@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/26 08:59:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/04/09 01:43:23 obache Exp $
 include/pyclutter-1.0/pyclutter/pyclutter.h
 lib/pkgconfig/pyclutter-1.0.pc
 ${PYSITELIB}/clutter/__init__.py
@@ -8,9 +8,11 @@ ${PYSITELIB}/clutter/_clutter.la
 ${PYSITELIB}/clutter/deprecation.py
 ${PYSITELIB}/clutter/deprecation.pyc
 ${PYSITELIB}/clutter/deprecation.pyo
+${PLIST.x11}${PYSITELIB}/clutter/glx.la
 ${PYSITELIB}/clutter/keysyms.py
 ${PYSITELIB}/clutter/keysyms.pyc
 ${PYSITELIB}/clutter/keysyms.pyo
+${PLIST.x11}${PYSITELIB}/clutter/x11.la
 share/gtk-doc/html/pyclutter/ch01.html
 share/gtk-doc/html/pyclutter/ch02.html
 share/gtk-doc/html/pyclutter/ch03.html
@@ -59,6 +61,14 @@ share/pyclutter/1.0/defs/clutter-base-types.defs
 share/pyclutter/1.0/defs/clutter-base.defs
 share/pyclutter/1.0/defs/clutter-types.defs
 share/pyclutter/1.0/defs/clutter.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterglx-base-types.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterglx-base.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterglx-types.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterglx.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterx11-base-types.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterx11-base.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterx11-types.defs
+${PLIST.x11}share/pyclutter/1.0/defs/clutterx11.defs
 share/pyclutter/1.0/defs/cogl-base-types.defs
 share/pyclutter/1.0/defs/cogl-base.defs
 share/pyclutter/1.0/defs/cogl-types.defs
