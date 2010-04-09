@@ -1,0 +1,5 @@
+This package typesets SI units, numbers and angles according to
+the ISO requirements. Care is taken with font setup and
+requirements, and language customisation is available. Note
+that this package is (in principle) superseded by siunitx;
+sistyle has maintenance-only support, now.
