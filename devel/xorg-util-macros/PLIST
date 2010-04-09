@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/15 18:58:44 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/04/09 09:31:34 tnn Exp $
 share/aclocal/xorg-macros.m4
-share/doc/util-macros/INSTALL
 share/pkgconfig/xorg-macros.pc
+share/util-macros/INSTALL
