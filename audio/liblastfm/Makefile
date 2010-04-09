@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/15 15:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/09 23:49:14 markd Exp $
 #
 
 DISTNAME=	liblastfm-0.3.0
@@ -36,6 +36,9 @@ REPLACE_FILES.ruby+=	admin/lastfm.h.rb
 REPLACE_FILES.ruby+=	admin/Makefile.rb
 REPLACE_FILES.ruby+=	admin/platform.rb
 REPLACE_FILES.ruby+=	admin/utils.rb
+
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
