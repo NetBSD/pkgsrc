@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:57:11 markd Exp $
+share/texmf-dist/tex/latex/texpower/automata.sty
+share/texmf-dist/tex/latex/texpower/fixseminar.sty
+share/texmf-dist/tex/latex/texpower/powersem.cls
+share/texmf-dist/tex/latex/texpower/texpower.sty
+share/texmf-dist/tex/latex/texpower/tpcolors.cfg
+share/texmf-dist/tex/latex/texpower/tplists.sty
+share/texmf-dist/tex/latex/texpower/tpoptions.cfg
+share/texmf-dist/tex/latex/texpower/tppstcol.sty
+share/texmf-dist/tex/latex/texpower/tpsem-a4.sty
+share/texmf-dist/tex/latex/texpower/tpsettings.cfg
