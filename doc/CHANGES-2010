@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1416 2010/04/09 01:47:42 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1417 2010/04/09 01:49:04 obache Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1670,3 +1670,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/py-clutter to 1.0.2 [obache 2010-04-09]
 	Updated graphics/libotf to 0.9.11 [obache 2010-04-09]
 	Updated misc/m17n-db to 1.6.0 [obache 2010-04-09]
+	Updated devel/m17n-lib to 1.6.0 [obache 2010-04-09]
