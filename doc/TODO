@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9182 2010/04/09 09:46:43 tnn Exp $
+$NetBSD: TODO,v 1.9183 2010/04/09 13:35:56 obache Exp $
 
 Suggested new packages
 ======================
@@ -617,7 +617,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flashplayer-0.4.13
 	o flightgear-2.0.0
 	o flpsed-0.4.4
-	o fltk-1.1.10 [pkg/43061]
 	o fluidsynth-1.1.1
 	o font-adobe-100dpi-1.0.1
 	o font-adobe-75dpi-1.0.1
