@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9179 2010/04/09 01:43:39 obache Exp $
+$NetBSD: TODO,v 1.9180 2010/04/09 01:47:05 obache Exp $
 
 Suggested new packages
 ======================
@@ -921,7 +921,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.1
 	o libogg-1.2.0
 	o liboobs-2.30.0 [GNOME 2.30]
-	o libotf-0.9.11
 	o libpciaccess-0.11.0
 	o libproxy-0.4.0
 	o librep-0.90.5
