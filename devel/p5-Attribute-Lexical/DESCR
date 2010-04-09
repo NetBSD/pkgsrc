@@ -1,0 +1,17 @@
+This module manages attributes that can be attached to subroutine and
+variable declarations. Although it can be used directly, it is mainly
+intended to be infrastructure for modules that supply particular attribute
+semantics.
+
+Meanings are assigned to attributes by code which is usually supplied by
+modules and which runs at compile time. The built-in mechanism for attribute
+control is awkward to use, difficult in particular to enable multiple
+attributes supplied by different modules, and it scopes attribute meanings
+according to the package of the object to which attributes are being
+applied. This module is intended to overcome these limitations.
+
+This module supplies a simple pragma to declare an attribute, associating
+the attribute's name with a handler function that implements its semantics.
+The declaration is lexically scoped, lasting only until the end of the
+enclosing block. A declaration can be overridden, giving an attribute name
+a different meaning or making it meaningless, in an inner nested block.
