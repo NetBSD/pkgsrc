@@ -1,0 +1,4 @@
+This package implements a variant of tabular-like environments
+where columns can be given a name and entries can flexibly be
+placed between arbitrary columns. Complex alignment-based
+layouts, for example for program code, are possible.
