@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2010/04/09 19:39:06 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2010/04/09 22:04:22 tron Exp $
 
 DISTNAME=	ghostscript-8.71
 PKGREVISION=	2
@@ -74,10 +74,10 @@ CONFIGURE_ENV+=	LPLIBDIR=${LOCALBASE}/lib
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
-#	${MV} ${WRKSRC}/jasper ${WRKSRC}/jasper.dontuse
-	${MV} ${WRKSRC}/libpng ${WRKSRC}/libpng.dontuse
-	${MV} ${WRKSRC}/tiff ${WRKSRC}/tiff.dontuse
-#	${MV} ${WRKSRC}/zlib ${WRKSRC}/zlib.dontuse
+#	${RM} -rf ${WRKSRC}/jasper
+	${RM} -rf ${WRKSRC}/libpng
+	${RM} -rf ${WRKSRC}/tiff
+#	${RM} -rf ${WRKSRC}/zlib
 
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
