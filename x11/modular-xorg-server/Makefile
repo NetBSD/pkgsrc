@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2010/01/17 12:02:57 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2010/04/09 09:08:13 tnn Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -123,6 +123,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
