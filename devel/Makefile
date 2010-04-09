@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1315 2010/04/09 08:16:09 sno Exp $
+# $NetBSD: Makefile,v 1.1316 2010/04/09 08:18:41 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -447,6 +447,7 @@ SUBDIR+=	p5-Array-RefElem
 SUBDIR+=	p5-Async-Interrupt
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
+SUBDIR+=	p5-Attribute-Lexical
 SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-AutoXS-Header
 SUBDIR+=	p5-B-Compiling
