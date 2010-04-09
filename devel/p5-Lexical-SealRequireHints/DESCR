@@ -1,0 +1,17 @@
+There is a bug in Perl's handling of the %^H (lexical hints) variable that
+causes lexical state in one file to leak into another that is required/used
+from it. This bug will probably be fixed in Perl 5.10.2, and is definitely
+fixed in Perl 5.11.0, but in any earlier version it is necessary to work
+around it. On versions of Perl that require a fix, this module globally
+changes the behaviour of require and use so that they no longer exhibit the
+bug. This is the most convenient kind of workaround, and is meant to be
+invoked by modules that make use of lexical state.
+
+The workaround supplied by this module takes effect the first time its
+import method is called. Typically this will be done by means of a use
+statement. This should be done before putting anything into %^H that would
+have a problem with leakage; usually it suffices to do this when loading
+the module that supplies the mechanism to set up the vulnerable lexical
+state. Invoking this module multiple times, from multiple lexical-related
+modules, is not a problem: the workaround is only applied once, and applies
+to everything.
