@@ -1,0 +1,2 @@
+DBD::DB2 is a Perl5 module which when used in conjunction with DBI allows
+Perl5 to communicate with IBM's DB2 Universal Database.
