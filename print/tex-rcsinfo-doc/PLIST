@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:49:55 markd Exp $
+share/texmf-dist/doc/latex/rcsinfo/README
+share/texmf-dist/doc/latex/rcsinfo/README-1.9
+share/texmf-dist/doc/latex/rcsinfo/rcsinfo.init
+share/texmf-dist/doc/latex/rcsinfo/rcsinfo.pdf
+share/texmf-dist/doc/latex/rcsinfo/rcsinfo.perl
+share/texmf-dist/doc/latex/rcsinfo/rcsinfo2html.tex
