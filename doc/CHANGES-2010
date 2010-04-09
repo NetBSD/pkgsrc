@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1430 2010/04/09 13:35:56 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1431 2010/04/09 16:11:31 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1691,3 +1691,10 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/pear-Mail_Mime to 1.6.2 [taca 2010-04-09]
 	Added mail/milter-manager version 1.4.2 [obache 2010-04-09]
 	Updated x11/fltk to 1.1.10 [obache 2010-04-09]
+	Updated lang/mono to 2.6.3 [kefren 2010-04-09]
+	Updated graphics/libgdiplus to 2.6.2 [kefren 2010-04-09]
+	Updated lang/mono-basic to 2.6.2 [kefren 2010-04-09]
+	Updated www/ap-mono to 2.6.3 [kefren 2010-04-09]
+	Updated www/mono-xsp to 2.6.3 [kefren 2010-04-09]
+	Updated devel/mono-tools to 2.6.2 [kefren 2010-04-09]
+	Updated devel/monodevelop to 2.2.2 [kefren 2010-04-09]
