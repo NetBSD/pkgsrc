@@ -1,0 +1,14 @@
+This package aims to improve presentations in terms of font
+readability, especially with maths. The standard cm math fonts
+at large design sizes are difficult to read from far away,
+especially at low resolutions and low contrast color choice.
+Using this package leads to much better overall readability of
+some font combinations. The package offers a couple of
+'harmonising' combinations of text and math fonts from the
+(distant) relatives of computer modern fonts, with a couple of
+extras for optimising readability. Text fonts from computer
+modern roman, computer modern sans serif, SliTeX computer
+modern sans serif, computer modern bright, or concrete roman
+are available, in addition to math fonts from computer modern
+math, computer modern bright math, or Euler fonts. This package
+is part of the TeXPower bundle.
