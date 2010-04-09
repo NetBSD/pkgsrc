@@ -1,0 +1,4 @@
+This collection contains files to add wallpapers (background
+images) to LaTeX documents. It uses the eso-pic package, but
+provides simple commands to include effects such as tiling. An
+example is provided, which works under both LaTeX and pdfLaTeX.
