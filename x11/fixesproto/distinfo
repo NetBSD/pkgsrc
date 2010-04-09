@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/07/23 22:26:05 wiz Exp $
+$NetBSD: distinfo,v 1.6 2010/04/09 08:15:48 tnn Exp $
 
-SHA1 (fixesproto-4.0.tar.bz2) = de9139e4836f1ab234583406ea2ee6446ad7965f
-RMD160 (fixesproto-4.0.tar.bz2) = fc1c2130ae89a88365cb039a5e9ffb8c6651c16e
-Size (fixesproto-4.0.tar.bz2) = 38550 bytes
+SHA1 (fixesproto-4.1.1.tar.bz2) = fb47920c629e08a56442a51968a02a22733085e5
+RMD160 (fixesproto-4.1.1.tar.bz2) = 83f9663df63a6e02cfe7f362f7848bf5e1b034d8
+Size (fixesproto-4.1.1.tar.bz2) = 91338 bytes
