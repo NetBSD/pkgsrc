@@ -1,0 +1,18 @@
+$NetBSD: patch-ba,v 1.3 2010/04/09 09:08:13 tnn Exp $
+
+--- include/dix-config.h.in.orig	2009-10-12 02:52:40.000000000 +0000
++++ include/dix-config.h.in
+@@ -3,6 +3,13 @@
+ #ifndef _DIX_CONFIG_H_
+ #define _DIX_CONFIG_H_
+ 
++#ifndef HAVE_XNEST_CONFIG_H
++#define Status int
++typedef struct {} Display;
++typedef struct {} XImage;
++typedef struct {} Visual;
++#endif
++
+ /* Support BigRequests extension */
+ #undef BIGREQS
+ 
