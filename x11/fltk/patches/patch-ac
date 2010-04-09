@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2008/11/10 19:03:15 adam Exp $
+$NetBSD: patch-ac,v 1.11 2010/04/09 13:35:42 obache Exp $
 
---- configure.orig	2008-04-27 10:28:21.000000000 +0200
+--- configure.orig	2009-12-27 15:24:34.000000000 +0000
 +++ configure
-@@ -1318,6 +1319,8 @@ Optional Features:
+@@ -1323,6 +1323,8 @@ Optional Features:
    --enable-debug          turn on debugging default=no
    --enable-gl             turn on OpenGL support default=yes
    --enable-shared         turn on shared libraries default=no
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.10 2008/11/10 19:03:15 adam Exp $
    --enable-threads        enable multi-threading support
    --enable-quartz         use Quartz instead of Quickdraw (default=no)
    --disable-largefile     omit support for large files
-@@ -1870,7 +1873,22 @@ if test "${enable_shared+set}" = set; th
+@@ -1898,7 +1900,22 @@ if test "${enable_shared+set}" = set; th
    enableval=$enable_shared;
  fi
  
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.10 2008/11/10 19:03:15 adam Exp $
      PICFLAG=1
      SHAREDSUFFIX=""
      FLUID="fluid-shared"
-@@ -1990,8 +2008,20 @@ else
+@@ -2018,8 +2035,20 @@ else
      LINKSHARED="../lib/libfltk_images.a ../lib/libfltk_forms.a ../lib/libfltk.a"
  fi
  

@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.7 2008/11/10 19:03:15 adam Exp $
+$NetBSD: patch-ag,v 1.8 2010/04/09 13:35:42 obache Exp $
 
---- src/Makefile.orig	2008-02-27 16:00:31.000000000 +0100
+--- src/Makefile.orig	2009-07-02 09:42:17.000000000 +0000
 +++ src/Makefile
 @@ -208,6 +208,10 @@ $(LIBNAME): $(OBJECTS)
  	$(LIBCOMMAND) $@ $(OBJECTS)
@@ -47,9 +47,9 @@ $NetBSD: patch-ag,v 1.7 2008/11/10 19:03:15 adam Exp $
  	echo $(DSOCOMMAND) $@ ...
  	$(DSOCOMMAND) $@ $(IMGOBJECTS) -L. $(IMAGELIBS) -lfltk
 @@ -504,6 +520,9 @@ install: $(LIBNAME) $(DSONAME) \
- 		$(RANLIB) $(DESTDIR)$(libdir)/$(GLLIBNAME); \
+ 		$(RANLIB) $(DESTDIR)$(libdir)/$(GLLIBBASENAME); \
  	fi
- 	$(RANLIB) $(DESTDIR)$(libdir)/$(IMGLIBNAME)
+ 	$(RANLIB) $(DESTDIR)$(libdir)/$(IMGLIBBASENAME)
 +	if test x$(DSONAME) = xlibfltk.la; then\
 +		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk.la $(DESTDIR)$(libdir); \
 +	fi
