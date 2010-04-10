@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.32 2010/04/10 13:20:11 sekiya Exp $
+$NetBSD: distinfo,v 1.33 2010/04/10 13:26:10 sekiya Exp $
 
 SHA1 (abcde-2.3.99.7_p235.tar.bz2) = 51db5e7da9b3eda0844904ad2b9138fa97eeb254
 RMD160 (abcde-2.3.99.7_p235.tar.bz2) = bbb7116a8a06ffae6e0027e5a7524e023bfd71cf
 Size (abcde-2.3.99.7_p235.tar.bz2) = 171342 bytes
 SHA1 (patch-ab) = eacbb4582c8dc74c6415adbb0af387aacce81ccc
-SHA1 (patch-ac) = 5af15448067a6ee523195922b2529b99f552718b
+SHA1 (patch-ac) = efe02d93dc8cd51b06cb004a77ae0e15053ad1fb
