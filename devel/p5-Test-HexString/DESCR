@@ -1,0 +1,7 @@
+The Perl 5 module Test::HexString provides a single function,
+is_hexstr(), which asserts that the given string matches what was
+expected. When the strings match (i.e. compare equal using the eq
+operator), the behaviour is identical to the usual is() function
+provided by Test::More. When the strings are different, a hex dump
+is produced as diagnostic, rather than the string values being
+printed raw
