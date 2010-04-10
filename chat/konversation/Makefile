@@ -1,33 +1,34 @@
-# $NetBSD: Makefile,v 1.22 2010/01/28 20:11:47 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/04/10 22:26:05 markd Exp $
 #
 
-DISTNAME=	konversation-1.1
-PKGREVISION=	4
+DISTNAME=	konversation-1.2.3
 CATEGORIES=	chat kde
-MASTER_SITES=	http://download.berlios.de/konversation/
+MASTER_SITES=	${MASTER_SITE_KDE:=konversation/1.2.3/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://konversation.kde.org/
 COMMENT=	KDE IRC Client
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
-USE_TOOLS+=	gmake perl msgfmt
+BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
+
+USE_CMAKE=	yes
+USE_TOOLS+=	perl msgfmt
 USE_LANGUAGES=	c c++
 
-REPLACE_PERL+=		konversation/src/konversation-0.19-appearance.pl \
-			konversation/src/konversation-0.19-colorcodes.pl \
-			konversation/src/konversation-0.19-colors.pl \
-			konversation/src/konversation-0.19-custombrowser.pl \
-			konversation/src/konversation-0.19-notifylists.pl \
-			konversation/src/konversation-0.19-sortorder.pl \
-			konversation/src/konversation-0.19-tabplacement.pl \
-			konversation/src/konversation-0.20-customfonts.pl \
-			konversation/src/konversation-0.20-quickbuttons.pl
-REPLACE_BASH+=		konversation/scripts/mail
+REPLACE_PERL+=		data/updaters/konversation-0.19-appearance.pl \
+			data/updaters/konversation-0.19-colorcodes.pl \
+			data/updaters/konversation-0.19-colors.pl \
+			data/updaters/konversation-0.19-custombrowser.pl \
+			data/updaters/konversation-0.19-notifylists.pl \
+			data/updaters/konversation-0.19-sortorder.pl \
+			data/updaters/konversation-0.19-tabplacement.pl \
+			data/updaters/konversation-0.20-customfonts.pl \
+			data/updaters/konversation-0.20-quickbuttons.pl
+REPLACE_BASH+=		data/scripts/mail
 USE_TOOLS+=		bash:run
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,16 +37,10 @@ USE_TOOLS+=		bash:run
 DEPENDS+=		psmisc>=20.1:../../sysutils/psmisc
 .endif
 
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-CONFIGURE_ARGS+=	--disable-threading
-.endif
-
+.include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

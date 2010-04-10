@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2008/06/08 01:21:37 tonnerre Exp $
+$NetBSD: patch-aa,v 1.4 2010/04/10 22:26:05 markd Exp $
 
---- konversation/scripts/media.orig	2006-10-06 18:43:29.000000000 +0200
-+++ konversation/scripts/media
-@@ -269,6 +269,7 @@ def playing(playerList, mode=None):
+Add patch for CVE-2007-4400 for Konversation to stop escape song names
+properly in the media script.
+
+--- data/scripts/media.orig	2009-11-12 18:24:50.000000000 +1300
++++ data/scripts/media
+@@ -414,6 +414,7 @@ def playing(playerList, mode=None):
      for i in playerList:
          s=i.get(mode)
          if s:
-+	    s=re.replace(r'[\r\n]', ' ', s)
++            s=re.replace(r'[\r\n]', ' ', s)
              tell([IRC_SERVER, TARGET, s], 'say' )
              return 1
      return 0
