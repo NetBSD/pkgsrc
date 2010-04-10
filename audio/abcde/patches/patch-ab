@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.9 2005/10/04 20:58:43 sketch Exp $
+$NetBSD: patch-ab,v 1.10 2010/04/10 13:20:11 sekiya Exp $
 
---- abcde.conf.orig	2005-10-04 21:45:58.000000000 +0100
-+++ abcde.conf	2005-10-04 21:46:09.000000000 +0100
-@@ -184,7 +184,7 @@
- #ACTIONS=cddb,read,encode,tag,move,clean
- 
+--- abcde.conf.orig	2006-10-02 03:26:11.000000000 +0900
++++ abcde.conf	2010-04-10 10:03:49.000000000 +0900
+@@ -221,7 +221,7 @@
  # CD device you want to read from
+ # It can be defined as a singletrack flac file, but since it might change from
+ # file to file it makes little sense to define it here.
 -#CDROM=/dev/cdrom
 +#CDROM=/dev/rcd0d
  # If we are using the IDE bus, we need CDPARANOIACDROMBUS defined as "d"
