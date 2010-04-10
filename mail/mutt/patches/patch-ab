@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.14 2007/05/27 13:34:16 tron Exp $
+$NetBSD: patch-ab,v 1.15 2010/04/10 16:08:51 tron Exp $
 
 --- Makefile.in.orig	2007-05-27 02:00:00.000000000 +0100
-+++ Makefile.in	2007-05-27 14:24:37.000000000 +0100
++++ Makefile.in	2010-04-10 16:54:51.000000000 +0100
 @@ -165,7 +165,7 @@
  DBX = @DBX@
  DEBUGGER = @DEBUGGER@
@@ -11,7 +11,26 @@ $NetBSD: patch-ab,v 1.14 2007/05/27 13:34:16 tron Exp $
  	-DHAVE_CONFIG_H=1
  
  DEPDIR = @DEPDIR@
-@@ -987,7 +987,7 @@
+@@ -266,7 +266,7 @@
+ install_sh = @install_sh@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+-localedir = @localedir@
++localedir = /usr/pkg/share/locale
+ localstatedir = @localstatedir@
+ mandir = @mandir@
+ mkdir_p = @mkdir_p@
+@@ -908,8 +908,7 @@
+ 
+ install-data-am: install-data-local
+ 
+-install-exec-am: install-binPROGRAMS install-binSCRIPTS \
+-	install-exec-local
++install-exec-am: install-binPROGRAMS install-binSCRIPTS
+ 
+ install-info: install-info-recursive
+ 
+@@ -987,7 +986,7 @@
  		ln -sf $(DESTDIR)$(bindir)/mutt_dotlock $(DESTDIR)$(bindir)/mutt.dotlock ; \
  	fi
  	if test -f $(DESTDIR)$(bindir)/mutt_dotlock && test x@DOTLOCK_GROUP@ != x ; then \
