@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1461 2010/04/10 16:20:20 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1462 2010/04/10 16:34:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/mutt to 1.4.2.3nb3 [tron 2010-04-10]
 	Updated print/tex-pgf to 2.00nb1 [minskim 2010-04-10]
 	Added print/tex-pgf-doc version 2.00 [minskim 2010-04-10]
+	Updated graphics/hugin to 2010.0.0 [adam 2010-04-10]
