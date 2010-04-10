@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:05:24 markd Exp $
+share/texmf-dist/doc/latex/a0poster/a0.pdf
+share/texmf-dist/doc/latex/a0poster/a0.tex
+share/texmf-dist/doc/latex/a0poster/a0_eng.pdf
+share/texmf-dist/doc/latex/a0poster/a0_eng.tex
