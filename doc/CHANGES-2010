@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1462 2010/04/10 16:34:19 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1463 2010/04/10 18:34:57 gson Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pgf to 2.00nb1 [minskim 2010-04-10]
 	Added print/tex-pgf-doc version 2.00 [minskim 2010-04-10]
 	Updated graphics/hugin to 2010.0.0 [adam 2010-04-10]
+	Updated misc/py-anita to 1.10 [gson 2010-04-10]
