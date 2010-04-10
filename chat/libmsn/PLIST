@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/10 00:11:49 markd Exp $
 bin/msntest
 include/msn/authdata.h
 include/msn/buddy.h
+include/msn/config.h
 include/msn/connection.h
 include/msn/errorcodes.h
 include/msn/externals.h
@@ -17,6 +18,6 @@ include/msn/sstream_fix.h
 include/msn/switchboardserver.h
 include/msn/util.h
 lib/libmsn.so
-lib/libmsn.so.0.1
-lib/libmsn.so.0.1.0
+lib/libmsn.so.0.3
+lib/libmsn.so.0.3.0
 lib/pkgconfig/libmsn.pc
