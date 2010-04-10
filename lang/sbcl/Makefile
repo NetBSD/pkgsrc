@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/03/05 14:20:25 asau Exp $
+# $NetBSD: Makefile,v 1.23 2010/04/10 05:13:09 dholland Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.36
@@ -45,10 +45,10 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # per Christophe Rhodes:
 SBCL_BOOT_SYSTEM=	clisp -ansi -on-error abort
 BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
-ULIMIT_RESOURCES=	datasize
+UNLIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == clisp
 BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
-ULIMIT_RESOURCES=	datasize
+UNLIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == sbcl
 # Get bootstrap version:
 BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
