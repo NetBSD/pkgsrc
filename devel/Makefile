@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1320 2010/04/10 13:39:45 seb Exp $
+# $NetBSD: Makefile,v 1.1321 2010/04/10 14:23:46 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -453,6 +453,7 @@ SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-AutoXS-Header
 SUBDIR+=	p5-B-Compiling
 SUBDIR+=	p5-B-Hooks-EndOfScope
+SUBDIR+=	p5-B-Hooks-OP-Annotation
 SUBDIR+=	p5-B-Hooks-OP-Check
 SUBDIR+=	p5-B-Hooks-OP-Check-StashChange
 SUBDIR+=	p5-B-Hooks-OP-PPAddr
@@ -744,6 +745,7 @@ SUBDIR+=	p5-Module-Install
 SUBDIR+=	p5-Module-Install-PadrePlugin
 SUBDIR+=	p5-Module-Install-RTx
 SUBDIR+=	p5-Module-Install-Substitute
+SUBDIR+=	p5-Module-Install-XSUtil
 SUBDIR+=	p5-Module-Load
 SUBDIR+=	p5-Module-Pluggable
 SUBDIR+=	p5-Module-Refresh
