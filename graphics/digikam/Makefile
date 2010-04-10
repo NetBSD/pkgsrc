@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2010/02/15 14:19:30 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2010/04/10 03:06:50 markd Exp $
 #
 
 DISTNAME=	digikam-1.1.0
@@ -24,6 +24,7 @@ USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 
 .include "options.mk"
 
+.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 # for libkdcraw>=0.4.0
@@ -33,5 +34,4 @@ BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.1.2nb1
 .include "../../graphics/liblqr/buildlink3.mk"
 .include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
