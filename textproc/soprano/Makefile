@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2010/01/22 13:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/10 00:02:03 markd Exp $
 
-DISTNAME=	soprano-2.3.0
-PKGREVISION=	5
+DISTNAME=	soprano-2.4.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=soprano/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +23,7 @@ PKGCONFIG_OVERRIDE+=	soprano.pc.cmake
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
+.include "../../databases/iodbc/buildlink3.mk"
 .include "../../textproc/libclucene/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
