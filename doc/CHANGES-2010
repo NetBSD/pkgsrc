@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1458 2010/04/10 15:45:08 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1459 2010/04/10 15:45:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1779,3 +1779,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-B-Hooks-OP-Annotation version 0.43 [seb 2010-04-10]
 	Added devel/p5-Module-Install-XSUtil version 0.22 [seb 2010-04-10]
 	Added devel/p5-Mixin-ExtraFields version 0.100.971 [seb 2010-04-10]
+	Added devel/p5-Mixin-ExtraFields-Param version 0.011 [seb 2010-04-10]
