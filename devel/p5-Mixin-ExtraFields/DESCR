@@ -1,0 +1,7 @@
+The Perl 5 module Mixin::ExtraFields provides a simple way to add
+an arbitrary number of stashes for named data. These data can be
+stored in the object, in a database, or anywhere else. The storage
+mechanism is abstracted away from the provided interface, so one
+storage mechanism can be easily swapped for another. Multiple
+ExtraFields stashes can be mixed into one class, using one or many
+storage mechanisms.
