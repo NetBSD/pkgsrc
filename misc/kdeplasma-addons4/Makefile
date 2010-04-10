@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/27 10:38:40 markd Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/10 02:45:03 markd Exp $
 
 DISTNAME=	kdeplasma-addons-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -14,6 +14,7 @@ COMMENT=	Plasmoids
 .include "../../graphics/kdegraphics4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.eigen2+=	eigen2>=2.0.3
 .include "../../math/eigen2/buildlink3.mk"
+.include "../../misc/attica/buildlink3.mk"
 .include "../../misc/kdeedu4/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"

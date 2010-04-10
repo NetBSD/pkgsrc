@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:41 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/10 02:45:03 markd Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 
@@ -11,9 +10,10 @@ COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 
 CMAKE_ARGS+=	-DBUILD_kmplot:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_SBIG:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_R:BOOL=OFF
 # CMAKE_ARGS+=	-DWITH_PyKDE4:BOOL=OFF   # "sip: MarblePlacemarkModel is undefined"
 #XXX detection does not work reliably
-CMAKE_ARGS+=	-DWITH_BoostPython:BOOL=off
+CMAKE_ARGS+=	-DWITH_BoostPython:BOOL=OFF
 # eigen2.0.4 tries to use _M_erase_at_end - not defined.
 CMAKE_ARGS+=	-DBUILD_step:BOOL=OFF
 
@@ -30,6 +30,7 @@ BROKEN_READLINE_DETECTION=	yes
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.eigen2+=	eigen2>=2.0.3
 #.include "../../math/eigen2/buildlink3.mk"
+.include "../../print/libspectre/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
 .include "../../x11/kdebase-workspace4/buildlink3.mk"
