@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/10/02 19:30:13 markd Exp $
+$NetBSD: patch-af,v 1.2 2010/04/10 02:45:04 markd Exp $
 
---- khelpcenter/searchhandlers/khc_docbookdig.pl.cmake.orig	2009-02-27 03:16:03.000000000 +1300
+--- khelpcenter/searchhandlers/khc_docbookdig.pl.cmake.orig	2009-09-23 19:21:09.000000000 +0000
 +++ khelpcenter/searchhandlers/khc_docbookdig.pl.cmake
 @@ -26,8 +26,8 @@ use strict;
  
@@ -13,16 +13,19 @@ $NetBSD: patch-af,v 1.1.1.1 2009/10/02 19:30:13 markd Exp $
  my $kdeprefix = "@CMAKE_INSTALL_PREFIX@";
  chomp $kdeprefix;
  
-@@ -126,20 +126,23 @@ if ( !open( PARSER, ">$parserfile" ) ) {
+@@ -124,7 +124,10 @@ if ( !open( PARSER, ">$parserfile" ) ) {
+   exit 1;
+ }
  print PARSER << "EOT";
- #! /bin/sh
- 
+-#! /bin/bash
++#! /bin/sh
++
 +PATH=/bin:/usr/bin:\$PATH
 +export PATH
-+
+ 
  file=\$1
  shift
- mime=\$1
+@@ -132,14 +135,14 @@ mime=\$1
  shift
  
  if test "\$#" -gt 0; then
