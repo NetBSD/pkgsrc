@@ -1,0 +1,5 @@
+PSGI specifies a standard interface between web servers and Perl
+web applications or frameworks, to promote web application portability
+and reduce the duplicated efforts by web application framework
+developers It is a specification to decouple web server environments
+from web application framework code.
