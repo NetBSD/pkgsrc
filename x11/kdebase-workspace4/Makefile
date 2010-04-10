@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2010/02/16 13:35:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/04/10 02:45:04 markd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	base workspace for the KDE 4 integrated X11 desktop
 
@@ -19,7 +18,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-USE_TOOLS+=		mkfontdir bdftopcf
+USE_TOOLS+=		mkfontdir bdftopcf gmake
 
 FONTS_DIRS.x11+=	${PREFIX}/share/kde/fonts/override
 REQD_DIRS+=		${PREFIX}/share/kde/fonts
@@ -99,7 +98,6 @@ PYTHON_VERSIONS_ACCEPTED= 26 25 # because kdebindings4-python
 #.include "../../sysutils/consolekit/buildlink3.mk"
 .include "../../x11/kdebindings4-python/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdelibs-experimental4/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"

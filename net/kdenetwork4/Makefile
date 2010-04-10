@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/03/24 19:43:28 asau Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/10 02:45:04 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -15,7 +14,7 @@ CONFLICTS=	kopete-[0-9]*
 UNLIMIT_RESOURCES+=	datasize memorysize stacksize
 
 CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_LibV4L2:BOOL=OFF
+#CMAKE_ARGS+=	-DWITH_LibV4L2:BOOL=OFF
 
 REPLACE_PERL+= \
 	kopete/kopete/kconf_update/kopete-account-0.10.pl \
@@ -32,6 +31,7 @@ REPLACE_SH+= \
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
+BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../chat/libmsn/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
 .include "../../chat/meanwhile/buildlink3.mk"
@@ -39,6 +39,7 @@ REPLACE_SH+= \
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libv4l/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
@@ -46,7 +47,6 @@ REPLACE_SH+= \
 .include "../../net/ortp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdelibs-experimental4/buildlink3.mk"
 .include "../../x11/kdebase4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
 .include "../../x11/kdebase-workspace4/buildlink3.mk"
