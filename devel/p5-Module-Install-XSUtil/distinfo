@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/10 14:20:21 seb Exp $
+
+SHA1 (Module-Install-XSUtil-0.22.tar.gz) = a5be255ca8e263f748af858bbc8b6d1dbf436c61
+RMD160 (Module-Install-XSUtil-0.22.tar.gz) = 80d812f15e99d5dabe361d3adf5c622c737aaba9
+Size (Module-Install-XSUtil-0.22.tar.gz) = 24372 bytes
