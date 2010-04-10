@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2010/04/10 21:26:18 markd Exp $
+# $NetBSD: Makefile,v 1.359 2010/04/10 21:56:13 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -222,6 +222,8 @@ SUBDIR+=	tex-german-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-graphics
 SUBDIR+=	tex-graphics-doc
+SUBDIR+=	tex-harvard
+SUBDIR+=	tex-harvard-doc
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hyper
 SUBDIR+=	tex-hyper-doc
