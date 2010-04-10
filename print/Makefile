@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2010/04/09 22:16:09 markd Exp $
+# $NetBSD: Makefile,v 1.356 2010/04/10 07:37:29 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -136,6 +136,8 @@ SUBDIR+=	tex-SIstyle
 SUBDIR+=	tex-a0poster
 SUBDIR+=	tex-a4wide
 SUBDIR+=	tex-a4wide-doc
+SUBDIR+=	tex-a5comb
+SUBDIR+=	tex-a5comb-doc
 SUBDIR+=	tex-abc
 SUBDIR+=	tex-acmconf
 SUBDIR+=	tex-acmconf-doc
