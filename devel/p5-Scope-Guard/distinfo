@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/14 09:26:16 abs Exp $
+$NetBSD: distinfo,v 1.2 2010/04/10 08:07:26 seb Exp $
 
-SHA1 (Scope-Guard-0.03.tar.gz) = f9f1c2f99aca1e277628887bbdff6c80e6f15d85
-RMD160 (Scope-Guard-0.03.tar.gz) = b7b4426409f887e3ad25af0b52634b39a3198377
-Size (Scope-Guard-0.03.tar.gz) = 2938 bytes
+SHA1 (Scope-Guard-0.12.tar.gz) = ccddac611a488a1aa4d8574e427967753bc91018
+RMD160 (Scope-Guard-0.12.tar.gz) = 858121a489d19c4db3ad10d13a18f8eab3f42eaf
+Size (Scope-Guard-0.12.tar.gz) = 3580 bytes
