@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1469 2010/04/10 22:13:23 markd Exp $
+$NetBSD: CHANGES-2010,v 1.1470 2010/04/10 22:28:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1809,3 +1809,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-harvard-doc version 2.0.5 [markd 2010-04-10]
 	Moved time/rsibreak to time/rsibreak-kde3 [markd 2010-04-10]
 	Updated time/rsibreak to 0.10 [markd 2010-04-10]
+	Moved chat/konversation to chat/konversation-kde3 [markd 2010-04-10]
+	Updated chat/konversation to 1.2.3 [markd 2010-04-10]
