@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1450 2010/04/10 12:47:27 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1451 2010/04/10 13:06:22 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1771,3 +1771,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Proc-Wait3 version 0.03 [seb 2010-04-10]
 	Added www/p5-PSGI version 1.03 [seb 2010-04-10]
 	Added www/p5-Plack version 0.9929 [seb 2010-04-10]
+	Added devel/p5-App-FatPacker version 0.009001 [seb 2010-04-10]
