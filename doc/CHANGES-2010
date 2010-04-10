@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1448 2010/04/10 09:17:22 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1449 2010/04/10 12:46:11 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1769,3 +1769,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-StackTrace-AsHTML to 0.09 [seb 2010-04-10]
 	Updated devel/p5-Filesys-Notify-Simple to 0.06 [seb 2010-04-10]
 	Added devel/p5-Proc-Wait3 version 0.03 [seb 2010-04-10]
+	Added www/p5-PSGI version 1.03 [seb 2010-04-10]
