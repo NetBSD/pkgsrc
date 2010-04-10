@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/04/09 08:50:17 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/04/10 21:09:21 tnn Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -11,7 +11,7 @@ BUILDLINK_TREE+=	libXext
 .if !defined(LIBXEXT_BUILDLINK3_MK)
 LIBXEXT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
+BUILDLINK_API_DEPENDS.libXext+=	libXext>=0.99.0
 BUILDLINK_PKGSRCDIR.libXext?=	../../x11/libXext
 
 .include "../../x11/libX11/buildlink3.mk"
