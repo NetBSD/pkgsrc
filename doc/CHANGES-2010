@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1456 2010/04/10 14:24:44 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1457 2010/04/10 14:25:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1777,3 +1777,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Test-HexString version 0.02 [seb 2010-04-10]
 	Added sysutils/p5-Server-Starter version 0.06 [seb 2010-04-10]
 	Added devel/p5-B-Hooks-OP-Annotation version 0.43 [seb 2010-04-10]
+	Added devel/p5-Module-Install-XSUtil version 0.22 [seb 2010-04-10]
