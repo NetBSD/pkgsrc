@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2010/02/15 14:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2010/04/10 03:10:15 markd Exp $
 #
 
 DISTNAME=	kipi-plugins-1.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/kipi-plugins/1.1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +23,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 
+BUILDLINK_API_DEPENDS.kdelibs+= kdelibs4>=4.4.0
+.include "../../meta-pkgs/kde4/kde4.mk"
 # for IpodExport
 .include "../../audio/libgpod/buildlink3.mk"
 .include "../../graphics/kdegraphics4/buildlink3.mk"
