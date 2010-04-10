@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:54:28 markd Exp $
+share/texmf-dist/bibtex/bib/harvard/harvard.bib
+share/texmf-dist/bibtex/bst/harvard/agsm.bst
+share/texmf-dist/bibtex/bst/harvard/apsr.bst
+share/texmf-dist/bibtex/bst/harvard/dcu.bst
+share/texmf-dist/bibtex/bst/harvard/jmr.bst
+share/texmf-dist/bibtex/bst/harvard/jphysicsB.bst
+share/texmf-dist/bibtex/bst/harvard/kluwer.bst
+share/texmf-dist/bibtex/bst/harvard/nederlands.bst
+share/texmf-dist/tex/latex/harvard/harvard.sty
