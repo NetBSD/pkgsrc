@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/10 04:04:21 markd Exp $
+
+--- configure.orig	2007-12-22 10:51:44.000000000 +1300
++++ configure
+@@ -34319,7 +34319,7 @@ LIBQTDBUS=""
+ LIBDBUS_CFLAGS=""
+ # Check whether --enable-nspr was given.
+ if test "${enable_nspr+set}" = set; then
+-  enableval=$enable_nspr; if test "x$enableval" == "xno"; then
++  enableval=$enable_nspr; if test "x$enableval" = "xno"; then
+         buildnpp=no
+     fi
+ fi
+@@ -34438,7 +34438,7 @@ LIBCAIRO_LIBS=""
+ LIBCAIRO_CFLAGS=""
+ # Check whether --enable-cairo was given.
+ if test "${enable_cairo+set}" = set; then
+-  enableval=$enable_cairo; if test "x$enableval" == "xno"; then
++  enableval=$enable_cairo; if test "x$enableval" = "xno"; then
+         hascairo=no
+     fi
+ fi
