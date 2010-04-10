@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/25 12:30:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/04/10 00:07:07 markd Exp $
 bin/akonadi_control
 bin/akonadictl
 bin/akonadiserver
 include/akonadi/private/akonadiprotocolinternals_export.h
+include/akonadi/private/capabilities_p.h
 include/akonadi/private/imapparser_p.h
 include/akonadi/private/imapset_p.h
 include/akonadi/private/notificationmessage_p.h
@@ -24,10 +25,8 @@ share/dbus-1/interfaces/org.freedesktop.Akonadi.AgentManager.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.ControlManager.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.DebugInterface.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.NotificationManager.xml
+share/dbus-1/interfaces/org.freedesktop.Akonadi.Preprocessor.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Resource.xml
-share/dbus-1/interfaces/org.freedesktop.Akonadi.Search.xml
-share/dbus-1/interfaces/org.freedesktop.Akonadi.SearchQuery.xml
-share/dbus-1/interfaces/org.freedesktop.Akonadi.SearchQueryIterator.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Server.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Tracer.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.TracerNotification.xml
