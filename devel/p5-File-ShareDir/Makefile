@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/01/25 13:07:03 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/10 07:29:05 seb Exp $
 #
 
-DISTNAME=		File-ShareDir-1.01
+DISTNAME=		File-ShareDir-1.02
 PKGNAME=		p5-${DISTNAME}
 #PKGREVISION=		1
 CATEGORIES=		devel perl5
@@ -22,7 +22,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=		p5-Class-Inspector>=1.12:../../devel/p5-Class-Inspector
-DEPENDS+=		p5-Params-Util>=0.07:../../devel/p5-Params-Util
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
