@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:17:43 markd Exp $
+share/texmf-dist/doc/latex/substr/ChangeLog
+share/texmf-dist/doc/latex/substr/README
+share/texmf-dist/doc/latex/substr/testsubstr.pdf
+share/texmf-dist/doc/latex/substr/testsubstr.tex
