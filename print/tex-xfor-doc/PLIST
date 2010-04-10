@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:22:19 markd Exp $
+share/texmf-dist/doc/latex/xfor/CHANGES
+share/texmf-dist/doc/latex/xfor/README
+share/texmf-dist/doc/latex/xfor/sample.tex
+share/texmf-dist/doc/latex/xfor/xfor.pdf
