@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1453 2010/04/10 13:22:30 sekiya Exp $
+$NetBSD: CHANGES-2010,v 1.1454 2010/04/10 13:40:39 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1774,3 +1774,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-App-FatPacker version 0.009001 [seb 2010-04-10]
 	Updated devel/p5-local-lib to 1.6.0 [seb 2010-04-10]
 	Updated audio/abcde to 2.3.99.7 [sekiya 2010-04-10]
+	Added devel/p5-Test-HexString version 0.02 [seb 2010-04-10]
