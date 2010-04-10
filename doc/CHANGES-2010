@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1467 2010/04/10 21:29:10 markd Exp $
+$NetBSD: CHANGES-2010,v 1.1468 2010/04/10 21:57:25 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1805,3 +1805,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-wallpaper-doc version 1.10 [markd 2010-04-10]
 	Added print/tex-xcolor-doc version 2.11 [markd 2010-04-10]
 	Added print/tex-xfor-doc version 1.05 [markd 2010-04-10]
+	Added print/tex-harvard version 2.0.5 [markd 2010-04-10]
+	Added print/tex-harvard-doc version 2.0.5 [markd 2010-04-10]
