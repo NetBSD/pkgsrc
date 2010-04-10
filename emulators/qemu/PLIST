@@ -1,10 +1,25 @@
-@comment $NetBSD: PLIST,v 1.21 2010/02/27 23:21:13 tnn Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/04/10 05:57:40 sbd Exp $
 bin/qemu
-bin/qemu-i386
+${PLIST.alpha}bin/qemu-alpha
+${PLIST.arm}bin/qemu-arm
+${PLIST.armeb}bin/qemu-armeb
+${PLIST.cris}bin/qemu-cris
+${PLIST.i386}bin/qemu-i386
 bin/qemu-img
 bin/qemu-io
-bin/qemu-sparc
-bin/qemu-sparc64
+${PLIST.m68k}bin/qemu-m68k
+${PLIST.microblaze}bin/qemu-microblaze
+${PLIST.mips}bin/qemu-mips
+${PLIST.mipsel}bin/qemu-mipsel
+${PLIST.nbd}bin/qemu-nbd
+${PLIST.ppc}bin/qemu-ppc
+${PLIST.ppc64}bin/qemu-ppc64
+${PLIST.ppc64abi32}bin/qemu-ppc64abi32
+${PLIST.sh4}bin/qemu-sh4
+${PLIST.sh4eb}bin/qemu-sh4eb
+${PLIST.sparc}bin/qemu-sparc
+${PLIST.sparc32plus}bin/qemu-sparc32plus
+${PLIST.sparc64}bin/qemu-sparc64
 bin/qemu-system-arm
 bin/qemu-system-cris
 bin/qemu-system-m68k
@@ -21,7 +36,7 @@ bin/qemu-system-sh4eb
 bin/qemu-system-sparc
 bin/qemu-system-sparc64
 bin/qemu-system-x86_64
-bin/qemu-x86_64
+${PLIST.x86_64}bin/qemu-x86_64
 man/man1/qemu-img.1
 man/man1/qemu.1
 man/man8/qemu-nbd.8
