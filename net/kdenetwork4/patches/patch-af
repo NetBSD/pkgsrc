@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 2010/04/10 02:45:04 markd Exp $
+
+--- kopete/libkopete/avdevice/videodevice.h.orig	2009-03-18 10:00:00.000000000 +0000
++++ kopete/libkopete/avdevice/videodevice.h
+@@ -61,6 +61,13 @@
+ #endif // HAVE_V4L2
+ 
+ #endif // __linux__
++#if defined(__NetBSD__) && defined(ENABLE_AV)
++
++#ifdef HAVE_LIBV4L2
++#include <libv4l2.h>
++#endif // HAVE_V4L2
++
++#endif // __NetBSD__
+ 
+ #include <qstring.h>
+ #include <qfile.h>
