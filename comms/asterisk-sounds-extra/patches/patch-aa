@@ -1,17 +1,24 @@
-$NetBSD: patch-aa,v 1.2 2010/03/17 15:16:55 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2010/04/10 08:36:43 sborrill Exp $
 
---- Makefile.orig	2005-09-16 23:17:30.000000000 +0200
-+++ Makefile	2005-09-16 23:36:06.000000000 +0200
-@@ -22,10 +22,10 @@
+--- Makefile.orig	2005-12-01 23:20:51.000000000 +0000
++++ Makefile	2010-04-09 22:27:38.000000000 +0100
+@@ -16,16 +16,16 @@
+ PWD=$(shell pwd)
+ # Where to install asterisk after compiling
+ # Default -> leave empty
+-INSTALL_PREFIX=
++INSTALL_PREFIX=${PREFIX}
+ 
+ # Staging directory
  # Files are copied here temporarily during the install process
  # For example, make DESTDIR=/tmp/asterisk woud put things in
  # /tmp/asterisk/etc/asterisk
 -DESTDIR=
-+DESTDIR=$(PREFIX)
++#DESTDIR=$(PREFIX)
  
  ASTLIBDIR=$(INSTALL_PREFIX)/usr/lib/asterisk
 -ASTVARLIBDIR=$(INSTALL_PREFIX)/var/lib/asterisk
-+ASTVARLIBDIR=$(INSTALL_PREFIX)${PREFIX}/libdata/asterisk
++ASTVARLIBDIR=$(INSTALL_PREFIX)/libdata/asterisk
  ASTETCDIR=$(INSTALL_PREFIX)/etc/asterisk
  ASTSPOOLDIR=$(INSTALL_PREFIX)/var/spool/asterisk
  ASTLOGDIR=$(INSTALL_PREFIX)/var/log/asterisk
