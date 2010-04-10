@@ -1,0 +1,4 @@
+The Perl 5 module Mixin::ExtraFields::Param mixes in to your class
+to provide a param method like the ones provided by CGI, CGI::Application,
+and other classes. It uses Mixin::ExtraFields, which means it can
+use any Mixin::ExtraFields driver to store your data.
