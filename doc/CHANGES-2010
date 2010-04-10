@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1443 2010/04/10 07:37:29 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1444 2010/04/10 08:11:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1764,3 +1764,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-File-ShareDir to 1.02 [seb 2010-04-10]
 	Added print/tex-a5comb version 4 [minskim 2010-04-10]
 	Added print/tex-a5comb-doc version 4 [minskim 2010-04-10]
+	Updated devel/p5-Scope-Guard to 0.12 [seb 2010-04-10]
