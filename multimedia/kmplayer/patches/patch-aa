@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2008/09/04 12:12:49 markd Exp $
+$NetBSD: patch-aa,v 1.6 2010/04/10 04:09:22 markd Exp $
 
---- configure.orig	2007-12-22 10:51:44.000000000 +1300
-+++ configure
-@@ -34319,7 +34319,7 @@ LIBQTDBUS=""
- LIBDBUS_CFLAGS=""
- # Check whether --enable-nspr was given.
- if test "${enable_nspr+set}" = set; then
--  enableval=$enable_nspr; if test "x$enableval" == "xno"; then
-+  enableval=$enable_nspr; if test "x$enableval" = "xno"; then
-         buildnpp=no
-     fi
- fi
-@@ -34438,7 +34438,7 @@ LIBCAIRO_LIBS=""
- LIBCAIRO_CFLAGS=""
- # Check whether --enable-cairo was given.
- if test "${enable_cairo+set}" = set; then
--  enableval=$enable_cairo; if test "x$enableval" == "xno"; then
-+  enableval=$enable_cairo; if test "x$enableval" = "xno"; then
-         hascairo=no
-     fi
- fi
+--- src/mediaobject.cpp.orig	2010-04-06 08:39:06.000000000 +0000
++++ src/mediaobject.cpp
+@@ -402,7 +402,7 @@ KDE_NO_EXPORT void MediaInfo::killWGet (
+ /**
+  * Gets contents from url and puts it in m_data
+  */
+-KDE_NO_EXPORT bool MediaInfo::wget (const QString &str) {
++bool MediaInfo::wget (const QString &str) {
+     clearData ();
+     url = str;
+ 
