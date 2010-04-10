@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/15 15:09:28 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/04/10 02:54:35 markd Exp $
 #
 
 DISTNAME=	tellico-2.2
@@ -19,6 +19,7 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	msgfmt pkg-config
 
+.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/exempi/buildlink3.mk"
 .include "../../graphics/kdegraphics4/buildlink3.mk"
