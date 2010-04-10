@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1464 2010/04/10 19:39:34 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1465 2010/04/10 19:50:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/hugin to 2010.0.0 [adam 2010-04-10]
 	Updated misc/py-anita to 1.10 [gson 2010-04-10]
 	Added www/p5-HTTP-Parser-XS version 0.07 [seb 2010-04-10]
+	Added www/p5-Net-FastCGI version 0.11 [seb 2010-04-10]
