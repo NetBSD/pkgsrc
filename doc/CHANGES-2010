@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1466 2010/04/10 20:07:37 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1467 2010/04/10 21:29:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1788,3 +1788,20 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-HTTP-Parser-XS version 0.07 [seb 2010-04-10]
 	Added www/p5-Net-FastCGI version 0.11 [seb 2010-04-10]
 	Added www/p5-CGI-Compile version 0.11 [seb 2010-04-10]
+	Added print/tex-SIstyle-doc version 2.3a [markd 2010-04-10]
+	Added print/tex-a0poster-doc version 1.22b [markd 2010-04-10]
+	Added print/tex-answers-doc version 2.12 [markd 2010-04-10]
+	Added print/tex-beamer-doc version 3.07 [markd 2010-04-10]
+	Added print/tex-datatool-doc version 2.03 [markd 2010-04-10]
+	Added print/tex-hyper-doc version 4.2d [markd 2010-04-10]
+	Added print/tex-hypernat-doc version 1.0b [markd 2010-04-10]
+	Added print/tex-mhchem-doc version 3.07 [markd 2010-04-10]
+	Added print/tex-pgfplots-doc version 1.2.2 [markd 2010-04-10]
+	Added print/tex-polytable-doc version 0.8.2 [markd 2010-04-10]
+	Added print/tex-srcltx-doc version 1.6 [markd 2010-04-10]
+	Added print/tex-substr-doc version 1.2 [markd 2010-04-10]
+	Added print/tex-texpower-doc version 0.2 [markd 2010-04-10]
+	Added print/tex-tpslifonts-doc version 0.6 [markd 2010-04-10]
+	Added print/tex-wallpaper-doc version 1.10 [markd 2010-04-10]
+	Added print/tex-xcolor-doc version 2.11 [markd 2010-04-10]
+	Added print/tex-xfor-doc version 1.05 [markd 2010-04-10]
