@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.31 2009/09/15 10:46:10 drochner Exp $
+$NetBSD: distinfo,v 1.32 2010/04/10 13:20:11 sekiya Exp $
 
-SHA1 (abcde_2.3.3.orig.tar.gz) = 76486a0bcb4ac85d052e0d244da3abbeab3c5db0
-RMD160 (abcde_2.3.3.orig.tar.gz) = a96030891e263e765cd86151ec227b1d3babbcea
-Size (abcde_2.3.3.orig.tar.gz) = 73458 bytes
-SHA1 (patch-ab) = 9fe36ee69e628a4c460dd8ee30b4e9bca29d7081
-SHA1 (patch-ac) = 1098e695035b6aeac265cdb5fa9e32580282114d
+SHA1 (abcde-2.3.99.7_p235.tar.bz2) = 51db5e7da9b3eda0844904ad2b9138fa97eeb254
+RMD160 (abcde-2.3.99.7_p235.tar.bz2) = bbb7116a8a06ffae6e0027e5a7524e023bfd71cf
+Size (abcde-2.3.99.7_p235.tar.bz2) = 171342 bytes
+SHA1 (patch-ab) = eacbb4582c8dc74c6415adbb0af387aacce81ccc
+SHA1 (patch-ac) = 5af15448067a6ee523195922b2529b99f552718b

@@ -1,103 +1,136 @@
-$NetBSD: patch-ac,v 1.23 2009/09/15 10:46:10 drochner Exp $
+$NetBSD: patch-ac,v 1.24 2010/04/10 13:20:11 sekiya Exp $
 
---- abcde.orig	2005-08-26 00:43:27.000000000 +0200
-+++ abcde
-@@ -1302,14 +1302,20 @@ do_cleancue()
- 			# FIXME It doesn't preserve spaces! Why?
- 			# FIXME parse $track into PERFORMER and TITLE - abcde already has code for this?
- 			n=1
-+			newtrack=0
- 			echo "PERFORMER \"$DARTIST\"" >> "$CUEFILE_OUT"
- 			echo "TITLE \"$DALBUM\"" >> "$CUEFILE_OUT"
- 			cat "$CUEFILE_IN" | while read line
- 			do
--				if echo "$line" | grep -q "INDEX"
-+				if echo "$line" | grep -q "TRACK"
-+				then
-+					newtrack=1
-+				fi
-+				if echo "$line" | grep -q "INDEX" && [ $newtrack = 1 ]
- 				then
- 					eval track="\$TRACK$n"
- 					n=$(expr $n + 1)
-+					newtrack=0
- 					echo "TITLE \"$track\"" >> "$CUEFILE_OUT"
- 				fi
- 				echo "$line" >> "$CUEFILE_OUT"
-@@ -1559,7 +1565,11 @@ do_cddbread ()
- do_cddbedit ()
+--- abcde.orig	2010-04-10 10:14:30.000000000 +0900
++++ abcde	2010-04-10 18:40:03.000000000 +0900
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/usr/pkg/bin/bash
+ # Copyright (c) 1998-2001 Robert Woodcock <rcw@debian.org>
+ # Copyright (c) 2003-2006 Jesus Climent <jesus.climent@hispalinux.es>
+ # This code is hereby licensed for public consumption under either the
+@@ -415,10 +415,10 @@
  {
- 	if checkstatus cddb-edit >/dev/null; then
-+		# Strip out ^M
- 		CDDBDATA="$ABCDETEMPDIR/cddbread.$(checkstatus cddb-choice)"
-+		CDDBDATATMP="$ABCDETEMPDIR/cddbread.tmp"
-+		tr -d '\r' < $CDDBDATA > $CDDBDATATMP
-+		mv $CDDBDATATMP $CDDBDATA
- 		VARIOUSARTISTS="$(checkstatus variousartists)"
- 		VARIOUSARTISTSTYLE="$(checkstatus variousartiststyle)"
- 		return 0
-@@ -1824,7 +1834,7 @@ do_cddbedit ()
- 	echo "variousartiststyle=$VARIOUSARTISTSTYLE" >> "$ABCDETEMPDIR/status"
- 
- 	if [ "$EDITCDDB" = "y" ] && [ "$UNINTENTIONALLY_ANGER_THE_FREEDB_PEOPLE" = "y" ]; then
--		if [ $CDDBDATAMD5SUM != "" ]  && [ $CDDBDATAMD5SUM != $($MD5SUM "$CDDBDATA" | cut -d " " -f 1) ]; then
-+		if [ "$CDDBDATAMD5SUM" != "" ]  && [ "$CDDBDATAMD5SUM" != "$($MD5SUM '$CDDBDATA' | cut -d' ' -f1)" ]; then
- 			# This works but does not have the necessary error checking
- 			# yet. If you are familiar with the CDDB spec
- 			# (see http://www.freedb.org/src/latest/DBFORMAT) 
-@@ -2114,7 +2124,7 @@ MD5SUM=md5sum
- DISTMP3=distmp3
- VORBISCOMMENT=vorbiscomment
- METAFLAC=metaflac
--NORMALIZE=normalize-audio
-+NORMALIZE=normalize
- CDSPEED=eject
- VORBISGAIN=vorbisgain
- MKCUE=mkcue
-@@ -2169,6 +2179,7 @@ if [ X$(uname) = "XFreeBSD" ] ; then
- 	HTTPGET=fetch
- 	NEEDCDROMID=y
- 	OSFLAVOUR=FBSD
-+	MD5SUM=md5
- elif [ X$(uname) = "XDarwin" ] ; then
- 	HTTPGET=curl
- 	OSFLAVOUR=OSX
-@@ -2178,6 +2189,9 @@ elif [ X$(uname) = "XDarwin" ] ; then
- elif [ X$(uname) = "XOpenBSD" ] ; then
- 	HTTPGET=wget
- 	MD5SUM=md5
-+elif [ X$(uname) = "XNetBSD" ] ; then
-+	HTTPGET=wget
-+	MD5SUM=md5
- else
- 	HTTPGET=wget
- fi
-@@ -2231,6 +2245,9 @@ if [ "$CDROM" = "" ] ; then
- 		CDROM=/dev/acd0c
- 	elif [ -e /dev/disk1 ]; then
- 		CDROM=/dev/disk1
-+	else
-+		RAWPART=`sysctl -n kern.rawpartition | awk '{printf "%c",97+$0}'`
-+		CDROM=/dev/rcd0$RAWPART
- 	fi
- fi
- 
-@@ -2427,7 +2444,7 @@ fi
- case "$CDROMREADERSYNTAX" in
- 	cdparanoia|debug)
- 		CDROMREADER="$CDPARANOIA"
--		CDROMREADEROPTS="$CDPARANOIAOPTS"
-+		CDROMREADEROPTS="$CDPARANOIAOPTS -g ${CDROM}"
+ 	case $1 in
+ 	TRACKNAME1)
+-		TRACKNAME="$(grep ^TTITLE$CDDBTRACKNUM= "$CDDBDATA" | head -n 1 | cut -f2- -d= | tr -d \[:cntrl:\] | sed 's/\ \+$//')"
++		TRACKNAME="$(grep ^TTITLE$CDDBTRACKNUM= "$CDDBDATA" | head -n 1 | cut -f2- -d= | tr -d \[:cntrl:\] | ${SED} 's/\ \+$//')"
  		;;
- 	cdda2wav)
- 		CDROMREADER="$CDDA2WAV"
-@@ -2681,7 +2698,8 @@ for X in $CDROMREADER $CDDISCID ${NEEDTA
- do
- 	# Cut off the command-line options we just added in
- 	X=$(echo $X | cut -d' ' -f2)
--	if [ "$(which $X)" = "" ]; then
-+	Y="$(which $X | cut -d' ' -f1,2)"
-+	if [ "$Y" = "" -o "$Y" = "no $X" ]; then
- 		echo "abcde error: $X is not in your path." >&2
- 		exit 1
- 	elif [ ! -x $(which $X) ]; then
+ 	TRACKNAME)
+-		TRACKNAME="$(grep ^TTITLE$CDDBTRACKNUM= "$CDDBDATA" | cut -f2- -d= | tr -d \[:cntrl:\] | sed 's/\ \+$//')"
++		TRACKNAME="$(grep ^TTITLE$CDDBTRACKNUM= "$CDDBDATA" | cut -f2- -d= | tr -d \[:cntrl:\] | ${SED} 's/\ \+$//')"
+ 		;;
+ 	esac
+ }
+@@ -575,32 +575,32 @@
+ 	if [ "$VARIOUSARTISTS" = "y" ] && [ ! "$ONETRACK" = "y" ]; then
+ 		case "$VARIOUSARTISTSTYLE" in
+ 		forward)
+-			DTITLEARTIST="$(echo "$TRACKNAME" | sed 's- / -~-g')"
++			DTITLEARTIST="$(echo "$TRACKNAME" | ${SED} 's- / -~-g')"
+ 			TRACKARTIST="$(echo "$DTITLEARTIST" | cut -f1 -d~)"
+ 			TRACKNAME="$(echo "$DTITLEARTIST" | cut -f2 -d~)"
+ 			;;
+ 		forward-dash)
+-			DTITLEARTIST="$(echo "$TRACKNAME" | sed 's, - ,~,g')"
++			DTITLEARTIST="$(echo "$TRACKNAME" | ${SED} 's, - ,~,g')"
+ 			TRACKARTIST="$(echo "$DTITLEARTIST" | cut -f1 -d~)"
+ 			TRACKNAME="$(echo "$DTITLEARTIST" | cut -f2 -d~)"
+ 			;;
+ 		reverse)
+-			DTITLEARTIST="$(echo "$TRACKNAME" | sed 's- / -~-g')"
++			DTITLEARTIST="$(echo "$TRACKNAME" | ${SED} 's- / -~-g')"
+ 			TRACKARTIST="$(echo "$DTITLEARTIST" | cut -f2 -d~)"
+ 			TRACKNAME="$(echo "$DTITLEARTIST" | cut -f1 -d~)"
+ 			;;
+ 		reverse-dash)
+-			DTITLEARTIST="$(echo "$TRACKNAME" | sed 's, - ,~,g')"
++			DTITLEARTIST="$(echo "$TRACKNAME" | ${SED} 's, - ,~,g')"
+ 			TRACKARTIST="$(echo "$DTITLEARTIST" | cut -f2 -d~)"
+ 			TRACKNAME="$(echo "$DTITLEARTIST" | cut -f1 -d~)"
+ 			;;
+ 		colon)
+-			DTITLEARTIST="$(echo "$TRACKNAME" | sed 's-: -~-g')"
++			DTITLEARTIST="$(echo "$TRACKNAME" | ${SED} 's-: -~-g')"
+ 			TRACKARTIST="$(echo "$DTITLEARTIST" | cut -f1 -d~)"
+ 			TRACKNAME="$(echo "$DTITLEARTIST" | cut -f2 -d~)"
+ 			;;
+ 		trailing-paren)
+-			DTITLEARTIST="$(echo "$TRACKNAME" | sed 's,^\(.*\) (\(.*\)),\1~\2,')"
++			DTITLEARTIST="$(echo "$TRACKNAME" | ${SED} 's,^\(.*\) (\(.*\)),\1~\2,')"
+ 			TRACKARTIST="$(echo "$DTITLEARTIST" | cut -f2 -d~)"
+ 			TRACKNAME="$(echo "$DTITLEARTIST" | cut -f1 -d~)"
+ 			;;
+@@ -1519,7 +1519,7 @@
+ 		if [ "$DOSPLAYLIST" = "y" ]; then
+ 			awk '{substr("\r",""); printf "%s\r\n", $0}' "$OUTPUTDIR/$PLAYLISTFILE" > "$ABCDETEMPDIR/PLAYLISTFILE.tmp"
+ #			mv -f "$ABCDETEMPDIR/PLAYLISTFILE.tmp" "$OUTPUTDIR/$PLAYLISTFILE"
+-			cat "$ABCDETEMPDIR/PLAYLISTFILE.tmp" | sed 's/\//\\/' > "$OUTPUTDIR/$PLAYLISTFILE"
++			cat "$ABCDETEMPDIR/PLAYLISTFILE.tmp" | ${SED} 's/\//\\/' > "$OUTPUTDIR/$PLAYLISTFILE"
+ 		fi
+ 		echo "playlistcomplete" >> "$ABCDETEMPDIR/status"
+ 	done
+@@ -1703,7 +1703,7 @@
+ 
+ 							#TRACKS=$(echo $CUESHEET | egrep "TRACK \+[[:digit:]]\+ \+AUDIO" |wc -l)
+ 							#TRACKS=0
+-							OFFSETTIMES=( $(echo "$CUESHEET" | sed -n -e's/\ *INDEX 01\ \+//p' ) )
++							OFFSETTIMES=( $(echo "$CUESHEET" | ${SED} -n -e's/\ *INDEX 01\ \+//p' ) )
+ 							TRACKS=${#OFFSETTIMES[@]}
+ 							unset OFFSETS
+ 							#echo "processing offsetimes ${OFFSETTIMES[@]}"
+@@ -1737,7 +1737,7 @@
+ #				CDPARANOIAAUDIOTRACKS="$TRACKS"
+ #
+ #				LEADOUT="$(echo "$CDPARANOIAOUTPUT" | egrep -o '^TOTAL[[:space:]]+([[:digit:]]+)' | get_last)"
+-#				OFFSETS="$(echo "$CDPARANOIAOUTPUT" | sed -n -e's/^ .* \([0-9]\+\) \[.*/\1/p')" 
++#				OFFSETS="$(echo "$CDPARANOIAOUTPUT" | ${SED} -n -e's/^ .* \([0-9]\+\) \[.*/\1/p')" 
+ #				makeids
+ #				;;
+ 			*)
+@@ -1831,7 +1831,7 @@
+ 		TRACKS=$(echo $TRACKINFO | cut -f2 -d' ')
+ 		# User-supplied track queue.
+ 		# Weed out non-numbers, whitespace, then sort and weed out duplicates
+-		TRACKQUEUE=$(echo $TRACKQUEUE | sed 's-[^0-9 ]--g' | tr ' ' '\n' | grep -v ^$ | sort -n | uniq | tr '\n' ' ' | sed 's- $--g')
++		TRACKQUEUE=$(echo $TRACKQUEUE | ${SED} 's-[^0-9 ]--g' | tr ' ' '\n' | grep -v ^$ | sort -n | uniq | tr '\n' ' ' | ${SED} 's- $--g')
+ 		# Once cleaned, obtain the highest value in the trackqueue for number padding
+ 		for LASTTRACK in $TRACKQUEUE; do :; done
+ 		if [ ! "$PADTRACKS" = "y" ] ; then
+@@ -2760,7 +2760,7 @@
+ 		cddafs)
+ 			# Find the track's mounted path
+ 			REALTRACKNUM=$(expr $UTRACKNUM + 0)
+-			FILEPATH=$(mount | grep "$CDROM on" | sed 's/^[^ ]* on \(.*\) (.*/\1/')
++			FILEPATH=$(mount | grep "$CDROM on" | ${SED} 's/^[^ ]* on \(.*\) (.*/\1/')
+ 			FILEPATH=$(find "$FILEPATH" | grep "/$REALTRACKNUM ");
+ 			# If the file exists, copy it
+ 			if [ -e "$FILEPATH" ] ; then
+@@ -2841,8 +2841,8 @@
+ # Custom filename munging:
+ mungefilename ()
+ {
+-	#echo "$@" | sed s,:,\ -,g | tr \ /\* __+ | tr -d \'\"\?\[:cntrl:\]
+-	echo "$@" | sed s,:,\ -,g | tr \ / __ | tr -d \'\"\?\[:cntrl:\]
++	#echo "$@" | ${SED} s,:,\ -,g | tr \ /\* __+ | tr -d \'\"\?\[:cntrl:\]
++	echo "$@" | ${SED} s,:,\ -,g | tr \ / __ | tr -d \'\"\?\[:cntrl:\]
+ }
+ 
+ # Custom genre munging:
+@@ -3037,6 +3037,9 @@
+ DEFAULT_QUALITY_HI="oggenc:-q 7,lame:--preset standard,speex:--quality 9,m4a:"
+ DEFAULT_QUALITY_XHI="oggenc:-q 10,lame:--preset extreme,speex:--quality 10,m4a:"
+ 
++# We need GNU sed
++SED=sed
++
+ # Asume fetch if under FreeBSD. curl is used for Mac OS X. wget is used for
+ # Linux/OpenBSD. ftp is user for NetBSD.
+ # Let's use these checkings to determine the OS flavour, which will be used
+@@ -3060,6 +3063,7 @@
+ 	HTTPGET=ftp
+ 	MD5SUM=md5
+ 	OSFLAVOUR=NBSD
++	SED=gsed
+ elif [ X$(uname) = "SunOS" ] ; then
+ 	HTTPGET=""
+ 	MD5SUM=md5
