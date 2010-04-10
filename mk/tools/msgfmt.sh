@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.33 2010/04/09 15:44:17 wiz Exp $
+# $NetBSD: msgfmt.sh,v 1.34 2010/04/10 00:46:23 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -84,7 +84,6 @@
 : ${CAT=cat}
 : ${MSGFMT=/usr/bin/msgfmt}
 : ${TEE=tee}
-: ${TR=tr}
 
 case "${MSGFMT}" in
 /*)	;;
@@ -163,7 +162,6 @@ if test "$pofile" != "-" -a ! -e "$pofile"; then
 fi
 
 ${CAT} $pofile | \
-${TR} -d '\015' | \
 if test "${MSGFMT_STRIP_MSGCTXT}" = "yes"; then
 	${AWK} -f ${PKGSRCDIR}/mk/tools/msgfmt-msgctxt.awk
 else
