@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9186 2010/04/10 00:57:22 obache Exp $
+$NetBSD: TODO,v 1.9187 2010/04/10 03:27:24 markd Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.8
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o akonadi-1.3.1
 	o album-4.06
 	o alee-ttf-11.2
 	o alephone-20091015 [pkg/42397]
@@ -849,8 +848,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kasumi-2.5
 	o kbibtex-0.2.2
 	o kdbg-2.2.1
-	o kde-4.4
-	o kde4-4.4.2
 	o kdrill-6.5
 	o kid3-1.4
 	o kipi-plugins-1.2.0
