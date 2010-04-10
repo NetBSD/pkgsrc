@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2010/02/10 19:17:47 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/04/10 00:57:06 obache Exp $
 
-DISTNAME=	midori-0.1.9
-PKGREVISION=	5
+DISTNAME=	midori-0.2.4
 CATEGORIES=	www
-MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.1/
+MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.twotoasts.de/index.php?/pages/midori_summary.html
@@ -18,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 REPLACE_PYTHON=		waf wscript docs/api/wscript_build
-REPLACE_PYTHON+=	katze/wscript_build extensions/wscript_build
+REPLACE_PYTHON+=	tests/wscript_build extensions/wscript_build
 REPLACE_PYTHON+=	icons/wscript_build midori/wscript_build
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.4:../../textproc/py-docutils
@@ -30,7 +29,15 @@ EGDIR=			${PREFIX}/share/examples/midori
 OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/midori
 CONF_FILES=		${EGDIR}/search ${PKG_SYSCONFDIR}/xdg/midori/search
 
-PRIVILEGED_STAGES+=	clean
+.include "../../mk/bsd.prefs.mk"
+
+# XXX arould hunk#2 of patch-aa
+PLIST_VARS+=	linux
+.if ${OPSYS} == "Linux"
+PLIST.linux=		yes
+OWN_DIRS+=		${PKG_SYSCONFDIR}/xdg/midori/extensions/libadblock.so
+CONF_FILES+=		${EGDIR}/extensions/libadblock.so/config ${PKG_SYSCONFDIR}/xdg/midori/extensions/libadblock.so/config
+.endif
 
 # XXX stupid hack. python has a marshal.h that gets included before
 # the local marshal.h
@@ -44,12 +51,11 @@ SUBST_FILES.marshal+=	katze/katze-array.c katze/katze-arrayaction.c
 SUBST_SED.marshal=	-e 's/"marshal/"marshallocal/'
 SUBST_STAGE.marshal2=	pre-configure
 SUBST_MESSAGE.marshal2=	Gross hack (part two) in progress
-SUBST_FILES.marshal2=	midori/wscript_build katze/wscript_build
+SUBST_FILES.marshal2=	midori/wscript_build
 SUBST_SED.marshal2=	-e s/\'marshal/\'marshallocal/
 
 pre-configure:
 	${MV} ${WRKSRC}/midori/marshal.list ${WRKSRC}/midori/marshallocal.list
-	${MV} ${WRKSRC}/katze/marshal.list ${WRKSRC}/katze/marshallocal.list
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"

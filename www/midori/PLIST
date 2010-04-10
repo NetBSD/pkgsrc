@@ -1,24 +1,27 @@
-@comment $NetBSD: PLIST,v 1.11 2009/08/06 06:48:11 hasso Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/04/10 00:57:06 obache Exp $
 bin/midori
 lib/midori/libadblock.so
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
 lib/midori/libfeed-panel.so
+lib/midori/libformhistory.so
 lib/midori/libmouse-gestures.so
 lib/midori/libpage-holder.so
 lib/midori/libshortcuts.so
 lib/midori/libstatusbar-features.so
 lib/midori/libtab-panel.so
+lib/midori/libtab-switcher.so
 lib/midori/libtoolbar-editor.so
+lib/midori/libweb-cache.so
 share/applications/midori.desktop
 share/doc/midori/AUTHORS
 share/doc/midori/COPYING
 share/doc/midori/ChangeLog
 share/doc/midori/EXPAT
 share/doc/midori/README
-share/doc/midori/TRANSLATE
 share/doc/midori/user/midori.html
 share/examples/midori/search
+${PLIST.linux}share/examples/midori/extensions/libadblock.so/config
 share/icons/hicolor/16x16/apps/midori.png
 share/icons/hicolor/16x16/categories/extension.png
 share/icons/hicolor/16x16/status/news-feed.png
@@ -34,6 +37,8 @@ share/icons/hicolor/32x32/status/news-feed.png
 share/icons/hicolor/48x48/apps/midori.png
 share/icons/hicolor/48x48/categories/extension.png
 share/icons/hicolor/48x48/status/news-feed.png
+share/locale/ast/LC_MESSAGES/midori.mo
+share/locale/ca/LC_MESSAGES/midori.mo
 share/locale/cs/LC_MESSAGES/midori.mo
 share/locale/da/LC_MESSAGES/midori.mo
 share/locale/de/LC_MESSAGES/midori.mo
@@ -49,9 +54,12 @@ share/locale/hu/LC_MESSAGES/midori.mo
 share/locale/id/LC_MESSAGES/midori.mo
 share/locale/it/LC_MESSAGES/midori.mo
 share/locale/ja/LC_MESSAGES/midori.mo
+share/locale/ko/LC_MESSAGES/midori.mo
 share/locale/nl/LC_MESSAGES/midori.mo
+share/locale/no/LC_MESSAGES/midori.mo
 share/locale/pl/LC_MESSAGES/midori.mo
 share/locale/pt/LC_MESSAGES/midori.mo
+share/locale/pt_BR/LC_MESSAGES/midori.mo
 share/locale/ro/LC_MESSAGES/midori.mo
 share/locale/ru/LC_MESSAGES/midori.mo
 share/locale/sk/LC_MESSAGES/midori.mo
@@ -62,6 +70,8 @@ share/locale/tr/LC_MESSAGES/midori.mo
 share/locale/uk/LC_MESSAGES/midori.mo
 share/locale/zh_CN/LC_MESSAGES/midori.mo
 share/locale/zh_TW/LC_MESSAGES/midori.mo
+share/midori/res/autosuggestcontrol.css
+share/midori/res/autosuggestcontrol.js
 share/midori/res/error.html
 share/midori/res/logo-shade.png
 share/midori/res/mootools.js

@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2009/03/18 03:14:11 snj Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/10 00:57:06 obache Exp $
 
---- wscript.orig	2009-03-17 18:29:37.000000000 -0700
-+++ wscript	2009-03-17 18:29:33.000000000 -0700
-@@ -311,7 +311,7 @@ def build (bld):
-             'AUTHORS ChangeLog COPYING EXPAT README TRANSLATE')
+--- wscript.orig	2010-03-07 21:23:04.000000000 +0000
++++ wscript
+@@ -430,7 +430,7 @@ def build (bld):
+             'AUTHORS COPYING ChangeLog EXPAT README')
  
      # Install default configuration
 -    bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + '/', 'data/search')
-+    bld.install_files ('${DESTDIR}${PREFIX}/share/examples/midori/', 'data/search')
++    bld.install_files ('${DESTDIR}${PREFIX}/share/examples/' + APPNAME + '/', 'data/search')
  
      if bld.env['RST2HTML']:
          # FIXME: Build only if needed
+@@ -515,7 +515,7 @@ def build (bld):
+                 folder = 'lib' + extension + '.so'
+                 source = 'data/extensions/' + extension +  '/config'
+                 if os.path.exists (source):
+-                    bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + \
++                    bld.install_files ('${DESTDIR}${PREFIX}/share/examples/' + APPNAME + \
+                                        '/extensions/' + folder, source)
+ 
+     if Options.commands['check']:
