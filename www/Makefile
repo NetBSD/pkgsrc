@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.709 2010/04/10 19:50:08 seb Exp $
+# $NetBSD: Makefile,v 1.710 2010/04/10 20:07:13 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -240,6 +240,7 @@ SUBDIR+=	p5-CGI-Ajax
 SUBDIR+=	p5-CGI-Application
 SUBDIR+=	p5-CGI-Application-Plugin-DBH
 SUBDIR+=	p5-CGI-Application-Plugin-ValidateRM
+SUBDIR+=	p5-CGI-Compile
 SUBDIR+=	p5-CGI-Cookie-Splitter
 SUBDIR+=	p5-CGI-FastTemplate
 SUBDIR+=	p5-CGI-FormBuilder
