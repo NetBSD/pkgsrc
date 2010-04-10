@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1459 2010/04/10 15:45:36 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1460 2010/04/10 16:09:07 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1780,3 +1780,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Module-Install-XSUtil version 0.22 [seb 2010-04-10]
 	Added devel/p5-Mixin-ExtraFields version 0.100.971 [seb 2010-04-10]
 	Added devel/p5-Mixin-ExtraFields-Param version 0.011 [seb 2010-04-10]
+	Updated mail/mutt to 1.4.2.3nb3 [tron 2010-04-10]
