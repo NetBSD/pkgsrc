@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:55:12 markd Exp $
+share/texmf-dist/doc/latex/harvard/INSTALL
+share/texmf-dist/doc/latex/harvard/README
+share/texmf-dist/doc/latex/harvard/harvard.pdf
+share/texmf-dist/doc/latex/harvard/harvard.perl
+share/texmf-dist/doc/latex/harvard/harvard.tex
+share/texmf-dist/doc/latex/harvard/manifest.txt
