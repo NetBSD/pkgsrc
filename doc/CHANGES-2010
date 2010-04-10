@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1452 2010/04/10 13:21:31 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1453 2010/04/10 13:22:30 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Plack version 0.9929 [seb 2010-04-10]
 	Added devel/p5-App-FatPacker version 0.009001 [seb 2010-04-10]
 	Updated devel/p5-local-lib to 1.6.0 [seb 2010-04-10]
+	Updated audio/abcde to 2.3.99.7 [sekiya 2010-04-10]
