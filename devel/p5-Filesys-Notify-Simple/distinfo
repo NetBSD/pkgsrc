@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/16 22:46:28 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/04/10 08:28:57 seb Exp $
 
-SHA1 (Filesys-Notify-Simple-0.05.tar.gz) = f3efbc32bb24d098af8864bf86c7ba8230cb99f9
-RMD160 (Filesys-Notify-Simple-0.05.tar.gz) = 4ea1b5cd83440462cae3131de9ea6a08a0a8d0ba
-Size (Filesys-Notify-Simple-0.05.tar.gz) = 44116 bytes
+SHA1 (Filesys-Notify-Simple-0.06.tar.gz) = 1e9a7c41d147c236e031a71b255513190a424fbe
+RMD160 (Filesys-Notify-Simple-0.06.tar.gz) = 5e3c1e61673f16a1d72cd7d2c532e04200290b54
+Size (Filesys-Notify-Simple-0.06.tar.gz) = 46661 bytes
