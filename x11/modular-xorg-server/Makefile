@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2010/04/09 09:08:13 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2010/04/10 21:30:34 tnn Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
@@ -117,6 +117,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXfont/buildlink3.mk"
