@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:03:51 markd Exp $
+share/texmf-dist/doc/latex/SIstyle/README
+share/texmf-dist/doc/latex/SIstyle/SIstyle-2.3a.pdf
+share/texmf-dist/doc/latex/SIstyle/fig1.eps
+share/texmf-dist/doc/latex/SIstyle/fig1.mps
+share/texmf-dist/doc/latex/SIstyle/fig2.eps
+share/texmf-dist/doc/latex/SIstyle/fig2.mps
+share/texmf-dist/doc/latex/SIstyle/graphs_scr.zip
