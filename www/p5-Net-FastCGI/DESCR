@@ -1,0 +1,6 @@
+The Perl 5 module Net::FastCGI aims to provide a complete API for
+working with the FastCGI protocol.  The primary goal is to provide
+a function oriented and object oriented API which are not tied to
+a specific I/O model or framework.  Secondary goal is to provide
+higher level tools/API which can be used for debugging and
+interoperability testing.
