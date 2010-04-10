@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/10 08:56:39 markd Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/10 00:11:49 markd Exp $
 
 update for modern openssl.
 use gettimeofday() rather than ftime() to prime srand().
 
---- msn/util.cpp.orig	2008-11-17 02:27:05.000000000 +1300
+--- msn/util.cpp.orig	2009-07-22 19:57:10.000000000 +0000
 +++ msn/util.cpp
 @@ -29,7 +29,7 @@
  #include <fstream>
@@ -12,9 +12,9 @@ use gettimeofday() rather than ftime() to prime srand().
 -#include <sys/timeb.h>
 +#include <sys/time.h>
  #include "md5.h"
+ #include "libsiren/siren7.h"
  
- #ifdef _WIN32
-@@ -244,15 +244,15 @@ namespace MSN 
+@@ -259,15 +259,15 @@ namespace MSN 
  
          unsigned char workvec[8];
          RAND_bytes(workvec, 8);
@@ -34,7 +34,7 @@ use gettimeofday() rather than ftime() to prime srand().
  
          unsigned char output[72];
          memset(&output,0,72);
-@@ -263,7 +263,7 @@ namespace MSN 
+@@ -278,7 +278,7 @@ namespace MSN 
          // ugly, but I think it is working properly
          std::ostringstream buf_;
          buf_ << nonce << "\x08\x08\x08\x08\x08\x08\x08\x08";
@@ -43,7 +43,7 @@ use gettimeofday() rather than ftime() to prime srand().
  
          MSGUSRKEY.uStructHeaderSize=28;
          MSGUSRKEY.uCryptMode=1;
-@@ -352,10 +352,10 @@ namespace MSN 
+@@ -367,10 +367,10 @@ namespace MSN 
  
      std::string new_branch()
      {
