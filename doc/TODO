@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9188 2010/04/10 07:24:05 seb Exp $
+$NetBSD: TODO,v 1.9189 2010/04/10 09:41:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -761,7 +761,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gst-plugins0.10-good-0.10.21
 	o gst-plugins0.10-ugly-0.10.14
 	o gstreamer0.10-0.10.28
-	o gtar-base-1.23
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk2-2.20.0
@@ -812,7 +811,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
-	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imp-4.3.6
 	o ingo-1.2.3
 	o inn-2.5.2
@@ -1449,8 +1447,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xcircuit-3.6.85
 	o xcmsdb-1.0.2 [unpackaged]
 	o xcursorgen-1.0.3
-	o xdelta-3.0w
 	o xdesktopwaves-1.3
+	o xdm-1.1.10
 	o xemacs-21.4.22
 	o xemacs-current-21.5.28
 	o xerces-c-2.9.0
