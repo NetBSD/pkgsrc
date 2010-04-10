@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/30 01:32:50 zafer Exp $
+$NetBSD: distinfo,v 1.3 2010/04/10 22:10:46 markd Exp $
 
-SHA1 (rsibreak-0.8.0.tar.bz2) = a365a810e6fd4f5482cf63499205001e817f5934
-RMD160 (rsibreak-0.8.0.tar.bz2) = bc1f696a5d2d8f88178ab39e079e22265b5b7bf5
-Size (rsibreak-0.8.0.tar.bz2) = 832998 bytes
-SHA1 (patch-aa) = 28c169b9c2820fc92a8ad2f149fc8830b1e7257b
+SHA1 (rsibreak-0.10.tar.bz2) = 39ccbfb4f325f11104910950d7c6d5428127b1e4
+RMD160 (rsibreak-0.10.tar.bz2) = 97cb329520145a842f0106408377a3e9b4d189f5
+Size (rsibreak-0.10.tar.bz2) = 397732 bytes
