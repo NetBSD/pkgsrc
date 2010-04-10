@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/27 10:38:39 markd Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/10 02:45:03 markd Exp $
 
 DISTNAME=	kdepim-runtime-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -12,6 +12,5 @@ COMMENT=	Runtime requirements for the KDE PIM tools
 
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdelibs-experimental4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

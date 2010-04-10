@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2009/11/16 08:55:06 markd Exp $
+$NetBSD: patch-aa,v 1.4 2010/04/10 02:45:05 markd Exp $
 
---- apps/konsole/src/ProcessInfo.cpp.orig	2009-10-31 01:28:19.000000000 +1300
+--- apps/konsole/src/ProcessInfo.cpp.orig	2010-03-26 17:26:32.000000000 +0000
 +++ apps/konsole/src/ProcessInfo.cpp
-@@ -685,6 +685,171 @@ private:
+@@ -894,6 +894,171 @@ private:
      }
  } ;
  
@@ -174,12 +174,12 @@ $NetBSD: patch-aa,v 1.3 2009/11/16 08:55:06 markd Exp $
  SSHProcessInfo::SSHProcessInfo(const ProcessInfo& process)
   : _process(process)
  {
-@@ -830,6 +995,8 @@ ProcessInfo* ProcessInfo::newInstance(in
+@@ -1039,6 +1204,8 @@ ProcessInfo* ProcessInfo::newInstance(in
      return new LinuxProcessInfo(pid,enableEnvironmentRead);
  #elif defined(Q_OS_SOLARIS)
      return new SolarisProcessInfo(pid,enableEnvironmentRead);
 +#elif defined(Q_OS_NETBSD)
 +    return new NetBSDProcessInfo(pid,enableEnvironmentRead);
- #else
-     return new NullProcessInfo(pid,enableEnvironmentRead);
- #endif
+ #elif defined(Q_OS_MAC)
+     return new MacProcessInfo(pid,enableEnvironmentRead);
+ #elif defined(Q_OS_FREEBSD)

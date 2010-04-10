@@ -1,14 +1,14 @@
-$NetBSD: patch-aj,v 1.1 2010/02/04 16:06:51 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2010/04/10 02:45:04 markd Exp $
 
---- drkonqi/krashconf.cpp.orig	2010-02-04 15:07:21.000000000 +0000
-+++ drkonqi/krashconf.cpp
-@@ -44,6 +44,9 @@
- #ifdef HAVE_STRSIGNAL
+--- drkonqi/crashedapplication.cpp.orig	2010-03-26 17:26:38.000000000 +0000
++++ drkonqi/crashedapplication.cpp
+@@ -23,6 +23,9 @@
  # include <clocale>
  # include <cstring>
+ # include <cstdlib>
 +extern "C" {
 +# include <unistd.h>
 +}
  #endif
  
- KrashConfig :: KrashConfig(QObject *parent)
+ CrashedApplication::CrashedApplication(QObject *parent)

@@ -1,6 +1,6 @@
-$NetBSD: patch-ca,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
+$NetBSD: patch-ca,v 1.2 2010/04/10 02:45:04 markd Exp $
 
---- libs/ksysguard/processcore/CMakeLists.txt.orig	2008-02-20 19:15:55.000000000 +0100
+--- libs/ksysguard/processcore/CMakeLists.txt.orig	2009-09-16 11:39:05.000000000 +0000
 +++ libs/ksysguard/processcore/CMakeLists.txt
 @@ -16,7 +16,7 @@ kde4_add_library(processcore SHARED ${ks
  target_link_libraries(processcore ${KDE4_KDECORE_LIBS} )
@@ -11,3 +11,14 @@ $NetBSD: patch-ca,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
  endif( ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD" )
  
  set_target_properties(processcore PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION} )
+@@ -37,6 +37,10 @@ set(ksysguardprocesslist_helper_srcs
+ 
+ kde4_add_executable(ksysguardprocesslist_helper ${ksysguardprocesslist_helper_srcs})
+ target_link_libraries(ksysguardprocesslist_helper ${KDE4_KDECORE_LIBS})
++if( ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD" )
++  message(STATUS "Adding kvm library on NetBSD")
++  target_link_libraries(ksysguardprocesslist_helper kvm)
++endif( ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD" )
+ install(TARGETS ksysguardprocesslist_helper DESTINATION ${LIBEXEC_INSTALL_DIR})
+ 
+ kde4_install_auth_helper_files(ksysguardprocesslist_helper org.kde.ksysguard.processlisthelper root)

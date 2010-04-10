@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/27 10:38:40 markd Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/10 02:45:04 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
@@ -24,7 +24,6 @@ DEPENDS+=	xine-xcb>=1.1.9:../../x11/xine-xcb
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdelibs-experimental4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 

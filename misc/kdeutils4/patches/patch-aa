@@ -1,0 +1,55 @@
+$NetBSD: patch-aa,v 1.3 2010/04/10 02:45:04 markd Exp $
+
+--- ark/plugins/libarchive/libarchivehandler.cpp.orig	2010-03-26 17:30:42.000000000 +0000
++++ ark/plugins/libarchive/libarchivehandler.cpp
+@@ -341,12 +341,16 @@ bool LibArchiveInterface::addFiles(const
+         } else if (filename().right(3).toUpper() == "BZ2") {
+             kDebug() << "Detected bzip2 compression for new file";
+             ret = archive_write_set_compression_bzip2(arch_writer);
++#ifdef ARCHIVE_COMPRESSION_XZ
+         } else if (filename().right(2).toUpper() == "XZ") {
+             kDebug() << "Detected xz compression for new file";
+             ret = archive_write_set_compression_xz(arch_writer);
++#endif
++#ifdef ARCHIVE_COMPRESSION_LZMA
+         } else if (filename().right(4).toUpper() == "LZMA") {
+             kDebug() << "Detected lzma compression for new file";
+             ret = archive_write_set_compression_lzma(arch_writer);
++#endif
+         } else if (filename().right(3).toUpper() == "TAR") {
+             kDebug() << "Detected no compression for new file (pure tar)";
+             ret = archive_write_set_compression_none(arch_writer);
+@@ -372,12 +376,16 @@ bool LibArchiveInterface::addFiles(const
+         case ARCHIVE_COMPRESSION_BZIP2:
+             ret = archive_write_set_compression_bzip2(arch_writer);
+             break;
++#ifdef ARCHIVE_COMPRESSION_XZ
+         case ARCHIVE_COMPRESSION_XZ:
+             ret = archive_write_set_compression_xz(arch_writer);
+             break;
++#endif
++#ifdef ARCHIVE_COMPRESSION_LZMA
+         case ARCHIVE_COMPRESSION_LZMA:
+             ret = archive_write_set_compression_lzma(arch_writer);
+             break;
++#endif
+         case ARCHIVE_COMPRESSION_NONE:
+             ret = archive_write_set_compression_none(arch_writer);
+             break;
+@@ -505,12 +513,16 @@ bool LibArchiveInterface::deleteFiles(co
+     case ARCHIVE_COMPRESSION_BZIP2:
+         ret = archive_write_set_compression_bzip2(arch_writer);
+         break;
++#ifdef ARCHIVE_COMPRESSION_XZ
+     case ARCHIVE_COMPRESSION_XZ:
+         ret = archive_write_set_compression_xz(arch_writer);
+         break;
++#endif
++#ifdef ARCHIVE_COMPRESSION_LZMA
+     case ARCHIVE_COMPRESSION_LZMA:
+         ret = archive_write_set_compression_lzma(arch_writer);
+         break;
++#endif
+     case ARCHIVE_COMPRESSION_NONE:
+         ret = archive_write_set_compression_none(arch_writer);
+         break;

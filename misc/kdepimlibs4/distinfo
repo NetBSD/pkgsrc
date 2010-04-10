@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/01/27 10:38:40 markd Exp $
+$NetBSD: distinfo,v 1.7 2010/04/10 02:45:03 markd Exp $
 
-SHA1 (kdepimlibs-4.3.5.tar.bz2) = 441b10fc0c89a91c447d73a68e3dc877156c5f67
-RMD160 (kdepimlibs-4.3.5.tar.bz2) = fec7cdec8b753356227fc192401a43fdd91a2bfe
-Size (kdepimlibs-4.3.5.tar.bz2) = 1781714 bytes
+SHA1 (kdepimlibs-4.4.2.tar.bz2) = 24e0a16fce05cab3ea705c948ae4d80558d5b0f4
+RMD160 (kdepimlibs-4.4.2.tar.bz2) = b228a4848b94c1b9ea54d84605e5face597df857
+Size (kdepimlibs-4.4.2.tar.bz2) = 2430259 bytes

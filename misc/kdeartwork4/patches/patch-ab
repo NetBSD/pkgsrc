@@ -1,12 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/10/02 20:47:46 markd Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/10 02:45:03 markd Exp $
 
---- kscreensaver/kxsconfig/CMakeLists.txt.orig	2009-10-01 01:02:45.000000000 +1300
+--- kscreensaver/kxsconfig/CMakeLists.txt.orig	2009-12-10 23:15:09.000000000 +0000
 +++ kscreensaver/kxsconfig/CMakeLists.txt
-@@ -46,6 +46,7 @@ foreach(_currentdesktopfile ${_desktopfi
+@@ -46,4 +46,5 @@ foreach(_currentdesktopfile ${_desktopfi
  	else(XSCREENSAVER_FILE_FOUND)
  		MESSAGE(STATUS "xscreensaver name ${_screensaverName} not found")
  	endif(XSCREENSAVER_FILE_FOUND)
 +	unset(XSCREENSAVER_FILE_FOUND CACHE)
  endforeach(_currentdesktopfile ${_desktopfiles})
- 
- 

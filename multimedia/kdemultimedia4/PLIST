@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 20:25:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/10 02:45:04 markd Exp $
 bin/dragon
 bin/juk
 bin/kmix
@@ -26,13 +26,13 @@ lib/kde4/libaudiocd_encoder_wav.so
 lib/kde4/videopreview.so
 lib/libaudiocdplugins.so
 lib/libaudiocdplugins.so.4
-lib/libaudiocdplugins.so.4.3.0
+lib/libaudiocdplugins.so.4.4.0
 lib/libkcddb.so
 lib/libkcddb.so.4
-lib/libkcddb.so.4.3.0
+lib/libkcddb.so.4.4.0
 lib/libkcompactdisc.so
 lib/libkcompactdisc.so.4
-lib/libkcompactdisc.so.4.3.0
+lib/libkcompactdisc.so.4.4.0
 lib/libkdeinit4_kmix.so
 lib/libkdeinit4_kmixctrl.so
 share/applications/kde4/dragonplayer.desktop
@@ -59,6 +59,12 @@ share/doc/kde/HTML/en/juk/juk-tag-guesser.png
 share/doc/kde/HTML/en/juk/normal-playlist.png
 share/doc/kde/HTML/en/juk/search-playlist.png
 share/doc/kde/HTML/en/juk/toolbar.png
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/common
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/index.docbook
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/kscd13.png
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/kscd14.png
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/kscd16.png
 share/doc/kde/HTML/en/kioslave/audiocd/common
 share/doc/kde/HTML/en/kioslave/audiocd/index.cache.bz2
 share/doc/kde/HTML/en/kioslave/audiocd/index.docbook
@@ -69,23 +75,6 @@ share/doc/kde/HTML/en/kmix/kmix-channel-playback.png
 share/doc/kde/HTML/en/kmix/kmix-channel-record.png
 share/doc/kde/HTML/en/kmix/kmix-channel-switches.png
 share/doc/kde/HTML/en/kmix/kmix-window.png
-share/doc/kde/HTML/en/kscd/common
-share/doc/kde/HTML/en/kscd/index.cache.bz2
-share/doc/kde/HTML/en/kscd/index.docbook
-share/doc/kde/HTML/en/kscd/kscd.png
-share/doc/kde/HTML/en/kscd/kscd11.png
-share/doc/kde/HTML/en/kscd/kscd12.png
-share/doc/kde/HTML/en/kscd/kscd13.png
-share/doc/kde/HTML/en/kscd/kscd14.png
-share/doc/kde/HTML/en/kscd/kscd16.png
-share/doc/kde/HTML/en/kscd/kscd18.png
-share/doc/kde/HTML/en/kscd/kscd19.png
-share/doc/kde/HTML/en/kscd/kscd2.png
-share/doc/kde/HTML/en/kscd/kscd3.png
-share/doc/kde/HTML/en/kscd/kscd5.png
-share/doc/kde/HTML/en/kscd/kscd6.png
-share/doc/kde/HTML/en/kscd/kscd9.png
-share/doc/kde/HTML/en/kscd/kscdannounc.png
 share/icons/hicolor/128x128/apps/dragonplayer.png
 share/icons/hicolor/128x128/apps/juk.png
 share/icons/hicolor/128x128/apps/kmix.png
@@ -129,7 +118,6 @@ share/kde/apps/kmix/kmixui.rc
 share/kde/apps/kmix/pics/kmixdocked.png
 share/kde/apps/kmix/pics/kmixdocked_error.png
 share/kde/apps/kmix/pics/kmixdocked_mute.png
-share/kde/apps/kmix/pics/mix_record.png
 share/kde/apps/kmix/pics/mixer-ac97.png
 share/kde/apps/kmix/pics/mixer-capture.png
 share/kde/apps/kmix/pics/mixer-cd.png
@@ -155,6 +143,7 @@ share/kde/apps/kscd/skin/default.svg
 share/kde/apps/profiles/kscd.profile.xml
 share/kde/apps/solid/actions/dragonplayer-opendvd.desktop
 share/kde/apps/solid/actions/kscd-play-audiocd.desktop
+share/kde/apps/solid/actions/solid_audiocd.desktop
 share/kde/apps/videothumbnail/sprocket-large.png
 share/kde/apps/videothumbnail/sprocket-medium.png
 share/kde/apps/videothumbnail/sprocket-small.png
