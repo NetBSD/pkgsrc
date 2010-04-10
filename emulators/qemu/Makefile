@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2010/02/27 23:21:13 tnn Exp $
+# $NetBSD: Makefile,v 1.65 2010/04/10 05:57:40 sbd Exp $
 #
 
 DISTNAME=		qemu-0.12.3
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
 
@@ -66,6 +67,24 @@ BUILDLINK_PASSTHRU_DIRS+= /usr/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+= /usr/lib
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
+
+UE_ARCHS+=		alpha arm armeb cris i386 m68k microblaze mips mipsel
+UE_ARCHS+=		nbd ppc ppc64 ppc64abi32 sh4 sh4eb sparc sparc32plus
+UE_ARCHS+=		sparc64 x86_64 
+
+.if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly) 
+USER_EMUL=		i386 x86_64 sparc sparc64
+.elif !empty(OPSYS:MDarwin)
+USER_EMUL=		i386 x86_64 sparc sparc64 ppc
+.elif !empty(OPSYS:MLinux) 
+USER_EMUL=		${UE_ARCHS}
+PLIST.nbd=		Yes
+.endif
+
+PLIST_VARS+=		${UE_ARCHS} nbd
+.for _var_ in ${USER_EMUL}
+PLIST.${_var_}=		Yes
+.endfor
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
