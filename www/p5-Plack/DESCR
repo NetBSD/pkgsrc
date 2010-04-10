@@ -1,0 +1,4 @@
+The Perl 5 module Plack is a set of tools for using PSGI stack. It
+contains middleware components, a reference server and utilities
+for Web application frameworks. Plack is like Ruby's Rack or Python's
+Paste for WSGI.
