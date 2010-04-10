@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/02/15 12:14:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/04/10 02:45:09 markd Exp $
 share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
 share/icons/oxygen/128x128/actions/appointment-new.png
@@ -86,6 +86,7 @@ share/icons/oxygen/128x128/actions/window-duplicate.png
 share/icons/oxygen/128x128/actions/zoom-fit-best.png
 share/icons/oxygen/128x128/actions/zoom-fit-height.png
 share/icons/oxygen/128x128/actions/zoom-fit-width.png
+share/icons/oxygen/128x128/apps/Charm.png
 share/icons/oxygen/128x128/apps/accessories-calculator.png
 share/icons/oxygen/128x128/apps/accessories-character-map.png
 share/icons/oxygen/128x128/apps/accessories-dictionary.png
@@ -94,8 +95,6 @@ share/icons/oxygen/128x128/apps/acroread.png
 share/icons/oxygen/128x128/apps/akonadi.png
 share/icons/oxygen/128x128/apps/akregator.png
 share/icons/oxygen/128x128/apps/basket.png
-share/icons/oxygen/128x128/apps/bovo.png
-share/icons/oxygen/128x128/apps/charm.png
 share/icons/oxygen/128x128/apps/clock.png
 share/icons/oxygen/128x128/apps/device-notifier.png
 share/icons/oxygen/128x128/apps/digikam.png
@@ -289,6 +288,7 @@ share/icons/oxygen/128x128/devices/phone-openmoko-freerunner.png
 share/icons/oxygen/128x128/devices/phone.png
 share/icons/oxygen/128x128/devices/printer.png
 share/icons/oxygen/128x128/devices/scanner.png
+share/icons/oxygen/128x128/devices/secure-card.png
 share/icons/oxygen/128x128/devices/video-display.png
 share/icons/oxygen/128x128/devices/video-projector.png
 share/icons/oxygen/128x128/devices/video-television.png
@@ -455,7 +455,6 @@ share/icons/oxygen/128x128/mimetypes/inode-directory.png
 share/icons/oxygen/128x128/mimetypes/message-news.png
 share/icons/oxygen/128x128/mimetypes/message-rfc822.png
 share/icons/oxygen/128x128/mimetypes/message.png
-share/icons/oxygen/128x128/mimetypes/odf.png
 share/icons/oxygen/128x128/mimetypes/package-x-generic.png
 share/icons/oxygen/128x128/mimetypes/text-calendar.png
 share/icons/oxygen/128x128/mimetypes/text-css.png
@@ -525,6 +524,7 @@ share/icons/oxygen/128x128/mimetypes/x-office-calendar.png
 share/icons/oxygen/128x128/mimetypes/x-office-document.png
 share/icons/oxygen/128x128/mimetypes/x-office-spreadsheet.png
 share/icons/oxygen/128x128/places/bookmarks.png
+share/icons/oxygen/128x128/places/certificate-server.png
 share/icons/oxygen/128x128/places/document-multiple.png
 share/icons/oxygen/128x128/places/favorites.png
 share/icons/oxygen/128x128/places/folder-blue.png
@@ -678,6 +678,12 @@ share/icons/oxygen/16x16/actions/distribute-vertical-top.png
 share/icons/oxygen/16x16/actions/distribute-vertical-y.png
 share/icons/oxygen/16x16/actions/document-close.png
 share/icons/oxygen/16x16/actions/document-decrypt.png
+share/icons/oxygen/16x16/actions/document-edit-decrypt-verify.png
+share/icons/oxygen/16x16/actions/document-edit-decrypt.png
+share/icons/oxygen/16x16/actions/document-edit-encrypt.png
+share/icons/oxygen/16x16/actions/document-edit-sign-encrypt.png
+share/icons/oxygen/16x16/actions/document-edit-sign.png
+share/icons/oxygen/16x16/actions/document-edit-verify.png
 share/icons/oxygen/16x16/actions/document-edit.png
 share/icons/oxygen/16x16/actions/document-encrypt.png
 share/icons/oxygen/16x16/actions/document-export-table.png
@@ -1068,6 +1074,14 @@ share/icons/oxygen/16x16/actions/view-calendar-week.png
 share/icons/oxygen/16x16/actions/view-calendar-whatsnext.png
 share/icons/oxygen/16x16/actions/view-calendar-workweek.png
 share/icons/oxygen/16x16/actions/view-calendar.png
+share/icons/oxygen/16x16/actions/view-certificate-add.png
+share/icons/oxygen/16x16/actions/view-certificate-export-secret.png
+share/icons/oxygen/16x16/actions/view-certificate-export-server.png
+share/icons/oxygen/16x16/actions/view-certificate-export.png
+share/icons/oxygen/16x16/actions/view-certificate-import.png
+share/icons/oxygen/16x16/actions/view-certificate-server-configure.png
+share/icons/oxygen/16x16/actions/view-certificate-sign.png
+share/icons/oxygen/16x16/actions/view-certificate.png
 share/icons/oxygen/16x16/actions/view-choose.png
 share/icons/oxygen/16x16/actions/view-close.png
 share/icons/oxygen/16x16/actions/view-file-columns.png
@@ -1150,7 +1164,6 @@ share/icons/oxygen/16x16/apps/acroread.png
 share/icons/oxygen/16x16/apps/akonadi.png
 share/icons/oxygen/16x16/apps/akregator.png
 share/icons/oxygen/16x16/apps/basket.png
-share/icons/oxygen/16x16/apps/bovo.png
 share/icons/oxygen/16x16/apps/clock.png
 share/icons/oxygen/16x16/apps/digikam.png
 share/icons/oxygen/16x16/apps/esd.png
@@ -1346,6 +1359,7 @@ share/icons/oxygen/16x16/devices/phone-openmoko-freerunner.png
 share/icons/oxygen/16x16/devices/phone.png
 share/icons/oxygen/16x16/devices/printer.png
 share/icons/oxygen/16x16/devices/scanner.png
+share/icons/oxygen/16x16/devices/secure-card.png
 share/icons/oxygen/16x16/devices/video-display.png
 share/icons/oxygen/16x16/devices/video-projector.png
 share/icons/oxygen/16x16/devices/video-television.png
@@ -1596,6 +1610,7 @@ share/icons/oxygen/16x16/mimetypes/x-office-contact.png
 share/icons/oxygen/16x16/mimetypes/x-office-document.png
 share/icons/oxygen/16x16/mimetypes/x-office-spreadsheet.png
 share/icons/oxygen/16x16/places/bookmarks.png
+share/icons/oxygen/16x16/places/certificate-server.png
 share/icons/oxygen/16x16/places/document-multiple.png
 share/icons/oxygen/16x16/places/favorites.png
 share/icons/oxygen/16x16/places/folder-blue.png
@@ -1796,8 +1811,15 @@ share/icons/oxygen/22x22/actions/distribute-vertical-top.png
 share/icons/oxygen/22x22/actions/distribute-vertical-y.png
 share/icons/oxygen/22x22/actions/document-close.png
 share/icons/oxygen/22x22/actions/document-decrypt.png
+share/icons/oxygen/22x22/actions/document-edit-decrypt-verify.png
+share/icons/oxygen/22x22/actions/document-edit-decrypt.png
+share/icons/oxygen/22x22/actions/document-edit-encrypt.png
+share/icons/oxygen/22x22/actions/document-edit-sign-encrypt.png
+share/icons/oxygen/22x22/actions/document-edit-sign.png
+share/icons/oxygen/22x22/actions/document-edit-verify.png
 share/icons/oxygen/22x22/actions/document-edit.png
 share/icons/oxygen/22x22/actions/document-encrypt.png
+share/icons/oxygen/22x22/actions/document-encrypted.png
 share/icons/oxygen/22x22/actions/document-export-table.png
 share/icons/oxygen/22x22/actions/document-export.png
 share/icons/oxygen/22x22/actions/document-import.png
@@ -2185,6 +2207,14 @@ share/icons/oxygen/22x22/actions/view-calendar-week.png
 share/icons/oxygen/22x22/actions/view-calendar-whatsnext.png
 share/icons/oxygen/22x22/actions/view-calendar-workweek.png
 share/icons/oxygen/22x22/actions/view-calendar.png
+share/icons/oxygen/22x22/actions/view-certificate-add.png
+share/icons/oxygen/22x22/actions/view-certificate-export-secret.png
+share/icons/oxygen/22x22/actions/view-certificate-export-server.png
+share/icons/oxygen/22x22/actions/view-certificate-export.png
+share/icons/oxygen/22x22/actions/view-certificate-import.png
+share/icons/oxygen/22x22/actions/view-certificate-server-configure.png
+share/icons/oxygen/22x22/actions/view-certificate-sign.png
+share/icons/oxygen/22x22/actions/view-certificate.png
 share/icons/oxygen/22x22/actions/view-choose.png
 share/icons/oxygen/22x22/actions/view-close.png
 share/icons/oxygen/22x22/actions/view-file-columns.png
@@ -2262,6 +2292,7 @@ share/icons/oxygen/22x22/animations/process-idle-kde.png
 share/icons/oxygen/22x22/animations/process-idle.png
 share/icons/oxygen/22x22/animations/process-working-kde.png
 share/icons/oxygen/22x22/animations/process-working.png
+share/icons/oxygen/22x22/apps/Charm.png
 share/icons/oxygen/22x22/apps/accessories-calculator.png
 share/icons/oxygen/22x22/apps/accessories-character-map.png
 share/icons/oxygen/22x22/apps/accessories-dictionary.png
@@ -2270,8 +2301,8 @@ share/icons/oxygen/22x22/apps/acroread.png
 share/icons/oxygen/22x22/apps/akonadi.png
 share/icons/oxygen/22x22/apps/akregator.png
 share/icons/oxygen/22x22/apps/basket.png
-share/icons/oxygen/22x22/apps/bovo.png
 share/icons/oxygen/22x22/apps/clock.png
+share/icons/oxygen/22x22/apps/device-notifier.png
 share/icons/oxygen/22x22/apps/digikam.png
 share/icons/oxygen/22x22/apps/esd.png
 share/icons/oxygen/22x22/apps/fontforge.png
@@ -2468,6 +2499,7 @@ share/icons/oxygen/22x22/devices/phone-openmoko-freerunner.png
 share/icons/oxygen/22x22/devices/phone.png
 share/icons/oxygen/22x22/devices/printer.png
 share/icons/oxygen/22x22/devices/scanner.png
+share/icons/oxygen/22x22/devices/secure-card.png
 share/icons/oxygen/22x22/devices/video-display.png
 share/icons/oxygen/22x22/devices/video-projector.png
 share/icons/oxygen/22x22/devices/video-television.png
@@ -2758,6 +2790,7 @@ share/icons/oxygen/22x22/mimetypes/x-office-contact.png
 share/icons/oxygen/22x22/mimetypes/x-office-document.png
 share/icons/oxygen/22x22/mimetypes/x-office-spreadsheet.png
 share/icons/oxygen/22x22/places/bookmarks.png
+share/icons/oxygen/22x22/places/certificate-server.png
 share/icons/oxygen/22x22/places/document-multiple.png
 share/icons/oxygen/22x22/places/favorites.png
 share/icons/oxygen/22x22/places/folder-blue.png
@@ -2886,11 +2919,11 @@ share/icons/oxygen/256x256/actions/tools-media-optical-erase.png
 share/icons/oxygen/256x256/actions/tools-media-optical-format.png
 share/icons/oxygen/256x256/actions/tools-rip-audio-cd.png
 share/icons/oxygen/256x256/actions/tools-rip-video-cd.png
+share/icons/oxygen/256x256/apps/Charm.png
 share/icons/oxygen/256x256/apps/MameExecutor.png
 share/icons/oxygen/256x256/apps/accessories-calculator.png
 share/icons/oxygen/256x256/apps/accessories-dictionary.png
 share/icons/oxygen/256x256/apps/akonadi.png
-share/icons/oxygen/256x256/apps/charm.png
 share/icons/oxygen/256x256/apps/k3b.png
 share/icons/oxygen/256x256/apps/karbon.png
 share/icons/oxygen/256x256/apps/kbruch.png
@@ -2966,6 +2999,7 @@ share/icons/oxygen/256x256/devices/network-wireless-connected-50.png
 share/icons/oxygen/256x256/devices/network-wireless-connected-75.png
 share/icons/oxygen/256x256/devices/network-wireless-disconnected.png
 share/icons/oxygen/256x256/devices/network-wireless.png
+share/icons/oxygen/256x256/devices/secure-card.png
 share/icons/oxygen/256x256/devices/video-display.png
 share/icons/oxygen/256x256/mimetypes/application-javascript.png
 share/icons/oxygen/256x256/mimetypes/application-msword.png
@@ -3066,6 +3100,7 @@ share/icons/oxygen/256x256/mimetypes/text-x-tex.png
 share/icons/oxygen/256x256/mimetypes/text-xml.png
 share/icons/oxygen/256x256/mimetypes/unknown.png
 share/icons/oxygen/256x256/mimetypes/video-x-generic.png
+share/icons/oxygen/256x256/places/certificate-server.png
 share/icons/oxygen/256x256/places/favorites.png
 share/icons/oxygen/256x256/places/folder-blue.png
 share/icons/oxygen/256x256/places/folder-brown.png
@@ -3176,8 +3211,15 @@ share/icons/oxygen/32x32/actions/distribute-vertical-top.png
 share/icons/oxygen/32x32/actions/distribute-vertical-y.png
 share/icons/oxygen/32x32/actions/document-close.png
 share/icons/oxygen/32x32/actions/document-decrypt.png
+share/icons/oxygen/32x32/actions/document-edit-decrypt-verify.png
+share/icons/oxygen/32x32/actions/document-edit-decrypt.png
+share/icons/oxygen/32x32/actions/document-edit-encrypt.png
+share/icons/oxygen/32x32/actions/document-edit-sign-encrypt.png
+share/icons/oxygen/32x32/actions/document-edit-sign.png
+share/icons/oxygen/32x32/actions/document-edit-verify.png
 share/icons/oxygen/32x32/actions/document-edit.png
 share/icons/oxygen/32x32/actions/document-encrypt.png
+share/icons/oxygen/32x32/actions/document-encrypted.png
 share/icons/oxygen/32x32/actions/document-export-table.png
 share/icons/oxygen/32x32/actions/document-export.png
 share/icons/oxygen/32x32/actions/document-import.png
@@ -3550,6 +3592,14 @@ share/icons/oxygen/32x32/actions/view-calendar-week.png
 share/icons/oxygen/32x32/actions/view-calendar-whatsnext.png
 share/icons/oxygen/32x32/actions/view-calendar-workweek.png
 share/icons/oxygen/32x32/actions/view-calendar.png
+share/icons/oxygen/32x32/actions/view-certificate-add.png
+share/icons/oxygen/32x32/actions/view-certificate-export-secret.png
+share/icons/oxygen/32x32/actions/view-certificate-export-server.png
+share/icons/oxygen/32x32/actions/view-certificate-export.png
+share/icons/oxygen/32x32/actions/view-certificate-import.png
+share/icons/oxygen/32x32/actions/view-certificate-server-configure.png
+share/icons/oxygen/32x32/actions/view-certificate-sign.png
+share/icons/oxygen/32x32/actions/view-certificate.png
 share/icons/oxygen/32x32/actions/view-choose.png
 share/icons/oxygen/32x32/actions/view-close.png
 share/icons/oxygen/32x32/actions/view-file-columns.png
@@ -3625,6 +3675,7 @@ share/icons/oxygen/32x32/actions/zoom-original.png
 share/icons/oxygen/32x32/actions/zoom-out.png
 share/icons/oxygen/32x32/animations/process-idle-kde.png
 share/icons/oxygen/32x32/animations/process-working-kde.png
+share/icons/oxygen/32x32/apps/Charm.png
 share/icons/oxygen/32x32/apps/accessories-calculator.png
 share/icons/oxygen/32x32/apps/accessories-character-map.png
 share/icons/oxygen/32x32/apps/accessories-dictionary.png
@@ -3634,7 +3685,6 @@ share/icons/oxygen/32x32/apps/akonadi.png
 share/icons/oxygen/32x32/apps/akregator.png
 share/icons/oxygen/32x32/apps/application-sxw.png
 share/icons/oxygen/32x32/apps/basket.png
-share/icons/oxygen/32x32/apps/bovo.png
 share/icons/oxygen/32x32/apps/clock.png
 share/icons/oxygen/32x32/apps/device-notifier.png
 share/icons/oxygen/32x32/apps/digikam.png
@@ -3838,6 +3888,7 @@ share/icons/oxygen/32x32/devices/phone-openmoko-freerunner.png
 share/icons/oxygen/32x32/devices/phone.png
 share/icons/oxygen/32x32/devices/printer.png
 share/icons/oxygen/32x32/devices/scanner.png
+share/icons/oxygen/32x32/devices/secure-card.png
 share/icons/oxygen/32x32/devices/video-display.png
 share/icons/oxygen/32x32/devices/video-projector.png
 share/icons/oxygen/32x32/devices/video-television.png
@@ -4089,6 +4140,7 @@ share/icons/oxygen/32x32/mimetypes/x-office-contact.png
 share/icons/oxygen/32x32/mimetypes/x-office-document.png
 share/icons/oxygen/32x32/mimetypes/x-office-spreadsheet.png
 share/icons/oxygen/32x32/places/bookmarks.png
+share/icons/oxygen/32x32/places/certificate-server.png
 share/icons/oxygen/32x32/places/document-multiple.png
 share/icons/oxygen/32x32/places/favorites.png
 share/icons/oxygen/32x32/places/folder-blue.png
@@ -4270,8 +4322,15 @@ share/icons/oxygen/48x48/actions/dialog-ok-apply.png
 share/icons/oxygen/48x48/actions/dialog-ok.png
 share/icons/oxygen/48x48/actions/document-close.png
 share/icons/oxygen/48x48/actions/document-decrypt.png
+share/icons/oxygen/48x48/actions/document-edit-decrypt-verify.png
+share/icons/oxygen/48x48/actions/document-edit-decrypt.png
+share/icons/oxygen/48x48/actions/document-edit-encrypt.png
+share/icons/oxygen/48x48/actions/document-edit-sign-encrypt.png
+share/icons/oxygen/48x48/actions/document-edit-sign.png
+share/icons/oxygen/48x48/actions/document-edit-verify.png
 share/icons/oxygen/48x48/actions/document-edit.png
 share/icons/oxygen/48x48/actions/document-encrypt.png
+share/icons/oxygen/48x48/actions/document-encrypted.png
 share/icons/oxygen/48x48/actions/document-export-table.png
 share/icons/oxygen/48x48/actions/document-export.png
 share/icons/oxygen/48x48/actions/document-import.png
@@ -4622,6 +4681,14 @@ share/icons/oxygen/48x48/actions/view-calendar-week.png
 share/icons/oxygen/48x48/actions/view-calendar-whatsnext.png
 share/icons/oxygen/48x48/actions/view-calendar-workweek.png
 share/icons/oxygen/48x48/actions/view-calendar.png
+share/icons/oxygen/48x48/actions/view-certificate-add.png
+share/icons/oxygen/48x48/actions/view-certificate-export-secret.png
+share/icons/oxygen/48x48/actions/view-certificate-export-server.png
+share/icons/oxygen/48x48/actions/view-certificate-export.png
+share/icons/oxygen/48x48/actions/view-certificate-import.png
+share/icons/oxygen/48x48/actions/view-certificate-server-configure.png
+share/icons/oxygen/48x48/actions/view-certificate-sign.png
+share/icons/oxygen/48x48/actions/view-certificate.png
 share/icons/oxygen/48x48/actions/view-choose.png
 share/icons/oxygen/48x48/actions/view-close.png
 share/icons/oxygen/48x48/actions/view-file-columns.png
@@ -4695,6 +4762,7 @@ share/icons/oxygen/48x48/actions/zoom-original.png
 share/icons/oxygen/48x48/actions/zoom-out.png
 share/icons/oxygen/48x48/animations/process-idle-kde.png
 share/icons/oxygen/48x48/animations/process-working-kde.png
+share/icons/oxygen/48x48/apps/Charm.png
 share/icons/oxygen/48x48/apps/accessories-calculator.png
 share/icons/oxygen/48x48/apps/accessories-character-map.png
 share/icons/oxygen/48x48/apps/accessories-dictionary.png
@@ -4703,7 +4771,6 @@ share/icons/oxygen/48x48/apps/acroread.png
 share/icons/oxygen/48x48/apps/akonadi.png
 share/icons/oxygen/48x48/apps/akregator.png
 share/icons/oxygen/48x48/apps/basket.png
-share/icons/oxygen/48x48/apps/bovo.png
 share/icons/oxygen/48x48/apps/clock.png
 share/icons/oxygen/48x48/apps/digikam.png
 share/icons/oxygen/48x48/apps/esd.png
@@ -4906,6 +4973,7 @@ share/icons/oxygen/48x48/devices/phone-openmoko-freerunner.png
 share/icons/oxygen/48x48/devices/phone.png
 share/icons/oxygen/48x48/devices/printer.png
 share/icons/oxygen/48x48/devices/scanner.png
+share/icons/oxygen/48x48/devices/secure-card.png
 share/icons/oxygen/48x48/devices/video-display.png
 share/icons/oxygen/48x48/devices/video-projector.png
 share/icons/oxygen/48x48/devices/video-television.png
@@ -5147,6 +5215,7 @@ share/icons/oxygen/48x48/mimetypes/x-office-contact.png
 share/icons/oxygen/48x48/mimetypes/x-office-document.png
 share/icons/oxygen/48x48/mimetypes/x-office-spreadsheet.png
 share/icons/oxygen/48x48/places/bookmarks.png
+share/icons/oxygen/48x48/places/certificate-server.png
 share/icons/oxygen/48x48/places/document-multiple.png
 share/icons/oxygen/48x48/places/favorites.png
 share/icons/oxygen/48x48/places/folder-blue.png
@@ -5350,6 +5419,7 @@ share/icons/oxygen/64x64/actions/window-duplicate.png
 share/icons/oxygen/64x64/actions/zoom-fit-best.png
 share/icons/oxygen/64x64/actions/zoom-fit-height.png
 share/icons/oxygen/64x64/actions/zoom-fit-width.png
+share/icons/oxygen/64x64/apps/Charm.png
 share/icons/oxygen/64x64/apps/accessories-calculator.png
 share/icons/oxygen/64x64/apps/accessories-character-map.png
 share/icons/oxygen/64x64/apps/accessories-dictionary.png
@@ -5358,8 +5428,6 @@ share/icons/oxygen/64x64/apps/acroread.png
 share/icons/oxygen/64x64/apps/akonadi.png
 share/icons/oxygen/64x64/apps/akregator.png
 share/icons/oxygen/64x64/apps/basket.png
-share/icons/oxygen/64x64/apps/bovo.png
-share/icons/oxygen/64x64/apps/charm.png
 share/icons/oxygen/64x64/apps/clock.png
 share/icons/oxygen/64x64/apps/digikam.png
 share/icons/oxygen/64x64/apps/esd.png
@@ -5714,7 +5782,6 @@ share/icons/oxygen/64x64/mimetypes/inode-directory.png
 share/icons/oxygen/64x64/mimetypes/message-news.png
 share/icons/oxygen/64x64/mimetypes/message-rfc822.png
 share/icons/oxygen/64x64/mimetypes/message.png
-share/icons/oxygen/64x64/mimetypes/odf.png
 share/icons/oxygen/64x64/mimetypes/package-x-generic.png
 share/icons/oxygen/64x64/mimetypes/text-calendar.png
 share/icons/oxygen/64x64/mimetypes/text-css.png
@@ -5784,6 +5851,7 @@ share/icons/oxygen/64x64/mimetypes/x-office-calendar.png
 share/icons/oxygen/64x64/mimetypes/x-office-document.png
 share/icons/oxygen/64x64/mimetypes/x-office-spreadsheet.png
 share/icons/oxygen/64x64/places/bookmarks.png
+share/icons/oxygen/64x64/places/certificate-server.png
 share/icons/oxygen/64x64/places/document-multiple.png
 share/icons/oxygen/64x64/places/favorites.png
 share/icons/oxygen/64x64/places/folder-blue.png

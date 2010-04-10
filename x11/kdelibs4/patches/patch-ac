@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
+$NetBSD: patch-ac,v 1.3 2010/04/10 02:45:05 markd Exp $
 
---- kio/kssl/kopenssl.cpp.ORIG	2008-10-23 12:05:00.000000000 +1300
+--- kio/kssl/kopenssl.cpp.orig	2009-11-13 10:59:08.000000000 +0000
 +++ kio/kssl/kopenssl.cpp
 @@ -236,7 +236,7 @@ void KOpenSSLProxy::destroy() {
     delete x;
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
                 if (!ok)
                         continue;
                 int min = numberpart.mid(endmaj+1).toInt(&ok);
-@@ -295,54 +305,23 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -295,49 +305,23 @@ KOpenSSLProxy::KOpenSSLProxy()
     if (!upath.isEmpty())
        libpaths << upath;
  
@@ -59,19 +59,14 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
 -   }
 -#elif defined(__CYGWIN__)
 -   libpaths << "/usr/bin/"
--   		<< "/usr/local/bin"
--   		<< "/usr/local/openssl/bin"
--   		<< "/opt/openssl/bin"
--   		<< "/opt/kde3/bin"
 -   		<< "";
 -
--   libnamess << "cygssl-0.9.7.dll"
--		 << "cygssl.dll"
--		 << "libssl.dll"
+-   libnamess << "cygssl-0.9.8.dll"
+-		 << "cygssl-0.9.7.dll"
 -		 << "";
 -
--   libnamesc << "cygcrypto.dll"
--		 << "libcrypto.dll"
+-   libnamesc << "cygcrypto-0.9.8.dll"
+-		 << "cygcrypto-0.9.7.dll"
 -		 << "";
 -#else
     libpaths
@@ -96,7 +91,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
  // FIXME: #define here for the various OS types to optimize
     libnamess
  	     #ifdef hpux
-@@ -357,8 +336,12 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -352,8 +336,12 @@ KOpenSSLProxy::KOpenSSLProxy()
               << "libssl.so." SHLIB_VERSION_NUMBER
               #endif
               << "libssl.so"
@@ -109,7 +104,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
  	     ;
  
     libnamesc
-@@ -374,7 +357,11 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -369,7 +357,11 @@ KOpenSSLProxy::KOpenSSLProxy()
               << "libcrypto.so." SHLIB_VERSION_NUMBER
               #endif
               << "libcrypto.so"
@@ -121,7 +116,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
               #endif
  	     ;
  #endif
-@@ -382,6 +369,17 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -377,6 +369,17 @@ KOpenSSLProxy::KOpenSSLProxy()
     for (QStringList::const_iterator it = libpaths.constBegin();
                                it != libpaths.constEnd();
                                ++it) {
@@ -139,7 +134,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
        for (QStringList::const_iterator shit = libnamesc.constBegin();
                                   shit != libnamesc.constEnd();
                                   ++shit) {
-@@ -404,6 +402,7 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -399,6 +402,7 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->cryptoLib = 0;
           }
        }
@@ -147,7 +142,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
        if (d->cryptoLib) break;
     }
  
-@@ -533,28 +532,20 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -528,28 +532,20 @@ KOpenSSLProxy::KOpenSSLProxy()
  #endif
     }
  
@@ -187,7 +182,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
        for (QStringList::const_iterator shit = libnamess.constBegin();
                                   shit != libnamess.constEnd();
                                   ++shit) {
-@@ -576,9 +567,9 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -571,9 +567,9 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->sslLib = 0;
           }
        }

@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2010/04/10 02:45:03 markd Exp $
+
+--- kig/objects/object_factory.cc.orig	2010-04-05 12:37:32.000000000 +0000
++++ kig/objects/object_factory.cc
+@@ -40,6 +40,10 @@
+ #include <functional>
+ #include <limits>
+ 
++#ifdef __NetBSD__
++#define fmin(a,b) ((a) < (b) ? (a) : (b))
++#endif
++
+ ObjectHolder* ObjectFactory::fixedPoint( const Coordinate& c ) const
+ {
+   ObjectHolder* o = new ObjectHolder( fixedPointCalcer( c ) );

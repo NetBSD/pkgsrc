@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/27 10:38:41 markd Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/10 02:45:04 markd Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -40,9 +40,12 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../misc/attica/buildlink3.mk"
+.include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
-.include "../../x11/kdelibs-experimental4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

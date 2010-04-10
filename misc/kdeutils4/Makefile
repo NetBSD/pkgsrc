@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/03/24 19:43:27 asau Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/10 02:45:04 markd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Utilities for the KDE integrated X11 desktop
 
@@ -18,6 +17,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
@@ -26,7 +26,6 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../print/py-cups/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdelibs-experimental4/buildlink3.mk"
 .include "../../x11/kdebase4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
 .include "../../x11/kdebase-workspace4/buildlink3.mk"

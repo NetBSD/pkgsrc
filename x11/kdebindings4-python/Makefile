@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2010/02/10 19:17:48 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/04/10 02:45:05 markd Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
-PKGREVISION=	2
 DISTNAME=	kdebindings-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	Python bindings for the KDE integrated X11 desktop
@@ -10,6 +9,8 @@ COMMENT=	Python bindings for the KDE integrated X11 desktop
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
+CMAKE_ARGS+=	-DBUILD_smoke=OFF -DBUILD_ruby=OFF -DBUILD_php=OFF 
+CMAKE_ARGS+=	-DBUILD_java=OFF -DBUILD_falcon=OFF -DBUILD_csharp=OFF
 CMAKE_ARGS+=	-DENABLE_SMOKE=off
 CMAKE_ARGS+=	-DENABLE_QYOTO=off
 CMAKE_ARGS+=	-DENABLE_QTRUBY=off -DENABLE_KORUNDUM=off
@@ -23,10 +24,6 @@ PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 post-extract:
 	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
-
-# for patch-ac:
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.6/PyKDE4/kdecore/typedefs.sip.orig
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

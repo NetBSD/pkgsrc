@@ -1,98 +1,12 @@
-$NetBSD: patch-ac,v 1.2 2010/02/07 15:26:40 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2010/04/10 02:45:05 markd Exp $
 
-http://websvn.kde.org/trunk/KDE/kdebindings/python/pykde4/sip/kdecore/typedefs.sip?r1=1061966&r2=1064763&view=patch
-
---- python/pykde4/sip/kdecore/typedefs.sip.orig	2009-10-02 08:21:29.000000000 +0000
-+++ python/pykde4/sip/kdecore/typedefs.sip
-@@ -466,91 +466,6 @@ template <TYPE1,TYPE2*>
- %End
- };
+--- CMakeLists.txt.orig	2010-04-04 12:10:19.000000000 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(kdebindings)
  
--
--template <TYPE*>
--%MappedType QSet<TYPE*>
--{
--%TypeHeaderCode
--#include <qset.h>
--%End
--
--%ConvertFromTypeCode
--    // Create the list.
--    PyObject *l;
--
--    if ((l = PyList_New(sipCpp->size())) == NULL)
--        return NULL;
--
--    // Set the list elements.
--    QSet<TYPE*> set = *sipCpp;
--    int i = 0;
--    foreach ((TYPE *)value, set)
--    {
--        PyObject *obj = sipConvertFromNewType(value, sipType_TYPE, sipTransferObj);
--        if (obj == NULL || PyList_SET_ITEM (l, i, obj) < 0)
--        {
--            Py_DECREF(l);
--
--            if (obj)
--                Py_DECREF(obj);
--
--            return NULL;
--        }
--
--        Py_DECREF(obj);
--        i++;
--    }
--   
--    return l;
--%End
--
--%ConvertToTypeCode
--    // Check the type if that is all that is required.
--    if (sipIsErr == NULL)
--    {
--        if (!PyList_Check(sipPy))
--            return 0;
--    }
--
--    // Check the type if that is all that is required.
--    if (sipIsErr == NULL)
--    {
--        if (!PyList_Check(sipPy))
--            return 0;
--
--        for (int i = 0; i < PyList_GET_SIZE(sipPy); ++i)
--            if (!sipCanConvertToType(PyList_GET_ITEM (sipPy, i), sipType_TYPE, SIP_NOT_NONE))
--                return 0;
--    }
--
--    QSet<TYPE*> *qs = new QSet<TYPE*>;
-- 
--    for (int i = 0; i < PyList_GET_SIZE(sipPy); ++i)
--    {
--        int state;
--
--        TYPE *t = reinterpret_cast<TYPE *>(sipConvertToType(PyList_GET_ITEM (l, i), sipType_TYPE, sipTransferObj, SIP_NOT_NONE, &state, sipIsErr));
-- 
--        if (*sipIsErr)
--        {
--            sipReleaseType(t, sipType_TYPE, state);
--
--            delete qs;
--            return 0;
--        }
--
--        *qs << t;
--
--        sipReleaseType(t, sipType_TYPE, state);
--    }
-- 
--    *sipCppPtr = qs;
-- 
--    return sipGetState(sipTransferObj);
--%End
--};
--
--
- template <TYPE>
- %MappedType QSet<TYPE>
- {
+-add_subdirectory(generator)
++#add_subdirectory(generator)
+ 
+ # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/modules )
