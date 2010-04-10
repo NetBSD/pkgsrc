@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9187 2010/04/10 03:27:24 markd Exp $
+$NetBSD: TODO,v 1.9188 2010/04/10 07:24:05 seb Exp $
 
 Suggested new packages
 ======================
@@ -1090,7 +1090,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-IO-Socket-INET6-2.61
 	o p5-IO-Socket-SSL-1.33
 	o p5-JSON-2.20
-	o p5-Module-Install-0.95
 	o p5-Module-Signature-0.63
 	o p5-Mouse-0.52
 	o p5-POE-1.289 [pkg/43115]
