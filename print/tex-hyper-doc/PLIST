@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:11:51 markd Exp $
+share/texmf-dist/doc/latex/hyper/README
+share/texmf-dist/doc/latex/hyper/TODO
+share/texmf-dist/doc/latex/hyper/contrib/README
+share/texmf-dist/doc/latex/hyper/contrib/harvard-to.hyp
+share/texmf-dist/doc/latex/hyper/defpattern.sty
+share/texmf-dist/doc/latex/hyper/hyper.pdf
+share/texmf-dist/doc/latex/hyper/scontrib/README
+share/texmf-dist/doc/latex/hyper/scontrib/harvard.hyp
