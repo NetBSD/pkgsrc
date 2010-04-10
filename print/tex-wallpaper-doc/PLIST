@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:20:26 markd Exp $
+share/texmf-dist/doc/latex/wallpaper/README
+share/texmf-dist/doc/latex/wallpaper/example/TGTamber.png
+share/texmf-dist/doc/latex/wallpaper/example/auto/example.el
+share/texmf-dist/doc/latex/wallpaper/example/example.tex
+share/texmf-dist/doc/latex/wallpaper/example/hya.png
+share/texmf-dist/doc/latex/wallpaper/wallpapermanual.pdf
