@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2010/04/09 08:41:23 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2010/04/10 21:09:21 tnn Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libXtst
 .if !defined(LIBXTST_BUILDLINK3_MK)
 LIBXTST_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libXtst+=	libXtst>=1.1.0
+BUILDLINK_API_DEPENDS.libXtst+=	libXtst>=1.0.1
 BUILDLINK_PKGSRCDIR.libXtst?=	../../x11/libXtst
 
 .include "../../x11/recordproto/buildlink3.mk"
