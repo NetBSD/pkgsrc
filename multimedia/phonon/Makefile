@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2010/01/18 09:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/10 00:18:13 markd Exp $
 
-DISTNAME=	phonon-4.3.1
-PKGREVISION=	2
+DISTNAME=	phonon-4.4.0
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=../Attic/4.2.1/src/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.4.0/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://phonon.kde.org
 COMMENT=	Multimedia API for KDE and QT
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,11 +17,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 DEPENDS+=	xine-xcb>=1.1.9:../../x11/xine-xcb
 
+WRKSRC=		${WRKDIR}/phonon-4.4
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
+CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
 
 PKGCONFIG_OVERRIDE+=	phonon.pc.cmake
 
