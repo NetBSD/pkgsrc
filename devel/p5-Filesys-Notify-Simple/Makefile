@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/16 22:46:28 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/10 08:28:57 seb Exp $
 #
 
-DISTNAME=		Filesys-Notify-Simple-0.05
+DISTNAME=		Filesys-Notify-Simple-0.06
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Filesys/}
