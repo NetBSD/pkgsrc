@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1442 2010/04/10 07:33:01 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1443 2010/04/10 07:37:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1762,3 +1762,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-Install to 0.95 [seb 2010-04-10]
 	Updated devel/p5-Test-Requires to 0.05 [seb 2010-04-10]
 	Updated devel/p5-File-ShareDir to 1.02 [seb 2010-04-10]
+	Added print/tex-a5comb version 4 [minskim 2010-04-10]
+	Added print/tex-a5comb-doc version 4 [minskim 2010-04-10]
