@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1438 2010/04/10 07:12:00 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1439 2010/04/10 07:12:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1758,3 +1758,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/kmplayer to 0.11.2a [markd 2010-04-10]
 	Updated emulators/qemu to 0.12.3nb1 [sbd 2010-04-10]
 	Updated devel/p5-Class-MOP to 1.00 [seb 2010-04-10]
+	Updated devel/p5-Moose to 1.01 [seb 2010-04-10]
