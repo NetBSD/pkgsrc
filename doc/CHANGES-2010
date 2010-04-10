@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1445 2010/04/10 08:18:13 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1446 2010/04/10 08:26:04 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1766,3 +1766,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-a5comb-doc version 4 [minskim 2010-04-10]
 	Updated devel/p5-Scope-Guard to 0.12 [seb 2010-04-10]
 	Added devel/p5-Hash-MultiValue version 0.08 [seb 2010-04-10]
+	Updated devel/p5-Devel-StackTrace-AsHTML to 0.09 [seb 2010-04-10]
