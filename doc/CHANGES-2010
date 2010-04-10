@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1460 2010/04/10 16:09:07 tron Exp $
+$NetBSD: CHANGES-2010,v 1.1461 2010/04/10 16:20:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1781,3 +1781,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Mixin-ExtraFields version 0.100.971 [seb 2010-04-10]
 	Added devel/p5-Mixin-ExtraFields-Param version 0.011 [seb 2010-04-10]
 	Updated mail/mutt to 1.4.2.3nb3 [tron 2010-04-10]
+	Updated print/tex-pgf to 2.00nb1 [minskim 2010-04-10]
+	Added print/tex-pgf-doc version 2.00 [minskim 2010-04-10]
