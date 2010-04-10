@@ -1,0 +1,4 @@
+The Perl 5 module Hash::MultiValue provides objects (and plain hash
+references) that may contain multiple values per key. The objects
+behave like single-value hash references, but also provide an API
+to retrieve multiple values explicitly on demand.
