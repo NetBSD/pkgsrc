@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2010/01/27 10:38:41 markd Exp $
+$NetBSD: distinfo,v 1.6 2010/04/10 02:45:04 markd Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -9,9 +9,9 @@ Size (Daemon.png) = 15725 bytes
 SHA1 (NetBSD-flag-1.0.png) = a9cf264a52ae0a602eec956d91222e299c7dee5c
 RMD160 (NetBSD-flag-1.0.png) = 2eac20df70396169819059a704e6a85ae10234b0
 Size (NetBSD-flag-1.0.png) = 4532 bytes
-SHA1 (kdebase-workspace-4.3.5.tar.bz2) = 703582cb8a3471c5821986dbdfc3c6deedac0ff3
-RMD160 (kdebase-workspace-4.3.5.tar.bz2) = dcf04a40412ba236365423afc877ea0c2066f972
-Size (kdebase-workspace-4.3.5.tar.bz2) = 62525359 bytes
+SHA1 (kdebase-workspace-4.4.2.tar.bz2) = 5fd38e48c6ddcf551bb49cf8841ba23b7682ee5b
+RMD160 (kdebase-workspace-4.4.2.tar.bz2) = 0558ff2102cb380127667a94b69ccb90f656266c
+Size (kdebase-workspace-4.4.2.tar.bz2) = 77039701 bytes
 SHA1 (patch-ab) = a1dc303cdb27bb4cb3067d347baedabefbca8353
 SHA1 (patch-ac) = 5420c39a055e6208097cf48db5513f7c9db09bef
 SHA1 (patch-ad) = ac0907cc59c5f0976cdbe152bb7fb0a4592bbe84
@@ -23,4 +23,5 @@ SHA1 (patch-bc) = c4fabab37cc4cb70b974a9455c2d640b3bd63fd7
 SHA1 (patch-bd) = 9d02eaa299847ac32a128696bb6d35f73bae0551
 SHA1 (patch-be) = e58dc4a0a7be7350251f26de34a8949e7508c983
 SHA1 (patch-bo) = e682d488c61ca2540ed4b2112c9bffc45bbe5e8d
-SHA1 (patch-ca) = 878a7fc7580fbd0f3abd8daa132d4c4045f3e19e
+SHA1 (patch-ca) = b3d200ce844ae596f1e421fd10b163a47b19258d
+SHA1 (patch-cb) = 3d4dc2027adb5759f1d16ab144652484a71f606b

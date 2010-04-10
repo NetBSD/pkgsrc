@@ -1,0 +1,20 @@
+$NetBSD: patch-cb,v 1.1 2010/04/10 02:45:04 markd Exp $
+
+--- libs/ksysguard/processcore/processes.cpp.orig	2010-02-26 18:32:17.000000000 +0000
++++ libs/ksysguard/processcore/processes.cpp
+@@ -277,6 +277,7 @@ bool Processes::updateProcessInfo(Proces
+             }
+         }
+         if(d->mUpdateFlags.testFlag(Processes::IOStatistics)) {
++#ifndef Q_OS_NETBSD
+             if( d->mHavePreviousIoValues ) {
+                 ps->setIoCharactersReadRate((ps->ioCharactersRead - oldIoCharactersRead) * 1000.0 / elapsedTime);
+                 ps->setIoCharactersWrittenRate((ps->ioCharactersWritten - oldIoCharactersWritten) * 1000.0 / elapsedTime);
+@@ -286,6 +287,7 @@ bool Processes::updateProcessInfo(Proces
+                 ps->setIoCharactersActuallyWrittenRate((ps->ioCharactersActuallyWritten - oldIoCharactersActuallyWritten) * 1000.0 / elapsedTime);
+             } else
+                 d->mHavePreviousIoValues = true;
++#endif
+         } else if(d->mHavePreviousIoValues) {
+             d->mHavePreviousIoValues = false;
+             ps->setIoCharactersReadRate(0);

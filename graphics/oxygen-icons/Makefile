@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2010/02/15 12:14:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/10 02:45:09 markd Exp $
 
-DISTNAME=	oxygen-icons-4.3.5
-PKGREVISION=	1
+DISTNAME=	oxygen-icons-4.4.2
 CATEGORIES=	graphics kde
-MASTER_SITES=	${MASTER_SITE_KDE:=4.3.5/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=4.4.2/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Oxygen icon set for the KDE integrated X11 desktop
 LICENSE=	gnu-lgpl-v3
-
-# remove on update!
-DIST_SUBDIR=	oxygen-icons-4.3.5-nokpgp
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
