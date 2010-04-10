@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1436 2010/04/10 04:14:19 markd Exp $
+$NetBSD: CHANGES-2010,v 1.1437 2010/04/10 06:28:01 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1756,3 +1756,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/konq-plugins to 4.4.0 [markd 2010-04-10]
 	Moved multimedia/kmplayer to multimedia/kmplayer-kde3 [markd 2010-04-10]
 	Updated multimedia/kmplayer to 0.11.2a [markd 2010-04-10]
+	Updated emulators/qemu to 0.12.3nb1 [sbd 2010-04-10]
