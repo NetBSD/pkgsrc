@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/04/10 04:04:21 markd Exp $
+
+--- src/kmplayer.desktop.orig	2005-03-14 22:22:19.000000000 +1300
++++ src/kmplayer.desktop
+@@ -2,7 +2,7 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ Type=Application
+-Exec=kmplayer -caption "%c" %i %m %U
++Exec=@PREFIX@/bin/kmplayer -caption "%c" %i %m %U
+ Icon=kmplayer.png
+ DocPath=kmplayer/index.html
+ Comment=KDE interface for MPlayer
