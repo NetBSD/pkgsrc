@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/11 06:48:41 cherry Exp $
+
+SHA1 (py-sysctl-0.1.tar.gz) = 120483a57fc85790702223317b1e29ece62f5bb0
+RMD160 (py-sysctl-0.1.tar.gz) = 053144711e41f5518efc418795eec5e6e06750a1
+Size (py-sysctl-0.1.tar.gz) = 6746 bytes
