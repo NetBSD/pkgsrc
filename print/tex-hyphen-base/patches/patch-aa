@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2010/01/18 23:08:29 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2010/04/11 21:56:11 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.orig	2009-08-08 19:05:17.000000000 -0700
+--- texmf/tex/generic/config/language.dat.orig	2010-04-10 01:55:22.000000000 +0000
 +++ texmf/tex/generic/config/language.dat
-@@ -47,116 +47,3 @@ usenglishmax	ushyphmax.tex
+@@ -47,130 +47,3 @@ usenglishmax	ushyphmax.tex
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
@@ -60,6 +60,18 @@ $NetBSD: patch-aa,v 1.2 2010/01/18 23:08:29 minskim Exp $
 -hungarian loadhyph-hu.tex
 -% from hyphen-icelandic:
 -icelandic loadhyph-is.tex
+-% from hyphen-indic:
+-assamese loadhyph-as.tex
+-bengali loadhyph-bn.tex
+-guajrati loadhyph-gu.tex
+-hindi loadhyph-hi.tex
+-assamese loadhyph-kn.tex
+-malayalam loadhyph-ml.tex
+-marathi loadhyph-mr.tex
+-oriya loadhyph-or.tex
+-panjabi loadhyph-pa.tex
+-tamil loadhyph-ta.tex
+-telugu loadhyph-te.tex
 -% from hyphen-indonesian:
 -indonesian loadhyph-id.tex
 -% from hyphen-interlingua:
@@ -78,7 +90,7 @@ $NetBSD: patch-aa,v 1.2 2010/01/18 23:08:29 minskim Exp $
 -lithuanian loadhyph-lt.tex
 -% from hyphen-mongolian:
 -mongolian loadhyph-mn-cyrl.tex
--mongolian2a loadhyph-mn-cyrl-x-2a.tex
+-mongolianlmc loadhyph-mn-cyrl-x-lmc.tex
 -% from hyphen-norwegian:
 -bokmal loadhyph-nb.tex
 -=norwegian
@@ -109,6 +121,8 @@ $NetBSD: patch-aa,v 1.2 2010/01/18 23:08:29 minskim Exp $
 -swedish loadhyph-sv.tex
 -% from hyphen-turkish:
 -turkish loadhyph-tr.tex
+-% from hyphen-turkmen:
+-turkmen loadhyph-tk.tex
 -% from hyphen-ukenglish:
 -ukenglish loadhyph-en-gb.tex
 -=british
