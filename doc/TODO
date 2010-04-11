@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9191 2010/04/11 08:23:25 adam Exp $
+$NetBSD: TODO,v 1.9192 2010/04/11 09:17:53 seb Exp $
 
 Suggested new packages
 ======================
@@ -1079,7 +1079,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-DateTime-Locale-0.45
 	o p5-DateTime-TimeZone-1.15
 	o p5-ExtUtils-CBuilder-0.2703
-	o p5-FCGI-0.71
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-HTML-Parser-3.65
 	o p5-IMDB-Film-0.45
