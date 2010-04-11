@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1503 2010/04/11 23:32:11 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1504 2010/04/11 23:55:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1860,3 +1860,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/p5-JSON-XS to 2.290 [seb 2010-04-11]
 	Updated devel/p5-Async-Interrupt to 1.04 [seb 2010-04-11]
 	Updated devel/p5-Module-ScanDeps to 0.97 [seb 2010-04-11]
+	Updated security/p5-Module-Signature to 0.63 [seb 2010-04-11]
