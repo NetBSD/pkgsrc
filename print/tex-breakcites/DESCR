@@ -1,0 +1,5 @@
+This LaTeX package makes a very minor change to the operation of the
+\cite command.  Note that the change is not necessary in unmodified
+LaTeX; however, there remain packages that restore the undesirable
+behavior of the command as provided in LaTeX 2.09. (Note that neither
+cite nor natbib make this mistake.)
