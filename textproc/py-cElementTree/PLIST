@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/11 12:41:45 obache Exp $
+${PYSITELIB}/_elementtree.so
