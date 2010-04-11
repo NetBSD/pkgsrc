@@ -1,0 +1,4 @@
+This LaTeX package defines a command \captionof for putting a caption
+to something that's not a float.  Note that the caption package
+includes a \captionof command that is an extension of that provided by
+this package.
