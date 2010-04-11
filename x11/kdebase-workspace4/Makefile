@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/04/10 02:45:04 markd Exp $
+# $NetBSD: Makefile,v 1.12 2010/04/11 13:56:14 markd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	base workspace for the KDE 4 integrated X11 desktop
 
@@ -32,6 +33,12 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 
 CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/ksysguarddrc \
 			${PKG_SYSCONFDIR}/ksysguarddrc
+CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.ksysguard.processlisthelper.conf \
+			${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf
+CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.fontinst.conf \
+			${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.fontinst.conf
+CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.kcmclock.conf \
+			${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmclock.conf
 
 REPLACE_PERL+= \
 	kcontrol/keys/convertShortcuts.pl \

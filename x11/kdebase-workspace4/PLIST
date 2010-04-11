@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/10 02:45:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/04/11 13:56:14 markd Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -594,6 +594,9 @@ share/doc/kde/HTML/en/plasma-desktop/taskbar-settings.png
 share/doc/kde/HTML/en/systemsettings/common
 share/doc/kde/HTML/en/systemsettings/index.cache.bz2
 share/doc/kde/HTML/en/systemsettings/index.docbook
+share/examples/kde4-dbus/org.kde.fontinst.conf
+share/examples/kde4-dbus/org.kde.kcontrol.kcmclock.conf
+share/examples/kde4-dbus/org.kde.ksysguard.processlisthelper.conf
 share/examples/kdebase-workspace4/ksysguarddrc
 share/examples/rc.d/kdm
 share/icons/Daemon.png
