@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/04/10 02:45:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/04/11 13:55:49 markd Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -2044,6 +2044,8 @@ share/doc/kde/HTML/en/kioslave/webdav/index.docbook
 share/doc/kde/HTML/en/sonnet/common
 share/doc/kde/HTML/en/sonnet/index.cache.bz2
 share/doc/kde/HTML/en/sonnet/index.docbook
+share/examples/kde4-dbus/org.kde.auth.conf
+share/examples/kde4-dbus/org.kde.kcontrol.kcmremotewidgets.conf
 share/examples/kdelibs4/applications.menu
 share/icons/hicolor/16x16/actions/presence_away.png
 share/icons/hicolor/16x16/actions/presence_offline.png
