@@ -1,0 +1,2 @@
+The command \acromake defines a command that will expand to an acronym
+and its definition (on first use) and just the acronym thereafter.
