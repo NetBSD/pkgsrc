@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/11 05:44:00 minskim Exp $
+share/texmf-dist/doc/latex/acromake/acromake.pdf
+share/texmf-dist/doc/latex/acromake/acromake.tex
