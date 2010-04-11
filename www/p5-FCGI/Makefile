@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2010/02/18 09:02:29 sno Exp $
+# $NetBSD: Makefile,v 1.26 2010/04/11 09:17:42 seb Exp $
 #
 
-DISTNAME=	FCGI-0.69
+DISTNAME=	FCGI-0.71
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	3
 SVR4_PKGNAME=	p5fcg
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fastcgi.com/
 COMMENT=	Perl5 library for FastCGI, a fast startup alternative to CGI
 
-USE_LANGUAGES+=		c
+USE_LANGUAGES=		c
 PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/FCGI/.packlist
 
