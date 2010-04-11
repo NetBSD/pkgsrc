@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/11 20:38:47 minskim Exp $
+share/texmf-dist/doc/latex/block/block.pdf
+share/texmf-dist/doc/latex/block/block.tex
