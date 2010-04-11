@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1477 2010/04/11 07:32:54 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1478 2010/04/11 08:23:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1820,3 +1820,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/py-sysctl version 0.1 [cherry 2010-04-11]
 	Added www/php-uploadprogress version 1.0.1 [obache 2010-04-11]
 	Added www/p5-HTTP-Server-Simple-PSGI version 0.14 [seb 2010-04-11]
+	Updated games/scummvm to 1.1.0 [adam 2010-04-11]

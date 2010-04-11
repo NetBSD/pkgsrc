@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9190 2010/04/10 16:34:18 adam Exp $
+$NetBSD: TODO,v 1.9191 2010/04/11 08:23:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -1279,7 +1279,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scribus-1.3.6
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o scummvm-1.1.0
 	o sdcc-2.9.0
 	o seahorse-2.30.0 [GNOME 2.30]
 	o seahorse-plugins-2.30.0 [GNOME 2.30]
