@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1493 2010/04/11 19:39:55 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1494 2010/04/11 20:33:56 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1836,3 +1836,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/p5-Net-Server-SS-PreFork version 0.05 [seb 2010-04-11]
 	Updated www/p5-HTML-Parser to 3.65 [seb 2010-04-11]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.026 [seb 2010-04-11]
+	Added www/p5-Starman version 0.1005 [seb 2010-04-11]
