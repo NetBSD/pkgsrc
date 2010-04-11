@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/14 04:57:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/11 21:39:48 minskim Exp $
 share/texmf-dist/doc/generic/hyph-utf8/README
 share/texmf-dist/doc/generic/hyph-utf8/bg/azbukaExtended.pdf
 share/texmf-dist/doc/generic/hyph-utf8/bg/azbukaExtended.tex
 share/texmf-dist/doc/generic/hyph-utf8/hu/huhyphn.pdf
+share/texmf-dist/doc/generic/hyph-utf8/sa/hyphenmin.txt
