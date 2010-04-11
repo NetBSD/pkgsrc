@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1481 2010/04/11 09:17:53 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1482 2010/04/11 09:34:24 imil Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1824,3 +1824,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-CGI-Emulate-PSGI version 0.06 [seb 2010-04-11]
 	Added www/p5-CGI-PSGI version 0.10 [seb 2010-04-11]
 	Updated www/p5-FCGI to 0.71 [seb 2010-04-11]
+	Added net/nagstamon version 0.9.2 [imil 2010-04-11]
