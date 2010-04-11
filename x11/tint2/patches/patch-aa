@@ -1,23 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/12/14 00:47:23 snj Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/11 21:43:57 gls Exp $
 
---- src/tint.c.orig	2009-12-12 19:33:03.000000000 -0200
-+++ src/tint.c
-@@ -38,6 +38,9 @@
- #include "systraybar.h"
- #include "panel.h"
- 
-+#ifndef SIGCHLD
-+# define SIGCHLD SIGCLD
-+#endif
- 
- void signal_handler(int sig)
- {
-@@ -53,7 +56,7 @@ void init ()
- 	signal(SIGINT, signal_handler);
- 	signal(SIGTERM, signal_handler);
- 	signal(SIGHUP, signal_handler);
--	signal(SIGCLD, SIG_IGN);		// don't have to wait() after fork()
-+	signal(SIGCHLD, SIG_IGN);		// don't have to wait() after fork()
- 
-    // set global data
-    memset(&server, 0, sizeof(Server_global));
+Do not automatically install samples
+--- Makefile.in.orig	2010-01-28 11:16:45.000000000 +0000
++++ Makefile.in
+@@ -237,7 +237,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ ACLOCAL_AMFLAGS = -I m4
+-SUBDIRS = doc sample src
++SUBDIRS = doc src
+ dist_doc_DATA = AUTHORS ChangeLog NEWS README
+ EXTRA_DIST = autogen.sh README.source
+ dist_pkgdata_DATA = default_icon.png
