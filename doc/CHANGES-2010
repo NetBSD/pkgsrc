@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1487 2010/04/11 13:31:05 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1488 2010/04/11 14:08:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1830,3 +1830,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/py-cElementTree version 0 [obache 2010-04-11]
 	Added geography/gipfel version 0.3.2nb1 [obache 2010-04-11]
 	Updated devel/imake to 1.0.2nb4 [obache 2010-04-11]
+	Added devel/p5-asa version 0.02 [seb 2010-04-11]
