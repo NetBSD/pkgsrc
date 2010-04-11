@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/11/16 12:33:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/04/11 08:22:06 adam Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/doc/scummvm/AUTHORS
@@ -15,3 +15,4 @@ share/scummvm/pred.dic
 share/scummvm/queen.tbl
 share/scummvm/scummmodern.zip
 share/scummvm/sky.cpt
+share/scummvm/teenagent.dat
