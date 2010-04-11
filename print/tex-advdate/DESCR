@@ -1,0 +1,5 @@
+This package provides macros which can add a specified number of days
+to the current date (as specified in \today), to save, set and restore
+the 'current date' and print it.  Intended for use, for example, in
+invoices payable within 14 days from today etc.  Has only been tested
+with Czech dates.
