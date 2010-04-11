@@ -1,0 +1,5 @@
+A LaTeX style file for use with the letter class that overwrites the
+\opening and \closing macros so that letters can be styled with the
+block letter style instead of the default style.  Thus, the return
+address, the closing, and the signature appear flushed on the left
+margin.
