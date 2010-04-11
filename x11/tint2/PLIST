@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/14 00:47:23 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/11 21:43:57 gls Exp $
 bin/tint2
 man/man1/tint2.1
 share/doc/tint2/AUTHORS
@@ -6,3 +6,4 @@ share/doc/tint2/ChangeLog
 share/doc/tint2/NEWS
 share/doc/tint2/README
 share/examples/tint2/tint2rc
+share/tint2/default_icon.png
