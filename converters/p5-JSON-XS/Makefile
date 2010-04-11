@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2010/03/16 10:47:57 sno Exp $
+# $NetBSD: Makefile,v 1.15 2010/04/11 23:03:40 seb Exp $
 #
 
-DISTNAME=	JSON-XS-2.28
+DISTNAME=	JSON-XS-2.29
 PKGNAME=	p5-${DISTNAME}0
 CATEGORIES=	textproc perl5
-MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=JSON/}
-MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=JSON/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/JSON-XS/
