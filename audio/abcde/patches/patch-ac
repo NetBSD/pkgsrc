@@ -1,13 +1,7 @@
-$NetBSD: patch-ac,v 1.25 2010/04/10 13:26:10 sekiya Exp $
+$NetBSD: patch-ac,v 1.26 2010/04/11 07:25:49 sekiya Exp $
 
 --- abcde.orig	2010-04-10 10:14:30.000000000 +0900
 +++ abcde	2010-04-10 18:40:03.000000000 +0900
-@@ -1,4 +1,4 @@
--#!/bin/bash
-+#! /usr/bin/env bash
- # Copyright (c) 1998-2001 Robert Woodcock <rcw@debian.org>
- # Copyright (c) 2003-2006 Jesus Climent <jesus.climent@hispalinux.es>
- # This code is hereby licensed for public consumption under either the
 @@ -415,10 +415,10 @@
  {
  	case $1 in
