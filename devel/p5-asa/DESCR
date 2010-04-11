@@ -1,0 +1,3 @@
+The Perl 5 module asa lets your class/object say it works like
+something else.  The "pragma" it provides is a convenient syntactic
+sugar for creating your own custom overloaded isa functions.
