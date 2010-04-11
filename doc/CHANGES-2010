@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1470 2010/04/10 22:28:13 markd Exp $
+$NetBSD: CHANGES-2010,v 1.1471 2010/04/11 05:45:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1811,3 +1811,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/rsibreak to 0.10 [markd 2010-04-10]
 	Moved chat/konversation to chat/konversation-kde3 [markd 2010-04-10]
 	Updated chat/konversation to 1.2.3 [markd 2010-04-10]
+	Added print/tex-acromake version 2009 [minskim 2010-04-11]
+	Added print/tex-acromake-doc version 2009 [minskim 2010-04-11]
