@@ -1,0 +1,4 @@
+Starman is a PSGI perl web server that has unique features such as:
+high performance, preforking, signals suport, superdaemon aware,
+multiple interfaces and UNIX Domain Socket support, small memory
+footprint, PSGI compatible, HTTP/1.1 support, UNIX only.
