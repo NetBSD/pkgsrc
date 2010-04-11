@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1492 2010/04/11 19:24:29 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1493 2010/04/11 19:39:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1835,3 +1835,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-IO-Handle-Util version 0.01 [seb 2010-04-11]
 	Added net/p5-Net-Server-SS-PreFork version 0.05 [seb 2010-04-11]
 	Updated www/p5-HTML-Parser to 3.65 [seb 2010-04-11]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.026 [seb 2010-04-11]
