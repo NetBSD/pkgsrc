@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/11 18:54:59 seb Exp $
+
+SHA1 (Net-Server-SS-PreFork-0.05.tar.gz) = c33c97548793217951f4cfd269502f07f475fa61
+RMD160 (Net-Server-SS-PreFork-0.05.tar.gz) = 895f5e8c6d24e8f30945a2e7600e130de24184ca
+Size (Net-Server-SS-PreFork-0.05.tar.gz) = 25978 bytes
