@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1498 2010/04/11 21:47:58 gls Exp $
+$NetBSD: CHANGES-2010,v 1.1499 2010/04/11 21:56:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1855,3 +1855,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyph-utf8 to 2009.17771 [minskim 2010-04-11]
 	Updated print/tex-hyph-utf8-doc to 2009.17771 [minskim 2010-04-11]
 	Updated x11/tint2 to 0.9 [gls 2010-04-11]
+	Updated print/tex-hyphen-base to 2009.17785 [minskim 2010-04-11]
