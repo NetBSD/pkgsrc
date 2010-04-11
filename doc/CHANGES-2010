@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1489 2010/04/11 14:40:53 imil Exp $
+$NetBSD: CHANGES-2010,v 1.1490 2010/04/11 16:11:29 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1832,3 +1832,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/imake to 1.0.2nb4 [obache 2010-04-11]
 	Added devel/p5-asa version 0.02 [seb 2010-04-11]
 	Updated shells/lshell to 0.9.10 [imil 2010-04-11]
+	Added devel/p5-IO-Handle-Util version 0.01 [seb 2010-04-11]
