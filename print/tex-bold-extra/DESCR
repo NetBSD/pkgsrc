@@ -1,0 +1,4 @@
+This LaTeX package allows access to extra bold fonts for Computer
+Modern OT1 encoding (such fonts are available as MetaFont source).
+Since there is more than one bold tt-family font set, the version
+required is selected by a package option.
