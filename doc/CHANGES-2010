@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1494 2010/04/11 20:33:56 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1495 2010/04/11 21:01:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1837,3 +1837,17 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTML-Parser to 3.65 [seb 2010-04-11]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.026 [seb 2010-04-11]
 	Added www/p5-Starman version 0.1005 [seb 2010-04-11]
+	Added print/tex-block version 2009 [minskim 2010-04-11]
+	Added print/tex-block-doc version 2009 [minskim 2010-04-11]
+	Added print/tex-boxedminipage version 2009 [minskim 2010-04-11]
+	Added print/tex-bold-extra version 0.1 [minskim 2010-04-11]
+	Added print/tex-bold-extra-doc version 0.1 [minskim 2010-04-11]
+	Added print/tex-boxedminipage-doc version 2009 [minskim 2010-04-11]
+	Added print/tex-braket version 2009 [minskim 2010-04-11]
+	Added print/tex-braket-doc version 2009 [minskim 2010-04-11]
+	Added print/tex-breakcites version 2009 [minskim 2010-04-11]
+	Added print/tex-breakcites-doc version 2009 [minskim 2010-04-11]
+	Added print/tex-cancel version 2.0 [minskim 2010-04-11]
+	Added print/tex-cancel-doc version 2.0 [minskim 2010-04-11]
+	Added print/tex-capt-of version 2009 [minskim 2010-04-11]
+	Added print/tex-capt-of-doc version 2009 [minskim 2010-04-11]
