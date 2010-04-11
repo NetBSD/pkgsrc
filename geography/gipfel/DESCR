@@ -1,0 +1,17 @@
+gipfel helps to find the names of mountains or points of interest on a picture.
+It uses a database containing names and GPS data. With the given viewpoint (the
+point from which the picture was taken) and two known mountains on the picture,
+gipfel can compute all parameters needed to compute the positions of other
+mountains on the picture.
+
+gipfel can also be used to play around with the parameters manually. But be
+warned: It is pretty difficult to find the right parameters for a given picture
+manually.
+
+You can think of gipfel as a georeferencing software for arbitrary images (not
+only satelite images or maps).
+
+gipfel also has an image stitching mode, which allows to generate panorama
+images from multiple images that have been referenced with gipfel. The nice
+thing about the new image stitching is that it reuses the code that already
+existed for referencing images.
