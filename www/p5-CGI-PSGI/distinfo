@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/11 08:42:49 seb Exp $
+
+SHA1 (CGI-PSGI-0.10.tar.gz) = c9a2cd4d5309ac45ffa690a0e340ac2f1f8d5f1c
+RMD160 (CGI-PSGI-0.10.tar.gz) = 1bd2061e3375319bbbe46c652d70995952a98585
+Size (CGI-PSGI-0.10.tar.gz) = 49173 bytes
