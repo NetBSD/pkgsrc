@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/04/10 02:45:05 markd Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/11 13:55:49 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -24,6 +25,10 @@ CMAKE_ARGS+=	-DWITH_Avahi:BOOL=off
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/menus
 CONF_FILES+=	${PREFIX}/share/examples/kdelibs4/applications.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/applications.menu
+CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.auth.conf \
+		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.auth.conf
+CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.kcmremotewidgets.conf \
+		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmremotewidgets.conf
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
 
