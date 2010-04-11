@@ -1,0 +1,4 @@
+The Perl 5 module IO::Pipeline is a metaphor for shell pipelines.
+It exports three functions "pmap", "pgrep" and "psink" returning
+pipeline objects wich can be combined with the overloaded '|'
+operator.
