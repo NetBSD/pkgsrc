@@ -1,0 +1,3 @@
+The Perl 5 module CGI::Emulate::PSGI allows an application designed
+for the CGI environment to run in a PSGI environment, and thus on
+any of the backends that PSGI supports.
