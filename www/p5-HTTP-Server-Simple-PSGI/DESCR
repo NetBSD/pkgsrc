@@ -1,0 +1,2 @@
+The Perl 5 module HTTP::Server::Simple::PSGI is a HTTP::Server::Simple
+based HTTP server that can run PSGI applications.
