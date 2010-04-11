@@ -1,0 +1,2 @@
+The Perl 5 module IO::Handle::Util provides a number of helpful
+routines to manipulate or create IO::Handle like objects.
