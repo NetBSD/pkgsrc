@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1474 2010/04/11 06:52:38 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1475 2010/04/11 07:01:49 cherry Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1817,3 +1817,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-advdate-doc version 2009 [minskim 2010-04-11]
 	Added print/tex-anonchap-doc version 1.1a [minskim 2010-04-11]
 	Added www/p5-FCGI-Client version 0.04 [seb 2010-04-11]
+	Added devel/py-sysctl version 0.1 [cherry 2010-04-11]
