@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1500 2010/04/11 22:04:43 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1501 2010/04/11 23:04:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1857,3 +1857,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/tint2 to 0.9 [gls 2010-04-11]
 	Updated print/tex-hyphen-base to 2009.17785 [minskim 2010-04-11]
 	Updated devel/p5-common-sense to 3.1 [seb 2010-04-11]
+	Updated converters/p5-JSON-XS to 2.290 [seb 2010-04-11]
