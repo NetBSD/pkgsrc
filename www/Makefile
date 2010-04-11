@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.714 2010/04/11 08:38:41 seb Exp $
+# $NetBSD: Makefile,v 1.715 2010/04/11 08:43:14 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -248,6 +248,7 @@ SUBDIR+=	p5-CGI-FormBuilder
 SUBDIR+=	p5-CGI-Kwiki
 SUBDIR+=	p5-CGI-Lite
 SUBDIR+=	p5-CGI-Minimal
+SUBDIR+=	p5-CGI-PSGI
 SUBDIR+=	p5-CGI-ProgressBar
 SUBDIR+=	p5-CGI-Session
 SUBDIR+=	p5-CGI-Simple
