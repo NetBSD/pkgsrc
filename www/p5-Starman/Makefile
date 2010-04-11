@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/11 20:33:03 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/11 22:28:06 seb Exp $
 
 DISTNAME=	Starman-0.1005
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Starman/.packlist
 
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+# This dependency on p5-Test-TCP should be removed with next release of Plack
 BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
 DEPENDS+=	p5-Net-Server-SS-PreFork-[0-9]*:../../net/p5-Net-Server-SS-PreFork
 DEPENDS+=	p5-Server-Starter-[0-9]*:../../sysutils/p5-Server-Starter
