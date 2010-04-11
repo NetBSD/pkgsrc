@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1324 2010/04/11 11:16:56 seb Exp $
+# $NetBSD: Makefile,v 1.1325 2010/04/11 14:08:27 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -997,6 +997,7 @@ SUBDIR+=	p5-Wx-Perl-DataWalker
 SUBDIR+=	p5-XSLoader
 SUBDIR+=	p5-accessors
 SUBDIR+=	p5-aliased
+SUBDIR+=	p5-asa
 SUBDIR+=	p5-autobox
 SUBDIR+=	p5-autobox-Core
 SUBDIR+=	p5-autodie
