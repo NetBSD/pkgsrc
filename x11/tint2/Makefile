@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:59:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/11 21:43:57 gls Exp $
 
-DISTNAME=		tint2-0.7.1
-PKGREVISION=		2
+DISTNAME=		tint2-0.9
 CATEGORIES=		x11
 MASTER_SITES=		http://tint2.googlecode.com/files/
 
 MAINTAINER=		fernandotcl@gmail.com
-HOMEPAGE=		http://tint2.googlecode.com/files/
+HOMEPAGE=		http://code.google.com/p/tint2/
 COMMENT=		Tint2 is a simple panel/taskbar
 LICENSE=		gnu-gpl-v2
 
@@ -17,15 +16,22 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 
 PKG_SYSCONFSUBDIR=	xdg
-
+INSTALLATION_DIRS=	share/examples/tint2
 OWN_DIRS=		${PKG_SYSCONFDIR}/tint2
 CONF_FILES=		${PREFIX}/share/examples/tint2/tint2rc \
-			${PKG_SYSCONFDIR}/tint2/tint2rc
+				${PKG_SYSCONFDIR}/tint2/tint2rc
 
-INSTALLATION_DIRS=	share/examples/tint2
+CONFIGURE_ARGS+=	--disable-tint2conf
+CONFIGURE_ARGS+=	--disable-examples
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--enable-battery
+.else
+CONFIGURE_ARGS+=	--disable-battery
+.endif
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/tint2rc \
+	${INSTALL_DATA} ${WRKSRC}/sample/tint2rc \
 		${DESTDIR}${PREFIX}/share/examples/tint2
 
 .include "../../devel/glib2/buildlink3.mk"
