@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9195 2010/04/11 19:39:56 seb Exp $
+$NetBSD: TODO,v 1.9196 2010/04/11 22:58:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aterm-1.0.1
 	o atk-1.30.0 [GNOME 2.30]
 	o auctex-11.86
-	o audacious-plugins-2.2
+	o audacious-plugins-2.3
 	o autoconvert-0.3.16
 	o autogen-5.10.1
 	o avcheck-0.91
@@ -467,7 +467,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.46
+	o calibre-0.6.47
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -507,19 +507,20 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o covered-current-20090802
 	o cpio-2.9
 	o cpmtools-2.6
+	o cppcheck-1.42
 	o cppunit-1.12.0
 	o cross-h8300-hms-binutils-2.17
 	o cryptopp-5.6.0
 	o cssc-1.2.0
 	o csup-20100404 [pkg/43120]
-	o cups-1.4.2
+	o cups-1.4.3
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.18
 	o cygwin_lib-1.5.24.2
 	o dansguardian-2.10.0.3
 	o dante-1.2.0
 	o dap-3.7
-	o dar-2.3.9
+	o dar-2.3.10
 	o darcs-2.4
 	o dasher-4.11
 	o db4-4.8.26
@@ -551,11 +552,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvipng-1.13
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
+	o echinus-0.4.3.2
 	o eclipse-3.2.0
 	o ed-1.4
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.2.0
+	o efax-gtk-3.2.1
 	o egtk-0.3.6.2
 	o electric-8.11
 	o electricfence-2.4.16
@@ -568,7 +570,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emacs-muse-3.20
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o empathy-2.30.0 [GNOME 2.30]
+	o empathy-2.30.0.1 [GNOME 2.30]
 	o enca-1.13
 	o enchant-1.6.0
 	o enlightenment-1.0.0
@@ -755,6 +757,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsasl-1.4.1
 	o gsharutils-4.9
 	o gss-0.1.2
+	o gssdp-0.7.2
 	o gst-plugins0.10-bad-0.10.18
 	o gst-plugins0.10-base-0.10.28
 	o gst-plugins0.10-ffmpeg-0.10.7
@@ -775,6 +778,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtranslator-1.9.6
 	o gucharmap-2.30.0 [GNOME 2.30]
 	o guile-gtk-2.0
+	o gupnp-0.13.3
 	o gutenprint-5.2.5
 	o gv-3.6.8
 	o gwaei-1.3.0
@@ -882,6 +886,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.0
 	o libdockapp-0.6.1
 	o libdrm-2.4.20
+	o libetpan-1.0
 	o libextractor-0.6.1
 	o libflash-0.4.13
 	o libgda-4.0.8 [GNOME 2.28]
@@ -940,7 +945,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o luit-1.0.5
 	o lwm-1.2.2
 	o lyx-1.6.5
-	o lzip-1.9
+	o lzip-1.10
 	o mDNSResponder-214.3
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
@@ -1015,6 +1020,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nagios-3.2.0
 	o nano-2.2.0
 	o nap-1.5.3
+	o nautilus-actions-2.30.1 [GNOME 2.30]
 	o nautilus-sendto-2.28.4
 	o navi2ch-1.8.1
 	o nawk-20071023
@@ -1074,17 +1080,19 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Any-Moose-0.12
 	o p5-Compress-Raw-Zlib-2.025
 	o p5-Config-General-2.45
+	o p5-DBD-postgresql-2.17.1
 	o p5-DateTime-Locale-0.45
-	o p5-DateTime-TimeZone-1.15
+	o p5-DateTime-TimeZone-1.17
 	o p5-ExtUtils-CBuilder-0.2703
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-IMDB-Film-0.45
-	o p5-IO-Compress-2.025
+	o p5-IO-Compress-2.026
 	o p5-IO-Socket-INET6-2.61
 	o p5-IO-Socket-SSL-1.33
-	o p5-JSON-2.20
+	o p5-JSON-2.21
+	o p5-Module-ScanDeps-0.97
 	o p5-Module-Signature-0.63
-	o p5-Mouse-0.52
+	o p5-Mouse-0.53
 	o p5-POE-1.289 [pkg/43115]
 	o p5-POE-Component-IRC-6.24 [pkg/42801]
 	o p5-POE-Component-SNMP-1.1006 [pkg/43116]
@@ -1161,7 +1169,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
 	o py-adns-1.2.1 [pkg/43127]
-	o py-anita-1.10
+	o py-babel-0.9.5
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-5.0.0
 	o py-checker-0.8.17
@@ -1265,7 +1273,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sawfish-1.6.2
 	o saxon-9.2
 	o scamper-20070201
-	o scapy-2.1.0
+	o scapy-2.1.1
 	o scew-0.4.0
 	o sch-3.8.3
 	o scilab-5.2.0
@@ -1328,14 +1336,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
-	o t-prot-2.97.1
+	o t-prot-2.98
 	o tacacs-4.0.4.14
 	o tads-3.0.16
+	o taglib-1.6.2
 	o tcl-8.5.8
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-3.4.3
+	o tcpreplay-3.4.4
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
@@ -1430,7 +1439,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wwwoffle-2.9f
 	o wxRemind-101
 	o wyrd-1.4.4
-	o x264-devel-20100404
+	o x264-devel-20100410
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbiff-1.0.2
@@ -1532,6 +1541,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwpe-1.5.30a
 	o xzip-182
 	o yafc-1.1
+	o yasm-1.0.0
+	o yaz-4.0.3
 	o yelp-2.30.0 [GNOME 2.30]
 	o yodl-2.14.3
 	o ysm-2.9.9.1
