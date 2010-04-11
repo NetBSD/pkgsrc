@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1495 2010/04/11 21:01:50 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1496 2010/04/11 21:12:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1851,3 +1851,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-cancel-doc version 2.0 [minskim 2010-04-11]
 	Added print/tex-capt-of version 2009 [minskim 2010-04-11]
 	Added print/tex-capt-of-doc version 2009 [minskim 2010-04-11]
+	Added www/p5-Dancer version 1.175 [seb 2010-04-11]
