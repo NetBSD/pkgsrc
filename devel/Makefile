@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1323 2010/04/11 06:56:44 cherry Exp $
+# $NetBSD: Makefile,v 1.1324 2010/04/11 11:16:56 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -689,6 +689,7 @@ SUBDIR+=	p5-IO-LockedFile
 SUBDIR+=	p5-IO-Multiplex
 SUBDIR+=	p5-IO-Null
 SUBDIR+=	p5-IO-Pager
+SUBDIR+=	p5-IO-Pipeline
 SUBDIR+=	p5-IO-Prompt
 SUBDIR+=	p5-IO-String
 SUBDIR+=	p5-IO-Stty
