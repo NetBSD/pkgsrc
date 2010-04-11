@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2010/04/11 13:55:49 markd Exp $
+
+--- cmake/modules/KDE4Macros.cmake.orig	2010-03-26 17:24:24.000000000 +0000
++++ cmake/modules/KDE4Macros.cmake
+@@ -1254,7 +1254,7 @@ function(KDE4_INSTALL_AUTH_HELPER_FILES 
+         configure_file(${_stubFilesDir}/dbus_policy.stub
+                         ${CMAKE_CURRENT_BINARY_DIR}/${HELPER_ID}.conf)
+         install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${HELPER_ID}.conf
+-                DESTINATION ${SYSCONF_INSTALL_DIR}/dbus-1/system.d/)
++                DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/kde4-dbus/)
+ 
+         configure_file(${_stubFilesDir}/dbus_service.stub
+                         ${CMAKE_CURRENT_BINARY_DIR}/${HELPER_ID}.service)
