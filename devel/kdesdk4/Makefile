@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/27 10:38:38 markd Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/11 08:22:40 mrg Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -48,6 +48,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
 .include "../../x11/kdebase-workspace4/buildlink3.mk"
