@@ -1,0 +1,6 @@
+This LaTeX package provides macros to typeset bra-ket notation, as
+well as set specifiers, with a single ("|") or a double ("||" or
+("\|") vertical bar specifier in between two bracketed parts.  Each
+macro comes in a fixed-size version and an expanding version.  If the
+package finds itself operating under e-tex, it uses the extended
+primitive \middle for more reliable results.
