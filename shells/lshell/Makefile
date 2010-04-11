@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/02/10 19:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/11 14:37:25 imil Exp $
 #
 
-DISTNAME=	lshell-0.9.4
-PKGREVISION=	1
+DISTNAME=	lshell-0.9.10
 CATEGORIES=	shells python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lshell/}
 
@@ -13,24 +12,24 @@ COMMENT=	Lshell restricts user's environment to specified commands
 PKG_GROUPS=	lshellg
 PKG_SHELL=	bin/lshell
 
-PKG_DESTDIR_SUPPORT=		user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=			# none
+USE_LANGUAGES=		# none
 
-PYDISTUTILSPKG=			yes
+PYDISTUTILSPKG=		yes
 
-EGDIR=				share/examples/lshell
+EGDIR=			share/examples/lshell
 
-SUBST_CLASSES+=			setup
-SUBST_STAGE.setup=		post-patch
-SUBST_FILES.setup=		setup.py
-SUBST_SED.setup=		-e 's,/etc,${EGDIR},'
-SUBST_SED.setup+=		-e 's,share/man,${PKGMANDIR},'
+SUBST_CLASSES+=		setup
+SUBST_STAGE.setup=	post-patch
+SUBST_FILES.setup=	setup.py
+SUBST_SED.setup=	-e 's,/etc,${EGDIR},'
+SUBST_SED.setup+=	-e 's,share/man,${PKGMANDIR},'
 
-INSTALLATION_DIRS+=		${EGDIR} ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/logrotate.d ${PKGMANDIR}/man1
 
-CONF_FILES=			${PREFIX}/${EGDIR}/lshell.conf \
-				${PKG_SYSCONFDIR}/lshell.conf
+CONF_FILES=		${PREFIX}/${EGDIR}/lshell.conf \
+			${PKG_SYSCONFDIR}/lshell.conf
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:14:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/11 14:37:25 imil Exp $
 bin/lshell
 ${PYSITELIB}/lshell.py
 ${PYSITELIB}/lshell.pyc
@@ -7,4 +7,5 @@ man/man1/lshell.1
 share/doc/lshell/CHANGES
 share/doc/lshell/COPYING
 share/doc/lshell/README
+share/examples/lshell/logrotate.d/lshell
 share/examples/lshell/lshell.conf
