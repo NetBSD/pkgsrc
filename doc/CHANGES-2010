@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1484 2010/04/11 11:17:19 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1485 2010/04/11 12:42:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1827,3 +1827,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/nagstamon version 0.9.2 [imil 2010-04-11]
 	Updated graphics/optipng to 0.6.4 [adam 2010-04-11]
 	Added devel/p5-IO-Pipeline version 0.9.2 [seb 2010-04-11]
+	Added textproc/py-cElementTree version 0 [obache 2010-04-11]
