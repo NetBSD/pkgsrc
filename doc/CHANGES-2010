@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1490 2010/04/11 16:11:29 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1491 2010/04/11 18:57:40 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1833,3 +1833,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-asa version 0.02 [seb 2010-04-11]
 	Updated shells/lshell to 0.9.10 [imil 2010-04-11]
 	Added devel/p5-IO-Handle-Util version 0.01 [seb 2010-04-11]
+	Added net/p5-Net-Server-SS-PreFork version 0.05 [seb 2010-04-11]
