@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/08 04:18:55 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/11 21:39:48 minskim Exp $
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-ec.tex
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-il2.tex
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-il3.tex
@@ -6,7 +6,9 @@ share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-l7x.tex
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-lmc.tex
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-qx.tex
 share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-t2a.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-as.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-bg.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-bn.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-ca.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-cop.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-cs.tex
@@ -27,6 +29,8 @@ share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-fr.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-ga.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-gl.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-grc.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-gu.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-hi.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-hr.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-hsb.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-hu.tex
@@ -35,14 +39,19 @@ share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-id.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-is.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-it.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-kmr.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-kn.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-lt.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-lv.tex
-share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-mn-cyrl-x-2a.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-ml.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-mn-cyrl-x-lmc.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-mn-cyrl.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-mr.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-nb.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-nl.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-nn.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-or.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-pa.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-pl.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-pt.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-ro.tex
@@ -53,10 +62,15 @@ share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-sl.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-sr-cyrl.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-sr-latn.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-sv.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-ta.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-te.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-tk.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-tr.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-uk.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-zh-latn.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-as.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-bg.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-bn.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-ca.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-cop.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-cs.tex
@@ -78,6 +92,8 @@ share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-fr.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-ga.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-gl.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-grc.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-gu.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-hi.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-hr.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-hsb.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-hu.tex
@@ -86,15 +102,20 @@ share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-id.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-is.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-it.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-kmr.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-kn.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-la.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-lt.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-lv.tex
-share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-mn-cyrl-x-2a.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-ml.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-mn-cyrl-x-lmc.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-mn-cyrl.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-mr.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-nb.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-nl.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-nn.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-no.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-or.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-pa.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-pl.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-pt.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-ro.tex
@@ -106,6 +127,9 @@ share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-sk.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-sl.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-sr-cyrl.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-sv.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-ta.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-te.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-tk.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-tr.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-uk.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/hyph-zh-latn.tex
