@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/18 09:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/04/12 02:26:39 obache Exp $
 
 DISTNAME=	webkit-1.1.15.4
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-target=x11 \
 			--with-font-backend=freetype
+.include "options.mk"
 
 REPLACE_PERL+=	JavaScriptCore/pcre/dftables \
 		JavaScriptCore/create_hash_table \
