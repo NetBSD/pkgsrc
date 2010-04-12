@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1514 2010/04/12 14:20:01 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1515 2010/04/12 17:45:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1893,3 +1893,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/glproto to 1.4.11 [tnn 2010-04-12]
 	Updated x11/dri2proto to 2.3 [tnn 2010-04-12]
 	Updated security/openssl to 0.9.8n [taca 2010-04-12]
+	Updated fonts/tex-helvetic to 2009 [minskim 2010-04-12]
