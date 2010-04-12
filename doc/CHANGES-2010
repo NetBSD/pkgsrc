@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1516 2010/04/12 20:40:05 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1517 2010/04/12 21:16:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1895,3 +1895,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/openssl to 0.9.8n [taca 2010-04-12]
 	Updated fonts/tex-helvetic to 2009 [minskim 2010-04-12]
 	Updated print/tex-graphics-doc to 1.0onb1 [minskim 2010-04-12]
+	Updated print/tex-hyphen-greek to 2009 [minskim 2010-04-12]
