@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/06/12 22:53:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/12 13:58:36 tnn Exp $
 #
 
-DISTNAME=		dri2proto-2.1
+DISTNAME=		dri2proto-2.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +14,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	dri2proto.pc.in
-USE_LANGUAGES=		# empty
 
 .include "../../mk/bsd.pkg.mk"
