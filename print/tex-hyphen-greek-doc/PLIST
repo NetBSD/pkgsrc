@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/12 21:20:48 minskim Exp $
+share/texmf/doc/generic/elhyphen/README
+share/texmf/doc/generic/elhyphen/anc-test.ltx
+share/texmf/doc/generic/elhyphen/anc-test.pdf
+share/texmf/doc/generic/elhyphen/ancient.pdf
+share/texmf/doc/generic/elhyphen/compound.ltx
+share/texmf/doc/generic/elhyphen/compound.pdf
+share/texmf/doc/generic/elhyphen/copyrite.txt
+share/texmf/doc/generic/elhyphen/modern.pdf
