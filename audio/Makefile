@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.434 2010/03/14 16:28:02 martin Exp $
+# $NetBSD: Makefile,v 1.435 2010/04/12 12:14:20 obache Exp $
 #
 
 COMMENT=	Audio tools
@@ -309,6 +309,7 @@ SUBDIR+=	pulseaudio
 SUBDIR+=	py-ao
 SUBDIR+=	py-cddb
 SUBDIR+=	py-daap
+SUBDIR+=	py-id3
 SUBDIR+=	py-id3lib
 SUBDIR+=	py-karaoke
 SUBDIR+=	py-libmtag
