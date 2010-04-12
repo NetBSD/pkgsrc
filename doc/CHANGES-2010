@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1507 2010/04/12 07:06:02 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1508 2010/04/12 10:07:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1864,3 +1864,25 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-IO-Socket-INET6 to 2.61 [seb 2010-04-12]
 	Updated geography/viking to 0.9.93 [gdt 2010-04-12]
 	Updated geography/mapserver to 5.6.3 [adam 2010-04-12]
+	Updated databases/postgresql84 to 8.4.3 [adam 2010-04-12]
+	Updated databases/postgresql84-client to 8.4.3 [adam 2010-04-12]
+	Updated databases/postgresql84-server to 8.4.3 [adam 2010-04-12]
+	Updated databases/postgresql84-adminpack to 8.4.3 [adam 2010-04-12]
+	Updated databases/postgresql84-plperl to 8.4.3 [adam 2010-04-12]
+	Updated databases/postgresql84-plpython to 8.4.3 [adam 2010-04-12]
+	Updated databases/postgresql84-pltcl to 8.4.3 [adam 2010-04-12]
+	Updated databases/postgresql83 to 8.3.10 [adam 2010-04-12]
+	Updated databases/postgresql83-client to 8.3.10 [adam 2010-04-12]
+	Updated databases/postgresql83-server to 8.3.10 [adam 2010-04-12]
+	Updated databases/postgresql83-adminpack to 8.3.10 [adam 2010-04-12]
+	Updated databases/postgresql83-plperl to 8.3.10 [adam 2010-04-12]
+	Updated databases/postgresql83-plpython to 8.3.10 [adam 2010-04-12]
+	Updated databases/postgresql83-pltcl to 8.3.10 [adam 2010-04-12]
+	Updated databases/postgresql82 to 8.2.16 [adam 2010-04-12]
+	Updated databases/postgresql82-client to 8.2.16 [adam 2010-04-12]
+	Updated databases/postgresql82-server to 8.2.16 [adam 2010-04-12]
+	Updated databases/postgresql82-adminpack to 8.2.16 [adam 2010-04-12]
+	Updated databases/postgresql82-plperl to 8.2.16 [adam 2010-04-12]
+	Updated databases/postgresql82-plpython to 8.2.16 [adam 2010-04-12]
+	Updated databases/postgresql82-pltcl to 8.2.16 [adam 2010-04-12]
+	Updated databases/postgresql82-tsearch2 to 8.2.16 [adam 2010-04-12]
