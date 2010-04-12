@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.13 2009/12/01 10:44:02 drochner Exp $
+$NetBSD: distinfo,v 1.14 2010/04/12 19:04:58 drochner Exp $
 
-SHA1 (audiofile-0.2.6.tar.gz) = 94a6ab8e5122bc1971cf186e5a52d032811c9bc5
-RMD160 (audiofile-0.2.6.tar.gz) = b61fbc856768a5838ca5c0fad602f35205e8d037
-Size (audiofile-0.2.6.tar.gz) = 374688 bytes
-SHA1 (patch-aa) = 7c498a63fe055f1f7e16f45f655341a9b6708f71
+SHA1 (audiofile-0.2.7.tar.gz) = 1d8a5bb0ca63c7047436f136fb1fb98ea886e920
+RMD160 (audiofile-0.2.7.tar.gz) = 70327d38c6a9057045f5c59f67f45e2f6f9bf677
+Size (audiofile-0.2.7.tar.gz) = 502448 bytes
 SHA1 (patch-ab) = cd292a827aa18b9839305b2c62c3dbd526384430
-SHA1 (patch-ac) = fd2b8bb374b263b34a0e724c3e7de498f3ff2b7c
-SHA1 (patch-ad) = 3558f3f83e322efcf2c2a4e7afbc144b084e99f6
+SHA1 (patch-ae) = 6dc99026b3448f436a5ccf638598344018329661
+SHA1 (patch-af) = d0d9b737bf6b3c5ea497ea16160fcee7aad4ffe2
