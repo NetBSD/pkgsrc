@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1509 2010/04/12 12:13:45 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1510 2010/04/12 13:51:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1887,3 +1887,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/postgresql82-pltcl to 8.2.16 [adam 2010-04-12]
 	Updated databases/postgresql82-tsearch2 to 8.2.16 [adam 2010-04-12]
 	Added audio/py-id3 version 1.2 [obache 2010-04-12]
+	Updated mail/pear-Mail_Mime to 1.7.0 [taca 2010-04-12]
