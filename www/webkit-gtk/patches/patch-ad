@@ -1,22 +1,22 @@
-$NetBSD: patch-ad,v 1.5 2009/10/19 14:18:08 wiz Exp $
+$NetBSD: patch-ad,v 1.6 2010/04/12 21:12:12 drochner Exp $
 
---- JavaScriptCore/wtf/Platform.h.orig	2009-10-01 22:06:02 +0300
-+++ JavaScriptCore/wtf/Platform.h	2009-10-19 11:39:58 +0300
-@@ -75,7 +75,7 @@
- /* PLATFORM(FREEBSD) */
- /* Operating system level dependencies for FreeBSD-like systems that */
- /* should be used regardless of operating environment */
+--- JavaScriptCore/wtf/Platform.h.orig	2010-04-12 13:25:16.000000000 +0000
++++ JavaScriptCore/wtf/Platform.h
+@@ -346,7 +346,7 @@
+ #endif
+ 
+ /* OS(FREEBSD) - FreeBSD */
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
- #define WTF_PLATFORM_FREEBSD 1
+ #define WTF_OS_FREEBSD 1
  #endif
  
-@@ -630,7 +630,7 @@
+@@ -362,7 +362,7 @@
+ 
+ /* OS(NETBSD) - NetBSD */
+ #if defined(__NetBSD__)
+-#define WTF_PLATFORM_NETBSD 1
++#define WTF_OS_NETBSD 1
  #endif
  
- #if !defined(WTF_USE_JSVALUE64) && !defined(WTF_USE_JSVALUE32) && !defined(WTF_USE_JSVALUE32_64)
--#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX))
-+#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX) || PLATFORM(FREEBSD) || PLATFORM(NETBSD))
- #define WTF_USE_JSVALUE64 1
- #elif PLATFORM(ARM) || PLATFORM(PPC64)
- #define WTF_USE_JSVALUE32 1
+ /* OS(OPENBSD) - OpenBSD */
