@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1508 2010/04/12 10:07:38 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1509 2010/04/12 12:13:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1886,3 +1886,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/postgresql82-plpython to 8.2.16 [adam 2010-04-12]
 	Updated databases/postgresql82-pltcl to 8.2.16 [adam 2010-04-12]
 	Updated databases/postgresql82-tsearch2 to 8.2.16 [adam 2010-04-12]
+	Added audio/py-id3 version 1.2 [obache 2010-04-12]
