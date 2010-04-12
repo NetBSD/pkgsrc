@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2010/02/10 18:15:29 joerg Exp $
+# $NetBSD: Makefile,v 1.613 2010/04/12 14:21:12 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -177,7 +177,6 @@ SUBDIR+=	kdebase4
 SUBDIR+=	kdebindings-ruby
 SUBDIR+=	kdebindings4-python
 SUBDIR+=	kdelibdocs3
-SUBDIR+=	kdelibs-experimental4
 SUBDIR+=	kdelibs3
 SUBDIR+=	kdelibs4
 SUBDIR+=	keylaunch
