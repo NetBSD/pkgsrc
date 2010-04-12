@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/04/04 17:23:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.49 2010/04/12 00:29:22 schmonz Exp $
 #
 
 DISTNAME=	ikiwiki_3.20100403
@@ -37,8 +37,8 @@ PERL5_PACKLIST=		auto/IkiWiki/.packlist
 USE_LANGUAGES=		# none
 USE_TOOLS+=		gmake msgfmt perl:run xgettext
 
-REPLACE_PERL+=	ikiwiki-calendar ikiwiki-mass-rebuild
-REPLACE_PERL+=	ikiwiki-transition ikiwiki-update-wikilist
+REPLACE_PERL+=	ikiwiki-calendar.in ikiwiki-mass-rebuild
+REPLACE_PERL+=	ikiwiki-transition.in ikiwiki-update-wikilist
 REPLACE_PERL+=	ikiwiki-w3m.cgi ikiwiki.in gitremotes mdwn2man pm_filter
 REPLACE_PERL+=	*.pm IkiWiki/*.pm IkiWiki/*/*.pm* *.setup */*.setup */*/*.setup
 REPLACE_PERL+=	po/po2wiki t/*.t
