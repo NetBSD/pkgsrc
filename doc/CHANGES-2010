@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1505 2010/04/12 00:10:23 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1506 2010/04/12 01:06:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-ScanDeps to 0.97 [seb 2010-04-11]
 	Updated security/p5-Module-Signature to 0.63 [seb 2010-04-11]
 	Updated net/p5-IO-Socket-INET6 to 2.61 [seb 2010-04-12]
+	Updated geography/viking to 0.9.93 [gdt 2010-04-12]
