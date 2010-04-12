@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1513 2010/04/12 14:03:08 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1514 2010/04/12 14:20:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1892,3 +1892,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/py-gobject to 2.18.0nb1 [taca 2010-04-12]
 	Updated x11/glproto to 1.4.11 [tnn 2010-04-12]
 	Updated x11/dri2proto to 2.3 [tnn 2010-04-12]
+	Updated security/openssl to 0.9.8n [taca 2010-04-12]
