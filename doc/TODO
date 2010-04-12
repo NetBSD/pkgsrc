@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9199 2010/04/12 00:10:23 seb Exp $
+$NetBSD: TODO,v 1.9200 2010/04/12 14:03:09 tnn Exp $
 
 Suggested new packages
 ======================
@@ -543,7 +543,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnstracer-1.9
 	o doxygen-1.8.3
 	o dpkg-1.14.25
-	o dri2proto-2.3
 	o drivel-3.0.0
 	o drscheme-4.0.2
 	o dspam-3.9.0
@@ -704,7 +703,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.43
-	o glproto-1.4.11
 	o gmime-2.2.26
 	o gnash-0.8.7
 	o gnet1-1.1.9
