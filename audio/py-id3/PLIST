@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/12 12:13:28 obache Exp $
+${PYSITELIB}/ID3.py
+${PYSITELIB}/ID3.pyc
+${PYSITELIB}/ID3.pyo
