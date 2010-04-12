@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2010/04/12 13:57:59 taca Exp $
+
+* Fix GC mark processing: [ruby-dev:40823]
+
+--- Lib/ruby/rubycontainer.swg.orig	2008-06-21 20:45:32.000000000 +0000
++++ Lib/ruby/rubycontainer.swg
+@@ -1112,9 +1112,8 @@ namespace swig {
+ 	int i = 0;
+ 	for (const_iterator it = seq.begin();
+ 	     it != seq.end(); ++it, ++i) {
+-	  RARRAY_PTR(obj)[i] = swig::from< value_type >(*it);
++	     rb_ary_push(obj, swig::from< value_type >(*it));
+ 	}
+-	RARRAY_LEN(obj) = size;
+ 	rb_obj_freeze(obj);  // treat as immutable result
+ 	return obj;
+       } else {
