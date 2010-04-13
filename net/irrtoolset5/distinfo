@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/30 16:14:16 spz Exp $
+$NetBSD: distinfo,v 1.2 2010/04/13 21:19:55 spz Exp $
 
-SHA1 (irrtoolset-5.0.0pre311.tar.gz) = 34791b9fbf620e9f193a1696dd586d76db38d077
-RMD160 (irrtoolset-5.0.0pre311.tar.gz) = 9a1cc979cfdec7a4faffd56cf91f2e3d17cdaaad
-Size (irrtoolset-5.0.0pre311.tar.gz) = 1191079 bytes
+SHA1 (irrtoolset-5.0.0.tar.gz) = 572d302652321f66f70208e560efc020cb989c50
+RMD160 (irrtoolset-5.0.0.tar.gz) = 20b9b58c2fcf06afae13d2e60e8154940a8de60f
+Size (irrtoolset-5.0.0.tar.gz) = 611849 bytes
