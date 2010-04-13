@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2010/02/27 21:37:47 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.11 2010/04/13 15:27:38 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -420,6 +420,7 @@ share/sip${PYVERSSUFFIX}/QtNetwork/qtcpsocket.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qudpsocket.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qurlinfo.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/QtOpenGLmod.sip
+share/sip${PYVERSSUFFIX}/QtOpenGL/opengl_types.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qgl.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qglcolormap.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qglframebufferobject.sip
