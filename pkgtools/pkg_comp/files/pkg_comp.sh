@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.35 2009/05/13 10:40:24 wiz Exp $
+# $NetBSD: pkg_comp.sh,v 1.36 2010/04/13 16:46:01 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -228,7 +228,7 @@ fsmount()
         count=`cat $fsstate`
         count=$(($count + 1))
         echo "$count" > $fsstate
-        echo "Already mounted by another pkg_comp process."
+        echo "Already mounted (maybe by another pkg_comp process?)"
         return
     else
         echo "1" > $fsstate
@@ -306,7 +306,7 @@ fsumount()
     if [ $count -gt 1 ]; then
         count=$(($count - 1))
         echo "$count" > $fsstate
-        echo "Still in use by another pkg_comp process."
+        echo "Still in use (maybe by another pkg_comp process?)"
         return
     fi
 
@@ -414,7 +414,7 @@ pkg_makeroot()
         pkg_install $INSTALL_PACKAGES
 
     [ "$nflag" = "no" -a -n "$BUILD_PACKAGES" ] &&
-        pkg_build $BUILD_PACKAGES
+        build_and_install $BUILD_PACKAGES
 }
 
 # makeroot
@@ -532,7 +532,7 @@ makeroot()
 
     if [ "$USE_GCC3" = "yes" -a "$Nflag" = "no" ]; then
         if [ -z "`echo $BUILD_PACKAGES $INSTALL_PACKAGES | grep gcc3`" ]; then
-            AVOID_GCC3=yes pkg_build lang/gcc3
+            AVOID_GCC3=yes build_and_install lang/gcc3
         fi
     fi
 
@@ -611,7 +611,8 @@ EOF
 #
 makeroot_digest()
 {
-    ( PKGSRC_COMPILER=gcc; export PKGSRC_COMPILER; pkg_build pkgtools/digest )
+    ( PKGSRC_COMPILER=gcc; export PKGSRC_COMPILER; \
+      build_and_install pkgtools/digest )
 }
 
 # makeroot_libkver
@@ -626,7 +627,7 @@ makeroot_libkver()
     if [ "$NETBSD_RELEASE" != "no" ]; then
         _BUILD_TARGET="$BUILD_TARGET"
         BUILD_TARGET="standalone-install"
-        pkg_build pkgtools/libkver
+        build_and_install pkgtools/libkver
         BUILD_TARGET="$_BUILD_TARGET"
         echo "LD_PRELOAD=${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so; export LD_PRELOAD" >> $DESTDIR/etc/shrc
         echo "setenv LD_PRELOAD ${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so" >> $DESTDIR/etc/csh.login
@@ -648,7 +649,7 @@ makeroot_x11()
             echo "export XAPPLRESDIR=${LOCALBASE}/lib/X11/app-defaults" >> $DESTDIR/etc/profile
             echo "setenv XAPPLRESDIR ${LOCALBASE}/lib/X11/app-defaults" >> $DESTDIR/etc/csh.login
         fi
-        [ "$Nflag" = "no" ] && pkg_build pkgtools/x11-links
+        [ "$Nflag" = "no" ] && build_and_install pkgtools/x11-links
     fi
 }
 
@@ -723,7 +724,7 @@ pkg_build()
     failed=""
     for p in $pkgs; do
         echo "PKG_COMP ==> Building and installing $p"
-        prefix=`mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXX`
+        prefix=$(mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXXXX)
         rm $prefix
         script="$prefix.sh"
         statfile="$prefix.stat"
@@ -771,7 +772,7 @@ check_pkg_install()
     # We assume filesystems are mounted!
 
     echo "PKG_COMP ==> Checking if pkg_install is up to date"
-    script=`mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXX`.sh
+    script=$(mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXXXX).sh
     init_script $script
     cat >> $script <<EOF
 cd /usr/pkgsrc/pkgtools/pkg_comp
@@ -785,6 +786,37 @@ EOF
     chmod +x $script
     chroot $DESTDIR /pkg_comp/tmp/`basename $script`
     rm $script
+}
+
+# build_and_install pkg
+#
+#   Builds a package and ensures it gets installed.  The use of destdir to
+#   build packages may cause a package to get built but not installed,
+#   which is not OK for this script.  This is for internal usage only.
+#
+build_and_install()
+{
+    pkg=${1}
+    fsmount
+    if pkg_build ${pkg}; then
+        script=$(mktemp ${DESTDIR}/pkg_comp/tmp/pkg_comp-XXXXXX).sh
+        init_script ${script}
+        cat >>${script} <<EOF
+cd /usr/pkgsrc/${pkg}
+pkgname=\$(make show-var VARNAME=PKGNAME)
+if pkg_info -E \${pkgname} 2>/dev/null; then
+    :
+else
+    echo "PKG_COMP ==> Forcing installation of \${pkgname}"
+    cd /pkg_comp/packages/All
+    pkg_add \${pkgname}
+fi
+EOF
+        chmod +x ${script}
+        chroot ${DESTDIR} /pkg_comp/tmp/$(basename ${script})
+        rm ${script}
+    fi
+    fsumount
 }
 
 # ----------------------------------------------------------------------
@@ -808,21 +840,17 @@ pkg_install()
 
     fsmount
     failed=""
-    for p in $pkgs; do
-        if [ -f $DESTDIR/pkg_comp/packages/All/$p ]; then
-            echo "PKG_COMP ==> Installing binary package: $p"
-            stat=$DESTDIR/pkg_comp/tmp/install.sh
-            init_script $stat
-            cat >> $stat <<EOF
+    for p in $(cd ${REAL_PACKAGES}/All && echo ${pkgs}); do
+        echo "PKG_COMP ==> Installing binary package: $p"
+        stat=$DESTDIR/pkg_comp/tmp/install.sh
+        init_script $stat
+        cat >> $stat <<EOF
 cd /pkg_comp/packages/All
 pkg_add $p
 EOF
-            chmod +x $stat
-            chroot $DESTDIR /pkg_comp/tmp/install.sh
-            rm $stat
-        else
-            failed="$failed $p"
-        fi
+        chmod +x $stat
+        chroot $DESTDIR /pkg_comp/tmp/install.sh || failed="$failed $p"
+        rm $stat
     done
     fsumount
     [ -n "$failed" ] && echo "Installation failed for:$failed"
@@ -846,7 +874,7 @@ pkg_chroot()
 
     fsmount
     echo "PKG_COMP ==> Entering sandbox \`$DESTDIR'"
-    prefix=`mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXX`
+    prefix=$(mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXXXX)
     rm $prefix
     script="$prefix.sh"
     init_script $script
