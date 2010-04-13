@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/01/19 00:38:17 christos Exp $
+# $NetBSD: Makefile,v 1.27 2010/04/13 21:05:41 tonio Exp $
 #
 
-DISTNAME=	apache-ant-1.7.1
+DISTNAME=	apache-ant-1.8.0
 #PKGREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
