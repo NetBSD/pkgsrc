@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.8 2009/12/09 10:13:03 drochner Exp $
+$NetBSD: patch-ap,v 1.9 2010/04/13 15:09:40 drochner Exp $
 
---- src/dxr3/Makefile.am.orig	2009-11-30 22:12:44.000000000 +0100
+--- src/dxr3/Makefile.am.orig	2010-02-24 01:18:20.000000000 +0000
 +++ src/dxr3/Makefile.am
 @@ -17,6 +17,9 @@ endif
  if HAVE_LIBRTE
@@ -10,9 +10,9 @@ $NetBSD: patch-ap,v 1.8 2009/12/09 10:13:03 drochner Exp $
 +link_xinerama = -lXinerama
 +endif
  
- xineplug_LTLIBRARIES = $(dxr3_modules)
+ EXTRA_DIST = compat.c
  
-@@ -43,7 +46,7 @@ xineplug_vo_out_dxr3_la_SOURCES = \
+@@ -45,7 +48,7 @@ xineplug_vo_out_dxr3_la_SOURCES = \
  	dxr3_scr.c \
  	video_out_dxr3.c
  
