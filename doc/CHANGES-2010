@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1520 2010/04/13 01:07:58 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1521 2010/04/13 01:33:28 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-hyphen-greek-doc version 2009 [minskim 2010-04-12]
 	Updated www/p5-Starman to 0.1006 [seb 2010-04-13]
 	Added www/p5-Twiggy version 0.1005 [seb 2010-04-13]
+	Added devel/p5-App-cpanminus version 0.9934 [seb 2010-04-13]
