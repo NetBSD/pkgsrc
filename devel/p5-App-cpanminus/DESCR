@@ -1,0 +1,7 @@
+cpanminus is a script to get, unpack, build and install modules
+from CPAN.
+
+Why? It's dependency free, requires zero configuration, and stands
+alone -- but it's maintainable and extensible with plugins and
+friendly to shell scripting. When running, it requires only 10MB
+of RAM.
