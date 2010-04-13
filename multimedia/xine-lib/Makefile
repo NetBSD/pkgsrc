@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.76 2010/01/18 09:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2010/04/13 15:09:40 drochner Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library
-PKGREVISION=		2
 
 BUILDLINK_API_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
