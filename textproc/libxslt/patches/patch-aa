@@ -1,26 +1,20 @@
-$NetBSD: patch-aa,v 1.19 2008/04/18 20:43:55 bjs Exp $
+$NetBSD: patch-aa,v 1.20 2010/04/13 16:14:03 drochner Exp $
 
---- doc/Makefile.in.orig	2008-04-08 13:18:24.000000000 -0400
+--- doc/Makefile.in.orig	2009-09-24 14:43:14.000000000 +0000
 +++ doc/Makefile.in
-@@ -210,7 +210,7 @@ top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
+@@ -546,9 +546,9 @@ eapi:	EXSLT/libexslt-api.xml EXSLT/libex
+ web: $(PAGES) $(EPAGES)
  
- # The name of the module.
--DOC_MODULE = libxslt-$(VERSION)
-+DOC_MODULE = libxslt
- 
- # The top-level SGML file.
- DOC_MAIN_XML_FILE = libxslt.xml
-@@ -220,7 +220,7 @@ DOC_SOURCE_DIR = ..
- 
- # A file in win32 depends upon two of the doc files
- WIN32_DIR = $(top_srcdir)/win32
--TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
-+TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
- PAGES = API.html bugs.html contribs.html FAQ.html docs.html \
-          downloads.html help.html index.html intro.html news.html \
- 	 xsltproc.html xsltproc2.html
-@@ -498,9 +498,9 @@ $(PAGES): xslt.html $(srcdir)/site.xsl
+ $(PAGES): xslt.html $(srcdir)/site.xsl
+-	-@(if [ -x $(bindir)/xsltproc ] ; then \
++	-@(if [ -x $(top_srcdir)/xsltproc/xsltproc ] ; then \
+ 	  echo "Rebuilding the HTML Web pages from xslt.html" ; \
+-	  $(bindir)/xsltproc --nonet --html $(srcdir)/site.xsl \
++	  $(top_srcdir)/xsltproc/xsltproc --nonet --html $(srcdir)/site.xsl \
+ 	    xslt.html > index.html ; fi )
+ 	-@(if [ -x $(bindir)/xmllint ] ; then \
+ 	  echo "Validating the HTML Web pages" ; \
+@@ -557,9 +557,9 @@ $(PAGES): xslt.html $(srcdir)/site.xsl
  $(EPAGES): EXSLT/exslt.html $(srcdir)/site.xsl
  	 -@(if [ ! -d EXSLT/html ] ; then \
  	   mkdir -p EXSLT/html ; fi )
@@ -29,10 +23,10 @@ $NetBSD: patch-aa,v 1.19 2008/04/18 20:43:55 bjs Exp $
  	   echo "Rebuilding the HTML Web pages from exslt.html" ; \
 -	   $(bindir)/xsltproc --nonet --html \
 +	   $(top_srcdir)/xsltproc/xsltproc --nonet --html \
- 	   	--stringparam dirname EXSLT/ \
+ 		--stringparam dirname EXSLT/ \
  		--stringparam libname libexslt \
  		--stringparam logo_base ../ \
-@@ -511,20 +511,20 @@ $(EPAGES): EXSLT/exslt.html $(srcdir)/si
+@@ -570,20 +570,20 @@ $(EPAGES): EXSLT/exslt.html $(srcdir)/si
  	   $(bindir)/xmllint --nonet --valid --noout $(EPAGES) ; fi );
  
  ../NEWS: $(srcdir)/news.xsl news.html
@@ -59,7 +53,7 @@ $NetBSD: patch-aa,v 1.19 2008/04/18 20:43:55 bjs Exp $
  			     $(srcdir)/api.xsl \
  			     xslt.html ; fi );
  	-@(if [ -x $(bindir)/xmllint ] ; then \
-@@ -532,9 +532,9 @@ $(APIPAGES): libxslt-refs.xml site.xsl a
+@@ -591,9 +591,9 @@ $(APIPAGES): libxslt-refs.xml site.xsl a
  	  $(bindir)/xmllint --nonet --valid --noout API*.html; fi );
  
  $(EAPIPAGES): EXSLT/libexslt-refs.xml site.xsl api.xsl
@@ -71,7 +65,7 @@ $NetBSD: patch-aa,v 1.19 2008/04/18 20:43:55 bjs Exp $
  			     --stringparam libname libexslt \
  			     --stringparam dirname EXSLT/ \
  			     --stringparam logo_base ../ \
-@@ -542,9 +542,9 @@ $(EAPIPAGES): EXSLT/libexslt-refs.xml si
+@@ -601,9 +601,9 @@ $(EAPIPAGES): EXSLT/libexslt-refs.xml si
  			     EXSLT/exslt.html ; fi );
  
  html/index.html: libxslt-api.xml $(srcdir)/newapi.xsl
@@ -80,10 +74,10 @@ $NetBSD: patch-aa,v 1.19 2008/04/18 20:43:55 bjs Exp $
  	  echo "Rebuilding the HTML pages from the XSLT API" ; \
 -	  $(bindir)/xsltproc --nonet \
 +	  $(top_srcdir)/xsltproc/xsltproc --nonet \
- 			     $(srcdir)/newapi.xsl libxslt-api.xml ; fi ); 
+ 			     $(srcdir)/newapi.xsl libxslt-api.xml ; fi );
  	-@(if [ -x $(bindir)/xmllint ] ; then \
  	  echo "Validating the resulting XHTML pages" ; \
-@@ -557,9 +557,9 @@ wiki: libxslt-api.xml $(srcdir)/wiki.xsl
+@@ -616,9 +616,9 @@ wiki: libxslt-api.xml $(srcdir)/wiki.xsl
  
  EXSLT/html/index.html: EXSLT/libexslt-api.xml \
  	$(srcdir)/newapi.xsl
@@ -92,10 +86,10 @@ $NetBSD: patch-aa,v 1.19 2008/04/18 20:43:55 bjs Exp $
  	  echo "Rebuilding the HTML pages from the EXSLT API" ; \
 -	  $(bindir)/xsltproc --nonet --output EXSLT/ \
 +	  $(top_srcdir)/xsltproc/xsltproc --nonet --output EXSLT/ \
- 	  		     --stringparam libname libexslt \
+ 			     --stringparam libname libexslt \
  			     --stringparam dirname EXSLT/ \
  			     --stringparam logo_base ../../ \
-@@ -581,22 +581,22 @@ xsltproc.1: xsltproc.xml
+@@ -642,22 +642,22 @@ xsltproc.1: xsltproc.xml
  # Note that in the following, xmllint output is piped to xsltproc
  search.php: $(srcdir)/api.xsl $(srcdir)/site.xsl $(srcdir)/search.templ \
              $(srcdir)/search.xml $(srcdir)/search.php.inc
