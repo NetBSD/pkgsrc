@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.33 2010/04/13 16:46:01 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.34 2010/04/13 20:59:19 wiz Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -245,7 +245,7 @@ Otherwise, the package
 .Pa pkgtools/libkver
 will be installed inside the chroot, in a special purpose
 prefix whose value can be set in
-.Pa $DESTDIR/etc/mk.conf 
+.Pa $DESTDIR/etc/mk.conf
 via the configuration file
 with the
 .Va LIBKVER_STANDALONE_PREFIX
