@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1525 2010/04/13 15:45:03 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1526 2010/04/13 15:59:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/py-gobject to 2.18.0nb2 [obache 2010-04-13]
 	Updated misc/py-anita to 1.11 [gson 2010-04-13]
 	Updated www/typolight28 to 2.8.2 [taca 2010-04-13]
+	Updated www/typolight28-translations to 20100413 [taca 2010-04-13]
