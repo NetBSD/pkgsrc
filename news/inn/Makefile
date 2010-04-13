@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2010/01/17 12:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2010/04/13 21:18:00 spz Exp $
 
-DISTNAME=		inn-2.5.1
-PKGREVISION=		2
+DISTNAME=		inn-2.5.2
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -18,7 +17,7 @@ CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 BUILD_DEFS+=		INN_DATA_DIR
 BUILD_DEFS+=		VARBASE
 
-FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR:Q}
+FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 
 BUILD_DEFS+=		INN_PATHBIN
 FILES_SUBST+=		INN_PATHBIN=${PREFIX}/${INN_PATHBIN:Q}
@@ -46,14 +45,14 @@ CONFIGURE_ARGS+=	--enable-setgid-inews 				\
 			--with-run-dir=${INN_DATA_DIR}/run 		\
 			--includedir=${PREFIX}/include 			\
 			--with-spool-dir=${INN_SPOOL:Q}			\
-			--with-news-user=${INN_USER:Q}			\
-			--with-news-group=${INN_GROUP:Q}
-CONFIGURE_ENV+=		_PATH_AWK=${TOOLS_AWK:Q}
-CONFIGURE_ENV+=		_PATH_EGREP=${TOOLS_EGREP:Q}
-CONFIGURE_ENV+=		_PATH_SED=${TOOLS_SED:Q}
-CONFIGURE_ENV+=		_PATH_SH=${TOOLS_SH:Q}
-CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT:Q}
-CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
+			--with-news-user=${INN_USER}			\
+			--with-news-group=${INN_GROUP}
+CONFIGURE_ENV+=		_PATH_AWK=${TOOLS_AWK}
+CONFIGURE_ENV+=		_PATH_EGREP=${TOOLS_EGREP}
+CONFIGURE_ENV+=		_PATH_SED=${TOOLS_SED}
+CONFIGURE_ENV+=		_PATH_SH=${TOOLS_SH}
+CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT}
+CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD}
 USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 
 LDFLAGS.SunOS+= -lsocket -lnsl
@@ -122,17 +121,17 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
 			${INN_USER} ${INN_GROUP} 0664
 .endfor
 
-CONF_FILES_PERMS+=      ${EXAMPLEDIR}/active.minimal ${INN_DATA_DIR}/db/active ${INN_USER} ${INN_GROUP} 0664
-CONF_FILES_PERMS+=      ${EXAMPLEDIR}/newsgroups.minimal ${INN_DATA_DIR}/db/newsgroups ${INN_USER} ${INN_GROUP} 0664
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/active.minimal ${INN_DATA_DIR}/db/active ${INN_USER} ${INN_GROUP} 0664
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/newsgroups.minimal ${INN_DATA_DIR}/db/newsgroups ${INN_USER} ${INN_GROUP} 0664
 
 DBFILES=		active.times history
 
 HTTPFILES=		innreport.css
 
-CONF_FILES_PERMS+=      ${EXAMPLEDIR}/innreport.css ${INN_DATA_DIR}/http/innreport.css ${INN_USER} ${INN_GROUP} 0664
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/innreport.css ${INN_DATA_DIR}/http/innreport.css ${INN_USER} ${INN_GROUP} 0664
 
 .for file in ${DBFILES}
-CONF_FILES_PERMS+=      ${EXAMPLEDIR}/${file} ${INN_DATA_DIR}/db/${file} \
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${INN_DATA_DIR}/db/${file} \
 			${INN_USER} ${INN_GROUP} 0664
 .endfor
 
@@ -155,31 +154,29 @@ GCC_REQD+=		2.95.3
 .include "options.mk"
 
 pre-install:
-	for FILE in ${CFILES} active.minimal newsgroups.minimal; do	\
-		${INSTALL_DATA} ${WRKSRC}/site/$$FILE			\
-					${DESTDIR}${EXAMPLEDIR};	\
-	done
-	for FILE in ${DBFILES} ${HTTPFILES}; do				\
-		${TOUCH} ${WRKSRC}/site/$$FILE ;			\
-		${INSTALL_DATA} ${WRKSRC}/site/$$FILE			\
-					${DESTDIR}${EXAMPLEDIR};	\
-	done
+.for file in ${CFILES} active.minimal newsgroups.minimal
+	${INSTALL_DATA} ${WRKSRC}/site/${file} ${DESTDIR}${EXAMPLEDIR}
+.endfor
+.for file in ${DBFILES} ${HTTPFILES}
+	${TOUCH} ${WRKSRC}/site/${file}
+	${INSTALL_DATA} ${WRKSRC}/site/${file} ${DESTDIR}${EXAMPLEDIR}
+.endfor
 
 post-install:
-	for FILE in cnfsstat ctlinnd makehistory innbind; do		\
-		${RM} -f ${DESTDIR}${PREFIX}/sbin/$$FILE ;		\
-		${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/$$FILE	\
-				${DESTDIR}${PREFIX}/sbin ;		\
-	done
-	${RM} -f ${DESTDIR}${PREFIX}/sbin/inews ;
-	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/inews		\
+.for file in cnfsstat ctlinnd makehistory innbind
+	${RM} -f ${DESTDIR}${PREFIX}/sbin/${file}
+	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/${file}	\
+				${DESTDIR}${PREFIX}/sbin
+.endfor
+	${RM} -f ${DESTDIR}${PREFIX}/sbin/inews
+	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/inews	\
 			${DESTDIR}${PREFIX}/bin
-	${RM} -f ${DESTDIR}${PREFIX}/sbin/rnews ;
-	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews		\
+	${RM} -f ${DESTDIR}${PREFIX}/sbin/rnews
+	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews	\
 			${DESTDIR}${PREFIX}/bin
-	for FILE in libinn.a libstorage.a libinnhist.a ; do		\
-		${CHMOD} 644 ${DESTDIR}${PREFIX}/lib/$$FILE ;		\
-	done
+.for file in libinn.a libstorage.a libinnhist.a
+	${CHMOD} 644 ${DESTDIR}${PREFIX}/lib/${file}
+.endfor
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
