@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1518 2010/04/12 21:21:48 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1519 2010/04/13 00:37:13 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1897,3 +1897,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-graphics-doc to 1.0onb1 [minskim 2010-04-12]
 	Updated print/tex-hyphen-greek to 2009 [minskim 2010-04-12]
 	Added print/tex-hyphen-greek-doc version 2009 [minskim 2010-04-12]
+	Updated www/p5-Starman to 0.1006 [seb 2010-04-13]
