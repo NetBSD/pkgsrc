@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:05:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/04/13 17:25:22 drochner Exp $
 bin/qalc
 include/libqalculate/BuiltinFunctions.h
 include/libqalculate/Calculator.h
@@ -184,7 +184,6 @@ share/doc/lib${PKGNAME}/reference/html/functions_vars.html
 share/doc/lib${PKGNAME}/reference/html/globals.html
 share/doc/lib${PKGNAME}/reference/html/globals_enum.html
 share/doc/lib${PKGNAME}/reference/html/globals_eval.html
-share/doc/lib${PKGNAME}/reference/html/globals_vars.html
 share/doc/lib${PKGNAME}/reference/html/hierarchy.html
 share/doc/lib${PKGNAME}/reference/html/includes_8h.html
 share/doc/lib${PKGNAME}/reference/html/index.html
@@ -202,10 +201,12 @@ share/doc/lib${PKGNAME}/reference/html/structPrintOptions-members.html
 share/doc/lib${PKGNAME}/reference/html/structPrintOptions.html
 share/doc/lib${PKGNAME}/reference/html/structSortOptions-members.html
 share/doc/lib${PKGNAME}/reference/html/structSortOptions.html
+share/doc/lib${PKGNAME}/reference/html/tabs.css
 share/doc/lib${PKGNAME}/reference/html/util_8h.html
 share/locale/fr/LC_MESSAGES/libqalculate.mo
 share/locale/nl/LC_MESSAGES/libqalculate.mo
 share/locale/sv/LC_MESSAGES/libqalculate.mo
+share/locale/zh_CN/LC_MESSAGES/libqalculate.mo
 share/qalculate/currencies.xml
 share/qalculate/datasets.xml
 share/qalculate/elements.xml
