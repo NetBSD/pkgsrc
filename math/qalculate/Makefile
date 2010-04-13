@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2009/09/08 19:29:35 asau Exp $
+# $NetBSD: Makefile,v 1.35 2010/04/13 17:25:22 drochner Exp $
 
-DISTNAME=	libqalculate-0.9.6
-PKGNAME=	qalculate-0.9.6
-PKGREVISION=	3
+DISTNAME=	libqalculate-0.9.7
+PKGNAME=	qalculate-0.9.7
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
