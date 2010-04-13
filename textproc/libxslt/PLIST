@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2009/06/14 21:36:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.40 2010/04/13 16:14:03 drochner Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -23,6 +23,7 @@ include/libxslt/xslt.h
 include/libxslt/xsltInternals.h
 include/libxslt/xsltconfig.h
 include/libxslt/xsltexports.h
+include/libxslt/xsltlocale.h
 include/libxslt/xsltutils.h
 lib/libexslt.la
 lib/libxslt.la
@@ -36,6 +37,10 @@ share/aclocal/libxslt.m4
 share/doc/libxslt/API.html
 share/doc/libxslt/APIchunk0.html
 share/doc/libxslt/APIchunk1.html
+share/doc/libxslt/APIchunk10.html
+share/doc/libxslt/APIchunk11.html
+share/doc/libxslt/APIchunk12.html
+share/doc/libxslt/APIchunk13.html
 share/doc/libxslt/APIchunk2.html
 share/doc/libxslt/APIchunk3.html
 share/doc/libxslt/APIchunk4.html
@@ -44,10 +49,6 @@ share/doc/libxslt/APIchunk6.html
 share/doc/libxslt/APIchunk7.html
 share/doc/libxslt/APIchunk8.html
 share/doc/libxslt/APIchunk9.html
-share/doc/libxslt/APIchunk10.html
-share/doc/libxslt/APIchunk11.html
-share/doc/libxslt/APIchunk12.html
-share/doc/libxslt/APIchunk13.html
 share/doc/libxslt/APIconstructors.html
 share/doc/libxslt/APIfiles.html
 share/doc/libxslt/APIfunctions.html
@@ -98,6 +99,7 @@ share/doc/libxslt/html/libxslt-variables.html
 share/doc/libxslt/html/libxslt-xslt.html
 share/doc/libxslt/html/libxslt-xsltInternals.html
 share/doc/libxslt/html/libxslt-xsltexports.html
+share/doc/libxslt/html/libxslt-xsltlocale.html
 share/doc/libxslt/html/libxslt-xsltutils.html
 share/doc/libxslt/html/right.png
 share/doc/libxslt/html/up.png
