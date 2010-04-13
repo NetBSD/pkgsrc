@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2010/04/12 14:00:17 taca Exp $
+# $NetBSD: Makefile,v 1.25 2010/04/13 12:03:06 obache Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.18.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -10,13 +10,28 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	26 25
 
-post-patch:
-	${SED} "s|@PYGTKCODEGEN@|${PREFIX}/share/pygobject/2.0|" \
-	<${WRKSRC}/dsextras.py >${WRKSRC}/dsextras.py.tmp \
-	&& ${MV} ${WRKSRC}/dsextras.py.tmp ${WRKSRC}/dsextras.py
+SUBST_CLASSES+=		codegen
+SUBST_STAGE.codegen=	pre-configure
+SUBST_FILES.codegen=	dsextras.py
+SUBST_SED.codegen=	-e "s|@PYGTKCODEGEN@|${PREFIX}/share/pygobject/2.0|"
+
+REPLACE_PYTHON+=	codegen/code-coverage.py
+REPLACE_PYTHON+=	codegen/codegen.py
+REPLACE_PYTHON+=	codegen/createdefs.py
+REPLACE_PYTHON+=	codegen/defsconvert.py
+REPLACE_PYTHON+=	codegen/defsgen.py
+REPLACE_PYTHON+=	codegen/docextract_to_xml.py
+REPLACE_PYTHON+=	codegen/docgen.py
+REPLACE_PYTHON+=	codegen/h2def.py
+REPLACE_PYTHON+=	codegen/mergedefs.py
+REPLACE_PYTHON+=	codegen/missingdefs.py
+REPLACE_PYTHON+=	codegen/mkskel.py
+REPLACE_PYTHON+=	codegen/scanvirtuals.py
+REPLACE_PYTHON+=	codegen/scmexpr.py
 
 BUILDLINK_API_DEPENDS.py-gobject-shared+= py-gobject-shared>=${PKGVERSION_NOREV}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
