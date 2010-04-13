@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2010/04/06 22:29:59 taca Exp $
+$NetBSD: distinfo,v 1.19 2010/04/13 15:58:55 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -21,9 +21,9 @@ Size (TYPOlight-Chinese-v20.zip) = 106328 bytes
 SHA1 (TYPOlight-Croatian-v4.zip) = 8f27b96f9d8c3ce5347a938ed2b279f675ca37f8
 RMD160 (TYPOlight-Croatian-v4.zip) = b7093742c625e1e69c6fd687bd3ee81dbd960ff5
 Size (TYPOlight-Croatian-v4.zip) = 121383 bytes
-SHA1 (TYPOlight-Czech-v12.zip) = 5ec74195c494e8c4a0b32acc59534793e8e52eaa
-RMD160 (TYPOlight-Czech-v12.zip) = 941dfea572ff274cb8996c0d2b5a4026225b4b8b
-Size (TYPOlight-Czech-v12.zip) = 131375 bytes
+SHA1 (TYPOlight-Czech-v13.zip) = 94c512c819a0721e8daa4be2ab2ffb302a10a1ca
+RMD160 (TYPOlight-Czech-v13.zip) = 96e3038211d3aa32532e9cdaf24184f1a1e99b7d
+Size (TYPOlight-Czech-v13.zip) = 131315 bytes
 SHA1 (TYPOlight-Danish-v9.zip) = c5280d5b5581cc441d2b160eab982bf60f9be932
 RMD160 (TYPOlight-Danish-v9.zip) = fc7b475cd8831af686b026343292891825fb6854
 Size (TYPOlight-Danish-v9.zip) = 130820 bytes
@@ -51,9 +51,9 @@ Size (TYPOlight-Indonesian-v1.zip) = 72232 bytes
 SHA1 (TYPOlight-Italian-v22.zip) = 29b760f96bad38df19b2650104cdd3b31fed345b
 RMD160 (TYPOlight-Italian-v22.zip) = 1678da0d18434d56ee845bdfde0e0b9d62d951d6
 Size (TYPOlight-Italian-v22.zip) = 129784 bytes
-SHA1 (TYPOlight-Japanese-v27.zip) = f6c281f98581a82fbe3390a502f30b512330491b
-RMD160 (TYPOlight-Japanese-v27.zip) = c9e43ee7b3362749c05de0125a979e7ad01d4f53
-Size (TYPOlight-Japanese-v27.zip) = 139232 bytes
+SHA1 (TYPOlight-Japanese-v28.zip) = ae5c548fe4bdbc07c97cdcd569bfe5a4c1855356
+RMD160 (TYPOlight-Japanese-v28.zip) = 4f4fcca563472a6548d34290113ac1b7d31ef843
+Size (TYPOlight-Japanese-v28.zip) = 139164 bytes
 SHA1 (TYPOlight-Latvian-v23.zip) = c35b9ccc7e449a6406c6267cad7bdc35b1a2cbe8
 RMD160 (TYPOlight-Latvian-v23.zip) = fcdb3ab64300d3e55f28bd1c511028939c816384
 Size (TYPOlight-Latvian-v23.zip) = 91501 bytes
