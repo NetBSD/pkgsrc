@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9200 2010/04/12 14:03:09 tnn Exp $
+$NetBSD: TODO,v 1.9201 2010/04/13 06:55:04 obache Exp $
 
 Suggested new packages
 ======================
@@ -1148,7 +1148,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o projclock-0.9
 	o proxsmtp-1.6
 	o psmisc-21.9
-	o pstoedit-3.50
 	o ptlib-2.8.0 [pkg/42941]
 	o puf-0.93.3
 	o puppet-0.25.4
