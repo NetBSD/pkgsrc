@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2009/12/16 22:10:25 spz Exp $
+# $NetBSD: options.mk,v 1.6 2010/04/13 21:18:00 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inn
 PKG_SUPPORTED_OPTIONS=	inet6 perl python uucp
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--without-perl
 ### Python support for INN
 ###
 .if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+=       --with-python
+CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		_PATH_PYTHON=${PYTHONBIN:Q}
 
 .include "../../lang/python/application.mk"
