@@ -1,0 +1,3 @@
+Test::CheckManifest is a module for authors of Perl5 modules to verify their
+MANIFEST files. Invalid MANIFEST files usually results in failing smoke
+tests and more module uploads than necessary.
