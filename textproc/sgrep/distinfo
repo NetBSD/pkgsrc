@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/14 20:19:28 wiz Exp $
+
+SHA1 (sgrep-1.94a.tar.gz) = 4f6815d212ac6e1ed4eb2720f9b28963d1d0e99d
+RMD160 (sgrep-1.94a.tar.gz) = d75f644fc4ba9b0eb916f8097bf58ebe4b73154c
+Size (sgrep-1.94a.tar.gz) = 193267 bytes
