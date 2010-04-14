@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2010/04/14 18:45:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/14 20:15:27 elric Exp $
 #
 
-DISTNAME=	knc-1.6
+DISTNAME=	knc-1.6.1
 CATEGORIES=	security net
 MASTER_SITES=	http://oskt.secure-endpoints.com/downloads/
 
@@ -18,8 +18,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../mk/krb5.buildlink3.mk"
 .if ${KRB5_TYPE} == "heimdal"
-MAKE_ENV+=		CFLAGS+=-DHEIMDAL
-MAKE_ENV+=		LDADD=-lgssapi\ -lkrb5
+CFLAGS+=-DHEIMDAL
+MAKE_ENV+=	LDADD=-lgssapi\ -lkrb5
 .elif ${KRB5_TYPE} == "mit-krb5"
 MAKE_ENV+=		LDADD=-lgssapi_krb5
 .endif
