@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.15 2010/04/14 12:38:23 hans Exp $
+
+--- configure.orig	2009-01-15 04:37:34.000000000 +0100
++++ configure	2010-04-13 20:43:29.487823256 +0200
+@@ -474,6 +474,10 @@ do
+         subdir_configure_args="$subdir_configure_args $arg"
+         makemake_args="$makemake_args $arg" ;;
+ 
++      --x-*)
++	subdir_configure_args="$subdir_configure_args --with-${arg#--}"
++	makemake_args="$makemake_args --with-${arg#--}" ;;
++
+       --enable-* | --disable-*)
+         subdir_configure_args="$subdir_configure_args $arg"
+         makemake_args="$makemake_args $arg" ;;
