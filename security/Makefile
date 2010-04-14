@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2010/03/15 19:44:02 pettai Exp $
+# $NetBSD: Makefile,v 1.379 2010/04/14 18:46:26 schmonz Exp $
 #
 
 COMMENT=	Security tools
@@ -93,6 +93,7 @@ SUBDIR+=	jessie
 SUBDIR+=	john
 SUBDIR+=	keepassx
 SUBDIR+=	keychain
+SUBDIR+=	knc
 SUBDIR+=	kssh
 SUBDIR+=	kth-krb4
 SUBDIR+=	lasso
