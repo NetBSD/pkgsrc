@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2010/03/11 06:13:54 obache Exp $
+# $NetBSD: Makefile,v 1.554 2010/04/14 00:02:14 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -135,6 +135,7 @@ SUBDIR+=	gimp-fix-ca
 SUBDIR+=	gimp-liquid-rescale
 SUBDIR+=	gimp-rawphoto
 SUBDIR+=	gimp-refocus-it
+SUBDIR+=	gimp-resynthesizer
 SUBDIR+=	gimp-ufraw
 SUBDIR+=	gimp-warp-sharp
 SUBDIR+=	gimp1
