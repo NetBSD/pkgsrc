@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1535 2010/04/14 22:03:24 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1536 2010/04/14 22:37:11 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1914,3 +1914,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/sgrep version 1.94a [wiz 2010-04-14]
 	Updated www/p5-Plack to 0.9930 [seb 2010-04-14]
 	Updated www/p5-Starman to 0.2001 [seb 2010-04-14]
+	Updated devel/p5-Module-CoreList to 2.29 [seb 2010-04-14]
