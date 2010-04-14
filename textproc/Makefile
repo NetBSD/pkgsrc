@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2010/04/09 23:39:06 markd Exp $
+# $NetBSD: Makefile,v 1.532 2010/04/14 20:19:53 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -403,6 +403,7 @@ SUBDIR+=	py-Excelerator
 SUBDIR+=	py-FourSuite
 SUBDIR+=	py-HappyDoc
 SUBDIR+=	py-X
+SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-creole
 SUBDIR+=	py-docutils
@@ -486,6 +487,7 @@ SUBDIR+=	sary
 SUBDIR+=	saxon
 SUBDIR+=	scew
 SUBDIR+=	scrollkeeper-dtd
+SUBDIR+=	sgrep
 SUBDIR+=	shared-desktop-ontologies
 SUBDIR+=	soprano
 SUBDIR+=	source-highlight
