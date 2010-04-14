@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/04/13 00:36:58 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/14 22:03:11 seb Exp $
 
-DISTNAME=	Starman-0.1006
+DISTNAME=	Starman-0.2001
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	www perl5
@@ -17,15 +17,13 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Starman/.packlist
 
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-# This dependency on p5-Test-TCP should be removed with next release of Plack
-BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
 DEPENDS+=	p5-Net-Server-SS-PreFork-[0-9]*:../../net/p5-Net-Server-SS-PreFork
 DEPENDS+=	p5-Server-Starter-[0-9]*:../../sysutils/p5-Server-Starter
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Parser-XS-[0-9]*:../../www/p5-HTTP-Parser-XS
 DEPENDS+=	p5-Net-Server>=0.91:../../net/p5-Net-Server
-DEPENDS+=	p5-Plack>=0.9925:../../www/p5-Plack
+DEPENDS+=	p5-Plack>=0.9930:../../www/p5-Plack
 DEPENDS+=	p5-parent-[0-9]*:../../devel/p5-parent
 
 .include "../../lang/perl5/module.mk"
