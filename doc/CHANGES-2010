@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1533 2010/04/14 20:20:06 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1534 2010/04/14 21:56:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1912,3 +1912,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Test-CheckManifest version 1.21 [sno 2010-04-14]
 	Added security/knc version 1.6 [schmonz 2010-04-14]
 	Added textproc/sgrep version 1.94a [wiz 2010-04-14]
+	Updated www/p5-Plack to 0.9930 [seb 2010-04-14]
