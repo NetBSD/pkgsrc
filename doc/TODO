@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9202 2010/04/13 21:07:09 tonio Exp $
+$NetBSD: TODO,v 1.9203 2010/04/14 12:41:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
-	o asymptote-1.91
+	o asymptote-1.92
 	o at-spi-1.30.0 [GNOME 2.30]
 	o aterm-1.0.1
 	o atk-1.30.0 [GNOME 2.30]
@@ -456,8 +456,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
-	o botan-1.9.5
-	o bouml-4.19.2
+	o botan-1.9.6
+	o bouml-4.19.3
 	o brasero-2.30.0 [GNOME 2.30]
 	o bugzilla-3.4.5
 	o bwbasic-2.50 [pkg/42846]
@@ -485,7 +485,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.3
 	o climm-0.6.4
-	o cln-1.3.1
 	o clutter-gtk-0.10.4 [obache, wait for gtk2+>=2.19.5]
 	o colorize-0.3.4
 	o cone-0.78 [pkg/41623]
@@ -536,6 +535,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.7
 	o denemo-0.8.12
 	o dhid-5.3
+	o diffuse-0.4.2
 	o digikam-1.2.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -592,7 +592,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o evince-2.30.0 [GNOME 2.30]
 	o evolution-2.28.3.1 [GNOME 2.30]
 	o evolution-couchdb-0.4.5
-	o evolution-data-server-2.28.3.1
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o evolution-webcal-2.28.1
@@ -645,7 +644,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-10.0
+	o fotoxx-10.1
+	o frama-c-20100401
 	o freeciv-2.2.0
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -734,7 +734,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnumeric110-1.10.1
 	o gnupg2-2.0.15
-	o gnutls-2.8.6
 	o gob2-2.0.17
 	o goffice0.8-0.8.1
 	o gogo-3.11p1
@@ -877,9 +876,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libX11-1.3.3
 	o libXt-1.0.8
 	o libao-1.0.0
-	o libart-2.3.21
 	o libassuan-2.0.0
-	o libaudiofile-0.2.7
 	o libcares-1.7.0
 	o libdockapp-0.6.1
 	o libdrm-2.4.20
@@ -894,7 +891,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnomecanvas-2.30.1 [GNOME 2.30]
 	o libgnomedb-3.1.2
 	o libgnomekbd-2.30.0 [GNOME 2.30]
-	o libgsf-1.14.18
 	o libgweather-2.30.0 [GNOME 2.30]
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
@@ -914,9 +910,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.0
 	o librep-0.90.5
 	o libssh-0.4.2
-	o libssh2-1.2.4
+	o libssh2-1.2.5
 	o libstree-0.4.2
-	o libtasn1-2.5
 	o libtcl-nothread-8.5.1
 	o libusb-1.0
 	o libv4l-0.6.4
@@ -924,7 +919,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxcb-1.6
 	o libxklavier-5.0
 	o libxml++-2.30.0 [GNOME 2.30]
-	o libxml2-2.7.7
 	o licq-1.3.8
 	o links-2.3pre1
 	o listres-1.0.2
@@ -1011,8 +1005,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o multitail-5.2.6
 	o munin-1.4.4
 	o muse-0.9.2
-	o musicpd-0.15.9
-	o mysql-5.1.44 [taca]
 	o mysql51-server-5.1.45
 	o nagios-3.2.0
 	o nano-2.2.0
@@ -1040,6 +1032,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ns-3.7.1
 	o ns-flash-10
 	o ns-plugger-common-5.1.3
+	o ntp-4.2.6p1
 	o ntp4-4.2.6
 	o nulib2-220
 	o nut-15.4
@@ -1106,7 +1099,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pbzip2-1.1.0
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
-	o pcre-8.02
 	o pdmenu-1.2.87
 	o pekwm-0.1.12
 	o pen-0.17.3
@@ -1117,7 +1109,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o photopc-3.05
 	o php5-5.3.2
 	o php-jpgraph-3.0.6
-	o phpmyadmin-3.3.1
+	o phpmyadmin-3.3.2
 	o phylip-3.68
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1173,7 +1165,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-fpconst-0.7.2 [pkg/42556]
 	o py-game-1.9.1
 	o py-gdata-2.0.8 [pkg/42892]
-	o py-gnome2-2.28.1 [GNOME 2.30]
 	o py-gnome2-desktop-2.30.0 [GNOME 2.30]
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
@@ -1181,14 +1172,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-html2text-2.38
 	o py-jinja2-2.3 [pkg/42783]
 	o py-kenosis-0.96 [pkg/42561]
-	o py-libxml2-2.7.7
 	o py-lxml-2.2.6
 	o py-m2crypto-0.20.2
 	o py-nevow-0.10.0
 	o py-psycopg2-2.0.14
 	o py-pytz-2010g
-	o py-qt4-4.7.2
-	o py-sip-4.10.1
 	o py-sybase-0.37
 	o py-urwid-0.9.9.1 [pkg/43104]
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]
@@ -1342,7 +1330,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-27.0.2
+	o tea-27.1.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
@@ -1415,7 +1403,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wcalc-2.4
 	o webalizer-2.21.2
 	o webby-0.9.3
-	o webkit-1.1.15.4
 	o webmin-1.510
 	o weewm-0.01
 	o whohas-0.24
@@ -1479,7 +1466,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xforms-1.0.92
 	o xfstt-1.7
 	o xhippo-3.5
-	o xine-lib-1.1.18.1
 	o xinit-1.2.1
 	o xinput-1.5.1
 	o xjman-0.7
