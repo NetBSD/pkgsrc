@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/03/09 01:33:26 taca Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/14 14:51:01 sborrill Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -146,5 +146,6 @@ post-install:
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
