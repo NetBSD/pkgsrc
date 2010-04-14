@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.95 2010/02/20 04:40:03 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.96 2010/04/14 18:24:58 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.95 2010/02/20 04:40:03 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.96 2010/04/14 18:24:58 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1280,7 +1280,7 @@ check_vulnerable(struct pkg_task *pkg)
 	}
 
 	if (pv == NULL) {
-		pv = read_pkg_vulnerabilities(pkg_vulnerabilities_file,
+		pv = read_pkg_vulnerabilities_file(pkg_vulnerabilities_file,
 		    require_check, 0);
 		if (pv == NULL)
 			return require_check;
