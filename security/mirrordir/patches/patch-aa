@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/12/19 14:44:07 agc Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/14 22:45:51 joerg Exp $
 
 Problems with "test -f symlink" returning true.
 
---- src/Makefile.in	2001/12/19 13:04:22	1.1
-+++ src/Makefile.in	2001/12/19 13:28:42
-@@ -176,7 +176,7 @@
+--- src/Makefile.in.orig	2000-01-16 21:19:28.000000000 +0000
++++ src/Makefile.in
+@@ -176,7 +176,7 @@ install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
  	@list='$(bin_PROGRAMS)'; for p in $$list; do \
@@ -13,3 +13,16 @@ Problems with "test -f symlink" returning true.
  	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
  	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
  	  else :; fi; \
+@@ -399,9 +399,9 @@ maintainer-clean-generic clean mostlycle
+ 
+ 
+ install-exec-hook:
+-	$(LN_S) -f $(bindir)/mirrordir $(bindir)/copydir
+-	$(LN_S) -f $(bindir)/mirrordir $(bindir)/recursdir
+-	$(LN_S) -f $(bindir)/mirrordir $(bindir)/pslogin
++	$(LN_S) -f mirrordir ${DESTDIR}$(bindir)/copydir
++	$(LN_S) -f mirrordir ${DESTDIR}$(bindir)/recursdir
++	$(LN_S) -f mirrordir ${DESTDIR}$(bindir)/pslogin
+ 
+ pslogin.o:
+ 	@echo ""
