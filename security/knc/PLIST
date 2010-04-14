@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/04/14 18:45:48 schmonz Exp $
+bin/knc
+man/cat1/knc.0
+man/man1/knc.1
