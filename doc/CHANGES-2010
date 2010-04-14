@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1530 2010/04/14 08:08:58 morr Exp $
+$NetBSD: CHANGES-2010,v 1.1531 2010/04/14 18:02:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1909,3 +1909,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/apache-ant to 1.8.0 [tonio 2010-04-13]
 	Updated net/darkstat to 3.0.713 [sh 2010-04-13]
 	Added graphics/gimp-resynthesizer version 0.16 [wiz 2010-04-14]
+	Added devel/p5-Test-CheckManifest version 1.21 [sno 2010-04-14]
