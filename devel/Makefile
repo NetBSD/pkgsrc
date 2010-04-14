@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1327 2010/04/13 01:33:05 seb Exp $
+# $NetBSD: Makefile,v 1.1328 2010/04/14 18:03:23 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -923,6 +923,7 @@ SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-Aggregate
 SUBDIR+=	p5-Test-Assertions
 SUBDIR+=	p5-Test-Base
+SUBDIR+=	p5-Test-CheckManifest
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-ClassAPI
 SUBDIR+=	p5-Test-Cmd
