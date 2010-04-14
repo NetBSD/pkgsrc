@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1529 2010/04/14 00:02:25 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1530 2010/04/14 08:08:58 morr Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1907,4 +1907,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100413 [taca 2010-04-13]
 	Updated pkgtools/pkg_comp to 1.32 [jmmv 2010-04-13]
 	Updated devel/apache-ant to 1.8.0 [tonio 2010-04-13]
+	Updated net/darkstat to 3.0.713 [sh 2010-04-13]
 	Added graphics/gimp-resynthesizer version 0.16 [wiz 2010-04-14]
