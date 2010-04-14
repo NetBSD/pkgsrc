@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9203 2010/04/14 12:41:31 wiz Exp $
+$NetBSD: TODO,v 1.9204 2010/04/14 12:45:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1102,6 +1102,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pdmenu-1.2.87
 	o pekwm-0.1.12
 	o pen-0.17.3
+	o perl-5.12.0
 	o pessulus-2.28.0 [GNOME 2.28]
 	o pforth-24 [asau]
 	o pgpool-3.1.1
