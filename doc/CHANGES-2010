@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1536 2010/04/14 22:37:11 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1537 2010/04/15 00:28:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1915,3 +1915,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Plack to 0.9930 [seb 2010-04-14]
 	Updated www/p5-Starman to 0.2001 [seb 2010-04-14]
 	Updated devel/p5-Module-CoreList to 2.29 [seb 2010-04-14]
+	Updated devel/diffuse to 0.4.2 [wiz 2010-04-15]
