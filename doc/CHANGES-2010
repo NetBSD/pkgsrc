@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1547 2010/04/15 13:03:34 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1548 2010/04/15 19:02:12 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1927,3 +1927,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/stunnel to 4.33 [tron 2010-04-15]
 	Added net/libbind version 6.0 [obache 2010-04-15]
 	Updated mail/enma to 1.1.0nb1 [obache 2010-04-15]
+	Updated cross/avr-gcc to 4.4.1nb2 [jakllsch 2010-04-15]
