@@ -1,0 +1,110 @@
+$NetBSD: patch-cf,v 1.1 2010/04/15 08:13:34 dholland Exp $
+
+DESTDIR support
+
+--- doc/Makefile.SH~	2001-06-19 17:03:39.000000000 +0000
++++ doc/Makefile.SH
+@@ -32,12 +32,15 @@ DEST		=	$bin
+ ECHO		=	$echo
+ FORMATTER	=	$roff
+ FORMATTER_OPTS	=	$roffopts
+-LIB		=	$lib
++PLIB		=	$lib
++LIB		=	\$(DESTDIR)$lib
+ LN		=	$ln
+ MAKE		=	$make
+-MAN		=	$mansrc
++PMAN		=	$mansrc
++MAN		=	\$(DESTDIR)$mansrc
+ MANEXT		=	$manext
+-CATMAN		=	$catmansrc
++PCATMAN		=	$catmansrc
++CATMAN		=	\$(DESTDIR)$catmansrc
+ CATMANEXT	=	$catmanext
+ RM		= 	$rm -f
+ TBL       	=	$tbl
+@@ -134,42 +137,42 @@ FORMATTED_LIST	=	Alias.fmtd	\
+ 
+ # Targets
+ all: 
+-	@if $(TEST) '$(CATMAN)' != none; then $(MAKE) formatted_pages ;  else true ; fi
++	@if $(TEST) '$(PCATMAN)' != none; then $(MAKE) formatted_pages ;  else true ; fi
+ 
+ #	The following are no-ops
+ lint:
+ clean:	
+ 
+ elm.1.subs: elm.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < elm.1 > elm.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < elm.1 > elm.1.subs
+ answer.1.subs: answer.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < answer.1 > answer.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < answer.1 > answer.1.subs
+ chkalias.1.subs: chkalias.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < chkalias.1 > chkalias.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < chkalias.1 > chkalias.1.subs
+ elmalias.1.subs: elmalias.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < elmalias.1 > elmalias.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < elmalias.1 > elmalias.1.subs
+ elmcharset.1.subs: elmcharset.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < elmcharset.1 > elmcharset.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < elmcharset.1 > elmcharset.1.subs
+ elmterminal.1.subs: elmterminal.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < elmterminal.1 > elmterminal.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < elmterminal.1 > elmterminal.1.subs
+ elmunidata.1.subs: elmunidata.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < elmunidata.1 > elmunidata.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < elmunidata.1 > elmunidata.1.subs
+ fastmail.1.subs: fastmail.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < fastmail.1 > fastmail.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < fastmail.1 > fastmail.1.subs
+ frm.1.subs: frm.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < frm.1 > frm.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < frm.1 > frm.1.subs
+ listalias.1.subs: listalias.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < listalias.1 > listalias.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < listalias.1 > listalias.1.subs
+ messages.1.subs: messages.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < messages.1 > messages.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < messages.1 > messages.1.subs
+ newalias.1.subs: newalias.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < newalias.1 > newalias.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < newalias.1 > newalias.1.subs
+ printmail.1.subs: printmail.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < printmail.1 > printmail.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < printmail.1 > printmail.1.subs
+ readmsg.1.subs: readmsg.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < readmsg.1 > readmsg.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < readmsg.1 > readmsg.1.subs
+ newmail.1.subs: newmail.1
+-	$(SED) 's"#LIB#"$(LIB)"g;' < newmail.1 > newmail.1.subs
++	$(SED) 's"#LIB#"$(PLIB)"g;' < newmail.1 > newmail.1.subs
+ 
+ 
+ 
+@@ -180,8 +183,8 @@ catman:
+ 	mkdir catman
+ 
+ install: $(LIB_LIST)
+-	@if $(TEST) '$(MAN)' != none; then $(MAKE) install_man ; else true ;  fi
+-	@if $(TEST) '$(CATMAN)' != none; then $(MAKE) install_catman ; else true ;  fi
++	@if $(TEST) '$(PMAN)' != none; then $(MAKE) install_man ; else true ;  fi
++	@if $(TEST) '$(PCATMAN)' != none; then $(MAKE) install_catman ; else true ;  fi
+ 
+ install_man: $(MANROOT) $(MAN) $(MAN_LIST) $(MAN)/wnewmail$(MANEXT)
+ 
+@@ -195,12 +198,12 @@ $(CATMAN):
+ 
+ uninstall:
+ 	$(RM) $(LIB_LIST) 
+-	@if $(TEST) '$(MAN)' != none; then  \
++	@if $(TEST) '$(PMAN)' != none; then  \
+ 		$(RM) $(MAN_LIST) $(MAN)/wnewmail$(MANEXT) ; \
+ 	else \
+ 		true ; \
+ 	fi
+-	@if $(TEST) '$(CATMAN)' != none; then \
++	@if $(TEST) '$(PCATMAN)' != none; then \
+ 		$(RM) $(CATMAN_LIST) $(CATMAN)/wnewmail$(CATMANEXT)$(SUFFIX) ; \
+ 	else \
+ 		true ; \
