@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1541 2010/04/15 07:57:26 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1542 2010/04/15 09:08:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1922,3 +1922,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/elm to 2.5.8nb2 [dholland 2010-04-15]
 	Updated chat/jabberd2 to 2.2.9nb2 [adam 2010-04-15]
 	Updated databases/slony1 to 2.0.2 [adam 2010-04-15]
+	Updated mail/metamail to 2.7nb10 [tron 2010-04-15]
