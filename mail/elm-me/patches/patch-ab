@@ -1,7 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/18 19:59:14 martin Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/15 08:13:34 dholland Exp $
 
---- nls/Makefile.orig	Thu Nov 18 14:41:07 1999
-+++ nls/Makefile	Thu Nov 18 14:46:27 1999
+use right gencat
+DESTDIR support
+
+--- nls/Makefile.orig	2001-06-19 17:03:18.000000000 +0000
++++ nls/Makefile
 @@ -3,7 +3,7 @@
  #
  LANGFILE=LANGS
@@ -11,3 +14,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/07/18 19:59:14 martin Exp $
  
  HDIR=	../hdrs
  SDIR=	C/C/C
+@@ -41,7 +41,7 @@ nls-headers: clean $(HFILES)
+ all:
+ 
+ install:
+-	./Install $(LANGFILE) $(GENCAT) $(CATNAME)
++	DESTDIR=$(DESTDIR) ./Install $(LANGFILE) $(GENCAT) $(CATNAME)
+ 
+ $(HFILES): $(MFILES)
+ 	gencat/gencat $(MSGCAT) "$(SDIR)/`basename $@ .h`".m -h $@

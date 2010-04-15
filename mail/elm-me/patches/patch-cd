@@ -1,7 +1,19 @@
-$NetBSD: patch-cd,v 1.1 2006/01/24 19:01:45 joerg Exp $
+$NetBSD: patch-cd,v 1.2 2010/04/15 08:13:34 dholland Exp $
 
---- src/Makefile.SH.orig	2006-01-24 18:05:41.000000000 +0000
+fix CFLAGS
+DESTDIR support
+
+--- src/Makefile.SH.orig	2001-06-19 17:03:45.000000000 +0000
 +++ src/Makefile.SH
+@@ -22,7 +22,7 @@ fi
+ 
+ case "$d_locale" in
+ define)
+-	localetarget='$(LIB)/elm.mimecharsets'
++	localetarget='$(DESTDIR)$(LIB)/elm.mimecharsets'
+ 	;;
+ *)
+ 	localetarget=
 @@ -83,7 +83,7 @@ cat >>Makefile <<'!NO!SUBS!'
  
  #	Other general variables
@@ -11,3 +23,86 @@ $NetBSD: patch-cd,v 1.1 2006/01/24 19:01:45 joerg Exp $
  INCLDIR		=	../hdrs
  LINTFLAGS	=	-I$(INCLDIR)
  SHELL		=	/bin/sh
+@@ -216,19 +216,19 @@ ELM_OBJ		=	addr_util.o	\
+ # Standard targets
+ all:		Makefile $(BIN)/elm $(SHLIST)
+ 
+-install:	Makefile $(DEST) $(LIB) $(DEST)/elm $(LOCALETARG) $(LIB)/elm.map.bin/unidata.bin 
++install:	Makefile $(DESTDIR)$(DEST) $(DESTDIR)$(LIB) $(DESTDIR)$(DEST)/elm $(LOCALETARG) $(DESTDIR)$(LIB)/elm.map.bin/unidata.bin 
+ 
+-$(DEST):
+-		mkdir $(DEST)
++$(DESTDIR)$(DEST):
++		mkdir $(DESTDIR)$(DEST)
+ 
+-$(LIB):
+-		mkdir $(LIB)
++$(DESTDIR)$(LIB):
++		mkdir $(DESTDIR)$(LIB)
+ 
+-$(LIB)/elm.map.bin: 
+-		mkdir $(LIB)/elm.map.bin
++$(DESTDIR)$(LIB)/elm.map.bin: 
++		mkdir $(DESTDIR)$(LIB)/elm.map.bin
+ 
+ uninstall:	
+-		$(RM) $(DEST)/elm $(LOCALETARG) $(LIB)/elm.map.bin/unidata.bin
++		$(RM) $(DESTDIR)$(DEST)/elm $(LOCALETARG) $(DESTDIR)$(LIB)/elm.map.bin/unidata.bin
+ 
+ Makefile: Makefile.SH ../config.sh
+ 	@echo "You must run 'sh Configure -S' or 'sh Configure'"
+@@ -323,17 +323,17 @@ syscall.o:	$(INCLDIR)/headers.h $(INCLDI
+ utils.o:	$(INCLDIR)/headers.h $(INCLDIR)/s_elm.h $(INCLDIR)/me.h
+ 
+ #	Dependencies and rules for compiling C programs
+-$(BIN)/elm:	$& $(ELM_OBJ) ../melib/libme.a ../lib/libutil.a 
++$(DESTDIR)$(BIN)/elm:	$& $(ELM_OBJ) ../melib/libme.a ../lib/libutil.a 
+ 		$(CC) $(LFLAGS) -o $@ $(ELM_OBJ) ../melib/libme.a ../lib/libutil.a $(LIBS) $(LIB2)
+ 
+ #	Dependencies and rules for installing C programs
+ 
+-$(LIB)/elm.mimecharsets: $(BIN)/elm.mimecharsets $(BIN)/elmcharset ../ConfTool/killsets
++$(DESTDIR)$(LIB)/elm.mimecharsets: $(BIN)/elm.mimecharsets $(BIN)/elmcharset ../ConfTool/killsets
+ 		$(BIN)/elmcharset -G -I ../ConfTool/killsets -w $@ $(BIN)/elm.mimecharsets 
+ 		$(CHMOD) u=rw,go=r $@
+ 
+-$(LIB)/elm.map.bin/unidata.bin: $(LIB) $(LIB)/elm.map.bin ../charset/UNIDATA/UNIDATA2.TXT $(BIN)/elmunidata 
+-		$(BIN)/elmunidata -I -s ../charset/UNIDATA/UNIDATA2.TXT 
++$(DESTDIR)$(LIB)/elm.map.bin/unidata.bin: $(DESTDIR)$(LIB) $(DESTDIR)$(LIB)/elm.map.bin ../charset/UNIDATA/UNIDATA2.TXT $(BIN)/elmunidata 
++		$(BIN)/elmunidata -w $@ -s ../charset/UNIDATA/UNIDATA2.TXT 
+ 		$(CHMOD) ugo=r $@
+ 
+ !NO!SUBS!
+@@ -346,24 +346,26 @@ $(BIN)/elm-shared: $& $(ELM_OBJ) ../meli
+ 		$(CC) $(LFLAGS) -o $@ $(RPATH) $(ELM_OBJ) ../melib/libme.a ../shlib/libelmme-base.so $(LIBS) $(LIB2)
+ 
+ 
+-$(DEST)/elm:	$(BIN)/elm-shared
++$(DESTDIR)$(DEST)/elm:	$(BIN)/elm-shared
+ 		-$(MV) $@ $@.old
+ 		-$(RM) $@.old
+ 		$(CP) $(BIN)/elm-shared $@
+-		$(CHGRP) $(MAILGRP) $@
+-		$(CHMOD) $(MAILERMODE) $@
++		$(CHMOD) a+x $@
++		#$(CHGRP) $(MAILGRP) $@
++		#$(CHMOD) $(MAILERMODE) $@
+ 
+ !NO!SUBS!
+ 
+ else
+ 
+ cat >>Makefile <<'!NO!SUBS!'
+-$(DEST)/elm:	$(BIN)/elm
++$(DESTDIR)$(DEST)/elm:	$(BIN)/elm
+ 		-$(MV) $@ $@.old
+ 		-$(RM) $@.old
+ 		$(CP) $(BIN)/elm $@
+-		$(CHGRP) $(MAILGRP) $@
+-		$(CHMOD) $(MAILERMODE) $@
++		$(CHMOD) a+x $@
++		#$(CHGRP) $(MAILGRP) $@
++		#$(CHMOD) $(MAILERMODE) $@
+ !NO!SUBS!
+ 
+ fi
