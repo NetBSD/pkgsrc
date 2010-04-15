@@ -1,0 +1,5 @@
+The \DeclareCaption command defines a class of caption command
+associated with the counter specified to the command.  These commands
+are free-standing (i.e., don't need to be inside a float environment).
+The package uses \DeclareCaption to define \figcaption and
+\tabcaption, which can be used outside figure or table environments.
