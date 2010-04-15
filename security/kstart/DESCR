@@ -1,0 +1,9 @@
+k5start, and krenew are modified versions of kinit which add support
+for running as a daemon to maintain a ticket cache, running a
+command with credentials from a keytab and maintaining a ticket
+cache until that command completes, obtaining AFS tokens (via an
+external aklog) after obtaining tickets, and creating an AFS PAG
+for a command. They are primarily useful in conjunction with
+long-running jobs; for moving ticket handling code out of servers,
+cron jobs, or daemons; and to obtain tickets and AFS tokens with
+a single command.
