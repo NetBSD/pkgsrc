@@ -1,0 +1,17 @@
+ISC's libbind provides the standard resolver library,
+along with header files and documentation, for communicating
+with domain name servers, retrieving network host entries
+from /etc/hosts or via DNS, converting CIDR network addresses,
+perform Hesiod information lookups, retrieve network entries
+from /etc/networks, implement TSIG transaction/request
+security of DNS messages, perform name-to-address and
+address-to-name translations, utilize /etc/resolv.conf
+for resolver configuration.
+
+It contains many of the same historical functions and headers
+included with many Unix operating systems.
+
+Originally written for BIND 8, it was included in BIND 9 as
+optionally-compiled code through release 9.5.  It has been
+removed from subsequent releases of BIND 9 and is now
+provided as a separate package.
