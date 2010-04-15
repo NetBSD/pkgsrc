@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1544 2010/04/15 09:58:05 tron Exp $
+$NetBSD: CHANGES-2010,v 1.1545 2010/04/15 12:58:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1925,3 +1925,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/metamail to 2.7nb10 [tron 2010-04-15]
 	Updated pkgtools/pkg_comp to 1.33 [jmmv 2010-04-15]
 	Updated security/stunnel to 4.33 [tron 2010-04-15]
+	Added net/libbind version 6.0 [obache 2010-04-15]
+	Added net/libbind version 6.0 [obache 2010-04-15]
