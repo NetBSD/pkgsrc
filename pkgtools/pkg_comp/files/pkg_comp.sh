@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.36 2010/04/13 16:46:01 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.37 2010/04/15 09:42:45 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -43,7 +43,7 @@ _MKCONF_VARS="WRKDIR_BASENAME MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
               PKG_DEVELOPER CLEANDEPENDS LOCALBASE PKG_SYSCONFBASE \
               CFLAGS CPPFLAGS CXXFLAGS USE_AUDIT_PACKAGES PKGVULNDIR \
               USE_XPKGWEDGE PKGSRC_COMPILER \
-              LIBKVER_STANDALONE_PREFIX"
+              LIBKVER_STANDALONE_PREFIX PKG_DBDIR"
 
 _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
@@ -99,6 +99,7 @@ env_setdefaults()
     : ${PKGVULNDIR:=/usr/pkg/share}
     : ${USE_XPKGWEDGE:=yes}
     : ${PKGSRC_COMPILER:=gcc}
+    : ${PKG_DBDIR:=/var/db/pkg}
 
     # Default values for global variables used in the script.
     : ${DESTDIR:=/var/chroot/pkg_comp/default}
@@ -513,15 +514,19 @@ makeroot()
     echo "ENV=/etc/shrc" >> $DESTDIR/etc/profile
     echo "export PS1=\"pkg_comp:`basename $conffile`# \"" >> $DESTDIR/etc/shrc
     echo "set -o emacs" >> $DESTDIR/etc/shrc
+    echo "export PKG_DBDIR=\"${PKG_DBDIR}\"" >> ${DESTDIR}/etc/shrc
 
     # Set csh configuration
     echo "umask 022" >> $DESTDIR/etc/csh.login
     echo "set prompt=\"pkg_comp:`basename $conffile`# \"" >> $DESTDIR/etc/csh.login
     echo "set prompt=\"pkg_comp:`basename $conffile`# \"" >> $DESTDIR/etc/csh.cshrc
+    echo "setenv PKG_DBDIR \"${PKG_DBDIR}\"" >> ${DESTDIR}/etc/csh.cshrc
 
     cp /etc/resolv.conf $DESTDIR/etc/resolv.conf
 
     makeroot_mkconf
+
+    echo "PKG_DBDIR=${PKG_DBDIR}" >> ${DESTDIR}/etc/pkg_install.conf
 
     # From now on, filesystems may be mounted, so we need to trap
     # signals to umount them.
