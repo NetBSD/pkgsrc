@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/15 12:57:49 obache Exp $
+
+--- configure.orig	2009-03-05 01:37:31.000000000 +0000
++++ configure
+@@ -25135,9 +25135,9 @@ case $use_libtool in
+ 		O=lo
+ 		A=la
+ 		LIBTOOL_MKDEP_SED='s;\.o;\.lo;'
+-		LIBTOOL_MODE_COMPILE='--mode=compile'
++		LIBTOOL_MODE_COMPILE='--mode=compile --tag=CC'
+ 		LIBTOOL_MODE_INSTALL='--mode=install'
+-		LIBTOOL_MODE_LINK='--mode=link'
++		LIBTOOL_MODE_LINK='--mode=link --tag=CC'
+ 		;;
+ 	*)
+ 		O=o
