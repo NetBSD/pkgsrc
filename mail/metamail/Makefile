@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2008/05/10 11:52:14 obache Exp $
+# $NetBSD: Makefile,v 1.46 2010/04/15 09:07:37 tron Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	mail
 MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/	\
 		ftp://ftp.research.telcordia.com/pub/nsb/
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
-CONFLICTS+=	elm>=2.5.5 mm-2.7
+CONFLICTS+=	mm-2.7
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
