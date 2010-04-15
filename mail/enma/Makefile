@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/12/15 16:40:01 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/15 13:03:21 obache Exp $
 #
 
 DISTNAME=	enma-1.1.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enma/}
 
@@ -15,10 +16,9 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--with-libmilter=${BUILDLINK_PREFIX.libmilter}
-#CONFIGURE_ARGS+=	--with-libbind=${BUILDLINK_PREFIX.bind}
+CONFIGURE_ARGS+=	--with-libbind=${BUILDLINK_PREFIX.libbind}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples/enma
-
-BUILDLINK_TRANSFORM+=	opt:-lbind:${RESOLV_LDFLAGS}
 
 BUILD_DEFS+=	VARBASE
 
@@ -57,9 +57,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/enma/enma.conf.sample
 
 .include "../../mail/libmilter/buildlink3.mk"
+.include "../../net/libbind/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.if ${OPSYS} == "DragonFly"
-USE_BUILTIN.resolv=	no
-.endif
-.include "../../mk/resolv.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
