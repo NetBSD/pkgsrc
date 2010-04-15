@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.824 2010/04/11 18:57:01 seb Exp $
+# $NetBSD: Makefile,v 1.825 2010/04/15 12:59:31 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -210,6 +210,7 @@ SUBDIR+=	lftp
 SUBDIR+=	libIDL
 SUBDIR+=	libares
 SUBDIR+=	libasyncns
+SUBDIR+=	libbind
 SUBDIR+=	libcares
 SUBDIR+=	libdnet
 SUBDIR+=	libfetch
