@@ -1,8 +1,10 @@
-$NetBSD: patch-an,v 1.1 2008/07/21 05:35:37 dholland Exp $
+$NetBSD: patch-an,v 1.2 2010/04/15 06:50:46 dholland Exp $
 
---- nls/gencat/genlib.c.orig	2005-08-18 08:49:24.000000000 -0400
-+++ nls/gencat/genlib.c	2008-07-21 01:07:43.000000000 -0400
-@@ -42,6 +42,8 @@
+Add necessary includes; fix POSIX getline lossage.
+
+--- nls/gencat/genlib.c.orig	2005-08-18 12:49:24.000000000 +0000
++++ nls/gencat/genlib.c
+@@ -42,6 +42,8 @@ up-to-date.  Many thanks.
  #include <stdio.h>
  #include <sys/types.h>
  #if defined(SYSV) || defined(__STDC__)
@@ -11,3 +13,30 @@ $NetBSD: patch-an,v 1.1 2008/07/21 05:35:37 dholland Exp $
  # include <fcntl.h>
  # include <unistd.h>
  # define L_SET SEEK_SET
+@@ -86,7 +88,7 @@ static void nomem() {
+     error(NULL, "out of memory");
+ }
+ 	    
+-static char *getline(fd)
++static char *get_line(fd)
+ int fd;
+ {
+     static long	len = 0, curlen = BUFSIZ;
+@@ -201,7 +203,7 @@ char quote;
+ 	    ++cptr;
+ 	    switch (*cptr) {
+ 	      case '\0':
+-		cptr = getline(fd);
++		cptr = get_line(fd);
+ 		if (!cptr) error(NULL, "premature end of file");
+ 		msglen += strlen(cptr);
+ 		i = tptr - msg;
+@@ -333,7 +335,7 @@ int fd;
+ 
+     hconst[0] = '\0';
+     
+-    while (cptr = getline(fd)) {
++    while (cptr = get_line(fd)) {
+ 	if (*cptr == '$') {
+ 	    ++cptr;
+ 	    if (strncmp(cptr, "set", 3) == 0) {

@@ -1,7 +1,10 @@
-$NetBSD: patch-ad,v 1.6 2001/07/18 20:04:13 martin Exp $
---- Make.defs.SH.orig	Mon Jul 16 01:59:07 2001
-+++ Make.defs.SH	Mon Jul 16 02:02:02 2001
-@@ -113,6 +113,7 @@
+$NetBSD: patch-ad,v 1.7 2010/04/15 06:50:46 dholland Exp $
+
+destdir support.
+
+--- Make.defs.SH.orig	2005-08-18 12:49:24.000000000 +0000
++++ Make.defs.SH
+@@ -113,6 +113,7 @@ RANLIB		= $ranlib
  RM		= $rm
  TEST		= $test
  TOUCH		= $touch
@@ -9,11 +12,18 @@ $NetBSD: patch-ad,v 1.6 2001/07/18 20:04:13 martin Exp $
  
  DESTBIN		= $installbin
  DESTLIB		= $installlib
-@@ -143,6 +144,7 @@
+@@ -143,9 +144,12 @@ INST_MAILER = \
  	$(RM) -f $@.old ; \
  	$(TEST) ! -f $@ || $(MV) $@ $@.old ; \
  	$(RM) -f $@.old ; \
 +	$(MKDIR) -p `dirname $@` ; \
  	$(CP) $? $@ ; \
- 	$(TEST) $(MAILERMODE) -lt 999 || $(CHGRP) $(MAILGRP) $@ ; \
- 	$(CHMOD) $(MAILERMODE) $@
+-	$(TEST) $(MAILERMODE) -lt 999 || $(CHGRP) $(MAILGRP) $@ ; \
+-	$(CHMOD) $(MAILERMODE) $@
++	$(CHMOD) a+x $@
++# now done by pkgsrc makefile with SPECIAL_PERMS
++#	$(TEST) $(MAILERMODE) -lt 999 || $(CHGRP) $(MAILGRP) $@
++#	$(CHMOD) $(MAILERMODE) $@
+ 
+ #
+ # Common rules
