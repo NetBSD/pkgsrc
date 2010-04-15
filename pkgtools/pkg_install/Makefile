@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2010/04/14 18:24:58 joerg Exp $
+# $NetBSD: Makefile,v 1.178 2010/04/15 22:25:11 tron Exp $
 
 # Notes to package maintainers:
 #
@@ -123,6 +123,12 @@ LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub
+
+.  if ${OPSYS} == "Darwin"
+# Make sure that the linker used our static library instead of the
+# (outdated) dynamic library "/usr/lib/libarchive.dylib".
+LDFLAGS+=	-Wl,-search_paths_first
+.  endif
 
 # Hack to make sure that the libarchive version is replaced
 pre-configure: config-guess-override config-sub-override
