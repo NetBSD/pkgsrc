@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9205 2010/04/15 00:28:54 wiz Exp $
+$NetBSD: TODO,v 1.9206 2010/04/15 09:58:05 tron Exp $
 
 Suggested new packages
 ======================
@@ -1308,7 +1308,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.2
 	o streamripper-1.63.0
-	o stunnel-4.33
 	o subtitleeditor-0.33.0
 	o sun-jdk6-6.0.19
 	o sun-jre6-6.0.19
