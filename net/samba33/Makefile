@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/03/09 01:33:26 taca Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2010/04/15 18:07:23 tron Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 
@@ -146,5 +147,6 @@ post-install:
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
