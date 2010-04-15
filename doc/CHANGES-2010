@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1549 2010/04/15 20:23:49 jakllsch Exp $
+$NetBSD: CHANGES-2010,v 1.1550 2010/04/15 20:28:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1929,3 +1929,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/enma to 1.1.0nb1 [obache 2010-04-15]
 	Updated cross/avr-gcc to 4.4.1nb2 [jakllsch 2010-04-15]
 	Added security/kstart version 3.16 [jakllsch 2010-04-15]
+	Updated textproc/ruby-haml to 2.2.23 [seb 2010-04-15]
