@@ -1,7 +1,22 @@
-$NetBSD: patch-cb,v 1.1 2006/01/24 19:01:45 joerg Exp $
+$NetBSD: patch-cb,v 1.2 2010/04/15 08:13:34 dholland Exp $
 
---- lib/Makefile.SH.orig	2006-01-24 18:04:57.000000000 +0000
+fix CFLAGS
+DESTDIR support
+
+--- lib/Makefile.SH.orig	2001-06-19 17:03:40.000000000 +0000
 +++ lib/Makefile.SH
+@@ -102,9 +102,9 @@ if $test "$d_shared" = "$define" ; then
+ 
+ cat >>Makefile <<SUBSTITUTE
+ SHLIST          = ../shlib/libelmme-base.so
+-INSTLIB		= $shlib/libelmme-base.so$d_shared_rev
++INSTLIB		= \$(DESTDIR)$shlib/libelmme-base.so$d_shared_rev
+ SONAME          = ${soname_opt}$shlib/libelmme-base.so$d_shared_rev
+-SHLIB		= $shlib
++SHLIB		= \$(DESTDIR)$shlib
+ SUBSTITUTE
+ 
+ else
 @@ -121,7 +121,7 @@ fi
  $cat >>Makefile <<'!NO!SUBS!'
  
