@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/15 20:23:03 jakllsch Exp $
+bin/k5start
+man/man1/k5start.1
+bin/krenew
+man/man1/krenew.1
