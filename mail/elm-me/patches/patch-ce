@@ -1,7 +1,23 @@
-$NetBSD: patch-ce,v 1.1 2006/01/24 19:01:45 joerg Exp $
+$NetBSD: patch-ce,v 1.2 2010/04/15 08:13:34 dholland Exp $
 
---- utils/Makefile.SH.orig	2006-01-24 18:05:58.000000000 +0000
+fix CFLAGS
+DESTDIR support
+
+--- utils/Makefile.SH.orig	2001-06-19 17:03:48.000000000 +0000
 +++ utils/Makefile.SH
+@@ -30,10 +30,10 @@ CC		=	$cc
+ CCFLAGS		=	$ccflags $xencf
+ CHMOD		=	$chmod
+ CP		=	$cp
+-DEST		=	$bin
++DEST		=	\$(DESTDIR)$bin
+ ECHO		=	$echo
+ LFLAGS		=	$ldflags $dynamic_opt $xenlf
+-LIB		=	$lib
++LIB		=	\$(DESTDIR)$lib
+ LIB2		= 	$dlopen_lib $libs
+ LIBS		=	$termlib $dbm
+ LINT		=	$lint
 @@ -74,7 +74,7 @@ fi
  cat >>Makefile <<'!NO!SUBS!'
  #	Other general variables
