@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2010/01/17 12:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2010/04/15 07:01:22 adam Exp $
 
 DISTNAME=		jabberd-2.2.9
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		http://codex.xiaoka.com/pub/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -27,19 +27,18 @@ SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"
 SUBST_SED.path+=	-e "s,\$$sysconfdir/jabberd,\$$sysconfdir,g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--disable-mysql
 CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
 
 .if (${MACHINE_ARCH} == alpha) || (${MACHINE_ARCH} == x86_64)
-CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
-CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
-MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
-CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
-CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
-MAKE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
+CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:Q}
+CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:Q}
+MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:Q}
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:C/-O./-Os/:Q}
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:Q}
+MAKE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:Q}
 .endif
 
 USE_TOOLS+=		perl:run
