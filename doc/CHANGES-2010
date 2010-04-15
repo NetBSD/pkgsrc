@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1538 2010/04/15 01:10:04 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1539 2010/04/15 03:26:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1917,3 +1917,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-CoreList to 2.29 [seb 2010-04-14]
 	Updated devel/diffuse to 0.4.2 [wiz 2010-04-15]
 	Updated x11/gtk2 to 2.18.9nb1 [wiz 2010-04-15]
+	Updated databases/postgresql83-client to 8.3.10nb1 [taca 2010-04-15]
+	Updated databases/postgresql84-client to 8.4.3nb1 [taca 2010-04-15]
