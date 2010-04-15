@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/15 20:54:22 minskim Exp $
+share/texmf-dist/doc/latex/captdef/captdef.pdf
+share/texmf-dist/doc/latex/captdef/captdef.tex
+share/texmf-dist/doc/latex/captdef/miscdoc.sty
