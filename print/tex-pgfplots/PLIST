@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:45:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/15 20:44:34 minskim Exp $
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.m
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.sh
 share/texmf-dist/scripts/pgfplots/pgf2pdf.sh
@@ -19,6 +19,7 @@ share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code.tex
 share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.coltype.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_misc.code.tex
+share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfcoreexternal.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfkeys.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfkeysfiltered.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgflibraryfpu.code.tex

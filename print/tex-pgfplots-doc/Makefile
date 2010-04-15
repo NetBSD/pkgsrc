@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/10 21:14:46 markd Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/15 20:44:34 minskim Exp $
 # TeX Live Revision 17670
 
 DISTNAME=	pgfplots.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.2.2
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.1
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pgfplots
 
 .include "../../print/texlive/package.mk"
