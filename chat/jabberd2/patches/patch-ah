@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.5 2010/04/15 07:02:51 adam Exp $
+
+--- router/main.c.orig	2010-02-24 08:41:41.000000000 +0000
++++ router/main.c
+@@ -479,6 +479,7 @@ JABBER_MAIN("jabberd2router", "Jabber 2 
+         do {
+             xhash_iter_get(r->components, NULL, xhv.val);
+             sx_close(comp->s);
++            mio_run(r->mio, 5);
+         } while(xhash_count(r->components) > 0);
+ 
+     xhash_free(r->components);
