@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.366 2010/04/16 17:36:54 minskim Exp $
+# $NetBSD: Makefile,v 1.367 2010/04/16 17:49:38 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -410,6 +410,7 @@ SUBDIR+=	tex-type1cm
 SUBDIR+=	tex-type1cm-doc
 SUBDIR+=	tex-ucs
 SUBDIR+=	tex-ukrhyph
+SUBDIR+=	tex-ukrhyph-doc
 SUBDIR+=	tex-url
 SUBDIR+=	tex-url-doc
 SUBDIR+=	tex-wallpaper
