@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2010/04/09 16:07:36 kefren Exp $
+# $NetBSD: Makefile,v 1.31 2010/04/16 10:44:20 kefren Exp $
 
 DISTNAME=	monodevelop-2.2.2
 CATEGORIES=	devel
+PKGREVISION=	1
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -12,7 +13,7 @@ COMMENT=	IDE for C\# and other .NET languages
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl:run pkg-config bash:run msgfmt
+USE_TOOLS+=	gmake:run perl:run pkg-config bash:run msgfmt
 EXTRACT_USING=	gtar
 MAKE_JOBS_SAFE=	no
 

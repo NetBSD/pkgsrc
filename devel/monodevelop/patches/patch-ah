@@ -1,0 +1,43 @@
+$NetBSD: patch-ah,v 1.1 2010/04/16 10:44:21 kefren Exp $
+--- src/addins/MonoDevelop.Autotools/templates/rules.make.orig	2010-04-16 13:19:36.000000000 +0300
++++ src/addins/MonoDevelop.Autotools/templates/rules.make	2010-04-16 13:20:02.000000000 +0300
+@@ -1,9 +1,9 @@
+ clean-local:
+-	make pre-clean-local-hook
+-	make $(CONFIG)_BeforeClean
++	gmake pre-clean-local-hook
++	gmake $(CONFIG)_BeforeClean
+ 	-rm -f $(call quote_each,$(CLEANFILES))
+-	make $(CONFIG)_AfterClean
+-	make post-clean-local-hook
++	gmake $(CONFIG)_AfterClean
++	gmake post-clean-local-hook
+ 
+ install-local:
+ uninstall-local:
+@@ -12,21 +12,21 @@
+ quote_each = $(foreach f,$(call s2q,$1),$(call q2quote,$f))
+ 
+ dist-local:
+-	make pre-dist-local-hook "distdir=$$distdir"
++	gmake pre-dist-local-hook "distdir=$$distdir"
+ 	for f in Makefile $(call quote_each,$(EXTRA_DIST)); do \
+ 		d=`dirname "$$f"`; \
+ 		test -d "$(distdir)/$$d" || \
+ 			mkdir -p "$(distdir)/$$d"; \
+ 		cp -p "$$f" "$(distdir)/$$d" || exit 1; \
+ 	done
+-	make post-dist-local-hook "distdir=$$distdir"
++	gmake post-dist-local-hook "distdir=$$distdir"
+ 
+ dist-local-recursive:
+ 	for dir in $(call quote_each,$(SUBDIRS)); do \
+ 		mkdir -p "$(distdir)/$$dir" || true; \
+ 		case "$$dir" in \
+-		.) make dist-local "distdir=$(distdir)" || exit 1;; \
+-		*) (cd "$$dir"; make dist-local "distdir=$(distdir)/$$dir") || exit 1; \
++		.) gmake dist-local "distdir=$(distdir)" || exit 1;; \
++		*) (cd "$$dir"; gmake dist-local "distdir=$(distdir)/$$dir") || exit 1; \
+ 		esac \
+ 	done
+ 
