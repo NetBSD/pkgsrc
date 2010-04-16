@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1557 2010/04/16 04:09:04 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1558 2010/04/16 09:55:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1940,3 +1940,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-App-cpanminus to 0.9935 [seb 2010-04-16]
 	Added devel/p5-Parallel-Prefork version 0.08 [seb 2010-04-16]
 	Added www/p5-Starlet version 0.08 [seb 2010-04-16]
+	Updated devel/diffuse to 0.4.3 [wiz 2010-04-16]
