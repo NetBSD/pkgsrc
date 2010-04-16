@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2008/07/16 06:41:17 bjs Exp $
+$NetBSD: patch-ac,v 1.3 2010/04/16 13:43:36 tnn Exp $
 
---- libdrm/xf86drm.h.orig	2008-07-01 03:51:40.000000000 -0400
-+++ libdrm/xf86drm.h
+--- xf86drm.h.orig	2010-03-05 23:21:13.000000000 +0000
++++ xf86drm.h
 @@ -35,7 +35,11 @@
  #define _XF86DRM_H_
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.2 2008/07/16 06:41:17 bjs Exp $
  #include <stdint.h>
  #include <drm.h>
  
-@@ -305,7 +309,12 @@ typedef struct _drmSetVersion {
+@@ -333,7 +337,12 @@ typedef struct _drmSetVersion {
  #define DRM_LOCK_HELD  0x80000000U /**< Hardware lock is held */
  #define DRM_LOCK_CONT  0x40000000U /**< Hardware lock is contended */
  
