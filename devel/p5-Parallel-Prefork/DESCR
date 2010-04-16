@@ -1,0 +1,3 @@
+The Perl 5 module Parallel::Prefork provides a simple prefork server
+framework. It is is much like Parallel::ForkManager, but supports
+graceful shutdown and run-time reconfiguration.
