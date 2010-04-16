@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1560 2010/04/16 13:44:44 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1561 2010/04/16 13:49:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1943,3 +1943,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/diffuse to 0.4.3 [wiz 2010-04-16]
 	Updated x11/qt4-libs to 4.6.2nb1 [wiz 2010-04-16]
 	Updated x11/libdrm to 2.4.20 [tnn 2010-04-16]
+	Updated audio/amarok to 2.3.0nb2 [wiz 2010-04-16]
