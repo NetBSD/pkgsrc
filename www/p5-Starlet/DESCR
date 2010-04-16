@@ -1,0 +1,5 @@
+The Perl 5 module Starlet provides a standalone HTTP/1.0 server.
+It is suitable for running HTTP application servers behind a reverse
+proxy and supports the following features: prefork and graceful
+shutdown using Parallel::Prefork, hot deployment using Server::Starter,
+fast HTTP processing using HTTP::Parser::XS .
