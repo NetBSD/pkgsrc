@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.365 2010/04/15 20:55:19 minskim Exp $
+# $NetBSD: Makefile,v 1.366 2010/04/16 17:36:54 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -193,6 +193,8 @@ SUBDIR+=	tex-caption
 SUBDIR+=	tex-caption-doc
 SUBDIR+=	tex-carlisle
 SUBDIR+=	tex-carlisle-doc
+SUBDIR+=	tex-cases
+SUBDIR+=	tex-cases-doc
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-cite
 SUBDIR+=	tex-cite-doc
