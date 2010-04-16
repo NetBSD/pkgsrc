@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1562 2010/04/16 15:20:12 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1563 2010/04/16 15:34:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/libdrm to 2.4.20 [tnn 2010-04-16]
 	Updated audio/amarok to 2.3.0nb2 [wiz 2010-04-16]
 	Updated lang/php53 to 5.3.2nb2 [taca 2010-04-16]
+	Updated security/sudo to 1.7.2p6 [taca 2010-04-16]
