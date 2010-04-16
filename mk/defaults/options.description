@@ -358,6 +358,7 @@ ogg			Enable Ogg support.
 oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
+opencore-amr		Enable OpenCORE Adaptive Multi-Rate speech codecs.
 openexr			Use OpenEXR as imaging library.
 opengl			Use OpenGL as display library.
 opengrok-build		Enable building of OpenGrok from source.
