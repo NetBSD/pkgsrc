@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1555 2010/04/16 03:21:33 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1556 2010/04/16 03:56:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-captdef-doc version 2009 [minskim 2010-04-15]
 	Updated print/tex-tools-doc to 2009 [minskim 2010-04-15]
 	Updated devel/p5-App-cpanminus to 0.9935 [seb 2010-04-16]
+	Added devel/p5-Parallel-Prefork version 0.08 [seb 2010-04-16]
