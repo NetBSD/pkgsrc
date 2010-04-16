@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1 2010/04/16 22:32:14 jmmv Exp $
+
+Tests are only built for the server package, which does not build the libgamin
+library.  Link against the installed version.
+
+--- tests/Makefile.in.orig	2008-11-24 15:25:07.000000000 +0000
++++ tests/Makefile.in
+@@ -69,7 +69,7 @@ CTAGS = ctags
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ ACLOCAL = @ACLOCAL@
+ AMTAR = @AMTAR@
+-AM_CFLAGS = @AM_CFLAGS@
++AM_CFLAGS = @AM_CFLAGS@ $$(pkg-config --cflags gamin)
+ AR = @AR@
+ AUTOCONF = @AUTOCONF@
+ AUTOHEADER = @AUTOHEADER@
+@@ -208,7 +208,7 @@ LDADD = $(top_builddir)/libgamin/libgami
+ testgam_SOURCES = testing.c
+ testgam_LDFLAGS = 
+ testgam_DEPENDENCIES = $(DEPS)
+-testgam_LDADD = $(LDADDS) -L$(top_builddir)/libgamin -lgamin-1
++testgam_LDADD = $(LDADDS) $$(pkg-config --libs gamin)
+ all: all-am
+ 
+ .SUFFIXES:
