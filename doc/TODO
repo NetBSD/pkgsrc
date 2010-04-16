@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9206 2010/04/15 09:58:05 tron Exp $
+$NetBSD: TODO,v 1.9207 2010/04/16 15:46:29 taca Exp $
 
 Suggested new packages
 ======================
@@ -1056,7 +1056,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmotif-2.3.2
 	o openmsx-0.7.0
 	o openoffice3-3.2
-	o openssh-5.4.1 (5.4p1)
+	o openssh-5.5.1 (5.5p1)
 	o openssl-0.9.8n
 	o openssl-1.0.0
 	o openttd-1.0.0
@@ -1445,7 +1445,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-ati-6.13.0
 	o xf86-video-chips-1.2.2
 	o xf86-video-dummy-0.3.2
-	o xf86-video-geode-2.11.6 [wip]
+	o xf86-video-geode-2.11.8 [wip]
 	o xf86-video-glide-1.0.3
 	o xf86-video-intel-2.11.0
 	o xf86-video-newport-0.2.3 [unpackaged]
