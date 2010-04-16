@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/16 17:48:36 minskim Exp $
+share/texmf-dist/doc/generic/ukrhyph/README
+share/texmf-dist/doc/generic/ukrhyph/rules60.pdf
+share/texmf-dist/doc/generic/ukrhyph/rules90.pdf
+share/texmf-dist/doc/generic/ukrhyph/rules_ph.pdf
