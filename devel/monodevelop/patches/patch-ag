@@ -1,0 +1,35 @@
+$NetBSD: patch-ag,v 1.1 2010/04/16 10:44:21 kefren Exp $
+--- src/addins/MonoDevelop.Autotools/templates/make-dist.targets.orig	2010-04-16 13:18:51.000000000 +0300
++++ src/addins/MonoDevelop.Autotools/templates/make-dist.targets	2010-04-16 13:19:21.000000000 +0300
+@@ -1,18 +1,18 @@
+ dist: $(CONFIG_MAKE)
+ 	rm -rf $(PACKAGE)-$(VERSION)
+ 	mkdir $(PACKAGE)-$(VERSION)
+-	make pre-dist-hook distdir=$$distdir
++	gmake pre-dist-hook distdir=$$distdir
+ 	for dir in $(call quote_each,$(SUBDIRS)); do \
+ 		pkgdir=`pwd`/$(PACKAGE)-$(VERSION); \
+ 		mkdir "$$pkgdir/$$dir" || true; \
+ 		case $$dir in \
+-		.) make dist-local "distdir=$$pkgdir" || exit 1;; \
+-		*) (cd "$$dir"; make dist-local "distdir=$$pkgdir/$$dir") || exit 1;; \
++		.) gmake dist-local "distdir=$$pkgdir" || exit 1;; \
++		*) (cd "$$dir"; gmake dist-local "distdir=$$pkgdir/$$dir") || exit 1;; \
+ 		esac \
+ 	done
+-	(make dist-local distdir=$(PACKAGE)-$(VERSION))
+-	make
+-	make post-dist-hook "distsir=$$distdir"
++	(gmake dist-local distdir=$(PACKAGE)-$(VERSION))
++	gmake
++	gmake post-dist-hook "distsir=$$distdir"
+ 	tar czvf $(PACKAGE)-$(VERSION).tar.gz $(PACKAGE)-$(VERSION)
+ 	rm -rf $(PACKAGE)-$(VERSION)
+ 	@echo "=========================================="
+@@ -23,5 +23,5 @@
+ 	(mkdir test; cd test;  \
+ 	tar xzvf ../$(PACKAGE)-$(VERSION).tar.gz; cd $(PACKAGE)-$(VERSION); \
+ 	./configure --prefix=$$(cd `pwd`/..; pwd); \
+-	make && make install && make dist);
++	gmake && gmake install && gmake dist);
+ 	rm -rf test
