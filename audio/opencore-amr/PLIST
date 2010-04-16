@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/16 15:42:10 reed Exp $
+include/opencore-amrnb/interf_dec.h
+include/opencore-amrnb/interf_enc.h
+include/opencore-amrwb/dec_if.h
+include/opencore-amrwb/if_rom.h
+lib/libopencore-amrnb.la
+lib/libopencore-amrwb.la
+lib/pkgconfig/opencore-amrnb.pc
+lib/pkgconfig/opencore-amrwb.pc
