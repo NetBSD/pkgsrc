@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1565 2010/04/16 15:46:13 reed Exp $
+$NetBSD: CHANGES-2010,v 1.1566 2010/04/16 17:36:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1948,3 +1948,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/sudo to 1.7.2p6 [taca 2010-04-16]
 	Updated www/typolight28-translations to 20100415 [taca 2010-04-16]
 	Added audio/opencore-amr version 0.1.2 [reed 2010-04-16]
+	Added print/tex-cases version 2.5 [minskim 2010-04-16]
+	Added print/tex-cases-doc version 2.5 [minskim 2010-04-16]
