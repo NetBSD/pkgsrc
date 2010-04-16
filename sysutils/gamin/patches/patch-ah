@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 2010/04/16 22:32:14 jmmv Exp $
+
+The server package does not build the libgamin library because it is already
+installed, so we can trick the package to build the tests.
+
+--- configure.orig	2010-04-16 22:22:26.000000000 +0000
++++ configure
+@@ -22098,7 +22098,7 @@ fi
+ 
+ 
+ enable_tests="no"
+-if test x$enable_server = xyes && test x$enable_libgamin = xyes ; then
++if test x$enable_server = xyes ; then
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for TEST" >&5

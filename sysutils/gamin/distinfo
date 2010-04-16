@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/03/17 13:34:06 jmcneill Exp $
+$NetBSD: distinfo,v 1.7 2010/04/16 22:32:14 jmmv Exp $
 
 SHA1 (gamin-0.1.10.tar.gz) = f4c6b9fe87757552ef58fef4abef9e42cd3142ac
 RMD160 (gamin-0.1.10.tar.gz) = fb6ba5ec2d2f49afacf10dda4095f02f5930d686
@@ -10,3 +10,5 @@ SHA1 (patch-ad) = 0ed5da772a0afbce7abf01623c9aebdd67e68537
 SHA1 (patch-ae) = 954e0d2678193e0bedab7e87b80548a3eef71b0e
 SHA1 (patch-af) = 7cda705d59206a1fad0c91b56206630f01717adc
 SHA1 (patch-ag) = 59b35394c29d0cbbf7905df24ef4ba913ebfec46
+SHA1 (patch-ah) = 79e132b615a6492587a10a550c421fcc91a27761
+SHA1 (patch-ai) = 54c6d347eef37a97e16c6f00870953fbdba41182
