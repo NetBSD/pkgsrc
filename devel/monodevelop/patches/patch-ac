@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1 2010/04/16 10:44:20 kefren Exp $
+--- src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs.orig	2010-04-16 12:51:03.000000000 +0300
++++ src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs	2010-04-16 12:51:58.000000000 +0300
+@@ -169,7 +169,7 @@ namespace MonoDevelop.Autotools
+ 				chainedOutput.ChainWriter (monitor.Log);
+ 				chainedOutput.ChainWriter (swOutput);
+ 
+-				ProcessWrapper process = Runtime.ProcessService.StartProcess ("make",
++				ProcessWrapper process = Runtime.ProcessService.StartProcess ("gmake",
+ 						data.BuildTargetName,
+ 						baseDir, 
+ 						chainedOutput, 
+@@ -257,7 +257,7 @@ namespace MonoDevelop.Autotools
+ 		// Snatched from our codedom code :-).
+ 		//FIXME: Get this from the language binding.. if a known lang
+ 
+-		static Regex regexEnterDir = new Regex (@"make\[[0-9]*\]: ([a-zA-Z]*) directory `(.*)'");
++		static Regex regexEnterDir = new Regex (@"gmake\[[0-9]*\]: ([a-zA-Z]*) directory `(.*)'");
+ 		
+ 		private static CompilerError CreateCompilerErrorFromString (string error_string, Stack<string> dirs, Regex regex)
+ 		{
+@@ -348,7 +348,7 @@ namespace MonoDevelop.Autotools
+ 			{
+ 				string baseDir = proj.BaseDirectory;
+ 	
+-				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "make", 
++				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "gmake", 
+ 						data.CleanTargetName,
+ 						baseDir, 
+ 						monitor.Log, 
+@@ -403,7 +403,7 @@ namespace MonoDevelop.Autotools
+ 			monitor.BeginTask (GettextCatalog.GetString ("Executing {0}", project.Name), 1);
+ 			try
+ 			{
+-				ProcessWrapper process = Runtime.ProcessService.StartProcess ("make",
++				ProcessWrapper process = Runtime.ProcessService.StartProcess ("gmake",
+ 						data.ExecuteTargetName,
+ 						project.BaseDirectory,
+ 						console.Out,
