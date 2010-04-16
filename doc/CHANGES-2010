@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1568 2010/04/16 17:49:38 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1569 2010/04/16 18:01:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1952,3 +1952,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-cases-doc version 2.5 [minskim 2010-04-16]
 	Updated print/tex-ukrhyph to 2009 [minskim 2010-04-16]
 	Added print/tex-ukrhyph-doc version 2009 [minskim 2010-04-16]
+	Added print/tex-chbibref version 1.0 [minskim 2010-04-16]
+	Added print/tex-chbibref-doc version 1.0 [minskim 2010-04-16]
