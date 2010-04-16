@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2010/04/16 10:44:20 kefren Exp $
+--- tests/UnitTests/MonoDevelop.Projects/PackagingTests.cs.orig	2010-04-16 12:52:26.000000000 +0300
++++ tests/UnitTests/MonoDevelop.Projects/PackagingTests.cs	2010-04-16 12:52:40.000000000 +0300
+@@ -248,10 +248,10 @@ namespace MonoDevelop.Deployment
+ 			if (!Exec (Path.Combine (tarDir, "configure"), "--prefix=" + prefix, tarDir))
+ 				Assert.Fail ("Configure script failed");
+ 			
+-			if (!Exec ("make", "all", tarDir))
++			if (!Exec ("gmake", "all", tarDir))
+ 				Assert.Fail ("Build failed");
+ 			
+-			if (!Exec ("make", "install", tarDir))
++			if (!Exec ("gmake", "install", tarDir))
+ 				Assert.Fail ("Install failed");
+ 			
+ 			CheckDirContents (prefix, expectedFiles);
