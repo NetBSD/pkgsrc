@@ -1,2 +1,2 @@
 The ffplay package provides the very simple, interactive media
-player for FFmpeg.  It is uses the SDL toolkit.
+player for FFmpeg.  It uses the SDL toolkit.
