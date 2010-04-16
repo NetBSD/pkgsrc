@@ -1,0 +1,5 @@
+This package defines the environment numcases: equations with several
+alternative right-hand sides, with equation numbers for each
+alternative.  It also defines environment subnumcases, where each
+alternative is a sub-number (e.g., 8a, 8b, ...) of the equation set as
+a whole.
