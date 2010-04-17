@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/08/16 16:17:01 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/04/17 13:29:54 obache Exp $
 
-SHA1 (gdata.py-1.2.4.tar.gz) = 5b6804cfb3bced02c7e9f102fa2a714140f62fd8
-RMD160 (gdata.py-1.2.4.tar.gz) = 4082397a7180198c1963fde726bb91c360f27e20
-Size (gdata.py-1.2.4.tar.gz) = 797525 bytes
+SHA1 (gdata-2.0.9.tar.gz) = 99d5aefce33b4ec73961aeb33eb49ab37709e8bb
+RMD160 (gdata-2.0.9.tar.gz) = bf6bf42a98acc7c77c2e59dabce29680557ac767
+Size (gdata-2.0.9.tar.gz) = 1618078 bytes
