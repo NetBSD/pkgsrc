@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/02/11 22:30:40 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2010/04/17 10:39:33 zafer Exp $
 
 DISTNAME=		openntpd-3.9p1
 PKGREVISION=		2
@@ -6,8 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/ \
 			ftp://ftp3.usa.openbsd.org/pub/OpenBSD/OpenNTPD/ \
 			ftp://ftp.belnet.be/packages/openbsd/OpenNTPD/ \
-			ftp://ftp.jaist.ac.jp/pub/OpenBSD/OpenNTPD/ \
-			ftp://mirror.pacific.net.au/OpenBSD/OpenNTPD/
+			ftp://ftp.jaist.ac.jp/pub/OpenBSD/OpenNTPD/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openntpd.org/
