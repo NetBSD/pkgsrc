@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2006/02/07 03:48:44 minskim Exp $
+$NetBSD: patch-af,v 1.2 2010/04/17 12:43:03 obache Exp $
 
---- src/internal.h.orig	2003-06-22 06:58:15.000000000 -0700
+--- src/internal.h.orig	2006-04-08 14:36:57.000000000 +0000
 +++ src/internal.h
-@@ -160,7 +160,7 @@ union maxalign {
+@@ -185,7 +185,7 @@ union maxalign {
    void *p;
    void (*fp)(void);
    union maxalign *up;
