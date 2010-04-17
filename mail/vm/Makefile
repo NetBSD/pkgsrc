@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/10/04 15:59:56 zafer Exp $
+# $NetBSD: Makefile,v 1.37 2010/04/17 15:03:19 zafer Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -8,7 +8,6 @@ MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
 		ftp://tug.org/vm/ \
 		ftp://psg.com/pub/vm/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/vm/ \
-		ftp://ftp.uu.net/networking/mail/vm/ \
 		http://www.interhack.net/projects/vm/ \
 		http://ftp.lip6.fr/pub/unix/mail/vm/ \
 		http://ftp.jussieu.fr/pub/unix/mail/vm/ \
