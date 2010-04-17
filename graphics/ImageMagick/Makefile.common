@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.85 2010/01/15 19:28:41 drochner Exp $
+# $NetBSD: Makefile.common,v 1.86 2010/04/17 17:09:01 zafer Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 
@@ -16,12 +16,13 @@ DISTNAME=	ImageMagick-${DISTSUFFIX}
 DISTVERSION=	${DISTSUFFIX:S/-/./}
 
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.imagemagick.net/pub/ImageMagick/ \
+MASTER_SITES=	ftp://ftp.imagemagick.org/pub/ImageMagick/ \
 		ftp://ftp.nluug.nl/pub/ImageMagick/ \
-		ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
-		ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
+		http://image_magick.veidrodis.com/image_magick/ \
 		ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/ \
-		http://www.imagemagick.net/download/
+		http://mirror.is.co.za/pub/imagemagick/ \
+		ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/ \
+		http://www.imagemagick.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 WRKSRC=		${WRKDIR}/ImageMagick-${DISTSUFFIX}
