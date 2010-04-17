@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2010/02/18 08:04:35 martti Exp $
+# $NetBSD: Makefile,v 1.196 2010/04/17 10:42:55 zafer Exp $
 
 DISTNAME=		openssh-5.3p1
 PKGNAME=		openssh-5.3.1
@@ -9,8 +9,7 @@ MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.freenet.de/pub/ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.jaist.ac.jp/pub/OpenBSD/OpenSSH/portable/ \
-			ftp://ftp.belnet.be/packages/openbsd/OpenSSH/portable/ \
-			ftp://mirror.pacific.net.au/OpenBSD/OpenSSH/portable/
+			ftp://ftp.belnet.be/packages/openbsd/OpenSSH/portable/
 # Don't delete the last entry -- it's there if the pkgsrc version is not
 # up-to-date and the mirrors already removed the old distfile.
 DIST_SUBDIR=		${PKGBASE}-5.3.1-20100218
