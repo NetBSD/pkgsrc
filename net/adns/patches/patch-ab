@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2009/09/09 16:34:09 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2010/04/17 12:43:03 obache Exp $
 
---- src/Makefile.in.orig	Sat Sep 16 20:24:24 2000
+--- src/Makefile.in.orig	2006-05-10 10:58:03.000000000 +0000
 +++ src/Makefile.in
-@@ -24,13 +24,13 @@
+@@ -23,14 +23,14 @@
  srcdir=		@srcdir@
  VPATH=		@srcdir@
  
@@ -12,13 +12,14 @@ $NetBSD: patch-ab,v 1.3 2009/09/09 16:34:09 joerg Exp $
  include		adns.make
  
  install:
+ 		mkdir -p $(libdir) $(includedir)
  		set -xe; for f in $(TARGETS); \
--			do $(INSTALL_DATA) $$f $(lib_dir)/$$f; done
-+			do ${LIBTOOL} --mode=install $(INSTALL_DATA) $$f $(lib_dir)/$$f; done
- 		$(INSTALL_DATA) $(srcdir)/../src/adns.h $(include_dir)/adns.h
+-			do $(INSTALL_DATA) $$f $(libdir)/$$f; done
++			do ${LIBTOOL} --mode=install $(INSTALL_DATA) $$f $(libdir)/$$f; done
+ 		$(INSTALL_DATA) $(srcdir)/../src/adns.h $(includedir)/adns.h
  
  uninstall:
-@@ -39,10 +39,10 @@
+@@ -39,10 +39,10 @@ uninstall:
  
  ALLOBJS=	$(LIBOBJS)
  
