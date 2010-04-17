@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2010/04/16 10:44:20 kefren Exp $
+$NetBSD: patch-ac,v 1.2 2010/04/17 17:11:05 kefren Exp $
 --- src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs.orig	2010-04-16 12:51:03.000000000 +0300
 +++ src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs	2010-04-16 12:51:58.000000000 +0300
 @@ -169,7 +169,7 @@ namespace MonoDevelop.Autotools
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.1 2010/04/16 10:44:20 kefren Exp $
  				chainedOutput.ChainWriter (swOutput);
  
 -				ProcessWrapper process = Runtime.ProcessService.StartProcess ("make",
-+				ProcessWrapper process = Runtime.ProcessService.StartProcess ("gmake",
++				ProcessWrapper process = Runtime.ProcessService.StartProcess ("MAKEPROGRAM",
  						data.BuildTargetName,
  						baseDir, 
  						chainedOutput, 
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.1 2010/04/16 10:44:20 kefren Exp $
  		//FIXME: Get this from the language binding.. if a known lang
  
 -		static Regex regexEnterDir = new Regex (@"make\[[0-9]*\]: ([a-zA-Z]*) directory `(.*)'");
-+		static Regex regexEnterDir = new Regex (@"gmake\[[0-9]*\]: ([a-zA-Z]*) directory `(.*)'");
++		static Regex regexEnterDir = new Regex (@"MAKEPROGRAM\[[0-9]*\]: ([a-zA-Z]*) directory `(.*)'");
  		
  		private static CompilerError CreateCompilerErrorFromString (string error_string, Stack<string> dirs, Regex regex)
  		{
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.1 2010/04/16 10:44:20 kefren Exp $
  				string baseDir = proj.BaseDirectory;
  	
 -				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "make", 
-+				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "gmake", 
++				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "MAKEPROGRAM", 
  						data.CleanTargetName,
  						baseDir, 
  						monitor.Log, 
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.1 2010/04/16 10:44:20 kefren Exp $
  			try
  			{
 -				ProcessWrapper process = Runtime.ProcessService.StartProcess ("make",
-+				ProcessWrapper process = Runtime.ProcessService.StartProcess ("gmake",
++				ProcessWrapper process = Runtime.ProcessService.StartProcess ("MAKEPROGRAM",
  						data.ExecuteTargetName,
  						project.BaseDirectory,
  						console.Out,

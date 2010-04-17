@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2010/04/16 10:44:20 kefren Exp $
+$NetBSD: patch-aa,v 1.8 2010/04/17 17:11:05 kefren Exp $
 --- src/addins/MonoDeveloperExtensions/MonoSolutionItemHandler.cs.orig	2010-04-16 12:49:05.000000000 +0300
 +++ src/addins/MonoDeveloperExtensions/MonoSolutionItemHandler.cs	2010-04-16 12:49:13.000000000 +0300
 @@ -185,7 +185,7 @@ namespace MonoDeveloper
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.7 2010/04/16 10:44:20 kefren Exp $
  			tw.ChainWriter (monitor.Log);
  			
 -			ProcessWrapper proc = Runtime.ProcessService.StartProcess ("make", "PROFILE=" + conf.Id + " " + target, conf.OutputDirectory, monitor.Log, tw, null);
-+			ProcessWrapper proc = Runtime.ProcessService.StartProcess ("gmake", "PROFILE=" + conf.Id + " " + target, conf.OutputDirectory, monitor.Log, tw, null);
++			ProcessWrapper proc = Runtime.ProcessService.StartProcess ("MAKEPROGRAM", "PROFILE=" + conf.Id + " " + target, conf.OutputDirectory, monitor.Log, tw, null);
  			proc.WaitForOutput ();
  			
  			CompilerResults cr = new CompilerResults (null);			

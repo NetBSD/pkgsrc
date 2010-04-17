@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2010/04/16 10:44:20 kefren Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/17 17:11:05 kefren Exp $
 --- src/addins/MonoDevelop.Autotools/SolutionDeployer.cs.orig	2010-04-16 12:49:50.000000000 +0300
 +++ src/addins/MonoDevelop.Autotools/SolutionDeployer.cs	2010-04-16 12:50:35.000000000 +0300
 @@ -180,7 +180,7 @@ namespace MonoDevelop.Autotools
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1 2010/04/16 10:44:20 kefren Exp $
  				chainedOutput.ChainWriter (sw);
  
 -				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "make", 
-+				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "gmake", 
++				ProcessWrapper process = Runtime.ProcessService.StartProcess ( "MAKEPROGRAM", 
  						"dist", 
  						baseDir, 
  						chainedOutput, 
