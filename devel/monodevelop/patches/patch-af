@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2010/04/16 10:44:20 kefren Exp $
+$NetBSD: patch-af,v 1.2 2010/04/17 17:11:05 kefren Exp $
 --- src/addins/MonoDevelop.Autotools/templates/Makefile.solution.template.orig	2010-04-16 13:17:54.000000000 +0300
 +++ src/addins/MonoDevelop.Autotools/templates/Makefile.solution.template	2010-04-16 13:18:08.000000000 +0300
 @@ -8,14 +8,14 @@
@@ -6,17 +6,17 @@ $NetBSD: patch-af,v 1.1 2010/04/16 10:44:20 kefren Exp $
  	case $$2 in --unix) shift ;; esac; \
  	case $$2 in *=*) dk="exit 1" ;; *k*) dk=: ;; *) dk="exit 1" ;; esac; \
 -	make pre-$*-hook prefix=$(prefix) ; \
-+	gmake pre-$*-hook prefix=$(prefix) ; \
++	MAKEPROGRAM pre-$*-hook prefix=$(prefix) ; \
  	for dir in $(call quote_each,$(SUBDIRS)); do \
  		case "$$dir" in \
 -		.) make $*-local || { final_exit="exit 1"; $$dk; };;\
 -		*) (cd "$$dir" && make $*) || { final_exit="exit 1"; $$dk; };;\
-+		.) gmake $*-local || { final_exit="exit 1"; $$dk; };;\
-+		*) (cd "$$dir" && gmake $*) || { final_exit="exit 1"; $$dk; };;\
++		.) MAKEPROGRAM $*-local || { final_exit="exit 1"; $$dk; };;\
++		*) (cd "$$dir" && MAKEPROGRAM $*) || { final_exit="exit 1"; $$dk; };;\
  		esac \
  	done; \
 -	make post-$*-hook prefix=$(prefix) ; \
-+	gmake post-$*-hook prefix=$(prefix) ; \
++	MAKEPROGRAM post-$*-hook prefix=$(prefix) ; \
  	$$final_exit
  
  $(CONFIG_MAKE):
