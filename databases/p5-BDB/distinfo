@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/17 09:35:40 seb Exp $
+
+SHA1 (BDB-1.88.tar.gz) = 75f1701d0e768755a7789e4329ac8f8dc6c6c788
+RMD160 (BDB-1.88.tar.gz) = 0140f02283726f29c69cae66af5b2fe43155a55d
+Size (BDB-1.88.tar.gz) = 35879 bytes
