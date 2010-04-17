@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2009/02/20 12:27:03 obache Exp $
+$NetBSD: patch-aa,v 1.6 2010/04/17 10:07:18 gls Exp $
+
+Fix installation dirs
 
 --- data/Makefile.in.orig	2009-01-26 17:59:45.000000000 +0000
 +++ data/Makefile.in
