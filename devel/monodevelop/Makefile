@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2010/04/16 10:44:20 kefren Exp $
+# $NetBSD: Makefile,v 1.32 2010/04/17 17:11:04 kefren Exp $
 
 DISTNAME=	monodevelop-2.2.2
 CATEGORIES=	devel
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -22,6 +22,22 @@ REPLACE_BASH+=	monodevelop.in
 REPLACE_BASH+=	src/addins/MonoDevelop.Autotools/templates/configure.template
 REPLACE_BASH+=	contrib/extract_makefile_variable.sh
 REPLACE_BASH+=	theme-icons/icon-theme-installer
+
+MAKE_OVERRIDE=	src/addins/MonoDeveloperExtensions/MonoSolutionItemHandler.cs
+MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/SolutionDeployer.cs
+MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs
+MAKE_OVERRIDE+=	tests/UnitTests/MonoDevelop.Projects/PackagingTests.cs
+MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/Makefile.noauto.project.template
+MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/Makefile.solution.template
+MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/make-dist.targets
+MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/rules.make
+MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/SimpleProjectMakefileHandler.cs
+
+SUBST_CLASSES+=			fix-gmake
+SUBST_STAGE.fix-gmake=		post-patch
+SUBST_MESSAGE.fix-gmake=	Fixing GNU make references
+SUBST_FILES.fix-gmake=		${MAKE_OVERRIDE}
+SUBST_SED.fix-gmake=		-e 's,MAKEPROGRAM,${MAKE_PROGRAM},'
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
