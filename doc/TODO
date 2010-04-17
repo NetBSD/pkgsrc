@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9209 2010/04/17 12:41:57 obache Exp $
+$NetBSD: TODO,v 1.9210 2010/04/17 12:43:17 obache Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o accerciser-1.10.0 [GNOME 2.30]
 	o acme-091
 	o acr-0.5.2
-	o adns-1.4 [pkg/43126]
 	o adobe-flash-10.0.32.18
 	o adobe-flash-plugin-091508
 	o adocman-0.13
