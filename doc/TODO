@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9211 2010/04/17 12:47:37 obache Exp $
+$NetBSD: TODO,v 1.9212 2010/04/17 13:30:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -1161,7 +1161,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-enchant-1.6.1 [pkg/42927]
 	o py-fpconst-0.7.2 [pkg/42556]
 	o py-game-1.9.1
-	o py-gdata-2.0.8 [pkg/42892]
 	o py-gnome2-desktop-2.30.0 [GNOME 2.30]
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
