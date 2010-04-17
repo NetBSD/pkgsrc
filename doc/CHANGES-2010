@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1571 2010/04/17 06:45:38 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1572 2010/04/17 09:21:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1983,3 +1983,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.19.4 [obache 2010-04-17]
 	Updated x11/ruby-gnome2-panelapplet to 0.19.4 [obache 2010-04-17]
 	Updated x11/ruby-gnome2-vte to 0.19.4 [obache 2010-04-17]
+	Added fonts/takao-fonts-ttf version 003.02.01 [obache 2010-04-17]
