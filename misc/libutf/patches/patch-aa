@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/02/17 20:42:20 tnn Exp $
+$NetBSD: patch-aa,v 1.6 2010/04/17 21:00:33 agc Exp $
 
 --- Makefile.in.orig	2006-05-26 22:14:56.000000000 +0200
 +++ Makefile.in
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.5 2008/02/17 20:42:20 tnn Exp $
  
  $(LIBS) : $(OBJS)
 -	$(AR) $(ARFLAGS) $(LIBS) $(OBJS)
-+	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 3:0
++	${LIBTOOL} --mode=link --tag=CC cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 3:0
  
  ci:
  	ci -l ure.c ure.h urelang.c utf.c utf.h
@@ -51,18 +51,18 @@ $NetBSD: patch-aa,v 1.5 2008/02/17 20:42:20 tnn Exp $
  
  gurep: gurep.o $(LIBS)
 -	$(CC) gurep.o $(LIBS) -o gurep
-+	${LIBTOOL} --mode=link ${CC} gurep.o ${LIBS:.a=.la} -o gurep
++	${LIBTOOL} --mode=link --tag=CC ${CC} gurep.o ${LIBS:.a=.la} -o gurep
  
  findword: findword.o $(LIBS)
 -	$(CC) findword.o $(LIBS) -o findword
-+	${LIBTOOL} --mode=link ${CC} findword.o ${LIBS:.a=.la} -o findword
++	${LIBTOOL} --mode=link --tag=CC ${CC} findword.o ${LIBS:.a=.la} -o findword
 +
 +ure.o: ure.c ure.h utf.h
-+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c ure.c
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c ure.c
 +urelang.o: urelang.c ure.h utf.h
-+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c urelang.c
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c urelang.c
 +utf.o: utf.c utf.h
-+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c utf.c
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c utf.c
  
  tst: gurep findword
  	test -d tests || ln -s $(srcdir)/tests .
