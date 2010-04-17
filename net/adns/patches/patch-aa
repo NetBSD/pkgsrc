@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2009/09/02 11:01:50 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2010/04/17 12:43:03 obache Exp $
 
---- client/Makefile.in.orig	Sat Sep 16 20:43:10 2000
+--- client/Makefile.in.orig	2006-05-10 10:58:02.000000000 +0000
 +++ client/Makefile.in
-@@ -31,7 +31,7 @@
+@@ -30,7 +30,7 @@ PROGRAMS=	adnslogres adnsheloex adnshost
  PROGRAMS_LOCAL=	fanftest adnstest
  PROGRAMS_ALL=	$(PROGRAMS) $(PROGRAMS_LOCAL)
  
@@ -11,15 +11,15 @@ $NetBSD: patch-aa,v 1.2 2009/09/02 11:01:50 joerg Exp $
  
  ifeq ($(ENABLE_DYNAMIC),elf)
  DYNAMIC_DEP=	$(srcdir)/../dynamic/$(SHLIBFILE)
-@@ -60,13 +60,13 @@
- 
+@@ -60,13 +60,13 @@ all:		$(TARGETS)
  install:	$(TARG_INSTALL)
+ 		mkdir -p $(bindir)
  		set -xe; for f in $(TARG_INSTALL); \
--			do $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
-+			do ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
+-			do $(INSTALL_PROGRAM) $$f $(bindir)/$$f; done
++			do ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $$f $(bindir)/$$f; done
  
  uninstall:
- 		for f in $(TARGETS); do rm -f $(bin_dir)/$$f; done
+ 		for f in $(TARGETS); do rm -f $(bindir)/$$f; done
  
  adnshost:	$(ADH_OBJS) $(DYNAMIC_DEP)
 -		$(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/02 11:01:50 joerg Exp $
  
  adnshost_s:	$(ADH_OBJS) $(STATIC_LIB)
  		$(CC) $(LDFLAGS) $(ADH_OBJS) $(STATIC_LIB) -o $@ $(LDLIBS)
-@@ -76,7 +76,7 @@
+@@ -76,7 +76,7 @@ $(ALL_OBJS):		$(ADNSDIR)/adns.h $(ADNSDI
  adnsresfilter.o:	$(ADNSDIR)/tvarith.h
  
  %:		%.o $(DYNAMIC_DEP)
