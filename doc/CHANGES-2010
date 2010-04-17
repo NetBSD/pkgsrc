@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1576 2010/04/17 12:46:32 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1577 2010/04/17 13:30:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1988,3 +1988,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated wm/pekwm to 0.1.12 [gls 2010-04-17]
 	Updated net/adns to 1.4 [obache 2010-04-17]
 	Updated net/py-adns to 1.2.1 [obache 2010-04-17]
+	Updated www/py-gdata to 2.0.9 [obache 2010-04-17]
