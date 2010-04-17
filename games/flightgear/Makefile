@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/01/18 09:58:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/04/17 16:01:56 zafer Exp $
 #
 
 DISTNAME=		FlightGear-1.0.0
@@ -6,8 +6,7 @@ PKGNAME=		${DISTNAME:S/FlightGear/flightgear/}
 PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.flightgear.org/pub/fgfs/Source/ \
-			http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/ \
-			ftp://ftp.de.flightgear.org/pub/fgfs/Source/ 
+			http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.flightgear.org/
