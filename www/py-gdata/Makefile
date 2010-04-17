@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/08/16 16:17:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/17 13:29:54 obache Exp $
 
-DISTNAME=	gdata.py-1.2.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.py//}
+DISTNAME=	gdata-2.0.9
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://gdata-python-client.googlecode.com/files/
 
@@ -59,5 +59,9 @@ REPLACE_PYTHON+=	src/gdata/youtube/service.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../textproc/py-elementtree/buildlink3.mk"
+.if !empty(PYPKGPREFIX:Mpy24)
+DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
+.else
+DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+.endif
 .include "../../mk/bsd.pkg.mk"
