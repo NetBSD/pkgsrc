@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1573 2010/04/17 09:36:20 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1574 2010/04/17 10:09:09 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1985,3 +1985,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-vte to 0.19.4 [obache 2010-04-17]
 	Added fonts/takao-fonts-ttf version 003.02.01 [obache 2010-04-17]
 	Added databases/p5-BDB version 1.88 [seb 2010-04-17]
+	Updated wm/pekwm to 0.1.12 [gls 2010-04-17]
