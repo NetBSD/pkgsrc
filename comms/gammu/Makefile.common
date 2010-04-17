@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2009/09/09 13:34:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2010/04/17 15:48:22 zafer Exp $
 #
 # used by comms/gammu/Makefile
 # used by comms/py-gammu/Makefile
@@ -6,7 +6,6 @@
 DISTNAME=	gammu-1.26.1
 CATEGORIES=	comms
 MASTER_SITES=	http://dl.cihar.com/gammu/releases/ \
-		http://mirror.clickcreations.com/gammu/releases/ \
 		http://dl.cihar.com.nyud.net/gammu/releases/
 EXTRACT_SUFX=	.tar.bz2
 
