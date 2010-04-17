@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9208 2010/04/17 10:12:06 gls Exp $
+$NetBSD: TODO,v 1.9209 2010/04/17 12:41:57 obache Exp $
 
 Suggested new packages
 ======================
@@ -1331,6 +1331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tea-27.1.0
 	o ted-2.17
 	o ted-en-us-2.17
+	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.9
 	o tfmxplay-1.1.6
