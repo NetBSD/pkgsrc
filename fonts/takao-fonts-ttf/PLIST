@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/17 09:20:56 obache Exp $
+lib/X11/fonts/TTF/TakaoExGothic.ttf
+lib/X11/fonts/TTF/TakaoExMincho.ttf
+lib/X11/fonts/TTF/TakaoGothic.ttf
+lib/X11/fonts/TTF/TakaoMincho.ttf
+lib/X11/fonts/TTF/TakaoPGothic.ttf
+lib/X11/fonts/TTF/TakaoPMincho.ttf
+share/doc/${PKGBASE}/ChangeLog
+share/doc/${PKGBASE}/IPA_Font_License_Agreement_v1.0.txt
+share/doc/${PKGBASE}/README
+share/doc/${PKGBASE}/README.ja
