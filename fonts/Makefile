@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2010/03/12 23:09:42 minskim Exp $
+# $NetBSD: Makefile,v 1.151 2010/04/17 09:21:54 obache Exp $
 #
 
 COMMENT=	Fonts
@@ -136,6 +136,7 @@ SUBDIR+=	py-fonttools
 SUBDIR+=	sgi-fonts
 SUBDIR+=	t1lib
 SUBDIR+=	t1utils
+SUBDIR+=	takao-fonts-ttf
 SUBDIR+=	terminus-font
 SUBDIR+=	tex-ae
 SUBDIR+=	tex-ae-doc
