@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2009/12/20 07:46:32 taca Exp $
+$NetBSD: patch-aa,v 1.22.4.1 2010/04/17 08:34:13 spz Exp $
 
---- Makefile.in.orig	2009-11-25 10:42:00.000000000 +0900
+--- Makefile.in.orig	2010-04-09 21:13:21.000000000 +0000
 +++ Makefile.in
-@@ -198,7 +198,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
+@@ -196,7 +196,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
  	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $(DEFS) $(OPTIONS) $(srcdir)/sudo_noexec.c
  
  sudo_noexec.la: sudo_noexec.lo
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.22 2009/12/20 07:46:32 taca Exp $
  
  # Uncomment the following if you want "make distclean" to clean the parser
  @DEV@GENERATED = gram.h gram.c toke.c def_data.c def_data.h
-@@ -408,36 +408,36 @@ sudoers.ldap.cat: sudoers.ldap.man
- ChangeLog:
- 	cvs2cl --follow-only trunk
+@@ -403,36 +403,36 @@ sudoers.ldap.cat: sudoers.ldap.man
+ @DEV@LICENSE: license.pod
+ @DEV@	pod2text -l -i0 $> | sed '1,2d' > $@
  
 -install: install-dirs install-binaries @INSTALL_NOEXEC@ install-sudoers install-man
 +install: install-dirs install-binaries @INSTALL_NOEXEC@ install-man
