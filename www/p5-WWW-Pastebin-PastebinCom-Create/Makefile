@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/01/18 10:08:17 seb Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/18 08:25:54 seb Exp $
 
-DISTNAME=	WWW-Pastebin-PastebinCom-Create-0.002
+DISTNAME=	WWW-Pastebin-PastebinCom-Create-0.003
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/WWW-Pastebin-PastebinCom-Create/
 COMMENT=	Paste to <http://pastebin.com> from Perl
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
