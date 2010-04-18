@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.4 2010/04/17 08:35:48 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.5 2010/04/18 21:52:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -12,3 +12,7 @@ net/samba: build fix and bug fix
 net/samba33: build fix and bug fix
 Pullup ticket #3079 - requested by taca
 security/sudo: security update
+Pullup ticket #3080 - requested by tez
+lang/erlang: security patch
+Pullup ticket #3081 - requested by tez
+editors/nano: security update
