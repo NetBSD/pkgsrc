@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/18 15:33:16 seb Exp $
+
+SHA1 (AnyEvent-BDB-1.1.tar.gz) = 5fa2a9eeb66d83a297c6e795628b70ad44c7ca8e
+RMD160 (AnyEvent-BDB-1.1.tar.gz) = 61e763f28e0f6acc5592b3b68b00aaa3a65d6e6e
+Size (AnyEvent-BDB-1.1.tar.gz) = 2063 bytes
