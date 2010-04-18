@@ -1,0 +1,34 @@
+$NetBSD: patch-ax,v 1.1.2.2 2010/04/18 21:47:42 tron Exp $
+CVE-2008-2371 pcro buffer overflow patch
+
+--- erts/emulator/pcre/pcre_compile.c.orig	2010-04-17 14:45:46.437030500 -0500
++++ erts/emulator/pcre/pcre_compile.c	2010-04-17 14:48:54.644343400 -0500
+@@ -92,6 +92,10 @@
+ 
+ #define COMPILE_WORK_SIZE (4096)
+ 
++/* The overrun tests check for a slightly smaller size so that they detect the 
++overrun before it actually does run off the end of the data block. */
++
++#define WORK_SIZE_CHECK (COMPILE_WORK_SIZE - 100)
+ 
+ /* Table for handling escaped characters in the range '0'-'z'. Positive returns
+ are simple data values; negative values are for special things like \d and so
+@@ -2445,7 +2449,7 @@
+ #ifdef DEBUG
+     if (code > cd->hwm) cd->hwm = code;                 /* High water info */
+ #endif
+-    if (code > cd->start_workspace + COMPILE_WORK_SIZE) /* Check for overrun */
++    if (code > cd->start_workspace + WORK_SIZE_CHECK) /* Check for overrun */
+       {
+       *errorcodeptr = ERR52;
+       goto FAILED;
+@@ -2494,7 +2498,7 @@
+   /* In the real compile phase, just check the workspace used by the forward
+   reference list. */
+ 
+-  else if (cd->hwm > cd->start_workspace + COMPILE_WORK_SIZE)
++  else if (cd->hwm > cd->start_workspace + WORK_SIZE_CHECK)
+     {
+     *errorcodeptr = ERR52;
+     goto FAILED;
