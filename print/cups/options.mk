@@ -1,26 +1,28 @@
-# $NetBSD: options.mk,v 1.3 2009/06/03 10:20:59 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2010/04/18 12:02:58 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
-PKG_OPTIONS_OPTIONAL_GROUPS=	pdftops
-PKG_OPTIONS_GROUP.pdftops=	gs poppler xpdf
+PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
+PKG_OPTIONS_GROUP.pdftops=	ghostscript poppler
 PKG_SUPPORTED_OPTIONS=	dnssd kerberos pam slp
 PKG_SUGGESTED_OPTIONS=	dnssd kerberos poppler slp
+PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		pdftops
 
 .if !empty(PKG_OPTIONS:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mgs)
-PLIST.pdftops=	yes
-DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
+.if !empty(PKG_OPTIONS:Mghostscript)
+USE_TOOLS+=	gs:run
+CONFIGURE_ARGS+=	--with-pdftops=gs
+CONFIGURE_ENV+=		ac_cv_path_CUPS_GHOSTSCRIPT=${TOOLS_PATH.gs}
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 .include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-gssapi
 .endif
 
 PLIST_VARS+=		pam
@@ -36,8 +38,11 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 .endif
 
 .if !empty(PKG_OPTIONS:Mpoppler)
-PLIST.pdftops=	yes
+FIND_PREFIX:=	POPPLERDIR=poppler-utils
+.include "../../mk/find-prefix.mk"
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
+CONFIGURE_ARGS+=	--with-pdftops=pdftops
+CONFIGURE_ENV+=		ac_cv_path_CUPS_PDFTOPS=${POPPLERDIR}/bin/pdftops
 .endif
 
 .if !empty(PKG_OPTIONS:Mslp)
@@ -45,9 +50,4 @@ DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 CONFIGURE_ARGS+=	--enable-slp
 .else
 CONFIGURE_ARGS+=	--disable-slp
-.endif
-
-.if !empty(PKG_OPTIONS:Mxpdf)
-PLIST.pdftops=	yes
-DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 .endif
