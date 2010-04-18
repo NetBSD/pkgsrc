@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2009/03/17 22:31:10 asau Exp $
+# $NetBSD: Makefile.common,v 1.4 2010/04/18 18:22:43 jmmv Exp $
 #
 # used by sysutils/gamin/Makefile
 # used by sysutils/libgamin/Makefile
@@ -21,6 +21,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-debug-api
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--without-threads
 CONFIGURE_ARGS+=	--with-html-dir=${DOCDIR:Q}
