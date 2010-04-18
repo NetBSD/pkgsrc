@@ -1,0 +1,3 @@
+The Perl 5 module IO::AIO implements asynchronous I/O using whatever
+means the operating system supports. It is implemented as an interface
+to libeio.
