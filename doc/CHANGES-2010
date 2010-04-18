@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1596 2010/04/18 17:23:16 tez Exp $
+$NetBSD: CHANGES-2010,v 1.1597 2010/04/18 21:59:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2011,3 +2011,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/spamass-milter to 0.3.1nb1 [tez 2010-04-18]
 	Updated chat/irssi to 0.8.15 [spz 2010-04-18]
 	Updated editors/nano to 2.2.4 [tez 2010-04-18]
+	Updated mail/milter-greylist to 4.2.5 [tron 2010-04-18]
