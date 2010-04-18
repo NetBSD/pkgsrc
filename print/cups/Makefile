@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2010/03/21 16:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2010/04/18 12:02:58 obache Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -57,6 +57,8 @@ CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gnutls=no
 CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--without-php
+CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-java
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
