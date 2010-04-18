@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1579 2010/04/18 01:39:31 agc Exp $
+$NetBSD: CHANGES-2010,v 1.1580 2010/04/18 04:19:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1991,3 +1991,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/py-gdata to 2.0.9 [obache 2010-04-17]
 	Updated www/typolight28 to 2.8.2nb1 [taca 2010-04-17]
 	Removed sysutils/user [agc 2010-04-17]
+	Added devel/p5-IO-AIO version 3.65 [seb 2010-04-18]
