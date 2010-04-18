@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/05/07 15:14:44 recht Exp $
+$NetBSD: patch-ab,v 1.5 2010/04/18 12:22:40 zafer Exp $
 
---- configure.orig	2005-03-25 02:18:12.000000000 +0100
-+++ configure	2005-05-07 10:56:46.000000000 +0200
-@@ -913,65 +913,7 @@
+--- configure.orig	2010-04-07 15:23:25.000000000 +0000
++++ configure
+@@ -954,65 +954,7 @@ EOF
  	macos*|darwin|rhapsody)
  		OS="macosx"
  		SYS="macosx"
@@ -69,7 +69,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/07 15:14:44 recht Exp $
  		if [ "$os_v" != "" ] ; then
  			OS="macosx${os_v}"
  			os_v1=`echo "$os_v" | cut -d. -f1`
-@@ -8529,7 +8471,7 @@
+@@ -11335,7 +11277,7 @@ fi
  fi
  
  
