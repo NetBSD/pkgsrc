@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2009/06/14 21:16:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.29 2010/04/18 12:02:58 obache Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -48,7 +48,7 @@ libexec/cups/filter/gziptoany
 libexec/cups/filter/hpgltops
 libexec/cups/filter/imagetops
 libexec/cups/filter/imagetoraster
-${PLIST.pdftops}libexec/cups/filter/pdftops
+libexec/cups/filter/pdftops
 libexec/cups/filter/pstops
 libexec/cups/filter/rastertodymo
 libexec/cups/filter/rastertoepson
