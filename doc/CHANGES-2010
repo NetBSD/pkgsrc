@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1582 2010/04/18 05:44:04 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1583 2010/04/18 05:51:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1994,3 +1994,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-IO-AIO version 3.65 [seb 2010-04-18]
 	Updated www/p5-Plack to 0.9931 [seb 2010-04-18]
 	Updated www/p5-App-Nopaste to 0.20 [seb 2010-04-18]
+	Updated www/p5-Starman to 0.2002 [seb 2010-04-18]
