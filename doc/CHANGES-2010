@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1588 2010/04/18 12:24:59 zafer Exp $
+$NetBSD: CHANGES-2010,v 1.1589 2010/04/18 14:10:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2000,3 +2000,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-namespace-clean to 0.14 [seb 2010-04-18]
 	Updated time/p5-DateTime-TimeZone to 1.17 [seb 2010-04-18]
 	Updated net/ncftp3 to 3.24 [zafer 2010-04-18]
+	Updated time/p5-DateTime-Locale to 0.45 [seb 2010-04-18]
