@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1584 2010/04/18 08:26:05 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1585 2010/04/18 08:36:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1996,3 +1996,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-App-Nopaste to 0.20 [seb 2010-04-18]
 	Updated www/p5-Starman to 0.2002 [seb 2010-04-18]
 	Updated www/p5-WWW-Pastebin-PastebinCom-Create to 0.003 [seb 2010-04-18]
+	Updated graphics/pngcrush to 1.7.10 [adam 2010-04-18]
