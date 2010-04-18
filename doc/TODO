@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9213 2010/04/18 08:55:13 seb Exp $
+$NetBSD: TODO,v 1.9214 2010/04/18 12:23:52 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1011,8 +1011,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nautilus-sendto-2.28.4
 	o navi2ch-1.8.1
 	o nawk-20071023
-	o ncftp3-3.2.1 [pkg/37859]
-	o ncftp3-3.2.2
 	o ncmpc-0.16
 	o ncview-1.93b
 	o ne-2.01
