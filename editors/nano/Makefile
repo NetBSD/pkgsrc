@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2009/05/19 08:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.37.8.1 2010/04/18 21:51:49 tron Exp $
 
-DISTNAME=	nano-2.0.8
+DISTNAME=	nano-2.2.4
 CATEGORIES=	editors
-MASTER_SITES=	http://www.nano-editor.org/dist/v2.0/
+MASTER_SITES=	http://www.nano-editor.org/dist/v2.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nano-editor.org/
