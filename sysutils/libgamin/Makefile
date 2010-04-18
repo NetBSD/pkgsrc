@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/17 13:34:06 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/18 18:22:43 jmmv Exp $
 
 .include "../../sysutils/gamin/Makefile.common"
 PKGNAME=	${DISTNAME:S/^gamin/lib&/}
@@ -13,6 +13,7 @@ post-install:
 		${INSTALL_DATA} $$file ${DESTDIR}${DOCDIR}/$$file;	\
 	done
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
