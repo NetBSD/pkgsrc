@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1592 2010/04/18 15:18:25 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1593 2010/04/18 15:34:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime-Locale to 0.45 [seb 2010-04-18]
 	Updated time/p5-DateTime-Format-Strptime to 1.2000 [seb 2010-04-18]
 	Added devel/p5-AnyEvent-AIO version 1.1 [seb 2010-04-18]
+	Added databases/p5-AnyEvent-BDB version 1.1 [seb 2010-04-18]
