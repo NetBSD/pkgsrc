@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/11 21:21:49 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2010/04/18 09:20:25 adam Exp $
 
 DISTNAME=	Python-2.6.4
 PKGNAME=	${DISTNAME:S/Python/python26/}
@@ -108,11 +108,6 @@ PLIST.oss=	yes
 # Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
-
-PLIST_VARS+=	nav
-.  if !defined(ABI) || ${ABI} != "64"
-PLIST.nav=	yes
-.  endif
 .endif
 
 PLIST_VARS+=	dll nis no-nis
