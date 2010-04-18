@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:50:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14.8.1 2010/04/18 21:51:49 tron Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -39,17 +39,29 @@ share/locale/vi/LC_MESSAGES/nano.mo
 share/locale/zh_CN/LC_MESSAGES/nano.mo
 share/locale/zh_TW/LC_MESSAGES/nano.mo
 share/nano/asm.nanorc
+share/nano/awk.nanorc
 share/nano/c.nanorc
+share/nano/cmake.nanorc
+share/nano/css.nanorc
+share/nano/debian.nanorc
+share/nano/fortran.nanorc
+share/nano/gentoo.nanorc
 share/nano/groff.nanorc
 share/nano/html.nanorc
 share/nano/java.nanorc
+share/nano/makefile.nanorc
 share/nano/man.nanorc
 share/nano/mutt.nanorc
 share/nano/nanorc.nanorc
+share/nano/objc.nanorc
+share/nano/ocaml.nanorc
 share/nano/patch.nanorc
 share/nano/perl.nanorc
+share/nano/php.nanorc
 share/nano/pov.nanorc
 share/nano/python.nanorc
 share/nano/ruby.nanorc
 share/nano/sh.nanorc
 share/nano/tex.nanorc
+share/nano/tcl.nanorc
+share/nano/xml.nanorc
