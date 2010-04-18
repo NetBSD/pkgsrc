@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1594 2010/04/18 15:52:10 tez Exp $
+$NetBSD: CHANGES-2010,v 1.1595 2010/04/18 16:23:01 spz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1909,6 +1909,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pkg_comp to 1.32 [jmmv 2010-04-13]
 	Updated devel/apache-ant to 1.8.0 [tonio 2010-04-13]
 	Updated net/darkstat to 3.0.713 [sh 2010-04-13]
+	Updated news/inn to 2.5.2 [spz 2010/04/13]
+	Updated net/irrtoolset5 to 5.0 [spz 2010/04/13]
 	Added graphics/gimp-resynthesizer version 0.16 [wiz 2010-04-14]
 	Added devel/p5-Test-CheckManifest version 1.21 [sno 2010-04-14]
 	Added security/knc version 1.6 [schmonz 2010-04-14]
@@ -2007,3 +2009,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/p5-AnyEvent-BDB version 1.1 [seb 2010-04-18]
 	Updated lang/erlang to 13.2.3nb4 [tez 2010-04-18]
 	Updated mail/spamass-milter to 0.3.1nb1 [tez 2010-04-18]
+	Updated chat/irssi to 0.8.15 [spz 2010-04-18]
