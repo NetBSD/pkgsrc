@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9216 2010/04/18 14:52:17 wiz Exp $
+$NetBSD: TODO,v 1.9217 2010/04/19 11:40:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -1179,7 +1179,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-lxml-2.2.6
 	o py-m2crypto-0.20.2
 	o py-nevow-0.10.0
-	o py-nose-0.11.3 [pkg/43174]
 	o py-psycopg2-2.0.14
 	o py-pyrex-0.9.9
 	o py-pytz-2010h
