@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1 2010/04/19 18:46:15 tnn Exp $
+
+--- xf86atomic.h.orig	2010-03-22 20:39:27.000000000 +0000
++++ xf86atomic.h
+@@ -92,6 +92,23 @@ typedef struct { uint_t atomic; } atomic
+ 
+ #endif
+ 
++#if defined(__NetBSD__) && !defined(HAS_ATOMIC_OPS)  /* NetBSD */
++
++#include <sys/atomic.h>
++#define HAS_ATOMIC_OPS 1
++
++typedef struct { int atomic; } atomic_t;
++
++# define atomic_read(x) (int) ((x)->atomic)
++# define atomic_set(x, val) ((x)->atomic = (val))
++# define atomic_inc(x) (atomic_inc_uint (&(x)->atomic))
++# define atomic_dec_and_test(x) (atomic_dec_uint_nv(&(x)->atomic) == 1)
++# define atomic_add(x, v) (atomic_add_int(&(x)->atomic, (v)))
++# define atomic_dec(x, v) (atomic_add_int(&(x)->atomic, -(v)))
++# define atomic_cmpxchg(x, oldv, newv) atomic_cas_uint (&(x)->atomic, oldv, newv)
++
++#endif
++
+ #if ! HAS_ATOMIC_OPS
+ #error libdrm requires atomic operations, please define them for your CPU/compiler.
+ #endif
