@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1332 2010/04/18 15:18:00 seb Exp $
+# $NetBSD: Makefile,v 1.1333 2010/04/19 22:12:07 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -539,6 +539,7 @@ SUBDIR+=	p5-Config-Std
 SUBDIR+=	p5-Config-Tiny
 SUBDIR+=	p5-Context-Preserve
 SUBDIR+=	p5-Contextual-Return
+SUBDIR+=	p5-Coro
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-Curses-UI-POE
