@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9217 2010/04/19 11:40:35 obache Exp $
+$NetBSD: TODO,v 1.9218 2010/04/19 19:53:31 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1297,7 +1297,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snes9x-1.51
 	o snort-2.8.5.3
 	o snownews-1.5.12
-	o socat-1.7.1.2
 	o softhsm-1.1.4
 	o solfege-3.14.11
 	o sope-4.6
