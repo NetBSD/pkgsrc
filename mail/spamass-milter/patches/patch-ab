@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.2.2 2010/04/19 09:15:47 tron Exp $
+CVE-2010-1132 patch from https://bugzilla.redhat.com/attachment.cgi?id=401011
+
+--- spamass-milter.h	7 Apr 2005 02:04:24 -0000	1.23
++++ spamass-milter.h	10 Mar 2010 18:52:22 -0000
+@@ -186,5 +186,6 @@
+ void parse_debuglevel(char* string);
+ char *strlwr(char *str);
+ void warnmacro(char *macro, char *scope);
++FILE *popenv(char *const argv[], const char *type);
+ 
+ #endif
