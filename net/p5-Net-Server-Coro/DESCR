@@ -1,0 +1,4 @@
+The Perl 5 module Net::Server::Coro implements multithreaded server
+for the Net::Server architecture, using Coro and Coro::Socket to
+make all reads and writes non-blocking. Additionally, it supports
+non-blocking SSL negotiation.
