@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/19 22:11:50 seb Exp $
+
+SHA1 (Coro-5.22.tar.gz) = 341aeb99a0b45a1860bdf4c15c2d3fc75da5dbae
+RMD160 (Coro-5.22.tar.gz) = 5e09dd57011f5fba5373295ef981ac99baff54fb
+Size (Coro-5.22.tar.gz) = 154510 bytes
+SHA1 (patch-aa) = d7d87d47b94013d5d60797f6023671850446d75d
