@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9219 2010/04/19 21:25:49 zafer Exp $
+$NetBSD: TODO,v 1.9220 2010/04/19 22:42:29 morr Exp $
 
 Suggested new packages
 ======================
@@ -1418,8 +1418,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
-	o wordpress-2.9.1 [pkg/42765]
-	o wordpress-2.9.2
 	o worker-2.17.6
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9f
