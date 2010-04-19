@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1606 2010/04/19 22:39:30 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1607 2010/04/19 22:42:29 morr Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/csup to csup-snap-20100404 [zafer 2010-04-19]
 	Added devel/p5-Coro version 5.22 [seb 2010-04-19]
 	Added net/p5-Net-Coro version 0.8 [seb 2010-04-19]
+	Updated www/wordpress to 2.9.2 [morr 2010-04-19]
