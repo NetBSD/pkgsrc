@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1604 2010/04/19 21:27:37 zafer Exp $
+$NetBSD: CHANGES-2010,v 1.1605 2010/04/19 22:12:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2037,3 +2037,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/xine-lib to 1.1.18.1 [drochner 2010-04-19]
 	Updated net/socat to 1.7.1.2 [zafer 2010-04-19]
 	Updated net/csup to csup-snap-20100404 [zafer 2010-04-19]
+	Added devel/p5-Coro version 5.22 [seb 2010-04-19]
