@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/04/09 01:47:30 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/19 13:55:50 obache Exp $
 #
 
-DISTNAME=	m17n-db-1.6.0
+DISTNAME=	m17n-db-1.6.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.m17n.org/m17n-lib-download/
 
