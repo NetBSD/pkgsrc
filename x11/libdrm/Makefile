@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/04/19 18:46:15 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/19 18:49:30 tnn Exp $
 #
 
 DISTNAME=		libdrm-2.4.20
@@ -26,12 +26,14 @@ SUBST_MESSAGE.atomic=	Configuring xf86drm.h's atomic operations.
 SUBST_STAGE.atomic=	pre-configure
 SUBST_VARS.atomic=	ATOMIC_OPS_CHECK
 
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/atomic.h)
-ATOMIC_OPS_CHECK=	1
-.else
 ATOMIC_OPS_CHECK=	0
-.include "../../devel/libatomic_ops/buildlink3.mk"
+.if ${OPSYS} == "NetBSD"
+. if exists(/usr/include/sys/atomic.h)
+ATOMIC_OPS_CHECK=	1
+. else
+. include "../../devel/libatomic_ops/buildlink3.mk"
 CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
+. endif
 .endif
 
 CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
