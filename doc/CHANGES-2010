@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1602 2010/04/19 15:48:25 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.1603 2010/04/19 19:54:20 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2035,3 +2035,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/py-qt4 to 4.7.2 [drochner 2010-04-19]
 	Updated x11/py-sip to 4.10.1 [drochner 2010-04-19]
 	Updated multimedia/xine-lib to 1.1.18.1 [drochner 2010-04-19]
+	Updated net/socat to 1.7.1.2 [zafer 2010-04-19]
