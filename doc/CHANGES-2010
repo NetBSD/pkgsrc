@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1608 2010/04/19 22:45:04 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1609 2010/04/19 22:48:03 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/p5-Net-Coro version 0.8 [seb 2010-04-19]
 	Updated www/wordpress to 2.9.2 [morr 2010-04-19]
 	Removed net/p5-Net-Coro [seb 2010-04-19]
+	Added net/p5-Net-Server-Coro version 0.8 [seb 2010-04-19]
