@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.5 2010/04/18 21:52:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.6 2010/04/19 09:16:34 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -16,3 +16,5 @@ Pullup ticket #3080 - requested by tez
 lang/erlang: security patch
 Pullup ticket #3081 - requested by tez
 editors/nano: security update
+Pullup ticket #3082 - requested by tez
+mail/spamass-milter: security patch
