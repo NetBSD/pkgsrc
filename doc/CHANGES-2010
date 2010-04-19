@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1598 2010/04/19 11:42:09 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1599 2010/04/19 12:02:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1909,8 +1909,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pkg_comp to 1.32 [jmmv 2010-04-13]
 	Updated devel/apache-ant to 1.8.0 [tonio 2010-04-13]
 	Updated net/darkstat to 3.0.713 [sh 2010-04-13]
-	Updated news/inn to 2.5.2 [spz 2010/04/13]
-	Updated net/irrtoolset5 to 5.0 [spz 2010/04/13]
+	Updated news/inn to 2.5.2 [spz 2010-04-13]
+	Updated net/irrtoolset5 to 5.0 [spz 2010-04-13]
 	Added graphics/gimp-resynthesizer version 0.16 [wiz 2010-04-14]
 	Added devel/p5-Test-CheckManifest version 1.21 [sno 2010-04-14]
 	Added security/knc version 1.6 [schmonz 2010-04-14]
