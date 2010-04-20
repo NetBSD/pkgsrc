@@ -1,4 +1,4 @@
-/*	$NetBSD: hash_page.c,v 1.5 2009/05/07 00:23:45 schmonz Exp $	*/
+/*	$NetBSD: hash_page.c,v 1.6 2010/04/20 00:32:23 joerg Exp $	*/
 /*	NetBSD: hash_page.c,v 1.23 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: hash_page.c,v 1.5 2009/05/07 00:23:45 schmonz Exp $");
+__RCSID("$NetBSD: hash_page.c,v 1.6 2010/04/20 00:32:23 joerg Exp $");
 
 /*
  * PACKAGE:  hashing
@@ -70,6 +70,13 @@ __RCSID("$NetBSD: hash_page.c,v 1.5 2009/05/07 00:23:45 schmonz Exp $");
 #include "hash.h"
 #include "page.h"
 #include "extern.h"
+
+#ifdef BROKEN_PREAD
+#include "../pread.c"
+#endif
+#ifdef BROKEN_PWRITE
+#include "../pwrite.c"
+#endif
 
 static uint32_t	*fetch_bitmap(HTAB *, int);
 static uint32_t	 first_free(uint32_t);
