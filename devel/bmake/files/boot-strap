@@ -56,7 +56,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.5 2009/09/18 21:27:25 joerg Exp $
+#	$Id: boot-strap,v 1.6 2010/04/20 13:37:49 joerg Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -72,10 +72,10 @@
 #
 
 Mydir=`dirname $0`
-. $Mydir/os.sh
-case $Mydir in
+. "$Mydir/os.sh"
+case "$Mydir" in
 /*) ;;
-*) Mydir=`cd $Mydir; /bin/pwd`;;
+*) Mydir=`cd "$Mydir" && 'pwd'`;;
 esac
 
 
@@ -92,49 +92,50 @@ Error() {
 }
 
 source_rc() {
-	rc=$1; shift
+	rc="$1"; shift
 	for d in ${*:-""}
 	do
-		r=${d:+$d/}$rc
-		[ -f $r -a -s $r ] || continue
+		r="${d:+$d/}$rc"
+		[ -f "$r" -a -s "$r" ] || continue
 		echo "NOTE: reading $r"
-		. $r
+		. "$r"
 		break
 	done
 }
 
 CONFIGURE_ARGS=
 # pick a useful default prefix (for me at least ;-)
-for prefix in /opt/$HOST_TARGET $HOME/$HOST_TARGET /usr/pkg /usr/local ""
+for prefix in /opt/$HOST_TARGET "$HOME/$HOST_TARGET" /usr/pkg /usr/local ""
 do
-	[ -d ${prefix:-.} ] && break
+	[ -d "${prefix:-.}" ] && break
 done
 srcdir=
 mksrc=
 objdir=
 quiet=:
 
-source_rc .bmake-boot-strap.rc . $Mydir/.. $HOME
+source_rc .bmake-boot-strap.rc . "$Mydir/.." "$HOME"
 
 while :
 do
 	case "$1" in
 	--) shift; break;;
-	--prefix) prefix=$2; shift 2;;
-	--prefix=*) prefix=`IFS="="; set -- $1; echo $2`; shift;;
-	--src=*) srcdir=`IFS="="; set -- $1; echo $2`; shift;;
-	--with-mksrc=*|--mksrc=*) mksrc=`IFS="="; set -- $1; echo $2`; shift;;
-	--share=*) share_dir=`IFS="="; set -- $1; echo $2`; shift;;
-	--share) share_dir=$2; shift 2;;
-	-s|--src) srcdir=$2; shift 2;;
-	-m|--mksrc) mksrc=$2; shift 2;;
-	-o|--objdir) objdir=$2; shift 2;;
-	-q) quiet=; shift;;
-	-c) source_rc $2; shift 2;;
-	--*) CONFIGURE_ARGS="$CONFIGURE_ARGS $1"; shift;;
-	*=*) eval "$1"; export `IFS="="; set -- $1; echo $1`; shift;;
+	--prefix) prefix="$2"; shift;;
+	--prefix=*) prefix=`IFS="="; set -- "$1"; echo "$2"`;;
+	--src=*) srcdir=`IFS="="; set -- "$1"; echo "$2"`;;
+	--with-mksrc=*|--mksrc=*) mksrc=`IFS="="; set -- "$1"; echo "$2"`;;
+	--share=*) share_dir=`IFS="="; set -- "$1"; echo "$2"`;;
+	--share) share_dir="$2"; shift;;
+	-s|--src) srcdir="$2"; shift;;
+	-m|--mksrc) mksrc="$2"; shift;;
+	-o|--objdir) objdir="$2"; shift;;
+	-q) quiet=;;
+	-c) source_rc "$2"; shift;;
+	--*) CONFIGURE_ARGS="$CONFIGURE_ARGS $1";;
+	*=*) eval "$1"; export `IFS="="; set -- "$1"; echo "$1"`;;
 	*) break;;
 	esac
+        shift
 done
 
 AddConfigure() {
@@ -145,47 +146,49 @@ AddConfigure() {
 }
 
 GetDir() {
-	match=$1
+	match="$1"
 	shift
 	for dir in $*
 	do
-		[ -d $dir ] || continue
+		[ -d "$dir" ] || continue
 		case "/$dir/" in
 		*$match*) ;;
 		*) continue;;
 		esac
 		case "$dir/" in
-		*./*) cd $dir && /bin/pwd;;
+		*./*) cd "$dir" && 'pwd';;
 		/*) echo $dir;;
-		*) cd $dir && /bin/pwd;;
+		*) cd "$dir" && 'pwd';;
 		esac
 		break
 	done
 }
 
-srcdir=`GetDir /bmake $srcdir $2 $Mydir ./bmake* $Mydir/../bmake*`
-[ -d ${srcdir:-/dev/null} ] || Usage
+srcdir=`GetDir /bmake "$srcdir" "$2" "$Mydir" ./bmake* "$Mydir"/../bmake*`
+[ -d "${srcdir:-/dev/null}" ] || Usage
 case "$mksrc" in
 none|-) # we don't want it
 	mksrc=
 	;;
 *)	# guess we want mksrc...
-	mksrc=`GetDir /mk $mksrc $3 ./mk* $srcdir/mk* $srcdir/../mk*`
-	[ -d ${mksrc:-/dev/null} ] || Usage "Use '-m none' to build without mksrc"
+	mksrc=`GetDir /mk "$mksrc" "$3" ./mk* "$srcdir"/mk* "$srcdir"/../mk*`
+	[ -d "${mksrc:-/dev/null}" ] || Usage "Use '-m none' to build without mksrc"
 	;;
 esac
 
 # Ok, get to work...
-objdir=${objdir:-$OS}
-[ -d $objdir ] || mkdir -p $objdir
-[ -d $objdir ] || mkdir $objdir
-cd $objdir || exit 1
+objdir="${objdir:-$OS}"
+[ -d "$objdir" ] || mkdir -p "$objdir"
+[ -d "$objdir" ] || mkdir "$objdir"
+cd "$objdir" || exit 1
+# make it absolute
+objdir=`'pwd'`
 
 ShareDir() {
 	case "/$1" in
 	*/$HOST_TARGET)
-		if [ -d $1/../share ]; then
-			echo `dirname $1`/share
+		if [ -d "$1/../share" ]; then
+			echo `dirname "$1"`/share
 			return
 		fi
 		;;
@@ -193,28 +196,45 @@ ShareDir() {
 	echo $1/share
 }
 
-share_dir=${share_dir:-`ShareDir $prefix`}
+share_dir="${share_dir:-`ShareDir $prefix`}"
 
-AddConfigure --prefix= $prefix
+AddConfigure --prefix= "$prefix"
 case "$CONFIGURE_ARGS" in
 *--with-prefix-sys-path*) ;;	# skip
-*) AddConfigure --with-default-sys-path= $share_dir/mk;;
+*) AddConfigure --with-default-sys-path= "$share_dir/mk";;
 esac
 if [ "$mksrc" ]; then
-        AddConfigure --with-mksrc= $mksrc
+        AddConfigure --with-mksrc= "$mksrc"
         # not all cc's support this
         export CFLAGS_MF=
 fi
 
 $srcdir/configure $CONFIGURE_ARGS || exit 1
-${MAKE:-make} -f makefile.boot clean
-${MAKE:-make} -f makefile.boot bootstrap || exit 1
+chmod 755 make-bootstrap.sh || exit 1
+./make-bootstrap.sh || exit 1
+MAKESYSPATH="$share_dir/mk:/usr/share/mk"
+if [ -s "${mksrc:-/dev/null}/install-mk" ]; then
+        sh "${mksrc}/install-mk" "$objdir/mk"
+        MAKESYSPATH=".../mk:${MAKESYSPATH}"
+fi
+export MAKESYSPATH
+./bmake test || exit 1
 
 # If -q given, we don't want all the install instructions
 $quiet exit 0
 
-make_version=`./bmake -m ./mk -m $share_dir/mk -m /usr/share/mk -f ./Makefile -V MAKE_VERSION | ( read one two; echo $one )`
+make_version=`./bmake -f ./Makefile -V MAKE_VERSION | ( read one two; echo $one )`
 bmake_version=bmake-$make_version
+
+if [ -s /usr/share/tmac/andoc.tmac ]; then
+	# this should be ok
+	man_subdir=man1
+	man_src=$srcdir/bmake.1
+else
+	# guess not
+	man_subdir=cat1
+	man_src=$srcdir/bmake.cat1
+fi
 
 install_prefix() {
     (
@@ -230,7 +250,7 @@ install_prefix() {
 		esac
 	done
 	bin_dir=${bin_dir:-$1/bin}
-	share_dir=${share_dir:-`ShareDir $1`}
+	share_dir=${share_dir:-`ShareDir "$1"`}
 	man_dir=${man_dir:-$share_dir/man}
 	mk_dir=${mk_dir:-$share_dir/mk}
 	echo
@@ -240,13 +260,8 @@ install_prefix() {
 	echo cp $objdir/bmake $bin_dir/$bmake_version
 	echo rm -f $bin_dir/bmake
 	echo ln -s $bmake_version $bin_dir/bmake
-	if [ -s bmake.cat1 ]; then
-		echo mkdir -p $man_dir/man1
-		echo cp $srcdir/bmake.1 $man_dir/man1
-	else
-		echo mkdir -p $man_dir/cat1
-		echo cp $srcdir/bmake.cat1 $man_dir/cat1/bmake.1
-	fi
+	echo mkdir -p $man_dir/$man_subdir
+	echo cp $man_src $man_dir/$man_subdir/bmake.1
 	if [ "$mksrc" ]; then
 		ev=`env | grep '_MK='`
 		echo $ev sh $mksrc/install-mk $mk_dir
@@ -254,14 +269,14 @@ install_prefix() {
     )
 }
 
-case $prefix/ in
-$HOME/*) ;;
+case "$prefix/" in
+"$HOME"/*) ;;
 *)	CONFIGS=${CONFIGS:-/configs}
 	[ -d $CONFIGS ] &&
-	install_prefix mksrc= $CONFIGS/$OS/$OSMAJOR.X/$MACHINE_ARCH$prefix
+	install_prefix mksrc= "$CONFIGS/$OS/$OSMAJOR.X/$MACHINE_ARCH$prefix"
 	# I like to keep a copy here...
-	install_prefix share_dir=$HOME/share $HOME/$HOST_TARGET
+	install_prefix share_dir="$HOME/share" "$HOME/$HOST_TARGET"
 	;;
 esac
 
-install_prefix $prefix
+install_prefix "$prefix"

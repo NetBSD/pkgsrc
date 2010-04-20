@@ -1,6 +1,6 @@
-# $Id: Makefile.in,v 1.4 2009/09/18 21:27:26 joerg Exp $
+# $Id: Makefile.in,v 1.5 2010/04/20 13:37:49 joerg Exp $
 #
-# $NetBSD: Makefile.in,v 1.4 2009/09/18 21:27:26 joerg Exp $
+# $NetBSD: Makefile.in,v 1.5 2010/04/20 13:37:49 joerg Exp $
 #
 # Unit tests for make(1)
 # The main targets are:
@@ -25,9 +25,12 @@ UNIT_TESTS:= ${srcdir}
 SUBFILES= \
 	comment \
 	cond1 \
+	error \
 	export \
 	export-all \
+	doterror \
 	dotwait \
+	forsubst \
 	moderrs \
 	modmatch \
 	modmisc \
@@ -37,15 +40,19 @@ SUBFILES= \
 	posix \
 	qequals \
 	ternary \
+	unexport \
+	unexport-env \
 	varcmd
 
 all: ${SUBFILES}
+
+flags.doterror=
 
 # the tests are actually done with sub-makes.
 .PHONY: ${SUBFILES}
 .PRECIOUS: ${SUBFILES}
 ${SUBFILES}:
-	-@${.MAKE} -k -f ${UNIT_TESTS}/$@
+	-@${.MAKE} ${flags.$@:U-k} -f ${UNIT_TESTS}/$@
 
 clean:
 	rm -f *.out *.fail *.core
