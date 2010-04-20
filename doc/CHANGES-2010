@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1613 2010/04/20 17:46:41 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.1614 2010/04/20 18:37:47 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2047,3 +2047,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/abcm2ps to 5.9.13 [minskim 2010-04-20]
 	Updated devel/glib2 to 2.22.5nb1 [jmmv 2010-04-20]
 	Added sysutils/gio-fam version 2.22.5 [jmmv 2010-04-20]
+	Updated geography/geos to 3.2.2 [zafer 2010-04-20]
