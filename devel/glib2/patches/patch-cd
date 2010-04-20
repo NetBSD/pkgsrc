@@ -1,6 +1,6 @@
-$NetBSD: patch-cd,v 1.1 2010/04/20 17:43:51 jmmv Exp $
+$NetBSD: patch-cd,v 1.2 2010/04/20 22:39:55 wiz Exp $
 
-sysutils/glib2-fam builds the gio/fam backend as a separate module.  Force it
+sysutils/gio-fam builds the gio/fam backend as a separate module.  Force it
 to link against the installed version of glib2, as it is not rebuilt by the
 package.
 
