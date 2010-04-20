@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.3 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: make.h,v 1.4 2010/04/20 13:37:49 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -180,6 +180,7 @@ typedef struct GNode {
 #define DONE_WAIT	0x8	/* Set by Make_ProcessWait() */
 #define DONE_ORDER	0x10	/* Build requested by .ORDER processing */
 #define FROM_DEPEND	0x20	/* Node created from .depend */
+#define DONE_ALLSRC	0x40	/* We do it once only */
 #define CYCLE		0x1000  /* Used by MakePrintStatus */
 #define DONECYCLE	0x2000  /* Used by MakePrintStatus */
     enum enum_made {
@@ -408,6 +409,7 @@ extern Lst	sysIncPath;	/* The system include path. */
 extern Lst	defIncPath;	/* The default include path. */
 
 extern char	*progname;	/* The program name */
+extern char	*makeDependfile; /* .depend */
 
 #define	MAKEFLAGS	".MAKEFLAGS"
 #define	MAKEOVERRIDES	".MAKEOVERRIDES"
@@ -415,6 +417,9 @@ extern char	*progname;	/* The program name */
 #define	MAKE_EXPORTED	".MAKE.EXPORTED"   /* variables we export */
 #define	MAKE_MAKEFILES	".MAKE.MAKEFILES"  /* all the makefiles we read */
 #define	MAKE_LEVEL	".MAKE.LEVEL"	   /* recursion level */
+#define MAKEFILE_PREFERENCE ".MAKE.MAKEFILE_PREFERENCE"
+#define MAKE_DEPENDFILE	".MAKE.DEPENDFILE" /* .depend */
+#define MAKE_MODE	".MAKE.MODE"
 
 /*
  * debug control:
@@ -458,7 +463,7 @@ void Make_DoAllVar(GNode *);
 Boolean Make_Run(Lst);
 char * Check_Cwd_Cmd(const char *);
 void Check_Cwd(const char **);
-void PrintOnError(const char *);
+void PrintOnError(GNode *, const char *);
 void Main_ExportMAKEFLAGS(Boolean);
 Boolean Main_SetObjdir(const char *);
 
