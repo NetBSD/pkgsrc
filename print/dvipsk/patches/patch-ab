@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.3.2.2 2010/04/20 21:26:19 tron Exp $
+
+--- dospecial.c.orig	2009-06-23 09:46:14.000000000 +0000
++++ dospecial.c
+@@ -334,6 +334,12 @@ predospecial(integer numbytes, Boolean s
+    static int omega_specials = 0;
+ 
+    if (nextstring + numbytes > maxstring) {
++      if (numbytes < 0
++          || (numbytes > 0 && 2 > INT_MAX / numbytes)
++          || 2 * numbytes > 1000 + 2 * numbytes) {
++         error("! Integer overflow in predospecial");
++         exit(1);
++      }
+       p = nextstring = mymalloc(1000 + 2 * numbytes) ;
+       maxstring = nextstring + 2 * numbytes + 700 ;
+    }
