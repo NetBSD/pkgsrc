@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9222 2010/04/20 13:43:52 wiz Exp $
+$NetBSD: TODO,v 1.9223 2010/04/20 18:36:25 zafer Exp $
 
 Suggested new packages
 ======================
@@ -685,7 +685,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gedit-plugins-2.30.0 [GNOME 2.30]
 	o gegl-0.1.2
 	o gentoo-0.15.6
-	o geos-3.2.2 [pkg/43181]
 	o gettext-0.17
 	o gettext-m4-0.17
 	o gfract-0.33
