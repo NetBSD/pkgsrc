@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/12/14 21:25:14 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2010/04/20 16:01:38 tnn Exp $
 #
 
 DISTNAME=	checkperms-1.11
@@ -25,5 +25,11 @@ IGNORE_DISTCC=		yes
 .if ${OPSYS} == "Linux"
 MAKE_ENV+=	NOGCCERROR=yes		# see PR 35930
 .endif
+
+# Avoid catpage regeneration
+post-extract:
+	echo ".PHONY: checkperms.cat1" >> ${WRKSRC}/Makefile
+	echo "checkperms.cat1:" >> ${WRKSRC}/Makefile
+	echo "" >> ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"
