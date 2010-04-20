@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2010/04/16 15:37:50 taca Exp $
+$NetBSD: distinfo,v 1.21 2010/04/20 23:20:38 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -54,9 +54,9 @@ Size (TYPOlight-Italian-v23.zip) = 129726 bytes
 SHA1 (TYPOlight-Japanese-v28.zip) = ae5c548fe4bdbc07c97cdcd569bfe5a4c1855356
 RMD160 (TYPOlight-Japanese-v28.zip) = 4f4fcca563472a6548d34290113ac1b7d31ef843
 Size (TYPOlight-Japanese-v28.zip) = 139164 bytes
-SHA1 (TYPOlight-Latvian-v23.zip) = c35b9ccc7e449a6406c6267cad7bdc35b1a2cbe8
-RMD160 (TYPOlight-Latvian-v23.zip) = fcdb3ab64300d3e55f28bd1c511028939c816384
-Size (TYPOlight-Latvian-v23.zip) = 91501 bytes
+SHA1 (TYPOlight-Latvian-v24.zip) = 72040dcd744db196a9ea75dd9ef0af5522b7aa2b
+RMD160 (TYPOlight-Latvian-v24.zip) = 388b7a0489fa3191663270a20cac2b98052589d2
+Size (TYPOlight-Latvian-v24.zip) = 94547 bytes
 SHA1 (TYPOlight-Lithuanian-v4.zip) = 0233b6ca112fabf9ec95457bfd9adf9b72819e62
 RMD160 (TYPOlight-Lithuanian-v4.zip) = 91dbf8cd1e270ba08a4085ee39d80854cd252fed
 Size (TYPOlight-Lithuanian-v4.zip) = 123457 bytes
@@ -75,9 +75,9 @@ Size (TYPOlight-Portuguese-v7.zip) = 141139 bytes
 SHA1 (TYPOlight-Romanian-v8.zip) = df74832094fd922f9aa9be77e2301d1c12cdd630
 RMD160 (TYPOlight-Romanian-v8.zip) = 34d5590c1ca59f5d26f53de9b108d0c7c95369a3
 Size (TYPOlight-Romanian-v8.zip) = 136805 bytes
-SHA1 (TYPOlight-Russian-v27.zip) = 4ec12ef4912a80f60d7d56662b61b2613e2485ec
-RMD160 (TYPOlight-Russian-v27.zip) = 6c432f1ac5fc10353b4ff2d61678a8e8b28096ad
-Size (TYPOlight-Russian-v27.zip) = 154034 bytes
+SHA1 (TYPOlight-Russian-v28.zip) = e7ac90cb8689661cf6a7dc4c15811f93189a440c
+RMD160 (TYPOlight-Russian-v28.zip) = df8f8fdd99aa6354edfca62835e9c5a1062a099c
+Size (TYPOlight-Russian-v28.zip) = 156392 bytes
 SHA1 (TYPOlight-Serbian-v6.zip) = 08898d68de41c51069e2e9b844cb092996998b93
 RMD160 (TYPOlight-Serbian-v6.zip) = b340162b7c746d5e1003c3848c110d4d4181df6c
 Size (TYPOlight-Serbian-v6.zip) = 157746 bytes
