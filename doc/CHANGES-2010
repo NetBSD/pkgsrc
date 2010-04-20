@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1614 2010/04/20 18:37:47 zafer Exp $
+$NetBSD: CHANGES-2010,v 1.1615 2010/04/20 19:32:43 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2048,3 +2048,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/glib2 to 2.22.5nb1 [jmmv 2010-04-20]
 	Added sysutils/gio-fam version 2.22.5 [jmmv 2010-04-20]
 	Updated geography/geos to 3.2.2 [zafer 2010-04-20]
+	Updated lang/mawk to 1.3.4 [zafer 2010-04-20]
