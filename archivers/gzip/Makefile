@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/02/02 14:42:43 taca Exp $
+# $NetBSD: Makefile,v 1.24 2010/04/20 15:50:23 tnn Exp $
 #
 
 DISTNAME=	gzip-1.3.12
@@ -21,5 +21,6 @@ CONFLICTS+=		gzip-base-[0-9]* gzip-info-[0-9]*
 GNU_CONFIGURE=	YES
 MAKE_FLAGS+=	manlinks=so
 INFO_FILES=	yes
+CHECK_PERMS=	no	# can't depend on checkperms; it's distfile is gzipped
 
 .include "../../mk/bsd.pkg.mk"
