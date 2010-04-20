@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2010/04/15 22:25:11 tron Exp $
+# $NetBSD: Makefile,v 1.179 2010/04/20 00:39:12 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -121,6 +121,10 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
+LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs://p' -e 's/^Libs.private://p' \
+    ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
+LIBS+=		${LIBARCHIVE_LIBS:sh}
+
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub
 
@@ -132,9 +136,13 @@ LDFLAGS+=	-Wl,-search_paths_first
 
 # Hack to make sure that the libarchive version is replaced
 pre-configure: config-guess-override config-sub-override
+.else
+LIBS+=		-larchive
 .endif
 CPPFLAGS+=	-I${WRKDIR}/libfetch
 LDFLAGS+=	-L${WRKDIR}/libfetch
+
+CONFIGURE_ENV+=	LIBS=${LIBS:Q}
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
@@ -162,7 +170,7 @@ pre-configure:
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
 		./configure --disable-shared --disable-bsdtar		\
 		--disable-bsdcpio --without-expat --without-xml2	\
-		--disable-dependency-tracking --disable-acl 
+		--disable-dependency-tracking
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
 	cd ${WRKDIR}/libfetch && ${SETENV} ${MAKE_ENV}			\

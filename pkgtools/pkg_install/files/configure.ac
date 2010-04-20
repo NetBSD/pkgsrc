@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.34 2010/01/23 22:41:43 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.35 2010/04/20 00:39:12 joerg Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
@@ -130,6 +130,16 @@ AC_LANG_POP([C])
 AC_CHECK_SIZEOF(int)
 AC_CHECK_SIZEOF(long)
 AC_CHECK_SIZEOF(long long)
+AC_CHECK_SIZEOF(size_t, [#include <stdlib.h>])
+
+case $host in
+*-*-hpux*)
+	AC_DEFINE(MISSING_SIZE_T_SUPPORT)
+	AH_TEMPLATE([MISSING_SIZE_T_SUPPORT], [
+	Define to 1 if the `z' modifider for printf is missing.
+])
+	;;
+esac
 
 case $host in
 *-*-dragonfly* |*-*-freebsd*)
@@ -140,6 +150,18 @@ esac
 AH_BOTTOM(
 #if !HAVE_VFORK
 # define vfork fork
+#endif
+
+#ifndef MISSING_SIZE_T_SUPPORT
+#  define PRIzu "zu"
+#elif SIZEOF_SIZE_T == SIZEOF_INT
+#  define PRIzu "u"
+#elif SIZEOF_SIZE_T == SIZEOF_LONG
+#  define PRIzu "lu"
+#elif SIZEOF_SIZE_T == SIZEOF_LONG_LONG
+#  define PRIzu "llu"
+#else
+#  errror "Unknown size_t size"
 #endif
 )
 
