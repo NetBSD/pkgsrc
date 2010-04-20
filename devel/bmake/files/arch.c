@@ -1,4 +1,4 @@
-/*	$NetBSD: arch.c,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: arch.c,v 1.5 2010/04/20 13:37:49 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: arch.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
+static char rcsid[] = "$NetBSD: arch.c,v 1.5 2010/04/20 13:37:49 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)arch.c	8.2 (Berkeley) 1/2/94";
 #else
-__RCSID("$NetBSD: arch.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
+__RCSID("$NetBSD: arch.c,v 1.5 2010/04/20 13:37:49 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -139,6 +139,19 @@ __RCSID("$NetBSD: arch.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
 #include    <ctype.h>
 #ifdef HAVE_AR_H
 #include    <ar.h>
+#else
+struct ar_hdr {
+        char ar_name[16];               /* name */
+        char ar_date[12];               /* modification time */
+        char ar_uid[6];                 /* user id */
+        char ar_gid[6];                 /* group id */
+        char ar_mode[8];                /* octal file permissions */
+        char ar_size[10];               /* size in bytes */
+#ifndef ARFMAG
+#define ARFMAG  "`\n"
+#endif
+        char ar_fmag[2];                /* consistency check */
+};
 #endif
 #if defined(HAVE_RANLIB_H) && !(defined(__ELF__) || defined(NO_RANLIB))
 #include    <ranlib.h>
@@ -203,6 +216,12 @@ static int ArchSVR4Entry(Arch *, char *, size_t, FILE *);
 #endif
 #ifndef  AR_FMAG
 # define AR_FMAG ar_fmag
+#endif
+#ifndef ARMAG
+# define ARMAG	"!<arch>\n"
+#endif
+#ifndef SARMAG
+# define SARMAG	8
 #endif
 
 #define AR_MAX_NAME_LEN	    (sizeof(arh.AR_NAME)-1)

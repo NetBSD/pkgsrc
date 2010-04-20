@@ -395,23 +395,11 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
                      bbmmaakkee and cannot be confused with the special target with
                      the same name.
 
+     _._M_A_K_E_._D_E_P_E_N_D_F_I_L_E
+                     Names the makefile (default `_._d_e_p_e_n_d') from which gener-
+                     ated dependencies are read.
+
      _._M_A_K_E_._E_X_P_O_R_T_E_D  The list of variables exported by bbmmaakkee.
-
-     _._M_A_K_E_._M_A_K_E_F_I_L_E_S
-                     The list of makefiles read by bbmmaakkee, which is useful for
-                     tracking dependencies.  Each makefile is recorded only
-                     once, regardless of the number of times read.
-
-     _._M_A_K_E_._L_E_V_E_L     The recursion depth of bbmmaakkee.  The initial instance of
-                     bbmmaakkee will be 0, and an incremented value is put into the
-                     environment to be seen by the next generation.  This
-                     allows tests like: .if ${.MAKE.LEVEL} == 0 to protect
-                     things which should only be evaluated in the initial
-                     instance of bbmmaakkee.
-
-     _._M_A_K_E_._P_I_D       The process-id of bbmmaakkee.
-
-     _._M_A_K_E_._P_P_I_D      The parent process-id of bbmmaakkee.
 
      _._M_A_K_E_._J_O_B_._P_R_E_F_I_X
                      If bbmmaakkee is run with _j then output for each target is
@@ -429,6 +417,25 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
                      `MAKEFLAGS' variable which is then entered into the envi-
                      ronment for all programs which bbmmaakkee executes.
 
+     _._M_A_K_E_._L_E_V_E_L     The recursion depth of bbmmaakkee.  The initial instance of
+                     bbmmaakkee will be 0, and an incremented value is put into the
+                     environment to be seen by the next generation.  This
+                     allows tests like: .if ${.MAKE.LEVEL} == 0 to protect
+                     things which should only be evaluated in the initial
+                     instance of bbmmaakkee.
+
+     _._M_A_K_E_._M_A_K_E_F_I_L_E___P_R_E_F_E_R_E_N_C_E
+                     The ordered list of makefile names (default `_m_a_k_e_f_i_l_e',
+                     `_M_a_k_e_f_i_l_e') that bbmmaakkee will look for.
+
+     _._M_A_K_E_._M_A_K_E_F_I_L_E_S
+                     The list of makefiles read by bbmmaakkee, which is useful for
+                     tracking dependencies.  Each makefile is recorded only
+                     once, regardless of the number of times read.
+
+     _._M_A_K_E_._M_O_D_E      Processed after reading all makefiles.  Can affect the
+                     mode that bbmmaakkee runs in.  Currently just `_c_o_m_p_a_t' mode.
+
      _._M_A_K_E_O_V_E_R_R_I_D_E_S  This variable is used to record the names of variables
                      assigned to on the command line, so that they may be
                      exported as part of `MAKEFLAGS'.  This behaviour can be
@@ -437,6 +444,10 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
                      a makefile by appending their names to `_._M_A_K_E_O_V_E_R_R_I_D_E_S'.
                      `MAKEFLAGS' is re-exported whenever `_._M_A_K_E_O_V_E_R_R_I_D_E_S' is
                      modified.
+
+     _._M_A_K_E_._P_I_D       The process-id of bbmmaakkee.
+
+     _._M_A_K_E_._P_P_I_D      The parent process-id of bbmmaakkee.
 
      _M_A_K_E___P_R_I_N_T___V_A_R___O_N___E_R_R_O_R
                      When bbmmaakkee stops due to an error, it prints its name and
@@ -572,12 +583,16 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
 
      ::RR   Replaces each word in the variable with everything but its suffix.
 
+     ::ttAA  Attempt to convert variable to an absolute path using realpath(3),
+          if that fails, the value is unchanged.
+
      ::ttll  Converts variable to lower-case letters.
 
      ::ttss_c
           Words in the variable are normally separated by a space on expan-
           sion.  This modifier sets the separator to the character _c.  If _c is
-          omitted, then no separator is used.
+          omitted, then no separator is used.  The common escapes (including
+          octal numeric codes), work as expected.
 
      ::ttuu  Converts variable to upper-case letters.
 
@@ -633,8 +648,12 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
           _t_r_u_e___s_t_r_i_n_g, otherwise return the _f_a_l_s_e___s_t_r_i_n_g.  Since the variable
           name is used as the expression, :? must be the first modifier after
           the variable name itself - which will, of course, usually contain
-          variable expansions.  If the expression is a single token, it will
-          likely be treated as a check for the name being defined.
+          variable expansions.  A common error is trying to use expressions
+          like
+                ${NUMBERS:M42:?match:no}
+          which actually tests defined(NUMBERS), to determine is any words
+          match "42" you need to use something like:
+                ${${NUMBERS:M42} !=  :?match:no}.
 
      _:_o_l_d___s_t_r_i_n_g_=_n_e_w___s_t_r_i_n_g
           This is the AT&T System V UNIX style variable substitution.  It must
@@ -756,16 +775,53 @@ IINNCCLLUUDDEE SSTTAATTEEMMEENNTTSS,, CCOONNDDIITTIIOO
      Conditional expressions are also preceded by a single dot as the first
      character of a line.  The possible conditionals are as follows:
 
-     ..eexxppoorrtt _v_a_r_i_a_b_l_e
-             Export the specified global variable.  If no variable is pro-
-             vided, all globals are exported except for internal variables
+     ..eerrrroorr _m_e_s_s_a_g_e
+             The message is printed along with the name of the makefile and
+             line number, then bbmmaakkee will exit.
+
+     ..eexxppoorrtt _v_a_r_i_a_b_l_e _._._.
+             Export the specified global variable.  If no variable list is
+             provided, all globals are exported except for internal variables
              (those that start with `.').  This is not affected by the --XX
-             flag, so should be used with caution.  Appending a variable name
-             to _._M_A_K_E_._E_X_P_O_R_T_E_D is equivalent to exporting a variable.
+             flag, so should be used with caution.
+
+             Appending a variable name to _._M_A_K_E_._E_X_P_O_R_T_E_D is equivalent to
+             exporting a variable.
+
+     ..iinnffoo _m_e_s_s_a_g_e
+             The message is printed along with the name of the makefile and
+             line number.
 
      ..uunnddeeff _v_a_r_i_a_b_l_e
              Un-define the specified global variable.  Only global variables
              may be un-defined.
+
+     ..uunneexxppoorrtt _v_a_r_i_a_b_l_e _._._.
+             The opposite of `.export'.  The specified global _v_a_r_i_a_b_l_e will be
+             removed from _._M_A_K_E_._E_X_P_O_R_T_E_D.  If no variable list is provided,
+             all globals are unexported, and _._M_A_K_E_._E_X_P_O_R_T_E_D deleted.
+
+     ..uunneexxppoorrtt--eennvv
+             Unexport all globals previously exported and clear the environ-
+             ment inherited from the parent.  This operation will cause a mem-
+             ory leak of the original environment, so should be used spar-
+             ingly.  Testing for _._M_A_K_E_._L_E_V_E_L being 0, would make sense.  Also
+             note that any variables which originated in the parent environ-
+             ment should be explicitly preserved if desired.  For example:
+
+                   .if ${.MAKE.LEVEL} == 0
+                   PATH := ${PATH}
+                   .unexport-env
+                   .export PATH
+                   .endif
+
+             Would result in an environment containing only `PATH', which is
+             the minimal useful environment.  Actually `.MAKE.LEVEL' will also
+             be pushed into the new environment.
+
+     ..wwaarrnniinngg _m_e_s_s_a_g_e
+             The message prefixed by `_w_a_r_n_i_n_g_:' is printed along with the name
+             of the makefile and line number.
 
      ..iiff [!]_e_x_p_r_e_s_s_i_o_n [_o_p_e_r_a_t_o_r _e_x_p_r_e_s_s_i_o_n _._._.]
              Test the value of an expression.
@@ -965,6 +1021,10 @@ SSPPEECCIIAALL TTAARRGGEETTSS
      ..EENNDD     Any command lines attached to this target are executed after
               everything else is done.
 
+     ..EERRRROORR   Any command lines attached to this target are executed when
+              another target fails.  The ..EERRRROORR__TTAARRGGEETT variable is set to the
+              target that failed.  See also MMAAKKEE__PPRRIINNTT__VVAARR__OONN__EERRRROORR.
+
      ..IIGGNNOORREE  Mark each of the sources with the ..IIGGNNOORREE attribute.  If no
               sources are specified, this is the equivalent of specifying the
               --ii option.
@@ -1104,4 +1164,4 @@ HHIISSTTOORRYY
      bbmmaakkee is derived from NetBSD's make(1).  It uses autoconf to facilitate
      portability to other platforms.
 
-NetBSD 5.0                     September 7, 2009                    NetBSD 5.0
+NetBSD 5.0                      April 14, 2010                      NetBSD 5.0

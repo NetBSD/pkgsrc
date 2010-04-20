@@ -1,10 +1,10 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.9 2009/09/18 21:27:25 joerg Exp $
+dnl	$Id: configure.in,v 1.10 2010/04/20 13:37:49 joerg Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
-AC_INIT(makefile.boot.in)
+AC_INIT([bmake], [20100414], [sjg@NetBSD.org])
 AC_CONFIG_HEADER(config.h)
 
 dnl
@@ -115,8 +115,12 @@ AC_CHECK_FUNCS( \
 	wait4 \
 	waitpid \
 	)
-dnl AC_REPLACE_FUNCS(setenv getenv)
-AC_REPLACE_FUNCS(getenv)
+
+dnl functions which we may need to provide
+AC_REPLACE_FUNCS( \
+	getenv \
+	realpath \
+	)
 
 AC_CHECK_LIB([util], [emalloc],
     [ AC_CHECK_LIB([util], [erealloc],
@@ -265,9 +269,12 @@ esac
 dnl
 dnl Now make sure we have a value
 dnl
+srcdir=`cd $srcdir && pwd`
 for mksrc in $mksrc $srcdir/mk $srcdir/../mk mk
 do
-        test -s $mksrc/install-mk && break
+	test -s $mksrc/install-mk || continue
+	mksrc=`cd $mksrc && pwd`
+	break
 done
 mksrc=`echo $mksrc | sed "s,$srcdir,\\\${srcdir},"`
 echo "Using: MKSRC=$mksrc" 1>&6
@@ -291,23 +298,14 @@ AC_SUBST(default_sys_path)
 AC_SUBST(INSTALL)
 AC_SUBST(GCC)
 AC_SUBST(diff_u)
-AC_OUTPUT(Makefile makefile.boot lst.lib/makefile.boot unit-tests/Makefile)
+AC_OUTPUT(Makefile make-bootstrap.sh unit-tests/Makefile)
 
 cat <<EOF
 
 You can now run
 
-	make -f makefile.boot bootstrap
+	./make-bootstrap.sh
 
-to produce a fully functional bmake. You can then use:
-
-	make -f makefile.boot install
-
-for an initial installation.  If you already have macros installed 
-you can use:
-
-	./bmake -f Makefile
-
-to install etc.
+to produce a fully functional bmake.
 
 EOF
