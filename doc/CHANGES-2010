@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1610 2010/04/20 10:27:11 is Exp $
+$NetBSD: CHANGES-2010,v 1.1611 2010/04/20 17:15:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2043,3 +2043,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed net/p5-Net-Coro [seb 2010-04-19]
 	Added net/p5-Net-Server-Coro version 0.8 [seb 2010-04-19]
 	Updated converters/mpack to 1.6nb1 [is 2010-04-20]
+	Updated print/dvipsk to 5.98nb1 [minskim 2010-04-20]
