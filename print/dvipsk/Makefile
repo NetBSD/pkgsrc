@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/16 03:47:31 minskim Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2010/04/20 21:26:19 tron Exp $
 
 DISTNAME=	texlive-20091011-source
 PKGNAME=	dvipsk-5.98
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
