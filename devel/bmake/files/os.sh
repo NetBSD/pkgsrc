@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.3 2008/03/09 19:54:29 joerg Exp $
+#	$Id: os.sh,v 1.4 2010/04/20 13:37:49 joerg Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -175,6 +175,13 @@ Linux)
 QNX)
 	case $MACHINE in
 	x86pc)	MACHINE_ARCH=i386;;
+	esac
+	;;
+Haiku)
+	case $MACHINE in
+	BeBox)	MACHINE_ARCH=powerpc;;
+	BeMac)	MACHINE_ARCH=powerpc;;
+	BePC)	MACHINE_ARCH=i386;;
 	esac
 	;;
 esac

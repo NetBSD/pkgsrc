@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.8 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: job.c,v 1.9 2010/04/20 13:37:49 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.8 2009/09/18 21:27:25 joerg Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.9 2010/04/20 13:37:49 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.8 2009/09/18 21:27:25 joerg Exp $");
+__RCSID("$NetBSD: job.c,v 1.9 2010/04/20 13:37:49 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -1239,8 +1239,8 @@ Job_CheckCommands(GNode *gn, void (*abortProc)(const char *, ...))
 	    static const char msg[] = ": don't know how to make";
 
 	    if (gn->flags & FROM_DEPEND) {
-		fprintf(stdout, "%s: ignoring stale .depend for %s\n",
-			progname, gn->name);
+		fprintf(stdout, "%s: ignoring stale %s for %s\n",
+			progname, makeDependfile, gn->name);
 		return TRUE;
 	    }
 
@@ -1911,7 +1911,7 @@ JobRun(GNode *targ)
 #else
     Compat_Make(targ, targ);
     if (targ->made == ERROR) {
-	PrintOnError("\n\nStop.");
+	PrintOnError(targ, "\n\nStop.");
 	exit(1);
     }
 #endif
@@ -2241,7 +2241,7 @@ Job_Init(void)
     if (begin != NULL) {
 	JobRun(begin);
 	if (begin->made == ERROR) {
-	    PrintOnError("\n\nStop.");
+	    PrintOnError(begin, "\n\nStop.");
 	    exit(1);
 	}
     }

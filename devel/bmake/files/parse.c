@@ -1,4 +1,4 @@
-/*	$NetBSD: parse.c,v 1.5 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: parse.c,v 1.6 2010/04/20 13:37:49 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: parse.c,v 1.5 2009/09/18 21:27:25 joerg Exp $";
+static char rcsid[] = "$NetBSD: parse.c,v 1.6 2010/04/20 13:37:49 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)parse.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: parse.c,v 1.5 2009/09/18 21:27:25 joerg Exp $");
+__RCSID("$NetBSD: parse.c,v 1.6 2010/04/20 13:37:49 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -191,6 +191,7 @@ typedef enum {
     Begin,  	    /* .BEGIN */
     Default,	    /* .DEFAULT */
     End,    	    /* .END */
+    dotError,	    /* .ERROR */
     Ignore,	    /* .IGNORE */
     Includes,	    /* .INCLUDES */
     Interrupt,	    /* .INTERRUPT */
@@ -245,6 +246,7 @@ static struct {
 { ".BEGIN", 	  Begin,    	0 },
 { ".DEFAULT",	  Default,  	0 },
 { ".END",   	  End,	    	0 },
+{ ".ERROR",   	  dotError,    	0 },
 { ".EXEC",	  Attribute,   	OP_EXEC },
 { ".IGNORE",	  Ignore,   	OP_IGNORE },
 { ".INCLUDES",	  Includes, 	0 },
@@ -495,6 +497,50 @@ Parse_Error(int type, const char *fmt, ...)
 		ParseVErrorInternal(debug_file, fname, lineno, type, fmt, ap);
 		va_end(ap);
 	}
+}
+
+
+/*
+ * ParseMessage
+ *	Parse a .info .warning or .error directive
+ *
+ *	The input is the line minus the ".".  We substitute
+ *	variables, print the message and exit(1) (for .error) or just print
+ *	a warning if the directive is malformed.
+ */
+static void
+ParseMessage(char *line)
+{
+    int mtype;
+    
+    switch(*line) {
+    case 'i':
+	mtype = 0;
+	break;
+    case 'w':
+	mtype = PARSE_WARNING;
+	break;
+    case 'e':
+	mtype = PARSE_FATAL;
+	break;
+    default:
+	Parse_Error(PARSE_WARNING, "invalid syntax: \".%s\"", line);
+	return;
+    }
+
+    while (!isspace((u_char)*line))
+	line++;
+    while (isspace((u_char)*line))
+	line++;
+
+    line = Var_Subst(NULL, line, VAR_CMD, 0);
+    Parse_Error(mtype, "%s", line);
+    free(line);
+
+    if (mtype == PARSE_FATAL) {
+	/* Terminate immediately. */
+	exit(1);
+    }
 }
 
 /*-
@@ -925,7 +971,8 @@ ParseDoDependency(char *line)
 		Parse_Error(PARSE_FATAL,
 		    "Makefile appears to contain unresolved cvs/rcs/??? merge conflicts");
 	    else
-		Parse_Error(PARSE_FATAL, "Need an operator");
+		Parse_Error(PARSE_FATAL, lstart[0] == '.' ? "Unknown directive"
+				     : "Need an operator");
 	    goto out;
 	}
 	*cp = '\0';
@@ -972,6 +1019,7 @@ ParseDoDependency(char *line)
 		 *	.NOPATH		Don't search for file in the path
 		 *	.BEGIN
 		 *	.END
+		 *	.ERROR
 		 *	.INTERRUPT  	Are not to be considered the
 		 *			main target.
 		 *  	.NOTPARALLEL	Make only one target at a time.
@@ -992,6 +1040,7 @@ ParseDoDependency(char *line)
 			break;
 		    case Begin:
 		    case End:
+		    case dotError:
 		    case Interrupt:
 			gn = Targ_FindNode(line, TARG_CREATE);
 			gn->type |= OP_NOTMAIN|OP_SPECIAL;
@@ -1121,6 +1170,7 @@ ParseDoDependency(char *line)
 	    case Default:
 	    case Begin:
 	    case End:
+	    case dotError:
 	    case Interrupt:
 		/*
 		 * These four create nodes on which to hang commands, so
@@ -1148,7 +1198,8 @@ ParseDoDependency(char *line)
 	    op = OP_DEPENDS;
 	}
     } else {
-	Parse_Error(PARSE_FATAL, "Missing dependency operator");
+	Parse_Error(PARSE_FATAL, lstart[0] == '.' ? "Unknown directive"
+		    : "Missing dependency operator");
 	goto out;
     }
 
@@ -2479,8 +2530,10 @@ Parse_File(const char *name, int fd)
 			curFile->lineno, line);
 	    if (*line == '.') {
 		/*
-		 * Lines that begin with the special character are either
+		 * Lines that begin with the special character may be
 		 * include or undef directives.
+		 * On the other hand they can be suffix rules (.c.o: ...)
+		 * or just dependencies for filenames that start '.'.
 		 */
 		for (cp = line + 1; isspace((unsigned char)*cp); cp++) {
 		    continue;
@@ -2506,7 +2559,15 @@ Parse_File(const char *name, int fd)
 			continue;
 		    Var_Export(cp, 1);
 		    continue;
-		}
+		} else if (strncmp(cp, "unexport", 8) == 0) {
+		    Var_UnExport(cp);
+		    continue;
+		} else if (strncmp(cp, "info", 4) == 0 ||
+			   strncmp(cp, "error", 5) == 0 ||
+			   strncmp(cp, "warning", 7) == 0) {
+		    ParseMessage(cp);
+		    continue;
+		}		    
 	    }
 
 	    if (*line == '\t') {
@@ -2590,15 +2651,30 @@ Parse_File(const char *name, int fd)
 	    /*
 	     * For some reason - probably to make the parser impossible -
 	     * a ';' can be used to separate commands from dependencies.
-	     * No attempt is made to avoid ';' inside substitution patterns.
+	     * Attempt to avoid ';' inside substitution patterns.
 	     */
-	    for (cp = line; *cp != 0; cp++) {
-		if (*cp == '\\' && cp[1] != 0) {
-		    cp++;
-		    continue;
+	    {
+		int level = 0;
+
+		for (cp = line; *cp != 0; cp++) {
+		    if (*cp == '\\' && cp[1] != 0) {
+			cp++;
+			continue;
+		    }
+		    if (*cp == '$' &&
+			(cp[1] == '(' || cp[1] == '{')) {
+			level++;
+			continue;
+		    }
+		    if (level > 0) {
+			if (*cp == ')' || *cp == '}') {
+			    level--;
+			    continue;
+			}
+		    } else if (*cp == ';') {
+			break;
+		    }
 		}
-		if (*cp == ';')
-		    break;
 	    }
 	    if (*cp != 0)
 		/* Terminate the dependency list at the ';' */
@@ -2639,7 +2715,7 @@ Parse_File(const char *name, int fd)
 	(void)fprintf(stderr,
 	    "%s: Fatal errors encountered -- cannot continue\n",
 	    progname);
-	PrintOnError(NULL);
+	PrintOnError(NULL, NULL);
 	exit(1);
     }
 }
