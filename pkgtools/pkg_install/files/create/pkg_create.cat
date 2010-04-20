@@ -64,7 +64,7 @@ OOPPTTIIOONNSS
      --FF _c_o_m_p_r_e_s_s_i_o_n
              Use _c_o_m_p_r_e_s_s_i_o_n as compression algorithm.  This overrides the
              heuristic to guess the compression type from the output name.
-             Currently supported values are bzip2, gzip and none.
+             Currently supported values are bzip2, gzip, none and xz.
 
      --ff _p_a_c_k_l_i_s_t
              Fetch (packing list) for package from the file _p_a_c_k_l_i_s_t or ssttddiinn
