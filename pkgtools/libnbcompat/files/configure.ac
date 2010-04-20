@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.76 2010/02/20 15:21:35 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.77 2010/04/20 00:32:22 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -132,6 +132,19 @@ AC_CHECK_FUNC(SHA512_File, [:], [
 	AC_LIBOBJ(sha2)
 	AC_LIBOBJ(sha2hl)
 ])
+
+case $host in
+*-*-hpux*)
+	AC_DEFINE(BROKEN_PREAD)
+	AH_TEMPLATE([BROKEN_PREAD], [
+	Define to 1 if the `pread' function is broken.
+])
+	AC_DEFINE(BROKEN_PWRITE)
+	AH_TEMPLATE([BROKEN_PWRITE], [
+	Define to 1 if the `pwrite' function is broken.
+])
+	;;
+esac
 
 AC_ARG_ENABLE([db],
 	[AS_HELP_STRING([--enable-db], [include DB implementation])])

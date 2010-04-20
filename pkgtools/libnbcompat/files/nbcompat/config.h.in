@@ -3,6 +3,12 @@
 /* Define if building universal (internal helper macro) */
 #undef AC_APPLE_UNIVERSAL_BUILD
 
+/* Define to 1 if the `pread' function is broken. */
+#undef BROKEN_PREAD
+
+/* Define to 1 if the `pwrite' function is broken. */
+#undef BROKEN_PWRITE
+
 /* Define to 1 if the `getpgrp' function requires zero arguments. */
 #undef GETPGRP_VOID
 
@@ -62,7 +68,7 @@
 /* Define if dirfd is either a function or a macro. */
 #undef HAVE_DIRFD
 
-/* Define to 1 if `dd_fd' is member of `DIR'. */
+/* Define to 1 if `dd_fd' is a member of `DIR'. */
 #undef HAVE_DIR_DD_FD
 
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
@@ -367,7 +373,7 @@
 /* Define to 1 if the system has the type `struct addrinfo'. */
 #undef HAVE_STRUCT_ADDRINFO
 
-/* Define to 1 if `d_namlen' is member of `struct dirent'. */
+/* Define to 1 if `d_namlen' is a member of `struct dirent'. */
 #undef HAVE_STRUCT_DIRENT_D_NAMLEN
 
 /* Define to 1 if the system has the type `struct in6_addr'. */
@@ -382,13 +388,13 @@
 /* Define to 1 if the system has the type `struct sockaddr_storage'. */
 #undef HAVE_STRUCT_SOCKADDR_STORAGE
 
-/* Define to 1 if `f_flags' is member of `struct statfs'. */
+/* Define to 1 if `f_flags' is a member of `struct statfs'. */
 #undef HAVE_STRUCT_STATFS_F_FLAGS
 
-/* Define to 1 if `f_fsize' is member of `struct statfs'. */
+/* Define to 1 if `f_fsize' is a member of `struct statfs'. */
 #undef HAVE_STRUCT_STATFS_F_FSIZE
 
-/* Define to 1 if `f_iosize' is member of `struct statfs'. */
+/* Define to 1 if `f_iosize' is a member of `struct statfs'. */
 #undef HAVE_STRUCT_STATFS_F_IOSIZE
 
 /* Define to 1 if you have the `strunvis' function. */
@@ -546,6 +552,9 @@
 
 /* Define to the one symbol short name of this package. */
 #undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
