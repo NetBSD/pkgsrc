@@ -1,17 +1,22 @@
-# $NetBSD: Makefile,v 1.20 2007/12/02 00:11:10 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/04/20 19:23:14 zafer Exp $
 #
 
-DISTNAME=	mawk-1.3.3
+DISTNAME=	mawk-1.3.4
+PKGNAME=	${DISTNAME:S/-20/.20/}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/languages/mawk/
+MASTER_SITES=	ftp://invisible-island.net/mawk/
+EXTRACT_SUFX=  .tgz
 
-MAINTAINER=	agc@NetBSD.org
-COMMENT=	Mike Brennan's fast awk clone
+MAINTAINER=	vle@gmx.net
+COMMENT=	AWK clone by Mike Brennan
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=   user-destdir
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 GNU_CONFIGURE=	yes
-CONFIGURE_HAS_MANDIR=	no
+
 TEST_TARGET=	mawk_test fpe_test
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
