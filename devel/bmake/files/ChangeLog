@@ -1,3 +1,79 @@
+2010-04-14  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100414
+	* Merge with NetBSD make, pick up
+	  o use realpath to resolve argv[0] (for .MAKE) if needed.
+	  o add realpath from libc.
+	  o add :tA to resolve variable via realpath(3) if possible.
+
+2010-04-08  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100408
+	* Merge with NetBSD make, pick up
+	  o unit tests for .ERROR, .error
+	  o fix for .ERROR to ensure it cannot be default target.
+
+2010-04-06  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100406
+	* Merge with NetBSD make, pick up
+	  o fix for compat mode "Error code" going to debug_file.
+	  o fix for .ALLSRC being populated twice.
+	  o support for .info, .warning and .error directives
+	  o .MAKE.MODE to control make's operational mode
+	  o .MAKE.MAKEFILE_PREFERENCE to control the preferred makefile
+	    name(s).
+	  o .MAKE.DEPENDFILE to control the name of the depend file
+	  o .ERROR target - run on failure.
+	
+2010-03-18  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* make-bootstrap.sh.in: extract MAKE_VERSION from Makefile
+
+	* os.sh,arch.c: patch for Haiku from joerg at netbsd
+
+2010-03-17  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100222
+	* Merge with NetBSD make, pick up
+	  o better error msg for .for with mutiple inter vars
+	
+	* boot-strap: 
+	  o use make-bootstrap.sh from joerg at netbsd
+	    to avoid the need for a native make when bootstrapping.
+	  o add "" everywhere ;-)
+	  o if /usr/share/tmac/andoc.tmac exists install nroff bmake.1
+	    otherwise the pre-formated version.
+
+2010-01-04  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100102
+	* Merge with NetBSD make, pick up:
+	  o fix for -m .../
+
+2009-11-18  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20091118
+	* Merge with NetBSD make, pick up:
+	  o .unexport
+	  o report lines that start with '.' and should have ':'
+	    (catch typo's of .el*if).
+	
+2009-10-30  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* configure.in: Ensure that srcdir and mksrc are absolute paths.
+
+2009-10-09  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): fix version to 20091007
+
+2009-10-07  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 200910007
+	* Merge with NetBSD make, pick up:
+	  o fix for parsing of :S;...;...; applied to .for loop iterator
+	    appearing in a dependency line. 
+	
 2009-09-09  Simon J. Gerraty  <sjg@void.crufty.net>
 
 	* Makefile.in (MAKE_VERSION): bump version to 20090909
