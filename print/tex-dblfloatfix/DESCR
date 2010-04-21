@@ -1,0 +1,3 @@
+The package solves two problems: floats in a twocolumn document come
+out in the right order and allowed float positions are now [tbp].  The
+packages actually merges facilities from fixltx2e and stfloats.
