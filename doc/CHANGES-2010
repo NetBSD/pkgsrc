@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1627 2010/04/21 19:22:46 roy Exp $
+$NetBSD: CHANGES-2010,v 1.1628 2010/04/21 23:10:34 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2066,3 +2066,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed time/sunbird successor mail/thunderbird [tnn 2010-04-21]
 	Removed mail/thunderbird2 successor mail/thunderbird [tnn 2010-04-21]
 	Updated net/parpd to 1.5 [roy 2010-04-21]
+	Updated lang/ocaml to 3.11.2 [zafer 2010-04-21]
