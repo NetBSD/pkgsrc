@@ -1,0 +1,7 @@
+This package provides circles in math mode that can be used for the
+nextstep operator of temporal logic, in conjunction with \Box and
+\Diamond (latexsym) or \square and \lozenge (amssymb).  LaTeX circles
+\circ and \bigcirc are not of the right size.  The circles are taken
+from the font lcircle10.  The package contains some hacks to
+approximate the right size and this solution is definitely not
+sufficient to give a high quality output.
