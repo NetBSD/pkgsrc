@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/04/21 16:50:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2010/04/21 19:21:58 jmmv Exp $
 
 DISTNAME=	gnome-platform-2.28.2
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -12,6 +13,7 @@ META_PACKAGE=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-platform
 PKG_SUPPORTED_OPTIONS=	fam
+PKG_SUGGESTED_OPTIONS=	fam
 
 .include "../../mk/bsd.options.mk"
 
