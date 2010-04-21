@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/04/24 09:47:47 roy Exp $
+$NetBSD: distinfo,v 1.5 2010/04/21 19:22:10 roy Exp $
 
-SHA1 (parpd-1.4.tar.bz2) = e3b393c3f6931a993c9d36776bab826acddb4e85
-RMD160 (parpd-1.4.tar.bz2) = b566feff9cb132ee7a5878c093c6008ad33f75f2
-Size (parpd-1.4.tar.bz2) = 11349 bytes
+SHA1 (parpd-1.5.tar.bz2) = 854b92205db882f8a31d25360ab4dbf2469f77d4
+RMD160 (parpd-1.5.tar.bz2) = 442632531eeb97a8f48232ef260db1924cafdf4b
+Size (parpd-1.5.tar.bz2) = 11420 bytes
