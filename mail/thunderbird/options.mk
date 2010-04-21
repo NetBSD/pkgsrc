@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2009/12/11 15:00:00 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2010/04/21 13:33:26 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
-PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding
+PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning
+PKG_SUGGESTED_OPTIONS=	mozilla-lightning
 
 PLIST_VARS+=		branding debug gnome
 
@@ -43,6 +44,13 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-jit
 .else
 CONFIGURE_ARGS+=	--disable-jit
+.endif
+
+.if !empty(PKG_OPTIONS:Mmozilla-lightning)
+CONFIGURE_ARGS+=	--enable-calendar
+PLIST_SRC+=		PLIST.lightning
+.else
+CONFIGURE_ARGS+=	--disable-calendar
 .endif
 
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
