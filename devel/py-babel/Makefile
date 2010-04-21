@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/21 06:01:51 obache Exp $
 #
 
-DISTNAME=	Babel-0.9.4
+DISTNAME=	Babel-0.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	http://ftp.edgewall.com/pub/babel/
