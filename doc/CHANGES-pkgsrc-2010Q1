@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.7 2010/04/20 21:30:30 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.8 2010/04/21 06:32:13 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -25,3 +25,6 @@ Pullup ticket #3084 - requested by minskim
 print/dvipsk: security patch
 Pullup ticket #3085 - requested by minskim
 print/abcm2ps: security update
+Pullup ticket #3086 - requested by taca
+databases/mysql51-client: security update
+databases/mysql51-server: security update
