@@ -1,0 +1,6 @@
+The package provides commands to change the page layout in the middle
+of a document, and to robustly check for typesetting on odd or even
+pages.  Instructions for use are at the end of the file.  The package
+is an extraction of code from the memoir class, whose user interface
+it shares.  It is intended the this package will eventually replace
+the chngpage package, which is distributed with the package.
