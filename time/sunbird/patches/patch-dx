@@ -1,14 +1,0 @@
-$NetBSD: patch-dx,v 1.2 2009/05/29 13:22:11 he Exp $
-
---- nsprpub/pr/src/md/unix/uxrng.c.orig	2005-07-02 00:26:36.000000000 +0200
-+++ nsprpub/pr/src/md/unix/uxrng.c
-@@ -138,7 +138,8 @@ GetHighResClock(void *buf, size_t maxbyt
-     return 0;
- }
- 
--#elif (defined(LINUX) || defined(FREEBSD) || defined(NETBSD) || defined(OPENBSD))
-+#elif (defined(LINUX) || defined(FREEBSD) || defined(NETBSD) || \
-+	defined(OPENBSD) || defined(DRAGONFLY))
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <fcntl.h>
