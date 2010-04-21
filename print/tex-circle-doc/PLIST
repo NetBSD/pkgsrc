@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/21 05:38:15 minskim Exp $
+share/texmf-dist/doc/latex/circle/circle.pdf
+share/texmf-dist/doc/latex/circle/circle.tex
