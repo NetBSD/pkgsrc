@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1626 2010/04/21 17:01:12 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1627 2010/04/21 19:22:46 roy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2065,3 +2065,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-dblfloatfix-doc version 1.0 [minskim 2010-04-21]
 	Removed time/sunbird successor mail/thunderbird [tnn 2010-04-21]
 	Removed mail/thunderbird2 successor mail/thunderbird [tnn 2010-04-21]
+	Updated net/parpd to 1.5 [roy 2010-04-21]
