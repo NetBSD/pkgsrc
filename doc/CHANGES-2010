@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1622 2010/04/21 05:58:07 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1623 2010/04/21 05:59:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2059,3 +2059,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-circle-doc version 2009 [minskim 2010-04-21]
 	Updated wm/windowmaker to 0.92.0nb11 [wiz 2010-04-21]
 	Updated graphics/clutter to 1.2.6 [obache 2010-04-21]
+	Updated print/tex-koma-script to 3.05 [minskim 2010-04-21]
