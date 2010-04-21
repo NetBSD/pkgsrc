@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.370 2010/04/21 05:31:08 minskim Exp $
+# $NetBSD: Makefile,v 1.371 2010/04/21 05:40:29 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -202,6 +202,8 @@ SUBDIR+=	tex-chbibref-doc
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-chngcntr
 SUBDIR+=	tex-chngcntr-doc
+SUBDIR+=	tex-circle
+SUBDIR+=	tex-circle-doc
 SUBDIR+=	tex-cite
 SUBDIR+=	tex-cite-doc
 SUBDIR+=	tex-collection-basic
