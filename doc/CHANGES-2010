@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1619 2010/04/21 05:35:21 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1620 2010/04/21 05:40:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2055,3 +2055,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-changepage version 1.0c [minskim 2010-04-21]
 	Added print/tex-changepage-doc version 1.0c [minskim 2010-04-21]
 	Updated sysutils/ruby-quota to 0.5.1nb9 [taca 2010-04-21]
+	Added print/tex-circle version 2009 [minskim 2010-04-21]
+	Added print/tex-circle-doc version 2009 [minskim 2010-04-21]
