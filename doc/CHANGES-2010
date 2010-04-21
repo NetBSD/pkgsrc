@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1625 2010/04/21 06:18:32 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1626 2010/04/21 17:01:12 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2063,3 +2063,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/py-babel to 0.9.5 [obache 2010-04-21]
 	Added print/tex-dblfloatfix version 1.0 [minskim 2010-04-21]
 	Added print/tex-dblfloatfix-doc version 1.0 [minskim 2010-04-21]
+	Removed time/sunbird successor mail/thunderbird [tnn 2010-04-21]
+	Removed mail/thunderbird2 successor mail/thunderbird [tnn 2010-04-21]
