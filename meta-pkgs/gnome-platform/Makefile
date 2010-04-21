@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/12/20 11:12:58 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2010/04/21 16:50:21 jmmv Exp $
 
 DISTNAME=	gnome-platform-2.28.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -10,6 +10,11 @@ COMMENT=	Meta-package for core platform libraries of the GNOME desktop
 
 META_PACKAGE=	yes
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-platform
+PKG_SUPPORTED_OPTIONS=	fam
+
+.include "../../mk/bsd.options.mk"
+
 # see http://ftp.gnome.org/pub/GNOME/platform/2.28/2.28.1/sources/
 
 DEPENDS+=	GConf>=2.28.0:../../devel/GConf
@@ -18,6 +23,9 @@ DEPENDS+=	at-spi>=1.28.1:../../devel/at-spi
 DEPENDS+=	atk>=1.28.0:../../devel/atk
 DEPENDS+=	libaudiofile>=0.2.6:../../audio/libaudiofile
 DEPENDS+=	esound>=0.2.41:../../audio/esound
+.if !empty(PKG_OPTIONS:Mfam)
+DEPENDS+=	gio-fam>=2.22.3:../../sysutils/gio-fam  # This is part of glib2.
+.endif
 DEPENDS+=	glib2>=2.22.3:../../devel/glib2
 DEPENDS+=	gnome-mime-data>=2.18.0:../../databases/gnome-mime-data
 DEPENDS+=	gnome-vfs>=2.24.2:../../sysutils/gnome-vfs
