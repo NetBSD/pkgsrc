@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/03/21 14:41:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2010/04/21 06:30:05 spz Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -310,6 +310,7 @@ share/mysql-test/include/no_running_event_scheduler.inc
 share/mysql-test/include/no_running_events.inc
 share/mysql-test/include/no_valgrind_without_big.inc
 share/mysql-test/include/not_as_root.inc
+share/mysql-test/include/not_binlog_format_row.inc
 share/mysql-test/include/not_embedded.inc
 share/mysql-test/include/not_ndb.inc
 share/mysql-test/include/not_ndb_default.inc
@@ -460,6 +461,7 @@ share/mysql-test/r/binary.result
 share/mysql-test/r/binlog_tx_isolation.result
 share/mysql-test/r/bool.result
 share/mysql-test/r/bootstrap.result
+share/mysql-test/r/bug39022.result
 share/mysql-test/r/bug46080.result
 share/mysql-test/r/bug46760.result
 share/mysql-test/r/bug47671.result
@@ -803,6 +805,7 @@ share/mysql-test/r/named_pipe.result
 share/mysql-test/r/ndb_default_cluster.require
 share/mysql-test/r/negation_elimination.result
 share/mysql-test/r/no-threads.result
+share/mysql-test/r/no_binlog.result
 share/mysql-test/r/not_embedded.require
 share/mysql-test/r/not_embedded_server.result
 share/mysql-test/r/not_ndb.require
@@ -837,6 +840,7 @@ share/mysql-test/r/partition_bug18198.result
 share/mysql-test/r/partition_charset.result
 share/mysql-test/r/partition_csv.result
 share/mysql-test/r/partition_datatype.result
+share/mysql-test/r/partition_debug_sync.result
 share/mysql-test/r/partition_disabled.result
 share/mysql-test/r/partition_error.result
 share/mysql-test/r/partition_federated.result
@@ -1004,10 +1008,10 @@ share/mysql-test/r/user_limits.result
 share/mysql-test/r/user_var-binlog.result
 share/mysql-test/r/user_var.result
 share/mysql-test/r/varbinary.result
-share/mysql-test/r/variables+c.result
 share/mysql-test/r/variables-big.result
 share/mysql-test/r/variables-notembedded.result
 share/mysql-test/r/variables.result
+share/mysql-test/r/variables_community.result
 share/mysql-test/r/variables_debug.result
 share/mysql-test/r/view.result
 share/mysql-test/r/view_grant.result
@@ -1043,6 +1047,7 @@ share/mysql-test/std_data/bug47012.ARM
 share/mysql-test/std_data/bug47012.ARZ
 share/mysql-test/std_data/bug47012.frm
 share/mysql-test/std_data/bug47142_master-bin.000001
+share/mysql-test/std_data/bug48449.frm
 share/mysql-test/std_data/cacert.pem
 share/mysql-test/std_data/charset_utf8.txt
 share/mysql-test/std_data/client-cert.pem
@@ -2607,6 +2612,7 @@ share/mysql-test/suite/rpl/r/rpl_slave_load_remove_tmpfile.result
 share/mysql-test/suite/rpl/r/rpl_slave_load_tmpdir_not_exist.result
 share/mysql-test/suite/rpl/r/rpl_slave_skip.result
 share/mysql-test/suite/rpl/r/rpl_slave_status.result
+share/mysql-test/suite/rpl/r/rpl_slow_query_log.result
 share/mysql-test/suite/rpl/r/rpl_sp.result
 share/mysql-test/suite/rpl/r/rpl_sp004.result
 share/mysql-test/suite/rpl/r/rpl_sp_effects.result
@@ -2930,6 +2936,8 @@ share/mysql-test/suite/rpl/t/rpl_slave_load_tmpdir_not_exist-slave.opt
 share/mysql-test/suite/rpl/t/rpl_slave_load_tmpdir_not_exist.test
 share/mysql-test/suite/rpl/t/rpl_slave_skip.test
 share/mysql-test/suite/rpl/t/rpl_slave_status.test
+share/mysql-test/suite/rpl/t/rpl_slow_query_log-slave.opt
+share/mysql-test/suite/rpl/t/rpl_slow_query_log.test
 share/mysql-test/suite/rpl/t/rpl_sp-master.opt
 share/mysql-test/suite/rpl/t/rpl_sp-slave.opt
 share/mysql-test/suite/rpl/t/rpl_sp.test
@@ -3148,6 +3156,7 @@ share/mysql-test/t/bigint.test
 share/mysql-test/t/binary.test
 share/mysql-test/t/bool.test
 share/mysql-test/t/bootstrap.test
+share/mysql-test/t/bug39022.test
 share/mysql-test/t/bug46080-master.opt
 share/mysql-test/t/bug46080.test
 share/mysql-test/t/bug46760-master.opt
@@ -3507,6 +3516,7 @@ share/mysql-test/t/named_pipe.test
 share/mysql-test/t/negation_elimination.test
 share/mysql-test/t/no-threads-master.opt
 share/mysql-test/t/no-threads.test
+share/mysql-test/t/no_binlog.test
 share/mysql-test/t/not_embedded_server-master.opt
 share/mysql-test/t/not_embedded_server.test
 share/mysql-test/t/not_partition.test
@@ -3535,6 +3545,7 @@ share/mysql-test/t/partition_bug18198.test
 share/mysql-test/t/partition_charset.test
 share/mysql-test/t/partition_csv.test
 share/mysql-test/t/partition_datatype.test
+share/mysql-test/t/partition_debug_sync.test
 share/mysql-test/t/partition_disabled-master.opt
 share/mysql-test/t/partition_disabled.test
 share/mysql-test/t/partition_error.test
@@ -3723,11 +3734,11 @@ share/mysql-test/t/user_limits.test
 share/mysql-test/t/user_var-binlog.test
 share/mysql-test/t/user_var.test
 share/mysql-test/t/varbinary.test
-share/mysql-test/t/variables+c.test
 share/mysql-test/t/variables-big.test
 share/mysql-test/t/variables-notembedded-master.opt
 share/mysql-test/t/variables-notembedded.test
 share/mysql-test/t/variables.test
+share/mysql-test/t/variables_community.test
 share/mysql-test/t/variables_debug.test
 share/mysql-test/t/view.test
 share/mysql-test/t/view_grant.test
