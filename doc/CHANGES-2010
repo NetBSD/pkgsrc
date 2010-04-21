@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1623 2010/04/21 05:59:07 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1624 2010/04/21 06:02:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2060,3 +2060,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated wm/windowmaker to 0.92.0nb11 [wiz 2010-04-21]
 	Updated graphics/clutter to 1.2.6 [obache 2010-04-21]
 	Updated print/tex-koma-script to 3.05 [minskim 2010-04-21]
+	Updated devel/py-babel to 0.9.5 [obache 2010-04-21]
