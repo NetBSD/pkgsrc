@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1624 2010/04/21 06:02:04 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1625 2010/04/21 06:18:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2061,3 +2061,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.2.6 [obache 2010-04-21]
 	Updated print/tex-koma-script to 3.05 [minskim 2010-04-21]
 	Updated devel/py-babel to 0.9.5 [obache 2010-04-21]
+	Added print/tex-dblfloatfix version 1.0 [minskim 2010-04-21]
+	Added print/tex-dblfloatfix-doc version 1.0 [minskim 2010-04-21]
