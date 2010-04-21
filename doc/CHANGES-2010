@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1618 2010/04/21 05:31:08 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1619 2010/04/21 05:35:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2054,3 +2054,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100420 [taca 2010-04-20]
 	Added print/tex-changepage version 1.0c [minskim 2010-04-21]
 	Added print/tex-changepage-doc version 1.0c [minskim 2010-04-21]
+	Updated sysutils/ruby-quota to 0.5.1nb9 [taca 2010-04-21]
