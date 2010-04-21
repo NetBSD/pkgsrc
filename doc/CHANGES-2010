@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1617 2010/04/20 23:21:20 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1618 2010/04/21 05:31:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2052,3 +2052,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-client to 5.1.45 [taca 2010-04-20]
 	Updated databases/mysql51-server to 5.1.45 [taca 2010-04-20]
 	Updated www/typolight28-translations to 20100420 [taca 2010-04-20]
+	Added print/tex-changepage version 1.0c [minskim 2010-04-21]
+	Added print/tex-changepage-doc version 1.0c [minskim 2010-04-21]
