@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1633 2010/04/22 04:27:23 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1634 2010/04/22 15:01:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2072,3 +2072,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-App-cpanminus to 0.9936 [seb 2010-04-22]
 	Updated www/p5-Starman to 0.2004 [seb 2010-04-22]
 	Updated www/p5-WWW-Shorten to 3.00 [seb 2010-04-22]
+	Updated sysutils/ruby-quota to 0.5.1nb10 [taca 2010-04-22]
