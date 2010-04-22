@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/02/16 12:16:23 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2010/04/22 07:39:54 kefren Exp $
 #
 
 DISTNAME=	f-spot-0.6.1.5
@@ -31,6 +31,13 @@ PKGCONFIG_OVERRIDE+=	f-spot.pc.in
 REPLACE_BASH+=	icon-theme-installer
 REPLACE_BASH+=	src/f-spot.in
 REPLACE_BASH+=	tools/f-spot-import
+
+SUBST_CLASSES+=			fix-x11
+SUBST_STAGE.fix-x11=		post-patch
+SUBST_MESSAGE.fix-x11=		Fixing libX11 references
+SUBST_FILES.fix-x11=		src/FSpot.Utils.dll.config
+SUBST_FILES.fix-x11+=		src/f-spot.exe.config.in
+SUBST_SED.fix-x11=		-e 's,libX11.so.6,${X11BASE}/lib/libX11.so,'
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
