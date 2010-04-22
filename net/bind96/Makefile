@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/01/20 01:01:15 taca Exp $
+# $NetBSD: Makefile,v 1.15 2010/04/22 20:22:26 gls Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/ \
 		http://ftp.belnet.be/pub/mirror/ftp.isc.org/isc/bind9/${BIND_VERSION}/
@@ -39,6 +40,9 @@ CONFIGURE_ARGS+=        --disable-atomic
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
 CONFIGURE_ARGS+=	--disable-threads
+.endif
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=       --disable-kqueue
 .endif
 
 PKG_GROUPS_VARS+=	BIND_GROUP
