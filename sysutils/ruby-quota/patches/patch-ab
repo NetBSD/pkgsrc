@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2010/04/21 05:34:31 taca Exp $
+$NetBSD: patch-ab,v 1.8 2010/04/22 15:01:07 taca Exp $
 
 --- quota.c.orig	2002-03-30 14:59:12.000000000 +0000
 +++ quota.c
@@ -87,7 +87,18 @@ $NetBSD: patch-ab,v 1.7 2010/04/21 05:34:31 taca Exp $
    switch( cmd ){
    case Q_QUOTAON:
    case Q_QUOTAOFF:
-@@ -235,7 +258,9 @@ rb_diskquota_get(VALUE dqb, struct dqblk
+@@ -230,12 +253,20 @@ rb_diskquota_get(VALUE dqb, struct dqblk
+ {
+   VALUE v;
+ 
++#if defined(USE_LINUX_QUOTA) && \
++	(defined(USE_LINUX_QUOTA_24) || defined(USE_LINUX_QUOTA_26))
++#define GetMember(mem) \
++        ((v = rb_struct_getmember(dqb,rb_intern(mem))) == Qnil) ? 0 : (NUM2ULL(v))
++#else
+ #define GetMember(mem) \
+         ((v = rb_struct_getmember(dqb,rb_intern(mem))) == Qnil) ? 0 : (NUM2UINT(v))
++#endif
  #if defined(USE_LINUX_QUOTA)
    c_dqb->dqb_bhardlimit = GetMember("bhardlimit");
    c_dqb->dqb_bsoftlimit = GetMember("bsoftlimit");
@@ -98,16 +109,41 @@ $NetBSD: patch-ab,v 1.7 2010/04/21 05:34:31 taca Exp $
    c_dqb->dqb_curblocks  = GetMember("curblocks");
  #endif
    c_dqb->dqb_ihardlimit = GetMember("ihardlimit");
-@@ -274,7 +299,7 @@ rb_diskquota_new(struct dqblk *c_dqb)
+@@ -271,20 +302,29 @@ rb_diskquota_new(struct dqblk *c_dqb)
+   VALUE dqb;
+ 
+ #if defined(USE_LINUX_QUOTA)
++#if defined(USE_LINUX_QUOTA_24) || defined(USE_LINUX_QUOTA_26)
++  dqb = rb_struct_new(rb_sDiskQuota,
++		      ULL2NUM(c_dqb->dqb_bhardlimit),
++		      ULL2NUM(c_dqb->dqb_bsoftlimit),
++		      ULL2NUM(c_dqb->dqb_curspace),
++		      ULL2NUM(c_dqb->dqb_ihardlimit),
++		      ULL2NUM(c_dqb->dqb_isoftlimit),
++		      ULL2NUM(c_dqb->dqb_curinodes),
++		      ULL2NUM(c_dqb->dqb_btime),
++		      ULL2NUM(c_dqb->dqb_itime),
++		      0);
++#else
    dqb = rb_struct_new(rb_sDiskQuota,
  		      UINT2NUM(c_dqb->dqb_bhardlimit),
  		      UINT2NUM(c_dqb->dqb_bsoftlimit),
 -#if defined(USE_LINUX_QUOTA_24)
-+#if defined(USE_LINUX_QUOTA_24) || defined(USE_LINUX_QUOTA_26)
- 		      UINT2NUM(c_dqb->dqb_curspace),
- #else
+-		      UINT2NUM(c_dqb->dqb_curspace),
+-#else
  		      UINT2NUM(c_dqb->dqb_curblocks),
-@@ -442,7 +467,7 @@ Init_quota()
+-#endif
+ 		      UINT2NUM(c_dqb->dqb_ihardlimit),
+ 		      UINT2NUM(c_dqb->dqb_isoftlimit),
+ 		      UINT2NUM(c_dqb->dqb_curinodes),
+ 		      UINT2NUM(c_dqb->dqb_btime),
+ 		      UINT2NUM(c_dqb->dqb_itime),
+ 		      0);
++#endif
+ #elif defined(USE_BSD_QUOTA)
+   dqb = rb_struct_new(rb_sDiskQuota,
+ 		      UINT2NUM(c_dqb->dqb_bhardlimit),
+@@ -442,7 +482,7 @@ Init_quota()
  				   "curinodes",
  				   "btimelimit",
  				   "itimelimit",
@@ -116,7 +152,7 @@ $NetBSD: patch-ab,v 1.7 2010/04/21 05:34:31 taca Exp $
  
    /* for compatibility */
  #define DQ_ALIAS(a,b) rb_alias(rb_sDiskQuota,rb_intern(#a),rb_intern(#b))
-@@ -454,7 +479,7 @@ Init_quota()
+@@ -454,7 +494,7 @@ Init_quota()
    DQ_ALIAS(fsoftlimit=, isoftlimit=);
    DQ_ALIAS(curfiles=,   curinodes=);
    DQ_ALIAS(ftimelimit=, itimelimit=);
