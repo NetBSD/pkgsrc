@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/04/22 16:58:23 tnn Exp $
+
+To change the language in Seamonkey, navigate to about:config and edit
+the general.useragent.locale property. 
+Alternatively you can install the "Quick Locale Switcher" addon from:
+ttps://addons.mozilla.org/en-US/seamonkey/addon/1333 .
+===========================================================================
