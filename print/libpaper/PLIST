@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/04 20:10:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/22 11:58:51 jmmv Exp $
 bin/paperconf
 include/paper.h
 lib/libpaper.la
@@ -21,3 +21,4 @@ man/man3/systempapersizefile.3
 man/man5/papersize.5
 man/man8/paperconfig.8
 sbin/paperconfig
+share/examples/libpaper/papersize
