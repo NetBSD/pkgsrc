@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/03/01 21:51:22 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/22 11:58:51 jmmv Exp $
 #
 
 DISTNAME=	libpaper_1.1.23
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libp/libpaper/}
 
@@ -17,8 +18,19 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-FILES_SUBST+=		PAPERSIZE=${PAPERSIZE}
+
+EGDIR=			${PREFIX}/share/examples/libpaper
+CONF_FILES=		${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
 
 .include "../../devel/libgetopt/buildlink3.mk"
+
+post-build:
+	@${ECHO} 'Creating default papersize configuration file'
+	@PAPERCONF=${WRKDIR}/papersize ${SH} ${WRKSRC}/src/paperconfig \
+	    -p ${PAPERSIZE}
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/papersize ${DESTDIR}${EGDIR}/papersize
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,0 @@
-#!/bin/sh
-# $NetBSD: INSTALL,v 1.1.1.1 2007/09/04 20:10:12 drochner Exp $
-
-case ${STAGE} in
-	POST-INSTALL)
-		${PREFIX}/sbin/paperconfig -p @PAPERSIZE@
-	;;
-esac
