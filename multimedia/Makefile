@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2010/04/10 04:13:47 markd Exp $
+# $NetBSD: Makefile,v 1.162 2010/04/22 07:03:57 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -138,6 +138,8 @@ SUBDIR+=	xfce4-mpc-plugin
 SUBDIR+=	xfmedia
 SUBDIR+=	xine-lib
 SUBDIR+=	xine-ui
+SUBDIR+=	xine-v4l
+SUBDIR+=	xine-v4l2
 SUBDIR+=	xvid4conf
 SUBDIR+=	xvidcore
 
