@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/03/26 17:54:09 zafer Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/22 12:10:50 reed Exp $
 #
 
 DISTNAME=	desktop-gnome-0.3
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 
 MAINTAINER=	netbsd-desktop@NetBSD.org
 COMMENT=	Software stack for the NetBSD Desktop Project
-HOMEPAGE=	http://wiki.netbsd.se/Desktop_Project/
+HOMEPAGE=	http://wiki.netbsd.se/Desktop_Project
 
 META_PACKAGE=	yes
 
