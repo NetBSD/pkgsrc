@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1632 2010/04/22 03:15:41 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1633 2010/04/22 04:27:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2071,3 +2071,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libgsf-gnome to 1.14.18 [dsainty 2010-04-22]
 	Updated devel/p5-App-cpanminus to 0.9936 [seb 2010-04-22]
 	Updated www/p5-Starman to 0.2004 [seb 2010-04-22]
+	Updated www/p5-WWW-Shorten to 3.00 [seb 2010-04-22]
