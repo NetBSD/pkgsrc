@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/04/07 08:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/22 15:19:14 taca Exp $
 
-DISTNAME=	Net_Sieve-1.2.0
+DISTNAME=	Net_Sieve-1.2.1
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
