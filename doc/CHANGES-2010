@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1635 2010/04/22 15:19:56 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1636 2010/04/22 17:05:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2074,3 +2074,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-WWW-Shorten to 3.00 [seb 2010-04-22]
 	Updated sysutils/ruby-quota to 0.5.1nb10 [taca 2010-04-22]
 	Updated net/pear-Net_Sieve to 1.2.1 [taca 2010-04-22]
+	Added www/firefox-l10n version 3.6.3 [tnn 2010-04-22]
+	Added www/seamonkey-l10n version 2.0.4 [tnn 2010-04-22]
+	Added mail/thunderbird-l10n version 3.0.4 [tnn 2010-04-22]
