@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2009/09/14 08:56:09 tnn Exp $
+$NetBSD: patch-ag,v 1.1.1.1.6.1 2010/04/22 17:53:38 tron Exp $
 
---- include/npupp.h.orig	2009-09-14 09:57:07.000000000 +0200
+--- include/npupp.h.orig	2010-04-21 15:52:56.000000000 +0000
 +++ include/npupp.h
-@@ -0,0 +1,1292 @@
+@@ -0,0 +1,1298 @@
 +/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
 +/* ***** BEGIN LICENSE BLOCK *****
 + * Version: NPL 1.1/GPL 2.0/LGPL 2.1
@@ -59,11 +59,15 @@ $NetBSD: patch-ag,v 1.1.1.1 2009/09/14 08:56:09 tnn Exp $
 +#define GENERATINGCFM 0
 +#endif
 +
++#include "nptypes.h"
++#define uint16 uint16_t
++#define int16 int16_t
++#define uint32 uint32_t
++#define int32  int32_t
++
 +#ifndef _NPAPI_H_
 +#include "npapi.h"
 +#endif
-+
-+#include "jri.h"
 +
 +/******************************************************************************************
 +   plug-in function table macros
@@ -935,6 +939,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2009/09/14 08:56:09 tnn Exp $
 +
 +#endif
 +
++#if 0
 +
 +/* NPN_GetJavaEnv */
 +
@@ -987,6 +992,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2009/09/14 08:56:09 tnn Exp $
 +
 +#endif
 +
++#endif /* if 0 */
 +
 +/* NPN_InvalidateRect */
 +
@@ -1094,7 +1100,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2009/09/14 08:56:09 tnn Exp $
 +    NPP_PrintUPP print;
 +    NPP_HandleEventUPP event;
 +    NPP_URLNotifyUPP urlnotify;
-+    JRIGlobalRef javaClass;
++    void* javaClass;
 +    NPP_GetValueUPP getvalue;
 +    NPP_SetValueUPP setvalue;
 +} NPPluginFuncs;
@@ -1114,8 +1120,8 @@ $NetBSD: patch-ag,v 1.1.1.1 2009/09/14 08:56:09 tnn Exp $
 +    NPN_MemFreeUPP memfree;
 +    NPN_MemFlushUPP memflush;
 +    NPN_ReloadPluginsUPP reloadplugins;
-+    NPN_GetJavaEnvUPP getJavaEnv;
-+    NPN_GetJavaPeerUPP getJavaPeer;
++    void* getJavaEnv;
++    void* getJavaPeer;
 +    NPN_GetURLNotifyUPP geturlnotify;
 +    NPN_PostURLNotifyUPP posturlnotify;
 +    NPN_GetValueUPP getvalue;
