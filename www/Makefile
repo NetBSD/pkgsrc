@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.719 2010/04/16 04:08:27 seb Exp $
+# $NetBSD: Makefile,v 1.720 2010/04/22 17:05:17 tnn Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -122,6 +122,7 @@ SUBDIR+=	firefox-bin-acroread7
 SUBDIR+=	firefox-bin-flash
 SUBDIR+=	firefox-bin-java
 SUBDIR+=	firefox-bin-realplayer
+SUBDIR+=	firefox-l10n
 SUBDIR+=	gallery
 SUBDIR+=	gallery2
 SUBDIR+=	galway
@@ -513,6 +514,7 @@ SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-bin
 SUBDIR+=	seamonkey-bin-flash
 SUBDIR+=	seamonkey-bin-java
+SUBDIR+=	seamonkey-l10n
 SUBDIR+=	serf
 SUBDIR+=	sitecopy
 SUBDIR+=	skipstone
