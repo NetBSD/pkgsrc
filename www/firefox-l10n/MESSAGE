@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/04/22 16:57:53 tnn Exp $
+
+To change the language in Firefox, navigate to about:config and edit
+the general.useragent.locale property. 
+Alternatively you can install the "Quick Locale Switcher" addon from:
+http://addons.mozilla.org/en-US/firefox/addon/1333 .
+===========================================================================
