@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/14 08:56:08 tnn Exp $
+$NetBSD: distinfo,v 1.1.1.1.6.1 2010/04/22 17:53:38 tron Exp $
 
 SHA1 (mplayerplug-in-3.55.tar.gz) = 69726d4e16523b1a39c284efee081c31b0ea7f7f
 RMD160 (mplayerplug-in-3.55.tar.gz) = e01224b14883a93211745be0a329a3f524f39d8c
 Size (mplayerplug-in-3.55.tar.gz) = 281845 bytes
-SHA1 (patch-aa) = 2a6724f536ad8a08c7766dfb269458df12bb3603
-SHA1 (patch-ab) = 950bec845ef3120e8b63a2343e79d5ded99a8bfa
-SHA1 (patch-ad) = 06699a71bb0f8da969d11a812a544e3aefa4d9a7
+SHA1 (patch-aa) = 76af562fe428b474554218cc6763e8832f591acd
 SHA1 (patch-ae) = 885eafce6747ed1f682eb78a6e15a473806924e3
 SHA1 (patch-af) = 812a4921c4a467fbf6163292f04ef5888ef6e8ed
-SHA1 (patch-ag) = 0af0bcb4bc722e1be290e1b4ef13c45f36bb77d0
+SHA1 (patch-ag) = f4b58bce0e3128e4cb8c7466ad33b97a1eeba2fe
