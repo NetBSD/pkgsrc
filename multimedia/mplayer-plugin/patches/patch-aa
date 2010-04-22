@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/09/14 08:56:09 tnn Exp $
+$NetBSD: patch-aa,v 1.1.1.1.6.1 2010/04/22 17:53:38 tron Exp $
 
---- Source/plugin.cpp.orig	2004-11-17 02:27:11.000000000 +0100
-+++ Source/plugin.cpp	2004-11-17 02:27:25.000000000 +0100
-@@ -34,6 +34,7 @@
+--- Source/plugin.h.orig	2008-01-03 00:20:34.000000000 +0000
++++ Source/plugin.h
+@@ -35,6 +35,10 @@
   *
   * ***** END LICENSE BLOCK ***** */
  
++#include <stdlib.h>
 +#include <string.h>
- #include "plugin.h"
- #include "nsIServiceManager.h"
- #include "nsIMemory.h"
++#include <assert.h>
++
+ #ifndef __PLUGIN_H__
+ #define __PLUGIN_H__
+ #ifdef BSD
