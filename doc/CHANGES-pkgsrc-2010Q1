@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.8 2010/04/21 06:32:13 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.9 2010/04/22 18:00:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -28,3 +28,7 @@ print/abcm2ps: security update
 Pullup ticket #3086 - requested by taca
 databases/mysql51-client: security update
 databases/mysql51-server: security update
+Pullup ticket #3088 - requested by tnn
+multimedia/mplayer-plugin: build fix
+Pullup ticket #3089 - requested by joerg
+pkgtools/pkg_install: bootstrap fix
