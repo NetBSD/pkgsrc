@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/04/18 05:51:00 seb Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/22 03:15:13 seb Exp $
 
-DISTNAME=	Starman-0.2002
+DISTNAME=	Starman-0.2004
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	www perl5
@@ -23,7 +23,7 @@ DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Parser-XS-[0-9]*:../../www/p5-HTTP-Parser-XS
 DEPENDS+=	p5-Net-Server>=0.91:../../net/p5-Net-Server
-DEPENDS+=	p5-Plack>=0.9930:../../www/p5-Plack
+DEPENDS+=	p5-Plack>=0.9931:../../www/p5-Plack
 DEPENDS+=	p5-parent-[0-9]*:../../devel/p5-parent
 
 .include "../../lang/perl5/module.mk"

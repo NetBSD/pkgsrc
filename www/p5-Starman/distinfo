@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/04/18 05:51:00 seb Exp $
+$NetBSD: distinfo,v 1.5 2010/04/22 03:15:13 seb Exp $
 
-SHA1 (Starman-0.2002.tar.gz) = 9419f8299e0eb785435d5716208121fc31c30ca9
-RMD160 (Starman-0.2002.tar.gz) = d374826b689aad26494c066754a6a8a18e3570fe
-Size (Starman-0.2002.tar.gz) = 35734 bytes
+SHA1 (Starman-0.2004.tar.gz) = 77272a3eb0c6b7424bd30e8e2cb2a2cdd893253a
+RMD160 (Starman-0.2004.tar.gz) = 0424cac1eabe025f20427e4931cdb90294c302ba
+Size (Starman-0.2004.tar.gz) = 35819 bytes
