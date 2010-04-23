@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1642 2010/04/23 09:02:31 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1643 2010/04/23 14:08:52 he Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2086,3 +2086,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/bind96 to 9.6.1pl3nb1 [gls 2010-04-23]
 	Updated sysutils/fakeroot to 1.5.10 [obache 2010-04-23]
 	Updated databases/slony1 to 2.0.3 [adam 2010-04-23]
+	Updated lang/parrot to 2.3.0 [he 2010-04-23]
