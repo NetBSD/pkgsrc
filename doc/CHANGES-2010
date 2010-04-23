@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1636 2010/04/22 17:05:16 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1637 2010/04/23 03:05:03 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/firefox-l10n version 3.6.3 [tnn 2010-04-22]
 	Added www/seamonkey-l10n version 2.0.4 [tnn 2010-04-22]
 	Added mail/thunderbird-l10n version 3.0.4 [tnn 2010-04-22]
+	Updated devel/p5-Devel-NYTProf to 3.11 [seb 2010-04-23]
