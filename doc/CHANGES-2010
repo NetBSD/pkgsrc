@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1645 2010/04/23 21:29:49 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1646 2010/04/23 21:32:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2089,3 +2089,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/parrot to 2.3.0 [he 2010-04-23]
 	Updated databases/postgresql82-client to 8.2.16nb1 [adam 2010-04-23]
 	Updated net/yaz to 4.0.3 [wiz 2010-04-23]
+	Updated devel/yasm to 1.0.0 [wiz 2010-04-23]
