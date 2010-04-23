@@ -1,13 +1,11 @@
-$NetBSD: patch-ak,v 1.2 2010/02/18 07:59:38 he Exp $
+$NetBSD: patch-ak,v 1.3 2010/04/23 14:08:17 he Exp $
 
 Prevent problem exposed by "library cloning", where the dlopen()-returned
 handle is copied, causing dlclose() to be called twice with the same handle,
 which in turn triggers a warning from ld.elf_so on NetBSD.  Ref.
 http://trac.parrot.org/parrot/ticket/1340.
 
-Index: config/gen/platform/generic/dl.c
-===================================================================
---- config/gen/platform/generic/dl.c.orig	2009-12-12 01:16:58.000000000 +0100
+--- config/gen/platform/generic/dl.c.orig	2010-03-22 13:39:23.000000000 +0100
 +++ config/gen/platform/generic/dl.c
 @@ -22,11 +22,69 @@ Dynlib stuff
  */
@@ -20,6 +18,7 @@ Index: config/gen/platform/generic/dl.c
  
  #define PARROT_DLOPEN_FLAGS RTLD_LAZY
  
++
 +#ifdef PARROT_HAS_HEADER_DLFCN
 +
 +struct handle_entry {
@@ -75,24 +74,25 @@ Index: config/gen/platform/generic/dl.c
 +}
 +#endif /* PARROT_HAS_HEADER_DLFCN */
 +
-+
  /*
  
- =item C<void * Parrot_dlopen(const char *filename)>
-@@ -39,7 +97,11 @@ void *
- Parrot_dlopen(const char *filename)
+ =item C<void * Parrot_dlopen(const char *filename, Parrot_dlopen_flags flags)>
+@@ -39,8 +97,12 @@ void *
+ Parrot_dlopen(const char *filename, Parrot_dlopen_flags flags)
  {
  #ifdef PARROT_HAS_HEADER_DLFCN
--    return dlopen(filename, PARROT_DLOPEN_FLAGS);
+-    return dlopen(filename, PARROT_DLOPEN_FLAGS
+-                    | ((flags & Parrot_dlopen_global_FLAG) ? RTLD_GLOBAL : 0));
 +    void *h;
 +
-+    h = dlopen(filename, PARROT_DLOPEN_FLAGS);
++    h = dlopen(filename, PARROT_DLOPEN_FLAGS
++	       | ((flags & Parrot_dlopen_global_FLAG) ? RTLD_GLOBAL : 0));
 +    push_handle_entry(h);
 +    return h;
  #else
      return 0;
  #endif
-@@ -93,10 +155,15 @@ int
+@@ -94,10 +156,15 @@ int
  Parrot_dlclose(void *handle)
  {
  #ifdef PARROT_HAS_HEADER_DLFCN
