@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1637 2010/04/23 03:05:03 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1638 2010/04/23 03:20:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2078,3 +2078,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/seamonkey-l10n version 2.0.4 [tnn 2010-04-22]
 	Added mail/thunderbird-l10n version 3.0.4 [tnn 2010-04-22]
 	Updated devel/p5-Devel-NYTProf to 3.11 [seb 2010-04-23]
+	Added print/tex-endnotes version 2009 [minskim 2010-04-23]
+	Added print/tex-endnotes-doc version 2009 [minskim 2010-04-23]
