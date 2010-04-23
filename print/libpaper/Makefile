@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/04/23 11:33:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/23 12:45:01 jmmv Exp $
 #
 
 DISTNAME=	libpaper_1.1.23
@@ -27,8 +27,8 @@ BUILD_DEFS=		PAPERSIZE
 .include "../../devel/libgetopt/buildlink3.mk"
 
 post-build:
-	PAPERCONF=${WRKDIR}/papersize ${SH} ${WRKSRC}/src/paperconfig \
-	    -p ${PAPERSIZE}
+	PAPERCONF=${WRKDIR}/papersize PATH=${WRKSRC}/src:$${PATH} ${SH} \
+	    ${WRKSRC}/src/paperconfig -p ${PAPERSIZE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
