@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1644 2010/04/23 15:43:18 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1645 2010/04/23 21:29:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2088,3 +2088,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/slony1 to 2.0.3 [adam 2010-04-23]
 	Updated lang/parrot to 2.3.0 [he 2010-04-23]
 	Updated databases/postgresql82-client to 8.2.16nb1 [adam 2010-04-23]
+	Updated net/yaz to 4.0.3 [wiz 2010-04-23]
