@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.18 2009/12/02 12:41:25 wiz Exp $
+$NetBSD: distinfo,v 1.19 2010/04/23 21:45:19 wiz Exp $
 
-SHA1 (libvorbis-1.2.3.tar.gz) = a93251aa5e4f142db4fa6433de80797f80960fac
-RMD160 (libvorbis-1.2.3.tar.gz) = e80ad7de3c2599e0d88994876407ac8fe3c9a0e7
-Size (libvorbis-1.2.3.tar.gz) = 1474492 bytes
-SHA1 (patch-aa) = bd1534e2f680d5621a7909fd0b197d9d8c52b91d
-SHA1 (patch-ab) = b253546a863893e96569d8afb5e626ffe5f226dc
+SHA1 (libvorbis-1.3.1.tar.gz) = 0874dd08699240b868b22979da4c95ae6325006b
+RMD160 (libvorbis-1.3.1.tar.gz) = 0ed122d628c3c0152ff2d245aaf5e7ac2667f0cc
+Size (libvorbis-1.3.1.tar.gz) = 1467164 bytes
