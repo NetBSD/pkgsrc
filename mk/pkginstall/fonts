@@ -1,4 +1,4 @@
-# $NetBSD: fonts,v 1.5 2007/07/12 19:41:46 jlam Exp $
+# $NetBSD: fonts,v 1.6 2010/04/23 12:47:14 jmmv Exp $
 #
 # Generate a +FONTS script that updates font databases for the package.
 #
@@ -31,6 +31,7 @@ GREP="@GREP@"
 MKFONTDIR="@MKFONTDIR@"
 PWD_CMD="@PWD_CMD@"
 RM="@RM@"
+RMDIR="@RMDIR@"
 SED="@SED@"
 SORT="@SORT@"
 TEST="@TEST@"
@@ -92,9 +93,17 @@ while read dir font_type; do
 	  #
 	  # Remove fonts databases if there are no fonts in the directory.
 	  # We filter out the encodings.dir, fonts.{dirs,scale}, and
-	  # Fontmap database files from the directory listing.
+	  # Fontmap database files from the directory listing.  Also remove
+	  # the directory if it turns out to be empty.
 	  #
-	  ${FIND} . -type f | ${GREP} -v "/encodings.dir" | ${GREP} -v "/fonts\.scale" | ${GREP} -v "/fonts\.dir" | ${GREP} -v "/Fontmap" >/dev/null || ${RM} -f fonts.dir fonts.scale Fontmap* encodings.dir > /dev/null
+	  if ${FIND} . -type f | ${GREP} -v "/encodings.dir" | ${GREP} -v "/fonts\.scale" | \
+	     ${GREP} -v "/fonts\.dir" | ${GREP} -v "/Fontmap" >/dev/null
+	  then
+	      : # Directory not empty; do nothing.
+	  else
+	      ${RM} -f fonts.dir fonts.scale Fontmap* encodings.dir
+	      ${RMDIR} -p $dir 2>/dev/null
+	  fi
 	)
 done
 
