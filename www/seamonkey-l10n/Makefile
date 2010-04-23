@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/22 16:58:23 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/23 14:48:35 tnn Exp $
 #
 
 SM_VER=		2.0.4
@@ -23,7 +23,7 @@ SM_LOCALES=		be ca cs de es-AR es-ES fr gl hu it		\
 			tr
 
 EXTENSIONS_DIR=		${PREFIX}/lib/seamonkey/extensions
-XPI_FILES=		${SM_LOCALES:C/^/seamonkey-${SM_VER}./:C/$$/.langpack.xpi/}
+XPI_FILES=		${SM_LOCALES:C/.*/seamonkey-${SM_VER}.&.langpack.xpi/}
 
 .include "../../devel/xulrunner/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
