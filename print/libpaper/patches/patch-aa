@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/09/04 20:10:12 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/23 11:31:57 jmmv Exp $
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=578886
 
 --- src/paperconfig.in.orig	2007-09-04 20:59:02.000000000 +0200
 +++ src/paperconfig.in
