@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1640 2010/04/23 04:52:59 gls Exp $
+$NetBSD: CHANGES-2010,v 1.1641 2010/04/23 09:00:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-autobox-Core to 1.2 [seb 2010-04-23]
 	Updated net/bind95 to 9.5.2pl2nb1 [gls 2010-04-23]
 	Updated net/bind96 to 9.6.1pl3nb1 [gls 2010-04-23]
+	Updated sysutils/fakeroot to 1.5.10 [obache 2010-04-23]
