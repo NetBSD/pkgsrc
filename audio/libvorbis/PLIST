@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/07/17 20:28:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/04/23 21:45:19 wiz Exp $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h
@@ -9,6 +9,7 @@ lib/pkgconfig/vorbis.pc
 lib/pkgconfig/vorbisenc.pc
 lib/pkgconfig/vorbisfile.pc
 share/aclocal/vorbis.m4
+share/doc/${PKGNAME}/doxygen-build.stamp
 share/doc/${PKGNAME}/eightphase.png
 share/doc/${PKGNAME}/evenlsp.png
 share/doc/${PKGNAME}/fish_xiph_org.png
