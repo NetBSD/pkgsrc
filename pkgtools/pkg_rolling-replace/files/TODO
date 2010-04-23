@@ -1,0 +1,2 @@
+* Add support for a package variable 'norebuild', which will cause
+  pkg_rolling-replace to exclude rebuilding that package.
