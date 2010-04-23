@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/22 11:58:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/23 11:33:06 jmmv Exp $
 #
 
 DISTNAME=	libpaper_1.1.23
@@ -22,11 +22,12 @@ USE_TOOLS+=		gmake
 EGDIR=			${PREFIX}/share/examples/libpaper
 CONF_FILES=		${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
 
+BUILD_DEFS=		PAPERSIZE
+
 .include "../../devel/libgetopt/buildlink3.mk"
 
 post-build:
-	@${ECHO} 'Creating default papersize configuration file'
-	@PAPERCONF=${WRKDIR}/papersize ${SH} ${WRKSRC}/src/paperconfig \
+	PAPERCONF=${WRKDIR}/papersize ${SH} ${WRKSRC}/src/paperconfig \
 	    -p ${PAPERSIZE}
 
 post-install:
