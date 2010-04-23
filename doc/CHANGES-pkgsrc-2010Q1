@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.9 2010/04/22 18:00:27 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.10 2010/04/23 09:08:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -32,3 +32,7 @@ Pullup ticket #3088 - requested by tnn
 multimedia/mplayer-plugin: build fix
 Pullup ticket #3089 - requested by joerg
 pkgtools/pkg_install: bootstrap fix
+Pullup ticket #3090 - requested by gls
+net/bind95: portability fix
+Pullup ticket #3091 - requested by gls
+net/bind96: portability fix
