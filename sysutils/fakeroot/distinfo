@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2006/01/13 18:26:04 wiz Exp $
+$NetBSD: distinfo,v 1.5 2010/04/23 09:00:15 obache Exp $
 
-SHA1 (fakeroot_1.5.6.tar.gz) = 8101d3eb63e9932e35d678234062421a50e6194b
-RMD160 (fakeroot_1.5.6.tar.gz) = 47a3ac29465c39b431300cc0fc7d851781de6342
-Size (fakeroot_1.5.6.tar.gz) = 980208 bytes
+SHA1 (fakeroot_1.5.10.tar.gz) = 2b5b90f812c0d99617936e49c740fdfdc5766220
+RMD160 (fakeroot_1.5.10.tar.gz) = ec22edd8025b57fceee4777d2bcb0d1024b54163
+Size (fakeroot_1.5.10.tar.gz) = 817885 bytes
 SHA1 (patch-aa) = 390eaa7976cd22383756541e1e3be9692b87c3bf
-SHA1 (patch-ab) = 5045f46ee3d77ee3e025ca29561b79ef011a23b1
+SHA1 (patch-ab) = 55d64e4565966a4fdc31ffb1f458b3b678022f38

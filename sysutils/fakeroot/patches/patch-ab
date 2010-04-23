@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2006/01/13 18:26:04 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2010/04/23 09:00:15 obache Exp $
 
---- configure.orig	2005-12-14 03:28:08.000000000 +0000
+--- configure.orig	2006-07-22 22:33:58.000000000 +0000
 +++ configure
-@@ -22602,34 +22602,34 @@ fi
+@@ -12712,34 +12712,34 @@ fi
  
  
  case $target_cpu:$target_os in
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.2 2006/01/13 18:26:04 wiz Exp $
  		{ echo "$as_me:$LINENO: WARNING: don't know where libc is for $target_os on
  			     $target_cpu, setting to /lib/libc.so" >&5
  echo "$as_me: WARNING: don't know where libc is for $target_os on
-@@ -22777,7 +22777,7 @@ echo "$as_me: error: no SUS compliant sh
+@@ -12896,7 +12896,7 @@ echo "$as_me: error: no SUS compliant sh
  fi
  
  case "$target_cpu:$target_os" in
@@ -55,4 +55,4 @@ $NetBSD: patch-ab,v 1.2 2006/01/13 18:26:04 wiz Exp $
 +	alpha*:linux*)
  
  
- 	echo "$as_me:$LINENO: checking if we need to do stat-struct conversion hackery" >&5
+ 	{ echo "$as_me:$LINENO: checking if we need to do stat-struct conversion hackery" >&5
