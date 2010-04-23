@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1638 2010/04/23 03:20:00 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1639 2010/04/23 04:05:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2080,3 +2080,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-NYTProf to 3.11 [seb 2010-04-23]
 	Added print/tex-endnotes version 2009 [minskim 2010-04-23]
 	Added print/tex-endnotes-doc version 2009 [minskim 2010-04-23]
+	Added devel/p5-autobox version 2.70 [seb 2010-04-23]
+	Updated devel/p5-autobox-Core to 1.2 [seb 2010-04-23]
