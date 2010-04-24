@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1655 2010/04/24 11:37:42 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1656 2010/04/24 13:59:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2099,3 +2099,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Text-Microformat version 0.04 [seb 2010-04-24]
 	Added textproc/p5-Text-MicroTemplate version 0.11 [seb 2010-04-24]
 	Added www/p5-Tatsumaki version 0.1010 [seb 2010-04-24]
+	Added www/llgal version 0.13.16 [obache 2010-04-24]
