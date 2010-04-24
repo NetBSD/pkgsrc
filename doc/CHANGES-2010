@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1666 2010/04/24 17:15:15 gls Exp $
+$NetBSD: CHANGES-2010,v 1.1667 2010/04/24 17:17:13 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2111,3 +2111,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-Adapter to 1.07 [seb 2010-04-24]
 	Updated devel/p5-common-sense to 3.2 [seb 2010-04-24]
 	Updated math/py-numpy to 1.4.1 [gls 2010-04-24]
+	Updated devel/p5-Config-GitLike to 1.04 [seb 2010-04-24]
