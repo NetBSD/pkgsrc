@@ -1,3 +1,38 @@
+2010-04-23  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100423
+	  Merge with NetBSD make, pick up
+	  o updated unit tests for Haiku (this time for sure).
+	* boot-strap: based on patch from joerg 
+	  honor --with-default-sys-path better.
+	* boot-strap: remove mention of --with-prefix-sys-path
+	
+2010-04-22  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100422
+	* Merge with NetBSD make, pick up
+	  o fix for vfork() on Darwin.
+	  o fix for bogus $TMPDIR.
+	  o set .MAKE.MODE=compat for -B
+	  o set .MAKE.JOBS=max_jobs for -j max_jobs
+	  o allow unit-tests to run without any *.mk
+	  o unit-tests/modmisc be more conservative in dirs presumed to exist.
+	* boot-strap: ignore /usr/share/mk except on NetBSD.
+	* unit-tests/Makefile.in: set LANG=C when running unit-tests to
+	  ensure sort(1) behaves as expected. 
+	
+2010-04-21  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* boot-strap: add FindHereOrAbove so we can use -m .../mk
+
+2010-04-20  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100420
+	* Merge with NetBSD make, pick up
+	  o fix for variable realpath() behavior.
+	    we have to stat(2) the result to be sure.
+	  o fix for .export (all) when nested vars use :sh
+	
 2010-04-14  Simon J. Gerraty  <sjg@bad.crufty.net>
 
 	* Makefile.in (MAKE_VERSION): bump version to 20100414
