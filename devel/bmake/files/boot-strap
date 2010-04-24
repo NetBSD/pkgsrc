@@ -48,15 +48,12 @@
 #	--with-default-sys-path="syspath"
 #		set an explicit default "syspath" which is where bmake
 #		will look for sys.mk and friends.
-#	
-#	--with-prefix-sys-path="syspath"
-#		prefix the built in default syspath with "syspath"
 #
 # AUTHOR:
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.6 2010/04/20 13:37:49 joerg Exp $
+#	$Id: boot-strap,v 1.7 2010/04/24 21:10:29 joerg Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -104,6 +101,7 @@ source_rc() {
 }
 
 CONFIGURE_ARGS=
+MAKESYSPATH=
 # pick a useful default prefix (for me at least ;-)
 for prefix in /opt/$HOST_TARGET "$HOME/$HOST_TARGET" /usr/pkg /usr/local ""
 do
@@ -116,23 +114,33 @@ quiet=:
 
 source_rc .bmake-boot-strap.rc . "$Mydir/.." "$HOME"
 
+get_optarg() {
+	expr "x$1" : "x[^=]*=\\(.*\\)"
+}
+
 while :
 do
 	case "$1" in
 	--) shift; break;;
 	--prefix) prefix="$2"; shift;;
-	--prefix=*) prefix=`IFS="="; set -- "$1"; echo "$2"`;;
-	--src=*) srcdir=`IFS="="; set -- "$1"; echo "$2"`;;
-	--with-mksrc=*|--mksrc=*) mksrc=`IFS="="; set -- "$1"; echo "$2"`;;
-	--share=*) share_dir=`IFS="="; set -- "$1"; echo "$2"`;;
+	--prefix=*) prefix=`get_optarg "$1"`;;
+	--src=*) srcdir=`get_optarg "$1"`;;
+	--with-mksrc=*|--mksrc=*) mksrc=`get_optarg "$1"`;;
+	--share=*) share_dir=`get_optarg "$1"`;;
 	--share) share_dir="$2"; shift;;
+	--with-default-sys-path=*)
+	    CONFIGURE_ARGS="$1"
+	    MAKESYSPATH=`get_optarg "$1"`;;
+	--with-default-sys-path)
+	    CONFIGURE_ARGS="$1 $2"
+	    MAKESYSPATH="$2"; shift;;
 	-s|--src) srcdir="$2"; shift;;
 	-m|--mksrc) mksrc="$2"; shift;;
 	-o|--objdir) objdir="$2"; shift;;
 	-q) quiet=;;
 	-c) source_rc "$2"; shift;;
 	--*) CONFIGURE_ARGS="$CONFIGURE_ARGS $1";;
-	*=*) eval "$1"; export `IFS="="; set -- "$1"; echo "$1"`;;
+	*=*) eval "$1"; export `expr "x$1" : "x\\(.[^=]\\)=.*"`;;
 	*) break;;
 	esac
         shift
@@ -164,11 +172,69 @@ GetDir() {
 	done
 }
 
+FindHereOrAbove() {
+    (
+	_t=-s
+	while :
+	do
+		case "$1" in
+		-C) cd "$2"; shift; shift;;
+		-?) _t=$1; shift;;
+		*) break;;
+		esac
+	done
+	case "$1" in	
+	/*)	# we shouldn't be here
+		[ $_t "$1" ] && echo "$1"
+		return
+		;;
+	.../*) want=`echo "$1" | sed 's,^.../*,,'`;;
+	*) want="$1";;
+	esac
+	here=`'pwd'`
+	while :
+	do
+		if [ $_t "./$want" ]; then
+			echo "$here/$want"
+			return
+		fi
+		cd ..
+		here=`'pwd'`
+		case "$here" in
+		/) return;;
+		esac
+	done
+    )
+}
+
+# is $1 missing from $2 (or PATH) ?
+no_path() {
+	eval "__p=\$${2:-PATH}"
+	case ":$__p:" in *:"$1":*) return 1;; *) return 0;; esac
+}
+
+# if $1 exists and is not in path, append it
+add_path () {
+	case "$1" in
+	-?) t=$1; shift;;
+	*) t=-d;;
+	esac
+	case "$2,$1" in
+	MAKESYSPATH,.../*) ;;
+	*) [ $t ${1:-.} ] || return;;
+	esac
+	no_path $* && eval ${2:-PATH}="$__p${__p:+:}$1"
+}
+
+
 srcdir=`GetDir /bmake "$srcdir" "$2" "$Mydir" ./bmake* "$Mydir"/../bmake*`
 [ -d "${srcdir:-/dev/null}" ] || Usage
 case "$mksrc" in
 none|-) # we don't want it
 	mksrc=
+	;;
+.../*)	# find here or above
+	mksrc=`FindHereOrAbove -C "$Mydir" -d "$mksrc"`
 	;;
 *)	# guess we want mksrc...
 	mksrc=`GetDir /mk "$mksrc" "$3" ./mk* "$srcdir"/mk* "$srcdir"/../mk*`
@@ -186,6 +252,7 @@ objdir=`'pwd'`
 
 ShareDir() {
 	case "/$1" in
+	/) [ -d /share ] || return;;
 	*/$HOST_TARGET)
 		if [ -d "$1/../share" ]; then
 			echo `dirname "$1"`/share
@@ -200,22 +267,31 @@ share_dir="${share_dir:-`ShareDir $prefix`}"
 
 AddConfigure --prefix= "$prefix"
 case "$CONFIGURE_ARGS" in
-*--with-prefix-sys-path*) ;;	# skip
-*) AddConfigure --with-default-sys-path= "$share_dir/mk";;
+*--with-*-sys-path*) ;; # skip
+*) [ "$share_dir" ] && AddConfigure --with-default-sys-path= "$share_dir/mk";;
 esac
 if [ "$mksrc" ]; then
         AddConfigure --with-mksrc= "$mksrc"
         # not all cc's support this
-        export CFLAGS_MF=
+        CFLAGS_MF= CFLAGS_MD=
+        export CFLAGS_MF CFLAGS_MD
 fi
 
 $srcdir/configure $CONFIGURE_ARGS || exit 1
 chmod 755 make-bootstrap.sh || exit 1
 ./make-bootstrap.sh || exit 1
-MAKESYSPATH="$share_dir/mk:/usr/share/mk"
+if [ -z "$MAKESYSPATH" ]; then
+       add_path "${share_dir:-...}/mk" MAKESYSPATH
+       case "$HOST_TARGET" in
+       netbsd*) add_path /usr/share/mk MAKESYSPATH;;
+       esac
+fi
 if [ -s "${mksrc:-/dev/null}/install-mk" ]; then
         sh "${mksrc}/install-mk" "$objdir/mk"
-        MAKESYSPATH=".../mk:${MAKESYSPATH}"
+        case "$MAKESYSPATH" in
+        .../mk*) ;;
+        *) MAKESYSPATH=".../mk:${MAKESYSPATH}";;
+        esac
 fi
 export MAKESYSPATH
 ./bmake test || exit 1

@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.9 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: job.c,v 1.10 2010/04/24 21:10:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.9 2010/04/20 13:37:49 joerg Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.10 2010/04/24 21:10:29 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.9 2010/04/20 13:37:49 joerg Exp $");
+__RCSID("$NetBSD: job.c,v 1.10 2010/04/24 21:10:29 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -354,8 +354,6 @@ static sigset_t caught_signals;	/* Set of signals we handle */
 #else
 #define KILLPG(pid, sig)	killpg((pid), (sig))
 #endif
-
-static char *tmpdir;		/* directory name, always ending with "/" */
 
 static void JobChildSig(int);
 static void JobContinueSig(int);
@@ -1315,7 +1313,7 @@ JobExec(Job *job, char **argv)
     /* Pre-emptively mark job running, pid still zero though */
     job->job_state = JOB_ST_RUNNING;
 
-    cpid = vfork();
+    cpid = vFork();
     if (cpid == -1)
 	Punt("Cannot vfork: %s", strerror(errno));
 
@@ -1569,11 +1567,7 @@ JobStart(GNode *gn, int flags)
 	}
 
 	JobSigLock(&mask);
-	tfile = bmake_malloc(strlen(tmpdir) + sizeof(TMPPAT));
-	strcpy(tfile, tmpdir);
-	strcat(tfile, TMPPAT);
-	if ((tfd = mkstemp(tfile)) == -1)
-	    Punt("Could not create temporary file %s", strerror(errno));
+	tfd = mkTempFile(TMPPAT, &tfile);
 	if (!DEBUG(SCRIPT))
 		(void)eunlink(tfile);
 	JobSigUnlock(&mask);
@@ -2136,8 +2130,6 @@ void
 Job_Init(void)
 {
     GNode         *begin;     /* node for commands to do at the very start */
-    const char    *p;
-    size_t        len;
 
     /* Allocate space for all the job info */
     job_table = bmake_malloc(maxJobs * sizeof *job_table);
@@ -2149,18 +2141,6 @@ Job_Init(void)
     errors = 	  0;
 
     lastNode =	  NULL;
-
-    /* set tmpdir, and ensure that it ends with "/" */
-    p = getenv("TMPDIR");
-    if (p == NULL || *p == '\0') {
-	p = _PATH_TMP;
-    }
-    len = strlen(p);
-    tmpdir = bmake_malloc(len + 2);
-    strcpy(tmpdir, p);
-    if (tmpdir[len - 1] != '/') {
-	strcat(tmpdir, "/");
-    }
 
     if (maxJobs == 1) {
 	/*

@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.4 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: make.h,v 1.5 2010/04/24 21:10:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -411,6 +411,13 @@ extern Lst	defIncPath;	/* The default include path. */
 extern char	*progname;	/* The program name */
 extern char	*makeDependfile; /* .depend */
 
+/*
+ * We cannot vfork() in a child of vfork().
+ * Most systems do not enforce this but some do.
+ */
+#define vFork() ((getpid() == myPid) ? vfork() : fork())
+extern pid_t	myPid;
+
 #define	MAKEFLAGS	".MAKEFLAGS"
 #define	MAKEOVERRIDES	".MAKEOVERRIDES"
 #define	MAKE_JOB_PREFIX	".MAKE.JOB.PREFIX" /* prefix for job target output */
@@ -466,6 +473,7 @@ void Check_Cwd(const char **);
 void PrintOnError(GNode *, const char *);
 void Main_ExportMAKEFLAGS(Boolean);
 Boolean Main_SetObjdir(const char *);
+int mkTempFile(const char *, char **);
 
 #ifdef __GNUC__
 #define UNCONST(ptr)	({ 		\
