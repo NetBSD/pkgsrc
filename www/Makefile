@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2010/04/24 09:00:27 seb Exp $
+# $NetBSD: Makefile,v 1.723 2010/04/24 11:37:21 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -415,6 +415,7 @@ SUBDIR+=	p5-Starlet
 SUBDIR+=	p5-Starman
 SUBDIR+=	p5-Task-CatInABox
 SUBDIR+=	p5-Task-Catalyst-Tutorial
+SUBDIR+=	p5-Tatsumaki
 SUBDIR+=	p5-Template-Extract
 SUBDIR+=	p5-Template-Generate
 SUBDIR+=	p5-Template-Multilingual
