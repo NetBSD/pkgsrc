@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1651 2010/04/24 09:00:48 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1652 2010/04/24 09:34:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2095,3 +2095,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Carp-REPL to 0.15 [seb 2010-04-24]
 	Added www/p5-Corona version 0.1004 [seb 2010-04-24]
 	Added www/p5-AnyEvent-HTTP version 1.44 [seb 2010-04-24]
+	Added textproc/p5-XML-TreeBuilder version 3.09 [seb 2010-04-24]
