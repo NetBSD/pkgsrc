@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1670 2010/04/24 18:57:45 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1671 2010/04/24 18:58:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2115,3 +2115,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-CPAN-DistnameInfo to 0.10 [seb 2010-04-24]
 	Updated lang/camlp5 to 5.13 [tonio 2010-04-24]
 	Updated devel/p5-Data-Dump-Streamer to 2.13 [seb 2010-04-24]
+	Updated devel/p5-Config-General to 2.48 [seb 2010-04-24]
