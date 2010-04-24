@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1653 2010/04/24 10:09:11 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1654 2010/04/24 11:06:19 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-AnyEvent-HTTP version 1.44 [seb 2010-04-24]
 	Added textproc/p5-XML-TreeBuilder version 3.09 [seb 2010-04-24]
 	Added textproc/p5-Text-Microformat version 0.04 [seb 2010-04-24]
+	Added textproc/p5-Text-MicroTemplate version 0.11 [seb 2010-04-24]
