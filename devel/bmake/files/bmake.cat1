@@ -1166,7 +1166,4 @@ HHIISSTTOORRYY
      bbmmaakkee is derived from NetBSD's make(1).  It uses autoconf to facilitate
      portability to other platforms.
 
-NetBSD 5.0                      April 14, 2010                      NetBSD 5.0
-=======
-NetBSD 5.0_STABLE               April 21, 2010               NetBSD 5.0_STABLE
->>>>>>> 1.1.1.5
+NetBSD 5.0                      April 21, 2010                      NetBSD 5.0
