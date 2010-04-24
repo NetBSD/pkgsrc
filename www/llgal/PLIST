@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/24 13:58:52 obache Exp $
+bin/llgal
+man/man1/llgal.1
+man/man5/llgalrc.5
+share/llgal/captions.header
+share/llgal/index.png
+share/llgal/indextemplate.html
+share/llgal/llgal.css
+share/llgal/next.png
+share/llgal/prev.png
+share/llgal/slidetemplate.html
+share/llgal/tile.png
+share/locale/de/LC_MESSAGES/llgal.mo
+share/locale/en/LC_MESSAGES/llgal.mo
+share/locale/fr/LC_MESSAGES/llgal.mo
+share/locale/it/LC_MESSAGES/llgal.mo
