@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2010/04/24 19:28:31 dholland Exp $
+
+makefiles should stop on error.
+
+--- Makefile.in~	2008-03-30 12:40:03.000000000 -0400
++++ Makefile.in	2008-03-30 12:42:07.000000000 -0400
+@@ -17,7 +17,7 @@
+ # subdir recursion macro
+ RECUR=	@for dir in $(SUBDIRS) ; do \
+ 		echo "===> $$dir"; \
+-		(cd $$dir ; $(MAKE) $@) \
++		(cd $$dir && $(MAKE) $@) || exit 1; \
+ 	done
+ 
+ all:
