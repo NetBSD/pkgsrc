@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/09 08:17:41 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/24 16:33:57 seb Exp $
 
-DISTNAME=	Attribute-Lexical-0.001
+DISTNAME=	Attribute-Lexical-0.002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Attribute/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Attribute-Lexical/
 COMMENT=	Sane scoping of function/variable attributes
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Lexical-SealRequireHints>=0.001:../../devel/p5-Lexical-SealRequireHints
+DEPENDS+=	p5-Lexical-SealRequireHints>=0.003:../../devel/p5-Lexical-SealRequireHints
 DEPENDS+=	p5-Params-Classify-[0-9]*:../../devel/p5-Params-Classify
 
 PKG_DESTDIR_SUPPORT=	user-destdir
