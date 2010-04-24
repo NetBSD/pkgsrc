@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/02/16 18:28:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/24 04:58:43 obache Exp $
 #
 
 DISTNAME=	alsa-utils-1.0.22
@@ -20,6 +20,8 @@ USE_NCURSES=		yes
 REPLACE_BASH=		alsaconf/alsaconf.in
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
+CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
