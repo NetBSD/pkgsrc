@@ -401,6 +401,8 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
 
      _._M_A_K_E_._E_X_P_O_R_T_E_D  The list of variables exported by bbmmaakkee.
 
+     _._M_A_K_E_._J_O_B_S      The argument to the --jj option.
+
      _._M_A_K_E_._J_O_B_._P_R_E_F_I_X
                      If bbmmaakkee is run with _j then output for each target is
                      prefixed with a token `--- target ---' the first part of
@@ -1165,3 +1167,6 @@ HHIISSTTOORRYY
      portability to other platforms.
 
 NetBSD 5.0                      April 14, 2010                      NetBSD 5.0
+=======
+NetBSD 5.0_STABLE               April 21, 2010               NetBSD 5.0_STABLE
+>>>>>>> 1.1.1.5
