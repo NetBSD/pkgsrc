@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1658 2010/04/24 15:57:21 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.1659 2010/04/24 15:58:05 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2102,3 +2102,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/llgal version 0.13.16 [obache 2010-04-24]
 	Updated time/ruby-tzinfo to 0.3.20 [taca 2010-04-24]
 	Updated print/libpaper to 1.1.24 [jmmv 2010-04-24]
+	Updated devel/p5-App-cpanminus to 1.0001 [seb 2010-04-24]
