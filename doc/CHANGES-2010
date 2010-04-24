@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1668 2010/04/24 17:35:24 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1669 2010/04/24 18:41:35 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2113,3 +2113,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/py-numpy to 1.4.1 [gls 2010-04-24]
 	Updated devel/p5-Config-GitLike to 1.04 [seb 2010-04-24]
 	Updated devel/p5-CPAN-DistnameInfo to 0.10 [seb 2010-04-24]
+	Updated lang/camlp5 to 5.13 [tonio 2010-04-24]
