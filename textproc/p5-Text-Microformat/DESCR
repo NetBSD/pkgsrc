@@ -1,0 +1,4 @@
+The Perl 5 module Text::Microformat is a Microformat parser. It
+sports a very pluggable API, which allows not only new kinds of
+Microformats to be added, but also extension of the parser itself,
+to allow new parsing metaphors and source document encodings
