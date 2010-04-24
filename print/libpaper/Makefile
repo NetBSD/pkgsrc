@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/04/23 12:45:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/24 15:56:46 jmmv Exp $
 #
 
-DISTNAME=	libpaper_1.1.23
+DISTNAME=	libpaper_1.1.24
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libp/libpaper/}
 
