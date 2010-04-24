@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.7 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.8 2010/04/24 21:10:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,7 +69,7 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: main.c,v 1.7 2010/04/20 13:37:49 joerg Exp $";
+static char rcsid[] = "$NetBSD: main.c,v 1.8 2010/04/24 21:10:29 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
@@ -81,7 +81,7 @@ __COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993\
 #if 0
 static char sccsid[] = "@(#)main.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.7 2010/04/20 13:37:49 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.8 2010/04/24 21:10:29 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -187,6 +187,7 @@ static char curdir[MAXPATHLEN + 1];	/* startup directory */
 static char objdir[MAXPATHLEN + 1];	/* where we chdir'ed to */
 char *progname;				/* the program name */
 char *makeDependfile;
+pid_t myPid;
 
 Boolean forceJobs = FALSE;
 
@@ -396,6 +397,7 @@ rearg:
 		case 'B':
 			compatMake = TRUE;
 			Var_Append(MAKEFLAGS, "-B", VAR_GLOBAL);
+			Var_Set(MAKE_MODE, "compat", VAR_GLOBAL, 0);
 			break;
 		case 'C':
 			if (chdir(argvalue) == -1) {
@@ -511,6 +513,7 @@ rearg:
 			}
 			Var_Append(MAKEFLAGS, "-j", VAR_GLOBAL);
 			Var_Append(MAKEFLAGS, argvalue, VAR_GLOBAL);
+			Var_Set(".MAKE.JOBS", argvalue, VAR_GLOBAL, 0);
 			maxJobTokens = maxJobs;
 			break;
 		case 'k':
@@ -873,6 +876,8 @@ main(int argc, char **argv)
 #endif
 	}
 
+	myPid = getpid();		/* remember this for vFork() */
+
 	/*
 	 * Just in case MAKEOBJDIR wants us to do something tricky.
 	 */
@@ -932,7 +937,7 @@ main(int argc, char **argv)
 	    p1 = argv[0];
 	} else {
 	    p1 = realpath(argv[0], mdpath);
-	    if (!p1 || *p1 != '/') {
+	    if (!p1 || *p1 != '/' || stat(p1, &sb) < 0) {
 		p1 = argv[0];		/* realpath failed */
 	    }
 	}
@@ -954,7 +959,7 @@ main(int argc, char **argv)
 		ep = "0";
 	    }
 	    Var_Set(MAKE_LEVEL, ep, VAR_GLOBAL, 0);
-	    snprintf(tmp, sizeof(tmp), "%u", getpid());
+	    snprintf(tmp, sizeof(tmp), "%u", myPid);
 	    Var_Set(".MAKE.PID", tmp, VAR_GLOBAL, 0);
 	    snprintf(tmp, sizeof(tmp), "%u", getppid());
 	    Var_Set(".MAKE.PPID", tmp, VAR_GLOBAL, 0);
@@ -1633,7 +1638,7 @@ Cmd_Exec(const char *cmd, const char **errnum)
     /*
      * Fork
      */
-    switch (cpid = vfork()) {
+    switch (cpid = vFork()) {
     case 0:
 	/*
 	 * Close input side of pipe
@@ -1995,4 +2000,47 @@ Main_ExportMAKEFLAGS(Boolean first)
 	setenv("MAKE", s, 1);
 #endif
     }
+}
+
+/*
+ * Create and open a temp file using "pattern".
+ * If "fnamep" is provided set it to a copy of the filename created.
+ * Otherwise unlink the file once open.
+ */
+int
+mkTempFile(const char *pattern, char **fnamep)
+{
+    static char *tmpdir = NULL;
+    char tfile[MAXPATHLEN];
+    int fd;
+    
+    if (!pattern)
+	pattern = TMPPAT;
+
+    if (!tmpdir) {
+	struct stat st;
+
+	/*
+	 * Honor $TMPDIR but only if it is valid.
+	 * Ensure it ends with /.
+	 */
+	tmpdir = Var_Subst(NULL, "${TMPDIR:tA:U" _PATH_TMP "}/", VAR_GLOBAL, 0);
+	if (stat(tmpdir, &st) < 0 || !S_ISDIR(st.st_mode)) {
+	    free(tmpdir);
+	    tmpdir = bmake_strdup(_PATH_TMP);
+	}
+    }
+    if (pattern[0] == '/') {
+	snprintf(tfile, sizeof(tfile), "%s", pattern);
+    } else {
+	snprintf(tfile, sizeof(tfile), "%s%s", tmpdir, pattern);
+    }
+    if ((fd = mkstemp(tfile)) < 0)
+	Punt("Could not create temporary file %s: %s", tfile, strerror(errno));
+    if (fnamep) {
+	*fnamep = bmake_strdup(tfile);
+    } else {
+	unlink(tfile);			/* we just want the descriptor */
+    }
+    return fd;
 }
