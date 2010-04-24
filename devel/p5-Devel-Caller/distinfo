@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/23 10:19:36 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/04/24 19:24:50 seb Exp $
 
-SHA1 (Devel-Caller-2.04.tar.gz) = cac08383cdec00bf9b2aa54a4c7812cde0a76966
-RMD160 (Devel-Caller-2.04.tar.gz) = d3d4a5b1a308bdd388dadd4fcb30ecf57be01f31
-Size (Devel-Caller-2.04.tar.gz) = 5603 bytes
+SHA1 (Devel-Caller-2.05.tar.gz) = 57412021ae07bed9ff4955523cec58a7560e46fb
+RMD160 (Devel-Caller-2.05.tar.gz) = 9b806dad16900e7bc5d5353b75219824f5140904
+Size (Devel-Caller-2.05.tar.gz) = 5716 bytes
