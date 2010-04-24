@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1662 2010/04/24 16:22:31 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1663 2010/04/24 16:34:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2107,3 +2107,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-server to 5.1.46 [taca 2010-04-24]
 	Updated devel/p5-Attribute-Handlers to 0.88 [seb 2010-04-24]
 	Updated devel/p5-Lexical-SealRequireHints to 0.003 [seb 2010-04-24]
+	Updated devel/p5-Attribute-Lexical to 0.002 [seb 2010-04-24]
