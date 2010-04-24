@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1672 2010/04/24 19:11:24 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1673 2010/04/24 19:25:13 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2117,3 +2117,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-Dump-Streamer to 2.13 [seb 2010-04-24]
 	Updated devel/p5-Config-General to 2.48 [seb 2010-04-24]
 	Updated devel/p5-Data-Section to 0.100.770 [seb 2010-04-24]
+	Updated devel/p5-Devel-Caller to 2.05 [seb 2010-04-24]
