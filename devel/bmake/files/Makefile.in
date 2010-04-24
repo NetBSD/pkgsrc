@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.15 2010/04/20 13:37:49 joerg Exp $
+#	$NetBSD: Makefile.in,v 1.16 2010/04/24 21:10:29 joerg Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.15 2010/04/20 13:37:49 joerg Exp $
+#	$Id: Makefile.in,v 1.16 2010/04/24 21:10:29 joerg Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -21,7 +21,7 @@ srcdir= @srcdir@
 CC?= @CC@
 
 # Base version on src date
-MAKE_VERSION= 20100414
+MAKE_VERSION= 20100423
 MACHINE=@machine@
 MACHINE_ARCH=@machine_arch@
 DEFAULT_SYS_PATH = @default_sys_path@
@@ -132,8 +132,4 @@ DPADD+=${LIBUTIL}
 
 # A simple unit-test driver to help catch regressions
 accept test:
-.if ${OS} != "SunOS" && empty(OS:MIRIX*) && empty(OS:MAIX*)
-	cd ${.CURDIR}/unit-tests && ${.MAKE:S,^./,${.CURDIR}/,} TEST_MAKE=${TEST_MAKE:U${.OBJDIR}/${PROG:T}} ${.TARGET}
-.else
-	true
-.endif
+	cd ${.CURDIR}/unit-tests && ${.MAKE} -r -m / TEST_MAKE=${TEST_MAKE:U${.OBJDIR}/${PROG:T}} ${.TARGET}

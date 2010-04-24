@@ -1,4 +1,4 @@
-/*	$NetBSD: compat.c,v 1.6 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: compat.c,v 1.7 2010/04/24 21:10:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: compat.c,v 1.6 2010/04/20 13:37:49 joerg Exp $";
+static char rcsid[] = "$NetBSD: compat.c,v 1.7 2010/04/24 21:10:29 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)compat.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: compat.c,v 1.6 2010/04/20 13:37:49 joerg Exp $");
+__RCSID("$NetBSD: compat.c,v 1.7 2010/04/24 21:10:29 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -358,7 +358,7 @@ again:
     /*
      * Fork and execute the single command. If the fork fails, we abort.
      */
-    cpid = vfork();
+    cpid = vFork();
     if (cpid < 0) {
 	Fatal("Could not fork");
     }

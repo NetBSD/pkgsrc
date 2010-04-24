@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.6 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: var.c,v 1.7 2010/04/24 21:10:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: var.c,v 1.6 2010/04/20 13:37:49 joerg Exp $";
+static char rcsid[] = "$NetBSD: var.c,v 1.7 2010/04/24 21:10:29 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)var.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: var.c,v 1.6 2010/04/20 13:37:49 joerg Exp $");
+__RCSID("$NetBSD: var.c,v 1.7 2010/04/24 21:10:29 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -123,6 +123,7 @@ __RCSID("$NetBSD: var.c,v 1.6 2010/04/20 13:37:49 joerg Exp $");
  * XXX: There's a lot of duplication in these functions.
  */
 
+#include    <sys/stat.h>
 #ifndef NO_REGEX
 #include    <sys/types.h>
 #include    <regex.h>
@@ -589,6 +590,13 @@ Var_Export1(const char *name, int parent)
 	     */
 	    v->flags |= (VAR_EXPORTED|VAR_REEXPORT);
 	    return 1;
+	}
+	if (v->flags & VAR_IN_USE) {
+	    /*
+	     * We recursed while exporting in a child.
+	     * This isn't going to end well, just skip it.
+	     */
+	    return 0;
 	}
 	n = snprintf(tmp, sizeof(tmp), "${%s}", name);
 	if (n < (int)sizeof(tmp)) {
@@ -1870,6 +1878,7 @@ VarRealpath(GNode *ctx __unused, Var_Parse_State *vpstate,
 	    char *word, Boolean addSpace, Buffer *buf,
 	    void *patternp __unused)
 {
+	struct stat st;
 	char rbuf[MAXPATHLEN];
 	char *rp;
 			    
@@ -1878,7 +1887,7 @@ VarRealpath(GNode *ctx __unused, Var_Parse_State *vpstate,
 	}
 	addSpace = TRUE;
 	rp = realpath(word, rbuf);
-	if (rp && *rp == '/')
+	if (rp && *rp == '/' && stat(rp, &st) == 0)
 		word = rp;
 	
 	Buf_AddBytes(buf, strlen(word), word);
