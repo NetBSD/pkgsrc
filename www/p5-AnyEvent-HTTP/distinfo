@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/24 09:00:13 seb Exp $
+
+SHA1 (AnyEvent-HTTP-1.44.tar.gz) = 953851e66394f1fccca26d95d722702e83234908
+RMD160 (AnyEvent-HTTP-1.44.tar.gz) = 1f5f157b095a99735f6275f6ee9d82c791a937d2
+Size (AnyEvent-HTTP-1.44.tar.gz) = 15509 bytes
