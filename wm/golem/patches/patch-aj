@@ -1,0 +1,19 @@
+$NetBSD: patch-aj,v 1.1 2010/04/24 19:36:14 dholland Exp $
+
+Hack around a problem that appears with the newer flex in NetBSD-current.
+(This is a hack, not a fix.)
+
+--- src/rclex.l~	2002-01-18 01:11:10.000000000 +0000
++++ src/rclex.l
+@@ -134,7 +134,11 @@ static int rclex_includef(FILE *file, ch
+ 	inside_forplug = forplug;
+ 	yyin = file;
+ 	yy_switch_to_buffer(yy_create_buffer(yyin, YY_BUF_SIZE));
++#ifndef INITIAL	/* hack; flex docs say INITIAL === 0 */
++	BEGIN(0);
++#else
+ 	BEGIN(INITIAL);
++#endif
+ 
+ 	return 0;
+ }
