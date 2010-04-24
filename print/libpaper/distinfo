@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/04/23 11:31:57 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2010/04/24 15:56:46 jmmv Exp $
 
-SHA1 (libpaper_1.1.23.tar.gz) = e1c03fc0fa708cafe12d00a120685ef566100468
-RMD160 (libpaper_1.1.23.tar.gz) = bf407f5e75348abde5b7d3d3c8e2ea695de46cd7
-Size (libpaper_1.1.23.tar.gz) = 351153 bytes
-SHA1 (patch-aa) = 1ea13f89be2dc0526537d2fc4143ecd255ea5032
-SHA1 (patch-ab) = d34307f99914a2eda7b87ce3e917f0eadd106e2d
-SHA1 (patch-ac) = 643541a5bbd3b422261c16f48fe86d018f315a82
+SHA1 (libpaper_1.1.24.tar.gz) = 6927f75d126373d32d89751d2a7fe3e99cc9b4a1
+RMD160 (libpaper_1.1.24.tar.gz) = 12e7234616bfe648337381c7c07e7de7bcfbea28
+Size (libpaper_1.1.24.tar.gz) = 355272 bytes
