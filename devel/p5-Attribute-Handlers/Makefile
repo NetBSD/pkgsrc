@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2009/09/22 17:16:44 sno Exp $
+# $NetBSD: Makefile,v 1.23 2010/04/24 16:05:18 seb Exp $
 
-DISTNAME=	Attribute-Handlers-0.87
+DISTNAME=	Attribute-Handlers-0.88
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ah
 CATEGORIES=	devel perl5
