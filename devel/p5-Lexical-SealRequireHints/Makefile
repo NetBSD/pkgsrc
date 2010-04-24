@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/09 08:15:06 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/24 16:22:19 seb Exp $
 #
 
-DISTNAME=	Lexical-SealRequireHints-0.002
+DISTNAME=	Lexical-SealRequireHints-0.003
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lexical/}
