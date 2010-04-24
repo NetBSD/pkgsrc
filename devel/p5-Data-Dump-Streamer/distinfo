@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/04/22 05:45:26 seb Exp $
+$NetBSD: distinfo,v 1.3 2010/04/24 18:57:34 seb Exp $
 
-SHA1 (Data-Dump-Streamer-2.09.tar.gz) = c3669374586a91b54d2fa52097993ded6fc3f305
-RMD160 (Data-Dump-Streamer-2.09.tar.gz) = 82c743fe140b4c8cb9ce7465d9ae4290226f2281
-Size (Data-Dump-Streamer-2.09.tar.gz) = 73522 bytes
+SHA1 (Data-Dump-Streamer-2.13.tar.gz) = 9fcf48906891465a7cf0012e62eb10679797b58e
+RMD160 (Data-Dump-Streamer-2.13.tar.gz) = 880ff6f2e6184b0c00f9f0b1e483d6c28fba1835
+Size (Data-Dump-Streamer-2.13.tar.gz) = 73792 bytes
