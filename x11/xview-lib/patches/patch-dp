@@ -1,4 +1,4 @@
-$NetBSD: patch-dp,v 1.3 2009/12/10 20:35:58 abs Exp $
+$NetBSD: patch-dp,v 1.4 2010/04/24 19:52:23 dholland Exp $
 
 --- lib/libxview/notify/sys_select.c.orig	1993-06-29 05:18:11.000000000 +0000
 +++ lib/libxview/notify/sys_select.c
@@ -14,7 +14,7 @@ $NetBSD: patch-dp,v 1.3 2009/12/10 20:35:58 abs Exp $
  #else SVR4
  #include <values.h>
  #include <sys/time.h>
-@@ -28,8 +32,6 @@ static char     sccsid[] = "@(#)sys_sele
+@@ -28,12 +32,22 @@ static char     sccsid[] = "@(#)sys_sele
  #include <errno.h>		/* For debugging */
  #include <stdio.h>		/* For debugging */
  
@@ -23,3 +23,19 @@ $NetBSD: patch-dp,v 1.3 2009/12/10 20:35:58 abs Exp $
  #ifndef NULL
  #define NULL	0
  #endif 
+ 
++/* netbsd-6's time_t changes caused versioning/renaming of select */
++/* XXX xview should not be using syscall() */
++#ifdef __NetBSD__
++#ifndef SYS_select
++#ifdef SYS___select50
++#define SYS_select SYS___select50
++#else
++#error "help!"
++#endif
++#endif
++#endif
++
+ pkg_private int
+ #ifndef SVR4
+ notify_select(nfds, readfds, writefds, exceptfds, tv)
