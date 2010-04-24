@@ -1,0 +1,7 @@
+llgal is a HTML gallery generator for images, videos, text and links.
+It is based on igal and adds supports for various types of slides
+including movies, text, links and subdirectories and several features
+such as the addition of headers and footers in generated HTML files or
+the generation of slide captions from JFIF, GIF or EXIF comments.
+llgal generates nice web-pages through very simple HTML code that does
+not require anything like php or javascript.
