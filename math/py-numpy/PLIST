@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/27 20:48:20 drochner Exp $
-bin/f2py${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.5 2010/04/24 17:13:55 gls Exp $
+bin/f2py2.5
 ${PYSITELIB}/numpy/COMPATIBILITY
 ${PYSITELIB}/numpy/DEV_README.txt
 ${PYSITELIB}/numpy/INSTALL.txt
@@ -121,7 +121,6 @@ ${PYSITELIB}/numpy/core/shape_base.pyo
 ${PYSITELIB}/numpy/core/tests/data/astype_copy.pkl
 ${PYSITELIB}/numpy/core/tests/data/recarray_from_file.fits
 ${PYSITELIB}/numpy/core/tests/test_blasdot.py
-${PYSITELIB}/numpy/core/tests/test_datetime.py
 ${PYSITELIB}/numpy/core/tests/test_defchararray.py
 ${PYSITELIB}/numpy/core/tests/test_dtype.py
 ${PYSITELIB}/numpy/core/tests/test_errstate.py
