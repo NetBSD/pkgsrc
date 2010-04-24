@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1660 2010/04/24 16:00:48 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1661 2010/04/24 16:05:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2105,3 +2105,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-App-cpanminus to 1.0001 [seb 2010-04-24]
 	Updated databases/mysql51-client to 5.1.46 [taca 2010-04-24]
 	Updated databases/mysql51-server to 5.1.46 [taca 2010-04-24]
+	Updated devel/p5-Attribute-Handlers to 0.88 [seb 2010-04-24]
