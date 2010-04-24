@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1665 2010/04/24 16:50:28 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1666 2010/04/24 17:15:15 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2110,3 +2110,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Attribute-Lexical to 0.002 [seb 2010-04-24]
 	Updated devel/p5-Class-Adapter to 1.07 [seb 2010-04-24]
 	Updated devel/p5-common-sense to 3.2 [seb 2010-04-24]
+	Updated math/py-numpy to 1.4.1 [gls 2010-04-24]
