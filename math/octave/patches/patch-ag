@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.8 2010/02/12 00:41:48 asau Exp $
+$NetBSD: patch-ag,v 1.9 2010/04/24 20:58:36 asau Exp $
 
---- src/Makefile.in.orig	2009-06-03 12:32:49.000000000 +0000
-+++ src/Makefile.in
-@@ -240,7 +240,7 @@ BUILT_EXTRAS := graphics.h mxarray.h
+--- src/Makefile.in.orig	2009-06-03 16:32:49.000000000 +0400
++++ src/Makefile.in	2010-02-21 13:57:25.000000000 +0300
+@@ -240,7 +240,7 @@
  
  EXTRAS := ov-base-int.cc ov-base-mat.cc ov-base-diag.cc ov-base-scalar.cc graphics-props.cc
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.8 2010/02/12 00:41:48 asau Exp $
  
  INCLUDES_FOR_INSTALL := $(INCLUDES) $(EXTRAS) $(BUILT_EXTRAS)
  
-@@ -357,8 +357,9 @@ libraries: $(LIBRARIES)
+@@ -357,8 +357,9 @@
  
  $(LIBPRE)octinterp.$(LIBEXT): $(OBJECTS) $(XERBLA)
  	rm -f $@
@@ -23,7 +23,7 @@ $NetBSD: patch-ag,v 1.8 2010/02/12 00:41:48 asau Exp $
  
  $(SHLPRE)octinterp.$(SHLEXT_VER): $(SHLPRE)octinterp.$(SHLEXT)
  	rm -f $@
-@@ -366,9 +367,10 @@ $(SHLPRE)octinterp.$(SHLEXT_VER): $(SHLP
+@@ -366,9 +367,10 @@
  
  $(SHLPRE)octinterp.$(SHLEXT): $(PICOBJ) $(PIC_XERBLA)
  	rm -f $@
@@ -35,7 +35,7 @@ $NetBSD: patch-ag,v 1.8 2010/02/12 00:41:48 asau Exp $
  	$(LD_CXX) $(CPPFLAGS) $(ALL_CXXFLAGS) $(RDYNAMIC_FLAG) \
  	$(ALL_LDFLAGS) -o $@ \
  	main.o $(DLD_STATIC_OBJ) \
-@@ -460,6 +462,7 @@ install-strip:
+@@ -460,6 +462,7 @@
  install-bin:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
  	rm -f $(DESTDIR)$(bindir)/octave$(EXEEXT)
@@ -43,15 +43,17 @@ $NetBSD: patch-ag,v 1.8 2010/02/12 00:41:48 asau Exp $
  	$(INSTALL_PROGRAM) octave$(EXEEXT) $(DESTDIR)$(bindir)/octave-$(version)$(EXEEXT)
  	cd $(DESTDIR)$(bindir) ; $(LN_S) octave-$(version)$(EXEEXT) octave$(EXEEXT)
  .PHONY: install-bin
-@@ -470,6 +473,7 @@ install-oct:
+@@ -470,7 +473,8 @@
  	if [ -n "$(OCT_FILES)" ]; then \
  	  xfiles="$(OCT_FILES)"; \
  	  for f in $$xfiles; do \
+-	    $(INSTALL_PROGRAM) $$f $(DESTDIR)$(octfiledir)/$$f; \
 +	    ${LIBTOOL} --mode=install \
- 	    $(INSTALL_PROGRAM) $$f $(DESTDIR)$(octfiledir)/$$f; \
++	    $(BSD_INSTALL_LIB) $$f $(DESTDIR)$(octfiledir)/$$f; \
  	  done; \
  	fi
-@@ -479,9 +483,8 @@ install-lib:
+ .PHONY: install-oct
+@@ -479,9 +483,8 @@
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(LIBEXT); \
