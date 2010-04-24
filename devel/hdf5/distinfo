@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.25 2009/11/15 15:50:50 drochner Exp $
+$NetBSD: distinfo,v 1.26 2010/04/24 21:27:36 asau Exp $
 
 SHA1 (hdf5-1.6.10.tar.gz) = ccac439841977ab4e460fcb4c1fc2c2692a841d7
 RMD160 (hdf5-1.6.10.tar.gz) = 7fd773f80265b5d8afc5c5765c499c22bd22f0c8
 Size (hdf5-1.6.10.tar.gz) = 7435318 bytes
 SHA1 (patch-aa) = 8e02e2b5decde21bb7d223f3870330832db399ba
-SHA1 (patch-ab) = aa4911184b72d4818f6e65d3adf86110db9bd379
-SHA1 (patch-ac) = 77e3762e4e41274550cb1a25f4a1c2ffaa45dcdf
+SHA1 (patch-ab) = 8bb87d50b6c54f9fb2de8f9d21fb28e326b1e55d
+SHA1 (patch-ac) = 46d224106ee34e2550cec708feffc802d6997bca
 SHA1 (patch-ad) = 0b58c169e0d12cc25fc6206fc49086a89d2836b7
 SHA1 (patch-ba) = 1ba84ee22c3307100a2c8d3df4dfb2037be8e773
 SHA1 (patch-bb) = bcfd87df515d64471f881d4d10c894d89a6bc56e
