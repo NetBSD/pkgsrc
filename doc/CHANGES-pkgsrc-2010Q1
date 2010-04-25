@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.10 2010/04/23 09:08:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.11 2010/04/25 18:17:42 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -36,3 +36,8 @@ Pullup ticket #3090 - requested by gls
 net/bind95: portability fix
 Pullup ticket #3091 - requested by gls
 net/bind96: portability fix
+Pullup ticket #3093 - requested by taca
+lang/php53: bug fix
+Pullup ticket #3094 - requested by taca
+mail/postfix: build fix
+mail/postfix-current: build fix
