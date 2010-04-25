@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2010/04/16 13:50:51 tnn Exp $
+# $NetBSD: Makefile,v 1.60 2010/04/25 19:17:41 jmmv Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,6 +25,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS_EFFECTS+=	XKB_OUTPUT_DIR
 
+OWN_DIRS+=		${VARBASE}/log
 OWN_DIRS+=		${XKB_OUTPUT_DIR}
 XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 
