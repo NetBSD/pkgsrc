@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2010/04/24 17:13:55 gls Exp $
-bin/f2py2.5
+@comment $NetBSD: PLIST,v 1.6 2010/04/25 00:02:20 tron Exp $
+bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/numpy/COMPATIBILITY
 ${PYSITELIB}/numpy/DEV_README.txt
 ${PYSITELIB}/numpy/INSTALL.txt
