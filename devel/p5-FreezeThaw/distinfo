@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/03/08 14:43:28 sno Exp $
+$NetBSD: distinfo,v 1.6 2010/04/25 15:30:33 seb Exp $
 
-SHA1 (FreezeThaw-0.50.tar.gz) = cf932519c836b79ca259591432136fb6d1379e79
-RMD160 (FreezeThaw-0.50.tar.gz) = 47f497d3e2bdcf7a96f9c4d492a9613e8f410d69
-Size (FreezeThaw-0.50.tar.gz) = 11683 bytes
+SHA1 (FreezeThaw-0.5001.tar.gz) = 73a175385ab15bc8ca860eee769305488a881ab3
+RMD160 (FreezeThaw-0.5001.tar.gz) = b049875dd7596e0df9c3217fb6b25d1d49cef98c
+Size (FreezeThaw-0.5001.tar.gz) = 11800 bytes
