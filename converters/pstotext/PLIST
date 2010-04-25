@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/25 12:46:19 obache Exp $
+bin/pstotext
+man/man1/pstotext.1
+share/doc/pstotext/pstotext.hlp
+share/doc/pstotext/pstotext.txt
