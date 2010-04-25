@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1680 2010/04/25 13:19:34 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1681 2010/04/25 13:32:41 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2125,3 +2125,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added converters/pstotext version 1.9 [obache 2010-04-25]
 	Updated emulators/qemu to 0.12.3nb2 [gson 2010-04-25]
 	Updated devel/p5-File-ChangeNotify to 0.13 [seb 2010-04-25]
+	Updated devel/p5-Format-Human-Bytes to 0.05 [seb 2010-04-25]
