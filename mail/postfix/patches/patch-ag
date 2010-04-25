@@ -1,10 +1,11 @@
-$NetBSD: patch-ag,v 1.29 2010/02/25 13:01:23 martti Exp $
+$NetBSD: patch-ag,v 1.29.2.1 2010/04/25 18:16:59 tron Exp $
 
 Only define HAS_DB if it hasn't been defined.
 Add support for NetBSD 5.x and DragonFly BSD.
+Handle closefrom() on FreeBSD.
 
---- src/util/sys_defs.h.orig	2009-11-15 01:32:37.000000000 +0200
-+++ src/util/sys_defs.h	2010-02-25 14:47:46.000000000 +0200
+--- src/util/sys_defs.h.orig	2009-11-14 23:32:37.000000000 +0000
++++ src/util/sys_defs.h
 @@ -29,8 +29,8 @@
      || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
@@ -26,7 +27,17 @@ Add support for NetBSD 5.x and DragonFly BSD.
  #define HAS_SA_LEN
  #define DEF_DB_TYPE	"hash"
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104250000)
-@@ -163,9 +165,19 @@
+@@ -111,7 +113,8 @@
+ #define HAS_DUPLEX_PIPE			/* 4.1 breaks with kqueue(2) */
+ #endif
+ 
+-#if __FreeBSD_version >= 800107		/* safe; don't believe the experts */
++#if (__FreeBSD_version >= 702104 && __FreeBSD_version <= 800000) \
++    || __FreeBSD_version >= 800100
+ #define HAS_CLOSEFROM
+ #endif
+ 
+@@ -163,9 +166,19 @@
  #define HAS_FUTIMES
  #endif
  
@@ -46,7 +57,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
      || defined(USAGI_LIBINET6)
  #ifndef NO_IPV6
  # define HAS_IPV6
-@@ -174,14 +186,16 @@
+@@ -174,14 +187,16 @@
  
  #if (defined(__FreeBSD_version) && __FreeBSD_version >= 300000) \
      || (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 103000000) \
