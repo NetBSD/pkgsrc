@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/02/23 14:12:18 sno Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/25 13:19:20 seb Exp $
 #
 
-DISTNAME=	File-ChangeNotify-0.12
+DISTNAME=	File-ChangeNotify-0.13
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
