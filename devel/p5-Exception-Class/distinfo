@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/05/17 17:40:51 sno Exp $
+$NetBSD: distinfo,v 1.10 2010/04/25 11:00:11 seb Exp $
 
-SHA1 (Exception-Class-1.29.tar.gz) = d635c5e67e1336780bebb231ea221ab526c3daeb
-RMD160 (Exception-Class-1.29.tar.gz) = 3571c207efba99b2a814aeb1265c563252b8d7e4
-Size (Exception-Class-1.29.tar.gz) = 24975 bytes
+SHA1 (Exception-Class-1.30.tar.gz) = 21479d06e38f3ddd365f2dafeb5bdb322f3d2361
+RMD160 (Exception-Class-1.30.tar.gz) = 43e01996b3c1588ffd118440edb8d301708fbfdf
+Size (Exception-Class-1.30.tar.gz) = 35552 bytes
