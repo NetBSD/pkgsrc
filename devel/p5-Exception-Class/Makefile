@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2009/05/17 17:40:51 sno Exp $
+# $NetBSD: Makefile,v 1.21 2010/04/25 11:00:11 seb Exp $
 
-DISTNAME=	Exception-Class-1.29
+DISTNAME=	Exception-Class-1.30
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5exc
 CATEGORIES=	devel perl5
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Exception/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Exception-Class/
 COMMENT=	Perl5 module implementing real exception classes
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-Data-Inheritable>=0.02:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Devel-StackTrace>=1.20:../../devel/p5-Devel-StackTrace
