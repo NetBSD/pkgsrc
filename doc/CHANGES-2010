@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1678 2010/04/25 12:46:35 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1679 2010/04/25 12:57:23 gson Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-ExtUtils-CBuilder to 0.27.03 [seb 2010-04-25]
 	Updated devel/p5-ExtUtils-XSpp to 0.10 [seb 2010-04-25]
 	Added converters/pstotext version 1.9 [obache 2010-04-25]
+	Updated emulators/qemu to 0.12.3nb2 [gson 2010-04-25]
