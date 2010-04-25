@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1675 2010/04/25 11:00:35 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1676 2010/04/25 11:18:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2120,3 +2120,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-Caller to 2.05 [seb 2010-04-24]
 	Updated devel/p5-Devel-Cover to 0.66 [seb 2010-04-24]
 	Updated devel/p5-Exception-Class to 1.30 [seb 2010-04-25]
+	Updated devel/p5-ExtUtils-CBuilder to 0.27.03 [seb 2010-04-25]
