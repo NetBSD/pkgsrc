@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/25 12:46:19 obache Exp $
+
+Fix CC and CFLAGS. They are now set from mk.conf.
+
+--- Makefile.orig	2010-04-17 19:54:01.000000000 -0700
++++ Makefile	2010-04-17 19:54:40.000000000 -0700
+@@ -9,7 +9,7 @@
+ # commenting out the includes of ptotdll.h in ptotdll.c and main.c.
+ # PMcJ 6 Sep 96
+ 
+-CC=gcc
++#CC=gcc
+ #CC=cc -std
+ 
+ BUNDLE = ocr.h rot270.h rot90.h
+@@ -17,18 +17,18 @@
+ all:	pstotext
+ 
+ main.o: main.c ptotdll.h bundle.h ocr.h rot270.h rot90.h
+-	$(CC) -c $*.c
++	$(CC) $(CFLAGS) -c $*.c
+ 
+ ptotdll.o: ptotdll.c ptotdll.h
+-	$(CC) -c $*.c
++	$(CC) $(CFLAGS) -c $*.c
+ 
+ pstotext: bundle.o main.o ptotdll.o
+-	$(CC) -o pstotext main.o bundle.o ptotdll.o -lm
++	$(CC) $(CFLAGS) -o pstotext main.o bundle.o ptotdll.o -lm
+ 
+ .SUFFIXES: .ps
+ 
+ .c.o:
+-	$(CC) -c $*.c
++	$(CC) $(CFLAGS) -c $*.c
+ 
+ # "Bundle" an Ascii file.
+ .ps.h:
