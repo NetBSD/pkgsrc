@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1682 2010/04/25 15:30:50 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1683 2010/04/25 17:05:20 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2127,3 +2127,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-File-ChangeNotify to 0.13 [seb 2010-04-25]
 	Updated devel/p5-Format-Human-Bytes to 0.05 [seb 2010-04-25]
 	Updated devel/p5-FreezeThaw to 0.50.01 [seb 2010-04-25]
+	Updated devel/p5-IMDB-Film to 0.45 [seb 2010-04-25]
