@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.61 2010/02/21 19:25:32 schmonz Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.62 2010/04/25 13:15:48 obache Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -111,7 +111,10 @@
       of pthreads, but other parts of libc may also be lacking.)</para>
 
       <para>Services for Unix Applications (aka SUA) is an integrated component
-      of Windows Server 2003 R2 and Windows Vista.  As of this writing, SUA's
+      of Windows Server 2003 R2 (5.2), Windows Vista and Windows Server 2008
+      (6.0), Windows 7 and Windows Server 2008 R2 (6.1).  As of this writing,
+      SUA's Interix 6.0 (32bit) subsystem has been tested.  6.0 (64bit) and 6.1
+      (both 32bit and 64bit) may work.
       Interix 5.x subsystem has not yet been tested with pkgsrc.</para>
 
       <sect3 id="platform.interix-sfu-install">
