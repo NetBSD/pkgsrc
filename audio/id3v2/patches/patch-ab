@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2010/04/26 01:54:27 schnoebe Exp $
+
+--- id3v2.cpp.orig	2010-03-26 23:26:46.000000000 +0000
++++ id3v2.cpp
+@@ -474,7 +474,8 @@ int main( int argc, char *argv[])
+           myFrame->Field(ID3FN_TEXT) = frameList[ii].data;
+           myTag.AttachFrame(myFrame);
+ 
+-          free(newTrackNum);
++	  if (newTrackNum != NULL)
++	    free(newTrackNum);
+           break;
+         }
+         case ID3FID_USERTEXT:
