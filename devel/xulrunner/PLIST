@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/03/30 11:29:36 tnn Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/04/26 12:47:08 tnn Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -100,6 +100,7 @@ include/xulrunner/inISearchProcess.h
 include/xulrunner/jar-ds.h
 include/xulrunner/jar.h
 include/xulrunner/jarfile.h
+${PLIST.jemalloc}include/xulrunner/jemalloc.h
 include/xulrunner/js-config.h
 include/xulrunner/js.msg
 include/xulrunner/jsapi.h
