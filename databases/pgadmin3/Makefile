@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2010/02/10 19:34:05 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/26 06:14:21 adam Exp $
 
 .include "../../databases/postgresql84/Makefile.mirrors"
 
-DISTNAME=	pgadmin3-1.10.1
-PKGREVISION=	1
+DISTNAME=	pgadmin3-1.10.2
 CATEGORIES=	databases
-MASTER_SITES=	${PGSQL_MIRRORS:=pgadmin3/release/v1.10.1/src/}
+MASTER_SITES=	${PGSQL_MIRRORS:=pgadmin3/release/v1.10.2/src/}
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.pgadmin.org/
