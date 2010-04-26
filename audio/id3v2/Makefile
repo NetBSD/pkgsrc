@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/04/26 01:54:26 schnoebe Exp $
+# $NetBSD: Makefile,v 1.24 2010/04/26 08:32:49 wiz Exp $
 
 DISTNAME=	id3v2-0.1.12
 CATEGORIES=	audio
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/id3v2
 
 post-configure:
 	# clean up inappropriate stuff left in the distribution archive
@@ -25,7 +25,6 @@ post-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/id3v2 ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/id3v2.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/id3v2
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/id3v2/README
 
