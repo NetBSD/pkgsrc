@@ -1,0 +1,6 @@
+The package defines an \excludeonly command, which is (in effect) the
+opposite of \includeonly.  If both \includeonly and \excludeonly exist
+in a document, only files "allowed" by both will be included.  The
+package redefines the internal \@include command, so it conflicts with
+packages that do the same.  Examples are the classes paper.cls and
+thesis.cls.
