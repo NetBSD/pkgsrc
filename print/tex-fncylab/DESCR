@@ -1,0 +1,6 @@
+LaTeX provides a mechanism for altering the appearance of references
+to labels, but it's somewhat flawed, and requires that the user
+manipulate internal commands.  The package fixes the flaw in LaTeX,
+and provides a \labelformat command for changing the format of
+references to labels.  The package also provides a \Ref command to
+make reference to such redefined labels at the start of a sentence.
