@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/26 17:17:40 minskim Exp $
+share/texmf-dist/doc/latex/fncylab/fncylab-example.tex
+share/texmf-dist/doc/latex/fncylab/fncylab.pdf
+share/texmf-dist/doc/latex/fncylab/fncylab.tex
