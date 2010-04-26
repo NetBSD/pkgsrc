@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1687 2010/04/26 16:06:27 schnoebe Exp $
+$NetBSD: CHANGES-2010,v 1.1688 2010/04/26 17:11:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2132,3 +2132,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IPC-System-Simple to 1.21 [seb 2010-04-25]
 	Updated databases/pgadmin3 to 1.10.2 [adam 2010-04-26]
 	Updated audio/id3v2 to 0.1.12 [eric 2010-04-26]
+	Added print/tex-excludeonly version 1.0 [minskim 2010-04-26]
+	Added print/tex-excludeonly-doc version 1.0 [minskim 2010-04-26]
