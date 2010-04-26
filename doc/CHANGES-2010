@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1689 2010/04/26 17:19:18 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1690 2010/04/26 17:26:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2136,3 +2136,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-excludeonly-doc version 1.0 [minskim 2010-04-26]
 	Added print/tex-fncylab version 1.0 [minskim 2010-04-26]
 	Added print/tex-fncylab-doc version 1.0 [minskim 2010-04-26]
+	Added print/tex-fnpara version 2009 [minskim 2010-04-26]
+	Added print/tex-fnpara-doc version 2009 [minskim 2010-04-26]
