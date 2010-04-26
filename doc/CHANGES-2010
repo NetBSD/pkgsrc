@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1688 2010/04/26 17:11:35 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1689 2010/04/26 17:19:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2134,3 +2134,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/id3v2 to 0.1.12 [eric 2010-04-26]
 	Added print/tex-excludeonly version 1.0 [minskim 2010-04-26]
 	Added print/tex-excludeonly-doc version 1.0 [minskim 2010-04-26]
+	Added print/tex-fncylab version 1.0 [minskim 2010-04-26]
+	Added print/tex-fncylab-doc version 1.0 [minskim 2010-04-26]
