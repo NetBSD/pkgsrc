@@ -1,0 +1,6 @@
+This package typesets footnotes in run-on paragraphs, instead of one
+above another; this is a re-seating, for the LaTeX environment, of an
+example in the TeXbook.  The same basic code, improved for use in
+e-TeX-based LaTeX, appears in the comprehensive footnote package
+footmisc, and superior versions are also available in the manyfoot and
+bigfoot packages.
