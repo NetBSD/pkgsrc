@@ -1,0 +1,10 @@
+The package creates three environments:
+  - framed, which puts an ordinary frame box around the region,
+  - shaded, which shades the region, and
+  - leftbar, which places a line at the left side.
+
+The environments allow a break at their start (the \FrameCommand
+enables creation of a title that is "attached" to the environment);
+breaks are also allowed in the course of the framed/shaded
+matter. There is also a command \MakeFramed to make your own
+framed-style environments.
