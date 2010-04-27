@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1693 2010/04/27 00:51:17 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1694 2010/04/27 01:01:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2141,3 +2141,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-Build to 0.36070 [seb 2010-04-27]
 	Updated devel/p5-Module-CoreList to 2.31 [seb 2010-04-27]
 	Updated devel/p5-Moose-Autobox to 0.11 [seb 2010-04-27]
+	Updated devel/p5-MooseX-Params-Validate to 0.14 [seb 2010-04-27]
