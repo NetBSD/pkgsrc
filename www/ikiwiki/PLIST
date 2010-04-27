@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/04/04 17:23:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/04/27 13:15:46 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -78,6 +78,7 @@ share/ikiwiki/directives/ikiwiki/directive/polygen.mdwn
 share/ikiwiki/directives/ikiwiki/directive/postsparkline.mdwn
 share/ikiwiki/directives/ikiwiki/directive/progress.mdwn
 share/ikiwiki/directives/ikiwiki/directive/shortcut.mdwn
+share/ikiwiki/directives/ikiwiki/directive/sidebar.mdwn
 share/ikiwiki/directives/ikiwiki/directive/sparkline.mdwn
 share/ikiwiki/directives/ikiwiki/directive/table.mdwn
 share/ikiwiki/directives/ikiwiki/directive/tag.mdwn
@@ -90,6 +91,7 @@ share/ikiwiki/directives/ikiwiki/directive/toggle.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggleable.mdwn
 share/ikiwiki/directives/ikiwiki/directive/version.mdwn
 share/ikiwiki/examples/blog.mdwn
+share/ikiwiki/examples/blog/archives.mdwn
 share/ikiwiki/examples/blog/comments.mdwn
 share/ikiwiki/examples/blog/index.mdwn
 share/ikiwiki/examples/blog/posts.mdwn
@@ -114,9 +116,9 @@ share/ikiwiki/examples/softwaresite/index.mdwn
 share/ikiwiki/examples/softwaresite/news.mdwn
 share/ikiwiki/examples/softwaresite/news/version_1.0.mdwn
 share/ikiwiki/examples/softwaresite/templates/release.mdwn
-share/ikiwiki/javascript/ikiwiki.js
-share/ikiwiki/javascript/relativedate.js
-share/ikiwiki/javascript/toggle.js
+share/ikiwiki/javascript/ikiwiki/ikiwiki.js
+share/ikiwiki/javascript/ikiwiki/relativedate.js
+share/ikiwiki/javascript/ikiwiki/toggle.js
 share/ikiwiki/po/cs/basewiki/ikiwiki.cs.po
 share/ikiwiki/po/cs/basewiki/ikiwiki/directive.cs.po
 share/ikiwiki/po/cs/basewiki/ikiwiki/formatting.cs.po
@@ -379,6 +381,7 @@ share/ikiwiki/templates/archivepage.tmpl
 share/ikiwiki/templates/atomitem.tmpl
 share/ikiwiki/templates/atompage.tmpl
 share/ikiwiki/templates/autoindex.tmpl
+share/ikiwiki/templates/autotag.tmpl
 share/ikiwiki/templates/blogpost.tmpl
 share/ikiwiki/templates/calendarmonth.tmpl
 share/ikiwiki/templates/calendaryear.tmpl
