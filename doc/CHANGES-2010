@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1695 2010/04/27 01:14:44 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1696 2010/04/27 13:15:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2143,3 +2143,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Moose-Autobox to 0.11 [seb 2010-04-27]
 	Updated devel/p5-MooseX-Params-Validate to 0.14 [seb 2010-04-27]
 	Updated devel/m17n-lib to 1.6.1 [obache 2010-04-27]
+	Updated www/ikiwiki to 3.20100427 [schmonz 2010-04-27]
