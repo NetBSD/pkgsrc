@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/27 18:42:11 minskim Exp $
+share/texmf-dist/doc/latex/ftcap/ftcap.pdf
+share/texmf-dist/doc/latex/ftcap/ftcap.tex
