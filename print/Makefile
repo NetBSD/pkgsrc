@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2010/04/27 18:43:30 minskim Exp $
+# $NetBSD: Makefile,v 1.379 2010/04/27 18:50:04 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -260,6 +260,8 @@ SUBDIR+=	tex-framed
 SUBDIR+=	tex-framed-doc
 SUBDIR+=	tex-ftcap
 SUBDIR+=	tex-ftcap-doc
+SUBDIR+=	tex-fwlw
+SUBDIR+=	tex-fwlw-doc
 SUBDIR+=	tex-geometry
 SUBDIR+=	tex-geometry-doc
 SUBDIR+=	tex-german
