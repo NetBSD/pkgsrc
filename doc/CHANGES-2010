@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1691 2010/04/27 00:39:46 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1692 2010/04/27 00:43:50 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-fnpara version 2009 [minskim 2010-04-26]
 	Added print/tex-fnpara-doc version 2009 [minskim 2010-04-26]
 	Updated devel/p5-Module-Build to 0.36070 [seb 2010-04-27]
+	Updated devel/p5-Module-CoreList to 2.31 [seb 2010-04-27]
