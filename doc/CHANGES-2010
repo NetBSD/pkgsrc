@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1700 2010/04/27 18:58:24 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1701 2010/04/27 20:55:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2152,3 +2152,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-fwlw-doc version 2009 [minskim 2010-04-27]
 	Added print/tex-ifmtarg version 1.2a [minskim 2010-04-27]
 	Added print/tex-ifmtarg-doc version 1.2a [minskim 2010-04-27]
+	Added print/tex-kix version 2009 [minskim 2010-04-27]
+	Added print/tex-kix-doc version 2009 [minskim 2010-04-27]
