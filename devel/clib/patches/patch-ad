@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/04/27 23:52:53 tonnerre Exp $
+
+--- config.h.in.orig	2010-04-27 23:46:29.000000000 +0000
++++ config.h.in
+@@ -179,3 +179,6 @@
+ /* Define to the type of an unsigned integer type of width exactly 8 bits if
+    such a type exists and the standard includes do not define it. */
+ #undef uint8_t
++
++#undef HAVE_NETINET_IN_H
++#undef HAVE_NETINET6_IN6_H
