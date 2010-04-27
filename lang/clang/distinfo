@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.2 2009/11/25 12:32:30 hasso Exp $
+$NetBSD: distinfo,v 1.3 2010/04/27 15:12:08 drochner Exp $
 
-SHA1 (clang-2.6.tar.gz) = 188f29ad3b2c64fcdc791aa34b323ed06452d7ae
-RMD160 (clang-2.6.tar.gz) = b7e44abbf28902ff8e3fd4578a5ff9dd34f40817
-Size (clang-2.6.tar.gz) = 3857138 bytes
-SHA1 (llvm-2.6.tar.gz) = 547471147cbf6d3e49539e01196ffada2c79c250
-RMD160 (llvm-2.6.tar.gz) = 24d58cb052ab5879aae59eaf4885ec41186ee22a
-Size (llvm-2.6.tar.gz) = 7790380 bytes
-SHA1 (patch-aa) = 173c470dbeab1912d29e97e9d91ec1581ed625b1
-SHA1 (patch-ac) = 08bf497cae798e65100fde06e294b4b31eedbec3
-SHA1 (patch-ad) = b7f4da294510666063b655540991f51c9044d618
-SHA1 (patch-ae) = 61b4d1c103ba3a3332ef748998c2a8930028d780
+SHA1 (clang-2.7.tgz) = 4d8326bfe2308a7355a5e4ca2eb172bffd761e1e
+RMD160 (clang-2.7.tgz) = 177fdcf59be4a60c37cf0dfb058535c9cdbbad4e
+Size (clang-2.7.tgz) = 4953739 bytes
+SHA1 (llvm-2.7.tgz) = 059fc21b0ec1b649c4a3dec81756e5f92aa131a2
+RMD160 (llvm-2.7.tgz) = 0fa2f362dd6a45efec35ce8fa0f8d36d98f32c8f
+Size (llvm-2.7.tgz) = 8374297 bytes
+SHA1 (patch-ac) = 3b8b72035d391456c58ffb787284b1fb873b6732
+SHA1 (patch-ad) = b90fa4fa75ef1f7c8cb9475798bf7f8e53e6baa9
+SHA1 (patch-ae) = 7ace4a3835f5998fbd9582f531237977dc948849
