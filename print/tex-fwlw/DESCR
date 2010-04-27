@@ -1,0 +1,4 @@
+The package extracts the first and last words of a page, together with
+the first word of the next page, just before the page is formed into
+the object to print.  The package defines a couple of page styles that
+use the words that have been extracted.
