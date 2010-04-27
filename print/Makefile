@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2010/04/26 17:26:33 minskim Exp $
+# $NetBSD: Makefile,v 1.377 2010/04/27 18:37:26 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -256,6 +256,8 @@ SUBDIR+=	tex-fnpara-doc
 SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-footmisc
 SUBDIR+=	tex-footmisc-doc
+SUBDIR+=	tex-framed
+SUBDIR+=	tex-framed-doc
 SUBDIR+=	tex-geometry
 SUBDIR+=	tex-geometry-doc
 SUBDIR+=	tex-german
