@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1690 2010/04/26 17:26:33 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1691 2010/04/27 00:39:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2138,3 +2138,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-fncylab-doc version 1.0 [minskim 2010-04-26]
 	Added print/tex-fnpara version 2009 [minskim 2010-04-26]
 	Added print/tex-fnpara-doc version 2009 [minskim 2010-04-26]
+	Updated devel/p5-Module-Build to 0.36070 [seb 2010-04-27]
