@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/27 23:52:53 tonnerre Exp $
+include/clib/clib.h
+include/clib/queue.h
+lib/libclib.la

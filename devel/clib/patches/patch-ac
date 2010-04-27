@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/04/27 23:52:53 tonnerre Exp $
+
+--- configure.orig	2010-04-27 23:42:59.000000000 +0000
++++ configure
+@@ -6813,7 +6813,7 @@ fi
+ 
+ 
+ for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
+-		  inttypes.h stdint.h unistd.h
++		  inttypes.h stdint.h unistd.h netinet/in.h netinet6/in6.h
+ do
+ as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ { $as_echo "$as_me:$LINENO: checking for $ac_header" >&5

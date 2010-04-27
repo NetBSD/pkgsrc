@@ -1,0 +1,3 @@
+The clib provides advanced features to the C programming language,
+such as dynamically resizing arrays, hash tables or operations
+like establishing a TCP connection to a string.

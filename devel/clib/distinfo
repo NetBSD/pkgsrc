@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/27 23:52:53 tonnerre Exp $
+
+SHA1 (clib-0.2.2.tar.bz2) = fa52fb10badd399884ef0572173b638f9da8dc05
+RMD160 (clib-0.2.2.tar.bz2) = deef15e980af658d5f38e341240fc83baf486d65
+Size (clib-0.2.2.tar.bz2) = 386945 bytes
+SHA1 (patch-aa) = 9dfec91e036b589c9bcf3cc23d61859df621965d
+SHA1 (patch-ab) = ffdd731c5e4628daa90364887d4793c3ae64a92f
+SHA1 (patch-ac) = 70d80413dcc4fd427d30f9c0e54ae5a099c5e27b
+SHA1 (patch-ad) = 41cd3192d06dd4a6425d925954e0c44adbfba0a0
