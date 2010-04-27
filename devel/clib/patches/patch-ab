@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/04/27 23:52:53 tonnerre Exp $
+
+--- configure.ac
++++ configure.ac
+@@ -40,7 +40,7 @@ AC_CHECK_LIB([nbcompat], [main], [LIBS="-lnbcompat $LIBS"])
+ # Checks for header files.
+ AC_CHECK_HEADERS([string.h strings.h memory.h stdlib.h unistd.h queue.h	\
+ 	sys/types.h sys/queue.h nbcompat/queue.h assert.h stddef.h	\
+-	sys/socket.h netdb.h])
++	sys/socket.h netdb.h netinet/in.h netinet6/in6.h])
+ CL_IFDEF(SLIST_HEAD, [SLIST_HEAD(name,type)],
+ 	[struct name { struct type *slh_first; /* first element */ }],
+ 	[Singly-linked list head])
