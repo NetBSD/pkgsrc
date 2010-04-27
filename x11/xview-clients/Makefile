@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/12/10 20:37:36 abs Exp $
+# $NetBSD: Makefile,v 1.34 2010/04/27 22:08:42 dholland Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-clients-3.2.1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		OpenLook applications and man pages
+
+MAKE_JOBS_SAFE=		no
 
 NOT_FOR_PLATFORM=	*-*-alpha	# it builds but everything segfaults...
 
