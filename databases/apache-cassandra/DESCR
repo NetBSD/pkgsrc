@@ -1,0 +1,3 @@
+The Apache Cassandra Project develops a highly scalable second-generation
+distributed database, bringing together  Dynamo's fully distributed design
+and Bigtable's ColumnFamily-based data model.
