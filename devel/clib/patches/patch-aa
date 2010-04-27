@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/27 23:52:53 tonnerre Exp $
+
+--- clib_internal.h
++++ clib_internal.h
+@@ -36,6 +36,12 @@
+ #include <assert.h>
+ #endif
+ 
++#ifdef HAVE_NETINET_IN_H
++#include <netinet/in.h>
++#endif
++#ifdef HAVE_NETINET6_IN6_H
++#include <netinet6/in6.h>
++#endif
+ #ifdef HAVE_SYS_SOCKET_H
+ #include <sys/socket.h>
+ #endif
