@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1701 2010/04/27 20:55:41 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1702 2010/04/27 23:16:30 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2154,3 +2154,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-ifmtarg-doc version 1.2a [minskim 2010-04-27]
 	Added print/tex-kix version 2009 [minskim 2010-04-27]
 	Added print/tex-kix-doc version 2009 [minskim 2010-04-27]
+	Added databases/apache-cassandra version 0.6.1 [tonnerre 2010-04-27]
