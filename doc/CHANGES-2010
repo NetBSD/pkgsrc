@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1698 2010/04/27 18:43:30 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1699 2010/04/27 18:50:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2148,3 +2148,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-framed-doc version 0.95 [minskim 2010-04-27]
 	Added print/tex-ftcap version 1.4 [minskim 2010-04-27]
 	Added print/tex-ftcap-doc version 1.4 [minskim 2010-04-27]
+	Added print/tex-fwlw version 2009 [minskim 2010-04-27]
+	Added print/tex-fwlw-doc version 2009 [minskim 2010-04-27]
