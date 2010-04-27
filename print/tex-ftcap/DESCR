@@ -1,0 +1,4 @@
+For several reasons a \caption may be desirable at the top of a table
+environment.  This package changes the table environment such that
+\abovecaptionskip and \belowcaptionskip are swapped.  The package
+should also work with a non-standard table environment.
