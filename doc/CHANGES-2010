@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1703 2010/04/28 00:30:51 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.1704 2010/04/28 00:31:07 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2156,3 +2156,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-kix-doc version 2009 [minskim 2010-04-27]
 	Added databases/apache-cassandra version 0.6.1 [tonnerre 2010-04-27]
 	Added devel/clib version 0.2.2 [tonnerre 2010-04-28]
+	Added sysutils/bcollect version 0.6.0 [tonnerre 2010-04-28]
