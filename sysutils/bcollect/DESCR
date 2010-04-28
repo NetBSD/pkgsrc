@@ -1,0 +1,13 @@
+bcollect is a tool for backing up remote hosts to local directories. It
+can keep a defined number of copies for specific backup intervals to
+give you a backlog of available backups for restoring data.
+
+bcollect keeps its backups directly accessible as files and directories
+so you can search through them and access files with regular tools and
+just copy files back as needed.
+
+In order to save space, bcollect uses hardlinks between different
+instances of the same backed-up host so multiple backups don't take up
+the same space multiple times. Only files which are actually different
+between two backups actually occupy space. If the file has not been
+changed, a reference will be created to the original file.
