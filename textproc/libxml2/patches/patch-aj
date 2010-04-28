@@ -1,0 +1,18 @@
+$NetBSD: patch-aj,v 1.1 2010/04/28 08:54:30 obache Exp $
+
+Inlucde resolv.h conditionally:
+  https://bugzilla.gnome.org/show_bug.cgi?id=617053
+
+--- nanohttp.c.orig	2009-10-19 11:55:48.000000000 +0000
++++ nanohttp.c
+@@ -65,8 +65,10 @@
+ #include <strings.h>
+ #endif
+ #ifdef SUPPORT_IP6
++#ifdef HAVE_RESOLV_H
+ #include <resolv.h>
+ #endif
++#endif
+ #ifdef HAVE_ZLIB_H
+ #include <zlib.h>
+ #endif
