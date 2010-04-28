@@ -1,0 +1,6 @@
+The listing environment is provided and is similar to figure and
+table, although it is not a floating environment.  Includes support
+for \caption, \label, \ref, and introduces \listoflistings,
+\listingname, \listlistingname.  It produces a .lol file.  It does not
+change \@makecaption (unless the option bigcaptions is used), so
+packages that change the layout of \caption still work.
