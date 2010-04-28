@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1706 2010/04/28 15:59:38 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1707 2010/04/28 16:06:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2160,3 +2160,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/pstotext to 1.9nb1 [obache 2010-04-28]
 	Added print/tex-listing version 1.2 [minskim 2010-04-28]
 	Added print/tex-listing-doc version 1.2 [minskim 2010-04-28]
+	Added print/tex-magaz version 0.2 [minskim 2010-04-28]
+	Added print/tex-magaz-doc version 0.2 [minskim 2010-04-28]
