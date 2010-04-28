@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/03/20 13:55:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/04/28 22:01:43 morr Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -6,6 +6,16 @@ bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
 ${PLIST.gui}bin/gitk
+${PERL5_SUB_INSTALLVENDORLIB}/Git.pm
+lib/perl5/vendor_perl/man/man3/Git.3
+${PLIST.python}${PYSITELIB}/git_remote_helpers/__init__.py
+${PLIST.python}${PYSITELIB}/git_remote_helpers/__init__.pyc
+${PLIST.python}${PYSITELIB}/git_remote_helpers/git/__init__.py
+${PLIST.python}${PYSITELIB}/git_remote_helpers/git/__init__.pyc
+${PLIST.python}${PYSITELIB}/git_remote_helpers/git/git.py
+${PLIST.python}${PYSITELIB}/git_remote_helpers/git/git.pyc
+${PLIST.python}${PYSITELIB}/git_remote_helpers/util.py
+${PLIST.python}${PYSITELIB}/git_remote_helpers/util.pyc
 libexec/git-core/git
 libexec/git-core/git-add
 libexec/git-core/git-add--interactive
@@ -112,7 +122,10 @@ libexec/git-core/git-receive-pack
 libexec/git-core/git-reflog
 libexec/git-core/git-relink
 libexec/git-core/git-remote
-libexec/git-core/git-remote-curl
+libexec/git-core/git-remote-ftp
+libexec/git-core/git-remote-ftps
+libexec/git-core/git-remote-http
+libexec/git-core/git-remote-https
 libexec/git-core/git-repack
 libexec/git-core/git-replace
 libexec/git-core/git-repo-config
@@ -146,8 +159,8 @@ libexec/git-core/git-unpack-objects
 libexec/git-core/git-update-index
 libexec/git-core/git-update-ref
 libexec/git-core/git-update-server-info
-libexec/git-core/git-upload-pack
 libexec/git-core/git-upload-archive
+libexec/git-core/git-upload-pack
 libexec/git-core/git-var
 libexec/git-core/git-verify-pack
 libexec/git-core/git-verify-tag
@@ -216,6 +229,7 @@ ${PLIST.gui}share/git-gui/lib/spellcheck.tcl
 ${PLIST.gui}share/git-gui/lib/sshkey.tcl
 ${PLIST.gui}share/git-gui/lib/status_bar.tcl
 ${PLIST.gui}share/git-gui/lib/tclIndex
+${PLIST.gui}share/git-gui/lib/themed.tcl
 ${PLIST.gui}share/git-gui/lib/tools.tcl
 ${PLIST.gui}share/git-gui/lib/tools_dlg.tcl
 ${PLIST.gui}share/git-gui/lib/transport.tcl
@@ -223,6 +237,8 @@ ${PLIST.gui}share/git-gui/lib/win32.tcl
 ${PLIST.gui}share/git-gui/lib/win32_shortcut.js
 ${PLIST.gui}share/gitk/lib/msgs/de.msg
 ${PLIST.gui}share/gitk/lib/msgs/es.msg
+${PLIST.gui}share/gitk/lib/msgs/fr.msg
+${PLIST.gui}share/gitk/lib/msgs/hu.msg
 ${PLIST.gui}share/gitk/lib/msgs/it.msg
 ${PLIST.gui}share/gitk/lib/msgs/ja.msg
 ${PLIST.gui}share/gitk/lib/msgs/ru.msg
