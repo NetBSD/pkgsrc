@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.5 2008/12/15 10:58:53 obache Exp $
+# $NetBSD: find-libs.mk,v 1.6 2010/04/28 08:02:18 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -71,6 +71,18 @@ BUILTIN_LIB_FOUND.${_lib_}!=	\
 	else								\
 		${ECHO} no;						\
 	fi
+.    if BUILTIN_LIB_FOUND.${_lib_}=="no" && defined(BELIBRARIES) && !empty(BELIBRARIES)
+.      for _path_ in ${BELIBRARIES:S/;/ /g}
+.        if BULITIN_LIB_FOUND.${_lib_} == "no"
+BUILTIN_LIB_FOUND.${_lib_}!=    \
+	if ${TEST} "`${ECHO} ${_path_}/lib${_lib_}.*`" != "${_path_}/lib/lib${_lib_}.*"; then \
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
 .  endif
 MAKEVARS+=	BUILTIN_LIB_FOUND.${_lib_}
 .endfor
