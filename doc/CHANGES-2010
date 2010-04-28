@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1710 2010/04/28 16:39:06 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1711 2010/04/28 20:41:19 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-midpage-doc version 1.1a [minskim 2010-04-28]
 	Added print/tex-needspace version 1.3b [minskim 2010-04-28]
 	Added print/tex-nextpage version 1.1a [minskim 2010-04-28]
+	Added devel/p5-Class-Field version 0.15 [seb 2010-04-28]
