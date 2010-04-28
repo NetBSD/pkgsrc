@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/04/25 12:46:19 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/28 07:32:41 obache Exp $
 
 * Set absolute path for GS cmmand.
 * Fixes CVE-2005-2536 and SA20012
@@ -133,7 +133,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/04/25 12:46:19 obache Exp $
 +  if (p == 0) { /* child */
 +    close(fd[0]);
 +    dup2(fd[1], 1); /* Redirect stdout into pipe to parent */
-+    execvp("gs", gs_argv);
++    execvp(gs_cmd, gs_argv);
 +    perror("execvp: "); status=cleanup(); exit(1);
 +  } else { /* parent */
 +    close(fd[1]);
