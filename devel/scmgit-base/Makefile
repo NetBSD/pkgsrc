@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/02/22 09:20:30 obache Exp $
+# $NetBSD: Makefile,v 1.24 2010/04/28 22:01:43 morr Exp $
 #
 
 .include "../../devel/scmgit/Makefile.common"
@@ -15,21 +15,20 @@ DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
 USE_LANGUAGES=		c99
 USE_TOOLS+=		perl:run sh:run msgfmt
 
-CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
-
-CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl:Q}
-CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat:Q}
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv:Q}
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib:Q}
-
-BUILD_TARGET=		all
-INSTALL_TARGET=		install
-
 PERL5_CONFIGURE=	no
 PERL5_PACKLIST=		auto/Git/.packlist
 REPLACE_PERL+=		*.perl */*.perl */*/*.perl
 REPLACE_PERL+=		contrib/hooks/update-paranoid
+
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+
+CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl}
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
+BUILD_TARGET=		all
 
 REPLACE_SH+=		contrib/hooks/post-receive-email
 REPLACE_SH+=		contrib/hooks/pre-auto-gc-battery
@@ -62,11 +61,13 @@ REQD_FILES+=		${GIT_TEMPLATES:@.t.@\
 			@:M*}
 
 
-CONFIGURE_ENV+=		HOME=${PREFIX:Q}
-CONFIGURE_ENV+=		gitexecdir=${GITCOREDIR:Q}
+CONFIGURE_ENV+=		HOME=${PREFIX}
+CONFIGURE_ENV+=		gitexecdir=${GITCOREDIR}
+
+MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 
 GIT_TEMPLATE_INSTDIR=	${EGDIR}/${GIT_TEMPLATEDIR}
-MAKE_ENV+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR:Q}
+MAKE_ENV+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR}
 MESSAGE_SUBST+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR}
 
 SUBST_CLASSES+=		fix-paths
@@ -89,10 +90,10 @@ SUBST_SED.fix-cd-P=	-e "s/cd -P/cd/g"
 #.include "../../editors/emacs/modules.mk" # XXX TODO (see patch-ad)
 
 .include "options.mk"
-.include "../../lang/perl5/module.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
