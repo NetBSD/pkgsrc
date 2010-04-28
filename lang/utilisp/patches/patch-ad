@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/04/28 23:42:38 dholland Exp $
+
+--- Makefile.in.orig	2010-04-28 23:40:19.000000000 +0000
++++ Makefile.in
+@@ -2,7 +2,7 @@
+ # SUBDIR = src lib ulx
+ SUBDIR = src lib 
+ 
+-all : ${SUBDIR}
++all : src .WAIT lib #${SUBDIR}
+ 
+ install : ${SUBDIR}
+ 	cd src; make install 
