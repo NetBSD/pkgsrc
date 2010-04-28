@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1705 2010/04/28 07:32:55 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1706 2010/04/28 15:59:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2158,3 +2158,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/clib version 0.2.2 [tonnerre 2010-04-28]
 	Added sysutils/bcollect version 0.6.0 [tonnerre 2010-04-28]
 	Updated converters/pstotext to 1.9nb1 [obache 2010-04-28]
+	Added print/tex-listing version 1.2 [minskim 2010-04-28]
+	Added print/tex-listing-doc version 1.2 [minskim 2010-04-28]
