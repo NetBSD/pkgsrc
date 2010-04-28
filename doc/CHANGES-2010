@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1707 2010/04/28 16:06:50 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1708 2010/04/28 16:15:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2162,3 +2162,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-listing-doc version 1.2 [minskim 2010-04-28]
 	Added print/tex-magaz version 0.2 [minskim 2010-04-28]
 	Added print/tex-magaz-doc version 0.2 [minskim 2010-04-28]
+	Added print/tex-midpage version 1.1a [minskim 2010-04-28]
+	Added print/tex-midpage-doc version 1.1a [minskim 2010-04-28]
