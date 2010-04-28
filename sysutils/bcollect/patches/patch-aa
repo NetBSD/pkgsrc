@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/28 00:29:21 tonnerre Exp $
+
+--- examples/Makefile.in.orig	2010-02-23 19:56:00.000000000 +0000
++++ examples/Makefile.in
+@@ -156,7 +156,7 @@ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+-sysconfdir = @sysconfdir@
++sysconfdir = @prefix@/share/examples/bcollect
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
