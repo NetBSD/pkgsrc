@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
+$NetBSD: patch-aa,v 1.4 2010/04/28 07:43:56 obache Exp $
 
---- Makefile.in.orig	2008-02-04 23:00:07.000000000 +0000
-+++ Makefile.in	2008-06-18 21:49:27.000000000 +0100
-@@ -4,7 +4,7 @@
+--- Makefile.in.orig	2008-11-25 20:24:49.000000000 +0000
++++ Makefile.in
+@@ -4,7 +4,7 @@ CLEAN_SUBDIRS = test
  
  PROGRAM_NAME         = $(progname)
  PROGRAM_SOURCES      = modules.c
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
  PROGRAM_PRELINK      = $(COMPILE) -c $(top_srcdir)/server/buildmark.c
  PROGRAM_DEPENDENCIES = \
    server/libmain.la \
-@@ -14,7 +14,7 @@
+@@ -14,7 +14,7 @@ PROGRAM_DEPENDENCIES = \
  
  PROGRAMS        = $(PROGRAM_NAME)
  TARGETS         = $(PROGRAMS) $(shared_build) $(other_targets)
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
  	install-other install-cgi install-include install-suexec install-build \
  	install-man
  
-@@ -30,8 +30,8 @@
+@@ -30,8 +30,8 @@ include $(top_srcdir)/build/program.mk
  
  install-conf:
  	@echo Installing configuration files
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
  	@cd $(top_srcdir)/docs/conf; \
  	for i in mime.types magic; do \
  	    if test ! -f $(DESTDIR)$(sysconfdir)/$$i; then \
-@@ -69,7 +69,8 @@
+@@ -69,7 +69,8 @@ install-conf:
  	    				-e 's#@@SSLPort@@#$(SSLPORT)#g' \
  	    				< $$i; \
  	    		fi \
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
  	    	chmod 0644 $(DESTDIR)$(sysconfdir)/original/$$i; \
  	    	file=$$i; \
  	    	if [ "$$i" = "httpd.conf" ]; then \
-@@ -79,13 +80,16 @@
+@@ -79,13 +80,16 @@ install-conf:
  	    		$(INSTALL_DATA) $(DESTDIR)$(sysconfdir)/original/$$i $(DESTDIR)$(sysconfdir)/$$file; \
  	    	fi; \
  	    	fi; \
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
  	fi
  
  # Create a sanitized config_vars.mk
-@@ -103,7 +107,7 @@
+@@ -103,7 +107,7 @@ install-build: build/config_vars.out
  		  $(top_srcdir)/build/instdso.sh; do \
  	 $(INSTALL_PROGRAM) $$f $(DESTDIR)$(installbuilddir); \
  	done
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
  	@rm build/config_vars.out
  
  htdocs-srcdir = $(top_srcdir)/docs/docroot
-@@ -120,48 +124,27 @@
+@@ -120,48 +124,28 @@ dox:
  	doxygen $(top_srcdir)/docs/doxygen.conf
  
  install-htdocs:
@@ -83,6 +83,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
 -		cd $(DESTDIR)$(htdocsdir) && find . -name ".svn" -type d -print | xargs rm -rf 2>/dev/null || true; \
 -	    fi; \
 -	fi
++		$(MKINSTALLDIRS) $(DESTDIR)$(htdocsdir) ; \
 +		test -d $(htdocs-srcdir) && (cd $(htdocs-srcdir) && \
 +		@PAX@ -rwppm . $(DESTDIR)$(htdocsdir))
  
@@ -124,7 +125,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/18 21:38:01 tron Exp $
  
  install-other:
  	@test -d $(DESTDIR)$(logfiledir) || $(MKINSTALLDIRS) $(DESTDIR)$(logfiledir)
-@@ -207,14 +190,10 @@
+@@ -208,14 +192,10 @@ install-man:
  	@test -d $(DESTDIR)$(mandir)/man1 || $(MKINSTALLDIRS) $(DESTDIR)$(mandir)/man1
  	@test -d $(DESTDIR)$(mandir)/man8 || $(MKINSTALLDIRS) $(DESTDIR)$(mandir)/man8
  	@test -d $(DESTDIR)$(manualdir)   || $(MKINSTALLDIRS) $(DESTDIR)$(manualdir)
