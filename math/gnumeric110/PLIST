@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/18 21:00:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/28 18:38:11 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -217,8 +217,8 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
-lib/goffice/0.8.0/plugins/gnumeric/gnumeric.la
-lib/goffice/0.8.0/plugins/gnumeric/plugin.xml
+lib/goffice/0.8.2/plugins/gnumeric/gnumeric.la
+lib/goffice/0.8.2/plugins/gnumeric/plugin.xml
 lib/libspreadsheet.la
 lib/pkgconfig/libspreadsheet-1.10.pc
 man/man1/gnumeric.1
@@ -881,6 +881,8 @@ share/locale/rw/LC_MESSAGES/gnumeric-functions.mo
 share/locale/rw/LC_MESSAGES/gnumeric.mo
 share/locale/sk/LC_MESSAGES/gnumeric-functions.mo
 share/locale/sk/LC_MESSAGES/gnumeric.mo
+share/locale/sl/LC_MESSAGES/gnumeric-functions.mo
+share/locale/sl/LC_MESSAGES/gnumeric.mo
 share/locale/sr/LC_MESSAGES/gnumeric-functions.mo
 share/locale/sr/LC_MESSAGES/gnumeric.mo
 share/locale/sr@latin/LC_MESSAGES/gnumeric-functions.mo
