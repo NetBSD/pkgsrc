@@ -1,0 +1,4 @@
+The Perl 5 module Template::Toolkit::Simple is a simple wrapper
+around Template Toolkit. It exports a function called tt which
+returns a new Template::Toolkit::Simple object. The object supports
+method calls for setting all the Template Toolkit options.
