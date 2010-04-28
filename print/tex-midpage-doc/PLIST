@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/28 16:14:31 minskim Exp $
+share/texmf-dist/doc/latex/midpage/midpage.pdf
+share/texmf-dist/doc/latex/midpage/midpage.tex
