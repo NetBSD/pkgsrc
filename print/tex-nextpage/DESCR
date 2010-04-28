@@ -1,0 +1,4 @@
+This package provides \clearpage and \newpage variants that guarantee
+to end up on even/odd numbered pages; these 4 commands all have an
+optional argument whose content will be placed on any "empty" page
+generated.
