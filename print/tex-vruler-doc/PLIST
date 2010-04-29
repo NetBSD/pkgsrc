@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/29 23:04:38 minskim Exp $
+share/texmf-dist/doc/latex/vruler/miscdoc.sty
+share/texmf-dist/doc/latex/vruler/vruler-example.tex
+share/texmf-dist/doc/latex/vruler/vruler.pdf
+share/texmf-dist/doc/latex/vruler/vruler.tex
