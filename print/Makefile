@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.389 2010/04/29 22:46:06 minskim Exp $
+# $NetBSD: Makefile,v 1.390 2010/04/29 22:49:01 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -410,6 +410,7 @@ SUBDIR+=	tex-printlen
 SUBDIR+=	tex-prosper
 SUBDIR+=	tex-rcsinfo
 SUBDIR+=	tex-rcsinfo-doc
+SUBDIR+=	tex-relsize
 SUBDIR+=	tex-resume
 SUBDIR+=	tex-rotating
 SUBDIR+=	tex-rotating-doc
