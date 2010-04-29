@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1724 2010/04/29 22:58:33 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1725 2010/04/29 22:59:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2187,3 +2187,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-ulem-doc version 2009 [minskim 2010-04-29]
 	Added print/tex-verbdef version 0.2 [minskim 2010-04-29]
 	Added print/tex-verbdef-doc version 0.2 [minskim 2010-04-29]
+	Added print/tex-version version 2.0 [minskim 2010-04-29]
