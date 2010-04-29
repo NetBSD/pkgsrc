@@ -1,0 +1,6 @@
+This package defines macros \includeversion{NAME} and
+\excludeversion{NAME}, each of which defines an environment NAME whose
+text is to be included or excluded from compilation.  Although the
+command syntax is very similar to that of comment, comment.sty is to
+be preferred to version.sty for documents where significant chunks of
+text may be excluded.
