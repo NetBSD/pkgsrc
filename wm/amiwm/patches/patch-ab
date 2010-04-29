@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/04/29 00:02:07 dholland Exp $
+
+--- lex.l~	1997-12-12 17:21:58.000000000 +0000
++++ lex.l
+@@ -6,7 +6,7 @@ extern int ParseError;
+ extern FILE *rcfile;
+ #undef yyin
+ #define yyin rcfile
+-#define yywrap() 1
++static int yywrap(void) { return 1; }
+ extern int parse_keyword(char *);
+ void fixup_string(char *, char *);
+ %}
