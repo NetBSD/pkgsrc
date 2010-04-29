@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2010/02/27 18:19:02 snj Exp $
+# $NetBSD: Makefile,v 1.18 2010/04/29 22:23:37 wiz Exp $
 
 .include "../../shells/zsh/Makefile.common"
 
 ZSH_VERSION=	4.3.10
+PKGREVISION=	1
 ZSH_MAINTAINER=	uebayasi@NetBSD.org
 
 USE_TOOLS+=	env
@@ -17,6 +18,7 @@ SUBST_FILES.prefix-fixup= \
 	Functions/Calendar/calendar_add \
 	Functions/Misc/run-help \
 	Functions/Misc/checkmail \
+	Functions/Misc/sticky-note \
 	Functions/Misc/zcalc \
 	Functions/Misc/zkbd \
 	Functions/Example/cat
