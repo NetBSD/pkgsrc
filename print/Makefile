@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.392 2010/04/29 22:54:56 minskim Exp $
+# $NetBSD: Makefile,v 1.393 2010/04/29 22:58:34 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -458,6 +458,8 @@ SUBDIR+=	tex-ulem
 SUBDIR+=	tex-ulem-doc
 SUBDIR+=	tex-url
 SUBDIR+=	tex-url-doc
+SUBDIR+=	tex-verbdef
+SUBDIR+=	tex-verbdef-doc
 SUBDIR+=	tex-wallpaper
 SUBDIR+=	tex-wallpaper-doc
 SUBDIR+=	tex-xcolor
