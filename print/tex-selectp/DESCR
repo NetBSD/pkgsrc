@@ -1,0 +1,4 @@
+This package defines a command \outputonly, whose argument is a list
+of pages to be output.  With the command present (before
+\begin{document}), only those pages are output.  This package was
+inspired by code published by Knuth in TUGboat 8(2) (July 1987).
