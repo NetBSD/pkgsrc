@@ -1,0 +1,7 @@
+\printlength{length} prints the value of a LaTeX length in the units
+specified by \uselengthunit{unit} ('unit' may be any TeX length unit
+except for scaled point, viz., any of: pt, pc, in, mm, cm, bp, dd or
+cc).  When the unit is pt, the printed length value will include any
+stretch or shrink; otherwise these are not printed.  The 'unit'
+argument may also be PT, in which case length values will be printed
+in point units but without any stretch or shrink values.
