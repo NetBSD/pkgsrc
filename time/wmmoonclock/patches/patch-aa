@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2010/02/12 00:28:36 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2010/04/29 00:09:28 dholland Exp $
 
 --- Makefile.orig	Tue Mar 23 03:20:32 1999
 +++ Makefile	Thu Oct 17 00:31:50 2002
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.4 2010/02/12 00:28:36 joerg Exp $
 -DESTDIR= /usr/X11R6
 -LIBDIR = -L/usr/X11R6/lib
 +INCDIR = -I${PREFIX}/include -I${X11BASE}/include
-+DESTDIR= ${PREFIX}
++#DESTDIR= /usr/X11R6
 +LIBDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
  
  # for Linux
