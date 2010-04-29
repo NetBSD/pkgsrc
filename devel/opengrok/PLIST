@@ -1,15 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/04/29 19:50:24 ahoka Exp $
 share/examples/opengrok/paths.tsv
 share/opengrok/README.txt
 share/opengrok/lib/ant.jar
 share/opengrok/lib/bcel-5.1.jar
 share/opengrok/lib/jakarta-oro-2.0.8.jar
 share/opengrok/lib/jmxremote_optional.jar
-share/opengrok/lib/lucene-core-2.2.0.jar
-share/opengrok/lib/lucene-spellchecker-2.2.0.jar
+share/opengrok/lib/lucene-core-2.4.1.jar
+share/opengrok/lib/lucene-spellchecker-2.4.1.jar
 share/opengrok/lib/org.apache.commons.jrcs.diff.jar
 share/opengrok/lib/org.apache.commons.jrcs.rcs.jar
-share/opengrok/lib/servlet-api.jar
 share/opengrok/lib/swing-layout-0.9.jar
 share/opengrok/opengrok.jar
 share/opengrok/run-quiet.sh
