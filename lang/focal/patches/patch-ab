@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2006/01/09 22:14:32 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/29 00:22:02 dholland Exp $
 
---- focal2.c.orig	2006-01-09 22:06:20.000000000 +0000
+--- focal2.c.orig	1995-04-17 13:03:46.000000000 +0000
 +++ focal2.c
+@@ -71,7 +71,7 @@ void library()
+ 		}
+ 		line = NULL;
+ 		sctp = ctp;
+-		while (getline(abuf, fp) != 0) {
++		while (get_line(abuf, fp) != 0) {
+ 			ctp = abuf;
+ 			if ((c=getnb()) != 0) {
+ 				if (isdigit(c) == 0)
 @@ -138,7 +138,7 @@ void library()
  			    ||  strcmp(de->d_name, ".") == 0
  			    ||  strcmp(de->d_name, "..") == 0)

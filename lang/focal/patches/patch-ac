@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/04/29 00:22:02 dholland Exp $
+
+--- proto.h~	1995-04-17 13:03:41.000000000 +0000
++++ proto.h
+@@ -17,7 +17,7 @@ void	popdo ARG((void));
+ void	popfor ARG((void));
+ void	clearfors ARG((struct sym *sp));
+ void	inject ARG((int c));
+-int	getline ARG((char *cp, FILE *fp));
++int	get_line ARG((char *cp, FILE *fp));
+ void	type ARG((void));
+ void	save ARG((struct lno *lnop, FILE *fp));
+ void	erasesyms ARG((void));
