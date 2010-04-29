@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2009/11/23 11:09:36 wiz Exp $
+$NetBSD: distinfo,v 1.21 2010/04/29 07:31:32 obache Exp $
 
-SHA1 (autoconf-2.65.tar.xz) = 348db555467d0eb8a16e4511b5f93cf0ca1d6c86
-RMD160 (autoconf-2.65.tar.xz) = 820f1dac7d87af917178ddc5a8d21a0da89b438d
-Size (autoconf-2.65.tar.xz) = 1132092 bytes
+SHA1 (autoconf-2.65.tar.gz) = ae9e1ab046822007f25c88e1d8f2166e065da8c2
+RMD160 (autoconf-2.65.tar.gz) = 67cf709b61290b47255ccdb2c3113bcd04c42ecd
+Size (autoconf-2.65.tar.gz) = 1738880 bytes
