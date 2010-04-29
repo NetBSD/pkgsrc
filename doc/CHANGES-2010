@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1721 2010/04/29 22:49:00 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1722 2010/04/29 22:52:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2181,3 +2181,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-printlen version 1.1a [minskim 2010-04-29]
 	Added print/tex-selectp version 1.0 [minskim 2010-04-29]
 	Added print/tex-relsize version 3.1 [minskim 2010-04-29]
+	Added print/tex-tabls version 3.5 [minskim 2010-04-29]
+	Added print/tex-tabls-doc version 3.5 [minskim 2010-04-29]
