@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/04/25 02:16:11 reed Exp $
+$NetBSD: distinfo,v 1.5 2010/04/29 00:02:07 dholland Exp $
 
 SHA1 (amiwm0.20pl48.tar.gz) = 6cf5f7197403a9519ea1f3b272e67a8de4fdca43
 RMD160 (amiwm0.20pl48.tar.gz) = abb5922a84501a28a73684c9e056dba6ac6969b7
 Size (amiwm0.20pl48.tar.gz) = 141542 bytes
 SHA1 (patch-aa) = 4927276af44a0c2257eb723959002eef90db6aaf
+SHA1 (patch-ab) = 047bd7f8c495a3d872c98515368f87131eea7162
