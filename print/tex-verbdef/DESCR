@@ -1,0 +1,7 @@
+The package defines a single command \verbdef (which has a *- form,
+like \verb).  \verbdef will define a robust command whose body expands
+to verbatim text.  By using commands defined by \verbdef, one can put
+verbatim text into the arguments of commands; since the defined
+command is robust, it doesn't matter if the argument is moving.  (Full
+details of syntax and caveats about use are in comments in the file
+itself.)
