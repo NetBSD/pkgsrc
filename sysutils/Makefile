@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2010/04/20 17:45:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.492 2010/04/29 06:58:31 jnemeth Exp $
 #
 
 COMMENT=	System utilities
@@ -29,6 +29,7 @@ SUBDIR+=	bacula-wx-console
 SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bcmfw
+SUBDIR+=	bcollect
 SUBDIR+=	bkpupsd
 SUBDIR+=	boxbackup-client
 SUBDIR+=	boxbackup-server
