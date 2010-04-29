@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/04/09 01:38:32 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/04/29 04:55:25 obache Exp $
 
 MODNAME=		ming
 PKGREVISION=		1
@@ -10,6 +10,8 @@ COMMENT=		PHP extension for Ming library
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-ming-[0-9]*
+
+PHP_VERSIONS_ACCEPTED=	52
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=${BUILDLINK_PREFIX.ming}
 
