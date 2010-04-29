@@ -1,0 +1,6 @@
+The package provides an \ul (underline) command will break over line
+ends; this technique may be used to replace \em (both in that form and
+as the \emph command), so as to make output look as if it comes from a
+typewriter.  The package also offers double and wavy underlining, and
+striking out (line through words) and crossing out (/// over words).
+Documentation is to be found in the package file itself.
