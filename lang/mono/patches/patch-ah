@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.10 2010/04/29 08:44:30 kefren Exp $
+--- mono/utils/mono-semaphore.c.orig	2010-04-29 11:29:02.000000000 +0300
++++ mono/utils/mono-semaphore.c	2010-04-29 11:19:30.000000000 +0300
+@@ -22,7 +22,7 @@
+ #  ifdef USE_MACH_SEMA
+ #    define TIMESPEC mach_timespec_t
+ #    define WAIT_BLOCK(a,b) semaphore_timedwait (*(a), *(b))
+-#  elif defined(__OpenBSD__)
++#  elif (defined(__OpenBSD__) || defined(__NetBSD__))
+ #    define TIMESPEC struct timespec
+ #    define WAIT_BLOCK(a) sem_trywait(a)
+ #  else
+@@ -37,7 +37,7 @@
+ 	TIMESPEC ts, copy;
+ 	struct timeval t;
+ 	int res = 0;
+-#if defined(__OpenBSD__)
++#if (defined(__OpenBSD__) || defined(__NetBSD__))
+ 	int timeout;
+ #endif
+ 
+@@ -55,7 +55,7 @@
+ 		ts.tv_nsec -= NSEC_PER_SEC;
+ 		ts.tv_sec++;
+ 	}
+-#if defined(__OpenBSD__)
++#if (defined(__OpenBSD__) || defined(__NetBSD__))
+ 	timeout = ts.tv_sec;
+ 	while (timeout) {
+ 		if ((res = WAIT_BLOCK (sem)) == 0)
