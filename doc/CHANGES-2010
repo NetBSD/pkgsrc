@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1714 2010/04/28 22:30:51 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1715 2010/04/29 05:08:56 morr Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2171,3 +2171,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit to 1.7.0.5 [morr 2010-04-28]
 	Updated devel/scmgit-base to 1.7.0.5 [morr 2010-04-28]
 	Added misc/p5-Vroom version 0.21 [seb 2010-04-28]
+	Updated devel/scmgit-docs to 1.7.0.5 [morr 2010-04-29]
