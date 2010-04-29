@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1717 2010/04/29 22:23:46 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1718 2010/04/29 22:39:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2176,3 +2176,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/libgdiplus to 2.6.4 [kefren 2010-04-29]
 	Updated www/mono-xsp to 2.6.4 [kefren 2010-04-29]
 	Updated shells/zsh-current to 4.3.10nb1 [wiz 2010-04-29]
+	Added print/tex-oubraces version 2009 [minskim 2010-04-29]
+	Added print/tex-oubraces-doc version 2009 [minskim 2010-04-29]
