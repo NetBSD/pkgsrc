@@ -1,13 +1,13 @@
-$NetBSD: patch-db,v 1.2 2009/04/28 10:31:58 hasso Exp $
-
---- mono/utils/mono-proclib.c.orig	2008-11-10 20:56:14 -0800
-+++ mono/utils/mono-proclib.c	2009-03-03 15:30:03 -0800
-@@ -13,14 +13,19 @@
+$NetBSD: patch-db,v 1.3 2010/04/29 08:44:30 kefren Exp $
+--- mono/utils/mono-proclib.c.orig	2010-04-22 18:37:45.000000000 +0300
++++ mono/utils/mono-proclib.c	2010-04-29 09:47:24.000000000 +0300
+@@ -13,15 +13,20 @@
  #endif
  
  /* FIXME: bsds untested */
 -#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ #include <sys/param.h>
  #include <sys/types.h>
  #include <sys/sysctl.h>
 +#ifndef __DragonFly__
@@ -17,10 +17,10 @@ $NetBSD: patch-db,v 1.2 2009/04/28 10:31:58 hasso Exp $
  #include <sys/user.h>
  #endif
 -#ifdef HAVE_STRUCT_KINFO_PROC_KP_PROC
-+#ifdef __DragonFly__
++#if !(defined(__NetBSD__) || defined(__DragonFly__))
 +#define kinfo_pid_member kp_pid
 +#define kinfo_name_member kp_comm
 +#elif HAVE_STRUCT_KINFO_PROC_KP_PROC
- #define kinfo_pid_member kp_proc.p_pid
- #define kinfo_name_member kp_proc.p_comm
- #else
+ #  ifdef KERN_PROC2
+ #    define kinfo_pid_member p_pid
+ #    define kinfo_name_member p_comm
