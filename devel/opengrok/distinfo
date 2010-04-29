@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.6 2008/10/25 18:11:16 adrianp Exp $
+$NetBSD: distinfo,v 1.7 2010/04/29 19:50:24 ahoka Exp $
 
-SHA1 (opengrok-0.7.tar.gz) = 6c3be3e2abe04d0f71e6bb82e40a950240e702fc
-RMD160 (opengrok-0.7.tar.gz) = eefb072a782ca211af1d18756fa1ba2657a9513f
-Size (opengrok-0.7.tar.gz) = 5842589 bytes
-SHA1 (opengrok-0.7-src.tar.gz) = 5f32005065d1f9c0ee8cf988bef6eb4cee626943
-RMD160 (opengrok-0.7-src.tar.gz) = f1e8a5ad2a2527c052394e62f89b5f5fe8a13995
-Size (opengrok-0.7-src.tar.gz) = 1881569 bytes
+SHA1 (opengrok-0.8.1.tar.gz) = e3c54c09d8f516a0af44e90283ffcff3a55b7ae6
+RMD160 (opengrok-0.8.1.tar.gz) = 3634ddb2731f7562441b22afaaa6d812b6baf51c
+Size (opengrok-0.8.1.tar.gz) = 6513865 bytes
 SHA1 (patch-aa) = 22c1e946fc90f7cfbc05ad97541eb3bbc2c03cfe
 SHA1 (patch-ab) = a5bb3931713207adaa6303eb533c2cddc39b8fb0
