@@ -1,0 +1,3 @@
+The basic command of the package is \relsize, whose argument is a
+number of \magsteps to change size; from this are defined commands
+\larger, \smaller, \textlarger, etc.
