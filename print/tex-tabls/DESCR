@@ -1,0 +1,5 @@
+This package modifies LaTeX's array and tabular environments to keep
+text from touching other text or hlines above or below.  Several new
+parameters are defined and some standard macros are re-defined.  The
+package slows down compilation of tables, since each entry is boxed
+twice.
