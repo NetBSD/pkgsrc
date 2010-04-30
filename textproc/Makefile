@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2010/04/24 11:05:59 seb Exp $
+# $NetBSD: Makefile,v 1.536 2010/04/30 10:05:23 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -50,6 +50,7 @@ SUBDIR+=	chasen
 SUBDIR+=	chasen-base
 SUBDIR+=	convertlit
 SUBDIR+=	crimson
+SUBDIR+=	dadadodo
 SUBDIR+=	db2latex
 SUBDIR+=	dblatex
 SUBDIR+=	detex
