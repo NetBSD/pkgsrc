@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1733 2010/04/30 10:16:24 ahoka Exp $
+$NetBSD: CHANGES-2010,v 1.1734 2010/04/30 10:19:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2196,3 +2196,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/filelight to 1.0nb12 [wiz 2010-04-30]
 	Added textproc/dadadodo version 1.04 [wiz 2010-04-30]
 	Updated devel/opengrok to 0.8.1 [ahoka 2010-04-30]
+	Added x11/gtkmm-utils version 0.4.1 [wiz 2010-04-30]
