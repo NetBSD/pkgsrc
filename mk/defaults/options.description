@@ -293,6 +293,8 @@ links-zlib		Enable zlib support for the links WWW browser.
 live			Enable live555 support.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
+lsof-more-secure	Only allow root to view all open files with lsof.
+lsof-less-secure-sockets	If 'lsof-more-secure' is set, allow all sockets to be viewed at all times.
 lua			Enable Lua support.
 lynx			Use and enable support for the lynx browser.
 lzma			Enable LZMA (de)compression support.
