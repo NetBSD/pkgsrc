@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2009/08/30 10:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2010/04/30 03:23:27 sbd Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -19,6 +19,7 @@ SUBDIR+=	libkver
 SUBDIR+=	libnbcompat
 SUBDIR+=	lintpkgsrc
 SUBDIR+=	mtree
+SUBDIR+=	osabi
 SUBDIR+=	p5-pkgsrc-Dewey
 SUBDIR+=	packagekit
 SUBDIR+=	pbulk
