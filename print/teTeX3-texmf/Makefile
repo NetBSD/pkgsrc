@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2010/04/09 22:04:37 markd Exp $
+# $NetBSD: Makefile,v 1.42 2010/04/30 18:55:00 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -15,28 +15,54 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 CONFLICTS+=	teTeX-share-[0-9]*
+DEPENDS+=	tex-a4wide-[0-9]*:../../print/tex-a4wide
+DEPENDS+=	tex-a5comb-[0-9]*:../../print/tex-a5comb
+DEPENDS+=	tex-acromake-[0-9]*:../../print/tex-acromake
+DEPENDS+=	tex-advdate-[0-9]*:../../print/tex-advdate
 DEPENDS+=	tex-ae-[0-9]*:../../fonts/tex-ae
+DEPENDS+=	tex-anonchap-[0-9]*:../../print/tex-anonchap
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
 DEPENDS+=	tex-amscls-[0-9]*:../../print/tex-amscls
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-beamer-[0-9]*:../../print/tex-beamer
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+DEPENDS+=	tex-block-[0-9]*:../../print/tex-block
+DEPENDS+=	tex-bold-extra-[0-9]*:../../print/tex-bold-extra
+DEPENDS+=	tex-boxedminipage-[0-9]*:../../print/tex-boxedminipage
+DEPENDS+=	tex-braket-[0-9]*:../../print/tex-braket
+DEPENDS+=	tex-breakcites-[0-9]*:../../print/tex-breakcites
+DEPENDS+=	tex-cancel-[0-9]*:../../print/tex-cancel
+DEPENDS+=	tex-capt-of-[0-9]*:../../print/tex-capt-of
+DEPENDS+=	tex-captdef-[0-9]*:../../print/tex-captdef
 DEPENDS+=	tex-caption-[0-9]*:../../print/tex-caption
 DEPENDS+=	tex-carlisle-[0-9]*:../../print/tex-carlisle
+DEPENDS+=	tex-cases-[0-9]*:../../print/tex-cases
+DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
+DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
+DEPENDS+=	tex-changepage-[0-9]*:../../print/tex-changepage
+DEPENDS+=	tex-circle-[0-9]*:../../print/tex-circle
 DEPENDS+=	tex-cite-[0-9]*:../../print/tex-cite
+DEPENDS+=	tex-collection-basic-[0-9]*:../../print/tex-collection-basic
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-courier-[0-9]*:../../fonts/tex-courier
-DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
-DEPENDS+=	tex-enctex-[0-9]*:../../print/tex-enctex
+DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
+DEPENDS+=	tex-endnotes-[0-9]*:../../print/tex-endnotes
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
+DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
+DEPENDS+=	tex-fncylab-[0-9]*:../../print/tex-fncylab
+DEPENDS+=	tex-fnpara-[0-9]*:../../print/tex-fnpara
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
+DEPENDS+=	tex-framed-[0-9]*:../../print/tex-framed
+DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
+DEPENDS+=	tex-fwlw-[0-9]*:../../print/tex-fwlw
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 DEPENDS+=	tex-helvetic-[0-9]*:../../fonts/tex-helvetic
+DEPENDS+=	tex-hypernat-[0-9]*:../../print/tex-hypernat
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-hyphen-basque-[0-9]*:../../print/tex-hyphen-basque
 DEPENDS+=	tex-hyphen-bulgarian-[0-9]*:../../print/tex-hyphen-bulgarian
@@ -69,41 +95,60 @@ DEPENDS+=	tex-hyphen-spanish-[0-9]*:../../print/tex-hyphen-spanish
 DEPENDS+=	tex-hyphen-swedish-[0-9]*:../../print/tex-hyphen-swedish
 DEPENDS+=	tex-hyphen-turkish-[0-9]*:../../print/tex-hyphen-turkish
 DEPENDS+=	tex-hyphen-ukrainian-[0-9]*:../../print/tex-hyphen-ukrainian
+DEPENDS+=	tex-ifmtarg-[0-9]*:../../print/tex-ifmtarg
+DEPENDS+=	tex-kix-[0-9]*:../../print/tex-kix
 DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+DEPENDS+=	tex-listing-[0-9]*:../../print/tex-listing
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
 DEPENDS+=	tex-lm-[0-9]*:../../fonts/tex-lm
-DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
+DEPENDS+=	tex-ltxmisc>=2009:../../print/tex-ltxmisc
+DEPENDS+=	tex-magaz-[0-9]*:../../print/tex-magaz
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
-DEPENDS+=	tex-makeindex-[0-9]*:../../textproc/tex-makeindex
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
-DEPENDS+=	tex-mflogo-[0-9]*:../../fonts/tex-mflogo
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
+DEPENDS+=	tex-midpage-[0-9]*:../../print/tex-midpage
 DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
 DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
+DEPENDS+=	tex-needspace-[0-9]*:../../print/tex-needspace
+DEPENDS+=	tex-nextpage-[0-9]*:../../print/tex-nextpage
 DEPENDS+=	tex-nomencl-[0-9]*:../../print/tex-nomencl
-DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+DEPENDS+=	tex-oberdiek>=2009:../../print/tex-oberdiek
+DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
+DEPENDS+=	tex-printlen-[0-9]*:../../print/tex-printlen
+DEPENDS+=	tex-relsize-[0-9]*:../../print/tex-relsize
 DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
 DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
+DEPENDS+=	tex-sansmath-[0-9]*:../../print/tex-sansmath
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
+DEPENDS+=	tex-selectp-[0-9]*:../../print/tex-selectp
 DEPENDS+=	tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 DEPENDS+=	tex-subfigure-[0-9]*:../../print/tex-subfigure
 DEPENDS+=	tex-subfig-[0-9]*:../../print/tex-subfig
 DEPENDS+=	tex-symbol-[0-9]*:../../fonts/tex-symbol
+DEPENDS+=	tex-tabls-[0-9]*:../../print/tex-tabls
+DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
 DEPENDS+=	tex-times-[0-9]*:../../fonts/tex-times
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-twoinone-[0-9]*:../../print/tex-twoinone
 DEPENDS+=	tex-txfonts-[0-9]*:../../fonts/tex-txfonts
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
+DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
+DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+DEPENDS+=	tex-verbdef-[0-9]*:../../print/tex-verbdef
+DEPENDS+=	tex-version-[0-9]*:../../print/tex-version
+DEPENDS+=	tex-vertbars-[0-9]*:../../print/tex-vertbars
+DEPENDS+=	tex-vruler-[0-9]*:../../print/tex-vruler
 DEPENDS+=	tex-wasy-[0-9]*:../../fonts/tex-wasy
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
@@ -182,12 +227,15 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/etex
 	rm -rf ${WRKSRC}/doc/fonts/ae*
 	rm -rf ${WRKSRC}/doc/fonts/am*
+	rm -rf ${WRKSRC}/doc/fonts/cm
 	rm -rf ${WRKSRC}/doc/fonts/lm
 	rm -rf ${WRKSRC}/doc/fonts/mar*
 	rm -rf ${WRKSRC}/doc/fonts/t*
 	rm -rf ${WRKSRC}/doc/generic/[a-f]*
+	rm -rf ${WRKSRC}/doc/generic/[a-g]*
 	rm -rf ${WRKSRC}/doc/generic/xk*
 	rm -rf ${WRKSRC}/doc/latex/a[f-m]*
+	rm -rf ${WRKSRC}/doc/latex/base
 	rm -rf ${WRKSRC}/doc/latex/beamer
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/enumitem
@@ -298,6 +346,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/vf/yandy/times
 	rm -rf ${WRKSRC}/metafont/[a-l]*
 	rm -f ${WRKSRC}/metafont/misc/[a-w]*
+	rm -rf ${WRKSRC}/mft
 	rm -rf ${WRKSRC}/omega/ocp/misc
 	rm -rf ${WRKSRC}/omega/otp/misc
 	rm -rf ${WRKSRC}/tex/generic/[a-b]*
@@ -378,9 +427,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/plain/amsfonts
 	rm -f ${WRKSRC}/tex/plain/base/[gmp-z]*
 	rm -f ${WRKSRC}/tex/plain/base/letter*
-	rm -rf ${WRKSRC}/tex/plain/[c-d]*
-	rm -rf ${WRKSRC}/tex/plain/etex
-	rm -rf ${WRKSRC}/tex/plain/fontchart
+	rm -rf ${WRKSRC}/tex/plain/[c-f]*
 	rm -rf ${WRKSRC}/tex/plain/[i-l]*
 	rm -rf ${WRKSRC}/tex/plain/mproof
 	rm -rf ${WRKSRC}/tex/plain/pdfcolor
