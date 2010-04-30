@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2010/04/12 14:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.614 2010/04/30 10:18:05 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -89,6 +89,7 @@ SUBDIR+=	gtk2-engines-murrine
 SUBDIR+=	gtk2-theme-switch
 SUBDIR+=	gtkglarea
 SUBDIR+=	gtkmm
+SUBDIR+=	gtkmm-utils
 SUBDIR+=	gtksourceview
 SUBDIR+=	gtksourceview-sharp2
 SUBDIR+=	gtksourceview2
