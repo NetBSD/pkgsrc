@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1737 2010/04/30 18:19:37 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1738 2010/04/30 19:02:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2201,3 +2201,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/apache22 to 2.2.15nb1 [tron 2010-04-30]
 	Added print/tex-sansmath version 1.1 [minskim 2010-04-30]
 	Added print/tex-sansmath-doc version 1.1 [minskim 2010-04-30]
+	Updated print/tex-oberdiek to 2009 [minskim 2010-04-30]
+	Updated print/tex-oberdiek-doc to 2009 [minskim 2010-04-30]
+	Updated print/tex-ltxmisc to 2009 [minskim 2010-04-30]
+	Updated print/teTeX3-texmf to 3.0nb24 [minskim 2010-04-30]
