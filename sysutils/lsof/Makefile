@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2010/03/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2010/04/30 06:53:06 sbd Exp $
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
@@ -23,8 +23,6 @@ CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-n ${LOWER_OPSYS}
 CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS}"
 MAKE_FLAGS+=		LSOF_BLDCMT="NetBSD pkgsrc rocks!"
-CPPFLAGS+=		-DLSOF_MORE_SECURE=${LSOF_MORE_SECURE} \
-			-DLSOF_LESS_SECURE_SOCKETS=${LSOF_LESS_SECURE_SOCKETS}
 OSVERSION_SPECIFIC=	yes
 
 TMPWRK=			${WRKDIR}/${DISTNAME}
@@ -41,6 +39,7 @@ USE_TOOLS+=	gtar pax perl:run
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 REAL_GROUP=		${REAL_ROOT_GROUP}
 .if ${OPSYS} == "NetBSD"
@@ -50,8 +49,6 @@ CONFIGURE_ENV+=		NETBSD_SYS="${NETBSDSRCDIR}/sys"
 MAKE_ENV+=		CPPFLAGS=
 .endif
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
-
-LSOF_MORE_SECURE?= 0
 
 post-extract:
 	@(cd ${TMPWRK} ; \
