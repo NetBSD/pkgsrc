@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/02/19 18:19:45 minskim Exp $
-# TeX Live Revision 12705
+# $NetBSD: Makefile,v 1.3 2010/04/30 18:53:26 minskim Exp $
+# TeX Live Revision 17996
 
 DISTNAME=	oberdiek
-PKGNAME=	tex-${DISTNAME}-2008.12705
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-2009
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Bundle of packages submitted by Heiko Oberdiek
@@ -17,5 +16,5 @@ DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
