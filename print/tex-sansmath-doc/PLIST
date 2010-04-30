@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/30 18:18:29 minskim Exp $
+share/texmf-dist/doc/latex/sansmath/miscdoc.sty
+share/texmf-dist/doc/latex/sansmath/sansmath.pdf
+share/texmf-dist/doc/latex/sansmath/sansmath.tex
