@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/01/27 18:56:44 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/04/30 08:12:14 wiz Exp $
 #
 
 DISTNAME=	filelight-1.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.methylblue.com/filelight/packages/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +23,7 @@ pre-build:
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
