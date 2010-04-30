@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1736 2010/04/30 16:31:29 tron Exp $
+$NetBSD: CHANGES-2010,v 1.1737 2010/04/30 18:19:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2199,3 +2199,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/gtkmm-utils version 0.4.1 [wiz 2010-04-30]
 	Updated mail/dovecot to 1.2.11nb1 [ghen 2010-04-30]
 	Updated www/apache22 to 2.2.15nb1 [tron 2010-04-30]
+	Added print/tex-sansmath version 1.1 [minskim 2010-04-30]
+	Added print/tex-sansmath-doc version 1.1 [minskim 2010-04-30]
