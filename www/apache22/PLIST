@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/03/09 02:30:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/04/30 16:30:09 tron Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -12,6 +12,7 @@ include/httpd/ap_regex.h
 include/httpd/ap_regkey.h
 include/httpd/ap_release.h
 include/httpd/http_config.h
+${PLIST.worker}include/httpd/fdqueue.h
 include/httpd/http_connection.h
 include/httpd/http_core.h
 include/httpd/http_log.h
@@ -35,6 +36,7 @@ include/httpd/mpm.h
 include/httpd/mpm_common.h
 include/httpd/mpm_default.h
 include/httpd/os.h
+${PLIST.worker}include/httpd/pod.h
 include/httpd/scoreboard.h
 include/httpd/unixd.h
 include/httpd/util_cfgtree.h
@@ -109,6 +111,8 @@ ${PLIST.all-shared}lib/httpd/mod_proxy_balancer.so
 ${PLIST.all-shared}lib/httpd/mod_proxy_connect.so
 ${PLIST.all-shared}lib/httpd/mod_proxy_ftp.so
 ${PLIST.all-shared}lib/httpd/mod_proxy_http.so
+${PLIST.all-shared}lib/httpd/mod_proxy_scgi.so
+${PLIST.all-shared}lib/httpd/mod_reqtimeout.so
 ${PLIST.all-shared}lib/httpd/mod_rewrite.so
 ${PLIST.all-shared}lib/httpd/mod_setenvif.so
 ${PLIST.all-shared}lib/httpd/mod_speling.so
