@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/30 23:09:57 tonnerre Exp $
+
+SHA1 (Net-Cassandra-0.35.tar.gz) = 58d2b2896e10dfca9db6b19555b00e432f5171a1
+RMD160 (Net-Cassandra-0.35.tar.gz) = 3712af455d484ab9ec93ce746680a08ebdf95422
+Size (Net-Cassandra-0.35.tar.gz) = 23395 bytes
