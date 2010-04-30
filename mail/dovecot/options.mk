@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2010/04/30 10:43:26 ghen Exp $
+# $NetBSD: options.mk,v 1.26 2010/04/30 10:50:21 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
@@ -20,7 +20,7 @@ PKG_SUGGESTED_OPTIONS+=	kqueue
 CONFIGURE_ARGS+=	--with-ssl=openssl
 CONFIGURE_ENV+=		SSL_CFLAGS="-I${BUILDLINK_PREFIX.openssl}/include"
 CONFIGURE_ENV+=		SSL_LIBS="-lssl -lcrypto"
-BUILDLINK_API_DEPENDS.openssl=openssl>=0.9.8a
+BUILDLINK_API_DEPENDS.openssl+=openssl>=0.9.8a
 .  include "../../security/openssl/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--with-ssl=gnutls
@@ -104,7 +104,7 @@ CONFIGURE_ARGS+=	--without-gssapi
 #
 # Default so we can use += below
 DISTFILES=		${DEFAULT_DISTFILES}
-PLIST_SRC=		${PLIST_SRC_DFLT}
+PLIST_SRC=		${PLIST_SRC_DFLT:Q}
 INSTALL_DIRS=		${WRKSRC}
 # sieve (must be built after dovecot, before managesieve)
 DISTFILES+=		dovecot-${DOVECOT_VERSION}-sieve-${SIEVE_VERSION}.tar.gz
@@ -117,7 +117,7 @@ INSTALL_DIRS+=		${WRKSRC.sieve}
 # Augment PLIST for sieve
 PLIST_SRC+=		${PKGDIR}/PLIST.sieve
 
-.if !empty(PKG_OPTIONS:Mdovecot-managesieve)
+.  if !empty(PKG_OPTIONS:Mdovecot-managesieve)
 # The managesieve patch to dovecot
 PATCHFILES+=		${MANAGESIEVE_PATCH}
 # managesieve itself (built after both dovecot and sieve)
@@ -130,9 +130,9 @@ CONFIGURE_ARGS.managesieve=\
 INSTALL_DIRS+=		${WRKSRC.managesieve}
 # Augment PLIST for managesieve
 PLIST_SRC+=		${PKGDIR}/PLIST.managesieve
-.endif # dovecot-managesieve
+.  endif # dovecot-managesieve
 .endif # dovecot-sieve
 
 .if !empty(PKG_OPTIONS:Mdovecot-managesieve) && empty(PKG_OPTIONS:Mdovecot-sieve)
-PKG_FAIL_REASON=	"You cannot enable dovecot-managesieve without dovecot-sieve."
+PKG_FAIL_REASON+=	"You cannot enable dovecot-managesieve without dovecot-sieve."
 .endif
