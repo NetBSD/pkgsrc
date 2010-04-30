@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/30 10:17:46 wiz Exp $
+include/glibmm-utils-1.0/glibmm-utils/date.h
+include/glibmm-utils-1.0/glibmm-utils/exception.h
+include/glibmm-utils-1.0/glibmm-utils/glibmm-utils.h
+include/glibmm-utils-1.0/glibmm-utils/initializer.h
+include/glibmm-utils-1.0/glibmm-utils/log-stream-utils.h
+include/glibmm-utils-1.0/glibmm-utils/log-stream.h
+include/glibmm-utils-1.0/glibmm-utils/option-utils.h
+include/glibmm-utils-1.0/glibmm-utils/scope-logger.h
+include/glibmm-utils-1.0/glibmm-utils/ustring.h
+include/gtkmm-utils-1.0/gtkmm-utils/dialog.h
+include/gtkmm-utils-1.0/gtkmm-utils/entry-multi-completion.h
+include/gtkmm-utils-1.0/gtkmm-utils/gtkmm-utils.h
+include/gtkmm-utils-1.0/gtkmm-utils/page-navigator.h
+include/gtkmm-utils-1.0/gtkmm-utils/tile-view.h
+include/gtkmm-utils-1.0/gtkmm-utils/tile.h
+include/gtkmm-utils-1.0/gtkmm-utils/white-box.h
+lib/libglibmm-utils.la
+lib/libgtkmm-utils.la
+lib/pkgconfig/glibmm-utils.pc
+lib/pkgconfig/gtkmm-utils.pc

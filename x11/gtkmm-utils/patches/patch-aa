@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/30 10:17:46 wiz Exp $
+
+--- glibmm-utils/date.cc.orig	2008-01-16 18:22:26.000000000 +0100
++++ glibmm-utils/date.cc
+@@ -50,7 +50,7 @@ get_current_daytime_generic(Glib::ustrin
+ 
+     // Obtain the time of day, and convert it to a tm struct.
+     gettimeofday(&tv, NULL);
+-    ptm = localtime(&tv.tv_sec);
++    ptm = localtime((time_t *)&tv.tv_sec);
+ 
+     strftime(time_string, sizeof (time_string), format, ptm);
+ 
