@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2010/04/30 07:27:16 sbd Exp $
+# $NetBSD: Makefile,v 1.106 2010/04/30 07:30:28 sbd Exp $
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
@@ -7,8 +7,18 @@ CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/ \
-			ftp://ftp.sunet.se/pub/unix/admin/lsof/ \
-			http://ftp.sunet.se/pub/unix/admin/lsof/
+			ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/ \
+			ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/NEW/ \
+			ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/OLD/ \
+			ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/ \
+			ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/NEW/ \
+			ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/OLD/ \
+			ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/ \
+			ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/NEW/ \
+			ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/OLD/ \
+			ftp://sunsite.ualberta.ca/pub/Mirror/lsof/ \
+			ftp://sunsite.ualberta.ca/pub/Mirror/lsof/NEW/ \
+			ftp://sunsite.ualberta.ca/pub/Mirror/lsof/OLD/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
