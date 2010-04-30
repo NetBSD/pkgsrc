@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1731 2010/04/30 08:51:51 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.1732 2010/04/30 10:05:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2194,3 +2194,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added pkgtools/osabi version 5.0 [sbd 2010-04-30]
 	Updated pkgtools/x11-links to 0.48 [sbd 2010-04-30]
 	Updated sysutils/filelight to 1.0nb12 [wiz 2010-04-30]
+	Added textproc/dadadodo version 1.04 [wiz 2010-04-30]
