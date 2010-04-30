@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2010/04/24 15:59:23 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2010/04/30 06:03:36 obache Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -87,8 +87,10 @@ CONFIGURE_ENV+=		mysql_cv_compress="yes"
 CPPFLAGS+=		-Dunix
 CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
 
+.if ${OPSYS} != "Interix"
 CFLAGS+=		-fPIC -DPIC
 CXXFLAGS+=		-fPIC -DPIC
+.endif
 
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.
