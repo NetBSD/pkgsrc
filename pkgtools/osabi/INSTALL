@@ -1,0 +1,44 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2010/04/30 03:18:26 sbd Exp $
+
+UNAME="@UNAME@"
+case ${STAGE} in
+PRE-INSTALL)
+	OS_VERSION=`${UNAME} -r`
+	PKG_VERSION="${PKGNAME##*-}"
+	case `${UNAME} -s` in
+	AIX)
+		if ${TEST} -f /usr/bin/oslevel ;then
+			OS_VERSION=`/usr/bin/oslevel | \
+					sed -e's/\([0-9]*\.[0-9]*\).*/\1/'`
+		else
+			OS_VERSION="`${UNAME} -v`.`${UNAME} -r`"
+			OS_VERSION=`echo "${OS_VERSION}" | \
+					sed -e's/\([0-9]*\.[0-9]*\).*/\1/'`
+		fi
+		;;
+	DragonFly|FreeBSD|Linux)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/-.*$//'`
+		;;
+	Interix)
+		if ${TEST} -f /usr/lib/libc.so.3.5 ;then
+			OS_VERSION="3.5"
+		elif ${TEST} -f /usr/lib/libc.so.3.1 ;then
+			OS_VERSION="3.1"
+		else
+			OS_VERSION="3.0"
+		fi
+		;;
+	OSF1)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/^V//'`
+		;;
+	HPUX)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/^B.//'`
+		;;
+	esac
+
+	if ${TEST} "${OS_VERSION}" != "${PKG_VERSION}" ;then 
+		echo "The Operating System version (${OS_VERSION}) does not match ${PKG_VERSION}"
+		exit 1
+	fi
+	;;
+esac
