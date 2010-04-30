@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sieve,v 1.2 2010/01/25 12:31:20 ghen Exp $
+@comment $NetBSD: PLIST.sieve,v 1.3 2010/04/30 10:43:26 ghen Exp $
 bin/sieve-test
 bin/sievec
 bin/sieved
@@ -44,3 +44,4 @@ lib/dovecot/lda/lib90_sieve_plugin.la
 man/man1/sieve-test.1
 man/man1/sievec.1
 man/man1/sieved.1
+share/doc/dovecot/sieve/spamtest-virustest.txt
