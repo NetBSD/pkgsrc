@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/21 13:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/30 06:31:32 kefren Exp $
 
 DISTNAME=	mono-gnome-bindings-2.26.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
-COMMENT=	Meta-package for Mono (C#) bindings for the GNOME desktop
+COMMENT=	Meta-package for Mono (C\#) bindings for the GNOME desktop
 
 META_PACKAGE=	yes
 
