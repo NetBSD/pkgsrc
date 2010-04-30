@@ -1,0 +1,7 @@
+This is a dummy-package which is made a dependence for packages which are
+tightly bound to a specific version of an operating system, e.g. LKMs or
+sysutils/lsof. Such binary packages are not backwards compatible with other
+versions of the OS.
+
+The version number of this package should be similar to the operating system
+version (`uname -r' output).
