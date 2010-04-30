@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1735 2010/04/30 10:44:21 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.1736 2010/04/30 16:31:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2198,3 +2198,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/opengrok to 0.8.1 [ahoka 2010-04-30]
 	Added x11/gtkmm-utils version 0.4.1 [wiz 2010-04-30]
 	Updated mail/dovecot to 1.2.11nb1 [ghen 2010-04-30]
+	Updated www/apache22 to 2.2.15nb1 [tron 2010-04-30]
