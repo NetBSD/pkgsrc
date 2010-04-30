@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2010/01/25 12:31:08 ghen Exp $
+# $NetBSD: options.mk,v 1.25 2010/04/30 10:43:26 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
@@ -112,6 +112,7 @@ SITES.dovecot-${DOVECOT_VERSION}-sieve-${SIEVE_VERSION}.tar.gz=\
 			${DOVECOT_SIEVE_SITES}
 WRKSRC.sieve=		${WRKDIR}/dovecot-${DOVECOT_VERSION}-sieve-${SIEVE_VERSION}
 CONFIGURE_ARGS.sieve=	--with-dovecot=${WRKSRC}
+CONFIGURE_ARGS.sieve+=	--docdir=${PREFIX}/share/doc
 INSTALL_DIRS+=		${WRKSRC.sieve}
 # Augment PLIST for sieve
 PLIST_SRC+=		${PKGDIR}/PLIST.sieve
