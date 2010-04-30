@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 03:03:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/30 18:53:27 minskim Exp $
 share/texmf-dist/doc/latex/oberdiek/accsupp-example1.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp-example2.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp.pdf
@@ -10,6 +10,7 @@ share/texmf-dist/doc/latex/oberdiek/atbegshi-example2.tex
 share/texmf-dist/doc/latex/oberdiek/atbegshi.pdf
 share/texmf-dist/doc/latex/oberdiek/atenddvi.pdf
 share/texmf-dist/doc/latex/oberdiek/attachfile2.pdf
+share/texmf-dist/doc/latex/oberdiek/atveryend.pdf
 share/texmf-dist/doc/latex/oberdiek/auxhook.pdf
 share/texmf-dist/doc/latex/oberdiek/bigintcalc.pdf
 share/texmf-dist/doc/latex/oberdiek/bitset.pdf
@@ -31,8 +32,10 @@ share/texmf-dist/doc/latex/oberdiek/epstopdf.pdf
 share/texmf-dist/doc/latex/oberdiek/etexcmds.pdf
 share/texmf-dist/doc/latex/oberdiek/example-mycolorsetup.sty
 share/texmf-dist/doc/latex/oberdiek/flags.pdf
+share/texmf-dist/doc/latex/oberdiek/gettitlestring.pdf
 share/texmf-dist/doc/latex/oberdiek/grfext.pdf
 share/texmf-dist/doc/latex/oberdiek/grffile.pdf
+share/texmf-dist/doc/latex/oberdiek/hologo.pdf
 share/texmf-dist/doc/latex/oberdiek/holtxdoc.pdf
 share/texmf-dist/doc/latex/oberdiek/hycolor.pdf
 share/texmf-dist/doc/latex/oberdiek/hypbmsec.pdf
@@ -44,7 +47,6 @@ share/texmf-dist/doc/latex/oberdiek/hypgotoe.pdf
 share/texmf-dist/doc/latex/oberdiek/hyphsubst.pdf
 share/texmf-dist/doc/latex/oberdiek/ifdraft.pdf
 share/texmf-dist/doc/latex/oberdiek/iflang.pdf
-share/texmf-dist/doc/latex/oberdiek/ifluatex.pdf
 share/texmf-dist/doc/latex/oberdiek/ifpdf.pdf
 share/texmf-dist/doc/latex/oberdiek/ifvtex.pdf
 share/texmf-dist/doc/latex/oberdiek/infwarerr.pdf
@@ -52,12 +54,14 @@ share/texmf-dist/doc/latex/oberdiek/inputenx-licrcmds.txt
 share/texmf-dist/doc/latex/oberdiek/inputenx-utf8enc.txt
 share/texmf-dist/doc/latex/oberdiek/inputenx.pdf
 share/texmf-dist/doc/latex/oberdiek/intcalc.pdf
+share/texmf-dist/doc/latex/oberdiek/kvdefinekeys.pdf
 share/texmf-dist/doc/latex/oberdiek/kvoptions.pdf
 share/texmf-dist/doc/latex/oberdiek/kvsetkeys-example.tex
 share/texmf-dist/doc/latex/oberdiek/kvsetkeys.pdf
 share/texmf-dist/doc/latex/oberdiek/letltxmacro-showcases.tex
 share/texmf-dist/doc/latex/oberdiek/letltxmacro.pdf
 share/texmf-dist/doc/latex/oberdiek/listingsutf8.pdf
+share/texmf-dist/doc/latex/oberdiek/ltxcmds.pdf
 share/texmf-dist/doc/latex/oberdiek/luacolor.pdf
 share/texmf-dist/doc/latex/oberdiek/luatex.pdf
 share/texmf-dist/doc/latex/oberdiek/magicnum.pdf
@@ -65,6 +69,7 @@ share/texmf-dist/doc/latex/oberdiek/magicnum.txt
 share/texmf-dist/doc/latex/oberdiek/makerobust-example.tex
 share/texmf-dist/doc/latex/oberdiek/makerobust.pdf
 share/texmf-dist/doc/latex/oberdiek/oberdiek.pdf
+share/texmf-dist/doc/latex/oberdiek/pagegrid.pdf
 share/texmf-dist/doc/latex/oberdiek/pagesel.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcol.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcolfoot.pdf
@@ -74,11 +79,15 @@ share/texmf-dist/doc/latex/oberdiek/pdfcolparcolumns.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcrypt.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfescape.pdf
 share/texmf-dist/doc/latex/oberdiek/pdflscape.pdf
+share/texmf-dist/doc/latex/oberdiek/pdfrender.pdf
 share/texmf-dist/doc/latex/oberdiek/pdftexcmds.pdf
 share/texmf-dist/doc/latex/oberdiek/picture-example.tex
 share/texmf-dist/doc/latex/oberdiek/picture.pdf
 share/texmf-dist/doc/latex/oberdiek/pmboxdraw.pdf
 share/texmf-dist/doc/latex/oberdiek/refcount.pdf
+share/texmf-dist/doc/latex/oberdiek/rerunfilecheck-example.cfg
+share/texmf-dist/doc/latex/oberdiek/rerunfilecheck.pdf
+share/texmf-dist/doc/latex/oberdiek/resizegather.pdf
 share/texmf-dist/doc/latex/oberdiek/scrindex-example1.tex
 share/texmf-dist/doc/latex/oberdiek/scrindex-example2.tex
 share/texmf-dist/doc/latex/oberdiek/scrindex.pdf
@@ -132,6 +141,7 @@ share/texmf-dist/doc/latex/oberdiek/test/askinclude-test9.tex
 share/texmf-dist/doc/latex/oberdiek/test/atbegshi-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/atbegshi-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/atbegshi-test3.tex
+share/texmf-dist/doc/latex/oberdiek/test/atveryend-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/bigintcalc-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/bigintcalc-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/bigintcalc-test3.tex
@@ -144,12 +154,15 @@ share/texmf-dist/doc/latex/oberdiek/test/catchfile-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/embedfile-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/embedfile-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/embedfile-test3.tex
+share/texmf-dist/doc/latex/oberdiek/test/embedfile-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/engord-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/epstopdf-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test4.tex
+share/texmf-dist/doc/latex/oberdiek/test/gettitlestring-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/gettitlestring-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/grfext-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/grfext-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/grffile-test1.tex
@@ -167,9 +180,6 @@ share/texmf-dist/doc/latex/oberdiek/test/iflang-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/iflang-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/iflang-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/iflang-test5.tex
-share/texmf-dist/doc/latex/oberdiek/test/ifluatex-test1.tex
-share/texmf-dist/doc/latex/oberdiek/test/ifluatex-test2.tex
-share/texmf-dist/doc/latex/oberdiek/test/ifluatex-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/ifpdf-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/ifvtex-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/infwarerr-test1.tex
@@ -179,8 +189,10 @@ share/texmf-dist/doc/latex/oberdiek/test/intcalc-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/intcalc-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/intcalc-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/intcalc-test4.tex
+share/texmf-dist/doc/latex/oberdiek/test/kvdefinekeys-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvoptions-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvoptions-test2.tex
+share/texmf-dist/doc/latex/oberdiek/test/kvoptions-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvsetkeys-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvsetkeys-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvsetkeys-test3.tex
@@ -191,6 +203,7 @@ share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test5.tex
+share/texmf-dist/doc/latex/oberdiek/test/ltxcmds-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/luacolor-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/luacolor-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/luacolor-test3.tex
@@ -202,6 +215,7 @@ share/texmf-dist/doc/latex/oberdiek/test/luatex-test5.tex
 share/texmf-dist/doc/latex/oberdiek/test/magicnum-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/magicnum-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/magicnum-test3.tex
+share/texmf-dist/doc/latex/oberdiek/test/pagegrid-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/pdfcol-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/pdfcol-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/pdfcol-test3.tex
@@ -221,6 +235,15 @@ share/texmf-dist/doc/latex/oberdiek/test/pdflscape-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/pdflscape-test5.tex
 share/texmf-dist/doc/latex/oberdiek/test/pdflscape-test6.tex
 share/texmf-dist/doc/latex/oberdiek/test/pdflscape-test6.txt
+share/texmf-dist/doc/latex/oberdiek/test/pdfrender-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/pdfrender-test2.tex
+share/texmf-dist/doc/latex/oberdiek/test/pdfrender-test3.tex
+share/texmf-dist/doc/latex/oberdiek/test/pdfrender-test4.tex
+share/texmf-dist/doc/latex/oberdiek/test/pdfrender-test5.tex
+share/texmf-dist/doc/latex/oberdiek/test/pdftexcmds-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/pdftexcmds-test2.tex
+share/texmf-dist/doc/latex/oberdiek/test/rerunfilecheck-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/resizegather-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/selinput-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/selinput-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/selinput-test3.tex
@@ -236,10 +259,19 @@ share/texmf-dist/doc/latex/oberdiek/test/soulutf8-test5.tex
 share/texmf-dist/doc/latex/oberdiek/test/stringenc-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/stringenc-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/telprint-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/uniquecounter-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/uniquecounter-test2.tex
+share/texmf-dist/doc/latex/oberdiek/test/uniquecounter-test3.tex
+share/texmf-dist/doc/latex/oberdiek/test/zref-test-base.tex
+share/texmf-dist/doc/latex/oberdiek/test/zref-test-runs.tex
+share/texmf-dist/doc/latex/oberdiek/test/zref-test-titleref-memoir.tex
 share/texmf-dist/doc/latex/oberdiek/test/zref-test1.tex
 share/texmf-dist/doc/latex/oberdiek/transparent-example.tex
 share/texmf-dist/doc/latex/oberdiek/transparent.pdf
 share/texmf-dist/doc/latex/oberdiek/twoopt.pdf
+share/texmf-dist/doc/latex/oberdiek/uniquecounter-example.tex
+share/texmf-dist/doc/latex/oberdiek/uniquecounter.pdf
 share/texmf-dist/doc/latex/oberdiek/zref-example-lastpage.tex
+share/texmf-dist/doc/latex/oberdiek/zref-example-nextpage.tex
 share/texmf-dist/doc/latex/oberdiek/zref-example.tex
 share/texmf-dist/doc/latex/oberdiek/zref.pdf
