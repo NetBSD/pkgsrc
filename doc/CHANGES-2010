@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1730 2010/04/30 08:12:26 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1731 2010/04/30 08:51:51 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2191,6 +2191,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-vertbars version 1.0a [minskim 2010-04-29]
 	Added print/tex-vruler version 2.3 [minskim 2010-04-29]
 	Added print/tex-vruler-doc version 2.3 [minskim 2010-04-29]
-	Added pkgtools/osabi [sbd 2010-04-30]
+	Added pkgtools/osabi version 5.0 [sbd 2010-04-30]
 	Updated pkgtools/x11-links to 0.48 [sbd 2010-04-30]
 	Updated sysutils/filelight to 1.0nb12 [wiz 2010-04-30]
