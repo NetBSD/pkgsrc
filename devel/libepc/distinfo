@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/01 20:41:40 wiz Exp $
+
+SHA1 (libepc-0.3.11.tar.bz2) = fa8af4a30e77639a1bab8c53d75aad3f0caa6250
+RMD160 (libepc-0.3.11.tar.bz2) = 8dfb79bb129712998f6ea61c3da51fba4a0465f7
+Size (libepc-0.3.11.tar.bz2) = 450567 bytes
+SHA1 (patch-ab) = 6a430ddce729e719f6bf04e5f888c45b95df6d12

@@ -1,0 +1,42 @@
+Release 0.3.11
+==============
+
+        * Change a string and add a translator comment. (Murray Cumming)
+        Bug #589339 (Luca Ferretti)
+	* Fix build failure on kFreeBSD. (Josselin Mouette) Bug #592474
+        (Petr Salinger)
+	* Use gtk_widget_get_visible() on GTK+ >= 2.19.7. (Andre Klapper,
+        David King) Bug #612108.
+        * Modernise autotools configuration. (David King) Bug #613316.
+        * Fix some compiler warnings. (David King)
+
+Translation Updates
+-------------------
+
+	Italian (Luca Ferretti)
+        Spanish (Jorge González)
+        Swedish (Daniel Nylander)
+        Polish (Piotr Drąg)
+        German (Mario Blättermann)
+        Danish (Joe Hansen)
+        Czech (Marek Černocký)
+        Slovenian (Matej Urbančič)
+        Simplified Chinese (YunQiang Su)
+        Galician (Fran Diéguez)
+        French (Bruno Brouard)
+
+Release 0.3.10
+==============
+
+	* epc_shell_create_service_browser(): Fix a warning about 
+	no return value, possibly avoiding a crash elsewhere.
+        (Murray Cumming) Bug #583000 (Vincent Untz).
+
+Release 0.3.9
+=============
+
+	* epc_shell_create_service_browser(): Avoid overwriting a GError.
+          (Murray Cumming)
+	* Build: Use single GTK+ includes. (Cosimo Cecchi)
+	* Tests: Get default address of system D-Bus from pkg-config.
+          (Mathias Hasselmann)
