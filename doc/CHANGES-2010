@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1745 2010/05/01 17:01:58 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1746 2010/05/01 17:23:51 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2212,3 +2212,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/py-sqlalchemy to 0.6.0 [tonnerre 2010-05-01]
 	Updated net/tinc to 1.0.13 [tonnerre 2010-05-01]
 	Updated lang/sbcl to 1.0.38 [asau 2010-05-01]
+	Updated security/py-asn1 to 0.0.11a [tonnerre 2010-05-01]
