@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9235 2010/04/28 22:26:15 morr Exp $
+$NetBSD: TODO,v 1.9236 2010/05/01 15:44:07 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -1176,7 +1176,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-pytz-2010h
 	o py-qt4-4.7.3
 	o py-sip-4.10.2
-	o py-sqlalchemy-0.6.0 [pkg/43180]
 	o py-sybase-0.37
 	o py-urwid-0.9.9.1 [pkg/43104]
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]

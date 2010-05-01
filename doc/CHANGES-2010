@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1742 2010/05/01 15:10:28 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.1743 2010/05/01 15:44:07 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/p5-Net-Cassandra version 0.35 [tonnerre 2010-04-30]
 	Added devel/libthrift version 0.2.0 [tonnerre 2010-05-01]
 	Added databases/libcassandra version 20100501 [tonnerre 2010-05-01]
+	Updated databases/py-sqlalchemy to 0.6.0 [tonnerre 2010-05-01]
