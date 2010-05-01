@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2007/04/21 15:19:01 obache Exp $
+$NetBSD: patch-ab,v 1.3 2010/05/01 16:56:41 tonnerre Exp $
 
---- configure.orig	2007-01-05 12:51:40.000000000 +0000
+--- configure.orig	2010-04-11 17:49:06.000000000 +0000
 +++ configure
-@@ -6399,7 +6399,7 @@ _ACEOF
+@@ -4723,7 +4723,7 @@ $as_echo "#define HAVE_LINUX 1" >>confde
  
       rm -f src/device.c; ln -sf linux/device.c src/device.c
    ;;
 -  *freebsd*)
 +  *freebsd* | *dragonfly*)
  
- cat >>confdefs.h <<\_ACEOF
- #define HAVE_FREEBSD 1
+ $as_echo "#define HAVE_FREEBSD 1" >>confdefs.h
+ 
