@@ -1,0 +1,94 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/01 15:09:44 tonnerre Exp $
+
+--- configure.orig	2010-04-30 23:25:08.000000000 +0000
++++ configure
+@@ -17830,7 +17830,7 @@ if test "${ac_cv_safe_to_use_wconversion
+   $as_echo_n "(cached) " >&6
+ else
+   save_CFLAGS="$CFLAGS"
+-                     CFLAGS="-Wconversion -Werror -pedantic ${AM_CFLAGS} ${CFLAGS}"
++                     CFLAGS="-Wconversion -Werror ${AM_CFLAGS} ${CFLAGS}"
+        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -17869,7 +17869,7 @@ if test "${ac_cv_safe_to_use_Wconversion
+   $as_echo_n "(cached) " >&6
+ else
+   save_CFLAGS="$CFLAGS"
+-                           CFLAGS="-Wconversion -Werror -pedantic ${AM_CFLAGS} ${CFLAGS}"
++                           CFLAGS="-Wconversion -Werror ${AM_CFLAGS} ${CFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -17929,7 +17929,7 @@ if test "${ac_cv_safe_to_use_Wextra_+set
+   $as_echo_n "(cached) " >&6
+ else
+   save_CFLAGS="$CFLAGS"
+-         CFLAGS="${W_FAIL} -pedantic -Wextra ${AM_CFLAGS} ${CFLAGS}"
++         CFLAGS="${W_FAIL} -Wextra ${AM_CFLAGS} ${CFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -17956,7 +17956,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_safe_to_use_Wextra_" >&5
+ $as_echo "$ac_cv_safe_to_use_Wextra_" >&6; }
+ 
+-      BASE_WARNINGS="${W_FAIL} -pedantic -Wall -Wundef -Wshadow ${NO_UNUSED} ${F_DIAGNOSTICS_SHOW_OPTION} ${CFLAG_VISIBILITY} ${BASE_WARNINGS_FULL}"
++      BASE_WARNINGS="${W_FAIL} -Wall -Wundef -Wshadow ${NO_UNUSED} ${F_DIAGNOSTICS_SHOW_OPTION} ${CFLAG_VISIBILITY} ${BASE_WARNINGS_FULL}"
+       if test "$ac_cv_safe_to_use_Wextra_" = "yes"; then :
+   BASE_WARNINGS="${BASE_WARNINGS} -Wextra"
+ else
+@@ -17978,7 +17978,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
+ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+          save_CXXFLAGS="$CXXFLAGS"
+-         CXXFLAGS="-Werror -pedantic -Wmissing-declarations ${AM_CXXFLAGS}"
++         CXXFLAGS="-Werror -Wmissing-declarations ${AM_CXXFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -18021,7 +18021,7 @@ if test "${ac_cv_safe_to_use_Wlogical_op
+   $as_echo_n "(cached) " >&6
+ else
+   save_CFLAGS="$CFLAGS"
+-         CFLAGS="${W_FAIL} -pedantic -Wlogical-op ${AM_CFLAGS} ${CFLAGS}"
++         CFLAGS="${W_FAIL} -Wlogical-op ${AM_CFLAGS} ${CFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -18063,7 +18063,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
+ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+          save_CXXFLAGS="${CXXFLAGS}"
+-         CXXFLAGS="${W_FAIL} -pedantic -Wredundant-decls ${AM_CXXFLAGS}"
++         CXXFLAGS="${W_FAIL} -Wredundant-decls ${AM_CXXFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -18113,7 +18113,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
+ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+          save_CXXFLAGS="${CXXFLAGS}"
+-         CXXFLAGS="${W_FAIL} -pedantic -Wattributes -fvisibility=hidden ${AM_CXXFLAGS}"
++         CXXFLAGS="${W_FAIL} -Wattributes -fvisibility=hidden ${AM_CXXFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -18171,7 +18171,7 @@ if test "${ac_cv_safe_to_use_Wno_attribu
+   $as_echo_n "(cached) " >&6
+ else
+   save_CFLAGS="$CFLAGS"
+-         CFLAGS="${W_FAIL} -pedantic -Wno_attributes_ ${AM_CFLAGS} ${CFLAGS}"
++         CFLAGS="${W_FAIL} -Wno_attributes_ ${AM_CFLAGS} ${CFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -23315,6 +23315,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
