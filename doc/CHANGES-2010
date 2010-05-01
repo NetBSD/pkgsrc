@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1750 2010/05/01 20:48:21 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1751 2010/05/01 23:17:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2217,3 +2217,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/libepc version 0.3.11 [wiz 2010-05-01]
 	Added textproc/py-Whoosh version 0.1.13 [wiz 2010-05-01]
 	Added graphics/jpegquality version 20070802 [wiz 2010-05-01]
+	Updated devel/mercurial to 1.5.2 [wiz 2010-05-01]
