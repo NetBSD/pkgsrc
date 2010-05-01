@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/01 15:09:44 tonnerre Exp $
+
+SHA1 (libcassandra-20100501.tar.gz) = 95136e5cd96f2bc63cd170b791e23853edde6fde
+RMD160 (libcassandra-20100501.tar.gz) = ceaa80c5a9abab7d5a0c0a42e19bd303799cb483
+Size (libcassandra-20100501.tar.gz) = 1081501 bytes
+SHA1 (patch-aa) = e1845f5d62862c778fd249598bbfc7a6bd098788
