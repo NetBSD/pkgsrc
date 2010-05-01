@@ -1,0 +1,2 @@
+Print out the quantization tables in a JPEG file (that indicate
+how the image was compressed).
