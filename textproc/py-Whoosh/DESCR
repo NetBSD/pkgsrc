@@ -1,0 +1,22 @@
+Whoosh is a fast, featureful full-text indexing and searching
+library implemented in pure Python.
+
+Some of Whoosh's features include:
+
+    * Pythonic API.
+    * Pure-Python. No compilation or binary packages needed, no
+    mysterious crashes.
+    * Fielded indexing and search.
+    * Fast indexing and retrieval -- much faster than any other
+    pure-Python solution.
+    * Pluggable scoring algorithm (including BM25F), text analysis,
+    storage, posting format, etc.
+    * Powerful query language parsed by pyparsing.
+    * Pure Python spell-checker (as far as I know, the only one).
+
+Whoosh takes much inspiration (and sometimes translates code) from
+other open-source search engines. The fundamental design is similar
+to (but does not entirely work like and is not compatible with)
+Lucene, but uses KinoSearch's indexing algorithm, some scoring
+algorithms from Terrier, and the English morphological variation
+generator from Minion.
