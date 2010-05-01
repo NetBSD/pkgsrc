@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9236 2010/05/01 15:44:07 tonnerre Exp $
+$NetBSD: TODO,v 1.9237 2010/05/01 16:56:56 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -1342,7 +1342,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tig-0.15
 	o tightvnc-1.5.1
 	o tile-0.7.4
-	o tinc-1.0.13
 	o tinyproxy-1.8.0
 	o tk-8.5.8
 	o tkcvs-8.2.1
