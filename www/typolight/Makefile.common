@@ -1,8 +1,5 @@
-# $NetBSD: Makefile.common,v 1.16 2009/12/23 12:51:41 taca Exp $
+# $NetBSD: Makefile.common,v 1.17 2010/05/01 23:40:34 taca Exp $
 #
-# used by www/typolight26/Makefile
-# used by www/typolight26-example/Makefile
-# used by www/typolight26-translations/Makefile
 # used by www/typolight27/Makefile
 # used by www/typolight27-example/Makefile
 # used by www/typolight27-translations/Makefile
