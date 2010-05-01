@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1747 2010/05/01 18:56:44 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.1748 2010/05/01 20:42:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2214,3 +2214,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/sbcl to 1.0.38 [asau 2010-05-01]
 	Updated security/py-asn1 to 0.0.11a [tonnerre 2010-05-01]
 	Added databases/py-cassa version 0.3.0 [tonnerre 2010-05-01]
+	Added devel/libepc version 0.3.11 [wiz 2010-05-01]
