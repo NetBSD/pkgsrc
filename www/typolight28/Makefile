@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/04/17 18:23:35 taca Exp $
+# $NetBSD: Makefile,v 1.7 2010/05/01 23:42:56 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
 PKGNAME=	typolight${TL_VER}-${TL_PKGVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 

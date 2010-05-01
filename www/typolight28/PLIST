@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/13 15:43:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/01 23:42:56 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -416,8 +416,6 @@ ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/tr_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/uk_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/vi_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/zh_dlg.js
-${TL_WEBDIR}/plugins/tinyMCE/plugins/autoresize/editor_plugin.js
-${TL_WEBDIR}/plugins/tinyMCE/plugins/autoresize/editor_plugin_src.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/autosave/editor_plugin.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/autosave/editor_plugin_src.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/autosave/langs/en.js
