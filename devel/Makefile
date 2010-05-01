@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1335 2010/04/29 06:56:49 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1336 2010/05/01 20:42:10 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -288,6 +288,7 @@ SUBDIR+=	libdnsres
 SUBDIR+=	libdockapp
 SUBDIR+=	libebml
 SUBDIR+=	libelf
+SUBDIR+=	libepc
 SUBDIR+=	libetm
 SUBDIR+=	libev
 SUBDIR+=	libevent
@@ -357,6 +358,7 @@ SUBDIR+=	libtai
 SUBDIR+=	libtar
 SUBDIR+=	libtecla
 SUBDIR+=	libthai
+SUBDIR+=	libthrift
 SUBDIR+=	libtool
 SUBDIR+=	libtool-base
 SUBDIR+=	libtool-info
