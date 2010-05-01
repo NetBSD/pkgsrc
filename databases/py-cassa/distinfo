@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/01 18:56:22 tonnerre Exp $
+
+SHA1 (pycassa-0.3.0.tar.gz) = a8f6498daf28e9731debe6b61330d1a7801e9f1d
+RMD160 (pycassa-0.3.0.tar.gz) = c0f68e193a48c47a5de2945f779ee7bf29958c23
+Size (pycassa-0.3.0.tar.gz) = 46721 bytes
