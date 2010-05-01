@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/01 20:41:40 wiz Exp $
+
+--- tests/framework.c.orig	2008-10-20 07:47:36.000000000 +0000
++++ tests/framework.c
+@@ -188,6 +188,7 @@ epc_test_list_ifaces (void)
+           continue;
+         }
+ 
++#ifdef SIOCGIFINDEX
+       if (ioctl (fd, SIOCGIFINDEX, req) < 0)
+         {
+           g_warning ("%s: ioctl(SIOCGIFINDEX): %s",
+@@ -201,6 +202,7 @@ epc_test_list_ifaces (void)
+       g_print ("%s: name=%s, ifidx=%u, \n",
+                G_STRLOC, ifaces[j].name,
+                ifaces[j].ifidx);
++#endif
+ 
+       ++j;
+     }
