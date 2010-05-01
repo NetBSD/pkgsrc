@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1740 2010/04/30 23:10:14 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.1741 2010/05/01 02:49:59 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2207,3 +2207,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/teTeX3-texmf to 3.0nb24 [minskim 2010-04-30]
 	Updated mail/getmail to 4.17.0 [schmonz 2010-04-30]
 	Added databases/p5-Net-Cassandra version 0.35 [tonnerre 2010-04-30]
+	Added devel/libthrift version 0.2.0 [tonnerre 2010-05-01]
