@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/01 18:56:22 tonnerre Exp $
+${PYSITELIB}/pycassa/__init__.py
+${PYSITELIB}/pycassa/__init__.pyc
+${PYSITELIB}/pycassa/__init__.pyo
+${PYSITELIB}/pycassa/columnfamily.py
+${PYSITELIB}/pycassa/columnfamily.pyc
+${PYSITELIB}/pycassa/columnfamily.pyo
+${PYSITELIB}/pycassa/columnfamilymap.py
+${PYSITELIB}/pycassa/columnfamilymap.pyc
+${PYSITELIB}/pycassa/columnfamilymap.pyo
+${PYSITELIB}/pycassa/connection.py
+${PYSITELIB}/pycassa/connection.pyc
+${PYSITELIB}/pycassa/connection.pyo
+${PYSITELIB}/pycassa/types.py
+${PYSITELIB}/pycassa/types.pyc
+${PYSITELIB}/pycassa/types.pyo
