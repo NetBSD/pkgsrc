@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/01 15:09:44 tonnerre Exp $
+include/libcassandra/cassandra.h
+include/libcassandra/cassandra_factory.h
+include/libcassandra/exception.h
+include/libcassandra/keyspace.h
+include/libcassandra/keyspace_factory.h
+include/libgenthrift/Cassandra.h
+include/libgenthrift/cassandra_constants.h
+include/libgenthrift/cassandra_types.h
+lib/libcassandra.la
+lib/libgenthrift.la
