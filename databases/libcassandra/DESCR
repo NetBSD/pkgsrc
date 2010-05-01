@@ -1,0 +1,2 @@
+C++ client API for Apache Cassandra. The standard front-end (in the sense
+of "language binding") for writing C++ programs that use Cassandra.
