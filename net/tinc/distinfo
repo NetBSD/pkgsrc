@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2009/04/18 19:27:11 tonnerre Exp $
+$NetBSD: distinfo,v 1.8 2010/05/01 16:56:40 tonnerre Exp $
 
-SHA1 (tinc-1.0.9.tar.gz) = 55de1bc3b47a48fb162b00ffbb3bac1e2058a7ed
-RMD160 (tinc-1.0.9.tar.gz) = 43ad67040ed7aaad710c5137659f8f0f1d908101
-Size (tinc-1.0.9.tar.gz) = 519048 bytes
-SHA1 (patch-aa) = 21bb1d30038faddedd9dea93e968d8a071b227a7
-SHA1 (patch-ab) = 482217af3b35ec7d3f9959857684ef38df1d72ce
+SHA1 (tinc-1.0.13.tar.gz) = d84070502d693cf46c93d324cdf1686d67617db4
+RMD160 (tinc-1.0.13.tar.gz) = 72e3063887546fb82e5c740a71b52840bd04237d
+Size (tinc-1.0.13.tar.gz) = 508903 bytes
+SHA1 (patch-aa) = c507d0a7ec69ca7842d9854662d0762407a6575d
+SHA1 (patch-ab) = 791738ffd137d280d61d3da18417b521554d288e
