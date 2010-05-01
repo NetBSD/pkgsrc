@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/01 02:49:10 tonnerre Exp $
+
+SHA1 (thrift-0.2.0-incubating.tar.gz) = 1f622daab73043b253e416ff8afbf5a459d3ab48
+RMD160 (thrift-0.2.0-incubating.tar.gz) = 235a3bbaccd6cf221a32af5905b7d102907881f8
+Size (thrift-0.2.0-incubating.tar.gz) = 1514845 bytes
