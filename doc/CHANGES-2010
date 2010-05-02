@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1790 2010/05/02 16:48:06 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1791 2010/05/02 17:03:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2259,3 +2259,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ikiwiki to 3.20100501 [schmonz 2010-05-02]
 	Updated print/tex-amscls to 2009 [minskim 2010-05-02]
 	Updated print/tex-amscls-doc to 2009 [minskim 2010-05-02]
+	Added print/tex-babelbib version 1.29 [minskim 2010-05-02]
+	Added print/tex-babelbib-doc version 1.29 [minskim 2010-05-02]
