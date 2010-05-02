@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/03/15 10:11:19 wiz Exp $
+$NetBSD: distinfo,v 1.5 2010/05/02 11:53:14 wiz Exp $
 
-SHA1 (libspectre-0.2.4.tar.gz) = 698dec68505c5f614f1b7db4407a6f5d636b1f08
-RMD160 (libspectre-0.2.4.tar.gz) = aed60dfc71d2ce12099ec0b6bff77eaf3a0876d0
-Size (libspectre-0.2.4.tar.gz) = 354820 bytes
+SHA1 (libspectre-0.2.5.tar.gz) = 669ff01b2412d4cf6db8663434115db69dfdb8bd
+RMD160 (libspectre-0.2.5.tar.gz) = 7d623361ea25e117d01bd481e8ca10337cce6ec7
+Size (libspectre-0.2.5.tar.gz) = 341454 bytes
