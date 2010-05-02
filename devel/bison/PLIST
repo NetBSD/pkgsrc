@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 17:48:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/05/02 10:41:52 wiz Exp $
 bin/bison
 info/bison.info
 lib/liby.a
@@ -25,6 +25,7 @@ share/bison/xslt/xml2dot.xsl
 share/bison/xslt/xml2text.xsl
 share/bison/xslt/xml2xhtml.xsl
 share/bison/yacc.c
+share/locale/ast/LC_MESSAGES/bison-runtime.mo
 share/locale/da/LC_MESSAGES/bison-runtime.mo
 share/locale/da/LC_MESSAGES/bison.mo
 share/locale/de/LC_MESSAGES/bison-runtime.mo
@@ -36,6 +37,7 @@ share/locale/es/LC_MESSAGES/bison.mo
 share/locale/et/LC_MESSAGES/bison-runtime.mo
 share/locale/et/LC_MESSAGES/bison.mo
 share/locale/fi/LC_MESSAGES/bison-runtime.mo
+share/locale/fi/LC_MESSAGES/bison.mo
 share/locale/fr/LC_MESSAGES/bison-runtime.mo
 share/locale/fr/LC_MESSAGES/bison.mo
 share/locale/ga/LC_MESSAGES/bison-runtime.mo
@@ -50,6 +52,7 @@ share/locale/ja/LC_MESSAGES/bison-runtime.mo
 share/locale/ja/LC_MESSAGES/bison.mo
 share/locale/ky/LC_MESSAGES/bison-runtime.mo
 share/locale/lt/LC_MESSAGES/bison-runtime.mo
+share/locale/lv/LC_MESSAGES/bison-runtime.mo
 share/locale/ms/LC_MESSAGES/bison-runtime.mo
 share/locale/ms/LC_MESSAGES/bison.mo
 share/locale/nb/LC_MESSAGES/bison-runtime.mo
@@ -58,6 +61,8 @@ share/locale/nl/LC_MESSAGES/bison-runtime.mo
 share/locale/nl/LC_MESSAGES/bison.mo
 share/locale/pl/LC_MESSAGES/bison-runtime.mo
 share/locale/pl/LC_MESSAGES/bison.mo
+share/locale/pt/LC_MESSAGES/bison-runtime.mo
+share/locale/pt/LC_MESSAGES/bison.mo
 share/locale/pt_BR/LC_MESSAGES/bison-runtime.mo
 share/locale/pt_BR/LC_MESSAGES/bison.mo
 share/locale/ro/LC_MESSAGES/bison-runtime.mo
