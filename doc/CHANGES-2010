@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1758 2010/05/02 10:54:49 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1759 2010/05/02 10:59:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2226,3 +2226,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/bison to 2.4.2 [wiz 2010-05-02]
 	Updated sysutils/cdrtools to 2.01.01alpha78 [wiz 2010-05-02]
 	Updated devel/cppcheck to 1.42 [wiz 2010-05-02]
+	Updated textproc/enchant to 1.6.0 [wiz 2010-05-02]
