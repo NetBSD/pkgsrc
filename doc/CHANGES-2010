@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1753 2010/05/02 10:28:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1754 2010/05/02 10:31:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2221,3 +2221,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight27-example to 2.7.7 [taca 2010-05-01]
 	Updated www/typolight28 to 2.8.3 [taca 2010-05-01]
 	Updated www/typolight28-translations to 20100420 [taca 2010-05-01]
+	Updated shells/osh to 20100430 [wiz 2010-05-02]
