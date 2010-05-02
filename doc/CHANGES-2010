@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1778 2010/05/02 13:30:56 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1779 2010/05/02 13:32:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2246,3 +2246,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/pangomm to 2.26.1 [wiz 2010-05-02]
 	Updated graphics/plotutils to 2.6 [wiz 2010-05-02]
 	Updated time/py-dateutil to 1.5 [wiz 2010-05-02]
+	Updated sysutils/py-dbus to 0.83.1 [wiz 2010-05-02]
