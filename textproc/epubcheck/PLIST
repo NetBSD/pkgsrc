@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/07 09:07:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/02 11:01:41 wiz Exp $
 bin/epubcheck
-libexec/epubcheck/epubcheck-1.0.4.jar
+libexec/epubcheck/epubcheck-1.0.5.jar
 libexec/epubcheck/lib/saxon.jar
 share/doc/epubcheck/COPYING.txt
 share/doc/epubcheck/README.txt
