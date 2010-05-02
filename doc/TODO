@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9251 2010/05/02 11:29:33 wiz Exp $
+$NetBSD: TODO,v 1.9252 2010/05/02 11:39:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -873,7 +873,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lbreakout2-2.6.1
 	o lcc-4.2
 	o ldapsdk-6.0.2
-	o lensfun-0.2.5
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
