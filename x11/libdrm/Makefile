@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/04/19 18:49:30 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2010/05/02 22:24:38 joerg Exp $
 #
 
 DISTNAME=		libdrm-2.4.20
@@ -11,6 +11,9 @@ HOMEPAGE=		http://dri.freedesktop.org/wiki/DRM
 COMMENT=		Userspace interface to kernel DRM services
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
+			Linux-*-* 
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
