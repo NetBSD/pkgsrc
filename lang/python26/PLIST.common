@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.9 2010/02/11 21:21:49 tnn Exp $
+@comment $NetBSD: PLIST.common,v 1.10 2010/05/02 14:09:11 wiz Exp $
 bin/2to3
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -787,6 +787,9 @@ lib/python${PY_VER_SUFFIX}/distutils/tests/test_filelist.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_install.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_install.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_install.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_lib.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_lib.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_lib.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_scripts.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_scripts.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_scripts.pyo
@@ -802,9 +805,15 @@ lib/python${PY_VER_SUFFIX}/distutils/tests/test_sdist.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_sysconfig.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_sysconfig.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_sysconfig.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_unixccompiler.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_unixccompiler.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_unixccompiler.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_upload.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_upload.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_upload.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_util.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_util.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_util.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_versionpredicate.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_versionpredicate.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_versionpredicate.pyo
@@ -951,6 +960,8 @@ lib/python${PY_VER_SUFFIX}/email/test/data/msg_41.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_42.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_43.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_44.txt
+lib/python${PY_VER_SUFFIX}/email/test/data/msg_45.txt
+lib/python${PY_VER_SUFFIX}/email/test/data/msg_46.txt
 lib/python${PY_VER_SUFFIX}/email/test/test_email.py
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyc
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyo
@@ -1894,6 +1905,9 @@ lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_nonzero.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_numliterals.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_numliterals.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_numliterals.pyo
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_operator.py
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_operator.pyc
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_operator.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_paren.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_paren.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_paren.pyo
@@ -2008,6 +2022,9 @@ lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_all_fixers.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_fixers.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_fixers.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_fixers.pyo
+lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_main.py
+lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_main.pyc
+lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_main.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_parser.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_parser.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/test_parser.pyo
@@ -2576,6 +2593,9 @@ lib/python${PY_VER_SUFFIX}/test/keycert.pem
 lib/python${PY_VER_SUFFIX}/test/list_tests.py
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/lock_tests.py
+lib/python${PY_VER_SUFFIX}/test/lock_tests.pyc
+lib/python${PY_VER_SUFFIX}/test/lock_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.py
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyo
@@ -3425,6 +3445,9 @@ lib/python${PY_VER_SUFFIX}/test/test_random.pyo
 lib/python${PY_VER_SUFFIX}/test/test_re.py
 lib/python${PY_VER_SUFFIX}/test/test_re.pyc
 lib/python${PY_VER_SUFFIX}/test/test_re.pyo
+lib/python${PY_VER_SUFFIX}/test/test_readline.py
+lib/python${PY_VER_SUFFIX}/test/test_readline.pyc
+lib/python${PY_VER_SUFFIX}/test/test_readline.pyo
 lib/python${PY_VER_SUFFIX}/test/test_repr.py
 lib/python${PY_VER_SUFFIX}/test/test_repr.pyc
 lib/python${PY_VER_SUFFIX}/test/test_repr.pyo
