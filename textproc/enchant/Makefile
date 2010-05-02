@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2009/10/12 19:56:04 ahoka Exp $
+# $NetBSD: Makefile,v 1.31 2010/05/02 10:59:23 wiz Exp $
 #
 
-DISTNAME=		enchant-1.5.0
-PKGREVISION=		1
+DISTNAME=		enchant-1.6.0
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.abisource.com/downloads/enchant/1.5.0/
+MASTER_SITES=		http://www.abisource.com/downloads/enchant/1.6.0/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.abisource.com/projects/enchant/
