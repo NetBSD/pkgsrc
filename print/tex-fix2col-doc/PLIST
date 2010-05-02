@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/02 17:17:26 minskim Exp $
+share/texmf-dist/doc/latex/fix2col/README
+share/texmf-dist/doc/latex/fix2col/fix2col.pdf
