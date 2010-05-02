@@ -1,28 +1,28 @@
-$NetBSD: patch-ac,v 1.2 2010/01/20 13:44:26 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2010/05/02 11:20:06 wiz Exp $
 
---- configure.orig	2009-12-04 15:26:48.000000000 +0000
+--- configure.orig	2010-04-08 12:31:28.000000000 +0000
 +++ configure
-@@ -11679,15 +11679,13 @@ if test -n "$PKG_CONFIG"; then
+@@ -13007,15 +13007,13 @@ if test -n "$LIBGUPNP_CFLAGS"; then
                              gmodule-2.0 \\
-                             gssdp-1.0 >= 0.7 \\
+                             gssdp-1.0 >= 0.7.1 \\
                              libsoup-2.4 >= 2.4.1 \\
 -                            libxml-2.0 \\
--                            uuid\""; } >&5
-+                            libxml-2.0\""; } >&5
+-                            uuid\"") >&5
++                            libxml-2.0\"") >&5
    ($PKG_CONFIG --exists --print-errors "glib-2.0 >= 2.18 \
                              gobject-2.0 >= 2.18 \
                              gmodule-2.0 \
-                             gssdp-1.0 >= 0.7 \
+                             gssdp-1.0 >= 0.7.1 \
                              libsoup-2.4 >= 2.4.1 \
 -                            libxml-2.0 \
 -                            uuid") 2>&5
 +                            libxml-2.0") 2>&5
    ac_status=$?
-   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-   test $ac_status = 0; }; then
-@@ -11696,8 +11694,7 @@ if test -n "$PKG_CONFIG"; then
+   $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+@@ -13024,8 +13022,7 @@ if test -n "$LIBGUPNP_CFLAGS"; then
                              gmodule-2.0 \
-                             gssdp-1.0 >= 0.7 \
+                             gssdp-1.0 >= 0.7.1 \
                              libsoup-2.4 >= 2.4.1 \
 -                            libxml-2.0 \
 -                            uuid" 2>/dev/null`
@@ -30,27 +30,27 @@ $NetBSD: patch-ac,v 1.2 2010/01/20 13:44:26 wiz Exp $
  else
    pkg_failed=yes
  fi
-@@ -11715,15 +11712,13 @@ if test -n "$PKG_CONFIG"; then
+@@ -13041,15 +13038,13 @@ if test -n "$LIBGUPNP_LIBS"; then
                              gmodule-2.0 \\
-                             gssdp-1.0 >= 0.7 \\
+                             gssdp-1.0 >= 0.7.1 \\
                              libsoup-2.4 >= 2.4.1 \\
 -                            libxml-2.0 \\
--                            uuid\""; } >&5
-+                            libxml-2.0\""; } >&5
+-                            uuid\"") >&5
++                            libxml-2.0\"") >&5
    ($PKG_CONFIG --exists --print-errors "glib-2.0 >= 2.18 \
                              gobject-2.0 >= 2.18 \
                              gmodule-2.0 \
-                             gssdp-1.0 >= 0.7 \
+                             gssdp-1.0 >= 0.7.1 \
                              libsoup-2.4 >= 2.4.1 \
 -                            libxml-2.0 \
 -                            uuid") 2>&5
 +                            libxml-2.0") 2>&5
    ac_status=$?
-   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-   test $ac_status = 0; }; then
-@@ -11732,8 +11727,7 @@ if test -n "$PKG_CONFIG"; then
+   $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+@@ -13058,8 +13053,7 @@ if test -n "$LIBGUPNP_LIBS"; then
                              gmodule-2.0 \
-                             gssdp-1.0 >= 0.7 \
+                             gssdp-1.0 >= 0.7.1 \
                              libsoup-2.4 >= 2.4.1 \
 -                            libxml-2.0 \
 -                            uuid" 2>/dev/null`
@@ -58,28 +58,38 @@ $NetBSD: patch-ac,v 1.2 2010/01/20 13:44:26 wiz Exp $
  else
    pkg_failed=yes
  fi
-@@ -11757,16 +11751,14 @@ fi
+@@ -13082,16 +13076,14 @@ fi
                              gmodule-2.0 \
-                             gssdp-1.0 >= 0.7 \
+                             gssdp-1.0 >= 0.7.1 \
                              libsoup-2.4 >= 2.4.1 \
 -                            libxml-2.0 \
--                            uuid"`
-+                            libxml-2.0"`
+-                            uuid" 2>&1`
++                            libxml-2.0" 2>&1`
          else
- 	        LIBGUPNP_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= 2.18 \
+ 	        LIBGUPNP_PKG_ERRORS=`$PKG_CONFIG --print-errors "glib-2.0 >= 2.18 \
                              gobject-2.0 >= 2.18 \
                              gmodule-2.0 \
-                             gssdp-1.0 >= 0.7 \
+                             gssdp-1.0 >= 0.7.1 \
                              libsoup-2.4 >= 2.4.1 \
 -                            libxml-2.0 \
--                            uuid"`
-+                            libxml-2.0"`
+-                            uuid" 2>&1`
++                            libxml-2.0" 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$LIBGUPNP_PKG_ERRORS" >&5
-@@ -11776,8 +11768,7 @@ fi
+@@ -13101,8 +13093,7 @@ fi
                              gmodule-2.0 \
-                             gssdp-1.0 >= 0.7 \
+                             gssdp-1.0 >= 0.7.1 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid) were not met:
++                            libxml-2.0) were not met:
+ 
+ $LIBGUPNP_PKG_ERRORS
+ 
+@@ -13118,8 +13109,7 @@ $as_echo "$as_me: error: Package require
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.7.1 \
                              libsoup-2.4 >= 2.4.1 \
 -                            libxml-2.0 \
 -                            uuid) were not met:
