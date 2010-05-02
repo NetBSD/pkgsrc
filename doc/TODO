@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9248 2010/05/02 11:11:27 wiz Exp $
+$NetBSD: TODO,v 1.9249 2010/05/02 11:20:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -780,7 +780,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtranslator-1.9.6
 	o gucharmap-2.30.0 [GNOME 2.30]
 	o guile-gtk-2.0
-	o gupnp-0.13.3
 	o gutenprint-5.2.5
 	o gv-3.6.8
 	o gvfs-1.6.1
