@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/01/21 22:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/05/02 11:39:31 wiz Exp $
 #
 
-DISTNAME=	lensfun-0.2.4
-PKGREVISION=	1
+DISTNAME=	lensfun-0.2.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/lensfun/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +16,7 @@ BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --libdir=${PREFIX}/lib
+CONFIGURE_ARGS+=	--vectorization=
 CONFIG_SHELL=		${PYTHONBIN}
 MAKE_FILE=		GNUmakefile
 PYTHON_FOR_BUILD_ONLY=	yes
