@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/03/07 08:55:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/02 11:03:13 wiz Exp $
 bin/gaupol
 ${PYSITELIB}/gaupol/__init__.py
 ${PYSITELIB}/gaupol/__init__.pyc
@@ -550,6 +550,8 @@ share/icons/hicolor/24x24/apps/gaupol.png
 share/icons/hicolor/32x32/apps/gaupol.png
 share/icons/hicolor/scalable/apps/gaupol.svg
 share/locale/ca/LC_MESSAGES/gaupol.mo
+share/locale/de/LC_MESSAGES/gaupol.mo
 share/locale/es/LC_MESSAGES/gaupol.mo
+share/locale/hu/LC_MESSAGES/gaupol.mo
 share/locale/pl/LC_MESSAGES/gaupol.mo
 share/locale/sv/LC_MESSAGES/gaupol.mo
