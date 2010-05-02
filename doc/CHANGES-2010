@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1792 2010/05/02 17:19:26 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1793 2010/05/02 17:36:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2263,3 +2263,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-babelbib-doc version 1.29 [minskim 2010-05-02]
 	Added print/tex-fix2col version 2009 [minskim 2010-05-02]
 	Added print/tex-fix2col-doc version 2009 [minskim 2010-05-02]
+	Added print/tex-typehtml version 2009 [minskim 2010-05-02]
+	Added print/tex-typehtml-doc version 2009 [minskim 2010-05-02]
