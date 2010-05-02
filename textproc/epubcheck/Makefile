@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/11/07 09:07:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/02 11:01:41 wiz Exp $
 #
 
-DISTNAME=	epubcheck-1.0.4
+DISTNAME=	epubcheck-1.0.5
 CATEGORIES=	textproc
 MASTER_SITES=	http://epubcheck.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -19,11 +19,11 @@ INSTALLATION_DIRS=      bin libexec/epubcheck/lib share/doc/epubcheck
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/epubcheck
-	${ECHO} "${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/libexec/epubcheck/epubcheck-1.0.4.jar"' "$$@"' >> ${WRKSRC}/epubcheck
+	${ECHO} "${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/libexec/epubcheck/epubcheck-1.0.5.jar"' "$$@"' >> ${WRKSRC}/epubcheck
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/epubcheck ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/epubcheck-1.0.4.jar ${DESTDIR}${PREFIX}/libexec/epubcheck
+	${INSTALL_DATA} ${WRKSRC}/epubcheck-1.0.5.jar ${DESTDIR}${PREFIX}/libexec/epubcheck
 # XXX: depend on saxon instead?
 	${INSTALL_DATA} ${WRKSRC}/lib/saxon.jar ${DESTDIR}${PREFIX}/libexec/epubcheck/lib
 	${INSTALL_DATA} ${WRKSRC}/COPYING.txt ${DESTDIR}${PREFIX}/share/doc/epubcheck
