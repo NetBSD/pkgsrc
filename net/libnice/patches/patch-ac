@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2009/08/23 15:26:48 hasso Exp $
+$NetBSD: patch-ac,v 1.2 2010/05/02 11:45:35 wiz Exp $
 
---- agent/interfaces.c.orig	2009-08-23 18:17:31 +0300
-+++ agent/interfaces.c	2009-08-23 18:18:07 +0300
-@@ -47,6 +47,7 @@
+--- agent/interfaces.c.orig	2010-03-18 20:57:10.000000000 +0000
++++ agent/interfaces.c
+@@ -49,6 +49,7 @@
  #include <net/if.h>
  #include <net/if_arp.h>
  #include <arpa/inet.h>
