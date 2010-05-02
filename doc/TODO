@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9258 2010/05/02 11:54:21 wiz Exp $
+$NetBSD: TODO,v 1.9259 2010/05/02 11:56:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -918,7 +918,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtcl-nothread-8.5.1
 	o libusb-1.0
 	o libv4l-0.6.4
-	o libxcb-1.6
 	o libxklavier-5.0
 	o libxml++-2.30.0 [GNOME 2.30]
 	o licq-1.3.8
