@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9243 2010/05/02 10:59:33 wiz Exp $
+$NetBSD: TODO,v 1.9244 2010/05/02 11:01:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -581,7 +581,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-2.30.2 [GNOME 2.30]
 	o epiphany-extensions-2.30.0 [GNOME 2.30]
 	o epstool-3.08
-	o epubcheck-1.0.5
 	o eric3-4.4.1 [now called eric4]
 	o erlang-13b4
 	o erubis-2.6.2
