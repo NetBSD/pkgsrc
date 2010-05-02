@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9259 2010/05/02 11:56:31 wiz Exp $
+$NetBSD: TODO,v 1.9260 2010/05/02 11:58:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1092,7 +1092,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.57
 	o packagekit-0.5.1
 	o pango-1.28.0 [GNOME 2.30]
-	o pangomm-2.26.1
 	o paprefs-0.9.8
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
