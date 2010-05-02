@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/07/12 02:54:43 minskim Exp $
-# TeX Live Revision 12163
+# $NetBSD: Makefile,v 1.3 2010/05/02 16:47:23 minskim Exp $
+# TeX Live Revision 15878
 
 DISTNAME=	amscls
-PKGNAME=	tex-${DISTNAME}-2008.12163
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-2009
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	AMS document classes for LaTeX
@@ -14,5 +13,5 @@ DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
