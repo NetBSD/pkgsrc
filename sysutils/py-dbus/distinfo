@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/01/07 21:20:28 wiz Exp $
+$NetBSD: distinfo,v 1.6 2010/05/02 13:31:54 wiz Exp $
 
-SHA1 (dbus-python-0.83.0.tar.gz) = c2a6edaf69b52066e8fb205ebee96a1aae141944
-RMD160 (dbus-python-0.83.0.tar.gz) = a0b49521199320992b83834feccaa537b61ae8e2
-Size (dbus-python-0.83.0.tar.gz) = 494281 bytes
+SHA1 (dbus-python-0.83.1.tar.gz) = a209de26ade2546251e5877f3b650789870755a4
+RMD160 (dbus-python-0.83.1.tar.gz) = d549fb52b52c960dc5aa646e809906142dcb067b
+Size (dbus-python-0.83.1.tar.gz) = 533391 bytes
