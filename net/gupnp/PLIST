@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/20 13:44:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/02 11:20:06 wiz Exp $
 bin/gupnp-binding-tool
 include/gupnp-1.0/libgupnp/gupnp-context-manager.h
 include/gupnp-1.0/libgupnp/gupnp-context.h
@@ -28,9 +28,9 @@ share/gtk-doc/html/gupnp/GUPnPResourceFactory.html
 share/gtk-doc/html/gupnp/GUPnPRootDevice.html
 share/gtk-doc/html/gupnp/GUPnPService.html
 share/gtk-doc/html/gupnp/GUPnPServiceInfo.html
-share/gtk-doc/html/gupnp/GUPnPServiceIntrospection.html
 share/gtk-doc/html/gupnp/GUPnPServiceProxy.html
 share/gtk-doc/html/gupnp/GUPnPXMLDoc.html
+share/gtk-doc/html/gupnp/annotation-glossary.html
 share/gtk-doc/html/gupnp/api-device-control.html
 share/gtk-doc/html/gupnp/api-device-impl.html
 share/gtk-doc/html/gupnp/api-device-info.html
@@ -42,6 +42,7 @@ share/gtk-doc/html/gupnp/glossary.html
 share/gtk-doc/html/gupnp/gupnp-Error-codes.html
 share/gtk-doc/html/gupnp/gupnp-Special-UPnP-types.html
 share/gtk-doc/html/gupnp/gupnp-binding-tool.html
+share/gtk-doc/html/gupnp/gupnp-gupnp-service-introspection.html
 share/gtk-doc/html/gupnp/gupnp.devhelp
 share/gtk-doc/html/gupnp/gupnp.devhelp2
 share/gtk-doc/html/gupnp/home.png
