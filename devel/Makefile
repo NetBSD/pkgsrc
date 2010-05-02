@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1336 2010/05/01 20:42:10 wiz Exp $
+# $NetBSD: Makefile,v 1.1337 2010/05/02 10:27:53 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -288,7 +288,6 @@ SUBDIR+=	libdnsres
 SUBDIR+=	libdockapp
 SUBDIR+=	libebml
 SUBDIR+=	libelf
-SUBDIR+=	libepc
 SUBDIR+=	libetm
 SUBDIR+=	libev
 SUBDIR+=	libevent
