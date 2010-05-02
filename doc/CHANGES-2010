@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1760 2010/05/02 11:01:51 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1761 2010/05/02 11:03:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2228,3 +2228,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/cppcheck to 1.42 [wiz 2010-05-02]
 	Updated textproc/enchant to 1.6.0 [wiz 2010-05-02]
 	Updated textproc/epubcheck to 1.0.5 [wiz 2010-05-02]
+	Updated misc/gaupol to 0.15.1 [wiz 2010-05-02]
