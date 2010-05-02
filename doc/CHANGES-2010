@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1776 2010/05/02 11:58:13 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1777 2010/05/02 13:28:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2244,3 +2244,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/libtasn1 to 2.6 [wiz 2010-05-02]
 	Updated x11/libxcb to 1.6 [wiz 2010-05-02]
 	Updated devel/pangomm to 2.26.1 [wiz 2010-05-02]
+	Updated graphics/plotutils to 2.6 [wiz 2010-05-02]
