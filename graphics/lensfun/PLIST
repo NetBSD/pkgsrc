@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/21 22:41:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/02 11:39:31 wiz Exp $
 include/lensfun.h
 lib/liblensfun.so
-lib/liblensfun.so.0
-lib/liblensfun.so.${PKGVERSION}
 lib/pkgconfig/lensfun.pc
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/cc-by-sa-3.0.txt
 share/doc/${PKGNAME}/gpl-3.0.txt
 share/doc/${PKGNAME}/lgpl-3.0.txt
 share/doc/${PKGNAME}/manual/addcamera.html
+share/doc/${PKGNAME}/manual/addlens.html
 share/doc/${PKGNAME}/manual/annotated.html
 share/doc/${PKGNAME}/manual/basearch.html
 share/doc/${PKGNAME}/manual/cc-by-ca.html
@@ -44,8 +43,8 @@ share/doc/${PKGNAME}/manual/group__Database.html
 share/doc/${PKGNAME}/manual/group__Lens.html
 share/doc/${PKGNAME}/manual/group__Mount.html
 share/doc/${PKGNAME}/manual/index.html
-share/doc/${PKGNAME}/manual/lensfun_8h_source.html
 share/doc/${PKGNAME}/manual/lensfun_8h.html
+share/doc/${PKGNAME}/manual/lensfun_8h_source.html
 share/doc/${PKGNAME}/manual/lgpl.html
 share/doc/${PKGNAME}/manual/license.html
 share/doc/${PKGNAME}/manual/modules.html
@@ -80,6 +79,7 @@ share/lensfun/6x6.xml
 share/lensfun/compact-canon.xml
 share/lensfun/compact-casio.xml
 share/lensfun/compact-fujifilm.xml
+share/lensfun/compact-kodak.xml
 share/lensfun/compact-konica-minolta.xml
 share/lensfun/compact-leica.xml
 share/lensfun/compact-nikon.xml
@@ -87,14 +87,17 @@ share/lensfun/compact-olympus.xml
 share/lensfun/compact-panasonic.xml
 share/lensfun/compact-pentax.xml
 share/lensfun/compact-ricoh.xml
+share/lensfun/compact-sigma.xml
 share/lensfun/compact-sony.xml
 share/lensfun/generic.xml
 share/lensfun/rf-leica.xml
 share/lensfun/slr-canon.xml
 share/lensfun/slr-contax.xml
+share/lensfun/slr-hasselblad.xml
 share/lensfun/slr-konica-minolta.xml
 share/lensfun/slr-nikon.xml
 share/lensfun/slr-olympus.xml
+share/lensfun/slr-panasonic.xml
 share/lensfun/slr-pentax.xml
 share/lensfun/slr-samsung.xml
 share/lensfun/slr-schneider.xml
