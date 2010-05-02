@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/07 09:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/05/02 11:01:42 wiz Exp $
 
-SHA1 (epubcheck-1.0.4.zip) = 3044731ca603a8eb0858e7d83cd0557e4c512458
-RMD160 (epubcheck-1.0.4.zip) = 78cccf6b86ac8e712362560fcb9e6b93a11f96f3
-Size (epubcheck-1.0.4.zip) = 1291983 bytes
+SHA1 (epubcheck-1.0.5.zip) = 31f3740b65da142803c1e3d25c7c77fd632913dd
+RMD160 (epubcheck-1.0.5.zip) = b7577716915fcc5867d1f83068d14e9e1ae72ef1
+Size (epubcheck-1.0.5.zip) = 1300359 bytes
