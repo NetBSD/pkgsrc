@@ -1,0 +1,4 @@
+This package fixes mark handling so that \firstmark is taken from the
+first column if that column has any marks at all.  It also keeps two
+column floats like figure* in sequence with single column floats like
+figure.
