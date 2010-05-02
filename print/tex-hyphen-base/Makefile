@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/04/11 21:56:11 minskim Exp $
-# TeX Live Revision 17785
+# $NetBSD: Makefile,v 1.5 2010/05/02 16:34:40 minskim Exp $
+# TeX Live Revision 18069
 
 DISTNAME=	hyphen-base
 PKGNAME=	tex-${DISTNAME}-2009.17785
+DIST_SUBDIR=	${PKGNAME_NOREV:S/17785/18069/}
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX hyphenation patterns for English
