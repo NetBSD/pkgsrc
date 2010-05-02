@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1763 2010/05/02 11:09:50 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1764 2010/05/02 11:11:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2231,3 +2231,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/gaupol to 0.15.1 [wiz 2010-05-02]
 	Updated games/gbrainy to 1.41 [wiz 2010-05-02]
 	Updated textproc/gsed to 4.2.1 [wiz 2010-05-02]
+	Updated net/gssdp to 0.7.2 [wiz 2010-05-02]
