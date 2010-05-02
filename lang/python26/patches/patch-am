@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.10 2010/02/11 21:09:50 tnn Exp $
+$NetBSD: patch-am,v 1.11 2010/05/02 14:09:12 wiz Exp $
 
 Disabled modules for normal build:
 bsdddb
@@ -12,7 +12,7 @@ headers and libraries from the system.
 
 Build the 1.85 compat module all the time against the BDB version of choice.
 
---- setup.py.orig	2009-10-08 09:48:32.000000000 +0000
+--- setup.py.orig	2010-03-08 07:08:25.000000000 +0000
 +++ setup.py
 @@ -17,7 +17,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
@@ -42,7 +42,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -626,9 +632,7 @@ class PyBuildExt(build_ext):
+@@ -629,9 +635,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -53,7 +53,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -738,151 +742,6 @@ class PyBuildExt(build_ext):
+@@ -741,151 +745,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -133,7 +133,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -                                print "being ignored (4.6.x must be >= 4.6.21)"
 -                                continue
 -
--                        if ( (not db_ver_inc_map.has_key(db_ver)) and
+-                        if ( (db_ver not in db_ver_inc_map) and
 -                            allow_db_ver(db_ver) ):
 -                            # save the include directory with the db.h version
 -                            # (first occurrence only)
@@ -205,7 +205,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -989,25 +848,12 @@ class PyBuildExt(build_ext):
+@@ -992,25 +851,12 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -236,7 +236,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -1020,7 +866,7 @@ class PyBuildExt(build_ext):
+@@ -1023,7 +869,7 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -245,7 +245,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
                  gdbm_libs = ['gdbm']
                  if self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
                      gdbm_libs.append('gdbm_compat')
-@@ -1036,14 +882,11 @@ class PyBuildExt(build_ext):
+@@ -1039,14 +885,11 @@ class PyBuildExt(build_ext):
                          libraries = gdbm_libs ) )
                  else:
                      missing.append('dbm')
@@ -262,7 +262,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
              else:
                  missing.append('dbm')
  
-@@ -1300,6 +1143,14 @@ class PyBuildExt(build_ext):
+@@ -1304,6 +1147,14 @@ class PyBuildExt(build_ext):
                  )
              libraries = []
  
@@ -277,7 +277,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -1900,9 +1751,9 @@ def main():
+@@ -1909,9 +1760,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
