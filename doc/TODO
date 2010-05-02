@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9252 2010/05/02 11:39:40 wiz Exp $
+$NetBSD: TODO,v 1.9253 2010/05/02 11:42:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -904,7 +904,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liblbxutil-1.1.0
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmikmod-3.1.12
 	o libmp3splt-0.5.8
 	o libnasl-2.3.1
 	o libnice-0.0.11
