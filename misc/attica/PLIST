@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 23:43:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/02 14:12:54 wiz Exp $
 include/attica/accountbalance.h
 include/attica/activity.h
 include/attica/atticabasejob.h
@@ -12,6 +12,7 @@ include/attica/folder.h
 include/attica/getjob.h
 include/attica/itemjob.h
 include/attica/knowledgebaseentry.h
+include/attica/license.h
 include/attica/listjob.h
 include/attica/message.h
 include/attica/metadata.h
