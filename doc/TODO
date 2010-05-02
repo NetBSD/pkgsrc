@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9242 2010/05/02 10:54:49 wiz Exp $
+$NetBSD: TODO,v 1.9243 2010/05/02 10:59:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -573,7 +573,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o empathy-2.30.0.2 [GNOME 2.30]
 	o enca-1.13
-	o enchant-1.6.0
 	o enlightenment-1.0.0
 	o enscript-1.6.5.1
 	o eog-2.30.1 [GNOME 2.30]
