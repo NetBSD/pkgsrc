@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1770 2010/05/02 11:45:45 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1771 2010/05/02 11:50:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2238,3 +2238,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/lensfun to 0.2.5 [wiz 2010-05-02]
 	Updated audio/libmikmod to 3.1.12 [wiz 2010-05-02]
 	Updated net/libnice to 0.0.11 [wiz 2010-05-02]
+	Updated graphics/librsvg to 2.26.3 [wiz 2010-05-02]
