@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9269 2010/05/02 13:49:03 wiz Exp $
+$NetBSD: TODO,v 1.9270 2010/05/02 13:51:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1177,7 +1177,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-m2crypto-0.20.2
 	o py-nevow-0.10.0
 	o py-psycopg2-2.0.14
-	o py-pyrex-0.9.9
 	o py-pytz-2010h
 	o py-rpy-1.0.3 [pkg/43227]
 	o py-scipy-0.7.2 [pkg/43225]
