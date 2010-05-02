@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1782 2010/05/02 13:43:01 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1783 2010/05/02 13:47:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2250,3 +2250,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-lxml to 2.2.6 [wiz 2010-05-02]
 	Updated misc/dialog to 1.1.20100428 [wiz 2010-05-02]
 	Updated misc/JBidwatcher to 2.1pre6 [wiz 2010-05-02]
+	Updated net/yaz to 4.0.6 [wiz 2010-05-02]
