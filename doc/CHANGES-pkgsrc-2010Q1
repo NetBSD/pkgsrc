@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.12 2010/04/25 18:20:21 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.13 2010/05/02 23:23:26 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -43,3 +43,7 @@ mail/postfix: build fix
 mail/postfix-current: build fix
 Pullup ticket #3092 - requested by dholland
 wm/golem: build fix
+Pullup ticket #3097 - requested by taca
+www/typolight27: security update
+Pullup ticket #3098 - requested by taca
+www/typolight28: security update
