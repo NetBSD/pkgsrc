@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/05/02 11:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/05/02 16:03:17 tron Exp $
 
 DISTNAME=	libtasn1-2.6
 CATEGORIES=	security devel
@@ -23,18 +23,12 @@ CONFIGURE_ARGS+=	--with-packager-version="${PKGVERSION}"
 CONFIGURE_ARGS+=	--with-packager-bug-reports="http://gnats.NetBSD.org/"
 
 .include "../../mk/bsd.prefs.mk"
+
 # Mac OS X has no prototype for getopt_long and no declaration for
 # struct option, so ignore getopt_long() even though the test succeeds.
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		ac_cv_func_getopt_long=no
 CFLAGS+=	-fno-common
-
-# The "gnu" library ends up being empty and Mac OS X's "ar" doesn't like
-# to create empty archives. Just don't build the library.
-SUBST_CLASSES+=		gllib
-SUBST_STAGE.gllib=	post-configure
-SUBST_FILES.gllib=	lib/Makefile
-SUBST_SED.gllib=	-e "s/SUBDIRS = gllib//"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
