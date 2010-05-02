@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1772 2010/05/02 11:52:23 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1773 2010/05/02 11:53:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2240,3 +2240,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/libnice to 0.0.11 [wiz 2010-05-02]
 	Updated graphics/librsvg to 2.26.3 [wiz 2010-05-02]
 	Updated devel/libsigc++ to 2.2.6 [wiz 2010-05-02]
+	Updated print/libspectre to 0.2.5 [wiz 2010-05-02]
