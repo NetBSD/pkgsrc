@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1774 2010/05/02 11:54:20 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1775 2010/05/02 11:56:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libsigc++ to 2.2.6 [wiz 2010-05-02]
 	Updated print/libspectre to 0.2.5 [wiz 2010-05-02]
 	Updated security/libtasn1 to 2.6 [wiz 2010-05-02]
+	Updated x11/libxcb to 1.6 [wiz 2010-05-02]
