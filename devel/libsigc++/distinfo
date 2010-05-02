@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/10/31 01:49:08 wiz Exp $
+$NetBSD: distinfo,v 1.15 2010/05/02 11:52:13 wiz Exp $
 
-SHA1 (libsigc++-2.2.4.2.tar.bz2) = 1c8bbe6ff23d551fa198e634bba3b386240110b7
-RMD160 (libsigc++-2.2.4.2.tar.bz2) = 128deb596e4f1d3e20d4ae9afa5ec03512fdf8d8
-Size (libsigc++-2.2.4.2.tar.bz2) = 3596750 bytes
+SHA1 (libsigc++-2.2.6.tar.bz2) = 2c0b60d8b076720a0feb71b115f88ffb60c6e570
+RMD160 (libsigc++-2.2.6.tar.bz2) = 66c7aaefd8469ac5f950595fccd0fb5c5bdbe168
+Size (libsigc++-2.2.6.tar.bz2) = 3741979 bytes
