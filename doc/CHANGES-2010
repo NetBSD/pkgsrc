@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1796 2010/05/03 06:22:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1797 2010/05/03 06:31:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2268,4 +2268,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/unixodbc to 2.3.0 [jnemeth 2010-05-03]
 	Updated databases/myodbc to 5.1.6 [jnemeth 2010-05-03]
 	Updated x11/x11vnc to 0.9.10 [obache 2010-05-03]
-	Updated x11/x11vnc to 0.9.10 [obache 2010-05-03]
+	Updated games/scummvm to 1.1.1 [adam 2010-05-03]
