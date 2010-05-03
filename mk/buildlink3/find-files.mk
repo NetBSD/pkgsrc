@@ -1,4 +1,4 @@
-# $NetBSD: find-files.mk,v 1.5 2010/05/02 23:59:29 obache Exp $
+# $NetBSD: find-files.mk,v 1.6 2010/05/03 05:52:59 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -84,18 +84,18 @@ USE_TOOLS+=	grep
 ${_var_}=	__nonexistent__
 .    for _file_ in ${BUILTIN_FIND_FILES.${_var_}}
 .      if !empty(${_var_}:M__nonexistent__)
-_real_file_=	__noexistent__
+_real_file_=	__nonexistent__
 .       if exists(${_file_})
 _real_file_=	${_file_}
 .       endif
-.       if !empty(_real_file_:M__noexistent__) && defined(BEINCLUDES) && !empty(BEINCLUDES)
+.       if !empty(_real_file_:M__nonexistent__) && defined(BEINCLUDES) && !empty(BEINCLUDES)
 .        for _try_file_ in ${BEINCLUDES:S/;/ /g:=${_file_:S/\/usr\/include\//\//g}}
-.          if !empty(_real_file_:M__noexistent__) && exists(${_try_file_})
+.          if !empty(_real_file_:M__nonexistent__) && exists(${_try_file_})
 _real_file_=	${_try_file_}
 .          endif
 .        endfor
 .       endif
-.       if empty(_real_file_:M__noexistent__)
+.       if empty(_real_file_:M__nonexistent__)
 .        if !defined(BUILTIN_FIND_GREP.${_var_})
 ${_var_}:=	${_real_file_}
 .        else
