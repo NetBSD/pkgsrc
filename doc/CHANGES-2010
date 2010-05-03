@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1793 2010/05/02 17:36:23 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1794 2010/05/03 02:11:00 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2265,3 +2265,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-fix2col-doc version 2009 [minskim 2010-05-02]
 	Added print/tex-typehtml version 2009 [minskim 2010-05-02]
 	Added print/tex-typehtml-doc version 2009 [minskim 2010-05-02]
+	Updated databases/unixodbc to 2.3.0 [jnemeth 2010-05-03]
