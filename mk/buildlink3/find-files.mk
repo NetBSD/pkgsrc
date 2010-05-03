@@ -1,4 +1,4 @@
-# $NetBSD: find-files.mk,v 1.6 2010/05/03 05:52:59 obache Exp $
+# $NetBSD: find-files.mk,v 1.7 2010/05/03 05:54:18 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -85,28 +85,28 @@ ${_var_}=	__nonexistent__
 .    for _file_ in ${BUILTIN_FIND_FILES.${_var_}}
 .      if !empty(${_var_}:M__nonexistent__)
 _real_file_=	__nonexistent__
-.       if exists(${_file_})
+.        if exists(${_file_})
 _real_file_=	${_file_}
-.       endif
-.       if !empty(_real_file_:M__nonexistent__) && defined(BEINCLUDES) && !empty(BEINCLUDES)
-.        for _try_file_ in ${BEINCLUDES:S/;/ /g:=${_file_:S/\/usr\/include\//\//g}}
-.          if !empty(_real_file_:M__nonexistent__) && exists(${_try_file_})
+.        endif
+.        if !empty(_real_file_:M__nonexistent__) && defined(BEINCLUDES) && !empty(BEINCLUDES)
+.          for _try_file_ in ${BEINCLUDES:S/;/ /g:=${_file_:S/\/usr\/include\//\//g}}
+.            if !empty(_real_file_:M__nonexistent__) && exists(${_try_file_})
 _real_file_=	${_try_file_}
-.          endif
-.        endfor
-.       endif
-.       if empty(_real_file_:M__nonexistent__)
-.        if !defined(BUILTIN_FIND_GREP.${_var_})
+.            endif
+.          endfor
+.        endif
+.        if empty(_real_file_:M__nonexistent__)
+.          if !defined(BUILTIN_FIND_GREP.${_var_})
 ${_var_}:=	${_real_file_}
-.        else
+.          else
 ${_var_}!=								\
 	if ${GREP} -q ${BUILTIN_FIND_GREP.${_var_}:Q} ${_real_file_:Q}; then	\
 		${ECHO} ${_real_file_:Q};				\
 	else								\
 		${ECHO} __nonexistent__;				\
 	fi
+.          endif
 .        endif
-.       endif
 .      endif
 .    endfor
 .  endif
