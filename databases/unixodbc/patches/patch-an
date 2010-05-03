@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2010/05/03 02:10:43 jnemeth Exp $
+
+--- include/Makefile.in.orig	2010-04-26 02:28:43.000000000 +0000
++++ include/Makefile.in
+@@ -301,7 +301,7 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-includeHEADERS: $(include_HEADERS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(includedir)" || $(MKDIR_P) "$(DESTDIR)$(includedir)"
++	test -z "$(DESTDIR)$(includedir)" || $(MKDIR_P) "$(DESTDIR)$(includedir)"
+ 	@list='$(include_HEADERS)'; test -n "$(includedir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
