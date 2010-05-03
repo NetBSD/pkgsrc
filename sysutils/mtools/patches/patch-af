@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.4 2010/05/03 10:17:05 is Exp $
+
+--- charsetConv.c.orig	2008-11-18 21:33:11.000000000 +0000
++++ charsetConv.c
+@@ -265,7 +265,7 @@ static void initialize_to_native(void)
+  */
+ int wchar_to_native(const wchar_t *wchar, char *native, size_t len)
+ {
+-#ifdef HAVE_ICONV_H
++#if defined(HAVE_ICONV_H) && defined(__linux__)
+ 	int mangled;
+ 	int r;
+ 	initialize_to_native();
