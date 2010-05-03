@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/08 05:06:30 minskim Exp $
-# TeX Live Revision 15576
+# $NetBSD: Makefile,v 1.2 2010/05/03 18:45:36 minskim Exp $
+# TeX Live Revision 17228
 
 DISTNAME=	collection-basic
 PKGNAME=	tex-${DISTNAME}-2009
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	# empty
 
@@ -28,6 +29,7 @@ DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
 DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 DEPENDS+=	tex-kpathsea-[0-9]*:../../print/tex-kpathsea
+DEPENDS+=	lua-alt-getopt>=0.7.0:../../devel/lua-alt-getopt
 DEPENDS+=	tex-luatex-[0-9]*:../../print/tex-luatex
 DEPENDS+=	tex-makeindex-[0-9]*:../../textproc/tex-makeindex
 DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
@@ -39,8 +41,11 @@ DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 DEPENDS+=	dialog-[0-9]*:../../misc/dialog
 DEPENDS+=	tex-tetex-[0-9]*:../../print/tex-tetex
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
+# texlive-tetex installs texconfig
 DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
+# texlive-msg-translations is not needed in pkgsrc.
 DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
+# texlive.infra is not needed in pkgsrc.
 DEPENDS+=	tex-xdvi-[0-9]*:../../print/tex-xdvi
 
 META_PACKAGE=	yes
