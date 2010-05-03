@@ -1,4 +1,4 @@
-# $NetBSD: tools.Haiku.mk,v 1.1 2010/02/06 10:39:59 obache Exp $
+# $NetBSD: tools.Haiku.mk,v 1.2 2010/05/03 07:02:24 obache Exp $
 #
 # System-supplied tools for the Haiku operating system.
 
@@ -49,7 +49,7 @@ TOOLS_PLATFORM.install?=	/bin/install
 TOOLS_PLATFORM.install-info?=	/boot/common/bin/install-info
 #TOOLS_PLATFORM.ldconfig?=	/sbin/ldconfig
 # XXX: Haiku currently no support of hard link.
-TOOLS_PLATFORM.ln?=		/bin/ln -s
+TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
 TOOLS_PLATFORM.m4?=		${TOOLS_PLATFORM.gm4}
 #TOOLS_PLATFORM.mail?=		/bin/mail
