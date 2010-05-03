@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2009/10/19 08:37:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/05/03 02:10:43 jnemeth Exp $
 bin/dltest
 bin/isql
 bin/iusql
 bin/odbc_config
 bin/odbcinst
-include/autotest.h
 include/odbcinst.h
 include/odbcinstext.h
 include/sql.h
@@ -14,8 +13,6 @@ include/sqlucode.h
 include/unixodbc_conf.h
 include/uodbc_extras.h
 include/uodbc_stats.h
-lib/libboundparam.la
-lib/libgtrtst.la
 lib/libodbc.la
 lib/libodbccr.la
 lib/libodbcinst.la

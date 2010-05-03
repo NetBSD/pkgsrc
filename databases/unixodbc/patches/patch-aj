@@ -1,0 +1,31 @@
+$NetBSD: patch-aj,v 1.1 2010/05/03 02:10:43 jnemeth Exp $
+
+--- libltdl/Makefile.in.orig	2010-04-26 01:42:12.000000000 +0000
++++ libltdl/Makefile.in
+@@ -408,7 +408,7 @@ distclean-hdr:
+ 	-rm -f config.h stamp-h1
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(MKDIR_P) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)$(libdir)" || $(MKDIR_P) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -644,7 +644,7 @@ distclean-libtool:
+ 	-rm -f libtool config.lt
+ install-includeHEADERS: $(include_HEADERS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(includedir)" || $(MKDIR_P) "$(DESTDIR)$(includedir)"
++	test -z "$(DESTDIR)$(includedir)" || $(MKDIR_P) "$(DESTDIR)$(includedir)"
+ 	@list='$(include_HEADERS)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+@@ -661,7 +661,7 @@ uninstall-includeHEADERS:
+ 	done
+ install-ltdlincludeHEADERS: $(ltdlinclude_HEADERS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(ltdlincludedir)" || $(MKDIR_P) "$(DESTDIR)$(ltdlincludedir)"
++	test -z "$(DESTDIR)$(ltdlincludedir)" || $(MKDIR_P) "$(DESTDIR)$(ltdlincludedir)"
+ 	@list='$(ltdlinclude_HEADERS)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \

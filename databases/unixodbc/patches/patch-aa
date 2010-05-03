@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2009/10/19 08:37:39 taca Exp $
+$NetBSD: patch-aa,v 1.6 2010/05/03 02:10:43 jnemeth Exp $
 
---- Makefile.in.orig	2008-11-20 01:11:38.000000000 +0900
+--- Makefile.in.orig	2010-02-24 16:52:24.000000000 +0000
 +++ Makefile.in
-@@ -700,9 +700,6 @@ uninstall-info: uninstall-info-recursive
+@@ -796,9 +796,6 @@ uninstall-am:
  
  
  install-data-am:
@@ -10,5 +10,5 @@ $NetBSD: patch-aa,v 1.5 2009/10/19 08:37:39 taca Exp $
 -	-touch $(DESTDIR)${sysconfdir}/odbc.ini
 -	-mkdir -p $(DESTDIR)${sysconfdir}/ODBCDataSources
  	$(DESTDIR)${bindir}/odbc_config --header > $(DESTDIR)${includedir}/unixodbc_conf.h
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.

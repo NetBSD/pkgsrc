@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2010/05/03 02:10:43 jnemeth Exp $
+
+--- odbcinst/Makefile.in.orig	2010-04-26 02:28:43.000000000 +0000
++++ odbcinst/Makefile.in
+@@ -440,7 +440,7 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
+ $(am__aclocal_m4_deps):
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(MKDIR_P) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)$(libdir)" || $(MKDIR_P) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; test -n "$(libdir)" || list=; \
+ 	list2=; for p in $$list; do \
+ 	  if test -f $$p; then \
+@@ -557,7 +557,7 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
++	test -z "$(DESTDIR)$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
+ 	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
