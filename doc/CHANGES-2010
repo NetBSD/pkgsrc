@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1802 2010/05/03 23:01:02 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1803 2010/05/03 23:18:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dovecot to 1.2.11nb2 [ghen 2010-05-03]
 	Updated www/apache22 to 2.2.15nb1 [tron 2010-05-03]
 	Updated fonts/tex-kotex-base to 0.1.1nb1 [minskim 2010-05-03]
+	Added print/tex-kotex-utils version 0.1.1 [minskim 2010-05-03]
