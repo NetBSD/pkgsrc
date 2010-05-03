@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2010/04/30 16:30:09 tron Exp $
+# $NetBSD: options.mk,v 1.8 2010/05/03 20:10:33 tron Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_OPTIONS_REQUIRED_GROUPS=	mpm
@@ -56,7 +56,11 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 	--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT:Q}		\
 	--with-suexec-logfile=${APACHE_SUEXEC_LOGFILE:Q}
 
+.  if !empty(PKG_OPTIONS:Mapache-shared-modules)
+CONFIGURE_ARGS+=        --enable-modules="all suexec"
+.  else
 APACHE_MODULES+=        suexec
+.  endif
 CONFIGURE_ARGS+=        ${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
 BUILD_DEFS+=            APACHE_SUEXEC_CONFIGURE_ARGS
 BUILD_TARGET=		all suexec
