@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2009/12/15 21:33:49 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2010/05/03 02:10:43 jnemeth Exp $
 
-DISTNAME=	unixODBC-2.2.14
+DISTNAME=	unixODBC-2.3.0
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
-PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://www.unixodbc.org/
 
@@ -36,7 +35,7 @@ post-patch: fix-ltdl-and-lexlib
 
 fix-driver-installation:
 	cd ${WRKSRC};						\
-	files=`${FIND} ODBCConfig DRVConfig Drivers -name Makefile.in -print`;\
+	files=`${FIND} DRVConfig Drivers -name Makefile.in -print`;\
 	for file in $${files}; do				\
 		sed -e "s|^\(libdir =\).*|\1 ${PREFIX}/${UNIXODBC_DRIVERS_DIR}|g" \
 			$${file} >> $${file}.fixed;		\
