@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/03 23:17:48 minskim Exp $
+bin/euc-bookmark
+bin/hbibtex
+bin/hmakeindex
+bin/hypua2jamo
+bin/insertjamofiller
+bin/jamo2hypua
+bin/komkindex
+bin/ttf2kotexfont
