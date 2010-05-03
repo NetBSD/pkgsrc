@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1799 2010/05/03 18:46:15 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1800 2010/05/03 19:19:31 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2271,3 +2271,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/scummvm to 1.1.1 [adam 2010-05-03]
 	Updated net/Transmission to 1.93 [tnn 2010-05-03]
 	Updated print/tex-collection-basic to 2009nb1 [minskim 2010-05-03]
+	Updated mail/dovecot to 1.2.11nb2 [ghen 2010-05-03]
