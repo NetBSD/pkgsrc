@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.33 2010/02/19 19:11:08 joerg Exp $
+# $NetBSD: metadata.mk,v 1.34 2010/05/03 16:46:36 reed Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -64,11 +64,11 @@ ${_BUILD_INFO_FILE}: plist
 	bins=`${AWK} '/(^|\/)(bin|sbin|libexec)\// { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 	case ${OBJECT_FMT:Q}"" in					\
 	ELF)								\
-		libs=`${AWK} '/(^|\/)lib\/lib.*\.so\.[0-9]+$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
+		libs=`${AWK} '/(^|\/)lib\/lib.*\.so(\.[0-9]+)?$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 		if ${TEST} -n "$$bins" -o -n "$$libs"; then		\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SORT} -u`; \
 		fi;							\
-		linklibs=`${AWK} '/.*\.so\.[0-9\.]+$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
+		linklibs=`${AWK} '/.*\.so(\.[0-9]+)?$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
 		for i in $$linklibs; do					\
 			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
 				${TEST} ${PKG_DEVELOPER:Uno:Q}"" = "no" || \
@@ -84,8 +84,12 @@ ${_BUILD_INFO_FILE}: plist
 		fi;							\
 		;;							\
 	esac;								\
+	requires=`{ for i in $$requires $$requires; do echo $$i; done; \
+		${AWK} '{ print "${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}; } | \
+		${SORT} | uniq -c | awk '$$1 == 2 {print $$2}'`; \
 	for i in "" $$libs; do						\
 		${TEST} "$$i" != "" || continue;			\
+		${TEST} -h "$$i" && echo "$$i" | grep '[.]so$$' > /dev/null && continue;	\
 		${ECHO} "PROVIDES=$${i}";				\
 	done | ${SED} -e 's,^PROVIDES=${DESTDIR},PROVIDES=,'		\
 		>> ${.TARGET}.tmp;					\
