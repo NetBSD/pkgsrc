@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2009/04/23 19:43:06 schwarz Exp $
+$NetBSD: patch-ac,v 1.2 2010/05/03 02:10:43 jnemeth Exp $
 
---- Drivers/Postgre7.1/md5.h.orig	2009-04-20 23:47:18.000000000 +0200
-+++ Drivers/Postgre7.1/md5.h	2009-04-20 23:48:30.000000000 +0200
+--- Drivers/Postgre7.1/md5.h.orig	2009-12-11 16:54:08.000000000 +0000
++++ Drivers/Postgre7.1/md5.h
 @@ -13,6 +13,9 @@
  
  #include <stdlib.h>
