@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1804 2010/05/04 02:49:03 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1805 2010/05/04 11:13:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2277,3 +2277,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-kotex-utils version 0.1.1 [minskim 2010-05-03]
 	Updated textproc/ruby-json to 1.4.2 [taca 2010-05-04]
 	Updated textproc/ruby-json-pure to 1.4.2 [taca 2010-05-04]
+	Updated databases/p5-DBI to 1.611 [sno 2010-05-04]
