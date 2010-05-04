@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1807 2010/05/04 15:19:45 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1808 2010/05/04 15:51:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2280,3 +2280,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBI to 1.611 [sno 2010-05-04]
 	Updated www/typolight27 to 2.7.7nb1 [taca 2010-05-04]
 	Updated www/typolight28-translations to 20100504 [taca 2010-05-04]
+	Updated print/tex-kotex to 0.1.1nb2 [minskim 2010-05-04]
