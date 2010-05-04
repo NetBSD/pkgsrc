@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/04 14:45:32 hauke Exp $
+
+SHA1 (teapot-1.09.tar.gz) = 5618bcc3c2e10ed6af73a0f8ee29599c7fc5967d
+RMD160 (teapot-1.09.tar.gz) = e592ff0a193e3c0f3dc5d774c07e72692d211240
+Size (teapot-1.09.tar.gz) = 161409 bytes
+SHA1 (patch-aa) = 5f849fc7436df413e6e925835056b598c3ffd237
