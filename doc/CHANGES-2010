@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1811 2010/05/04 20:48:24 tez Exp $
+$NetBSD: CHANGES-2010,v 1.1812 2010/05/04 23:51:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2284,3 +2284,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed print/tex-bin-kotex successor print/tex-kotex-utils [minskim 2010-05-04]
 	Added math/teapot version 1.0.9 [hauke 2010-05-04]
 	Updated lang/gcc34 to 3.4.6nb3 [tez 2010-05-04]
+	Updated textproc/tex-xmltex to 1.9nb7 [minskim 2010-05-04]
+	Updated textproc/tex-xmltex-doc to 0.8nb1 [minskim 2010-05-04]
