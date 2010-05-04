@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1809 2010/05/04 15:53:46 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1810 2010/05/04 16:31:56 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2282,3 +2282,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100504 [taca 2010-05-04]
 	Updated print/tex-kotex to 0.1.1nb2 [minskim 2010-05-04]
 	Removed print/tex-bin-kotex successor print/tex-kotex-utils [minskim 2010-05-04]
+	Added math/teapot version 1.0.9 [hauke 2010-05-04]
