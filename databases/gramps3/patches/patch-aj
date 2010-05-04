@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2010/05/04 11:05:00 drochner Exp $
+
+--- src/gen/db/txn.py.orig	2010-03-18 15:41:57.000000000 +0000
++++ src/gen/db/txn.py
+@@ -32,7 +32,7 @@ database.
+ #-------------------------------------------------------------------------
+ from __future__ import with_statement
+ import cPickle as pickle
+-from bsddb import dbshelve, db
++from bsddb3 import dbshelve, db
+ import logging
+ from collections import defaultdict
+ 
