@@ -1,0 +1,7 @@
+teapot is a spread sheet program for UNIX, which uses modern concepts
+besides being portable and extensible, for instance three dimensional
+tables and iterative expressions.
+
+The most important feature is the funktional addressing of cells,
+unlike the traditional approach like A0, C5, etc. which is probably
+inherited from VisiCalc.
