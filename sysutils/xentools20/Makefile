@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2010/02/10 19:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2010/05/04 18:55:46 jym Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
@@ -12,9 +12,13 @@ MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.cl.cam.ac.uk/research/srg/netos/xen/
 COMMENT=		Userland Tools for Xen
 
+LICENSE=		gnu-gpl-v2
+
 DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 PKG_SYSCONFSUBDIR=	xen
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
 
@@ -28,6 +32,7 @@ MESSAGE_SUBST=		EGDIR=${EGDIR}
 USE_TOOLS+=		gmake
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
+
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS=	python/xen/util/console_client.py
 PYTHON_PATCH_SCRIPTS+=	python/xen/xend/server/SrvServer.py
@@ -100,12 +105,12 @@ post-build:
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	for f in xend-config.sxp xmexample1 xmexample2 xmexample3; do	\
-		${INSTALL_DATA} ${WRKSRC}/examples/$$f ${EGDIR}/$$f;	\
+		${INSTALL_DATA} ${WRKSRC}/examples/$$f ${DESTDIR}${EGDIR}/$$f;	\
 	done
 .for s in ${XEND_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${DESTDIR}${EGDIR}/${s}
 .endfor
 
 .include "../../lang/python/application.mk"
