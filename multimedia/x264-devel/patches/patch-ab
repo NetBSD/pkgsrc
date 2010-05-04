@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.11 2009/05/25 20:56:38 drochner Exp $
+$NetBSD: patch-ab,v 1.12 2010/05/04 18:18:57 drochner Exp $
 
---- Makefile.orig	2009-03-26 22:45:08.000000000 +0100
+--- Makefile.orig	2009-09-20 20:45:09.000000000 +0000
 +++ Makefile
 @@ -40,9 +40,9 @@ endif
  ifdef ARCH_X86
@@ -14,12 +14,22 @@ $NetBSD: patch-ab,v 1.11 2009/05/25 20:56:38 drochner Exp $
  endif
  endif
  
-@@ -52,44 +52,49 @@ ALTIVECSRC += common/ppc/mc.c common/ppc
+@@ -52,7 +52,7 @@ ALTIVECSRC += common/ppc/mc.c common/ppc
                common/ppc/quant.c common/ppc/deblock.c \
                common/ppc/predict.c
  SRCS += $(ALTIVECSRC)
 -$(ALTIVECSRC:%.c=%.o): CFLAGS += $(ALTIVECFLAGS)
 +$(ALTIVECSRC:%.c=%.lo): CFLAGS += $(ALTIVECFLAGS)
+ endif
+ 
+ # NEON optims
+@@ -62,44 +62,49 @@ ASMSRC += common/arm/cpu-a.S common/arm/
+           common/arm/dct-a.S common/arm/quant-a.S common/arm/deblock-a.S \
+           common/arm/predict-a.S
+ SRCS   += common/arm/mc-c.c common/arm/predict-c.c
+-OBJASM  = $(ASMSRC:%.S=%.o)
++OBJASM  = $(ASMSRC:%.S=%.lo)
+ endif
  endif
  
  # VIS optims
@@ -59,7 +69,7 @@ $NetBSD: patch-ab,v 1.11 2009/05/25 20:56:38 drochner Exp $
  
 -x264$(EXE): $(OBJCLI) libx264.a 
 -	$(CC) -o $@ $+ $(LDFLAGS)
-+x264$(EXE): $(OBJCLI) libx264.la
++x264$(EXE): $(OBJCLI) libx264.la 
 +	${LIBTOOL} --mode=link $(CC) -o $@ $+ $(LDFLAGS)
  
 -checkasm: tools/checkasm.o libx264.a
@@ -69,16 +79,15 @@ $NetBSD: patch-ab,v 1.11 2009/05/25 20:56:38 drochner Exp $
  
 -%.o: %.asm
 -	$(AS) $(ASFLAGS) -o $@ $<
+-	-@ $(STRIP) -x $@ # delete local/anonymous symbols, so they don't show up in oprofile
 +%.lo: %.asm
 +	${LIBTOOL} --mode=compile --tag=CC \
 +		./strip_fopt.sh $(AS) $(ASFLAGS) -o $@ $<
- # delete local/anonymous symbols, so they don't show up in oprofile
--	-@ $(STRIP) -x $@
-+	-@ $(STRIP) -x $(@:.lo=.o)
++	-@ $(STRIP) -x $(@:.lo=.o) # delete local/anonymous symbols, so they don't show up in oprofile
  
- .depend: config.mak
- 	rm -f .depend
-@@ -143,21 +148,16 @@ distclean: clean
+ %.o: %.S
+ 	$(AS) $(ASFLAGS) -o $@ $<
+@@ -156,21 +161,16 @@ distclean: clean
  	rm -f config.mak config.h x264.pc
  	rm -rf test/
  
