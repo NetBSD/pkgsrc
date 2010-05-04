@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2010/03/20 12:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2010/05/04 11:10:07 drochner Exp $
 #
 
-DISTNAME=	rhythmbox-0.12.6
-PKGREVISION=	4
+DISTNAME=	rhythmbox-0.12.8
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -34,7 +33,6 @@ BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
@@ -48,7 +46,7 @@ BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.14.0
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.16.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
