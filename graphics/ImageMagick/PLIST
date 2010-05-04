@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2009/10/28 11:07:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.66 2010/05/04 11:14:23 drochner Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -31,6 +31,7 @@ include/ImageMagick/Magick++/TypeMetric.h
 include/ImageMagick/magick/ImageMagick.h
 include/ImageMagick/magick/MagickCore.h
 include/ImageMagick/magick/PreRvIcccm.h
+include/ImageMagick/magick/accelerate.h
 include/ImageMagick/magick/animate.h
 include/ImageMagick/magick/annotate.h
 include/ImageMagick/magick/api.h
@@ -59,6 +60,7 @@ include/ImageMagick/magick/draw.h
 include/ImageMagick/magick/effect.h
 include/ImageMagick/magick/enhance.h
 include/ImageMagick/magick/exception.h
+include/ImageMagick/magick/feature.h
 include/ImageMagick/magick/fourier.h
 include/ImageMagick/magick/fx.h
 include/ImageMagick/magick/gem.h
@@ -82,6 +84,7 @@ include/ImageMagick/magick/mime.h
 include/ImageMagick/magick/module.h
 include/ImageMagick/magick/monitor.h
 include/ImageMagick/magick/montage.h
+include/ImageMagick/magick/morphology.h
 include/ImageMagick/magick/option.h
 include/ImageMagick/magick/paint.h
 include/ImageMagick/magick/pixel.h
@@ -141,6 +144,7 @@ lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/english.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/francais.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/locale.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/policy.xml
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-dejavu.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-ghostscript.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-windows.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type.xml
@@ -215,6 +219,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose-over.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose-sigmoidal.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose.png
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose.pnm
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/script.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/smile.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/sponsor.jpg
@@ -998,9 +1003,10 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/drawing-wand.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/effect.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/enhance.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/exception.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/feature.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/fx.html
-share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/histogram.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/layer.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/list.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-deprecate.html
@@ -1012,6 +1018,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/memory.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/module.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/monitor.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/montage.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/morphology.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/paint.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/pixel-iterator.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/pixel-view.html
@@ -1025,6 +1032,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/resource.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/segment.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/shear.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/signature.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/statistic.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/transform.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/version.html
@@ -1046,6 +1054,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/download.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/escape.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/examples.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/exception.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/favicon.ico
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/formats.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/fx.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/high-dynamic-range.html
