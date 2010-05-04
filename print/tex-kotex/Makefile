@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2009/07/23 06:26:59 minskim Exp $
-# TeX Live Revision 19
+# $NetBSD: Makefile,v 1.4 2010/05/04 15:50:45 minskim Exp $
+# TeX Live Revision 8
 
 DISTNAME=	kotex
 PKGNAME=	tex-${DISTNAME}-0.1.1
-PKGREVISION=	1
-MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/texlive/2008/archive/
-DIST_SUBDIR=	${PKGNAME_NOREV}-19
+PKGREVISION=	2
+MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/texlive/2009/archive/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/ko.TeX/
 COMMENT=	TeX macro package to typeset Korean
 
-DEPENDS+=	tex-bin-kotex-[0-9]*:../../print/tex-bin-kotex
 DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-etex-pkg-[0-9]*:../../print/tex-etex-pkg
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-DEPENDS+=	tex-kotex-base-[0-9]*:../../fonts/tex-kotex-base
+DEPENDS+=	tex-kotex-base>=0.1.1nb1:../../fonts/tex-kotex-base
+DEPENDS+=	tex-kotex-utils>=0.1.1:../../print/tex-kotex-utils
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
@@ -30,5 +29,5 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
