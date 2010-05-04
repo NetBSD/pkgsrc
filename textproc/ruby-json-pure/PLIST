@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/23 13:35:59 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/04 02:48:21 taca Exp $
 bin/edit_json.rb
 bin/prettify_json.rb
 ${GEM_HOME}/cache/json_pure-${PKGVERSION}.gem
@@ -40,7 +40,11 @@ ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkRails.log
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkYAML#parser-autocorrelation.dat
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkYAML#parser.dat
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkYAML.log
+${GEM_LIBDIR}/benchmarks/generator2_benchmark.rb
 ${GEM_LIBDIR}/benchmarks/generator_benchmark.rb
+${GEM_LIBDIR}/benchmarks/ohai.json
+${GEM_LIBDIR}/benchmarks/ohai.ruby
+${GEM_LIBDIR}/benchmarks/parser2_benchmark.rb
 ${GEM_LIBDIR}/benchmarks/parser_benchmark.rb
 ${GEM_LIBDIR}/bin/edit_json.rb
 ${GEM_LIBDIR}/bin/prettify_json.rb
@@ -49,13 +53,11 @@ ${GEM_LIBDIR}/data/index.html
 ${GEM_LIBDIR}/data/prototype.js
 ${GEM_LIBDIR}/ext/json/ext/generator/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/generator/generator.c
-${GEM_LIBDIR}/ext/json/ext/generator/unicode.c
-${GEM_LIBDIR}/ext/json/ext/generator/unicode.h
+${GEM_LIBDIR}/ext/json/ext/generator/generator.h
 ${GEM_LIBDIR}/ext/json/ext/parser/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.c
+${GEM_LIBDIR}/ext/json/ext/parser/parser.h
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.rl
-${GEM_LIBDIR}/ext/json/ext/parser/unicode.c
-${GEM_LIBDIR}/ext/json/ext/parser/unicode.h
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/json.rb
 ${GEM_LIBDIR}/lib/json/Array.xpm
