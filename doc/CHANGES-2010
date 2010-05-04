@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1805 2010/05/04 11:13:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1806 2010/05/04 13:20:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2278,3 +2278,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/ruby-json to 1.4.2 [taca 2010-05-04]
 	Updated textproc/ruby-json-pure to 1.4.2 [taca 2010-05-04]
 	Updated databases/p5-DBI to 1.611 [sno 2010-05-04]
+	Updated www/typolight27 to 2.7.7nb1 [taca 2010-05-04]
