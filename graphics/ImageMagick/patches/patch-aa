@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.46 2010/05/04 11:14:23 drochner Exp $
+
+--- configure.orig	2010-04-13 19:20:13.000000000 +0000
++++ configure
+@@ -27537,7 +27537,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ if test "$with_lcms" != 'no'; then
+-if test "$have_lcms" == 'no'; then
++if test "$have_lcms" = 'no'; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: -------------------------------------------------------------" >&5
+ $as_echo "-------------------------------------------------------------" >&6; }
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LCMS" >&5
