@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2010/04/27 15:12:08 drochner Exp $
+$NetBSD: distinfo,v 1.4 2010/05/04 16:52:16 drochner Exp $
 
 SHA1 (clang-2.7.tgz) = 4d8326bfe2308a7355a5e4ca2eb172bffd761e1e
 RMD160 (clang-2.7.tgz) = 177fdcf59be4a60c37cf0dfb058535c9cdbbad4e
@@ -9,3 +9,4 @@ Size (llvm-2.7.tgz) = 8374297 bytes
 SHA1 (patch-ac) = 3b8b72035d391456c58ffb787284b1fb873b6732
 SHA1 (patch-ad) = b90fa4fa75ef1f7c8cb9475798bf7f8e53e6baa9
 SHA1 (patch-ae) = 7ace4a3835f5998fbd9582f531237977dc948849
+SHA1 (patch-af) = 440f939c1f3500e6a96b95f4ba63051c1e3f5f10
