@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2010/05/04 11:05:00 drochner Exp $
+
+--- src/plugins/tool/Leak.py.orig	2010-03-15 07:21:27.000000000 +0000
++++ src/plugins/tool/Leak.py
+@@ -31,7 +31,7 @@ Show uncollected objects in a window.
+ #
+ #------------------------------------------------------------------------
+ from gen.ggettext import gettext as _
+-from bsddb.db import DBError
++from bsddb3.db import DBError
+ 
+ #------------------------------------------------------------------------
+ #

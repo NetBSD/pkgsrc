@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2010/05/04 11:05:00 drochner Exp $
+
+--- src/gen/db/dbconst.py.orig	2010-03-15 07:21:14.000000000 +0000
++++ src/gen/db/dbconst.py
+@@ -63,7 +63,7 @@ DBLOCKS   = 25000           # Maximum nu
+ DBOBJECTS = 25000           # Maximum number of simultaneously locked objects
+ DBUNDO    = 1000            # Maximum size of undo buffer
+ 
+-from bsddb.db import DB_CREATE, DB_AUTO_COMMIT, DB_DUP, DB_DUPSORT, DB_RDONLY
++from bsddb3.db import DB_CREATE, DB_AUTO_COMMIT, DB_DUP, DB_DUPSORT, DB_RDONLY
+ DBFLAGS_O = DB_CREATE | DB_AUTO_COMMIT  # Default flags for database open
+ DBFLAGS_R = DB_RDONLY                   # Flags to open a database read-only
+ DBFLAGS_D = DB_DUP | DB_DUPSORT         # Default flags for duplicate keys
