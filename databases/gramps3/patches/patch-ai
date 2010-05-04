@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2010/05/04 11:05:00 drochner Exp $
+
+--- src/gen/db/undoredo.py.orig	2010-03-18 15:41:16.000000000 +0000
++++ src/gen/db/undoredo.py
+@@ -33,7 +33,7 @@ undos and redos.
+ from __future__ import with_statement
+ import time, os
+ import cPickle as pickle
+-from bsddb import db
++from bsddb3 import db
+ from gen.ggettext import gettext as _
+ 
+ #-------------------------------------------------------------------------
