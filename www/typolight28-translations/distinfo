@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2010/04/20 23:20:38 taca Exp $
+$NetBSD: distinfo,v 1.22 2010/05/04 15:18:50 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -51,9 +51,9 @@ Size (TYPOlight-Indonesian-v1.zip) = 72232 bytes
 SHA1 (TYPOlight-Italian-v23.zip) = a5dc9cd1e30c18a505fa29a92f072b4c1cc4fcb1
 RMD160 (TYPOlight-Italian-v23.zip) = 9fb17c10271ec30058d9f58605aad8893ac5a977
 Size (TYPOlight-Italian-v23.zip) = 129726 bytes
-SHA1 (TYPOlight-Japanese-v28.zip) = ae5c548fe4bdbc07c97cdcd569bfe5a4c1855356
-RMD160 (TYPOlight-Japanese-v28.zip) = 4f4fcca563472a6548d34290113ac1b7d31ef843
-Size (TYPOlight-Japanese-v28.zip) = 139164 bytes
+SHA1 (TYPOlight-Japanese-v29.zip) = c2c6121b9003aa34a904c13dc332a45819a63f03
+RMD160 (TYPOlight-Japanese-v29.zip) = 3373f0b589fc6acce439887602c5d9385605c176
+Size (TYPOlight-Japanese-v29.zip) = 139187 bytes
 SHA1 (TYPOlight-Latvian-v24.zip) = 72040dcd744db196a9ea75dd9ef0af5522b7aa2b
 RMD160 (TYPOlight-Latvian-v24.zip) = 388b7a0489fa3191663270a20cac2b98052589d2
 Size (TYPOlight-Latvian-v24.zip) = 94547 bytes
@@ -75,9 +75,9 @@ Size (TYPOlight-Portuguese-v7.zip) = 141139 bytes
 SHA1 (TYPOlight-Romanian-v8.zip) = df74832094fd922f9aa9be77e2301d1c12cdd630
 RMD160 (TYPOlight-Romanian-v8.zip) = 34d5590c1ca59f5d26f53de9b108d0c7c95369a3
 Size (TYPOlight-Romanian-v8.zip) = 136805 bytes
-SHA1 (TYPOlight-Russian-v28.zip) = e7ac90cb8689661cf6a7dc4c15811f93189a440c
-RMD160 (TYPOlight-Russian-v28.zip) = df8f8fdd99aa6354edfca62835e9c5a1062a099c
-Size (TYPOlight-Russian-v28.zip) = 156392 bytes
+SHA1 (TYPOlight-Russian-v29.zip) = a0c92fa47788bc019acf07c8a6fcee53eb654093
+RMD160 (TYPOlight-Russian-v29.zip) = 30e6d14ac948b394064897cf4c0fa0df70b0ca05
+Size (TYPOlight-Russian-v29.zip) = 160467 bytes
 SHA1 (TYPOlight-Serbian-v6.zip) = 08898d68de41c51069e2e9b844cb092996998b93
 RMD160 (TYPOlight-Serbian-v6.zip) = b340162b7c746d5e1003c3848c110d4d4181df6c
 Size (TYPOlight-Serbian-v6.zip) = 157746 bytes
