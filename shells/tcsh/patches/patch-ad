@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.11 2010/05/04 00:14:00 agc Exp $
+
+fix 'e' navigation in vi mode to classify '_' chars as part of words
+
+--- ed.chared.c	2010/04/02 00:04:39	1.1
++++ ed.chared.c	2010/04/02 00:04:59
+@@ -832,11 +832,11 @@
+ 	while ((p < high) && Isspace(*p)) 
+ 	    p++;
+ 
+-	if (Isalnum(*p))
+-	    while ((p < high) && Isalnum(*p)) 
++	if (isword(*p))
++	    while ((p < high) && isword(*p)) 
+ 		p++;
+ 	else
+-	    while ((p < high) && !(Isspace(*p) || Isalnum(*p)))
++	    while ((p < high) && !(Isspace(*p) || isword(*p)))
+ 		p++;
+     }
+ 
