@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2010/05/04 18:18:57 drochner Exp $
+
+--- encoder/analyse.c.orig	2009-09-20 20:45:09.000000000 +0000
++++ encoder/analyse.c
+@@ -252,7 +252,7 @@ int x264_analyse_init_costs( x264_t *h, 
+     for( i = 0; i <= 2*4*2048; i++ )
+     {
+         h->cost_mv[lambda][-i] =
+-        h->cost_mv[lambda][i]  = lambda * (log2f(i+1)*2 + 0.718f + !!i) + .5f;
++        h->cost_mv[lambda][i]  = lambda * (logf(i+1)*2.88539f + 0.718f + !!i) + .5f;
+     }
+     x264_pthread_mutex_lock( &cost_ref_mutex );
+     for( i = 0; i < 3; i++ )
