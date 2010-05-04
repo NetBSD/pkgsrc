@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2009/06/04 17:29:41 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2010/05/04 11:05:00 drochner Exp $
 
---- src/DbManager.py.orig	2009-03-10 07:13:34.000000000 +0100
-+++ src/DbManager.py
-@@ -129,7 +129,7 @@ class CLIDbManager:
+--- src/cli/clidbman.py.orig	2010-03-15 07:21:31.000000000 +0000
++++ src/cli/clidbman.py
+@@ -109,7 +109,7 @@ class CLIDbManager(object):
          Returns (people_count, version_number) of current DB.
          Returns ("Unknown", "Unknown") if invalid DB or other error.
          """

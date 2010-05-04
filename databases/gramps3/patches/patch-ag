@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.1 2009/06/04 17:29:41 drochner Exp $
+$NetBSD: patch-ag,v 1.2 2010/05/04 11:05:00 drochner Exp $
 
---- src/plugins/import/ImportGrdb.py.orig	2009-03-11 15:57:19.000000000 +0100
+--- src/plugins/import/ImportGrdb.py.orig	2010-03-15 07:21:24.000000000 +0000
 +++ src/plugins/import/ImportGrdb.py
-@@ -35,7 +35,7 @@ import tempfile
- from gettext import gettext as _
+@@ -36,7 +36,7 @@ import tempfile
+ from gen.ggettext import gettext as _
  import cPickle as pickle
  import time
 -from bsddb import dbshelve, db
 +from bsddb3 import dbshelve, db
  import logging
- __LOG = logging.getLogger(".GrampsDb")
+ LOG = logging.getLogger(".Db")
  

@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2010/05/04 11:05:00 drochner Exp $
+
+--- src/gen/db/cursor.py.orig	2010-03-18 15:40:28.000000000 +0000
++++ src/gen/db/cursor.py
+@@ -24,7 +24,7 @@
+ #
+ #-------------------------------------------------------------------------
+ from cPickle import dumps, loads
+-from bsddb import db
++from bsddb3 import db
+ 
+ #-------------------------------------------------------------------------
+ #

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2010/05/04 11:05:00 drochner Exp $
+
+--- src/plugins/webreport/NarrativeWeb.py.orig	2010-04-22 07:18:53.000000000 +0000
++++ src/plugins/webreport/NarrativeWeb.py
+@@ -37,6 +37,8 @@ Narrative Web Page generator.
+ # python modules
+ #
+ #------------------------------------------------------------------------
++# for Python-2.5
++from __future__ import with_statement
+ import gc
+ import os
+ import sys
