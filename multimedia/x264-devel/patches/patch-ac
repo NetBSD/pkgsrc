@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2009/05/25 20:56:38 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2010/05/04 18:18:57 drochner Exp $
 
---- common/cpu.c.orig	2009-04-05 21:01:48.000000000 +0200
+--- common/cpu.c.orig	2010-04-22 20:45:07.000000000 +0000
 +++ common/cpu.c
-@@ -33,7 +33,7 @@
+@@ -36,7 +36,7 @@
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #endif
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:56:38 drochner Exp $
  #include <sys/param.h>
  #include <sys/sysctl.h>
  #include <machine/cpu.h>
-@@ -200,13 +200,13 @@ uint32_t x264_cpu_detect( void )
+@@ -226,13 +226,13 @@ uint32_t x264_cpu_detect( void )
  
  #elif defined( ARCH_PPC )
  
@@ -27,12 +27,3 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:56:38 drochner Exp $
      int      selectors[2] = { CTL_MACHDEP, CPU_ALTIVEC };
  #else
      int      selectors[2] = { CTL_HW, HW_VECTORUNIT };
-@@ -223,7 +223,7 @@ uint32_t x264_cpu_detect( void )
-     return cpu;
- }
- 
--#elif defined( SYS_LINUX )
-+#elif defined(SYS_LINUX) || defined(SYS_NETBSD)
- #include <signal.h>
- #include <setjmp.h>
- static sigjmp_buf jmpbuf;
