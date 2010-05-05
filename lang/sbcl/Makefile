@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/05/01 17:01:20 asau Exp $
+# $NetBSD: Makefile,v 1.25 2010/05/05 10:02:27 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.38
@@ -79,5 +79,9 @@ do-install:
 
 do-test:
 	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
+
+.if $(LOWER_ARCH) == "amd64" || $(LOWER_ARCH) == "x86_64"
+PLIST_SUBST+=	SUFX64=-64
+.endif
 
 .include "../../mk/bsd.pkg.mk"
