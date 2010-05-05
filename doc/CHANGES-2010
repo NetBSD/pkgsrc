@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1821 2010/05/05 22:07:33 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1822 2010/05/05 22:19:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2296,3 +2296,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/farsight2 to 0.0.17nb3 [wiz 2010-05-05]
 	Updated textproc/p5-YAML-LibYAML to 0.33 [seb 2010-05-05]
 	Updated devel/p5-App-cpanminus to 1.0003 [seb 2010-05-05]
+	Updated devel/p5-Params-Util to 1.01 [seb 2010-05-05]
