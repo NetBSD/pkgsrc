@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/05 18:23:52 drochner Exp $
 #
 
 DISTNAME=	podofo-0.7.0
@@ -21,7 +21,8 @@ CMAKE_ARGS+=	-DFREETYPE_LIB_PATHS:PATH=${BUILDLINK_PREFIX.freetype2}/lib
 CFLAGS+=	-fPIC
 CXXFLAGS+=	-fPIC
 
-# optional: lua support
+# XXX lua support should be optional
+.include "../../lang/lua/buildlink3.mk"
 # tests-depend on cppunit (for unit tests)
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
