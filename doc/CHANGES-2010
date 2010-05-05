@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1818 2010/05/05 21:51:59 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1819 2010/05/05 21:56:27 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2293,3 +2293,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-acmconf to 1.3nb1 [minskim 2010-05-05]
 	Updated print/tex-ifluatex-doc to 1.3nb1 [minskim 2010-05-05]
 	Updated multimedia/farsight2 to 0.0.17nb3 [wiz 2010-05-05]
+	Updated textproc/p5-YAML-LibYAML to 0.33 [seb 2010-05-05]
