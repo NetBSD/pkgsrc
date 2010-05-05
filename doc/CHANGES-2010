@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1824 2010/05/05 22:58:48 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1825 2010/05/05 23:19:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2299,3 +2299,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Params-Util to 1.01 [seb 2010-05-05]
 	Updated security/p5-IO-Socket-SSL to 1.33 [seb 2010-05-05]
 	Updated time/p5-DateTime-TimeZone to 1.18 [seb 2010-05-05]
+	Updated devel/p5-Moose to 1.02 [seb 2010-05-05]
