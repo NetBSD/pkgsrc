@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/12/05 23:55:07 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2010/05/05 18:21:52 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.blender
 PKG_SUPPORTED_OPTIONS=
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--without-ogg --disable-oggtest
 .if !empty(PKG_OPTIONS:Mopenal)
 CONFIGURE_ARGS+=	--enable-openal
 .include "../../audio/openal/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-D WITH_OPENAL:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
