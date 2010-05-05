@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9277 2010/05/04 15:21:24 taca Exp $
+$NetBSD: TODO,v 1.9278 2010/05/05 16:35:49 hauke Exp $
 
 Suggested new packages
 ======================
@@ -173,7 +173,7 @@ Suggested new packages
 	http://oasis.frogfoot.net/code/tinysnmp/
 	Fast lightweight SNMPv1 daemon
 
-	BSNMP
+	BSNMP [pkgsrc-wip]
 	http://people.freebsd.org/~harti/bsnmp/
 	Mini SNMP daemon
 
