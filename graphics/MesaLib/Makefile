@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.83 2010/04/16 13:50:51 tnn Exp $
+# $NetBSD: Makefile,v 1.84 2010/05/05 18:33:30 reed Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 PKGREVISION=	3
 COMMENT=	Graphics library similar to SGI's OpenGL
+
+CONFLICTS+=	xf86driproto<2.0.4
 
 MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h	\
 		glx_mangle.h osmesa.h xmesa.h xmesa_x.h	\
