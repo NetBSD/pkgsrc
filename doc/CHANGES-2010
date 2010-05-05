@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1812 2010/05/04 23:51:49 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1813 2010/05/05 00:07:32 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2286,3 +2286,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/gcc34 to 3.4.6nb3 [tez 2010-05-04]
 	Updated textproc/tex-xmltex to 1.9nb7 [minskim 2010-05-04]
 	Updated textproc/tex-xmltex-doc to 0.8nb1 [minskim 2010-05-04]
+	Updated pkgtools/pbulk-base to 0.41 [joerg 2010-05-05]
