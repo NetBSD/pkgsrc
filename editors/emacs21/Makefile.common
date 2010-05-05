@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2009/04/30 17:22:06 hasso Exp $
+# $NetBSD: Makefile.common,v 1.7 2010/05/05 14:26:36 roy Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 
@@ -43,6 +43,13 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 # sections and .data reloc sections, both of which Emacs can't handle
 # properly.  Analyzed by Stephen Ma.
 LDFLAGS+=	-Wl,-z,nocombreloc
+.endif
+
+# Use terminfo on NetBSD-6.
+# We cannot use terminfo.*.mk as emacs WILL force a link to termcap,
+# but this is fine for us.
+.if (${OPSYS} == "NetBSD") && exists(/usr/include/term.h)
+CPPFLAGS+=	-DTERMINFO
 .endif
 
 .if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
