@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2010/02/21 12:26:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2010/05/05 15:17:50 roy Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -58,7 +58,9 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 CPPFLAGS+=		-DDFLY_CRT_USRLIB
 .endif
 
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
+.if (${OPSYS} == "NetBSD") && exists(/usr/include/term.h)
+CPPFLAGS+=	-DTERMINFO
+.elif ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
 .include "../../mk/curses.buildlink3.mk"
 .else
 .include "../../mk/termcap.buildlink3.mk"
