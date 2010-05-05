@@ -1,0 +1,16 @@
+$NetBSD: patch-ap,v 1.6 2010/05/05 12:15:30 markd Exp $
+
+Fixes loading of pam modules on older versions on NetBSD, where
+the dependency of the module on libpam was not explicit.
+
+--- include/atalk/util.h.orig	2010-05-03 09:28:16.000000000 +0000
++++ include/atalk/util.h
+@@ -65,7 +65,7 @@ extern void mod_close    __P((void *));
+  * OpenBSD currently does not use the second arg for dlopen(). For
+  * future compatibility we define DL_LAZY */
+ #ifdef __NetBSD__
+-#define mod_open(a)      dlopen(a, RTLD_LAZY)
++#define mod_open(a)      dlopen(a, RTLD_LAZY|RTLD_GLOBAL)
+ #elif defined(__OpenBSD__)
+ #define mod_open(a)      dlopen(a, DL_LAZY)
+ #else /* ! __NetBSD__ && ! __OpenBSD__ */
