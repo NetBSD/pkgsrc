@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1813 2010/05/05 00:07:32 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.1814 2010/05/05 14:32:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2287,3 +2287,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/tex-xmltex to 1.9nb7 [minskim 2010-05-04]
 	Updated textproc/tex-xmltex-doc to 0.8nb1 [minskim 2010-05-04]
 	Updated pkgtools/pbulk-base to 0.41 [joerg 2010-05-05]
+	Updated www/ikiwiki to 3.20100504 [schmonz 2010-05-05]
