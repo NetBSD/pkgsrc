@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2010/04/30 20:43:39 minskim Exp $
-# TeX Live Revision 17996
+# $NetBSD: Makefile,v 1.5 2010/05/05 18:05:36 minskim Exp $
+# TeX Live Revision 18100
 
 DISTNAME=	ifluatex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
-DIST_SUBDIR=	${PKGNAME_NOREV}.17996
+PKGREVISION=	1
+DIST_SUBDIR=	${PKGNAME_NOREV}-18100
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-ifluatex
