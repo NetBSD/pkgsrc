@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9280 2010/05/05 22:47:32 seb Exp $
+$NetBSD: TODO,v 1.9281 2010/05/05 22:58:48 seb Exp $
 
 Suggested new packages
 ======================
@@ -1067,7 +1067,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Compress-Raw-Zlib-2.027
 	o p5-DBD-postgresql-2.17.1
 	o p5-Date-Manip-6.11
-	o p5-DateTime-TimeZone-1.18
 	o p5-ExtUtils-CBuilder-0.2703
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-IO-Compress-2.027
