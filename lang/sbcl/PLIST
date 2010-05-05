@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/05/01 17:01:20 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/05/05 10:02:27 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/Makefile
@@ -202,8 +202,8 @@ lib/sbcl/sb-rotate-byte/sb-rotate-byte.fasl
 lib/sbcl/sb-rotate-byte/sb-rotate-byte.texinfo
 lib/sbcl/sb-rotate-byte/test-passed
 lib/sbcl/sb-rotate-byte/x86-64-vm.lisp
-lib/sbcl/sb-rotate-byte/x86-vm.fasl
 lib/sbcl/sb-rotate-byte/x86-vm.lisp
+lib/sbcl/sb-rotate-byte/x86${SUFX64}-vm.fasl
 lib/sbcl/sb-rt/.cvsignore
 lib/sbcl/sb-rt/Makefile
 lib/sbcl/sb-rt/rt.fasl
