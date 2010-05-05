@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1816 2010/05/05 17:43:25 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1817 2010/05/05 18:06:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2291,3 +2291,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-sttools to 2009 [minskim 2010-05-05]
 	Updated print/tex-sttools-doc to 2009 [minskim 2010-05-05]
 	Updated print/tex-acmconf to 1.3nb1 [minskim 2010-05-05]
+	Updated print/tex-ifluatex-doc to 1.3nb1 [minskim 2010-05-05]
