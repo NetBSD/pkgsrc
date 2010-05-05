@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/21 17:07:52 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/05 17:31:12 dholland Exp $
 
 DISTNAME=	php-extensions-${PHP_BASE_VERS}
 CATEGORIES=	meta-pkgs www
@@ -7,7 +7,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.php.net/
-COMMENT=	"meta-package" for the PHP 5.2 HTML-embedded scripting language
+COMMENT=	"meta-package" for the PHP 5.3 HTML-embedded scripting language
 
 # base PHP 5.3.x package
 DEPENDS+=	php>=${PHP_BASE_VERS}<6:../../lang/php53
