@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2010/03/01 07:06:48 jnemeth Exp $
+# $NetBSD: Makefile,v 1.14 2010/05/06 20:10:17 jnemeth Exp $
 #
 
 DISTNAME=	asterisk-1.6.1.17
 DIST_SUBDIR=	${PKGNAME_NOREV}
+PKGREVISION=	1
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
@@ -22,6 +23,7 @@ USE_LANGUAGES=		c c++
 REPLACE_BASH=		build_tools/mkpkgconfig
 REPLACE_PERL+=		agi/DialAnMp3.agi agi/agi-test.agi
 REPLACE_PERL+=		agi/fastagi-test agi/jukebox.agi agi/numeralize
+REPLACE_PERL+=		contrib/scripts/vmail.cgi
 
 PKGCONFIG_OVERRIDE+=	menuselect/mxml/mxml.pc.in
 
@@ -31,7 +33,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
 
 INSTALL_TARGET=		install samples
-INSTALLATION_DIRS=	lib/pkgconfig
+INSTALLATION_DIRS+=	lib/pkgconfig
 INSTALLATION_DIRS+=	share/examples/asterisk share/examples/rc.d
 
 BUILD_DEFS+=		VARBASE
@@ -80,6 +82,8 @@ MAKE_FLAGS+=		AGI_DIR=${PREFIX}/libexec/agi-bin
 MAKE_FLAGS+=		ASTEXAMPLEDIR=${ASTEXAMPLEDIR}
 MAKE_FLAGS+=		WRKSRC=${WRKSRC}
 MAKE_FLAGS+=		LDOPTS=${LDFLAGS:M*:Q}
+MAKE_FLAGS+=		HTTP_DOCSDIR=${PREFIX}/share/httpd/htdocs
+MAKE_FLAGS+=		HTTP_CGIDIR=${PREFIX}/libexec/cgi-bin
 
 .include "options.mk"
 
