@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/03/24 19:43:25 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2010/05/06 10:21:17 adam Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
-PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,7 +19,7 @@ USE_TOOLS+=		awk:run bash:run perl chmod \
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
-GCC_VERSION=		4.4.3
+GCC_VERSION=		4.4.4
 
 GCC_SUBPREFIX=		gcc44
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
