@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:33:08 agc Exp $
+$NetBSD: distinfo,v 1.5 2010/05/06 14:51:29 sno Exp $
 
-SHA1 (MLDBM-2.01.tar.gz) = 01e35634dee973d03a24cc8417587b2fbc5b39d3
-RMD160 (MLDBM-2.01.tar.gz) = f8debf7189a976562310bb2ace35bda3d923050e
-Size (MLDBM-2.01.tar.gz) = 9568 bytes
+SHA1 (MLDBM-2.04.tar.gz) = 85dbdcee8612f8dd10d5bd4d8ee2eee7cab19b13
+RMD160 (MLDBM-2.04.tar.gz) = e3c1d795c1b94751253fef651a495ecaf1230f92
+Size (MLDBM-2.04.tar.gz) = 12603 bytes
