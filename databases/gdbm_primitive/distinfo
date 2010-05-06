@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/01/29 17:00:26 joerg Exp $
+$NetBSD: distinfo,v 1.5 2010/05/06 09:15:55 sbd Exp $
 
 SHA1 (gdbm-prim-1.15.tar.gz-link.gz) = 40c8802ccd8fa66b858ff5059771780b1e28f43a
 RMD160 (gdbm-prim-1.15.tar.gz-link.gz) = 89b0f140c4205a9b22b4c420a51bc0133fd1f749
 Size (gdbm-prim-1.15.tar.gz-link.gz) = 10532 bytes
-SHA1 (patch-aa) = 929e776082aed7c55bae39562ef60d21589393ce
+SHA1 (patch-aa) = e87eaf22d525d4dfadd72067fa7c0f819f16a1c3
