@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/08/06 01:44:54 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2010/05/06 06:06:47 tonnerre Exp $
 #
 
 DISTNAME=		bbdb-2.34
@@ -25,6 +25,7 @@ USE_TOOLS+=		makeinfo
 INFO_FILES=		# PLIST
 LISPDIR=		${EMACS_LISPPREFIX}/bbdb
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
+MAKE_JOBS_SAFE=		no
 
 .include "../../editors/emacs/modules.mk"
 
