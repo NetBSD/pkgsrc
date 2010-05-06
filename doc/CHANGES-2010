@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1834 2010/05/06 14:51:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1835 2010/05/06 20:42:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2308,3 +2308,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/nsd to 3.2.5 [pettai 2010-05-06]
 	Added security/opendnssec version 1.0.0 [pettai 2010-05-06]
 	Updated databases/p5-MLDBM to 2.04 [sno 2010-05-06]
+	Updated print/tex-enumitem to 2.2 [minskim 2010-05-06]
+	Updated print/tex-enumitem-doc to 2.2 [minskim 2010-05-06]
