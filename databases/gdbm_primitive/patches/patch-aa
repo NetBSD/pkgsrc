@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2010/01/29 17:00:26 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2010/05/06 09:15:55 sbd Exp $
 
---- Makefile.orig	Thu Nov 30 07:44:57 2000
+--- Makefile.orig	2000-11-30 06:44:57.000000000 +0000
 +++ Makefile
 @@ -9,17 +9,19 @@
  # Copyright (c) 2000 Jonathan B. Leffert <jonathan@leffert.net>
@@ -25,3 +25,21 @@ $NetBSD: patch-aa,v 1.3 2010/01/29 17:00:26 joerg Exp $
  
  .c.o:
  	$(CC) $(CFLAGS) -c $<
+@@ -33,13 +35,13 @@ clean:
+ 
+ install: all
+ 	mkdir -p $(INSTALL_PREFIX)/bin
+-	mkdir -p $(INSTALL_PREFIX)/man/man1
++	mkdir -p $(INSTALL_PREFIX)/$(PKGMANDIR)/man1
+ 	strip $(PROGS)
+ 	cp $(PROGS) $(INSTALL_PREFIX)/bin
+-	cp doc/gdbm_primitive.1 $(INSTALL_PREFIX)/man/man1
++	cp doc/gdbm_primitive.1 $(INSTALL_PREFIX)/$(PKGMANDIR)/man1
+ 	for file in $(PROGS);\
+-		do ln -sf $(INSTALL_PREFIX)/man/man1/gdbm_primitive.1\
+-			$(INSTALL_PREFIX)/man/man1/$${file}.1;\
++		do ln -sf $(INSTALL_PREFIX)/$(PKGMANDIR)/man1/gdbm_primitive.1\
++			$(INSTALL_PREFIX)/$(PKGMANDIR)/man1/$${file}.1;\
+ 	done
+ 
+ gdbm-clear: gdbm-clear.o db.o
