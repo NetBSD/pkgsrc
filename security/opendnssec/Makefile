@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/06 12:50:17 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/06 14:56:16 pettai Exp $
 #
 
 DISTNAME=	opendnssec-1.0.0
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
-MAINTAINER=	pettai@NetBSD.net
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
