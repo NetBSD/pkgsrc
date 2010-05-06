@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.13 2009/12/11 18:53:40 adam Exp $
+$NetBSD: patch-ad,v 1.14 2010/05/06 07:33:41 adam Exp $
 
---- src/main/Makefile.in.orig	2009-10-14 04:05:03.000000000 +0200
+--- src/main/Makefile.in.orig	2010-03-25 08:32:02.000000000 +0000
 +++ src/main/Makefile.in
-@@ -97,13 +97,13 @@ EXTRA_STATIC_LIBS = \
+@@ -96,13 +96,13 @@ EXTRA_STATIC_LIBS = \
    $(R_ZLIBS) $(R_BZLIBS) $(R_PCRE) $(R_TRE) $(R_XDR) $(R_XZ) $(R_LIBINTL)
  STATIC_LIBS = $(MAIN_LIBS) $(EXTRA_STATIC_LIBS)
  
