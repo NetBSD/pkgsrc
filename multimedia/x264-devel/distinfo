@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2010/05/04 18:18:57 drochner Exp $
+$NetBSD: distinfo,v 1.20 2010/05/06 17:02:12 drochner Exp $
 
 SHA1 (x264-snapshot-20090920-2245.tar.bz2) = de37c75bdcbfb4e16fba006afd932020b93d8a66
 RMD160 (x264-snapshot-20090920-2245.tar.bz2) = c0303b906f4de285eb4c9460882e6df4cf92f4a3
 Size (x264-snapshot-20090920-2245.tar.bz2) = 2736477 bytes
-SHA1 (patch-aa) = e77e346640cb0512f9ca5b678bf325f915a69da7
+SHA1 (patch-aa) = c9c93b1d1bbbfe1b61564cb3ab7df68216d1d9d2
 SHA1 (patch-ab) = 6db45e7995b7986d8b0bf95a777eff71527a189d
 SHA1 (patch-ac) = b3c91319b287278dd98c822dd7e35e273a238f70
 SHA1 (patch-ak) = d8362f3beadcc5cc19684a12b3794d542f502f14
