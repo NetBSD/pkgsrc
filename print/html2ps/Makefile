@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/01/27 18:21:56 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2010/05/06 09:17:27 sbd Exp $
 #
 
 DISTNAME=	html2ps-1.0b4
@@ -28,7 +28,7 @@ NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/html2ps
-	@cd ${WRKSRC} && PATH=${LOCALBASE}/bin:${PREFIX}/bin ./install ${DESTDIR}${PREFIX}
+	@cd ${WRKSRC} && PATH=${LOCALBASE}/bin:${PREFIX}/bin ./install ${DESTDIR}${PREFIX} ${PKGMANDIR}
 	@${INSTALL_DATA} ${WRKSRC}/sample ${DESTDIR}${PREFIX}/share/html2ps/sample.rc
 
 .include "../../mk/bsd.pkg.mk"
