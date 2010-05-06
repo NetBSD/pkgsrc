@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2010/02/09 07:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.107 2010/05/06 07:33:40 adam Exp $
 
-DISTNAME=		R-2.10.1
+DISTNAME=		R-2.11.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -62,6 +62,7 @@ CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
 CONFIGURE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 CONFIGURE_ENV+=		ac_cv_path_R_GZIPCMD=${TOOLS_GZIP_CMD}
 CONFIGURE_ENV+=		ac_cv_path_R_UNZIPCMD=${TOOLS_PATH.unzip}
+CONFIGURE_ENV+=		r_cv_prog_f77_flag_mieee=no
 
 # Package assumes it can append to files (specifically DESCRIPTION) that have
 # been installed SHAREMODE
