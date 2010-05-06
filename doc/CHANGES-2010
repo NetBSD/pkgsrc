@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1832 2010/05/06 12:26:07 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1833 2010/05/06 12:53:17 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated benchmarks/netperf to 2.4.5 [adam 2010-05-06]
 	Updated net/unbound to version 1.4.4 [pettai 2010-05-06]
 	Updated net/nsd to 3.2.5 [pettai 2010-05-06]
+	Added security/opendnssec version 1.0.0 [pettai 2010-05-06]
