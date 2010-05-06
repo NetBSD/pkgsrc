@@ -1,50 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2009/07/08 14:28:29 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2010/05/06 11:14:01 adam Exp $
 
---- makefile.orig	2004-09-21 23:33:40.000000000 +0200
-+++ makefile
-@@ -15,8 +15,8 @@ VERSION = 2.3pl1
- # for the rest of the world, it is probably better to put the binaries
- # in /usr/local/netperf or /opt/netperf
- #
--#NETPERF_HOME = /usr/local/netperf
--NETPERF_HOME = /opt/netperf
-+NETPERF_HOME = ${PREFIX}/netperf
-+#NETPERF_HOME = /opt/netperf
+--- src/net_uuid.c.orig	2010-05-06 12:52:11.000000000 +0000
++++ src/net_uuid.c
+@@ -38,7 +38,6 @@
+ #else
+ #include <sys/types.h>
+ #include <sys/time.h>
+-#include <sys/sysinfo.h>
+ #endif
  
- # The compiler on your system might be somewhere else, and/or have
- # a different name.
-@@ -113,7 +113,8 @@ CC = cc
- #                   netserver via the netperf command line with -T
- 
- LOG_FILE=DEBUG_LOG_FILE="\"/tmp/netperf.debug\""
--CFLAGS = -O -D$(LOG_FILE) -DNEED_MAKEFILE_EDIT
-+CFLAGS = -O -D$(LOG_FILE)
-+CFLAGS+=-fno-strength-reduce -DUSE_LOOPER -DHISTOGRAM -DDO_UNIX -DDO_IPV6
- 
- # Some platforms, and some options, require additional libraries.
- # you can add to the "LIBS =" line to accomplish this. if you find
-@@ -216,19 +217,12 @@ nettest_dns.o:  nettest_dns.c nettest_dn
- netserver.o:	netserver.c nettest_bsd.h netlib.h makefile
- 
- install:	netperf netserver
--		mkdir -p $(NETPERF_HOME)
-+		mkdir -p ${DESTDIR}$(NETPERF_HOME)
- 		chmod -w *.[ch]
--		chmod +x $(NETPERF_SCRIPTS)
--		@if [ ! -d $(NETPERF_HOME) ]; then \
--			mkdir $(NETPERF_HOME) && chmod a+rx $(NETPERF_HOME); \
--		fi
--		cp netperf $(NETPERF_HOME)
--		cp netserver $(NETPERF_HOME)
--		cp $(NETPERF_SCRIPTS) $(NETPERF_HOME)
--		chmod a+rx $(NETPERF_HOME)/netperf $(NETPERF_HOME)/netserver
--		@for i in $(NETPERF_SCRIPTS); do \
--			chmod a+rx $(NETPERF_HOME)/$$i; \
--		done
-+		${BSD_INSTALL_PROGRAM} netperf ${DESTDIR}$(NETPERF_HOME)
-+		${BSD_INSTALL_PROGRAM} netserver ${DESTDIR}$(NETPERF_HOME)
-+		${BSD_INSTALL_SCRIPT} $(NETPERF_SCRIPTS) ${DESTDIR}$(NETPERF_HOME)
-+
- clean:
- 	rm -f *.o netperf netserver core
- 
+ /* system dependent call to get the current system time. Returned as
