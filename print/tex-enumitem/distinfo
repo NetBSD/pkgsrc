@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/09 22:52:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/06 20:42:03 minskim Exp $
 
-SHA1 (tex-enumitem-2.1/enumitem.tar.lzma) = 006106572c17cb1d40452657e6f49367e10b5bd1
-RMD160 (tex-enumitem-2.1/enumitem.tar.lzma) = cded66cfa5fa5f704f75f9e5adf77f99fe1d068a
-Size (tex-enumitem-2.1/enumitem.tar.lzma) = 5469 bytes
+SHA1 (tex-enumitem-2.2/enumitem.tar.xz) = a7770d762b3f05ad79d0abba82155f62f7bcc6ed
+RMD160 (tex-enumitem-2.2/enumitem.tar.xz) = 48208aaa0413effe6818d71595044e8307602f5f
+Size (tex-enumitem-2.2/enumitem.tar.xz) = 5536 bytes
