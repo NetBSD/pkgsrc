@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1828 2010/05/06 10:22:11 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1829 2010/05/06 11:17:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2303,3 +2303,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/p5-Net-SMTP-SSL version 1.01 [seb 2010-05-06]
 	Updated math/R to 2.11.0 [adam 2010-05-06]
 	Updated lang/gcc44 to 4.4.4 [adam 2010-05-06]
+	Updated benchmarks/netperf to 2.4.5 [adam 2010-05-06]
