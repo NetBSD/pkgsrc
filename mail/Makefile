@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.396 2010/04/22 17:05:17 tnn Exp $
+# $NetBSD: Makefile,v 1.397 2010/05/06 00:45:20 seb Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -210,6 +210,7 @@ SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MailTools
 SUBDIR+=	p5-Net-LMTP
 SUBDIR+=	p5-Net-ManageSieve
+SUBDIR+=	p5-Net-SMTP-SSL
 SUBDIR+=	p5-Net-SMTP_auth
 SUBDIR+=	p5-Net-validMX
 SUBDIR+=	p5-Sendmail-AccessDB
