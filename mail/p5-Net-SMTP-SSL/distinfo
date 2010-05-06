@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/06 00:45:02 seb Exp $
+
+SHA1 (Net-SMTP-SSL-1.01.tar.gz) = 2acccf803a6b0b5f71bd3ebed41434afb99d5e16
+RMD160 (Net-SMTP-SSL-1.01.tar.gz) = 8848d5f28d6e7ce03481aa6f0b7bb6b193c0bddb
+Size (Net-SMTP-SSL-1.01.tar.gz) = 1806 bytes
