@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/16 12:36:20 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/06 10:46:49 drochner Exp $
 bin/lyx
 bin/lyxclient
 bin/tex2lyx
@@ -225,6 +225,8 @@ share/lyx/doc/sv/Intro.lyx
 share/lyx/doc/sv/Tutorial.lyx
 share/lyx/doc/uk/Intro.lyx
 share/lyx/doc/uk/clipart/FootnoteQT4.png
+share/lyx/doc/zh_CN/Intro.lyx
+share/lyx/doc/zh_CN/Tutorial.lyx
 share/lyx/encodings
 share/lyx/examples/Braille.lyx
 share/lyx/examples/CV-image.eps
@@ -271,6 +273,7 @@ share/lyx/examples/de/serienbrief1.lyx
 share/lyx/examples/de/serienbrief2.lyx
 share/lyx/examples/de/serienbrief3.lyx
 share/lyx/examples/de/splash.lyx
+share/lyx/examples/de/tufte-handout.lyx
 share/lyx/examples/docbook_article.lyx
 share/lyx/examples/es/Braille.lyx
 share/lyx/examples/es/ItemizeBullets.lyx
@@ -290,11 +293,16 @@ share/lyx/examples/fr/AlignementDecimal.lyx
 share/lyx/examples/fr/Braille.lyx
 share/lyx/examples/fr/Foils.lyx
 share/lyx/examples/fr/ListesPuces.lyx
+share/lyx/examples/fr/exemple-powerdot.lyx
 share/lyx/examples/fr/exemple_brut.lyx
 share/lyx/examples/fr/exemple_lyxifie.lyx
+share/lyx/examples/fr/linguistics.lyx
 share/lyx/examples/fr/multicol.lyx
+share/lyx/examples/fr/seminar.lyx
 share/lyx/examples/fr/simplecv.lyx
 share/lyx/examples/fr/splash.lyx
+share/lyx/examples/fr/xyfigure.png
+share/lyx/examples/fr/xypic.lyx
 share/lyx/examples/gl/exemplo_bruto.lyx
 share/lyx/examples/gl/exemplo_lyxificado.lyx
 share/lyx/examples/gl/splash.lyx
@@ -335,10 +343,13 @@ share/lyx/examples/serial_letter1.lyx
 share/lyx/examples/serial_letter2.lyx
 share/lyx/examples/serial_letter3.lyx
 share/lyx/examples/simplecv.lyx
+share/lyx/examples/sk/splash.lyx
 share/lyx/examples/sl/primer_lyxan.lyx
 share/lyx/examples/sl/primer_surov.lyx
 share/lyx/examples/sl/splash.lyx
 share/lyx/examples/splash.lyx
+share/lyx/examples/tufte-book.lyx
+share/lyx/examples/tufte-handout.lyx
 share/lyx/examples/uk/splash.lyx
 share/lyx/examples/xyfigure.png
 share/lyx/examples/xypic.lyx
@@ -996,6 +1007,7 @@ share/lyx/images/vc-check-in.png
 share/lyx/images/vc-check-out.png
 share/lyx/images/vc-locking-toggle.png
 share/lyx/images/vc-register.png
+share/lyx/images/vc-repo-update.png
 share/lyx/images/vc-revert.png
 share/lyx/kbd/american-2.kmap
 share/lyx/kbd/american.kmap
@@ -1081,17 +1093,20 @@ share/lyx/layouts/docbook-book.layout
 share/lyx/layouts/docbook-chapter.layout
 share/lyx/layouts/docbook-section.layout
 share/lyx/layouts/docbook.layout
+share/lyx/layouts/doublecol-new.layout
 share/lyx/layouts/dtk.layout
 share/lyx/layouts/egs.layout
 share/lyx/layouts/elsart.layout
 share/lyx/layouts/elsarticle.layout
 share/lyx/layouts/endnotes.module
 share/lyx/layouts/entcs.layout
+share/lyx/layouts/eqs-within-sections.module
 share/lyx/layouts/europecv.layout
 share/lyx/layouts/extarticle.layout
 share/lyx/layouts/extbook.layout
 share/lyx/layouts/extletter.layout
 share/lyx/layouts/extreport.layout
+share/lyx/layouts/figs-within-sections.module
 share/lyx/layouts/foils.layout
 share/lyx/layouts/foottoend.module
 share/lyx/layouts/g-brief-de.layout
@@ -1150,6 +1165,7 @@ share/lyx/layouts/seminar.layout
 share/lyx/layouts/siamltex.layout
 share/lyx/layouts/sigplanconf.layout
 share/lyx/layouts/simplecv.layout
+share/lyx/layouts/singlecol-new.layout
 share/lyx/layouts/singlecol.layout
 share/lyx/layouts/slides.layout
 share/lyx/layouts/spie.layout
@@ -1170,15 +1186,25 @@ share/lyx/layouts/svglobal.layout
 share/lyx/layouts/svglobal3.layout
 share/lyx/layouts/svjog.layout
 share/lyx/layouts/svjour.inc
+share/lyx/layouts/svmono.layout
+share/lyx/layouts/svmult.layout
 share/lyx/layouts/svprobth.layout
+share/lyx/layouts/tabs-within-sections.module
 share/lyx/layouts/tarticle.layout
 share/lyx/layouts/tbook.layout
+share/lyx/layouts/theorems-ams-bytype.inc
+share/lyx/layouts/theorems-ams-bytype.module
+share/lyx/layouts/theorems-ams-extended-bytype.module
 share/lyx/layouts/theorems-ams-extended.module
 share/lyx/layouts/theorems-ams.inc
 share/lyx/layouts/theorems-ams.module
+share/lyx/layouts/theorems-bytype.inc
+share/lyx/layouts/theorems-bytype.module
+share/lyx/layouts/theorems-chap-bytype.module
 share/lyx/layouts/theorems-chap.module
 share/lyx/layouts/theorems-order.inc
 share/lyx/layouts/theorems-proof.inc
+share/lyx/layouts/theorems-sec-bytype.module
 share/lyx/layouts/theorems-sec.module
 share/lyx/layouts/theorems-starred-equivalents.inc
 share/lyx/layouts/theorems-starred.inc
@@ -1186,6 +1212,8 @@ share/lyx/layouts/theorems-starred.module
 share/lyx/layouts/theorems-std.module
 share/lyx/layouts/theorems.inc
 share/lyx/layouts/treport.layout
+share/lyx/layouts/tufte-book.layout
+share/lyx/layouts/tufte-handout.layout
 share/lyx/lyx2lyx/LyX.py
 share/lyx/lyx2lyx/LyX.pyc
 share/lyx/lyx2lyx/LyX.pyo
@@ -1330,6 +1358,11 @@ share/lyx/templates/letter.lyx
 share/lyx/templates/revtex.lyx
 share/lyx/templates/revtex4.lyx
 share/lyx/templates/slides.lyx
+share/lyx/templates/svjour3.lyx
+share/lyx/templates/svmono_book.lyx
+share/lyx/templates/svmult_appendix.lyx
+share/lyx/templates/svmult_author.lyx
+share/lyx/templates/svmult_editor.lyx
 share/lyx/tex/broadway.cls
 share/lyx/tex/hollywood.cls
 share/lyx/tex/lyxchess.sty
