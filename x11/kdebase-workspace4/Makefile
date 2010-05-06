@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2010/02/16 13:35:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2010/05/06 09:53:32 tron Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	base workspace for the KDE 4 integrated X11 desktop
+
+PATCH_SITES=	${MASTER_SITE_LOCAL}
+PATCHFILES=	kdebase-workspace-4.3.5-only-CVE-2010-0436.diff
 
 MAKE_JOBS_SAFE=	no
 
