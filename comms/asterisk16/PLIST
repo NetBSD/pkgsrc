@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/03/01 07:06:48 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/05/06 20:10:17 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -1028,6 +1028,7 @@ libexec/agi-bin/agi-test.agi
 libexec/agi-bin/eagi-sphinx-test
 libexec/agi-bin/eagi-test
 libexec/agi-bin/jukebox.agi
+${PLIST.webvmail}libexec/cgi-bin/vmail
 man/man8/asterisk.8
 man/man8/astgenkey.8
 man/man8/autosupport.8
@@ -1123,6 +1124,8 @@ share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
+${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
+${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
 @pkgdir libdata/asterisk/sounds/fr
 @pkgdir libdata/asterisk/sounds/es
 @pkgdir libdata/asterisk/firmware/iax
