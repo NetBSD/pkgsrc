@@ -1,17 +1,18 @@
-$NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
 
 --- install.orig	2005-03-03 12:25:29.000000000 +0000
 +++ install
-@@ -17,7 +17,7 @@ if(-e '/dev/null') {
+@@ -17,7 +17,8 @@ if(-e '/dev/null') {
      $pathsep = ':';
      $dirsep = '/';
      $sys = 'unix';
 -    $prefix = '/usr/local';
 +    $prefix = $ARGV[0];
++    $mandir = $ARGV[1];
  } elsif (-e 'nul') {
      $pathsep = ';';
      $dirsep = '\\';
-@@ -57,8 +57,8 @@ where the abovementioned packages are. Y
+@@ -57,8 +58,8 @@ where the abovementioned packages are. Y
  the directories where the files should be placed.
  EOD
  
@@ -22,7 +23,7 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
  
  print "\n";
  for $req (@perl) {
-@@ -134,19 +134,22 @@ if(@reqpath) {
+@@ -134,19 +135,22 @@ if(@reqpath) {
  
  chop ($cd = `pwd`);
  
@@ -57,7 +58,7 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
  
  if($def) {
      $bindir = "$prefix${dirsep}bin";
-@@ -159,9 +162,9 @@ if($def) {
+@@ -159,9 +163,9 @@ if($def) {
  &makedir($bindir,$def);
  
  if($def) {
@@ -69,7 +70,25 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
       "\nEnter the the directory where the global configuration file for\n"
      ."html2ps should be put");
      $glob =~ s|/$||g;
-@@ -198,7 +201,7 @@ $cophy = 1;
+@@ -174,7 +178,7 @@ if(-f "$glob${dirsep}html2psrc") {
+ }
+ 
+ if($def) {
+-    $man1 = "$prefix${dirsep}man${dirsep}man1";
++    $man1 = "$prefix${dirsep}${mandir}${dirsep}man1";
+ } else {
+     &getval($man1, "$prefix${dirsep}man${dirsep}man1",
+      "\nEnter the directory for the html2ps manual page");
+@@ -183,7 +187,7 @@ if($def) {
+ &makedir($man1,$def);
+ 
+ if($def) {
+-    $man5 = "$prefix${dirsep}man${dirsep}man5";
++    $man5 = "$prefix${dirsep}${mandir}${dirsep}man5";
+ } else {
+     &getval($man5, "$prefix${dirsep}man${dirsep}man5",
+      "\nEnter the directory for the manual page describing the configuration\n"
+@@ -198,7 +202,7 @@ $cophy = 1;
  if($exist{'TeX'}) {
      $hfile = "";
      ($texdir = $dir{'TeX'}) =~ s|/bin$||;
@@ -78,7 +97,7 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
          "lib/inputs","lib/tex/macros","lib/tex/inputs") {
          if(-f "$texdir/$_/ushyph1.tex") {
              $hyph = "$texdir/$_";
-@@ -212,15 +215,15 @@ if($exist{'TeX'}) {
+@@ -212,15 +216,15 @@ if($exist{'TeX'}) {
          }
      }
      if($hfile) {
@@ -102,7 +121,7 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
      } else {
          &getval($hfile, "", "$ht I cannot find the pattern\nfile for English "
           ."in your TeX installation. (It should be called\n'hyphen.tex', "
-@@ -236,9 +239,9 @@ if($exist{'TeX'}) {
+@@ -236,9 +240,9 @@ if($exist{'TeX'}) {
      }
      if(!$hfile) {
          if($def) {
@@ -114,7 +133,7 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
               "\nOK, I will use the supplied pattern file for English. Enter "
              ."the directory\nwhere this file should be put");
              &fixdir($hyph);
-@@ -246,9 +249,9 @@ if($exist{'TeX'}) {
+@@ -246,9 +250,9 @@ if($exist{'TeX'}) {
      }
  } else {
      if($def) {
@@ -126,7 +145,7 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
       ."included with html2ps (see the documentation how to install pattern\n"
       ."files for other languages). Enter the directory where this file\n"
       ."should be put");
-@@ -260,20 +263,21 @@ if($cophy) {
+@@ -260,20 +264,21 @@ if($cophy) {
  }
  
  if($def) {
@@ -156,7 +175,7 @@ $NetBSD: patch-aa,v 1.5 2009/03/08 19:17:11 minskim Exp $
  if($format !~ /^other$/i) {
      $paper .= "    type: $format;";
  } else {
-@@ -431,7 +435,7 @@ sub inst {
+@@ -431,7 +436,7 @@ sub inst {
      copy $from => $_[0].$dirsep.$_[1] or die "*** Cannot write to $_[0]\n";
  }
  sub goodprefix {
