@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/15 12:57:49 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/06 13:13:11 obache Exp $
 #
 
 DISTNAME=	libbind-6.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/libbind/6.0/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	https://www.isc.org/software/libbind
 COMMENT=	ISC Standard Resolver Library
-#LICENSE=	isc
+LICENSE=	isc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
