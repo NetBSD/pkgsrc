@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/06 12:50:17 pettai Exp $
+
+--- conf/Makefile.in.orig	2009-12-19 21:39:52.000000000 +0100
++++ conf/Makefile.in	2009-12-19 21:43:40.000000000 +0100
+@@ -166,6 +166,7 @@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@/opendnssec
++EGDIR=@EGDIR@
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -553,19 +554,19 @@
+ 		(echo "kasp.xml built")
+ 
+ install-data-hook:
+-	test -d ${sysconfdir} || mkdir -p ${DESTDIR}${sysconfdir}
+-	test -f ${sysconfdir}/conf.xml || \
+-		${INSTALL_DATA} -m 0640 ${top_builddir}/conf.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} -m 640 ${top_builddir}/conf.xml ${DESTDIR}${sysconfdir}/conf.xml.sample
+-	test -f ${sysconfdir}/zonelist.xml || \
+-		${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${sysconfdir}/zonelist.xml.sample
+-	test -f ${sysconfdir}/zonefetch.xml || \
+-		${INSTALL_DATA} -m 0640 ${top_builddir}/zonefetch.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} -m 640 ${top_builddir}/zonefetch.xml ${DESTDIR}${sysconfdir}/zonefetch.xml.sample
+-	test -f ${sysconfdir}/kasp.xml || \
+-		${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${sysconfdir}/kasp.xml.sample
++	test -d ${DESTDIR}${EGDIR} || mkdir -p ${DESTDIR}${EGDIR}
++	test -f ${DESTDIR}${EGDIR}/conf.xml || \
++		${INSTALL_DATA} -m 0640 ${top_builddir}/conf.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} -m 640 ${top_builddir}/conf.xml ${DESTDIR}${EGDIR}/conf.xml.sample
++	test -f ${DESTDIR}${EGDIR}/zonelist.xml || \
++		${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${EGDIR}/zonelist.xml.sample
++	test -f ${DESTDIR}${EGDIR}/zonefetch.xml || \
++		${INSTALL_DATA} -m 0640 ${top_builddir}/zonefetch.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} -m 640 ${top_builddir}/zonefetch.xml ${DESTDIR}${EGDIR}/zonefetch.xml.sample
++	test -f ${DESTDIR}${EGDIR}/kasp.xml || \
++		${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
