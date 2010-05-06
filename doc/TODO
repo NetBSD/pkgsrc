@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9282 2010/05/06 07:34:49 adam Exp $
+$NetBSD: TODO,v 1.9283 2010/05/06 10:22:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gbdfed-1.6
 	o gcalctool-5.30.1 [GNOME 2.30]
 	o gcc-4.5.0
-	o gcc44-4.4.4
 	o gcdmaster-1.2.3
 	o gcin-1.4.1
 	o gcombust-0.1.55
