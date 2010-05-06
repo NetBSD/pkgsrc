@@ -1,12 +1,12 @@
-$NetBSD: patch-ak,v 1.1 2008/05/12 15:49:30 tonnerre Exp $
+$NetBSD: patch-ak,v 1.2 2010/05/06 11:14:01 adam Exp $
 
---- netlib.c.orig	2004-09-21 23:33:40.000000000 +0200
-+++ netlib.c
-@@ -422,6 +422,7 @@ union   netperf_request_struct  netperf_
+--- src/netlib.c.orig	2009-05-27 22:27:34.000000000 +0000
++++ src/netlib.c
+@@ -262,6 +262,7 @@ union   netperf_request_struct  netperf_
  union   netperf_response_struct netperf_response;
  
  FILE    *where;
-+int	fd = -1;
++int     fd = -1;
  
- char    libfmt = 'm';
+ char    libfmt = '?';
          
