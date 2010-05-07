@@ -1,4 +1,4 @@
-# $NetBSD: shell,v 1.5 2010/05/07 12:00:36 jmmv Exp $
+# $NetBSD: shell,v 1.6 2010/05/07 14:29:36 jmmv Exp $
 #
 # Generate a +SHELL script that handles shell registration for the package.
 #
@@ -29,12 +29,17 @@ UNPACK,|UNPACK,+SHELL)
 #
 #	# SHELL: bin/pdksh
 #
+CAT="@CAT@"
+CP="@CP@"
 ECHO="@ECHO@"
+GREP="@GREP@"
 PWD_CMD="@PWD_CMD@"
+RM="@RM@"
 SED="@SED@"
-SHELLS="@SHELLS@"
 SORT="@SORT@"
 TEST="@TEST@"
+TRUE="@TRUE@"
+TOUCH="@TOUCH@"
 
 SELF=$0
 ACTION=$1
@@ -72,12 +77,16 @@ ADD)
 		${TEST} -f "$shell" || continue
 
 		shelldb="/etc/shells"
-		if ${TEST} -f ${shelldb} && \
-		   ${SHELLS} -K ${shelldb} check ${shell}; then
+		${TEST} -f "$shelldb" || continue
+		if ${TEST} -f "$shelldb" && \
+		   ${GREP} "^$shell" $shelldb >/dev/null; then
 			:
 		else
 			${ECHO} "${PKGNAME}: adding $shell to $shelldb"
-			${SHELLS} -K ${shelldb} add ${shell}
+                	${TOUCH} $shelldb
+                	${CP} $shelldb $shelldb.pkgsrc."$$"
+			{ ${CAT} $shelldb.pkgsrc."$$"; ${ECHO} "$shell"; } > $shelldb
+                	${RM} $shelldb.pkgsrc."$$"
 		fi
 	done
 	;;
@@ -100,9 +109,12 @@ REMOVE)
 
 		shelldb="/etc/shells"
 		if ${TEST} -f "$shelldb" && \
-		   ${SHELLS} -K ${shelldb} check ${shell}; then
+		   ${GREP} "^$shell" $shelldb >/dev/null; then
 			${ECHO} "${PKGNAME}: removing $shell from $shelldb"
-			${SHELLS} -K ${shelldb} remove ${shell}
+                	${TOUCH} $shelldb
+                	${CP} $shelldb $shelldb.pkgsrc."$$"
+			{ ${GREP} -v "^$shell" $shelldb.pkgsrc."$$" || ${TRUE}; } > $shelldb
+                	${RM} $shelldb.pkgsrc."$$"
 		fi
 	done
 	;;
@@ -122,7 +134,7 @@ CHECK-ADD)
 
 		shelldb="/etc/shells"
 		if ${TEST} -f "$shelldb" && \
-		   ${SHELLS} -K ${shelldb} check ${shell}; then
+		   ${GREP} "^$shell" $shelldb >/dev/null; then
 			:
 		else
 			case "$printed_header" in
@@ -160,7 +172,7 @@ CHECK-REMOVE)
 
 		shelldb="/etc/shells"
 		if ${TEST} -f "$shelldb" && \
-		   ${SHELLS} -K ${shelldb} check ${shell}; then
+		   ${GREP} "^$shell" $shelldb >/dev/null; then
 			case "$printed_header" in
 			yes)	;;
 			*)	printed_header=yes
