@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1837 2010/05/07 07:21:07 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.1838 2010/05/07 09:16:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2312,3 +2312,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-enumitem-doc to 2.2 [minskim 2010-05-06]
 	Updated math/maxima to 5.21.1 [asau 2010-05-07]
 	Updated comms/asterisk16 to 1.6.1.17nb3 [jnemeth 2010-05-07]
+	Added sysutils/etcutils version 0.1 [jmmv 2010-05-07]
