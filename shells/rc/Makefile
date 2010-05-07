@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2010/02/04 05:23:27 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2010/05/07 12:02:44 jmmv Exp $
 
 DISTNAME=       rc-1.7
+PKGREVISION=	1
 CATEGORIES=	shells plan9
 MASTER_SITES=   http://www-ftp.lip6.fr/pub/unix/shells/rc/
 
