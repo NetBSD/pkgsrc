@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/05/06 17:02:12 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2010/05/07 09:34:43 drochner Exp $
 
 SNAPSHOT_DATE=		20090920
 
@@ -32,10 +32,11 @@ BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake bash
 USE_LIBTOOL=		yes
 
 HAS_CONFIGURE=		yes
+CONFIG_SHELL=		${BASH}
 CONFIGURE_ARGS+=	--enable-pic	# uses libtool's -prefer-pic
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--disable-mp4-output	# needs GPAC, not in pkgsrc
