@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1841 2010/05/07 15:35:38 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.1842 2010/05/07 21:04:58 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2315,3 +2315,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/etcutils version 0.1 [jmmv 2010-05-07]
 	Updated databases/p5-SQL-Statement to 1.27 [sno 2010-05-07]
 	Updated devel/atf to 0.8 [jmmv 2010-05-07]
+	Updated x11/tint2 to 0.9nb1 [gls 2010-05-07]
