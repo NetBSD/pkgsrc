@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/11/15 18:24:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/05/07 18:02:53 drochner Exp $
 bin/dvdstyler
 man/man1/dvdstyler.1
 share/applications/dvdstyler.desktop
@@ -41,6 +41,7 @@ share/dvdstyler/buttons/deprecated/arrow2-left.xml
 share/dvdstyler/buttons/deprecated/arrow2-right.xml
 share/dvdstyler/buttons/deprecated/arrow2-up.xml
 share/dvdstyler/buttons/deprecated/text-shadow.xml
+share/dvdstyler/buttons/deprecated/text-underlined.xml
 share/dvdstyler/buttons/deprecated/text.xml
 share/dvdstyler/buttons/ellipse.xml
 share/dvdstyler/buttons/frame.xml
@@ -49,7 +50,7 @@ share/dvdstyler/buttons/pill.xml
 share/dvdstyler/buttons/text-circle.xml
 share/dvdstyler/buttons/text-shadow.xml
 share/dvdstyler/buttons/text-square.xml
-share/dvdstyler/buttons/text-underlined.xml
+share/dvdstyler/buttons/text-underlined-v2.xml
 share/dvdstyler/buttons/text-v2.xml
 share/dvdstyler/data/empty_ntsc_ac3.mpg
 share/dvdstyler/data/empty_ntsc_mp2.mpg
@@ -58,6 +59,8 @@ share/dvdstyler/data/empty_pal_mp2.mpg
 share/dvdstyler/data/subtitles.rgb
 share/dvdstyler/docs/help_de.zip
 share/dvdstyler/docs/help_en.zip
+share/dvdstyler/docs/help_ja.zip
+share/dvdstyler/docs/help_ru.zip
 share/dvdstyler/objects/ellipse.xml
 share/dvdstyler/objects/frame.xml
 share/dvdstyler/objects/image.xml
@@ -68,6 +71,7 @@ share/dvdstyler/rc/add.png
 share/dvdstyler/rc/dvdstyler.png
 share/dvdstyler/rc/files.png
 share/dvdstyler/rc/logo.png
+share/dvdstyler/rc/logoSmall.png
 share/dvdstyler/rc/minus.png
 share/dvdstyler/rc/move.cur
 share/dvdstyler/rc/nesw.cur
@@ -76,23 +80,36 @@ share/dvdstyler/rc/noaudio.png
 share/dvdstyler/rc/nwse.cur
 share/dvdstyler/rc/open.png
 share/dvdstyler/rc/plus.png
+share/dvdstyler/rc/preferences.png
 share/dvdstyler/rc/run.png
 share/dvdstyler/rc/save.png
+share/dvdstyler/templates/blue.dvdt
+share/dvdstyler/templates/blue.png
+share/dvdstyler/templates/travel.dvdt
+share/dvdstyler/templates/travel.png
+share/dvdstyler/templates/turbulence.dvdt
+share/dvdstyler/templates/turbulence.png
 share/locale/cs/LC_MESSAGES/dvdstyler.mo
 share/locale/da/LC_MESSAGES/dvdstyler.mo
 share/locale/de/LC_MESSAGES/dvdstyler.mo
 share/locale/el/LC_MESSAGES/dvdstyler.mo
 share/locale/es/LC_MESSAGES/dvdstyler.mo
+share/locale/eu/LC_MESSAGES/dvdstyler.mo
 share/locale/fr/LC_MESSAGES/dvdstyler.mo
+share/locale/hu/LC_MESSAGES/dvdstyler.mo
 share/locale/it/LC_MESSAGES/dvdstyler.mo
 share/locale/ko/LC_MESSAGES/dvdstyler.mo
 share/locale/mk/LC_MESSAGES/dvdstyler.mo
+share/locale/nb/LC_MESSAGES/dvdstyler.mo
+share/locale/nl/LC_MESSAGES/dvdstyler.mo
 share/locale/pl/LC_MESSAGES/dvdstyler.mo
 share/locale/pt/LC_MESSAGES/dvdstyler.mo
 share/locale/pt_BR/LC_MESSAGES/dvdstyler.mo
 share/locale/ru/LC_MESSAGES/dvdstyler.mo
+share/locale/sk/LC_MESSAGES/dvdstyler.mo
 share/locale/sl/LC_MESSAGES/dvdstyler.mo
 share/locale/sr/LC_MESSAGES/dvdstyler.mo
+share/locale/sv/LC_MESSAGES/dvdstyler.mo
 share/locale/vi/LC_MESSAGES/dvdstyler.mo
 share/locale/zh_TW/LC_MESSAGES/dvdstyler.mo
 share/pixmaps/dvdstyler.png
