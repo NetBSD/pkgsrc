@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2009/12/22 16:08:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2010/05/07 15:35:06 jmmv Exp $
 #
 
-DISTNAME=	atf-0.7
+DISTNAME=	atf-0.8
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.7/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.8/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/~jmmv/atf/
@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=		yes
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
