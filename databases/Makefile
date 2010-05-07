@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2010/04/29 06:53:08 jnemeth Exp $
+# $NetBSD: Makefile,v 1.331 2010/05/07 06:56:31 wiz Exp $
 #
 
 COMMENT=	Databases
@@ -44,6 +44,7 @@ SUBDIR+=	kmysqladmin
 SUBDIR+=	krecipes
 SUBDIR+=	lbdb
 SUBDIR+=	ldapvi
+SUBDIR+=	libcassandra
 SUBDIR+=	libdbi
 SUBDIR+=	libdbi-driver-mysql
 SUBDIR+=	libdbi-driver-pgsql
@@ -145,6 +146,7 @@ SUBDIR+=	p5-MARC
 SUBDIR+=	p5-MARC-Record
 SUBDIR+=	p5-MLDBM
 SUBDIR+=	p5-MLDBM-Sync
+SUBDIR+=	p5-Net-Cassandra
 SUBDIR+=	p5-Net-MySQL
 SUBDIR+=	p5-ORLite
 SUBDIR+=	p5-ORLite-Migrate
@@ -229,6 +231,7 @@ SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-bdb-xml
 SUBDIR+=	py-bsddb3
+SUBDIR+=	py-cassa
 SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-elixir
 SUBDIR+=	py-gdbm
