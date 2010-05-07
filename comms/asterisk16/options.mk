@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
+# $NetBSD: options.mk,v 1.6 2010/05/07 03:49:07 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail
@@ -77,6 +77,7 @@ post-extract:
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebvmail)
+DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
 SUBST_CLASSES+=		webvmail
 SUBST_STAGE.webvmail=	post-patch
 SUBST_FILES.webvmail=	contrib/scripts/vmail.cgi
