@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1840 2010/05/07 15:17:36 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1841 2010/05/07 15:35:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2314,3 +2314,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/asterisk16 to 1.6.1.17nb3 [jnemeth 2010-05-07]
 	Added sysutils/etcutils version 0.1 [jmmv 2010-05-07]
 	Updated databases/p5-SQL-Statement to 1.27 [sno 2010-05-07]
+	Updated devel/atf to 0.8 [jmmv 2010-05-07]
