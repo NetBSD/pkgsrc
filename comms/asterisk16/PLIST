@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/05/07 07:20:55 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/05/07 23:57:56 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -250,7 +250,7 @@ lib/asterisk/modules/res_ael_share.so
 lib/asterisk/modules/res_agi.so
 lib/asterisk/modules/res_clioriginate.so
 lib/asterisk/modules/res_config_curl.so
-lib/asterisk/modules/res_config_ldap.so
+${PLIST.ldap}lib/asterisk/modules/res_config_ldap.so
 ${PLIST.unixodbc}lib/asterisk/modules/res_config_odbc.so
 lib/asterisk/modules/res_convert.so
 lib/asterisk/modules/res_crypto.so
