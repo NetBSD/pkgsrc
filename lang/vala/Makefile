@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/03/10 12:36:25 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/05/07 08:34:22 ahoka Exp $
 #
 
 DISTNAME=	vala-0.7.10
@@ -6,7 +6,7 @@ CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/0.7/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Vala
 COMMENT=	Compiler for the GObject type system
 

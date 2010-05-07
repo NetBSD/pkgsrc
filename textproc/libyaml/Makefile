@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/09 09:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/07 08:34:23 ahoka Exp $
 #
 
 DISTNAME=	yaml-0.1.2
@@ -6,7 +6,7 @@ PKGNAME=	lib${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pyyaml.org/download/libyaml/
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pyyaml.org/wiki/LibYAML
 COMMENT=	YAML 1.1 parser and emitter written in C
 LICENSE=	mit

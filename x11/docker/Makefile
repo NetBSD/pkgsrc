@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/17 19:00:14 ahoka Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/07 08:34:23 ahoka Exp $
 #
 
 DISTNAME=	docker-1.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://offload1.icculus.org/openbox/2/docker/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://icculus.org/openbox/2/docker/
 COMMENT=	WindowMaker dock app which acts as a system tray
 

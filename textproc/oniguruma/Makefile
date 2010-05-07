@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/10 01:19:46 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/07 08:34:23 ahoka Exp $
 #
 
 DISTNAME=	onig-5.9.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.geocities.jp/kosako3/oniguruma/archive/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geocities.jp/kosako3/oniguruma/
 COMMENT=	Regular expressions library
 
