@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/08/31 21:46:40 ahoka Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/07 08:34:23 ahoka Exp $
 
 DISTNAME=	oniguruma-1.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oniguruma.rubyforge.org/
 COMMENT=	Fast regular expression library
 
