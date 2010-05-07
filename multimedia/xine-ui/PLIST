@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:08:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/05/07 17:46:24 drochner Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
@@ -63,6 +63,7 @@ share/locale/sk/LC_MESSAGES/xine-ui.mo
 share/locale/sk/LC_MESSAGES/xitk.mo
 share/locale/uk/LC_MESSAGES/xine-ui.mo
 share/locale/uk/LC_MESSAGES/xitk.mo
+share/mime/packages/xine-ui.xml
 share/pixmaps/xine.xpm
 share/xine/desktop/xine.desktop
 share/xine/oxine/mainmenu
