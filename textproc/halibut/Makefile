@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/10/06 21:31:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/07 08:34:22 ahoka Exp $
 #
 
 DISTNAME=	halibut-1.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/halibut/
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/halibut/
 COMMENT=	Documentation production system
 LICENSE=	mit
