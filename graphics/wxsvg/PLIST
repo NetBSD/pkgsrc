@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/11 18:57:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/07 17:58:30 drochner Exp $
 bin/svgview
 include/wxSVG/Animated.h
 include/wxSVG/CSSStyleDeclaration.h
@@ -9,7 +9,6 @@ include/wxSVG/DocumentCSS.h
 include/wxSVG/DocumentEvent.h
 include/wxSVG/Element.h
 include/wxSVG/ElementTimeControl.h
-include/wxSVG/ElementTransform.h
 include/wxSVG/EventTarget.h
 include/wxSVG/GetSVGDocument.h
 include/wxSVG/NodeList.h
