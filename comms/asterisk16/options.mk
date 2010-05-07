@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.6 2010/05/07 03:49:07 jnemeth Exp $
+# $NetBSD: options.mk,v 1.7 2010/05/07 23:57:56 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
-PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail
+PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
+PKG_SUGGESTED_OPTIONS=		ldap
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail
+PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap
 
 # Asterisk now uses DAHDI, not zaptel; not implemented yet...
 #.if !empty(PKG_OPTIONS:Mzaptel)
@@ -87,4 +88,11 @@ INSTALLATION_DIRS+=	${PREFIX}/libexec/cgi-bin ${PREFIX}/share/httpd/htdocs
 SPECIAL_PERMS+=		${PREFIX}/libexec/cgi-bin/vmail ${ASTERISK_USER} ${ASTERISK_GROUP} 04555
 INSTALL_TARGET+=	webvmail
 PLIST.webvmail=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mldap)
+.include "../../databases/openldap-client/buildlink3.mk"
+PLIST.ldap=		yes
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif

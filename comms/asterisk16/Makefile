@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2010/05/07 07:20:55 jnemeth Exp $
+# $NetBSD: Makefile,v 1.17 2010/05/07 23:57:56 jnemeth Exp $
 #
 
 DISTNAME=	asterisk-1.6.1.17
 DIST_SUBDIR=	${PKGNAME_NOREV}
-PKGREVISION=	3
+PKGREVISION=	4
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
