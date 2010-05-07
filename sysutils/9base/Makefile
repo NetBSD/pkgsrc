@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/07/06 16:08:05 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/05/07 12:02:45 jmmv Exp $
 #
 
 DISTNAME=	9base-20051114
+PKGREVISION=	1
 CATEGORIES=	sysutils shells
 MASTER_SITES=	http://www.suckless.org/download/
 

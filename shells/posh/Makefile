@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2010/05/07 12:02:44 jmmv Exp $
 #
 
 DISTNAME=	posh_0.3.14
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
 
