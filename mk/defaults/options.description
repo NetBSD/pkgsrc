@@ -478,6 +478,7 @@ syslog			Enable syslog support.
 syslogng-spoof		Spoof the original source address of forwarded packets.
 tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
+tests			Build and install tests.
 theora			Use the theora codecs.
 threads			Enable threads support.
 tin-use-inn-spool	Use the INN spool directories.
