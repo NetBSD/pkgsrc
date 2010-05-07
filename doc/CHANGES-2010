@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1839 2010/05/07 11:35:45 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1840 2010/05/07 15:17:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2313,3 +2313,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/maxima to 5.21.1 [asau 2010-05-07]
 	Updated comms/asterisk16 to 1.6.1.17nb3 [jnemeth 2010-05-07]
 	Added sysutils/etcutils version 0.1 [jmmv 2010-05-07]
+	Updated databases/p5-SQL-Statement to 1.27 [sno 2010-05-07]
