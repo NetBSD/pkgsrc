@@ -1,0 +1,19 @@
+etcutils is a package that provides standalone utilities to manipulate some
+of the configuration files in /etc in a programmatic manner.  Some of these
+files can be seen as databases and, as such, they should have tools to
+update them.
+
+The utilities provided by etcutils are designed to permit their integration
+into packaging systems.  Once integrated, packages can use these tools to
+automatically modify these system-wide configuration files without having
+to care about portability issues.  Of course, these utilities provide a
+command-line interface that resembles that of other standard tools, and
+thus their manual usage is also possible.
+
+The following utilities are provided:
+
+* services(8): Add, list, remove and check the presence of entries in the
+  services(5) database.
+
+* shells(8): Add, list, remove and check the presence of entries in the
+  shells(5) database.

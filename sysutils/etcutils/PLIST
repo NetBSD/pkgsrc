@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/07 09:13:59 jmmv Exp $
+man/man8/services.8
+man/man8/shells.8
+sbin/services
+sbin/shells
+share/doc/etcutils/AUTHORS
+share/doc/etcutils/COPYING
+share/doc/etcutils/NEWS
+share/doc/etcutils/README
+${TESTS}tests/etcutils/Atffile
+${TESTS}tests/etcutils/services_test
+${TESTS}tests/etcutils/services.gold
+${TESTS}tests/etcutils/shells_test
+${TESTS}tests/etcutils/shells.gold

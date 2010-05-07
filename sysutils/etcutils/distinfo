@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/07 09:13:59 jmmv Exp $
+
+SHA1 (etcutils-0.1.tar.gz) = c34742febea68836eea4d4ef3495a660f6a86ee5
+RMD160 (etcutils-0.1.tar.gz) = 71440ea12b091e14b2a5f4ed137c09f7bc4e663a
+Size (etcutils-0.1.tar.gz) = 59625 bytes
