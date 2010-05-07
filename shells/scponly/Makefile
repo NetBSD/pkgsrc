@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/03/06 00:12:28 snj Exp $
+# $NetBSD: Makefile,v 1.14 2010/05/07 12:02:44 jmmv Exp $
 
 DISTNAME=	scponly-4.8
+PKGREVISION=	1
 CATEGORIES=	shells security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scponly/}
 EXTRACT_SUFX=	.tgz
