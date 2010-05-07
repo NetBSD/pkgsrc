@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/01/18 09:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/05/07 17:58:30 drochner Exp $
 #
 
-DISTNAME=	wxsvg-1.0
-PKGREVISION=	2
+DISTNAME=	wxsvg-1.0.4
+PKGNAME=	wxsvg-1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxsvg/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,4 +25,5 @@ pre-configure:
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
