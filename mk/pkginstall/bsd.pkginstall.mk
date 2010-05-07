@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.47 2010/03/10 15:01:42 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.48 2010/05/07 12:00:36 jmmv Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -762,6 +762,10 @@ install-script-data-info-files:
 #
 PKG_SHELL?=		# empty
 
+.if !empty(PKG_SHELL)
+DEPENDS+=		etcutils>=0.1:../../sysutils/etcutils
+FILES_SUBST+=		SHELLS=${PREFIX:Q}/sbin/shells
+
 _INSTALL_SHELL_FILE=		${_PKGINSTALL_DIR}/shell
 _INSTALL_SHELL_DATAFILE=	${_PKGINSTALL_DIR}/shell-data
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_SHELL_FILE}
@@ -788,6 +792,7 @@ ${_INSTALL_SHELL_FILE}: ../../mk/pkginstall/shell
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
+.endif
 
 # SHLIB_TYPE
 #	The type of shared library supported by the platform.
