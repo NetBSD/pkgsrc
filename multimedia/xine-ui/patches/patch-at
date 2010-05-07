@@ -1,11 +1,11 @@
-$NetBSD: patch-at,v 1.2 2007/07/15 19:41:30 xtraeme Exp $
+$NetBSD: patch-at,v 1.3 2010/05/07 17:46:25 drochner Exp $
 
---- doc/man/en/Makefile.in.orig	2007-07-15 21:13:06.000000000 +0200
-+++ doc/man/en/Makefile.in	2007-07-15 21:13:17.000000000 +0200
-@@ -243,7 +243,7 @@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+--- doc/man/en/Makefile.in.orig	2010-03-06 01:34:49.000000000 +0000
++++ doc/man/en/Makefile.in
+@@ -253,7 +253,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
 -manfiles = xine.1 aaxine.1 xine-check.1 xine-remote.1
 +manfiles = xine.1 xine-check.1 xine-remote.1
  man_MANS = $(manfiles) xine-bugreport.1
