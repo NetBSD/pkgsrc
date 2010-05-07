@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/05 21:59:43 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/07 08:34:22 ahoka Exp $
 #
 
 DISTNAME=	libgee-0.1.5
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Libgee
 COMMENT=	Library providing GObject-based interfaces and classes
 
