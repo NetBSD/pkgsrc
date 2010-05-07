@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/04/11 21:43:57 gls Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/07 20:53:45 gls Exp $
 
 DISTNAME=		tint2-0.9
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://tint2.googlecode.com/files/
 
@@ -38,6 +39,8 @@ post-install:
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
