@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.79 2009/05/20 00:58:27 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2010/05/07 12:02:43 jmmv Exp $
 #
 
 DISTNAME=	bash-2.05b
 PKGNAME=	bash-2.05.2.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
