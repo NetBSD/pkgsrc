@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.7 2009/11/15 18:09:35 drochner Exp $
+# $NetBSD: options.mk,v 1.8 2010/05/08 16:04:05 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
 PKG_SUPPORTED_OPTIONS=	a52 freetype2 mjpegtools lzo libxml2
-PKG_SUPPORTED_OPTIONS+=	dv imagemagick x264
+PKG_SUPPORTED_OPTIONS+=	dv imagemagick x264 faac
 
 PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools libxml2
 PKG_SUGGESTED_OPTIONS+=	imagemagick x264
@@ -77,4 +77,11 @@ CONFIGURE_ARGS+=	--enable-x264
 .else
 CONFIGURE_ARGS+=
 CONFIGURE_ARGS+=	--disable-x264
+.endif
+
+.if !empty(PKG_OPTIONS:Mfaac)
+.  include "../../audio/faac/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-faac
+.else
+CONFIGURE_ARGS+=	--disable-faac
 .endif
