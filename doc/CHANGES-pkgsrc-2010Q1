@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.15 2010/05/06 12:15:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.16 2010/05/08 22:23:08 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -55,3 +55,5 @@ Pullup ticket #3103 - requested by markd
 x11/kdebase-workspace4: security patch
 Pullup ticket #3106 - requested by tez
 lang/gcc34: security patch
+Pullup ticket #3109 - requested by tez
+devel/pcre: security update
