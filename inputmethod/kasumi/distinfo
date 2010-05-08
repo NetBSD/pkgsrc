@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/01/13 13:02:54 joerg Exp $
+$NetBSD: distinfo,v 1.4 2010/05/08 13:26:23 obache Exp $
 
-SHA1 (kasumi-1.0.1.tar.gz) = 8cd7d5d9b91875a7dea5450fcdfdcbabdd1d52ce
-RMD160 (kasumi-1.0.1.tar.gz) = 2c49afa2b6c0de63d303cefdfd71457c394cf950
-Size (kasumi-1.0.1.tar.gz) = 290336 bytes
-SHA1 (patch-aa) = e7193e682109428908d7eab6c5182a20fefc3d1b
-SHA1 (patch-ab) = ec4e7923c447faa4f72b77ca9087d3e4777585e1
-SHA1 (patch-ac) = 151e00c3d326cd9c1778c5454baa700a5cf58a8c
+SHA1 (kasumi-2.5.tar.gz) = 38155494d684f61e74ed1498ec90cc0fc68d791a
+RMD160 (kasumi-2.5.tar.gz) = b609988d585b387acf83f5e7f6f58d6b10c80dd3
+Size (kasumi-2.5.tar.gz) = 279587 bytes
