@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/03/09 07:06:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/05/08 09:05:47 adam Exp $
 share/doc/bacula/console/About_this_document.html
 share/doc/bacula/console/Bacula_Console.html
 share/doc/bacula/console/Bacula_Console_Operators_Gu.html
@@ -86,6 +86,7 @@ share/doc/bacula/developers/Save_Protocol_Between_File.html
 share/doc/bacula/developers/Sequence_Creation_Records_S.html
 share/doc/bacula/developers/Serialization.html
 share/doc/bacula/developers/Session_Label.html
+share/doc/bacula/developers/Setting_up_Regession_Testin.html
 share/doc/bacula/developers/Smart_Memory_Allocation.html
 share/doc/bacula/developers/Step_Step_Modifying_Bacula.html
 share/doc/bacula/developers/Steps_Take_Porting.html
@@ -169,6 +170,7 @@ share/doc/bacula/main/New_Features_in_3_0_0.html
 share/doc/bacula/main/New_Features_in_5_0_0.html
 share/doc/bacula/main/New_Features_in_5_0_1.html
 share/doc/bacula/main/New_Features_in_Released.html
+share/doc/bacula/main/Release_Version_5_0_2.html
 share/doc/bacula/main/Released_Version_3_0_3_3_0_.html
 share/doc/bacula/main/Restore_Command.html
 share/doc/bacula/main/Storage_Daemon_Configuratio.html
@@ -221,7 +223,6 @@ share/doc/bacula/main/img38.png
 share/doc/bacula/main/img39.png
 share/doc/bacula/main/img4.png
 share/doc/bacula/main/img40.png
-share/doc/bacula/main/img41.png
 share/doc/bacula/main/img5.png
 share/doc/bacula/main/img6.png
 share/doc/bacula/main/img7.png
