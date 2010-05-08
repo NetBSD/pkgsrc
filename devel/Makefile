@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1337 2010/05/02 10:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1338 2010/05/08 15:47:11 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -169,6 +169,7 @@ SUBDIR+=	emacs20-elib
 SUBDIR+=	epydoc
 SUBDIR+=	equeue
 SUBDIR+=	eric3
+SUBDIR+=	eric4
 SUBDIR+=	error
 SUBDIR+=	etrace
 SUBDIR+=	exctags
