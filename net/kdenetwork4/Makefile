@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/04/10 02:45:04 markd Exp $
+# $NetBSD: Makefile,v 1.9 2010/05/08 22:13:57 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -24,8 +24,6 @@ REPLACE_PERL+= \
 	kopete/kopete/kconf_update/kopete-update_yahoo_server.pl
 
 REPLACE_SH+= \
-	kopete/protocols/skype/call_end \
-	kopete/protocols/skype/call_start \
 	kopete/protocols/winpopup/winpopup-install \
 	kopete/protocols/winpopup/winpopup-send
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/10 02:45:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/08 22:13:58 markd Exp $
 man/de/man1/adddebug.1
 man/de/man1/ark.1
 man/de/man1/cheatmake.1
@@ -860,11 +860,15 @@ share/doc/kde/HTML/de/kleopatra/index.docbook
 share/doc/kde/HTML/de/klettres/common
 share/doc/kde/HTML/de/klettres/index.cache.bz2
 share/doc/kde/HTML/de/klettres/index.docbook
+share/doc/kde/HTML/de/klettres/klettres-newstuff.png
+share/doc/kde/HTML/de/klettres/klettres-newstuff1.png
+share/doc/kde/HTML/de/klettres/klettres-newstuff2.png
 share/doc/kde/HTML/de/klettres/klettres1.png
 share/doc/kde/HTML/de/klettres/klettres2.png
 share/doc/kde/HTML/de/klettres/klettres3.png
 share/doc/kde/HTML/de/klettres/klettres4.png
 share/doc/kde/HTML/de/klettres/klettres5.png
+share/doc/kde/HTML/de/klettres/klettres6.png
 share/doc/kde/HTML/de/klines/common
 share/doc/kde/HTML/de/klines/gamescreen.png
 share/doc/kde/HTML/de/klines/index.cache.bz2
@@ -1058,10 +1062,26 @@ share/doc/kde/HTML/de/kppp/kppp-wizzard.png
 share/doc/kde/HTML/de/kppp/security.docbook
 share/doc/kde/HTML/de/kppp/tricks.docbook
 share/doc/kde/HTML/de/kppp/wizard.docbook
+share/doc/kde/HTML/de/krdc/address_input.png
+share/doc/kde/HTML/de/krdc/bookmarks_menu.png
+share/doc/kde/HTML/de/krdc/common
+share/doc/kde/HTML/de/krdc/fullscreen_button.png
+share/doc/kde/HTML/de/krdc/host_preferences.png
+share/doc/kde/HTML/de/krdc/index.cache.bz2
+share/doc/kde/HTML/de/krdc/index.docbook
+share/doc/kde/HTML/de/krdc/krdc_mainwindow.png
+share/doc/kde/HTML/de/krdc/password_entry.png
+share/doc/kde/HTML/de/krdc/rdp_preferences.png
+share/doc/kde/HTML/de/krdc/vnc_host_configuration.png
+share/doc/kde/HTML/de/krdc/vnc_preferences.png
+share/doc/kde/HTML/de/krdc/windowmode_button.png
 share/doc/kde/HTML/de/kreversi/common
 share/doc/kde/HTML/de/kreversi/index.cache.bz2
 share/doc/kde/HTML/de/kreversi/index.docbook
 share/doc/kde/HTML/de/kreversi/kreversi1.png
+share/doc/kde/HTML/de/krfb/common
+share/doc/kde/HTML/de/krfb/index.cache.bz2
+share/doc/kde/HTML/de/krfb/index.docbook
 share/doc/kde/HTML/de/kruler/common
 share/doc/kde/HTML/de/kruler/index.cache.bz2
 share/doc/kde/HTML/de/kruler/index.docbook

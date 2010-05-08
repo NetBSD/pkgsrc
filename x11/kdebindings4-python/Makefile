@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/04/10 02:45:05 markd Exp $
+# $NetBSD: Makefile,v 1.12 2010/05/08 22:13:58 markd Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
 DISTNAME=	kdebindings-${_KDE_VERSION}
@@ -21,6 +21,11 @@ CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED=	26 25
 PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+REPLACE_PYTHON+= \
+	python/pykde4/examples/polkitqtExamples/pkexample.py \
+	python/pykde4/examples/polkitqtExamples/pkexamplehelper.py \
+	python/pykde4/examples/solid_demo.py
 
 post-extract:
 	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
