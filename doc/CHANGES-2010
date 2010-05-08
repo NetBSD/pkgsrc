@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1850 2010/05/08 20:47:39 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1851 2010/05/08 22:18:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2329,3 +2329,29 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/fetchmail to 6.3.17 [tez 2010-05-08]
 	Updated x11/xscreensaver to 5.10nb1 [tez 2010-05-08]
 	Added textproc/gutcheck version 0.991 [wiz 2010-05-08]
+	Updated devel/kdesdk4 to 4.4.3 [markd 2010-05-08]
+	Updated games/kdegames4 to 4.4.3 [markd 2010-05-08]
+	Updated games/kdetoys4 to 4.4.3 [markd 2010-05-08]
+	Updated graphics/kdegraphics4 to 4.4.3 [markd 2010-05-08]
+	Updated graphics/oxygen-icons to 4.4.3 [markd 2010-05-08]
+	Updated meta-pkgs/kde4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdeaccessibility4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdeadmin4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdeartwork4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdeedu4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdepim-runtime4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdepim4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdepimlibs4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdeplasma-addons4 to 4.4.3 [markd 2010-05-08]
+	Updated misc/kdeutils4 to 4.4.3 [markd 2010-05-08]
+	Updated multimedia/kdemultimedia4 to 4.4.3 [markd 2010-05-08]
+	Updated net/kdenetwork4 to 4.4.3 [markd 2010-05-08]
+	Updated www/kdewebdev4 to 4.4.3 [markd 2010-05-08]
+	Updated x11/kde4-l10n-de to 4.4.3 [markd 2010-05-08]
+	Updated x11/kde4-l10n-en_GB to 4.4.3 [markd 2010-05-08]
+	Updated x11/kde4-l10n-nl to 4.4.3 [markd 2010-05-08]
+	Updated x11/kdebase-runtime4 to 4.4.3 [markd 2010-05-08]
+	Updated x11/kdebase-workspace4 to 4.4.3 [markd 2010-05-08]
+	Updated x11/kdebase4 to 4.4.3 [markd 2010-05-08]
+	Updated x11/kdebindings4-python to 4.4.3 [markd 2010-05-08]
+	Updated x11/kdelibs4 to 4.4.3 [markd 2010-05-08]
