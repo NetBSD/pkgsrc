@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1849 2010/05/08 16:54:32 tez Exp $
+$NetBSD: CHANGES-2010,v 1.1850 2010/05/08 20:47:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/py-genshi to 0.6 [obache 2010-05-08]
 	Updated mail/fetchmail to 6.3.17 [tez 2010-05-08]
 	Updated x11/xscreensaver to 5.10nb1 [tez 2010-05-08]
+	Added textproc/gutcheck version 0.991 [wiz 2010-05-08]
