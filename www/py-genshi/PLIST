@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/08 13:51:01 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/genshi/__init__.py
 ${PYSITELIB}/genshi/__init__.pyc
 ${PYSITELIB}/genshi/__init__.pyo
-${PYSITELIB}/genshi/_speedups.so
 ${PYSITELIB}/genshi/builder.py
 ${PYSITELIB}/genshi/builder.pyc
 ${PYSITELIB}/genshi/builder.pyo
@@ -40,6 +38,15 @@ ${PYSITELIB}/genshi/path.pyo
 ${PYSITELIB}/genshi/template/__init__.py
 ${PYSITELIB}/genshi/template/__init__.pyc
 ${PYSITELIB}/genshi/template/__init__.pyo
+${PYSITELIB}/genshi/template/_ast24.py
+${PYSITELIB}/genshi/template/_ast24.pyc
+${PYSITELIB}/genshi/template/_ast24.pyo
+${PYSITELIB}/genshi/template/ast24.py
+${PYSITELIB}/genshi/template/ast24.pyc
+${PYSITELIB}/genshi/template/ast24.pyo
+${PYSITELIB}/genshi/template/astutil.py
+${PYSITELIB}/genshi/template/astutil.pyc
+${PYSITELIB}/genshi/template/astutil.pyo
 ${PYSITELIB}/genshi/template/base.py
 ${PYSITELIB}/genshi/template/base.pyc
 ${PYSITELIB}/genshi/template/base.pyo
