@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1842 2010/05/07 21:04:58 gls Exp $
+$NetBSD: CHANGES-2010,v 1.1843 2010/05/08 03:47:10 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2316,3 +2316,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-SQL-Statement to 1.27 [sno 2010-05-07]
 	Updated devel/atf to 0.8 [jmmv 2010-05-07]
 	Updated x11/tint2 to 0.9nb1 [gls 2010-05-07]
+	Updated security/netpgp to 20100507 [agc 2010-05-07]
