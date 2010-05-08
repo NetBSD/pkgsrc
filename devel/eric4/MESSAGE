@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/05/08 15:44:36 drochner Exp $
+
+#########################################################################
+#                                                                       #
+#  If you like to use i18n-support for Eric4 you can simply             #
+#  download the necessary files depending on your needs from:           #
+#                                                                       #
+#         http://sourceforge.net/projects/eric-ide/files/eric4/stable   #
+#                                                                       #
+#         e.g. eric4-i18n-de-4.4.4.tar.gz for GERMAN language           #
+#                                                                       #
+#                                                                       #
+#  Unpack it as normal user, change into created folder and type:       #
+#                                                                       #
+#         python2.6 install-i18n.py -p                                  #
+#                                                                       #
+#  for a local install stored in ~/.eric4                               #
+#                                                                       #
+#########################################################################
+
+===========================================================================
