@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2010/05/08 15:34:59 tez Exp $
+
+If the upgrade you did encompassed an upgrade to OpenSSL 1.0.0 or newer,
+you may need to run c_rehash on your certificate directories, particularly
+if you are using local certs directories (f. i. through fetchmail's
+--sslcertpath option).
+
+Reason: OpenSSL 1.0.0, relative to earlier versions, uses a different hash
+for the symbolic links (symlinks) in its certs/ directory, so you need to
+recreate the symlinks by running c_rehash /etc/ssl/certs (adjust this to
+where your installation keeps its certificates), and you cannot easily
+share this certs directory with applications linked against older OpenSSL
+versions.
+
+See the fetchmail FAQ for more information:
+	http://fetchmail.berlios.de/fetchmail-FAQ.html#R14
+
+===========================================================================
