@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/10 02:45:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/08 22:13:57 markd Exp $
 bin/blinken
 bin/calgebra
 bin/cantor
@@ -227,7 +227,6 @@ man/man1/ktouch.1
 man/man6/khangman.6
 share/applications/kde4/blinken.desktop
 share/applications/kde4/cantor.desktop
-share/applications/kde4/cantor_part.desktop
 share/applications/kde4/kalgebra.desktop
 share/applications/kde4/kalzium.desktop
 share/applications/kde4/kanagram.desktop
@@ -3727,6 +3726,7 @@ share/kde/config/klettres.knsrc
 share/kde/config/kstars.knsrc
 share/kde/config/kwordquiz.knsrc
 share/kde/config/parley.knsrc
+share/kde4/services/cantor/cantor_part.desktop
 share/kde4/services/cantor/creatematrixassistant.desktop
 share/kde4/services/cantor/differentiateassistant.desktop
 share/kde4/services/cantor/eigenvaluesassistant.desktop

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/04/10 02:45:04 markd Exp $
+# $NetBSD: Makefile,v 1.8 2010/05/08 22:13:58 markd Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -23,8 +23,6 @@ SUBST_SED.htdig=	-e s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 SUBST_FILES.paths=	kioslave/info/kde-info2html.conf
 SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_STAGE.paths=	post-patch
-
-REPLACE_BASH+= pics/oxygen/scalable/export_pngs.sh
 
 REPLACE_PERL+= \
 	khelpcenter/searchhandlers/khc_docbookdig.pl.cmake \
