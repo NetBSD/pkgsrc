@@ -1,0 +1,5 @@
+Gutcheck is a plain-text checking program that specializes in
+reporting the problems that spellcheckers don't--errors like
+mismatched quotes, misplaced punctuation, unintended blank lines.
+It is specifically tuned for checking texts for submission to
+Project Gutenberg, though it can be useful elsewhere as well.
