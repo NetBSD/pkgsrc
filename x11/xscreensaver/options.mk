@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2009/07/07 17:28:04 joerg Exp $
+# $NetBSD: options.mk,v 1.6 2010/05/08 16:53:06 tez Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
-PKG_SUPPORTED_OPTIONS=	pam xscreensaver-webcollage
+PKG_SUPPORTED_OPTIONS=	pam webcollage opengl gdk-pixbuf
+PKG_SUGGESTED_OPTIONS=	opengl
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,12 +20,30 @@ CONFIGURE_ARGS+=	--without-pam
 #CONFIGURE_ARGS+=	--without-shadow
 .endif
 
-.if !empty(PKG_OPTIONS:Mxscreensaver-webcollage)
-PLIST_SRC=	PLIST.webcollage PLIST
+PLIST_SRC=	PLIST
+.if !empty(PKG_OPTIONS:Mwebcollage)
+PLIST_SRC+=	PLIST.webcollage
 .else
 post-install: delwebcollage
 delwebcollage:
 	rm ${DESTDIR}${PREFIX}/libexec/xscreensaver/config/webcollage.xml
 	rm ${DESTDIR}${PREFIX}/libexec/xscreensaver/webcollage
 	rm ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/webcollage.6
+.endif
+
+.if !empty(PKG_OPTIONS:Mopengl)
+PLIST_SRC+=		PLIST.opengl
+CONFIGURE_ARGS+=	--with-gl
+CONFIGURE_ARGS+=	--with-gle
+.include "../../graphics/gle/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gl
+CONFIGURE_ARGS+=	--without-gle
+.endif
+
+.if !empty(PKG_OPTIONS:Mgdk-pixbuf)
+CONFIGURE_ARGS+=	--with-pixbuf
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-pixbuf
 .endif

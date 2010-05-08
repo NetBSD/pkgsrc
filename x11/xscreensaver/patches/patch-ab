@@ -1,8 +1,15 @@
-$NetBSD: patch-ab,v 1.18 2009/01/14 13:29:15 drochner Exp $
-
---- configure.in.orig	2008-12-27 22:12:27.000000000 +0100
-+++ configure.in
-@@ -1185,7 +1185,7 @@ AC_DEFINE_UNQUOTED(PACKAGE, "$GETTEXT_PA
+--- configure.in.orig	Wed Sep  2 23:38:35 2009
++++ configure.in	Mon Mar 22 14:26:20 2010
+@@ -1148,7 +1148,7 @@
+ AC_GETTIMEOFDAY_ARGS
+ AC_CHECK_FUNCS(select fcntl uname nice setpriority getcwd getwd putenv sbrk)
+ AC_CHECK_FUNCS(sigaction syslog realpath setrlimit)
+-AC_CHECK_FUNCS(setlocale)
++AC_CHECK_FUNCS(setlocale sqrtf)
+ AC_CHECK_ICMP
+ AC_CHECK_ICMPHDR
+ AC_CHECK_HEADERS(crypt.h sys/select.h)
+@@ -1194,7 +1194,7 @@
  		   generated code.])
  AC_SUBST(GETTEXT_PACKAGE)
  
@@ -11,7 +18,7 @@ $NetBSD: patch-ab,v 1.18 2009/01/14 13:29:15 drochner Exp $
  AM_GLIB_GNU_GETTEXT
  MKINSTALLDIRS="$INSTALL_DIRS"
  
-@@ -1995,7 +1995,7 @@ if test "$enable_locking" = yes -a "$wit
+@@ -2017,7 +2017,7 @@
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
