@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2010/05/04 18:30:10 drochner Exp $
+# $NetBSD: Makefile,v 1.91 2010/05/09 07:46:28 tnn Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -116,7 +116,7 @@ REPLACE_SH+=		vlc-config.in.in
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so \
 			lib/libvlccore.so.2 \
-			lib/libvlccore.so.2.1.1
+			lib/libvlccore.so.2.1.2
 
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
