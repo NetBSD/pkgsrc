@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1854 2010/05/09 20:53:24 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1855 2010/05/09 21:12:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2358,3 +2358,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/fetchmail to 6.3.17nb1 [tron 2010-05-09]
 	Updated mail/fetchmailconf to 6.3.17 [tron 2010-05-09]
 	Updated www/surfraw to 2.2.7 [wiz 2010-05-09]
+	Updated graphics/digikam to 1.2.0 [wiz 2010-05-09]
