@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.8.2.2 2010/05/09 18:10:13 spz Exp $
+
+Don't complain about insecure connection if a SSL fingerprint is provided.
+Patch taken from here:
+
+http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg780308.html
+
+--- socket.c.orig	2010-04-30 00:29:05.000000000 +0100
++++ socket.c	2010-05-09 12:40:58.000000000 +0100
+@@ -1009,8 +1009,8 @@
+ 		}
+ 	}
+ 
+-	if (!certck && (SSL_get_verify_result(_ssl_context[sock]) != X509_V_OK
+-|| !_verify_ok)) {
++	if (!certck && !fingerprint &&
++		(SSL_get_verify_result(_ssl_context[sock]) != X509_V_OK || !_verify_ok)) {
+ 		report(stderr, GT_("Warning: the connection is insecure, continuing anyways. (Better use --sslcertck!)\n"));
+ 	}
+ 
