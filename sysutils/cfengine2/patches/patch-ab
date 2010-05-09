@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.6 2008/09/07 10:14:31 rhaen Exp $
+$NetBSD: patch-ab,v 1.7 2010/05/09 22:09:30 pettai Exp $
 
---- configure.orig	2008-08-26 10:26:51.000000000 +0200
-+++ configure	2008-08-26 10:27:42.000000000 +0200
-@@ -24254,7 +24254,7 @@
+--- configure.orig	2010-03-22 15:25:59.000000000 +0100
++++ configure	2010-03-22 15:27:57.000000000 +0100
+@@ -16104,7 +16104,7 @@
      elif test -d "$BERKELEY_DB_DIR"; then
  
          BERKELEY_DB_CFLAGS="-I$BERKELEY_DB_DIR/include"
--        for v in . db46 db45 db44 db43 db42 db41 db40 db4 db33 db32 db3 db; do
-+        for v in . db46 db45 db44 db43 db42 db41 db40 db4 db33 db32 db3 db db4; do
+-        for v in . db47 db46 db45 db44 db43 db42 db41 db40 db4 db33 db32 db3 db; do
++        for v in . db47 db46 db45 db44 db43 db42 db41 db40 db4 db33 db32 db3 db db4; do
              if test -f "$BERKELEY_DB_DIR/include/$v/db.h"; then
                  BERKELEY_DB_CFLAGS="-I$BERKELEY_DB_DIR/include/$v"
  		break
-@@ -24262,7 +24262,7 @@
+@@ -16112,7 +16112,7 @@
          done
  
          BERKELEY_DB_LIB="-ldb"
--        for v in db-4.6 db4.6 db46 db-4.5 db4.5 db45 db-4.4 db4.4 db44; do
-+        for v in db-4.6 db4.6 db46 db-4.5 db4.5 db45 db-4.4 db4.4 db44 db4; do
+-        for v in db-4.7 db4.7 db47 db-4.6 db4.6 db46 db-4.5 db4.5 db45 db-4.4 db4.4 db44; do
++        for v in db-4.7 db4.7 db47 db-4.6 db4.6 db46 db-4.5 db4.5 db45 db-4.4 db4.4 db44 db4; do
              if test -f "$BERKELEY_DB_DIR/lib/lib$v.so"; then
                  BERKELEY_DB_LIB="-l$v"
  		break
