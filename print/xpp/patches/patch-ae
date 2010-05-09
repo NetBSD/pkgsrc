@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/05/09 04:21:40 sbd Exp $
+
+--- xpp.cxx.orig	2004-12-07 08:00:04.000000000 +1300
++++ xpp.cxx
+@@ -168,7 +168,7 @@ printFiles::printFiles(int  argc, /* I -
+ 	    {	  
+ 	      char *tmp;
+ 
+-	      if ((tmp = strchr(dest,'/'))) {
++	      if ((tmp = strchr((char*)dest,'/'))) {
+ 		tmp[0] = '\0';
+ 		instance = tmp + 1;
+ 	      }	
