@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1851 2010/05/08 22:18:46 markd Exp $
+$NetBSD: CHANGES-2010,v 1.1852 2010/05/09 11:45:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2355,3 +2355,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdebase4 to 4.4.3 [markd 2010-05-08]
 	Updated x11/kdebindings4-python to 4.4.3 [markd 2010-05-08]
 	Updated x11/kdelibs4 to 4.4.3 [markd 2010-05-08]
+	Updated mail/fetchmail to 6.3.17nb1 [tron 2010-05-09]
