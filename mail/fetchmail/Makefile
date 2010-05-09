@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.171 2010/02/14 13:05:31 tnn Exp $
+# $NetBSD: Makefile,v 1.171.2.1 2010/05/09 18:10:13 spz Exp $
 
 # Note to updaters: mail/fetchmailconf reaches over here, make sure it builds.
-DISTNAME=	fetchmail-6.3.14
+DISTNAME=	fetchmail-6.3.17
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://download.berlios.de/fetchmail/
 EXTRACT_SUFX=	.tar.bz2
