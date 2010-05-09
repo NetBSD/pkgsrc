@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9292 2010/05/09 20:49:25 wiz Exp $
+$NetBSD: TODO,v 1.9293 2010/05/09 20:53:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1323,7 +1323,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subversion-1.6.11
 	o sun-jdk6-6.0.19
 	o sun-jre6-6.0.19
-	o surfraw-2.2.7
 	o suse_base-11.0
 	o sympa-6.0.1
 	o sysinfo-4.2.2
