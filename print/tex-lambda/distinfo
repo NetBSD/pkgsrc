@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/29 18:54:36 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 23:34:32 minskim Exp $
 
-SHA1 (tex-lambda-2008.7340/lambda.tar.lzma) = 55892932275d28a406f59fcff4eef96e422d0fa5
-RMD160 (tex-lambda-2008.7340/lambda.tar.lzma) = ac058836ab9e8224da2b2a5fd4c10825bf530ade
-Size (tex-lambda-2008.7340/lambda.tar.lzma) = 47511 bytes
+SHA1 (tex-lambda-15878/lambda.tar.xz) = 974ae7130215fe78e1c40845ecc46562c1507d9b
+RMD160 (tex-lambda-15878/lambda.tar.xz) = ffad41dc45795b17cd73731681aad335b5097f91
+Size (tex-lambda-15878/lambda.tar.xz) = 47204 bytes
