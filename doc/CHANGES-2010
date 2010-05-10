@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1867 2010/05/10 22:45:04 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1868 2010/05/10 22:49:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2380,3 +2380,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/tex-lh-doc version 3.5g [minskim 2010-05-10]
 	Added fonts/tex-cmcyr version 2009 [minskim 2010-05-10]
 	Added fonts/tex-cmcyr-doc version 2009 [minskim 2010-05-10]
+	Added print/tex-cyrillic version 2009 [minskim 2010-05-10]
+	Added print/tex-cyrillic-doc version 2009 [minskim 2010-05-10]
