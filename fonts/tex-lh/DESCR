@@ -1,0 +1,10 @@
+The LH fonts address the problem of the wide variety of alphabets that
+are written with Cyrillic-style characters.  The fonts are the
+original basis of the set of T2* and X2 encodings that are now used
+when LaTeX users need to write in Cyrillic languages.  Macro support
+in standard LaTeX encodings is offered through the cyrillic and t2
+bundles, and the package itself offers support for other (more
+traditional) encodings.  The fonts, in the standard T2* and X2
+encodings are available in Adobe Type 1 format, in the CM-Super family
+of fonts.  The package also offers its own LaTeX support for OT2
+encoded fonts, CM bright shaped fonts and Concrete shaped fonts.
