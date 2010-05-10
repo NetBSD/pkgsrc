@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1869 2010/05/10 22:53:36 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1870 2010/05/10 22:56:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2384,3 +2384,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-cyrillic-doc version 2009 [minskim 2010-05-10]
 	Added print/tex-mfnfss version 2009 [minskim 2010-05-10]
 	Added print/tex-mfnfss-doc version 2009 [minskim 2010-05-10]
+	Added print/tex-pslatex version 2009 [minskim 2010-05-10]
