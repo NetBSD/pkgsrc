@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1858 2010/05/10 07:07:26 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1859 2010/05/10 08:21:56 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2363,3 +2363,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-misc to 2009.17497 [minskim 2010-05-10]
 	Updated fonts/tex-txfonts to 2009 [minskim 2010-05-10]
 	Updated fonts/tex-txfonts-doc to 2009 [minskim 2010-05-10]
+	Updated sysutils/lsof to 4.83 [sbd 2010-05-10]
