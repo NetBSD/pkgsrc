@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 22:50:42 minskim Exp $
+share/texmf-dist/tex/latex/mfnfss/oldgerm.sty
+share/texmf-dist/tex/latex/mfnfss/ot1panr.fd
+share/texmf-dist/tex/latex/mfnfss/ot1pss.fd
+share/texmf-dist/tex/latex/mfnfss/pandora.sty
+share/texmf-dist/tex/latex/mfnfss/uyfrak.fd
+share/texmf-dist/tex/latex/mfnfss/uygoth.fd
+share/texmf-dist/tex/latex/mfnfss/uyinit.fd
+share/texmf-dist/tex/latex/mfnfss/uyswab.fd
