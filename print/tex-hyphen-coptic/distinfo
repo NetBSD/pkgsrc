@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:28:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 23:26:07 minskim Exp $
 
-SHA1 (tex-hyphen-coptic-2008.8935/hyphen-coptic.tar.lzma) = b6bd500a55b72c08eb94169d5cd9caf9ba6fdbca
-RMD160 (tex-hyphen-coptic-2008.8935/hyphen-coptic.tar.lzma) = 8c3f501d9242df61d95c5d90c91823a56d275a4b
-Size (tex-hyphen-coptic-2008.8935/hyphen-coptic.tar.lzma) = 2419 bytes
+SHA1 (tex-hyphen-coptic-15667/hyphen-coptic.tar.xz) = 4651080cc6e68aea8da5df227553a245e43dc58d
+RMD160 (tex-hyphen-coptic-15667/hyphen-coptic.tar.xz) = e3dd79daea0baf8e87de7244be76bf5580f6388f
+Size (tex-hyphen-coptic-15667/hyphen-coptic.tar.xz) = 2820 bytes
