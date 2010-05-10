@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/24 01:46:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 23:35:51 minskim Exp $
 
-SHA1 (tex-placeins-2.2/placeins.tar.lzma) = c85b4f88f4647e28baa96289b773c0fed21625f4
-RMD160 (tex-placeins-2.2/placeins.tar.lzma) = 95d9796f42f1edfc22f71edb54f63aaafded0ea0
-Size (tex-placeins-2.2/placeins.tar.lzma) = 2232 bytes
+SHA1 (tex-placeins-15878/placeins.tar.xz) = 045a2849a0281f2b92297667c5be9ed529cbc44f
+RMD160 (tex-placeins-15878/placeins.tar.xz) = 268dfa179b0e956e0891250401dc1735708573ad
+Size (tex-placeins-15878/placeins.tar.xz) = 2288 bytes
