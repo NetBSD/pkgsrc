@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 22:54:39 minskim Exp $
+share/texmf-dist/fonts/map/dvips/pslatex/pcrr8rn.map
+share/texmf-dist/fonts/tfm/public/pslatex/pcrr7tn.tfm
+share/texmf-dist/fonts/tfm/public/pslatex/pcrr8rn.tfm
+share/texmf-dist/fonts/tfm/public/pslatex/pcrr8tn.tfm
+share/texmf-dist/fonts/vf/public/pslatex/pcrr7tn.vf
+share/texmf-dist/fonts/vf/public/pslatex/pcrr8tn.vf
+share/texmf-dist/tex/latex/pslatex/pslatex.sty
