@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/12 03:32:57 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 20:14:57 minskim Exp $
 
-SHA1 (tex-geometry-doc-4.1/geometry.doc.tar.lzma) = 629520046d0d7f4265c483cec250be65ed6f3764
-RMD160 (tex-geometry-doc-4.1/geometry.doc.tar.lzma) = 0971e0481852477e208716b106694422812ddf38
-Size (tex-geometry-doc-4.1/geometry.doc.tar.lzma) = 277862 bytes
+SHA1 (tex-geometry-17466/geometry.doc.tar.xz) = c50fe250a64182cbba4fcc0c6056163a528d6594
+RMD160 (tex-geometry-17466/geometry.doc.tar.xz) = b5a0da087a1af6db97c208197ac4f7db674791f3
+Size (tex-geometry-17466/geometry.doc.tar.xz) = 183608 bytes
