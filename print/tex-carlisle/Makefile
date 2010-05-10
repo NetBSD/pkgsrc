@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/02/19 18:19:44 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.3 2010/05/10 09:33:24 minskim Exp $
+# TeX Live Revision 18137
 
 DISTNAME=	carlisle
-PKGNAME=	tex-${DISTNAME}-2008.7340
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-2009
+DIST_SUBDIR=	${PKGBASE}-18137
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX packages created by David Carlisle
@@ -15,5 +15,5 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
