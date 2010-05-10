@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/18 23:33:56 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 23:20:05 minskim Exp $
 
-SHA1 (tex-acmtrans-2008.7340/acmtrans.tar.lzma) = b0f917d86a589469aa185e38e758f14f65d83dc7
-RMD160 (tex-acmtrans-2008.7340/acmtrans.tar.lzma) = d9e3fe80c91cc420bcecfce56e19d0d62413211f
-Size (tex-acmtrans-2008.7340/acmtrans.tar.lzma) = 21366 bytes
+SHA1 (tex-acmtrans-15878/acmtrans.tar.xz) = ebf87b6cc53069fffb135f9aa3292397ce0e0315
+RMD160 (tex-acmtrans-15878/acmtrans.tar.xz) = c6603685935e43da6a104c99eb830ac719e6234d
+Size (tex-acmtrans-15878/acmtrans.tar.xz) = 21432 bytes
