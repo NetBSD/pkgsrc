@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1863 2010/05/10 21:22:54 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1864 2010/05/10 21:50:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2373,3 +2373,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-natbib-doc to 8.31a [minskim 2010-05-10]
 	Added print/tex-pspicture version 2009 [minskim 2010-05-10]
 	Added print/tex-pspicture-doc version 2009 [minskim 2010-05-10]
+	Added print/tex-latex-bin-doc version 2009 [minskim 2010-05-10]
