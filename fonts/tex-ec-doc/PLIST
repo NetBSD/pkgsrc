@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 22:36:25 minskim Exp $
+share/texmf-dist/doc/fonts/ec/00bugs.txt
+share/texmf-dist/doc/fonts/ec/00error.txt
+share/texmf-dist/doc/fonts/ec/00files.txt
+share/texmf-dist/doc/fonts/ec/00inst.txt
+share/texmf-dist/doc/fonts/ec/00readme.txt
+share/texmf-dist/doc/fonts/ec/copyrite.txt
+share/texmf-dist/doc/fonts/ec/dc-chg.txt
+share/texmf-dist/doc/fonts/ec/dcdoc.tex
+share/texmf-dist/doc/fonts/ec/ec-chg.txt
+share/texmf-dist/doc/fonts/ec/ecstdedt.tex
+share/texmf-dist/doc/fonts/ec/tc-chg.txt
+share/texmf-dist/doc/fonts/ec/tcstdedt.tex
