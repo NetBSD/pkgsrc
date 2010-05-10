@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/02/19 18:19:45 minskim Exp $
-# TeX Live Revision 12984
+# $NetBSD: Makefile,v 1.4 2010/05/10 20:32:00 minskim Exp $
 
 DISTNAME=	hyperref
-PKGNAME=	tex-${DISTNAME}-6.78r
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-6.80x
+TEXLIVE_REV=	17902
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extensive support for hypertext in LaTeX
@@ -15,5 +14,5 @@ DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

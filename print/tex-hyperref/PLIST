@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 22:08:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/10 20:32:00 minskim Exp $
 share/texmf-dist/tex/latex/hyperref/backref.sty
 share/texmf-dist/tex/latex/hyperref/hdvipdfm.def
 share/texmf-dist/tex/latex/hyperref/hdvips.def
@@ -11,6 +11,7 @@ share/texmf-dist/tex/latex/hyperref/htexture.def
 share/texmf-dist/tex/latex/hyperref/hvtex.def
 share/texmf-dist/tex/latex/hyperref/hvtexhtm.def
 share/texmf-dist/tex/latex/hyperref/hvtexmrk.def
+share/texmf-dist/tex/latex/hyperref/hxetex.def
 share/texmf-dist/tex/latex/hyperref/hylatex.ltx
 share/texmf-dist/tex/latex/hyperref/hyperref.sty
 share/texmf-dist/tex/latex/hyperref/hypertex.def
