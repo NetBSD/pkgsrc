@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1857 2010/05/10 06:00:23 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1858 2010/05/10 07:07:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2361,3 +2361,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/digikam to 1.2.0 [wiz 2010-05-09]
 	Updated www/bozohttpd to 20100509 [mrg 2010-05-09]
 	Updated print/tex-misc to 2009.17497 [minskim 2010-05-10]
+	Updated fonts/tex-txfonts to 2009 [minskim 2010-05-10]
+	Updated fonts/tex-txfonts-doc to 2009 [minskim 2010-05-10]
