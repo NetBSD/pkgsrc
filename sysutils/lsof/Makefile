@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2010/04/30 07:30:28 sbd Exp $
+# $NetBSD: Makefile,v 1.107 2010/05/10 08:21:41 sbd Exp $
 
-DISTNAME=		lsof_4.78
-PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
-PKGREVISION=		5
+DISTNAME=		lsof_4.83
+PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
