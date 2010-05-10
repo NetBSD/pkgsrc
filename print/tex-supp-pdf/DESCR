@@ -1,0 +1,6 @@
+The supp-pdf.* files support native MetaPost graphics inclusion in LaTeX
+(via pdftex.def) and ConTeXt.  They can be used independently of the
+rest of the ConTeXt, yet are maintained as part of it.  So in TeX Live
+we pull them out to this separate package for the benefit of LaTeX users
+who do not install the rest of ConTeXt.  They can be found on CTAN in
+macros/pdftex/graphics.
