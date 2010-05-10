@@ -1,0 +1,2 @@
+A replacement for LaTeX's picture macros, that uses PostScript
+\special commands.  The package is now largely superseded by pict2e.
