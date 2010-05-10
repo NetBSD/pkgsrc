@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2010/02/19 14:09:58 asau Exp $
+# $NetBSD: Makefile.common,v 1.19 2010/05/10 06:22:03 minskim Exp $
 
 # used by ../../graphics/gnuplot-nox11
 
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--without-tutorial
 # Use BSD editline wherever possible:
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-readline=bsd
 .include "../../mk/curses.buildlink3.mk"
 .else
