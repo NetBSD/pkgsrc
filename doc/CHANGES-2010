@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1871 2010/05/10 22:58:56 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1872 2010/05/10 23:02:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2386,3 +2386,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-mfnfss-doc version 2009 [minskim 2010-05-10]
 	Added print/tex-pslatex version 2009 [minskim 2010-05-10]
 	Added print/tex-supp-pdf version 2009 [minskim 2010-05-10]
+	Added print/tex-collection-latex version 2009 [minskim 2010-05-10]
+	Added print/tex-collection-latex-doc version 2009 [minskim 2010-05-10]
