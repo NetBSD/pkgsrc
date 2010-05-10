@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/14 22:15:08 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 07:06:44 minskim Exp $
 
-SHA1 (tex-txfonts-2008.11886/txfonts.tar.lzma) = 8e7a4539f374788fd2c7bd2be199dab601e4cba7
-RMD160 (tex-txfonts-2008.11886/txfonts.tar.lzma) = 1a510b41d7d3ed5bbc7cb5f942f5a6f8a5c5cdf7
-Size (tex-txfonts-2008.11886/txfonts.tar.lzma) = 708321 bytes
+SHA1 (tex-txfonts-2009/txfonts.tar.xz) = 365d59c63e1b148a62a8267ebf5dca65d8058ba4
+RMD160 (tex-txfonts-2009/txfonts.tar.xz) = 64128ca16b93ee1501a67d94611a8bb2f481eda7
+Size (tex-txfonts-2009/txfonts.tar.xz) = 709536 bytes
