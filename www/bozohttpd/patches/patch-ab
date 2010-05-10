@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.17 2007/09/08 01:44:52 jlam Exp $
+$NetBSD: patch-ab,v 1.18 2010/05/10 03:42:18 mrg Exp $
 
---- Makefile.boot.orig	Tue Sep 27 20:09:20 2005
-+++ Makefile.boot
+--- Makefile.boot.orig	2010-05-09 19:24:30.000000000 -0700
++++ Makefile.boot	2010-05-09 20:12:09.000000000 -0700
 @@ -4,7 +4,6 @@
  # see Makefile for a list of compile options that may be placed in CFLAGS.
  
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.17 2007/09/08 01:44:52 jlam Exp $
  
  GROFF=	groff -Tascii
  CRYPTOLIBDIR=	# -L/usr/local/lib
-@@ -14,7 +13,7 @@ FILES=	bozohttpd.c auth-bozo.c cgi-bozo.
- 	dir-index-bozo.c ssl-bozo.c tilde-luzah-bozo.c
+@@ -14,7 +13,7 @@
+ 	dir-index-bozo.c ssl-bozo.c tilde-luzah-bozo.c main.c
  
  all:
 -	$(CC) $(CFLAGS) -o bozohttpd $(FILES) $(CRYPTOLIBS)
