@@ -1,0 +1,14 @@
+A small package that makes LaTeX default to 'standard' PostScript
+fonts.  It is basically a merger of the times and the (obsolete)
+mathptm packages from the psnfss suite.  You must have installed
+standard LaTeX and the psnfss PostScript fonts to use this package.
+The main novel feature is that the pslatex package tries to compensate
+for the visual differences between the Adobe fonts by scaling
+Helvetica by 90%, and 'condensing' Courier (i.e. scaling horizontally)
+by 85%.  The package is supplied with a (unix) shell file for a
+'pslatex' command that allows standard LaTeX documents to be
+processed, without needing to edit the file.  Note that current psnfss
+uses a different technique for scaling Helvetica, and treats Courier
+as a lost cause (there are better free fixed-width available now, than
+there were when pslatex was designed).  As a result, pslatex is widely
+considered obsolete.
