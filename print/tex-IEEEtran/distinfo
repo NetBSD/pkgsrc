@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2009/07/07 23:24:14 minskim Exp $
+$NetBSD: distinfo,v 1.9 2010/05/10 23:55:40 minskim Exp $
 
-SHA1 (tex-IEEEtran-1.7a/IEEEtran.tar.lzma) = 5d73a5b5e03548569b9cde370f610ab3c3e6958c
-RMD160 (tex-IEEEtran-1.7a/IEEEtran.tar.lzma) = 6ad08ea901b1fdb1b0e844b6c43c6183343d07c3
-Size (tex-IEEEtran-1.7a/IEEEtran.tar.lzma) = 75895 bytes
+SHA1 (tex-IEEEtran-15878/IEEEtran.tar.xz) = e0d08af69655ac5dff1e49c23b6166fd50c72c1a
+RMD160 (tex-IEEEtran-15878/IEEEtran.tar.xz) = 4e3efa0605b3728ac3cf498b5e6f230e1f5a6e4f
+Size (tex-IEEEtran-15878/IEEEtran.tar.xz) = 75988 bytes
