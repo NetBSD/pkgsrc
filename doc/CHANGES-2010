@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1861 2010/05/10 20:35:01 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1862 2010/05/10 20:49:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2369,3 +2369,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-geometry-doc to 5.3 [minskim 2010-05-10]
 	Updated print/tex-hyperref to 6.80x [minskim 2010-05-10]
 	Updated print/tex-hyperref-doc to 6.80x [minskim 2010-05-10]
+	Updated print/tex-natbib to 8.31a [minskim 2010-05-10]
+	Updated print/tex-natbib-doc to 8.31a [minskim 2010-05-10]
