@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1864 2010/05/10 21:50:49 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1865 2010/05/10 22:38:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2374,3 +2374,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-pspicture version 2009 [minskim 2010-05-10]
 	Added print/tex-pspicture-doc version 2009 [minskim 2010-05-10]
 	Added print/tex-latex-bin-doc version 2009 [minskim 2010-05-10]
+	Added fonts/tex-ec version 1.0 [minskim 2010-05-10]
+	Added fonts/tex-ec-doc version 1.0 [minskim 2010-05-10]
