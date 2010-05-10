@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/22 07:01:55 minskim Exp $
-# TeX Live Revision 10740
+# $NetBSD: Makefile,v 1.2 2010/05/10 23:12:09 minskim Exp $
 
 DISTNAME=	elsarticle.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0.1
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.20
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-elsarticle
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/22 07:01:38 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 23:12:09 minskim Exp $
 
-SHA1 (tex-elsarticle-1.0.1/elsarticle.tar.lzma) = 55a41c23b20368e48848a8757751fa048b897d8f
-RMD160 (tex-elsarticle-1.0.1/elsarticle.tar.lzma) = d0a05b4de8e52a8f3dce1181b4bdd465ba71f004
-Size (tex-elsarticle-1.0.1/elsarticle.tar.lzma) = 16965 bytes
+SHA1 (tex-elsarticle-15878/elsarticle.tar.xz) = 2cd05945902485b158f7f2c99bc63c40118824a0
+RMD160 (tex-elsarticle-15878/elsarticle.tar.xz) = 1eb37dab1eec1ad603b86dfe57f3d644086a1eb8
+Size (tex-elsarticle-15878/elsarticle.tar.xz) = 17612 bytes

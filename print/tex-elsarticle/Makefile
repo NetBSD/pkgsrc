@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/22 07:01:38 minskim Exp $
-# TeX Live Revision 10740
+# $NetBSD: Makefile,v 1.2 2010/05/10 23:12:09 minskim Exp $
 
 DISTNAME=	elsarticle
-PKGNAME=	tex-${DISTNAME}-1.0.1
+PKGNAME=	tex-${DISTNAME}-1.20
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Class for articles for submission to Elsevier journals
@@ -14,5 +14,5 @@ DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-times-[0-9]*:../../fonts/tex-times
 DEPENDS+=	tex-txfonts-[0-9]*:../../fonts/tex-txfonts
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
