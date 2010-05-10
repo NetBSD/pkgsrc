@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/29 02:39:38 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/10 09:33:24 minskim Exp $
 
-SHA1 (tex-carlisle-2008.7340/carlisle.tar.lzma) = 53f38c8e334d7cf6d24bd552ddc418379f1accbc
-RMD160 (tex-carlisle-2008.7340/carlisle.tar.lzma) = a23417865d6cee90fe03450ac2b1c5fff022638a
-Size (tex-carlisle-2008.7340/carlisle.tar.lzma) = 36589 bytes
+SHA1 (tex-carlisle-18137/carlisle.tar.xz) = 193f6cf655aac0c46c629804e9444eb95ee50c55
+RMD160 (tex-carlisle-18137/carlisle.tar.xz) = 75a1c771fbc8053e8baa75d9f517e7cb75f62802
+Size (tex-carlisle-18137/carlisle.tar.xz) = 11692 bytes
