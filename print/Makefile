@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.405 2010/05/10 22:49:42 minskim Exp $
+# $NetBSD: Makefile,v 1.406 2010/05/10 22:53:36 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -368,6 +368,8 @@ SUBDIR+=	tex-magaz
 SUBDIR+=	tex-magaz-doc
 SUBDIR+=	tex-memoir
 SUBDIR+=	tex-memoir-doc
+SUBDIR+=	tex-mfnfss
+SUBDIR+=	tex-mfnfss-doc
 SUBDIR+=	tex-mhchem
 SUBDIR+=	tex-mhchem-doc
 SUBDIR+=	tex-microtype
