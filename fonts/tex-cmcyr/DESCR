@@ -1,0 +1,4 @@
+These are the Computer Modern fonts extended with Russian letters, in
+MetaFont sources and ATM Compatible Type 1 format.  The fonts are
+provided in KOI-7, but virtual fonts are available to recode them to
+three other Russian 8-bit encodings.
