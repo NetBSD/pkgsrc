@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/29 01:48:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/10 05:59:58 minskim Exp $
 share/texmf-dist/fonts/source/public/misc/black.mf
 share/texmf-dist/fonts/source/public/misc/blackaps.mf
 share/texmf-dist/fonts/source/public/misc/blackcx.mf
@@ -43,6 +43,7 @@ share/texmf-dist/omega/ocp/misc/ebcdic.ocp
 share/texmf-dist/omega/ocp/misc/id.ocp
 share/texmf-dist/omega/otp/misc/ebcdic.otp
 share/texmf-dist/omega/otp/misc/id.otp
+share/texmf-dist/tex/generic/misc/bibnames.sty
 share/texmf-dist/tex/generic/misc/null.tex
 share/texmf-dist/tex/generic/misc/texnames.sty
 share/texmf-dist/tex/plain/misc/idxmac.tex
