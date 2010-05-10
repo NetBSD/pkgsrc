@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 21:21:10 minskim Exp $
+share/texmf-dist/doc/latex/pspicture/README
+share/texmf-dist/doc/latex/pspicture/pspicture.pdf
