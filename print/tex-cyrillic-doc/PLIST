@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 22:46:22 minskim Exp $
+share/texmf-dist/doc/latex/cyrillic/00readme.txt
+share/texmf-dist/doc/latex/cyrillic/changes.txt
+share/texmf-dist/doc/latex/cyrillic/cyinpenc.pdf
+share/texmf-dist/doc/latex/cyrillic/cyoutenc.pdf
+share/texmf-dist/doc/latex/cyrillic/lcy.pdf
+share/texmf-dist/doc/latex/cyrillic/lcycmlh.pdf
+share/texmf-dist/doc/latex/cyrillic/manifest.txt
+share/texmf-dist/doc/latex/cyrillic/ot2.pdf
+share/texmf-dist/doc/latex/cyrillic/ot2cmams.pdf
+share/texmf-dist/doc/latex/cyrillic/ot2cmlh.pdf
+share/texmf-dist/doc/latex/cyrillic/t2lhfnt.pdf
