@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.18 2010/05/09 18:11:53 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.19 2010/05/11 21:18:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -62,3 +62,5 @@ databases/mysql51-server: portability fix
 Pullup ticket #3108 - requested by tez and tron
 mail/fetchmail: security update
 mail/fetchmailconf: dependent update
+Pullup ticket #3111 - requested by taca
+www/typolight27-example: build fix
