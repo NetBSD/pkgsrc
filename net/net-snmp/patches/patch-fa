@@ -1,0 +1,14 @@
+$NetBSD: patch-fa,v 1.1 2010/05/11 04:39:54 adam Exp $
+
+--- include/net-snmp/system/netbsd.h.orig	2010-03-12 00:32:48.000000000 +0000
++++ include/net-snmp/system/netbsd.h	2010-03-12 00:34:40.000000000 +0000
+@@ -38,5 +38,9 @@
+ # define netbsd1 netbsd1
+ #endif
+ 
++#if __NetBSD_Version__ >= 400000000
++#define netbsd4 netbsd4
++#endif /* __NetBSD_Version__ >= 400000000 */
++
+ /* define the extra mib modules that are supported */
+ #define NETSNMP_INCLUDE_HOST_RESOURCES
