@@ -1,0 +1,39 @@
+$NetBSD: patch-ey,v 1.1 2010/05/11 04:39:54 adam Exp $
+
+--- agent/mibgroup/mibII/tcp.c.orig	2010-03-12 00:32:22.000000000 +0000
++++ agent/mibgroup/mibII/tcp.c	2010-03-12 00:34:09.000000000 +0000
+@@ -167,6 +167,12 @@
+ #define USES_SNMP_DESIGNED_TCPSTAT
+ #endif
+ 
++#ifdef netbsd4
++#define TCP_STAT_STRUCTURE      struct tcp_mib
++#define USES_SNMP_DESIGNED_TCPSTAT
++#undef TCP_NSTATS
++#endif
++
+ #if defined (WIN32) || defined (cygwin)
+ #include <iphlpapi.h>
+ #define TCP_STAT_STRUCTURE     MIB_TCPSTATS
+@@ -768,6 +774,21 @@
+     }
+     return ret_value;
+ }
++#elif defined(netbsd4)
++int
++tcp_load(netsnmp_cache *cache, void *vmagic)
++{
++    long ret_value = -1;
++
++    ret_value = netbsd_read_tcp_stat(&tcpstat);
++
++    if ( ret_value < 0 ) {
++       DEBUGMSGTL(("mibII/tcpScalar", "Failed to load TCP scalar Group (netbsd)\n"));
++    } else {
++        DEBUGMSGTL(("mibII/tcpScalar", "Loaded TCP scalar Group (netbsd)\n"));
++    }
++    return ret_value;
++}
+ #elif defined (WIN32) || defined (cygwin)
+ int
+ tcp_load(netsnmp_cache *cache, void *vmagic)
