@@ -1,0 +1,2 @@
+The Perl 5 module Proc::WaitStat provides functions to intepret and act upon
+wait status values.
