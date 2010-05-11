@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1879 2010/05/11 12:16:18 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.1880 2010/05/11 14:21:49 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2401,3 +2401,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-IPC-Signal version 1.00 [jmmv 2010-05-11]
 	Added devel/p5-Proc-WaitStat version 1.00 [jmmv 2010-05-11]
 	Added mail/mime-construct version 1.10 [jmmv 2010-05-11]
+	Updated net/istgt to 20100407 [sborrill 2010-05-11]
