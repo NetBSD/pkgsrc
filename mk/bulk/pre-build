@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.75 2009/07/02 22:34:16 sketch Exp $
+# $NetBSD: pre-build,v 1.76 2010/05/11 18:36:15 mbalmer Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -72,7 +72,7 @@ mkdir -p "${BULKFILESDIR}"
 
 # Make sure the pkg-vulnerabilities file is up to date
 _INFO_VER=`${PKG_INFO} -V`;
-echo "pre-build> Making sure vulnerability-list is upto date:"
+echo "pre-build> Making sure vulnerability-list is up to date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = yes ]; then
 	_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
 	download-vulnerability-list ${DOWNLOAD_VULNERABILITY_LIST_FLAGS}
