@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2010/03/09 22:52:56 hubertf Exp $
+# $NetBSD: options.mk,v 1.10 2010/05/11 04:39:54 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
 PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem perl
@@ -41,15 +41,14 @@ CONFIGURE_ARGS+=	--without-root-access
 # can't load the shared libraries from WRKSRC/
 # Until this is fixed you can test them after installation by doing
 # `make test TEST_TARGET=perltest'
-TEST_TARGET=            test
+TEST_TARGET=		test
 
 # Enable the perl modules build and installation
-# 
-PERL5_CONFIGURE=        no
-PERL5_PACKLIST=         auto/Bundle/NetSNMP/.packlist
-CONFIGURE_ARGS+=        --with-perl-modules=${MAKE_PARAMS:Q}
-CONFIGURE_ENV+=         PERLPROG=${PERL5:Q}
-USE_TOOLS+=perl
+USE_TOOLS+=		perl
+PERL5_CONFIGURE=	no
+PERL5_PACKLIST=		auto/Bundle/NetSNMP/.packlist
+CONFIGURE_ARGS+=	--with-perl-modules=${MAKE_PARAMS:Q}
+CONFIGURE_ENV+=		PERLPROG=${PERL5:Q}
 
 .include "../../lang/perl5/module.mk"
 .else # !perl
