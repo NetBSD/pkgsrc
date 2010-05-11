@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/11 12:15:08 jmmv Exp $
+
+SHA1 (mime-construct-1.10.tar.gz) = 9b0ee8aa0bb273e84fb46aa42f97b27863121ad1
+RMD160 (mime-construct-1.10.tar.gz) = 145ed65a33359c047a6e38fd95ff479bc985c9c3
+Size (mime-construct-1.10.tar.gz) = 12452 bytes
