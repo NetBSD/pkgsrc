@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/11/29 06:45:01 taca Exp $
+# $NetBSD: Makefile,v 1.3.4.1 2010/05/11 21:17:59 tron Exp $
 #
 
+DIST_SUBDIR=	typolight27-20100503
 LICENSE=	gnu-lgpl-v2.1
 WWW_FILE=	templates/example_website.sql
 
