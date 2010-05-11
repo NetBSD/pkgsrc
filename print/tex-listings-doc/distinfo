@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/03 23:46:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/11 00:25:04 minskim Exp $
 
-SHA1 (tex-listings-doc-1.4/listings.doc.tar.lzma) = 42abae71b07b7b8b5ba277c2528b87cb4e4b0a25
-RMD160 (tex-listings-doc-1.4/listings.doc.tar.lzma) = a18a1ebc96ef02d1e888b75d2719fb231c20be21
-Size (tex-listings-doc-1.4/listings.doc.tar.lzma) = 475822 bytes
+SHA1 (tex-listings-doc-1.4/listings.doc.tar.xz) = 2b2f5199c997af6bf59eeaaac5c8274946d7e54e
+RMD160 (tex-listings-doc-1.4/listings.doc.tar.xz) = 5f27fda129f6d56bb46ce31c6af308a96012c772
+Size (tex-listings-doc-1.4/listings.doc.tar.xz) = 476208 bytes
