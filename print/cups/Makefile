@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2010/04/18 21:56:36 sbd Exp $
+# $NetBSD: Makefile,v 1.149 2010/05/11 07:52:20 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -13,9 +13,8 @@ VERS=		${DIST_VERS:S/-/./g}
 PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
-		ftp://ftp.ntua.gr/pub/gnu/cups/${BASE_VERS}/ \
-		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${BASE_VERS}/ \
-		ftp://ftp.fisek.com.tr/pub/cups/${BASE_VERS}/
+		ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
+		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${BASE_VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	sbd@NetBSD.org
