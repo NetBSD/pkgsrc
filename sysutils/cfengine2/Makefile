@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/05/09 22:09:30 pettai Exp $
+# $NetBSD: Makefile,v 1.32 2010/05/11 14:50:27 pettai Exp $
 #
 
 DISTNAME=		cfengine-2.2.10
@@ -27,10 +27,10 @@ REPLACE_PERL=		contrib/cfdoc
 
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 ${VARBASE}/cfengine/inputs
+
 post-install:
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/*.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA_DIR} ${DESTDIR}var/cfengine/inputs
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
