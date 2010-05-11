@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1338 2010/05/08 15:47:11 drochner Exp $
+# $NetBSD: Makefile,v 1.1339 2010/05/11 12:12:24 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -715,6 +715,7 @@ SUBDIR+=	p5-IPC-Run3
 SUBDIR+=	p5-IPC-ShareLite
 SUBDIR+=	p5-IPC-Shareable
 SUBDIR+=	p5-IPC-SharedCache
+SUBDIR+=	p5-IPC-Signal
 SUBDIR+=	p5-IPC-SysV
 SUBDIR+=	p5-IPC-System-Simple
 SUBDIR+=	p5-Inline
@@ -867,6 +868,7 @@ SUBDIR+=	p5-Proc-ProcessTable
 SUBDIR+=	p5-Proc-Queue
 SUBDIR+=	p5-Proc-Simple
 SUBDIR+=	p5-Proc-Wait3
+SUBDIR+=	p5-Proc-WaitStat
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
 SUBDIR+=	p5-Regexp-Assemble
