@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1878 2010/05/11 04:44:39 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1879 2010/05/11 12:16:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2398,3 +2398,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-footmisc to 5.5a [minskim 2010-05-11]
 	Updated print/tex-footmisc-doc to 5.5a [minskim 2010-05-11]
 	Updated net/net-snmp to 5.4.2.1nb4 [adam 2010-05-11]
+	Added devel/p5-IPC-Signal version 1.00 [jmmv 2010-05-11]
+	Added devel/p5-Proc-WaitStat version 1.00 [jmmv 2010-05-11]
+	Added mail/mime-construct version 1.10 [jmmv 2010-05-11]
