@@ -1,0 +1,50 @@
+$NetBSD: patch-ez,v 1.1 2010/05/11 04:39:54 adam Exp $
+
+--- agent/mibgroup/mibII/udp.c.orig	2010-03-12 00:32:31.000000000 +0000
++++ agent/mibgroup/mibII/udp.c	2010-03-12 00:34:17.000000000 +0000
+@@ -29,6 +29,10 @@
+ #include "kernel_linux.h"
+ #endif
+ 
++#ifdef netbsd4
++#include "kernel_netbsd.h"
++#endif
++
+ #ifdef cygwin
+ #define WIN32
+ #include <windows.h>
+@@ -149,6 +153,12 @@
+ #define USES_SNMP_DESIGNED_UDPSTAT
+ #endif
+ 
++#ifdef netbsd4
++#define UDP_STAT_STRUCTURE      struct udp_mib
++#define USES_SNMP_DESIGNED_UDPSTAT
++#undef UDP_NSTATS
++#endif
++
+ #ifdef WIN32
+ #include <iphlpapi.h>
+ #define UDP_STAT_STRUCTURE MIB_UDPSTATS
+@@ -469,6 +479,21 @@
+     }
+     return ret_value;
+ }
++#elif defined(netbsd4)
++int
++udp_load(netsnmp_cache *cache, void *vmagic)
++{
++    long ret_value = -1;
++
++    ret_value = netbsd_read_udp_stat(&udpstat);
++
++    if ( ret_value < 0 ) {
++        DEBUGMSGTL(("mibII/udpScalar", "Failed to load UDP scalar Group (netbsd)\n"));
++    } else {
++        DEBUGMSGTL(("mibII/udpScalar", "Loaded UDP scalar Group (netbsd)\n"));
++    }
++    return ret_value;
++}
+ #elif defined(WIN32)
+ int
+ udp_load(netsnmp_cache *cache, void *vmagic)

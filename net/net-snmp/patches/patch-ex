@@ -1,0 +1,14 @@
+$NetBSD: patch-ex,v 1.1 2010/05/11 04:39:54 adam Exp $
+
+--- agent/mibgroup/mibII/mibII_common.h.orig	2010-03-12 00:32:15.000000000 +0000
++++ agent/mibgroup/mibII/mibII_common.h	2010-03-12 00:33:59.000000000 +0000
+@@ -100,6 +100,9 @@
+ #ifdef linux
+ #include "kernel_linux.h"
+ #endif
++#ifdef netbsd4
++#include "kernel_netbsd.h"
++#endif
+ 	/* or MIB_xxxCOUNTER_SYMBOL || hpux11 */
+ #ifdef hpux
+ #include <sys/mib.h>
