@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1876 2010/05/11 00:19:55 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1877 2010/05/11 00:36:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2395,3 +2395,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-algorithms-doc to 2009 [minskim 2010-05-11]
 	Updated print/tex-fancyvrb to 2.7anb1 [minskim 2010-05-11]
 	Updated print/tex-fancyvrb-doc to 2.7anb1 [minskim 2010-05-11]
+	Updated print/tex-footmisc to 5.5a [minskim 2010-05-11]
+	Updated print/tex-footmisc-doc to 5.5a [minskim 2010-05-11]
