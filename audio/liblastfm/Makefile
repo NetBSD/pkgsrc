@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/09 23:49:14 markd Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/11 12:14:43 obache Exp $
 #
 
 DISTNAME=	liblastfm-0.3.0
@@ -12,8 +12,6 @@ HOMEPAGE=	http://github.com/mxcl/liblastfm/tree/master
 COMMENT=	Library for accessing last.fm
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	ruby-[0-9]*:../../lang/ruby
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
@@ -25,22 +23,24 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 #CONFIGURE_ARGS+=	--release
 #CPPFLAGS+=		-fPIC
-CONFIG_SHELL=		ruby
+CONFIG_SHELL=		${RUBY}
 
 REPLACE_PERL=		admin/findsrc
-REPLACE_INTERPRETER+=	ruby
-REPLACE.ruby.old=	.*ruby
-REPLACE.ruby.new=	${LOCALBASE}/bin/ruby
-REPLACE_FILES.ruby+=	admin/which_qmake.rb
-REPLACE_FILES.ruby+=	admin/lastfm.h.rb
-REPLACE_FILES.ruby+=	admin/Makefile.rb
-REPLACE_FILES.ruby+=	admin/platform.rb
-REPLACE_FILES.ruby+=	admin/utils.rb
+
+REPLACE_RUBY+=		admin/which_qmake.rb
+REPLACE_RUBY+=		admin/lastfm.h.rb
+REPLACE_RUBY+=		admin/Makefile.rb
+REPLACE_RUBY+=		admin/platform.rb
+REPLACE_RUBY+=		admin/utils.rb
+REPLACE_RUBY+=		admin/qpp
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../audio/libsamplerate/buildlink3.mk"
+BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
+.include "../../lang/ruby/replace.mk"
+.include "../../lang/ruby/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
