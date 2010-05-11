@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.150 2010/02/27 03:37:58 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.151 2010/05/11 18:36:15 mbalmer Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -299,8 +299,8 @@ clean-bulk-cache:
 		${INDEXFILE} \
 		${ORDERFILE}
 
-# check if the $REF file is uptodate, i.e. is newer than any of
-# the pkg files; prints "1" if upto date, "0" if not.
+# check if the $REF file is up to date, i.e. is newer than any of
+# the pkg files; prints "1" if up to date, "0" if not.
 .PHONY: bulk-check-uptodate
 bulk-check-uptodate:
 	@uptodate=1; \
