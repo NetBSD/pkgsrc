@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2010/01/17 12:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2010/05/12 21:20:05 tron Exp $
 
 PKGNAME=	postgresql82-client-${BASE_VERS}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database client programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,7 +19,6 @@ CONFLICTS+=	postgresql82-docs-[0-9]*
 # 1. The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
 # NetBSD earler than 4.0 or DragonFly.
 # 2. configure with --enable-thread-safety fails on OpenBSD.
-#
 .if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-3].*)) || \
     ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
 PGSQL_THREAD_SAFETY?=	no
@@ -83,7 +81,6 @@ PG_PGXS_FILES+=	src/nls-global.mk
 
 # On Solaris, avoid conflicts between "${SSLBASE}/include/openssl/des.h"
 # and "/usr/include/crypt.h" -- we want the definitions in the former.
-#
 .if ${OPSYS} == "SunOS"
 post-wrapper:
 	touch ${BUILDLINK_DIR}/include/crypt.h

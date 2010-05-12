@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/01/21 12:45:28 adam Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2010/05/12 21:20:06 tron Exp $
 
 PKGNAME=	postgresql83-client-${BASE_VERS}
-PKGREVISION=	2
+PKGREVISION=	1
 COMMENT=	PostgreSQL database client programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--with-zlib
 # 1. The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
 # NetBSD earler than 4.0 or DragonFly.
 # 2. configure with --enable-thread-safety fails on OpenBSD.
-#
 .if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-3].*)) || \
     ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
 PGSQL_THREAD_SAFETY?=	no
