@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1883 2010/05/12 00:57:48 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1884 2010/05/12 01:25:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2405,3 +2405,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-MOP to 1.01 [seb 2010-05-12]
 	Updated devel/p5-Moose to 1.03 [seb 2010-05-12]
 	Updated graphics/clutter to 1.2.8 [obache 2010-05-12]
+	Updated print/tex-ms to 2009 [minskim 2010-05-12]
+	Updated print/tex-ms-doc to 2009.16596 [minskim 2010-05-12]
