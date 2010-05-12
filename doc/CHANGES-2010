@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1881 2010/05/12 00:15:40 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1882 2010/05/12 00:16:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2403,3 +2403,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/mime-construct version 1.10 [jmmv 2010-05-11]
 	Updated net/istgt to 20100407 [sborrill 2010-05-11]
 	Updated devel/p5-Class-MOP to 1.01 [seb 2010-05-12]
+	Updated devel/p5-Moose to 1.03 [seb 2010-05-12]
