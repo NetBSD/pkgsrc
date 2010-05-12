@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/10 00:15:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/12 01:23:48 minskim Exp $
 
-SHA1 (tex-ms-doc-2009.7340/ms.doc.tar.lzma) = 8be8b911fa25792888bdc761c529856283f8851d
-RMD160 (tex-ms-doc-2009.7340/ms.doc.tar.lzma) = 07f3cbacb3b7c66020ce46342bb804bfa888d3df
-Size (tex-ms-doc-2009.7340/ms.doc.tar.lzma) = 722874 bytes
+SHA1 (tex-ms-16596/ms.doc.tar.xz) = 18d75b45b6b40437b8b53e82ffc451e7ba7116a8
+RMD160 (tex-ms-16596/ms.doc.tar.xz) = 192fc665608d703c85b1040ccd229ec22fd0debc
+Size (tex-ms-16596/ms.doc.tar.xz) = 1970000 bytes
