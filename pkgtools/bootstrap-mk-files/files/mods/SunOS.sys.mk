@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.sys.mk,v 1.2 2008/02/11 15:12:39 tnn Exp $
+#	$NetBSD: SunOS.sys.mk,v 1.3 2010/05/12 20:57:46 tez Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
@@ -40,7 +40,13 @@ OBJCFLAGS?=	${CFLAGS}
 COMPILE.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} -c
 LINK.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
+# use cpp if using gcc, else use ${CC} -E as gcc -E is broken pr#42624
+# if /usr/ucb/lib/cpp is in the path before gnu cpp this could break things
+.if !empty(CC:Mgcc)
+CPP?=		cpp
+.else
 CPP?=		${CC} -E
+.endif
 .if defined(NETBSD_COMPATIBLE)
 CPPFLAGS?=	-I${BSDDIR}/include -D__EXTENSIONS__ -D_XPG4_2 -DSUNOS_5
 HOST_CPPFLAGS?=	${CPPFLAGS}
