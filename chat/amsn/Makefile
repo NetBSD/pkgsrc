@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2010/01/18 09:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/05/12 21:27:01 rillig Exp $
 #
 
-DISTNAME=		amsn-0.97
-PKGREVISION=		2
+DISTNAME=		amsn-0.98.3
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
-EXTRACT_SUFX=		.tar.bz2
+DISTFILES=		${DISTNAME}-src.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.amsn-project.net/
@@ -31,10 +30,9 @@ REPLACE_PERL=		utils/amsnctl.pl lang/complete.pl
 REPLACE_BASH=		utils/update-amsn.sh
 USE_TOOLS+=		perl:run bash:run
 
-USE_TOOLS+=		autoconf gmake
+USE_TOOLS+=		gmake
 
-pre-configure:
-	cd ${WRKSRC} && autoconf
+CHECK_PORTABILITY_SKIP=	utils/macosx/finishbuild.sh
 
 .include "../../security/tcl-tls/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"

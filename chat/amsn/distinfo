@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/06/14 05:05:36 obache Exp $
+$NetBSD: distinfo,v 1.6 2010/05/12 21:27:01 rillig Exp $
 
-SHA1 (amsn-0.97.tar.bz2) = 67364c90a2b1347aebff5c4db0eb7487797e3ccf
-RMD160 (amsn-0.97.tar.bz2) = 75416c9897df15960f616a0d3e233c8270de9b8b
-Size (amsn-0.97.tar.bz2) = 10131843 bytes
-SHA1 (patch-configureac) = 31a80f3c0cec28b87449b146c828a5e6de6c3354
+SHA1 (amsn-0.98.3-src.tar.bz2) = aa8383a11ce66352aceee27f9c291c1410b3403d
+RMD160 (amsn-0.98.3-src.tar.bz2) = 20f707062da4a5ab1eb6beec49d01dfd2ba90a99
+Size (amsn-0.98.3-src.tar.bz2) = 13275477 bytes
+SHA1 (patch-configure) = ddbd6a9616683c44202a551d734b2c9b10b2e05b
