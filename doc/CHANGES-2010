@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1885 2010/05/12 04:13:38 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1886 2010/05/12 21:00:04 tez Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2409,3 +2409,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-ms-doc to 2009.16596 [minskim 2010-05-12]
 	Updated print/tex-caption to 3.1m [minskim 2010-05-12]
 	Updated print/tex-caption-doc to 3.1m [minskim 2010-05-12]
+	Updated pkgtools/bootstrap-mk-files to 20090807nb2 [tez 2010-05-12]
