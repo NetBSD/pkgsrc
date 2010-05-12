@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/10 00:15:28 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.2 2010/05/12 01:23:48 minskim Exp $
 
 DISTNAME=	ms.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2009.7340
+PKGNAME=	tex-${DISTNAME:S/./-/}-2009.16596
+TEXLIVE_REV=	16596
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-ms
 
 CONFLICTS+=	teTeX-texmf<=3.0nb17
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

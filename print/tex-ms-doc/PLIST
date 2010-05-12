@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/10 00:15:28 minskim Exp $
-share/texmf-dist/doc/latex/ms/count1to.asc
-share/texmf-dist/doc/latex/ms/count1to.bug
+@comment $NetBSD: PLIST,v 1.2 2010/05/12 01:23:48 minskim Exp $
 share/texmf-dist/doc/latex/ms/count1to.pdf
-share/texmf-dist/doc/latex/ms/everysel.asc
-share/texmf-dist/doc/latex/ms/everysel.bug
 share/texmf-dist/doc/latex/ms/everysel.pdf
 share/texmf-dist/doc/latex/ms/everyshi.asc
 share/texmf-dist/doc/latex/ms/everyshi.bug
@@ -11,7 +7,5 @@ share/texmf-dist/doc/latex/ms/everyshi.pdf
 share/texmf-dist/doc/latex/ms/multitoc.asc
 share/texmf-dist/doc/latex/ms/multitoc.bug
 share/texmf-dist/doc/latex/ms/multitoc.pdf
-share/texmf-dist/doc/latex/ms/prelim2e.asc
-share/texmf-dist/doc/latex/ms/prelim2e.bug
 share/texmf-dist/doc/latex/ms/prelim2e.pdf
 share/texmf-dist/doc/latex/ms/ragged2e.pdf
