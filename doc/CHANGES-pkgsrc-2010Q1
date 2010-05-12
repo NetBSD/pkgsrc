@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.19 2010/05/11 21:18:48 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.20 2010/05/12 21:21:02 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -64,3 +64,29 @@ mail/fetchmail: security update
 mail/fetchmailconf: dependent update
 Pullup ticket #3111 - requested by taca
 www/typolight27-example: build fix
+Pullup ticket #3113 - requested by spz:
+databases/postgresql82: security update
+databases/postgresql82-adminpack: security update
+databases/postgresql82-client: security update
+databases/postgresql82-plperl: security update
+databases/postgresql82-plpython: security update
+databases/postgresql82-pltcl: security update
+databases/postgresql82-server: security update
+databases/postgresql82-tsearch2: security update
+databases/postgresql83: security update
+databases/postgresql83-adminpack: security update
+databases/postgresql83-client: security update
+databases/postgresql83-plperl: security update
+databases/postgresql83-plpython: security update
+databases/postgresql83-pltcl: security update
+databases/postgresql83-server: security update
+databases/postgresql84: security update
+databases/postgresql84-adminpack: security update
+databases/postgresql84-client: security update
+databases/postgresql84-plperl: security update
+databases/postgresql84-plpython: security update
+databases/postgresql84-pltcl: security update
+databases/postgresql84-server: security update
+databases/postgresql82: security update
+databases/postgresql83: security update
+databases/postgresql84: security update
