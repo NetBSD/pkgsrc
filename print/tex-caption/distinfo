@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/15 20:46:03 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/12 04:12:53 minskim Exp $
 
-SHA1 (tex-caption-3.1j/caption.tar.lzma) = 964e25d0731215e3c167a623cd063318b017aa04
-RMD160 (tex-caption-3.1j/caption.tar.lzma) = 30fb95ddff90cc43c27ae28c68b7f4ec2e8ad27e
-Size (tex-caption-3.1j/caption.tar.lzma) = 26198 bytes
+SHA1 (tex-caption-16715/caption.tar.xz) = f69f96be8b675936d0b2a0f4c6ac75cf474750a2
+RMD160 (tex-caption-16715/caption.tar.xz) = 2c89adc78f1ee95940e20e149bfd053508d1f140
+Size (tex-caption-16715/caption.tar.xz) = 26980 bytes
