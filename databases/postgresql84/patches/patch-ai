@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1.1.1 2009/07/29 06:26:19 adam Exp $
+$NetBSD: patch-ai,v 1.1.1.1.6.1 2010/05/12 21:20:07 tron Exp $
 
---- src/timezone/zic.c.orig	2009-06-11 16:49:15.000000000 +0200
+--- src/timezone/zic.c.orig	2010-03-16 07:17:04.000000000 +0000
 +++ src/timezone/zic.c
 @@ -120,51 +120,51 @@ struct zone
  
@@ -69,7 +69,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2009/07/29 06:26:19 adam Exp $
  static void setboundaries(void);
 -static pg_time_t tadd(const pg_time_t t1, long t2);
 +static pg_time_t tadd(const pg_time_t t1, const long t2);
- static void usage(void);
+ static void usage(FILE *stream, int status);
  static void writezone(const char *name, const char *string);
 -static int	yearistype(int year, const char *type);
 +static int	yearistype(const int year, const char *type);

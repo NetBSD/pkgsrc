@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2009/12/16 13:30:53 adam Exp $
+# $NetBSD: Makefile.common,v 1.3.4.1 2010/05/12 21:20:06 tron Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -32,13 +32,10 @@ COMMON_FILESDIR?=	${.CURDIR}/../postgresql84/files
 PATCHDIR?=		${.CURDIR}/../postgresql84/patches
 
 # Version numbering scheme:
-#
 # DIST_VERS		version number on the postgresql distfile
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
-#
 # Note: Do not forget jdbc-postgresql84 when updating version
-#
-DIST_VERS?=		8.4.2
+DIST_VERS?=		8.4.3
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql84-client+=	postgresql84-client>=${BASE_VERS}
@@ -49,10 +46,10 @@ PKG_SYSCONFSUBDIR=	postgresql
 
 .include "../../mk/bsd.prefs.mk"
 
-PGSQL_TEMPLATE.SunOS=		solaris
-PGSQL_TEMPLATE.IRIX=		irix5
-.if !defined(PGSQL_TEMPLATE.${OPSYS})
-PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
+PG_TEMPLATE.SunOS=	solaris
+PG_TEMPLATE.IRIX=	irix5
+.if !defined(PG_TEMPLATE.${OPSYS})
+PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
 PG_SUBPREFIX=		# empty
@@ -76,7 +73,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PG_ETC_DIR}
 CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR}
 CONFIGURE_ARGS+=	--localedir=${PG_LOCALE_DIR}
 CONFIGURE_ARGS+=	--with-docdir=${PG_DOC_DIR}
-CONFIGURE_ARGS+=	--with-template=${PGSQL_TEMPLATE.${OPSYS}}
+CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-zlib
 CONFIGURE_ARGS+=	--enable-nls
@@ -95,7 +92,6 @@ BUILDLINK_TRANSFORM+=	rm:-ffast-math
 
 # USE_LIBLTDL is "yes" or "no" depending on whether we're using libltdl
 # to provide "dlopen" functionality for the PostgreSQL backend.
-#
 .if ${OPSYS} == "Interix"
 USE_LIBLTDL?=		yes
 .endif
@@ -105,59 +101,32 @@ FILES_SUBST+=		PG_PREFIX=${PG_PREFIX:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 
+.if !defined(META_PACKAGE)
 post-extract:
-	if ${TEST} -d ${WRKSRC}/src; then				\
-		rm -f ${WRKSRC}/src/Makefile.custom;			\
-		cp -f ${COMMON_FILESDIR}/Makefile.custom		\
-			${WRKSRC}/src/Makefile.custom;			\
-		rm -f ${WRKSRC}/src/Makefile.shlib;			\
-		cp -f ${COMMON_FILESDIR}/Makefile.libtool		\
-			${WRKSRC}/src/Makefile.shlib;			\
-	fi
-	if ${TEST} -d ${WRKSRC}/src/interfaces/libpq; then		\
-		rm -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
-		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
-			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
-	fi
-	if ${TEST} -d ${WRKSRC}/src/interfaces/libpgtcl; then		\
-		rm -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
-		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
-			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
-	fi
+	cp -f ${COMMON_FILESDIR}/Makefile.custom ${WRKSRC}/src/Makefile.custom
+	cp -f ${COMMON_FILESDIR}/Makefile.libtool ${WRKSRC}/src/Makefile.shlib
 .if !empty(USE_LIBLTDL:M[yY][eE][sS])
-	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
-		template=${PGSQL_TEMPLATE.${OPSYS}:Q};			\
-		rm -f ${WRKSRC}/src/backend/port/dynloader/$$template.[ch]; \
-		cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h		\
-			${WRKSRC}/src/backend/port/dynloader/$$template.h; \
-		${ECHO} "static int dummy = 0;"				\
-			 >${WRKSRC}/src/backend/port/dynloader/$$template.c
-	fi
+	cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
+		${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.h
+	${ECHO} "static int dummy = 0;" \
+		> ${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.c
 .endif
-	if ${TEST} -d ${WRKSRC}/src/template; then			\
-		touch ${WRKSRC}/src/template/dragonfly;		\
-	fi
-	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
-		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c	\
-			${WRKSRC}/src/backend/port/dynloader/dragonfly.c; \
-		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.h	\
-			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
-	fi
-	if ${TEST} -d ${WRKSRC}/src/include/port; then			\
-		cp ${WRKSRC}/src/include/port/freebsd.h		\
-			${WRKSRC}/src/include/port/dragonfly.h;		\
-	fi
-	if ${TEST} -d ${WRKSRC}/src/makefiles; then			\
-		cp ${WRKSRC}/src/makefiles/Makefile.freebsd		\
-			${WRKSRC}/src/makefiles/Makefile.dragonfly;	\
-	fi
+	touch ${WRKSRC}/src/template/dragonfly
+	cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.c
+	cp ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
+	cp ${WRKSRC}/src/include/port/freebsd.h	\
+		${WRKSRC}/src/include/port/dragonfly.h
+	cp ${WRKSRC}/src/makefiles/Makefile.freebsd \
+		${WRKSRC}/src/makefiles/Makefile.dragonfly
+.endif
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
 # of 2 up to 32768, and the default size is 8196 (hardcoded in the
 # PostgreSQL sources).  Please don't change this value unless you know
 # what you are doing.
-#
 BUILD_DEFS+=	PGSQL_BLCKSZ
 
 .if defined(PGSQL_BLCKSZ)
