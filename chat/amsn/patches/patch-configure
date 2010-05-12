@@ -1,0 +1,32 @@
+$NetBSD: patch-configure,v 1.1 2010/05/12 21:27:02 rillig Exp $
+
+The remaining pieces of:
+http://sourceforge.net/tracker/index.php?func=detail&aid=1864687&group_id=54091&atid=472657
+
+--- configure.orig	2010-03-06 23:29:12.000000000 +0100
++++ configure	2010-05-12 23:20:00.000000000 +0200
+@@ -2255,7 +2255,7 @@
+ 	Linux)
+ 		FOUND_OS="linux"
+ 		;;
+-	OpenBSD | FreeBSD | NetBSD)
++	OpenBSD | FreeBSD | NetBSD | DragonFly)
+ 		# *BSD has important stuff (from ports)
+ 		# in /usr/local ...
+ 		CFLAGS="$CFLAGS -I/usr/local/include -L/usr/local/lib"
+@@ -3693,6 +3693,7 @@
+ 
+ 
+ 
++if false; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lstdc++" >&5
+ $as_echo_n "checking for main in -lstdc++... " >&6; }
+ if test "${ac_cv_lib_stdcpp_main+set}" = set; then :
+@@ -3728,6 +3729,7 @@
+ else
+   as_fn_error "stdc++ library not found" "$LINENO" 5
+ fi
++fi
+ 
+ 
+ 
