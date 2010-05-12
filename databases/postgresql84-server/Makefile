@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/01/22 20:12:11 adam Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2010/05/12 21:20:07 tron Exp $
 
 PKGNAME=	postgresql84-server-${BASE_VERS}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database server programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -32,7 +31,6 @@ BUILD_DIRS+=		src/pl
 # PostgreSQL's backend (pkg/28729).  This works on older and newer
 # versions of NetBSD as well since they don't have the bad interaction
 # between dlopen() and pthreads.
-#
 .if ${OPSYS} == "NetBSD"
 DLOPEN_REQUIRE_PTHREADS=	no
 .endif
@@ -40,7 +38,6 @@ DLOPEN_REQUIRE_PTHREADS=	no
 
 # If we're using libltdl to provide "dlopen" functionality, then add the
 # dependency and make sure that we link against -lltdl.
-#
 .if !empty(USE_LIBLTDL:M[yY][eE][sS])
 DL_LIBS+=	-lltdl
 .  include "../../devel/libltdl/buildlink3.mk"
@@ -54,7 +51,6 @@ PKG_SUPPORTED_OPTIONS=	gssapi krb5 ldap pam
 # PGGROUP	group of the database administrator
 # PGHOME	home directory of the database administrator and location of
 #		the databases
-#
 PGUSER?=		pgsql
 PGGROUP?=		pgsql
 PGHOME?=		${PREFIX}/${PGUSER}
