@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/03/04 08:13:15 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/12 00:57:34 obache Exp $
 include/clutter-1.0/clutter/clutter-actor.h
 include/clutter-1.0/clutter/clutter-alpha.h
 include/clutter-1.0/clutter/clutter-animatable.h
@@ -231,6 +231,7 @@ share/gtk-doc/html/cogl/cogl-Textures.html
 share/gtk-doc/html/cogl/cogl-Vertex-Buffers.html
 share/gtk-doc/html/cogl/cogl.devhelp
 share/gtk-doc/html/cogl/cogl.devhelp2
+share/gtk-doc/html/cogl/fill-rule.png
 share/gtk-doc/html/cogl/home.png
 share/gtk-doc/html/cogl/index.html
 share/gtk-doc/html/cogl/index.sgml
