@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1884 2010/05/12 01:25:26 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1885 2010/05/12 04:13:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2407,3 +2407,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.2.8 [obache 2010-05-12]
 	Updated print/tex-ms to 2009 [minskim 2010-05-12]
 	Updated print/tex-ms-doc to 2009.16596 [minskim 2010-05-12]
+	Updated print/tex-caption to 3.1m [minskim 2010-05-12]
+	Updated print/tex-caption-doc to 3.1m [minskim 2010-05-12]
