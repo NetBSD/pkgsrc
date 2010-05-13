@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9297 2010/05/12 00:57:48 obache Exp $
+$NetBSD: TODO,v 1.9298 2010/05/13 07:03:42 tron Exp $
 
 Suggested new packages
 ======================
@@ -1420,7 +1420,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-devel-1.1.44
-	o wireshark-1.2.8
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
