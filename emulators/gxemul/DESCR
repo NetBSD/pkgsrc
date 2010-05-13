@@ -3,16 +3,17 @@ Several processor architectures and machine types have been implemented.
 It is working well enough to allow unmodified "guest" operating systems to
 run inside the emulator, as if they were running on real hardware.
 
-The emulator emulates (networks of) real machines. The machines may
-consist of ARM, MIPS, PowerPC, and SuperH processors, and various
+The emulator emulates (networks of) real machines. The machines may consist
+of ARM, MIPS, Motorola 88K, PowerPC, and SuperH processors, and various
 surrounding hardware components such as framebuffers, busses, interrupt
 controllers, ethernet controllers, disk controllers, and serial port
 controllers.
 
-GXemul, including the dynamic translation system, is implemented in
-portable C, which means that the emulator will run on practically any host
-architecture.
+GXemul, including the dynamic translation system, is implemented in portable
+C++, which means that the emulator will (at least in theory) run on
+practically any modern host architecture and unix-like operating system, for
+which a C++ compiler is available.
 
-The documentation lists the machines and guest operating systems that can
-be regarded as "working" in GXemul. The best working guest operating
-systems are probably NetBSD/pmax and NetBSD/cats.
+The documentation lists the machines and specific guest operating systems
+that can be regarded as "working" in GXemul. The guest operating system
+that works best in GXemul is NetBSD/pmax.

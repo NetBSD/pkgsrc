@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.42 2009/07/21 20:52:21 asau Exp $
+# $NetBSD: Makefile,v 1.43 2010/05/13 14:48:53 tsutsui Exp $
 #
 
-DISTNAME=	gxemul-0.4.7.2
+DISTNAME=	gxemul-0.6.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://gxemul.sourceforge.net/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gxemul.sourceforge.net/
-COMMENT=	Machine emulator
+COMMENT=	Framework for full-system computer architecture emulation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_JOBS_SAFE=	no
-
 USE_TOOLS+=	pax
 
-USE_LANGUAGES=	c
+USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 BUILD_TARGET=	build
 
@@ -25,7 +23,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gxemul ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/gxemul.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.for f in README HISTORY TODO RELEASE.html LICENSE
+.for f in README HISTORY LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 	cd ${WRKSRC}/doc && pax -rwppm . ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
