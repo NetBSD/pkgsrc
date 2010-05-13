@@ -1,18 +1,18 @@
-/*	$NetBSD: util.c,v 1.6 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: util.c,v 1.7 2010/05/13 18:43:08 joerg Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.6 2010/04/20 13:37:49 joerg Exp $
+ *	$Id: util.c,v 1.7 2010/05/13 18:43:08 joerg Exp $
  */
 
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.6 2010/04/20 13:37:49 joerg Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.7 2010/05/13 18:43:08 joerg Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.6 2010/04/20 13:37:49 joerg Exp $");
+__RCSID("$NetBSD: util.c,v 1.7 2010/05/13 18:43:08 joerg Exp $");
 #endif
 #endif
 
@@ -385,7 +385,12 @@ getcwd(path, sz)
 }
 #endif
 
-#if defined(sun) && defined(__svr4__) && !defined(FORCE_POSIX_SIGNALS)
+#if !defined(FORCE_POSIX_SIGNALS)
+/*
+ * If FORCE_POSIX_SIGNALS is defined
+ * then sigcompat will have done this.
+ */
+#if defined(sun) && (defined(__svr4__) || defined(__SVR4))
 #include <signal.h>
 
 /* turn into bsd signals */
@@ -403,6 +408,7 @@ signal(int s, void (*a)(int)))(int)
     else
 	return osa.sa_handler;
 }
+#endif
 #endif
 
 #if !defined(HAVE_VSNPRINTF) || !defined(HAVE_VASPRINTF)
