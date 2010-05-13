@@ -1,3 +1,27 @@
+2010-05-10  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* boot-strap: use absolute path for bmake when running tests.
+
+	* Makefile.in (MAKE_VERSION):  bump version to 20100510
+	  Merge with NetBSD make, pick up
+	  o revert use of realpath on argv[0]
+	    too many corner cases.
+	  o print MAKE_PRINT_VAR_ON_ERROR before running .ERROR target.
+
+2010-05-05  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100505
+	  Merge with NetBSD make, pick up
+	  o fix for missed SIGCHLD when compiled with SunPRO
+	    actually for bmake, defining FORCE_POSIX_SIGNALS would have
+	    done the job.
+
+2010-04-30  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100430
+	  Merge with NetBSD make, pick up
+	  o fflush stdout before writing to stdout
+	
 2010-04-23  Simon J. Gerraty  <sjg@bad.crufty.net>
 
 	* Makefile.in (MAKE_VERSION): bump version to 20100423

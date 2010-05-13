@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.16 2010/04/24 21:10:29 joerg Exp $
+#	$NetBSD: Makefile.in,v 1.17 2010/05/13 18:43:07 joerg Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.16 2010/04/24 21:10:29 joerg Exp $
+#	$Id: Makefile.in,v 1.17 2010/05/13 18:43:07 joerg Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -21,7 +21,7 @@ srcdir= @srcdir@
 CC?= @CC@
 
 # Base version on src date
-MAKE_VERSION= 20100423
+MAKE_VERSION= 20100510
 MACHINE=@machine@
 MACHINE_ARCH=@machine_arch@
 DEFAULT_SYS_PATH = @default_sys_path@
@@ -88,12 +88,12 @@ EXTRACT_MAN=no
 .if exists(${srcdir}/../Makefile.inc)
 .include "${srcdir}/../Makefile.inc"
 .endif
-.include <bsd.prog.mk>
+.-include <bsd.prog.mk>
 # sigh, FreeBSD at least includes bsd.subdir.mk via bsd.obj.mk
 # so the inclusion below, results in complaints about re-defined
 # targets.  For NetBSD though we need to explicitly include it.
 .if defined(SUBDIR) && !target(${SUBDIR:[1]})
-.include <bsd.subdir.mk>
+.-include <bsd.subdir.mk>
 .endif
 
 # Force these
