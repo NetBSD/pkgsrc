@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9300 2010/05/13 19:42:19 wiz Exp $
+$NetBSD: TODO,v 1.9301 2010/05/13 20:32:37 joerg Exp $
 
 Suggested new packages
 ======================
@@ -453,7 +453,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bitlbee-1.2.6
 	o bluefish-2.0.0
 	o blur6ex-0.3.462
-	o bmake-20100102
 	o bmon-2.1.0
 	o bochs-2.4.2 [pkg/42443]
 	o bochs-2.4.5
