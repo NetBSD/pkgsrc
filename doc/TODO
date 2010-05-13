@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9298 2010/05/13 07:03:42 tron Exp $
+$NetBSD: TODO,v 1.9299 2010/05/13 08:15:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -1288,7 +1288,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o simulavr-0.1.2.2
 	o singularity-0.30
 	o sitescooper-3.1.2
-	o sj3-lib-2.0.1.21 [http://code.google.com/p/sj3/]
 	o sjeng-11.2
 	o skipstone-1.0.1
 	o skype-2.1.0.47
