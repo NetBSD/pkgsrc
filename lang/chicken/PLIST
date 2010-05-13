@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/03/15 03:43:51 asau Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/05/13 19:32:02 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-install
@@ -37,9 +37,6 @@ lib/chicken/5/utils.import.so
 lib/libchicken.a
 lib/libchicken.so
 lib/libchicken.so.5
-lib/libuchicken.a
-lib/libuchicken.so
-lib/libuchicken.so.5
 man/man1/chicken-bug.1
 man/man1/chicken-install.1
 man/man1/chicken-profile.1
