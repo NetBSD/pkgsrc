@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.20 2010/05/12 21:21:02 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.21 2010/05/13 13:38:02 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -64,7 +64,7 @@ mail/fetchmail: security update
 mail/fetchmailconf: dependent update
 Pullup ticket #3111 - requested by taca
 www/typolight27-example: build fix
-Pullup ticket #3113 - requested by spz:
+Pullup ticket #3113 - requested by spz
 databases/postgresql82: security update
 databases/postgresql82-adminpack: security update
 databases/postgresql82-client: security update
@@ -90,3 +90,5 @@ databases/postgresql84-server: security update
 databases/postgresql82: security update
 databases/postgresql83: security update
 databases/postgresql84: security update
+Pullup ticket #3114 - requested by tron
+net/wireshark: security update
