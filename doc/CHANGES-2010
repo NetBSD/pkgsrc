@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1887 2010/05/12 21:28:23 rillig Exp $
+$NetBSD: CHANGES-2010,v 1.1888 2010/05/13 07:03:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2411,3 +2411,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-caption-doc to 3.1m [minskim 2010-05-12]
 	Updated pkgtools/bootstrap-mk-files to 20090807nb2 [tez 2010-05-12]
 	Updated chat/amsn to 0.98.3 [rillig 2010-05-12]
+	Updated net/wireshark to 1.2.8 [tron 2010-05-13]
