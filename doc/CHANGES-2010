@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1888 2010/05/13 07:03:42 tron Exp $
+$NetBSD: CHANGES-2010,v 1.1889 2010/05/13 14:55:49 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2412,3 +2412,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/bootstrap-mk-files to 20090807nb2 [tez 2010-05-12]
 	Updated chat/amsn to 0.98.3 [rillig 2010-05-12]
 	Updated net/wireshark to 1.2.8 [tron 2010-05-13]
+	Updated emulators/gxemul to 0.6.0 [tsutsui 2010-05-13]
