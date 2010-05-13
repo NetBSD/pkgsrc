@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.8 2010/04/24 21:10:29 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.9 2010/05/13 18:43:08 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,7 +69,7 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: main.c,v 1.8 2010/04/24 21:10:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: main.c,v 1.9 2010/05/13 18:43:08 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
@@ -81,7 +81,7 @@ __COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993\
 #if 0
 static char sccsid[] = "@(#)main.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.8 2010/04/24 21:10:29 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.9 2010/05/13 18:43:08 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -933,14 +933,7 @@ main(int argc, char **argv)
 	 *	MFLAGS also gets initialized empty, for compatibility.
 	 */
 	Parse_Init();
-	if (argv[0][0] == '/') {
-	    p1 = argv[0];
-	} else {
-	    p1 = realpath(argv[0], mdpath);
-	    if (!p1 || *p1 != '/' || stat(p1, &sb) < 0) {
-		p1 = argv[0];		/* realpath failed */
-	    }
-	}
+	p1 = argv[0];
 	Var_Set("MAKE", p1, VAR_GLOBAL, 0);
 	Var_Set(".MAKE", p1, VAR_GLOBAL, 0);
 	Var_Set(MAKEFLAGS, "", VAR_GLOBAL, 0);
@@ -1749,6 +1742,7 @@ Error(const char *fmt, ...)
 	err_file = debug_file;
 	if (err_file == stdout)
 		err_file = stderr;
+	(void)fflush(stdout);
 	for (;;) {
 		va_start(ap, fmt);
 		fprintf(err_file, "%s: ", progname);
@@ -1783,6 +1777,7 @@ Fatal(const char *fmt, ...)
 	if (jobsRunning)
 		Job_Wait();
 
+	(void)fflush(stdout);
 	(void)vfprintf(stderr, fmt, ap);
 	va_end(ap);
 	(void)fprintf(stderr, "\n");
@@ -1814,6 +1809,7 @@ Punt(const char *fmt, ...)
 	va_list ap;
 
 	va_start(ap, fmt);
+	(void)fflush(stdout);
 	(void)fprintf(stderr, "%s: ", progname);
 	(void)vfprintf(stderr, fmt, ap);
 	va_end(ap);
@@ -1960,22 +1956,21 @@ PrintOnError(GNode *gn, const char *s)
 	 */
 	Var_Set(".ERROR_TARGET", gn->name, VAR_GLOBAL, 0);
     }
+    strncpy(tmp, "${MAKE_PRINT_VAR_ON_ERROR:@v@$v='${$v}'\n@}",
+	    sizeof(tmp) - 1);
+    cp = Var_Subst(NULL, tmp, VAR_GLOBAL, 0);
+    if (cp) {
+	if (*cp)
+	    printf("%s", cp);
+	free(cp);
+    }
     /*
-     * See if there is a .ERROR target, and run it if so.
+     * Finally, see if there is a .ERROR target, and run it if so.
      */
     en = Targ_FindNode(".ERROR", TARG_NOCREATE);
     if (en) {
 	en->type |= OP_SPECIAL;
 	Compat_Make(en, en);
-    }
-    
-    strncpy(tmp, "${MAKE_PRINT_VAR_ON_ERROR:@v@$v='${$v}'\n@}",
-	    sizeof(tmp) - 1);
-    cp = Var_Subst(NULL, tmp, VAR_GLOBAL, 0);
-    if (cp) {
-	    if (*cp)
-		    printf("%s", cp);
-	    free(cp);
     }
 }
 
