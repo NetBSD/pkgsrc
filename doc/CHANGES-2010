@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1890 2010/05/13 19:32:44 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1891 2010/05/13 19:39:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2414,3 +2414,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/wireshark to 1.2.8 [tron 2010-05-13]
 	Updated emulators/gxemul to 0.6.0 [tsutsui 2010-05-13]
 	Updated lang/chicken to 4.5.0 [asau 2010-05-13]
+	Updated devel/mercurial to 1.5.3 [wiz 2010-05-13]
