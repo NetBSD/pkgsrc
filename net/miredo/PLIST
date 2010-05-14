@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/05/14 06:18:48 pettai Exp $
 bin/teredo-mire
 include/libteredo/teredo-udp.h
 include/libteredo/teredo.h
@@ -6,18 +6,16 @@ include/libteredo/tunnel.h
 include/libtun6/tun6.h
 lib/libteredo.la
 lib/libtun6.la
+lib/miredo/miredo-privproc
 man/man1/teredo-mire.1
-man/man5/isatapd.conf.5
 man/man5/miredo-server.conf.5
 man/man5/miredo.conf.5
-man/man8/isatapd.8
 man/man8/miredo-checkconf.8
 man/man8/miredo-server.8
 man/man8/miredo.8
-sbin/isatapd
 sbin/miredo
 sbin/miredo-checkconf
 sbin/miredo-server
-share/examples/miredo/isatapd.conf
 share/examples/miredo/miredo-server.conf
 share/examples/miredo/miredo.conf
+share/examples/rc.d/client-hook
