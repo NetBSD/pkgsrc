@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/05/14 06:18:48 pettai Exp $
+# $NetBSD: Makefile,v 1.17 2010/05/14 06:22:18 pettai Exp $
 
 DISTNAME=	miredo-1.1.7
 CATEGORIES=	net
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.remlab.net/miredo/
 COMMENT=	Teredo IPv6 tunneling
+LICENSE=	gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	Interix-*-* NetBSD-[0-3]*-* SunOS-*-*
 
