@@ -1,20 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2009/02/02 19:23:27 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2010/05/14 17:06:19 drochner Exp $
 
---- gst-libs/ext/ffmpeg/libavformat/4xm.c.orig	2009-01-29 14:05:13.000000000 +0100
-+++ gst-libs/ext/ffmpeg/libavformat/4xm.c
-@@ -159,10 +159,13 @@ static int fourxm_read_header(AVFormatCo
-                 return AVERROR_INVALIDDATA;
-             }
-             current_track = LE_32(&header[i + 8]);
-+	    if((unsigned)current_track >= UINT_MAX / sizeof(AudioTrack) - 1){
-+		av_log(s, AV_LOG_ERROR, "current_track too large\n");
-+		av_free(header);
-+		return AVERROR_INVALIDDATA;
-+	    }
-             if (current_track + 1 > fourxm->track_count) {
-                 fourxm->track_count = current_track + 1;
--                if((unsigned)fourxm->track_count >= UINT_MAX / sizeof(AudioTrack))
--                    return -1;
-                 fourxm->tracks = av_realloc(fourxm->tracks,
-                     fourxm->track_count * sizeof(AudioTrack));
-                 if (!fourxm->tracks) {
+--- gst-libs/ext/ffmpeg/configure.orig	2010-03-06 13:11:26.000000000 +0000
++++ gst-libs/ext/ffmpeg/configure
+@@ -2123,6 +2123,7 @@ case $target_os in
+         nm_opts='-P -g'
+         ;;
+     netbsd)
++	disable need_memalign
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         ;;
