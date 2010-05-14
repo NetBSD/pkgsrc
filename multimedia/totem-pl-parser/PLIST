@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/12/16 18:55:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/05/14 16:41:40 drochner Exp $
 include/totem-pl-parser/1/plparser/totem-disc.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-builtins.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-features.h
@@ -9,6 +9,7 @@ lib/libtotem-plparser.la
 lib/pkgconfig/totem-plparser-mini.pc
 lib/pkgconfig/totem-plparser.pc
 share/gtk-doc/html/totem-pl-parser/TotemPlParser.html
+share/gtk-doc/html/totem-pl-parser/annotation-glossary.html
 share/gtk-doc/html/totem-pl-parser/api-index-deprecated.html
 share/gtk-doc/html/totem-pl-parser/api-index-full.html
 share/gtk-doc/html/totem-pl-parser/api-reference.html
@@ -25,6 +26,7 @@ share/gtk-doc/html/totem-pl-parser/up.png
 share/locale/am/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ar/LC_MESSAGES/totem-pl-parser.mo
 share/locale/as/LC_MESSAGES/totem-pl-parser.mo
+share/locale/ast/LC_MESSAGES/totem-pl-parser.mo
 share/locale/az/LC_MESSAGES/totem-pl-parser.mo
 share/locale/be/LC_MESSAGES/totem-pl-parser.mo
 share/locale/be@latin/LC_MESSAGES/totem-pl-parser.mo
