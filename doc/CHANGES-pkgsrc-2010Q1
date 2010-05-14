@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.21 2010/05/13 13:38:02 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.22 2010/05/14 19:48:01 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -92,3 +92,5 @@ databases/postgresql83: security update
 databases/postgresql84: security update
 Pullup ticket #3114 - requested by tron
 net/wireshark: security update
+Pullup ticket #3115 - requested by wiz
+net/tor: bug fix update
