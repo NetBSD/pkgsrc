@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:01:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/14 11:02:20 obache Exp $
 include/tomoe/gtk/tomoe-canvas.h
 include/tomoe/gtk/tomoe-char-table.h
 include/tomoe/gtk/tomoe-details.h
@@ -8,6 +8,7 @@ include/tomoe/gtk/tomoe-edit-strokes.h
 include/tomoe/gtk/tomoe-gtk-config.h
 include/tomoe/gtk/tomoe-gtk-enum-types.h
 include/tomoe/gtk/tomoe-gtk.h
+include/tomoe/gtk/tomoe-gucharmap.h
 include/tomoe/gtk/tomoe-handwriting.h
 include/tomoe/gtk/tomoe-reading-search.h
 include/tomoe/gtk/tomoe-scrollable.h
