@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2008/12/19 04:39:11 jmcneill Exp $
+$NetBSD: patch-ab,v 1.6 2010/05/14 16:28:57 drochner Exp $
 
---- ext/alsa/gstalsasink.c.orig	2008-12-18 23:35:32.000000000 -0500
+--- ext/alsa/gstalsasink.c.orig	2010-04-09 08:13:11.000000000 +0000
 +++ ext/alsa/gstalsasink.c
 @@ -53,6 +53,10 @@
  
@@ -10,6 +10,6 @@ $NetBSD: patch-ab,v 1.5 2008/12/19 04:39:11 jmcneill Exp $
 +#define ESTRPIPE EPIPE
 +#endif
 +
- /* elementfactory information */
- static const GstElementDetails gst_alsasink_details =
- GST_ELEMENT_DETAILS ("Audio sink (ALSA)",
+ #define DEFAULT_DEVICE		"default"
+ #define DEFAULT_DEVICE_NAME	""
+ #define SPDIF_PERIOD_SIZE 1536
