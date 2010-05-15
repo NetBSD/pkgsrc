@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1902 2010/05/15 09:13:54 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1903 2010/05/15 13:17:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/mkvtoolnix to 2.9.8nb2 [adam 2010-05-15]
 	Updated audio/mp3diags to 1.0.05.050 [adam 2010-05-15]
 	Updated games/alephone to 20100424 [adam 2010-05-15]
+	Updated graphics/vnc2swf to 0.5.0nb4 [obache 2010-05-15]
