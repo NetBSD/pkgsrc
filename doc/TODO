@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9301 2010/05/13 20:32:37 joerg Exp $
+$NetBSD: TODO,v 1.9302 2010/05/15 05:55:40 pettai Exp $
 
 Suggested new packages
 ======================
@@ -980,7 +980,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mined-2000.16
 	o minicom-2.4
 	o minivmac-3.0.4
-	o miredo-1.1.7
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
