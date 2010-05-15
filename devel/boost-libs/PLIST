@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/15 07:29:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/05/15 05:42:23 adam Exp $
 lib/libboost_date_time.a
 lib/libboost_date_time.so
 lib/libboost_date_time.so.${BOOST_VERSION}
@@ -33,6 +33,9 @@ lib/libboost_prg_exec_monitor.so.${BOOST_VERSION}
 lib/libboost_program_options.a
 lib/libboost_program_options.so
 lib/libboost_program_options.so.${BOOST_VERSION}
+lib/libboost_random.a
+lib/libboost_random.so
+lib/libboost_random.so.${BOOST_VERSION}
 lib/libboost_regex.a
 lib/libboost_regex.so
 lib/libboost_regex.so.${BOOST_VERSION}
