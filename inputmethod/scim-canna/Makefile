@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/24 11:50:45 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/15 11:32:47 obache Exp $
 #
 
 DISTNAME=		scim-canna-1.0.1
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=scim-imengine/29155/}
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://scim-imengine.sourceforge.jp/
 COMMENT=		SCIM IMEngine module for Canna
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

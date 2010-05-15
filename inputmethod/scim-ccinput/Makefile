@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/23 09:03:20 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/15 11:39:29 obache Exp $
 #
 
 DISTNAME=		scim-ccinput-0.3.1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.scim-im.org/
 COMMENT=		SCIM IMEngine module for CCInput
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
