@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9302 2010/05/15 05:55:40 pettai Exp $
+$NetBSD: TODO,v 1.9303 2010/05/15 09:13:54 adam Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o afterstep-2.2.9
 	o album-4.06
 	o alee-ttf-11.2
-	o alephone-20091015 [pkg/42397]
 	o aliados-0.2.0
 	o alsa-1.0.23
 	o alsa-lib-1.0.23
@@ -993,7 +992,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.30.1 [GNOME 2.30]
 	o mp3blaster-3.2.3
-	o mp3diags-1.0.05
 	o mp3splt-2.2.7
 	o mpc-0.19
 	o mpeg4ip-1.6.1
