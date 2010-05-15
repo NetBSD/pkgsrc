@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.50 2010/05/10 14:58:21 mrg Exp $
+$NetBSD: distinfo,v 1.51 2010/05/15 06:50:33 mrg Exp $
 
-SHA1 (bozohttpd-20100510.tar.bz2) = 57c79faa1c7b5d5b431c12f2ac65228bc01811b2
-RMD160 (bozohttpd-20100510.tar.bz2) = 5de0d1c2e3e9a12caf9f4985f0874132525f558b
-Size (bozohttpd-20100510.tar.bz2) = 45780 bytes
+SHA1 (bozohttpd-20100512.tar.bz2) = 07a18794603074c21331780047eac37cc98ba4de
+RMD160 (bozohttpd-20100512.tar.bz2) = d7b764aac5cc08dd066f9eb8d4c1a2620f0b1aba
+Size (bozohttpd-20100512.tar.bz2) = 46075 bytes
 SHA1 (patch-aa) = 2e70d3d10aa8bc228331cc1a229ef04106aca210
 SHA1 (patch-ab) = 67c4299d7a857d7d6179ee7a437b76d29db596cd
