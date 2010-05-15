@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1 2010/05/15 05:47:58 adam Exp $
+
+--- configure.orig	2009-12-20 15:40:28.000000000 +0000
++++ configure
+@@ -14111,11 +14107,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char omp_set_num_threads ();
++#include <omp.h>
+ int
+ main ()
+ {
+-return omp_set_num_threads ();
++return omp_get_num_threads ();
+   ;
+   return 0;
+ }
