@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/15 13:17:28 obache Exp $
 bin/recordwin
 bin/vnc2swf
 lib/X11/app-defaults/Vnc2Swf
-share/doc/html/vnc2swf/output1.html
-share/doc/html/vnc2swf/output1.swf
-share/doc/html/vnc2swf/output2.html
-share/doc/html/vnc2swf/output2.swf
-share/doc/html/vnc2swf/recording1.html
-share/doc/html/vnc2swf/recording1.swf
-share/doc/html/vnc2swf/recording2.html
-share/doc/html/vnc2swf/recording2.swf
-share/doc/html/vnc2swf/recordwin.html
-share/doc/html/vnc2swf/vnc2swf.html
+share/doc/vnc2swf/output1.html
+share/doc/vnc2swf/output1.swf
+share/doc/vnc2swf/output2.html
+share/doc/vnc2swf/output2.swf
+share/doc/vnc2swf/recording1.html
+share/doc/vnc2swf/recording1.swf
+share/doc/vnc2swf/recording2.html
+share/doc/vnc2swf/recording2.swf
+share/doc/vnc2swf/recordwin.html
+share/doc/vnc2swf/vnc2swf.html
