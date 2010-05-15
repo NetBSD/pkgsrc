@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2010/02/10 19:17:46 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/05/15 20:23:38 gls Exp $
 #
 
-DISTNAME=		asciidoc-8.3.3
-PKGREVISION=		1
+DISTNAME=		asciidoc-8.5.3
 CATEGORIES=		textproc
-MASTER_SITES=		${HOMEPAGE}	\
+MASTER_SITES=		${HOMEPAGE:Q} \
 			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
 
 MAINTAINER=		gdt@NetBSD.org
@@ -16,9 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 
-REPLACE_BASH+=		a2x
-USE_TOOLS+=		bash:run pax
-PYTHON_PATCH_SCRIPTS=	asciidoc.py
+USE_TOOLS+=		pax
+PYTHON_PATCH_SCRIPTS=	a2x.py asciidoc.py
 PYTHON_PATCH_SCRIPTS+=	filters/code/code-filter.py
 PYTHON_PATCH_SCRIPTS+=	filters/music/music2png.py
 PYTHON_PATCH_SCRIPTS+=	filters/graphviz/graphviz2png.py
@@ -31,17 +29,23 @@ SUBST_MESSAGE.ad=	Fixing hard-coded config file paths.
 SUBST_FILES.ad=		a2x asciidoc.py
 SUBST_SED.ad=		-e 's,^\(CONF_DIR\).*=.*,\1="${PREFIX}/share/asciidoc",'
 
+SUBST_CLASSES+=		ae
+SUBST_STAGE.ae=		pre-configure
+SUBST_MESSAGE.ae=	Fixing hard-coded Python interpreter paths.
+SUBST_FILES.ae=		a2x.py asciidoc.conf
+SUBST_SED.ae=		-e 's,python,${PYTHONBIN},'
+
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/docbook-xsl share/asciidoc/stylesheets \
 			share/asciidoc/javascripts \
 			share/asciidoc/images/icons/callouts \
-			${PKGMANDIR}/man1 ${DOCDIR}
+			${PKGMANDIR}/man1 ${DOCDIR} \
 
 DOCDIR=		${PREFIX}/share/doc/asciidoc
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/asciidoc.py ${DESTDIR}${PREFIX}/bin/asciidoc
-	${INSTALL_SCRIPT} ${WRKSRC}/a2x ${DESTDIR}${PREFIX}/bin/a2x
+	${INSTALL_SCRIPT} ${WRKSRC}/a2x.py ${DESTDIR}${PREFIX}/bin/a2x
 	${INSTALL_MAN} ${WRKSRC}/doc/asciidoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/doc/a2x.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DESTDIR}${DOCDIR}
