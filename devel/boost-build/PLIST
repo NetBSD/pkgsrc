@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/11/24 09:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/05/15 05:42:23 adam Exp $
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
 share/boost-build/boost_build.png
@@ -10,6 +10,7 @@ share/boost-build/build/alias.jam
 share/boost-build/build/alias.py
 share/boost-build/build/build-request.jam
 share/boost-build/build/build_request.py
+share/boost-build/build/configure.jam
 share/boost-build/build/engine.py
 share/boost-build/build/errors.py
 share/boost-build/build/feature.jam
@@ -466,6 +467,9 @@ share/boost-build/tools/borland.jam
 share/boost-build/tools/builtin.jam
 share/boost-build/tools/builtin.py
 share/boost-build/tools/cast.jam
+share/boost-build/tools/clang-darwin.jam
+share/boost-build/tools/clang-unix.jam
+share/boost-build/tools/clang.jam
 share/boost-build/tools/common.jam
 share/boost-build/tools/common.py
 share/boost-build/tools/como-linux.jam
