@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1894 2010/05/14 20:18:09 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1895 2010/05/15 00:05:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/tor to 0.2.1.26 [wiz 2010-05-13]
 	Updated devel/bmake to 20100423 [joerg 2010-05-13]
 	Updated parallel/openmpi to 1.4.2 [asau 2010-05-15]
+	Updated wm/ctwm to 3.8anb5 [wiz 2010-05-15]
