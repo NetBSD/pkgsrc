@@ -220,6 +220,7 @@ jdbc-mysql5		Enable MySQL JDBC driver.
 jpeg			Enable JPEG support.
 jwhois-enable-cache	Enable cache support.
 kde			Enable KDE support.
+kde3			Enable support for KDE 3.
 kde4			Enable support for KDE 4.
 kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
@@ -406,6 +407,7 @@ qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
 qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
 qt			Enable support for QT.
+qt3			Enable support for QT3.
 quartz			Enable Quartz support on Mac OS X.	.
 readline		Enable use of GNU readline library.
 rsaref			Use RSAREF library.
