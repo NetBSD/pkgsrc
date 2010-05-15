@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/06 01:44:52 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/15 13:07:38 obache Exp $
 #
 
 DISTNAME=	prime-el-1.5.1.3
@@ -10,6 +10,7 @@ MASTER_SITES=	http://prime.sourceforge.jp/src/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/emacs/
 COMMENT=	PRIME client for emacsen
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
