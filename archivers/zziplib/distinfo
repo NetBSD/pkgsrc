@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2009/11/29 20:40:08 sno Exp $
+$NetBSD: distinfo,v 1.10 2010/05/15 06:37:03 adam Exp $
 
-SHA1 (zziplib-0.13.56.tar.bz2) = aa8cebc8c5e815a1071b17c6878876adedc4a333
-RMD160 (zziplib-0.13.56.tar.bz2) = c217cff4c4b1ec6bc868a0d89a55c75b8ea46fa9
-Size (zziplib-0.13.56.tar.bz2) = 696931 bytes
-SHA1 (patch-aa) = 6bfead43e5dae726861a8d1c21ed829126e64b41
-SHA1 (patch-ba) = 9203c92f8dd76bb2e21e512c7811fb0bd852cbee
-SHA1 (patch-bb) = e2f03667b73ce445d5a96262898dddfe324e0764
+SHA1 (zziplib-0.13.59.tar.bz2) = ddbce25cb36c3b4c2b892e2c8a88fa4a0be29a71
+RMD160 (zziplib-0.13.59.tar.bz2) = b96f547039ac005f6e9ca2cf92c388a077b9b21e
+Size (zziplib-0.13.59.tar.bz2) = 691000 bytes
+SHA1 (patch-aa) = d834435ea63a9a263fb6848be30053f00b0302da
+SHA1 (patch-ba) = 086cbf68accef14f878f1e63e1f20db63749a4c8
+SHA1 (patch-bb) = afdcf01c5aea03f7bfd61492acbe4f3743d50b0a
 SHA1 (patch-bc) = d5300d81155c11358625ff320cb6055dcc8ed860

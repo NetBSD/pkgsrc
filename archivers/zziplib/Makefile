@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2009/07/26 10:29:08 minskim Exp $
-#
+# $NetBSD: Makefile,v 1.17 2010/05/15 06:37:03 adam Exp $
 
-DISTNAME=	zziplib-0.13.56
+DISTNAME=	zziplib-0.13.59
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zziplib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://zziplib.sourceforge.net/
 COMMENT=	Library for ZIP archive handling
+
 LICENSE=	gnu-lgpl-v2 OR mpl-1.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--disable-builddir
 
-BUILD_DIRS=	${WRKSRC}/zzip ${WRKSRC}/zzipwrap ${WRKSRC}/bins
+BUILD_DIRS=	zzip zzipwrap bins
 
 TEST_TARGET=		check
 
