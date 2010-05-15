@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1900 2010/05/15 06:51:05 mrg Exp $
+$NetBSD: CHANGES-2010,v 1.1901 2010/05/15 07:35:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2422,4 +2422,26 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated parallel/openmpi to 1.4.2 [asau 2010-05-15]
 	Updated wm/ctwm to 3.8anb5 [wiz 2010-05-15]
 	Added databases/p5-RRD-Simple version 1.44 [pettai 2010-05-15]
+	Updated devel/boost-jam to 1.43.0 [adam 2010-05-15]
+	Updated devel/boost-headers to 1.43.0 [adam 2010-05-15]
+	Updated devel/boost-libs to 1.43.0 [adam 2010-05-15]
+	Updated devel/boost-docs to 1.43.0 [adam 2010-05-15]
+	Updated devel/boost-build to 1.43.0 [adam 2010-05-15]
+	Updated devel/boost-python to 1.43.0 [adam 2010-05-15]
+	Updated meta-pkgs/boost to 1.43.0 [adam 2010-05-15]
+	Updated graphics/enblend-enfuse to 4.0nb2 [adam 2010-05-15]
+	Updated archivers/zziplib to 0.13.59 [adam 2010-05-15]
+	Updated audio/bmpx to 0.40.14nb3 [adam 2010-05-15]
+	Updated math/xylib to 0.6 [adam 2010-05-15]
+	Updated math/fityk to 0.9.2 [adam 2010-05-15]
 	Updated www/bozohttpd to 20100512 [mrg 2010-05-15]
+	Updated devel/libthrift to 0.2.0nb1 [adam 2010-05-15]
+	Updated devel/xsd to 3.2.0nb1 [adam 2010-05-15]
+	Updated games/pokerth to 0.7.1nb4 [adam 2010-05-15]
+	Updated games/wesnoth to 1.6.4nb3 [adam 2010-05-15]
+	Updated graphics/exiv2-organize to 0.19nb1 [adam 2010-05-15]
+	Updated graphics/hugin to 2010.0.0nb1 [adam 2010-05-15]
+	Updated ham/gnuradio-core to 3.2nb3 [adam 2010-05-15]
+	Updated mail/akonadi to 1.3.1nb1 [adam 2010-05-15]
+	Updated misc/kdepimlibs4 to 4.4.3nb1 [adam 2010-05-15]
+	Updated multimedia/mkvtoolnix to 2.9.8nb2 [adam 2010-05-15]
