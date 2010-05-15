@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/12/10 06:10:02 obache Exp $
+$NetBSD: distinfo,v 1.4 2010/05/15 09:11:40 adam Exp $
 
-SHA1 (AlephOne-20091015.tar.bz2) = 8e87ff166ca5c973921337a75ffc9fcc7cdeb9ae
-RMD160 (AlephOne-20091015.tar.bz2) = 046fc5fde1d89250e8cc6c30f74f561780398c54
-Size (AlephOne-20091015.tar.bz2) = 3147394 bytes
+SHA1 (AlephOne-20100424.tar.bz2) = 3d3989703ccb1b5e8a6b6ab0028956f433e4f846
+RMD160 (AlephOne-20100424.tar.bz2) = cc6e0491b0aa7febd854c560c5df56c0a660c757
+Size (AlephOne-20100424.tar.bz2) = 3180896 bytes
