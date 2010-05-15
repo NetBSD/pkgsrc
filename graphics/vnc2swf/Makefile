@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/05/15 13:12:19 obache Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -9,6 +9,7 @@ MASTER_SITES=		http://www.unixuser.org/~euske/vnc2swf/
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.unixuser.org/~euske/vnc2swf/
 COMMENT=		Record vnc session as flash movie
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
