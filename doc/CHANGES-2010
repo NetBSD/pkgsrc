@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1896 2010/05/15 05:54:19 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1897 2010/05/15 05:55:40 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2420,3 +2420,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated parallel/openmpi to 1.4.2 [asau 2010-05-15]
 	Updated wm/ctwm to 3.8anb5 [wiz 2010-05-15]
 	Added databases/p5-RRD-Simple version 1.44 [pettai 2010-05-15]
+	Updated net/miredo to 1.1.7 [pettai 2010-05-15]
