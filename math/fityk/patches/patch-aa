@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/12/11 20:44:38 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/15 07:12:00 adam Exp $
 
---- src/cli/main.cpp.orig	2009-06-22 13:55:54.000000000 +0200
+--- src/cli/main.cpp.orig	2010-05-05 22:45:31.000000000 +0000
 +++ src/cli/main.cpp
-@@ -397,7 +397,9 @@ RlHistoryManager::~RlHistoryManager()
+@@ -410,7 +410,9 @@ RlHistoryManager::~RlHistoryManager()
          if (hist_file_size <= 0)
              hist_file_size = 500;
          write_history (hist_file.c_str());

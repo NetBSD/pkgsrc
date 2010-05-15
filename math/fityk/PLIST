@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/11 20:44:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/15 07:12:00 adam Exp $
 bin/cfityk
 bin/fityk
 include/fityk.h
@@ -6,10 +6,13 @@ lib/libfityk.la
 man/man1/fityk.1
 share/applications/fityk.desktop
 share/fityk/html/_images/fityk076.png
+share/fityk/html/_images/math/150d0ed7bec340267e1b148159a2e70ffa5983a7.png
 share/fityk/html/_images/math/19f15eacccc345c3179259320491956f3f23887a.png
 share/fityk/html/_images/math/1ab39d761413804680d26d972381f028001562f5.png
+share/fityk/html/_images/math/1f9dde26fcc951cb30c787bb39043e4354b9b367.png
 share/fityk/html/_images/math/23decadd8b245289f5fa993f2c99e0ac9cff56dc.png
 share/fityk/html/_images/math/349202f044a9aca8885d8084005ea099f1816b94.png
+share/fityk/html/_images/math/38b394ef8f2ecd34817add552d9daa3fe8b9e017.png
 share/fityk/html/_images/math/412787c048e28774dc63fc27db42dc52ca858de7.png
 share/fityk/html/_images/math/441e7ddea6580ae19be0583f35b648340340f789.png
 share/fityk/html/_images/math/486938d1819df5972cb80ef2d101517b20412366.png
@@ -18,9 +21,9 @@ share/fityk/html/_images/math/572b65ebc3f438b176b4ca4a890799f2f72564af.png
 share/fityk/html/_images/math/5e97a8af68fbc8e357d3ee0eba452022b06c1875.png
 share/fityk/html/_images/math/61c594c97b61f72af93af4e61894b3f16a3bbb30.png
 share/fityk/html/_images/math/695f416425dbcafe8c762a1e8c533023350a525d.png
-share/fityk/html/_images/math/6e4754d11ef093459abaf1935c69be98b7cf1430.png
 share/fityk/html/_images/math/707fc7dbf98d8f4f39c6bdf3f6c025ed948789c9.png
 share/fityk/html/_images/math/727873d2cbeda3d30f41bee18cb2bf5ea1071fa1.png
+share/fityk/html/_images/math/741fb9098efcb98055f467f87630a5d0ca599b6b.png
 share/fityk/html/_images/math/7508455f7c089e149392451dec57d771370d63ce.png
 share/fityk/html/_images/math/7532b41a34c9ca592694135d1de65eeb8d9ce036.png
 share/fityk/html/_images/math/7567e40901ed423f42f5fc972bca0fd2d311ec40.png
@@ -32,17 +35,21 @@ share/fityk/html/_images/math/9f4a323840470c45eb00c5896ba579edc0f0799f.png
 share/fityk/html/_images/math/9fabdcba50c720ea1ae42cd0b4f1d3eb5f367e56.png
 share/fityk/html/_images/math/a1f49d0ef1ed40eddc5de7055dc1378db1e4a95c.png
 share/fityk/html/_images/math/a61c1e51680e27d35d05bebed87d474972fc70bd.png
+share/fityk/html/_images/math/b57aa88ab6df026b38afcb2ab1261d9a05d36bf5.png
+share/fityk/html/_images/math/b72439b28d639f1999aeecd537d21df605ad8db8.png
 share/fityk/html/_images/math/bcdaf43e7130e8f85d7721440139a9481b23e631.png
+share/fityk/html/_images/math/bea4d576937a04ec200b1037fc8ee33e8f744cb1.png
 share/fityk/html/_images/math/c104a975652392e8192a26551dc776a5fbdcf9c7.png
+share/fityk/html/_images/math/c1bc1d463e6642b69aecd742fefeb4bce4bd3d52.png
 share/fityk/html/_images/math/c2ec895a1a42f04814ac1e370c4b8ca8fb702167.png
 share/fityk/html/_images/math/ce4588fd900d02afcbd260bc07f54cce49a7dc4a.png
 share/fityk/html/_images/math/d3d29774850d1fa81d750fef3ed9b65ee66c524e.png
 share/fityk/html/_images/math/d3e7d7cd926970086d34700ac3f979eac398132a.png
 share/fityk/html/_images/math/d953af3188b3c252a5220e76255e375ee0afaf07.png
-share/fityk/html/_images/math/db7ec4a5b3fa9a0f1eaefb781da25807d831f2c5.png
+share/fityk/html/_images/math/db9d47c742259fffb7665882158a7b507cb9f052.png
+share/fityk/html/_images/math/deaf305680f8dc36524842ef15f13f33789dbbd4.png
 share/fityk/html/_images/math/ee5c7c921b3334f6ecf58c241eeea42acf0ce71e.png
 share/fityk/html/_images/math/fa35d9fc104207e09a712110ac81612c5b279a6c.png
-share/fityk/html/_images/project-support.jpg
 share/fityk/html/_sources/appendix.txt
 share/fityk/html/_sources/extensions.txt
 share/fityk/html/_sources/fityk-manual.txt
@@ -64,6 +71,7 @@ share/fityk/html/_static/plus.png
 share/fityk/html/_static/pygments.css
 share/fityk/html/_static/searchtools.js
 share/fityk/html/_static/sphinxdoc.css
+share/fityk/html/_static/underscore.js
 share/fityk/html/_static/unipress-button.png
 share/fityk/html/_static/wxwidgets_powered.png
 share/fityk/html/appendix.html
