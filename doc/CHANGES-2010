@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1904 2010/05/15 20:27:15 gls Exp $
+$NetBSD: CHANGES-2010,v 1.1905 2010/05/15 20:29:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2449,3 +2449,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/alephone to 20100424 [adam 2010-05-15]
 	Updated graphics/vnc2swf to 0.5.0nb4 [obache 2010-05-15]
 	Updated textproc/asciidoc to 8.5.3 [gls 2010-05-15]
+	Updated net/wireshark to 1.2.8nb1 [tron 2010-05-15]
