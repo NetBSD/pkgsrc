@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2010/01/27 14:45:11 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.4 2010/05/15 07:25:32 adam Exp $
 
-DISTNAME=		exiv2-0.19
-PKGNAME=		exiv2-organize-0.19
-CATEGORIES=		graphics
-MASTER_SITES=		http://www.exiv2.org/
+DISTNAME=	exiv2-0.19
+PKGNAME=	exiv2-organize-0.19
+PKGREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.exiv2.org/
 
-MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://www.exiv2.org/
-COMMENT=		Image metadata manipulation
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	gdt@NetBSD.org
+HOMEPAGE=	http://www.exiv2.org/
+COMMENT=	Image metadata manipulation
+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
