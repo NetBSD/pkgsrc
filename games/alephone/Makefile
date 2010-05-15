@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/01/18 09:58:50 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.11 2010/05/15 09:11:40 adam Exp $
 
-DISTNAME=	AlephOne-20091015
+DISTNAME=	AlephOne-20100424
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,13 +13,16 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+
 INSTALLATION_DIRS=	share/doc/AlephOne
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/AlephOne/
 
+.include "../../archivers/zziplib/buildlink3.mk"
 .include "../../audio/SDL_sound/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.6
 .include "../../devel/SDL/buildlink3.mk"
