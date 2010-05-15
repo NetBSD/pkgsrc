@@ -1,16 +1,13 @@
-$NetBSD: patch-bb,v 1.2 2009/11/29 20:40:08 sno Exp $
+$NetBSD: patch-bb,v 1.3 2010/05/15 06:37:03 adam Exp $
 
-replacing explicit --export-dynamic by ${EXPORT_SYMBOLS_LDFLAGS}
-for non-gnu-ld
-
---- configure.ac.orig	2009-06-27 18:28:16.000000000 +0000
-+++ configure.ac	2009-11-29 20:30:35.000000000 +0000
-@@ -288,7 +288,7 @@
- 
-     if ".$can_build_shared" = .no
-     then ZZIPLIB_LDFLAGS=""
--    else ZZIPLIB_LDFLAGS="--export-dynamic"
-+    else ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
-     fi
-     RESOLVES=' # '
-   ;;
+--- configure.ac.orig	2010-03-29 19:24:17.000000000 +0000
++++ configure.ac
+@@ -279,7 +279,7 @@ AC_SUBST(ZIPTESTS)
+ # ---------------------------------------------------------------
+ AC_MSG_CHECKING([link options])
+ ZZIPLIB_LDFLAGS=""
+-test ".$can_build_shared" != ".no" && ZZIPLIB_LDFLAGS="--export-dynamic"
++test ".$can_build_shared" != ".no" && ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+ RESOLVES=" # "
+ case "$host_os" in mingw*)
+     ZZIPLIB_LDFLAGS="-no-undefined -export-all-symbols -mconsole"

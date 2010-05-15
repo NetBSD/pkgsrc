@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/07/26 10:29:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/05/15 06:37:03 adam Exp $
 bin/unzip-mem
 bin/unzzip
 bin/unzzipcat
@@ -31,6 +31,7 @@ include/zzip/types.h
 include/zzip/wrap.h
 include/zzip/write.h
 include/zzip/zzip.h
+include/zzip/zzip32.h
 include/zziplib.h
 lib/libzzip.la
 lib/libzzipfseeko.la
