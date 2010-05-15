@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:17:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/05/15 20:23:38 gls Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -6,6 +6,7 @@ man/man1/asciidoc.1
 share/asciidoc/asciidoc.conf
 share/asciidoc/docbook-xsl/chunked.xsl
 share/asciidoc/docbook-xsl/common.xsl
+share/asciidoc/docbook-xsl/epub.xsl
 share/asciidoc/docbook-xsl/fo.xsl
 share/asciidoc/docbook-xsl/htmlhelp.xsl
 share/asciidoc/docbook-xsl/manpage.xsl
@@ -54,8 +55,16 @@ share/asciidoc/images/icons/up.png
 share/asciidoc/images/icons/warning.png
 share/asciidoc/javascripts/ASCIIMathML.js
 share/asciidoc/javascripts/LaTeXMathML.js
+share/asciidoc/javascripts/asciidoc-xhtml11.js
 share/asciidoc/javascripts/toc.js
+share/asciidoc/lang-de.conf
+share/asciidoc/lang-en.conf
 share/asciidoc/lang-es.conf
+share/asciidoc/lang-fr.conf
+share/asciidoc/lang-hu.conf
+share/asciidoc/lang-it.conf
+share/asciidoc/lang-pt-BR.conf
+share/asciidoc/lang-ru.conf
 share/asciidoc/latex.conf
 share/asciidoc/stylesheets/docbook-xsl.css
 share/asciidoc/stylesheets/xhtml11-manpage.css
