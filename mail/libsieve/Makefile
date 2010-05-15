@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/11/13 04:41:00 obache Exp $
+# $NetBSD: Makefile,v 1.12 2010/05/15 12:52:08 obache Exp $
 #
 
 DISTNAME=		libsieve-2.2.7
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libsieve/}
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://libsieve.sourceforge.net/
 COMMENT=		Library for parsing, sorting and filtering mail
+LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
