@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/01/18 09:59:12 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2010/05/15 07:12:00 adam Exp $
 
-DISTNAME=	fityk-0.8.9
-PKGREVISION=	1
+DISTNAME=	fityk-0.9.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fityk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,16 +8,19 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fityk.sourceforge.net/
 COMMENT=	Peak fitting software
-#LICENSE=	LICENSE
+LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_DIRS+=	xdg-1.1
-PKG_DESTDIR_SUPPORT= user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+# XXX: xyconvert requires wxWidgets >= 2.9
+CONFIGURE_ARGS+=	--disable-xyconvert
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../math/xylib/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
