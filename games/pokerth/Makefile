@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2010/01/18 09:58:53 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2010/05/15 07:22:15 adam Exp $
 
 DISTNAME=	PokerTH-0.7.1-src
-PKGNAME=        pokerth-0.7.1
-PKGREVISION=	3
+PKGNAME=	pokerth-0.7.1
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pokerth/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://pokerth.sourceforge.net/
-COMMENT=        Texas Holdem poker with online play
+COMMENT=	Texas Holdem poker with online play
 
 USE_TOOLS=	gmake
 USE_LIBTOOL=	yes
@@ -32,13 +31,13 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pokerth.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_MAN} ${WRKSRC}/docs/pokerth.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
