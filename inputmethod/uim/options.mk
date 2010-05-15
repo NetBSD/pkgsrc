@@ -1,28 +1,28 @@
-# $NetBSD: options.mk,v 1.19 2010/02/15 13:56:17 obache Exp $
+# $NetBSD: options.mk,v 1.20 2010/05/15 07:05:57 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 #PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime sj3 uim-fep wnn xim
 PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime sj3 uim-fep xim
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
-PKG_OPTIONS_GROUP.kde=	kde kde4
-PKG_OPTIONS_GROUP.qt=	qt qt4
+PKG_OPTIONS_GROUP.kde=	kde kde3
+PKG_OPTIONS_GROUP.qt=	qt qt3
 PKG_SUGGESTED_OPTIONS=	anthy canna gtk uim-fep xim
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mqt4)
-.  if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
-PKG_FAIL_REASON+=	"'qt4' conflict with 'qt' or 'kde' option"
+.if !empty(PKG_OPTIONS:Mqt)
+.  if !empty(PKG_OPTIONS:Mqt3) || !empty(PKG_OPTIONS:Mkde3)
+PKG_FAIL_REASON+=	"'qt' conflict with 'qt3' or 'kde3' option"
 .  endif
 .endif
-.if !empty(PKG_OPTIONS:Mqt)
-.  if !empty(PKG_OPTIONS:Mqt4) || !empty(PKG_OPTIONS:Mkde4)
-PKG_FAIL_REASON+=	"'qt' conflict with 'qt4' or 'kde4' option"
+.if !empty(PKG_OPTIONS:Mqt3)
+.  if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
+PKG_FAIL_REASON+=	"'qt3' conflict with 'qt' or 'kde' option"
 .  endif
 .endif
 
 PLIST_VARS+=		helperdata uim-dict-gtk fep
-PLIST_VARS+=		anthy canna gnome gtk kde kde4 m17nlib prime qt qt4 sj3 wnn xim
+PLIST_VARS+=		anthy canna gnome gtk kde kde3 m17nlib prime qt qt3 sj3 wnn xim
 
 .if !empty(PKG_OPTIONS:Mxim)
 .include "../../x11/libX11/buildlink3.mk"
@@ -95,18 +95,18 @@ PLIST.gtk=		yes
 CONFIGURE_ARGS+=	--without-gtk2
 .endif
 
-.if !empty(PKG_OPTIONS:Mkde)
+.if !empty(PKG_OPTIONS:Mkde3)
 .  include "../../x11/kdelibs3/buildlink3.mk"
 .  include "../../x11/qt3-libs/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-kde-applet
-PLIST.kde=		yes
+PLIST.kde3=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mkde4)
+.if !empty(PKG_OPTIONS:Mkde)
 .  include "../../x11/kdelibs4/buildlink3.mk"
 .  include "../../x11/qt4-libs/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-kde4-applet
-PLIST.kde4=		yes
+PLIST.kde=		yes
 .else
 CONFIGURE_ARGS+=	--disable-kde4-applet
 .endif
@@ -122,20 +122,20 @@ CHECK_FILES_SKIP+=	${PREFIX}/share/uim/pixmaps/m17n-.*\.png
 CONFIGURE_ARGS+=	--without-m17nlib
 .endif
 
-.if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
+.if !empty(PKG_OPTIONS:Mqt3) || !empty(PKG_OPTIONS:Mkde3)
 .  include "../../x11/qt3-libs/buildlink3.mk"
 .  include "../../x11/qt3-tools/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-qt CXXFLAGS=-lc
 PLIST.helperdata=	yes
-PLIST.qt=		yes
+PLIST.qt3=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mqt4) || !empty(PKG_OPTIONS:Mkde4)
+.if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
 .  include "../../x11/qt4-libs/buildlink3.mk"
 .  include "../../x11/qt4-tools/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-qt4 --with-qt4-immodule
 PLIST.helperdata=	yes
-PLIST.qt4=		yes
+PLIST.qt=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mprime)
