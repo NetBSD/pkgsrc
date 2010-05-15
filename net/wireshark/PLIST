@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/04/08 10:03:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/05/15 20:27:28 tron Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -46,6 +46,7 @@ share/wireshark/COPYING
 share/wireshark/capinfos.html
 share/wireshark/cfilters
 share/wireshark/colorfilters
+${PLIST.lua}share/wireshark/console.lua
 share/wireshark/dfilters
 share/wireshark/diameter/Ericsson.xml
 share/wireshark/diameter/TGPPGmb.xml
@@ -63,6 +64,7 @@ share/wireshark/diameter/mobileipv6.xml
 share/wireshark/diameter/nasreq.xml
 share/wireshark/diameter/sip.xml
 share/wireshark/diameter/sunping.xml
+${PLIST.lua}share/wireshark/dtd_gen.lua
 share/wireshark/dtds/dc.dtd
 share/wireshark/dtds/itunes.dtd
 share/wireshark/dtds/mscml.dtd
@@ -85,6 +87,7 @@ share/wireshark/help/getting_started.txt
 share/wireshark/help/overview.txt
 share/wireshark/help/toc
 share/wireshark/idl2wrs.html
+${PLIST.lua}share/wireshark/init.lua
 share/wireshark/ipmap.html
 share/wireshark/manuf
 share/wireshark/mergecap.html
