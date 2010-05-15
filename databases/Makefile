@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.331 2010/05/07 06:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.332 2010/05/15 06:03:32 pettai Exp $
 #
 
 COMMENT=	Databases
@@ -151,6 +151,7 @@ SUBDIR+=	p5-Net-MySQL
 SUBDIR+=	p5-ORLite
 SUBDIR+=	p5-ORLite-Migrate
 SUBDIR+=	p5-Palm
+SUBDIR+=	p5-RRD-Simple
 SUBDIR+=	p5-Rose-DB
 SUBDIR+=	p5-Rose-DB-Object
 SUBDIR+=	p5-Rose-DBx-AutoReconnect
