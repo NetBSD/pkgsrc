@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/16 10:22:37 adam Exp $
+
+--- Makefile.in.orig	2010-01-19 04:55:01.000000000 +0000
++++ Makefile.in
+@@ -178,7 +178,7 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = zlib/src libpng/src libtiff/src libjpeg/src vigra/src/impex zthread/src libsurf panomatic
++SUBDIRS = vigra/src/impex zthread/src libsurf panomatic
+ all: all-recursive
+ 
+ .SUFFIXES:
