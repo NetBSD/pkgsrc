@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.555 2010/05/01 20:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.556 2010/05/16 10:25:59 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -288,6 +288,7 @@ SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Template-GD
 SUBDIR+=	p5-cairo
 SUBDIR+=	p5-clutter
+SUBDIR+=	panomatic
 SUBDIR+=	pdiff
 SUBDIR+=	pear-Image_Canvas
 SUBDIR+=	pear-Image_Color
