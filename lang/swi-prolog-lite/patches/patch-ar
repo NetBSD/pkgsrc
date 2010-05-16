@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.1 2010/05/16 18:46:11 asau Exp $
+
+Use installed swipl-ld wrapper.
+
+--- packages/swipl-ld.sh.in.orig	2010-05-07 00:13:28.000000000 +0400
++++ packages/swipl-ld.sh.in	2010-05-16 18:36:32.000000000 +0400
+@@ -21,4 +21,4 @@
+ fi
+ export @DLLIBVAR@
+ 
+-$bdir/swipl-ld -pl $bdir/$PL "$@"
++swipl-ld -pl $bdir/$PL "$@"
