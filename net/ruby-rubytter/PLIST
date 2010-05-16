@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/02 12:10:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/16 11:52:35 obache Exp $
 ${GEM_HOME}/cache/rubytter-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/README.rdoc
@@ -15,11 +15,14 @@ ${GEM_LIBDIR}/examples/replies.rb
 ${GEM_LIBDIR}/examples/search.rb
 ${GEM_LIBDIR}/examples/update_status.rb
 ${GEM_LIBDIR}/examples/use_oauth.rb
+${GEM_LIBDIR}/examples/use_xauth.rb
 ${GEM_LIBDIR}/examples/user.rb
 ${GEM_LIBDIR}/lib/rubytter.rb
 ${GEM_LIBDIR}/lib/rubytter/connection.rb
 ${GEM_LIBDIR}/lib/rubytter/core_ext.rb
+${GEM_LIBDIR}/lib/rubytter/oauth.rb
 ${GEM_LIBDIR}/lib/rubytter/oauth_rubytter.rb
+${GEM_LIBDIR}/spec/rubytter/oauth_spec.rb
 ${GEM_LIBDIR}/spec/rubytter_spec.rb
 ${GEM_LIBDIR}/spec/search.json
 ${GEM_LIBDIR}/spec/spec_helper.rb
