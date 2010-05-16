@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1914 2010/05/16 12:05:29 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1915 2010/05/16 12:34:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2459,3 +2459,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/ruby-json-pure to 1.4.3 [obache 2010-05-16]
 	Updated net/ruby-rubytter to 1.3.2 [obache 2010-05-16]
 	Updated www/termtter to 1.8.0 [obache 2010-05-16]
+	Added time/p5-Time-Elapsed version 0.29 [abs 2010-05-16]
+	Added devel/p5-IPC-DirQueue version 1.0 [abs 2010-05-16]
+	Added devel/p5-Modern-Perl version 1.03 [abs 2010-05-16]
+	Added devel/p5-MooseX-FollowPBP version 0.02 [abs 2010-05-16]
