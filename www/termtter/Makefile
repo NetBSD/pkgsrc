@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/16 12:05:17 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/16 12:11:32 obache Exp $
 
 DISTNAME=	termtter-1.8.0
 CATEGORIES=	www
@@ -6,6 +6,7 @@ CATEGORIES=	www
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://termtter.org/
 COMMENT=	Terminal based Twitter client
+LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-highline>=1.5.0:../../devel/ruby-highline
 DEPENDS+=	${RUBY_PKGPREFIX}-readline-[0-9]*:../../devel/ruby-readline
