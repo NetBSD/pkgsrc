@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1912 2010/05/16 11:51:13 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1913 2010/05/16 11:52:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2457,3 +2457,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/panomatic version 0.9.4 [adam 2010-05-16]
 	Added security/ruby-oauth version 0.4.0 [obache 2010-05-16]
 	Updated textproc/ruby-json-pure to 1.4.3 [obache 2010-05-16]
+	Updated net/ruby-rubytter to 1.3.2 [obache 2010-05-16]
