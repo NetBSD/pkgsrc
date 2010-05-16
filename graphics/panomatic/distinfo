@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/16 10:22:37 adam Exp $
+
+SHA1 (panomatic-0.9.4-src.tar.bz2) = cc0a48d81d090ec90e134afba4b9e700a5843f09
+RMD160 (panomatic-0.9.4-src.tar.bz2) = 14ad37420733f950b8f7640c2e7f0b3fe593af89
+Size (panomatic-0.9.4-src.tar.bz2) = 1598683 bytes
+SHA1 (patch-aa) = 0c30ac34a9f678083c0bc3353f0171c0d3f5bdfa
+SHA1 (patch-ab) = 316d23c740ee23e35b7b2f4ae8c0cc1b87c47ccb
+SHA1 (patch-ac) = 2fa2168a257b60ae194675e3b0abd00bf6c7799b
+SHA1 (patch-ba) = 65fd25c9ae6fd22046a050687154940ab41849b7
