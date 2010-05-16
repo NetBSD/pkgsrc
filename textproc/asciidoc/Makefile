@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/05/15 20:23:38 gls Exp $
+# $NetBSD: Makefile,v 1.21 2010/05/16 17:16:27 gls Exp $
 #
 
 DISTNAME=		asciidoc-8.5.3
@@ -26,7 +26,7 @@ NO_BUILD=		yes
 SUBST_CLASSES+=		ad
 SUBST_STAGE.ad=		pre-configure
 SUBST_MESSAGE.ad=	Fixing hard-coded config file paths.
-SUBST_FILES.ad=		a2x asciidoc.py
+SUBST_FILES.ad=		a2x.py asciidoc.py
 SUBST_SED.ad=		-e 's,^\(CONF_DIR\).*=.*,\1="${PREFIX}/share/asciidoc",'
 
 SUBST_CLASSES+=		ae
