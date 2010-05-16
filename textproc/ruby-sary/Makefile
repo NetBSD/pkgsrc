@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/10/29 02:20:31 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/16 00:37:37 obache Exp $
 #
 
 DISTNAME=	sary-ruby-1.2.0
@@ -10,6 +10,7 @@ MASTER_SITES=	http://sary.sourceforge.net/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://sary.sourceforge.net/
 COMMENT=	Ruby Binding of Sary
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
