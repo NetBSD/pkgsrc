@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/15 14:08:49 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/16 12:04:03 asau Exp $
 bin/GMXRC
 bin/GMXRC.bash
 bin/GMXRC.csh
@@ -246,9 +246,9 @@ include/gromacs/writeps.h
 include/gromacs/xdrf.h
 include/gromacs/xtcio.h
 include/gromacs/xvgr.h
-lib/libgmx_d.la
-lib/libgmxana_d.la
-lib/libmd_d.la
+lib/libgmx${MPI}_d.la
+lib/libgmxana${MPI}_d.la
+lib/libmd${MPI}_d.la
 man/man1/anadock.1
 man/man1/do_dssp.1
 man/man1/editconf.1
