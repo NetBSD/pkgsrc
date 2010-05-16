@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/10 16:43:58 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/16 01:11:46 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -7,6 +7,7 @@ DISTNAME=	mecab-ipadic-2.7.0-20070610
 PKGNAME=	mecab-ipadic-2.7.0.20070610
 
 COMMENT=	Japanese Morphological Dictionary for MeCab
+#LICENSE=	# See ${WRKSRC}/COPYING
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
