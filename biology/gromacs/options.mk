@@ -1,12 +1,21 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/03/15 14:08:49 asau Exp $
+# $NetBSD: options.mk,v 1.2 2010/05/16 12:04:03 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gromacs
-PKG_SUPPORTED_OPTIONS+=		x11
-PKG_SUGGESTED_OPTIONS+=		x11
+PKG_SUPPORTED_OPTIONS+=		mpi x11
+PKG_SUGGESTED_OPTIONS+=		mpi x11
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS=	x11
+
+# MPI support:
+.if !empty(PKG_OPTIONS:Mmpi)
+CONFIGURE_ARGS+=	--enable-mpi
+PLIST_SUBST+=		MPI=_mpi
+.include "../../mk/mpi.buildlink3.mk"
+.else
+PLIST_SUBST+=		MPI=
+.endif
 
 # X support:
 .if !empty(PKG_OPTIONS:Mx11)
