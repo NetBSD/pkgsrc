@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1915 2010/05/16 12:34:46 abs Exp $
+$NetBSD: CHANGES-2010,v 1.1916 2010/05/16 12:35:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2463,3 +2463,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-IPC-DirQueue version 1.0 [abs 2010-05-16]
 	Added devel/p5-Modern-Perl version 1.03 [abs 2010-05-16]
 	Added devel/p5-MooseX-FollowPBP version 0.02 [abs 2010-05-16]
+	Updated www/ikiwiki to 3.20100515 [schmonz 2010-05-16]
