@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1913 2010/05/16 11:52:48 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1914 2010/05/16 12:05:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2458,3 +2458,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added security/ruby-oauth version 0.4.0 [obache 2010-05-16]
 	Updated textproc/ruby-json-pure to 1.4.3 [obache 2010-05-16]
 	Updated net/ruby-rubytter to 1.3.2 [obache 2010-05-16]
+	Updated www/termtter to 1.8.0 [obache 2010-05-16]
