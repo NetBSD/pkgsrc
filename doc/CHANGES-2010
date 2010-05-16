@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1917 2010/05/16 15:08:07 heinz Exp $
+$NetBSD: CHANGES-2010,v 1.1918 2010/05/16 19:13:32 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2465,3 +2465,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-MooseX-FollowPBP version 0.02 [abs 2010-05-16]
 	Updated www/ikiwiki to 3.20100515 [schmonz 2010-05-16]
 	Updated misc/esniper to 2.23.0 [heinz 2010-05-16]
+	Updated lang/swi-prolog to 5.11.0 [asau 2010-05-16]
