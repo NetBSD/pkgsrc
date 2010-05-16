@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1911 2010/05/16 11:46:13 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1912 2010/05/16 11:51:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2456,3 +2456,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/ruby-notify version 0.2.1 [obache 2010-05-16]
 	Added graphics/panomatic version 0.9.4 [adam 2010-05-16]
 	Added security/ruby-oauth version 0.4.0 [obache 2010-05-16]
+	Updated textproc/ruby-json-pure to 1.4.3 [obache 2010-05-16]
