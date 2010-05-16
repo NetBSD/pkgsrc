@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/07/14 15:53:20 hasso Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/16 05:28:48 adam Exp $
 bin/pokerth
 bin/pokerth_server
 lib/libpokerth_lib.a
@@ -258,8 +258,6 @@ share/pokerth/data/gfx/gui/table/danuxi1/radiobutton_pressed.png
 share/pokerth/data/gfx/gui/table/danuxi1/radiobutton_unchecked.png
 share/pokerth/data/gfx/gui/table/danuxi1/radiobutton_unchecked_hover.png
 share/pokerth/data/gfx/gui/table/danuxi1/smallblindPuck.png
-share/pokerth/data/gfx/gui/table/danuxi1/table.png
-share/pokerth/data/gfx/gui/table/danuxi1/toolboxbg.png
 share/pokerth/data/gfx/gui/table/danuxi1/table.png
 share/pokerth/data/gfx/gui/table/danuxi1/toolboxbg.png
 share/pokerth/data/gfx/gui/table/default/bigblindPuck.png
