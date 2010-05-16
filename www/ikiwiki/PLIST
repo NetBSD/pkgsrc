@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/04/27 13:15:46 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/05/16 12:35:09 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -119,6 +119,8 @@ share/ikiwiki/examples/softwaresite/templates/release.mdwn
 share/ikiwiki/javascript/ikiwiki/ikiwiki.js
 share/ikiwiki/javascript/ikiwiki/relativedate.js
 share/ikiwiki/javascript/ikiwiki/toggle.js
+share/ikiwiki/openid-selector/ikiwiki/openid/jquery.js
+share/ikiwiki/openid-selector/ikiwiki/openid/openid-jquery.js
 share/ikiwiki/po/cs/basewiki/ikiwiki.cs.po
 share/ikiwiki/po/cs/basewiki/ikiwiki/directive.cs.po
 share/ikiwiki/po/cs/basewiki/ikiwiki/formatting.cs.po
@@ -398,7 +400,7 @@ share/ikiwiki/templates/feedlink.tmpl
 share/ikiwiki/templates/googleform.tmpl
 share/ikiwiki/templates/inlinepage.tmpl
 share/ikiwiki/templates/microblog.tmpl
-share/ikiwiki/templates/misc.tmpl
+share/ikiwiki/templates/openid-selector.tmpl
 share/ikiwiki/templates/page.tmpl
 share/ikiwiki/templates/passwordmail.tmpl
 share/ikiwiki/templates/pocreatepage.tmpl
