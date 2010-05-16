@@ -1,0 +1,5 @@
+Modern Perl programs use several modules to enable additional
+features of Perl and of the CPAN. Instead of copying and pasting
+all of these use lines, instead write only one:
+
+    use Modern::Perl;
