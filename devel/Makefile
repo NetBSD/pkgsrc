@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1339 2010/05/11 12:12:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.1340 2010/05/16 12:33:24 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -709,6 +709,7 @@ SUBDIR+=	p5-IO-Util
 SUBDIR+=	p5-IO-Zlib
 SUBDIR+=	p5-IO-stringy
 SUBDIR+=	p5-IPC-Cmd
+SUBDIR+=	p5-IPC-DirQueue
 SUBDIR+=	p5-IPC-PubSub
 SUBDIR+=	p5-IPC-Run
 SUBDIR+=	p5-IPC-Run3
@@ -748,6 +749,7 @@ SUBDIR+=	p5-Method-Signatures-Simple
 SUBDIR+=	p5-Mixin-ExtraFields
 SUBDIR+=	p5-Mixin-ExtraFields-Param
 SUBDIR+=	p5-Mixin-Linewise
+SUBDIR+=	p5-Modern-Perl
 SUBDIR+=	p5-Module-Build
 SUBDIR+=	p5-Module-CPANTS-Analyse
 SUBDIR+=	p5-Module-CoreList
@@ -777,6 +779,7 @@ SUBDIR+=	p5-MooseX-ClassAttribute
 SUBDIR+=	p5-MooseX-ConfigFromFile
 SUBDIR+=	p5-MooseX-Declare
 SUBDIR+=	p5-MooseX-Emulate-Class-Accessor-Fast
+SUBDIR+=	p5-MooseX-FollowPBP
 SUBDIR+=	p5-MooseX-Getopt
 SUBDIR+=	p5-MooseX-InsideOut
 SUBDIR+=	p5-MooseX-LazyRequire
