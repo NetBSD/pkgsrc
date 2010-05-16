@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2010/05/08 09:05:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.55 2010/05/16 13:08:10 wiz Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -63,6 +63,9 @@ CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
 
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-smartalloc
+.endif
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-xattr
 .endif
 
 PTHREAD_OPTS+=		require
