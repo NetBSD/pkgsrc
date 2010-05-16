@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/04/15 13:03:21 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/16 00:46:34 obache Exp $
 #
 
 DISTNAME=	enma-1.1.0
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enma/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://enma.sourceforge.net/
 COMMENT=	Sender authentication milter supporting SPF and Sender ID
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
