@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/16 11:37:54 obache Exp $
+${GEM_HOME}/cache/notify-${PKGVERSION}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/notify.rb
+${GEM_LIBDIR}/lib/notify/growlnotify.rb
+${GEM_LIBDIR}/lib/notify/notify-send.rb
+${GEM_LIBDIR}/lib/notify/ruby-growl.rb
+${GEM_LIBDIR}/lib/notify/ruby_gntp.rb
+${GEM_LIBDIR}/sample.rb
+${GEM_HOME}/specifications/notify-${PKGVERSION}.gemspec
