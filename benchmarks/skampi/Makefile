@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/12/13 01:46:31 asau Exp $
+# $NetBSD: Makefile,v 1.24 2010/05/16 11:16:19 asau Exp $
 #
 
 DISTNAME=	skampi
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
 COMMENT=	MPI (Message Passing Interface) benchmarks
 LICENSE=	gnu-gpl-v2
-
-#DEPENDS+=	gnuplot>=3.7.1:../../graphics/gnuplot	# optional
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,6 +26,5 @@ do-install:
 	(cd ${WRKSRC} && pax -rw ski ${DESTDIR}${PREFIX}/share/skampi)
 	(cd ${WRKSRC} && pax -rw doc ${DESTDIR}${PREFIX}/share/skampi)
 
-.include "../../parallel/mpi-ch/buildlink3.mk"
-#.include "../../parallel/openmpi/buildlink3.mk"
+.include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
