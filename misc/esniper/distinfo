@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2010/01/22 20:15:00 heinz Exp $
+$NetBSD: distinfo,v 1.14.2.1 2010/05/16 23:14:25 tron Exp $
 
-SHA1 (esniper-2-22-0.tgz) = 191f6352d37adceffc59307676b1850858c8aa9c
-RMD160 (esniper-2-22-0.tgz) = 9b40a58b9b7db691dcfd89630b559fa9163976f6
-Size (esniper-2-22-0.tgz) = 126971 bytes
+SHA1 (esniper-2-23-0.tgz) = 8ef64a0966de4084f24f5471d19afbf11c9054f3
+RMD160 (esniper-2-23-0.tgz) = 116295e60ec29a01d5bb1e24dc4762ad70d71bac
+Size (esniper-2-23-0.tgz) = 127287 bytes
