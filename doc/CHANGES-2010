@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1906 2010/05/16 09:13:12 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1907 2010/05/16 09:42:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2451,3 +2451,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/asciidoc to 8.5.3 [gls 2010-05-15]
 	Updated net/wireshark to 1.2.8nb1 [tron 2010-05-15]
 	Updated textproc/ruby-json to 1.4.3 [obache 2010-05-16]
+	Updated www/typolight28-translations to 20100514 [taca 2010-05-16]
