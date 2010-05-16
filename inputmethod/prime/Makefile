@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/01/12 12:50:57 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/16 00:26:49 obache Exp $
 #
 
 DISTNAME=	prime-1.0.0.1
@@ -9,6 +9,7 @@ MASTER_SITES=	http://prime.sourceforge.jp/src/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/
 COMMENT=	Japanese PRedictive Input Method Editor
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
