@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/05/16 10:22:37 adam Exp $
+
+--- vigra/src/impex/Makefile.in.orig	2010-05-16 09:03:31.000000000 +0000
++++ vigra/src/impex/Makefile.in
+@@ -184,7 +184,7 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-INCLUDES = -I../../include -I../../../libtiff/include -I../../../libpng/include -I../../../libjpeg/include
++INCLUDES = -I../../include -I${PREFIX}/include
+ libvigra_impex_sources = \
+  auto_file.hxx \
+  bmp.cxx  \

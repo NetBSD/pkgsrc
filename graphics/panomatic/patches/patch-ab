@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/16 10:22:37 adam Exp $
+
+--- panomatic/Makefile.in.orig	2010-01-19 04:56:01.000000000 +0000
++++ panomatic/Makefile.in
+@@ -54,8 +54,7 @@ am_panomatic_OBJECTS = Homography.$(OBJE
+ 	TestCode.$(OBJEXT) Utils.$(OBJEXT) main.$(OBJEXT)
+ panomatic_OBJECTS = $(am_panomatic_OBJECTS)
+ panomatic_DEPENDENCIES = ../vigra/src/impex/libvigra_impex.a \
+-	../libtiff/src/libtiff.a ../libjpeg/src/libjpeg.a \
+-	../libpng/src/libpng.a ../zlib/src/libz.a ../libsurf/libsurf.a \
++	../libsurf/libsurf.a \
+ 	../zthread/src/libZThread.a
+ DEFAULT_INCLUDES = -I.@am__isrc@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+@@ -183,10 +182,7 @@ panomatic_SOURCES = \
+ 
+ panomatic_LDADD = \
+  ../vigra/src/impex/libvigra_impex.a \
+- ../libtiff/src/libtiff.a \
+- ../libjpeg/src/libjpeg.a \
+- ../libpng/src/libpng.a \
+- ../zlib/src/libz.a \
++ -ltiff -ljpeg -lpng -lz \
+  ../libsurf/libsurf.a \
+  ../zthread/src/libZThread.a \
+  @LINKER_OPTIONS@

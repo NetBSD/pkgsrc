@@ -1,0 +1,14 @@
+$NetBSD: patch-ba,v 1.1.1.1 2010/05/16 10:22:37 adam Exp $
+
+--- panomatic/tclap/ValueArg.h.orig	2009-06-20 12:28:28.912422729 +0200
++++ panomatic/tclap/ValueArg.h	2009-06-20 12:28:35.615429069 +0200
+@@ -28,6 +28,9 @@
+ 
+ #include <tclap/Arg.h>
+ #include <tclap/Constraint.h>
++#if __GNUC__ == 4 && __GNUC_MINOR__ > 3 
++#include <cstdio>
++#endif
+ 
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>

@@ -1,0 +1,7 @@
+Most of the time pan-o-matic is called from Hugin.
+Here are the instructions to use it:
+In Preferences > Autopano
+1. Select Autopano-SIFT
+2. Tick "Use alternative autopano-SIFT program"
+3. Choose path to the binary
+4. In Arguments, put: -o %o %i
