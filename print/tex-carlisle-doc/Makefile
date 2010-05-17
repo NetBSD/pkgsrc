@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/05/10 09:33:24 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/17 05:23:10 minskim Exp $
 # TeX Live Revision 18137
 
 DISTNAME=	carlisle.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2009
-DIST_SUBDIR=	${PKGBASE}-18137
+PKGREVISION=	1
+DIST_SUBDIR=	${PKGBASE}-18137nb1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-carlisle
