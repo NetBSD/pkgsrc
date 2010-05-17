@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/05/17 17:54:25 drochner Exp $
 bin/libetpan-config
 include/libetpan.h
 include/libetpan/acl.h
@@ -136,6 +136,10 @@ include/libetpan/pop3driver_cached_message.h
 include/libetpan/pop3driver_message.h
 include/libetpan/pop3driver_types.h
 include/libetpan/pop3storage.h
+include/libetpan/quota.h
+include/libetpan/quota_parser.h
+include/libetpan/quota_sender.h
+include/libetpan/quota_types.h
 include/libetpan/uidplus.h
 include/libetpan/uidplus_types.h
 lib/libetpan.la
