@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2010/02/03 19:45:05 drochner Exp $
+$NetBSD: distinfo,v 1.11 2010/05/17 17:58:15 drochner Exp $
 
-SHA1 (vcalendar-2.0.7.tar.gz) = a3a7fdb414a9139f4fb459d696df0b3bfc6fcdc0
-RMD160 (vcalendar-2.0.7.tar.gz) = 802fbee7c8ec2e97ac63b4eb757fd3dce9609e2f
-Size (vcalendar-2.0.7.tar.gz) = 821302 bytes
+SHA1 (vcalendar-2.0.8.tar.gz) = 97b1e29e6ab40065e1cf36cbbb3c4ae9bb4930e5
+RMD160 (vcalendar-2.0.8.tar.gz) = b30207f8aeb976edfb1beaf2cb87d166065998e7
+Size (vcalendar-2.0.8.tar.gz) = 820452 bytes

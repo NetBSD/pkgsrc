@@ -1,0 +1,38 @@
+$NetBSD: patch-bc,v 1.1 2010/05/17 17:58:13 drochner Exp $
+
+--- src/plugins/pgpinline/pgpinline.c.orig	2009-02-23 16:55:51.000000000 +0000
++++ src/plugins/pgpinline/pgpinline.c
+@@ -583,9 +583,14 @@ static gboolean pgpinline_sign(MimeInfo 
+ 
+ 	/* get content node from message */
+ 	msgcontent = (MimeInfo *) mimeinfo->node->children->data;
+-	if (msgcontent->type == MIMETYPE_MULTIPART)
++	if (msgcontent->type == MIMETYPE_MULTIPART) {
++		if (!msgcontent->node->children) {
++			debug_print("msgcontent->node->children NULL, bailing\n");
++			privacy_set_error(_("Malformed message"));
++			return FALSE;
++		}
+ 		msgcontent = (MimeInfo *) msgcontent->node->children->data;
+-
++	}
+ 	/* get rid of quoted-printable or anything */
+ 	procmime_decode_content(msgcontent);
+ 
+@@ -768,9 +773,14 @@ static gboolean pgpinline_encrypt(MimeIn
+ 
+ 	/* get content node from message */
+ 	msgcontent = (MimeInfo *) mimeinfo->node->children->data;
+-	if (msgcontent->type == MIMETYPE_MULTIPART)
++	if (msgcontent->type == MIMETYPE_MULTIPART) {
++		if (!msgcontent->node->children) {
++			debug_print("msgcontent->node->children NULL, bailing\n");
++			privacy_set_error(_("Malformed message"));
++			return FALSE;
++		}
+ 		msgcontent = (MimeInfo *) msgcontent->node->children->data;
+-
++	}
+ 	/* get rid of quoted-printable or anything */
+ 	procmime_decode_content(msgcontent);
+ 
