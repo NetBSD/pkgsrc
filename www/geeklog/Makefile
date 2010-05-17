@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2010/02/19 19:58:38 joerg Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2010/05/17 22:38:02 tron Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
@@ -20,7 +19,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
 USE_TOOLS+=	pax
 
-VER=		1.6.1
+VER=		1.6.1sr1
 NO_BUILD=	YES
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
