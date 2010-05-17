@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1920 2010/05/17 05:14:18 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1921 2010/05/17 05:23:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2469,3 +2469,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-ldap to 0.9.10 [obache 2010-05-17]
 	Added print/tex-nopageno version 2009 [minskim 2010-05-17]
 	Added print/tex-nopageno-doc version 2009 [minskim 2010-05-17]
+	Updated print/tex-carlisle to 2009nb1 [minskim 2010-05-17]
+	Updated print/tex-carlisle-doc to 2009nb1 [minskim 2010-05-17]
