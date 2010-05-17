@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.409 2010/05/10 23:02:07 minskim Exp $
+# $NetBSD: Makefile,v 1.410 2010/05/17 05:14:18 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -392,6 +392,8 @@ SUBDIR+=	tex-needspace
 SUBDIR+=	tex-nextpage
 SUBDIR+=	tex-nomencl
 SUBDIR+=	tex-nomencl-doc
+SUBDIR+=	tex-nopageno
+SUBDIR+=	tex-nopageno-doc
 SUBDIR+=	tex-oberdiek
 SUBDIR+=	tex-oberdiek-doc
 SUBDIR+=	tex-ocrb
