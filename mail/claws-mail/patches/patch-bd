@@ -1,0 +1,23 @@
+$NetBSD: patch-bd,v 1.1 2010/05/17 17:58:13 drochner Exp $
+
+--- src/gtk/sslcertwindow.c.orig	2009-09-28 07:04:13.000000000 +0000
++++ src/gtk/sslcertwindow.c
+@@ -267,12 +267,15 @@ static gboolean sslcert_ask_hook(gpointe
+ {
+ 	SSLCertHookData *hookdata = (SSLCertHookData *)source;
+ 
+-	if (prefs_common.skip_ssl_cert_check)
+-		return TRUE;
+-
+ 	if (hookdata == NULL) {
+ 		return FALSE;
+ 	}
++	
++	if (prefs_common.skip_ssl_cert_check) {
++		hookdata->accept = TRUE;
++		return TRUE;
++	}
++
+ 	if (hookdata->old_cert == NULL) {
+ 		if (hookdata->expired)
+ 			hookdata->accept = sslcertwindow_ask_expired_cert(hookdata->cert);
