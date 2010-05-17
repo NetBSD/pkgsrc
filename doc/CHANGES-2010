@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1927 2010/05/17 18:28:54 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1928 2010/05/17 20:14:27 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2492,3 +2492,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/gst-plugins0.10-base to 0.10.29 [drochner 2010-05-17]
 	Updated multimedia/gstreamer0.10 to 0.10.29 [drochner 2010-05-17]
 	Updated parallel/mpi-ch to 1.2.1p1 [asau 2010-05-17]
+	Updated chat/irssi-icb to 0.14nb15 [sketch 2010-05-17]
