@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1929 2010/05/17 20:23:42 tez Exp $
+$NetBSD: CHANGES-2010,v 1.1930 2010/05/17 21:33:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated parallel/mpi-ch to 1.2.1p1 [asau 2010-05-17]
 	Updated chat/irssi-icb to 0.14nb15 [sketch 2010-05-17]
 	Updated graphics/dvipng to 1.12nb2 [tez 2010-05-17]
+	Updated print/tex-multirow-doc to 1.6nb1 [minskim 2010-05-17]
