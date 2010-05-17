@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2009/08/05 11:02:12 markd Exp $
+$NetBSD: patch-aa,v 1.7 2010/05/17 16:22:59 drochner Exp $
 
 --- setupext.py.orig	2008-12-10 14:53:21.000000000 +1300
 +++ setupext.py
-@@ -102,10 +102,10 @@ options = {'display_status': True,
-            'provide_configobj': 'auto',
-            'provide_traits': False,
+@@ -99,10 +99,10 @@ options = {'display_status': True,
+            'provide_pytz': 'auto',
+            'provide_dateutil': 'auto',
             'build_agg': True,
 -           'build_gtk': 'auto',
 -           'build_gtkagg': 'auto',
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.6 2009/08/05 11:02:12 markd Exp $
             'build_macosx': 'auto',
             'build_image': True,
             'build_windowing': True,
-@@ -325,11 +325,8 @@ def check_for_libpng():
+@@ -315,11 +315,8 @@ def check_for_libpng():
      return True
  
  def add_base_flags(module):
