@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/08 15:44:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/17 15:48:48 drochner Exp $
 bin/eric4
 bin/eric4-api
 bin/eric4-compare
@@ -47,6 +47,7 @@ ${PYSITELIB}/eric4/DTDs/Session-4.0.dtd
 ${PYSITELIB}/eric4/DTDs/Session-4.1.dtd
 ${PYSITELIB}/eric4/DTDs/Session-4.2.dtd
 ${PYSITELIB}/eric4/DTDs/Session-4.3.dtd
+${PYSITELIB}/eric4/DTDs/Session-4.4.dtd
 ${PYSITELIB}/eric4/DTDs/Shortcuts-3.5.dtd
 ${PYSITELIB}/eric4/DTDs/Shortcuts-3.6.dtd
 ${PYSITELIB}/eric4/DTDs/Tasks-3.7.dtd
