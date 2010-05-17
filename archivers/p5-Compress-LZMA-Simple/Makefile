@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:17:41 he Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/17 02:29:25 obache Exp $
 #
 
 DISTNAME=	Compress-LZMA-Simple-0.2
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Compress/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Compress-LZMA-Simple/
 COMMENT=	Perl interface of lzmalib
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
