@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/07 23:15:24 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/17 21:32:48 minskim Exp $
 
-SHA1 (tex-multirow-1.6/multirow.tar.lzma) = 68be4a663518b709494840cea52ddfbb4d38eb8f
-RMD160 (tex-multirow-1.6/multirow.tar.lzma) = a709aa4bd4896321df8b1a244f4452a233d8edbf
-Size (tex-multirow-1.6/multirow.tar.lzma) = 4736 bytes
+SHA1 (tex-multirow-17256/multirow.tar.xz) = 87a612487b99b028d47028cfa773d736e1ca0727
+RMD160 (tex-multirow-17256/multirow.tar.xz) = a09235bd2f85231253ea0bc61ffd54c422c699bc
+Size (tex-multirow-17256/multirow.tar.xz) = 4800 bytes
