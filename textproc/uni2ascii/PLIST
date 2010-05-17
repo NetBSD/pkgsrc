@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/17 22:27:26 morr Exp $
+bin/ascii2uni
+bin/uni2ascii
+man/man1/ascii2uni.1
+man/man1/uni2ascii.1
