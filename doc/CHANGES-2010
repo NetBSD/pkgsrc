@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1923 2010/05/17 15:32:05 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1924 2010/05/17 15:41:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2473,3 +2473,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-carlisle-doc to 2009nb1 [minskim 2010-05-17]
 	Updated emulators/qemu to 0.12.4 [tsutsui 2010-05-17]
 	Updated textproc/asciidoc to 8.5.3nb1 [wiz 2010-05-17]
+	Updated www/typolight28-translations to 20100516 [taca 2010-05-17]
