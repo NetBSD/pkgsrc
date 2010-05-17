@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2010/04/25 12:55:41 gson Exp $
+# $NetBSD: Makefile,v 1.67 2010/05/17 14:31:07 tsutsui Exp $
 #
 
-DISTNAME=		qemu-0.12.3
-PKGREVISION=		2
+DISTNAME=		qemu-0.12.4
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
 
@@ -70,20 +69,20 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
 UE_ARCHS+=		alpha arm armeb cris i386 m68k microblaze mips mipsel
 UE_ARCHS+=		nbd ppc ppc64 ppc64abi32 sh4 sh4eb sparc sparc32plus
-UE_ARCHS+=		sparc64 x86_64 
+UE_ARCHS+=		sparc64 x86_64
 
-.if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly) 
+.if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
 USER_EMUL=		i386 x86_64 sparc sparc64
 .elif !empty(OPSYS:MDarwin)
 USER_EMUL=		i386 x86_64 sparc sparc64 ppc
-.elif !empty(OPSYS:MLinux) 
+.elif !empty(OPSYS:MLinux)
 USER_EMUL=		${UE_ARCHS}
-PLIST.nbd=		Yes
+PLIST.nbd=		YES
 .endif
 
 PLIST_VARS+=		${UE_ARCHS} nbd
 .for _var_ in ${USER_EMUL}
-PLIST.${_var_}=		Yes
+PLIST.${_var_}=		YES
 .endfor
 
 post-install:
