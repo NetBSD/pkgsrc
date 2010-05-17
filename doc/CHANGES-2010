@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1919 2010/05/17 01:11:27 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1920 2010/05/17 05:14:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2467,3 +2467,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/esniper to 2.23.0 [heinz 2010-05-16]
 	Updated lang/swi-prolog to 5.11.0 [asau 2010-05-16]
 	Updated databases/ruby-ldap to 0.9.10 [obache 2010-05-17]
+	Added print/tex-nopageno version 2009 [minskim 2010-05-17]
+	Added print/tex-nopageno-doc version 2009 [minskim 2010-05-17]
