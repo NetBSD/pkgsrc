@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1931 2010/05/17 21:36:14 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1932 2010/05/17 22:03:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2496,3 +2496,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/dvipng to 1.12nb2 [tez 2010-05-17]
 	Updated print/tex-multirow-doc to 1.6nb1 [minskim 2010-05-17]
 	Added print/tex-needspace-doc version 1.3b [minskim 2010-05-17]
+	Updated print/tex-texlive-scripts to 2009.17976 [minskim 2010-05-17]
