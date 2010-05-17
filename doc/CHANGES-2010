@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1921 2010/05/17 05:23:56 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1922 2010/05/17 14:33:07 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2471,3 +2471,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-nopageno-doc version 2009 [minskim 2010-05-17]
 	Updated print/tex-carlisle to 2009nb1 [minskim 2010-05-17]
 	Updated print/tex-carlisle-doc to 2009nb1 [minskim 2010-05-17]
+	Updated emulators/qemu to 0.12.4 [tsutsui 2010-05-17]
