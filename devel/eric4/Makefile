@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/08 15:44:39 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/17 15:48:48 drochner Exp $
 #
 
-VERS=			4.4.4
+VERS=			4.4.4a
 DISTNAME=		eric4-${VERS}
 CATEGORIES=		devel
 MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/stable/${VERS}/
@@ -14,13 +14,13 @@ LICENSE=		gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=				yes
 
-
 PY_PATCHPLIST=			yes
 
 CONFIGURE_ARGS+=		-b ${PREFIX}/bin
 CONFIGURE_ARGS+=		-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=		-a ${PREFIX}/qt4/qsci/api
-.ifdef DESTDIR
+.include "../../mk/bsd.prefs.mk"
+.if defined(DESTDIR) && !empty(DESTDIR)
 CONFIGURE_ARGS+=		-i ${DESTDIR}
 .endif
 
