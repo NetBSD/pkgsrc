@@ -1,13 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.20 2010/01/17 12:02:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2010/05/17 17:54:25 drochner Exp $
 
 BUILDLINK_TREE+=	libetpan
 
 .if !defined(LIBETPAN_BUILDLINK3_MK)
 LIBETPAN_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libetpan+=	libetpan>=0.38nb1
-BUILDLINK_ABI_DEPENDS.libetpan?=	libetpan>=0.57nb2
-BUILDLINK_ABI_DEPENDS.libetpan?=	libetpan>=0.56
+BUILDLINK_API_DEPENDS.libetpan+=	libetpan>=1.0
+BUILDLINK_ABI_DEPENDS.libetpan?=	libetpan>=1.0
 BUILDLINK_PKGSRCDIR.libetpan?=	../../mail/libetpan
 
 .include "../../converters/libiconv/buildlink3.mk"
