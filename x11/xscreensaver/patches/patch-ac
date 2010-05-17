@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.22 2010/02/11 18:16:22 drochner Exp $
+$NetBSD: patch-ac,v 1.23 2010/05/17 16:35:03 drochner Exp $
 
---- configure.orig	2009-09-08 04:54:40.000000000 +0000
+--- configure.orig	2010-04-13 20:37:06.000000000 +0000
 +++ configure
-@@ -3505,6 +3505,9 @@ echo "${ECHO_T}$ac_cv_gcc_accepts_no_cpp
+@@ -3651,6 +3651,9 @@ $as_echo "$ac_cv_gcc_accepts_no_cpp_prec
     ac_gcc_accepts_no_cpp_precomp="$ac_cv_gcc_accepts_no_cpp_precomp"
    fi
  
@@ -12,15 +12,15 @@ $NetBSD: patch-ac,v 1.22 2010/02/11 18:16:22 drochner Exp $
  if test -n "$GCC"; then
  
    case "$host" in
-@@ -3565,6 +3568,7 @@ echo "${ECHO_T}Disabling C++ comments in
-      CC="$CC -Wp,-lang-c89"
+@@ -3711,6 +3714,7 @@ $as_echo "Disabling C++ comments in ANSI
+ #     CC="$CC -Wp,-lang-c89"
     fi
    fi
 +fi
  
  ac_ext=c
  ac_cpp='$CPP $CPPFLAGS'
-@@ -7936,7 +7940,7 @@ _ACEOF
+@@ -8329,7 +8333,7 @@ _ACEOF
  
  
  
@@ -29,8 +29,8 @@ $NetBSD: patch-ac,v 1.22 2010/02/11 18:16:22 drochner Exp $
  if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}ranlib", so it can be a program name with args.
  set dummy ${ac_tool_prefix}ranlib; ac_word=$2
-@@ -13632,7 +13636,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+@@ -14227,7 +14231,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
+   $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lkrb4  $LIBS"
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.22 2010/02/11 18:16:22 drochner Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13719,7 +13723,7 @@ echo "$as_me: WARNING: Cannot find compa
+@@ -14318,7 +14322,7 @@ $as_echo "$as_me: WARNING: Cannot find c
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.22 2010/02/11 18:16:22 drochner Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -14881,7 +14885,7 @@ fi
+@@ -15524,7 +15528,7 @@ fi
  #
  if test "$enable_locking" = yes ; then
    case "$host" in
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.22 2010/02/11 18:16:22 drochner Exp $
        need_setuid=yes
      ;;
    esac
-@@ -15315,11 +15319,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
+@@ -15958,11 +15962,7 @@ $as_echo "$ac_cv_gtk_config_libs" >&6; }
    ac_gtk_config_libs=$ac_cv_gtk_config_libs
  
    GTK_EXTRA_OBJS=""
