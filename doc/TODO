@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9304 2010/05/16 19:15:22 asau Exp $
+$NetBSD: TODO,v 1.9305 2010/05/17 14:33:07 tsutsui Exp $
 
 Suggested new packages
 ======================
@@ -1180,7 +1180,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]
 	o python-3.1.1
 	o qbrew-0.3.9
-	o qemu-0.12.4
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.4.3 [wip]
