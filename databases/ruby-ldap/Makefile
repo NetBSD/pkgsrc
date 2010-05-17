@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/01/17 12:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/17 01:11:14 obache Exp $
 
 DISTNAME=	ruby-ldap-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ldap-${VER}
-PKGREVISION=	1
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/58441/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/68853/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
@@ -14,7 +13,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-VER=		0.9.9
+VER=		0.9.10
 
 REPLACE_RUBY_DIRS=	example/pr_ctl example/cgi/search.cgi
 RUBY_HAS_ARCHLIB=	yes
