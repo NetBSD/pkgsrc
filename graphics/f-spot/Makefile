@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/04/22 07:39:54 kefren Exp $
+# $NetBSD: Makefile,v 1.21 2010/05/17 17:46:44 drochner Exp $
 #
 
-DISTNAME=	f-spot-0.6.1.5
-PKGREVISION=	4
+DISTNAME=	f-spot-0.6.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,6 +38,9 @@ SUBST_FILES.fix-x11=		src/FSpot.Utils.dll.config
 SUBST_FILES.fix-x11+=		src/f-spot.exe.config.in
 SUBST_SED.fix-x11=		-e 's,libX11.so.6,${X11BASE}/lib/libX11.so,'
 
+GCONF_SCHEMAS=	f-spot.schemas
+
+.include "../../devel/GConf/schemas.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
@@ -49,12 +51,14 @@ SUBST_SED.fix-x11=		-e 's,libX11.so.6,${X11BASE}/lib/libX11.so,'
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
+.include "../../devel/mono-addins/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gnome-desktop-sharp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
