@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1925 2010/05/17 15:47:29 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1926 2010/05/17 18:09:04 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2475,3 +2475,19 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/asciidoc to 8.5.3nb1 [wiz 2010-05-17]
 	Updated www/typolight28-translations to 20100516 [taca 2010-05-17]
 	Updated www/geeklog to 1.6.1.1 [taca 2010-05-17]
+	Updated mail/claws-mail to 3.7.6 [drochner 2010-05-17]
+	Updated mail/libetpan to 1.0 [drochner 2010-05-17]
+	Updated graphics/gthumb to 2.10.12 [drochner 2010-05-17]
+	Updated math/wxMaxima to 0.8.5 [drochner 2010-05-17]
+	Updated x11/xscreensaver to 5.11 [drochner 2010-05-17]
+	Updated math/gnumeric110 to 0.10.3 [drochner 2010-05-17]
+	Updated misc/goffice0.8 to 0.8.3 [drochner 2010-05-17]
+	Updated graphics/py-matplotlib to 0.99.2.1 [drochner 2010-05-17]
+	Updated devel/eric4 to 4.4.4a [drochner 2010-05-17]
+	Updated multimedia/gst-plugins0.10-ffmpeg to 0.10.10 [drochner 2010-05-17]
+	Updated multimedia/totem to 2.28.6 [drochner 2010-05-17]
+	Updated multimedia/totem-pl-parser to 2.28.3 [drochner 2010-05-17]
+	Updated net/libgdata to 0.5.2 [drochner 2010-05-17]
+	Updated multimedia/gst-plugins0.10-good to 0.10.22 [drochner 2010-05-17]
+	Updated multimedia/gst-plugins0.10-base to 0.10.29 [drochner 2010-05-17]
+	Updated multimedia/gstreamer0.10 to 0.10.29 [drochner 2010-05-17]
