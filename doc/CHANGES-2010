@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1922 2010/05/17 14:33:07 tsutsui Exp $
+$NetBSD: CHANGES-2010,v 1.1923 2010/05/17 15:32:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2472,3 +2472,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-carlisle to 2009nb1 [minskim 2010-05-17]
 	Updated print/tex-carlisle-doc to 2009nb1 [minskim 2010-05-17]
 	Updated emulators/qemu to 0.12.4 [tsutsui 2010-05-17]
+	Updated textproc/asciidoc to 8.5.3nb1 [wiz 2010-05-17]
