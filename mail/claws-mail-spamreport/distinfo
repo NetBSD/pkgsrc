@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/02/03 19:45:05 drochner Exp $
+$NetBSD: distinfo,v 1.8 2010/05/17 17:58:14 drochner Exp $
 
-SHA1 (spam_report-0.3.10.tar.gz) = fdeb97be788d3551f8c4396e40a6c61b3d78e5f0
-RMD160 (spam_report-0.3.10.tar.gz) = 3e993756712b0fe9c5d13ec7f1283b9cbce414d2
-Size (spam_report-0.3.10.tar.gz) = 356344 bytes
+SHA1 (spam_report-0.3.11.tar.gz) = 0e8ea1d30f471cf67366e731dace2c51142240c3
+RMD160 (spam_report-0.3.11.tar.gz) = 9ea00302ba084b02f10f9655306ab13ab8afd943
+Size (spam_report-0.3.11.tar.gz) = 356392 bytes
