@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.2.2 2010/05/17 22:47:52 tron Exp $
+CVE-2010-0829
+
+--- vf.c	2008-06-11 23:05:01 +0000
++++ vf.c	2010-04-27 09:34:06 +0000
+@@ -27,11 +27,10 @@
+ #define VF_ID 202
+ #define LONG_CHAR 242
+ 
+-int32_t SetVF(int32_t c) 
++int32_t SetVF(struct char_entry* ptr) 
+ {
+   struct font_entry* currentvf;
+   unsigned char *command,*end;
+-  struct char_entry* ptr=currentfont->chr[c];
+ 
+   currentvf=currentfont;
+   BeginVFMacro(currentvf);
+
