@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/17 02:55:18 obache Exp $
 
 DISTNAME=	pam_af-1.0.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mbsd.msk.ru/stas/pam_af.html
 COMMENT=	Anti-bruteforce PAM module
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
