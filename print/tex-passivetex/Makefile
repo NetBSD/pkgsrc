@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/05/25 05:24:00 minskim Exp $
-# TeX Live Revision 9324
+# $NetBSD: Makefile,v 1.6 2010/05/17 07:48:26 minskim Exp $
 
 DISTNAME=	passivetex
 PKGNAME=	tex-${DISTNAME}-1.25
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tei-c.org.uk/Software/passivetex/
@@ -21,5 +21,5 @@ DEPENDS+=	tex-tipa-[0-9]*:../../fonts/tex-tipa
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-xmltex-[0-9]*:../../textproc/tex-xmltex
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
