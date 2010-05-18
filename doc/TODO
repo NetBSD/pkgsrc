@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9307 2010/05/18 12:53:25 taca Exp $
+$NetBSD: TODO,v 1.9308 2010/05/18 13:25:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -487,8 +487,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clutter-gtk-0.10.4 [obache, wait for gtk2+>=2.19.5]
 	o cmus-2.3.2
 	o colorize-0.3.4
-	o cone-0.78 [pkg/41623]
-	o cone-0.83
 	o confuse-2.7
 	o connect-1.96
 	o conserver-8.1.17
