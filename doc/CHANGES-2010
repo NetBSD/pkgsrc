@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1933 2010/05/17 22:29:44 morr Exp $
+$NetBSD: CHANGES-2010,v 1.1934 2010/05/18 06:41:42 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2498,3 +2498,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-needspace-doc version 1.3b [minskim 2010-05-17]
 	Updated print/tex-texlive-scripts to 2009.17976 [minskim 2010-05-17]
 	Added textproc/uni2ascii version 4.14 [morr 2010-05-17]
+	Updated security/keychain to 2.7.1 [pettai 2010-05-18]
