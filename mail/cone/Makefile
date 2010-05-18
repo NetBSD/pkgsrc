@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/03/21 16:29:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/05/18 13:24:15 adam Exp $
 
-DISTNAME=	cone-0.74
+DISTNAME=	cone-0.83
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,15 +11,15 @@ COMMENT=	Console newsreader and emailer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake perl true
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl true
 GCC_REQD+=		3.0	# need Standard C++ Library
 
 .include "options.mk"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--without-certdb
+CONFIGURE_ARGS+=	--with-certdb=${SSLCERTS}
 
 # Cone doesn't really need the openssl or c_rehash binaries, but the
 # rootcerts/configure script is written poorly and directly overrides
