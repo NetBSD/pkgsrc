@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1934 2010/05/18 06:41:42 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1935 2010/05/18 09:28:41 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2499,3 +2499,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-texlive-scripts to 2009.17976 [minskim 2010-05-17]
 	Added textproc/uni2ascii version 4.14 [morr 2010-05-17]
 	Updated security/keychain to 2.7.1 [pettai 2010-05-18]
+	Updated lang/yap to 6.0.5 [asau 2010-05-18]
