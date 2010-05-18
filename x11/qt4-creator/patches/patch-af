@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- src/libs/extensionsystem/extensionsystem.pro.orig	2010-01-15 17:36:52 +0000
++++ src/libs/extensionsystem/extensionsystem.pro
+@@ -4,7 +4,7 @@ DEFINES += EXTENSIONSYSTEM_LIBRARY
+ include(../../qtcreatorlibrary.pri)
+ include(extensionsystem_dependencies.pri)
+ 
+-unix:!macx:!freebsd*:LIBS += -ldl
++unix:!macx:!freebsd*:!netbsd*:LIBS += -ldl
+ 
+ DEFINES += IDE_TEST_DIR=\\\"$$IDE_SOURCE_TREE\\\"
+ 
