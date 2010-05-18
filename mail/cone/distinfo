@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2008/02/20 22:31:06 jlam Exp $
+$NetBSD: distinfo,v 1.3 2010/05/18 13:24:15 adam Exp $
 
-SHA1 (cone-0.74.tar.bz2) = 74a68e8468494bb020da7f7fd4dc3abd1ef67b83
-RMD160 (cone-0.74.tar.bz2) = 30a7d64d04426d975a602999db28e47caaa97e80
-Size (cone-0.74.tar.bz2) = 4150864 bytes
+SHA1 (cone-0.83.tar.bz2) = da1c39b75146a7cb5a30b524c12fe6a7f7d4a193
+RMD160 (cone-0.83.tar.bz2) = 756d8593be400f59948e3dde0af5d072cac58b71
+Size (cone-0.83.tar.bz2) = 4145506 bytes
 SHA1 (patch-aa) = 379e4875619bda6d7094f906e2cba34f19d879fe
-SHA1 (patch-ab) = 897bec29acdab95f679a3b95195614ae94509e29
+SHA1 (patch-ab) = 2475c6644d894d1bdbf60977cdc5f96f36e72dde
 SHA1 (patch-ac) = 2a6a8ad9c8cc6773b219bfbefabc11eac31f6cb3
 SHA1 (patch-ad) = 578dde2e725ca4e1b332ad2e9135446534aa3184
 SHA1 (patch-ae) = f11842f29aadd91aaab74dff8583d6b62c06673d
