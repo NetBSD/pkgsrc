@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/04 11:04:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/05/18 16:38:53 drochner Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1

@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.1 2010/05/04 11:05:00 drochner Exp $
+$NetBSD: patch-an,v 1.2 2010/05/18 16:38:53 drochner Exp $
 
---- src/GrampsAboutDialog.py.orig	2010-03-15 07:21:34.000000000 +0000
+--- src/GrampsAboutDialog.py.orig	2010-05-17 05:31:23.000000000 +0000
 +++ src/GrampsAboutDialog.py
 @@ -30,7 +30,7 @@
  from gen.ggettext import gettext as _
  import os
  import sys
 -import bsddb
-+import bsddb3
++import bsddb3 as bsddb
  
  ##import logging
  ##_LOG = logging.getLogger(".GrampsAboutDialog")
