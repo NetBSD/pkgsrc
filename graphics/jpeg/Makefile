@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2010/04/09 20:00:02 drochner Exp $
+# $NetBSD: Makefile,v 1.42 2010/05/18 19:59:21 drochner Exp $
 #
 
-DISTNAME=		jpegsrc.v8a
-PKGNAME=		jpeg-8a
+DISTNAME=		jpegsrc.v8b
+PKGNAME=		jpeg-8b
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.ijg.org/files/
 
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+TEST_TARGET=		test
 
 INSTALLATION_DIRS=	bin include share/doc/jpeg
 
