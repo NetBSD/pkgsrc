@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1936 2010/05/18 12:52:51 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1937 2010/05/18 13:25:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/keychain to 2.7.1 [pettai 2010-05-18]
 	Updated lang/yap to 6.0.5 [asau 2010-05-18]
 	Updated www/typolight28 to 2.8.3nb1 [taca 2010-05-18]
+	Updated mail/cone to 0.83 [adam 2010-05-18]
