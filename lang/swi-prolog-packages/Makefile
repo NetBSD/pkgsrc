@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/05/16 18:46:11 asau Exp $
+# $NetBSD: Makefile,v 1.26 2010/05/18 08:29:55 asau Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -78,6 +78,9 @@ teardownx:
 	sleep 5
 	-kill `${CAT} ${WRKDIR}/.Xvfb.pid`
 	${RM} -f ${WRKDIR}/.Xvfb.pid
+
+# I need this on FreeBSD, perhaps this depends on GCC behaviour:
+CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHINE_GNU_PLATFORM}/pl2xpce.so
 
 
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
