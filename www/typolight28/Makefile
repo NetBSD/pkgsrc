@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/03/16 16:02:21 taca Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2010/05/18 21:13:46 tron Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
 PKGNAME=	typolight${TL_VER}-${TL_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -24,7 +25,8 @@ NO_BUILD=	yes
 
 EG_DATA=	${WWW_EG_FILES} system/config tl_files
 EG_FILES=	system/config/config.php system/config/countries.php \
-		system/config/dcaconfig.php system/config/langconfig.php \
+		system/config/dcaconfig.php system/config/fancyUpload.php \
+		system/config/initconfig.php system/config/langconfig.php \
 		system/config/languages.php \
 		system/config/tcpdf.php system/config/timezones.php \
 		system/config/tinyFlash.php system/config/tinyMCE.php \
