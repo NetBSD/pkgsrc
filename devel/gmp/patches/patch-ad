@@ -1,8 +1,15 @@
+$NetBSD: patch-ad,v 1.8 2010/05/18 18:33:48 martin Exp $
+
 --- mpn/vax/add_n.s.orig	2010-02-06 13:43:14.000000000 +0100
-+++ mpn/vax/add_n.s	2010-05-17 22:55:26.000000000 +0200
-@@ -30,30 +30,30 @@
- .globl ___gmpn_add_n
- ___gmpn_add_n:
++++ mpn/vax/add_n.s	2010-05-18 10:16:29.000000000 +0200
+@@ -27,33 +27,33 @@
+ 
+ .text
+ 	.align 1
+-.globl ___gmpn_add_n
+-___gmpn_add_n:
++.globl __gmpn_add_n
++__gmpn_add_n:
  	.word	0x0
 -	movl	16(ap),r0
 -	movl	12(ap),r1
