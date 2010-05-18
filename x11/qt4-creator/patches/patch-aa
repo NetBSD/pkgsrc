@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- doc/doc.pri.orig	2010-01-15 17:36:52 +0000
++++ doc/doc.pri
+@@ -24,7 +24,7 @@ qch_docs.depends += html_docs
+ qch_docs.files = $$QCH_FILE
+ 
+ unix:!macx {
+-    qch_docs.path = /share/doc/qtcreator
++    qch_docs.path = $(PREFIX)/share/doc/qtcreator
+     qch_docs.CONFIG += no_check_exist
+     INSTALLS += qch_docs
+ }
