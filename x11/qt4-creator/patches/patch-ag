@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- src/libs/utils/process_stub.pro.orig	2010-01-15 17:36:52 +0000
++++ src/libs/utils/process_stub.pro
+@@ -20,5 +20,5 @@ unix {
+     LIBS += -lshell32
+ }
+ 
+-target.path  = /bin # FIXME: libexec, more or less
++target.path  = $(PREFIX)/bin # FIXME: libexec, more or less
+ INSTALLS    += target

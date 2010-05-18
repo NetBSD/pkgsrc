@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- src/qtcreatorlibrary.pri.orig	2010-01-15 17:36:52 +0000
++++ src/qtcreatorlibrary.pri
+@@ -17,7 +17,7 @@ contains(QT_CONFIG, reduce_exports):CONF
+         target.path = /bin
+         target.files = $$DESTDIR/$${TARGET}.dll
+     } else {
+-        target.path = /$$IDE_LIBRARY_BASENAME/qtcreator
++        target.path = $(PREFIX)/lib/qtcreator
+     }
+     INSTALLS += target
+ }

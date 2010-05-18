@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- share/qtcreator/static.pro.orig	2010-01-15 17:36:52 +0000
++++ share/qtcreator/static.pro
+@@ -6,7 +6,7 @@ CONFIG -= qt
+ QT =
+ LIBS =
+ 
+-isEmpty(vcproj) {
++!isEmpty(vcproj) {
+     QMAKE_LINK = @: IGNORE THIS LINE
+     OBJECTS_DIR =
+     win32:CONFIG -= embed_manifest_exe
+@@ -16,7 +16,7 @@ isEmpty(vcproj) {
+     phony_src.input = PHONY_DEPS
+     phony_src.output = phony.c
+     phony_src.variable_out = GENERATED_SOURCES
+-    phony_src.commands = echo int main() { return 0; } > phony.c
++    phony_src.commands = echo \"int main() { return 0; }\" > phony.c
+     phony_src.name = CREATE phony.c
+     phony_src.CONFIG += combine
+     QMAKE_EXTRA_COMPILERS += phony_src
+@@ -60,7 +60,7 @@ DATA_DIRS = \
+ !macx {
+     for(data_dir, DATA_DIRS) {
+         eval($${data_dir}.files = $$quote($$PWD/$$data_dir))
+-        eval($${data_dir}.path = /share/qtcreator)
++        eval($${data_dir}.path = $(PREFIX)/share/qtcreator)
+         INSTALLS += $$data_dir
+     }
+ }

@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- src/plugins/debugger/gdb/gdbengine.cpp.orig	2010-01-15 17:36:52 +0000
++++ src/plugins/debugger/gdb/gdbengine.cpp
+@@ -806,7 +806,7 @@ void GdbEngine::flushCommand(const GdbCo
+         cmd.command = cmd.command.arg(currentToken());
+     gdbInputAvailable(LogInput, cmd.command);
+ 
+-    m_gdbAdapter->write(cmd.command.toLatin1() + "\r\n");
++    m_gdbAdapter->write(cmd.command.toLatin1() + "\n");
+ 
+     m_commandTimer->start();
+ 
+@@ -996,7 +996,7 @@ void GdbEngine::executeDebuggerCommand(c
+         return;
+     }
+ 
+-    m_gdbAdapter->write(command.toLatin1() + "\r\n");
++    m_gdbAdapter->write(command.toLatin1() + "\n");
+ }
+ 
+ // Called from CoreAdapter and AttachAdapter

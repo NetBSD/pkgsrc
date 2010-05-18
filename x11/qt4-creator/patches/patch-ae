@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- src/app/app.pro.orig	2010-01-15 17:36:52 +0000
++++ src/app/app.pro
+@@ -28,7 +28,7 @@ win32 {
+ } else {
+     LIBS *= -lExtensionSystem -lAggregation
+ 
+-    target.path  = /bin
++    target.path  = $(PREFIX)/bin
+     INSTALLS    += target
+ }
+ 

@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- share/qtcreator/gdbmacros/gdbmacros.pro.orig	2010-01-15 17:36:52 +0000
++++ share/qtcreator/gdbmacros/gdbmacros.pro
+@@ -16,3 +16,6 @@ else { 
+ }
+ exists($$QMAKE_INCDIR_QT/QtCore/private/qobject_p.h):DEFINES += HAS_QOBJECT_P_H
+ HEADERS += gdbmacros_p.h
++
++target.path = $$OUT_PWD
++INSTALLS += target

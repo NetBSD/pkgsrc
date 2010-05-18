@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+--- src/plugins/projectexplorer/debugginghelper.cpp.orig	2010-01-15 17:36:52 +0000
++++ src/plugins/projectexplorer/debugginghelper.cpp
+@@ -217,7 +217,7 @@ QString DebuggingHelperLibrary::buildDeb
+     output += newline;;
+     if (!makeFullPath.isEmpty()) {
+         output += QCoreApplication::translate("ProjectExplorer::DebuggingHelperLibrary", "Running %1 ...\n").arg(makeFullPath);
+-        proc.start(makeFullPath, QStringList());
++        proc.start(makeFullPath, QStringList() << "install");
+         proc.waitForFinished();
+         output += proc.readAll();
+     } else {
