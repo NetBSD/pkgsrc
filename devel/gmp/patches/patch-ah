@@ -1,8 +1,15 @@
+$NetBSD: patch-ah,v 1.2 2010/05/18 18:33:48 martin Exp $
+
 --- mpn/vax/rshift.s.orig	2010-02-06 13:43:14.000000000 +0100
-+++ mpn/vax/rshift.s	2010-05-17 23:15:00.000000000 +0200
-@@ -31,24 +31,24 @@
- .globl ___gmpn_rshift
- ___gmpn_rshift:
++++ mpn/vax/rshift.s	2010-05-18 10:16:29.000000000 +0200
+@@ -28,27 +28,27 @@
+ 
+ .text
+ 	.align 1
+-.globl ___gmpn_rshift
+-___gmpn_rshift:
++.globl __gmpn_rshift
++__gmpn_rshift:
  	.word	0x1c0
 -	movl	4(ap),r7
 -	movl	8(ap),r6

@@ -1,8 +1,15 @@
+$NetBSD: patch-ae,v 1.2 2010/05/18 18:33:48 martin Exp $
+
 --- mpn/vax/addmul_1.s.orig	2010-02-06 13:43:14.000000000 +0100
-+++ mpn/vax/addmul_1.s	2010-05-17 23:22:38.000000000 +0200
-@@ -30,95 +30,95 @@
- .globl ___gmpn_addmul_1
- ___gmpn_addmul_1:
++++ mpn/vax/addmul_1.s	2010-05-18 10:16:29.000000000 +0200
+@@ -27,98 +27,98 @@
+ 
+ .text
+ 	.align 1
+-.globl ___gmpn_addmul_1
+-___gmpn_addmul_1:
++.globl __gmpn_addmul_1
++__gmpn_addmul_1:
  	.word	0xfc0
 -	movl	12(ap),r4
 -	movl	8(ap),r8
