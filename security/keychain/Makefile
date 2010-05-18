@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2009/05/12 12:27:20 martti Exp $
+# $NetBSD: Makefile,v 1.27 2010/05/18 06:29:31 pettai Exp $
 
-DISTNAME=	keychain-2.6.8
+DISTNAME=	keychain-2.7.1
 CATEGORIES=	security
-MASTER_SITES=	http://www.ibiblio.org/pub/linux/distributions/gentoo/distfiles/
+MASTER_SITES=	http://www.funtoo.org/archive/keychain/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martti@NetBSD.org
-HOMEPAGE=	http://www.gentoo.org/proj/en/keychain/
+HOMEPAGE=	http://www.funtoo.org/en/security/keychain/intro/
 COMMENT=	Nice ssh-agent front-end
 LICENSE=	gnu-gpl-v2
 
@@ -25,7 +25,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/keychain ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/keychain.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/README \
+	${INSTALL_DATA} ${WRKSRC}/README.rst \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
