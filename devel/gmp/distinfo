@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2010/05/18 05:02:34 martin Exp $
+$NetBSD: distinfo,v 1.32 2010/05/18 07:31:59 martin Exp $
 
 SHA1 (gmp-5.0.1.tar.bz2) = 6340edc7ceb95f9015a758c7c0d196eb0f441d49
 RMD160 (gmp-5.0.1.tar.bz2) = 3e89ebf5294639e1c926b92d9786bbdd0c8fa587
@@ -9,7 +9,7 @@ SHA1 (patch-ac) = 9c7e6817632596bfd6c86a30e3b2d7f78fccd5ff
 SHA1 (patch-ad) = 732a9bb11c6bcd20f8147d6792dac2c8a129053f
 SHA1 (patch-ae) = 578180d5f762d93841e14b3f1ae23738e62b49bf
 SHA1 (patch-af) = 9abbed8afff6b44b5ab1a9f04ded8a4874aea62c
-SHA1 (patch-ag) = ac75d9dc02fad79b46594797bed947b7fec8fed0
+SHA1 (patch-ag) = f8810659b7839be1e821ef6cd9e6a964a95a68e7
 SHA1 (patch-ah) = 4d52c7b2ed3c66cea4ad5b485ed92a6d9550ab3c
 SHA1 (patch-ai) = a6f965879d27d2b151612c672f647d0e961c0993
 SHA1 (patch-aj) = 39690d83743559d4385a1ac868445013acbbe784
