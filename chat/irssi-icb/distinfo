@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2010/05/17 20:13:25 sketch Exp $
+$NetBSD: distinfo,v 1.17 2010/05/18 21:38:49 sketch Exp $
 
 SHA1 (irssi-0.8.15.tar.bz2) = b79ce8c2c98a76b004f63706e7868cd363000d89
 RMD160 (irssi-0.8.15.tar.bz2) = 0c8fba8cf3409621f6c1883127e14538a58c3359
@@ -11,3 +11,6 @@ SHA1 (patch-ab) = 768826fbd30ed66fff6ce45b7ca492b69c0c7437
 SHA1 (patch-ac) = 68409b392f3212a8da9a79c2dfcc4dc265504d98
 SHA1 (patch-ad) = f5cf3b9294a1a8a450f8c380ff41bbaafd425337
 SHA1 (patch-ae) = ee3ed714e2f1d136562b87cfd82bc4b58b7d80df
+SHA1 (patch-af) = 8f68dadd44acd870b3e84fd561edbd5958305ef3
+SHA1 (patch-ag) = 4b0df5a1f59397455963888fbda1a57d56f90757
+SHA1 (patch-ah) = 097bab1ebd959372a0266fa5d9a99c78c3a2c1fe
