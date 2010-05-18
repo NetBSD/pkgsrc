@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2010/05/18 21:38:49 sketch Exp $
+
+--- src/core/icb-servers.c.orig	2010-05-18 21:25:22.000000000 +0100
++++ src/core/icb-servers.c	2010-05-18 21:24:58.000000000 +0100
+@@ -113,7 +113,6 @@
+ 			 const char *msg, int target_type)
+ {
+ 	ICB_SERVER_REC *icbserver;
+-        char *str;
+ 
+         icbserver = ICB_SERVER(server);
+ 	g_return_if_fail(server != NULL);
+@@ -125,9 +124,7 @@
+                 icb_send_open_msg(icbserver, msg);
+ 	} else {
+ 		/* private message */
+-                str = g_strconcat(target, " ", msg, NULL);
+-		icb_command(icbserver, "m", str, NULL);
+-                g_free(str);
++		icb_send_private_msg(icbserver, target, msg);
+ 	}
+ }
+ 

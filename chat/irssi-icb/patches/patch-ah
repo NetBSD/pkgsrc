@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2010/05/18 21:38:49 sketch Exp $
+
+--- src/core/icb-protocol.h.orig	2010-05-18 21:34:32.000000000 +0100
++++ src/core/icb-protocol.h	2010-05-18 21:34:15.000000000 +0100
+@@ -4,6 +4,8 @@
+ #define ICB_PROTOCOL_LEVEL 1
+ 
+ void icb_send_open_msg(ICB_SERVER_REC *server, const char *text);
++void icb_send_private_msg(ICB_SERVER_REC *server, const char *target,
++		const char *text);
+ void icb_command(ICB_SERVER_REC *server, const char *cmd,
+ 		 const char *args, const char *id);
+ void icb_protocol(ICB_SERVER_REC *server, const char *level,
