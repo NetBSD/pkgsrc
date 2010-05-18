@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1938 2010/05/18 21:13:13 gls Exp $
+$NetBSD: CHANGES-2010,v 1.1939 2010/05/18 21:39:44 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2503,3 +2503,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28 to 2.8.3nb1 [taca 2010-05-18]
 	Updated mail/cone to 0.83 [adam 2010-05-18]
 	Updated audio/cmus to 2.3.2 [gls 2010-05-18]
+	Updated chat/irssi-icb to 0.14nb16 [sketch 2010-05-18]
