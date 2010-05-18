@@ -1,8 +1,15 @@
+$NetBSD: patch-af,v 1.2 2010/05/18 18:33:48 martin Exp $
+
 --- mpn/vax/lshift.s.orig	2010-02-06 13:43:14.000000000 +0100
-+++ mpn/vax/lshift.s	2010-05-17 23:08:42.000000000 +0200
-@@ -31,26 +31,26 @@
- .globl ___gmpn_lshift
- ___gmpn_lshift:
++++ mpn/vax/lshift.s	2010-05-18 10:16:29.000000000 +0200
+@@ -28,29 +28,29 @@
+ 
+ .text
+ 	.align 1
+-.globl ___gmpn_lshift
+-___gmpn_lshift:
++.globl __gmpn_lshift
++__gmpn_lshift:
  	.word	0x1c0
 -	movl	4(ap),r7
 -	movl	8(ap),r6
