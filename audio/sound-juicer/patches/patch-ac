@@ -1,8 +1,157 @@
-$NetBSD: patch-ac,v 1.1 2009/08/10 10:00:19 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2010/05/18 20:03:04 drochner Exp $
 
---- src/sj-main.c.orig	2009-02-24 13:05:50.000000000 +0100
+--- src/sj-main.c.orig	2010-03-30 14:29:55.000000000 +0000
 +++ src/sj-main.c
-@@ -1416,7 +1416,8 @@ void on_artist_edit_changed(GtkEditable 
+@@ -680,11 +680,11 @@ AlbumDetails* multiple_album_dialog(GLis
+  */
+ static void baseuri_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_BASEURI) == 0);
++  g_assert (!entry || strcmp (entry->key, GCONF_BASEURI) == 0);
+   if (base_uri) {
+     g_object_unref (base_uri);
+   }
+-  if (entry->value == NULL) {
++  if (!entry || entry->value == NULL) {
+     base_uri = sj_get_default_music_directory ();
+   } else {
+     base_uri = g_file_new_for_uri (gconf_value_get_string (entry->value));
+@@ -697,8 +697,8 @@ static void baseuri_changed_cb (GConfCli
+  */
+ static void path_pattern_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_PATH_PATTERN) == 0);
+-  if (entry->value == NULL) {
++  g_assert (!entry || strcmp (entry->key, GCONF_PATH_PATTERN) == 0);
++  if (!entry || entry->value == NULL) {
+     /* TODO: this value and the value in sj-prefs need to be in one place */
+     path_pattern = g_strdup ("%aa/%at");
+   } else {
+@@ -712,8 +712,8 @@ static void path_pattern_changed_cb (GCo
+  */
+ static void file_pattern_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_FILE_PATTERN) == 0);
+-  if (entry->value == NULL) {
++  g_assert (!entry || strcmp (entry->key, GCONF_FILE_PATTERN) == 0);
++  if (!entry || entry->value == NULL) {
+     /* TODO: this value and the value in sj-prefs need to be in one place */
+     file_pattern = g_strdup ("%tN-%tt");
+   } else {
+@@ -727,8 +727,8 @@ static void file_pattern_changed_cb (GCo
+  */
+ static void paranoia_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_PARANOIA) == 0);
+-  if (entry->value == NULL) {
++  g_assert (!entry || strcmp (entry->key, GCONF_PARANOIA) == 0);
++  if (!entry || entry->value == NULL) {
+     sj_extractor_set_paranoia (extractor, DEFAULT_PARANOIA);
+   } else {
+     int value = gconf_value_get_int (entry->value);
+@@ -743,8 +743,8 @@ static void paranoia_changed_cb (GConfCl
+  */
+ static void strip_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_STRIP) == 0);
+-  if (entry->value == NULL) {
++  g_assert (!entry || strcmp (entry->key, GCONF_STRIP) == 0);
++  if (!entry || entry->value == NULL) {
+     strip_chars = FALSE;
+   } else {
+     strip_chars = gconf_value_get_bool (entry->value);
+@@ -756,8 +756,8 @@ static void strip_changed_cb (GConfClien
+  */
+ static void eject_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_EJECT) == 0);
+-  if (entry->value == NULL) {
++  g_assert (!entry || strcmp (entry->key, GCONF_EJECT) == 0);
++  if (!entry || entry->value == NULL) {
+     eject_finished = FALSE;
+   } else {
+     eject_finished = gconf_value_get_bool (entry->value);
+@@ -769,8 +769,8 @@ static void eject_changed_cb (GConfClien
+  */
+ static void open_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_OPEN) == 0);
+-  if (entry->value == NULL) {
++  g_assert (!entry || strcmp (entry->key, GCONF_OPEN) == 0);
++  if (!entry || entry->value == NULL) {
+     open_finished = FALSE;
+   } else {
+     open_finished = gconf_value_get_bool (entry->value);
+@@ -782,10 +782,10 @@ static void open_changed_cb (GConfClient
+  */
+ static void audio_volume_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_AUDIO_VOLUME) == 0);
++  g_assert (!entry || strcmp (entry->key, GCONF_AUDIO_VOLUME) == 0);
+ 
+   GtkWidget *volb = glade_xml_get_widget (glade, "volume_button");
+-  if (entry->value == NULL) {
++  if (!entry || entry->value == NULL) {
+     gtk_scale_button_set_value (GTK_SCALE_BUTTON (volb), 1.0);
+   } else {
+     gtk_scale_button_set_value (GTK_SCALE_BUTTON (volb), gconf_value_get_float (entry->value));
+@@ -1107,9 +1107,9 @@ static void device_changed_cb (GConfClie
+ {
+   const char *device;
+   gboolean ignore_no_media = GPOINTER_TO_INT (user_data);
+-  g_assert (strcmp (entry->key, GCONF_DEVICE) == 0);
++  g_assert (!entry || strcmp (entry->key, GCONF_DEVICE) == 0);
+ 
+-  if (entry->value == NULL || !cd_drive_exists (gconf_value_get_string (entry->value))) {
++  if (!entry || entry->value == NULL || !cd_drive_exists (gconf_value_get_string (entry->value))) {
+     device = prefs_get_default_device();
+     if (device == NULL) {
+ #ifndef IGNORE_MISSING_CD
+@@ -1137,8 +1137,8 @@ static void profile_changed_cb (GConfCli
+ {
+   GMAudioProfile *profile;
+ 
+-  g_assert (strcmp (entry->key, GCONF_AUDIO_PROFILE) == 0);
+-  if (!entry->value) return;
++  g_assert (!entry || strcmp (entry->key, GCONF_AUDIO_PROFILE) == 0);
++  if (!entry || !entry->value) return;
+   profile = gm_audio_profile_lookup (gconf_value_get_string (entry->value));
+   if (profile != NULL)
+     g_object_set (extractor, "profile", profile, NULL);
+@@ -1190,8 +1190,8 @@ http_proxy_setup (GConfClient *client)
+  */
+ static void http_proxy_enable_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_HTTP_PROXY_ENABLE) == 0);
+-  if (entry->value == NULL) return;
++  g_assert (!entry || strcmp (entry->key, GCONF_HTTP_PROXY_ENABLE) == 0);
++  if (!entry || entry->value == NULL) return;
+   http_proxy_setup (client);
+ }
+ 
+@@ -1200,8 +1200,8 @@ static void http_proxy_enable_changed_cb
+  */
+ static void http_proxy_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_HTTP_PROXY) == 0);
+-  if (entry->value == NULL) return;
++  g_assert (!entry || strcmp (entry->key, GCONF_HTTP_PROXY) == 0);
++  if (!entry || entry->value == NULL) return;
+   http_proxy_setup (client);
+ }
+ 
+@@ -1210,8 +1210,8 @@ static void http_proxy_changed_cb (GConf
+  */
+ static void http_proxy_port_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
+ {
+-  g_assert (strcmp (entry->key, GCONF_HTTP_PROXY_PORT) == 0);
+-  if (entry->value == NULL) return;
++  g_assert (!entry || strcmp (entry->key, GCONF_HTTP_PROXY_PORT) == 0);
++  if (!entry || entry->value == NULL) return;
+   http_proxy_setup (client);
+ }
+ 
+@@ -1414,7 +1414,8 @@ void on_artist_edit_changed(GtkEditable 
  
    if (current_album->artist) {
      former_album_artist = current_album->artist;
