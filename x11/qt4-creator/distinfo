@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+
+SHA1 (qt-creator-1.3.1-src.tar.gz) = 49b61c3e8010d94d6d595fef38d3da737b26cd80
+RMD160 (qt-creator-1.3.1-src.tar.gz) = 37bebc4566cfef85d5a7901c1efd8b917b3a0584
+Size (qt-creator-1.3.1-src.tar.gz) = 10623442 bytes
+SHA1 (patch-aa) = 908f98fcfcd7341aef924efa74938409b51e5b09
+SHA1 (patch-ab) = f0acd533050e7f310dba5981eef0f51992d3a41c
+SHA1 (patch-ac) = 80f3a0669ba9c830ac9ddc79dd0e56bbc95bb693
+SHA1 (patch-ad) = d416f3d5f0e28f2b825aa3943499f0cd9896e8b6
+SHA1 (patch-ae) = 8fa1abb214473b438926d5c0d8cec7671f5c8397
+SHA1 (patch-af) = 199ab3a05c40c9d171e553713ea560367952995e
+SHA1 (patch-ag) = bbfd6e80e323f0a1cf11bc5ef345d2a23edcffc5
+SHA1 (patch-ah) = 56000810ffefa7fbb12d3d36bc656b428c7231cc
+SHA1 (patch-ai) = 6bf785c891cf8a41ce23810975a9c7b3f8afa5b1
+SHA1 (patch-aj) = 82e4a688fc287e08c0c425d601e78f95252d5011
+SHA1 (patch-ak) = 5c33cd0733f84c850856bf7c178fdb0596e1592b
+SHA1 (patch-al) = b8e116a70ec00c4b5bb50f5c2181d438e81de54f
