@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1944 2010/05/19 12:08:25 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1945 2010/05/19 12:09:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2509,3 +2509,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added math/TinySVM version 0.09 [obache 2010-05-19]
 	Updated lang/maude to 2.4 [asau 2010-05-19]
 	Added textproc/yamcha version 0.33 [obache 2010-05-19]
+	Added textproc/p5-yamcha version 0.33 [obache 2010-05-19]
