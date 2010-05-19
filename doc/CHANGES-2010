@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1955 2010/05/19 23:14:07 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1956 2010/05/19 23:19:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2522,3 +2522,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed print/tex-ams successor print/tex-amsrefs [minskim 2010-05-19]
 	Updated print/tex-xltxtra to 0.5b [minskim 2010-05-19]
 	Updated print/tex-xltxtra-doc to 0.5b [minskim 2010-05-19]
+	Updated print/tex-preprint-doc to 2009 [minskim 2010-05-19]
