@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/30 04:45:01 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/19 23:17:25 minskim Exp $
 
-SHA1 (tex-zapfding-2008.7340/zapfding.tar.lzma) = 988ccb4866fa6f6ce0983d2636bf3fe91ae10f95
-RMD160 (tex-zapfding-2008.7340/zapfding.tar.lzma) = d095da7093eff9dd6d3ac1685f3b5f1ef679fe8c
-Size (tex-zapfding-2008.7340/zapfding.tar.lzma) = 46438 bytes
+SHA1 (tex-zapfding-15878/zapfding.tar.xz) = 8460339c93423547a4c4ebc1ba273dd29e3783cb
+RMD160 (tex-zapfding-15878/zapfding.tar.xz) = 8319639a2266af814d046ce475d6640cf8c8cb56
+Size (tex-zapfding-15878/zapfding.tar.xz) = 46588 bytes
