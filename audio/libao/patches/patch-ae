@@ -1,21 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2007/11/30 17:50:32 wiz Exp $
+$NetBSD: patch-ae,v 1.9 2010/05/19 18:17:27 drochner Exp $
 
---- configure.orig	2007-05-24 10:51:52.000000000 +0000
+--- configure.orig	2010-03-26 01:24:37.000000000 +0000
 +++ configure
-@@ -20094,9 +20094,9 @@ else
-                 PROFILE="-pg -g -O20 -D__NO_MATH_INLINES -fsigned-char" ;;
-         *-darwin*)
-                 PLUGIN_LDFLAGS="-module -avoid-version"
--                DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char -Ddlsym=dlsym_auto_underscore"
--                CFLAGS="-D__NO_MATH_INLINES -fsigned-char -Ddlsym=dlsym_auto_underscore"
--                PROFILE="-g -pg -D__NO_MATH_INLINES -fsigned-char -Ddlsym=dlsym_auto_underscore" ;;
-+                DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char"
-+                CFLAGS="-D__NO_MATH_INLINES -fsigned-char"
-+                PROFILE="-g -pg -D__NO_MATH_INLINES -fsigned-char" ;;
-         *)
-                 PLUGIN_LDFLAGS="-export-dynamic -avoid-version"
-                 DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char"
-@@ -21613,6 +21613,10 @@ else
+@@ -13132,6 +13132,10 @@ else
     BUILD_ESD="yes"
  fi
  
@@ -26,19 +13,18 @@ $NetBSD: patch-ae,v 1.8 2007/11/30 17:50:32 wiz Exp $
  
  if test "$BUILD_ESD" = "yes"; then
  
-@@ -22215,7 +22219,10 @@ else
+@@ -13739,6 +13743,10 @@ else
    HAVE_OSS_FALSE=
  fi
  
--
 +if test "x${ENABLE_OSS}" = xno; then
 +  HAVE_OSS_TRUE='#'
 +  HAVE_OSS_FALSE=
 +fi
  
  
- # Check whether --enable-alsa was given.
-@@ -23007,6 +23014,10 @@ else
+ have_alsa="no";
+@@ -14304,6 +14312,10 @@ else
    HAVE_SUN_AUDIO_FALSE=
  fi
  
@@ -48,8 +34,8 @@ $NetBSD: patch-ae,v 1.8 2007/11/30 17:50:32 wiz Exp $
 +fi
  
  
- case $host in
-@@ -23166,6 +23177,10 @@ else
+ have_sndio="no";
+@@ -14782,6 +14794,10 @@ else
    HAVE_AIX_AUDIO_FALSE=
  fi
  
@@ -60,7 +46,7 @@ $NetBSD: patch-ae,v 1.8 2007/11/30 17:50:32 wiz Exp $
  
  
  # Check whether --enable-arts was given.
-@@ -23424,6 +23439,10 @@ else
+@@ -15145,6 +15161,10 @@ else
    HAVE_IRIX_FALSE=
  fi
  
@@ -71,7 +57,7 @@ $NetBSD: patch-ae,v 1.8 2007/11/30 17:50:32 wiz Exp $
  
  
  case $host in
-@@ -23440,6 +23459,10 @@ else
+@@ -15163,6 +15183,10 @@ else
    HAVE_MACOSX_FALSE=
  fi
  
@@ -82,7 +68,7 @@ $NetBSD: patch-ae,v 1.8 2007/11/30 17:50:32 wiz Exp $
  
  
  
-@@ -25192,6 +25215,10 @@ else
+@@ -16921,6 +16945,10 @@ else
    HAVE_SOLARIS_FALSE=
  fi
  
