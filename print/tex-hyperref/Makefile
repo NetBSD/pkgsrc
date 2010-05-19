@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/05/10 20:32:00 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/19 23:38:53 minskim Exp $
 
 DISTNAME=	hyperref
-PKGNAME=	tex-${DISTNAME}-6.80x
-TEXLIVE_REV=	17902
+PKGNAME=	tex-${DISTNAME}-6.81a
+TEXLIVE_REV=	18114
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extensive support for hypertext in LaTeX
