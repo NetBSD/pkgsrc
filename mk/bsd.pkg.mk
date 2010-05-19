@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1970 2010/04/30 08:14:04 sbd Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1971 2010/05/19 09:12:15 sbd Exp $
 #
 # This file is in the public domain.
 #
@@ -518,6 +518,17 @@ _BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
 _BUILD_DEFS+=	OSVERSION_SPECIFIC
 DEPENDS+=	osabi-${OPSYS}-${OS_VERSION}:../../pkgtools/osabi
 .endif # OSVERSION_SPECIFIC
+
+.for _pkg_ in ${_BUILTIN_PKGS}
+.  if defined(USE_BUILTIN.${_pkg_}) && \
+      !empty(USE_BUILTIN.${_pkg_}:M[yY][eE][sS]) && \
+      defined(BUILTIN_PKG.${_pkg_}) && !empty(BUILTIN_PKG.${_pkg_})
+BUILTIN_PKGS+=	${BUILTIN_PKG.${_pkg_}}
+.  endif
+.endfor
+.if defined(BUILTIN_PKGS)
+_BUILD_DEFS+=	BUILTIN_PKGS
+.endif
 
 .PHONY: all
 .if !target(all)

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.309 2010/04/30 03:29:55 sbd Exp $
+# $NetBSD: bsd.prefs.mk,v 1.310 2010/05/19 09:12:15 sbd Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -637,6 +637,7 @@ FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
 
 _PKGSRC_DEPS?=		# empty
+_BUILTIN_PKGS?=		# empty
 
 # If WRKOBJDIR is set, use that tree to build
 .if defined(WRKOBJDIR)
