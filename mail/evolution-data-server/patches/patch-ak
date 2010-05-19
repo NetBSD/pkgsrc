@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.12 2010/05/18 16:37:11 drochner Exp $
+$NetBSD: patch-ak,v 1.13 2010/05/19 21:52:57 drochner Exp $
 
 --- configure.orig	2010-03-02 06:36:33.000000000 +0000
 +++ configure
@@ -20,6 +20,15 @@ $NetBSD: patch-ak,v 1.12 2010/05/18 16:37:11 drochner Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
+@@ -22533,7 +22532,7 @@ fi
+ { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
+ $as_echo "$ac_cv_lib_pthread_pthread_create" >&6; }
+ if test "x$ac_cv_lib_pthread_pthread_create" = x""yes; then
+-  PTHREAD_LIB="-lpthread"
++  PTHREAD_LIB="${PTHREAD_LIB}"
+ else
+   { $as_echo "$as_me:$LINENO: checking for pthread_create in -lpthreads" >&5
+ $as_echo_n "checking for pthread_create in -lpthreads... " >&6; }
 @@ -22737,7 +22736,7 @@ fi
  { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_pthread___pthread_attr_init_system" >&5
  $as_echo "$ac_cv_lib_pthread___pthread_attr_init_system" >&6; }
