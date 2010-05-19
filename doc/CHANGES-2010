@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1950 2010/05/19 12:37:17 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1951 2010/05/19 12:40:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2515,3 +2515,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/cabocha version 0.53 [obache 2010-05-19]
 	Added textproc/p5-cabocha version 0.53 [obache 2010-05-19]
 	Added textproc/py-cabocha version 0.53 [obache 2010-05-19]
+	Added textproc/ruby-cabocha version 0.53 [obache 2010-05-19]
