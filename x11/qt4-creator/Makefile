@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/18 19:44:01 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/19 17:51:22 drochner Exp $
 #
 
 DISTNAME=	qt-creator-1.3.1-src
 PKGNAME=	qt4-creator-1.3.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://get.qt.nokia.com/qtcreator/
 
@@ -53,11 +54,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/share/qtcreator/translations/*.qm \
 		${DESTDIR}${PREFIX}/share/qtcreator/translations/
 	cd ${WRKSRC}/share/qtcreator && ${FIND} designer gdbmacros \
-		schemes snippets templates -type d -exec \
+		schemes snippets styles templates -type d -exec \
                 ${INSTALL_DATA_DIR} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
 	cd ${WRKSRC}/share/qtcreator && ${FIND} designer gdbmacros \
-		schemes snippets templates -type f \! -name "*.orig" -exec \
+		schemes snippets styles templates -type f \! -name "*.orig" -exec \
                 ${INSTALL_DATA} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
 
