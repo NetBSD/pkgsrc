@@ -1,10 +1,21 @@
-@comment $NetBSD: PLIST.lightning,v 1.1 2010/04/21 13:33:26 tnn Exp $
+@comment $NetBSD: PLIST.lightning,v 1.2 2010/05/19 09:21:43 tnn Exp $
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/chrome.manifest
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/chrome/calendar-timezones-en-US.jar
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/chrome/calendar-timezones.jar
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/defaults/preferences/preferences.js
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/install.rdf
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/timezones.sqlite
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome.manifest
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US.jar
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider.jar
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/components/calGoogleCalendarModule.js
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/components/gdata.xpt
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/defaults/preferences/preferences.js
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/install.rdf
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/js/calGoogleCalendar.js
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/js/calGoogleRequest.js
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/js/calGoogleSession.js
+lib/thunderbird/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/js/calGoogleUtils.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarm.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmMonitor.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmService.js

@@ -1,0 +1,16 @@
+$NetBSD: patch-mo,v 1.1 2010/05/19 09:21:43 tnn Exp $
+
+--- calendar/providers/gdata/Makefile.in.orig	2010-03-17 17:02:26.000000000 +0000
++++ calendar/providers/gdata/Makefile.in
+@@ -67,6 +67,11 @@ DEFINES += -DAB_CD=$(AB_CD) \
+ PREF_JS_EXPORTS = $(srcdir)/defaults/preferences.js
+ DIRS = components locales public
+ 
++ifndef DISABLE_LIGHTNING_INSTALL
++# install as a global extension in dist/bin/extensions/
++INSTALL_EXTENSION_ID = {a62ef8ec-5fdc-40c2-873c-223b8a6925cc}
++endif
++
+ libs-%:
+ 	$(MAKE) -C locales libs AB_CD=$* XPI_NAME=$(XPI_NAME) USE_EXTENSION_MANIFEST=1
+ 
