@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.540 2010/05/19 12:12:55 obache Exp $
+# $NetBSD: Makefile,v 1.541 2010/05/19 12:42:08 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -42,6 +42,7 @@ SUBDIR+=	bibparse
 SUBDIR+=	bsdgrep-devel
 SUBDIR+=	btparse
 SUBDIR+=	c2html
+SUBDIR+=	cabocha
 SUBDIR+=	catdoc
 SUBDIR+=	catdoc-tk
 SUBDIR+=	cawf
@@ -382,6 +383,7 @@ SUBDIR+=	p5-YAML-LibYAML
 SUBDIR+=	p5-YAML-Syck
 SUBDIR+=	p5-YAML-Tiny
 SUBDIR+=	p5-ack
+SUBDIR+=	p5-cabocha
 SUBDIR+=	p5-iCal-Parser
 SUBDIR+=	p5-libxml
 SUBDIR+=	p5-mecab
@@ -411,6 +413,7 @@ SUBDIR+=	py-HappyDoc
 SUBDIR+=	py-Whoosh
 SUBDIR+=	py-X
 SUBDIR+=	py-cElementTree
+SUBDIR+=	py-cabocha
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-creole
 SUBDIR+=	py-docutils
@@ -453,6 +456,7 @@ SUBDIR+=	rubber
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-bluecloth
 SUBDIR+=	ruby-builder
+SUBDIR+=	ruby-cabocha
 SUBDIR+=	ruby-coderay
 SUBDIR+=	ruby-diff-lcs
 SUBDIR+=	ruby-eruby
