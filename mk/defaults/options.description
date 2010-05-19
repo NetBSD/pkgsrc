@@ -56,6 +56,7 @@ catalog-sqlite		Store Bacula catalog in SQLite database.
 catalog-sqlite3		Store Bacula catalog in SQLite 3 database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 cgi			Enable CGI support.
+chasen			Use ChaSen as the Japanese Morphological Analzer.
 cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support.
@@ -310,6 +311,7 @@ mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
 maintainer-zts		Enable the Zend Thread Safety option for PHP.
 marble			Enable marble (virtual globe) support.
+mecab			Use MeCab as the Japanese Morphological Analzer.
 mex			Enable matlab mex support (Linux and Solaris only).
 migemo			Enable migemo (Japanese text search tool/library) support.
 mikmod			Enable MikMod sound library.
