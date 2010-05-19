@@ -1,0 +1,5 @@
+TinySVM is an implementation of Support Vector Machines (SVMs) [Vapnik 95],
+[Vapnik 98] for the problem of pattern recognition. Support Vector Machines is a
+new generation learning algorithms based on recent advances in statistical
+learning theory, and applied to large number of real-world applications, such as
+text categorization, hand-written character recognition.

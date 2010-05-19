@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/19 11:47:15 obache Exp $
+bin/svm_classify
+bin/svm_learn
+bin/svm_model
+include/TinySVM/base_example.h
+include/TinySVM/classifier.h
+include/TinySVM/example.h
+include/TinySVM/kernel.h
+include/TinySVM/misc.h
+include/TinySVM/model.h
+include/TinySVM/param.h
+include/tinysvm.h
+lib/libtinysvm.la
+man/man1/svm_classify.1
+man/man1/svm_learn.1
+man/man1/svm_model.1
