@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/19 11:47:15 obache Exp $
+
+declaration of C function 'int getopt()' conflicts with unistd.h.
+
+--- src/getopt.h.orig	2002-08-20 15:31:17.000000000 +0900
++++ src/getopt.h
+@@ -128,7 +128,6 @@ struct option
+    errors, only prototype getopt for the GNU C library.  */
+ extern int getopt (int argc, char *const *argv, const char *shortopts);
+ #else /* not __GNU_LIBRARY__ */
+-extern int getopt ();
+ #endif /* __GNU_LIBRARY__ */
+ extern int getopt_long (int argc, char *const *argv, const char *shortopts,
+ 		        const struct option *longopts, int *longind);
