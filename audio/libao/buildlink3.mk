@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/06/14 22:57:58 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2010/05/19 18:17:27 drochner Exp $
 
 BUILDLINK_TREE+=	libao
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libao
 LIBAO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libao+=	libao>=0.8.4
-BUILDLINK_ABI_DEPENDS.libao+=	libao>=0.8.6nb3
+BUILDLINK_ABI_DEPENDS.libao+=	libao>=1.0.0
 BUILDLINK_PKGSRCDIR.libao?=	../../audio/libao
 
 .  if !defined(_LIBAO_BUILDING_PLUGIN)
