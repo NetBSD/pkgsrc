@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1952 2010/05/19 22:59:43 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1953 2010/05/19 23:02:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2518,3 +2518,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/ruby-cabocha version 0.53 [obache 2010-05-19]
 	Updated print/tex-amsrefs to 2.03 [minskim 2010-05-19]
 	Updated print/tex-amsrefs-doc to 2.03 [minskim 2010-05-19]
+	Updated print/tex-kotex-dev to 0.1.1nb1 [minskim 2010-05-19]
