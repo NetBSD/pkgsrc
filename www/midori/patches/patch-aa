@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2010/04/10 00:57:06 obache Exp $
+$NetBSD: patch-aa,v 1.3 2010/05/19 18:01:29 drochner Exp $
 
---- wscript.orig	2010-03-07 21:23:04.000000000 +0000
+--- wscript.orig	2010-05-16 18:32:33.000000000 +0000
 +++ wscript
-@@ -430,7 +430,7 @@ def build (bld):
+@@ -454,7 +454,7 @@ def build (bld):
              'AUTHORS COPYING ChangeLog EXPAT README')
  
      # Install default configuration
@@ -11,7 +11,14 @@ $NetBSD: patch-aa,v 1.2 2010/04/10 00:57:06 obache Exp $
  
      if bld.env['RST2HTML']:
          # FIXME: Build only if needed
-@@ -515,7 +515,7 @@ def build (bld):
+@@ -533,13 +533,13 @@ def build (bld):
+         bld.install_files ('${MDATADIR}/' + APPNAME + '/res', 'data/autosuggestcontrol.css')
+ 
+         # FIXME: Determine the library naming for other platforms
+-        if Options.platform == 'linux':
++        if 1:
+             extensions = os.listdir ('data/extensions')
+             for extension in extensions:
                  folder = 'lib' + extension + '.so'
                  source = 'data/extensions/' + extension +  '/config'
                  if os.path.exists (source):
@@ -19,4 +26,4 @@ $NetBSD: patch-aa,v 1.2 2010/04/10 00:57:06 obache Exp $
 +                    bld.install_files ('${DESTDIR}${PREFIX}/share/examples/' + APPNAME + \
                                         '/extensions/' + folder, source)
  
-     if Options.commands['check']:
+     if Options.commands['check'] or bld.env['tests']:
