@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/12 02:55:54 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/19 22:59:13 minskim Exp $
 
-SHA1 (tex-amsrefs-2.02/amsrefs.tar.lzma) = bc631efe916ed1ebd5caf654ea48488caf576c22
-RMD160 (tex-amsrefs-2.02/amsrefs.tar.lzma) = 575e5c1807dec300f2a063ac764dd7c64c7f01b3
-Size (tex-amsrefs-2.02/amsrefs.tar.lzma) = 21955 bytes
+SHA1 (tex-amsrefs-15878/amsrefs.tar.xz) = 5f3727b329d782ce8ee3cd1618ed649122525ef7
+RMD160 (tex-amsrefs-15878/amsrefs.tar.xz) = 69c9846185a9089137944de5e1c3f66bdd8e58d2
+Size (tex-amsrefs-15878/amsrefs.tar.xz) = 27448 bytes
