@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/07 23:15:15 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/19 23:19:00 minskim Exp $
 
-SHA1 (tex-preprint-doc-2008.7340/preprint.doc.tar.lzma) = 6b73fdf209c1e21de878e0652017d9cf5b141869
-RMD160 (tex-preprint-doc-2008.7340/preprint.doc.tar.lzma) = 62c9825ddf92395c1e571f15d9e4925fdfe3584c
-Size (tex-preprint-doc-2008.7340/preprint.doc.tar.lzma) = 316178 bytes
+SHA1 (tex-preprint-16085/preprint.doc.tar.xz) = 5ebc8ab394885d3825cf73a77f5f539b4a530a82
+RMD160 (tex-preprint-16085/preprint.doc.tar.xz) = 7474466bfc7a64cd0e53cfcfbb06a91c5f135e2f
+Size (tex-preprint-16085/preprint.doc.tar.xz) = 316420 bytes
