@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1946 2010/05/19 12:10:26 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1947 2010/05/19 12:11:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2511,3 +2511,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/yamcha version 0.33 [obache 2010-05-19]
 	Added textproc/p5-yamcha version 0.33 [obache 2010-05-19]
 	Added textproc/py-yamcha version 0.33 [obache 2010-05-19]
+	Added textproc/ruby-yamcha version 0.33 [obache 2010-05-19]
