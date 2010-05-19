@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2008/09/07 04:35:41 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2010/05/19 09:10:55 asau Exp $
 
-DISTNAME=		gprolog-1.3.0
+DISTNAME=		gprolog-1.3.1
 CATEGORIES=		lang
 MASTER_SITES=		${HOMEPAGE}
 
