@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2010/05/19 21:00:02 drochner Exp $
+
+--- src/aomodule.c.orig	2003-07-24 06:52:59.000000000 +0000
++++ src/aomodule.c
+@@ -64,6 +64,7 @@ parse_args(PyObject *args, PyObject *kwa
+   assert(overwrite != NULL);
+ 
+   /* Set the default values */
++  memset(format, 0, sizeof(*format));
+   format->bits = 16;
+   format->rate = 44100;
+   format->channels = 2;
+@@ -143,6 +144,7 @@ py_ao_new(PyObject *self, PyObject *args
+ 
+   retobj = (ao_Object *) PyObject_NEW(ao_Object, &ao_Type);
+   retobj->dev = dev;
++  retobj->driver_id = driver_id;
+   return (PyObject *) retobj;
+ }
+ 
+@@ -150,7 +152,7 @@ static void
+ py_ao_dealloc(ao_Object *self)
+ {
+   ao_close(self->dev);
+-  PyMem_DEL(self);
++  PyObject_DEL(self);
+ }
+ 
+ static PyObject *
+@@ -184,7 +186,7 @@ py_ao_driver_info(PyObject *self, PyObje
+ 
+     /* It's a method */
+     ao_Object *ao_self = (ao_Object *) self;
+-    info = ao_driver_info(ao_self->dev->driver_id);
++    info = ao_driver_info(ao_self->driver_id);
+ 
+   } else {
+ 
