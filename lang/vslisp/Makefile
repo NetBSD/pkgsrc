@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2009/12/12 21:36:55 asau Exp $
+# $NetBSD: Makefile,v 1.17 2010/05/19 11:11:44 asau Exp $
 
 DISTNAME=		vslisp-4.0-1
 PKGNAME=		vslisp-4.0.1
 PKGREVISION=		2
 CATEGORIES=		lang
-MASTER_SITES=		ftp://vslisp.sourceforge.net/pub/vslisp/
+MASTER_SITES=		$(MASTER_SITE_SOURCEFORGE:=vslisp/)
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vslisp.sourceforge.net/
