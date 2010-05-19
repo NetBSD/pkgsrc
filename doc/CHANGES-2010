@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1939 2010/05/18 21:39:44 sketch Exp $
+$NetBSD: CHANGES-2010,v 1.1940 2010/05/19 09:11:34 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/cone to 0.83 [adam 2010-05-18]
 	Updated audio/cmus to 2.3.2 [gls 2010-05-18]
 	Updated chat/irssi-icb to 0.14nb16 [sketch 2010-05-18]
+	Updated lang/gprolog to 1.3.1 [asau 2010-05-19]
