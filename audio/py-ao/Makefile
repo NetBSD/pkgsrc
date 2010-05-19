@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/05/19 21:00:02 drochner Exp $
 #
 
-DISTNAME=		pyao-0.81
+DISTNAME=		pyao-0.82
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		audio python
-MASTER_SITES=		http://vorbis.com/files/1.0.1/unix/py/
+MASTER_SITES=		http://ekyo.nerim.net/software/pyogg/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vorbis.com/
