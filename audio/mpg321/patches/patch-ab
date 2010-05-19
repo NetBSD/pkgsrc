@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2010/05/19 18:25:19 drochner Exp $
+
+--- ao.c.orig	2010-05-19 15:45:33.000000000 +0000
++++ ao.c
+@@ -229,6 +229,7 @@ void open_ao_playdevice(struct mad_heade
+            and restore it afterwards */
+         signal(SIGINT, SIG_DFL);
+         
++	memset(&format, 0, sizeof(format));
+         format.bits = 16;
+         format.rate = header->samplerate;
+         format.channels = (options.opt & MPG321_FORCE_STEREO) ? 2 : MAD_NCHANNELS(header);

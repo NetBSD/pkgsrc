@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2008/01/03 23:18:07 heinz Exp $
+# $NetBSD: Makefile,v 1.34 2010/05/19 18:22:14 drochner Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/cdrdao/Makefile.common"
+
+PKGREVISION=	1
 
 PKGNAME=		cdrdao-${CDRDAO_VER}
 
