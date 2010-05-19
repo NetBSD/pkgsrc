@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/25 07:53:46 minskim Exp $
-# TeX Live Revision 9907
+# $NetBSD: Makefile,v 1.2 2010/05/19 23:13:07 minskim Exp $
 
 DISTNAME=	xltxtra
-PKGNAME=	tex-${DISTNAME}-0.4
+PKGNAME=	tex-${DISTNAME}-0.5b
+TEXLIVE_REV=	16545
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extras files for LaTeX users of XeTeX
@@ -14,5 +14,5 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-xunicode-[0-9]*:../../print/tex-xunicode
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
