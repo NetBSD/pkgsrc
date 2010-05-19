@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2010/05/19 17:51:22 drochner Exp $
+
+--- src/plugins/qt4projectmanager/qt4project.cpp.orig	2010-01-15 17:36:53.000000000 +0000
++++ src/plugins/qt4projectmanager/qt4project.cpp
+@@ -513,7 +513,7 @@ ProjectExplorer::ToolChain *Qt4Project::
+ QString Qt4Project::makeCommand(BuildConfiguration *configuration) const
+ {
+     ToolChain *tc = toolChain(configuration);
+-    return tc ? tc->makeCommand() : "make";
++    return tc ? tc->makeCommand() : "gmake";
+ }
+ 
+ QString Qt4Project::defaultMakeTarget(BuildConfiguration *configuration) const
