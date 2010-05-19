@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2010/05/19 21:00:02 drochner Exp $
+
+--- src/aomodule.h.orig	2003-07-24 06:58:07.000000000 +0000
++++ src/aomodule.h
+@@ -9,6 +9,7 @@
+ typedef struct {
+   PyObject_HEAD
+   ao_device *dev;
++  int driver_id;
+ } ao_Object;
+ 
+ static PyObject *Py_aoError;
