@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 2008/12/19 04:26:56 jmcneill Exp $
+$NetBSD: patch-af,v 1.4 2010/05/19 18:17:27 drochner Exp $
 
---- src/plugins/alsa09/ao_alsa09.c.orig	2008-12-18 23:24:28.000000000 -0500
-+++ src/plugins/alsa09/ao_alsa09.c
+--- src/plugins/alsa/ao_alsa.c.orig	2008-12-18 23:24:28.000000000 -0500
++++ src/plugins/alsa/ao_alsa.c
 @@ -39,6 +39,10 @@
  #include <ao/ao.h>
  #include <ao/plugin.h>
