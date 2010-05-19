@@ -1,0 +1,7 @@
+CaboCha is a Japanese dependency analysis machine based on Support Vector
+Machines. It is (89.29%) system that accuracy is the highest as a statistical
+Japanese dependency analysis machine as of June, 2001. Moreover, definite
+analytical algorithm (Cascaded Chunking Model) that doesn't do back-track is
+adopted, and an efficient analysis can be done comparatively.
+
+This package is python module for CaboCha.
