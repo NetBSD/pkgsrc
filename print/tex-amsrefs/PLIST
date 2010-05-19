@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 02:55:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/19 22:59:13 minskim Exp $
+share/texmf-dist/bibtex/bib/amsrefs/amsj.bib
+share/texmf-dist/bibtex/bst/amsrefs/amsra.bst
+share/texmf-dist/bibtex/bst/amsrefs/amsrn.bst
+share/texmf-dist/bibtex/bst/amsrefs/amsrs.bst
+share/texmf-dist/bibtex/bst/amsrefs/amsru.bst
+share/texmf-dist/bibtex/bst/amsrefs/amsry.bst
 share/texmf-dist/tex/latex/amsrefs/amsbst.sty
 share/texmf-dist/tex/latex/amsrefs/amsrefs.sty
 share/texmf-dist/tex/latex/amsrefs/ifoption.sty
