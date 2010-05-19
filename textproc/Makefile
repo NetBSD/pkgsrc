@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.539 2010/05/17 22:30:27 morr Exp $
+# $NetBSD: Makefile,v 1.540 2010/05/19 12:12:55 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -388,6 +388,7 @@ SUBDIR+=	p5-mecab
 SUBDIR+=	p5-mobiperl
 SUBDIR+=	p5-native-hyperestraier
 SUBDIR+=	p5-podlators
+SUBDIR+=	p5-yamcha
 SUBDIR+=	par
 SUBDIR+=	pear-Console_Table
 SUBDIR+=	pear-File_Find
@@ -434,6 +435,7 @@ SUBDIR+=	py-sphinx
 SUBDIR+=	py-textile
 SUBDIR+=	py-vobject
 SUBDIR+=	py-xml
+SUBDIR+=	py-yamcha
 SUBDIR+=	py-yaml
 SUBDIR+=	qprint
 SUBDIR+=	qsubst
@@ -488,6 +490,7 @@ SUBDIR+=	ruby-will-paginate
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
 SUBDIR+=	ruby-xslt
+SUBDIR+=	ruby-yamcha
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
@@ -552,6 +555,7 @@ SUBDIR+=	xmltooling
 SUBDIR+=	xp
 SUBDIR+=	xslide
 SUBDIR+=	xt
+SUBDIR+=	yamcha
 SUBDIR+=	yodl
 
 .include "../mk/misc/category.mk"
