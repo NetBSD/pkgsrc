@@ -1,34 +1,30 @@
-$NetBSD: patch-ab,v 1.7 2009/06/04 05:29:33 hasso Exp $
+$NetBSD: patch-ab,v 1.8 2010/05/19 09:10:55 asau Exp $
 
---- src/configure.orig	2007-01-05 14:13:28 +0200
-+++ src/configure	2009-06-04 05:45:38 +0300
-@@ -3523,6 +3523,10 @@ _ACEOF
+--- src/configure.orig	2009-02-10 18:16:50.000000000 +0300
++++ src/configure	2010-05-19 12:27:07.000000000 +0400
+@@ -3529,6 +3529,10 @@
  #define M_bsd 1
  _ACEOF
  ;;
-+        *dragonfly*)    cat >>confdefs.h <<\_ACEOF
++        *dragonfly*)          cat >>confdefs.h <<\_ACEOF
 +#define M_bsd 1
 +_ACEOF
 +;;
-     esac
- 
-     case "$host" in
-@@ -3554,6 +3558,14 @@ _ACEOF
- #define M_x86_64_linux 1
+         *darwin*)       cat >>confdefs.h <<\_ACEOF
+ #define M_darwin 1
+ _ACEOF
+@@ -3568,6 +3572,10 @@
+ #define M_x86_64_bsd 1
  _ACEOF
  ;;
-+        x86_64*bsd*)   cat >>confdefs.h <<\_ACEOF
++        x86_64*dragonfly*)     cat >>confdefs.h <<\_ACEOF
 +#define M_x86_64_bsd 1
 +_ACEOF
 +;;
-+        x86_64*dragonfly*) cat >>confdefs.h <<\_ACEOF
-+#define M_x86_64_bsd 1
-+_ACEOF
-+;;
-         i*86*linux*)     cat >>confdefs.h <<\_ACEOF
- #define M_ix86_linux 1
+         x86_64*solaris*) cat >>confdefs.h <<\_ACEOF
+ #define M_x86_64_solaris 1
  _ACEOF
-@@ -3570,6 +3582,10 @@ _ACEOF
+@@ -3588,6 +3596,10 @@
  #define M_ix86_bsd 1
  _ACEOF
  ;;

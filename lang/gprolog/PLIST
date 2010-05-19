@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/19 09:10:55 asau Exp $
 bin/fd2c
 bin/gplc
 bin/gprolog
@@ -114,6 +114,8 @@ share/doc/gprolog/html/gprolog068.html
 share/doc/gprolog/html/gprolog069.html
 share/doc/gprolog/html/gprolog070.html
 share/doc/gprolog/html/gprolog071.html
+share/doc/gprolog/html/gprolog072.html
+share/doc/gprolog/html/gprolog073.html
 share/doc/gprolog/html/index.html
 share/doc/gprolog/html/next_motif.gif
 share/doc/gprolog/html/previous_motif.gif
