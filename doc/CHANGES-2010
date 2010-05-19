@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1945 2010/05/19 12:09:35 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1946 2010/05/19 12:10:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2510,3 +2510,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/maude to 2.4 [asau 2010-05-19]
 	Added textproc/yamcha version 0.33 [obache 2010-05-19]
 	Added textproc/p5-yamcha version 0.33 [obache 2010-05-19]
+	Added textproc/py-yamcha version 0.33 [obache 2010-05-19]
