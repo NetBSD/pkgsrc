@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 2010/05/19 18:25:19 drochner Exp $
+
+--- ogg123/callbacks.c.orig	2010-05-19 16:19:11.000000000 +0000
++++ ogg123/callbacks.c
+@@ -44,6 +44,7 @@ void audio_reopen_action (buf_t *buf, vo
+ 
+   close_audio_devices (reopen_arg->devices);
+   
++  memset(&format, 0, sizeof(format));
+   /* Record audio device settings and open the devices */
+   format.rate = reopen_arg->format->rate;
+   format.channels = reopen_arg->format->channels;

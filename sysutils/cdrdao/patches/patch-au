@@ -1,0 +1,12 @@
+$NetBSD: patch-au,v 1.1 2010/05/19 18:22:14 drochner Exp $
+
+--- ./trackdb/FormatOgg.cc.orig	2010-05-19 14:56:10.000000000 +0000
++++ ./trackdb/FormatOgg.cc
+@@ -84,6 +84,7 @@ FormatSupport::Status FormatOgg::oggInit
+       return FS_WRONG_FORMAT;
+   }
+ 
++  memset(&outFormat_, 0, sizeof(outFormat_));
+   outFormat_.bits = 16;
+   outFormat_.rate = 44100;
+   outFormat_.channels = 2;
