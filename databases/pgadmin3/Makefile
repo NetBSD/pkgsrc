@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.13 2010/04/26 06:14:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2010/05/20 13:27:20 adam Exp $
 
 .include "../../databases/postgresql84/Makefile.mirrors"
 
-DISTNAME=	pgadmin3-1.10.2
+DISTNAME=	pgadmin3-1.10.3
 CATEGORIES=	databases
-MASTER_SITES=	${PGSQL_MIRRORS:=pgadmin3/release/v1.10.2/src/}
+MASTER_SITES=	${PGSQL_MIRRORS:=pgadmin3/release/v1.10.3/src/}
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.pgadmin.org/
 COMMENT=	Graphical PostgreSQL client and administration tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PGSQL_VERSIONS_ACCEPTED=84 83
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt
