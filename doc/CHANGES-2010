@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1969 2010/05/20 09:38:56 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.1970 2010/05/20 09:56:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2534,6 +2534,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/im-ja version 1.5 [obache 2010-05-20]
 	Added inputmethod/zinnia version 0.05 [obache 2010-05-20]
 	Added inputmethod/p5-zinnia version 0.05 [obache 2010-05-20]
+	Added inputmethod/py-zinnia version 0.05 [obache 2010-05-20]
 	Added inputmethod/ruby-zinnia version 0.05 [obache 2010-05-20]
 	Added inputmethod/zinnia-tomoe version 0.6.0.20080911 [obache 2010-05-20]
 	Updated print/cups to 1.3.11nb4 [sbd 2010-05-20]
