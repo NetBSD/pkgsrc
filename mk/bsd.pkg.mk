@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1971 2010/05/19 09:12:15 sbd Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1972 2010/05/20 07:57:22 sbd Exp $
 #
 # This file is in the public domain.
 #
@@ -529,6 +529,10 @@ BUILTIN_PKGS+=	${BUILTIN_PKG.${_pkg_}}
 .if defined(BUILTIN_PKGS)
 _BUILD_DEFS+=	BUILTIN_PKGS
 .endif
+
+.if defined(GLIBC_VERSION)
+_BUILD_DEFS+=	GLIBC_VERSION
+.endif # GLIBC_VERSION
 
 .PHONY: all
 .if !target(all)
