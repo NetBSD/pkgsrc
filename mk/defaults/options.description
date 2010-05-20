@@ -435,6 +435,7 @@ sieve			Enable sieve support.
 simd			Enable MMX/3DNOW/SSE/Altivec support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey			Enable S/Key support.
+skk			Use SKK for Kana-to-Kanji conversion.
 slang			Enable S-Lang support.
 slp			Enable Service Location Protocol support.
 small-net		Tune for a smaller networks.
