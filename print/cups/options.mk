@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/04/18 12:02:58 obache Exp $
+# $NetBSD: options.mk,v 1.5 2010/05/20 09:35:58 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
@@ -11,6 +11,9 @@ PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
 .if !empty(PKG_OPTIONS:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dnssd
+.else
+CONFIGURE_ARGS+=	--disable-dnssd
 .endif
 
 .if !empty(PKG_OPTIONS:Mghostscript)
@@ -21,6 +24,7 @@ CONFIGURE_ENV+=		ac_cv_path_CUPS_GHOSTSCRIPT=${TOOLS_PATH.gs}
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 .include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gssapi
 .else
 CONFIGURE_ARGS+=	--disable-gssapi
 .endif
