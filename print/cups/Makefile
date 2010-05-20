@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2010/05/20 09:35:58 sbd Exp $
+# $NetBSD: Makefile,v 1.152 2010/05/20 09:37:12 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -47,6 +47,7 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP:Q}
+CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-jpeg
 CONFIGURE_ARGS+=	--enable-png
@@ -154,4 +155,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${DESTDIR}${EGDIR}
 .endif
 
+.include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
