@@ -1,0 +1,5 @@
+DiffPDF is used to compare two PDF files. By default the comparison is
+of the text on each pair of pages, but comparing the appearance of pages
+is also supported (for example, if a diagram is changed or a paragraph
+reformatted). It is also possible to compare particular pages or page
+ranges.
