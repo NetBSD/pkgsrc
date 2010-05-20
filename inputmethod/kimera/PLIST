@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/20 07:46:41 obache Exp $
+bin/kimera
+libdata/kimera/dic/dakuten.dic
+libdata/kimera/dic/hankakukana.dic
+libdata/kimera/dic/hiragana.dic
+libdata/kimera/dic/kanainput.dic
+libdata/kimera/dic/katakana.dic
+libdata/kimera/dic/numeralsymbols.dic
+libdata/kimera/dic/zenkakualphabet.dic
+libdata/kimera/images/property_icon.png
+libdata/kimera/images/red_dictionary.png
+libdata/kimera/images/trayicon_directinput.png
+libdata/kimera/images/trayicon_hankakukana.png
+libdata/kimera/images/trayicon_hiragana.png
+libdata/kimera/images/trayicon_katakana.png
+libdata/kimera/images/trayicon_zenkakueisu.png
+libdata/kimera/kimera-bin
