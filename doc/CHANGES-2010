@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1966 2010/05/20 09:07:01 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1967 2010/05/20 09:08:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2534,3 +2534,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/im-ja version 1.5 [obache 2010-05-20]
 	Added inputmethod/zinnia version 0.05 [obache 2010-05-20]
 	Added inputmethod/p5-zinnia version 0.05 [obache 2010-05-20]
+	Added inputmethod/ruby-zinnia version 0.05 [obache 2010-05-20]
