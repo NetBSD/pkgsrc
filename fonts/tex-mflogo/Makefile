@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 08:32:00 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/05/20 17:44:40 minskim Exp $
 
 DISTNAME=	mflogo
 PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	17487
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX support for MetaFont logo fonts
