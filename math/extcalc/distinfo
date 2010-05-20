@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/03 14:05:01 drochner Exp $
+$NetBSD: distinfo,v 1.2 2010/05/20 17:48:59 drochner Exp $
 
-SHA1 (extcalc-0.9.2.tar.gz) = 96799e277578d37a8c73a8ee04812b026c6ea7e6
-RMD160 (extcalc-0.9.2.tar.gz) = 9b0922bc4f6454ada96c0c6bb85f77e6153a715f
-Size (extcalc-0.9.2.tar.gz) = 1081868 bytes
-SHA1 (patch-aa) = 272a39d2e616f364670afd42d11aefe5e0558c10
-SHA1 (patch-ab) = b2b504c186b4c898addb0f762c18c108063ca12f
+SHA1 (extcalc-0.9.3-1.tar.gz) = bca456f2defe9df88d20cbce8ce9d02b68c0f8d2
+RMD160 (extcalc-0.9.3-1.tar.gz) = 3626ca6e59c27b1cde88e088b79e24b9cf509b81
+Size (extcalc-0.9.3-1.tar.gz) = 1011983 bytes
+SHA1 (patch-aa) = fe0f4cb8fb88768df5675f90b643cf5307d111e4
+SHA1 (patch-ac) = 1284a5526a027e4844303479159804825ae7b203
