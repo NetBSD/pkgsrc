@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/05/20 09:05:30 obache Exp $
+# used by inputmethod/p5-zinnia/Makefile
+# used by inputmethod/py-zinnia/Makefile
+# used by inputmethod/ruby-zinnia/Makefile
+
+DISTNAME=	zinnia-0.05
+CATEGORIES=	inputmethod
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zinnia/}
+
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/zinnia/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/zinnia/patches
+
+MAINTAINER?=	obache@NetBSD.org
+HOMEPAGE=	http://zinnia.sourceforge.net/
+LICENSE=	modified-bsd
