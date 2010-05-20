@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/03 14:05:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/20 17:48:59 drochner Exp $
 bin/extcalc
 share/applications/extcalc.desktop
 share/extcalc/data/angle.png
@@ -22,8 +22,7 @@ share/extcalc/data/forward.png
 share/extcalc/data/free.png
 share/extcalc/data/french.qm
 share/extcalc/data/german.qm
-share/extcalc/data/icon22.png
-share/extcalc/data/icon48.png
+share/extcalc/data/icons.qrc
 share/extcalc/data/license.txt
 share/extcalc/data/line.png
 share/extcalc/data/matrix-vector
@@ -67,6 +66,7 @@ share/extcalc/doc/randbutton.jpg
 share/extcalc/doc/random.jpg
 share/extcalc/doc/screenshot.jpg
 share/extcalc/doc/scriptedit.jpg
+share/extcalc/doc/scriptedit2.jpg
 share/extcalc/doc/scriptrun.jpg
 share/extcalc/doc/setbutton.jpg
 share/extcalc/doc/setvar.jpg
@@ -78,9 +78,5 @@ share/extcalc/doc/stat1.jpg
 share/extcalc/doc/stat2.jpg
 share/extcalc/doc/table.jpg
 share/extcalc/doc/usevar.jpg
-share/extcalc/icons/icon48.png
-@dirrm share/extcalc/icons
-@dirrm share/extcalc/doc
-@dirrm share/extcalc/data
-@dirrm share/extcalc
-@comment in xdg-dirs: @dirrm share/applications
+share/icons/extcalc22.png
+share/icons/extcalc48.png
