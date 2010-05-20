@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.150 2010/05/20 08:05:29 sbd Exp $
+# $NetBSD: Makefile,v 1.151 2010/05/20 09:35:58 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
 # cups-bugs@cups.org.
 
 DISTNAME=	cups-${DIST_VERS}-source
-PKGNAME=	cups-${VERS}
+PKGNAME=	cups-${DIST_VERS:S/-/./g}
 BASE_VERS=	1.3.11
 DIST_VERS=	${BASE_VERS}
 DIST_SUBDIR=	cups-${DIST_VERS}	# temp fix for updated distfile
-VERS=		${DIST_VERS:S/-/./g}
 PKGREVISION=	3
+
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -45,17 +45,18 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-cachedir=${VARBASE:Q}/cache/cups
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
-CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR:Q}
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP:Q}
+CONFIGURE_ARGS+=	--enable-libtool
+CONFIGURE_ARGS+=	--enable-jpeg
+CONFIGURE_ARGS+=	--enable-png
+CONFIGURE_ARGS+=	--enable-tiff
+CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--with-manext=bsd
-CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
-CONFIGURE_ARGS+=	--enable-libtool
-CONFIGURE_ARGS+=	--enable-ssl
-CONFIGURE_ARGS+=	--enable-gnutls=no
-CONFIGURE_ARGS+=	--enable-openssl
+CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-php
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-java
@@ -121,7 +122,7 @@ SUBST_STAGE.paths=	post-patch
 SUBST_CLASSES+=		rpathfix
 SUBST_FILES.rpathfix=	cups-config.in
 SUBST_MESSAGE.rpathfix=	Adding rpath to cups-config.
-SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${LOCALBASE}/lib|g'
+SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g'
 SUBST_STAGE.rpathfix=	post-patch
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
@@ -134,11 +135,12 @@ post-extract:
 	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
-	for file in LICENSE.txt README.txt; do				\
+	${RUN} chmod -r ${DESTDIR}${PREFIX}/bin/lppasswd
+	set -e; for file in LICENSE.txt README.txt; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
-	cd ${WRKSRC}/conf; for file in *.conf mime.convs mime.types; do	\
+	set -e; cd ${WRKSRC}/conf; for file in *.conf mime.convs mime.types; do \
 		case $${file} in					\
 		pam.conf)						\
 			;;						\
