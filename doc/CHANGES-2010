@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1976 2010/05/20 18:06:51 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1977 2010/05/20 18:13:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2568,3 +2568,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-wasy to 2009 [minskim 2010-05-20]
 	Updated fonts/tex-wasy-doc to 2009 [minskim 2010-05-20]
 	Updated fonts/tex-stmaryrd-doc to 2009 [minskim 2010-05-20]
+	Updated print/tex-hyphen-ancientgreek to 2009 [minskim 2010-05-20]
