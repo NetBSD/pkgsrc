@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
+$NetBSD: patch-al,v 1.2 2010/05/20 17:14:45 jnemeth Exp $
 
---- pbx/pbx_dundi.c.orig	2008-11-02 16:39:04.000000000 -0800
+--- pbx/pbx_dundi.c.orig	2010-03-30 16:10:41.000000000 +0000
 +++ pbx/pbx_dundi.c
 @@ -37,7 +37,7 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
  #include <pthread.h>
@@ -10,4 +10,4 @@ $NetBSD: patch-al,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__Darwin__) || defined(__DragonFly__)
  #include <net/if_dl.h>
  #include <ifaddrs.h>
- #endif
+ #include <signal.h>
