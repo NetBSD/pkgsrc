@@ -1,13 +1,20 @@
-# $NetBSD: options.mk,v 1.5 2010/05/20 09:35:58 sbd Exp $
+# $NetBSD: options.mk,v 1.6 2010/05/20 09:38:34 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
 PKG_OPTIONS_GROUP.pdftops=	ghostscript poppler
-PKG_SUPPORTED_OPTIONS=	dnssd kerberos pam slp
+PKG_SUPPORTED_OPTIONS=	dbus dnssd kerberos pam slp threads
 PKG_SUGGESTED_OPTIONS=	dnssd kerberos poppler slp
 PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdbus)
+.  include "../../sysutils/dbus/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dbus
+.else
+CONFIGURE_ARGS+=	--disable-dbus
+.endif
 
 .if !empty(PKG_OPTIONS:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
@@ -54,4 +61,11 @@ CONFIGURE_ENV+=		ac_cv_path_CUPS_PDFTOPS=${POPPLERDIR}/bin/pdftops
 CONFIGURE_ARGS+=	--enable-slp
 .else
 CONFIGURE_ARGS+=	--disable-slp
+.endif
+
+.if !empty(PKG_OPTIONS:Mthreads)
+.  include "../../mk/pthread.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-threads
+.else
+CONFIGURE_ARGS+=	--disable-threads
 .endif
