@@ -95,6 +95,7 @@ djvu			Enable DjVuLibRe support.
 dkim-milter-arlib	ar(3) support for dkim-milter.
 dkim-stats		dkim-stats(8) support for dkim-milter.
 dnsrbl			Enable DNS Real-time Blackhole List support.
+dnssd			Enable DNS Service Dicsovery Protocol support.
 doc			Include the documentation.
 drac			Enable DRAC support.
 dri			Enable Direct Rendering support.
@@ -390,6 +391,7 @@ pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 pkcs11			Use certificate-on-a-stick (or card) support.
 png			Enable PNG support.
+poppler			Enable poppler-utils support.
 postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
 prime			Use Prime for Kana-to-Kanji conversion.
