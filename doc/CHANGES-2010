@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1974 2010/05/20 17:45:21 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1975 2010/05/20 17:53:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2565,3 +2565,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated securitymit-krb5 to 1.4.2nb10 [tez 2010-01-20]
 	Updated comms/asterisk16 to 1.6.1.19 [jnemeth 2010-05-20]
 	Updated fonts/tex-mflogo-doc to 2009nb1 [minskim 2010-05-20]
+	Updated fonts/tex-wasy to 2009 [minskim 2010-05-20]
+	Updated fonts/tex-wasy-doc to 2009 [minskim 2010-05-20]
