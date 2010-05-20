@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2010/02/22 12:10:59 obache Exp $
+$NetBSD: patch-aa,v 1.3 2010/05/20 11:09:51 drochner Exp $
 
---- setup.py.in.orig	2003-09-03 07:42:55.000000000 +0200
+--- setup.py.in.orig	2003-09-03 05:42:55.000000000 +0000
 +++ setup.py.in
-@@ -58,12 +58,9 @@ if version < [2, 2]:
+@@ -58,12 +58,12 @@ if version < [2, 2]:
  
  class PyGtkGLExtInstallLib(InstallLib):
      def run(self):
@@ -10,13 +10,16 @@ $NetBSD: patch-aa,v 1.2 2010/02/22 12:10:59 obache Exp $
 -        self.add_template_option('PYGTKGLEXT_API_VERSION', API_VERSION)
 -        self.prepare()
  
++	dd = os.getenv('DESTDIR')
++	if not dd:
++		dd = ""
          self.install_template_as('pygtkglext.pc.in',
 -                                 os.path.join(self.libdir, 'pkgconfig'),
-+                                 os.path.join(os.getenv('DESTDIR') + os.getenv('PREFIX'), 'lib', 'pkgconfig'),
++                                 os.path.join(dd + os.getenv('PREFIX'), 'lib', 'pkgconfig'),
                                   'pygtkglext-' + API_VERSION + '.pc')
  
          # Modify the base installation dir
-@@ -76,8 +73,6 @@ class PyGtkGLExtInstallLib(InstallLib):
+@@ -76,8 +76,6 @@ class PyGtkGLExtInstallLib(InstallLib):
          """Install template filename into target directory install_dir."""
          
          template = open(filename).read()
@@ -25,7 +28,7 @@ $NetBSD: patch-aa,v 1.2 2010/02/22 12:10:59 obache Exp $
          
          output = os.path.join(install_dir, install_filename)
          self.mkpath(install_dir)
-@@ -86,7 +81,7 @@ class PyGtkGLExtInstallLib(InstallLib):
+@@ -86,7 +84,7 @@ class PyGtkGLExtInstallLib(InstallLib):
          self.local_outputs.append(output)
          return output
  
