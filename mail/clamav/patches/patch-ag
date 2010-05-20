@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2010/04/01 12:02:23 martti Exp $
+$NetBSD: patch-ag,v 1.4.2.1 2010/05/20 21:58:59 tron Exp $
 
-Fix compileation error DragonFly.
+Fix compilation error DragonFly.
 
 --- libclamav/others.h.orig	2010-03-31 19:39:38.000000000 +0300
 +++ libclamav/others.h	2010-04-01 12:24:33.000000000 +0300
