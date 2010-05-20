@@ -1,11 +1,13 @@
-$NetBSD: patch-aq,v 1.5 2010/03/01 07:06:48 jnemeth Exp $
+$NetBSD: patch-aq,v 1.6 2010/05/20 17:14:45 jnemeth Exp $
 
---- configure.orig	2009-12-28 15:31:22.000000000 +0000
+--- configure.orig	2010-01-25 21:53:37.000000000 +0000
 +++ configure
-@@ -13761,6 +13761,146 @@ fi
+@@ -19494,6 +19494,146 @@ _ACEOF
  
+ fi
  
- 
++ 
++ 
 +if test "${ac_cv_header_sys_atomic_h+set}" = set; then
 +  { echo "$as_me:$LINENO: checking for sys/atomic.h" >&5
 +echo $ECHO_N "checking for sys/atomic.h... $ECHO_C" >&6; }
@@ -144,17 +146,15 @@ $NetBSD: patch-aq,v 1.5 2010/03/01 07:06:48 jnemeth Exp $
 +
 +fi
 +
-+
-+
- # The cast to long int works around a bug in the HP C Compiler
- # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
- # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -14172,6 +14312,8 @@ $as_echo_n "checking if \"struct ifaddrs
  
- 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ 
+ { echo "$as_me:$LINENO: checking for int" >&5
+@@ -20769,6 +20909,8 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
-+ #include <sys/types.h>
-+ #include <sys/socket.h>
-  #include <ifaddrs.h>
++#include <sys/types.h>
++#include <sys/socket.h>
+ #include <ifaddrs.h>
  int
  main ()
