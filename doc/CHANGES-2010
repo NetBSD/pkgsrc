@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1964 2010/05/20 08:18:50 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1965 2010/05/20 09:06:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2532,3 +2532,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/kimera-tomoe-gtk version 0.5 [obache 2010-05-20]
 	Updated mail/clamav to 0.96.1 [martti 2010-05-20]
 	Added inputmethod/im-ja version 1.5 [obache 2010-05-20]
+	Added inputmethod/zinnia version 0.05 [obache 2010-05-20]
