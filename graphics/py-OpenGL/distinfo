@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/12/16 20:45:20 drochner Exp $
+$NetBSD: distinfo,v 1.3 2010/05/20 11:15:17 drochner Exp $
 
-SHA1 (PyOpenGL-3.0.1b1.tar.gz) = 5a05ad4d06d4f0bafc8dbbd13323fe508aaecc3b
-RMD160 (PyOpenGL-3.0.1b1.tar.gz) = 7066e7eb18c0de1f2802dbc8bc1e5a2e1c48b5bf
-Size (PyOpenGL-3.0.1b1.tar.gz) = 660642 bytes
-SHA1 (patch-ac) = 81e11b13981848e853f7c19d1a9800618032cb80
+SHA1 (PyOpenGL-3.0.1.tar.gz) = 35ca03f4c9fb452dc07788818fd1683e37f521bf
+RMD160 (PyOpenGL-3.0.1.tar.gz) = 2d733ae5a75583b6afd1cf4e6e3d01af650bf5ab
+Size (PyOpenGL-3.0.1.tar.gz) = 698420 bytes
+SHA1 (patch-ac) = 4f8f078bc5857de1c415b7d84de84a7f9c24628a
 SHA1 (patch-ae) = 49db5e58e914ea916a72745eb9a68a6a334c5c2b
