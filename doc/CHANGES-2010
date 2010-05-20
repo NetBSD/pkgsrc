@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1959 2010/05/20 04:33:39 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.1960 2010/05/20 06:54:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2527,3 +2527,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyperref-doc to 6.81a [minskim 2010-05-19]
 	Added multimedia/gmediaserver version 0.13.0 [obache 2010-05-20]
 	Updated www/ikiwiki to 3.20100518.2 [schmonz 2010-05-20]
+	Updated finance/libofx to 0.9.1 [wiz 2010-05-20]
