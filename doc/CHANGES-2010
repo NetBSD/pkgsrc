@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1960 2010/05/20 06:54:34 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1961 2010/05/20 07:47:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2528,3 +2528,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added multimedia/gmediaserver version 0.13.0 [obache 2010-05-20]
 	Updated www/ikiwiki to 3.20100518.2 [schmonz 2010-05-20]
 	Updated finance/libofx to 0.9.1 [wiz 2010-05-20]
+	Added inputmethod/kimera version 2.11 [obache 2010-05-20]
