@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.38 2010/05/16 06:59:26 sbd Exp $
+# $NetBSD: Linux.mk,v 1.39 2010/05/20 07:57:23 sbd Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -110,4 +110,11 @@ _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 .if (${MACHINE_ARCH} == "x86_64")
 ABI?=	64
 LIBABISUFFIX?=          64
+.endif
+
+## Use _CMD so the command only gets run when needed!
+.if exists(/lib/libc.so.6)
+_GLIBC_VERSION_CMD=	/lib/libc.so.6 --version | \
+				sed -ne's/^GNU C.*version \(.*\),.*$$/\1/p'
+GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .endif
