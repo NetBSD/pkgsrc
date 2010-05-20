@@ -1,0 +1,5 @@
+Kimera is an input method (XIM) for the X Window System utilizing
+the Qt4 toolkit that provides Japanese language input support. It
+provides Kanji conversion via Canna or Anthy, as well as supporting
+the ability to assign input styles. We are also considering a
+simple key assign selection method like the one used in Windows.
