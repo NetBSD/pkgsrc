@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/16 20:45:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/20 11:15:17 drochner Exp $
 ${PYSITELIB}/OpenGL/AGL/__init__.py
 ${PYSITELIB}/OpenGL/AGL/__init__.pyc
 ${PYSITELIB}/OpenGL/AGL/__init__.pyo
@@ -1178,6 +1178,9 @@ ${PYSITELIB}/OpenGL/GL/exceptional.pyo
 ${PYSITELIB}/OpenGL/GL/feedback.py
 ${PYSITELIB}/OpenGL/GL/feedback.pyc
 ${PYSITELIB}/OpenGL/GL/feedback.pyo
+${PYSITELIB}/OpenGL/GL/framebufferobjects.py
+${PYSITELIB}/OpenGL/GL/framebufferobjects.pyc
+${PYSITELIB}/OpenGL/GL/framebufferobjects.pyo
 ${PYSITELIB}/OpenGL/GL/glget.py
 ${PYSITELIB}/OpenGL/GL/glget.pyc
 ${PYSITELIB}/OpenGL/GL/glget.pyo
@@ -1286,9 +1289,6 @@ ${PYSITELIB}/OpenGL/arrays/lists.pyo
 ${PYSITELIB}/OpenGL/arrays/nones.py
 ${PYSITELIB}/OpenGL/arrays/nones.pyc
 ${PYSITELIB}/OpenGL/arrays/nones.pyo
-${PYSITELIB}/OpenGL/arrays/numarrays.py
-${PYSITELIB}/OpenGL/arrays/numarrays.pyc
-${PYSITELIB}/OpenGL/arrays/numarrays.pyo
 ${PYSITELIB}/OpenGL/arrays/numbers.py
 ${PYSITELIB}/OpenGL/arrays/numbers.pyc
 ${PYSITELIB}/OpenGL/arrays/numbers.pyo
@@ -1328,6 +1328,9 @@ ${PYSITELIB}/OpenGL/extensions.pyo
 ${PYSITELIB}/OpenGL/images.py
 ${PYSITELIB}/OpenGL/images.pyc
 ${PYSITELIB}/OpenGL/images.pyo
+${PYSITELIB}/OpenGL/latebind.py
+${PYSITELIB}/OpenGL/latebind.pyc
+${PYSITELIB}/OpenGL/latebind.pyo
 ${PYSITELIB}/OpenGL/lazywrapper.py
 ${PYSITELIB}/OpenGL/lazywrapper.pyc
 ${PYSITELIB}/OpenGL/lazywrapper.pyo

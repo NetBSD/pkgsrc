@@ -1,23 +1,26 @@
-$NetBSD: patch-ac,v 1.2 2009/12/16 20:45:20 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2010/05/20 11:15:17 drochner Exp $
 
---- OpenGL/platform/glx.py.orig	2009-08-30 02:26:10.000000000 +0000
+--- OpenGL/platform/glx.py.orig	2009-11-25 20:08:32.000000000 +0000
 +++ OpenGL/platform/glx.py
-@@ -12,12 +12,12 @@ class GLXPlatform( baseplatform.BasePlat
-     # references to GL/GLU functions).
-     GL = OpenGL = ctypesloader.loadLibrary(
-         ctypes.cdll,
--        'GL', 
-+        'libGL.so', 
-         mode=ctypes.RTLD_GLOBAL 
-     )
-     GLU = ctypesloader.loadLibrary(
-         ctypes.cdll,
--        'GLU',
-+        'libGLU.so',
-         mode=ctypes.RTLD_GLOBAL 
-     )
-     # glut shouldn't need to be global, but just in case a dependent library makes
-@@ -25,7 +25,7 @@ class GLXPlatform( baseplatform.BasePlat
+@@ -13,7 +13,7 @@ class GLXPlatform( baseplatform.BasePlat
+     try:
+         GL = OpenGL = ctypesloader.loadLibrary(
+             ctypes.cdll,
+-            'GL', 
++            'libGL.so', 
+             mode=ctypes.RTLD_GLOBAL 
+         )
+     except OSError, err:
+@@ -21,7 +21,7 @@ class GLXPlatform( baseplatform.BasePlat
+     try:
+         GLU = ctypesloader.loadLibrary(
+             ctypes.cdll,
+-            'GLU',
++            'libGLU.so',
+             mode=ctypes.RTLD_GLOBAL 
+         )
+     except OSError, err:
+@@ -31,7 +31,7 @@ class GLXPlatform( baseplatform.BasePlat
      try:
          GLUT = ctypesloader.loadLibrary(
              ctypes.cdll,
@@ -26,7 +29,7 @@ $NetBSD: patch-ac,v 1.2 2009/12/16 20:45:20 drochner Exp $
              mode=ctypes.RTLD_GLOBAL 
          )
      except OSError, err:
-@@ -38,7 +38,7 @@ class GLXPlatform( baseplatform.BasePlat
+@@ -44,7 +44,7 @@ class GLXPlatform( baseplatform.BasePlat
      try:
          GLE = ctypesloader.loadLibrary(
              ctypes.cdll,
@@ -35,10 +38,3 @@ $NetBSD: patch-ac,v 1.2 2009/12/16 20:45:20 drochner Exp $
              mode=ctypes.RTLD_GLOBAL 
          )
      except OSError, err:
-@@ -69,4 +69,4 @@ class GLXPlatform( baseplatform.BasePlat
-         pointer = ctypes.c_void_p.in_dll( self.GLUT, internal )
-         return ctypes.c_void_p(ctypes.addressof(pointer))
-     
--    safeGetError = staticmethod( OpenGL.glGetError )
-\ No newline at end of file
-+    safeGetError = staticmethod( OpenGL.glGetError )
