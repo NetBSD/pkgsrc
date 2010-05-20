@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/07 07:31:30 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.2 2010/05/20 17:52:31 minskim Exp $
 
 DISTNAME=	wasy.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2008.7340
+PKGNAME=	tex-${DISTNAME:S/./-/}-2009
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-wasy
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
