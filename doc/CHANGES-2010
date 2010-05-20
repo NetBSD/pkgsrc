@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1957 2010/05/19 23:39:31 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1958 2010/05/20 04:28:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2525,3 +2525,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-preprint-doc to 2009 [minskim 2010-05-19]
 	Updated print/tex-hyperref to 6.81a [minskim 2010-05-19]
 	Updated print/tex-hyperref-doc to 6.81a [minskim 2010-05-19]
+	Added multimedia/gmediaserver version 0.13.0 [obache 2010-05-20]
