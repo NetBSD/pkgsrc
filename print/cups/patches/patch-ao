@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.9 2009/05/14 01:19:13 christos Exp $
+$NetBSD: patch-ao,v 1.10 2010/05/20 08:06:44 sbd Exp $
+
+Add '--with-manext' configure option.
 
 --- config-scripts/cups-manpages.m4.orig	2009-01-12 14:17:21.000000000 -0500
 +++ config-scripts/cups-manpages.m4	2009-05-13 21:07:50.000000000 -0400
