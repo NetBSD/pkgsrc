@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/10 00:19:51 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/20 23:31:22 minskim Exp $
 
-SHA1 (tex-paralist-2.3b/paralist.tar.lzma) = 56ea23ad1094f210e8801b930a835b83105de313
-RMD160 (tex-paralist-2.3b/paralist.tar.lzma) = d78bb9d2024f8324b238095a318076a503a4ceb9
-Size (tex-paralist-2.3b/paralist.tar.lzma) = 3577 bytes
+SHA1 (tex-paralist-15878/paralist.tar.xz) = b047d0609d1e39022b486e500187839716adb8b3
+RMD160 (tex-paralist-15878/paralist.tar.xz) = 37b23f1647910e47c3df61df0d4d05463e78fd0a
+Size (tex-paralist-15878/paralist.tar.xz) = 3644 bytes
