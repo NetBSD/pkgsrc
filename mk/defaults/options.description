@@ -95,7 +95,7 @@ djvu			Enable DjVuLibRe support.
 dkim-milter-arlib	ar(3) support for dkim-milter.
 dkim-stats		dkim-stats(8) support for dkim-milter.
 dnsrbl			Enable DNS Real-time Blackhole List support.
-dnssd			Enable DNS Service Dicsovery Protocol support.
+dnssd			Enable DNS Service Discovery Protocol support.
 doc			Include the documentation.
 drac			Enable DRAC support.
 dri			Enable Direct Rendering support.
