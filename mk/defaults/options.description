@@ -289,6 +289,7 @@ libmtp			Enable MTP via libmtp support.
 libofx			Enable OFX support.
 libspiff		Use libspiff for XML shareable playlist support.
 libssh2 	 	Use libssh2 for SSHv2 protocol support.
+libthai			Use libthai for Thai word segmentation.
 libvisual		Enable libvisual (audio visualisation) support.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libusb			Enable USB access.
