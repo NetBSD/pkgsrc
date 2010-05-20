@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/05/07 23:57:56 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/05/20 17:14:45 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -945,6 +945,9 @@ libdata/asterisk/static-http/docs/node277.html
 libdata/asterisk/static-http/docs/node278.html
 libdata/asterisk/static-http/docs/node279.html
 libdata/asterisk/static-http/docs/node28.html
+libdata/asterisk/static-http/docs/node280.html
+libdata/asterisk/static-http/docs/node281.html
+libdata/asterisk/static-http/docs/node282.html
 libdata/asterisk/static-http/docs/node29.html
 libdata/asterisk/static-http/docs/node3.html
 libdata/asterisk/static-http/docs/node30.html
@@ -1062,9 +1065,6 @@ share/doc/asterisk/UPGRADE-1.4.txt
 share/doc/asterisk/UPGRADE-1.6.txt
 share/doc/asterisk/UPGRADE.txt
 share/doc/asterisk/Zaptel-to-DAHDI.txt
-share/doc/asterisk/asterisk-1.6.1.14-summary.txt
-share/doc/asterisk/asterisk-1.6.1.16-summary.txt
-share/doc/asterisk/${PKGNAME}-summary.txt
 share/doc/asterisk/asterisk-mib.txt
 share/doc/asterisk/backtrace.txt
 share/doc/asterisk/callfiles.txt
