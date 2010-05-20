@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.48 2010/03/26 21:44:59 joerg Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2010/05/20 22:23:50 tron Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.4/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/www/
 COMMENT=	MIT Kerberos 5 authentication system
 
