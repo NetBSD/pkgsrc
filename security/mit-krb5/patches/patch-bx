@@ -1,0 +1,19 @@
+$NetBSD: patch-bx,v 1.1.2.2 2010/05/20 22:23:50 tron Exp $
+fix http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2010-005.txt
+
+--- lib/gssapi/krb5/accept_sec_context.c.orig	2010-05-20 07:13:48.258046700 -0500
++++ lib/gssapi/krb5/accept_sec_context.c	2010-05-20 07:16:20.228175200 -0500
+@@ -423,6 +423,13 @@
+    }
+ #endif
+ 
++   if (authdat->checksum == NULL) {
++      /* missing checksum counts as "inappropriate type" */
++      code = KRB5KRB_AP_ERR_INAPP_CKSUM;
++      major_status = GSS_S_FAILURE;
++      goto fail;
++    }
++
+    {
+        /* gss krb5 v1 */
+ 
