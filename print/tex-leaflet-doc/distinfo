@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/12 00:16:10 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/20 18:01:30 minskim Exp $
 
-SHA1 (tex-leaflet-doc-1.0c/leaflet.doc.tar.lzma) = d2423707357996906736421c9c6ebe2f91c2d791
-RMD160 (tex-leaflet-doc-1.0c/leaflet.doc.tar.lzma) = 5640d692b38210ba442479c14428f5a8c88afc2b
-Size (tex-leaflet-doc-1.0c/leaflet.doc.tar.lzma) = 232179 bytes
+SHA1 (tex-leaflet-15878/leaflet.doc.tar.xz) = b7ccb6a5b7a038ac703de48c801250d95beed3a5
+RMD160 (tex-leaflet-15878/leaflet.doc.tar.xz) = dcef4dec824c4c91ed4b3de4fd43dd6469e21630
+Size (tex-leaflet-15878/leaflet.doc.tar.xz) = 232280 bytes
