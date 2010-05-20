@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/20 17:19:15 drochner Exp $
+
+--- diffpdf.pro.orig	2010-05-19 07:20:45.000000000 +0000
++++ diffpdf.pro
+@@ -9,4 +9,4 @@ SOURCES     += sequence_matcher.cpp
+ SOURCES     += main.cpp
+ RESOURCES   += resources.qrc
+ LIBS	    += -lpoppler-qt4
+-INCLUDEPATH += /usr/include/poppler/qt4
++INCLUDEPATH += $(LOCALBASE)/include/poppler/qt4
