@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/07 07:20:54 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/20 18:06:30 minskim Exp $
 
-SHA1 (tex-stmaryrd-doc-2008.7340/stmaryrd.doc.tar.lzma) = bb51284a29471e59a717b9345f87da45d325224e
-RMD160 (tex-stmaryrd-doc-2008.7340/stmaryrd.doc.tar.lzma) = 7b04271668eea8dbee267b11804d4f95469d9d66
-Size (tex-stmaryrd-doc-2008.7340/stmaryrd.doc.tar.lzma) = 4179 bytes
+SHA1 (tex-stmaryrd-15878/stmaryrd.doc.tar.xz) = dcb46194fa55ab478f454966a423c3ef743c9ecd
+RMD160 (tex-stmaryrd-15878/stmaryrd.doc.tar.xz) = c48b5965c827ba9206d4df0dcb88a54fefac7667
+Size (tex-stmaryrd-15878/stmaryrd.doc.tar.xz) = 4256 bytes
