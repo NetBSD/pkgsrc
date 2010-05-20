@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.26 2010/05/18 21:14:17 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.27 2010/05/20 22:21:29 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -106,3 +106,7 @@ Pullup ticket #3124 - requested by tez
 graphics/dvipng: security patch
 Pullup ticket #3125 - requested by taca
 www/typolight28: bug fix
+Pullup ticket #3126 - requested by martti
+mail/clamav: bug fix update
+Pullup ticket #3127 - requested by tez
+security/mit-krb5: security patch
