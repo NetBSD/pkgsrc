@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/14 01:29:40 minskim Exp $
-# TeX Live Revision 9400
+# $NetBSD: Makefile,v 1.3 2010/05/20 18:12:54 minskim Exp $
 
 DISTNAME=	hyphen-ancientgreek
-PKGNAME=	tex-${DISTNAME}-2008.9400
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	13822
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for ancient Greek
@@ -17,5 +16,5 @@ TEX_HYPHEN_DEF+=	\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
 TEX_HYPHEN_DEF+=	\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
