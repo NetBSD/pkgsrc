@@ -291,6 +291,7 @@ libspiff		Use libspiff for XML shareable playlist support.
 libssh2 	 	Use libssh2 for SSHv2 protocol support.
 libvisual		Enable libvisual (audio visualisation) support.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
+libusb			Enable USB access.
 libxml2			Use the libxml2 library for XML support.
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
 liferea-mozilla		Use xulrunner to render HTML.
