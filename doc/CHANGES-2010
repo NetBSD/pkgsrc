@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1962 2010/05/20 07:48:22 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1963 2010/05/20 07:49:08 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2530,3 +2530,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated finance/libofx to 0.9.1 [wiz 2010-05-20]
 	Added inputmethod/kimera version 2.11 [obache 2010-05-20]
 	Added inputmethod/kimera-tomoe-gtk version 0.5 [obache 2010-05-20]
+	Updated mail/clamav to 0.96.1 [martti 2010-05-20]
