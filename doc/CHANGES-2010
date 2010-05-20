@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1971 2010/05/20 13:31:38 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1972 2010/05/20 14:39:12 tez Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2562,3 +2562,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/postgresql82-tsearch2 to 8.2.17 [adam 2010-05-20]
 	Updated databases/pgadmin3 to 1.10.3 [adam 2010-05-20]
 	Updated databases/p5-DBD-postgresql to 2.17.1 [wiz 2010-01-20]
+	Updated securitymit-krb5 to 1.4.2nb10 [tez 2010-01-20]
