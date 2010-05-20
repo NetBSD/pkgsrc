@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.8 2009/08/02 12:10:39 drochner Exp $
+$NetBSD: patch-ad,v 1.9 2010/05/20 21:15:54 drochner Exp $
 
---- plugins/coherence/upnp_coherence/MediaPlayer.py.orig	2009-07-31 15:50:21.000000000 +0200
+--- plugins/coherence/upnp_coherence/MediaPlayer.py.orig	2010-03-25 00:10:11.000000000 +0000
 +++ plugins/coherence/upnp_coherence/MediaPlayer.py
-@@ -260,7 +260,7 @@ class RhythmboxPlayer(log.Loggable):
+@@ -13,7 +13,7 @@ import rhythmdb
+ from coherence.upnp.core.soap_service import errorCode
+ from coherence.upnp.core import DIDLLite
+ 
+-import louie
++import coherence.extern.louie as louie
+ 
+ from coherence.extern.simple_plugin import Plugin
+ 
+@@ -302,7 +302,7 @@ class RhythmboxPlayer(log.Loggable):
  
                  if duration is not None:
                      h,m,s = duration.split(':')
