@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/05/20 17:49:00 drochner Exp $
+
+--- src/global.h.orig	2010-04-05 08:37:05.000000000 +0000
++++ src/global.h
+@@ -40,6 +40,8 @@ file.
+ #include "list.h"
+ #include "calclocale.h"
+ 
++#define NO_LONG_DOUBLE
++
+ using namespace std;
+ 
+ 

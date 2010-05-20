@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/02/03 14:05:01 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/20 17:49:00 drochner Exp $
 
---- share/Makefile.in.orig	2008-03-02 18:38:15.000000000 +0100
-+++ share/Makefile.in
-@@ -153,9 +153,9 @@ target_alias = @target_alias@
- licensedir = $(datadir)/extcalc/data
- icondir = $(datadir)/extcalc/data
- exampledir = $(datadir)/extcalc/data
--menuicondir = /usr/share/icons
-+menuicondir = $(datadir)/extcalc/icons
- translationsdir = $(datadir)/extcalc/data
--applicationdir = /usr/share/applications
-+applicationdir = $(prefix)/share/applications
- license_DATA = license.txt
- icon_DATA = icon22.png icon48.png modified.png circle.png free.png line.png open.png rect.png rubber.png text.png editcopy.png editcut.png editdelete.png editpaste.png exec.png fileexport.png fileimport.png filenew.png filesaveas.png save_all.png redo.png undo.png view_top_bottom.png angle.png binary.png scientific.png view_remove.png catalog.png print.png exit.png forward.png back.png zoomin.png zoomout.png
- menuicon_DATA = icon48.png
+--- CMakeLists.txt.orig	2010-04-05 09:12:04.000000000 +0000
++++ CMakeLists.txt
+@@ -158,7 +158,7 @@ QT4_WRAP_UI(ui_h ${src_ui})
+ 
+ 
+ 
+-SET(CMAKE_INSTALL_PREFIX "/usr/local")
++#SET(CMAKE_INSTALL_PREFIX "/usr/local")
+ SET(SHAREDIR "share/extcalc/data")
+ SET(DOCDIR "share/extcalc/doc")
+ SET(DESKTOPDIR "share/applications")
