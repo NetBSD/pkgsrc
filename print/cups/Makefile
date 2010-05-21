@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2010/05/20 09:38:34 sbd Exp $
+# $NetBSD: Makefile,v 1.154 2010/05/21 06:32:45 obache Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -136,7 +136,7 @@ post-extract:
 	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
-	${RUN} chmod -r ${DESTDIR}${PREFIX}/bin/lppasswd
+	${RUN} chmod -w ${DESTDIR}${PREFIX}/bin/lppasswd
 	set -e; for file in LICENSE.txt README.txt; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
