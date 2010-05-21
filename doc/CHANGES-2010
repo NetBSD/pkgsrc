@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1981 2010/05/21 10:37:56 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1982 2010/05/21 11:55:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2480,7 +2480,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/gthumb to 2.10.12 [drochner 2010-05-17]
 	Updated math/wxMaxima to 0.8.5 [drochner 2010-05-17]
 	Updated x11/xscreensaver to 5.11 [drochner 2010-05-17]
-	Updated math/gnumeric110 to 0.10.3 [drochner 2010-05-17]
+	Updated math/gnumeric110 to 1.10.3 [drochner 2010-05-17]
 	Updated misc/goffice0.8 to 0.8.3 [drochner 2010-05-17]
 	Updated graphics/py-matplotlib to 0.99.2.1 [drochner 2010-05-17]
 	Updated devel/eric4 to 4.4.4a [drochner 2010-05-17]
