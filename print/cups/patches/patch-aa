@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.21 2010/05/20 08:06:44 sbd Exp $
+$NetBSD: patch-aa,v 1.22 2010/05/21 10:05:20 sbd Exp $
 
 Treat DragonFly like other BSD descendants.
 
---- cups/http.h.orig	2007-03-15 18:57:14.000000000 +0000
+--- cups/http.h.orig	2009-06-22 20:40:28.000000000 +0000
 +++ cups/http.h
-@@ -106,7 +106,7 @@ extern "C" {
+@@ -88,7 +88,7 @@ extern "C" {
  #if defined(AF_INET6) && !defined(s6_addr32)
  #  if defined(__sun)
  #    define s6_addr32	_S6_un._S6_u32
