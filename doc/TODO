@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9312 2010/05/21 10:27:23 adam Exp $
+$NetBSD: TODO,v 1.9313 2010/05/21 10:37:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -694,7 +694,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.14.2 [GNOME 2.26]
-	o glpk-4.43
 	o gmime-2.2.26
 	o gmime24-2.4.16
 	o gnash-0.8.7
