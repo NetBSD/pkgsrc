@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2009/06/02 17:10:53 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2010/05/21 13:06:19 obache Exp $
 
---- configure.orig	2009-05-28 19:13:31.000000000 +0200
+--- configure.orig	2009-05-28 17:13:31.000000000 +0000
 +++ configure
 @@ -3802,7 +3802,7 @@ SHARED_EXTENSION=""
  STATIC_EXTENSION=""
@@ -20,14 +20,7 @@ $NetBSD: patch-ab,v 1.5 2009/06/02 17:10:53 drochner Exp $
  	echo "$as_me:$LINENO: result: ok" >&5
  echo "${ECHO_T}ok" >&6
  	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
-@@ -3876,13 +3876,13 @@ echo "${ECHO_T}ok" >&6
- 	   echo "$as_me:$LINENO: result: dylib options" >&5
- echo "${ECHO_T}dylib options" >&6
- 	   SHARED_LIB="libxvidcore.\$(API_MAJOR).\$(SHARED_EXTENSION)"
--	   SPECIFIC_LDFLAGS="-Wl,-read_only_relocs,suppress -dynamiclib -flat_namespace -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB)"
-+	   SPECIFIC_LDFLAGS="-Wl,-read_only_relocs,suppress -dynamiclib -flat_namespace -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB) -Wl,-read_only_relocs -Wl,warning"
- 	else
- 	   echo "$as_me:$LINENO: result: module options" >&5
+@@ -3882,7 +3882,7 @@ echo "${ECHO_T}dylib options" >&6
  echo "${ECHO_T}module options" >&6
   	   PRE_SHARED_LIB="libxvidcore.\$(SHARED_EXTENSION)-temp.o"
  	   SHARED_LIB="libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR)"
