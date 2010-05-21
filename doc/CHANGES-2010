@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1979 2010/05/21 10:05:41 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.1980 2010/05/21 10:27:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2572,3 +2572,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-rsfs to 2009 [minskim 2010-05-20]
 	Updated fonts/tex-rsfs-doc to 2009 [minskim 2010-05-20]
 	Updated print/cups to 1.4.3 [sbd 2010-05-21]
+	Updated devel/libsigc++ to 2.2.7 [adam 2010-05-21]
+	Updated devel/glibmm to 2.22.2 [adam 2010-05-21]
