@@ -1,40 +1,41 @@
-$NetBSD: patch-ae,v 1.25 2010/05/20 08:06:44 sbd Exp $
+$NetBSD: patch-ae,v 1.26 2010/05/21 10:05:20 sbd Exp $
 
 For proper libtool usage split CC into CC_COMPILE and CC with libtool
 mode options compile/link respectively.
 
 Same for CXX.
 
---- Makedefs.in.orig	2009-09-07 18:00:35.000000000 +0200
+--- Makedefs.in.orig	2009-05-26 23:27:06.000000000 +0000
 +++ Makedefs.in
-@@ -19,8 +19,10 @@
+@@ -19,9 +19,11 @@
  
  AR		=	@AR@
  AWK		=	@AWK@
 -CC		=	@LIBTOOL@ @CC@
--CXX		=	@LIBTOOL@ @CXX@
 +CC_COMPILE	=	@LIBTOOL@ --mode=compile @CC@
-+CXX_COMPILE	=	@LIBTOOL@ --mode=compile @CXX@
 +CC		=	@LIBTOOL@ --mode=link @CC@
+ CHMOD		=	@CHMOD@
+-CXX		=	@LIBTOOL@ @CXX@
++CXX_COMPILE	=	@LIBTOOL@ --mode=compile @CXX@
 +CXX		=	@LIBTOOL@ --mode=link @CXX@
  DSO		=	@DSO@
+ DSOXX		=	@DSOXX@
  HTMLDOC		=	@HTMLDOC@
- INSTALL		=	@INSTALL@
-@@ -40,11 +42,11 @@ STRIP		=	@STRIP@
+@@ -41,11 +43,11 @@ SHELL		=	/bin/sh
  # Installation programs...
  #
  
--INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -m 755
-+INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -m 755
- INSTALL_CONFIG	=	$(INSTALL) -m @CUPS_CONFIG_FILE_PERM@
- INSTALL_DATA	=	$(INSTALL) -m 644
+-INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
++INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 555 @INSTALL_STRIP@
+ INSTALL_CONFIG	=	$(INSTALL) -c -m @CUPS_CONFIG_FILE_PERM@
+ INSTALL_DATA	=	$(INSTALL) -c -m 444
  INSTALL_DIR	=	$(INSTALL) -d
--INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -m 755
-+INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -m 755
- INSTALL_MAN	=	$(INSTALL) -m 644
- INSTALL_SCRIPT	=	$(INSTALL) -m 755
+-INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
++INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 555 @INSTALL_STRIP@
+ INSTALL_MAN	=	$(INSTALL) -c -m 444
+ INSTALL_SCRIPT	=	$(INSTALL) -c -m 555
  
-@@ -246,19 +248,19 @@ DBUSDIR		=	@DBUSDIR@
+@@ -263,19 +265,19 @@ DBUSDIR		=	@DBUSDIR@
  
  .c.o:
  	echo Compiling $<...
@@ -56,5 +57,5 @@ Same for CXX.
 -	$(CXX) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c $<
 +	$(CXX_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c $<
  
- .man.1 .man.1m .man.5 .man.7 .man.8:
+ .man.1 .man.1m .man.3 .man.5 .man.7 .man.8:
  	echo Linking $<...

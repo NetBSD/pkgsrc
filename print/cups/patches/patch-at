@@ -1,26 +1,24 @@
-$NetBSD: patch-at,v 1.8 2010/05/20 08:06:44 sbd Exp $
+$NetBSD: patch-at,v 1.9 2010/05/21 10:05:21 sbd Exp $
 
 Don't create the empty driver dir, do that with OWN_DIRS
 
---- scheduler/Makefile.orig	2007-02-05 23:20:52.000000000 +1300
+--- scheduler/Makefile.orig	2009-05-26 23:27:06.000000000 +0000
 +++ scheduler/Makefile
-@@ -106,7 +106,9 @@ depend:
- # Install the scheduler...
+@@ -127,7 +127,7 @@ depend:
+ # Install all targets...
  #
  
--install:	all
-+install:	installbin
+-install:	all install-data install-headers install-libs install-exec
++install:	all install-headers install-libs install-exec install-dirs
+ 
+ 
+ #
+@@ -135,6 +135,8 @@ install:	all install-data install-header
+ #
+ 
+ install-data:
 +
-+installbin:	all
- 	echo Creating $(SBINDIR)...
- 	$(INSTALL_DIR) -m 755 $(SBINDIR)
- 	echo Installing cupsd in $(SBINDIR)...
-@@ -120,6 +122,8 @@ install:	all
- 	$(INSTALL_BIN) cups-driverd $(SERVERBIN)/daemon
- 	$(INSTALL_BIN) cups-lpd $(SERVERBIN)/daemon
- 	$(INSTALL_BIN) cups-polld $(SERVERBIN)/daemon
-+
-+installdir:
++install-dirs:
  	echo Creating $(SERVERBIN)/driver...
  	$(INSTALL_DIR) -m 755 $(SERVERBIN)/driver
  	echo Creating $(SERVERROOT)...

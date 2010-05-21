@@ -1,17 +1,25 @@
-# $NetBSD: options.mk,v 1.7 2010/05/21 00:45:14 sbd Exp $
+# $NetBSD: options.mk,v 1.8 2010/05/21 10:05:20 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
 PKG_OPTIONS_GROUP.pdftops=	ghostscript poppler
-PKG_SUPPORTED_OPTIONS=	dbus dnssd kerberos pam slp threads
-PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos poppler slp
+PKG_SUPPORTED_OPTIONS=	acl dbus dnssd kerberos libusb pam slp tcpwrappers threads
+PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos libusb poppler slp
 PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
 .include "../../mk/bsd.options.mk"
 
+.if !empty(PKG_OPTIONS:Macl)
+CONFIGURE_ARGS+=	--enable-acl
+.else
+CONFIGURE_ARGS+=	--disable-acl
+.endif
+
+PLIST_VARS+= 		dbus
 .if !empty(PKG_OPTIONS:Mdbus)
 .  include "../../sysutils/dbus/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-dbus
+PLIST.dbus=		yes
 .else
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
@@ -34,6 +42,13 @@ CONFIGURE_ENV+=		ac_cv_path_CUPS_GHOSTSCRIPT=${TOOLS_PATH.gs}
 CONFIGURE_ARGS+=	--enable-gssapi
 .else
 CONFIGURE_ARGS+=	--disable-gssapi
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibusb)
+.include "../../devel/libusb/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-libusb
+.else
+CONFIGURE_ARGS+=	--disable-libusb
 .endif
 
 PLIST_VARS+=		pam
@@ -61,6 +76,13 @@ CONFIGURE_ENV+=		ac_cv_path_CUPS_PDFTOPS=${POPPLERDIR}/bin/pdftops
 CONFIGURE_ARGS+=	--enable-slp
 .else
 CONFIGURE_ARGS+=	--disable-slp
+.endif
+
+.if !empty(PKG_OPTIONS:Mtcpwrappers)
+.include "../../security/tcp_wrappers/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-tcp-wrappers
+.else
+CONFIGURE_ARGS+=	--disable-tcp-wrappers
 .endif
 
 .if !empty(PKG_OPTIONS:Mthreads)

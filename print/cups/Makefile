@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2010/05/21 06:32:45 obache Exp $
+# $NetBSD: Makefile,v 1.155 2010/05/21 10:05:20 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,10 +6,8 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
-BASE_VERS=	1.3.11
+BASE_VERS=	1.4.3
 DIST_VERS=	${BASE_VERS}
-DIST_SUBDIR=	cups-${DIST_VERS}	# temp fix for updated distfile
-PKGREVISION=	4
 
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -54,6 +52,8 @@ CONFIGURE_ARGS+=	--enable-png
 CONFIGURE_ARGS+=	--enable-tiff
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-openssl
+CONFIGURE_ARGS+=	--enable-bannertops
+CONFIGURE_ARGS+=	--enable-texttops
 CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
@@ -92,7 +92,6 @@ PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}
 PKG_GECOS.${CUPS_USER}=	Common UNIX Printing System user
 PKG_SHELL.${CUPS_USER}=	${SH}
 
-SPECIAL_PERMS=		${PREFIX}/bin/lppasswd ${CUPS_USER} ${CUPS_GROUP} 4555
 CONF_FILES=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
 CONF_FILES+=		${EGDIR}/mime.convs ${CUPS_CONFDIR}/mime.convs
 CONF_FILES+=		${EGDIR}/mime.types ${CUPS_CONFDIR}/mime.types
@@ -136,7 +135,6 @@ post-extract:
 	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
-	${RUN} chmod -w ${DESTDIR}${PREFIX}/bin/lppasswd
 	set -e; for file in LICENSE.txt README.txt; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
