@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2010/05/19 18:01:29 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2010/05/21 09:36:58 drochner Exp $
 
 --- wscript.orig	2010-05-16 18:32:33.000000000 +0000
 +++ wscript
+@@ -88,7 +88,7 @@ def configure (conf):
+ 
+     conf.check_tool ('compiler_cc')
+     # Circumvent mandatory check for valac
+-    if find_program_impl (conf.env, 'valac'):
++    if 0:
+         conf.check_tool ('vala')
+     else:
+          conf.check_message ('program', 'valac', False, False)
 @@ -454,7 +454,7 @@ def build (bld):
              'AUTHORS COPYING ChangeLog EXPAT README')
  
