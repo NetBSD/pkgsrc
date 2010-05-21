@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.225 2010/04/25 22:01:22 seanb Exp $
+# $NetBSD: replace.mk,v 1.226 2010/05/21 22:21:06 schwarz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1188,7 +1188,13 @@ TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .      else # !empty(X11_TYPE:Mnative)
+.        if exists(${X11BASE}/bin/${_t_})
 TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
+.        else # X11_TYPE native, but tool does not exist, so fall back
+TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.        endif
 .      endif
 .    endif
 .  endif
