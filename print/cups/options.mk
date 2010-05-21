@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2010/05/20 09:38:34 sbd Exp $
+# $NetBSD: options.mk,v 1.7 2010/05/21 00:45:14 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
 PKG_OPTIONS_GROUP.pdftops=	ghostscript poppler
 PKG_SUPPORTED_OPTIONS=	dbus dnssd kerberos pam slp threads
-PKG_SUGGESTED_OPTIONS=	dnssd kerberos poppler slp
+PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos poppler slp
 PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
 .include "../../mk/bsd.options.mk"
