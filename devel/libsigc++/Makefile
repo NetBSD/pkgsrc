@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2010/05/02 11:52:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/05/21 09:52:59 adam Exp $
 
-DISTNAME=	libsigc++-2.2.6
+DISTNAME=	libsigc++-2.2.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/2.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
+
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
