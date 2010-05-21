@@ -1,36 +1,36 @@
-$NetBSD: patch-ab,v 1.20 2010/05/20 08:06:44 sbd Exp $
+$NetBSD: patch-ab,v 1.21 2010/05/21 10:05:20 sbd Exp $
 
 Split the install target in installcups & installconf.
 (installcup is everything but the config files.)
 
---- Makefile.orig	2009-03-12 17:34:21.000000000 -0400
-+++ Makefile	2009-05-13 20:57:09.000000000 -0400
-@@ -22,7 +22,7 @@
- DIRS	=	cups backend berkeley cgi-bin filter locale man monitor \
- 		notifier scheduler systemv test \
+--- Makefile.orig	2010-01-18 22:10:29.000000000 +0000
++++ Makefile
+@@ -30,7 +30,7 @@ include Makedefs
+ DIRS	=	cups filter backend berkeley cgi-bin driver locale man monitor \
+ 		notifier ppdc scheduler systemv test \
  		$(PHPDIR) \
--		conf data doc $(FONTS) ppd templates
-+		data doc $(FONTS) ppd templates
+-		conf data doc examples $(FONTS) templates
++		data doc examples $(FONTS) templates
  
  
  #
-@@ -107,7 +107,9 @@
- # Install object and target files...
+@@ -162,7 +162,8 @@ ctags:
+ # Install everything...
  #
  
--install:	installhdrs
-+install:	installcups installconf
-+
-+installcups:	installhdrs
- 	for dir in $(DIRS); do\
- 		echo Installing in $$dir... ;\
- 		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
-@@ -115,6 +117,10 @@
+-install:	install-data install-headers install-libs install-exec
++install:	install-data install-conf install-headers install-libs install-exec
++installcups:	install-data install-headers install-libs install-exec
+ 
+ 
+ #
+@@ -177,6 +178,11 @@ install-data:
  	echo Installing cups-config script...
  	$(INSTALL_DIR) -m 755 $(BINDIR)
  	$(INSTALL_SCRIPT) cups-config $(BINDIR)/cups-config
 +
-+installconf:
++install-conf:
++	(cd scheduler; $(MAKE) $(MFLAGS) install-dirs) || exit 1
 +	echo Installing in conf...
 +	(cd conf; $(MAKE) $(MFLAGS) install)
  	if test "x$(INITDIR)" != x; then \
