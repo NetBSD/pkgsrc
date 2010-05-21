@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.28 2009/10/11 08:01:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2010/05/21 06:34:23 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
 bin/sfddiff
 include/fontforge/PfEd.h
 include/fontforge/autowidth.h
+include/fontforge/autowidth2.h
 include/fontforge/baseviews.h
 include/fontforge/basics.h
 include/fontforge/bezctx_ff.h
