@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2010/03/24 19:43:26 asau Exp $
+# $NetBSD: Makefile,v 1.28 2010/05/21 10:36:56 adam Exp $
 
-DISTNAME=	glpk-4.35
-PKGREVISION=	1
+DISTNAME=	glpk-4.43
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/glpk/
 
