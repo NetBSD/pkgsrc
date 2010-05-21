@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/11/05 13:01:37 tnn Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/05/21 10:06:08 adam Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/appinfo.h
 include/giomm-2.4/giomm/asyncresult.h
@@ -868,7 +868,6 @@ share/doc/glibmm-2.4/reference/html/namespacemembers_func_0x77.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_func_0x78.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_type.html
 share/doc/glibmm-2.4/reference/html/namespaces.html
-share/doc/glibmm-2.4/reference/html/namespacesigc.html
 share/doc/glibmm-2.4/reference/html/pages.html
 share/doc/glibmm-2.4/reference/html/since_2_12.html
 share/doc/glibmm-2.4/reference/html/since_2_14.html
