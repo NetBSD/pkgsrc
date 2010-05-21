@@ -1,8 +1,26 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2010/05/21 22:09:43 schwarz Exp $
 
---- Imake.cf.orig	2005-11-08 06:33:24.000000000 +0000
-+++ Imake.cf
-@@ -234,8 +234,9 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+--- Imake.cf.orig	2006-07-15 03:48:12.000000000 +0200
++++ Imake.cf	2010-05-16 14:01:52.000000000 +0200
+@@ -25,13 +25,15 @@
+ # define MacroIncludeFile <darwin.cf>
+ # define MacroFile darwin.cf
+ # define DarwinArchitecture
+-# ifdef __ppc__
++# if defined __ppc__ || defined __ppc64__
+ #  define PpcDarwinArchitecture
+ #  undef __ppc__
++#  undef __ppc64__
+ # endif
+-# ifdef __i386__
++# if defined __i386__ || defined __x86_64__
+ #  define i386DarwinArchitecture
+ #  undef __i386__
++#  undef __x86_64__
+ # endif
+ #endif
+ 
+@@ -234,8 +236,9 @@
  # ifdef mc68000
  #   define Mc68020Architecture
  # endif
@@ -13,7 +31,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
  #   undef __arm32__
  # endif
  # ifdef __vax__
-@@ -246,6 +247,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+@@ -246,6 +249,10 @@
  #   define PpcArchitecture
  #   undef __powerpc__
  # endif
