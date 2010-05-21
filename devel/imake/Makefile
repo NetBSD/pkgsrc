@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/04/11 13:30:51 obache Exp $
+# $NetBSD: Makefile,v 1.10 2010/05/21 22:10:11 schwarz Exp $
 
-DISTNAME=		imake-1.0.2
-PKGREVISION=		4
+DISTNAME=		imake-1.0.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config makedepend:run
 
-DEPENDS+=		xorg-cf-files>=1.0.2nb1:../../x11/xorg-cf-files
+DEPENDS+=		xorg-cf-files>=1.0.3:../../x11/xorg-cf-files
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 CONFIGURE_ENV+=		HAS_PERL=no
