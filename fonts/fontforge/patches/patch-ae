@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.21 2010/02/15 20:39:31 schwarz Exp $
+$NetBSD: patch-ae,v 1.22 2010/05/21 06:34:23 adam Exp $
 
---- configure.orig	2009-09-24 01:55:22.000000000 +0200
+--- configure.orig	2010-04-29 17:53:45.000000000 +0000
 +++ configure
-@@ -20246,14 +20246,14 @@ if test "x$ac_cv_file__usr_include_libxm
+@@ -20275,14 +20275,14 @@ if test "x$ac_cv_file__usr_include_libxm
    CFLAGS="$CFLAGS -I/usr/include/libxml2/"
  else
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.21 2010/02/15 20:39:31 schwarz Exp $
    ac_cv_file__usr_local_include_libxml2_libxml=yes
  else
    ac_cv_file__usr_local_include_libxml2_libxml=no
-@@ -20262,7 +20262,7 @@ fi
+@@ -20291,7 +20291,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_file__usr_local_include_libxml2_libxml" >&5
  $as_echo "$ac_cv_file__usr_local_include_libxml2_libxml" >&6; }
  if test "x$ac_cv_file__usr_local_include_libxml2_libxml" = x""yes; then :
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.21 2010/02/15 20:39:31 schwarz Exp $
  else
    $as_echo "#define _NO_LIBXML 1" >>confdefs.h
  
-@@ -22761,7 +22761,7 @@ if test "$gww_has_gettext" = "yes" >/dev
+@@ -22930,7 +22930,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
   echo 'prefix = @prefix@' >> $ac_confdir/po/Makefile.in
@@ -38,12 +38,3 @@ $NetBSD: patch-ae,v 1.21 2010/02/15 20:39:31 schwarz Exp $
   echo 'INSTALL = @INSTALL@' >> $ac_confdir/po/Makefile.in
   echo 'INSTALL_DATA = @INSTALL_DATA@' >> $ac_confdir/po/Makefile.in
   echo '' >> $ac_confdir/po/Makefile.in
-@@ -22843,7 +22843,7 @@ if test "$gww_archlist" != "" ; then
-   LDFLAGS="$LDFLAGS $gww_archlist"
- fi
- 
--CFLAGS_NOOPT=`echo $CFLAGS | sed -e s/-O2// | sed -e s/-O//`
-+CFLAGS_NOOPT=`echo $CFLAGS | sed -e s/-O[1-9]//g | sed -e s/-O//g`
- 
- cp $ac_confdir/Makefile.dynamic.in $ac_confdir/Makefile.in
- cp $ac_confdir/Unicode/Makefile.dynamic.in $ac_confdir/Unicode/Makefile.in
