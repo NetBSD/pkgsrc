@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1982 2010/05/21 11:55:11 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1983 2010/05/21 22:13:44 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2575,3 +2575,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libsigc++ to 2.2.7 [adam 2010-05-21]
 	Updated devel/glibmm to 2.22.2 [adam 2010-05-21]
 	Updated math/glpk to 4.43 [adam 2010-05-21]
+	Updated x11/xorg-cf-files to 1.0.3 [schwarz 2010-05-21]
+	Updated devel/imake to 1.0.3 [schwarz 2010-05-21]
