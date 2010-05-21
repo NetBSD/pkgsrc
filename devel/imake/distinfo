@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/12/19 22:56:06 joerg Exp $
+$NetBSD: distinfo,v 1.2 2010/05/21 22:10:12 schwarz Exp $
 
-SHA1 (imake-1.0.2.tar.bz2) = 863a1015af41149e91a2f4b20858cb5d584c6943
-RMD160 (imake-1.0.2.tar.bz2) = e440ee22baca33d2831a3ecb8453dca43b3d862e
-Size (imake-1.0.2.tar.bz2) = 112959 bytes
+SHA1 (imake-1.0.3.tar.bz2) = 625a974dd0fe4c4e9d7ec036fc7b079ec05185f1
+RMD160 (imake-1.0.3.tar.bz2) = 5cbd5f23fc8360a10cb36c367405f5950443349d
+Size (imake-1.0.3.tar.bz2) = 139230 bytes
