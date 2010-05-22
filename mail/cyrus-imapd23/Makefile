@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/17 03:03:28 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/22 12:05:10 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.16
 CATEGORIES=	mail
@@ -14,7 +14,7 @@ COMMENT=	Cyrus IMAP server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl makedepend
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
@@ -78,6 +78,10 @@ FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 PERL5_PACKLIST= \
 	auto/Cyrus/IMAP/.packlist			\
 	auto/Cyrus/SIEVE/managesieve/.packlist
+
+pre-build:
+	${RUN}${_ULIMIT_CMD} \
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} depend
 
 .include "../../lang/perl5/module.mk"
 BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.17
