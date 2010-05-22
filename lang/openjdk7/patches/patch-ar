@@ -1,13 +1,13 @@
-$NetBSD: patch-ar,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+$NetBSD: patch-ar,v 1.2 2010/05/22 17:09:55 tnn Exp $
 
---- jdk/make/common/Defs.gmk.orig	2009-01-10 22:44:49.000000000 +0100
-+++ jdk/make/common/Defs.gmk
-@@ -220,7 +220,7 @@ DEVTOOLS_FT_DIR_EXISTS = $(shell \
-   ifeq ($(PLATFORM), windows)
-     FREETYPE_LIB = $(FREETYPE_LIB_PATH)/freetype.lib
-   else
--    FREETYPE_LIB = -L$(FREETYPE_LIB_PATH) -lfreetype
-+    FREETYPE_LIB = -L$(FREETYPE_LIB_PATH) -Wl,-R$(FREETYPE_LIB_PATH) -lfreetype
+--- jdk/make/sun/font/Makefile.orig	2010-05-21 13:27:04.000000000 +0000
++++ jdk/make/sun/font/Makefile
+@@ -129,7 +129,7 @@ else 
+   ifeq ($(USING_SYSTEM_FT_LIB), false)
+     FREETYPE_LIB = $(LIB_LOCATION)/$(LIB_PREFIX)freetype.$(LIBRARY_SUFFIX).6
    endif
+-  OTHER_LDLIBS += -L$(FREETYPE_LIB_PATH) -lfreetype
++  OTHER_LDLIBS += -L$(FREETYPE_LIB_PATH) -Wl,-R$(FREETYPE_LIB_PATH) -lfreetype
+ endif 
  
-   ifdef ALT_FREETYPE_HEADERS_PATH
+ library:: $(FREETYPE_LIB)
