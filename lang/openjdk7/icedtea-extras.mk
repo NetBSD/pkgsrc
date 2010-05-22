@@ -1,12 +1,12 @@
-# $NetBSD: icedtea-extras.mk,v 1.6 2010/02/02 23:12:53 jmcneill Exp $
+# $NetBSD: icedtea-extras.mk,v 1.7 2010/05/22 17:09:55 tnn Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			bsdtar
 
 DIST_SUBDIR=			openjdk7
 
-ICEDTEA=			icedtea-aaf3cf416fb4
-ICEDTEA_TGZ=			aaf3cf416fb4.tar.bz2
+ICEDTEA=			icedtea-8dc6e1ff8ccf
+ICEDTEA_TGZ=			8dc6e1ff8ccf.tar.bz2
 SITES.${ICEDTEA_TGZ}=		http://icedtea.classpath.org/hg/icedtea/archive/
 DISTFILES+=			${ICEDTEA_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_TGZ}
@@ -24,8 +24,8 @@ DISTFILES+=			${RHINO_TGZ}
 EXTRACT_ONLY+=			${RHINO_TGZ}
 
 # fixme: Should depend on devel/apache-ant?
-ANT=				apache-ant-1.7.1
-ANT_TGZ=			${ANT}-bin.zip
+ANT=				apache-ant-1.8.1
+ANT_TGZ=			${ANT}-bin.tar.bz2
 SITES.${ANT_TGZ}=		http://archive.apache.org/dist/ant/binaries/
 DISTFILES+=			${ANT_TGZ}
 EXTRACT_ONLY+=			${ANT_TGZ}
@@ -36,11 +36,11 @@ ICEDTEA_CONFIGURE_ARGS=	\
 	  --with-xalan2-jar=${WRKDIR}/${XALAN}/xalan.jar \
 	  --with-xalan2-serializer-jar=${WRKDIR}/${XALAN}/serializer.jar \
 	  --with-xerces2-jar=${WRKDIR}/${XALAN}/xercesImpl.jar \
-	  --with-rhino=${WRKDIR}/${RHINO}/js.jar
+	  --with-rhino=${WRKDIR}/${RHINO}/js.jar \
+	  --with-jdk-home=${PREFIX}/java/openjdk7
 
 .if defined(ICEDTEA_PACKAGE)
 CONFIGURE_ARGS+=	${ICEDTEA_CONFIGURE_ARGS}
-CONFIGURE_ARGS+=	--with-jdk-home=${PREFIX}/java/openjdk7
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=	gawk pkg-config autoconf automake
