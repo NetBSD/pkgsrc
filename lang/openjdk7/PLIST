@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/15 19:18:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/22 17:09:55 tnn Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -192,6 +192,9 @@ java/openjdk7/demo/jfc/TableExample/src.zip
 java/openjdk7/demo/jpda/com/sun/tools/example/README
 java/openjdk7/demo/jpda/jpda.jar
 java/openjdk7/demo/jpda/src.zip
+java/openjdk7/demo/jvmti/compiledMethodLoad/README.txt
+java/openjdk7/demo/jvmti/compiledMethodLoad/lib/libcompiledMethodLoad.so
+java/openjdk7/demo/jvmti/compiledMethodLoad/src.zip
 java/openjdk7/demo/jvmti/gctest/README.txt
 java/openjdk7/demo/jvmti/gctest/lib/libgctest.so
 java/openjdk7/demo/jvmti/gctest/src.zip
@@ -317,6 +320,7 @@ java/openjdk7/include/jdwpTransport.h
 java/openjdk7/include/jni.h
 java/openjdk7/include/jni_md.h
 java/openjdk7/include/jvmti.h
+java/openjdk7/include/jvmticmlr.h
 java/openjdk7/include/${LOWER_OPSYS}/jawt_md.h
 java/openjdk7/include/${LOWER_OPSYS}/jni_md.h
 java/openjdk7/jre/ASSEMBLY_EXCEPTION
@@ -560,6 +564,7 @@ java/openjdk7/jre/lib/zi/America/Maceio
 java/openjdk7/jre/lib/zi/America/Managua
 java/openjdk7/jre/lib/zi/America/Manaus
 java/openjdk7/jre/lib/zi/America/Martinique
+java/openjdk7/jre/lib/zi/America/Matamoros
 java/openjdk7/jre/lib/zi/America/Mazatlan
 java/openjdk7/jre/lib/zi/America/Menominee
 java/openjdk7/jre/lib/zi/America/Merida
@@ -577,6 +582,7 @@ java/openjdk7/jre/lib/zi/America/Nome
 java/openjdk7/jre/lib/zi/America/Noronha
 java/openjdk7/jre/lib/zi/America/North_Dakota/Center
 java/openjdk7/jre/lib/zi/America/North_Dakota/New_Salem
+java/openjdk7/jre/lib/zi/America/Ojinaga
 java/openjdk7/jre/lib/zi/America/Panama
 java/openjdk7/jre/lib/zi/America/Pangnirtung
 java/openjdk7/jre/lib/zi/America/Paramaribo
@@ -591,6 +597,7 @@ java/openjdk7/jre/lib/zi/America/Recife
 java/openjdk7/jre/lib/zi/America/Regina
 java/openjdk7/jre/lib/zi/America/Resolute
 java/openjdk7/jre/lib/zi/America/Rio_Branco
+java/openjdk7/jre/lib/zi/America/Santa_Isabel
 java/openjdk7/jre/lib/zi/America/Santarem
 java/openjdk7/jre/lib/zi/America/Santiago
 java/openjdk7/jre/lib/zi/America/Santo_Domingo
@@ -616,6 +623,7 @@ java/openjdk7/jre/lib/zi/America/Yellowknife
 java/openjdk7/jre/lib/zi/Antarctica/Casey
 java/openjdk7/jre/lib/zi/Antarctica/Davis
 java/openjdk7/jre/lib/zi/Antarctica/DumontDUrville
+java/openjdk7/jre/lib/zi/Antarctica/Macquarie
 java/openjdk7/jre/lib/zi/Antarctica/Mawson
 java/openjdk7/jre/lib/zi/Antarctica/McMurdo
 java/openjdk7/jre/lib/zi/Antarctica/Palmer

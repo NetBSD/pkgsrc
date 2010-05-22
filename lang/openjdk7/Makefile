@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2010/02/11 09:44:26 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2010/05/22 17:09:55 tnn Exp $
 
-DISTNAME=	openjdk-7-ea-src-b78-17_dec_2009
-PKGNAME=	openjdk7-1.7.0.78.20100102
-PKGREVISION=	3
+DISTNAME=	openjdk-7-ea-src-b92-06_may_2010
+PKGNAME=	openjdk7-1.7.0.92.20100521
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +17,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # diff between distfile and bsd-port branch. To check out, use:
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
-PATCHFILES+=	jdk-7-bsd-port-78.20100102.diff.bz2
+PATCHFILES+=	jdk-7-bsd-port-92.20100521.diff.bz2
 PATCH_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}
 
 CACERTS=	cacerts-20091013.tar.bz2
@@ -105,6 +104,9 @@ post-extract:
 	  ${WRKSRC}/jdk/src/share/classes
 	cd ${WRKDIR}/${ICEDTEA}/netx && pax -rw . \
 	  ${WRKSRC}/jdk/src/share/classes
+	${MKDIR} ${WRKSRC}/hotspot/make/bsd/makefiles
+	cp ${WRKSRC}/hotspot/make/linux/makefiles/build_vm_def.sh \
+	  ${WRKSRC}/hotspot/make/bsd/makefiles/build_vm_def.sh
 
 do-build: ${WRKDIR}/stage3-done
 
