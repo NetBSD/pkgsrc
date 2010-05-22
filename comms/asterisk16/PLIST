@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/05/20 17:14:45 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/05/22 22:21:45 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -270,7 +270,7 @@ libdata/asterisk/images/asterisk-intro.jpg
 libdata/asterisk/images/kpad2.jpg
 libdata/asterisk/keys/freeworlddialup.pub
 libdata/asterisk/keys/iaxtel.pub
-libdata/asterisk/moh/.asterisk-moh-opsound-wav
+libdata/asterisk/moh/.asterisk-moh-opsound-wav-2.03
 libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-wav
 libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-wav
 libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-wav
@@ -284,10 +284,10 @@ libdata/asterisk/phoneprov/000000000000-phone.cfg
 libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
-libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.17
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.17
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.17
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.17
+libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.18
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.18
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.18
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.18
 libdata/asterisk/sounds/en/agent-alreadyon.gsm
 libdata/asterisk/sounds/en/agent-incorrect.gsm
 libdata/asterisk/sounds/en/agent-loggedoff.gsm
@@ -318,10 +318,14 @@ libdata/asterisk/sounds/en/conf-lockednow.gsm
 libdata/asterisk/sounds/en/conf-muted.gsm
 libdata/asterisk/sounds/en/conf-noempty.gsm
 libdata/asterisk/sounds/en/conf-nonextended.gsm
+libdata/asterisk/sounds/en/conf-now-muted.gsm
+libdata/asterisk/sounds/en/conf-now-recording.gsm
+libdata/asterisk/sounds/en/conf-now-unmuted.gsm
 libdata/asterisk/sounds/en/conf-onlyone.gsm
 libdata/asterisk/sounds/en/conf-onlyperson.gsm
 libdata/asterisk/sounds/en/conf-otherinparty.gsm
 libdata/asterisk/sounds/en/conf-placeintoconf.gsm
+libdata/asterisk/sounds/en/conf-roll-callcomplete.gsm
 libdata/asterisk/sounds/en/conf-thereare.gsm
 libdata/asterisk/sounds/en/conf-unlockednow.gsm
 libdata/asterisk/sounds/en/conf-unmuted.gsm
@@ -383,6 +387,7 @@ libdata/asterisk/sounds/en/digits/9.gsm
 libdata/asterisk/sounds/en/digits/90.gsm
 libdata/asterisk/sounds/en/digits/a-m.gsm
 libdata/asterisk/sounds/en/digits/at.gsm
+libdata/asterisk/sounds/en/digits/billion.gsm
 libdata/asterisk/sounds/en/digits/day-0.gsm
 libdata/asterisk/sounds/en/digits/day-1.gsm
 libdata/asterisk/sounds/en/digits/day-2.gsm
@@ -407,11 +412,21 @@ libdata/asterisk/sounds/en/digits/h-20.gsm
 libdata/asterisk/sounds/en/digits/h-3.gsm
 libdata/asterisk/sounds/en/digits/h-30.gsm
 libdata/asterisk/sounds/en/digits/h-4.gsm
+libdata/asterisk/sounds/en/digits/h-40.gsm
 libdata/asterisk/sounds/en/digits/h-5.gsm
+libdata/asterisk/sounds/en/digits/h-50.gsm
 libdata/asterisk/sounds/en/digits/h-6.gsm
+libdata/asterisk/sounds/en/digits/h-60.gsm
 libdata/asterisk/sounds/en/digits/h-7.gsm
+libdata/asterisk/sounds/en/digits/h-70.gsm
 libdata/asterisk/sounds/en/digits/h-8.gsm
+libdata/asterisk/sounds/en/digits/h-80.gsm
 libdata/asterisk/sounds/en/digits/h-9.gsm
+libdata/asterisk/sounds/en/digits/h-90.gsm
+libdata/asterisk/sounds/en/digits/h-billion.gsm
+libdata/asterisk/sounds/en/digits/h-hundred.gsm
+libdata/asterisk/sounds/en/digits/h-million.gsm
+libdata/asterisk/sounds/en/digits/h-thousand.gsm
 libdata/asterisk/sounds/en/digits/hundred.gsm
 libdata/asterisk/sounds/en/digits/million.gsm
 libdata/asterisk/sounds/en/digits/minus.gsm
@@ -524,6 +539,7 @@ libdata/asterisk/sounds/en/letters/zed.gsm
 libdata/asterisk/sounds/en/minutes.gsm
 libdata/asterisk/sounds/en/pbx-invalid.gsm
 libdata/asterisk/sounds/en/pbx-invalidpark.gsm
+libdata/asterisk/sounds/en/pbx-parkingfailed.gsm
 libdata/asterisk/sounds/en/pbx-transfer.gsm
 libdata/asterisk/sounds/en/phonetic/9_p.gsm
 libdata/asterisk/sounds/en/phonetic/a_p.gsm
@@ -1054,6 +1070,7 @@ share/doc/asterisk/CHANGES
 share/doc/asterisk/COPYING
 share/doc/asterisk/CREDITS
 share/doc/asterisk/ChangeLog
+share/doc/asterisk/HOWTO_collect_debug_information.txt
 share/doc/asterisk/IAX2-security.txt
 share/doc/asterisk/India-CID.txt
 share/doc/asterisk/LICENSE

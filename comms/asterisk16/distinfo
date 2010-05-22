@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.13 2010/05/20 17:14:45 jnemeth Exp $
+$NetBSD: distinfo,v 1.14 2010/05/22 22:21:45 jnemeth Exp $
 
-SHA1 (asterisk-1.6.1.19/asterisk-1.6.1.19.tar.gz) = a97f8f37b768fef88bc73ee066a0743978672a87
-RMD160 (asterisk-1.6.1.19/asterisk-1.6.1.19.tar.gz) = df5ba06911f76cc54646c516c65c5e4ec4692f3d
-Size (asterisk-1.6.1.19/asterisk-1.6.1.19.tar.gz) = 23600478 bytes
-SHA1 (asterisk-1.6.1.19/extract-cfile.awk) = c4f08eee1ab83c041bde1ab91672a4a3c43c28b8
-RMD160 (asterisk-1.6.1.19/extract-cfile.awk) = cd59f8e5807732023d5aec95187e2d5572f400a4
-Size (asterisk-1.6.1.19/extract-cfile.awk) = 667 bytes
-SHA1 (asterisk-1.6.1.19/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
-RMD160 (asterisk-1.6.1.19/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
-Size (asterisk-1.6.1.19/rfc3951.txt) = 373442 bytes
-SHA1 (patch-aa) = a9925349ba9b08c350d86d9d88e02185083c133b
+SHA1 (asterisk-1.6.1.20/asterisk-1.6.1.20.tar.gz) = 7d92f9de5ed6de10e34c8e6039f91b45884e46f8
+RMD160 (asterisk-1.6.1.20/asterisk-1.6.1.20.tar.gz) = ccb504292e9d5e93d79456ede212b1697e3c213e
+Size (asterisk-1.6.1.20/asterisk-1.6.1.20.tar.gz) = 23601410 bytes
+SHA1 (asterisk-1.6.1.20/extract-cfile.awk) = c4f08eee1ab83c041bde1ab91672a4a3c43c28b8
+RMD160 (asterisk-1.6.1.20/extract-cfile.awk) = cd59f8e5807732023d5aec95187e2d5572f400a4
+Size (asterisk-1.6.1.20/extract-cfile.awk) = 667 bytes
+SHA1 (asterisk-1.6.1.20/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
+RMD160 (asterisk-1.6.1.20/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
+Size (asterisk-1.6.1.20/rfc3951.txt) = 373442 bytes
+SHA1 (patch-aa) = 953fcfd1e0da44f9e7e46fed84be9e8b44125ef0
 SHA1 (patch-af) = 09860d714281cb4c65d1a087cf5b16647a16e2fa
 SHA1 (patch-ag) = c71c61350cefbbe53eefa99245ca7712753f22d5
 SHA1 (patch-ai) = e92edab5c1ff323478f41d0b0783102ed527fe39
