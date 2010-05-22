@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/09/10 10:06:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.2.6.1 2010/05/22 10:38:54 tron Exp $
 ${PG_SUBPREFIX}lib/postgresql/plperl.la
 ${PG_SUBPREFIX}share/locale/de/LC_MESSAGES/plperl0-8.4.mo
 ${PG_SUBPREFIX}share/locale/es/LC_MESSAGES/plperl0-8.4.mo
@@ -7,3 +7,4 @@ ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/plperl0-8.4.mo
 ${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/plperl0-8.4.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/plperl0-8.4.mo
 ${PG_SUBPREFIX}share/locale/tr/LC_MESSAGES/plperl0-8.4.mo
+${PG_SUBPREFIX}share/locale/zh_CN/LC_MESSAGES/plperl0-8.4.mo
