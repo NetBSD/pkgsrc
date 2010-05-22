@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
+$NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
 
---- Makefile.orig	2009-12-10 21:03:40.000000000 +0000
+--- Makefile.orig	2010-05-03 17:37:13.000000000 +0000
 +++ Makefile
 @@ -123,20 +123,6 @@ DEBUG=-g3
  
@@ -55,18 +55,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  ifeq ($(findstring -march,$(_ASTCFLAGS) $(ASTCFLAGS)),)
    ifneq ($(PROC),ultrasparc)
      _ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
-@@ -464,9 +439,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
- 	rm -f build_tools/menuselect-deps
- 
- datafiles: _all
--	if [ `$(ID) -u` = 0 ]; then \
--		CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; \
--	fi
-+	CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig
- # Should static HTTP be installed during make samples or even with its own target ala
- # webvoicemail?  There are portions here that *could* be customized but might also be
- # improved a lot.  I'll put it here for now.
-@@ -508,9 +481,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
+@@ -508,9 +483,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
  OLDHEADERS=$(filter-out $(NEWHEADERS),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
  
  installdirs:
@@ -78,7 +67,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  	mkdir -p $(DESTDIR)$(ASTBINDIR)
  	mkdir -p $(DESTDIR)$(ASTVARRUNDIR)
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/voicemail
-@@ -519,6 +493,7 @@ installdirs:
+@@ -519,6 +495,7 @@ installdirs:
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/tmp
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/meetme
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/monitor
@@ -86,7 +75,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  
  bininstall: _all installdirs $(SUBDIRS_INSTALL)
  	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
-@@ -614,22 +589,22 @@ upgrade: bininstall
+@@ -614,22 +591,22 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -114,7 +103,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  		if [ -f $${dst} ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s $${dst} $$x ; then \
-@@ -645,10 +620,10 @@ samples: adsi
+@@ -645,10 +622,10 @@ samples: adsi
  		echo "Installing file $$x"; \
  		$(INSTALL) -m 644 $$x $${dst} ;\
  	done
@@ -127,7 +116,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  		echo "astetcdir => $(ASTETCDIR)" ; \
  		echo "astmoddir => $(MODULES_DIR)" ; \
  		echo "astvarlibdir => $(ASTVARLIBDIR)" ; \
-@@ -701,7 +676,7 @@ samples: adsi
+@@ -705,7 +682,7 @@ samples: adsi
  		echo "pbx_realtime=1.6" ; \
  		echo "res_agi=1.6" ; \
  		echo "app_set=1.6" ; \
@@ -136,7 +125,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  	else \
  		echo "Skipping asterisk.conf creation"; \
  	fi
-@@ -729,7 +704,7 @@ samples: adsi
+@@ -733,7 +710,7 @@ samples: adsi
  webvmail:
  	@[ -d $(DESTDIR)$(HTTP_DOCSDIR)/ ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
  	@[ -d $(DESTDIR)$(HTTP_CGIDIR) ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
@@ -145,7 +134,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  	mkdir -p $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk
  	for x in images/*.gif; do \
  		$(INSTALL) -m 644 $$x $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/; \
-@@ -835,7 +810,7 @@ uninstall-all: _uninstall
+@@ -841,7 +818,7 @@ uninstall-all: _uninstall
  	rm -rf $(DESTDIR)$(ASTVARLIBDIR)
  	rm -rf $(DESTDIR)$(ASTDATADIR)
  	rm -rf $(DESTDIR)$(ASTSPOOLDIR)
@@ -154,7 +143,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/06 20:10:17 jnemeth Exp $
  	rm -rf $(DESTDIR)$(ASTLOGDIR)
  
  menuconfig: menuselect
-@@ -906,6 +881,7 @@ asterisk.pdf:
+@@ -912,6 +889,7 @@ asterisk.pdf:
  	$(MAKE) -C doc/tex asterisk.pdf
  
  .PHONY: menuselect

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2010/05/20 17:14:45 jnemeth Exp $
+# $NetBSD: Makefile,v 1.19 2010/05/22 22:21:45 jnemeth Exp $
 #
 
-DISTNAME=	asterisk-1.6.1.19
+DISTNAME=	asterisk-1.6.1.20
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 CATEGORIES=	comms net audio
@@ -176,6 +176,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.6.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/Zaptel-to-DAHDI.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/HOWTO_collect_debug_information.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/India-CID.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/PEERING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
