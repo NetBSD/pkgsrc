@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9.2.1 2010/05/12 21:20:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.9.2.2 2010/05/22 10:58:02 tron Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -139,6 +139,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Asuncion
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Atka
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Atikokan
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Bahia
+${PG_SUBPREFIX}share/postgresql/timezone/America/Bahia_Banderas
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Barbados
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Belem
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Belize
@@ -276,6 +277,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Yellowknife
 ${PG_SUBPREFIX}share/postgresql/timezone/Antarctica/Casey
 ${PG_SUBPREFIX}share/postgresql/timezone/Antarctica/Davis
 ${PG_SUBPREFIX}share/postgresql/timezone/Antarctica/DumontDUrville
+${PG_SUBPREFIX}share/postgresql/timezone/Antarctica/Macquarie
 ${PG_SUBPREFIX}share/postgresql/timezone/Antarctica/Mawson
 ${PG_SUBPREFIX}share/postgresql/timezone/Antarctica/McMurdo
 ${PG_SUBPREFIX}share/postgresql/timezone/Antarctica/Palmer

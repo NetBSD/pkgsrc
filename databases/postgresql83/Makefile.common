@@ -1,4 +1,11 @@
-# $NetBSD: Makefile.common,v 1.9.4.1 2010/05/12 21:20:06 tron Exp $
+# $NetBSD: Makefile.common,v 1.9.4.2 2010/05/22 10:58:01 tron Exp $
+#
+# used by databases/postgresql83-adminpack/Makefile
+# used by databases/postgresql83-client/Makefile
+# used by databases/postgresql83-plperl/Makefile
+# used by databases/postgresql83-plpython/Makefile
+# used by databases/postgresql83-pltcl/Makefile
+# used by databases/postgresql83-server/Makefile
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -35,7 +42,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql83/patches
 # DIST_VERS		version number on the postgresql distfile
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 # Note: Do not forget jdbc-postgresql83 when updating version
-DIST_VERS?=		8.3.10
+DIST_VERS?=		8.3.11
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql83-client+=	postgresql83-client>=${BASE_VERS}
@@ -110,14 +117,14 @@ FILES_SUBST+=		PG_PREFIX=${PG_PREFIX:Q}
 post-extract:
 	cp -f ${COMMON_FILESDIR}/Makefile.custom ${WRKSRC}/src/Makefile.custom
 	cp -f ${COMMON_FILESDIR}/Makefile.libtool ${WRKSRC}/src/Makefile.shlib
-.if !empty(USE_LIBLTDL:M[yY][eE][sS])
+.  if !empty(USE_LIBLTDL:M[yY][eE][sS])
 		template=${PG_TEMPLATE.${OPSYS}:Q}
 	cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
 		${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.h
 	${ECHO} "static int dummy = 0;" \
 		> ${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.c
 	fi
-.endif
+.  endif
 	touch ${WRKSRC}/src/template/dragonfly
 	cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
 		${WRKSRC}/src/backend/port/dynloader/dragonfly.c
