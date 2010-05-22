@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/09/10 10:06:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.2.6.1 2010/05/22 10:38:55 tron Exp $
 ${PG_SUBPREFIX}bin/pltcl_delmod
 ${PG_SUBPREFIX}bin/pltcl_listmod
 ${PG_SUBPREFIX}bin/pltcl_loadmod
@@ -11,3 +11,4 @@ ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/pltcl0-8.4.mo
 ${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/pltcl0-8.4.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/pltcl0-8.4.mo
 ${PG_SUBPREFIX}share/locale/tr/LC_MESSAGES/pltcl0-8.4.mo
+${PG_SUBPREFIX}share/locale/zh_CN/LC_MESSAGES/pltcl0-8.4.mo
