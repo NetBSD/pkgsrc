@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17.4.1 2010/05/12 21:20:05 tron Exp $
+@comment $NetBSD: PLIST,v 1.17.4.2 2010/05/22 11:22:53 tron Exp $
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/af/LC_MESSAGES/libpq.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/initdb.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libpq.mo
@@ -1544,7 +1544,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/wal-intro.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/wal-reliability.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/wal.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/warm-standby.html
-${PG_SUBPREFIX}share/doc/postgresql/html/x71236.html
+${PG_SUBPREFIX}share/doc/postgresql/html/x71234.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/xaggr.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/xfunc-c.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/xfunc-internal.html
