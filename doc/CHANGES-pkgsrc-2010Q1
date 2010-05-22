@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.27 2010/05/20 22:21:29 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.28 2010/05/22 11:24:32 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -110,3 +110,26 @@ Pullup ticket #3126 - requested by martti
 mail/clamav: bug fix update
 Pullup ticket #3127 - requested by tez
 security/mit-krb5: security patch
+Pullup ticket #3182 - requested by adam
+databases/postgresql82: security update
+databases/postgresql82-adminpack: security update
+databases/postgresql82-client: security update
+databases/postgresql82-plperl: security update
+databases/postgresql82-plpython: security update
+databases/postgresql82-pltcl: security update
+databases/postgresql82-server: security update
+databases/postgresql82-tsearch2: security update
+databases/postgresql83: security update
+databases/postgresql83-adminpack: security update
+databases/postgresql83-client: security update
+databases/postgresql83-plperl: security update
+databases/postgresql83-plpython: security update
+databases/postgresql83-pltcl: security update
+databases/postgresql83-server: security update
+databases/postgresql84: security update
+databases/postgresql84-adminpack: security update
+databases/postgresql84-client: security update
+databases/postgresql84-plperl: security update
+databases/postgresql84-plpython: security update
+databases/postgresql84-pltcl: security update
+databases/postgresql84-server: security update
