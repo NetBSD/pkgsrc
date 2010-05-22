@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1983 2010/05/21 22:13:44 schwarz Exp $
+$NetBSD: CHANGES-2010,v 1.1984 2010/05/22 17:58:27 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2577,3 +2577,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/glpk to 4.43 [adam 2010-05-21]
 	Updated x11/xorg-cf-files to 1.0.3 [schwarz 2010-05-21]
 	Updated devel/imake to 1.0.3 [schwarz 2010-05-21]
+	Updated lang/openjdk7 to 1.7.0.92.20100521 [tnn 2010-05-22]
