@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
+
+for broken gettext-libs detection
+
+--- configure.orig	2007-12-09 13:03:36.000000000 +0000
++++ configure
+@@ -302,7 +302,7 @@ cpu=`uname -m`
+ optimize="yes"
+ debug="no"
+ dostrip="yes"
+-extralibs=""
++extralibs="${INTLLIBS}"
+ installstrip="-s"
+ cross_compile="no"
+ INSTALL="/usr/bin/install -c"
