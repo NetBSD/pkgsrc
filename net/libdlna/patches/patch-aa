@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/23 08:03:18 obache Exp $
+
+Adjust header file locations for ffmpeg changes.
+
+--- configure.orig	2007-11-26 20:47:43.000000000 +0000
++++ configure
+@@ -610,9 +610,9 @@ if [ -n "$ffmpegdir" ]; then
+ fi
+ 
+ echolog "Checking for libavformat ..."
+-check_lib ffmpeg/avformat.h av_register_all -lavformat || die "Error, can't find libavformat !"
++check_lib libavformat/avformat.h av_register_all -lavformat || die "Error, can't find libavformat !"
+ echolog "Checking for libavcodec ..."
+-check_lib ffmpeg/avcodec.h avcodec_register_all -lavcodec || die "Error, can't find libavcodec !"
++check_lib libavcodec/avcodec.h avcodec_register_all -lavcodec || die "Error, can't find libavcodec !"
+ 
+ #################################################
+ #   version

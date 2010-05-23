@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/23 08:03:18 obache Exp $
+
+SHA1 (libdlna-0.2.3.tar.bz2) = 87159167610abde806a7addb8e425dbdc446856e
+RMD160 (libdlna-0.2.3.tar.bz2) = b6ef7cca1c661b95d3f8892ad99179fae9ddfbf4
+Size (libdlna-0.2.3.tar.bz2) = 37142 bytes
+SHA1 (patch-aa) = 2ecdb279c68f5411c0c53de4f544ba84042a5af9
+SHA1 (patch-ab) = cd12b7c6a0055402047ccd7e7f6c7cdc1b997417
+SHA1 (patch-ac) = e5258dea39c7fd33cc123896830a6e1b15c25e3d
+SHA1 (patch-ad) = 5a30c1491d4b5aa8a90187ca2f1096e9523e9e7c
+SHA1 (patch-ae) = 97323e8fd202880b5b1fcad6ae544fbdd25e0abe
+SHA1 (patch-af) = b34c260bf86062d268a8f113df17e285ed6ecdb7
