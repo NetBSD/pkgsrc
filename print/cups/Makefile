@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2010/05/21 10:05:20 sbd Exp $
+# $NetBSD: Makefile,v 1.156 2010/05/23 09:44:12 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -82,6 +82,7 @@ BUILD_DEFS+=		VARBASE
 
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
+MIMEDIR=		${PREFIX}/share/cups/mime
 PKG_SYSCONFSUBDIR=	cups
 CUPS_CONFDIR=		${PKG_SYSCONFDIR}
 CUPS_LOGDIR=		${VARBASE}/log/cups
@@ -93,8 +94,7 @@ PKG_GECOS.${CUPS_USER}=	Common UNIX Printing System user
 PKG_SHELL.${CUPS_USER}=	${SH}
 
 CONF_FILES=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
-CONF_FILES+=		${EGDIR}/mime.convs ${CUPS_CONFDIR}/mime.convs
-CONF_FILES+=		${EGDIR}/mime.types ${CUPS_CONFDIR}/mime.types
+CONF_FILES+=		${EGDIR}/snmp.conf ${CUPS_CONFDIR}/snmp.conf
 RCD_SCRIPTS=		cupsd
 
 OWN_DIRS=		${CUPS_CONFDIR}
@@ -125,7 +125,7 @@ SUBST_MESSAGE.rpathfix=	Adding rpath to cups-config.
 SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g'
 SUBST_STAGE.rpathfix=	post-patch
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR:Q}
 
 pre-configure:
@@ -139,15 +139,11 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
-	set -e; cd ${WRKSRC}/conf; for file in *.conf mime.convs mime.types; do \
-		case $${file} in					\
-		pam.conf)						\
-			;;						\
-		*)							\
-			${INSTALL_DATA} $${file} 			\
-			    ${DESTDIR}${EGDIR}/$${file};		\
-			;;						\
-		esac;							\
+	set -e; cd ${WRKSRC}/conf; for file in cupsd.conf snmp.conf ; do \
+		${INSTALL_DATA} $${file} ${DESTDIR}${EGDIR}/$${file};	\
+	done
+	set -e; cd ${WRKSRC}/conf; for file in mime.convs mime.types; do \
+		${INSTALL_DATA} $${file} ${DESTDIR}${MIMEDIR}/$${file};	\
 	done
 .if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${DESTDIR}${EGDIR}
