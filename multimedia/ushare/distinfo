@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
+
+SHA1 (ushare-1.1a.tar.bz2) = 1539e83cde5d80f433d262d971f5fe78486c9375
+RMD160 (ushare-1.1a.tar.bz2) = 6194ffec031d20fd897f2c7cf71c3c810238713f
+Size (ushare-1.1a.tar.bz2) = 65864 bytes
+SHA1 (patch-aa) = bf8b49ac048b97d9edd6d18f71fa34d93526ce43
+SHA1 (patch-ab) = 2136d6b0e92b797072ea13d30e0fcc7131ab50a6
+SHA1 (patch-ac) = 0c8cc122de8d1fbdaaace4867656819cad0b84e7
+SHA1 (patch-ad) = 6c8e838add604b54132fbe924c4a8697ee2e2c09
+SHA1 (patch-ae) = 180151696678bb2f3ccd2bbaaaf9ed55f1c441e9
+SHA1 (patch-af) = 43de62f0bb720bb31f7e8f1c8a31a5b7c5e19881

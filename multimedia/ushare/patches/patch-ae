@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
+
+Treat NetBSD same as FreeBSD.
+
+--- src/osdep.h.orig	2007-12-09 13:03:36.000000000 +0000
++++ src/osdep.h
+@@ -21,7 +21,7 @@
+ #ifndef _OS_DEP_H_
+ #define _OS_DEP_H_
+ 
+-#if (defined(BSD) || defined(__FreeBSD__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
+ #include <unistd.h>
+ char *strndup (const char *s, size_t n);
+ ssize_t getline (char **lineptr, size_t *n, FILE *stream);
