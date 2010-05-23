@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9315 2010/05/23 17:32:56 schwarz Exp $
+$NetBSD: TODO,v 1.9316 2010/05/23 18:25:43 spz Exp $
 
 Suggested new packages
 ======================
@@ -787,7 +787,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o heyu-2.8.0
 	o hiawatha-7.2
 	o highlight-2.16
-	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o horde-3.3.7
 	o host-20070128
@@ -807,11 +806,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ike-2.0.1 [pkg/37032]
 	o imp-4.3.7
 	o ingo-1.2.4
-	o inn-2.5.2
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
-	o irrd-2.3.4 [pkg/36813|38002]
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20091006
@@ -1210,7 +1207,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rpm-5.1.4
 	o rrdtool-1.4.3
 	o rsnapshot-1.3.1
-	o rt-3.8.2
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-1.8.7.248 (Ruby 1.8.7-p248)
