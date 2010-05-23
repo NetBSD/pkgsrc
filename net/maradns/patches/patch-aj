@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.2 2007/08/12 01:14:31 joerg Exp $
+$NetBSD: patch-aj,v 1.3 2010/05/23 17:30:31 schwarz Exp $
 
---- tools/Makefile.orig	2006-01-02 16:59:33.000000000 +0000
-+++ tools/Makefile
-@@ -18,17 +18,17 @@ clean:
+--- tools/Makefile.recursive.orig	2010-05-23 18:09:37.000000000 +0200
++++ tools/Makefile.recursive	2010-05-23 18:11:17.000000000 +0200
+@@ -18,17 +18,17 @@
  	rm -f core $(EXECS) *.exe
  
  askmara: askmara.c askmara_labels_en.h $(OBJECTS) $(Q) $(OUTOBJ)
