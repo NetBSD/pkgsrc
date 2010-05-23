@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
+bin/ushare
+man/man1/ushare.1
+share/examples/rc.d/ushare
+share/examples/ushare/init.d/ushare
+share/examples/ushare/ushare.conf
+share/locale/de/LC_MESSAGES/ushare.mo
+share/locale/fr/LC_MESSAGES/ushare.mo
