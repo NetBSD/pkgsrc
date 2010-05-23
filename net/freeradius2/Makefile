@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/01/17 12:02:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/05/23 17:28:44 tron Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
-PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,16 +9,17 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/
 COMMENT=	Free RADIUS server implementation
+LICENSE=	gnu-gpl-v2
 
-.include "../../mk/bsd.prefs.mk"
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		radiusd-cistron-[0-9]*
 CONFLICTS+=		freeradius<2.0
 USE_TOOLS+=		gmake perl:run
-USE_LIBTOOL=		YES
-USE_OLD_DES_API=	YES
-MAKE_JOBS_SAFE=		NO
+USE_LIBTOOL=		yes
+USE_OLD_DES_API=	yes
+MAKE_JOBS_SAFE=		no
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS=		VARBASE
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER}
@@ -45,21 +45,23 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.7
-EGDIR=			${PREFIX}/share/examples/freeradius
+RADVER=			2.1.8
+EGDIR=			${DESTDIR}${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--quiet
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/radiusd
 CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
+CONFIGURE_ARGS+=	--without-rlm_python
 CONFIGURE_ARGS+=	--without-rlm_smb
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
+MAKE_ENV+=		R=${DESTDIR:Q}
 
 REPLACE_PERL=		scripts/radsqlrelay
 
@@ -124,6 +126,15 @@ CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${RADIUS_USER} ${RADIUS_GROUP} 0640
 .endfor
 
+.for d in ${EGDIRS}
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/${d}
+.endfor
+
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs ${RADIUS_USER} \
+			${RADIUS_GROUP} 750
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs/demoCA ${RADIUS_USER} \
+			${RADIUS_GROUP} 750
+
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
@@ -151,16 +162,11 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 .for d in ${EGDIRS}
 	${INSTALL_DATA_DIR} ${EGDIR}/${d}
-	${MKDIR} ${PKG_SYSCONFDIR}/${d}
 .endfor
 .for f in ${EGFILES}
 	${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
-	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs
-	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs/demoCA
-	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs
-	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs/demoCA
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
