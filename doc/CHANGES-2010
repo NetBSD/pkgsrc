@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1987 2010/05/23 08:18:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1988 2010/05/23 09:58:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2581,3 +2581,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/asterisk16 to 1.6.1.20 [jnemeth 2010-05-22]
 	Added net/libdlna version 0.2.3 [obache 2010-05-23]
 	Added multimedia/ushare version 1.1a [obache 2010-05-23]
+	Added print/tex-dehyph-exptl-doc version 0.20 [minskim 2010-05-23]
