@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2010/05/21 10:05:20 sbd Exp $
+@comment $NetBSD: PLIST,v 1.31 2010/05/23 09:44:12 sbd Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -207,6 +207,8 @@ share/cups/fonts/Monospace
 share/cups/fonts/Monospace-Bold
 share/cups/fonts/Monospace-BoldOblique
 share/cups/fonts/Monospace-Oblique
+share/cups/mime/mime.convs
+share/cups/mime/mime.types
 share/cups/ppdc/epson.h
 share/cups/ppdc/escp.h
 share/cups/ppdc/font.defs
@@ -957,8 +959,6 @@ share/doc/cups/robots.txt
 share/doc/cups/ru/index.html
 ${PLIST.pam}share/examples/cups/cups.pam
 share/examples/cups/cupsd.conf
-share/examples/cups/mime.convs
-share/examples/cups/mime.types
 share/examples/cups/snmp.conf
 share/examples/rc.d/cupsd
 share/locale/da/cups_da.po
