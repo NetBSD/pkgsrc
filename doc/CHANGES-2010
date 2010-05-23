@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1991 2010/05/23 17:30:12 tron Exp $
+$NetBSD: CHANGES-2010,v 1.1992 2010/05/23 17:32:56 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2585,3 +2585,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-dehyph-exptl to 0.20 [minskim 2010-05-23]
 	Updated graphics/glew to 1.5.4 [adam 2010-05-23]
 	Updated net/freeradius2 to 2.1.8 [tron 2010-05-23]
+	Updated net/maradns to 1.4.03 [schwarz 2010-05-23]
