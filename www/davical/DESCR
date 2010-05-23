@@ -1,0 +1,12 @@
+DAViCal is a server for calendar sharing. It is an implementation of the
+CalDAV protocol which is designed for storing calendaring resources (in
+iCalendar format) on a remote shared server.
+
+DAViCal supports basic delegation of read/write access among calendar users,
+multiple users (or clients) reading and writing the same calendar entries over
+time, and scheduling of meetings with free/busy time displayed.
+
+An increasing number of calendar clients support the maintenance of shared
+remote calendars through CalDAV, including Evolution, Mulberry, Chandler,
+Mozilla Calendar (Sunbird/Lightning), and various other closed-source
+products such as Apple's iCal and iPhone.
