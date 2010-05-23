@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/23 10:50:42 tnn Exp $
 
---- Makefile.am.orig	2009-10-08 16:31:21.000000000 +0200
-+++ Makefile.am
-@@ -1704,7 +1704,7 @@ IcedTeaNPPlugin.so: IcedTeaNPPlugin_obje
- 	  $(GLIB_LIBS) \
- 	  $(GTK_LIBS) \
- 	  $(MOZILLA_LIBS)\
--	  -shared -o $@ \
-+	  -shared -o $@; \
- 	cd ../
+--- plugin/icedteanp/IcedTeaPluginRequestProcessor.cc.orig	2010-05-20 13:37:32.000000000 +0000
++++ plugin/icedteanp/IcedTeaPluginRequestProcessor.cc
+@@ -512,8 +512,6 @@ PluginRequestProcessor::sendMember(std::
  
- clean-IcedTeaNPPlugin:
+     NPIdentifier member_identifier;
+ 
+-    NPIdentifier member_identifier;
+-
+     int method_id;
+     int instance_id;
+     long reference;
