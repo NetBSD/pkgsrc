@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/05/23 21:16:17 jym Exp $
+# used by devel/php-libawl/Makefile
+# used by www/davical/Makefile
+#
+
+# Include path of AWL
+LIBAWLDIR=	lib/php/awl
