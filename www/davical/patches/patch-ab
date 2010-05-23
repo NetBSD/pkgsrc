@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+
+--- inc/always.php.in.orig	2010-04-01 09:21:58.000000000 +0000
++++ inc/always.php.in
+@@ -72,7 +72,7 @@ if ( ! @include_once('AWLUtilities.php')
+   $try_paths = array(
+         '../../awl/inc'
+       , '/usr/share/awl/inc'
+-      , '/usr/local/share/awl/inc'
++      , '@LIBAWLPATH@/inc'
+   );
+   foreach( $try_paths AS $awl_include_path ) {
+     if ( @file_exists($awl_include_path.'/AWLUtilities.php') ) {
+@@ -121,11 +121,11 @@ if ( @file_exists('/etc/davical/'.$_SERV
+ else if ( @file_exists('/etc/davical/config.php') ) {
+   include('/etc/davical/config.php');
+ }
+-else if ( @file_exists('/usr/local/etc/davical/'.$_SERVER['SERVER_NAME'].'-conf.php') ) {
+-  include('/usr/local/etc/davical/'.$_SERVER['SERVER_NAME'].'-conf.php');
++else if ( @file_exists('@PKG_SYSCONFDIR@'.$_SERVER['SERVER_NAME'].'-conf.php') ) {
++  include('@PKG_SYSCONFDIR@'.$_SERVER['SERVER_NAME'].'-conf.php');
+ }
+-else if ( @file_exists('/usr/local/etc/davical/config.php') ) {
+-  include('/usr/local/etc/davical/config.php');
++else if ( @file_exists('@PKG_SYSCONFDIR@/config.php') ) {
++  include('@PKG_SYSCONFDIR@/config.php');
+ }
+ else if ( @file_exists('../config/config.php') ) {
+   include('../config/config.php');

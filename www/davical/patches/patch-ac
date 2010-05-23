@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+
+--- dba/update-davical-database.orig	2010-03-09 02:51:21.000000000 +0000
++++ dba/update-davical-database
+@@ -23,7 +23,7 @@ my $helpmeplease = 0;
+ my $apply_patches = 1;
+ my $revoke_list = "";
+ my $force_owner = "";
+-my $config_file = "config/administration.yml";
++my $config_file = "@PKG_SYSCONFDIR@/administration.yml";
+ 
+ my $dbadir = $0;
+ $dbadir =~ s#/[^/]*$##;
