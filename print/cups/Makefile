@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2010/05/23 09:44:12 sbd Exp $
+# $NetBSD: Makefile,v 1.157 2010/05/23 10:03:12 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -40,7 +40,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--with-cachedir=${VARBASE:Q}/cache/cups
+CONFIGURE_ARGS+=	--with-cachedir=${CUPS_CACHE:Q}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
@@ -87,6 +87,8 @@ PKG_SYSCONFSUBDIR=	cups
 CUPS_CONFDIR=		${PKG_SYSCONFDIR}
 CUPS_LOGDIR=		${VARBASE}/log/cups
 CUPS_REQUESTS=		${VARBASE}/spool/cups
+CUPS_CACHE=		${VARBASE}/cache/cups
+CUPS_STATEDIR=		${VARBASE}/run/cups
 
 PKG_GROUPS=		${CUPS_GROUP}
 PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}
@@ -102,11 +104,13 @@ OWN_DIRS+=		${CUPS_CONFDIR}/interfaces
 OWN_DIRS+=		${CUPS_CONFDIR}/ppd
 OWN_DIRS+=		${PREFIX}/libexec/cups/driver
 OWN_DIRS+=		${CUPS_LOGDIR}
-OWN_DIRS_PERMS=		${CUPS_CONFDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
-OWN_DIRS_PERMS+=	${CUPS_CONFDIR}/ssl ${CUPS_USER} ${CUPS_GROUP} 0700
-OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${CUPS_USER} ${CUPS_GROUP} 0710
-OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
-OWN_DIRS_PERMS+=	${VARBASE}/cache/cups ${CUPS_USER} ${CUPS_GROUP} 0775
+OWN_DIRS+=		${CUPS_STATEDIR}
+OWN_DIRS_PERMS=		${CUPS_STATEDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
+OWN_DIRS_PERMS+=	${CUPS_CONFDIR}/ssl ${ROOT_USER} ${CUPS_GROUP} 0700
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${ROOT_USER} ${CUPS_GROUP} 0710
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${ROOT_USER} ${CUPS_GROUP} 1770
+OWN_DIRS_PERMS+=	${CUPS_CACHE} ${ROOT_USER} ${CUPS_GROUP} 0775
+OWN_DIRS_PERMS+=	${CUPS_CACHE}/rss ${ROOT_USER} ${CUPS_GROUP} 0775
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
