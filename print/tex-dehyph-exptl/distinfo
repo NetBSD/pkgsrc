@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 05:25:38 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/23 10:01:50 minskim Exp $
 
-SHA1 (tex-dehyph-exptl-0.13/dehyph-exptl.tar.lzma) = 81d861b271eb315b556ecd6e332b938a830b02f9
-RMD160 (tex-dehyph-exptl-0.13/dehyph-exptl.tar.lzma) = 2e45d3bf6d80bc373111f2f50adf708e0b2f1a9d
-Size (tex-dehyph-exptl-0.13/dehyph-exptl.tar.lzma) = 57824 bytes
+SHA1 (tex-dehyph-exptl-15878/dehyph-exptl.tar.xz) = 28b6cd02797cf1aa4c21c7031942fe34b15ac6f6
+RMD160 (tex-dehyph-exptl-15878/dehyph-exptl.tar.xz) = 08421979747b4313b90ff8a805d0e5c049e2beeb
+Size (tex-dehyph-exptl-15878/dehyph-exptl.tar.xz) = 66444 bytes
