@@ -1,0 +1,11 @@
+$NetBSD: patch-aw,v 1.1 2010/05/23 13:00:04 tnn Exp $
+
+--- jdk/src/share/lib/security/java.policy.orig	2010-05-06 08:45:24.000000000 +0000
++++ jdk/src/share/lib/security/java.policy
+@@ -45,5 +45,6 @@ grant { 
+ 	permission java.util.PropertyPermission "java.vm.version", "read";
+ 	permission java.util.PropertyPermission "java.vm.vendor", "read";
+ 	permission java.util.PropertyPermission "java.vm.name", "read";
++	permission java.util.PropertyPermission "sun.java2d.debugfonts", "read";
+ };
+ 
