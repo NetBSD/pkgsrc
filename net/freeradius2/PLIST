@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/11 09:18:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/05/23 17:28:44 tron Exp $
 bin/radclient
 bin/radconf2xml
 bin/radeapclient
@@ -416,9 +416,11 @@ share/freeradius/dictionary.3com
 share/freeradius/dictionary.3gpp
 share/freeradius/dictionary.3gpp2
 share/freeradius/dictionary.acc
+share/freeradius/dictionary.acme
 share/freeradius/dictionary.airespace
 share/freeradius/dictionary.alcatel
 share/freeradius/dictionary.alcatel.esam
+share/freeradius/dictionary.alcatel.sr
 share/freeradius/dictionary.alteon
 share/freeradius/dictionary.altiga
 share/freeradius/dictionary.alvarion
@@ -427,6 +429,7 @@ share/freeradius/dictionary.aptis
 share/freeradius/dictionary.aruba
 share/freeradius/dictionary.ascend
 share/freeradius/dictionary.asn
+share/freeradius/dictionary.audiocodes
 share/freeradius/dictionary.avaya
 share/freeradius/dictionary.azaire
 share/freeradius/dictionary.bay
