@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 05:25:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/23 10:01:50 minskim Exp $
 share/texmf-dist/tex/generic/dehyph-exptl/dehyph-exptl.tex
-share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2008-06-18.pat
-share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2008-06-18.tex
-share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2008-06-18.pat
-share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2008-06-18.tex
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2009-06-19.pat
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2009-06-19.tex
+share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2009-06-19.pat
+share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2009-06-19.tex
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphts-x-2009-06-19.pat
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphts-x-2009-06-19.tex
