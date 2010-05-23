@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2010/04/13 16:56:36 drochner Exp $
+# $NetBSD: Makefile,v 1.69 2010/05/23 11:19:27 obache Exp $
 #
 # Some files are shared with libgsf-gnome, so update that
 # as well when updating libgsf!
@@ -29,6 +29,10 @@ CONFIGURE_ARGS+=	--without-python
 MAKE_ENV+=	GCONF2_SCHEMAS_DIR=${GCONF_SCHEMAS_DIR}
 
 GCONF_SCHEMAS=	gsf-office-thumbnailer.schemas
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=		gtkdoc-rebase
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

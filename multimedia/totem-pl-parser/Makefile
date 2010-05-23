@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/05/14 16:41:40 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2010/05/23 11:19:26 obache Exp $
 #
 
 DISTNAME=	totem-pl-parser-2.28.3
@@ -20,6 +20,10 @@ CONFLICTS+=	totem<2.22.0
 
 PKGCONFIG_OVERRIDE+=	totem-plparser-mini.pc.in
 PKGCONFIG_OVERRIDE+=	totem-plparser.pc.in
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=		gtkdoc-rebase
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/gmime24/buildlink3.mk"
