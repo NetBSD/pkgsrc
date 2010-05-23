@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
+
+Treat NetBSD same as FreeBSD.
+
+--- src/osdep.c.orig	2007-12-09 13:03:36.000000000 +0000
++++ src/osdep.c
+@@ -18,7 +18,7 @@
+  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+  */
+ 
+-#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#if (defined(__unix__) || defined(unix)) && !defined(USG) || defined(__NetBSD__)
+ #include <sys/param.h>
+ #endif
+ 
+@@ -29,7 +29,7 @@
+ 
+ #include "osdep.h"
+ 
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
+ char *
+ strndup (const char *s, size_t n)
+ {
+@@ -88,4 +88,4 @@ getline (char **lineptr, size_t *n, FILE
+ 
+   return len;
+ }
+-#endif /* (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__)) */
++#endif /* (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)) */

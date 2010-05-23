@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
+
+Requre -I.. to include config.h.
+
+--- src/Makefile.orig	2007-12-09 13:03:36.000000000 +0000
++++ src/Makefile
+@@ -53,7 +53,7 @@ OBJS = $(SRCS:.c=.o)
+ all: depend $(PROG)
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(OPTFLAGS) -o $@ $<
++	$(CC) -c -I.. $(CFLAGS) $(OPTFLAGS) -o $@ $<
+ 
+ $(PROG): $(OBJS)
+ 	$(CC) $(OBJS) $(LDFLAGS) $(EXTRALIBS) -o $@
