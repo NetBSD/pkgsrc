@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.3 2009/09/29 09:34:09 adam Exp $
+# $NetBSD: options.mk,v 1.4 2010/05/23 17:28:44 tron Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
-PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp kerberos pam freeradius-simul-use
-PKG_SUPPORTED_OPTIONS+=	perl
-PKG_SUGGESTED_OPTIONS=	gdbm freeradius-simul-use
+PKG_OPTIONS_VAR=		PKG_OPTIONS.freeradius
+PKG_SUPPORTED_OPTIONS=		freeradius-simul-use kerberos ldap mysql
+PKG_SUPPORTED_OPTIONS+=		pam perl pgsql snmp
 PKG_OPTIONS_OPTIONAL_GROUPS=	dbm odbc
-PKG_OPTIONS_GROUP.dbm=	bdb gdbm
-PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
+PKG_OPTIONS_GROUP.dbm=		bdb gdbm
+PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
+PKG_SUGGESTED_OPTIONS=		freeradius-simul-use gdbm
 
 .include "../../mk/bsd.options.mk"
 
