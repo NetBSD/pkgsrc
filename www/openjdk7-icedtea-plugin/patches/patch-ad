@@ -1,8 +1,26 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+$NetBSD: patch-ad,v 1.2 2010/05/23 10:50:42 tnn Exp $
 
---- acinclude.m4.orig	2009-10-07 10:48:00.000000000 +0200
+--- acinclude.m4.orig	2010-05-20 13:37:32.000000000 +0000
 +++ acinclude.m4
-@@ -873,7 +873,7 @@ AC_DEFUN([ENABLE_HG],
+@@ -287,7 +287,7 @@ AC_DEFUN([FIND_JAVAH],
+     JAVAH=no
+   ])
+   AC_MSG_RESULT(${JAVAH})
+-  if test "x${JAVAH}" == "xno"; then
++  if test "x${JAVAH}" = "xno"; then
+     JAVAH=${JAVAH_DEFAULT}
+   fi
+   AC_PATH_PROG(JAVAH, "${JAVAH}")
+@@ -320,7 +320,7 @@ AC_DEFUN([FIND_JAR],
+     JAR=no
+   ])
+   AC_MSG_RESULT(${JAR})
+-  if test "x${JAR}" == "xno"; then
++  if test "x${JAR}" = "xno"; then
+     JAR=${JAR_DEFAULT}
+   fi
+   AC_PATH_PROG(JAR, "${JAR}")
+@@ -854,7 +854,7 @@ AC_DEFUN([ENABLE_HG],
  [
    AC_MSG_CHECKING(whether to retrieve the source code from Mercurial)
    AC_ARG_ENABLE([hg],

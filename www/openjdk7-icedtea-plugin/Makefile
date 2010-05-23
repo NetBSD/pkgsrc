@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/01/15 19:18:42 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2010/05/23 10:50:42 tnn Exp $
 #
 
 DISTNAME=	# from icedtea-extras.mk
-PKGNAME=	openjdk7-icedtea-plugin-1.11.0.20100111
+PKGNAME=	openjdk7-icedtea-plugin-1.12.0.20100521
 CATEGORIES=	www
 MASTER_SITES=	# from icedtea-extras.mk
 
@@ -29,12 +29,12 @@ SUBST_FILES.fix-paths=		plugin/icedteanp/IcedTeaNPPlugin.cc
 SUBST_SED.fix-paths+=		-e 's,%s/../../bin/java,${PREFIX}/java/openjdk7/bin/java,g'
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} IcedTeaNPPlugin.so
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${WRKSRC}/plugin.build/icedteanp/IcedTeaNPPlugin.so
 
 INSTALLATION_DIRS+=		lib/netscape/plugins
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/plugin/icedteanp/IcedTeaNPPlugin.so ${DESTDIR}${PREFIX}/lib/netscape/plugins
+	${INSTALL_LIB} ${WRKSRC}/plugin.build/icedteanp/IcedTeaNPPlugin.so ${DESTDIR}${PREFIX}/lib/netscape/plugins
 
 BUILDLINK_API_DEPENDS.xulrunner+=       xulrunner>=1.9.1.3nb6
 .include "../../lang/openjdk7/icedtea-extras.mk"
