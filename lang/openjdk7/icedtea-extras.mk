@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.7 2010/05/22 17:09:55 tnn Exp $
+# $NetBSD: icedtea-extras.mk,v 1.8 2010/05/23 10:50:11 tnn Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			bsdtar
@@ -43,7 +43,7 @@ ICEDTEA_CONFIGURE_ARGS=	\
 CONFIGURE_ARGS+=	${ICEDTEA_CONFIGURE_ARGS}
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=	gawk pkg-config autoconf automake
+USE_TOOLS+=	gawk gmake pkg-config autoconf automake
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 CONFIGURE_ENV+=	ac_cv_path_MD5SUM=/usr/bin/true
 CONFIGURE_ENV+=	ac_cv_path_SHA256SUM=/usr/bin/true
