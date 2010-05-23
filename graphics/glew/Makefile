@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/08/31 11:18:58 adam Exp $
+# $NetBSD: Makefile,v 1.7 2010/05/23 09:52:49 adam Exp $
 
-DISTNAME=	glew-1.5.0-src
-PKGNAME=	glew-1.5.0
+DISTNAME=	glew-1.5.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glew/}
 EXTRACT_SUFX=	.tgz
@@ -11,14 +10,12 @@ HOMEPAGE=	http://glew.sourceforge.net/
 COMMENT=	OpenGL Extension Wrangler Library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_JOBS_SAFE=		no
 
-WRKSRC=		${WRKDIR}/glew
-
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-MAKE_ENV+=	GLEW_DEST=${PREFIX} X11=${PREFIX} POPT=${CFLAGS:Q}
-MAKE_ENV+=	LDFLAGS.EXTRA=${X11_LDFLAGS:Q}
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+PKGCONFIG_OVERRIDE=	glew.pc.in
+MAKE_ENV+=		GLEW_DEST=${PREFIX} X11=${PREFIX} POPT=${CFLAGS:Q}
+MAKE_ENV+=		LDFLAGS.EXTRA=${X11_LDFLAGS:Q}
 
 post-patch:
 	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.dragonfly
