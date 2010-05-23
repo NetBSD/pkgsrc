@@ -1,0 +1,15 @@
+libdlna aims at being the reference open-source implementation of DLNA (Digital
+Living Network Alliance) standards. Its primary goal is to provide DLNA support
+to uShare, an embedded DLNA & UPnP A/V Media Server, but it will be used to
+build both DLNA servers and players in the long term.
+
+libdlna is written in C and relies on FFMPEG librairies (libavformat and
+libavcodec) to handle and demux A/V streams. You still need libupnp to provide
+basic UPnP support to your project.
+
+libdlna is based on official DLNA specifications and aims at a providing a
+complete respect of the defined standards. Right now, libdlna can be used to
+build compliant DLNA Media Servers.
+
+libdlna is free software - it is licensed under the terms of the GNU Lesser
+General Public License (LGPL).
