@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1985 2010/05/22 22:22:03 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.1986 2010/05/23 08:04:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2579,3 +2579,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/imake to 1.0.3 [schwarz 2010-05-21]
 	Updated lang/openjdk7 to 1.7.0.92.20100521 [tnn 2010-05-22]
 	Updated comms/asterisk16 to 1.6.1.20 [jnemeth 2010-05-22]
+	Added net/libdlna version 0.2.3 [obache 2010-05-23]
