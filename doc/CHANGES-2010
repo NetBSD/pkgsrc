@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2017 2010/05/24 23:16:36 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2018 2010/05/24 23:49:22 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2652,3 +2652,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Pod to 1.44 [seb 2010-05-24]
 	Updated www/p5-HTTP-Server-Simple to 0.43 [seb 2010-05-24]
 	Updated devel/p5-Devel-REPL to 1.003010 [seb 2010-05-24]
+	Updated www/p5-Plack to 0.9938 [seb 2010-05-24]
