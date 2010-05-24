@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1998 2010/05/24 10:34:20 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1999 2010/05/24 12:08:20 jym Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2587,6 +2587,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/freeradius2 to 2.1.8 [tron 2010-05-23]
 	Updated net/maradns to 1.4.03 [schwarz 2010-05-23]
 	Updated emulators/hatari to 1.3.1 [adam 2010-05-23]
+	Added devel/php-libawl version 0.43 [jym 2010-05-23]
+	Added www/davical version 0.9.9 [jym 2010-05-23]
 	Updated print/cups to 1.4.3nb1 [sbd 2010-05-24]
 	Updated fonts/tex-euenc to 0.1f [minskim 2010-05-24]
 	Updated fonts/tex-euenc-doc to 0.1f [minskim 2010-05-24]
