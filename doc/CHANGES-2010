@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1997 2010/05/24 08:09:43 seb Exp $
+$NetBSD: CHANGES-2010,v 1.1998 2010/05/24 10:34:20 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2632,3 +2632,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-uppersorbian to 2009 [minskim 2010-05-24]
 	Updated print/tex-hyphen-welsh to 2009 [minskim 2010-05-24]
 	Updated devel/p5-Module-CoreList to 2.34 [seb 2010-05-24]
+	Updated devel/p5-App-cpanminus to 1.0004 [seb 2010-05-24]
