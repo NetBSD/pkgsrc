@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:42:52 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:35 minskim Exp $
 
-SHA1 (tex-hyphen-latin-2008.9093/hyphen-latin.tar.lzma) = b43ff5e2640ae73b3329844814108a06e13fd4b3
-RMD160 (tex-hyphen-latin-2008.9093/hyphen-latin.tar.lzma) = bccb62e5981047a9ceebb3c8c68d271d283f30e1
-Size (tex-hyphen-latin-2008.9093/hyphen-latin.tar.lzma) = 229 bytes
+SHA1 (tex-hyphen-latin-13822/hyphen-latin.tar.xz) = 48857d1d4740216ec1ea7f0365e95521ee794d3c
+RMD160 (tex-hyphen-latin-13822/hyphen-latin.tar.xz) = 1b75c88690cd0198cbf673eb726649f838371f5e
+Size (tex-hyphen-latin-13822/hyphen-latin.tar.xz) = 676 bytes

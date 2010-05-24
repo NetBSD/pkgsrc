@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 07:50:34 minskim Exp $
-# TeX Live Revision 8996
+# $NetBSD: Makefile,v 1.2 2010/05/24 06:08:36 minskim Exp $
 
 DISTNAME=	hyphen-spanish
-PKGNAME=	tex-${DISTNAME}-4.2a
+PKGNAME=	tex-${DISTNAME}-4.5
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Spanish
@@ -15,5 +14,5 @@ TEX_HYPHEN_DAT+=	= espanol
 TEX_HYPHEN_DEF+=	\addlanguage{spanish}{loadhyph-es.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{espanol}{loadhyph-es.tex}{}{2}{2}
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:35:09 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:34 minskim Exp $
 
-SHA1 (tex-hyphen-finnish-2008.8998/hyphen-finnish.tar.lzma) = da9158da27477d28c0d80adf346ecda862a4841d
-RMD160 (tex-hyphen-finnish-2008.8998/hyphen-finnish.tar.lzma) = 0876f28f8714d40e17c4007ff2083e2e68cfc542
-Size (tex-hyphen-finnish-2008.8998/hyphen-finnish.tar.lzma) = 230 bytes
+SHA1 (tex-hyphen-finnish-13822/hyphen-finnish.tar.xz) = 8086e2b0d4b3e6a26e9e1c795eaa5d998f3321cb
+RMD160 (tex-hyphen-finnish-13822/hyphen-finnish.tar.xz) = 3d69df467c63b914ca29ac407d8d3c47dd3f2e53
+Size (tex-hyphen-finnish-13822/hyphen-finnish.tar.xz) = 628 bytes

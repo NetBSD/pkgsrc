@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:20:57 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:33 minskim Exp $
 
-SHA1 (tex-hyphen-basque-2008.8983/hyphen-basque.tar.lzma) = 24696594d91d7c4b8493e282ff08b39b957bf635
-RMD160 (tex-hyphen-basque-2008.8983/hyphen-basque.tar.lzma) = 927cc4fd55b427a29b7b1565c40dc7663c3bad43
-Size (tex-hyphen-basque-2008.8983/hyphen-basque.tar.lzma) = 231 bytes
+SHA1 (tex-hyphen-basque-13822/hyphen-basque.tar.xz) = 395d48717a24111cc88e70f045d06d59c09e4f32
+RMD160 (tex-hyphen-basque-13822/hyphen-basque.tar.xz) = aee681b667b31bbcb1e87cc1faf89895d5f2e0c9
+Size (tex-hyphen-basque-13822/hyphen-basque.tar.xz) = 452 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:39:43 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:35 minskim Exp $
 
-SHA1 (tex-hyphen-indonesian-2008.9006/hyphen-indonesian.tar.lzma) = 00f1eed4c337883913b52960ddfc9d4ea968e7e3
-RMD160 (tex-hyphen-indonesian-2008.9006/hyphen-indonesian.tar.lzma) = 06b7afea9281fc48d1111322011cd89410cf5ed7
-Size (tex-hyphen-indonesian-2008.9006/hyphen-indonesian.tar.lzma) = 234 bytes
+SHA1 (tex-hyphen-indonesian-13822/hyphen-indonesian.tar.xz) = f961c993e252b459a2afa1a90869857535fe3fb6
+RMD160 (tex-hyphen-indonesian-13822/hyphen-indonesian.tar.xz) = 50ca00d4d1e06e4aab4f6cab262294a6d4a33eec
+Size (tex-hyphen-indonesian-13822/hyphen-indonesian.tar.xz) = 300 bytes

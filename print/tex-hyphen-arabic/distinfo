@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:18:43 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:33 minskim Exp $
 
-SHA1 (tex-hyphen-arabic-2008.8935/hyphen-arabic.tar.lzma) = fb4c10ea10223a74dc6a16b4bbf1d7e0ee556843
-RMD160 (tex-hyphen-arabic-2008.8935/hyphen-arabic.tar.lzma) = 9d84176ad57f134cd76e7e3207c4a41bce49cb7a
-Size (tex-hyphen-arabic-2008.8935/hyphen-arabic.tar.lzma) = 227 bytes
+SHA1 (tex-hyphen-arabic-13822/hyphen-arabic.tar.xz) = d9b31036046ad6c1d2a5c41cf1ac23cc90ea90e9
+RMD160 (tex-hyphen-arabic-13822/hyphen-arabic.tar.xz) = ff0333694f42aee1671c40edf8719a2628504528
+Size (tex-hyphen-arabic-13822/hyphen-arabic.tar.xz) = 296 bytes

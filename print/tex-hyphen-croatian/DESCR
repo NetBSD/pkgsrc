@@ -1,1 +1,4 @@
-This package provides TeX hyphenation patterns for Croatian.
+Hyphenation patterns for the Croatian language for use with T1
+encoding as supported in EC fonts. Note that these patterns are
+no longer used by distributions; a version of the patterns,
+encoded in UTF-8, are the location of current development.

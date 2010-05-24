@@ -1,1 +1,3 @@
-This package provides TeX hyphenation patterns for Icelandic.
+Hyphenation patterns for Icelandic; apparently designed for a
+modern encoding (by contrast with ishyph, whose encoding is not
+apparently published.

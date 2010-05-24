@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:37:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:35 minskim Exp $
 
-SHA1 (tex-hyphen-german-2008.8935/hyphen-german.tar.lzma) = a4da9fbf693d55a5ff5b25f1c070f722d3b4a456
-RMD160 (tex-hyphen-german-2008.8935/hyphen-german.tar.lzma) = 4f179396b4b64ae6758f97e809865f5495df9c99
-Size (tex-hyphen-german-2008.8935/hyphen-german.tar.lzma) = 46274 bytes
+SHA1 (tex-hyphen-german-2009/hyphen-german.tar.xz) = 1e767cb9c1fe5659d9679f5d4422515b2875fe5a
+RMD160 (tex-hyphen-german-2009/hyphen-german.tar.xz) = 75b6298eaf0e3affdf15f441202c1ff8339f8641
+Size (tex-hyphen-german-2009/hyphen-german.tar.xz) = 46396 bytes

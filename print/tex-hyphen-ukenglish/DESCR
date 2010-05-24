@@ -1,1 +1,5 @@
-This package provides TeX hyphenation patterns for UK English.
+These patterns were derived from a word-division list generously
+provided by the Oxford University Press (for the purpose of generating
+these patterns, only).  'British English' hyphenation differs from the
+default patterns provided with TeX, in that they are etymologically
+based; American patterns tend to be more pragmatically derived.

@@ -1,1 +1,4 @@
-This package provides TeX hyphenation patterns for Spanish.
+This hyphenation file is the outcome of a long (slow-moving)
+project by the Spanish User group CervanTeX. The patterns are
+arranged such they work equally well in UTF-8 and in
+traditional TeX font encodings.
