@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9319 2010/05/24 16:02:40 seb Exp $
+$NetBSD: TODO,v 1.9320 2010/05/24 18:43:28 seb Exp $
 
 Suggested new packages
 ======================
@@ -1073,7 +1073,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-URI-1.54
 	o p5-XML-RSS-1.48
 	o p5-ispman-1.2
-	o p5-libwww-5.836
 	o p5-sybperl-2.18
 	o p5-version-0.8200
 	o p5-xmltv-0.5.57
