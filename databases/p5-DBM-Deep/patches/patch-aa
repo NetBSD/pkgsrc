@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2010/05/24 13:22:51 seb Exp $
+
+Configure must not be interactive.
+
+--- Build.PL.orig	2010-04-10 14:49:51.000000000 +0000
++++ Build.PL
+@@ -70,9 +70,9 @@ my $build = Module::Build->subclass(
+     },
+ );
+ 
+-if ( $build->y_n( "Run the long-running tests", 'n' ) ) {
+-    $build->notes( 'LONG_TESTS' => 1 );
+-}
++#if ( $build->y_n( "Run the long-running tests", 'n' ) ) {
++#    $build->notes( 'LONG_TESTS' => 1 );
++#}
+ 
+ if ( $build->features( 'sqlite_engine' ) ) {
+     if ( $build->y_n( "Run the tests against the DBI engine via SQLite?", 'n' ) ) {
