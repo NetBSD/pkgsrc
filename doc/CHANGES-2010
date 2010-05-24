@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2012 2010/05/24 21:07:02 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2013 2010/05/24 21:21:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2647,3 +2647,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Coro to 5.23 [seb 2010-05-24]
 	Updated devel/p5-Variable-Magic to 0.42 [seb 2010-05-24]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.09 [seb 2010-05-24]
+	Updated devel/p5-PPI to 1.212 [seb 2010-05-24]
