@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2010/05/23 10:03:12 sbd Exp $
+# $NetBSD: Makefile,v 1.158 2010/05/24 03:26:37 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -106,11 +106,11 @@ OWN_DIRS+=		${PREFIX}/libexec/cups/driver
 OWN_DIRS+=		${CUPS_LOGDIR}
 OWN_DIRS+=		${CUPS_STATEDIR}
 OWN_DIRS_PERMS=		${CUPS_STATEDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
-OWN_DIRS_PERMS+=	${CUPS_CONFDIR}/ssl ${ROOT_USER} ${CUPS_GROUP} 0700
-OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${ROOT_USER} ${CUPS_GROUP} 0710
-OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${ROOT_USER} ${CUPS_GROUP} 1770
-OWN_DIRS_PERMS+=	${CUPS_CACHE} ${ROOT_USER} ${CUPS_GROUP} 0775
-OWN_DIRS_PERMS+=	${CUPS_CACHE}/rss ${ROOT_USER} ${CUPS_GROUP} 0775
+OWN_DIRS_PERMS+=	${CUPS_CONFDIR}/ssl ${REAL_ROOT_USER} ${CUPS_GROUP} 0700
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${REAL_ROOT_USER} ${CUPS_GROUP} 0710
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${REAL_ROOT_USER} ${CUPS_GROUP} 1770
+OWN_DIRS_PERMS+=	${CUPS_CACHE} ${REAL_ROOT_USER} ${CUPS_GROUP} 0775
+OWN_DIRS_PERMS+=	${CUPS_CACHE}/rss ${REAL_ROOT_USER} ${CUPS_GROUP} 0775
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
