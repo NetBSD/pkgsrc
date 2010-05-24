@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2014 2010/05/24 21:33:55 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2015 2010/05/24 21:43:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2649,3 +2649,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-B-Hooks-EndOfScope to 0.09 [seb 2010-05-24]
 	Updated devel/p5-PPI to 1.212 [seb 2010-05-24]
 	Updated textproc/p5-Pod-Simple to 3.14 [seb 2010-05-24]
+	Updated devel/p5-Test-Pod to 1.44 [seb 2010-05-24]

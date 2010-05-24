@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9322 2010/05/24 21:20:15 wiz Exp $
+$NetBSD: TODO,v 1.9323 2010/05/24 21:43:36 seb Exp $
 
 Suggested new packages
 ======================
@@ -1076,7 +1076,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Pod-Readme-0.10
 	o p5-Search-Xapian-1.0.20.0
 	o p5-Set-Infinite-0.65
-	o p5-Test-Pod-1.44
 	o p5-Text-Markdown-1.000031
 	o p5-URI-1.54
 	o p5-XML-RSS-1.48
