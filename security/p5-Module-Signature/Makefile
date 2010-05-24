@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2010/04/11 23:55:02 seb Exp $
+# $NetBSD: Makefile,v 1.17 2010/05/24 16:02:28 seb Exp $
 #
 
-DISTNAME=	Module-Signature-0.63
+DISTNAME=	Module-Signature-0.64
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ms
 CATEGORIES=	devel perl5
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-Signature/
-COMMENT=	Perl5 module adding cryptographic authentications to CPAN distributions
+COMMENT=	Perl 5 module for module signature file manipulation
 LICENSE=	public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -30,9 +30,8 @@ post-extract:
 	${MV} ${WRKSRC}/t/0-signature.t ${WRKSRC}/t/0-signature.t.SKIP
 
 post-install:
-	${PKG_SILENT}${PKG_DEBUG}	\
-	for f in ${WRKSRC}/*.pub; do ${INSTALL_DATA} $$f	\
-		${DESTDIR:Q}${PREFIX:Q}/share/Module-Signature;	\
+	${RUN} for f in ${WRKSRC}/*.pub; do ${INSTALL_DATA} "$$f"	\
+		${DESTDIR}${PREFIX}/share/Module-Signature;		\
 	done
 
 .include "../../lang/perl5/module.mk"
