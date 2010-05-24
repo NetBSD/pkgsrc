@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2010/05/24 19:49:45 christos Exp $
+
+--- init.c.orig	2010-05-24 15:41:29.000000000 -0400
++++ init.c	2010-05-24 15:43:14.000000000 -0400
+@@ -54,7 +54,7 @@
+ 	}
+     }
+     if (!entry) 
+-#endif ROOTMAIL
++#endif /* ROOTMAIL */
+ 	entry = getpwuid(getuid());
+     if (!entry) {
+   	if (p = getlogin())

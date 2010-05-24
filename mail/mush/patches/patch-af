@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2000/01/03 20:59:24 christos Exp $
+$NetBSD: patch-af,v 1.5 2010/05/24 19:49:45 christos Exp $
 
 *** old/commands.c	Fri Sep  4 11:22:06 1998
 --- commands.c	Fri Sep  4 11:21:28 1998
@@ -700,7 +700,7 @@ $NetBSD: patch-af,v 1.4 2000/01/03 20:59:24 christos Exp $
 +     struct msg **mlist = (struct msg **) alloca(msg_cnt *
 + 						sizeof(struct msg *));
 + #endif
-+     char *omsg = NULL, *nmsg = NULL, *otext, *ntext;
++     char *omsg = NULL, *nmsg = NULL, *otext = NULL, *ntext = NULL;
 +     size_t otsize = 0, ntsize = 0, omsize = 0, nmsize = 0, mid;
 + 
 +     if (cnt == -1)
