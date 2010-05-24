@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:40:41 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:35 minskim Exp $
 
-SHA1 (tex-hyphen-interlingua-2008.9004/hyphen-interlingua.tar.lzma) = 5b9b39dfa9dae2fe20db8f0e08fa2700689d1292
-RMD160 (tex-hyphen-interlingua-2008.9004/hyphen-interlingua.tar.lzma) = 5dda43cea62c0fdfcfe74bd88ea24b9d03a304f4
-Size (tex-hyphen-interlingua-2008.9004/hyphen-interlingua.tar.lzma) = 237 bytes
+SHA1 (tex-hyphen-interlingua-13822/hyphen-interlingua.tar.xz) = 808f34524fee216b62f7e1d0027c799a8037b734
+RMD160 (tex-hyphen-interlingua-13822/hyphen-interlingua.tar.xz) = 58c518bed16eebcbfa62d53a76c9d5745b08554a
+Size (tex-hyphen-interlingua-13822/hyphen-interlingua.tar.xz) = 304 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:53:19 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:37 minskim Exp $
 
-SHA1 (tex-hyphen-ukrainian-2008.9370/hyphen-ukrainian.tar.lzma) = 5f5fb4a50d76008c432a74727adc51206e1a4c4e
-RMD160 (tex-hyphen-ukrainian-2008.9370/hyphen-ukrainian.tar.lzma) = 6bbf0f7bba7c9c79b8cca69c5797eab819791e05
-Size (tex-hyphen-ukrainian-2008.9370/hyphen-ukrainian.tar.lzma) = 244 bytes
+SHA1 (tex-hyphen-ukrainian-13822/hyphen-ukrainian.tar.xz) = 203b9e34bfd9b17c6febe81ab9f34662d3fc48d4
+RMD160 (tex-hyphen-ukrainian-13822/hyphen-ukrainian.tar.xz) = 437bc7d526d9834105ab3d648c5fb7c9413be13c
+Size (tex-hyphen-ukrainian-13822/hyphen-ukrainian.tar.xz) = 312 bytes

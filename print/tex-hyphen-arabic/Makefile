@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 07:18:43 minskim Exp $
-# TeX Live Revision 8935
+# $NetBSD: Makefile,v 1.2 2010/05/24 06:08:33 minskim Exp $
 
 DISTNAME=	hyphen-arabic
-PKGNAME=	tex-${DISTNAME}-2008.8935
+PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	13822
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Arabic
@@ -13,5 +13,5 @@ DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 TEX_HYPHEN_DAT+=	arabic zerohyph.tex
 TEX_HYPHEN_DEF+=	\addlanguage{arabic}{zerohyph.tex}{}{}{}
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
