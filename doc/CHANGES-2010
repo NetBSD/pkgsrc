@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2001 2010/05/24 13:23:05 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2002 2010/05/24 15:11:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2636,3 +2636,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-CoreList to 2.34 [seb 2010-05-24]
 	Updated devel/p5-App-cpanminus to 1.0004 [seb 2010-05-24]
 	Updated databases/p5-DBM-Deep to 1.0023 [seb 2010-05-24]
+	Updated devel/p5-Scope-Guard to 0.20 [seb 2010-05-24]
