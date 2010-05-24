@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/07/27 06:22:43 roy Exp $
+# $NetBSD: Makefile,v 1.7 2010/05/24 21:08:41 roy Exp $
 #
 
-DISTNAME=		dhcpcd-dbus-0.4.2
+DISTNAME=		dhcpcd-dbus-0.5.0
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
@@ -15,9 +15,10 @@ LICENSE=		modified-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c99
 USE_TOOLS+=		pkg-config
+HAS_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/dhcpcd-dbus
-INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
+INSTALL_MAKE_FLAGS+=	CONFDIR=${EGDIR}
 
 # Install the configuration file
 CONF_FILES+=		${EGDIR}/dhcpcd-dbus.conf \
