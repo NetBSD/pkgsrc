@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:33:09 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:34 minskim Exp $
 
-SHA1 (tex-hyphen-estonian-2008.8997/hyphen-estonian.tar.lzma) = 63d42dd08de497dac655ff7a2aa37562c54f2ad6
-RMD160 (tex-hyphen-estonian-2008.8997/hyphen-estonian.tar.lzma) = 54a856b06f0a7b62135660001b8d9ba9f97d95cc
-Size (tex-hyphen-estonian-2008.8997/hyphen-estonian.tar.lzma) = 233 bytes
+SHA1 (tex-hyphen-estonian-13822/hyphen-estonian.tar.xz) = f8d8c7bb659d224d676b65838572c05f6cfb8a75
+RMD160 (tex-hyphen-estonian-13822/hyphen-estonian.tar.xz) = cfc619eb771b323e27763acfe02420a32d9b60ad
+Size (tex-hyphen-estonian-13822/hyphen-estonian.tar.xz) = 300 bytes

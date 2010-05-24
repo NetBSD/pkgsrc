@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:55:07 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:37 minskim Exp $
 
-SHA1 (tex-hyphen-welsh-2008.8985/hyphen-welsh.tar.lzma) = a5b3ec246d5ade8f0e0b8d3dc590e0e5b6c7e301
-RMD160 (tex-hyphen-welsh-2008.8985/hyphen-welsh.tar.lzma) = 0a55876822af9e178a9a5554b78a9028ee370b02
-Size (tex-hyphen-welsh-2008.8985/hyphen-welsh.tar.lzma) = 231 bytes
+SHA1 (tex-hyphen-welsh-13822/hyphen-welsh.tar.xz) = 47ef72ce2dd69bcb9d10ccaff1b74c5199da1c56
+RMD160 (tex-hyphen-welsh-13822/hyphen-welsh.tar.xz) = 135ab72b3bda9cb46b7d22c63f8fe4bdc425c8c7
+Size (tex-hyphen-welsh-13822/hyphen-welsh.tar.xz) = 300 bytes
