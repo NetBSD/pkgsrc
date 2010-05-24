@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2010/03/14 23:07:30 tron Exp $
+# $NetBSD: Makefile.common,v 1.6 2010/05/24 22:10:01 tron Exp $
 # used by multimedia/ffplay/Makefile
 
 DISTNAME=	ffmpeg-${DISTVERSION:S/-//g}
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
 			--enable-pthreads \
 			--enable-gpl
 
-.if ${OPSYS} == "SunOS"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-amd3dnow --disable-amd3dnowext
 CONFIGURE_ARGS+=	--disable-mmx --disable-mmx2
 CONFIGURE_ARGS+=	--disable-sse --disable-ssse3
