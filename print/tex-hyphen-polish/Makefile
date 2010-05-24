@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 07:45:20 minskim Exp $
-# TeX Live Revision 9103
+# $NetBSD: Makefile,v 1.2 2010/05/24 06:08:36 minskim Exp $
 
 DISTNAME=	hyphen-polish
-PKGNAME=	tex-${DISTNAME}-2008.9103
+PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	13822
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Polish
@@ -13,5 +13,5 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 TEX_HYPHEN_DAT+=	polish loadhyph-pl.tex
 TEX_HYPHEN_DEF+=	\addlanguage{polish}{loadhyph-pl.tex}{}{2}{2}
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

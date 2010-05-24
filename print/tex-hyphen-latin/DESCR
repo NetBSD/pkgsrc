@@ -1,1 +1,8 @@
-This package provides TeX hyphenation patterns for Latin.
+These are patterns for the latin language mainly in modern
+spelling (u when u is needed and v when v is needed); medieval
+spelling with the ligatures \ae and \oe and the (uncial)
+lowercase 'v' written as a 'u' is also supported; apparently
+there is no conflict between the patterns of modern Latin and
+those of medieval Latin. The patterns support the restricted
+character set of the OT1-encoding (obviously without the
+ligature characters), as well as T1-encoded usage.

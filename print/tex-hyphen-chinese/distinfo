@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:27:04 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:34 minskim Exp $
 
-SHA1 (tex-hyphen-chinese-2008.9013/hyphen-chinese.tar.lzma) = c30b8d41c3161010eb1efb165013a183327d82f6
-RMD160 (tex-hyphen-chinese-2008.9013/hyphen-chinese.tar.lzma) = 90a110055b5b6f5ee5710939fb96824e7e166a5a
-Size (tex-hyphen-chinese-2008.9013/hyphen-chinese.tar.lzma) = 236 bytes
+SHA1 (tex-hyphen-chinese-13822/hyphen-chinese.tar.xz) = 45239933701c62f26bfac4ab6703c0efe8367ab3
+RMD160 (tex-hyphen-chinese-13822/hyphen-chinese.tar.xz) = 6928db10079be2043eb987f1f69fee800fb88319
+Size (tex-hyphen-chinese-13822/hyphen-chinese.tar.xz) = 304 bytes
