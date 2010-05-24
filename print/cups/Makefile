@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2010/05/24 03:26:37 sbd Exp $
+# $NetBSD: Makefile,v 1.159 2010/05/24 03:32:12 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -8,6 +8,7 @@ DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
 BASE_VERS=	1.4.3
 DIST_VERS=	${BASE_VERS}
+PKGREVISION=	1
 
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -45,6 +46,7 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP:Q}
+CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-jpeg
@@ -71,14 +73,16 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 # CUPS_GROUP	group of the CUPS administrator
 #
 CUPS_USER?=		lp
-CUPS_GROUP?=		sys
+CUPS_GROUP?=		lp
+CUPS_SYSTEM_GROUPS?=	${REAL_ROOT_GROUP}
 FILES_SUBST+=		CUPS_USER=${CUPS_USER:Q}
 FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP:Q}
+FILES_SUSST+=		CUPS_SYSTEM_GROUPS=${CUPS_SYSTEM_GROUPS:Q}
 
-PKG_GROUPS_VARS+=	CUPS_GROUP
+PKG_GROUPS_VARS+=	CUPS_GROUP CUPS_SYSTEM_GROUPS
 PKG_USERS_VARS+=	CUPS_USER
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		CUPS_USER CUPS_GROUP CUPS_SYSTEM_GROUPS VARBASE
 
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
@@ -133,6 +137,10 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR:Q}
 
 pre-configure:
+.if !empty(CUPS_SYSTEM_GROUPS:M${CUPS_GROUP})
+	${ERROR_MSG} "CUPS_SYSTEM_GROUPS may not contain the CUPS_GROUP"
+	exit 1
+.endif
 	cd ${WRKSRC} && aclocal && autoconf
 
 post-extract:
