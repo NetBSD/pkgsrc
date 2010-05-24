@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.8 2010/05/24 16:10:54 tron Exp $
+
+Fix build problem under NetBSD, please look here for more details:
+
+http://gnats.netbsd.org/43347
+http://bugs.squid-cache.org/show_bug.cgi?id=2934
+
+--- helpers/ntlm_auth/smb_lm/smbval/rfcnb-util.c.orig	2010-05-02 11:47:07.000000000 +0100
++++ helpers/ntlm_auth/smb_lm/smbval/rfcnb-util.c	2010-05-24 16:40:20.000000000 +0100
+@@ -23,6 +23,8 @@
+  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
+ 
++#include "config.h"
++
+ #include <string.h>
+ #include <stdlib.h>
+ 
