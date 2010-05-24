@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2010/02/19 17:22:13 tron Exp $
+# $NetBSD: options.mk,v 1.17 2010/05/24 16:25:29 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	snmp ssl \
@@ -149,28 +149,36 @@ CONFIGURE_ARGS+=	--disable-unlinkd
 PLIST.unlinkd=		yes
 .endif
 
-.if !empty(SQUID_BASIC_AUTH_HELPERS)
+.if empty(SQUID_BASIC_AUTH_HELPERS)
+CONFIGURE_ARGS+= --enable-basic-auth-helpers=no
+.else
 CONFIGURE_ARGS+= --enable-basic-auth-helpers=${SQUID_BASIC_AUTH_HELPERS:Q}
 .for i in ${SQUID_BASIC_AUTH_HELPERS}
 PLIST.ba_${i}=		yes
 .endfor
 .endif
 
-.if !empty(SQUID_DIGEST_AUTH_HELPERS)
+.if empty(SQUID_DIGEST_AUTH_HELPERS)
+CONFIGURE_ARGS+= --enable-digest-auth-helpers=no
+.else
 CONFIGURE_ARGS+= --enable-digest-auth-helpers=${SQUID_DIGEST_AUTH_HELPERS:Q}
 .for i in ${SQUID_DIGEST_AUTH_HELPERS}
 PLIST.da_${i}=		yes
 .endfor
 .endif
 
-.if !empty(SQUID_NTLM_AUTH_HELPERS)
+.if empty(SQUID_NTLM_AUTH_HELPERS)
+CONFIGURE_ARGS+= --enable-ntlm-auth-helpers=no
+.else
 CONFIGURE_ARGS+= --enable-ntlm-auth-helpers=${SQUID_NTLM_AUTH_HELPERS:Q}
 .for i in ${SQUID_NTLM_AUTH_HELPERS}
 PLIST.na_${i}=		yes
 .endfor
 .endif
 
-.if !empty(SQUID_EXTERNAL_ACL_HELPERS)
+.if empty(SQUID_EXTERNAL_ACL_HELPERS)
+CONFIGURE_ARGS+= --enable-external-acl-helpers=no
+.else
 CONFIGURE_ARGS+= --enable-external-acl-helpers=${SQUID_EXTERNAL_ACL_HELPERS:Q}
 .for i in ${SQUID_EXTERNAL_ACL_HELPERS}
 PLIST.eacl_${i}=	yes
