@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2008 2010/05/24 20:10:25 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2009 2010/05/24 20:25:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2643,3 +2643,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime-TimeZone to 1.19 [seb 2010-05-24]
 	Updated devel/p5-Class-MOP to 1.02 [seb 2010-05-24]
 	Updated devel/p5-Moose to 1.05 [seb 2010-05-24]
+	Updated devel/p5-Async-Interrupt to 1.05 [seb 2010-05-24]
