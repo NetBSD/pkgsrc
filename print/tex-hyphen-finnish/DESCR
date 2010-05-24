@@ -1,1 +1,6 @@
-This package provides TeX hyphenation patterns for Finnish.
+Two sets of hyphenation patterns are provided; fihyph.tex, and
+fi8hyph.tex (which is modified from fihyph.tex to make the Finnish
+accented letters to work with LaTeX2e, adding some \catcode, \uccode,
+and \lccode commands after the model used in the hyphenation files for
+the other European languages).  The package is superseded by the
+Finnish patterns available in the hyph-utf8 bundle.

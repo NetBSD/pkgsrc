@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 07:44:49 minskim Exp $
-# TeX Live Revision 9009
+# $NetBSD: Makefile,v 1.2 2010/05/24 06:08:36 minskim Exp $
 
 DISTNAME=	hyphen-norwegian
-PKGNAME=	tex-${DISTNAME}-2008.9009
+PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	13822
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Norwegian
@@ -19,5 +19,5 @@ TEX_HYPHEN_DEF+=	\addlanguage{norwegian}{loadhyph-nb.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{norsk}{loadhyph-nb.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{nynorsk}{loadhyph-nn.tex}{}{2}{2}
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
