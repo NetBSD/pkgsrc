@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2009 2010/05/24 20:25:43 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2010 2010/05/24 20:53:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2644,3 +2644,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-MOP to 1.02 [seb 2010-05-24]
 	Updated devel/p5-Moose to 1.05 [seb 2010-05-24]
 	Updated devel/p5-Async-Interrupt to 1.05 [seb 2010-05-24]
+	Updated devel/p5-Coro to 5.23 [seb 2010-05-24]
