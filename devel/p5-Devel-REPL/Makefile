@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/03/10 13:12:19 sno Exp $
+# $NetBSD: Makefile,v 1.12 2010/05/24 23:16:24 seb Exp $
 #
 
-DISTNAME=	Devel-REPL-1.003009
+DISTNAME=	Devel-REPL-1.003010
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -29,6 +29,7 @@ DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 # Recommended dependencies
 DEPENDS+=	p5-App-Nopaste-[0-9]*:../../www/p5-App-Nopaste
 DEPENDS+=	p5-B-Keywords-[0-9]*:../../devel/p5-B-Keywords
+DEPENDS+=	p5-Data-Dumper-Concise-[0-9]*:../../devel/p5-Data-Dumper-Concise
 DEPENDS+=	p5-Data-Dump-Streamer-[0-9]*:../../devel/p5-Data-Dump-Streamer
 DEPENDS+=	p5-File-Next-[0-9]*:../../devel/p5-File-Next
 DEPENDS+=	p5-Lexical-Persistence-[0-9]*:../../devel/p5-Lexical-Persistence
