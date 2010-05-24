@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2004 2010/05/24 17:37:25 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2005 2010/05/24 18:43:28 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2639,3 +2639,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Scope-Guard to 0.20 [seb 2010-05-24]
 	Updated security/p5-Module-Signature to 0.64 [seb 2010-05-24]
 	Updated net/p5-IO-Socket-INET6 to 2.62 [seb 2010-05-24]
+	Updated www/p5-libwww to 5.836 [seb 2010-05-24]
