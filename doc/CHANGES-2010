@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2006 2010/05/24 19:00:14 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2007 2010/05/24 20:10:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2641,3 +2641,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-IO-Socket-INET6 to 2.62 [seb 2010-05-24]
 	Updated www/p5-libwww to 5.836 [seb 2010-05-24]
 	Updated time/p5-DateTime-TimeZone to 1.19 [seb 2010-05-24]
+	Updated devel/p5-Class-MOP to 1.02 [seb 2010-05-24]
