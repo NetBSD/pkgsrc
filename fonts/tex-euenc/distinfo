@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/07/08 07:42:04 taca Exp $
+$NetBSD: distinfo,v 1.3 2010/05/24 03:35:09 minskim Exp $
 
-SHA1 (tex-euenc-0.1d/euenc.tar.lzma) = c51332edcf3d4f2f5c9f9003fa53395ed7e78917
-RMD160 (tex-euenc-0.1d/euenc.tar.lzma) = af9f729d3bb75bf82645bdd9710260ffdcd13743
-Size (tex-euenc-0.1d/euenc.tar.lzma) = 1782 bytes
+SHA1 (tex-euenc-17015/euenc.tar.xz) = 0ad7eced48fda2ec01e345b28f5bba8d462b00a3
+RMD160 (tex-euenc-17015/euenc.tar.xz) = fff12df5da3d600eafdc98e69da7e086fffb059b
+Size (tex-euenc-17015/euenc.tar.xz) = 3184 bytes
