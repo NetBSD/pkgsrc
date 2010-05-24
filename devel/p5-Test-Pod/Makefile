@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2010/03/15 12:23:56 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/05/24 21:43:26 seb Exp $
 
-DISTNAME=		Test-Pod-1.42
+DISTNAME=		Test-Pod-1.44
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tp
 CATEGORIES=		devel perl5
