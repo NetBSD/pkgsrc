@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/07 22:36:10 minskim Exp $
-share/texmf-dist/tex/xelatex/euenc/eu1enc.def
-share/texmf-dist/tex/xelatex/euenc/eu1lmdh.fd
-share/texmf-dist/tex/xelatex/euenc/eu1lmr.fd
-share/texmf-dist/tex/xelatex/euenc/eu1lmss.fd
-share/texmf-dist/tex/xelatex/euenc/eu1lmssq.fd
-share/texmf-dist/tex/xelatex/euenc/eu1lmtt.fd
-share/texmf-dist/tex/xelatex/euenc/eu1lmvtt.fd
+@comment $NetBSD: PLIST,v 1.2 2010/05/24 03:35:09 minskim Exp $
+share/texmf-dist/tex/latex/euenc/eu1enc.def
+share/texmf-dist/tex/latex/euenc/eu1lmdh.fd
+share/texmf-dist/tex/latex/euenc/eu1lmr.fd
+share/texmf-dist/tex/latex/euenc/eu1lmss.fd
+share/texmf-dist/tex/latex/euenc/eu1lmssq.fd
+share/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+share/texmf-dist/tex/latex/euenc/eu1lmvtt.fd
+share/texmf-dist/tex/latex/euenc/eu2enc.def
+share/texmf-dist/tex/latex/euenc/eu2lmdh.fd
+share/texmf-dist/tex/latex/euenc/eu2lmr.fd
+share/texmf-dist/tex/latex/euenc/eu2lmss.fd
+share/texmf-dist/tex/latex/euenc/eu2lmssq.fd
+share/texmf-dist/tex/latex/euenc/eu2lmtt.fd
+share/texmf-dist/tex/latex/euenc/eu2lmvtt.fd

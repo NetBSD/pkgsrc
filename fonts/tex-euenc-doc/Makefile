@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/07 22:37:42 minskim Exp $
-# TeX Live Revision 8177
+# $NetBSD: Makefile,v 1.2 2010/05/24 03:35:09 minskim Exp $
 
 DISTNAME=	euenc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.1d
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.1f
+TEXLIVE_REV=	17015
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-euenc
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
