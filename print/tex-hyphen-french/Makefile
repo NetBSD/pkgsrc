@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 07:35:50 minskim Exp $
-# TeX Live Revision 11021
+# $NetBSD: Makefile,v 1.2 2010/05/24 06:08:35 minskim Exp $
 
 DISTNAME=	hyphen-french
-PKGNAME=	tex-${DISTNAME}-2008.11021
+PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	13822
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for French
@@ -17,5 +17,5 @@ TEX_HYPHEN_DEF+=	\addlanguage{french}{loadhyph-fr.tex}{}{2}{3}
 TEX_HYPHEN_DEF+=	\addlanguage{patois}{loadhyph-fr.tex}{}{2}{3}
 TEX_HYPHEN_DEF+=	\addlanguage{francais}{loadhyph-fr.tex}{}{2}{3}
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

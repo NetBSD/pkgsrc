@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:44:03 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:36 minskim Exp $
 
-SHA1 (tex-hyphen-mongolian-2008.9008/hyphen-mongolian.tar.lzma) = 987f8da3dc43d6b583d9b4ea20e3cd97d74924ba
-RMD160 (tex-hyphen-mongolian-2008.9008/hyphen-mongolian.tar.lzma) = 4f2a24d173b785176990d5a0def6b98eb432e85a
-Size (tex-hyphen-mongolian-2008.9008/hyphen-mongolian.tar.lzma) = 250 bytes
+SHA1 (tex-hyphen-mongolian-17773/hyphen-mongolian.tar.xz) = 6463e2d26e730ad9dcdd49d2ad8b2771eb888da8
+RMD160 (tex-hyphen-mongolian-17773/hyphen-mongolian.tar.xz) = 2d7223b620ca699b8de70ac8911ff114970b1898
+Size (tex-hyphen-mongolian-17773/hyphen-mongolian.tar.xz) = 320 bytes

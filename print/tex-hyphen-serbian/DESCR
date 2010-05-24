@@ -1,1 +1,2 @@
-This package provides TeX hyphenation patterns for Serbian.
+The patterns are written using ISO 8859-5, but are targeted at the
+standard LaTeX T2A encoding.
