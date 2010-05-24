@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 07:36:23 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/24 06:08:35 minskim Exp $
 
-SHA1 (tex-hyphen-galician-2008.8999/hyphen-galician.tar.lzma) = 6de235f60c13d9a24cc2d4373e441533a3eb1cb8
-RMD160 (tex-hyphen-galician-2008.8999/hyphen-galician.tar.lzma) = 36914eb5b1980b0191e23234d202d2730466ee85
-Size (tex-hyphen-galician-2008.8999/hyphen-galician.tar.lzma) = 232 bytes
+SHA1 (tex-hyphen-galician-13822/hyphen-galician.tar.xz) = a9f1036144d1869293dde271983b3dcc9f919090
+RMD160 (tex-hyphen-galician-13822/hyphen-galician.tar.xz) = 237e950bb3ead4279d50708b08c69d1d9db47eec
+Size (tex-hyphen-galician-13822/hyphen-galician.tar.xz) = 300 bytes

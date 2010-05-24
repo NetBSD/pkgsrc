@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/04/30 02:26:31 minskim Exp $
-# TeX Live Revision 8935
+# $NetBSD: Makefile,v 1.3 2010/05/24 06:08:35 minskim Exp $
 
 DISTNAME=	hyphen-german
-PKGNAME=	tex-${DISTNAME}-2008.8935
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-2009
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for German
@@ -17,5 +15,5 @@ TEX_HYPHEN_DEF+=	\addlanguage{german}{loadhyph-de-1901.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{ngerman}{loadhyph-de-1996.tex}{}{2}{2}
 TEX_TEXMF_DIRS=		${PREFIX}/share/texmf
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
