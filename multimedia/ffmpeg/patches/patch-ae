@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.10 2010/03/14 23:07:30 tron Exp $
+$NetBSD: patch-ae,v 1.11 2010/05/24 22:10:02 tron Exp $
 
 Really turn AMD 3DNow (and MMX, etc.) because the shared library
-will otherwise not work on Intel CPUs.
+will otherwise not build (Mac OS X) or work (Solaris) on Intel CPUs.
 
 --- libswscale/rgb2rgb.c.orig	Thu Mar 19 04:45:29 2009
 +++ libswscale/rgb2rgb.c	Sun Mar 14 23:55:39 2010
@@ -19,7 +19,7 @@ will otherwise not work on Intel CPUs.
  #include "rgb2rgb_template.c"
  
 -#if ARCH_X86 && CONFIG_GPL
-+#if ARCH_X86 && CONFIG_GPL && !defined(sun)
++#if ARCH_X86 && CONFIG_GPL && !defined(sun) && !defined(__APPLE__)
  
  //MMX versions
  #undef RENAME
