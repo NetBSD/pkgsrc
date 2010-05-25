@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2023 2010/05/25 07:55:58 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2024 2010/05/25 08:00:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2660,3 +2660,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-nolbreaks-doc version 1.0 [minskim 2010-05-25]
 	Added print/tex-notoccite version 2009 [minskim 2010-05-25]
 	Added print/tex-notoccite-doc version 2009 [minskim 2010-05-25]
+	Added print/tex-optional version 2.2b [minskim 2010-05-25]
+	Added print/tex-optional-doc version 2.2b [minskim 2010-05-25]
