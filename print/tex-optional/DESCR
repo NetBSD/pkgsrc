@@ -1,0 +1,8 @@
+Optional provides simple, flexible, optional compilation of LaTeX
+documents. Option switches may be given via package options, by the
+\UseOption command, or interactively via the \AskOption command (help
+text may be provided, by defining the \ExplainOptions command). The
+package is not robust, in the way that comment package is, against
+ill-behaved text. In particular, verbatim text may not be directly
+included in optional sections (whether they're included or not). Package
+documentation is included in comments within the package itself.
