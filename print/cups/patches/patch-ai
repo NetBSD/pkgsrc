@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.17 2010/05/25 08:09:58 sbd Exp $
+$NetBSD: patch-ai,v 1.18 2010/05/25 08:52:59 wiz Exp $
 
-Don't create directorys, do that with OWN_DIRS and OWN_DIRS_PERMS
+Don't create directories, do that with OWN_DIRS and OWN_DIRS_PERMS
 
 --- notifier/Makefile.orig	2009-04-12 23:04:51.000000000 +0000
 +++ notifier/Makefile
