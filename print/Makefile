@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.416 2010/05/25 07:55:58 minskim Exp $
+# $NetBSD: Makefile,v 1.417 2010/05/25 08:00:59 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -403,6 +403,8 @@ SUBDIR+=	tex-notoccite-doc
 SUBDIR+=	tex-oberdiek
 SUBDIR+=	tex-oberdiek-doc
 SUBDIR+=	tex-ocrb
+SUBDIR+=	tex-optional
+SUBDIR+=	tex-optional-doc
 SUBDIR+=	tex-oubraces
 SUBDIR+=	tex-oubraces-doc
 SUBDIR+=	tex-paralist
