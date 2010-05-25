@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2008/06/26 20:59:51 peter Exp $
+# $NetBSD: Makefile,v 1.13 2010/05/25 21:06:29 wiz Exp $
 
 DISTNAME=	pftop-0.7
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.eee.metu.edu.tr/~canacar/
 
-MAINTAINER=	peter@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eee.metu.edu.tr/~canacar/pftop/
 COMMENT=	Utility for real-time display of statistics for PF
 
