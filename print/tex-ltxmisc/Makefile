@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/04/30 18:54:00 minskim Exp $
-# TeX Live Revision 18001
+# $NetBSD: Makefile,v 1.5 2010/05/25 08:02:44 minskim Exp $
 
 DISTNAME=	ltxmisc
 PKGNAME=	tex-${DISTNAME}-2009
+PKGREVISION=	1
+TEXLIVE_REV=	18137
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Miscellaneous LaTeX packages
