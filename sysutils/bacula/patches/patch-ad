@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2010/05/25 06:47:31 adam Exp $
+
+--- src/lib/tls.c.orig	2010-04-27 19:58:29.000000000 +0000
++++ src/lib/tls.c
+@@ -315,7 +315,7 @@ bool tls_postconnect_verify_host(JCR *jc
+          extname = OBJ_nid2sn(OBJ_obj2nid(X509_EXTENSION_get_object(ext)));
+ 
+          if (strcmp(extname, "subjectAltName") == 0) {
+-#ifdef HAVE_OPENSSLv1
++#if (OPENSSL_VERSION_NUMBER >= 0x10100000L)
+             const X509V3_EXT_METHOD *method;
+ #else
+             X509V3_EXT_METHOD *method;
