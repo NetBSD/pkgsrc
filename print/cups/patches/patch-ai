@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.17 2010/05/25 08:09:58 sbd Exp $
+
+Don't create directorys, do that with OWN_DIRS and OWN_DIRS_PERMS
+
+--- notifier/Makefile.orig	2009-04-12 23:04:51.000000000 +0000
++++ notifier/Makefile
+@@ -54,7 +54,7 @@ clean:
+ # Install all targets...
+ #
+ 
+-install:	all install-data install-headers install-libs install-exec
++install:	all install-data install-headers install-libs install-exec install-dirs
+ 
+ 
+ #
+@@ -62,6 +62,8 @@ install:	all install-data install-header
+ #
+ 
+ install-data:
++
++install-dirs:
+ 	$(INSTALL_DIR) -m 775 -g $(CUPS_GROUP) $(CACHEDIR)/rss
+ 
+ 
