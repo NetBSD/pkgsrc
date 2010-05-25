@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/12/10 16:56:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/05/25 00:50:15 gdt Exp $
 bin/cgps
 bin/gpscat
 bin/gpsctl
@@ -9,25 +9,28 @@ bin/gpspipe
 bin/gpsprof
 bin/gpxlogger
 bin/lcdgps
+bin/xgps
 include/gps.h
 include/gpsd.h
 include/libgpsmm.h
 lib/libgps.la
+lib/libgpsd.la
 lib/pkgconfig/libgps.pc
 lib/pkgconfig/libgpsd.pc
-${PYSITELIB}/gps.py
-${PYSITELIB}/gps.pyc
-${PYSITELIB}/gps.pyo
+${PYSITELIB}/gps/__init__.py
+${PYSITELIB}/gps/__init__.pyc
+${PYSITELIB}/gps/clienthelpers.so
+${PYSITELIB}/gps/fake.py
+${PYSITELIB}/gps/fake.pyc
+${PYSITELIB}/gps/gps.py
+${PYSITELIB}/gps/gps.pyc
+${PYSITELIB}/gps/misc.py
+${PYSITELIB}/gps/misc.pyc
+${PYSITELIB}/gps/packet.so
 ${PYSITELIB}/gpscap.py
 ${PYSITELIB}/gpscap.pyc
 ${PYSITELIB}/gpscap.pyo
-${PYSITELIB}/gpsfake.py
-${PYSITELIB}/gpsfake.pyc
-${PYSITELIB}/gpsfake.pyo
-${PYSITELIB}/gpslib.so
-${PYSITELIB}/gpspacket.so
 man/man1/cgps.1
-man/man1/cgpxlogger.1
 man/man1/gps.1
 man/man1/gpscat.1
 man/man1/gpsctl.1
