@@ -1,0 +1,5 @@
+Use \nolbreaks{some text} to prevent line breaks in "some text". This
+has the advantage over \mbox{} that glue (rubber space) remains
+flexible. Most common cases are handled here (\linebreak is disabled,
+for example) but spaces hidden in macros or { } can still create
+break-points.
