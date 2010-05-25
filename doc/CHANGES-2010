@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2022 2010/05/25 07:39:00 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2023 2010/05/25 07:55:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2658,3 +2658,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter08 to 0.8.8nb1 [obache 2010-05-25]
 	Added print/tex-nolbreaks version 1.0 [minskim 2010-05-25]
 	Added print/tex-nolbreaks-doc version 1.0 [minskim 2010-05-25]
+	Added print/tex-notoccite version 2009 [minskim 2010-05-25]
+	Added print/tex-notoccite-doc version 2009 [minskim 2010-05-25]
