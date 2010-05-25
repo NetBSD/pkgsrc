@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2010/02/07 17:59:40 gdt Exp $
+$NetBSD: distinfo,v 1.16 2010/05/25 00:50:15 gdt Exp $
 
-SHA1 (gpsd-2.90.tar.gz) = e8831bd8013015633c49e6af37537ee6228e5372
-RMD160 (gpsd-2.90.tar.gz) = 556f58520d9b931aa60be0fc76b82106220984de
-Size (gpsd-2.90.tar.gz) = 915578 bytes
+SHA1 (gpsd-2.94.tar.gz) = d1c0661ebd6b41d019249b6588b7478927b7eba6
+RMD160 (gpsd-2.94.tar.gz) = 7c3a2d36eefb1ee533c138d6b77da8e1ece8fd2f
+Size (gpsd-2.94.tar.gz) = 1209893 bytes
 SHA1 (patch-aa) = b77bd7491ee890fc66f807cbfe4c6d62423d67d5
