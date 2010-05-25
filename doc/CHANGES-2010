@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2021 2010/05/25 07:25:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2022 2010/05/25 07:39:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2656,3 +2656,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/gpsd to 2.94 [gdt 2010-05-25]
 	Updated graphics/ruby-rcairo to 1.8.1nb1 [obache 2010-05-25]
 	Updated graphics/clutter08 to 0.8.8nb1 [obache 2010-05-25]
+	Added print/tex-nolbreaks version 1.0 [minskim 2010-05-25]
+	Added print/tex-nolbreaks-doc version 1.0 [minskim 2010-05-25]
