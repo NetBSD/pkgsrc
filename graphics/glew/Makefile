@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/05/23 09:52:49 adam Exp $
+# $NetBSD: Makefile,v 1.8 2010/05/25 06:44:14 wiz Exp $
 
 DISTNAME=	glew-1.5.4
 CATEGORIES=	graphics
@@ -16,6 +16,7 @@ USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE=	glew.pc.in
 MAKE_ENV+=		GLEW_DEST=${PREFIX} X11=${PREFIX} POPT=${CFLAGS:Q}
 MAKE_ENV+=		LDFLAGS.EXTRA=${X11_LDFLAGS:Q}
+INSTALLATION_DIRS+=	lib/pkgconfig
 
 post-patch:
 	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.dragonfly
