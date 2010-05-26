@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/29 18:28:26 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/26 04:48:23 minskim Exp $
 
-SHA1 (tex-rotating-doc-2.16a/rotating.doc.tar.lzma) = dd14b4f6c904a99c6b74a952c2fa75adbcb1eff4
-RMD160 (tex-rotating-doc-2.16a/rotating.doc.tar.lzma) = 8ffd36b808898877f9e13ef8eaed11bde0709225
-Size (tex-rotating-doc-2.16a/rotating.doc.tar.lzma) = 97288 bytes
+SHA1 (tex-rotating-16832/rotating.doc.tar.xz) = e24853b8e6948b8e310bf0f8208f6648b5803acd
+RMD160 (tex-rotating-16832/rotating.doc.tar.xz) = db5367c711dc6f48b3c5c3c2cb5481d216f31c5b
+Size (tex-rotating-16832/rotating.doc.tar.xz) = 93940 bytes
