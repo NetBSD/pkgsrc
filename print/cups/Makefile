@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2010/05/25 11:23:46 sbd Exp $
+# $NetBSD: Makefile,v 1.162 2010/05/26 09:18:48 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -31,7 +31,7 @@ WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
 UNLIMIT_RESOURCES=	datasize memorysize
 USE_LANGUAGES=		c c++	# pdftops is a C++ application
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
+USE_TOOLS+=		aclocal autoconf automake gmake
 USE_LIBTOOL=		yes
 INSTALL_TARGET=		installcups
 # patch-a[jkl] were added for 2.60
