@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2026 2010/05/26 01:32:47 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2027 2010/05/26 01:53:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2664,3 +2664,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-optional-doc version 2.2b [minskim 2010-05-25]
 	Updated print/tex-ltxmisc to 2009nb1 [minskim 2010-05-25]
 	Updated www/lynx to 2.8.7nb2 [obache 2010-05-26]
+	Updated databases/mysql51-client to 5.1.47 [taca 2010-05-26]
+	Updated databases/mysql51-server to 5.1.47 [taca 2010-05-26]
