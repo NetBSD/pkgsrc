@@ -1,0 +1,41 @@
+.TH FAB 1 "November 8, 2008"
+.SH NAME
+fab - Simple Pythonic remote deployment tool
+.SH SYNOPSIS
+.PP
+\fB \fr\fIfab\fR \fR\fI[commands ...]\fR
+.SH DESCRIPTION
+.PP
+Fabric is designed to upload files and run shell commands on a number of
+servers in parallel or serially. These commands are grouped in tasks
+(which are regular Python functions) and specified in a 'fabfile.' It is
+similar to Capistrano, except it's implemented in Python and doesn't expect
+you to be deploying Rails applications.
+.SH COMMANDS
+.TP
+.B help
+Display Fabric usage help, or help for a given command.
+.TP
+.B license
+Display the Fabric distribution license text.
+.TP
+.B list
+Display a list of commands with descriptions.
+.TP
+.B set
+Set a Fabric variable.
+.TP
+.B shell
+Start an interactive shell connection to the specified hosts.
+.TP
+.B warranty
+Display warranty information for the Fabric software.
+.SH "AUTHOR"
+.PP
+Fabric was written by Christian Vest Hansen <karmazilla@gmail.com>.
+.PP
+This stub manual page was written by Chris Lamb <lamby@debian.org> for the
+Debian project (but may be used by others).
+.SH "SEE ALSO"
+.IP
+\fBssh\fP\fB(1)\fP
