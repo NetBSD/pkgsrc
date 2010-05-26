@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2009/11/25 22:15:25 joerg Exp $
+$NetBSD: patch-ad,v 1.4 2010/05/26 15:57:37 taca Exp $
 
---- configure.orig	2009-03-13 06:35:43.000000000 +0100
+--- configure.orig	2009-10-16 04:30:13.000000000 +0000
 +++ configure
-@@ -23751,6 +23751,8 @@ case $host in
+@@ -23124,6 +23124,8 @@ case $host in
  	use_threads=false ;;
  *-freebsd*)
  	use_threads=false ;;
@@ -11,30 +11,30 @@ $NetBSD: patch-ad,v 1.3 2009/11/25 22:15:25 joerg Exp $
  *-bsdi234*)
  	# Thread signals do not work reliably on some versions of BSD/OS.
  	use_threads=false ;;
-@@ -23839,7 +23841,7 @@ $as_echo "$as_me: WARNING: linking with 
- $as_echo "native" >&6; }
+@@ -23212,7 +23214,7 @@ echo "$as_me: WARNING: linking with PTL2
+ echo "${ECHO_T}native" >&6; }
  				LIBS="-lpthread $LIBS"
  			else
 -				if test ! -d $LOCALBASE/pthreads
 +				if test ! -d $LOCALBASE/pthreads -a ! -f /usr/include/pthread.h
  				then
- 					{ $as_echo "$as_me:$LINENO: result: none" >&5
- $as_echo "none" >&6; }
-@@ -23850,14 +23852,23 @@ $as_echo "$as_me: error: \"could not fin
+ 					{ echo "$as_me:$LINENO: result: none" >&5
+ echo "${ECHO_T}none" >&6; }
+@@ -23223,14 +23225,23 @@ echo "$as_me: error: \"could not find th
  
  				if $use_threads
  				then
--					{ $as_echo "$as_me:$LINENO: result: mit-pthreads/unproven-pthreads" >&5
+-					{ echo "$as_me:$LINENO: result: mit-pthreads/unproven-pthreads" >&5
 +					if test -f /usr/include/pthread.h
 +					then
-+						{ $as_echo "$as_me:$LINENO: result: native pthreads" >&5
++						{ echo "$as_me:$LINENO: result: native pthreads" >&5
 +$as_echo "native pthreads" >&6; }
 +						LIBS="-lpthread $LIBS"
 +						CPPFLAGS="$CPPFLAGS -I/usr/include"
 +						STD_CINDLUES="$STD_CINDLUES -I/usr/include"
 +					else
-+						{ $as_echo "$as_me:$LINENO: result: mit-pthreads/unproven-pthreads" >&5
- $as_echo "mit-pthreads/unproven-pthreads" >&6; }
++						{ echo "$as_me:$LINENO: result: mit-pthreads/unproven-pthreads" >&5
+ echo "${ECHO_T}mit-pthreads/unproven-pthreads" >&6; }
 -					pkg="$LOCALBASE/pthreads"
 -					lib1="-L$pkg/lib -Wl,-R$pkg/lib"
 -					lib2="-lpthread -lm -lgcc -lpthread"
@@ -51,7 +51,7 @@ $NetBSD: patch-ad,v 1.3 2009/11/25 22:15:25 joerg Exp $
  				fi
  			fi
  		fi
-@@ -26386,9 +26397,9 @@ case $use_libtool in
+@@ -25648,9 +25659,9 @@ case $use_libtool in
  		O=lo
  		A=la
  		LIBTOOL_MKDEP_SED='s;\.o;\.lo;'
@@ -63,7 +63,7 @@ $NetBSD: patch-ad,v 1.3 2009/11/25 22:15:25 joerg Exp $
  		case "$host" in
  		*) LIBTOOL_ALLOW_UNDEFINED= ;;
  		esac
-@@ -32836,7 +32847,7 @@ $as_echo "no" >&6; }
+@@ -32072,7 +32083,7 @@ echo "${ECHO_T}no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
  	then

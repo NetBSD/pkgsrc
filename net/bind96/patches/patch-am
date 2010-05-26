@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1.1.1 2009/01/04 00:21:36 adrianp Exp $
+$NetBSD: patch-am,v 1.2 2010/05/26 15:57:37 taca Exp $
 
---- config.threads.in.orig	2005-03-16 07:59:16.000000000 +0900
+--- config.threads.in.orig	2006-07-20 05:39:07.000000000 +0000
 +++ config.threads.in
 @@ -48,6 +48,8 @@ case $host in
  	use_threads=false ;;
