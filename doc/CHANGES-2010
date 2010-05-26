@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2039 2010/05/26 13:24:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2040 2010/05/26 13:56:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2682,3 +2682,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/ruby-twitter-stream version 0.1.6 [obache 2010-05-26]
 	Added net/ruby-tweetstream version 1.0.4 [obache 2010-05-26]
 	Added net/dtorrent version 3.3.2 [obache 2010-05-26]
+	Added fonts/misaki-fonts version 0beta11a [obache 2010-05-26]
