@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/09 23:04:33 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/26 04:43:42 minskim Exp $
 
-SHA1 (tex-microtype-2.3c/microtype.tar.lzma) = ba9a3c3c5891bf1daed47047c92c4264cf25640a
-RMD160 (tex-microtype-2.3c/microtype.tar.lzma) = 57412f8d33c900b2f05b8bb0334a91aaa094835e
-Size (tex-microtype-2.3c/microtype.tar.lzma) = 33978 bytes
+SHA1 (tex-microtype-16687/microtype.tar.xz) = 30443356194be525ed17a892b23ac3fa53108754
+RMD160 (tex-microtype-16687/microtype.tar.xz) = 0c483e362acccd984b440b016729b3898cb07a7c
+Size (tex-microtype-16687/microtype.tar.xz) = 35388 bytes
