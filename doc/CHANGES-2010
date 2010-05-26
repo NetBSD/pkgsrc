@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2038 2010/05/26 10:58:12 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2039 2010/05/26 13:24:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2681,3 +2681,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/mdoclint to 1.7 [wiz 2010-05-26]
 	Added net/ruby-twitter-stream version 0.1.6 [obache 2010-05-26]
 	Added net/ruby-tweetstream version 1.0.4 [obache 2010-05-26]
+	Added net/dtorrent version 3.3.2 [obache 2010-05-26]
