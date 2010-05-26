@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.494 2010/05/16 11:39:46 obache Exp $
+# $NetBSD: Makefile,v 1.495 2010/05/26 18:29:20 gls Exp $
 #
 
 COMMENT=	System utilities
@@ -91,6 +91,7 @@ SUBDIR+=	estd
 SUBDIR+=	etcmanage
 SUBDIR+=	etcutils
 SUBDIR+=	extipl
+SUBDIR+=	fabric
 SUBDIR+=	fakeroot
 SUBDIR+=	fam
 SUBDIR+=	fastfs
