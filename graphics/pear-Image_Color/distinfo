@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/06 15:50:21 taca Exp $
+$NetBSD: distinfo,v 1.3 2010/05/26 16:16:10 taca Exp $
 
-SHA1 (pear/Image_Color-1.0.3.tgz) = c9a19aa4e5e33c0af4069b4bf65370911bdf224e
-RMD160 (pear/Image_Color-1.0.3.tgz) = 7663a19a6da681a94d824945dc758de86313ae6b
-Size (pear/Image_Color-1.0.3.tgz) = 9234 bytes
+SHA1 (pear/Image_Color-1.0.4.tgz) = 611839b0e85474989de657e6e77f8286cf082134
+RMD160 (pear/Image_Color-1.0.4.tgz) = 1852abe3d3ffba4071307741579fa14ff9ed73dd
+Size (pear/Image_Color-1.0.4.tgz) = 9501 bytes
