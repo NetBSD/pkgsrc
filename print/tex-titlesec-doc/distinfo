@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/12 02:24:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/26 03:59:06 minskim Exp $
 
-SHA1 (tex-titlesec-doc-2.8/titlesec.doc.tar.lzma) = 420ad2f33e166f12c85af34955d43542fadf6e80
-RMD160 (tex-titlesec-doc-2.8/titlesec.doc.tar.lzma) = 39f60be00674f5ffd865de0b2e62f80ca225a577
-Size (tex-titlesec-doc-2.8/titlesec.doc.tar.lzma) = 201619 bytes
+SHA1 (tex-titlesec-15878/titlesec.doc.tar.xz) = 5806146c3e7a85feaddd970fdb5ef048edd1005e
+RMD160 (tex-titlesec-15878/titlesec.doc.tar.xz) = 38e34cbcab7bc7505a2152b1332621627cadcfa1
+Size (tex-titlesec-15878/titlesec.doc.tar.xz) = 201744 bytes
