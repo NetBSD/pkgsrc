@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2010/01/20 01:01:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/05/26 15:57:37 taca Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
 bin/nslookup
 bin/nsupdate
+${PLIST.inet6}include/isc/ipv6.h
 include/bind9/check.h
 include/bind9/getaddresses.h
 include/bind9/version.h
@@ -336,11 +337,11 @@ share/doc/bind9/arm/man.rndc-confgen.html
 share/doc/bind9/arm/man.rndc.conf.html
 share/doc/bind9/arm/man.rndc.html
 share/doc/bind9/draft/draft-ietf-6man-text-addr-representation-01.txt
-share/doc/bind9/draft/draft-ietf-behave-dns64-01.txt
-share/doc/bind9/draft/draft-ietf-dnsext-axfr-clarify-12.txt
-share/doc/bind9/draft/draft-ietf-dnsext-dns-tcp-requirements-01.txt
+share/doc/bind9/draft/draft-ietf-behave-dns64-06.txt
+share/doc/bind9/draft/draft-ietf-dnsext-axfr-clarify-13.txt
+share/doc/bind9/draft/draft-ietf-dnsext-dns-tcp-requirements-02.txt
 share/doc/bind9/draft/draft-ietf-dnsext-dnssec-bis-updates-09.txt
-share/doc/bind9/draft/draft-ietf-dnsext-dnssec-gost-05.txt
+share/doc/bind9/draft/draft-ietf-dnsext-dnssec-gost-06.txt
 share/doc/bind9/draft/draft-ietf-dnsext-ecc-key-07.txt
 share/doc/bind9/draft/draft-ietf-dnsext-interop3597-02.txt
 share/doc/bind9/draft/draft-ietf-dnsext-rfc2671bis-edns0-02.txt
