@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3.2.1 2010/04/21 06:30:05 spz Exp $
+# $NetBSD: Makefile,v 1.3.2.2 2010/05/26 17:13:53 tron Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -67,6 +67,7 @@ REPLACE_PERL+=		mysql-test/lib/My/SafeProcess/safe_process.pl \
 			mysql-test/lib/v1/mysql-test-run.pl \
 			mysql-test/mysql-stress-test.pl \
 			mysql-test/mysql-test-run.pl \
+			mysql-test/suite/engines/rr_trx/run_stress_tx_rr.pl \
 			mysql-test/suite/funcs_1/lib/DataGen_local.pl \
 			mysql-test/suite/funcs_1/lib/DataGen_modify.pl \
 			mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl \
