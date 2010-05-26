@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9323 2010/05/24 21:43:36 seb Exp $
+$NetBSD: TODO,v 1.9324 2010/05/26 16:00:33 taca Exp $
 
 Suggested new packages
 ======================
@@ -443,7 +443,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o benchfft-3.1
 	o bftpd-2.8
 	o biew-6.1.0
-	o bind-9.6.2
 	o bind-9.7.0
 	o binutils-2.20.1
 	o bioperl-1.5.0
@@ -1479,7 +1478,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbevd-1.1.0 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
-	o xkeyboard-config-1.8
+	o xkeyboard-config-1.9
 	o xli-2006.11.10
 	o xlog-2.0.3
 	o xlogo-1.0.2
