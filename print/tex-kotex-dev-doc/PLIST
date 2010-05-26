@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/09 06:54:08 minskim Exp $
-share/texmf-dist/doc/latex/kotex-dev/luatexko/luatexko-doc.pdf
-share/texmf-dist/doc/latex/kotex-dev/luatexko/luatexko-doc.tex
-share/texmf-dist/doc/latex/kotex-dev/xetexko/xetexko-doc.pdf
-share/texmf-dist/doc/latex/kotex-dev/xetexko/xetexko-doc.tex
+@comment $NetBSD: PLIST,v 1.2 2010/05/26 05:27:39 minskim Exp $
 share/texmf-dist/doc/latex/kotex-dev/xoblivoir/ultrasimplexob.pdf
 share/texmf-dist/doc/latex/kotex-dev/xoblivoir/ultrasimplexob.tex
+share/texmf-dist/doc/lualatex/kotex-dev/luatexko/luatexko-doc.pdf
+share/texmf-dist/doc/lualatex/kotex-dev/luatexko/luatexko-doc.tex
+share/texmf-dist/doc/xelatex/kotex-dev/xetexko/xetexko-doc.pdf
+share/texmf-dist/doc/xelatex/kotex-dev/xetexko/xetexko-doc.tex
