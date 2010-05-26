@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2032 2010/05/26 04:53:58 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2033 2010/05/26 05:07:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2673,3 +2673,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-rotating to 2.16b [minskim 2010-05-26]
 	Updated print/tex-rotating-doc to 2.16b [minskim 2010-05-26]
 	Added print/tex-hyphen-hungarian-doc version 2009 [minskim 2010-05-26]
+	Updated print/tex-oberdiek to 2009nb1 [minskim 2010-05-26]
+	Updated print/tex-oberdiek-doc to 2009nb1 [minskim 2010-05-26]
