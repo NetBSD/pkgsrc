@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/30 18:53:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/26 05:06:34 minskim Exp $
 share/texmf-dist/doc/latex/oberdiek/accsupp-example1.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp-example2.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp.pdf
@@ -203,6 +203,7 @@ share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test5.tex
+share/texmf-dist/doc/latex/oberdiek/test/ltxcmds-test-gobble.tex
 share/texmf-dist/doc/latex/oberdiek/test/ltxcmds-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/luacolor-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/luacolor-test2.tex

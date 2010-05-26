@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/30 18:53:26 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/26 05:06:34 minskim Exp $
 share/texmf-dist/scripts/oberdiek/luacolor.lua
 share/texmf-dist/scripts/oberdiek/magicnum.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.luacolor.lua
@@ -16,6 +16,7 @@ share/texmf-dist/tex/generic/oberdiek/embedfile.sty
 share/texmf-dist/tex/generic/oberdiek/engord.sty
 share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+share/texmf-dist/tex/generic/oberdiek/hologo-test-spacefactor.tex
 share/texmf-dist/tex/generic/oberdiek/hologo-test1.tex
 share/texmf-dist/tex/generic/oberdiek/hologo.sty
 share/texmf-dist/tex/generic/oberdiek/hyphsubst.sty
@@ -192,6 +193,7 @@ share/texmf-dist/tex/latex/oberdiek/x-mac-roman.def
 share/texmf-dist/tex/latex/oberdiek/x-nextstep.def
 share/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty
 share/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
+share/texmf-dist/tex/latex/oberdiek/zref-abspos.sty
 share/texmf-dist/tex/latex/oberdiek/zref-base.sty
 share/texmf-dist/tex/latex/oberdiek/zref-counter.sty
 share/texmf-dist/tex/latex/oberdiek/zref-dotfill.sty
@@ -199,6 +201,8 @@ share/texmf-dist/tex/latex/oberdiek/zref-hyperref.sty
 share/texmf-dist/tex/latex/oberdiek/zref-lastpage.sty
 share/texmf-dist/tex/latex/oberdiek/zref-marks.sty
 share/texmf-dist/tex/latex/oberdiek/zref-nextpage.sty
+share/texmf-dist/tex/latex/oberdiek/zref-pageattr.sty
+share/texmf-dist/tex/latex/oberdiek/zref-pagelayout.sty
 share/texmf-dist/tex/latex/oberdiek/zref-perpage.sty
 share/texmf-dist/tex/latex/oberdiek/zref-runs.sty
 share/texmf-dist/tex/latex/oberdiek/zref-savepos.sty
