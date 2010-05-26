@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/29 23:42:53 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/05/26 04:16:51 minskim Exp $
 
-SHA1 (tex-nomencl-3.1a/nomencl.tar.lzma) = ff7f6083e14c0cecdd51e8209494a9166396c143
-RMD160 (tex-nomencl-3.1a/nomencl.tar.lzma) = c23edd58294628d83a0927b9c1d620cbce8d5988
-Size (tex-nomencl-3.1a/nomencl.tar.lzma) = 3608 bytes
+SHA1 (tex-nomencl-15878/nomencl.tar.xz) = 4caa628250f5654cd8cffff6f8b8f0963a1f3566
+RMD160 (tex-nomencl-15878/nomencl.tar.xz) = 13251607813f7bf1d39f5bb5718fe0e6a4e866b0
+Size (tex-nomencl-15878/nomencl.tar.xz) = 3668 bytes
