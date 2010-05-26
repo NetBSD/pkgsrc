@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+$NetBSD: patch-af,v 1.2 2010/05/26 15:56:39 taca Exp $
 
---- lib/bind/configure.in.orig	2005-10-14 10:38:46.000000000 +0900
+--- lib/bind/configure.in.orig	2009-01-19 23:47:01.000000000 +0000
 +++ lib/bind/configure.in
 @@ -82,12 +82,7 @@ AC_SUBST(PERL)
  #
@@ -16,7 +16,7 @@ $NetBSD: patch-af,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  		;;
  esac
  
-@@ -395,6 +390,10 @@ then
+@@ -327,6 +322,10 @@ then
  			CCOPT="$CCOPT -pthread"
  			STD_CDEFINES="$STD_CDEFINES -D_THREAD_SAFE"
  			;;
@@ -27,7 +27,7 @@ $NetBSD: patch-af,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  		*-openbsd*)
  			CC="$CC -pthread"
  			CCOPT="$CCOPT -pthread"
-@@ -985,6 +984,7 @@ case "$host" in
+@@ -1019,6 +1018,7 @@ case "$host" in
  	*-bsdi[2345]*)	have_minimum_ifreq=yes;;
  	*-darwin*)	have_minimum_ifreq=yes;;
  	*-freebsd*)	have_minimum_ifreq=yes;;
@@ -35,7 +35,7 @@ $NetBSD: patch-af,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  	*-lynxos*)	have_minimum_ifreq=yes;;
  	*-netbsd*)	have_minimum_ifreq=yes;;
  	*-next*)	have_minimum_ifreq=yes;;
-@@ -1024,6 +1024,7 @@ case "$host" in
+@@ -1058,6 +1058,7 @@ case "$host" in
  	*-darwin*)	PORT_DIR="port/darwin";;
  	*-osf*)		PORT_DIR="port/decunix";;
  	*-freebsd*)	PORT_DIR="port/freebsd";;

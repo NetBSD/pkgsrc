@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+$NetBSD: patch-ab,v 1.2 2010/05/26 15:56:39 taca Exp $
 
---- lib/lwres/getnameinfo.c.orig	2004-08-28 08:25:24.000000000 +0200
-+++ lib/lwres/getnameinfo.c	2004-10-03 08:56:21.000000000 +0200
-@@ -63,6 +63,10 @@
+--- lib/lwres/getnameinfo.c.orig	2007-06-19 23:47:22.000000000 +0000
++++ lib/lwres/getnameinfo.c
+@@ -121,6 +121,10 @@
  #include <lwres/netdb.h>
  #include "print_p.h"
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  #include "assert_p.h"
  
  #define SUCCESS 0
-@@ -211,13 +215,10 @@
+@@ -271,13 +275,10 @@ lwres_getnameinfo(const struct sockaddr 
  		    ((const struct sockaddr_in6 *)sa)->sin6_scope_id) {
  			char *p = numaddr + strlen(numaddr);
  			const char *stringscope = NULL;
