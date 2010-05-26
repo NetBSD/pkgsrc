@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2046 2010/05/26 18:32:00 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2047 2010/05/26 19:52:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2690,3 +2690,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100523 [taca 2010-05-26]
 	Updated www/drupal6-translations to 20100527 [taca 2010-05-26]
 	Added sysutils/fabric version 0.9.0 [gls 2010-05-26]
+	Updated devel/p5-namespace-autoclean to 0.11 [seb 2010-05-26]
