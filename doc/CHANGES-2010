@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2033 2010/05/26 05:07:23 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2034 2010/05/26 05:12:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2675,3 +2675,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-hyphen-hungarian-doc version 2009 [minskim 2010-05-26]
 	Updated print/tex-oberdiek to 2009nb1 [minskim 2010-05-26]
 	Updated print/tex-oberdiek-doc to 2009nb1 [minskim 2010-05-26]
+	Updated print/tex-memoir to 1.618033988c.6.0f [minskim 2010-05-26]
+	Updated print/tex-memoir-doc to 1.618033988c.6.0f [minskim 2010-05-26]
