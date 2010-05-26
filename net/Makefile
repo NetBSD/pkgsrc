@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.829 2010/05/23 08:05:02 obache Exp $
+# $NetBSD: Makefile,v 1.830 2010/05/26 11:00:33 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -480,6 +480,8 @@ SUBDIR+=	ruby-icmp
 SUBDIR+=	ruby-netaddr
 SUBDIR+=	ruby-rubytter
 SUBDIR+=	ruby-snmp
+SUBDIR+=	ruby-tweetstream
+SUBDIR+=	ruby-twitter-stream
 SUBDIR+=	samba
 SUBDIR+=	samba33
 SUBDIR+=	scamper
