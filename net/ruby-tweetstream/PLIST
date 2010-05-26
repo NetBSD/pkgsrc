@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/26 10:58:00 obache Exp $
+${GEM_HOME}/cache/tweetstream-${PKGVERSION}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/RELEASE_NOTES.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/examples/growl_daemon.rb
+${GEM_LIBDIR}/lib/tweetstream.rb
+${GEM_LIBDIR}/lib/tweetstream/client.rb
+${GEM_LIBDIR}/lib/tweetstream/daemon.rb
+${GEM_LIBDIR}/lib/tweetstream/hash.rb
+${GEM_LIBDIR}/lib/tweetstream/parsers/active_support.rb
+${GEM_LIBDIR}/lib/tweetstream/parsers/json_gem.rb
+${GEM_LIBDIR}/lib/tweetstream/parsers/json_pure.rb
+${GEM_LIBDIR}/lib/tweetstream/parsers/yajl.rb
+${GEM_LIBDIR}/lib/tweetstream/status.rb
+${GEM_LIBDIR}/lib/tweetstream/user.rb
+${GEM_LIBDIR}/spec/data/statuses.json
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/tweetstream/client_spec.rb
+${GEM_LIBDIR}/spec/tweetstream/hash_spec.rb
+${GEM_LIBDIR}/spec/tweetstream/parser_spec.rb
+${GEM_LIBDIR}/spec/tweetstream/status_spec.rb
+${GEM_LIBDIR}/spec/tweetstream_spec.rb
+${GEM_HOME}/specifications/tweetstream-${PKGVERSION}.gemspec
