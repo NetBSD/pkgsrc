@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.830 2010/05/26 11:00:33 obache Exp $
+# $NetBSD: Makefile,v 1.831 2010/05/26 13:25:58 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -96,6 +96,7 @@ SUBDIR+=	driftnet
 SUBDIR+=	drill
 SUBDIR+=	dtcp
 SUBDIR+=	dtcpclient
+SUBDIR+=	dtorrent
 SUBDIR+=	dynipclient
 SUBDIR+=	echoping
 SUBDIR+=	ed2k-gtk-gui
