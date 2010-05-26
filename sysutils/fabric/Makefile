@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/26 18:26:20 gls Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/26 18:30:17 gls Exp $
 #
 
 VERSION=		0.9.0
 DISTNAME=		Fabric-${VERSION}
 PKGNAME=		${DISTNAME:S/F/f/}
-CATEGORIES=		www
+CATEGORIES=		sysutils net
 MASTER_SITES=		http://code.fabfile.org/projects/fabric/files/
 
 MAINTAINER=		gls@NetBSD.org
