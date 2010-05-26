@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/26 19:50:00 gls Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/26 22:19:02 gls Exp $
 #
 
 VERSION=		0.9.0
@@ -8,7 +8,7 @@ CATEGORIES=		sysutils net
 MASTER_SITES=		http://code.fabfile.org/projects/fabric/files/
 
 MAINTAINER=		gls@NetBSD.org
-HOMEPAGE=		http://code.fabfile.org/projects/fabric
+HOMEPAGE=		http://fabfile.org
 COMMENT=		Simple Pythonic remote deployment tool
 LICENSE=		2-clause-bsd
 
