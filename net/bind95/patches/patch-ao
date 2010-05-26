@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+$NetBSD: patch-ao,v 1.2 2010/05/26 15:56:39 taca Exp $
 
---- lib/bind/irs/getaddrinfo.c.orig	2006-11-13 05:04:49.000000000 +0000
+--- lib/bind/irs/getaddrinfo.c.orig	2006-11-13 05:00:56.000000000 +0000
 +++ lib/bind/irs/getaddrinfo.c
-@@ -332,7 +332,8 @@ getaddrinfo(hostname, servname, hints, r
+@@ -336,7 +336,8 @@ getaddrinfo(hostname, servname, hints, r
  	pai->ai_family = PF_UNSPEC;
  	pai->ai_socktype = ANY;
  	pai->ai_protocol = ANY;
@@ -12,7 +12,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  	/*
  	 * clear _ai_pad to preserve binary
  	 * compatibility with previously compiled 64-bit
-@@ -365,7 +366,7 @@ getaddrinfo(hostname, servname, hints, r
+@@ -369,7 +370,7 @@ getaddrinfo(hostname, servname, hints, r
  		}
  		memcpy(pai, hints, sizeof(*pai));
  
