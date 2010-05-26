@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2028 2010/05/26 04:13:20 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2029 2010/05/26 04:37:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2667,3 +2667,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-client to 5.1.47 [taca 2010-05-26]
 	Updated databases/mysql51-server to 5.1.47 [taca 2010-05-26]
 	Updated print/tex-pdftex-def to 0.04n [minskim 2010-05-26]
+	Updated fonts/tex-courier to 2009 [minskim 2010-05-26]
