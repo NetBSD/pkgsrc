@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.mr,v 1.1 2010/05/26 17:18:56 taca Exp $
+${DRUPAL_BASE}/LICENSE.mr.txt
+${DRUPAL_BASE}/STATUS.mr.txt
+${DRUPAL_BASE}/modules/openid/translations/modules-openid.mr.po
+${DRUPAL_BASE}/modules/system/translations/general.mr.po
+${DRUPAL_BASE}/profiles/default/translations/mr.po
