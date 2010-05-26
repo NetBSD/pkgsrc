@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/26 13:24:43 obache Exp $
+
+SHA1 (ctorrent-dnh3.3.2.tar.gz) = d4e221f0292268f80e2430ce9d451dd64cf1ffaa
+RMD160 (ctorrent-dnh3.3.2.tar.gz) = 5db2613109fc7e55e7ccdf0d2da12e352c99b385
+Size (ctorrent-dnh3.3.2.tar.gz) = 219053 bytes
