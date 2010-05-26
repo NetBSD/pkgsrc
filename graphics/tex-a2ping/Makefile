@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/03 23:48:44 minskim Exp $
-# TeX Live Revision 10592
+# $NetBSD: Makefile,v 1.2 2010/05/26 05:25:06 minskim Exp $
 
 DISTNAME=	a2ping
 PKGNAME=	tex-${DISTNAME}-2.77p
+TEXLIVE_REV=	16044
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Advanced PS, PDF, EPS converter
@@ -21,7 +21,7 @@ SUBST_SED.perl=		-e 's,@PERL@,${PERL5},g'
 
 TEX_TEXMF_DIRS=	none
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
