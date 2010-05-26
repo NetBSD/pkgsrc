@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/26 18:30:17 gls Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/26 19:50:00 gls Exp $
 #
 
 VERSION=		0.9.0
@@ -31,17 +31,7 @@ post-extract:
 
 post-install:
 	${INSTALL_MAN} files/fab.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-#	${INSTALL_DATA} ${WRKSRC}/docs/*.rst \
-#	  	${DESTDIR}${PREFIX}/share/doc/fabric
-#	${INSTALL_DATA} ${WRKSRC}/docs/api/contrib/*.rst \
-#	  	${DESTDIR}${PREFIX}/share/doc/fabric/api/contrib
-#	${INSTALL_DATA} ${WRKSRC}/docs/api/core/*.rst \
-#	  	${DESTDIR}${PREFIX}/share/doc/fabric/api/core
-#	${INSTALL_DATA} ${WRKSRC}/docs/changes/* \
-#		${DESTDIR}${PREFIX}/share/doc/fabric/changes
-#	${INSTALL_DATA} ${WRKSRC}/docs/usage/* \
-#	  	${DESTDIR}${PREFIX}/share/doc/fabric/usage
-#
+
 	cd ${WRKSRC}/docs && pax -wr -pma *.rst api/contrib/*.rst \
 		api/core/*.rst changes/* usage/* \
 		${DESTDIR}${PREFIX}/share/doc/fabric/.
