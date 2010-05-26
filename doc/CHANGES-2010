@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2037 2010/05/26 10:55:46 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2038 2010/05/26 10:58:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2680,3 +2680,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-kotex-dev-doc to 0.1.1nb1 [minskim 2010-05-26]
 	Updated textproc/mdoclint to 1.7 [wiz 2010-05-26]
 	Added net/ruby-twitter-stream version 0.1.6 [obache 2010-05-26]
+	Added net/ruby-tweetstream version 1.0.4 [obache 2010-05-26]
