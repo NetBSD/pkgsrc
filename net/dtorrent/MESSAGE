@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/05/26 13:24:43 obache Exp $
+
+For general usage type 'ctorrent -h'.  For full documentation see
+${PREFIX}/share/doc/ctorrent/UserGuide.  Additional info and support
+at  http://dtorrent.sourceforge.net/
+===========================================================================
