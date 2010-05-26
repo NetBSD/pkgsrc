@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2035 2010/05/26 05:27:57 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2036 2010/05/26 08:32:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2678,3 +2678,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-memoir to 1.618033988c.6.0f [minskim 2010-05-26]
 	Updated print/tex-memoir-doc to 1.618033988c.6.0f [minskim 2010-05-26]
 	Updated print/tex-kotex-dev-doc to 0.1.1nb1 [minskim 2010-05-26]
+	Updated textproc/mdoclint to 1.7 [wiz 2010-05-26]
