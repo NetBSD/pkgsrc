@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/26 18:26:20 gls Exp $
+
+Disable setuptools usage
+
+--- setup.py.orig	2009-11-08 23:17:10.000000000 +0000
++++ setup.py
+@@ -15,8 +15,8 @@ For more information, please see the Fab
+     author='Jeff Forcier',
+     author_email='jeff@bitprophet.org',
+     url='http://fabfile.org',
+     packages=find_packages(),
+-    install_requires=['pycrypto >=1.9'],
++#    install_requires=['pycrypto >=1.9'],
+     entry_points={
+         'console_scripts': [
+             'fab = fabric.main:main',
