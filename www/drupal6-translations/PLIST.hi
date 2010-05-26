@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.hi,v 1.1 2010/05/26 17:18:56 taca Exp $
+${DRUPAL_BASE}/LICENSE.hi.txt
+${DRUPAL_BASE}/STATUS.hi.txt
+${DRUPAL_BASE}/modules/openid/translations/modules-openid.hi.po
+${DRUPAL_BASE}/modules/system/translations/general.hi.po
+${DRUPAL_BASE}/profiles/default/translations/hi.po

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.es,v 1.3 2009/07/01 01:36:45 taca Exp $
+@comment $NetBSD: PLIST.es,v 1.4 2010/05/26 17:18:56 taca Exp $
 ${DRUPAL_BASE}/CONTRIBUTORS.es.txt
 ${DRUPAL_BASE}/LICENSE.es.txt
 ${DRUPAL_BASE}/README.es.txt
@@ -31,7 +31,6 @@ ${DRUPAL_BASE}/modules/system/translations/general.es.po
 ${DRUPAL_BASE}/modules/system/translations/includes.es.po
 ${DRUPAL_BASE}/modules/system/translations/misc.es.po
 ${DRUPAL_BASE}/modules/system/translations/modules-system.es.po
-${DRUPAL_BASE}/modules/system/translations/root.es.po
 ${DRUPAL_BASE}/modules/taxonomy/translations/modules-taxonomy.es.po
 ${DRUPAL_BASE}/modules/throttle/translations/modules-throttle.es.po
 ${DRUPAL_BASE}/modules/tracker/translations/modules-tracker.es.po
@@ -41,7 +40,6 @@ ${DRUPAL_BASE}/modules/update/translations/modules-update.es.po
 ${DRUPAL_BASE}/modules/upload/translations/modules-upload.es.po
 ${DRUPAL_BASE}/modules/user/translations/modules-user.es.po
 ${DRUPAL_BASE}/profiles/default/translations/es.po
-${DRUPAL_BASE}/profiles/default/translations/profiles-default.es.po
 ${DRUPAL_BASE}/themes/chameleon/translations/themes-chameleon.es.po
 ${DRUPAL_BASE}/themes/garland/translations/themes-garland.es.po
 ${DRUPAL_BASE}/themes/pushbutton/translations/themes-pushbutton.es.po
