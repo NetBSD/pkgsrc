@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2010/02/14 12:26:47 taca Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/27 13:46:25 taca Exp $
 
---- ../ruby-odbc-0.9998.gemspec.orig	2010-02-02 06:39:35.000000000 +0000
-+++ ../ruby-odbc-0.9998.gemspec
+--- ../ruby-odbc-0.99991.gemspec.orig	2010-04-08 06:36:44.000000000 +0000
++++ ../ruby-odbc-0.99991.gemspec
 @@ -6,9 +6,10 @@ spec = Gem::Specification.new do |s|
    s.author = "Christian Werner"
    s.email = "chw @nospam@ ch-werner.de"
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1 2010/02/14 12:26:47 taca Exp $
    s.homepage = "http://www.ch-werner.de/rubyodbc"
    s.files = Dir.glob("**/*")
 -  s.require_paths << 'lib'
-+  s.require_paths = ['lib']
++  s.require_paths << ['lib']
    s.test_files = Dir.glob('tests/*.rb')
    s.has_rdoc = false
    s.extra_rdoc_files = ["README", "COPYING", "ChangeLog", "GPL", "doc/odbc.html"]
