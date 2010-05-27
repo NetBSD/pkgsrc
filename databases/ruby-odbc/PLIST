@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2010/02/14 12:26:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/27 13:46:25 taca Exp $
 ${GEM_HOME}/cache/ruby-odbc-${PKGVERSION}.gem
+${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GPL
