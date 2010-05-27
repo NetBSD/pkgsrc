@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2049 2010/05/27 13:47:34 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2050 2010/05/27 14:14:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2693,3 +2693,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-namespace-autoclean to 0.11 [seb 2010-05-26]
 	Updated benchmarks/sysbench to 0.4.12 [adam 2010-05-27]
 	Updated databases/ruby-odbc to 0.99991 [taca 2010-05-27]
+	Updated net/bftpd to 2.8 [obache 2010-05-27]
