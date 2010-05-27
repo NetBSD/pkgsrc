@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2048 2010/05/27 10:50:13 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2049 2010/05/27 13:47:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2692,3 +2692,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/fabric version 0.9.0 [gls 2010-05-26]
 	Updated devel/p5-namespace-autoclean to 0.11 [seb 2010-05-26]
 	Updated benchmarks/sysbench to 0.4.12 [adam 2010-05-27]
+	Updated databases/ruby-odbc to 0.99991 [taca 2010-05-27]
