@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2008/11/01 05:15:42 obache Exp $
+$NetBSD: patch-ac,v 1.6 2010/05/28 13:21:26 tsutsui Exp $
 
---- sim_console.c.orig	2006-10-01 14:26:58.000000000 +0200
+--- sim_console.c.orig	2008-11-20 04:50:44.000000000 +0000
 +++ sim_console.c
-@@ -391,7 +391,7 @@ for (i = 0; i < sec; i++) {             
+@@ -429,7 +429,7 @@
      if (tmxr_poll_conn (&sim_con_tmxr) >= 0) {          /* poll connect */
          sim_con_ldsc.rcve = 1;                          /* rcv enabled */
          if (i) {                                        /* if delayed */
@@ -11,9 +11,9 @@ $NetBSD: patch-ac,v 1.5 2008/11/01 05:15:42 obache Exp $
              fflush (stdout);
              }
          return SCPE_OK;                                 /* ready to proceed */
-@@ -399,7 +399,7 @@ for (i = 0; i < sec; i++) {             
-     c = sim_os_poll_kbd ();                             /* check for stop char */
-     if ((c == SCPE_STOP) || stop_cpu) return SCPE_STOP;
+@@ -438,7 +438,7 @@
+     if ((c == SCPE_STOP) || stop_cpu)
+         return SCPE_STOP;
      if ((i % 10) == 0) {                                /* Status every 10 sec */
 -        printf ("Waiting for console Telnet connection\n");
 +        printf ("Waiting for console Telnet connection\r\n");
