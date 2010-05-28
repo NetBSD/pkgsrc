@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2051 2010/05/28 07:27:12 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2052 2010/05/28 07:40:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2695,3 +2695,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-odbc to 0.99991 [taca 2010-05-27]
 	Updated net/bftpd to 2.8 [obache 2010-05-27]
 	Updated mail/enma to 1.1.0nb2 [obache 2010-05-28]
+	Updated mail/milter-manager to 1.4.2nb1 [obache 2010-05-28]
