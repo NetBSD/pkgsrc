@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2010/02/20 10:41:59 obache Exp $
+# $NetBSD: Makefile.common,v 1.21 2010/05/28 11:06:34 obache Exp $
 #
 # Canna common makefile.
 #
@@ -23,7 +23,6 @@ FILESDIR=	${.CURDIR}/../../inputmethod/canna/files
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/canna/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/canna/patches
 
-USE_TOOLS+=	itools
 USE_IMAKE=	yes
 CANNA_SPOOL=	${VARBASE}/spool/canna
 CANNA_MODE=	0755
@@ -40,3 +39,7 @@ MAKE_ENV+=	${CANNA_ENV}
 SCRIPTS_ENV+=	${CANNA_ENV}
 PLIST_SUBST+=	${CANNA_ENV}
 FILES_SUBST+=	${CANNA_ENV}
+
+INSTALL_MAKE_FLAGS+=	CHOWN=${TRUE}
+INSTALL_MAKE_FLAGS+=	CHGRP=${TRUE}
+INSTALL_MAKE_FLAGS+=	CHMOD=${TRUE}
