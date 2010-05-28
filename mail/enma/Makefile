@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/05/16 00:46:34 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/05/28 07:26:48 obache Exp $
 #
 
 DISTNAME=	enma-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enma/}
 
@@ -48,6 +48,9 @@ SUBST_CLASSES+=		daemon
 SUBST_STAGE.daemon=	post-configure
 SUBST_FILES.daemon=	enma/etc/enma.conf.sample
 SUBST_SED.daemon=	-e 's;daemon;${ENMA_USER};g'
+
+FILES_SUBST+=		ENMA_USER=${ENMA_USER:Q}
+FILES_SUBST+=		ENMA_GROUP=${ENMA_GROUP:Q}
 
 OWN_DIRS_PERMS+=	${VARBASE}/run/enma ${ENMA_USER} ${ENMA_GROUP} 0700
 
