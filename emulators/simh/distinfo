@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.14 2008/11/20 21:30:05 chuck Exp $
+$NetBSD: distinfo,v 1.15 2010/05/28 13:21:26 tsutsui Exp $
 
-SHA1 (simhv38-0.zip) = e1afbebede7dc4b2e0f7b13fca3ee6aa8d34f9c1
-RMD160 (simhv38-0.zip) = f1986d45f9b17a905957d1dca4eaa70098a7cae6
-Size (simhv38-0.zip) = 2775593 bytes
-SHA1 (patch-aa) = 427aa8eca1f1ac17f9279708e666d066b24dde7e
+SHA1 (simhv38-1.zip) = 5eac2f8e50be11600727983e05072690a7066702
+RMD160 (simhv38-1.zip) = f085c52ec92425f84f65b3f3605cb7aba8be7b32
+Size (simhv38-1.zip) = 2954982 bytes
+SHA1 (patch-aa) = 88567baeed5af2d834b105935ea1c8706dab1133
 SHA1 (patch-ab) = 85b36e3d92a2bfbd886dbb2e08a0af967edeb0bd
-SHA1 (patch-ac) = 78ecdc9abe248eb8c9a1dc3c297a4a7e5eb812d6
-SHA1 (patch-ad) = 4ab9108d50bc89b41aea3efdf58cc95089137937
+SHA1 (patch-ac) = 16673f3bb5c42cdfd0497cd1f0657cbbe3bbecdb

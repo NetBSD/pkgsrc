@@ -1,83 +1,29 @@
-$NetBSD: patch-aa,v 1.8 2008/11/01 05:15:42 obache Exp $
+$NetBSD: patch-aa,v 1.9 2010/05/28 13:21:26 tsutsui Exp $
 
---- makefile.orig	2008-06-06 06:00:46.000000000 +0000
+--- makefile.orig	2008-11-19 12:53:48.000000000 +0000
 +++ makefile
-@@ -1,32 +1,36 @@
- #
- # CC Command
- #
--ifeq ($(WIN32),)
-+#ifeq ($(WIN32),)
+@@ -5,17 +5,17 @@
    #Unix Environments
--  ifneq (,$(findstring solaris,$(OSTYPE)))
--    OS_CCDEFS = -lm -lsocket -lnsl -lrt -lpthread -D_GNU_SOURCE
--  else
+   ifneq (,$(findstring solaris,$(OSTYPE)))
+     OS_CCDEFS = -lm -lsocket -lnsl -lrt -lpthread -D_GNU_SOURCE
++  else ifneq (,$(findstring darwin,$(OSTYPE)))
++    OS_CCDEFS = -D_GNU_SOURCE
++  else ifneq (,$(findstring linux,$(OSTYPE)))
++    OS_CCDEFS = -lrt -lm -D_GNU_SOURCE
+   else
 -    ifneq (,$(findstring darwin,$(OSTYPE)))
 -      OS_CCDEFS = -D_GNU_SOURCE
 -    else
 -      OS_CCDEFS = -lrt -lm -D_GNU_SOURCE
 -    endif
--  endif
++    OS_CCDEFS = -lm -D_GNU_SOURCE
+   endif
 -  CC = gcc -std=c99 -U__STRICT_ANSI__ -g $(OS_CCDEFS) -I .
--  ifeq ($(USE_NETWORK),)
--  else
++  CC = gcc -std=c99 -U__STRICT_ANSI__ -g -O2 $(OS_CCDEFS) -I .
+   ifeq ($(USE_NETWORK),)
+   else
 -    NETWORK_OPT = -DUSE_NETWORK -isystem /usr/local/include /usr/local/lib/libpcap.a
--  endif
--else
--  #Win32 Environments
--  LDFLAGS = -lm -lwsock32 -lwinmm
--  CC = gcc -std=c99 -U__STRICT_ANSI__ -O2 -I.
--  EXE = .exe
--  ifeq ($(USE_NETWORK),)
--  else
--    NETWORK_OPT = -DUSE_NETWORK -lwpcap -lpacket
--  endif
--endif
-+#  ifneq (,$(findstring solaris,$(OSTYPE)))
-+#    OS_CCDEFS = -lm -lsocket -lnsl -lrt -lpthread -D_GNU_SOURCE
-+#  else
-+#    ifneq (,$(findstring darwin,$(OSTYPE)))
-+#      OS_CCDEFS = -D_GNU_SOURCE
-+#    else
-+#      OS_CCDEFS = -lrt -lm -D_GNU_SOURCE
-+#    endif
-+#  endif
-+#  CC = gcc -std=c99 -U__STRICT_ANSI__ -g $(OS_CCDEFS) -I .
-+CC ?= gcc
-+CC := ${CC} -std=c99 -O2 -U__STRICT_ANSI__ -g -lm $(OS_CCDEFS) -I .
-+#
-+#  ifeq ($(USE_NETWORK),)
-+#  else
-+#    NETWORK_OPT = -DUSE_NETWORK -isystem /usr/local/include /usr/local/lib/libpcap.a
-+     NETWORK_OPT = -DUSE_NETWORK -lpcap
-+#  endif
-+#else
-+#  #Win32 Environments
-+#  LDFLAGS = -lm -lwsock32 -lwinmm
-+#  CC = gcc -std=c99 -U__STRICT_ANSI__ -O2 -I.
-+#  EXE = .exe
-+#  ifeq ($(USE_NETWORK),)
-+#  else
-+#    NETWORK_OPT = -DUSE_NETWORK -lwpcap -lpacket
-+#  endif
-+#endif
- 
- #
- # Common Libraries
-@@ -259,11 +263,11 @@ ALL = pdp1 pdp4 pdp7 pdp8 pdp9 pdp15 pdp
- all : ${ALL}
- 
- clean :
--ifeq ($(WIN32),)
--	${RM} ${BIN}*
--else
--	if exist BIN\*.exe del /q BIN\*.exe
--endif
-+#ifeq ($(WIN32),)
-+	rm ${BIN}*
-+#else
-+#	if exist BIN\*.exe del /q BIN\*.exe
-+#endif
- 
- #
- # Individual builds
++    NETWORK_OPT = -DUSE_NETWORK -lpcap
+   endif
+ else
+   #Win32 Environments
