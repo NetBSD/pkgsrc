@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2006/04/19 13:13:05 tonio Exp $
+$NetBSD: distinfo,v 1.5 2010/05/28 16:45:12 joerg Exp $
 
 SHA1 (advi-1.6.0.tgz) = 8c033df906f3e208471506f64ffa0b175c1c5ee8
 RMD160 (advi-1.6.0.tgz) = 55bc5f2742964f29bc694997c3dd9573f8c71964
@@ -16,4 +16,4 @@ SHA1 (patch-aj) = 87737dc00a68e7c020cec98b039eecf0f7cadf1a
 SHA1 (patch-ak) = 831b0bbc22b25e1160809ad7db981d03eb3388ca
 SHA1 (patch-al) = 97c591d60aefbc15c5ef1624f74b12be57daf6d8
 SHA1 (patch-am) = 8bacf3de7ef836183543b12b5dca66d97bfd4ae4
-SHA1 (patch-an) = 510871fce562c8a5989fbbdd976c175b7e9bc288
+SHA1 (patch-an) = 85bc55e6409e1be813693425e5b7d7cc2ca6f23d
