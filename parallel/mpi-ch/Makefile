@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2010/05/17 18:27:15 asau Exp $
+# $NetBSD: Makefile,v 1.64 2010/05/28 12:15:42 obache Exp $
 
 DISTNAME=	mpich2-1.2.1p1
 #PKGREVISION=	1
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
 CONFIGURE_ARGS+=	--disable-f90	# problems?
+CONFIGURE_ARGS+=	--without-java
+CONFIGURE_ARGS+=	--without-java2
 
 USE_TOOLS+=		perl:run
 
