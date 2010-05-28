@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2009/09/02 08:47:15 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2010/05/28 16:18:23 joerg Exp $
 
 --- source/Shell/OdfConverter/Makefile.orig	2007-12-19 15:16:04.000000000 +0100
 +++ source/Shell/OdfConverter/Makefile
-@@ -71,9 +71,9 @@ else
+@@ -64,16 +64,16 @@ ifeq ($(OS),Darwin)
+ 	$(CC) -o OdfConverter -Wall `pkg-config --cflags mono` main.c \
+ 		`pkg-config --libs-only-L mono` -bind_at_load -all_load -lz \
+ 	    ../../AdditionalTools/zlib123/contrib/minizip/libzlibwapi.a \
+-		`pkg-config --libs-only-l mono` bundle.o
++		`pkg-config --libs-only-l mono gtk+-2.0 gthread-2.0` bundle.o
+ else
+-	$(CC) -o OdfConverter$(EXEEXT) -Wall `pkg-config --cflags mono` main.c \
++	$(CC) -o OdfConverter$(EXEEXT) -Wall `pkg-config --cflags mono gtk+-2.0 gthread-2.0` main.c \
+ 	    $(KILLAT) \
  	    bundle.o \
  	    $(EXPORTDYNAMIC) \
  	    -Wl,--undefined=$(ZIPOPEN) -Wl,--undefined=$(UNZOPEN) \
@@ -10,7 +19,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/02 08:47:15 wiz Exp $
 +	    -L../../AdditionalTools/zlib123/contrib/minizip \
  	    -Wl,-Bstatic -lmono -lzlibwapi -Wl,-Bdynamic  \
 -	    `pkg-config --libs-only-l mono | sed -e "s/\-lmono //"` \
-+	    `pkg-config --libs mono | sed -e "s/\-lmono //"` \
++	    `pkg-config --libs mono gtk+-2.0 gthread-2.0 | sed -e "s/\-lmono //"` \
  	    $(ZLIB) $(OTHERLIBS)
  endif
  ifeq ($(OS),Cygwin)
