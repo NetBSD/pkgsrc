@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2010/05/18 18:33:48 martin Exp $
+$NetBSD: patch-af,v 1.3 2010/05/28 13:50:26 martin Exp $
 
 --- mpn/vax/lshift.s.orig	2010-02-06 13:43:14.000000000 +0100
-+++ mpn/vax/lshift.s	2010-05-18 10:16:29.000000000 +0200
++++ mpn/vax/lshift.s	2010-05-25 10:04:33.000000000 +0200
 @@ -28,29 +28,29 @@
  
  .text
@@ -28,6 +28,7 @@ $NetBSD: patch-af,v 1.2 2010/05/18 18:33:48 martin Exp $
 -	movl	r5,r0
 -	movl	r2,r3
 -	decl	r1
+-	jeql	Lend
 +	moval	(%r6)[%r1],%r6
 +	moval	(%r7)[%r1],%r7
 +	clrl	%r3
@@ -36,19 +37,19 @@ $NetBSD: patch-af,v 1.2 2010/05/18 18:33:48 martin Exp $
 +	movl	%r5,%r0
 +	movl	%r2,%r3
 +	decl	%r1
- 	jeql	Lend
++	jeql	.Lend
  
 -Loop:	movl	-(r6),r2
 -	ashq	r8,r2,r4
 -	movl	r5,-(r7)
 -	movl	r2,r3
 -	sobgtr	r1,Loop
-+Loop:	movl	-(%r6),%r2
++.Loop:	movl	-(%r6),%r2
 +	ashq	%r8,%r2,%r4
 +	movl	%r5,-(%r7)
 +	movl	%r2,%r3
-+	sobgtr	%r1,Loop
++	sobgtr	%r1,.Loop
  
 -Lend:	movl	r4,-4(r7)
-+Lend:	movl	%r4,-4(%r7)
++.Lend:	movl	%r4,-4(%r7)
  	ret
