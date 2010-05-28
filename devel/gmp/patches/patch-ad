@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.8 2010/05/18 18:33:48 martin Exp $
+$NetBSD: patch-ad,v 1.9 2010/05/28 13:50:25 martin Exp $
 
 --- mpn/vax/add_n.s.orig	2010-02-06 13:43:14.000000000 +0100
-+++ mpn/vax/add_n.s	2010-05-18 10:16:29.000000000 +0200
++++ mpn/vax/add_n.s	2010-05-28 10:26:03.000000000 +0200
 @@ -27,33 +27,33 @@
  
  .text
@@ -30,7 +30,7 @@ $NetBSD: patch-ad,v 1.8 2010/05/18 18:33:48 martin Exp $
 +	ashl	$-2,%r0,%r0	# unroll loop count
 +	bicl2	$-4,%r5		# mask out low 2 bits
 +	movaq	(%r5)[%r5],%r5	# 9x
-+	jmp	Loop(%r5)
++	jmp	.Loop[%r5]
  
 -Loop:	movl	(r2)+,r4
 -	adwc	(r1)+,r4
@@ -45,7 +45,7 @@ $NetBSD: patch-ad,v 1.8 2010/05/18 18:33:48 martin Exp $
 -	adwc	(r1)+,r4
 -	movl	r4,(r3)+
 -	sobgtr	r0,Loop
-+Loop:	movl	(%r2)+,%r4
++.Loop:	movl	(%r2)+,%r4
 +	adwc	(%r1)+,%r4
 +	movl	%r4,(%r3)+
 +	movl	(%r2)+,%r4
@@ -57,7 +57,7 @@ $NetBSD: patch-ad,v 1.8 2010/05/18 18:33:48 martin Exp $
 +	movl	(%r2)+,%r4
 +	adwc	(%r1)+,%r4
 +	movl	%r4,(%r3)+
-+	sobgtr	%r0,Loop
++	sobgtr	%r0,.Loop
  
 -	adwc	r0,r0
 +	adwc	%r0,%r0
