@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2058 2010/05/28 13:25:57 tsutsui Exp $
+$NetBSD: CHANGES-2010,v 1.2059 2010/05/28 17:04:44 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2704,3 +2704,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-POE-Component-SNMP to 1.1006 [martti 2010-05-28]
 	Updated www/p5-URI-Escape-XS to 0.07 [martti 2010-05-28]
 	Updated emulators/simh to V3.8-1 [tsutsui 2010-05-28]
+	Removed math/orpie [tnn 2010-05-28]
