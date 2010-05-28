@@ -1,22 +1,21 @@
-$NetBSD: patch-aa,v 1.8 2009/09/22 07:53:28 martti Exp $
+$NetBSD: patch-aa,v 1.9 2010/05/28 09:33:12 martti Exp $
 
 We have a separate package for xpmroot
 
---- bin/Makefile.in.orig	2009-09-20 10:11:53.000000000 +0300
-+++ bin/Makefile.in	2009-09-22 10:03:22.000000000 +0300
-@@ -736,14 +736,8 @@
+--- bin/Makefile.in.orig	2010-05-28 12:28:07.000000000 +0300
++++ bin/Makefile.in	2010-05-28 12:28:14.000000000 +0300
+@@ -819,14 +819,8 @@
  	_fvwm-perllib.1
  
  install-exec-local:
 -	@rm -f $(DESTDIR)$(bindir)/xpmroot
 -	@$(LN_S) fvwm-root $(DESTDIR)$(bindir)/xpmroot || \
 -		echo "Minor warning: $(bindir)/xpmroot symlink was not created"
--
+ 
  install-data-local:
 -	@rm -f $(DESTDIR)$(mandir)/man1/xpmroot.1
 -	@$(LN_S) fvwm-root.1 $(DESTDIR)$(mandir)/man1/xpmroot.1 || \
 -		echo "Minor warning: $(mandir)/man1/xpmroot.1 symlink was not created"
-+
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
