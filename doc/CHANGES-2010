@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2052 2010/05/28 07:40:35 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2053 2010/05/28 08:11:44 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2696,3 +2696,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/bftpd to 2.8 [obache 2010-05-27]
 	Updated mail/enma to 1.1.0nb2 [obache 2010-05-28]
 	Updated mail/milter-manager to 1.4.2nb1 [obache 2010-05-28]
+	Updated www/mediawiki to 1.15.4 [martti 2010-05-28]
