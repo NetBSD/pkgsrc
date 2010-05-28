@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2055 2010/05/28 09:31:48 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2056 2010/05/28 09:33:41 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2699,3 +2699,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/mediawiki to 1.15.4 [martti 2010-05-28]
 	Updated databases/ruby-ldap to 0.9.11 [obache 2010-05-28]
 	Updated inputmethod/scim-tomoe to 0.6.0nb1 [obache 2010-05-28]
+	Updated wm/fvwm-devel to 2.5.30 [martti 2010-05-28]
