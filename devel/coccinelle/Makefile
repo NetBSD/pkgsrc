@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/09/25 09:13:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/05/28 14:05:39 joerg Exp $
 
 DISTNAME=	coccinelle-0.1.8
 PKGREVISION=	1
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 DEPENDS+=	menhir-[0-9]*:../../devel/menhir
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-#MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=		no
 
 HAS_CONFIGURE=	yes
 USE_TOOLS=	gmake perl
