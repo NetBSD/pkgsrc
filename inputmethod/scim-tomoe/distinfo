@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:09:35 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/05/28 09:31:35 obache Exp $
 
 SHA1 (scim-tomoe-0.6.0.tar.gz) = 481ee2f8f9baa6105a349da36360aed06e432291
 RMD160 (scim-tomoe-0.6.0.tar.gz) = c95059e7f594192c97b082aa61818060391a8591
 Size (scim-tomoe-0.6.0.tar.gz) = 385126 bytes
 SHA1 (patch-aa) = 0554574908f37adae9d8771dcadce2e038c5857a
+SHA1 (patch-ab) = 1c598b251d218a9f1da7c089dd51780e97108d40
