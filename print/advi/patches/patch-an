@@ -1,7 +1,16 @@
-$NetBSD: patch-an,v 1.1 2006/04/19 13:13:05 tonio Exp $
+$NetBSD: patch-an,v 1.2 2010/05/28 16:45:12 joerg Exp $
 
---- Makefile.orig	2004-10-02 23:35:09.000000000 +0200
+--- Makefile.orig	2004-10-02 21:35:09.000000000 +0000
 +++ Makefile
+@@ -83,7 +83,7 @@ MODULES	  = $(MISC) $(OPTIONS) $(GRAPHIC
+             $(EFFECTS) grdev addons \
+ 	    $(GUI) main
+ 
+-LIBRARIES = graphics unix str $(CAMLIMAGESLIBS)
++LIBRARIES = unix str $(CAMLIMAGESLIBS)
+ CLIBS	  = graphics unix str
+ 
+ COBJS     = events.o grwm.o grY11.o
 @@ -172,13 +172,6 @@ installopt:: $(INSTALLTARGET) $(HELPFILE
  	- install -d $(MANDIR)/man$(MANEXT)
  	if [ -f conf/jpfonts.conf ]; then \
