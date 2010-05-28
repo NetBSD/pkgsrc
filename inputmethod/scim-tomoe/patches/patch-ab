@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2010/05/28 09:31:35 obache Exp $
+
+support gucharmap-2
+
+--- src/scim_tomoe_prefs_widget.cpp.orig	2007-05-07 07:49:15.000000000 +0000
++++ src/scim_tomoe_prefs_widget.cpp
+@@ -472,9 +472,9 @@ apply_config (ScimTomoePrefsWidget *pref
+         String (SCIM_TOMOE_CONFIG_UNICODE_TABLE_FONT_DEFAULT));
+ 
+     if (font.length() > 0) {
+-        gucharmap_charmap_set_font (charmap, font.c_str ());
++        gucharmap_charmap_set_font_desc (charmap, pango_font_description_from_string(font.c_str ()));
+     } else {
+-        gucharmap_charmap_set_font (charmap, NULL);
++        gucharmap_charmap_set_font_desc (charmap, pango_font_description_from_string(NULL));
+         set_default_font (prefs, SCIM_TOMOE_CONFIG_CAND_FONT,
+                           GTK_WIDGET (charmap));
+     }
