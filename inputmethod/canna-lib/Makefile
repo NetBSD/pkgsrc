@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/12/23 21:46:10 abs Exp $
+# $NetBSD: Makefile,v 1.12 2010/05/28 11:06:34 obache Exp $
 
 PKGREVISION=	2
 CANNA_MODULE=	lib
 
-PKG_DESTDIR_SUPPORT= destdir
+PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../inputmethod/canna/Makefile.common"
 
@@ -23,18 +23,5 @@ post-patch:
 
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
-
-.include "../../mk/bsd.prefs.mk"
-
-# XXX Work around bug in nbitools where the correct DragonFly library
-# XXX symlinks are not created.
-# XXX
-.if ${OPSYS} == "DragonFly"
-post-install:
-.  for f in RKC RKC16 canna canna16
-	${LN} -s lib${f}.so.1.1 ${PREFIX}/lib/lib${f}.so.1
-	${LN} -s lib${f}.so.1 ${PREFIX}/lib/lib${f}.so
-.  endfor
-.endif
 
 .include "../../mk/bsd.pkg.mk"
