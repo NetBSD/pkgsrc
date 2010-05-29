@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2060 2010/05/29 03:19:17 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2061 2010/05/29 06:20:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2706,3 +2706,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/simh to V3.8-1 [tsutsui 2010-05-28]
 	Removed math/orpie [tnn 2010-05-28]
 	Updated math/py-Scientific to 2.8 [obache 2010-05-29]
+	Added security/py-xmlsec version 0.3.0 [obache 2010-05-29]
