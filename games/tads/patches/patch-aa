@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2005/03/27 18:08:40 kristerw Exp $
+$NetBSD: patch-aa,v 1.5 2010/05/29 14:31:23 dillo Exp $
 
---- tads2/Makefile.orig	Fri Nov  5 14:34:49 2004
-+++ tads2/Makefile	Sun Mar 27 19:52:59 2005
+--- tads2/Makefile.orig	2004-11-05 13:34:49.000000000 +0000
++++ tads2/Makefile
 @@ -56,7 +56,7 @@
  #
  # DATADIR is where the TADS 2 development libraries (adv.t, std.t and
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2005/03/27 18:08:40 kristerw Exp $
  BINDIR=$(PREFIX)/bin
  DATADIR=$(PREFIX)/share/tads2
  
-@@ -278,16 +278,18 @@
+@@ -278,16 +278,18 @@ MATT=Matt Herberg <meherberg@earthlink.n
  # No testing has been done on pre 1.5 or a.out systems
  # HAVE_TPARM is set in osunixt.h
  #
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.4 2005/03/27 18:08:40 kristerw Exp $
  
  #
  # i386+ running DOS/Windows, using DJGPP 2.X
-@@ -382,10 +384,14 @@
+@@ -382,10 +384,14 @@ TDBOBJS= $(DBGOBJS) osgen.o osunixt.o tp
  all: tadsr tadsc tdb
  
  install: all
@@ -48,14 +48,14 @@ $NetBSD: patch-aa,v 1.4 2005/03/27 18:08:40 kristerw Exp $
 -	install -d $(DATADIR)
 -	install -s -m755 tadsc tadsr tdb $(BINDIR)
 -	install -m644 adv.t std.t gameinfo.t $(DATADIR)
-+	#install -d $(BINDIR)
-+	${BSD_INSTALL_DATA_DIR} $(DATADIR)
-+	${BSD_INSTALL_PROGRAM} tadsc $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} tadsr $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} tdb $(BINDIR)
-+	${BSD_INSTALL_DATA} adv.t $(DATADIR)
-+	${BSD_INSTALL_DATA} std.t $(DATADIR)
-+	${BSD_INSTALL_DATA} gameinfo.t $(DATADIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(DATADIR)
++	${BSD_INSTALL_PROGRAM} tadsc ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} tadsr ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} tdb ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_DATA} adv.t ${DESTDIR}$(DATADIR)
++	${BSD_INSTALL_DATA} std.t ${DESTDIR}$(DATADIR)
++	${BSD_INSTALL_DATA} gameinfo.t ${DESTDIR}$(DATADIR)
  
  tadsr: $(TROBJS)
  	$(CC) $(CFLAGS) $(TROBJS) -o tadsr $(LIBS)
