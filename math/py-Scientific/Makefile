@@ -1,33 +1,30 @@
-# $NetBSD: Makefile,v 1.31 2009/03/05 18:51:30 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2010/05/29 03:18:54 obache Exp $
 
-DISTNAME=	ScientificPython-2.4.5
+DISTNAME=	ScientificPython-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
-PKGREVISION=	2
 CATEGORIES=	math python
-MASTER_SITES=	http://starship.python.net/crew/hinsen/ScientificPython/ \
-		http://dirac.cnrs-orleans.fr/programs/ScientificPython/
+MASTER_SITES=	http://sourcesup.cru.fr/frs/download.php/2309/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://starship.python.net/crew/hinsen/scientific.html
+HOMEPAGE=	http://dirac.cnrs-orleans.fr/ScientificPython/
 COMMENT=	Python modules for scientific computing
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS+=	py-Scientific-*
+CONFLICTS+=	py-Scientific-[0-9]*
 
 PYDISTUTILSPKG=	yes
 
-MAKE_ENV+=	NETCDF_PREFIX=${LOCALBASE:Q}
+MAKE_ENV+=	NETCDF_PREFIX=${BUILDLINK_PREFIX.netcdf}
 
-EVAL_PREFIX+=	NETCDFPREFIX=netcdf MPICHPREFIX=mpich
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 PLIST_SUBST+=	OSVER=${OS_VERSION:C/^(.).*/\1/}
 
 INSTALLATION_DIRS=	bin
 
 post-build:
-	@(cd ${WRKSRC}/Src/MPI && ${SETENV} CFLAGS="${CFLAGS}" \
-	  LDFLAGS="${LDFLAGS} ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" ${PYTHONBIN} compile.py)
+	${RUN} cd ${WRKSRC}/Src/MPI && ${SETENV} CFLAGS=${CFLAGS:Q} \
+	  LDFLAGS="${LDFLAGS} ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" ${PYTHONBIN} compile.py
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython \
@@ -35,7 +32,7 @@ post-install:
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
