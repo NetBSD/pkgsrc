@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2005/03/22 20:02:11 dillo Exp $
+$NetBSD: patch-ac,v 1.4 2010/05/29 14:31:23 dillo Exp $
 
---- tads3/Makefile.orig	2005-03-05 11:44:48.000000000 +0100
+--- tads3/Makefile.orig	2005-03-05 10:44:48.000000000 +0000
 +++ tads3/Makefile
 @@ -14,9 +14,9 @@
  # Installation points for TADS3. Tailor these to your liking. If you install
@@ -40,59 +40,59 @@ $NetBSD: patch-ac,v 1.3 2005/03/22 20:02:11 dillo Exp $
  # OpenBSD
  # Compiled and tested on OpenBSD 3.0
  # Maintainer: Mark Wickham (macwickham@attbi.com)
-@@ -216,18 +235,47 @@ MKCHRTAB_OBJS = mkchrtab.o $(T2_DIR)/osu
+@@ -216,18 +235,46 @@ MKCHRTAB_OBJS = mkchrtab.o $(T2_DIR)/osu
  all: t3make t3run t23run t3pre t3res mkchrtab
  
  install: all install-common
 -	install -s -m755 t3make t3run t23run t3res mkchrtab $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} t3make $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} t3run $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} t23run $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} t3res $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} mkchrtab $(BINDIR)
++	${BSD_INSTALL_PROGRAM} t3make ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} t3run ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} t23run ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} t3res ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} mkchrtab ${DESTDIR}$(BINDIR)
  
  install-common: all
 -	install -d $(BINDIR)
 -	install -d $(DOCDIR)
 -	install -d $(DATADIR)
-+	${BSD_INSTALL_DATA_DIR} $(DOCDIR)
-+	${BSD_INSTALL_DATA_DIR} $(DATADIR)
- 	rm -rf $(INCDIR) $(LIBDIR) $(RESDIR) $(DOCDIR)
+-	rm -rf $(INCDIR) $(LIBDIR) $(RESDIR) $(DOCDIR)
 -	cp -rp t3include $(INCDIR)
 -	cp -rp t3library $(LIBDIR)
 -	cp -rp t3resource $(RESDIR)
 -	cp -rp doc $(DOCDIR)
 -	-chown -fR root.root $(INCDIR) $(LIBDIR) $(RESDIR) $(DOCDIR)
-+	${BSD_INSTALL_DATA_DIR} ${INCDIR}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(DOCDIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(DATADIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${INCDIR}
 +	for f in t3include/*; \
 +	do \
-+		${BSD_INSTALL_DATA} $$f ${INCDIR}; \
++		${BSD_INSTALL_DATA} $$f ${DESTDIR}${INCDIR}; \
 +	done
-+	${BSD_INSTALL_DATA_DIR} ${LIBDIR}
-+	${BSD_INSTALL_DATA_DIR} ${LIBDIR}/adv3
-+	${BSD_INSTALL_DATA_DIR} ${LIBDIR}/adv3/en_us
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}/adv3
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}/adv3/en_us
 +	for f in t3library/*.*; \
 +	do \
-+		${BSD_INSTALL_DATA} $$f ${LIBDIR}; \
++		${BSD_INSTALL_DATA} $$f ${DESTDIR}${LIBDIR}; \
 +	done
 +	for f in t3library/adv3/*.*; \
 +	do \
-+		${BSD_INSTALL_DATA} $$f ${LIBDIR}/adv3; \
++		${BSD_INSTALL_DATA} $$f ${DESTDIR}${LIBDIR}/adv3; \
 +	done
 +	for f in t3library/adv3/en_us/*.*; \
 +	do \
-+		${BSD_INSTALL_DATA} $$f ${LIBDIR}/adv3/en_us; \
++		${BSD_INSTALL_DATA} $$f ${DESTDIR}${LIBDIR}/adv3/en_us; \
 +	done
-+	${BSD_INSTALL_DATA_DIR} ${RESDIR}
-+	${BSD_INSTALL_DATA_DIR} ${RESDIR}/charmap
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${RESDIR}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${RESDIR}/charmap
 +	for f in t3resource/charmap/*; \
 +	do \
-+		${BSD_INSTALL_DATA} $$f ${RESDIR}/charmap; \
++		${BSD_INSTALL_DATA} $$f ${DESTDIR}${RESDIR}/charmap; \
 +	done
-+	${BSD_INSTALL_DATA_DIR} ${DOCDIR}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 +	for f in doc/*; \
 +	do \
-+		${BSD_INSTALL_DATA} $$f ${DOCDIR}; \
++		${BSD_INSTALL_DATA} $$f ${DESTDIR}${DOCDIR}; \
 +	done
  
  clean:
