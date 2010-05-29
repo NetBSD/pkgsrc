@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/29 06:20:06 obache Exp $
+${PYSITELIB}/xmlsec.py
+${PYSITELIB}/xmlsec.pyc
+${PYSITELIB}/xmlsec.pyo
+${PYSITELIB}/xmlsec_strings.py
+${PYSITELIB}/xmlsec_strings.pyc
+${PYSITELIB}/xmlsec_strings.pyo
+${PYSITELIB}/xmlsecmod.so
