@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/29 06:20:06 obache Exp $
+
+SHA1 (pyxmlsec-0.3.0.tar.gz) = 4752ced5316d676a800230eca0408dd204ffe2b4
+RMD160 (pyxmlsec-0.3.0.tar.gz) = aa945ca704ea92747e3ad46041c03b0d37380147
+Size (pyxmlsec-0.3.0.tar.gz) = 224312 bytes
+SHA1 (patch-aa) = 7a3104efb9f3e587d848ae676b89057e113f93e5
