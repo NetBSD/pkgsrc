@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/29 10:43:14 obache Exp $
+bin/cvs_realclean
+bin/ocamldep-omake
+bin/omake
+bin/osh
+lib/omake/OMakefile.default
+lib/omake/OMakeroot.default
+lib/omake/OMakeroot.om
+lib/omake/Pervasives.om
+lib/omake/build/C.om
+lib/omake/build/Common.om
+lib/omake/build/LaTeX.om
+lib/omake/build/OCaml.om
+lib/omake/build/svn_realclean.om
+lib/omake/configure/Configure.om
+lib/omake/configure/X.om
+lib/omake/configure/fam.om
+lib/omake/configure/fs_case_sensitive.om
+lib/omake/configure/ncurses.om
+lib/omake/configure/readline.om
+lib/omake/configure/snprintf.om
+lib/omake/parse/C/Lex.om
+lib/omake/parse/C/Parse.om

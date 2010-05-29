@@ -1,0 +1,11 @@
+OMake is a build system, similar to GNU make, but with many additional
+features, including:
+- Support for large projects spanning multiple directories;
+- Support for commands that produce several targets at once;
+- Fast, accurate, automated dependency analysis using MD5 digests;
+- Portability: omake provides a consistent interface on Win32
+  and on Unix systems including Linux, OSX, and Cygwin;
+- Builtin functions that provide the most common features of
+  programs like grep, sed, and awk;
+- Active filesystem monitoring, where the build automatically
+  restarts whenever you modify a source file.

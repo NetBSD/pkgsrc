@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/29 10:43:14 obache Exp $
+
+http://svn.metaprl.org/viewvc/mojave?view=rev&revision=12923
+
+--- src/exec/omake_exec.ml.orig	2006-12-08 22:52:01.000000000 +0000
++++ src/exec/omake_exec.ml
+@@ -46,8 +46,6 @@ open Omake_exec_notify
+ open Omake_options
+ open Omake_command_type
+ 
+-external sync : unit -> unit = "caml_sync"
+-
+ module Exec =
+ struct
+    (*
