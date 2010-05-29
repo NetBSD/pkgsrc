@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2061 2010/05/29 06:20:35 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2062 2010/05/29 10:43:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2707,3 +2707,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed math/orpie [tnn 2010-05-28]
 	Updated math/py-Scientific to 2.8 [obache 2010-05-29]
 	Added security/py-xmlsec version 0.3.0 [obache 2010-05-29]
+	Added devel/omake version 0.9.8.5 [obache 2010-05-29]
