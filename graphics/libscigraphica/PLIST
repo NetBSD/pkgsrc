@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/29 13:54:32 drochner Exp $
 include/scigraphica-2.0/scigraphica/algorithms/Axb_core.c
 include/scigraphica-2.0/scigraphica/algorithms/lm.h
 include/scigraphica-2.0/scigraphica/algorithms/lm_core.c
@@ -258,4 +258,3 @@ share/pixmaps/libscigraphica/zoom_minus.xpm
 share/pixmaps/libscigraphica/zoom_plus.xpm
 share/pixmaps/libscigraphica/zoomin.xpm
 share/pixmaps/libscigraphica/zoomout.xpm
-share/pixmaps/sg_icon.xpm
