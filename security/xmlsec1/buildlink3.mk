@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/01/17 12:02:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/05/29 05:53:04 obache Exp $
 
 BUILDLINK_TREE+=	xmlsec1
 
@@ -12,6 +12,8 @@ BUILDLINK_INCDIRS.xmlsec1+=	include/xmlsec1
 BUILDLINK_CPPFLAGS.xmlsec1+=	-DXMLSEC_CRYPTO_OPENSSL
 BUILDLINK_LIBS.xmlsec1+=	-lxmlsec1-openssl
 
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif # XMLSEC1_BUILDLINK3_MK
 
