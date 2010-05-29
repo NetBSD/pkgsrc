@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9327 2010/05/28 10:08:21 martti Exp $
+$NetBSD: TODO,v 1.9328 2010/05/29 03:19:17 obache Exp $
 
 Suggested new packages
 ======================
@@ -1145,7 +1145,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-FourSuite-1.0.2
 	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
-	o py-Scientific-2.8 [pkg/43282]
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
 	o py-ZopeInterface-3.6.0
