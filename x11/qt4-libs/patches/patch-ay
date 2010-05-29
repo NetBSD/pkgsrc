@@ -1,8 +1,30 @@
-$NetBSD: patch-ay,v 1.5 2010/03/11 00:07:24 wiz Exp $
+$NetBSD: patch-ay,v 1.6 2010/05/29 17:10:31 adam Exp $
 
 --- src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.orig	2010-02-11 15:55:20.000000000 +0000
 +++ src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h
-@@ -718,7 +718,7 @@
+@@ -86,6 +86,13 @@
+ #define WTF_PLATFORM_OPENBSD 1
+ #endif
+ 
++/* PLATFORM(DRAGONFLY) */
++/* Operating system level dependencies for OpenBSD systems that */
++/* should be used regardless of operating environment */
++#ifdef __DragonFly__
++#define WTF_PLATFORM_DRAGONFLY 1
++#endif
++
+ /* PLATFORM(SOLARIS) */
+ /* Operating system level dependencies for Solaris that should be used */
+ /* regardless of operating environment */
+@@ -141,6 +148,7 @@
+ /* should be used regardless of operating environment */
+ #if   PLATFORM(DARWIN)     \
+    || PLATFORM(FREEBSD)    \
++   || PLATFORM(DRAGONFLY)  \
+    || PLATFORM(SYMBIAN)    \
+    || PLATFORM(NETBSD)     \
+    || PLATFORM(SOLARIS)    \
+@@ -718,7 +726,7 @@
  #endif
  
  #if !defined(WTF_USE_JSVALUE64) && !defined(WTF_USE_JSVALUE32) && !defined(WTF_USE_JSVALUE32_64)
