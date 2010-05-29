@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/05/23 17:28:44 tron Exp $
+# $NetBSD: Makefile,v 1.12 2010/05/29 11:47:37 obache Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -169,5 +169,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
 
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
