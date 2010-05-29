@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.29 2010/05/26 17:16:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.30 2010/05/29 08:27:02 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -136,3 +136,5 @@ databases/postgresql84-server: security update
 Pullup ticket #3129 - requested by taca
 databases/mysql51-client: security update
 databases/mysql51-server: security update
+Pullup ticket #3130 - requested by martti
+www/mediawiki: security update
