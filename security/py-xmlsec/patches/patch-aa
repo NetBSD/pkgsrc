@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/29 06:20:06 obache Exp $
+
+avoid keyborad interaction.
+
+--- setup.py.orig	2006-01-01 17:43:37.000000000 +0000
++++ setup.py
+@@ -71,7 +71,7 @@ if len(sys.argv) == 1:
+ 
+ # the crypto engine name : openssl, gnutls or nss
+ xmlsec1_crypto = "openssl"
+-if 'build' in sys.argv:
++if False:
+     msg = '\nChoose a crypto engine :\n' \
+           '   1. OpenSSL\n' \
+           '   2. GnuTLS\n' \
