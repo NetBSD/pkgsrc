@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2062 2010/05/29 10:43:34 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2063 2010/05/29 15:05:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2708,3 +2708,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/py-Scientific to 2.8 [obache 2010-05-29]
 	Added security/py-xmlsec version 0.3.0 [obache 2010-05-29]
 	Added devel/omake version 0.9.8.5 [obache 2010-05-29]
+	Updated time/ruby-tzinfo to 0.3.22 [taca 2010-05-29]
