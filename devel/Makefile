@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1341 2010/05/23 21:41:48 jym Exp $
+# $NetBSD: Makefile,v 1.1342 2010/05/29 10:44:25 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -422,6 +422,7 @@ SUBDIR+=	ocaml-findlib
 SUBDIR+=	ocaml-lwt
 SUBDIR+=	ode
 SUBDIR+=	ogre
+SUBDIR+=	omake
 SUBDIR+=	opal
 SUBDIR+=	opencm
 SUBDIR+=	opengrok
