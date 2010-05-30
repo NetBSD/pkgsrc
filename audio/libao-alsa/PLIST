@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/19 18:18:47 drochner Exp $
-lib/ao/plugins-4/libalsa09.la
+@comment $NetBSD: PLIST,v 1.4 2010/05/30 11:25:44 joerg Exp $
+lib/ao/plugins-4/libalsa.la
