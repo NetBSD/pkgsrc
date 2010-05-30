@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9331 2010/05/30 14:52:53 tonio Exp $
+$NetBSD: TODO,v 1.9332 2010/05/30 19:57:23 seb Exp $
 
 Suggested new packages
 ======================
@@ -1079,7 +1079,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-YAML-Syck-1.08
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
-	o p5-version-0.8200
 	o p5-xmltv-0.5.57
 	o packagekit-0.5.1
 	o pango-1.28.0 [GNOME 2.30]
