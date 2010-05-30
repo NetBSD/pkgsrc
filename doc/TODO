@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9329 2010/05/29 11:51:43 obache Exp $
+$NetBSD: TODO,v 1.9330 2010/05/30 08:56:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -509,7 +509,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cvsd-1.0.18
 	o cygwin_lib-1.5.24.2
 	o dansguardian-2.10.0.3
-	o dante-1.2.0
+	o dante-1.2.1
 	o dap-3.7
 	o dar-2.3.10
 	o darcs-2.4
@@ -540,6 +540,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dspam-3.9.0
 	o dvdrip-0.98.11
 	o dvipng-1.13
+	o dwm-5.8
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.3.2
@@ -636,7 +637,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-10.3.1
+	o fotoxx-10.4
 	o frama-c-20100401
 	o freeciv-2.2.0
 	o freeglut-2.4.0
@@ -657,6 +658,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gawk-3.1.8
 	o gbdfed-1.6
+	o gbrainy-1.42
 	o gcalctool-5.30.1 [GNOME 2.30]
 	o gcc-4.5.0
 	o gcdmaster-1.2.3
@@ -707,21 +709,21 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-doc-utils-0.20.0 [GNOME 2.30]
 	o gnome-games-2.30.1 [GNOME 2.30]
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-icon-theme-2.30.2.1 [GNOME 2.30]
+	o gnome-icon-theme-2.30.3 [GNOME 2.30]
 	o gnome-icon-theme-extras-2.30.1 [GNOME 2.30]
 	o gnome-icon-theme-symbolic-2.30.0 [GNOME 2.30]
 	o gnome-keyring-2.30.1 [GNOME 2.30]
 	o gnome-mag-0.16.1 [GNOME 2.30]
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.30.0 [GNOME 2.30]
-	o gnome-packagekit-2.30.1 [GNOME 2.30]
+	o gnome-packagekit-2.30.2 [GNOME 2.30]
 	o gnome-power-manager-2.30.1 [GNOME 2.30]
 	o gnome-screensaver-2.30.0 [GNOME 2.30]
 	o gnome-session-2.28.0 [GNOME 2.28, wants DeviceKit-power]
 	o gnome-settings-daemon-2.30.1 [GNOME 2.30]
 	o gnome-subtitles-1.0
 	o gnome-system-monitor-2.28.1 [GNOME 2.30]
-	o gnome-system-tools-2.30.1 [GNOME 2.30]
+	o gnome-system-tools-2.30.2 [GNOME 2.30]
 	o gnome-terminal-2.30.0 [GNOME 2.30]
 	o gnome-themes-2.30.1 [GNOME 2.30]
 	o gnome-user-docs-2.30.0 [GNOME 2.30]
@@ -762,7 +764,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtkimageview-1.6.4
 	o gtkmm-2.20.3
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview-2.10.1
+	o gtksourceview-2.10.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -771,14 +773,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gupnp-igd-0.1.7
 	o gutenprint-5.2.5
 	o gv-3.6.8
-	o gvfs-1.6.1
+	o gvfs-1.6.2
 	o gwaei-1.4.0
 	o gxemul-0.6.0 [pkg/43296]
 	o gzip-1.4
 	o hackbot-2.21
 	o hal-0.5.14
 	o hamster-applet-2.30.1 [GNOME 2.30]
-	o hanzim-3.0
+	o hanzim-3.2
 	o haskell-mode-1.45
 	o hdf5-1.9.68
 	o heel-1.0.2
@@ -898,7 +900,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.1
 	o liboobs-2.30.1 [GNOME 2.30]
 	o libproxy-0.4.2
-	o librep-0.90.5
+	o librep-0.90.6
 	o libsoup24-2.30.1 [GNOME 2.30]
 	o libssh-0.4.3
 	o libssh2-1.2.5
@@ -1031,7 +1033,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
 	o openafs-1.4.10 [pkg/41262]
-	o openafs-1.4.12
+	o openafs-1.4.12.1
 	o openbox-3.4.11.2
 	o opencobol-1.0
 	o opengrok-0.9
@@ -1096,6 +1098,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o perl-5.12.0
 	o pessulus-2.28.0 [GNOME 2.28]
 	o pforth-24 [asau]
+	o pfstat-2.5
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
@@ -1103,7 +1106,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php5-5.3.2
 	o php-jpgraph-3.0.6
 	o phpmyadmin-3.3.3
-	o phylip-3.68
+	o phylip-3.69 [pkg/43388]
 	o picp-0.6.8
 	o pidgin-2.7.0
 	o pim6dd-20040819a
@@ -1139,7 +1142,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-0.25.5
 	o pure-ftpd-1.0.29
 	o puzzle-5.2
-	o puzzles-8951
+	o puzzles-8965
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1153,7 +1156,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.17
 	o py-cups-1.9.50
 	o py-django-1.2
-	o py-enchant-1.6.1 [pkg/43384]
+	o py-enchant-1.6.2 [pkg/43384]
 	o py-fpconst-0.7.2 [pkg/42556]
 	o py-game-1.9.1
 	o py-gnome2-desktop-2.30.0 [GNOME 2.30]
@@ -1190,6 +1193,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o remind-3.1.8
+	o rep-gtk-0.90.3
 	o rep-gtk2-0.90.2
 	o resize_image-0.7
 	o rio500-0.8.1
@@ -1309,7 +1313,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sun-jdk6-6.0.19
 	o sun-jre6-6.0.19
 	o suse_base-11.0
-	o sympa-6.0.1
+	o sympa-6.0.2
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
@@ -1391,12 +1395,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vp-1.6
 	o vsftpd-2.2.2
 	o vte-0.24.0 [GNOME 2.30]
-	o vttest-20071216
+	o vttest-20100528
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.0
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
+	o wdiff-0.6.2
 	o webalizer-2.21.2
 	o webby-0.9.3
 	o webmin-1.510
@@ -1483,7 +1488,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xmessage-1.0.3
-	o xmlsec1-1.2.15
+	o xmlsec1-1.2.16
 	o xmlstarlet-1.0.2
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
@@ -1499,6 +1504,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-docs-1.5
+	o xorg-util-macros-1.8.0
 	o xpad-2.13
 	o xpr-1.0.3 [unpackaged]
 	o xproto-7.0.17
@@ -1531,7 +1537,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yorick-2.1.05
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.16
+	o zile-2.3.17
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
