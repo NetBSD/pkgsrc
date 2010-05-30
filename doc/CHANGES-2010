@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2064 2010/05/30 14:52:53 tonio Exp $
+$NetBSD: CHANGES-2010,v 1.2065 2010/05/30 19:57:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2710,3 +2710,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/omake version 0.9.8.5 [obache 2010-05-29]
 	Updated time/ruby-tzinfo to 0.3.22 [taca 2010-05-29]
 	Updated chat/bitlbee to 1.2.7 [tonio 2010-05-30]
+	Updated devel/p5-version to 0.8200 [seb 2010-05-30]
