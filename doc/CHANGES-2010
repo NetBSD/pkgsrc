@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2066 2010/05/31 16:48:28 manu Exp $
+$NetBSD: CHANGES-2010,v 1.2067 2010/05/31 18:53:15 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2713,3 +2713,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-version to 0.8200 [seb 2010-05-30]
 	Updated security/lasso to 2.2.91 [manu 2010-05-30]
 	Updated www/ap2-auth-mellon to 0.2.7 [manu 2010-05-30]
+	Updated x11/gtk2 to 2.20.1 [drochner 2010-05-31]
