@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2065 2010/05/30 19:57:23 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2066 2010/05/31 16:48:28 manu Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2711,3 +2711,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/ruby-tzinfo to 0.3.22 [taca 2010-05-29]
 	Updated chat/bitlbee to 1.2.7 [tonio 2010-05-30]
 	Updated devel/p5-version to 0.8200 [seb 2010-05-30]
+	Updated security/lasso to 2.2.91 [manu 2010-05-30]
+	Updated www/ap2-auth-mellon to 0.2.7 [manu 2010-05-30]
