@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9332 2010/05/30 19:57:23 seb Exp $
+$NetBSD: TODO,v 1.9333 2010/05/31 19:10:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,6 +373,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.8
 	o aewm++-1.0.27
 	o afterstep-2.2.9
+	o akonadi-1.3.80
 	o album-4.06
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -462,7 +463,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.54
+	o calibre-0.6.55
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -539,7 +540,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dspam-3.9.0
 	o dvdrip-0.98.11
 	o dvipng-1.13
-	o dwm-5.8
+	o dwm-5.8.1
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.3.2
@@ -549,6 +550,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.2.2
 	o egtk-0.3.6.2
+	o ekiga-3.2.7
 	o electric-8.11
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -730,10 +732,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnumeric110-1.10.4
+	o gnumeric110-1.10.5
 	o gnupg2-2.0.15
 	o gob2-2.0.17
-	o goffice0.8-0.8.4
+	o goffice0.8-0.8.5
 	o gogo-3.11p1
 	o gok-2.30.0 [GNOME 2.30]
 	o golem-0.0.6
@@ -845,12 +847,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kmess-1.5.1
 	o kmp-0.5
 	o kodos-2.4.5
-	o koffice-2.1.91
+	o koffice-2.2.0
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
 	o kronolith-2.3.4
 	o krusader-2.0
-	o ktorrent-3.3.4
+	o ktorrent-4.0
 	o ktorrent3-3.3.4
 	o lablgtk-2.14.1
 	o lapack-3.2.1
@@ -980,6 +982,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.8.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
+	o mono-addins-0.5
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.30.1 [GNOME 2.30]
 	o mp3blaster-3.2.3
@@ -1060,6 +1063,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-ExtUtils-CBuilder-0.2703
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-IO-Compress-2.027
+	o p5-IO-Socket-INET6-2.63
 	o p5-JSON-2.21
 	o p5-MIME-tools-5.428
 	o p5-Module-Build-0.36090
@@ -1114,6 +1118,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pioneers-0.12.2
 	o pircbot-1.4.6
 	o pixman-0.18.2
+	o pkg-config-0.25
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
 	o plone3-3.3.4
@@ -1140,7 +1145,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-0.25.5
 	o pure-ftpd-1.0.29
 	o puzzle-5.2
-	o puzzles-8965
+	o puzzles-8966
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1419,7 +1424,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxMaxima-0.8.5 [pkg/43265]
 	o wxRemind-101
 	o wyrd-1.4.4
-	o x264-devel-20100515
+	o x264-devel-20100529
 	o xanalyser-1.30
 	o xapian-1.0.20
 	o xapian-omega-1.0.20
@@ -1524,6 +1529,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xvidtune-1.0.2
 	o xview-3.2.1.4.24.12
 	o xwpe-1.5.30a
+	o xz-4.999.9124
 	o xzip-182
 	o yafc-1.1
 	o yasm-1.0.1
