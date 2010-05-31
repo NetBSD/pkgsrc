@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2069 2010/05/31 20:38:26 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2070 2010/05/31 21:20:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2716,3 +2716,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/gtk2 to 2.20.1 [drochner 2010-05-31]
 	Updated devel/fossil to 201005211.62104 [wiz 2010-05-31]
 	Updated security/py-paramiko to 1.7.6 [gls 2010-05-31]
+	Updated pkgtools/x11-links to 0.49nb1 [wiz 2010-05-31]
