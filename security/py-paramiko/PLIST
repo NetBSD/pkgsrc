@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/05/31 20:30:31 gls Exp $
+${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/requires.txt
+${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/top_level.txt
 ${PYSITELIB}/paramiko/__init__.py
 ${PYSITELIB}/paramiko/__init__.pyc
 ${PYSITELIB}/paramiko/__init__.pyo
@@ -50,9 +55,6 @@ ${PYSITELIB}/paramiko/logging22.pyo
 ${PYSITELIB}/paramiko/message.py
 ${PYSITELIB}/paramiko/message.pyc
 ${PYSITELIB}/paramiko/message.pyo
-${PYSITELIB}/paramiko/osrandom.py
-${PYSITELIB}/paramiko/osrandom.pyc
-${PYSITELIB}/paramiko/osrandom.pyo
 ${PYSITELIB}/paramiko/packet.py
 ${PYSITELIB}/paramiko/packet.pyc
 ${PYSITELIB}/paramiko/packet.pyo
@@ -65,12 +67,21 @@ ${PYSITELIB}/paramiko/pkey.pyo
 ${PYSITELIB}/paramiko/primes.py
 ${PYSITELIB}/paramiko/primes.pyc
 ${PYSITELIB}/paramiko/primes.pyo
-${PYSITELIB}/paramiko/rsakey.py
-${PYSITELIB}/paramiko/rsakey.pyc
-${PYSITELIB}/paramiko/rsakey.pyo
 ${PYSITELIB}/paramiko/resource.py
 ${PYSITELIB}/paramiko/resource.pyc
 ${PYSITELIB}/paramiko/resource.pyo
+${PYSITELIB}/paramiko/rng.py
+${PYSITELIB}/paramiko/rng.pyc
+${PYSITELIB}/paramiko/rng.pyo
+${PYSITELIB}/paramiko/rng_posix.py
+${PYSITELIB}/paramiko/rng_posix.pyc
+${PYSITELIB}/paramiko/rng_posix.pyo
+${PYSITELIB}/paramiko/rng_win32.py
+${PYSITELIB}/paramiko/rng_win32.pyc
+${PYSITELIB}/paramiko/rng_win32.pyo
+${PYSITELIB}/paramiko/rsakey.py
+${PYSITELIB}/paramiko/rsakey.pyc
+${PYSITELIB}/paramiko/rsakey.pyo
 ${PYSITELIB}/paramiko/server.py
 ${PYSITELIB}/paramiko/server.pyc
 ${PYSITELIB}/paramiko/server.pyo
