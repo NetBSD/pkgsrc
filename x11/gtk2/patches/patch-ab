@@ -1,10 +1,8 @@
-$NetBSD: patch-ab,v 1.22 2010/04/15 01:09:55 wiz Exp $
+$NetBSD: patch-ab,v 1.23 2010/05/31 17:34:33 drochner Exp $
 
-http://mail.gnome.org/archives/gtk-devel-list/2010-March/msg00113.html
-
---- gtk/gtkentry.c.orig	2010-03-17 13:45:47.000000000 +0000
+--- gtk/gtkentry.c.orig	2010-05-02 03:14:28.000000000 +0000
 +++ gtk/gtkentry.c
-@@ -6661,8 +6661,11 @@ gtk_entry_set_buffer (GtkEntry       *en
+@@ -6712,8 +6712,11 @@ gtk_entry_set_buffer (GtkEntry       *en
    g_object_notify (obj, "invisible-char-set");
    g_object_thaw_notify (obj);
  
@@ -17,4 +15,4 @@ http://mail.gnome.org/archives/gtk-devel-list/2010-March/msg00113.html
 +    }
  }
  
- 
+ /**
