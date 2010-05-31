@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.13 2009/12/30 17:10:32 tron Exp $
+# $NetBSD: xorg,v 1.14 2010/05/31 21:20:02 wiz Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -249,8 +249,6 @@ include/X11/extensions/XKBui.h
 include/X11/extensions/XKM.h
 include/X11/extensions/XKMformat.h
 include/X11/extensions/XResproto.h
-include/X11/extensions/Xevie.h
-include/X11/extensions/Xeviestr.h
 include/X11/extensions/Xinerama.h
 include/X11/extensions/XvMClib.h
 include/X11/extensions/damageproto.h
@@ -264,19 +262,11 @@ include/X11/extensions/panoramiXext.h
 include/X11/extensions/panoramiXproto.h
 include/X11/extensions/panoramiXwrap.h
 include/X11/extensions/record.h
-include/X11/extensions/recordstr.h
 include/X11/extensions/scrnsaver.h
 include/X11/extensions/xevieplaceholder.h
-include/X11/extensions/xf86bigfont.h
-include/X11/extensions/xf86bigfstr.h
-include/X11/extensions/xf86dga.h
-include/X11/extensions/xf86dga1.h
-include/X11/extensions/xf86dga1str.h
-include/X11/extensions/xf86dgastr.h
 include/X11/extensions/xf86misc.h
 include/X11/extensions/xf86mscstr.h
 include/X11/extensions/xf86vmode.h
-include/X11/extensions/xf86vmstr.h
 include/X11/extensions/xtrapbits.h
 include/X11/extensions/xtrapddmi.h
 include/X11/extensions/xtrapdi.h
@@ -460,13 +450,6 @@ lib/libXxf86misc.dylib
 lib/libXxf86vm.1.0.0.dylib
 lib/libXxf86vm.1.dylib
 lib/libXxf86vm.dylib
-lib/libXxf86dga.a
-lib/libXxf86dga.so
-lib/libXxf86dga.so.1
-lib/libXxf86dga.so.1.0
-lib/libXxf86dga.so.1.1
-lib/libXxf86dga.so.2
-lib/libXxf86dga.so.2.0
 lib/libXxf86misc.a
 lib/libXxf86misc.so
 lib/libXxf86misc.so.1
@@ -540,6 +523,8 @@ lib/libxkbui.so.1
 lib/libxkbui.so.1.0
 lib/libxkbui.so.2
 lib/libxkbui.so.2.0
+lib/pkgconfig/xaw6.pc
+lib/pkgconfig/xaw7.pc
 lib/pkgconfig/xfontcache.pc
 lib/pkgconfig/xi.pc
 lib/pkgconfig/xkbfile.pc
@@ -547,6 +532,5 @@ lib/pkgconfig/xkbui.pc
 lib/pkgconfig/xp.pc
 lib/pkgconfig/xprintapputil.pc
 lib/pkgconfig/xvmc.pc
-lib/pkgconfig/xxf86dga.pc
 lib/pkgconfig/xxf86misc.pc
 lib/pkgconfig/xxf86vm.pc
