@@ -1,18 +1,23 @@
-# $NetBSD: xfree.MesaLib,v 1.5 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: xfree.MesaLib,v 1.6 2010/05/31 21:20:02 wiz Exp $
 #
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
 include/GL/GLwMDrawAP.h
 include/GL/gl.h
+include/GL/gl_mangle.h
 include/GL/glext.h
 include/GL/glx.h
+include/GL/glx_mangle.h
 include/GL/glxext.h
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
 include/GL/glxtokens.h
 include/GL/osmesa.h
+include/GL/xmesa.h
+include/GL/xmesa_x.h
+include/GL/xmesa_xf86.h
 lib/libGL.a
 lib/libGL.so
 lib/libGL.so.1
@@ -37,3 +42,5 @@ lib/libOSMesa.so.6.5.3
 lib/libOSMesa.dylib
 lib/libOSMesa.4.dylib
 lib/libOSMesa.4.0.dylib
+lib/pkgconfig/gl.pc
+lib/pkgconfig/glw.pc
