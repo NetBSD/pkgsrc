@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
+$NetBSD: patch-ak,v 1.6 2010/05/31 17:30:36 drochner Exp $
 
---- configure.in.orig	2009-10-07 15:29:47.000000000 +0200
-+++ configure.in	2009-11-22 15:18:00.124347084 +0100
-@@ -835,7 +835,7 @@
+--- configure.in.orig	2010-05-02 23:58:58.000000000 +0000
++++ configure.in
+@@ -846,7 +846,7 @@ int main (int argc, char **argv)
  AC_MSG_RESULT($g_have_gnuc_visibility)
  AM_CONDITIONAL(HAVE_GNUC_VISIBILITY, [test x$g_have_gnuc_visibility = xyes])
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
  #else
  # include "error: this is not Sun Studio."
-@@ -1023,10 +1023,22 @@
+@@ -1043,10 +1043,22 @@ fi
  
  case $host in
    *-*-solaris* )
@@ -38,7 +38,7 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
  esac
  
  dnl
-@@ -1379,11 +1391,12 @@
+@@ -1399,11 +1411,12 @@ if test x"$glib_native_win32" = xyes; th
    G_MODULE_LDFLAGS=
  else
    export SED
@@ -52,7 +52,7 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1444,7 +1457,7 @@
+@@ -1464,7 +1477,7 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  dnl *** check for OSF1/5.0 RTLD_GLOBAL brokenness
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -61,7 +61,7 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
  		-export-dynamic -o plugin.o plugin.c 2>&1 >/dev/null
  	AC_CACHE_CHECK([for RTLD_GLOBAL brokenness],
  		glib_cv_rtldglobal_broken,[
-@@ -1508,6 +1521,38 @@
+@@ -1528,6 +1541,38 @@ dnl *** check for having dlerror()
  		[G_MODULE_HAVE_DLERROR=0])
  	LIBS="$LIBS_orig"
  fi
@@ -100,7 +100,7 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1518,7 +1563,7 @@
+@@ -1538,7 +1583,7 @@ fi
  
  AC_MSG_CHECKING(for the suffix of module shared libraries)
  export SED
@@ -109,7 +109,7 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -1537,6 +1582,8 @@
+@@ -1557,6 +1602,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
  AC_SUBST(G_MODULE_LDFLAGS)
  AC_SUBST(G_MODULE_HAVE_DLERROR)
  AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
@@ -118,7 +118,7 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -1925,22 +1972,8 @@
+@@ -1945,22 +1992,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -143,14 +143,3 @@ $NetBSD: patch-ak,v 1.5 2009/11/22 16:51:17 sno Exp $
           ;;
      esac 
    fi
-@@ -2336,6 +2369,10 @@
-   *) 	 
-     G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS" 	 
-     ;;
-+  *-*-netbsd*)
-+    # On NetBSD, pkgsrc's libtool does the right thing.
-+    G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
-+    ;;
- esac
- 
- AC_DEFINE_UNQUOTED(G_THREAD_SOURCE,"gthread-$have_threads.c",
