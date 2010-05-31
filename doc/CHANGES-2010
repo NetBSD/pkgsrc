@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2068 2010/05/31 20:21:19 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2069 2010/05/31 20:38:26 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2715,3 +2715,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ap2-auth-mellon to 0.2.7 [manu 2010-05-30]
 	Updated x11/gtk2 to 2.20.1 [drochner 2010-05-31]
 	Updated devel/fossil to 201005211.62104 [wiz 2010-05-31]
+	Updated security/py-paramiko to 1.7.6 [gls 2010-05-31]
