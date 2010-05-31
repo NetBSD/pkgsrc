@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.1 2010/04/20 17:43:50 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/05/31 17:30:36 drochner Exp $
 #
 # used by devel/glib2/Makefile
 # used by sysutils/gio-fam/Makefile
 
 # When updating this package, please apply patch-ak to configure.in and
 # then run a matching version of autoconf to regen patch-aa.
-DISTNAME=		glib-2.22.5
+DISTNAME=		glib-2.24.1
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		# empty; redefined in Makefile
-MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.22/ \
-			${MASTER_SITE_GNOME:=sources/glib/2.22/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.24/ \
+			${MASTER_SITE_GNOME:=sources/glib/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
