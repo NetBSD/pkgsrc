@@ -1,9 +1,0 @@
-$NetBSD: patch-cd,v 1.1 2009/12/01 08:49:46 manu Exp $
---- lasso/xml/private.h.orig	2009-11-30 19:54:53.000000000 +0100
-+++ lasso/xml/private.h	2009-11-30 19:55:04.000000000 +0100
-@@ -214,4 +214,5 @@
- 
- char * lasso_get_relaystate_from_query(const char *query);
-+char * lasso_url_add_parameters(char *url, gboolean free, ...);
- 
- #ifdef __cplusplus
