@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/05/31 10:08:22 pettai Exp $
+
+--- configure.orig	2010-01-03 17:46:46.000000000 +0100
++++ configure	2010-01-03 17:47:01.000000000 +0100
+@@ -1793,7 +1793,7 @@
+ 
+ 
+ 
+-echo $* | fgrep -e '--sysconfdir' > /dev/null 2>&1 || sysconfdir='/etc'
++#echo $* | fgrep -e '--sysconfdir' > /dev/null 2>&1 || sysconfdir='/etc'
+ 
+ ac_ext=c
+ ac_cpp='$CPP $CPPFLAGS'
