@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9335 2010/06/01 05:28:36 obache Exp $
+$NetBSD: TODO,v 1.9336 2010/06/01 13:15:07 ghen Exp $
 
 Suggested new packages
 ======================
@@ -1481,7 +1481,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbevd-1.1.0 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
-	o xkeyboard-config-1.9
 	o xli-2006.11.10
 	o xlog-2.0.3
 	o xlogo-1.0.2
