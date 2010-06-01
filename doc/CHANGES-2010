@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2073 2010/06/01 06:15:56 agc Exp $
+$NetBSD: CHANGES-2010,v 1.2074 2010/06/01 11:01:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2719,3 +2719,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/x11-links to 0.49 [wiz 2010-05-31]
 	Updated textproc/py-enchant to 1.6.2 [obache 2010-06-01]
 	Updated security/netpgp to 20100601 [agc 2010-06-01]
+	Updated devel/SDL_gfx to 2.0.21 [adam 2010-06-01]
