@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2075 2010/06/01 13:15:07 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.2076 2010/06/01 21:13:17 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2721,3 +2721,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/netpgp to 20100601 [agc 2010-06-01]
 	Updated devel/SDL_gfx to 2.0.21 [adam 2010-06-01]
 	Updated x11/xkeyboard-config to 1.9 [ghen 2010-06-01]
+	Updated shells/lshell to 0.9.12 [gls 2010-06-01]
