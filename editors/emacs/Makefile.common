@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2010/05/05 15:17:50 roy Exp $
+# $NetBSD: Makefile.common,v 1.27 2010/06/01 21:44:54 minskim Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -7,7 +7,7 @@ DISTNAME=	emacs-${EMACS_VERSION}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
-MAINTAINER=	markd@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
