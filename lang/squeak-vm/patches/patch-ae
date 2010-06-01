@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2010/06/01 21:55:32 markd Exp $
+
+Make pulseaudio optional.
+
+--- unix/vm-sound-pulse/config.cmake.orig	2009-09-14 21:09:24.000000000 +0000
++++ unix/vm-sound-pulse/config.cmake
+@@ -1 +1,7 @@
+ PLUGIN_REQUIRE_LIBRARY (PULSE pulse-simple)
++
++CHECK_LIBRARY_EXISTS (pulse-simple pa_stream_new "" HAVE_PULSE)
++IF (NOT HAVE_PULSE)
++  PLUGIN_DISABLE ()
++ENDIF ()
++

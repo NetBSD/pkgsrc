@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2010/06/01 21:55:32 markd Exp $
+
+Make dbus optional.
+
+--- unix/plugins/DBusPlugin/config.cmake.orig	2009-08-26 18:38:47.000000000 +0000
++++ unix/plugins/DBusPlugin/config.cmake
+@@ -1 +1,7 @@
+ PLUGIN_REQUIRE_PACKAGE (DBUS1 dbus-1)
++
++CHECK_LIBRARY_EXISTS (dbus-1 dbus_bus_get "" HAVE_DBUS)
++IF (NOT HAVE_DBUS)
++  PLUGIN_DISABLE ()
++ENDIF ()
++

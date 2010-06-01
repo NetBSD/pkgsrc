@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/11 00:58:19 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/01 21:55:32 markd Exp $
 bin/squeak
 bin/squeak.sh
 lib/squeak/${PKGVERSION}/so.AioPlugin
 lib/squeak/${PKGVERSION}/so.B3DAcceleratorPlugin
 lib/squeak/${PKGVERSION}/so.ClipboardExtendedPlugin
+${PLIST.pulse}lib/squeak/${PKGVERSION}/so.DBusPlugin
 lib/squeak/${PKGVERSION}/so.FileCopyPlugin
 lib/squeak/${PKGVERSION}/so.HostWindowPlugin
 lib/squeak/${PKGVERSION}/so.ImmX11Plugin
@@ -25,5 +26,6 @@ ${PLIST.nas}lib/squeak/${PKGVERSION}/so.vm-sound-NAS
 lib/squeak/${PKGVERSION}/so.vm-sound-OSS
 lib/squeak/${PKGVERSION}/so.vm-sound-custom
 lib/squeak/${PKGVERSION}/so.vm-sound-null
+${PLIST.pulse}lib/squeak/${PKGVERSION}/so.vm-sound-pulse
 lib/squeak/${PKGVERSION}/squeakvm
 man/man1/squeak.1
