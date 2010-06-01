@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2010/06/01 05:28:11 obache Exp $
+
+avoid extra download of distribute-0.6.10.tar.gz.
+
+--- setup.py.orig	2010-05-29 04:14:59.000000000 +0000
++++ setup.py
+@@ -6,8 +6,8 @@
+ #
+ 
+ 
+-import distribute_setup
+-distribute_setup.use_setuptools()
++#import distribute_setup
++#distribute_setup.use_setuptools()
+ from setuptools import setup, find_packages, Extension
+ 
+ import sys
