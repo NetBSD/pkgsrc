@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.383 2010/05/29 06:21:29 obache Exp $
+# $NetBSD: Makefile,v 1.384 2010/06/01 11:01:27 drochner Exp $
 #
 
 COMMENT=	Security tools
@@ -106,6 +106,7 @@ SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libfwbuilder21
 SUBDIR+=	libgcrypt
+SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgpg-error
 SUBDIR+=	libidea
 SUBDIR+=	libident
