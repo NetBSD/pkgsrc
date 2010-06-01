@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2010/05/31 17:34:33 drochner Exp $
+# $NetBSD: Makefile,v 1.202 2010/06/01 13:26:31 drochner Exp $
 
 DISTNAME=		gtk+-2.20.1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -23,12 +23,13 @@ CONFLICTS+=		gail-[0-9]*
 SUPERSEDES=		gail-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config bash
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 
 GNU_CONFIGURE=		 yes
+# XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 # Work around build problems, disable unstable PAPI, PR #41608:
