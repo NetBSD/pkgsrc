@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2008/10/15 08:52:42 bjs Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/01 13:14:25 ghen Exp $
 #
 
-DISTNAME=	xkeyboard-config-1.4
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_XORG:=data/}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		xkeyboard-config-1.9
+CATEGORIES=		x11
+MASTER_SITES=		http://people.freedesktop.org/~svu/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/XKeyboardConfig
-COMMENT=	X Keyboard Configuration Database
+MAINTAINER=		bjs@NetBSD.org
+HOMEPAGE=		http://www.freedesktop.org/wiki/Software/XKeyboardConfig
+COMMENT=		X Keyboard Configuration Database
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,6 +21,7 @@ MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt
+PKGCONFIG_OVERRIDE+=	xkeyboard-config.pc.in
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		XKBCOMPDIR
