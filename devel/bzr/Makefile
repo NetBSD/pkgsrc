@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/02/16 11:27:27 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/06/01 13:27:59 tnn Exp $
 
 DISTNAME=		bzr-${VER}
 CATEGORIES=		devel scm
@@ -38,9 +38,9 @@ post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} tools/generate_docs.py man
 
 do-test:
-#	XXX shouldn't HOME=FAKEHOME already be set?
-	HOME=${FAKEHOMEDIR}; cd ${WRKSRC} && ./bzr selftest -v
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} && ./bzr selftest -v
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
