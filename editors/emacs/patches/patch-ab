@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.28 2009/10/07 10:56:40 obache Exp $
+$NetBSD: patch-ab,v 1.29 2010/06/01 21:44:54 minskim Exp $
 
---- configure.orig	2009-07-30 00:12:00.000000000 +0900
-+++ configure
-@@ -1856,7 +1856,7 @@ archlibdir='${libexecdir}/emacs/${versio
+--- work/emacs-23.2/configure.orig	2010-05-08 12:10:16.000000000 +0900
++++ configure	2010-05-12 20:32:23.000000000 +0900
+@@ -1995,7 +1995,7 @@
  docdir='${datadir}/emacs/${version}/etc'
  gamedir='${localstatedir}/games/emacs'
  
@@ -11,10 +11,10 @@ $NetBSD: patch-ab,v 1.28 2009/10/07 10:56:40 obache Exp $
  
  
  
-@@ -2406,6 +2406,15 @@ case "${canonical}" in
+@@ -2652,6 +2652,14 @@
+       amd64-*-freebsd*|x86_64-*-freebsd*) machine=amdx86-64 ;;
      esac
    ;;
- 
 +  ## DragonFly ports
 +  *-*-dragonfly*)
 +    opsys=dragonfly
@@ -23,32 +23,17 @@ $NetBSD: patch-ab,v 1.28 2009/10/07 10:56:40 obache Exp $
 +      amd64-*-dragonfly*|x86_64-*-dragonfly*) machine=amdx86-64 ;;
 +    esac
 +  ;;
-+
+ 
    ## FreeBSD kernel + glibc based userland
    *-*-kfreebsd*gnu* )
-     opsys=gnu-kfreebsd
-@@ -2434,9 +2443,9 @@ _ACEOF
-     case "${canonical}" in
-       alpha*-*-netbsd*)	machine=alpha ;;
-       i[3456]86-*-netbsd*) machine=intel386 ;;
--      mips-*-netbsd*)	machine=pmax ;;
--      mipsel-*-netbsd*)	machine=pmax ;;
--      mipseb-*-netbsd*)	machine=pmax ;;
-+      mips-*-netbsd*)	machine=mips ;;
-+      mipsel-*-netbsd*)	machine=mips ;;
-+      mipseb-*-netbsd*)	machine=mips ;;
-       powerpc-*-netbsd*) machine=macppc ;;
-       sparc*-*-netbsd*)	machine=sparc ;;
-       vax-*-netbsd*)	machine=vax ;;
-@@ -9408,9 +9417,9 @@ if test "${HAVE_NS}" = yes; then
+@@ -9849,9 +9857,9 @@
    window_system=nextstep
    with_xft=no
    # set up packaging dirs
--  exec_prefix=${ns_appbindir}
--  libexecdir=${ns_appbindir}/libexec
-   if test "${EN_NS_SELF_CONTAINED}" = yes; then
-+     exec_prefix=${ns_appbindir}
-+     libexecdir=${ns_appbindir}/libexec
++  if test "${EN_NS_SELF_CONTAINED}" = yes; then
+   exec_prefix=${ns_appbindir}
+   libexecdir=${ns_appbindir}/libexec
+-  if test "${EN_NS_SELF_CONTAINED}" = yes; then
       prefix=${ns_appresdir}
    fi
  fi
