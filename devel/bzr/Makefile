@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/06/01 13:27:59 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2010/06/01 13:31:40 tnn Exp $
 
 DISTNAME=		bzr-${VER}
 CATEGORIES=		devel scm
@@ -38,7 +38,7 @@ post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} tools/generate_docs.py man
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} && ./bzr selftest -v
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./bzr selftest -v
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
