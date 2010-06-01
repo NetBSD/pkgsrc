@@ -1,19 +1,41 @@
-# $NetBSD: Makefile,v 1.2 2009/02/16 19:38:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/01 05:28:11 obache Exp $
 #
 
-DISTNAME=	pyenchant-1.4.2
+DISTNAME=	pyenchant-1.6.2
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyenchant/}
+MASTER_SITES=	http://pypi.python.org/packages/source/p/pyenchant/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pyenchant.sourceforge.net/
+HOMEPAGE=	http://www.rfk.id.au/software/pyenchant/
 COMMENT=	Spellchecking library for Python
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	c
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYPACKAGE} && ${PYPACKAGE} == "python24"
+DEPENDS+=	${PYPKGPREFIX}-ctype-[0-9]*:../../devel/py-ctype
+.endif
+DEPENDS+=	enchant-[0-9]*:../../textproc/enchant
+
+USE_LANGUAGES=	# empty
+
+FIND_PREFIX:=	ENCHANT_DIR=enchant
+.include "../../mk/find-prefix.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+DLEXT.dylib=	dylib
+DLEXT=		${DLEXT.${_OPSYS_SHLIB_TYPE}:Uso}
+PYENCHANT_LIBRARY_PATH=	${ENCHANT_DIR}/lib/libenchant.${DLEXT}
+
+# fix the path of libenchant with patch-ab.
+SUBST_CLASSES+=		dlpath
+SUBST_STAGE.dlpath=	pre-configure
+SUBST_FILES.dlpath=	enchant/_enchant.py
+SUBST_VARS.dlpath=	PYENCHANT_LIBRARY_PATH
 
 .include "../../lang/python/egg.mk"
-.include "../../textproc/enchant/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
