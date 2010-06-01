@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2010/06/01 05:28:11 obache Exp $
+
+fix path of libenchant.
+
+--- enchant/_enchant.py.orig	2010-03-06 07:27:42.000000000 +0000
++++ enchant/_enchant.py
+@@ -67,6 +67,7 @@ if sys.platform == "win32":
+ 
+ def _e_path_possibilities():
+     yield os.environ.get("PYENCHANT_LIBRARY_PATH")
++    yield "@PYENCHANT_LIBRARY_PATH@" 
+     yield find_library("enchant")
+     yield find_library("libenchant")
+     yield find_library("libenchant-1")
