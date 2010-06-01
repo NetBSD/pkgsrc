@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/06/01 10:59:55 adam Exp $
 include/SDL/SDL_framerate.h
 include/SDL/SDL_gfxBlitFunc.h
 include/SDL/SDL_gfxPrimitives.h
@@ -11,8 +11,8 @@ share/doc/SDL_gfx/Screenshots/SDL_gfxPrimitives-thumb.jpg
 share/doc/SDL_gfx/Screenshots/SDL_gfxPrimitives.jpg
 share/doc/SDL_gfx/Screenshots/SDL_rotozoom-thumb.jpg
 share/doc/SDL_gfx/Screenshots/SDL_rotozoom.jpg
-share/doc/SDL_gfx/blank.gif
 share/doc/SDL_gfx/framerate-thumb.png
 share/doc/SDL_gfx/framerate.fig
 share/doc/SDL_gfx/framerate.png
+share/doc/SDL_gfx/html.doxyfile
 share/doc/SDL_gfx/index.html
