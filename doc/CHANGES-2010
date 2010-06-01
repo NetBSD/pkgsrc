@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2078 2010/06/01 21:42:40 markd Exp $
+$NetBSD: CHANGES-2010,v 1.2079 2010/06/01 21:48:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2725,3 +2725,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-sphinx to 0.6.6 [markd 2010-06-01]
 	Added devel/kdevplatform version 1.0.0 [markd 2010-06-01]
 	Added devel/kdevelop4 version 4.0.0 [markd 2010-06-01]
+	Updated editors/emacs to 23.2 [minskim 2010-06-01]
+	Updated editors/emacs-nox11 to 23.2 [minskim 2010-06-01]
