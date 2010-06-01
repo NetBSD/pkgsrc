@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9334 2010/05/31 19:39:45 dholland Exp $
+$NetBSD: TODO,v 1.9335 2010/06/01 05:28:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -1159,7 +1159,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.17
 	o py-cups-1.9.50
 	o py-django-1.2
-	o py-enchant-1.6.2 [pkg/43384]
 	o py-fpconst-0.7.2 [pkg/42556]
 	o py-game-1.9.1
 	o py-gnome2-desktop-2.30.0 [GNOME 2.30]
