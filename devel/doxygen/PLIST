@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/01/20 11:39:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/06/02 04:17:02 adam Exp $
 bin/doxygen
 bin/doxytag
 man/man1/doxygen.1
@@ -237,6 +237,9 @@ share/doc/doxygen/examples/diagrams/html/diagrams__d_8h__incl.md5
 share/doc/doxygen/examples/diagrams/html/diagrams__d_8h__incl.png
 share/doc/doxygen/examples/diagrams/html/diagrams__d_8h_source.html
 share/doc/doxygen/examples/diagrams/html/diagrams__e_8h.html
+share/doc/doxygen/examples/diagrams/html/diagrams__e_8h__dep__incl.map
+share/doc/doxygen/examples/diagrams/html/diagrams__e_8h__dep__incl.md5
+share/doc/doxygen/examples/diagrams/html/diagrams__e_8h__dep__incl.png
 share/doc/doxygen/examples/diagrams/html/diagrams__e_8h__incl.map
 share/doc/doxygen/examples/diagrams/html/diagrams__e_8h__incl.md5
 share/doc/doxygen/examples/diagrams/html/diagrams__e_8h__incl.png
@@ -286,10 +289,10 @@ share/doc/doxygen/examples/diagrams_e.h
 share/doc/doxygen/examples/docstring.cfg
 share/doc/doxygen/examples/docstring.py
 share/doc/doxygen/examples/docstring/html/annotated.html
-${PLIST.cs}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass-members.html
-${PLIST.cs}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass.html
 ${PLIST.ci}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class-members.html
 ${PLIST.ci}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class.html
+${PLIST.cs}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass-members.html
+${PLIST.cs}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass.html
 share/doc/doxygen/examples/docstring/html/classes.html
 share/doc/doxygen/examples/docstring/html/docstring_8py.html
 share/doc/doxygen/examples/docstring/html/doxygen.css
@@ -362,7 +365,7 @@ share/doc/doxygen/examples/example/html/class_test.html
 share/doc/doxygen/examples/example/html/classes.html
 share/doc/doxygen/examples/example/html/doxygen.css
 share/doc/doxygen/examples/example/html/doxygen.png
-share/doc/doxygen/examples/example/html/example__test_8cpp-example.html
+share/doc/doxygen/examples/example/html/example__test.cpp-example.html
 share/doc/doxygen/examples/example/html/examples.html
 share/doc/doxygen/examples/example/html/functions.html
 share/doc/doxygen/examples/example/html/functions_func.html
@@ -739,10 +742,10 @@ share/doc/doxygen/examples/pyexample.cfg
 share/doc/doxygen/examples/pyexample.py
 share/doc/doxygen/examples/pyexample/html/annotated.html
 share/doc/doxygen/examples/pyexample/html/classes.html
-${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
-${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
 ${PLIST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class-members.html
 ${PLIST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class.html
+${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
+${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
 share/doc/doxygen/examples/pyexample/html/doxygen.css
 share/doc/doxygen/examples/pyexample/html/doxygen.png
 share/doc/doxygen/examples/pyexample/html/functions.html
