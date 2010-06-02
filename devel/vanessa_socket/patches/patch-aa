@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2006/01/15 17:32:52 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/02 12:43:37 adam Exp $
 
---- vanessa_socket_pipe/vanessa_socket_pipe.c.orig	2006-01-15 17:28:37.000000000 +0000
+--- vanessa_socket_pipe/vanessa_socket_pipe.c.orig	2009-09-30 02:23:15.000000000 +0000
 +++ vanessa_socket_pipe/vanessa_socket_pipe.c
 @@ -53,8 +53,6 @@ int main (int argc, char **argv){
-   int bytes_read=0;
+   size_t bytes_read=0;
    int timeout=0;
  
 -  extern int errno;
