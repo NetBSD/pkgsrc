@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2010/02/26 10:28:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2010/06/02 13:11:00 adam Exp $
 
 DISTNAME=	squidGuard-1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squidguard.org/Downloads/ \
 		http://www.squidguard.org/Downloads/Patches/1.4/
-DISTFILES=	${DEFAULT_DISTFILES} squidGuard-1.4-patch-20091015.tar.gz
+DISTFILES=	${DEFAULT_DISTFILES} \
+		squidGuard-1.4-patch-20091015.tar.gz \
+		squidGuard-1.4-patch-20091019.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squidguard.org/
@@ -16,11 +18,11 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BDB_ACCEPTED=		db4
+BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		lex yacc perl
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db4}/include/db4
-CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db4}/lib/db4
+CONFIGURE_ARGS+=	--with-db-inc=${BDBBASE}/include/${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-db-lib=${BDBBASE}/lib/${BDB_TYPE}
 CONFIGURE_ARGS+=	--with-sg-config=${PKG_SYSCONFDIR}/squidGuard.conf
 CONFIGURE_ARGS+=	--with-sg-logdir=${LOGDIR}
 CONFIGURE_ARGS+=	--with-sg-dbhome=${DBDIR}
@@ -50,8 +52,9 @@ INSTALLATION_DIRS+=	bin ${EGDIR}
 CGIBINDIR?=		${PREFIX}/libexec/cgi-bin/
 
 pre-patch:
-	${CP} ${WRKDIR}/squidGuard-1.4-patch-20091015/sgLog.c \
-		${WRKSRC}/src
+	${CP} ${WRKDIR}/squidGuard-1.4-patch-20091015/sgLog.c ${WRKSRC}/src
+	${CP} ${WRKDIR}/squidGuard-1.4-20091019/sg.h.in ${WRKSRC}/src
+	${CP} ${WRKDIR}/squidGuard-1.4-20091019/sgDiv.c.in ${WRKSRC}/src
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/squidGuard ${DESTDIR}${PREFIX}/bin
@@ -64,5 +67,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/squidGuard.cgi \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
+BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
