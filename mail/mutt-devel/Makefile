@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2009/09/13 22:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2010/06/02 13:15:48 adam Exp $
 
 DISTNAME=		mutt-1.5.20
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -20,14 +20,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
-
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}		\
-			--with-docdir=${PREFIX}/share/doc/mutt		\
-			--without-included-gettext			\
-			--enable-external-dotlock			\
-			--enable-pop					\
-			--enable-imap
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/mutt
+CONFIGURE_ARGS+=	--without-included-gettext
+CONFIGURE_ARGS+=	--enable-external-dotlock
+CONFIGURE_ARGS+=	--enable-pop
+CONFIGURE_ARGS+=	--enable-imap
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 # Force sendmail to /usr/sbin to avoid postfix's
