@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+$NetBSD: MESSAGE,v 1.2 2010/06/02 23:27:56 jym Exp $
 
 For pkgsrc installations, DAViCal's package is installed in non-default
 locations:
@@ -9,7 +9,9 @@ locations:
 
 To complete the installation of DAViCal, follow these steps:
 
-1. Create DAViCal's app (application) and dba (database admin) acounts:
+1. Create DAViCal's app (application) and dba (database admin) acounts.
+   Depending on your PostgreSQL setup, this could be done in different
+   ways, like:
 
 	$ su pgsql
 	$ createuser -D -R -S --pwprompt davical_app
@@ -17,27 +19,28 @@ To complete the installation of DAViCal, follow these steps:
 	$ createuser -D -R -S --pwprompt davical_dba
 	<enter davical_dba passwd>
 
-2. Edit pg_hba.conf file to add the davical_dba and davical_app users
+   Consider editing pg_hba.conf file to grant access for both accounts
+   to the soon to be created 'davical' database.
 
-	local   davical     davical_app   md5
-	local   davical     davical_dba   md5
+2. Adapt DAViCal's configuration files to your setup:
 
-   then restart pgsql.
+	${PKG_SYSCONFDIR}/administration.yml	(used for davical_dba)
+	${PKG_SYSCONFDIR}/config.php		(used for davical_app)
 
-3. Create DAViCal's database
+   Look for 'pg_connect', 'system_name', 'admin_email', and 'default_locale'
+   in config.php.
 
-       su pgsql ${DAVICALDIR}/dba/create-database.sh
+3. To ease DAViCal's database creation, you can use the following script:
 
-   The script will output the password of 'admin' account for DAViCal.
-   Keep it in mind, it will be used at step 6.
+	${DAVICALDIR}/dba/create-database.sh
 
-4. Adapt DAViCal configuration file to your setup:
+   To work properly, it needs to be executed with a PostgreSQL's superuser
+   account, and requires access to administration.yml file (see step 2.).
 
-	${PKG_SYSCONFDIR}/config.php
-	
-   Look for 'pg_connect', 'system_name', 'admin_email', and 'default_locale'.
+   At the end, the script will output the password of the www 'admin'
+   account for DAViCal. Keep it in mind, it will be used at step 5.
 
-5. You will need to make DAViCal accessible through your HTTP server.
+4. You will need to make DAViCal accessible through your HTTP server.
    If you are running Apache and ap-php, you can use the following file:
 
 	${PKG_SYSCONFDIR}/davical.conf
@@ -48,9 +51,8 @@ To complete the installation of DAViCal, follow these steps:
 
    then restart Apache.
 
-6. You should now be able to access DAViCal through the URL configured
-   within DAViCal's configuration file. At login page, enter the following
-   credentials:
+5. You should now be able to access DAViCal through the URL configured
+   at step 4. At login page, enter the following credentials:
 
 	Login: admin
 	Password: <the one obtained in step 3.>
@@ -58,6 +60,6 @@ To complete the installation of DAViCal, follow these steps:
    Validate, then follow the steps to create user accounts. See DAViCal
    online documentation for further information:
 
-	http://www.davical.org/
+	${HOMEPAGE}
 
 ===========================================================================
