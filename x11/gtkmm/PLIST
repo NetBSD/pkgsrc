@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2009/10/22 08:22:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2010/06/02 16:45:41 adam Exp $
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
 include/atkmm-1.6/atkmm/component.h
@@ -111,6 +111,7 @@ include/gtkmm-2.4/gtkmm/aspectframe.h
 include/gtkmm-2.4/gtkmm/assistant.h
 include/gtkmm-2.4/gtkmm/base.h
 include/gtkmm-2.4/gtkmm/bin.h
+include/gtkmm-2.4/gtkmm/border.h
 include/gtkmm-2.4/gtkmm/box.h
 include/gtkmm-2.4/gtkmm/builder.h
 include/gtkmm-2.4/gtkmm/button.h
@@ -125,6 +126,7 @@ include/gtkmm-2.4/gtkmm/cellrenderercombo.h
 include/gtkmm-2.4/gtkmm/cellrendererpixbuf.h
 include/gtkmm-2.4/gtkmm/cellrendererprogress.h
 include/gtkmm-2.4/gtkmm/cellrendererspin.h
+include/gtkmm-2.4/gtkmm/cellrendererspinner.h
 include/gtkmm-2.4/gtkmm/cellrenderertext.h
 include/gtkmm-2.4/gtkmm/cellrenderertoggle.h
 include/gtkmm-2.4/gtkmm/cellview.h
@@ -144,6 +146,7 @@ include/gtkmm-2.4/gtkmm/dialog.h
 include/gtkmm-2.4/gtkmm/drawingarea.h
 include/gtkmm-2.4/gtkmm/editable.h
 include/gtkmm-2.4/gtkmm/entry.h
+include/gtkmm-2.4/gtkmm/entrybuffer.h
 include/gtkmm-2.4/gtkmm/entrycompletion.h
 include/gtkmm-2.4/gtkmm/enums.h
 include/gtkmm-2.4/gtkmm/eventbox.h
@@ -187,6 +190,7 @@ include/gtkmm-2.4/gtkmm/messagedialog.h
 include/gtkmm-2.4/gtkmm/misc.h
 include/gtkmm-2.4/gtkmm/notebook.h
 include/gtkmm-2.4/gtkmm/object.h
+include/gtkmm-2.4/gtkmm/offscreenwindow.h
 include/gtkmm-2.4/gtkmm/optionmenu.h
 include/gtkmm-2.4/gtkmm/orientable.h
 include/gtkmm-2.4/gtkmm/pagesetup.h
@@ -226,6 +230,7 @@ include/gtkmm-2.4/gtkmm/private/cellrenderercombo_p.h
 include/gtkmm-2.4/gtkmm/private/cellrendererpixbuf_p.h
 include/gtkmm-2.4/gtkmm/private/cellrendererprogress_p.h
 include/gtkmm-2.4/gtkmm/private/cellrendererspin_p.h
+include/gtkmm-2.4/gtkmm/private/cellrendererspinner_p.h
 include/gtkmm-2.4/gtkmm/private/cellrenderertext_p.h
 include/gtkmm-2.4/gtkmm/private/cellrenderertoggle_p.h
 include/gtkmm-2.4/gtkmm/private/cellview_p.h
@@ -243,6 +248,7 @@ include/gtkmm-2.4/gtkmm/private/dialog_p.h
 include/gtkmm-2.4/gtkmm/private/drawingarea_p.h
 include/gtkmm-2.4/gtkmm/private/editable_p.h
 include/gtkmm-2.4/gtkmm/private/entry_p.h
+include/gtkmm-2.4/gtkmm/private/entrybuffer_p.h
 include/gtkmm-2.4/gtkmm/private/entrycompletion_p.h
 include/gtkmm-2.4/gtkmm/private/enums_p.h
 include/gtkmm-2.4/gtkmm/private/eventbox_p.h
@@ -284,6 +290,7 @@ include/gtkmm-2.4/gtkmm/private/messagedialog_p.h
 include/gtkmm-2.4/gtkmm/private/misc_p.h
 include/gtkmm-2.4/gtkmm/private/notebook_p.h
 include/gtkmm-2.4/gtkmm/private/object_p.h
+include/gtkmm-2.4/gtkmm/private/offscreenwindow_p.h
 include/gtkmm-2.4/gtkmm/private/optionmenu_p.h
 include/gtkmm-2.4/gtkmm/private/orientable_p.h
 include/gtkmm-2.4/gtkmm/private/pagesetup_p.h
@@ -326,6 +333,7 @@ include/gtkmm-2.4/gtkmm/private/settings_p.h
 include/gtkmm-2.4/gtkmm/private/sizegroup_p.h
 include/gtkmm-2.4/gtkmm/private/socket_p.h
 include/gtkmm-2.4/gtkmm/private/spinbutton_p.h
+include/gtkmm-2.4/gtkmm/private/spinner_p.h
 include/gtkmm-2.4/gtkmm/private/statusbar_p.h
 include/gtkmm-2.4/gtkmm/private/statusicon_p.h
 include/gtkmm-2.4/gtkmm/private/stockitem_p.h
@@ -347,6 +355,8 @@ include/gtkmm-2.4/gtkmm/private/toggletoolbutton_p.h
 include/gtkmm-2.4/gtkmm/private/toolbar_p.h
 include/gtkmm-2.4/gtkmm/private/toolbutton_p.h
 include/gtkmm-2.4/gtkmm/private/toolitem_p.h
+include/gtkmm-2.4/gtkmm/private/toolitemgroup_p.h
+include/gtkmm-2.4/gtkmm/private/toolpalette_p.h
 include/gtkmm-2.4/gtkmm/private/toolshell_p.h
 include/gtkmm-2.4/gtkmm/private/tooltip_p.h
 include/gtkmm-2.4/gtkmm/private/tooltips_p.h
@@ -398,6 +408,7 @@ include/gtkmm-2.4/gtkmm/settings.h
 include/gtkmm-2.4/gtkmm/sizegroup.h
 include/gtkmm-2.4/gtkmm/socket.h
 include/gtkmm-2.4/gtkmm/spinbutton.h
+include/gtkmm-2.4/gtkmm/spinner.h
 include/gtkmm-2.4/gtkmm/statusbar.h
 include/gtkmm-2.4/gtkmm/statusicon.h
 include/gtkmm-2.4/gtkmm/stock.h
@@ -422,6 +433,8 @@ include/gtkmm-2.4/gtkmm/toggletoolbutton.h
 include/gtkmm-2.4/gtkmm/toolbar.h
 include/gtkmm-2.4/gtkmm/toolbutton.h
 include/gtkmm-2.4/gtkmm/toolitem.h
+include/gtkmm-2.4/gtkmm/toolitemgroup.h
+include/gtkmm-2.4/gtkmm/toolpalette.h
 include/gtkmm-2.4/gtkmm/toolshell.h
 include/gtkmm-2.4/gtkmm/tooltip.h
 include/gtkmm-2.4/gtkmm/tooltips.h
@@ -683,6 +696,9 @@ share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererProgress__coll__graph
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererSpin-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererSpin.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererSpin__coll__graph.png
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererSpinner-members.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererSpinner.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererSpinner__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererText-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererText.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1CellRendererText__coll__graph.png
@@ -756,6 +772,9 @@ share/doc/gtkmm-2.4/reference/html/classGtk_1_1Editable.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Editable__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Entry-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Entry.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1EntryBuffer-members.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1EntryBuffer.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1EntryBuffer__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1EntryCompletion-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1EntryCompletion.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1EntryCompletion__coll__graph.png
@@ -956,6 +975,9 @@ share/doc/gtkmm-2.4/reference/html/classGtk_1_1Notebook__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Object-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Object.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Object__coll__graph.png
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1OffscreenWindow-members.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1OffscreenWindow.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1OffscreenWindow__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1OptionMenu-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1OptionMenu.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1OptionMenu__coll__graph.png
@@ -1103,6 +1125,9 @@ share/doc/gtkmm-2.4/reference/html/classGtk_1_1Socket__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1SpinButton-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1SpinButton.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1SpinButton__coll__graph.png
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1Spinner-members.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1Spinner.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1Spinner__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1StatusIcon-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1StatusIcon.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1StatusIcon__coll__graph.png
@@ -1168,7 +1193,13 @@ share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolButton.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolButton__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolItem-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolItem.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolItemGroup-members.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolItemGroup.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolItemGroup__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolItem__coll__graph.png
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolPalette-members.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolPalette.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolPalette__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolShell-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolShell.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ToolShell__coll__graph.png
@@ -1619,14 +1650,16 @@ share/doc/gtkmm-2.4/reference/html/pages.html
 share/doc/gtkmm-2.4/reference/html/progressbar1.png
 share/doc/gtkmm-2.4/reference/html/radiobutton1.png
 share/doc/gtkmm-2.4/reference/html/recentchooserdialog1.png
+share/doc/gtkmm-2.4/reference/html/since_1_3.html
+share/doc/gtkmm-2.4/reference/html/since_1_4.html
 share/doc/gtkmm-2.4/reference/html/since_1_9.html
 share/doc/gtkmm-2.4/reference/html/since_2_10.html
 share/doc/gtkmm-2.4/reference/html/since_2_12.html
-share/doc/gtkmm-2.4/reference/html/since_2_13.html
 share/doc/gtkmm-2.4/reference/html/since_2_14.html
 share/doc/gtkmm-2.4/reference/html/since_2_16.html
 share/doc/gtkmm-2.4/reference/html/since_2_18.html
 share/doc/gtkmm-2.4/reference/html/since_2_2.html
+share/doc/gtkmm-2.4/reference/html/since_2_20.html
 share/doc/gtkmm-2.4/reference/html/since_2_4.html
 share/doc/gtkmm-2.4/reference/html/since_2_6.html
 share/doc/gtkmm-2.4/reference/html/since_2_8.html
