@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:01:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/06/02 12:36:57 adam Exp $
 bin/cin2tab
 bin/xcin
 lib/libxcin.la
-lib/xcin/chewing.la
 lib/xcin/bimsphone.la
+lib/xcin/chewing.la
 lib/xcin/gen_inp.la
 lib/xcin/tab/big5/array30.tab
 lib/xcin/tab/big5/bims_pinyin.tab
