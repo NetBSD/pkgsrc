@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.5 2003/07/15 19:46:15 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2010/06/02 13:07:12 adam Exp $
 
---- configure.orig	Sun Jul 13 23:40:52 2003
+--- configure.orig	2004-01-24 06:30:30.000000000 +0000
 +++ configure
-@@ -9752,6 +9752,7 @@ fi
+@@ -8961,7 +8961,6 @@ gcc 3.0.x (or 2.95.x) *BEFORE* reporting
+ Press return to resume configuration (CTRL-C to abort).
+ ================================================================================
+ EOF
+-	read dummy
+ 	fi
+ fi
+ 
+@@ -9956,6 +9955,7 @@ fi
  							if test "x$HAVE_DB40" = "xyes"; then
  
  								berkeleydb_libs="-ldb4"
