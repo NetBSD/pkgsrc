@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2010/01/18 09:59:32 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.49 2010/06/02 13:13:14 adam Exp $
 
-DISTNAME=	webalizer-2.20-03-src
-PKGNAME=	webalizer-2.20.3
-PKGREVISION=	2
+DISTNAME=	webalizer-2.21-02-src
+PKGNAME=	webalizer-2.21.2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/ \
 		http://webalizer.linux-mirror.org/pub/webalizer/ \
@@ -18,7 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
-GNU_CONFIGURE=	YES
+BDB_ACCEPTED=		db4 db5
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-dns
 
@@ -55,8 +54,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
 .endfor
 
-BUILDLINK_TRANSFORM+=	l:db:db4
-.include "../../databases/db4/buildlink3.mk"
+BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
