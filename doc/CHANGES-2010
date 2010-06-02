@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2087 2010/06/02 13:36:10 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2088 2010/06/02 13:38:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2809,3 +2809,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/openssl to 0.9.8o [taca 2010-06-02]
 	Updated databases/mysql5-client to 5.0.91 [taca 2010-06-02]
 	Updated databases/mysql5-server to 5.0.91 [taca 2010-06-02]
+	Updated www/typolight28-translations to 20100527 [taca 2010-06-02]
