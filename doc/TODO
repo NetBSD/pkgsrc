@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9342 2010/06/02 06:44:37 obache Exp $
+$NetBSD: TODO,v 1.9343 2010/06/02 13:30:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -513,14 +513,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.3.10
 	o darcs-2.4
 	o dasher-4.11
-	o db4-4.8.26
-	o db5-5.0.0
 	o dbench-4.0
 	o dbus-1.2.24 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbus-glib-0.86
 	o dbxml-2.5.13
-	o dc_gui2-0.80
-	o dctc-0.85.9
 	o ddclient-3.7.3
 	o ddrescue-1.12
 	o defendguin-0.0.11
@@ -1034,7 +1030,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.12.1
 	o openbox-3.4.11.2
-	o opencobol-1.0
 	o opengrok-0.9
 	o openh323-1.19.1
 	o openldap-client-2.4.22
@@ -1125,7 +1120,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o png-1.4.2
 	o pngcheck-2.3.0
 	o po4a-0.36.3
-	o poedit-1.4.4
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppy-4.01
@@ -1153,7 +1147,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-TTFQuery-1.0.0
 	o py-ZopeInterface-3.6.0
 	o py-bdb-xml-2.1.8
-	o py-bsddb3-5.0.0
 	o py-checker-0.8.17
 	o py-cups-1.9.50
 	o py-django-1.2
@@ -1401,7 +1394,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o wdiff-0.6.2
-	o webalizer-2.21.2
 	o webby-0.9.3
 	o webmin-1.510
 	o weechat-0.3.2
