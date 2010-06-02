@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2009/08/16 08:34:34 lukem Exp $
-#
+# $NetBSD: Makefile,v 1.39 2010/06/02 13:24:34 adam Exp $
 
 DISTNAME=	nvi-1.81.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	editors
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	${HOMEPAGE:Q}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,13 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build.unix
-USE_TOOLS+=		sh
 USE_LIBTOOL=		yes
+USE_TOOLS+=		sh
 GNU_CONFIGURE=		yes
-
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
-CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH:Q}
+CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH}
 
 .if ${OPSYS} == "NetBSD"
 .  if !empty(OS_VERSION:M[2-9].*) || !empty(OS_VERSION:M1.6[A-Z]*)
