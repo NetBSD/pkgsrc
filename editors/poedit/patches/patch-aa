@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.3 2010/06/02 12:32:18 adam Exp $
+
+--- configure.orig	2010-06-01 09:19:56.000000000 +0000
++++ configure
+@@ -6057,15 +6057,9 @@ $as_echo_n "checking for Berkeley DB... 
+ $as_echo_n "checking for Berkeley DB >= $minversion... " >&6; }
+   fi
+ 
+-  for version in "" 5.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 4.0 3.6 3.5 3.4 3.3 3.2 3.1 ; do
+ 
+-    if test -z $version ; then
+-        db_lib="-ldb"
+-        try_headers="db.h"
+-    else
+-        db_lib="-ldb-$version"
+-        try_headers="db$version/db.h db`echo $version | sed -e 's,\..*,,g'`/db.h"
+-    fi
++    db_lib="-l${BDB_TYPE}"
++    try_headers="${BDB_TYPE}/db.h"
+ 
+     LIBS="$old_LIBS $db_lib"
+ 
+@@ -6140,7 +6134,6 @@ rm -f core conftest.err conftest.$ac_obj
+       conftest$ac_exeext conftest.$ac_ext
+         fi
+     done
+-  done
+ 
+   LIBS="$old_LIBS"
+ 
