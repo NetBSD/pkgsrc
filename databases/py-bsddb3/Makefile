@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2009/06/04 17:24:08 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.38 2010/06/02 12:22:59 adam Exp $
 
-DISTNAME=	bsddb3-4.7.6
+DISTNAME=	bsddb3-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/b/bsddb3/
@@ -12,20 +11,27 @@ COMMENT=	Python extension module for Berkeley DB 4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYSETUPBUILDARGS=	--berkeley-db=${BUILDLINK_PREFIX.db4}
-PYSETUPINSTALLARGS=	--berkeley-db=${BUILDLINK_PREFIX.db4}
+BDB_ACCEPTED=		db4 db5
+
+PYSETUPBUILDARGS=	--berkeley-db=${BDBBASE}
+PYSETUPINSTALLARGS=	--berkeley-db=${BDBBASE}
 
 PYDISTUTILSPKG=	yes
 
 REPLACE_PYTHON=		Lib/bsddb/dbshelve.py
 REPLACE_PYTHON+=	Lib3/bsddb/dbshelve.py
 
+SUBST_CLASSES+=		bdb
+SUBST_STAGE.bdb=	pre-configure
+SUBST_FILES.bdb=	${WRKSRC}/setup2.py
+SUBST_SED.bdb=		-e "s,dblib = 'db',dblib = '${BDB_TYPE}',g"
+
 .include "../../mk/pthread.buildlink3.mk"
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} test.py
 
-.include "../../databases/db4/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

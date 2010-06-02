@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:43:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/06/02 12:22:59 adam Exp $
 ${PYINC}/bsddb3/bsddb.h
 ${PYSITELIB}/bsddb3/__init__.py
 ${PYSITELIB}/bsddb3/__init__.pyc
@@ -46,6 +46,12 @@ ${PYSITELIB}/bsddb3/tests/test_compat.pyo
 ${PYSITELIB}/bsddb3/tests/test_cursor_pget_bug.py
 ${PYSITELIB}/bsddb3/tests/test_cursor_pget_bug.pyc
 ${PYSITELIB}/bsddb3/tests/test_cursor_pget_bug.pyo
+${PYSITELIB}/bsddb3/tests/test_db.py
+${PYSITELIB}/bsddb3/tests/test_db.pyc
+${PYSITELIB}/bsddb3/tests/test_db.pyo
+${PYSITELIB}/bsddb3/tests/test_dbenv.py
+${PYSITELIB}/bsddb3/tests/test_dbenv.pyc
+${PYSITELIB}/bsddb3/tests/test_dbenv.pyo
 ${PYSITELIB}/bsddb3/tests/test_dbobj.py
 ${PYSITELIB}/bsddb3/tests/test_dbobj.pyc
 ${PYSITELIB}/bsddb3/tests/test_dbobj.pyo
