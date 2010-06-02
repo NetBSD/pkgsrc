@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/05/02 11:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/02 16:45:11 adam Exp $
 
-DISTNAME=	pangomm-2.26.1
+DISTNAME=	pangomm-2.26.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pangomm/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,9 +20,9 @@ USE_TOOLS+=		gmake pkg-config perl:run
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pango/pangomm-1.4.pc.in
 GNU_CONFIGURE=		yes
 
-BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.22.1
-.include "../../devel/glibmm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.26.0
+
+.include "../../devel/glibmm/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairomm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
