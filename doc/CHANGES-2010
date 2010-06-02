@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2089 2010/06/02 15:23:23 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2090 2010/06/02 16:51:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2811,3 +2811,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql5-server to 5.0.91 [taca 2010-06-02]
 	Updated www/typolight28-translations to 20100527 [taca 2010-06-02]
 	Updated print/php-pdflib to 2.1.8 [adam 2010-06-02]
+	Updated devel/glibmm to 2.24.2 [adam 2010-06-02]
+	Updated devel/pangomm to 2.26.2 [adam 2010-06-02]
+	Updated x11/gtkmm to 2.20.3 [adam 2010-06-02]

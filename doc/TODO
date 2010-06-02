@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9344 2010/06/02 15:23:23 adam Exp $
+$NetBSD: TODO,v 1.9345 2010/06/02 16:51:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -684,8 +684,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade3-3.6.7 [GNOME 2.26]
-	o glib2-2.24.1
-	o glibmm-2.24.2
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.14.2 [GNOME 2.26]
@@ -757,7 +755,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtkglarea-2.0.1
 	o gtkhtml-3.30.1 [GNOME 2.30]
 	o gtkimageview-1.6.4
-	o gtkmm-2.20.3
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtksourceview-2.10.3
 	o gtodo-0.16.0rc2
@@ -1079,7 +1076,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.57
 	o packagekit-0.5.1
 	o pango-1.28.0 [GNOME 2.30]
-	o pangomm-2.26.2
 	o paprefs-0.9.8
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
