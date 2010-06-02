@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/15 12:57:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/02 04:34:09 obache Exp $
 include/bind/arpa/inet.h
 include/bind/arpa/nameser.h
 include/bind/arpa/nameser_compat.h
@@ -22,7 +22,6 @@ include/bind/netdb.h
 include/bind/netgroup.h
 include/bind/res_update.h
 include/bind/resolv.h
-include/bind/sys/bitypes.h
 lib/libbind.la
 man/cat3/getaddrinfo.3
 man/cat3/gethostbyname.3

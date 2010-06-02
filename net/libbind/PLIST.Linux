@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2010/06/02 04:34:09 obache Exp $
+include/bind/sys/mbuf.h
+include/bind/net/route.h

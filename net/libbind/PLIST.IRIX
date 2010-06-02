@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.IRIX,v 1.1 2010/06/02 04:34:09 obache Exp $
+include/bind/paths.h
+include/bind/sys/bitypes.h
+include/bind/sys/cdefs.h
