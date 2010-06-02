@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2093 2010/06/02 20:00:01 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2094 2010/06/02 20:11:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2817,3 +2817,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/py-paramiko to 1.7.6nb1 [gls 2010-06-02]
 	Updated fonts/dejavu-ttf to 2.31 [jakllsch 2010-06-02]
 	Updated devel/boehm-gc to 7.1nb4 [wiz 2010-06-02]
+	Added graphics/tex-asyfig version 0.1c [minskim 2010-06-02]
+	Added graphics/tex-asyfig-doc version 0.1c [minskim 2010-06-02]
