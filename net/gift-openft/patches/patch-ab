@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.3 2010/06/02 13:10:05 adam Exp $
+
+--- src/ft_search_db.h.orig	2010-06-02 06:12:21.000000000 +0000
++++ src/ft_search_db.h
+@@ -77,6 +77,9 @@
+ /*****************************************************************************/
+ 
+ #ifdef USE_LIBDB
++# ifdef HAVE_DB5_DB_H
++#  include <db5/db.h>
++# endif
+ # ifdef HAVE_DB4_DB_H
+ #  include <db4/db.h>
+ # endif

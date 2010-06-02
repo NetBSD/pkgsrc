@@ -1,8 +1,24 @@
-$NetBSD: patch-aa,v 1.2 2004/07/27 15:39:21 recht Exp $
+$NetBSD: patch-aa,v 1.3 2010/06/02 13:10:05 adam Exp $
 
---- configure.orig	2004-05-08 04:24:24.000000000 +0200
-+++ configure	2004-07-27 17:32:35.000000000 +0200
-@@ -20100,7 +20100,7 @@
+--- configure.orig	2005-05-01 00:05:57.000000000 +0000
++++ configure
+@@ -19940,7 +19940,7 @@ if test x$use_libdb = xyes; then
+ 
+ 
+ 
+-for ac_header in db4/db.h db.h db3/db.h
++for ac_header in db5/db.h db4/db.h db.h db3/db.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -20094,13 +20094,13 @@ done
+ fi
+ if (test x$use_libdb = xyes) && ( test x$found_dbh = xyes); then
+ # AC_MSG_NOTICE([Checking for min version 3.2.9...])
+-    for dbname in db db3 db-3.0 db4 db-4.0 db-4; do
++    for dbname in db db3 db4 db5; do
+       ac_save_CFLAGS="$CFLAGS"
+       ac_save_LIBS="$LIBS"
        LIBS="$LIBS -l$dbname"
        echo "$as_me:$LINENO: checking for libdb (-l$dbname)" >&5
  echo $ECHO_N "checking for libdb (-l$dbname)... $ECHO_C" >&6
@@ -11,7 +27,17 @@ $NetBSD: patch-aa,v 1.2 2004/07/27 15:39:21 recht Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    if test "$cross_compiling" = yes; then
-@@ -20179,7 +20179,7 @@
+@@ -20117,6 +20117,9 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++        #ifdef HAVE_DB5_DB_H
++        #include <db5/db.h>
++        #endif
+         #ifdef HAVE_DB4_DB_H
+         #include <db4/db.h>
+         #endif
+@@ -20179,7 +20182,7 @@ echo "$as_me:$LINENO: result: $found_lib
  echo "${ECHO_T}$found_libdb" >&6
        CFLAGS="$ac_save_CFLAGS"
        LIBS="$ac_save_LIBS"
