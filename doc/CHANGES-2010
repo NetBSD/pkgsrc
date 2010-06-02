@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2083 2010/06/02 10:21:56 markd Exp $
+$NetBSD: CHANGES-2010,v 1.2084 2010/06/02 13:28:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2756,3 +2756,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdebase4 to 4.4.4 [markd 2010-06-02]
 	Updated x11/kdebindings4-python to 4.4.4 [markd 2010-06-02]
 	Updated x11/kdelibs4 to 4.4.4 [markd 2010-06-02]
+	Updated lang/ruby18-base to 1.8.7.174nb5 [taca 2010-06-02]
