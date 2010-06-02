@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2010/01/18 09:58:48 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.28 2010/06/02 12:32:18 adam Exp $
 
-DISTNAME=	poedit-1.4.2
-PKGREVISION=	2
+DISTNAME=	poedit-1.4.6.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poedit/}
 
@@ -14,14 +12,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
-GNU_CONFIGURE=		yes
+BDB_ACCEPTED=		db4 db5
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		BDB_TYPE="${BDB_TYPE}"
 CONFIGURE_ENV+=		WX_CONFIG_NAME=${BUILDLINK_PREFIX.wxGTK28}/bin/wx-config
 
-.include "../../databases/db4/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
