@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2009/11/24 11:15:14 obache Exp $
+$NetBSD: patch-aa,v 1.5 2010/06/02 12:34:02 adam Exp $
 
 --- configure.orig	2004-09-20 06:16:48.000000000 +0000
 +++ configure
+@@ -18905,7 +18905,7 @@ OLD_LIBS=$LIBS
+ CPPFLAGS="$OLD_CPPFLAGS $with_db_inc"
+ LDFLAGS="$OLD_LDFLAGS $test_db_lib"
+ 
+-for dbname in $with_db_name db db2 db3 db4
++for dbname in $with_db_name db db2 db3 db4 db5
+ do
+   as_ac_Lib=`echo "ac_cv_lib_$dbname''_db_open" | $as_tr_sh`
+ echo "$as_me:$LINENO: checking for db_open in -l$dbname" >&5
 @@ -19253,7 +19253,9 @@ errno = db_open("foo.db", DB_BTREE, DB_C
  #endif
  if(errno) return errno;

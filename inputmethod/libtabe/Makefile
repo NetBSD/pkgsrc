@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/11/25 20:38:45 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.20 2010/06/02 12:34:02 adam Exp $
 
 DISTNAME=	libtabe-0.2.6
+PKGREVISION=	1
 CATEGORIES=	chinese inputmethod
 MASTER_SITES=	ftp://cle.linux.org.tw/pub/xcin/cvs/
 
@@ -14,8 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
+BDB_ACCEPTED=		db2 db3 db4 db5
 USE_LIBTOOL=		yes
-
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-db-inc=${BDBBASE}/include/${BDB_TYPE}
 CONFIGURE_ARGS+=	--with-db-lib=${BDBBASE}/lib
@@ -36,11 +36,10 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	--x-includes=${PREFIX:Q}/include
+CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-BDB_ACCEPTED=	db2 db3 db4
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
