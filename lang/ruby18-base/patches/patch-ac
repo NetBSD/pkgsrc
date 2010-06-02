@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.7 2009/08/11 14:26:58 taca Exp $
+$NetBSD: patch-ac,v 1.8 2010/06/02 13:27:57 taca Exp $
 
-* Accept db3 or db4 as include/library.
+* Accept db3, db4 or db5 as include/library.
 
---- ext/dbm/extconf.rb.orig	2007-02-13 08:01:19.000000000 +0900
+--- ext/dbm/extconf.rb.orig	2007-02-12 23:01:19.000000000 +0000
 +++ ext/dbm/extconf.rb
-@@ -5,13 +5,15 @@ dir_config("dbm")
+@@ -5,13 +5,16 @@ dir_config("dbm")
  if dblib = with_config("dbm-type", nil)
    dblib = dblib.split(/[ ,]+/)
  else
@@ -18,19 +18,20 @@ $NetBSD: patch-ac,v 1.7 2009/08/11 14:26:58 taca Exp $
    "db2" => ["db2/db.h", "db2.h", "db.h"],
 +  "db3" => ["db3/db.h", "db3.h", "db.h"],
 +  "db4" => ["db4/db.h", "db4.h", "db.h"],
++  "db5" => ["db5/db.h", "db5.h", "db.h"],
    "dbm" => ["ndbm.h"],
    "gdbm" => ["gdbm-ndbm.h", "ndbm.h"],
    "gdbm_compat" => ["gdbm-ndbm.h", "ndbm.h"],
-@@ -24,7 +26,7 @@ def headers.db_check(db)
+@@ -24,7 +27,7 @@ def headers.db_check(db)
    hsearch = nil
  
    case db
 -  when /^db2?$/
-+  when /^db[2-4]?$/
++  when /^db[2-5]?$/
      db_prefix = "__db_n"
      hsearch = "-DDB_DBM_HSEARCH "
    when "gdbm"
-@@ -36,7 +38,8 @@ def headers.db_check(db)
+@@ -36,7 +39,8 @@ def headers.db_check(db)
    db_prefix ||= ""
  
    if (have_library(db, db_prefix+"dbm_open") || have_func(db_prefix+"dbm_open")) and
