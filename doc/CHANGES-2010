@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2086 2010/06/02 13:31:34 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2087 2010/06/02 13:36:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2807,3 +2807,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated parallel/sge to 6.2.2.1nb3 [adam 2010-06-02]
 	Updated lang/ruby18-base to 1.8.7.174nb5 [taca 2010-06-02]
 	Updated security/openssl to 0.9.8o [taca 2010-06-02]
+	Updated databases/mysql5-client to 5.0.91 [taca 2010-06-02]
+	Updated databases/mysql5-server to 5.0.91 [taca 2010-06-02]
