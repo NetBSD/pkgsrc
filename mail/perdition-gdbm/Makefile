@@ -1,7 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:35 joerg Exp $
-#
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.4 2010/06/02 12:50:04 adam Exp $
 
 PERDITION_COMMENT=	GDBM user database module
 PERDITION_PKGNAME=	gdbm
@@ -11,4 +8,4 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../mail/perdition/buildlink3.mk"
-.include "../perdition/Makefile.common"
+.include "../../mail/perdition/Makefile.common"

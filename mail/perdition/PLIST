@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:04:39 joerg Exp $
-include/jain.h
-lib/libjain.la
+@comment $NetBSD: PLIST,v 1.7 2010/06/02 12:50:03 adam Exp $
 lib/libperditiondb_nis.la
 lib/libperditiondb_posix_regex.la
 man/man5/perditiondb.5
