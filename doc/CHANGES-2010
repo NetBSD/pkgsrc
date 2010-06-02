@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2082 2010/06/02 06:44:37 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2083 2010/06/02 10:21:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2730,3 +2730,29 @@ Changes to the packages collection and infrastructure in 2010:
 	Added emulators/gns3 version 0.7 [markd 2010-06-01]
 	Updated devel/doxygen to 1.6.3 [adam 2010-06-01]
 	Updated graphics/clutter-gtk to 0.10.4 [obache 2010-06-02]
+	Updated devel/kdesdk4 to 4.4.4 [markd 2010-06-02]
+	Updated games/kdegames4 to 4.4.4 [markd 2010-06-02]
+	Updated games/kdetoys4 to 4.4.4 [markd 2010-06-02]
+	Updated graphics/kdegraphics4 to 4.4.4 [markd 2010-06-02]
+	Updated graphics/oxygen-icons to 4.4.4 [markd 2010-06-02]
+	Updated meta-pkgs/kde4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdeaccessibility4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdeadmin4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdeartwork4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdeedu4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdepim-runtime4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdepim4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdepimlibs4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdeplasma-addons4 to 4.4.4 [markd 2010-06-02]
+	Updated misc/kdeutils4 to 4.4.4 [markd 2010-06-02]
+	Updated multimedia/kdemultimedia4 to 4.4.4 [markd 2010-06-02]
+	Updated net/kdenetwork4 to 4.4.4 [markd 2010-06-02]
+	Updated www/kdewebdev4 to 4.4.4 [markd 2010-06-02]
+	Updated x11/kde4-l10n-de to 4.4.4 [markd 2010-06-02]
+	Updated x11/kde4-l10n-en_GB to 4.4.4 [markd 2010-06-02]
+	Updated x11/kde4-l10n-nl to 4.4.4 [markd 2010-06-02]
+	Updated x11/kdebase-runtime4 to 4.4.4 [markd 2010-06-02]
+	Updated x11/kdebase-workspace4 to 4.4.4 [markd 2010-06-02]
+	Updated x11/kdebase4 to 4.4.4 [markd 2010-06-02]
+	Updated x11/kdebindings4-python to 4.4.4 [markd 2010-06-02]
+	Updated x11/kdelibs4 to 4.4.4 [markd 2010-06-02]
