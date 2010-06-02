@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/31 20:30:31 gls Exp $
-${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/requires.txt
-${PYSITELIB}/paramiko-1.7.6-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2010/06/02 18:31:41 gls Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/paramiko/__init__.py
 ${PYSITELIB}/paramiko/__init__.pyc
 ${PYSITELIB}/paramiko/__init__.pyo
