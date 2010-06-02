@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9340 2010/06/01 21:42:40 markd Exp $
+$NetBSD: TODO,v 1.9341 2010/06/02 04:18:54 adam Exp $
 
 Suggested new packages
 ======================
@@ -533,7 +533,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-mode-9.3e
 	o dnstracer-1.9
 	o dosbox-0.74
-	o doxygen-1.8.3
 	o dpkg-1.14.25
 	o drivel-3.0.0
 	o drscheme-4.0.2

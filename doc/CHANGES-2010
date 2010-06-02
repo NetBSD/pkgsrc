@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2080 2010/06/01 22:03:52 markd Exp $
+$NetBSD: CHANGES-2010,v 1.2081 2010/06/02 04:18:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2728,3 +2728,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs to 23.2 [minskim 2010-06-01]
 	Updated editors/emacs-nox11 to 23.2 [minskim 2010-06-01]
 	Added emulators/gns3 version 0.7 [markd 2010-06-01]
+	Updated devel/doxygen to 1.6.3 [adam 2010-06-01]
