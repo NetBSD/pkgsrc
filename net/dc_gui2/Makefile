@@ -1,39 +1,41 @@
-# $NetBSD: Makefile,v 1.47 2010/01/18 09:59:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.48 2010/06/02 13:08:22 adam Exp $
 
-DISTNAME=	dc_gui2-0.75
-PKGREVISION=	26
+DISTNAME=	dc_gui2-0.80
 CATEGORIES=	net
-MASTER_SITES=	http://ac2i.homelinux.com/dctc/ 
+MASTER_SITES=	http://ac2i.homelinux.com/dctc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ac2i.homelinux.com/dctc/
 COMMENT=	Graphical user interface for DCTC
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	dctc>=0.85.4:../../net/dctc
+DEPENDS+=	dctc>=0.85.9:../../net/dctc
 
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-CONFIGURE_ARGS+=	--enable-manual-db-detect
+BDB_ACCEPTED=		db4 db5
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config msgfmt
-USE_LIBTOOL=		YES
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-manual-db-detect
 
 UNLIMIT_RESOURCES+=	datasize
 
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
-CPPFLAGS+=	-DNO_PRINTF_LOCALE
+CPPFLAGS+=		-I${BDBBASE}/include/${BDB_TYPE}
+CPPFLAGS+=		-DNO_PRINTF_LOCALE
+BUILDLINK_TRANSFORM+=	l:db4:${BDB_TYPE}
 
 post-configure:
-	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
-	@${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC}/config.h
-	@${ECHO} '#endif' >> ${WRKSRC}/config.h
-	@sleep 5
-	@${TOUCH} ${WRKSRC}/stamp-h ${WRKSRC}/stamp-h.in
+	${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
+	${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC}/config.h
+	${ECHO} '#endif' >> ${WRKSRC}/config.h
+	${TOUCH} ${WRKSRC}/stamp-h ${WRKSRC}/stamp-h.in
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/db4/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
