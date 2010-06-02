@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.4 2006/02/02 20:53:44 rillig Exp $
+$NetBSD: patch-ae,v 1.5 2010/06/02 13:07:12 adam Exp $
 
---- src/keyboard.c.orig	Sun May 18 08:48:16 2003
-+++ src/keyboard.c	Tue Jun 10 12:04:22 2003
-@@ -39,8 +39,7 @@
- #include <openssl/md4.h>
+--- src/keyboard.c.orig	2004-01-09 18:16:01.000000000 +0000
++++ src/keyboard.c
+@@ -49,8 +49,7 @@ $Id: keyboard.c,v 1.25 2004/01/09 18:16:
+ 
  #include <glib.h>
  
 -#if !(defined(BSD) && (BSD >= 199103))
@@ -12,7 +12,7 @@ $NetBSD: patch-ae,v 1.4 2006/02/02 20:53:44 rillig Exp $
         /* union semun is defined by including <sys/sem.h> */
         #else
         /* according to X/OPEN we have to define it ourselves */
-@@ -51,7 +50,6 @@
+@@ -61,7 +60,6 @@ $Id: keyboard.c,v 1.25 2004/01/09 18:16:
                 struct seminfo *__buf;      /* buffer for IPC_INFO */
         };
         #endif
