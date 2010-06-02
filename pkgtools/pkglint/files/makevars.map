@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.203 2010/03/14 16:42:54 wiz Exp $
+# $NetBSD: makevars.map,v 1.204 2010/06/02 12:12:17 adam Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -140,10 +140,10 @@ AUTO_MKDIRS		YesNo [$package]
 BATCH			Yes [$user]
 BDB185_DEFAULT		Unchecked []
 BDBBASE			Pathname [$system]
-BDB_ACCEPTED		List of { db1 db2 db3 db4 } [$package]
-BDB_DEFAULT		{ db1 db2 db3 db4 } []
+BDB_ACCEPTED		List of { db1 db2 db3 db4 db5 } [$package]
+BDB_DEFAULT		{ db1 db2 db3 db4 db5 } []
 BDB_LIBS		List of LdFlag [$system]
-BDB_TYPE		{ db1 db2 db3 db4 } [$system]
+BDB_TYPE		{ db1 db2 db3 db4 db5 } [$system]
 BINGRP			UserGroupName [$system]
 BINMODE			FileMode [$system]
 BINOWN			UserGroupName [$system]
