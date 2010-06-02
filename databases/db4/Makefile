@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2010/01/16 17:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2010/06/02 12:06:21 adam Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -6,15 +6,14 @@
 # ABI depends in buildlink3.mk and bump PKGREVISIONs for all dependencies.
 # In particular, take care to include BDB_ACCEPTED=db4 packages.
 
-DISTNAME=	db-4.7.25
-PKGNAME=	${DISTNAME:S/db/db4/}.3
+DISTNAME=	db-4.8.30
+PKGNAME=	${DISTNAME:S/db/db4/}
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 		http://download-uk.oracle.com/berkeley-db/
 
-# doesn't apply due to line endings, included as patch-ba
-#PATCHFILES=	patch.4.7.25.1
-#PATCH_SITES=	http://www.oracle.com/technology/products/berkeley-db/db/update/4.7.25/
+#PATCHFILES=	patch.4.8.30.1
+#PATCH_SITES=	http://www.oracle.com/technology/products/berkeley-db/db/update/4.8.30/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db/db/index.html
@@ -29,36 +28,20 @@ USE_TOOLS+=		pax
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		build_unix
 CONFIGURE_SCRIPT=	../dist/configure
-
-CONFIGURE_ARGS+=	--enable-cxx
-CONFIGURE_ARGS+=	--enable-rpc
 CONFIGURE_ARGS+=	--enable-compat185
+CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db4
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
 
-# Along with a hack in patch-ab, this forces shlib detection via
-# the pkgsrc-supplied libtool only.
-CONFIGURE_ENV+=		LIBTOOL_PROG=${LIBTOOL:Q}\ ${LIBTOOL_FLAGS:Q}
-
 OPSYSVARS+=		LIBSO_LIBS
-LIBSO_LIBS.Interix+=	-lrpclib
-LIBS.Interix+=		-lrpclib # needed for in-tree programs, too
 LIBSO_LIBS.SunOS+=	-lnsl -lrt
 CONFIGURE_ENV+=		LIBSO_LIBS=${LIBSO_LIBS:Q}
 
 # DB4 only want pthreads because it's really after POSIX 1003.1
 # inter-process mutexes.  In this case, we only care to use the native
-# threads.  We also only care if we're using a non-GCC compiler since
-# we have code to use GCC assembly for mutexes instead of 1003.1
-# mutexes.
-#
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_lib_pthread_main=no
-.else
+# threads.
 PTHREAD_OPTS+=		native
-.  include "../../mk/pthread.buildlink3.mk"
-.endif
+.include "../../mk/pthread.buildlink3.mk"
 
 INSTALLATION_DIRS=	include/db4 lib share/doc/db4
 

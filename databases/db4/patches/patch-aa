@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.15 2008/09/06 20:53:51 wiz Exp $
+$NetBSD: patch-aa,v 1.16 2010/06/02 12:06:22 adam Exp $
 
---- dist/Makefile.in.orig	2008-05-06 05:03:36.000000000 +0200
+--- dist/Makefile.in.orig	2010-04-12 20:25:22.000000000 +0000
 +++ dist/Makefile.in
 @@ -11,7 +11,7 @@ exec_prefix=@exec_prefix@
  bindir=	@bindir@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.15 2008/09/06 20:53:51 wiz Exp $
  
  dmode=	755
  emode=	555
-@@ -41,7 +41,7 @@ INSTALLER=	@INSTALLER@
+@@ -42,7 +42,7 @@ INSTALLER=	@INSTALLER@
  LIBTOOL=	@LIBTOOL@
  
  POSTLINK=	@POSTLINK@
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.15 2008/09/06 20:53:51 wiz Exp $
  SOFLAGS=	@SOFLAGS@
  LIBMAJOR=	@DB_VERSION_MAJOR@
  LIBVERSION=	@DB_VERSION_MAJOR@.@DB_VERSION_MINOR@
-@@ -60,7 +60,7 @@ LIBS=		@LIBSO_LIBS@
+@@ -61,7 +61,7 @@ LIBS=		@LIBSO_LIBS@
  TEST_LIBS=	@TEST_LIBS@
  LIBCSO_LIBS=	@LIBCSO_LIBS@ @LIBSO_LIBS@
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.15 2008/09/06 20:53:51 wiz Exp $
  libdb=		$(libdb_base).a
  libdb_version=	$(libdb_base)-$(LIBVERSION).a
  libso=		$(libdb_base)-$(LIBVERSION)@SOSUFFIX@
-@@ -79,7 +79,7 @@ CXXLINK=	@MAKEFILE_CXXLINK@ @CXXFLAGS@
+@@ -80,7 +80,7 @@ CXXLINK=	@MAKEFILE_CXXLINK@ @CXXFLAGS@
  XSOLINK=	@MAKEFILE_XSOLINK@ @CXXFLAGS@
  LIBXSO_LIBS=	@LIBXSO_LIBS@ @LIBSO_LIBS@
  
@@ -38,9 +38,9 @@ $NetBSD: patch-aa,v 1.15 2008/09/06 20:53:51 wiz Exp $
  libcxx=		$(libcxx_base).a
  libcxx_version=	$(libcxx_base)-$(LIBVERSION).a
  libxso=		$(libcxx_base)-$(LIBVERSION)@SOSUFFIX@
-@@ -105,9 +105,9 @@ JAVA_SRCDIR=	$(srcdir)/java/src
- JAVA_EXDIR=	$(srcdir)/examples_java/src
+@@ -124,9 +124,9 @@ JAVA_EXDIR=	$(srcdir)/examples_java/src
  JAVA_SLEEPYCAT=	$(srcdir)/java/src/com/sleepycat
+ JAVA_MANIFEST=	$(srcdir)/java/jarManifestEntries
  
 -libj_jarfile=	db.jar
 +libj_jarfile=	db4.jar
@@ -50,40 +50,43 @@ $NetBSD: patch-aa,v 1.15 2008/09/06 20:53:51 wiz Exp $
  libjso=		$(libjso_base)-$(LIBVERSION)@JMODSUFFIX@
  libjso_static=	$(libjso_base)-$(LIBVERSION).a
  libjso_target=	$(libjso_base)-$(LIBVERSION).la
-@@ -122,7 +122,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
+@@ -141,7 +141,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
  ##################################################
  TCL_INCLUDE_SPEC=	@TCL_INCLUDE_SPEC@
  LIBTSO_LIBS=	@LIBTSO_LIBS@ @LIBSO_LIBS@
 -libtso_base=	libdb_tcl
 +libtso_base=	libdb4_tcl
- libtso=		$(libtso_base)-$(LIBVERSION)@MODSUFFIX@
+ libtso=		$(libtso_base)-$(LIBVERSION)@LIBTSO_MODSUFFIX@
  libtso_static=	$(libtso_base)-$(LIBVERSION).a
  libtso_target=	$(libtso_base)-$(LIBVERSION).la
-@@ -882,8 +882,7 @@ install_include:
- 	    ($(MKDIR) -p $(DESTDIR)$(includedir) && \
+@@ -942,11 +942,7 @@ install_include:
  	    $(CHMOD) $(dmode) $(DESTDIR)$(includedir))
- 	@cd $(DESTDIR)$(includedir) && $(RM) -f $(INCDOT)
--	@$(CP) -p $(INCDOT) $(DESTDIR)$(includedir)
--	@cd $(DESTDIR)$(includedir) && $(CHMOD) $(fmode) $(INCDOT)
-+	$(BSD_INSTALL_DATA) $(INCDOT) $(DESTDIR)$(includedir)
+ 	@cd $(DESTDIR)$(includedir) && $(RM) $(INCDOT)
+ 	@for f in $(INCDOT); do \
+-	    for d in . $(srcdir)/stl ; do \
+-	        test -f $$d/$$f && \
+-	            $(CP) -p $$d/$$f $(DESTDIR)$(includedir) ; \
+-	    done ; \
+-	    $(CHMOD) $(fmode) $(DESTDIR)$(includedir)/$$f ; \
++	    $(BSD_INSTALL_DATA) $$f $(DESTDIR)$(includedir) ; \
+ 	done
  
  uninstall_include:
- 	@cd $(DESTDIR)$(includedir) && $(RM) -f $(INCDOT)
-@@ -894,7 +893,7 @@ install_lib:
+@@ -958,7 +954,7 @@ install_lib:
  	    ($(MKDIR) -p $(DESTDIR)$(libdir) && \
  	    $(CHMOD) $(dmode) $(DESTDIR)$(libdir))
- 	@cd $(DESTDIR)$(libdir) && $(RM) -f $(LIB_INSTALL_FILE_LIST)
+ 	@cd $(DESTDIR)$(libdir) && $(RM) $(LIB_INSTALL_FILE_LIST)
 -	@$(INSTALLER) @INSTALL_LIBS@ $(DESTDIR)$(libdir)
 +	@libtool --mode=install $(BSD_INSTALL_LIB) @INSTALL_LIBS@ $(DESTDIR)$(libdir)
  	@(cd $(DESTDIR)$(libdir) && \
  	    test -f $(libso) && $(LN) -s $(libso) $(libso_default); \
  	    test -f $(libso) && $(LN) -s $(libso) $(libso_major); \
-@@ -918,11 +917,8 @@ install_utilities:
+@@ -984,11 +980,8 @@ install_utilities:
  	    ($(MKDIR) -p $(DESTDIR)$(bindir) && \
  	    $(CHMOD) $(dmode) $(DESTDIR)$(bindir))
  	@for i in $(UTIL_PROGS); do \
 -		test -f $$i.exe && i=$$i.exe || i=$$i; \
--		$(RM) -f $(DESTDIR)$(bindir)/$$i; \
+-		$(RM) $(DESTDIR)$(bindir)/$$i; \
 -		$(INSTALLER) $$i $(DESTDIR)$(bindir)/$$i; \
 -		$(STRIP) $(DESTDIR)$(bindir)/$$i; \
 -		$(CHMOD) $(emode) $(DESTDIR)$(bindir)/$$i; \
@@ -92,12 +95,12 @@ $NetBSD: patch-aa,v 1.15 2008/09/06 20:53:51 wiz Exp $
  	done
  
  uninstall_utilities:
-@@ -939,7 +935,7 @@ install_docs:
+@@ -1005,7 +998,7 @@ install_docs:
  	    ($(MKDIR) -p $(DESTDIR)$(docdir) && \
  	    $(CHMOD) $(dmode) $(DESTDIR)$(docdir))
- 	@cd $(DESTDIR)$(docdir) && $(RM) -rf $(DOCLIST)
+ 	@cd $(DESTDIR)$(docdir) && $(RM) -r $(DOCLIST)
 -	@cd $(srcdir)/docs && $(CP) -pr $(DOCLIST) $(DESTDIR)$(docdir)/
 +	@cd $(srcdir)/docs && pax -rwpp $(DOCLIST) $(DESTDIR)$(docdir)/
  
  uninstall_docs:
- 	@cd $(DESTDIR)$(docdir) && $(RM) -rf $(DOCLIST)
+ 	@cd $(DESTDIR)$(docdir) && $(RM) -r $(DOCLIST)

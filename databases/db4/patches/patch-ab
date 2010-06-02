@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.21 2009/07/09 06:37:41 hasso Exp $
+$NetBSD: patch-ab,v 1.22 2010/06/02 12:06:22 adam Exp $
 
---- dist/configure.orig	2008-05-16 00:12:41 +0300
-+++ dist/configure	2009-07-09 08:48:34 +0300
-@@ -3716,7 +3716,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
+--- dist/configure.orig	2010-04-12 20:25:23.000000000 +0000
++++ dist/configure
+@@ -4523,7 +4523,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
  	LIBSO_LIBS="$LIBSO_LIBS -lipc";;
  cygwin*)
  	CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE -D_REENTRANT";;
@@ -11,15 +11,7 @@ $NetBSD: patch-ab,v 1.21 2009/07/09 06:37:41 hasso Exp $
  	CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
  	LDFLAGS="$LDFLAGS -pthread";;
  gnu*|k*bsd*-gnu|linux*)
-@@ -5913,6 +5913,7 @@ db_cv_gxx_except=no;
- if test "$GXX" = "yes"; then
- 	GXX_VERSION=`${MAKEFILE_CXX} --version`
- 	case ${GXX_VERSION} in
-+	egcs*)	CXXFLAGS="-fexceptions $CXXFLAGS";;
- 	1.*|2.[01234567].*|*-1.*|*-2.[01234567].*)
- 		db_cv_gxx_except=yes;;
- 	esac
-@@ -5929,7 +5930,7 @@ fi
+@@ -6282,7 +6282,7 @@ fi
  # we're using.
  case "$host_os" in
  sysv5UnixWare*|sysv5OpenUNIX8*)
@@ -28,15 +20,7 @@ $NetBSD: patch-ab,v 1.21 2009/07/09 06:37:41 hasso Exp $
  		CPPFLAGS="$CPPFLAGS -pthread"
  		LDFLAGS="$LDFLAGS -pthread"
  	else
-@@ -21053,7 +21054,6 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
- 
- 
- SOFLAGS="-rpath \$(libdir)"
--LIBTOOL_PROG="${SHELL} ./libtool"
- 
- # Set SOSUFFIX and friends
- 
-@@ -21145,7 +21145,7 @@ echo "${ECHO_T}$JMODSUFFIX" >&6; }
+@@ -16161,7 +16161,7 @@ LIBTOOL="./libtool"
  INSTALLER="\$(LIBTOOL) --mode=install cp -p"
  
  MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
@@ -45,7 +29,7 @@ $NetBSD: patch-ab,v 1.21 2009/07/09 06:37:41 hasso Exp $
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
  MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
-@@ -21918,7 +21918,7 @@ if test "$_JTOPDIR" != "/usr"; then
+@@ -16890,7 +16890,7 @@ if test "$_JTOPDIR" != "/usr"; then
  	aix*)		_JNI_INC_SUBDIRS="aix";;
  	bsdi*)		_JNI_INC_SUBDIRS="bsdos";;
  	cygwin*)	_JNI_INC_SUBDIRS="win32";;
@@ -54,20 +38,7 @@ $NetBSD: patch-ab,v 1.21 2009/07/09 06:37:41 hasso Exp $
  	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
  	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
  	osf*)		_JNI_INC_SUBDIRS="alpha";;
-@@ -28529,10 +28529,12 @@ typedef FILE * ac__type_new_;
- int
- main ()
- {
-+#ifndef __DragonFly__
- if ((ac__type_new_ *) 0)
-   return 0;
- if (sizeof (ac__type_new_))
-   return 0;
-+#endif
-   ;
-   return 0;
- }
-@@ -29904,7 +29906,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -18748,7 +18748,7 @@ if test "$db_cv_mutex" = no; then
  	# If the user specified we use POSIX pthreads mutexes, and we fail to
  	# find the full interface, try and configure for just intra-process
  	# support.
@@ -75,4 +46,4 @@ $NetBSD: patch-ab,v 1.21 2009/07/09 06:37:41 hasso Exp $
 +	if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
  		LIBS="$LIBS -lpthread"
  
- if test "$cross_compiling" = yes; then
+ if test "$cross_compiling" = yes; then :
