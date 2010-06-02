@@ -1,7 +1,25 @@
-$NetBSD: patch-ag,v 1.4 2007/06/12 11:34:29 obache Exp $
+$NetBSD: patch-ag,v 1.5 2010/06/02 12:56:39 adam Exp $
 
 --- lib/cyrusdb_berkeley.c.orig	2006-03-17 16:12:32.000000000 +0000
 +++ lib/cyrusdb_berkeley.c
+@@ -104,7 +104,7 @@ static void db_panic(DB_ENV *dbenv __att
+     exit(EC_TEMPFAIL);
+ }
+ 
+-#if (DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 3)
++#if DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 3)
+ static void db_err(const DB_ENV *dbenv __attribute__((unused)),
+ 		   const char *db_prfx, const char *buffer)
+ #else
+@@ -160,7 +160,7 @@ static int init(const char *dbdir, int m
+ #endif
+     }
+ 
+-#if (DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 3)
++#if DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 3)
+     dbenv->set_msgcall(dbenv, db_msg);
+ #endif
+     dbenv->set_errcall(dbenv, db_err);
 @@ -173,7 +173,15 @@ static int init(const char *dbdir, int m
  	syslog(LOG_WARNING,
  	       "DBERROR: invalid berkeley_locks_max value, using internal default");
@@ -18,3 +36,30 @@ $NetBSD: patch-ag,v 1.4 2007/06/12 11:34:29 obache Exp $
  	if (r) {
  	    dbenv->err(dbenv, r, "set_lk_max");
  	    syslog(LOG_ERR, "DBERROR: set_lk_max(): %s", db_strerror(r));
+@@ -270,7 +278,7 @@ static int mysync(void)
+ 
+     assert(dbinit);
+ 
+-#if !(DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
++#if !(DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1))
+     do {
+ #endif
+ #if (DB_VERSION_MAJOR > 3) || ((DB_VERSION_MAJOR == 3) && (DB_VERSION_MINOR > 0))
+@@ -278,7 +286,7 @@ static int mysync(void)
+ #else
+ 	r = txn_checkpoint(dbenv, 0, 0);
+ #endif
+-#if !(DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
++#if !(DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1))
+     } while (r == DB_INCOMPLETE);  /* Never returned by BDB 4.1 */
+ #endif
+     if (r) {
+@@ -393,7 +401,7 @@ static int myopen(const char *fname, DBT
+     }
+     /* xxx set comparator! */
+ 
+-#if DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1
++#if DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
+     r = db->open(db, NULL, fname, NULL, type, dbflags | DB_AUTO_COMMIT, 0664);
+ #else
+     r = db->open(db, fname, NULL, type, dbflags, 0664);
