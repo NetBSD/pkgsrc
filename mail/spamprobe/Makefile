@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/01/24 13:26:11 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2010/06/02 13:17:22 adam Exp $
 
 DISTNAME=	spamprobe-1.4d
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spamprobe/}
 
@@ -12,10 +12,9 @@ COMMENT=	Spam detector using Bayesian analysis of word counts
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	YES
-
-CONFIGURE_ARGS+= --enable-default-8bit
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-default-8bit
 
 .include "options.mk"
 

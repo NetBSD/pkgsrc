@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/08/07 10:39:23 tron Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/02 13:19:43 adam Exp $
 
 DISTNAME=	apr-util-1.3.9
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 
@@ -13,16 +14,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}/bin/apr-1-config
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--without-gdbm
 CONFIGURE_ARGS+=	--without-sqlite2
 PKGCONFIG_OVERRIDE+=	apr-util.pc.in
 
-MAKE_ENV+=	WRAPPER_DIR=${WRAPPER_DIR:Q}
+MAKE_ENV+=	WRAPPER_DIR=${WRAPPER_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
