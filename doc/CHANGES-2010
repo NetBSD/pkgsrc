@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2091 2010/06/02 18:33:47 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2092 2010/06/02 19:59:54 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2815,3 +2815,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/pangomm to 2.26.2 [adam 2010-06-02]
 	Updated x11/gtkmm to 2.20.3 [adam 2010-06-02]
 	Updated security/py-paramiko to 1.7.6nb1 [gls 2010-06-02]
+	Updated fonts/dejavu-ttf to 2.31 [jakllsch 2010-06-02]
