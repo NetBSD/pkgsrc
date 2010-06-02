@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/02 12:08:49 adam Exp $
+
+SHA1 (db-5.0.21.tar.gz) = f852184fdd7d4a0b14e31ec835fd796981f35976
+RMD160 (db-5.0.21.tar.gz) = 957310c66f7be35d07a96a42dce661bea8f97976
+Size (db-5.0.21.tar.gz) = 29300812 bytes
+SHA1 (patch-aa) = 76f3aee77d1b43435a72509bf845db63f8e74766
+SHA1 (patch-ab) = cacc74cd5e25b0ae29a3b14f95e5e94fc264c35f
+SHA1 (patch-ac) = 045a3b83b9c6c164382ec546b06ae248620552cf
