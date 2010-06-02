@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/05/26 16:18:41 taca Exp $
+# $NetBSD: Makefile,v 1.26 2010/06/02 13:37:34 taca Exp $
 #
 
 DISTNAME=	typolight${TL_VER}-translations-${VERS}
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	typolight${TL_VER}>=${TL_PKGVER}:../../www/typolight${TL_VER}
 
 # Use time stamp of latest translation.
-VERS=		20100523
+VERS=		20100527
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
