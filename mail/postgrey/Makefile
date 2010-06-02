@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2008/09/06 20:54:33 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2010/06/02 13:05:50 adam Exp $
 
-DISTNAME=	postgrey-1.31
-PKGREVISION=	1
+DISTNAME=	postgrey-1.33
 CATEGORIES=	mail
 MASTER_SITES=	http://postgrey.schweikert.ch/pub/
 
@@ -16,8 +14,9 @@ DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CONFIGURE=	yes
-USE_TOOLS+=	perl:run
+BDB_ACCEPTED=		db4 db5
+NO_CONFIGURE=		yes
+USE_TOOLS+=		perl:run
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -82,5 +81,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/${EGDIR}/${i}
 .endfor
 
-.include "../../databases/db4/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
