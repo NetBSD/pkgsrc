@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.83 2010/01/18 09:58:45 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2010/06/02 12:30:49 adam Exp $
 
 DISTNAME=	kdevelop_3.5.5.orig
 PKGNAME=	kdevelop-base-3.5.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel kde
 MASTER_SITES=	http://download.opensuse.org/repositories/home:/amilcarlucas/xUbuntu_6.06/
-EXTRACT_SUFX=	.tar.gz
 
 HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
@@ -28,47 +27,46 @@ DEPENDS+=		qt3-tools>=3.1.1:../../x11/qt3-tools
 
 CONFLICTS+=	kdevelop<=1.3
 
-USE_TOOLS+=	msgfmt perl:run
-USE_LANGUAGES+=	fortran
+BDB_ACCEPTED=		db4 db5
+USE_LANGUAGES=		c fortran
+USE_TOOLS+=		msgfmt perl:run
 
-REPLACE_PERL+= \
-	kdevprj2kdevelop \
-	doc/tools/index-python \
-	doc/tools/index-texi \
-	doc/tools/toc-docbook \
-	doc/tools/toc-gsdoc \
-	doc/tools/toc-python \
-	doc/tools/toc-texi \
-	languages/perl/app_templates/perlhello/app.pl \
-	languages/perl/file_templates/pl
+REPLACE_PERL+=		kdevprj2kdevelop
+REPLACE_PERL+=		doc/tools/index-python
+REPLACE_PERL+=		doc/tools/index-texi
+REPLACE_PERL+=		doc/tools/toc-docbook
+REPLACE_PERL+=		doc/tools/toc-gsdoc
+REPLACE_PERL+=		doc/tools/toc-python
+REPLACE_PERL+=		doc/tools/toc-texi
+REPLACE_PERL+=		languages/perl/app_templates/perlhello/app.pl
+REPLACE_PERL+=		languages/perl/file_templates/pl
 
 SUBST_CLASSES+=		perlpath
 SUBST_STAGE.perlpath=	post-patch
 SUBST_MESSAGE.perlpath=	Fix perl path.
 SUBST_FILES.perlpath=	languages/perl/perlparser.cpp parts/doxygen/config.cpp
-SUBST_SED.perlpath=	-e s:/usr/bin/perl:${PERL5}:
+SUBST_SED.perlpath=	-e s:/usr/bin/perl:${PERL5:Q}:
 
-EVAL_PREFIX+=	\
-	QT3DIR=qt3 \
-	KDELIBDIR=kdelibs
+EVAL_PREFIX+=		QT3DIR=qt3
+EVAL_PREFIX+=		KDELIBDIR=kdelibs
 
-CONFIGURE_ARGS+= \
-	--with-db-includedir=${BUILDLINK_PREFIX.db4}/include/db4 \
-	--with-db-libdir=${BUILDLINK_PREFIX.db4}/lib \
-	--with-db-lib=db4 \
-	--with-qtdoc-dir=${QT3DIR}/qt3/doc/html \
-	--with-kdelibsdoxy-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs-apidocs
+CONFIGURE_ARGS+=	--with-db-includedir=${BDBBASE}/include/${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-db-libdir=${BDBBASE}/lib
+CONFIGURE_ARGS+=	--with-db-lib=${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-qtdoc-dir=${QT3DIR}/qt3/doc/html
+CONFIGURE_ARGS+=	--with-kdelibsdoxy-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs-apidocs
 
 .include "options.mk"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
-# XXX: need to include compiler.mk before including db4/buildlink3.mk,
+# XXX: need to include compiler.mk before including bdb.buildlink3.mk,
 # otherwise f2c is not added as a dependency correctly
 .include "../../mk/compiler.mk"
-.include "../../databases/db4/buildlink3.mk"
 .include "../../devel/kdesdk3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
