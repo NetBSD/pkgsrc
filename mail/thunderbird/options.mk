@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2010/04/21 13:33:26 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2010/06/02 15:39:26 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
-PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning
+PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning mozilla-enigmail
 PKG_SUGGESTED_OPTIONS=	mozilla-lightning
 
 PLIST_VARS+=		branding debug gnome
@@ -51,6 +51,10 @@ CONFIGURE_ARGS+=	--enable-calendar
 PLIST_SRC+=		PLIST.lightning
 .else
 CONFIGURE_ARGS+=	--disable-calendar
+.endif
+
+.if !empty(PKG_OPTIONS:Mmozilla-enigmail)
+.include "enigmail.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
