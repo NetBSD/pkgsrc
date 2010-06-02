@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2007/12/15 16:04:41 adam Exp $
+# $NetBSD: options.mk,v 1.16 2010/06/02 13:04:04 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -128,19 +128,13 @@ EXIM_INCLUDE=		-I${PREFIX}/include
 .else # use native or Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
 .  include "../../mk/bdb.buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
-.  if ${BDB_TYPE} == "db4"
-EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
-EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db4}
-.  elif ${BDB_TYPE} == "db3"
-EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
-EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
-.  elif ${BDB_TYPE} == "db2"
-EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
-EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
-.  else # using native
+.  if ${BDB_TYPE} == "db1"
 EXIM_DBMLIB=		# empty so use defaults
 EXIM_USE_DB_CONFIG=	# empty so use defaults
 EXIM_INCLUDE=		-I/usr/${BUILDLINK_INCDIRS.db-native}
+.  else
+EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 .  endif
 .endif
 

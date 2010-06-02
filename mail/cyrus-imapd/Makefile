@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2010/01/17 12:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2010/06/02 12:56:39 adam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
@@ -18,7 +18,7 @@ USE_TOOLS+=		perl
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
-BDB_ACCEPTED=		db4 db3
+BDB_ACCEPTED=		db3 db4 db5
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,12 +30,12 @@ CYRUS_GROUP?=		mail
 
 PKG_GROUPS_VARS+=	CYRUS_GROUP
 PKG_USERS_VARS+=	CYRUS_USER
-FILES_SUBST+=		CYRUS_USER=${CYRUS_USER:Q}
-FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP:Q}
+FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
+FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP}
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER:Q}
-CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
+CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--with-krb=/usr
 .  endif
 .elif !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
@@ -131,7 +131,7 @@ PERL5_PACKLIST= \
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 
-CONFIGURE_ENV+=	BDB_TYPE=${BDB_TYPE:Q}
+CONFIGURE_ENV+=	BDB_TYPE=${BDB_TYPE}
 
 # Only imap/mupdate needs to be build with pthreads support, so selectively
 # enable it via patches for just that one program.
