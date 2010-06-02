@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/06/02 12:08:53 adam Exp $
+
+--- dist/configure.orig	2010-03-30 17:36:10.000000000 +0000
++++ dist/configure
+@@ -5174,7 +5174,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
+ 	LIBSO_LIBS="$LIBSO_LIBS -lipc";;
+ cygwin*)
+ 	CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE -D_REENTRANT";;
+-freebsd*)
++freebsd*|dragonfly*)
+ 	CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
+ 	LDFLAGS="$LDFLAGS -pthread";;
+ gnu*|k*bsd*-gnu|linux*)
+@@ -6935,7 +6935,7 @@ fi
+ # we're using.
+ case "$host_os" in
+ sysv5UnixWare*|sysv5OpenUNIX8*)
+-	if test "$GCC" == "yes"; then
++	if test "$GCC" = "yes"; then
+ 		CPPFLAGS="$CPPFLAGS -pthread"
+ 		LDFLAGS="$LDFLAGS -pthread"
+ 	else
+@@ -16814,7 +16814,7 @@ LIBTOOL="./libtool"
+ INSTALLER="\$(LIBTOOL) --mode=install cp -p"
+ 
+ MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
+-MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK} -avoid-version"
++MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
+ MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
+@@ -17543,7 +17543,7 @@ if test "$_JTOPDIR" != "/usr"; then
+ 	aix*)		_JNI_INC_SUBDIRS="aix";;
+ 	bsdi*)		_JNI_INC_SUBDIRS="bsdos";;
+ 	cygwin*)	_JNI_INC_SUBDIRS="win32";;
+-	freebsd*)	_JNI_INC_SUBDIRS="freebsd";;
++	freebsd*|dragonfly*)	_JNI_INC_SUBDIRS="freebsd";;
+ 	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
+ 	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
+ 	osf*)		_JNI_INC_SUBDIRS="alpha";;
+@@ -19661,7 +19661,7 @@ if test "$db_cv_mutex" = no; then
+ 	# If the user specified we use POSIX pthreads mutexes, and we fail to
+ 	# find the full interface, try and configure for just intra-process
+ 	# support.
+-	if test "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
++	if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
+ 		LIBS="$LIBS -lpthread"
+ 
+ if test "$cross_compiling" = yes; then :
