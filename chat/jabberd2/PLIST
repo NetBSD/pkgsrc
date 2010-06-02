@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/08/21 02:28:12 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/06/02 13:14:47 adam Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
@@ -32,8 +32,8 @@ lib/jabberd/mod_iq-version.la
 lib/jabberd/mod_offline.la
 lib/jabberd/mod_presence.la
 lib/jabberd/mod_privacy.la
-lib/jabberd/mod_roster.la
 lib/jabberd/mod_roster-publish.la
+lib/jabberd/mod_roster.la
 lib/jabberd/mod_session.la
 lib/jabberd/mod_status.la
 lib/jabberd/mod_template-roster.la
@@ -50,10 +50,10 @@ man/man8/jabberd.8
 man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
+share/doc/jabberd/ChangeLog
 share/doc/jabberd/README
 share/doc/jabberd/README.protocol
 share/doc/jabberd/UPGRADE
-share/doc/jabberd/ChangeLog
 share/examples/jabberd/c2s.xml
 share/examples/jabberd/db-jd14-2-jd2.sql
 share/examples/jabberd/db-setup.mysql
