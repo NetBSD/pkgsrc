@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:00:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/02 13:08:22 adam Exp $
+bin/bt2dc_gui2
+bin/bt2dc_gui2_prelaunch
 bin/cmd2dc_gui2
 bin/dc_gui2
+bin/dc_gui2_bt
+bin/dc_gui2_stat
+bin/dc_gui2_unattached_gdl
 share/applications/dc_gui2.desktop
 share/gnome/help/dc_gui/C/chat.html
 share/gnome/help/dc_gui/C/chat.png
@@ -22,7 +27,17 @@ share/gnome/help/dc_gui/C/startup.png
 share/gnome/help/dc_gui/C/user_file_list.html
 share/gnome/help/dc_gui/C/user_file_list.png
 share/locale/fr/LC_MESSAGES/dc_gui2.mo
+share/locale/fr/LC_MESSAGES/dc_gui2_bt.mo
+share/locale/fr/LC_MESSAGES/dc_gui2_stat.mo
+share/locale/fr/LC_MESSAGES/dc_gui2_unattached_gdl.mo
 share/locale/nl/LC_MESSAGES/dc_gui2.mo
+share/locale/nl/LC_MESSAGES/dc_gui2_bt.mo
+share/locale/nl/LC_MESSAGES/dc_gui2_stat.mo
+share/locale/nl/LC_MESSAGES/dc_gui2_unattached_gdl.mo
+share/locale/pl/LC_MESSAGES/dc_gui2.mo
+share/locale/pl/LC_MESSAGES/dc_gui2_bt.mo
+share/locale/pl/LC_MESSAGES/dc_gui2_stat.mo
+share/locale/pl/LC_MESSAGES/dc_gui2_unattached_gdl.mo
 share/pixmaps/dc_gui2.xpm
 share/pixmaps/dc_gui2/icon_kill.xpm
 @pkgdir share/gnome/help/dc_gui/C/images
