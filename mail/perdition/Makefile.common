@@ -1,29 +1,28 @@
-# $NetBSD: Makefile.common,v 1.6 2007/09/04 21:04:20 joerg Exp $
-#
+# $NetBSD: Makefile.common,v 1.7 2010/06/02 12:50:03 adam Exp $
 
-PERDITION_VERSION=	1.17
-DISTNAME=		perdition-${PERDITION_VERSION}
-CATEGORIES=		mail
-MASTER_SITES=		http://www.vergenet.net/linux/perdition/download/1.17/
+DISTNAME=	perdition-${PERDITION_VERSION}
+CATEGORIES=	mail
+MASTER_SITES=	http://www.vergenet.net/linux/perdition/download/${PERDITION_VERSION}/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.vergenet.net/linux/perdition/
-COMMENT=		IMAP/POP3 proxy redirector (${PERDITION_COMMENT})
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.vergenet.net/linux/perdition/
+COMMENT=	IMAP/POP3 proxy redirector (${PERDITION_COMMENT})
 
-USE_TOOLS+=		gmake
-USE_PKGLOCALEDIR=	yes
+PERDITION_VERSION=	1.18
+
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-PKG_SYSCONFSUBDIR=	perdition
-
 CONFIGURE_ARGS+=	--disable-daemon-map
 CONFIGURE_ARGS+=	--localstatedir=/var
+PKG_SYSCONFSUBDIR=	perdition
 
 EGDIR=			${PREFIX}/share/examples
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
-.ifdef PERDITION_PKGNAME
+.if defined(PERDITION_PKGNAME)
 PKGNAME=		${DISTNAME:S/-/-${PERDITION_PKGNAME}-/}
 DEPENDS+=		perdition-${PERDITION_VERSION}{,nb*}:../../mail/perdition
 BUILD_DIRS?=		perdition/db/${PERDITION_PKGNAME}
@@ -32,7 +31,7 @@ BUILD_DIRS?=		perdition/db/${PERDITION_PKGNAME}
 PERDITION_SKIP_DISABLE?=${PERDITION_PKGNAME}
 .for f in mysql odbc pg gdbm bdb ldap ldap-doc
 .  if empty(PERDITION_SKIP_DISABLE:M$f)
-CONFIGURE_ARGS+=	--disable-$f
+CONFIGURE_ARGS+=	--disable-${f}
 .  endif
 .endfor
 
