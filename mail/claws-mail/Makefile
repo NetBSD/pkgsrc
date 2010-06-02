@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2010/02/03 19:45:04 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2010/06/02 12:53:49 adam Exp $
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EGDIR}
@@ -17,7 +19,7 @@ USE_TOOLS+=		msgfmt
 PKGCONFIG_OVERRIDE+=	claws-mail.pc.in
 
 PKG_SYSCONFSUBDIR=	claws-mail
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,12 +71,11 @@ PLIST_SRC=	PLIST
 PLIST_SRC+=	PLIST.shred
 .endif
 
-.include "../../databases/db4/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
