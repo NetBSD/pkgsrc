@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2009/06/27 09:55:09 ghen Exp $
+# $NetBSD: options.mk,v 1.13 2010/06/02 12:15:29 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb sasl slp inet6 smbk5pwd dso
@@ -14,11 +14,19 @@ PKG_SUGGESTED_OPTIONS=	bdb
 ### NOTE: that option is enabled, because the openldap server needs
 ### 	  to have local storage support to work as standalone.
 ###
-
 .if !empty(PKG_OPTIONS:Mbdb)
-.  include "../../databases/db4/buildlink3.mk"
+BDB_ACCEPTED=		db4 db5
 CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
 TEST_TARGET=		test
+# Fix hard-coded support for db4.
+# Remove if fixed in future versions of OpenLDAP.
+SUBST_CLASSES=		bdb
+SUBST_MESSAGE.bdb=	Fixing bdb library.
+SUBST_STAGE.bdb=	pre-configure
+SUBST_FILES.bdb=	${WRKSRC}/configure
+SUBST_SED.bdb=		-e 's,-ldb4,-l${BDB_TYPE},g'
+SUBST_SED.bdb+=		-e 's,ol_cv_bdb_major = 4,ol_cv_bdb_major > 3,g'
+.  include "../../mk/bdb.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-bdb --disable-hdb
 .endif
@@ -76,7 +84,6 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ###
 ### smbk5pwd support (sync samba and kerberos passwords on password changes)
 ###
-
 .if !empty(PKG_OPTIONS:Msmbk5pwd)
 PKG_FAIL_REASON+=	"smbk5pwd option to openldap-server is now " \
 			"available through the openldap-smbk5pwd package"
