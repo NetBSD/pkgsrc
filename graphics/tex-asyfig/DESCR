@@ -1,0 +1,7 @@
+The package provides a means of reading Asymptote figures from separate
+files, rather than within the document, as is standard in the asymptote
+package, which is provided as part of the Asymptote bundle. The
+asymptote way can prove cumbersome in a large document; the present
+package allows the user to process one picture at a time, in simple test
+documents, and then to migrate (with no fuss) to their use in the target
+document.

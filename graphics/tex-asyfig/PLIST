@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/02 20:08:58 minskim Exp $
+share/texmf-dist/tex/latex/asyfig/asyalign.sty
+share/texmf-dist/tex/latex/asyfig/asyfig.sty
+share/texmf-dist/tex/latex/asyfig/asyprocess.sty
