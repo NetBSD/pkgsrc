@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/08 22:13:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/06/02 10:14:16 markd Exp $
 man/nl/man1/adddebug.1
 man/nl/man1/ark.1
 man/nl/man1/checkXML.1
@@ -164,6 +164,9 @@ share/doc/kde/HTML/nl/kcontrol/cookies/index.docbook
 share/doc/kde/HTML/nl/kcontrol/desktop/common
 share/doc/kde/HTML/nl/kcontrol/desktop/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/desktop/index.docbook
+share/doc/kde/HTML/nl/kcontrol/desktopthemedetails/common
+share/doc/kde/HTML/nl/kcontrol/desktopthemedetails/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/desktopthemedetails/index.docbook
 share/doc/kde/HTML/nl/kcontrol/ebrowsing/common
 share/doc/kde/HTML/nl/kcontrol/ebrowsing/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/ebrowsing/index.docbook
@@ -212,6 +215,9 @@ share/doc/kde/HTML/nl/kcontrol/kcmcgi/index.docbook
 share/doc/kde/HTML/nl/kcontrol/kcmcss/common
 share/doc/kde/HTML/nl/kcontrol/kcmcss/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kcmcss/index.docbook
+share/doc/kde/HTML/nl/kcontrol/kcmdisplay/common
+share/doc/kde/HTML/nl/kcontrol/kcmdisplay/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/kcmdisplay/index.docbook
 share/doc/kde/HTML/nl/kcontrol/kcmlaunch/common
 share/doc/kde/HTML/nl/kcontrol/kcmlaunch/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kcmlaunch/index.docbook
@@ -265,6 +271,9 @@ share/doc/kde/HTML/nl/kcontrol/kwindecoration/main.png
 share/doc/kde/HTML/nl/kcontrol/kwinscreenedges/common
 share/doc/kde/HTML/nl/kcontrol/kwinscreenedges/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kwinscreenedges/index.docbook
+share/doc/kde/HTML/nl/kcontrol/kwintabbox/common
+share/doc/kde/HTML/nl/kcontrol/kwintabbox/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/kwintabbox/index.docbook
 share/doc/kde/HTML/nl/kcontrol/kxkb/common
 share/doc/kde/HTML/nl/kcontrol/kxkb/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kxkb/index.docbook
@@ -289,6 +298,9 @@ share/doc/kde/HTML/nl/kcontrol/performance/index.docbook
 share/doc/kde/HTML/nl/kcontrol/phonon/common
 share/doc/kde/HTML/nl/kcontrol/phonon/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/phonon/index.docbook
+share/doc/kde/HTML/nl/kcontrol/powerdevil/common
+share/doc/kde/HTML/nl/kcontrol/powerdevil/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/powerdevil/index.docbook
 share/doc/kde/HTML/nl/kcontrol/proxy/common
 share/doc/kde/HTML/nl/kcontrol/proxy/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/proxy/index.docbook
@@ -298,6 +310,9 @@ share/doc/kde/HTML/nl/kcontrol/screensaver/index.docbook
 share/doc/kde/HTML/nl/kcontrol/smb/common
 share/doc/kde/HTML/nl/kcontrol/smb/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/smb/index.docbook
+share/doc/kde/HTML/nl/kcontrol/solid-actions/common
+share/doc/kde/HTML/nl/kcontrol/solid-actions/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/solid-actions/index.docbook
 share/doc/kde/HTML/nl/kcontrol/solid-device-automounter/common
 share/doc/kde/HTML/nl/kcontrol/solid-device-automounter/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/solid-device-automounter/index.docbook
@@ -316,6 +331,9 @@ share/doc/kde/HTML/nl/kcontrol/trash/index.docbook
 share/doc/kde/HTML/nl/kcontrol/useragent/common
 share/doc/kde/HTML/nl/kcontrol/useragent/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/useragent/index.docbook
+share/doc/kde/HTML/nl/kcontrol/windowbehaviour/common
+share/doc/kde/HTML/nl/kcontrol/windowbehaviour/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/windowbehaviour/index.docbook
 share/doc/kde/HTML/nl/kcontrol/windowspecific/common
 share/doc/kde/HTML/nl/kcontrol/windowspecific/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/windowspecific/index.docbook
@@ -347,6 +365,7 @@ share/doc/kde/HTML/nl/kdm/common
 share/doc/kde/HTML/nl/kdm/index.cache.bz2
 share/doc/kde/HTML/nl/kdm/index.docbook
 share/doc/kde/HTML/nl/kdm/kdmrc-ref.docbook
+share/doc/kde/HTML/nl/kdm/theme-ref.docbook
 share/doc/kde/HTML/nl/kfilereplace/addstringsdialog_window.png
 share/doc/kde/HTML/nl/kfilereplace/backup_option.png
 share/doc/kde/HTML/nl/kfilereplace/casesensitive_option.png
