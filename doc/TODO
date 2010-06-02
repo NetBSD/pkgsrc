@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9341 2010/06/02 04:18:54 adam Exp $
+$NetBSD: TODO,v 1.9342 2010/06/02 06:44:37 obache Exp $
 
 Suggested new packages
 ======================
@@ -483,7 +483,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.3
 	o climm-0.6.4
-	o clutter-gtk-0.10.4 [obache, wait for gtk2+>=2.19.5]
 	o colorize-0.3.4
 	o confuse-2.7
 	o connect-1.96
