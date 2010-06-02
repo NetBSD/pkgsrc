@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/06 20:46:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/06/02 12:32:18 adam Exp $
 bin/poedit
 man/man1/poedit.1
 share/applications/poedit.desktop
@@ -16,6 +16,7 @@ share/locale/bg/LC_MESSAGES/poedit.mo
 share/locale/bn/LC_MESSAGES/poedit.mo
 share/locale/br/LC_MESSAGES/poedit.mo
 share/locale/ca/LC_MESSAGES/poedit.mo
+share/locale/ca@valencia/LC_MESSAGES/poedit.mo
 share/locale/cs/LC_MESSAGES/poedit.mo
 share/locale/da/LC_MESSAGES/poedit.mo
 share/locale/de/LC_MESSAGES/poedit.mo
@@ -40,6 +41,7 @@ share/locale/is/LC_MESSAGES/poedit.mo
 share/locale/it/LC_MESSAGES/poedit.mo
 share/locale/ja/LC_MESSAGES/poedit.mo
 share/locale/ka/LC_MESSAGES/poedit.mo
+share/locale/kk/LC_MESSAGES/poedit.mo
 share/locale/ko/LC_MESSAGES/poedit.mo
 share/locale/ku/LC_MESSAGES/poedit.mo
 share/locale/ky/LC_MESSAGES/poedit.mo
@@ -69,6 +71,8 @@ share/locale/tt/LC_MESSAGES/poedit.mo
 share/locale/ug/LC_MESSAGES/poedit.mo
 share/locale/uk/LC_MESSAGES/poedit.mo
 share/locale/ur/LC_MESSAGES/poedit.mo
+share/locale/uz/LC_MESSAGES/poedit.mo
+share/locale/vi/LC_MESSAGES/poedit.mo
 share/locale/wa/LC_MESSAGES/poedit.mo
 share/locale/zh_CN/LC_MESSAGES/poedit.mo
 share/locale/zh_TW/LC_MESSAGES/poedit.mo
