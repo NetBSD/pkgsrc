@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/02 20:09:09 minskim Exp $
+share/texmf-dist/doc/latex/asyfig/README
+share/texmf-dist/doc/latex/asyfig/asyfig.pdf
+share/texmf-dist/doc/latex/asyfig/example/frf.asy
+share/texmf-dist/doc/latex/asyfig/example/test-asyfig.tex
