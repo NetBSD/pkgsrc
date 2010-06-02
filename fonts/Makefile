@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2010/05/26 13:57:01 obache Exp $
+# $NetBSD: Makefile,v 1.156 2010/06/02 19:02:11 drochner Exp $
 #
 
 COMMENT=	Fonts
@@ -199,6 +199,7 @@ SUBDIR+=	umefont-ttf
 SUBDIR+=	un-core-ttf
 SUBDIR+=	un-extra-ttf
 SUBDIR+=	uralic-ttf
+SUBDIR+=	urw-fonts
 SUBDIR+=	vera-ttf
 SUBDIR+=	vfontcap-kochi
 SUBDIR+=	vlgothic-ttf
