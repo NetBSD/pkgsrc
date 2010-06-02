@@ -1,25 +1,28 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:03:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/06/02 12:38:29 adam Exp $
 bin/cob-config
 bin/cobc
 bin/cobcrun
 include/libcob.h
 include/libcob/byteswap.h
 include/libcob/call.h
+include/libcob/codegen.h
 include/libcob/common.h
 include/libcob/exception.def
 include/libcob/fileio.h
+include/libcob/intrinsic.h
 include/libcob/move.h
 include/libcob/numeric.h
 include/libcob/screenio.h
 include/libcob/strings.h
+include/libcob/system.def
 include/libcob/termio.h
 info/open-cobol.info
 lib/libcob.la
 share/locale/ja/LC_MESSAGES/open-cobol.mo
+share/open-cobol/config/bs2000.conf
 share/open-cobol/config/cobol2002.conf
 share/open-cobol/config/cobol85.conf
 share/open-cobol/config/default.conf
 share/open-cobol/config/ibm.conf
 share/open-cobol/config/mf.conf
 share/open-cobol/config/mvs.conf
-share/open-cobol/config/v023.conf
