@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2008/01/11 01:23:43 adam Exp $
+# $NetBSD: options.mk,v 1.4 2010/06/02 18:35:38 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.octave
-PKG_SUPPORTED_OPTIONS=	glpk hdf5 pcre qhull
+PKG_SUPPORTED_OPTIONS=	glpk graphicsmagick hdf5 pcre qhull
 PKG_SUGGESTED_OPTIONS=	glpk hdf5 pcre qhull
 
 .include "../../mk/bsd.options.mk"
@@ -10,6 +10,12 @@ PKG_SUGGESTED_OPTIONS=	glpk hdf5 pcre qhull
 .include "../../math/glpk/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-glpk
+.endif
+
+.if !empty(PKG_OPTIONS:Mgraphicsmagick)
+.include "../../graphics/GraphicsMagick/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		ac_cv_prog_MAGICK_CONFIG=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mhdf5)
