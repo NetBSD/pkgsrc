@@ -1,23 +1,39 @@
-# $NetBSD: Makefile,v 1.56 2010/04/15 07:01:22 adam Exp $
+# $NetBSD: Makefile,v 1.57 2010/06/02 13:14:47 adam Exp $
 
-DISTNAME=		jabberd-2.2.9
-PKGREVISION=		2
-CATEGORIES=		chat
-MASTER_SITES=		http://codex.xiaoka.com/pub/jabberd2/releases/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	jabberd-2.2.9
+PKGREVISION=	3
+CATEGORIES=	chat
+MASTER_SITES=	http://codex.xiaoka.com/pub/jabberd2/releases/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://jabberd2.xiaoka.com/
-COMMENT=		XMPP (Jabber) instant messaging server
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	eric@cirr.com
+HOMEPAGE=	http://jabberd2.xiaoka.com/
+COMMENT=	XMPP (Jabber) instant messaging server
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		jabberd-[0-9]*
 
+BDB_ACCEPTED=		db4 db5
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-anon
+CONFIGURE_ARGS+=	--enable-pipe
+CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-fs
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+.if (${MACHINE_ARCH} == alpha) || (${MACHINE_ARCH} == x86_64)
+CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:M*:Q}
+CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:M*:Q}
+MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:M*:Q}
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:C/-O./-Os/:M*:Q}
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:M*:Q}
+MAKE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:M*:Q}
+.endif
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -26,22 +42,6 @@ SUBST_MESSAGE.path=	Fixing configure script.
 SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"
 SUBST_SED.path+=	-e "s,\$$sysconfdir/jabberd,\$$sysconfdir,g"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-pipe
-CONFIGURE_ARGS+=	--enable-anon
-CONFIGURE_ARGS+=	--enable-ssl
-CONFIGURE_ARGS+=	--enable-fs
-
-.if (${MACHINE_ARCH} == alpha) || (${MACHINE_ARCH} == x86_64)
-CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:Q}
-CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:Q}
-MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:Q}
-CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:C/-O./-Os/:Q}
-CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:Q}
-MAKE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:Q}
-.endif
-
-USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
 
 .include "../../mk/bsd.prefs.mk"
@@ -55,10 +55,10 @@ PKG_SYSCONFSUBDIR=	jabberd
 RCD_SCRIPTS=		jabberd c2s sm router s2s
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
-FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
-FILES_SUBST+=		JABBERD_GROUP=${JABBERD_GROUP:Q}
-FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR:Q}
-FILES_SUBST+=		JABBERD_LOGDIR=${JABBERD_LOGDIR:Q}
+FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
+FILES_SUBST+=		JABBERD_GROUP=${JABBERD_GROUP}
+FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR}
+FILES_SUBST+=		JABBERD_LOGDIR=${JABBERD_LOGDIR}
 PKG_USERS_VARS+=	JABBERD_USER
 PKG_GROUPS_VARS+=	JABBERD_GROUP
 PKG_GROUPS=		${JABBERD_GROUP}
@@ -95,8 +95,7 @@ post-extract:
 
 pre-configure:
 .for f in ${FILES}
-	sed								\
-		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
+	sed	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
 		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
 		-e "s|@LOGDIR@|${JABBERD_LOGDIR}|g"			\
 		-e "s|@SSLCERTS@|${SSLCERTS}|g"				\
@@ -121,9 +120,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
-.include "../../net/udns/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../net/udns/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

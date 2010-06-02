@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/17 09:35:40 seb Exp $
-#
+# $NetBSD: Makefile,v 1.2 2010/06/02 13:21:03 adam Exp $
 
 DISTNAME=	BDB-1.88
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5bdb
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BDB_ACCEPTED=		db4 db3 db2
+BDB_ACCEPTED=		db5 db4 db3 db2
 PERL5_PACKLIST=		auto/BDB/.packlist
 
 MAKE_PARAMS+=	INC=-I${BDBBASE:Q}/${BUILDLINK_INCDIRS.${BDB_TYPE}:Q}
@@ -22,6 +22,6 @@ PERL5_LDFLAGS+=	-L${BUILDLINK_PREFIX.${BDB_TYPE}} ${BDB_LIBS}
 
 DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

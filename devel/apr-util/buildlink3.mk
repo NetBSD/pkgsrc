@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2010/01/17 12:02:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2010/06/02 13:19:43 adam Exp $
 
 BUILDLINK_TREE+=	apr-util
 
@@ -23,7 +23,8 @@ pkgbase := apr-util
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.apr-util:Mdb4)
-.  include "../../databases/db4/buildlink3.mk"
+BDB_ACCEPTED?=		db4 db5
+.  include "../../mk/bdb.buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.apr-util:Mldap)
