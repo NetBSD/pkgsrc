@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2010/06/02 13:10:05 adam Exp $
+
+--- config.h.in.orig	2010-06-02 06:19:09.000000000 +0000
++++ config.h.in
+@@ -6,6 +6,9 @@
+ /* Define to 1 if you have the <db4/db.h> header file. */
+ #undef HAVE_DB4_DB_H
+ 
++/* Define to 1 if you have the <db5/db.h> header file. */
++#undef HAVE_DB5_DB_H
++
+ /* Define to 1 if you have the <db.h> header file. */
+ #undef HAVE_DB_H
+ 
