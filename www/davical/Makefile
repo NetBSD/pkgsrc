@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/02 23:27:56 jym Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -18,10 +18,11 @@ DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical
 DOCDIR=		${PREFIX}/share/doc/davical
 
-BUILD_DEFS=	APACHE_USER APACHE_GROUP
+BUILD_DEFS=	APACHE_USER APACHE_GROUP PGUSER PGGROUP
 
-DAVICAL_USER?=	${APACHE_USER}
-DAVICAL_GROUP?=	${APACHE_GROUP}
+# davical_dba account
+DAVICAL_USER?=	${PGUSER}
+DAVICAL_GROUP?=	${PGGROUP}
 
 USE_TOOLS=	pax msgfmt perl:build
 
@@ -41,20 +42,21 @@ DEPENDS+=	pwgen>=2.06:../../sysutils/pwgen
 DEPENDS+=	postgresql${PGSQL_VERSION}-client-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-client
 
 PKG_SYSCONFSUBDIR=	davical
-PKG_SYSCONFDIR_PERMS=	${DAVICAL_USER} ${DAVICAL_GROUP} 0700
 
 MESSAGE_SUBST+=		DAVICALDIR=${DAVICALDIR:Q} DOCDIR=${DOCDIR:Q}
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE:Q}
 
 CONF_FILES=		${EGDIR}/davical.conf	\
 			${PKG_SYSCONFDIR}/davical.conf
 
-CONF_FILES+=		${EGDIR}/config/example-administration.yml	\
-			${PKG_SYSCONFDIR}/administration.yml
+CONF_FILES_PERMS+=	${EGDIR}/config/example-administration.yml	\
+			${PKG_SYSCONFDIR}/administration.yml		\
+			${DAVICAL_USER} ${DAVICAL_GROUP} 0600
 
 CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
 			${PKG_SYSCONFDIR}/config.php		\
-			${DAVICAL_USER} ${DAVICAL_GROUP} 0640
+			${APACHE_USER} ${APACHE_GROUP} 0640
 
 REPLACE_INTERPRETER+=	perl
 REPLACE.perl.old=	.*/bin/perl
