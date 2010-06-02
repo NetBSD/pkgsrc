@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.8 2010/06/02 18:24:47 tnn Exp $
+
+--- src/fe-gtk/fe-gtk.c.orig	2008-02-24 08:39:44.000000000 +0000
++++ src/fe-gtk/fe-gtk.c
+@@ -819,7 +819,7 @@ fe_gui_info (session *sess, int info_typ
+ 	switch (info_type)
+ 	{
+ 	case 0:	/* window status */
+-		if (!GTK_WIDGET_VISIBLE (GTK_WINDOW (sess->gui->window)))
++		if (!gtk_widget_get_visible(GTK_WINDOW (sess->gui->window)))
+ 			return 2;	/* hidden (iconified or systray) */
+ #if GTK_CHECK_VERSION(2,4,0)
+ 		if (gtk_window_is_active (GTK_WINDOW (sess->gui->window)))
