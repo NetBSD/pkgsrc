@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2010/06/02 13:24:34 adam Exp $
+
+--- ../dist/Makefile.in.orig	2010-06-01 08:47:30.000000000 +0000
++++ ../dist/Makefile.in
+@@ -165,7 +165,7 @@ AUTOMAKE = @AUTOMAKE@
+ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+-CFLAGS = $(OPTFLAG)
++CFLAGS = @CFLAGS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CURSCPPFLAGS = @CURSCPPFLAGS@
