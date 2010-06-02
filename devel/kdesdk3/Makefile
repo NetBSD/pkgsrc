@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2010/01/18 09:58:45 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2010/06/02 12:26:13 adam Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -12,7 +12,12 @@ CONFLICTS+=	umbrello-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
+BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		lex perl:run
+CONFIGURE_ARGS+=	--with-db-dir=${BDBBASE}
+CONFIGURE_ARGS+=	--with-db-include=${BDB_TYPE}/db.h
+#CONFIGURE_ARGS+=	--with-db-include-dir=${BDBBASE}/include/${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-db-name=${BDB_TYPE}
 
 REPLACE_PERL+=	cervisia/change_colors.pl \
 		cervisia/move_repositories.pl \
@@ -76,9 +81,10 @@ post-install:
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
-.include "../../databases/db4/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

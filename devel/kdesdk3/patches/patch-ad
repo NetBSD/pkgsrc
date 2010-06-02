@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.7 2010/06/02 12:26:13 adam Exp $
+
+--- configure.orig	2008-08-20 15:51:23.000000000 +0000
++++ configure
+@@ -33895,7 +33895,7 @@ fi
+ 
+ # Check whether --with-db-include was given.
+ if test "${with_db_include+set}" = set; then
+-  withval=$with_db_include;   ac_db_include_file=-I"$withval"
++  withval=$with_db_include;   ac_db_include_file="$withval"
+ 
+ fi
+ 
+@@ -33941,14 +33941,10 @@ int
+ main ()
+ {
+ 
+-#if DB_VERSION_MAJOR == 4
++#if DB_VERSION_MAJOR >= 4
+ DB *db;
+-#if DB_VERSION_MINOR > 0
+ db->open( db, NULL, "test.db", NULL, DB_BTREE, DB_CREATE, 0644 );
+ #else
+-db->open( db, "test.db", NULL, DB_BTREE, DB_CREATE, 0644 );
+-#endif
+-#else
+ error
+ #endif
+ 
