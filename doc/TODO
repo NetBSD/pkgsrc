@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9343 2010/06/02 13:30:40 adam Exp $
+$NetBSD: TODO,v 1.9344 2010/06/02 15:23:23 adam Exp $
 
 Suggested new packages
 ======================
@@ -1097,7 +1097,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
-	o php-pdflib-2.1.8 [pkg/43270]
 	o php5-5.3.2
 	o php-jpgraph-3.0.6
 	o phpmyadmin-3.3.3
