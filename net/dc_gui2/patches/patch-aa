@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/10 13:21:52 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/02 13:08:22 adam Exp $
 
---- configure.orig	Tue Jun 10 14:32:15 2003
+--- configure.orig	2004-01-24 06:41:45.000000000 +0000
 +++ configure
-@@ -10490,6 +10490,7 @@
+@@ -11042,6 +11042,7 @@ fi
  
  							if test "x$HAVE_DB40" = "xyes"; then
  
