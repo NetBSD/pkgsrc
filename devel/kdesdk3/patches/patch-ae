@@ -1,0 +1,120 @@
+$NetBSD: patch-ae,v 1.5 2010/06/02 12:26:13 adam Exp $
+
+--- kbabel/kbabeldict/modules/dbsearchengine/database.cpp.orig	2010-06-01 14:22:58.000000000 +0000
++++ kbabel/kbabeldict/modules/dbsearchengine/database.cpp
+@@ -341,9 +341,7 @@ DataBaseManager::openDataBase ()
+     db_create (&indexDb, 0, 0);
+ 
+     ret = db->open (db,
+-#if DB_VERSION_MINOR > 0
+ 		    NULL,
+-#endif
+ 		    transfilename.local8Bit (), 0, DB_BTREE, 0, 0644);
+ 
+     if (ret == DB_OLD_VERSION)
+@@ -457,9 +455,7 @@ DataBaseManager::openDataBase ()
+ 		keysFile.unlink ();
+ 
+ 		ret = db->open (db,
+-#if DB_VERSION_MINOR > 0
+ 				NULL,
+-#endif
+ 				transfilename.local8Bit (), 0, DB_BTREE, 0,
+ 				0644);
+ 		if (ret != 0)
+@@ -483,9 +479,7 @@ DataBaseManager::openDataBase ()
+ 
+ 
+     ret = infoDb->open (infoDb,
+-#if DB_VERSION_MINOR > 0
+ 			NULL,
+-#endif
+ 			infofilename.local8Bit (), 0, DB_RECNO, 0, 0644);
+     if (ret != 0)
+       {
+@@ -501,9 +495,7 @@ DataBaseManager::openDataBase ()
+ // Words index database
+ 
+     ret = wordDb->open (wordDb,
+-#if DB_VERSION_MINOR > 0
+ 			NULL,
+-#endif
+ 			wordsfilename.local8Bit (), 0, DB_BTREE, 0, 0644);
+     if (ret != 0)
+       {
+@@ -515,9 +507,7 @@ DataBaseManager::openDataBase ()
+ //Index of keys.
+ 
+     ret = indexDb->open (indexDb,
+-#if DB_VERSION_MINOR > 0
+ 			 NULL,
+-#endif
+ 			 keysfilename.local8Bit (), 0, DB_RECNO, 0, 0644);
+     if (ret != 0)
+       {
+@@ -740,11 +730,7 @@ int
+ DataBaseManager::count ()
+ {
+     DB_BTREE_STAT *dstat = 0;
+-#if DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 3
+     db->stat (db, NULL, &dstat, DB_FAST_STAT);
+-#else
+-    db->stat (db, &dstat, DB_FAST_STAT);
+-#endif
+     int ret = dstat->bt_nkeys;
+     free (dstat);
+ 
+@@ -800,9 +786,7 @@ DataBaseManager::createDataBase (QString
+ 
+     db->set_flags (db, DB_RECNUM);
+     ret = db->open (db,
+-#if DB_VERSION_MINOR > 0
+ 		    NULL,
+-#endif
+ 		    filename.local8Bit (), 0, DB_BTREE, DB_CREATE | DB_EXCL,
+ 		    mode);
+     if (ret != 0)
+@@ -818,9 +802,7 @@ DataBaseManager::createDataBase (QString
+ 
+     db_create (&infoDb, 0, 0);
+     ret = infoDb->open (infoDb,
+-#if DB_VERSION_MINOR > 0
+ 			NULL,
+-#endif
+ 			filename.local8Bit (), 0, DB_RECNO, DB_CREATE, mode);
+     if (ret != 0)
+ 	iAmOk = false;
+@@ -833,9 +815,7 @@ DataBaseManager::createDataBase (QString
+ 
+     db_create (&wordDb, 0, 0);
+     ret = wordDb->open (wordDb,
+-#if DB_VERSION_MINOR > 0
+ 			NULL,
+-#endif
+ 			filename.local8Bit (), 0, DB_BTREE, DB_CREATE, mode);
+     if (ret != 0)
+ 	iAmOk = false;
+@@ -848,9 +828,7 @@ DataBaseManager::createDataBase (QString
+ 
+     db_create (&indexDb, 0, 0);
+     ret = indexDb->open (indexDb,
+-#if DB_VERSION_MINOR > 0
+ 			 NULL,
+-#endif
+ 			 filename.local8Bit (), 0, DB_RECNO, DB_CREATE, mode);
+     if (ret != 0)
+ 	iAmOk = false;
+@@ -979,13 +957,8 @@ DataBaseManager::loadInfo ()
+     int nrec;
+     DB_BTREE_STAT *stat;
+ // memset(&stat,0,sizeof(DB_BTREE_STAT));
+-#if DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 3
+     if (infoDb->stat (infoDb, NULL, &stat, DB_FAST_STAT))
+ 	fprintf (stderr, "Cannot stat\n");
+-#else
+-    if (infoDb->stat (infoDb, &stat, DB_FAST_STAT))
+-	fprintf (stderr, "Cannot stat\n");
+-#endif
+     nrec = stat->bt_nkeys;
+     free (stat);
+ 
