@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.7 2008/07/13 16:26:17 tonnerre Exp $
+$NetBSD: distinfo,v 1.8 2010/06/02 12:50:03 adam Exp $
 
-SHA1 (perdition-1.17.tar.gz) = 5e04f172db4a7ee2af5b7a28c19c231f955243fc
-RMD160 (perdition-1.17.tar.gz) = cc3c4679390132ece6858eca6483ffddead568e4
-Size (perdition-1.17.tar.gz) = 552149 bytes
-SHA1 (patch-aa) = 17c6bf55f77187cad59f779e6fbcd85d6921eab1
-SHA1 (patch-ab) = 7d7b8458c104437e83934b3b0fea573bd54aced0
-SHA1 (patch-ac) = 5096afa901f6f5766d9a8b0d2481c8f9c1356fe1
-SHA1 (patch-ad) = 7b53169a8571141016fa79e1fbf55439579c4d77
-SHA1 (patch-ae) = a3a41d06a7a63d479f4c8de29b6d7ee2a745dd87
-SHA1 (patch-af) = 0fa5a853c69ff6869e3a752fc592228d6e782079
-SHA1 (patch-ag) = 350cfc64f98611455292d4d052463e6828588338
-SHA1 (patch-ah) = 6a88d3c73cc5e5b88a58b057c58fdbe182f2d0d4
+SHA1 (perdition-1.18.tar.gz) = 60d76e2fca810fa1a12bebe369fc3e7d3452ebbb
+RMD160 (perdition-1.18.tar.gz) = 82065dcfb7f05d7bebcf98b72334f676d4fd5dad
+Size (perdition-1.18.tar.gz) = 602933 bytes
+SHA1 (patch-ac) = 01934fb919cc8ac7699e07e407d6e26706e98fbd
+SHA1 (patch-ag) = 3840c9b4ed6e6d286c1cbeebad7184f9ccdaac2a

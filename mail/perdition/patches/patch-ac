@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2006/03/04 15:16:30 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2010/06/02 12:50:03 adam Exp $
 
---- perdition/pam.c.orig	2006-03-04 15:10:45.000000000 +0000
+--- perdition/pam.c.orig	2009-11-26 05:05:32.000000000 +0000
 +++ perdition/pam.c
-@@ -31,6 +31,7 @@
+@@ -32,6 +32,7 @@
  #include "config.h"
  #endif
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.1 2006/03/04 15:16:30 joerg Exp $
  
  #include "pam.h"
  
-@@ -52,8 +53,6 @@ int perdition_conv(
+@@ -53,8 +54,6 @@ int perdition_conv(
  ){
    char *pass;
  
