@@ -329,6 +329,7 @@ mozilla			Use mozilla as gecko rendering engine.
 mozilla-jemalloc	Enable building with Mozilla'a jemalloc.
 mozilla-jit		Enable nanojit javascript acceleration.
 mozilla-lightning	Enable the lightning calendar extension.
+mozilla-enigmail	Enable the Enigmail OpenPGP extension.
 mozilla-single-profile	Enable single profiles on mozilla browsers.
 mp3tunes		Enable support for mp3tunes.com.
 mpcdec			Enable the portable Musepack decoder library.
