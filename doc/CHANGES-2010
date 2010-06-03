@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2102 2010/06/03 16:27:56 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2103 2010/06/03 19:36:59 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2828,3 +2828,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/drupal6 to 6.17 [taca 2010-06-03]
 	Updated devel/atf to 0.9 [jmmv 2010-06-03]
 	Updated games/xskat to 4.0 [sno 2010-06-03]
+	UPdated multimedia/transcode to 1.1.5nb4 [gls 2010-06-03]
