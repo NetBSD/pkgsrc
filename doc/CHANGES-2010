@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2095 2010/06/03 05:25:08 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.2096 2010/06/03 08:16:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2820,3 +2820,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/tex-asyfig version 0.1c [minskim 2010-06-02]
 	Added graphics/tex-asyfig-doc version 0.1c [minskim 2010-06-02]
 	Updated lang/inform to 6.31.1nb1 [dholland 2010-06-03]
+	Updated net/libmms to 0.6 [obache 2010-06-03]
