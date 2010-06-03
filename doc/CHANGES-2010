@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2099 2010/06/03 15:43:31 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2100 2010/06/03 15:45:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2824,4 +2824,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/gst-plugins0.10-mms version 0.10.18 [obache 2010-06-03]
 	Updated chat/p5-POE-Filter-IRCD to 2.42 [kefren 2010-06-03]
 	Updated chat/p5-POE-Component-IRC to 6.32 [kefren 2010-06-03]
+	Updated security/sudo to 1.7.2p7 [taca 2010-06-03]
 	Updated www/drupal6 to 6.17 [taca 2010-06-03]
