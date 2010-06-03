@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.832 2010/05/26 16:12:19 taca Exp $
+# $NetBSD: Makefile,v 1.833 2010/06/03 09:24:04 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -148,6 +148,7 @@ SUBDIR+=	gopher
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
 SUBDIR+=	gst-plugins0.10-soup
+SUBDIR+=	gst-plugins0.10-mms
 SUBDIR+=	gt-itm
 SUBDIR+=	gtk-gnutella
 SUBDIR+=	gtk-vnc
