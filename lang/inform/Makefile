@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/06/03 05:24:27 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/03 09:26:30 wiz Exp $
 
 DISTNAME=	inform-6.31.1
 PKGREVISION=	1
@@ -8,8 +8,7 @@ MASTER_SITES=	http://mirror.ifarchive.org/if-archive/infocom/compilers/inform6/s
 MAINTAINER=	nathanw@mit.edu
 HOMEPAGE=	http://www.inform-fiction.org/
 COMMENT=	Interactive fiction compiler (Z-Machine and Glulx)
-
-LICENSE=	no-profit
+LICENSE=	inform-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
