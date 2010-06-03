@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2009/06/14 22:57:59 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2010/06/03 01:00:46 dsainty Exp $
 
 BUILDLINK_TREE+=	glib2
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # GLIB2_BUILDLINK3_MK
 
