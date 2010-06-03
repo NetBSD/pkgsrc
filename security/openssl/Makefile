@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.146 2010/03/26 00:20:49 taca Exp $
+# $NetBSD: Makefile,v 1.146.2.1 2010/06/03 08:33:32 spz Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
-OPENSSL_VERS?=		0.9.8m
-PKGREVISION=		2
+OPENSSL_VERS?=		0.9.8o
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
@@ -86,6 +85,13 @@ CONFIGURE_ARGS+=	tru64-alpha-gcc
 CONFIGURE_ARGS+=	tru64-alpha-cc
 .  endif
 .elif ${OPSYS} == "Darwin"
+CONFIGURE_SCRIPT=	./Configure
+.  if ${ABI} == "64"
+CONFIGURE_ARGS+=	darwin64-${MACHINE_ARCH}-cc
+.  else
+CONFIGURE_ARGS+=	darwin-${MACHINE_ARCH}-cc
+.  endif
+
 .include "../../mk/dlopen.buildlink3.mk"
 
 SUBST_CLASSES+=		dl
