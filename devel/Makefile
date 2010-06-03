@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1343 2010/06/01 21:40:22 markd Exp $
+# $NetBSD: Makefile,v 1.1344 2010/06/03 05:06:25 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -261,8 +261,8 @@ SUBDIR+=	kdbg
 SUBDIR+=	kdesdk3
 SUBDIR+=	kdesdk4
 SUBDIR+=	kdevelop
-SUBDIR+=	kdevelop4
 SUBDIR+=	kdevelop-base
+SUBDIR+=	kdevelop4
 SUBDIR+=	kdevplatform
 SUBDIR+=	kdiff3
 SUBDIR+=	ko-po-check
