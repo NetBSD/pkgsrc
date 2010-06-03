@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/03 09:22:42 obache Exp $
+lib/gstreamer-0.10/libgstmms.la
