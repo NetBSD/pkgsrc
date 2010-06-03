@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+# $NetBSD: options.mk,v 1.2 2010/06/03 06:55:54 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--without-zephyr
 .endif
 
 .if !empty(PKG_OPTIONS:Mbdb)
-BDB_ACCEPTED=		db4 db3
+BDB_ACCEPTED=		db3 db4 db5
 .  include "../../mk/bdb.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-bdb=${BDB_TYPE}
 CONFIGURE_ARGS+=	--with-bdb-incdir=${BDBBASE}/include/${BDB_TYPE}
