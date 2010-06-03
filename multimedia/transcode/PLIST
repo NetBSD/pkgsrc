@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/08/17 17:25:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/06/03 19:33:33 gls Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -40,6 +40,7 @@ lib/transcode/export_wav.la
 lib/transcode/export_xvid.so
 lib/transcode/export_xvid4.la
 ${PLIST.mjpegtools}lib/transcode/export_yuv4mpeg.la
+${PLIST.lzo}lib/transcode/export_lzo.la
 lib/transcode/filter_29to23.la
 lib/transcode/filter_32detect.la
 lib/transcode/filter_32drop.la
@@ -106,6 +107,7 @@ lib/transcode/import_ffmpeg.la
 lib/transcode/import_framegen.la
 ${PLIST.imagemagick}lib/transcode/import_im.la
 ${PLIST.imagemagick}lib/transcode/import_imlist.la
+${PLIST.lzo}lib/transcode/import_lzo.la
 lib/transcode/import_mp3.la
 lib/transcode/import_mpeg2.la
 lib/transcode/import_mplayer.la
