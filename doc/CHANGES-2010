@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2094 2010/06/02 20:11:25 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2095 2010/06/03 05:25:08 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2819,3 +2819,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/boehm-gc to 7.1nb4 [wiz 2010-06-02]
 	Added graphics/tex-asyfig version 0.1c [minskim 2010-06-02]
 	Added graphics/tex-asyfig-doc version 0.1c [minskim 2010-06-02]
+	Updated lang/inform to 6.31.1nb1 [dholland 2010-06-03]
