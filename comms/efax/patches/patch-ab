@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/21 22:27:01 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2010/06/03 12:53:47 sborrill Exp $
 
---- fax.orig	Wed Mar 24 08:07:28 1999
-+++ fax
+--- fax.orig	1999-03-24 08:07:28.000000000 +0000
++++ fax	2010-06-03 13:40:50.000000000 +0100
 @@ -14,12 +14,10 @@
  #    or in a configuration file (see CONFIGFILES below)
  #
@@ -27,16 +27,24 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/21 22:27:01 jtb Exp $
  
  # Your fax number in international format, 20 characters maximum.
  # Use only digits, spaces, and the "+" character.
-@@ -67,7 +65,7 @@
+@@ -66,8 +64,14 @@
+ 
  # The name of the Ghostscript executable including full path if
  # necessary.  Only required if faxing Postscript files.
- 
+-
 -GS=gs
-+GS=@LOCALBASE@/bin/gs
++#
++# Ghostscript 8.71 and later output multi-strip TIFF files by default
++# which efax does not like. This can be disabled with the
++# -dMaxStripSize=0 option. It is reported that this option also works
++# with older versions (e.g. 8.63), so it is probably safe to add it
++# by default. If you have problems use the following line instead:
++# GS=@LOCALBASE@/bin/gs
++GS="@LOCALBASE@/bin/gs -dMaxStripSize=0"
  
  # Dial string prefix and suffix such as T for tone dialing, P for
  # pulse dialing, 9 to get an external line, commas for delays or
-@@ -81,7 +79,7 @@
+@@ -81,7 +85,7 @@
  # conventions. Protect with single quotes for delayed evaluation.
  # Add a leading '#' to the file name to use binary format.
  
@@ -45,7 +53,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/21 22:27:01 jtb Exp $
  # LOCK='-x /usr/spool/uucp/LCK..$DEV'		# older systems
  # LOCK='-x /var/lock/LCK..$DEV -x /var/spool/uucp/LCK..$DEV' # both
  # LOCK='-x #/usr/spool/uucp/LCK..$DEV'		# binary format
-@@ -101,11 +99,12 @@
+@@ -101,11 +105,12 @@
  # The remaining options probably won't need to be changed.
  # ****************************************************************
  
@@ -62,7 +70,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/21 22:27:01 jtb Exp $
  
  # A command that will generate unique names for logs and received
  # files.  'date +%m%d%H%M%S' works on most systems.  Protect with
-@@ -301,8 +300,8 @@
+@@ -301,8 +306,8 @@
  # The directory to store incoming faxes and log files.  This directory
  # should already exist and be writable by the user(s) of this script.
  
@@ -73,7 +81,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/21 22:27:01 jtb Exp $
  
  # The strftime(3) pattern that generates the file name for
  # received files.  For example, at 10:45:36 on February 25,
-@@ -390,8 +389,8 @@
+@@ -390,8 +395,8 @@
  # efax even if a previous process (e.g. login) has changed it.
  # Comment out if you don't need to reset device ownership.
  
@@ -84,7 +92,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/21 22:27:01 jtb Exp $
  # MODE=660		# only owner & group
  
  # Regular expression for efax exit codes in log files that will
-@@ -404,7 +403,21 @@
+@@ -404,7 +409,21 @@
  # --- End of user configuration section ---
  # ****************************************************************
  
