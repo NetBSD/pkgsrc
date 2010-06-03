@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 20:34:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/06/03 05:24:27 dholland Exp $
 bin/inform
 bin/inform-6.31
 share/inform/6.31/include/AdHints.h
@@ -210,7 +210,6 @@ share/inform/manual/s28.html
 share/inform/manual/s29.html
 share/inform/manual/s3.html
 share/inform/manual/s30.html
-share/inform/manual/s31.html
 share/inform/manual/s31.html
 share/inform/manual/s32.html
 share/inform/manual/s33.html
