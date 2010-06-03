@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9346 2010/06/02 20:12:02 minskim Exp $
+$NetBSD: TODO,v 1.9347 2010/06/03 09:26:35 kefren Exp $
 
 Suggested new packages
 ======================
@@ -1059,8 +1059,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Module-Install-0.97
 	o p5-Mouse-0.59
 	o p5-POE-1.289 [pkg/43115]
-	o p5-POE-Component-IRC-6.24 [pkg/42801]
-	o p5-POE-Filter-IRCD-2.42 [pkg/42800]
 	o p5-POE-Test-Loops-1.035 [pkg/43114]
 	o p5-PerlMagick-6.6.2.0
 	o p5-Pod-Readme-0.10
