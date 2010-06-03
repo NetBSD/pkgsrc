@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2097 2010/06/03 09:22:58 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2098 2010/06/03 09:26:35 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2822,3 +2822,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/inform to 6.31.1nb1 [dholland 2010-06-03]
 	Updated net/libmms to 0.6 [obache 2010-06-03]
 	Added net/gst-plugins0.10-mms version 0.10.18 [obache 2010-06-03]
+	Updated chat/p5-POE-Filter-IRCD to 2.42 [kefren 2010-06-03]
+	Updated chat/p5-POE-Component-IRC to 6.32 [kefren 2010-06-03]
