@@ -1,6 +1,6 @@
-$NetBSD: patch-ba,v 1.5 2009/09/10 00:14:55 tnn Exp $
+$NetBSD: patch-ba,v 1.6 2010/06/03 07:58:37 tnn Exp $
 
---- configure.orig	2009-04-22 16:54:40.000000000 +0200
+--- configure.orig	2009-04-22 14:54:40.000000000 +0000
 +++ configure
 @@ -4222,11 +4222,11 @@ echo "${ECHO_T}$PTHREAD_LIBS" >&6; }
          test_randr=no
@@ -77,6 +77,15 @@ $NetBSD: patch-ba,v 1.5 2009/09/10 00:14:55 tnn Exp $
  else
  
               CFLAGS=-I/usr/include/db4
+@@ -15054,7 +15055,7 @@ fi
+ 
+     { echo "$as_me:$LINENO: checking whether db is at least 4.1" >&5
+ echo $ECHO_N "checking whether db is at least 4.1... $ECHO_C" >&6; }
+-    for v in `seq 1 7`; do
++    for v in `seq 1 8`; do
+        if test "$cross_compiling" = yes; then
+   { { echo "$as_me:$LINENO: error: cannot run test program while cross compiling
+ See \`config.log' for more details." >&5
 @@ -15122,13 +15123,13 @@ echo "$as_me: error: no. you need at lea
      #AC_CHECK_LIB(db, db_create, [],
      #  [AC_MSG_ERROR([db library not installed or functional])], [])
