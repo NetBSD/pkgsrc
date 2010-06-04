@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/04 16:14:44 sborrill Exp $
+include/iscsi.h
+lib/libiscsi.la
+man/man3/libiscsi.3
