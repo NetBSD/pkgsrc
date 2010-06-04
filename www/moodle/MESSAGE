@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/06/04 09:20:00 wiz Exp $
+
+Add the following line to httpd.conf to make Moodle accessible
+through your HTTP server:
+
+	Include ${PKG_SYSCONFDIR}/moodle.conf
+
+Your Moodle is then accessible through:
+
+	http://www.example.com/moodle/
+
+Then create a user and a database for Moodle to store all
+its tables in (or choose an existing database).
+
+For more information, see the INSTALL DOCUMENTATION:
+
+   http://docs.moodle.org/en/Installing_Moodle
+
+===========================================================================
