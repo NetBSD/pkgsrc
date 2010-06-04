@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.833 2010/06/03 09:24:04 obache Exp $
+# $NetBSD: Makefile,v 1.834 2010/06/04 16:10:24 sborrill Exp $
 #
 
 COMMENT=	Networking tools
@@ -285,6 +285,8 @@ SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
 SUBDIR+=	net6
 SUBDIR+=	netatalk
+SUBDIR+=	netbsd-iscsi-initiator
+SUBDIR+=	netbsd-iscsi-target
 SUBDIR+=	netcat
 SUBDIR+=	netcat6
 SUBDIR+=	netdisco
