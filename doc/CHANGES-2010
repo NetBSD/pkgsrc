@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2110 2010/06/04 14:05:20 tsutsui Exp $
+$NetBSD: CHANGES-2010,v 1.2111 2010/06/04 16:10:24 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2835,3 +2835,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/p5-Net-CUPS version 0.61 [obache 2010-06-04]
 	Updated devel/p5-POE-Test-Loops to 1.035 [obache 2010-06-04]
 	Updated time/emiclock to 2.0.2nb5 [tsutsui 2010-06-04]
+	Moved devel/netbsd-iscsi-initiator to net/netbsd-iscsi-initiator [sborrill 2010-06-04]
+	Moved devel/netbsd-iscsi-target to net/netbsd-iscsi-target [sborrill 2010-06-04]
