@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2009/07/07 20:25:27 joerg Exp $
+$NetBSD: distinfo,v 1.8 2010/06/04 13:52:21 tsutsui Exp $
 
 SHA1 (emiclock-2.0.2.tar.gz) = e1c042d600faf59ecdb11f1199f1793282db90c1
 RMD160 (emiclock-2.0.2.tar.gz) = 25a753aaefbd9b8b57c16fbfe13678a002ab8179
@@ -8,3 +8,6 @@ SHA1 (patch-ab) = 8c83e056bd03b0f493f91afd33ce572ed673511b
 SHA1 (patch-ac) = 4b020ac03c958d1ca44968c17b7d657edda77690
 SHA1 (patch-ad) = 47a12bfb61ed37f5ad9625f161e5e2a6c1d3e47f
 SHA1 (patch-ae) = 75250a553700eeacd5fcc6f71ed4477541cab6c0
+SHA1 (patch-af) = f5b6c40f42136ee8953bf259a78fa0d8be048503
+SHA1 (patch-ag) = 43c750de300cbda8cb89917894bbc73b18974c5d
+SHA1 (patch-ah) = 227494794d7c28620d11800fa6087ab765dd5562
