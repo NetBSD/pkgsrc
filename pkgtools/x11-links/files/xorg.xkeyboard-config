@@ -1,0 +1,3 @@
+# $NetBSD: xorg.xkeyboard-config,v 1.1 2010/06/04 10:52:21 ghen Exp $
+#
+lib/pkgconfig/xkeyboard-config.pc
