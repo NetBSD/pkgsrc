@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/05/27 14:14:30 obache Exp $
+# $NetBSD: Makefile,v 1.12 2010/06/04 04:30:45 obache Exp $
 #
 
-DISTNAME=	bftpd-2.8
+DISTNAME=	bftpd-2.9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bftpd/}
 
