@@ -1,0 +1,5 @@
+iSCSI is an IETF standard (RFC 3720) for remote access to block-level
+storage.  It can be thought of as similar to NFS, except that an NFS
+server exports files.
+
+This is the NetBSD libiscsi library use by both the target and initiator.
