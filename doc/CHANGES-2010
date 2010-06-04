@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2106 2010/06/04 10:53:32 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.2107 2010/06/04 12:13:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2828,7 +2828,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/drupal6 to 6.17 [taca 2010-06-03]
 	Updated devel/atf to 0.9 [jmmv 2010-06-03]
 	Updated games/xskat to 4.0 [sno 2010-06-03]
-	UPdated multimedia/transcode to 1.1.5nb4 [gls 2010-06-03]
+	Updated multimedia/transcode to 1.1.5nb4 [gls 2010-06-03]
 	Updated net/bftpd to 2.9 [obache 2010-06-04]
 	Added www/moodle version 1.9.8 [wiz 2010-06-04]
 	Updated pkgtools/x11-links to 0.50 [ghen 2010-06-04]
