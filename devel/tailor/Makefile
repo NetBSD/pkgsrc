@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/02/10 19:17:37 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/06/04 20:01:00 gls Exp $
 #
 
 DISTNAME=		tailor-0.9.35
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel scm
 MASTER_SITES=		http://darcs.arstecnica.it/
 
@@ -21,6 +21,6 @@ AUTO_MKDIRS=		yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README* ${DESTDIR}${PREFIX}/share/doc/tailor
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
