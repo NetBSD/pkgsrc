@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/04 16:14:44 sborrill Exp $
+
+SHA1 (netbsd-iscsi-20100416.tar.gz) = ab8a94f26520f8a1ff7484efa80aa3c0ecfe1c40
+RMD160 (netbsd-iscsi-20100416.tar.gz) = 1bac1a7fdcc8d1df7dd3c32b8fb940933057ba61
+Size (netbsd-iscsi-20100416.tar.gz) = 539715 bytes
+SHA1 (patch-ab) = d769048053104c03739a7ff3f77280ef1357e23c
+SHA1 (patch-ac) = 6e2131c0e992c750aec272da5f88d7b99324898e

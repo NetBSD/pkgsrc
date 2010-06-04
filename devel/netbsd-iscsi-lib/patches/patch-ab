@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/06/04 16:14:44 sborrill Exp $
+
+--- src/target/Makefile.in.orig	2010-04-16 20:16:12.000000000 +0100
++++ src/target/Makefile.in	2010-04-16 20:16:32.000000000 +0100
+@@ -51,7 +51,7 @@
+ PROGRAMS = $(bin_PROGRAMS)
+ am_iscsi_target_OBJECTS = iscsi_target-iscsi-target.$(OBJEXT)
+ iscsi_target_OBJECTS = $(am_iscsi_target_OBJECTS)
+-iscsi_target_DEPENDENCIES = ../lib/libiscsi.la
++iscsi_target_DEPENDENCIES =
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/include
+ depcomp = $(SHELL) $(top_srcdir)/buildaux/depcomp
+ am__depfiles_maybe = depfiles
+@@ -210,7 +210,7 @@
+ AM_CFLAGS = $(WARNCFLAGS) -pthread
+ iscsi_target_SOURCES = iscsi-target.c
+ iscsi_target_CPPFLAGS = -I$(top_srcdir)/include
+-iscsi_target_LDADD = ../lib/libiscsi.la -lpthread
++iscsi_target_LDADD = -liscsi -lpthread
+ man8_MANS = iscsi-target.8
+ man5_MANS = targets.5
+ dist_man_MANS = iscsi-target.8 targets.5
