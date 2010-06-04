@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/06/04 16:14:44 sborrill Exp $
+# Included by:
+# net/netbsd-iscsi-target/Makefile
+# net/netbsd-iscsi-initiator/Makefile
+
+DISTNAME=	netbsd-iscsi-20100416
+MASTER_SITES=	${MASTER_SITE_BACKUP}
+
+MAINTAINER=	agc@NetBSD.org
+HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
+LICENSE=	modified-bsd
+
+GNU_CONFIGURE=	yes
+
+AUTO_MKDIRS=		yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
