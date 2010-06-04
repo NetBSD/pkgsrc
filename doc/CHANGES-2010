@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2103 2010/06/03 19:36:59 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2104 2010/06/04 04:31:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2829,3 +2829,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/atf to 0.9 [jmmv 2010-06-03]
 	Updated games/xskat to 4.0 [sno 2010-06-03]
 	UPdated multimedia/transcode to 1.1.5nb4 [gls 2010-06-03]
+	Updated net/bftpd to 2.9 [obache 2010-06-04]
