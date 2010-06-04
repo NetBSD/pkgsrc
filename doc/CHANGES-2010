@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2105 2010/06/04 09:20:32 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2106 2010/06/04 10:53:32 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2010:
 	UPdated multimedia/transcode to 1.1.5nb4 [gls 2010-06-03]
 	Updated net/bftpd to 2.9 [obache 2010-06-04]
 	Added www/moodle version 1.9.8 [wiz 2010-06-04]
+	Updated pkgtools/x11-links to 0.50 [ghen 2010-06-04]
