@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.418 2010/05/26 04:53:58 minskim Exp $
+# $NetBSD: Makefile,v 1.419 2010/06/04 12:53:22 obache Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -89,6 +89,7 @@ SUBDIR+=	mupdf
 SUBDIR+=	p5-LaTeX-Driver
 SUBDIR+=	p5-LaTeX-Encode
 SUBDIR+=	p5-LaTeX-Table
+SUBDIR+=	p5-Net-CUPS
 SUBDIR+=	p5-PostScript-MailLabels
 SUBDIR+=	p5-PostScript-Simple
 SUBDIR+=	papersize
