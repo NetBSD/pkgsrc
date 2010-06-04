@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2107 2010/06/04 12:13:22 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2108 2010/06/04 12:52:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2832,3 +2832,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/bftpd to 2.9 [obache 2010-06-04]
 	Added www/moodle version 1.9.8 [wiz 2010-06-04]
 	Updated pkgtools/x11-links to 0.50 [ghen 2010-06-04]
+	Added print/p5-Net-CUPS version 0.61 [obache 2010-06-04]
