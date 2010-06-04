@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9350 2010/06/04 04:31:42 obache Exp $
+$NetBSD: TODO,v 1.9351 2010/06/04 13:23:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -1070,7 +1070,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Module-Install-0.97
 	o p5-Mouse-0.59
 	o p5-POE-1.289 [pkg/43115]
-	o p5-POE-Test-Loops-1.035 [pkg/43114]
 	o p5-PerlMagick-6.6.2.0
 	o p5-Pod-Readme-0.10
 	o p5-Search-Xapian-1.0.20.0
