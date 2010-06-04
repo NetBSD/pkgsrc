@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2010/06/04 13:52:21 tsutsui Exp $
+
+--- main.c	1999-09-27 01:18:18.000000000 +0900
++++ main.c
+@@ -185,7 +185,7 @@
+ {
+     XtAppContext	appContext;
+     Boolean		isRcFile;
+-    long		now;
++    time_t		now;
+     struct tm		*tm;
+ 
+     static String	trans = "#override\n\
