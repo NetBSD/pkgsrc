@@ -1,0 +1,49 @@
+$NetBSD: patch-ag,v 1.1 2010/06/04 13:52:21 tsutsui Exp $
+
+--- EmiClock.c	1999-09-27 01:18:18.000000000 +0900
++++ EmiClock.c
+@@ -509,7 +509,7 @@
+ EmiClockRandomInit(w)
+     EmiClockWidget	w;
+ {
+-    long	now;
++    time_t	now;
+     struct tm	*tm;
+ 
+     /* 時間を取り出す */
+@@ -567,7 +567,7 @@
+     XSetWindowAttributes	*attrs;
+ {
+     EmiClockWidget	cw = (EmiClockWidget)w;
+-    long		now;
++    time_t		now;
+     struct tm		*tm;
+ 
+     XtCreateWindow(w, (unsigned)InputOutput, (Visual *)CopyFromParent,
+@@ -951,7 +951,7 @@
+ NewTime(w)
+     EmiClockWidget	w;
+ {
+-    long	now;
++    time_t	now;
+     struct tm	*tm;
+     int		year;
+ 
+@@ -1066,7 +1066,7 @@
+ 				/* 1000 milliseconds == 1 second */
+ 			(XtTimerCallbackProc)NewTime, w);
+     } else {
+-	long		now;
++	time_t		now;
+ 	struct tm	*tm;
+ 
+ 	time(&now);
+@@ -1426,7 +1426,7 @@
+ GenPixmapAndDraw(w)
+     EmiClockWidget	w;
+ {
+-    long	now;
++    time_t	now;
+     struct tm	*tm;
+ 
+     TimerBasePixmapGen(w, NULL);	/* 下絵の作成 */
