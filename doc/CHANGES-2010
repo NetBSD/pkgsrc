@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2108 2010/06/04 12:52:21 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2109 2010/06/04 13:23:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2833,3 +2833,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/moodle version 1.9.8 [wiz 2010-06-04]
 	Updated pkgtools/x11-links to 0.50 [ghen 2010-06-04]
 	Added print/p5-Net-CUPS version 0.61 [obache 2010-06-04]
+	Updated devel/p5-POE-Test-Loops to 1.035 [obache 2010-06-04]
