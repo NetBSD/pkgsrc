@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/06/04 20:01:00 gls Exp $
 bin/tailor
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/vcpx/__init__.py
 ${PYSITELIB}/vcpx/__init__.pyc
 ${PYSITELIB}/vcpx/__init__.pyo
