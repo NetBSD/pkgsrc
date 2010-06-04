@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2111 2010/06/04 16:10:24 sborrill Exp $
+$NetBSD: CHANGES-2010,v 1.2112 2010/06/04 16:16:39 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2837,3 +2837,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/emiclock to 2.0.2nb5 [tsutsui 2010-06-04]
 	Moved devel/netbsd-iscsi-initiator to net/netbsd-iscsi-initiator [sborrill 2010-06-04]
 	Moved devel/netbsd-iscsi-target to net/netbsd-iscsi-target [sborrill 2010-06-04]
+	Added devel/netbsd-iscsi-lib version 20100416 [sborrill 2010-06-04]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1345 2010/06/04 16:10:24 sborrill Exp $
+# $NetBSD: Makefile,v 1.1346 2010/06/04 16:16:39 sborrill Exp $
 #
 
 COMMENT=	Development utilities
@@ -409,6 +409,7 @@ SUBDIR+=	ncc
 SUBDIR+=	ncurses
 SUBDIR+=	ncursesw
 SUBDIR+=	netbeans-ide
+SUBDIR+=	netbsd-iscsi-lib
 SUBDIR+=	netcdf
 SUBDIR+=	newfile
 SUBDIR+=	newt
