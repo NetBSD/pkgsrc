@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/16 17:10:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/05 14:45:01 wiz Exp $
 bin/ocp
 bin/${PKGNAME}
 bin/ocp-curses
@@ -21,6 +21,7 @@ lib/${PKGNAME}/autoload/30-fstypes.so
 lib/${PKGNAME}/autoload/30-mcpbase.so
 lib/${PKGNAME}/autoload/30-plrbase.so
 lib/${PKGNAME}/autoload/30-smpbase.so
+lib/${PKGNAME}/autoload/30-ymtype.so
 lib/${PKGNAME}/autoload/35-cpiface.so
 lib/${PKGNAME}/autoload/40-cphlpif.so
 lib/${PKGNAME}/devpdisk.so
@@ -50,6 +51,7 @@ lib/${PKGNAME}/playmp2.so
 lib/${PKGNAME}/playogg.so
 lib/${PKGNAME}/playwav.so
 lib/${PKGNAME}/playxm.so
+lib/${PKGNAME}/playym.so
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/BUGS
 share/doc/${PKGNAME}/COPYING
