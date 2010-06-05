@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/05 09:27:51 obache Exp $
+
+SHA1 (blop-0.2.8.tar.gz) = 0ca1a2589a0c214ac0e215b21a94d389221ded46
+RMD160 (blop-0.2.8.tar.gz) = 1bc9578e461182df4c0d545c604af5128b62c54b
+Size (blop-0.2.8.tar.gz) = 228110 bytes
