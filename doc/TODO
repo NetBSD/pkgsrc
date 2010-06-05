@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9362 2010/06/05 13:26:56 wiz Exp $
+$NetBSD: TODO,v 1.9363 2010/06/05 13:30:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amaya-11.1
 	o amsn-0.98.3
 	o angband-3.0.9
-	o anjuta-2.30.1.0 [GNOME 2.30]
+	o anjuta-2.30.2.0 [GNOME 2.30]
 	o anjuta-extras-2.30.1.0 [GNOME 2.30]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
@@ -410,7 +410,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aqsis-1.6.0
 	o aranym-0.9.9
 	o argtable-2.9
-	o aria2-1.9.3
+	o aria2-1.9.4
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.09
@@ -542,8 +542,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ed-1.4
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.2.2
+	o efax-gtk-3.2.3
 	o egtk-0.3.6.2
+	o ejabberd-2.1.4
 	o ekiga-3.2.7
 	o electric-8.11
 	o electricfence-2.4.16
@@ -662,10 +663,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcin-1.4.1
 	o gcombust-0.1.55
 	o gcompris-9.0
+	o gconfmm-2.28.2
 	o gcpio-2.10
 	o gdb-7.1
 	o gdeskcal-1.01
 	o gdl-2.28.2 [GNOME 2.28]
+	o gdm-2.20.11
 	o gdm-2.30.2 [GNOME 2.30]
 	o gdsreader-0.3.2
 	o geany-0.18.1
@@ -673,9 +676,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gedit-plugins-2.30.0 [GNOME 2.30]
 	o gegl-0.1.2
 	o gentoo-0.15.6
-	o gettext-0.18
-	o gettext-lib-0.18
-	o gettext-m4-0.18
+	o gettext-0.18.1
+	o gettext-lib-0.18.1
+	o gettext-m4-0.18.1
 	o gfract-0.33
 	o ghc-6.12.2
 	o gifsicle-1.48
@@ -753,7 +756,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-systrace-20030623
 	o gtk2-engines-2.20.1 [GNOME 2.30]
 	o gtkglarea-2.0.1
-	o gtkhtml-3.30.1 [GNOME 2.30]
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtksourceview-2.10.3
@@ -781,7 +783,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hesiod-3.1.0
 	o heyu-2.8.0
 	o hiawatha-7.2
-	o highlight-2.16
+	o highlight-3.0
 	o honeyd-1.5c
 	o horde-3.3.7
 	o host-20070128
@@ -858,6 +860,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-4.0.5
 	o libX11-1.3.4
+	o libXext-1.1.2
 	o libXt-1.0.8
 	o libassuan-2.0.0
 	o libcares-1.7.0
@@ -892,6 +895,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liboobs-2.30.1 [GNOME 2.30]
 	o libproxy-0.4.2
 	o librep-0.90.6
+	o libsigc++-2.2.8
 	o libssh-0.4.4
 	o libssh2-1.2.5
 	o libstree-0.4.2
@@ -1252,7 +1256,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o seahorse-plugins-2.30.1 [GNOME 2.30]
 	o sendfile-20010424
 	o ser-0.9.6
-	o sessreg-1.0.5
+	o sessreg-1.0.6
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
@@ -1456,7 +1460,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xfstt-1.7
 	o xhippo-3.5
 	o xinit-1.2.1
-	o xinput-1.5.1
+	o xinput-1.5.2
 	o xjman-0.7
 	o xkbcomp-1.1.1
 	o xkbevd-1.1.0 [unpackaged]
@@ -1465,7 +1469,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xli-2006.11.10
 	o xlog-2.0.3
 	o xlogo-1.0.2
-	o xlsatoms-1.0.2 [unpackaged]
+	o xlsatoms-1.1.0 [unpackaged]
 	o xlsclients-1.1.0
 	o xm7-1020s
 	o xmbdfed-4.6
