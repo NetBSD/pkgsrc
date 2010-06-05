@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2009/08/26 19:56:56 sno Exp $
+# $NetBSD: Makefile,v 1.38 2010/06/05 12:08:46 wiz Exp $
 
 DISTNAME=	gtkglext-1.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkglext/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtkglext.sourceforge.net/
 COMMENT=	OpenGL extension to GTK
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -25,6 +26,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.20.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
