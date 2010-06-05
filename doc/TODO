@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9356 2010/06/05 10:53:34 wiz Exp $
+$NetBSD: TODO,v 1.9357 2010/06/05 11:00:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -895,7 +895,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liboobs-2.30.1 [GNOME 2.30]
 	o libproxy-0.4.2
 	o librep-0.90.6
-	o libsoup24-2.30.1 [GNOME 2.30]
 	o libssh-0.4.4
 	o libssh2-1.2.5
 	o libstree-0.4.2
