@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2010/06/05 10:05:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2010/06/05 10:16:38 wiz Exp $
 share/icons/gnome/16x16/actions/add.png
 share/icons/gnome/16x16/actions/address-book-new.png
 share/icons/gnome/16x16/actions/application-exit.png
@@ -3471,6 +3471,7 @@ share/icons/gnome/256x256/places/network.png
 share/icons/gnome/256x256/places/network_local.png
 share/icons/gnome/256x256/places/redhat-network-server.png
 share/icons/gnome/256x256/places/server.png
+share/icons/gnome/256x256/places/start-here.png
 share/icons/gnome/256x256/places/stock_folder.png
 share/icons/gnome/256x256/places/trashcan_empty.png
 share/icons/gnome/256x256/places/user-bookmarks.png
@@ -5577,6 +5578,4 @@ share/icons/gnome/8x8/emblems/emblem-readonly.png
 share/icons/gnome/8x8/emblems/emblem-symbolic-link.png
 share/icons/gnome/8x8/emblems/emblem-unreadable.png
 share/icons/gnome/index.theme
-share/icons/gnome/scalable/places/start-here.svg
 share/pkgconfig/gnome-icon-theme.pc
-@pkgdir share/locale/en@shaw/LC_MESSAGES
