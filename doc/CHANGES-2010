@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2128 2010/06/05 11:44:00 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2129 2010/06/05 12:08:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2855,3 +2855,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/gtkhtml314 to 3.30.1 [wiz 2010-06-05]
 	Updated sysutils/cdrtools to 3.00 [wiz 2010-06-05]
 	Updated wm/openbox to 3.4.11.2 [wiz 2010-06-05]
+	Updated graphics/gtkglext to 1.2.0nb4 [wiz 2010-06-05]
