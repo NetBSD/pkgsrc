@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/10/31 01:14:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/06/05 11:17:40 wiz Exp $
 bin/magnifier
 include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
 lib/bonobo/servers/GNOME_Magnifier.server
@@ -6,6 +6,7 @@ lib/libgnome-mag.la
 lib/orbit-2.0/GNOME_Magnifier_module.la
 lib/pkgconfig/gnome-mag-1.0.pc
 man/man1/magnifier.1
+share/dbus-1/services/org.freedesktop.gnome.Magnifier.service
 share/gnome-mag/1_32/appstart.xpm
 share/gnome-mag/1_32/bottom_left_corner.xpm
 share/gnome-mag/1_32/bottom_side.xpm
@@ -25,6 +26,8 @@ share/gnome-mag/1_32/top_right_corner.xpm
 share/gnome-mag/1_32/top_side.xpm
 share/gnome-mag/1_32/up.xpm
 share/gnome-mag/1_32/xterm.xpm
+share/gnome-mag/dbus/org.freedesktop.gnome.Magnifier
+share/gnome-mag/dbus/org.freedesktop.gnome.ZoomRegion
 share/gnome-mag/default-cursor.xpm
 share/idl/gnome-mag-1.0/GNOME_Magnifier.idl
 share/locale/ang/LC_MESSAGES/gnome-mag.mo
@@ -47,6 +50,7 @@ share/locale/da/LC_MESSAGES/gnome-mag.mo
 share/locale/de/LC_MESSAGES/gnome-mag.mo
 share/locale/dz/LC_MESSAGES/gnome-mag.mo
 share/locale/el/LC_MESSAGES/gnome-mag.mo
+share/locale/en@shaw/LC_MESSAGES/gnome-mag.mo
 share/locale/en_CA/LC_MESSAGES/gnome-mag.mo
 share/locale/en_GB/LC_MESSAGES/gnome-mag.mo
 share/locale/eo/LC_MESSAGES/gnome-mag.mo
