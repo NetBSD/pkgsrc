@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2010/01/16 17:10:31 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2010/06/05 14:45:01 wiz Exp $
 
---- Makefile.in.orig	2009-12-25 23:32:29.000000000 +0000
+--- Makefile.in.orig	2010-05-17 09:55:17.000000000 +0000
 +++ Makefile.in
 @@ -60,7 +60,6 @@ endif
  ifeq ($(HAVE_X11),1)
@@ -9,4 +9,4 @@ $NetBSD: patch-ab,v 1.2 2010/01/16 17:10:31 wiz Exp $
 -	$(CP) ultrafix.sh "$(DESTDIR)$(BINDIR)/ultrafix.sh"
  	mkdir -p "$(DESTDIR)$(ULTRADIR)"
  	$(MAKE) -C doc DESTDIR="$(DESTDIR)" install TOPDIR="../$(TOPDIR)"
- ifeq ($(HAVE_X11),1)
+ 
