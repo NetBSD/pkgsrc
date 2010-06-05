@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2138 2010/06/05 20:37:27 manu Exp $
+$NetBSD: CHANGES-2010,v 1.2139 2010/06/05 23:10:33 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2865,3 +2865,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/mtr to 0.77 [wiz 2010-06-05]
 	Updated www/typolight28-translations to 20100603 [taca 2010-06-05]
 	Updated security/crudesaml to 1.1 [manu 2010-06-05]
+	Updated print/cups to 1.4.3nb2 [sbd 2010-06-05]
