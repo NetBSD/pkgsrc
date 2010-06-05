@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.436 2010/04/16 15:46:13 reed Exp $
+# $NetBSD: Makefile,v 1.437 2010/06/05 09:28:40 obache Exp $
 #
 
 COMMENT=	Audio tools
@@ -38,6 +38,7 @@ SUBDIR+=	audacity
 SUBDIR+=	aumix
 SUBDIR+=	aumix-gtk
 SUBDIR+=	bladeenc
+SUBDIR+=	blop
 SUBDIR+=	bml
 SUBDIR+=	bmp
 SUBDIR+=	bmp-esound
