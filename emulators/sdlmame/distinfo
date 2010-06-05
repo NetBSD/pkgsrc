@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2010/01/16 21:25:19 wiz Exp $
+$NetBSD: distinfo,v 1.11 2010/06/05 12:20:07 wiz Exp $
 
 SHA1 (sdlmame0136.zip) = 19c11abc3b3ab2633df62f3867921b3541bb582e
 RMD160 (sdlmame0136.zip) = 1cb9b24ae6f97c0f223f13ed97a074de14e2892e
@@ -8,4 +8,5 @@ SHA1 (patch-ab) = 3cc161845baae6ebcdab42fbd19f74e2ee3d4cb1
 SHA1 (patch-ac) = e97e7b730305aa2d10363cfd65f8e2b30f2fc292
 SHA1 (patch-ad) = 8d6312b593343eb2e5b29f177376c8fa243d8293
 SHA1 (patch-ae) = d110f0338d224823d959c8a2b57026321a3f0a38
+SHA1 (patch-af) = 4e7b4eab76e43feec91e91238d855c70ac43e15b
 SHA1 (patch-ah) = f2dbfc44e30857fd9b52ed5d107b5190d5e5f6da
