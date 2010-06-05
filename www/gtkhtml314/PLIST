@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/22 17:50:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/06/05 11:34:29 wiz Exp $
 bin/gtkhtml-editor-test
 include/libgtkhtml-3.14/editor/gtkhtml-editor-actions.h
 include/libgtkhtml-3.14/editor/gtkhtml-editor-common.h
@@ -43,9 +43,11 @@ share/gtkhtml-3.14/icons/rule-yellow-flowers-right.png
 share/gtkhtml-3.14/icons/texture.png
 share/gtkhtml-3.14/icons/transparent.png
 share/gtkhtml-3.14/keybindingsrc.emacs
+share/locale/af/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/am/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/ar/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/as/LC_MESSAGES/gtkhtml-3.14.mo
+share/locale/ast/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/az/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/be/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/bg/LC_MESSAGES/gtkhtml-3.14.mo
@@ -59,6 +61,7 @@ share/locale/da/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/de/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/dz/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/el/LC_MESSAGES/gtkhtml-3.14.mo
+share/locale/en@shaw/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/en_CA/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/en_GB/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/es/LC_MESSAGES/gtkhtml-3.14.mo
