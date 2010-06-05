@@ -1,0 +1,9 @@
+BLOP comprises a set of LADSPA  plugins that generate bandlimited sawtooth,
+square, variable pulse and slope-variable triangle waves, principally for use
+with one of the many modular software synthesisers available.
+
+They are wavetable based, and are designed to produce output with harmonic
+content as high as possible over a wide pitch range.
+
+Additionally, there are a few extra plugins to assist in building synthesis
+networks. Full details can be found in the List-o-Plugins
