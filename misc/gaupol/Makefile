@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/05 14:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/05 23:55:39 wiz Exp $
 #
 
 DISTNAME=	gaupol-0.16
@@ -21,6 +21,7 @@ USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
 PKG_DESTDIR_SUPPORT=		user-destdir
 
+# https://bugzilla.gnome.org/show_bug.cgi?id=620665
 SUBST_CLASSES+=			manpath
 SUBST_FILES.manpath=		INSTALL manifest/data-files.gaupol
 SUBST_MESSAGE.manpath=		Fixing man page installation path.
