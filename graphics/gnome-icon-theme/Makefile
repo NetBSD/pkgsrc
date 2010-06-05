@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.65 2009/10/21 16:09:56 drochner Exp $
+# $NetBSD: Makefile,v 1.66 2010/06/05 10:05:38 wiz Exp $
 #
 
-DISTNAME=		gnome-icon-theme-2.28.0
+DISTNAME=		gnome-icon-theme-2.30.3
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.28/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.30/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme consisting of a set of icons for GNOME
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
@@ -18,6 +19,9 @@ USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
+
+# https://bugzilla.gnome.org/show_bug.cgi?id=620638
+INSTALLATION_DIRS=	share/icons/gnome/scalable/places
 
 # The list of installed files depends on the version of
 # icon-naming-utils, so be sure that this dependency corresponds to
