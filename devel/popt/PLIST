@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2009/04/20 11:23:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/06/05 13:26:46 wiz Exp $
 include/popt.h
 lib/libpopt.la
+lib/pkgconfig/popt.pc
 man/man3/popt.3
 share/locale/cs/LC_MESSAGES/popt.mo
 share/locale/da/LC_MESSAGES/popt.mo
@@ -17,6 +18,7 @@ share/locale/is/LC_MESSAGES/popt.mo
 share/locale/it/LC_MESSAGES/popt.mo
 share/locale/ja/LC_MESSAGES/popt.mo
 share/locale/ko/LC_MESSAGES/popt.mo
+share/locale/lv/LC_MESSAGES/popt.mo
 share/locale/nb/LC_MESSAGES/popt.mo
 share/locale/nl/LC_MESSAGES/popt.mo
 share/locale/pl/LC_MESSAGES/popt.mo
