@@ -1,8 +1,18 @@
-$NetBSD: patch-af,v 1.6 2006/06/29 22:56:34 dillo Exp $
+$NetBSD: patch-af,v 1.7 2010/06/05 12:29:53 wiz Exp $
 
---- src/arch/unix/x11/video.c.orig	2006-01-02 01:04:55.000000000 +0100
+--- src/arch/unix/x11/video.c.orig	2007-08-04 13:24:43.000000000 +0000
 +++ src/arch/unix/x11/video.c
-@@ -210,11 +210,7 @@ int video_init_cmdline_options(void)
+@@ -56,6 +56,9 @@
+ #include <X11/Xutil.h>
+ #include <X11/Intrinsic.h>
+ #include <X11/cursorfont.h>
++#include <X11/extensions/Xxf86dga.h>
++#include <X11/Xmd.h>
++#include <X11/extensions/shmproto.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -221,11 +224,7 @@ int video_init_cmdline_options(void)
  
  /* ------------------------------------------------------------------------- */
  
