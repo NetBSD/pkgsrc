@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2137 2010/06/05 15:20:17 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2138 2010/06/05 20:37:27 manu Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2864,3 +2864,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/ocp to 0.1.20 [wiz 2010-06-05]
 	Updated net/mtr to 0.77 [wiz 2010-06-05]
 	Updated www/typolight28-translations to 20100603 [taca 2010-06-05]
+	Updated security/crudesaml to 1.1 [manu 2010-06-05]
