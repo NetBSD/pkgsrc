@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2010/06/05 12:20:07 wiz Exp $
+
+--- src/osd/sdl/dview.c.orig	2009-12-19 16:18:15.000000000 +0000
++++ src/osd/sdl/dview.c
+@@ -213,7 +213,7 @@ static void dview_size_allocate(GtkWidge
+ 	debug_view_set_visible_position(dv->dw, pos); 
+ 	debug_view_set_visible_size(dv->dw, vsize);
+ 
+-	if(GTK_WIDGET_REALIZED(wdv))
++	if(gtk_widget_get_realized(wdv))
+ 		gdk_window_move_resize(wdv->window,
+ 							   allocation->x, allocation->y,
+ 							   allocation->width, allocation->height);
