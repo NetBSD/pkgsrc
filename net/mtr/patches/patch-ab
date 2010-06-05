@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.16 2008/11/05 19:58:25 wiz Exp $
+$NetBSD: patch-ab,v 1.17 2010/06/05 14:49:51 wiz Exp $
 
---- dns.c.orig	2008-09-18 12:36:50.000000000 +0000
+--- dns.c.orig	2009-11-27 07:49:15.000000000 +0000
 +++ dns.c
-@@ -310,6 +310,17 @@ char nullstring[] = "";
+@@ -309,6 +309,17 @@ char nullstring[] = "";
  
  int use_dns = 1;
  
@@ -21,9 +21,9 @@ $NetBSD: patch-ab,v 1.16 2008/11/05 19:58:25 wiz Exp $
  /* Code */
  #ifdef CorruptCheck
 @@ -484,14 +495,14 @@ void dns_open(void)
- {
    int option,i;
  
+   if (!dns) return;
 -  res_init();
 -  if (!_res.nscount) {
 +  RES_INIT();
