@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/12/16 17:53:50 drochner Exp $
+$NetBSD: distinfo,v 1.5 2010/06/05 04:38:46 obache Exp $
 
-SHA1 (SimPy-2.0.1.tar.gz) = 4d34bb66faa69938e6f3c3a24089b3307e4d12fd
-RMD160 (SimPy-2.0.1.tar.gz) = 03f07dbb5a396a715c5cfe02e01084b311167139
-Size (SimPy-2.0.1.tar.gz) = 4812183 bytes
+SHA1 (SimPy-2.1.0.tar.gz) = f26b3e6d3e4bfa404b5e0c72b2ea5e6b6ce54e6a
+RMD160 (SimPy-2.1.0.tar.gz) = 07da2d6f881b3029e5fb1db116ee30d12f654743
+Size (SimPy-2.1.0.tar.gz) = 4342621 bytes

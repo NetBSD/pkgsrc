@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/16 17:53:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/06/05 04:38:46 obache Exp $
 ${PYSITELIB}/SimPy/GUIDebug.py
 ${PYSITELIB}/SimPy/GUIDebug.pyc
 ${PYSITELIB}/SimPy/GUIDebug.pyo
@@ -44,6 +44,9 @@ ${PYSITELIB}/SimPy/SimulationTrace.pyo
 ${PYSITELIB}/SimPy/__init__.py
 ${PYSITELIB}/SimPy/__init__.pyc
 ${PYSITELIB}/SimPy/__init__.pyo
+${PYSITELIB}/SimPy/stepping.py
+${PYSITELIB}/SimPy/stepping.pyc
+${PYSITELIB}/SimPy/stepping.pyo
 ${PYSITELIB}/SimPy/testRT_Behavior.py
 ${PYSITELIB}/SimPy/testRT_Behavior.pyc
 ${PYSITELIB}/SimPy/testRT_Behavior.pyo
@@ -74,6 +77,9 @@ ${PYSITELIB}/SimPy/testSimPyTrace.pyo
 ${PYSITELIB}/SimPy/testSimPyTraceOO.py
 ${PYSITELIB}/SimPy/testSimPyTraceOO.pyc
 ${PYSITELIB}/SimPy/testSimPyTraceOO.pyo
+${PYSITELIB}/SimPy/testSimPy_simident.py
+${PYSITELIB}/SimPy/testSimPy_simident.pyc
+${PYSITELIB}/SimPy/testSimPy_simident.pyo
 ${PYSITELIB}/SimPy/tkconsole.py
 ${PYSITELIB}/SimPy/tkconsole.pyc
 ${PYSITELIB}/SimPy/tkconsole.pyo
