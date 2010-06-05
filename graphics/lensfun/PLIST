@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/02 11:39:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/05 11:47:57 wiz Exp $
 include/lensfun.h
 lib/liblensfun.so
 lib/pkgconfig/lensfun.pc
@@ -22,7 +22,7 @@ share/doc/${PKGNAME}/manual/el__camera.html
 share/doc/${PKGNAME}/manual/el__lens.html
 share/doc/${PKGNAME}/manual/el__mount.html
 share/doc/${PKGNAME}/manual/elem__calibration.html
-share/doc/${PKGNAME}/manual/example_8c-example.html
+share/doc/${PKGNAME}/manual/example.c-example.html
 share/doc/${PKGNAME}/manual/examples.html
 share/doc/${PKGNAME}/manual/files.html
 share/doc/${PKGNAME}/manual/filldb.html
@@ -73,8 +73,8 @@ share/doc/${PKGNAME}/manual/tab_b.gif
 share/doc/${PKGNAME}/manual/tab_l.gif
 share/doc/${PKGNAME}/manual/tab_r.gif
 share/doc/${PKGNAME}/manual/tabs.css
-share/doc/${PKGNAME}/manual/tfun_8cpp-example.html
-share/doc/${PKGNAME}/manual/tmod_8cpp-example.html
+share/doc/${PKGNAME}/manual/tfun.cpp-example.html
+share/doc/${PKGNAME}/manual/tmod.cpp-example.html
 share/lensfun/6x6.xml
 share/lensfun/compact-canon.xml
 share/lensfun/compact-casio.xml
