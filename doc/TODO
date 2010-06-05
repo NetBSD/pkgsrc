@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9352 2010/06/05 04:39:04 obache Exp $
+$NetBSD: TODO,v 1.9353 2010/06/05 10:05:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asymptote-1.94
 	o at-spi-1.30.1 [GNOME 2.30]
 	o aterm-1.0.1
-	o atk-1.30.0 [GNOME 2.30]
 	o attica-0.1.4
 	o auctex-11.86
 	o audacious-plugins-2.3
@@ -709,7 +708,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-doc-utils-0.20.0 [GNOME 2.30]
 	o gnome-games-2.30.1 [GNOME 2.30]
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-icon-theme-2.30.3 [GNOME 2.30]
 	o gnome-icon-theme-extras-2.30.1 [GNOME 2.30]
 	o gnome-icon-theme-symbolic-2.30.0 [GNOME 2.30]
 	o gnome-keyring-2.30.1 [GNOME 2.30]
