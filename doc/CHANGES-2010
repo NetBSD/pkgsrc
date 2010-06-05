@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2118 2010/06/05 10:16:48 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2119 2010/06/05 10:23:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added audio/blop version 0.2.8 [obache 2010-06-05]
 	Updated graphics/gnome-icon-theme to 2.30.3 [wiz 2010-06-05]
 	Updated graphics/gnome-icon-theme to 2.30.3nb1 [wiz 2010-06-05]
+	Added graphics/gnome-icon-theme-extras version 2.30.1 [wiz 2010-06-05]
