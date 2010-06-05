@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/05/17 07:53:29 obache Exp $
+# $NetBSD: Makefile,v 1.33 2010/06/05 12:36:08 wiz Exp $
 #
 
 DISTNAME=	GraphicsMagick-1.3.12
@@ -18,6 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config gs
 USE_FEATURES=	vsnprintf		# optional but recommended for security
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-gs-font-dir=${LOCALBASE}/share/ghostscript/fonts/
 
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in \
 			wand/GraphicsMagickWand.pc.in \
