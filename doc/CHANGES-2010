@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2115 2010/06/05 04:39:04 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2116 2010/06/05 09:28:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2842,3 +2842,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/netbsd-iscsi-target to 20100416 [sborrill 2010-06-04]
 	Updated devel/tailor to 0.9.35nb4 [gls 2010-06-04]
 	Updated cad/py-simpy to 2.1.0 [obache 2010-06-05]
+	Added audio/blop version 0.2.8 [obache 2010-06-05]
