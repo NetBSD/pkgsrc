@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2010/06/03 23:46:55 gdt Exp $
+$NetBSD: distinfo,v 1.9 2010/06/05 13:45:12 gdt Exp $
 
 SHA1 (spamass-milter-0.3.1.tar.gz) = dd488eb9ab1f230440fba8a729bee80550f2fbff
 RMD160 (spamass-milter-0.3.1.tar.gz) = 5db6af6b31de1bf83eafbd9713d81cdc957b5033
 Size (spamass-milter-0.3.1.tar.gz) = 141144 bytes
-SHA1 (spamass-milter.20100504.patch) = 26beb851a17f059757a66f36fe48639c73cfcf4c
-RMD160 (spamass-milter.20100504.patch) = f98923345c1412329c9b3ab8430f0ed5aec22665
-Size (spamass-milter.20100504.patch) = 2625 bytes
+SHA1 (spamass-milter-001.patch) = d37227f95808479dc4d6ba5c76ddd2413b4530d3
+RMD160 (spamass-milter-001.patch) = eef17cb4506e6f5c0908b6872b7fb5dcd8bc2e16
+Size (spamass-milter-001.patch) = 2435 bytes
 SHA1 (patch-aa) = c69afbafaba72ec59f77f024e2421b2df077a2ee
 SHA1 (patch-ab) = 5e7188cc212cc0b06671853fb13921e2e0f38c8c
