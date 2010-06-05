@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2010/06/03 23:46:54 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2010/06/05 13:45:12 gdt Exp $
 #
 
 DISTNAME=	spamass-milter-0.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://savannah.nongnu.org/download/spamass-milt/
 
-PATCHFILES=	spamass-milter.20100504.patch
+PATCHFILES=	spamass-milter-001.patch
 
 
 MAINTAINER=	gdt@NetBSD.org
