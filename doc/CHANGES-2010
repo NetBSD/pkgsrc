@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2136 2010/06/05 14:50:32 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2137 2010/06/05 15:20:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2863,3 +2863,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/yaz to 4.0.9 [wiz 2010-06-05]
 	Updated audio/ocp to 0.1.20 [wiz 2010-06-05]
 	Updated net/mtr to 0.77 [wiz 2010-06-05]
+	Updated www/typolight28-translations to 20100603 [taca 2010-06-05]
