@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2010/06/05 11:30:36 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2010/06/05 11:30:54 wiz Exp $
 
-python bindings are in separate py-atspi package.
+python bindings are in separate py-at-spi package.
 
 --- Makefile.in.orig	2009-10-19 04:59:15.000000000 +0200
 +++ Makefile.in
