@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2008/08/29 08:32:41 tonnerre Exp $
+$NetBSD: patch-aa,v 1.10 2010/06/05 14:50:12 wiz Exp $
 
 --- configure.orig	2008-08-19 20:11:50.000000000 +0200
 +++ configure
@@ -25,12 +25,3 @@ $NetBSD: patch-aa,v 1.9 2008/08/29 08:32:41 tonnerre Exp $
  
  typedef socklen_t ac__type_new_;
  int
-@@ -8570,6 +8575,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
