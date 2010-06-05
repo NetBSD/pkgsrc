@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42.2.1 2010/06/03 08:11:22 spz Exp $
+# $NetBSD: Makefile,v 1.42.2.2 2010/06/05 07:00:19 spz Exp $
 
 DISTNAME=		mimedefang-2.68
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
@@ -54,7 +54,7 @@ CONF_FILES+=		${EGDIR}/mimedefang-filter ${PKG_SYSCONFDIR}/mimedefang-filter
 CONF_FILES+=		${EGDIR}/sa-mimedefang.cf ${PKG_SYSCONFDIR}/sa-mimedefang.cf
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-confsubdir=${PKG_SYSCONFSUBDIR:Q}
+CONFIGURE_ARGS+=	--with-confsubdir=
 CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
 CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR:Q}
