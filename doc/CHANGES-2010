@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2122 2010/06/05 11:00:53 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2123 2010/06/05 11:06:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2849,3 +2849,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/gnome-icon-theme-symbolic version 2.30.0 [wiz 2010-06-05]
 	Updated security/libtasn1 to 2.7 [wiz 2010-06-05]
 	Updated net/libsoup24 to 2.30.1 [wiz 2010-06-05]
+	Updated devel/at-spi to 1.30.1 [wiz 2010-06-05]
