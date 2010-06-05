@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.32 2010/06/03 10:19:36 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.33 2010/06/05 07:03:20 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -149,3 +149,7 @@ Pullup ticket #3135 - requested by taca
 security/openssl: security update
 Pullup ticket #3136 - requested by kefren
 chat/p5-POE-Component-IRC: security update
+Pullup ticket #3137 - requested by kefren
+security/sudo: security update
+Pullup ticket #3138 - requested by pettai
+mail/mimedefang: functionality fix
