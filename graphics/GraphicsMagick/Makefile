@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2010/06/05 12:36:08 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2010/06/05 13:30:33 obache Exp $
 #
 
 DISTNAME=	GraphicsMagick-1.3.12
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/
@@ -11,6 +12,8 @@ HOMEPAGE=	http://www.graphicsmagick.org/
 COMMENT=	X application for displaying and manipulating images
 #LICENSE=	mit AND # see ${WRKSRC}/Copyright.txt
 
+DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
@@ -18,7 +21,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config gs
 USE_FEATURES=	vsnprintf		# optional but recommended for security
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-gs-font-dir=${LOCALBASE}/share/ghostscript/fonts/
+CONFIGURE_ARGS+=	--with-gs-font-dir=${URW_FONTS_DIR}/share/fonts/urw
 
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in \
 			wand/GraphicsMagickWand.pc.in \
@@ -28,9 +31,13 @@ CONFIGURE_ARGS+=	--without-perl
 
 TEST_TARGET=	check
 
+FIND_PREFIX:=	URW_FONTS_DIR=urw-fonts
+.include "../../mk/find-prefix.mk"
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
