@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9360 2010/06/05 11:40:15 wiz Exp $
+$NetBSD: TODO,v 1.9361 2010/06/05 11:44:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1027,7 +1027,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opal-3.8.0 [pkg/42942]
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.12.1
-	o openbox-3.4.11.2
 	o opengrok-0.9
 	o openh323-1.19.1
 	o openldap-client-2.4.22
