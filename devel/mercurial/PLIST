@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/03/07 23:23:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/06/05 12:32:20 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -66,6 +66,9 @@ ${PYSITELIB}/hgext/convert/subversion.pyo
 ${PYSITELIB}/hgext/convert/transport.py
 ${PYSITELIB}/hgext/convert/transport.pyc
 ${PYSITELIB}/hgext/convert/transport.pyo
+${PYSITELIB}/hgext/eol.py
+${PYSITELIB}/hgext/eol.pyc
+${PYSITELIB}/hgext/eol.pyo
 ${PYSITELIB}/hgext/extdiff.py
 ${PYSITELIB}/hgext/extdiff.pyc
 ${PYSITELIB}/hgext/extdiff.pyo
