@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9367 2010/06/05 14:50:32 wiz Exp $
+$NetBSD: TODO,v 1.9368 2010/06/05 23:57:11 markd Exp $
 
 Suggested new packages
 ======================
@@ -1148,7 +1148,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-utils-1.2.1
 	o py-gtksourceview-2.10.1
 	o py-html2text-2.38
-	o py-jinja2-2.3 [pkg/42783]
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
