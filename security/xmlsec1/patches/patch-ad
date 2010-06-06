@@ -1,9 +1,0 @@
-$NetBSD: patch-ad,v 1.1 2009/12/01 08:43:52 manu Exp $
---- configure.orig	2009-11-30 22:21:32.000000000 +0100
-+++ configure	2009-11-30 22:23:40.000000000 +0100
-@@ -24212,4 +24212,5 @@
- 	*-*-mingw*) openssl_exlibs=;;
- 	*-*-osf5*) openssl_exlibs=;;
-+	*-*-netbsd*) openssl_exlibs=;;
- 	#FIXME: check if lib "dl" is required
- 	*)          openssl_exlibs=-ldl;;
