@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2149 2010/06/06 18:22:21 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2150 2010/06/06 18:28:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2877,3 +2877,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/exim to 4.72 [adam 2010-06-06]
 	Updated net/miredo to 1.1.7nb1 [gson 2010-06-06]
 	Updated devel/ruby-activesupport to 2.3.8 [minskim 2010-06-06]
+	Updated net/ruby-snmp to 1.0.3 [minskim 2010-06-06]
