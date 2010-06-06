@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/31 16:44:28 manu Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/06 11:52:31 obache Exp $
 lib/pkgconfig/lasso.pc
 lib/liblasso.la
 include/lasso/xml/saml-2.0/saml2_action.h
@@ -517,11 +517,3 @@ share/gtk-doc/html/lasso/xml-idff.html
 share/gtk-doc/html/lasso/xml-idwsf.html
 share/gtk-doc/html/lasso/xml-idwsf2.html
 share/gtk-doc/html/lasso/xml-samlv2.html
-@dirrm include/lasso/xml
-@dirrm include/lasso/xml/saml-2.0
-@dirrm include/lasso/xml/soap-1.1
-@dirrm include/lasso/id-ff
-@dirrm include/lasso/saml-2.0
-@dirrm include/lasso
-@dirrm share/doc/lasso
-@dirrm share/gtk-doc/html/lasso
