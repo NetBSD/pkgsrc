@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2010/06/02 13:04:04 adam Exp $
+# $NetBSD: options.mk,v 1.17 2010/06/06 14:15:30 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -16,8 +16,6 @@ PKG_SUGGESTED_OPTIONS+=	exim-lookup-dsearch exim-old-demime exim-tcp-wrappers
 PKG_SUGGESTED_OPTIONS+=	exim-tls
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_SRC=${PKGDIR}/PLIST
 
 .if !empty(PKG_OPTIONS:Mexim-appendfile-maildir)
 LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MAILDIR=yes

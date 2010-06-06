@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.101 2010/06/02 13:04:04 adam Exp $
+# $NetBSD: Makefile,v 1.102 2010/06/06 14:15:30 adam Exp $
 
-DISTNAME=	exim-4.71
-PKGREVISION=	2
+DISTNAME=	exim-4.72
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
-	http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/exim4/
+		http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/exim4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	abs@NetBSD.org
@@ -38,7 +37,7 @@ PKG_GECOS.${EXIM_USER}=	Exim mail server user
 PKG_HOME.${EXIM_USER}=	${VARBASE}/mail
 PKG_SHELL.${EXIM_USER}=	${NOLOGIN}
 
-PKG_SYSCONFSUBDIR?=	exim
+PKG_SYSCONFSUBDIR=	exim
 EXAMPLESDIR=		${PREFIX}/share/examples/exim
 CONF_FILES=		${EXAMPLESDIR}/aliases ${PKG_SYSCONFDIR}/aliases
 CONF_FILES+=		${EXAMPLESDIR}/configure ${PKG_SYSCONFDIR}/configure
@@ -63,6 +62,12 @@ SUBST_STAGE.exim=	pre-configure
 SUBST_MESSAGE.exim=	Faking exim version information in exim_install
 SUBST_FILES.exim=	scripts/exim_install
 SUBST_VARS.exim=	PKGSRC_EXIM_VERSION
+
+SUBST_CLASSES+=		cflags
+SUBST_STAGE.cflags=	post-patch
+SUBST_MESSAGE.cflags=	Removing hard-coded CFLAGS
+SUBST_FILES.cflags=	OS/Makefile-*
+SUBST_SED.cflags=	-e 's,^CFLAGS=.*,,'
 
 INSTALL_ARG=		INSTALL_ARG=-no_chown
 INSTALL_ENV+=		${INSTALL_ARG:Q}
@@ -105,11 +110,6 @@ pre-configure:
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
 	    > ${WRKSRC}/Local/eximon.conf
-# CFLAGS is already set by pkgsrc
-	for f in ${WRKSRC}/OS/Makefile-*; do \
-		sed -e 's/^CFLAGS=.*//' $$f > $$f.subst; \
-		mv -f $$f.subst $$f; \
-	done
 
 post-build:
 	sed -e 's:@PREFIX@:${PREFIX}:' \
