@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/30 19:32:11 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/06 12:36:11 obache Exp $
 bin/xmlsec1
 bin/xmlsec1-config
 include/xmlsec1/xmlsec/app.h
@@ -9,6 +9,9 @@ include/xmlsec1/xmlsec/crypto.h
 include/xmlsec1/xmlsec/dl.h
 include/xmlsec1/xmlsec/errors.h
 include/xmlsec1/xmlsec/exports.h
+include/xmlsec1/xmlsec/gcrypt/app.h
+include/xmlsec1/xmlsec/gcrypt/crypto.h
+include/xmlsec1/xmlsec/gcrypt/symbols.h
 include/xmlsec1/xmlsec/io.h
 include/xmlsec1/xmlsec/keyinfo.h
 include/xmlsec1/xmlsec/keys.h
@@ -37,8 +40,10 @@ include/xmlsec1/xmlsec/xmldsig.h
 include/xmlsec1/xmlsec/xmlenc.h
 include/xmlsec1/xmlsec/xmlsec.h
 include/xmlsec1/xmlsec/xmltree.h
+lib/libxmlsec1-gcrypt.la
 lib/libxmlsec1-openssl.la
 lib/libxmlsec1.la
+lib/pkgconfig/xmlsec1-gcrypt.pc
 lib/pkgconfig/xmlsec1-openssl.pc
 lib/pkgconfig/xmlsec1.pc
 lib/xmlsec1Conf.sh
@@ -77,6 +82,10 @@ share/doc/xmlsec1/api/xmlsec-examples-sign-dynamimc-template.html
 share/doc/xmlsec1/api/xmlsec-examples-sign-template-file.html
 share/doc/xmlsec1/api/xmlsec-examples-sign-x509.html
 share/doc/xmlsec1/api/xmlsec-examples.html
+share/doc/xmlsec1/api/xmlsec-gcrypt-app.html
+share/doc/xmlsec1/api/xmlsec-gcrypt-crypto.html
+share/doc/xmlsec1/api/xmlsec-gcrypt-ref.html
+share/doc/xmlsec1/api/xmlsec-gcrypt.sgml
 share/doc/xmlsec1/api/xmlsec-gnutls-app.html
 share/doc/xmlsec1/api/xmlsec-gnutls-crypto.html
 share/doc/xmlsec1/api/xmlsec-gnutls-ref.html

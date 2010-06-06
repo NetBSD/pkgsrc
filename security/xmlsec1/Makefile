@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2010/01/17 12:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/06/06 12:36:11 obache Exp $
 #
 
-DISTNAME=		xmlsec1-1.2.13
-PKGREVISION=		2
+DISTNAME=		xmlsec1-1.2.16
 CATEGORIES=		security
 MASTER_SITES=		http://www.aleksey.com/xmlsec/download/
 
@@ -12,20 +11,28 @@ COMMENT=		XML signature and encryption library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-#PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-gnutls.pc.in
-#PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-nss.pc.in
+
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-gcrypt.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-gnutls.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-nss.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-openssl.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec.pc.in
-GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--without-openssl
+
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-gnutls
+CONFIGURE_ARGS+=	--with-libxml=${BUILDLINK_PREFIX.libxml2}
+CONFIGURE_ARGS+=	--with-libxslt=${BUILDLINK_PREFIX.libxslt}
+CONFIGURE_ARGS+=	--with-gcrypt=${BUILDLINK_PREFIX.libgcrypt}
 
+.include "../../devel/libltdl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4.0
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-#.include "../../security/gnutls/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.7.4
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
