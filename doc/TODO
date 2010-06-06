@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9368 2010/06/05 23:57:11 markd Exp $
+$NetBSD: TODO,v 1.9369 2010/06/06 02:39:31 markd Exp $
 
 Suggested new packages
 ======================
@@ -1156,7 +1156,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-psycopg2-2.0.14
 	o py-pytz-2010h
 	o py-rpy-1.0.3 [pkg/43227]
-	o py-scipy-0.7.2 [pkg/43225]
 	o py-sybase-0.37
 	o py-urwid-0.9.9.1 [pkg/43104]
 	o py-uwsgi-0.9.5.1 [pkg/43400]
