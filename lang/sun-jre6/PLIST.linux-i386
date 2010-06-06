@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.17 2009/08/22 22:39:57 abs Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.18 2010/06/06 09:51:49 obache Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -129,6 +129,8 @@ java/sun-6/lib/fontconfig.Sun.bfc.default
 java/sun-6/lib/fontconfig.Sun.properties.src.default
 java/sun-6/lib/fontconfig.Turbo.bfc.default
 java/sun-6/lib/fontconfig.Turbo.properties.src.default
+java/sun-6/lib/fontconfig.Ubuntu.bfc
+java/sun-6/lib/fontconfig.Ubuntu.properties.src
 java/sun-6/lib/fontconfig.bfc.default
 java/sun-6/lib/fontconfig.properties.src.default
 java/sun-6/lib/fonts/LucidaBrightDemiBold.ttf
@@ -141,6 +143,7 @@ java/sun-6/lib/fonts/LucidaTypewriterBold.ttf
 java/sun-6/lib/fonts/LucidaTypewriterRegular.ttf
 java/sun-6/lib/fonts/fonts.dir
 java/sun-6/lib/i386/client/Xusage.txt
+java/sun-6/lib/i386/client/classes.jsa
 java/sun-6/lib/i386/client/libjsig.so
 java/sun-6/lib/i386/client/libjvm.so
 java/sun-6/lib/i386/headless/libmawt.so
@@ -250,6 +253,7 @@ java/sun-6/lib/security/java.policy
 java/sun-6/lib/security/java.security.default
 java/sun-6/lib/security/javaws.policy
 java/sun-6/lib/security/local_policy.jar
+java/sun-6/lib/security/trusted.libraries
 java/sun-6/lib/servicetag/jdk_header.png
 java/sun-6/lib/sound.properties.default
 java/sun-6/lib/zi/Africa/Abidjan
@@ -385,6 +389,7 @@ java/sun-6/lib/zi/America/Maceio
 java/sun-6/lib/zi/America/Managua
 java/sun-6/lib/zi/America/Manaus
 java/sun-6/lib/zi/America/Martinique
+java/sun-6/lib/zi/America/Matamoros
 java/sun-6/lib/zi/America/Mazatlan
 java/sun-6/lib/zi/America/Menominee
 java/sun-6/lib/zi/America/Merida
@@ -402,6 +407,7 @@ java/sun-6/lib/zi/America/Nome
 java/sun-6/lib/zi/America/Noronha
 java/sun-6/lib/zi/America/North_Dakota/Center
 java/sun-6/lib/zi/America/North_Dakota/New_Salem
+java/sun-6/lib/zi/America/Ojinaga
 java/sun-6/lib/zi/America/Panama
 java/sun-6/lib/zi/America/Pangnirtung
 java/sun-6/lib/zi/America/Paramaribo
@@ -416,6 +422,7 @@ java/sun-6/lib/zi/America/Recife
 java/sun-6/lib/zi/America/Regina
 java/sun-6/lib/zi/America/Resolute
 java/sun-6/lib/zi/America/Rio_Branco
+java/sun-6/lib/zi/America/Santa_Isabel
 java/sun-6/lib/zi/America/Santarem
 java/sun-6/lib/zi/America/Santiago
 java/sun-6/lib/zi/America/Santo_Domingo
@@ -494,6 +501,7 @@ java/sun-6/lib/zi/Asia/Makassar
 java/sun-6/lib/zi/Asia/Manila
 java/sun-6/lib/zi/Asia/Muscat
 java/sun-6/lib/zi/Asia/Nicosia
+java/sun-6/lib/zi/Asia/Novokuznetsk
 java/sun-6/lib/zi/Asia/Novosibirsk
 java/sun-6/lib/zi/Asia/Omsk
 java/sun-6/lib/zi/Asia/Oral
