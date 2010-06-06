@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2145 2010/06/06 12:36:26 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2146 2010/06/06 15:10:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2873,3 +2873,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/sun-jre6 to 6.0.20 [obache 2010-06-06]
 	Updated lang/sun-jdk6 to 6.0.20 [obache 2010-06-06]
 	Updated security/xmlsec1 to 1.2.16 [obache 2010-06-06]
+	Updated mail/exim to 4.72 [adam 2010-06-06]
