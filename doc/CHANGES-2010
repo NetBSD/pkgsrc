@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2150 2010/06/06 18:28:05 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2151 2010/06/06 23:43:55 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/miredo to 1.1.7nb1 [gson 2010-06-06]
 	Updated devel/ruby-activesupport to 2.3.8 [minskim 2010-06-06]
 	Updated net/ruby-snmp to 1.0.3 [minskim 2010-06-06]
+	Added textproc/lit2epub to 0.1.1 [markd 2010-06-06]
