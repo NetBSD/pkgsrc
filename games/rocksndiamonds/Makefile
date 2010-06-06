@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2009/11/01 15:46:07 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2010/06/06 08:41:44 adam Exp $
 
-DISTNAME=	rocksndiamonds-3.2.6.0
-PKGREVISION=	2
+DISTNAME=	rocksndiamonds-3.3.0.0
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
@@ -45,7 +44,7 @@ OWN_DIRS_PERMS+=	${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 
 SPECIAL_PERMS=		bin/rocksndiamonds ${SETGID_GAMES_PERMS}
 
-PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F ${WRKDIR}/PLIST.D
+PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
 
 .if ( ${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
       ${MACHINE} == "shark" )
@@ -68,17 +67,17 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/rocksndiamonds.6
 	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	# auto-generated PLIST
-	rm -f ${WRKDIR}/PLIST.F ${WRKDIR}/PLIST.D
+	rm -f ${WRKDIR}/PLIST.F
 	set -e;								\
 	cd ${WRKSRC} &&							\
 	for d in sounds graphics levels music; do 			\
-		find "$${d}" -type d -print | { while read subdir; do	\
-			${INSTALL_DATA_DIR} 				\
+		find "$${d}" -type d -print | while read subdir; do	\
+			${INSTALL_DATA_DIR}				\
 				${DESTDIR}${SHAREDIR}/"$${subdir}";	\
-		done ; } | sort -r >> ${WRKDIR}/PLIST.D;		\
+		done ;							\
 		find "$${d}" -type f -print | while read f; do		\
 			${INSTALL_DATA} "$${f}"				\
-				${DESTDIR}${SHAREDIR}/"$${f}";	\
+				${DESTDIR}${SHAREDIR}/"$${f}";		\
 			${ECHO} ${SHARESUBDIR}/"$${f}" >> ${WRKDIR}/PLIST.F;\
 		done ;							\
 	done
