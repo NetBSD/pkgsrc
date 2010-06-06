@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.33 2010/06/05 07:03:20 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.34 2010/06/06 08:14:36 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -153,3 +153,5 @@ Pullup ticket #3137 - requested by kefren
 security/sudo: security update
 Pullup ticket #3138 - requested by pettai
 mail/mimedefang: functionality fix
+Pullup ticket #3131 - requested by is
+shells/mksh: bugfix update
