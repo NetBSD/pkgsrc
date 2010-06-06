@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2010/05/14 06:22:18 pettai Exp $
+# $NetBSD: Makefile,v 1.18 2010/06/06 17:31:05 gson Exp $
 
 DISTNAME=	miredo-1.1.7
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.remlab.net/files/miredo/archive/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +23,7 @@ USE_LIBTOOL=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PKG_SYSCONFSUBDIR?=	miredo
 EGDIR=		${PREFIX}/share/examples/miredo
 CONF_FILES=	${EGDIR}/miredo.conf ${PKG_SYSCONFDIR}/miredo.conf
 CONF_FILES+=	${EGDIR}/miredo-server.conf \
