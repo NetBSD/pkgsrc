@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2147 2010/06/06 17:32:49 gson Exp $
+$NetBSD: CHANGES-2010,v 1.2148 2010/06/06 17:36:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2571,6 +2571,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-ancientgreek to 2009 [minskim 2010-05-20]
 	Updated fonts/tex-rsfs to 2009 [minskim 2010-05-20]
 	Updated fonts/tex-rsfs-doc to 2009 [minskim 2010-05-20]
+	Added print/diffpdf version 1.0.0 [drochner 2010-05-20]
 	Updated print/cups to 1.4.3 [sbd 2010-05-21]
 	Updated devel/libsigc++ to 2.2.7 [adam 2010-05-21]
 	Updated devel/glibmm to 2.22.2 [adam 2010-05-21]
