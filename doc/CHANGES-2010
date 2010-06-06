@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2144 2010/06/06 09:53:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2145 2010/06/06 12:36:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2872,3 +2872,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/rocksndiamonds to 3.3.0.0 [adam 2010-06-06]
 	Updated lang/sun-jre6 to 6.0.20 [obache 2010-06-06]
 	Updated lang/sun-jdk6 to 6.0.20 [obache 2010-06-06]
+	Updated security/xmlsec1 to 1.2.16 [obache 2010-06-06]
