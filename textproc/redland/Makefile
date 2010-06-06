@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/29 13:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.11 2010/06/06 17:41:34 adam Exp $
 
 DISTNAME=	redland-1.0.10
 CATEGORIES=	textproc
@@ -15,10 +15,12 @@ USE_TOOLS+=	gmake perl pkg-config
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+.include "../../mk/bdb.buildlink3.mk"
+
 .if empty(BDB_LIBS)
 CONFIGURE_ARGS+=	--with-bdb-dbname=c
 .else
-CONFIGURE_ARGS+=	--with-bdb-dbname=${BDB_LIBS:Q}
+CONFIGURE_ARGS+=	--with-bdb-dbname=${BDB_TYPE}
 .endif
 CONFIGURE_ARGS+=	--with-bdb-lib=${BDBBASE}/lib
 CONFIGURE_ARGS+=	--with-bdb-include=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
@@ -41,5 +43,4 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/raptor/buildlink3.mk"
 .include "../../textproc/rasqal/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
