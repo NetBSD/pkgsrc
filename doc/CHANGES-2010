@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2142 2010/06/06 03:46:42 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.2143 2010/06/06 08:42:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-jinja2 to 2.5 [markd 2010-06-05]
 	Updated math/py-scipy to 0.7.2 [markd 2010-06-06]
 	Updated pkgtools/xpkgwedge to 1.17 [dholland 2010-06-06]
+	Updated games/rocksndiamonds to 3.3.0.0 [adam 2010-06-06]
