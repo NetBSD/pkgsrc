@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9371 2010/06/06 12:36:26 obache Exp $
+$NetBSD: TODO,v 1.9372 2010/06/06 17:40:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -344,7 +344,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GutenMark-20090216
-	o ImageMagick-6.6.2.0
+	o ImageMagick-6.6.2.3
+	o JBidwatcher-2.1pre7
 	o MAMEDiff-2.30
 	o Mesa-7.8.1
 	o MesaLib-7.8.0
@@ -522,6 +523,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o denemo-0.8.12
 	o deskbar-applet-2.30.1 [GNOME 2.30]
 	o dhid-5.3
+	o diffpdf-1.1.2
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.1.1
@@ -534,7 +536,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dspam-3.9.0
 	o dvdrip-0.98.11
 	o dvipng-1.13
-	o dwm-5.8.1
+	o dwm-5.8.2
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.3.2
@@ -591,7 +593,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ezxml-0.8.6
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o farsight2-0.0.19
+	o farsight2-0.0.20
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o fd-3.00d
@@ -746,9 +748,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsasl-1.4.1
 	o gsharutils-4.9
 	o gss-1.0.1
-	o gst-plugins0.10-bad-0.10.18
+	o gst-plugins0.10-bad-0.10.19
 	o gst-plugins0.10-good-0.10.23
-	o gst-plugins0.10-ugly-0.10.14
+	o gst-plugins0.10-ugly-0.10.15
 	o gthumb-2.10.12
 	o gtick-0.4.2
 	o gtk-doc-1.15
@@ -864,7 +866,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libassuan-2.0.0
 	o libcares-1.7.0
 	o libdockapp-0.6.1
-	o libebml-0.8.0
+	o libebml-1.0.0
 	o libextractor-0.6.1
 	o libflash-0.4.13
 	o libgda-4.0.8 [GNOME 2.28]
@@ -883,9 +885,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
+	o libltdl-2.2.8
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmatroska-0.9.0
+	o libmatroska-1.0.0
 	o libmp3splt-0.5.8
 	o libnasl-2.3.1
 	o libnice-0.0.12
@@ -899,6 +902,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh2-1.2.5
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
+	o libtool-2.2.8
+	o libtool-base-2.2.8
 	o libusb-1.0
 	o libv4l-0.8.0
 	o libxklavier-5.0
@@ -1043,7 +1048,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opera-10.51
 	o orca-2.30.1 [GNOME 2.30]
 	o oroborus-2.0.18
-	o ortp-0.16.2
+	o ortp-0.16.3
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Any-Moose-0.13
@@ -1058,10 +1063,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-JSON-2.21
 	o p5-MIME-tools-5.428
 	o p5-Module-Build-0.36090
-	o p5-Module-Install-0.97
+	o p5-Module-Install-0.99
 	o p5-Mouse-0.59
 	o p5-POE-1.289 [pkg/43115]
-	o p5-PerlMagick-6.6.2.0
+	o p5-PerlMagick-6.6.2.3
 	o p5-Pod-Readme-0.10
 	o p5-Search-Xapian-1.0.20.0
 	o p5-Set-Infinite-0.65
@@ -1400,7 +1405,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxMaxima-0.8.5 [pkg/43265]
 	o wxRemind-101
 	o wyrd-1.4.4
-	o x264-devel-20100529
+	o x264-devel-20100605
 	o xanalyser-1.30
 	o xapian-1.0.20
 	o xapian-omega-1.0.20
