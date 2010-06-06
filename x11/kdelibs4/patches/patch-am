@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2010/06/06 22:44:02 markd Exp $
+
+--- kdecore/sycoca/ksycoca.cpp.orig	2010-01-19 23:15:27.000000000 +0000
++++ kdecore/sycoca/ksycoca.cpp
+@@ -62,7 +62,7 @@
+  */
+ #define KSYCOCA_FILENAME "ksycoca4"
+ 
+-#if HAVE_MADVISE
++#if HAVE_MMAP
+ #include <sys/mman.h> // This #include was checked when looking for posix_madvise
+ #endif
+ 
