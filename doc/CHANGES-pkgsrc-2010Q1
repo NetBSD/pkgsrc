@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.34 2010/06/06 08:14:36 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.35 2010/06/06 11:33:41 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -155,3 +155,6 @@ Pullup ticket #3138 - requested by pettai
 mail/mimedefang: functionality fix
 Pullup ticket #3131 - requested by is
 shells/mksh: bugfix update
+Pullup ticket #3139 - requested by taca
+databases/mysql5-client: security update
+databases/mysql5-server: security update
