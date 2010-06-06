@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9369 2010/06/06 02:39:31 markd Exp $
+$NetBSD: TODO,v 1.9370 2010/06/06 09:53:57 obache Exp $
 
 Suggested new packages
 ======================
@@ -1292,8 +1292,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o subversion-1.6.11
-	o sun-jdk6-6.0.19
-	o sun-jre6-6.0.19
 	o suse_base-11.0
 	o sympa-6.0.2
 	o sysinfo-4.2.2
