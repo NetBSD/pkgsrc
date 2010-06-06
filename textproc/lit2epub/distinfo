@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/06 23:41:12 markd Exp $
+
+SHA1 (ebook-tools-0.1.1.tar.gz) = 5c7c177914767412f3c8b145319fa4683755ac90
+RMD160 (ebook-tools-0.1.1.tar.gz) = 02ee38ed7175e94577f718cc68c468f4e9d229ea
+Size (ebook-tools-0.1.1.tar.gz) = 43280 bytes
+SHA1 (patch-aa) = e8b2df45fdcd985eb1df5ed6a56861af268f7d7c

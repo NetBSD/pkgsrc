@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/06/06 23:41:12 markd Exp $
+
+--- src/tools/lit2epub.orig	2008-06-07 21:09:38.000000000 +0200
++++ src/tools/lit2epub
+@@ -2,7 +2,7 @@
+ # Uses clit to convert .lit files to valid epub
+ # known issues: created metadata uses the old spec
+  
+-CLIT=$(which clit)
++CLIT=$(which convertlit)
+ 
+ if [ "$?" != 0 ]; then
+     echo "Can't find clit, please make sure it is in your path"
+@@ -42,7 +42,7 @@ if [ "$?" != 0 ]; then
+     fi
+     
+ else
+-    TEMPDIR=$($MKTEMP -d)
++    TEMPDIR=$($MKTEMP -d -t lit2epub.tmp)
+ fi
+ 
+ WD=$(pwd)
