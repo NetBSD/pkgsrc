@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9370 2010/06/06 09:53:57 obache Exp $
+$NetBSD: TODO,v 1.9371 2010/06/06 12:36:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -1468,7 +1468,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xmessage-1.0.3
-	o xmlsec1-1.2.16
 	o xmlstarlet-1.0.2
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
