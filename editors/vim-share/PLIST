@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/02/18 08:18:25 martti Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/06/07 12:12:22 martti Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -326,6 +326,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/limits.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lisp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/loginaccess.vim
 share/vim/${VIM_SUBDIR}/ftplugin/logindefs.vim
+share/vim/${VIM_SUBDIR}/ftplugin/logtalk.dict
 share/vim/${VIM_SUBDIR}/ftplugin/logtalk.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lprolog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lua.vim

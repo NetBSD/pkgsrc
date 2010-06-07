@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.140 2010/03/24 17:05:40 martti Exp $
+# $NetBSD: Makefile.common,v 1.141 2010/06/07 12:12:21 martti Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -29,7 +29,12 @@ PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION}/
 
 PATCHFILES+=		7.2.001-100.gz 7.2.101-200.gz 7.2.201-300.gz
 PATCHFILES+=		7.2.301-400.gz 7.2.401 7.2.402 7.2.403 7.2.404 7.2.405
-PATCHFILES+=		7.2.406 7.2.407 7.2.408 7.2.409 7.2.410 7.2.411
+PATCHFILES+=		7.2.406 7.2.407 7.2.408 7.2.409 7.2.410 7.2.411 7.2.412
+PATCHFILES+=		7.2.413 7.2.414 7.2.415 7.2.416 7.2.417 7.2.418 7.2.419
+PATCHFILES+=		7.2.420 7.2.421 7.2.422 7.2.423 7.2.424 7.2.425 7.2.426
+PATCHFILES+=		7.2.427 7.2.428 7.2.429 7.2.430 7.2.431 7.2.432 7.2.433
+PATCHFILES+=		7.2.434 7.2.435 7.2.436 7.2.437 7.2.438 7.2.439 7.2.440
+PATCHFILES+=		7.2.441 7.2.442
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
@@ -46,7 +51,7 @@ CHECK_INTERPRETER_SKIP=	share/vim/vim72/tools/vim132
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-modified-by="${MAINTAINER}"
+CONFIGURE_ARGS+=	--with-modified-by=${MAINTAINER:Q}
 
 # See "configure --help" extra options. These might affect the installed
 # files (and PLIST might not include all files) so use at your own risk!
