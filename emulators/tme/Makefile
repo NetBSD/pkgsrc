@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/12/15 21:41:56 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/06/07 13:34:00 tsutsui Exp $
 #
 
-DISTNAME=		tme-0.6
-PKGREVISION=		1
+DISTNAME=		tme-0.8
 CATEGORIES=		emulators
 MASTER_SITES=		http://csail.mit.edu/~fredette/tme/
 
@@ -27,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-debug
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
