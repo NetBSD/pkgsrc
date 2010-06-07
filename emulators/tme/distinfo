@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.9 2007/09/07 14:11:51 tsutsui Exp $
+$NetBSD: distinfo,v 1.10 2010/06/07 13:34:01 tsutsui Exp $
 
-SHA1 (tme-0.6.tar.gz) = bd5556eb2ae4a6999f46099166370491ee633a8b
-RMD160 (tme-0.6.tar.gz) = b730faac06280c55c9355e375caf4f4b26365f50
-Size (tme-0.6.tar.gz) = 1700273 bytes
+SHA1 (tme-0.8.tar.gz) = dd4f3421c20ceed548c5328a21dbb26e80f46b9c
+RMD160 (tme-0.8.tar.gz) = 6bd505c5fa7810d37f436883383c4ba655df2ded
+Size (tme-0.8.tar.gz) = 2100123 bytes
+SHA1 (patch-aa) = e6095f8783c540fa2ae7f5c73b1d30f8f6cd79bc
+SHA1 (patch-ab) = 3825986759da24c628b870a1493e4d37ec37358f
