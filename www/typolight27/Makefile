@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/05/04 13:18:19 taca Exp $
+# $NetBSD: Makefile,v 1.18 2010/06/07 11:22:57 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 DIST_SUBDIR=	typolight27-20100503
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.typolight.org/
+HOMEPAGE=	http://www.contao.org/
 COMMENT=	Powerful web content management system (CMS)
 LICENSE=	gnu-lgpl-v2.1
 
