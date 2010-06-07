@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/06/05 15:19:37 taca Exp $
+# $NetBSD: Makefile,v 1.28 2010/06/07 11:30:07 taca Exp $
 #
 
 DISTNAME=	typolight${TL_VER}-translations-${VERS}
@@ -8,14 +8,14 @@ DISTFILES=	${TL_DISTFILES}
 EXTRACT_DIR=	${WRKSRC}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.typolight.org/download.html
+HOMEPAGE=	http://www.contao.org/download.html
 COMMENT=	Language files for TYPOlight CMS
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	typolight${TL_VER}>=${TL_PKGVER}:../../www/typolight${TL_VER}
 
 # Use time stamp of latest translation.
-VERS=		20100603
+VERS=		20100606
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
