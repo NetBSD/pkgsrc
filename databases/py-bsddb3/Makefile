@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2010/06/02 12:22:59 adam Exp $
+# $NetBSD: Makefile,v 1.39 2010/06/07 19:36:41 gls Exp $
 
 DISTNAME=	bsddb3-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/b/bsddb3/
 
@@ -32,6 +33,6 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} test.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
