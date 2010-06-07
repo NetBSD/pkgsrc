@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/02/19 19:04:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/07 22:44:01 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -63,10 +63,8 @@ libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/fakemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/profile
-libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/sorted-doc
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
-libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/vcdiff
 man/man1/b2m.1
 man/man1/ctags.1
 man/man1/ebrowse.1
@@ -108,6 +106,7 @@ share/emacs/${EMACS_VERSION}/etc/NEWS.19
 share/emacs/${EMACS_VERSION}/etc/NEWS.20
 share/emacs/${EMACS_VERSION}/etc/NEWS.21
 share/emacs/${EMACS_VERSION}/etc/NEWS.22
+share/emacs/${EMACS_VERSION}/etc/NEWS.23
 share/emacs/${EMACS_VERSION}/etc/NXML-NEWS
 share/emacs/${EMACS_VERSION}/etc/ORDERS
 share/emacs/${EMACS_VERSION}/etc/PROBLEMS
@@ -1376,6 +1375,8 @@ share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/ia.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/ia.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/idle.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/idle.elc
+share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/imenu.el.gz
+share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/imenu.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/java.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/java.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/semantic/lex-spp.el.gz
@@ -1498,8 +1499,6 @@ share/emacs/${EMACS_VERSION}/lisp/comint.el.gz
 share/emacs/${EMACS_VERSION}/lisp/comint.elc
 share/emacs/${EMACS_VERSION}/lisp/compare-w.el.gz
 share/emacs/${EMACS_VERSION}/lisp/compare-w.elc
-share/emacs/${EMACS_VERSION}/lisp/complete.el.gz
-share/emacs/${EMACS_VERSION}/lisp/complete.elc
 share/emacs/${EMACS_VERSION}/lisp/completion.el.gz
 share/emacs/${EMACS_VERSION}/lisp/completion.elc
 share/emacs/${EMACS_VERSION}/lisp/composite.el.gz
@@ -1557,6 +1556,8 @@ share/emacs/${EMACS_VERSION}/lisp/dos-w32.el.gz
 share/emacs/${EMACS_VERSION}/lisp/dos-w32.elc
 share/emacs/${EMACS_VERSION}/lisp/double.el.gz
 share/emacs/${EMACS_VERSION}/lisp/double.elc
+share/emacs/${EMACS_VERSION}/lisp/dynamic-setting.el.gz
+share/emacs/${EMACS_VERSION}/lisp/dynamic-setting.elc
 share/emacs/${EMACS_VERSION}/lisp/ebuff-menu.el.gz
 share/emacs/${EMACS_VERSION}/lisp/ebuff-menu.elc
 share/emacs/${EMACS_VERSION}/lisp/echistory.el.gz
@@ -1711,6 +1712,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/rx.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/rx.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/shadow.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/shadow.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/smie.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/smie.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/sregex.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/sregex.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/syntax.el.gz
@@ -1971,8 +1974,6 @@ share/emacs/${EMACS_VERSION}/lisp/font-core.el.gz
 share/emacs/${EMACS_VERSION}/lisp/font-core.elc
 share/emacs/${EMACS_VERSION}/lisp/font-lock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/font-lock.elc
-share/emacs/${EMACS_VERSION}/lisp/font-setting.el.gz
-share/emacs/${EMACS_VERSION}/lisp/font-setting.elc
 share/emacs/${EMACS_VERSION}/lisp/format-spec.el.gz
 share/emacs/${EMACS_VERSION}/lisp/format-spec.elc
 share/emacs/${EMACS_VERSION}/lisp/format.el.gz
@@ -2707,6 +2708,8 @@ share/emacs/${EMACS_VERSION}/lisp/net/sasl-ntlm.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/sasl-ntlm.elc
 share/emacs/${EMACS_VERSION}/lisp/net/sasl.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/sasl.elc
+share/emacs/${EMACS_VERSION}/lisp/net/secrets.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/secrets.elc
 share/emacs/${EMACS_VERSION}/lisp/net/snmp-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/snmp-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/net/socks.el.gz
@@ -2800,6 +2803,8 @@ share/emacs/${EMACS_VERSION}/lisp/nxml/xsd-regexp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/nxml/xsd-regexp.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/fast-lock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/fast-lock.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/iso-acc.el.gz
@@ -2825,6 +2830,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/rnews.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/rnews.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/rnewspost.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/rnewspost.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/s-region.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/s-region.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/sc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/sc.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/scribe.el.gz
@@ -2847,6 +2854,8 @@ share/emacs/${EMACS_VERSION}/lisp/org/org-attach.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-attach.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-bbdb.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-bbdb.elc
+share/emacs/${EMACS_VERSION}/lisp/org/org-beamer.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/org-beamer.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-bibtex.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-bibtex.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-clock.el.gz
@@ -2857,10 +2866,16 @@ share/emacs/${EMACS_VERSION}/lisp/org/org-compat.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-crypt.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-crypt.elc
+share/emacs/${EMACS_VERSION}/lisp/org/org-ctags.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/org-ctags.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-datetree.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-datetree.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-docbook.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-docbook.elc
+share/emacs/${EMACS_VERSION}/lisp/org/org-docview.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/org-docview.elc
+share/emacs/${EMACS_VERSION}/lisp/org/org-entities.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/org-entities.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-exp-blocks.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-exp-blocks.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-exp.el.gz
@@ -3128,8 +3143,8 @@ share/emacs/${EMACS_VERSION}/lisp/progmodes/flymake.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/flymake.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/fortran.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/fortran.elc
-share/emacs/${EMACS_VERSION}/lisp/progmodes/gdb-ui.el.gz
-share/emacs/${EMACS_VERSION}/lisp/progmodes/gdb-ui.elc
+share/emacs/${EMACS_VERSION}/lisp/progmodes/gdb-mi.el.gz
+share/emacs/${EMACS_VERSION}/lisp/progmodes/gdb-mi.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/glasses.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/glasses.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/grep.el.gz
@@ -3238,8 +3253,6 @@ share/emacs/${EMACS_VERSION}/lisp/rot13.el.gz
 share/emacs/${EMACS_VERSION}/lisp/rot13.elc
 share/emacs/${EMACS_VERSION}/lisp/ruler-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/ruler-mode.elc
-share/emacs/${EMACS_VERSION}/lisp/s-region.el.gz
-share/emacs/${EMACS_VERSION}/lisp/s-region.elc
 share/emacs/${EMACS_VERSION}/lisp/savehist.el.gz
 share/emacs/${EMACS_VERSION}/lisp/savehist.elc
 share/emacs/${EMACS_VERSION}/lisp/saveplace.el.gz
