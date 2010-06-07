@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/10/17 09:31:43 taca Exp $
+$NetBSD: distinfo,v 1.7 2010/06/07 09:34:41 obache Exp $
 
-SHA1 (sqlite3-ruby-1.2.5.gem) = 837eabb8c80f37e46e29d4c7c22ee08e7679e47a
-RMD160 (sqlite3-ruby-1.2.5.gem) = 509b0401ee40e2176431ef30595f14a9ef4e2bcd
-Size (sqlite3-ruby-1.2.5.gem) = 74240 bytes
+SHA1 (sqlite3-ruby-1.3.0.gem) = 7707bc00e439cd0313ac5c71b97a2c964fab8fb9
+RMD160 (sqlite3-ruby-1.3.0.gem) = bacfce9192dc35a4d4b4323547af78dbc295a0af
+Size (sqlite3-ruby-1.3.0.gem) = 51712 bytes
