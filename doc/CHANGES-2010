@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2155 2010/06/07 13:37:07 tsutsui Exp $
+$NetBSD: CHANGES-2010,v 1.2156 2010/06/07 19:39:08 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2883,3 +2883,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100606 [taca 2010-06-07]
 	Updated editors/vim-share to 7.2.442 [martti 2010-06-07]
 	Updated emulators/tme to 0.8 [tsutsui 2010-06-07]
+	Updated databases/py-bsddb3 to 5.0.0nb1 [gls 2010-06-07]
