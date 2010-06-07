@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2010/06/05 15:19:37 taca Exp $
+# $NetBSD: options.mk,v 1.28 2010/06/07 11:30:07 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.typolight-translations
 
@@ -11,7 +11,7 @@ TL_TRANSLATIONS.bs=	TYPOlight-Bosnian-v10.zip	# 2010/03/18
 TL_TRANSLATIONS.ca=	TYPOlight-Catalan-v4.zip	# 2008/09/24
 TL_TRANSLATIONS.cs=	TYPOlight-Czech-v19.zip		# 2010/06/03
 TL_TRANSLATIONS.da=	TYPOlight-Danish-v10.zip	# 2010/05/16
-TL_TRANSLATIONS.es=	TYPOlight-Spanish-v12.zip	# 2009/07/01
+TL_TRANSLATIONS.es=	TYPOlight-Spanish-v13.zip	# 2010/06/06
 TL_TRANSLATIONS.fa=	TYPOlight-Persian-v4.zip	# 2010/05/12
 TL_TRANSLATIONS.fi=	TYPOlight-Finnish-v1.zip	# 2009/11/03
 TL_TRANSLATIONS.fr=	TYPOlight-French-v53.zip	# 2010/04/14
@@ -34,10 +34,10 @@ TL_TRANSLATIONS.sk=	TYPOlight-Slovak-v8.zip		# 2009/08/15
 TL_TRANSLATIONS.sl=	TYPOlight-Slovenian-v6.zip	# 2010/03/12
 TL_TRANSLATIONS.sq=	TYPOlight-Albanian-v4.zip	# 2008/12/14
 TL_TRANSLATIONS.sr=	TYPOlight-Serbian-v7.zip	# 2010/05/10
-TL_TRANSLATIONS.sv=	TYPOlight-Swedish-v46.zip	# 2010/04/13
+TL_TRANSLATIONS.sv=	TYPOlight-Swedish-v48.zip	# 2010/06/06
 TL_TRANSLATIONS.th=	TYPOlight-Thai-v2.zip		# 2008/11/23
 TL_TRANSLATIONS.tl=	TYPOlight-Tagalog-v1.zip	# 2010/01/29
-TL_TRANSLATIONS.tr=	TYPOlight-Turkish-v9.zip	# 2010/05/08
+TL_TRANSLATIONS.tr=	TYPOlight-Turkish-v10.zip	# 2010/06/06
 TL_TRANSLATIONS.uk=	TYPOlight-Ukrainian-v13.zip	# 2010/15/14
 TL_TRANSLATIONS.zh=	TYPOlight-Chinese-v20.zip	# 2010/01/29
 
@@ -55,6 +55,6 @@ TL_LANGUAGES+=	${l:S/^lang-//1}
 .for l in ${TL_LANGUAGES}
 TL_DISTFILES+=	${TL_TRANSLATIONS.${l}}
 SITES.${TL_TRANSLATIONS.${l}}= \
-	http://www.typolight.org/download.html?iso=${l}&file=tl_files/languages/${l}/
+	http://www.contao.org/download.html?iso=${l}&file=tl_files/languages/${l}/
 PLIST_SRC+=	PLIST.${l}
 .endfor
