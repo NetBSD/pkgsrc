@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2156 2010/06/07 19:39:08 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2157 2010/06/07 22:44:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2884,3 +2884,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/vim-share to 7.2.442 [martti 2010-06-07]
 	Updated emulators/tme to 0.8 [tsutsui 2010-06-07]
 	Updated databases/py-bsddb3 to 5.0.0nb1 [gls 2010-06-07]
+	Updated editors/emacs-snapshot to 24.0.50.20100602 [minskim 2010-06-07]
