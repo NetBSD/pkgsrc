@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/02/19 19:04:11 minskim Exp $
+# $NetBSD: options.mk,v 1.4 2010/06/07 22:44:01 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--without-dbus
 ###
 ### Support SVG
 ###
-.  if !empty(PKG_OPTIONS:Msvg)
+.  if !empty(PKG_OPTIONS:Msvg) && empty(PKG_OPTIONS:Mnextstep)
 .include "../../graphics/librsvg/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--without-rsvg

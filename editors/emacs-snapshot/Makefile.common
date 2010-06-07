@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.4 2010/05/30 12:29:12 joerg Exp $
+# $NetBSD: Makefile.common,v 1.5 2010/06/07 22:44:01 minskim Exp $
 
-DISTNAME=	emacs-snapshot_20100217.orig
+DISTNAME=	emacs-snapshot_20100602.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.orebokech.com/pool/main/e/emacs-snapshot/
+EXTRACT_SUFX=	.tar.lzma
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
