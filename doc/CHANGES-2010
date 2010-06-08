@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2162 2010/06/08 12:37:13 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2163 2010/06/08 15:15:15 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2890,3 +2890,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/mtr to 0.78 [wiz 2010-06-08]
 	Updated textproc/gnome-doc-utils to 0.20.0 [wiz 2010-06-08]
 	Updated mail/prayer to 1.3.2 [adam 2010-06-08]
+	Updated mail/postfix to 2.7.1 [martti 2010-06-08]
+	Updated mail/postfix-current to 2.8.20100603 [martti 2010-06-08]
