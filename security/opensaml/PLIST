@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/15 19:40:44 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/08 12:02:21 pettai Exp $
 bin/samlsign
 include/saml/Assertion.h
 include/saml/RootObject.h
@@ -48,8 +48,8 @@ include/saml/util/SAMLConstants.h
 include/saml/version.h
 lib/libsaml.a
 lib/libsaml.so
-lib/libsaml.so.4
-lib/libsaml.so.4.0.1
+lib/libsaml.so.6
+lib/libsaml.so.6.0.0
 share/doc/opensaml-${PKGVERSION}/LICENSE.txt
 share/doc/opensaml-${PKGVERSION}/LOG4CPP.LICENSE
 share/doc/opensaml-${PKGVERSION}/NOTICE.txt
