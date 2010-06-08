@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2158 2010/06/08 08:47:06 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2159 2010/06/08 10:15:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2886,3 +2886,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/py-bsddb3 to 5.0.0nb1 [gls 2010-06-07]
 	Updated editors/emacs-snapshot to 24.0.50.20100602 [minskim 2010-06-07]
 	Added games/powder version 114 [wiz 2010-06-08]
+	Updated security/libgpg-error to 1.8 [wiz 2010-06-08]
