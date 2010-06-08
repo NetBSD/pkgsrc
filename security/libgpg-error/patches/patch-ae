@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.1 2005/12/29 16:09:42 kim Exp $
+$NetBSD: patch-ae,v 1.2 2010/06/08 10:15:32 wiz Exp $
 
 Setting FS in some versions of awk makes it null.  The default FS of
 "whitespace" works fine, so no need to redefine it.
 
---- src/mkerrcodes1.awk.orig	2004-03-08 18:44:05.000000000 +0200
-+++ src/mkerrcodes1.awk	2005-12-24 15:34:33.000000000 +0200
+--- src/mkerrcodes1.awk.orig	2009-07-23 13:52:35.000000000 +0000
++++ src/mkerrcodes1.awk
 @@ -55,7 +55,7 @@
  # as is trailing whitespace.
  
@@ -14,7 +14,7 @@ Setting FS in some versions of awk makes it null.  The default FS of
    header = 1;
    if (errnoidx == 0)
      errnoidx = 2;
-@@ -67,7 +67,7 @@
+@@ -67,7 +67,7 @@ BEGIN {
  /^#/ { next; }
  
  header {
@@ -22,4 +22,4 @@ Setting FS in some versions of awk makes it null.  The default FS of
 +  if ($0 ~ /^[0-9]/)
      {
        print "#include <errno.h>";
-       print "";
+       print "#ifdef _WIN32";

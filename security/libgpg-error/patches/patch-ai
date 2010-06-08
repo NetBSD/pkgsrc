@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2005/12/29 16:09:42 kim Exp $
+$NetBSD: patch-ai,v 1.2 2010/06/08 10:15:33 wiz Exp $
 
 Setting FS in some versions of awk makes it null.  Make this script
 work with the default FS of "whitespace" instead.
 
---- src/mkheader.awk.orig	2004-03-08 18:44:05.000000000 +0200
-+++ src/mkheader.awk	2005-12-24 16:51:38.000000000 +0200
+--- src/mkheader.awk.orig	2010-03-15 10:49:49.000000000 +0000
++++ src/mkheader.awk
 @@ -51,7 +51,7 @@
  # at the full path of the files in @srcdir@.
  
@@ -14,8 +14,8 @@ work with the default FS of "whitespace" instead.
  # sources_nr holds the number of error sources.
    sources_nr = 0;
  # codes_nr holds the number of error codes.
-@@ -74,7 +74,7 @@
- }
+@@ -78,7 +78,7 @@ BEGIN {
+ 
  
  sources_header {
 -  if ($1 ~ /^[0123456789]+$/)
@@ -23,7 +23,7 @@ work with the default FS of "whitespace" instead.
      {
        sources_header = 0;
        sources_body = 1;
-@@ -88,7 +88,7 @@
+@@ -92,7 +92,7 @@ sources_body {
    if (/^$/)
      next;
  
@@ -32,7 +32,7 @@ work with the default FS of "whitespace" instead.
      {
        sources_body = 0;
        between_sources_and_codes = 1;
-@@ -103,7 +103,7 @@
+@@ -107,7 +107,7 @@ sources_body {
  }
  
  between_sources_and_codes {
@@ -41,7 +41,7 @@ work with the default FS of "whitespace" instead.
      {
        between_sources_and_codes = 0;
        codes_body = 1;
-@@ -117,7 +117,7 @@
+@@ -121,7 +121,7 @@ codes_body {
    if (/^$/)
      next;
  
@@ -50,7 +50,7 @@ work with the default FS of "whitespace" instead.
      {
        codes_body = 0;
        between_codes_and_errnos = 1;
-@@ -132,7 +132,7 @@
+@@ -136,7 +136,7 @@ codes_body {
  }
  
  between_codes_and_errnos {
@@ -59,12 +59,12 @@ work with the default FS of "whitespace" instead.
      {
        between_codes_and_errnos = 0;
        errnos_body = 1;
-@@ -146,7 +146,7 @@
+@@ -150,7 +150,7 @@ errnos_body {
    if (/^$/)
      next;
  
 -  if ($1 !~ /^[0-9]/)
 +  if ($0 !~ /^[0-9]+/)
      {
- # Note that this assumes that gpg-error.h.in doesn't start with a digit.
+ # Note that this assumes that extra_body.in doesn't start with a digit.
        errnos_body = 0;
