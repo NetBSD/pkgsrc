@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/09 19:48:23 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/08 13:52:57 wiz Exp $
 #
 
 DISTNAME=	circos-0.49
@@ -25,7 +25,7 @@ DEPENDS+=	p5-Math-Bezier-[0-9]*:../../math/p5-Math-Bezier
 DEPENDS+=	p5-Math-Round-[0-9]*:../../math/p5-Math-Round
 DEPENDS+=	p5-Math-VecStat-[0-9]*:../../math/p5-Math-VecStat
 DEPENDS+=	p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
-DEPENDS+=	p5-Set-IntSpan>=1.11*:../../devel/p5-Set-IntSpan
+DEPENDS+=	p5-Set-IntSpan>=1.11:../../devel/p5-Set-IntSpan
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 INSTALLATION_DIRS+=	bin share/${PKGBASE} ${FONTDIR} ${EGDIR}
