@@ -1,17 +1,33 @@
-$NetBSD: patch-ab,v 1.3.2.2 2010/04/20 21:26:19 tron Exp $
+$NetBSD: patch-ab,v 1.3.2.3 2010/06/08 18:22:06 tron Exp $
+
+- CVE-2010-0739
+- CVE-2010-1440
 
 --- dospecial.c.orig	2009-06-23 09:46:14.000000000 +0000
 +++ dospecial.c
-@@ -334,6 +334,12 @@ predospecial(integer numbytes, Boolean s
+@@ -333,7 +333,11 @@ predospecial(integer numbytes, Boolean s
+    int j ;
     static int omega_specials = 0;
  
-    if (nextstring + numbytes > maxstring) {
-+      if (numbytes < 0
-+          || (numbytes > 0 && 2 > INT_MAX / numbytes)
-+          || 2 * numbytes > 1000 + 2 * numbytes) {
+-   if (nextstring + numbytes > maxstring) {
++   if (numbytes < 0 || numbytes > maxstring - nextstring) {
++      if (numbytes < 0 || numbytes > (INT_MAX - 1000) / 2 ) {
 +         error("! Integer overflow in predospecial");
 +         exit(1);
 +      }
        p = nextstring = mymalloc(1000 + 2 * numbytes) ;
        maxstring = nextstring + 2 * numbytes + 700 ;
+    }
+@@ -918,7 +922,11 @@ bbdospecial(int nbytes)
+    char seen[NKEYS] ;
+    float valseen[NKEYS] ;
+ 
+-   if (nextstring + nbytes > maxstring) {
++   if (nbytes < 0 || nbytes > maxstring - nextstring) {
++      if (nbytes < 0 || nbytes > (INT_MAX - 1000) / 2 ) {
++	 error("! Integer overflow in bbdospecial");
++	 exit(1);
++      }
+       p = nextstring = mymalloc(1000 + 2 * nbytes) ;
+       maxstring = nextstring + 2 * nbytes + 700 ;
     }
