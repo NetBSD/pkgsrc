@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2010/01/18 09:59:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2010/06/08 15:13:01 wiz Exp $
 
 BUILDLINK_TREE+=	imlib2
 
@@ -15,6 +15,8 @@ BUILDLINK_PKGSRCDIR.imlib2?=	../../graphics/imlib2
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 _IMLIB2_PRE_X11_OPTION!= \
 	if ${PKG_INFO} -qe 'imlib2<=1.4.0'; then			\
