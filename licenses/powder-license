@@ -1,0 +1,90 @@
+THE POWDER LICENSE:
+-------------------
+
+POWDER is copyright 2003-2009 by Jeff Lait.
+All rights reserved.
+
+Note
+----
+The Adam Bolt tileset are copyright by Adam Bolt and are licensed
+seperately.  Other tilesets are creations of the respective creators -
+download the latest artpack for details.
+
+MSVCP71.DLL and MSVCR71.DLL are owned and licensed entirely by
+Microsoft.  They are redistributed with POWDER as per their edicts.  I'd
+rather not have to include them.
+
+Simple DirectMedia Layer (SDL) library is licensed under the GNU
+Lesser General Public License (LGPL).  POWDER conforms to the third
+clause - where you downloaded this should also have been a link to
+download a source tarball.
+
+Information about SDL can be found at:
+http://www.libsdl.org/
+
+Information about the LGPL license can be found at:
+http://www.libsdl.org/license.php
+http://www.gnu.org.copyleft/lgpl.html
+
+Information about the Mersenne Twister can be found at:
+http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html
+
+Execution
+---------
+You are allowed to execute the POWDER binary, either by running it in
+an emulator or on hardware.
+
+Duplication
+-----------
+You are allowed to duplicate the POWDER distribution provided you:
+1) Keep the distribution intact.  This means keeping this license.
+2) Do not charge for the act of duplication, nor for the medium of
+duplication above the rate which you paid to acquire it.
+3) Do not add to the distribution in a manner which obscures the
+original author.
+4) Do not modify the POWDER binary nor accompanying files.  This
+includes, but is not limited to, the removal of any licensing or
+copyright information embedded in the files.
+
+An exception is made when duplicating to a cartridge or similar device
+for purpose of executing the binary on hardware.  In this case, the
+binary alone needs to be duplicated (as that is all that is practical)
+An exception is made for patching the binary to run on certain
+platforms.
+
+Transfer
+--------
+You are free to transfer copies of POWDER to others, provided they
+remain unaltered, and the transfer is performed without payment.  You
+are encouraged to instead show people to the author's current web site
+where the latest version may be acquired.
+
+Reverse Engineering
+-------------------
+You are strongly discouraged from reverse engingeering the POWDER
+binary.  If you have questions about how an algorithm worked, contact
+the author who will likely freely answer.  If would like the source,
+check the download site where it is available.
+
+Disclaimer
+----------
+Neither the author, nor anyone associated with the distribution of
+this binary to your system, is responsible for any damage done to your
+computer, console, or handheld.  This includes, but is not limited
+to, loss of data, work, time, or hardware.  
+
+In some, or all, places, a limitation of liability may not be
+possible.  It is your responsibility to verify that within your
+jurisdiction the above disclaimer fully exempts the author from all
+liability.  If it does not, all earlier rights of execution,
+duplication, and transfer are rescinded.
+
+ALL CAPS
+--------
+THIS SECTION OF THE LICENSING AGREEMENT IS WRITTEN IN ALL CAPS TO MAKE
+IT APPEAR MORE LEGAL.  IT ISN'T.  INSTEAD, IT IS JUST A FRIENDLY
+REMINDER TO ENJOY POWDER AND TO CONTACT THE AUTHOR IF YOU PLAY IT.
+EVEN IF YOU HATE THE GAME.  POWDER IS A LABOUR OF LOVE WHICH HAS PAID
+FOR ITSELF IN THE AUTHOR'S OWN ENJOYMENT, YET THERE IS NO REASON WHY
+IT CANNOT EARN EVEN MORE DIVIDENDS OF HAPPINESS BY BRINGING JOY TO THE
+LIVES OF OTHERS.
