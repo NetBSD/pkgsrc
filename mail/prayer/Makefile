@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2010/01/17 12:02:25 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.39 2010/06/08 12:34:38 adam Exp $
 
-DISTNAME=	prayer-1.0.18
-PKGREVISION=	6
+DISTNAME=	prayer-1.3.2
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
@@ -10,23 +8,31 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 
-USE_TOOLS+=	gmake perl
-PRAYER_USER=	prayer
-PRAYER_GROUP=	prayer
-PKG_GROUPS=	${PRAYER_GROUP}
-PKG_USERS=	${PRAYER_USER}:${PRAYER_GROUP}
+BDB_ACCEPTED=		db4 db5
+USE_TOOLS+=		gmake perl
+REPLACE_PERL+=		templates/src/build_index.pl
+REPLACE_PERL+=		templates/src/build_map_index.pl
+
+PRAYER_USER=		prayer
+PRAYER_GROUP=		prayer
+PKG_GROUPS=		${PRAYER_GROUP}
+PKG_USERS=		${PRAYER_USER}:${PRAYER_GROUP}
 
 PKG_GROUPS_VARS+=	PRAYER_GROUP
 PKG_USERS_VARS+=	PRAYER_USER
 BUILD_DEFS+=		VARBASE
 
-MAKE_ENV+=	EGDIR=${EGDIR:Q}
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-MAKE_ENV+=	BUILDLINK_PREFIX.db4="${BUILDLINK_PREFIX.db4}"
+MAKE_ENV+=	BASECFLAGS=${CFLAGS:Q}
+MAKE_ENV+=	BDBBASE="${BDBBASE}"
+MAKE_ENV+=	BDB_TYPE="${BDB_TYPE}"
 MAKE_ENV+=	BUILDLINK_PREFIX.imap-uw="${BUILDLINK_PREFIX.imap-uw}"
-MAKE_ENV+=	SSLCERTS=${SSLCERTS:Q}
+MAKE_ENV+=	EGDIR=${EGDIR}
+MAKE_ENV+=	KRB5BASE="${KRB5BASE}"
+MAKE_ENV+=	KRB5_TYPE=${KRB5_TYPE:Q}
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	PRAYER_USER=${PRAYER_USER} PRAYER_GROUP=${PRAYER_GROUP}
 MAKE_ENV+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
+MAKE_ENV+=	SSLCERTS=${SSLCERTS:Q}
 
 PKG_SYSCONFSUBDIR=	prayer
 EGDIR=			${PREFIX}/share/examples/prayer
@@ -36,13 +42,12 @@ RCD_SCRIPTS=		prayer
 CONF_FILES=	${EGDIR}/prayer.cf ${PKG_SYSCONFDIR}/prayer.cf
 CONF_FILES+=	${EGDIR}/prayer-accountd.cf ${PKG_SYSCONFDIR}/prayer-accountd.cf
 CONF_FILES+=	${EGDIR}/motd.html ${PKG_SYSCONFDIR}/motd.html
-CONF_FILES+=	${EGDIR}/welcome.html ${PKG_SYSCONFDIR}/welcome.html
 
 VAR_PREFIX=	${VARBASE}/spool/prayer
 
 OWN_DIRS_PERMS+=${VAR_PREFIX} ${PRAYER_USER} ${PRAYER_GROUP} 0750
 
-FILES_SUBST+=	OPSYS=${OPSYS:Q}
+FILES_SUBST+=	OPSYS=${OPSYS}
 FILES_SUBST+=	VAR_PREFIX=${VAR_PREFIX:Q}
 
 post-patch:
@@ -53,11 +58,10 @@ post-patch:
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
-.include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

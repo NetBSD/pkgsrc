@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2007/06/15 23:28:17 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
 
---- defaults/Config.orig	2006-04-05 12:35:35.000000000 +0000
+--- defaults/Config.orig	2009-09-01 10:25:22.000000000 +0000
 +++ defaults/Config
-@@ -16,9 +16,9 @@ DIRECT_ENABLE        = false  # Experime
+@@ -15,9 +15,9 @@ FENCE_ENABLE         = false  # Use Elec
  MUTEX_SEMAPHORE      = false  # Use SYSV mutexes rather than file locking
  
  # Following depend on the way that you have configured c-client
@@ -14,60 +14,70 @@ $NetBSD: patch-aa,v 1.9 2007/06/15 23:28:17 wiz Exp $
 +CCLIENT_KERB_ENABLE  = true  # C-client was built with Kerberos support
  
  # Probably don't need the following
- ACCOUNTD_ENABLE      = false  # Only of use in Cambridge at the moment.
-@@ -32,13 +32,13 @@ CC           = gcc
+ RAVEN_ENABLE         = false  # Only of use in Cambridge at the moment.
+@@ -31,22 +31,18 @@ CC           = gcc
  # Location of make program (GNU make required)
  MAKE         = gmake
  # Location of install program (GNU install or compatible required)
 -INSTALL      = install
 +INSTALL      = install -c
  
- # Base Compiler options for GCC.
- #BASECFLAGS   = -Wall -g
- #BASELDFLAGS  = -g
--BASECFLAGS   = -Wall -g -O2
--BASELDFLAGS  = -g -O2
-+BASECFLAGS   = -Wall
-+BASELDFLAGS  = 
- BASE_LIBS    = -lcrypt
+ # Base Compiler options for GCC (use CPPFLAGS and LDFLAGS if passed in)
+ ifdef CPPFLAGS
+-  BASECFLAGS   = $(CPPFLAGS)
++  BASECFLAGS   += $(CPPFLAGS)
+ else
+-  BASECFLAGS   = -Wall -g -O2
++  BASECFLAGS   += -Wall
+ endif
+ ifdef INCLUDES
+   BASECFLAGS += $(INCLUDES)
+ endif
+-ifdef LDFLAGS
+- BASELDFLAGS  = $(LDFLAGS)
+-else
+- BASELDFLAGS  = -g
+-endif
++BASELDFLAGS  =
  
- # Base Compiler options for Sun SUNWspro compiler
-@@ -58,9 +58,9 @@ BASE_LIBS    = -lcrypt
+ # Minimal libraries needed by Linux
+ BASE_LIBS    = -lcrypt -lutil
+@@ -71,9 +67,9 @@ BASE_LIBS    = -lcrypt -lutil
  # which points to ../../imap/c-client. This just reduces the amount of
  # noise output on each line when building the package.
  #
--CCLIENT_DIR=./c-client
+-CCLIENT_DIR=../c-client
 -CCLIENT_INCLUDE=-I $(CCLIENT_DIR)
 -CCLIENT_LIBS=./$(CCLIENT_DIR)/c-client.a
 +CCLIENT_DIR=${BUILDLINK_PREFIX.imap-uw}
 +CCLIENT_INCLUDE=-I $(CCLIENT_DIR)/include/c-client
 +CCLIENT_LIBS=$(CCLIENT_DIR)/lib/libc-client.a
- CCLIENT_SSL_ENABLE  = true
  
  #
-@@ -107,8 +107,8 @@ PAM_INCLUDE =
+ # Following works with imap-devel RPM package from Redhat 7.
+@@ -119,8 +115,8 @@ PAM_INCLUDE =
  PAM_LIBS    = -lpam
  
  # Kerberos (required if CCLIENT_KERB_ENABLE set)
 -KERB_INCLUDE = -I/usr/kerberos/include
 -KERB_LIBS    = -L/usr/kerberos/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
-+KERB_INCLUDE = -I/usr/include
-+KERB_LIBS    = -L/usr/lib -lgssapi -lcom_err -lkrb5 -lasn1 -lroken
++KERB_INCLUDE = -I${KRB5BASE}/include
++KERB_LIBS    = -L${KRB5BASE}/lib -Wl,-R${KRB5BASE}/lib -lkrb5 -lcom_err
  
  # SSL definitions (required if SSL_ENABLE or CCLIENT_SSL_ENABLE set)
  #
-@@ -132,8 +132,8 @@ DB_INCLUDE=
- DB_LIBS=-ldb
+@@ -140,8 +136,8 @@ OPENSSL=openssl
+ # DB definitions (required if SESSION_CACHE_ENABLE set)
+ #
+ # Following suitable for Redhat Linux which has DB 3 preinstalled
+-DB_INCLUDE=
+-DB_LIBS=-ldb
++DB_INCLUDE=-I${BDBBASE}/include/${BDB_TYPE}
++DB_LIBS=-L${BDBBASE}/lib -Wl,-R${BDBBASE}/lib -l${BDB_TYPE}
  
  # Following suitable for FreeBSD with DB 4 package installed
--#DB_INCLUDE=-I/usr/local/include/db4
--#DB_LIBS=-L/usr/local/lib -ldb4
-+DB_INCLUDE=-I${BUILDLINK_PREFIX.db4}/include/db4
-+DB_LIBS=-L${BUILDLINK_PREFIX.db4}/lib -ldb4
- 
- ############################################################################
- 
-@@ -147,16 +147,16 @@ BROOT=
+ #DB_INCLUDE=-I/usr/local/include/db4
+@@ -159,16 +155,16 @@ BROOT=
  
  # Directory, User and group for read-write files: log files, sockets etc
  VAR_PREFIX = /var/spool/prayer
@@ -89,7 +99,7 @@ $NetBSD: patch-aa,v 1.9 2007/06/15 23:28:17 wiz Exp $
  
  # Access permissions for general objects (wrt above users and groups)
  PUBLIC_EXEC  = 0755
-@@ -169,6 +169,6 @@ PRIVATE_DIR  = 0750
+@@ -181,6 +177,6 @@ PRIVATE_DIR  = 0750
  PRIVATE_FILE = 0640
  
  # Location of configuration files and binaries
