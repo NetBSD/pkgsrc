@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2009/10/21 16:51:46 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2010/06/08 15:59:50 hauke Exp $
 
-DISTNAME=	zile-2.3.9
-PKGREVISION=	1
+DISTNAME=	zile-2.3.17
+#PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/gnu/zile/
 
@@ -16,7 +16,7 @@ USE_TOOLS+=	makeinfo
 USE_NCURSES=	yes	# uses stdscr->_delay directly
 GNU_CONFIGURE=	yes
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # we only want the charset.alias file, so no buildlinkery for libiconv
 DEPENDS+=       libiconv-[0-9]*:../../converters/libiconv
