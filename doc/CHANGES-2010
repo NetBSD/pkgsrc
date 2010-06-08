@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2160 2010/06/08 10:17:56 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2161 2010/06/08 10:20:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2888,3 +2888,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added games/powder version 114 [wiz 2010-06-08]
 	Updated security/libgpg-error to 1.8 [wiz 2010-06-08]
 	Updated net/mtr to 0.78 [wiz 2010-06-08]
+	Updated textproc/gnome-doc-utils to 0.20.0 [wiz 2010-06-08]
