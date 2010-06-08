@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2006/01/24 19:55:53 joerg Exp $
+$NetBSD: patch-ai,v 1.2 2010/06/08 12:34:38 adam Exp $
 
---- prayer/prayer_session.h.orig	2006-01-24 19:48:31.000000000 +0000
-+++ prayer/prayer_session.h
+--- session/prayer_session.h.orig	2008-09-16 11:59:58 +0200
++++ session/prayer_session.h	2010-05-01 21:30:33 +0200
 @@ -25,8 +25,6 @@
  #include <grp.h>
  #include <netdb.h>
@@ -10,4 +10,4 @@ $NetBSD: patch-ai,v 1.1 2006/01/24 19:55:53 joerg Exp $
 -
  #include "c-client.h"
  
- #define  PRAYER_FULL_HDRS
+ #include "shared.h"
