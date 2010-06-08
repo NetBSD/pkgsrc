@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.5 2010/06/08 15:59:50 hauke Exp $
+
+--- lib/wchar.in.h.orig	2010-05-09 18:10:04.000000000 +0000
++++ lib/wchar.in.h
+@@ -59,6 +59,7 @@
+    But avoid namespace pollution on glibc systems.  */
+ #ifndef __GLIBC__
+ # include <stddef.h>
++# include <stdlib.h>		/* NetBSD */
+ # include <stdio.h>
+ # include <time.h>
+ #endif
