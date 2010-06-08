@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9377 2010/06/08 12:37:13 adam Exp $
+$NetBSD: TODO,v 1.9378 2010/06/08 16:01:28 hauke Exp $
 
 Suggested new packages
 ======================
@@ -1522,7 +1522,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yorick-2.1.05
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.17
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
