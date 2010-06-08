@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prayer.sh,v 1.1 2005/01/09 00:07:47 schmonz Exp $
+# $NetBSD: prayer.sh,v 1.2 2010/06/08 12:34:38 adam Exp $
 #
 # This shell script takes care of starting and stopping prayer,
 # a program providing web access to a mail server using IMAP
@@ -25,7 +25,7 @@ name="prayer"
 rcvar=$name
 command="@PREFIX@/sbin/prayer"
 command_args=""
-pidfile="@VAR_PREFIX@/pid/prayer"
+pidfile="@VAR_PREFIX@/pid/prayer.pid"
 
 prayer_flags=${prayer_flags-""} 
 OPSYS=@OPSYS@
