@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2005/01/09 00:07:47 schmonz Exp $
+$NetBSD: patch-ac,v 1.6 2010/06/08 12:34:38 adam Exp $
 
---- files/Makefile.orig	2003-05-11 10:59:12.000000000 -0400
-+++ files/Makefile
-@@ -14,10 +14,10 @@ endif
+--- files/Makefile.orig	2008-10-30 12:28:59 +0100
++++ files/Makefile	2010-05-01 20:12:14 +0200
+@@ -14,10 +14,10 @@
  all:	./etc/prayer.cf ./init.d/prayer
  
  ./etc/prayer.cf: ./etc/prayer.cf.SRC
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.5 2005/01/09 00:07:47 schmonz Exp $
  
  
  ifeq ($(strip $(SSL_ENABLE)), true)
-@@ -53,24 +53,24 @@ distclean:
+@@ -53,20 +53,20 @@
  install-cert:
  	if [ -f certs/prayer.pem ]; then \
  	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) \
@@ -40,14 +40,9 @@ $NetBSD: patch-ac,v 1.5 2005/01/09 00:07:47 schmonz Exp $
 -	etc/motd.html ${BROOT}${PREFIX}/etc
 +	etc/motd.html ${BROOT}${EGDIR}/motd.html
  
- install-welcome:
- 	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_FILE) \
--	etc/welcome.html ${BROOT}${PREFIX}/etc
-+	etc/welcome.html ${BROOT}${EGDIR}/welcome.html
- 
  install:
  	PREFIX=$(BROOT)$(PREFIX) VAR_PREFIX=$(BROOT)$(VAR_PREFIX) \
-@@ -79,13 +79,9 @@ install:
+@@ -75,12 +75,9 @@
  	PUBLIC_DIR=$(PUBLIC_DIR) PRIVATE_DIR=$(PRIVATE_DIR) \
  	PUBLIC_FILE=$(PUBLIC_FILE) PRIVATE_FILE=$(PRIVATE_FILE) \
  	PUBLIC_EXEC=$(PUBLIC_FILE) PRIVATE_EXEC=$(PRIVATE_EXEC) \
@@ -58,8 +53,7 @@ $NetBSD: patch-ac,v 1.5 2005/01/09 00:07:47 schmonz Exp $
 -	if [ ! -f $(BROOT)$(PRAYER_CONFIG_FILE) ]; then $(MAKE) install-config; fi
 -	if [ ! -f $(BROOT)$(ACCOUNTD_CONFIG_FILE) ]; then $(MAKE) install-aconfig; fi
 -	if [ ! -f $(BROOT)$(PREFIX)/etc/motd.html ]; then $(MAKE) install-motd; fi
--	if [ ! -f $(BROOT)$(PREFIX)/etc/welcome.html ]; then $(MAKE) install-welcome; fi
-+	$(MAKE) install-cert install-config install-aconfig install-motd install-welcome
++	$(MAKE) install-cert install-config install-aconfig install-motd
  
  redhat-install-init.d:
  	install -D -o root -g root -m 755 \
