@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.72 2010/02/03 00:49:58 minskim Exp $
+# $NetBSD: java-vm.mk,v 1.73 2010/06/08 19:01:35 wiz Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: jdk kaffe openjdk7 openjdk7-bin
-#		sun-jdk14 jdk14 sun-jdk15 sun-jdk6 jdk15
+#		jdk14 sun-jdk6 jdk15
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -72,8 +72,8 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 #
 _PKG_JVMS.7=		openjdk7 openjdk7-bin
 _PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6
-_PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 jdk15
-_PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
+_PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
+_PKG_JVMS.1.4=		${_PKG_JVMS.1.5} jdk14
 _PKG_JVMS.yes=		${_PKG_JVMS.1.4} kaffe
 _PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
 _PKG_JVMS=		${_PKG_JVMS.${USE_JAVA2}}
@@ -98,11 +98,11 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 _PKG_JVM_DEFAULT?=	openjdk7
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86)
-_PKG_JVM_DEFAULT?=	sun-jdk
+_PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
-_PKG_JVM_DEFAULT?=	sun-jdk
+_PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
-_PKG_JVM_DEFAULT?=	sun-jdk
+_PKG_JVM_DEFAULT?=	sun-jdk6
 .  else
 _PKG_JVM_DEFAULT?=	kaffe
 .  endif
@@ -121,18 +121,6 @@ _ONLY_FOR_PLATFORMS.jdk15= \
 	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
-_ONLY_FOR_PLATFORMS.sun-jdk14= \
-	Darwin-[678].*-* \
-	DragonFly-*-i386 \
-	FreeBSD-6.*-i386 \
-	Linux-*-i[3-6]86 \
-	NetBSD-*-i386
-_ONLY_FOR_PLATFORMS.sun-jdk15= \
-	Darwin-[8-9].*-* \
-	DragonFly-*-i386 \
-	FreeBSD-6.*-i386 \
-	Linux-*-i[3-6]86 \
-	NetBSD-*-i386 NetBSD-*-x86_64
 _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	Darwin-9.*-* \
 	Darwin-10.*-* \
@@ -163,8 +151,6 @@ _JAVA_PKGBASE.jdk15=		jdk15
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk7=		openjdk7
 _JAVA_PKGBASE.openjdk7-bin=	openjdk7-bin
-_JAVA_PKGBASE.sun-jdk14=	sun-jre14
-_JAVA_PKGBASE.sun-jdk15=	sun-jre15
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
 
 # The following is copied from the respective JVM Makefiles.
@@ -173,8 +159,6 @@ _JAVA_NAME.jdk14=		jdk14
 _JAVA_NAME.kaffe=		kaffe
 _JAVA_NAME.openjdk7=		openjdk7
 _JAVA_NAME.openjdk7-bin=	openjdk7-bin
-_JAVA_NAME.sun-jdk14=		sun14
-_JAVA_NAME.sun-jdk15=		sun15
 _JAVA_NAME.sun-jdk6=		sun6
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
@@ -187,33 +171,6 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 		${ECHO} no;						\
 	fi
 .endfor
-
-# Convert "sun-jdk" into "sun-jdk1[45]" depending on the
-# platform.  Recent versions of NetBSD and Linux can use the 1.4-1.5
-# versions of the Sun JDK, so default to the newer installed one.
-#
-.if ${_PKG_JVM_DEFAULT} == "sun-jdk"
-.  if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*-i386) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*-i386) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*-x86_64) || \
-      !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
-      !empty(MACHINE_PLATFORM:MDarwin-[8-9].*-*) || \
-      !empty(MACHINE_PLATFORM:MDarwin-10.*-*) || \
-      !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
-.    if defined(_PKG_JVM_INSTALLED.sun-jdk6) && \
-	(${_PKG_JVM_INSTALLED.sun-jdk6} == "yes")
-_PKG_JVM_DEFAULT=	sun-jdk6
-.    elif defined(_PKG_JVM_INSTALLED.sun-jdk15) && \
-	(${_PKG_JVM_INSTALLED.sun-jdk15} == "yes")
-_PKG_JVM_DEFAULT=	sun-jdk15
-.    elif defined(_PKG_JVM_INSTALLED.sun-jdk14) && \
-	(${_PKG_JVM_INSTALLED.sun-jdk14} == "yes")
-_PKG_JVM_DEFAULT=	sun-jdk14
-.    else
-_PKG_JVM_DEFAULT=	sun-jdk6
-.    endif
-.  endif
-.endif
 
 # Use one of the installed JVMs,...
 #
@@ -256,10 +213,6 @@ BUILDLINK_API_DEPENDS.jdk15?=		jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk7-bin?=	openjdk7-bin-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jdk14?=	sun-jdk14-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jre14?=	sun-jre14-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jdk15?=	sun-jdk15-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jre15?=	sun-jre15-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk6?=	sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
 
@@ -269,8 +222,6 @@ _JRE.jdk15=		jdk15
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
 _JRE.openjdk7-bin=	openjdk7-bin
-_JRE.sun-jdk14=		sun-jre14
-_JRE.sun-jdk15=		sun-jre15
 _JRE.sun-jdk6=		sun-jre6
 
 _JAVA_BASE_CLASSES=	classes.zip
@@ -299,15 +250,6 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk7
 _JDK_PKGSRCDIR=		../../lang/openjdk7-bin
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk7-bin
-.elif ${_PKG_JVM} == "sun-jdk14"
-_JDK_PKGSRCDIR=		../../lang/sun-jdk14
-_JRE_PKGSRCDIR=		../../lang/sun-jre14
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.4
-.elif ${_PKG_JVM} == "sun-jdk15"
-_JDK_PKGSRCDIR=		../../lang/sun-jdk15
-_JRE_PKGSRCDIR=		../../lang/sun-jre15
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.5
-UNLIMIT_RESOURCES+=	datasize
 .elif ${_PKG_JVM} == "sun-jdk6"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk6
 _JRE_PKGSRCDIR=		../../lang/sun-jre6
