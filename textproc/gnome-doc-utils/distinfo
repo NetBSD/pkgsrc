@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2009/12/08 21:10:10 wiz Exp $
+$NetBSD: distinfo,v 1.22 2010/06/08 10:20:19 wiz Exp $
 
-SHA1 (gnome-doc-utils-0.18.1.tar.bz2) = 40b1a812345474db8c15a5f8233ea4842c4f0cc6
-RMD160 (gnome-doc-utils-0.18.1.tar.bz2) = b43bbfd7dd84a09b5aed998e0cea84bf679965f3
-Size (gnome-doc-utils-0.18.1.tar.bz2) = 783694 bytes
+SHA1 (gnome-doc-utils-0.20.0.tar.bz2) = 04697db04208a20e5e524d09125bbbe8a488f02f
+RMD160 (gnome-doc-utils-0.20.0.tar.bz2) = 01c0f0ecb4cb62919092f8db3769a7c11f8685df
+Size (gnome-doc-utils-0.20.0.tar.bz2) = 715148 bytes
