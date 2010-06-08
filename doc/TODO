@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9376 2010/06/08 10:20:32 wiz Exp $
+$NetBSD: TODO,v 1.9377 2010/06/08 12:37:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -1121,7 +1121,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o posh-0.5.5
 	o postal-0.70
 	o pptp-1.7.1 [pkg/38038]
-	o prayer-1.3.2 [pkg/43238]
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
