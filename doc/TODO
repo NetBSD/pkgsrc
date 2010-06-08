@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9373 2010/06/08 10:03:28 wiz Exp $
+$NetBSD: TODO,v 1.9374 2010/06/08 10:10:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
-	o asymptote-1.95
+	o asymptote-1.96
 	o aterm-1.0.1
 	o attica-0.1.4
 	o auctex-11.86
@@ -527,7 +527,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.1.1
-	o dnsmasq-2.53
+	o dnsmasq-2.55
 	o dnstracer-1.9
 	o dosbox-0.74
 	o dpkg-1.14.25
@@ -575,7 +575,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-560
+	o etm-610
 	o eukleides-1.5.4
 	o evince-2.30.1 [GNOME 2.30]
 	o evolution-2.30.1.2 [GNOME 2.30]
@@ -635,7 +635,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-10.5
+	o fotoxx-10.6
 	o frama-c-20100401
 	o freeciv-2.2.0
 	o freeglut-2.4.0
@@ -826,7 +826,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o joe-3.6
 	o john-1.7.5
 	o jools-1.0
-	o jpilot-1.6.2
+	o jpilot-1.8.0
 	o kadu-0.6.5
 	o kaffe-1.1.9
 	o kaffeine-0.8.7
