@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXdmcp,v 1.3 2010/02/18 12:32:19 obache Exp $
+# $NetBSD: xorg.libXdmcp,v 1.4 2010/06/09 09:33:42 obache Exp $
 #
 include/X11/Xdmcp.h
 lib/libXdmcp.a
@@ -13,4 +13,5 @@ lib/libXdmcp.so.6.0
 lib/libXdmcp.so.7
 lib/libXdmcp.so.7.0
 lib/libXdmcp.so.9.0
+lib/libXdmcp.so.10.0
 lib/pkgconfig/xdmcp.pc
