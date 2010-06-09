@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2010/02/15 16:32:20 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2010/06/09 21:04:26 markd Exp $
 #
 
-DISTNAME=	rpy-0.99.0
-PKGREVISION=	3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	rpy2-2.1.3
+PKGNAME=	${PYPKGPREFIX}-rpy-2.1.3
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rpy/}
 
@@ -14,12 +13,11 @@ COMMENT=	R interface for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		YES
+USE_LANGUAGES+=		c fortran
 
-BUILDLINK_API_DEPENDS.R+= R>=2.7.0
-
-BROKEN=		Doesn't support modern R.
+BUILDLINK_API_DEPENDS.R+= R>=2.11.0
 
 .include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/R/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
