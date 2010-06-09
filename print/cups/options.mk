@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2010/05/26 09:18:48 sbd Exp $
+# $NetBSD: options.mk,v 1.10 2010/06/09 08:58:05 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
@@ -8,6 +8,8 @@ PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos libusb poppler slp
 PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
 .include "../../mk/bsd.options.mk"
+
+MESSAGE_SRC=		${PKGDIR}/MESSAGE
 
 .if !empty(PKG_OPTIONS:Macl)
 CONFIGURE_ARGS+=	--enable-acl
@@ -48,6 +50,7 @@ CONFIGURE_ARGS+=	--disable-gssapi
 .if !empty(PKG_OPTIONS:Mlibusb)
 .include "../../devel/libusb/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-libusb
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.libusb
 .else
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
@@ -56,7 +59,6 @@ PLIST_VARS+=		pam
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pam
-MESSAGE_SRC=		${PKGDIR}/MESSAGE
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.pam
 PLIST.pam=		yes
 .else
