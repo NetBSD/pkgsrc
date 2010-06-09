@@ -1,12 +1,12 @@
-$NetBSD: patch-ak,v 1.13 2010/06/05 23:09:29 sbd Exp $
+$NetBSD: patch-ak,v 1.14 2010/06/09 09:01:43 sbd Exp $
 
 Incorporate
 usb-backend-both-usblp-and-libusb.dpatch by  <till.kamppeter@gmail.com>
 http://www.cups.org/str.php?L3357
 
---- backend/usb-hybrid.c.orig	2010-06-05 02:02:53.089601743 +0000
+--- backend/usb-hybrid.c.orig	2010-06-06 00:29:57.033597544 +0000
 +++ backend/usb-hybrid.c
-@@ -0,0 +1,87 @@
+@@ -0,0 +1,88 @@
 +/*
 + * "Id: usb-hybrid.c 8807 2009-08-31 18:45:43Z mike "
 + *
@@ -41,6 +41,7 @@ http://www.cups.org/str.php?L3357
 + * Include the two USB implementations used under Linux ...
 + */
 +
++#define USB_HYBRID 1
 +#include "usb-libusb.c"
 +#include "usb-unix.c"
 +
