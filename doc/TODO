@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9378 2010/06/08 16:01:28 hauke Exp $
+$NetBSD: TODO,v 1.9379 2010/06/09 09:23:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -647,6 +647,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o freewais-sf-2.2.14
 	o frozen-bubble-2.2.0
 	o ftplibpp-2.0.2
+	o fuse-2.8.4
 	o fuse-archivemount-0.6.0
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2009.11.14
@@ -876,6 +877,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnomecanvas-2.30.1 [GNOME 2.30]
 	o libgnomedb-3.1.2
 	o libgnomekbd-2.30.1 [GNOME 2.30]
+	o libgpod-0.7.2
 	o libgweather-2.30.0 [GNOME 2.30]
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
