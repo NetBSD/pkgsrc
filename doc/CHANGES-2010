@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2165 2010/06/09 09:44:54 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.2166 2010/06/09 16:29:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2894,3 +2894,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/postfix-current to 2.8.20100603 [martti 2010-06-08]
 	Updated print/dvipsk to 5.98nb2 [minskim 2010-06-08]
 	Updated print/cups to 1.4.3nb3 [sbd 2010-06-09]
+	Updated databases/ruby-activerecord to 2.3.8 [minskim 2010-06-09]
