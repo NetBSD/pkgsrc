@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/02 12:22:07 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/09 10:42:07 fhajny Exp $
 ${GEM_HOME}/cache/amqp-${PKGVERSION}.gem
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
@@ -30,6 +30,7 @@ ${GEM_LIBDIR}/lib/amqp/frame.rb
 ${GEM_LIBDIR}/lib/amqp/protocol.rb
 ${GEM_LIBDIR}/lib/amqp/server.rb
 ${GEM_LIBDIR}/lib/amqp/spec.rb
+${GEM_LIBDIR}/lib/amqp/version.rb
 ${GEM_LIBDIR}/lib/ext/blankslate.rb
 ${GEM_LIBDIR}/lib/ext/em.rb
 ${GEM_LIBDIR}/lib/ext/emfork.rb
