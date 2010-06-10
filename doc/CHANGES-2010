@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2169 2010/06/09 22:49:07 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2170 2010/06/10 06:45:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2898,3 +2898,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ruby-activeresource to 2.3.8 [minskim 2010-06-09]
 	Updated math/py-rpy to 2.1.3 [markd 2010-06-09]
 	Updated editors/emacs-snapshot to 24.0.50.20100608 [minskim 2010-06-09]
+	Updated comms/efax-gtk to 3.2.3 [adam 2010-06-09]
