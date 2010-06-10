@@ -1,3 +1,5 @@
 Fonts and font metrics customarily distributed with Ghostscript.
-Currently includes the 35 standard PostScript fonts and a grab-bag
-of others.
+(The 35 standard fonts are not included. Ghostscript comes with its
+own set in its "Resource/Font" directory; for other customers the
+pkgsrc/fonts/urw-fonts pkg is provided which follows Ghostscript's
+historical naming scheme.)
