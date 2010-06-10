@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/02/03 18:26:53 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/10 19:25:28 wiz Exp $
 #
 
 SWTREL=		3.5.1
@@ -19,7 +19,7 @@ COMMENT=	Open source widget toolkit for Java
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 USE_JAVA2=	yes
 
