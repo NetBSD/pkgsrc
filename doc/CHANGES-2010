@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2171 2010/06/10 18:01:04 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2172 2010/06/10 18:24:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2900,3 +2900,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20100608 [minskim 2010-06-09]
 	Updated comms/efax-gtk to 3.2.3 [adam 2010-06-09]
 	Updated print/tex-kotex-dev to 0.1.1nb2 [minskim 2010-06-10]
+	Updated net/wireshark to 1.2.9 [tron 2010-06-10]
