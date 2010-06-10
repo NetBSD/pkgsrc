@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2172 2010/06/10 18:24:54 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2173 2010/06/10 20:50:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2482,7 +2482,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xscreensaver to 5.11 [drochner 2010-05-17]
 	Updated math/gnumeric110 to 1.10.3 [drochner 2010-05-17]
 	Updated misc/goffice0.8 to 0.8.3 [drochner 2010-05-17]
-	Updated graphics/py-matplotlib to 0.99.2.1 [drochner 2010-05-17]
+	Updated graphics/py-matplotlib to 0.99.1.2 [drochner 2010-05-17]
 	Updated devel/eric4 to 4.4.4a [drochner 2010-05-17]
 	Updated multimedia/gst-plugins0.10-ffmpeg to 0.10.10 [drochner 2010-05-17]
 	Updated multimedia/totem to 2.28.6 [drochner 2010-05-17]
