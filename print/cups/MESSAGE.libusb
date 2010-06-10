@@ -1,11 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE.libusb,v 1.1 2010/06/09 08:58:05 sbd Exp $
+$NetBSD: MESSAGE.libusb,v 1.2 2010/06/10 10:28:35 gdt Exp $
 
-To get the libusb DeviceURI's of attached printers run:
+With cups 1.4 from pkgsrc, USB printing can use libusb in addition to
+traditional USB printer devices.
+
+To see the DeviceURI of all attached printers run:
 
 ${PREFIX}/libexec/cups/backend/usb
 
-The DeviceURI is the string starting with "usb://".
+libusb DeviceURIs start with "usb://".
 
-Note: ulpt(4)/usblp printer can be accessed with a "usb:/dev/" DeviceURI.
+ulpt(4)/usblp DeviceURIs start with "usb:/dev/" (e.g., "usb:/dev/ulpt0".)
 ===========================================================================
