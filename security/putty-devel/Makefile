@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/07 08:34:22 ahoka Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/10 21:18:16 wiz Exp $
 #
 
 DISTNAME=	putty-0.60-2009-09-06
@@ -12,7 +12,7 @@ COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 BUILD_DIRS=	unix
 BUILD_DEPENDS+=	halibut>=1.0:../../textproc/halibut
 
