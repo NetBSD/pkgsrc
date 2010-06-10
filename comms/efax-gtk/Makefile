@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2010/01/29 16:17:33 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2010/06/10 06:44:00 adam Exp $
 
-DISTNAME=	efax-gtk-3.0.20.src
-PKGNAME=	efax-gtk-3.0.20
-PKGREVISION=	2
+DISTNAME=	efax-gtk-3.2.3.src
+PKGNAME=	efax-gtk-3.2.3
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=efax-gtk/}
 EXTRACT_SUFX=	.tgz
@@ -24,7 +23,16 @@ CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/spool/efax
 EGDIR=			${PREFIX}/share/examples
 CONF_FILES=		${EGDIR}/efax-gtkrc ${PKG_SYSCONFDIR}/efax-gtkrc
 
+SUBST_CLASSES+=		xopen
+SUBST_MESSAGE.xopen=	Removing _XOPEN_SOURCE=600 definition
+SUBST_STAGE.xopen=	post-patch
+SUBST_FILES.xopen=	src/Makefile.in src/utils/Makefile.in
+SUBST_FILES.xopen+=	src/internal/c++-gtk-utils/Makefile.in
+SUBST_SED.xopen=	-e 's,-D_XOPEN_SOURCE=600,,'
+
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
