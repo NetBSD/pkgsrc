@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9380 2010/06/10 06:45:44 adam Exp $
+$NetBSD: TODO,v 1.9381 2010/06/10 14:55:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -327,7 +327,8 @@ Suggested new packages
 	xf86-video-suntcx, xf86-video-v4l, xf86-video-vermilion,
 	xf86-video-voodoo, xf86-video-xgi, xf86-video-xgixp, xf86dga,
 	xgc, xkbevd, xkbprint, xkbutils, xlsatoms, xorg-sgml-doctools,
-	xpr, xpyb, mkcomposecache, xscope, xf86-video-qxl, xinput_calibrator
+	xpr, xpyb, mkcomposecache, xscope, xf86-video-qxl, xinput_calibrator,
+	xf86-input-elographics
 
 
 Suggested package updates
@@ -361,7 +362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.0.1
-	o abcmidi-20100508
+	o abcmidi-20100531
 	o abiword-2.8
 	o abook-0.6.0pre2 [pkg/42672]
 	o accerciser-1.10.1 [GNOME 2.30]
@@ -557,7 +558,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emacs-muse-3.20
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o empathy-2.30.0.2 [GNOME 2.30]
+	o empathy-2.30.1.1 [GNOME 2.30]
 	o enca-1.13
 	o enlightenment-1.0.0
 	o enscript-1.6.5.2
@@ -633,7 +634,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-10.6
+	o fotoxx-10.6.1
 	o frama-c-20100401
 	o freeciv-2.2.0
 	o freeglut-2.4.0
@@ -653,6 +654,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.27.94
 	o gap-4r4p9
 	o gated-3.6
+	o gaupol-0.16.1
 	o gawk-3.1.8
 	o gbdfed-1.6
 	o gbrainy-1.42
@@ -711,6 +713,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-keyring-2.30.1 [GNOME 2.30]
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.30.0 [GNOME 2.30]
+	o gnome-packagekit-2.28.3 [GNOME 2.28]
 	o gnome-packagekit-2.30.2 [GNOME 2.30]
 	o gnome-power-manager-2.30.1 [GNOME 2.30]
 	o gnome-screensaver-2.30.0 [GNOME 2.30]
@@ -830,7 +833,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kaffeine-0.8.7
 	o kapooka-0.3
 	o kbibtex-0.2.2
-	o kdbg-2.2.1
+	o kdbg-2.2.2
 	o kdrill-6.5
 	o kid3-1.4
 	o kipi-plugins-1.2.0
@@ -840,6 +843,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kodos-2.4.5
 	o koffice-2.2.0
 	o koffice-l10n-de-2.0.2
+	o konversation-1.3
 	o kphotobook-0.0.7
 	o kronolith-2.3.4
 	o krusader-2.0
@@ -859,7 +863,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-4.0.5
 	o libX11-1.3.4
+	o libXcomposite-0.4.2
+	o libXdamage-1.1.3
 	o libXext-1.1.2
+	o libXfixes-4.0.5
+	o libXrender-0.9.6
 	o libXt-1.0.8
 	o libassuan-2.0.0
 	o libcares-1.7.0
@@ -896,11 +904,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.2
 	o librep-0.90.6
 	o libsigc++-2.2.8
+	o libspectre-0.2.6
 	o libssh-0.4.4
 	o libssh2-1.2.5
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
-	o libtool-2.2.8
+	o libtool-2.2.10
 	o libtool-base-2.2.8
 	o libusb-1.0
 	o libv4l-0.8.0
@@ -1117,6 +1126,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o po4a-0.36.3
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.14.0
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1292,6 +1302,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o star-1.5.1
 	o statist-1.3.0
 	o stella-3.1.2
+	o stellarium-0.10.5
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
@@ -1387,7 +1398,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.0
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o wdiff-0.6.2
+	o wdiff-0.6.3
 	o webby-0.9.3
 	o webmin-1.510
 	o weechat-0.3.2
@@ -1395,6 +1406,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-devel-1.1.44
+	o wireshark-1.2.9
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
