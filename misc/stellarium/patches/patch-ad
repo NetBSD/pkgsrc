@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.3 2010/06/10 18:20:03 drochner Exp $
+
+--- data/ssystem.ini.orig	2010-06-10 17:45:19.000000000 +0000
++++ data/ssystem.ini
+@@ -586,6 +586,26 @@ lighting = false
+ albedo = 1
+ orbit_visualization_period = 365.25
+ 
++[mcnaught_2009R1]
++name = C/2009 R1 (McNaught)
++parent = Sun
++radius = 1000
++oblateness = 0.0
++halo = true
++color = 1.0,1.0,1.0
++tex_halo = vomit.png
++tex_map = nomap.png
++coord_func = comet_orbit
++orbit_TimeAtPericenter = 2455380.18520
++orbit_PericenterDistance = 0.40504
++orbit_Eccentricity = 1.0
++orbit_ArgOfPericenter = 130.62161
++orbit_AscendingNode = 322.62161
++orbit_Inclination = 77.0332
++lighting = false
++albedo = 0.015
++orbit_visualization_period = 100.0
++
+ [ceres]
+ name = Ceres
+ parent = Sun
