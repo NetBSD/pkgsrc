@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
+$NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
 
---- sshd.c.orig	2009-06-21 13:26:17.000000000 +0300
-+++ sshd.c	2010-02-19 12:10:07.000000000 +0200
-@@ -235,7 +235,11 @@
+--- sshd.c.orig	2010-03-07 14:05:17.000000000 +0200
++++ sshd.c	2010-06-09 20:36:56.000000000 +0300
+@@ -236,7 +236,11 @@
  int startup_pipe;		/* in child */
  
  /* variables used for privilege separation */
@@ -14,7 +14,7 @@ $NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
  struct monitor *pmonitor = NULL;
  
  /* global authentication context */
-@@ -605,10 +609,15 @@
+@@ -612,10 +616,15 @@
  	/* XXX not ready, too heavy after chroot */
  	do_setusercontext(privsep_pw);
  #else
@@ -30,7 +30,7 @@ $NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
  #endif
  }
  
-@@ -648,7 +657,7 @@
+@@ -655,7 +664,7 @@
  		close(pmonitor->m_sendfd);
  
  		/* Demote the child */
@@ -39,7 +39,7 @@ $NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
  			privsep_preauth_child();
  		setproctitle("%s", "[net]");
  	}
-@@ -663,7 +672,7 @@
+@@ -670,7 +679,7 @@
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -48,7 +48,7 @@ $NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1273,8 +1282,10 @@
+@@ -1310,8 +1319,10 @@
  	av = saved_argv;
  #endif
  
@@ -60,7 +60,7 @@ $NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1578,7 +1589,7 @@
+@@ -1664,7 +1675,7 @@
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -69,7 +69,7 @@ $NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1602,8 +1613,10 @@
+@@ -1688,8 +1699,10 @@
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */

@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.27 2010/02/19 10:17:33 martti Exp $
+$NetBSD: patch-ab,v 1.28 2010/06/11 20:41:42 martti Exp $
 
---- configure.ac.orig	2009-09-11 07:56:08.000000000 +0300
-+++ configure.ac	2010-02-19 12:13:02.000000000 +0200
+--- configure.ac.orig	2010-04-10 15:58:01.000000000 +0300
++++ configure.ac	2010-06-09 21:32:22.000000000 +0300
 @@ -191,6 +191,9 @@
  	]
  )
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.27 2010/02/19 10:17:33 martti Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -535,6 +539,15 @@
+@@ -541,6 +545,15 @@
  		;;
  	esac
  	;;
@@ -36,27 +36,16 @@ $NetBSD: patch-ab,v 1.27 2010/02/19 10:17:33 martti Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  	AC_DEFINE(BROKEN_INET_NTOA, 1,
-@@ -4129,9 +4142,17 @@
- )
- if test -z "$conf_utmpx_location"; then
- 	if test x"$system_utmpx_path" = x"no" ; then
--		AC_DEFINE(DISABLE_UTMPX)
-+		for f in /var/run/utmpx; do
-+			if test -f $f ; then
-+				conf_utmpx_location=$f
-+			fi
-+		done
-+		if test -z "$conf_utmpx_location"; then
-+			AC_DEFINE(DISABLE_UTMPX)
-+		fi
- 	fi
--else
-+fi
-+if test -n "$conf_utmpx_location"; then
- 	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location",
- 		[Define if you want to specify the path to your utmpx file])
- fi
-@@ -4155,9 +4176,17 @@
+@@ -1273,7 +1286,7 @@
+ 				LDFLAGS="-L${withval}/lib ${LDFLAGS}"
+ 			fi
+ 		fi
+-		if test "x$use_pkgconfig_for_libedit" == "xyes"; then
++		if test "x$use_pkgconfig_for_libedit" = "xyes"; then
+ 			LIBEDIT=`$PKGCONFIG --libs-only-l libedit`
+ 			CPPFLAGS="$CPPFLAGS `$PKGCONFIG --cflags libedit`"
+ 		else
+@@ -4106,9 +4119,17 @@
  )
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -76,7 +65,7 @@ $NetBSD: patch-ab,v 1.27 2010/02/19 10:17:33 martti Exp $
  	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location",
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -4204,7 +4233,7 @@
+@@ -4156,7 +4177,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
