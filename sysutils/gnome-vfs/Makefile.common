@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.23 2009/10/22 15:19:39 drochner Exp $
+# $NetBSD: Makefile.common,v 1.24 2010/06/11 13:25:27 drochner Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-dns-sd/Makefile
 # used by net/gnome-vfs-smb/Makefile
 
-GNOME_VFS_VERSION=	2.24.2
+GNOME_VFS_VERSION=	2.24.3
 
 DISTNAME=		gnome-vfs-${GNOME_VFS_VERSION}
 CATEGORIES?=		sysutils
