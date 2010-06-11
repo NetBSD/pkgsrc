@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/11 23:26:16 tonnerre Exp $
+
+SHA1 (cassandra-0.8.2.gem) = d37a65eb6eb466c21534a0f5223c65258388b9b5
+RMD160 (cassandra-0.8.2.gem) = e624484ab32cbf8681297522dddebd3a9f50ce65
+Size (cassandra-0.8.2.gem) = 38912 bytes
