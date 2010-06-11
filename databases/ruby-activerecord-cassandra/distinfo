@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/11 23:41:15 tonnerre Exp $
+
+SHA1 (activerecord-cassandra-adapter-0.1.0.gem) = 30ed31978675aff9ebf11d05f6bbf227958312f4
+RMD160 (activerecord-cassandra-adapter-0.1.0.gem) = 91a06a3ddf2d5ae6f6c96abf3f095538b7e8e125
+Size (activerecord-cassandra-adapter-0.1.0.gem) = 11776 bytes
+SHA1 (patch-aa) = 2ac6742263630b6ee2d1e062867e4390efc33a2f
