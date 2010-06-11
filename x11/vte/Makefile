@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2009/11/20 11:34:04 drochner Exp $
+# $NetBSD: Makefile,v 1.74 2010/06/11 11:50:39 drochner Exp $
 #
 
 DISTNAME=	vte-0.22.5
@@ -20,6 +20,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-ft-exec-prefix=${BUILDLINK_PREFIX.freetype2}
+CONFIGURE_ARGS+=	--disable-deprecation
 
 PKGCONFIG_OVERRIDE+=	vte.pc.in
 
