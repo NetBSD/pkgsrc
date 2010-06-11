@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2009/02/08 23:01:56 tonnerre Exp $
+$NetBSD: patch-ab,v 1.4 2010/06/11 01:27:58 tonnerre Exp $
 
 Make the FreeBSD provider the default for NetBSD as well.
 Omit _enabled for init scripts under NetBSD, which doesn't look for them.
 
 --- lib/puppet/provider/service/freebsd.rb.orig	2009-02-08 16:47:46.000000000 +0100
 +++ lib/puppet/provider/service/freebsd.rb
-@@ -8,7 +8,7 @@ Puppet::Type.type(:service).provide :fre
-  
+@@ -8,7 +8,7 @@ Puppet::Type.type(:service).provide :freebsd, :parent => :init do
+ 
      confine :operatingsystem => [:freebsd, :netbsd, :openbsd]
  
 -    defaultfor :operatingsystem => :freebsd
@@ -14,7 +14,7 @@ Omit _enabled for init scripts under NetBSD, which doesn't look for them.
  
      @@rcconf_dir = '/etc/rc.conf.d'
  
-@@ -41,7 +41,11 @@ Puppet::Type.type(:service).provide :fre
+@@ -41,7 +41,11 @@ Puppet::Type.type(:service).provide :freebsd, :parent => :init do
              Dir.mkdir(@@rcconf_dir)
          end
          rcfile = File.join(@@rcconf_dir, @model[:name])
@@ -25,5 +25,5 @@ Omit _enabled for init scripts under NetBSD, which doesn't look for them.
 +            open(rcfile, 'w') { |f| f << "%s_enable=\"YES\"\n" % @model[:name] }
 +        end
      end
-     
+ 
      # Override stop/start commands to use one<cmd>'s and the avoid race condition
