@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/05/07 08:34:23 ahoka Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/11 09:42:21 wiz Exp $
 #
 
 DISTNAME=	netsurf-1.2-src
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netsurf-browser.org/
 COMMENT=	Web browser for RISC OS and UNIX-like platforms
 
+BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
+BUILD_DEPENDS+=	re2c>=0.12.*:../../devel/re2c
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # current codebase needs strndup
@@ -20,10 +23,13 @@ WRKSRC=		${WRKDIR}/netsurf
 
 USE_TOOLS+=	gmake perl:build pax pkg-config
 
-BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
-BUILD_DEPENDS+=	re2c>=0.12.*:../../devel/re2c
-
 INSTALLATION_DIRS+=	share/netsurf bin
+
+# needed for netsurf-1.2 and gtk2-2.20 -- remove on next update!
+BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 post-extract:
 	find ${WRKSRC}/!NetSurf -type f | xargs chmod a-x
