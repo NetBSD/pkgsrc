@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2010/02/10 19:17:46 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2010/06/11 13:16:08 drochner Exp $
 #
 
-DISTNAME=	gtk-doc-1.13
-PKGREVISION=	2
+DISTNAME=	gtk-doc-1.15
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.13/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.15/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
