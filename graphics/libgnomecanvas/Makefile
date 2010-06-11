@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2009/08/26 19:56:58 sno Exp $
+# $NetBSD: Makefile,v 1.52 2010/06/11 13:22:51 drochner Exp $
 #
 
-DISTNAME=		libgnomecanvas-2.26.0
-PKGREVISION=		1
+DISTNAME=		libgnomecanvas-2.30.1
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.30/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -17,6 +16,9 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config intltool
 USE_LIBTOOL=		yes
+
+# XXX not sure whether it is useful, just to keep status quo
+CONFIGURE_ARGS+=	--enable-glade
 
 PKGCONFIG_OVERRIDE=	libgnomecanvas/libgnomecanvas-2.0.pc.in
 
