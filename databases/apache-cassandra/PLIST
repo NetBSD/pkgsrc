@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/27 23:12:59 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/11 02:01:43 tonnerre Exp $
 share/cassandra/CHANGES.txt
 share/cassandra/DISCLAIMER.txt
 share/cassandra/LICENSE.txt
@@ -93,6 +93,8 @@ share/cassandra/javadoc/org/apache/cassandra/concurrent/AIOExecutorService.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/Context.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/DebuggableThreadPoolExecutor.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/IExecutorMBean.html
+share/cassandra/javadoc/org/apache/cassandra/concurrent/JMXConfigurableThreadPoolExecutor.html
+share/cassandra/javadoc/org/apache/cassandra/concurrent/JMXConfigurableThreadPoolExecutorMBean.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/JMXEnabledThreadPoolExecutor.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/JMXEnabledThreadPoolExecutorMBean.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/NamedThreadFactory.html
@@ -101,6 +103,8 @@ share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/AIOExecutorSer
 share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/Context.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/DebuggableThreadPoolExecutor.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/IExecutorMBean.html
+share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/JMXConfigurableThreadPoolExecutor.html
+share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/JMXConfigurableThreadPoolExecutorMBean.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/JMXEnabledThreadPoolExecutor.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/JMXEnabledThreadPoolExecutorMBean.html
 share/cassandra/javadoc/org/apache/cassandra/concurrent/class-use/NamedThreadFactory.html
@@ -201,14 +205,20 @@ share/cassandra/javadoc/org/apache/cassandra/db/class-use/Table.TableMetadata.ht
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/Table.html
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/WriteResponse.WriteResponseSerializer.html
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/WriteResponse.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/AbstractCommitLogExecutorService.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/BatchCommitLogExecutorServiceMBean.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/CommitLog.html
-share/cassandra/javadoc/org/apache/cassandra/db/commitlog/CommitLogExecutorServiceMBean.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/CommitLogSegment.CommitLogContext.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/CommitLogSegment.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/ICommitLogExecutorService.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/PeriodicCommitLogExecutorServiceMBean.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/AbstractCommitLogExecutorService.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/BatchCommitLogExecutorServiceMBean.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/CommitLog.html
-share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/CommitLogExecutorServiceMBean.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/CommitLogSegment.CommitLogContext.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/CommitLogSegment.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/ICommitLogExecutorService.html
+share/cassandra/javadoc/org/apache/cassandra/db/commitlog/class-use/PeriodicCommitLogExecutorServiceMBean.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/package-frame.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/package-summary.html
 share/cassandra/javadoc/org/apache/cassandra/db/commitlog/package-tree.html
@@ -521,7 +531,6 @@ share/cassandra/javadoc/org/apache/cassandra/streaming/StreamIn.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/StreamInitiateDoneVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/StreamInitiateVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/StreamOut.html
-share/cassandra/javadoc/org/apache/cassandra/streaming/StreamOutManager.StreamFile.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/StreamOutManager.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/StreamRequestVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/StreamingService.html
@@ -532,7 +541,6 @@ share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamIn.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamInitiateDoneVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamInitiateVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamOut.html
-share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamOutManager.StreamFile.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamOutManager.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamRequestVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/streaming/class-use/StreamingService.html
@@ -573,6 +581,7 @@ share/cassandra/javadoc/org/apache/cassandra/utils/BloomFilter.html
 share/cassandra/javadoc/org/apache/cassandra/utils/BoundedStatsDeque.html
 share/cassandra/javadoc/org/apache/cassandra/utils/CloseableIterator.html
 share/cassandra/javadoc/org/apache/cassandra/utils/DestructivePQIterator.html
+share/cassandra/javadoc/org/apache/cassandra/utils/EstimatedHistogram.html
 share/cassandra/javadoc/org/apache/cassandra/utils/ExpiringMap.html
 share/cassandra/javadoc/org/apache/cassandra/utils/FBUtilities.html
 share/cassandra/javadoc/org/apache/cassandra/utils/Filter.html
@@ -595,6 +604,7 @@ share/cassandra/javadoc/org/apache/cassandra/utils/class-use/BloomFilter.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/BoundedStatsDeque.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/CloseableIterator.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/DestructivePQIterator.html
+share/cassandra/javadoc/org/apache/cassandra/utils/class-use/EstimatedHistogram.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/ExpiringMap.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/FBUtilities.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/Filter.html
