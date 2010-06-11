@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/11 23:41:15 tonnerre Exp $
+${GEM_HOME}/cache/activerecord-cassandra-adapter-${PKGVERSION}.gem
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/lib/active_cassandra/cf.rb
+${GEM_LIBDIR}/lib/active_cassandra/sqlparser.tab.rb
+${GEM_LIBDIR}/lib/active_cassandra/sqlparser.y
+${GEM_LIBDIR}/lib/active_record/connection_adapters/cassandra_adapter.rb
+${GEM_HOME}/specifications/activerecord-cassandra-adapter-${PKGVERSION}.gemspec
