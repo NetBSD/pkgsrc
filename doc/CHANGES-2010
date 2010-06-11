@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2173 2010/06/10 20:50:17 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2174 2010/06/11 01:28:46 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2901,3 +2901,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/efax-gtk to 3.2.3 [adam 2010-06-09]
 	Updated print/tex-kotex-dev to 0.1.1nb2 [minskim 2010-06-10]
 	Updated net/wireshark to 1.2.9 [tron 2010-06-10]
+	Updated sysutils/puppet to 0.25.5 [tonnerre 2010-06-11]
