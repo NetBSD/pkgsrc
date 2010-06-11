@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.5 2010/06/11 23:28:00 wiz Exp $
+
+Needed with compiz-0.8.4 and gtk2-2.20 -- remove on update.
+
+--- gtk/window-decorator/gtk-window-decorator.c.orig	2009-08-15 07:24:40.000000000 +0000
++++ gtk/window-decorator/gtk-window-decorator.c
+@@ -31,14 +31,6 @@
+ #include <X11/extensions/Xrender.h>
+ #include <X11/Xregion.h>
+ 
+-#ifndef GDK_DISABLE_DEPRECATED
+-#define GDK_DISABLE_DEPRECATED
+-#endif
+-
+-#ifndef GTK_DISABLE_DEPRECATED
+-#define GTK_DISABLE_DEPRECATED
+-#endif
+-
+ #include <gtk/gtk.h>
+ #include <gdk/gdkx.h>
+ #include <glib/gi18n.h>
