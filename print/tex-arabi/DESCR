@@ -1,0 +1,8 @@
+The package provides the Arabic and Farsi script support for TeX without
+the need of any external pre-processor. The bi- directional capability
+supposes that the user has a TeX engine that knows the four primitives
+\beginR, \endR, \beginL and \endL. That is the case in both the TeX--XeT
+and e-TeX engines. Arabi will accept input in several 8-bit encodings,
+including UTF-8. Arabi can make use of a wide variety of Arabic and
+Farsi fonts; PDF files generated using Arabi may be searched, and text
+may be copied from them and pasted elsewhere.
