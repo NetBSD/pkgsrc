@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2009/03/15 18:14:24 jmcneill Exp $
+$NetBSD: patch-ad,v 1.7 2010/06/11 13:45:50 drochner Exp $
 
---- egg/egg-unix-credentials.c.orig	2009-01-17 18:08:46.000000000 -0500
+--- egg/egg-unix-credentials.c.orig	2009-12-15 04:00:09.000000000 +0000
 +++ egg/egg-unix-credentials.c
-@@ -130,7 +130,6 @@ egg_unix_credentials_read (int sock, pid
+@@ -127,7 +127,6 @@ egg_unix_credentials_read (int sock, pid
  		cred = (struct sockcred *) CMSG_DATA (&cmsg.hdr);
  		*pid = 0;
  		*uid = cred->sc_euid;
@@ -10,3 +10,12 @@ $NetBSD: patch-ad,v 1.6 2009/03/15 18:14:24 jmcneill Exp $
  #elif defined(HAVE_GETPEEREID) /* OpenBSD */
  		uid_t euid;
  		gid_t egid;
+@@ -215,7 +214,7 @@ egg_unix_credentials_setup (int sock)
+ #if defined(LOCAL_CREDS) && !defined(HAVE_CMSGCRED)
+ 	int val = 1;
+ 	if (setsockopt (sock, 0, LOCAL_CREDS, &val, sizeof (val)) < 0) {
+-		fprintf (stderr, "unable to set LOCAL_CREDS socket option on fd %d\n", fd);
++		fprintf (stderr, "unable to set LOCAL_CREDS socket option on fd %d\n", sock);
+ 		retval = -1;
+ 	}
+ #endif
