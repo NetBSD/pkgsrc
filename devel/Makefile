@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1346 2010/06/04 16:16:39 sborrill Exp $
+# $NetBSD: Makefile,v 1.1347 2010/06/11 23:00:18 tonnerre Exp $
 #
 
 COMMENT=	Development utilities
@@ -1205,10 +1205,13 @@ SUBDIR+=	ruby-rgl
 SUBDIR+=	ruby-rspec
 SUBDIR+=	ruby-setup
 SUBDIR+=	ruby-sexp-processor
+SUBDIR+=	ruby-simple_uuid
 SUBDIR+=	ruby-stream
 SUBDIR+=	ruby-subversion
 SUBDIR+=	ruby-termcolor
 SUBDIR+=	ruby-test-spec
+SUBDIR+=	ruby-thrift
+SUBDIR+=	ruby-thrift_client
 SUBDIR+=	ruby-validatable
 SUBDIR+=	ruby2ruby
 SUBDIR+=	rubyforge
