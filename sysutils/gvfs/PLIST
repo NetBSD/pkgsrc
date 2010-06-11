@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/12/09 18:53:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/06/11 13:53:02 drochner Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -62,6 +62,7 @@ share/gvfs/mounts/trash.mount
 ${PLIST.hal}share/gvfs/remote-volume-monitors/hal.monitor
 share/locale/ar/LC_MESSAGES/gvfs.mo
 share/locale/as/LC_MESSAGES/gvfs.mo
+share/locale/ast/LC_MESSAGES/gvfs.mo
 share/locale/be@latin/LC_MESSAGES/gvfs.mo
 share/locale/bg/LC_MESSAGES/gvfs.mo
 share/locale/bn/LC_MESSAGES/gvfs.mo
@@ -73,6 +74,7 @@ share/locale/da/LC_MESSAGES/gvfs.mo
 share/locale/de/LC_MESSAGES/gvfs.mo
 share/locale/el/LC_MESSAGES/gvfs.mo
 share/locale/en_GB/LC_MESSAGES/gvfs.mo
+share/locale/en@shaw/LC_MESSAGES/gvfs.mo
 share/locale/es/LC_MESSAGES/gvfs.mo
 share/locale/et/LC_MESSAGES/gvfs.mo
 share/locale/eu/LC_MESSAGES/gvfs.mo
@@ -84,6 +86,7 @@ share/locale/gu/LC_MESSAGES/gvfs.mo
 share/locale/he/LC_MESSAGES/gvfs.mo
 share/locale/hi/LC_MESSAGES/gvfs.mo
 share/locale/hu/LC_MESSAGES/gvfs.mo
+share/locale/id/LC_MESSAGES/gvfs.mo
 share/locale/it/LC_MESSAGES/gvfs.mo
 share/locale/ja/LC_MESSAGES/gvfs.mo
 share/locale/kn/LC_MESSAGES/gvfs.mo
@@ -96,6 +99,7 @@ share/locale/mk/LC_MESSAGES/gvfs.mo
 share/locale/ml/LC_MESSAGES/gvfs.mo
 share/locale/mr/LC_MESSAGES/gvfs.mo
 share/locale/nb/LC_MESSAGES/gvfs.mo
+share/locale/nds/LC_MESSAGES/gvfs.mo
 share/locale/nl/LC_MESSAGES/gvfs.mo
 share/locale/nn/LC_MESSAGES/gvfs.mo
 share/locale/or/LC_MESSAGES/gvfs.mo

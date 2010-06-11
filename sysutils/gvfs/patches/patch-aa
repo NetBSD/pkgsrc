@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2009/12/09 18:53:49 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2010/06/11 13:53:02 drochner Exp $
 
---- configure.orig	2009-11-30 12:06:16.000000000 +0100
+--- configure.orig	2010-05-27 04:02:32.000000000 +0000
 +++ configure
-@@ -17863,7 +17863,7 @@ if test "x$enable_gdu" != "xno"; then
-   msg_gdu=yes
- fi
- 
--  if test "x$msg_gdu" == "xyes"; then
-+  if test "x$msg_gdu" = "xyes"; then
- 
- pkg_failed=no
- { $as_echo "$as_me:$LINENO: checking for GDU" >&5
-@@ -19679,7 +19679,7 @@ _ACEOF
+@@ -16082,7 +16082,7 @@ $as_echo "#define HAVE_SAMBA /**/" >>con
  
  		msg_samba="yes"
                  if test x$with_samba_libs != x/usr/lib; then
@@ -20,12 +11,12 @@ $NetBSD: patch-aa,v 1.5 2009/12/09 18:53:49 drochner Exp $
                  else
                  	SAMBA_LIBS="-lsmbclient"
                  fi
-@@ -20911,7 +20911,7 @@ _ACEOF
+@@ -16532,7 +16532,7 @@ _ACEOF
  fi
  
  
 -if test "$ac_cv_func_statfs" = yes ; then
 +if test "$ac_cv_func_statvfs" != yes -a "$ac_cv_func_statfs" = yes ; then
-   { $as_echo "$as_me:$LINENO: checking number of arguments to statfs()" >&5
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking number of arguments to statfs()" >&5
  $as_echo_n "checking number of arguments to statfs()... " >&6; }
-   cat >conftest.$ac_ext <<_ACEOF
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
