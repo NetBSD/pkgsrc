@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2009/12/16 17:15:10 drochner Exp $
+# $NetBSD: Makefile.common,v 1.32 2010/06/11 09:56:15 wiz Exp $
 #
 # used by print/evince/Makefile
 # used by print/evince-nautilus/Makefile
@@ -20,6 +20,12 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++
+
+# needed for evince-2.28 and gtk2-2.20 -- remove on next update!
+BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 # XXX fake for "configure" to allow build w/o a gs installed
 # (avoid hard dependency on a specific version)
