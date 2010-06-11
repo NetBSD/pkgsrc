@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/11 22:31:08 tonnerre Exp $
+${GEM_HOME}/cache/simple_uuid-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Manifest
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/simple_uuid.rb
+${GEM_LIBDIR}/simple_uuid.gemspec
+${GEM_LIBDIR}/test/test_uuid.rb
+${GEM_HOME}/specifications/simple_uuid-${PKGVERSION}.gemspec
