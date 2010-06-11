@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/01/28 14:37:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/06/11 23:20:07 wiz Exp $
 bin/DllPlugInTester
 bin/cppunit-config
 bin/simple
@@ -150,9 +150,6 @@ share/cppunit/html/_compiler_outputter_8h__incl.md5
 share/cppunit/html/_compiler_outputter_8h__incl.png
 share/cppunit/html/_compiler_outputter_8h_source.html
 share/cppunit/html/_config_8h.html
-share/cppunit/html/_config_8h__dep__incl.map
-share/cppunit/html/_config_8h__dep__incl.md5
-share/cppunit/html/_config_8h__dep__incl.png
 share/cppunit/html/_config_8h_source.html
 share/cppunit/html/_cpp_unit_api_8h.html
 share/cppunit/html/_cpp_unit_api_8h__dep__incl.map
@@ -197,6 +194,9 @@ share/cppunit/html/_cpp_unit_vector_8h__incl.md5
 share/cppunit/html/_cpp_unit_vector_8h__incl.png
 share/cppunit/html/_cpp_unit_vector_8h_source.html
 share/cppunit/html/_default_protector_8cpp.html
+share/cppunit/html/_default_protector_8cpp__dep__incl.map
+share/cppunit/html/_default_protector_8cpp__dep__incl.md5
+share/cppunit/html/_default_protector_8cpp__dep__incl.png
 share/cppunit/html/_default_protector_8cpp__incl.map
 share/cppunit/html/_default_protector_8cpp__incl.md5
 share/cppunit/html/_default_protector_8cpp__incl.png
@@ -322,6 +322,9 @@ share/cppunit/html/_portability_8h__incl.md5
 share/cppunit/html/_portability_8h__incl.png
 share/cppunit/html/_portability_8h_source.html
 share/cppunit/html/_protector_8cpp.html
+share/cppunit/html/_protector_8cpp__dep__incl.map
+share/cppunit/html/_protector_8cpp__dep__incl.md5
+share/cppunit/html/_protector_8cpp__dep__incl.png
 share/cppunit/html/_protector_8cpp__incl.map
 share/cppunit/html/_protector_8cpp__incl.md5
 share/cppunit/html/_protector_8cpp__incl.png
@@ -334,6 +337,9 @@ share/cppunit/html/_protector_8h__incl.md5
 share/cppunit/html/_protector_8h__incl.png
 share/cppunit/html/_protector_8h_source.html
 share/cppunit/html/_protector_chain_8cpp.html
+share/cppunit/html/_protector_chain_8cpp__dep__incl.map
+share/cppunit/html/_protector_chain_8cpp__dep__incl.md5
+share/cppunit/html/_protector_chain_8cpp__dep__incl.png
 share/cppunit/html/_protector_chain_8cpp__incl.map
 share/cppunit/html/_protector_chain_8cpp__incl.md5
 share/cppunit/html/_protector_chain_8cpp__incl.png
@@ -591,6 +597,9 @@ share/cppunit/html/_test_path_8h__incl.md5
 share/cppunit/html/_test_path_8h__incl.png
 share/cppunit/html/_test_path_8h_source.html
 share/cppunit/html/_test_plug_in_8h.html
+share/cppunit/html/_test_plug_in_8h__dep__incl.map
+share/cppunit/html/_test_plug_in_8h__dep__incl.md5
+share/cppunit/html/_test_plug_in_8h__dep__incl.png
 share/cppunit/html/_test_plug_in_8h__incl.map
 share/cppunit/html/_test_plug_in_8h__incl.md5
 share/cppunit/html/_test_plug_in_8h__incl.png
@@ -853,6 +862,10 @@ share/cppunit/html/class_default_protector__coll__graph.png
 share/cppunit/html/class_default_protector__inherit__graph.map
 share/cppunit/html/class_default_protector__inherit__graph.md5
 share/cppunit/html/class_default_protector__inherit__graph.png
+share/cppunit/html/class_dynamic_library_manager-members.html
+share/cppunit/html/class_dynamic_library_manager.html
+share/cppunit/html/class_dynamic_library_manager_exception-members.html
+share/cppunit/html/class_dynamic_library_manager_exception.html
 share/cppunit/html/class_exception-members.html
 share/cppunit/html/class_exception.html
 share/cppunit/html/class_exception__coll__graph.map
@@ -894,6 +907,10 @@ share/cppunit/html/class_outputter.html
 share/cppunit/html/class_outputter__inherit__graph.map
 share/cppunit/html/class_outputter__inherit__graph.md5
 share/cppunit/html/class_outputter__inherit__graph.png
+share/cppunit/html/class_plug_in_manager-members.html
+share/cppunit/html/class_plug_in_manager.html
+share/cppunit/html/class_plug_in_parameters-members.html
+share/cppunit/html/class_plug_in_parameters.html
 share/cppunit/html/class_protector-members.html
 share/cppunit/html/class_protector.html
 share/cppunit/html/class_protector__inherit__graph.map
@@ -1052,6 +1069,14 @@ share/cppunit/html/class_test_namer-members.html
 share/cppunit/html/class_test_namer.html
 share/cppunit/html/class_test_path-members.html
 share/cppunit/html/class_test_path.html
+share/cppunit/html/class_test_plug_in_default_impl-members.html
+share/cppunit/html/class_test_plug_in_default_impl.html
+share/cppunit/html/class_test_plug_in_default_impl__coll__graph.map
+share/cppunit/html/class_test_plug_in_default_impl__coll__graph.md5
+share/cppunit/html/class_test_plug_in_default_impl__coll__graph.png
+share/cppunit/html/class_test_plug_in_default_impl__inherit__graph.map
+share/cppunit/html/class_test_plug_in_default_impl__inherit__graph.md5
+share/cppunit/html/class_test_plug_in_default_impl__inherit__graph.png
 share/cppunit/html/class_test_plug_in_interface-members.html
 share/cppunit/html/class_test_plug_in_interface.html
 share/cppunit/html/class_test_result-members.html
@@ -1364,6 +1389,24 @@ share/cppunit/html/inherit__graph__32.png
 share/cppunit/html/inherit__graph__33.map
 share/cppunit/html/inherit__graph__33.md5
 share/cppunit/html/inherit__graph__33.png
+share/cppunit/html/inherit__graph__34.map
+share/cppunit/html/inherit__graph__34.md5
+share/cppunit/html/inherit__graph__34.png
+share/cppunit/html/inherit__graph__35.map
+share/cppunit/html/inherit__graph__35.md5
+share/cppunit/html/inherit__graph__35.png
+share/cppunit/html/inherit__graph__36.map
+share/cppunit/html/inherit__graph__36.md5
+share/cppunit/html/inherit__graph__36.png
+share/cppunit/html/inherit__graph__37.map
+share/cppunit/html/inherit__graph__37.md5
+share/cppunit/html/inherit__graph__37.png
+share/cppunit/html/inherit__graph__38.map
+share/cppunit/html/inherit__graph__38.md5
+share/cppunit/html/inherit__graph__38.png
+share/cppunit/html/inherit__graph__39.map
+share/cppunit/html/inherit__graph__39.md5
+share/cppunit/html/inherit__graph__39.png
 share/cppunit/html/inherit__graph__4.map
 share/cppunit/html/inherit__graph__4.md5
 share/cppunit/html/inherit__graph__4.png
@@ -1400,8 +1443,18 @@ share/cppunit/html/other__documentation_8dox.html
 share/cppunit/html/pages.html
 share/cppunit/html/struct_asserter-members.html
 share/cppunit/html/struct_asserter.html
+share/cppunit/html/struct_cpp_unit_test_plug_in-members.html
+share/cppunit/html/struct_cpp_unit_test_plug_in.html
+share/cppunit/html/struct_cpp_unit_test_plug_in__inherit__graph.map
+share/cppunit/html/struct_cpp_unit_test_plug_in__inherit__graph.md5
+share/cppunit/html/struct_cpp_unit_test_plug_in__inherit__graph.png
 share/cppunit/html/struct_i_test_runner_d_s_plugin_vtbl-members.html
 share/cppunit/html/struct_i_test_runner_d_s_plugin_vtbl.html
+share/cppunit/html/struct_plug_in_manager_1_1_plug_in_info-members.html
+share/cppunit/html/struct_plug_in_manager_1_1_plug_in_info.html
+share/cppunit/html/struct_plug_in_manager_1_1_plug_in_info__coll__graph.map
+share/cppunit/html/struct_plug_in_manager_1_1_plug_in_info__coll__graph.md5
+share/cppunit/html/struct_plug_in_manager_1_1_plug_in_info__coll__graph.png
 share/cppunit/html/struct_string_tools-members.html
 share/cppunit/html/struct_string_tools.html
 share/cppunit/html/structassertion__traits-members.html
