@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2009/12/16 17:08:56 drochner Exp $
+# $NetBSD: Makefile,v 1.68 2010/06/11 08:50:04 wiz Exp $
 #
 
 DISTNAME=	gucharmap-2.28.2
@@ -24,6 +24,12 @@ PKGCONFIG_OVERRIDE+=	gucharmap-2.pc.in
 GTK2_IMMODULES=		yes
 
 GCONF_SCHEMAS+=	gucharmap.schemas
+
+# needed for gucharmap-2.28 and gtk2-2.20 -- remove on next update
+BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.3
