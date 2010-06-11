@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2179 2010/06/11 13:41:46 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2180 2010/06/11 15:16:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2908,3 +2908,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/exiv2 to 0.20 [adam 2010-06-11]
 	Updated devel/mono-addins to 0.5 [kefren 2010-06-11]
 	Updated www/squid31 to 3.1.4 [tron 2010-06-11]
+	Updated www/ikiwiki to 3.20100610 [schmonz 2010-06-11]
