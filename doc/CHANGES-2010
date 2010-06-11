@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2178 2010/06/11 12:42:33 kefren Exp $
+$NetBSD: CHANGES-2010,v 1.2179 2010/06/11 13:41:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2907,3 +2907,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-arabi-doc version 1.1 [minskim 2010-06-11]
 	Updated graphics/exiv2 to 0.20 [adam 2010-06-11]
 	Updated devel/mono-addins to 0.5 [kefren 2010-06-11]
+	Updated www/squid31 to 3.1.4 [tron 2010-06-11]
