@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/10/21 15:55:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/06/11 13:17:30 drochner Exp $
 bin/activation-client
 bin/bonobo-activation-run-query
 bin/bonobo-slay
@@ -183,6 +183,7 @@ share/idl/bonobo-activation-2.0/Bonobo_Unknown.idl
 share/locale/am/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/ar/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/as/LC_MESSAGES/libbonobo-2.0.mo
+share/locale/ast/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/az/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/be/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/bg/LC_MESSAGES/libbonobo-2.0.mo
@@ -198,6 +199,7 @@ share/locale/da/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/de/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/dz/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/el/LC_MESSAGES/libbonobo-2.0.mo
+share/locale/en@shaw/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/en_CA/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/en_GB/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/eo/LC_MESSAGES/libbonobo-2.0.mo
