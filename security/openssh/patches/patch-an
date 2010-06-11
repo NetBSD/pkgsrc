@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.10 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-an,v 1.11 2010/06/11 20:41:42 martti Exp $
 
---- scp.c.orig	2008-11-03 17:23:45.000000000 +0900
-+++ scp.c
-@@ -390,7 +390,11 @@ main(int argc, char **argv)
+--- scp.c.orig	2010-01-08 09:53:43.000000000 +0200
++++ scp.c	2010-06-09 20:34:26.000000000 +0300
+@@ -395,7 +395,11 @@
  	argc -= optind;
  	argv += optind;
  
@@ -14,7 +14,7 @@ $NetBSD: patch-an,v 1.10 2009/05/21 03:22:29 taca Exp $
  		fatal("unknown user %u", (u_int) userid);
  
  	if (!isatty(STDOUT_FILENO))
-@@ -782,8 +786,10 @@ rsource(char *name, struct stat *statp)
+@@ -789,8 +793,10 @@
  		return;
  	}
  	while ((dp = readdir(dirp)) != NULL) {
@@ -25,7 +25,7 @@ $NetBSD: patch-an,v 1.10 2009/05/21 03:22:29 taca Exp $
  		if (!strcmp(dp->d_name, ".") || !strcmp(dp->d_name, ".."))
  			continue;
  		if (strlen(name) + 1 + strlen(dp->d_name) >= sizeof(path) - 1) {
-@@ -1233,7 +1239,9 @@ okname(char *cp0)
+@@ -1240,7 +1246,9 @@
  			case '\'':
  			case '"':
  			case '`':
