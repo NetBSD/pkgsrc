@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2184 2010/06/11 22:57:06 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.2185 2010/06/11 23:26:32 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2913,3 +2913,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/ruby-simple_uuid version 0.1.1 [tonnerre 2010-06-11]
 	Added devel/ruby-thrift version 0.2.0.4 [tonnerre 2010-06-11]
 	Added devel/ruby-thrift_client version 0.4.3 [tonnerre 2010-06-11]
+	Added databases/ruby-cassandra version 0.8.2 [tonnerre 2010-06-11]
