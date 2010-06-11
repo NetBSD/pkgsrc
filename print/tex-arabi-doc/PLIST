@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/11 06:56:02 minskim Exp $
+share/texmf-dist/doc/latex/arabi/README
+share/texmf-dist/doc/latex/arabi/bblopts.cfg
+share/texmf-dist/doc/latex/arabi/big2.pdf
+share/texmf-dist/doc/latex/arabi/big2.tex
+share/texmf-dist/doc/latex/arabi/fontchart_arabic.pdf
+share/texmf-dist/doc/latex/arabi/fontchart_farsi.pdf
+share/texmf-dist/doc/latex/arabi/lion.pdf
+share/texmf-dist/doc/latex/arabi/lppl.tex
+share/texmf-dist/doc/latex/arabi/samplebook.css
+share/texmf-dist/doc/latex/arabi/samplebook.html
+share/texmf-dist/doc/latex/arabi/samplebook.pdf
+share/texmf-dist/doc/latex/arabi/samplebook.tex
+share/texmf-dist/doc/latex/arabi/test_beamer.pdf
+share/texmf-dist/doc/latex/arabi/testplaintex.pdf
+share/texmf-dist/doc/latex/arabi/testplaintex.tex
+share/texmf-dist/doc/latex/arabi/user_guide.pdf
