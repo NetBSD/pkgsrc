@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.27 2010/02/19 10:17:33 martti Exp $
+$NetBSD: patch-ah,v 1.28 2010/06/11 20:41:42 martti Exp $
 
---- Makefile.in.orig	2009-08-28 03:47:38.000000000 +0300
-+++ Makefile.in	2010-02-19 12:08:24.000000000 +0200
+--- Makefile.in.orig	2010-03-13 23:41:34.000000000 +0200
++++ Makefile.in	2010-06-09 20:28:52.000000000 +0300
 @@ -22,7 +22,7 @@
  DESTDIR=
  VPATH=@srcdir@
@@ -10,9 +10,9 @@ $NetBSD: patch-ah,v 1.27 2010/02/19 10:17:33 martti Exp $
 +#ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
- RAND_HELPER=$(libexecdir)/ssh-rand-helper
-@@ -235,7 +235,7 @@
- 	(cd scard && $(MAKE) -f Makefile.in distprep)
+ SSH_PKCS11_HELPER=$(libexecdir)/ssh-pkcs11-helper
+@@ -239,7 +239,7 @@
+ 	-rm -rf autom4te.cache
  
  install: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
 -install-nokeys: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS) install-files install-sysconf
@@ -20,12 +20,3 @@ $NetBSD: patch-ah,v 1.27 2010/02/19 10:17:33 martti Exp $
  install-nosysconf: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS) install-files
  
  check-config:
-@@ -244,7 +244,7 @@
- scard-install:
- 	(cd scard && env DESTDIR=$(DESTDIR) $(MAKE) DESTDIR=$(DESTDIR) install)
- 
--install-files: scard-install
-+install-files:
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(sbindir)
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)
