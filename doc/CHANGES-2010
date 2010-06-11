@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2175 2010/06/11 02:01:57 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.2176 2010/06/11 06:57:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2903,3 +2903,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/wireshark to 1.2.9 [tron 2010-06-10]
 	Updated sysutils/puppet to 0.25.5 [tonnerre 2010-06-11]
 	Updated databases/apache-cassandra to 0.6.2 [tonnerre 2010-06-11]
+	Added print/tex-arabi version 1.1 [minskim 2010-06-11]
+	Added print/tex-arabi-doc version 1.1 [minskim 2010-06-11]
