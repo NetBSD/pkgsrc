@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.45 2010/02/19 10:17:33 martti Exp $
+$NetBSD: patch-aa,v 1.46 2010/06/11 20:41:42 martti Exp $
 
---- configure.orig	2009-09-26 09:31:15.000000000 +0300
-+++ configure	2010-02-19 12:06:28.000000000 +0200
-@@ -5997,6 +5997,9 @@
+--- configure.orig	2010-04-16 03:17:11.000000000 +0300
++++ configure	2010-06-09 21:30:29.000000000 +0300
+@@ -5665,6 +5665,9 @@
  fi
  
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.45 2010/02/19 10:17:33 martti Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags was given.
-@@ -6142,6 +6145,7 @@
+@@ -5810,6 +5813,7 @@
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.45 2010/02/19 10:17:33 martti Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -7965,6 +7969,36 @@
+@@ -7660,6 +7664,36 @@
  		;;
  	esac
  	;;
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.45 2010/02/19 10:17:33 martti Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  
-@@ -8537,7 +8571,7 @@
+@@ -8226,7 +8260,7 @@
  _ACEOF
  
  	;;
@@ -66,33 +66,16 @@ $NetBSD: patch-aa,v 1.45 2010/02/19 10:17:33 martti Exp $
  	check_for_libcrypt_later=1
  
  cat >>confdefs.h <<\_ACEOF
-@@ -30831,14 +30865,21 @@
- rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
- if test -z "$conf_utmpx_location"; then
- 	if test x"$system_utmpx_path" = x"no" ; then
--		cat >>confdefs.h <<\_ACEOF
-+		for f in /var/run/utmpx; do
-+			if test -f $f ; then
-+				conf_utmpx_location=$f
-+			fi
-+		done
-+		if test -z "$conf_utmpx_location"; then
-+			cat >>confdefs.h <<\_ACEOF
- #define DISABLE_UTMPX 1
- _ACEOF
-+		fi
- 
- 	fi
--else
--
--cat >>confdefs.h <<_ACEOF
-+fi
-+if test -n "$conf_utmpx_location"; then
-+	cat >>confdefs.h <<_ACEOF
- #define CONF_UTMPX_FILE "$conf_utmpx_location"
- _ACEOF
- 
-@@ -30903,14 +30944,20 @@
+@@ -12468,7 +12502,7 @@
+ 				LDFLAGS="-L${withval}/lib ${LDFLAGS}"
+ 			fi
+ 		fi
+-		if test "x$use_pkgconfig_for_libedit" == "xyes"; then
++		if test "x$use_pkgconfig_for_libedit" = "xyes"; then
+ 			LIBEDIT=`$PKGCONFIG --libs-only-l libedit`
+ 			CPPFLAGS="$CPPFLAGS `$PKGCONFIG --cflags libedit`"
+ 		else
+@@ -29573,14 +29607,20 @@
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -118,7 +101,7 @@ $NetBSD: patch-aa,v 1.45 2010/02/19 10:17:33 martti Exp $
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
  
-@@ -32200,7 +32247,7 @@
+@@ -30888,7 +30930,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
