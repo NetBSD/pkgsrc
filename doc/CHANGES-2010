@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2183 2010/06/11 22:50:53 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.2184 2010/06/11 22:57:06 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2912,3 +2912,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/openssh to 5.5.1 [martti 2010-06-11]
 	Added devel/ruby-simple_uuid version 0.1.1 [tonnerre 2010-06-11]
 	Added devel/ruby-thrift version 0.2.0.4 [tonnerre 2010-06-11]
+	Added devel/ruby-thrift_client version 0.4.3 [tonnerre 2010-06-11]
