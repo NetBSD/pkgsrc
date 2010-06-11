@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/10/21 15:48:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.30 2010/06/11 13:19:24 drochner Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -44,6 +44,7 @@ share/gtk-doc/html/gconf/up.png
 share/locale/am/LC_MESSAGES/GConf2.mo
 share/locale/ar/LC_MESSAGES/GConf2.mo
 share/locale/as/LC_MESSAGES/GConf2.mo
+share/locale/ast/LC_MESSAGES/GConf2.mo
 share/locale/az/LC_MESSAGES/GConf2.mo
 share/locale/be/LC_MESSAGES/GConf2.mo
 share/locale/bg/LC_MESSAGES/GConf2.mo
@@ -58,6 +59,7 @@ share/locale/da/LC_MESSAGES/GConf2.mo
 share/locale/de/LC_MESSAGES/GConf2.mo
 share/locale/dz/LC_MESSAGES/GConf2.mo
 share/locale/el/LC_MESSAGES/GConf2.mo
+share/locale/en@shaw/LC_MESSAGES/GConf2.mo
 share/locale/en_CA/LC_MESSAGES/GConf2.mo
 share/locale/en_GB/LC_MESSAGES/GConf2.mo
 share/locale/es/LC_MESSAGES/GConf2.mo
