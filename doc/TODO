@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9385 2010/06/11 12:42:33 kefren Exp $
+$NetBSD: TODO,v 1.9386 2010/06/11 14:21:04 taca Exp $
 
 Suggested new packages
 ======================
@@ -807,6 +807,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
+	o isc-dhclient-4.1.1p1
+	o isc-dhcpd-4.1.1p1
+	o isc-dhcpd-4.1.1p1
+	o isc-dhcrelay-4.1.1p1
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20091006
@@ -1362,8 +1366,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-1.12.9
-	o umefont-0.415
-	o umefont-0.414
+	o umefont-0.416
 	o unrealircd-3.2.8.1
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
