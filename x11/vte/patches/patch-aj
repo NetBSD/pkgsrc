@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2010/06/11 11:50:39 drochner Exp $
+
+--- configure.orig	2009-11-17 18:41:26.000000000 +0000
++++ configure
+@@ -15818,7 +15818,7 @@ else
+   enable_deprecation=$enable_maintainer_mode
+ fi
+ 
+-if test "enable_deprecation"; then
++if test "$enable_deprecation" = yes; then
+   { $as_echo "$as_me:$LINENO: disabling deprecated GLIB/PANGO/GDK/ATK/GTK+ features" >&5
+ $as_echo "$as_me: disabling deprecated GLIB/PANGO/GDK/ATK/GTK+ features" >&6;}
+ 
