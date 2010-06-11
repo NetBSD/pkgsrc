@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2180 2010/06/11 15:16:16 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.2181 2010/06/11 20:41:49 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2909,3 +2909,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/mono-addins to 0.5 [kefren 2010-06-11]
 	Updated www/squid31 to 3.1.4 [tron 2010-06-11]
 	Updated www/ikiwiki to 3.20100610 [schmonz 2010-06-11]
+	Updated security/openssh to 5.5.1 [martti 2010-06-11]
