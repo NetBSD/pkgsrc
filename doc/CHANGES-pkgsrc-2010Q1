@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.38 2010/06/12 16:02:05 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.39 2010/06/12 21:00:05 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -166,3 +166,7 @@ Pullup ticket #3143 - requested by minskim
 print/dvipsk: security patch
 Pullup ticket #3142 - requested by taca
 www/typolight28-translations: build fix
+Pullup ticket #3144 - requested by tron
+net/wireshark: security update
+Pullup ticket #3145 - requested by tron
+www/apache22: security fix
