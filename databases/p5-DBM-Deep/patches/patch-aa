@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2010/05/24 13:22:51 seb Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/12 16:00:44 seb Exp $
 
 Configure must not be interactive.
 
---- Build.PL.orig	2010-04-10 14:49:51.000000000 +0000
+--- Build.PL.orig	2010-06-06 19:45:47.000000000 +0000
 +++ Build.PL
-@@ -70,9 +70,9 @@ my $build = Module::Build->subclass(
-     },
+@@ -64,9 +64,9 @@ my $build = Module::Build->subclass(
+     meta_add => { no_index => { directory => [ 'utils' ] } },
  );
  
 -if ( $build->y_n( "Run the long-running tests", 'n' ) ) {
