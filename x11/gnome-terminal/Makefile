@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/01/27 08:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2010/06/12 12:50:44 drochner Exp $
 #
 
 DISTNAME=		gnome-terminal-2.28.2
@@ -27,6 +27,7 @@ CONFIGURE_ENV+=		ac_cv_path_GTK_BUILDER_CONVERT="${PYTHONBIN} ${BUILDLINK_PREFIX
 GCONF_SCHEMAS=	gnome-terminal.schemas
 
 PYTHON_FOR_BUILD_ONLY=	YES
+BUILDLINK_TRANSFORM+= rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.14.0
