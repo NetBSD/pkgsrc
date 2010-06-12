@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.28 2010/01/30 21:07:29 joerg Exp $
+# $NetBSD: replace.mk,v 1.29 2010/06/12 00:53:43 gdt Exp $
 #
 
 # _flavor-replace:
@@ -181,16 +181,25 @@ replace-clean: .PHONY
 	${RM} -f ${_REPLACE_OLDNAME_FILE} ${_REPLACE_NEWNAME_FILE}	\
 		${_COOKIE.replace}
 
+# Logically we would like to do a "pkg_add -U".  However, that fails
+# if there is a depending package that exactly depends on the package
+# being replaced.  Historically, 'make replace' would replace a
+# package regardless of whether that broke depending packages
+# (typically due to shlib ABI changes, especially major version
+# bumps).  Therefore, make replace in DESTDIR mode should behave the
+# same way.  unsafe_depends will be set on depending packages, and
+# then those may be rebuilt via a manual process or by
+# pkg_rolling-replace.
 replace-destdir: .PHONY
 	@${PHASE_MSG} "Updating using binary package of "${PKGNAME:Q}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
-	${PKG_ADD} -U -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
+	${PKG_ADD} -U -f -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
 	@${ECHO} "Fixing recorded cwd..."
 	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
 	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
 .else
-	${PKG_ADD} -U ${PKGFILE}
+	${PKG_ADD} -U -f ${PKGFILE}
 .endif
 	${RUN}${_REPLACE_OLDNAME_CMD}; \
 	${PKG_INFO} -qR ${PKGNAME:Q} | while read pkg; do \
