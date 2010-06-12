@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/26 19:58:16 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/12 14:13:17 wiz Exp $
 #
 
 POLICYKIT_GNOME_VER=	0.9.2
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../security/policykit/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-doc-utils+=	gnome-doc-utils>=0.20.1
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
