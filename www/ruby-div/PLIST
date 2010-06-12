@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/12 10:43:12 obache Exp $
+${RUBY_VENDORLIB}/div.rb
+${RUBY_VENDORLIB}/div/div.rb
+${RUBY_VENDORLIB}/div/js.rb
+${RUBY_VENDORLIB}/div/login.rb
+${RUBY_VENDORLIB}/div/tofusession.rb
+${RUBY_VENDORLIB}/tofu/cgicontext.rb
+${RUBY_VENDORLIB}/tofu/mock.rb
+${RUBY_VENDORLIB}/tofu/proxy.rb
+${RUBY_VENDORLIB}/tofu/ring.rb
+${RUBY_VENDORLIB}/tofu/tofu.rb
+${RUBY_VENDORLIB}/tofu/tofulet.rb
