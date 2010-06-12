@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/05/16 12:21:44 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/12 09:47:16 obache Exp $
 
 DISTNAME=	htree-0.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes
 
-INSTALL_TARGET=		install --destdir=${DESTDIR}
+INSTALL_TARGET=		--destdir=${DESTDIR}
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
