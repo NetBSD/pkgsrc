@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2196 2010/06/12 21:46:27 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2197 2010/06/12 21:46:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2925,3 +2925,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Package-Stash version 0.03 [seb 2010-06-12]
 	Updated devel/p5-Package-Stash to 0.03nb1 [seb 2010-06-12]
 	Updated devel/p5-Class-MOP to 1.03 [seb 2010-06-12]
+	Updated devel/p5-Moose to 1.07 [seb 2010-06-12]
