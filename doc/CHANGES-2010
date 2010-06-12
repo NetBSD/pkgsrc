@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2192 2010/06/12 16:12:25 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2193 2010/06/12 19:37:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2921,3 +2921,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Try-Tiny to 0.06 [seb 2010-06-12]
 	Updated databases/p5-DBM-Deep to 1.0025 [seb 2010-06-12]
 	Updated net/p5-IO-Socket-INET6 to 2.65 [seb 2010-06-12]
+	Updated net/rdist6 to 0.92nb4 [dholland 2010-06-12]
