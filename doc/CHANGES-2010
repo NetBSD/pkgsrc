@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2189 2010/06/12 10:43:30 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2190 2010/06/12 10:49:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2918,3 +2918,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-NYTProf to 4.00 [seb 2010-06-12]
 	Updated www/apache22 to 2.2.15nb3 [tron 2010-06-12]
 	Added www/ruby-div version 1.3.2 [obache 2010-06-12]
+	Updated devel/p5-Try-Tiny to 0.06 [seb 2010-06-12]
