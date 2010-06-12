@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2194 2010/06/12 20:47:44 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2195 2010/06/12 21:01:35 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2923,3 +2923,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-IO-Socket-INET6 to 2.65 [seb 2010-06-12]
 	Updated net/rdist6 to 0.92nb4 [dholland 2010-06-12]
 	Added devel/p5-Package-Stash version 0.03 [seb 2010-06-12]
+	Updated devel/p5-Package-Stash to 0.03nb1 [seb 2010-06-12]
