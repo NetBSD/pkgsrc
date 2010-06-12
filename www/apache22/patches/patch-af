@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.3.2.2 2010/06/12 20:57:46 spz Exp $
+
+Patch to fix CVE-2010-2068, taken from here:
+
+http://www.apache.org/dist/httpd/patches/apply_to_2.2.15/CVE-2010-2068-r953616.patch
+
+--- modules/proxy/mod_proxy_http.c.orig	2010-02-27 18:49:36.000000000 +0000
++++ modules/proxy/mod_proxy_http.c	2010-06-12 11:33:45.000000000 +0100
+@@ -1401,7 +1401,7 @@
+             ap_log_rerror(APLOG_MARK, APLOG_ERR, rc, r,
+                           "proxy: error reading status line from remote "
+                           "server %s", backend->hostname);
+-            if (rc == APR_TIMEUP) {
++            if (APR_STATUS_IS_TIMEUP(rc)) {
+                 ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r,
+                               "proxy: read timeout");
+             }
+@@ -1417,7 +1417,7 @@
+              * we normally would handle timeouts
+              */
+             if (r->proxyreq == PROXYREQ_REVERSE && c->keepalives &&
+-                rc != APR_TIMEUP) {
++                !APR_STATUS_IS_TIMEUP(rc)) {
+                 apr_bucket *eos;
+ 
+                 ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r,
+@@ -1449,6 +1449,8 @@
+                     APR_BUCKET_INSERT_BEFORE(eos, e);
+                 }
+                 ap_pass_brigade(r->output_filters, bb);
++                /* Mark the backend connection for closing */
++                backend->close = 1;
+                 /* Need to return OK to avoid sending an error message */
+                 return OK;
+             }
