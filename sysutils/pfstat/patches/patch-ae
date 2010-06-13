@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2010/06/13 14:55:45 wiz Exp $
+
+--- pfstatd/pfstatd.8.orig	2007-01-11 16:01:58.000000000 +0000
++++ pfstatd/pfstatd.8
+@@ -64,6 +64,7 @@ after opening the device special file
+ .Pa /dev/pf .
+ Default is
+ .Sq nobody .
++.El
+ .Sh SECURITY CONSIDERATIONS
+ Clients are not authenticated and output is not encrypted.
+ The daemon does not read input from clients and immediately

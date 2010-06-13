@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2010/06/13 14:55:45 wiz Exp $
+
+--- pfstat.8.orig	2010-06-13 14:49:25.000000000 +0000
++++ pfstat.8
+@@ -155,6 +155,7 @@ instead of 1000.
+ .It Fl d Ar database
+ Database file.
+ Default is /var/db/pfstat.db.
++.El
+ .Sh EXAMPLES
+ .Bd -literal
+ collect 1 = interface "sis0" pass bytes in ipv4 diff
