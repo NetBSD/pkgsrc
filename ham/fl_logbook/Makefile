@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/04/07 17:08:11 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:44:47 wiz Exp $
 #
 
 DISTNAME=		fl_logbook.121.src
 PKGNAME=		fl_logbook-1.21
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		http://www.w1hkj.com/LinuxApps/
 

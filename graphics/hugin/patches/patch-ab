@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2010/06/13 22:44:35 wiz Exp $
+
+--- CMakeModules/FindPNG.cmake.orig	2010-03-02 23:17:21.000000000 +0000
++++ CMakeModules/FindPNG.cmake
+@@ -29,7 +29,7 @@ IF (ZLIB_FOUND)
+ 
+   find_library_with_debug(PNG_LIBRARIES
+     WIN32_DEBUG_POSTFIX d
+-    NAMES png libpng wxpng
++    NAMES png14 libpng14 wxpng
+     PATHS /usr/lib /usr/local/lib ${wxWidgets_LIB_DIR}
+   )
+ 

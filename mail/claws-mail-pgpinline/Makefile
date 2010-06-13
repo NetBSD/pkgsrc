@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2009/09/15 10:28:29 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2010/06/13 22:44:53 wiz Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	pgpinline
 .include "../../mail/claws-mail/plugins.mk"
+
+PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Handles PGP/Inline signed and/or encrypted mails

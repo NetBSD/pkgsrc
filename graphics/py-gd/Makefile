@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2010/01/18 09:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/06/13 22:44:42 wiz Exp $
 
 DISTNAME=	gdmodule.c
 PKGNAME=	${PYPKGPREFIX}-gd-1.3
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	graphics python
 MASTER_SITES=	http://starship.python.net/~richard/gdmodule/
 EXTRACT_SUFX=
