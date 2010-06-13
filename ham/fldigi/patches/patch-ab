@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/10/23 08:07:09 wulf Exp $
+$NetBSD: patch-ab,v 1.2 2010/06/13 22:44:47 wiz Exp $
 
---- src/widgets/picture.cxx.orig	2008-10-23 15:59:18.000000000 +1030
-+++ src/widgets/picture.cxx	2008-10-23 15:54:17.000000000 +1030
+--- src/widgets/picture.cxx.orig	2008-09-14 13:26:15.000000000 +0000
++++ src/widgets/picture.cxx
 @@ -31,8 +31,10 @@
  #include <FL/fl_ask.H>
  
@@ -13,3 +13,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/10/23 08:07:09 wulf Exp $
  #endif
  #if USE_LIBPNG
  #  include <png.h>
+@@ -317,7 +319,7 @@ int picture::save_png(const char* filena
+ 		return -1;
+ 	}
+ 	if ((info = png_create_info_struct(png)) == NULL) {
+-		png_destroy_write_struct(&png, png_infopp_NULL);
++		png_destroy_write_struct(&png, NULL);
+ 		fclose(fp);
+ 		return -1;
+ 	}

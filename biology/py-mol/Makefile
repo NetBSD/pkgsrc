@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/07/08 15:40:54 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:43:54 wiz Exp $
 
 DISTNAME=	pymol-0_98-src
 PKGNAME=	${PYPKGPREFIX}-mol-0.98
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tgz
@@ -20,6 +20,8 @@ PYSETUP=	setup.py
 CONFLICTS=	pymol-[0-9]*
 
 REPLACE_PYTHON=	test/cyg test/run test/show test/win.py
+
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 INSTALLATION_DIRS=	bin
 

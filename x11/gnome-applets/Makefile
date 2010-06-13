@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2010/02/16 13:35:40 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2010/06/13 22:45:37 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.28.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.28/}
 EXTRACT_SUFX=		.tar.bz2
