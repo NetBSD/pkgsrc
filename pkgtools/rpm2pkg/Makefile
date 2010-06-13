@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2009/06/14 22:44:34 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2010/06/13 13:08:51 tron Exp $
 
-DISTNAME=	rpm2pkg-2.3
+DISTNAME=	rpm2pkg-3.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,16 +14,21 @@ CONFLICTS+=	suse-base<=6.4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES=	c99
 WRKSRC=		${WRKDIR}
 
 CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} ${BUILDLINK_CPPFLAGS.rpm} \
 		${BUILDLINK_CPPFLAGS.zlib}
-LIBS+=		-lrpm -lintl -lz -lbz2
+LIBS+=		-lintl -lz -lbz2
 
 .include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-*)
 CFLAGS+=	-Wall -Wshadow -Wsign-compare -Wunused-value
+.endif
+
+.if ${OPSYS} == "NetBSD" && defined(USE_SSP) && (${USE_SSP} != "no")
+CFLAGS+=	-fstack-protector -Wstack-protector --param ssp-buffer-size=1
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
@@ -39,7 +44,6 @@ do-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../misc/rpm/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
