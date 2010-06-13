@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2010/01/18 09:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/06/13 22:44:17 wiz Exp $
 #
 
 DISTNAME=	KoboDeluxe-0.5.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://olofson.net/kobodl/download/
 EXTRACT_SUFX=	.tar.bz2

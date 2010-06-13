@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2010/01/18 09:58:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2010/06/13 22:44:21 wiz Exp $
 
 BUILDLINK_TREE+=	kdegames
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdegames
 KDEGAMES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdegames+=	kdegames>=3.5.0nb1
-BUILDLINK_ABI_DEPENDS.kdegames?=	kdegames>=3.5.10nb4
+BUILDLINK_ABI_DEPENDS.kdegames?=	kdegames>=3.5.10nb5
 BUILDLINK_PKGSRCDIR.kdegames?=	../../games/kdegames3
 
 .include "../../x11/kdebase3/buildlink3.mk"

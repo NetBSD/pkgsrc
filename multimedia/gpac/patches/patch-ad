@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/06/13 22:45:05 wiz Exp $
+
+--- src/media_tools/img.c.orig	2008-12-01 17:39:36.000000000 +0000
++++ src/media_tools/img.c
+@@ -551,7 +551,7 @@ GF_Err gf_img_png_enc(char *data, u32 wi
+ 	/* Allocate/initialize the image information data.  REQUIRED */
+ 	info_ptr = png_create_info_struct(png_ptr);
+ 	if (info_ptr == NULL) {
+-		png_destroy_write_struct(&png_ptr,  png_infopp_NULL);
++		png_destroy_write_struct(&png_ptr,  NULL);
+ 		return GF_IO_ERR;
+ 	}
+ 	

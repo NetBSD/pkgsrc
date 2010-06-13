@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2010/04/09 13:35:41 obache Exp $
+# $NetBSD: Makefile,v 1.72 2010/06/13 22:45:36 wiz Exp $
 
 DISTNAME=	fltk-1.1.10-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.easysw.com/pub/fltk/${VERS}/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/${VERS}/ \
