@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/09/09 16:54:13 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:43:47 wiz Exp $
 #
 
 DISTNAME=	albumplayer_0.3.orig
 PKGNAME=	albumplayer-0.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://rvb.mytanet.de/debian/
 
@@ -11,7 +12,7 @@ HOMEPAGE=	http://rvb.mytanet.de/
 COMMENT=	FLAC album player
 LICENSE=	original-bsd
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

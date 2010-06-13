@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2009/08/27 18:53:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2010/06/13 22:45:49 wiz Exp $
 
 BUILDLINK_TREE+=	pygtk2
 
@@ -8,7 +8,7 @@ PYGTK2_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.8.4
-BUILDLINK_ABI_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.14.1nb2
+BUILDLINK_ABI_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.16.0nb1
 BUILDLINK_PKGSRCDIR.pygtk2?=	../../x11/py-gtk2
 
 .include "../../devel/py-gobject/buildlink3.mk"

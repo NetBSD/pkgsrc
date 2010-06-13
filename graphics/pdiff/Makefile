@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2010/01/18 09:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:44:40 wiz Exp $
 #
 
 DISTNAME=		PerceptualDiff-1.0.1
 PKGNAME=		pdiff-1.0.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pdiff/}
 
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 
-.include "../../graphics/png/buildlink3.mk"
+# not compatible with png>=1.4
+#.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

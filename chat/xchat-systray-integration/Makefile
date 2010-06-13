@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/01/29 16:09:49 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/06/13 22:43:59 wiz Exp $
 
 DISTNAME=	xchat-systray-integration-2.4.5-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xchat2-plugins/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/02/16 17:35:34 taca Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:45:53 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		6
+PKGREVISION=		7
 COMMENT=		GTK-based implementation of the wxWidgets GUI library
 
 post-build:

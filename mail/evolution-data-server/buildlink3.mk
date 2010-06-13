@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2010/06/02 13:03:11 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2010/06/13 22:44:54 wiz Exp $
 
 BUILDLINK_TREE+=	evolution-data-server
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evolution-data-server
 EVOLUTION_DATA_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=1.8.0
-BUILDLINK_ABI_DEPENDS.evolution-data-server+=	evolution-data-server>=2.22.3nb1
+BUILDLINK_ABI_DEPENDS.evolution-data-server+=	evolution-data-server>=2.28.3.1nb2
 BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../mail/evolution-data-server
 
 BDB_ACCEPTED?=		db4 db5

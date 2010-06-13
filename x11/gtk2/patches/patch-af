@@ -1,8 +1,28 @@
-$NetBSD: patch-af,v 1.17 2010/03/16 08:40:15 wiz Exp $
+$NetBSD: patch-af,v 1.18 2010/06/13 22:45:39 wiz Exp $
 
---- configure.orig	2010-03-15 22:37:29.000000000 +0000
+--- configure.orig	2010-05-02 23:55:05.000000000 +0000
 +++ configure
-@@ -23073,7 +23073,7 @@ _ACEOF
+@@ -21748,14 +21748,14 @@ $as_echo "$as_me: WARNING: *** JPEG load
+ fi
+ 
+   if test x$with_libpng != xno && test -z "$LIBPNG"; then
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libpng12" >&5
+-$as_echo_n "checking for libpng12... " >&6; }
+-    if $PKG_CONFIG --exists libpng12 ; then
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libpng" >&5
++$as_echo_n "checking for libpng... " >&6; }
++    if $PKG_CONFIG --exists libpng ; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+         PNG='png'
+-	PNG_DEP_CFLAGS_PACKAGES=libpng12
+-	LIBPNG=`$PKG_CONFIG --libs libpng12`
++	PNG_DEP_CFLAGS_PACKAGES=libpng
++	LIBPNG=`$PKG_CONFIG --libs libpng`
+     else
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+@@ -23098,7 +23098,7 @@ _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }

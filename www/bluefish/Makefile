@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2010/01/18 09:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2010/06/13 22:45:32 wiz Exp $
 
 DISTNAME=	bluefish-1.0.7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://bluefish.mrball.net/stable/source/               \
 		http://www.bennewitz.com/bluefish/stable/source/

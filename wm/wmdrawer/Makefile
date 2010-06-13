@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/01/18 09:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:45:32 wiz Exp $
 #
 
 DISTNAME=		wmdrawer-0.10.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		misc
 MASTER_SITES=		http://people.easter-eggs.org/~valos/wmdrawer/
 

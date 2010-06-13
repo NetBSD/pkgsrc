@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/09/16 01:31:12 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2010/06/13 22:45:07 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-mpc-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-mpc-plugin
 XFCE4_MPC_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-mpc-plugin+=	xfce4-mpc-plugin>=0.3.2
-BUILDLINK_ABI_DEPENDS.xfce4-mpc-plugin?=	xfce4-mpc-plugin>=0.3.2nb1
+BUILDLINK_ABI_DEPENDS.xfce4-mpc-plugin?=	xfce4-mpc-plugin>=0.3.2nb2
 BUILDLINK_PKGSRCDIR.xfce4-mpc-plugin?=	../../multimedia/xfce4-mpc-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

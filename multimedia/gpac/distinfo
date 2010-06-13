@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/23 14:54:23 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2010/06/13 22:45:05 wiz Exp $
 
 SHA1 (gpac-0.4.5.tar.gz) = 2ec03c1d7dc3f4d10c0f7b47696cc1e753a56fc8
 RMD160 (gpac-0.4.5.tar.gz) = 21249249a412efa5d1237907cb6b8cfe6282e86f
@@ -6,3 +6,4 @@ Size (gpac-0.4.5.tar.gz) = 4269054 bytes
 SHA1 (patch-aa) = bd4a1314fa80ced3cc4aaa632e4a522f877207a9
 SHA1 (patch-ab) = 19bb0746ced98fbb438673a406a570cad7aaabb4
 SHA1 (patch-ac) = 25f8b92a308b6a70fb160980fe86e7d3e3f3f0ac
+SHA1 (patch-ad) = 5d50a3477f3a4459825f19c848454f6cdfb8a1fd

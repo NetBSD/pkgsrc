@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.13 2010/06/13 22:45:01 wiz Exp $
+
+--- filters/krita/png/kis_png_converter.cc.orig	2007-05-30 21:39:37.000000000 +0000
++++ filters/krita/png/kis_png_converter.cc
+@@ -785,7 +785,7 @@ void KisPNGConverter::cancel()
+ 
+ void KisPNGConverter::progress(png_structp png_ptr, png_uint_32 row_number, int pass)
+ {
+-    if(png_ptr == NULL || row_number > PNG_MAX_UINT || pass > 7) return;
++    if(png_ptr == NULL || row_number > PNG_UINT_32_MAX || pass > 7) return;
+ //     setProgress(row_number);
+ }
+ 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2010/04/10 04:09:21 markd Exp $
+# $NetBSD: Makefile,v 1.51 2010/06/13 22:45:05 wiz Exp $
 #
 
 DISTNAME=	kmplayer-0.11.2a
+PKGREVISION=	1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	http://kmplayer.kde.org/pkgs/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,10 +11,11 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://kmplayer.kde.org/
 COMMENT=	KDE frontend to mplayer
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
+BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
 DEPENDS+=		mplayer>=1.0rc3:../../multimedia/mplayer
 DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=		yes
 USE_TOOLS+=		msgfmt perl pkg-config

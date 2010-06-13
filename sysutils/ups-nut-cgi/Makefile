@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2010/02/17 15:39:02 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2010/06/13 22:45:25 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/ups-nut-cgi/}
-PKGREVISION=		2
+PKGREVISION=		3
 COMMENT=		Network UPS Tools CGI scripts
 
 DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut

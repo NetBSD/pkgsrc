@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2010/01/18 09:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/06/13 22:45:21 wiz Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils x11 windowmaker
 MASTER_SITES=	http://www.bayernline.de/~gscholz/linux/fsviewer/
 

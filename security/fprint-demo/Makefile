@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/24 13:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:45:18 wiz Exp $
 
 DISTNAME=	fprint_demo-0.4
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fprint/}
 EXTRACT_SUFX=	.tar.bz2

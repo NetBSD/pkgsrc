@@ -1,0 +1,63 @@
+$NetBSD: patch-aa,v 1.1 2010/06/13 22:44:00 wiz Exp $
+
+--- configure.orig	2008-05-26 18:01:17.000000000 +0000
++++ configure
+@@ -21145,12 +21145,12 @@ if test -n "$PKG_CONFIG"; then
+         pkg_cv_png_CFLAGS="$png_CFLAGS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"\"libpng12\"\"") >&5
+-  ($PKG_CONFIG --exists --print-errors ""libpng12"") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"\"libpng\"\"") >&5
++  ($PKG_CONFIG --exists --print-errors ""libpng"") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_png_CFLAGS=`$PKG_CONFIG --cflags ""libpng12"" 2>/dev/null`
++  pkg_cv_png_CFLAGS=`$PKG_CONFIG --cflags ""libpng"" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -21163,12 +21163,12 @@ if test -n "$PKG_CONFIG"; then
+         pkg_cv_png_LIBS="$png_LIBS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"\"libpng12\"\"") >&5
+-  ($PKG_CONFIG --exists --print-errors ""libpng12"") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"\"libpng\"\"") >&5
++  ($PKG_CONFIG --exists --print-errors ""libpng"") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_png_LIBS=`$PKG_CONFIG --libs ""libpng12"" 2>/dev/null`
++  pkg_cv_png_LIBS=`$PKG_CONFIG --libs ""libpng"" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -21187,14 +21187,14 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        png_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors ""libpng12""`
++	        png_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors ""libpng""`
+         else
+-	        png_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors ""libpng12""`
++	        png_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors ""libpng""`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$png_PKG_ERRORS" >&5
+ 
+-	{ { echo "$as_me:$LINENO: error: Package requirements (\"libpng12\") were not met:
++	{ { echo "$as_me:$LINENO: error: Package requirements (\"libpng\") were not met:
+ 
+ $png_PKG_ERRORS
+ 
+@@ -21205,7 +21205,7 @@ Alternatively, you may set the environme
+ and png_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ " >&5
+-echo "$as_me: error: Package requirements (\"libpng12\") were not met:
++echo "$as_me: error: Package requirements (\"libpng\") were not met:
+ 
+ $png_PKG_ERRORS
+ 

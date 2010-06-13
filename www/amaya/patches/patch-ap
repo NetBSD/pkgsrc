@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.1 2008/09/11 04:22:50 dholland Exp $
+$NetBSD: patch-ap,v 1.2 2010/06/13 22:45:32 wiz Exp $
 
---- ../../wxWidgets/configure.orig	2007-05-14 05:08:25.000000000 -0400
-+++ ../../wxWidgets/configure	2008-09-08 06:27:09.000000000 -0400
+--- ../../wxWidgets/configure.orig	2007-05-14 09:08:25.000000000 +0000
++++ ../../wxWidgets/configure
 @@ -23470,43 +23470,8 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  
@@ -78,6 +78,59 @@ $NetBSD: patch-ap,v 1.1 2008/09/11 04:22:50 dholland Exp $
    do
      if test -f "$ac_dir/X11/Intrinsic.h"; then
        ac_find_includes=$ac_dir
+@@ -24916,9 +24881,9 @@ echo "${ECHO_T}$ac_cv_header_png_h" >&6
+ 
+ 
+             if test "$ac_cv_header_png_h" = "yes"; then
+-                echo "$as_me:$LINENO: checking for png_check_sig in -lpng" >&5
+-echo $ECHO_N "checking for png_check_sig in -lpng... $ECHO_C" >&6
+-if test "${ac_cv_lib_png_png_check_sig+set}" = set; then
++                echo "$as_me:$LINENO: checking for png_sig_cmp in -lpng" >&5
++echo $ECHO_N "checking for png_sig_cmp in -lpng... $ECHO_C" >&6
++if test "${ac_cv_lib_png_png_sig_cmp+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -24936,11 +24901,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char png_check_sig ();
++char png_sig_cmp ();
+ int
+ main ()
+ {
+-png_check_sig ();
++png_sig_cmp ();
+   ;
+   return 0;
+ }
+@@ -24966,20 +24931,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_png_png_check_sig=yes
++  ac_cv_lib_png_png_sig_cmp=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_png_png_check_sig=no
++ac_cv_lib_png_png_sig_cmp=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_check_sig" >&5
+-echo "${ECHO_T}$ac_cv_lib_png_png_check_sig" >&6
+-if test $ac_cv_lib_png_png_check_sig = yes; then
++echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_sig_cmp" >&5
++echo "${ECHO_T}$ac_cv_lib_png_png_sig_cmp" >&6
++if test $ac_cv_lib_png_png_sig_cmp = yes; then
+   PNG_LINK=" -lpng -lz"
+ fi
+ 
 @@ -30134,7 +30099,7 @@ echo "$as_me: error: Unicode configurati
  echo $ECHO_N "checking for Motif/Lesstif headers... $ECHO_C" >&6
  

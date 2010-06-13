@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2008/09/11 04:22:50 dholland Exp $
+$NetBSD: distinfo,v 1.20 2010/06/13 22:45:32 wiz Exp $
 
 SHA1 (amaya-fullsrc-10.0.1.tgz) = a2dcceedaa2c0256f04aaa86e3dc319d4ff26ade
 RMD160 (amaya-fullsrc-10.0.1.tgz) = d1a20a03a18ef3b06cf9dcbab907fb412de0ad6b
@@ -15,5 +15,5 @@ SHA1 (patch-al) = 172ab5106ecdc8fac825bcca8e57202010c980a3
 SHA1 (patch-am) = 152800baf4b750dbfe1bfa731313222b471d28ab
 SHA1 (patch-an) = 5d2e98d7046394960d7c172ed7d491ecb0f0992e
 SHA1 (patch-ao) = 34f6b0fe289d966c2a7553799be8bf59426091b4
-SHA1 (patch-ap) = d4ba3426bbeffc5f9f8f30002d4bb75e0c3816c6
+SHA1 (patch-ap) = 9d0eaa0bc05dc61f5d29cd78644fb854076590ce
 SHA1 (patch-aq) = 3885a77d86fa1c3892a6aab7c9538d119951cd4a

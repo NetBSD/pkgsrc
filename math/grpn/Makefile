@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2009/11/26 17:35:53 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/06/13 22:44:56 wiz Exp $
 #
 
 DISTNAME=	grpn
 PKGNAME=	grpn-1.2
 DIST_SUBDIR=	grpn-1.2
+PKGREVISION=	1
 CATEGORIES=	math
 #MASTER_SITES=	http://lashwhip.com/grpn/
 MASTER_SITES=	http://www.getreu.net/public/downloads/

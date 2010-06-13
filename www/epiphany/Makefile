@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2010/06/11 08:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2010/06/13 22:45:33 wiz Exp $
 #
 
 DISTNAME=	epiphany-2.28.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.28/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,7 @@ USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	data/epiphany-2.28.pc
 
+# needed for epiphany-2.28 and gtk2-2.20 -- remove on next update
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED

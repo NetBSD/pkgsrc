@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2010/05/15 05:47:58 adam Exp $
+$NetBSD: distinfo,v 1.5 2010/06/13 22:44:29 wiz Exp $
 
 SHA1 (enblend-enfuse-4.0/enblend-enfuse-4.0.tar.gz) = 34c3a5ce11c6ef0ef520d8a15a3cb6a94a567033
 RMD160 (enblend-enfuse-4.0/enblend-enfuse-4.0.tar.gz) = 9e531b5bf6f7258ef8778c01b456979e0bc04338
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = b1809fe6ef6609658b697635c6cbf0c112a03fd1
 SHA1 (patch-ab) = afc074bb94e2a2b96c654c37540072514ba0bce0
 SHA1 (patch-ac) = 916f4655ff30013583014eb8deecc72bd19ae55d
 SHA1 (patch-ad) = bc0a04dbf7477c3db7c9ef979fb851a975a93571
+SHA1 (patch-ae) = d16fc0157c9796bfc63bc434cc627dcf99669d6f

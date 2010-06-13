@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2010/01/18 09:58:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/06/13 22:44:13 wiz Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-2.16
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
 
@@ -24,8 +24,9 @@ INFODIR=	${PREFIX}/share/doc/Ted
 
 CONFIGURE_ENV+=	ac_jpeg_includes="${BUILDLINK_PREFIX.jpeg}/include"
 CONFIGURE_ENV+=	ac_jpeg_libraries="${BUILDLINK_PREFIX.jpeg}/lib"
-CONFIGURE_ENV+=	ac_png_includes="${BUILDLINK_PREFIX.png}/include"
-CONFIGURE_ENV+=	ac_png_libraries="${BUILDLINK_PREFIX.png}/lib"
+# disabled, has not been update since about libpng-0.90
+#CONFIGURE_ENV+=	ac_png_includes="${BUILDLINK_PREFIX.png}/include"
+#CONFIGURE_ENV+=	ac_png_libraries="${BUILDLINK_PREFIX.png}/lib"
 CONFIGURE_ENV+=	ac_tiff_includes="${BUILDLINK_PREFIX.tiff}/include"
 CONFIGURE_ENV+=	ac_tiff_libraries="${BUILDLINK_PREFIX.tiff}/lib"
 CONFIGURE_ENV+=	ac_xm_includes="${BUILDLINK_PREFIX.openmotif}/include"
@@ -85,7 +86,7 @@ do-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+#.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
