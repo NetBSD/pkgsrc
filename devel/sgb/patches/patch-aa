@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2010/01/29 01:34:06 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2010/06/13 19:07:24 minskim Exp $
 
---- Makefile.orig	1999-12-27 14:27:24.000000000 -0800
+--- Makefile.orig	1999-12-27 22:27:24.000000000 +0000
 +++ Makefile
 @@ -8,22 +8,22 @@
  #   current directory. (Not recommended for serious users.)
@@ -93,7 +93,7 @@ $NetBSD: patch-aa,v 1.2 2010/01/29 01:34:06 minskim Exp $
  
  tests: test_io test_graph test_flip
  	./test_io
-@@ -128,24 +134,22 @@ tests: test_io test_graph test_flip
+@@ -128,30 +134,28 @@ tests: test_io test_graph test_flip
  	touch certified
  
  install: lib
@@ -129,3 +129,10 @@ $NetBSD: patch-aa,v 1.2 2010/01/29 01:34:06 minskim Exp $
  
  uninstalldemos:
  	- cd $(BINDIR); rm -f $(DEMOS)
+ 
+ doc:
+-	tex abstract.plaintex
++	@LOCALBASE@/bin/tex abstract.plaintex
+ 
+ clean:
+ 	rm -f *~ *.o *.c *.h libgb.a certified \
