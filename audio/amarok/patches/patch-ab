@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2010/03/16 19:28:50 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2010/06/13 23:39:26 wiz Exp $
 
---- src/collection/sqlcollection/mysqlecollection/CMakeLists.txt.orig	2010-03-10 23:12:15.000000000 +0000
-+++ src/collection/sqlcollection/mysqlecollection/CMakeLists.txt
+--- src/core-impl/collections/sqlcollection/mysqlecollection/CMakeLists.txt.orig	2010-03-10 23:12:15.000000000 +0000
++++ src/core-impl/collections/sqlcollection/mysqlecollection/CMakeLists.txt
 @@ -49,6 +49,7 @@ if(APPLE)
  	SET_TARGET_PROPERTIES(amarok_collection-mysqlecollection PROPERTIES LINK_FLAGS "-undefined dynamic_lookup")
  endif(APPLE)
