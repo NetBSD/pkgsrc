@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.3 2005/09/07 15:19:08 adam Exp $
+$NetBSD: patch-ak,v 1.4 2010/06/13 08:56:04 spz Exp $
 
 --- doc/xpdfrc.5.orig	2005-08-17 05:34:30.000000000 +0000
 +++ doc/xpdfrc.5
@@ -41,20 +41,20 @@ $NetBSD: patch-ak,v 1.3 2005/09/07 15:19:08 adam Exp $
 -displayFontT1 Courier-BoldOblique   /usr/local/share/ghostscript/fonts/n022024l.pfb
 -displayFontT1 Symbol                /usr/local/share/ghostscript/fonts/s050000l.pfb
 -displayFontT1 ZapfDingbats          /usr/local/share/ghostscript/fonts/d050000l.pfb
-+displayFontT1 Times-Roman           @PREFIX@/share/ghostscript/fonts/n021003l.pfb
-+displayFontT1 Times-Italic          @PREFIX@/share/ghostscript/fonts/n021023l.pfb
-+displayFontT1 Times-Bold            @PREFIX@/share/ghostscript/fonts/n021004l.pfb
-+displayFontT1 Times-BoldItalic      @PREFIX@/share/ghostscript/fonts/n021024l.pfb
-+displayFontT1 Helvetica             @PREFIX@/share/ghostscript/fonts/n019003l.pfb
-+displayFontT1 Helvetica-Oblique     @PREFIX@/share/ghostscript/fonts/n019023l.pfb
-+displayFontT1 Helvetica-Bold        @PREFIX@/share/ghostscript/fonts/n019004l.pfb
-+displayFontT1 Helvetica-BoldOblique @PREFIX@/share/ghostscript/fonts/n019024l.pfb
-+displayFontT1 Courier               @PREFIX@/share/ghostscript/fonts/n022003l.pfb
-+displayFontT1 Courier-Oblique       @PREFIX@/share/ghostscript/fonts/n022023l.pfb
-+displayFontT1 Courier-Bold          @PREFIX@/share/ghostscript/fonts/n022004l.pfb
-+displayFontT1 Courier-BoldOblique   @PREFIX@/share/ghostscript/fonts/n022024l.pfb
-+displayFontT1 Symbol                @PREFIX@/share/ghostscript/fonts/s050000l.pfb
-+displayFontT1 ZapfDingbats          @PREFIX@/share/ghostscript/fonts/d050000l.pfb
++displayFontT1 Times-Roman           @PREFIX@/share/fonts/urw/n021003l.pfb
++displayFontT1 Times-Italic          @PREFIX@/share/fonts/urw/n021023l.pfb
++displayFontT1 Times-Bold            @PREFIX@/share/fonts/urw/n021004l.pfb
++displayFontT1 Times-BoldItalic      @PREFIX@/share/fonts/urw/n021024l.pfb
++displayFontT1 Helvetica             @PREFIX@/share/fonts/urw/n019003l.pfb
++displayFontT1 Helvetica-Oblique     @PREFIX@/share/fonts/urw/n019023l.pfb
++displayFontT1 Helvetica-Bold        @PREFIX@/share/fonts/urw/n019004l.pfb
++displayFontT1 Helvetica-BoldOblique @PREFIX@/share/fonts/urw/n019024l.pfb
++displayFontT1 Courier               @PREFIX@/share/fonts/urw/n022003l.pfb
++displayFontT1 Courier-Oblique       @PREFIX@/share/fonts/urw/n022023l.pfb
++displayFontT1 Courier-Bold          @PREFIX@/share/fonts/urw/n022004l.pfb
++displayFontT1 Courier-BoldOblique   @PREFIX@/share/fonts/urw/n022024l.pfb
++displayFontT1 Symbol                @PREFIX@/share/fonts/urw/s050000l.pfb
++displayFontT1 ZapfDingbats          @PREFIX@/share/fonts/urw/d050000l.pfb
  
  # use the Bakoma Type 1 fonts
  # (this assumes they happen to be installed in /usr/local/fonts/bakoma)
