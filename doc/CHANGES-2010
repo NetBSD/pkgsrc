@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2199 2010/06/13 19:27:27 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2200 2010/06/13 19:41:19 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Moose to 1.07 [seb 2010-06-12]
 	Updated pkgtools/rpm2pkg to 3.0 [tron 2010-06-13]
 	Updated devel/p5-Data-Dump-Streamer to 2.18 [seb 2010-06-13]
+	Updated devel/p5-local-lib to 1.6.4 [seb 2010-06-13]
