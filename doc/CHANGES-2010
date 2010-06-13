@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2201 2010/06/13 20:33:26 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2202 2010/06/13 21:38:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2930,3 +2930,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-Dump-Streamer to 2.18 [seb 2010-06-13]
 	Updated devel/p5-local-lib to 1.6.4 [seb 2010-06-13]
 	Updated devel/p5-namespace-clean to 0.18 [seb 2010-06-13]
+	Updated devel/p5-Perl-Critic to 1.106 [seb 2010-06-13]
