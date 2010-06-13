@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2010/02/23 20:31:26 drochner Exp $
+$NetBSD: patch-ah,v 1.5 2010/06/13 22:45:15 wiz Exp $
 
 --- configure.orig	2010-02-10 20:31:30.000000000 +0000
 +++ configure
@@ -11,6 +11,61 @@ $NetBSD: patch-ah,v 1.4 2010/02/23 20:31:26 drochner Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define USE_LIBPAPER 1
+@@ -8739,9 +8739,9 @@ $as_echo "yes" >&6; }
+ else
+ 	{ $as_echo "$as_me:$LINENO: result: no" >&5
+ $as_echo "no" >&6; }
+-	{ $as_echo "$as_me:$LINENO: checking for png_check_sig in -lpng" >&5
+-$as_echo_n "checking for png_check_sig in -lpng... " >&6; }
+-if test "${ac_cv_lib_png_png_check_sig+set}" = set; then
++	{ $as_echo "$as_me:$LINENO: checking for png_sig_cmp in -lpng" >&5
++$as_echo_n "checking for png_sig_cmp in -lpng... " >&6; }
++if test "${ac_cv_lib_png_png_sig_cmp+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -8759,11 +8759,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char png_check_sig ();
++char png_sig_cmp ();
+ int
+ main ()
+ {
+-return png_check_sig ();
++return png_sig_cmp ();
+   ;
+   return 0;
+ }
+@@ -8789,12 +8789,12 @@ $as_echo "$ac_try_echo") >&5
+ 	 test "$cross_compiling" = yes ||
+ 	 $as_test_x conftest$ac_exeext
+        }; then
+-  ac_cv_lib_png_png_check_sig=yes
++  ac_cv_lib_png_png_sig_cmp=yes
+ else
+   $as_echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_png_png_check_sig=no
++	ac_cv_lib_png_png_sig_cmp=no
+ fi
+ 
+ rm -rf conftest.dSYM
+@@ -8802,9 +8802,9 @@ rm -f core conftest.err conftest.$ac_obj
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_check_sig" >&5
+-$as_echo "$ac_cv_lib_png_png_check_sig" >&6; }
+-if test "x$ac_cv_lib_png_png_check_sig" = x""yes; then
++{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_sig_cmp" >&5
++$as_echo "$ac_cv_lib_png_png_sig_cmp" >&6; }
++if test "x$ac_cv_lib_png_png_sig_cmp" = x""yes; then
+ 
+ 
+ for ac_header in png.h
 @@ -9203,7 +9203,7 @@ done
  
  fi

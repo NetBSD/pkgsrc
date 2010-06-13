@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2010/03/03 07:07:40 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2010/06/13 22:44:24 wiz Exp $
 
 --- src/renderer/r_image.c.orig	2008-04-25 16:15:02.000000000 +0000
 +++ src/renderer/r_image.c
+@@ -254,7 +254,7 @@ static int R_LoadPNG (const char *name, 
+ 		png_set_palette_to_rgb(png_ptr);
+ 	/* convert 1-2-4 bits grayscale images to 8 bits grayscale */
+ 	if (color_type == PNG_COLOR_TYPE_GRAY && bit_depth < 8)
+-		png_set_gray_1_2_4_to_8(png_ptr);
++		png_set_expand_gray_1_2_4_to_8(png_ptr);
+ 	if (png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS))
+ 		png_set_tRNS_to_alpha(png_ptr);
+ 
 @@ -651,17 +651,6 @@ static void jpg_skip_input_data (j_decom
  	cinfo->src->bytes_in_buffer -= (size_t) num_bytes;
  }

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2010/01/18 09:59:29 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2010/06/13 22:45:30 wiz Exp $
 
 DISTNAME=	e16-0.16.8.8
 PKGNAME=	${DISTNAME:S/e16/enlightenment/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 gnome wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 

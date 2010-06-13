@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/08/26 19:56:56 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/06/13 22:45:47 wiz Exp $
 
 BUILDLINK_TREE+=	libunique
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libunique
 LIBUNIQUE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libunique+=	libunique>=1.0.4
-BUILDLINK_ABI_DEPENDS.libunique?=	libunique>=1.0.8nb1
+BUILDLINK_ABI_DEPENDS.libunique?=	libunique>=1.1.6nb1
 BUILDLINK_PKGSRCDIR.libunique?=	../../x11/libunique
 
 pkgbase := libunique

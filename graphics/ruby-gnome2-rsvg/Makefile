@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2009/10/12 03:09:32 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:44:44 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-rsvg-${VERSION}
 COMMENT=		Ruby binding of librsvg
+PKGREVISION=		1
 CATEGORIES=		graphics
 
 PKG_DESTDIR_SUPPORT=	user-destdir
