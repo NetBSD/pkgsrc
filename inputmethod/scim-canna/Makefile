@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/15 11:32:47 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:44:49 wiz Exp $
 #
 
 DISTNAME=		scim-canna-1.0.1
+PKGREVISION=		1
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=scim-imengine/29155/}
 

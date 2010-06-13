@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2006/08/15 08:42:36 xtraeme Exp $
+$NetBSD: distinfo,v 1.8 2010/06/13 22:44:18 wiz Exp $
 
 SHA1 (CriticalMass-1.0.2.tar.bz2) = d2d1f35183e9fbed76fd8da2a948745a4c89f20b
 RMD160 (CriticalMass-1.0.2.tar.bz2) = 6c0b6988f6a52c4b19fbca2525b1daec0202693d
 Size (CriticalMass-1.0.2.tar.bz2) = 5122126 bytes
+SHA1 (patch-aa) = c8f329fdf20df88a961e95b2a1fb8dbca85871f0

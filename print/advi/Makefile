@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2010/01/18 09:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2010/06/13 22:45:14 wiz Exp $
 
 DISTNAME=		advi-1.6.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.inria.fr/INRIA/Projects/cristal/advi/
 EXTRACT_SUFX=		.tgz

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2010/01/18 09:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/06/13 22:45:16 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=		pdflib-${PDFLIB_BASE_VERS}
-PKGREVISION=		9
+PKGREVISION=		10
 COMMENT=		C library to produce PDF files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
