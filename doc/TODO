@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9390 2010/06/13 22:42:20 wiz Exp $
+$NetBSD: TODO,v 1.9391 2010/06/13 23:16:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
-	o asymptote-1.96
+	o asymptote-1.97
 	o aterm-1.0.1
 	o attica-0.1.4
 	o auctex-11.86
@@ -569,6 +569,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-2.30.2 [GNOME 2.30]
 	o epiphany-extensions-2.30.1 [GNOME 2.30]
 	o epstool-3.08
+	o eric4-4.4.5
 	o erlang-13b4
 	o erubis-2.6.2
 	o esh-0.8.5
@@ -673,7 +674,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdm-2.20.11
 	o gdm-2.30.2 [GNOME 2.30]
 	o gdsreader-0.3.2
-	o geany-0.18.1
+	o geany-0.19
 	o gedit-2.30.2 [GNOME 2.30]
 	o gedit-plugins-2.30.0 [GNOME 2.30]
 	o gegl-0.1.2
@@ -859,6 +860,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lcc-4.2
 	o lcms-2.0
 	o ldapsdk-6.0.2
+	o leafnode-1.11.8
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
@@ -1337,7 +1339,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tfmxplay-1.1.6
 	o thoth-0.2.1
 	o tiff-3.9.3
-	o tig-0.15
+	o tig-0.16
 	o tightvnc-1.5.1
 	o tile-0.7.4
 	o tinyproxy-1.8.0
