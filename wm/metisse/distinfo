@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2009/07/24 12:10:18 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/06/13 22:45:30 wiz Exp $
 
 SHA1 (metisse-0.4.1.tar.bz2) = acf97b125905d91988955560a9b14b06a530eed6
 RMD160 (metisse-0.4.1.tar.bz2) = 7487322f22a3655d756b5d3d3cc59afbf277d137
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 6c8f66b54c96f18b3e835fea490d5eb444514b52
 SHA1 (patch-ae) = eab55e17f7e3518434d4ad42e7637c18cef5bf72
 SHA1 (patch-af) = 45cf852490bd30d17cac341916d83b0688f7bce0
 SHA1 (patch-ag) = b7159e56a1d1f1b5b12ea99ca60de0071bcf5294
+SHA1 (patch-ah) = 6afe0c047a67f83149a4130b4eae55612e437ad0

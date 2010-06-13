@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2010/01/18 09:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/06/13 22:43:50 wiz Exp $
 
 DISTNAME=		kmp-0.01
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		http://mercury.chem.pitt.edu/~shank/
 EXTRACT_SUFX=		.tar.bz2

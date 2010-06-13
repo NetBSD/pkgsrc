@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/16 01:06:30 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/06/13 22:44:11 wiz Exp $
 
 BUILDLINK_TREE+=	xfconf
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xfconf
 XFCONF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfconf+=	xfconf>=4.6.0
+BUILDLINK_ABI_DEPENDS.xfconf?=	xfconf>=4.6.1
 BUILDLINK_PKGSRCDIR.xfconf?=	../../devel/xfconf
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2010/04/09 01:35:47 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:45:06 wiz Exp $
 #
 
 .include "../../multimedia/ming/Makefile.common"
 
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		multimedia
 
 MAINTAINER=		obache@NetBSD.org

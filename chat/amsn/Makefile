@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/05/12 21:27:01 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:43:56 wiz Exp $
 #
 
 DISTNAME=		amsn-0.98.3
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
 DISTFILES=		${DISTNAME}-src.tar.bz2

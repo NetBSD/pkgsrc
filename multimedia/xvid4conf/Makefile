@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/08/26 19:58:08 sno Exp $
+# $NetBSD: Makefile,v 1.16 2010/06/13 22:45:08 wiz Exp $
 
 DISTNAME=	xvid4conf-1.12
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	#
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/04/14 19:50:48 spz Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:45:13 wiz Exp $
 #
 
 DISTNAME=		xymon-4.3.0-beta2
 PKGNAME=		xymon-4.3.0b2
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
 

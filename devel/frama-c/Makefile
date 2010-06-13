@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/01/18 09:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:44:04 wiz Exp $
 #
 
 DISTNAME=	frama-c-Beryllium-20090901
 PKGNAME=	${DISTNAME:S/-Beryllium//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://frama-c.cea.fr/download/
 

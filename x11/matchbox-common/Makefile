@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/07/16 21:39:51 zafer Exp $
+# $NetBSD: Makefile,v 1.11 2010/06/13 22:45:47 wiz Exp $
 #
 
 DISTNAME=		matchbox-common-0.9.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11
 MASTER_SITES=		http://matchbox-project.org/sources/matchbox-common/0.9/
 EXTRACT_SUFX=		.tar.bz2

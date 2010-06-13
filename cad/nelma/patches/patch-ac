@@ -1,0 +1,49 @@
+$NetBSD: patch-ac,v 1.1 2010/06/13 22:43:55 wiz Exp $
+
+--- src/pngutil.c.orig	2006-12-10 15:50:19.000000000 +0000
++++ src/pngutil.c
+@@ -145,7 +145,7 @@ int png_read(struct image **dest, char *
+ 	{
+ 		error("Can't allocate memory");
+ 		fclose(fp);
+-		png_destroy_read_struct(&png_ptr, png_infopp_NULL, png_infopp_NULL);
++		png_destroy_read_struct(&png_ptr, NULL, NULL);
+ 		return -1;
+ 	}
+ 
+@@ -159,7 +159,7 @@ int png_read(struct image **dest, char *
+ 		error("libpng error");
+ 		/* Free all of the memory associated with the png_ptr and 
+ 		 * info_ptr */
+-		png_destroy_read_struct(&png_ptr, &info_ptr, png_infopp_NULL);
++		png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+ 		fclose(fp);
+ 		/* If we get here, we had a problem reading the file */
+ 		return -1;
+@@ -185,7 +185,7 @@ int png_read(struct image **dest, char *
+ 				PNG_TRANSFORM_PACKING | 
+ 				PNG_TRANSFORM_EXPAND;
+ 
+-	png_read_png(png_ptr, info_ptr, png_transforms, png_voidp_NULL);
++	png_read_png(png_ptr, info_ptr, png_transforms, NULL);
+ 
+ 	/* At this point you have read the entire image */
+ 	img=png_alloc(	png_get_image_width(png_ptr, info_ptr), 
+@@ -209,7 +209,7 @@ int png_read(struct image **dest, char *
+ 	*dest=img;
+ 
+ 	/* Clean up after the read, and free any memory allocated - REQUIRED */
+-	png_destroy_read_struct(&png_ptr, &info_ptr, png_infopp_NULL);
++	png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+ 
+ 	/* close the file */
+ 	fclose(fp);
+@@ -253,7 +253,7 @@ int png_write(struct image *img, char *f
+ 	if (info_ptr == NULL) {
+ 		error("Can't allocate memory");
+ 		fclose(fp);
+-		png_destroy_write_struct(&png_ptr,  png_infopp_NULL);
++		png_destroy_write_struct(&png_ptr,  NULL);
+ 		return -1;
+ 	}
+ 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2010/01/18 09:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/06/13 22:45:36 wiz Exp $
 #
 
 DISTNAME=	fbdesk-1.4.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://fluxbox.sourceforge.net/download/
 

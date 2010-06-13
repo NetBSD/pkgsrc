@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2009/11/26 15:04:03 joerg Exp $
+$NetBSD: distinfo,v 1.4 2010/06/13 22:44:45 wiz Exp $
 
 SHA1 (unicap-0.9.3.tar.gz) = b9d1580a9e10d15a8ab86400a0200b72e582dc4d
 RMD160 (unicap-0.9.3.tar.gz) = dd2b687197ac81534d2adbc5db8dcc2bdc3e3aad
@@ -16,7 +16,8 @@ SHA1 (patch-aj) = c04fa9aeb3c6fc93524019b1d69f6b3da6b62bc6
 SHA1 (patch-ak) = 41025b0d650d8e06a2f4950b5113414f5a4d6ec1
 SHA1 (patch-al) = cc6b286f54b902907e49028797e644af9eaff132
 SHA1 (patch-am) = 32c85d4c7353a9f2130a7105067f555365fcc883
-SHA1 (patch-ap) = f80854eb8708e950384e18cad0d04fda66ca5267
+SHA1 (patch-an) = 8167ed1f1f3a7882f3c07feaddaf429a90bf1902
+SHA1 (patch-ap) = 29cb7f81e4e56c0178c453fe80f2c576eefeb6c6
 SHA1 (patch-aq) = 396dae0f7695bd816479117b50f577d67aa6efbc
 SHA1 (patch-ar) = d0a2b4411ca9df52b0041cd532779ccb9fc1efdf
 SHA1 (patch-as) = 56db81f3a643f3c15d1c7572c63af23728c4b4eb

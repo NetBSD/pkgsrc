@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2010/04/09 13:25:34 adam Exp $
+# $NetBSD: Makefile,v 1.51 2010/06/13 22:44:03 wiz Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
@@ -41,6 +42,9 @@ SUBST_VARS.cmake=	X11BASE
 
 post-patch:
 	${RM} ${WRKSRC}/Modules/*.orig
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/cmake-${CMAKE_API}/Modules/Platform/UnixPaths.cmake.orig
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

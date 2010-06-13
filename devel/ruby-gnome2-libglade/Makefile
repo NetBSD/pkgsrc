@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/10/12 03:09:31 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:44:10 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-libglade-${VERSION}
 COMMENT=		Ruby binding of libglade
+PKGREVISION=		1
 CATEGORIES=		devel
 
 PKG_DESTDIR_SUPPORT=	user-destdir

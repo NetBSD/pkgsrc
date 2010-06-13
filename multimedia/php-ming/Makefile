@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/04/29 04:55:25 obache Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:45:06 wiz Exp $
 
 MODNAME=		ming
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES+=		multimedia
 
 MAINTAINER=		obache@NetBSD.org

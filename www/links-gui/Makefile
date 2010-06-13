@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2010/01/18 09:59:31 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2010/06/13 22:45:34 wiz Exp $
 #
 
 PKGNAME=	${DISTNAME:S/links/&-gui/:S/pre/.0./}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Lynx-like text and graphics WWW browser
 
 CONFLICTS+=	links-[0-9]* elinks-0.3*

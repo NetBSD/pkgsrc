@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2010/01/17 08:16:52 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2010/06/13 22:44:15 wiz Exp $
 #
 
 DISTNAME=	raines-0.43.3
 PKGNAME=	${DISTNAME:S/raines/raine/}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://rainemu.swishparty.co.uk/html/archive/
 EXTRACT_SUFX=	.tar.bz2

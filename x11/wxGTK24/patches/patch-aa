@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2009/11/29 20:16:20 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2010/06/13 22:45:53 wiz Exp $
 
---- configure.orig	2003-09-21 13:31:30.000000000 +0200
+--- configure.orig	2003-09-21 11:31:30.000000000 +0000
 +++ configure
 @@ -1247,7 +1247,7 @@ EOF
  
@@ -24,6 +24,32 @@ $NetBSD: patch-aa,v 1.4 2009/11/29 20:16:20 joerg Exp $
  
  
  cat > confcache <<\EOF
+@@ -11972,9 +11973,9 @@ fi
+ echo "$ac_t""$ac_cv_header_png_h" 1>&6
+ 
+             if test "$ac_cv_header_png_h" = "yes"; then
+-                echo $ac_n "checking for png_check_sig in -lpng""... $ac_c" 1>&6
+-echo "configure:11977: checking for png_check_sig in -lpng" >&5
+-ac_lib_var=`echo png'_'png_check_sig | sed 'y%./+-%__p_%'`
++                echo $ac_n "checking for png_sig_cmp in -lpng""... $ac_c" 1>&6
++echo "configure:11977: checking for png_sig_cmp in -lpng" >&5
++ac_lib_var=`echo png'_'png_sig_cmp | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+@@ -11986,10 +11987,10 @@ cat > conftest.$ac_ext <<EOF
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char png_check_sig();
++char png_sig_cmp();
+ 
+ int main() {
+-png_check_sig()
++png_sig_cmp()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:11996: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
 @@ -13381,6 +13382,101 @@ echo "configure:13351: checking PANGOFT2
    fi
  

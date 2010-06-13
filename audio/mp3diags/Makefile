@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/05/15 08:51:30 adam Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:43:51 wiz Exp $
 
 DISTNAME=	MP3Diags-1.0.05.050
 PKGNAME=	${DISTNAME:S/MP3D/mp3d/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3diags/}
 

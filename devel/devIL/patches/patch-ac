@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/06/13 22:44:03 wiz Exp $
+
+--- src-IL/src/il_png.c.orig	2009-03-08 07:10:09.000000000 +0000
++++ src-IL/src/il_png.c
+@@ -278,7 +278,7 @@ ILboolean readpng_get_image(ILdouble dis
+ 
+ 	// Expand low-bit-depth grayscale images to 8 bits
+ 	if (png_color_type == PNG_COLOR_TYPE_GRAY && bit_depth < 8) {
+-		png_set_gray_1_2_4_to_8(png_ptr);
++		png_set_expand_gray_1_2_4_to_8(png_ptr);
+ 	}
+ 
+ 	// Expand RGB images with transparency to full alpha channels

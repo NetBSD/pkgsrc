@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2010/01/18 09:59:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2010/06/13 22:45:20 wiz Exp $
 #
 
 BUILDLINK_TREE+=	qca
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	qca
 QCA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qca+=	qca>=1.0
-BUILDLINK_ABI_DEPENDS.qca?=	qca>=1.0nb5
+BUILDLINK_ABI_DEPENDS.qca?=	qca>=1.0nb6
 BUILDLINK_PKGSRCDIR.qca?=	../../security/qca
 
 .include "../../x11/qt3-libs/buildlink3.mk"

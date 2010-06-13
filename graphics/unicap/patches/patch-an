@@ -1,0 +1,58 @@
+$NetBSD: patch-an,v 1.3 2010/06/13 22:44:45 wiz Exp $
+
+--- libucil/ucil_png.c.orig	2008-06-12 15:25:11.000000000 +0000
++++ libucil/ucil_png.c
+@@ -77,7 +77,7 @@ static int read_png(FILE *fp, unsigned i
+    if (info_ptr == NULL)
+    {
+       fclose(fp);
+-      png_destroy_read_struct(&png_ptr, png_infopp_NULL, png_infopp_NULL);
++      png_destroy_read_struct(&png_ptr, NULL, NULL);
+       return( -1 );
+    }
+ 
+@@ -89,7 +89,7 @@ static int read_png(FILE *fp, unsigned i
+    if (setjmp(png_jmpbuf(png_ptr)))
+    {
+       /* Free all of the memory associated with the png_ptr and info_ptr */
+-      png_destroy_read_struct(&png_ptr, &info_ptr, png_infopp_NULL);
++      png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+       fclose(fp);
+       /* If we get here, we had a problem reading the file */
+       return( -1 );
+@@ -109,7 +109,7 @@ static int read_png(FILE *fp, unsigned i
+     * adjustment), then you can read the entire image (including
+     * pixels) into the info structure with this call:
+     */
+-   png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_IDENTITY, png_voidp_NULL);
++   png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_IDENTITY, NULL);
+ 
+    /* At this point you have read the entire image */
+    
+@@ -174,7 +174,7 @@ static int read_png(FILE *fp, unsigned i
+    }
+ 
+    /* clean up after the read, and free any memory allocated - REQUIRED */
+-   png_destroy_read_struct(&png_ptr, &info_ptr, png_infopp_NULL);
++   png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+ 
+    /* close the file */
+    fclose(fp);
+@@ -230,7 +230,7 @@ static int read_png(FILE *fp, unsigned i
+ /*    if (info_ptr == NULL) */
+ /*    { */
+ /*       fclose(fp); */
+-/*       png_destroy_write_struct(&png_ptr,  png_infopp_NULL); */
++/*       png_destroy_write_struct(&png_ptr,  NULL); */
+ /*       return( -1 ); */
+ /*    } */
+ 
+@@ -252,7 +252,7 @@ static int read_png(FILE *fp, unsigned i
+ /*     * image info living info in the structure.  You could "|" many */
+ /*     * PNG_TRANSFORM flags into the png_transforms integer here. */
+ /*     *\/ */
+-/*    png_write_png( png_ptr, info_ptr, PNG_TRANSFORM_IDENTITY, png_voidp_NULL ); */
++/*    png_write_png( png_ptr, info_ptr, PNG_TRANSFORM_IDENTITY, NULL ); */
+ 
+ /*    /\* If you png_malloced a palette, free it here (don't free info_ptr->palette, */
+ /*       as recommended in versions 1.0.5m and earlier of this example; if */

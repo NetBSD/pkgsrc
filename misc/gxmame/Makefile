@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/08/26 19:58:01 sno Exp $
+# $NetBSD: Makefile,v 1.26 2010/06/13 22:44:59 wiz Exp $
 #
 
 DISTNAME=	gxmame-0.35beta1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxmame/}
 

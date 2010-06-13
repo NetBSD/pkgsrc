@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.226 2010/05/21 22:21:06 schwarz Exp $
+# $NetBSD: replace.mk,v 1.227 2010/06/13 22:45:03 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -310,7 +310,7 @@ TOOLS_PATH.chrpath=		${TOOLS_PREFIX.chrpath}/bin/chrpath
 .    if !empty(PKGPATH:Mdevel/cmake)
 MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_DEPENDS.${_t_}?=		cmake>=2.4.6nb3:../../devel/cmake
+TOOLS_DEPENDS.${_t_}?=		cmake>=2.8.1nb1:../../devel/cmake
 TOOLS_CREATE+=			${_t_}
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=cmake
 TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}

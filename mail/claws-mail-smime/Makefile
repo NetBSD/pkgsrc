@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2009/09/15 10:28:29 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:44:54 wiz Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	smime
 .include "../../mail/claws-mail/plugins.mk"
+
+PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	This plugin handles S/MIME signed and/or encrypted mails

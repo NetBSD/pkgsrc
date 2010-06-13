@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/02/10 19:17:44 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/06/13 22:45:14 wiz Exp $
 
 DISTNAME=	bg5pdf-1.0.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print chinese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

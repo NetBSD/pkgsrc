@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/22 19:44:05 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/13 22:45:54 wiz Exp $
 
---- configure.orig	2006-03-22 00:42:05.000000000 +0100
-+++ configure	2006-10-08 06:26:28.000000000 +0200
+--- configure.orig	2006-03-21 23:42:05.000000000 +0000
++++ configure
 @@ -1820,7 +1820,7 @@ _ACEOF
  
      DEFAULT_DEFAULT_wxUSE_MOTIF=1
@@ -21,6 +21,59 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/09/22 19:44:05 joerg Exp $
  
  echo "$as_me:$LINENO: checking for libraries directory" >&5
  echo $ECHO_N "checking for libraries directory... $ECHO_C" >&6
+@@ -24519,9 +24520,9 @@ fi
+ 
+ 
+             if test "$ac_cv_header_png_h" = "yes"; then
+-                echo "$as_me:$LINENO: checking for png_check_sig in -lpng" >&5
+-echo $ECHO_N "checking for png_check_sig in -lpng... $ECHO_C" >&6
+-if test "${ac_cv_lib_png_png_check_sig+set}" = set; then
++                echo "$as_me:$LINENO: checking for png_sig_cmp in -lpng" >&5
++echo $ECHO_N "checking for png_sig_cmp in -lpng... $ECHO_C" >&6
++if test "${ac_cv_lib_png_png_sig_cmp+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -24539,11 +24540,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char png_check_sig ();
++char png_sig_cmp ();
+ int
+ main ()
+ {
+-png_check_sig ();
++png_sig_cmp ();
+   ;
+   return 0;
+ }
+@@ -24570,20 +24571,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_png_png_check_sig=yes
++  ac_cv_lib_png_png_sig_cmp=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_png_png_check_sig=no
++ac_cv_lib_png_png_sig_cmp=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_check_sig" >&5
+-echo "${ECHO_T}$ac_cv_lib_png_png_check_sig" >&6
+-if test $ac_cv_lib_png_png_check_sig = yes; then
++echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_sig_cmp" >&5
++echo "${ECHO_T}$ac_cv_lib_png_png_sig_cmp" >&6
++if test $ac_cv_lib_png_png_sig_cmp = yes; then
+   PNG_LINK=" -lpng -lz"
+ fi
+ 
 @@ -36663,6 +36664,9 @@ echo "$as_me: WARNING: BeOS threads are 
                      THREAD_OPTS="-mt $THREAD_OPTS"
                  fi
