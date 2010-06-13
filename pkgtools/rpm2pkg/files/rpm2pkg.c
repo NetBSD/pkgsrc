@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.8 2009/06/14 22:44:34 joerg Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.9 2010/06/13 13:08:52 tron Exp $	*/
 
 /*-
  * Copyright (c) 2004-2009 The NetBSD Foundation, Inc.
@@ -34,15 +34,28 @@
 
 #include <errno.h>
 #include <fcntl.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 
 #include <bzlib.h>
-#include <rpmlib.h>
 #include <zlib.h>
 
+/*
+ * Lead of an RPM archive as described here:
+ * http://www.rpm.org/max-rpm/s1-rpm-file-format-rpm-file-format.html
+ */
+static const unsigned char RPMMagic[] = { 0xed, 0xab, 0xee, 0xdb };
+
+#define	RPM_LEAD_SIZE	96
+
+/* Magic bytes for "bzip2" and "gzip" compressed files. */
+static const unsigned char BZipMagic[] = { 'B', 'Z', 'h' };
+static const unsigned char GZipMagic[] = { 0x1f, 0x8b, 0x08 };
+
+/* Structure of a cpio(1) archive. */
 #define C_IRUSR			0000400
 #define C_IWUSR			0000200
 #define C_IXUSR			0000100
@@ -60,7 +73,7 @@
 #define C_ISCHR			0020000
 #define C_ISLNK			0120000
  
-char CPIOMagic[] = {'0','7','0','7','0','1'};
+static const unsigned char CPIOMagic[] = {'0','7','0','7','0','1'};
 
 #define CPIO_END_MARKER		"TRAILER!!!"
 #define CPIO_FIELD_LENGTH	8
@@ -72,9 +85,6 @@ char CPIOMagic[] = {'0','7','0','7','0','1'};
 #define CPIO_NUM_HEADERS	13
 
 #define CP_IFMT			0170000
-
-#define	TRUE	1
-#define	FALSE	0
 
 typedef struct ModeMapStruct {
 	unsigned long	mm_CPIOMode;
@@ -124,7 +134,7 @@ typedef struct FileHandleStruct {
 	off_t	fh_Pos;
 } FileHandle;
 
-static int
+static bool
 InitBuffer(void **Buffer, size_t *BufferSizePtr)
 {
 	if (*Buffer == NULL) {
@@ -134,11 +144,11 @@ InitBuffer(void **Buffer, size_t *BufferSizePtr)
 		while ((*Buffer = malloc(BufferSize)) == NULL) {
 			BufferSize >>= 1;
 			if (BufferSize == 0)
-				return FALSE;
+				return false;
 		}
 		*BufferSizePtr = BufferSize;
 	}
-	return TRUE;
+	return true;
 }
 
 static void
@@ -155,24 +165,77 @@ Close(FileHandle *fh)
 	free(fh);
 }
 
+static bool
+IsRPMFile(int fd)
+{
+	char buffer[RPM_LEAD_SIZE];
+
+	if (read(fd, buffer, sizeof(buffer)) != sizeof(buffer))
+		return false;
+
+	return (memcmp(buffer, RPMMagic, sizeof(RPMMagic)) == 0);
+}
+
 static FileHandle *
 Open(int fd)
 {
+	unsigned char	buffer[4096];
+	size_t		bzMatch, gzMatch;
+	int		archive_type;
 	off_t		offset;
-	char		Magic[3];
 	FileHandle	*fh;
 
-	if ((offset = lseek(fd, 0, SEEK_CUR)) < 0)
-		return NULL;
-	if (read(fd, Magic, sizeof (Magic)) != sizeof (Magic))
-		return NULL;
-	if (lseek(fd, offset, SEEK_SET) != offset)
+	bzMatch = 0;
+	gzMatch = 0;
+	archive_type = 0;
+	offset = 0;
+	do {
+		ssize_t	bytes, i;
+
+		bytes = read(fd, buffer, sizeof(buffer));
+		if (bytes <= 0)
+			return NULL;
+
+		for (i = 0; i < bytes; i++) {
+			/* Look for bzip2 header. */
+			if (buffer[i] == BZipMagic[bzMatch]) {
+				bzMatch++;
+				if (bzMatch == sizeof(BZipMagic)) {
+					archive_type = 1;
+					offset = i - bytes -
+					    sizeof(BZipMagic) + 1;
+					break;
+				}
+			} else {
+				bzMatch = 0;
+			}
+
+			/* Look for gzip header. */
+			if (buffer[i] == GZipMagic[gzMatch]) {
+				gzMatch++;
+				if (gzMatch == sizeof(GZipMagic)) {
+					archive_type = 2;
+					offset = i - bytes -
+					    sizeof(GZipMagic) + 1;
+					break;
+				}
+			} else {
+				gzMatch = 0;
+			}
+
+			offset++;
+		}
+	} while (archive_type == 0);
+
+	/* Go back to the beginning of the archive. */
+	if (lseek(fd, offset, SEEK_CUR) < RPM_LEAD_SIZE)
 		return NULL;
 
 	if ((fh = calloc(1, sizeof (FileHandle))) == NULL)
 		return NULL;
 
-	if ((Magic[0] == 'B') && (Magic[1] == 'Z') && (Magic[2] == 'h')) {
+	if (archive_type == 1) {
+		/* bzip2 archive */
 		int	bzerror;
 
 		if ((fd = dup(fd)) < 0) {
@@ -192,6 +255,7 @@ Open(int fd)
 			return (NULL);
 		}
 	} else {
+		/* gzip archive */
 		if ((fh->fh_GZFile = gzdopen(fd, "r")) == NULL) {
 			free(fh);
 			return (NULL);
@@ -215,7 +279,7 @@ Read(FileHandle *fh, void *buffer, int length)
 	return (bytes == length);
 }
 
-static int
+static bool
 SkipAndAlign(FileHandle *fh, off_t Skip)
 
 {
@@ -223,20 +287,20 @@ SkipAndAlign(FileHandle *fh, off_t Skip)
 
 	NewPos = (fh->fh_Pos + Skip + 3) & ~3;
 	if (fh->fh_Pos == NewPos)
-		return TRUE;
+		return true;
 
 	if (fh->fh_GZFile != NULL) {
 		if (gzseek(fh->fh_GZFile, NewPos, SEEK_SET) == NewPos) {
 			fh->fh_Pos = NewPos;
-			return TRUE;
+			return true;
 		}
-		return FALSE;
+		return false;
 	} else {
 		static void	*Buffer = NULL;
 		static size_t	BufferSize = 0;
 
 		if (!InitBuffer(&Buffer, &BufferSize))
-			return FALSE;
+			return false;
 
 		while (fh->fh_Pos < NewPos) {
 			off_t	Length;
@@ -246,11 +310,11 @@ SkipAndAlign(FileHandle *fh, off_t Skip)
 			Chunk = (Length > (off_t)BufferSize) ?
 			    (off_t)BufferSize : Length;
 			if (!Read(fh, Buffer, Chunk))
-				return FALSE;
+				return false;
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 static PListEntry *
@@ -413,22 +477,22 @@ GetData(FileHandle *In, unsigned long Length)
 	return NULL;
 }
 
-static int
+static bool
 GetCPIOHeader(FileHandle *In, unsigned long *Fields, char **Name)
 {
-	char	Buffer[CPIO_NUM_HEADERS*CPIO_FIELD_LENGTH], *Ptr;
+	char	Buffer[CPIO_NUM_HEADERS * CPIO_FIELD_LENGTH], *Ptr;
 	int	Index;
 	unsigned long	Value;
 
 	*Name = NULL;
 
 	if (!Read(In, Buffer, sizeof (CPIOMagic)))
-		return FALSE;
+		return false;
 	if (memcmp(Buffer, CPIOMagic, sizeof (CPIOMagic)) != 0)
-		return FALSE;
+		return false;
 
 	if (!Read(In, Buffer, sizeof (Buffer)))
-		return FALSE;
+		return false;
 
 	Ptr = Buffer;
 	Index = sizeof (Buffer);
@@ -442,7 +506,7 @@ GetCPIOHeader(FileHandle *In, unsigned long *Fields, char **Name)
 		} else if ((*Ptr >= 'a') && (*Ptr <= 'f')) {
 				Value += (unsigned long)(*Ptr++-'a') + 10;
 		} else {
-			return FALSE;
+			return false;
 		}
    
 		if ((Index % CPIO_FIELD_LENGTH) == 0) {
@@ -453,7 +517,7 @@ GetCPIOHeader(FileHandle *In, unsigned long *Fields, char **Name)
 
 	Value = Fields[CPIO_HDR_NAMESIZE - CPIO_NUM_HEADERS];
 	if ((*Name = GetData(In, Value)) == NULL)
-		return FALSE;
+		return false;
 	return ((*Name)[Value -1 ] == '\0');
 }
 
@@ -474,7 +538,7 @@ ConvertMode(unsigned long CPIOMode)
 	return Mode;
 }
 
-static int
+static bool
 MakeTargetDir(char *Name, PListEntry **Dirs, int MarkNonEmpty)
 {
 	char		*Basename;
@@ -483,24 +547,24 @@ MakeTargetDir(char *Name, PListEntry **Dirs, int MarkNonEmpty)
 	int	Result;
 
 	if ((Basename = strrchr(Name, '/')) == NULL)
-		return TRUE;
+		return true;
 
 	*Basename = '\0';
 	if ((Dir = FindPListEntry(*Dirs, Name)) != NULL) {
 		*Basename = '/';
 		Dir->pe_DirEmpty = !MarkNonEmpty;
-		return TRUE;
+		return true;
 	}
 
-	if (!MakeTargetDir(Name, Dirs, TRUE)) {
+	if (!MakeTargetDir(Name, Dirs, true)) {
 		*Basename = '/';
-		return FALSE;
+		return false;
 	}
 
 	if (stat(Name, &Stat) == 0) {
 		Result = S_ISDIR(Stat.st_mode);
 	} else if (errno != ENOENT) {
-		Result = FALSE;
+		Result = false;
 	} else if ((Result = (mkdir(Name, S_IRWXU|S_IRWXG|S_IRWXO) == 0))) {
 		InsertPListEntry(Dirs, Name)->pe_DirMode =
 		    S_IRWXU|S_IRWXG|S_IRWXO;
@@ -510,40 +574,40 @@ MakeTargetDir(char *Name, PListEntry **Dirs, int MarkNonEmpty)
 	return Result;
 }
 
-static int
+static bool
 MakeDir(char *Name, mode_t Mode, int *OldDir)
 {
 	struct stat Stat;
 
-	*OldDir = FALSE;
+	*OldDir = false;
 	if (mkdir(Name, Mode) == 0)
-		return TRUE;
+		return true;
 
 	if ((errno != EEXIST) || (lstat(Name, &Stat) < 0) || 
 	    !S_ISDIR(Stat.st_mode)) {
-		return FALSE;
+		return false;
 	}
 
-	*OldDir = TRUE;
-	return TRUE;
+	*OldDir = true;
+	return true;
 }
 
-static int
+static bool
 MakeSymLink(char *Link, char *Name)
 {
 	struct stat Stat;
 
-	if (symlink(Link, Name) == 0) return TRUE;
+	if (symlink(Link, Name) == 0) return true;
 
 	if ((errno != EEXIST) || (lstat(Name, &Stat) < 0) || 
 	    !S_ISLNK(Stat.st_mode)) {
-		return FALSE;
+		return false;
 	}
 
 	return ((unlink(Name) == 0) && (symlink(Link, Name) == 0));
 }
 
-static int
+static bool
 WriteFile(FileHandle *In, char *Name, mode_t Mode, unsigned long Length,
     char *Link)
 {
@@ -554,21 +618,21 @@ WriteFile(FileHandle *In, char *Name, mode_t Mode, unsigned long Length,
 
 	if ((lstat(Name, &Stat) == 0) &&
 	    (!S_ISREG(Stat.st_mode) || (unlink(Name) < 0))) {
-		return FALSE;
+		return false;
 	}
 
 	if (!InitBuffer(&Buffer, &BufferSize))
-		return FALSE;
+		return false;
 
 	if (Link != NULL) {
 		if (link(Link, Name) < 0)
-			return FALSE;
+			return false;
 		Out = open(Name, O_WRONLY, Mode);
 	 } else {
 		Out = open(Name, O_WRONLY|O_CREAT, Mode);
 	}
 	if (Out < 0)
-		return FALSE;
+		return false;
 
 	while (Length > 0) {
 		int	Chunk;
@@ -584,7 +648,7 @@ WriteFile(FileHandle *In, char *Name, mode_t Mode, unsigned long Length,
 		return SkipAndAlign(In, 0);
 
 	(void)unlink(Name);
-	return FALSE;
+	return false;
 }
 
 static void
@@ -611,7 +675,7 @@ CheckSymLinks(PListEntry **Links, PListEntry **Files, PListEntry **Dirs)
 			*Basename = '\0';
 			if ((Ptr = FindPListEntry(*Dirs,
 			    Link->pe_Name)) != NULL)
-				Ptr->pe_DirEmpty = FALSE;
+				Ptr->pe_DirEmpty = false;
 		}
 
 		if (Link->pe_Right == NULL) {
@@ -634,7 +698,7 @@ CheckSymLinks(PListEntry **Links, PListEntry **Files, PListEntry **Dirs)
 	}
 }
 
-static int
+static bool
 CheckPrefix(char *Prefix, char *Name)
 {
 	int	Length;
@@ -670,9 +734,8 @@ main(int argc, char **argv)
 	char		*Progname;
 	FILE		*PListFile;
 	char		**Ignore, *Prefix;
-	int		Opt, Index, FD, IsSource, StripCount;
+	int		Opt, Index, FD, StripCount;
 	PListEntry	*Files, *Links, *Dirs;
-	Header		Hdr;
 	FileHandle	*In;
 
 	Progname = strrchr(argv[0], '/');
@@ -742,17 +805,9 @@ main(int argc, char **argv)
 			return EXIT_FAILURE;
 		}
 
-		switch (rpmReadPackageHeader(FD, &Hdr, &IsSource, NULL,
-		    NULL)) {
-		case 0:
-			break;
-		case 1:
+		if (!IsRPMFile(FD)) {
 			(void)fprintf(stderr,
 			    "%s: file is not an RPM package.\n", argv[Index]);
-			return EXIT_FAILURE;
-		default:
-			(void)fprintf(stderr, "%s: error reading header.\n",
-			    argv[Index]);
 			return EXIT_FAILURE;
 		}
 
@@ -825,7 +880,7 @@ main(int argc, char **argv)
 					return EXIT_FAILURE;
 				}
 
-				if (!MakeTargetDir(Name, &Dirs, TRUE)) {
+				if (!MakeTargetDir(Name, &Dirs, true)) {
 					(void)fprintf(stderr, 
 					    "%s: can't create parent "
 					    "directories for \"%s\".\n", 
@@ -842,7 +897,7 @@ main(int argc, char **argv)
 
 				if (!OldDir) {
 					Dir = InsertPListEntry(&Dirs, Name);
-					Dir->pe_DirEmpty = TRUE;
+					Dir->pe_DirEmpty = true;
 					Dir->pe_DirMode = Mode;
 				}
 				break;
@@ -857,7 +912,7 @@ main(int argc, char **argv)
 					return EXIT_FAILURE;
 				}
 
-				if (!MakeTargetDir(Name, &Dirs, TRUE)) {
+				if (!MakeTargetDir(Name, &Dirs, true)) {
 					(void)fprintf(stderr, 
 					    "%s: can't create parent "
 					    "directories for \"%s\".\n", 
@@ -896,7 +951,7 @@ main(int argc, char **argv)
 				break;
 			}
 			case C_ISREG:
-				if (!MakeTargetDir(Name, &Dirs, TRUE)) {
+				if (!MakeTargetDir(Name, &Dirs, true)) {
 					(void)fprintf(stderr, 
 					    "%s: can't create parent "
 					    "directories for \"%s\".\n", 
