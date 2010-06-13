@@ -1,10 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dovecot.sh,v 1.5 2010/05/03 19:19:01 ghen Exp $
+# $NetBSD: dovecot.sh,v 1.6 2010/06/13 23:01:50 erh Exp $
 #
 
 # PROVIDE: dovecot
-# REQUIRE: DAEMON LOGIN
+# REQUIRE: DAEMON LOGIN ntpdate
 
 . /etc/rc.subr
 
