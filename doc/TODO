@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9391 2010/06/13 23:16:20 wiz Exp $
+$NetBSD: TODO,v 1.9392 2010/06/13 23:39:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alsa-lib-1.0.23
 	o alsa-plugins-1.0.22
 	o amanda-2.6.1p2
-	o amarok-2.3.1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.4
 	o amaya-11.1
