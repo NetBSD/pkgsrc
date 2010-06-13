@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2010/02/19 14:09:58 asau Exp $
+# $NetBSD: Makefile,v 1.50 2010/06/13 22:44:33 wiz Exp $
 
 CATEGORIES+=		x11
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFLICTS+=		gnuplot-nox11-[0-9]*
 

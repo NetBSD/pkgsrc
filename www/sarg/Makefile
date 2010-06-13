@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2010/01/18 09:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/06/13 22:45:34 wiz Exp $
 
 DISTNAME=		sarg-2.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 

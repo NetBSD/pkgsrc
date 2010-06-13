@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2006/04/19 17:04:31 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2010/06/13 22:44:46 wiz Exp $
 
 --- Local.config.orig	1998-04-01 02:58:05.000000000 +0200
 +++ Local.config
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.7 2006/04/19 17:04:31 wiz Exp $
  #ifdef HavePNG
 -PNG_LIB     = -L/usr/local/lib -lpng -lz
 -PNG_INCLUDE = -I/usr/local/include/png
-+PNG_LIB     = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng12 -lz -lm
++PNG_LIB     = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng -lz -lm
 +PNG_INCLUDE = -I${LOCALBASE}/include
  #endif
  

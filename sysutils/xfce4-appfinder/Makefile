@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2009/09/16 01:15:34 reed Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:45:25 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-appfinder-${XFCE4_VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 COMMENT=	Xfce application finder
 

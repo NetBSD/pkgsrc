@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/03/11 04:24:57 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:44:40 wiz Exp $
 #
 
 DISTNAME=	clutter-perl-1.0.1
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/clutter-perl/1.0/
 

@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1 2010/06/13 22:44:40 wiz Exp $
+
+Not compatible with png-1.4.
+
+--- RGBAImage.cpp.orig	2007-03-16 06:17:17.000000000 +0000
++++ RGBAImage.cpp
+@@ -15,7 +15,9 @@ if not, write to the Free Software Found
+ */
+ 
+ #include "RGBAImage.h"
++#if 0
+ #include "png.h"
++#endif
+ #include "tiff.h"
+ #include "tiffio.h"
+ 
+@@ -54,6 +56,7 @@ RGBAImage* RGBAImage::ReadTiff(char *fil
+ 	return fimg;
+ }
+ 
++#if 0
+ // This portion was written by Scott Corley
+ RGBAImage* RGBAImage::ReadPNG(char *filename)
+ {
+@@ -117,6 +120,7 @@ RGBAImage* RGBAImage::ReadPNG(char *file
+ 	png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
+ 	return fimg;
+ }
++#endif
+ 		   
+ bool RGBAImage::WritePPM()
+ {	
