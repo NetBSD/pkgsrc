@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2010/01/21 18:20:43 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/14 18:00:54 drochner Exp $
 
---- configure.orig	2009-10-19 12:06:20.000000000 +0000
+--- configure.orig	2010-03-30 13:12:02.000000000 +0000
 +++ configure
-@@ -19017,6 +19017,8 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
+@@ -15144,6 +15144,8 @@ fi
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
 +#include <sys/types.h>

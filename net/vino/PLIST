@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/01/21 18:20:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/06/14 18:00:53 drochner Exp $
 bin/vino-passwd
 bin/vino-preferences
 libexec/vino-server
@@ -24,6 +24,7 @@ share/locale/da/LC_MESSAGES/vino.mo
 share/locale/de/LC_MESSAGES/vino.mo
 share/locale/dz/LC_MESSAGES/vino.mo
 share/locale/el/LC_MESSAGES/vino.mo
+share/locale/en@shaw/LC_MESSAGES/vino.mo
 share/locale/en_CA/LC_MESSAGES/vino.mo
 share/locale/en_GB/LC_MESSAGES/vino.mo
 share/locale/es/LC_MESSAGES/vino.mo
