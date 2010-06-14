@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2217 2010/06/14 20:32:26 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2218 2010/06/14 20:44:19 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2959,3 +2959,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/gnome-doc-utils to 0.20.1 [drochner 2010-06-14]
 	Updated devel/py-urwid to 0.9.9.1 [tonio 2010-06-14]
 	Added devel/p5-CPAN-FindDependencies version 2.34 [seb 2010-06-14]
+	Updated devel/p5-Package-Stash to 0.04 [seb 2010-06-14]
