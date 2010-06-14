@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/04/18 05:42:21 seb Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/14 04:04:21 seb Exp $
 
-DISTNAME=	App-Nopaste-0.20
+DISTNAME=	App-Nopaste-0.22
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	www perl5
@@ -16,9 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/App/Nopaste/.packlist
 
-# We drop the git module dependency as we require p5-Config-INI
-
-DEPENDS+=	{perl>=5.10,p5-Module-Pluggable-[0-9]*}:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Moose>=0.74:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Getopt>=0.17:../../devel/p5-MooseX-Getopt
 DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
