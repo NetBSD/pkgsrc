@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2215 2010/06/14 16:53:39 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.2216 2010/06/14 17:55:03 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2957,3 +2957,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/docbook-xsl to 1.75.2 [drochner 2010-06-14]
 	Updated misc/stellarium to 0.10.5 [drochner 2010-06-14]
 	Updated textproc/gnome-doc-utils to 0.20.1 [drochner 2010-06-14]
+	Updated devel/py-urwid to 0.9.9.1 [tonio 2010-06-14]
