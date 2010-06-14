@@ -1,0 +1,4 @@
+The Perl 5 module CPAN::FindDependencies uses the CPAN packages
+index to map modules to distributions and vice versa, and then
+fetches distributions' META.yml or Makefile.PL files from
+http://search.cpan.org/ to determine pre-requisites.
