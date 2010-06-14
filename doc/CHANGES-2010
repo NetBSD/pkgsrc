@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2211 2010/06/14 09:55:15 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2212 2010/06/14 10:15:38 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2940,3 +2940,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-App-Nopaste to 0.22 [seb 2010-06-14]
 	Added devel/p5-Parse-CPAN-Packages version 2.31 [seb 2010-06-14]
 	Updated editors/ted to 2.21 [wiz 2010-06-14]
+	Updated devel/py-dulwich to 0.6.0 [joerg 2010-06-14]
