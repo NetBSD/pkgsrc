@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.9 2010/06/13 13:08:52 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.10 2010/06/14 11:24:48 tron Exp $	*/
 
 /*-
  * Copyright (c) 2004-2009 The NetBSD Foundation, Inc.
@@ -179,7 +179,7 @@ IsRPMFile(int fd)
 static FileHandle *
 Open(int fd)
 {
-	unsigned char	buffer[4096];
+	unsigned char	buffer[16384];
 	size_t		bzMatch, gzMatch;
 	int		archive_type;
 	off_t		offset;
@@ -197,8 +197,12 @@ Open(int fd)
 			return NULL;
 
 		for (i = 0; i < bytes; i++) {
+			unsigned char cur_char;
+
+			cur_char = buffer[i];
+
 			/* Look for bzip2 header. */
-			if (buffer[i] == BZipMagic[bzMatch]) {
+			if (cur_char == BZipMagic[bzMatch]) {
 				bzMatch++;
 				if (bzMatch == sizeof(BZipMagic)) {
 					archive_type = 1;
@@ -207,11 +211,11 @@ Open(int fd)
 					break;
 				}
 			} else {
-				bzMatch = 0;
+				bzMatch = (cur_char == BZipMagic[0]) ? 1 : 0;
 			}
 
 			/* Look for gzip header. */
-			if (buffer[i] == GZipMagic[gzMatch]) {
+			if (cur_char == GZipMagic[gzMatch]) {
 				gzMatch++;
 				if (gzMatch == sizeof(GZipMagic)) {
 					archive_type = 2;
@@ -220,10 +224,8 @@ Open(int fd)
 					break;
 				}
 			} else {
-				gzMatch = 0;
+				gzMatch = (cur_char == GZipMagic[0]) ? 1 : 0;
 			}
-
-			offset++;
 		}
 	} while (archive_type == 0);
 
