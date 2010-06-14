@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/04/18 05:42:21 seb Exp $
+$NetBSD: distinfo,v 1.8 2010/06/14 04:04:21 seb Exp $
 
-SHA1 (App-Nopaste-0.20.tar.gz) = 52498a2fce4fd56e2075070524834be5ab50ff63
-RMD160 (App-Nopaste-0.20.tar.gz) = d1bb002d19d8a9a48790a51c4f5ed7de1b4ccca3
-Size (App-Nopaste-0.20.tar.gz) = 33224 bytes
+SHA1 (App-Nopaste-0.22.tar.gz) = c3e0ba1f79665411d485d7f85ad222c483f8da70
+RMD160 (App-Nopaste-0.22.tar.gz) = 6fdb5a7c1812f92342d38f4f088c2fefd4eca6b4
+Size (App-Nopaste-0.22.tar.gz) = 33684 bytes
