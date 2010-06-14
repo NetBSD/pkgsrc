@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/10/19 11:17:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/06/14 08:51:36 joerg Exp $
 ${PYSITELIB}/_renderPM.so
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
@@ -12,11 +12,27 @@ ${PYSITELIB}/reportlab/fonts/DarkGarden-readme.txt
 ${PYSITELIB}/reportlab/fonts/DarkGarden.sfd
 ${PYSITELIB}/reportlab/fonts/DarkGardenMK.afm
 ${PYSITELIB}/reportlab/fonts/DarkGardenMK.pfb
+${PYSITELIB}/reportlab/fonts/Sy______.pfb
 ${PYSITELIB}/reportlab/fonts/Vera.ttf
 ${PYSITELIB}/reportlab/fonts/VeraBI.ttf
 ${PYSITELIB}/reportlab/fonts/VeraBd.ttf
 ${PYSITELIB}/reportlab/fonts/VeraIt.ttf
+${PYSITELIB}/reportlab/fonts/Zd______.pfb
+${PYSITELIB}/reportlab/fonts/Zx______.pfb
+${PYSITELIB}/reportlab/fonts/Zy______.pfb
+${PYSITELIB}/reportlab/fonts/_a______.pfb
+${PYSITELIB}/reportlab/fonts/_ab_____.pfb
+${PYSITELIB}/reportlab/fonts/_abi____.pfb
+${PYSITELIB}/reportlab/fonts/_ai_____.pfb
+${PYSITELIB}/reportlab/fonts/_eb_____.pfb
+${PYSITELIB}/reportlab/fonts/_ebi____.pfb
+${PYSITELIB}/reportlab/fonts/_ei_____.pfb
+${PYSITELIB}/reportlab/fonts/_er_____.pfb
 ${PYSITELIB}/reportlab/fonts/bitstream-vera-license.txt
+${PYSITELIB}/reportlab/fonts/cob_____.pfb
+${PYSITELIB}/reportlab/fonts/cobo____.pfb
+${PYSITELIB}/reportlab/fonts/com_____.pfb
+${PYSITELIB}/reportlab/fonts/coo_____.pfb
 ${PYSITELIB}/reportlab/graphics/__init__.py
 ${PYSITELIB}/reportlab/graphics/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/__init__.pyo
@@ -200,6 +216,9 @@ ${PYSITELIB}/reportlab/graphics/widgets/markers.pyo
 ${PYSITELIB}/reportlab/graphics/widgets/signsandsymbols.py
 ${PYSITELIB}/reportlab/graphics/widgets/signsandsymbols.pyc
 ${PYSITELIB}/reportlab/graphics/widgets/signsandsymbols.pyo
+${PYSITELIB}/reportlab/graphics/widgets/table.py
+${PYSITELIB}/reportlab/graphics/widgets/table.pyc
+${PYSITELIB}/reportlab/graphics/widgets/table.pyo
 ${PYSITELIB}/reportlab/lib/PyFontify.py
 ${PYSITELIB}/reportlab/lib/PyFontify.pyc
 ${PYSITELIB}/reportlab/lib/PyFontify.pyo
@@ -258,6 +277,9 @@ ${PYSITELIB}/reportlab/lib/pagesizes.pyo
 ${PYSITELIB}/reportlab/lib/pdfencrypt.py
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyc
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyo
+${PYSITELIB}/reportlab/lib/pygments2xpre.py
+${PYSITELIB}/reportlab/lib/pygments2xpre.pyc
+${PYSITELIB}/reportlab/lib/pygments2xpre.pyo
 ${PYSITELIB}/reportlab/lib/randomtext.py
 ${PYSITELIB}/reportlab/lib/randomtext.pyc
 ${PYSITELIB}/reportlab/lib/randomtext.pyo
