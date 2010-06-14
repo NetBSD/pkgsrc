@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/11 15:04:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/14 10:15:15 joerg Exp $
 bin/dul-daemon
+bin/dul-web
 bin/dulwich
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -16,6 +17,12 @@ ${PYSITELIB}/dulwich/client.pyo
 ${PYSITELIB}/dulwich/errors.py
 ${PYSITELIB}/dulwich/errors.pyc
 ${PYSITELIB}/dulwich/errors.pyo
+${PYSITELIB}/dulwich/fastexport.py
+${PYSITELIB}/dulwich/fastexport.pyc
+${PYSITELIB}/dulwich/fastexport.pyo
+${PYSITELIB}/dulwich/file.py
+${PYSITELIB}/dulwich/file.pyc
+${PYSITELIB}/dulwich/file.pyo
 ${PYSITELIB}/dulwich/index.py
 ${PYSITELIB}/dulwich/index.pyc
 ${PYSITELIB}/dulwich/index.pyo
@@ -52,6 +59,12 @@ ${PYSITELIB}/dulwich/tests/__init__.pyo
 ${PYSITELIB}/dulwich/tests/test_client.py
 ${PYSITELIB}/dulwich/tests/test_client.pyc
 ${PYSITELIB}/dulwich/tests/test_client.pyo
+${PYSITELIB}/dulwich/tests/test_fastexport.py
+${PYSITELIB}/dulwich/tests/test_fastexport.pyc
+${PYSITELIB}/dulwich/tests/test_fastexport.pyo
+${PYSITELIB}/dulwich/tests/test_file.py
+${PYSITELIB}/dulwich/tests/test_file.pyc
+${PYSITELIB}/dulwich/tests/test_file.pyo
 ${PYSITELIB}/dulwich/tests/test_index.py
 ${PYSITELIB}/dulwich/tests/test_index.pyc
 ${PYSITELIB}/dulwich/tests/test_index.pyo
@@ -67,9 +80,24 @@ ${PYSITELIB}/dulwich/tests/test_objects.pyo
 ${PYSITELIB}/dulwich/tests/test_pack.py
 ${PYSITELIB}/dulwich/tests/test_pack.pyc
 ${PYSITELIB}/dulwich/tests/test_pack.pyo
+${PYSITELIB}/dulwich/tests/test_patch.py
+${PYSITELIB}/dulwich/tests/test_patch.pyc
+${PYSITELIB}/dulwich/tests/test_patch.pyo
 ${PYSITELIB}/dulwich/tests/test_protocol.py
 ${PYSITELIB}/dulwich/tests/test_protocol.pyc
 ${PYSITELIB}/dulwich/tests/test_protocol.pyo
 ${PYSITELIB}/dulwich/tests/test_repository.py
 ${PYSITELIB}/dulwich/tests/test_repository.pyc
 ${PYSITELIB}/dulwich/tests/test_repository.pyo
+${PYSITELIB}/dulwich/tests/test_server.py
+${PYSITELIB}/dulwich/tests/test_server.pyc
+${PYSITELIB}/dulwich/tests/test_server.pyo
+${PYSITELIB}/dulwich/tests/test_web.py
+${PYSITELIB}/dulwich/tests/test_web.pyc
+${PYSITELIB}/dulwich/tests/test_web.pyo
+${PYSITELIB}/dulwich/tests/utils.py
+${PYSITELIB}/dulwich/tests/utils.pyc
+${PYSITELIB}/dulwich/tests/utils.pyo
+${PYSITELIB}/dulwich/web.py
+${PYSITELIB}/dulwich/web.pyc
+${PYSITELIB}/dulwich/web.pyo
