@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2207 2010/06/14 02:25:16 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2208 2010/06/14 03:38:33 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2936,3 +2936,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/amarok to 2.3.1 [wiz 2010-06-13]
 	Updated net/mtr to 0.79 [wiz 2010-06-13]
 	Updated graphics/ruby-opengl to 0.60.1 [obache 2010-06-14]
+	Updated devel/p5-MooseX-Getopt to 0.28 [seb 2010-06-14]
