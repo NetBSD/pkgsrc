@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2213 2010/06/14 10:25:02 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.2214 2010/06/14 11:25:01 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2942,3 +2942,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/ted to 2.21 [wiz 2010-06-14]
 	Updated devel/py-dulwich to 0.6.0 [joerg 2010-06-14]
 	Updated print/py-reportlab to 2.4 [joerg 2010-06-14]
+	Updated pkgtools/rpm2pkg to 3.0.1 [tron 2010-06-14]
