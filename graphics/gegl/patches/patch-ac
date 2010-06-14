@@ -1,0 +1,42 @@
+$NetBSD: patch-ac,v 1.1 2010/06/14 18:48:33 drochner Exp $
+
+--- gegl/buffer/gegl-buffer.c.orig	2010-02-07 15:31:58.000000000 +0000
++++ gegl/buffer/gegl-buffer.c
+@@ -77,12 +77,14 @@
+ 
+ //#define GEGL_BUFFER_DEBUG_ALLOCATIONS
+ 
++#ifdef GEGL_BUFFER_DEBUG_ALLOCATIONS
+ /* #define GEGL_BUFFER_DEBUG_ALLOCATIONS to print allocation stack
+  * traces for leaked GeglBuffers using GNU C libs backtrace_symbols()
+  */
+ #ifndef G_OS_WIN32
+ #include <execinfo.h>
+ #endif
++#endif
+ 
+ 
+ G_DEFINE_TYPE (GeglBuffer, gegl_buffer, GEGL_TYPE_TILE_HANDLER)
+@@ -870,7 +872,6 @@ gegl_buffer_class_init (GeglBufferClass 
+ }
+ 
+ #ifdef GEGL_BUFFER_DEBUG_ALLOCATIONS
+-#endif
+ #define MAX_N_FUNCTIONS 100
+ static gchar *
+ gegl_buffer_get_alloc_stack (void)
+@@ -908,11 +909,14 @@ gegl_buffer_get_alloc_stack (void)
+ 
+   return result;
+ }
++#endif
+ 
+ void gegl_bt (void);
+ void gegl_bt (void)
+ {
++#ifdef GEGL_BUFFER_DEBUG_ALLOCATIONS
+   g_print ("%s\n", gegl_buffer_get_alloc_stack ());
++#endif
+ }
+ 
+ static void
