@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2010/02/28 20:49:21 tonio Exp $
+# $NetBSD: options.mk,v 1.2 2010/06/14 17:58:44 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libsoup24
 PKG_SUPPORTED_OPTIONS=	gnome
@@ -10,7 +10,7 @@ PLIST_VARS+= gnome
 
 .if !empty(PKG_OPTIONS:Mgnome)
 .include "../../devel/GConf/buildlink3.mk"
-.include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../security/libgnome-keyring/buildlink3.mk"
 PKGCONFIG_OVERRIDE+=	libsoup-gnome-2.4.pc.in
 PLIST.gnome=	yes
 .else
