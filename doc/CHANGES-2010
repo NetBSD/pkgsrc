@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2210 2010/06/14 04:34:32 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2211 2010/06/14 09:55:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2939,3 +2939,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Getopt to 0.28 [seb 2010-06-14]
 	Updated www/p5-App-Nopaste to 0.22 [seb 2010-06-14]
 	Added devel/p5-Parse-CPAN-Packages version 2.31 [seb 2010-06-14]
+	Updated editors/ted to 2.21 [wiz 2010-06-14]
