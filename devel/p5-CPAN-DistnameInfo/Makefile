@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/24 17:35:01 seb Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/14 04:24:12 seb Exp $
 #
 
 DISTNAME=	CPAN-DistnameInfo-0.10
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CPAN-DistnameInfo/
-COMMENT=	Perl 5 module to exatract distname and version from distfile
+COMMENT=	Perl 5 module to extract distname and version from distfile
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
