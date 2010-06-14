@@ -1,0 +1,4 @@
+The Perl 5 module XML::Rabbit is a simple Moose-based base class
+you can use to make simple XPath-based XML extractors. Each attribute
+in your class is linked to an XPath query that is executed on your
+XML document when you request the value.
