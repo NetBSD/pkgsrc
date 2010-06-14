@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2010/06/09 22:48:48 minskim Exp $
+$NetBSD: distinfo,v 1.11 2010/06/14 23:58:18 minskim Exp $
 
-SHA1 (emacs-snapshot_20100608.orig.tar.lzma) = 69f5487621e76d91bd3cd1df32e50ef731d91c06
-RMD160 (emacs-snapshot_20100608.orig.tar.lzma) = 2cec2e1a9f0b8a18183e9d6fd6937a6ba54257a6
-Size (emacs-snapshot_20100608.orig.tar.lzma) = 22545115 bytes
+SHA1 (emacs-snapshot_20100612.orig.tar.lzma) = 07ce9f5676fcdfb16b69e88d661bf18aaa01d748
+RMD160 (emacs-snapshot_20100612.orig.tar.lzma) = 01bb07f2495814f67c7d28dd570e0ec82d287f13
+Size (emacs-snapshot_20100612.orig.tar.lzma) = 22549754 bytes
 SHA1 (patch-aa) = de76919bedcdfaffe567bc80633a9e908714ec2b
 SHA1 (patch-ab) = f40d65cdbce564de8f7f5a5f8ec64f9ab747d157
-SHA1 (patch-ac) = 9378586aa9720beebf19b9d54e94ef4f08e50745
+SHA1 (patch-ac) = e3d87b7227054652fc84cc485c98e933e2a602b3
 SHA1 (patch-ad) = b8faf958f7ab3effd6c8dbcbf51fe70ddb2ecdae
 SHA1 (patch-ag) = 2fc1d3fd953e595eb0ed1f3f5289a70a754e1aed
