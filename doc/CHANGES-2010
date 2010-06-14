@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2208 2010/06/14 03:38:33 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2209 2010/06/14 04:04:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2937,3 +2937,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/mtr to 0.79 [wiz 2010-06-13]
 	Updated graphics/ruby-opengl to 0.60.1 [obache 2010-06-14]
 	Updated devel/p5-MooseX-Getopt to 0.28 [seb 2010-06-14]
+	Updated www/p5-App-Nopaste to 0.22 [seb 2010-06-14]
