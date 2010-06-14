@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2010/06/13 22:44:13 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/06/14 09:55:04 wiz Exp $
 
-DISTNAME=	ted-2.16.src
-PKGNAME=	ted-2.16
-PKGREVISION=	8
+DISTNAME=	ted-2.21.src
+PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
 
@@ -13,10 +12,11 @@ COMMENT=	X11 based WordPad-like word processor
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gtar
+MAKE_JOBS_SAFE=	no
 
-WRKSRC=		${WRKDIR}/Ted-2.16
-USE_X11BASE=	YES
+WRKSRC=		${WRKDIR}/Ted-2.21
 
 AFMDIR=		${PREFIX}/share/Ted/afm
 INDDIR=		${PREFIX}/share/Ted/ind
@@ -24,9 +24,8 @@ INFODIR=	${PREFIX}/share/doc/Ted
 
 CONFIGURE_ENV+=	ac_jpeg_includes="${BUILDLINK_PREFIX.jpeg}/include"
 CONFIGURE_ENV+=	ac_jpeg_libraries="${BUILDLINK_PREFIX.jpeg}/lib"
-# disabled, has not been update since about libpng-0.90
-#CONFIGURE_ENV+=	ac_png_includes="${BUILDLINK_PREFIX.png}/include"
-#CONFIGURE_ENV+=	ac_png_libraries="${BUILDLINK_PREFIX.png}/lib"
+CONFIGURE_ENV+=	ac_png_includes="${BUILDLINK_PREFIX.png}/include"
+CONFIGURE_ENV+=	ac_png_libraries="${BUILDLINK_PREFIX.png}/lib"
 CONFIGURE_ENV+=	ac_tiff_includes="${BUILDLINK_PREFIX.tiff}/include"
 CONFIGURE_ENV+=	ac_tiff_libraries="${BUILDLINK_PREFIX.tiff}/lib"
 CONFIGURE_ENV+=	ac_xm_includes="${BUILDLINK_PREFIX.openmotif}/include"
@@ -47,7 +46,7 @@ MAKE_ENV+=	DEF_PKGDIR='-DPKGDIR=\"${PREFIX}\"' \
 BUILD_TARGET=	compile.shared
 INSTALL_TARGET=	install.shared
 
-INSTALLATION_DIRS=	bin lib/X11/app-defaults
+INSTALLATION_DIRS=	bin lib/X11/app-defaults ${AFMDIR} ${INDDIR} ${INFODIR}
 
 post-extract:
 	@cd ${WRKSRC} ; ${GTAR} xf tedPackage/TedBindist.tar
@@ -61,32 +60,16 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Ted/Ted ${DESTDIR}${PREFIX}/bin/Ted
-	${INSTALL_DATA_DIR} ${DESTDIR}${AFMDIR}
-	${INSTALL_DATA} \
-		${WRKSRC}/afm/Courier-Bold.afm \
-		${WRKSRC}/afm/Courier-BoldOblique.afm \
-		${WRKSRC}/afm/Courier-Oblique.afm \
-		${WRKSRC}/afm/Courier.afm \
-		${WRKSRC}/afm/Helvetica-Bold.afm \
-		${WRKSRC}/afm/Helvetica-BoldOblique.afm \
-		${WRKSRC}/afm/Helvetica-Oblique.afm \
-		${WRKSRC}/afm/Helvetica.afm \
-		${WRKSRC}/afm/Symbol.afm \
-		${WRKSRC}/afm/Times-Bold.afm \
-		${WRKSRC}/afm/Times-BoldItalic.afm \
-		${WRKSRC}/afm/Times-Italic.afm \
-		${WRKSRC}/afm/Times-Roman.afm \
-		${DESTDIR}${AFMDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${INDDIR}
+	${INSTALL_DATA} ${WRKSRC}/Ted/afm/*.afm ${DESTDIR}${AFMDIR}
 	${INSTALL_DATA} ${FILESDIR}/README.ind ${DESTDIR}${INDDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${INFODIR}
 	${INSTALL_DATA} ${WRKSRC}/Ted/TedDocument-en_US.rtf ${DESTDIR}${INFODIR}
 	${INSTALL_DATA}	${WRKSRC}/Ted/Ted.ad \
 		${DESTDIR}${PREFIX}/lib/X11/app-defaults/Ted
 
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-#.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
