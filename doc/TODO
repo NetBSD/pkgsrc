@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9394 2010/06/14 02:26:11 obache Exp $
+$NetBSD: TODO,v 1.9395 2010/06/14 09:55:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1328,7 +1328,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tdir-1.67
 	o tds-1.6.2
 	o tea-27.1.0
-	o ted-2.17
 	o ted-en-us-2.17
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
