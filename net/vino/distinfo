@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2010/01/21 18:20:43 drochner Exp $
+$NetBSD: distinfo,v 1.9 2010/06/14 18:00:53 drochner Exp $
 
-SHA1 (vino-2.28.1.tar.bz2) = 2ef544100c74f3bc7f990fc6d2bc839dad231790
-RMD160 (vino-2.28.1.tar.bz2) = a118ce4ea3d7271f65d231f8786f98b148b5d358
-Size (vino-2.28.1.tar.bz2) = 794178 bytes
-SHA1 (patch-aa) = 96a58b9ed2827260b3b8ab203936df6f6deb1754
+SHA1 (vino-2.28.2.tar.bz2) = 7d6863956356475b8784cdd2017bfbbd0e0ce15e
+RMD160 (vino-2.28.2.tar.bz2) = 541006f8fac7b951bfc236869e52a3b1c02e1ed1
+Size (vino-2.28.2.tar.bz2) = 795208 bytes
+SHA1 (patch-aa) = a79f5d6cae5377c9029e5f1dfaf9b76f6da7e0a2
 SHA1 (patch-ab) = 81efc17f2d1275ea6131ffd44bdb8f50d0cf464e
 SHA1 (patch-ac) = 69bf929df606e106bf9401fc3a5b2a0fc241b8e7
