@@ -1,0 +1,24 @@
+$NetBSD: patch-gtk2-api-change,v 1.1 2010/06/14 19:21:06 gdt Exp $
+
+--- bubblemon.c.orig	2010-05-30 08:26:17.000000000 +0000
++++ bubblemon.c
+@@ -275,6 +275,8 @@ static void print_usage(void)
+ 
+ int main(int argc, char **argv)
+ {
++    /* hack borrowed from gentoo, to make info windows also work */
++    setenv("GDK_NATIVE_WINDOWS", "1", 0);
+     char execute[256];
+     int proximity = 0;
+     int ch;
+@@ -605,10 +607,7 @@ static void make_new_bubblemon_dockapp(v
+     gdk_window_set_back_pixmap(bm.iconwin, bm.pixmap, False);
+ 
+     gdk_window_show(bm.win);
+-#ifdef KDE_DOCKAPP
+-    /* makes the dockapp visible inside KDE wm */
+     gdk_window_show(bm.iconwin);
+-#endif
+ 
+     XSetWMHints(GDK_WINDOW_XDISPLAY(bm.win), win, &wmhints);
+ 
