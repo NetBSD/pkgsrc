@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.20 2010/02/24 22:51:37 joerg Exp $
+# $NetBSD: pkg-build,v 1.21 2010/06/15 21:11:43 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -69,6 +69,21 @@ run_make() {
 
 }
 
+run_usergroup() {
+	[ "${use_destdir}" != no ] || return 0
+	case "${usergroup_phase}" in
+	*configure)
+		[ "$1" != "configure" ] || ${make} create-usergroup
+		;;
+	*build)
+		[ "$1" != "build" ] || ${make} create-usergroup
+		;;
+	pre-install)
+		[ "$1" != "install" ] || ${make} create-usergroup
+		;;
+	esac
+}
+
 while read build_info_line; do
 	case "${build_info_line}" in
 	PKGNAME=*)
@@ -89,6 +104,8 @@ while read build_info_line; do
 	BOOTSTRAP_PKG=*)
 		is_bootstrap=${build_info_line#BOOTSTRAP_PKG=}
 		;;
+	USERGROUP_PHASE=*)
+		usergroup_phase=${build_info_line#USERGROUP_PHASE=}
 	esac
 done
 
@@ -106,6 +123,11 @@ destdir)
 	run_install=run_direct
 	;;
 esac
+
+if [ `whoami` != "root" ]; then
+	run_build=run_direct
+	run_install=run_direct
+fi
 
 ${pkg_up_to_date_script} ${pkgname} ${dependencies} && exit 0
 
@@ -157,9 +179,12 @@ if [ ! -z "$dependencies" ]; then
 fi
 # Build package, create a separate log file for each major phase
 run_make run_direct checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
-run_make ${run_build} configure  > ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
-run_make ${run_build} all  > ${bulklog}/${pkgname}/build.log 2>&1 || cleanup
-run_make ${run_install} stage-install  > ${bulklog}/${pkgname}/install.log 2>&1 || cleanup
+run_usergroup configure > ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
+run_make ${run_build} configure >> ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
+run_usergroup build> ${bulklog}/${pkgname}/build.log 2>&1 || cleanup
+run_make ${run_build} all >> ${bulklog}/${pkgname}/build.log 2>&1 || cleanup
+run_usergroup install > ${bulklog}/${pkgname}/install.log 2>&1 || cleanup
+run_make ${run_install} stage-install >> ${bulklog}/${pkgname}/install.log 2>&1 || cleanup
 run_make run_direct package  > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
 
 # When using DESTDIR build, add the package once to test install rules.
