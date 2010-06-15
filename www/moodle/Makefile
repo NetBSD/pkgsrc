@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/04 09:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/15 08:16:12 wiz Exp $
 
 DISTNAME=	moodle-1.9.8
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.moodle.org/stable19/ \
 		http://download2.moodle.org/stable19/ \
@@ -23,7 +24,7 @@ EGDIR=			share/examples/moodle
 MOODLEDIR=		${PREFIX}/share/moodle
 MOODLEDATADIR=		${PREFIX}/share/moodledata
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+#PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${EGDIR} share/moodle
 
 .include "../../mk/bsd.prefs.mk"
@@ -44,11 +45,12 @@ CONF_FILES=		${PREFIX}/${EGDIR}/moodle.conf \
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing pathnames in configuration file.
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	../moodle.conf
-SUBST_SED.paths=	-e "s,@MOODLEDIR@,${MOODLEDIR},g"
+SUBST_CLASSES+=		conf
+SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	../moodle.conf
+SUBST_SED.conf=		-e "s,@MOODLEDIR@,${MOODLEDIR},g"
+SUBST_SED.conf+=	-e "s,@MOODLEDATADIR@,${MOODLEDATADIR},g"
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
@@ -57,10 +59,10 @@ SUBST_FILES.php=	admin/mailout-debugger.php admin/process_email.php mod/chat/cha
 SUBST_SED.php=		-e "s,/usr/bin/php,/usr/pkg/bin/php,g"
 
 SUBST_CLASSES+=         perl
-SUBST_MESSAGE.paths=	Fixing the path of perl.
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	filter/algebra/algebra2tex.pl
-SUBST_SED.paths=	-e "s,/usr/bin/perl,/usr/pkg/bin/perl,g"
+SUBST_MESSAGE.perl=	Fixing the path of perl.
+SUBST_STAGE.perl=	post-patch
+SUBST_FILES.perl=	filter/algebra/algebra2tex.pl
+SUBST_SED.perl=		-e "s,/usr/bin/perl,/usr/pkg/bin/perl,g"
 
 WRKSRC=			${WRKDIR}/moodle
 
