@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2227 2010/06/15 11:03:03 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2228 2010/06/15 11:09:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/xmlrpc-c to 1.06.40 [adam 2010-06-15]
 	Updated devel/libidn to 1.19 [wiz 2010-06-15]
 	Updated games/gbrainy to 1.42 [wiz 2010-06-15]
+	Updated print/libspectre to 0.2.6 [wiz 2010-06-15]
