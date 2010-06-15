@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2236 2010/06/15 13:23:09 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2237 2010/06/15 13:36:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2978,3 +2978,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/attica to 0.1.4 [wiz 2010-06-15]
 	Updated net/openvpn to 2.1.1 [sborrill 2010-06-15]
 	Updated time/etm to 622 [wiz 2010-06-15]
+	Updated textproc/ruby-json to 1.4.3nb1 [obache 2010-06-15]
