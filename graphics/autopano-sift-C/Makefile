@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/15 09:42:23 adam Exp $
 
 DISTNAME=	autopano-sift-C-2.5.1
 PKGREVISION=	2
@@ -16,6 +16,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+
+# work-around finding libpng
+post-extract:
+	rm ${WRKSRC}/CMakeModules/FindPNG.cmake
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libpano13/buildlink3.mk"
