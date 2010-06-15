@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2008/02/19 18:45:24 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2010/06/15 23:01:23 pettai Exp $
 
 --- courier/doc/Makefile.in.orig	2007-11-17 19:48:53.000000000 -0500
 +++ courier/doc/Makefile.in
-@@ -151,7 +151,7 @@ top_srcdir = @top_srcdir@
+@@ -169,7 +169,7 @@ top_srcdir = @top_srcdir@
  version = @version@
  htmldocdir = @datadir@/htmldoc
  CLEANFILES = permissions.dat
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2008/02/19 18:45:24 jlam Exp $
  		draft-varshavchik-exdata-smtpext.txt \
  		draft-varshavchik-verp-smtpext.txt \
  		draft-varshavchik-security-smtpext.txt \
-@@ -189,66 +189,38 @@ htmlin = \
+@@ -207,67 +189,38 @@ htmlin = \
  		courier.html \
  		courierldapaliasd.html \
  		couriermlm.html \
@@ -63,7 +63,8 @@ $NetBSD: patch-ac,v 1.5 2008/02/19 18:45:24 jlam Exp $
 -man1 = sendmail.1 preline.1 maildirmake.1 cancelmsg.1 lockmail.1 maildrop.1 \
 -	mailq.1 mailbot.1 makemime.1 mimegpg.1 maildiracl.1 \
 -	makedat.1 reformail.1 reformime.1 couriermlm.1 testmxlookup.1 \
--	dot-forward.1 couriertls.1 couriertcpd.1 maildirkw.1 webmlmd.1
+-	dot-forward.1 couriertls.1 couriertcpd.1 maildirkw.1 \
+-	webmlmd.1
 -
 -man5 = dot-courier.5 maildir.5
 -man7 = localmailfilter.7 maildirquota.7 maildropgdbm.7 maildropfilter.7 \
@@ -83,21 +84,21 @@ $NetBSD: patch-ac,v 1.5 2008/02/19 18:45:24 jlam Exp $
 -	mkesmtpdcert.8 mkimapdcert.8 mkpop3dcert.8 \
 +	mkesmtpdcert.8 \
  	makealiases.8 makepercentrelay.8 makesmtpaccess.8 \
--	pop3d.8 submit.8 imapd.8
+-	pop3d.8 pop3d-ssl.8 submit.8 imapd.8
 +	submit.8
  
  BUILT_SOURCES = \
  	aliaslookup.html aliaslookup.8 \
-@@ -275,7 +247,7 @@ BUILT_SOURCES = \
+@@ -294,7 +265,7 @@ BUILT_SOURCES = \
  	webmlmd.html.in webmlmd.1.in
  
- EXTRA_DIST = $(nohtmlin) $(BUILT_SOURCES)
+ EXTRA_DIST = $(nohtmlin) $(BUILT_SOURCES) dotforward.1 pop3d-ssl.8
 -man_LINKS = $(man8dir)/courierpop3login.8 \
 +man_LINKS = \
  	$(man1dir)/rmail.1 $(man1dir)/dotforward.1 \
  	$(man8dir)/makesmtpaccess-msa.8 \
  	$(man8dir)/esmtpd-msa.8
-@@ -1156,8 +1128,7 @@ preline.1: preline.1.in
+@@ -1215,8 +1186,7 @@ preline.1: preline.1.in
  
  install-man-extra:
  	cd $(DESTDIR)$(man8dir) ; \

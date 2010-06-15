@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1 2008/02/19 18:45:24 jlam Exp $
+$NetBSD: patch-ay,v 1.2 2010/06/15 23:01:23 pettai Exp $
 
 --- webadmin/Makefile.in.orig	2007-11-17 19:53:34.000000000 -0500
 +++ webadmin/Makefile.in
-@@ -603,9 +603,6 @@ uninstall-am: uninstall-webadminDATA uni
+@@ -679,9 +679,6 @@ uninstall-am: uninstall-webadminDATA uni
  
  
  install-exec-hook:
