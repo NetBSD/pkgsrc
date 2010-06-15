@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:45:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/15 11:48:07 wiz Exp $
 #
 
-DISTNAME=	gupnp-igd-0.1.6
-PKGREVISION=	2
+DISTNAME=	gupnp-igd-0.1.7
 CATEGORIES=	net devel
 MASTER_SITES=	http://www.gupnp.org/sources/gupnp-igd/
 
