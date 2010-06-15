@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2243 2010/06/15 19:52:14 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2244 2010/06/15 21:12:25 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2986,3 +2986,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/openoffice3-bin to 3.2.1 [bad 2010-06-15]
 	Updated devel/p5-Path-Class to 0.19 [bad 2010-06-15]
 	Updated pkgtools/rpm2pkg to 3.0.2 [tron 2010-06-15]
+	Updated pkgtools/pbulk to 0.47 [joerg 2010-06-15]
