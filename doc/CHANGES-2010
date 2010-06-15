@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2253 2010/06/15 23:31:09 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.2254 2010/06/15 23:35:36 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2392,6 +2392,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-elsarticle to 1.20 [minskim 2010-05-10]
 	Updated print/tex-elsarticle-doc to 1.20 [minskim 2010-05-10]
 	Updated sysutils/cfengine2 to 2.2.10 [pettai 2010-05-10]
+	Updated net/ruby-dnsruby to 1.46 [pettai 2010-05-10]
 	Updated print/tex-algorithms to 2009 [minskim 2010-05-11]
 	Updated print/tex-algorithms-doc to 2009 [minskim 2010-05-11]
 	Updated print/tex-fancyvrb to 2.7anb1 [minskim 2010-05-11]
@@ -2884,6 +2885,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/vim-share to 7.2.442 [martti 2010-06-07]
 	Updated emulators/tme to 0.8 [tsutsui 2010-06-07]
 	Updated databases/py-bsddb3 to 5.0.0nb1 [gls 2010-06-07]
+	Updated net/ruby-dnsruby to 1.47 [pettai 2010-06-07]
 	Updated editors/emacs-snapshot to 24.0.50.20100602 [minskim 2010-06-07]
 	Added games/powder version 114 [wiz 2010-06-08]
 	Updated security/libgpg-error to 1.8 [wiz 2010-06-08]
@@ -2995,4 +2997,3 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/courier-imap to 4.8.0 [pettai 2010-06-15]
 	Updated security/courier-authlib to 0.63.0 [pettai 2010-06-15]
 	Updated mail/sqwebmail to 5.4.1 [pettai 2010-06-15]
-	Updated net/ruby-dnsruby to 1.47 [pettai 2010-06-15]
