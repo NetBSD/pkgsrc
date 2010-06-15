@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.822 2010/03/10 14:42:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.823 2010/06/15 22:06:48 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7387,12 +7387,12 @@ sub checkfile_patch($) {
 			#
 		}], [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
 			if (!$seen_comment) {
-				$opt_warn_style and $line->log_warning("Comment expected.");
+				$line->log_warning("Comment expected.");
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 		}], [PST_TEXT, re_patch_ufd, PST_UFA, sub() {
 			if (!$seen_comment) {
-				$opt_warn_style and $line->log_warning("Comment expected.");
+				$line->log_warning("Comment expected.");
 			}
 		}], [PST_TEXT, re_patch_text, PST_TEXT, sub() {
 			$seen_comment = true;
@@ -7404,14 +7404,14 @@ sub checkfile_patch($) {
 			if ($seen_comment) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
-				$opt_warn_style and $line->log_warning("Comment expected.");
+				$line->log_warning("Comment expected.");
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 		}], [PST_CENTER, re_patch_ufd, PST_UFA, sub() {
 			if ($seen_comment) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
-				$opt_warn_style and $line->log_warning("Comment expected.");
+				$line->log_warning("Comment expected.");
 			}
 		}], [PST_CENTER, undef, PST_TEXT, sub() {
 			$opt_warn_space and $line->log_note("Empty line expected.");
