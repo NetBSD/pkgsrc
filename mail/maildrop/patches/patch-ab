@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/08/10 17:57:09 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2010/06/15 23:14:47 pettai Exp $
 
 --- maildrop/configure.orig	2007-04-22 11:24:25.000000000 -0400
 +++ maildrop/configure
-@@ -21562,7 +21562,7 @@ fi
+@@ -19066,7 +19066,7 @@ fi
  test "x$prefix" = xNONE && prefix=$ac_default_prefix
  test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2007/08/10 17:57:09 jlam Exp $
  then
  #
  # This version of maildrop is integrated into Courier mail server
-@@ -21699,7 +21699,7 @@ SPOOLDIR="$DIR"
+@@ -19203,7 +19203,7 @@ SPOOLDIR="$DIR"
  
  get_spooldir() {
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.4 2007/08/10 17:57:09 jlam Exp $
  then
  	MBOX_RESET_GID=1
  	SPOOLDIR="./Maildir"
-@@ -21767,7 +21767,7 @@ if test "${with_default_maildrop+set}" =
+@@ -19270,7 +19270,7 @@ if test "${with_default_maildrop+set}" =
  else
    # Courier defaults to ./Maildir
  
