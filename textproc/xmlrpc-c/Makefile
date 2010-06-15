@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2010/01/17 12:02:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/06/15 09:18:10 adam Exp $
 
-DISTNAME=	xmlrpc-c-1.06.38
+DISTNAME=	xmlrpc-c-1.06.40
 # the "super stable" branch
-PKGNAME=	xmlrpc-c-ss-1.06.38
-PKGREVISION=	3
+PKGNAME=	xmlrpc-c-ss-1.06.40
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz
@@ -30,9 +29,9 @@ MAKE_ENV+=		CXXFLAGS_COMMON=${CXXFLAGS:M*:Q}
 MAKE_ENV+=		LADD=${LDFLAGS:M*:Q}
 TEST_TARGET=		check
 
+PTHREAD_LINKFLAGS=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 SUBST_CLASSES+=	pthread
 SUBST_FILES.pthread=	xmlrpc-c-config.in xmlrpc-c-config.test.in
-PTHREAD_LINKFLAGS=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 SUBST_SED.pthread=	-e s/-lpthread/${PTHREAD_LINKFLAGS:Q}/
 SUBST_SED.pthread+=	-e "s/-L\(.\)libdir/-L\1libdir ${COMPILER_RPATH_FLAG}\1libdir/"
 SUBST_STAGE.pthread=	pre-configure
