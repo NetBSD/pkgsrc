@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/02 14:12:54 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/06/15 12:03:16 wiz Exp $
 
-SHA1 (attica-0.1.3.tar.bz2) = 1a1c3411722f88d2c7e327512b81d92ccc5e875e
-RMD160 (attica-0.1.3.tar.bz2) = 292e68f4619f03049f486e0a5ff238831abc9e57
-Size (attica-0.1.3.tar.bz2) = 31790 bytes
+SHA1 (attica-0.1.4.tar.bz2) = b93aee339b5f61442e04c920acb981b4dca719ea
+RMD160 (attica-0.1.4.tar.bz2) = 2fbacf1bc4a4e75edb8c1be6b23881d5d5f8144a
+Size (attica-0.1.4.tar.bz2) = 33349 bytes
