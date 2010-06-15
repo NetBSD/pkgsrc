@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2223 2010/06/15 08:16:21 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2224 2010/06/15 09:17:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2965,3 +2965,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20100612 [minskim 2010-06-14]
 	Updated graphics/tiff to 3.9.3 [dholland 2010-06-15]
 	Updated www/moodle to 1.9.8nb1 [wiz 2010-06-15]
+	Updated misc/gaupol to 0.16.1 [wiz 2010-06-15]
