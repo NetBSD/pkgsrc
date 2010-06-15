@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9408 2010/06/15 13:23:09 wiz Exp $
+$NetBSD: TODO,v 1.9409 2010/06/15 14:50:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
-	o asymptote-1.97
+	o asymptote-1.98
 	o aterm-1.0.1
 	o auctex-11.86
 	o audacious-plugins-2.3
@@ -450,7 +450,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
-	o botan-1.9.7
+	o botan-1.9.8
 	o bouml-4.21
 	o brasero-2.30.1 [GNOME 2.30]
 	o bugzilla-3.6
@@ -591,6 +591,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o fd-3.00d
+	o feh-1.6.1
 	o festival-1.96
 	o felt-3.07
 	o fetchyahoo-2.13.8
@@ -660,6 +661,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcompris-9.0
 	o gconfmm-2.28.2
 	o gcpio-2.10
+	o gdal-lib-1.7.2 [pkg/43467]
 	o gdb-7.1
 	o gdeskcal-1.01
 	o gdl-2.28.2 [GNOME 2.28]
@@ -669,7 +671,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.19
 	o gedit-2.30.2 [GNOME 2.30]
 	o gedit-plugins-2.30.0 [GNOME 2.30]
-	o gegl-0.1.2
 	o gentoo-0.15.6
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
@@ -818,7 +819,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jed-0.99-18
 	o jhead-2.90
 	o joe-3.6
-	o john-1.7.5
+	o john-1.7.6
 	o jools-1.0
 	o jpilot-1.8.0
 	o kadu-0.6.5
@@ -868,7 +869,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdockapp-0.6.1
 	o libdrm-2.4.21
 	o libebml-1.0.0
-	o libextractor-0.6.1
+	o libextractor-0.6.2
 	o libflash-0.4.13
 	o libgda-4.0.9 [GNOME 2.28]
 	o libgdata-0.6.4
@@ -884,7 +885,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
-	o libltdl-2.2.8
+	o libltdl-2.2.10
 	o liblzo-2.02
 	o libmatheval-1.1.6
 	o libmatroska-1.0.0
@@ -901,7 +902,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.10
-	o libtool-base-2.2.8
+	o libtool-base-2.2.10
 	o libusb-1.0
 	o libv4l-0.8.0
 	o libxklavier-5.0
@@ -977,6 +978,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.8.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
+	o monotone-0.48
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.30.1 [GNOME 2.30]
 	o mp3blaster-3.2.3
@@ -1142,6 +1144,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZopeInterface-3.6.0
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
+	o py-cheetah-2.4.2.1 [pkg/43458]
 	o py-cups-1.9.50
 	o py-django-1.2
 	o py-fpconst-0.7.2 [pkg/42556]
@@ -1154,11 +1157,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
+	o py-markdown-2.0.3 [pkg/43448]
 	o py-nevow-0.10.0
 	o py-psycopg-2.2.1
 	o py-psycopg2-2.0.14
 	o py-pytz-2010h
 	o py-rpy-1.0.3 [pkg/43227]
+	o py-simplejson-2.1.1 [pkg/43447]
 	o py-sybase-0.37
 	o py-uwsgi-0.9.5.1 [pkg/43400]
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]
@@ -1315,7 +1320,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-27.1.0
+	o tea-28.0.0
 	o ted-en-us-2.17
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
@@ -1340,6 +1345,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o totem-pl-parser-2.30.1 [GNOME 2.30]
 	o tpasm-1.2
 	o tpb-0.6.4
+	o trac-0.12
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
