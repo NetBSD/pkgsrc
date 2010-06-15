@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/10/24 12:51:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/06/15 21:29:25 drochner Exp $
 lib/gtk-2.0/2.10.0/engines/libclearlooks.la
 lib/gtk-2.0/2.10.0/engines/libcrux-engine.la
 lib/gtk-2.0/2.10.0/engines/libglide.la
@@ -16,8 +16,10 @@ share/gtk-engines/industrial.xml
 share/gtk-engines/mist.xml
 share/gtk-engines/redmond95.xml
 share/gtk-engines/thinice.xml
+share/locale/af/LC_MESSAGES/gtk-engines.mo
 share/locale/ar/LC_MESSAGES/gtk-engines.mo
 share/locale/as/LC_MESSAGES/gtk-engines.mo
+share/locale/ast/LC_MESSAGES/gtk-engines.mo
 share/locale/be@latin/LC_MESSAGES/gtk-engines.mo
 share/locale/bg/LC_MESSAGES/gtk-engines.mo
 share/locale/bn/LC_MESSAGES/gtk-engines.mo
@@ -29,6 +31,7 @@ share/locale/da/LC_MESSAGES/gtk-engines.mo
 share/locale/de/LC_MESSAGES/gtk-engines.mo
 share/locale/dz/LC_MESSAGES/gtk-engines.mo
 share/locale/el/LC_MESSAGES/gtk-engines.mo
+share/locale/en@shaw/LC_MESSAGES/gtk-engines.mo
 share/locale/en_GB/LC_MESSAGES/gtk-engines.mo
 share/locale/es/LC_MESSAGES/gtk-engines.mo
 share/locale/et/LC_MESSAGES/gtk-engines.mo
