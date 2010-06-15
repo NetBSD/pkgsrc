@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9407 2010/06/15 12:03:26 wiz Exp $
+$NetBSD: TODO,v 1.9408 2010/06/15 13:23:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -571,7 +571,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-616
 	o eukleides-1.5.4
 	o evince-2.30.1 [GNOME 2.30]
 	o evolution-2.30.1.2 [GNOME 2.30]
