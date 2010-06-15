@@ -1,39 +1,70 @@
-$NetBSD: patch-aa,v 1.7 2007/08/10 17:57:09 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2010/06/15 23:14:47 pettai Exp $
 
---- Makefile.in.orig	2007-04-22 11:24:04.000000000 -0400
-+++ Makefile.in
-@@ -249,15 +249,12 @@ DELIVERQUOTAHTMLSOURCE = maildirquota.ht
- @INSTALL_DELIVERQUOTA_TRUE@DELIVERQUOTAHTML = $(DELIVERQUOTAHTMLSOURCE)
- @INSTALL_DELIVERQUOTA_FALSE@DELIVERQUOTAMAN = 
- @INSTALL_DELIVERQUOTA_TRUE@DELIVERQUOTAMAN = maildirquota.7 deliverquota.8
+--- Makefile.in.orig	2010-05-30 23:36:17.000000000 +0200
++++ Makefile.in	2010-06-13 12:28:00.000000000 +0200
+@@ -294,16 +294,14 @@
+ 	maildroptips.txt COPYING.GPL manpage.css pgpkeys.txt
+ 
+ scriptdir = $(pkgdatadir)/scripts
+-DELIVERQUOTAHTMLSOURCE = maildirquota.html deliverquota.html
+-DELIVERQUOTAHTML = $(DELIVERQUOTAHTMLSOURCE)
+-DELIVERQUOTAMAN = maildirquota.7 deliverquota.8
 -MAILDROPHTML = lockmail.html maildirmake.html maildropex.html \
 -	maildir.html \
++DELIVERQUOTAHTMLSOURCE = 
++DELIVERQUOTAHTML = 
++DELIVERQUOTAMAN = 
 +MAILDROPHTML = lockmail.html maildropex.html \
  	maildropfilter.html maildropgdbm.html maildrop.html mailbot.html \
  	makemime.html reformail.html reformime.html
  
 -MAILDROPMAN = lockmail.1 maildirmake.1 maildrop.1 mailbot.1 maildropex.7 \
 -	maildir.5 \
--	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 reformime.1 \
--	maildirquota.7 deliverquota.8
 +MAILDROPMAN = lockmail.1 maildrop.1 mailbot.1 maildropex.7 \
-+	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 reformime.1
+ 	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 reformime.1
  
  EXTRA_LTLIBRARIES = librfc822.la librfc2045.la
- @DEVEL_TRUE@DEVEL_MAN = rfc822.3 rfc2045.3
-@@ -1084,11 +1081,12 @@ install-maildrop:
+@@ -1140,12 +1138,8 @@
+ #  Create a soft link from bindir/deliverquota to libdir/bin/deliverquota
+ 
+ install-deliverquota:
+-	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	$(INSTALL_PROGRAM) maildir/deliverquota $(DESTDIR)$(bindir)/deliverquota
+-	cd $(DESTDIR)$(bindir); rm -f maildrop.deliverquota
+ 
+ uninstall-deliverquota:
+-	rm -f $(DESTDIR)$(bindir)/deliverquota
+ 
+ install-data-local: install-man install-deliverquota install-maildrop
+ 
+@@ -1173,23 +1167,24 @@
  		$(INSTALL_PROGRAM) maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
  	done
  	$(INSTALL_PROGRAM) liblock/lockmail $(DESTDIR)$(bindir)/lockmail
 -	$(INSTALL_PROGRAM) maildir/maildirmake $(DESTDIR)$(bindir)/maildirmake
  	$(INSTALL_PROGRAM) rfc2045/reformime $(DESTDIR)$(bindir)/reformime
  	$(INSTALL_PROGRAM) rfc2045/makemime $(DESTDIR)$(bindir)/makemime
--	$(INSTALL_PROGRAM) makedat/makedatprog $(DESTDIR)$(bindir)/makedatprog
--	$(INSTALL_SCRIPT)  makedat/makedat     $(DESTDIR)$(bindir)/makedat
-+	$(INSTALL_PROGRAM) makedat/makedatprog $(DESTDIR)$(libexecdir)/makedatprog
-+	$(INSTALL_SCRIPT)  makedat/makedat     $(DESTDIR)$(datadir)/makedat
-+	rm -f $(DESTDIR)$(bindir)/makedat
-+	$(LN_S) $(datadir)/makedat $(DESTDIR)$(bindir)/makedat
+ 	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
+-		$(INSTALL_PROGRAM) makedat/makedatprog $(DESTDIR)$(bindir)/makedatprog
++		$(INSTALL_PROGRAM) makedat/makedatprog $(DESTDIR)$(libexecdir)/makedatprog
++		$(LN_S) $(libexecdir)/makedatprog $(DESTDIR)$(bindir)/makedatprog
+ 	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
+-		$(INSTALL_SCRIPT)  makedat/makedat     $(DESTDIR)$(bindir)/makedat
++		$(INSTALL_SCRIPT)  makedat/makedat     $(DESTDIR)$(libexecdir)/makedat
++		$(LN_S) $(libexecdir)/makedat $(DESTDIR)$(bindir)/makedat
  	. maildrop/uidgid ; test -z "$$gid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop lockmail
  	. maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop lockmail && chmod 755 maildrop lockmail
+ 
+ uninstall-maildrop:
+-	for f in maildrop mailbot maildirmake reformail lockmail makemime reformime; do \
++	for f in maildrop mailbot reformail lockmail makemime reformime; do \
+ 		rm -f $(DESTDIR)$(bindir)/$$f ; \
+ 	done
+ 	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
+-		rm -f $(DESTDIR)$(bindir)/makedat ; \
+-		rm -f $(DESTDIR)$(bindir)/makedatprog
++		rm -f $(DESTDIR)$(libexecdir)/makedat ; \
++		rm -f $(DESTDIR)$(libexecdir)/makedatprog
+ 
+ all-recursive: all-make-check
  
