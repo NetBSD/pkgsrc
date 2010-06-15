@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.10 2009/05/19 08:59:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2010/06/15 23:01:23 pettai Exp $
 
-COURIER_VERSION=	0.58.0
+COURIER_VERSION=	0.65.0
 LICENSE=		gnu-gpl-v3
 
 .include "../../mk/bsd.prefs.mk"

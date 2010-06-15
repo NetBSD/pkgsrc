@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2008/02/19 18:45:24 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
 
 --- courier/Makefile.in.orig	2007-11-23 22:26:43.000000000 -0500
 +++ courier/Makefile.in
-@@ -46,16 +46,16 @@ build_triplet = @build@
+@@ -47,16 +47,16 @@ build_triplet = @build@
  host_triplet = @host@
  target_triplet = @target@
  pkglibexec_PROGRAMS = aliasexp$(EXEEXT) aliascombine$(EXEEXT) \
@@ -24,16 +24,15 @@ $NetBSD: patch-aa,v 1.5 2008/02/19 18:45:24 jlam Exp $
  	@EXTRASBIN@ $(am__empty)
  cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT) @EXTRACMDLIB@
  subdir = .
-@@ -433,7 +433,7 @@ BUILT_SOURCES = prefix.h exec_prefix.h s
+@@ -477,29 +477,26 @@ BUILT_SOURCES = prefix.h exec_prefix.h s
  	uidgid.h configargs.h sort.h webmlmdhandlerslist.H
  RFCERRTXTIN = rfcerrheader.txt
  RFCERRTXTNOIN = rfcerr2045.txt rfcerr2046.txt rfcerr2047.txt
 -extrapkglib = makedatprog courierpop3login pcpd
 +extrapkglib = 
- pkglibexecdir = $(libexecdir)/courier
  webmaildir = $(libexecdir)/courier/webmail
  webmail_SOURCES = 
-@@ -441,22 +441,19 @@ sqwebmaild_SOURCES = 
+ sqwebmaild_SOURCES = 
  
  # Don't forget to change perms.sh.in, if webmailimagedir moves.
  webmailimagedir = $(datadir)/sqwebmail/images
@@ -62,7 +61,7 @@ $NetBSD: patch-aa,v 1.5 2008/02/19 18:45:24 jlam Exp $
  
  mlmdatadir = $(datadir)/couriermlm
  mlmdata_DATA = \
-@@ -512,7 +509,7 @@ mlmdata_DATA = \
+@@ -555,7 +552,7 @@ mlmdata_DATA = \
  	webmlmsublist.tmpl.html \
  	webmlm.tmpl.html
  
@@ -71,7 +70,7 @@ $NetBSD: patch-aa,v 1.5 2008/02/19 18:45:24 jlam Exp $
  cmdlibdir = @libexecdir@/courier
  
  # Subdirectories
-@@ -1673,6 +1670,12 @@ couriertls$(EXEEXT): ../tcpd/couriertls$
+@@ -1896,6 +1893,12 @@ couriertls$(EXEEXT): ../tcpd/couriertls$
  courierpop3login$(EXEEXT): ../imap/pop3login$(EXEEXT)
  	cp -f ../imap/pop3login$(EXEEXT) courierpop3login$(EXEEXT)
  
@@ -84,7 +83,7 @@ $NetBSD: patch-aa,v 1.5 2008/02/19 18:45:24 jlam Exp $
  sort.h:
  	echo '#define SORT "$(SORT)"' >sort.h
  
-@@ -1828,39 +1831,21 @@ dist-hook:
+@@ -2051,39 +2054,21 @@ dist-hook:
  
  install-exec-hook:
  	for d in $(bindir) $(sbindir) $(libexecdir) $(libexecdir)/courier \
@@ -126,7 +125,7 @@ $NetBSD: patch-aa,v 1.5 2008/02/19 18:45:24 jlam Exp $
  	test -f $(DESTDIR)$(sysconfdir)/enablefiltering && exit 0; \
  		echo esmtp >$(DESTDIR)$(sysconfdir)/enablefiltering
  	test -f $(DESTDIR)$(sysconfdir)/aliases/system && exit 0; \
-@@ -1872,10 +1857,6 @@ install-data-hook:
+@@ -2095,10 +2080,6 @@ install-data-hook:
  	rm -f $(DESTDIR)$(bindir)/rmail
  	$(LN_S) sendmail $(DESTDIR)$(bindir)/rmail
  	-$(mkinstalldirs) $(DESTDIR)@mandir@/man8
