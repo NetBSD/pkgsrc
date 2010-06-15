@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2229 2010/06/15 11:28:00 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2230 2010/06/15 11:31:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2971,3 +2971,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/gbrainy to 1.42 [wiz 2010-06-15]
 	Updated print/libspectre to 0.2.6 [wiz 2010-06-15]
 	Updated devel/libsigc++ to 2.2.8 [wiz 2010-06-15]
+	Updated emulators/dosbox to 0.74 [wiz 2010-06-15]
