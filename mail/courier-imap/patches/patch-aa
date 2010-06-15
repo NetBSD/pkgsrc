@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2007/10/15 15:37:21 jlam Exp $
+$NetBSD: patch-aa,v 1.15 2010/06/15 23:07:07 pettai Exp $
 
---- Makefile.in.orig	Sat Sep 29 14:48:20 2007
-+++ Makefile.in
-@@ -250,9 +250,10 @@ DIST_SUBDIRS = numlib md5 sha1 bdbobj gd
+--- Makefile.in.orig	2010-05-30 23:20:04.000000000 +0200
++++ Makefile.in	2010-06-14 00:25:33.000000000 +0200
+@@ -289,9 +289,10 @@
  
 -sbin_SCRIPTS = sharedindexinstall sharedindexsplit
 +sbin_SCRIPTS = 
@@ -18,12 +18,12 @@ $NetBSD: patch-aa,v 1.14 2007/10/15 15:37:21 jlam Exp $
 +sbinPROGRAMS = 
 +libexecPROGRAMS = imaplogin courierpop3login courierpop3d
  bin_PROGRAMS = @binPROGRAMS_exec@
-@@ -260,3 +261,3 @@ sbin_PROGRAMS = @sbinPROGRAMS_exec@
+@@ -299,3 +300,3 @@
  libexec_PROGRAMS = @libexecPROGRAMS_exec@
 -man_MANS = couriertcpd.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
 +man_MANS = courierimapd.8 courierpop3d.8 mkimapdcert.8 mkpop3dcert.8
  
-@@ -271,5 +272,5 @@ EXTRA_DIST = 00README.NOW.OR.SUFFER READ
+@@ -310,5 +311,5 @@
  sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
 -	imapd.cnf pop3d.cnf quotawarnmsg.example
 +	imapd.cnf pop3d.cnf
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.14 2007/10/15 15:37:21 jlam Exp $
 -libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
 +libexec_SCRIPTS = 
  HTML2TXT = links -dump -no-numbering -no-references
-@@ -1045,7 +1046,7 @@ sharedindexsplit: maildir/sharedindexspl
+@@ -1227,7 +1228,7 @@
  
 -pop3login$(EXEEXT): imap/pop3login$(EXEEXT)
 -	cp imap/pop3login$(EXEEXT) .
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.14 2007/10/15 15:37:21 jlam Exp $
 +courierpop3d$(EXEEXT): imap/pop3d$(EXEEXT)
 +	cp imap/pop3d$(EXEEXT) ./$@
  
-@@ -1093,4 +1094,7 @@ maildirkw.1: maildir/maildirkw.1
+@@ -1275,4 +1276,7 @@
  
 -imapd.8: imap/imapd.8
 -	cp imap/imapd.8 .
@@ -53,15 +53,18 @@ $NetBSD: patch-aa,v 1.14 2007/10/15 15:37:21 jlam Exp $
 +courierpop3d.8: imap/courierpop3d.8
 +	cp imap/courierpop3d.8 .
  
-@@ -1120,6 +1124,4 @@ install-exec-local:
+@@ -1302,4 +1306,2 @@
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
 -	test ! -x tcpd/couriertls || $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) \
 -		tcpd/couriertls $(DESTDIR)$(bindir)/couriertls
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
--	for f in mkimapdcert mkpop3dcert ; \
-+	for f in imapd-ssl imapd mkimapdcert mkpop3dcert pop3d pop3d-ssl ; \
- 		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
-@@ -1129,17 +1131,4 @@ install-exec-local:
+@@ -1308,2 +1310,5 @@
+ 		$(LN_S) $(databindir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
++	for f in imapd-ssl imapd pop3d pop3d-ssl ; \
++		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
++		$(LN_S) $(databindir)/$$f.rc $(DESTDIR)$(sbindir)/$$f ; done
+ 	$(mkinstalldirs) $(DESTDIR)$(localstatedir)
+@@ -1311,17 +1316,4 @@
  install-exec-hook:
 -	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
@@ -79,7 +82,7 @@ $NetBSD: patch-aa,v 1.14 2007/10/15 15:37:21 jlam Exp $
 -		$(INSTALL_DATA) $(srcdir)/imap/pop3d.pam \
 -		$(DESTDIR)/etc/pam.d/pop3 || exit 1
  	for f in $(man_MANS); do chmod a+r $(DESTDIR)$(mandir)/*/$$f; done
-@@ -1150,3 +1139,2 @@ uninstall-local:
+@@ -1332,3 +1324,2 @@
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; done
 -	rm -f $(DESTDIR)$(bindir)/couriertls
  
