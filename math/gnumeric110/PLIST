@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/17 16:30:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/06/15 21:16:20 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -189,6 +189,8 @@ lib/gnumeric/${PKGVERSION}/plugins/lpsolve/lpsolve.la
 lib/gnumeric/${PKGVERSION}/plugins/lpsolve/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/mps/mps.la
 lib/gnumeric/${PKGVERSION}/plugins/mps/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/nlsolve/nlsolve.la
+lib/gnumeric/${PKGVERSION}/plugins/nlsolve/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/oleo/oleo.la
 lib/gnumeric/${PKGVERSION}/plugins/oleo/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/openoffice/openoffice.la
@@ -217,8 +219,8 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
-lib/goffice/0.8.3/plugins/gnumeric/gnumeric.la
-lib/goffice/0.8.3/plugins/gnumeric/plugin.xml
+lib/goffice/0.8.5/plugins/gnumeric/gnumeric.la
+lib/goffice/0.8.5/plugins/gnumeric/plugin.xml
 lib/libspreadsheet.la
 lib/pkgconfig/libspreadsheet-1.10.pc
 man/man1/gnumeric.1
@@ -780,6 +782,7 @@ share/gnumeric/${PKGVERSION}/glade/solver.glade
 share/gnumeric/${PKGVERSION}/glade/tabulate.glade
 share/gnumeric/${PKGVERSION}/glade/variance-tests.glade
 share/gnumeric/${PKGVERSION}/glade/view.glade
+share/gnumeric/${PKGVERSION}/glade/wilcoxon-mann-whitney.glade
 share/gnumeric/${PKGVERSION}/glade/workbook-attr.glade
 share/gnumeric/${PKGVERSION}/templates/calendar.gnumeric
 share/gnumeric/${PKGVERSION}/templates/invoice.gnumeric
