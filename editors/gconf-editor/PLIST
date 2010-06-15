@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/10/24 13:00:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/06/15 21:01:21 drochner Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
@@ -161,6 +161,7 @@ share/locale/da/LC_MESSAGES/gconf-editor.mo
 share/locale/de/LC_MESSAGES/gconf-editor.mo
 share/locale/dz/LC_MESSAGES/gconf-editor.mo
 share/locale/el/LC_MESSAGES/gconf-editor.mo
+share/locale/en@shaw/LC_MESSAGES/gconf-editor.mo
 share/locale/en_CA/LC_MESSAGES/gconf-editor.mo
 share/locale/en_GB/LC_MESSAGES/gconf-editor.mo
 share/locale/es/LC_MESSAGES/gconf-editor.mo
