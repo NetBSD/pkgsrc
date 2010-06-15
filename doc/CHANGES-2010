@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2221 2010/06/14 23:58:38 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2222 2010/06/15 05:58:55 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2963,3 +2963,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-LeakTrace to 0.11 [seb 2010-06-14]
 	Added textproc/p5-XML-Rabbit version 0.0.1 [seb 2010-06-14]
 	Updated editors/emacs-snapshot to 24.0.50.20100612 [minskim 2010-06-14]
+	Updated graphics/tiff to 3.9.3 [dholland 2010-06-15]
