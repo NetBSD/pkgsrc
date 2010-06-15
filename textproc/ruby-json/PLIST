@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/04 02:46:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/15 13:35:52 obache Exp $
 ${GEM_HOME}/cache/json-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
@@ -53,6 +53,8 @@ ${GEM_LIBDIR}/data/prototype.js
 ${GEM_LIBDIR}/ext/json/ext/generator/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/generator/generator.c
 ${GEM_LIBDIR}/ext/json/ext/generator/generator.h
+${GEM_LIBDIR}/ext/json/ext/json/ext/generator.${RUBY_DLEXT}
+${GEM_LIBDIR}/ext/json/ext/json/ext/parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/ext/json/ext/parser/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.c
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.h
