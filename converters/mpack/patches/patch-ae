@@ -1,4 +1,9 @@
-$NetBSD: patch-ae,v 1.4 2010/04/20 10:26:40 is Exp $
+$NetBSD: patch-ae,v 1.5 2010/06/15 04:18:04 dholland Exp $
+
+- Include fixes for modern Unix.
+- Suppress mktemp() warning on NetBSD; callers use O_EXCL.
+
+Upstream: as far as I know not actively maintained upstream.
 
 --- unixpk.c.orig	2003-07-21 22:50:41.000000000 +0200
 +++ unixpk.c
