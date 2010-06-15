@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.39 2010/06/12 21:00:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.40 2010/06/15 09:06:57 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -170,3 +170,5 @@ Pullup ticket #3144 - requested by tron
 net/wireshark: security update
 Pullup ticket #3145 - requested by tron
 www/apache22: security fix
+Pullup ticket #3146 - requested by dholland
+graphics/tiff: security update
