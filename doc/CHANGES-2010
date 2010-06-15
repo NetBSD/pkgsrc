@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2241 2010/06/15 16:23:30 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.2242 2010/06/15 16:56:16 bad Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2983,3 +2983,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-arabtex version 3.11s [minskim 2010-06-15]
 	Added print/tex-arabtex-doc version 3.11s [minskim 2010-06-15]
 	Updated devel/hg-git to 0.2.2 [joerg 2010-06-15]
+	Updated misc/openoffice3-bin to 3.2.1 [bad 2010-06-15]
+	Updated devel/p5-Path-Class to 0.19 [bad 2010-06-15]
