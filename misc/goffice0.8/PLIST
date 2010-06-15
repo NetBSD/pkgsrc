@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/28 18:34:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/15 21:12:39 drochner Exp $
 include/libgoffice-0.8/goffice/app/error-info.h
 include/libgoffice-0.8/goffice/app/file.h
 include/libgoffice-0.8/goffice/app/go-cmd-context-impl.h
@@ -129,6 +129,7 @@ include/libgoffice-0.8/goffice/math/go-distribution.h
 include/libgoffice-0.8/goffice/math/go-fft.h
 include/libgoffice-0.8/goffice/math/go-math.h
 include/libgoffice-0.8/goffice/math/go-matrix3x3.h
+include/libgoffice-0.8/goffice/math/go-quad.h
 include/libgoffice-0.8/goffice/math/go-rangefunc.h
 include/libgoffice-0.8/goffice/math/go-regression.h
 include/libgoffice-0.8/goffice/math/goffice-math.h
