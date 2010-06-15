@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/03/08 13:54:47 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/15 20:05:48 joerg Exp $
 
-DISTNAME=		nginx-0.8.34
+DISTNAME=		nginx-0.8.41
 DISTFILES=		${DEFAULT_DISTFILES}
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
@@ -11,7 +11,6 @@ COMMENT=		Lightweight HTTP server and mail proxy server
 LICENSE=		2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
 .include "../../mk/bsd.prefs.mk"
 
 NGINX_USER?=		nginx
@@ -52,7 +51,7 @@ CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
 PKG_SYSCONFSUBDIR=	nginx
 
 EGDIR=			${PREFIX}/share/examples/nginx
-EGFILES=		fastcgi.conf fastcgi_params koi-utf koi-win \
+EGFILES+=		fastcgi.conf fastcgi_params koi-utf koi-win \
 			mime.types nginx.conf win-utf
 
 .for file in ${EGFILES}
@@ -79,6 +78,8 @@ SUBST_SED.paths+=	-e 's,%%NGINX_GROUP%%,${NGINX_GROUP},g'
 MESSAGE_SUBST+=		NGINX_LOGDIR=${NGINX_LOGDIR}
 MESSAGE_SUBST+=		NGINX_PIDDIR=${NGINX_PIDDIR}
 
+.include "options.mk"
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx
 .for file in ${EGFILES}
@@ -86,8 +87,6 @@ do-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${DESTDIR}${EGDIR}/html/50x.html
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
-
-.include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
