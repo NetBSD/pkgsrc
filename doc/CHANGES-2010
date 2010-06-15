@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2239 2010/06/15 14:08:51 hauke Exp $
+$NetBSD: CHANGES-2010,v 1.2240 2010/06/15 14:24:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2980,3 +2980,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/etm to 622 [wiz 2010-06-15]
 	Updated textproc/ruby-json to 1.4.3nb1 [obache 2010-06-15]
 	Added www/pyblosxom version 1.5 [hauke 2010-06-15]
+	Added print/tex-arabtex version 3.11s [minskim 2010-06-15]
+	Added print/tex-arabtex-doc version 3.11s [minskim 2010-06-15]
