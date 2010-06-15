@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.9 2008/06/19 18:36:51 joerg Exp $
+#	$NetBSD: pbulk-index.mk,v 1.10 2010/06/15 19:23:55 joerg Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -94,6 +94,7 @@ pbulk-index-item:
 	@echo "MAINTAINER="${MAINTAINER:Q}
 	@echo "USE_DESTDIR="${_USE_DESTDIR:Q}
 	@echo "BOOTSTRAP_PKG="${BOOTSTRAP_PKG}
+	@echo "USERGROUP_PHASE="${USERGROUP_PHASE:Q}
 .if defined(_PBULK_MULTI_NEEDED)
 	@printf "MULTI_VERSION="
 .for _t in ${_PBULK_MULTI_NEEDED}
