@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/15 11:58:25 drochner Exp $
 #
 
 DISTNAME=	albumplayer_0.3.orig
 PKGNAME=	albumplayer-0.3
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	http://rvb.mytanet.de/debian/
+MASTER_SITES=	http://rvb.mytanet.de/
 
 MAINTAINER=	pkgstc-users@NetBSD.org
-HOMEPAGE=	http://rvb.mytanet.de/
+HOMEPAGE=	http://rvb.mytanet.de/album-player.shtml
 COMMENT=	FLAC album player
 LICENSE=	original-bsd
 
