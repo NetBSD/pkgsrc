@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.1 2008/02/19 18:45:24 jlam Exp $
+$NetBSD: patch-ax,v 1.2 2010/06/15 23:01:23 pettai Exp $
 
 --- courier/module.esmtp/Makefile.in.orig	2007-11-17 19:49:38.000000000 -0500
 +++ courier/module.esmtp/Makefile.in
-@@ -870,17 +870,11 @@ install-data-local:
+@@ -955,17 +955,11 @@ install-data-local:
  	test -f $(DESTDIR)$(sbindir)/courieresmtpd && exit 0; $(mkinstalldirs) $(DESTDIR)$(sbindir) || :; rm -f $(DESTDIR)$(sbindir)/courieresmtpd && $(LN_S) $(moduledir)/courieresmtpd $(DESTDIR)$(sbindir)/courieresmtpd
  	-$(mkinstalldirs) $(DESTDIR)$(bindir)
  	test -f $(DESTDIR)$(bindir)/addcr && exit 0; rm -f $(DESTDIR)$(bindir)/addcr && $(LN_S) $(moduledir)/addcr $(DESTDIR)$(bindir)/addcr
