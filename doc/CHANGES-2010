@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2244 2010/06/15 21:12:25 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.2245 2010/06/15 21:26:57 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2987,3 +2987,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Path-Class to 0.19 [bad 2010-06-15]
 	Updated pkgtools/rpm2pkg to 3.0.2 [tron 2010-06-15]
 	Updated pkgtools/pbulk to 0.47 [joerg 2010-06-15]
+	Added audio/gmpc-magnatune version 0.20.0 [joerg 2010-06-15]
