@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/15 14:06:08 hauke Exp $
+
+SHA1 (pyblosxom-1.5-rc1.tar.gz) = 9d56dc9d69b5496e93ed8ef7c0f7537b3618985f
+RMD160 (pyblosxom-1.5-rc1.tar.gz) = 3c6f4b14a8ceb9b903bde9c400c18c6f4b21c5e8
+Size (pyblosxom-1.5-rc1.tar.gz) = 225671 bytes
