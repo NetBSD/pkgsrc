@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2250 2010/06/15 23:26:37 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.2251 2010/06/15 23:27:28 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2993,3 +2993,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/maildrop to 2.5.0 [pettai 2010-06-15]
 	Updated mail/courier-mta to 0.65.0 [pettai 2010-06-15]
 	Updated mail/courier-imap to 4.8.0 [pettai 2010-06-15]
+	Updated security/courier-authlib to 0.63.0 [pettai 2010-06-15]
