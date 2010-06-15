@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.5 2010/06/15 16:32:12 drochner Exp $
+
+--- pkcs11/seahorse-pkcs11-operations.c.orig	2009-04-18 03:22:13.000000000 +0000
++++ pkcs11/seahorse-pkcs11-operations.c
+@@ -181,7 +181,7 @@ seahorse_pkcs11_refresher_constructor (G
+ 
+ 	/* Step 1. Load the session */
+ 	slot = seahorse_pkcs11_source_get_slot (self->source);
+-	gp11_slot_open_session_async (slot, CKF_RW_SESSION, self->cancellable, 
++	gp11_slot_open_session_async (slot, CKF_RW_SESSION, NULL, NULL, self->cancellable, 
+ 	                              (GAsyncReadyCallback)on_open_session, self);
+ 	seahorse_operation_mark_start (SEAHORSE_OPERATION (self));
+ 	
