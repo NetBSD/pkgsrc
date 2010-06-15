@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9411 2010/06/15 23:25:36 pettai Exp $
+$NetBSD: TODO,v 1.9412 2010/06/15 23:26:08 pettai Exp $
 
 Suggested new packages
 ======================
@@ -491,7 +491,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o courier-analog-0.16
 	o courier-authlib-0.63.0
 	o courier-imap-4.7.0
-	o courier-mta-0.64.0
 	o covered-0.7.8
 	o covered-current-20090802
 	o cpio-2.9
