@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2246 2010/06/15 23:23:55 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.2247 2010/06/15 23:24:54 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2989,3 +2989,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pbulk to 0.47 [joerg 2010-06-15]
 	Added audio/gmpc-magnatune version 0.20.0 [joerg 2010-06-15]
 	Updated mail/courier-maildir to 0.65.0 [pettai 2010-06-15]
+	Updated net/couriertcpd to 0.65.0 [pettai 2010-06-15]
