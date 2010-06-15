@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2231 2010/06/15 11:43:58 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2232 2010/06/15 11:48:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2973,3 +2973,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libsigc++ to 2.2.8 [wiz 2010-06-15]
 	Updated emulators/dosbox to 0.74 [wiz 2010-06-15]
 	Updated misc/JBidwatcher to 2.1pre8 [wiz 2010-06-15]
+	Updated net/gupnp-igd to 0.1.7 [wiz 2010-06-15]
