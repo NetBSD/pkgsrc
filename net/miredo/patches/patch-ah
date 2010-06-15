@@ -1,21 +1,24 @@
-$NetBSD: patch-ah,v 1.1 2010/05/14 06:18:49 pettai Exp $
+$NetBSD: patch-ah,v 1.2 2010/06/15 23:49:30 pettai Exp $
 
---- misc/Makefile.in.orig	2009-07-06 17:57:11.000000000 +0200
-+++ misc/Makefile.in	2010-05-13 23:34:06.000000000 +0200
-@@ -265,13 +265,13 @@
- 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+--- misc/Makefile.in.orig	2009-11-05 20:03:42.000000000 +0100
++++ misc/Makefile.in	2010-06-08 23:15:53.000000000 +0200
+@@ -296,7 +296,7 @@
+ $(am__aclocal_m4_deps):
  install-confSCRIPTS: $(conf_SCRIPTS)
  	@$(NORMAL_INSTALL)
 -	test -z "$(confdir)" || $(MKDIR_P) "$(DESTDIR)$(confdir)"
-+	test -z "$(confdir)" || $(MKDIR_P) "$(DESTDIR)$(examplesdir)/../rc.d"
- 	@list='$(conf_SCRIPTS)'; for p in $$list; do \
++	test -z "$(examplesdir)/../rc.d" || $(MKDIR_P) "$(DESTDIR)$(examplesdir)/../rc.d"
+ 	@list='$(conf_SCRIPTS)'; test -n "$(confdir)" || list=; \
+ 	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  if test -f $$d$$p; then \
- 	    f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
--	    echo " $(confSCRIPT_INSTALL) '$$d$$p' '$(DESTDIR)$(confdir)/$$f'"; \
--	    $(confSCRIPT_INSTALL) "$$d$$p" "$(DESTDIR)$(confdir)/$$f"; \
-+	    echo " $(confSCRIPT_INSTALL) '$$d$$p' '$(DESTDIR)$(examplesdir)/../rc.d/$$f'"; \
-+	    $(confSCRIPT_INSTALL) "$$d$$p" "$(DESTDIR)$(examplesdir)/../rc.d/$$f"; \
- 	  else :; fi; \
- 	done
+@@ -315,8 +315,8 @@
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(confdir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(confdir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(examplesdir)/../rc.d/$$dir'"; \
++	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(examplesdir)/../rc.d/$$dir" || exit $$?; \
+ 	     } \
+ 	; done
  
