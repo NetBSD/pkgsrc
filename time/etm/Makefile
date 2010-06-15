@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2010/02/10 19:17:46 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/06/15 13:22:59 wiz Exp $
 #
 
-DISTNAME=	etm-420
-PKGREVISION=	1
+DISTNAME=	etm-622
 CATEGORIES=	time
 MASTER_SITES=	http://www.duke.edu/~dgraham/ETM/
 
@@ -11,9 +10,9 @@ HOMEPAGE=	http://www.duke.edu/~dgraham/ETM/
 COMMENT=	Event and Task Manager
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-icalendar-[0-9]*:../../time/py-icalendar
+DEPENDS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*:../../x11/py-wxWidgets
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -25,7 +24,7 @@ SUBST_FILES.python=	ez_setup.py
 SUBST_STAGE.python=	pre-build
 SUBST_MESSAGE.python=	Replacing python interpreter.
 
-REPLACE_PYTHON=		e.py ew.py etm/freetime.py
+REPLACE_PYTHON=		e.py etm/etmBusyFree.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
