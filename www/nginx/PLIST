@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/23 16:32:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/06/15 20:05:48 joerg Exp $
 sbin/nginx
 share/examples/nginx/conf/fastcgi.conf
 share/examples/nginx/conf/fastcgi_params
@@ -6,6 +6,7 @@ share/examples/nginx/conf/koi-utf
 share/examples/nginx/conf/koi-win
 share/examples/nginx/conf/mime.types
 share/examples/nginx/conf/nginx.conf
+${PLIST.uwsgi}share/examples/nginx/conf/uwsgi_params
 share/examples/nginx/conf/win-utf
 share/examples/nginx/html/50x.html
 share/examples/nginx/html/index.html
