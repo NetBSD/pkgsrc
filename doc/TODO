@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9410 2010/06/15 23:23:56 pettai Exp $
+$NetBSD: TODO,v 1.9411 2010/06/15 23:25:36 pettai Exp $
 
 Suggested new packages
 ======================
@@ -926,7 +926,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mDNSResponder-214.3
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
-	o maildrop-2.4.1 [security]
 	o mailgraph-1.14
 	o mailman-2.1.13
 	o mailscanner-4.74
