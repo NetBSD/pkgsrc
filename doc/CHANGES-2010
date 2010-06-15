@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2225 2010/06/15 09:19:11 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2226 2010/06/15 09:23:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/moodle to 1.9.8nb1 [wiz 2010-06-15]
 	Updated misc/gaupol to 0.16.1 [wiz 2010-06-15]
 	Updated textproc/xmlrpc-c to 1.06.40 [adam 2010-06-15]
+	Updated devel/libidn to 1.19 [wiz 2010-06-15]
