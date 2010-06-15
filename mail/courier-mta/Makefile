@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2010/03/21 16:29:40 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2010/06/15 23:01:23 pettai Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +14,7 @@ HOMEPAGE=	http://www.courier-mta.org/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
-DEPENDS+=	maildrop>=2.0.4nb3:../../mail/maildrop
+DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake perl:run
@@ -45,7 +44,7 @@ CONFIGURE_ARGS+=	--with-mailgid=${PKG_GID.${COURIER_GROUP}}
 CONFIGURE_ARGS+=	--with-paranoid-smtpext
 CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR:Q}/tmp
 CONFIGURE_ARGS+=	--with-transport=${COURIER_TRANSPORTS:M*:Q}
-CONFIGURE_ARGS+=	--without-certdb
+#CONFIGURE_ARGS+=	--with-certdb=${SSLCERTS}
 
 # This argument is actually here just to make the "webmail" configure
 # script work.  The value is not actually used since in reality, we are

@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2007/10/15 15:37:14 jlam Exp $
+$NetBSD: patch-af,v 1.4 2010/06/15 23:01:23 pettai Exp $
 
 --- courier/filters/perlfilter/Makefile.in.orig	Sat Jul 21 20:31:15 2007
 +++ courier/filters/perlfilter/Makefile.in
-@@ -207,7 +207,8 @@ top_srcdir = @top_srcdir@
+@@ -234,7 +234,8 @@ top_srcdir = @top_srcdir@
  EXTRA_DIST = perlfilter-wrapper.pl perlfilter-example.pl
  BUILT_SOURCES = filtersocketdir.h wrapperpl.h xsinit.c
  CLEANFILES = $(BUILT_SOURCES) permissions.dat

@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2008/02/19 18:45:24 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2010/06/15 23:01:23 pettai Exp $
 
 --- courier/filters/Makefile.in.orig	2007-11-17 19:49:01.000000000 -0500
 +++ courier/filters/Makefile.in
-@@ -236,11 +236,12 @@ SUBDIRS = libfilter perlfilter
+@@ -283,11 +283,12 @@ SUBDIRS = libfilter perlfilter
  CLEANFILES = $(htmldoc_DATA) $(man_MANS) filtersocketdir.h filteractivedir.h \
  	pidfile.h permissions.dat
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ad,v 1.4 2008/02/19 18:45:24 jlam Exp $
  filtersocketdir = $(localstatedir)/filters
  allfiltersocketdir = $(localstatedir)/allfilters
  filterconfdir = $(sysconfdir)/filters
-@@ -931,16 +932,12 @@ install-exec-hook:
+@@ -1083,16 +1084,12 @@ install-exec-hook:
  install-data-hook:
  	-$(mkinstalldirs) $(DESTDIR)$(filtersocketdir)
  	-$(mkinstalldirs) $(DESTDIR)$(allfiltersocketdir)
