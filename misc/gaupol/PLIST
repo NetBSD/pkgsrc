@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/06/05 14:04:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/06/15 09:17:20 wiz Exp $
 bin/gaupol
 ${PYSITELIB}/aeidon/__init__.py
 ${PYSITELIB}/aeidon/__init__.pyc
@@ -507,6 +507,7 @@ share/gaupol/ui/debug-dialog.ui
 share/gaupol/ui/duration-dialog.ui
 share/gaupol/ui/encoding-dialog.ui
 share/gaupol/ui/framerate-dialog.ui
+share/gaupol/ui/gtkrc
 share/gaupol/ui/header-dialog.ui
 share/gaupol/ui/insert-dialog.ui
 share/gaupol/ui/language-dialog.ui
@@ -540,4 +541,5 @@ share/locale/de/LC_MESSAGES/gaupol.mo
 share/locale/es/LC_MESSAGES/gaupol.mo
 share/locale/hu/LC_MESSAGES/gaupol.mo
 share/locale/pl/LC_MESSAGES/gaupol.mo
+share/locale/ru/LC_MESSAGES/gaupol.mo
 share/locale/sv/LC_MESSAGES/gaupol.mo
