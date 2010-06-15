@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2252 2010/06/15 23:28:00 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.2253 2010/06/15 23:31:09 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2995,3 +2995,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/courier-imap to 4.8.0 [pettai 2010-06-15]
 	Updated security/courier-authlib to 0.63.0 [pettai 2010-06-15]
 	Updated mail/sqwebmail to 5.4.1 [pettai 2010-06-15]
+	Updated net/ruby-dnsruby to 1.47 [pettai 2010-06-15]
