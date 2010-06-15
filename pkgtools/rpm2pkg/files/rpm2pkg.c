@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.10 2010/06/14 11:24:48 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.11 2010/06/15 19:52:02 tron Exp $	*/
 
 /*-
  * Copyright (c) 2004-2009 The NetBSD Foundation, Inc.
@@ -206,7 +206,7 @@ Open(int fd)
 				bzMatch++;
 				if (bzMatch == sizeof(BZipMagic)) {
 					archive_type = 1;
-					offset = i - bytes -
+					offset = (off_t)i - (off_t)bytes -
 					    sizeof(BZipMagic) + 1;
 					break;
 				}
@@ -219,7 +219,7 @@ Open(int fd)
 				gzMatch++;
 				if (gzMatch == sizeof(GZipMagic)) {
 					archive_type = 2;
-					offset = i - bytes -
+					offset = (off_t)i - (off_t)bytes -
 					    sizeof(GZipMagic) + 1;
 					break;
 				}
