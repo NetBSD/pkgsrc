@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9398 2010/06/15 09:17:30 wiz Exp $
+$NetBSD: TODO,v 1.9399 2010/06/15 09:23:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -888,7 +888,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgweather-2.30.0 [GNOME 2.30]
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
-	o libidn-1.19
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
