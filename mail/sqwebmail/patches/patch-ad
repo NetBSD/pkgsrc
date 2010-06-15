@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.10 2007/10/15 15:38:52 jlam Exp $
+$NetBSD: patch-ad,v 1.11 2010/06/15 23:18:13 pettai Exp $
 
 --- sqwebmail/Makefile.in.orig	Sat Sep 29 14:53:23 2007
 +++ sqwebmail/Makefile.in
-@@ -1012,7 +1012,7 @@ install-perms-local: install-perms-cache
+@@ -1143,7 +1143,7 @@ install-perms-local: install-perms-cache
  
  htmllibdir.h: config.status
  	echo '#define HTMLLIBDIR "@htmldir@"' >htmllibdir.h
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.10 2007/10/15 15:38:52 jlam Exp $
  	echo '#define CALENDARMODE "$(sysconfdir)/calendarmode"' >>htmllibdir.h
  	echo '#define LOGINDOMAINLIST "$(sysconfdir)/logindomainlist"' >>htmllibdir.h
  	echo '#define MAXMSGSIZE @MAXMSGSIZE@' >>htmllibdir.h
-@@ -1020,7 +1020,7 @@ htmllibdir.h: config.status
+@@ -1151,7 +1151,7 @@ htmllibdir.h: config.status
  	echo '#define SOCKDIR "$(localstatedir)"' >>htmllibdir.h
  	echo '#define SHAREDINDEXFILE "$(sysconfdir)/shared/index"' >>htmllibdir.h
  	echo '#define SQWEBPASSWD "$(pkglibexecdir)/sqwebpasswd"' >>htmllibdir.h
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.10 2007/10/15 15:38:52 jlam Exp $
  		; then \
  		echo '#define HOSTNAMEFILE "$(sysconfdir)/defaultdomain"' >>htmllibdir.h \
  		; echo '#define MAKEMIME "$(bindir)/makemime"' >>htmllibdir.h \
-@@ -1057,9 +1057,6 @@ install-perms-cache:
+@@ -1188,9 +1188,6 @@ install-perms-cache:
  	@echo "@cachedir@ 700 @cacheowner@ bin" >>permissions.dat
  
  cache-reminder:
