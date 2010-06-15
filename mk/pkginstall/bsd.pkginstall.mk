@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.49 2010/05/07 14:29:36 jmmv Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.50 2010/06/15 19:23:56 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -320,6 +320,8 @@ ${_INSTALL_USERGROUP_UNPACKER}:						\
 pre-configure: create-usergroup
 .  elif !empty(USERGROUP_PHASE:M*build)
 pre-build: create-usergroup
+.  elif !empty(USERGROUP_PHASE:Mpre-install) && ${_USE_DESTDIR} != "no"
+pre-install: create-usergroup
 .  endif
 .endif
 
