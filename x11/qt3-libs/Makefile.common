@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.71 2009/07/11 09:11:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.72 2010/06/15 10:45:48 obache Exp $
 # used by x11/qt3-docs/Makefile
+# used by x11/qt3-tools/Makefile
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
