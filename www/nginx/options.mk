@@ -1,9 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2010/03/21 22:32:35 joerg Exp $
+# $NetBSD: options.mk,v 1.9 2010/06/15 20:05:48 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools mail-proxy memcache \
 			realip inet6 uwsgi
 PKG_SUGGESTED_OPTIONS=	ssl pcre
+
+PLIST_VARS+=		uwsgi
 
 .include "../../mk/bsd.options.mk"
 
@@ -53,8 +55,8 @@ CONFIGURE_ARGS+=       --with-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)
-UWSGI=			uwsgi-0.9.4.3
-DISTFILES+=		${UWSGI}.tar.gz
-SITES.${UWSGI}.tar.gz=	http://projects.unbit.it/downloads/
-CONFIGURE_ARGS+=	--add-module=../${UWSGI}/nginx
+EGFILES+=		uwsgi_params
+PLIST.uwsgi=		yes
+.else
+CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
