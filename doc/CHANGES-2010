@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2224 2010/06/15 09:17:30 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2225 2010/06/15 09:19:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2966,3 +2966,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/tiff to 3.9.3 [dholland 2010-06-15]
 	Updated www/moodle to 1.9.8nb1 [wiz 2010-06-15]
 	Updated misc/gaupol to 0.16.1 [wiz 2010-06-15]
+	Updated textproc/xmlrpc-c to 1.06.40 [adam 2010-06-15]
