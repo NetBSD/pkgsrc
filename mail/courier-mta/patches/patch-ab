@@ -1,21 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2010/01/09 22:16:20 heinz Exp $
-
-  first hunk: make option "--without-ldapaliasd" work (see patch-az)
+$NetBSD: patch-ab,v 1.6 2010/06/15 23:01:23 pettai Exp $
 
 --- courier/configure.orig	2007-11-24 03:26:42.000000000 +0000
 +++ courier/configure
-@@ -21071,7 +21071,9 @@ LIBS="$saveLIBS"
- 
- # Check whether --with-ldapaliasd was given.
- if test "${with_ldapaliasd+set}" = set; then
--  withval=$with_ldapaliasd; ldapaliasd="$withval"; ldapaliasd="yes"
-+  withval=$with_ldapaliasd; ldapaliasd="$withval"
-+else
-+  ldapaliasd="yes"
- fi
- 
- 
-@@ -22366,9 +22368,9 @@ done
+@@ -18398,9 +18398,9 @@ done
  
  if test "$testmode" = "0"
  then
