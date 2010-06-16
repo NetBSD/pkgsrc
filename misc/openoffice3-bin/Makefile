@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/04/07 18:04:46 joerg Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2010/06/16 21:03:18 tron Exp $
 
 DISTNAME=		openoffice3-bin	# overridden below
 PKGNAME=		openoffice3-bin-${OO_RELEASE}
@@ -19,7 +19,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
 OO_BASEVER=		3.2
-OO_RELEASE=		3.2.0
+OO_RELEASE=		3.2.1
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -54,14 +54,14 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
-DISTNAME=		OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=			${WRKDIR}/OOO320_m12_native_packed-1_en-US.9483
+DISTNAME=		OOo_${OO_RELEASE}_Linux_x86_install-rpm_en-US
+WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502
 .elif ${EMUL_PLATFORM} == "solaris-i386"
-DISTNAME=		OOo_${OO_RELEASE}_Solarisx86_install_en-US
-WRKSRC=			${WRKDIR}/OOO320_m12_native_packed-1_en-US.9483/packages
+DISTNAME=		OOo_${OO_RELEASE}_Solaris_x86_install_en-US
+WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502/packages
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
-DISTNAME=		OOo_${OO_RELEASE}_SolarisSparc_install_en-US
-WRKSRC=			${WRKDIR}/OOO320_m12_native_packed-1_en-US.9483/packages
+DISTNAME=		OOo_${OO_RELEASE}_Solaris_Sparc_install_en-US
+WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502/packages
 .endif
 
 .include "options.mk"
