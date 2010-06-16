@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2272 2010/06/16 21:20:37 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.2273 2010/06/16 21:26:40 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3015,4 +3015,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/trac to 0.12 [jmmv 2010-06-16]
 	Updated textproc/mdocml to 1.10.1 [joerg 2010-06-16]
 	Updated www/py-django to 1.2.1 [joerg 2010-06-16]
-  Updated print/cups to 1.4.3nb6 [drochner 2010-06-16]
+	Updated print/cups to 1.4.3nb6 [drochner 2010-06-16]
+	Updated net/filezilla to 3.3.3 [zafer 2010-06-16]
