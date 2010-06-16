@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2259 2010/06/16 06:41:04 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2260 2010/06/16 07:34:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2393,7 +2393,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-elsarticle-doc to 1.20 [minskim 2010-05-10]
 	Updated sysutils/cfengine2 to 2.2.10 [pettai 2010-05-10]
 	Updated net/ruby-dnsruby to 1.46 [pettai 2010-05-10]
-	Updated security/softhsm to version 1.1.4 [pettai 2010-05-10]
+	Updated security/softhsm to 1.1.4 [pettai 2010-05-10]
 	Updated print/tex-algorithms to 2009 [minskim 2010-05-11]
 	Updated print/tex-algorithms-doc to 2009 [minskim 2010-05-11]
 	Updated print/tex-fancyvrb to 2.7anb1 [minskim 2010-05-11]
