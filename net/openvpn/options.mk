@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/10/30 19:06:06 manu Exp $
+# $NetBSD: options.mk,v 1.3 2010/06/16 07:30:26 tnn Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.openvpn
 PKG_SUPPORTED_OPTIONS=  pkcs11 pam
@@ -19,15 +19,15 @@ PLIST_VARS+=	pam
 .if !empty(PKG_OPTIONS:Mpam)
 USE_TOOLS+=	gmake
 BUILD_DIRS+=	plugin/auth-pam
-BUILD_TARGET=	
-INSTALL_DIRS=	${WRKSRC}
+BUILD_TARGET=	# empty
+INSTALL_DIRS=	.
 INSTALL_TARGET=	install
 PLIST.pam=	yes
 post-install-pam:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/openvpn && 	\
 	cd ${WRKSRC:Q}/plugin/auth-pam &&			\
 	${INSTALL_LIB} openvpn-auth-pam.so 			\
-		       ${DESTDIR}${PREFIX}/lib/openvpn || true
+		       ${DESTDIR}${PREFIX}/lib/openvpn || ${TRUE}
 .include "../../mk/pam.buildlink3.mk"
 .else
 post-install-pam:
