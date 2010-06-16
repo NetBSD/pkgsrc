@@ -1,0 +1,24 @@
+$NetBSD: patch-ba,v 1.3 2010/06/16 18:18:26 drochner Exp $
+
+--- scheduler/select.c.orig	2010-01-14 22:40:19.000000000 +0000
++++ scheduler/select.c
+@@ -454,7 +454,8 @@ cupsdDoSelect(long timeout)		/* I - Time
+     if (fdptr->read_cb && event->filter == EVFILT_READ)
+       (*(fdptr->read_cb))(fdptr->data);
+ 
+-    if (fdptr->use > 1 && fdptr->write_cb && event->filter == EVFILT_WRITE)
++    if (fdptr->use > 1 && fdptr->write_cb && event->filter == EVFILT_WRITE &&
++	!cupsArrayFind(cupsd_inactive_fds, fdptr))
+       (*(fdptr->write_cb))(fdptr->data);
+ 
+     release_fd(fdptr);
+@@ -500,7 +501,8 @@ cupsdDoSelect(long timeout)		/* I - Time
+ 	  (*(fdptr->read_cb))(fdptr->data);
+ 
+ 	if (fdptr->use > 1 && fdptr->write_cb &&
+-	    (event->events & (EPOLLOUT | EPOLLERR | EPOLLHUP)))
++	    (event->events & (EPOLLOUT | EPOLLERR | EPOLLHUP)) &&
++	    !cupsArrayFind(cupsd_inactive_fds, fdptr))
+ 	  (*(fdptr->write_cb))(fdptr->data);
+ 
+ 	release_fd(fdptr);
