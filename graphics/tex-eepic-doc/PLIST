@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/16 23:24:33 minskim Exp $
+share/texmf-dist/doc/latex/eepic/eepic.pdf
+share/texmf-dist/doc/latex/eepic/eepic.tex
+share/texmf-dist/doc/latex/eepic/epic-eg3.fig
+share/texmf-dist/doc/latex/eepic/epic-eg3.tex
+share/texmf-dist/doc/latex/eepic/epic-eg4.fig
+share/texmf-dist/doc/latex/eepic/epic-eg4.tex
+share/texmf-dist/doc/latex/eepic/fig2eepic/epic-eg3.fig
+share/texmf-dist/doc/latex/eepic/fig2eepic/epic-eg4.fig
+share/texmf-dist/doc/latex/eepic/fig2eepic/fig2epic.1
+share/texmf-dist/doc/latex/eepic/fig2eepic/makefile
+share/texmf-dist/doc/latex/eepic/fig2eepic/readme
+share/texmf-dist/doc/latex/eepic/grafig.shar
+share/texmf-dist/doc/latex/eepic/readme
