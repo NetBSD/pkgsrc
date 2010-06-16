@@ -1,0 +1,14 @@
+$NetBSD: patch-bb,v 1.5 2010/06/16 18:18:26 drochner Exp $
+
+--- cgi-bin/var.c.orig	2010-02-08 17:33:31.000000000 +0000
++++ cgi-bin/var.c
+@@ -927,6 +927,9 @@ cgi_initialize_string(const char *data)	
+ 	    * Read the hex code...
+ 	    */
+ 
++	    if (!isxdigit(data[1] & 255) || !isxdigit(data[2] & 255))
++		return (0);
++
+             if (s < (value + sizeof(value) - 1))
+ 	    {
+               data ++;
