@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.40 2010/06/15 09:06:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.41 2010/06/16 21:28:40 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -172,3 +172,7 @@ Pullup ticket #3145 - requested by tron
 www/apache22: security fix
 Pullup ticket #3146 - requested by dholland
 graphics/tiff: security update
+Pullup ticket #3147 - requested by bad
+misc/openoffice3-bin: security update
+Pullup ticket #3148 - requested by taca
+net/samba33: security update
