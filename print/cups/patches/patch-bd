@@ -1,4 +1,8 @@
-$NetBSD: patch-bd,v 1.3 2010/06/16 18:18:26 drochner Exp $
+$NetBSD: patch-bd,v 1.4 2010/06/16 21:15:18 sbd Exp $
+
+Incorporate str3510.patch from
+http://www.cups.org/str.php?L3510
+"cups overwrites files as root in a directory with non-root write permission"
 
 --- cups/file.c.orig	2009-05-14 21:18:35.000000000 +0000
 +++ cups/file.c

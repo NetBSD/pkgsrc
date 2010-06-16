@@ -1,4 +1,8 @@
-$NetBSD: patch-ba,v 1.3 2010/06/16 18:18:26 drochner Exp $
+$NetBSD: patch-ba,v 1.4 2010/06/16 21:15:18 sbd Exp $
+
+Incorporate 0001-More-complete-fix-for-CVE-2009-3553.patch from
+http://www.cups.org/str.php?L3490
+"CVE-2010-0302: Incomplete fix for CVE-2009-3553 (STR #3200)"
 
 --- scheduler/select.c.orig	2010-01-14 22:40:19.000000000 +0000
 +++ scheduler/select.c
