@@ -5,8 +5,8 @@ NNAAMMEE
      tributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aadddd [--AAffIILLnnRRUUuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--mm _m_a_c_h_i_n_e] [--PP _d_e_s_t_d_i_r]
-             [--pp _p_r_e_f_i_x] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w] _f_i_l_e _._._.
+     ppkkgg__aadddd [--AAffIILLnnRRUUuuVVvv] [--CC _c_o_n_f_i_g] [--KK _p_k_g___d_b_d_i_r] [--mm _m_a_c_h_i_n_e]
+             [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w] _f_i_l_e _._._.
              [[ftp|http]://[_u_s_e_r][:_p_a_s_s_w_o_r_d]@]_h_o_s_t[:_p_o_r_t][/_p_a_t_h_/]_p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
@@ -52,6 +52,10 @@ OOPPTTIIOONNSS
              to remove the mark.  If you ppkkgg__aadddd a package without specifying
              --AA after it had already been automatically installed, the mark is
              removed.
+
+     --CC _c_o_n_f_i_g
+             Read the configuration file from _c_o_n_f_i_g instead of the system
+             default.
 
      --ff      Force installation to proceed even if prerequisite packages are
              not installed or the install script fails.  Although ppkkgg__aadddd will
@@ -262,4 +266,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 5.0                     February 18, 2010                    NetBSD 5.0
+NetBSD 5.0                       June 16, 2010                      NetBSD 5.0
