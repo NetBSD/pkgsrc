@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.25 2010/02/18 13:43:11 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.26 2010/06/16 23:02:48 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.25 2010/02/18 13:43:11 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.26 2010/06/16 23:02:48 joerg Exp $");
 
 /*
  *
@@ -39,7 +39,7 @@ __RCSID("$NetBSD: main.c,v 1.25 2010/02/18 13:43:11 joerg Exp $");
 #include "lib.h"
 #include "add.h"
 
-static char Options[] = "AIK:LP:RVW:fhm:np:t:Uuvw:";
+static char Options[] = "AC:IK:LP:RVW:fhm:np:t:Uuvw:";
 
 char   *Destdir = NULL;
 char   *OverrideMachine = NULL;

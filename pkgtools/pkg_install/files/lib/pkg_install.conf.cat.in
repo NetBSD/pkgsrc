@@ -56,6 +56,10 @@ DDEESSCCRRIIPPTTIIOONN
              always         Passing the license check is required.  Missing
                             license conditions are considered an error.
 
+     CHECK_END_OF_FILE
+             During vulnerability checks, consider packages that have reached
+             end-of-life as vulnerable.  This option is enabled by default.
+
      CHECK_VULNERABILITIES
              Check for vulnerabilities when installing packages.  Supported
              values are:
@@ -166,4 +170,4 @@ FFIILLEESS
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1) pkg_create(1), pkg_delete(1), pkg_info(1)
 
-NetBSD 5.0                     January 22, 2010                     NetBSD 5.0
+NetBSD 5.0                       June 16, 2010                      NetBSD 5.0
