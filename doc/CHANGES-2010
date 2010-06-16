@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2257 2010/06/16 00:19:43 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.2258 2010/06/16 06:20:13 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3000,3 +3000,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/sqwebmail to 5.4.1 [pettai 2010-06-15]
 	Updated net/miredo to 1.2.2 [pettai 2010-06-15]
 	Updated security/opendnssec to 1.1.0 [pettai 2010-06-16]
+	Updated lang/sbcl to 1.0.39 [asau 2010-06-16]
