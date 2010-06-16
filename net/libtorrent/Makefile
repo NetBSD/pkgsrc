@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2010/01/17 12:02:33 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/06/16 13:07:03 jakllsch Exp $
 
 DISTNAME=	libtorrent-0.12.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -20,6 +20,11 @@ CONFIGURE_ARGS+=	--disable-debug
 GCC_REQD+=		3.3
 
 .include "../../mk/bsd.prefs.mk"
+
+# configure check is fooled by trap & emulate of unaligned access on alpha
+.if (${MACHINE_ARCH} == "alpha")
+CONFIGURE_ARGS+= --enable-aligned
+.endif
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-kqueue
