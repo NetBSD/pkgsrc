@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/09/22 17:41:07 taca Exp $
+$NetBSD: patch-ab,v 1.2 2010/06/16 22:27:04 taca Exp $
+
+use /var/tmp instead of /tmp.
 
 --- perl/lib/Anomy/Sanitizer.pm.orig	2008-01-19 23:53:47.000000000 +0900
 +++ perl/lib/Anomy/Sanitizer.pm
