@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.10 2009/11/15 13:00:01 drochner Exp $
+$NetBSD: patch-ae,v 1.11 2010/06/16 16:35:57 drochner Exp $
 
---- configure.orig	2009-09-28 15:10:12.000000000 +0200
+--- configure.orig	2010-05-12 20:26:22.000000000 +0000
 +++ configure
-@@ -11763,7 +11763,7 @@ fi
+@@ -11070,7 +11070,7 @@ fi
  # if we're using Sun Studio and neither the user nor a config.site
  # has set CFLAGS.
  if test $SUNCC = yes &&			\
@@ -11,20 +11,19 @@ $NetBSD: patch-ae,v 1.10 2009/11/15 13:00:01 drochner Exp $
     test "$CFLAGS" = "-g"
  then
    CFLAGS="-O -g"
-@@ -11856,6 +11856,7 @@ fi
+@@ -11161,6 +11161,7 @@ fi
  
  
  have_gcc4=no
 +if false; then
- { $as_echo "$as_me:$LINENO: checking for -fvisibility" >&5
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -fvisibility" >&5
  $as_echo_n "checking for -fvisibility... " >&6; }
- cat >conftest.$ac_ext <<_ACEOF
-@@ -11894,7 +11895,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -11177,6 +11178,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
+   have_gcc4=yes
  fi
- 
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
--
 +fi
+ 
  if test "x$have_gcc4" = "xyes"; then
     CFLAGS="$CFLAGS -fvisibility=hidden"
- fi
