@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2010/01/22 17:19:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/06/16 19:24:47 drochner Exp $
 bin/evcd2vcd
 bin/fst2vcd
 bin/ghwdump
 bin/gtkwave
 bin/lxt2miner
 bin/lxt2vcd
-bin/mvl2lxt
-bin/mvl2vcd
 bin/rtlbrowse
 bin/shmidcat
-bin/tex2vcd
-bin/tla2vcd
 bin/twinwave
 bin/vcd2fst
 bin/vcd2lxt
@@ -25,12 +21,8 @@ man/man1/ghwdump.1
 man/man1/gtkwave.1
 man/man1/lxt2miner.1
 man/man1/lxt2vcd.1
-man/man1/mvl2lxt.1
-man/man1/mvl2vcd.1
 man/man1/rtlbrowse.1
 man/man1/shmidcat.1
-man/man1/tex2vcd.1
-man/man1/tla2vcd.1
 man/man1/twinwave.1
 man/man1/vcd2fst.1
 man/man1/vcd2lxt.1
@@ -44,4 +36,7 @@ share/gtkwave/examples/des.sav
 share/gtkwave/examples/des.tcl
 share/gtkwave/examples/des.v
 share/gtkwave/examples/des.vzt
+share/gtkwave/examples/transaction.c
+share/gtkwave/examples/transaction.fst
+share/gtkwave/examples/transaction.sav
 share/gtkwave/gtkwave.odt
