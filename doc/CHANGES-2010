@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2256 2010/06/15 23:50:17 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.2257 2010/06/16 00:19:43 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2999,3 +2999,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/courier-authlib to 0.63.0 [pettai 2010-06-15]
 	Updated mail/sqwebmail to 5.4.1 [pettai 2010-06-15]
 	Updated net/miredo to 1.2.2 [pettai 2010-06-15]
+	Updated security/opendnssec to 1.1.0 [pettai 2010-06-16]
