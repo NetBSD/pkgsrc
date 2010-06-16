@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2267 2010/06/16 14:50:23 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.2268 2010/06/16 15:17:41 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3011,3 +3011,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monotone to 0.48 [jmmv 2010-06-16]
 	Updated devel/monotone-server to 0.48 [jmmv 2010-06-16]
 	Updated devel/monotone-el to 0.48 [jmmv 2010-06-16]
+	Updated mail/courier-analog to 0.16 [pettai 2010-06-16]
