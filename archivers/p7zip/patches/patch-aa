@@ -1,18 +1,19 @@
-$NetBSD: patch-aa,v 1.17 2007/09/05 20:37:08 adam Exp $
+$NetBSD: patch-aa,v 1.18 2010/06/16 08:30:09 adam Exp $
 
---- makefile.machine.orig	2007-09-01 10:26:00.000000000 +0200
+--- makefile.machine.orig	2010-05-30 08:33:48.000000000 +0000
 +++ makefile.machine
-@@ -2,20 +2,20 @@
+@@ -2,21 +2,21 @@
  # makefile for Linux (x86, PPC, alpha ...)
  #
  
 -OPTFLAGS=-O
 +OPTFLAGS=
  
--ALLFLAGS=${OPTFLAGS} -s \
+-ALLFLAGS=${OPTFLAGS} -pipe -s \
 +ALLFLAGS=${OPTFLAGS} -Wall \
      	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE \
  	-DNDEBUG -D_REENTRANT -DENV_UNIX \
+ 	-D_7ZIP_LARGE_PAGES \
  	$(LOCAL_FLAGS)
  
 -CXX=g++ $(ALLFLAGS)
