@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:06:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/06/16 16:27:47 drochner Exp $
 bin/koi8rxterm
 bin/resize
 bin/uxterm
 bin/xterm
 lib/X11/app-defaults/KOI8RXTerm
+lib/X11/app-defaults/KOI8RXTerm-color
 lib/X11/app-defaults/UXTerm
+lib/X11/app-defaults/UXTerm-color
 lib/X11/app-defaults/XTerm
 lib/X11/app-defaults/XTerm-color
 man/man1/koi8rxterm.1

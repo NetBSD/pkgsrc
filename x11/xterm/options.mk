@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2009/08/05 17:10:37 drochner Exp $
+# $NetBSD: options.mk,v 1.11 2010/06/16 16:27:47 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xterm
 PKG_SUPPORTED_OPTIONS=		debug pcre freetype luit
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+= --enable-warnings
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+= --enable-freetype
 .  include "../../x11/libXft/buildlink3.mk"
+.else
+CONFIGURE_ARGS+= --disable-freetype
 .endif
 ###
 ### XXX The configure test checks for pcreposix_regcomp in libpcreposix.

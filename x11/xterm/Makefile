@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2010/02/24 19:37:38 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2010/06/16 16:27:47 drochner Exp $
 
-DISTNAME=	xterm-255
+DISTNAME=	xterm-259
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/ \
 		http://www.sfr-fresh.com/unix/misc/
@@ -13,7 +13,7 @@ COMMENT=	Latest terminal emulator for the X Window System
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		tbl
+USE_TOOLS+=		tbl pkg-config
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
