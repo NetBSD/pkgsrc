@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.5 2010/06/16 11:49:57 drochner Exp $
+
+--- Makefile.in.orig	2010-06-16 11:40:45.000000000 +0000
++++ Makefile.in
+@@ -1996,7 +1996,11 @@ gpsd_maskdump.c: gpsd.h-tail maskaudit.p
+ 
+ # Install Python modules
+ @HAVE_PYTHON_TRUE@install-exec-local:
+-@HAVE_PYTHON_TRUE@	$(PYTHON) setup.py install --prefix=${prefix} --root=$(DESTDIR)
++@HAVE_PYTHON_TRUE@	if test -z "$(DESTDIR)"; then \
++@HAVE_PYTHON_TRUE@	$(PYTHON) setup.py install --prefix=${prefix}; \
++@HAVE_PYTHON_TRUE@	else \
++@HAVE_PYTHON_TRUE@	$(PYTHON) setup.py install --prefix=${prefix} --root=$(DESTDIR); \
++@HAVE_PYTHON_TRUE@	fi
+ 
+ @HAVE_XSLT_PROCESSOR_TRUE@.xml.1:
+ @HAVE_XSLT_PROCESSOR_TRUE@	$(MANGENERATOR) $(MANFLAGS) $(MANTARGET) $<
