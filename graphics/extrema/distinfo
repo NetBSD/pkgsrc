@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/11 18:28:07 drochner Exp $
+$NetBSD: distinfo,v 1.3 2010/06/16 20:45:42 drochner Exp $
 
-SHA1 (extrema-4.4.3.tar.gz) = adc66b7383f170ae7f2c02f11ffb12a908b240c8
-RMD160 (extrema-4.4.3.tar.gz) = 5d0c7a5637a478931d9e8fcc58d223a315790e51
-Size (extrema-4.4.3.tar.gz) = 6314563 bytes
+SHA1 (extrema-4.4.4.tar.gz) = eff38eb3c36aa9acc3ad471ea57f2037c66e1842
+RMD160 (extrema-4.4.4.tar.gz) = 4ce6dcacca51ac18deb770cd9c0f7f77d0458ccd
+Size (extrema-4.4.4.tar.gz) = 6404330 bytes
