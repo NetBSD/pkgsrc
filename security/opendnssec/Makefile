@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/05/06 14:56:16 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/16 00:19:08 pettai Exp $
 #
 
-DISTNAME=	opendnssec-1.0.0
+DISTNAME=	opendnssec-1.1.0
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -10,16 +10,18 @@ HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-4Suite-[0-9]*:../../textproc/py-4Suite
 DEPENDS+=	ldns>=1.6.4:../../net/ldns
-DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.43:../../net/ruby-dnsruby
+DEPENDS+=	rubygems:../../misc/rubygems
+DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.46:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=	VARBASE
 
-USE_TOOLS+=	bash gmake perl
+USE_TOOLS+=	bash gmake
 CONFIG_SHELL=	${BASH}
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
@@ -28,6 +30,17 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ENV+=		RUBY=${RUBY}
+
+ODS_USER?=	opendnssec
+ODS_GROUP?=	opendnssec
+
+PKG_GROUPS=		${ODS_GROUP}
+PKG_USERS=		${ODS_USER}:${ODS_GROUP}
+PKG_GECOS.${ODS_USER}=	OpenDNSSEC user
+PKG_HOME.${ODS_USER}=	${VARBASE}/opendnssec
+PKG_SHELL.${ODS_USER}=	${SH}
+PKG_USERS_VARS+=	ODS_USER
+PKG_GROUPS_VARS+=	ODS_GROUP
 
 EGDIR=			${PREFIX}/share/examples/opendnssec
 ODS_SYSCONFDIR=		${PKG_SYSCONFDIR}/opendnssec

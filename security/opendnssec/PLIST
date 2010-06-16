@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/06 12:50:17 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/16 00:19:08 pettai Exp $
 bin/ods-auditor
 bin/ods-hsmspeed
 bin/ods-hsmutil
+bin/ods-kasp2html
 bin/ods-kaspcheck
 bin/ods-ksmutil
 include/hsmtest.h
@@ -13,6 +14,7 @@ lib/opendnssec/kasp_auditor/auditor.rb
 lib/opendnssec/kasp_auditor/config.rb
 lib/opendnssec/kasp_auditor/key_tracker.rb
 lib/opendnssec/kasp_auditor/parse.rb
+lib/opendnssec/kasp_auditor/partial_auditor.rb
 lib/opendnssec/kasp_auditor/preparser.rb
 lib/opendnssec/kasp_checker.rb
 lib/opendnssec/signer/Engine.py
@@ -41,11 +43,8 @@ libexec/opendnssec/create_dnskey
 libexec/opendnssec/finalizer
 libexec/opendnssec/get_class
 libexec/opendnssec/get_serial
-libexec/opendnssec/nsec3er
-libexec/opendnssec/nseccer
+libexec/opendnssec/quicksorter
 libexec/opendnssec/signer
-libexec/opendnssec/signer_threads
-libexec/opendnssec/sorter
 libexec/opendnssec/zone_fetcher
 libexec/opendnssec/zone_reader
 man/man1/ods-auditor.1
