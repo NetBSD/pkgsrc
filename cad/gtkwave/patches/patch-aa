@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.5 2010/06/16 19:24:47 drochner Exp $
+
+--- configure.orig	2010-03-09 22:21:28.000000000 +0000
++++ configure
+@@ -5076,7 +5076,7 @@ $as_echo "$EXZ" >&6; }
+ 
+ LIBXZ_LDADD=
+ LIBXZ_CFLAGS=
+-if test "X$EXZ" == "Xyes"; then
++if test "X$EXZ" = "Xyes"; then
+ 	have_liblzma=no
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+@@ -5169,7 +5169,7 @@ $as_echo "$EJUDY" >&6; }
+ 
+ LIBJUDY_LDADD=
+ LIBJUDY_CFLAGS=
+-if test "X$EJUDY" == "Xyes"; then
++if test "X$EJUDY" = "Xyes"; then
+ 	have_libjudy=no
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
