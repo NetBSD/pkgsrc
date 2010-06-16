@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/16 19:43:52 drochner Exp $
 #
 
-DISTNAME=	merkaartor-0.15.2
-PKGREVISION=	1
+DISTNAME=	merkaartor-0.16.1
 CATEGORIES=	geography
 MASTER_SITES=	http://www.merkaartor.org/downloads/source/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,6 +32,7 @@ do-configure:
 		${QMAKE} ${CONFIGURE_ARGS} Merkaartor.pro && \
 		${MAKE} qmake
 
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/gpsd/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
