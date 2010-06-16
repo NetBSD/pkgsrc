@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2010/06/16 11:49:57 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2010/06/16 22:16:31 gdt Exp $
+
+This change is present post-2.94 in upstream git as
+commit 01296e67701bac187d83a5a88395de3478326f93.
 
 --- Makefile.in.orig	2010-06-16 11:40:45.000000000 +0000
 +++ Makefile.in
