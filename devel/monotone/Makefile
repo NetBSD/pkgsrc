@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2010/03/15 09:51:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.63 2010/06/16 14:47:26 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.47
+DISTNAME=	monotone-0.48
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.47/
+MASTER_SITES=	http://monotone.ca/downloads/0.48/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
+LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
 USE_TOOLS+=		gmake makeinfo pax pkg-config
@@ -38,8 +39,9 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
+INSTALLATION_DIRS+=	share/monotone
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/monotone
 	cd ${WRKSRC} && rm -rf contrib/.deps && \
 	    pax -rw -pm contrib \
 	    ${DESTDIR}${PREFIX}/share/monotone
