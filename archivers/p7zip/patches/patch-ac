@@ -1,19 +1,19 @@
-$NetBSD: patch-ac,v 1.6 2009/02/18 07:19:06 adam Exp $
+$NetBSD: patch-ac,v 1.7 2010/06/16 08:30:09 adam Exp $
 
---- makefile.glb.orig	2009-02-09 21:20:12.000000000 +0100
+--- makefile.glb.orig	2009-07-03 20:44:21.000000000 +0000
 +++ makefile.glb
 @@ -1,12 +1,12 @@
  
  RM=rm -f
--CFLAGS=-c \
-+CFLAGS+=-c \
+-CFLAGS=-c -I. \
++CFLAGS+=-c -I. \
  -I../../../../C \
  -I../../../myWindows \
  -I../../../include_windows \
  -I../../..
  
--CXXFLAGS=-c \
-+CXXFLAGS+=-c \
+-CXXFLAGS=-c -I. \
++CXXFLAGS+=-c -I. \
  -I../../../myWindows \
  -I../../../ \
  -I../../../include_windows
