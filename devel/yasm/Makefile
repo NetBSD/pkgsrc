@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2010/04/23 21:32:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/06/16 19:36:28 drochner Exp $
 #
 
-DISTNAME=	yasm-1.0.0
+DISTNAME=	yasm-1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.tortall.net/projects/yasm/releases/
 
