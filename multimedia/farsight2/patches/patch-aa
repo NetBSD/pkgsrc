@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/17 21:13:04 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/16 12:11:10 obache Exp $
 
 https://bugs.freedesktop.org/show_bug.cgi?id=23378
 
---- configure.orig	2009-08-03 20:33:06.000000000 +0000
+--- configure.orig	2010-01-05 17:15:11.000000000 +0000
 +++ configure
-@@ -24712,7 +24712,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -15753,7 +15753,7 @@ rm -f core conftest.err conftest.$ac_obj
  $as_echo "$flag_ok" >&6; }
  
  
