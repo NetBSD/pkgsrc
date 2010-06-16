@@ -1,12 +1,12 @@
-$NetBSD: patch-ah,v 1.5 2010/04/15 07:02:51 adam Exp $
+$NetBSD: patch-ah,v 1.6 2010/06/16 07:56:30 adam Exp $
 
---- router/main.c.orig	2010-02-24 08:41:41.000000000 +0000
-+++ router/main.c
-@@ -479,6 +479,7 @@ JABBER_MAIN("jabberd2router", "Jabber 2 
-         do {
-             xhash_iter_get(r->components, NULL, xhv.val);
-             sx_close(comp->s);
-+            mio_run(r->mio, 5);
-         } while(xhash_count(r->components) > 0);
- 
-     xhash_free(r->components);
+--- storage/storage_ldapvcard.c.orig	2010-06-13 06:44:33.000000000 +0000
++++ storage/storage_ldapvcard.c
+@@ -143,7 +143,6 @@ static int rebindProc(LDAP *ld, LDAP_CON
+     drvdata_t data = mdata;
+     data->ld = ld;
+     if(ldap_simple_bind_s(data->ld, data->binddn, data->bindpw)) {
+-        log_write(drv->st->sm->log, LOG_ERR, "ldap: bind failed (to %s): %s", url, ldap_err2string(_ldap_get_lderrno(data->ld)));
+         ldap_unbind_s(data->ld);
+         data->ld = NULL;
+         return NULL;

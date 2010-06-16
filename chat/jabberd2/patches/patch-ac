@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2009/09/06 04:18:11 schnoebe Exp $
+$NetBSD: patch-ac,v 1.7 2010/06/16 07:56:30 adam Exp $
 
---- etc/sm.xml.in.orig	2009-07-05 16:54:18.000000000 -0500
+--- etc/sm.xml.in.orig	2010-06-11 11:44:58.000000000 +0000
 +++ etc/sm.xml.in
 @@ -5,7 +5,7 @@
  
@@ -56,9 +56,9 @@ $NetBSD: patch-ac,v 1.6 2009/09/06 04:18:11 schnoebe Exp $
      </fs>
  
      <!-- LDAPVCARD driver configuration -->
-@@ -667,7 +667,7 @@
- 
-       <!-- If you defined publish, you should comment <roster> -->
+@@ -679,7 +679,7 @@
+            stored in the users data store when they are created. -->
+       <!-- If you defined publish, you should comment-out <roster> -->
        <!--
 -      <roster>@sysconfdir@/templates/roster.xml</roster>
 +      <roster>@PKG_SYSCONFDIR@/roster.xml</roster>
