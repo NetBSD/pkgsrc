@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2270 2010/06/16 18:16:02 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.2271 2010/06/16 19:10:33 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3014,3 +3014,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/courier-analog to 0.16 [pettai 2010-06-16]
 	Updated www/trac to 0.12 [jmmv 2010-06-16]
 	Updated textproc/mdocml to 1.10.1 [joerg 2010-06-16]
+	Updated www/py-django to 1.2.1 [joerg 2010-06-16]
