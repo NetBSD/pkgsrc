@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2266 2010/06/16 14:35:30 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2267 2010/06/16 14:50:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3008,3 +3008,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/libtorrent to 0.12.6nb2 [jakllsch 2010-06-16]
 	Updated lang/ecl to 10.4.1 [asau 2010-06-16]
 	Updated net/samba33 to 3.3.13 [taca 2010-06-16]
+	Updated devel/monotone to 0.48 [jmmv 2010-06-16]
+	Updated devel/monotone-server to 0.48 [jmmv 2010-06-16]
+	Updated devel/monotone-el to 0.48 [jmmv 2010-06-16]
