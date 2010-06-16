@@ -1,5 +1,5 @@
 #!@RCD_SCRIPTS_SHELL@
-# $NetBSD: scanmail.sh,v 1.1.1.1 2009/09/22 17:41:07 taca Exp $
+# $NetBSD: scanmail.sh,v 1.2 2010/06/16 22:27:04 taca Exp $
 
 # PROVIDE: scanmail
 # REQUIRE: fpscand
@@ -11,7 +11,7 @@ name="scanmail"
 rcvar=$name
 command="@PREFIX@/@FPROTDIR@/scan-mail.pl"
 command_interpreter="@PREFIX@/bin/perl"
-pidfile="@VARDIR@/scan-mail.pid"
+pidfile="@VARDIR@/run/scan-mail.pid"
 datadir="@VARDIR@"
 required_files="${command}"
 command_args="--daemon"
