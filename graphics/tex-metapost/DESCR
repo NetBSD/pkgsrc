@@ -1,0 +1,3 @@
+MetaPost uses a language based on that of MetaFont to produce precise
+technical illustrations. Its output is scalable PostScript or SVG,
+rather than the bitmaps MetaFont creates.
