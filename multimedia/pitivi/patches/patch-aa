@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/06/16 14:12:09 drochner Exp $
+
+--- po/LINGUAS.orig	2010-02-19 16:17:24.000000000 +0000
++++ po/LINGUAS
+@@ -5,12 +5,10 @@ ast
+ bg
+ ca
+ cs
+-da
+ de
+ dz
+ el
+ en_GB
+-es
+ fi
+ fr
+ gl
