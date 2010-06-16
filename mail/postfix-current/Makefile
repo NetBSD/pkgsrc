@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2010/06/08 15:15:03 martti Exp $
+# $NetBSD: Makefile,v 1.114 2010/06/16 18:36:48 gdt Exp $
 
 DISTNAME=	postfix-2.8-20100603
 PKGNAME=	postfix-2.8.20100603
@@ -12,7 +12,10 @@ DIST_SUBDIR=	postfix
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
-LICENSE=	postfix-license
+
+# The postfix license has only very minor diffs from cpl-1.0.
+LICENSE=	cpl-1.0
+#LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	postfix-2.[6-7]-[0-9]* esmtp>=1.2
