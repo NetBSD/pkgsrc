@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/03/21 16:29:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/16 15:16:53 pettai Exp $
 
-DISTNAME=	courier-analog-0.15
+DISTNAME=	courier-analog-0.16
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
