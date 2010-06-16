@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2010/06/16 16:53:56 drochner Exp $
+
+--- src/cadaver.c.orig	2008-10-29 09:35:33.000000000 +0000
++++ src/cadaver.c
+@@ -39,9 +39,9 @@
+ #ifdef HAVE_STRING_H
+ #include <string.h>
+ #endif
+-#ifdef HAVE_LOCALE_H
++/* #ifdef HAVE_LOCALE_H XXX missing configure check */
+ #include <locale.h>
+-#endif
++/* #endif */
+ 
+ 
+ #include <errno.h>
