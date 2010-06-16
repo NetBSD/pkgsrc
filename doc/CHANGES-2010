@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2274 2010/06/16 22:29:05 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2275 2010/06/16 23:48:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3020,3 +3020,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/f-prot-antivirus6-fs-bin to 6.0.3.1 [taca 2010-06-16]
 	Updated security/f-prot-antivirus6-ms-bin to 6.0.3.1 [taca 2010-06-16]
 	Updated security/f-prot-antivirus6-ws-bin to 6.0.3.1 [taca 2010-06-16]
+	Added graphics/tex-eepic version 1.1e [minskim 2010-06-16]
+	Added graphics/tex-eepic-doc version 1.1e [minskim 2010-06-16]
