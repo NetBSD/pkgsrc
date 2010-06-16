@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2010/06/16 13:57:30 asau Exp $
+
+Avoid possible conflicts when using shared place.
+
+--- src/Makefile.in.orig	2010-04-04 18:31:27.000000000 +0400
++++ src/Makefile.in	2010-06-16 14:56:55.000000000 +0400
+@@ -174,7 +174,7 @@
+ 	  esac \
+ 	done
+ 	for i in Copyright LGPL; do \
+-	  $(INSTALL_DATA) $(top_srcdir)/../$$i $(DESTDIR)$(libdir); \
++	  $(INSTALL_DATA) $(top_srcdir)/../$$i $(DESTDIR)$(ecldir); \
+ 	done
+ 	$(mkinstalldirs) $(DESTDIR)$(mandir)/man$(manext)
+ 	for i in doc/ecl.man doc/ecl-config.man; do \
