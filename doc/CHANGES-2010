@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2260 2010/06/16 07:34:18 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2261 2010/06/16 07:57:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3002,3 +3002,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/opendnssec to 1.1.0 [pettai 2010-06-16]
 	Updated lang/sbcl to 1.0.39 [asau 2010-06-16]
 	Updated www/moodle to 1.9.9 [wiz 2010-06-16]
+	Updated chat/jabberd2 to 2.2.10 [adam 2010-06-16]
