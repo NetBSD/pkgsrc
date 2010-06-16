@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2261 2010/06/16 07:57:36 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2262 2010/06/16 08:05:06 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3003,3 +3003,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/sbcl to 1.0.39 [asau 2010-06-16]
 	Updated www/moodle to 1.9.9 [wiz 2010-06-16]
 	Updated chat/jabberd2 to 2.2.10 [adam 2010-06-16]
+	Updated comms/asterisk16 to 1.6.1.20nb1 [jnemeth 2010-06-16]
