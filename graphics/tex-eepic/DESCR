@@ -1,0 +1,6 @@
+Extensions to epic and the LaTeX picture drawing environment, include
+the drawing of lines at any slope, the drawing of circles in any radii,
+and the drawing of dotted and dashed lines much faster with much less
+TeX memory, and providing several new commands for drawing ellipses,
+arcs, splines, and filled circles and ellipses. The package uses tpic
+\special commands.

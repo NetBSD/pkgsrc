@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/16 23:24:13 minskim Exp $
+share/texmf-dist/tex/latex/eepic/eepic.sty
+share/texmf-dist/tex/latex/eepic/eepicemu.sty
+share/texmf-dist/tex/latex/eepic/epic.sty
