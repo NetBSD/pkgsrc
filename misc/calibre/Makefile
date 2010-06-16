@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/06/16 17:20:27 drochner Exp $
 #
 
 DISTNAME=	calibre-0.6.24
@@ -433,6 +433,7 @@ MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 #MAKE_ENV+=		XDG_UTILS_DEBUG_LEVEL=100
 
+.include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -442,7 +443,6 @@ BUILDLINK_API_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.6
 .include "../../graphics/py-imaging/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libwmf+=	libwmf>=0.2.8
 .include "../../graphics/libwmf/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 _PYSETUPTOOLSINSTALLARGS=	# empty
 #.include "../../lang/python/extension.mk"
