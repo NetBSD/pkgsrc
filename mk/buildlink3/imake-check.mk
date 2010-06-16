@@ -1,4 +1,4 @@
-# $NetBSD: imake-check.mk,v 1.7 2007/11/27 23:06:43 rillig Exp $
+# $NetBSD: imake-check.mk,v 1.8 2010/06/16 20:23:05 schwarz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,16 +57,22 @@
 # .include "../../mk/buildlink3/imake-check.mk"
 #
 
+.if defined(IMAKE)
+_TMP_IMAKE=	${IMAKE}
+.else
+_TMP_IMAKE=	${X11BASE}/bin/imake
+.endif
+
 .for _pair_ in ${BUILTIN_IMAKE_CHECK}
 .  for pkg in ${_pair_:C/\:[^:]*$//}
 .  for symbol in ${_pair_:C/^[^:]*\://}
-.  if ${X11_TYPE} == "modular"
+.  if ${X11_TYPE} == "modular" || !exists(${_TMP_IMAKE})
 BUILTIN_IMAKE_CHECK.${pkg}=	no
 .  else
 USE_TOOLS+=	cat:pkgsrc echo:pkgsrc grep:pkgsrc mkdir:pkgsrc		\
 		rm:pkgsrc test:pkgsrc
-USE_TOOLS+=	imake:pkgsrc ${IMAKE_TOOLS:S/$/:pkgsrc/}	# XXX
-IMAKE?=		${X11BASE}/bin/imake				# XXX
+USE_TOOLS+=	imake:pkgsrc ${IMAKE_TOOLS:S/$/:pkgsrc/}
+IMAKE?=		${X11BASE}/bin/imake
 
 .    if !defined(BUILTIN_IMAKE_CHECK.${pkg})
 BUILTIN_IMAKE_CHECK.${pkg}!=				\
