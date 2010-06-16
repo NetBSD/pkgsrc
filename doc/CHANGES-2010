@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2263 2010/06/16 08:31:25 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2264 2010/06/16 13:07:24 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3005,3 +3005,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated chat/jabberd2 to 2.2.10 [adam 2010-06-16]
 	Updated comms/asterisk16 to 1.6.1.20nb1 [jnemeth 2010-06-16]
 	Updated archivers/p7zip to 9.13 [adam 2010-06-16]
+	Updated net/libtorrent to 0.12.6nb2 [jakllsch 2010-06-16]
