@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/16 16:53:56 drochner Exp $
 bin/cadaver
 man/man1/cadaver.1
+share/locale/en@quot/LC_MESSAGES/cadaver.mo
+share/locale/es/LC_MESSAGES/cadaver.mo
+share/locale/it/LC_MESSAGES/cadaver.mo

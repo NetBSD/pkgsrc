@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2010/01/17 12:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/06/16 16:53:56 drochner Exp $
 
-DISTNAME=		cadaver-0.22.2
-PKGREVISION=		7
+DISTNAME=		cadaver-0.23.3
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/cadaver/
 
@@ -15,17 +14,17 @@ BUILD_TARGET=		cadaver
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-netrc
 CONFIGURE_ARGS+=	--with-expat
-CONFIGURE_ARGS+=	--with-included-neon
+#CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--with-ssl=yes
 LIBS+=			${BUILDLINK_LDADD.termcap}
 
-INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR:Q}${PREFIX:Q}/bin		\
-			mandir=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}
+#INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR:Q}${PREFIX:Q}/bin		\
+#			mandir=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-
+.include "../../www/neon/buildlink3.mk"
 # DON'T make this package depend on the www/neon package until neon
 # becomes stable; keep it using its internal copy of neon as with
 # www/sitecopy.  This package has in the past bounced back and forth
