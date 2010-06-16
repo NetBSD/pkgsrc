@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2010/06/02 13:14:47 adam Exp $
+# $NetBSD: Makefile,v 1.58 2010/06/16 07:56:29 adam Exp $
 
-DISTNAME=	jabberd-2.2.9
-PKGREVISION=	3
+DISTNAME=	jabberd-2.2.10
 CATEGORIES=	chat
 MASTER_SITES=	http://codex.xiaoka.com/pub/jabberd2/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,15 +24,6 @@ CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-.if (${MACHINE_ARCH} == alpha) || (${MACHINE_ARCH} == x86_64)
-CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:M*:Q}
-CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:M*:Q}
-MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-Os/:M*:Q}
-CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:C/-O./-Os/:M*:Q}
-CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:M*:Q}
-MAKE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-Os/:M*:Q}
-.endif
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -108,8 +98,8 @@ pre-configure:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
 	    ${DESTDIR}${EGDIR}/roster.xml
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/bdbdump.pl ${DESTDIR}${BINDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${DESTDIR}${BINDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/migrate.pl ${DESTDIR}${BINDIR}
 .for f in ${DBFILES}
 	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${DESTDIR}${EGDIR}
 .endfor
