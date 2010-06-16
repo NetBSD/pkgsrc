@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/16 23:11:48 wiz Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 
@@ -42,9 +42,11 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.attica?=	attica>=0.1.4
 .include "../../misc/attica/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
