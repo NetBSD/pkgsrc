@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/03/15 05:20:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/06/16 13:57:30 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -17,6 +17,8 @@ include/ecl/page.h
 include/ecl/stacks.h
 include/ecl/unify.h
 lib/${PKGNAME}/BUILD-STAMP
+lib/${PKGNAME}/Copyright
+lib/${PKGNAME}/LGPL
 lib/${PKGNAME}/TAGS
 lib/${PKGNAME}/asdf.fas
 lib/${PKGNAME}/bytecmp.asd
@@ -30,6 +32,16 @@ lib/${PKGNAME}/defsystem.fas
 lib/${PKGNAME}/dpp
 lib/${PKGNAME}/ecl_min
 lib/${PKGNAME}/help.doc
+lib/${PKGNAME}/libasdf.a
+lib/${PKGNAME}/libbytecmp.a
+${PLIST.clx}lib/${PKGNAME}/libclx.a
+lib/${PKGNAME}/libcmp.a
+lib/${PKGNAME}/libdefsystem.a
+lib/${PKGNAME}/libprofile.a
+lib/${PKGNAME}/librt.a
+lib/${PKGNAME}/libsb-bsd-sockets.a
+lib/${PKGNAME}/libserve-event.a
+lib/${PKGNAME}/libsockets.a
 lib/${PKGNAME}/profile.asd
 lib/${PKGNAME}/profile.fas
 lib/${PKGNAME}/rt.asd
@@ -46,3 +58,4 @@ lib/libecl.so
 lib/libecl.so.${PKGVERSION_MAJOR}
 lib/libecl.so.${PKGVERSION_MAJOR_MINOR}
 lib/libecl.so.${PKGVERSION}
+man/man1/ecl.1
