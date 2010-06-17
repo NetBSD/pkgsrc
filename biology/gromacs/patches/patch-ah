@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2010/06/17 09:26:16 asau Exp $
+
+Modern libtool requires tag.
+
+--- src/gmxlib/nonbonded/nb_kernel_ia64_single/Makefile.in.orig	2009-12-06 21:18:54.000000000 +0000
++++ src/gmxlib/nonbonded/nb_kernel_ia64_single/Makefile.in	2010-06-17 07:57:43.000000000 +0000
+@@ -67,7 +67,7 @@
+ am__depfiles_maybe = depfiles
+ CPPASCOMPILE = $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS)
+-LTCPPASCOMPILE = $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
++LTCPPASCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS)
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
