@@ -1,4 +1,8 @@
-$NetBSD: CHANGES-2010,v 1.2277 2010/06/17 00:02:31 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.2278 2010/06/17 00:11:53 agc Exp $
+
+PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
+ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
+THE BRANCH HAS BEEN TAGGED. THANKS.
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3026,3 +3030,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/tex-metapost-doc to 1.211 [minskim 2010-06-17]
 	Added print/tex-context version 2009 [minskim 2010-06-17]
 	Added print/tex-context-doc version 2009 [minskim 2010-06-17]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2010Q2 branch [agc 2010-06-16]
