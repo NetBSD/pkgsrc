@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2010/05/10 23:05:07 minskim Exp $
+# $NetBSD: Makefile,v 1.44 2010/06/17 00:35:43 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -41,10 +41,12 @@ DEPENDS+=	tex-cite-[0-9]*:../../print/tex-cite
 DEPENDS+=	tex-cmcyr>=2009:../../fonts/tex-cmcyr
 DEPENDS+=	tex-collection-latex>=2009:../../print/tex-collection-latex
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
+DEPENDS+=	tex-context>=2009:../../print/tex-context
 DEPENDS+=	tex-courier-[0-9]*:../../fonts/tex-courier
 DEPENDS+=	tex-cyrillic>=2009:../../print/tex-cyrillic
 DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
 DEPENDS+=	tex-ec>=1.0:../../fonts/tex-ec
+DEPENDS+=	tex-eepic>=1.1e:../../graphics/tex-eepic
 DEPENDS+=	tex-endnotes-[0-9]*:../../print/tex-endnotes
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
@@ -102,6 +104,7 @@ DEPENDS+=	tex-magaz-[0-9]*:../../print/tex-magaz
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
+DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
 DEPENDS+=	tex-midpage-[0-9]*:../../print/tex-midpage
 DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
@@ -147,7 +150,6 @@ DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/tex-zapfding
 
 EXTRACT_ELEMENTS+=	aliases
 EXTRACT_ELEMENTS+=	bibtex
-EXTRACT_ELEMENTS+=	context
 EXTRACT_ELEMENTS+=	doc
 EXTRACT_ELEMENTS+=	dvips
 EXTRACT_ELEMENTS+=	fonts
@@ -209,7 +211,7 @@ post-extract:
 	rm -f ${WRKSRC}/ls-R
 	rm -rf ${WRKSRC}/bibtex/bib/[A-Za-o]*
 	rm -rf ${WRKSRC}/bibtex/bst/ams
-	rm -rf ${WRKSRC}/bibtex/bst/base
+	rm -rf ${WRKSRC}/bibtex/bst/[b-c]*
 	rm -rf ${WRKSRC}/bibtex/bst/misc
 	rm -rf ${WRKSRC}/bibtex/bst/natbib
 	rm -rf ${WRKSRC}/doc/bibtex/base
@@ -230,6 +232,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/beamer
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/c[v-z]*
+	rm -rf ${WRKSRC}/doc/latex/eepic
 	rm -rf ${WRKSRC}/doc/latex/enumitem
 	rm -rf ${WRKSRC}/doc/latex/exam
 	rm -rf ${WRKSRC}/doc/latex/fancy[c-z]*
@@ -258,7 +261,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/ty*
 	rm -rf ${WRKSRC}/doc/latex/wasysym/wasydoc.dvi
 	rm -rf ${WRKSRC}/doc/latex/xcolor
-	rm -rf ${WRKSRC}/doc/makeindex
+	rm -rf ${WRKSRC}/doc/m[a-j]*
 	rm -rf ${WRKSRC}/doc/pdftex
 	rm -rf ${WRKSRC}/dvips/[b-l]*
 	rm -f ${WRKSRC}/dvips/misc/[o-r]*
@@ -273,11 +276,13 @@ post-extract:
 	rmdir ${WRKSRC}/fonts/cmap
 	rm -rf ${WRKSRC}/fonts/enc/dvipdfm/tetex
 	rm -rf ${WRKSRC}/fonts/enc/dvips/base
+	rm -rf ${WRKSRC}/fonts/enc/dvips/context
 	rm -rf ${WRKSRC}/fonts/enc/dvips/lm
 	rm -rf ${WRKSRC}/fonts/enc/dvips/tetex
 	rmdir ${WRKSRC}/fonts/lig
 	rm -f ${WRKSRC}/fonts/map/dvipdfm/tetex/cm-dvipdfm-fix.map
 	rmdir ${WRKSRC}/fonts/map/dvipdfm/updmap
+	rm -rf ${WRKSRC}/fonts/map/dvips/context
 	rm -rf ${WRKSRC}/fonts/map/dvips/lm
 	rm -f ${WRKSRC}/fonts/map/dvips/misc/marvosym.map
 	rmdir ${WRKSRC}/fonts/map/dvips/updmap
@@ -312,7 +317,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/cg/cou*
 	rm -rf ${WRKSRC}/fonts/tfm/cg/[h-kp-s]*
 	rm -rf ${WRKSRC}/fonts/tfm/cg/times
-	rm -rf ${WRKSRC}/fonts/tfm/[i-o]*
+	rm -rf ${WRKSRC}/fonts/tfm/[d-o]*
 	rm -rf ${WRKSRC}/fonts/tfm/public/t*
 	rm -rf ${WRKSRC}/fonts/tfm/public/ae*
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm
@@ -327,7 +332,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/yandy/times
 	rmdir ${WRKSRC}/fonts/truetype
 	rm -rf ${WRKSRC}/fonts/type1/bluesky
-	rm -rf ${WRKSRC}/fonts/type1/hoekwater/[d-z]*
+	rm -rf ${WRKSRC}/fonts/type1/hoekwater
 	rm -rf ${WRKSRC}/fonts/type1/public/cmcyr
 	rm -rf ${WRKSRC}/fonts/type1/public/lm
 	rm -rf ${WRKSRC}/fonts/type1/public/marvosym
@@ -347,12 +352,16 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/vf/yandy/times
 	rm -rf ${WRKSRC}/metafont/[a-l]*
 	rm -f ${WRKSRC}/metafont/misc/[a-w]*
+	rm -rf ${WRKSRC}/metapost/[a-c]*
+	rm -rf ${WRKSRC}/metapost/misc
+	rm -rf ${WRKSRC}/metapost/support
 	rm -rf ${WRKSRC}/mft
 	rm -rf ${WRKSRC}/omega/ocp/misc
 	rm -rf ${WRKSRC}/omega/otp/misc
-	rm -f ${WRKSRC}/tex/context/base/supp-pdf.tex
+	rm -rf ${WRKSRC}/scripts/context
+	rm -rf ${WRKSRC}/tex/context
 	rm -rf ${WRKSRC}/tex/generic/[a-b]*
-	rm -rf ${WRKSRC}/tex/generic/config
+	rm -rf ${WRKSRC}/tex/generic/con*
 	rm -rf ${WRKSRC}/tex/generic/enctex
 	rm -rf ${WRKSRC}/tex/generic/german
 	rm -rf ${WRKSRC}/tex/generic/hyphen
@@ -374,9 +383,10 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/chngpage
 	rm -rf ${WRKSRC}/tex/latex/cite
 	rm -rf ${WRKSRC}/tex/latex/concrete
-	rm -rf ${WRKSRC}/tex/latex/config
+	rm -rf ${WRKSRC}/tex/latex/con[f-z]*
 	rm -rf ${WRKSRC}/tex/latex/c[v-z]*
 	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
+	rm -rf ${WRKSRC}/tex/latex/eepic
 	rm -rf ${WRKSRC}/tex/latex/endnotes
 	rm -rf ${WRKSRC}/tex/latex/enumitem
 	rm -rf ${WRKSRC}/tex/latex/etex
