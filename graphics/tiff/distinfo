@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.46.4.1 2010/06/15 09:06:28 tron Exp $
+$NetBSD: distinfo,v 1.46.4.2 2010/06/17 17:52:14 tron Exp $
 
-SHA1 (tiff-3.9.3.tar.gz) = 0d1eef69e58711d77320921bcb4d447f52265dc1
-RMD160 (tiff-3.9.3.tar.gz) = fc0685549f7a82b24675cfb8fb33cc2535682221
-Size (tiff-3.9.3.tar.gz) = 1439203 bytes
+SHA1 (tiff-3.9.4.tar.gz) = a4e32d55afbbcabd0391a9c89995e8e8a19961de
+RMD160 (tiff-3.9.4.tar.gz) = 3e0a74b6294297c16fb983ad68056a1dfbbdb1de
+Size (tiff-3.9.4.tar.gz) = 1436968 bytes
