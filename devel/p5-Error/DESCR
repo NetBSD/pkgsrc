@@ -5,5 +5,7 @@ a procedural interface to exception handling. Secondly Error is a
 base class for errors/exceptions that can either be thrown, for
 subsequent catch, or can simply be recorded.
 
-Errors in the class Error should not be thrown directly, but the
-user should throw errors from a sub-class of Error
+Using the "Error" module is no longer recommended due to the black-magical
+nature of its syntactic sugar, which often tends to break. Its maintainers
+have stopped actively writing code that uses it, and discourage people
+from doing so.
