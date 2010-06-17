@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/17 00:00:31 minskim Exp $
+man/man1/ctxtools.1
+man/man1/makempy.1
+man/man1/mptopdf.1
+man/man1/pdftools.1
+man/man1/pstopdf.1
+man/man1/texexec.1
+man/man1/texfind.1
+man/man1/texfont.1
+man/man1/texmfstart.1
+man/man1/textools.1
+man/man1/texutil.1
