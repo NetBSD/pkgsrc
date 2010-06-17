@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/01/16 03:40:44 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2010/06/17 00:21:17 minskim Exp $
 
---- Makefile.in.orig	2009-09-28 08:46:20.000000000 -0700
+--- Makefile.in.orig	2009-09-28 15:46:20.000000000 +0000
 +++ Makefile.in
 @@ -197,7 +197,6 @@ dist_bin_SCRIPTS = \
  	kpsetool \
@@ -10,15 +10,28 @@ $NetBSD: patch-aa,v 1.4 2010/01/16 03:40:44 minskim Exp $
  	pslatex \
  	rubibtex \
  	rumakeindex \
-@@ -225,7 +224,6 @@ dist_man1_MANS = \
- 	context/texutil.man \
+@@ -212,20 +211,8 @@ dist_man1_MANS = \
+ 	allcm.man \
+ 	allec.man \
+ 	allneeded.man \
+-	context/ctxtools.man \
+-	context/makempy.man \
+-	context/mptopdf.man \
+-	context/pdftools.man \
+-	context/pstopdf.man \
+-	context/texexec.man \
+-	context/texfind.man \
+-	context/texfont.man \
+-	context/texmfstart.man \
+-	context/textools.man \
+-	context/texutil.man \
  	dvi2fax.man \
  	dvired.man \
 -	e2pall.man \
  	fmtutil.man \
  	fontinst.man \
  	kpsetool.man \
-@@ -254,14 +252,14 @@ dist_man5_MANS = \
+@@ -254,14 +241,14 @@ dist_man5_MANS = \
  	fmtutil.cnf.5 \
  	updmap.cfg.5
  
@@ -35,7 +48,7 @@ $NetBSD: patch-aa,v 1.4 2010/01/16 03:40:44 minskim Exp $
  nobase_dist_texconf_DATA = \
  	texmf/texconfig/README \
  	texmf/texconfig/g/generic \
-@@ -269,7 +267,7 @@ nobase_dist_texconf_DATA = \
+@@ -269,7 +256,7 @@ nobase_dist_texconf_DATA = \
  	texmf/texconfig/v/vt100 \
  	texmf/texconfig/x/xterm
  
@@ -44,7 +57,7 @@ $NetBSD: patch-aa,v 1.4 2010/01/16 03:40:44 minskim Exp $
  dist_texconfig_SCRIPTS = tcfmgr
  dist_texconfig_DATA = tcfmgr.map
  web2cdir = ${prefix}/texmf/web2c
-@@ -753,8 +751,8 @@ info: info-am
+@@ -753,8 +740,8 @@ info: info-am
  
  info-am:
  
@@ -55,7 +68,7 @@ $NetBSD: patch-aa,v 1.4 2010/01/16 03:40:44 minskim Exp $
  	install-man install-nobase_dist_texconfDATA
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
-@@ -848,22 +846,15 @@ install-exec-hook:
+@@ -848,22 +835,15 @@ install-exec-hook:
  
  install-data-hook:
  	cd $(DESTDIR)$(man1dir) \
