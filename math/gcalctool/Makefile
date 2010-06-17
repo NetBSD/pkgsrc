@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2010/06/15 21:09:31 drochner Exp $
+# $NetBSD: Makefile,v 1.89 2010/06/17 07:21:29 obache Exp $
 #
 
 DISTNAME=		gcalctool-5.30.1
@@ -28,6 +28,6 @@ GCONF_SCHEMAS=		gcalctool.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
