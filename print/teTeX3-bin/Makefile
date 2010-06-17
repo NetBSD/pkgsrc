@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2010/06/13 22:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2010/06/17 00:44:01 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -67,7 +67,7 @@ INSTALLATION_DIRS+=	info share/texmf/fmtutil
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
 
-TEX_FORMATS=	"mpost mpost - -translate-file=cp227.tcx mpost.mp\\nmetafun mpost - -translate-file=cp227.tcx metafun.mp\\naleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\ncont-en pdftex cont-usr.tex -translate-file=cp227.tcx *cont-en.ini\\nmptopdf pdftex - -translate-file=cp227.tcx mptopdf.tex\\n"
+TEX_FORMATS=	"aleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\n"
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
@@ -77,8 +77,6 @@ post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
 
 post-install:
-	${LN} -sf mpost ${DESTDIR}${PREFIX}/bin/metafun
 	${LN} -sf aleph ${DESTDIR}${PREFIX}/bin/lamed
-	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/mptopdf
 
 .include "../../mk/bsd.pkg.mk"
