@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2010/06/17 09:26:16 asau Exp $
+
+Modern libtool requires tag.
+
+--- src/gmxlib/nonbonded/nb_kernel_ia32_sse/Makefile.in.orig	2009-12-06 21:18:53.000000000 +0000
++++ src/gmxlib/nonbonded/nb_kernel_ia32_sse/Makefile.in	2010-06-17 07:55:04.000000000 +0000
+@@ -86,7 +86,7 @@
+ 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
+ CCASCOMPILE = $(CCAS) $(AM_CCASFLAGS) $(CCASFLAGS)
+-LTCCASCOMPILE = $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
++LTCCASCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=compile $(CCAS) $(AM_CCASFLAGS) $(CCASFLAGS)
+ SOURCES = $(libnb_kernel_ia32_sse_la_SOURCES)
+ DIST_SOURCES = $(libnb_kernel_ia32_sse_la_SOURCES)
