@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.15 2010/06/17 08:56:46 obache Exp $
+
+portability fix (no advantage to use getline(3) here)
+  https://bugzilla.gnome.org/show_bug.cgi?id=621863
+
+--- src/gcalccmd.c.orig	2010-04-26 01:14:22.000000000 +0000
++++ src/gcalccmd.c
+@@ -73,7 +73,7 @@ int
+ main(int argc, char **argv)
+ {
+     char *equation;
+-    int bytes_read;
++    char *line_read;
+     size_t nbytes = MAXLINE;
+ 
+     /* Seed random number generator. */
+@@ -82,12 +82,12 @@ main(int argc, char **argv)
+     equation = (char *) malloc(MAXLINE * sizeof(char));
+     while (1) {
+         printf("> ");
+-        bytes_read = getline(&equation, &nbytes, stdin);
++        line_read = fgets(equation, nbytes, stdin);
+       
+-        if (bytes_read >= 0)
++        if (line_read != NULL)
+             str_adjust(equation);
+ 
+-        if (bytes_read < 0 || strcmp(equation, "exit") == 0 || strcmp(equation, "quit") == 0 || strlen(equation) == 0)
++        if (line_read == NULL || strcmp(equation, "exit") == 0 || strcmp(equation, "quit") == 0 || strlen(equation) == 0)
+             break;
+ 
+         solve(equation);
