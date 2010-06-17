@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.560 2010/06/16 23:48:23 minskim Exp $
+# $NetBSD: Makefile,v 1.561 2010/06/17 00:01:29 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -389,6 +389,8 @@ SUBDIR+=	tex-asyfig-doc
 SUBDIR+=	tex-dvipng-doc
 SUBDIR+=	tex-eepic
 SUBDIR+=	tex-eepic-doc
+SUBDIR+=	tex-metapost
+SUBDIR+=	tex-metapost-doc
 SUBDIR+=	tgif
 SUBDIR+=	tiff
 SUBDIR+=	tkpiechart
