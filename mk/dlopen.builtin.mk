@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.21 2010/06/16 19:57:08 drochner Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.22 2010/06/17 18:09:40 drochner Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -38,6 +38,44 @@ USE_BUILTIN.dl=		no	# Darwin-[56].* uses devel/dlcompat
 .endif
 MAKEVARS+=	USE_BUILTIN.dl
 
+# The following platforms require pthreads to be linked into the
+# application if it uses dlopen() or else the applications will core
+# dump when they dlopen a shared module that _is_ linked with pthread
+# support.
+# It is not required for NetBSD>=5 if just linked with pthread or using
+# pthread_mutex_*(), but need if using pthread_create() / pthread_join().
+#
+_BLNK_DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
+	NetBSD-2.[0-9]_*-*						\
+	NetBSD-2.[0-9]-* NetBSD-2.[0-9].[0-9]*-*			\
+	NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*			\
+	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*				\
+	NetBSD-[3-9]*-*							\
+	NetBSD-[1-9][0-9]*-*
+
+.if !defined(_BLNK_DLOPEN_REQUIRE_PTHREADS)
+_BLNK_DLOPEN_REQUIRE_PTHREADS?=	no
+.  for _pattern_ in ${_BLNK_DLOPEN_REQUIRE_PTHREAD_PLATFORMS}
+.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.      if !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
+_BLNK_DLOPEN_REQUIRE_PTHREADS=	yes
+.      endif
+.    endif
+.  endfor
+.endif
+MAKEVARS+=	_BLNK_DLOPEN_REQUIRE_PTHREADS
+#
+# DLOPEN_REQUIRE_PTHREADS is a user- and package-settable yes/no variable
+#	whose value decides whether pthread.buildlink3.mk is automatically
+#	included or not.  Its default value depends on whether native
+#	pthreads exist.
+#
+.if defined(DLOPEN_REQUIRE_PTHREADS)
+_BLNK_DLOPEN_REQUIRE_PTHREADS:=	${DLOPEN_REQUIRE_PTHREADS}
+.else
+DLOPEN_REQUIRE_PTHREADS=        ${_BLNK_DLOPEN_REQUIRE_PTHREADS}
+.endif
+
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
@@ -53,6 +91,13 @@ BUILDLINK_PREFIX.dl=	/usr
 # scripts already check for -ldl themselves.
 #
 BUILDLINK_LDADD.dl=	-ldl
+.    endif
+.    if !empty(_BLNK_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
+.      include "../../mk/pthread.buildlink3.mk"
+.      include "../../mk/pthread.builtin.mk"
+BUILDLINK_CFLAGS.dl+=	${PTHREAD_CFLAGS}
+BUILDLINK_LDFLAGS.dl+=	${PTHREAD_LDFLAGS}
+BUILDLINK_LIBS.dl+=	${PTHREAD_LIBS}
 .    endif
 .  endif
 
