@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2010/06/17 07:21:29 obache Exp $
+# $NetBSD: Makefile,v 1.90 2010/06/17 07:45:59 obache Exp $
 #
 
 DISTNAME=		gcalctool-5.30.1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.30/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://calctool.sourceforge.net/
+HOMEPAGE=		http://live.gnome.org/Gcalctool
 COMMENT=		Desktop calculator for GNOME
 
 PKG_DESTDIR_SUPPORT=	user-destdir
