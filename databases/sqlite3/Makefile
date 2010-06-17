@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/04/01 12:01:53 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2010/06/17 13:45:36 obache Exp $
 
 DISTNAME=	sqlite-amalgamation-3.6.23.1
 PKGNAME=	${DISTNAME:S/sqlite-amalgamation/sqlite3/}
@@ -22,6 +22,13 @@ PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 CONFIGURE_ARGS+=	--with-readline-inc= --enable-threadsafe
+
+.include "../../mk/bsd.prefs.mk"
+
+# Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+CFLAGS+=		-DSQLITE_ENABLE_LOCKING_STYLE=0
+.endif
 
 # Uses dlopen and friends but doesn't use -ldl on Linux.
 # See http://www.sqlite.org/cvstrac/tktview?tn=3555
