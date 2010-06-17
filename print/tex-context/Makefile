@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/16 23:59:12 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/17 00:32:54 minskim Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2009
+PKGREVISION=	1
 TEXLIVE_REV=	16044
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,6 +11,7 @@ COMMENT=	The ConTeXt macro package
 CONFLICTS+=	teTeX-bin<=3.0nb44
 DEPENDS+=	tex-kpathsea>=2009.16044:../../print/tex-kpathsea
 DEPENDS+=	tex-lm>=2.004nb1:../../fonts/tex-lm
+DEPENDS+=	tex-metapost>=1.211:../../graphics/tex-metapost
 DEPENDS+=	tex-pdftex>=1.40.10:../../print/tex-pdftex
 DEPENDS+=	tex-supp-pdf>=2009:../../print/tex-supp-pdf
 DEPENDS+=	web2c>=2009:../../print/web2c
