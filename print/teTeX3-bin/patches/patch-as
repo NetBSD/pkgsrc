@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.8 2010/01/28 21:37:35 minskim Exp $
+$NetBSD: patch-as,v 1.9 2010/06/17 00:44:01 minskim Exp $
 
---- texk/tetex/Makefile.in.orig	2005-02-04 14:20:54.000000000 -0800
+--- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
 @@ -8,26 +8,21 @@ ac_include ../make/programs.mk
  man5dir = $(mandir)/man5
@@ -66,10 +66,13 @@ $NetBSD: patch-as,v 1.8 2010/01/28 21:37:35 minskim Exp $
  	test -r ./latex.info || cd $(srcdir) && for i in latex.info*; do \
  	  $(INSTALL_DATA) $$i $(infodir)/$$i; done
  	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
-@@ -74,14 +45,6 @@ install-data:: $(INFOFILES)
- 	for p in TETEXDOC.pdf TETEXDOC.ps TETEXDOC.dvi teTeX-FAQ; do \
- 	  $(INSTALL_DATA) $(srcdir)/doc/$$p $(texmf)/doc/tetex; \
+@@ -71,17 +42,6 @@ install-data:: $(INFOFILES)
+ 	for p in $(POOLFILES); do \
+ 	  $(INSTALL_DATA) $(srcdir)/$$p $(texpooldir)/$$p; \
  	done
+-	for p in TETEXDOC.pdf TETEXDOC.ps TETEXDOC.dvi teTeX-FAQ; do \
+-	  $(INSTALL_DATA) $(srcdir)/doc/$$p $(texmf)/doc/tetex; \
+-	done
 -	$(SHELL) $(top_srcdir)/../mkinstalldirs $(texmf)/texconfig $(texmf)/texconfig/g $(texmf)/texconfig/v $(texmf)/texconfig/x
 -	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/g/generic $(texmf)/texconfig/g
 -	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/v/vt100 $(texmf)/texconfig/v
@@ -81,7 +84,7 @@ $NetBSD: patch-as,v 1.8 2010/01/28 21:37:35 minskim Exp $
  
  install-exec:
  	-$(SHELL) $(srcdir)/../mkinstalldirs $(scriptdir)
-@@ -96,16 +59,10 @@ install-exec:
+@@ -96,16 +56,10 @@ install-exec:
  	else \
  	  true; \
  	fi
