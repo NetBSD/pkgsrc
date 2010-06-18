@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2286 2010/06/18 09:55:14 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2287 2010/06/18 10:06:28 obache Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3039,3 +3039,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/rabbit to 0.6.4nb1 [obache 2010-06-18]
 	Updated databases/tokyocabinet to 1.4.45 [obache 2010-06-18]
 	Updated databases/ruby-tokyocabinet to 1.30 [obache 2010-06-18]
+	Updated databases/lua-tokyocabinet to 1.9 [obache 2010-06-18]
