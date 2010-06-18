@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2283 2010/06/17 19:48:37 mrg Exp $
+$NetBSD: CHANGES-2010,v 1.2284 2010/06/18 09:16:59 obache Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3036,3 +3036,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/teTeX3-texmf to 3.0nb26 [minskim 2010-06-17]
 	Updated print/teTeX3-bin to 3.0nb45 [minskim 2010-06-17]
 	Updated www/bozohttpd to 20100617 [mrg 2010-06-17]
+	Updated graphics/rabbit to 0.6.4nb1 [obache 2010-06-18]
