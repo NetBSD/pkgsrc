@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2010/06/18 09:16:08 obache Exp $
+
+work comment view again.
+http://www.cozmixng.org/retro/projects/rabbit/changesets/1376
+
+--- lib/rabbit/renderer/display/comment-drawing-area.rb.orig	2010-01-29 14:09:05.000000000 +0000
++++ lib/rabbit/renderer/display/comment-drawing-area.rb
+@@ -36,6 +36,8 @@ module Rabbit
+ 
+         def_delegators(:@pixmap, :x_dpi, :y_dpi)
+ 
++        def_delegators(:@pixmap, :set_font_resolution)
++
+         attr_accessor :direction
+ 
+         def width
