@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2010/06/17 08:56:46 obache Exp $
+$NetBSD: distinfo,v 1.45 2010/06/18 01:53:47 obache Exp $
 
 SHA1 (gcalctool-5.30.1.tar.bz2) = 9a7f561705e931416ba028f712ef3f16c9b58fee
 RMD160 (gcalctool-5.30.1.tar.bz2) = 27122e63ceb2880ca27cf550ab8c55bfd865d169
 Size (gcalctool-5.30.1.tar.bz2) = 1125957 bytes
-SHA1 (patch-aa) = dd8311ca98bf93748a904e623af2043e5da6e402
+SHA1 (patch-aa) = 67e23446b886b4bb442a7650e5bbe2e394c05958
