@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.15 2010/01/30 00:59:30 obache Exp $
+$NetBSD: distinfo,v 1.16 2010/06/18 09:16:08 obache Exp $
 
 SHA1 (rabbit-0.6.4.tar.gz) = 77b9850a2a616b45790735ec544d039503fd2327
 RMD160 (rabbit-0.6.4.tar.gz) = 0243187185641923232c71fffd16d4ce22cf73bb
 Size (rabbit-0.6.4.tar.gz) = 5895707 bytes
-SHA1 (patch-ab) = 848ccd627644dde7e36d27032ab318af729dc3ce
-SHA1 (patch-ac) = 8e9e5a831f54e4a350a422d3c0027aa7dfa85d35
-SHA1 (patch-ad) = ee455a7c34587fa68fc8152d6ad0a6f48b608222
+SHA1 (patch-ae) = 301505f066dfe2a7911a6bbbd07a4ee224e6d040
