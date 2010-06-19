@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2289 2010/06/18 10:17:21 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2290 2010/06/19 11:41:36 sborrill Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3042,3 +3042,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/lua-tokyocabinet to 1.9 [obache 2010-06-18]
 	Updated textproc/tokyodystopia to 0.9.14 [obache 2010-06-18]
 	Updated databases/java-tokyocabinet to 1.23 [obache 2010-06-18]
+	Updated devel/scons to 1.3.0 [sborrill 2010-06-19]
+	Removed devel/scons-devel successor devel/scons [sborrill 2010-06-19]
