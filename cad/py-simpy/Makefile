@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/05 04:38:46 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/06/19 12:09:07 joerg Exp $
 #
 
 DISTNAME=		SimPy-2.1.0
@@ -14,6 +14,7 @@ LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PYTHON_VERSIONS_ACCEPTED=	26 25
 PYDISTUTILSPKG=	yes
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC:Q}/build/lib
