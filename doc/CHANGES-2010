@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2292 2010/06/19 14:09:46 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2293 2010/06/19 14:50:11 wiz Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3045,4 +3045,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scons to 1.3.0 [sborrill 2010-06-19]
 	Removed devel/scons-devel successor devel/scons [sborrill 2010-06-19]
 	Updated emulators/simh to 3.8.1nb1 [obache 2010-06-19]
+	Downgraded sysutils/gvfs to 1.4.3nb1 [drochner 2010-06-19]
 	Updated net/samba to 3.0.37nb4 [taca 2010-06-19]
