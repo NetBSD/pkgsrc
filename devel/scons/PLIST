@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/06/19 11:33:46 sborrill Exp $
 bin/scons
 bin/${PKGNAME}
 bin/scons-time
@@ -173,6 +173,27 @@ lib/${PKGNAME}/SCons/Tool/FortranCommon.pyo
 lib/${PKGNAME}/SCons/Tool/JavaCommon.py
 lib/${PKGNAME}/SCons/Tool/JavaCommon.pyc
 lib/${PKGNAME}/SCons/Tool/JavaCommon.pyo
+lib/${PKGNAME}/SCons/Tool/MSCommon/__init__.py
+lib/${PKGNAME}/SCons/Tool/MSCommon/__init__.pyc
+lib/${PKGNAME}/SCons/Tool/MSCommon/__init__.pyo
+lib/${PKGNAME}/SCons/Tool/MSCommon/arch.py
+lib/${PKGNAME}/SCons/Tool/MSCommon/arch.pyc
+lib/${PKGNAME}/SCons/Tool/MSCommon/arch.pyo
+lib/${PKGNAME}/SCons/Tool/MSCommon/common.py
+lib/${PKGNAME}/SCons/Tool/MSCommon/common.pyc
+lib/${PKGNAME}/SCons/Tool/MSCommon/common.pyo
+lib/${PKGNAME}/SCons/Tool/MSCommon/netframework.py
+lib/${PKGNAME}/SCons/Tool/MSCommon/netframework.pyc
+lib/${PKGNAME}/SCons/Tool/MSCommon/netframework.pyo
+lib/${PKGNAME}/SCons/Tool/MSCommon/sdk.py
+lib/${PKGNAME}/SCons/Tool/MSCommon/sdk.pyc
+lib/${PKGNAME}/SCons/Tool/MSCommon/sdk.pyo
+lib/${PKGNAME}/SCons/Tool/MSCommon/vc.py
+lib/${PKGNAME}/SCons/Tool/MSCommon/vc.pyc
+lib/${PKGNAME}/SCons/Tool/MSCommon/vc.pyo
+lib/${PKGNAME}/SCons/Tool/MSCommon/vs.py
+lib/${PKGNAME}/SCons/Tool/MSCommon/vs.pyc
+lib/${PKGNAME}/SCons/Tool/MSCommon/vs.pyo
 lib/${PKGNAME}/SCons/Tool/Perforce.py
 lib/${PKGNAME}/SCons/Tool/Perforce.pyc
 lib/${PKGNAME}/SCons/Tool/Perforce.pyo
@@ -308,6 +329,9 @@ lib/${PKGNAME}/SCons/Tool/install.pyo
 lib/${PKGNAME}/SCons/Tool/intelc.py
 lib/${PKGNAME}/SCons/Tool/intelc.pyc
 lib/${PKGNAME}/SCons/Tool/intelc.pyo
+lib/${PKGNAME}/SCons/Tool/ipkg.py
+lib/${PKGNAME}/SCons/Tool/ipkg.pyc
+lib/${PKGNAME}/SCons/Tool/ipkg.pyo
 lib/${PKGNAME}/SCons/Tool/jar.py
 lib/${PKGNAME}/SCons/Tool/jar.pyc
 lib/${PKGNAME}/SCons/Tool/jar.pyo
@@ -347,6 +371,9 @@ lib/${PKGNAME}/SCons/Tool/mslib.pyo
 lib/${PKGNAME}/SCons/Tool/mslink.py
 lib/${PKGNAME}/SCons/Tool/mslink.pyc
 lib/${PKGNAME}/SCons/Tool/mslink.pyo
+lib/${PKGNAME}/SCons/Tool/mssdk.py
+lib/${PKGNAME}/SCons/Tool/mssdk.pyc
+lib/${PKGNAME}/SCons/Tool/mssdk.pyo
 lib/${PKGNAME}/SCons/Tool/msvc.py
 lib/${PKGNAME}/SCons/Tool/msvc.pyc
 lib/${PKGNAME}/SCons/Tool/msvc.pyo
@@ -455,6 +482,9 @@ lib/${PKGNAME}/SCons/Tool/tar.pyo
 lib/${PKGNAME}/SCons/Tool/tex.py
 lib/${PKGNAME}/SCons/Tool/tex.pyc
 lib/${PKGNAME}/SCons/Tool/tex.pyo
+lib/${PKGNAME}/SCons/Tool/textfile.py
+lib/${PKGNAME}/SCons/Tool/textfile.pyc
+lib/${PKGNAME}/SCons/Tool/textfile.pyo
 lib/${PKGNAME}/SCons/Tool/tlib.py
 lib/${PKGNAME}/SCons/Tool/tlib.pyc
 lib/${PKGNAME}/SCons/Tool/tlib.pyo
