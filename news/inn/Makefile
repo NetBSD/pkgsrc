@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2010/04/13 21:18:00 spz Exp $
+# $NetBSD: Makefile,v 1.104 2010/06/19 12:45:37 joerg Exp $
 
 DISTNAME=		inn-2.5.2
 CATEGORIES=		news
@@ -64,6 +64,7 @@ DEPENDS+=		gnupg>0:../../security/gnupg
 ## Please note that USE_DESTDIR=yes only works for this package if the user
 ## and group already exist
 
+USERGROUP_PHASE=	pre-install
 PKG_USERS_VARS+=	INN_USER
 PKG_GROUPS_VARS+=	INN_GROUP
 
