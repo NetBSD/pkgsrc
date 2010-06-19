@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4709 2010/04/10 09:38:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4710 2010/06/19 14:47:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4277,7 +4277,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/p5-Text-TabularDisplay version 1.22 [sno 2009-08-19]
 	Added textproc/p5-Text-RecordParser version 1.3.0 [sno 2009-08-19]
 	Updated databases/p5-SQL-Translator to 0.11001 [sno 2009-08-19]
-	Downgraded devel/libixp.down to 0.4 [ghen 2009-08-19]
+	Downgraded devel/libixp to 0.4 [ghen 2009-08-19]
 	Updated lang/sbcl to 1.0.30 [asau 2009-08-19]
 	Updated lang/ecl to 9.8.4 [asau 2009-08-19]
 	Updated editors/Sigil to 0.1.2 [wiz 2009-08-19]
