@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/28 12:16:45 spz Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/19 13:00:28 joerg Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -29,6 +29,7 @@ DOCDIR=			${PREFIX}/share/doc/tomcat
 RCD_SCRIPTS=		tomcat
 TOMCAT_USER?=		tomcat
 TOMCAT_GROUP?=		tomcat
+USERGROUP_PHASE=	pre-install
 PKG_GROUPS=		${TOMCAT_GROUP}
 PKG_USERS=		${TOMCAT_USER}:${TOMCAT_GROUP}
 PKG_GROUPS_VARS+=	TOMCAT_GROUP
