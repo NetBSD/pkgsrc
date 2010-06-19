@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.4 2010/06/19 13:29:23 wiz Exp $
+
+--- src/pilot-read-palmpix.c.orig	2009-06-04 13:26:19.000000000 +0000
++++ src/pilot-read-palmpix.c
+@@ -42,10 +42,6 @@
+ 
+ #ifdef HAVE_PNG
+ #include "png.h"
+-#if (PNG_LIBPNG_VER < 10201)
+- #define png_voidp_NULL (png_voidp)NULL
+- #define png_error_ptr_NULL (png_error_ptr)NULL
+-#endif
+ #endif
+ 
+ const char *progname;
+@@ -223,8 +219,8 @@ void write_png( FILE *f, const struct Pa
+ 	png_infop info_ptr;
+ 
+ 	png_ptr = png_create_write_struct
+-		( PNG_LIBPNG_VER_STRING, png_voidp_NULL,
+-		png_error_ptr_NULL, png_error_ptr_NULL);
++		( PNG_LIBPNG_VER_STRING, NULL,
++		NULL, NULL);
+ 
+ 	if(!png_ptr)
+ 		return;
