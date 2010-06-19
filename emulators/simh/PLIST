@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:51:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/06/19 13:59:52 obache Exp $
 bin/simh-altair
 bin/simh-altairz80
 bin/simh-eclipse
@@ -30,6 +30,7 @@ share/doc/simh/0readme_ethernet.txt
 share/doc/simh/altair.txt
 share/doc/simh/eclipse.txt
 share/doc/simh/haltguide.txt
+share/doc/simh/hp2100_bugfixes.txt
 share/doc/simh/hp2100_diag.txt
 share/doc/simh/i7094_bug_history.txt
 share/doc/simh/id_diag.txt
