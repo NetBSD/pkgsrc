@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/06/19 13:36:13 wiz Exp $
+
+--- src/im_png.c.orig	2002-10-15 14:30:58.000000000 +0000
++++ src/im_png.c
+@@ -273,7 +273,7 @@ png_read_start(image_png *im)
+ 	if (im->im.oi.cspace.depth != im->im.i.cspace.depth) {
+ 	    if (im->im.oi.cspace.type == IMAGE_CS_GRAY
+ 		&& im->im.oi.cspace.depth /* XXX ?! */)
+-		png_set_gray_1_2_4_to_8(im->png);
++		png_set_expand_gray_1_2_4_to_8(im->png);
+ 	    else if (im->im.oi.cspace.depth == 16)
+ 		png_set_strip_16(im->png);
+ 	}

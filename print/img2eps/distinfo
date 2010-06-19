@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/07/23 16:30:37 yyamano Exp $
+$NetBSD: distinfo,v 1.5 2010/06/19 13:36:13 wiz Exp $
 
 SHA1 (img2eps-0.2.tar.gz) = 0b62efba9ffdf1b9420e29ea9de928e5e8d9abaf
 RMD160 (img2eps-0.2.tar.gz) = 5113a3cd22bcc2ae1562a45bfdd21c2ef0151e70
 Size (img2eps-0.2.tar.gz) = 404286 bytes
 SHA1 (patch-aa) = 027c6981b1b3188897af0a09bf0ce0119763316d
+SHA1 (patch-ab) = 460228a99267234c7a2ad297a27cc04c78e6953e
