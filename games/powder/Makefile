@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/08 08:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/19 13:32:06 wiz Exp $
 #
 
 DISTNAME=	powder114_src
@@ -18,8 +18,10 @@ USE_TOOLS+=	bash gmake
 
 INSTALLATION_DIRS=	bin share/doc/powder
 
+REPLACE_BASH=	buildall.sh gfx/rebuild.sh rooms/buildrooms.bash
+
 do-build:
-	cd ${WRKSRC} && ${TOOLS_PATH.bash} buildall.sh
+	cd ${WRKSRC} && ./buildall.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/powder ${DESTDIR}${PREFIX}/bin
