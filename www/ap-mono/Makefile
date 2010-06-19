@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/04/09 15:58:36 kefren Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/19 14:33:27 kefren Exp $
 
 DISTNAME=	mod_mono-2.6.3
 PKGNAME=	${APACHE_PKG_PREFIX}-mono-2.6.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mod_mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,7 @@ CONF_FILES=		${PREFIX}/share/examples/httpd/mod_mono.conf\
 			${PKG_SYSCONFDIR}/httpd/mod_mono.conf
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE=	no
