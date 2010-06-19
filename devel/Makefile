@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1350 2010/06/14 20:32:07 seb Exp $
+# $NetBSD: Makefile,v 1.1351 2010/06/19 11:39:55 sborrill Exp $
 #
 
 COMMENT=	Development utilities
@@ -1228,7 +1228,6 @@ SUBDIR+=	scmgit
 SUBDIR+=	scmgit-base
 SUBDIR+=	scmgit-docs
 SUBDIR+=	scons
-SUBDIR+=	scons-devel
 SUBDIR+=	sdcc
 SUBDIR+=	semantic
 SUBDIR+=	semi
