@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2010/06/13 22:45:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/06/19 13:57:47 drochner Exp $
 #
 
-DISTNAME=	gvfs-1.6.2
+DISTNAME=	gvfs-1.4.3
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.4/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
