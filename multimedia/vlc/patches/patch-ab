@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2010/06/13 22:45:07 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2010/06/20 15:58:06 wiz Exp $
+
+Fixed in git version ffa6a2fa83452afe6a6ec67c4a3e8a5f1a6aaeef.
 
 --- modules/codec/png.c.orig	2010-03-07 18:38:01.000000000 +0000
 +++ modules/codec/png.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-v4l2,v 1.2 2009/07/07 16:17:47 tnn Exp $
+$NetBSD: patch-v4l2,v 1.3 2010/06/20 15:58:06 wiz Exp $
+
+http://trac.videolan.org/vlc/ticket/3761
 
 --- modules/access/v4l2.c.orig	2009-05-22 01:06:04.000000000 +0200
 +++ modules/access/v4l2.c
