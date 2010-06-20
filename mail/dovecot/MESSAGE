@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2009/12/11 20:52:21 ghen Exp $
-
-If you are upgrading from Dovecot 1.1.x to 1.2.x, you can find some
-update notes on http://wiki.dovecot.org/Upgrading/1.2
-
-===========================================================================
