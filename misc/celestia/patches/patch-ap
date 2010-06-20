@@ -1,4 +1,6 @@
-$NetBSD: patch-ap,v 1.1 2010/06/13 22:44:58 wiz Exp $
+$NetBSD: patch-ap,v 1.2 2010/06/20 15:05:43 wiz Exp $
+
+https://sourceforge.net/tracker/?func=detail&aid=3018741&group_id=21302&atid=121302
 
 --- src/celengine/image.cpp.orig	2005-07-19 20:30:54.000000000 +0000
 +++ src/celengine/image.cpp
