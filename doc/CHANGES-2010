@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2295 2010/06/20 09:56:17 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.2296 2010/06/20 19:30:01 wiz Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/samba to 3.0.37nb4 [taca 2010-06-19]
 	Updated textproc/sub2srt to 0.5.3 [tonio 2010-06-20]
 	Updated mail/dovecot to 1.2.12 [ghen 2010-06-20]
+	Updated pkgtools/revbump to 2.1 [wiz 2010-06-20]
