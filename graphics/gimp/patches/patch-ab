@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.30 2009/08/21 19:46:27 adam Exp $
+$NetBSD: patch-ab,v 1.31 2010/06/20 14:01:59 wiz Exp $
+
+enable_print chunk sent upstream as https://bugzilla.gnome.org/show_bug.cgi?id=622196
 
 --- configure.orig	2009-08-13 21:37:15.000000000 +0200
 +++ configure
