@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2008/08/25 15:11:47 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2010/06/20 11:06:03 wiz Exp $
 
---- 915resolution.c.orig	2006-02-02 15:28:34.000000000 +0100
+--- 915resolution.c.orig	2007-04-15 10:46:56.000000000 +0000
 +++ 915resolution.c
 @@ -22,11 +22,57 @@
  #include <string.h>
@@ -21,7 +21,6 @@ $NetBSD: patch-aa,v 1.3 2008/08/25 15:11:47 joerg Exp $
  #include <unistd.h>
  #include <assert.h>
  
--
 +static uint8_t
 +asm_inb(unsigned port)
 +{
@@ -43,7 +42,7 @@ $NetBSD: patch-aa,v 1.3 2008/08/25 15:11:47 joerg Exp $
 +	__asm volatile("inl %w1,%0" : "=a" (data) : "d" (port));
 +	return data;
 +}
-+
+ 
 +static __inline void
 +asm_outl(uint32_t data, unsigned port)
 +{
@@ -61,3 +60,16 @@ $NetBSD: patch-aa,v 1.3 2008/08/25 15:11:47 joerg Exp $
  
  #define NEW(a) ((a *)(calloc(1, sizeof(a))))
  #define FREE(a) (free(a))
+@@ -165,7 +211,12 @@ typedef struct {
+ void initialize_system(char * filename) {
+ 
+     if (!filename) {
++#if !defined(__FreeBSD__) & !defined(__DragonFly__)
+         if (iopl(3) < 0) {
++#else
++        FILE *iof = fopen("/dev/io", "r");
++        if(iof == NULL) {
++#endif
+             perror("Unable to obtain the proper IO permissions");
+             exit(2);
+         }
