@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/05 20:02:44 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/20 09:39:26 tonio Exp $
 
-DISTNAME=	sub2srt-0.5.2
+DISTNAME=	sub2srt-0.5.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.robelix.com/sub2srt/download/
 

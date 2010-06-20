@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/05 20:02:44 kefren Exp $
+$NetBSD: distinfo,v 1.2 2010/06/20 09:39:26 tonio Exp $
 
-SHA1 (sub2srt-0.5.2.tar.gz) = aeb4462cefbbd2be2845e548877c5f4d579ebb22
-RMD160 (sub2srt-0.5.2.tar.gz) = 61beea24fbb44520f5ee54e58cebad23cdc416da
-Size (sub2srt-0.5.2.tar.gz) = 9994 bytes
+SHA1 (sub2srt-0.5.3.tar.gz) = eaecadc4caaaacddcd0e13202be722f13706acd4
+RMD160 (sub2srt-0.5.3.tar.gz) = 301f9383ad5604bbc003e87b13ef8f924eaa25b9
+Size (sub2srt-0.5.3.tar.gz) = 10737 bytes
