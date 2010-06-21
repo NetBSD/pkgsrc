@@ -1,4 +1,4 @@
-# $NetBSD: tools.Haiku.mk,v 1.2 2010/05/03 07:02:24 obache Exp $
+# $NetBSD: tools.Haiku.mk,v 1.3 2010/06/21 11:17:21 obache Exp $
 #
 # System-supplied tools for the Haiku operating system.
 
@@ -27,7 +27,7 @@ TOOLS_PLATFORM.env?=		/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
 TOOLS_PLATFORM.false?=		false			# shell builtin
 TOOLS_PLATFORM.fgrep?=		/bin/fgrep
-TOOLS_PLATFORM.file?=		/usr/bin/file
+#TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/bin/find
 TOOLS_PLATFORM.ftp?=		/bin/ftp
 TOOLS_PLATFORM.gawk?=		/bin/gawk
@@ -35,9 +35,17 @@ TOOLS_PLATFORM.gm4?=		/boot/common/bin/m4
 TOOLS_PLATFORM.gmake?=		/bin/make
 TOOLS_PLATFORM.grep?=		/bin/grep
 #TOOLS_PLATFORM.groff?=		/usr/bin/groff
+.if exists(/bin/sed)
 TOOLS_PLATFORM.gsed?=		/bin/sed
+.elif exists(/boot/common/bin/sed)
+TOOLS_PLATFORM.gsed?=		/boot/common/bin/sed
+.endif
 #TOOLS_PLATFORM.gsoelim?=	/usr/bin/soelim
+.if exists(/bin/tar)
 TOOLS_PLATFORM.gtar?=		/bin/tar
+.elif exists(/boot/common/bin/tar)
+TOOLS_PLATFORM.gtar?=		/boot/common/bin/tar
+.endif
 TOOLS_PLATFORM.gunzip?=		/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/bin/zcat
 TOOLS_PLATFORM.gzip?=		/bin/gzip -nf ${GZIP}
@@ -55,7 +63,9 @@ TOOLS_PLATFORM.m4?=		${TOOLS_PLATFORM.gm4}
 #TOOLS_PLATFORM.mail?=		/bin/mail
 TOOLS_PLATFORM.makeinfo?=	/boot/common/bin/makeinfo
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
-#TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
+.if exists(/bin/mktemp)
+TOOLS_PLATFORM.mktemp?=		/bin/mktemp
+.endif
 #TOOLS_PLATFORM.msgfmt?=		/usr/bin/msgfmt
 TOOLS_PLATFORM.mv?=		/bin/mv
 #TOOLS_PLATFORM.nice?=		/bin/nice
