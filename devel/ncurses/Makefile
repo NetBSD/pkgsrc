@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2008/11/16 17:03:00 adrianp Exp $
+# $NetBSD: Makefile,v 1.84 2010/06/21 14:49:00 tron Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=	4
 COMMENT=	CRT screen handling and optimization package
 
 INSTALLATION_DIRS+=	share/examples
@@ -29,6 +30,8 @@ SUBST_SED.ti+=		-e '/^screen.mlterm/,/^$$/d'
 SUBST_SED.ti+=		-e '/^screen.rxvt/,/^$$/d'
 .endif
 
+PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.terminfo
+
 post-configure:
 	cd ${WRKSRC}/man;					\
 	for f in *.1m; do					\
@@ -41,5 +44,7 @@ post-configure:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/c++/demo.cc \
 		${DESTDIR}${PREFIX}/share/examples/ncurses++demo.cc
+	${FIND} ${DESTDIR}${PREFIX}/${TERMINFODIR} -type f -print | ${SORT} | \
+	${SED} -e "s,^${DESTDIR}${PREFIX}/,," >${WRKDIR}/PLIST.terminfo
 
 .include "../../mk/bsd.pkg.mk"
