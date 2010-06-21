@@ -1,7 +1,11 @@
-# $NetBSD: Makefile.common,v 1.36 2009/06/08 09:24:39 ahoka Exp $
+# $NetBSD: Makefile.common,v 1.37 2010/06/21 07:53:14 spz Exp $
+
+# used by games/freeciv-share/Makefile
+# used by games/freeciv-client/Makefile
+# used by games/freeciv-server/Makefile
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.1.9
+FC_VERS=	2.2.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeciv/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +15,7 @@ HOMEPAGE=	http://www.freeciv.org/
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 
 DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
@@ -25,6 +30,8 @@ SUBST_SED.data+=	-e "s|@CLIENT_FALSE@|@MAKE_DATA_FALSE@|g"
 SUBST_SED.data+=	-e "s|@CLIENT_TRUE@|@MAKE_DATA_TRUE@|g"
 SUBST_SED.data+=	-e "s|@SERVER_FALSE@|@MAKE_DATA_FALSE@|g"
 SUBST_SED.data+=	-e "s|@SERVER_TRUE@|@MAKE_DATA_TRUE@|g"
+SUBST_SED.data+=	-e "s|@CLIENT_GUI_XAW_TRUE@||g"
+SUBST_SED.data+=	-e "s|@CLIENT_GUI_GTK_2_0_TRUE@||g"
 SUBST_MESSAGE.data=	Fixing installation of data files.
 
 .include "../../devel/gettext-lib/buildlink3.mk"
