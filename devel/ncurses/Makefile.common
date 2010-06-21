@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2009/07/13 20:36:42 ahoka Exp $
+# $NetBSD: Makefile.common,v 1.13 2010/06/21 14:49:00 tron Exp $
 #
 # used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.7
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/ \
@@ -47,13 +46,10 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 . endif
 .endif
 
-PLIST_VARS+=	not-sunos
-
 .if ${OPSYS} == "SunOS"
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
 TERMINFODIR=	share/lib/terminfo
 .else
-PLIST.not-sunos=yes
 TERMINFODIR=	share/terminfo
 .endif
 
