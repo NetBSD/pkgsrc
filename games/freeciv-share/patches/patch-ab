@@ -1,17 +1,15 @@
-$NetBSD: patch-ab,v 1.8 2008/12/14 19:20:55 adam Exp $
+$NetBSD: patch-ab,v 1.9 2010/06/21 07:53:14 spz Exp $
 
---- Makefile.in.orig	2008-11-30 14:19:36.000000000 +0100
+--- Makefile.in.orig	2010-05-23 21:45:39.000000000 +0000
 +++ Makefile.in
-@@ -191,10 +191,10 @@ ACLOCAL_AMFLAGS = -I m4
+@@ -397,8 +397,8 @@ ACLOCAL_AMFLAGS = -I m4 -I dependencies/
  @CLIENT_TRUE@@SERVER_TRUE@MSUBDIRS = manual
  @SERVER_FALSE@MSUBDIRS = 
- 
--@MAKE_DATA_TRUE@DSUBDIRS = data
-+@MAKE_DATA_TRUE@DSUBDIRS = data po doc
  @MAKE_DATA_FALSE@DSUBDIRS = 
- 
--SUBDIRS = $(DSUBDIRS) intl utility common tests win32 $(SSUBDIRS) $(CSUBDIRS) po doc $(MSUBDIRS)
-+SUBDIRS = $(DSUBDIRS) intl utility common tests win32 $(SSUBDIRS) $(CSUBDIRS) $(MSUBDIRS)
- 
+-@MAKE_DATA_TRUE@DSUBDIRS = data
+-SUBDIRS = $(DSUBDIRS) utility common tests win32 $(SSUBDIRS) $(CSUBDIRS) po doc $(MSUBDIRS)
++@MAKE_DATA_TRUE@DSUBDIRS = data po doc
++SUBDIRS = $(DSUBDIRS) utility common tests win32 $(SSUBDIRS) $(CSUBDIRS) $(MSUBDIRS)
  EXTRA_DIST = autogen.sh 			\
  		config.mac.h			\
+ 		configure.ac			\
