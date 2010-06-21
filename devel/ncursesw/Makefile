@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/01/11 10:38:16 tron Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/21 14:49:00 tron Exp $
 
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
+PKGREVISION=	3
 COMMENT=	Wide character CRT screen handling and optimization package
 
 PATCHDIR=	${.CURDIR}/../../devel/ncurses/patches
