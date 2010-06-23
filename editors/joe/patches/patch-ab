@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.7 2010/06/23 12:52:43 adam Exp $
+
+--- rc/Makefile.in.orig	2010-06-23 09:05:54.000000000 +0000
++++ rc/Makefile.in
+@@ -196,12 +196,12 @@ $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-sysconf_joeDATA: $(sysconf_joe_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconf_joedir)" || $(MKDIR_P) "$(DESTDIR)$(sysconf_joedir)"
++	$(MKDIR_P) "$(DESTDIR)$(datarootdir)/examples/joe"
+ 	@list='$(sysconf_joe_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(sysconf_joeDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconf_joedir)/$$f'"; \
+-	  $(sysconf_joeDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconf_joedir)/$$f"; \
++	  echo " $(sysconf_joeDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datarootdir)/examples/joe/$$f'"; \
++	  $(sysconf_joeDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datarootdir)/examples/joe/$$f"; \
+ 	done
+ 
+ uninstall-sysconf_joeDATA:
