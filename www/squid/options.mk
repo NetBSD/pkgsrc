@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2010/05/24 16:25:29 tron Exp $
+# $NetBSD: options.mk,v 1.18 2010/06/23 10:39:28 sborrill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	snmp ssl \
@@ -25,6 +25,13 @@ PLIST_VARS+=	eacl_ip_user eacl_ldap_group eacl_unix_group
 PKG_SUGGESTED_OPTIONS=	squid-carp snmp ssl squid-pam-helper squid-unlinkd
 
 .include "../../mk/bsd.prefs.mk"
+
+#
+# Squid 3.1 and above include IPv6 support
+.if empty(PKGNAME:Msquid=3.[1-9]*.[0-9]*)
+PKG_SUPPORTED_OPTIONS+=	inet6
+PKG_SUGGESTED_OPTIONS+=	inet6
+.endif
 
 #
 # Squid 3.0's COSS support is not stable now.
@@ -96,6 +103,11 @@ CONFIGURE_ARGS+=	--enable-arp-acl
 
 .if !empty(PKG_OPTIONS:Msquid-carp)
 CONFIGURE_ARGS+=	--enable-carp
+.endif
+
+.if !empty(PKG_SUPPORTED_OPTIONS:Minet6) && \
+    empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Msquid-ldap-helper)
