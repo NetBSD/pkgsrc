@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2297 2010/06/21 14:49:32 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2298 2010/06/23 03:06:23 dsainty Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3051,3 +3051,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dovecot to 1.2.12 [ghen 2010-06-20]
 	Updated pkgtools/revbump to 2.1 [wiz 2010-06-20]
 	Updated devel/ncurses to 5.7nb4 [tron 2010-06-21]
+	Updated graphics/gd to 2.0.35nb6 [dsainty 2010-06-23]
