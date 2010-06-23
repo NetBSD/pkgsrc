@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2299 2010/06/23 08:00:13 mrg Exp $
+$NetBSD: CHANGES-2010,v 1.2300 2010/06/23 12:53:52 adam Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3053,3 +3053,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/ncurses to 5.7nb4 [tron 2010-06-21]
 	Updated www/bozohttpd to 20100621 [mrg 2010-06-22]
 	Updated graphics/gd to 2.0.35nb6 [dsainty 2010-06-23]
+	Updated editors/joe to 3.7 [adam 2010-06-23]
