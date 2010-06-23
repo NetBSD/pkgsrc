@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.17 2010/04/27 13:15:46 schmonz Exp $
+$NetBSD: patch-aa,v 1.18 2010/06/23 23:52:12 schmonz Exp $
 
---- Makefile.PL.orig	2010-04-25 00:42:59.000000000 +0000
+--- Makefile.PL.orig	2010-06-16 23:17:18.000000000 +0000
 +++ Makefile.PL
 @@ -25,6 +25,8 @@ PROBABLE_INST_LIB=$(shell \\
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.17 2010/04/27 13:15:46 schmonz Exp $
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
  		done; \
  	done
-@@ -85,7 +87,7 @@ extra_install: underlay_install
+@@ -99,7 +101,7 @@ extra_install: underlay_install
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$dir; \
  	done
  	for file in `cd doc/examples; find . -type f ! -regex '.*\.svn.*'`; do \
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.17 2010/04/27 13:15:46 schmonz Exp $
  		install -m 644 doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file; \
  	done
  
-@@ -104,15 +106,15 @@ extra_install: underlay_install
+@@ -118,15 +120,15 @@ extra_install: underlay_install
  		install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/ikiwiki/plugins; \
  	done
  
@@ -62,7 +62,7 @@ $NetBSD: patch-aa,v 1.17 2010/04/27 13:15:46 schmonz Exp $
  	
  	install -d $(DESTDIR)$(PREFIX)/sbin
  	install ikiwiki-mass-rebuild $(DESTDIR)$(PREFIX)/sbin
-@@ -129,10 +131,10 @@ extra_install: underlay_install
+@@ -143,10 +145,10 @@ extra_install: underlay_install
  	
  	# These might fail if a regular user is installing into a home
  	# directory.

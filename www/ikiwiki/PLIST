@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/06/11 15:15:57 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/06/23 23:52:12 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -409,6 +409,10 @@ share/ikiwiki/templates/rsspage.tmpl
 share/ikiwiki/templates/searchform.tmpl
 share/ikiwiki/templates/searchquery.tmpl
 share/ikiwiki/templates/titlepage.tmpl
+share/ikiwiki/themes/actiontabs/style.css
+share/ikiwiki/themes/blueview/background_darkness.png
+share/ikiwiki/themes/blueview/header_background.png
+share/ikiwiki/themes/blueview/style.css
 share/locale/bg/LC_MESSAGES/ikiwiki.mo
 share/locale/cs/LC_MESSAGES/ikiwiki.mo
 share/locale/da/LC_MESSAGES/ikiwiki.mo
