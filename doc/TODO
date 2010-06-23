@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9426 2010/06/21 17:51:17 tron Exp $
+$NetBSD: TODO,v 1.9427 2010/06/23 12:53:52 adam Exp $
 
 Suggested new packages
 ======================
@@ -817,7 +817,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jdb-1.14
 	o jed-0.99-18
 	o jhead-2.90
-	o joe-3.6
 	o john-1.7.6
 	o jools-1.0
 	o jpilot-1.8.0
