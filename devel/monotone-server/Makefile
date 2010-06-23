@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2010/06/16 14:49:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2010/06/23 21:48:14 jmmv Exp $
 #
 
 DISTNAME=	monotone-0.48
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	2-clause-bsd
 NO_BUILD=	yes
+NO_CHECKSUM=	yes
 
 RCD_SCRIPTS=		monotone
 
