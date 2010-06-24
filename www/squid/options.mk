@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2010/06/23 10:39:28 sborrill Exp $
+# $NetBSD: options.mk,v 1.19 2010/06/24 07:51:37 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	snmp ssl \
@@ -28,7 +28,8 @@ PKG_SUGGESTED_OPTIONS=	squid-carp snmp ssl squid-pam-helper squid-unlinkd
 
 #
 # Squid 3.1 and above include IPv6 support
-.if empty(PKGNAME:Msquid=3.[1-9]*.[0-9]*)
+#
+.if empty(PKGNAME:Msquid-[0-2].*) && empty(PKGNAME:Msquid-3.0.*)
 PKG_SUPPORTED_OPTIONS+=	inet6
 PKG_SUGGESTED_OPTIONS+=	inet6
 .endif
