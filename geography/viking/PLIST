@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2010/02/07 15:54:33 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/06/24 12:37:09 gdt Exp $
 bin/viking
 bin/viking-remote
 share/applications/viking.desktop
+share/gnome/help/viking/C/figures/properties_degree.png
+share/gnome/help/viking/C/figures/properties_units.png
+share/gnome/help/viking/C/legal.xml
+share/gnome/help/viking/C/viking.xml
 share/icons/hicolor/48x48/apps/viking.png
 share/locale/cs/LC_MESSAGES/viking.mo
 share/locale/da/LC_MESSAGES/viking.mo
@@ -25,3 +29,4 @@ share/locale/sl/LC_MESSAGES/viking.mo
 share/locale/sv/LC_MESSAGES/viking.mo
 share/locale/zh_CN/LC_MESSAGES/viking.mo
 share/locale/zh_TW/LC_MESSAGES/viking.mo
+share/omf/viking/viking-C.omf
