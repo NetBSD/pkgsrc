@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2302 2010/06/24 12:21:46 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2303 2010/06/24 15:08:28 gdt Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3057,3 +3057,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ikiwiki to 3.20100623 [schmonz 2010-06-23]
 	Updated devel/xulrunner to 1.9.2.4 [tnn 2010-06-24]
 	Updated www/firefox to 3.6.4 [tnn 2010-06-24]
+	Updated geography/viking to 0.9.94 [gdt 2010-06-24]
