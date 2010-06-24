@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/04/26 12:47:08 tnn Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/06/24 12:20:38 tnn Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -229,6 +229,8 @@ include/xulrunner/mozilla/CondVar.h
 include/xulrunner/mozilla/DeadlockDetector.h
 include/xulrunner/mozilla/Monitor.h
 include/xulrunner/mozilla/Mutex.h
+include/xulrunner/mozilla/PluginLibrary.h
+include/xulrunner/mozilla/PluginPRLibrary.h
 include/xulrunner/mozilla/TimeStamp.h
 include/xulrunner/mozilla/XPCOM.h
 include/xulrunner/mozilla/storage.h
@@ -2245,6 +2247,7 @@ lib/xulrunner/components/nsFilePicker.js
 lib/xulrunner/components/nsFormAutoComplete.js
 lib/xulrunner/components/nsHandlerService.js
 lib/xulrunner/components/nsHelperAppDlg.js
+lib/xulrunner/components/nsINIProcessor.js
 lib/xulrunner/components/nsLivemarkService.js
 lib/xulrunner/components/nsLoginInfo.js
 lib/xulrunner/components/nsLoginManager.js
