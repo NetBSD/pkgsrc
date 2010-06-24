@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 2010/06/24 22:19:24 wiz Exp $
+
+Workaround for systems coming with another copy of libpng (see PR 43485).
+
+--- src/image.c.orig	2008-08-25 22:18:33.000000000 +0000
++++ src/image.c
+@@ -6328,11 +6328,7 @@ png_image_p (object)
+ 
+ #ifdef HAVE_PNG
+ 
+-#if defined HAVE_LIBPNG_PNG_H
+-# include <libpng/png.h>
+-#else
+ # include <png.h>
+-#endif
+ 
+ #ifdef HAVE_NTGUI
+ /* PNG library details.  */
