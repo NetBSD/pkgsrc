@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9428 2010/06/23 14:26:05 wiz Exp $
+$NetBSD: TODO,v 1.9429 2010/06/24 20:04:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -376,6 +376,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o afterstep-2.2.9
 	o akonadi-1.3.85
 	o album-4.06
+	o albumplayer-0.3.1
 	o alee-ttf-11.2
 	o aliados-0.2.0
 	o alsa-1.0.23
@@ -573,7 +574,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o etach-1.4.1
 	o etm-623
 	o eukleides-1.5.4
-	o evince-2.30.2 [GNOME 2.30]
+	o evince-2.30.3 [GNOME 2.30]
 	o evolution-2.30.2 [GNOME 2.30]
 	o evolution-couchdb-0.4.5
 	o evolution-data-server-2.30.2 [GNOME 2.30]
@@ -681,6 +682,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gfract-0.33
 	o ghc-6.12.2
 	o gifsicle-1.48
+	o gimp-2.6.9
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
@@ -973,6 +975,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mesure-0.7.2
 	o metacity-2.30.1 [GNOME 2.30]
 	o mgetty+sendfax-1.1.35
+	o midori-0.2.6 [pkg/43500]
 	o milkytracker-0.90.85
 	o mimedefang-2.69
 	o mined-2000.16
@@ -1237,7 +1240,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-rgl-0.4.0
 	o ruby-rspec-1.2.9
 	o ruby-rttool-1.0.3.0
-	o ruby-sequel-3.6.0
+	o ruby-sequel-3.12.1 [pkg/43498]
 	o ruby-sequel-core-2.2.0
 	o ruby-will-paginate-2.3.12
 	o rudiments-0.30
@@ -1505,7 +1508,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-docs-1.5
-	o xorg-util-macros-1.8.0
+	o xorg-util-macros-1.9.0
 	o xpad-2.13
 	o xpr-1.0.3 [unpackaged]
 	o xproto-7.0.17
