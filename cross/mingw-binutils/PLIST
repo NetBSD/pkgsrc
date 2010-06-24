@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/15 18:34:36 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/24 20:06:28 asau Exp $
 bin/${MINGW_TARGET}-addr2line
 bin/${MINGW_TARGET}-ar
 bin/${MINGW_TARGET}-as
@@ -40,7 +40,6 @@ info/configure.info
 info/gprof.info
 info/ld.info
 info/standards.info
-lib/libiberty.a
 man/man1/${MINGW_TARGET}-addr2line.1
 man/man1/${MINGW_TARGET}-ar.1
 man/man1/${MINGW_TARGET}-as.1
