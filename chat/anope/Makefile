@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/19 12:14:07 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/25 08:58:38 obache Exp $
 
 DISTNAME=	anope-1.7.21
 CATEGORIES=	chat
@@ -25,7 +25,8 @@ PKG_GROUPS_VARS+=	ANOPE_GROUP
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_USERS=	${ANOPE_USER}:${ANOPE_GROUP}::anope\ user:${PREFIX}/lib/anope:${NOLOGIN}
+PKG_USERS=	${ANOPE_USER}:${ANOPE_GROUP}
+PKG_HOME.${ANOPE_USER}=		${PREFIX}/lib/anope
 PKG_GROUPS=	${ANOPE_GROUP}
 MAKE_ENV+=	RUNGROUP=${ANOPE_GROUP:Q}
 OWN_DIRS_PERMS+=	${PREFIX}/lib/anope/logs \
