@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2002/09/21 04:24:04 simonb Exp $
+$NetBSD: patch-al,v 1.2 2010/06/25 22:12:31 joerg Exp $
 
 --- /dev/null	Sat Aug 10 17:45:46 2002
 +++ doc/Makefile	Sat Aug 10 17:48:23 2002
@@ -16,5 +16,5 @@ $NetBSD: patch-al,v 1.1 2002/09/21 04:24:04 simonb Exp $
 +	cat moria1.txt moria2.txt > moria.txt
 +
 +install: moria.ms moria.txt
-+	${BSD_INSTALL_MAN_DIR} ${DOCDIR}
-+	${BSD_INSTALL_MAN} ${FILES} ${DOCDIR}
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${DOCDIR}
++	${BSD_INSTALL_MAN} ${FILES} ${DESTDIR}${DOCDIR}
