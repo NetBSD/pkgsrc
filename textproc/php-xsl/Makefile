@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/16 15:11:58 taca Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/25 09:54:41 obache Exp $
 
 MODNAME=		xsl
 CATEGORIES+=		textproc
@@ -11,7 +11,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.libxslt}
 
 # uses symbols from DOM extension, so add explicit depends
-DEPENDS+=		php5*-dom-*:../../textproc/php-dom
+DEPENDS+=		${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 
 # build uses includes of the DOM extension, so need to extract that too
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/${MODNAME} ${DISTNAME}/ext/dom
