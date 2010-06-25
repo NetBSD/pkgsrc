@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/10/17 02:01:50 taca Exp $
+# $NetBSD: Makefile,v 1.18 2010/06/25 22:06:47 wiz Exp $
 
 DISTNAME=	libiodbc-3.52.7
 PKGNAME=	${DISTNAME:S/^lib//}
@@ -18,8 +18,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gui
 CONFIGURE_ARGS+=	--with-iodbc-inidir=${PKG_SYSCONFDIR}
-LIBADD_DL=		${DL_LDFLAGS} ${DL_LIBS}
-MAKE_FLAGS+=		LIBADD_DL=${LIBADD_DL:Q}
+
+DL_AUTO_VARS=		yes
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/odbc.ini ${PKG_SYSCONFDIR}/odbc.ini
