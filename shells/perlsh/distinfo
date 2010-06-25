@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:14:41 agc Exp $
+$NetBSD: distinfo,v 1.4 2010/06/25 23:16:27 joerg Exp $
 
 SHA1 (psh-1.8.tar.gz) = fd2f1fd0e100fb9fc20102b1c0d9dfaf2b14c0b9
 RMD160 (psh-1.8.tar.gz) = ed06062ef6faeb08dba0ac5dd12cf24acbcd6380
 Size (psh-1.8.tar.gz) = 119989 bytes
 SHA1 (patch-aa) = c91b7ace961409e9d12f7ecda0e0dad1e860cd22
+SHA1 (patch-ab) = e884915aeb44fcdce6d2177bd7836302048586f1
