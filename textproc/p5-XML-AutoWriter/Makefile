@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/19 10:06:28 sno Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/25 05:17:36 obache Exp $
 
 DISTNAME=	XML-AutoWriter-0.4
 PKGNAME=	p5-${DISTNAME}0
@@ -13,7 +13,7 @@ COMMENT=	DOCTYPE-driven valid XML output
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/AutoWriter/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
