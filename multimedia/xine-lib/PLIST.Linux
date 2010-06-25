@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.13 2010/04/19 15:31:19 drochner Exp $
+@comment $NetBSD: PLIST.Linux,v 1.14 2010/06/25 22:05:53 wiz Exp $
 lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/cyberblade_vid.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/cyberblade_vid.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/mach64_vid.a
@@ -29,8 +29,6 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_spu.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_spu.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_video.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_video.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_pvr.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_pvr.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_fb.a
