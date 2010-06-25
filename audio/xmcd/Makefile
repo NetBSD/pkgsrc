@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2008/08/10 02:52:27 obache Exp $
+# $NetBSD: Makefile,v 1.73 2010/06/25 20:29:51 joerg Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	10
@@ -13,12 +13,14 @@ PATCH_SITES=		${HOMEPAGE}
 PATCHFILES=		xmcd-3.0.2-proxyauth-patch
 PATCH_DIST_STRIP=	-p1
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/xmcd-3.0
 
 USE_IMAKE=		yes
-MAKE_ENV+=		BATCH_BINDIR=${PREFIX}/bin
-MAKE_ENV+=		BATCH_LIBDIR=${PREFIX}/lib/X11
-MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/${PKGMANDIR}/man1
+MAKE_ENV+=		BATCH_BINDIR=${DESTDIR}${PREFIX}/bin
+MAKE_ENV+=		BATCH_LIBDIR=${DESTDIR}${PREFIX}/lib/X11
+MAKE_ENV+=		BATCH_MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_ENV+=		BATCH_MANSUFFIX=1
 MAKE_ENV+=		SHELL=${SH:Q}
 
@@ -52,9 +54,11 @@ SUBST_MESSAGE.xmcd=	Replacing MACHINE_ARCH
 SUBST_FILES.xmcd=	libdi_d/config.sh misc_d/start.sh install.sh
 SUBST_VARS.xmcd=	MACHINE_ARCH
 
+INSTALLATION_DIRS=	bin
+
 post-install:
 	for file in cda xmcd gobrowser; do			\
-		strip ${ARCHBIN}/$$file;			\
+		strip ${DESTDIR}${ARCHBIN}/$$file;		\
 	done;
 
 .if ${OPSYS} != "SunOS"
