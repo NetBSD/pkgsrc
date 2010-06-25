@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/12 20:42:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/06/25 21:11:42 joerg Exp $
 
 DISTNAME=	aim-1.5.286-1.i386
 PKGNAME=	aim-1.5.286
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.rpm
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.aim.com/
 COMMENT=	AOL Instant Messenger (SM)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base compat x11 gtk
@@ -27,7 +29,7 @@ WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 
 EMUL_PKG_FMT=		rpm
-RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
 .if (${OPSYS} == "Linux") && (${LOCALBASE} == "/usr")
 RPM2PKG_STRIP=		1
@@ -40,7 +42,7 @@ INSTALLATION_DIRS=	bin
 
 .if ${OPSYS} != "Linux"
 post-install:
-	${LN} -fs ${EMULDIR}/usr/bin/aim ${PREFIX}/bin/aim
+	${LN} -fs ${EMULDIR}/usr/bin/aim ${DESTDIR}${PREFIX}/bin/aim
 	${ECHO} "bin/aim" >> ${RPM2PKG_PLIST}
 .endif
 

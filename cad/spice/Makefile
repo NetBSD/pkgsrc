@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/12/17 20:58:25 abs Exp $
+# $NetBSD: Makefile,v 1.44 2010/06/25 21:05:57 joerg Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -11,6 +11,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 COMMENT=	General-purpose circuit simulation program
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 # GPL license used by GNU readline is not compatible
@@ -45,8 +46,8 @@ do-build:
 INSTALLATION_DIRS+=share/examples/spice3
 
 do-install:
-	cd ${WRKSRC} && env ${MAKE_ENV} util/build NetBSD install
-	${CHMOD} a+rx ${PREFIX}/bin/spice3		\
+	cd ${WRKSRC} && env ${MAKE_ENV} ${INSTALL_ENV} util/build NetBSD install
+	${CHMOD} a+rx ${DESTDIR}${PREFIX}/bin/spice3	\
 		${DESTDIR}${PREFIX}/bin/nutmeg		\
 	  	${DESTDIR}${PREFIX}/bin/sconvert	\
 		${DESTDIR}${PREFIX}/bin/help		\
