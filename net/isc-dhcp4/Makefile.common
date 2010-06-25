@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2010/03/20 21:32:41 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.7 2010/06/25 21:56:46 joerg Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -42,9 +42,6 @@ SUBST_SED.config=       -e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_SED.config+=      -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.config=   Fixing configuration files.
 
-do-install:
-.	for d in ${SUBDIR}
-		cd ${WRKSRC}/${d} && ${SETENV} ${MAKE_ENV} ${MAKE} install
-.	endfor
+INSTALL_DIRS=	${SUBDIR}
 
 .include "../../security/openssl/buildlink3.mk"
