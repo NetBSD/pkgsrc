@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/03/20 21:32:40 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/25 21:38:44 joerg Exp $
 #
 
 DISTNAME=	InspIRCd-1.2.0
 PKGNAME=	${DISTNAME:S/InspIRCd/inspircd/}
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.inspircd.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inspircd.org/
 COMMENT=	Modular C++ IRC Daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	inspircd<1.2.0
 
@@ -117,19 +120,16 @@ post-build:
 .  endfor
 .endif
 
+INSTALLATION_DIRS+=	bin ${EGDIR}/aliases ${EGDIR}/sql
+
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/log/inspircd.log \
+			${INSPIRCD_USER} ${INSPIRCD_GROUP} 0640
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/sql
-	${INSTALL_DATA_DIR} ${EGDIR}/aliases
-
-	${INSTALL_DATA} ${WRKSRC}/conf/inspircd.* ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/modules.* ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/aliases/*.example ${EGDIR}/aliases
-	${INSTALL_DATA} ${WRKSRC}/conf/inspircd.conf.example ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/extras/m_*.sql ${EGDIR}/sql
-
-	${TOUCH} ${VARBASE}/log/inspircd.log
-	${CHOWN} ${INSPIRCD_USER}:${INSPIRCD_GROUP} ${VARBASE}/log/inspircd.log
-	${CHMOD} 0640 ${VARBASE}/log/inspircd.log
+	${INSTALL_DATA} ${WRKSRC}/conf/inspircd.* ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/modules.* ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/aliases/*.example ${DESTDIR}${EGDIR}/aliases
+	${INSTALL_DATA} ${WRKSRC}/conf/inspircd.conf.example ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/extras/m_*.sql ${DESTDIR}${EGDIR}/sql
 
 .include "../../mk/bsd.pkg.mk"
