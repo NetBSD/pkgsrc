@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.OpenBSD,v 1.1 2010/06/25 08:30:23 obache Exp $
+share/amsn/utils/linux/linflash/flash.so
+share/amsn/utils/linux/linflash/pkgIndex.tcl
+share/amsn/utils/linux/traydock/libtray.so
+share/amsn/utils/linux/traydock/pkgIndex.tcl
