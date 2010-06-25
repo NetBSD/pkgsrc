@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/06/16 06:19:23 asau Exp $
+# $NetBSD: Makefile,v 1.27 2010/06/25 13:43:22 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.39
@@ -82,6 +82,8 @@ do-test:
 
 .if $(LOWER_ARCH) == "amd64" || $(LOWER_ARCH) == "x86_64"
 PLIST_SUBST+=	SUFX64=-64
+.else
+PLIST_SUBST+=	SUFX64=
 .endif
 
 .include "../../mk/bsd.pkg.mk"
