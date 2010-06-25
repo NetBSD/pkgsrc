@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2006/10/09 20:04:38 mlelstv Exp $
+$NetBSD: patch-ag,v 1.5 2010/06/25 21:05:57 joerg Exp $
 
 --- conf/defaults.orig	Thu Jul 29 17:33:56 1993
 +++ conf/defaults
@@ -17,7 +17,7 @@ $NetBSD: patch-ag,v 1.4 2006/10/09 20:04:38 mlelstv Exp $
  
 -SPICE_DIR	= $(TOP1)/$(SYSTEM)
 -SPICE_LIB_DIR	= $(SPICE_DIR)/lib
-+SPICE_DIR	= @PREFIX@
++SPICE_DIR	= ${DESTDIR}@PREFIX@
 +SPICE_LIB_DIR	= $(SPICE_DIR)/share/spice3
  SPICE_EXEC_DIR	= $(SPICE_DIR)/bin
  
