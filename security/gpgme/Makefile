@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2010/01/16 17:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2010/06/25 22:11:10 wiz Exp $
 #
 
 DISTNAME=	gpgme-1.1.8
@@ -36,7 +36,6 @@ LIBS.SunOS+=		-lnsl -lsocket
 # getenv_r is not detected correctly. It will be found
 # in either base system or librfuncs
 CONFIGURE_ENV+=		ac_cv_func_getenv_r=yes
-CONFIGURE_ENV+=		ac_cv_func_funopen=yes
 
 TEST_TARGET=		check
 
