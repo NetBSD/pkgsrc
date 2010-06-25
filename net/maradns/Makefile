@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/05/23 17:30:31 schwarz Exp $
+# $NetBSD: Makefile,v 1.22 2010/06/25 21:40:32 joerg Exp $
 
 DISTNAME=	maradns-1.4.03
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.maradns.org/download/1.4/${DISTNAME:S/maradns-//}/
 EXTRACT_SUFX=	.tar.bz2
