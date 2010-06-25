@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/08/21 06:25:11 simonb Exp $
+$NetBSD: patch-aa,v 1.3 2010/06/25 22:12:31 joerg Exp $
 
 --- unix/Makefile.orig	Fri Jul 22 08:37:08 1994
 +++ unix/Makefile
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 06:25:11 simonb Exp $
  moria : $(OBJS)
  	$(CC) -o moria $(CFLAGS) $(OBJS) $(CURSES) $(LFLAGS)
  
-@@ -57,22 +62,21 @@
+@@ -57,22 +62,16 @@
  TAGS : $(SRCS)
  	ctags -x $(SRCS) > TAGS
  
@@ -59,15 +59,10 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 06:25:11 simonb Exp $
 -	(cd $(LIBDIR); chgrp $(GROUP) $(LIBFILES) scores)
 -# If you are short on disk space, or aren't interested in debugging moria.
 -#	strip $(BINDIR)/moria
-+	${BSD_INSTALL_PROGRAM} moria ${BINDIR}
-+	${CHGRP} ${GROUP} ${BINDIR}/moria
-+	${CHMOD} g+s ${BINDIR}/moria
-+	${BSD_INSTALL_MAN} doc/moria.6 ${MANDIR}
-+	${BSD_INSTALL_DATA_DIR} ${LIBDIR}
-+	( cd files; ${BSD_INSTALL_DATA} ${LIBFILES} ${LIBDIR} )
-+	${TOUCH} ${LIBDIR}/scores.dist
-+	${CHMOD} 664 ${LIBDIR}/scores.dist
-+	${CHGRP} ${GROUP} ${LIBDIR}/scores.dist
++	${BSD_INSTALL_PROGRAM} moria ${DESTDIR}${BINDIR}
++	${BSD_INSTALL_MAN} doc/moria.6 ${DESTDIR}${MANDIR}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}
++	( cd files; ${BSD_INSTALL_DATA} ${LIBFILES} ${DESTDIR}${LIBDIR} )
 +	( cd doc ; ${MAKE} install )
  
  clean:
