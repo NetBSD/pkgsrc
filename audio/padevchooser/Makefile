@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/25 06:01:57 obache Exp $
 #
 
 DISTNAME=	padevchooser-0.9.3
@@ -18,6 +18,12 @@ USE_TOOLS=	pkg-config gmake
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--disable-lynx
+
+pkgbase:=	pulseaudio
+.include "../../mk/pkg-build-options.mk"
+.if empty(PKG_BUILD_OPTIONS.pulseaudio)
+PKG_FAIL_REASON=	"Require pulseaudio with ZeroConf support (avahi)"
+.endif
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
