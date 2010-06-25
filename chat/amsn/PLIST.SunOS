@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2010/06/25 08:30:23 obache Exp $
+share/amsn/utils/linux/capture/capture.so
+share/amsn/utils/linux/capture/libng/plugins/conv-mjpeg.so
+share/amsn/utils/linux/capture/libng/plugins/drv0-v4l2.so
+share/amsn/utils/linux/capture/pkgIndex.tcl
+share/amsn/utils/linux/linflash/flash.so
+share/amsn/utils/linux/linflash/pkgIndex.tcl
+share/amsn/utils/linux/traydock/libtray.so
+share/amsn/utils/linux/traydock/pkgIndex.tcl
