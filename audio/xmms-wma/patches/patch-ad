@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2005/03/01 01:17:01 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2010/06/25 20:21:47 joerg Exp $
 
 --- Makefile.orig	2005-03-01 02:09:43.000000000 +0100
 +++ Makefile	2005-03-01 02:10:42.000000000 +0100
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2005/03/01 01:17:01 xtraeme Exp $
  .PHONY: all install install-home uninstall uninstall-home clean
  
 -INSTALL_DIR := /usr/lib/xmms/Input
-+INSTALL_DIR := `xmms-config --input-plugin-dir`
++INSTALL_DIR := ${DESTDIR}`xmms-config --input-plugin-dir`
  INSTALL_DIR_HOME := ~/.xmms/Plugins/Input
  
  export PLUGIN_FILE := libwma.so
