@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/03 00:41:41 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/25 22:47:50 joerg Exp $
 
 --- Makefile.orig	Fri Sep  7 00:40:21 2001
 +++ Makefile	Wed Mar 26 23:23:08 2003
@@ -8,8 +8,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/06/03 00:41:41 hubertf Exp $
  
 -DATA_PREFIX=/usr/share/tuxmath/
 -BIN_PREFIX=/usr/local/bin/
-+DATA_PREFIX=$(PREFIX)/share/tuxmath/
-+BIN_PREFIX=$(PREFIX)/bin/
++DATA_PREFIX=${DESTDIR}$(PREFIX)/share/tuxmath/
++BIN_PREFIX=${DESTDIR}$(PREFIX)/bin/
  
  
  VERSION=2001.09.07
