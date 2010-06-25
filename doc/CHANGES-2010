@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2304 2010/06/25 07:36:08 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2305 2010/06/25 13:07:10 hauke Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3060,3 +3060,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/viking to 0.9.94 [gdt 2010-06-24]
 	Updated mail/thunderbird to 3.0.5 [tnn 2010-06-25]
 	Updated www/seamonkey to 2.0.5 [tnn 2010-06-25]
+	Removed www/pyblosxom successor www/py-blosxom [hauke 2010-06-25]
