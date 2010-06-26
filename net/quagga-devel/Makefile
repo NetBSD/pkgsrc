@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/03/10 19:57:06 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/26 00:59:35 joerg Exp $
 #
 
 DISTNAME=	quagga-0.99.16
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.quagga.net/download/
 
@@ -35,6 +36,7 @@ RCD_SCRIPTS=		zebra bgpd ospfd ripd
 PKG_GROUPS=		quagga
 PKG_USERS=		quagga:quagga
 
+PKG_SYSCONFDIR_PERMS=	quagga quagga 750
 # log_syslog.conf is used as a template for each config file
 .for _file_ in vtysh.conf zebra.conf bgpd.conf ospfd.conf ripd.conf
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/quagga/log_syslog.conf \
@@ -53,7 +55,6 @@ RCD_SCRIPT_SRC.${_script_}?=	${WRKSRC}/pkgsrc/${_script_}.sh
 
 post-install:
 	@${CHMOD} a+r ${DESTDIR}${PREFIX}/share/examples/quagga/*
-	${INSTALL} -d -o quagga -g quagga -m 750 ${DESTDIR}${PKG_SYSCONFDIR}
 	${INSTALL_DATA} ${FILESDIR}/log_syslog.conf ${DESTDIR}${PREFIX}/share/examples/quagga
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/quagga
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/quagga/mpls
