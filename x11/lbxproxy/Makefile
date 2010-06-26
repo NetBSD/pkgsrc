@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/09 19:34:05 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/26 00:39:59 joerg Exp $
 #
 
 DISTNAME=		lbxproxy-1.0.2
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+BROKEN=			Unsupported by modern X.org
 
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
