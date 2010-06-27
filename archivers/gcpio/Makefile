@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2010/03/23 22:42:17 tez Exp $
+# $NetBSD: Makefile,v 1.39 2010/06/27 17:51:07 joerg Exp $
 #
 
 DISTNAME=	cpio-2.6
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=cpio/}
 
@@ -26,8 +26,6 @@ TEST_TARGET=	check
 CONFIGURE_ENV+=	gt_cv_func_gnugettext1_libintl=yes
 
 .include "../../mk/bsd.prefs.mk"
-
-LIBS.NetBSD+=	-lgnumalloc
 
 .if defined(GNU_PROGRAM_PREFIX) && ${GNU_PROGRAM_PREFIX} == ""
 # pax installs a "cpio" also
