@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/27 19:16:03 joerg Exp $
 bin/mkstrip
 bin/extdgts
 libdata/wwwcount/digits/A/peng.gif
@@ -16,7 +16,6 @@ libdata/wwwcount/digits/cdd/strip.gif
 libdata/wwwcount/digits/cdr/strip.gif
 libdata/wwwcount/digits/mkstrip.sh
 libdata/wwwcount/rgb.txt
-libdata/wwwcount/sample.dat
 libexec/cgi-bin/Count.cgi
 share/doc/wwwcount/blues.gif
 share/doc/wwwcount/index.html
