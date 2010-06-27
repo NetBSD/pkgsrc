@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
+$NetBSD: patch-ae,v 1.5 2010/06/27 19:16:03 joerg Exp $
 
---- Count-install.orig	Mon May 17 03:01:50 1999
-+++ Count-install	Sun Dec 12 09:45:45 1999
+--- Count-install.orig	1999-05-17 01:01:50.000000000 +0000
++++ Count-install
 @@ -13,7 +13,6 @@
  # Nov 24, 1995
  ##
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
  INSTALL_PROG="./install-sh"
  Tmpl="./Config.tmpl"
  Binary="./bin/Count.cgi"
-@@ -28,8 +27,6 @@
+@@ -28,8 +27,6 @@ Digit_cdd="./data/digits/cdd"
  Digit_bang="./data/digits/bang"
  Rgbfile="./data/rgb.txt"
  SAMPLE_DAT="./data/data/sample.dat"
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
  
  UserId="nobody"
  userid_flag=0
-@@ -115,20 +112,6 @@
+@@ -115,20 +112,6 @@ fi
  
  . $Tmpl
  
@@ -40,7 +40,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
  tdir="./tmp"
  
  if [ ! -d $tdir ]; then
-@@ -197,7 +180,6 @@
+@@ -197,7 +180,6 @@ anything else.
  
  cgi-bin directory   = $CGIBIN_DIR
  conf directory      = $CONFIG_DIR
@@ -48,7 +48,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
  digit directory     = $DIGIT_DIR
  data directory      = $DATA_DIR
  log directory       = $LOG_DIR
-@@ -212,7 +194,7 @@
+@@ -212,7 +194,7 @@ read answer
  
  if [ .$answer = . ]
  then
@@ -57,7 +57,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
  fi
      until [ $answer = "y" -o $answer = "Y" -o $answer = "n" -o $answer = "N" ]
      do
-@@ -253,7 +235,7 @@
+@@ -253,7 +235,7 @@ echo $n "*Do you know the user and group
     read answer
     if [ .$answer = . ]
     then
@@ -66,7 +66,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
     fi   
     until [ $answer = "y" -o $answer = "Y" -o $answer = "n" -o $answer = "N" ]
     do
-@@ -272,11 +254,11 @@
+@@ -272,11 +254,11 @@ echo $n "*Do you know the user and group
  ###
  # enter user id -starts
  ###
@@ -80,7 +80,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
     fi
     until [ $answer != "x" ]
     do
-@@ -296,11 +278,11 @@
+@@ -296,11 +278,11 @@ echo $n "*Do you know the user and group
  ##
  # enter groud id -starts
  ##
@@ -94,7 +94,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
     fi
     until [ $answer != "x" ]
     do
-@@ -318,47 +300,18 @@
+@@ -318,47 +300,18 @@ echo $n "*Do you know the user and group
  # enter groud id -ends
  ##
  echo "installing Count.cgi->$CGIBIN_DIR"
@@ -105,10 +105,12 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
 -#
 -# check if the file exist or not
 -#
--
++#echo "installing sample datafile $SAMPLE_DAT->$RGB_DIR"
++#$INSTALL_PROG -c -o $UserId -g $GroupId -m 664 $SAMPLE_DAT $RGB_DIR/sample.dat
+ 
 -if [ ! -f $CONFIG_DIR/$CONFIG_FILE ]; then
-+echo "installing sample datafile $SAMPLE_DAT->$RGB_DIR"
-+$INSTALL_PROG -c -o $UserId -g $GroupId -m 664 $SAMPLE_DAT $RGB_DIR/sample.dat
++echo "installing rgb.txt->$RGB_DIR"
++$INSTALL_PROG -c -m 644 $Rgbfile $RGB_DIR/rgb.txt
  
 -    $INSTALL_PROG -c -m 664 $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE
 -else
@@ -119,9 +121,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
 -    echo " $INSTALL_PROG -c -m 664 $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE"
 -	echo ""
 -fi
-+echo "installing rgb.txt->$RGB_DIR"
-+$INSTALL_PROG -c -m 644 $Rgbfile $RGB_DIR/rgb.txt
- 
+-
 -echo "installing sample datafile $SAMPLE_DAT->$DATA_DIR"
 -
 -if [ ! -f $DATA_DIR/sample.dat ]; then
@@ -145,13 +145,13 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
 -chgrp $GroupId $LOG_DIR
 -chmod 775 $LOG_DIR
 +echo "installing $LOG_FILE->$LOG_DIR"
-+touch $LOG_DIR/$LOG_FILE
-+chmod 644 $LOG_DIR/$LOG_FILE
-+chown $UserId.$GroupId $LOG_DIR/$LOG_FILE
++#touch $LOG_DIR/$LOG_FILE
++#chmod 644 $LOG_DIR/$LOG_FILE
++#chown $UserId.$GroupId $LOG_DIR/$LOG_FILE
  
  echo "installing image strip for digit style A->$DIGIT_DIR/A"
  $INSTALL_PROG -c -m 644 $DigitA/strip.gif $DIGIT_DIR/A/strip.gif
-@@ -400,18 +353,6 @@
+@@ -400,18 +353,6 @@ $INSTALL_PROG -c -m 644 $Digit_cdd/strip
  echo "installing strip image for digit style bang->$DIGIT_DIR/bang"
  $INSTALL_PROG -c -m 644 $Digit_bang/strip.gif $DIGIT_DIR/bang/strip.gif
  
@@ -170,7 +170,7 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
          ;;
          n|N)
  cat <<EOM
-@@ -424,17 +365,16 @@
+@@ -424,17 +365,16 @@ cat <<EOM
  
  EOM
  echo "installing Count.cgi->$CGIBIN_DIR"
@@ -194,13 +194,13 @@ $NetBSD: patch-ae,v 1.4 1999/12/12 08:46:01 rh Exp $
  
  echo "installing image strip for digit style A->$DIGIT_DIR/A"
  $INSTALL_PROG -c $DigitA/strip.gif $DIGIT_DIR/A/strip.gif
-@@ -474,9 +414,6 @@
- 
+@@ -475,9 +415,6 @@ $INSTALL_PROG -c $Digit_cdd/strip.gif $D
  echo "installing strip image for digit style bang->$DIGIT_DIR/bang"
  $INSTALL_PROG -c $Digit_bang/strip.gif $DIGIT_DIR/bang/strip.gif
--
+ 
 -echo "installing the mirroring script"
 -$INSTALL_PROG -c $mirror_script $BASE_DIR/$mirror_file
- 
+-
      ;;
          *)
+    esac
