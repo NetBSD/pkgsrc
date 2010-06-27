@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/06/14 15:33:13 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/06/27 11:20:18 obache Exp $
 
 DISTNAME=		wireshark-1.2.9
 PKGREVISION=		1
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		ethereal-[0-9]*
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config yacc lex
 
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
