@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2008/02/04 14:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2010/06/27 17:34:35 joerg Exp $
 
 DISTNAME=	xosview-1.8.3
 PKGREVISION=	2
@@ -10,6 +10,7 @@ HOMEPAGE=	http://xosview.sourceforge.net/
 COMMENT=	X11 graphical display of OS statistics
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 USE_LANGUAGES=		c c++
@@ -20,7 +21,8 @@ CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man1
-MAKE_FLAGS+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man1
+INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX:Q}/${PKGMANDIR:Q}/man1
+INSTALL_MAKE_FLAGS+=	PREFIX_TO_USE=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,12 +40,15 @@ LIBS+=		-lsocket -lnsl
 USE_TOOLS+=	gmake
 .endif
 
-.if ${UNPRIVILEGED:M[Yy][Ee][Ss]} != ""
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
+    ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
+SPECIAL_PERMS+=	bin/xosview ${REAL_ROOT_USER} kmem 2555
+.endif
+
 SUBST_CLASSES+=		unpriv
 SUBST_STAGE.unpriv=	pre-configure
 SUBST_FILES.unpriv=	config/Makefile.top.in
 SUBST_SED.unpriv=	-e s,@INSTALL_ARGS@,,
-.endif
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-configure
