@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.43 2009/07/15 09:40:30 joerg Exp $
+# $NetBSD: fetch.mk,v 1.44 2010/06/27 17:46:22 joerg Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -188,27 +188,35 @@ fetch-check-interactive: .USEBEFORE
 #	to try to resume interrupted file transfers to avoid downloading
 #	the whole file.  The default is set in pkgsrc/mk/defaults/mk.conf.
 #
+# FETCH_TIMEOUT, if defined, will cause the fetch command to quit on stalled
+#	connections after the given amount of seconds.
+#       The specific behavior depends on the command used.
+#
 
 # If this host is behind a filtering firewall, use passive ftp(1)
-_FETCH_BEFORE_ARGS.ftp=		${PASSIVE_FETCH:D-p}
+_FETCH_BEFORE_ARGS.ftp=		${PASSIVE_FETCH:D-p} \
+				${FETCH_TIMEOUT:D-q ${FETCH_TIMEOUT}}
 _FETCH_AFTER_ARGS.ftp=		# empty
 _FETCH_RESUME_ARGS.ftp=		-R
 _FETCH_OUTPUT_ARGS.ftp=		-o
 _FETCH_CMD.ftp=			${TOOLS_PATH.ftp}
 
-_FETCH_BEFORE_ARGS.fetch=	# empty
+_FETCH_BEFORE_ARGS.fetch=	${FETCH_TIMEOUT:D-T ${FETCH_TIMEOUT}}
 _FETCH_AFTER_ARGS.fetch=	# empty
 _FETCH_RESUME_ARGS.fetch=	-r
 _FETCH_OUTPUT_ARGS.fetch=	-o
 _FETCH_CMD.fetch=		${TOOLS_PATH.fetch}
 
-_FETCH_BEFORE_ARGS.wget=	${PASSIVE_FETCH:D--passive-ftp}
+_FETCH_BEFORE_ARGS.wget=	${PASSIVE_FETCH:D--passive-ftp} \
+				${FETCH_TIMEOUT:D--timeout=${FETCH_TIMEOUT}}
 _FETCH_AFTER_ARGS.wget=		# empty
 _FETCH_RESUME_ARGS.wget=	-c
 _FETCH_OUTPUT_ARGS.wget=	-O
 _FETCH_CMD.wget=		${PREFIX}/bin/wget
 
-_FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv}
+_FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv} \
+				${FETCH_TIMEOUT:D--connect-timeout=${FETCH_TIMEOUT}} \
+				${FETCH_TIMEOUT:D--speed-time=${FETCH_TIMEOUT}}
 _FETCH_AFTER_ARGS.curl=		-O # must be here to honor -o option
 _FETCH_RESUME_ARGS.curl=	-C -
 _FETCH_OUTPUT_ARGS.curl=	-o
