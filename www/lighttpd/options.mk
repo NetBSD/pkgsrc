@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/02/22 19:27:20 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2010/06/27 11:18:05 obache Exp $
 
 PKG_OPTIONS_VAR =	PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=	bzip fam gdbm inet6 ldap lua mysql ssl memcache
@@ -12,6 +12,8 @@ PKG_SUGGESTED_OPTIONS=	inet6 ssl
 .if !empty(PKG_OPTIONS:Mbzip)
 .  include "../../archivers/bzip2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-bzip2
+.else
+CONFIGURE_ARGS+=	--without-bzip2
 .endif
 
 ###
