@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2310 2010/06/27 08:51:32 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2311 2010/06/27 20:39:08 joerg Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3066,3 +3066,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/getmail to 4.18.0 [schmonz 2010-06-27]
 	Updated inputmethod/scim-tomoe to 0.6.0nb3 [obache 2010-06-27]
 	Updated inputmethod/tomoe-gtk to 0.6.0nb5 [obache 2010-06-27]
+	Removed databases/php-odbc [joerg 2010-06-27]
