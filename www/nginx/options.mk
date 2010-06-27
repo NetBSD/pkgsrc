@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.9 2010/06/15 20:05:48 joerg Exp $
+# $NetBSD: options.mk,v 1.10 2010/06/27 18:00:24 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools mail-proxy memcache \
-			realip inet6 uwsgi
-PKG_SUGGESTED_OPTIONS=	ssl pcre
+PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache pcre \
+			push realip ssl sub uwsgi
+PKG_SUGGESTED_OPTIONS=	pcre ssl
 
 PLIST_VARS+=		uwsgi
 
@@ -58,5 +58,13 @@ CONFIGURE_ARGS+=       --with-ipv6
 EGFILES+=		uwsgi_params
 PLIST.uwsgi=		yes
 .else
+
+.if !empty(PKG_OPTIONS:Mpush)
+PUSH=			nginx_http_push_module-0.692
+DISTFILES+=		${PUSH}.tar.gz
+SITES.${PUSH}.tar.gz=	http://pushmodule.slact.net/downloads/
+CONFIGURE_ARGS+=        --add-module=../${PUSH}
+.endif
+
 CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
