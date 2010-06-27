@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2008/02/19 10:34:07 schmonz Exp $
+$NetBSD: patch-aa,v 1.7 2010/06/27 01:52:46 schmonz Exp $
 
---- setup.py.orig	2007-11-23 11:26:55.000000000 -0500
+--- setup.py.orig	2007-11-23 16:26:55.000000000 +0000
 +++ setup.py
 @@ -39,12 +39,11 @@ GETMAILDOCDIR = os.path.join(
      datadir or prefix,
