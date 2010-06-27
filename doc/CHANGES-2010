@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2307 2010/06/26 19:11:45 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2308 2010/06/27 01:52:57 schmonz Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3063,3 +3063,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/pyblosxom successor www/py-blosxom [hauke 2010-06-25]
 	Updated fonts/umefont-ttf to 0.416 [wiz 2010-06-25]
 	Updated graphics/png to 1.4.3 [wiz 2010-06-26]
+	Updated mail/getmail to 4.18.0 [schmonz 2010-06-27]
