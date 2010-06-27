@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/12/17 19:31:55 abs Exp $
+# $NetBSD: Makefile,v 1.22 2010/06/27 20:28:24 joerg Exp $
 #
 
 DISTNAME=		Zope-3.3.1
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.zope.org/DevHome/Zope3/
 COMMENT=		Zope 3 Application Server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
@@ -51,6 +53,8 @@ EXTRACT_USING=		bsdtar
 
 USE_TOOLS+=		pax
 
+INSTALLATION_DIRS+=	bin ${ZOPE3_DOCDIR}
+
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
 
@@ -58,7 +62,6 @@ post-install:
 	${LN} -s ${DESTDIR}${ZOPE3_DIR}/bin/mkzeoinstance ${DESTDIR}${PREFIX}/bin
 	${LN} -s ${DESTDIR}${ZOPE3_DIR}/bin/mkzopeinstance ${DESTDIR}${PREFIX}/bin
 	${LN} -s ${DESTDIR}${ZOPE3_DIR}/bin/zopetest ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${ZOPE3_DOCDIR}
 	cd ${WRKSRC}/Zope && pax -r -w LICENSES.txt ZopePublicLicense.txt \
 		${DESTDIR}${ZOPE3_DOCDIR}
 	cd ${WRKSRC}/Zope/doc && pax -r -w *.txt ${DESTDIR}${ZOPE3_DOCDIR}
