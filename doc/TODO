@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9431 2010/06/28 09:04:36 wiz Exp $
+$NetBSD: TODO,v 1.9432 2010/06/28 22:31:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -572,7 +572,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-628
+	o etm-630
 	o eukleides-1.5.4
 	o evince-2.30.3 [GNOME 2.30]
 	o evolution-2.30.2 [GNOME 2.30]
@@ -1180,7 +1180,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-matplotlib-0.99.3
 	o py-moin-1.9.3 [pkg/43524]
 	o py-nevow-0.10.0
-	o py-openid-2.2.5 [pkg/43528]
 	o py-psycopg-2.2.1
 	o py-psycopg2-2.0.14
 	o py-pytz-2010h
