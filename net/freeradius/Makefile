@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2010/05/29 08:51:11 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2010/06/28 22:43:50 joerg Exp $
 
 DISTNAME=	freeradius-${RADVER}
 PKGREVISION=	4
@@ -11,6 +11,7 @@ COMMENT=	Free RADIUS server implementation
 
 CONFLICTS+=	freeradius-2.[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
@@ -138,19 +139,15 @@ post-build:
 	${CP} ${PKGDIR:Q}/MESSAGE.pam ${WRKDIR:Q}/.MESSAGE_SRC.pam
 .endif
 
+INSTALLATION_DIRS+=	${EGDIR}/certs/demoCA
+INSTALL_ENV+=		R=${DESTDIR}
+MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs ${RADIUS_USER} ${RADIUS_GROUP} 0750
+MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs/demoCA ${RADIUS_USER} ${RADIUS_GROUP} 0750
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/certs
-	${INSTALL_DATA_DIR} ${EGDIR}/certs/demoCA
 .for f in ${EGFILES}
-	${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${DESTDIR}${EGDIR}/${f}
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
-	${MKDIR} ${PKG_SYSCONFDIR}/certs
-	${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
-	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs
-	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs/demoCA
-	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs
-	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs/demoCA
+	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/rlm_perl/example.pl ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
