@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2010/03/21 16:29:41 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/06/28 08:55:37 joerg Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	7
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
+PKG_DESTDIR_SUPPORT =	user-destdir
 MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=	exim-exiscan-[0-9]*
@@ -19,7 +20,6 @@ BUILD_DEFS+=		EXIM_DB.mysql EXIM_DB.pgsql
 
 PKG_SYSCONFSUBDIR?=	exim
 EGDIR=			${PREFIX}/share/examples/exim
-MAKE_ENV+=		INST_CONFIGURE_FILE="${EGDIR}/configure"
 CONF_FILES=		${EGDIR}/configure ${PKG_SYSCONFDIR}/configure
 MESSAGE_SUBST+=		EGDIR="${EGDIR}"
 
@@ -84,6 +84,10 @@ SUBST_STAGE.paths=	post-patch
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/exim
 
+INSTALL_ENV+=	INST_BIN_DIRECTORY=${DESTDIR}${PREFIX}/sbin \
+	INST_CONFIGURE_FILE=${DESTDIR}${EGDIR}/configure \
+	INST_UID=${ROOT_USER}
+
 post-extract:
 	${CP} ${FILESDIR}/Makefile-DragonFly ${FILESDIR}/os.h-DragonFly \
 		${WRKSRC}/OS/
@@ -103,9 +107,9 @@ pre-configure:
 	done
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/exim_newaliases ${PREFIX}/sbin/exim_newaliases
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
-	${CP} ${FILESDIR}/exim.8 ${PREFIX}/${PKGMANDIR}/man8/exim.8
+	${INSTALL_SCRIPT} ${WRKDIR}/exim_newaliases ${DESTDIR}${PREFIX}/sbin/exim_newaliases
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EGDIR}
+	${CP} ${FILESDIR}/exim.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/exim.8
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
