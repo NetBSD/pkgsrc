@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2010/06/13 22:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2010/06/28 11:29:26 wiz Exp $
 
 DISTNAME=	gtkmm-2.20.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-examples
+
+EXTRACT_USING=		bsdtar
 
 PKGCONFIG_OVERRIDE=	atk/atkmm-1.6.pc.in
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm-2.4.pc.in
