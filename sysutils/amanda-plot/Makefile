@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/07/29 17:21:39 pgoyette Exp $
+# $NetBSD: Makefile,v 1.26 2010/06/28 10:09:26 joerg Exp $
 #
 
 PKGNAME=		amanda-plot-${VERS}
@@ -6,6 +6,8 @@ PKGREVISION=		1
 SVR4_PKGNAME=		amapl
 
 COMMENT=		Visualizes the behavior of Amanda, a network backup system
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		amanda-server-2.5.2p1{,nb[0-9]*}:../../sysutils/amanda-server

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2009/05/20 00:58:27 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/06/28 10:09:26 joerg Exp $
 #
 
 PKGNAME=		amanda-client-${VERS}
@@ -6,6 +6,8 @@ PKGREVISION=		2
 SVR4_PKGNAME=		amacl
 
 COMMENT=		Client part of Amanda, a network backup system
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		awk:run perl:run
