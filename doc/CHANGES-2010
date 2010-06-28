@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2313 2010/06/28 11:29:45 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2314 2010/06/28 18:46:52 gls Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3069,3 +3069,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/tomoe-gtk to 0.6.0nb5 [obache 2010-06-27]
 	Removed databases/php-odbc [joerg 2010-06-27]
 	Updated x11/gtkmm to 2.20.3nb2 [wiz 2010-06-28]
+	Updated sysutils/fabric to 0.9.1 [gls 2010-06-28]
