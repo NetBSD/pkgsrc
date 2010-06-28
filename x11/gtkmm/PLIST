@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2010/06/02 16:45:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2010/06/28 11:29:26 wiz Exp $
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
 include/atkmm-1.6/atkmm/component.h
@@ -608,6 +608,9 @@ share/doc/gtkmm-2.4/reference/html/classGdk_1_1Visual__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGdk_1_1Window-members.html
 share/doc/gtkmm-2.4/reference/html/classGdk_1_1Window.html
 share/doc/gtkmm-2.4/reference/html/classGdk_1_1Window__coll__graph.png
+share/doc/gtkmm-2.4/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1RecentInfo_01_4_01_4-members.html
+share/doc/gtkmm-2.4/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1RecentInfo_01_4_01_4.html
+share/doc/gtkmm-2.4/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01Gtk_1_1RecentInfo_01_4_01_4__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1AboutDialog-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1AboutDialog.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1AboutDialog__coll__graph.png
@@ -752,7 +755,9 @@ share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDown.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDownItem-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDownItem.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDownItem__coll__graph.png
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDown__Helpers_1_1ComboDropDownList-members.html
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDown__Helpers_1_1ComboDropDownList.html
+share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDown__Helpers_1_1ComboDropDownList__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1ComboDropDown__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Combo__coll__graph.png
 share/doc/gtkmm-2.4/reference/html/classGtk_1_1Container-members.html
