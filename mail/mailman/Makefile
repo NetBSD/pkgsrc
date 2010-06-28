@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2010/02/10 19:17:40 joerg Exp $
+# $NetBSD: Makefile,v 1.61 2010/06/28 09:29:40 joerg Exp $
 
 DISTNAME=	mailman-2.1.12
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.list.org/
 COMMENT=	The GNU Mailing List Manager
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,6 +41,7 @@ PLIST_SUBST+=		MAILMAN_CGIEXT=${MAILMAN_CGIEXT:S/none//}
 PKG_GROUPS_VARS+=	MAILMAN_GROUP MAILMAN_CGIGROUP MAILMAN_MAILGROUP
 PKG_USERS_VARS+=	MAILMAN_USER
 
+USERGROUP_PHASE=	pre-install
 PKG_GROUPS=		${MAILMAN_GROUP}
 PKG_USERS=		${MAILMAN_USER}:${MAILMAN_GROUP}
 
@@ -108,24 +111,24 @@ post-patch:
 	${RM} -f ${WRKSRC}/[A-Z]*.orig
 
 pre-install:
-	${INSTALL} -d -o ${MAILMAN_USER} -g ${MAILMAN_GROUP} -m 775 ${EXECDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EXECDIR}/support
+	${INSTALL} -d -o ${MAILMAN_USER} -g ${MAILMAN_GROUP} -m 775 ${DESTDIR}${EXECDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXECDIR}/support
 
 post-install:
 	cd ${WRKSRC} && for i in [A-IN-U]*; do \
-		${INSTALL_DATA} $$i ${DOCDIR}/; \
+		${INSTALL_DATA} $$i ${DESTDIR}${DOCDIR}/; \
 	done
 	cd ${WRKSRC}/doc && for i in \
 	    mailman-*.ps mailman-*.pdf mailman-*.txt; do \
-		${INSTALL_DATA} $$i ${DOCDIR}/; \
+		${INSTALL_DATA} $$i ${DESTDIR}${DOCDIR}/; \
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/mailman.conf.dist ${EGDIR}/mailman.conf
-	${CHOWN} -R root:${MAILMAN_GROUP} ${EXECDIR}
-	${CHMOD} -R g+w ${EXECDIR}
-	${CHMOD} g+s ${EXECDIR}/cgi-bin/*
-	${PY_COMPILE_ALL} ${PREFIX}/lib/mailman/bin ${PREFIX}/lib/mailman/cron ${PREFIX}/lib/mailman/scripts
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/mailman.conf.dist ${DESTDIR}${EGDIR}/mailman.conf
+	${CHOWN} -R root:${MAILMAN_GROUP} ${DESTDIR}${EXECDIR}
+	${CHMOD} -R g+w ${DESTDIR}${EXECDIR}
+	${CHMOD} g+s ${DESTDIR}${EXECDIR}/cgi-bin/*
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/lib/mailman/bin ${DESTDIR}${PREFIX}/lib/mailman/cron ${DESTDIR}${PREFIX}/lib/mailman/scripts
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
