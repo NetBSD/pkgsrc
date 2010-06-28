@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/06/28 20:37:32 joerg Exp $
+
+--- aclocal.m4.orig	2010-06-28 20:31:17.000000000 +0000
++++ aclocal.m4
+@@ -116,7 +116,7 @@ AC_DEFUN(AC_PATH_EMACS,
+   case "${flavor}" in
+   XEmacs)
+     EMACS_FLAVOR=xemacs;;
+-  Emacs\ 2[[123]]\.*)
++  Emacs\ 2[[1234]]\.*)
+     EMACS_FLAVOR=emacs;;
+   *)
+     EMACS_FLAVOR=unsupported;;
