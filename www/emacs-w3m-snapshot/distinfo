@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/05 22:17:58 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/06/28 20:37:32 joerg Exp $
 
 SHA1 (w3m-el-snapshot_1.4.364+0.20090802.orig.tar.gz) = c03da651ff5faaa945db124653e287bfe927a6b1
 RMD160 (w3m-el-snapshot_1.4.364+0.20090802.orig.tar.gz) = 0a4331a129f00c943e10f15a257db2d5420be624
 Size (w3m-el-snapshot_1.4.364+0.20090802.orig.tar.gz) = 951300 bytes
+SHA1 (patch-aa) = d17fa31e5cf767203dad2652e2ebb5aebffa535d
