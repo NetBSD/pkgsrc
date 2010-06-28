@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/03/12 13:45:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2010/06/28 10:49:51 joerg Exp $
 #
 
 DISTNAME=	cherokee-0.5.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.cherokee-project.com/download/0.5/0.5.3/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cherokee-project.com/
 COMMENT=	Flexible and fast web server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -78,7 +80,6 @@ CONF_FILES+=		${EGDIR}/cherokee/mods-available/ssl \
 CONFIGURE_ARGS+=	--disable-tls
 .endif
 
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}/pam.d
+INSTALLATION_DIRS+=	${EGDIR}/pam.d
 
 .include "../../mk/bsd.pkg.mk"
