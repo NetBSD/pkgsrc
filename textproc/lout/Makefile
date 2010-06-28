@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/06/14 22:58:09 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/06/28 10:41:53 joerg Exp $
 #
 
 DISTNAME=	lout-3.26
@@ -10,9 +10,11 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://lout.sourceforge.net/
 COMMENT=	Basser Lout, a TeX/troff-like formatter with PostScript/PDF output
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 INSTALL_TARGET=	allinstall
-INSTALLATION_DIRS=	bin share/doc
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc
 
 do-configure:
 	${MV} ${WRKSRC}/makefile ${WRKSRC}/makefile.in
@@ -20,9 +22,8 @@ do-configure:
 
 post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} share/doc/lout -type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} share/lout -type f -print >>${PLIST_SRC})
-	${ECHO} "@unexec ${RM} -rf %D/share/doc/lout" >>${PLIST_SRC}
+	(cd ${DESTDIR}${PREFIX}; ${FIND} share/doc/lout -type f -print >>${PLIST_SRC})
+	(cd ${DESTDIR}${PREFIX}; ${FIND} share/lout -type f -print >>${PLIST_SRC})
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
