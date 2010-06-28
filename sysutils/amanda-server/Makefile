@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.45 2008/07/29 17:21:39 pgoyette Exp $
+# $NetBSD: Makefile,v 1.46 2010/06/28 10:09:26 joerg Exp $
 
 PKGNAME=		amanda-server-${VERS}
 PKGREVISION=		1
 SVR4_PKGNAME=		amase
 
 COMMENT=		Server part of Amanda, a network backup system
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 USE_TOOLS+=		awk:run perl:run
 
