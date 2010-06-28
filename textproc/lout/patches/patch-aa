@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2007/04/01 19:36:08 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2010/06/28 10:41:53 joerg Exp $
 
---- makefile.orig	2002-10-16 00:11:05.000000000 +0100
-+++ makefile	2003-09-15 10:19:50.000000000 +0100
-@@ -276,10 +276,10 @@
+--- makefile.orig	2002-10-15 23:11:05.000000000 +0000
++++ makefile
+@@ -276,10 +276,10 @@ SAFEDFT = 0
  DEBUGGING = 1
  TRACING = -g
  
@@ -10,14 +10,14 @@ $NetBSD: patch-aa,v 1.5 2007/04/01 19:36:08 rillig Exp $
 -LIBDIR	= /home/jeff/lout.lib
 -DOCDIR	= /home/jeff/lout.doc
 -MANDIR	= /home/jeff/lout.man
-+BINDIR	= @PREFIX@/bin
-+LIBDIR	= @PREFIX@/share/lout
-+DOCDIR	= @PREFIX@/share/doc/lout
-+MANDIR	= @PREFIX@/${PKGMANDIR}/man1
++BINDIR	= ${DESTDIR}@PREFIX@/bin
++LIBDIR	= ${DESTDIR}@PREFIX@/share/lout
++DOCDIR	= ${DESTDIR}@PREFIX@/share/doc/lout
++MANDIR	= ${DESTDIR}@PREFIX@/${PKGMANDIR}/man1
  
  LIBFONT = font
  LIBMAPS = maps
-@@ -297,8 +297,8 @@
+@@ -297,8 +297,8 @@ LOC_DE	= de
  
  COLLATE	= 1
  
@@ -28,7 +28,16 @@ $NetBSD: patch-aa,v 1.5 2007/04/01 19:36:08 rillig Exp $
  ZLIBPATH	=
  
  CC	= gcc
-@@ -450,3 +450,6 @@
+@@ -392,7 +392,7 @@ install: lout prg2lout
+ 	chmod 755 $(LIBDIR)/$(LIBLOCA)
+ 	@echo ""
+ 	@echo "(c) Initializing run (should be silent, no errors expected)"
+-	$(BINDIR)/lout -x -s $(LIBDIR)/$(LIBINCL)/init
++	$(BINDIR)/lout -D $(LIBDIR)/$(LIBDATA) -H $(LIBDIR)/$(LIBHYPH) -I $(LIBDIR)/$(LIBINCL) -x -s $(LIBDIR)/$(LIBINCL)/init
+ 	@echo ""
+ 	@echo "(d) Changing mode of files just created by initializing run"
+ 	chmod 644 $(LIBDIR)/$(LIBDATA)/*
+@@ -450,3 +450,6 @@ clean:	
  	-rm -f lout prg2lout *.o
  
  restart:	clean uninstall
