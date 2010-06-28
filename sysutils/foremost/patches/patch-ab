@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2010/06/28 10:18:58 joerg Exp $
 
 --- Makefile.orig	2007-01-26 15:10:20.000000000 +0100
 +++ Makefile
@@ -12,10 +12,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
  # You shouldn't need to change anything below this line
  #---------------------------------------------------------------------
 @@ -27,6 +27,11 @@ RAW_FLAGS += -DVERSION=\"$(VERSION)\"
- BIN = $(PREFIX)/bin
- MAN = $(PREFIX)/$(PKGMANDIR)/man1
+ BIN = ${DESTDIR}$(PREFIX)/bin
+ MAN = ${DESTDIR}$(PREFIX)/$(PKGMANDIR)/man1
  CONF= $(PKG_SYSCONFDIR)
-+SAMPLES = $(PREFIX)/share/examples/foremost
++SAMPLES = ${DESTDIR}$(PREFIX)/share/examples/foremost
 +
 +# Tell it to config.c
 +RAW_FLAGS += -DCONFDIR=\"$(CONF)\"
@@ -32,10 +32,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
 -macinstall: MAN = /usr/share/man/man1/
 -macinstall: CONF = /usr/local/etc/
 +	install -m 444 foremost.conf $(SAMPLES)
-+macinstall: BIN = $(PREFIX)/bin/
-+macinstall: MAN = $(PREFIX)/$(PKGMANDIR)/man1/
++macinstall: BIN = ${DESTDIR}$(PREFIX)/bin/
++macinstall: MAN = ${DESTDIR}$(PREFIX)/$(PKGMANDIR)/man1/
 +macinstall: CONF = $(PREFIX)/etc/
-+macinstall: SAMPLES = $(PREFIX)/share/examples/foremost
++macinstall: SAMPLES = ${DESTDIR}$(PREFIX)/share/examples/foremost
  macinstall: mac install
  
  
@@ -45,8 +45,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
  
 -macuninstall: BIN = /usr/bin
 -macuninstall: MAN = /usr/share/man/man1
-+macuninstall: BIN = $(PREFIX)/bin
-+macuninstall: MAN = $(PREFIX)/$(PKGMANDIR)/man1
++macuninstall: BIN =${DESTDIR} $(PREFIX)/bin
++macuninstall: MAN =${DESTDIR} $(PREFIX)/$(PKGMANDIR)/man1
  macuninstall: uninstall
  
  #---------------------------------------------------------------------

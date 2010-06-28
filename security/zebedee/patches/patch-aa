@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2006/03/08 23:06:40 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2010/06/28 10:13:01 joerg Exp $
 
 --- Makefile.orig	2005-09-05 22:59:53.000000000 -0700
 +++ Makefile
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.8 2006/03/08 23:06:40 minskim Exp $
  # Installation directories for the Linux/Solaris/*NIX World
  
 -ROOTDIR = /usr
-+ROOTDIR =$(LOCALBASE)
++ROOTDIR =$(DESTDIR)$(PREFIX)
  BINDIR = $(ROOTDIR)/bin
 -ZBDDIR = $(ROOTDIR)/lib/zebedee
 +ZBDDIR = $(ROOTDIR)/share/doc/zebedee
