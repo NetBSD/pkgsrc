@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2009/06/03 06:58:55 adam Exp $
+$NetBSD: patch-aa,v 1.6 2010/06/28 09:29:40 joerg Exp $
 
---- misc/Makefile.in.orig	2009-02-23 22:23:35.000000000 +0100
+--- misc/Makefile.in.orig	2009-02-23 21:23:35.000000000 +0000
 +++ misc/Makefile.in
 @@ -41,7 +41,7 @@ DEFS=   	@DEFS@
  OPT=		@OPT@
@@ -11,7 +11,17 @@ $NetBSD: patch-aa,v 1.5 2009/06/03 06:58:55 adam Exp $
  ICONDIR=	$(prefix)/icons
  SCRIPTSDIR=	$(prefix)/scripts
  
-@@ -99,6 +99,7 @@ install-packages:
+@@ -91,14 +91,15 @@ install-other:
+ 	$(INSTALL) -m $(FILEMODE) sitelist.cfg $(DESTDIR)$(DATADIR)
+ 
+ install-packages:
+-	if [ -z "$(EMAILPKG)" -a -d $(PYTHONLIBDIR)/email ] ; \
++	if [ -z "$(DESTDIR)$(EMAILPKG)" -a -d $(DESTDIR)$(PYTHONLIBDIR)/email ] ; \
+ 	then \
+-	    rm -rf $(PYTHONLIBDIR)/email* ; \
++	    rm -rf $(DESTDIR)$(PYTHONLIBDIR)/email* ; \
+ 	fi
+ 	for p in $(PACKAGES); \
  	do \
  	    gunzip -c $(srcdir)/$$p.tar.gz | (cd $(PKGDIR) ; tar xf -); \
  	    (cd $(PKGDIR)/$$p ; umask 02 ; PYTHONPATH=$(PYTHONLIBDIR) $(PYTHON) $(SETUPCMD)); \
