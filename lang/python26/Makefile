@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2010/02/11 21:21:49 tnn Exp $
+# $NetBSD: Makefile,v 1.21.2.1 2010/06/29 18:38:15 spz Exp $
 
 DISTNAME=	Python-2.6.4
 PKGNAME=	${DISTNAME:S/Python/python26/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.6.4/
 EXTRACT_SUFX=	.tar.bz2
