@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2315 2010/06/28 22:31:49 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2316 2010/06/29 07:31:28 manu Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3071,3 +3071,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/gtkmm to 2.20.3nb2 [wiz 2010-06-28]
 	Updated sysutils/fabric to 0.9.1 [gls 2010-06-28]
 	Updated security/py-openid to 2.2.5 [roy 2010-06-28]
+	Added security/pam-p11-0.1.5 [manu 2010-06-29]
