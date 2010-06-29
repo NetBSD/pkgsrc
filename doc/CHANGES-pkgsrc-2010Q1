@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.44 2010/06/28 18:32:44 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.45 2010/06/29 18:40:05 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -182,3 +182,5 @@ Pullup ticket #3150 - requested by taca
 net/samba: security patch
 Pullup ticket #3151 - requested by spz
 lang/perl5: security patch
+Pullup ticket #3152 - requested by tron
+lang/python26: security patch
