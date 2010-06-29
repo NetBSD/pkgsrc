@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/07 17:06:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/06/29 18:52:13 joerg Exp $
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h.html
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h__dep__incl.map
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h__dep__incl.md5
@@ -699,9 +699,6 @@ share/doc/usrp-${PKGVERSION}/html/classxcvr2450__coll__graph.map
 share/doc/usrp-${PKGVERSION}/html/classxcvr2450__coll__graph.md5
 share/doc/usrp-${PKGVERSION}/html/classxcvr2450__coll__graph.png
 share/doc/usrp-${PKGVERSION}/html/darwin__libusb_8h.html
-share/doc/usrp-${PKGVERSION}/html/darwin__libusb_8h__dep__incl.map
-share/doc/usrp-${PKGVERSION}/html/darwin__libusb_8h__dep__incl.md5
-share/doc/usrp-${PKGVERSION}/html/darwin__libusb_8h__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/darwin__libusb_8h__incl.map
 share/doc/usrp-${PKGVERSION}/html/darwin__libusb_8h__incl.md5
 share/doc/usrp-${PKGVERSION}/html/darwin__libusb_8h__incl.png
@@ -917,6 +914,9 @@ share/doc/usrp-${PKGVERSION}/html/fusb_8h__dep__incl.md5
 share/doc/usrp-${PKGVERSION}/html/fusb_8h__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/fusb_8h_source.html
 share/doc/usrp-${PKGVERSION}/html/fusb__darwin_8cc.html
+share/doc/usrp-${PKGVERSION}/html/fusb__darwin_8cc__dep__incl.map
+share/doc/usrp-${PKGVERSION}/html/fusb__darwin_8cc__dep__incl.md5
+share/doc/usrp-${PKGVERSION}/html/fusb__darwin_8cc__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/fusb__darwin_8cc__incl.map
 share/doc/usrp-${PKGVERSION}/html/fusb__darwin_8cc__incl.md5
 share/doc/usrp-${PKGVERSION}/html/fusb__darwin_8cc__incl.png
@@ -1119,9 +1119,6 @@ share/doc/usrp-${PKGVERSION}/html/inherit__graph__9.png
 share/doc/usrp-${PKGVERSION}/html/inherits.html
 share/doc/usrp-${PKGVERSION}/html/mainpage_8dox.html
 share/doc/usrp-${PKGVERSION}/html/md5_8h.html
-share/doc/usrp-${PKGVERSION}/html/md5_8h__dep__incl.map
-share/doc/usrp-${PKGVERSION}/html/md5_8h__dep__incl.md5
-share/doc/usrp-${PKGVERSION}/html/md5_8h__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/md5_8h__incl.map
 share/doc/usrp-${PKGVERSION}/html/md5_8h__incl.md5
 share/doc/usrp-${PKGVERSION}/html/md5_8h__incl.png
@@ -1137,9 +1134,6 @@ share/doc/usrp-${PKGVERSION}/html/mld__threads_8h_source.html
 share/doc/usrp-${PKGVERSION}/html/rate__to__regval_8h.html
 share/doc/usrp-${PKGVERSION}/html/rate__to__regval_8h_source.html
 share/doc/usrp-${PKGVERSION}/html/std__paths_8h.html
-share/doc/usrp-${PKGVERSION}/html/std__paths_8h__dep__incl.map
-share/doc/usrp-${PKGVERSION}/html/std__paths_8h__dep__incl.md5
-share/doc/usrp-${PKGVERSION}/html/std__paths_8h__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/std__paths_8h_source.html
 share/doc/usrp-${PKGVERSION}/html/structdarwin__dev__handle-members.html
 share/doc/usrp-${PKGVERSION}/html/structdarwin__dev__handle.html
@@ -1167,6 +1161,9 @@ share/doc/usrp-${PKGVERSION}/html/tab_l.gif
 share/doc/usrp-${PKGVERSION}/html/tab_r.gif
 share/doc/usrp-${PKGVERSION}/html/tabs.css
 share/doc/usrp-${PKGVERSION}/html/test__usrp__standard__rx_8cc.html
+share/doc/usrp-${PKGVERSION}/html/test__usrp__standard__rx_8cc__dep__incl.map
+share/doc/usrp-${PKGVERSION}/html/test__usrp__standard__rx_8cc__dep__incl.md5
+share/doc/usrp-${PKGVERSION}/html/test__usrp__standard__rx_8cc__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/test__usrp__standard__rx_8cc__incl.map
 share/doc/usrp-${PKGVERSION}/html/test__usrp__standard__rx_8cc__incl.md5
 share/doc/usrp-${PKGVERSION}/html/test__usrp__standard__rx_8cc__incl.png
@@ -1180,6 +1177,9 @@ share/doc/usrp-${PKGVERSION}/html/time__stuff_8h__dep__incl.md5
 share/doc/usrp-${PKGVERSION}/html/time__stuff_8h__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/time__stuff_8h_source.html
 share/doc/usrp-${PKGVERSION}/html/usrp__basic_8cc.html
+share/doc/usrp-${PKGVERSION}/html/usrp__basic_8cc__dep__incl.map
+share/doc/usrp-${PKGVERSION}/html/usrp__basic_8cc__dep__incl.md5
+share/doc/usrp-${PKGVERSION}/html/usrp__basic_8cc__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/usrp__basic_8cc__incl.map
 share/doc/usrp-${PKGVERSION}/html/usrp__basic_8cc__incl.md5
 share/doc/usrp-${PKGVERSION}/html/usrp__basic_8cc__incl.png
@@ -1201,13 +1201,13 @@ share/doc/usrp-${PKGVERSION}/html/usrp__cal__dc__offset_8cc__incl.map
 share/doc/usrp-${PKGVERSION}/html/usrp__cal__dc__offset_8cc__incl.md5
 share/doc/usrp-${PKGVERSION}/html/usrp__cal__dc__offset_8cc__incl.png
 share/doc/usrp-${PKGVERSION}/html/usrp__config_8cc.html
+share/doc/usrp-${PKGVERSION}/html/usrp__config_8cc__dep__incl.map
+share/doc/usrp-${PKGVERSION}/html/usrp__config_8cc__dep__incl.md5
+share/doc/usrp-${PKGVERSION}/html/usrp__config_8cc__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/usrp__config_8cc__incl.map
 share/doc/usrp-${PKGVERSION}/html/usrp__config_8cc__incl.md5
 share/doc/usrp-${PKGVERSION}/html/usrp__config_8cc__incl.png
 share/doc/usrp-${PKGVERSION}/html/usrp__config_8h.html
-share/doc/usrp-${PKGVERSION}/html/usrp__config_8h__dep__incl.map
-share/doc/usrp-${PKGVERSION}/html/usrp__config_8h__dep__incl.md5
-share/doc/usrp-${PKGVERSION}/html/usrp__config_8h__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/usrp__config_8h_source.html
 share/doc/usrp-${PKGVERSION}/html/usrp__dbid_8cc.html
 share/doc/usrp-${PKGVERSION}/html/usrp__dbid_8cc__incl.map
@@ -1231,6 +1231,9 @@ share/doc/usrp-${PKGVERSION}/html/usrp__local__sighandler_8h__incl.md5
 share/doc/usrp-${PKGVERSION}/html/usrp__local__sighandler_8h__incl.png
 share/doc/usrp-${PKGVERSION}/html/usrp__local__sighandler_8h_source.html
 share/doc/usrp-${PKGVERSION}/html/usrp__prims_8cc.html
+share/doc/usrp-${PKGVERSION}/html/usrp__prims_8cc__dep__incl.map
+share/doc/usrp-${PKGVERSION}/html/usrp__prims_8cc__dep__incl.md5
+share/doc/usrp-${PKGVERSION}/html/usrp__prims_8cc__dep__incl.png
 share/doc/usrp-${PKGVERSION}/html/usrp__prims_8cc__incl.map
 share/doc/usrp-${PKGVERSION}/html/usrp__prims_8cc__incl.md5
 share/doc/usrp-${PKGVERSION}/html/usrp__prims_8cc__incl.png
