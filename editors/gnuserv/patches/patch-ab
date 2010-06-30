@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2010/06/30 12:41:10 markd Exp $
+
+DESTDIR support
+
+--- Makefile.in.orig	2004-10-20 01:20:54.000000000 +0000
++++ Makefile.in
+@@ -42,8 +42,8 @@ CFLAGS = @CFLAGS@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ 
+-prefix = @prefix@
++prefix = $(DESTDIR)@prefix@
+ exec_prefix = @exec_prefix@
+ 
+ # The directory for installing executable programs that users can run.
+ bindir = $(exec_prefix)/bin

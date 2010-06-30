@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/14 23:42:10 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/06/30 12:41:10 markd Exp $
 
 DISTNAME=	gnuserv-3.12.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,14 +12,17 @@ COMMENT=	Improved version of emacsserver for GNU Emacs
 
 CONFLICTS+=	xemacs-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 
 .include "../../x11/libXau/buildlink3.mk"
 
 EL_FILES=	devices.el gnuserv.el gnuserv-compat.el
 post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}
 	cd ${WRKSRC} && for FILE in ${EL_FILES}; do				\
-		${INSTALL_DATA} $${FILE} $${FILE}c ${EMACS_LISPPREFIX};		\
+		${INSTALL_DATA} $${FILE} $${FILE}c ${DESTDIR}${EMACS_LISPPREFIX};		\
 	done
 
 .if ${X11_TYPE} == "modular"
