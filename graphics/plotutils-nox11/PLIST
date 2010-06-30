@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/06/30 10:24:37 asau Exp $
 bin/double
 bin/graph
+bin/hersheydemo
 bin/ode
 bin/pic2plot
 bin/plot
@@ -20,13 +21,11 @@ man/man1/spline.1
 man/man1/tek2plot.1
 share/libplot/README
 share/libplot/colors.txt
-share/libplot/demo-page
-share/libplot/h-demo.c
-share/libplot/h-fonts.doc
-share/libplot/h-glyphs.doc
+share/libplot/h-fonts.txt
+share/libplot/h-glyphs.txt
 share/libplot/hershey.bib
-share/libplot/kana.doc
-share/libplot/kanji.doc
+share/libplot/kana.txt
+share/libplot/kanji.txt
 share/ode/README
 share/ode/atwoods.ode
 share/ode/bead.ode
