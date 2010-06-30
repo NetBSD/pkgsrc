@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2320 2010/06/30 02:08:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2321 2010/06/30 12:45:10 tron Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3074,3 +3074,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/python26 to 2.6.5nb1 [tron 2010-06-29]
 	Updated mail/getmail to 4.19.0 [schmonz 2010-06-29]
 	Updated graphics/rabbit to 0.6.4nb2 [obache 2010-06-30]
+	Updated print/ghostscript to 8.71nb4 [tron 2010-06-30]
