@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2010/06/30 04:58:30 spz Exp $
+
+--- programs/irr_notify/notify_msgs.c.orig	2009-04-20 18:51:16.000000000 +0000
++++ programs/irr_notify/notify_msgs.c
+@@ -161,7 +161,7 @@ void maint_request (trace_t *tr, FILE *f
+ 
+ #ifdef HAVE_SENDMAIL
+     sprintf (email, "%s < %s", SENDMAIL_CMD, buf);
+-#elif HAVE_MAIL
++#elif defined HAVE_MAIL
+     sprintf (email, "%s \"%s\" < %s", MAIL_CMD, to_addr, buf);
+ #else
+     trace (NORM, tr, "No mail or sendmail found\n");
+@@ -627,7 +627,7 @@ void send_email (trace_t *tr,  char *add
+ /*    chmod (msg_hdl[ndx[i]].fname, S_IRWXO|S_IRGRP|S_IRWXU); */
+ #ifdef HAVE_SENDMAIL
+       sprintf (buf, "%s < %s", SENDMAIL_CMD, msg_hdl[ndx[i]].fname);
+-#elif HAVE_MAIL
++#elif defined HAVE_MAIL
+       sprintf (buf, "%s \"%s\" < %s", MAIL_CMD, p, msg_hdl[ndx[i]].fname);
+ #else
+       trace (NORM, tr, "No mail or sendmail found\n");

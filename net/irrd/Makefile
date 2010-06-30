@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2010/02/23 20:37:05 spz Exp $
+# $NetBSD: Makefile,v 1.43 2010/06/30 04:58:30 spz Exp $
 
 DISTNAME=		irrd2.3.9
 PKGNAME=		irrd-2.3.9
@@ -20,6 +20,8 @@ DEPENDS+=		wget-[0-9]*:../../net/wget
 USE_TOOLS+=		automake autoconf flex perl:run yacc
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
+
+BUILD_DEFS+=		VARBASE
 
 PKG_SYSCONFSUBDIR=	irrd
 EGDIR=			${PREFIX}/share/examples/irrd

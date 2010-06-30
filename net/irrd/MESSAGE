@@ -1,4 +1,6 @@
 ===========================================================================
+$NetBSD: MESSAGE,v 1.2 2010/06/30 04:58:30 spz Exp $
+===========================================================================
 
 The useful user documentation is ${PREFIX}/share/doc/irrd/irrd-user.pdf
                               or ${PREFIX}/share/doc/irrd/irrd-user.sgml
