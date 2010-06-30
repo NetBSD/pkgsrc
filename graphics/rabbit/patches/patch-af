@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1 2010/06/30 02:07:14 obache Exp $
+
+enable keybord interface on Clutter render.
+http://www.cozmixng.org/retro/projects/rabbit/changesets/1380
+
+--- lib/rabbit/renderer/display/clutter-embed.rb.orig	2010-01-29 14:09:05.000000000 +0000
++++ lib/rabbit/renderer/display/clutter-embed.rb
+@@ -195,9 +195,11 @@ module Rabbit
+           add_widget_to_window(@window)
+           widget.show
+           attach_menu(@window)
++          attach_key(@window)
+         end
+ 
+         def detach
++          detach_key(@window)
+           detach_menu(@window)
+           widget.hide
+           unless @window.destroyed?
