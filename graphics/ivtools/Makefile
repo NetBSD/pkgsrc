@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/04/05 22:52:23 markd Exp $
+# $NetBSD: Makefile,v 1.24 2010/07/01 22:21:29 joerg Exp $
 
 DISTNAME=	ivtools-1.2.8
 CATEGORIES=	graphics
@@ -11,10 +11,11 @@ COMMENT=	Drawing editors for PostScript, TeX, and web graphics
 
 CONFLICTS+=	dclock-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_PLATFORM=	${LP64PLATFORMS}
+
 DEPENDS+=	pstoedit>=3.0:../../graphics/pstoedit
 DEPENDS+=	wget>=1.0:../../net/wget
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	imake bash:run
