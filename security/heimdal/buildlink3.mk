@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2010/01/17 12:02:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2010/07/01 18:14:19 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -19,7 +19,11 @@ pkgbase := heimdal
 .  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 .include "../../security/openssl/buildlink3.mk"
+
+.include "../../security/heimdal/builtin.mk"
+.if !empty(USE_BUILTIN.heimdal:M[nN][oO])
 .include "../../mk/bdb.buildlink3.mk"
+.endif
 .endif # HEIMDAL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-heimdal
