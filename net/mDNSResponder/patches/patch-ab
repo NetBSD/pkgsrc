@@ -1,8 +1,26 @@
-$NetBSD: patch-ab,v 1.5 2006/07/11 14:39:29 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2010/07/01 15:05:06 tez Exp $
+add patch from http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/147007
 
---- mDNSPosix/mDNSPosix.c.orig	2006-02-20 22:40:36.000000000 +0100
-+++ mDNSPosix/mDNSPosix.c
-@@ -852,7 +852,13 @@ mDNSlocal int SetupSocket(struct sockadd
+--- mDNSPosix/mDNSPosix.c.orig	2006-02-20 15:40:36.000000000 -0600
++++ mDNSPosix/mDNSPosix.c	2010-06-30 17:57:01.575378400 -0500
+@@ -633,7 +633,7 @@
+ 	{
+ 	char line[256];
+ 	char nameserver[16];
+-	char keyword[10];
++	char keyword[11];
+ 	int  numOfServers = 0;
+ 	FILE *fp = fopen(filePath, "r");
+ 	if (fp == NULL) return -1;
+@@ -652,6 +652,7 @@
+ 			numOfServers++;
+ 			}
+ 		}  
++	fclose(fp);
+ 	return (numOfServers > 0) ? 0 : -1;
+ 	}
+ 
+@@ -852,7 +853,13 @@
  		{
  		struct ipv6_mreq imr6;
  		struct sockaddr_in6 bindAddr6;
@@ -17,7 +35,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/11 14:39:29 drochner Exp $
  		if (err == 0)
  			{
  				err = setsockopt(*sktPtr, IPPROTO_IPV6, IPV6_PKTINFO, &kOn, sizeof(kOn));
-@@ -861,7 +867,13 @@ mDNSlocal int SetupSocket(struct sockadd
+@@ -861,7 +868,13 @@
  	#else
  		#warning This platform has no way to get the destination interface information for IPv6 -- will only work for single-homed hosts
  	#endif
@@ -32,7 +50,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/11 14:39:29 drochner Exp $
  		if (err == 0)
  			{
  				err = setsockopt(*sktPtr, IPPROTO_IPV6, IPV6_HOPLIMIT, &kOn, sizeof(kOn));
-@@ -1339,6 +1351,36 @@ mDNSlocal mDNSBool mDNSPlatformInit_CanR
+@@ -1339,6 +1352,36 @@
  	return(err == 0);
  	}
  
@@ -69,7 +87,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/11 14:39:29 drochner Exp $
  // mDNS core calls this routine to initialise the platform-specific data.
  mDNSexport mStatus mDNSPlatformInit(mDNS *const m)
  	{
-@@ -1360,6 +1402,10 @@ mDNSexport mStatus mDNSPlatformInit(mDNS
+@@ -1360,6 +1403,10 @@
  	GetUserSpecifiedRFC1034ComputerName(&m->hostlabel);
  	if (m->hostlabel.c[0] == 0) MakeDomainLabelFromLiteralString(&m->hostlabel, "Computer");
  
