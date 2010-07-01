@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2323 2010/07/01 18:53:03 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2324 2010/07/01 21:31:41 ghen Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3078,3 +3078,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/getmail to 4.20.0 [schmonz 2010-06-30]
 	Updated www/w3m to 0.5.2nb5 [tron 2010-07-01]
 	Updated www/w3m-img to 0.5.2nb5 [tron 2010-07-01]
+	Updated net/mydns-pgsql to 1.1.0nb9 [ghen 2010-07-01]
+	Updated net/mydns-mysql to 1.1.0nb4 [ghen 2010-07-01]
