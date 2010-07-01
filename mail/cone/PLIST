@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/18 13:24:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/01 16:22:26 joerg Exp $
 bin/cone
 bin/leaf
 bin/mailtool
@@ -64,6 +64,11 @@ share/cone/cone06newaccount.html
 share/cone/cone07remoteconfig.html
 share/cone/cone08gpg.html
 share/cone/cone09masterpassword.html
+share/cone/cone10certificates.html
+share/cone/cone11encryption.html
+share/cone/cone12filters.html
+share/cone/cone13addressbook.html
+share/cone/cone14ldapaddressbook.html
 share/cone/conn.html
 share/cone/cppnamespace.html
 share/cone/emailaddress.html
