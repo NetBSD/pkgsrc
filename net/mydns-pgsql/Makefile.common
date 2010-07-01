@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2010/02/19 20:30:21 joerg Exp $
+# $NetBSD: Makefile.common,v 1.16 2010/07/01 16:07:05 joerg Exp $
 
 DISTNAME=		mydns-1.1.0
 CATEGORIES=		net
@@ -35,6 +35,8 @@ PKG_GROUPS=		${MYDNS_GROUP}
 PKG_USERS=		${MYDNS_USER}:${MYDNS_GROUP}
 
 INSTALLATION_DIRS+=	${EGDIR}
+
+USERGROUP_PHASE+=	pre-install
 
 post-install:
 	${WRKSRC}/src/mydns/mydns --dump-config > ${DESTDIR}${EGDIR}/mydns.conf
