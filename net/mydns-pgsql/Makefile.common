@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2010/07/01 16:07:05 joerg Exp $
+# $NetBSD: Makefile.common,v 1.17 2010/07/01 21:29:33 ghen Exp $
 
 DISTNAME=		mydns-1.1.0
 CATEGORIES=		net
@@ -40,7 +40,6 @@ USERGROUP_PHASE+=	pre-install
 
 post-install:
 	${WRKSRC}/src/mydns/mydns --dump-config > ${DESTDIR}${EGDIR}/mydns.conf
-	${CHMOD} 0600 ${DESTDIR}${EGDIR}/mydns.conf
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
