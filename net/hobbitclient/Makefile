@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/31 22:00:30 he Exp $
+# $NetBSD: Makefile,v 1.11 2010/07/01 22:18:29 joerg Exp $
 #
 
 DISTNAME=	hobbit-4.2.0
@@ -46,6 +46,7 @@ PKG_HOME.${BBUSER}=	${BBTOPDIR}
 
 PKG_GROUPS_VARS+=	BBGROUP
 PKG_USERS_VARS+=	BBUSER
+USERGROUP_PHASE=	pre-install
 
 CONFIGURE_ARGS+="--client"
 
