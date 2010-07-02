@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.45 2010/06/29 18:40:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2010Q1,v 1.1.2.46 2010/07/02 09:23:00 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-20101Q1 branch:
@@ -184,3 +184,6 @@ Pullup ticket #3151 - requested by spz
 lang/perl5: security patch
 Pullup ticket #3152 - requested by tron
 lang/python26: security patch
+Pullup ticket #3153 - requested by tron
+www/w3m: security patch
+www/w3m-img: security patch
