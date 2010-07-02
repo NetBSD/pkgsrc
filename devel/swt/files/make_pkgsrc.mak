@@ -1,4 +1,4 @@
-# $NetBSD: make_pkgsrc.mak,v 1.1.1.1 2010/02/03 13:51:29 jmcneill Exp $
+# $NetBSD: make_pkgsrc.mak,v 1.2 2010/07/02 20:41:39 joerg Exp $
 #*******************************************************************************
 # Copyright (c) 2000, 2009 IBM Corporation and others.
 # All rights reserved. This program and the accompanying materials
@@ -51,7 +51,7 @@ GTKLIBS = `pkg-config --libs-only-L gtk+-2.0 gthread-2.0` `pkg-config --libs-onl
 
 CDE_LIBS = -L$(CDE_HOME)/lib -R$(CDE_HOME)/lib -lXt -lX11 -lDtSvc
 
-AWT_LIBS = -L$(AWT_LIB_PATH) -ljawt -shared
+AWT_LIBS = -L$(JAVA_HOME)/jre/lib/$(LOWER_ARCH) -R$(JAVA_HOME)/jre/lib/$(LOWER_ARCH) -ljawt -shared
 
 ATKCFLAGS = `pkg-config --cflags atk gtk+-2.0`
 ATKLIBS = `pkg-config --libs-only-L atk gtk+-2.0` `pkg-config --libs-only-other atk gtk+-2.0` -latk-1.0 -lgtk-x11-2.0
