@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2325 2010/07/02 15:15:17 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.2326 2010/07/02 21:49:39 ghen Exp $
 
 PKGSRC IS CURRENTLY FROZEN FOR NEW FUNCTIONALITY - PLEASE DO NOT ADD
 ANY NEW PACKAGES, AND PLEASE DO NOT MAKE INFRASTRUCTURE CHANGES, UNTIL
@@ -3081,3 +3081,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/mydns-pgsql to 1.1.0nb9 [ghen 2010-07-01]
 	Updated net/mydns-mysql to 1.1.0nb4 [ghen 2010-07-01]
 	Updated devel/atf to 0.10 [jmmv 2010-07-02]
+	Updated x11/dmenu to 4.1.1 [ghen 2010-07-02]
