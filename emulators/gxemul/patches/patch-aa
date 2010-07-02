@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.9 2010/07/02 14:41:50 joerg Exp $
+
+--- src/main/fileloaders/FileLoader_aout.cc.orig	2010-07-02 14:06:41.000000000 +0000
++++ src/main/fileloaders/FileLoader_aout.cc
+@@ -265,7 +265,7 @@ bool FileLoader_aout::LoadIntoComponent(
+ 
+ 		off_t oldpos = file.tellg();
+ 		file.seekg(0, std::ios_base::end);
+-		int strings_len = file.tellg() - oldpos;
++		int strings_len = (off_t)file.tellg() - oldpos;
+ 		file.seekg(oldpos, std::ios_base::beg);
+ 
+ 		messages.flags(std::ios::dec);
