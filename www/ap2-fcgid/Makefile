@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/15 11:38:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/02 20:50:34 joerg Exp $
 
 DISTNAME=	mod_fcgid-2.3.5
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -16,13 +16,12 @@ PKG_APACHE_ACCEPTED=	apache2 apache22
 APACHE_MODULE=		YES
 USE_LIBTOOL=		YES
 
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	./configure.apxs
 CONFIGURE_ENV+=		APXS=${APXS:Q}
 
 MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 MAKE_FLAGS+=		INCLUDES="-I${BUILDLINK_PREFIX.apache}/include/httpd"
-
-do-configure:
-	cd ${WRKSRC} && ./configure.apxs
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
