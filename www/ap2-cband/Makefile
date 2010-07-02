@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/12/03 17:12:42 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/02 17:07:31 joerg Exp $
 #
 
 DISTNAME=		mod-cband-0.9.7.5
+PKGNAME=		${APACHE_PKG_PREFIX}-cband-${DISTNAME:S/mod-cband-//}
 CATEGORIES=		www
 MASTER_SITES=		http://cband.linux.pl/download/
 EXTRACT_SUFX=		.tgz
@@ -24,6 +25,8 @@ HAS_CONFIGURE=		yes
 BUILD_TARGET=
 
 INSTALLATION_DIRS+=	lib/httpd share/doc/${APACHE_MODULE_NAME}
+
+CONFIGURE_ENV+=		APXS=${APXS}
 
 do-install:
 	cd ${WRKSRC}/src && 							\
