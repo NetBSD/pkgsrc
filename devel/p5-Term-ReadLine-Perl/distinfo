@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/02 23:06:45 seb Exp $
+
+SHA1 (Term-ReadLine-Perl-1.0303.tar.gz) = 7326a70b5ce676f6e19d1ddb76839413fbe5f6bd
+RMD160 (Term-ReadLine-Perl-1.0303.tar.gz) = 569715e35793831915b236f191ee114a1aa4affa
+Size (Term-ReadLine-Perl-1.0303.tar.gz) = 48710 bytes
