@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/04/30 09:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/02 21:48:49 ghen Exp $
 #
 
-DISTNAME=	dmenu-4.0
+DISTNAME=	dmenu-4.1.1
 CATEGORIES=	x11
-MASTER_SITES=	http://code.suckless.org/dl/tools/
+MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://tools.suckless.org/dmenu
