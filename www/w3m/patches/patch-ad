@@ -1,0 +1,58 @@
+$NetBSD: patch-ad,v 1.8.2.2 2010/07/02 09:22:04 spz Exp $
+
+Fix for CVE-2010-2074 taken from here:
+
+http://www.openwall.com/lists/oss-security/2010/06/14/4
+
+--- istream.c.orig	2007-05-23 16:06:05.000000000 +0100
++++ istream.c	2010-07-01 19:31:00.000000000 +0100
+@@ -447,8 +447,17 @@
+ 
+ 		    if (!seen_dnsname)
+ 			seen_dnsname = Strnew();
++		    /* replace \0 to make full string visible to user */
++		    if (sl != strlen(sn)) {
++			int i;
++			for (i = 0; i < sl; ++i) {
++			    if (!sn[i])
++				sn[i] = '!';
++			}
++		    }
+ 		    Strcat_m_charp(seen_dnsname, sn, " ", NULL);
+-		    if (ssl_match_cert_ident(sn, sl, hostname))
++		    if (sl == strlen(sn) /* catch \0 in SAN */
++			&& ssl_match_cert_ident(sn, sl, hostname))
+ 			break;
+ 		}
+ 	    }
+@@ -466,16 +475,27 @@
+     if (match_ident == FALSE && ret == NULL) {
+ 	X509_NAME *xn;
+ 	char buf[2048];
++	int slen;
+ 
+ 	xn = X509_get_subject_name(x);
+ 
+-	if (X509_NAME_get_text_by_NID(xn, NID_commonName,
+-				      buf, sizeof(buf)) == -1)
++	slen = X509_NAME_get_text_by_NID(xn, NID_commonName, buf, sizeof(buf));
++	if ( slen == -1)
+ 	    /* FIXME: gettextize? */
+ 	    ret = Strnew_charp("Unable to get common name from peer cert");
+-	else if (!ssl_match_cert_ident(buf, strlen(buf), hostname))
++	else if (slen != strlen(buf)
++		|| !ssl_match_cert_ident(buf, strlen(buf), hostname)) {
++	    /* replace \0 to make full string visible to user */
++	    if (slen != strlen(buf)) {
++		int i;
++		for (i = 0; i < slen; ++i) {
++		    if (!buf[i])
++			buf[i] = '!';
++		}
++	    }
+ 	    /* FIXME: gettextize? */
+ 	    ret = Sprintf("Bad cert ident %s from %s", buf, hostname);
++	}
+ 	else
+ 	    match_ident = TRUE;
+     }
