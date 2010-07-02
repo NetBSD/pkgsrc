@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/05/13 14:48:53 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/07/02 14:41:50 joerg Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -77,6 +77,8 @@ share/doc/gxemul/20070616-netbsd-pmppc-diskless.png
 share/doc/gxemul/20070616-netbsd-pmppc-diskless_small.png
 share/doc/gxemul/20081103-openbsd-landisk-small.png
 share/doc/gxemul/20081103-openbsd-landisk.png
+share/doc/gxemul/20100205-netbsd-playstation2-small.png
+share/doc/gxemul/20100205-netbsd-playstation2.png
 share/doc/gxemul/Doxyfile
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
@@ -128,6 +130,7 @@ share/doc/gxemul/experiments.html
 share/doc/gxemul/framework.html
 share/doc/gxemul/generate_machine_doc.sh
 share/doc/gxemul/guestoses.html
+share/doc/gxemul/head.html
 share/doc/gxemul/index.html
 share/doc/gxemul/intro.html
 share/doc/gxemul/machine_template.html
@@ -140,6 +143,7 @@ share/doc/gxemul/machines/machine_testmips-thumb.png
 share/doc/gxemul/machines/machine_testmips.html.SKEL
 share/doc/gxemul/machines/machine_testmips.png
 share/doc/gxemul/misc.html
+share/doc/gxemul/model.png
 share/doc/gxemul/networking.html
 share/doc/gxemul/openbsd-pmax-20040710.png
 share/doc/gxemul/openbsd-pmax-20040710_small.png
