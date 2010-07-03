@@ -1,0 +1,5 @@
+The Perl 5 module App::cpanoutdated provides the script cpan-outdated
+which prints a list of outdated CPAN modules in your environment.
+It has the same functionality as 'CPAN::Shell->r', but cpan-outdated
+is faster and uses less memory. It can be used with the cpanm
+command from the App::cpanminus module.
