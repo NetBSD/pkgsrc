@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2343 2010/07/03 18:35:08 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2344 2010/07/03 20:54:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3098,3 +3098,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime to 0.5900 [seb 2010-07-03]
 	Updated devel/p5-Moose to 1.08 [seb 2010-07-03]
 	Updated www/p5-Plack to 0.9940 [seb 2010-07-03]
+	Added www/p5-HTTP-Parser version 0.05 [seb 2010-07-03]
