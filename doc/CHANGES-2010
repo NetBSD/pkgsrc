@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2332 2010/07/03 04:51:15 manu Exp $
+$NetBSD: CHANGES-2010,v 1.2333 2010/07/03 05:01:38 manu Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3084,3 +3084,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28 to 2.8.4 [taca 2010-07-03]
 	Added security/libassuan2 version 2.0.0 [manu 2010-07-03]
 	Added security/pam-p11 version 0.1.50 [manu 2010-07-03]
+	Added security/gnupg-pkcs11-scd version 0.7.0 [manu 2010-07-03]
