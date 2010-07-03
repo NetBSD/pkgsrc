@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/11 19:11:00 adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/03 07:25:57 adam Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -8,7 +8,7 @@ HOMEPAGE=	${R_HOMEPAGE_BASE}/genetics/
 COMMENT=	Package for choosing univariate class intervals for graphics
 
 R_PKGNAME=	classInt
-R_PKGVER=	0.1-13
+R_PKGVER=	0.1-14
 
 USE_LANGUAGES=	fortran
 
