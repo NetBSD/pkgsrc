@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2336 2010/07/03 06:40:25 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2337 2010/07/03 07:30:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3088,3 +3088,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Path-Dispatcher-Declarative version 0.01 [seb 2010-07-03]
 	Added devel/p5-App-cpanoutdated version 0.08 [seb 2010-07-03]
 	Added devel/p5-App-perlbrew version 0.07 [seb 2010-07-03]
+	Updated games/rocksndiamonds to 3.3.0.1 [adam 2010-07-03]
+	Updated math/R to 2.11.1 [adam 2010-07-03]
+	Updated math/R-classInt to 0.1.14 [adam 2010-07-03]
+	Updated math/R-e1071 to 1.5.24 [adam 2010-07-03]
