@@ -1,0 +1,4 @@
+The Perl 5 module HTTP::Parser is an HTTP request parser. It takes
+chunks of text as received and returns a 'hint' as to what is
+required, or returns the HTTP::Request when a complete request has
+been read. HTTP/1.1 chunking is supported.
