@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2009/12/15 13:39:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/07/03 12:34:32 seb Exp $
 
-DISTNAME=	YAML-Tiny-1.41
+DISTNAME=	YAML-Tiny-1.42
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	perl5 textproc
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AD/ADAMK/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=YAML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/YAML-Tiny/
