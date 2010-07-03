@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/03 04:59:19 manu Exp $
+bin/gnupg-pkcs11-scd
+share/doc/gnupg-pkcs11-scd/gnupg-pkcs11-scd.conf.example
+share/doc/gnupg-pkcs11-scd/README
+share/doc/gnupg-pkcs11-scd/COPYING
+man/man1/gnupg-pkcs11-scd.1
