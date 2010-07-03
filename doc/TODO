@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9433 2010/07/02 21:49:39 ghen Exp $
+$NetBSD: TODO,v 1.9434 2010/07/03 04:46:55 manu Exp $
 
 Suggested new packages
 ======================
@@ -874,7 +874,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXfont-1.4.2
 	o libXrender-0.9.6
 	o libXt-1.0.8
-	o libassuan-2.0.0
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.21
