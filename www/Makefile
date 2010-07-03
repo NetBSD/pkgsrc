@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.732 2010/07/01 07:19:04 jnemeth Exp $
+# $NetBSD: Makefile,v 1.733 2010/07/03 20:53:50 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -353,6 +353,7 @@ SUBDIR+=	p5-HTTP-Cache-Transparent
 SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
+SUBDIR+=	p5-HTTP-Parser
 SUBDIR+=	p5-HTTP-Parser-XS
 SUBDIR+=	p5-HTTP-Proxy
 SUBDIR+=	p5-HTTP-Request-AsCGI
