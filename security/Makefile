@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2010/06/29 13:42:10 manu Exp $
+# $NetBSD: Makefile,v 1.387 2010/07/03 04:46:55 manu Exp $
 #
 
 COMMENT=	Security tools
@@ -99,6 +99,7 @@ SUBDIR+=	kstart
 SUBDIR+=	kth-krb4
 SUBDIR+=	lasso
 SUBDIR+=	libassuan
+SUBDIR+=	libassuan2
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libdes
