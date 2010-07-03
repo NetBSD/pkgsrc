@@ -1,0 +1,15 @@
+gnupg-pkcs11 is a project to implement a BSD-licensed smart-card
+daemon to enable the use of PKCS#11 tokens with GnuPG. The motivation
+behind this project originates in the following two threads:
+
+ * http://lists.gnupg.org/pipermail/gnupg-users/2006-February/027964.html
+ * http://lists.gnupg.org/pipermail/gnupg-devel/2004-November/021522.html
+ * http://lists.gnupg.org/pipermail/gnupg-users/2004-November/023673.html
+
+PKCS#11 is the de-facto standard for accessing cryptographic tokens,
+and thus we strongly disagree with WK's attitude towards it.
+
+The patch mentioned in the above threads is unmaintained, so we
+decided to implement PKCS#11 support "the right way". gnupg-pkcs11
+is a (hopefully) drop-in replacement for the smart-card daemon
+(scd) shipped with GnuPG.
