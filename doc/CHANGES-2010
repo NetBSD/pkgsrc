@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2339 2010/07/03 12:22:34 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2340 2010/07/03 12:34:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3094,3 +3094,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/R-e1071 to 1.5.24 [adam 2010-07-03]
 	Updated devel/p5-Package-Stash to 0.05 [seb 2010-07-03]
 	Updated devel/p5-Module-CoreList to 2.35 [seb 2010-07-03]
+	Updated textproc/p5-YAML-Tiny to 1.42 [seb 2010-07-03]
