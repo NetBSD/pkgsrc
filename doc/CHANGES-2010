@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2335 2010/07/03 06:21:28 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2336 2010/07/03 06:40:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3087,3 +3087,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added security/gnupg-pkcs11-scd version 0.7.0 [manu 2010-07-03]
 	Added devel/p5-Path-Dispatcher-Declarative version 0.01 [seb 2010-07-03]
 	Added devel/p5-App-cpanoutdated version 0.08 [seb 2010-07-03]
+	Added devel/p5-App-perlbrew version 0.07 [seb 2010-07-03]
