@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2329 2010/07/03 01:55:05 agc Exp $
+$NetBSD: CHANGES-2010,v 1.2330 2010/07/03 04:00:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3081,3 +3081,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/dmenu to 4.1.1 [ghen 2010-07-02]
 	Updated lang/sbcl to 1.0.40 [asau 2010-07-02]
 	Added devel/p5-Term-ReadLine-Perl version 1.0303 [seb 2010-07-02]
+	Updated www/typolight28 to 2.8.4 [taca 2010-07-03]
