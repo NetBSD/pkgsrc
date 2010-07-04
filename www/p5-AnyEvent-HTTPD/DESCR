@@ -1,0 +1,3 @@
+The Perl 5 module AnyEvent::HTTPD provides a simple HTTPD for serving
+simple web application interfaces. It's completly event based and
+independend from any event loop by using the AnyEvent module.
