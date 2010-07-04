@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/06/02 10:14:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/07/04 11:02:36 markd Exp $
 man/nl/man1/adddebug.1
 man/nl/man1/ark.1
 man/nl/man1/checkXML.1
@@ -8,6 +8,7 @@ man/nl/man1/kappfinder.1
 man/nl/man1/kate.1
 man/nl/man1/kbookmarkmerger.1
 man/nl/man1/kbruch.1
+man/nl/man1/kde4-config.1
 man/nl/man1/kdesu.1
 man/nl/man1/kfind.1
 man/nl/man1/kig.1
@@ -18,6 +19,7 @@ man/nl/man1/kmousetool.1
 man/nl/man1/kmouth.1
 man/nl/man1/kmplot.1
 man/nl/man1/kross.1
+man/nl/man1/ktouch.1
 man/nl/man1/plasmaengineexplorer.1
 man/nl/man1/po2xml.1
 man/nl/man1/preparetips.1
@@ -29,7 +31,11 @@ man/nl/man1/zonetab2pot.py.1
 man/nl/man6/amor.6
 man/nl/man6/khangman.6
 man/nl/man6/kpat.6
+man/nl/man7/kdeoptions.7
+man/nl/man8/kbuildsycoca4.8
+man/nl/man8/kcookiejar4.8
 man/nl/man8/kded4.8
+man/nl/man8/kdeinit4.8
 man/nl/man8/meinproc4.8
 man/nl/man8/nepomukserver.8
 man/nl/man8/nepomukservicestub.8
@@ -409,6 +415,10 @@ share/doc/kde/HTML/nl/kgeography/index.docbook
 share/doc/kde/HTML/nl/kgpg/common
 share/doc/kde/HTML/nl/kgpg/index.cache.bz2
 share/doc/kde/HTML/nl/kgpg/index.docbook
+share/doc/kde/HTML/nl/khangman/common
+share/doc/kde/HTML/nl/khangman/index.cache.bz2
+share/doc/kde/HTML/nl/khangman/index.docbook
+share/doc/kde/HTML/nl/khangman/man-khangman.6.docbook
 share/doc/kde/HTML/nl/khelpcenter/common
 share/doc/kde/HTML/nl/khelpcenter/contact.docbook
 share/doc/kde/HTML/nl/khelpcenter/faq/about.docbook
@@ -716,6 +726,12 @@ share/doc/kde/HTML/nl/kmail/using-kmail.docbook
 share/doc/kde/HTML/nl/kmenuedit/common
 share/doc/kde/HTML/nl/kmenuedit/index.cache.bz2
 share/doc/kde/HTML/nl/kmenuedit/index.docbook
+share/doc/kde/HTML/nl/kmines/common
+share/doc/kde/HTML/nl/kmines/index.cache.bz2
+share/doc/kde/HTML/nl/kmines/index.docbook
+share/doc/kde/HTML/nl/kmix/common
+share/doc/kde/HTML/nl/kmix/index.cache.bz2
+share/doc/kde/HTML/nl/kmix/index.docbook
 share/doc/kde/HTML/nl/kmousetool/common
 share/doc/kde/HTML/nl/kmousetool/index.cache.bz2
 share/doc/kde/HTML/nl/kmousetool/index.docbook
@@ -840,6 +856,12 @@ share/doc/kde/HTML/nl/kpat/man-kpat.6.docbook
 share/doc/kde/HTML/nl/kruler/common
 share/doc/kde/HTML/nl/kruler/index.cache.bz2
 share/doc/kde/HTML/nl/kruler/index.docbook
+share/doc/kde/HTML/nl/ksame/common
+share/doc/kde/HTML/nl/ksame/index.cache.bz2
+share/doc/kde/HTML/nl/ksame/index.docbook
+share/doc/kde/HTML/nl/kshisen/common
+share/doc/kde/HTML/nl/kshisen/index.cache.bz2
+share/doc/kde/HTML/nl/kshisen/index.docbook
 share/doc/kde/HTML/nl/ksnapshot/common
 share/doc/kde/HTML/nl/ksnapshot/index.cache.bz2
 share/doc/kde/HTML/nl/ksnapshot/index.docbook
@@ -973,6 +995,10 @@ share/doc/kde/HTML/nl/kttsd/stringreplacer.png
 share/doc/kde/HTML/nl/kttsd/talkerchooser.png
 share/doc/kde/HTML/nl/kttsd/talkers.png
 share/doc/kde/HTML/nl/kttsd/xmltransformer.png
+share/doc/kde/HTML/nl/ktuberling/common
+share/doc/kde/HTML/nl/ktuberling/index.cache.bz2
+share/doc/kde/HTML/nl/ktuberling/index.docbook
+share/doc/kde/HTML/nl/ktuberling/technical-reference.docbook
 share/doc/kde/HTML/nl/kturtle/common
 share/doc/kde/HTML/nl/kturtle/getting-started.docbook
 share/doc/kde/HTML/nl/kturtle/glossary.docbook
@@ -997,6 +1023,9 @@ share/doc/kde/HTML/nl/kwatchgnupg/index.docbook
 share/doc/kde/HTML/nl/kweather/common
 share/doc/kde/HTML/nl/kweather/index.cache.bz2
 share/doc/kde/HTML/nl/kweather/index.docbook
+share/doc/kde/HTML/nl/kwordquiz/common
+share/doc/kde/HTML/nl/kwordquiz/index.cache.bz2
+share/doc/kde/HTML/nl/kwordquiz/index.docbook
 share/doc/kde/HTML/nl/kwrite/common
 share/doc/kde/HTML/nl/kwrite/index.cache.bz2
 share/doc/kde/HTML/nl/kwrite/index.docbook
