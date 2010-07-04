@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2368 2010/07/04 18:12:14 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2369 2010/07/04 18:15:20 cube Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3157,3 +3157,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/p5-Audio-Scan to 0.82 [cube 2010-07-04]
 	Added devel/p5-Class-Virtual version 0.06 [cube 2010-07-04]
 	Added www/p5-Plack-Middleware-ReverseProxy version 0.06 [seb 2010-07-04]
+	Added devel/p5-File-BOM version 0.14 [cube 2010-07-04]
+	Added devel/p5-Tie-Cache-LRU version 20081023.2116 [cube 2010-07-04]
+	Added devel/p5-Tie-Cache-LRU-Expires version 0.54 [cube 2010-07-04]
+	Added devel/p5-Tie-LLHash version 1.003 [cube 2010-07-04]
+	Added devel/p5-Tie-RegexpHash version 0.15 [cube 2010-07-04]
+	Added www/p5-Data-URIEncode version 0.11 [cube 2010-07-04]
