@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2349 2010/07/04 08:29:42 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2350 2010/07/04 09:13:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3113,3 +3113,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-POE-Component-Server-PSGI version 0.5 [seb 2010-07-04]
 	Added www/p5-AnyEvent-ReverseHTTP version 0.05 [seb 2010-07-04]
 	Added www/p5-Plack-Handler-AnyEvent-ReverseHTTP version 0.04 [seb 2010-07-04]
+	Added www/p5-SCGI version 0.6 [seb 2010-07-04]
