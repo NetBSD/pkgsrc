@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2361 2010/07/04 15:06:01 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2362 2010/07/04 16:02:29 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3150,3 +3150,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Plack-Middleware-Deflater version 0.03 [seb 2010-07-04]
 	Updated mail/spamdyke to 4.1.0 [schmonz 2010-07-04]
 	Added www/p5-Plack-Middleware-Session version 0.11 [seb 2010-07-04]
+	Added devel/p5-Module-Versions version 0.02 [seb 2010-07-04]
