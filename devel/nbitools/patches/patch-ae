@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/06/03 09:53:47 sakamoto Exp $
+$NetBSD: patch-ae,v 1.1.1.1.58.1 2010/07/04 07:10:50 agc Exp $
 
 --- config/cf/X11.tmpl.orig	Thu Jan 21 21:50:39 1999
 +++ config/cf/X11.tmpl
