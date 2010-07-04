@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2371 2010/07/04 21:09:05 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2372 2010/07/04 21:43:13 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3165,3 +3165,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Data-URIEncode version 0.11 [cube 2010-07-04]
 	Added www/p5-Plack-Middleware-ConsoleLogger version 0.02 [seb 2010-07-04]
 	Added www/p5-Plack-App-Proxy version 0.15 [seb 2010-07-04]
+	Added www/p5-Plack-Middleware-JSConcat version 0.29 [seb 2010-07-04]
