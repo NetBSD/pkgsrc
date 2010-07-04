@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2010/06/20 15:58:06 wiz Exp $
+$NetBSD: patch-aa,v 1.12.2.1 2010/07/04 20:11:31 tron Exp $
 
 http://trac.videolan.org/vlc/ticket/3762
 
@@ -19,7 +19,7 @@ http://trac.videolan.org/vlc/ticket/3762
  static bool IsRemote (int fd)
  {
 -#ifdef HAVE_FSTATFS
-+#ifdef HAVE_FSTATVFS
++#if !defined(__linux__) && defined(HAVE_FSTATVFS)
 +    struct statvfs s;
 +    if (fstatvfs(fd, &s))
 +        return false;  
