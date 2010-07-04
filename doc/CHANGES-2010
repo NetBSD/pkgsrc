@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2350 2010/07/04 09:13:09 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2351 2010/07/04 09:35:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3114,3 +3114,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-AnyEvent-ReverseHTTP version 0.05 [seb 2010-07-04]
 	Added www/p5-Plack-Handler-AnyEvent-ReverseHTTP version 0.04 [seb 2010-07-04]
 	Added www/p5-SCGI version 0.6 [seb 2010-07-04]
+	Added www/p5-Plack-Handler-SCGI version 0.02 [seb 2010-07-04]
