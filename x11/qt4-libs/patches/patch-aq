@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.6 2010/01/29 18:19:09 adam Exp $
+$NetBSD: patch-aq,v 1.7 2010/07/04 06:00:14 adam Exp $
 
---- configure.orig	2010-01-15 17:01:30.000000000 +0000
+--- configure.orig	2010-06-02 02:03:10.000000000 +0000
 +++ configure
-@@ -3069,7 +3069,7 @@ fi
+@@ -3071,7 +3071,7 @@ fi
  if [ "$PLATFORM_MAC" = "yes" ] && [ '!' -z "$CFG_SDK" ]; then
      # get the darwin version. 10.0.0 and up means snow leopard.
      VERSION=`uname -r | tr '.' ' ' | awk '{print $1}'`
@@ -11,7 +11,7 @@ $NetBSD: patch-aq,v 1.6 2010/01/29 18:19:09 adam Exp $
          echo
          echo "WARNING: The 10.4u SDK does not support gcc 4.2. Configure with -platform macx-g++40. "
          echo
-@@ -7012,7 +7012,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
+@@ -7002,7 +7002,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
  [ "$CFG_EXCEPTIONS" = "no" ] && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_EXCEPTIONS"
  [ "$CFG_IPV6" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IPV6"
  [ "$CFG_SXE" = "no" ]        && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_SXE"
