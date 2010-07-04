@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/04 21:42:38 seb Exp $
+
+SHA1 (Plack-Middleware-JSConcat-0.29.tar.gz) = b6bca7fd9fc142219e65f7d3e5ff0afc3837bcbe
+RMD160 (Plack-Middleware-JSConcat-0.29.tar.gz) = 19906034f0a26ca7cc6ff76924346a0012effae7
+Size (Plack-Middleware-JSConcat-0.29.tar.gz) = 40137 bytes
