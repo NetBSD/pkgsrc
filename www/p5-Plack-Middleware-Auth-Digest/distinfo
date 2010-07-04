@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/04 16:49:10 seb Exp $
+
+SHA1 (Plack-Middleware-Auth-Digest-0.03.tar.gz) = 0ee558d3af56cd3db72dd711ba4bd09659737c3e
+RMD160 (Plack-Middleware-Auth-Digest-0.03.tar.gz) = cecb9e87fd5bcbf3e8e456a986f332a686e83dbd
+Size (Plack-Middleware-Auth-Digest-0.03.tar.gz) = 23943 bytes
