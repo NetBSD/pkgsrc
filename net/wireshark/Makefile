@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/06/14 15:33:13 wiz Exp $
+# $NetBSD: Makefile,v 1.47.2.1 2010/07/04 07:23:34 agc Exp $
 
 DISTNAME=		wireshark-1.2.9
 PKGREVISION=		1
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		ethereal-[0-9]*
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config yacc lex
 
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
+CONFIGURE_ENV+=		ac_cv_path_YACCDUMMY=${TOOLS_PATH.yacc}
+CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
 
 PTHREAD_OPTS+=		require
 

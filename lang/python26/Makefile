@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/05/02 14:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2010/07/04 07:19:40 agc Exp $
 
 DISTNAME=	Python-2.6.5
 PKGNAME=	${DISTNAME:S/Python/python26/}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.6.5/
 EXTRACT_SUFX=	.tar.bz2

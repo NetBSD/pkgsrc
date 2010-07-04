@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/03/24 19:43:25 asau Exp $
+# $NetBSD: Makefile,v 1.9.4.1 2010/07/04 07:17:40 agc Exp $
 
 PKGNAME=	usrp-docs-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Documentation for the usrp module
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,7 +12,7 @@ USE_TOOLS+=	make
 CONFIGURE_ARGS+=--enable-doxygen
 CONFIGURE_ARGS+=--docdir=${LOCALBASE}/share/doc/gnuradio/usrp
 
-BUILD_DEPENDS+=	doxygen>=1.6.1:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen>=1.6.3:../../devel/doxygen
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 BUILD_DIRS=	usrp/doc

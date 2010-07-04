@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.384 2010/06/01 11:01:27 drochner Exp $
+# $NetBSD: Makefile,v 1.384.2.1 2010/07/04 07:25:36 agc Exp $
 #
 
 COMMENT=	Security tools

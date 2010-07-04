@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/05/12 16:54:45 hubertf Exp $
+$NetBSD: MESSAGE,v 1.1.1.1.58.1 2010/07/04 07:20:40 agc Exp $
 
 The config file for ${PKGNAME} must be located at ${PKG_SYSCONFDIR}
 Example files are located at ${EGDIR}

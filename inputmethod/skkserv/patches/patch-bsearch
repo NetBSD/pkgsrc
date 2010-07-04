@@ -1,4 +1,4 @@
-$NetBSD: patch-bsearch,v 1.1.1.1 2002/05/31 12:59:59 seb Exp $
+$NetBSD: patch-bsearch,v 1.1.1.1.58.1 2010/07/04 07:18:44 agc Exp $
 
 Binary search patch.
 Originally from skk-users mailing list

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/06/15 08:22:18 shell Exp $
+$NetBSD: patch-ac,v 1.1.1.1.58.1 2010/07/04 07:24:39 agc Exp $
 
 --- bg5ps.orig	Tue Feb 15 04:46:43 2000
 +++ bg5ps
