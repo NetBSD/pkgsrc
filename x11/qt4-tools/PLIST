@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/02/16 13:08:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/07/04 06:00:15 adam Exp $
 lib/pkgconfig/QtAssistantClient.pc
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
@@ -213,6 +213,7 @@ qt4/mkspecs/features/silent.prf
 qt4/mkspecs/features/static.prf
 qt4/mkspecs/features/static_and_shared.prf
 qt4/mkspecs/features/staticlib.prf
+qt4/mkspecs/features/symbian/add_mmp_rules.prf
 qt4/mkspecs/features/symbian/application_icon.prf
 qt4/mkspecs/features/symbian/armcc_warnings.prf
 qt4/mkspecs/features/symbian/data_caging_paths.prf
@@ -422,12 +423,14 @@ qt4/mkspecs/solaris-g++-64/qplatformdefs.h
 qt4/mkspecs/solaris-g++/qmake.conf
 qt4/mkspecs/solaris-g++/qplatformdefs.h
 qt4/mkspecs/symbian-abld/qmake.conf
+qt4/mkspecs/symbian-abld/qplatformdefs.h
 qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_emulator_deployment.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_extra_pre_targetdep.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_post_link.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_store_build.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qt.xml
 qt4/mkspecs/symbian-sbsv2/qmake.conf
+qt4/mkspecs/symbian-sbsv2/qplatformdefs.h
 qt4/mkspecs/tru64-cxx/qmake.conf
 qt4/mkspecs/tru64-cxx/qplatformdefs.h
 qt4/mkspecs/tru64-g++/qmake.conf
