@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2347 2010/07/04 07:29:53 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2348 2010/07/04 08:04:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/qt4-sqlite3 to 4.6.3 [adam 2010-07-04]
 	Updated x11/qt4-tiff to 4.6.3 [adam 2010-07-04]
 	Added www/p5-POE-Component-Server-PSGI version 0.5 [seb 2010-07-04]
+	Added www/p5-AnyEvent-ReverseHTTP version 0.05 [seb 2010-07-04]
