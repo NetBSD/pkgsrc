@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2367 2010/07/04 17:09:52 cube Exp $
+$NetBSD: CHANGES-2010,v 1.2368 2010/07/04 18:12:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3156,3 +3156,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Plack-Middleware-Auth-Digest version 0.03 [seb 2010-07-04]
 	Updated audio/p5-Audio-Scan to 0.82 [cube 2010-07-04]
 	Added devel/p5-Class-Virtual version 0.06 [cube 2010-07-04]
+	Added www/p5-Plack-Middleware-ReverseProxy version 0.06 [seb 2010-07-04]
