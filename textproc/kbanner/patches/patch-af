@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/05/31 13:00:29 seb Exp $
+$NetBSD: patch-af,v 1.1.1.1.58.1 2010/07/04 07:27:29 agc Exp $
 
 JIS X0208-1990 characters.
 

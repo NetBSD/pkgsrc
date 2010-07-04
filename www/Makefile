@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.731 2010/06/25 12:59:47 hauke Exp $
+# $NetBSD: Makefile,v 1.731.2.1 2010/07/04 07:28:52 agc Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -473,6 +473,7 @@ SUBDIR+=	py-ClientForm
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-PasteDeploy
 SUBDIR+=	py-beautifulsoup
+SUBDIR+=	py-blosxom
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
 SUBDIR+=	py-django
@@ -491,7 +492,6 @@ SUBDIR+=	py-simpletal
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webpy
-SUBDIR+=	py-blosxom
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
 SUBDIR+=	rails
