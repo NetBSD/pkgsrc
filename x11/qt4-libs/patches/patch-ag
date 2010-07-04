@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.10 2010/01/29 18:19:09 adam Exp $
+$NetBSD: patch-ag,v 1.11 2010/07/04 06:00:14 adam Exp $
 
---- qmake/project.cpp.orig	2010-01-15 17:01:30.000000000 +0000
+--- qmake/project.cpp.orig	2010-06-02 02:03:09.000000000 +0000
 +++ qmake/project.cpp
-@@ -1612,6 +1612,9 @@ QMakeProject::isActiveConfig(const QStri
+@@ -1614,6 +1614,9 @@ QMakeProject::isActiveConfig(const QStri
      if(isForSymbian() && (x == "symbian" || x == "unix"))
          return true;
  
