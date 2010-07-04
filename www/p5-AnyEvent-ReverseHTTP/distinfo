@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/04 08:03:43 seb Exp $
+
+SHA1 (AnyEvent-ReverseHTTP-0.05.tar.gz) = c8aaef4802920d4c3bcb846601a729695921766e
+RMD160 (AnyEvent-ReverseHTTP-0.05.tar.gz) = 9d8722b5d4c35f764f7bb0c107c4da4c30f83cf7
+Size (AnyEvent-ReverseHTTP-0.05.tar.gz) = 41775 bytes

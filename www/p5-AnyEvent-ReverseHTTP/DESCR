@@ -1,0 +1,6 @@
+The Perl 5 module AnyEvent::ReverseHTTP is an AnyEvent module that
+acts as a Reverse HTTP server (which is actually a polling client
+for Reverse HTTP gateway).  This module implements simple Reverse
+HTTP client that's tested against reversehttp.net demo server. More
+complicated specification like relaying or pipelining is not (yet)
+implemented.
