@@ -1,0 +1,2 @@
+The Perl 5 module Plack::Middleware::Header is a Plack a middleware
+to  append to, set or unset HTTP response's headers.
