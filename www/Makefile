@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.751 2010/07/04 20:36:01 seb Exp $
+# $NetBSD: Makefile,v 1.752 2010/07/04 21:08:42 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -411,6 +411,7 @@ SUBDIR+=	p5-POE-Filter-HTTP-Parser
 SUBDIR+=	p5-PSGI
 SUBDIR+=	p5-ParallelUserAgent
 SUBDIR+=	p5-Plack
+SUBDIR+=	p5-Plack-App-Proxy
 SUBDIR+=	p5-Plack-Handler-AnyEvent-HTTPD
 SUBDIR+=	p5-Plack-Handler-AnyEvent-ReverseHTTP
 SUBDIR+=	p5-Plack-Handler-AnyEvent-SCGI
