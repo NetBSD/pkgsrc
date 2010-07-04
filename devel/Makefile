@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1359 2010/07/04 17:09:52 cube Exp $
+# $NetBSD: Makefile,v 1.1360 2010/07/04 18:12:26 cube Exp $
 #
 
 COMMENT=	Development utilities
@@ -633,6 +633,7 @@ SUBDIR+=	p5-ExtUtils-ParseXS
 SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-ExtUtils-XSBuilder
 SUBDIR+=	p5-ExtUtils-XSpp
+SUBDIR+=	p5-File-BOM
 SUBDIR+=	p5-File-BaseDir
 SUBDIR+=	p5-File-ChangeNotify
 SUBDIR+=	p5-File-DesktopEntry
@@ -1002,10 +1003,14 @@ SUBDIR+=	p5-Throwable
 SUBDIR+=	p5-Tie-Array-AsHash
 SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Tie-Cache
+SUBDIR+=	p5-Tie-Cache-LRU
+SUBDIR+=	p5-Tie-Cache-LRU-Expires
 SUBDIR+=	p5-Tie-File
 SUBDIR+=	p5-Tie-IxHash
+SUBDIR+=	p5-Tie-LLHash
 SUBDIR+=	p5-Tie-RefHash
 SUBDIR+=	p5-Tie-RefHash-Weak
+SUBDIR+=	p5-Tie-RegexpHash
 SUBDIR+=	p5-Tie-ToObject
 SUBDIR+=	p5-Tree-DAG_Node
 SUBDIR+=	p5-Tree-Simple
