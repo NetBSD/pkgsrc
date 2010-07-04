@@ -1,0 +1,4 @@
+The Perl 5 module Plack::Middleware::ConsoleLogger captures logs
+from PSGI applications and plack middleware components and makes
+them available to see on JavaScript console for Firebug and Webkit
+Inspector.
