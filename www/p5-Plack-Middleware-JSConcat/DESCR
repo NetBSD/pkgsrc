@@ -1,0 +1,2 @@
+The Perl 5 module Plack::Middleware::JSConcat is a Plack middleware.
+It allows you to concatenate multiple javascripts files into one.
