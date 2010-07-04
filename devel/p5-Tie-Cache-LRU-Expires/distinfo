@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/04 17:48:57 cube Exp $
+
+SHA1 (Tie-Cache-LRU-Expires-0.54.tar.gz) = 205e5f8ba1be2a415b0ff056a804dd1cf9b7cda6
+RMD160 (Tie-Cache-LRU-Expires-0.54.tar.gz) = 8db8d93f449105737b3366104201566e1639e2c7
+Size (Tie-Cache-LRU-Expires-0.54.tar.gz) = 3149 bytes
