@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2364 2010/07/04 16:40:36 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2365 2010/07/04 16:49:47 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3153,3 +3153,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Module-Versions version 0.02 [seb 2010-07-04]
 	Added www/p5-Plack-Middleware-Debug version 0.09 [seb 2010-07-04]
 	Added www/p5-Plack-Middleware-Header version 0.03 [seb 2010-07-04]
+	Added www/p5-Plack-Middleware-Auth-Digest version 0.03 [seb 2010-07-04]
