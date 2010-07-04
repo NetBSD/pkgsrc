@@ -1,0 +1,4 @@
+This module is a base class for implementing virtual base classes (what
+some people call an abstract class).  Kinda kooky.  It allows you to
+explicitly declare what methods are virtual and that must be implemented
+by subclasses.
