@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2010/02/01 15:00:20 jmcneill Exp $
+$NetBSD: patch-ad,v 1.5 2010/07/04 17:41:58 tron Exp $
 
 --- src/Makefile.am.orig	2009-11-23 03:57:04.000000000 +0000
-+++ src/Makefile.am
-@@ -26,13 +26,13 @@
++++ src/Makefile.am	2010-07-04 18:05:42.000000000 +0100
+@@ -26,13 +26,17 @@
  
  pulseincludedir=$(includedir)/pulse
  pulsecoreincludedir=$(includedir)/pulsecore
@@ -13,13 +13,17 @@ $NetBSD: patch-ad,v 1.4 2010/02/01 15:00:20 jmcneill Exp $
 +xdgautostartdir=$(PREFIX)/share/gnome/autostart
  alsaprofilesetsdir=$(datadir)/pulseaudio/alsa-mixer/profile-sets
  alsapathsdir=$(datadir)/pulseaudio/alsa-mixer/paths
++if HAVE_UDEV
  udevrulesdir=/lib/udev/rules.d
 -dbuspolicydir=$(sysconfdir)/dbus-1/system.d
++else
++udevrulesdir=
++endif
 +dbuspolicydir=$(EGDIR)
  
  ###################################
  #            Defines              #
-@@ -42,7 +42,7 @@ PA_BINARY=$(bindir)/pulseaudio$(EXEEXT)
+@@ -42,7 +46,7 @@
  if OS_IS_WIN32
  PA_DEFAULT_CONFIG_DIR=%PULSE_ROOT%
  else
@@ -28,7 +32,7 @@ $NetBSD: patch-ad,v 1.4 2010/02/01 15:00:20 jmcneill Exp $
  endif
  
  ###################################
-@@ -1419,7 +1419,7 @@ module_x11_cork_request_la_LIBADD = $(AM
+@@ -1419,7 +1423,7 @@
  # OSS
  
  liboss_util_la_SOURCES = modules/oss/oss-util.c modules/oss/oss-util.h
