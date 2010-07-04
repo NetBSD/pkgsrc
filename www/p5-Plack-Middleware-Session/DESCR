@@ -1,0 +1,4 @@
+The Perl 5 module Plack::Middleware::Session is a Plack middleware
+component for session management. By default it  uses cookies to
+keep session state and store data in memory. It also comes with
+other state and store solutions.
