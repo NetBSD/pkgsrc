@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:00:29 seb Exp $
+$NetBSD: patch-ab,v 1.1.1.1.58.1 2010/07/04 07:27:29 agc Exp $
 
 --- kbanner.c.orig	Fri Oct 15 17:43:31 1993
 +++ kbanner.c	Thu May 18 00:28:39 2000
