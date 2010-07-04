@@ -1,0 +1,6 @@
+The Perl 5 module Plack::Middleware::Debug is a Plack middleware.
+It offers a configurable set of panels that displays information
+about the current request and response. The information is generated
+only for responses with a status of 200 (OK) and a Content-Type
+that contains text/html or application/xhtml+xml and is embedded
+in the HTML that is sent back to the browser.
