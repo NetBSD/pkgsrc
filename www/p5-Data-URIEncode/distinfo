@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/04 17:42:51 cube Exp $
+
+SHA1 (Data-URIEncode-0.11.tar.gz) = 9730450e4177cad7d5f76dc38c97391fcee39a74
+RMD160 (Data-URIEncode-0.11.tar.gz) = 5b594d8f4e622eee9b14829701e48336776769e7
+Size (Data-URIEncode-0.11.tar.gz) = 8867 bytes
