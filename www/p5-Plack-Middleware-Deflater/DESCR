@@ -1,0 +1,5 @@
+The Perl 5 module Plack::Middleware::Deflater is a middleware to
+encode your response body in gzip or deflate, based on Accept-Encoding
+HTTP request header. It would save the bandwidth a little bit but
+should increase the Plack server load, so ideally you should handle
+this on the frontend reverse proxy servers.
