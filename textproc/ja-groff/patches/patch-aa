@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
+$NetBSD: patch-aa,v 1.1.1.1.58.1 2010/07/04 07:27:29 agc Exp $
 --- afmtodit/Makefile.sub.orig	Wed Oct 28 21:48:22 1992
 +++ afmtodit/Makefile.sub	Tue Mar 26 22:38:08 1996
 @@ -15,7 +15,7 @@
