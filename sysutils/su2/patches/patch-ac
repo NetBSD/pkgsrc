@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/06/04 09:56:38 cjep Exp $
+$NetBSD: patch-ac,v 1.1.1.1.58.1 2010/07/04 07:26:46 agc Exp $
 
 --- su2.man.orig	Tue Oct  2 22:09:48 2001
 +++ su2.man

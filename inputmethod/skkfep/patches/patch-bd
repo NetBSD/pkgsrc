@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
+$NetBSD: patch-bd,v 1.1.1.1.58.1 2010/07/04 07:18:44 agc Exp $
 
 --- fep.c.orig	Tue Jul  7 00:31:16 1998
 +++ fep.c	Tue Dec 21 00:42:53 1999

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.60 2010/06/17 00:44:01 minskim Exp $
+# $NetBSD: Makefile,v 1.60.2.1 2010/07/04 07:24:40 agc Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
 PKGREVISION=	45
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/

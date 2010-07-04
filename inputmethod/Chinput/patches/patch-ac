@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/06/15 09:31:39 shell Exp $
+$NetBSD: patch-ac,v 1.1.1.1.58.1 2010/07/04 07:18:43 agc Exp $
 
 --- src/chinput.c.orig	Mon Jun 10 21:16:56 2002
 +++ src/chinput.c

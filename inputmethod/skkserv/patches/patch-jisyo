@@ -1,4 +1,4 @@
-$NetBSD: patch-jisyo,v 1.1.1.1 2002/05/31 12:59:59 seb Exp $
+$NetBSD: patch-jisyo,v 1.1.1.1.58.1 2010/07/04 07:18:44 agc Exp $
 
 Dictionary (SKK-JISYO.L) corrigenda.
 Partially from skk-dic mailing list.
