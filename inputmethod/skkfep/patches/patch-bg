@@ -1,4 +1,4 @@
-$NetBSD: patch-bg,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
+$NetBSD: patch-bg,v 1.1.1.1.58.1 2010/07/04 07:18:44 agc Exp $
 
 --- skkfep.1.orig	Tue Jul  7 00:31:16 1998
 +++ skkfep.1	Sat Dec 25 17:28:26 1999

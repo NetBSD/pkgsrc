@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/06/04 16:44:55 cjep Exp $
+$NetBSD: patch-ae,v 1.1.1.1.58.1 2010/07/04 07:26:46 agc Exp $
 
 --- Imake.options.orig	Wed Apr  5 00:05:36 2000
 +++ Imake.options	Wed Sep  6 00:37:02 2000

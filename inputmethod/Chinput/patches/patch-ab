@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/06/15 09:31:39 shell Exp $
+$NetBSD: patch-ab,v 1.1.1.1.58.1 2010/07/04 07:18:43 agc Exp $
 
 --- src/XIM.h.orig	Mon Jun 10 21:19:55 2002
 +++ src/XIM.h

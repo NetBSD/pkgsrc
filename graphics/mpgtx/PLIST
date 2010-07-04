@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/17 11:39:35 grant Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.58.1 2010/07/04 07:17:04 agc Exp $
 bin/mpgcat
 bin/mpgdemux
 bin/mpginfo
