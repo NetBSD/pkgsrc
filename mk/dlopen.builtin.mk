@@ -1,11 +1,12 @@
-# $NetBSD: dlopen.builtin.mk,v 1.22 2010/06/17 18:09:40 drochner Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.23 2010/07/04 16:25:13 obache Exp $
 
 BUILTIN_PKG:=	dl
 
 BUILTIN_FIND_LIBS:=		dl
 BUILTIN_FIND_FILES_VAR:=	H_DL
 BUILTIN_FIND_FILES.H_DL=	/usr/include/dlfcn.h			\
-				/opt/gcc.3.3/include/dlfcn.h
+				/opt/gcc.3.3/include/dlfcn.h		\
+				/boot/develop/headers/posix/dlfcn.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -84,7 +85,9 @@ CHECK_BUILTIN.dl?=	no
 .if !empty(CHECK_BUILTIN.dl:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.dl:M[yY][eE][sS])
+.    if empty(H_DL:M__nonexistent__) && !empty(H_DL:M/usr/*)
 BUILDLINK_PREFIX.dl=	/usr
+.    endif
 .    if !empty(BUILTIN_LIB_FOUND.dl:M[yY][eE][sS])
 #
 # No need to add this to BUILDLINK_LIBS.dl since most GNU configure
