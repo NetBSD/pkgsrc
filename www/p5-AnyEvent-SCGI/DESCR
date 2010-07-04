@@ -1,0 +1,2 @@
+The Perl 5 module AnyEvent::SCGI allows you to build event based
+SCGI servers.  It can be used with or without Coro.
