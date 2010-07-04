@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/04 07:29:09 seb Exp $
+
+SHA1 (POE-Component-Server-PSGI-0.5.tar.gz) = 72a452244e401942abed1bb582b20dfc7f982544
+RMD160 (POE-Component-Server-PSGI-0.5.tar.gz) = 4bdca7ab0a42fe90b1702f97ae1ed90e10838631
+Size (POE-Component-Server-PSGI-0.5.tar.gz) = 10964 bytes
