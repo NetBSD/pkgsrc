@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: patchdiff.pl,v 1.11 2010/07/04 22:18:28 sbd Exp $
+# $NetBSD: patchdiff.pl,v 1.12 2010/07/04 22:20:04 sbd Exp $
 #
 # patchdiff: compares a set of patches patch-aa, patch-ab, ... in
 #   $WRKDIR/.newpatches in the with another set in patches.
@@ -106,11 +106,12 @@ foreach $patch (keys%new) {
 	# In particular, remove hunks with:
 	# . NetBSD RCS Id tag differences
 	$diff=~s/^[\d,]+c[\d,]+\n..\$[N]etBSD.*\$\n---\n..\$[N]etBSD.*\$\n//m;
-	# . only the name or date of the output file changed
-	$diff=~s/^[\d,]+c[\d,]+\n..\+\+\+.*\n---\n..\+\+\+.*\n//m;
-	# . only the name or date of the input file changed
-	$diff=~s/^[\d,]+c[\d,]+\n.\s---\s.*\.orig\s.*\n---\n.\s---\s.*\n//m;
-	$diff=~s/^[\d,]+c[\d,]+\n.\s---\s.*\n---\n.\s---\s.*\.orig\s.*\n//m;
+	# . the name of the input file changed
+	#   (if the name of the output file has changed values in $orig{$patch}
+	#    and $new{$patch} won't match so the files don't get compared)
+	# . time of the input and/or output file changed
+	# . line numbers changed
+	$diff=~s/^[\d,]+c[\d,]+\n(?:.\s---\s(:?\S*).*\n)?(?:.\s\+\+\+\s(\S*).*\n)?(?:.\s@@\s(?:.*)\s@@.*\n)?---\n(?:.\s---\s.*\n)?(?:.\s\+\+\+\s\1.*\n)?(?:.\s@@\s.*\s@@.*\n)?//m;
 	# . only line numbers changed
 	$diff=~s/^[\d,]+c[\d,]+\n.\s@@\s.*\s@@.*\n---\n.\s@@\s.*\s@@.*\n//mg;
 	if ($diff) {
