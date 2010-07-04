@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
+$NetBSD: patch-ae,v 1.1.1.1.58.1 2010/07/04 07:27:29 agc Exp $
 --- nroff/nroff.sh.orig	Fri May 28 17:03:23 1999
 +++ nroff/nroff.sh	Fri May 28 18:24:04 1999
 @@ -58,4 +58,4 @@

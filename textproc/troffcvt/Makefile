@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/07/07 20:35:27 joerg Exp $
+# $NetBSD: Makefile,v 1.16.8.1 2010/07/04 07:27:30 agc Exp $
 #
 
 DISTNAME=		troffcvt-1.04
@@ -11,6 +11,7 @@ HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Troff/groff to RTF/HTML/TEXT converter
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		perl:run
 
