@@ -1,11 +1,13 @@
-# $NetBSD: builtin.mk,v 1.28 2009/06/07 14:24:03 joerg Exp $
+# $NetBSD: builtin.mk,v 1.29 2010/07/04 16:33:25 obache Exp $
 
 BUILTIN_PKG:=	openssl
 
 BUILTIN_FIND_LIBS:=		des
 BUILTIN_FIND_FILES_VAR:=	H_OPENSSLCONF H_OPENSSLV
-BUILTIN_FIND_FILES.H_OPENSSLCONF= /usr/include/openssl/opensslconf.h
-BUILTIN_FIND_FILES.H_OPENSSLV=	/usr/include/openssl/opensslv.h
+BUILTIN_FIND_FILES.H_OPENSSLCONF= /usr/include/openssl/opensslconf.h \
+				/boot/common/include/openssl/opensslconf.h
+BUILTIN_FIND_FILES.H_OPENSSLV=	/usr/include/openssl/opensslv.h \
+				/boot/common/include/openssl/opensslv.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -155,7 +157,13 @@ CHECK_BUILTIN.openssl?=	no
 .if !empty(CHECK_BUILTIN.openssl:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.    if empty(H_OPENSSLV:M__nonexistent__)
+.      if !empty(H_OPENSSLV:M/usr/*)
 BUILDLINK_PREFIX.openssl=	/usr
+.      elif !empty(H_OPENSSLV:M/boot/common/*)
+BUILDLINK_PREFIX.openssl=	/boot/common
+.      endif
+.    endif
 .  endif
 
 # By default, we don't bother with the old DES API.
@@ -233,6 +241,8 @@ SSLDIR=	${PKG_SYSCONFDIR.openssl}
 .  elif !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 .    if ${OPSYS} == "NetBSD"
 SSLDIR=	/etc/openssl
+.    elif ${OPSYS} == "Haiku"
+SSLDIR=	/boot/common/ssl
 .    else
 SSLDIR=	/etc/ssl 		# most likely place
 .    endif
