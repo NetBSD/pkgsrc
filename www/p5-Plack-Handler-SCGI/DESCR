@@ -1,0 +1,2 @@
+The Perl 5 module Plack::Handler::SCGI is a standalone SCGI daemon
+using SCGI module.
