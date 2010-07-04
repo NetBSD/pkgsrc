@@ -1,0 +1,2 @@
+This module provides functions for handling unicode byte order marks,
+which are to be found at the beginning of some files and streams.
