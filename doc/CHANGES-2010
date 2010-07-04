@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2354 2010/07/04 11:09:08 markd Exp $
+$NetBSD: CHANGES-2010,v 1.2355 2010/07/04 11:18:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3143,3 +3143,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdebase4 to 4.4.5 [markd 2010-07-04]
 	Updated x11/kdebindings4-python to 4.4.5 [markd 2010-07-04]
 	Updated x11/kdelibs4 to 4.4.5 [markd 2010-07-04]
+	Added www/p5-Plack-Handler-AnyEvent-SCGI version 0.02 [seb 2010-07-04]
