@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1356 2010/07/03 21:45:05 seb Exp $
+# $NetBSD: Makefile,v 1.1357 2010/07/04 11:43:40 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -820,6 +820,7 @@ SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
 SUBDIR+=	p5-OOTools
 SUBDIR+=	p5-Object-Declare
+SUBDIR+=	p5-Object-Event
 SUBDIR+=	p5-Object-InsideOut
 SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-Object-Signature
