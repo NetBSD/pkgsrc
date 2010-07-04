@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2010/02/02 14:33:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2010/07/04 06:00:14 adam Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -10,8 +10,7 @@
 
 DISTNAME=	qt-everywhere-opensource-src-${QTVERSION}
 CATEGORIES=	x11
-MASTER_SITES=	http://get.qtsoftware.com/qt/source/ \
-		ftp://ftp.qtsoftware.com/qt/source/
+MASTER_SITES=	ftp://ftp.qt.nokia.com/qt/source/
 #EXTRACT_SUFX=	.tar.bz2
 
 .include "../../x11/qt4/Makefile.common"
@@ -27,7 +26,7 @@ USE_TOOLS+=		gmake
 
 QTPREFIX=		${PREFIX}/qt4
 
-CONFIGURE_ARGS+=	-arch ${MACHINE_ARCH}
+#CONFIGURE_ARGS+=	-arch ${MACHINE_ARCH}
 CONFIGURE_ARGS+=	-optimized-qmake
 CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
 CONFIGURE_ARGS+=	-qt-gif	# qt4 does not write compressed GIFs
@@ -70,6 +69,7 @@ SYS_LIBS=		-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .elif ${OPSYS} == "Darwin"
+#CONFIGURE_ARGS+=	-cocoa
 QMAKE_RANLIB=		${RANLIB}
 .  if exists(/usr/lib/libresolv.dylib)
 LDFLAGS+=		-lresolv
