@@ -1,0 +1,5 @@
+This module implements a least recently used (LRU) cache in memory
+through a tie interface. Any time data is stored in the tied hash, that
+key/value pair has an entry time associated with it, and as the cache
+fills up, those members of the cache that are the oldest are removed to
+make room for new entries.
