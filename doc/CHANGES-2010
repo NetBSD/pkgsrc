@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2369 2010/07/04 18:15:20 cube Exp $
+$NetBSD: CHANGES-2010,v 1.2370 2010/07/04 20:37:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3163,3 +3163,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Tie-LLHash version 1.003 [cube 2010-07-04]
 	Added devel/p5-Tie-RegexpHash version 0.15 [cube 2010-07-04]
 	Added www/p5-Data-URIEncode version 0.11 [cube 2010-07-04]
+	Added www/p5-Plack-Middleware-ConsoleLogger version 0.02 [seb 2010-07-04]
