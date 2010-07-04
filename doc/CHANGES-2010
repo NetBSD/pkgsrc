@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2352 2010/07/04 10:27:03 schwarz Exp $
+$NetBSD: CHANGES-2010,v 1.2353 2010/07/04 10:49:30 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3116,3 +3116,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-SCGI version 0.6 [seb 2010-07-04]
 	Added www/p5-Plack-Handler-SCGI version 0.02 [seb 2010-07-04]
 	Updated audio/lame to 3.98.4 [schwarz 2010-07-04]
+	Added www/p5-AnyEvent-SCGI version 1.1 [seb 2010-07-04]
