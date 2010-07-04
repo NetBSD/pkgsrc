@@ -1,0 +1,4 @@
+The Perl 5 module Plack::Middleware::Auth::Digest is a Plack middleware.
+It enables digest authentication. Your authenticator callback is
+given an username as a string and should return a password, either
+as a raw password or a hashed password.
