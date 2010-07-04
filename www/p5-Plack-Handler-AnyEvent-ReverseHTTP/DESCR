@@ -1,0 +1,5 @@
+The Perl 5 module Plack::Handler::AnyEvent::ReverseHTTP is Plack
+handler that runs your PSGI application on AnyEvent::ReverseHTTP.
+It uses ReverseHTTP gateway to access your PSGI application on your
+desktop or behind the firewall from the internet. Just like Ruby's
+hookout does with Rack applications.
