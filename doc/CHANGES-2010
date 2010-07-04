@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2345 2010/07/03 21:45:26 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2346 2010/07/04 06:02:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3100,3 +3100,13 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Plack to 0.9940 [seb 2010-07-03]
 	Added www/p5-HTTP-Parser version 0.05 [seb 2010-07-03]
 	Added devel/p5-Test-POE-Client-TCP version 1.08 [seb 2010-07-03]
+	Updated graphics/gimp to 2.6.9 [adam 2010-07-04]
+	Updated x11/qt4-libs to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-tools to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-docs to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-mng to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-mysql to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-pgsql to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-qdbus to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-sqlite3 to 4.6.3 [adam 2010-07-04]
+	Updated x11/qt4-tiff to 4.6.3 [adam 2010-07-04]
