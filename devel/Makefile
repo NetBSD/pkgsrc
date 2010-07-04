@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1358 2010/07/04 16:02:08 seb Exp $
+# $NetBSD: Makefile,v 1.1359 2010/07/04 17:09:52 cube Exp $
 #
 
 COMMENT=	Development utilities
@@ -526,6 +526,7 @@ SUBDIR+=	p5-Class-Std
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Trigger
 SUBDIR+=	p5-Class-Unload
+SUBDIR+=	p5-Class-Virtual
 SUBDIR+=	p5-Class-WhiteHole
 SUBDIR+=	p5-Class-XML
 SUBDIR+=	p5-Class-XPath
