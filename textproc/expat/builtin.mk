@@ -1,9 +1,11 @@
-# $NetBSD: builtin.mk,v 1.14 2008/10/07 18:03:55 cube Exp $
+# $NetBSD: builtin.mk,v 1.15 2010/07/04 16:34:46 obache Exp $
 
 BUILTIN_PKG:=	expat
 
 BUILTIN_FIND_FILES_VAR:=	H_EXPAT
-BUILTIN_FIND_FILES.H_EXPAT=	${X11BASE}/include/expat.h /usr/include/expat.h
+BUILTIN_FIND_FILES.H_EXPAT=	${X11BASE}/include/expat.h \
+				/usr/include/expat.h \
+				/boot/common/include/expat.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -81,8 +83,10 @@ BUILDLINK_API_DEPENDS.expat+=	expat>=1.95.4
 .  else
 .    if !empty(H_EXPAT:M${X11BASE}/*)
 .      include "../../mk/x11.builtin.mk"
-.    else
+.    elif !empty(H_EXPAT:M/usr/*)
 BUILDLINK_PREFIX.expat=	/usr
+.    elif !empty(H_EXPAT:M/boot/common/*)
+BUILDLINK_PREFIX.expat=	/boot/common
 .    endif
 .  endif
 
