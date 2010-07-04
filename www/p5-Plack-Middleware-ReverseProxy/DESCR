@@ -1,0 +1,4 @@
+The Perl 5 module Plack::Middleware::ReverseProxy is a Plack middleware. It
+resets some HTTP headers, which were changed by reverse-proxy. You
+can specify the reverse proxy address and stop fake requests using
+'enable_if' directive in your app.psgi.
