@@ -1,0 +1,2 @@
+The Perl 5 module Plack::Handler::AnyEvent::SCGI is a standalone
+SCGI daemon running on AnyEvent::SCGI.
