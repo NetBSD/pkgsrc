@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/04/18 12:22:40 zafer Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2010/07/04 07:23:33 agc Exp $
 
 DISTNAME=	ncftp-3.2.4-src
 PKGNAME=	ncftp3-3.2.4
@@ -12,7 +12,7 @@ LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 GNU_CONFIGURE=	yes

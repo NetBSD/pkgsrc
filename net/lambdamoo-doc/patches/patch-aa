@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/26 00:17:59 rh Exp $
+$NetBSD: patch-aa,v 1.1.1.1.58.1 2010/07/04 07:23:33 agc Exp $
 
 --- ProgrammersManual.texinfo.orig	Mon May 28 07:29:56 2001
 +++ ProgrammersManual.texinfo	Mon May 28 07:38:25 2001

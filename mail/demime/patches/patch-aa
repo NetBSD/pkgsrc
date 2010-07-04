@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/07 12:21:09 tron Exp $
+$NetBSD: patch-aa,v 1.1.1.1.58.1 2010/07/04 07:20:39 agc Exp $
 
 --- demime.stable.orig	Wed Apr 17 17:08:40 2002
 +++ demime.stable
