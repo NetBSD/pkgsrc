@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9441 2010/07/05 00:57:02 cube Exp $
+$NetBSD: TODO,v 1.9442 2010/07/05 03:30:34 dholland Exp $
 
 Suggested new packages
 ======================
@@ -550,8 +550,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elinks-0.12pre5
-	o elm-2.5pl24
-	o elm-me-2.5plalpha23
+	o elm-me-2.5plalpha24
 	o elscreen-1.4.6
 	o emacs-muse-3.20
 	o emacs-wiki-2.72
