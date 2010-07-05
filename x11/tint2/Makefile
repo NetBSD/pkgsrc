@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/05 08:06:15 tnn Exp $
 
-DISTNAME=		tint2-0.9
-PKGREVISION=		2
+DISTNAME=		tint2-0.11
 CATEGORIES=		x11
 MASTER_SITES=		http://tint2.googlecode.com/files/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		fernandotcl@gmail.com
 HOMEPAGE=		http://code.google.com/p/tint2/
@@ -12,35 +12,48 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++ # XXX CMake. pkg does not really need c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 
-PKG_SYSCONFSUBDIR=	xdg
 INSTALLATION_DIRS=	share/examples/tint2
-OWN_DIRS=		${PKG_SYSCONFDIR}/tint2
+OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/tint2
 CONF_FILES=		${PREFIX}/share/examples/tint2/tint2rc \
-				${PKG_SYSCONFDIR}/tint2/tint2rc
+				${PKG_SYSCONFDIR}/xdg/tint2/tint2rc
 
-CONFIGURE_ARGS+=	--disable-tint2conf
-CONFIGURE_ARGS+=	--disable-examples
+REPLACE_PYTHON+=	src/tint2conf/tintwizard.py
+
+CMAKE_OPTS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_OPTS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
+CMAKE_OPTS+=	-DMANDIR=${PKGMANDIR}
+# Below rpath fix is copypasted from graphics/vtk.
+CMAKE_OPTS+=	-DCMAKE_INSTALL_RPATH:STRING=${PREFIX}/lib:${X11BASE}/lib${LIBABISUFFIX:Q}	\
+CMAKE_OPTS+=	-DCMAKE_SKIP_BUILD_RPATH:BOOL=ON		\
+CMAKE_OPTS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH:BOOL=ON	\
+CMAKE_OPTS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
+
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-battery
+CMAKE_OPTS+=		-DENABLE_BATTERY=ON
 .else
-CONFIGURE_ARGS+=	--disable-battery
+CMAKE_OPTS+=		-DENABLE_BATTERY=OFF
 .endif
+
+do-configure:
+	cd ${WRKSRC} && ${PREFIX}/bin/cmake ${CMAKE_OPTS} .
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/tint2rc \
 		${DESTDIR}${PREFIX}/share/examples/tint2
 
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
+.include "../../devel/cmake/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
