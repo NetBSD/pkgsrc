@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
+$NetBSD: patch-ag,v 1.15 2010/07/05 03:08:10 taca Exp $
 
---- configure.orig	2009-11-25 01:57:27.000000000 +0000
+--- configure.orig	2010-06-30 13:17:19.000000000 +0000
 +++ configure
 @@ -1454,7 +1454,7 @@ Fine tuning of the installation director
    --bindir=DIR           user executables [EPREFIX/bin]
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR         enable S/Key support
    --with-opie=DIR         enable OPIE support
-@@ -2183,7 +2184,6 @@ else
+@@ -2184,7 +2185,6 @@ else
  fi
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -27,7 +27,7 @@ $NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
  
  
  
-@@ -2396,6 +2396,23 @@ fi
+@@ -2397,6 +2397,23 @@ fi
  
  
  
@@ -51,7 +51,7 @@ $NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
  # Check whether --with-passwd was given.
  if test "${with_passwd+set}" = set; then
    withval=$with_passwd; case $with_passwd in
-@@ -14287,7 +14304,7 @@ if test `eval echo '${'$as_ac_Header'}'`
+@@ -14358,7 +14375,7 @@ if test `eval echo '${'$as_ac_Header'}'`
  _ACEOF
   LOGINCAP_USAGE='[-c class|-] '; LCMAN=""
  	case "$OS" in
@@ -60,7 +60,7 @@ $NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
  	    ;;
  	esac
  
-@@ -21537,6 +21554,8 @@ fi
+@@ -21644,6 +21661,8 @@ fi
  
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
      AUTH_OBJS="$AUTH_OBJS kerb5.o"
