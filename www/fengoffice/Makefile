@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/03/16 16:02:21 taca Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/05 03:26:46 taca Exp $
 #
 
-DISTNAME=	fengoffice_1.6.2
-PKGNAME=	${DISTNAME:S/_/-/:S/.rc/rc1/}
-PKGREVISION=	1
+DISTNAME=	fengoffice_1.7
+PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
@@ -58,7 +57,7 @@ pre-install:
 		config/empty.config.php
 
 do-install:
-	cd ${WRKSRC}; ${FIND} . -type f -print | \
+	cd ${WRKSRC}; ${FIND} . -type f \! -name '*.orig' -print | \
 		pax -rw ${DESTDIR}${PREFIX}/${FO_DIR}
 
 .include "../../lang/php/phpversion.mk"

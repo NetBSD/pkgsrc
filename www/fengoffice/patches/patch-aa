@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1 2010/07/05 03:26:46 taca Exp $
+
+Unofficial patch to avoid iconv(GNU or gnu libc) portability problem.
+http://www.fengoffice.com/web/bugs/view.php?id=6
+
+--- environment/classes/encoding/EncodingConverter.class.php.orig	2010-06-28 21:05:03.000000000 +0000
++++ environment/classes/encoding/EncodingConverter.class.php
+@@ -6,6 +6,16 @@ class EncodingConverter
+ 	var $_last_err_filename;
+ 	var $_last_err_line;
+ 	var $_last_err_func;
++	private static $gnu_iconv = NULL;
++
++	static function iconv_error($errno, $errstr) {
++		if (preg_match("/Wrong charset/", $errstr) > 0) {
++			self::$gnu_iconv = false;
++			return true;
++		} else {
++			return false;
++		}
++	}
+ 
+ 	function _handleError($err, $msg, $errfile, $errline, $errcontext) {
+ 		$trace = debug_backtrace();
+@@ -25,10 +35,22 @@ class EncodingConverter
+ 	}
+ 
+ 	function convert($in_enc, $out_enc, $str, $return_original_on_error = true, $ignore_non_compatible = true) {
++		if (is_null(self::$gnu_iconv)) {
++			$dummy = "a";
++			$ascii = 'us-ascii';
++			$func = set_error_handler("self::iconv_error");
++			$r = iconv($ascii, $ascii . "//ignore", $dummy);
++			restore_error_handler();
++			if ($r == $dummy) {
++				self::$gnu_iconv = true;
++			}
++		}
++
+ 		$this->_last_err = null;
+ 		set_error_handler(array(&$this, '_handleError'));
+ 		
+-		if ($ignore_non_compatible) $out_enc .= "//IGNORE";
++		if (self::$gnu_iconv)
++			if ($ignore_non_compatible) $out_enc .= "//IGNORE";
+ 		
+ 		$retval = iconv($in_enc, $out_enc, $str);
+ 		
