@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2010/07/05 08:58:56 dsainty Exp $
+
+Define uid_t, which is used by org.freedesktop.DBus.xml, but is not
+guaranteed to be defined by the selected set of includes.
+
+--- src/eggdbus/Makefile.am.orig	2009-09-17 03:39:28.000000000 +1200
++++ src/eggdbus/Makefile.am	2010-07-05 15:43:42.000000000 +1200
+@@ -142,6 +142,7 @@
+ 		--include-header "eggdbus/eggdbusrequestnamereply.h"					\
+ 		--include-header "eggdbus/eggdbusreleasenamereply.h"					\
+ 		--include-header "eggdbus/eggdbusstartservicebynamereply.h"				\
++		--include-header "sys/types.h"								\
+ 		--introspection-xml $(top_srcdir)/src/eggdbus/org.freedesktop.DBus.xml			\
+ 		--introspection-xml $(top_srcdir)/src/eggdbus/org.freedesktop.DBus.Peer.xml		\
+ 		--introspection-xml $(top_srcdir)/src/eggdbus/org.freedesktop.DBus.Properties.xml	\
