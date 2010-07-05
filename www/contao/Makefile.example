@@ -1,0 +1,41 @@
+# $NetBSD: Makefile.example,v 1.1.1.1 2010/07/05 14:39:32 taca Exp $
+#
+# used by www/contao29-example/Makefile
+#
+
+DISTNAME=	contao-${CT_VERSION}
+PKGNAME=	contao${CT_VER}-example-${CT_PKGVER}
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
+
+MAINTAINER=	taca@NetBSD.org
+HOMEPAGE=	http://www.contao.org/
+COMMENT=	Sample site data for Contao Open Source CMS
+
+DEPENDS+=	contao${CT_VER}>=${CT_PKGVER}:../../www/contao${CT_VER}
+
+DISTINFO_FILE=	${.CURDIR}/../../www/contao${CT_VER}/distinfo
+
+USE_TOOLS=	pax
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WWW_EG_FILES=	music_academy.css tl_files/music_academy
+WWW_FILE?=	templates/music_academy.sql
+
+.for f in ${WWW_EG_FILES} ${WWW_FILE}
+EXTRACT_ELEMENTS+=	${DISTNAME}/${f}
+.endfor
+
+PKG_GROUPS_VARS+=	APACHE_GROUP
+PKG_USERS_VARS+=	APACHE_USER
+
+INSTALLATION_DIRS+=	${CT_WEBDIR}/templates
+
+do-install:
+	cd ${WRKSRC}; \
+		pax -rw -pm ${WWW_EG_FILES} ${DESTDIR}${PREFIX}/${CT_EGDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} ${WWW_FILE} \
+		${DESTDIR}${PREFIX}/${CT_WEBDIR}/templates
