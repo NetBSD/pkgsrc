@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.63 2010/06/03 14:53:14 taca Exp $
+$NetBSD: distinfo,v 1.64 2010/07/05 03:08:10 taca Exp $
 
-SHA1 (sudo-1.7.2p7-200805130/sudo-1.7.2p7.tar.gz) = 0504e0d7b1d3c987e48325ec4caa6ebfe5237ff5
-RMD160 (sudo-1.7.2p7-200805130/sudo-1.7.2p7.tar.gz) = 7ed1976bbce6d66939b85ce08a97c089dbeb1ec4
-Size (sudo-1.7.2p7-200805130/sudo-1.7.2p7.tar.gz) = 772356 bytes
+SHA1 (sudo-1.7.2p8-200805130/sudo-1.7.2p8.tar.gz) = 9534dda2d9fc60b9a733b2a7f69050c183e6ccd0
+RMD160 (sudo-1.7.2p8-200805130/sudo-1.7.2p8.tar.gz) = 6d7f249e9b73f5631c76f868f1b26bf75bc5cf03
+Size (sudo-1.7.2p8-200805130/sudo-1.7.2p8.tar.gz) = 772639 bytes
 SHA1 (patch-aa) = bd35d9a9168a70c53b8908570cd86483b117a084
-SHA1 (patch-af) = 50e6ecf889c460669a4b632c0fd3b15fc45b1214
-SHA1 (patch-ag) = b6153d89cfe634c79f1c5b44d4f0df0089353528
+SHA1 (patch-af) = dbbe3f0a13eb82645b96806a2fb866eef59ad8e4
+SHA1 (patch-ag) = 9e6d2cff0b075a2d668aeccb4646dec797150e79
