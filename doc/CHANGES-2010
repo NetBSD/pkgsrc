@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2372 2010/07/04 21:43:13 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2373 2010/07/05 00:05:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3166,3 +3166,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Plack-Middleware-ConsoleLogger version 0.02 [seb 2010-07-04]
 	Added www/p5-Plack-App-Proxy version 0.15 [seb 2010-07-04]
 	Added www/p5-Plack-Middleware-JSConcat version 0.29 [seb 2010-07-04]
+	Updated geography/gpsbabel to 1.4.1 [gdt 2010-07-05]
