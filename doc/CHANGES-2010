@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2374 2010/07/05 00:57:01 cube Exp $
+$NetBSD: CHANGES-2010,v 1.2375 2010/07/05 03:09:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3168,3 +3168,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Plack-Middleware-JSConcat version 0.29 [seb 2010-07-04]
 	Updated geography/gpsbabel to 1.4.1 [gdt 2010-07-05]
 	Added audio/squeezeboxserver version 7.5.1 [cube 2010-07-05]
+	Updated security/sudo to 1.7.2p8 [taca 2010-07-05]
