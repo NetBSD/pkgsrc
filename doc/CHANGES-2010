@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2378 2010/07/05 03:27:29 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2379 2010/07/05 03:32:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3173,3 +3173,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-server to 5.1.48 [taca 2010-07-05]
 	Updated net/bind97 to 9.7.1 [taca 2010-07-05]
 	Updated www/fengoffice to 1.7 [taca 2010-07-05]
+	Updated www/typo3 to 4.4.0 [taca 2010-07-05]
