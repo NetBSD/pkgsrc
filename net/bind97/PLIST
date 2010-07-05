@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/26 16:11:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/07/05 03:17:45 taca Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -362,24 +362,27 @@ share/doc/bind9/arm/man.nsupdate.html
 share/doc/bind9/arm/man.rndc-confgen.html
 share/doc/bind9/arm/man.rndc.conf.html
 share/doc/bind9/arm/man.rndc.html
-share/doc/bind9/draft/draft-ietf-6man-text-addr-representation-01.txt
-share/doc/bind9/draft/draft-ietf-behave-dns64-01.txt
-share/doc/bind9/draft/draft-ietf-dnsext-axfr-clarify-13.txt
-share/doc/bind9/draft/draft-ietf-dnsext-dns-tcp-requirements-02.txt
-share/doc/bind9/draft/draft-ietf-dnsext-dnssec-bis-updates-09.txt
-share/doc/bind9/draft/draft-ietf-dnsext-dnssec-gost-06.txt
+share/doc/bind9/draft/draft-ietf-6man-text-addr-representation-07.txt
+share/doc/bind9/draft/draft-ietf-behave-address-format-07.txt
+share/doc/bind9/draft/draft-ietf-behave-dns64-09.txt
+share/doc/bind9/draft/draft-ietf-dnsext-axfr-clarify-14.txt
+share/doc/bind9/draft/draft-ietf-dnsext-dns-tcp-requirements-03.txt
+share/doc/bind9/draft/draft-ietf-dnsext-dnssec-bis-updates-10.txt
+share/doc/bind9/draft/draft-ietf-dnsext-dnssec-gost-07.txt
 share/doc/bind9/draft/draft-ietf-dnsext-ecc-key-07.txt
 share/doc/bind9/draft/draft-ietf-dnsext-interop3597-02.txt
 share/doc/bind9/draft/draft-ietf-dnsext-rfc2671bis-edns0-02.txt
-share/doc/bind9/draft/draft-ietf-dnsext-rfc2672bis-dname-18.txt
-share/doc/bind9/draft/draft-ietf-dnsext-rfc3597-bis-00.txt
+share/doc/bind9/draft/draft-ietf-dnsext-rfc2672bis-dname-19.txt
+share/doc/bind9/draft/draft-ietf-dnsext-rfc3597-bis-02.txt
 share/doc/bind9/draft/draft-ietf-dnsext-tsig-md5-deprecated-03.txt
 share/doc/bind9/draft/draft-ietf-dnsop-bad-dns-res-05.txt
-share/doc/bind9/draft/draft-ietf-dnsop-default-local-zones-09.txt
+share/doc/bind9/draft/draft-ietf-dnsop-default-local-zones-10.txt
+share/doc/bind9/draft/draft-ietf-dnsop-dnssec-trust-history-01.txt
 share/doc/bind9/draft/draft-ietf-dnsop-inaddr-required-07.txt
 share/doc/bind9/draft/draft-ietf-dnsop-name-server-management-reqs-02.txt
 share/doc/bind9/draft/draft-ietf-dnsop-respsize-06.txt
 share/doc/bind9/draft/draft-kato-dnsop-local-zones-00.txt
+share/doc/bind9/draft/draft-kerr-ixfr-only-01.txt
 share/doc/bind9/rfc/rfc1032.txt
 share/doc/bind9/rfc/rfc1033.txt
 share/doc/bind9/rfc/rfc1034.txt
