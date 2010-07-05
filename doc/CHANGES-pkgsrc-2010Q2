@@ -4,3 +4,6 @@ pkgsrc-2010Q2 branch:
 Created pkgsrc-2010Q2 branch [agc 2010-07-02 20:58 UTC]
 Pullup ticket #3154 - requested by wiz
 multimedia/vlc: portability fix
+Pullup ticket #3155 - requested by taca
+databases/mysql51-client: security update
+databases/mysql51-server: security update
