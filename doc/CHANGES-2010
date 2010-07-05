@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2382 2010/07/05 08:20:24 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2383 2010/07/05 09:11:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3177,3 +3177,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pkgdiff to 0.123 [sbd 2010-07-05]
 	Updated www/ikiwiki to 3.20100704 [schmonz 2010-07-05]
 	Updated x11/tint2 to 0.11 [tnn 2010-07-05]
+	Updated devel/mercurial to 1.6 [wiz 2010-07-05]
