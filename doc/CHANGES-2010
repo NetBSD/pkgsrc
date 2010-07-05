@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2385 2010/07/05 10:22:05 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2386 2010/07/05 11:55:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3179,3 +3179,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/tint2 to 0.11 [tnn 2010-07-05]
 	Updated devel/mercurial to 1.6 [wiz 2010-07-05]
 	Updated emulators/tme to 0.8nb1 [obache 2010-07-05]
+	Updated fonts/umefont-ttf to 0.417 [obache 2010-07-05]
