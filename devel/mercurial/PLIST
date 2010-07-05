@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/06/05 12:32:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/07/05 09:11:14 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -191,6 +191,9 @@ ${PYSITELIB}/mercurial/context.pyo
 ${PYSITELIB}/mercurial/copies.py
 ${PYSITELIB}/mercurial/copies.pyc
 ${PYSITELIB}/mercurial/copies.pyo
+${PYSITELIB}/mercurial/dagparser.py
+${PYSITELIB}/mercurial/dagparser.pyc
+${PYSITELIB}/mercurial/dagparser.pyo
 ${PYSITELIB}/mercurial/demandimport.py
 ${PYSITELIB}/mercurial/demandimport.pyc
 ${PYSITELIB}/mercurial/demandimport.pyo
@@ -198,6 +201,9 @@ ${PYSITELIB}/mercurial/diffhelpers.so
 ${PYSITELIB}/mercurial/dirstate.py
 ${PYSITELIB}/mercurial/dirstate.pyc
 ${PYSITELIB}/mercurial/dirstate.pyo
+${PYSITELIB}/mercurial/discovery.py
+${PYSITELIB}/mercurial/discovery.pyc
+${PYSITELIB}/mercurial/discovery.pyo
 ${PYSITELIB}/mercurial/dispatch.py
 ${PYSITELIB}/mercurial/dispatch.pyc
 ${PYSITELIB}/mercurial/dispatch.pyo
@@ -233,9 +239,12 @@ ${PYSITELIB}/mercurial/help/dates.txt
 ${PYSITELIB}/mercurial/help/diffs.txt
 ${PYSITELIB}/mercurial/help/environment.txt
 ${PYSITELIB}/mercurial/help/extensions.txt
+${PYSITELIB}/mercurial/help/glossary.txt
+${PYSITELIB}/mercurial/help/hgweb.txt
 ${PYSITELIB}/mercurial/help/multirevs.txt
 ${PYSITELIB}/mercurial/help/patterns.txt
 ${PYSITELIB}/mercurial/help/revisions.txt
+${PYSITELIB}/mercurial/help/revsets.txt
 ${PYSITELIB}/mercurial/help/templates.txt
 ${PYSITELIB}/mercurial/help/urls.txt
 ${PYSITELIB}/mercurial/hg.py
@@ -331,6 +340,9 @@ ${PYSITELIB}/mercurial/node.py
 ${PYSITELIB}/mercurial/node.pyc
 ${PYSITELIB}/mercurial/node.pyo
 ${PYSITELIB}/mercurial/osutil.so
+${PYSITELIB}/mercurial/parser.py
+${PYSITELIB}/mercurial/parser.pyc
+${PYSITELIB}/mercurial/parser.pyo
 ${PYSITELIB}/mercurial/parsers.so
 ${PYSITELIB}/mercurial/patch.py
 ${PYSITELIB}/mercurial/patch.pyc
@@ -338,6 +350,9 @@ ${PYSITELIB}/mercurial/patch.pyo
 ${PYSITELIB}/mercurial/posix.py
 ${PYSITELIB}/mercurial/posix.pyc
 ${PYSITELIB}/mercurial/posix.pyo
+${PYSITELIB}/mercurial/pushkey.py
+${PYSITELIB}/mercurial/pushkey.pyc
+${PYSITELIB}/mercurial/pushkey.pyo
 ${PYSITELIB}/mercurial/repair.py
 ${PYSITELIB}/mercurial/repair.pyc
 ${PYSITELIB}/mercurial/repair.pyo
@@ -347,6 +362,12 @@ ${PYSITELIB}/mercurial/repo.pyo
 ${PYSITELIB}/mercurial/revlog.py
 ${PYSITELIB}/mercurial/revlog.pyc
 ${PYSITELIB}/mercurial/revlog.pyo
+${PYSITELIB}/mercurial/revset.py
+${PYSITELIB}/mercurial/revset.pyc
+${PYSITELIB}/mercurial/revset.pyo
+${PYSITELIB}/mercurial/similar.py
+${PYSITELIB}/mercurial/similar.pyc
+${PYSITELIB}/mercurial/similar.pyo
 ${PYSITELIB}/mercurial/simplemerge.py
 ${PYSITELIB}/mercurial/simplemerge.pyc
 ${PYSITELIB}/mercurial/simplemerge.pyo
