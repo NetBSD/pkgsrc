@@ -1,13 +1,16 @@
-$NetBSD: patch-ad,v 1.2 2009/02/21 18:54:41 gdt Exp $
+$NetBSD: patch-ad,v 1.3 2010/07/05 00:05:23 gdt Exp $
 
-Rejected by upstream.  There is comment in Makefile.in that explains
-why there is no space, and output flag is set to "-o ".  This needs a
-comment explaining why the change is made and why the original scheme
-of putting the space in the variable doesn't work.
+This patch was rejected by upstream.  There is a comment in upstream
+Makefile.in that explains why there is no space, and output flag is
+set to "-o ", so that the output flag can be set to "-Fo" for MSVC.n
 
---- Makefile.in.orig	2007-07-23 22:30:00.000000000 +0100
+On NetBSD, the upstream versoni works, but there is some mysterious
+failure on Mac OS X.  This patch therefore needs investigation and
+resolution to be filed with upstream.
+
+--- Makefile.in.orig	2010-06-20 04:16:20.000000000 +0000
 +++ Makefile.in
-@@ -90,7 +90,7 @@ LIBOBJS = queue.o route.o waypt.o filter
+@@ -102,7 +102,7 @@ LIBOBJS = queue.o route.o waypt.o filter
  OBJS = main.o globals.o $(LIBOBJS) @FILEINFO@
  
  .c.o:
@@ -16,7 +19,7 @@ of putting the space in the variable doesn't work.
  
  
  
-@@ -101,10 +101,10 @@ WEB=@DOCDIR@
+@@ -113,10 +113,10 @@ WEB=@DOCDIR@
  all: gpsbabel$(EXEEXT)
  
  gpsbabel$(EXEEXT): configure Makefile $(OBJS) @GPSBABEL_DEBUG@ 
@@ -27,9 +30,9 @@ of putting the space in the variable doesn't work.
 -	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH)$@
 +	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH) $@
  
- Makefile gbversion.h: Makefile.in config.status xmldoc/makedoc.in gbversion.h.in
- 	CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status 
-@@ -113,7 +113,7 @@ config.status: configure 
+ Makefile gbversion.h: Makefile.in config.status xmldoc/makedoc.in \
+ 	  gbversion.h.in gui/setup.iss.in
+@@ -129,7 +129,7 @@ config.status: configure 
  	$(SHELL) config.status --recheck
  
  jeeps/gpslibusb.o: 
