@@ -1,14 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2010/04/11 21:43:57 gls Exp $
+$NetBSD: patch-aa,v 1.3 2010/07/05 08:06:15 tnn Exp $
 
-Do not automatically install samples
---- Makefile.in.orig	2010-01-28 11:16:45.000000000 +0000
-+++ Makefile.in
-@@ -237,7 +237,7 @@ top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
- ACLOCAL_AMFLAGS = -I m4
--SUBDIRS = doc sample src
-+SUBDIRS = doc src
- dist_doc_DATA = AUTHORS ChangeLog NEWS README
- EXTRA_DIST = autogen.sh README.source
- dist_pkgdata_DATA = default_icon.png
+--- CMakeLists.txt.orig	2010-06-15 21:38:14.000000000 +0000
++++ CMakeLists.txt
+@@ -99,7 +99,7 @@ set_target_properties( tint2 PROPERTIES 
+ set_target_properties(tint2 PROPERTIES LINK_FLAGS "-pthread" )
+ 
+ install( TARGETS tint2 DESTINATION bin )
+-install( FILES sample/tint2rc DESTINATION ${SYSCONFDIR}/xdg/tint2 )
++#install( FILES sample/tint2rc DESTINATION ${SYSCONFDIR}/xdg/tint2 )
+ install( FILES default_icon.png DESTINATION ${DATADIR}/tint2 )
+ install( FILES AUTHORS ChangeLog README DESTINATION ${DOCDIR} )
+ install( FILES doc/tint2.1 DESTINATION ${MANDIR}/man1 )
