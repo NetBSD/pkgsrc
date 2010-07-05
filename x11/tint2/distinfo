@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/04/11 21:43:57 gls Exp $
+$NetBSD: distinfo,v 1.3 2010/07/05 08:06:15 tnn Exp $
 
-SHA1 (tint2-0.9.tar.gz) = fa69aaa924bb5a85cfa753946c8a6ebed79d73d8
-RMD160 (tint2-0.9.tar.gz) = 958a4850857e2b90fea72c48d32ca3d687d6bc74
-Size (tint2-0.9.tar.gz) = 206491 bytes
-SHA1 (patch-aa) = 104875afab897c052e7011f7b4ae03ab340bcd14
+SHA1 (tint2-0.11.tar.bz2) = 9752255529673dabf13e7437afd1cd0b39d9c92b
+RMD160 (tint2-0.11.tar.bz2) = f094e81aec1fae98a88e8392c4c9e6b5fecb6120
+Size (tint2-0.11.tar.bz2) = 91716 bytes
+SHA1 (patch-aa) = 2865cdb561d856615c607d589af9040bfc95e14b
+SHA1 (patch-ab) = 41d3059bc5d329a2f8ad55e05a43ef3e2e199fec
