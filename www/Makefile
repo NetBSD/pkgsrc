@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.753 2010/07/04 21:42:53 seb Exp $
+# $NetBSD: Makefile,v 1.754 2010/07/05 14:48:15 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -94,6 +94,9 @@ SUBDIR+=	cherokee
 SUBDIR+=	chimera
 SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
+#SUBDIR+=	contao		# only contains Makefile fragments
+SUBDIR+=	contao29
+SUBDIR+=	contao29-example
 SUBDIR+=	crawl
 SUBDIR+=	cronolog
 SUBDIR+=	curl
