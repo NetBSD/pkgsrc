@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2376 2010/07/05 03:16:20 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2377 2010/07/05 03:18:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/sudo to 1.7.2p8 [taca 2010-07-05]
 	Updated databases/mysql51-client to 5.1.48 [taca 2010-07-05]
 	Updated databases/mysql51-server to 5.1.48 [taca 2010-07-05]
+	Updated net/bind97 to 9.7.1 [taca 2010-07-05]
