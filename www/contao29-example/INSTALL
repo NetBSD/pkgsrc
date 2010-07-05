@@ -1,0 +1,21 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2010/07/05 14:46:25 taca Exp $
+
+PAX="@PAX@"
+CT_EGDIR="@PREFIX@/@CT_EGDIR@"
+CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+CT_DATA="music_academy.css tl_files/music_academy"
+
+case "${STAGE}" in
+POST-INSTALL)
+	cd ${CT_EGDIR} &&
+		@PAX@ -rw ${CT_DATA} ${CT_WEBDIR}
+	for f in ${CT_DATA}; do
+		${CHGRP} -R ${WWWGRP} ${CT_WEBDIR}/$f
+		${CHOWN} -R ${WWWOWN} ${CT_WEBDIR}/$f
+	done
+	;;
+esac
