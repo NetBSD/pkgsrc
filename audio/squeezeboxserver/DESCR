@@ -1,0 +1,3 @@
+SqueezeboxServer is the software behind Logitech's networked audio players such
+as the Squeezebox.  It streams music to the device over the network from your
+local computer.
