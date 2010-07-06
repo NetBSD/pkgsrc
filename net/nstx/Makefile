@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/02/11 22:20:52 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/06 10:17:14 jmmv Exp $
 #
 
 DISTNAME=		nstx-1.1-beta6
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://nstx.dereference.de/nstx/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nstx.dereference.de/nstx/
 COMMENT=		Nameserver Transfer Protocol
 

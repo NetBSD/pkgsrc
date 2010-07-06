@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.9 2008/02/18 16:39:43 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.10 2010/07/06 10:17:14 jmmv Exp $
 #
 
 DISTNAME=	pnetlib-0.8.0
 CATEGORIES=	lang
 MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dotgnu.org/
 COMMENT=	DotGNU Portable .NET C SHARP class libraries
 

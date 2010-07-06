@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:29 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/07/06 10:17:12 jmmv Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.pknet.com/~joe/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pknet.com/~joe/dgen-sdl.html
 COMMENT=	Genesis/Megadrive emulator for Unix platforms
 

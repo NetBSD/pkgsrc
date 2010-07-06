@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.9 2009/03/02 23:27:46 abs Exp $
+# $NetBSD: Makefile.common,v 1.10 2010/07/06 10:17:15 jmmv Exp $
 #
 
 DISTNAME=	wistumbler2-2.0pre10
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nopcode.org/prj/wistumbler2/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nopcode.org/?t=wistumbler2
 COMMENT=	Fork of original WaveLAN/IEEE network stumbler
 

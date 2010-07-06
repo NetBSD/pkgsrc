@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2009/07/06 22:17:14 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/07/06 10:17:13 jmmv Exp $
 
 DISTNAME=	pnet-0.8.0
 #PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dotgnu.org/
 COMMENT=	DotGNU Portable.NET (development tools)
 

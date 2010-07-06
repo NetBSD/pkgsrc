@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/02/25 07:15:42 agc Exp $
+# $NetBSD: Makefile,v 1.17 2010/07/06 10:17:15 jmmv Exp $
 #
 
 DISTNAME=		chkrootkit-0.47
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.chkrootkit.org/
 COMMENT=		Locally checks for signs of a rootkit
 LICENSE=		modified-bsd
