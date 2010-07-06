@@ -1,22 +1,19 @@
-@comment $NetBSD: PLIST,v 1.41 2009/11/15 21:18:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.42 2010/07/06 15:52:44 drochner Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.20/gedit/gedit-app.h
 include/gedit-2.20/gedit/gedit-commands.h
-include/gedit-2.20/gedit/gedit-convert.h
 include/gedit-2.20/gedit/gedit-debug.h
 include/gedit-2.20/gedit/gedit-document.h
-include/gedit-2.20/gedit/gedit-encodings-option-menu.h
+include/gedit-2.20/gedit/gedit-encodings-combo-box.h
 include/gedit-2.20/gedit/gedit-encodings.h
 include/gedit-2.20/gedit/gedit-file-chooser-dialog.h
 include/gedit-2.20/gedit/gedit-help.h
 include/gedit-2.20/gedit/gedit-message-bus.h
 include/gedit-2.20/gedit/gedit-message-type.h
 include/gedit-2.20/gedit/gedit-message.h
-include/gedit-2.20/gedit/gedit-metadata-manager.h
 include/gedit-2.20/gedit/gedit-notebook.h
 include/gedit-2.20/gedit/gedit-panel.h
-include/gedit-2.20/gedit/gedit-plugin-loader.h
 include/gedit-2.20/gedit/gedit-plugin.h
 include/gedit-2.20/gedit/gedit-prefs-manager-app.h
 include/gedit-2.20/gedit/gedit-prefs-manager.h
@@ -31,11 +28,9 @@ lib/gedit-2/plugin-loaders/libcloader.la
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
 lib/gedit-2/plugins/filebrowser.gedit-plugin
-lib/gedit-2/plugins/indent.gedit-plugin
 lib/gedit-2/plugins/libchangecase.la
 lib/gedit-2/plugins/libdocinfo.la
 lib/gedit-2/plugins/libfilebrowser.la
-lib/gedit-2/plugins/libindent.la
 lib/gedit-2/plugins/libmodelines.la
 lib/gedit-2/plugins/libsort.la
 ${PLIST.enchant}lib/gedit-2/plugins/libspell.la
@@ -263,32 +258,32 @@ share/gnome/help/gedit/zh_TW/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/zh_TW/figures/gedit_window.png
 share/gnome/help/gedit/zh_TW/gedit.xml
 share/gnome/help/gedit/zh_TW/legal.xml
-share/gtk-doc/html/gedit/GeditApp.html
-share/gtk-doc/html/gedit/GeditDocument.html
-share/gtk-doc/html/gedit/GeditEncodingsOptionMenu.html
-share/gtk-doc/html/gedit/GeditFileChooserDialog.html
 share/gtk-doc/html/gedit/GeditMessage.html
 share/gtk-doc/html/gedit/GeditMessageBus.html
-share/gtk-doc/html/gedit/GeditNotebook.html
-share/gtk-doc/html/gedit/GeditPanel.html
 share/gtk-doc/html/gedit/GeditPlugin.html
-share/gtk-doc/html/gedit/GeditProgressMessageArea.html
-share/gtk-doc/html/gedit/GeditStatusbar.html
-share/gtk-doc/html/gedit/GeditTab.html
-share/gtk-doc/html/gedit/GeditView.html
-share/gtk-doc/html/gedit/GeditWindow.html
 share/gtk-doc/html/gedit/ch01.html
 share/gtk-doc/html/gedit/gedit-GeditMessageType.html
 share/gtk-doc/html/gedit/gedit-GeditPrintJob.html
-share/gtk-doc/html/gedit/gedit-GeditPrintJobPreview.html
+share/gtk-doc/html/gedit/gedit-gedit-app.html
 share/gtk-doc/html/gedit/gedit-gedit-convert.html
 share/gtk-doc/html/gedit/gedit-gedit-debug.html
+share/gtk-doc/html/gedit/gedit-gedit-document.html
+share/gtk-doc/html/gedit/gedit-gedit-encodings-option-menu.html
 share/gtk-doc/html/gedit/gedit-gedit-encodings.html
+share/gtk-doc/html/gedit/gedit-gedit-file-chooser-dialog.html
 share/gtk-doc/html/gedit/gedit-gedit-help.html
 share/gtk-doc/html/gedit/gedit-gedit-metadata-manager.html
+share/gtk-doc/html/gedit/gedit-gedit-notebook.html
+share/gtk-doc/html/gedit/gedit-gedit-panel.html
 share/gtk-doc/html/gedit/gedit-gedit-prefs-manager-app.html
 share/gtk-doc/html/gedit/gedit-gedit-prefs-manager.html
+share/gtk-doc/html/gedit/gedit-gedit-print-job-preview.html
+share/gtk-doc/html/gedit/gedit-gedit-progress-message-area.html
+share/gtk-doc/html/gedit/gedit-gedit-statusbar.html
+share/gtk-doc/html/gedit/gedit-gedit-tab.html
 share/gtk-doc/html/gedit/gedit-gedit-utils.html
+share/gtk-doc/html/gedit/gedit-gedit-view.html
+share/gtk-doc/html/gedit/gedit-gedit-window.html
 share/gtk-doc/html/gedit/gedit.devhelp
 share/gtk-doc/html/gedit/gedit.devhelp2
 share/gtk-doc/html/gedit/home.png
@@ -320,6 +315,7 @@ share/locale/da/LC_MESSAGES/gedit.mo
 share/locale/de/LC_MESSAGES/gedit.mo
 share/locale/dz/LC_MESSAGES/gedit.mo
 share/locale/el/LC_MESSAGES/gedit.mo
+share/locale/en@shaw/LC_MESSAGES/gedit.mo
 share/locale/en_CA/LC_MESSAGES/gedit.mo
 share/locale/en_GB/LC_MESSAGES/gedit.mo
 share/locale/eo/LC_MESSAGES/gedit.mo
@@ -357,6 +353,7 @@ share/locale/mn/LC_MESSAGES/gedit.mo
 share/locale/mr/LC_MESSAGES/gedit.mo
 share/locale/ms/LC_MESSAGES/gedit.mo
 share/locale/nb/LC_MESSAGES/gedit.mo
+share/locale/nds/LC_MESSAGES/gedit.mo
 share/locale/ne/LC_MESSAGES/gedit.mo
 share/locale/nl/LC_MESSAGES/gedit.mo
 share/locale/nn/LC_MESSAGES/gedit.mo
@@ -413,5 +410,4 @@ share/omf/gedit/gedit-uk.omf
 share/omf/gedit/gedit-zh_CN.omf
 share/omf/gedit/gedit-zh_HK.omf
 share/omf/gedit/gedit-zh_TW.omf
-@pkgdir share/gedit-2/plugins/indent
 @pkgdir share/gedit-2/plugins/changecase
