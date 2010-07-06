@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2388 2010/07/05 22:42:02 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2389 2010/07/06 07:32:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3183,3 +3183,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/contao29 version 2.9.0 [taca 2010-07-05]
 	Added www/contao29-example version 2.9.0 [taca 2010-07-05]
 	Updated math/fricas to 1.1.0 [asau 2010-07-05]
+	Updated databases/rrdtool to 1.4.4 [adam 2010-07-06]
