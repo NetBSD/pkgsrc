@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2010/06/11 13:50:10 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2010/07/06 15:00:27 drochner Exp $
 
-DISTNAME=	gnome-platform-2.30.1
+DISTNAME=	gnome-platform-2.30.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -27,11 +27,11 @@ DEPENDS+=	esound>=0.2.41:../../audio/esound
 .if !empty(PKG_OPTIONS:Mfam)
 DEPENDS+=	gio-fam>=2.24.0:../../sysutils/gio-fam  # This is part of glib2.
 .endif
-DEPENDS+=	glib2>=2.24.0:../../devel/glib2
+DEPENDS+=	glib2>=2.24.1:../../devel/glib2
 DEPENDS+=	gnome-mime-data>=2.18.0:../../databases/gnome-mime-data
 DEPENDS+=	gnome-vfs>=2.24.3:../../sysutils/gnome-vfs
 DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
-DEPENDS+=	gtk2+>=2.20.0:../../x11/gtk2
+DEPENDS+=	gtk2+>=2.20.1:../../x11/gtk2
 DEPENDS+=	gtk-doc>=1.14:../../textproc/gtk-doc
 DEPENDS+=	libIDL>=0.8.14:../../net/libIDL
 DEPENDS+=	libart>=2.3.21:../../graphics/libart
@@ -41,6 +41,6 @@ DEPENDS+=	libglade>=2.6.4:../../devel/libglade
 DEPENDS+=	libgnome>=2.30.0:../../devel/libgnome
 DEPENDS+=	libgnomecanvas>=2.30.1:../../graphics/libgnomecanvas
 DEPENDS+=	libgnomeui>=2.24.3:../../devel/libgnomeui
-DEPENDS+=	pango>=1.28.0:../../devel/pango
+DEPENDS+=	pango>=1.28.1:../../devel/pango
 
 .include "../../mk/bsd.pkg.mk"
