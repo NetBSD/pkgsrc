@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/10/30 11:44:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/07/06 15:32:17 drochner Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
@@ -85,8 +85,14 @@ share/gnome/help/totem/C/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/C/figures/totem_volume_mute_button.png
 share/gnome/help/totem/C/legal.xml
 share/gnome/help/totem/C/totem.xml
+share/gnome/help/totem/bg/figures/totem_next_button.png
+share/gnome/help/totem/bg/figures/totem_pause_button.png
+share/gnome/help/totem/bg/figures/totem_play_button.png
+share/gnome/help/totem/bg/figures/totem_previous_button.png
+share/gnome/help/totem/bg/figures/totem_show_playlist_button.png
 share/gnome/help/totem/bg/figures/totem_start_window.png
-share/gnome/help/totem/bg/legal.xml
+share/gnome/help/totem/bg/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/bg/figures/totem_volume_mute_button.png
 share/gnome/help/totem/bg/totem.xml
 share/gnome/help/totem/ca/figures/totem_next_button.png
 share/gnome/help/totem/ca/figures/totem_pause_button.png
@@ -160,6 +166,15 @@ share/gnome/help/totem/eu/figures/totem_start_window.png
 share/gnome/help/totem/eu/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/eu/figures/totem_volume_mute_button.png
 share/gnome/help/totem/eu/totem.xml
+share/gnome/help/totem/fi/figures/totem_next_button.png
+share/gnome/help/totem/fi/figures/totem_pause_button.png
+share/gnome/help/totem/fi/figures/totem_play_button.png
+share/gnome/help/totem/fi/figures/totem_previous_button.png
+share/gnome/help/totem/fi/figures/totem_show_playlist_button.png
+share/gnome/help/totem/fi/figures/totem_start_window.png
+share/gnome/help/totem/fi/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/fi/figures/totem_volume_mute_button.png
+share/gnome/help/totem/fi/totem.xml
 share/gnome/help/totem/fr/figures/totem_next_button.png
 share/gnome/help/totem/fr/figures/totem_pause_button.png
 share/gnome/help/totem/fr/figures/totem_play_button.png
@@ -330,6 +345,7 @@ share/locale/da/LC_MESSAGES/totem.mo
 share/locale/de/LC_MESSAGES/totem.mo
 share/locale/dz/LC_MESSAGES/totem.mo
 share/locale/el/LC_MESSAGES/totem.mo
+share/locale/en@shaw/LC_MESSAGES/totem.mo
 share/locale/en_CA/LC_MESSAGES/totem.mo
 share/locale/en_GB/LC_MESSAGES/totem.mo
 share/locale/es/LC_MESSAGES/totem.mo
@@ -403,6 +419,7 @@ share/omf/totem/totem-el.omf
 share/omf/totem/totem-en_GB.omf
 share/omf/totem/totem-es.omf
 share/omf/totem/totem-eu.omf
+share/omf/totem/totem-fi.omf
 share/omf/totem/totem-fr.omf
 share/omf/totem/totem-it.omf
 share/omf/totem/totem-ja.omf
