@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:45:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/06 10:17:16 jmmv Exp $
 #
 
 DISTNAME=	xml2doc-20030510
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://xml2doc.sourceforge.net/src/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xml2doc.sourceforge.net/
 COMMENT=	Xml to document formats converter
 
