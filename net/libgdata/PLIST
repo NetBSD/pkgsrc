@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/14 16:40:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/07/06 15:25:06 drochner Exp $
 include/libgdata/gdata/atom/gdata-author.h
 include/libgdata/gdata/atom/gdata-category.h
 include/libgdata/gdata/atom/gdata-generator.h
 include/libgdata/gdata/atom/gdata-link.h
-include/libgdata/gdata/exif/gdata-exif-tags.h
 include/libgdata/gdata/gd/gdata-gd-email-address.h
 include/libgdata/gdata/gd/gdata-gd-im-address.h
 include/libgdata/gdata/gd/gdata-gd-name.h
@@ -26,7 +25,6 @@ include/libgdata/gdata/gdata-service.h
 include/libgdata/gdata/gdata-types.h
 include/libgdata/gdata/gdata-upload-stream.h
 include/libgdata/gdata/gdata.h
-include/libgdata/gdata/georss/gdata-georss-where.h
 include/libgdata/gdata/media/gdata-media-category.h
 include/libgdata/gdata/media/gdata-media-content.h
 include/libgdata/gdata/media/gdata-media-credit.h
@@ -51,9 +49,11 @@ include/libgdata/gdata/services/documents/gdata-documents-spreadsheet.h
 include/libgdata/gdata/services/documents/gdata-documents-text.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-album.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-enums.h
+include/libgdata/gdata/services/picasaweb/gdata-picasaweb-feed.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-file.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-query.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-service.h
+include/libgdata/gdata/services/picasaweb/gdata-picasaweb-user.h
 include/libgdata/gdata/services/youtube/gdata-youtube-content.h
 include/libgdata/gdata/services/youtube/gdata-youtube-credit.h
 include/libgdata/gdata/services/youtube/gdata-youtube-enums.h
@@ -88,6 +88,7 @@ share/gtk-doc/html/gdata/GDataEntry.html
 share/gtk-doc/html/gdata/GDataFeed.html
 share/gtk-doc/html/gdata/GDataGDEmailAddress.html
 share/gtk-doc/html/gdata/GDataGDIMAddress.html
+share/gtk-doc/html/gdata/GDataGDName.html
 share/gtk-doc/html/gdata/GDataGDOrganization.html
 share/gtk-doc/html/gdata/GDataGDPhoneNumber.html
 share/gtk-doc/html/gdata/GDataGDPostalAddress.html
@@ -140,6 +141,10 @@ share/gtk-doc/html/gdata/ix02.html
 share/gtk-doc/html/gdata/ix03.html
 share/gtk-doc/html/gdata/ix04.html
 share/gtk-doc/html/gdata/ix05.html
+share/gtk-doc/html/gdata/ix06.html
+share/gtk-doc/html/gdata/ix07.html
+share/gtk-doc/html/gdata/ix08.html
+share/gtk-doc/html/gdata/ix09.html
 share/gtk-doc/html/gdata/left.png
 share/gtk-doc/html/gdata/pt01.html
 share/gtk-doc/html/gdata/pt02.html
@@ -151,6 +156,7 @@ share/gtk-doc/html/gdata/structure.png
 share/gtk-doc/html/gdata/style.css
 share/gtk-doc/html/gdata/up.png
 share/locale/ca/LC_MESSAGES/gdata.mo
+share/locale/cs/LC_MESSAGES/gdata.mo
 share/locale/de/LC_MESSAGES/gdata.mo
 share/locale/el/LC_MESSAGES/gdata.mo
 share/locale/en_GB/LC_MESSAGES/gdata.mo
@@ -159,13 +165,17 @@ share/locale/eu/LC_MESSAGES/gdata.mo
 share/locale/fr/LC_MESSAGES/gdata.mo
 share/locale/gl/LC_MESSAGES/gdata.mo
 share/locale/hu/LC_MESSAGES/gdata.mo
+share/locale/it/LC_MESSAGES/gdata.mo
 share/locale/ja/LC_MESSAGES/gdata.mo
 share/locale/nb/LC_MESSAGES/gdata.mo
 share/locale/pa/LC_MESSAGES/gdata.mo
 share/locale/pl/LC_MESSAGES/gdata.mo
 share/locale/pt/LC_MESSAGES/gdata.mo
 share/locale/pt_BR/LC_MESSAGES/gdata.mo
+share/locale/ru/LC_MESSAGES/gdata.mo
+share/locale/sl/LC_MESSAGES/gdata.mo
 share/locale/sv/LC_MESSAGES/gdata.mo
 share/locale/uk/LC_MESSAGES/gdata.mo
+share/locale/zh_CN/LC_MESSAGES/gdata.mo
 share/locale/zh_HK/LC_MESSAGES/gdata.mo
 share/locale/zh_TW/LC_MESSAGES/gdata.mo
