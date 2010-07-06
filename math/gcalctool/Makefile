@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2010/06/17 07:45:59 obache Exp $
+# $NetBSD: Makefile,v 1.91 2010/07/06 15:39:35 drochner Exp $
 #
 
-DISTNAME=		gcalctool-5.30.1
+DISTNAME=		gcalctool-5.30.2
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.30/}
 EXTRACT_SUFX=		.tar.bz2
