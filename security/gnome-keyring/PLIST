@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/06/11 13:45:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/07/06 16:13:41 drochner Exp $
 bin/gnome-keyring
 bin/gnome-keyring-daemon
 include/gcr/gcr-certificate-basics-widget.h
@@ -24,6 +24,7 @@ lib/pkgconfig/gcr-0.pc
 lib/pkgconfig/gp11-0.pc
 lib/security/pam_gnome_keyring.la
 libexec/gnome-keyring-prompt
+share/dbus-1/services/org.freedesktop.secrets.service
 share/dbus-1/services/org.gnome.keyring.service
 share/gconf/schemas/gnome-keyring.schemas
 share/gcr/ui/gcr-certificate-basics-widget.ui
