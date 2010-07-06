@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:43:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/07/06 07:31:20 adam Exp $
+bin/rrdcached
 bin/rrdcgi
 bin/rrdtool
 bin/rrdupdate
 include/rrd.h
+include/rrd_client.h
 include/rrd_format.h
 lib/librrd.la
 lib/librrd_th.la
@@ -12,11 +14,13 @@ man/man1/cdeftutorial.1
 man/man1/rpntutorial.1
 man/man1/rrd-beginners.1
 man/man1/rrdbuild.1
+man/man1/rrdcached.1
 man/man1/rrdcgi.1
 man/man1/rrdcreate.1
 man/man1/rrddump.1
 man/man1/rrdfetch.1
 man/man1/rrdfirst.1
+man/man1/rrdflushcached.1
 man/man1/rrdgraph.1
 man/man1/rrdgraph_data.1
 man/man1/rrdgraph_examples.1
@@ -33,19 +37,23 @@ man/man1/rrdtune.1
 man/man1/rrdtutorial.1
 man/man1/rrdupdate.1
 man/man1/rrdxport.1
+man/man3/librrd.3
 share/doc/rrdtool-${PKGVERSION}/html/RRDp.html
 share/doc/rrdtool-${PKGVERSION}/html/RRDs.html
 share/doc/rrdtool-${PKGVERSION}/html/bin_dec_hex.html
 share/doc/rrdtool-${PKGVERSION}/html/cdeftutorial.html
 share/doc/rrdtool-${PKGVERSION}/html/index.html
+share/doc/rrdtool-${PKGVERSION}/html/librrd.html
 share/doc/rrdtool-${PKGVERSION}/html/rpntutorial.html
 share/doc/rrdtool-${PKGVERSION}/html/rrd-beginners.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdbuild.html
+share/doc/rrdtool-${PKGVERSION}/html/rrdcached.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdcgi.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdcreate.html
 share/doc/rrdtool-${PKGVERSION}/html/rrddump.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdfetch.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdfirst.html
+share/doc/rrdtool-${PKGVERSION}/html/rrdflushcached.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdgraph.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdgraph_data.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdgraph_examples.html
@@ -66,12 +74,15 @@ share/doc/rrdtool-${PKGVERSION}/txt/bin_dec_hex.pod
 share/doc/rrdtool-${PKGVERSION}/txt/bin_dec_hex.txt
 share/doc/rrdtool-${PKGVERSION}/txt/cdeftutorial.pod
 share/doc/rrdtool-${PKGVERSION}/txt/cdeftutorial.txt
+share/doc/rrdtool-${PKGVERSION}/txt/librrd.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rpntutorial.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rpntutorial.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrd-beginners.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrd-beginners.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdbuild.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdbuild.txt
+share/doc/rrdtool-${PKGVERSION}/txt/rrdcached.pod
+share/doc/rrdtool-${PKGVERSION}/txt/rrdcached.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdcgi.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdcgi.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdcreate.pod
@@ -82,6 +93,8 @@ share/doc/rrdtool-${PKGVERSION}/txt/rrdfetch.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdfetch.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdfirst.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdfirst.txt
+share/doc/rrdtool-${PKGVERSION}/txt/rrdflushcached.pod
+share/doc/rrdtool-${PKGVERSION}/txt/rrdflushcached.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdgraph.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdgraph.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdgraph_data.pod
@@ -114,6 +127,8 @@ share/doc/rrdtool-${PKGVERSION}/txt/rrdupdate.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdupdate.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdxport.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdxport.txt
+share/examples/rrdcached/RRDCached.pm
+share/examples/rrdcached/rrdcached-size.pl
 share/examples/rrdtool/4charts.pl
 share/examples/rrdtool/bigtops.pl
 share/examples/rrdtool/cgi-demo.cgi
