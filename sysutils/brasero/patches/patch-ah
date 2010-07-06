@@ -1,29 +1,28 @@
-$NetBSD: patch-ah,v 1.2 2009/12/09 19:01:06 drochner Exp $
+$NetBSD: patch-ah,v 1.3 2010/07/06 15:23:59 drochner Exp $
 
---- nautilus/Makefile.in.orig	2009-10-19 18:05:45.000000000 +0200
+--- nautilus/Makefile.in.orig	2010-04-26 23:29:14.000000000 +0000
 +++ nautilus/Makefile.in
-@@ -71,10 +71,7 @@ am__installdirs = "$(DESTDIR)$(nautilus_
- 	"$(DESTDIR)$(desktopdir)"
+@@ -72,9 +72,7 @@ am__installdirs = "$(DESTDIR)$(nautilus_
  LTLIBRARIES = $(nautilus_extension_LTLIBRARIES)
  am__DEPENDENCIES_1 =
--libnautilus_brasero_extension_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
--	../libbrasero-utils/libbrasero-utils.la \
+ libnautilus_brasero_extension_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+-	$(am__DEPENDENCIES_1) ../libbrasero-utils/libbrasero-utils.la \
 -	../libbrasero-media/libbrasero-media.la \
 -	../libbrasero-burn/libbrasero-burn.la
-+libnautilus_brasero_extension_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
++	$(am__DEPENDENCIES_1)
  am_libnautilus_brasero_extension_la_OBJECTS = nautilus-burn-bar.lo \
  	nautilus-burn-extension.lo brasero-project-name.lo
  libnautilus_brasero_extension_la_OBJECTS =  \
-@@ -355,9 +352,10 @@ libnautilus_brasero_extension_la_SOURCES
- 
+@@ -368,9 +366,10 @@ libnautilus_brasero_extension_la_SOURCES
  libnautilus_brasero_extension_la_LIBADD = \
+ 	$(BRASERO_GCONF_CFLAGS)	\
  	$(NAUTILUS_EXTENSION_LIBS)		\
 -	../libbrasero-utils/libbrasero-utils.la	\
 -	../libbrasero-media/libbrasero-media.la	\
 -	../libbrasero-burn/libbrasero-burn.la
 +	-L$(prefix)/lib -Wl,-R$(prefix)/lib \
-+	-lbrasero-utils	\
-+	-lbrasero-media	\
++	-lbrasero-utils \
++	-lbrasero-media \
 +	-lbrasero-burn
  
  libnautilus_brasero_extension_la_LDFLAGS = $(module_flags)
