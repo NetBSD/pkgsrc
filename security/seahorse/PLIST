@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/04/11 22:19:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/07/06 15:12:37 drochner Exp $
 bin/seahorse
 bin/seahorse-daemon
 include/libcryptui/cryptui-key-chooser.h
@@ -12,10 +12,10 @@ lib/pkgconfig/cryptui-0.0.pc
 lib/seahorse/seahorse-ssh-askpass
 lib/seahorse/xloadimage
 man/man1/seahorse-daemon.1
+man/man1/seahorse.1
 share/applications/seahorse.desktop
 share/dbus-1/services/org.gnome.seahorse.service
 share/gconf/schemas/seahorse.schemas
-share/gnome/autostart/seahorse-daemon.desktop
 share/gnome/help/seahorse/C/figures/seahorse-window.png
 share/gnome/help/seahorse/C/legal.xml
 share/gnome/help/seahorse/C/seahorse.xml
@@ -120,6 +120,7 @@ share/icons/hicolor/48x48/apps/seahorse-preferences.png
 share/icons/hicolor/48x48/apps/seahorse.png
 share/locale/ar/LC_MESSAGES/seahorse.mo
 share/locale/as/LC_MESSAGES/seahorse.mo
+share/locale/ast/LC_MESSAGES/seahorse.mo
 share/locale/az/LC_MESSAGES/seahorse.mo
 share/locale/be@latin/LC_MESSAGES/seahorse.mo
 share/locale/bg/LC_MESSAGES/seahorse.mo
@@ -134,6 +135,7 @@ share/locale/da/LC_MESSAGES/seahorse.mo
 share/locale/de/LC_MESSAGES/seahorse.mo
 share/locale/dz/LC_MESSAGES/seahorse.mo
 share/locale/el/LC_MESSAGES/seahorse.mo
+share/locale/en@shaw/LC_MESSAGES/seahorse.mo
 share/locale/en_CA/LC_MESSAGES/seahorse.mo
 share/locale/en_GB/LC_MESSAGES/seahorse.mo
 share/locale/es/LC_MESSAGES/seahorse.mo
@@ -148,6 +150,7 @@ share/locale/he/LC_MESSAGES/seahorse.mo
 share/locale/hi/LC_MESSAGES/seahorse.mo
 share/locale/hr/LC_MESSAGES/seahorse.mo
 share/locale/hu/LC_MESSAGES/seahorse.mo
+share/locale/id/LC_MESSAGES/seahorse.mo
 share/locale/it/LC_MESSAGES/seahorse.mo
 share/locale/ja/LC_MESSAGES/seahorse.mo
 share/locale/kn/LC_MESSAGES/seahorse.mo
@@ -170,6 +173,7 @@ share/locale/pa/LC_MESSAGES/seahorse.mo
 share/locale/pl/LC_MESSAGES/seahorse.mo
 share/locale/pt/LC_MESSAGES/seahorse.mo
 share/locale/pt_BR/LC_MESSAGES/seahorse.mo
+share/locale/ro/LC_MESSAGES/seahorse.mo
 share/locale/ru/LC_MESSAGES/seahorse.mo
 share/locale/rw/LC_MESSAGES/seahorse.mo
 share/locale/si/LC_MESSAGES/seahorse.mo
