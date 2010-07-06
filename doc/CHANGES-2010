@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2390 2010/07/06 07:34:42 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2391 2010/07/06 14:47:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/fricas to 1.1.0 [asau 2010-07-05]
 	Updated databases/rrdtool to 1.4.4 [adam 2010-07-06]
 	Updated mail/msmtp to 1.4.21 [obache 2010-07-06]
+	Added www/contao29-translations version 20100706 [taca 2010-07-06]
