@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2010/01/15 18:26:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.41 2010/07/06 15:15:05 drochner Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnome/gnome-desktop-utils.h
@@ -52,6 +52,7 @@ share/gnome/help/gpl/fi/gpl.xml
 share/gnome/help/gpl/fr/gpl.xml
 share/gnome/help/gpl/hu/gpl.xml
 share/gnome/help/gpl/ko/gpl.xml
+share/gnome/help/gpl/nds/gpl.xml
 share/gnome/help/gpl/oc/gpl.xml
 share/gnome/help/gpl/pa/gpl.xml
 share/gnome/help/gpl/sv/gpl.xml
@@ -233,6 +234,7 @@ share/omf/gpl/gpl-fi.omf
 share/omf/gpl/gpl-fr.omf
 share/omf/gpl/gpl-hu.omf
 share/omf/gpl/gpl-ko.omf
+share/omf/gpl/gpl-nds.omf
 share/omf/gpl/gpl-oc.omf
 share/omf/gpl/gpl-pa.omf
 share/omf/gpl/gpl-sv.omf
