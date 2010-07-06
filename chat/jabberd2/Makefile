@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2010/06/16 07:56:29 adam Exp $
+# $NetBSD: Makefile,v 1.59 2010/07/06 00:01:35 schnoebe Exp $
 
 DISTNAME=	jabberd-2.2.10
 CATEGORIES=	chat
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		jabberd-[0-9]*
 
-BDB_ACCEPTED=		db4 db5
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run
@@ -58,9 +57,8 @@ BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
 DOCDIR=			${PREFIX}/share/doc/jabberd
 
-FILES=			jabberd.cfg c2s.xml router.xml	\
-			router-users.xml router-filter.xml s2s.xml	\
-			sm.xml
+FILES=			jabberd.cfg c2s.xml router.xml router-users.xml \
+			router-filter.xml s2s.xml sm.xml
 DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
 			db-update.mysql	db-setup.sqlite db-update.sqlite
 DOCFILES=		README.protocol README UPGRADE ChangeLog
