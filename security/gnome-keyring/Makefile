@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2010/06/13 22:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2010/07/06 16:13:41 drochner Exp $
 
-DISTNAME=	gnome-keyring-2.30.1
-PKGREVISION=	1
+DISTNAME=	gnome-keyring-2.30.3
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.30/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,11 +39,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
-
-# XXX not necessary technically, just for transition,
-# can be removed when all dependant pkgs are switched to
-# libgnome-keyring if the library is needed
-.include "../../security/libgnome-keyring/buildlink3.mk"
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
