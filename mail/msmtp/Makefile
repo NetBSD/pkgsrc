@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2009/09/14 07:08:52 taca Exp $
+# $NetBSD: Makefile,v 1.25 2010/07/06 07:33:43 obache Exp $
 
-DISTNAME=	msmtp-1.4.18
+DISTNAME=	msmtp-1.4.21
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msmtp/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/msmtp
 CONF_FILES=	${EGDIR}/msmtprc-user.example \
