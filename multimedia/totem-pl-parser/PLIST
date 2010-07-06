@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.7 2010/05/14 16:41:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/07/06 15:22:23 drochner Exp $
 include/totem-pl-parser/1/plparser/totem-disc.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-builtins.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-features.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-mini.h
 include/totem-pl-parser/1/plparser/totem-pl-parser.h
+include/totem-pl-parser/1/plparser/totem-pl-playlist.h
 lib/libtotem-plparser-mini.la
 lib/libtotem-plparser.la
 lib/pkgconfig/totem-plparser-mini.pc
 lib/pkgconfig/totem-plparser.pc
 share/gtk-doc/html/totem-pl-parser/TotemPlParser.html
+share/gtk-doc/html/totem-pl-parser/TotemPlPlaylist.html
 share/gtk-doc/html/totem-pl-parser/annotation-glossary.html
 share/gtk-doc/html/totem-pl-parser/api-index-deprecated.html
 share/gtk-doc/html/totem-pl-parser/api-index-full.html
@@ -19,7 +21,8 @@ share/gtk-doc/html/totem-pl-parser/index.sgml
 share/gtk-doc/html/totem-pl-parser/left.png
 share/gtk-doc/html/totem-pl-parser/right.png
 share/gtk-doc/html/totem-pl-parser/style.css
-share/gtk-doc/html/totem-pl-parser/totem-pl-parser-totem-disc.html
+share/gtk-doc/html/totem-pl-parser/totem-pl-parser-TotemDisc.html
+share/gtk-doc/html/totem-pl-parser/totem-pl-parser-TotemPlPlaylistIter.html
 share/gtk-doc/html/totem-pl-parser/totem-pl-parser.devhelp
 share/gtk-doc/html/totem-pl-parser/totem-pl-parser.devhelp2
 share/gtk-doc/html/totem-pl-parser/up.png
@@ -72,6 +75,7 @@ share/locale/mai/LC_MESSAGES/totem-pl-parser.mo
 share/locale/mg/LC_MESSAGES/totem-pl-parser.mo
 share/locale/mk/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ml/LC_MESSAGES/totem-pl-parser.mo
+share/locale/mn/LC_MESSAGES/totem-pl-parser.mo
 share/locale/mr/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ms/LC_MESSAGES/totem-pl-parser.mo
 share/locale/nb/LC_MESSAGES/totem-pl-parser.mo
