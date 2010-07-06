@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2009/11/03 00:12:12 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/07/06 15:06:39 drochner Exp $
 
-DISTNAME=	gnome-backgrounds-2.28.0
+DISTNAME=	gnome-backgrounds-2.30.0
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-backgrounds/2.28/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-backgrounds/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
