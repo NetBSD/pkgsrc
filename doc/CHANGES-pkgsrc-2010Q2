@@ -7,3 +7,5 @@ multimedia/vlc: portability fix
 Pullup ticket #3155 - requested by taca
 databases/mysql51-client: security update
 databases/mysql51-server: security update
+Pullup ticket #3156 - requested by obache
+emulators/tme: build fix
