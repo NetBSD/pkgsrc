@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.3 2010/06/11 13:45:50 drochner Exp $
+$NetBSD: patch-ae,v 1.4 2010/07/06 16:13:42 drochner Exp $
 
---- daemon/Makefile.in.orig	2010-04-26 19:47:36.000000000 +0000
+--- daemon/Makefile.in.orig	2010-06-20 23:35:30.000000000 +0000
 +++ daemon/Makefile.in
-@@ -418,7 +418,7 @@ desktop_in_files = \
+@@ -416,7 +416,7 @@ desktop_in_files = \
  	gnome-keyring-secrets.desktop.in \
  	gnome-keyring-ssh.desktop.in
  
 -desktopdir = $(sysconfdir)/xdg/autostart
 +desktopdir = $(PREFIX)/share/gnome/autostart
  desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
- all: all-recursive
- 
+ EXTRA_DIST = \
+ 	$(service_in_files) \
