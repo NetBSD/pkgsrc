@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/20 00:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/06 10:17:11 jmmv Exp $
 #
 
 DISTNAME=	lsqlite_src
@@ -8,7 +8,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://lua-users.org/files/wiki_insecure/binary_modules/luasqlite/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lua-users.org/wiki/LuaSqlite
 COMMENT=	SQLite binding for LUA
 

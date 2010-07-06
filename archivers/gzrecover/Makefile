@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/24 21:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/06 10:17:11 jmmv Exp $
 #
 
 DISTNAME=		gzrt-0.5
@@ -6,7 +6,7 @@ PKGNAME=		gzrecover-0.5
 CATEGORIES=		archivers
 MASTER_SITES=		http://www.urbanophile.com/arenn/hacking/gzrt/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.urbanophile.com/arenn/hacking/gzrt/
 COMMENT=		GZip Recovery Toolkit
 

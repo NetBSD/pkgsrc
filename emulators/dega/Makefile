@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2010/07/06 10:17:12 jmmv Exp $
 #
 
 DISTNAME=	dega-1.07
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.emulinks.de/emus/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.finalburn.com/dega/
 COMMENT=	Sega Game Gear, Sega Mark III and Sega Master System emulator
 

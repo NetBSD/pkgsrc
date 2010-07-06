@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2010/07/02 10:44:46 asau Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/06 10:17:12 jmmv Exp $
 #
 
 DISTNAME=		fuse-2.5.2
 CATEGORIES=		filesystems
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fuse.sourceforge.net/
 COMMENT=		Filesystem in Userspace
 

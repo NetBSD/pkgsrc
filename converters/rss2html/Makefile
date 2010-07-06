@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/01/29 16:51:42 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/07/06 10:17:11 jmmv Exp $
 #
 
 DISTNAME=		rss2html-0.8.2
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		converters
 MASTER_SITES=		ftp://ftp.nopcode.org/prj/rss2html/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nopcode.org/blog/rss2html.html
 COMMENT=		RSS to HTML converter
 
