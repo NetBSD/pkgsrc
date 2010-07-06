@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/06/07 13:34:00 tsutsui Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2010/07/06 14:06:24 tron Exp $
 #
 
 DISTNAME=		tme-0.8
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://csail.mit.edu/~fredette/tme/
 
@@ -19,7 +20,7 @@ COMMENT=		The Machine Emulator
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake perl:run pkg-config
 
 CONFIGURE_ARGS+=	--disable-debug
 
