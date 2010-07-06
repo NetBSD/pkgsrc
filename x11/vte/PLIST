@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/11/15 21:30:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/07/06 15:56:06 drochner Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -14,22 +14,35 @@ lib/vte/osc
 lib/vte/slowcat
 lib/vte/window
 libexec/gnome-pty-helper
+share/gtk-doc/html/vte/VteReaper.html
 share/gtk-doc/html/vte/VteTerminal.html
 share/gtk-doc/html/vte/VteTerminalAccessible.html
+share/gtk-doc/html/vte/api-index-0-20.html
+share/gtk-doc/html/vte/api-index-0-24.html
+share/gtk-doc/html/vte/api-index-deprecated.html
+share/gtk-doc/html/vte/api-index-full.html
 share/gtk-doc/html/vte/ch01.html
+share/gtk-doc/html/vte/ch02.html
+share/gtk-doc/html/vte/deprecated-objects.html
 share/gtk-doc/html/vte/home.png
 share/gtk-doc/html/vte/index.html
 share/gtk-doc/html/vte/index.sgml
+share/gtk-doc/html/vte/internal-objects.html
 share/gtk-doc/html/vte/left.png
+share/gtk-doc/html/vte/licence.html
+share/gtk-doc/html/vte/object-hierarchy.html
+share/gtk-doc/html/vte/pt01.html
 share/gtk-doc/html/vte/right.png
 share/gtk-doc/html/vte/style.css
 share/gtk-doc/html/vte/up.png
+share/gtk-doc/html/vte/vte-Version-Information.html
 share/gtk-doc/html/vte/vte.devhelp
 share/gtk-doc/html/vte/vte.devhelp2
 share/locale/am/LC_MESSAGES/vte.mo
 share/locale/ang/LC_MESSAGES/vte.mo
 share/locale/ar/LC_MESSAGES/vte.mo
 share/locale/as/LC_MESSAGES/vte.mo
+share/locale/ast/LC_MESSAGES/vte.mo
 share/locale/az/LC_MESSAGES/vte.mo
 share/locale/be/LC_MESSAGES/vte.mo
 share/locale/be@latin/LC_MESSAGES/vte.mo
