@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2009/10/22 17:29:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.50 2010/07/06 15:17:03 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -76,6 +76,9 @@ share/gnome/help/clock/ca/legal.xml
 share/gnome/help/clock/cs/clock.xml
 share/gnome/help/clock/cs/figures/clock_applet.png
 share/gnome/help/clock/cs/legal.xml
+share/gnome/help/clock/da/clock.xml
+share/gnome/help/clock/da/figures/clock_applet.png
+share/gnome/help/clock/da/legal.xml
 share/gnome/help/clock/de/clock.xml
 share/gnome/help/clock/de/figures/clock_applet.png
 share/gnome/help/clock/de/legal.xml
@@ -115,6 +118,9 @@ share/gnome/help/clock/oc/legal.xml
 share/gnome/help/clock/pa/clock.xml
 share/gnome/help/clock/pa/figures/clock_applet.png
 share/gnome/help/clock/pa/legal.xml
+share/gnome/help/clock/pt/clock.xml
+share/gnome/help/clock/pt/figures/clock_applet.png
+share/gnome/help/clock/pt/legal.xml
 share/gnome/help/clock/pt_BR/clock.xml
 share/gnome/help/clock/pt_BR/figures/clock_applet.png
 share/gnome/help/clock/pt_BR/legal.xml
@@ -136,6 +142,9 @@ share/gnome/help/clock/uk/legal.xml
 share/gnome/help/clock/zh_CN/clock.xml
 share/gnome/help/clock/zh_CN/figures/clock_applet.png
 share/gnome/help/clock/zh_CN/legal.xml
+share/gnome/help/clock/zh_HK/clock.xml
+share/gnome/help/clock/zh_HK/figures/clock_applet.png
+share/gnome/help/clock/zh_HK/legal.xml
 share/gnome/help/clock/zh_TW/clock.xml
 share/gnome/help/clock/zh_TW/figures/clock_applet.png
 share/gnome/help/clock/zh_TW/legal.xml
@@ -193,7 +202,6 @@ share/gnome/help/fish/uk/legal.xml
 share/gnome/help/fish/zh_CN/figures/fish_applet.png
 share/gnome/help/fish/zh_CN/fish.xml
 share/gnome/help/fish/zh_CN/legal.xml
-share/gtk-doc/html/panel-applet/PanelApplet.html
 share/gtk-doc/html/panel-applet/applet-popups.html
 share/gtk-doc/html/panel-applet/applet-porting.html
 share/gtk-doc/html/panel-applet/applet-writing.html
@@ -203,6 +211,7 @@ share/gtk-doc/html/panel-applet/index.sgml
 share/gtk-doc/html/panel-applet/left.png
 share/gtk-doc/html/panel-applet/multi-applets.html
 share/gtk-doc/html/panel-applet/panel-applet-Panel-Applet-GConf-Utilities.html
+share/gtk-doc/html/panel-applet/panel-applet-panel-applet.html
 share/gtk-doc/html/panel-applet/panel-applet.devhelp
 share/gtk-doc/html/panel-applet/panel-applet.devhelp2
 share/gtk-doc/html/panel-applet/panel-applet.html
@@ -291,6 +300,7 @@ share/locale/da/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/dz/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/en@shaw/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/eo/LC_MESSAGES/gnome-panel-2.0.mo
@@ -333,6 +343,7 @@ share/locale/mn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mr/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nb/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/nds/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ne/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-panel-2.0.mo
@@ -375,6 +386,7 @@ share/omf/clock/clock-C.omf
 share/omf/clock/clock-ar.omf
 share/omf/clock/clock-ca.omf
 share/omf/clock/clock-cs.omf
+share/omf/clock/clock-da.omf
 share/omf/clock/clock-de.omf
 share/omf/clock/clock-el.omf
 share/omf/clock/clock-en_GB.omf
@@ -388,6 +400,7 @@ share/omf/clock/clock-ko.omf
 share/omf/clock/clock-nl.omf
 share/omf/clock/clock-oc.omf
 share/omf/clock/clock-pa.omf
+share/omf/clock/clock-pt.omf
 share/omf/clock/clock-pt_BR.omf
 share/omf/clock/clock-ru.omf
 share/omf/clock/clock-sr.omf
@@ -395,6 +408,7 @@ share/omf/clock/clock-sv.omf
 share/omf/clock/clock-th.omf
 share/omf/clock/clock-uk.omf
 share/omf/clock/clock-zh_CN.omf
+share/omf/clock/clock-zh_HK.omf
 share/omf/clock/clock-zh_TW.omf
 share/omf/fish/fish-C.omf
 share/omf/fish/fish-ca.omf
