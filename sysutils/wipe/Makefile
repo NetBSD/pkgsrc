@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/27 20:37:48 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/06 10:17:16 jmmv Exp $
 #
 
 DISTNAME=		wipe-2.2.0
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wipe/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wipe.sourceforge.net/
 COMMENT=		Secure data destruction
 

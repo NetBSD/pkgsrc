@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/03/17 15:44:00 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/06 10:17:12 jmmv Exp $
 #
 
 DISTNAME=		heme-0.4
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heme/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/heme/
 COMMENT=		Fast and portable console hex editor
 
