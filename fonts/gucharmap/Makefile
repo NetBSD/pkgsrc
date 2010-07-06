@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2010/06/16 01:09:10 obache Exp $
+# $NetBSD: Makefile,v 1.70 2010/07/06 15:01:56 drochner Exp $
 #
 
-DISTNAME=	gucharmap-2.28.2
-PKGREVISION=	1
+DISTNAME=	gucharmap-2.30.2
 CATEGORIES=	fonts gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/2.28/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,12 +24,6 @@ PKGCONFIG_OVERRIDE+=	gucharmap-2.pc.in
 GTK2_IMMODULES=		yes
 
 GCONF_SCHEMAS+=	gucharmap.schemas
-
-# needed for gucharmap-2.28 and gtk2-2.20 -- remove on next update
-BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.3
