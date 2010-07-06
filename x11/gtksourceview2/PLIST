@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2010/01/18 18:26:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/07/06 15:51:19 drochner Exp $
+include/gtksourceview-2.0/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-2.0/gtksourceview/gtksourcebuffer.h
+include/gtksourceview-2.0/gtksourceview/gtksourcecompletion.h
+include/gtksourceview-2.0/gtksourceview/gtksourcecompletioncontext.h
+include/gtksourceview-2.0/gtksourceview/gtksourcecompletioninfo.h
+include/gtksourceview-2.0/gtksourceview/gtksourcecompletionitem.h
+include/gtksourceview-2.0/gtksourceview/gtksourcecompletionproposal.h
+include/gtksourceview-2.0/gtksourceview/gtksourcecompletionprovider.h
 include/gtksourceview-2.0/gtksourceview/gtksourcegutter.h
 include/gtksourceview-2.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-2.0/gtksourceview/gtksourcelanguage.h
@@ -9,11 +16,17 @@ include/gtksourceview-2.0/gtksourceview/gtksourceprintcompositor.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestyle.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestylescheme.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestyleschememanager.h
+include/gtksourceview-2.0/gtksourceview/gtksourceundomanager.h
 include/gtksourceview-2.0/gtksourceview/gtksourceview-typebuiltins.h
 include/gtksourceview-2.0/gtksourceview/gtksourceview.h
 lib/libgtksourceview-2.0.la
 lib/pkgconfig/gtksourceview-2.0.pc
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceBuffer.html
+share/gtk-doc/html/gtksourceview-2.0/GtkSourceCompletion.html
+share/gtk-doc/html/gtksourceview-2.0/GtkSourceCompletionInfo.html
+share/gtk-doc/html/gtksourceview-2.0/GtkSourceCompletionItem.html
+share/gtk-doc/html/gtksourceview-2.0/GtkSourceCompletionProposal.html
+share/gtk-doc/html/gtksourceview-2.0/GtkSourceCompletionProvider.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceGutter.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceLanguage.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceLanguageManager.html
@@ -22,10 +35,12 @@ share/gtk-doc/html/gtksourceview-2.0/GtkSourcePrintCompositor.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceStyle.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceStyleScheme.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceStyleSchemeManager.html
+share/gtk-doc/html/gtksourceview-2.0/GtkSourceUndoManager.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceView.html
+share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0-Searching-in-a-GtkSourceBuffer.html
+share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0-completioncontext.html
 share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0.devhelp
 share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0.devhelp2
-share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0-Searching-in-a-GtkSourceBuffer.html
 share/gtk-doc/html/gtksourceview-2.0/home.png
 share/gtk-doc/html/gtksourceview-2.0/index.html
 share/gtk-doc/html/gtksourceview-2.0/index.sgml
@@ -35,14 +50,17 @@ share/gtk-doc/html/gtksourceview-2.0/left.png
 share/gtk-doc/html/gtksourceview-2.0/right.png
 share/gtk-doc/html/gtksourceview-2.0/rn01.html
 share/gtk-doc/html/gtksourceview-2.0/rn02.html
+share/gtk-doc/html/gtksourceview-2.0/style-reference.html
 share/gtk-doc/html/gtksourceview-2.0/style.css
 share/gtk-doc/html/gtksourceview-2.0/up.png
 share/gtksourceview-2.0/language-specs/R.lang
 share/gtksourceview-2.0/language-specs/ada.lang
 share/gtksourceview-2.0/language-specs/asp.lang
 share/gtksourceview-2.0/language-specs/awk.lang
+share/gtksourceview-2.0/language-specs/bibtex.lang
 share/gtksourceview-2.0/language-specs/boo.lang
 share/gtksourceview-2.0/language-specs/c.lang
+share/gtksourceview-2.0/language-specs/cg.lang
 share/gtksourceview-2.0/language-specs/changelog.lang
 share/gtksourceview-2.0/language-specs/chdr.lang
 share/gtksourceview-2.0/language-specs/check.sh
@@ -63,8 +81,10 @@ share/gtksourceview-2.0/language-specs/dpatch.lang
 share/gtksourceview-2.0/language-specs/dtd.lang
 share/gtksourceview-2.0/language-specs/eiffel.lang
 share/gtksourceview-2.0/language-specs/erlang.lang
+share/gtksourceview-2.0/language-specs/fcl.lang
 share/gtksourceview-2.0/language-specs/forth.lang
 share/gtksourceview-2.0/language-specs/fortran.lang
+share/gtksourceview-2.0/language-specs/fsharp.lang
 share/gtksourceview-2.0/language-specs/gap.lang
 share/gtksourceview-2.0/language-specs/glsl.lang
 share/gtksourceview-2.0/language-specs/gtk-doc.lang
@@ -93,6 +113,7 @@ share/gtksourceview-2.0/language-specs/objc.lang
 share/gtksourceview-2.0/language-specs/ocaml.lang
 share/gtksourceview-2.0/language-specs/ocl.lang
 share/gtksourceview-2.0/language-specs/octave.lang
+share/gtksourceview-2.0/language-specs/ooc.lang
 share/gtksourceview-2.0/language-specs/pascal.lang
 share/gtksourceview-2.0/language-specs/perl.lang
 share/gtksourceview-2.0/language-specs/php.lang
@@ -104,6 +125,7 @@ share/gtksourceview-2.0/language-specs/rpmspec.lang
 share/gtksourceview-2.0/language-specs/ruby.lang
 share/gtksourceview-2.0/language-specs/scheme.lang
 share/gtksourceview-2.0/language-specs/sh.lang
+share/gtksourceview-2.0/language-specs/sparql.lang
 share/gtksourceview-2.0/language-specs/sql.lang
 share/gtksourceview-2.0/language-specs/styles.rng
 share/gtksourceview-2.0/language-specs/t2t.lang
@@ -124,6 +146,7 @@ share/gtksourceview-2.0/styles/styles.rng
 share/gtksourceview-2.0/styles/tango.xml
 share/locale/ar/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/as/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/ast/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/az/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/be/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/bg/LC_MESSAGES/gtksourceview-2.0.mo
@@ -138,6 +161,7 @@ share/locale/da/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/de/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/dz/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/el/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/en@shaw/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/es/LC_MESSAGES/gtksourceview-2.0.mo
