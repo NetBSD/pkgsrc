@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2010/06/13 22:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2010/07/06 07:31:20 adam Exp $
 
-DISTNAME=	rrdtool-1.3.9
-PKGREVISION=	2
+DISTNAME=	rrdtool-1.4.4
 
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
@@ -37,13 +36,13 @@ SUBST_FILES.prefix=	examples/cgi-demo.cgi
 SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/pthread.buildlink3.mk"

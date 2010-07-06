@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.8 2010/07/06 07:31:37 adam Exp $
+
+Correct examples directory.
+
+--- examples/rrdcached/Makefile.in.orig	2010-07-06 07:23:46.000000000 +0000
++++ examples/rrdcached/Makefile.in
+@@ -283,7 +283,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-examplesdir = $(pkgdatadir)/examples/rrdcached
++examplesdir = $(prefix)/share/examples/rrdcached
+ examples_SCRIPTS = RRDCached.pm rrdcached-size.pl
+ EXTRA_DIST = RRDCached.pm rrdcached-size.pl
+ all: all-am
