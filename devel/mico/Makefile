@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/08 15:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/07 01:13:08 joerg Exp $
 #
 
 DISTNAME=		mico-2.3.12
@@ -9,6 +9,8 @@ WRKSRC=			${WRKDIR}/mico
 
 MAINTAINER=		tonnerre@NetBSD.org
 COMMENT=		High performance and rubustness CORBA ORB
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt intltool
 GNU_CONFIGURE=		YES
@@ -35,6 +37,9 @@ SUBST_FILES.exampledir+=	demo/poa/Makefile demo/security/Makefile
 SUBST_FILES.exampledir+=	demo/services/Makefile demo/siegel/Makefile
 SUBST_FILES.exampledir+=	demo/services/wireless/Makefile
 SUBST_SED.exampledir=		-e "s@(INSTDIR)/doc/mico/examples@(SHARED_INSTDIR)/examples/${PKGBASE}@g"
+
+INSTALL_MAKE_FLAGS+=		INSTDIR=${DESTDIR}${PREFIX} \
+				SHARED_INSTDIR=${DESTDIR}${PREFIX}/share
 
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
