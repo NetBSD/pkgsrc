@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/07/06 10:17:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2010/07/07 00:29:32 joerg Exp $
 #
 
 DISTNAME=	xml2doc-20030510
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xml2doc.sourceforge.net/
 COMMENT=	Xml to document formats converter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/xml2doc
 USE_PKGLOCALEDIR=	yes
