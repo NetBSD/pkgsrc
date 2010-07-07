@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2004/09/10 08:40:51 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2010/07/07 00:29:32 joerg Exp $
 
---- src/Makefile.in.orig	2003-05-03 03:37:38.000000000 +0200
+--- src/Makefile.in.orig	2003-05-03 01:37:38.000000000 +0000
 +++ src/Makefile.in
 @@ -11,13 +11,9 @@ PREFIX=@PREFIX@
  
@@ -19,3 +19,14 @@ $NetBSD: patch-ab,v 1.1 2004/09/10 08:40:51 jmmv Exp $
  BIN=xml2doc
  
  all:
+@@ -25,8 +21,8 @@ all:
+ 
+ install: build
+ 	@printf "\e[32mInstalling binaries...\e[0m\n"
+-	mkdir -p $(PREFIX)/bin
+-	install -m 0755 ./$(BIN) $(PREFIX)/bin/$(BIN)
++	mkdir -p ${DESTDIR}$(PREFIX)/bin
++	install -m 0755 ./$(BIN) ${DESTDIR}$(PREFIX)/bin/$(BIN)
+ 
+ remove:
+ 	@printf "\e[32mDeinstalling binaries...\e[0m\n"

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2010/07/07 00:29:32 joerg Exp $
+
+--- examples/Makefile.in.orig	2010-07-07 00:27:14.000000000 +0000
++++ examples/Makefile.in
+@@ -15,8 +15,8 @@ clean:
+ 
+ install:
+ 	@printf "\e[32mInstalling examples...\e[0m\n"
+-	mkdir -p $(PREFIX)/share/doc/xml2doc/examples
+-	cp -f *.xml $(PREFIX)/share/doc/xml2doc/examples
++	mkdir -p ${DESTDIR}$(PREFIX)/share/doc/xml2doc/examples
++	cp -f *.xml ${DESTDIR}$(PREFIX)/share/doc/xml2doc/examples
+ 	
+ remove:
+ 	@printf "\e[32mDeinstalling examples...\e[0m\n"
