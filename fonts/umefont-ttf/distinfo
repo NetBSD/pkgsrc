@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/07/05 11:55:15 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/07/07 01:03:28 obache Exp $
 
-SHA1 (umefont_417.tar.xz) = 692678284a1ecc6e63006dd58d39f3f1f43b59ee
-RMD160 (umefont_417.tar.xz) = a175aaf3cdd3695757d876167c4e897cca0b3580
-Size (umefont_417.tar.xz) = 6634880 bytes
+SHA1 (umefont-0.417/umefont_417.tar.xz) = 365f15767c8ff3aa9f7aae7cdd6a7c654dd9ebd4
+RMD160 (umefont-0.417/umefont_417.tar.xz) = ac2da7918b4f814169aaff4f127827152407b2ca
+Size (umefont-0.417/umefont_417.tar.xz) = 6631808 bytes
