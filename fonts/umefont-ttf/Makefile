@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/07/07 01:03:28 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/08 00:34:42 obache Exp $
 #
 
-DISTNAME=	umefont_417
+DISTNAME=	umefont_417a
 PKGNAME=	${DISTNAME:S/_/-0./}
-PKGREVISION=	1
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=ume-font/22212/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,10 +14,10 @@ COMMENT=	Ume 18 Japanese fonts (Mincho and Gothic)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+WRKSRC=		${WRKDIR}/umefont_417
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
