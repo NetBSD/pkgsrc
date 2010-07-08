@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2395 2010/07/08 00:34:54 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2396 2010/07/08 11:28:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3219,3 +3219,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libgweather to 2.30.2 [drochner 2010-07-07]
 	Updated devel/libwnck to 2.30.2 [drochner 2010-07-07]
 	Updated fonts/umefont-ttf to 0.417a [obache 2010-07-08]
+	Updated emulators/aranym to 0.9.10 [obache 2010-07-08]
