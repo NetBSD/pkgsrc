@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2007/11/14 18:27:48 drochner Exp $
+$NetBSD: patch-ac,v 1.9 2010/07/08 18:46:46 drochner Exp $
 
---- make/linux/Makefile.orig	2006-06-02 16:32:52.000000000 +0200
+--- make/linux/Makefile.orig	2010-06-04 08:46:29.000000000 +0000
 +++ make/linux/Makefile
-@@ -16,15 +16,15 @@ prefix=/boot/home/config
+@@ -16,16 +16,16 @@ prefix=/boot/home/config
  else
  prefix=/usr/local
  endif
@@ -12,28 +12,29 @@ $NetBSD: patch-ac,v 1.8 2007/11/14 18:27:48 drochner Exp $
 +includedir=$(PREFIX)/include/matroska
  
  # Programs
--CXX=g++
-+#CXX=g++
- LD=$(CXX)
--AR = ar rcvu
--RANLIB = ranlib
+ CROSS =
+-CXX = $(CROSS)g++
++#CXX = $(CROSS)g++
+ LD = $(CXX)
+-AR = $(CROSS)ar
+-RANLIB = $(CROSS)ranlib
 -INSTALL = install
-+AR += rcvu
-+#RANLIB = ranlib
++#AR = $(CROSS)ar
++#RANLIB = $(CROSS)ranlib
 +INSTALL = $(BSD_INSTALL)
  INSTALL_OPTS = -m 644
  INSTALL_OPTS_LIB = -m 644
  INSTALL_DIR_OPTS = -m 755
-@@ -56,7 +56,7 @@ MUX_LIBS=-lmatroska -lebml $(LIBICONV)
+@@ -53,7 +53,7 @@ MUX_LIBS=-lmatroska -lebml $(LIBICONV)
  
  # Names
  LIBRARY=libmatroska.a
 -LIBRARY_SO=libmatroska.so
 +LIBRARY_SO=libmatroska.la
- LIBRARY_SO_VER=libmatroska.so.0
+ LIBRARY_SO_VER=libmatroska.so.2
  
  # source-files
-@@ -95,16 +95,14 @@ lib:
+@@ -92,16 +92,14 @@ lib:
  	$(CXX) -c $(COMPILEFLAGS) -o $@ $<
  
  %.lo: %$(EXTENSION)
@@ -41,7 +42,7 @@ $NetBSD: patch-ac,v 1.8 2007/11/14 18:27:48 drochner Exp $
 +	$(LIBTOOL) --mode=compile $(CXX) -c $(COMPILEFLAGS) -o $@ $<
  
  $(LIBRARY): $(objects)
- 	$(AR) $@ $(objects)
+ 	$(AR) rcvu $@ $(objects)
  	$(RANLIB) $@
  
  $(LIBRARY_SO): $(objects_so)
@@ -52,7 +53,7 @@ $NetBSD: patch-ac,v 1.8 2007/11/14 18:27:48 drochner Exp $
  
  clean:	cleantest
  	rm -f $(objects) $(objects_so)
-@@ -156,23 +154,22 @@ install: install_staticlib install_share
+@@ -153,23 +151,22 @@ install: install_staticlib install_share
  endif
  
  install_headers:
