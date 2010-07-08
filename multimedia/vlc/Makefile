@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2010/05/09 07:46:28 tnn Exp $
+# $NetBSD: Makefile,v 1.92 2010/07/08 18:48:05 drochner Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
