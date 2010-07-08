@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.42 2009/09/24 06:31:27 tron Exp $
+# $NetBSD: Darwin.mk,v 1.43 2010/07/08 04:57:36 dholland Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -127,17 +127,3 @@ CONFIGURE_ENV+=		ac_cv_func_poll=no
 .if empty(OS_VERSION:M[0-8].*) && exists(/bin/ksh)
 WRAPPER_BIN_SH?=	/bin/ksh
 .endif
-
-# If games are to be installed setgid, then SETGIDGAME is set to 'yes'
-# (it defaults to 'no' as per defaults/mk.conf).
-# Set the group and mode to meaningful values in that case (defaults to
-# BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if !(empty(SETGIDGAME:M[yY][eE][sS]))
-#GAMES_USER=		games
-#GAMES_GROUP=		games
-#GAMEOWN=		${GAMES_USER}
-#GAMEGRP=		${GAMES_GROUP}
-#GAMEMODE=		2555
-#GAMEDIRMODE=		0775
-#.endif

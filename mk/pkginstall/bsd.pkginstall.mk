@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.50 2010/06/15 19:23:56 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.51 2010/07/08 04:57:36 dholland Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -203,9 +203,14 @@ _PKG_USER_SHELL?=	${NOLOGIN}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME:Q}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL:Q}
 
-# If SETGIDGAME == yes, then we need the "games" user and group.
-.if defined(SETGIDGAME) && !empty(SETGIDGAME:M[yY][eE][sS])
-PKG_GROUPS+=	${GAMES_USER}
+# If USE_GAMESGROUP == yes, then we need the "games" group.
+# SETGIDGAME is a deprecated alias for USE_GAMESGROUP.
+#
+# For now we also create the "games" user; this should not be used and
+# should be removed at some point.
+.if (defined(USE_GAMESGROUP) && !empty(USE_GAMESGROUP:M[yY][eE][sS])) ||\
+    (defined(SETGIDGAME) && !empty(SETGIDGAME:M[yY][eE][sS]))
+PKG_GROUPS+=	${GAMES_GROUP}
 PKG_USERS+=	${GAMES_USER}:${GAMES_GROUP}
 .endif
 
@@ -377,15 +382,30 @@ su-create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
 #	SPECIAL_PERMS+=	/path/to/suidroot ${SETUID_ROOT_PERMS}
 #
 # SETGID_GAMES_PERMS is a convenience definition to note an executable is
-# meant to be setgid-game, and should be used as follows:
+# meant to be setgid games, and should be used as follows:
 #
 #	SPECIAL_PERMS+=	/path/to/sgidgame ${SETGID_GAMES_PERMS}
+#
+# GAMEDATA_PERMS and GAMEDIR_PERMS are convenience defintiions for files
+# that are meant to be accessed by things that are setgid games. Because
+# such files should normally be under ${VARBASE}, generally these 
+# definitions should be used roughly as follows:
+#
+#	REQD_DIRS_PERMS+=  /path/to/scoredir ${GAMEDIR_PERMS}
+#	REQD_FILES_PERMS+= /dev/null /path/to/scorefile ${GAMEDATA_PERMS}
+#
+# Note that GAMEDIR_PERMS should only be used when the game requires
+# write access to scribble in its directory; many games do not, in which
+# case REQD_DIRS instead of REQD_DIRS_PERMS can be used and GAMEDIR_PERMS
+# is not needed.
 #
 # Keywords: setuid setgid st_mode perms
 #
 SPECIAL_PERMS?=		# empty
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4511
 SETGID_GAMES_PERMS?=	${GAMES_USER} ${GAMES_GROUP} ${GAMEMODE}
+GAMEDATA_PERMS?=	${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+GAMEDIR_PERMS?=		${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 
 _INSTALL_PERMS_FILE=		${_PKGINSTALL_DIR}/perms
 _INSTALL_PERMS_DATAFILE=	${_PKGINSTALL_DIR}/perms-data
