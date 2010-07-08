@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2010/01/29 20:20:53 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/07/08 11:28:05 obache Exp $
 #
 
-DISTNAME=			aranym-0.9.6beta2
-PKGREVISION=			1
+DISTNAME=			aranym-0.9.10
 CATEGORIES=			emulators
 MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=aranym/}
-SITES.emutos-512k-0.8.3.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
-DISTFILES=			aranym-0.9.6beta2.tar.gz emutos-512k-0.8.3.zip
+SITES.emutos-512k-0.8.5.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
+DISTFILES=			${DEFAULT_DISTFILES} emutos-512k-0.8.5.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
 COMMENT=		Atari Running on Any Machine
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -20,8 +20,9 @@ GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes
 
 CONFIGURE_ARGS+=	--enable-fullmmu
+CONFIGURE_ARGS+=	--enable-atc=full
 
-EMUTOS_WRKSRC=		${WRKDIR}/emutos-512k-0.8.3
+EMUTOS_WRKSRC=		${WRKDIR}/emutos-512k-0.8.5
 EMUTOS_DOC_DIR=		${PREFIX}/share/doc/aranym/emutos
 EMUTOS_ROM_DIR=		${PREFIX}/share/aranym
 
@@ -38,8 +39,13 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "NetBSD" && ${OPSYS} != "DragonFly"
+.if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-nfpci
+.endif
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-i386)
+CONFIGURE_ARGS+=	--enable-jit-compiler
+CONFIGURE_ARGS+=	--enable-jit-fpu
 .endif
 
 INSTALLATION_DIRS+=	${EMUTOS_DOC_DIR} ${EMUTOS_ROM_DIR}
