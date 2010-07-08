@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2398 2010/07/08 12:15:55 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2399 2010/07/08 18:54:46 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3222,3 +3222,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/aranym to 0.9.10 [obache 2010-07-08]
 	Updated www/midori to 0.2.6 [obache 2010-07-08]
 	Updated converters/py-simplejson to 2.1.1 [obache 2010-07-08]
+	Updated sysutils/memtestplus to 4.10 [jakllsch 2010-07-08]
