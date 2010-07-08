@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2397 2010/07/08 11:45:03 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2398 2010/07/08 12:15:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3221,3 +3221,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/umefont-ttf to 0.417a [obache 2010-07-08]
 	Updated emulators/aranym to 0.9.10 [obache 2010-07-08]
 	Updated www/midori to 0.2.6 [obache 2010-07-08]
+	Updated converters/py-simplejson to 2.1.1 [obache 2010-07-08]
