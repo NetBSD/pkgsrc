@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.9 2009/08/20 17:15:21 epg Exp $
+# $NetBSD: Makefile,v 1.10 2010/07/08 12:15:39 obache Exp $
 #
 
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
-DISTNAME=	simplejson-2.0.9
-#PKGREVISION=	1
+DISTNAME=	simplejson-2.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	http://pypi.python.org/packages/source/s/simplejson/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://undefined.org/python/#simplejson
 COMMENT=	Simplejson is a simple, fast, extensible JSON encoder/decoder
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=  c
-
-PYDISTUTILSPKG=         yes
+USE_LANGUAGES=	c
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} setup.py test -q
