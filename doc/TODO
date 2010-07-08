@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9445 2010/07/06 07:33:56 obache Exp $
+$NetBSD: TODO,v 1.9446 2010/07/08 11:28:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-tomcat6-6.0.26
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
-	o aranym-0.9.10 [pkg/43567]
 	o argtable-2.9
 	o aria2-1.9.4 [pkg/43511]
 	o aria2-1.9.5
