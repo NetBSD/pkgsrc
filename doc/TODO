@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9446 2010/07/08 11:28:29 obache Exp $
+$NetBSD: TODO,v 1.9447 2010/07/08 11:45:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -978,7 +978,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mesure-0.7.2
 	o metacity-2.30.1 [GNOME 2.30]
 	o mgetty+sendfax-1.1.35
-	o midori-0.2.6 [pkg/43500]
 	o milkytracker-0.90.85
 	o mimedefang-2.70
 	o mined-2000.16
