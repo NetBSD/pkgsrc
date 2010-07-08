@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2008/04/28 09:48:13 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2010/07/08 18:42:14 drochner Exp $
 
---- make/linux/Makefile.orig	2006-06-02 16:32:15.000000000 +0200
+--- make/linux/Makefile.orig	2010-06-04 08:44:54.000000000 +0000
 +++ make/linux/Makefile
-@@ -16,15 +16,15 @@ prefix=/boot/home/config
+@@ -16,16 +16,16 @@ prefix=/boot/home/config
  else
  prefix=/usr/local
  endif
@@ -12,28 +12,29 @@ $NetBSD: patch-aa,v 1.10 2008/04/28 09:48:13 wiz Exp $
 +includedir=$(DESTDIR)$(PREFIX)/include/ebml
  
  # Programs
--CXX=g++
-+#CXX=g++
- LD=$(CXX)
--AR = ar rcvu
--RANLIB = ranlib
+ CROSS =
+-CXX = $(CROSS)g++
++#CXX = $(CROSS)g++
+ LD = $(CXX)
+-AR = $(CROSS)ar
+-RANLIB = $(CROSS)ranlib
 -INSTALL = install
-+AR += rcvu
-+#RANLIB = ranlib
++#AR = $(CROSS)ar
++#RANLIB = $(CROSS)ranlib
 +INSTALL = $(BSD_INSTALL)
  INSTALL_OPTS = -m 644
  INSTALL_OPTS_LIB = -m 644
  INSTALL_DIR_OPTS = -m 755
-@@ -51,7 +51,7 @@ LIBS=
+@@ -48,7 +48,7 @@ LIBS=
  
  # Names
  LIBRARY=libebml.a
 -LIBRARY_SO=libebml.so
 +LIBRARY_SO=libebml.la
- LIBRARY_SO_VER=libebml.so.0
+ LIBRARY_SO_VER=libebml.so.2
  
  # source-files
-@@ -87,16 +87,14 @@ lib:
+@@ -84,16 +84,14 @@ lib:
  	$(CXX) -c $(COMPILEFLAGS) -o $@ $<
  
  %.lo: %$(EXTENSION)
@@ -41,7 +42,7 @@ $NetBSD: patch-aa,v 1.10 2008/04/28 09:48:13 wiz Exp $
 +	$(LIBTOOL) --mode=compile $(CXX) -c $(COMPILEFLAGS) -o $@ $<
  
  $(LIBRARY): $(objects)
- 	$(AR) $@ $(objects)
+ 	$(AR) rcvu $@ $(objects)
  	$(RANLIB) $@
  
  $(LIBRARY_SO): $(objects_so)
@@ -52,7 +53,7 @@ $NetBSD: patch-aa,v 1.10 2008/04/28 09:48:13 wiz Exp $
  
  clean:
  	rm -f $(objects) $(objects_so)
-@@ -140,8 +138,7 @@ install_staticlib: $(LIBRARY)
+@@ -137,8 +135,7 @@ install_staticlib: $(LIBRARY)
  
  install_sharedlib: $(LIBRARY_SO)
  	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(libdir)
