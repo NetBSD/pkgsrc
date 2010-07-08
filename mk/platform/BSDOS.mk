@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.27 2009/07/26 05:32:43 agc Exp $
+# $NetBSD: BSDOS.mk,v 1.28 2010/07/08 04:57:36 dholland Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -84,17 +84,3 @@ PKG_CREATE_USERGROUP=	NO # until it works
 # to avoid a test required by the libtool script that takes forever.
 # FIXME: Adjust to work on this system and enable the lines below.
 #_OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
-
-# If games are to be installed setgid, then SETGIDGAME is set to 'yes'
-# (it defaults to 'no' as per defaults/mk.conf).
-# Set the group and mode to meaningful values in that case (defaults to
-# BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if !(empty(SETGIDGAME:M[yY][eE][sS]))
-#GAMES_USER=		games
-#GAMES_GROUP=		games
-#GAMEOWN=		${GAMES_USER}
-#GAMEGRP=		${GAMES_GROUP}
-#GAMEMODE=		2555
-#GAMEDIRMODE=		0775
-#.endif
