@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/05/19 18:01:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/07/08 11:44:48 obache Exp $
 bin/midori
 lib/midori/libadblock.so
 lib/midori/libaddons.so
@@ -71,6 +71,7 @@ share/locale/sr/LC_MESSAGES/midori.mo
 share/locale/sr@latin/LC_MESSAGES/midori.mo
 share/locale/sv/LC_MESSAGES/midori.mo
 share/locale/tr/LC_MESSAGES/midori.mo
+share/locale/ug/LC_MESSAGES/midori.mo
 share/locale/uk/LC_MESSAGES/midori.mo
 share/locale/zh_CN/LC_MESSAGES/midori.mo
 share/locale/zh_TW/LC_MESSAGES/midori.mo
