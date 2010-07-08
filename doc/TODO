@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9447 2010/07/08 11:45:03 obache Exp $
+$NetBSD: TODO,v 1.9448 2010/07/08 12:15:55 obache Exp $
 
 Suggested new packages
 ======================
@@ -1185,7 +1185,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-psycopg-2.2.1
 	o py-psycopg2-2.0.14
 	o py-pytz-2010h
-	o py-simplejson-2.1.1 [pkg/43447]
 	o py-sybase-0.37
 	o py-uwsgi-0.9.5.1 [pkg/43400]
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]
