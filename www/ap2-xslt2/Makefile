@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/11/30 18:52:33 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/07/08 16:05:34 joerg Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.mod-xslt2.com/software/archive/${DIST_VER}/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mod-xslt2.com/
 COMMENT=	Apache module able to apply stylesheets to XML data on the fly
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -28,6 +30,8 @@ CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs \
 			--with-apu-config=${BUILDLINK_PREFIX.apr}/bin/apu-config 
 
 REPLACE_BASH=	utils/modxslt-config.pre.in
+
+INSTALLATION_DIRS+=	bin lib/httpd
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
