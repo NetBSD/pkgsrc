@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/07/09 19:20:17 asau Exp $
+
+--- modules/gdbm/Makefile.in.orig	2010-04-16 11:36:35.000000000 +0400
++++ modules/gdbm/Makefile.in	2010-07-09 13:01:05.000000000 +0400
+@@ -3,7 +3,7 @@
+ srcdir = @srcdir@
+ CC = @CC@
+ GDBMCPPFLAGS = @CPPFLAGS@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CLISP_CFLAGS@
+ CLISP = @CLISP@ -norc -q
+ CLISP_LINKKIT = @CLISP_LINKKIT@
+ 
