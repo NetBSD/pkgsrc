@@ -423,7 +423,7 @@ _old_
 is not matched, the pattern is skipped.
 Within
 _new_,
-~ is substituted with the match, \1 to \9 with the content of
+~ is substituted with the match, \e1 to \e9 with the content of
 the corresponding captured group.
 The optional trailing g specifies that matching should continue
 after the matched part and stopped on the first unmatched pattern.
@@ -518,6 +518,8 @@ Note that, unlike other
 implementations, this implementation recognizes compress compression
 automatically when reading archives.
 </dd></dl>
+== EXIT STATUS ==
+The *tar* utility exits 0 on success, and >0 if an error occurs.
 == ENVIRONMENT ==
 The following environment variables affect the execution of
 *tar*:
@@ -547,8 +549,6 @@ environment variable or the
 *-f*
 option.
 </dt></dl>
-== EXIT STATUS ==
-The *tar* utility exits 0 on success, and >0 if an error occurs.
 == EXAMPLES ==
 The following creates a new archive
 called
