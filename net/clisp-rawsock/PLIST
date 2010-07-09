@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 19:12:27 asau Exp $
+lib/clisp/dynmod/lib-rawsock.so
+lib/clisp/dynmod/rawsock.lisp
+lib/clisp/rawsock/Makefile
+lib/clisp/rawsock/demos/README
+lib/clisp/rawsock/demos/sniffer.lisp
+lib/clisp/rawsock/link.sh
+lib/clisp/rawsock/preload.lisp
+lib/clisp/rawsock/rawsock.o
+lib/clisp/rawsock/sock.fas
+lib/clisp/rawsock/sock.lisp
