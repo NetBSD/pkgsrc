@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 21:17:32 asau Exp $
+lib/clisp/dynmod/lib-syscalls.so
+lib/clisp/dynmod/syscalls.lisp
+lib/clisp/syscalls/Makefile
+lib/clisp/syscalls/README
+lib/clisp/syscalls/bogomips.o
+lib/clisp/syscalls/calls.o
+lib/clisp/syscalls/libgnu_sc.a
+lib/clisp/syscalls/link.sh
+lib/clisp/syscalls/posix.fas
+lib/clisp/syscalls/posix.lisp
+lib/clisp/syscalls/preload.lisp

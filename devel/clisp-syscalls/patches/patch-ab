@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/07/09 21:17:32 asau Exp $
+
+--- modules/syscalls/Makefile.in.orig	2010-06-10 19:03:57.000000000 +0400
++++ modules/syscalls/Makefile.in	2010-07-09 16:43:56.000000000 +0400
+@@ -52,8 +52,8 @@
+ 	mkdir -p gllib
+ 	test -f gllib/Makefile || sh config.status gllib/Makefile depfiles
+ 	cd gllib; \
+-	  $(MAKE) srcdir="$(srcdir)/gllib" \
+-		ACLOCAL_M4="$(srcdir)/gllib/Makefile.am" \
++	  $(MAKE) srcdir="." \
++		ACLOCAL_M4="./Makefile.am" \
+ 		CFLAGS="$(CFLAGS) -I$(CLISP_LIBDIR)"; \
+ 	  $(LN) libgnu.a ../libgnu_sc.a
+ 
