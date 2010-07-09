@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1360 2010/07/04 18:12:26 cube Exp $
+# $NetBSD: Makefile,v 1.1361 2010/07/09 19:37:11 asau Exp $
 #
 
 COMMENT=	Development utilities
@@ -96,6 +96,8 @@ SUBDIR+=	check
 SUBDIR+=	chmlib
 SUBDIR+=	chrpath
 SUBDIR+=	clib
+SUBDIR+=	clisp-pcre
+SUBDIR+=	clisp-zlib
 SUBDIR+=	cmake
 SUBDIR+=	cmake-mode
 SUBDIR+=	coccinelle
