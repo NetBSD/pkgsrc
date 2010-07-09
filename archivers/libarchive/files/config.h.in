@@ -1,5 +1,74 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* MD5 via ARCHIVE_HASH_MD5_LIBC supported. */
+#undef ARCHIVE_HASH_MD5_LIBC
+
+/* MD5 via ARCHIVE_HASH_MD5_LIBSYSTEM supported. */
+#undef ARCHIVE_HASH_MD5_LIBSYSTEM
+
+/* MD5 via ARCHIVE_HASH_MD5_OPENSSL supported. */
+#undef ARCHIVE_HASH_MD5_OPENSSL
+
+/* RMD160 via ARCHIVE_HASH_RMD160_LIBC supported. */
+#undef ARCHIVE_HASH_RMD160_LIBC
+
+/* RMD160 via ARCHIVE_HASH_RMD160_OPENSSL supported. */
+#undef ARCHIVE_HASH_RMD160_OPENSSL
+
+/* SHA1 via ARCHIVE_HASH_SHA1_LIBC supported. */
+#undef ARCHIVE_HASH_SHA1_LIBC
+
+/* SHA1 via ARCHIVE_HASH_SHA1_LIBSYSTEM supported. */
+#undef ARCHIVE_HASH_SHA1_LIBSYSTEM
+
+/* SHA1 via ARCHIVE_HASH_SHA1_OPENSSL supported. */
+#undef ARCHIVE_HASH_SHA1_OPENSSL
+
+/* SHA256 via ARCHIVE_HASH_SHA256_LIBC supported. */
+#undef ARCHIVE_HASH_SHA256_LIBC
+
+/* SHA256 via ARCHIVE_HASH_SHA256_LIBC2 supported. */
+#undef ARCHIVE_HASH_SHA256_LIBC2
+
+/* SHA256 via ARCHIVE_HASH_SHA256_LIBC3 supported. */
+#undef ARCHIVE_HASH_SHA256_LIBC3
+
+/* SHA256 via ARCHIVE_HASH_SHA256_LIBSYSTEM supported. */
+#undef ARCHIVE_HASH_SHA256_LIBSYSTEM
+
+/* SHA256 via ARCHIVE_HASH_SHA256_OPENSSL supported. */
+#undef ARCHIVE_HASH_SHA256_OPENSSL
+
+/* SHA384 via ARCHIVE_HASH_SHA384_LIBC supported. */
+#undef ARCHIVE_HASH_SHA384_LIBC
+
+/* SHA384 via ARCHIVE_HASH_SHA384_LIBC2 supported. */
+#undef ARCHIVE_HASH_SHA384_LIBC2
+
+/* SHA384 via ARCHIVE_HASH_SHA384_LIBC3 supported. */
+#undef ARCHIVE_HASH_SHA384_LIBC3
+
+/* SHA384 via ARCHIVE_HASH_SHA384_LIBSYSTEM supported. */
+#undef ARCHIVE_HASH_SHA384_LIBSYSTEM
+
+/* SHA384 via ARCHIVE_HASH_SHA384_OPENSSL supported. */
+#undef ARCHIVE_HASH_SHA384_OPENSSL
+
+/* SHA512 via ARCHIVE_HASH_SHA512_LIBC supported. */
+#undef ARCHIVE_HASH_SHA512_LIBC
+
+/* SHA512 via ARCHIVE_HASH_SHA512_LIBC2 supported. */
+#undef ARCHIVE_HASH_SHA512_LIBC2
+
+/* SHA512 via ARCHIVE_HASH_SHA512_LIBC3 supported. */
+#undef ARCHIVE_HASH_SHA512_LIBC3
+
+/* SHA512 via ARCHIVE_HASH_SHA512_LIBSYSTEM supported. */
+#undef ARCHIVE_HASH_SHA512_LIBSYSTEM
+
+/* SHA512 via ARCHIVE_HASH_SHA512_OPENSSL supported. */
+#undef ARCHIVE_HASH_SHA512_OPENSSL
+
 /* Version number of bsdcpio */
 #undef BSDCPIO_VERSION_STRING
 
@@ -62,6 +131,10 @@
 
 /* Define to 1 if you have the `cygwin_conv_path' function. */
 #undef HAVE_CYGWIN_CONV_PATH
+
+/* Define to 1 if you have the declaration of `EXTATTR_NAMESPACE_USER', and to
+   0 if you don't. */
+#undef HAVE_DECL_EXTATTR_NAMESPACE_USER
 
 /* Define to 1 if you have the declaration of `INT64_MAX', and to 0 if you
    don't. */
@@ -173,8 +246,20 @@
 /* Define to 1 if you have the `geteuid' function. */
 #undef HAVE_GETEUID
 
+/* Define to 1 if you have the `getgrgid_r' function. */
+#undef HAVE_GETGRGID_R
+
+/* Define to 1 if you have the `getgrnam_r' function. */
+#undef HAVE_GETGRNAM_R
+
 /* Define to 1 if you have the `getpid' function. */
 #undef HAVE_GETPID
+
+/* Define to 1 if you have the `getpwnam_r' function. */
+#undef HAVE_GETPWNAM_R
+
+/* Define to 1 if you have the `getpwuid_r' function. */
+#undef HAVE_GETPWUID_R
 
 /* Define to 1 if you have the `getxattr' function. */
 #undef HAVE_GETXATTR
@@ -273,12 +358,6 @@
 /* Define to 1 if you have the <lzma.h> header file. */
 #undef HAVE_LZMA_H
 
-/* Define to 1 if you have the `MD5Init' function. */
-#undef HAVE_MD5INIT
-
-/* Define to 1 if you have the <md5.h> header file. */
-#undef HAVE_MD5_H
-
 /* Define to 1 if you have the `memmove' function. */
 #undef HAVE_MEMMOVE
 
@@ -303,24 +382,6 @@
 /* Define to 1 if you have the `nl_langinfo' function. */
 #undef HAVE_NL_LANGINFO
 
-/* Define to 1 if you have the <openssl/md5.h> header file. */
-#undef HAVE_OPENSSL_MD5_H
-
-/* Define to 1 if you have the <openssl/ripemd.h> header file. */
-#undef HAVE_OPENSSL_RIPEMD_H
-
-/* Define to 1 if your openssl has the `SHA256_Init' function. */
-#undef HAVE_OPENSSL_SHA256_INIT
-
-/* Define to 1 if your openssl has the `SHA384_Init' function. */
-#undef HAVE_OPENSSL_SHA384_INIT
-
-/* Define to 1 if your openssl has the `SHA512_Init' function. */
-#undef HAVE_OPENSSL_SHA512_INIT
-
-/* Define to 1 if you have the <openssl/sha.h> header file. */
-#undef HAVE_OPENSSL_SHA_H
-
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
 
@@ -342,15 +403,6 @@
 /* Define to 1 if you have the <regex.h> header file. */
 #undef HAVE_REGEX_H
 
-/* Define to 1 if you have the <ripemd.h> header file. */
-#undef HAVE_RIPEMD_H
-
-/* Define to 1 if you have the `RMD160Init' function. */
-#undef HAVE_RMD160INIT
-
-/* Define to 1 if you have the <rmd160.h> header file. */
-#undef HAVE_RMD160_H
-
 /* Define to 1 if you have the `select' function. */
 #undef HAVE_SELECT
 
@@ -359,39 +411,6 @@
 
 /* Define to 1 if you have the `setlocale' function. */
 #undef HAVE_SETLOCALE
-
-/* Define to 1 if you have the `SHA1Init' function. */
-#undef HAVE_SHA1INIT
-
-/* Define to 1 if you have the <sha1.h> header file. */
-#undef HAVE_SHA1_H
-
-/* Define to 1 if you have the `SHA256Init' function. */
-#undef HAVE_SHA256INIT
-
-/* Define to 1 if you have the <sha256.h> header file. */
-#undef HAVE_SHA256_H
-
-/* Define to 1 if you have the `SHA256_Init' function. */
-#undef HAVE_SHA256_INIT
-
-/* Define to 1 if you have the <sha2.h> header file. */
-#undef HAVE_SHA2_H
-
-/* Define to 1 if you have the `SHA384Init' function. */
-#undef HAVE_SHA384INIT
-
-/* Define to 1 if you have the `SHA384_Init' function. */
-#undef HAVE_SHA384_INIT
-
-/* Define to 1 if you have the `SHA512Init' function. */
-#undef HAVE_SHA512INIT
-
-/* Define to 1 if you have the `SHA512_Init' function. */
-#undef HAVE_SHA512_INIT
-
-/* Define to 1 if you have the <sha.h> header file. */
-#undef HAVE_SHA_H
 
 /* Define to 1 if you have the `sigaction' function. */
 #undef HAVE_SIGACTION
@@ -439,31 +458,31 @@
 /* Define to 1 if you have the `strrchr' function. */
 #undef HAVE_STRRCHR
 
-/* Define to 1 if `st_birthtime' is member of `struct stat'. */
+/* Define to 1 if `st_birthtime' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_BIRTHTIME
 
-/* Define to 1 if `st_birthtimespec.tv_nsec' is member of `struct stat'. */
+/* Define to 1 if `st_birthtimespec.tv_nsec' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC
 
-/* Define to 1 if `st_blksize' is member of `struct stat'. */
+/* Define to 1 if `st_blksize' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_BLKSIZE
 
-/* Define to 1 if `st_flags' is member of `struct stat'. */
+/* Define to 1 if `st_flags' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_FLAGS
 
-/* Define to 1 if `st_mtimespec.tv_nsec' is member of `struct stat'. */
+/* Define to 1 if `st_mtimespec.tv_nsec' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC
 
-/* Define to 1 if `st_mtime_n' is member of `struct stat'. */
+/* Define to 1 if `st_mtime_n' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_MTIME_N
 
-/* Define to 1 if `st_mtime_usec' is member of `struct stat'. */
+/* Define to 1 if `st_mtime_usec' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_MTIME_USEC
 
-/* Define to 1 if `st_mtim.tv_nsec' is member of `struct stat'. */
+/* Define to 1 if `st_mtim.tv_nsec' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC
 
-/* Define to 1 if `st_umtime' is member of `struct stat'. */
+/* Define to 1 if `st_umtime' is a member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_UMTIME
 
 /* Define to 1 if you have the `symlink' function. */
@@ -570,6 +589,9 @@
 /* Define to 1 if you have the `wcrtomb' function. */
 #undef HAVE_WCRTOMB
 
+/* Define to 1 if you have the `wcscmp' function. */
+#undef HAVE_WCSCMP
+
 /* Define to 1 if you have the `wcscpy' function. */
 #undef HAVE_WCSCPY
 
@@ -634,6 +656,9 @@
 /* Define to the one symbol short name of this package. */
 #undef PACKAGE_TARNAME
 
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
+
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
 
@@ -648,6 +673,28 @@
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #undef TIME_WITH_SYS_TIME
+
+/* Enable extensions on AIX 3, Interix.  */
+#ifndef _ALL_SOURCE
+# undef _ALL_SOURCE
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# undef _GNU_SOURCE
+#endif
+/* Enable threading extensions on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# undef _POSIX_PTHREAD_SEMANTICS
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# undef _TANDEM_SOURCE
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# undef __EXTENSIONS__
+#endif
+
 
 /* Version number of package */
 #undef VERSION
@@ -681,28 +728,6 @@
 
 /* Define to '0x0500' for Windows 2000 APIs. */
 #undef _WIN32_WINNT
-
-/* Enable extensions on AIX 3, Interix.  */
-#ifndef _ALL_SOURCE
-# undef _ALL_SOURCE
-#endif
-/* Enable GNU extensions on systems that have them.  */
-#ifndef _GNU_SOURCE
-# undef _GNU_SOURCE
-#endif
-/* Enable threading extensions on Solaris.  */
-#ifndef _POSIX_PTHREAD_SEMANTICS
-# undef _POSIX_PTHREAD_SEMANTICS
-#endif
-/* Enable extensions on HP NonStop.  */
-#ifndef _TANDEM_SOURCE
-# undef _TANDEM_SOURCE
-#endif
-/* Enable general extensions on Solaris.  */
-#ifndef __EXTENSIONS__
-# undef __EXTENSIONS__
-#endif
-
 
 /* Define to empty if `const' does not conform to ANSI C. */
 #undef const

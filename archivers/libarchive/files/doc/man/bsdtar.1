@@ -482,7 +482,7 @@ If
 is not matched, the pattern is skipped.
 Within
 \fInew\fP,
-~ is substituted with the match, \1 to \9 with the content of
+~ is substituted with the match, \e1 to \e9 with the content of
 the corresponding captured group.
 The optional trailing g specifies that matching should continue
 after the matched part and stopped on the first unmatched pattern.
@@ -587,6 +587,9 @@ Note that, unlike other
 implementations, this implementation recognizes compress compression
 automatically when reading archives.
 .RE
+.SH EXIT STATUS
+.ad l
+The \fBtar\fP utility exits 0 on success, and >0 if an error occurs.
 .SH ENVIRONMENT
 .ad l
 The following environment variables affect the execution of
@@ -622,9 +625,6 @@ environment variable or the
 \fB\-f\fP
 option.
 .RE
-.SH EXIT STATUS
-.ad l
-The \fBtar\fP utility exits 0 on success, and >0 if an error occurs.
 .SH EXAMPLES
 .ad l
 The following creates a new archive
