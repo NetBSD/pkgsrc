@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/03/20 21:12:03 pettai Exp $
+# $NetBSD: Makefile,v 1.14 2010/07/09 11:38:36 obache Exp $
 #
 
-VER=		1.9.2
+VER=		1.9.3
 DISTNAME=	moin-${VER}
 PKGNAME=	${PYPKGPREFIX}-moin-${VER}
 CATEGORIES=	www python
