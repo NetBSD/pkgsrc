@@ -1,0 +1,71 @@
+$NetBSD: patch-ac,v 1.13 2010/07/09 18:08:05 asau Exp $
+
+Support staged installation.
+
+--- src/clisp-link.in.orig	2010-05-25 23:54:54.000000000 +0400
++++ src/clisp-link.in	2010-07-09 00:17:46.000000000 +0400
+@@ -145,8 +145,8 @@
+ LIBDIR=""
+ set_dynamic_module_location() {
+   if test -z "${LIBDIR}"; then
+-    if touch ${CLISP_LIBDIR}/${DYNMOD}/.abazonk 2>/dev/null; then
+-      rm -f ${CLISP_LIBDIR}/${DYNMOD}/.abazonk
++    if touch "${DESTDIR}${CLISP_LIBDIR}/${DYNMOD}/.abazonk" 2>/dev/null; then
++      rm -f "${DESTDIR}${CLISP_LIBDIR}/${DYNMOD}/.abazonk"
+       LIBDIR=${CLISP_LIBDIR}
+     else # cf. src/m4/clisp.m4
+       CLISP_LIBDIR_USER=`clisp_eval '(and *user-lib-directory* (namestring *user-lib-directory*))'`
+@@ -194,29 +194,29 @@
+     done
+     # create the REQUIRE file
+     reqfile=${dyndir}/${firstmod}.lisp
+-    rm -f ${reqfile}
++    rm -f "${DESTDIR}${reqfile}"
+     for f in ${TO_PRELOAD}; do
+       # preload files are not compiled
+-      echo "(cl:load (cl:merge-pathnames \"../${moduledir}/${f}\" cl:*load-truename*))" >> ${reqfile}
++      echo "(cl:load (cl:merge-pathnames \"../${moduledir}/${f}\" cl:*load-truename*))" >> "${DESTDIR}${reqfile}"
+     done
+     # dll has SHREXT extension
+     DM="(sys::dynload-modules (cl:merge-pathnames \"${dll}\" cl:*load-truename*) (quote ("
+     for m in ${NEW_MODULES}; do
+       DM=${DM}" \"$m\""
+     done
+-    echo ${DM}" )))" >> ${reqfile}
++    echo ${DM}" )))" >> "${DESTDIR}${reqfile}"
+     if test -n "${TO_LOAD}"; then
+-      echo ";; for def-call-out to non-existent functions" >> ${reqfile}
+-      echo "(ext:appease-cerrors" >> ${reqfile}
++      echo ";; for def-call-out to non-existent functions" >> "${DESTDIR}${reqfile}"
++      echo "(ext:appease-cerrors" >> "${DESTDIR}${reqfile}"
+       for f in ${TO_LOAD}; do
+         # module files must be compiled
+-        echo " (cl:load (cl:merge-pathnames \"../${moduledir}/${f}.fas\" cl:*load-truename*))" >> ${reqfile}
++        echo " (cl:load (cl:merge-pathnames \"../${moduledir}/${f}.fas\" cl:*load-truename*))" >> "${DESTDIR}${reqfile}"
+       done
+-      echo ")" >> ${reqfile}
++      echo ")" >> "${DESTDIR}${reqfile}"
+     fi
+     # create links to the REQUIRE file
+     for m in ${othermods}; do
+-      ln ${dyndir}/$m.lisp ${reqfile}
++      ln ${dyndir}/$m.lisp "${DESTDIR}${reqfile}"
+     done
+   fi
+ }
+@@ -556,12 +556,12 @@
+       absolute_moduledir=`/bin/pwd`
+       . ./link.sh
+       prepare_dynamic_module  # sets LIBDIR
+-      mkdir -p "${LIBDIR}/$moduledir"
++      mkdir -p "${DESTDIR}${LIBDIR}/$moduledir"
+       # when running "CLISP=./clisp ./clisp-link install <modname>"
+       # in the build directory, avoid "cp: `...' and `...' are the same file"
+-      absolute_distribdir=`cd "${LIBDIR}/$moduledir"; /bin/pwd`
++      absolute_distribdir=`cd "${DESTDIR}${LIBDIR}/$moduledir"; /bin/pwd`
+       test "${absolute_moduledir}" = "${absolute_distribdir}" || \
+-        make clisp-module-distrib LN=cp distribdir="${LIBDIR}/$moduledir"
++        make clisp-module-distrib LN=cp distribdir="${DESTDIR}${LIBDIR}/$moduledir"
+       cd "$absolute_currentdir"
+     done
+     ;;
