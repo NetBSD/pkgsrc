@@ -1,0 +1,7 @@
+lib/clisp/dynmod/lib-zlib.so
+lib/clisp/dynmod/zlib.lisp
+lib/clisp/zlib/Makefile
+lib/clisp/zlib/link.sh
+lib/clisp/zlib/zlib.fas
+lib/clisp/zlib/zlib.lisp
+lib/clisp/zlib/zlib.o
