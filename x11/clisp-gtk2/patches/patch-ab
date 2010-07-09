@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/07/09 19:30:15 asau Exp $
+
+--- modules/gtk2/Makefile.in.orig	2010-04-16 11:36:40.000000000 +0400
++++ modules/gtk2/Makefile.in	2010-07-09 13:10:07.000000000 +0400
+@@ -3,7 +3,7 @@
+ srcdir = @srcdir@
+ CC = @CC@
+ CPPFLAGS = @CPPFLAGS@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CLISP_CFLAGS@
+ LIBS = @LIBS@
+ # defined by AM_PATH_GTK_2_0
+ GTK_CFLAGS = @GTK_CFLAGS@
