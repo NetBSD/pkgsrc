@@ -1,0 +1,3 @@
+The Perl 5 module Plack::Middleware::File::Sass is a Plack middleware
+component that works with Plack::App::File or Plack::Middleware::Static
+to compile Sass templates into CSS stylesheet in every request.
