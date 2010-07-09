@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/09 19:20:17 asau Exp $
+
+SHA1 (clisp-2.49.tar.gz) = 1743e7917013162400c955af441e991db43b3323
+RMD160 (clisp-2.49.tar.gz) = ae30f3b681cb023e885c6e4ed12210ee5ba14c76
+Size (clisp-2.49.tar.gz) = 9823111 bytes
+SHA1 (patch-aa) = 097e64b5db28688fdea7be92e9bc46d5803b4c33
+SHA1 (patch-ab) = 31cf1cad224471cf17703f540f98f9a4cd710ffb
