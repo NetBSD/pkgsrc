@@ -1,0 +1,39 @@
+# $NetBSD: Makefile,v 1.1.1.1 2010/07/09 09:46:49 drochner Exp $
+#
+
+DISTNAME=	telepathy-mission-control-5.5.1
+PKGNAME=	telepathy-mission-control5-5.5.1
+CATEGORIES=	chat
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mission-control/}
+MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-mission-control/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://mission-control.sourceforge.net/
+COMMENT=	Telepathy component providing abstractions for "end-user" applications
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
+
+PKGCONFIG_OVERRIDE+=	mission-control-plugins.pc.in
+#PKGCONFIG_OVERRIDE+=	libmcclient.pc.in
+#PKGCONFIG_OVERRIDE+=	mission-control.pc.in
+
+#.include "../../lang/python/pyversion.mk"
+CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
+
+CONFIGURE_ARGS+= --enable-gnome-keyring
+.include "../../security/libgnome-keyring/buildlink3.mk"
+
+# needs py-twisted
+# TEST_TARGET= check
+
+.include "../../chat/telepathy-glib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
