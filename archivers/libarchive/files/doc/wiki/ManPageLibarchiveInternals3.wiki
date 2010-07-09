@@ -334,4 +334,3 @@ The
 *libarchive*
 library was written by
 Tim Kientzle  <kientzle@acm.org.>
-== BUGS ==
