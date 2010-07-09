@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 19:22:59 asau Exp $
+lib/clisp/dynmod/fastcgi.lisp
+lib/clisp/dynmod/lib-fastcgi.so
+lib/clisp/fastcgi/Makefile
+lib/clisp/fastcgi/README
+lib/clisp/fastcgi/fastcgi.fas
+lib/clisp/fastcgi/fastcgi.lisp
+lib/clisp/fastcgi/fastcgi.o
+lib/clisp/fastcgi/fastcgi_wrappers.o
+lib/clisp/fastcgi/link.sh
