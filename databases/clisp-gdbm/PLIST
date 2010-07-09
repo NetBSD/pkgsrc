@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 19:20:17 asau Exp $
+lib/clisp/dynmod/gdbm.lisp
+lib/clisp/dynmod/lib-gdbm.so
+lib/clisp/gdbm/Makefile
+lib/clisp/gdbm/gdbm.fas
+lib/clisp/gdbm/gdbm.lisp
+lib/clisp/gdbm/gdbm.o
+lib/clisp/gdbm/link.sh
+lib/clisp/gdbm/preload.lisp
