@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/03/20 21:12:03 pettai Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/07/09 11:38:36 obache Exp $
 bin/moin
 ${PYSITELIB}/MoinMoin/Page.py
 ${PYSITELIB}/MoinMoin/Page.pyc
@@ -710,6 +710,9 @@ ${PYSITELIB}/MoinMoin/script/import/__init__.pyo
 ${PYSITELIB}/MoinMoin/script/import/irclog.py
 ${PYSITELIB}/MoinMoin/script/import/irclog.pyc
 ${PYSITELIB}/MoinMoin/script/import/irclog.pyo
+${PYSITELIB}/MoinMoin/script/import/wikipage.py
+${PYSITELIB}/MoinMoin/script/import/wikipage.pyc
+${PYSITELIB}/MoinMoin/script/import/wikipage.pyo
 ${PYSITELIB}/MoinMoin/script/index/__init__.py
 ${PYSITELIB}/MoinMoin/script/index/__init__.pyc
 ${PYSITELIB}/MoinMoin/script/index/__init__.pyo
@@ -842,6 +845,9 @@ ${PYSITELIB}/MoinMoin/script/migration/1080600.pyo
 ${PYSITELIB}/MoinMoin/script/migration/1080700.py
 ${PYSITELIB}/MoinMoin/script/migration/1080700.pyc
 ${PYSITELIB}/MoinMoin/script/migration/1080700.pyo
+${PYSITELIB}/MoinMoin/script/migration/1080800.py
+${PYSITELIB}/MoinMoin/script/migration/1080800.pyc
+${PYSITELIB}/MoinMoin/script/migration/1080800.pyo
 ${PYSITELIB}/MoinMoin/script/migration/1089999.py
 ${PYSITELIB}/MoinMoin/script/migration/1089999.pyc
 ${PYSITELIB}/MoinMoin/script/migration/1089999.pyo
@@ -854,6 +860,9 @@ ${PYSITELIB}/MoinMoin/script/migration/1090100.pyo
 ${PYSITELIB}/MoinMoin/script/migration/1090200.py
 ${PYSITELIB}/MoinMoin/script/migration/1090200.pyc
 ${PYSITELIB}/MoinMoin/script/migration/1090200.pyo
+${PYSITELIB}/MoinMoin/script/migration/1090300.py
+${PYSITELIB}/MoinMoin/script/migration/1090300.pyc
+${PYSITELIB}/MoinMoin/script/migration/1090300.pyo
 ${PYSITELIB}/MoinMoin/script/migration/__init__.py
 ${PYSITELIB}/MoinMoin/script/migration/__init__.pyc
 ${PYSITELIB}/MoinMoin/script/migration/__init__.pyo
@@ -1166,6 +1175,9 @@ ${PYSITELIB}/MoinMoin/support/pygments/lexer.pyo
 ${PYSITELIB}/MoinMoin/support/pygments/lexers/__init__.py
 ${PYSITELIB}/MoinMoin/support/pygments/lexers/__init__.pyc
 ${PYSITELIB}/MoinMoin/support/pygments/lexers/__init__.pyo
+${PYSITELIB}/MoinMoin/support/pygments/lexers/_asybuiltins.py
+${PYSITELIB}/MoinMoin/support/pygments/lexers/_asybuiltins.pyc
+${PYSITELIB}/MoinMoin/support/pygments/lexers/_asybuiltins.pyo
 ${PYSITELIB}/MoinMoin/support/pygments/lexers/_clbuiltins.py
 ${PYSITELIB}/MoinMoin/support/pygments/lexers/_clbuiltins.pyc
 ${PYSITELIB}/MoinMoin/support/pygments/lexers/_clbuiltins.pyo
@@ -1256,6 +1268,9 @@ ${PYSITELIB}/MoinMoin/support/pygments/styles/fruity.pyo
 ${PYSITELIB}/MoinMoin/support/pygments/styles/manni.py
 ${PYSITELIB}/MoinMoin/support/pygments/styles/manni.pyc
 ${PYSITELIB}/MoinMoin/support/pygments/styles/manni.pyo
+${PYSITELIB}/MoinMoin/support/pygments/styles/monokai.py
+${PYSITELIB}/MoinMoin/support/pygments/styles/monokai.pyc
+${PYSITELIB}/MoinMoin/support/pygments/styles/monokai.pyo
 ${PYSITELIB}/MoinMoin/support/pygments/styles/murphy.py
 ${PYSITELIB}/MoinMoin/support/pygments/styles/murphy.pyc
 ${PYSITELIB}/MoinMoin/support/pygments/styles/murphy.pyo
@@ -1674,6 +1689,7 @@ ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/interna
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/internals/fcklistslib.js
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/internals/fckplugins.js
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/internals/fckregexlib.js
+${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/internals/fckscayt.js
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/internals/fckselection.js
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/internals/fckselection_gecko.js
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/_source/internals/fckselection_ie.js
@@ -1743,6 +1759,8 @@ ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_list
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_paste.html
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_radiobutton.html
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_replace.html
+${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_scayt.html
+${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_scayt/scayt_dialog.css
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_select.html
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_select/fck_select.js
 ${PYSITELIB}/MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_smiley.html
@@ -2500,6 +2518,7 @@ share/moin/config/more_samples/auth_wikiconfig_snippet
 share/moin/config/more_samples/dicts_wikiconfig_snippet
 share/moin/config/more_samples/groups_wikiconfig_snippet
 share/moin/config/more_samples/jabber_wikiconfig_snippet
+share/moin/config/more_samples/ldap_2servers_wikiconfig_snippet
 share/moin/config/more_samples/ldap_wikiconfig_snippet
 share/moin/config/more_samples/mail_wikiconfig_snippet
 share/moin/config/more_samples/mailimportconf.py
@@ -2559,10 +2578,14 @@ share/moin/underlay/pages/LanguageSetup/attachments/Brazilian_Portuguese--option
 share/moin/underlay/pages/LanguageSetup/attachments/Brazilian_Portuguese--optional_system_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Brazilian_Portuguese--optional_template_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Brazilian_Portuguese--translated_system_pages.zip
+share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--all_help_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--all_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--all_system_pages.zip
+share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--all_template_pages.zip
+share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--essential_help_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--essential_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--essential_system_pages.zip
+share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--essential_template_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--optional_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--optional_system_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Bulgarian--translated_system_pages.zip
@@ -2582,10 +2605,13 @@ share/moin/underlay/pages/LanguageSetup/attachments/Croatian--essential_system_p
 share/moin/underlay/pages/LanguageSetup/attachments/Croatian--optional_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Croatian--optional_system_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Croatian--translated_system_pages.zip
+share/moin/underlay/pages/LanguageSetup/attachments/Czech--all_help_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Czech--all_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Czech--all_system_pages.zip
+share/moin/underlay/pages/LanguageSetup/attachments/Czech--essential_help_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Czech--essential_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Czech--essential_system_pages.zip
+share/moin/underlay/pages/LanguageSetup/attachments/Czech--optional_help_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Czech--optional_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Czech--optional_system_pages.zip
 share/moin/underlay/pages/LanguageSetup/attachments/Czech--translated_system_pages.zip
