@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.543 2010/06/14 21:58:51 seb Exp $
+# $NetBSD: Makefile,v 1.544 2010/07/09 04:01:56 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -310,6 +310,7 @@ SUBDIR+=	p5-Text-RecordParser
 SUBDIR+=	p5-Text-Reflow
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Text-RewriteRules
+SUBDIR+=	p5-Text-Sass
 SUBDIR+=	p5-Text-Shellwords
 SUBDIR+=	p5-Text-SimpleTable
 SUBDIR+=	p5-Text-SpellChecker
