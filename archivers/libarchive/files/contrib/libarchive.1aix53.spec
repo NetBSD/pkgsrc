@@ -1,4 +1,4 @@
-# $LastChangedRevision: 1827 $, $LastChangedDate: 2010-01-16 16:21:36 -0800 (Sat, 16 Jan 2010) $
+# $LastChangedRevision: 8 $, $LastChangedDate: 2008-05-01 00:11:33 +0200 (Thu, 01 May 2008) $
 Summary:        Library to create and read several different archive formats
 Summary(pl):    Biblioteka do tworzenia i odczytu ró¿nych formatów archiwów
 Name:           libarchive
@@ -127,8 +127,10 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.1.1.4  2010/03/16 17:07:00  joerg
-libarchive-2.8.3: Build fix for Linux
+Revision 1.1.1.5  2010/07/09 11:53:30  joerg
+Import libarchive-2.8.4:
+- Improved reliability of hash function detection
+- Fix issues on ancient FreeBSD, QNX, ancient NetBSD and Minix
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
