@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 18:59:48 asau Exp $
+lib/clisp/dynmod/lib-pcre.so
+lib/clisp/dynmod/pcre.lisp
+lib/clisp/pcre/Makefile
+lib/clisp/pcre/cpcre.o
+lib/clisp/pcre/link.sh
+lib/clisp/pcre/pcre.fas
+lib/clisp/pcre/pcre.lisp
+lib/clisp/pcre/preload.lisp
