@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2405 2010/07/09 08:46:32 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2406 2010/07/09 11:39:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3229,3 +3229,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/termtter to 1.9.0 [obache 2010-07-09]
 	Updated graphics/clutter to 1.2.10 [obache 2010-07-09]
 	Updated net/mrtg to 2.16.4 [adam 2010-07-09]
+	Updated www/py-moin to 1.9.3 [obache 2010-07-09]
