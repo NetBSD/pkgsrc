@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2399 2010/07/08 18:54:46 jakllsch Exp $
+$NetBSD: CHANGES-2010,v 1.2400 2010/07/09 04:02:29 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3223,3 +3223,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/midori to 0.2.6 [obache 2010-07-08]
 	Updated converters/py-simplejson to 2.1.1 [obache 2010-07-08]
 	Updated sysutils/memtestplus to 4.10 [jakllsch 2010-07-08]
+	Added textproc/p5-Text-Sass version 0.5 [seb 2010-07-09]
