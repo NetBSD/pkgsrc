@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2406 2010/07/09 11:39:28 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2407 2010/07/09 12:04:10 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3230,3 +3230,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.2.10 [obache 2010-07-09]
 	Updated net/mrtg to 2.16.4 [adam 2010-07-09]
 	Updated www/py-moin to 1.9.3 [obache 2010-07-09]
+	Updated archivers/libarchive to 2.8.4 [joerg 2010-07-09]
