@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2408 2010/07/09 12:13:40 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.2409 2010/07/09 18:10:29 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3232,3 +3232,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/py-moin to 1.9.3 [obache 2010-07-09]
 	Updated archivers/libarchive to 2.8.4 [joerg 2010-07-09]
 	Updated archivers/bsdtar to 2.8.4 [joerg 2010-07-09]
+	Updated lang/clisp to 2.49 [asau 2010-07-09]
