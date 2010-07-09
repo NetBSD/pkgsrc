@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/05/16 12:11:32 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/09 05:58:13 obache Exp $
 
-DISTNAME=	termtter-1.8.0
+DISTNAME=	termtter-1.9.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
