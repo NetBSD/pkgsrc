@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/16 12:05:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/07/09 05:58:13 obache Exp $
 bin/termtter
 ${GEM_HOME}/cache/termtter-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -33,6 +33,7 @@ ${GEM_LIBDIR}/lib/plugins/db.rb
 ${GEM_LIBDIR}/lib/plugins/defaults.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/alias.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/auto_reload.rb
+${GEM_LIBDIR}/lib/plugins/defaults/cache.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/command_line.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/confirm.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/eval.rb
@@ -48,13 +49,17 @@ ${GEM_LIBDIR}/lib/plugins/defaults/standard_commands.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/standard_completion.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/stdout.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/switch.rb
+${GEM_LIBDIR}/lib/plugins/defaults/system.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/user.rb
 ${GEM_LIBDIR}/lib/plugins/draft.rb
+${GEM_LIBDIR}/lib/plugins/dupu.rb
 ${GEM_LIBDIR}/lib/plugins/easy_post.rb
 ${GEM_LIBDIR}/lib/plugins/eject.rb
 ${GEM_LIBDIR}/lib/plugins/en2ja.rb
 ${GEM_LIBDIR}/lib/plugins/english.rb
+${GEM_LIBDIR}/lib/plugins/erase.rb
 ${GEM_LIBDIR}/lib/plugins/erb.rb
+${GEM_LIBDIR}/lib/plugins/error_log.rb
 ${GEM_LIBDIR}/lib/plugins/event_invoked_at.rb
 ${GEM_LIBDIR}/lib/plugins/exec_and_update.rb
 ${GEM_LIBDIR}/lib/plugins/expand-tinyurl.rb
@@ -78,6 +83,7 @@ ${GEM_LIBDIR}/lib/plugins/gyazo.rb
 ${GEM_LIBDIR}/lib/plugins/haml.rb
 ${GEM_LIBDIR}/lib/plugins/hatebu.rb
 ${GEM_LIBDIR}/lib/plugins/hatebu_and_update.rb
+${GEM_LIBDIR}/lib/plugins/hatena_keyword_haiku.rb
 ${GEM_LIBDIR}/lib/plugins/hi.rb
 ${GEM_LIBDIR}/lib/plugins/history.rb
 ${GEM_LIBDIR}/lib/plugins/http_server.rb
@@ -98,11 +104,14 @@ ${GEM_LIBDIR}/lib/plugins/log.rb
 ${GEM_LIBDIR}/lib/plugins/mark.rb
 ${GEM_LIBDIR}/lib/plugins/md5pass.rb
 ${GEM_LIBDIR}/lib/plugins/me.rb
+${GEM_LIBDIR}/lib/plugins/mecab.rb
 ${GEM_LIBDIR}/lib/plugins/modify_arg_hook_sample.rb
 ${GEM_LIBDIR}/lib/plugins/msagent.rb
+${GEM_LIBDIR}/lib/plugins/mudan_kinshi.rb
 ${GEM_LIBDIR}/lib/plugins/multi_output.rb
 ${GEM_LIBDIR}/lib/plugins/multi_post.rb
 ${GEM_LIBDIR}/lib/plugins/multi_reply.rb
+${GEM_LIBDIR}/lib/plugins/ndkn.rb
 ${GEM_LIBDIR}/lib/plugins/nop.rb
 ${GEM_LIBDIR}/lib/plugins/notify-send.rb
 ${GEM_LIBDIR}/lib/plugins/notify-send2.rb
@@ -110,6 +119,7 @@ ${GEM_LIBDIR}/lib/plugins/notify-send3.rb
 ${GEM_LIBDIR}/lib/plugins/nuance.rb
 ${GEM_LIBDIR}/lib/plugins/open.rb
 ${GEM_LIBDIR}/lib/plugins/open_url.rb
+${GEM_LIBDIR}/lib/plugins/other_user.rb
 ${GEM_LIBDIR}/lib/plugins/otsune.rb
 ${GEM_LIBDIR}/lib/plugins/outputz.rb
 ${GEM_LIBDIR}/lib/plugins/paranoid.rb
@@ -130,6 +140,7 @@ ${GEM_LIBDIR}/lib/plugins/reply.rb
 ${GEM_LIBDIR}/lib/plugins/reply_retweet.rb
 ${GEM_LIBDIR}/lib/plugins/reply_sound.rb
 ${GEM_LIBDIR}/lib/plugins/reverse.rb
+${GEM_LIBDIR}/lib/plugins/ruby-v.rb
 ${GEM_LIBDIR}/lib/plugins/say.rb
 ${GEM_LIBDIR}/lib/plugins/saykanji.rb
 ${GEM_LIBDIR}/lib/plugins/scrape.rb
@@ -149,6 +160,7 @@ ${GEM_LIBDIR}/lib/plugins/story.rb
 ${GEM_LIBDIR}/lib/plugins/stream.rb
 ${GEM_LIBDIR}/lib/plugins/switch_user.rb
 ${GEM_LIBDIR}/lib/plugins/system_status.rb
+${GEM_LIBDIR}/lib/plugins/time_signal.rb
 ${GEM_LIBDIR}/lib/plugins/timer.rb
 ${GEM_LIBDIR}/lib/plugins/tinyurl.rb
 ${GEM_LIBDIR}/lib/plugins/train.rb
@@ -160,10 +172,12 @@ ${GEM_LIBDIR}/lib/plugins/twitpic.rb
 ${GEM_LIBDIR}/lib/plugins/typable_id.rb
 ${GEM_LIBDIR}/lib/plugins/update_editor.rb
 ${GEM_LIBDIR}/lib/plugins/uri-open.rb
+${GEM_LIBDIR}/lib/plugins/user_stream.rb
 ${GEM_LIBDIR}/lib/plugins/w3mimg.rb
 ${GEM_LIBDIR}/lib/plugins/wassr.rb
 ${GEM_LIBDIR}/lib/plugins/wassr_post.rb
 ${GEM_LIBDIR}/lib/plugins/web.rb
+${GEM_LIBDIR}/lib/plugins/whale.rb
 ${GEM_LIBDIR}/lib/plugins/whois.rb
 ${GEM_LIBDIR}/lib/plugins/yhara.rb
 ${GEM_LIBDIR}/lib/plugins/yhara_filter.rb
@@ -176,6 +190,7 @@ ${GEM_LIBDIR}/lib/termtter/command.rb
 ${GEM_LIBDIR}/lib/termtter/config.rb
 ${GEM_LIBDIR}/lib/termtter/config_setup.rb
 ${GEM_LIBDIR}/lib/termtter/config_template.erb
+${GEM_LIBDIR}/lib/termtter/crypt.rb
 ${GEM_LIBDIR}/lib/termtter/default_config.rb
 ${GEM_LIBDIR}/lib/termtter/event.rb
 ${GEM_LIBDIR}/lib/termtter/hook.rb
@@ -226,6 +241,7 @@ ${GEM_LIBDIR}/spec/termtter/client_spec.rb
 ${GEM_LIBDIR}/spec/termtter/command_spec.rb
 ${GEM_LIBDIR}/spec/termtter/config_setup_spec.rb
 ${GEM_LIBDIR}/spec/termtter/config_spec.rb
+${GEM_LIBDIR}/spec/termtter/crypt_spec.rb
 ${GEM_LIBDIR}/spec/termtter/event_spec.rb
 ${GEM_LIBDIR}/spec/termtter/hook_spec.rb
 ${GEM_LIBDIR}/spec/termtter/hookable_spec.rb
