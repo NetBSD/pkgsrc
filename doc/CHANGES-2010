@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2401 2010/07/09 04:26:50 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2402 2010/07/09 05:26:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3225,3 +3225,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/memtestplus to 4.10 [jakllsch 2010-07-08]
 	Added textproc/p5-Text-Sass version 0.5 [seb 2010-07-09]
 	Added www/p5-Plack-Middleware-File-Sass version 0.01 [seb 2010-07-09]
+	Updated net/ruby-rubytter to 1.4.0 [obache 2010-07-09]
