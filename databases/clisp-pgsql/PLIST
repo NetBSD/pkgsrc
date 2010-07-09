@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 19:16:58 asau Exp $
+lib/clisp/dynmod/lib-postgresql.so
+lib/clisp/dynmod/postgresql.lisp
+lib/clisp/postgresql/Makefile
+lib/clisp/postgresql/README
+lib/clisp/postgresql/link.sh
+lib/clisp/postgresql/postgresql.fas
+lib/clisp/postgresql/postgresql.lisp
+lib/clisp/postgresql/postgresql.o
+lib/clisp/postgresql/sql.fas
+lib/clisp/postgresql/sql.lisp
