@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2402 2010/07/09 05:26:10 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2403 2010/07/09 05:58:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3226,3 +3226,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Text-Sass version 0.5 [seb 2010-07-09]
 	Added www/p5-Plack-Middleware-File-Sass version 0.01 [seb 2010-07-09]
 	Updated net/ruby-rubytter to 1.4.0 [obache 2010-07-09]
+	Updated www/termtter to 1.9.0 [obache 2010-07-09]
