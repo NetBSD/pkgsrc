@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2010/04/10 22:26:49 markd Exp $
+# $NetBSD: Makefile,v 1.154 2010/07/09 09:48:16 drochner Exp $
 #
 
 COMMENT=	Communication programs
@@ -106,6 +106,7 @@ SUBDIR+=	telepathy-gabble
 SUBDIR+=	telepathy-glib
 SUBDIR+=	telepathy-idle
 SUBDIR+=	telepathy-mission-control
+SUBDIR+=	telepathy-mission-control5
 SUBDIR+=	tik
 SUBDIR+=	tirc
 SUBDIR+=	tkabber
