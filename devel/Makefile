@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1361 2010/07/09 19:37:11 asau Exp $
+# $NetBSD: Makefile,v 1.1362 2010/07/09 21:23:49 asau Exp $
 #
 
 COMMENT=	Development utilities
@@ -97,6 +97,7 @@ SUBDIR+=	chmlib
 SUBDIR+=	chrpath
 SUBDIR+=	clib
 SUBDIR+=	clisp-pcre
+SUBDIR+=	clisp-syscalls
 SUBDIR+=	clisp-zlib
 SUBDIR+=	cmake
 SUBDIR+=	cmake-mode
