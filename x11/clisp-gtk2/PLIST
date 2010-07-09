@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 19:30:15 asau Exp $
+lib/clisp/dynmod/gtk.lisp
+lib/clisp/dynmod/lib-gtk.so
+lib/clisp/gtk2/Makefile
+lib/clisp/gtk2/gtk-server.cfg
+lib/clisp/gtk2/gtk.fas
+lib/clisp/gtk2/gtk.lisp
+lib/clisp/gtk2/gtk.o
+lib/clisp/gtk2/link.sh
+lib/clisp/gtk2/preload.lisp
+lib/clisp/gtk2/ui.glade
