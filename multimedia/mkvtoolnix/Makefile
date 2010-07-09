@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/07/08 18:51:01 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2010/07/09 16:04:02 drochner Exp $
 
 DISTNAME=	mkvtoolnix-4.1.1
 CATEGORIES=	multimedia
@@ -33,6 +33,9 @@ PLIST.gui=	yes
 CONFIGURE_ARGS+=	--enable-gui
 CONFIGURE_ARGS+=	--enable-wxwidgets
 .   include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gui
 CONFIGURE_ARGS+=	--disable-wxwidgets
