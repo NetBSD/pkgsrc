@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.755 2010/07/06 14:47:15 taca Exp $
+# $NetBSD: Makefile,v 1.756 2010/07/09 04:26:16 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -424,6 +424,7 @@ SUBDIR+=	p5-Plack-Middleware-Auth-Digest
 SUBDIR+=	p5-Plack-Middleware-ConsoleLogger
 SUBDIR+=	p5-Plack-Middleware-Debug
 SUBDIR+=	p5-Plack-Middleware-Deflater
+SUBDIR+=	p5-Plack-Middleware-File-Sass
 SUBDIR+=	p5-Plack-Middleware-Header
 SUBDIR+=	p5-Plack-Middleware-JSConcat
 SUBDIR+=	p5-Plack-Middleware-ReverseProxy
