@@ -115,8 +115,13 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.spec,v $
+Revision 1.5  2010/07/09 12:02:42  joerg
+Merge libarchive-2.8.4
+
 Revision 1.4  2010/03/14 18:39:08  joerg
-Merge.
+Import libarchive-2.8.4:
+- Improved reliability of hash function detection
+- Fix issues on ancient FreeBSD, QNX, ancient NetBSD and Minix
 
 Release 1  2006/12/12 rm1023@dcx.com
 - added libarchive-0123457890.patch for "0123457890" error
