@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/05/16 11:52:35 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/09 05:25:56 obache Exp $
 
-DISTNAME=	rubytter-1.3.2
+DISTNAME=	rubytter-1.4.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 
