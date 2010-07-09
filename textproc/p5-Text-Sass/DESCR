@@ -1,0 +1,3 @@
+The Perl 5 module Text::Sass is an implementation of Sass
+http://sass-lang.com/.  This is most definitely a work-in-progress.
+It only implements a subset of the specification.
