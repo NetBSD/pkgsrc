@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/10 11:34:00 obache Exp $
 
 DISTNAME=	unworkable-0.51
 PKGREVISION=	3
@@ -11,6 +11,7 @@ COMMENT=	BSD-licensed command-line torrent client
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	yacc
 WRKSRC=		${WRKDIR}/unworkable
 MAKE_FILE=	BSDmakefile
 
