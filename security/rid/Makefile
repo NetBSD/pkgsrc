@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/27 21:34:09 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/07/10 11:38:57 obache Exp $
 #
 
 DISTNAME=	rid-1.11
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	YES
+USE_TOOLS+=	yacc lex
 
 CONF_FILES=	${PREFIX}/share/examples/rid/rid.conf ${PKG_SYSCONFDIR}/rid.conf
 
