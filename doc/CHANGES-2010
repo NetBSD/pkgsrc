@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2409 2010/07/09 18:10:29 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2410 2010/07/10 03:01:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/libarchive to 2.8.4 [joerg 2010-07-09]
 	Updated archivers/bsdtar to 2.8.4 [joerg 2010-07-09]
 	Updated lang/clisp to 2.49 [asau 2010-07-09]
+	Updated editors/joe to 3.7nb1 [obache 2010-07-10]
