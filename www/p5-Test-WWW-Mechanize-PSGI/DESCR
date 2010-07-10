@@ -1,0 +1,5 @@
+The Perl 5 Test::WWW::Mechanize::PSGI meshes Test::WWW::Mechanize,
+a subclass of WWW::Mechanize that incorporates features for web
+application testing, and PSGI, a specification to decouple web
+server environments from web application framework code. Hence
+it allows easy testing of PSGI applications.
