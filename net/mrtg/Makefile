@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2010/07/09 08:45:33 adam Exp $
+# $NetBSD: Makefile,v 1.99 2010/07/10 11:50:20 tron Exp $
 
 DISTNAME=	mrtg-2.16.4
 CATEGORIES=	net
@@ -33,7 +33,7 @@ SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg	\
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	Fixing default configuration files.
 
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR} libexec
 
 post-extract:
 	cp ${FILESDIR}/mrtg.conf.example ${WRKDIR}
