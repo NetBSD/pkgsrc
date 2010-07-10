@@ -9,3 +9,5 @@ databases/mysql51-client: security update
 databases/mysql51-server: security update
 Pullup ticket #3156 - requested by obache
 emulators/tme: build fix
+Pullup ticket #3160 - requested by obache
+www/py-moin: security update
