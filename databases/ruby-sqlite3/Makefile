@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2010/06/07 09:34:41 obache Exp $
+# $NetBSD: Makefile,v 1.12 2010/07/10 09:29:21 obache Exp $
 
-DISTNAME=	sqlite3-ruby-1.3.0
+DISTNAME=	sqlite3-ruby-1.3.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby//}
 CATEGORIES=	databases
 
