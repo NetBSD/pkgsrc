@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/12/28 13:46:07 joerg Exp $
+$NetBSD: distinfo,v 1.6 2010/07/10 11:26:32 obache Exp $
 
-SHA1 (phylip-3.61.tar.gz) = f852d860cd2b05bfacb4c7b7ca9baa9163592106
-RMD160 (phylip-3.61.tar.gz) = c783f947f204a653d9d5ed8e54e93368c46513de
-Size (phylip-3.61.tar.gz) = 835969 bytes
-SHA1 (patch-aa) = 268469d311183447d86db0274f0fd5079c6b16d6
+SHA1 (phylip-3.69.tar.gz) = ada364d1a588935ff59a23c08337d9dd99109c5e
+RMD160 (phylip-3.69.tar.gz) = a39080b959452957576c9b7daa2b9e7f25bef212
+Size (phylip-3.69.tar.gz) = 1511935 bytes
+SHA1 (patch-aa) = 2439ca6348fe29a534f8e305cbe4ff5e66ee3c03
