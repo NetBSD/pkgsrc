@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/07/10 12:02:07 obache Exp $
 #
 
 DISTNAME=	nfdump-1.5.7
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 TEST_TARGET=	test
-USE_TOOLS+=	lex
+USE_TOOLS+=	lex yacc
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nfdump
 PKG_SUPPORTED_OPTIONS=	nfdump-ftconv nfdump-sflow nfdump-nfprofile
