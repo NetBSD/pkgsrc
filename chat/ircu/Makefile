@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/04/07 17:22:48 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2010/07/10 11:50:15 obache Exp $
 #
 
 DISTNAME=	ircu2.10.12.12
@@ -16,7 +16,7 @@ CONFLICTS+=	ircd-hybrid-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	lex
+USE_TOOLS+=	lex yacc
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-cpath=${PKG_SYSCONFDIR}/ircd.conf
