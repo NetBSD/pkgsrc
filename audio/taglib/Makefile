@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2010/05/02 14:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2010/07/10 07:56:06 wiz Exp $
 #
 
 DISTNAME=	taglib-1.6.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://ktown.kde.org/~wheeler/files/src/
 
@@ -21,12 +22,6 @@ CONFIGURE_ARGS+=	--enable-mp4
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	bindings/c/taglib_c.pc.in taglib.pc.in
-
-pre-build:
-	cp ${FILESDIR}/id3lib_strings.h ${WRKSRC}/taglib/toolkit/.
-
-post-install:
-	${INSTALL_DATA} ${FILESDIR}/id3lib_strings.h ${DESTDIR}${PREFIX}/include/taglib/.
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
