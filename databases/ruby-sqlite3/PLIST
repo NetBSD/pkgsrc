@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/06/07 09:34:41 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/07/10 09:29:21 obache Exp $
 ${GEM_HOME}/cache/sqlite3-ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/API_CHANGES.rdoc
 ${GEM_LIBDIR}/CHANGELOG.rdoc
@@ -35,6 +35,7 @@ ${GEM_LIBDIR}/tasks/gem.rake
 ${GEM_LIBDIR}/tasks/native.rake
 ${GEM_LIBDIR}/tasks/vendor_sqlite3.rake
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_collation.rb
 ${GEM_LIBDIR}/test/test_database.rb
 ${GEM_LIBDIR}/test/test_deprecated.rb
 ${GEM_LIBDIR}/test/test_encoding.rb
@@ -45,4 +46,5 @@ ${GEM_LIBDIR}/test/test_integration_resultset.rb
 ${GEM_LIBDIR}/test/test_integration_statement.rb
 ${GEM_LIBDIR}/test/test_sqlite3.rb
 ${GEM_LIBDIR}/test/test_statement.rb
+${GEM_LIBDIR}/test/test_statement_execute.rb
 ${GEM_HOME}/specifications/sqlite3-ruby-${PKGVERSION}.gemspec
