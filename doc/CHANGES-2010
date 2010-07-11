@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2424 2010/07/11 10:54:29 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2425 2010/07/11 12:19:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3248,3 +3248,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Squatting version 0.70 [seb 2010-07-11]
 	Added www/p5-Squatting-On-PSGI version 0.04 [seb 2010-07-11]
 	Added www/p5-CGI-Application-PSGI version 1.00 [seb 2010-07-11]
+	Updated www/cherokee to 1.0.5 [obache 2010-07-11]
