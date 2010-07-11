@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1363 2010/07/11 08:41:22 seb Exp $
+# $NetBSD: Makefile,v 1.1364 2010/07/11 14:28:59 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -447,6 +447,7 @@ SUBDIR+=	p5-Any-Moose
 SUBDIR+=	p5-AnyEvent
 SUBDIR+=	p5-AnyEvent-AIO
 SUBDIR+=	p5-App-CLI
+SUBDIR+=	p5-App-Cache
 SUBDIR+=	p5-App-Cmd
 SUBDIR+=	p5-App-FatPacker
 SUBDIR+=	p5-App-cpanminus
