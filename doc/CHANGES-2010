@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2418 2010/07/11 03:00:46 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2419 2010/07/11 07:08:58 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3242,3 +3242,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ja-freewnn-server-bin to 1.10nb6 [obache 2010-07-11]
 	Updated inputmethod/kinput2 to 3.1nb1 [obache 2010-07-11]
 	Updated editors/mule to 2.3nb6 [obache 2010-07-11]
+	Added www/p5-Catalyst-Engine-PSGI version 0.10 [seb 2010-07-11]
