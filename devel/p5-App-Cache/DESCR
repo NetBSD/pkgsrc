@@ -1,0 +1,4 @@
+The Perl 5 module App::Cache lets an application cache data locally.
+There are a few times an application would need to cache data: when
+it is retrieving information from the network or when it has to
+complete a large calculation.
