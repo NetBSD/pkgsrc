@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/10/19 19:18:47 he Exp $
+# $NetBSD: Makefile,v 1.10 2010/07/11 19:08:06 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S:-server-:_:}
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin.sourceforge.net/
 COMMENT=	System monitoring tool, server version
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 DEPENDS+=	p5-Date-Manip>=0:../../devel/p5-Date-Manip
 DEPENDS+=	p5-HTML-Template>=0:../../www/p5-HTML-Template
@@ -33,7 +35,10 @@ MUNIN_GROUP?=	munin
 MUNIN_USER?=	munin
 
 PKG_GROUPS=	${MUNIN_GROUP}
-PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}::Munin\\ user
+PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}
+PKG_GECOS.${MUNIN_USER}=	Munin user
+USERGROUP_PHASE=	pre-install
+
 PKG_SYSCONFSUBDIR?=	munin
 
 STATEDIR=	${VARBASE}/munin/plugin-state
@@ -63,6 +68,7 @@ PERL5_SITELIB=	${PERL5_SUB_INSTALLVENDORLIB:Q}
 
 MAKE_ENV+=	PERL5_SITELIB=${PREFIX}/${PERL5_SITELIB}
 MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
+INSTALL_MAKE_ENV+=	CONFDIR=${DESTDIR}${PKG_SYSCONFDIR}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
 MAKE_ENV+=	MUNIN_GROUP=${MUNIN_GROUP}
 MAKE_ENV+=	PERL5=${PERL5:Q}
@@ -92,9 +98,10 @@ TMPL_FILES=	definitions.html logo.png munin-comparison-day.tmpl \
 CONF_FILES+=	${TMPL_EGDIR}/${f} ${INST_TMPL_DIR}/${f}
 .endfor
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/build/server/munin.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/build/server/munin.conf ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../lang/perl5/module.mk"
