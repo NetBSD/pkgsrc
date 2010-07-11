@@ -1,17 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2006/07/21 23:28:37 abs Exp $
+$NetBSD: patch-aa,v 1.3 2010/07/11 18:15:47 joerg Exp $
 
 --- Makefile.config.orig	2005-01-10 10:38:22.000000000 +0000
 +++ Makefile.config
-@@ -7,32 +7,36 @@
+@@ -7,32 +7,32 @@
  #
  # the base of the Munin installation.
  # 
 -PREFIX     = $(DESTDIR)/opt/munin
-+ifdef $(PREFIX)
-+UPREFIX=$(PREFIX)
-+else
-+UPREFIX=/usr/pkg
-+endif
++UPREFIX=${DESTDIR}$(PREFIX)
  
  # Where Munin keeps its configurations (server.conf, client.conf, ++)
 -CONFDIR    = $(DESTDIR)/etc/opt/munin
@@ -31,7 +27,7 @@ $NetBSD: patch-aa,v 1.2 2006/07/21 23:28:37 abs Exp $
  
  # Where to put man pages
 -MANDIR     = $(PREFIX)/man
-+MANDIR     = $(UPREFIX)/man
++MANDIR     = $(UPREFIX)/${PKGMANDIR}
  
  # Where to put internal binaries and plugin repository
 -LIBDIR     = $(PREFIX)/lib
