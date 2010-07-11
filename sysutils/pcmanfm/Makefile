@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/07/11 19:25:04 joerg Exp $
 #
 
 DISTNAME=	pcmanfm-0.1.8.9
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcmanfm.sourceforge.net/
 COMMENT=	Extremly fast and lightweight file manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
