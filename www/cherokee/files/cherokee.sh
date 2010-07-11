@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cherokee.sh,v 1.2 2006/05/01 10:32:51 jmmv Exp $
+# $NetBSD: cherokee.sh,v 1.3 2010/07/11 12:18:55 obache Exp $
 #
 # PROVIDE: cherokee
 # REQUIRE: DAEMON
@@ -12,7 +12,7 @@ fi
 name="cherokee"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-command_args="-b"
+command_args="-d"
 required_files="@PKG_SYSCONFDIR@/cherokee/${name}.conf"
 
 if [ -f /etc/rc.subr ]; then
