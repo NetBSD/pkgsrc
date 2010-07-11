@@ -1,17 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2006/07/21 23:21:20 abs Exp $
+$NetBSD: patch-aa,v 1.3 2010/07/11 19:08:07 joerg Exp $
 
 --- Makefile.config.orig	2005-01-10 11:38:22.000000000 +0100
 +++ Makefile.config
-@@ -7,32 +7,39 @@
+@@ -7,32 +7,35 @@
  #
  # the base of the Munin installation.
  # 
 -PREFIX     = $(DESTDIR)/opt/munin
-+ifdef $(PREFIX)
-+UPREFIX=$(PREFIX)
-+else
-+UPREFIX=/usr/pkg
-+endif
++UPREFIX    = ${DESTDIR}$(PREFIX)
  
  # Where Munin keeps its configurations (server.conf, client.conf, ++)
 -CONFDIR    = $(DESTDIR)/etc/opt/munin
@@ -65,7 +61,7 @@ $NetBSD: patch-aa,v 1.2 2006/07/21 23:21:20 abs Exp $
  
  # Server only - Where to install the perl libraries
 -PERLLIB    = $(DESTDIR)$(shell $(PERL) -V:sitelib | cut -d= -f2 | sed "s/[\';]//g")
-+PERLLIB    = ${PERL5_SITELIB}
++PERLLIB    = ${DESTDIR}${PERL5_SITELIB}
  
  # Client only - Install plugins for this architecture
  OSTYPE     = $(shell uname | tr '[A-Z]' '[a-z]')
