@@ -1,0 +1,3 @@
+The Perl 5 module Test::Compile lets you check the validity of a
+Perl module file or Perl script file, and report its results in
+standard Test::Simple fashion.
