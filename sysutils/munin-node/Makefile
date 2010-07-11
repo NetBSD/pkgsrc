@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/02/10 19:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/07/11 18:15:47 joerg Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin.sourceforge.net/
 COMMENT=	System monitoring tool, client version
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
@@ -34,12 +36,14 @@ PLIST.not-sunos= yes
 
 PKG_GROUPS_VARS+=	MUNIN_GROUP
 PKG_USERS_VARS+=	MUNIN_USER
+USERGROUP_PHASE=	pre-install
 
 MUNIN_GROUP?=	munin
 MUNIN_USER?=	munin
 
 PKG_GROUPS=	${MUNIN_GROUP}
-PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}::Munin\\ user
+PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}
+PKG_GECOS.${MUNIN_USER}=	Munin\\ user
 PKG_SYSCONFSUBDIR?=	munin
 REPLACE_PERL+=	node/node.d/*.in
 
@@ -67,7 +71,8 @@ BUILD_TARGET=	build
 
 #MAKE_ENV+=	PERL5_SITELIB=${PERL5_SITELIB}
 MAKE_ENV+=	PREFIX=${PREFIX}
-MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=	CONFDIR=${DESTDIR}${PKG_SYSCONFDIR}
+INSTALL_MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
 MAKE_ENV+=	MUNIN_GROUP=${MUNIN_GROUP}
 MAKE_ENV+=	PERL5=${PERL5:Q}
@@ -88,14 +93,13 @@ RCD_SCRIPTS+=	munin-node
 EGDIR=		${PREFIX}/share/examples/munin
 
 CONF_FILES+=	${EGDIR}/munin-node.conf ${PKG_SYSCONFDIR}/munin-node.conf
-
+INSTALLATION_DIRS+=	${EGDIR}
 
 pre-configure:
 	cd ${FILESDIR}; ${TAR} cf - . | (cd ${WRKSRC}; ${TAR} xfp -)
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/build/node/munin-node.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/build/node/munin-node.conf ${DESTDIR}${EGDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
