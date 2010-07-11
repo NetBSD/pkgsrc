@@ -1,0 +1,4 @@
+The Perl 5 module Git::CPAN::Patch provides a suite of git commands
+aimed at making trivially easy the process of grabbing any distribution
+off CPAN, stuffing it in a local git repository and, once gleeful
+hacking has been perpetrated, sending back patches to its maintainer.
