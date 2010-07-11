@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1362 2010/07/09 21:23:49 asau Exp $
+# $NetBSD: Makefile,v 1.1363 2010/07/11 08:41:22 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -911,6 +911,7 @@ SUBDIR+=	p5-Scope-Upper
 SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Set-Scalar
+SUBDIR+=	p5-Shell-Perl
 SUBDIR+=	p5-ShipIt
 SUBDIR+=	p5-Smart-Comments
 SUBDIR+=	p5-Software-License
