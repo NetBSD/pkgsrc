@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.760 2010/07/11 09:12:37 seb Exp $
+# $NetBSD: Makefile,v 1.761 2010/07/11 09:37:38 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -443,6 +443,7 @@ SUBDIR+=	p5-Rose-HTMLx-Form-Related
 SUBDIR+=	p5-Rose-URI
 SUBDIR+=	p5-SCGI
 SUBDIR+=	p5-SVN-Web
+SUBDIR+=	p5-Squatting
 SUBDIR+=	p5-Starlet
 SUBDIR+=	p5-Starman
 SUBDIR+=	p5-Task-CatInABox
