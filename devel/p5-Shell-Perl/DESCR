@@ -1,0 +1,2 @@
+The Perl 5 module Shell::Perl is the implementation of a command-line
+interpreter for Perl. It is the heart of the provided pirl script.
