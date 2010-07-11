@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2420 2010/07/11 08:41:40 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2421 2010/07/11 09:12:56 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3244,3 +3244,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/mule to 2.3nb6 [obache 2010-07-11]
 	Added www/p5-Catalyst-Engine-PSGI version 0.10 [seb 2010-07-11]
 	Added devel/p5-Shell-Perl version 0.0018 [seb 2010-07-11]
+	Added www/p5-Continuity version 1.1.1 [seb 2010-07-11]
