@@ -1,0 +1,2 @@
+The Perl 5 module Catalyst::Engine::PSGI is a Catalyst Engine that
+adapts Catalyst into the PSGI gateway protocol.
