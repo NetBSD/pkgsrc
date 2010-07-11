@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: distinfo,v 1.5 2010/07/11 23:51:15 dholland Exp $
 
 SHA1 (xmx-2.1alpha.pl7.tar.gz) = b517b20a7bfa352b12ffb7dd260d50ea6c1ec21b
 RMD160 (xmx-2.1alpha.pl7.tar.gz) = 18560824a35ffc55ce90fa63d1894362afa45405
@@ -85,3 +85,4 @@ SHA1 (patch-ec) = 18de9cdf60967af54721d105072dc30867a99904
 SHA1 (patch-ed) = 11c1d90ecad5bec0c92bbb4bd7b80c4056e4bcde
 SHA1 (patch-ee) = 077943c76a512a0e51e7097409ec645d43b1ba18
 SHA1 (patch-ef) = 58e1b211139aaba6f4303cec5b6a6cac98ab5b66
+SHA1 (patch-eg) = fffaaddaf67708b90c44b76ac4b9a301ffef6530
