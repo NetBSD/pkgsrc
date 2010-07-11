@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2427 2010/07/11 13:30:21 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2428 2010/07/11 13:51:13 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/cherokee to 1.0.5 [obache 2010-07-11]
 	Updated www/p5-CGI-Emulate-PSGI to 0.10 [seb 2010-07-11]
 	Updated www/p5-CGI-PSGI to 0.11 [seb 2010-07-11]
+	Added www/p5-Task-Plack version 0.24 [seb 2010-07-11]
