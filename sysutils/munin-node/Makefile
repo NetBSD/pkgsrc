@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/07/11 18:15:47 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2010/07/11 18:17:27 joerg Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -43,7 +43,7 @@ MUNIN_USER?=	munin
 
 PKG_GROUPS=	${MUNIN_GROUP}
 PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}
-PKG_GECOS.${MUNIN_USER}=	Munin\\ user
+PKG_GECOS.${MUNIN_USER}=	Munin user
 PKG_SYSCONFSUBDIR?=	munin
 REPLACE_PERL+=	node/node.d/*.in
 
