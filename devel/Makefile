@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1366 2010/07/11 20:09:48 seb Exp $
+# $NetBSD: Makefile,v 1.1367 2010/07/11 22:42:14 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -684,6 +684,7 @@ SUBDIR+=	p5-Getopt-Long
 SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-Getopt-Mixed
 SUBDIR+=	p5-Getopt-Simple
+SUBDIR+=	p5-Git-CPAN-Patch
 SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Gtk2-GladeXML
 SUBDIR+=	p5-Guard
