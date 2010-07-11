@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.8 2007/10/08 08:47:09 obache Exp $
+# $NetBSD: wbm.mk,v 1.9 2010/07/11 17:41:01 joerg Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -57,10 +57,10 @@ WBM_EGDIR=	${PREFIX}/share/examples/webmin
 
 PKG_SYSCONFSUBDIR=	webmin
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/${WBM_NAME}			\
-			${ROOT_USER} ${ROOT_GROUP} 0700
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 CONF_FILES_PERMS+=	${WBM_EGDIR}/${WBM_NAME}/config			\
 			${PKG_SYSCONFDIR}/${WBM_NAME}/config		\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 FILES_SUBST+=		WBM_NAME=${WBM_NAME:Q}
 FILES_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
 FILES_SUBST+=		WEBMIN_VARDIR=${WEBMIN_VARDIR:Q}
@@ -85,11 +85,13 @@ wbm-build:
 	${FIND} ${WBMSRC} -name '*.cgi' -print -o -name '*.pl' -print |	\
 	${PERL5} ${WEBMIN_DIR}/perlpath.pl ${PERL5} -
 
+INSTALLATION_DIRS+=	${WBM_DIR} ${WBM_EGDIR}
+
 wbm-install:
-	${CP} -R ${WBMSRC} ${WBM_DIR}/.
+	${CP} -R ${WBMSRC} ${DESTDIR}${WBM_DIR}/.
 	${PERL5} ${WEBMIN_DIR}/copyconfig.pl				\
 		${WEBMIN_OSTYPE_cmd:sh:Q} ${WEBMIN_OSVERSION_cmd:sh:Q}	\
-		${WBM_DIR} ${WBM_EGDIR} ${WBM_NAME}
+		${DESTDIR}${WBM_DIR} ${DESTDIR}${WBM_EGDIR} ${WBM_NAME}
 
 do-configure: wbm-configure
 do-build: wbm-build
