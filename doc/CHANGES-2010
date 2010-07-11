@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2432 2010/07/11 22:42:42 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2433 2010/07/11 23:57:47 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3256,3 +3256,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Test-Compile version 0.13 [seb 2010-07-11]
 	Added devel/p5-BackPAN-Index version 0.39 [seb 2010-07-11]
 	Added devel/p5-Git-CPAN-Patch version 0.4.4 [seb 2010-07-11]
+	Updated devel/p5-App-cpanoutdated to 0.09 [seb 2010-07-11]
