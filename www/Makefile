@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.762 2010/07/11 10:28:28 seb Exp $
+# $NetBSD: Makefile,v 1.763 2010/07/11 10:54:02 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -251,6 +251,7 @@ SUBDIR+=	p5-App-Nopaste
 SUBDIR+=	p5-CGI
 SUBDIR+=	p5-CGI-Ajax
 SUBDIR+=	p5-CGI-Application
+SUBDIR+=	p5-CGI-Application-PSGI
 SUBDIR+=	p5-CGI-Application-Plugin-DBH
 SUBDIR+=	p5-CGI-Application-Plugin-ValidateRM
 SUBDIR+=	p5-CGI-Compile
