@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2006/06/21 15:15:16 minskim Exp $
+$NetBSD: patch-ag,v 1.6 2010/07/11 02:53:25 obache Exp $
 
 --- Wnn/jlib/js.c.orig	1999-05-17 03:04:45.000000000 +0000
 +++ Wnn/jlib/js.c
@@ -46,3 +46,12 @@ $NetBSD: patch-ag,v 1.5 2006/06/21 15:15:16 minskim Exp $
  
  #if DEBUG
  	xerror("jslib:Can't connect socket.\n");
+@@ -2554,7 +2550,7 @@ char *lang;
+ int cnt;
+ {
+     FILE *fp;
+-    static char s[6][EXPAND_PATH_LENGTH];
++    static char s[7][EXPAND_PATH_LENGTH];
+     char serv_defs[EXPAND_PATH_LENGTH];
+     char data[1024];
+     int num;
