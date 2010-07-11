@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/10 12:19:23 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/11 17:41:07 joerg Exp $
 
 PKGNAME=	wbm-${WBM_NAME}-${WBM_MOD_REV}
 PKGREVISION=	2
@@ -11,6 +11,8 @@ WBM_MOD_REV=	3.572
 WBM_DEPEND_MODULES=	net quota useradmin sendmail apache mysql
 
 COMMENT=	Webmin module to allow users to control their own virtual servers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/webmin/wbm.mk"
 .include "../../mk/bsd.pkg.mk"
