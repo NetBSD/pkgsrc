@@ -1,0 +1,59 @@
+$NetBSD: patch-cj,v 1.1 2010/07/11 03:00:33 obache Exp $
+
+--- src/wnnfns.c.orig	1995-05-30 06:49:10.000000000 +0000
++++ src/wnnfns.c
+@@ -322,6 +322,9 @@ static struct wnn_env *wnnfns_env_rev[NS
+ static int wnnfns_norm;
+ static unsigned char lc_wnn_server_type[NSERVER] = {LCJP, LCCN, LCINV, LCKR};
+ 
++static int yes_or_no();
++static void puts2();
++
+ /* Lisp Variables and Constants Definition */
+ Lisp_Object	Qjserver;
+ Lisp_Object	Qcserver;
+@@ -430,8 +433,6 @@ Specify password files of dictionary and
+      int			nargs;
+      register Lisp_Object	*args;
+ {
+-  static int yes_or_no();
+-  static void puts2();
+   struct gcpro gcpro1;
+   int	snum;
+   CHECK_STRING (args[0], 0);
+@@ -1242,8 +1243,6 @@ Specify password files of dictionary and
+      int                        nargs;
+      register Lisp_Object       *args;
+ {
+-  static int yes_or_no();
+-  static void puts2();
+   struct gcpro gcpro1;
+   int   snum;
+   CHECK_STRING (args[0], 0);
+@@ -1278,8 +1277,6 @@ Specify password files of dictionary and
+      int                        nargs;
+      register Lisp_Object       *args;
+ {
+-  static int yes_or_no();
+-  static void puts2();
+   struct gcpro gcpro1;
+   int   snum;
+   CHECK_STRING (args[0], 0);
+@@ -1314,8 +1311,6 @@ Specify password files of dictionary and
+      int                        nargs;
+      register Lisp_Object       *args;
+ {
+-  static int yes_or_no();
+-  static void puts2();
+   struct gcpro gcpro1;
+   int   snum;
+   int	dic_no;
+@@ -1376,8 +1371,6 @@ Specify password files of dictionary and
+      int                        nargs;
+      register Lisp_Object       *args;
+ {
+-  static int yes_or_no();
+-  static void puts2();
+   struct gcpro gcpro1;
+   int   snum;
+   int   dic_no;
