@@ -1,0 +1,2 @@
+The Perl 5 module CGI::Application::PSGI is a runner to run
+CGI::Application application as a PSGI application.
