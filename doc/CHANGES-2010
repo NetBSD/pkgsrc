@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2428 2010/07/11 13:51:13 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2429 2010/07/11 14:29:35 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3252,3 +3252,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CGI-Emulate-PSGI to 0.10 [seb 2010-07-11]
 	Updated www/p5-CGI-PSGI to 0.11 [seb 2010-07-11]
 	Added www/p5-Task-Plack version 0.24 [seb 2010-07-11]
+	Added devel/p5-App-Cache version 0.37 [seb 2010-07-11]
