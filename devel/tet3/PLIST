@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/12 02:46:37 dholland Exp $
 tet3/bin/grw
-tet3/bin/jet-build
-tet3/bin/jet-clean
-tet3/bin/jet-exec
-tet3/bin/jet-spawn
+${PLIST.java}tet3/bin/jet-build
+${PLIST.java}tet3/bin/jet-clean
+${PLIST.java}tet3/bin/jet-exec
+${PLIST.java}tet3/bin/jet-spawn
 tet3/bin/tcc
 tet3/bin/tccd
 tet3/bin/tccdsrv
@@ -19,7 +19,21 @@ tet3/lib/perl/api.pl
 tet3/lib/perl/tcm.pl
 tet3/lib/posix_sh/tcm.sh
 tet3/lib/posix_sh/tetapi.sh
+tet3/lib/tet3/Ctcm.o
+tet3/lib/tet3/Ctcmchild.o
+tet3/lib/tet3/Cthrtcm.o
+tet3/lib/tet3/Cthrtcmchild.o
 tet3/lib/tet3/libapi.a
 tet3/lib/tet3/libthrapi.a
+tet3/lib/tet3/tcm.o
+tet3/lib/tet3/tcm_m.o
+tet3/lib/tet3/tcmc_m.o
+tet3/lib/tet3/tcmchild.o
+tet3/lib/tet3/tcmr_m.o
+tet3/lib/tet3/tcmrem.o
+tet3/lib/tet3/thrtcm.o
+tet3/lib/tet3/thrtcm_m.o
+tet3/lib/tet3/thrtcmc_m.o
+tet3/lib/tet3/thrtcmchild.o
 tet3/lib/xpg3sh/tcm.sh
 tet3/lib/xpg3sh/tetapi.sh

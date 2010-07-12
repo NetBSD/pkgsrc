@@ -1,0 +1,93 @@
+$NetBSD: patch-ak,v 1.1 2010/07/12 02:46:38 dholland Exp $
+
+Work around POSIX getline() nonsense.
+
+--- src/tet3/tcc/scen1.c~	2006-03-10 09:42:21.000000000 +0000
++++ src/tet3/tcc/scen1.c
+@@ -152,7 +152,7 @@ static struct ifstack *ifstp;
+ 
+ /* static function declarations */
+ static int find1scen PROTOLIST((void));
+-static char *getline PROTOLIST((void));
++static char *get_line PROTOLIST((void));
+ static void includefile PROTOLIST((char *, char *, int));
+ static struct ifstack *ifsalloc PROTOLIST((void));
+ static void ifsfree PROTOLIST((struct ifstack *));
+@@ -245,7 +245,7 @@ static int find1scen()
+ 	**	the scenario processor can find it
+ 	*/
+ 	for (;;) {
+-		if ((line = getline()) == (char *) 0)
++		if ((line = get_line()) == (char *) 0)
+ 			return(ferror(ifstp->if_fp) ? -1 : 0);
+ 		if (!isspace(*line)) {
+ 			/* start of new scenario */
+@@ -288,7 +288,7 @@ static int proc1scen()
+ 	register struct scentab *ep;
+ 
+ 	/* read the scenario name - starts in column 1 */
+-	line = getline();
++	line = get_line();
+ 	ASSERT(line);
+ 	ASSERT(!isspace(*line));
+ 
+@@ -316,7 +316,7 @@ static int proc1scen()
+ 		return(-1);
+ 
+ 	/* process the rest of the current scenario */
+-	while ((line = getline()) != (char *) 0) {
++	while ((line = get_line()) != (char *) 0) {
+ 		if (!isspace(*line)) {
+ 			/* a new scenario */
+ 			ungetline(line);
+@@ -1197,13 +1197,13 @@ static struct ifstack *ifspop()
+ }
+ 
+ /*
+-**	getline() - get the next non-blank, non-comment line
++**	get_line() - get the next non-blank, non-comment line
+ **		from the currently active input file
+ **
+ **	return a pointer to the line, or (char *) 0 on EOF or error
+ */
+ 
+-static char *getline()
++static char *get_line()
+ {
+ 	static char buf[LBUFLEN];
+ 	struct lcache *lcp;
+@@ -1216,7 +1216,7 @@ static char *getline()
+ 	if ((lcp = lcpop()) != (struct lcache *) 0) {
+ 		(void) strcpy(buf, lcp->lc_line);
+ 		lcfree(lcp);
+-		TRACE2(tet_Tscen, 10, "getline(): line = <%s>", firstpart(buf));
++		TRACE2(tet_Tscen, 10, "get_line(): line = <%s>", firstpart(buf));
+ 		return(buf);
+ 	}
+ 
+@@ -1247,14 +1247,14 @@ static char *getline()
+ 			}
+ 			else
+ 				TRACE2(tet_Tscen, 10,
+-					"getline(): encountered EOF on %s",
++					"get_line(): encountered EOF on %s",
+ 					ifstp->if_fname);
+ 			if (ifstp->if_next) {
+ 				(void) fclose(ifstp->if_fp);
+ 				ifsfree(ifspop());
+ 				continue;
+ 			}
+-			TRACE1(tet_Tscen, 10, "getline(): return EOF");
++			TRACE1(tet_Tscen, 10, "get_line(): return EOF");
+ 			return((char *) 0);
+ 		}
+ 
+@@ -1289,7 +1289,7 @@ static char *getline()
+ 
+ 		/* if there is anything left, return it */
+ 		if (p >= buf) {
+-			TRACE4(tet_Tscen, 10, "getline(): fname = %s, lineno = %s, line = <%s>",
++			TRACE4(tet_Tscen, 10, "get_line(): fname = %s, lineno = %s, line = <%s>",
+ 				ifstp->if_fname, tet_i2a(ifstp->if_lcount),
+ 				firstpart(buf));
+ 			return(buf);
