@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.43 2009/09/02 08:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.43.8.1 2010/07/12 12:39:49 tron Exp $
 
 DISTNAME=	mule-2.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/mule/
 COMMENT=	Multilingual GNU editing macros (editor)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	emacs-[0-9]*
 
@@ -35,6 +37,10 @@ CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/lib/X11/fonts/intlfonts/bdf
 
 INFO_FILES=	# PLIST
 
+INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${GNU_CONFIGURE_INFODIR}
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${GNU_CONFIGURE_MANDIR}
+
 # Remove original versions of patched files so that aren't installed.
 post-build:
 	${FIND} ${WRKSRC} -name "*.orig" | ${XARGS} ${RM} -f
@@ -45,8 +51,8 @@ post-install:
 		-e 's/etl\([0-9]*\)-latin1/lt1-40-etl/' \
 		-e 's/etl\([0-9]*\)-latin\([0-9]\)/lt\2-\1-etl/' \
 		-e 's/jiskan24/j83-48/' \
-		< ${WRKSRC}/etc/CHARSETS > ${PREFIX}/lib/mule/19.28/etc/CHARSETS
-	#diff -u		${WRKSRC}/etc/CHARSETS ${PREFIX}/lib/mule/19.28/etc/CHARSETS
+		< ${WRKSRC}/etc/CHARSETS > ${DESTDIR}${PREFIX}/lib/mule/19.28/etc/CHARSETS
+	#diff -u		${WRKSRC}/etc/CHARSETS ${DESTDIR}${PREFIX}/lib/mule/19.28/etc/CHARSETS
 
 .include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/02/15 13:41:17 obache Exp $
+# $NetBSD: Makefile,v 1.19.4.1 2010/07/12 12:39:51 tron Exp $
 
 DISTNAME=	kinput2-v3.1
 PKGNAME=	kinput2-3.1
+PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/x11/kinput2/
 
