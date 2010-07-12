@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/07/11 03:00:33 obache Exp $
+# $NetBSD: Makefile,v 1.45 2010/07/12 01:57:34 dholland Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	6
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.m17n.org/mule/
 COMMENT=	Multilingual GNU editing macros (editor)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 CONFLICTS=	emacs-[0-9]*
 
