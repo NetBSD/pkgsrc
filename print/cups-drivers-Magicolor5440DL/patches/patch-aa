@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/02/01 00:38:36 jym Exp $
-
+$NetBSD: patch-aa,v 1.2 2010/07/12 22:06:07 jym Exp $
+- fix a typo about LDFLAGS
+- fix paths, some of them being hardcoded.
 --- configure.orig	2007-02-28 23:33:11.000000000 +0100
 +++ configure
 @@ -2957,7 +2957,7 @@ fi
