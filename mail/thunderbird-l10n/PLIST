@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/22 16:59:05 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/07/12 17:10:37 tnn Exp $
 lib/thunderbird/extensions/langpack-af@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-af@thunderbird.mozilla.org/chrome/af.jar
 lib/thunderbird/extensions/langpack-af@thunderbird.mozilla.org/defaults/pref/all-l10n.js
@@ -75,10 +75,6 @@ lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome.manifes
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE.jar
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/defaults/pref/all-l10n.js
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/install.rdf
-lib/thunderbird/extensions/langpack-gl@thunderbird.mozilla.org/chrome.manifest
-lib/thunderbird/extensions/langpack-gl@thunderbird.mozilla.org/chrome/gl.jar
-lib/thunderbird/extensions/langpack-gl@thunderbird.mozilla.org/defaults/pref/all-l10n.js
-lib/thunderbird/extensions/langpack-gl@thunderbird.mozilla.org/install.rdf
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he.jar
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/defaults/pref/all-l10n.js
@@ -103,10 +99,6 @@ lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja.jar
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/defaults/pref/all-l10n.js
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/install.rdf
-lib/thunderbird/extensions/langpack-ka@thunderbird.mozilla.org/chrome.manifest
-lib/thunderbird/extensions/langpack-ka@thunderbird.mozilla.org/chrome/ka.jar
-lib/thunderbird/extensions/langpack-ka@thunderbird.mozilla.org/defaults/pref/all-l10n.js
-lib/thunderbird/extensions/langpack-ka@thunderbird.mozilla.org/install.rdf
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko.jar
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/defaults/pref/all-l10n.js
@@ -155,14 +147,14 @@ lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk.jar
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/defaults/pref/all-l10n.js
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/install.rdf
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome.manifest
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl.jar
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/defaults/pref/all-l10n.js
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/install.rdf
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq.jar
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/defaults/pref/all-l10n.js
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/install.rdf
-lib/thunderbird/extensions/langpack-sr@thunderbird.mozilla.org/chrome.manifest
-lib/thunderbird/extensions/langpack-sr@thunderbird.mozilla.org/chrome/sr.jar
-lib/thunderbird/extensions/langpack-sr@thunderbird.mozilla.org/defaults/pref/all-l10n.js
-lib/thunderbird/extensions/langpack-sr@thunderbird.mozilla.org/install.rdf
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE.jar
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/defaults/pref/all-l10n.js
@@ -175,10 +167,6 @@ lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk.jar
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/defaults/pref/all-l10n.js
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/install.rdf
-lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome.manifest
-lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi.jar
-lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/defaults/pref/all-l10n.js
-lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/install.rdf
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN.jar
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/defaults/pref/all-l10n.js
