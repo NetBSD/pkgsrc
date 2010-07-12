@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/10/22 17:25:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/07/12 15:54:09 drochner Exp $
 ${PLIST.evolution}bin/gnome-about-me
 bin/gnome-appearance-properties
 bin/gnome-at-mobility
@@ -55,22 +55,34 @@ ${PLIST.evolution}share/gnome-control-center/pixmaps/gnome-about-me-lock-open.pn
 ${PLIST.evolution}share/gnome-control-center/pixmaps/gnome-about-me-lock.png
 share/gnome-control-center/pixmaps/gtk-theme-thumbnailing.png
 share/gnome-control-center/pixmaps/icon-theme-thumbnailing.png
+share/gnome-control-center/pixmaps/left-index-finger.png
 share/gnome-control-center/pixmaps/left-index-finger.svg
+share/gnome-control-center/pixmaps/left-little-finger.png
 share/gnome-control-center/pixmaps/left-little-finger.svg
+share/gnome-control-center/pixmaps/left-middle-finger.png
 share/gnome-control-center/pixmaps/left-middle-finger.svg
+share/gnome-control-center/pixmaps/left-ring-finger.png
 share/gnome-control-center/pixmaps/left-ring-finger.svg
+share/gnome-control-center/pixmaps/left-thumb.png
 share/gnome-control-center/pixmaps/left-thumb.svg
 share/gnome-control-center/pixmaps/mouse-cursor-normal-large.png
 share/gnome-control-center/pixmaps/mouse-cursor-normal.png
 share/gnome-control-center/pixmaps/mouse-cursor-white-large.png
 share/gnome-control-center/pixmaps/mouse-cursor-white.png
 share/gnome-control-center/pixmaps/ocean-stripes.png
+share/gnome-control-center/pixmaps/print_error.png
 share/gnome-control-center/pixmaps/print_error.svg
+share/gnome-control-center/pixmaps/print_ok.png
 share/gnome-control-center/pixmaps/print_ok.svg
+share/gnome-control-center/pixmaps/right-index-finger.png
 share/gnome-control-center/pixmaps/right-index-finger.svg
+share/gnome-control-center/pixmaps/right-little-finger.png
 share/gnome-control-center/pixmaps/right-little-finger.svg
+share/gnome-control-center/pixmaps/right-middle-finger.png
 share/gnome-control-center/pixmaps/right-middle-finger.svg
+share/gnome-control-center/pixmaps/right-ring-finger.png
 share/gnome-control-center/pixmaps/right-ring-finger.svg
+share/gnome-control-center/pixmaps/right-thumb.png
 share/gnome-control-center/pixmaps/right-thumb.svg
 share/gnome-control-center/pixmaps/subpixel-bgr.png
 share/gnome-control-center/pixmaps/subpixel-rgb.png
@@ -128,6 +140,7 @@ share/gnome/help/control-center/pt/control-center.xml
 share/gnome/help/control-center/pt_BR/control-center.xml
 share/gnome/help/control-center/ru/control-center.xml
 share/gnome/help/control-center/sv/control-center.xml
+share/gnome/help/control-center/th/control-center.xml
 share/gnome/help/control-center/uk/control-center.xml
 share/gnome/help/control-center/vi/control-center.xml
 share/gnome/help/control-center/zh_CN/control-center.xml
@@ -171,6 +184,7 @@ share/locale/da/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/dz/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/en@shaw/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/es/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -204,6 +218,7 @@ share/locale/mn/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/mr/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/nb/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/nds/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ne/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -257,6 +272,7 @@ share/omf/control-center/control-center-pt.omf
 share/omf/control-center/control-center-pt_BR.omf
 share/omf/control-center/control-center-ru.omf
 share/omf/control-center/control-center-sv.omf
+share/omf/control-center/control-center-th.omf
 share/omf/control-center/control-center-uk.omf
 share/omf/control-center/control-center-vi.omf
 share/omf/control-center/control-center-zh_CN.omf
