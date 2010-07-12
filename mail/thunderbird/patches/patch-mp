@@ -1,4 +1,4 @@
-$NetBSD: patch-mp,v 1.1 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-mp,v 1.2 2010/07/12 16:49:22 tnn Exp $
 
 --- mozilla/media/libsydneyaudio/src/Makefile.in.orig	2009-12-02 05:28:49.000000000 +0100
 +++ mozilla/media/libsydneyaudio/src/Makefile.in

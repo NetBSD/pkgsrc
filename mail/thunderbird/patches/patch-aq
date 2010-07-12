@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.5 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-aq,v 1.6 2010/07/12 16:49:22 tnn Exp $
 
 --- mozilla/media/liboggplay/src/liboggplay/std_semaphore.h.orig	2009-10-16 17:14:09.000000000 +0200
 +++ mozilla/media/liboggplay/src/liboggplay/std_semaphore.h

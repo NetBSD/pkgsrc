@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/06/02 15:39:26 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2010/07/12 16:49:21 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning mozilla-enigmail
@@ -49,6 +49,9 @@ CONFIGURE_ARGS+=	--disable-jit
 .if !empty(PKG_OPTIONS:Mmozilla-lightning)
 CONFIGURE_ARGS+=	--enable-calendar
 PLIST_SRC+=		PLIST.lightning
+XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/calendar-timezones.xpi
+XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/gdata-provider.xpi
+XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/lightning.xpi
 .else
 CONFIGURE_ARGS+=	--disable-calendar
 .endif

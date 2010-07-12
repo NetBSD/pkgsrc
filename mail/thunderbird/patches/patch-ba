@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.8 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-ba,v 1.9 2010/07/12 16:49:22 tnn Exp $
 
 pthread_t may be 64-bit, avoid casting it.
 

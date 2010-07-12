@@ -1,9 +1,9 @@
-$NetBSD: patch-me,v 1.2 2010/04/26 12:38:00 tnn Exp $
+$NetBSD: patch-me,v 1.3 2010/07/12 16:49:22 tnn Exp $
 
 Add DragonFly support.
 Disable assembly routines in freebl on Linux (PR pkg/43146)
 
---- mozilla/security/nss/lib/freebl/Makefile.orig	2010-03-17 17:06:12.000000000 +0000
+--- mozilla/security/nss/lib/freebl/Makefile.orig	2010-04-13 22:22:54.000000000 +0000
 +++ mozilla/security/nss/lib/freebl/Makefile
 @@ -154,7 +154,9 @@ ifeq ($(USE_N32),1)
  endif
