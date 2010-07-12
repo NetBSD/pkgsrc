@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.1 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-av,v 1.2 2010/07/12 16:49:22 tnn Exp $
 
 --- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2008-03-22 05:25:35.000000000 +0100
 +++ mozilla/xulrunner/app/nsXULRunnerApp.cpp
