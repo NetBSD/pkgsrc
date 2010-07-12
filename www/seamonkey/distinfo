@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2010/07/12 11:56:59 tnn Exp $
+$NetBSD: distinfo,v 1.52 2010/07/12 13:57:29 tnn Exp $
 
 SHA1 (seamonkey-2.0.5.source.tar.bz2) = a2be375b89a7d1f641da285f1c8edb81c2831e7b
 RMD160 (seamonkey-2.0.5.source.tar.bz2) = ac8f03efa79ebd1c7f47434e0f8bfb79ff209f25
@@ -32,9 +32,9 @@ SHA1 (patch-ay) = 5aaeb992cab024fb2b6035ddee239a8534b23aee
 SHA1 (patch-az) = 0e04c1c740ad3f1462a6cda4a3832378acefb600
 SHA1 (patch-ba) = fd28f3b24848e7221078ef692eef7ccae8625987
 SHA1 (patch-bb) = 70d1d1fed2f611fa0185ca5736dae26c8cbc2f12
-SHA1 (patch-directory_c-sdk_configure.in) = 171cf70894cecf4cda149380deef2d859cb98d83
-SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = f56ec8a4ce6a6a7b6c9423f6c3d914b70461a710
-SHA1 (patch-directory_c-sdk_ldap_libraries_libldap_Makefile.in) = ddc133cb552869c97d00ddea6f43e74ecf37e54e
+SHA1 (patch-directory_c-sdk_configure.in) = 4d8d8c1425ca26036d8f5179f954dbea2203de36
+SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = 2727868e9fd905badb5b2f6195903ba214ce8138
+SHA1 (patch-directory_c-sdk_ldap_libraries_libldap_Makefile.in) = 6e9788e5e9575fc0813f5f0e178cc2f5659ea781
 SHA1 (patch-ma) = 9b9bc5e5ced5831aa14e1549ed2ddf0b9c2ce986
 SHA1 (patch-ma-toplevel) = 460326a0551fecd13ca188cff907c89cce359c31
 SHA1 (patch-mb) = 8bdd47c4e57ae63c971766286ce8626d3341c92e
