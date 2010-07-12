@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2010/06/13 22:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2010/07/12 17:52:29 drochner Exp $
 
-DISTNAME=	evolution-data-server-2.28.3.1
-PKGREVISION=	2
+DISTNAME=	evolution-data-server-2.30.2.1
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/2.28/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -42,10 +41,6 @@ CPPFLAGS+=	-DBIND_8_COMPAT
 CFLAGS.SunOS+=	-D__FUNCTION__=__func__
 .endif
 
-CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
-CONFIGURE_ARGS+=	--with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib
-CONFIGURE_ARGS+=	--with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
-CONFIGURE_ARGS+=	--with-nss-libs=${BUILDLINK_PREFIX.nss}/lib
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--with-libdb=${BDBBASE}
 
@@ -69,7 +64,6 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgweather/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
