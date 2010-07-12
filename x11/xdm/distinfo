@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/01/28 15:14:33 tnn Exp $
+$NetBSD: distinfo,v 1.4 2010/07/12 11:39:57 obache Exp $
 
-SHA1 (xdm-1.1.9.tar.bz2) = ea0ee2923999d54848dc8a165867ffa7c628fd7b
-RMD160 (xdm-1.1.9.tar.bz2) = 4a80e19ad1af6d3c61f3e10c3d2719c4811418d9
-Size (xdm-1.1.9.tar.bz2) = 425348 bytes
+SHA1 (xdm-1.1.10.tar.bz2) = 45eb013aa14ddd8d385b200b94fb0fbcbe09b860
+RMD160 (xdm-1.1.10.tar.bz2) = c5f6b3bba2d1294b560ad50e2eaaa90097c62dee
+Size (xdm-1.1.10.tar.bz2) = 423578 bytes
