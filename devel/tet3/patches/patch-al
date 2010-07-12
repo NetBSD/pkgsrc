@@ -1,0 +1,133 @@
+$NetBSD: patch-al,v 1.1 2010/07/12 02:46:38 dholland Exp $
+
+make the build stop on error.
+
+--- src/tet3/makefile~	2006-03-10 09:42:19.000000000 +0000
++++ src/tet3/makefile
+@@ -107,7 +107,7 @@ all install CLEAN clean:
+ 	for i in $(DIRS);						\
+ 	do								\
+ 		echo $$i:;						\
+-		(cd $$i && $(MAKE) $@);					\
++		(cd $$i && $(MAKE) $@) || exit 1;			\
+ 	done;								\
+ 									\
+ 	: "thread-safe tcm and api library";				\
+@@ -118,7 +118,7 @@ all install CLEAN clean:
+ 		for i in $(THRDIRS);					\
+ 		do							\
+ 			echo $$i:;					\
+-			(cd $$i && $(MAKE) $@);				\
++			(cd $$i && $(MAKE) $@) || exit 1;		\
+ 		done;							\
+ 		;;							\
+ 	esac;								\
+@@ -131,7 +131,7 @@ all install CLEAN clean:
+ 		for i in $(SHLIBDIRS);					\
+ 		do							\
+ 			echo $$i:;					\
+-			(cd $$i && $(MAKE) $@);				\
++			(cd $$i && $(MAKE) $@) || exit 1;		\
+ 		done;							\
+ 		;;							\
+ 	esac;								\
+@@ -144,7 +144,7 @@ all install CLEAN clean:
+ 		for i in $(THRSHLIBDIRS);				\
+ 		do							\
+ 			echo $$i:;					\
+-			(cd $$i && $(MAKE) $@);				\
++			(cd $$i && $(MAKE) $@) || exit 1;		\
+ 		done;							\
+ 		;;							\
+ 	esac;								\
+@@ -155,11 +155,11 @@ all install CLEAN clean:
+ 		;;							\
+ 	*:all)								\
+ 		echo "tcm(C++):";					\
+-		(cd tcm && $(MAKE) allC);				\
++		(cd tcm && $(MAKE) allC) || exit 1;			\
+ 		;;							\
+ 	*:install)							\
+ 		echo "tcm(C++):";					\
+-		(cd tcm && $(MAKE) installC);				\
++		(cd tcm && $(MAKE) installC) || exit 1;			\
+ 		;;							\
+ 	esac;								\
+ 									\
+@@ -169,11 +169,11 @@ all install CLEAN clean:
+ 		;;							\
+ 	*:all)								\
+ 		echo "tcmthr(C++):";					\
+-		(cd tcmthr && $(MAKE) allC);				\
++		(cd tcmthr && $(MAKE) allC) || exit 1;			\
+ 		;;							\
+ 	*:install)							\
+ 		echo "tcmthr(C++):";					\
+-		(cd tcmthr && $(MAKE) installC);			\
++		(cd tcmthr && $(MAKE) installC) || exit 1;		\
+ 		;;							\
+ 	esac;								\
+ 									\
+@@ -183,11 +183,11 @@ all install CLEAN clean:
+ 		;;							\
+ 	*:all)								\
+ 		echo "tcmshlib(C++):";					\
+-		(cd tcmshlib && $(MAKE) allC);				\
++		(cd tcmshlib && $(MAKE) allC) || exit 1;		\
+ 		;;							\
+ 	*:install)							\
+ 		echo "tcmshlib(C++):";					\
+-		(cd tcmshlib && $(MAKE) installC);			\
++		(cd tcmshlib && $(MAKE) installC) || exit 1;		\
+ 		;;							\
+ 	esac;								\
+ 									\
+@@ -197,11 +197,11 @@ all install CLEAN clean:
+ 		;;							\
+ 	*:all)								\
+ 		echo "tcmthrshlib(C++):";				\
+-		(cd tcmthrshlib && $(MAKE) allC);			\
++		(cd tcmthrshlib && $(MAKE) allC) || exit 1;		\
+ 		;;							\
+ 	*:install)							\
+ 		echo "tcmsthrhlib(C++):";				\
+-		(cd tcmthrshlib && $(MAKE) installC);			\
++		(cd tcmthrshlib && $(MAKE) installC) || exit 1;		\
+ 		;;							\
+ 	esac;								\
+ 									\
+@@ -216,7 +216,7 @@ all install CLEAN clean:
+ 			for i in $(JAVADIRS);				\
+ 			do						\
+ 				echo $$i:;				\
+-				(cd $$i && $(MAKE) $@);			\
++				(cd $$i && $(MAKE) $@) || exit 1;	\
+ 			done;						\
+ 		fi;							\
+ 		;;							\
+@@ -228,7 +228,7 @@ all install CLEAN clean:
+ 		if test -d $$i;						\
+ 		then							\
+ 			echo $$i:;					\
+-			(cd $$i && $(MAKE) $@);				\
++			(cd $$i && $(MAKE) $@) || exit 1;		\
+ 		fi;							\
+ 	done;
+ 
+@@ -245,14 +245,14 @@ CLOBBER clobber FORCE FRC:
+ 	for i in $(DIRS) $(THRDIRS) $(SHLIBDIRS) $(THRSHLIBDIRS);	\
+ 	do								\
+ 		echo $$i:;						\
+-		(cd $$i && $(MAKE) $@);					\
++		(cd $$i && $(MAKE) $@) || exit 1;			\
+ 	done;								\
+ 	for i in $(JAVADIRS) $(OPTDIRS);				\
+ 	do								\
+ 		if test -d $$i;						\
+ 		then							\
+ 			echo $$i:;					\
+-			(cd $$i && $(MAKE) $@);				\
++			(cd $$i && $(MAKE) $@) || exit 1;		\
+ 		fi;							\
+ 	done;
+ 
