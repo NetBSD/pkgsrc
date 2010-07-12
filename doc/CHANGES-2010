@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2438 2010/07/12 01:56:09 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2439 2010/07/12 03:08:24 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3262,3 +3262,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-NYTProf to 4.04 [seb 2010-07-12]
 	Updated devel/p5-Devel-REPL to 1.003011 [seb 2010-07-12]
 	Updated devel/p5-PPI to 1.213 [seb 2010-07-12]
+	Updated www/gallery to 1.5.10nb2 [dholland 2010-07-12]
+	Updated devel/tet3 to 3.7nb1 [dholland 2010-07-12]
