@@ -1,0 +1,17 @@
+$NetBSD$
+
+Add DragonFly support.
+
+--- directory/c-sdk/ldap/libraries/libldap/Makefile.in.orig	2008-12-24 09:39:55.000000000 +0000
++++ directory/c-sdk/ldap/libraries/libldap/Makefile.in
+@@ -262,6 +262,10 @@ ifeq ($(OS_ARCH), OpenBSD)
+ EXTRA_LIBS = -L$(dist_libdir) -l$(LBER_LIBNAME) -pthread
+ endif
+ 
++ifeq ($(OS_ARCH), DragonFly)
++EXTRA_LIBS = -L$(dist_libdir) -l$(LBER_LIBNAME)
++endif
++
+ ifeq ($(HAVE_SASL), 1)
+ EXTRA_LIBS += $(SASL_LINK)
+ endif
