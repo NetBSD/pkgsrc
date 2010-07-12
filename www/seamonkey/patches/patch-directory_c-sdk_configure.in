@@ -1,0 +1,23 @@
+$NetBSD$
+
+Add DragonFly support.
+
+--- directory/c-sdk/configure.in.orig	2009-10-06 21:43:08.000000000 +0000
++++ directory/c-sdk/configure.in
+@@ -1233,6 +1233,16 @@ tools are selected during the Xcode/Deve
+     _DEBUG_FLAGS=
+     ;;
+ 
++*-dragonfly*)
++    if test -z "$USE_NSPR_THREADS"; then
++        USE_PTHREADS=1
++    fi
++    AC_DEFINE(XP_UNIX)
++    AC_DEFINE(DRAGONFLY)
++    DSO_CFLAGS=-fPIC
++    DSO_LDOPTS='-shared'
++	;;
++
+ *-freebsd*)
+     if test -z "$USE_NSPR_THREADS"; then
+         USE_PTHREADS=1
