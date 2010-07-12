@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2010/04/19 15:33:25 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/12 01:05:51 dholland Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/xine-lib/Makefile.common"
 
-PKGNAME=	${XINE_PKGNAME:S/lib/v4l2/}
+PKGNAME=	${XINE_PKGNAME:S/lib/v4l/}
 CATEGORIES=	multimedia
 COMMENT=	The v4l input plugin for xine-lib
 
