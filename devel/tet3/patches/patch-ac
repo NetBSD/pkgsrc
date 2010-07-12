@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.2 2006/06/08 16:57:59 rillig Exp $
+$NetBSD: patch-ac,v 1.3 2010/07/12 02:46:38 dholland Exp $
 
---- /dev/null	2003-06-16 16:04:41.000000000 +0100
-+++ src/defines/UNTESTED/netbsd.mk	2003-06-16 16:03:57.000000000 +0100
-@@ -0,0 +1,165 @@
+Config for NetBSD.
+
+--- src/defines/UNTESTED/netbsd.mk.orig	2010-07-12 02:12:35.000000000 +0000
++++ src/defines/UNTESTED/netbsd.mk
+@@ -0,0 +1,181 @@
 +#
 +#	SCCS: @(#)netbsd.mk	1.1 (2003/06/16)
 +#
@@ -85,6 +87,8 @@ $NetBSD: patch-ac,v 1.2 2006/06/08 16:57:59 rillig Exp $
 +# sgs component definitions and flags
 +# CC - the name of the C compiler
 +CC = cc
++# LD_R - the program that performs partial linking
++LD_R = ld -r
 +# CDEFS may be passed to lint and cc, COPTS to cc only
 +# CDEFS usually defines NSIG (the highest signal number plus one)
 +CDEFS = -I$(INC) -I$(DINC)
@@ -168,3 +172,17 @@ $NetBSD: patch-ac,v 1.2 2006/06/08 16:57:59 rillig Exp $
 +THRSHLIB_BUILD_END =
 +SO =
 +
++# support for Java
++#
++# JAVA_CDEFS is used in addition to TET_CDEFS/DTET_CDEFS when compiling
++# the Java API.
++# It is normally set to -Ipath-to-jdk-include-directory
++# and includes a list of signals that the TCM should leave alone.
++# Set JAVA_CDEFS to JAVA_NOT_SUPPORTED if Java is not supported on your
++# system or if you don't want to build the Java API.
++# NOTE that the Java API is only supported on certain platforms - see the
++# Installation Guide and/or the Release Notes for details.
++JAVA_CDEFS = JAVA_NOT_SUPPORTED
++#
++# JAVA_COPTS is used in addition to COPTS when compiling the Java API.
++JAVA_COPTS = $(SHLIB_COPTS)
