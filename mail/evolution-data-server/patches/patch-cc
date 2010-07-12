@@ -1,0 +1,13 @@
+$NetBSD: patch-cc,v 1.1 2010/07/12 17:52:29 drochner Exp $
+
+--- camel/providers/local/camel-maildir-summary.c.orig	2010-06-11 17:47:27.000000000 +0000
++++ camel/providers/local/camel-maildir-summary.c
+@@ -378,7 +378,7 @@ static gchar *maildir_summary_next_uid_s
+ 				g_free(uid);
+ 				sleep(2);
+ 			}
+-			uid = g_strdup_printf("%ld.%d_%u.%s", time(NULL), getpid(), nextuid, mds->priv->hostname);
++			uid = g_strdup_printf("%lld.%d_%u.%s", (long long)time(NULL), getpid(), nextuid, mds->priv->hostname);
+ 			name = g_strdup_printf("%s/tmp/%s", cls->folder_path, uid);
+ 			retry++;
+ 		} while (stat(name, &st) == 0 && retry<3);

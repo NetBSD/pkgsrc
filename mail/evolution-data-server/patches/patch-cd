@@ -1,0 +1,13 @@
+$NetBSD: patch-cd,v 1.1 2010/07/12 17:52:29 drochner Exp $
+
+--- addressbook/backends/vcf/e-book-backend-vcf.c.orig	2010-06-11 17:49:13.000000000 +0000
++++ addressbook/backends/vcf/e-book-backend-vcf.c
+@@ -77,7 +77,7 @@ e_book_backend_vcf_create_unique_id (voi
+ 	   it's doubtful 2^32 id's will be created in a second, so we
+ 	   should be okay. */
+ 	static guint c = 0;
+-	return g_strdup_printf (PAS_ID_PREFIX "%08lX%08X", time(NULL), c++);
++	return g_strdup_printf (PAS_ID_PREFIX "%08lX%08X", (long)time(NULL), c++);
+ }
+ 
+ static void
