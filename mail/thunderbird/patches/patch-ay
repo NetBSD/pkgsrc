@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.1 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-ay,v 1.2 2010/07/12 16:49:22 tnn Exp $
 
 --- mozilla/browser/app/nsBrowserApp.cpp.orig	2009-06-29 18:14:40.000000000 +0200
 +++ mozilla/browser/app/nsBrowserApp.cpp
