@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2010/06/17 13:45:36 obache Exp $
+# $NetBSD: Makefile,v 1.29 2010/07/12 10:54:55 tnn Exp $
 
 DISTNAME=	sqlite-amalgamation-3.6.23.1
 PKGNAME=	${DISTNAME:S/sqlite-amalgamation/sqlite3/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
 		http://www.sqlite.org/
@@ -29,6 +30,10 @@ CONFIGURE_ARGS+=	--with-readline-inc= --enable-threadsafe
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=		-DSQLITE_ENABLE_LOCKING_STYLE=0
 .endif
+
+# This define includes the sqlite3_unlock_notify() API in the build.
+# It is required by Firefox 4.x.
+CFLAGS+=		-DSQLITE_ENABLE_UNLOCK_NOTIFY=1
 
 # Uses dlopen and friends but doesn't use -ldl on Linux.
 # See http://www.sqlite.org/cvstrac/tktview?tn=3555
