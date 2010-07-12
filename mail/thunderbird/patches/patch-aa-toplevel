@@ -1,9 +1,9 @@
-$NetBSD: patch-aa-toplevel,v 1.1 2009/11/29 03:06:43 tnn Exp $
+$NetBSD: patch-aa-toplevel,v 1.2 2010/07/12 16:49:22 tnn Exp $
 
---- configure.in.orig	2009-10-25 15:29:01.000000000 +0100
+--- configure.in.orig	2010-06-23 17:43:07.000000000 +0000
 +++ configure.in
-@@ -1963,7 +1963,7 @@ case "$target" in
-     fi
+@@ -1938,7 +1938,7 @@ case "$target" in
+     MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
 -*-freebsd*)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa-toplevel,v 1.1 2009/11/29 03:06:43 tnn Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1977,6 +1977,9 @@ case "$target" in
+@@ -1952,6 +1952,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -21,7 +21,7 @@ $NetBSD: patch-aa-toplevel,v 1.1 2009/11/29 03:06:43 tnn Exp $
      ;; 
  
  *-hpux*)
-@@ -3173,6 +3176,9 @@ dnl ====================================
+@@ -3200,6 +3203,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +31,7 @@ $NetBSD: patch-aa-toplevel,v 1.1 2009/11/29 03:06:43 tnn Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4233,6 +4239,14 @@ else
+@@ -4350,6 +4356,14 @@ fi
     fi
  fi
  
@@ -46,7 +46,7 @@ $NetBSD: patch-aa-toplevel,v 1.1 2009/11/29 03:06:43 tnn Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -7513,7 +7527,8 @@ rm -f confdefs.h.save
+@@ -7526,7 +7540,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()

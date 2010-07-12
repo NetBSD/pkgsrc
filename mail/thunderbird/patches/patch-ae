@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-ae,v 1.6 2010/07/12 16:49:22 tnn Exp $
 
 --- mozilla/nsprpub/pr/src/misc/prnetdb.c.orig	2009-06-29 18:15:07.000000000 +0200
 +++ mozilla/nsprpub/pr/src/misc/prnetdb.c
