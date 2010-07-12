@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9453 2010/07/12 12:06:24 taca Exp $
+$NetBSD: TODO,v 1.9454 2010/07/12 16:50:12 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1351,7 +1351,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texmaker-1.9.9
 	o tfmxplay-1.1.6
 	o thoth-0.2.1
-	o thunderbird-3.1
 	o tig-0.16
 	o tightvnc-1.5.1
 	o tile-0.7.4

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2440 2010/07/12 11:40:44 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2441 2010/07/12 16:50:12 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3265,3 +3265,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/gallery to 1.5.10nb2 [dholland 2010-07-12]
 	Updated devel/tet3 to 3.7nb1 [dholland 2010-07-12]
 	Updated x11/xdm to 1.1.10 [obache 2010-07-12]
+	Updated mail/thunderbird to 3.1 [tnn 2010-07-12]
