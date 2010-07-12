@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2437 2010/07/12 01:37:35 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2438 2010/07/12 01:56:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3261,3 +3261,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-common-sense to 3.3 [seb 2010-07-12]
 	Updated devel/p5-Devel-NYTProf to 4.04 [seb 2010-07-12]
 	Updated devel/p5-Devel-REPL to 1.003011 [seb 2010-07-12]
+	Updated devel/p5-PPI to 1.213 [seb 2010-07-12]
