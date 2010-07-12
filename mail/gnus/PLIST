@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/07/12 01:27:45 dholland Exp $
 share/doc/gnus/info/emacs-mime
 share/doc/gnus/info/gnus
 share/doc/gnus/info/gnus-1
@@ -216,7 +216,6 @@ ${EMACS_LISPPREFIX}/gnus/gnus-int.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-kill.el
 ${EMACS_LISPPREFIX}/gnus/gnus-kill.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-load.el
-${EMACS_LISPPREFIX}/gnus/gnus-load.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-logic.el
 ${EMACS_LISPPREFIX}/gnus/gnus-logic.elc
 ${FOR_emacs}${EMACS_LISPPREFIX}/gnus/gnus-mh.el
