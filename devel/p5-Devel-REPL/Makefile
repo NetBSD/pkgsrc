@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/05/24 23:16:24 seb Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/12 01:37:25 seb Exp $
 #
 
-DISTNAME=	Devel-REPL-1.003010
+DISTNAME=	Devel-REPL-1.003011
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
