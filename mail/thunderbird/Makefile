@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2010/06/24 18:01:38 tnn Exp $
+# $NetBSD: Makefile,v 1.56 2010/07/12 16:49:21 tnn Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		3.0.5
+TB_VER=		3.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,8 @@ MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
 
-WRKSRC=		${WRKDIR}/comm-1.9.1
+USE_TOOLS+=	unzip pax
+WRKSRC=		${WRKDIR}/comm-1.9.2
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	PLIST
 
@@ -51,6 +52,18 @@ post-install:
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${WRKSRC}/mail/branding/nightly/mailicon48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
+	@${STEP_MSG} "Installing bundled thunderbird extensions."
+	rm -rf ${WRKDIR}/extensions
+	${MKDIR} ${WRKDIR}/extensions
+	${RUN} for e in ${XPI_FILES}; do				\
+	  subdir="`${UNZIP_CMD} -c "$$e" install.rdf | awk '/^    <em:id>/ {sub(".*<em:id>","");sub("</em:id>.*","");print;exit;}'`" &&	\
+	  ${MKDIR} "${WRKDIR}/extensions/$$subdir" &&			\
+	  cd "${WRKDIR}/extensions/$$subdir" &&				\
+	  ${UNZIP_CMD} -aqo $$e;					\
+	done
+	cd ${WRKDIR}/extensions && pax -rw .				\
+	   ${DESTDIR}${PREFIX}/lib/${MOZILLA}/extensions/.
+	rm -rf ${WRKDIR}/extensions
 
 .include "../../devel/xulrunner/mozilla-common.mk"
 .include "options.mk"

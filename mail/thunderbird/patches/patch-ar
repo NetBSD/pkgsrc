@@ -1,4 +1,4 @@
-$NetBSD: patch-ar,v 1.3 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-ar,v 1.4 2010/07/12 16:49:22 tnn Exp $
 
 Enable the sunaudio module to build on NetBSD.
 

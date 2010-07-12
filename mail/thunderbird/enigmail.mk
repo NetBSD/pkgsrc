@@ -1,10 +1,10 @@
-# $NetBSD: enigmail.mk,v 1.1 2010/06/02 15:39:26 tnn Exp $
+# $NetBSD: enigmail.mk,v 1.2 2010/07/12 16:49:21 tnn Exp $
 #
 # This Makefile fragment hooks the Enigmail OpenPGP extension
 # (see http://www.mozilla-enigmail.org/ ) into the build.
 
-ENIGMAIL_DIST=		enigmail-1.0.1.tar.gz
-ENIGMAIL_UUID=		847b3a00-7ab1-11d4-8f02-006008948af5
+ENIGMAIL_DIST=		enigmail-1.1.2.tar.gz
+XPI_FILES+=		${WRKDIR}/enigmail.xpi
 .if !defined(DISTFILES)
 DISTFILES=		${DEFAULT_DISTFILES}
 .endif
@@ -13,7 +13,9 @@ SITES.${ENIGMAIL_DIST}=	http://www.mozilla-enigmail.org/download/source/
 
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 PLIST_SRC+=		PLIST.enigmail
-USE_TOOLS+=		unzip pax
+
+TARGET_XPCOM_ABI=	${MACHINE_ARCH:S/i386/x86/}-gcc3
+PLIST_SUBST+=		TARGET_XPCOM_ABI=${TARGET_XPCOM_ABI}
 
 post-extract: enigmail-post-extract
 .PHONY: enigmail-post-extract
@@ -35,14 +37,7 @@ enigmail-post-build:
 	${RUN} cd ${WRKSRC}/mailnews/extensions/enigmail &&		\
 	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} &&			\
 	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} xpi
-	${RUN} ${MKDIR} "${WRKDIR}/{${ENIGMAIL_UUID}}"
-	${RUN} cd "${WRKDIR}/{${ENIGMAIL_UUID}}" &&			\
-	  ${UNZIP_CMD} -aqo ${WRKSRC}/mozilla/dist/bin/enigmail*.xpi
+	${CP} ${WRKSRC}/mozilla/dist/bin/enigmail*.xpi			\
+	  ${WRKDIR}/enigmail.xpi
 	${RUN} rm -rf ${WRKSRC}/mozilla/dist
 	${RUN} cd ${WRKSRC}/mozilla/dist.save && pax -rwpe . ../dist
-
-post-install: enigmail-post-install
-.PHONY: enigmail-post-install
-enigmail-post-install:
-	${RUN} cd ${WRKDIR} && pax -rw "{${ENIGMAIL_UUID}}"		\
-	  ${DESTDIR}${PREFIX}/lib/${MOZILLA}/extensions/.

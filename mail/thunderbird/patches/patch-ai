@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.6 2010/03/16 10:59:09 tnn Exp $
+$NetBSD: patch-ai,v 1.7 2010/07/12 16:49:22 tnn Exp $
 
 --- mozilla/dbm/src/mktemp.c.orig	2009-06-29 18:14:43.000000000 +0200
 +++ mozilla/dbm/src/mktemp.c
