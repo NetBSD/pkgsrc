@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/12 16:06:57 drochner Exp $
 #
 
 DISTNAME=	libgksu-2.0.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.debian.org/~kov/gksu/
 
@@ -32,7 +32,7 @@ SUBST_FILES.xauth=	libgksu/gksu-run-helper.c libgksu/libgksu.c
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
-.include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
