@@ -11,3 +11,7 @@ Pullup ticket #3156 - requested by obache
 emulators/tme: build fix
 Pullup ticket #3160 - requested by obache
 www/py-moin: security update
+Pullup ticket #3162 - requested by obache
+editors/mule: bug fix patch
+inputmethod/ja-freewnn-lib: bug fix patch
+inputmethod/kinput2: bug fix patch
