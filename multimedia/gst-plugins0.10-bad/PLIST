@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/03/12 20:51:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/07/13 18:02:11 drochner Exp $
 include/gstreamer-0.10/gst/interfaces/photography-enumtypes.h
 include/gstreamer-0.10/gst/interfaces/photography.h
 include/gstreamer-0.10/gst/signalprocessor/gstsignalprocessor.h
@@ -29,6 +29,7 @@ lib/gstreamer-0.10/libgstfrei0r.la
 lib/gstreamer-0.10/libgsth264parse.la
 lib/gstreamer-0.10/libgsthdvparse.la
 lib/gstreamer-0.10/libgstid3tag.la
+lib/gstreamer-0.10/libgstinvtelecine.la
 lib/gstreamer-0.10/libgstjpegformat.la
 lib/gstreamer-0.10/libgstlegacyresample.la
 lib/gstreamer-0.10/libgstliveadder.la
@@ -49,6 +50,7 @@ lib/gstreamer-0.10/libgstrfbsrc.la
 lib/gstreamer-0.10/libgstrtpmux.la
 lib/gstreamer-0.10/libgstscaletempoplugin.la
 lib/gstreamer-0.10/libgstsdpelem.la
+lib/gstreamer-0.10/libgstsegmentclip.la
 lib/gstreamer-0.10/libgstselector.la
 lib/gstreamer-0.10/libgstsiren.la
 lib/gstreamer-0.10/libgstspeed.la
