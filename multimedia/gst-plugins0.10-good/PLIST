@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/03/12 20:36:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/07/13 17:52:17 drochner Exp $
 lib/gstreamer-0.10/libgstalaw.la
 lib/gstreamer-0.10/libgstalpha.la
 lib/gstreamer-0.10/libgstalphacolor.la
@@ -16,12 +16,12 @@ lib/gstreamer-0.10/libgsteffectv.la
 lib/gstreamer-0.10/libgstequalizer.la
 lib/gstreamer-0.10/libgstflv.la
 lib/gstreamer-0.10/libgstflxdec.la
-lib/gstreamer-0.10/libgstgamma.la
 lib/gstreamer-0.10/libgstgconfelements.la
 lib/gstreamer-0.10/libgstgoom.la
 lib/gstreamer-0.10/libgstgoom2k1.la
 lib/gstreamer-0.10/libgsticydemux.la
 lib/gstreamer-0.10/libgstid3demux.la
+lib/gstreamer-0.10/libgstimagefreeze.la
 lib/gstreamer-0.10/libgstinterleave.la
 lib/gstreamer-0.10/libgstlevel.la
 lib/gstreamer-0.10/libgstmatroska.la
@@ -38,10 +38,9 @@ lib/gstreamer-0.10/libgstshapewipe.la
 lib/gstreamer-0.10/libgstsmpte.la
 lib/gstreamer-0.10/libgstspectrum.la
 lib/gstreamer-0.10/libgstudp.la
-lib/gstreamer-0.10/libgstvideobalance.la
 lib/gstreamer-0.10/libgstvideobox.la
 lib/gstreamer-0.10/libgstvideocrop.la
-lib/gstreamer-0.10/libgstvideoflip.la
+lib/gstreamer-0.10/libgstvideofilter.la
 lib/gstreamer-0.10/libgstvideomixer.la
 lib/gstreamer-0.10/libgstwavenc.la
 lib/gstreamer-0.10/libgstwavparse.la
