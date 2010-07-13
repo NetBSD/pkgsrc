@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.22 2010/07/13 12:24:34 drochner Exp $
+
+--- data/Makefile.in.orig	2010-07-13 10:34:48.000000000 +0000
++++ data/Makefile.in
+@@ -425,7 +425,7 @@ SUBDIRS = icons
+ desktopdir = $(datadir)/applications
+ desktop_in_files = evolution.desktop.in evolution-settings.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/gnome/autostart
+ autostart_in_files = evolution-alarm-notify.desktop.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ mimedir = $(datadir)/mime-info
