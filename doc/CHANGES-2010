@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2442 2010/07/12 17:11:06 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2443 2010/07/13 06:10:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3267,3 +3267,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xdm to 1.1.10 [obache 2010-07-12]
 	Updated mail/thunderbird to 3.1 [tnn 2010-07-12]
 	Updated mail/thunderbird-l10n to 3.1 [tnn 2010-07-12]
+	Updated graphics/netpbm to 10.35.76 [adam 2010-07-13]
