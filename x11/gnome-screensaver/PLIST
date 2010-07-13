@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/02/11 18:02:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/07/13 10:15:24 drochner Exp $
 bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
@@ -54,6 +54,7 @@ share/locale/da/LC_MESSAGES/gnome-screensaver.mo
 share/locale/de/LC_MESSAGES/gnome-screensaver.mo
 share/locale/dz/LC_MESSAGES/gnome-screensaver.mo
 share/locale/el/LC_MESSAGES/gnome-screensaver.mo
+share/locale/en@shaw/LC_MESSAGES/gnome-screensaver.mo
 share/locale/en_CA/LC_MESSAGES/gnome-screensaver.mo
 share/locale/en_GB/LC_MESSAGES/gnome-screensaver.mo
 share/locale/es/LC_MESSAGES/gnome-screensaver.mo
