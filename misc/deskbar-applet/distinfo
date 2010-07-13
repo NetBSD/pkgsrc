@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2009/11/17 17:19:58 wiz Exp $
+$NetBSD: distinfo,v 1.19 2010/07/13 13:27:39 drochner Exp $
 
-SHA1 (deskbar-applet-2.28.0.tar.bz2) = 4901a7e0b62c092d0d3b5ebf4a0bab539b7bc5ec
-RMD160 (deskbar-applet-2.28.0.tar.bz2) = 308f8d5a09f82254334de77aa3fbf697e12116b0
-Size (deskbar-applet-2.28.0.tar.bz2) = 1087593 bytes
+SHA1 (deskbar-applet-2.30.1.tar.bz2) = f7647bc06692fcbf5e6d82daa6c15f5bcfa10206
+RMD160 (deskbar-applet-2.30.1.tar.bz2) = 473b0ef8e18ea61a72a609f044ff11518b8fcc74
+Size (deskbar-applet-2.30.1.tar.bz2) = 1064879 bytes
