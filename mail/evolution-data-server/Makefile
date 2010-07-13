@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2010/07/12 17:52:29 drochner Exp $
+# $NetBSD: Makefile,v 1.101 2010/07/13 17:31:19 drochner Exp $
 
 DISTNAME=	evolution-data-server-2.30.2.1
 CATEGORIES=	mail gnome
@@ -58,6 +58,7 @@ PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
