@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2010/06/13 22:44:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2010/07/13 12:24:34 drochner Exp $
 
 BUILDLINK_TREE+=	evolution
 
@@ -9,9 +9,6 @@ BUILDLINK_API_DEPENDS.evolution+=	evolution>=2.8.0
 BUILDLINK_ABI_DEPENDS.evolution?=	evolution>=2.28.2nb5
 BUILDLINK_PKGSRCDIR.evolution?=	../../mail/evolution
 
-.include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"

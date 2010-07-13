@@ -1,38 +1,12 @@
-$NetBSD: distinfo,v 1.74 2010/02/19 22:52:21 roy Exp $
+$NetBSD: distinfo,v 1.75 2010/07/13 12:24:34 drochner Exp $
 
-SHA1 (evolution-2.28.2.tar.bz2) = 19e970417cc91c82a5279cfe5dd7262d9d4c3319
-RMD160 (evolution-2.28.2.tar.bz2) = 6e5f5ae60563fdaa9daa4c78f780cfa556770043
-Size (evolution-2.28.2.tar.bz2) = 29735192 bytes
-SHA1 (patch-ab) = b56533feb1bf7d3c3eabf905a50a54e7f27f5b1c
-SHA1 (patch-ca) = 54924a67434908475411e1fd1be1b66856c2de92
-SHA1 (patch-cb) = b32db8b558a29ace0fcb182a8ffbf1f5d16e56a2
-SHA1 (patch-cc) = 90d0e9b2c4b79913c735a607ea9166d754631f57
-SHA1 (patch-cd) = 3464e52c86cda5406845b9d5edc878949355b728
-SHA1 (patch-ce) = 148252288b5d95fd7c5d5190cb7df5e1487760c2
-SHA1 (patch-cf) = 5d23cab964c67f9b0a80b5572a8874b98301c4ff
-SHA1 (patch-cg) = f7a8f0ce9ba4616deee918796a137d7c98f6679b
-SHA1 (patch-ch) = 3cbba9ec28590be817fa8e1d518012dc47356f14
-SHA1 (patch-ci) = de2b5a4c88765f196ac7da3a1e2c2125f4ef64e8
-SHA1 (patch-cj) = bf9e79d19246f5b37032505d9562aa0ebd48da92
-SHA1 (patch-ck) = 8c4f490198bb20ed4ee9cc94491cdbe9fd6c7a50
-SHA1 (patch-cl) = 4ad6f6e7b64afe3bd77fabfb36bab445aefb7ae7
-SHA1 (patch-cm) = c918d647fc215215c014271819a9e13ecd33dd21
-SHA1 (patch-cn) = da9d28af2c359cc137a35377b35901223f63fc4f
-SHA1 (patch-co) = fcd4a32a18ed3d31af58a48e250f79f231fae217
-SHA1 (patch-cp) = 2f42aeb696070ae10a0f1ec695db42b22542a1bb
-SHA1 (patch-cq) = b15259ffaa41e4d57524626dd2e3883624687425
-SHA1 (patch-cr) = e28277b22c2dc3b7e8fc32c7050e19375e8738bf
-SHA1 (patch-cs) = 150375d4281e253308f62387af6ac9ab06d43c49
-SHA1 (patch-ct) = 080c028e7994fe6e1fc33294af56d135c0dc75da
-SHA1 (patch-cu) = 35729a88c772c79ed20e1bf6c452f2abb2d47678
-SHA1 (patch-cv) = c154acbe1974bbda196ae63a9d99f5800d9394c5
-SHA1 (patch-cw) = 5f2cebd9a373fa2c53068dcd82a869783b33bb30
-SHA1 (patch-cx) = 6d04cacd3329e1fdc481d00fe85b2f6385064d5a
-SHA1 (patch-cy) = bb0d2bf7e5890924a628338b4e11dfebc972ad9d
-SHA1 (patch-cz) = 027d12d9f45710fa7c282d96a1b79db4e20892f5
-SHA1 (patch-da) = c4ac76f6a9948457fca9b568aaf7678f4ec722e8
-SHA1 (patch-ya) = f21a92e93394ad76166f2da09ee21cbddb043576
+SHA1 (evolution-2.30.2.tar.bz2) = 14ddccbf33eb86c976899eccea6ae1fb565ea9ca
+RMD160 (evolution-2.30.2.tar.bz2) = c1b5703bc241a2dee20f94e60e7c9995c8cce841
+Size (evolution-2.30.2.tar.bz2) = 32570501 bytes
+SHA1 (patch-ab) = d16e359862063f0ec606daea035fb7b3c8e7d6f0
+SHA1 (patch-ac) = 853fe9f4a28fa1fe1266607b93e4ef9f63969b42
+SHA1 (patch-ya) = 73872309c1d69d6d10bf04d867cc04ce17e724d3
 SHA1 (patch-yb) = 6d09dceb5405b29cde657eea6fa0fbd004a8bd1f
-SHA1 (patch-yc) = dc97fda0d5fc05df37274192466702e7fe9da4e0
+SHA1 (patch-yc) = 4830a0305d9f0ba10393884e7f833f8e740a87c8
 SHA1 (patch-yd) = 09bb3fcd4223add3880253fb43cfd036b8294d1c
-SHA1 (patch-ye) = 042586d68127bf4c70b2bfecd8e44df03c924792
+SHA1 (patch-ye) = 57fd2cb481a8b465b94a2155d82633f0f4b3fa06
