@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/04/28 22:01:43 morr Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/07/13 11:11:48 sbd Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -7,7 +7,7 @@ bin/git-upload-archive
 bin/git-upload-pack
 ${PLIST.gui}bin/gitk
 ${PERL5_SUB_INSTALLVENDORLIB}/Git.pm
-lib/perl5/vendor_perl/man/man3/Git.3
+lib/perl5/vendor_perl/${PKGMANDIR}/man3/Git.3
 ${PLIST.python}${PYSITELIB}/git_remote_helpers/__init__.py
 ${PLIST.python}${PYSITELIB}/git_remote_helpers/__init__.pyc
 ${PLIST.python}${PYSITELIB}/git_remote_helpers/git/__init__.py
