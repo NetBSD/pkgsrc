@@ -1,18 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2010/06/13 22:43:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/07/13 19:52:30 drochner Exp $
 
-DISTNAME=	empathy-2.26.2
-PKGREVISION=	6
+DISTNAME=	empathy-2.30.2
 CATEGORIES=	chat gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/empathy/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/empathy/2.30/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Empathy
 COMMENT=	Gnome instant messenger client
 LICENSE=	gnu-gpl-v2
-
-# not strictly needed, but without any plugins, empathy is useless
-DEPENDS+=	telepathy-gabble-[0-9]*:../../chat/telepathy-gabble
-DEPENDS+=	telepathy-idle-[0-9]*:../../chat/telepathy-idle
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,18 +19,12 @@ USE_PKGLOCALEDIR=	yes
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-GCONF_SCHEMAS+=	GNOME_Megaphone_Applet.schemas
 GCONF_SCHEMAS+=	empathy.schemas
 
-pre-configure:
-	cd ${WRKSRC} && autoconf -f
-
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../chat/telepathy-mission-control/buildlink3.mk"
 .include "../../chat/telepathy-farsight/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/libglade/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -55,5 +44,6 @@ BUILDLINK_API_DEPENDS.enchant+=		enchant>=1.2.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
