@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9454 2010/07/12 16:50:12 tnn Exp $
+$NetBSD: TODO,v 1.9455 2010/07/13 06:40:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -581,7 +581,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.1
-	o exiftool-7.67
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o faces-1.7.7
