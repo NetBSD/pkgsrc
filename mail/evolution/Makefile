@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.160 2010/06/13 22:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2010/07/13 12:24:34 drochner Exp $
 
-DISTNAME=		evolution-2.28.2
-PKGREVISION=		5
+DISTNAME=		evolution-2.30.2
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.28/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.30/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -36,6 +35,9 @@ CONFIGURE_ARGS+=	--with-krb5=/usr
 CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
 .endif
 CONFIGURE_ARGS+=	--disable-nm
+CONFIGURE_ARGS+=	--disable-audio-inline
+CONFIGURE_ARGS+=	--disable-image-inline
+CONFIGURE_ARGS+=	--disable-pst-import
 
 PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
@@ -63,14 +65,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.20.3
-.include "../../devel/libbonobo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libbonoboui+=	libbonoboui>=2.4.2
-.include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.19.91
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgweather/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -79,11 +74,8 @@ BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.24.3
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
-#.include "../../print/libgnomeprint/buildlink3.mk"
-#.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-#.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -93,5 +85,7 @@ BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.24.3
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
+.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
