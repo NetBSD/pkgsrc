@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.390 2010/07/08 06:59:56 jnemeth Exp $
+# $NetBSD: Makefile,v 1.391 2010/07/13 19:48:09 manu Exp $
 #
 
 COMMENT=	Security tools
@@ -242,6 +242,7 @@ SUBDIR+=	pam-fprint
 SUBDIR+=	pam-ldap
 SUBDIR+=	pam-mkhomedir
 SUBDIR+=	pam-mysql
+SUBDIR+=	pam-p11
 SUBDIR+=	pam-passwdqc
 SUBDIR+=	pam-pwauth_suid
 SUBDIR+=	pam-radius
