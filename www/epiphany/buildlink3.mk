@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2010/06/13 22:45:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2010/07/13 12:05:57 drochner Exp $
 #
 
 BUILDLINK_TREE+=	epiphany
@@ -13,9 +13,6 @@ BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 .include "../../mk/bsd.fast.prefs.mk"
 
 .include "../../devel/GConf/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
