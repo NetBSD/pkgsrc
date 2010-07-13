@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.10 2006/02/04 12:23:55 markd Exp $
+$NetBSD: patch-ah,v 1.11 2010/07/13 06:08:23 adam Exp $
 
---- converter/other/cameratopam/camera.c.orig	2005-12-04 07:06:50.000000000 +1300
+--- converter/other/cameratopam/camera.c.orig	2006-08-19 03:12:28.000000000 +0000
 +++ converter/other/cameratopam/camera.c
 @@ -2,6 +2,7 @@
      /* Make sure strcasecmp is in string.h */
@@ -10,7 +10,7 @@ $NetBSD: patch-ah,v 1.10 2006/02/04 12:23:55 markd Exp $
  
  #include <stdlib.h>
  #include <string.h>
-@@ -25,6 +26,10 @@
+@@ -24,6 +25,10 @@
  
  #include "camera.h"
  
