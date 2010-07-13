@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.4 2010/06/16 21:15:18 sbd Exp $
+$NetBSD: patch-bd,v 1.5 2010/07/13 10:59:43 sbd Exp $
 
 Incorporate str3510.patch from
 http://www.cups.org/str.php?L3510
@@ -51,7 +51,7 @@ http://www.cups.org/str.php?L3510
          break;
  
      case 's' : /* Read/write socket */
-@@ -2207,6 +2220,86 @@ cups_fill(cups_file_t *fp)		/* I - CUPS 
+@@ -2207,6 +2220,88 @@ cups_fill(cups_file_t *fp)		/* I - CUPS 
    return (bytes);
  }
  
@@ -119,7 +119,9 @@ http://www.cups.org/str.php?L3510
 +  if (S_ISLNK(linkinfo.st_mode) ||
 +      fileinfo.st_dev != linkinfo.st_dev ||
 +      fileinfo.st_ino != linkinfo.st_ino ||
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__DragonFly__)
 +      fileinfo.st_gen != linkinfo.st_gen ||
++#endif
 +      fileinfo.st_nlink != linkinfo.st_nlink ||
 +      fileinfo.st_mode != linkinfo.st_mode)
 +  {
