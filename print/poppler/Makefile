@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2010/06/13 22:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2010/07/14 17:04:22 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
-PKGREVISION=		1
 
 COMMENT=		PDF rendering library
 MAINTAINER=		reed@reedmedia.net
@@ -30,6 +29,7 @@ CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-poppler-glib
 # Don't build and install the tools
 CONFIGURE_ARGS+=	--disable-utils
+CONFIGURE_ARGS+=	--disable-poppler-cpp
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.poppler
 PKG_SUPPORTED_OPTIONS=	poppler-cms

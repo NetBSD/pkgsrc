@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/09/09 19:57:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/07/14 17:04:23 drochner Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
@@ -8,6 +8,8 @@ include/poppler/glib/poppler-enums.h
 include/poppler/glib/poppler-features.h
 include/poppler/glib/poppler-form-field.h
 include/poppler/glib/poppler-layer.h
+include/poppler/glib/poppler-media.h
+include/poppler/glib/poppler-movie.h
 include/poppler/glib/poppler-page.h
 include/poppler/glib/poppler.h
 lib/libpoppler-glib.la
@@ -20,7 +22,6 @@ share/gtk-doc/html/poppler/index.sgml
 share/gtk-doc/html/poppler/left.png
 share/gtk-doc/html/poppler/poppler-poppler-action.html
 share/gtk-doc/html/poppler/poppler-poppler-annot.html
-share/gtk-doc/html/poppler/poppler-poppler-attachment.html
 share/gtk-doc/html/poppler/poppler-poppler-document.html
 share/gtk-doc/html/poppler/poppler-poppler-enums.html
 share/gtk-doc/html/poppler/poppler-poppler-features.html
