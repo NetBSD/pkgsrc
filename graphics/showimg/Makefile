@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2010/06/13 22:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2010/07/14 11:11:23 sbd Exp $
 #
 
 DISTNAME=	showimg-0.9.5
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	kde graphics x11
 MASTER_SITES=	http://www.jalix.org/projects/showimg/download/0.9.5/
 EXTRACT_SUFX=	.tar.bz2
