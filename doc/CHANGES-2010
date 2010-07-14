@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2472 2010/07/14 18:28:36 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2473 2010/07/14 18:44:27 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3296,3 +3296,31 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-Section to 0.101.620 [seb 2010-07-14]
 	Updated devel/p5-Software-License to 0.101.620 [seb 2010-07-14]
 	Updated devel/p5-Test-YAML-Meta to 0.16 [seb 2010-07-14]
+	Updated mail/evolution-exchange to 2.30.2 [drochner 2010-07-14]
+	Updated print/poppler to 0.14.1 [drochner 2010-07-14]
+	Updated games/gnome-games to 2.30.2 [drochner 2010-07-14]
+	Updated sysutils/nautilus-sendto to 2.28.4 [drochner 2010-07-14]
+	Updated x11/gnome-applets to 2.30.0 [drochner 2010-07-14]
+	Updated sysutils/gnome-settings-daemon to 2.30.2 [drochner 2010-07-14]
+	Updated x11/libgnomekbd to 2.30.2 [drochner 2010-07-14]
+	Updated x11/xfce4-settings to 4.6.5 [drochner 2010-07-14]
+	Updated x11/libxklavier to 5.0 [drochner 2010-07-14]
+	Updated chat/empathy to 2.30.2 [drochner 2010-07-14]
+	Updated devel/eric4 to 4.4.6 [drochner 2010-07-14]
+	Updated x11/qt4-qscintilla to 2.4.4 [drochner 2010-07-14]
+	Updated x11/py-qt4 to 4.7.4 [drochner 2010-07-14]
+	Updated x11/py-sip to 4.10.3 [drochner 2010-07-14]
+	Updated multimedia/gst-plugins0.10-ugly to 0.10.15 [drochner 2010-07-14]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.19 [drochner 2010-07-14]
+	Updated multimedia/gst-plugins0.10-good to 0.10.23 [drochner 2010-07-14]
+	Updated misc/deskbar-applet to 2.30.1 [drochner 2010-07-14]
+	Updated textproc/gtkspell to 2.0.16 [drochner 2010-07-14]
+	Updated wm/metacity to 2.30.1 [drochner 2010-07-14]
+	Updated mail/evolution to 2.30.2 [drochner 2010-07-14]
+	Updated www/epiphany-extensions to 2.30.1 [drochner 2010-07-14]
+	Updated www/epiphany to 2.30.2 [drochner 2010-07-14]
+	Updated x11/gnome-screensaver to 2.30.0 [drochner 2010-07-14]
+	Updated x11/zenity to 2.30.0 [drochner 2010-07-14]
+	Updated mail/evolution-data-server to 2.30.2.1 [drochner 2010-07-14]
+	Updated chat/telepathy-glib to 0.11.9 [drochner 2010-07-14]
+	Updated x11/gnome-control-center to 2.30.1 [drochner 2010-07-14]
