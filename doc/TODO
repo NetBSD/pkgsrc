@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9463 2010/07/14 12:54:05 obache Exp $
+$NetBSD: TODO,v 1.9464 2010/07/14 13:26:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -1230,7 +1230,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-sequel-core-2.2.0
 	o ruby-simple-rss-1.2.3 [pkg/43606]
 	o ruby-will-paginate-2.3.12
-	o ruby-xslt-0.9.7 [pkg/43604]
 	o rudiments-0.30
 	o rxvt-unicode-9.07
 	o sabayon-2.30.0 [GNOME 2.30]
