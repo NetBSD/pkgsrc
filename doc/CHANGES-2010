@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2454 2010/07/14 09:29:24 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.2455 2010/07/14 09:43:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3279,3 +3279,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime to 0.6000 [seb 2010-07-14]
 	Updated devel/p5-MooseX-Getopt to 0.31 [seb 2010-07-14]
 	Updated net/mDNSResponder to 214.3.2 [sbd 2010-07-14]
+	Updated devel/p5-Variable-Magic to 0.43 [seb 2010-07-14]
