@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/05/25 00:50:15 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/07/14 16:53:04 gdt Exp $
 bin/cgps
 bin/gpscat
 bin/gpsctl
@@ -10,6 +10,7 @@ bin/gpsprof
 bin/gpxlogger
 bin/lcdgps
 bin/xgps
+bin/xgpsspeed
 include/gps.h
 include/gpsd.h
 include/libgpsmm.h
@@ -19,6 +20,8 @@ lib/pkgconfig/libgps.pc
 lib/pkgconfig/libgpsd.pc
 ${PYSITELIB}/gps/__init__.py
 ${PYSITELIB}/gps/__init__.pyc
+${PYSITELIB}/gps/client.py
+${PYSITELIB}/gps/client.pyc
 ${PYSITELIB}/gps/clienthelpers.so
 ${PYSITELIB}/gps/fake.py
 ${PYSITELIB}/gps/fake.pyc
