@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2010/06/13 22:45:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2010/07/14 11:11:15 sbd Exp $
 
 BUILDLINK_TREE+=	kdebase
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdebase
 KDEBASE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdebase+=	kdebase>=3.5.0nb2
-BUILDLINK_ABI_DEPENDS.kdebase+=	kdebase>=3.5.10nb10
+BUILDLINK_ABI_DEPENDS.kdebase+=	kdebase>=3.5.10nb11
 BUILDLINK_PKGSRCDIR.kdebase?=	../../x11/kdebase3
 
 pkgbase := kdebase
