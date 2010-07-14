@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2010/06/09 08:58:05 sbd Exp $
+# $NetBSD: options.mk,v 1.11 2010/07/14 11:25:19 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
@@ -27,9 +27,11 @@ PLIST.dbus=		yes
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
 
+PLIST_VARS+=		dnssd
 .if !empty(PKG_OPTIONS:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-dnssd
+PLIST.dnssd=		yes
 .else
 CONFIGURE_ARGS+=	--disable-dnssd
 .endif
