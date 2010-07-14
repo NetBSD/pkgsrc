@@ -1,0 +1,9 @@
+Pam_p11 is a plugable authentication module (PAM) package for using
+crpytographic PKCS#11 tokens such as smart cards and usb crypto
+tokens for local authentication.
+
+Pam_p11 implements two authentication modules:
+* pam_p11_openssh authenticates the user against public keys found
+in OpenSSH ~/.ssh/authorized_keys file.
+* pam_p11_opensc authenticates the user against certificates found
+in ~/.eid/authorized_certificates.
