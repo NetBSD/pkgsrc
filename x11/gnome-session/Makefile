@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.118 2010/06/13 22:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2010/07/14 16:26:27 drochner Exp $
 #
 
 DISTNAME=		gnome-session-2.26.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.26/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -48,12 +48,8 @@ post-install:
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=2.21.92
-.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../security/policykit-gnome/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
