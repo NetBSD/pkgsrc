@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2469 2010/07/14 16:53:44 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.2470 2010/07/14 17:19:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3293,3 +3293,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-SQL-Abstract to 1.67 [seb 2010-07-14]
 	Updated devel/p5-Parse-RecDescent to 1.965.1 [seb 2010-07-14]
 	Updated geography/gpsd to 2.95 [gdt 2010-07-14]
+	Updated devel/p5-Data-Section to 0.101.620 [seb 2010-07-14]
