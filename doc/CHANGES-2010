@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2475 2010/07/14 19:00:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2476 2010/07/14 19:17:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3327,3 +3327,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed sysutils/nautilus-cd-burner successor sysutils/brasero [drochner 2010-07-14]
 	Removed devel/eel successor sysutils/nautilus [drochner 2010-07-14]
 	Updated textproc/p5-Text-CSV_XS to 0.73 [seb 2010-07-14]
+	Updated databases/db5 to 5.0.26 [adam 2010-07-14]
