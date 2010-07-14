@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2010/06/13 22:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2010/07/14 16:30:34 drochner Exp $
 
-DISTNAME=		gnome-games-2.28.2
-PKGREVISION=		4
+DISTNAME=		gnome-games-2.30.2
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.28/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.30/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -26,28 +25,24 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ENV+=		ac_cv_path_MSGFMT=msgfmt
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--without-ggz-server
-
-# Needs devel/check
-CONFIGURE_ARGS=		--disable-tests
+CONFIGURE_ARGS+=	--enable-omitgames=lightsoff
 
 FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
 GCONF_SCHEMAS=		aisleriot.schemas
-GCONF_SCHEMAS+=	blackjack.schemas
 GCONF_SCHEMAS+=	glchess.schemas
 GCONF_SCHEMAS+=	glines.schemas
 GCONF_SCHEMAS+=	gnect.schemas
 GCONF_SCHEMAS+=	gnibbles.schemas
 GCONF_SCHEMAS+=	gnobots2.schemas
-GCONF_SCHEMAS+=	gnometris.schemas
+GCONF_SCHEMAS+=	quadrapassel.schemas
 GCONF_SCHEMAS+=	gnomine.schemas
 GCONF_SCHEMAS+=	gnotravex.schemas
 GCONF_SCHEMAS+=	gnotski.schemas
 GCONF_SCHEMAS+=	gtali.schemas
 GCONF_SCHEMAS+=	iagno.schemas
 GCONF_SCHEMAS+=	mahjongg.schemas
-GCONF_SCHEMAS+=	same-gnome.schemas
+GCONF_SCHEMAS+=	swell-foop.schemas
 GCONF_SCHEMAS+=	gnome-sudoku.schemas
 
 PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess.in.in
@@ -60,12 +55,6 @@ PY_PATCHPLIST=		yes
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
 .include "../../devel/glib2/buildlink3.mk"
-#.include "../../devel/libglade/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
-#.include "../../devel/libgnome/buildlink3.mk"
-#.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../games/ggz-client-libs/buildlink3.mk"
-.include "../../games/ggz-client-libs/ggz-client.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6

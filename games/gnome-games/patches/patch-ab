@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2009/10/29 20:40:10 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2010/07/14 16:30:34 drochner Exp $
 
---- libgames-support/Makefile.in.orig	2009-10-19 23:43:54.000000000 +0200
+--- libgames-support/Makefile.in.orig	2010-04-26 23:20:47.000000000 +0000
 +++ libgames-support/Makefile.in
-@@ -740,7 +740,7 @@ nodist_libgames_support_la_SOURCES = $(B
+@@ -556,7 +556,7 @@ nodist_libgames_support_la_SOURCES = $(B
  libgames_support_la_CPPFLAGS = -DPKGDATADIR="\"$(pkgdatadir)\"" \
  	-DDATADIR="\"$(datadir)\"" \
  	-DCOMMON_DATADIR="\"$(datadir)/gnome-games-common\"" \
--	-DSCORESDIR="\"$(scoredir)\"" $(AM_CPPFLAGS) $(am__append_10)
-+	-DSCORESDIR="\"/var/games\"" $(AM_CPPFLAGS) $(am__append_10)
+-	-DSCORESDIR="\"$(scoredir)\"" $(AM_CPPFLAGS) $(am__append_8)
++	-DSCORESDIR="\"/var/games\"" $(AM_CPPFLAGS) $(am__append_8)
  libgames_support_la_CFLAGS = $(GTK_CFLAGS) $(AM_CFLAGS) \
- 	$(am__append_7) $(am__append_13) $(am__append_15) \
- 	$(am__append_17) $(am__append_19) $(am__append_21) \
+ 	$(am__append_5) $(am__append_11) $(am__append_13) \
+ 	$(am__append_15) $(am__append_17)
