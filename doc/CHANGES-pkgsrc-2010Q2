@@ -15,3 +15,5 @@ Pullup ticket #3162 - requested by obache
 editors/mule: bug fix patch
 inputmethod/ja-freewnn-lib: bug fix patch
 inputmethod/kinput2: bug fix patch
+Pullup ticket #3164 - requested by sbd
+print/cups: build fix
