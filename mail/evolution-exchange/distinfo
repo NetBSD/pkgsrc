@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2009/10/26 09:48:41 drochner Exp $
+$NetBSD: distinfo,v 1.18 2010/07/14 17:28:24 drochner Exp $
 
-SHA1 (evolution-exchange-2.28.1.tar.bz2) = 7937d3186b3020c59f9f59e697535dc973da895b
-RMD160 (evolution-exchange-2.28.1.tar.bz2) = d085f4b114f88f99c12edb412538d3424e4db5a4
-Size (evolution-exchange-2.28.1.tar.bz2) = 965508 bytes
+SHA1 (evolution-exchange-2.30.2.tar.bz2) = 16414178bccb9d3c87d210bc8ac8856064c904b8
+RMD160 (evolution-exchange-2.30.2.tar.bz2) = a8ba2bcec71a64f8689261d4ea74a47ea96d6936
+Size (evolution-exchange-2.30.2.tar.bz2) = 1331852 bytes
