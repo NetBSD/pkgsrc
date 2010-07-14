@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2010/06/13 22:44:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/07/14 11:11:22 sbd Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kphotools/}
 EXTRACT_SUFX=	.tar.bz2
