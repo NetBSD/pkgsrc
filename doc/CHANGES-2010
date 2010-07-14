@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2459 2010/07/14 13:25:48 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2460 2010/07/14 14:00:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3284,3 +3284,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/cups to 1.4.3nb9 [sbd 2010-07-14]
 	Updated net/yaz to 4.0.11 [obache 2010-07-14]
 	Updated textproc/ruby-xslt to 0.9.7 [obache 2010-07-14]
+	Updated devel/p5-Module-Install to 1.00 [seb 2010-07-14]
