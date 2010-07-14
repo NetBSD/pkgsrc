@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2010/06/13 22:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/07/14 02:57:26 dholland Exp $
 
 DISTNAME=	gq-1.2.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqclient/}
 
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-ssl-prefix=${BUILDLINK_PREFIX.openssl}
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
