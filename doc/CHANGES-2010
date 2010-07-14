@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2463 2010/07/14 15:16:27 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2464 2010/07/14 15:46:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3288,3 +3288,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/Transmission to 2.01 [tnn 2010-07-14]
 	Updated devel/p5-Class-Accessor-Grouped to 0.09003 [seb 2010-07-14]
 	Updated devel/p5-Class-C3 to 0.23 [seb 2010-07-14]
+	Updated devel/p5-Class-Unload to 0.06 [seb 2010-07-14]
