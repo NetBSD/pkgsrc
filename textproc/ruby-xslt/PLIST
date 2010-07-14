@@ -1,9 +1,22 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/14 13:25:34 obache Exp $
 ${GEM_HOME}/cache/ruby-xslt-${PKGVERSION}.gem
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/examples/bug.rb
+${GEM_LIBDIR}/examples/fuzface.rb
+${GEM_LIBDIR}/examples/fuzface_REXML.rb
+${GEM_LIBDIR}/examples/fuzface_XML-Simple.rb
+${GEM_LIBDIR}/examples/fuzface_data.rb
+${GEM_LIBDIR}/examples/fuzface_error.rb
+${GEM_LIBDIR}/examples/fuzface_to_s.rb
+${GEM_LIBDIR}/examples/info.rb
+${GEM_LIBDIR}/examples/test_functions.rb
+${GEM_LIBDIR}/examples/test_parameters.rb
 ${GEM_LIBDIR}/ext/xslt_lib/extconf.rb
 ${GEM_LIBDIR}/ext/xslt_lib/extfunc.c
 ${GEM_LIBDIR}/ext/xslt_lib/extfunc.h
@@ -17,6 +30,7 @@ ${GEM_LIBDIR}/ext/xslt_lib/xslt.h
 ${GEM_LIBDIR}/ext/xslt_lib/xslt_lib.c
 ${GEM_LIBDIR}/lib/xml/xslt.rb
 ${GEM_LIBDIR}/lib/xml/xslt_lib.${RUBY_DLEXT}
+${GEM_LIBDIR}/ruby-xslt.gemspec
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/subdir/result.xsl
 ${GEM_LIBDIR}/test/subdir/test.xsl
