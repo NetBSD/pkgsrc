@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2456 2010/07/14 11:22:59 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2457 2010/07/14 11:28:55 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3281,3 +3281,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/mDNSResponder to 214.3.2 [sbd 2010-07-14]
 	Updated devel/p5-Variable-Magic to 0.43 [seb 2010-07-14]
 	Updated www/p5-WWW-Mechanize to 1.64 [seb 2010-07-14]
+	Updated print/cups to 1.4.3nb9 [sbd 2010-07-14]
