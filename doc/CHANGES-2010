@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2448 2010/07/14 03:38:51 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2449 2010/07/14 03:43:20 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3273,3 +3273,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/cups to 1.4.3nb7 [sbd 2010-07-13]
 	Updated devel/p5-ExtUtils-ParseXS to 2.22.06 [seb 2010-07-14]
 	Updated www/p5-HTML-Parser to 3.66 [seb 2010-07-14]
+	Updated textproc/p5-YAML-Tiny to 1.43 [seb 2010-07-14]
