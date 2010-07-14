@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2010/06/13 22:45:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/07/14 16:17:41 drochner Exp $
 #
 
-DISTNAME=	gnome-settings-daemon-2.28.1
-PKGREVISION=	3
+DISTNAME=	gnome-settings-daemon-2.30.2
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/2.28/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,8 +29,8 @@ PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=3.3
 
-# pkgsrc pulseaudio is too old
 #.include "../../audio/pulseaudio/buildlink3.mk"
+#.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
