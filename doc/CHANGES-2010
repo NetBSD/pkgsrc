@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2446 2010/07/13 11:38:32 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.2447 2010/07/14 03:27:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3271,3 +3271,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/p5-Image-ExifTool to 8.24 [adam 2010-07-13]
 	Updated math/glpk to 4.44 [adam 2010-07-13]
 	Updated print/cups to 1.4.3nb7 [sbd 2010-07-13]
+	Updated devel/p5-ExtUtils-ParseXS to 2.22.06 [seb 2010-07-14]
