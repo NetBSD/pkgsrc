@@ -1,0 +1,2 @@
+This OpenVPN plugin logs VPN logins and logouts in the wtmpx file.
+Using it, you can have a look of OpenPVN usage by the last(1) command.
