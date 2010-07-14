@@ -1,21 +1,24 @@
-$NetBSD: patch-aa,v 1.8 2006/03/03 22:30:56 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2010/07/14 09:29:04 sbd Exp $
 
---- mDNSPosix/Makefile.orig	2006-02-20 22:40:36.000000000 +0100
+Find libpthread.so when not on the default rpath.
+
+--- mDNSPosix/Makefile.orig	2009-02-02 19:44:06.000000000 +0000
 +++ mDNSPosix/Makefile
-@@ -275,6 +275,7 @@ CFLAGS_OS = -DNOT_HAVE_DAEMON -DNOT_HAVE
- CC = gcc
- LD = gcc -shared
- LIBFLAGS = -lsocket -lnsl -lresolv
-+SYSTEMLIBS = -lsocket -lnsl
- JAVACFLAGS_OS += -I$(JDK)/include/solaris
- ifneq ($(DEBUG),1)
- STRIP = strip
-@@ -617,7 +618,7 @@ $(BUILDDIR)/mDNSNetMonitor:          $(S
- 	$(CC) $+ -o $@ $(LIBFLAGS)
+@@ -326,7 +326,7 @@ LN = ln -s -f
+ CFLAGS_COMMON = -I$(COREDIR) -I$(SHAREDDIR) -I$(OBJDIR) -fwrapv -W -Wall -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
+ CFLAGS_PTHREAD =
+ LINKOPTS =
+-LINKOPTS_PTHREAD = -lpthread
++LINKOPTS_PTHREAD = $(LIBFLAGS) ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${EXTRA_LIBS}
+ LDSUFFIX = so
+ JAVACFLAGS_OS = -fPIC -shared -ldns_sd
  
- $(BUILDDIR)/dnsextd:                 $(SPECIALOBJ) $(OBJDIR)/dnsextd.c.threadsafe.o
--	$(CC) $+ -o $@ $(LIBFLAGS) -lpthread
-+	$(CC) $+ -o $@ $(LIBFLAGS) ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${EXTRA_LIBS}
- 
- #############################################################################
- 
+@@ -388,7 +388,7 @@ CFLAGS_OS =
+ #     -pthread
+ #       Link a user-threaded process against libc_r instead of libc.
+ CFLAGS_PTHREAD   = -pthread -D_THREAD_SAFE
+-LINKOPTS_PTHREAD = -pthread
++LINKOPTS_PTHREAD = $(LIBFLAGS) ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${EXTRA_LIBS}
+ JAVACFLAGS_OS += -I$(JDK)/include/freebsd
+ LDCONFIG = ldconfig
+ else
