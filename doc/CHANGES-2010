@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2461 2010/07/14 14:08:02 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2462 2010/07/14 14:15:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3286,3 +3286,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/ruby-xslt to 0.9.7 [obache 2010-07-14]
 	Updated devel/p5-Module-Install to 1.00 [seb 2010-07-14]
 	Updated net/Transmission to 2.01 [tnn 2010-07-14]
+	Updated devel/p5-Class-Accessor-Grouped to 0.09003 [seb 2010-07-14]
