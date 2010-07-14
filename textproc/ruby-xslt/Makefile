@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2008/06/19 15:21:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/14 13:25:34 obache Exp $
 
-DISTNAME=	ruby-xslt-0.9.6
+DISTNAME=	ruby-xslt-0.9.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://raa.ruby-lang.org/project/ruby-xslt/
 COMMENT=	Ruby wrapper classes for libxslt
+LICENSE=	gnu-gpl-v2
 
 GEM_BUILD=	gemspec
 CONFIGURE_ARGS=	--with-xslt-dir=${BUILDLINK_PREFIX.libxslt}
