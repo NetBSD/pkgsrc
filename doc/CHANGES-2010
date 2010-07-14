@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2471 2010/07/14 17:52:21 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2472 2010/07/14 18:28:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3295,3 +3295,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/gpsd to 2.95 [gdt 2010-07-14]
 	Updated devel/p5-Data-Section to 0.101.620 [seb 2010-07-14]
 	Updated devel/p5-Software-License to 0.101.620 [seb 2010-07-14]
+	Updated devel/p5-Test-YAML-Meta to 0.16 [seb 2010-07-14]
