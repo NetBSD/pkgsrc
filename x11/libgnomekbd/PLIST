@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/12/16 19:05:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/07/14 16:16:49 drochner Exp $
 bin/gkbd-indicator-plugins-capplet
 include/libgnomekbd/gkbd-desktop-config.h
 include/libgnomekbd/gkbd-indicator-config.h
@@ -6,6 +6,7 @@ include/libgnomekbd/gkbd-indicator-plugin.h
 include/libgnomekbd/gkbd-indicator.h
 include/libgnomekbd/gkbd-keyboard-config.h
 include/libgnomekbd/gkbd-keyboard-drawing.h
+include/libgnomekbd/gkbd-status.h
 include/libgnomekbd/gkbd-util.h
 lib/libgnomekbd.la
 lib/libgnomekbdui.la
@@ -17,6 +18,7 @@ share/libgnomekbd/ui/gkbd-indicator-plugins.ui
 share/libgnomekbd/ui/gkbd-indicator-plugins_add.ui
 share/locale/ar/LC_MESSAGES/libgnomekbd.mo
 share/locale/as/LC_MESSAGES/libgnomekbd.mo
+share/locale/ast/LC_MESSAGES/libgnomekbd.mo
 share/locale/be@latin/LC_MESSAGES/libgnomekbd.mo
 share/locale/bg/LC_MESSAGES/libgnomekbd.mo
 share/locale/bn/LC_MESSAGES/libgnomekbd.mo
@@ -64,6 +66,7 @@ share/locale/pt_BR/LC_MESSAGES/libgnomekbd.mo
 share/locale/ro/LC_MESSAGES/libgnomekbd.mo
 share/locale/ru/LC_MESSAGES/libgnomekbd.mo
 share/locale/si/LC_MESSAGES/libgnomekbd.mo
+share/locale/sk/LC_MESSAGES/libgnomekbd.mo
 share/locale/sl/LC_MESSAGES/libgnomekbd.mo
 share/locale/sq/LC_MESSAGES/libgnomekbd.mo
 share/locale/sr/LC_MESSAGES/libgnomekbd.mo
