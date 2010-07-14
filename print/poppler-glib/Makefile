@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2010/06/13 22:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/07/14 17:04:23 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-glib-${POPPLER_VERS}
-PKGREVISION=		1
 
 COMMENT=		PDF rendering library (GLib wrapper)
 MAINTAINER=		reed@reedmedia.net
@@ -26,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-poppler-qt
 CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-utils
 CONFIGURE_ARGS+=	--disable-cms
+CONFIGURE_ARGS+=	--disable-poppler-cpp
 
 BUILD_DIRS=		goo fofi poppler glib
 INSTALL_DIRS=		glib
