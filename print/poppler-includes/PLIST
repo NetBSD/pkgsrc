@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2009/09/09 19:57:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/07/14 17:04:23 drochner Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
 include/poppler/BuiltinFontTables.h
 include/poppler/CMap.h
+include/poppler/CachedFile.h
 include/poppler/Catalog.h
 include/poppler/CharCodeToUnicode.h
 include/poppler/CharTypes.h
@@ -27,6 +28,7 @@ include/poppler/JArithmeticDecoder.h
 include/poppler/JBIG2Stream.h
 include/poppler/Lexer.h
 include/poppler/Link.h
+include/poppler/LocalPDFDocBuilder.h
 include/poppler/Movie.h
 include/poppler/NameToCharCode.h
 include/poppler/NameToUnicodeTable.h
@@ -35,7 +37,9 @@ include/poppler/OptionalContent.h
 include/poppler/Outline.h
 include/poppler/OutputDev.h
 include/poppler/PDFDoc.h
+include/poppler/PDFDocBuilder.h
 include/poppler/PDFDocEncoding.h
+include/poppler/PDFDocFactory.h
 include/poppler/PSOutputDev.h
 include/poppler/PSTokenizer.h
 include/poppler/Page.h
@@ -44,9 +48,12 @@ include/poppler/Parser.h
 include/poppler/PopplerCache.h
 include/poppler/PreScanOutputDev.h
 include/poppler/ProfileData.h
+include/poppler/Rendition.h
 include/poppler/SecurityHandler.h
 include/poppler/Sound.h
 include/poppler/SplashOutputDev.h
+include/poppler/StdinCachedFile.h
+include/poppler/StdinPDFDocBuilder.h
 include/poppler/Stream-CCITT.h
 include/poppler/Stream.h
 include/poppler/TextOutputDev.h
@@ -66,12 +73,13 @@ include/poppler/goo/GooMutex.h
 include/poppler/goo/GooString.h
 include/poppler/goo/GooTimer.h
 include/poppler/goo/GooVector.h
+include/poppler/goo/ImgWriter.h
+include/poppler/goo/JpegWriter.h
 include/poppler/goo/PNGWriter.h
 include/poppler/goo/gfile.h
 include/poppler/goo/gmem.h
 include/poppler/goo/gstrtod.h
 include/poppler/goo/gtypes.h
-include/poppler/poppler-config.h
 include/poppler/splash/Splash.h
 include/poppler/splash/SplashBitmap.h
 include/poppler/splash/SplashClip.h
