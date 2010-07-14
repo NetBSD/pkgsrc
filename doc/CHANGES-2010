@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2466 2010/07/14 15:57:07 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2467 2010/07/14 16:15:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3291,3 +3291,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-Unload to 0.06 [seb 2010-07-14]
 	Updated mail/p5-MIME-Types to 1.30 [seb 2010-07-14]
 	Updated databases/p5-SQL-Abstract to 1.67 [seb 2010-07-14]
+	Updated devel/p5-Parse-RecDescent to 1.965.1 [seb 2010-07-14]
