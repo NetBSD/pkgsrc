@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2451 2010/07/14 04:56:04 manu Exp $
+$NetBSD: CHANGES-2010,v 1.2452 2010/07/14 08:47:47 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3276,3 +3276,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-YAML-Tiny to 1.43 [seb 2010-07-14]
 	Updated devel/p5-Data-Dump-Streamer to 2.22 [seb 2010-07-14]
 	Added openvpn-acct-wtmpx version 20091110 [manu 2010-07-14]
+	Updated time/p5-DateTime to 0.6000 [seb 2010-07-14]
