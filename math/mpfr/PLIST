@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/15 12:35:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/15 20:30:40 asau Exp $
 include/mpf2mpfr.h
 include/mpfr.h
 info/mpfr.info
@@ -6,7 +6,7 @@ lib/libmpfr.la
 share/doc/mpfr/AUTHORS
 share/doc/mpfr/BUGS
 share/doc/mpfr/COPYING
-share/doc/mpfr/COPYING.LIB
+share/doc/mpfr/COPYING.LESSER
 share/doc/mpfr/FAQ.html
 share/doc/mpfr/NEWS
 share/doc/mpfr/TODO
@@ -14,3 +14,4 @@ share/doc/mpfr/examples/ReadMe
 share/doc/mpfr/examples/divworst.c
 share/doc/mpfr/examples/rndo-add.c
 share/doc/mpfr/examples/sample.c
+share/doc/mpfr/examples/version.c
