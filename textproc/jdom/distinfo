@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/10/19 11:07:34 rillig Exp $
+$NetBSD: distinfo,v 1.2 2010/07/15 12:12:10 obache Exp $
 
-SHA1 (jdom-1.0.zip) = 7cc98b9fc4b6f38556aff4ded1b4d73c09772ca2
-RMD160 (jdom-1.0.zip) = 97953154092503bff0b8871c9f9b3aa5f0d22618
-Size (jdom-1.0.zip) = 3912599 bytes
+SHA1 (jdom-1.1.1.zip) = e887ce82ccc1f03991b48ba8a190b2d42b2129da
+RMD160 (jdom-1.1.1.zip) = 7b20b46822b50e1a7a39a1693ebe01010caf6e61
+Size (jdom-1.1.1.zip) = 4054268 bytes
