@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.23 2008/04/18 14:26:37 joerg Exp $
+# $NetBSD: mkreadme,v 1.24 2010/07/15 05:25:30 spz Exp $
 #
 # Script for README.html generation
 #
@@ -463,7 +463,19 @@ echo " "
 cd ${PKGSRCDIR}
 ipv6=${TMPDIR}/ipv6pkgs
 ipv6_entries=${TMPDIR}/ipv6_entries
-${GREP} -l -e '^BUILD_DEFS.*=.*IPV6_READY' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' -e '^USE_FEATURES.*=.*inet6' */*/Makefile */*/options.mk | ${SED} -e 's;Makefile;;g' -e 's;options.mk;;g' > $ipv6
+
+echo -n "" > $ipv6
+cats=`${BMAKE} show-subdir-var VARNAME=SUBDIR`
+for c in ${cats} ; do
+    if [ -d ${c} ]; then
+	${GREP} -l -e '^BUILD_DEFS.*=.*IPV6_READY' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' -e '^USE_FEATURES.*=.*inet6' ${c}/*/Makefile | ${SED} -e 's;Makefile;;g' >> $ipv6
+	arethereoptions=`ls ${c}/*/options.mk 2>/dev/null`
+	if [ ! -z "$arethereoptions" ]; then
+	    ${GREP} -l -e '^BUILD_DEFS.*=.*IPV6_READY' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' -e '^USE_FEATURES.*=.*inet6' ${c}/*/options.mk | ${SED} -e 's;options.mk;;g' >> $ipv6
+	fi
+
+    fi
+done
 ${FGREP} -f $ipv6 README-all.html | sort -t/ +1 > $ipv6_entries
 ${SED} \
     -e "/%%TRS%%/r${ipv6_entries}" \
