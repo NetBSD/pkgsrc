@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9465 2010/07/14 14:00:10 seb Exp $
+$NetBSD: TODO,v 1.9466 2010/07/15 12:12:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -802,7 +802,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o javacc-5.0
 	o jcabc2ps-20070110
 	o jdb-1.14
-	o jdom-1.1.1 [pkg/43608]
 	o jed-0.99-18
 	o jhead-2.90
 	o john-1.7.6
