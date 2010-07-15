@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/07/14 17:04:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/07/15 11:33:26 drochner Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -80,6 +80,7 @@ include/poppler/goo/gfile.h
 include/poppler/goo/gmem.h
 include/poppler/goo/gstrtod.h
 include/poppler/goo/gtypes.h
+include/poppler/poppler-config.h
 include/poppler/splash/Splash.h
 include/poppler/splash/SplashBitmap.h
 include/poppler/splash/SplashClip.h
