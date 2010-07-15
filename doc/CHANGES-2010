@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2476 2010/07/14 19:17:15 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2477 2010/07/15 11:48:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3328,3 +3328,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed devel/eel successor sysutils/nautilus [drochner 2010-07-14]
 	Updated textproc/p5-Text-CSV_XS to 0.73 [seb 2010-07-14]
 	Updated databases/db5 to 5.0.26 [adam 2010-07-14]
+	Updated chat/ircservices to 5.0.64 [obache 2010-07-15]
