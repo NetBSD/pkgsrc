@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.13 2007/11/24 00:47:36 adrianp Exp $
+$NetBSD: distinfo,v 1.14 2010/07/15 11:48:21 obache Exp $
 
-SHA1 (ircservices-5.0.63.tar.gz) = 5c08af0d56bc99f9dc8f331eae9963beb3e28dad
-RMD160 (ircservices-5.0.63.tar.gz) = d61d5bf3dc28ac38a391b3918289d74ce2106ace
-Size (ircservices-5.0.63.tar.gz) = 1167436 bytes
+SHA1 (ircservices-5.0.64.tar.gz) = 6a12e05368da5dc251dd73b999856f2fc572a352
+RMD160 (ircservices-5.0.64.tar.gz) = 4b6b0fc113a9ff0c9aa45d4462a48b3836d27d49
+Size (ircservices-5.0.64.tar.gz) = 1163863 bytes
 SHA1 (patch-aa) = cff60257c4f5ebdfd0af4984008d2677b293029b
 SHA1 (patch-ab) = a15821c44bd9738080436a3626ec62d96c37db63
 SHA1 (patch-ac) = d567871c9cbb05b329247155c55e26e265476b48
+SHA1 (patch-ad) = b838e722e2c4019775b25cbc85ea2c5cf3510927

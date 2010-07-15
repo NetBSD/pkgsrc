@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1 2010/07/15 11:48:22 obache Exp $
+
+Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
+
+--- lang/langcomp.c.orig	2009-07-31 14:54:04.000000000 +0000
++++ lang/langcomp.c
+@@ -41,7 +41,6 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
+-#undef getline
+ 
+ /* CR/LF values--used instead of '\r' and '\n' to avoid platform-dependent
+  * messiness */
+@@ -115,7 +114,7 @@ static int stringnum(const char *name)
+ /* Read a non-comment, non-blank line from the input file.  Return NULL at
+  * end of file. */
+ 
+-static char *getline(FILE *f)
++static char *get_line(FILE *f)
+ {
+     static char buf[1024];
+     char *s;
+@@ -196,7 +195,7 @@ int main(int ac, char **av)
+ 	return 1;
+     }
+ 
+-    while (maxerr > 0 && (line = getline(in)) != NULL) {
++    while (maxerr > 0 && (line = get_line(in)) != NULL) {
+ 	if (*line == '\t') {
+ 	    if (curstring == -2) {
+ 		fprintf(stderr, "%s:%d: Junk at beginning of file\n",
