@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/19 11:07:34 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/07/15 12:12:10 obache Exp $
 lib/java/jdom-src.zip
 lib/java/jdom.jar
 share/doc/jdom/allclasses-frame.html
+share/doc/jdom/allclasses-noframe.html
+share/doc/jdom/constant-values.html
 share/doc/jdom/deprecated-list.html
 share/doc/jdom/help-doc.html
 share/doc/jdom/index-files/index-1.html
@@ -162,6 +164,6 @@ share/doc/jdom/overview-frame.html
 share/doc/jdom/overview-summary.html
 share/doc/jdom/overview-tree.html
 share/doc/jdom/package-list
-share/doc/jdom/packages.html
+share/doc/jdom/resources/inherit.gif
 share/doc/jdom/serialized-form.html
 share/doc/jdom/stylesheet.css
