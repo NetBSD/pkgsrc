@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/07/15 17:41:57 drochner Exp $
+
+--- runtests.py.orig	2010-02-02 10:11:17.000000000 +0000
++++ runtests.py
+@@ -604,7 +604,7 @@ class EmbedTest(unittest.TestCase):
+         os.chdir(self.old_dir)
+         
+     def test_embed(self):
+-        self.assert_(os.system("make test > make.output") == 0)
++        self.assert_(os.system("gmake test PYTHON=%s > make.output" % sys.executable) == 0)
+ 
+ class MissingDependencyExcluder:
+     def __init__(self, deps):
