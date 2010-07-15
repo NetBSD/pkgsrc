@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2010/06/13 22:44:56 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2010/07/15 21:35:10 asau Exp $
 #
 
 DISTNAME=		genius-1.0.9
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math
 MASTER_SITES=		http://ftp.5z.com/pub/genius/
 
