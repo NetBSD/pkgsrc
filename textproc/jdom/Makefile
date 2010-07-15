@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/07/14 12:56:13 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/15 12:12:10 obache Exp $
 #
 
-DISTNAME=	jdom-1.0
+DISTNAME=	jdom-1.1.1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.jdom.org/dist/binary/
 EXTRACT_SUFX=	.zip
@@ -16,10 +16,14 @@ BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 USE_LANGUAGES=	# only Java
 USE_TOOLS+=	pax
-AUTO_MKDIRS=			yes
+AUTO_MKDIRS=	yes
+WRKSRC=		${WRKDIR}/jdom
+
+FIND_PREFIX:=	ZIP_DIR=zip
+.include "../../mk/find-prefix.mk"
 
 do-build:
-	cd ${WRKSRC}/src/java && ${LOCALBASE}/bin/zip -r ${WRKSRC}/jdom-src.zip org
+	cd ${WRKSRC}/src/java && ${ZIP_DIR}/bin/zip -r ${WRKSRC}/jdom-src.zip org
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} build/jdom.jar jdom-src.zip ${DESTDIR}${PREFIX}/lib/java/
