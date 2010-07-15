@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/07/14 17:04:23 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/15 11:33:26 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -10,6 +10,7 @@ MAINTAINER=		dillo@NetBSD.org
 
 CONFLICTS+=		poppler-0.5.1 poppler-0.5.1nb1 poppler-0.5.1nb2
 
+GNU_CONFIGURE=		yes
 NO_BUILD=		yes
 PKG_DESTDIR_SUPPORT=    user-destdir
 
@@ -31,5 +32,8 @@ do-install:
 	     done };							\
 	done
 	${INSTALL_DATA} ${WRKSRC}/poppler/SplashOutputDev.h ${INCDIR}/poppler
+	${INSTALL_DATA} ${WRKSRC}/poppler/poppler-config.h ${INCDIR}/poppler
 
+BUILDLINK_DEPMETHOD.fontconfig= build
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
