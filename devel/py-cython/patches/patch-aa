@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/07/15 17:41:57 drochner Exp $
+
+--- setup.py.orig	2010-02-02 10:11:17.000000000 +0000
++++ setup.py
+@@ -68,7 +68,7 @@ if 'setuptools' in sys.modules:
+     scripts = []
+ else:
+     if os.name == "posix":
+-        scripts = ["bin/cython"]
++        scripts = ["bin/cython" + sys.version[0:3]]
+     else:
+         scripts = ["cython.py"]
+ 
