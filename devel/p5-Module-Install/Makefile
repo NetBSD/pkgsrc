@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/07/14 13:59:54 seb Exp $
+# $NetBSD: Makefile,v 1.23 2010/07/15 06:03:47 obache Exp $
 
 DISTNAME=	Module-Install-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -29,6 +29,8 @@ PERL5_PACKLIST=		auto/Module/Install/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALL_MAKE_FLAGS+=	VENDORARCHEXP=${DESTDIR}${PERL5_INSTALLVENDORARCH}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
