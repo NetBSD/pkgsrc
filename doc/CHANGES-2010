@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2481 2010/07/15 23:16:17 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2482 2010/07/15 23:50:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3333,3 +3333,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/sigscheme to 0.8.4 [obache 2010-07-15]
 	Updated math/mpfr to 3.0.0.3 [asau 2010-07-15]
 	Updated devel/p5-local-lib to 1.6.5 [seb 2010-07-15]
+	Updated devel/p5-App-FatPacker to 0.009002 [seb 2010-07-15]
