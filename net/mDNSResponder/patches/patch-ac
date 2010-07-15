@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2010/07/14 09:29:04 sbd Exp $
+$NetBSD: patch-ac,v 1.7 2010/07/15 09:08:28 tnn Exp $
 
 * Fix build on FreeBSD and DragonFly, as shown in recent bulk builds and
   PR 34022.
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.6 2010/07/14 09:29:04 sbd Exp $
  #endif
  
 -#if defined(AF_INET6) && HAVE_IPV6 && !HAVE_LINUX
-+#if defined(AF_INET6) && HAVE_IPV6 && !HAVE_LINUX && !defined(sun)
++#if defined(AF_INET6) && HAVE_IPV6 && !HAVE_LINUX && !defined(sun) && !defined(__NetBSD__)
  #include <net/if_var.h>
  #include <netinet/in_var.h>
  // Note: netinet/in_var.h implicitly includes netinet6/in6_var.h for us
