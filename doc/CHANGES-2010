@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2480 2010/07/15 21:36:26 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2481 2010/07/15 23:16:17 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3332,3 +3332,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/jdom to 1.1.1 [obache 2010-07-15]
 	Updated lang/sigscheme to 0.8.4 [obache 2010-07-15]
 	Updated math/mpfr to 3.0.0.3 [asau 2010-07-15]
+	Updated devel/p5-local-lib to 1.6.5 [seb 2010-07-15]
