@@ -1,7 +1,9 @@
-$NetBSD: patch-ba,v 1.1 2010/07/14 02:16:46 dholland Exp $
+$NetBSD: patch-ba,v 1.2 2010/07/15 20:23:10 dholland Exp $
 
 Patch from upstream to stop emacs from trying to read stdin during the
 build. From Makoto Fujiwara in PR 43580.
+
+This patch should become unnecessary with the next update.
 
 --- doc/wl.texi.orig	2005-02-25 15:05:48.000000000 +0000
 +++ doc/wl.texi
