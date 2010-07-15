@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2477 2010/07/15 11:48:43 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2478 2010/07/15 12:12:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3329,3 +3329,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-CSV_XS to 0.73 [seb 2010-07-14]
 	Updated databases/db5 to 5.0.26 [adam 2010-07-14]
 	Updated chat/ircservices to 5.0.64 [obache 2010-07-15]
+	Updated textproc/jdom to 1.1.1 [obache 2010-07-15]
