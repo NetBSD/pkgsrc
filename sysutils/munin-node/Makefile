@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/07/11 18:17:27 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/07/16 22:04:11 abs Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -26,7 +26,19 @@ USE_PKGINSTALL=	YES
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S:_:-:}
 
-PLIST_VARS+=	sunos not-sunos
+PLIST_VARS+=	sunos not-sunos netbsd not-netbsd linux not-linux
+
+.if ${OPSYS} == "Linux"
+PLIST.linux=	yes
+.else
+PLIST.not-linux= yes
+.endif
+
+.if ${OPSYS} == "NetBSD"
+PLIST.netbsd=	yes
+.else
+PLIST.not-netbsd= yes
+.endif
 
 .if ${OPSYS} == "SunOS"
 PLIST.sunos=	yes
