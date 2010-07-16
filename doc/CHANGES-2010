@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2485 2010/07/16 00:50:38 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2486 2010/07/16 00:54:49 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/bind97 to 9.7.1pl2 [taca 2010-07-16]
 	Updated devel/p5-Devel-Cover to 0.67 [seb 2010-07-16]
 	Updated devel/p5-Mouse to 0.62 [seb 2010-07-16]
+	Updated devel/p5-MouseX-Types to 0.05 [seb 2010-07-16]
