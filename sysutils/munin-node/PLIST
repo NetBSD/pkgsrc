@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/08/30 08:19:43 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/07/16 22:04:11 abs Exp $
 lib/munin/plugins/acpi
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -31,13 +31,13 @@ lib/munin/plugins/hddtemp2
 lib/munin/plugins/hddtemp_smartctl
 lib/munin/plugins/hddtempd
 lib/munin/plugins/if_
-lib/munin/plugins/if_errcoll_
+${PLIST.not-linux}lib/munin/plugins/if_errcoll_
 ${PLIST.not-sunos}lib/munin/plugins/interrupts
 ${PLIST.sunos}lib/munin/plugins/io_busy_
 ${PLIST.sunos}lib/munin/plugins/io_bytes_
 ${PLIST.sunos}lib/munin/plugins/io_ops_
 ${PLIST.not-sunos}lib/munin/plugins/iostat
-${PLIST.not-sunos}lib/munin/plugins/iostat_ops
+${PLIST.netbsd}lib/munin/plugins/iostat_ops
 lib/munin/plugins/ipac-ng
 lib/munin/plugins/ircu
 ${PLIST.not-sunos}lib/munin/plugins/irqstats
@@ -47,8 +47,8 @@ lib/munin/plugins/mailman
 lib/munin/plugins/mailscanner
 lib/munin/plugins/mbmon_
 lib/munin/plugins/memory
-${PLIST.not-sunos}lib/munin/plugins/memory_pools
-${PLIST.not-sunos}lib/munin/plugins/memory_types
+${PLIST.netbsd}lib/munin/plugins/memory_pools
+${PLIST.netbsd}lib/munin/plugins/memory_types
 lib/munin/plugins/mhttping
 lib/munin/plugins/multips
 lib/munin/plugins/munin_graph
