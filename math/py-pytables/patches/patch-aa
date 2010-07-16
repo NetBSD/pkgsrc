@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2009/11/15 15:56:55 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2010/07/16 12:18:00 drochner Exp $
 
---- setup.py.orig	2009-03-05 18:12:19.000000000 +0100
+--- setup.py.orig	2010-07-01 11:04:59.000000000 +0000
 +++ setup.py
-@@ -463,7 +463,7 @@ else:
-         'tables.tests', 'tables.numexpr.tests', 'tables.nodes.tests',
+@@ -527,7 +527,7 @@ else:
+         'tables.tests', 'tables.nodes.tests',
          'tables.netcdf3.tests', 'tables.nra.tests']
      setuptools_kwargs['scripts'] = [
 -        'utils/ptdump', 'utils/ptrepack', 'utils/nctoh5']

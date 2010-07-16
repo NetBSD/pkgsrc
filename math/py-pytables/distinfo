@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/11/15 15:56:55 drochner Exp $
+$NetBSD: distinfo,v 1.8 2010/07/16 12:17:59 drochner Exp $
 
-SHA1 (tables-2.1.2.tar.gz) = 545cc16491d37e2f6b8ce10bc8bdfa559b174e2e
-RMD160 (tables-2.1.2.tar.gz) = 09bfb73e9252baa34aa40274a0b07f6c6cc60d70
-Size (tables-2.1.2.tar.gz) = 4677233 bytes
-SHA1 (patch-aa) = 3cf2812635aaa12e445398243ca765d209fb9cdf
+SHA1 (tables-2.2.tar.gz) = 1a1c3e01b99fb264ae5fce1fa2950c25e6dcb516
+RMD160 (tables-2.2.tar.gz) = 6a15629c6d08131589e1825d1a237f2d5c887aab
+Size (tables-2.2.tar.gz) = 4700399 bytes
+SHA1 (patch-aa) = 8d89466c9fc4df63dd39a3fe2bd3e9f8ac7b45c8
