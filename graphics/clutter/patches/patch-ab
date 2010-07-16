@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2010/07/16 14:31:46 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/07/16 14:56:11 obache Exp $
+
+Fixes build with !Linux.
+http://git.clutter-project.org/clutter/commit/?h=clutter-1.2&id=4600615be61a1d73abfd4d521308e9512a01f475
 
 --- clutter/glx/clutter-stage-glx.c.orig	2010-07-14 10:32:57.000000000 +0000
 +++ clutter/glx/clutter-stage-glx.c
