@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2009/11/01 10:49:14 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/16 12:00:27 obache Exp $
 #
 
 DISTNAME=		makedepf90-2.8.8
 CATEGORIES=		devel
-MASTER_SITES=		http://www.helsinki.fi/~eedelman/makedepf90/
+MASTER_SITES=		http://personal.inet.fi/private/erikedelmann/makedepf90/
 
-MAINTAINER=		emil@math.su.se
-HOMEPAGE=		http://www.helsinki.fi/~eedelman/makedepf90/
+MAINTAINER=		esg@sdf.lonestar.org
+HOMEPAGE=		http://personal.inet.fi/private/erikedelmann/makedepf90/
 COMMENT=		Creates Makefile dependencies for Fortran code
 LICENSE=		gnu-gpl-v2
 
