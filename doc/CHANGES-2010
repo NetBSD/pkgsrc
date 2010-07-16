@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2488 2010/07/16 06:42:40 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2489 2010/07/16 14:32:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MouseX-Types to 0.05 [seb 2010-07-16]
 	Updated graphics/p5-Image-ExifTool to 8.25 [gdt 2010-07-16]
 	Updated graphics/gimp to 2.6.10 [adam 2010-07-16]
+	Updated graphics/clutter to 1.2.12 [obache 2010-07-16]
