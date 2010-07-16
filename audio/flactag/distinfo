@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/08/03 10:02:35 drochner Exp $
+$NetBSD: distinfo,v 1.3 2010/07/16 16:23:49 drochner Exp $
 
 SHA1 (flactag-1.1.tar.gz) = 8b0b65068b2659eceb36831694657bf2210ca36b
 RMD160 (flactag-1.1.tar.gz) = 975091ad58b1c88e972e0b99ae800c068bc668d7
 Size (flactag-1.1.tar.gz) = 110567 bytes
 SHA1 (patch-aa) = 49d7ad0efd18e9da71e671dd02beab8d2dff84d5
-SHA1 (patch-ab) = 735a5559e081614b1732a684851e6c11f2a176be
 SHA1 (patch-ac) = cf71f4f68663ed9dc73662e32df55c0621fcaa14
 SHA1 (patch-ad) = ff867a7acc08e08e3f109c63a235c13243a95cc6
