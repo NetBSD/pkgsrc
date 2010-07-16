@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2010/07/14 05:49:39 obache Exp $
+# $NetBSD: Makefile,v 1.40 2010/07/16 00:44:29 obache Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.30.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.30/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ PY_PATCHPLIST=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
-DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
+#DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 
