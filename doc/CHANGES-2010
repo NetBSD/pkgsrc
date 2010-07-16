@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2486 2010/07/16 00:54:49 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2487 2010/07/16 01:35:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3338,3 +3338,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-Cover to 0.67 [seb 2010-07-16]
 	Updated devel/p5-Mouse to 0.62 [seb 2010-07-16]
 	Updated devel/p5-MouseX-Types to 0.05 [seb 2010-07-16]
+	Updated graphics/p5-Image-ExifTool to 8.25 [gdt 2010-07-16]
