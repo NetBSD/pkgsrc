@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9467 2010/07/15 22:33:55 wiz Exp $
+$NetBSD: TODO,v 1.9468 2010/07/16 00:50:38 seb Exp $
 
 Suggested new packages
 ======================
@@ -1041,7 +1041,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Lingua-EN-Inflect-1.892
 	o p5-MIME-tools-5.428
 	o p5-Module-Build-0.36090
-	o p5-Mouse-0.62
 	o p5-POE-1.289 [pkg/43115]
 	o p5-PerlMagick-6.6.3.1
 	o p5-Pod-Readme-0.10
