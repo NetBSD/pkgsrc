@@ -435,6 +435,7 @@ sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 serialconsole		Enable use of serial console.
 sieve			Enable sieve support.
+sigver			Enable signature verification for debugging purposes.
 simd			Enable MMX/3DNOW/SSE/Altivec support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey			Enable S/Key support.
@@ -451,6 +452,7 @@ snort-flexresp2		NEW Flexible Responses on hostile connection attempts.
 snort-prelude		Enable support for the Prelude Hybrid IDS system.
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
+softhsm			Enable SoftHSM for key management.
 spamassassin		Enable SpamAssassin support.
 spamassassin-perl-warnings	Enable Perl warnings at run-time.
 spamassassin-taint-checks	Enable Perl taint checks to improve security.
