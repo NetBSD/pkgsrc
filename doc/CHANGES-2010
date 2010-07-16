@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2482 2010/07/15 23:50:36 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2483 2010/07/16 00:36:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/mpfr to 3.0.0.3 [asau 2010-07-15]
 	Updated devel/p5-local-lib to 1.6.5 [seb 2010-07-15]
 	Updated devel/p5-App-FatPacker to 0.009002 [seb 2010-07-15]
+	Updated net/bind97 to 9.7.1pl2 [taca 2010-07-16]
