@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/07/14 09:29:04 sbd Exp $
+# $NetBSD: Makefile,v 1.31 2010/07/16 07:34:02 tnn Exp $
 
 DISTNAME=	mDNSResponder-214.3.2
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Apple's mDNS responder
 
 MAKE_JOBS_SAFE=	no
 
-USE_TOOLS+=	gmake flex
+USE_TOOLS+=	gmake flex bison
 BUILD_DIRS=	mDNSPosix
 BUILDDIR=	${WRKSRC}/mDNSPosix/build/prod
 AUTO_MKDIRS=	yes
