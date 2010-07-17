@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2497 2010/07/17 08:36:53 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2498 2010/07/17 08:45:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3349,3 +3349,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/p5-Sys-Filesystem to 1.30 [sno 2010-07-17]
 	Added inputmethod/skk-jisyo version 200708 [obache 2010-07-17]
 	Updated inputmethod/skktools to 1.3.1 [obache 2010-07-17]
+	Updated devel/p5-Hash-MoreUtils to 0.02 [sno 2010-07-17]
