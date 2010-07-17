@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
+$NetBSD: patch-af,v 1.2 2010/07/17 08:57:18 obache Exp $
 
---- skkserv/skkserv.c.orig	Tue Jan 21 04:16:36 1997
-+++ skkserv/skkserv.c	Mon Nov  6 00:12:57 2000
-@@ -100,14 +100,16 @@
+--- skkserv/skkserv.c.orig	1997-01-20 19:16:36.000000000 +0000
++++ skkserv/skkserv.c
+@@ -100,8 +100,10 @@
  #define SERVER_NOT_FOUND "4"
  #define SERVER_FULL	"9"
  
@@ -14,14 +14,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
  
  /*
   *	Global Variables
-  */
- 
--char	pgmver[] = "3.9.4 ";	/* version number */
-+char	pgmver[] = "3.9.4nb1 ";	/* version number */
- 
- char	*pgmnm;		/* program name */
- char	*jname;		/* name of shared dictionary */
-@@ -121,6 +123,9 @@
+@@ -121,6 +123,9 @@ int	format;		/* 0 (old-style) / non-0 (n
  int	jtab1[KANAMOJI]; /* index-table by 1st letter (1st part)*/
  int	jtab2[KANAMOJI]; /* index-table by 1st letter (2nd part)*/
  int	initsock;	/* socket for waiting requests */
@@ -31,7 +24,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
  int	clientsock[MAXCLNT];	/* socket for each client */
  int	nclients;	/* max index for active clients */
  
-@@ -130,8 +135,18 @@
+@@ -130,8 +135,18 @@ char *argv[];
    int	parg;
    int	setjisho = 0;
    int	ctlterm;	/* fildes for control terminal */
@@ -51,7 +44,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
    pgmnm = argv[0];
    debug = 0;
    errout = stderr;
-@@ -200,7 +215,10 @@
+@@ -200,7 +215,10 @@ char *argv[];
      fclose(stderr);
  
      /* detach child process from control terminal */
@@ -63,7 +56,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
      if ((ctlterm = open("/dev/tty", 2)) >= 0) { 
        ioctl(ctlterm, TIOCNOTTY, 0);
        close(ctlterm);
-@@ -215,6 +233,7 @@
+@@ -215,6 +233,7 @@ char *argv[];
      signal(SIGHUP, SIG_IGN);
      if (fork() != 0) exit(0);
  #endif
@@ -71,7 +64,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
    } else { /* debug mode */
      fprintf(errout, "SKK-JISYO is %s\n", jname);
      fflush(errout);
-@@ -222,7 +241,7 @@
+@@ -222,7 +241,7 @@ char *argv[];
      if (errout != stderr) fclose(stderr);
    }
  
@@ -80,7 +73,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
    /* 1993/6/5 by kam, re-read dictionary by "INT" signal */
  
    nclients = 0;
-@@ -244,8 +263,11 @@
+@@ -244,8 +263,11 @@ showusage()
  mksock()
  {
    struct sockaddr_in	sin;
@@ -93,7 +86,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
    
    bzero((char*)&sin, sizeof(sin));
    sin.sin_family = AF_INET;
-@@ -262,16 +284,54 @@
+@@ -262,16 +284,54 @@ mksock()
    sin.sin_port = htons(portnum); 
  
    if ((initsock = socket(PF_INET, SOCK_STREAM, 0)) < 0)
@@ -154,7 +147,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
      fflush(errout);
    }
  }
-@@ -303,8 +363,19 @@
+@@ -303,8 +363,19 @@ mkjtab()
      mkoldjtab(buf);
  }
  
@@ -175,7 +168,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
  {
    if (fclose(jisho) < 0) {
      fprintf(stderr, 
-@@ -455,15 +526,22 @@
+@@ -455,15 +526,22 @@ mknewjtab()
  main_loop()
  {
    fd_set 		readfds, writefds, exceptfds;
@@ -200,7 +193,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
      if (select(MAXDTAB, &readfds, &writefds, &exceptfds, NULL) < 0) {
        if (errno == EINTR) /* if signal happens */
  	continue;
-@@ -474,16 +552,32 @@
+@@ -474,16 +552,32 @@ main_loop()
        fflush(errout);
      }
  
@@ -235,7 +228,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
  
      /*	naiive scheduling */
      for (i = 0; i < nclients; i ++)
-@@ -511,16 +605,20 @@
+@@ -511,16 +605,20 @@ main_loop()
   *	get bit pattern of read file descriptor
   */
  
@@ -262,7 +255,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
  }
  
  /*
-@@ -724,6 +822,9 @@
+@@ -724,6 +822,9 @@ set_hname()
      exit(1);
    }
    hentry = gethostbyname(hname);
@@ -272,7 +265,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
  #ifdef NO_ADDR_LIST
    strcat(hname, ":");
    strcat(hname, hentry->h_addr);
-@@ -736,6 +837,7 @@
+@@ -736,6 +837,7 @@ set_hname()
      strcat(hname, inet_ntoa(*(struct in_addr *)*p++));
    }
  #endif
