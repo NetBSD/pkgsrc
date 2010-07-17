@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2010/05/07 15:17:02 sno Exp $
+# $NetBSD: Makefile,v 1.31 2010/07/17 08:20:52 sno Exp $
 #
 
-DISTNAME=	SQL-Statement-1.27
+DISTNAME=	SQL-Statement-1.28
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5sqs
 CATEGORIES=	databases perl5
@@ -19,6 +19,8 @@ BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.86}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Clone>=0.30:../../devel/p5-Clone
 DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 
+CONFLICTS+=	p5-DBI<=1.611
+
 PERL5_PACKLIST=		auto/SQL/Statement/.packlist
 MAKE_ENV+=		SQL_STATEMENT_WARN_UPDATE=sure
 
@@ -30,7 +32,7 @@ post-extract:
 
 .include "../../lang/perl5/module.mk"
 .include "../../databases/p5-DBI/buildlink3.mk"
-BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.609
+BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.612
 BUILDLINK_DEPMETHOD.p5-DBI=	build
 
 .include "../../mk/bsd.pkg.mk"
