@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2010/06/25 22:05:05 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2010/07/17 12:22:32 wiz Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.30.3
@@ -38,5 +38,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
-BUILD_DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
+BUILDLINK_DEPMETHOD.librsvg=	build
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.22.3
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
