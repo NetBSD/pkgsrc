@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/07/16 12:17:59 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2010/07/17 18:13:08 joerg Exp $
 #
 
 DISTNAME=		tables-2.2
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.pytables.org/
 COMMENT=		Database package for large amounts of data
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pytables
 PKG_SUPPORTED_OPTIONS=	lzo
