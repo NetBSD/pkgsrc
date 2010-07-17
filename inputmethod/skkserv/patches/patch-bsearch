@@ -1,21 +1,8 @@
-$NetBSD: patch-bsearch,v 1.1.1.1 2002/05/31 12:59:59 seb Exp $
+$NetBSD: patch-bsearch,v 1.2 2010/07/17 08:57:18 obache Exp $
 
-Binary search patch.
-Originally from skk-users mailing list
-(Masahiro Doteguchi, Mailinglist-Id: 1779).
-
---- skkserv/skkserv.c.patch1	Mon Nov  6 00:12:57 2000
-+++ skkserv/skkserv.c	Mon Nov  6 00:15:00 2000
-@@ -109,7 +109,7 @@
-  *	Global Variables
-  */
- 
--char	pgmver[] = "3.9.4nb1 ";	/* version number */
-+char	pgmver[] = "3.9.4nb1 (binary search) ";	/* version number */
- 
- char	*pgmnm;		/* program name */
- char	*jname;		/* name of shared dictionary */
-@@ -622,7 +622,7 @@
+--- skkserv/skkserv.c.orig	2010-07-16 09:36:31.000000000 +0000
++++ skkserv/skkserv.c
+@@ -622,7 +622,7 @@ fd_set	*rfds;
  }
  
  /*
@@ -24,7 +11,7 @@ Originally from skk-users mailing list
   */
  
  search(commsock)
-@@ -635,6 +635,7 @@
+@@ -635,6 +635,7 @@ int	commsock;
    int		n; 	 	 /* number of characters from client */
    int		sttpnt; 	 /* start point of searching */
    int		endpnt; 	 /* end point of searching */
@@ -32,7 +19,7 @@ Originally from skk-users mailing list
    int		errcod = 0; 	 /* error flag */
    int		sstyle;		 /* search style */
  
-@@ -743,18 +744,36 @@
+@@ -743,18 +744,36 @@ int	commsock;
        endpnt = jtab1[KANA_END - code + 1];
      }
    }
@@ -75,7 +62,7 @@ Originally from skk-users mailing list
        if ((errcod = write(commsock, SERVER_FOUND, 1)) >= 0)
  	while ((c = fgetc(jisho)) != EOF) {
  	  *pbuf = c;
-@@ -770,18 +789,35 @@
+@@ -770,18 +789,35 @@ int	commsock;
        }
        return(0);
      }
