@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2491 2010/07/17 03:07:04 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2492 2010/07/17 08:15:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.2.12 [obache 2010-07-16]
 	Added fonts/ipafont version 00302 [obache 2010-07-17]
 	Added fonts/ipaexfont version 00102 [obache 2010-07-17]
+	Updated databases/p5-DBI to 1.612 [sno 2010-07-17]
