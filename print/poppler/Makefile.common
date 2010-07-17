@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2010/07/14 17:04:22 drochner Exp $
+# $NetBSD: Makefile.common,v 1.37 2010/07/17 19:29:25 tron Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-glib/Makefile
@@ -13,6 +13,7 @@ CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
 
 HOMEPAGE=		http://poppler.freedesktop.org/
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
