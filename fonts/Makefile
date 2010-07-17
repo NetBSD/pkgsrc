@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2010/06/02 19:02:11 drochner Exp $
+# $NetBSD: Makefile,v 1.157 2010/07/17 03:08:09 obache Exp $
 #
 
 COMMENT=	Fonts
@@ -89,6 +89,8 @@ SUBDIR+=	gsftopkk
 SUBDIR+=	gucharmap
 SUBDIR+=	inconsolata-ttf
 SUBDIR+=	intlfonts
+SUBDIR+=	ipaexfont
+SUBDIR+=	ipafont
 SUBDIR+=	ja-elisat
 SUBDIR+=	ja-elisau
 SUBDIR+=	ja-kaname
