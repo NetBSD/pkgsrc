@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/18 12:22:25 drochner Exp $
+
+SHA1 (orc-0.4.6.tar.gz) = 79531fc20f726f201271ff3c23d1707518c3cdf7
+RMD160 (orc-0.4.6.tar.gz) = e04f20e5c0916c819e5bad2cf79bfcbc3826be2f
+Size (orc-0.4.6.tar.gz) = 548164 bytes
