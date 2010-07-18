@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9469 2010/07/16 14:32:01 obache Exp $
+$NetBSD: TODO,v 1.9470 2010/07/18 12:05:54 seb Exp $
 
 Suggested new packages
 ======================
@@ -1031,7 +1031,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Compress-Raw-Zlib-2.027
 	o p5-Date-Manip-6.11
 	o p5-Digest-MD5-2.40
-	o p5-Digest-SHA1-2.13
 	o p5-ExtUtils-CBuilder-0.2703
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-HTML-Element-Extended-1.18
