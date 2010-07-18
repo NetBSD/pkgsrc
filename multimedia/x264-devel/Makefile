@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/05/07 09:34:43 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2010/07/18 09:48:44 wiz Exp $
 
 SNAPSHOT_DATE=		20090920
 
@@ -21,7 +21,7 @@ CFLAGS+=	-DHAVE_STDLIB_H
 .endif
 
 .if ${MACHINE_ARCH} == "i386"
-.  if ${OPSYS} == "Darwin" || \
+.  if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS" \
       (${OPSYS} == "NetBSD" && \
        (!empty(OS_VERSION:M[1-5].*) && empty(OS_VERSION:M5.99.*)))
 CONFIGURE_ARGS+=	--disable-asm
