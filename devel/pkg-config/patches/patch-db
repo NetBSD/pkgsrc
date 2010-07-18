@@ -1,0 +1,17 @@
+$NetBSD: patch-db,v 1.1 2010/07/18 13:05:07 obache Exp $
+
+--- glib-1.2.10/gmodule/Makefile.in.orig	2008-01-16 22:52:27.000000000 +0000
++++ glib-1.2.10/gmodule/Makefile.in
+@@ -239,10 +239,10 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/testgmodule.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
++LTCOMPILE = $(LIBTOOL) --tag=CC --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+ 	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
++LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DIST_SOURCES = $(libgmodule_la_SOURCES) $(libgplugin_a_la_SOURCES) \
+ 	$(libgplugin_b_la_SOURCES) testgmodule.c

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2008/03/04 09:22:27 wiz Exp $
+$NetBSD: distinfo,v 1.15 2010/07/18 13:05:07 obache Exp $
 
 SHA1 (pkg-config-0.23.tar.gz) = b59dddd6b5320bd74c0f74b3339618a327096b2a
 RMD160 (pkg-config-0.23.tar.gz) = 0aa5565430d609319917ac2c8ffeaa5e4a509489
@@ -9,3 +9,8 @@ SHA1 (patch-ad) = 4628f5ce73b3dcaa2df92e3be2fd7955ab38ffa4
 SHA1 (patch-ah) = 3cee7ec1a5592e2a550f74a3eb8da2a9e3ab1773
 SHA1 (patch-ca) = 22690d923ddf0e1ce2ca9eddb56ada385f6cefe4
 SHA1 (patch-cb) = 23412858615649c8d8305ce4e6571f06e17073fd
+SHA1 (patch-da) = 44d9810e2eed8dd38339418e6886add289ae504e
+SHA1 (patch-db) = 279708087c2740af812c123c880e4dde1402af4c
+SHA1 (patch-dc) = 27a8009eb6822608f3869bd71e5cb108edf4063a
+SHA1 (patch-dd) = d776d0e6a2907d629f8b6abc68b6f9fb23a9fc61
+SHA1 (patch-de) = 67c85c7076b2b624b7221f569ce755d6a6329a0d
