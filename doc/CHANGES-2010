@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2507 2010/07/18 12:46:25 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2508 2010/07/18 14:48:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3358,3 +3358,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-C3-Adopt-NEXT to 0.13 [seb 2010-07-18]
 	Updated security/p5-Digest-SHA1 to 2.13 [seb 2010-07-18]
 	Updated devel/p5-MooseX-Types to 0.22 [seb 2010-07-18]
+	Updated www/contao29 to 2.9.0nb1 [taca 2010-07-18]
