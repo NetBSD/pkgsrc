@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2010/07/14 11:11:40 sbd Exp $
+# $NetBSD: Makefile,v 1.16 2010/07/18 13:08:58 markd Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
 DISTNAME=	kdebindings-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Python bindings for the KDE integrated X11 desktop
 
@@ -30,6 +30,9 @@ REPLACE_PYTHON+= \
 
 post-extract:
 	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
+
+post-patch:
+	rm ${WRKSRC}/python/pykde4/sip/akonadi/addressattribute.sip.orig
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
