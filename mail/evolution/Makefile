@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2010/07/13 12:24:34 drochner Exp $
+# $NetBSD: Makefile,v 1.162 2010/07/18 04:50:29 dsainty Exp $
 
 DISTNAME=		evolution-2.30.2
 CATEGORIES=		mail time gnome
@@ -29,7 +29,6 @@ CPPFLAGS+=		-I/usr/include/krb5
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--without-static-ldap
 CONFIGURE_ARGS+=	--enable-pilot-conduits=no
-CONFIGURE_ARGS+=	--with-krb4=/usr
 CONFIGURE_ARGS+=	--with-krb5=/usr
 .if defined(PKGREVISION)
 CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
