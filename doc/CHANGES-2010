@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2502 2010/07/17 08:59:42 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2503 2010/07/18 11:40:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3353,3 +3353,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-File-Find-Rule-VCS to 1.07 [sno 2010-07-17]
 	Updated textproc/p5-Text-CSV to 1.18 [sno 2010-07-17]
 	Updated inputmethod/skkserv to 3.9.4nb7 [obache 2010-07-17]
+	Updated devel/p5-PadWalker to 1.9.2 [seb 2010-07-18]
