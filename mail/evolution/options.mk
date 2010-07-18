@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2008/10/26 23:17:21 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2010/07/18 04:50:29 dsainty Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
-PKG_SUPPORTED_OPTIONS=	krb4 krb5 ssl
+PKG_SUPPORTED_OPTIONS=	krb5 ssl
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
@@ -12,12 +12,6 @@ PKG_SUGGESTED_OPTIONS=	ssl
 # cause runtime crashes, so don't allow these options to be specified
 # together.
 PKG_FAIL_REASON+=	"Kerberos support conflicts with SSL"
-.endif
-
-.if !empty(PKG_OPTIONS:Mkrb4)
-CONFIGURE_ARGS+=	--with-krb4
-.else
-CONFIGURE_ARGS+=	--without-krb4
 .endif
 
 .if !empty(PKG_OPTIONS:Mkrb5)
