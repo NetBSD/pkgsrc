@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2509 2010/07/18 14:50:47 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2510 2010/07/18 18:24:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3360,3 +3360,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Types to 0.22 [seb 2010-07-18]
 	Updated www/contao29 to 2.9.0nb1 [taca 2010-07-18]
 	Updated www/contao29-translations to 20100717 [taca 2010-07-18]
+	Updated devel/p5-MooseX-MethodAttributes to 0.23 [seb 2010-07-18]
