@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2504 2010/07/18 11:53:55 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2505 2010/07/18 12:01:48 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3355,3 +3355,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/skkserv to 3.9.4nb7 [obache 2010-07-17]
 	Updated devel/p5-PadWalker to 1.9.2 [seb 2010-07-18]
 	Updated time/p5-DateTime to 0.6100 [seb 2010-07-18]
+	Updated devel/p5-Class-C3-Adopt-NEXT to 0.13 [seb 2010-07-18]
