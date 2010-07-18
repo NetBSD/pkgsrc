@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/06/14 23:58:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/07/18 21:55:36 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -63,8 +63,10 @@ libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/fakemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/profile
+libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/sorted-doc
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
+libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/vcdiff
 man/man1/b2m.1
 man/man1/ctags.1
 man/man1/ebrowse.1
@@ -1495,8 +1497,6 @@ share/emacs/${EMACS_VERSION}/lisp/cmuscheme.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cmuscheme.elc
 share/emacs/${EMACS_VERSION}/lisp/comint.el.gz
 share/emacs/${EMACS_VERSION}/lisp/comint.elc
-share/emacs/${EMACS_VERSION}/lisp/compare-w.el.gz
-share/emacs/${EMACS_VERSION}/lisp/compare-w.elc
 share/emacs/${EMACS_VERSION}/lisp/completion.el.gz
 share/emacs/${EMACS_VERSION}/lisp/completion.elc
 share/emacs/${EMACS_VERSION}/lisp/composite.el.gz
@@ -1668,6 +1668,10 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/macroexp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/macroexp.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/map-ynp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/map-ynp.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package-x.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package-x.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/pp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/pp.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/re-builder.el.gz
@@ -3490,6 +3494,8 @@ share/emacs/${EMACS_VERSION}/lisp/userlock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/userlock.elc
 share/emacs/${EMACS_VERSION}/lisp/vc/add-log.el.gz
 share/emacs/${EMACS_VERSION}/lisp/vc/add-log.elc
+share/emacs/${EMACS_VERSION}/lisp/vc/compare-w.el.gz
+share/emacs/${EMACS_VERSION}/lisp/vc/compare-w.elc
 share/emacs/${EMACS_VERSION}/lisp/vc/cvs-status.el.gz
 share/emacs/${EMACS_VERSION}/lisp/vc/cvs-status.elc
 share/emacs/${EMACS_VERSION}/lisp/vc/diff-mode.el.gz
