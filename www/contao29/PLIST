@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/05 14:45:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/07/18 14:46:44 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.txt
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/INSTALL.txt
@@ -1981,6 +1981,7 @@ ${CT_WEBDIR}/typolight/main.php
 ${CT_DOCDIR}/README
 ${CT_EGDIR}/basic.css
 ${CT_EGDIR}/contao.conf
+${CT_EGDIR}/htaccess.default
 ${CT_EGDIR}/print.css
 ${CT_EGDIR}/robots.txt
 ${CT_EGDIR}/system/config/config.php
@@ -1997,7 +1998,6 @@ ${CT_EGDIR}/system/config/timezones.php
 ${CT_EGDIR}/system/config/tinyFlash.php
 ${CT_EGDIR}/system/config/tinyMCE.php
 ${CT_EGDIR}/system/config/tinyNews.php
-${CT_EGDIR}/templates-htaccess
 ${CT_EGDIR}/tl_files/tiny_templates/index.html
 ${CT_EGDIR}/tl_files/tinymce.css
 ${CT_EGDIR}/contao.conf
