@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2512 2010/07/18 19:09:54 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2513 2010/07/18 19:45:50 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3363,3 +3363,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-MethodAttributes to 0.23 [seb 2010-07-18]
 	Updated devel/p5-MooseX-Role-WithOverloading to 0.06 [seb 2010-07-18]
 	Updated www/p5-Plack to 0.9941 [seb 2010-07-18]
+	Updated net/p5-Net-Server to 0.99 [seb 2010-07-18]
