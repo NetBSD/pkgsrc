@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/02/17 11:36:33 sno Exp $
+$NetBSD: distinfo,v 1.9 2010/07/18 18:23:06 seb Exp $
 
-SHA1 (MooseX-MethodAttributes-0.20.tar.gz) = 844a54ecc296f813e1307d50f977c4a5315ab67a
-RMD160 (MooseX-MethodAttributes-0.20.tar.gz) = 45a1a94ee6e13e8d3934aad2e50c1a7f6e283587
-Size (MooseX-MethodAttributes-0.20.tar.gz) = 20596 bytes
+SHA1 (MooseX-MethodAttributes-0.23.tar.gz) = 02b33e924c68797bd1fb96ca2d30333aefd74a72
+RMD160 (MooseX-MethodAttributes-0.23.tar.gz) = e73d87dcf81da6d0418c1a7435f994c60d65b47a
+Size (MooseX-MethodAttributes-0.23.tar.gz) = 22626 bytes
