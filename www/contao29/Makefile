@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/05 14:45:21 taca Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/18 14:46:44 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -37,10 +38,8 @@ CONF_FILES_PERMS+=	${CT_EGDIR}/system/config/localconfig.php \
 			${CT_WEBDIR}/system/config/localconfig.php \
 			${APACHE_USER} ${APACHE_GROUP} 0600
 
-CONF_FILES+=		${CT_EGDIR}/contao.conf \
-			${PKG_SYSCONFDIR}/contao.conf \
-			${CT_EGDIR}/templates-htaccess \
-			${CT_WEBDIR}/templates/.htaccess
+CONF_FILES+=		${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf \
+			${CT_EGDIR}/htaccess.default ${CT_WEBDIR}/.htaccess
 
 .for f in ${EG_FILES}
 CONF_FILES+=		${CT_EGDIR}/${f} ${CT_WEBDIR}/${f}
@@ -94,7 +93,6 @@ PKG_USERS_VARS+=	APACHE_USER
 .include "../../www/contao/options.mk"
 
 pre-configure:
-	${MV} ${WRKSRC}/templates/.htaccess ${WRKDIR}/templates-htaccess
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
 
 pre-install:
@@ -109,11 +107,13 @@ do-install:
 			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system; \
 		${INSTALL_DATA} config/.htaccess \
 			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system/config
+	${INSTALL_DATA} ${WRKSRC}/templates/.htaccess \
+		${DESTDIR}${PREFIX}/${CT_WEBDIR}/templates
 	cd ${WRKSRC}; pax -rw ${EG_DATA} ${DESTDIR}${PREFIX}/${CT_EGDIR}
 	rm -f ${DESTDIR}${PREFIX}/${CT_EGDIR}/system/config/.htaccess
+	${INSTALL_DATA} ${WRKSRC}/.htaccess.default \
+		${DESTDIR}${PREFIX}/${CT_EGDIR}/htaccess.default
 	${INSTALL_DATA} ${WRKDIR}/contao.conf ${DESTDIR}${PREFIX}/${CT_EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/templates-htaccess \
-		${DESTDIR}${PREFIX}/${CT_EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/README \
 		${DESTDIR}${PREFIX}/${CT_DOCDIR}
 
