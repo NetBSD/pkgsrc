@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2010/07/18 13:08:58 markd Exp $
+
+svn 1150377
+
+--- python/pykde4/sip/akonadi/addressattribute.sip	2010/07/15 20:17:59	1150376
++++ python/pykde4/sip/akonadi/addressattribute.sip	2010/07/15 20:19:01	1150377
+@@ -57,6 +57,10 @@
+     else if (dynamic_cast<Akonadi::MessageThreadingAttribute*>(sipCpp))
+         sipType = sipType_Akonadi_MessageThreadingAttribute;
+ %End
++private:
++//force
++Akonadi::AddressAttribute& operator = (const Akonadi::AddressAttribute&);
++//end
+ };
+ };
+ %ModuleHeaderCode
