@@ -1,0 +1,2 @@
+Jersey extends Twisted's Application framework for use with command-line
+interfaces.
