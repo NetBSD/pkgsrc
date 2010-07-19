@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1369 2010/07/15 17:44:45 drochner Exp $
+# $NetBSD: Makefile,v 1.1370 2010/07/19 11:15:05 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -429,6 +429,7 @@ SUBDIR+=	omake
 SUBDIR+=	opal
 SUBDIR+=	opencm
 SUBDIR+=	opengrok
+SUBDIR+=	orc
 SUBDIR+=	ossp-uuid
 SUBDIR+=	p4
 SUBDIR+=	p4-docs
