@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2010/07/15 09:08:28 tnn Exp $
+$NetBSD: patch-ae,v 1.2 2010/07/19 14:14:14 tnn Exp $
 
 --- mDNSShared/CommonServices.h.orig	2009-03-30 19:51:29.000000000 +0000
 +++ mDNSShared/CommonServices.h
-@@ -102,6 +102,16 @@ Common Services and portability support 
+@@ -102,6 +102,24 @@ Common Services and portability support 
  	#endif
  #endif
  
@@ -16,19 +16,27 @@ $NetBSD: patch-ae,v 1.1 2010/07/15 09:08:28 tnn Exp $
 +	#endif
 +#endif
 +
++#if( !defined( TARGET_OS_DRAGONFLY ) )
++	#if( defined( __DragonFly__ ) )
++		#define	TARGET_OS_DRAGONFLY		1
++	#else
++	#define	TARGET_OS_DRAGONFLY		0
++	#endif
++#endif
++
  // Solaris
  
  #if( !defined( TARGET_OS_SOLARIS ) )
-@@ -128,7 +138,7 @@ Common Services and portability support 
+@@ -128,7 +146,7 @@ Common Services and portability support 
  	
  	// No predefined macro for VxWorks so just assume VxWorks if nothing else is set.
  	
 -	#if( !macintosh && !__MACH__  && !defined( __linux__ ) && !defined ( __SVR4 ) && !defined ( __sun ) && !defined( __PALMOS_TRAPS__ ) && !defined( __PALMOS_ARMLET__ ) && !defined( _WIN32 ) )
-+	#if( !macintosh && !__MACH__  && !defined( __linux__ ) && !defined ( __SVR4 ) && !defined ( __sun ) && !defined( __PALMOS_TRAPS__ ) && !defined( __PALMOS_ARMLET__ ) && !defined( _WIN32 ) && !defined(__NetBSD__))
++	#if( !macintosh && !__MACH__  && !defined( __linux__ ) && !defined ( __SVR4 ) && !defined ( __sun ) && !defined( __PALMOS_TRAPS__ ) && !defined( __PALMOS_ARMLET__ ) && !defined( _WIN32 ) && !defined(__NetBSD__) && !defined(__DragonFly__))
  		#define	TARGET_OS_VXWORKS		1
  	#else
  		#define	TARGET_OS_VXWORKS		0
-@@ -224,6 +234,12 @@ Common Services and portability support 
+@@ -224,6 +242,19 @@ Common Services and portability support 
  	#include	<stdint.h>
  	#include	<arpa/inet.h>
  	
@@ -38,15 +46,22 @@ $NetBSD: patch-ae,v 1.1 2010/07/15 09:08:28 tnn Exp $
 +
 +	#include	<arpa/inet.h>
 +
++#elif ( TARGET_OS_DRAGONFLY )
++
++	// DragonFly
++
++	#include	<arpa/inet.h>
++	#include	<sys/socket.h> // for AF_INET6 definition
++
  #elif( TARGET_OS_SOLARIS )
  	
  	// Solaris
-@@ -493,7 +509,7 @@ Common Services and portability support 
+@@ -493,7 +524,7 @@ Common Services and portability support 
  // - Windows
  
  #if( TARGET_LANGUAGE_C_LIKE )
 -	#if( !defined(_SSIZE_T) && ( TARGET_OS_WIN32 || !defined( _BSD_SSIZE_T_DEFINED_ ) ) && !TARGET_OS_LINUX && !TARGET_OS_VXWORKS && !TARGET_OS_MAC)
-+	#if( !defined(_SSIZE_T) && ( TARGET_OS_WIN32 || !defined( _BSD_SSIZE_T_DEFINED_ ) ) && !TARGET_OS_LINUX && !TARGET_OS_VXWORKS && !TARGET_OS_MAC && !TARGET_OS_NETBSD)
++	#if( !defined(_SSIZE_T) && ( TARGET_OS_WIN32 || !defined( _BSD_SSIZE_T_DEFINED_ ) ) && !TARGET_OS_LINUX && !TARGET_OS_VXWORKS && !TARGET_OS_MAC && !TARGET_OS_NETBSD && !TARGET_OS_DRAGONFLY)
  		typedef int						ssize_t;
  	#endif
  #endif
