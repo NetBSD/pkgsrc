@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2010/07/19 16:42:12 ver Exp $
+
+SHA1 (s3cmd-0.9.9.91.tar.gz) = 011f552d486ad77e09a07f01c7e8903ccc787837
+RMD160 (s3cmd-0.9.9.91.tar.gz) = 31818beed635d5916149d4b354f8009089f63afd
+Size (s3cmd-0.9.9.91.tar.gz) = 51132 bytes
