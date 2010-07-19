@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2524 2010/07/19 13:04:53 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.2525 2010/07/19 17:13:57 ver Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3375,3 +3375,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/p5-Sys-Utmp to 1.6nb1 [sno 2010-07-19]
 	Updated graphics/pngcrush to 1.7.11 [adam 2010-07-19]
 	Updated net/rancid to 2.3.4 [pettai 2010-07-19]
+	Added devel/py-jersey 0.1.2 [ver 2010-07-19]
+	Added www/py-pendrell 0.2.3 [ver 2010-07-19]
+	Added net/py-s3cmd 0.9.9.91 [ver 2010-07-19]
+	Added security/py-oauth 1.0.1 [ver 2010-07-19]
+	Updated security/py-OpenSSL to 0.10 [ver 2010-07-19]
