@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 23:39:16 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/07/19 11:22:25 pettai Exp $
 bin/agmrancid
 bin/alogin
 bin/arancid
+bin/arrancid
 bin/avologin
 bin/avorancid
 bin/blogin
@@ -50,10 +51,12 @@ bin/tntlogin
 bin/tntrancid
 bin/trancid
 bin/xrancid
+bin/xrrancid
 bin/zrancid
 man/man1/agmrancid.1
 man/man1/alogin.1
 man/man1/arancid.1
+man/man1/arrancid.1
 man/man1/avologin.1
 man/man1/avorancid.1
 man/man1/blogin.1
@@ -78,6 +81,8 @@ man/man1/jlogin.1
 man/man1/jrancid.1
 man/man1/lg_intro.1
 man/man1/mrancid.1
+man/man1/mrvlogin.1
+man/man1/mrvrancid.1
 man/man1/nlogin.1
 man/man1/nrancid.1
 man/man1/nslogin.1
@@ -98,6 +103,7 @@ man/man1/tntlogin.1
 man/man1/tntrancid.1
 man/man1/trancid.1
 man/man1/xrancid.1
+man/man1/xrrancid.1
 man/man1/zrancid.1
 man/man5/cloginrc.5
 man/man5/lg.conf.5
