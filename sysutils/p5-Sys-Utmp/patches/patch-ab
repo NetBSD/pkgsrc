@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/07/19 12:32:24 sno Exp $
+
+--- Makefile.PL.orig	2006-10-13 12:39:33.000000000 +0000
++++ Makefile.PL
+@@ -5,7 +5,7 @@ my (
+     $libs
+    );
+ 
+-if ( $^O =~ /bsd/i )
++if ( $^O =~ m/bsd/i && $^O ne 'netbsd' )
+ {
+    $define = '-DNOUTFUNCS';
+ }
