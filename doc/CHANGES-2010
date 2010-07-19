@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2518 2010/07/19 04:51:29 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2519 2010/07/19 04:56:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3369,3 +3369,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20100711 [minskim 2010-07-18]
 	Updated devel/p5-Test-POE-Server-TCP to 1.12 [seb 2010-07-19]
 	Updated www/p5-AnyEvent-HTTP to 1.45 [seb 2010-07-19]
+	Updated textproc/p5-Text-MicroTemplate to 0.13 [seb 2010-07-19]
