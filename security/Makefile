@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2010/07/13 19:48:09 manu Exp $
+# $NetBSD: Makefile,v 1.392 2010/07/19 17:04:54 ver Exp $
 #
 
 COMMENT=	Security tools
@@ -291,6 +291,7 @@ SUBDIR+=	py-gnupg
 SUBDIR+=	py-lasso
 SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
+SUBDIR+=	py-oauth
 SUBDIR+=	py-openid
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-prewikka
