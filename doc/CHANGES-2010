@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2522 2010/07/19 12:32:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2523 2010/07/19 13:02:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3373,3 +3373,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Exception to 0.29nb1 [seb 2010-07-19]
 	Updated mail/mimedefang to 2.70 [pettai 2010-07-19]
 	Updated sysutils/p5-Sys-Utmp to 1.6nb1 [sno 2010-07-19]
+	Updated graphics/pngcrush to 1.7.11 [adam 2010-07-19]
