@@ -1,6 +1,8 @@
---- Utmp.xs.orig	2006-10-13 16:10:30.000000000 +0200
-+++ Utmp.xs	2009-02-13 13:45:12.000000000 +0100
-@@ -4,8 +4,11 @@
+$NetBSD: patch-aa,v 1.2 2010/07/19 12:32:24 sno Exp $
+
+--- Utmp.xs.orig	2006-10-13 14:10:30.000000000 +0000
++++ Utmp.xs
+@@ -4,24 +4,24 @@
  
  #include <utmp.h>
  
@@ -9,29 +11,41 @@
 +#define _HAVE_UT_HOST	1
 +#endif
  
-+#ifdef NOUTFUNCS
- #include <stdlib.h>
- #include <unistd.h>
- #include <time.h>
-@@ -15,6 +18,7 @@
- #include <sys/stat.h>
- #include <fcntl.h>
+-#include <stdlib.h>
+-#include <unistd.h>
+-#include <time.h>
+-#include <string.h>
+-#include <stdio.h>
+-#include <sys/types.h>
+-#include <sys/stat.h>
+-#include <fcntl.h>
++/*
++    It is almost certain that if these are not defined the fields they are
++    for are not present or this is BSD :)
++*/
  
-+
  #ifdef BSD
  #define _NO_UT_ID
  #define _NO_UT_TYPE
-@@ -42,23 +46,12 @@
- #define ACCOUNTING      9
+ #define _NO_UT_PID
+ #define ut_user ut_name
++#define _HAVE_UT_HOST	1
  #endif
  
--
++
  /*
-     It is almost certain that if these are not defined the fields they are
-     for are not present or this is BSD :)
+    define these so it still works as documented :)
  */
+@@ -43,21 +43,15 @@
+ #endif
  
  
+-/*
+-    It is almost certain that if these are not defined the fields they are
+-    for are not present or this is BSD :)
+-*/
+-
+-
 -#ifndef UT_LINESIZE
 -# define UT_LINESIZE 32
 -#endif
@@ -41,11 +55,19 @@
 -#ifndef UT_HOSTSIZE
 -# define UT_HOSTSIZE
 -#endif
--
++#ifdef NOUTFUNCS
++#include <stdlib.h>
++#include <unistd.h>
++#include <time.h>
++#include <string.h>
++#include <stdio.h>
++#include <sys/types.h>
++#include <sys/stat.h>
++#include <fcntl.h>
+ 
  static int ut_fd = -1;
  
- static char _ut_name[] = _PATH_UTMP;
-@@ -207,7 +200,7 @@
+@@ -207,7 +201,7 @@ SV *self
       static SV *ut_ref;
       static char *_ut_id;
       static struct utmp *utent;
@@ -54,7 +76,7 @@
  
       HV *self_hash;
  
-@@ -249,9 +242,9 @@
+@@ -249,9 +243,9 @@ SV *self
         ut_tv = (IV)utent->ut_time;
  #endif
  #ifdef _HAVE_UT_HOST
