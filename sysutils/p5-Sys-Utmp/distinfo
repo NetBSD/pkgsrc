@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/22 21:17:03 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/07/19 12:32:24 sno Exp $
 
 SHA1 (Sys-Utmp-1.6.tar.gz) = 45548135e888d87f5c8f184b83048e04dadbfa5f
 RMD160 (Sys-Utmp-1.6.tar.gz) = fd3adb315ca2791e22054110127b85e3c54feacf
 Size (Sys-Utmp-1.6.tar.gz) = 8818 bytes
-SHA1 (patch-aa) = 47c20eac627a092f6eed64c0a3061df0a8da7a40
+SHA1 (patch-aa) = 2725e6929ae1c5424c6db284df93dbb402f83592
+SHA1 (patch-ab) = 5a74869b9be0ecb97f8239a1ec7e65f8016e54e7
