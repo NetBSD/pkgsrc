@@ -1,50 +1,13 @@
-$NetBSD: patch-bj,v 1.3 2010/01/17 11:48:03 markd Exp $
+$NetBSD: patch-bj,v 1.4 2010/07/19 21:21:25 markd Exp $
 
---- distrib/initscripts/Makefile.in.orig	2009-11-10 13:11:12.000000000 +0000
+--- distrib/initscripts/Makefile.in.orig	2010-02-14 17:47:12.000000000 +0000
 +++ distrib/initscripts/Makefile.in
-@@ -251,7 +251,7 @@ TEMPLATES = \
- 	rc.atalk.gentoo.tmpl		\
- 	rc.atalk.debian.tmpl
- 
--CLEANFILES = $(GENERATED_FILES) atalk afpd atalkd papd timelord
-+CLEANFILES = $(GENERATED_FILES) atalk afpd atalkd papd timelord cnid_metad
- EXTRA_DIST = $(TEMPLATES) rc.atalk.cobalt
- 
- #
-@@ -296,7 +296,7 @@ EXTRA_DIST = $(TEMPLATES) rc.atalk.cobal
- @USE_COBALT_TRUE@sysv_SCRIPTS = atalk
- @USE_DEBIAN_TRUE@sysv_SCRIPTS = atalk
- @USE_GENTOO_TRUE@sysv_SCRIPTS = atalk
--@USE_NETBSD_TRUE@sysv_SCRIPTS = afpd atalkd papd timelord
-+@USE_NETBSD_TRUE@sysv_SCRIPTS = afpd atalkd papd timelord cnid_metad
- @USE_REDHAT_TRUE@sysv_SCRIPTS = atalk
- @USE_SOLARIS_TRUE@sysv_SCRIPTS = atalk
- @USE_SUSE_TRUE@sysv_SCRIPTS = atalk
-@@ -443,7 +443,7 @@ info: info-am
+@@ -455,7 +455,7 @@ info: info-am
  
  info-am:
  
 -install-data-am: install-sysvSCRIPTS
-+install-data-am: 
++install-data-am:
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
  
-@@ -559,6 +559,7 @@ uninstall: uninstall-startup
- 
- @USE_NETBSD_TRUE@afpd: rc.afpd.netbsd
- @USE_NETBSD_TRUE@	cp -f $< $@
-+@USE_NETBSD_TRUE@	chmod a+x $@
- 
- @USE_NETBSD_TRUE@atalkd: rc.atalkd.netbsd
- @USE_NETBSD_TRUE@	cp -f $< $@
-@@ -572,6 +573,10 @@ uninstall: uninstall-startup
- @USE_NETBSD_TRUE@	cp -f $< $@
- @USE_NETBSD_TRUE@	chmod a+x $@
- 
-+@USE_NETBSD_TRUE@cnid_metad: rc.cnid_metad.netbsd
-+@USE_NETBSD_TRUE@	cp -f $< $@
-+@USE_NETBSD_TRUE@	chmod a+x $@
-+
- @USE_NETBSD_TRUE@install-data-hook:
- 
- @USE_NETBSD_TRUE@uninstall-hook:
