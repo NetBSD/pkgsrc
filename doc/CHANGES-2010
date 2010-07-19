@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2523 2010/07/19 13:02:45 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2524 2010/07/19 13:04:53 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3374,3 +3374,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/mimedefang to 2.70 [pettai 2010-07-19]
 	Updated sysutils/p5-Sys-Utmp to 1.6nb1 [sno 2010-07-19]
 	Updated graphics/pngcrush to 1.7.11 [adam 2010-07-19]
+	Updated net/rancid to 2.3.4 [pettai 2010-07-19]
