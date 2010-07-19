@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2009/06/09 13:57:56 taca Exp $
+$NetBSD: patch-ae,v 1.9 2010/07/19 21:21:25 markd Exp $
 
---- config.h.in.orig	2009-03-29 16:23:57.000000000 +0900
+--- config.h.in.orig	2010-02-07 18:57:15.000000000 +0000
 +++ config.h.in
-@@ -188,8 +188,8 @@
+@@ -300,8 +300,8 @@
  /* Define to 1 if you have the `gettimeofday' function. */
  #undef HAVE_GETTIMEOFDAY
  
@@ -11,5 +11,5 @@ $NetBSD: patch-ae,v 1.8 2009/06/09 13:57:56 taca Exp $
 +/* Define to 1 if you have the `getifaddrs' function. */
 +#undef HAVE_GETIFADDRS
  
- /* Whether to enable GSSAPI support */
- #undef HAVE_GSSAPI
+ /* Define to 1 if you have the `getxattr' function. */
+ #undef HAVE_GETXATTR

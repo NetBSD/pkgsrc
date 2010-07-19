@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.6 2010/05/05 12:15:30 markd Exp $
+$NetBSD: patch-ap,v 1.7 2010/07/19 21:21:25 markd Exp $
 
 Fixes loading of pam modules on older versions on NetBSD, where
 the dependency of the module on libpam was not explicit.

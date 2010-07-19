@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2010/05/05 12:15:30 markd Exp $
+# $NetBSD: Makefile,v 1.70 2010/07/19 21:21:25 markd Exp $
 
-DISTNAME=	netatalk-2.0.5
-PKGREVISION=	2
+DISTNAME=	netatalk-2.1.3
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,6 +38,7 @@ CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--enable-netbsd \
+			--enable-debug \
 			--enable-overwrite \
 			--enable-timelord \
 			--libexecdir=${PREFIX}/libexec/netatalk \
@@ -63,18 +63,13 @@ RCD_SCRIPTS=		afpd atalkd papd timelord cnid_metad
 RCD_SCRIPT_SRC.${f}=	${WRKSRC}/distrib/initscripts/${f}
 .endfor
 
-SUBST_CLASSES+=		rc
-SUBST_FILES.rc=		${WRKSRC}/bin/afile/acleandir.rc
-SUBST_SED.rc+=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_STAGE.rc=		pre-configure
-
 .include "options.mk"
 
 INSTALLATION_DIRS=	libexec/psffilters
 
 .if !empty(PKG_OPTIONS:Mpam)
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/config/netatalk.pamd ${DESTDIR}${EG_DIR}
+	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk.pam ${DESTDIR}${EG_DIR}
 .endif
 
 .include "../../databases/db4/buildlink3.mk"
