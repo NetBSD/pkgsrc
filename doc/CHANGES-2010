@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2525 2010/07/19 17:13:57 ver Exp $
+$NetBSD: CHANGES-2010,v 1.2526 2010/07/19 18:48:49 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3380,3 +3380,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/py-s3cmd 0.9.9.91 [ver 2010-07-19]
 	Added security/py-oauth 1.0.1 [ver 2010-07-19]
 	Updated security/py-OpenSSL to 0.10 [ver 2010-07-19]
+	Updated net/lftp to 4.0.4 [pettai 2010-07-19]
