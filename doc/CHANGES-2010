@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2520 2010/07/19 06:28:04 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2521 2010/07/19 10:59:58 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3371,3 +3371,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-AnyEvent-HTTP to 1.45 [seb 2010-07-19]
 	Updated textproc/p5-Text-MicroTemplate to 0.13 [seb 2010-07-19]
 	Updated devel/p5-Test-Exception to 0.29nb1 [seb 2010-07-19]
+	Updated mail/mimedefang to 2.70 [pettai 2010-07-19]
