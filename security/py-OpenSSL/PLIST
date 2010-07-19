@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/07/19 16:46:48 ver Exp $
 ${PYSITELIB}/OpenSSL/SSL.so
 ${PYSITELIB}/OpenSSL/__init__.py
 ${PYSITELIB}/OpenSSL/__init__.pyc
@@ -11,9 +11,15 @@ ${PYSITELIB}/OpenSSL/test/__init__.pyo
 ${PYSITELIB}/OpenSSL/test/test_crypto.py
 ${PYSITELIB}/OpenSSL/test/test_crypto.pyc
 ${PYSITELIB}/OpenSSL/test/test_crypto.pyo
+${PYSITELIB}/OpenSSL/test/test_rand.py
+${PYSITELIB}/OpenSSL/test/test_rand.pyc
+${PYSITELIB}/OpenSSL/test/test_rand.pyo
 ${PYSITELIB}/OpenSSL/test/test_ssl.py
 ${PYSITELIB}/OpenSSL/test/test_ssl.pyc
 ${PYSITELIB}/OpenSSL/test/test_ssl.pyo
+${PYSITELIB}/OpenSSL/test/util.py
+${PYSITELIB}/OpenSSL/test/util.pyc
+${PYSITELIB}/OpenSSL/test/util.pyo
 ${PYSITELIB}/OpenSSL/tsafe.py
 ${PYSITELIB}/OpenSSL/tsafe.pyc
 ${PYSITELIB}/OpenSSL/tsafe.pyo
