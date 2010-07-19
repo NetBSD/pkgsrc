@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/01/20 14:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/19 06:27:53 seb Exp $
 #
 
 DISTNAME=		Test-Exception-0.29
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -14,7 +15,6 @@ LICENSE=		${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Sub-Uplevel>=0.18:../../devel/p5-Sub-Uplevel
-DEPENDS+=		p5-Test-Simple>=0.7:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Exception/.packlist
