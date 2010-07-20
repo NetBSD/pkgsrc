@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2010/07/20 12:29:21 asau Exp $
+
+--- tools/binary.orig	2006-03-30 06:46:08.000000000 +0400
++++ tools/binary	2010-01-11 14:28:01.000000000 +0300
+@@ -477,7 +477,7 @@
+ 
+             if "$negative"
+             then
+-                if test "$step_status" == 0
++                if test "$step_status" = 0
+                 then
+                     testeddir=$testsubdir
+                     found=true

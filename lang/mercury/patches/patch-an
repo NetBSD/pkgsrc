@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2006/10/22 20:29:49 rillig Exp $
+$NetBSD: patch-an,v 1.2 2010/07/20 12:29:21 asau Exp $
 
---- tools/backupdir.orig	2000-02-24 23:37:28.000000000 +0100
-+++ tools/backupdir	2006-10-22 22:27:51.000000000 +0200
-@@ -25,7 +25,7 @@ do
+--- tools/backupdir.orig	2000-02-25 01:37:28.000000000 +0300
++++ tools/backupdir	2010-01-11 14:21:42.000000000 +0300
+@@ -25,7 +25,7 @@
  	    revisions=$pwd/$subdir-$date.revisions.gz
  
  	    # If there is no backup, make one

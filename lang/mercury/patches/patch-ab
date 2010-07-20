@@ -1,17 +1,19 @@
-$NetBSD: patch-ab,v 1.2 2003/05/02 17:48:29 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2010/07/20 12:29:20 asau Exp $
 
---- scripts/Mmake.vars.in.orig
-+++ scripts/Mmake.vars.in
-@@ -692,13 +692,13 @@
- INSTALL_LIBDIR		= $(INSTALL_PREFIX)/lib/mercury
+--- scripts/Mmake.vars.in.orig	2006-11-03 08:42:28.000000000 +0300
++++ scripts/Mmake.vars.in	2010-01-11 14:10:26.000000000 +0300
+@@ -721,14 +721,14 @@
  FINAL_INSTALL_LIBDIR	= $(FINAL_INSTALL_PREFIX)/lib/mercury
+ INSTALL_JAVA_LIBRARY_DIR= $(INSTALL_PREFIX)/lib/mercury/lib/java
  INSTALL_INFO_DIR	= $(INSTALL_PREFIX)/info
 -INSTALL_DVI_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
 -INSTALL_TEXT_DIR	= $(INSTALL_PREFIX)/lib/mercury/doc
 -INSTALL_PS_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_PDF_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
 +INSTALL_DVI_DIR		= $(INSTALL_PREFIX)/share/doc/mercury
 +INSTALL_TEXT_DIR	= $(INSTALL_PREFIX)/share/doc/mercury
 +INSTALL_PS_DIR		= $(INSTALL_PREFIX)/share/doc/mercury
++INSTALL_PDF_DIR		= $(INSTALL_PREFIX)/share/doc/mercury
  INSTALL_MAN_DIR		= $(INSTALL_PREFIX)/man
 -INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/lib/mercury/html
 +INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/share/doc/html/mercury

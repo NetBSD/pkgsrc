@@ -1,20 +1,15 @@
-$NetBSD: distinfo,v 1.9 2006/10/22 20:29:49 rillig Exp $
+$NetBSD: distinfo,v 1.10 2010/07/20 12:29:20 asau Exp $
 
-SHA1 (mercury-compiler-0.11.0.tar.gz) = 17feadfa8e8783738fc18428c6ab59b61c1e8a73
-RMD160 (mercury-compiler-0.11.0.tar.gz) = a29edbca8253e921fa5f7c17f605f71ec0a65b56
-Size (mercury-compiler-0.11.0.tar.gz) = 15598754 bytes
-SHA1 (patch-aa) = 4cfe2e7cc82d98f7338e8e3e4b753f6bdec0472f
-SHA1 (patch-ab) = b253e9a8da66e44b94d621a8b212d4229e269e8f
+SHA1 (mercury-compiler-0.13.1.tar.gz) = 919eb45ba34c503fc2e7391225e52a5cfbb80616
+RMD160 (mercury-compiler-0.13.1.tar.gz) = a0a80cd2ac7393cf084b79d40230bd1efe795c5f
+Size (mercury-compiler-0.13.1.tar.gz) = 15938824 bytes
+SHA1 (patch-ab) = 5245328e629fea2395507e51d38faaa9e961a25e
 SHA1 (patch-ac) = 94a59bded8b57a4e919dd029690629b552dfd681
 SHA1 (patch-ad) = a76030a9c15d160c46d2003aba5b74e6b7bed6e2
-SHA1 (patch-ae) = 0d9105492d30e915da33d1679ce65ab615866875
-SHA1 (patch-af) = 2ed2b8d098c01ad1b79a8308885ba0af9b5bf05f
-SHA1 (patch-ag) = cb846e04ad686ebafbd1826235f9c5cbea619eed
-SHA1 (patch-ah) = 460ff322fda6ad3dcde3de459a15cdb2a35d3946
-SHA1 (patch-ai) = 4f1df99df946118a0c2eb4a5e2481036d5c44177
-SHA1 (patch-aj) = fb0df25aeb55a1c466fa0def40b7096269ba8d6c
-SHA1 (patch-ak) = 20223ebfa573659d2217b6177bf2e2b523eb248d
-SHA1 (patch-al) = 5eb7f071049b163807f7a0c833eeecd941e7cbfb
-SHA1 (patch-am) = d0d3211c8d3e55beaba5a73b39f6bb3853e1602d
-SHA1 (patch-an) = d581d673d677f88fc4a48319df3a6458e598499b
-SHA1 (patch-ao) = c9b57f296e98cc860cdbcb0332abe2e979c2248b
+SHA1 (patch-an) = 65bfb05147fe2f3663b35e494b8e8bf7fc6906e2
+SHA1 (patch-ao) = c994597a95edc8376c4916333e7ad371752bbd2e
+SHA1 (patch-ap) = fbbb66c0557e8ceff49a8289d97b521d92dbf022
+SHA1 (patch-aq) = fcf7b99650d9f288cbc4200c2bc48934f7198845
+SHA1 (patch-ar) = d81ce88cc5ed51b1122c251719dd69415402ec1c
+SHA1 (patch-as) = da64e85f5a1722497cd4fb954243680a39300f61
+SHA1 (patch-at) = 02dcd6cbe2e2bff6c86f03d49fa9a6cfb821804b
