@@ -1,0 +1,11 @@
+Racket (formerly PLT Scheme) is a specific dialect of the Lisp
+language based on the Scheme branch of the Lisp family.
+
+It is suitable for implementation tasks ranging from scripting
+to application development, including GUIs, web services, etc.
+It includes programming environment, a virtual machine with
+a just-in-time compiler, tools for creating stand-alone
+executables, web server, extensive libraries, documentation
+for both beginners and experts, and more. It supports the
+creation of new programming languages through a rich, expressive
+syntax system.
