@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.2 2008/10/12 13:57:27 adrianp Exp $
+$NetBSD: patch-al,v 1.3 2010/07/20 08:41:21 adam Exp $
 
---- src/modules/rlm_preprocess/rlm_preprocess.c.orig	2008-09-25 10:41:26.000000000 +0200
+--- src/modules/rlm_preprocess/rlm_preprocess.c.orig	2010-05-24 05:40:58.000000000 +0000
 +++ src/modules/rlm_preprocess/rlm_preprocess.c
 @@ -130,7 +130,7 @@ static void cisco_vsa_hack(VALUE_PAIR *v
  		/*
@@ -19,8 +19,8 @@ $NetBSD: patch-al,v 1.2 2008/10/12 13:57:27 adrianp Exp $
 +			p = (char *)vp->vp_strvalue;
  			gettoken(&p, newattr, sizeof(newattr));
  
- 			if (((dattr = dict_attrbyname(newattr)) != NULL) &&
-@@ -233,10 +233,10 @@ static void rad_mangle(rlm_preprocess_t 
+ 			if ((dattr = dict_attrbyname(newattr)) != NULL) {
+@@ -232,10 +232,10 @@ static void rad_mangle(rlm_preprocess_t 
  		 *
  		 *	FIXME: should we handle this as a REALM ?
  		 */
@@ -33,7 +33,7 @@ $NetBSD: patch-al,v 1.2 2008/10/12 13:57:27 adrianp Exp $
  			namepair->length = strlen(newname);
  		}
  	}
-@@ -404,9 +404,9 @@ static int huntgroup_access(REQUEST *req
+@@ -403,9 +403,9 @@ static int huntgroup_access(REQUEST *req
  						       &request->packet->vps,
  						       PW_HUNTGROUP_NAME,
  						       PW_TYPE_STRING);
@@ -45,7 +45,7 @@ $NetBSD: patch-al,v 1.2 2008/10/12 13:57:27 adrianp Exp $
  			}
  			r = RLM_MODULE_OK;
  		}
-@@ -581,7 +581,7 @@ static int preprocess_authorize(void *in
+@@ -580,7 +580,7 @@ static int preprocess_authorize(void *in
  				  data->huntgroups)) != RLM_MODULE_OK) {
  		char buf[1024];
  		radlog_request(L_AUTH, 0, request, "No huntgroup access: [%s] (%s)",
@@ -54,7 +54,7 @@ $NetBSD: patch-al,v 1.2 2008/10/12 13:57:27 adrianp Exp $
  		       auth_name(buf, sizeof(buf), request, 1));
  		return r;
  	}
-@@ -632,7 +632,7 @@ static int preprocess_preaccounting(void
+@@ -631,7 +631,7 @@ static int preprocess_preaccounting(void
  				  data->huntgroups)) != RLM_MODULE_OK) {
  		char buf[1024];
  		radlog_request(L_INFO, 0, request, "No huntgroup access: [%s] (%s)",
