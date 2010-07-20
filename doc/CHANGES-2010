@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2529 2010/07/20 03:14:36 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2530 2010/07/20 07:24:25 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3386,3 +3386,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added lang/racket-textual version 5.0 [asau 2010-07-20]
 	Removed lang/drscheme successor lang/racket [asau 2010-07-20]
 	Removed lang/mzscheme successor lang/racket-textual [asau 2010-07-20]
+	Updated net/mDNSResponder-nss to 214.3.2 [sbd 2010-07-20]
