@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2532 2010/07/20 12:29:43 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2533 2010/07/20 16:50:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3390,3 +3390,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/net-snmp to 5.4.3 [adam 2010-07-20]
 	Updated net/freeradius2 to 2.1.9 [adam 2010-07-20]
 	Updated lang/mercury to 0.13.1 [asau 2010-07-20]
+	Updated pkgtools/pkg_comp to 1.34 [jmmv 2010-07-20]
