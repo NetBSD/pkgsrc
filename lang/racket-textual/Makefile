@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/20 02:15:51 asau Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/20 03:12:18 obache Exp $
 
 PKGNAME=	racket-textual-5.0
 DISTNAME=	$(PKGNAME)-src-unix
@@ -18,6 +18,8 @@ COMMENT=	Scheme-based dialect of Lisp
 LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS+=	drscheme-[0-9]* mzscheme-[0-9]* racket-[0-9]*
 
 WRKSRC=		$(WRKDIR)/mz-$(PKGVERSION_NOREV)
 
