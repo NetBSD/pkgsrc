@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2010/07/14 09:29:04 sbd Exp $
+$NetBSD: patch-aa,v 1.10 2010/07/20 00:04:08 sbd Exp $
 
 Find libpthread.so when not on the default rpath.
 
@@ -13,6 +13,15 @@ Find libpthread.so when not on the default rpath.
  LDSUFFIX = so
  JAVACFLAGS_OS = -fPIC -shared -ldns_sd
  
+@@ -362,7 +362,7 @@ endif
+ else
+ 
+ ifeq ($(os),linux)
+-CFLAGS_OS = -DNOT_HAVE_SA_LEN -DUSES_NETLINK -DHAVE_LINUX -DTARGET_OS_LINUX
++CFLAGS_OS = -DNOT_HAVE_SA_LEN -DUSES_NETLINK -DHAVE_LINUX -DTARGET_OS_LINUX -D_GNU_SOURCE
+ FLEXFLAGS_OS = -l
+ JAVACFLAGS_OS += -I$(JDK)/include/linux
+ OPTIONALTARG = nss_mdns
 @@ -388,7 +388,7 @@ CFLAGS_OS =
  #     -pthread
  #       Link a user-threaded process against libc_r instead of libc.
