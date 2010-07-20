@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:09:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/07/20 08:33:44 adam Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -263,7 +263,6 @@ man/man3/get_module_node.3
 man/man3/init_mib.3
 man/man3/init_mib_internals.3
 man/man3/mib_api.3
-man/man3/netsnmp_Container_iterator.3
 man/man3/netsnmp_agent.3
 man/man3/netsnmp_baby_steps.3
 man/man3/netsnmp_bulk_to_next.3
@@ -492,6 +491,7 @@ share/snmp/mibs/NET-SNMP-AGENT-MIB.txt
 share/snmp/mibs/NET-SNMP-EXAMPLES-MIB.txt
 share/snmp/mibs/NET-SNMP-EXTEND-MIB.txt
 share/snmp/mibs/NET-SNMP-MIB.txt
+share/snmp/mibs/NET-SNMP-PASS-MIB.txt
 share/snmp/mibs/NET-SNMP-TC.txt
 share/snmp/mibs/NET-SNMP-VACM-MIB.txt
 share/snmp/mibs/NOTIFICATION-LOG-MIB.txt

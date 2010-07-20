@@ -1,8 +1,8 @@
-$NetBSD: patch-ei,v 1.3 2007/08/11 11:05:57 adam Exp $
+$NetBSD: patch-ei,v 1.4 2010/07/20 08:33:44 adam Exp $
 
---- agent/mibgroup/util_funcs.c.orig	2007-01-11 23:13:56.000000000 +0100
+--- agent/mibgroup/util_funcs.c.orig	2009-12-08 21:54:37.000000000 +0000
 +++ agent/mibgroup/util_funcs.c
-@@ -254,7 +254,7 @@ get_exec_output(struct extensible *ex)
+@@ -268,7 +268,7 @@ get_exec_output(struct extensible *ex)
  #if HAVE_EXECV
      char            cachefile[STRMAX];
      char            cache[NETSNMP_MAXCACHESIZE];
