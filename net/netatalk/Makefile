@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2010/07/19 21:21:25 markd Exp $
+# $NetBSD: Makefile,v 1.71 2010/07/20 06:47:37 adam Exp $
 
 DISTNAME=	netatalk-2.1.3
 CATEGORIES=	net print
@@ -15,40 +15,39 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS=	rc>=1.5:../../shells/rc
+BDB_ACCEPTED=		db4 db5
+USE_LIBTOOL=		yes
+USE_OLD_DES_API=	yes
+USE_TOOLS+=		gmake perl:run
+GNU_CONFIGURE=		yes
 
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake perl:run
-USE_LIBTOOL=	YES
-USE_OLD_DES_API=YES
-BUILDLINK_TRANSFORM+=	l:db-4.2:db4
+BUILDLINK_TRANSFORM+=	l:db48:${BDB_TYPE}
 
 PKG_SYSCONFSUBDIR=	netatalk
-EG_DIR=		${PREFIX}/share/examples/netatalk
-CONF_FILES=	${EG_DIR}/AppleVolumes.default ${PKG_SYSCONFDIR}/AppleVolumes.default \
-		${EG_DIR}/AppleVolumes.system ${PKG_SYSCONFDIR}/AppleVolumes.system \
-		${EG_DIR}/afpd.conf ${PKG_SYSCONFDIR}/afpd.conf \
-		${EG_DIR}/atalkd.conf ${PKG_SYSCONFDIR}/atalkd.conf \
-		${EG_DIR}/netatalk.conf ${PKG_SYSCONFDIR}/netatalk.conf \
-		${EG_DIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
+EGDIR=		${PREFIX}/share/examples/netatalk
+CONF_FILES=	${EGDIR}/AppleVolumes.default ${PKG_SYSCONFDIR}/AppleVolumes.default
+CONF_FILES+=	${EGDIR}/AppleVolumes.system ${PKG_SYSCONFDIR}/AppleVolumes.system
+CONF_FILES+=	${EGDIR}/afpd.conf ${PKG_SYSCONFDIR}/afpd.conf
+CONF_FILES+=	${EGDIR}/atalkd.conf ${PKG_SYSCONFDIR}/atalkd.conf
+CONF_FILES+=	${EGDIR}/netatalk.conf ${PKG_SYSCONFDIR}/netatalk.conf
+CONF_FILES+=	${EGDIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		VARBASE
-CONFIGURE_ARGS+=	--enable-netbsd \
-			--enable-debug \
-			--enable-overwrite \
-			--enable-timelord \
-			--libexecdir=${PREFIX}/libexec/netatalk \
-			--sbindir=${PREFIX}/libexec/netatalk \
-			--with-pkgconfdir=${PKG_SYSCONFDIR} \
-			--with-message-dir=${PKG_SYSCONFDIR}/msg \
-			--localstatedir=${VARBASE}/netatalk \
-			--with-uams-path=${PREFIX}/libexec/netatalk/uams \
-			--with-bdb=${BUILDLINK_PREFIX.db4} \
-			--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--enable-netbsd
+CONFIGURE_ARGS+=	--enable-overwrite
+CONFIGURE_ARGS+=	--enable-timelord
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netatalk
+CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/netatalk
+CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-message-dir=${PKG_SYSCONFDIR}/msg
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/netatalk
+CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
+CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
+CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
@@ -69,11 +68,11 @@ INSTALLATION_DIRS=	libexec/psffilters
 
 .if !empty(PKG_OPTIONS:Mpam)
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk.pam ${DESTDIR}${EG_DIR}
+	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk.pam ${DESTDIR}${EGDIR}
 .endif
 
-.include "../../databases/db4/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
