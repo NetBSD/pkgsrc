@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/05/23 17:28:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/07/20 08:41:21 adam Exp $
 bin/radclient
 bin/radconf2xml
 bin/radeapclient
@@ -538,6 +538,7 @@ share/freeradius/dictionary.versanet
 share/freeradius/dictionary.vqp
 share/freeradius/dictionary.walabi
 share/freeradius/dictionary.waverider
+share/freeradius/dictionary.wichorus
 share/freeradius/dictionary.wimax
 share/freeradius/dictionary.wispr
 share/freeradius/dictionary.xedia
