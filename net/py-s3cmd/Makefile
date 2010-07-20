@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/20 05:00:01 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/20 05:01:13 obache Exp $
 
 DISTNAME=	s3cmd-0.9.9.91
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Command-line interface to Amazon's Simple Storage Service (S3)
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PYDISTUTILSPKG= 	yes
+PYDISTUTILSPKG=		yes
 MAKE_ENV+=		S3CMD_INSTPATH_MAN=${PKGMANDIR}
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
