@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/05/29 11:47:37 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/20 08:41:21 adam Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -45,7 +45,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.8
+RADVER=			2.1.9
 EGDIR=			${DESTDIR}${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--without-rlm_python
 CONFIGURE_ARGS+=	--without-rlm_smb
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
-MAKE_ENV+=		R=${DESTDIR:Q}
+MAKE_ENV+=		R=${DESTDIR}
 
 REPLACE_PERL=		scripts/radsqlrelay
 
