@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9472 2010/07/19 10:59:58 pettai Exp $
+$NetBSD: TODO,v 1.9473 2010/07/20 02:23:40 asau Exp $
 
 Suggested new packages
 ======================
@@ -528,7 +528,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doxygen-1.7.1
 	o dpkg-1.14.25
 	o drivel-3.0.0
-	o drscheme-4.0.2
 	o dspam-3.9.0
 	o dvdrip-0.98.11
 	o dvipng-1.13
