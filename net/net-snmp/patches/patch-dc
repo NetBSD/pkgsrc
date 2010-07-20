@@ -1,6 +1,6 @@
-$NetBSD: patch-dc,v 1.6 2009/03/10 18:30:44 apb Exp $
+$NetBSD: patch-dc,v 1.7 2010/07/20 08:33:44 adam Exp $
 
---- include/net-snmp/net-snmp-config.h.in.orig	2008-07-28 13:41:40.000000000 +0200
+--- include/net-snmp/net-snmp-config.h.in.orig	2010-03-03 16:11:57.000000000 +0000
 +++ include/net-snmp/net-snmp-config.h.in
 @@ -159,6 +159,7 @@
  #undef STRUCT_IFNET_HAS_IF_IMCASTS
@@ -10,7 +10,7 @@ $NetBSD: patch-dc,v 1.6 2009/03/10 18:30:44 apb Exp $
  #undef STRUCT_IFNET_HAS_IF_NOPROTO
  #undef STRUCT_IFNET_HAS_IF_OMCASTS
  #undef STRUCT_IFNET_HAS_IF_XNAME
-@@ -1463,6 +1464,7 @@
+@@ -1466,6 +1467,7 @@
  #define NETSNMP_HPUX11ID 14
  #define NETSNMP_AIXID 15
  #define NETSNMP_MACOSXID 16
@@ -18,7 +18,7 @@ $NetBSD: patch-dc,v 1.6 2009/03/10 18:30:44 apb Exp $
  #define NETSNMP_UNKNOWNID 255
  
  #ifdef hpux9
-@@ -1492,6 +1494,9 @@
+@@ -1495,6 +1497,9 @@
  #if defined(__FreeBSD__)
  #define NETSNMP_OSTYPE NETSNMP_FREEBSDID
  #endif

@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
+$NetBSD: patch-af,v 1.14 2010/07/20 08:33:44 adam Exp $
 
---- configure.orig	2008-10-31 17:53:45.000000000 +0200
+--- configure.orig	2010-05-23 21:10:00.000000000 +0000
 +++ configure
 @@ -27854,6 +27854,81 @@ _ACEOF
  fi
@@ -84,7 +84,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  # Check for libraries that the agent needs
  # saving old libraries
  NONAGENTLIBS=$LIBS
-@@ -36844,6 +36919,12 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -36914,6 +36989,12 @@ cat >>conftest.$ac_ext <<_ACEOF
  #if HAVE_NETINET_IP6_H
  #include <netinet/ip6.h>
  #endif
@@ -97,7 +97,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  
  
  #include <$ac_header>
-@@ -42849,8 +42930,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -42919,8 +43000,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -108,7 +108,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  
  
-@@ -42947,8 +43030,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -43017,8 +43100,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -119,7 +119,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  
  
-@@ -43241,8 +43326,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -43311,8 +43396,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -130,7 +130,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -43330,8 +43417,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -43400,8 +43487,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -141,7 +141,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -43399,8 +43488,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -43469,8 +43558,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -152,7 +152,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -43539,8 +43630,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -43609,8 +43700,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -163,7 +163,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -43772,8 +43865,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -43842,8 +43935,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -174,7 +174,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -43873,8 +43968,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -43943,8 +44038,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -185,7 +185,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -43974,8 +44071,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -44044,8 +44141,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -196,7 +196,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -44075,8 +44174,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -44145,8 +44244,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #ifdef IFNET_NEEDS_KERNEL
  #define KERNEL
@@ -207,7 +207,7 @@ $NetBSD: patch-af,v 1.13 2009/03/10 18:30:44 apb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -45730,6 +45831,143 @@ fi
+@@ -45800,6 +45901,143 @@ fi
  
  
  ac_safe_struct=`echo "ifnet" | sed 'y%./+-%__p_%'`
