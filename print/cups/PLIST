@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2010/07/14 11:25:19 sbd Exp $
+@comment $NetBSD: PLIST,v 1.33 2010/07/20 00:01:22 sbd Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -982,44 +982,5 @@ share/locale/ru/cups_ru.po
 share/locale/sv/cups_sv.po
 share/locale/zh/cups_zh.po
 share/locale/zh_TW/cups_zh_TW.po
-@pkgdir include/cups
-@pkgdir libexec/cups/daemon
-@pkgdir libexec/cups/notifier
-@pkgdir libexec/cups/monitor
-@pkgdir libexec/cups/cgi-bin
-@pkgdir libexec/cups/backend
-@pkgdir libexec/cups/filter
-@pkgdir libexec/cups/driver
-@pkgdir libexec/cups
-@pkgdir share/cups/templates/ru
-@pkgdir share/cups/templates/pl
-@pkgdir share/cups/templates/ja
-@pkgdir share/cups/templates/it
-@pkgdir share/cups/templates/id
-@pkgdir share/cups/templates/eu
-@pkgdir share/cups/templates/es
-@pkgdir share/cups/templates/de
-@pkgdir share/cups/templates
-@pkgdir share/cups/fonts
-@pkgdir share/cups/examples
 @pkgdir share/cups/profiles
-@pkgdir share/cups/ppdc
 @pkgdir share/cups/model
-@pkgdir share/cups/data
-@pkgdir share/cups/charsets
-@pkgdir share/cups/charmaps
-@pkgdir share/cups/banners
-@pkgdir share/cups/drv
-@pkgdir share/cups
-@pkgdir share/examples/cups
-@pkgdir share/doc/cups/images
-@pkgdir share/doc/cups/help
-@pkgdir share/doc/cups/ru
-@pkgdir share/doc/cups/pl
-@pkgdir share/doc/cups/ja
-@pkgdir share/doc/cups/it
-@pkgdir share/doc/cups/id
-@pkgdir share/doc/cups/eu
-@pkgdir share/doc/cups/es
-@pkgdir share/doc/cups/de
-@pkgdir share/doc/cups
