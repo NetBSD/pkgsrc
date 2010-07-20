@@ -17,3 +17,5 @@ inputmethod/ja-freewnn-lib: bug fix patch
 inputmethod/kinput2: bug fix patch
 Pullup ticket #3164 - requested by sbd
 print/cups: build fix
+Pullup ticket #3173 - requested by drochner
+graphics/freetype2: security update
