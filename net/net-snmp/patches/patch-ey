@@ -1,8 +1,8 @@
-$NetBSD: patch-ey,v 1.1 2010/05/11 04:39:54 adam Exp $
+$NetBSD: patch-ey,v 1.2 2010/07/20 08:33:44 adam Exp $
 
---- agent/mibgroup/mibII/tcp.c.orig	2010-03-12 00:32:22.000000000 +0000
-+++ agent/mibgroup/mibII/tcp.c	2010-03-12 00:34:09.000000000 +0000
-@@ -167,6 +167,12 @@
+--- agent/mibgroup/mibII/tcp.c.orig	2009-11-13 12:59:26.000000000 +0000
++++ agent/mibgroup/mibII/tcp.c
+@@ -167,6 +167,12 @@ init_tcp(void)
  #define USES_SNMP_DESIGNED_TCPSTAT
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ey,v 1.1 2010/05/11 04:39:54 adam Exp $
  #if defined (WIN32) || defined (cygwin)
  #include <iphlpapi.h>
  #define TCP_STAT_STRUCTURE     MIB_TCPSTATS
-@@ -768,6 +774,21 @@
+@@ -689,6 +695,21 @@ tcp_load(netsnmp_cache *cache, void *vma
      }
      return ret_value;
  }
