@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2010/05/17 16:22:59 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2010/07/20 09:00:17 markd Exp $
 
 --- setupext.py.orig	2009-08-23 05:27:32.000000000 +0000
 +++ setupext.py
@@ -16,14 +16,14 @@ $NetBSD: patch-aa,v 1.4 2010/05/17 16:22:59 drochner Exp $
 -           'build_macosx': 'auto',
 -           'build_image': True,
 -           'build_windowing': True,
-+           'provide_pytz': 'False',
-+           'provide_dateutil': 'False',
++           'provide_pytz': False,
++           'provide_dateutil': False,
 +           'build_agg': False,
-+           'build_gtk': 'True',
-+           'build_gtkagg': 'True',
-+           'build_tkagg': 'False',
-+           'build_wxagg': 'False',
-+           'build_macosx': 'False',
++           'build_gtk': True,
++           'build_gtkagg': True,
++           'build_tkagg': False,
++           'build_wxagg': False,
++           'build_macosx': False,
 +           'build_image': False,
 +           'build_windowing': False,
             'backend': None}
