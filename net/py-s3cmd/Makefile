@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2010/07/19 16:42:12 ver Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/20 04:58:07 obache Exp $
 
 DISTNAME=	s3cmd-0.9.9.91
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=s3tools/files/s3cmd/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=s3tools/}
 
 MAINTAINER=	ver@NetBSD.org
 HOMEPAGE=	http://s3tools.org/s3cmd
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG= 	yes
-MAKE_ENV+=		S3CMD_INSTPATH_MAN=man
+MAKE_ENV+=		S3CMD_INSTPATH_MAN=${PKGMANDIR}
 
 DEPENDS+=	${PYPKGPREFIX}-expat:../../textproc/py-expat
 
