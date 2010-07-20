@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/06/15 21:16:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/07/20 12:15:43 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -116,6 +116,7 @@ include/libspreadsheet-1.10/spreadsheet/style-font.h
 include/libspreadsheet-1.10/spreadsheet/style.h
 include/libspreadsheet-1.10/spreadsheet/symbol.h
 include/libspreadsheet-1.10/spreadsheet/tools/gnm-solver.h
+include/libspreadsheet-1.10/spreadsheet/undo.h
 include/libspreadsheet-1.10/spreadsheet/validation-combo.h
 include/libspreadsheet-1.10/spreadsheet/validation.h
 include/libspreadsheet-1.10/spreadsheet/value.h
@@ -219,8 +220,8 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
-lib/goffice/0.8.5/plugins/gnumeric/gnumeric.la
-lib/goffice/0.8.5/plugins/gnumeric/plugin.xml
+lib/goffice/0.8.7/plugins/gnumeric/gnumeric.la
+lib/goffice/0.8.7/plugins/gnumeric/plugin.xml
 lib/libspreadsheet.la
 lib/pkgconfig/libspreadsheet-1.10.pc
 man/man1/gnumeric.1
@@ -750,7 +751,6 @@ share/gnumeric/${PKGVERSION}/glade/mean-tests.glade
 share/gnumeric/${PKGVERSION}/glade/merge.glade
 share/gnumeric/${PKGVERSION}/glade/moving-averages.glade
 share/gnumeric/${PKGVERSION}/glade/normality-tests.glade
-share/gnumeric/${PKGVERSION}/glade/paste-names.glade
 share/gnumeric/${PKGVERSION}/glade/paste-special.glade
 share/gnumeric/${PKGVERSION}/glade/plugin-manager.glade
 share/gnumeric/${PKGVERSION}/glade/preferences.glade
@@ -800,6 +800,8 @@ share/locale/am/LC_MESSAGES/gnumeric-functions.mo
 share/locale/am/LC_MESSAGES/gnumeric.mo
 share/locale/ar/LC_MESSAGES/gnumeric-functions.mo
 share/locale/ar/LC_MESSAGES/gnumeric.mo
+share/locale/ast/LC_MESSAGES/gnumeric-functions.mo
+share/locale/ast/LC_MESSAGES/gnumeric.mo
 share/locale/az/LC_MESSAGES/gnumeric-functions.mo
 share/locale/az/LC_MESSAGES/gnumeric.mo
 share/locale/bg/LC_MESSAGES/gnumeric-functions.mo
@@ -923,3 +925,4 @@ share/pixmaps/gnumeric/right-down.png
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/win32-gnumeric.ico
 share/pixmaps/win32-gnumeric.ico
+@pkgdir share/gnumeric/${PKGVERSION}/doc/C
