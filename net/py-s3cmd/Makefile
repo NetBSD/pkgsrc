@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/20 04:58:07 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/20 05:00:01 obache Exp $
 
 DISTNAME=	s3cmd-0.9.9.91
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG= 	yes
 MAKE_ENV+=		S3CMD_INSTPATH_MAN=${PKGMANDIR}
 
-DEPENDS+=	${PYPKGPREFIX}-expat:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
