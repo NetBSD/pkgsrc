@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9473 2010/07/20 02:23:40 asau Exp $
+$NetBSD: TODO,v 1.9474 2010/07/20 08:42:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -624,7 +624,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o frama-c-20100401
 	o freeglut-2.4.0
 	o freenet-0.7
-	o freeradius-2.1.9
 	o freesci-0.6.4
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
