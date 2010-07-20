@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2010/02/18 21:28:45 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2010/07/20 11:44:15 drochner Exp $
 
-DISTNAME=	freetype-2.3.12
+DISTNAME=	freetype-2.4.1
 PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/} \
@@ -33,22 +33,11 @@ PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 .include "../../mk/compiler.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freetype2
-PKG_SUPPORTED_OPTIONS=	truetype subpixel
+PKG_SUPPORTED_OPTIONS=	subpixel
 
 .include "../../mk/bsd.options.mk"
 
-###
-### This builds freetype2 with the TrueType bytecode interpreter.  Note
-### that there are important patent issues related to the use of the
-### interpreter:
-###
-###	http://www.freetype.org/patents.html
-###
-.if !empty(PKG_OPTIONS:Mtruetype)
-CFLAGS+=	-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
-.endif
-
-# subpixel (lcd) rendering, also patent issues
+# subpixel (lcd) rendering, patent issues
 .if !empty(PKG_OPTIONS:Msubpixel)
 CFLAGS+=	-DFT_CONFIG_OPTION_SUBPIXEL_RENDERING
 .endif
