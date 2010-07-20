@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.37 2010/04/15 09:42:45 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.38 2010/07/20 16:50:26 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -533,7 +533,6 @@ makeroot()
     trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
 
     makeroot_libkver
-    [ "$Nflag" = "no" ] && makeroot_digest
 
     if [ "$USE_GCC3" = "yes" -a "$Nflag" = "no" ]; then
         if [ -z "`echo $BUILD_PACKAGES $INSTALL_PACKAGES | grep gcc3`" ]; then
@@ -607,17 +606,6 @@ CXXFLAGS += $CXXFLAGS
 .endif # BSD_PKG_MK
 EOF
     fi
-}
-
-# makeroot_digest
-#
-#   Ensure digest is always installed, specially because PKGSRC_COMPILER
-#   may contain 'ccache' or 'distcc'.
-#
-makeroot_digest()
-{
-    ( PKGSRC_COMPILER=gcc; export PKGSRC_COMPILER; \
-      build_and_install pkgtools/digest )
 }
 
 # makeroot_libkver
@@ -725,7 +713,7 @@ pkg_build()
 
     # Build them
     fsmount
-    check_pkg_install    # executes copy_vulnerabilities too
+    copy_vulnerabilities
     failed=""
     for p in $pkgs; do
         echo "PKG_COMP ==> Building and installing $p"
@@ -761,36 +749,6 @@ EOF
             echo "    $p"
         done
     fi
-}
-
-# check_pkg_install
-#
-#   Ensure that the version of pkg_install inside the sandbox is new
-#   enough to work with pkgsrc.  If not, rebuild it.
-#
-check_pkg_install()
-{
-    local script
-
-    copy_vulnerabilities
-
-    # We assume filesystems are mounted!
-
-    echo "PKG_COMP ==> Checking if pkg_install is up to date"
-    script=$(mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXXXX).sh
-    init_script $script
-    cat >> $script <<EOF
-cd /usr/pkgsrc/pkgtools/pkg_comp
-fail=\$(make show-var VARNAME=PKG_FAIL_REASON)
-if echo \$fail | grep "package tools installed on this system are out of date" >/dev/null; then
-    echo "PKG_COMP ==> pkg_install is out of date; rebuilding"
-    cd /usr/pkgsrc/pkgtools/pkg_install
-    make && make install && make clean
-fi
-EOF
-    chmod +x $script
-    chroot $DESTDIR /pkg_comp/tmp/`basename $script`
-    rm $script
 }
 
 # build_and_install pkg
