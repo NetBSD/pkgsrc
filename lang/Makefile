@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.291 2010/03/18 09:19:40 wiz Exp $
+# $NetBSD: Makefile,v 1.292 2010/07/20 02:22:15 asau Exp $
 #
 
 COMMENT=	Programming languages
@@ -26,7 +26,6 @@ SUBDIR+=	clisp
 SUBDIR+=	coq
 SUBDIR+=	cparser
 SUBDIR+=	cu-prolog
-SUBDIR+=	drscheme
 SUBDIR+=	eag
 SUBDIR+=	ecl
 SUBDIR+=	eieio
@@ -95,7 +94,6 @@ SUBDIR+=	mono
 SUBDIR+=	mono-basic
 SUBDIR+=	moscow_ml
 SUBDIR+=	mpd
-SUBDIR+=	mzscheme
 SUBDIR+=	nawk
 SUBDIR+=	nhc98
 SUBDIR+=	objc
@@ -136,6 +134,8 @@ SUBDIR+=	py26-html-docs
 SUBDIR+=	python24
 SUBDIR+=	python25
 SUBDIR+=	python26
+SUBDIR+=	racket
+SUBDIR+=	racket-textual
 SUBDIR+=	rcfunge
 SUBDIR+=	rexx-imc
 SUBDIR+=	rexx-regina
