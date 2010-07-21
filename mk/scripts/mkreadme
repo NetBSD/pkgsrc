@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.24 2010/07/15 05:25:30 spz Exp $
+# $NetBSD: mkreadme,v 1.25 2010/07/21 12:29:46 spz Exp $
 #
 # Script for README.html generation
 #
@@ -59,6 +59,7 @@ BMAKE=${BMAKE:-${makeprog}}
 usage(){
     echo "$prog - Generates README.html files for a pkgsrc tree"
     echo "Usage:      $prog [-c|--cdrom] [-C|--prune] [-d|--debug] [-f|--ftp] "
+    echo "                  [-q|--quiet] "
     echo "                  [-p|--pkgsrc directory] "
     echo "                  [-P|--packages directory] [-r|--restart] "
     echo "                  [-s|--summary]"
@@ -80,6 +81,8 @@ usage(){
     echo "  -f|--ftp            Generates FTP README.html files"
     echo " "
     echo "  -h|--help           Displays this help message"
+    echo " "
+    echo "  -q|--quiet          Does not give progress output"
     echo " "
     echo "  -p|--pkgsrc dir     Specifies the pkgsrc directory.  Defaults to"
     echo "                      the value of the PKGSRCDIR environment variable"
@@ -130,6 +133,7 @@ prune=no
 DEBUG=no
 save=no
 pv=default
+quiet=no
 
 summary=""
 
@@ -168,6 +172,12 @@ do
     -h|--help)
 	usage
 	exit 0
+	;;
+
+    # be less talkative
+    -q|--quiet)
+	quiet=yes
+	shift
 	;;
 
     # Specify pkgsrc directory
@@ -356,8 +366,10 @@ if [ "x$restart" = "xno" ] ; then
 		echo "WARNING:  The category directory ${c} does not seem to" > /dev/stderr
 		echo "          exist under ${PKGSRCDIR}" > /dev/stderr
 	else
-		echo " "
-		echo "Extracting data for category ${c}"
+		if [ "x$quiet" = "xno" ]; then
+			echo " "
+			echo "Extracting data for category ${c}"
+		fi
 		cd ${PKGSRCDIR}/${c}
 		list=`${BMAKE} show-subdir-var VARNAME=SUBDIR`
     		for pkgdir in $list ; do
@@ -381,11 +393,13 @@ if [ "x$restart" = "xno" ] ; then
 			    		echo "$l" >> $DATABASEFILE
 		    		fi
 	    		fi
-	    		${ECHO} -n "."
-	    		if [ `${EXPR} $npkg % 100 = 0` -eq 1 ]; then
-				echo " "
-				echo "$npkg"
-	    		fi
+			if [ "x$quiet" = "xno" ]; then
+				${ECHO} -n "."
+				if [ `${EXPR} $npkg % 100 = 0` -eq 1 ]; then
+					echo " "
+					echo "$npkg"
+				fi
+			fi
 	  		npkg=`${EXPR} $npkg + 1`
 	    		cd ${PKGSRCDIR}
     		done
@@ -424,6 +438,7 @@ fi
 ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     builddependsfile=${TMPDIR}/pkgsrc.builddepends.debug \
     debug=$debug \
+    quiet=$quiet \
     dependsfile=${TMPDIR}/pkgsrc.depends.debug \
     summary=${summary} \
     AWK=$AWK \

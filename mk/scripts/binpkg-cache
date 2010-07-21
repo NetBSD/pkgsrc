@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.20 2010/03/13 11:45:16 spz Exp $
+# $NetBSD: binpkg-cache,v 1.21 2010/07/21 12:29:46 spz Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -198,7 +198,7 @@ process_binpkg_dir(){
 			echo "Need version ${cacheversion} but the file has"
 			${GREP} "^pkgcache_version " ${d}/${cachefile}
 		else
-			echo "${tab}Cache file ${d}/${cachefile} is up to date."
+			$if_verbose echo "${tab}Cache file ${d}/${cachefile} is up to date."
 		fi
 	fi
 
@@ -326,7 +326,7 @@ process_cache_files(){
 ######################################################################
 
 if_debug=:		# either ":" or ""
-verbose=no
+if_verbose=:		# either ":" or ""
 force=no
 build_summary=no
 
@@ -338,7 +338,7 @@ do
 		# Turn on debugging
 		-d|--debug)
 			if_debug=""
-			verbose=yes
+			if_verbose=""
 			shift
 			;;
 
@@ -373,7 +373,7 @@ do
 
 		# Turn on verbose output, but not as noisy as debug
 		-v|--verbose)
-			verbose=yes
+			if_verbose=""
 			shift
 			;;
 
@@ -431,7 +431,7 @@ for d in `${AWK} '{print $1}' ${all_dirs}` ; do
 		fi
 	done
 	if test "X${is_pkg_dir}" = "Xyes" ; then
-		echo "${prompt}Checking cache in ${d}"
+		$if_verbose echo "${prompt}Checking cache in ${d}"
 		process_binpkg_dir
 	else
 		$if_debug echo "${prompt}no binary packages in ${d}"

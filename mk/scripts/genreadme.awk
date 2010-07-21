@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.33 2008/08/03 16:24:53 tnn Exp $
+# $NetBSD: genreadme.awk,v 1.34 2010/07/21 12:29:46 spz Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -201,8 +201,13 @@ END {
 	if ( builddependsfile == "" ) builddependsfile = "/dev/stdout";
 
 	printf("Making sure binary package cache file is up to date...\n");
-	cmd = sprintf("%s AWK=%s CMP=%s FIND=%s GREP=%s GZIP_CMD=\"%s\" PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache %s --packages %s",
+	if ( quiet == "yes" ){
+		cmd = sprintf("%s AWK=%s CMP=%s FIND=%s GREP=%s GZIP_CMD=\"%s\" PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache %s --packages %s",
 		SETENV, AWK, CMP, FIND, GREP, GZIP_CMD, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, summary, PACKAGES);
+	} else {
+		cmd = sprintf("%s AWK=%s CMP=%s FIND=%s GREP=%s GZIP_CMD=\"%s\" PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache %s --packages %s --verbose",
+		SETENV, AWK, CMP, FIND, GREP, GZIP_CMD, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, summary, PACKAGES);
+	}
 	if (debug) printf("\nExecute:  %s\n",cmd);
 	rc = system(cmd);
 
@@ -281,9 +286,11 @@ END {
 
 			if (debug) printf("Creating %s for %s\n",
 					  readme, readmenew);
-			printf(".");
-			if ((pkgcnt % 100) == 0) {
-				printf("\n%d\n", pkgcnt);
+			if (quiet != "yes") {
+				printf(".");
+				if ((pkgcnt % 100) == 0) {
+					printf("\n%d\n", pkgcnt);
+				}
 			}
 			printf("") > readme;
 			htmldeps = "";
@@ -779,7 +786,7 @@ function copy_readme(old, new, cmd, rc) {
 
 
 function load_cache_file( file, pkgfile, opsys, osver, march, wk, rx ) {
-  printf("    * %s\n", file);
+  if ( quiet != "yes" ) printf("    * %s\n", file);
   fatal_check_file( file );
 
   # read the cache file
