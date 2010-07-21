@@ -1,0 +1,3 @@
+rtmpdump is a toolkit for RTMP streams. All forms of RTMP are
+supported, including rtmp://, rtmpt://, rtmpe://, rtmpte://, and
+rtmps://.
