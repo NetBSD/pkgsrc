@@ -1,35 +1,28 @@
-$NetBSD: patch-aa,v 1.14 2009/09/20 10:44:51 tnn Exp $
+$NetBSD: patch-aa,v 1.15 2010/07/21 17:29:48 drochner Exp $
 
---- configure.orig	2009-07-22 22:11:25.000000000 +0200
+--- configure.orig	2010-06-04 22:32:04.000000000 +0000
 +++ configure
-@@ -16858,7 +16858,7 @@ squeeze() {
+@@ -14715,7 +14715,7 @@ squeeze() {
  
  
        #
 -  if test "$compiler_id" != "unknown"; then
 +  if false; then
      #
-     if test "$compiler_id" = "GNU_C"; then
- 
-@@ -23439,7 +23439,7 @@ $as_echo "yes" >&6; }
-         GSSAPI_LIBS=`$GSSAPI_ROOT/bin/krb5-config --libs gssapi`
-      elif test "$GSSAPI_ROOT" != "yes"; then
-         GSSAPI_INCS="-I$GSSAPI_ROOT/include"
--        GSSAPI_LIBS="-lgssapi"
-+        GSSAPI_LIBS="-lgssapi -lkrb5"
-      fi
-   fi
- 
-@@ -23996,13 +23996,13 @@ _ACEOF
-         LIBS="$LIBS $gss_libs"
-      elif test "$GSSAPI_ROOT" != "yes"; then
-         LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
--        LIBS="$LIBS -lgssapi"
-+        LIBS="$LIBS -lgssapi -lkrb5"
-      else
--        LIBS="$LIBS -lgssapi"
-+        LIBS="$LIBS -lgssapi -lkrb5"
-      fi
+     if test "$compiler_id" = "GNU_C" ||
+       test "$compiler_id" = "CLANG"; then
+@@ -19100,15 +19100,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+            LIBS="$LIBS $gss_libs"
+         elif test "$GSSAPI_ROOT" != "yes"; then
+            LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
+-           LIBS="$LIBS -lgssapi"
++           LIBS="$LIBS -lgssapi -lkrb5"
+         else
+-           LIBS="$LIBS -lgssapi"
++           LIBS="$LIBS -lgssapi -lkrb5"
+         fi
+         ;;
+      esac
    else
       LDFLAGS="$LDFLAGS $GSSAPI_LIB_DIR"
 -     LIBS="$LIBS -lgssapi"
