@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2007/12/11 22:41:55 heinz Exp $
+$NetBSD: patch-ad,v 1.3 2010/07/21 14:11:16 joerg Exp $
 --- Makefile.in.orig	2000-10-20 14:06:30.000000000 +0200
 +++ Makefile.in
 @@ -29,8 +29,8 @@ PYTHLIB   = @PYTH_LIBDIR@/config
@@ -12,12 +12,14 @@ $NetBSD: patch-ad,v 1.2 2007/12/11 22:41:55 heinz Exp $
  RANLIB  = @RANLIB@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -39,13 +39,13 @@ LN_S    = @LN_S@
+@@ -38,14 +38,14 @@ RM      = @RM@ -f
+ LN_S    = @LN_S@
  LDEXE   = @LDEXE@
  
- SO       = @SO@
+-SO       = @SO@
 -LDSHARED = @LDSHARED@
 -CCSHARED = @CCSHARED@
++SO       = .la
 +LDSHARED = ${LIBTOOL} --mode=link @CC@
 +CCSHARED = ${LIBTOOL} --mode=compile @CC@
  
@@ -25,7 +27,7 @@ $NetBSD: patch-ad,v 1.2 2007/12/11 22:41:55 heinz Exp $
  CPPFLAGS = -I. -I$(srcdir) @CPPFLAGS@
  CFLAGS   = @CFLAGS@
 -LDFLAGS  = @LDFLAGS@
-+LDFLAGS  = @LDFLAGS@ -shared
++LDFLAGS  = @LDFLAGS@ -module -rpath ${INSTLIBDIR}
  LIBS     = $(EXPLIB) @LIBS@
  INSTLIBDIR = @PYTH_SHLIBDIR@
  
@@ -48,7 +50,7 @@ $NetBSD: patch-ad,v 1.2 2007/12/11 22:41:55 heinz Exp $
 +	$(INSTALL_PROGRAM) python $(DESTDIR)$(exec_prefix)/bin/python.exppy
  installshared:  $(MODNAME)module$(SO)
 -	$(INSTALL_PROGRAM) $(MODNAME)module$(SO) $(INSTLIBDIR)
-+	$(INSTALL_PROGRAM) $(MODNAME)module$(SO) $(DESTDIR)$(INSTLIBDIR)
++	${LIBTOOL} --mode=install $(BSD_INSTALL_LIB) $(MODNAME)module$(SO) $(DESTDIR)$(INSTLIBDIR)
  uninstall:
  
  clean::
