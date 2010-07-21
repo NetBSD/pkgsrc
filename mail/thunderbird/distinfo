@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2010/07/12 16:49:21 tnn Exp $
+$NetBSD: distinfo,v 1.71 2010/07/21 11:48:05 tnn Exp $
 
 SHA1 (enigmail-1.1.2.tar.gz) = d29fce2b20a36d210b12c28fcbbee965007c95aa
 RMD160 (enigmail-1.1.2.tar.gz) = 2c1fa3494c1c2458635a3d68929ce7ff8fdb48e7
@@ -40,7 +40,7 @@ SHA1 (patch-be) = 654ca74f4ec23bfef147c6f0f852ae6de046bc9e
 SHA1 (patch-bf) = 63d4ba67d29ab64ba97fe6f148a52760e940a8b3
 SHA1 (patch-bg) = 5e44de4d5904dc962c40d146d212ad084011c79c
 SHA1 (patch-directory_c-sdk_configure.in) = 4d8d8c1425ca26036d8f5179f954dbea2203de36
-SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = 2727868e9fd905badb5b2f6195903ba214ce8138
+SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = 0e1c188af241289ce0a9fc252a063a69f3d504a4
 SHA1 (patch-directory_c-sdk_ldap_libraries_libldap_Makefile.in) = 6e9788e5e9575fc0813f5f0e178cc2f5659ea781
 SHA1 (patch-ma) = 9b9bc5e5ced5831aa14e1549ed2ddf0b9c2ce986
 SHA1 (patch-ma-toplevel) = 460326a0551fecd13ca188cff907c89cce359c31
