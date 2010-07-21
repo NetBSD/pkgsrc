@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2010/07/20 13:40:02 tnn Exp $
+$NetBSD: distinfo,v 1.31 2010/07/21 11:57:52 tron Exp $
 
 SHA1 (m4-1.4.14.tar.gz) = 8bf68b7a072d68affaccd281138ec73aca23b954
 RMD160 (m4-1.4.14.tar.gz) = 80c6a4a7ac22419777fe2890f05dfaaa5c53f946
 Size (m4-1.4.14.tar.gz) = 1509355 bytes
 SHA1 (patch-aa) = fc7fc68865763098060ee11f0c13fc57956ec820
-SHA1 (patch-ab) = a7cf3e8c6a8f325d8be44d75507dba8df54ba1fa
+SHA1 (patch-ab) = 0f81e31652b13a6d5dcb24b7e1e629f0950d10f3

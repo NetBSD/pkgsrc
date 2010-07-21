@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2010/07/20 13:57:28 tnn Exp $
+$NetBSD: distinfo,v 1.24 2010/07/21 11:57:52 tron Exp $
 
 SHA1 (bison-2.4.2.tar.bz2) = 4e2c4b40a248748989b3fe7f0d89022ea11a8d6f
 RMD160 (bison-2.4.2.tar.bz2) = bc72359a93ad36ae60e8027d846211cb99634d93
 Size (bison-2.4.2.tar.bz2) = 1616117 bytes
 SHA1 (patch-aa) = dbc64816b60aebba81125aea0cdc8bb648aa114f
-SHA1 (patch-ab) = 2df283693aed686e13af2a2c48786b56e437c3b9
+SHA1 (patch-ab) = a6c6805f5948e6f129811f3cea54065af7dedefb
