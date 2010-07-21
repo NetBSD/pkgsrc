@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9481 2010/07/21 19:55:10 tnn Exp $
+$NetBSD: TODO,v 1.9482 2010/07/21 20:53:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -497,7 +497,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o cssc-1.2.0
 	o cups-1.4.4
-	o curl-7.21.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.18
 	o cygwin_lib-1.5.24.2
@@ -899,7 +898,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lucy-1.20
 	o luit-1.0.5
 	o lwm-1.2.2
-	o lyx-1.6.7
 	o lzip-1.10
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
@@ -999,6 +997,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nulib2-220
 	o nut-15.7
 	o nxtvepg-2.8.1
+	o obexftp-0.23
 	o objc-3.2.8
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
