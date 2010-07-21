@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/07/21 11:25:42 drochner Exp $
+
+--- gui/Makefile.in.orig	2010-07-15 16:36:15.000000000 +0000
++++ gui/Makefile.in
+@@ -268,7 +268,7 @@ EXTRA_DIST = usbprog.xpm usbprog_icon.xp
+ @GUI_TRUE@			  pindialog.cc pindialog.h \
+ @GUI_TRUE@			  viewer.cc viewer.h
+ 
+-@GUI_TRUE@usbprog_gui_LDADD = ../usbprog/libusbprog.la \
++@GUI_TRUE@usbprog_gui_LDADD = ../usbprog/libusbprog.la ../md5/libmd5.a \
+ @GUI_TRUE@			  @WX_LIBS@
+ 
+ @GUI_TRUE@man_MANS = usbprog-gui.1

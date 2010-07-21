@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/07/21 11:25:42 drochner Exp $
+
+--- configure.orig	2010-07-15 15:46:31.000000000 +0000
++++ configure
+@@ -16506,7 +16506,7 @@ else
+   have_libusb="no"
+ fi
+ 
+-    if test "${have_libusb}" == yes; then
++    if test "${have_libusb}" = yes; then
+         if test "${ac_cv_header_usb_h+set}" = set; then
+   { $as_echo "$as_me:$LINENO: checking for usb.h" >&5
+ $as_echo_n "checking for usb.h... " >&6; }

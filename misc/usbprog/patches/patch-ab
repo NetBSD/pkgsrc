@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/07/21 11:25:42 drochner Exp $
+
+--- usbprog/date.cc.orig	2010-07-15 16:07:07.000000000 +0000
++++ usbprog/date.cc
+@@ -14,7 +14,6 @@
+  * You should have received a copy of the GNU General Public License
+  * along with this program. If not, see <http://www.gnu.org/licenses/>.
+  */
+-#define _XOPEN_SOURCE
+ #include <cstdio>
+ #include <string>
+ #include <time.h>

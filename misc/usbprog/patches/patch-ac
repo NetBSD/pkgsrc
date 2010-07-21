@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/07/21 11:25:42 drochner Exp $
+
+--- src/Makefile.in.orig	2010-07-15 16:35:33.000000000 +0000
++++ src/Makefile.in
+@@ -255,7 +255,7 @@ usbprog_SOURCES = io.h io.cc \
+ 			  commands.cc commands.h \
+ 			  main.cc
+ 
+-usbprog_LDADD = ../usbprog/libusbprog.la
++usbprog_LDADD = ../usbprog/libusbprog.la ../md5/libmd5.a
+ man_MANS = usbprog.1
+ all: all-am
+ 
