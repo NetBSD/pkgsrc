@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2010/06/13 22:45:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2010/07/21 03:17:33 sbd Exp $
 
 BUILDLINK_TREE+=	cups
 
@@ -14,6 +14,10 @@ pkgbase := cups
 
 .if !empty(PKG_BUILD_OPTIONS.cups:Mkerberos)
 .include "../../mk/krb5.buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.cups:Mdnssd)
+.include "../../net/mDNSResponder/buildlink3.mk"
 .endif
 
 .include "../../graphics/png/buildlink3.mk"
