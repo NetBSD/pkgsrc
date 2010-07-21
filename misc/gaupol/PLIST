@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/06/15 09:17:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/07/21 11:29:37 wiz Exp $
 bin/gaupol
 ${PYSITELIB}/aeidon/__init__.py
 ${PYSITELIB}/aeidon/__init__.pyc
@@ -357,6 +357,9 @@ ${PYSITELIB}/gaupol/dialogs/message.pyo
 ${PYSITELIB}/gaupol/dialogs/multiclose.py
 ${PYSITELIB}/gaupol/dialogs/multiclose.pyc
 ${PYSITELIB}/gaupol/dialogs/multiclose.pyo
+${PYSITELIB}/gaupol/dialogs/multisave.py
+${PYSITELIB}/gaupol/dialogs/multisave.pyc
+${PYSITELIB}/gaupol/dialogs/multisave.pyo
 ${PYSITELIB}/gaupol/dialogs/open.py
 ${PYSITELIB}/gaupol/dialogs/open.pyc
 ${PYSITELIB}/gaupol/dialogs/open.pyo
@@ -512,6 +515,7 @@ share/gaupol/ui/header-dialog.ui
 share/gaupol/ui/insert-dialog.ui
 share/gaupol/ui/language-dialog.ui
 share/gaupol/ui/multiclose-dialog.ui
+share/gaupol/ui/multisave-dialog.ui
 share/gaupol/ui/open-dialog.ui
 share/gaupol/ui/preferences-dialog.ui
 share/gaupol/ui/previewerr-dialog.ui
@@ -539,6 +543,7 @@ share/icons/hicolor/scalable/apps/gaupol.svg
 share/locale/ca/LC_MESSAGES/gaupol.mo
 share/locale/de/LC_MESSAGES/gaupol.mo
 share/locale/es/LC_MESSAGES/gaupol.mo
+share/locale/fi/LC_MESSAGES/gaupol.mo
 share/locale/hu/LC_MESSAGES/gaupol.mo
 share/locale/pl/LC_MESSAGES/gaupol.mo
 share/locale/ru/LC_MESSAGES/gaupol.mo
