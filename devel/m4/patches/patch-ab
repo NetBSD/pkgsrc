@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2010/07/20 13:40:02 tnn Exp $
+$NetBSD: patch-ab,v 1.10 2010/07/21 11:57:52 tron Exp $
 
 DragonFly PR pkg/43098
 Upstream supposedly has a better fix for this for the next m4 release.
@@ -9,7 +9,7 @@ Upstream supposedly has a better fix for this for the next m4 release.
  
  
  /* Flags to be set in the `posix_spawnattr_t'.  */
-+#if !@HAVE_POSIX_SPAWN@
++#if !@HAVE_POSIX_SPAWN@ || defined(__APPLE__)
  #if @REPLACE_POSIX_SPAWN@
  /* Use the values from the system, for better compatibility.  */
  /* But this implementation does not support AIX extensions.  */
