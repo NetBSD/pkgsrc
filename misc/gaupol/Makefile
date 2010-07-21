@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/06/15 09:17:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/07/21 11:29:37 wiz Exp $
 #
 
-DISTNAME=	gaupol-0.16.1
+DISTNAME=	gaupol-0.17
 CATEGORIES=	misc
-MASTER_SITES=	http://download.gna.org/gaupol/0.16/
+MASTER_SITES=	http://download.gna.org/gaupol/0.17/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://home.gna.org/gaupol/index.html
@@ -21,12 +21,7 @@ USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
 PKG_DESTDIR_SUPPORT=		user-destdir
 
-# https://bugzilla.gnome.org/show_bug.cgi?id=620665
-SUBST_CLASSES+=			manpath
-SUBST_FILES.manpath=		INSTALL manifest/data-files.gaupol
-SUBST_MESSAGE.manpath=		Fixing man page installation path.
-SUBST_SED.manpath=		-e "s,share/man/man1,${PKGMANDIR}/man1,"
-SUBST_STAGE.manpath=		pre-build
+PYSETUPARGS=		--mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
