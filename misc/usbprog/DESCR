@@ -1,0 +1,3 @@
+This is the programming tool needed to replace the firmware on the USBprog
+hardware. It automatically retrieves a list of available firmwares from the
+internet, downloads them and uploads it to the USBprog adapter.
