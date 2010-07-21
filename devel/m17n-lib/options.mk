@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/04/12 22:42:59 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2010/07/21 13:11:11 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.m17n-lib
 PKG_SUPPORTED_OPTIONS=	anthy x11 libthai
@@ -16,6 +16,7 @@ PLIST_VARS+=		x11
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libotf+=	libotf>=0.9.11
 .include "../../graphics/libotf/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
