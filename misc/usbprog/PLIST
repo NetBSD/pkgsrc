@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/21 11:25:42 drochner Exp $
+bin/usbprog
+bin/usbprog-gui
+include/usbprog/date.h
+include/usbprog/devices.h
+include/usbprog/digest.h
+include/usbprog/downloader.h
+include/usbprog/firmwarepool.h
+include/usbprog/inifile.h
+include/usbprog/optionparser.h
+include/usbprog/stringutil.h
+include/usbprog/usbprog.h
+include/usbprog/util.h
+lib/libusbprog.la
+man/man1/usbprog-gui.1
+man/man1/usbprog.1
+share/applications/usbprog.desktop
+share/doc/usbprog/USBprog.pdf
+share/pixmaps/usbprog_icon.xpm
