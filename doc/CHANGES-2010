@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2534 2010/07/21 11:18:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2535 2010/07/21 11:29:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/mercury to 0.13.1 [asau 2010-07-20]
 	Updated pkgtools/pkg_comp to 1.34 [jmmv 2010-07-20]
 	Updated devel/autoconf to 2.66 [wiz 2010-07-21]
+	Updated misc/gaupol to 0.17 [wiz 2010-07-21]
