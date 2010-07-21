@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2008/08/01 06:36:26 dsainty Exp $
+# $NetBSD: options.mk,v 1.7 2010/07/21 18:48:27 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.curl
-PKG_SUPPORTED_OPTIONS=	inet6 libssh2 gssapi ldap
+PKG_SUPPORTED_OPTIONS=	inet6 libssh2 gssapi ldap rtmp
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == NetBSD
 # Kerberos is built in - no additional dependency
@@ -37,4 +37,11 @@ CONFIGURE_ARGS+=	--enable-ldap
 CONFIGURE_ARGS+=	--enable-ldaps
 .else
 CONFIGURE_ARGS+=	--disable-ldap
+.endif
+
+.if !empty(PKG_OPTIONS:Mrtmp)
+.include "../../net/rtmpdump/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-librtmp
+.else
+CONFIGURE_ARGS+=	--without-librtmp
 .endif
