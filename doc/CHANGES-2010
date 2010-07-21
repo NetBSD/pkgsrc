@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2536 2010/07/21 13:32:46 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2537 2010/07/21 19:55:10 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3394,3 +3394,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/autoconf to 2.66 [wiz 2010-07-21]
 	Updated misc/gaupol to 0.17 [wiz 2010-07-21]
 	Updated time/evolution-webcal to 2.28.1 [obache 2010-07-21]
+	Updated devel/xulrunner to 1.9.2.7 [tnn 2010-07-21]
+	Updated www/firefox to 3.6.7 [tnn 2010-07-21]
+	Updated www/seamonkey to 2.0.6 [tnn 2010-07-21]
+	Updated mail/thunderbird to 3.1.1 [tnn 2010-07-21]
