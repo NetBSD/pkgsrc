@@ -19,3 +19,12 @@ Pullup ticket #3164 - requested by sbd
 print/cups: build fix
 Pullup ticket #3173 - requested by drochner
 graphics/freetype2: security update
+Pullup ticket #3176 - requested by sbd
+misc/rpm: build fix
+Pullup ticket #3177 - requested by tnn
+devel/xulrunner: security update
+www/firefox: security update
+Pullup ticket #3178 - requested by tnn
+www/seamonkey: security update and build fix
+Pullup ticket #3179 - requested by tnn
+mail/thunderbird: security update and build fix
