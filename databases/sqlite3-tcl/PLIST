@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/03/12 09:11:27 adam Exp $
-lib/tcl8.4/sqlite3/libsqlite3623.so
+@comment $NetBSD: PLIST,v 1.7 2010/07/22 21:07:46 adam Exp $
+lib/tcl8.4/sqlite3/libsqlite3.7.0.so
 lib/tcl8.4/sqlite3/pkgIndex.tcl
 man/mann/sqlite3.n
