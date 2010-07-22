@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2538 2010/07/22 14:11:05 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2539 2010/07/22 14:52:51 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3400,3 +3400,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/thunderbird to 3.1.1 [tnn 2010-07-21]
 	Updated www/contao29 to 2.9.0nb2 [taca 2010-07-22]
 	Updated www/contao29-translations to 20100720 [taca 2010-07-22]
+	Updated net/Transmission to 2.03 [tnn 2010-07-22]
