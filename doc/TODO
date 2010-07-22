@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9482 2010/07/21 20:53:54 wiz Exp $
+$NetBSD: TODO,v 1.9483 2010/07/22 21:12:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -991,7 +991,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ns-3.8
 	o ns-flash-10
 	o ns-plugger-common-5.1.3
-	o ntop-4.0
 	o ntp-4.2.6p2
 	o ntp4-4.2.6
 	o nulib2-220
@@ -1281,7 +1280,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o star-1.5.1
 	o statist-1.3.0
 	o stella-3.1.2
-	o stellarium-0.10.5
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
