@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2010/01/21 17:41:07 heinz Exp $
+# $NetBSD: Makefile,v 1.70.4.1 2010/07/22 11:58:43 tron Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	6
@@ -30,6 +30,7 @@ CONFIGURE_ENV+=		varprefix=${RPM_DB_PREFIX:Q}
 
 # Needs help finding bdb.
 LIBS+=			${BDB_LIBS:Q}
+LDFLAGS+=		${PTHREAD_LDFLAGS}
 
 MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man8
 MAKE_FLAGS+=		ROOT=${DESTDIR}
