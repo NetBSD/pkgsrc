@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2009/04/24 10:18:03 adam Exp $
+$NetBSD: patch-aa,v 1.13 2010/07/22 21:10:52 adam Exp $
 
---- Makefile.am.orig	2008-12-03 23:00:22.000000000 +0100
+--- Makefile.am.orig	2010-04-25 12:52:28.000000000 +0000
 +++ Makefile.am
-@@ -76,9 +76,7 @@ ETTER_PASSIVE_DOWNLOAD_PARMS = "rev=HEAD
+@@ -74,9 +74,7 @@ ETTER_PASSIVE_DOWNLOAD_PARMS = "rev=HEAD
  NTOPDATA = ntop-cert.pem \
             $(ETTER_PASSIVE) \
             oui.txt.gz \
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.12 2009/04/24 10:18:03 adam Exp $
  
  NTOPHTML = html html/*.js html/*.html  html/*.gif html/*.jpg html/*.ico html/*.png \
             html/*.css html/*.dtd \
-@@ -159,8 +157,6 @@ man_MANS = ntop.8
+@@ -157,8 +155,6 @@ man_MANS = ntop.8
  .PHONY: snapshot
  
  
@@ -22,11 +22,12 @@ $NetBSD: patch-aa,v 1.12 2009/04/24 10:18:03 adam Exp $
  
  CLEANLIST = `ls -l $(DESTDIR)$(libdir)/*ntop*.so $(DESTDIR)$(libdir)/*Plugin*.so | \
            grep -v $(VERSION) | \
-@@ -270,7 +266,6 @@ libclean:
+@@ -336,7 +332,7 @@ install: install-recursive
+ install-selinux-policy:
+ 	chcon -t textrel_shlib_t $(DESTDIR)$(libdir)/*ntop*.so
  
- install: install-recursive
- 
--	cd @GEO_DIR@; make install
- 
- 	@mkdir -p $(DESTDIR)/$(CFG_DBFILE_DIR)
- 
+-install-data-local: ntop.txt ntop.html faq.html dnetter
++install-data-local: ntop.txt ntop.html faq.html
+ 	@$(top_srcdir)/mkinstalldirs $(DESTDIR)/$(libdir)/plugins;
+ 	@if ! test -d $(DESTDIR)/$(datadir)/ntop; then \
+ 	  $(top_srcdir)/mkinstalldirs $(DESTDIR)/$(datadir)/ntop; \
