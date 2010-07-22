@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.8 2008/11/03 17:30:15 wiz Exp $
+# $NetBSD: plugins.mk,v 1.9 2010/07/22 12:57:15 drochner Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
@@ -79,5 +79,4 @@ SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/.*/libgst|${BUILDLINK_PREFI
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/liboil/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"

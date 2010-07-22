@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/05/14 16:28:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/07/22 12:57:15 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
@@ -159,7 +159,13 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstr
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtpbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtppayloads.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspbase64.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspconnection.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspdefs.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspextension.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspmessage.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtsprange.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtsptransport.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspurl.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstsdpmessage.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gststreamvolume.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttag.html
@@ -243,7 +249,6 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugin
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audiotestsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-cdparanoia.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin2.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ffmpegcolorspace.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gdp.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gio.html
@@ -318,6 +323,7 @@ share/locale/pl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/pt_BR/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/ru/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sk/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/sl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sq/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sr/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sv/LC_MESSAGES/gst-plugins-base-0.10.mo
