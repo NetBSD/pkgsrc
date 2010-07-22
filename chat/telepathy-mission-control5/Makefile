@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/09 09:46:49 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/22 08:31:35 drochner Exp $
 #
 
 DISTNAME=	telepathy-mission-control-5.5.1
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+= --enable-gnome-keyring
 
 # needs py-twisted
 # TEST_TARGET= check
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
