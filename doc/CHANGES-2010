@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2537 2010/07/21 19:55:10 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2538 2010/07/22 14:11:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3398,3 +3398,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/firefox to 3.6.7 [tnn 2010-07-21]
 	Updated www/seamonkey to 2.0.6 [tnn 2010-07-21]
 	Updated mail/thunderbird to 3.1.1 [tnn 2010-07-21]
+	Updated www/contao29 to 2.9.0nb2 [taca 2010-07-22]
+	Updated www/contao29-translations to 20100720 [taca 2010-07-22]
