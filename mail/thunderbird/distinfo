@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.69 2010/06/24 18:01:38 tnn Exp $
+$NetBSD: distinfo,v 1.69.2.1 2010/07/22 16:11:00 tron Exp $
 
 SHA1 (enigmail-1.0.1.tar.gz) = 334e70723fffc0631dadb6fd4449afffdeafc3f2
 RMD160 (enigmail-1.0.1.tar.gz) = 2abd8e70fcfcd2e75e71a97a5a3c7d1e0c292666
 Size (enigmail-1.0.1.tar.gz) = 1201945 bytes
-SHA1 (thunderbird-3.0.5.source.tar.bz2) = c51b6c6a9357578beb7440e4d3cf4594a61fd6a7
-RMD160 (thunderbird-3.0.5.source.tar.bz2) = a5ebfbf5444fe694cbd9bc7a7131460e404c5d40
-Size (thunderbird-3.0.5.source.tar.bz2) = 60574905 bytes
+SHA1 (thunderbird-3.0.6.source.tar.bz2) = ad18ba63144060d91e3aac93a477064372596e80
+RMD160 (thunderbird-3.0.6.source.tar.bz2) = a8796abfc84f60aa3d0f17454b3e3debfb21bf5a
+Size (thunderbird-3.0.6.source.tar.bz2) = 60485828 bytes
 SHA1 (patch-aa) = 0d46562e73fce3fc1bf590ac93a28b2202a8e214
 SHA1 (patch-aa-toplevel) = 458051a1b3318b49124192c6e97cb9ed0d92dead
 SHA1 (patch-ab) = c7a6961362b131f0a39f65355562b115fae3be85
@@ -35,6 +35,9 @@ SHA1 (patch-ay) = 5aaeb992cab024fb2b6035ddee239a8534b23aee
 SHA1 (patch-az) = 0e04c1c740ad3f1462a6cda4a3832378acefb600
 SHA1 (patch-ba) = fd28f3b24848e7221078ef692eef7ccae8625987
 SHA1 (patch-bb) = 70d1d1fed2f611fa0185ca5736dae26c8cbc2f12
+SHA1 (patch-directory_c-sdk_configure.in) = 4d8d8c1425ca26036d8f5179f954dbea2203de36
+SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = 0e1c188af241289ce0a9fc252a063a69f3d504a4
+SHA1 (patch-directory_c-sdk_ldap_libraries_libldap_Makefile.in) = 6e9788e5e9575fc0813f5f0e178cc2f5659ea781
 SHA1 (patch-ma) = 9b9bc5e5ced5831aa14e1549ed2ddf0b9c2ce986
 SHA1 (patch-ma-toplevel) = 460326a0551fecd13ca188cff907c89cce359c31
 SHA1 (patch-mb) = 8bdd47c4e57ae63c971766286ce8626d3341c92e
@@ -49,7 +52,7 @@ SHA1 (patch-ml) = ef7d87fff48f298f4c1ed037439eaf8c7c574f68
 SHA1 (patch-mm) = 04d9105ab0fb520690b58230e90bf6217b439df7
 SHA1 (patch-mn) = beb92ccc59f909f0d4f5f5bb62ad834b55fc94ce
 SHA1 (patch-mo) = 93590d077e305a369ce9548165e0f1d8edf040b2
-SHA1 (patch-mp) = 3da5e645d4e0c704ad8147c33f66bb13ec7c1bc6
+SHA1 (patch-mp) = 24bac4975548f0a058c2770865706fedb27aa0e6
 SHA1 (patch-na) = b7c0feed9546ca1168c696bf7ea6bbc8ea4564c4
 SHA1 (patch-nd) = 007b8d1310990253e86dab579397b02ced42cb71
 SHA1 (patch-pa) = ee713ec24b453aaf3f1964e8100b26ecae3bf6a4
