@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/22 13:22:01 drochner Exp $
 #
 
 GST_PLUGINS0.10_NAME=	pango
@@ -8,8 +8,6 @@ GST_PLUGINS0.10_FLAGS=	pango
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/gst-plugins0.10-base/Makefile.common"
-
-PKGREVISION=		1
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
