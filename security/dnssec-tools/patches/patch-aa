@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/07/22 21:08:26 pettai Exp $
+
+--- Makefile.in.orig	2010-06-30 14:51:12.000000000 +0000
++++ Makefile.in
+@@ -15,7 +15,7 @@ man1dir=man1
+ #man8dir=@man8dir@
+ BUILDDIR=@abs_top_builddir@
+ PERLDIRS=tools/modules tools/donuts tools/mapper tools/scripts tools/convertar \
+-         tools/dnspktflow tools/maketestzone tools/etc tools/drawvalmap
++         tools/dnspktflow tools/maketestzone tools/drawvalmap
+ PERLARGS=@PERLARGS@
+ SUBDIRS=@DNSSEC_SUBDIRS@
+ MKPATH=$(top_srcdir)/mkinstalldirs
+@@ -46,9 +46,9 @@ nextstepinstructions: subdirinstall
+ 	$(QUIET)echo ""
+ 
+ maninstall:
+-	$(MKPATH) $(mandir)/$(man1dir)
++	$(MKPATH) $(DESTDIR)/$(mandir)/$(man1dir)
+ 	for i in $(MAN1PAGES) ; do		\
+-	  $(DOCINSTALL) docs/$$i $(DESTDIR)/$(mandir)/$(man1dir) ;	\
++	  $(INSTALL) docs/$$i $(DESTDIR)/$(mandir)/$(man1dir) ;	\
+ 	done
+ 
+ 
