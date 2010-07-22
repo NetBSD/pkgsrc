@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2540 2010/07/22 16:47:51 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.2541 2010/07/22 19:35:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3414,3 +3414,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/vte to 0.24.3 [drochner 2010-07-22]
 	Updated graphics/freetype2 to 2.4.1 [drochner 2010-07-22]
 	Added devel/orc version 0.4.6 [drochner 2010-07-22]
+	Added security/py-crypto version 2.1.0 [gdt 2010-07-22]
