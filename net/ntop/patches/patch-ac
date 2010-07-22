@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.8 2010/07/22 21:10:52 adam Exp $
+
+--- initialize.c.orig	2010-07-20 20:46:07.000000000 +0000
++++ initialize.c
+@@ -365,7 +365,7 @@ void initCounters(void) {
+ 
+   setDomainName();
+ 
+-#ifdef INET6
++#if 0
+   _in6addr_linklocal_allnodes.s6_addr[0] = 0xff;
+   _in6addr_linklocal_allnodes.s6_addr[1] = 0x02;
+   _in6addr_linklocal_allnodes.s6_addr[2] = 0x00;
