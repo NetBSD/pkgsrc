@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/22 19:39:41 gdt Exp $
+
+SHA1 (pycryptopp-0.5.19.tar.gz) = 4ac6155cf665dceb7d4bfbd48e02aadd4104672c
+RMD160 (pycryptopp-0.5.19.tar.gz) = ef6911b578282ddbc1fff8a1607a6039a3503617
+Size (pycryptopp-0.5.19.tar.gz) = 1086059 bytes
