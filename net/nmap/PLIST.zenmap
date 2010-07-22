@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zenmap,v 1.6 2010/03/21 21:58:23 pettai Exp $
+@comment $NetBSD: PLIST.zenmap,v 1.7 2010/07/22 20:46:29 pettai Exp $
 bin/nmapfe
 bin/uninstall_zenmap
 bin/xnmap
@@ -133,6 +133,8 @@ ${PYSITELIB}/zenmapGUI/NmapOutputViewer.py
 ${PYSITELIB}/zenmapGUI/NmapOutputViewer.pyc
 ${PYSITELIB}/zenmapGUI/OptionBuilder.py
 ${PYSITELIB}/zenmapGUI/OptionBuilder.pyc
+${PYSITELIB}/zenmapGUI/Print.py
+${PYSITELIB}/zenmapGUI/Print.pyc
 ${PYSITELIB}/zenmapGUI/ProfileCombo.py
 ${PYSITELIB}/zenmapGUI/ProfileCombo.pyc
 ${PYSITELIB}/zenmapGUI/ProfileEditor.py
@@ -161,8 +163,6 @@ ${PYSITELIB}/zenmapGUI/SearchGUI.py
 ${PYSITELIB}/zenmapGUI/SearchGUI.pyc
 ${PYSITELIB}/zenmapGUI/SearchWindow.py
 ${PYSITELIB}/zenmapGUI/SearchWindow.pyc
-${PYSITELIB}/zenmapGUI/Splash.py
-${PYSITELIB}/zenmapGUI/Splash.pyc
 ${PYSITELIB}/zenmapGUI/TargetCombo.py
 ${PYSITELIB}/zenmapGUI/TargetCombo.pyc
 ${PYSITELIB}/zenmapGUI/TopologyPage.py
@@ -241,7 +241,6 @@ share/zenmap/pixmaps/redhat_32.png
 share/zenmap/pixmaps/redhat_75.png
 share/zenmap/pixmaps/solaris_32.png
 share/zenmap/pixmaps/solaris_75.png
-share/zenmap/pixmaps/splash.png
 share/zenmap/pixmaps/throbber.gif
 share/zenmap/pixmaps/throbber.png
 share/zenmap/pixmaps/ubuntu_32.png
