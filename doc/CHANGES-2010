@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2543 2010/07/22 21:12:53 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2544 2010/07/22 21:30:50 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3419,3 +3419,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/sqlite3 to 3.7.0 [adam 2010-07-22]
 	Updated databases/sqlite3-tcl to 3.7.0 [adam 2010-07-22]
 	Updated net/ntop to 4.0 [adam 2010-07-22]
+	Added security/dnssec-tools version 1.7 [pettai 2010-07-22]
