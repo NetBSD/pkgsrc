@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2010/05/14 16:26:07 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2010/07/22 12:51:49 drochner Exp $
 #
 
-DISTNAME=		gstreamer-0.10.29
+DISTNAME=		gstreamer-0.10.30
 PKGNAME=		${DISTNAME:S/gstreamer/gstreamer0.10/}
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gstreamer/
@@ -59,6 +59,8 @@ PLIST_VARS+=	gstcheck
 .if !empty(PKG_OPTIONS:Mgstcheck)
 .include "../../devel/check/buildlink3.mk"
 PLIST.gstcheck=	yes
+# don't worry if the "GstABI" check fails -- GstPlugin contains
+# off_t and time_t which are system dependent
 TEST_TARGET=	check-torture
 .else
 CONFIGURE_ARGS+= --disable-check
