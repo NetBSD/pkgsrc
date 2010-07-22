@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2539 2010/07/22 14:52:51 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2540 2010/07/22 16:47:51 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3401,3 +3401,16 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29 to 2.9.0nb2 [taca 2010-07-22]
 	Updated www/contao29-translations to 20100720 [taca 2010-07-22]
 	Updated net/Transmission to 2.03 [tnn 2010-07-22]
+	Updated multimedia/py-gstreamer0.10 to 0.10.19 [drochner 2010-07-22]
+	Updated multimedia/gst-plugins0.10-good to 0.10.24 [drochner 2010-07-22]
+	Updated multimedia/gst-plugins0.10-base to 0.10.30 [drochner 2010-07-22]
+	Updated multimedia/gstreamer0.10 to 0.10.30 [drochner 2010-07-22]
+	Added net/rtmpdump version 2.3 [drochner 2010-07-22]
+	Updated www/curl to 7.21.0 [drochner 2010-07-22]
+	Updated editors/lyx to 1.6.7 [drochner 2010-07-22]
+	Added misc/usbprog version 0.2.0 [drochner 2010-07-22]
+	Updated math/gnumeric110 to 1.10.7 [drochner 2010-07-22]
+	Updated misc/goffice0.8 to 0.8.7 [drochner 2010-07-22]
+	Updated x11/vte to 0.24.3 [drochner 2010-07-22]
+	Updated graphics/freetype2 to 2.4.1 [drochner 2010-07-22]
+	Added devel/orc version 0.4.6 [drochner 2010-07-22]
