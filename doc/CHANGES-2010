@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2546 2010/07/23 13:07:46 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.2547 2010/07/23 13:25:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3423,3 +3423,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/libgcrypt to 1.4.6 [adam 2010-07-23]
 	Updated audio/sox to 14.3.1 [adam 2010-07-23]
 	Updated www/ikiwiki to 3.20100722 [schmonz 2010-07-23]
+	Updated devel/SDL_ttf to 2.0.10 [adam 2010-07-23]
