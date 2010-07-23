@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/07/23 21:35:41 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/23 23:20:48 gdt Exp $
 bin/nevow-xmlgettext
 bin/nit
 doc/README
@@ -19,10 +19,10 @@ doc/html/default.css
 doc/man/nevow-xmlgettext.1
 doc/old/nevow.doc
 doc/old/toc.html
-${PYSITELIB}/Nevow-0.10.0-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/Nevow-0.10.0-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/Nevow-0.10.0-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/Nevow-0.10.0-py2.6.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/formless/__init__.py
 ${PYSITELIB}/formless/__init__.pyc
 ${PYSITELIB}/formless/__init__.pyo
