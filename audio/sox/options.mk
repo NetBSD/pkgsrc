@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/04/27 08:19:54 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2010/07/23 07:55:12 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sox
 PKG_SUPPORTED_OPTIONS=	lame oss
@@ -12,5 +12,5 @@ PKG_SUGGESTED_OPTIONS=
 .endif
 
 .if empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+=	--enable-oss=no
+CONFIGURE_ARGS+=	--without-oss
 .endif
