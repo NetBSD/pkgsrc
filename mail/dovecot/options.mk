@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2010/04/30 10:50:21 ghen Exp $
+# $NetBSD: options.mk,v 1.27 2010/07/23 07:44:51 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
@@ -95,7 +95,7 @@ CONFIGURE_ARGS+=	--without-gssapi
 ###
 ### Sieve and the ManageSieve patch
 ###
-.if !empty(PKG_OPTIONS:Mdovecot-sieve)
+.if !empty(PKG_OPTIONS:Mdovecot-sieve) || make(distinfo) || make(makesum)
 # ManageSieve needs Sieve to build.
 # We can't simply use CONFIGURE_DIRS+= and BUILD_DIRS+=
 #  because dovecot must be built before sieve can be configured
@@ -117,7 +117,7 @@ INSTALL_DIRS+=		${WRKSRC.sieve}
 # Augment PLIST for sieve
 PLIST_SRC+=		${PKGDIR}/PLIST.sieve
 
-.  if !empty(PKG_OPTIONS:Mdovecot-managesieve)
+.  if !empty(PKG_OPTIONS:Mdovecot-managesieve) || make(distinfo) || make(makesum)
 # The managesieve patch to dovecot
 PATCHFILES+=		${MANAGESIEVE_PATCH}
 # managesieve itself (built after both dovecot and sieve)
