@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/07/23 23:12:36 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/23 23:24:19 wiz Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.so
 ${PYSITELIB}/Crypto/Cipher/ARC2.so
 ${PYSITELIB}/Crypto/Cipher/ARC4.so
@@ -266,4 +266,3 @@ ${PYSITELIB}/Crypto/pct_warnings.py
 ${PYSITELIB}/Crypto/pct_warnings.pyc
 ${PYSITELIB}/Crypto/pct_warnings.pyo
 ${PYSITELIB}/${EGG_FILE}
-
