@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/27 08:19:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/07/23 07:55:12 adam Exp $
 bin/play
 bin/rec
 bin/sox
+bin/soxi
 include/sox.h
 include/soxstdint.h
-lib/libsfx.la
 lib/libsox.la
+lib/pkgconfig/sox.pc
 man/man1/play.1
 man/man1/rec.1
 man/man1/sox.1
+man/man1/soxi.1
 man/man3/libsox.3
 man/man7/soxeffect.7
-man/man7/soxexam.7
 man/man7/soxformat.7
