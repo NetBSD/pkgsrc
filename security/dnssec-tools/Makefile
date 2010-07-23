@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/22 21:08:26 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/23 08:42:05 pettai Exp $
 #
 
 DISTNAME=	dnssec-tools-1.7
@@ -34,7 +34,7 @@ PERL5_PACKLIST+=	auto/convertar/.packlist
 PERL5_PACKLIST+=	auto/dnssec-tools/.packlist
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=        --enable-nsec3
+CONFIGURE_ARGS+=        --with-nsec3
 CONFIGURE_ARGS+=	--with-resolv-conf=${PKG_SYSCONFDIR}/dnssec-tools/resolv.conf
 CONFIGURE_ARGS+=	--with-root-hints=${PKG_SYSCONFDIR}/dnssec-tools/root.hints
 CONFIGURE_ARGS+=	--with-perl-build-args="INSTALLDIRS=vendor DESTDIR=${DESTDIR}"
