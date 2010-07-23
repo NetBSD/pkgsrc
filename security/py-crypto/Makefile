@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/07/23 18:30:51 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2010/07/23 23:12:36 gdt Exp $
 #
 
 DISTNAME=	pycrypto-2.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-crypto-2.1.0
 CATEGORIES=	security python
 MASTER_SITES=	http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PY_NO_EGG=	no
+EGG_NAME?=	${DISTNAME}
+PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../lang/python/extension.mk"
