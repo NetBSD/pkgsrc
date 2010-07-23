@@ -1,17 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2009/01/11 02:31:28 dsainty Exp $
+$NetBSD: patch-aa,v 1.6 2010/07/23 13:22:12 adam Exp $
 
-We don't install the example programs so we can avoid building them.  showfont
-may otherwise fail to build with link time errors if include/SDL/SDL_config.h
-defines HAVE_ICONV.
-
---- Makefile.in.orig	2007-07-22 04:38:38.000000000 +1200
-+++ Makefile.in	2009-01-11 13:59:03.525361095 +1300
-@@ -42,7 +42,7 @@
+--- Makefile.in.orig	2009-10-19 08:18:21.000000000 +0000
++++ Makefile.in
+@@ -39,7 +39,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
 -noinst_PROGRAMS = showfont$(EXEEXT) glfont$(EXEEXT)
 +noinst_PROGRAMS = # showfont$(EXEEXT) glfont$(EXEEXT)
+ subdir = .
  DIST_COMMON = README $(am__configure_deps) \
  	$(libSDL_ttfinclude_HEADERS) $(srcdir)/Makefile.am \
- 	$(srcdir)/Makefile.in $(srcdir)/SDL_ttf.spec.in \
