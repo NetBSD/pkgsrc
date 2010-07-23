@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2545 2010/07/23 08:13:17 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2546 2010/07/23 13:07:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3422,3 +3422,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added security/dnssec-tools version 1.7 [pettai 2010-07-22]
 	Updated security/libgcrypt to 1.4.6 [adam 2010-07-23]
 	Updated audio/sox to 14.3.1 [adam 2010-07-23]
+	Updated www/ikiwiki to 3.20100722 [schmonz 2010-07-23]
