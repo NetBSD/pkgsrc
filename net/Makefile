@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.839 2010/07/21 18:30:28 drochner Exp $
+# $NetBSD: Makefile,v 1.840 2010/07/23 21:48:08 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -443,6 +443,7 @@ SUBDIR+=	publicfile
 SUBDIR+=	puf
 SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
+SUBDIR+=	py-foolscap
 SUBDIR+=	py-GeoIP
 SUBDIR+=	py-IP
 SUBDIR+=	py-METAR
