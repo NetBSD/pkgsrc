@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9484 2010/07/23 08:13:17 adam Exp $
+$NetBSD: TODO,v 1.9485 2010/07/23 13:25:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -350,7 +350,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o SDL_ttf-2.0.10
 	o Sigil-0.2.3
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.4
@@ -624,7 +623,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o freesci-0.6.4
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
-	o freetype2-2.4.0
 	o freewais-sf-2.2.14
 	o frozen-bubble-2.2.0
 	o ftplibpp-2.0.2
@@ -967,7 +965,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o multitail-5.2.6
 	o munin-1.4.4
 	o muse-0.9.2
-	o mysql51-server-5.1.48
 	o nagios-3.2.0
 	o nap-1.5.3
 	o nautilus-actions-2.30.3 [GNOME 2.30]
@@ -1076,7 +1073,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
-	o php5-5.3.2
+	o php5-5.2.14
+	o php5-5.3.3
 	o php-jpgraph-3.0.6
 	o phpmyadmin-3.3.4
 	o picp-0.6.8
