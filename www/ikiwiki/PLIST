@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/06/23 23:52:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/07/23 13:07:16 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -50,6 +50,7 @@ share/ikiwiki/directives/ikiwiki/directive/brokenlinks.mdwn
 share/ikiwiki/directives/ikiwiki/directive/calendar.mdwn
 share/ikiwiki/directives/ikiwiki/directive/color.mdwn
 share/ikiwiki/directives/ikiwiki/directive/comment.mdwn
+share/ikiwiki/directives/ikiwiki/directive/commentmoderation.mdwn
 share/ikiwiki/directives/ikiwiki/directive/copy.mdwn
 share/ikiwiki/directives/ikiwiki/directive/cut.mdwn
 share/ikiwiki/directives/ikiwiki/directive/cutpaste.mdwn
