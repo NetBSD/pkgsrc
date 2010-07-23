@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2010/07/23 07:55:12 adam Exp $
+# $NetBSD: Makefile,v 1.50 2010/07/23 13:25:54 adam Exp $
 
 DISTNAME=	sox-14.3.1
 CATEGORIES=	audio
@@ -18,6 +18,8 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gomp
 CONFIGURE_ARGS+=	--without-libltdl
+
+PKGCONFIG_OVERRIDE+=	sox.pc.in
 
 SUBST_CLASSES+=		gsm
 SUBST_FILES.gsm=	configure src/gsm.c src/wav.c CMakeLists.txt
