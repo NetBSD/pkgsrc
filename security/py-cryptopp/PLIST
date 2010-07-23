@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/22 19:39:41 gdt Exp $
-${PYSITELIB}/pycryptopp-0.5.19-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/pycryptopp-0.5.19-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/pycryptopp-0.5.19-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/pycryptopp-0.5.19-py2.6.egg-info/not-zip-safe
-${PYSITELIB}/pycryptopp-0.5.19-py2.6.egg-info/requires.txt
-${PYSITELIB}/pycryptopp-0.5.19-py2.6.egg-info/stdeb.cfg
-${PYSITELIB}/pycryptopp-0.5.19-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2010/07/23 23:17:48 gdt Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/stdeb.cfg
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pycryptopp/__init__.py
 ${PYSITELIB}/pycryptopp/__init__.pyc
 ${PYSITELIB}/pycryptopp/__init__.pyo
