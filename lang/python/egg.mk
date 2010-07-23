@@ -1,8 +1,12 @@
-# $NetBSD: egg.mk,v 1.10 2009/11/03 20:20:05 joerg Exp $
+# $NetBSD: egg.mk,v 1.11 2010/07/23 22:44:46 gdt Exp $
 #
 # Common logic to handle Python Eggs
 #
 .include "../../mk/bsd.fast.prefs.mk"
+
+# This file should be included to package python "distributions" which
+# use setuptools to create an egg.  The presence of egg-info in a
+# package does not indicate that the package is an egg.
 
 EGG_NAME?=	${DISTNAME}
 
