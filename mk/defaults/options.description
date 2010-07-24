@@ -496,6 +496,7 @@ theora			Use the theora codecs.
 threads			Enable threads support.
 tin-use-inn-spool	Use the INN spool directories.
 tls			Enable TLS support.
+tokyocabinet		Enable Tokyo Cabinet support.
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
 typolight-liveupdate	Allow using TYPOlight Live Update service.
