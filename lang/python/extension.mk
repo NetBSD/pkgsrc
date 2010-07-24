@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.27 2010/07/23 22:56:40 gdt Exp $
+# $NetBSD: extension.mk,v 1.28 2010/07/24 00:57:17 gdt Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -36,10 +36,12 @@ do-install:
 	 ${PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "install" ${_PYSETUPINSTALLARGS})
 .endif
 
-# XXX This suppress the installation of the egg-info file (and
+# PY_NO_EGG suppress the installation of the egg info file (and
 # therefore its inclusion in the package).  Python practice is be to
 # use these files to let 'require' verify that python distributions
-# are present.
+# are present, and therefore the default value of PY_NO_EGG=yes causes
+# pkgsrc not to conform to python norms.  The reason for this behavior
+# appears to be that creating egg info files was new in Python 2.5.
 PY_NO_EGG?=		yes
 .if !empty(PY_NO_EGG:M[yY][eE][sS])
 # see python25/patches/patch-av
