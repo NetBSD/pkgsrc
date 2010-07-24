@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9485 2010/07/23 13:25:31 adam Exp $
+$NetBSD: TODO,v 1.9486 2010/07/24 08:22:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -729,7 +729,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-www-2.26
 	o gupnp-0.13.4
 	o gutenprint-5.2.5
-	o gv-3.7.1
 	o gvfs-1.6.2
 	o gwaei-1.4.1
 	o gxemul-0.6.0 [pkg/43296]
