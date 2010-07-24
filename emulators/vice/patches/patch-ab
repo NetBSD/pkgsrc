@@ -1,46 +1,157 @@
-$NetBSD: patch-ab,v 1.9 2009/07/12 22:10:59 hasso Exp $
+$NetBSD: patch-ab,v 1.10 2010/07/24 09:44:57 wiz Exp $
 
---- configure.orig	2009-07-12 21:48:36 +0300
-+++ configure	2009-07-12 21:49:57 +0300
-@@ -27831,7 +27831,7 @@ _ACEOF
+1. dynamic lib support does not depend on the existence of libdl
+2. fix test(1) == (only supported by bash)
+3. fix png detection, was looking for symbol that is a #define
+   in png>=1.4
+
+--- configure.orig	2009-12-14 19:40:01.000000000 +0000
++++ configure
+@@ -12642,6 +12642,7 @@ fi
+ echo "${ECHO_T}$ac_cv_lib_dl_dlopen" >&6; }
+ if test $ac_cv_lib_dl_dlopen = yes; then
+    DYNLIB_LIBS="-ldl";
++fi
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_DYNLIB_SUPPORT
+@@ -12649,7 +12650,6 @@ _ACEOF
+ 
+                    dynlib_support=yes
+ 
+-fi
+ 
+   fi
+ elif test x"$is_win32" = "xyes" ; then
+@@ -19019,7 +19019,7 @@ fi
+ done
  
  
- case "$host_os" in
--  netbsd*)
-+  *)
-     VICEDIR="$PREFIX/share/vice";
+-  if test x"$with_pulse" == "xyes"; then
++  if test x"$with_pulse" = "xyes"; then
+ 
+ for ac_header in pulse/simple.h
+ do
+@@ -26103,10 +26103,10 @@ fi
  
  
-@@ -27844,32 +27844,6 @@ else
+     if test x"$ac_cv_header_png_h" = "xyes" ; then
+-      unset ac_cv_lib_png_png_check_sig
+-      { echo "$as_me:$LINENO: checking for png_check_sig in -lpng" >&5
+-echo $ECHO_N "checking for png_check_sig in -lpng... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_png_png_check_sig+set}" = set; then
++      unset ac_cv_lib_png_png_sig_cmp
++      { echo "$as_me:$LINENO: checking for png_sig_cmp in -lpng" >&5
++echo $ECHO_N "checking for png_sig_cmp in -lpng... $ECHO_C" >&6; }
++if test "${ac_cv_lib_png_png_sig_cmp+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -26124,11 +26124,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char png_check_sig ();
++char png_sig_cmp ();
+ int
+ main ()
+ {
+-return png_check_sig ();
++return png_sig_cmp ();
+   ;
+   return 0;
+ }
+@@ -26151,21 +26151,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  ac_cv_lib_png_png_check_sig=yes
++  ac_cv_lib_png_png_sig_cmp=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_png_png_check_sig=no
++	ac_cv_lib_png_png_sig_cmp=no
  fi
  
-     ;;
--  freebsd*)
--    VICEDIR="$PREFIX/lib/vice";
--
--
--if true; then
--  ALTERNATE_DOCDIR_TRUE=
--  ALTERNATE_DOCDIR_FALSE='#'
--else
--  ALTERNATE_DOCDIR_TRUE='#'
--  ALTERNATE_DOCDIR_FALSE=
--fi
--
--    ;;
--  *)
--    VICEDIR="$PREFIX/lib/vice";
--
--
--if false; then
--  ALTERNATE_DOCDIR_TRUE=
--  ALTERNATE_DOCDIR_FALSE='#'
--else
--  ALTERNATE_DOCDIR_TRUE='#'
--  ALTERNATE_DOCDIR_FALSE=
--fi
--
--    ;;
- esac
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_check_sig" >&5
+-echo "${ECHO_T}$ac_cv_lib_png_png_check_sig" >&6; }
+-if test $ac_cv_lib_png_png_check_sig = yes; then
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_sig_cmp" >&5
++echo "${ECHO_T}$ac_cv_lib_png_png_sig_cmp" >&6; }
++if test $ac_cv_lib_png_png_sig_cmp = yes; then
+    GFXOUTPUT_LIBS="-lpng $GFXOUTPUT_LIBS";
+                      GFXOUTPUT_DRIVERS="$GFXOUTPUT_DRIVERS pngdrv.o";
  
+@@ -26175,11 +26175,11 @@ _ACEOF
  
+ fi
+ 
+-      if test "$ac_cv_lib_png_png_check_sig" = "no"; then
+-        unset ac_cv_lib_png_png_check_sig
+-        { echo "$as_me:$LINENO: checking for png_check_sig in -lpng" >&5
+-echo $ECHO_N "checking for png_check_sig in -lpng... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_png_png_check_sig+set}" = set; then
++      if test "$ac_cv_lib_png_png_sig_cmp" = "no"; then
++        unset ac_cv_lib_png_png_sig_cmp
++        { echo "$as_me:$LINENO: checking for png_sig_cmp in -lpng" >&5
++echo $ECHO_N "checking for png_sig_cmp in -lpng... $ECHO_C" >&6; }
++if test "${ac_cv_lib_png_png_sig_cmp+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -26197,11 +26197,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char png_check_sig ();
++char png_sig_cmp ();
+ int
+ main ()
+ {
+-return png_check_sig ();
++return png_sig_cmp ();
+   ;
+   return 0;
+ }
+@@ -26224,21 +26224,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  ac_cv_lib_png_png_check_sig=yes
++  ac_cv_lib_png_png_sig_cmp=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_png_png_check_sig=no
++	ac_cv_lib_png_png_sig_cmp=no
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_check_sig" >&5
+-echo "${ECHO_T}$ac_cv_lib_png_png_check_sig" >&6; }
+-if test $ac_cv_lib_png_png_check_sig = yes; then
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_sig_cmp" >&5
++echo "${ECHO_T}$ac_cv_lib_png_png_sig_cmp" >&6; }
++if test $ac_cv_lib_png_png_sig_cmp = yes; then
+    GFXOUTPUT_LIBS="-lpng -lz $GFXOUTPUT_LIBS";
+                        GFXOUTPUT_DRIVERS="$GFXOUTPUT_DRIVERS pngdrv.o";
+ 
+@@ -26250,7 +26250,7 @@ fi
+ 
+       fi
+     fi
+-    if test x"$ac_cv_lib_png_png_check_sig" != "xyes"; then
++    if test x"$ac_cv_lib_png_png_sig_cmp" != "xyes"; then
+       if test x"$with_zlib" != "xno" ; then
+ 
+ cat >>confdefs.h <<\_ACEOF
