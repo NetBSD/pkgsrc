@@ -1,0 +1,7 @@
+The argparse module provides an easy, declarative interface for
+creating command line tools, which knows how to:
+
+    * parse the arguments and flags from sys.argv
+    * convert arg strings into objects for your program
+    * format and print informative help messages
+    * and much more...
