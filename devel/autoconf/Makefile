@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2010/07/21 11:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2010/07/24 20:46:16 tron Exp $
 
-DISTNAME=		autoconf-2.66
+DISTNAME=		autoconf-2.65
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
@@ -37,5 +38,16 @@ CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/autoconf/autoconf.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/autotest/autotest.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/m4sugar/m4sugar.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/m4sugar/m4sh.m4f
+
+# wiz 20090809: next section commented out because it seems not to be needed.
+# re-enable if it is; otherwise it will be removed during the next
+# update:
+# pkgsrc symlinks config/config.guess and config.sub to mk/gnu-config
+# when you do not preserve timestamps in mk, this can cause
+# config.guess and config.sub to be newer than config.guess.1 and
+# config.sub.1.  In that case, the man pages need to be rebuilt, and
+# build fails because pkgsrc lacks help2man.  Work around this situation.
+#pre-build:
+#	${TOUCH} ${WRKSRC}/man/config.sub.1 ${WRKSRC}/man/config.guess.1
 
 .include "../../mk/bsd.pkg.mk"
