@@ -1,0 +1,4 @@
+If your source tree is coming from darcs (i.e. it is in a darcs
+repository), this tool will determine the most recent release tag,
+count the patches that have been applied since then, and compute a
+version number to be written into _version.py.
