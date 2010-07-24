@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/24 17:25:51 gdt Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/argparse.py
+${PYSITELIB}/argparse.pyc
+${PYSITELIB}/argparse.pyo
