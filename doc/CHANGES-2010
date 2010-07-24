@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2560 2010/07/24 13:43:09 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2561 2010/07/24 15:16:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3443,3 +3443,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/py-pyutil version 1.7.9 [gdt 2010-07-24]
 	Added converters/py-zfec version 1.4.7 [gdt 2010-07-24]
 	Updated net/avahi to 0.6.27 [obache 2010-07-24]
+	Added devel/py-darcsver version 1.5.1 [gdt 2010-07-24]
