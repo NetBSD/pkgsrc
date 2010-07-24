@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2010/07/24 13:42:12 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 
@@ -28,9 +28,8 @@ CONFIGURE_ARGS+=	--disable-gdbm
 ###
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/application.mk"
+PY_PATCHPLIST=		yes
 .  include "../../lang/python/extension.mk"
-PYTHON_VERSIONS_ACCEPTED=	25 24
-PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
 .  include "../../sysutils/py-dbus/buildlink3.mk"
 .  include "../../x11/py-gtk2/buildlink3.mk"
 DEPENDS+=		${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
