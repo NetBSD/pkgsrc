@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2008/06/20 01:10:02 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2010/07/24 09:44:57 wiz Exp $
+
+Better destdir support.
 
 --- po/Makefile.in.in.orig	2008-06-18 16:02:50.000000000 +0000
 +++ po/Makefile.in.in
