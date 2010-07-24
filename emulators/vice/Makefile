@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.83 2010/06/13 22:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2010/07/24 09:44:57 wiz Exp $
 #
 
-DISTNAME=		vice-1.22
-PKGREVISION=		8
+DISTNAME=		vice-2.2
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/emulators/VICE/ \
-			http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/
+			http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/ \
+			http://www.trikaliotis.net/Download/vice/
 
-MAINTAINER=		kristerw@NetBSD.org
-HOMEPAGE=		http://www.viceteam.org/
+MAINTAINER=		rhialto@falu.nl
+HOMEPAGE=		http://vice-emu.sourceforge.net/
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
+LICENSE=		gnu-gpl-v2
+
+PATCH_SITES=            http://www.students.tut.fi/~nuotio/
+PATCHFILES+=            vice_2_2_netbsd.patch
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -44,6 +48,7 @@ CONFIGURE_ARGS+=	--without-oss
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
