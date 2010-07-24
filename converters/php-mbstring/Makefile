@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/16 15:03:42 taca Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/24 22:24:21 tron Exp $
 
 MODNAME=		mbstring
-PKGREVISION=		1
 CATEGORIES+=		converters
 COMMENT=		PHP extension for multibyte characters support
 
