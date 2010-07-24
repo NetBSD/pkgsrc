@@ -1,0 +1,24 @@
+An alternate base32 encoder (not RFC 3548 compliant).
+
+The rationale for base-32 encoding in RFC 3548 [1] is as written therein: "The
+Base 32 encoding is designed to represent arbitrary sequences of octets in a
+form that needs to be case insensitive but need not be humanly readable.".
+
+The rationale for our encoding is different -- it is to represent arbitrary
+sequences of octets in a form that is as convenient as possible for human
+users to manipulate.  In particular, z-base-32 was created in order to serve
+the Mnet project [3], where 30-octet cryptographic values are encoded into
+URIs for humans to manipulate.  Anticipated uses of these URIs include cut-
+and-paste, text editing (e.g. in HTML files), manual transcription via a
+keyboard, manual transcription via pen-and-paper, vocal transcription over
+phone or radio, etc.
+
+The desiderata for such an encoding are:
+
+ * minimizing transcription errors -- e.g. the well-known problem of confusing
+   `0' with `O'
+ * embedding into other structures -- e.g. search engines, structured or
+   marked-up text, file systems, command shells
+ * brevity -- Shorter URLs are better than longer ones.
+ * ergonomics -- Human users (especially non-technical ones) should find the
+   URIs as easy and pleasant as possible.  The uglier the URI looks, the worse.
