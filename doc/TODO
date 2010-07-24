@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9486 2010/07/24 08:22:20 obache Exp $
+$NetBSD: TODO,v 1.9487 2010/07/24 09:45:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1348,7 +1348,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o valgrind-3.5.0
 	o vera-1.17
 	o vfu-4.09
-	o vice-2.2 [pkgsrc-wip]
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
 	o viewvc-1.1.6
