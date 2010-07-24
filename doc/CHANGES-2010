@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2556 2010/07/24 12:51:26 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2557 2010/07/24 13:20:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3439,3 +3439,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/squirrelmail to 1.4.21 [tron 2010-07-24]
 	Updated net/youtube-dl to 20100724 [wiz 2010-07-24]
 	Updated audio/pulseaudio to 0.9.21nb3 [tron 2010-07-24]
+	Added devel/py-setuptools_trial version 0.5.4 [gdt 2010-07-24]
