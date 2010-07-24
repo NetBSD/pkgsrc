@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2006/10/23 12:29:56 tron Exp $
+$NetBSD: patch-aa,v 1.15 2010/07/24 08:22:02 obache Exp $
 
---- src/main.c.orig	2006-09-14 19:56:08.000000000 +0100
-+++ src/main.c	2006-10-23 12:50:43.000000000 +0100
-@@ -408,7 +408,7 @@
+--- src/main.c.orig	2010-06-04 17:34:53.000000000 +0000
++++ src/main.c
+@@ -467,7 +467,7 @@ int main(argc, argv)
     }
  
     /*### Manage GNU command line arguments ########################*/
