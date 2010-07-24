@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/24 15:15:10 gdt Exp $
+bin/darcsver
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/darcsver/__init__.py
+${PYSITELIB}/darcsver/__init__.pyc
+${PYSITELIB}/darcsver/__init__.pyo
+${PYSITELIB}/darcsver/_version.py
+${PYSITELIB}/darcsver/_version.pyc
+${PYSITELIB}/darcsver/_version.pyo
+${PYSITELIB}/darcsver/darcsvermodule.py
+${PYSITELIB}/darcsver/darcsvermodule.pyc
+${PYSITELIB}/darcsver/darcsvermodule.pyo
+${PYSITELIB}/darcsver/setuptools_command.py
+${PYSITELIB}/darcsver/setuptools_command.pyc
+${PYSITELIB}/darcsver/setuptools_command.pyo
+${PYSITELIB}/scripts/__init__.py
+${PYSITELIB}/scripts/__init__.pyc
+${PYSITELIB}/scripts/__init__.pyo
+${PYSITELIB}/scripts/darcsverscript.py
+${PYSITELIB}/scripts/darcsverscript.pyc
+${PYSITELIB}/scripts/darcsverscript.pyo
+share/doc/python-darcsver/README.txt
