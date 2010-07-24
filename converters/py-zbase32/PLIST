@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/24 17:56:26 gdt Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/zbase32/__init__.py
+${PYSITELIB}/zbase32/__init__.pyc
+${PYSITELIB}/zbase32/__init__.pyo
+${PYSITELIB}/zbase32/_version.py
+${PYSITELIB}/zbase32/_version.pyc
+${PYSITELIB}/zbase32/_version.pyo
+${PYSITELIB}/zbase32/test/__init__.py
+${PYSITELIB}/zbase32/test/__init__.pyc
+${PYSITELIB}/zbase32/test/__init__.pyo
+${PYSITELIB}/zbase32/test/test_zbase32.py
+${PYSITELIB}/zbase32/test/test_zbase32.pyc
+${PYSITELIB}/zbase32/test/test_zbase32.pyo
+${PYSITELIB}/zbase32/zbase32.py
+${PYSITELIB}/zbase32/zbase32.pyc
+${PYSITELIB}/zbase32/zbase32.pyo
+${PYSITELIB}/zbase32/zbase32id.py
+${PYSITELIB}/zbase32/zbase32id.pyc
+${PYSITELIB}/zbase32/zbase32id.pyo
