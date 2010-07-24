@@ -1,0 +1,17 @@
+$NetBSD: patch-ba,v 1.6 2010/07/24 12:51:09 tron Exp $
+
+Fix for security vulnerability reported in CVE-2009-1299, taken from here:
+
+http://git.0pointer.de/?p=pulseaudio.git;a=patch;h=d3efa43d85ac132c6a5a416a2b6f2115f5d577ee
+
+--- configure.ac.orig	2009-11-23 04:06:47.000000000 +0000
++++ configure.ac	2010-07-24 13:33:30.000000000 +0100
+@@ -424,7 +424,7 @@
+ AC_FUNC_FORK
+ AC_FUNC_GETGROUPS
+ AC_FUNC_SELECT_ARGTYPES
+-AC_CHECK_FUNCS_ONCE([chmod chown clock_gettime getaddrinfo getgrgid_r getgrnam_r \
++AC_CHECK_FUNCS_ONCE([chmod chown fstat fchown fchmod clock_gettime getaddrinfo getgrgid_r getgrnam_r \
+     getpwnam_r getpwuid_r gettimeofday getuid inet_ntop inet_pton mlock nanosleep \
+     pipe posix_fadvise posix_madvise posix_memalign setpgid setsid shm_open \
+     sigaction sleep sysconf pthread_setaffinity_np])
