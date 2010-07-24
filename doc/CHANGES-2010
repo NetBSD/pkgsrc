@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2564 2010/07/24 18:14:40 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.2565 2010/07/24 20:47:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3391,7 +3391,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/freeradius2 to 2.1.9 [adam 2010-07-20]
 	Updated lang/mercury to 0.13.1 [asau 2010-07-20]
 	Updated pkgtools/pkg_comp to 1.34 [jmmv 2010-07-20]
-	Updated devel/autoconf to 2.66 [wiz 2010-07-21]
 	Updated misc/gaupol to 0.17 [wiz 2010-07-21]
 	Updated time/evolution-webcal to 2.28.1 [obache 2010-07-21]
 	Updated devel/xulrunner to 1.9.2.7 [tnn 2010-07-21]
