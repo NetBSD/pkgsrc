@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2010/06/12 10:40:26 tron Exp $
+# $NetBSD: Makefile,v 1.60 2010/07/24 10:45:38 sborrill Exp $
 
 DISTNAME=	httpd-2.2.15
 PKGREVISION=	3
@@ -51,6 +51,7 @@ APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 .include "../../devel/apr-util/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 CONFIGURE_ARGS+=	--disable-include
 CONFIGURE_ARGS+=	--disable-log-config
