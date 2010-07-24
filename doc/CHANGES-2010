@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2549 2010/07/24 08:22:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2550 2010/07/24 08:45:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3426,3 +3426,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/SDL_ttf to 2.0.10 [adam 2010-07-23]
 	Added net/py-foolscap version 0.5.1 [gdt 2010-07-23]
 	Updated print/gv to 3.7.1 [obache 2010-07-24]
+	Updated archivers/cabextract to 1.3 [wiz 2010-07-24]
