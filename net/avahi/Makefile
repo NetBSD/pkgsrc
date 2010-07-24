@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:45:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/07/24 13:42:12 obache Exp $
 
-DISTNAME=		avahi-0.6.25
-PKGREVISION=		3
+DISTNAME=		avahi-0.6.27
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
@@ -69,6 +68,7 @@ CONFIGURE_ARGS+=	--with-avahi_priv_access_group=${REAL_ROOT_GROUP}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-dbus-system-socket=${VARBASE}/run/dbus/system_bus_socket
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--disable-gtk3
 CONFIGURE_ARGS+=	--disable-qt3
 CONFIGURE_ARGS+=	--disable-qt4
 CONFIGURE_ARGS+=	--disable-mono
@@ -78,6 +78,7 @@ CONFIGURE_ARGS+=	--disable-doxygen-dot
 CONFIGURE_ARGS+=	--disable-doxygen-html
 CONFIGURE_ARGS+=	--disable-xmltoman
 CONFIGURE_ARGS+=	--disable-autoipd
+CONFIGURE_ARGS+=	--enable-tests
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-distro=none
@@ -108,7 +109,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libdaemon/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

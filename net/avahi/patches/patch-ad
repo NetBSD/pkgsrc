@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2010/07/24 13:42:12 obache Exp $
 
---- avahi-dnsconfd/Makefile.in.orig	2008-06-24 00:20:31.000000000 +0100
+--- avahi-dnsconfd/Makefile.in.orig	2010-07-13 03:06:36.000000000 +0000
 +++ avahi-dnsconfd/Makefile.in
-@@ -367,7 +367,7 @@ top_srcdir = @top_srcdir@
- @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@avahi_dnsconfd_SOURCES = main.c 
+@@ -400,7 +400,7 @@ EXTRA_DIST = avahi-dnsconfd.action avahi
+ @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@avahi_dnsconfd_SOURCES = main.c
  @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@avahi_dnsconfd_CFLAGS = $(AM_CFLAGS) $(LIBDAEMON_CFLAGS)
  @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@avahi_dnsconfd_LDADD = $(AM_LDADD) ../avahi-common/libavahi-common.la $(LIBDAEMON_LIBS)
 -@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@pkgsysconf_SCRIPTS = avahi-dnsconfd.action
 +@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@pkgsysconf_SCRIPTS =
- EXTRA_DIST = avahi-dnsconfd.action
- all: all-am
+ @HAVE_LIBDAEMON_TRUE@@HAVE_SYSTEMD_TRUE@@HAVE_XML_TRUE@systemdsystemunit_DATA = \
+ @HAVE_LIBDAEMON_TRUE@@HAVE_SYSTEMD_TRUE@@HAVE_XML_TRUE@	avahi-dnsconfd.service
  
