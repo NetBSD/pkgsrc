@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.19 2008/10/15 12:15:40 martti Exp $
+$NetBSD: distinfo,v 1.20 2010/07/24 09:33:09 obache Exp $
 
-SHA1 (bogofilter-1.1.7.tar.bz2) = b34e2bf224a2139e080960fb44cf2abe1c35c9b3
-RMD160 (bogofilter-1.1.7.tar.bz2) = 799a375d54441c8fd6355921c468f33f7e65a46f
-Size (bogofilter-1.1.7.tar.bz2) = 839687 bytes
-SHA1 (patch-aa) = e45350ce0f2f74af949b6a298e98873da3798239
+SHA1 (bogofilter-1.2.2.tar.bz2) = 6d2860c1d919fe47a8efcfc7fd6de9433872f21d
+RMD160 (bogofilter-1.2.2.tar.bz2) = a522d0c7d2deae59d479c67f64e9bd9551b59096
+Size (bogofilter-1.2.2.tar.bz2) = 867043 bytes
 SHA1 (patch-ab) = f55a9956d82f56cef686a9125983ec5fd6942809
