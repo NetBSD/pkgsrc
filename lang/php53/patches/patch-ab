@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+$NetBSD: patch-ab,v 1.2 2010/07/24 22:23:37 tron Exp $
 
---- configure.orig	2010-03-13 06:01:16.000000000 +0000
-+++ configure
-@@ -12194,7 +12194,7 @@ EOF
+--- configure.orig	2010-07-24 22:35:41.000000000 +0100
++++ configure	2010-07-24 22:39:23.000000000 +0100
+@@ -13778,7 +13778,7 @@
    PHP_VAR_SUBST="$PHP_VAR_SUBST SAPI_CGI_PATH"
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
      
    PHP_SAPI=cgi
    
-@@ -21515,7 +21515,7 @@ fi
+@@ -23206,7 +23206,7 @@
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -20,7 +20,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -34398,7 +34398,7 @@ fi
+@@ -25179,7 +25179,7 @@
+     PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
+     
+   
+-    for header_file in ext/sqlite3/libsqlite/sqlite3.h; do
++    for header_file; do
+       
+   
+   unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
+@@ -36124,7 +36124,7 @@
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -29,7 +38,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -48467,7 +48467,7 @@ fi
+@@ -50201,7 +50201,7 @@
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -38,7 +47,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -82684,7 +82684,7 @@ fi
+@@ -84421,7 +84421,7 @@
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -47,7 +56,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -104623,12 +104623,7 @@ old_CC=$CC
+@@ -107682,12 +107682,7 @@
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
