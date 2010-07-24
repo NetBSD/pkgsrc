@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.6 2006/10/23 12:29:56 tron Exp $
+$NetBSD: patch-af,v 1.7 2010/07/24 08:22:02 obache Exp $
 
---- src/error.h.orig	2005-08-10 13:33:21.000000000 +0200
+--- src/error.h.orig	2010-05-29 07:37:20.000000000 +0000
 +++ src/error.h
 @@ -36,8 +36,6 @@
  
