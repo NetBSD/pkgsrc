@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2565 2010/07/24 20:47:22 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2566 2010/07/24 22:25:03 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3446,3 +3446,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/py-argparse version 1.1 [gdt 2010-07-24]
 	Added converters/py-zbase32 version 1.1.2 [gdt 2010-07-24]
 	Added filesystems/tahoe-lafs version 1.7.1 [gdt 2010-07-24]
+	Updated lang/php5 to 5.2.14 [tron 2010-07-24]
+	Updated lang/php53 to 5.3.3 [tron 2010-07-24]
