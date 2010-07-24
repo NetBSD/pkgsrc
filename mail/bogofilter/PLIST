@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:04:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/07/24 09:33:09 obache Exp $
 bin/bf_compact
 bin/bf_copy
 bin/bf_tar
@@ -16,4 +16,4 @@ man/man1/bogolexer.1
 man/man1/bogotune.1
 man/man1/bogoupgrade.1
 man/man1/bogoutil.1
-share/examples/bogofilter/bogofilter.cf
+share/examples/bogofilter/bogofilter.cf.example
