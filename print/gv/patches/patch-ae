@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2006/10/23 12:29:56 tron Exp $
+$NetBSD: patch-ae,v 1.10 2010/07/24 08:22:02 obache Exp $
 
---- src/Ghostview.c.orig	2006-07-04 21:09:52.000000000 +0200
+--- src/Ghostview.c.orig	2010-06-03 16:36:25.000000000 +0000
 +++ src/Ghostview.c
-@@ -83,8 +83,6 @@ typedef char *XPointer;
+@@ -87,8 +87,6 @@ typedef char *XPointer;
  #endif
  
  #include <errno.h>
