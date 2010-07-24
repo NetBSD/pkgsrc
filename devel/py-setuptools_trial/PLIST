@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/24 13:18:59 gdt Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/setuptools_trial/__init__.py
+${PYSITELIB}/setuptools_trial/__init__.pyc
+${PYSITELIB}/setuptools_trial/__init__.pyo
+${PYSITELIB}/setuptools_trial/_version.py
+${PYSITELIB}/setuptools_trial/_version.pyc
+${PYSITELIB}/setuptools_trial/_version.pyo
+${PYSITELIB}/setuptools_trial/setuptools_trial.py
+${PYSITELIB}/setuptools_trial/setuptools_trial.pyc
+${PYSITELIB}/setuptools_trial/setuptools_trial.pyo
+share/doc/python-setuptools_trial/README.txt
