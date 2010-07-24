@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2558 2010/07/24 13:22:38 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.2559 2010/07/24 13:24:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3441,3 +3441,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/pulseaudio to 0.9.21nb3 [tron 2010-07-24]
 	Added devel/py-setuptools_trial version 0.5.4 [gdt 2010-07-24]
 	Added devel/py-pyutil version 1.7.9 [gdt 2010-07-24]
+	Added converters/py-zfec version 1.4.7 [gdt 2010-07-24]
