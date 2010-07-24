@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.70 2010/03/11 12:46:42 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2010/07/24 08:22:02 obache Exp $
 
-DISTNAME=	gv-3.6.3
-PKGREVISION=	2
+DISTNAME=	gv-3.7.1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU:=gv/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gv/
 COMMENT=	PostScript and PDF previewer
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake gs:run makeinfo
+USE_TOOLS+=		gmake gs:run makeinfo perl:run
 
 TEXINFO_REQD=		4.2
 INFO_FILES=		yes
@@ -33,6 +32,23 @@ XAW_TYPE=		3d
 CONFIGURE_ARGS+=	--enable-setenv-code
 .endif
 
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-SIGCHLD-fallback
+.endif
+
+SUBST_CLASSES+=		optlong1
+SUBST_STAGE.optlong1=	post-extract
+SUBST_FILES.optlong1=	src/gv_message.h
+SUBST_SED.optlong1=	-e 's/\[-\]-/--/'
+
+SUBST_CLASSES+=		optlong2
+SUBST_STAGE.optlong2=	post-extract
+SUBST_FILES.optlong2=	doc/gv.1
+SUBST_SED.optlong2=	-e 's/\[\\-\]\\-/\\-\\-/'
+
+REPLACE_PERL+=		src/gv-update-userconfig.in
+
 .include "../../devel/libgetopt/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
