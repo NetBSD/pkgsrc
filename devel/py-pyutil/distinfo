@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/24 13:21:49 gdt Exp $
+
+SHA1 (pyutil-1.7.9.tar.gz) = 372179d8231077c652e1c9933c7f9f1419da3f47
+RMD160 (pyutil-1.7.9.tar.gz) = 7410f2d3c198ce3b38ea75384eb15feb3506a84f
+Size (pyutil-1.7.9.tar.gz) = 151917 bytes
