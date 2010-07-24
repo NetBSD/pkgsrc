@@ -1,23 +1,13 @@
-$NetBSD: patch-ag,v 1.3 2009/06/09 13:07:13 wiz Exp $
+$NetBSD: patch-ag,v 1.4 2010/07/24 13:42:12 obache Exp $
 
---- configure.orig	2009-04-14 01:57:18.000000000 +0000
+--- configure.orig	2010-07-13 03:06:31.000000000 +0000
 +++ configure
-@@ -18064,7 +18064,7 @@ with_distro=`echo ${with_distro} | tr '[
+@@ -16687,7 +16687,7 @@ with_distro=`echo ${with_distro} | tr '[
  case $with_distro in
      lfs|debian|gentoo|archlinux|suse|fedora|mandriva|darwin|freebsd|slackware|none)
       ;;
 -    netbsd)
 +    netbsd|dragonfly)
-      { $as_echo "$as_me:$LINENO: WARNING: Your distribution (${with_distro}) is supported but no init script exist yet! (patches welcome)" >&5
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Your distribution (${with_distro}) is supported but no init script exist yet! (patches welcome)" >&5
  $as_echo "$as_me: WARNING: Your distribution (${with_distro}) is supported but no init script exist yet! (patches welcome)" >&2;}
       ;;
-@@ -19365,7 +19365,8 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--$ac_includes_default
-+#include<sys/socket.h>
-+
- int
- main ()
- {
