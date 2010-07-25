@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/07/23 22:41:49 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/07/25 19:57:25 pettai Exp $
 bin/getaddr
 bin/gethost
 bin/getname
@@ -62,3 +62,6 @@ share/dnssec-tools/donuts/rules/dnssec.rules.txt
 share/dnssec-tools/donuts/rules/nsec_check.rules.txt
 share/dnssec-tools/donuts/rules/parent_child.rules.txt
 share/dnssec-tools/donuts/rules/recommendations.rules.txt
+share/examples/dnssec-tools/dnsval.conf
+share/examples/dnssec-tools/resolv.conf
+share/examples/dnssec-tools/root.hints
