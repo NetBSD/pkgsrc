@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9491 2010/07/24 13:43:09 obache Exp $
+$NetBSD: TODO,v 1.9492 2010/07/25 13:12:08 obache Exp $
 
 Suggested new packages
 ======================
@@ -407,8 +407,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
-	o aria2-1.9.4 [pkg/43511]
-	o aria2-1.10.0
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.09
