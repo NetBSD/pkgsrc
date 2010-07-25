@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/07/25 02:35:35 obache Exp $
-
+# $NetBSD: Makefile,v 1.10 2010/07/25 02:37:16 obache Exp $
 #
 # Please do not update or modify this package as it has been imported only
 # as a dependecy for chat/unrealircd. This package should only be updated
