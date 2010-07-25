@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2578 2010/07/25 22:56:06 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2579 2010/07/25 23:12:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3460,3 +3460,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/x3270 to 3.3.10ga5 [gls 2010-07-25]
 	Updated mail/dovecot to 1.2.13 [ghen 2010-07-25]
 	Updated devel/p5-MooseX-MethodAttributes to 0.24 [seb 2010-07-25]
+	Updated devel/p5-MooseX-Role-WithOverloading to 0.08 [seb 2010-07-25]
