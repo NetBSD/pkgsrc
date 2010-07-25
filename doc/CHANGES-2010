@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2570 2010/07/25 13:10:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2571 2010/07/25 13:12:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3452,3 +3452,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-CoreList to 2.36 [seb 2010-07-25]
 	Updated devel/p5-MooseX-Types to 0.23 [seb 2010-07-25]
 	Updated net/libcares to 1.6.0 [obache 2010-07-25]
+	Updated net/aria2 to 1.10.0 [obache 2010-07-25]
+	Updated net/aria2 to 1.10.0 [obache 2010-07-25]
