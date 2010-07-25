@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2572 2010/07/25 13:13:42 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2573 2010/07/25 13:19:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3455,3 +3455,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/aria2 to 1.10.0 [obache 2010-07-25]
 	Updated net/aria2 to 1.10.0 [obache 2010-07-25]
 	Updated games/bzflag to 2.0.16 [obache 2010-07-25]
+	Updated chat/unrealircd to 3.2.8.1 [obache 2010-07-25]
