@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2569 2010/07/25 11:08:39 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2570 2010/07/25 13:10:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3451,3 +3451,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20100724 [minskim 2010-07-25]
 	Updated devel/p5-Module-CoreList to 2.36 [seb 2010-07-25]
 	Updated devel/p5-MooseX-Types to 0.23 [seb 2010-07-25]
+	Updated net/libcares to 1.6.0 [obache 2010-07-25]
