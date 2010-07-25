@@ -28,3 +28,25 @@ Pullup ticket #3178 - requested by tnn
 www/seamonkey: security update and build fix
 Pullup ticket #3179 - requested by tnn
 mail/thunderbird: security update and build fix
+Pullup ticket #3181 - requested by tron
+mail/squirrelmail: security update
+Pullup ticket #3182 - requested by tron
+audio/pulseaudio: security patch
+Pullup ticket #3183 - requested by ghen
+databases/openldap: security update
+databases/openldap-client: security update
+databases/openldap-server: security update
+databases/openldap-doc: security update
+databases/openldap-cloak: security update
+databases/openldap-nop: security update
+databases/openldap-smbk5pwd: security update
+Pullup ticket #3184 - requested by tron
+lang/php5: security update
+lang/php53: security update
+converters/php-mbstring: security update
+devel/php-gmp: security update
+graphics/php-gd: security update
+multimedia/php-ming: security update
+net/php-xmlrpc: security update
+net/php-yaz: security update
+print/php-pdflib: security update
