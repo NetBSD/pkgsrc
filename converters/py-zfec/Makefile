@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/24 13:24:15 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/25 06:27:17 agc Exp $
 #
 
 DISTNAME=	zfec-1.4.7
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Uses internal egg.
 #DEPENDS+=	${PYPKGPREFIX}-darcsver:../../devel/py-darcsver
+
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
