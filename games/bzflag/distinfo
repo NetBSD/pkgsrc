@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2008/10/13 03:14:40 dsainty Exp $
+$NetBSD: distinfo,v 1.13 2010/07/25 13:13:26 obache Exp $
 
-SHA1 (bzflag-2.0.12.tar.gz) = 3ef1739cbdd8b888dc93efe42560a4fdfc2a2174
-RMD160 (bzflag-2.0.12.tar.gz) = bab171233d3c56ecc6bce1909196f68344c25308
-Size (bzflag-2.0.12.tar.gz) = 12071712 bytes
-SHA1 (patch-ad) = 75e49c8e78e421f5b495a49a13ac2cdc51ef85e1
+SHA1 (bzflag-2.0.16.tar.gz) = 5d4c949038c4a0a873d58f656fab8f9288cb73ff
+RMD160 (bzflag-2.0.16.tar.gz) = 93393b8cc0afd3922706b9e7e0e7fa99e8ac17e7
+Size (bzflag-2.0.16.tar.gz) = 12146215 bytes
+SHA1 (patch-ad) = 626ff20e3b73f77734995732f34869550f590d5e
