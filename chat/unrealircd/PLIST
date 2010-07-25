@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:37:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/07/25 13:18:52 obache Exp $
 sbin/ircd
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
@@ -41,6 +41,7 @@ share/unrealircd/help.tr.conf
 share/unrealircd/modules/cloak.so
 share/unrealircd/modules/commands.so
 share/unrealircd/modules/m_addline.so
+share/unrealircd/modules/m_addmotd.so
 share/unrealircd/modules/m_addomotd.so
 share/unrealircd/modules/m_admin.so
 share/unrealircd/modules/m_adminchat.so
@@ -109,6 +110,7 @@ share/unrealircd/modules/m_stats.so
 share/unrealircd/modules/m_svsfline.so
 share/unrealircd/modules/m_svsjoin.so
 share/unrealircd/modules/m_svskill.so
+share/unrealircd/modules/m_svslusers.so
 share/unrealircd/modules/m_svsmode.so
 share/unrealircd/modules/m_svsmotd.so
 share/unrealircd/modules/m_svsnick.so
