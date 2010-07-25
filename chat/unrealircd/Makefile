@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2010/01/09 16:34:08 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2010/07/25 13:18:52 obache Exp $
 
-DISTNAME=	Unreal3.2.7
-PKGNAME=	unrealircd-3.2.7
-PKGREVISION=	3
+DISTNAME=	Unreal3.2.8.1
+PKGNAME=	unrealircd-3.2.8.1
 CATEGORIES=	chat
-MASTER_SITES=	http://unreal.brueggisite.de/
+MASTER_SITES=	http://unrealircd.com/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unrealircd.com/
@@ -17,9 +16,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config gmake
 TRE_NEEDED=	0.7.5
-CARES_NEEDED=	1.4.0
+CARES_NEEDED=	1.6.0
 
 CHECK_PORTABILITY_SKIP=	update
+
+WRKSRC=		${WRKDIR}/Unreal3.2
 
 BUILDLINK_API_DEPENDS.tre+=		tre>=${TRE_NEEDED}
 BUILDLINK_API_DEPENDS.libcares+=	libcares-${CARES_NEEDED}
@@ -27,11 +28,10 @@ BUILDLINK_API_DEPENDS.libcares+=	libcares-${CARES_NEEDED}
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=		tre_version=${TRE_NEEDED:Q}
-CONFIGURE_ENV+=		TRELIBS='-L${PREFIX:Q}/lib -ltre' TREINCDIR=-I${PREFIX}/include
+CONFIGURE_ENV+=		TREINCDIR=-I${BUILDLINK_PREFIX.tre}/include
 CONFIGURE_ENV+=		cares_version=${CARES_NEEDED:Q}
-CONFIGURE_ENV+=		CARESINCDIR='${PREFIX:Q}/include'
-CONFIGURE_ENV+=		CARESLIBDIR='-L${PREFIX:Q}/lib'
-CONFIGURE_ENV+=		CARESLIBS='-lcares'
+CONFIGURE_ENV+=		CARESINCDIR='${BUILDLINK_PREFIX.libcares}/include'
+CONFIGURE_ENV+=		CARESLIBDIR='-L${BUILDLINK_PREFIX.libcares}/lib'
 
 CONFIGURE_ARGS+=	--with-dpath=${UIRCD_HOME:Q}
 CONFIGURE_ARGS+=	--with-spath=${PREFIX:Q}/sbin/ircd
@@ -142,7 +142,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/help.* ${DESTDIR}${IRCD_SHARE:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/doc/help.* ${DESTDIR}${IRCD_SHARE:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/spamfilter.conf ${DESTDIR}${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/src/modules/*.so \
+	${INSTALL_LIB} ${WRKSRC:Q}/src/modules/*.so \
 		${DESTDIR}${IRCD_SHARE:Q}/modules
 	${INSTALL_DATA} ${WRKSRC:Q}/doc/unreal32docs.* ${DESTDIR}${IRCD_DOCS:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/doc/example.* ${DESTDIR}${IRCD_EG:Q}
