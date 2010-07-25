@@ -1,13 +1,40 @@
-$NetBSD: patch-aa,v 1.6 2010/03/04 20:42:01 gls Exp $
+$NetBSD: patch-aa,v 1.7 2010/07/25 21:23:03 gls Exp $
 
---- configure.orig      2009-09-22 01:59:47.000000000 +0000
-+++ configure
-@@ -4025,7 +4025,7 @@ no|*)     no_xmkmf=1
- esac
+--- Imakefile.in.orig	2009-09-18 02:08:55.000000000 +0000
++++ Imakefile.in
+@@ -1,7 +1,7 @@
+ /*
+  * Copyright (c) 1995-2009, Paul Mattes.
+  * All rights reserved.
+- * 
++ *
+  * Redistribution and use in source and binary forms, with or without
+  * modification, are permitted provided that the following conditions
+  * are met:
+@@ -13,7 +13,7 @@
+  *     * Neither the name of Paul Mattes nor his contributors may be used
+  *       to endorse or promote products derived from this software without
+  *       specific prior written permission.
+- * 
++ *
+  * THIS SOFTWARE IS PROVIDED BY PAUL MATTES "AS IS" AND ANY EXPRESS
+  * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+@@ -190,8 +190,8 @@ $(DESTDIR)$(FONTINSTDIR)/fonts.dir::
+ /* Extra install rule for the sample ibm_hosts file (runs only if there is
+    no ibm_hosts file installed yet). */
+ install:: $(HOSTSFILE)
+-	@[ -r $(DESTDIR)$(LIBX3270DIR)/$(HOSTSFILE) ] || \
+-		$(INSTALL) -c $(INSTDATFLAGS) $(HOSTSFILE) $(DESTDIR)$(LIBX3270DIR)/$(HOSTSFILE)
++	@[ -r $(DESTDIR)$(PREFIX)/share/examples/x3270/$(HOSTSFILE) ] || \
++		$(INSTALL) -c $(INSTDATFLAGS) $(HOSTSFILE) $(DESTDIR)$(PREFIX)/share/examples/x3270/$(HOSTSFILE)
  
- # Set up the configuration directory.
--LIBX3270DIR='${sysconfdir}/x3270'
-+LIBX3270DIR='${PREFIX}/share/examples/x3270'
- 
- 
- { $as_echo "$as_me:$LINENO: checking for library containing forkpty" >&5
+ /*
+  * Install rules for x3270if, x3270-script and ibm_hosts man pages.
+@@ -226,5 +226,5 @@ install.byprefix::
+ /******************************************************************************
+  * Clean rules.                                                               *
+  ******************************************************************************/
+-clean:: 
++clean::
+ 	$(RM) $(FONTS) qcpp mkfb fallbacks.c
