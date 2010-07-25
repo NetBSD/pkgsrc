@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/25 13:45:05 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/25 17:08:08 joerg Exp $
 #
 
 DISTNAME=	setuptools_trial-0.5.10
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=       ${PYPKGPREFIX}-twisted:../../net/py-twisted
+DEPENDS+=       ${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
