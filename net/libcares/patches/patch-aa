@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2007/07/14 22:05:57 adrianp Exp $
+$NetBSD: patch-aa,v 1.4 2010/07/25 13:09:42 obache Exp $
 
---- ares.h.orig	2007-06-04 08:36:31.000000000 +0100
+--- ares.h.orig	2008-12-04 12:53:03.000000000 +0000
 +++ ares.h
-@@ -185,6 +185,13 @@ struct ares_options {
+@@ -218,6 +218,13 @@ struct ares_options {
    int nsort;
  };
  
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.3 2007/07/14 22:05:57 adrianp Exp $
  struct hostent;
  struct timeval;
  struct sockaddr;
-@@ -243,7 +250,7 @@ int ares_parse_ns_reply(const unsigned c
+@@ -313,7 +320,7 @@ int ares_parse_ns_reply(const unsigned c
  void ares_free_string(void *str);
  void ares_free_hostent(struct hostent *host);
  const char *ares_strerror(int code);
