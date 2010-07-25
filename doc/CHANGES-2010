@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2576 2010/07/25 21:24:17 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2577 2010/07/25 22:22:10 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3453,9 +3453,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Types to 0.23 [seb 2010-07-25]
 	Updated net/libcares to 1.6.0 [obache 2010-07-25]
 	Updated net/aria2 to 1.10.0 [obache 2010-07-25]
-	Updated net/aria2 to 1.10.0 [obache 2010-07-25]
 	Updated games/bzflag to 2.0.16 [obache 2010-07-25]
 	Updated chat/unrealircd to 3.2.8.1 [obache 2010-07-25]
 	Updated devel/py-setuptools_trial to 0.5.10 [gdt 2010-07-25]
 	Updated www/p5-Catalyst-Plugin-Session to 0.30 [sno 2010-07-25]
 	Updated x11/x3270 to 3.3.10ga5 [gls 2010-07-25]
+	Updated mail/dovecot to 1.2.13 [ghen 2010-07-25]
