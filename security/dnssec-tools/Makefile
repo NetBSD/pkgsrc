@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/23 08:42:05 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/25 19:57:25 pettai Exp $
 #
 
 DISTNAME=	dnssec-tools-1.7
@@ -42,7 +42,21 @@ CONFIGURE_ARGS+=	--with-perl-build-args="INSTALLDIRS=vendor DESTDIR=${DESTDIR}"
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
+EGDIR=		${PREFIX}/share/examples/dnssec-tools
+PKG_SYSCONFSUBDIR?=     dnssec-tools
+
+CONF_FILES=	${EGDIR}/dnsval.conf ${PKG_SYSCONFDIR}/dnsval.conf
+CONF_FILES+=	${EGDIR}/resolv.conf ${PKG_SYSCONFDIR}/resolv.conf
+CONF_FILES+=	${EGDIR}/root.hints ${PKG_SYSCONFDIR}/root.hints
+
+INSTALLATION_DIRS=	${EGDIR}
+
 .include "options.mk"
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/validator/etc/dnsval.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/validator/etc/resolv.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/validator/etc/root.hints ${DESTDIR}${EGDIR}
 
 .include "../../lang/perl5/packlist.mk"
 .include "../../lang/perl5/buildlink3.mk"
