@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2566 2010/07/24 22:25:03 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2567 2010/07/25 08:22:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3448,3 +3448,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added filesystems/tahoe-lafs version 1.7.1 [gdt 2010-07-24]
 	Updated lang/php5 to 5.2.14 [tron 2010-07-24]
 	Updated lang/php53 to 5.3.3 [tron 2010-07-24]
+	Updated editors/emacs-snapshot to 24.0.50.20100724 [minskim 2010-07-25]
