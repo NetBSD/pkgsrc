@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.24 2010/03/04 20:42:01 gls Exp $
+# $NetBSD: Makefile,v 1.25 2010/07/25 21:23:03 gls Exp $
 
-DISTNAME=	suite3270-3.3.10ga4-src
-PKGNAME=	x3270-3.3.10ga4
+DISTNAME=	suite3270-3.3.10ga5-src
+PKGNAME=	x3270-3.3.10ga5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	http://x3270.bgp.nu/
 COMMENT=	3270 Terminal emulator
+LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -18,8 +19,13 @@ USE_IMAKE=	yes
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+
+PKG_SYSCONFSUBDIR=	x3270
+
 EGDIR=			${PREFIX}/share/examples/x3270
 CONF_FILES=		${EGDIR}/ibm_hosts ${PKG_SYSCONFDIR}/ibm_hosts
+INSTALLATION_DIRS+=	${EGDIR}
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
