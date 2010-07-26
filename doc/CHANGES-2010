@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2583 2010/07/26 01:05:53 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2584 2010/07/26 01:42:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3465,3 +3465,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Mouse to 0.63 [seb 2010-07-25]
 	Updated devel/p5-Test-POE-Server-TCP to 1.14 [seb 2010-07-26]
 	Updated www/p5-Plack-Middleware-Session to 0.12 [seb 2010-07-26]
+	Updated www/p5-Test-WWW-Mechanize to 1.30 [seb 2010-07-26]
