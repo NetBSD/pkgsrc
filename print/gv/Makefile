@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2010/07/24 08:22:02 obache Exp $
+# $NetBSD: Makefile,v 1.72 2010/07/26 14:40:22 obache Exp $
 
 DISTNAME=	gv-3.7.1
 CATEGORIES=	print
@@ -32,7 +32,8 @@ XAW_TYPE=		3d
 CONFIGURE_ARGS+=	--enable-setenv-code
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin" \
+	|| ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--enable-SIGCHLD-fallback
 .endif
 
@@ -48,6 +49,7 @@ SUBST_SED.optlong2=	-e 's/\[\\-\]\\-/\\-\\-/'
 
 REPLACE_PERL+=		src/gv-update-userconfig.in
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
