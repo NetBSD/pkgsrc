@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/07/26 11:23:56 drochner Exp $
+
+--- tests/plugin-info.c.orig	2009-11-08 03:39:13.000000000 +0000
++++ tests/plugin-info.c
+@@ -59,7 +59,7 @@ int
+ main (int argc, char *argv[])
+ {
+ 	g_type_init ();
+-	g_test_init (&argc, &argv);
++	g_test_init (&argc, &argv, NULL);
+ 
+ 	g_test_add_func ("/plugin-info/new", test1);
+ 	g_test_add_func ("/plugin-info/load_from_data", test2);
