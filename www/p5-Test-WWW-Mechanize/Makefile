@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/01/19 22:25:32 seb Exp $
+# $NetBSD: Makefile,v 1.9 2010/07/26 01:42:37 seb Exp $
 #
 
-DISTNAME=	Test-WWW-Mechanize-1.24
+DISTNAME=	Test-WWW-Mechanize-1.30
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5twm
 CATEGORIES=	www perl5
@@ -16,9 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/Test/WWW/Mechanize/.packlist
 
 DEPENDS+=	p5-Carp-Assert-More-[0-9]*:../../devel/p5-Carp-Assert-More
-DEPENDS+=	p5-Carp-Assert-[0-9]*:../../devel/p5-Carp-Assert
-DEPENDS+=	p5-HTTP-Server-Simple>=0.07:../../www/p5-HTTP-Server-Simple
-DEPENDS+=	p5-Test-LongString>=0.09nb1:../../devel/p5-Test-LongString
+DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
+DEPENDS+=	p5-HTTP-Server-Simple>=0.42:../../www/p5-HTTP-Server-Simple
+DEPENDS+=	p5-Test-LongString>=0.12:../../devel/p5-Test-LongString
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-WWW-Mechanize>=1.24:../../www/p5-WWW-Mechanize
 
