@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/10 17:08:24 epg Exp $
+$NetBSD: distinfo,v 1.3 2010/07/26 12:38:42 obache Exp $
 
-SHA1 (Paste-1.7.2.tar.gz) = 4c7d6d76ec0fe76d57c525101c6f9ff6ebf4a93c
-RMD160 (Paste-1.7.2.tar.gz) = 10deddbb5ef3ccd220c6c0cdb594efd35045fdea
-Size (Paste-1.7.2.tar.gz) = 373556 bytes
+SHA1 (Paste-1.7.4.tar.gz) = df6114f419ce5b162a6e6e29d5a824d699448346
+RMD160 (Paste-1.7.4.tar.gz) = 35bf95f00a687f619717a2ba571dbc5aae137429
+Size (Paste-1.7.4.tar.gz) = 517556 bytes
