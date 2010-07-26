@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/26 11:54:34 drochner Exp $
+
+SHA1 (geoclue-0.12.0.tar.gz) = 0c7d3322ac80e5032b8dd5826ad76517f34c92fd
+RMD160 (geoclue-0.12.0.tar.gz) = f0198c5b6478df699b71c585d27d6c89d57f496a
+Size (geoclue-0.12.0.tar.gz) = 567552 bytes
