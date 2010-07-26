@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2010/07/26 10:01:45 adam Exp $
+
+--- lib/fixedpoint/fixed_class.h.orig	2010-07-25 16:18:30.000000000 +0000
++++ lib/fixedpoint/fixed_class.h
+@@ -64,7 +64,7 @@ struct fixed_point {
+ 	/*explicit*/ fixed_point(float f) : intValue(float2fix<p>(f)) {}
+ 	/*explicit*/ fixed_point(double f) : intValue(float2fix<p>((float)f)) {}
+ #if __WORDSIZE != 64
+-	/*explicit*/ fixed_point(long int l) : intValue(((int64_t)l) << p) {}
++	/*explicit*/ fixed_point(unsigned long l) : intValue(((int64_t)l) << p) {}
+ #endif
+ 	/*explicit*/ fixed_point(unsigned int l) : intValue(((int64_t)l) << p) {}
+ #ifdef SIZE_T_FIXEDPOINT_METHODS
