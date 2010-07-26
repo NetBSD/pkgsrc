@@ -50,3 +50,5 @@ multimedia/php-ming: security update
 net/php-xmlrpc: security update
 net/php-yaz: security update
 print/php-pdflib: security update
+Pullup ticket #3185 - requested by ghen
+mail/dovecot: security update
