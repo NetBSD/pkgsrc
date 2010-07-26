@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2597 2010/07/26 21:39:05 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2598 2010/07/26 22:15:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3481,3 +3481,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-MOP to 1.04 [seb 2010-07-26]
 	Updated devel/p5-Moose to 1.09 [seb 2010-07-26]
 	Updated www/apache22 to 2.2.16 [tron 2010-07-26]
+	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.08nb1 [seb 2010-07-26]
