@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2010/05/06 09:38:24 pettai Exp $
+$NetBSD: distinfo,v 1.9 2010/07/26 19:09:19 pettai Exp $
 
-SHA1 (unbound-1.4.4.tar.gz) = 2cb4c34ece87e43c9acc8da85d2ea1c8ea1ffe66
-RMD160 (unbound-1.4.4.tar.gz) = 581ae8953d5624e0c2b59af94740c4d024882abe
-Size (unbound-1.4.4.tar.gz) = 4300711 bytes
-SHA1 (patch-ac) = 90f1bc56afecd6973b4ffee9ab66ae639b7863a4
+SHA1 (unbound-1.4.5.tar.gz) = c1f227b95448cdfd0006d6d00b3d4354500d7564
+RMD160 (unbound-1.4.5.tar.gz) = 908d80acf0dfe4592922988e5ca73bdbab8d26a9
+Size (unbound-1.4.5.tar.gz) = 4317925 bytes
+SHA1 (patch-ac) = f2294c6216b4f1ee1c1fe07a9949aea2bb8dc485
