@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2593 2010/07/26 16:54:51 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2594 2010/07/26 17:04:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3477,3 +3477,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-App-cpanoutdated to 0.10 [seb 2010-07-26]
 	Updated devel/p5-App-FatPacker to 0.009003 [seb 2010-07-26]
 	Updated devel/p5-App-perlbrew to 0.08 [seb 2010-07-26]
+	Added devel/p5-Package-DeprecationManager version 0.04 [seb 2010-07-26]
