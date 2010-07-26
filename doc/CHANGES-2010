@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2586 2010/07/26 02:14:26 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2587 2010/07/26 02:48:24 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3271,6 +3271,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/p5-Image-ExifTool to 8.24 [adam 2010-07-13]
 	Updated math/glpk to 4.44 [adam 2010-07-13]
 	Updated print/cups to 1.4.3nb7 [sbd 2010-07-13]
+	Updated mail/wl to 2.14.0nb9 [dholland 2010-07-14]
+	Updated graphics/netpbm to 10.35.76nb1 [dholland 2010-07-14]
+	Updated databases/gq to 1.2.3nb6 [dholland 2010-07-14]
 	Updated devel/p5-ExtUtils-ParseXS to 2.22.06 [seb 2010-07-14]
 	Updated www/p5-HTML-Parser to 3.66 [seb 2010-07-14]
 	Updated textproc/p5-YAML-Tiny to 1.43 [seb 2010-07-14]
