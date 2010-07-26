@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2587 2010/07/26 02:48:24 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.2588 2010/07/26 05:48:18 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3471,3 +3471,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Test-WWW-Mechanize to 1.30 [seb 2010-07-26]
 	Updated sysutils/p5-Server-Starter to 0.07 [seb 2010-07-26]
 	Updated www/p5-Starman to 0.2006 [seb 2010-07-26]
+	Updated devel/ncursesw to 5.7nb4 [dholland 2010-07-26]
