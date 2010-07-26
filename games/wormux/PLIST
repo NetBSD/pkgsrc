@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2010/03/14 14:00:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/07/26 10:01:45 adam Exp $
 bin/wormux
+bin/wormux-index-server
 bin/wormux-list-games
+bin/wormux-server
 man/man6/wormux.6
 share/applications/wormux.desktop
 share/locale/bg/LC_MESSAGES/wormux.mo
@@ -807,17 +809,12 @@ share/wormux/font/DejaVuSans.ttf
 share/wormux/font/VL-Gothic-Regular.ttf
 share/wormux/font/wqy-microhei-lite.ttc
 share/wormux/game_mode/blitz.xml
-share/wormux/game_mode/blitz.xml.~1~
 share/wormux/game_mode/classic.xml
-share/wormux/game_mode/classic.xml.~1~
-share/wormux/game_mode/classic.xml.~2~
 share/wormux/game_mode/default_objects.xml
 share/wormux/game_mode/game_mode.dtd
 share/wormux/game_mode/objects.dtd
 share/wormux/game_mode/skin_viewer.xml
-share/wormux/game_mode/skin_viewer.xml.~1~
 share/wormux/game_mode/unlimited.xml
-share/wormux/game_mode/unlimited.xml.~1~
 share/wormux/graphism.dtd
 share/wormux/graphism.xml
 share/wormux/interface/not_skin/background_interface.png
@@ -970,7 +967,6 @@ share/wormux/map/hell/hellsky.jpg
 share/wormux/map/hell/preview.jpg
 share/wormux/map/hive/bg.jpg
 share/wormux/map/hive/config.xml
-share/wormux/map/hive/config.xml.~1~
 share/wormux/map/hive/fg.png
 share/wormux/map/hive/part_effect_strip.png
 share/wormux/map/hive/preview.jpg
@@ -1022,13 +1018,11 @@ share/wormux/map/paint/map.png
 share/wormux/map/paint/preview.jpg
 share/wormux/map/paint/sky.png
 share/wormux/map/paradis/config.xml
-share/wormux/map/paradis/config.xml.~1~
 share/wormux/map/paradis/decor_paradis.png
 share/wormux/map/paradis/decor_paradis_bg.jpg
 share/wormux/map/paradis/paradis_preview.jpg
 share/wormux/map/pillars/bg.jpg
 share/wormux/map/pillars/config.xml
-share/wormux/map/pillars/config.xml.~1~
 share/wormux/map/pillars/fg.png
 share/wormux/map/pillars/preview.jpg
 share/wormux/map/pirates/config.xml
@@ -1050,12 +1044,10 @@ share/wormux/map/qingqong/qingqong.png
 share/wormux/map/qingqong/sky.jpg
 share/wormux/map/random_map.jpg
 share/wormux/map/randomamoebas/config.xml
-share/wormux/map/randomamoebas/config.xml.~1~
 share/wormux/map/randomamoebas/preview.jpg
 share/wormux/map/randomamoebas/sky.jpg
 share/wormux/map/randomamoebas/texture.png
 share/wormux/map/randomisland/config.xml
-share/wormux/map/randomisland/config.xml.~1~
 share/wormux/map/randomisland/palm-tree.png
 share/wormux/map/randomisland/preview.jpg
 share/wormux/map/randomisland/sky.jpg
@@ -1073,7 +1065,6 @@ share/wormux/map/space2/preview.jpg
 share/wormux/map/space2/sky.jpg
 share/wormux/map/tic-tac-toe/bg.jpg
 share/wormux/map/tic-tac-toe/config.xml
-share/wormux/map/tic-tac-toe/config.xml.~1~
 share/wormux/map/tic-tac-toe/fg.png
 share/wormux/map/tic-tac-toe/part_effect_strip.png
 share/wormux/map/tic-tac-toe/preview.jpg
