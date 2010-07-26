@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2589 2010/07/26 10:03:15 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2590 2010/07/26 12:39:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Starman to 0.2006 [seb 2010-07-26]
 	Updated devel/ncursesw to 5.7nb4 [dholland 2010-07-26]
 	Updated games/wormux to 0.9.2.1 [adam 2010-07-26]
+	Updated www/py-paste to 1.7.4 [obache 2010-07-26]
