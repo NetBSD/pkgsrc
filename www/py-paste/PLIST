@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/07/26 12:38:42 obache Exp $
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -50,6 +50,9 @@ ${PYSITELIB}/paste/cgitb_catcher.pyo
 ${PYSITELIB}/paste/config.py
 ${PYSITELIB}/paste/config.pyc
 ${PYSITELIB}/paste/config.pyo
+${PYSITELIB}/paste/cowbell/__init__.py
+${PYSITELIB}/paste/cowbell/__init__.pyc
+${PYSITELIB}/paste/cowbell/__init__.pyo
 ${PYSITELIB}/paste/debug/__init__.py
 ${PYSITELIB}/paste/debug/__init__.pyc
 ${PYSITELIB}/paste/debug/__init__.pyo
@@ -86,14 +89,13 @@ ${PYSITELIB}/paste/evalexception/__init__.pyo
 ${PYSITELIB}/paste/evalexception/evalcontext.py
 ${PYSITELIB}/paste/evalexception/evalcontext.pyc
 ${PYSITELIB}/paste/evalexception/evalcontext.pyo
+${PYSITELIB}/paste/evalexception/media/MochiKit.packed.js
 ${PYSITELIB}/paste/evalexception/media/debug.js
 ${PYSITELIB}/paste/evalexception/media/minus.jpg
 ${PYSITELIB}/paste/evalexception/media/plus.jpg
 ${PYSITELIB}/paste/evalexception/middleware.py
 ${PYSITELIB}/paste/evalexception/middleware.pyc
 ${PYSITELIB}/paste/evalexception/middleware.pyo
-${PYSITELIB}/paste/evalexception/mochikit/MochiKit.js
-${PYSITELIB}/paste/evalexception/mochikit/__package__.js
 ${PYSITELIB}/paste/exceptions/__init__.py
 ${PYSITELIB}/paste/exceptions/__init__.pyc
 ${PYSITELIB}/paste/exceptions/__init__.pyo
