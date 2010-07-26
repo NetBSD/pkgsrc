@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2010/06/12 21:46:18 seb Exp $
+# $NetBSD: Makefile,v 1.37 2010/07/26 21:12:29 seb Exp $
 #
 
-DISTNAME=	Class-MOP-1.03
+DISTNAME=	Class-MOP-1.04
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
@@ -15,6 +15,7 @@ DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
 DEPENDS+=	p5-Devel-GlobalDestruction-[0-9]*:../../devel/p5-Devel-GlobalDestruction
 DEPENDS+=	p5-List-MoreUtils>=0.12:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-MRO-Compat>=0.05:../../devel/p5-MRO-Compat
+DEPENDS+=	p5-Package-DeprecationManager>=0.04:../../devel/p5-Package-DeprecationManager
 DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
