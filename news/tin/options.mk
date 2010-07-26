@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2010/02/25 16:05:57 drochner Exp $
+# $NetBSD: options.mk,v 1.12 2010/07/26 06:52:52 dholland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_SUPPORTED_OPTIONS=		icu inet6 tin-use-inn-spool
@@ -20,12 +20,14 @@ CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.curses}
 
 .if !empty(PKG_OPTIONS:Mncurses)
 .  include "../../devel/ncurses/buildlink3.mk"
+USE_NCURSES=		yes
 CONFIGURE_ARGS+=	--with-screen=ncurses
 CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.ncurses}
 .endif
 
 .if !empty(PKG_OPTIONS:Mncursesw)
 .  include "../../devel/ncursesw/buildlink3.mk"
+USE_NCURSES=		yes
 CONFIGURE_ARGS+=	--with-screen=ncursesw
 CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.ncursesw}
 .endif
