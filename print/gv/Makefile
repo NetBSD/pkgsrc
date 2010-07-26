@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2010/07/26 14:40:22 obache Exp $
+# $NetBSD: Makefile,v 1.73 2010/07/26 14:57:51 obache Exp $
 
 DISTNAME=	gv-3.7.1
 CATEGORIES=	print
@@ -36,6 +36,10 @@ CONFIGURE_ARGS+=	--enable-setenv-code
 	|| ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--enable-SIGCHLD-fallback
 .endif
+
+# XXX: bad configure test for libiconv from pkgsrc, so skip it.
+CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv_open=yes
+LIBS+=			${BUILDLINK_LDADD.iconv}
 
 SUBST_CLASSES+=		optlong1
 SUBST_STAGE.optlong1=	post-extract
