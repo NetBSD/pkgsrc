@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2588 2010/07/26 05:48:18 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.2589 2010/07/26 10:03:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3472,3 +3472,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/p5-Server-Starter to 0.07 [seb 2010-07-26]
 	Updated www/p5-Starman to 0.2006 [seb 2010-07-26]
 	Updated devel/ncursesw to 5.7nb4 [dholland 2010-07-26]
+	Updated games/wormux to 0.9.2.1 [adam 2010-07-26]
