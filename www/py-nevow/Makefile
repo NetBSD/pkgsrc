@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/07/23 23:20:48 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2010/07/26 10:26:09 gdt Exp $
 #
 
 VERSION=		0.10.0
@@ -13,8 +13,7 @@ MASTER_SITES=		http://tahoe-lafs.org/source/tahoe-lafs/deps/tahoe-dep-sdists/
 EXTRACT_SUFX=		.tar.bz2
 LICENSE=		mit
 
-MAINTAINER=		sifu@0xx0.net
-#MAINTAINER+=		gdt@ir.bbn.com
+MAINTAINER+=		gdt@ir.bbn.com
 HOMEPAGE=		http://divmod.org/trac/wiki/DivmodNevow
 COMMENT=		Next-generation web application templating system
 
