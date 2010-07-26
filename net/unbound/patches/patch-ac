@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2010/03/08 19:56:20 pettai Exp $
+$NetBSD: patch-ac,v 1.6 2010/07/26 19:09:19 pettai Exp $
 
---- Makefile.in.orig	2009-07-15 16:08:52 +0300
-+++ Makefile.in	2009-08-23 17:11:32 +0300
-@@ -91,12 +91,11 @@ UNITTEST_SRC=$(patsubst $(srcdir)/%,%, \
+--- Makefile.in.orig	2010-06-02 08:59:11.000000000 +0000
++++ Makefile.in
+@@ -101,12 +101,11 @@ UNITTEST_SRC=$(patsubst $(srcdir)/%,%, \
  	testcode/readhex.c testcode/ldns-testpkts.c smallapp/worker_cb.c \
  	$(COMMON_SRC)
  UNITTEST_OBJ=$(addprefix $(BUILD),$(UNITTEST_SRC:.c=.lo)) $(COMPAT_OBJ)
@@ -17,10 +17,10 @@ $NetBSD: patch-ac,v 1.5 2010/03/08 19:56:20 pettai Exp $
 +CONTROL_SRC=smallapp/unbound-control.c smallapp/worker_cb.c
  CONTROL_OBJ=$(addprefix $(BUILD),$(CONTROL_SRC:.c=.lo)) $(COMPAT_OBJ)
  HOST_SRC=smallapp/unbound-host.c
- HOST_OBJ=$(addprefix $(BUILD),$(HOST_SRC:.c=.lo)) $(COMPAT_OBJ)
-@@ -205,21 +204,21 @@
-	$(INFO) Link $@
-	$Q$(LINK_LIB) -export-symbols $(srcdir)/libunbound/ubsyms.def -o $@ $(sort $(LIBUNBOUND_OBJ)) -rpath $(libdir) $(LIBS)
+ HOST_OBJ=$(addprefix $(BUILD),$(HOST_SRC:.c=.lo)) $(filter-out $(BUILD)compat/ctime_r.lo, $(COMPAT_OBJ))
+@@ -213,21 +212,21 @@ libunbound.la:	$(LIBUNBOUND_OBJ) $(ldnsl
+ 	$(INFO) Link $@
+ 	$Q$(LINK_LIB) -export-symbols $(srcdir)/libunbound/ubsyms.def -o $@ $(sort $(LIBUNBOUND_OBJ)) -rpath $(libdir) $(LIBS)
  
 -unbound$(EXEEXT):	$(DAEMON_OBJ) $(ldnslib)
 +unbound$(EXEEXT):	$(DAEMON_OBJ) $(ldnslib) libunbound.la
