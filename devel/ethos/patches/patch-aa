@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/07/26 11:23:56 drochner Exp $
+
+--- configure.orig	2009-11-19 22:20:25.000000000 +0000
++++ configure
+@@ -13127,7 +13127,7 @@ else
+   with_default_vapidir=no
+ fi
+ 
+-if test x"$with_default_vapidir" == xno ; then
++if test x"$with_default_vapidir" = xno ; then
+ 	VAPI_DIR=${datarootdir}/vala/vapi
+ 
+ fi
