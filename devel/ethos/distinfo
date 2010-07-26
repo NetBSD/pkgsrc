@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/26 11:23:56 drochner Exp $
+
+SHA1 (ethos-0.2.2.tar.gz) = e4561cbdd65ec8ceffce76e6355cdb708bd527d6
+RMD160 (ethos-0.2.2.tar.gz) = 5d952638c1e301356350d6f08aa08640cbd7b6f2
+Size (ethos-0.2.2.tar.gz) = 521303 bytes
+SHA1 (patch-aa) = 42a949593d9cbf9969db0dfbf52ff35e3fb20a8c
+SHA1 (patch-ab) = 725d52813e2aac005b65f08ae6dd70c5e0a45e54
