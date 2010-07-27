@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2605 2010/07/27 18:28:54 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2606 2010/07/27 18:33:49 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3490,3 +3490,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-FollowPBP to 0.04 [seb 2010-07-27]
 	Updated devel/p5-MooseX-LazyRequire to 0.06 [seb 2010-07-27]
 	Updated misc/vym to 1.12.7 [gls 2010-07-27]
+	Updated devel/p5-MooseX-NonMoose to 0.14 [seb 2010-07-27]
