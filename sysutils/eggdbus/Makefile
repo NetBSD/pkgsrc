@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/01 10:51:04 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/27 14:16:41 joerg Exp $
 #
 
 DISTNAME=	eggdbus-0.6
@@ -12,6 +12,7 @@ COMMENT=	GObject bindings for DBus
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	pkg-config autoconf automake gmake
 GNU_CONFIGURE=	yes
