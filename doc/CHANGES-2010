@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2599 2010/07/27 08:02:02 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2600 2010/07/27 15:13:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3484,3 +3484,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.08nb1 [seb 2010-07-26]
 	Updated devel/xulrunner to 1.9.2.8 [tnn 2010-07-27]
 	Updated www/firefox to 3.6.8 [tnn 2010-07-27]
+	Updated devel/p5-File-ChangeNotify to 0.16 [seb 2010-07-27]
