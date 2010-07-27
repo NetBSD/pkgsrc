@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2601 2010/07/27 15:35:06 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2602 2010/07/27 17:16:38 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3486,3 +3486,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/firefox to 3.6.8 [tnn 2010-07-27]
 	Updated devel/p5-File-ChangeNotify to 0.16 [seb 2010-07-27]
 	Updated devel/p5-MooseX-ClassAttribute to 0.16 [seb 2010-07-27]
+	Added math/mpcomplex version 0.8.2 [asau 2010-07-27]
