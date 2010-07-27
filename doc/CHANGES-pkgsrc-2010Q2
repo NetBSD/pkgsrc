@@ -55,3 +55,5 @@ mail/dovecot: security update
 Pullup ticket #3189 - requested by tnn
 devel/xulrunner: security update
 www/firefox: security update
+Pullup ticket #3190 - requested by obache
+www/py-paste: security update
