@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2604 2010/07/27 18:03:43 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2605 2010/07/27 18:28:54 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3489,3 +3489,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added math/mpcomplex version 0.8.2 [asau 2010-07-27]
 	Updated devel/p5-MooseX-FollowPBP to 0.04 [seb 2010-07-27]
 	Updated devel/p5-MooseX-LazyRequire to 0.06 [seb 2010-07-27]
+	Updated misc/vym to 1.12.7 [gls 2010-07-27]
