@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/31 14:50:28 rhaen Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/07/27 18:27:34 gls Exp $
 bin/vym
 share/doc/packages/vym/vym.pdf
 share/vym/demos/lifeforms.vym
@@ -14,9 +14,9 @@ share/vym/exports/template-orange-blue/content.xml
 share/vym/exports/template-orange-blue/meta.xml
 share/vym/exports/template-orange-blue/mimetype
 share/vym/exports/template-orange-blue/page-template.xml
+share/vym/exports/template-orange-blue/section-template.xml
 share/vym/exports/template-orange-blue/settings.xml
 share/vym/exports/template-orange-blue/styles.xml
-share/vym/exports/template-orange-blue/section-template.xml
 share/vym/flags/flag-arrow-2down.png
 share/vym/flags/flag-arrow-2up.png
 share/vym/flags/flag-arrow-down.png
@@ -156,7 +156,8 @@ share/vym/lang/vym_sv.qm
 share/vym/lang/vym_sv.ts
 share/vym/lang/vym_zh_CN.qm
 share/vym/lang/vym_zh_CN.ts
-share/vym/lang/vym-zh_TW.ts
+share/vym/lang/vym_zh_TW.qm
+share/vym/lang/vym_zh_TW.ts
 share/vym/macros/macro-1.vys
 share/vym/macros/macro-10.vys
 share/vym/macros/macro-11.vys
