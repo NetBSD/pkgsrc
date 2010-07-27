@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2602 2010/07/27 17:16:38 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2603 2010/07/27 17:44:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3487,3 +3487,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-File-ChangeNotify to 0.16 [seb 2010-07-27]
 	Updated devel/p5-MooseX-ClassAttribute to 0.16 [seb 2010-07-27]
 	Added math/mpcomplex version 0.8.2 [asau 2010-07-27]
+	Updated devel/p5-MooseX-FollowPBP to 0.04 [seb 2010-07-27]
