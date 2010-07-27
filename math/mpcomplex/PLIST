@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/27 17:09:45 asau Exp $
+include/mpc.h
+lib/libmpc.la
+info/mpc.info
