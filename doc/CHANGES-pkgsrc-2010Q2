@@ -52,3 +52,6 @@ net/php-yaz: security update
 print/php-pdflib: security update
 Pullup ticket #3185 - requested by ghen
 mail/dovecot: security update
+Pullup ticket #3189 - requested by tnn
+devel/xulrunner: security update
+www/firefox: security update
