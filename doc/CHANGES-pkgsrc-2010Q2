@@ -57,3 +57,5 @@ devel/xulrunner: security update
 www/firefox: security update
 Pullup ticket #3190 - requested by obache
 www/py-paste: security update
+Pullup ticket #3187 - requested by tron
+www/apache22: security update
