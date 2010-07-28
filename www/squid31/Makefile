@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2010/06/11 13:41:34 tron Exp $
+# $NetBSD: Makefile,v 1.23 2010/07/28 10:16:14 adam Exp $
 
-DISTNAME=	squid-3.1.4
+DISTNAME=	squid-3.1.5.1
 PKGNAME=	${DISTNAME}	# Necessary for "pkgsrc/www/squid/options.mk"
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/3.1/ \
@@ -32,4 +32,5 @@ post-build:
 	${CP} -pf ${WRKSRC}/src/squid.conf.documented \
 	  ${WRKSRC}/src/squid.conf.default
 
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
