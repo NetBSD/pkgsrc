@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2613 2010/07/28 16:31:58 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2614 2010/07/28 16:40:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3499,3 +3499,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28 to 2.8.4nb1 [taca 2010-07-28]
 	Updated www/contao29 to 2.9.0nb3 [taca 2010-07-28]
 	Updated www/contao29-translations to 20100726 [taca 2010-07-28]
+	Removed www/typolight27-translations [taca 2010-07-28]
+	Removed www/typolight27-example [taca 2010-07-28]
+	Removed www/typolight27 [taca 2010-07-28]
