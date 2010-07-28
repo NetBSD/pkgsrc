@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/07/05 03:31:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/07/28 16:16:20 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2670,6 +2670,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_tables.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_typoscript_setup.txt
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/last_synched_target
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extra_page_cm_options/class.tx_extrapagecmoptions.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extra_page_cm_options/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extra_page_cm_options/ext_icon.gif
@@ -2861,6 +2862,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/ViewHelperBas
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_icon.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/last_synched_target
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func_wizards/class.tx_funcwizards_webfunc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func_wizards/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func_wizards/ext_icon.gif
@@ -3841,6 +3843,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/alt_menu_mainitem_bg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/language-marker.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/row-header.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/sprites/actions.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/sprites/actions.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/status/dialog-information.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/htmlarea/skins/default/images/status/dialog-ok.png
@@ -3899,6 +3902,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/typical/pageTSConfig.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/typical/userTSConfig.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/static/clickenlarge/setup.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/tca.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/templates/rtehtmlarea_pageheader_frontend.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/classes/class.tx_saltedpasswords_div.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/classes/class.tx_saltedpasswords_emconfhelper.php
@@ -5790,6 +5794,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/actions/variable
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/alt_menu_mainitem_bg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/language-marker.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/separator.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/sprites/actions.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/sprites/actions.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/status/dialog-information.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/status/dialog-ok.png
@@ -5800,7 +5805,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/rtehtmlarea/images/system-help-open
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/ie6.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/ie6/z_t3-icons-gifSprites.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/_t3-icon.css
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icon-apps-pagetree.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-actions.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-apps.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-mimetypes.css
