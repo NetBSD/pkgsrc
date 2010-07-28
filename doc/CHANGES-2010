@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2607 2010/07/28 08:38:28 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2608 2010/07/28 09:36:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3492,3 +3492,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/vym to 1.12.7 [gls 2010-07-27]
 	Updated devel/p5-MooseX-NonMoose to 0.14 [seb 2010-07-27]
 	Updated devel/p5-MooseX-Singleton to 0.24 [seb 2010-07-28]
+	Updated lang/sigscheme to 0.8.5 [obache 2010-07-28]
