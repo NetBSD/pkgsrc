@@ -1,21 +1,15 @@
-$NetBSD: distinfo,v 1.67 2010/07/21 16:47:57 drochner Exp $
+$NetBSD: distinfo,v 1.68 2010/07/28 09:24:14 drochner Exp $
 
-SHA1 (xine-lib-1.1.18.1.tar.bz2) = 783232b6d6e23850a7ac97bf53b2a8bc2e743270
-RMD160 (xine-lib-1.1.18.1.tar.bz2) = caa05f16a58bb5ba438b6bd4605cdc2ed91c7201
-Size (xine-lib-1.1.18.1.tar.bz2) = 7530681 bytes
-SHA1 (patch-aa) = 740b3132bcf27886632a6cfe126c3ca493d38c5b
-SHA1 (patch-ab) = eb58985011ed97d61dc18ef648c97477558f2ad8
+SHA1 (xine-lib-1.1.19.tar.bz2) = 5afcc28c5cf2bdaab99d951960f6587797e1e5a0
+RMD160 (xine-lib-1.1.19.tar.bz2) = 84999c43d3cc115c3bda4b2e06089dc827c646cc
+Size (xine-lib-1.1.19.tar.bz2) = 7531642 bytes
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
-SHA1 (patch-ae) = 0c101fd7360ba6abfe9003b8fd6eae4028a3cd2d
-SHA1 (patch-ag) = 6dee1af3eba997df95d833a2d46331a9e4c46d36
-SHA1 (patch-ah) = 56a0cbb1b5b3c9d1a0e55694ebb82307f82d3198
-SHA1 (patch-ai) = 4644746f1a5105cdc1e0d20612fc7be467852140
+SHA1 (patch-ag) = 26e0937a6018342660180bc6b7076004b68bd545
 SHA1 (patch-aj) = 4215c3bc37cf636e563a509f9a391081ed8e773b
 SHA1 (patch-ak) = 987700e6526b5112ac66bd6a8f9ee41f338c3508
 SHA1 (patch-ao) = 2682548a181803bc2d79f79d76828b6b3ba0e4fa
 SHA1 (patch-ap) = f22810c78ac0d1bb7e958ed92fd2ad8a7f889d92
 SHA1 (patch-as) = a0a93a256589e87a66eef31494441aa1b200f834
-SHA1 (patch-aw) = 52520d47bd9b5af313fab9a38e79f24f5c58d37c
 SHA1 (patch-be) = 966d057b118728ff509fd4e7f8005ab5b00b5633
 SHA1 (patch-bg) = f072486eb8441b8bed2c825380aa04d99bc70cc1
 SHA1 (patch-cb) = db4ff27418e05e97bf30b554beecc24d6e578d15
@@ -23,7 +17,5 @@ SHA1 (patch-cd) = a080c745d08ded46db7c1173fe55350c1eb9ff33
 SHA1 (patch-da) = f79701d7c036e78d760c12119d88fe3f0dd1762d
 SHA1 (patch-db) = 3ad4ca6f43a379b251211477972cd6d34b1f821a
 SHA1 (patch-dc) = 11c4212029e67f22796e57706b42400a0dbcac3a
-SHA1 (patch-eb) = b65e2c7c30fc04115d55da1ce1f6f65216ac1d23
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
-SHA1 (patch-fb) = fe4913041758b6e42f32cd810534199129d61351
 SHA1 (patch-ga) = c4770b6be12bbc4dd72f8299f3b0bbf92546cc68
