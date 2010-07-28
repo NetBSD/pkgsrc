@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2610 2010/07/28 11:29:43 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2611 2010/07/28 16:16:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3495,3 +3495,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/sigscheme to 0.8.5 [obache 2010-07-28]
 	Updated www/squid31 to 3.1.5.1 [adam 2010-07-28]
 	Updated devel/p5-MooseX-StrictConstructor to 0.10 [seb 2010-07-28]
+	Updated www/typo3 to 4.4.1 [taca 2010-07-28]
