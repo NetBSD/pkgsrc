@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/07/22 14:09:46 taca Exp $
+# $NetBSD: options.mk,v 1.4 2010/07/28 16:30:46 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.contao-translations
 
@@ -12,7 +12,7 @@ CT_TRANSLATIONS.bg=	TYPOlight-Bulgarian-v18.zip	# 2010/02/18
 CT_TRANSLATIONS.bs=	TYPOlight-Bosnian-v10.zip	# 2010/03/18
 CT_TRANSLATIONS.ca=	TYPOlight-Catalan-v4.zip	# 2008/09/24
 CT_TRANSLATIONS.cs=	TYPOlight-Czech-v24.zip		# 2010/07/08
-CT_TRANSLATIONS.da=	TYPOlight-Danish-v10.zip	# 2010/05/16
+CT_TRANSLATIONS.da=	TYPOlight-Danish-v11.zip	# 2010/07/26
 CT_TRANSLATIONS.es=	TYPOlight-Spanish-v14.zip	# 2010/06/10
 CT_TRANSLATIONS.fa=	TYPOlight-Persian-v5.zip	# 2010/07/06
 CT_TRANSLATIONS.fi=	TYPOlight-Finnish-v1.zip	# 2009/11/03
@@ -27,7 +27,7 @@ CT_TRANSLATIONS.it=	TYPOlight-Italian-v24.zip	# 2010/07/02
 CT_TRANSLATIONS.ja=	TYPOlight-Japanese-v33.zip	# 2010/07/19
 CT_TRANSLATIONS.lt=	TYPOlight-Lithuanian-v4.zip	# 2010/04/14
 CT_TRANSLATIONS.lv=	TYPOlight-Latvian-v25.zip	# 2010/07/15
-CT_TRANSLATIONS.nl=	TYPOlight-Dutch-v45.zip		# 2010/07/19
+CT_TRANSLATIONS.nl=	TYPOlight-Dutch-v46.zip		# 2010/07/26
 CT_TRANSLATIONS.no=	TYPOlight-Norwegian-v11.zip	# 2009/11/16
 CT_TRANSLATIONS.pl=	TYPOlight-Polish-v28.zip	# 2010/07/02
 CT_TRANSLATIONS.pt=	TYPOlight-Portuguese-v7.zip	# 2009/11/01
