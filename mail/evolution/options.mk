@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/07/28 07:27:54 dsainty Exp $
+# $NetBSD: options.mk,v 1.4 2010/07/28 07:44:50 dsainty Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
 PKG_SUPPORTED_OPTIONS=	krb5 ssl
@@ -15,7 +15,9 @@ PKG_FAIL_REASON+=	"Kerberos support conflicts with SSL"
 .endif
 
 .if !empty(PKG_OPTIONS:Mkrb5)
-CONFIGURE_ARGS+=	--with-krb5
+CPPFLAGS+=		-I/usr/include/gssapi
+CPPFLAGS+=		-I/usr/include/krb5
+CONFIGURE_ARGS+=	--with-krb5=/usr
 .  include "../../mk/krb5.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-krb5
