@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2612 2010/07/28 16:25:01 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2613 2010/07/28 16:31:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3497,3 +3497,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-StrictConstructor to 0.10 [seb 2010-07-28]
 	Updated www/typo3 to 4.4.1 [taca 2010-07-28]
 	Updated www/typolight28 to 2.8.4nb1 [taca 2010-07-28]
+	Updated www/contao29 to 2.9.0nb3 [taca 2010-07-28]
+	Updated www/contao29-translations to 20100726 [taca 2010-07-28]
