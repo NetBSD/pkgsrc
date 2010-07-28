@@ -53,6 +53,7 @@ print/php-pdflib: security update
 Pullup ticket #3185 - requested by ghen
 mail/dovecot: security update
 Pullup ticket #3189 - requested by tnn
+devel/nspr: security update
 devel/xulrunner: security update
 www/firefox: security update
 Pullup ticket #3190 - requested by obache
