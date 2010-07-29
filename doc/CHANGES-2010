@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2615 2010/07/29 03:01:43 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2616 2010/07/29 03:04:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3503,3 +3503,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/typolight27-example [taca 2010-07-28]
 	Removed www/typolight27 [taca 2010-07-28]
 	Updated www/squid27 to 2.7.9 [taca 2010-07-29]
+	Removed www/squid30 successor www/squid31 [taca 2010-07-29]
