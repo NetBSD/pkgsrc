@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2619 2010/07/29 19:03:36 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2620 2010/07/29 21:08:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3507,3 +3507,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Proc-InvokeEditor to 1.03 [seb 2010-07-29]
 	Updated devel/p5-Mouse to 0.64 [seb 2010-07-29]
 	Updated devel/p5-Any-Moose to 0.13 [seb 2010-07-29]
+	Added devel/p5-Test-Script-Run version 0.04 [seb 2010-07-29]
