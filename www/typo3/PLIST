@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/04/09 10:15:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.12.2.1 2010/07/29 15:12:07 tron Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -862,6 +862,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/filter_bg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/CREDITS.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/at.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ba.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/be.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/bg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/br.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ch.gif
@@ -902,6 +903,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/no.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/pl.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/pt.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ro.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/rs.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ru.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/sa.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/se.gif
@@ -2444,6 +2446,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/CleanStateNotMemorized.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/IllegalObjectType.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/InvalidClass.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/InvalidNumberOfConstraints.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/InvalidPropertyType.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/MissingBackend.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/RepositoryException.php
@@ -2452,9 +2455,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/Unex
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/UnknownObject.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/UnsupportedMethod.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/UnsupportedOrder.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/ValueFormatException.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/UnsupportedRelation.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/IdentityMap.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/IteratorInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/LazyLoadingProxy.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/LazyObjectStorage.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/LoadingStrategyInterface.php
@@ -2462,6 +2464,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Manager.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/ManagerInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Mapper/ColumnMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Mapper/DataMap.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Mapper/DataMapFactory.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Mapper/DataMapper.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/ObjectStorage.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/PropertyType.php
@@ -2470,6 +2473,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/BindVariab
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/BindVariableValueInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/Comparison.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/ComparisonInterface.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/Constraint.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/ConstraintInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/DynamicOperand.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/DynamicOperandInterface.php
@@ -2491,16 +2495,13 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/Ordering.p
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/OrderingInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/PropertyValue.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/PropertyValueInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/QueryObjectModel.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/QueryObjectModelConstantsInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/QueryObjectModelFactory.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/QueryObjectModelFactoryInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/QueryObjectModelInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/Selector.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/SelectorInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/SourceInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/Statement.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/StatementInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/StaticOperand.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/StaticOperandInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QOM/UpperCase.php
@@ -2509,28 +2510,15 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Query.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QueryFactory.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QueryFactoryInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QueryInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QueryResult.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QueryResultInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/QuerySettingsInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/RangeIterator.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/RangeIteratorInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Repository.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/RepositoryInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Row.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/RowInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/RowIterator.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/RowIteratorInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Session.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Storage/BackendInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Storage/Exception/BadConstraint.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Storage/Exception/SqlError.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Storage/Typo3DbBackend.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Typo3QuerySettings.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Typo3QuerySettingsInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Value.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/ValueFactory.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/ValueFactoryInterface.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/ValueInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Property/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Property/Exception/FormatNotSupported.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Property/Exception/InvalidDataType.php
@@ -2562,6 +2550,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Utility/ClassLoader.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Utility/ExtbaseRequirementsCheck.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Utility/Extension.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Utility/Localization.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Utility/TypeHandling.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Utility/TypoScript.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Validation/Error.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Validation/Exception.php
@@ -2605,11 +2594,11 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/MVC/Controller/ActionControl
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/MVC/Controller/Argument_testcase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/MVC/Controller/Arguments_testcase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/MVC/Web/RequestBuilder_testcase.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/MVC/Web/RequestTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/MVC/Web/Routing/UriBuilder_testcase.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Persistence/Mapper/DataMap_testcase.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Persistence/Mapper/DataMapFactory_testcase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Persistence/ObjectStorage_testcase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Persistence/Query_testcase.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Persistence/Repository_testcase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Persistence/Session_testcase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Persistence/Storage/Typo3DbBackend_testcase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Tests/Reflection/Service_testcase.php
