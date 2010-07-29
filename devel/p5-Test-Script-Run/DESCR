@@ -1,0 +1,2 @@
+The Perl 5 module Test::Script::Run exports some subs to help test
+and run scripts in your dist's bin/ directory.
