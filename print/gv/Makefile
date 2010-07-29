@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70.4.1 2010/07/29 13:10:55 tron Exp $
+# $NetBSD: Makefile,v 1.70.4.2 2010/07/29 13:55:26 tron Exp $
 
 DISTNAME=	gv-3.7.1
 CATEGORIES=	print
@@ -32,9 +32,14 @@ XAW_TYPE=		3d
 CONFIGURE_ARGS+=	--enable-setenv-code
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin" \
+	|| ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--enable-SIGCHLD-fallback
 .endif
+
+# XXX: bad configure test for libiconv from pkgsrc, so skip it.
+CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv_open=yes
+LIBS+=			${BUILDLINK_LDADD.iconv}
 
 SUBST_CLASSES+=		optlong1
 SUBST_STAGE.optlong1=	post-extract
@@ -48,6 +53,7 @@ SUBST_SED.optlong2=	-e 's/\[\\-\]\\-/\\-\\-/'
 
 REPLACE_PERL+=		src/gv-update-userconfig.in
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
