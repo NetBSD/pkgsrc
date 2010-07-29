@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/07/26 16:40:09 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/29 21:29:11 seb Exp $
 #
 
-DISTNAME=	App-cpanoutdated-0.10
+DISTNAME=	App-cpanoutdated-0.11
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -19,6 +19,7 @@ PERL5_PACKLIST=	auto/App/cpanoutdated/.packlist
 
 DEPENDS+=	{perl>=5.12,p5-ExtUtils-MakeMaker>=6.56}:../../devel/p5-ExtUtils-MakeMaker
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-local-lib-[0-9]*:../../devel/p5-local-lib
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

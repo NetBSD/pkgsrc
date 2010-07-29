@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/07/26 16:40:09 seb Exp $
+$NetBSD: distinfo,v 1.4 2010/07/29 21:29:11 seb Exp $
 
-SHA1 (App-cpanoutdated-0.10.tar.gz) = 13d51c382c2525d73e3883153bc00ad39c7bb16f
-RMD160 (App-cpanoutdated-0.10.tar.gz) = c8302af93c19b04b8ddb4f890b3c08e71cdb64dd
-Size (App-cpanoutdated-0.10.tar.gz) = 4560 bytes
+SHA1 (App-cpanoutdated-0.11.tar.gz) = e9d3db254e27b463d6f079b38a3511b10a37a009
+RMD160 (App-cpanoutdated-0.11.tar.gz) = ba4090bf92b13b20d62b6653d2845d1ae405c06b
+Size (App-cpanoutdated-0.11.tar.gz) = 4694 bytes
