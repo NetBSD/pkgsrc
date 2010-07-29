@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/07/29 11:02:38 rafal Exp $
+
+--- conserver/consent.c.orig	2003-04-06 08:32:41.000000000 -0400
++++ conserver/consent.c
+@@ -788,7 +788,7 @@ ConsInit(pCE, pfdSet, useHostCache)
+     } else if (pCE->isNetworkConsole) {
+ 	struct sockaddr_in port;
+ 	struct hostent *hp;
+-	size_t one = 1;
++	int one = 1;
+ 	int flags;
+ 	fd_set fds;
+ 	struct timeval tv;
