@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.393 2010/07/22 20:22:49 gdt Exp $
+# $NetBSD: Makefile,v 1.394 2010/07/29 04:59:33 jnemeth Exp $
 #
 
 COMMENT=	Security tools
@@ -51,6 +51,7 @@ SUBDIR+=	ddos-scan
 SUBDIR+=	destroy
 SUBDIR+=	dirb
 SUBDIR+=	dirmngr
+SUBDIR+=	dnssec-tools
 SUBDIR+=	dropbear
 SUBDIR+=	dsniff
 SUBDIR+=	dsniff-nox11
