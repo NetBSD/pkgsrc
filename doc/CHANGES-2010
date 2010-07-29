@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2616 2010/07/29 03:04:58 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2617 2010/07/29 14:19:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3504,3 +3504,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/typolight27 [taca 2010-07-28]
 	Updated www/squid27 to 2.7.9 [taca 2010-07-29]
 	Removed www/squid30 successor www/squid31 [taca 2010-07-29]
+	Updated devel/p5-Proc-InvokeEditor to 1.03 [seb 2010-07-29]
