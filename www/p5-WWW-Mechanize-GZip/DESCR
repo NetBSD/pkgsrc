@@ -1,0 +1,4 @@
+The Perl 5 module WWW::Mechanize::GZip tries to fetch a URL by
+requesting gzip-compression from the webserver. If the response
+contains a header with 'Content-Encoding: gzip', it decompresses
+the response in order to get the original (uncompressed) content.
