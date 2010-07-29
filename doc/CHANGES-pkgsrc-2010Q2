@@ -62,3 +62,5 @@ Pullup ticket #3187 - requested by tron
 www/apache22: security update
 Pullup ticket #3192 - requested by obache
 net/avahi: security update
+Pullup ticket #3193 - requested by obache
+print/gv: security update
