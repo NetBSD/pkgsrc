@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9497 2010/07/28 10:17:38 adam Exp $
+$NetBSD: TODO,v 1.9498 2010/07/29 19:03:36 seb Exp $
 
 Suggested new packages
 ======================
@@ -1017,7 +1017,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.3
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Any-Moose-0.13
 	o p5-Archive-Tar-1.64
 	o p5-Compress-Raw-Bzip2-2.027
 	o p5-Compress-Raw-Zlib-2.027
