@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2010/05/28 12:15:42 obache Exp $
+# $NetBSD: Makefile,v 1.65 2010/07/30 10:36:33 asau Exp $
 
 DISTNAME=	mpich2-1.2.1p1
 #PKGREVISION=	1
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 
 PKG_SYSCONFSUBDIR=	mpich
 

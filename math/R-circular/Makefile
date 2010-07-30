@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/12/11 19:25:33 adam Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/30 10:36:26 asau Exp $
 
 PKGREVISION=	1
 CATEGORIES=	math
@@ -11,7 +11,7 @@ COMMENT=	Circular Statistics, from "Topics in circular Statistics"
 R_PKGNAME=	circular
 R_PKGVER=	0.3-8
 
-USE_LANGUAGES=	fortran
+USE_LANGUAGES=	fortran77
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"

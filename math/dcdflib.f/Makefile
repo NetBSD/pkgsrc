@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/12 22:18:00 asau Exp $
+# $NetBSD: Makefile,v 1.14 2010/07/30 10:36:27 asau Exp $
 
 DISTNAME=	dcdflib.f-1.1
 PKGREVISION=	3
@@ -11,7 +11,7 @@ COMMENT=	Library of Fortran Routines for Cumulative Distribution Functions
 
 WRKSRC=		${WRKDIR}/dcdflib.f
 BUILD_DIRS=	src
-USE_LANGUAGES=	c fortran
+USE_LANGUAGES=	c fortran77
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	lib share/doc/dcdflib.f

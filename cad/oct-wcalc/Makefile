@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/01/28 01:11:27 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/07/30 10:36:23 asau Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--without-scilab
 # explicitly present in wcalc.  The fortran part
 # also comes from ocatve, not from wcalc.
 GCC_REQD+=	3.0
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c c++ fortran77
 
 .include "../../math/octave/octave.mk"
 

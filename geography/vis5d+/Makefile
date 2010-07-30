@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/12/03 13:06:52 asau Exp $
+# $NetBSD: Makefile,v 1.16 2010/07/30 10:36:24 asau Exp $
 #
 
 DISTNAME=		vis5d+-1.2.1
@@ -12,7 +12,7 @@ COMMENT=		Volumetric Visualization program for scientific datasets
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt

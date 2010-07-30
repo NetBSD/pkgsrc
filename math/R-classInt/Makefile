@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/03 07:25:57 adam Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/30 10:36:26 asau Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -10,7 +10,7 @@ COMMENT=	Package for choosing univariate class intervals for graphics
 R_PKGNAME=	classInt
 R_PKGVER=	0.1-14
 
-USE_LANGUAGES=	fortran
+USE_LANGUAGES=	fortran77
 
 DEPENDS+=	R-e1071>=1.5:../../math/R-e1071
 

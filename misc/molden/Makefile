@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/12/03 13:06:55 asau Exp $
+# $NetBSD: Makefile,v 1.26 2010/07/30 10:36:33 asau Exp $
 
 DISTNAME=	molden4.6
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -24,7 +24,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FILE=	makefile
 BUILD_TARGET=	molden
 
-USE_LANGUAGES=		c fortran
+USE_LANGUAGES=		c fortran77
 
 INSTALLATION_DIRS=	bin share/molden/doc share/molden/test share/molden/utils
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/01/18 12:46:39 obache Exp $
+# $NetBSD: options.mk,v 1.2 2010/07/30 10:36:25 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pfstools
 PKG_SUPPORTED_OPTIONS=	gdal imagemagick openexr octave qt opengl
@@ -46,7 +46,7 @@ PLIST.octave=	yes
 PLIST_SUBST+=	OCT_LOCALVEROCTFILEDIR=${OCT_LOCALVEROCTFILEDIR:S/${BUILDLINK_PREFIX.octave}\///}
 PLIST_SUBST+=	OCT_LOCALVERFCNFILEDIR=${OCT_LOCALVERFCNFILEDIR:S/${BUILDLINK_PREFIX.octave}\///}
 USE_TOOLS+=	gmake
-USE_LANGUAGES+=	fortran
+USE_LANGUAGES+=	fortran77
 CONFIGURE_ARGS+=	--enable-octave
 .else
 CONFIGURE_ARGS+=	--disable-octave
