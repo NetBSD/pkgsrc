@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2626 2010/07/30 12:52:48 adam Exp $
+$NetBSD: CHANGES-2010,v 1.2627 2010/07/30 12:59:22 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3514,3 +3514,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-XML-TreePP version 0.39 [seb 2010-07-30]
 	Added textproc/p5-XML-FeedPP version 0.41 [seb 2010-07-30]
 	Updated geography/mapserver to 5.6.5 [adam 2010-07-30]
+	Added net/p5-Net-Google-Code version 0.19 [seb 2010-07-30]
