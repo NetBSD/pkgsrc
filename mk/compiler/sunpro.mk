@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.46 2009/10/25 17:15:44 sno Exp $
+# $NetBSD: sunpro.mk,v 1.47 2010/07/30 07:58:59 asau Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -24,10 +24,11 @@ _COMPILER_TYPE.c++ =	CXX
 _COMPILER_TYPE.fortran=	FC
 
 # sunpro-specific definitions
-_COMPILER_LANGS=	c c++ fortran
+_COMPILER_LANGS=	c c++ fortran fortran77
 _COMPILER_NAME.c=	cc
 _COMPILER_NAME.c++ =	CC
 _COMPILER_NAME.fortran=	f77
+_COMPILER_NAME.fortran77=	f77
 
 # LANGUAGES.<compiler> is the list of supported languages by the
 # compiler.
