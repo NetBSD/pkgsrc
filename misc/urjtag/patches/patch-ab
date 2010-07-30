@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/07/30 16:02:45 drochner Exp $
+
+--- src/tap/cable.c.orig	2009-04-17 20:24:10.000000000 +0000
++++ src/tap/cable.c
+@@ -69,6 +69,7 @@ extern cable_driver_t xpc_ext_cable_driv
+ extern cable_driver_t jlink_cable_driver;
+ extern cable_driver_t ep9307_cable_driver;
+ extern cable_driver_t ts7800_cable_driver;
++extern cable_driver_t usbprog_cable_driver;
+ 
+ cable_driver_t *cable_drivers[] = {
+ #ifdef ENABLE_CABLE_ARCOM
+@@ -143,6 +144,7 @@ cable_driver_t *cable_drivers[] = {
+ #ifdef ENABLE_CABLE_TS7800
+ 	&ts7800_cable_driver,
+ #endif
++	&usbprog_cable_driver,
+ 	NULL				/* last must be NULL */
+ };
+ 

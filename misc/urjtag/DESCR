@@ -1,0 +1,5 @@
+UrJTAG is a software package which enables working with JTAG-aware (IEEE
+1149.1) hardware devices (parts) and boards through a JTAG adapter.
+This package has an open and modular architecture with the ability to write
+miscellaneous extensions (like board testers, flash memory programmers, and so
+on).
