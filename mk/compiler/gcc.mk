@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.105 2010/05/06 10:21:17 adam Exp $
+# $NetBSD: gcc.mk,v 1.106 2010/07/30 07:58:59 asau Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -197,13 +197,13 @@ _NEED_GCC44=	yes
 # Assume by default that GCC will only provide a C compiler.
 LANGUAGES.gcc?=	c
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran objc
+LANGUAGES.gcc=	c c++ fortran fortran77 objc
 .elif !empty(_NEED_GCC3:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran java objc
+LANGUAGES.gcc=	c c++ fortran fortran77 java objc
 .elif !empty(_NEED_GCC34:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran objc
+LANGUAGES.gcc=	c c++ fortran fortran77 objc
 .elif !empty(_NEED_GCC44:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran java objc
+LANGUAGES.gcc=	c c++ fortran fortran77 java objc
 .endif
 _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
@@ -238,6 +238,7 @@ _GCC_PKGSRCDIR=		../../lang/gcc
 _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mobjc)
 _USE_GCC_SHLIB?=	yes
 .    endif
@@ -269,6 +270,7 @@ _GCC_PKGSRCDIR=		../../lang/gcc34
 _GCC_DEPENDENCY=	gcc34>=${_GCC_REQD}:../../lang/gcc34
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mobjc)
 _USE_GCC_SHLIB?=	yes
 .    endif
@@ -287,6 +289,7 @@ _GCC_PKGSRCDIR=		../../lang/gcc44
 _GCC_DEPENDENCY=	gcc44>=${_GCC_REQD}:../../lang/gcc44
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mobjc)
 _USE_GCC_SHLIB?=	yes
 .    endif
@@ -308,7 +311,7 @@ _USE_GCC_SHLIB?=	yes
 _IGNORE_GCC3F77=	yes
 MAKEFLAGS+=		_IGNORE_GCC3F77=yes
 .  endif
-.  if !defined(_IGNORE_GCC3F77) && !empty(_LANGUAGES.gcc:Mfortran)
+.  if !defined(_IGNORE_GCC3F77) && (!empty(_LANGUAGES.gcc:Mfortran) || !empty(_LANGUAGES.gcc:Mfortran77))
 _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
 _USE_GCC_SHLIB?=	yes
