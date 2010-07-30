@@ -1,0 +1,5 @@
+The Perl 5 module XML::TreePP module parses an XML document and
+expands it for a hash tree. This generates an XML document from a
+hash tree as the opposite way around. It is a pure Perl implementation.
+It can also fetch and parse an XML document from remote web server
+like JavaScript's XMLHttpRequest object.
