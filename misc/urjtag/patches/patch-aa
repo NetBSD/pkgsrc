@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/07/30 16:02:45 drochner Exp $
+
+--- src/tap/Makefile.in.orig	2009-04-17 20:25:38.000000000 +0000
++++ src/tap/Makefile.in
+@@ -217,7 +217,7 @@ am_libtap_a_OBJECTS = tap.$(OBJEXT) regi
+ 	$(am__objects_14) $(am__objects_15) $(am__objects_16) \
+ 	$(am__objects_17) $(am__objects_18) $(am__objects_19) \
+ 	$(am__objects_20) $(am__objects_21) $(am__objects_22) \
+-	$(am__objects_23)
++	$(am__objects_23) usbprog.$(OBJEXT)
+ libtap_a_OBJECTS = $(am_libtap_a_OBJECTS)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/tools/depcomp
+@@ -360,7 +360,7 @@ libtap_a_SOURCES = tap.c register.c stat
+ 	$(am__append_13) $(am__append_14) $(am__append_15) \
+ 	$(am__append_16) $(am__append_17) $(am__append_18) \
+ 	$(am__append_19) $(am__append_20) $(am__append_21) \
+-	$(am__append_22) $(am__append_23)
++	$(am__append_22) $(am__append_23) usbprog.c
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -853,6 +853,9 @@ vision_ep9307.obj: cable/vision_ep9307.c
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o vision_ep9307.obj `if test -f 'cable/vision_ep9307.c'; then $(CYGPATH_W) 'cable/vision_ep9307.c'; else $(CYGPATH_W) '$(srcdir)/cable/vision_ep9307.c'; fi`
+ 
++usbprog.o: cable/usbprog.c
++	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o usbprog.o cable/usbprog.c
++
+ ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+ 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
+ 	unique=`for i in $$list; do \

@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/07/30 16:02:45 drochner Exp $
+
+--- src/tap/cable/generic_usbconn.c.orig	2009-04-17 20:24:10.000000000 +0000
++++ src/tap/cable/generic_usbconn.c
+@@ -86,6 +86,7 @@ extern usbconn_cable_t usbconn_cable_nio
+ extern usbconn_cable_t usbconn_cable_usb_jtag_ftdi;
+ #endif
+ #endif
++extern usbconn_cable_t usbconn_cable_usbprog;
+ 
+ usbconn_cable_t *usbconn_cables[] =
+ {
+@@ -138,6 +139,7 @@ usbconn_cable_t *usbconn_cables[] =
+ 	&usbconn_cable_usb_jtag_ftdi,
+ #endif
+ #endif
++	&usbconn_cable_usbprog,
+ 	NULL
+ };
+ 
