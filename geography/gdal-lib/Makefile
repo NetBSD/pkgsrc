@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/06/13 22:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/07/30 10:36:24 asau Exp $
 
 DISTNAME=	gdal-1.7.1
 PKGNAME=	gdal-lib-1.7.1
@@ -12,7 +12,7 @@ COMMENT=	Translator library for raster geospatial data formats
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake

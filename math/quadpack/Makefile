@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/12/12 22:52:57 asau Exp $
+# $NetBSD: Makefile,v 1.17 2010/07/30 10:36:31 asau Exp $
 
 DISTNAME=		quadpack-20001130
 PKGREVISION=		2
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Fortran subroutines for the solution of definite univariate integrals
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		fortran77
 WRKSRC=			${WRKDIR}/quadpack
 
 PKG_DESTDIR_SUPPORT=	user-destdir
