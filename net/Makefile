@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.842 2010/07/30 08:26:27 seb Exp $
+# $NetBSD: Makefile,v 1.843 2010/07/30 12:58:41 seb Exp $
 #
 
 COMMENT=	Networking tools
@@ -352,6 +352,7 @@ SUBDIR+=	p5-Net-FTPSSL
 SUBDIR+=	p5-Net-GitHub
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Google
+SUBDIR+=	p5-Net-Google-Code
 SUBDIR+=	p5-Net-IP
 SUBDIR+=	p5-Net-IPv4Addr
 SUBDIR+=	p5-Net-IPv6Addr
