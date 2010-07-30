@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.70 2009/07/08 21:17:16 markd Exp $
+# $NetBSD: compiler.mk,v 1.71 2010/07/30 07:58:58 asau Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -57,8 +57,8 @@
 # USE_LANGUAGES
 #	Lists the languages used in the source code of the package,
 #	and is used to determine the correct compilers to install.
-#	Valid values are: c, c99, c++, fortran, java, objc.  The
-#       default is "c".
+#	Valid values are: c, c99, c++, fortran, fortran77, java, objc.
+#	The default is "c".
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
@@ -206,7 +206,7 @@ PKG_CXX:=		${_FAIL_WRAPPER.CXX}
 ALL_ENV+=		CXXCPP=${CPP:Q} # to make some Autoconf scripts happy
 override-tools: ${_FAIL_WRAPPER.CXX}
 .endif
-.if empty(USE_LANGUAGES:Mfortran)
+.if empty(USE_LANGUAGES:Mfortran) && empty(USE_LANGUAGES:Mfortran77)
 PKG_FC:=		${_FAIL_WRAPPER.FC}
 override-tools: ${_FAIL_WRAPPER.FC}
 .endif

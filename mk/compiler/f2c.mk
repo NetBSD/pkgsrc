@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.14 2009/12/20 12:32:55 jmmv Exp $
+# $NetBSD: f2c.mk,v 1.15 2010/07/30 07:58:59 asau Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,7 +44,7 @@ COMPILER_F2C_MK=	defined
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
 # requested by the package in USE_LANGUAGES.
 #
-LANGUAGES.f2c=	fortran
+LANGUAGES.f2c=	fortran fortran77
 _LANGUAGES.f2c=	# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.f2c+=	${LANGUAGES.f2c:M${_lang_}}
@@ -65,7 +65,7 @@ _F2CBASE_DEFAULT=	${LOCALBASE}
 
 _F2C_DIR=	${WRKDIR}/.f2c
 _F2C_VARS=	# empty
-.  if !empty(_LANGUAGES.f2c:Mfortran)
+.  if !empty(_LANGUAGES.f2c:Mfortran) || !empty(_LANGUAGES.f2c:Mfortran77)
 PKG_FC?=	${FC}
 _F2C_VARS+=	FC
 _F2C_FC:=	${_F2C_DIR}/bin/${PKG_FC:T}
