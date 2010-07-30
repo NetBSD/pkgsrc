@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2624 2010/07/30 10:30:27 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2625 2010/07/30 12:24:34 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3512,3 +3512,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-WWW-Mechanize-GZip version 0.12 [seb 2010-07-29]
 	Added net/p5-Net-GitHub version 0.22 [seb 2010-07-30]
 	Added textproc/p5-XML-TreePP version 0.39 [seb 2010-07-30]
+	Added textproc/p5-XML-FeedPP version 0.41 [seb 2010-07-30]
