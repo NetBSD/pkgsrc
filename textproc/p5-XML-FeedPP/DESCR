@@ -1,0 +1,5 @@
+The Perl 5 module XML::FeedPP is an all-purpose syndication utility
+that parses and publishes RSS 2.0, RSS 1.0 (RDF), Atom 0.3 and 1.0
+feeds. It allows you to add new content, merge feeds, and convert
+among these various formats. It is a pure Perl implementation and
+does not require any other module except for XML::TreePP.
