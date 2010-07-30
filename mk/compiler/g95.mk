@@ -1,4 +1,4 @@
-# $NetBSD: g95.mk,v 1.1 2009/07/08 21:17:16 markd Exp $
+# $NetBSD: g95.mk,v 1.2 2010/07/30 07:58:59 asau Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,7 +54,7 @@ _USE_G95=	NO
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
 # requested by the package in USE_LANGUAGES.
 #
-LANGUAGES.g95=	fortran
+LANGUAGES.g95=	fortran fortran77
 _LANGUAGES.g95=	# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.g95+=	${LANGUAGES.g95:M${_lang_}}
