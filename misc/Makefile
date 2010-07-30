@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2010/07/21 11:27:36 drochner Exp $
+# $NetBSD: Makefile,v 1.348 2010/07/30 16:06:37 drochner Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -220,6 +220,7 @@ SUBDIR+=	ttyrec
 SUBDIR+=	udfclient
 SUBDIR+=	ukpostcodes
 SUBDIR+=	uptimec
+SUBDIR+=	urjtag
 SUBDIR+=	usbids
 SUBDIR+=	usbprog
 SUBDIR+=	utftools
