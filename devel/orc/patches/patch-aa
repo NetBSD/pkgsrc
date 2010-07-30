@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2010/07/30 07:02:36 dholland Exp $
+
+Recognize dfly, from Antonio Huete Jimenez in PR 43685.
+
+--- configure.ac.orig	2010-07-13 23:39:15.000000000 +0000
++++ configure.ac
+@@ -92,7 +92,7 @@ case "${host_os}" in
+   mingw*|pw32*|cygwin*)
+     AC_DEFINE(HAVE_CODEMEM_VIRTUALALLOC, 1, [Use VirtualAlloc to allocate code for execution])
+     ;;
+-  linux*|darwin*|solaris*|netbsd*|freebsd*|openbsd*|kfreebsd*|gnu*)
++  linux*|darwin*|solaris*|netbsd*|dragonfly*|freebsd*|openbsd*|kfreebsd*|gnu*)
+     AC_DEFINE(HAVE_CODEMEM_MMAP, 1, [Use mmap to allocate code for execution])
+     ;;
+   *)

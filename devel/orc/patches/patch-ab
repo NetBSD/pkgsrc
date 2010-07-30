@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/07/30 07:02:36 dholland Exp $
+
+Recognize dfly, from Antonio Huete Jimenez in PR 43685.
+
+--- configure.orig	2010-07-14 00:45:38.000000000 +0000
++++ configure
+@@ -12891,7 +12891,7 @@ $as_echo "#define HAVE_CODEMEM_MALLOC 1"
+ $as_echo "#define HAVE_CODEMEM_VIRTUALALLOC 1" >>confdefs.h
+ 
+     ;;
+-  linux*|darwin*|solaris*|netbsd*|freebsd*|openbsd*|kfreebsd*|gnu*)
++  linux*|darwin*|solaris*|netbsd*|dragonfly*|freebsd*|openbsd*|kfreebsd*|gnu*)
+ 
+ $as_echo "#define HAVE_CODEMEM_MMAP 1" >>confdefs.h
+ 
