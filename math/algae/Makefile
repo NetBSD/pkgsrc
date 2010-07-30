@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/12/03 13:06:53 asau Exp $
+# $NetBSD: Makefile,v 1.24 2010/07/30 10:36:27 asau Exp $
 
 DISTNAME=		algae-4.3.6
 PKGREVISION=		2
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-dlmalloc
 CONFIGURE_ENV=		ac_cv_path_XTERM=xterm
-USE_LANGUAGES=		c fortran
+USE_LANGUAGES=		c fortran77
 USE_GNU_READLINE=	yes	# uses history_truncate_file
 INFO_FILES=		yes
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\

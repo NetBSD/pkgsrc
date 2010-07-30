@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/06/09 21:04:26 markd Exp $
+# $NetBSD: Makefile,v 1.27 2010/07/30 10:36:30 asau Exp $
 #
 
 DISTNAME=	rpy2-2.1.3
@@ -13,7 +13,7 @@ COMMENT=	R interface for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		YES
-USE_LANGUAGES+=		c fortran
+USE_LANGUAGES+=		c fortran77
 
 BUILDLINK_API_DEPENDS.R+= R>=2.11.0
 
