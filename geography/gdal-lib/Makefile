@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/07/30 10:36:24 asau Exp $
+# $NetBSD: Makefile,v 1.29 2010/07/30 11:03:27 asau Exp $
 
 DISTNAME=	gdal-1.7.1
 PKGNAME=	gdal-lib-1.7.1
@@ -25,10 +25,6 @@ CONFIGURE_ARGS+=	--with-xerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-
 CONFIGURE_ARGS+=	--without-python
 
 MAKE_FILE=		GNUmakefile
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
-PKG_SUPPORTED_OPTIONS=	pgsql mysql
-PKG_SUGGESTED_OPTIONS=	pgsql
 
 .include "options.mk"
 
