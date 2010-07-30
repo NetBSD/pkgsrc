@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/30 17:53:09 seb Exp $
+
+SHA1 (RT-Client-REST-0.41.tar.gz) = cc1785bc2230a86db724fa9f77db126906951458
+RMD160 (RT-Client-REST-0.41.tar.gz) = df080081de5c1518a37cffd36b87e02ca984015b
+Size (RT-Client-REST-0.41.tar.gz) = 54374 bytes
