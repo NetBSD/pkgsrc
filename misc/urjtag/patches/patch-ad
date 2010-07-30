@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2010/07/30 16:59:49 drochner Exp $
+
+--- src/bsdl2jtag.orig	2009-04-17 20:24:11.000000000 +0000
++++ src/bsdl2jtag
+@@ -24,7 +24,7 @@
+ 
+ scriptname=`basename $0`
+ 
+-function usage ()
++usage ()
+ {
+     cat <<EOF
+ Usage:	$scriptname <bsdl-file> <jtag-file>
+@@ -37,7 +37,7 @@ Parameters
+ EOF
+ }
+ 
+-if [[ -z $1 || -z $2 ]]; then
++if [ -z "$1" -o -z "$2" ]; then
+     usage
+     exit 1
+ fi
