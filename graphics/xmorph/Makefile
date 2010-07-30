@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/12/03 13:06:53 asau Exp $
+# $NetBSD: Makefile,v 1.8 2010/07/30 10:36:25 asau Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-gtkmorph=no
 INFO_FILES=	yes
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c c++ fortran77
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

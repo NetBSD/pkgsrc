@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/06/13 22:44:56 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/07/30 10:36:29 asau Exp $
 #
 
 DISTNAME=	grace-5.1.22
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c fortran
+USE_LANGUAGES=		c fortran77
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-grace-home=${PREFIX}/grace
 CONFIGURE_ARGS+=	--without-bundled-xbae

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/12/03 13:06:52 asau Exp $
+# $NetBSD: Makefile,v 1.35 2010/07/30 10:36:22 asau Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=		3
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c fortran
+USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
 
 LIBTOOL_OVERRIDE=	libtool ../fftw-*/libtool

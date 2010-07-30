@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/12/03 19:01:05 asau Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/30 10:36:23 asau Exp $
 #
 
 DISTNAME=		mopac7
@@ -22,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/mopac7
 BUILD_TARGET=		MOPAC7
 USE_TOOLS+=		gmake pax
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		fortran77
 PKG_FC=			f2c-f77
 
 INSTALLATION_DIRS=	bin share/mopac7/sample
