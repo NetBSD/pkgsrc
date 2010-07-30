@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.544 2010/07/09 04:01:56 seb Exp $
+# $NetBSD: Makefile,v 1.545 2010/07/30 10:30:02 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -371,6 +371,7 @@ SUBDIR+=	p5-XML-Simple
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-XML-Tidy
 SUBDIR+=	p5-XML-TreeBuilder
+SUBDIR+=	p5-XML-TreePP
 SUBDIR+=	p5-XML-Twig
 SUBDIR+=	p5-XML-UM
 SUBDIR+=	p5-XML-Writer
