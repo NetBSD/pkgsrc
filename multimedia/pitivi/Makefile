@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/16 14:12:09 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/30 06:55:04 dholland Exp $
 #
 
 DISTNAME=	pitivi-0.13.4
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 PYTHON_PATCH_SCRIPTS=	bin/pitivi.in
+PYTHON_VERSIONS_ACCEPTED= 26 25
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../lang/python/application.mk"
