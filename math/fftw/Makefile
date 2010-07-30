@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/12/03 13:06:54 asau Exp $
+# $NetBSD: Makefile,v 1.35 2010/07/30 10:36:28 asau Exp $
 
 DISTNAME=	fftw-3.2.2
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		c fortran
+USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

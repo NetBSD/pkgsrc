@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2010/07/03 07:25:57 adam Exp $
+# $NetBSD: Makefile,v 1.110 2010/07/30 10:36:25 asau Exp $
 
 DISTNAME=		R-2.11.1
 CATEGORIES=		math
@@ -19,7 +19,7 @@ TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
 USE_GNU_READLINE=	yes		# uses callback interface
 USE_GNU_ICONV=		yes		# latin1 support, iconvlist
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 TEXINFO_REQD=		4.7
 
