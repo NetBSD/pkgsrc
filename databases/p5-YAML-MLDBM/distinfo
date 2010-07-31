@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/31 07:16:23 sno Exp $
+
+SHA1 (YAML-MLDBM-0.10.tar.gz) = be53f12206f8a8c99dee6c2d83c3faa439d70d6f
+RMD160 (YAML-MLDBM-0.10.tar.gz) = 26d673818d96dc489f0286050127f9605fd55a86
+Size (YAML-MLDBM-0.10.tar.gz) = 3420 bytes
