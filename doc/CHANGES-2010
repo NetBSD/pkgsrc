@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2652 2010/07/31 11:48:49 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2653 2010/07/31 11:52:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3540,3 +3540,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Perl-Critic to 1.108 [sno 2010-07-31]
 	Updated security/p5-Crypt-Twofish to 2.14 [sno 2010-07-31]
 	Updated security/p5-Digest-MD5 to 2.40 [sno 2010-07-31]
+	Updated security/p5-GSSAPI to 0.28 [sno 2010-07-31]
