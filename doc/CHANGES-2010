@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2648 2010/07/31 10:42:16 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2649 2010/07/31 10:52:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IPC-Cmd to 0.60 [sno 2010-07-31]
 	Updated devel/p5-IPC-SysV to 2.03 [sno 2010-07-31]
 	Added devel/p5-PPIx-Utilities version 1.000.001 [sno 2010-07-31]
+	Added devel/p5-PPIx-Regexp version 0.008 [sno 2010-07-31]
