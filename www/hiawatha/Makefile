@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/08/25 11:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/07/31 23:41:17 dholland Exp $
 #
 
 DISTNAME=	hiawatha
@@ -49,6 +49,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/simple.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/SeeAlso/pault_com.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/hiawatha.cfg ${DESTDIR}${EGDIR}
+	cd ${WRKSRC} && chmod -R go-w WEBROOT
 	cd ${WRKSRC} && pax -s '/^WEBROOT/pault.com/' -rw WEBROOT ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/index.xml ${DESTDIR}${EGDIR}/WEBROOT
 	${INSTALL_DATA} ${FILESDIR}/index.xsl ${DESTDIR}${EGDIR}/WEBROOT
