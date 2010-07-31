@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2666 2010/07/31 14:00:02 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2667 2010/07/31 14:04:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3554,3 +3554,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Pod-POM to 0.27 [sno 2010-07-31]
 	Updated textproc/p5-Pod-Coverage to 0.21 [sno 2010-07-31]
 	Updated textproc/p5-Pod-Readme to 0.10 [sno 2010-07-31]
+	Updated textproc/p5-Text-Autoformat to 1.669.002 [sno 2010-07-31]
