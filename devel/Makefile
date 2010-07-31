@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1379 2010/07/31 07:28:17 sno Exp $
+# $NetBSD: Makefile,v 1.1380 2010/07/31 07:32:01 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -615,6 +615,7 @@ SUBDIR+=	p5-Devel-StackTrace-AsHTML
 SUBDIR+=	p5-Devel-StackTrace-WithLexicals
 SUBDIR+=	p5-Devel-Symdump
 SUBDIR+=	p5-Devel-Trace
+SUBDIR+=	p5-Devel-TraceUse
 SUBDIR+=	p5-Devel-ebug
 SUBDIR+=	p5-EV
 SUBDIR+=	p5-Error
