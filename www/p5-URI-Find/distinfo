@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/22 20:29:09 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/07/31 12:32:47 sno Exp $
 
-SHA1 (URI-Find-20100211.tar.gz) = 61072ce2ce74b2821abab0fb197a3c56608c3b57
-RMD160 (URI-Find-20100211.tar.gz) = 862bb384113d8af95160cc203922ecbbcea526ee
-Size (URI-Find-20100211.tar.gz) = 15214 bytes
+SHA1 (URI-Find-20100505.tar.gz) = cf3b0d48368df1e2dd1786c89b2f6616faec6d5a
+RMD160 (URI-Find-20100505.tar.gz) = abbd36d61dd03a84ff6579aedb3e7d3b66553381
+Size (URI-Find-20100505.tar.gz) = 23149 bytes
