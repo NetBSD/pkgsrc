@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2010/03/16 23:46:40 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/31 10:13:46 sno Exp $
 #
 
-DISTNAME=	IO-Prompt-0.997
-PKGNAME=	p5-${DISTNAME:S/997/99.7/}
+DISTNAME=	IO-Prompt-0.997001
+PKGNAME=	p5-${DISTNAME:S/997001/99.7.001/}
 #PKGREVISION=	2
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DC/DCONWAY/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~dconway/IO-Prompt/
