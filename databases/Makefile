@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.338 2010/07/09 19:37:11 asau Exp $
+# $NetBSD: Makefile,v 1.339 2010/07/31 07:12:21 sno Exp $
 #
 
 COMMENT=	Databases
@@ -134,6 +134,7 @@ SUBDIR+=	p5-DBIx-Class-Schema-Loader
 SUBDIR+=	p5-DBIx-Class-TimeStamp
 SUBDIR+=	p5-DBIx-Class-UUIDColumns
 SUBDIR+=	p5-DBIx-Class-Validation
+SUBDIR+=	p5-DBIx-Connector
 SUBDIR+=	p5-DBIx-ContextualFetch
 SUBDIR+=	p5-DBIx-DBSchema
 SUBDIR+=	p5-DBIx-Datasource
