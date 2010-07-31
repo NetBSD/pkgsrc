@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2629 2010/07/30 17:53:51 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2630 2010/07/31 07:11:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3517,3 +3517,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/p5-Net-Google-Code version 0.19 [seb 2010-07-30]
 	Added net/p5-Net-Trac version 0.15 [seb 2010-07-30]
 	Added net/p5-RT-Client-REST version 0.41 [seb 2010-07-30]
+	Added databases/p5-DBIx-Connector version 0.35 [sno 2010-07-31]
