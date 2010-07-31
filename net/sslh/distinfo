@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2010/07/31 17:04:47 apb Exp $
+
+SHA1 (sslh-1.7a.tar.gz) = 11bcb9fd4285b06819d16db638ca111d8d43577a
+RMD160 (sslh-1.7a.tar.gz) = 79a156469ba4b10c493851be28d15898eaef4731
+Size (sslh-1.7a.tar.gz) = 9733 bytes
