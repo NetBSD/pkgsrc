@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2010/01/03 01:37:59 tnn Exp $
+# $NetBSD: Makefile,v 1.54 2010/07/31 20:31:33 dholland Exp $
 
 DISTNAME=	f2c-20090411	# see notes below
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
