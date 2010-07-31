@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.20 2010/01/21 06:21:07 asau Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/07/31 22:06:24 asau Exp $
 bin/gst
 bin/gst-blox
+bin/gst-browser
 bin/gst-config
 bin/gst-convert
 bin/gst-doc
 bin/gst-load
 bin/gst-package
+bin/gst-profile
 bin/gst-reload
 bin/gst-remote
 bin/gst-sunit
@@ -18,13 +20,13 @@ lib/libgst.la
 lib/pkgconfig/gnu-smalltalk.pc
 lib/smalltalk/blox-tk.la
 lib/smalltalk/digest.la
+lib/smalltalk/expat.la
 lib/smalltalk/gdbm.la
 lib/smalltalk/gst-gtk.la
 lib/smalltalk/gstglut.la
 lib/smalltalk/gstopengl.la
 lib/smalltalk/i18n.la
 lib/smalltalk/iconv.la
-lib/smalltalk/sockets.la
 lib/smalltalk/zlib.la
 libexec/smalltalk/vfs/deb
 libexec/smalltalk/vfs/lslR
@@ -42,16 +44,16 @@ man/man1/gst-convert.1
 man/man1/gst-doc.1
 man/man1/gst-load.1
 man/man1/gst-package.1
+man/man1/gst-profile.1
 man/man1/gst-reload.1
 man/man1/gst-sunit.1
 man/man1/gst.1
 share/aclocal/gst-package.m4
 share/aclocal/gst.m4
-share/aclocal/snprintfv.m4
+share/smalltalk/BLOXBrowser.star
 share/smalltalk/Blox.star
 share/smalltalk/BloxGTK.star
 share/smalltalk/BloxTK.star
-share/smalltalk/Browser.star
 share/smalltalk/CParser.star
 share/smalltalk/Cairo.star
 share/smalltalk/ClassPublisher.star
@@ -76,8 +78,10 @@ share/smalltalk/Magritte.star
 share/smalltalk/NetClients.star
 share/smalltalk/OpenGL.star
 share/smalltalk/Parser.star
+share/smalltalk/ProfileTools.star
 share/smalltalk/ROE.star
 share/smalltalk/SUnit.star
+share/smalltalk/SandstoneDb.star
 share/smalltalk/Seaside-Core.star
 share/smalltalk/Seaside-Development.star
 share/smalltalk/Seaside-Examples.star
@@ -86,8 +90,12 @@ share/smalltalk/Sockets.star
 share/smalltalk/Sport.star
 share/smalltalk/Swazoo.star
 share/smalltalk/VFSAddOns.star
+share/smalltalk/VisualGST.star
 share/smalltalk/WebServer.star
 share/smalltalk/XML-DOM.star
+share/smalltalk/XML-Expat.star
+share/smalltalk/XML-ParserTests.star
+share/smalltalk/XML-PullParser.star
 share/smalltalk/XML-SAXDriver.star
 share/smalltalk/XML-SAXParser.star
 share/smalltalk/XML-XMLNodeBuilder.star
@@ -130,7 +138,6 @@ share/smalltalk/examples/shell
 share/smalltalk/examples/xml.sed
 share/smalltalk/kernel/AbstNamespc.st
 share/smalltalk/kernel/AnsiDates.st
-share/smalltalk/kernel/AnsiExcept.st
 share/smalltalk/kernel/Array.st
 share/smalltalk/kernel/ArrayColl.st
 share/smalltalk/kernel/Association.st
@@ -167,6 +174,7 @@ share/smalltalk/kernel/Delay.st
 share/smalltalk/kernel/Dictionary.st
 share/smalltalk/kernel/DirMessage.st
 share/smalltalk/kernel/Directory.st
+share/smalltalk/kernel/DynVariable.st
 share/smalltalk/kernel/ExcHandling.st
 share/smalltalk/kernel/False.st
 share/smalltalk/kernel/File.st
@@ -236,6 +244,7 @@ share/smalltalk/kernel/String.st
 share/smalltalk/kernel/SymLink.st
 share/smalltalk/kernel/Symbol.st
 share/smalltalk/kernel/SysDict.st
+share/smalltalk/kernel/SysExcept.st
 share/smalltalk/kernel/Time.st
 share/smalltalk/kernel/Transcript.st
 share/smalltalk/kernel/True.st
@@ -250,11 +259,11 @@ share/smalltalk/kernel/VarBinding.st
 share/smalltalk/kernel/WeakObjects.st
 share/smalltalk/kernel/WriteStream.st
 share/smalltalk/packages.xml
-share/smalltalk/scripts/Browser.st
 share/smalltalk/scripts/Convert.st
 share/smalltalk/scripts/GenDoc.st
 share/smalltalk/scripts/Load.st
 share/smalltalk/scripts/Package.st
+share/smalltalk/scripts/Profile.st
 share/smalltalk/scripts/Remote.st
 share/smalltalk/scripts/Test.st
 share/smalltalk/unsupported/CPP-test.st
