@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2660 2010/07/31 12:32:59 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2661 2010/07/31 12:37:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3548,3 +3548,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-YAML-Syck to 1.10 [sno 2010-07-31]
 	Updated www/p5-URI to 1.54 [sno 2010-07-31]
 	Updated www/p5-URI-Find to 20100505 [sno 2010-07-31]
+	Updated databases/p5-Template-DBI to 2.65 [sno 2010-07-31]
