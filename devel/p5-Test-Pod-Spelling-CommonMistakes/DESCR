@@ -1,0 +1,4 @@
+This module checks modules POD for common spelling errors. This differs
+than Test::Spelling because it doesn't use your system spellchecker and
+instead uses Pod::Spell::CommonMistakes for the heavy lifting. Using it
+is the same as any standard Test::* module, as seen here.
