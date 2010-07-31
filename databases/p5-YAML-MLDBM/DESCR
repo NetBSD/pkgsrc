@@ -1,0 +1,12 @@
+This module is similar to MLDBM except that it stores data internally as
+YAML, instead of Data::Dumper or Storable. By doing this, tied hash DBM
+databases can be created that can be used seamlessly in Python or Ruby
+applications. That's because those languages also have YAML and DBM
+modules. As other languages get YAML support, YAML::MLDBM should be able
+to be used with them as well.
+
+This module is a wrapper around MLDBM, but you open a DBM file using the
+new() method, instead of using a tie. new() will return a reference to
+a tied hash.
+
+You can also use YAML as a serialization method for MLDBM itself.
