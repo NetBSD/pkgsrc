@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2643 2010/07/31 09:52:35 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2644 2010/07/31 10:08:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3531,3 +3531,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/p5-Wx to 0.97.02 [sno 2010-07-31]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.030 [sno 2010-07-31]
 	Updated devel/p5-Compress-Raw-Zlib to 2.030 [sno 2010-07-31]
+	Updated devel/p5-IO-Compress to 2.030 [sno 2010-07-31]
