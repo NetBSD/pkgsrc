@@ -1,0 +1,4 @@
+This module looks for any typos in your POD. It differs from Pod::Spell
+or Test::Spelling because it uses a custom wordlist and doesn't use the
+system spellchecker. The idea for this came from the
+http://wiki.debian.org/Teams/Lintian code in Debian!
