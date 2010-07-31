@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1382 2010/07/31 07:45:53 sno Exp $
+# $NetBSD: Makefile,v 1.1383 2010/07/31 10:43:10 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -847,6 +847,7 @@ SUBDIR+=	p5-POE-Test-Loops
 SUBDIR+=	p5-PPI
 SUBDIR+=	p5-PPI-PowerToys
 SUBDIR+=	p5-PPI-XS
+SUBDIR+=	p5-PPIx-Utilities
 SUBDIR+=	p5-PV
 SUBDIR+=	p5-Package-Constants
 SUBDIR+=	p5-Package-DeprecationManager
