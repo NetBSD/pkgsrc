@@ -1,0 +1,3 @@
+The purpose of the PPIx-Regexp package is to parse regular expressions
+in a manner similar to the way the PPI package parses Perl. This class
+forms the root of the parse tree, playing a role similar to PPI::Document.
