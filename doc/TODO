@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9507 2010/07/31 14:00:02 sno Exp $
+$NetBSD: TODO,v 1.9508 2010/07/31 20:01:57 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1005,7 +1005,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opengrok-0.9
 	o openh323-1.19.1
 	o openmortal-0.7.1
-	o openmotif-2.3.2
+	o openmotif-2.3.3
 	o openmsx-0.7.0
 	o openoffice3-3.2.1
 	o openssl-0.9.8o
