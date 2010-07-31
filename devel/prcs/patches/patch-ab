@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2006/06/03 01:13:40 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2010/07/31 21:37:25 dholland Exp $
+
+don't let it roll its own uintptr_t, because it gets it wrong. 
 
 --- src/regex.c.orig	2006-06-03 01:04:53.000000000 +0000
 +++ src/regex.c
@@ -6,8 +8,9 @@ $NetBSD: patch-ab,v 1.4 2006/06/03 01:13:40 joerg Exp $
  # endif /* emacs */
  
  /* Integer type for pointers.  */
--# if !defined _LIBC
-+# if !defined _LIBC && !defined(__DragonFly__)
- typedef unsigned long int uintptr_t;
+ # if !defined _LIBC
+-typedef unsigned long int uintptr_t;
++# include <stdint.h>
  # endif
  
+ /* Should we use malloc or alloca?  If REG2EX2_MALLOC is not defined, we
