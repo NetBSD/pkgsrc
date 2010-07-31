@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2009/06/14 20:09:54 sno Exp $
+# $NetBSD: Makefile,v 1.33 2010/07/31 11:48:37 sno Exp $
 #
 
-DISTNAME=	Digest-MD5-2.39
+DISTNAME=	Digest-MD5-2.40
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5md5
 CATEGORIES=	security perl5
@@ -15,7 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Digest>=1.00:../../security/p5-Digest
+DEPENDS+=	{perl>=5.7.3,p5-Digest>=1.00}:../../security/p5-Digest
 
 CONFLICTS+=	p5-MD5-[0-9]*
 
