@@ -1,0 +1,88 @@
+$NetBSD: patch-ab,v 1.1 2010/07/31 07:24:38 sno Exp $
+
+Fix several issue because of depreciated design
+
+--- lib/Tie/DBI.pm.orig	2010-04-10 06:15:01.000000000 +0000
++++ lib/Tie/DBI.pm
+@@ -27,23 +27,35 @@ my %DefaultOptions = (
+ # DBD drivers that work correctly with bound variables
+ my %CAN_BIND = (
+                 'ODBC' => 1,
++                'AnyData' => 1,
+ 		'mysql' => 1,
+ 		'mSQL'  => 1,
+ 		'Oracle' => 1,
+ 		'CSV'  => 1,
++		'DBM'  => 1,
++		'Sys'  => 1,
+ 		'Pg'  => 1,
++		'PO'  => 1,
+ 		'Informix'  => 1,
+ 		'Solid'  => 1,
+ 	       );
+ my %CANNOT_LISTFIELDS = (
+ 			 'SQLite' => 1,
+ 			 'Oracle' => 1,
++			 'CSV' => 1,
++			 'DBM' => 1,
++			 'PO' => 1,
++			 'AnyData' => 1,
+ 			);
+ my %CAN_BINDSELECT = (
+ 		      'mysql' => 1,
+ 		      'mSQL'  => 1,
+ 		      'CSV'  => 1,
+ 		      'Pg'  => 1,
++		      'Sys'  => 1,
++		      'DBM'  => 1,
++		      'AnyData'  => 1,
++		      'PO'  => 1,
+ 		      'Informix'  => 1,
+ 		      'Solid'  => 1,
+                       'ODBC'  => 1,
+@@ -59,6 +71,11 @@ my %DOES_IN = (
+ 	       'mysql' => 1,
+ 	       'Oracle' => 1,
+ 	       'Sybase' => 1,
++	       'CSV' => 1,
++	       'DBM' => 1, # at least with SQL::Statement
++	       'AnyData' => 1,
++	       'Sys' => 1,
++	       'PO' => 1,
+ 	       );
+ 
+ 
+@@ -278,11 +295,11 @@ sub STORE {
+ 	    $s->_update($key,\@fields,\@values)
+ 		:  $s->_insert($key,\@fields,\@values);
+     } else {
+-      $result = eval {
++      eval {
+       local($s->{'dbh'}->{PrintError}) = 0; # suppress warnings
+-      $s->_insert($key,\@fields,\@values);
+-      }
+-      || $s->_update($key,\@fields,\@values);
++      $result = $s->_insert($key,\@fields,\@values);
++      };
++      $result or $result = $s->_update($key,\@fields,\@values);
+     }
+     croak "STORE: ",$s->errstr if $s->error;
+ 
+@@ -361,7 +378,7 @@ sub _run_query {
+     # if we get here, then we can't bind, so we replace ? with escaped parameters
+     while ( (my $pos = index($query, '?')) >= 0 ) {
+       my $value = shift(@bind_variables);
+-      substr($query, $pos, 1) = (defined($value) ? $value : 'null');
++      substr($query, $pos, 1) = (defined($value) ? ( $self->{CanBind} ? $self->{'dbh'}->quote($value) : $value ) : 'null');
+     }
+     my $sth = $self->{'dbh'}->prepare($query);
+     return unless $sth && $sth->execute;
+@@ -375,7 +392,7 @@ sub _fields {
+ 	my ($dbh,$table) = @{$self}{'dbh','table'};
+ 
+ 	local($^W) = 0;  # kill uninitialized variable warning
+-	my $sth = $dbh->prepare("LISTFIELDS $table");
++	my $sth = $dbh->prepare("LISTFIELDS $table") unless($self->{CannotListfields});
+ 
+ 	# doesn't support LISTFIELDS, so try SELECT *
+ 	unless (!$self->{CannotListfields} && defined($sth) && $sth->execute) {  

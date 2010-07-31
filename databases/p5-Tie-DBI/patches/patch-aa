@@ -1,0 +1,64 @@
+$NetBSD: patch-aa,v 1.1 2010/07/31 07:24:38 sno Exp $
+
+Respect DBI_DSN etc. - and do not prompt for test DSN's
+
+--- t/DBI.t.orig	2010-06-19 13:01:36.000000000 +0000
++++ t/DBI.t
+@@ -1,10 +1,10 @@
+ use strict;
+ use warnings;
+-use Test::More tests => 26;
++use Test::More;
+ 
+ my $DRIVER = $ENV{DRIVER};
+-use constant USER   => $ENV{USER};
+-use constant PASS   => $ENV{PASS};
++use constant USER   => $ENV{USER} || $ENV{DBI_USER};
++use constant PASS   => $ENV{PASS} || $ENV{DBI_PASS};
+ use constant DBNAME => $ENV{DB} || 'test';
+ use constant HOST   => $ENV{HOST} || ($^O eq 'cygwin') ? '127.0.0.1' : 'localhost';
+ 
+@@ -13,6 +13,10 @@ use Tie::DBI;
+ 
+ ######################### End of black magic.
+ 
++if ($ENV{DBI_DSN} && !$DRIVER) {
++    ($DRIVER = $ENV{DBI_DSN}) =~ s/^dbi:([^:]+):.*$/$1/i;
++}
++
+ unless ($DRIVER) {
+     local($^W)=0;  # kill uninitialized variable warning
+     # I like mysql best, followed by Oracle and Sybase
+@@ -22,9 +26,10 @@ unless ($DRIVER) {
+ }
+ 
+ if ($DRIVER) {
++    plan tests => 26;
+     diag("DBI.t - Using DBD driver $DRIVER...");
+ } else {
+-    die "Found no DBD driver to use.\n";
++    plan skip_all => "Found no DBD driver to use.\n";
+ }
+ 
+ my %TABLES = (
+@@ -79,8 +84,9 @@ my @test_data = (
+ sub initialize_database {
+     local($^W) = 0;
+     my $dsn;
+-    if ($DRIVER eq 'Pg') { $dsn = "dbi:$DRIVER:dbname=${\DBNAME}"; } 
+-                    else { $dsn = "dbi:$DRIVER:${\DBNAME}:${\HOST}";        }
++    if( $ENV{DBI_DSN} )     { $dsn = $ENV{DBI_DSN}; }
++    elsif ($DRIVER eq 'Pg') { $dsn = "dbi:$DRIVER:dbname=${\DBNAME}"; } 
++                       else { $dsn = "dbi:$DRIVER:${\DBNAME}:${\HOST}"; }
+     my $dbh = DBI->connect($dsn,USER,PASS,{PrintError=>0}) || return undef;
+     $dbh->do("DROP TABLE testTie");
+     return $dbh if $DRIVER eq 'ExampleP';
+@@ -121,7 +127,7 @@ isa_ok(tie(%h,'Tie::DBI',{db=>$dbh,table
+ is(scalar(keys %h), 0, '%h is empty');
+ 
+ {
+-    local($^W = 0);
++    local $^W = 0;
+     ok(insert_data(\%h), "Insert data into db");
+ }
+ ok(exists($h{strawberries}));
