@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2661 2010/07/31 12:37:29 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2662 2010/07/31 12:44:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3549,3 +3549,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-URI to 1.54 [sno 2010-07-31]
 	Updated www/p5-URI-Find to 20100505 [sno 2010-07-31]
 	Updated databases/p5-Template-DBI to 2.65 [sno 2010-07-31]
+	Updated devel/p5-Test-MinimumVersion to 0.101.080 [sno 2010-07-31]
