@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2639 2010/07/31 08:03:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2640 2010/07/31 08:46:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3527,3 +3527,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-PPI-PowerToys version 0.14 [sno 2010-07-31]
 	Updated x11/p5-Alien-wxWidgets to 0.51 [sno 2010-07-31]
 	Updated devel/p5-ExtUtils-XSpp to 0.14 [sno 2010-07-31]
+	Updated inputmethod/skk to 14.0.91 [obache 2010-07-31]
