@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2645 2010/07/31 10:13:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2646 2010/07/31 10:16:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3533,3 +3533,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Compress-Raw-Zlib to 2.030 [sno 2010-07-31]
 	Updated devel/p5-IO-Compress to 2.030 [sno 2010-07-31]
 	Updated devel/p5-IO-Prompt to 0.99.7.001 [sno 2010-07-31]
+	Updated devel/p5-IPC-Cmd to 0.60 [sno 2010-07-31]
