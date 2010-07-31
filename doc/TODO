@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9498 2010/07/29 19:03:36 seb Exp $
+$NetBSD: TODO,v 1.9499 2010/07/31 08:45:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -1244,7 +1244,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skipstone-1.0.1
-	o skk-14.0.91 [pkg/43649]
 	o skype-2.1.0.47
 	o slib-3b3
 	o smalltalk-3.2
