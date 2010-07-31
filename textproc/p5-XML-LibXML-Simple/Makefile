@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/11/26 18:15:35 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/31 11:58:55 sno Exp $
 #
 
-DISTNAME=	XML-LibXML-Simple-0.13
+DISTNAME=	XML-LibXML-Simple-0.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -12,6 +12,8 @@ COMMENT=	XML::LibXML clone of XML::Simple
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML
