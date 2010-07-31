@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/01/21 17:41:07 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/31 13:59:51 sno Exp $
 
-DISTNAME=	Pod-Readme-0.09
+DISTNAME=	Pod-Readme-0.10
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	p5-Regexp-Common>=0:../../textproc/p5-Regexp-Common
 
 PERL5_PACKLIST=		auto/Pod/Readme/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
