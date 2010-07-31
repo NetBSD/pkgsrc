@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/01/25 13:45:40 sno Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/31 12:47:47 sno Exp $
 #
 
-DISTNAME=		Perl-MinimumVersion-1.24
+DISTNAME=		Perl-MinimumVersion-1.26
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Perl/}
@@ -18,6 +18,7 @@ DEPENDS+=		p5-File-Find-Rule-Perl>=1.04:../../devel/p5-File-Find-Rule-Perl
 DEPENDS+=		{perl>=5.10.0,p5-Scalar-List-Utils>=1.18}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=		p5-PPI>=1.205:../../devel/p5-PPI
 DEPENDS+=		p5-Params-Util>=0.25:../../devel/p5-Params-Util
+DEPENDS+=		p5-Perl-Critic>=1.104:../../devel/p5-Perl-Critic
 DEPENDS+=		{perl>=5.10.1,p5-version>=0.76}:../../devel/p5-version
 
 BUILD_DEPENDS+=		p5-Test-Script>=1.03:../../devel/p5-Test-Script
