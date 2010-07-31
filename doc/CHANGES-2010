@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2668 2010/07/31 14:11:13 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2669 2010/07/31 17:16:59 apb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3556,3 +3556,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Pod-Readme to 0.10 [sno 2010-07-31]
 	Updated textproc/p5-Text-Autoformat to 1.669.002 [sno 2010-07-31]
 	Updated www/p5-Pod-POM-Web to 1.14 [sno 2010-07-31]
+	Added net/sslh version 1.7a [apb 2010-07-31]
