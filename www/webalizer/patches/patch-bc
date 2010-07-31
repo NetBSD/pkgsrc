@@ -1,0 +1,18 @@
+$NetBSD: patch-bc,v 1.1 2010/07/31 21:09:14 dholland Exp $
+
+Avoid conflict between configure script, which #defines u_int64_t on
+the command line, and db.h, which provides it on platforms where it's
+missing. PR 42805.
+
+(Upstream ought to switch to using uint64_t and stdint.h.)
+
+--- wcmgr.c.orig	2009-01-13 04:45:49.000000000 +0000
++++ wcmgr.c
+@@ -70,6 +70,7 @@ int main()
+ #include <sys/types.h>
+ #endif
+ 
++#undef u_int64_t
+ #include <db.h>
+ #include "webalizer.h"
+ 
