@@ -1,12 +1,23 @@
-$NetBSD: patch-ad,v 1.16 2010/02/16 17:01:04 kefren Exp $
---- mono/utils/mono-sigcontext.h.orig	2010-02-16 16:50:32.000000000 +0200
-+++ mono/utils/mono-sigcontext.h	2010-02-16 16:57:02.000000000 +0200
-@@ -70,6 +70,8 @@
+--- mono/utils/mono-sigcontext.h.orig	2010-07-06 17:52:18.000000000 +0300
++++ mono/utils/mono-sigcontext.h	2010-07-30 12:56:01.000000000 +0300
+@@ -80,6 +80,20 @@
  
  #ifdef __FreeBSD__
  #define UCONTEXT_GREGS(ctx)	&(((ucontext_t*)(ctx))->uc_mcontext)
 +#elif defined(__NetBSD__)
-+#define UCONTEXT_GREGS(ctx)	&(((ucontext_t*)(ctx))->uc_mcontext.__gregs)
- #else
- #define UCONTEXT_GREGS(ctx)	&(((ucontext_t*)(ctx))->uc_mcontext.gregs)
- #endif
++	#define UCONTEXT_REG_RAX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RAX])
++	#define UCONTEXT_REG_RBX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RBX])
++	#define UCONTEXT_REG_RCX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RCX])
++	#define UCONTEXT_REG_RDX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RDX])
++	#define UCONTEXT_REG_RBP(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RBP])
++	#define UCONTEXT_REG_RSP(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RSP])
++	#define UCONTEXT_REG_RSI(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RSI])
++	#define UCONTEXT_REG_RDI(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RDI])
++	#define UCONTEXT_REG_RIP(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RIP])
++	#define UCONTEXT_REG_R12(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R12])
++	#define UCONTEXT_REG_R13(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R13])
++	#define UCONTEXT_REG_R14(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R14])
++	#define UCONTEXT_REG_R15(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R15])
+ #elif defined(__OpenBSD__)
+ 	/* OpenBSD/amd64 has no gregs array, ucontext_t == sigcontext */
+ 	#define UCONTEXT_REG_RAX(ctx) ((ctx)->sc_rax)
