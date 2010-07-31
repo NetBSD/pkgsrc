@@ -1,16 +1,18 @@
-$NetBSD: patch-ae,v 1.3 2010/01/21 06:21:07 asau Exp $
+$NetBSD: patch-ae,v 1.4 2010/07/31 22:06:25 asau Exp $
 
---- configure.orig	2008-10-19 15:25:04.000000000 +0400
-+++ configure	2010-01-21 08:49:56.000000000 +0300
-@@ -20386,6 +20386,7 @@
+--- configure.orig	2010-04-21 14:03:23.000000000 +0400
++++ configure	2010-05-02 22:52:09.000000000 +0400
+@@ -15539,7 +15539,8 @@
+ 
  for ac_func in putenv strdup strerror strsignal mkstemp getpagesize \
  	getdtablesize strstr ftruncate floorl ceill sqrtl frexpl ldexpl asinl \
- 	acosl atanl logl expl tanl sinl cosl powl truncl lrintl strsep strpbrk \
-+	acosl atanl logl expl tanl sinl cosl trunc truncf truncl lrintl strsep strpbrk \
- 	symlink mkdtemp
- do
- as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
-@@ -34021,8 +34022,6 @@
+-	acosl atanl logl expl tanl sinl cosl powl truncl lrintl truncf lrintf \
++	acosl atanl logl expl tanl sinl cosl truncl lrintl truncf lrintf \
++	acosl atanl logl expl tanl sinl cosl powl trunc truncf truncl lrintl strsep strpbrk \
+         lrint trunc strsep strpbrk symlink mkdtemp
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+@@ -24753,8 +24754,6 @@
  
  ac_config_files="$ac_config_files tests/atlocal"
  
