@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2637 2010/07/31 07:44:52 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2638 2010/07/31 07:52:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3525,3 +3525,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Pod-Spell-CommonMistakes version 0.01 [sno 2010-07-31]
 	Added devel/p5-Test-Pod-Spelling-CommonMistakes version 0.01 [sno 2010-07-31]
 	Added devel/p5-PPI-PowerToys version 0.14 [sno 2010-07-31]
+	Updated x11/p5-Alien-wxWidgets to 0.51 [sno 2010-07-31]
