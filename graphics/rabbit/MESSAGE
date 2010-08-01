@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2010/07/12 00:14:01 obache Exp $
+$NetBSD: MESSAGE,v 1.4 2010/08/01 12:37:18 obache Exp $
 You can install the following packages for feature improvement.
 	www/mimetex:			for writing TeX in RD
 	print/ghostscript:		for reading EPS
@@ -7,4 +7,8 @@ You can install the following packages for feature improvement.
 	devel/ruby-gettext:		for displaying localized messages
 	print/enscript and textproc/ruby-htree:
 					source code hilight
+	graphics/py-aafigure		for writing ASCII art
+	textproc/ruby-hikidoc		for using HikiDoc as input source
+	net/ruby-tweetstream		for using rabbitter tool
+	www/ruby-div			for using rabrick tool
 ===========================================================================

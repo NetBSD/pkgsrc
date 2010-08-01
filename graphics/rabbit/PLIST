@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2010/01/30 00:59:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/08/01 12:37:18 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
 bin/rabbit-theme-manager
+bin/rabbitter
 bin/rabrick
 ${RUBY_VENDORLIB}/rabbit/action.rb
 ${RUBY_VENDORLIB}/rabbit/action/basic.rb
@@ -85,6 +86,7 @@ ${RUBY_VENDORLIB}/rabbit/logger/stderr.rb
 ${RUBY_VENDORLIB}/rabbit/menu.rb
 ${RUBY_VENDORLIB}/rabbit/parser.rb
 ${RUBY_VENDORLIB}/rabbit/parser/base.rb
+${RUBY_VENDORLIB}/rabbit/parser/ext/aafigure.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/anthy.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/enscript.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/entity.rb
@@ -96,6 +98,7 @@ ${RUBY_VENDORLIB}/rabbit/parser/image.rb
 ${RUBY_VENDORLIB}/rabbit/parser/pause-support.rb
 ${RUBY_VENDORLIB}/rabbit/parser/pdf.rb
 ${RUBY_VENDORLIB}/rabbit/parser/rd.rb
+${RUBY_VENDORLIB}/rabbit/parser/rd/ext/aafigure.rb
 ${RUBY_VENDORLIB}/rabbit/parser/rd/ext/anthy.rb
 ${RUBY_VENDORLIB}/rabbit/parser/rd/ext/base.rb
 ${RUBY_VENDORLIB}/rabbit/parser/rd/ext/block-verbatim.rb
@@ -178,12 +181,14 @@ ${RUBY_VENDORLIB}/rabbit/theme-browser/tree.rb
 ${RUBY_VENDORLIB}/rabbit/theme/applier.rb
 ${RUBY_VENDORLIB}/rabbit/theme/auto-slide/auto-slide.rb
 ${RUBY_VENDORLIB}/rabbit/theme/auto-slide/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/background-image-toolkit/background-image-toolkit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/base/base.rb
 ${RUBY_VENDORLIB}/rabbit/theme/base/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/blue-bar/blue-bar.rb
 ${RUBY_VENDORLIB}/rabbit/theme/blue-bar/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/blue-circle/blue-circle.rb
 ${RUBY_VENDORLIB}/rabbit/theme/blue-circle/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/body-background-image/body-background-image.rb
 ${RUBY_VENDORLIB}/rabbit/theme/centering-rabbit/centering-rabbit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/centering-rabbit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/clear-blue/clear-blue.rb
