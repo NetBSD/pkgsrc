@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/11 10:45:11 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/08/01 18:57:27 sno Exp $
 
-SHA1 (Throwable-0.100090.tar.gz) = 26ea04ae48d0ac317c07bcfc0eac98e708f5df4b
-RMD160 (Throwable-0.100090.tar.gz) = 7bd9c63042b57217afea050aab2d28202ded3587
-Size (Throwable-0.100090.tar.gz) = 10679 bytes
+SHA1 (Throwable-0.102080.tar.gz) = 88f107845a23fe0c3925e1c4ebdb029c2450cfd4
+RMD160 (Throwable-0.102080.tar.gz) = 886cc2ea5202adaf5125291eff24e104308b4cb3
+Size (Throwable-0.102080.tar.gz) = 12455 bytes
