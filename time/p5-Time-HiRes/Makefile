@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2010/02/15 13:39:39 sno Exp $
+# $NetBSD: Makefile,v 1.29 2010/08/01 20:33:29 sno Exp $
 
-DISTNAME=		Time-HiRes-1.9720
+DISTNAME=		Time-HiRes-1.9721
 PKGNAME=		p5-${DISTNAME}
 #PKGREVISION=		1
 SVR4_PKGNAME=		p5thr
