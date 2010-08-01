@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/19 16:19:10 cube Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/01 02:07:20 cube Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -43,6 +43,7 @@
 
 DISTNAME=	${PRODUCT:tl:S/_v/-/}-noCPAN
 PKGNAME=	${DISTNAME:S/-noCPAN//}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 
@@ -100,6 +101,7 @@ DEPENDS+=	p5-Exporter-Lite-[0-9]*:../../devel/p5-Exporter-Lite
 DEPENDS+=	p5-File-BOM>=0.13:../../devel/p5-File-BOM
 DEPENDS+=	p5-File-Next>=1.02:../../devel/p5-File-Next
 DEPENDS+=	p5-File-ReadBackwards-[0-9]*:../../textproc/p5-File-ReadBackwards
+DEPENDS+=	p5-File-Slurp>=9999.09:../../devel/p5-File-Slurp
 DEPENDS+=	p5-File-Which>=0.05:../../devel/p5-File-Which
 DEPENDS+=	p5-IO-String>=1.07:../../devel/p5-IO-String
 DEPENDS+=	p5-JSON-XS-VersionOneAndTwo>=0.31:../../converters/p5-JSON-XS-VersionOneAndTwo
@@ -127,8 +129,8 @@ REPLACE_PERL=	slimserver.pl scanner.pl
 
 USE_TOOLS+=	pax sed
 
-SBS_USER=		slimuser
-SBS_GROUP=		${SBS_USER}
+SBS_USER?=		slimuser
+SBS_GROUP?=		${SBS_USER}
 PKG_USERS_VARS+=	SBS_USER
 PKG_GROUPS_VARS+=	SBS_GROUP
 PKG_USERS+=		${SBS_USER}:${SBS_GROUP}
@@ -171,7 +173,7 @@ CONF_FILES+=	${SBS_SHAREDIR}/types.conf ${PKG_SYSCONFDIR}/types.conf \
 		${SBS_SHAREDIR}/modules.conf ${PKG_SYSCONFDIR}/modules.conf \
 		${SBS_SHAREDIR}/convert.conf ${PKG_SYSCONFDIR}/convert.conf
 
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=	VARBASE SBS_USER SBS_GROUP
 
 RCD_SCRIPTS=	squeezeboxserver
 FILES_SUBST+=	SBS_LIBDIR=${SBS_LIBDIR} SBS_USER=${SBS_USER} SBS_GROUP=${SBS_GROUP}
