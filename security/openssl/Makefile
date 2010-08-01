@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2010/06/02 13:30:11 taca Exp $
+# $NetBSD: Makefile,v 1.150 2010/08/01 05:24:00 obache Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -86,7 +86,7 @@ CONFIGURE_ARGS+=	tru64-alpha-cc
 .  endif
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_SCRIPT=	./Configure
-.  if ${ABI} == "64"
+.  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	darwin64-${MACHINE_ARCH}-cc
 .  else
 CONFIGURE_ARGS+=	darwin-${MACHINE_ARCH}-cc
