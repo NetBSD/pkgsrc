@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2682 2010/08/01 19:43:14 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2683 2010/08/01 19:57:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3572,3 +3572,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Term-ReadLine to 1.20 [sno 2010-08-01]
 	Updated devel/p5-Test-CheckManifest to 1.22 [sno 2010-08-01]
 	Updated devel/p5-Test-Class to 0.35 [sno 2010-08-01]
+	Updated databases/p5-ORLite to 1.44 [sno 2010-08-01]
