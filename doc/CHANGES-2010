@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2673 2010/08/01 12:14:51 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2674 2010/08/01 12:37:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3563,3 +3563,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/squeezeboxserver to 7.5.1nb1 [cube 2010-08-01]
 	Added graphics/py-aafigure version 0.5 [obache 2010-08-01]
 	Added textproc/ruby-hikidoc version 0.0.4 [obache 2010-08-01]
+	Updated graphics/rabbit to 0.6.5 [obache 2010-08-01]
