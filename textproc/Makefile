@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.547 2010/07/31 07:35:45 sno Exp $
+# $NetBSD: Makefile,v 1.548 2010/08/01 12:15:36 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -470,6 +470,7 @@ SUBDIR+=	ruby-fastercsv
 SUBDIR+=	ruby-feed-normalizer
 SUBDIR+=	ruby-ferret
 SUBDIR+=	ruby-haml
+SUBDIR+=	ruby-hikidoc
 SUBDIR+=	ruby-hpricot
 SUBDIR+=	ruby-html-parser
 SUBDIR+=	ruby-htree
