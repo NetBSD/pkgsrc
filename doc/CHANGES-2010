@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2674 2010/08/01 12:37:33 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2675 2010/08/01 16:59:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3564,3 +3564,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/py-aafigure version 0.5 [obache 2010-08-01]
 	Added textproc/ruby-hikidoc version 0.0.4 [obache 2010-08-01]
 	Updated graphics/rabbit to 0.6.5 [obache 2010-08-01]
+	Updated editors/emacs-snapshot to 24.0.50.20100801 [minskim 2010-08-01]
