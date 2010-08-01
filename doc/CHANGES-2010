@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2671 2010/08/01 02:08:30 cube Exp $
+$NetBSD: CHANGES-2010,v 1.2672 2010/08/01 10:14:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3561,3 +3561,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/f2c to 20090411nb5 [dholland 2010-07-31]
 	Updated www/hiawatha to 0.1nb5 [dholland 2010-08-01]
 	Updated audio/squeezeboxserver to 7.5.1nb1 [cube 2010-08-01]
+	Added graphics/py-aafigure version 0.5 [obache 2010-08-01]
