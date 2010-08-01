@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2689 2010/08/01 20:36:01 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2690 2010/08/01 20:41:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3579,3 +3579,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-Time-Clock to 1.02 [sno 2010-08-01]
 	Updated time/p5-Time-HiRes to 1.9721 [sno 2010-08-01]
 	Updated time/p5-Time-Piece to 1.20 [sno 2010-08-01]
+	Updated time/p5-Calendar-Simple to 1.21 [sno 2010-08-01]
