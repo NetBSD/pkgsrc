@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2677 2010/08/01 18:15:04 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2678 2010/08/01 18:57:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3567,3 +3567,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20100801 [minskim 2010-08-01]
 	Added postgresql84-pgcrypt version 8.4.4 [jdolecek 2010-08-01]
 	Updated net/p5-NetAddr-IP to 4.030 [sno 2010-08-01]
+	Updated devel/p5-Throwable to 0.102080 [sno 2010-08-01]
