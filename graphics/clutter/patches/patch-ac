@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 2010/08/01 09:04:33 obache Exp $
+
+--- clutter/cogl/cogl/cogl-texture.c.orig	2010-07-14 10:32:47.000000000 +0000
++++ clutter/cogl/cogl/cogl-texture.c
+@@ -49,6 +49,14 @@
+ #include "cogl-primitives.h"
+ #include "cogl-framebuffer-private.h"
+ 
++#if defined (HAVE_COGL_GL)
++
++#ifndef GL_PIXEL_UNPACK_BUFFER
++#define GL_PIXEL_UNPACK_BUFFER GL_PIXEL_UNPACK_BUFFER_ARB
++#endif
++
++#endif
++
+ #include <string.h>
+ #include <stdlib.h>
+ #include <math.h>
