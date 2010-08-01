@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2010/07/16 14:56:10 obache Exp $
+$NetBSD: distinfo,v 1.12 2010/08/01 09:04:33 obache Exp $
 
 SHA1 (clutter-1.2.12.tar.gz) = b4ee053f61306526ef13e4b15ad2a63fc3e9f70f
 RMD160 (clutter-1.2.12.tar.gz) = 6f590f9c20dd030820aa6bbb88fba7cb93b6140d
 Size (clutter-1.2.12.tar.gz) = 3200650 bytes
 SHA1 (patch-ab) = 9f76fc4f1357081cd4a30485663bb440d3376095
+SHA1 (patch-ac) = 02d9c33b7d3cd7f08e342fb8796d95d471f1bb67
