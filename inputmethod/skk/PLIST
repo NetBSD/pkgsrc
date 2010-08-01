@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/07/31 08:45:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/08/01 01:09:14 obache Exp $
 ${EMACS_INFOPREFIX}/skk.info
 ${FOR_emacs}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs}${EMACS_LISPPREFIX}/skk/ccc.elc
@@ -41,8 +41,8 @@ ${EMACS_LISPPREFIX}/skk/skk-isearch.el
 ${EMACS_LISPPREFIX}/skk/skk-isearch.elc
 ${EMACS_LISPPREFIX}/skk/skk-jisx0201.el
 ${EMACS_LISPPREFIX}/skk/skk-jisx0201.elc
-${FOR_emacs}${EMACS_LISPPREFIX}/skk/skk-jisx0213.el
-${FOR_emacs}${EMACS_LISPPREFIX}/skk/skk-jisx0213.elc
+${NOTFOR_xemacs}${NOTFOR_emacs22}${EMACS_LISPPREFIX}/skk/skk-jisx0213.el
+${NOTFOR_xemacs}${NOTFOR_emacs22}${EMACS_LISPPREFIX}/skk/skk-jisx0213.elc
 ${EMACS_LISPPREFIX}/skk/skk-jisyo-edit-mode.el
 ${EMACS_LISPPREFIX}/skk/skk-jisyo-edit-mode.elc
 ${EMACS_LISPPREFIX}/skk/skk-kakasi.el
