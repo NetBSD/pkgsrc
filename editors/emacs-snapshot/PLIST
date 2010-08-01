@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/07/25 08:22:03 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/08/01 16:58:56 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -880,6 +880,7 @@ share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.de
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.eo
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.es
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.fr
+share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.he
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.it
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.ja
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.ko
