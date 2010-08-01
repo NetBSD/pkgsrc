@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2685 2010/08/01 20:05:58 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2686 2010/08/01 20:26:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3575,3 +3575,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-ORLite to 1.44 [sno 2010-08-01]
 	Updated databases/p5-ORLite-Migrate to 1.07 [sno 2010-08-01]
 	Updated devel/p5-Capture-Tiny to 0.08 [sno 2010-08-01]
+	Updated math/p5-Math-BaseCnv to 1.6 [sno 2010-08-01]
