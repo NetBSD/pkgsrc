@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2692 2010/08/01 20:59:03 darcy Exp $
+$NetBSD: CHANGES-2010,v 1.2693 2010/08/01 21:02:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3581,3 +3581,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-Time-Piece to 1.20 [sno 2010-08-01]
 	Updated time/p5-Calendar-Simple to 1.21 [sno 2010-08-01]
 	Updated math/p5-Spreadsheet-Read to 0.40 [sno 2010-08-01]
+	Updated math/p5-Excel-Template to 0.32 [sno 2010-08-01]
