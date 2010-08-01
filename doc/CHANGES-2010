@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2669 2010/07/31 17:16:59 apb Exp $
+$NetBSD: CHANGES-2010,v 1.2670 2010/08/01 00:19:06 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3557,3 +3557,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-Autoformat to 1.669.002 [sno 2010-07-31]
 	Updated www/p5-Pod-POM-Web to 1.14 [sno 2010-07-31]
 	Added net/sslh version 1.7a [apb 2010-07-31]
+	Updated biology/gromacs to 4.0.7nb2 [dholland 2010-07-31]
+	Updated lang/f2c to 20090411nb5 [dholland 2010-07-31]
+	Updated www/hiawatha to 0.1nb5 [dholland 2010-08-01]
