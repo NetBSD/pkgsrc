@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/07/31 22:19:16 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2010/08/02 09:01:01 dholland Exp $
 
 CATEGORIES=	databases math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,6 +9,7 @@ COMMENT=	Example data sets and functions implemented in R
 
 R_PKGNAME=	DAAG
 R_PKGVER=	1.01
+PKGREVISION=	1
 
 DEPENDS+=	R-randomForest>=4.5:../../math/R-randomForest
 
