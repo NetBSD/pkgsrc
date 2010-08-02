@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2010/07/29 11:02:38 rafal Exp $
+$NetBSD: patch-ac,v 1.2 2010/08/02 07:05:09 wiz Exp $
+
+Add patch from
+https://www.conserver.com/pipermail/users/2004-June/msg00001.html
+to make network consoles work on LP64 platforms.
 
 --- conserver/consent.c.orig	2003-04-06 08:32:41.000000000 -0400
 +++ conserver/consent.c
