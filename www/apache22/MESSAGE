@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2010/08/02 10:38:16 lukem Exp $
+
+As of Apache 2.2.16, all Apache modules will be built as shared
+modules instead of being statically compiled into Apache.
+
+If upgrading from a previous version of Apache, you will need to
+add "LoadModule" directives to the your Apache configuration
+otherwise you may experience problems.
+
+See ${PREFIX}/share/examples/httpd/httpd.conf for a list of
+"LoadModule" directives to be added to ${PKG_SYSCONFDIR}/httpd/httpd.conf
+that should restore the previous behaviour.
+
+===========================================================================
