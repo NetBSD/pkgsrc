@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2010/08/02 10:24:33 drochner Exp $
+
+--- src/plugins/youtube/totem-youtube.c.orig	2010-05-12 15:41:25.000000000 +0000
++++ src/plugins/youtube/totem-youtube.c
+@@ -530,6 +530,7 @@ resolve_t_param_cb (GObject *source_obje
+ 		g_string_append_uri_escaped (video_uri_string, video_id, NULL, TRUE);
+ 		g_string_append (video_uri_string, "&t=");
+ 		g_string_append_uri_escaped (video_uri_string, t_param, NULL, TRUE);
++		g_string_append (video_uri_string, "&asv=");
+ 		g_string_append (video_uri_string, fmt_param);
+ 
+ 		video_uri = g_string_free (video_uri_string, FALSE);
