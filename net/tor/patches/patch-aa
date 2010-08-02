@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 2010/08/02 07:06:04 wiz Exp $
+
 From: Taylor R Campbell
 Subject: patch for Tor to workaround OpenSSL renegotiation lossage on 5.1
 Cc: athaba (pkgsrc/net/tor maintainer)
