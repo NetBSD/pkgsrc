@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2695 2010/08/01 21:10:45 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2696 2010/08/02 04:50:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3584,3 +3584,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/p5-Excel-Template to 0.32 [sno 2010-08-01]
 	Updated math/p5-Set-Infinite to 0.65 [sno 2010-08-01]
 	Updated devel/p5-Test-LeakTrace to 0.13 [sno 2010-08-01]
+	Updated net/msdl to 1.2.7r2 [obache 2010-08-02]
