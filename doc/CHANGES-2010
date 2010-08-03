@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2713 2010/08/03 22:22:10 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2714 2010/08/03 22:30:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3602,3 +3602,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-ScanDeps to 0.98 [seb 2010-08-03]
 	Updated devel/p5-Set-IntSpan to 1.14 [seb 2010-08-03]
 	Updated devel/p5-Proc-InvokeEditor to 1.04 [seb 2010-08-03]
+	Updated www/p5-Plack to 0.9943 [seb 2010-08-03]
