@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2699 2010/08/03 04:28:52 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2700 2010/08/03 04:55:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3588,3 +3588,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/R-DAAG to 1.01nb1 [dholland 2010-08-02]
 	Updated devel/ruby-mocha to 0.9.8 [obache 2010-08-03]
 	Updated devel/p5-App-cpanminus to 1.0010 [seb 2010-08-03]
+	Added security/ruby-soauth version 0.2 [obache 2010-08-03]
