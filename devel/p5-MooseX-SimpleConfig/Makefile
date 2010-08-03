@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/02/17 11:47:11 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/03 21:32:43 seb Exp $
 
-DISTNAME=	MooseX-SimpleConfig-0.05
+DISTNAME=	MooseX-SimpleConfig-0.07
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/MooseX-SimpleConfig/
 COMMENT=	Moose role for setting attributes from a simple configfile
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Config-Any>=0.10:../../devel/p5-Config-Any
+DEPENDS+=	p5-Config-Any>=0.13:../../devel/p5-Config-Any
 DEPENDS+=	p5-Moose>=0.35:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-ConfigFromFile>=0.02:../../devel/p5-MooseX-ConfigFromFile
 
