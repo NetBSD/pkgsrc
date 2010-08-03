@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2697 2010/08/02 09:01:32 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.2698 2010/08/03 02:56:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3586,3 +3586,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-LeakTrace to 0.13 [sno 2010-08-01]
 	Updated net/msdl to 1.2.7r2 [obache 2010-08-02]
 	Updated math/R-DAAG to 1.01nb1 [dholland 2010-08-02]
+	Updated devel/ruby-mocha to 0.9.8 [obache 2010-08-03]
