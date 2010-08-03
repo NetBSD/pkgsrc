@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2010/07/30 16:59:48 drochner Exp $
+$NetBSD: distinfo,v 1.3 2010/08/03 15:22:27 drochner Exp $
 
 SHA1 (urjtag-0.10.tar.gz) = 1e21f07d758e9e151d932e95c0b3b11fd178eace
 RMD160 (urjtag-0.10.tar.gz) = d22dcaf8447e594f5fbb25836df141e2a451760a
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 0c5128a37f763eb5f436f7682cbb1172f1c8fe40
 SHA1 (patch-ab) = 1187447787012901d59f8967ae08c1047e23f38e
 SHA1 (patch-ac) = 1d241fb503e45a57f63f87eeada6804dbb278502
 SHA1 (patch-ad) = 3dcf6a0297b339db1b52a8d9cb6fe907e589b07b
+SHA1 (patch-ae) = 791cf819bad265d11c7ecd72cd89784f67428a20
