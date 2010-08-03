@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.1 2010/08/03 15:22:27 drochner Exp $
+
+--- src/tap/cable/generic.c.orig	2009-04-17 20:24:10.000000000 +0000
++++ src/tap/cable/generic.c
+@@ -202,7 +202,7 @@ generic_flush_using_transfer( cable_t *c
+ 
+ 	do
+ 	{
+-		int r, bits = 0, tdo = 0;
++		int r, bits = 0, tdo = 0, savbits;
+ 
+ #ifdef VERBOSE
+ 		printf("flush(%d)\n", cable->todo.num_items);
+@@ -254,6 +254,7 @@ generic_flush_using_transfer( cable_t *c
+ #ifdef VERBOSE
+ 		printf("%d combined into one (%d bits)\n", n, bits);
+ #endif
++		savbits = bits;
+ 
+ 		if(bits == 0 || n <= 1)
+ 		{
+@@ -320,6 +321,10 @@ generic_flush_using_transfer( cable_t *c
+ 					printf("add result from transfer to %p.%d\n", &(cable->done), c);
+ #endif
+ 					cable->done.data[c].action = CABLE_GET_TDO;
++					if (bits < savbits)
++						tdo = out[bits];
++					else
++						tdo = cable->driver->get_tdo(cable);
+ 					cable->done.data[c].arg.value.val = tdo;
+ 				}
+ 				else if(cable->todo.data[i].action == CABLE_TRANSFER)
