@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2010/07/25 23:29:11 seb Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/03 22:29:16 seb Exp $
 
-DISTNAME=	Plack-0.9942
+DISTNAME=	Plack-0.9943
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	www perl5
