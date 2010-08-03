@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/07/30 16:59:48 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/03 15:22:27 drochner Exp $
 #
 
 DISTNAME=	urjtag-0.10
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://downloads.sourceforge.net/project/urjtag/urjtag/0.10/
 
