@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2706 2010/08/03 20:46:06 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2707 2010/08/03 21:03:28 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3595,3 +3595,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Method-Signatures to 0.35 [seb 2010-08-03]
 	Updated devel/p5-MooseX-Types-Structured to 0.23 [seb 2010-08-03]
 	Updated net/wireshark to 1.2.10 [tron 2010-08-03]
+	Updated devel/p5-MooseX-Role-Parameterized to 0.19 [seb 2010-08-03]
