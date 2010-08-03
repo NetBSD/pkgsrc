@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/07/29 14:18:49 seb Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/03 22:21:25 seb Exp $
 #
 
-DISTNAME=	Proc-InvokeEditor-1.03
+DISTNAME=	Proc-InvokeEditor-1.04
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
