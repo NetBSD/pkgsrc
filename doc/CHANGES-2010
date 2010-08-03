@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2704 2010/08/03 12:39:02 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2705 2010/08/03 20:44:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3593,3 +3593,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/ruby-twitter-stream to 0.1.7 [obache 2010-08-03]
 	Updated security/ruby-oauth to 0.4.1 [obache 2010-08-03]
 	Updated devel/p5-MooseX-Method-Signatures to 0.35 [seb 2010-08-03]
+	Updated devel/p5-MooseX-Types-Structured to 0.23 [seb 2010-08-03]
