@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/02/16 12:04:53 sno Exp $
+# $NetBSD: Makefile,v 1.11 2010/08/03 12:38:23 seb Exp $
 #
 
-DISTNAME=	MooseX-Method-Signatures-0.30
+DISTNAME=	MooseX-Method-Signatures-0.35
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
@@ -23,7 +23,6 @@ DEPENDS+=	p5-MooseX-Types-Structured>=0.20:../../devel/p5-MooseX-Types-Structure
 DEPENDS+=	p5-Parse-Method-Signatures>=1.003011:../../devel/p5-Parse-Method-Signatures
 DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
-DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-aliased-[0-9]*:../../devel/p5-aliased
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
@@ -38,3 +37,4 @@ PERL5_PACKLIST=	auto/MooseX/Method/Signatures/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
+#BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
