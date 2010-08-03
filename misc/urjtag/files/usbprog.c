@@ -1,4 +1,4 @@
-/* $NetBSD: usbprog.c,v 1.1.1.1 2010/07/30 16:02:45 drochner Exp $ */
+/* $NetBSD: usbprog.c,v 1.2 2010/08/03 15:22:27 drochner Exp $ */
 
 /* Written by Matthias Drochner. Public domain. */
 
@@ -120,7 +120,10 @@ static int
 usbprog_set_signal(cable_t *cable, int mask, int val)
 {
 
-	fprintf(stderr, "usbprog_set_signal called(%x, %x)\n", mask, val);
+	/* /TRST isn't supported yet */
+	if (mask & ~CS_TRST)
+		fprintf(stderr, "usbprog_set_signal called(%x, %x)\n",
+			mask, val);
 	return 1;
 }
 
@@ -150,7 +153,7 @@ usbprog_transfer(cable_t *cable, int len, char *in, char *out )
 		fprintf(stderr, "usbprog_transfer: write error\n");
 	res = usb_bulk_read(h, 2, ans, 64, 500);
 	if (res != 64)
-		fprintf(stderr, "usbprog_transfer: read %d\n", res);
+		fprintf(stderr, "usbprog_transfer(%d): read %d\n", len, res);
 	if (!out)
 		return len;
 	for (i = 0; i < len; i++)
