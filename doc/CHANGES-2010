@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2703 2010/08/03 07:06:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2704 2010/08/03 12:39:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3592,3 +3592,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added security/ruby-roauth version 0.0.2 [obache 2010-08-03]
 	Updated net/ruby-twitter-stream to 0.1.7 [obache 2010-08-03]
 	Updated security/ruby-oauth to 0.4.1 [obache 2010-08-03]
+	Updated devel/p5-MooseX-Method-Signatures to 0.35 [seb 2010-08-03]
