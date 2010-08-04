@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2718 2010/08/04 05:00:01 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2719 2010/08/04 05:21:27 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3606,3 +3606,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated cad/nelma to 3.2 [dmcmahill 2010-08-03]
 	Updated www/p5-Catalyst-Engine-PSGI to 0.11 [seb 2010-08-04]
 	Updated devel/p5-Net-CIDR to 0.14 [seb 2010-08-04]
+	Updated devel/p5-Hook-LexWrap to 0.23 [seb 2010-08-04]
