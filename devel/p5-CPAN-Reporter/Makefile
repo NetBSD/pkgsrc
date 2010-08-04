@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/02/22 17:11:14 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/04 14:51:23 sno Exp $
 
-DISTNAME=	CPAN-Reporter-1.1711
+DISTNAME=	CPAN-Reporter-1.1800
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
@@ -26,7 +26,7 @@ PKG_SUGGESTED_OPTIONS+=	#empty
 
 .include "../../mk/bsd.options.mk"
 
-DEPENDS+=	p5-CPAN>=1.9301:../../devel/p5-CPAN
+DEPENDS+=	{perl>=5.10.1,p5-CPAN>=1.9301}:../../devel/p5-CPAN
 DEPENDS+=	p5-Config-Tiny>=2.12:../../devel/p5-Config-Tiny
 DEPENDS+=	p5-Devel-Autoflush>=0.04:../../devel/p5-Devel-Autoflush
 DEPENDS+=	p5-ExtUtils-MakeMaker>=6.36:../../devel/p5-ExtUtils-MakeMaker
