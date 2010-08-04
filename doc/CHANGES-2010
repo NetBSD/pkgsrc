@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2732 2010/08/04 15:02:18 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2733 2010/08/04 15:05:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-MethodMaker to 2.16 [sno 2010-08-04]
 	Updated devel/p5-CPAN-Reporter to 1.1800 [sno 2010-08-04]
 	Updated databases/p5-DBI to 1.613 [sno 2010-08-04]
+	Updated databases/p5-SQL-Statement to 1.30 [sno 2010-08-04]
