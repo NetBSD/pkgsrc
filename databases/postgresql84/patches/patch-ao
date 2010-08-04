@@ -1,0 +1,11 @@
+--- contrib/dblink/dblink.c.orig	2010-08-01 14:56:33.000000000 +0200
++++ contrib/dblink/dblink.c	2010-08-01 14:56:47.000000000 +0200
+@@ -58,7 +58,7 @@
+ #include "utils/array.h"
+ #include "utils/builtins.h"
+ #include "utils/dynahash.h"
+-#include "utils/fmgroids.h"
++#include "postgresql/server/utils/fmgroids.h"
+ #include "utils/hsearch.h"
+ #include "utils/lsyscache.h"
+ #include "utils/memutils.h"
