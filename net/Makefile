@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.846 2010/08/02 07:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.847 2010/08/04 21:33:16 seb Exp $
 #
 
 COMMENT=	Networking tools
@@ -402,6 +402,7 @@ SUBDIR+=	p5-SOAP-Lite
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Test-DNS
 SUBDIR+=	p5-Test-TCP
+SUBDIR+=	p5-WebService-Google-Reader
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-eBay-API
 SUBDIR+=	p5-ispman
