@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2735 2010/08/04 15:25:22 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.2736 2010/08/04 16:15:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3623,3 +3623,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-SQL-Statement to 1.30 [sno 2010-08-04]
 	Added net/p5-Net-SMTP-TLS version 0.12 [sno 2010-08-04]
 	Updated www/ikiwiki to 3.20100804 [schmonz 2010-08-04]
+	Updated time/p5-DateTime-Format-DateParse to 0.05 [sno 2010-08-04]
