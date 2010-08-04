@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/02/25 21:12:53 sno Exp $
+# $NetBSD: Makefile,v 1.20 2010/08/04 14:31:26 sno Exp $
 #
 
-DISTNAME=		Class-MethodMaker-2.15
+DISTNAME=		Class-MethodMaker-2.16
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Class-MethodMaker/
 COMMENT=		Getter/setter OO method maker for class elements
+LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
