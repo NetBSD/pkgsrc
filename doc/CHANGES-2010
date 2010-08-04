@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2715 2010/08/04 02:12:43 darcy Exp $
+$NetBSD: CHANGES-2010,v 1.2716 2010/08/04 02:47:46 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3603,3 +3603,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Set-IntSpan to 1.14 [seb 2010-08-03]
 	Updated devel/p5-Proc-InvokeEditor to 1.04 [seb 2010-08-03]
 	Updated www/p5-Plack to 0.9943 [seb 2010-08-03]
+	Updated cad/nelma to 3.2 [dmcmahill 2010-08-03]
