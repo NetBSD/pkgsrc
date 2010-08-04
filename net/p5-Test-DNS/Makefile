@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/20 10:40:00 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/04 09:38:49 seb Exp $
 #
 
-DISTNAME=	Test-DNS-0.07
+DISTNAME=	Test-DNS-0.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -12,12 +12,15 @@ COMMENT=	Perl 5 module to test DNS queries and zone configuration
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PERL5_MODULE_TYPE=	Module::Build
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/DNS/.packlist
 
+BUILD_DEPENDS+=	{perl>=5.11.4,p5-Module-Build>=0.3601}:../../devel/p5-Module-Build
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 DEPENDS+=	p5-Moose>=0.8:../../devel/p5-Moose
-DEPENDS+=	p5-Net-DNS>=0.65:../../net/p5-Net-DNS
+DEPENDS+=	p5-Net-DNS>=0:../../net/p5-Net-DNS
 DEPENDS+=	p5-Set-Object>=0:../../devel/p5-Set-Object
 DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
 
