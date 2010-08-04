@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2714 2010/08/03 22:30:00 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2715 2010/08/04 02:12:43 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3565,7 +3565,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/ruby-hikidoc version 0.0.4 [obache 2010-08-01]
 	Updated graphics/rabbit to 0.6.5 [obache 2010-08-01]
 	Updated editors/emacs-snapshot to 24.0.50.20100801 [minskim 2010-08-01]
-	Added databases/postgresql84-pgcrypt version 8.4.4 [jdolecek 2010-08-01]
+	Added databases/postgresql84-pgcrypto version 8.4.4 [jdolecek 2010-08-01]
 	Updated net/p5-NetAddr-IP to 4.030 [sno 2010-08-01]
 	Updated devel/p5-Throwable to 0.102080 [sno 2010-08-01]
 	Updated devel/p5-Test-Reporter to 1.5700 [sno 2010-08-01]
