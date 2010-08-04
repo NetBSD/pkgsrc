@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/07/19 04:55:44 seb Exp $
+$NetBSD: distinfo,v 1.3 2010/08/04 22:37:14 seb Exp $
 
-SHA1 (Text-MicroTemplate-0.13.tar.gz) = 70d5ee0ac59e26dc51f3ee9763c0616b37246f83
-RMD160 (Text-MicroTemplate-0.13.tar.gz) = 03e9a8913fdb48b9973eb181d0d61d36211be4cb
-Size (Text-MicroTemplate-0.13.tar.gz) = 61720 bytes
+SHA1 (Text-MicroTemplate-0.14.tar.gz) = ae277262db1e6f7773f4a40629eea068cb434eea
+RMD160 (Text-MicroTemplate-0.14.tar.gz) = 709a987f1342a0074bbdf36bbb45fbed2d3b9e02
+Size (Text-MicroTemplate-0.14.tar.gz) = 42151 bytes
