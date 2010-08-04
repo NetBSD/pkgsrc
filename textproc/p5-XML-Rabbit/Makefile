@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/14 21:58:37 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/04 23:12:42 seb Exp $
 
-DISTNAME=	XML-Rabbit-0.0.1
+DISTNAME=	XML-Rabbit-0.0.2
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	textproc perl5
