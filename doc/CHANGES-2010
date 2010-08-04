@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2720 2010/08/04 05:32:53 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2721 2010/08/04 07:19:39 roy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3608,3 +3608,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Net-CIDR to 0.14 [seb 2010-08-04]
 	Updated devel/p5-Hook-LexWrap to 0.23 [seb 2010-08-04]
 	Updated net/p5-Net-MAC to 1.6 [seb 2010-08-04]
+	Updated net/dhcpcd to 5.2.7 [roy 2010-08-04]
