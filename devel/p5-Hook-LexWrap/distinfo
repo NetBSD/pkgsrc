@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/12/20 22:26:08 he Exp $
+$NetBSD: distinfo,v 1.4 2010/08/04 05:17:28 seb Exp $
 
-SHA1 (Hook-LexWrap-0.22.zip) = 43f0c67176a55ba1846173c62c49d045c0885a0d
-RMD160 (Hook-LexWrap-0.22.zip) = 3448a406d8135a1e1964c37aee5adacc981979f4
-Size (Hook-LexWrap-0.22.zip) = 12287 bytes
+SHA1 (Hook-LexWrap-0.23.tar.gz) = aba74c1d5d15ae0043148318c49222ee62de8ce8
+RMD160 (Hook-LexWrap-0.23.tar.gz) = b25885bac8676c3650660982f4abf4b0c03986f2
+Size (Hook-LexWrap-0.23.tar.gz) = 8985 bytes
