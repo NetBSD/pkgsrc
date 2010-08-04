@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2747 2010/08/04 21:46:37 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2748 2010/08/04 22:10:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/p5-Archive-Tar to 1.66 [sno 2010-08-04]
 	Added net/p5-WebService-Google-Reader version 0.12 [seb 2010-08-04]
 	Updated devel/p5-App-perlbrew to 0.09 [seb 2010-08-04]
+	Updated misc/p5-Vroom to 0.23 [seb 2010-08-04]
