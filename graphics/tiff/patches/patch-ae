@@ -1,0 +1,47 @@
+$NetBSD: patch-ae,v 1.11 2010/08/04 17:48:22 tron Exp $
+
+Fix for CVE-2010-2597 taken from here:
+
+http://bugzilla.maptools.org/show_bug.cgi?id=2215
+
+--- libtiff/tif_strip.c.orig	2010-06-08 19:50:43.000000000 +0100
++++ libtiff/tif_strip.c	2010-08-04 18:35:46.000000000 +0100
+@@ -124,9 +124,9 @@
+ 		uint16 ycbcrsubsampling[2];
+ 		tsize_t w, scanline, samplingarea;
+ 
+-		TIFFGetField( tif, TIFFTAG_YCBCRSUBSAMPLING,
+-			      ycbcrsubsampling + 0,
+-			      ycbcrsubsampling + 1 );
++		TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING,
++				      ycbcrsubsampling + 0,
++				      ycbcrsubsampling + 1);
+ 
+ 		samplingarea = ycbcrsubsampling[0]*ycbcrsubsampling[1];
+ 		if (samplingarea == 0) {
+@@ -234,9 +234,9 @@
+ 		    && !isUpSampled(tif)) {
+ 			uint16 ycbcrsubsampling[2];
+ 
+-			TIFFGetField(tif, TIFFTAG_YCBCRSUBSAMPLING,
+-				     ycbcrsubsampling + 0,
+-				     ycbcrsubsampling + 1);
++			TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING,
++					      ycbcrsubsampling + 0,
++					      ycbcrsubsampling + 1);
+ 
+ 			if (ycbcrsubsampling[0] == 0) {
+ 				TIFFErrorExt(tif->tif_clientdata, tif->tif_name,
+@@ -308,9 +308,9 @@
+ 		    && !isUpSampled(tif)) {
+ 			uint16 ycbcrsubsampling[2];
+ 
+-			TIFFGetField(tif, TIFFTAG_YCBCRSUBSAMPLING,
+-				     ycbcrsubsampling + 0,
+-				     ycbcrsubsampling + 1);
++			TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING,
++					      ycbcrsubsampling + 0,
++					      ycbcrsubsampling + 1);
+ 
+ 			if (ycbcrsubsampling[0]*ycbcrsubsampling[1] == 0) {
+ 				TIFFErrorExt(tif->tif_clientdata, tif->tif_name,
