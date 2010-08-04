@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.20.2.2 2010/08/04 21:23:39 spz Exp $
+
+Fix for CVE-2010-2482 taken from here:
+
+http://bugzilla.maptools.org/show_bug.cgi?id=1996
+
+--- libtiff/tif_ojpeg.c.orig	2010-06-09 00:29:51.000000000 +0100
++++ libtiff/tif_ojpeg.c	2010-08-04 18:14:07.000000000 +0100
+@@ -1920,6 +1920,10 @@
+ 							sp->in_buffer_file_pos=0;
+ 						else
+ 						{
++							if (sp->tif->tif_dir.td_stripbytecount == 0) {
++								TIFFErrorExt(sp->tif->tif_clientdata,sp->tif->tif_name,"Strip byte counts are missing");
++								return(0);
++							}
+ 							sp->in_buffer_file_togo=sp->tif->tif_dir.td_stripbytecount[sp->in_buffer_next_strile];  
+ 							if (sp->in_buffer_file_togo==0)
+ 								sp->in_buffer_file_pos=0;
