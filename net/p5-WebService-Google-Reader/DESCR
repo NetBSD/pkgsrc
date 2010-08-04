@@ -1,0 +1,3 @@
+The Perl 5 module WebService::Google::Reader provides an interface
+to the Google Reader service through the unofficial (as-yet
+unpublished) API.
