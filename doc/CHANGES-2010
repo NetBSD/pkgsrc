@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2725 2010/08/04 11:36:19 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2726 2010/08/04 11:40:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3613,3 +3613,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Test-DNS to 0.08 [seb 2010-08-04]
 	Updated net/p5-DNS-ZoneParse to 1.00 [seb 2010-08-04]
 	Updated www/squid31 to 3.1.6 [tron 2010-08-04]
+	Updated graphics/p5-clutter to 1.002 [obache 2010-08-04]
