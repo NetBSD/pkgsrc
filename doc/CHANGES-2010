@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2723 2010/08/04 09:40:22 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2724 2010/08/04 09:54:33 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3611,3 +3611,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/dhcpcd to 5.2.7 [roy 2010-08-04]
 	Updated www/wordpress to 3.0.1 [morr 2010-08-04]
 	Updated net/p5-Test-DNS to 0.08 [seb 2010-08-04]
+	Updated net/p5-DNS-ZoneParse to 1.00 [seb 2010-08-04]
