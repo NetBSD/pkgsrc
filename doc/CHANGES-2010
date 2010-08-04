@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2729 2010/08/04 14:26:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2730 2010/08/04 14:31:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3617,3 +3617,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/goocanvasmm to 0.15.3 [obache 2010-08-04]
 	Updated converters/p5-JSON to 2.21 [sno 2010-08-04]
 	Updated databases/p5-SQL-Translator to 0.11006 [sno 2010-08-04]
+	Updated devel/p5-Class-MethodMaker to 2.16 [sno 2010-08-04]
