@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2009/11/23 02:36:39 schmonz Exp $
+# $NetBSD: options.mk,v 1.9 2010/08/04 15:25:11 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cvs ikiwiki-amazon-s3 ikiwiki-search
@@ -18,7 +18,6 @@ DEPENDS+=	p5-File-ReadBackwards-[0-9]*:../../textproc/p5-File-ReadBackwards
 
 .if !empty(PKG_OPTIONS:Mikiwiki-search)
 DEPENDS+=	p5-Search-Xapian-[0-9]*:../../textproc/p5-Search-Xapian
-DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	xapian-omega-[0-9]*:../../textproc/xapian-omega
 .endif
 
