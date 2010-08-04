@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.22.2.2 2010/08/04 21:23:39 spz Exp $
+
+Fix for	CVE-2010-2482 taken from here:
+
+http://bugzilla.maptools.org/show_bug.cgi?id=1996
+
+--- tools/tiffsplit.c.orig	2010-06-08 19:50:44.000000000 +0100
++++ tools/tiffsplit.c	2010-08-04 18:14:07.000000000 +0100
+@@ -237,7 +237,10 @@
+ 		tstrip_t s, ns = TIFFNumberOfStrips(in);
+ 		uint32 *bytecounts;
+ 
+-		TIFFGetField(in, TIFFTAG_STRIPBYTECOUNTS, &bytecounts);
++		if (!TIFFGetField(in, TIFFTAG_STRIPBYTECOUNTS, &bytecounts)) {
++			fprintf(stderr, "tiffsplit: strip byte counts are missing\n");
++			return (0);
++		}
+ 		for (s = 0; s < ns; s++) {
+ 			if (bytecounts[s] > (uint32)bufsize) {
+ 				buf = (unsigned char *)_TIFFrealloc(buf, bytecounts[s]);
+@@ -267,7 +270,10 @@
+ 		ttile_t t, nt = TIFFNumberOfTiles(in);
+ 		uint32 *bytecounts;
+ 
+-		TIFFGetField(in, TIFFTAG_TILEBYTECOUNTS, &bytecounts);
++		if (!TIFFGetField(in, TIFFTAG_TILEBYTECOUNTS, &bytecounts)) {
++			fprintf(stderr, "tiffsplit: tile byte counts are missing\n");
++			return (0);
++		}
+ 		for (t = 0; t < nt; t++) {
+ 			if (bytecounts[t] > (uint32) bufsize) {
+ 				buf = (unsigned char *)_TIFFrealloc(buf, bytecounts[t]);
