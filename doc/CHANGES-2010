@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2749 2010/08/04 22:30:08 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2750 2010/08/04 22:37:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3637,3 +3637,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-App-perlbrew to 0.09 [seb 2010-08-04]
 	Updated misc/p5-Vroom to 0.23 [seb 2010-08-04]
 	Updated textproc/p5-Text-Markdown to 1.0.31 [seb 2010-08-04]
+	Updated textproc/p5-Text-MicroTemplate to 0.14 [seb 2010-08-04]
