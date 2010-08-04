@@ -66,3 +66,7 @@ Pullup ticket #3193 - requested by obache
 print/gv: security update
 Pullup ticket #3194 - requested by taca
 www/typo3: security update
+Pullup ticket #3196 - requested by tron
+net/wireshark: security update
+Pullup ticket #3197 - requested by tron
+graphics/tiff: security patches
