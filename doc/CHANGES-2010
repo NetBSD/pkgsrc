@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2751 2010/08/04 22:49:50 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2752 2010/08/04 23:13:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3639,3 +3639,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-Markdown to 1.0.31 [seb 2010-08-04]
 	Updated textproc/p5-Text-MicroTemplate to 0.14 [seb 2010-08-04]
 	Updated textproc/p5-Text-RewriteRules to 0.23 [seb 2010-08-04]
+	Updated textproc/p5-XML-Rabbit to 0.0.2 [seb 2010-08-04]
