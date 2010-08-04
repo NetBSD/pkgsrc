@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2743 2010/08/04 17:04:43 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2744 2010/08/04 17:48:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3631,3 +3631,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime-Format-Natural to 0.88 [sno 2010-08-04]
 	Updated security/p5-Net-OpenSSH to 0.48 [sno 2010-08-04]
 	Updated net/p5-SOAP-Lite to 0.712 [sno 2010-08-04]
+	Updated graphics/tiff to 3.9.4nb1 [tron 2010-08-04]
