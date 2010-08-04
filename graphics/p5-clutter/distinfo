@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/10/26 08:54:52 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/08/04 11:40:29 obache Exp $
 
-SHA1 (clutter-perl-1.0.1.tar.gz) = c4ed1008c54536b065697c5808b7e0cbe568e4a6
-RMD160 (clutter-perl-1.0.1.tar.gz) = d561813b99624b352432d3288fe0b2cdb2596aba
-Size (clutter-perl-1.0.1.tar.gz) = 106814 bytes
+SHA1 (Clutter-1.002.tar.gz) = ab1470a359c2f1cf4e550f6037c6078a6558f1e4
+RMD160 (Clutter-1.002.tar.gz) = 762c5184805677349263d96936ae50f1dbb9b1a4
+Size (Clutter-1.002.tar.gz) = 109850 bytes
