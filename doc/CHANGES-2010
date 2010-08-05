@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2753 2010/08/04 23:32:29 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2754 2010/08/05 00:14:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-RewriteRules to 0.23 [seb 2010-08-04]
 	Updated textproc/p5-XML-Rabbit to 0.0.2 [seb 2010-08-04]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.89.2 [seb 2010-08-04]
+	Added math/p5-Math-Base36 version 0.07 [seb 2010-08-05]
