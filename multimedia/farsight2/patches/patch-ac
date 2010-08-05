@@ -1,8 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/08/17 21:13:04 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2010/08/05 18:55:18 drochner Exp $
 
-https://bugs.freedesktop.org/show_bug.cgi?id=23378
-
---- common/glib-gen.mak.orig	2009-07-21 01:09:25.000000000 +0000
+--- common/glib-gen.mak.orig	2010-05-18 21:07:38.000000000 +0000
 +++ common/glib-gen.mak
 @@ -26,7 +26,7 @@ enum_headers=$(foreach h,$(glib_enum_hea
  	$^ > $@
@@ -10,6 +8,6 @@ https://bugs.freedesktop.org/show_bug.cgi?id=23378
  %-enumtypes.c: $(glib_enum_headers)
 -	@if test "x$(glib_enum_headers)" == "x"; then echo "ERROR: glib_enum_headers is empty, please fix Makefile"; exit 1; fi
 +	@if test "x$(glib_enum_headers)" = "x"; then echo "ERROR: glib_enum_headers is empty, please fix Makefile"; exit 1; fi
- 	glib-mkenums \
+ 	$(AM_V_GEN)glib-mkenums \
  	--fhead "#include \"$*-enumtypes.h\"\n$(enum_headers)" \
  	--fprod "\n/* enumerations from \"@filename@\" */" \
