@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2010/08/05 12:41:27 obache Exp $
+# $NetBSD: options.mk,v 1.10 2010/08/05 21:15:41 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
 PKG_SUPPORTED_OPTIONS=	x11 libthai
@@ -33,7 +33,7 @@ PLIST.carbon=	yes
 .endif
 
 ###
-### Thai lauguage support
+### Thai language support
 ###
 .if !empty(PKG_OPTIONS:Mlibthai)
 PLIST.thai=		yes
