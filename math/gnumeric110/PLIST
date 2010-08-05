@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/07/20 12:15:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/08/05 18:43:14 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -115,13 +115,17 @@ include/libspreadsheet-1.10/spreadsheet/style-conditions.h
 include/libspreadsheet-1.10/spreadsheet/style-font.h
 include/libspreadsheet-1.10/spreadsheet/style.h
 include/libspreadsheet-1.10/spreadsheet/symbol.h
+include/libspreadsheet-1.10/spreadsheet/tools/dao.h
 include/libspreadsheet-1.10/spreadsheet/tools/gnm-solver.h
+include/libspreadsheet-1.10/spreadsheet/tools/tools.h
 include/libspreadsheet-1.10/spreadsheet/undo.h
 include/libspreadsheet-1.10/spreadsheet/validation-combo.h
 include/libspreadsheet-1.10/spreadsheet/validation.h
 include/libspreadsheet-1.10/spreadsheet/value.h
 include/libspreadsheet-1.10/spreadsheet/wbc-gtk-impl.h
 include/libspreadsheet-1.10/spreadsheet/wbc-gtk.h
+include/libspreadsheet-1.10/spreadsheet/widgets/gnm-notebook.h
+include/libspreadsheet-1.10/spreadsheet/widgets/gnumeric-expr-entry.h
 include/libspreadsheet-1.10/spreadsheet/workbook-cmd-format.h
 include/libspreadsheet-1.10/spreadsheet/workbook-control-priv.h
 include/libspreadsheet-1.10/spreadsheet/workbook-control.h
@@ -220,8 +224,8 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
-lib/goffice/0.8.7/plugins/gnumeric/gnumeric.la
-lib/goffice/0.8.7/plugins/gnumeric/plugin.xml
+lib/goffice/0.8.8/plugins/gnumeric/gnumeric.la
+lib/goffice/0.8.8/plugins/gnumeric/plugin.xml
 lib/libspreadsheet.la
 lib/pkgconfig/libspreadsheet-1.10.pc
 man/man1/gnumeric.1
