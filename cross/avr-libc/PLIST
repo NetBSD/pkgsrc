@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/06/15 13:21:08 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/08/05 15:50:22 drochner Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -880,12 +880,6 @@ share/doc/avr-libc/man/man3/WDTO_4S.3
 share/doc/avr-libc/man/man3/WDTO_500MS.3
 share/doc/avr-libc/man/man3/WDTO_60MS.3
 share/doc/avr-libc/man/man3/WDTO_8S.3
-share/doc/avr-libc/man/man3/_AVR_BOOT_H_.3
-share/doc/avr-libc/man/man3/_AVR_FUSE_H_.3
-share/doc/avr-libc/man/man3/_AVR_LOCK_H_.3
-share/doc/avr-libc/man/man3/_AVR_POWER_H_.3
-share/doc/avr-libc/man/man3/_AVR_SIGNATURE_H_.3
-share/doc/avr-libc/man/man3/_AVR_SLEEP_H_.3
 share/doc/avr-libc/man/man3/_BV.3
 share/doc/avr-libc/man/man3/_EEGET.3
 share/doc/avr-libc/man/man3/_EEPUT.3
@@ -897,13 +891,6 @@ share/doc/avr-libc/man/man3/_FDEV_SETUP_WRITE.3
 share/doc/avr-libc/man/man3/_FFS.3
 share/doc/avr-libc/man/man3/_SLEEP_CONTROL_REG.3
 share/doc/avr-libc/man/man3/_SLEEP_ENABLE_MASK.3
-share/doc/avr-libc/man/man3/_STDIO_H_.3
-share/doc/avr-libc/man/man3/_STDLIB_H_.3
-share/doc/avr-libc/man/man3/_STRING_H_.3
-share/doc/avr-libc/man/man3/_UTIL_ATOMIC_H_.3
-share/doc/avr-libc/man/man3/_UTIL_DELAY_BASIC_H_.3
-share/doc/avr-libc/man/man3/_UTIL_DELAY_H_.3
-share/doc/avr-libc/man/man3/_UTIL_TWI_H_.3
 share/doc/avr-libc/man/man3/_WD_CHANGE_BIT.3
 share/doc/avr-libc/man/man3/_WD_CONTROL_REG.3
 share/doc/avr-libc/man/man3/_WD_PS3_MASK.3
@@ -926,7 +913,6 @@ share/doc/avr-libc/man/man3/__COMMON_ASB.3
 share/doc/avr-libc/man/man3/__COMMON_ASRE.3
 share/doc/avr-libc/man/man3/__CONCAT.3
 share/doc/avr-libc/man/man3/__CONCATenate.3
-share/doc/avr-libc/man/man3/__CTYPE_H_.3
 share/doc/avr-libc/man/man3/__EEGET.3
 share/doc/avr-libc/man/man3/__EEPUT.3
 share/doc/avr-libc/man/man3/__ELPM.3
@@ -945,7 +931,6 @@ share/doc/avr-libc/man/man3/__ELPM_word_classic__.3
 share/doc/avr-libc/man/man3/__ELPM_word_enhanced__.3
 share/doc/avr-libc/man/man3/__ELPM_word_xmega__.3
 share/doc/avr-libc/man/man3/__ELPM_xmega__.3
-share/doc/avr-libc/man/man3/__ERRNO_H_.3
 share/doc/avr-libc/man/man3/__INTR_ATTRS.3
 share/doc/avr-libc/man/man3/__LPM.3
 share/doc/avr-libc/man/man3/__LPM_classic__.3
@@ -959,8 +944,6 @@ share/doc/avr-libc/man/man3/__LPM_float_enhanced__.3
 share/doc/avr-libc/man/man3/__LPM_word.3
 share/doc/avr-libc/man/man3/__LPM_word_classic__.3
 share/doc/avr-libc/man/man3/__LPM_word_enhanced__.3
-share/doc/avr-libc/man/man3/__PGMSPACE_H_.3
-share/doc/avr-libc/man/man3/__SETJMP_H_.3
 share/doc/avr-libc/man/man3/__USING_MINT8.3
 share/doc/avr-libc/man/man3/__boot_lock_bits_set.3
 share/doc/avr-libc/man/man3/__boot_lock_bits_set_alternate.3
@@ -1143,9 +1126,9 @@ share/doc/avr-libc/man/man3/getchar.3
 share/doc/avr-libc/man/man3/gets.3
 share/doc/avr-libc/man/man3/hypot.3
 share/doc/avr-libc/man/man3/inb.3
-share/doc/avr-libc/man/man3/inline__asm.3
+share/doc/avr-libc/man/man3/inline_asm.3
 share/doc/avr-libc/man/man3/inp.3
-share/doc/avr-libc/man/man3/install__tools.3
+share/doc/avr-libc/man/man3/install_tools.3
 share/doc/avr-libc/man/man3/int16_t.3
 share/doc/avr-libc/man/man3/int32_t.3
 share/doc/avr-libc/man/man3/int64_t.3
@@ -1198,7 +1181,7 @@ share/doc/avr-libc/man/man3/lround.3
 share/doc/avr-libc/man/man3/ltoa.3
 share/doc/avr-libc/man/man3/malloc.3
 share/doc/avr-libc/man/man3/math.h.3
-share/doc/avr-libc/man/man3/mem__sections.3
+share/doc/avr-libc/man/man3/mem_sections.3
 share/doc/avr-libc/man/man3/memccpy.3
 share/doc/avr-libc/man/man3/memccpy.S.3
 share/doc/avr-libc/man/man3/memchr.3
@@ -1272,7 +1255,7 @@ share/doc/avr-libc/man/man3/rand_r.3
 share/doc/avr-libc/man/man3/random.3
 share/doc/avr-libc/man/man3/random_r.3
 share/doc/avr-libc/man/man3/realloc.3
-share/doc/avr-libc/man/man3/release__method.3
+share/doc/avr-libc/man/man3/release_method.3
 share/doc/avr-libc/man/man3/rem.3
 share/doc/avr-libc/man/man3/reti.3
 share/doc/avr-libc/man/man3/round.3
@@ -1435,8 +1418,8 @@ share/doc/avr-libc/man/man3/uintmax_t.3
 share/doc/avr-libc/man/man3/uintptr_t.3
 share/doc/avr-libc/man/man3/ultoa.3
 share/doc/avr-libc/man/man3/ungetc.3
-share/doc/avr-libc/man/man3/using__avrprog.3
-share/doc/avr-libc/man/man3/using__tools.3
+share/doc/avr-libc/man/man3/using_avrprog.3
+share/doc/avr-libc/man/man3/using_tools.3
 share/doc/avr-libc/man/man3/util_atomic.3
 share/doc/avr-libc/man/man3/util_crc.3
 share/doc/avr-libc/man/man3/util_delay.3
