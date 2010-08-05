@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/05 12:18:06 obache Exp $
+
+SHA1 (xlrd-0.7.1.tar.gz) = 9d06a1ebbf796530a1abb497f633a796606f4ad1
+RMD160 (xlrd-0.7.1.tar.gz) = 1dbbde702c515e5af3257fe403975c13c52632fc
+Size (xlrd-0.7.1.tar.gz) = 118302 bytes
