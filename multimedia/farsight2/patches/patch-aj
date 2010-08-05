@@ -1,12 +1,12 @@
-$NetBSD: patch-aj,v 1.1 2009/08/27 18:39:19 hasso Exp $
+$NetBSD: patch-aj,v 1.2 2010/08/05 18:55:18 drochner Exp $
 
---- gst-libs/gst/farsight/fs-interfaces.c.orig	2009-08-27 21:16:13 +0300
-+++ gst-libs/gst/farsight/fs-interfaces.c	2009-08-27 21:16:41 +0300
-@@ -49,6 +49,7 @@ GST_DEBUG_CATEGORY_EXTERN (fs_base_confe
- #include <net/if.h>
- #include <net/if_arp.h>
- #include <arpa/inet.h>
+--- gst-libs/gst/farsight/fs-interfaces.c.orig	2010-05-31 19:20:03.000000000 +0000
++++ gst-libs/gst/farsight/fs-interfaces.c
+@@ -44,6 +44,7 @@
+  #include <sys/socket.h>
+  #include <ifaddrs.h>
+ #endif
 +#include <netinet/in.h>
  
- /**
-  * SECTION:fs-interfaces
+ #include <gst/gst.h>
+ 

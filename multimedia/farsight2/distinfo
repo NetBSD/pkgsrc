@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.7 2010/06/16 12:11:10 obache Exp $
+$NetBSD: distinfo,v 1.8 2010/08/05 18:55:18 drochner Exp $
 
-SHA1 (farsight2-0.0.17.tar.gz) = 6e4b3376b9f33ab659b231bbbb2155d4e1b202cc
-RMD160 (farsight2-0.0.17.tar.gz) = bd6238a3376d0448e32fd0c50b80ccb3220132e2
-Size (farsight2-0.0.17.tar.gz) = 1025565 bytes
-SHA1 (patch-aa) = f3e9c2de47d8c73a6e28b4c63feaded395f2a2ac
+SHA1 (farsight2-0.0.21.tar.gz) = baf51f52eeeb81214b376ce1b9f33a22ccac7298
+RMD160 (farsight2-0.0.21.tar.gz) = 198feb04be765cae836c09cc3492842e1788e56b
+Size (farsight2-0.0.21.tar.gz) = 1090456 bytes
+SHA1 (patch-aa) = 8bca15a47ff97f751cb04247369129090f64d892
 SHA1 (patch-ab) = 27fd12ad2d1774cbeb7c11a4cee5b40e5ea97853
-SHA1 (patch-ac) = ff7eabcbbad1a81eb10ff91ea459d439866edaee
-SHA1 (patch-ad) = cfeac35e148d96e122a280d4adca54b23c369cf9
+SHA1 (patch-ac) = bb2b6a6eeb807d19b420eeec07f6b0b92203bff7
 SHA1 (patch-ai) = 6459729f80f592a2a333d683b05a139b499f46c6
-SHA1 (patch-aj) = 816318707d1463df27b37734baedadb338452fb0
+SHA1 (patch-aj) = c8f92433243a5741403721bb248e4471a23583eb
 SHA1 (patch-ak) = 591ab7b6afefc84443280b01c765492007686ff6
