@@ -1,20 +1,21 @@
-The Independent JPEG Group's JPEG software
-==========================================
+Independent JPEG Group's free JPEG software
+-------------------------------------------
 
-README for release 6 of 2-Aug-95
-================================
+This package contains C software to implement JPEG image encoding, decoding,
+and transcoding.  JPEG is a standardized compression method for full-color
+and gray-scale images.
 
-This distribution contains the sixth public release of the Independent JPEG
-Group's free JPEG software.  You are welcome to redistribute this software and
-to use it for any purpose, subject to the conditions under LEGAL ISSUES, below.
+The distributed programs provide conversion between JPEG "JFIF" format and
+image files in PBMPLUS PPM/PGM, GIF, BMP, and Targa file formats.  The
+core compression and decompression library can easily be reused in other
+programs, such as image viewers.  The package is highly portable C code;
+we have tested it on many machines ranging from PCs to Crays.
 
-Serious users of this software (particularly those incorporating it into
-larger programs) should contact IJG at jpeg-info@uunet.uu.net to be added to
-our electronic mailing list.  Mailing list members are notified of updates
-and have a chance to participate in technical discussions, etc.
+We are releasing this software for both noncommercial and commercial use.
+Companies are welcome to use it as the basis for JPEG-related products.
+We do not ask a royalty, although we do ask for an acknowledgement in
+product literature (see the README file in the distribution for details).
+We hope to make this software industrial-quality --- although, as with
+anything that's free, we offer no warranty and accept no liability.
 
-This software is the work of Tom Lane, Philip Gladstone, Luis Ortiz, Jim
-Boucher, Lee Crocker, Julian Minguillon, George Phillips, Davide Rossi,
-Ge' Weijers, and other members of the Independent JPEG Group.
-
-IJG is not affiliated with the official ISO JPEG standards committee.
+For more information, contact jpeg-info@uc.ag.
