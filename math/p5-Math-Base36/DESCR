@@ -1,0 +1,2 @@
+The Perl 5 module Math::Base36 converts to and from Base36 numbers
+(0..9 - A..Z).
