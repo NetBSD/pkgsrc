@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/04/05 00:49:07 jakllsch Exp $
+# $NetBSD: Makefile,v 1.18 2010/08/05 15:50:22 drochner Exp $
 
 DISTNAME=		avr-libc-1.6.7
 PKGREVISION=		1
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 BUILD_DEPENDS+=		avr-gcc-[0-9]*:../../cross/avr-gcc
-BUILD_DEPENDS+=		doxygen>=1.6.2:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.6.3nb1:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
