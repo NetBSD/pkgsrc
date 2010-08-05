@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2758 2010/08/05 13:13:48 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2759 2010/08/05 18:59:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3646,3 +3646,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/py-xlrd version 0.7.1 [obache 2010-08-05]
 	Updated devel/libdatrie to 0.2.4 [obache 2010-08-05]
 	Updated fonts/thaixfonts to 1.2.5 [obache 2010-08-05]
+	Updated net/clive to 2.2.12 [wiz 2010-08-05]
