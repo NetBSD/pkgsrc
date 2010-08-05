@@ -1,0 +1,2 @@
+The Perl 5 module MooseX::Types::JSON provides Moose string type
+constraints that match valid and relaxed JSON.
