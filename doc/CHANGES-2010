@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2756 2010/08/05 12:18:22 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2757 2010/08/05 12:50:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3644,3 +3644,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added math/p5-Math-Base36 version 0.07 [seb 2010-08-05]
 	Updated fonts/umefont-ttf to 0.418 [obache 2010-08-05]
 	Added textproc/py-xlrd version 0.7.1 [obache 2010-08-05]
+	Updated devel/libdatrie to 0.2.4 [obache 2010-08-05]
