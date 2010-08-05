@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/05/15 07:05:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/08/05 13:23:20 obache Exp $
 ${PLIST.qt3}bin/uim-chardict-qt
 ${PLIST.qt}bin/uim-chardict-qt4
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
@@ -140,7 +140,7 @@ share/uim/mana-key-custom.scm
 share/uim/mana.scm
 share/uim/pinyin-big5.scm
 share/uim/pixmaps/anthy.png
-share/uim/pixmaps/anthy-utf8.png
+${PLIST.anthy}share/uim/pixmaps/anthy-utf8.png
 share/uim/pixmaps/byeoru.png
 share/uim/pixmaps/byeoru.svg
 share/uim/pixmaps/canna.png
