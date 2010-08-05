@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2010/04/05 18:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2010/08/05 18:59:41 wiz Exp $
 #
 
-DISTNAME=	clive-2.2.11
+DISTNAME=	clive-2.2.12
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://clive.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
