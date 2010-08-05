@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2010/05/31 17:57:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.50 2010/08/05 12:41:27 obache Exp $
 bin/pango-querymodules
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -53,6 +53,7 @@ lib/pango/1.6.0/modules/pango-indic-lang.la
 lib/pango/1.6.0/modules/pango-khmer-fc.la
 lib/pango/1.6.0/modules/pango-syriac-fc.la
 lib/pango/1.6.0/modules/pango-thai-fc.la
+${PLIST.thai}lib/pango/1.6.0/modules/pango-thai-lang.la
 lib/pango/1.6.0/modules/pango-tibetan-fc.la
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
