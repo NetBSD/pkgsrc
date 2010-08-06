@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2010/01/18 09:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/08/06 20:49:23 bad Exp $
 #
 
-DISTNAME=	dcraw-8.82
-PKGREVISION=	2
+DISTNAME=	dcraw-9.04
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/archive/
 
@@ -20,8 +19,8 @@ USE_LANGUAGES=		c
 LIBS+=		-lm -ljpeg
 CFLAGS+=	-DLOCALEDIR=\"${PREFIX}/${PKGLOCALEDIR}/locale\"
 
-DCRAW_MANS=		eo ru fr it de pt es zh_TW zh_CN pl hu
-DCRAW_LOCALES=		eo ru fr it de pt es zh_TW zh_CN nl pl hu
+DCRAW_MANS=		ca cs da de eo es fr hu it pl pt ru sv zh_CN zh_TW
+DCRAW_LOCALES=		ca cs da de eo es fr hu it nl pl pt ru sv zh_CN zh_TW
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .for lang in ${DCRAW_MANS}
