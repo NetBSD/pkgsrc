@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/25 13:02:14 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/06 14:46:16 hauke Exp $
 bin/pyblosxom-cmd
 ${PYSITELIB}/Pyblosxom/__init__.py
 ${PYSITELIB}/Pyblosxom/__init__.pyc
@@ -87,6 +87,9 @@ ${PYSITELIB}/Pyblosxom/tests/test_blog.pyo
 ${PYSITELIB}/Pyblosxom/tests/test_entries.py
 ${PYSITELIB}/Pyblosxom/tests/test_entries.pyc
 ${PYSITELIB}/Pyblosxom/tests/test_entries.pyo
+${PYSITELIB}/Pyblosxom/tests/test_entryparser.py
+${PYSITELIB}/Pyblosxom/tests/test_entryparser.pyc
+${PYSITELIB}/Pyblosxom/tests/test_entryparser.pyo
 ${PYSITELIB}/Pyblosxom/tests/test_pathinfo.py
 ${PYSITELIB}/Pyblosxom/tests/test_pathinfo.pyc
 ${PYSITELIB}/Pyblosxom/tests/test_pathinfo.pyo
@@ -162,6 +165,15 @@ ${PYSITELIB}/plugins/date/pyfilenamemtime.pyo
 ${PYSITELIB}/plugins/date/w3cdate.py
 ${PYSITELIB}/plugins/date/w3cdate.pyc
 ${PYSITELIB}/plugins/date/w3cdate.pyo
+${PYSITELIB}/plugins/display/__init__.py
+${PYSITELIB}/plugins/display/__init__.pyc
+${PYSITELIB}/plugins/display/__init__.pyo
+${PYSITELIB}/plugins/display/entrytitle.py
+${PYSITELIB}/plugins/display/entrytitle.pyc
+${PYSITELIB}/plugins/display/entrytitle.pyo
+${PYSITELIB}/plugins/display/paginate.py
+${PYSITELIB}/plugins/display/paginate.pyc
+${PYSITELIB}/plugins/display/paginate.pyo
 ${PYSITELIB}/plugins/headers/__init__.py
 ${PYSITELIB}/plugins/headers/__init__.pyc
 ${PYSITELIB}/plugins/headers/__init__.pyo
@@ -180,6 +192,12 @@ ${PYSITELIB}/plugins/testrunner.pyo
 ${PYSITELIB}/plugins/tests/__init__.py
 ${PYSITELIB}/plugins/tests/__init__.pyc
 ${PYSITELIB}/plugins/tests/__init__.pyo
+${PYSITELIB}/plugins/tests/archives/__init__.py
+${PYSITELIB}/plugins/tests/archives/__init__.pyc
+${PYSITELIB}/plugins/tests/archives/__init__.pyo
+${PYSITELIB}/plugins/tests/archives/test_yeararchives.py
+${PYSITELIB}/plugins/tests/archives/test_yeararchives.pyc
+${PYSITELIB}/plugins/tests/archives/test_yeararchives.pyo
 ${PYSITELIB}/plugins/tests/categories/__init__.py
 ${PYSITELIB}/plugins/tests/categories/__init__.pyc
 ${PYSITELIB}/plugins/tests/categories/__init__.pyo
@@ -198,9 +216,27 @@ ${PYSITELIB}/plugins/tests/comments/test_check_javascript.pyo
 ${PYSITELIB}/plugins/tests/comments/test_comments.py
 ${PYSITELIB}/plugins/tests/comments/test_comments.pyc
 ${PYSITELIB}/plugins/tests/comments/test_comments.pyo
+${PYSITELIB}/plugins/tests/display/__init__.py
+${PYSITELIB}/plugins/tests/display/__init__.pyc
+${PYSITELIB}/plugins/tests/display/__init__.pyo
+${PYSITELIB}/plugins/tests/display/test_entrytitle.py
+${PYSITELIB}/plugins/tests/display/test_entrytitle.pyc
+${PYSITELIB}/plugins/tests/display/test_entrytitle.pyo
 ${PYSITELIB}/plugins/tests/test_base.py
 ${PYSITELIB}/plugins/tests/test_base.pyc
 ${PYSITELIB}/plugins/tests/test_base.pyo
+${PYSITELIB}/plugins/tests/text/__init__.py
+${PYSITELIB}/plugins/tests/text/__init__.pyc
+${PYSITELIB}/plugins/tests/text/__init__.pyo
+${PYSITELIB}/plugins/tests/text/test_acronyms.py
+${PYSITELIB}/plugins/tests/text/test_acronyms.pyc
+${PYSITELIB}/plugins/tests/text/test_acronyms.pyo
+${PYSITELIB}/plugins/text/__init__.py
+${PYSITELIB}/plugins/text/__init__.pyc
+${PYSITELIB}/plugins/text/__init__.pyo
+${PYSITELIB}/plugins/text/acronyms.py
+${PYSITELIB}/plugins/text/acronyms.pyc
+${PYSITELIB}/plugins/text/acronyms.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
