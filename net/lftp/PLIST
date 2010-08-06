@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.16 2009/12/01 07:46:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16.6.1 2010/08/06 18:49:55 tron Exp $
 bin/lftp
 bin/lftpget
+@comment belongs to libiconv: lib/charset.alias
 lib/lftp/${PKGVERSION}/cmd-mirror.la
 lib/lftp/${PKGVERSION}/cmd-sleep.la
 lib/lftp/${PKGVERSION}/cmd-torrent.la
@@ -15,6 +16,7 @@ lib/liblftp-jobs.la
 lib/liblftp-tasks.la
 man/man1/lftp.1
 man/man1/lftpget.1
+man/man5/lftp.conf.5
 share/examples/lftp/lftp.conf.default
 share/lftp/import-ncftp
 share/lftp/import-netscape
