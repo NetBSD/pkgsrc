@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/03/12 10:30:59 obache Exp $
+# $NetBSD: Makefile,v 1.23 2010/08/06 04:51:23 obache Exp $
 #
 
 DISTNAME=	tokyocabinet-perl-1.33
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE:S/perldoc/perlpkg/}
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://1978th.net/tokyocabinet/perldoc/
+HOMEPAGE=	http://fallabs.com/tokyocabinet/perldoc/
 COMMENT=	Perl binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
