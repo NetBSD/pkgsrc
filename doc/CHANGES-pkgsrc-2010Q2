@@ -70,3 +70,5 @@ Pullup ticket #3196 - requested by tron
 net/wireshark: security update
 Pullup ticket #3197 - requested by tron
 graphics/tiff: security patches
+Pullup ticket #3198 - requested by gls
+net/lftp: security update
