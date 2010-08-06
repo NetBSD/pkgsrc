@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2007/02/18 11:40:10 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2010/08/06 19:21:27 drochner Exp $
 
 --- pth_high.c.orig	2006-06-08 17:54:03.000000000 +0000
 +++ pth_high.c
@@ -100,7 +100,28 @@ $NetBSD: patch-ac,v 1.6 2007/02/18 11:40:10 wiz Exp $
          rc = 0;
      }
      if (ev_extra != NULL && !selected)
-@@ -624,6 +653,13 @@ int pth_connect_ev(int s, const struct s
+@@ -601,6 +630,7 @@ int pth_connect_ev(int s, const struct s
+     int rv, err;
+     socklen_t errlen;
+     int fdmode;
++    int notfirsttry = 0;
+ 
+     pth_implicit_init();
+     pth_debug2("pth_connect_ev: enter from thread \"%s\"", pth_current->name);
+@@ -615,8 +645,11 @@ int pth_connect_ev(int s, const struct s
+ 
+     /* try to connect */
+     while (   (rv = pth_sc(connect)(s, (struct sockaddr *)addr, addrlen)) == -1
+-           && errno == EINTR)
++           && (errno == EINTR || errno == EINPROGRESS || errno == EALREADY))
++	   notfirsttry = 1;
+         ;
++    if (rv == -1 && errno == EISCONN && notfirsttry)
++	rv = 0;
+ 
+     /* restore filedescriptor mode */
+     pth_shield { pth_fdmode(s, fdmode); }
+@@ -624,6 +657,13 @@ int pth_connect_ev(int s, const struct s
      /* if it is still on progress wait until socket is really writeable */
      if (rv == -1 && errno == EINPROGRESS && fdmode != PTH_FDMODE_NONBLOCK) {
          if ((ev = pth_event(PTH_EVENT_FD|PTH_UNTIL_FD_WRITEABLE|PTH_MODE_STATIC, &ev_key, s)) == NULL)
