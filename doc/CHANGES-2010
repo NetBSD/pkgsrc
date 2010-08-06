@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2763 2010/08/06 05:01:36 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2764 2010/08/06 05:02:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3651,3 +3651,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29 to 2.9.0nb4 [taca 2010-08-06]
 	Updated databases/tokyocabinet to 1.4.46 [obache 2010-08-06]
 	Updated databases/tokyotyrant to 1.1.41 [obache 2010-08-06]
+	Updated textproc/tokyodystopia to 0.9.15 [obache 2010-08-06]
