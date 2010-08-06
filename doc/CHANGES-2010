@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2765 2010/08/06 06:52:05 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2766 2010/08/06 08:30:23 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3653,3 +3653,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/tokyotyrant to 1.1.41 [obache 2010-08-06]
 	Updated textproc/tokyodystopia to 0.9.15 [obache 2010-08-06]
 	Updated devel/fossil to 201008051.00943 [asau 2010-08-06]
+	Updated lang/sbcl to 1.0.41 [asau 2010-08-06]
