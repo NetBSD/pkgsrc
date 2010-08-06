@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/07/28 16:28:51 taca Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/06 03:43:28 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -38,8 +38,7 @@ CONF_FILES_PERMS+=	${CT_EGDIR}/system/config/localconfig.php \
 			${CT_WEBDIR}/system/config/localconfig.php \
 			${APACHE_USER} ${APACHE_GROUP} 0600
 
-CONF_FILES+=		${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf \
-			${CT_EGDIR}/htaccess.default ${CT_WEBDIR}/.htaccess
+CONF_FILES+=		${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf
 
 .for f in ${EG_FILES}
 CONF_FILES+=		${CT_EGDIR}/${f} ${CT_WEBDIR}/${f}
