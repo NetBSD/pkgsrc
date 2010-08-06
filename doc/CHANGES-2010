@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2761 2010/08/06 03:44:03 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2762 2010/08/06 04:37:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3649,3 +3649,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/clive to 2.2.12 [wiz 2010-08-05]
 	Added devel/p5-MooseX-Types-JSON version 0.02 [seb 2010-08-05]
 	Updated www/contao29 to 2.9.0nb4 [taca 2010-08-06]
+	Updated databases/tokyocabinet to 1.4.46 [obache 2010-08-06]
