@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2010/03/12 10:47:22 obache Exp $
+# $NetBSD: Makefile,v 1.29 2010/08/06 04:39:22 obache Exp $
 #
 
-DISTNAME=	tokyotyrant-1.1.40
+DISTNAME=	tokyotyrant-1.1.41
 CATEGORIES=	databases net
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://1978th.net/tokyotyrant/
+HOMEPAGE=	http://fallabs.com/tokyotyrant/
 COMMENT=	Network interface of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
@@ -31,11 +31,10 @@ CONFIGURE_ARGS+=	--with-bzip=${BUILDLINK_PREFIX.bzip2}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 .endif
 PTHREAD_AUTO_VARS=	yes
+PTHREAD_OPTS+=		require
 .include "../../mk/pthread.buildlink3.mk"
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread|${PTHREAD_LIBS}|'
-.endif
 .include "../../mk/bsd.pkg.mk"
