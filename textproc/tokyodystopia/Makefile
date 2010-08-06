@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2010/06/18 10:12:05 obache Exp $
+# $NetBSD: Makefile,v 1.16 2010/08/06 04:43:23 obache Exp $
 #
 
-DISTNAME=	tokyodystopia-0.9.14
+DISTNAME=	tokyodystopia-0.9.15
 CATEGORIES=	textproc
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://1978th.net/tokyodystopia/
+HOMEPAGE=	http://fallabs.com/tokyodystopia/
 COMMENT=	Full-text search system
 LICENSE=	gnu-lgpl-v2.1
 
@@ -18,6 +18,9 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	tokyodystopia.pc.in
 
 TEST_TARGET=	check
+
+post-extract:
+		${RM} -f ${WRKSRC}/doc/index.html~
 
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.29
 .include "../../databases/tokyocabinet/buildlink3.mk"
@@ -33,9 +36,9 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 .else
 CONFIGURE_ARGS+=	--disable-zlib
 .endif
+PTHREAD_OPTS+=		require
 .include "../../mk/pthread.buildlink3.mk"
 PTHREAD_AUTO_VARS=	yes
-CONFIGURE_ARGS+=	--enable-pthread
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_FILES.pthread=	configure
