@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2767 2010/08/06 08:50:22 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.2768 2010/08/06 14:46:48 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3655,3 +3655,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/fossil to 201008051.00943 [asau 2010-08-06]
 	Updated lang/sbcl to 1.0.41 [asau 2010-08-06]
 	Updated mail/dbmail to 2.2.16 [tnn 2010-08-06]
+	Updated www/py-blosxom to 1.5nb1 [hauke 2010-08-06]
