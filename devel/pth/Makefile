@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2009/07/15 10:29:16 joerg Exp $
+# $NetBSD: Makefile,v 1.72 2010/08/06 19:21:26 drochner Exp $
 #
 
 DISTNAME=		pth-2.0.7
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=pth/}
 
