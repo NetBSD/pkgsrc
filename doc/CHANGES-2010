@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2801 2010/08/07 14:27:46 jym Exp $
+$NetBSD: CHANGES-2010,v 1.2802 2010/08/07 16:08:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3704,3 +3704,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/tegaki-zinnia-traditional-chinese version 0.3 [obache 2010-08-07]
 	Added inputmethod/tegaki-zinnia-traditional-chinese-light version 0.3 [obache 2010-08-07]
 	Updated devel/coccinelle to 0.2.3 [jym 2010-08-07]
+	Updated fonts/vlgothic-ttf to 20100416 [wiz 2010-08-07]
