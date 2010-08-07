@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 02:25:03 obache Exp $
+libexec/ibus-engine-handwrite
+share/ibus-handwrite/data/table.txt
+share/ibus-handwrite/icons/ibus-handwrite.svg
+share/ibus-handwrite/icons/switch.svg
+share/ibus/component/handwrite-jp.xml
+share/ibus/component/handwrite-zh.xml
+share/locale/zh_CN/LC_MESSAGES/ibus-handwrite.mo
