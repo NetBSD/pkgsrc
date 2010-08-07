@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 02:27:35 obache Exp $
+share/ibus-t9/icons/full-letter.svg
+share/ibus-t9/icons/full-punct.svg
+share/ibus-t9/icons/half-letter.svg
+share/ibus-t9/icons/half-punct.svg
+share/ibus-t9/icons/ibus-t9.svg
+share/ibus-t9/icons/key1.svg
+share/ibus-t9/icons/key2.svg
+share/ibus-t9/icons/key3.svg
+share/ibus-t9/icons/key4.svg
+share/ibus-t9/icons/key5.svg
+share/ibus-t9/tables/table.txt
+share/ibus/component/ibus-t9.xml
+share/ibus/engine/ibus-engine-t9
+share/locale/zh_CN/LC_MESSAGES/ibus-t9.mo
