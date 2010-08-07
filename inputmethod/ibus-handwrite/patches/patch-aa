@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/07 02:25:03 obache Exp $
+
+--- src/handrecog_lucykila.c.orig	2010-04-22 10:53:37.000000000 +0000
++++ src/handrecog_lucykila.c
+@@ -17,6 +17,12 @@
+ #include "engine.h"
+ #include "handrecog.h"
+ 
++#ifndef MAP_ANONYMOUS
++#ifdef MAP_ANON
++#define MAP_ANONYMOUS MAP_ANON
++#endif
++#endif
++
+ typedef struct _MATCHED MATCHED;
+ typedef struct _IbusHandwriteRecogLucyKila IbusHandwriteRecogLucyKila;
+ typedef struct _IbusHandwriteRecogLucyKilaClass IbusHandwriteRecogLucyKilaClass;
