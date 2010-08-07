@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/08/07 05:19:55 obache Exp $
+# $NetBSD: Makefile,v 1.40 2010/08/07 13:05:42 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -88,6 +88,24 @@ SUBDIR+=	skkinput
 SUBDIR+=	skkserv
 SUBDIR+=	skktools
 SUBDIR+=	tc
+SUBDIR+=	tegaki-pygtk
+SUBDIR+=	tegaki-python
+SUBDIR+=	tegaki-recognize
+SUBDIR+=	tegaki-tools
+SUBDIR+=	tegaki-train
+SUBDIR+=	tegaki-wagomu
+SUBDIR+=	tegaki-wagomu-japanese
+SUBDIR+=	tegaki-wagomu-japanese-joyo
+SUBDIR+=	tegaki-wagomu-japanese-kyoiku
+SUBDIR+=	tegaki-wagomu-simplified-chinese
+SUBDIR+=	tegaki-zinnia-japanese
+SUBDIR+=	tegaki-zinnia-japanese-joyo
+SUBDIR+=	tegaki-zinnia-japanese-kyoiku
+SUBDIR+=	tegaki-zinnia-japanese-light
+SUBDIR+=	tegaki-zinnia-simplified-chinese
+SUBDIR+=	tegaki-zinnia-simplified-chinese-light
+SUBDIR+=	tegaki-zinnia-traditional-chinese
+SUBDIR+=	tegaki-zinnia-traditional-chinese-light
 SUBDIR+=	tomoe
 SUBDIR+=	tomoe-gtk
 SUBDIR+=	uim
