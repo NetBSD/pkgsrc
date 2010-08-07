@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/07 02:27:35 obache Exp $
+
+--- src/decoder.c.orig	2010-03-22 01:51:10.000000000 +0000
++++ src/decoder.c
+@@ -31,6 +31,12 @@
+ #include <string.h>
+ #include "engine.h"
+ 
++#ifndef MAP_ANONYMOUS
++#ifdef MAP_ANON
++#define MAP_ANONYMOUS MAP_ANON
++#endif
++#endif
++
+ static char * nextline(char *);
+ 
+ /**
