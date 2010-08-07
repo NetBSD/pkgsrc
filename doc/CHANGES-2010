@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2777 2010/08/07 02:02:56 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2778 2010/08/07 02:05:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3665,3 +3665,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/ibus-hangul version 1.3.0.20100329 [obache 2010-08-07]
 	Added inputmethod/ibus-m17n version 1.3.0nb1 [obache 2010-08-07]
 	Added inputmethod/ibus-pinyin version 1.3.10 [obache 2010-08-07]
+	Added inputmethod/ibus-qt version 1.3.0nb1 [obache 2010-08-07]
