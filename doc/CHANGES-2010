@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2793 2010/08/07 05:19:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2794 2010/08/07 06:24:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3679,3 +3679,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-Cover to 0.68 [seb 2010-08-07]
 	Updated x11/py-Xlib to 0.14 [obache 2010-08-07]
 	Added inputmethod/ibus-el version 0.1.1 [obache 2010-08-07]
+	Updated devel/mercurial to 1.6.2 [wiz 2010-08-07]
