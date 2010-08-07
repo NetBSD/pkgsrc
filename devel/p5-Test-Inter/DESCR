@@ -1,0 +1,11 @@
+This is another framework for writing test scripts. It is loosely
+inspired by Test::More, and has most of it's functionality, but it
+is not a drop-in replacement.
+
+Test::More (and other existing test frameworks) suffer from two weaknesses:
+
+   None offer the ability to access specific tests in a reasonably
+   interactive fashion
+
+   None offer the ability to write the tests in whatever format
+   would make the tests the most readable
