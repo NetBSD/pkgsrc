@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 01:56:36 obache Exp $
+libexec/ibus-engine-chewing
+share/gconf/schemas/ibus-chewing.schemas
+share/ibus-chewing/icons/ibus-chewing-orig.png
+share/ibus-chewing/icons/ibus-chewing.png
+share/ibus-chewing/icons/settings.png
+share/ibus/component/chewing.xml
+share/locale/zh_CN/LC_MESSAGES/ibus-chewing.mo
+share/locale/zh_TW/LC_MESSAGES/ibus-chewing.mo
