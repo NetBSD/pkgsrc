@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 04:53:24 obache Exp $
-
-SHA1 (python-xlib-0.14.tar.gz) = e25e3c1284e768d3f84eaebbea4ed3e647c2a05b
-RMD160 (python-xlib-0.14.tar.gz) = be5610035fb1aee36a55e3e276582e3e31ba1cfc
-Size (python-xlib-0.14.tar.gz) = 200223 bytes
