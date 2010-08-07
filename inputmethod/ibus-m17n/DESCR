@@ -1,0 +1,2 @@
+M17N engine for IBus input platform. It allows input of many languages using
+the input table maps from m17n-db.
