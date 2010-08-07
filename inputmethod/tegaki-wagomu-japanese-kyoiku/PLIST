@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 12:56:29 obache Exp $
+share/tegaki/models/wagomu/kyoiku-kanji.meta
+share/tegaki/models/wagomu/kyoiku-kanji.model
