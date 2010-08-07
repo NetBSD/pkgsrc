@@ -1,0 +1,6 @@
+IBus-chewing is an IBus front-end of Chewing, an intelligent Chinese input
+method for Zhuyin (BoPoMoFo) users.
+It supports various Zhuyin keyboard layout, such as standard (DaChen),
+IBM, Gin-Yeah, Eten, Eten 26, Hsu, Dvorak, Dvorak-Hsu, and DaChen26.
+
+Chewing also support toned Hanyu pinyin input.
