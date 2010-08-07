@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/07 12:52:21 obache Exp $
+
+SHA1 (tegaki-recognize-0.3.1.2.tar.gz) = 0638e7a6e12e54d2d28c0e3403ae1dcba6356529
+RMD160 (tegaki-recognize-0.3.1.2.tar.gz) = dad34766d6874e9b074cd59b1e539024f565990e
+Size (tegaki-recognize-0.3.1.2.tar.gz) = 296765 bytes
+SHA1 (patch-aa) = 14451c25380125456d96bf4c64e97f2b14380f04
