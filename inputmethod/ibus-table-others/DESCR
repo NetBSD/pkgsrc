@@ -1,0 +1,14 @@
+ibus-table-others provides the following input methods on IBus-Table on IBus
+framework:
+
+    * CNS11643
+    * Compose
+    * Emoji
+    * IPA-X-SAMPA
+    * LaTex
+    * RussianTraditional
+    * Thai
+    * Translit
+    * Ua-Translit
+    * Viqr
+    * Yawerty
