@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/08/07 02:34:16 obache Exp $
+# $NetBSD: Makefile,v 1.39 2010/08/07 05:19:55 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -19,6 +19,7 @@ SBUDIR+=	ibus
 SUBDIR+=	ibus-anthy
 SUBDIR+=	ibus-array
 SUBDIR+=	ibus-chewing
+SUBDIR+=	ibus-el
 SUBDIR+=	ibus-handwrite
 SUBDIR+=	ibus-hangul
 SUBDIR+=	ibus-m17n
