@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2783 2010/08/07 02:20:29 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2784 2010/08/07 02:22:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3671,3 +3671,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/ibus-table-extraphrase version 1.2.0.20100305 [obache 2010-08-07]
 	Added inputmethod/ibus-table-chinese version 1.3.0.20100527 [obache 2010-08-07]
 	Added inputmethod/ibus-table-others version 1.3.0.20100528 [obache 2010-08-07]
+	Added inputmethod/ibus-unikey version 0.5 [obache 2010-08-07]
