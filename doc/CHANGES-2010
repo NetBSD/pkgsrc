@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2797 2010/08/07 06:41:15 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2798 2010/08/07 06:42:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3683,3 +3683,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/pcre to 8.10 [wiz 2010-08-07]
 	Updated devel/gmake to 3.82 [wiz 2010-08-07]
 	Updated devel/p5-Date-Manip to 6.11 [wiz 2010-08-07]
+	Added devel/p5-Test-Inter version 1.01 [wiz 2010-08-07]
