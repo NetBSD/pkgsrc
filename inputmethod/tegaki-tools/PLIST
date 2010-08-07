@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 12:53:14 obache Exp $
+bin/tegaki-bootstrap
+bin/tegaki-build
+bin/tegaki-convert
+bin/tegaki-eval
+bin/tegaki-render
+bin/tegaki-stats
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/tegakitools/__init__.py
+${PYSITELIB}/tegakitools/__init__.pyc
+${PYSITELIB}/tegakitools/__init__.pyo
+${PYSITELIB}/tegakitools/charcol.py
+${PYSITELIB}/tegakitools/charcol.pyc
+${PYSITELIB}/tegakitools/charcol.pyo
+${PYSITELIB}/tegakitools/kuchibue.py
+${PYSITELIB}/tegakitools/kuchibue.pyc
+${PYSITELIB}/tegakitools/kuchibue.pyo
+${PYSITELIB}/tegakitools/shiftjis.py
+${PYSITELIB}/tegakitools/shiftjis.pyc
+${PYSITELIB}/tegakitools/shiftjis.pyo
+${PYSITELIB}/tegakitools/tomoe.py
+${PYSITELIB}/tegakitools/tomoe.pyc
+${PYSITELIB}/tegakitools/tomoe.pyo
+${PYSITELIB}/tegakitools/unipen.py
+${PYSITELIB}/tegakitools/unipen.pyc
+${PYSITELIB}/tegakitools/unipen.pyo
