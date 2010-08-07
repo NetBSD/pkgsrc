@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/08/07 14:23:23 jym Exp $
 bin/spatch
 bin/spatch.opt
 lib/dllpycaml_stubs.so
 man/man1/spatch.1
+share/coccinelle/ocaml/coccilib.cmi
 share/coccinelle/python/coccilib/__init__.py
 share/coccinelle/python/coccilib/coccigui/__init__.py
 share/coccinelle/python/coccilib/coccigui/coccigui.py
@@ -14,10 +15,10 @@ share/coccinelle/python/coccilib/coccigui/vimcom.py
 share/coccinelle/python/coccilib/coccigui/vimeditor.py
 share/coccinelle/python/coccilib/coccigui/vimembed.py
 share/coccinelle/python/coccilib/elems.py
+share/coccinelle/python/coccilib/org.py
 share/coccinelle/python/coccilib/output.py
-share/coccinelle/python/coccilib/output_base.py
-share/coccinelle/python/coccilib/output_gui.py
-share/coccinelle/python/coccilib/output_trac.py
+share/coccinelle/python/coccilib/report.py
+share/coccinelle/python/coccilib/trac.py
 share/coccinelle/spatch
 share/coccinelle/spatch.opt
 share/coccinelle/standard.h
