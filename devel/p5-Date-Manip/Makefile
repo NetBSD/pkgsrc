@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/08/07 06:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2010/08/07 06:43:26 wiz Exp $
 #
 
 DISTNAME=	Date-Manip-6.11
@@ -15,6 +15,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
+# only needed for tests
+#DEPENDS+=	p5-Test-Inter-[0-9]*:../../devel/p5-Test-Inter
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
