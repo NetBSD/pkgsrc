@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2010/08/07 06:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2010/08/07 06:33:18 wiz Exp $
 
 DISTNAME=	make-3.82
 PKGNAME=	g${DISTNAME}
@@ -9,13 +9,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
+LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 TEXINFO_REQD+=		4.0
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 # NOTE:  the 'test' target requires perl, but since gmake does
 # not otherwise require it, perl is not listed as an explicit
