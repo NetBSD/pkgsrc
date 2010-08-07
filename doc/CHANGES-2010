@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2789 2010/08/07 03:23:26 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2790 2010/08/07 04:54:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3677,3 +3677,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/ibus-table-array30 version 1.2.0.20090729 [obache 2010-08-07]
 	Updated databases/p5-DBIx-Class to 0.08123 [seb 2010-08-07]
 	Updated devel/p5-Devel-Cover to 0.68 [seb 2010-08-07]
+	Added x11/py-xlib version 0.14 [obache 2010-08-07]
