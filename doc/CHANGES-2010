@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2799 2010/08/07 06:44:55 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2800 2010/08/07 13:03:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3685,3 +3685,21 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Date-Manip to 6.11 [wiz 2010-08-07]
 	Added devel/p5-Test-Inter version 1.01 [wiz 2010-08-07]
 	Updated textproc/py-html2text to 2.38 [wiz 2010-08-07]
+	Added inputmethod/tegaki-python version 0.3.1 [obache 2010-08-07]
+	Added inputmethod/tegaki-pygtk version 0.3.1nb1 [obache 2010-08-07]
+	Added inputmethod/tegaki-recognize version 0.3.1.2 [obache 2010-08-07]
+	Added inputmethod/tegaki-tools version 0.3.1 [obache 2010-08-07]
+	Added inputmethod/tegaki-train version 0.3.1 [obache 2010-08-07]
+	Added inputmethod/tegaki-wagomu version 0.3.1 [obache 2010-08-07]
+	Added inputmethod/tegaki-wagomu-japanese version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-wagomu-japanese-joyo version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-wagomu-japanese-kyoiku version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-wagomu-simplified-chinese version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-japanese version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-japanese-light version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-japanese-joyo version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-japanese-kyoiku version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-simplified-chinese version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-simplified-chinese-light version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-traditional-chinese version 0.3 [obache 2010-08-07]
+	Added inputmethod/tegaki-zinnia-traditional-chinese-light version 0.3 [obache 2010-08-07]
