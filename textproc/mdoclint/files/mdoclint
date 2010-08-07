@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.9 2010/05/26 08:31:59 wiz Exp $
+# $NetBSD: mdoclint,v 1.10 2010/08/07 18:57:52 wiz Exp $
 #
 # Copyright (c) 2001-2010 Thomas Klausner
 # All rights reserved.
@@ -144,7 +144,7 @@ my $valid_date_re;
 		    mvme68k mvmeppc netwinder news68k newsmips next68k
 		    pc532 playstation2 pmax pmppc prep sandpoint sbmips
 		    sgimips shark sparc sparc64 sun2 sun3 vax walnut
-		    x68k x86_64));
+		    x68k x86 x86_64 xen));
 	}
 	my $a = join('|', @arches);
 	$arches_re = qr{(?:$a)}o;
