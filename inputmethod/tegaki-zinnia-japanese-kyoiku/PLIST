@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 12:59:01 obache Exp $
+share/tegaki/models/zinnia/kyoiku-kanji.meta
+share/tegaki/models/zinnia/kyoiku-kanji.model
