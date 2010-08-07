@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/07 02:27:35 obache Exp $
+
+--- src/main.c.orig	2010-03-22 01:51:10.000000000 +0000
++++ src/main.c
+@@ -1,7 +1,9 @@
+ /* vim:set et sts=4: */
+ #include <config.h>
+ #include <unistd.h>
++#ifdef __linux__
+ #include <execinfo.h>
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>

@@ -1,0 +1,3 @@
+ibus-t9 is an input method engine for Chinese, base on ibus.
+This package provide one input method:
+ * t9: t9 input method.
