@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/07 02:18:29 obache Exp $
+
+SHA1 (ibus-table-chinese-1.3.0.20100527.tar.gz) = ade7c69d6f134abab1f3773c969498944c12e453
+RMD160 (ibus-table-chinese-1.3.0.20100527.tar.gz) = b66ba84b76e40281b3855845fd89425b33e0a20e
+Size (ibus-table-chinese-1.3.0.20100527.tar.gz) = 7579715 bytes
+SHA1 (patch-aa) = fa88bd55629f70cd9fb4d5f598a346a43219cad8

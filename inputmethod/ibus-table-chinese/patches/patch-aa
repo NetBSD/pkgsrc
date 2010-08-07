@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/07 02:18:29 obache Exp $
+
+portability fix
+
+--- configure.orig	2010-05-27 08:17:37.000000000 +0000
++++ configure
+@@ -2959,7 +2959,7 @@ else
+ fi
+ 
+ 
+- if test x"$enable_extra_phrases" == x"yes"; then
++ if test x"$enable_extra_phrases" = x"yes"; then
+   IBUS_TABLE_EXTRA_PHRASES_TRUE=
+   IBUS_TABLE_EXTRA_PHRASES_FALSE='#'
+ else
+@@ -2969,7 +2969,7 @@ fi
+ 
+ 
+ # check for ibus-table-extraphrase, if we need it.
+-if test x"$enable_extra_phrases" == x"yes"; then
++if test x"$enable_extra_phrases" = x"yes"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EXTRA_PHRASE" >&5
