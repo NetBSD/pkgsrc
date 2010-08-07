@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 12:54:45 obache Exp $
+${PYSITELIB}/_wagomu.so
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/wagomu.py
+${PYSITELIB}/wagomu.pyc
+${PYSITELIB}/wagomu.pyo
+share/tegaki/engines/tegakiwagomu.py
