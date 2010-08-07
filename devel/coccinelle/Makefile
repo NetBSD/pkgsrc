@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2010/05/28 14:05:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/07 14:23:23 jym Exp $
 
-DISTNAME=	coccinelle-0.1.8
-PKGREVISION=	1
+DISTNAME=	coccinelle-0.2.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.emn.fr/x-info/coccinelle/distrib/
-#http://aryx.cs.uiuc.edu/~pad/software/project-coccinelle/
+MASTER_SITES=	http://coccinelle.lip6.fr/distrib/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.emn.fr/x-info/coccinelle/
+HOMEPAGE=	http://coccinelle.lip6.fr/
 COMMENT=	Tool for writing and applying semantic patches
 LICENSE=	gnu-gpl-v2
 

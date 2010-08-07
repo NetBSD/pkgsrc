@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/09/25 09:13:58 wiz Exp $
+$NetBSD: distinfo,v 1.7 2010/08/07 14:23:23 jym Exp $
 
-SHA1 (coccinelle-0.1.8.tgz) = 8531f601873950ea79f60671ea8de76365d86277
-RMD160 (coccinelle-0.1.8.tgz) = b55954f191bfd286df7005836ba5bb025d077cf3
-Size (coccinelle-0.1.8.tgz) = 1914684 bytes
-SHA1 (patch-aa) = 12614a91c49a3bbf4d707b4a65fee5e3aba58b3f
-SHA1 (patch-ab) = 0be4fb19afdb530c5d27f0611cc9d245b6db0bad
-SHA1 (patch-ac) = c74bfbb076b80143a8ecc5e65b6e48bbd12acce5
+SHA1 (coccinelle-0.2.3.tgz) = 98e0221e5b180cebc8191a0e1b78f295d897d902
+RMD160 (coccinelle-0.2.3.tgz) = 92e3ff5faeaa383a3ca186a76d46e662bec77965
+Size (coccinelle-0.2.3.tgz) = 2228130 bytes
