@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2771 2010/08/07 01:48:52 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2772 2010/08/07 01:51:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3659,3 +3659,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/dcraw to 9.04 [bad 2010-08-06]
 	Updated converters/skf to 1.97.2 [obache 2010-08-07]
 	Added inputmethod/ibus version 1.3.7 [obache 2010-08-07]
+	Added inputmethod/ibus-anthy version 1.2.1 [obache 2010-08-07]
