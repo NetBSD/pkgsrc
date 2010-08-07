@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.locale,v 1.3 2006/04/17 07:07:16 jlam Exp $
+@comment $NetBSD: PLIST.locale,v 1.4 2010/08/07 06:31:16 wiz Exp $
 share/locale/be/LC_MESSAGES/make.mo
 share/locale/da/LC_MESSAGES/make.mo
 share/locale/de/LC_MESSAGES/make.mo
@@ -10,13 +10,14 @@ share/locale/gl/LC_MESSAGES/make.mo
 share/locale/he/LC_MESSAGES/make.mo
 share/locale/hr/LC_MESSAGES/make.mo
 share/locale/id/LC_MESSAGES/make.mo
+share/locale/it/LC_MESSAGES/make.mo
 share/locale/ja/LC_MESSAGES/make.mo
 share/locale/ko/LC_MESSAGES/make.mo
+share/locale/lt/LC_MESSAGES/make.mo
 share/locale/nl/LC_MESSAGES/make.mo
 share/locale/pl/LC_MESSAGES/make.mo
 share/locale/pt_BR/LC_MESSAGES/make.mo
 share/locale/ru/LC_MESSAGES/make.mo
-share/locale/rw/LC_MESSAGES/make.mo
 share/locale/sv/LC_MESSAGES/make.mo
 share/locale/tr/LC_MESSAGES/make.mo
 share/locale/uk/LC_MESSAGES/make.mo
