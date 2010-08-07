@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2786 2010/08/07 02:27:53 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2787 2010/08/07 02:43:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3674,3 +3674,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/ibus-unikey version 0.5 [obache 2010-08-07]
 	Added inputmethod/ibus-handwrite version 2.1.0nb1 [obache 2010-08-07]
 	Added inputmethod/ibus-t9 version 2.1.0.20100601nb1 [obache 2010-08-07]
+	Added inputmethod/ibus-table-array30 version 1.2.0.20090729 [obache 2010-08-07]
