@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/08/08 01:05:04 obache Exp $
+
+add wanted convert.
+
+--- src/scim-python-factory.cpp.orig	2008-07-11 04:16:15.000000000 +0000
++++ src/scim-python-factory.cpp
+@@ -134,14 +134,14 @@ PyIMEngineFactory::get_attr_unicode (cha
+ 		#else
+ 			gunichar *unistr = g_utf16_to_ucs4 (PyUnicode_AS_UNICODE (pValue),
+ 						PyUnicode_GET_SIZE (pValue), NULL, NULL, NULL);
+-			result = (wchar_t *) unistr;
++			result = WideString(unistr);
+ 			g_free (unistr);
+ 		#endif
+ 		}
+ 		else if (PyString_Check (pValue)) {
+ 			gunichar *unistr = g_utf8_to_ucs4 (PyString_AsString (pValue),
+ 						PyString_GET_SIZE (pValue), NULL, NULL, NULL);
+-			result = (wchar_t *)unistr;
++			result = WideString(unistr);
+ 			g_free (unistr);
+ 		}
+ 		Py_DECREF (pValue);
