@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.29 2010/08/08 21:07:24 wiz Exp $
+
+Fix whitespace issues -- gmake-3.82 expects tabs.
+
+--- Makefile.in.orig	2010-04-23 18:29:22.000000000 +0000
++++ Makefile.in
+@@ -11119,21 +11119,21 @@ check-local: $(PERLMAGICK_CHECK_LOCAL_TA
+ 
+ # drd: valgrind's newer thread error detector
+ drd:
+-  $(MAKE) MEMCHECK='valgrind --tool=drd --check-stack-var=yes --var-info=yes \
++	$(MAKE) MEMCHECK='valgrind --tool=drd --check-stack-var=yes --var-info=yes \
+     --quiet $(VALGRIND_EXTRA_OPTS)' check
+ 
+ # helgrind: valgrind's older thread error detector
+ helgrind:
+-  $(MAKE) MEMCHECK='valgrind --tool=helgrind --quiet $(VALGRIND_EXTRA_OPTS)' check
++	$(MAKE) MEMCHECK='valgrind --tool=helgrind --quiet $(VALGRIND_EXTRA_OPTS)' check
+ 
+ # memcheck: valgrind's memory access checker
+ memcheck:
+-  $(MAKE) MEMCHECK='valgrind --tool=memcheck --leak-check=full --read-var-info=yes \
++	$(MAKE) MEMCHECK='valgrind --tool=memcheck --leak-check=full --read-var-info=yes \
+     --track-origins=yes --num-callers=12 --quiet $(VALGRIND_EXTRA_OPTS)' check
+ 
+ # ptrcheck: valgrind's experimental pointer checking tool.
+ ptrcheck:
+-  $(MAKE) MEMCHECK='valgrind --tool=exp-ptrcheck --quiet $(VALGRIND_EXTRA_OPTS)' check
++	$(MAKE) MEMCHECK='valgrind --tool=exp-ptrcheck --quiet $(VALGRIND_EXTRA_OPTS)' check
+ dist-hook:
+ 	( \
+ 	  builddir=`pwd` ; \
