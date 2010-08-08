@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/08 01:09:36 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+share/scim-python/helper/tegaki/__init__.py
+share/scim-python/helper/tegaki/scimtegaki.py
