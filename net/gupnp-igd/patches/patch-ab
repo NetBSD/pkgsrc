@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/08/08 21:10:37 wiz Exp $
+
+No code outside of targets.
+
+--- python/Makefile.in.orig	2010-05-19 23:20:57.000000000 +0000
++++ python/Makefile.in
+@@ -640,7 +640,7 @@ uninstall-am: uninstall-pygupnpigdLTLIBR
+ 	pdf pdf-am ps ps-am tags uninstall uninstall-am \
+ 	uninstall-pygupnpigdLTLIBRARIES uninstall-pygupnpigdPYTHON
+ 
+-[ -z "$PYDEFS" && PYDEFS=`pkg-config --variable=defsdir pygtk-2.0`]
++PYDEFS=`pkg-config --variable=defsdir pygtk-2.0`
+ 
+ pygupnp-igd.c: $(srcdir)/pygupnp-igd.override $(srcdir)/pygupnp-igd.defs
+ 	$(PYCODEGEN)						\
