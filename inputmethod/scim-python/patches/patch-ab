@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/08 01:05:04 obache Exp $
+
+remove unwanted cast.
+
+--- src/scim-python-engine.cpp.orig	2008-07-11 04:16:15.000000000 +0000
++++ src/scim-python-engine.cpp
+@@ -621,7 +621,7 @@ PyIMEngine::py_update_preedit_string (Py
+ 
+ 	unistr = g_utf16_to_ucs4 (str, size, NULL, NULL, NULL);
+ 
+-	self->engine.update_preedit_string (WideString ((wchar_t *)unistr), 
++	self->engine.update_preedit_string (WideString (unistr), 
+ 								Attributes_FromTupleOrList (pAttrs));
+ 	g_free (unistr);
+ 
+@@ -659,7 +659,7 @@ PyIMEngine::py_update_aux_string (PyIMEn
+ 		return NULL;
+ 
+ 	unistr = g_utf16_to_ucs4 (str, size, NULL, NULL, NULL);
+-	self->engine.update_aux_string (WideString ((wchar_t *)unistr),
++	self->engine.update_aux_string (WideString (unistr),
+ 								Attributes_FromTupleOrList (pAttrs));
+ 	g_free (unistr);
+ #endif
+@@ -713,7 +713,7 @@ PyIMEngine::py_commit_string (PyIMEngine
+ 		return NULL;
+ 
+ 	unistr = g_utf16_to_ucs4 (str, size, NULL, NULL, NULL);
+-	self->engine.commit_string (WideString ((wchar_t *)unistr));
++	self->engine.commit_string (WideString (unistr));
+ 	g_free (unistr);
+ #endif
+ 

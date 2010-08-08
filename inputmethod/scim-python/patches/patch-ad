@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/08/08 01:05:04 obache Exp $
+
+remove unwanted cast.
+
+--- src/scim-python-lookup-table.cpp.orig	2008-07-11 04:16:15.000000000 +0000
++++ src/scim-python-lookup-table.cpp
+@@ -86,7 +86,7 @@ PyLookupTable::py_set_candidate_labels (
+ #else
+ 		int usize = PyUnicode_GET_SIZE (items[i]);
+ 		gunichar *unistr = g_utf16_to_ucs4 (PyUnicode_AS_UNICODE (items[i]), usize, NULL, NULL, NULL);
+-		_labels.push_back (WideString ((wchar_t *)unistr));
++		_labels.push_back (WideString (unistr));
+ 		g_free (unistr);
+ #endif
+ 	}
+@@ -518,7 +518,7 @@ PyLookupTable::py_append_candidate (PyLo
+ 		return NULL;
+ 	unistr = g_utf16_to_ucs4 (candidate, size, NULL, NULL, NULL);
+ 
+-	if (self->lookup_table.append_candidate (WideString ((wchar_t *)unistr),
++	if (self->lookup_table.append_candidate (WideString (unistr),
+ 								Attributes_FromTupleOrList (pAttrs)))
+ 	{
+ 		result = Py_True;
