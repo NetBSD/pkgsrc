@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2803 2010/08/07 18:58:01 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2804 2010/08/08 00:42:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3706,3 +3706,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/coccinelle to 0.2.3 [jym 2010-08-07]
 	Updated fonts/vlgothic-ttf to 20100416 [wiz 2010-08-07]
 	Updated textproc/mdoclint to 1.8 [wiz 2010-08-07]
+	Added inputmethod/ibus-tegaki version 0.3.1 [obache 2010-08-08]
