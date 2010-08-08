@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/08 00:42:23 obache Exp $
+
+destdir support.
+
+--- setup.py.orig	2010-03-23 07:07:56.000000000 +0000
++++ setup.py
+@@ -40,6 +40,8 @@ class install(installbase):
+         txt = load_file(filename)
+         txt = replace_constants(self._replace_prefix(txt))
+         outdir = os.path.join(self._getprefix(), folder)
++        if self.root is not None:
++            outdir = self.root + outdir
+         out = os.path.join(outdir, filename.replace(".in", ""))
+         if not os.path.exists(outdir):
+             os.makedirs(outdir)
+@@ -76,4 +78,4 @@ setup(
+     data_files=[('share/ibus-tegaki/engine', glob("engine/*.py")),
+                 ('share/ibus-tegaki/icons', glob("*.svg"))],
+     cmdclass={'install':install}
+-)
+\ No newline at end of file
++)
