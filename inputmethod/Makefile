@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/08/07 13:05:42 obache Exp $
+# $NetBSD: Makefile,v 1.41 2010/08/08 01:11:03 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -32,6 +32,7 @@ SUBDIR+=	ibus-table-array30
 SUBDIR+=	ibus-table-chinese
 SUBDIR+=	ibus-table-extraphrase
 SUBDIR+=	ibus-table-others
+SUBDIR+=	ibus-tegaki
 SUBDIR+=	ibus-unikey
 SUBDIR+=	iiimecf
 SUBDIR+=	im-ja
@@ -71,9 +72,11 @@ SUBDIR+=	scim-input-pad
 SUBDIR+=	scim-m17n
 SUBDIR+=	scim-pinyin
 SUBDIR+=	scim-prime
+SUBDIR+=	scim-python
 SUBDIR+=	scim-sinhala
 SUBDIR+=	scim-skk
 SUBDIR+=	scim-tables
+SUBDIR+=	scim-tegaki
 SUBDIR+=	scim-thai
 SUBDIR+=	scim-tomoe
 SUBDIR+=	scim-uim
