@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9523 2010/08/08 13:22:10 wiz Exp $
+$NetBSD: TODO,v 1.9524 2010/08/08 13:25:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.4
 	o amaya-11.1
-	o amsn-0.98.3
 	o angband-3.0.9
 	o anjuta-2.30.2.1 [GNOME 2.30]
 	o anjuta-extras-2.30.1.0 [GNOME 2.30]
@@ -466,7 +465,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
-	o cfengine2-2.2.10
 	o cfitsio-3240
 	o cgdb-0.6.5
 	o cgicc-3.2.9
@@ -477,7 +475,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
-	o claws-mail-3.7.3
 	o climm-0.6.4
 	o clustalw-2.0.12 [pkg/43395]
 	o cmus-2.3.3
@@ -720,7 +717,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsasl-1.4.1
 	o gsharutils-4.9
 	o gss-1.0.1
-	o gthumb-2.10.12
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.1
@@ -734,9 +730,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-www-2.26
 	o gupnp-0.13.4
 	o gutenprint-5.2.5
-	o gvfs-1.6.2
 	o gwaei-1.4.1
-	o gxemul-0.6.0 [pkg/43296]
 	o gzip-1.4
 	o hackbot-2.21
 	o hal-0.5.14
@@ -985,7 +979,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ncmpc-0.16
 	o ncview-1.93b
 	o ne-2.01
-	o nelma-3.2
 	o nessus-3.2.0
 	o netcdf-4.1.1
 	o netpipe-3.6.2
@@ -1027,7 +1020,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmotif-2.3.3
 	o openmsx-0.7.0
 	o openoffice3-3.2.1
-	o openssl-0.9.8o
 	o openssl-1.0.0a
 	o openttd-1.0.3
 	o open-vm-tools-2010.03.20.243334
@@ -1066,7 +1058,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdfjam-2.06
 	o pdmenu-1.2.87
-	o pear-Net_Sieve-1.3.0 [pkg/43555]
 	o pen-0.17.3
 	o perl-5.12.0
 	o pessulus-2.30.2 [GNOME 2.28]
@@ -1191,14 +1182,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-debug-base-0.10.3.1
 	o ruby-debug-ide-0.4.4
 	o ruby-directory-watcher-1.3.1
-	o ruby-dnsruby-1.47 [pkg/43423]
 	o ruby-eventmachine-0.12.2
 	o ruby-fastercsv-1.5.1
 	o ruby-itex2MML-1.3.5
 	o ruby-jsmin-1.0.1
 	o ruby-logging-1.3.0
 	o ruby-mechanize-1.0.0
-	o ruby-mocha-0.9.8
 	o ruby-parsetree-3.0.3
 	o ruby-racc-1.4.6
 	o ruby-rgl-0.4.0
@@ -1227,8 +1216,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scm-5e7
 	o scmgit-base-1.7.2.1
 	o scmgit-docs-1.7.2.1
-	o scons-1.3.0 [pkg/43418]
-	o scons-devel-1.3.0d20100523 [pkg/43419]
 	o scribus-1.3.7
 	o scrollz-1.9.99
 	o scrotwm-0.9.25
@@ -1261,7 +1248,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snort-2.8.6.1
 	o snownews-1.5.12
 	o socat-1.7.1.3
-	o softhsm-1.1.4
 	o solfege-3.16.3
 	o sope-4.6
 	o source-highlight-3.1.4
