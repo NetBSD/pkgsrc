@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2805 2010/08/08 01:05:26 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2806 2010/08/08 01:09:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3708,3 +3708,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/mdoclint to 1.8 [wiz 2010-08-07]
 	Added inputmethod/ibus-tegaki version 0.3.1 [obache 2010-08-08]
 	Added inputmethod/scim-python version 0.1.13rc1nb1 [obache 2010-08-08]
+	Added inputmethod/scim-tegaki version 0.1 [obache 2010-08-08]
