@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.11 2010/08/08 11:00:03 jmcneill Exp $
+
+--- docs/libs/Makefile.in.orig	2010-08-08 10:49:39.000000000 +0000
++++ docs/libs/Makefile.in
+@@ -931,7 +931,7 @@ dist-hook: dist-check-gtkdoc dist-hook-l
+ 	-cp $(srcdir)/$(DOC_MODULE).types $(distdir)/
+ 	-cp $(srcdir)/$(DOC_MODULE)-sections.txt $(distdir)/
+ 	cd $(distdir) && rm -f $(DISTCLEANFILES)
+-        -gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
++	-gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
+ 
+ .PHONY : dist-hook-local docs
+ 
