@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/12/16 19:16:58 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2010/08/09 12:21:48 drochner Exp $
 #
 
 DISTNAME=	slang-2.2.2
 PKGNAME=	lib${DISTNAME:slang%=slang2%}
+PKGREVISION=	1
 SVR4_PKGNAME=	lslan
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v2.2/ \
@@ -49,6 +50,7 @@ CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termcap}/share/terminfo
 USE_FEATURES=		# empty (used in options.mk)
 .include "options.mk"
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
