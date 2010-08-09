@@ -1,0 +1,42 @@
+$NetBSD: patch-af,v 1.1 2010/08/09 19:37:45 drochner Exp $
+
+--- src/cmd/dr.c.orig	2009-04-17 20:24:09.000000000 +0000
++++ src/cmd/dr.c
+@@ -36,7 +36,7 @@ static int
+ cmd_dr_run( chain_t *chain, char *params[] )
+ {
+ 	int dir = 1;
+-	tap_register *r;
++	tap_register *r, *r1;
+ 
+ 	if (cmd_params( params ) < 1 || cmd_params( params ) > 2)
+ 		return -1;
+@@ -68,7 +68,12 @@ cmd_dr_run( chain_t *chain, char *params
+ 			dir = 0;
+ 		else if (strcasecmp( params[1], "out" ) == 0)
+ 			dir = 1;
+-		else {
++		else if (strcasecmp( params[1], "sync" ) == 0) {
++			r = chain->parts->parts[chain->active_part]->active_instruction->data_register->in;
++			r1 = chain->parts->parts[chain->active_part]->active_instruction->data_register->out;
++			memcpy(r->data, r1->data, r->len);
++			dir = 0;
++		} else {
+ 			unsigned int bit;
+ 			if (strspn(params[1], "01") != strlen(params[1])) {
+ 				return -1;
+@@ -101,12 +106,13 @@ cmd_dr_help( void )
+ {
+ 	printf( _(
+ 		"Usage: %s [DIR]\n"
+-		"Usage: %s BITSTRING\n"
++		"Usage: %s BITSTRING | sync\n"
+ 		"Display input or output data register content or set current register.\n"
+ 		"\n"
+ 		"DIR           requested data register; possible values: 'in' for\n"
+ 		"              input and 'out' for output; default is 'out'\n"
+ 		"BITSTRING     set current data register with BITSTRING (e.g. 01010)\n"
++		"sync          set 'in' data register to the 'out' value\n"
+ 	), "dr", "dr" );
+ }
+ 

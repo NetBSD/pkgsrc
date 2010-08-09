@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2010/08/09 19:37:45 drochner Exp $
+
+--- src/svf/svf_flex.c.orig	2009-04-17 20:25:55.000000000 +0000
++++ src/svf/svf_flex.c
+@@ -2332,6 +2332,7 @@ progress_nl(YYLTYPE * mylloc, YY_EXTRA_T
+     printf( "\r" );
+     printf( _("Parsing %6d/%d (%3.0d%%)"),
+             mylloc->last_line, extra->num_lines, percent);
++    fflush(stdout);
+   }
+ }
+ 
