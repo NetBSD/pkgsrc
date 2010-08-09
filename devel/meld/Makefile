@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2010/02/10 19:17:36 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2010/08/09 11:33:53 drochner Exp $
 #
 
-DISTNAME=		meld-1.3.1
-PKGREVISION=		1
+DISTNAME=		meld-1.3.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/1.3/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,13 +20,13 @@ USE_TOOLS+=			gmake msgfmt intltool
 MAKE_FLAGS+=			prefix=${PREFIX}
 MAKE_FLAGS+=			localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 MAKE_FLAGS+=			PYTHON=${PYTHONBIN}
-MAKE_FILE=			GNUmakefile
-PYTHON_PATCH_SCRIPTS=		meld
+PYTHON_PATCH_SCRIPTS=		bin/meld
 
 # remove unnecessarily created empty dir
 post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/doc/meld
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

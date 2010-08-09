@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/08/09 11:33:53 drochner Exp $
+
+--- meld/vc/_vc.py.orig	2010-06-24 21:31:33.000000000 +0000
++++ meld/vc/_vc.py
+@@ -106,7 +106,7 @@ class Vc(object):
+     def resolved_command(self):
+         raise NotImplementedError()
+     def patch_command(self, workdir):
+-        return ["patch","--strip=%i"%self.PATCH_STRIP_NUM,"--reverse","--directory=%s" % workdir]
++        return ["patch","-p%i"%self.PATCH_STRIP_NUM,"-R","-d%s" % workdir]
+ 
+     def check_repo_root(self, location):
+         if not os.path.isdir(os.path.join(location, self.VC_DIR)):
