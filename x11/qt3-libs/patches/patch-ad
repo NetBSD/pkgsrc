@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.8 2005/04/13 21:58:05 bouyer Exp $
+$NetBSD: patch-ad,v 1.9 2010/08/09 13:21:07 tsutsui Exp $
 
---- src/tools/qglobal.h.orig	Fri Jan 21 18:16:04 2005
-+++ src/tools/qglobal.h	Fri Apr  8 21:19:49 2005
+--- src/tools/qglobal.h.orig	2007-02-02 14:01:04.000000000 +0000
++++ src/tools/qglobal.h
 @@ -63,6 +63,7 @@
       NETBSD	- NetBSD
       OPENBSD	- OpenBSD
@@ -22,13 +22,22 @@ $NetBSD: patch-ad,v 1.8 2005/04/13 21:58:05 bouyer Exp $
  #elif defined(macintosh)
  #  define Q_OS_MAC9
  #elif defined(__CYGWIN__)
-@@ -119,6 +120,9 @@
- #  define Q_OS_BSD4
+@@ -120,6 +121,9 @@
  #elif defined(__NetBSD__)
  #  define Q_OS_NETBSD
-+#  define Q_OS_BSD4
+ #  define Q_OS_BSD4
 +#elif defined(__INTERIX)
 +#  define Q_OS_INTERIX
- #  define Q_OS_BSD4
++#  define Q_OS_BSD4
  #elif defined(__OpenBSD__)
  #  define Q_OS_OPENBSD
+ #  define Q_OS_BSD4
+@@ -317,7 +321,7 @@
+    supposedly know what you are doing.) */
+ #  if (defined(__arm__) || defined(__ARMEL__)) && !defined(QT_MOC_CPP)
+ #    define Q_PACKED __attribute__ ((packed))
+-#    if __GNUC__ == 3 && __GNUC_MINOR__ >= 4
++#    if (__GNUC__ == 3 && __GNUC_MINOR__ >= 4) || __GNUC__ >= 4
+ #      define Q_NO_PACKED_REFERENCE
+ #    endif
+ #  endif
