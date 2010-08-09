@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/02/10 19:17:33 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/08/09 10:25:37 drochner Exp $
 #
 
-DISTNAME=	telepathy-idle-0.1.5
-PKGREVISION=	3
+DISTNAME=	telepathy-idle-0.1.6
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-idle/
 
@@ -23,6 +22,8 @@ CONFIGURE_ARGS+=	OPENSSL_CFLAGS=-I${BUILDLINK_PREFIX.openssl}/include
 CONFIGURE_ARGS+=	OPENSSL_LIBS="-L${BUILDLINK_PREFIX.openssl}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib -lssl"
 
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
+# needs py-twisted
+# TEST_TARGET= check
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
