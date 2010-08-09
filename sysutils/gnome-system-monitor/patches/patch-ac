@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2009/09/20 19:55:40 sno Exp $
+$NetBSD: patch-ac,v 1.2 2010/08/09 10:11:57 drochner Exp $
 
---- src/load-graph.cpp.orig	2009-09-20 21:16:41.000000000 +0200
-+++ src/load-graph.cpp	2009-09-20 21:18:27.000000000 +0200
-@@ -395,8 +395,11 @@
- 	//
- 	// e.g: ceil(100.5 KiB) = 101 KiB = 101 * 2**(1 * 10)
- 	//      where base10 = 1, coef10 = 101, pow2 = 16
+--- src/load-graph.cpp.orig	2009-06-23 00:03:02.000000000 +0000
++++ src/load-graph.cpp
+@@ -411,8 +411,11 @@ net_scale (LoadGraph *g, unsigned din, u
+ 	  //
+ 	  // e.g: ceil(100.5 KiB) = 101 KiB = 101 * 2**(1 * 10)
+ 	  //      where base10 = 1, coef10 = 101, pow2 = 16
 -
 +#ifdef __FreeBSD__
-+	unsigned pow2 = std::floor(log(new_max) / log(2));
++	  unsigned pow2 = std::floor(log(new_max) / log(2));
 +#else
- 	unsigned pow2 = std::floor(log2(new_max));
+ 	  unsigned pow2 = std::floor(log2(new_max));
 +#endif
- 	unsigned base10 = pow2 / 10;
- 	unsigned coef10 = std::ceil(new_max / double(1UL << (base10 * 10)));
- 	g_assert(new_max <= (coef10 * (1UL << (base10 * 10))));
+ 	  unsigned base10 = pow2 / 10;
+ 	  unsigned coef10 = std::ceil(new_max / double(1UL << (base10 * 10)));
+ 	  g_assert(new_max <= (coef10 * (1UL << (base10 * 10))));
