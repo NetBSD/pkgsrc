@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/07/12 17:46:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/08/09 10:19:12 drochner Exp $
 include/telepathy-1.0/telepathy-glib/_gen/error-str.h
 include/telepathy-1.0/telepathy-glib/_gen/genums.h
 include/telepathy-1.0/telepathy-glib/_gen/gtypes.h
@@ -17,6 +17,7 @@ include/telepathy-1.0/telepathy-glib/_gen/tp-cli-dbus-daemon.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-cli-generic.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-cli-media-session-handler.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-cli-media-stream-handler.h
+include/telepathy-1.0/telepathy-glib/_gen/tp-cli-protocol.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-account-manager.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-account.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-channel-dispatch-operation.h
@@ -30,12 +31,14 @@ include/telepathy-1.0/telepathy-glib/_gen/tp-svc-debug.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-generic.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-media-session-handler.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-media-stream-handler.h
+include/telepathy-1.0/telepathy-glib/_gen/tp-svc-protocol.h
 include/telepathy-1.0/telepathy-glib/account-manager.h
 include/telepathy-1.0/telepathy-glib/account.h
 include/telepathy-1.0/telepathy-glib/add-dispatch-operation-context.h
 include/telepathy-1.0/telepathy-glib/base-client.h
 include/telepathy-1.0/telepathy-glib/base-connection-manager.h
 include/telepathy-1.0/telepathy-glib/base-connection.h
+include/telepathy-1.0/telepathy-glib/base-protocol.h
 include/telepathy-1.0/telepathy-glib/capabilities.h
 include/telepathy-1.0/telepathy-glib/channel-dispatch-operation.h
 include/telepathy-1.0/telepathy-glib/channel-dispatcher.h
@@ -75,6 +78,7 @@ include/telepathy-1.0/telepathy-glib/message-mixin.h
 include/telepathy-1.0/telepathy-glib/observe-channels-context.h
 include/telepathy-1.0/telepathy-glib/presence-mixin.h
 include/telepathy-1.0/telepathy-glib/properties-mixin.h
+include/telepathy-1.0/telepathy-glib/protocol.h
 include/telepathy-1.0/telepathy-glib/proxy-subclass.h
 include/telepathy-1.0/telepathy-glib/proxy.h
 include/telepathy-1.0/telepathy-glib/run.h
@@ -94,6 +98,7 @@ include/telepathy-1.0/telepathy-glib/svc-debug.h
 include/telepathy-1.0/telepathy-glib/svc-generic.h
 include/telepathy-1.0/telepathy-glib/svc-media-interfaces.h
 include/telepathy-1.0/telepathy-glib/svc-properties-interface.h
+include/telepathy-1.0/telepathy-glib/svc-protocol.h
 include/telepathy-1.0/telepathy-glib/telepathy-glib.h
 include/telepathy-1.0/telepathy-glib/text-mixin.h
 include/telepathy-1.0/telepathy-glib/util.h
@@ -135,7 +140,9 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-account.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-add-dispatch-operation-context.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-asv.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-base-client.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-base-protocol.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-capabilities.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-contactsearch.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-dispatch-operation.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-dispatcher.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-file-transfer.html
@@ -180,6 +187,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-handle.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-interfaces.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-media-interfaces.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-observe-channels-context.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-protocol.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-proxy-dbus-core.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-proxy-subclass.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-proxy-tp-properties.html
@@ -192,6 +200,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-account-manager.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-account.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-anonymity.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-contactlist.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-contactsearch.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-dispatch-operation.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-dispatcher.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-file-transfer.html
@@ -209,6 +218,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-connection.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-debug.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-generic.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-media-interfaces.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-protocol.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-service-point.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-util.html
