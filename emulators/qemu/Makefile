@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2010/06/16 18:31:27 tnn Exp $
+# $NetBSD: Makefile,v 1.69 2010/08/09 11:49:10 tsutsui Exp $
 #
 
 DISTNAME=		qemu-0.12.4
@@ -30,33 +30,30 @@ CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX:Q}/share/qemu
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*)
-SUBST_CLASSES+=		lib
-SUBST_STAGE.lib=	pre-configure
-SUBST_FILES.lib=	x86_64.ld
-SUBST_SED.lib=		-e s,/lib64,/lib,g
-SUBST_MESSAGE.lib=	fixing hardcoded paths to libraries.
-.endif
-
-SUBST_CLASSES+=		snd
-SUBST_STAGE.snd=	pre-configure
-SUBST_FILES.snd=	audio/ossaudio.c
-SUBST_SED.snd=		-e s,/dev/dsp,${DEVOSSAUDIO:Q},g
-SUBST_MESSAGE.snd=	Fixing hardcoded audio device.
-
-SUBST_CLASSES+=		smbd
-SUBST_STAGE.smbd=	pre-configure
-SUBST_FILES.smbd=	vl.c
-SUBST_SED.smbd=		-e s,/usr/sbin/smbd,${PREFIX:Q}/sbin/smbd,g
-SUBST_MESSAGE.smbd=	Fixing hardcoded paths.
-
 # Avoid clash with system include file:
 pre-patch:
 	mv ${WRKSRC}/audio/audio.h ${WRKSRC}/audio/qaudio.h
 
 SUBST_CLASSES+=		qaudio
 SUBST_STAGE.qaudio=	pre-configure
-SUBST_FILES.qaudio=	*.c *.h audio/*.c hw/*.c
+SUBST_FILES.qaudio=	monitor.c savevm.c vl.c vnc.h \
+			audio/*.c \
+			hw/ac97.c \
+			hw/adlib.c \
+			hw/cs4231a.c \
+			hw/es1370.c \
+			hw/gus.c \
+			hw/marvell_88w8618_audio.c \
+			hw/mips_jazz.c \
+			hw/mips_malta.c \
+			hw/omap2.c \
+			hw/palm.c \
+			hw/pc.c \
+			hw/pcspk.c \
+			hw/sb16.c \
+			hw/spitz.c \
+			hw/tsc210x.c \
+			hw/wm8750.c
 SUBST_SED.qaudio=	-e s,audio.h\",qaudio.h\",g
 SUBST_MESSAGE.qaudio= 	Fixing audio.h confusion
 
