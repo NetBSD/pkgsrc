@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2010/07/12 17:46:02 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2010/08/09 10:19:12 drochner Exp $
 #
 
-DISTNAME=	telepathy-glib-0.11.9
+DISTNAME=	telepathy-glib-0.11.11
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-glib/
 
