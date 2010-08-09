@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9524 2010/08/08 13:25:20 wiz Exp $
+$NetBSD: TODO,v 1.9525 2010/08/09 11:38:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aterm-1.0.1
 	o auctex-11.86
 	o audacious-plugins-2.3
-	o autoconf-2.66 [wait for 2.67]
 	o autoconf-2.67
 	o autoconvert-0.3.16
 	o autogen-5.11
@@ -456,7 +455,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.9
+	o calibre-0.7.11
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.0.1
@@ -519,7 +518,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o djview4-4.5 [pkg/43712]
-	o djvulibre-lib-3.5.22 [pkg/43711]
 	o dnsmasq-2.55
 	o dnstracer-1.9
 	o doclifter-2.4
@@ -567,7 +565,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-645
+	o etm-647
 	o eukleides-1.5.4
 	o evolution-couchdb-0.4.5
 	o evolution-mapi-0.30.2 [GNOME 2.30]
@@ -642,7 +640,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gbdfed-1.6
 	o gbrainy-1.50
 	o gcal-3.6
-	o gcc-4.5.0
+	o gcc-4.5.1
 	o gcdmaster-1.2.3
 	o gcin-1.4.1
 	o gcombust-0.1.55
@@ -671,6 +669,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade3-3.6.7 [GNOME 2.26]
+	o glib2-2.24.2
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.14.2 [GNOME 2.26]
@@ -682,7 +681,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-2.30
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.30.2 [GNOME 2.30]
-	o gnome-commander-1.2.8.7
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
@@ -691,7 +689,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-power-manager-2.30.1 [GNOME 2.30]
 	o gnome-session-2.30.2 [GNOME 2.30, wants DeviceKit-power]
 	o gnome-subtitles-1.0
-	o gnome-system-monitor-2.28.1 [GNOME 2.30]
 	o gnome-system-tools-2.30.2 [GNOME 2.30]
 	o gnome-user-docs-2.30.0 [GNOME 2.30]
 	o gnome-user-share-2.30.0 [GNOME 2.30]
@@ -783,6 +780,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
+	o jabberd2-2.2.11
 	o java-db3-3.87
 	o java-lang-spec-3.0
 	o javacc-5.0
@@ -865,7 +863,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmowgli-0.7.1
 	o libmp3splt-0.5.8
 	o libnasl-2.3.1
-	o libnice-0.0.13
 	o libnids-1.24
 	o libnotify-0.5.0
 	o libntlm-1.1
@@ -914,7 +911,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mc-4.7.0.6
 	o mdocml-1.10.5
 	o mediatomb-0.12.1
-	o mednafen-0.8.13
+	o mednafen-0.8.13.2
 	o meld-1.3.2
 	o memconf-2.9 [pkg/40201]
 	o memtester-4.2.0
@@ -1221,7 +1218,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scrotwm-0.9.25
 	o scsh-1.3.0
 	o sdcc-2.9.0
-	o sdlmame-0.138
+	o sdlmame-0.139
+	o sdlmess-0.139
 	o seahorse-plugins-2.30.1 [GNOME 2.30]
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1289,6 +1287,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o telepathy-gabble-0.9.14
+	o tellico-2.3
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
 	o texi2html-5.0
@@ -1310,7 +1309,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-1.2.1 [GNOME 2.30]
 	o top-3.8beta1
-	o totem-pl-parser-2.30.2
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.12
@@ -1340,6 +1338,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o viewvc-1.1.6
 	o vifm-0.5
 	o vigra-1.7.0
+	o vile-9.8
 	o visual-regexp-3.1
 	o vlc-1.1.2
 	o vm-8.0.7.522 [pkg/37707]
@@ -1363,7 +1362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-1.2
-	o wine-devel-1.1.44
+	o wine-devel-1.3.0
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1374,6 +1373,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxGTK28-2.8.11
 	o wxRemind-101
 	o wyrd-1.4.4
+	o x11vnc-0.9.11
 	o x264-devel-20100807
 	o xanalyser-1.30
 	o xapian-1.0.21
