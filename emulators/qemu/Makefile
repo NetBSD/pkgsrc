@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2010/08/09 20:35:25 tsutsui Exp $
+# $NetBSD: Makefile,v 1.72 2010/08/09 20:56:32 tsutsui Exp $
 #
 
 DISTNAME=		qemu-0.12.4
@@ -51,7 +51,7 @@ SUBST_FILES.qaudio=	monitor.c savevm.c vl.c vnc.h \
 			hw/tsc210x.c \
 			hw/wm8750.c
 SUBST_SED.qaudio=	-e s,audio.h\",qaudio.h\",g
-SUBST_MESSAGE.qaudio= 	Fixing audio.h confusion
+SUBST_MESSAGE.qaudio=	Fixing audio.h confusion
 
 REPLACE_PERL+=		texi2pod.pl
 
