@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2010/08/09 11:49:10 tsutsui Exp $
+# $NetBSD: Makefile,v 1.70 2010/08/09 20:28:32 tsutsui Exp $
 #
 
 DISTNAME=		qemu-0.12.4
@@ -19,10 +19,6 @@ USE_TOOLS+=		gmake perl:build
 HAS_CONFIGURE=		yes
 
 BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
-
-# Workaround for PR/41007 - ensure WRKSRC comes before any buildlinked
-# directories so we pickup our audio/audio.h. Cannot use CPPFLAGS for this
-CFLAGS+=		-I${WRKSRC} -I${WRKSRC}/slirp
 
 .include "../../mk/bsd.prefs.mk"
 
