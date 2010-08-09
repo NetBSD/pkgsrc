@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/09 09:46:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/09 10:22:23 drochner Exp $
 bin/mc-tool
 bin/mc-wait-for-name
 include/mission-control-5.5/mission-control-plugins/account-storage.h
 include/mission-control-5.5/mission-control-plugins/account.h
+include/mission-control-5.5/mission-control-plugins/dbus-acl.h
 include/mission-control-5.5/mission-control-plugins/dispatch-operation-policy.h
 include/mission-control-5.5/mission-control-plugins/dispatch-operation.h
 include/mission-control-5.5/mission-control-plugins/loader.h
@@ -18,11 +19,6 @@ man/man1/mc-wait-for-name.1
 man/man8/mission-control-5.8
 share/dbus-1/services/org.freedesktop.Telepathy.AccountManager.service
 share/dbus-1/services/org.freedesktop.Telepathy.MissionControl5.service
-share/gtk-doc/html/mission-control-plugins/McpAccountStorage.html
-share/gtk-doc/html/mission-control-plugins/McpDispatchOperation.html
-share/gtk-doc/html/mission-control-plugins/McpDispatchOperationPolicy.html
-share/gtk-doc/html/mission-control-plugins/McpRequest.html
-share/gtk-doc/html/mission-control-plugins/McpRequestPolicy.html
 share/gtk-doc/html/mission-control-plugins/api-index-full.html
 share/gtk-doc/html/mission-control-plugins/ch01.html
 share/gtk-doc/html/mission-control-plugins/ch02.html
@@ -32,8 +28,13 @@ share/gtk-doc/html/mission-control-plugins/home.png
 share/gtk-doc/html/mission-control-plugins/index.html
 share/gtk-doc/html/mission-control-plugins/index.sgml
 share/gtk-doc/html/mission-control-plugins/left.png
-share/gtk-doc/html/mission-control-plugins/mission-control-plugins-Plugin-loader-and-global-functions.html
+share/gtk-doc/html/mission-control-plugins/mission-control-plugins-account-storage.html
 share/gtk-doc/html/mission-control-plugins/mission-control-plugins-account.html
+share/gtk-doc/html/mission-control-plugins/mission-control-plugins-dispatch-operation-policy.html
+share/gtk-doc/html/mission-control-plugins/mission-control-plugins-dispatch-operation.html
+share/gtk-doc/html/mission-control-plugins/mission-control-plugins-loader.html
+share/gtk-doc/html/mission-control-plugins/mission-control-plugins-request-policy.html
+share/gtk-doc/html/mission-control-plugins/mission-control-plugins-request.html
 share/gtk-doc/html/mission-control-plugins/mission-control-plugins.devhelp
 share/gtk-doc/html/mission-control-plugins/mission-control-plugins.devhelp2
 share/gtk-doc/html/mission-control-plugins/object-tree.html
