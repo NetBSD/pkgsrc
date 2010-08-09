@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9526 2010/08/09 14:25:04 obache Exp $
+$NetBSD: TODO,v 1.9527 2010/08/09 21:05:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.30.1 [GNOME 2.30]
-	o cherokee-1.0.6
+	o cherokee-1.0.7
 	o chromium-0.9.14.1
 	o cinepaint-0.23
 	o cint-5.16
@@ -878,7 +878,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-base-2.2.10
 	o libusb-1.0
 	o libv4l-0.8.0
-	o libwnck-2.30.3
 	o libxml++-2.30.1 [GNOME 2.30]
 	o licq-1.3.8
 	o links-2.3pre1
@@ -906,13 +905,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.2
 	o matchbox-panel-0.9.3
-	o mathomatic-15.1.5
+	o mathomatic-15.1.6
 	o mawk-1.3.4.20100625
 	o mc-4.7.0.6
 	o mdocml-1.10.5
 	o mediatomb-0.12.1
 	o mednafen-0.8.13.2
-	o meld-1.3.2
 	o memconf-2.9 [pkg/40201]
 	o memtester-4.2.0
 	o merb-1.0.8.1
@@ -1263,7 +1261,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o subversion-1.6.12
-	o sudo-1.7.4
+	o sudo-1.7.4p2
 	o sun-jdk6-6.0.21
 	o sun-jre6-6.0.21
 	o suse_base-11.0
@@ -1294,6 +1292,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texmaker-2.0
 	o tfmxplay-1.1.6
 	o thoth-0.2.1
+	o thunderbird-3.1.2
 	o tig-0.16
 	o tightvnc-1.5.1
 	o tile-0.7.4
