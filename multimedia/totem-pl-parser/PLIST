@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/07/06 15:22:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/08/09 10:43:24 drochner Exp $
 include/totem-pl-parser/1/plparser/totem-disc.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-builtins.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-features.h
@@ -48,6 +48,7 @@ share/locale/el/LC_MESSAGES/totem-pl-parser.mo
 share/locale/en@shaw/LC_MESSAGES/totem-pl-parser.mo
 share/locale/en_CA/LC_MESSAGES/totem-pl-parser.mo
 share/locale/en_GB/LC_MESSAGES/totem-pl-parser.mo
+share/locale/eo/LC_MESSAGES/totem-pl-parser.mo
 share/locale/es/LC_MESSAGES/totem-pl-parser.mo
 share/locale/et/LC_MESSAGES/totem-pl-parser.mo
 share/locale/eu/LC_MESSAGES/totem-pl-parser.mo
