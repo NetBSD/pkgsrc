@@ -1,0 +1,5 @@
+GLib ICE library
+
+ - only implements ICE Lite
+ - no support for RTCP
+ - no support for IPv6

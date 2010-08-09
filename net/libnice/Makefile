@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:45:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/09 09:53:30 drochner Exp $
 #
 
-DISTNAME=	libnice-0.0.11
-PKGREVISION=	1
+DISTNAME=	libnice-0.0.13
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -13,11 +12,10 @@ LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "options.mk"
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+CONFIGURE_ARGS+= --without-gstreamer
 
 PKGCONFIG_OVERRIDE+=	nice/nice.pc.in
 
