@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2010/02/27 23:21:13 tnn Exp $
+$NetBSD: patch-aa,v 1.7 2010/08/09 11:46:39 tsutsui Exp $
 
---- net/tap-bsd.c.orig	2010-02-23 20:54:38.000000000 +0000
+--- net/tap-bsd.c.orig	2010-05-04 15:27:48.000000000 +0000
 +++ net/tap-bsd.c
 @@ -27,6 +27,8 @@
  #include "sysemu.h"
@@ -11,17 +11,20 @@ $NetBSD: patch-aa,v 1.6 2010/02/27 23:21:13 tnn Exp $
  #include <net/if_tap.h>
  #endif
  
-@@ -45,6 +47,9 @@ int tap_open(char *ifname, int ifname_si
+@@ -43,8 +45,12 @@
+ int tap_open(char *ifname, int ifname_size, int *vnet_hdr, int vnet_hdr_required)
+ {
      int fd;
-     char *dev;
-     struct stat s;
 +#ifdef TAPGIFNAME
 +    struct ifreq ifr;
++#else
+     char *dev;
+     struct stat s;
 +#endif
  
  #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
      /* if no ifname is given, always start the search from tap0. */
-@@ -75,14 +80,26 @@ int tap_open(char *ifname, int ifname_si
+@@ -75,14 +81,26 @@ int tap_open(char *ifname, int ifname_si
  #else
      TFR(fd = open("/dev/tap", O_RDWR));
      if (fd < 0) {

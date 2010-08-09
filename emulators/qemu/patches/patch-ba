@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2007/12/24 10:18:22 apb Exp $
+$NetBSD: patch-ba,v 1.2 2010/08/09 11:46:39 tsutsui Exp $
 
---- hw/pcspk.c.orig	2007-02-06 01:01:54.000000000 +0200
+--- hw/pcspk.c.orig	2010-05-04 15:27:48.000000000 +0000
 +++ hw/pcspk.c
-@@ -38,7 +38,6 @@ typedef struct {
+@@ -42,7 +42,6 @@ typedef struct {
      unsigned int samples;
      unsigned int play_pos;
      int data_on;
@@ -10,7 +10,7 @@ $NetBSD: patch-ba,v 1.1 2007/12/24 10:18:22 apb Exp $
  } PCSpkState;
  
  static const char *s_spk = "pcspk";
-@@ -112,15 +111,32 @@ int pcspk_audio_init(AudioState *audio)
+@@ -112,15 +111,31 @@ int pcspk_audio_init(qemu_irq *pic)
      return 0;
  }
  
@@ -34,7 +34,6 @@ $NetBSD: patch-ba,v 1.1 2007/12/24 10:18:22 apb Exp $
  {
      PCSpkState *s = opaque;
      int out;
-+    int dummy_refresh_clock;
  
 -    s->dummy_refresh_clock ^= (1 << 4);
      out = pit_get_out(s->pit, 2, qemu_get_clock(vm_clock)) << 5;
