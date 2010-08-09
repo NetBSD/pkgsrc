@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.5 2010/08/09 11:09:24 wiz Exp $
+
+gmake-3.82 allows no code outside of targets.
+
+--- python/Makefile.in.orig	2010-07-16 23:00:59.000000000 +0000
++++ python/Makefile.in
+@@ -677,7 +677,7 @@ uninstall-am: uninstall-pyfarsightLTLIBR
+ 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+ 	tags uninstall uninstall-am uninstall-pyfarsightLTLIBRARIES
+ 
+-[ -z "$PYDEFS" && PYDEFS=`pkg-config --variable=defsdir pygtk-2.0`]
++PYDEFS=`pkg-config --variable=defsdir pygtk-2.0`
+ 
+ pyfarsight.c: pyfarsight.override pyfarsight.defs
+ 	$(PYCODEGEN)						\
