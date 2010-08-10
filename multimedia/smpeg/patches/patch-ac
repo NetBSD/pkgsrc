@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2004/06/26 09:16:10 grant Exp $
+$NetBSD: patch-ac,v 1.2 2010/08/10 06:20:59 tsutsui Exp $
 
---- video/video.h.orig	2004-03-01 02:14:39.000000000 +0100
-+++ video/video.h	2004-03-01 02:16:02.000000000 +0100
+--- video/video.h.orig	2001-02-10 07:36:42.000000000 +0000
++++ video/video.h	2010-08-07 22:45:45.000000000 +0000
 @@ -413,7 +413,7 @@
  #define __SCO__ 1
  #endif
@@ -11,3 +11,29 @@ $NetBSD: patch-ac,v 1.1 2004/06/26 09:16:10 grant Exp $
  #undef  BIG_ENDIAN_ARCHITECTURE
  #define LITTLE_ENDIAN_ARCHITECTURE 1
  #endif
+@@ -424,6 +424,17 @@
+ #endif
+ 
+ #if !defined(LITTLE_ENDIAN_ARCHITECTURE) && !defined(BIG_ENDIAN_ARCHITECTURE)
++#if defined(__NetBSD__)
++#include <sys/endian.h>
++#if _BYTE_ORDER == _LITTLE_ENDIAN
++#undef  BIG_ENDIAN_ARCHITECTURE
++#define LITTLE_ENDIAN_ARCHITECTURE 1
++#endif
++#if _BYTE_ORDER == _BIG_ENDIAN
++#undef  LITTLE_ENDIAN_ARCHITECTURE
++#define BIG_ENDIAN_ARCHITECTURE 1
++#endif
++#else
+ #ifdef WIN32
+ #undef  BIG_ENDIAN_ARCHITECTURE
+ #define LITTLE_ENDIAN_ARCHITECTURE
+@@ -444,6 +455,7 @@
+ #endif
+ #endif
+ #endif
++#endif
+ 
+ #if !defined(LITTLE_ENDIAN_ARCHITECTURE) && !defined(BIG_ENDIAN_ARCHITECTURE)
+ #error Unknown endianism of architecture
