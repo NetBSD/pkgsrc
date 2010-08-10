@@ -1,0 +1,41 @@
+$NetBSD: patch-aj,v 1.1 2010/08/10 20:26:36 sketch Exp $
+
+--- src/core/Makefile.in.orig	2002-11-24 13:18:08.000000000 +0000
++++ src/core/Makefile.in	2010-08-10 21:10:22.000000000 +0100
+@@ -83,15 +83,15 @@
+ moduledir = $(libdir)/irssi/modules
+ 
+ module_LTLIBRARIES = libicb_core.la
+-libicb_core_la_LDFLAGS = -avoid-version
++libicb_core_la_LDFLAGS = -module -avoid-version
+ 
+ INCLUDES =  	$(GLIB_CFLAGS) 	-I$(IRSSI_INCLUDE) -I$(IRSSI_INCLUDE)/src 	-I$(IRSSI_INCLUDE)/src/core
+ 
+ 
+-libicb_core_la_SOURCES =  	icb-channels.c 	icb-commands.c 	icb-core.c 	icb-queries.c 	icb-servers-reconnect.c 	icb-protocol.c 	icb-servers.c 	icb-session.c
++libicb_core_la_SOURCES =  	icb-channels.c 	icb-commands.c 	icb-core.c	icb-nicklist.c	icb-queries.c 	icb-servers-reconnect.c 	icb-protocol.c 	icb-servers.c 	icb-session.c
+ 
+ 
+-noinst_HEADERS =  	icb.h 	icb-channels.h 	icb-commands.h 	icb-protocol.h 	icb-queries.h 	icb-servers.h 	module.h
++noinst_HEADERS =  	icb.h 	icb-channels.h 	icb-commands.h 	icb-nicklist.h	icb-protocol.h 	icb-queries.h 	icb-servers.h 	module.h
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../config-plugin.h
+@@ -106,7 +106,7 @@
+ libicb_core_la_LIBADD = 
+ libicb_core_la_OBJECTS =  icb-channels.lo icb-commands.lo icb-core.lo \
+ icb-queries.lo icb-servers-reconnect.lo icb-protocol.lo icb-servers.lo \
+-icb-session.lo
++icb-session.lo icb-nicklist.lo
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -257,6 +257,8 @@
+ 	icb-commands.h icb-servers.h icb-channels.h icb-protocol.h
+ icb-core.lo icb-core.o : icb-core.c module.h icb.h icb-commands.h \
+ 	icb-servers.h icb-channels.h icb-queries.h icb-protocol.h
++icb-nicklist.lo icb-nicklist.o : icb-nicklist.c module.h \
++	icb-channels.h icb-nicklist.h
+ icb-protocol.lo icb-protocol.o : icb-protocol.c module.h icb.h \
+ 	icb-servers.h
+ icb-queries.lo icb-queries.o : icb-queries.c module.h icb.h \
