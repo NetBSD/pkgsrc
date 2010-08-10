@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/08/10 07:49:57 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/08/10 08:26:20 asau Exp $
 bin/yap
 include/Yap/Atoms.h
 include/Yap/Regs.h
@@ -113,8 +113,6 @@ lib/Yap/yap_random.so
 lib/Yap/yap_rl.so
 lib/Yap/zlib4pl.so
 lib/libYap.a
-lib/web/css/dirindex.css
-lib/web/css/openid.css
 share/Yap/DTD/HTML4.dcl
 share/Yap/DTD/HTML4.dtd
 share/Yap/DTD/HTML4.soc
@@ -269,6 +267,8 @@ share/Yap/http/json_convert.pl
 share/Yap/http/mimepack.pl
 share/Yap/http/mimetype.pl
 share/Yap/http/thread_httpd.pl
+share/Yap/http/web/css/dirindex.css
+share/Yap/http/web/css/openid.css
 share/Yap/http/web/icons/back.png
 share/Yap/http/web/icons/c.png
 share/Yap/http/web/icons/compressed.png
