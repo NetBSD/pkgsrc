@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2811 2010/08/09 23:12:40 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2812 2010/08/10 07:50:13 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3725,3 +3725,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/libnice to 0.0.13 [drochner 2010-08-08]
 	Updated editors/emacs-snapshot to 24.0.50.20100808 [minskim 2010-08-09]
 	Added devel/p5-Dir-Self version 0.10 [seb 2010-08-09]
+	Updated lang/yap to 6.0.6 [asau 2010-08-10]
