@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2816 2010/08/10 13:40:20 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2817 2010/08/10 15:38:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3730,3 +3730,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/racket to 5.0.1 [asau 2010-08-10]
 	Updated lang/racket-textual to 5.0.1 [asau 2010-08-10]
 	Updated lang/pcc-current to 0.9.9.20100810 [asau 2010-08-10]
+	Updated www/contao29 to 2.9.1 [taca 2010-08-10]
