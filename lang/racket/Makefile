@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2010/07/20 03:12:18 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/10 10:32:45 asau Exp $
 
-PKGNAME=	racket-5.0
+PKGNAME=	racket-5.0.1
 DISTNAME=	$(PKGNAME)-src-unix
 CATEGORIES=	lang
-MASTER_SITES_PLT=	http://download.racket-lang.org/installers/5.0/ \
-		http://www.eecs.northwestern.edu/racket/5.0/ \
-		http://www.cs.utah.edu/plt/installers/5.0/ \
-		http://mirror.informatik.uni-tuebingen.de/mirror/racket/5.0/ \
-		ftp://infogroep.be/pub/racket/installers/5.0/ \
-		http://russell.cs.bilgi.edu.tr/racket-installers/5.0/
+MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
+		http://www.eecs.northwestern.edu/racket/$(PKGVERSION_NOREV)/ \
+		http://www.cs.utah.edu/plt/installers/$(PKGVERSION_NOREV)/ \
+		http://mirror.informatik.uni-tuebingen.de/mirror/racket/$(PKGVERSION_NOREV)/ \
+		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/ \
+		http://russell.cs.bilgi.edu.tr/racket-installers/$(PKGVERSION_NOREV)/
 MASTER_SITES=	$(MASTER_SITES_PLT:=racket/)
 EXTRACT_SUFX=	.tgz
 
