@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.version,v 1.1.1.1 2010/07/05 14:45:21 taca Exp $
+# $NetBSD: Makefile.version,v 1.2 2010/08/10 15:37:32 taca Exp $
 #
 # used by www/contao29/Makefile
 # used by www/contao29-example/Makefile
 # used by www/contao29-translations/Makefile
 #
 
-CT_VERSION=		2.9.0
+CT_VERSION=		2.9.1
