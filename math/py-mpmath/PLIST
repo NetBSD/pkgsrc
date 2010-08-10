@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/08 11:54:25 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/08/10 18:04:30 drochner Exp $
 ${PYSITELIB}/mpmath/__init__.py
 ${PYSITELIB}/mpmath/__init__.pyc
 ${PYSITELIB}/mpmath/__init__.pyo
@@ -38,6 +38,9 @@ ${PYSITELIB}/mpmath/ctx_base.pyo
 ${PYSITELIB}/mpmath/ctx_fp.py
 ${PYSITELIB}/mpmath/ctx_fp.pyc
 ${PYSITELIB}/mpmath/ctx_fp.pyo
+${PYSITELIB}/mpmath/ctx_iv.py
+${PYSITELIB}/mpmath/ctx_iv.pyc
+${PYSITELIB}/mpmath/ctx_iv.pyo
 ${PYSITELIB}/mpmath/ctx_mp.py
 ${PYSITELIB}/mpmath/ctx_mp.pyc
 ${PYSITELIB}/mpmath/ctx_mp.pyo
@@ -62,12 +65,18 @@ ${PYSITELIB}/mpmath/functions/functions.pyo
 ${PYSITELIB}/mpmath/functions/hypergeometric.py
 ${PYSITELIB}/mpmath/functions/hypergeometric.pyc
 ${PYSITELIB}/mpmath/functions/hypergeometric.pyo
+${PYSITELIB}/mpmath/functions/qfunctions.py
+${PYSITELIB}/mpmath/functions/qfunctions.pyc
+${PYSITELIB}/mpmath/functions/qfunctions.pyo
 ${PYSITELIB}/mpmath/functions/rszeta.py
 ${PYSITELIB}/mpmath/functions/rszeta.pyc
 ${PYSITELIB}/mpmath/functions/rszeta.pyo
 ${PYSITELIB}/mpmath/functions/zeta.py
 ${PYSITELIB}/mpmath/functions/zeta.pyc
 ${PYSITELIB}/mpmath/functions/zeta.pyo
+${PYSITELIB}/mpmath/functions/zetazeros.py
+${PYSITELIB}/mpmath/functions/zetazeros.pyc
+${PYSITELIB}/mpmath/functions/zetazeros.pyo
 ${PYSITELIB}/mpmath/identification.py
 ${PYSITELIB}/mpmath/identification.pyc
 ${PYSITELIB}/mpmath/identification.pyo
@@ -119,6 +128,12 @@ ${PYSITELIB}/mpmath/rational.pyo
 ${PYSITELIB}/mpmath/tests/__init__.py
 ${PYSITELIB}/mpmath/tests/__init__.pyc
 ${PYSITELIB}/mpmath/tests/__init__.pyo
+${PYSITELIB}/mpmath/tests/extratest_gamma.py
+${PYSITELIB}/mpmath/tests/extratest_gamma.pyc
+${PYSITELIB}/mpmath/tests/extratest_gamma.pyo
+${PYSITELIB}/mpmath/tests/extratest_zeta.py
+${PYSITELIB}/mpmath/tests/extratest_zeta.pyc
+${PYSITELIB}/mpmath/tests/extratest_zeta.pyo
 ${PYSITELIB}/mpmath/tests/runtests.py
 ${PYSITELIB}/mpmath/tests/runtests.pyc
 ${PYSITELIB}/mpmath/tests/runtests.pyo
