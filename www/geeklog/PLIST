@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/11/30 15:44:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/08/10 16:00:42 taca Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
 ${GEEKLOG_BASE}/language/afrikaans.php
 ${GEEKLOG_BASE}/language/afrikaans_utf-8.php
@@ -98,6 +98,8 @@ ${GEEKLOG_BASE}/plugins/calendar/language/korean.php
 ${GEEKLOG_BASE}/plugins/calendar/language/korean_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/russian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/russian_utf-8.php
+${GEEKLOG_BASE}/plugins/calendar/language/slovak.php
+${GEEKLOG_BASE}/plugins/calendar/language/slovak_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/slovenian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/slovenian_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/spanish.php
@@ -109,6 +111,7 @@ ${GEEKLOG_BASE}/plugins/calendar/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/calendar/sql/mssql_updates.php
 ${GEEKLOG_BASE}/plugins/calendar/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/calendar/sql/mysql_updates.php
+${GEEKLOG_BASE}/plugins/calendar/sql/pgsql_install.php
 ${GEEKLOG_BASE}/plugins/calendar/templates/addevent.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/addeventoption.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/addremoveevent.thtml
@@ -168,6 +171,7 @@ ${GEEKLOG_BASE}/plugins/links/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/links/language/ukrainian_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/links/sql/mysql_install.php
+${GEEKLOG_BASE}/plugins/links/sql/pgsql_install.php
 ${GEEKLOG_BASE}/plugins/links/templates/admin/categoryeditor.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/admin/categorylist.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/admin/catitem.thtml
@@ -217,6 +221,7 @@ ${GEEKLOG_BASE}/plugins/polls/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/polls/sql/mssql_updates.php
 ${GEEKLOG_BASE}/plugins/polls/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/polls/sql/mysql_updates.php
+${GEEKLOG_BASE}/plugins/polls/sql/pgsql_install.php
 ${GEEKLOG_BASE}/plugins/polls/templates/admin/pollansweroption.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/admin/polleditor.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/admin/pollquestions.thtml
@@ -274,7 +279,10 @@ ${GEEKLOG_BASE}/plugins/spamx/language/ukrainian.php
 ${GEEKLOG_BASE}/plugins/spamx/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/spamx/language/ukrainian_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/sql/mssql_install.php
+${GEEKLOG_BASE}/plugins/spamx/sql/mssql_updates.php
 ${GEEKLOG_BASE}/plugins/spamx/sql/mysql_install.php
+${GEEKLOG_BASE}/plugins/spamx/sql/mysql_updates.php
+${GEEKLOG_BASE}/plugins/spamx/sql/pgsql_install.php
 ${GEEKLOG_BASE}/plugins/spamx/templates/admin.thtml
 ${GEEKLOG_BASE}/plugins/spamx/templates/install.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/autoinstall.php
@@ -326,6 +334,7 @@ ${GEEKLOG_BASE}/plugins/staticpages/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mssql_updates.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mysql_updates.php
+${GEEKLOG_BASE}/plugins/staticpages/sql/pgsql_install.php
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor_advanced.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/centerblock.thtml
@@ -339,19 +348,28 @@ ${GEEKLOG_BASE}/plugins/xmlsitemap/language/english.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/english_utf-8.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/estonian.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/estonian_utf-8.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/german.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/german_formal.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/german_formal_utf-8.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/german_utf-8.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/hebrew_utf-8.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/japanese_utf-8.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/slovenian.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/slovenian_utf-8.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/sql/mysql_install.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/sql/pgsql_install.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/xmlsitemap.class.php
 ${GEEKLOG_BASE}/readme
 ${GEEKLOG_BASE}/sql/mssql_tableanddata.php
 ${GEEKLOG_BASE}/sql/mysql_tableanddata.php
+${GEEKLOG_BASE}/sql/pgsql_tableanddata.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.4.1_to_1.5.0.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.5.0_to_1.5.1.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.5.1_to_1.5.2.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.5.2_to_1.6.0.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.6.0_to_1.6.1.php
+${GEEKLOG_BASE}/sql/updates/mssql_1.6.1_to_1.7.0.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.2.5-1_to_1.3.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3.10_to_1.3.11.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3.11_to_1.4.0.php
@@ -370,6 +388,7 @@ ${GEEKLOG_BASE}/sql/updates/mysql_1.5.0_to_1.5.1.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.5.1_to_1.5.2.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.5.2_to_1.6.0.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.6.0_to_1.6.1.php
+${GEEKLOG_BASE}/sql/updates/mysql_1.6.1_to_1.7.0.php
 ${GEEKLOG_BASE}/system/classes/authentication/LDAP.auth.class.php
 ${GEEKLOG_BASE}/system/classes/authentication/LiveJournal.auth.class.php
 ${GEEKLOG_BASE}/system/classes/authentication/ldap/config.php
@@ -408,6 +427,7 @@ ${GEEKLOG_BASE}/system/classes/upload.class.php
 ${GEEKLOG_BASE}/system/classes/url.class.php
 ${GEEKLOG_BASE}/system/databases/mssql.class.php
 ${GEEKLOG_BASE}/system/databases/mysql.class.php
+${GEEKLOG_BASE}/system/databases/pgsql.class.php
 ${GEEKLOG_BASE}/system/lib-admin.php
 ${GEEKLOG_BASE}/system/lib-comment.php
 ${GEEKLOG_BASE}/system/lib-database.php
@@ -443,9 +463,11 @@ ${GEEKLOG_BASE}/system/pear/HTTP/Request/Listener.php
 ${GEEKLOG_BASE}/system/pear/Mail.php
 ${GEEKLOG_BASE}/system/pear/Mail/RFC822.php
 ${GEEKLOG_BASE}/system/pear/Mail/mail.php
+${GEEKLOG_BASE}/system/pear/Mail/mock.php
 ${GEEKLOG_BASE}/system/pear/Mail/null.php
 ${GEEKLOG_BASE}/system/pear/Mail/sendmail.php
 ${GEEKLOG_BASE}/system/pear/Mail/smtp.php
+${GEEKLOG_BASE}/system/pear/Mail/smtpmx.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/Header.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/Packet.php
@@ -499,7 +521,6 @@ ${GEEKLOG_BASE}/system/pear/PEAR/Command/Test.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Command/Test.xml
 ${GEEKLOG_BASE}/system/pear/PEAR/Common.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Config.php
-${GEEKLOG_BASE}/system/pear/PEAR/Dependency.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Dependency2.php
 ${GEEKLOG_BASE}/system/pear/PEAR/DependencyDB.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Downloader.php
@@ -545,7 +566,6 @@ ${GEEKLOG_BASE}/system/pear/PEAR/REST/10.php
 ${GEEKLOG_BASE}/system/pear/PEAR/REST/11.php
 ${GEEKLOG_BASE}/system/pear/PEAR/REST/13.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Registry.php
-${GEEKLOG_BASE}/system/pear/PEAR/Remote.php
 ${GEEKLOG_BASE}/system/pear/PEAR/RunTest.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Task/Common.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Task/Postinstallscript.php
@@ -559,6 +579,7 @@ ${GEEKLOG_BASE}/system/pear/PEAR/Task/Windowseol/rw.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Validate.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Validator/PECL.php
 ${GEEKLOG_BASE}/system/pear/PEAR/XMLParser.php
+${GEEKLOG_BASE}/system/pear/PEAR5.php
 ${GEEKLOG_BASE}/system/pear/README
 ${GEEKLOG_BASE}/system/pear/System.php
 ${GEEKLOG_BASE}/system/pear/Text/Wiki.php
@@ -963,6 +984,7 @@ ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcklisthandler.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcklistslib.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckplugins.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckregexlib.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckscayt.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckselection.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckselection_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckselection_ie.js
@@ -1032,6 +1054,8 @@ ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_listprop.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_paste.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_radiobutton.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_replace.html
+${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_scayt.html
+${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_scayt/scayt_dialog.css
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_select.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_select/fck_select.js
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_smiley.html
@@ -1546,6 +1570,7 @@ ${GEEKLOG_PUB}/layout/professional/preferences/deleteaccount.thtml
 ${GEEKLOG_PUB}/layout/professional/preferences/digestblock.thtml
 ${GEEKLOG_PUB}/layout/professional/preferences/displayblock.thtml
 ${GEEKLOG_PUB}/layout/professional/preferences/displayprefs.thtml
+${GEEKLOG_PUB}/layout/professional/preferences/editor.thtml
 ${GEEKLOG_PUB}/layout/professional/preferences/excludeblock.thtml
 ${GEEKLOG_PUB}/layout/professional/preferences/index.html
 ${GEEKLOG_PUB}/layout/professional/preferences/language.thtml
@@ -1583,7 +1608,6 @@ ${GEEKLOG_PUB}/layout/professional/storybodytext.thtml
 ${GEEKLOG_PUB}/layout/professional/storytext.thtml
 ${GEEKLOG_PUB}/layout/professional/style.css
 ${GEEKLOG_PUB}/layout/professional/submit/index.html
-${GEEKLOG_PUB}/layout/professional/submit/submitloginrequired.thtml
 ${GEEKLOG_PUB}/layout/professional/submit/submitstory.thtml
 ${GEEKLOG_PUB}/layout/professional/submit/submitstory_advanced.thtml
 ${GEEKLOG_PUB}/layout/professional/topcenterblock-span.thtmlx
