@@ -1,12 +1,25 @@
-$NetBSD: patch-ba,v 1.6 2010/07/24 12:51:09 tron Exp $
+$NetBSD: patch-ba,v 1.7 2010/08/10 05:42:34 tsutsui Exp $
 
 Fix for security vulnerability reported in CVE-2009-1299, taken from here:
 
 http://git.0pointer.de/?p=pulseaudio.git;a=patch;h=d3efa43d85ac132c6a5a416a2b6f2115f5d577ee
 
+Also handle atomic_ops for NetBSD/arm.
+
 --- configure.ac.orig	2009-11-23 04:06:47.000000000 +0000
-+++ configure.ac	2010-07-24 13:33:30.000000000 +0100
-@@ -424,7 +424,7 @@
++++ configure.ac	2010-08-07 08:06:57.000000000 +0000
+@@ -220,6 +220,10 @@
+                 AC_MSG_RESULT([yes])
+                 AC_DEFINE_UNQUOTED(ATOMIC_ARM_LINUX_HELPERS, 1, [special arm linux implementation])
+                 need_libatomic_ops=no
++            elif test "x$pulse_target_os" = "xnetbsd" && test "x$atomic_netbsd_helpers" = "xyes"; then
++                AC_MSG_RESULT([yes])
++                AC_DEFINE_UNQUOTED(NETBSD_ATOMIC_OPS, 1, [netbsd implementation])
++                need_libatomic_ops=no
+             else
+                AC_MSG_RESULT([no])
+                AC_CACHE_CHECK([compiler support for arm inline asm atomic operations],
+@@ -424,7 +428,7 @@
  AC_FUNC_FORK
  AC_FUNC_GETGROUPS
  AC_FUNC_SELECT_ARGTYPES
