@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2009/09/23 09:54:45 tron Exp $
+# $NetBSD: Makefile,v 1.31 2010/08/10 08:49:40 tron Exp $
 
 DISTNAME=	MySQL-python-${DIST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-mysqldb-${DIST_VERSION:S/c/rc/}
-DIST_VERSION=	1.2.3c1
+DIST_VERSION=	1.2.3
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 

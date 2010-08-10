@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2009/09/22 13:09:30 tron Exp $
+$NetBSD: distinfo,v 1.11 2010/08/10 08:49:40 tron Exp $
 
-SHA1 (MySQL-python-1.2.3c1.tar.gz) = ef300cb2c378004b11e81e832cadda559cfd2fc5
-RMD160 (MySQL-python-1.2.3c1.tar.gz) = f32517c86f5fdc9e8d81a9e427492a82af8c58d9
-Size (MySQL-python-1.2.3c1.tar.gz) = 89831 bytes
+SHA1 (MySQL-python-1.2.3.tar.gz) = 3511bb8c57c6016eeafa531d5c3ea4b548915e3c
+RMD160 (MySQL-python-1.2.3.tar.gz) = e394e7bf08127068795aeebfbaea7dc3b2127c86
+Size (MySQL-python-1.2.3.tar.gz) = 70305 bytes
