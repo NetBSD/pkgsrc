@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/02/08 11:54:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/10 18:04:30 drochner Exp $
 #
 
-DISTNAME=	mpmath-0.14
+DISTNAME=	mpmath-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	http://mpmath.googlecode.com/files/
@@ -26,4 +26,6 @@ do-test:
 	${SETENV} ${TEST_ENV} ${PYTHONBIN} runtests.py
 
 .include "../../lang/python/extension.mk"
+# optional speedup
+#.include "../../math/py-gmpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
