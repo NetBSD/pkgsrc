@@ -1,6 +1,41 @@
---- src/core/icb-protocol.c.orig	2010-05-18 21:09:43.000000000 +0100
-+++ src/core/icb-protocol.c	2010-05-18 22:32:50.000000000 +0100
-@@ -121,7 +121,91 @@
+$NetBSD: patch-af,v 1.2 2010/08/10 20:26:36 sketch Exp $
+
+--- src/core/icb-protocol.c	(revision 5174)
++++ src/core/icb-protocol.c	(working copy)
+@@ -27,19 +27,19 @@
+ #include "icb-servers.h"
+ 
+ static char *signal_names[] = {
+-	"login",
+-	"open",
+-	"personal",
+-	"status",
+-	"error",
+-	"important",
+-	"exit",
+-	"command",
+-	"cmdout",
+-	"protocol",
+-	"beep",
+-	"ping",
+-        "pong"
++	"login",	/* a */
++	"open",		/* b */
++	"personal",	/* c */
++	"status",	/* d */
++	"error",	/* e */
++	"important",	/* f */
++	"exit",		/* g */
++	"command",	/* h */
++	"cmdout",	/* i */
++	"protocol",	/* j */
++	"beep",		/* k */
++	"ping",		/* l */
++	"pong"		/* m */
+ };
+ 
+ #define SIGNAL_FIRST 'a'
+@@ -121,9 +121,93 @@
  
  void icb_send_open_msg(ICB_SERVER_REC *server, const char *text)
  {
@@ -42,8 +77,8 @@
 +		icb_send_cmd(server, 'b', sendbuf, NULL);
 +		text += len > copylen ? copylen : len;
 +	}
-+}
-+
+ }
+ 
 +void icb_send_private_msg(ICB_SERVER_REC *server, const char *target,
 +		const char *text)
 +{
@@ -90,6 +125,43 @@
 +		icb_send_cmd(server, 'h', "m", sendbuf, NULL);
 +		text += len > copylen ? copylen : len;
 +	}
++}
++
+ void icb_command(ICB_SERVER_REC *server, const char *cmd,
+ 		 const char *args, const char *id)
+ {
+@@ -293,6 +377,20 @@
+         g_strfreev(args);
  }
  
- void icb_command(ICB_SERVER_REC *server, const char *cmd,
++static void event_status(ICB_SERVER_REC *server, const char *data)
++{
++	char **args, *event;
++
++	args = g_strsplit(data, "\001", -1);
++	if (args[0] != NULL) {
++		event = g_strdup_printf("icb status %s", g_ascii_strdown(args[0], strlen(args[0])));
++		if (!signal_emit(event, 2, server, args))
++                        signal_emit("default icb status", 2, server, args);
++                g_free(event);
++	}
++        g_strfreev(args);
++}
++
+ void icb_protocol_init(void)
+ {
+         signal_add("server connected", (SIGNAL_FUNC) sig_server_connected);
+@@ -300,6 +398,7 @@
+         signal_add("icb event login", (SIGNAL_FUNC) event_login);
+         signal_add("icb event ping", (SIGNAL_FUNC) event_ping);
+         signal_add("icb event cmdout", (SIGNAL_FUNC) event_cmdout);
++	signal_add("icb event status", (SIGNAL_FUNC) event_status);
+ }
+ 
+ void icb_protocol_deinit(void)
+@@ -309,4 +408,5 @@
+         signal_remove("icb event login", (SIGNAL_FUNC) event_login);
+         signal_remove("icb event ping", (SIGNAL_FUNC) event_ping);
+         signal_remove("icb event cmdout", (SIGNAL_FUNC) event_cmdout);
++        signal_remove("icb event status", (SIGNAL_FUNC) event_status);
+ }
