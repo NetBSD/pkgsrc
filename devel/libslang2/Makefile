@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/08/09 12:21:48 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2010/08/10 10:16:44 drochner Exp $
 #
 
 DISTNAME=	slang-2.2.2
@@ -27,6 +27,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--with-z=${BUILDLINK_PREFIX.zlib}
 
 DLOPEN_REQUIRE_PTHREADS=no
 
