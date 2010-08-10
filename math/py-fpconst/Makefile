@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/09/02 02:59:35 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/08/10 12:35:34 drochner Exp $
 #
 
-DISTNAME=	fpconst-0.7.0
+DISTNAME=	fpconst-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
-MASTER_SITES=	# ${MASTER_SITE_SOURCEFORGE:=rsoap/}
+MASTER_SITES=	http://pypi.python.org/packages/source/f/fpconst/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://research.warnes.net/projects/RStatServer/fpconst/
