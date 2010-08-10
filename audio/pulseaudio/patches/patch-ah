@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.3 2010/08/10 05:42:34 tsutsui Exp $
+
+--- src/pulsecore/cpu-arm.c.orig	2009-11-23 03:57:07.000000000 +0000
++++ src/pulsecore/cpu-arm.c	2010-08-07 08:14:36.000000000 +0000
+@@ -129,11 +129,11 @@
+           (flags & PA_CPU_ARM_EDSP) ? "EDSP " : "",
+           (flags & PA_CPU_ARM_NEON) ? "NEON " : "",
+           (flags & PA_CPU_ARM_VFPV3) ? "VFPV3 " : "");
+-#else /* defined (__linux__) */
+-    pa_log ("ARM cpu features not yet supported on this OS");
+-#endif /* defined (__linux__) */
+ 
+     if (flags & PA_CPU_ARM_V6)
+         pa_volume_func_init_arm (flags);
++#else /* defined (__linux__) */
++    pa_log ("ARM cpu features not yet supported on this OS");
++#endif /* defined (__linux__) */
+ #endif /* defined (__arm__) */
+ }
