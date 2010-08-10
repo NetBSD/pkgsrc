@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2814 2010/08/10 10:33:22 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2815 2010/08/10 10:33:39 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3728,3 +3728,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/yap to 6.0.6 [asau 2010-08-10]
 	Updated databases/py-mysqldb to 1.2.3 [tron 2010-08-10]
 	Updated lang/racket to 5.0.1 [asau 2010-08-10]
+	Updated lang/racket-textual to 5.0.1 [asau 2010-08-10]
