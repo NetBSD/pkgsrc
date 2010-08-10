@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2010/08/10 20:26:36 sketch Exp $
+
+--- src/fe-common/module-formats.c	(revision 5174)
++++ src/fe-common/module-formats.c	(working copy)
+@@ -30,7 +30,7 @@
+ 	{ "status", "[$0] $1", 2, { 0, 0 } },
+ 	{ "important", "[$0!] $1", 2, { 0, 0 } },
+ 	{ "status", "{error [Error]} $0", 1, { 0 } },
+-	{ "beep", "[beep] $1 beeps you", 1, { 0 } },
++	{ "beep", "[Beep] $1 beeps you", 1, { 0 } },
+ 
+ 	{ NULL, NULL, 0 }
+ };

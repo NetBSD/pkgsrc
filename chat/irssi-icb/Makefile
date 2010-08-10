@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2010/05/18 21:38:49 sketch Exp $
+# $NetBSD: Makefile,v 1.31 2010/08/10 20:26:36 sketch Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	chat
 MASTER_SITES=	http://www.irssi.org/files/plugins/icb/
 DISTFILES=	${DISTNAME}.tar.gz ${IRSSI_DISTFILE}

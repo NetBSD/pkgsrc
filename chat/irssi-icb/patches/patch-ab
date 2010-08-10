@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2010/05/17 20:13:25 sketch Exp $
+$NetBSD: patch-ab,v 1.3 2010/08/10 20:26:36 sketch Exp $
 
---- src/fe-common/fe-icb.c.orig	2002-04-27 21:56:18.000000000 +0100
-+++ src/fe-common/fe-icb.c	2010-05-17 20:52:23.000000000 +0100
-@@ -18,12 +18,15 @@
+--- src/fe-common/fe-icb.c	(revision 5174)
++++ src/fe-common/fe-icb.c	(working copy)
+@@ -18,33 +18,73 @@
      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
  
@@ -18,19 +18,29 @@ $NetBSD: patch-ab,v 1.2 2010/05/17 20:13:25 sketch Exp $
  
  #include "icb.h"
  #include "icb-servers.h"
-@@ -33,16 +36,84 @@
+ #include "icb-channels.h"
++#include "icb-nicklist.h"
+ #include "icb-protocol.h"
+ 
  #include "printtext.h"
  #include "themes.h"
  
-+static void icb_channel_change_topic(ICB_SERVER_REC *server,
-+				const char *topic, const char *setby,
-+				time_t settime)
-+{
+-static void event_status(ICB_SERVER_REC *server, const char *data)
++static void icb_change_topic(ICB_SERVER_REC *server, const char *topic,
++			     const char *setby, time_t settime)
+ {
+-	char **args;
 +	if (topic != NULL) {
 +		g_free_not_null(server->group->topic);
 +		server->group->topic = g_strdup(topic);
 +	}
-+
+ 
+-	/* FIXME: status messages should probably divided into their own
+-	   signals so irssi could track joins, parts, etc. */
+-	args = icb_split(data, 2);
+-	printformat(server, server->group->name, MSGLEVEL_CRAP,
+-		    ICBTXT_STATUS, args[0], args[1]);
+-        icb_split_free(args);
 +	if (setby != NULL) {
 +		g_free_not_null(server->group->topic_by);
 +		server->group->topic_by = g_strdup(setby);
@@ -39,72 +49,42 @@ $NetBSD: patch-ab,v 1.2 2010/05/17 20:13:25 sketch Exp $
 +	server->group->topic_time = settime;
 +
 +	signal_emit("channel topic changed", 1, server->group);
-+}
-+
- static void event_status(ICB_SERVER_REC *server, const char *data)
- {
- 	char **args;
-+	int len;
-+	char *oldnick, *newnick;
-+	char *topic, *setby, *p1, *p2;
- 
- 	/* FIXME: status messages should probably divided into their own
- 	   signals so irssi could track joins, parts, etc. */
- 	args = icb_split(data, 2);
- 	printformat(server, server->group->name, MSGLEVEL_CRAP,
- 		    ICBTXT_STATUS, args[0], args[1]);
--        icb_split_free(args);
-+
-+	len = strlen("Name");
-+	if (strncmp(args[0],"Name",len) == 0) {
-+		oldnick = g_strdup(args[1]);
-+		p2 = strchr(oldnick, ' ');
-+		if (p2 != NULL) {
-+			*p2 = '\0';
-+			/* make sure it's me changing the nick */
-+			if (strcmp(oldnick, server->connrec->nick) == 0) {
-+				newnick = strrchr(args[1], ' ');
-+				if (newnick != NULL) {
-+					newnick++;  /* skip the space */
-+					server_change_nick(SERVER(server), newnick);
-+					nicklist_rename(SERVER(server), server->connrec->nick, newnick);
-+					g_free(server->connrec->nick);
-+					server->connrec->nick = g_strdup(newnick);
-+				}
-+			}
-+		}
-+		g_free(oldnick);
-+	}
-+
-+	/* sample topic msg: nick changed the topic to \"test 1\" */
-+	len = strlen("Topic");
-+	if (strncmp(args[0],"Topic",len) == 0) {
-+		p1 = strchr(args[1], '"');
-+		p2 = strrchr(args[1], '"');
-+
-+		/* make sure there's something between those quotes */
-+		if (p1) {
-+			p1++;
-+			topic = g_strdup(p1);
-+			p2 = strrchr(topic, '"');
-+			*p2 = '\0';
-+
-+			setby = g_strdup(args[1]);
-+			p2 = strchr(setby, ' ');
-+			*p2 = '\0';
-+
-+			icb_channel_change_topic(server, topic, setby, time(NULL));
-+
-+			g_free(topic);
-+			g_free(setby);
-+		}
-+	}
-+
-+	icb_split_free(args);
  }
  
++/*
++ * ICB makes it hard to keep track of nicks:
++ *
++ *  - moderators can come and go, and even return with a different nick, while
++ *    still retaining their moderator status
++ *
++ *  - group moderator can change at any time, if the moderator is off-group
++ *    while changing nick
++ *
++ *  - users can be moderator of multiple groups simultaneously, but can only
++ *    be in one group at a time
++ *
++ * So for now we don't bother to track the moderator, just the group nicks
++ */
++static void icb_update_nicklist(ICB_SERVER_REC *server)
++{
++	/*
++	 * In theory we should be able to just send '/who <group>' and parse,
++	 * but the problem is that ICB does not send any kind of end-of-who
++	 * marker when only listing one group, and sending a separate command
++	 * isn't guaranteed to come back in the right order.
++	 *
++	 * So we're forced do perform a full /who and then match against our
++	 * groupname.  A full /who is terminated with a 'Total: ' line which we
++	 * can use as EOF>
++	 */
++	server->silentwho = TRUE;
++	icb_command(server, "w", "", NULL);
++}
++
  static void event_error(ICB_SERVER_REC *server, const char *data)
-@@ -84,12 +155,67 @@
+ {
+ 	printformat(server, NULL, MSGLEVEL_CRAP, ICBTXT_ERROR, data);
+@@ -84,15 +124,351 @@
          icb_split_free(args);
  }
  
@@ -131,6 +111,77 @@ $NetBSD: patch-ab,v 1.2 2010/05/17 20:13:25 sketch Exp $
 +		snprintf(buf, bufsize, "   %2ds", (int)idle);
 +}
 +
++static void cmdout_co(ICB_SERVER_REC *server, char **args)
++{
++	char *p, *group, *topic;
++	int len;
++
++	static const char match_group[] = "Group: ";
++	static const char match_topic[] = "Topic: ";
++	static const char match_topicunset[] = "(None)";
++	static const char match_topicis[] = "The topic is";
++	static const char match_total[] = "Total: ";
++
++	/*
++	 * Use 'co' as the marker to denote wl lines have finished, so
++	 * reset the nick updates
++	 */
++	server->updatenicks = FALSE;
++
++	/* If we're running in silent mode, parse the output for nicks/topic */
++	if (server->silentwho) {
++
++		/* Match group lines */
++		len = strlen(match_group);
++		if (strncmp(args[0], match_group, len) == 0) {
++
++			group = g_strdup(args[0] + len);
++			p = strchr(group, ' ');
++			*p = '\0';
++
++			/* Check for our particular group */
++			len = strlen(group);
++			if (g_ascii_strncasecmp(group, server->group->name, len) == 0) {
++
++				/* Start matching nicks */
++				server->updatenicks = TRUE;
++
++				p = strstr(args[0], match_topic);
++				if (p != NULL && p != args[0]) {
++					topic = p + strlen(match_topic);
++					if (topic != NULL) {
++						len = strlen(match_topicunset);
++						if (strncmp(topic,
++							    match_topicunset,
++							    len) != 0) {
++
++							/* No way to find who set the topic, mark as unknown */
++							icb_change_topic(server, topic, "unknown", time(NULL));
++						}
++					}
++				}
++			}
++			g_free(group);
++		}
++
++		/*
++		 * End of /who output, stop silent mode and signal front-end
++		 * to display /names list
++		 */
++		len = strlen(match_total);
++		if (strncmp(args[0], match_total, len) == 0) {
++			server->silentwho = FALSE;
++			signal_emit("channel joined", 1, server->group);
++		}
++	} else {
++		/* Now that /topic works correctly, ignore server output */
++		len = strlen(match_topicis);
++		if (strncmp(args[0], match_topicis, len) != 0) {
++			printtext(server, NULL, MSGLEVEL_CRAP, "%s", args[0]);
++		}
++	}
++}
++
 +static void cmdout_wl(ICB_SERVER_REC *server, char **args)
 +{
 +	struct tm *logintime;
@@ -138,6 +189,7 @@ $NetBSD: patch-ab,v 1.2 2010/05/17 20:13:25 sketch Exp $
 +	char idlebuf[20];
 +	char line[255];
 +	time_t temptime;
++	int op;
 +
 +	/* "wl" : In a who listing, a line of output listing a user. Has the following format:
 +
@@ -157,10 +209,25 @@ $NetBSD: patch-ab,v 1.2 2010/05/17 20:13:25 sketch Exp $
 +	temptime = strtol(args[2], NULL, 10);
 +	idle_time(idlebuf, sizeof(idlebuf), temptime);
 +
-+	snprintf(line, sizeof(line), "*** %c%-14.14s %6.6s %12.12s %s@%s %s",
-+		  args[0][0] == ' '?' ':'*', args[1], idlebuf, logbuf, args[5],
-+		  args[6], args[7]);
-+	printtext(server, NULL, MSGLEVEL_CRAP, line);
++	/* Update nicklist */
++	if (server->updatenicks) {
++		op = FALSE;
++#ifdef NO_MOD_SUPPORT_YET
++		switch(args[0][0]) {
++		case '*':
++		case 'm':
++			op = TRUE;
++			break;
++		}
++#endif
++		icb_nicklist_insert(server->group, args[1], op);
++	}
++	if (!server->silentwho) {
++		snprintf(line, sizeof(line), "*** %c%-14.14s %6.6s %12.12s %s@%s %s",
++			  args[0][0] == ' '?' ':'*', args[1], idlebuf, logbuf, args[5],
++			  args[6], args[7]);
++		printtext(server, NULL, MSGLEVEL_CRAP, line);
++	}
 +}
 +
  static void cmdout_default(ICB_SERVER_REC *server, char **args)
@@ -169,23 +236,254 @@ $NetBSD: patch-ab,v 1.2 2010/05/17 20:13:25 sketch Exp $
  
  	data = g_strjoinv(" ", args+1);
 -	printtext(server, server->group->name, MSGLEVEL_CRAP, "%s", data);
-+	printtext(server, NULL, MSGLEVEL_CRAP, "%s", data);
++	if (!server->silentwho) {
++		printtext(server, NULL, MSGLEVEL_CRAP, "%s", data);
++	}
          g_free(data);
  }
  
-@@ -115,6 +241,7 @@
++/*
++ * args0 = "Arrive"
++ * args0 = "<nickname> (<user>@<host>) entered group"
++ */
++static void status_arrive(ICB_SERVER_REC *server, char **args)
++{
++	char *nick, *p;
++
++	nick = g_strdup(args[1]);
++	p = strchr(nick, ' ');
++	*p = '\0';
++	/* XXX: new arrivals can still be moderator */
++	icb_nicklist_insert(server->group, nick, FALSE);
++        g_free(nick);
++
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++/*
++ * args0 = "Depart"
++ * args1 = "<nickname> (<user>@<host>) just left"
++ */
++static void status_depart(ICB_SERVER_REC *server, char **args)
++{
++	NICK_REC *nickrec;
++	char *nick, *p;
++
++	nick = g_strdup(args[1]);
++	p = strchr(nick, ' ');
++	*p = '\0';
++
++	nickrec = nicklist_find(CHANNEL(server->group), nick);
++	if (nickrec != NULL) {
++		nicklist_remove(CHANNEL(server->group), nickrec);
++	}
++	g_free(nick);
++
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++/*
++ * args0 = "Sign-on"
++ * args1 = "<nickname> (<user>@<host>) entered group"
++ */
++static void status_signon(ICB_SERVER_REC *server, char **args)
++{
++	char *nick, *p;
++
++	nick = g_strdup(args[1]);
++	p = strchr(nick, ' ');
++	*p = '\0';
++
++	icb_nicklist_insert(server->group, nick, FALSE);
++
++        g_free(nick);
++
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++/*
++ * args0 = "Sign-off"
++ * args1 = "<nickname> (<user>@<host>) has signed off."
++ */
++static void status_signoff(ICB_SERVER_REC *server, char **args)
++{
++	NICK_REC *nickrec;
++	char *nick, *p;
++
++	nick = g_strdup(args[1]);
++	p = strchr(nick, ' ');
++	*p = '\0';
++
++	nickrec = nicklist_find(CHANNEL(server->group), nick);
++	if (nickrec != NULL) {
++		nicklist_remove(CHANNEL(server->group), nickrec);
++	}
++	g_free(nick);
++
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++/*
++ * In theory should be status_status() but that's just silly :-)
++ *
++ * args0 = "Status"
++ * args0 = "You are now in group <group>[ as moderator]"
++ */
++static void status_join(ICB_SERVER_REC *server, char **args)
++{
++	icb_update_nicklist(server);
++
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++/*
++ * args0 = "Name"
++ * args1 = "<oldnick> changed nickname to <newnick>"
++ */
++static void status_name(ICB_SERVER_REC *server, char **args)
++{
++	NICK_REC *nickrec;
++	char *oldnick, *newnick, *p;
++
++	oldnick = g_strdup(args[1]);
++	p = strchr(oldnick, ' ');
++	if (p != NULL) *p = '\0';
++
++	p = g_strdup(args[1]);
++	newnick = strrchr(p, ' ');
++	if (newnick != NULL)
++	       newnick++;
++
++	nickrec = nicklist_find(CHANNEL(server->group), oldnick);
++	if (nickrec != NULL)
++		nicklist_rename(SERVER(server), oldnick, newnick);
++
++	/* Update our own nick */
++	if (strcmp(oldnick, server->connrec->nick) == 0) {
++		server_change_nick(SERVER(server), newnick);
++		g_free(server->connrec->nick);
++		server->connrec->nick = g_strdup(newnick);
++	}
++
++	g_free(oldnick);
++	g_free(p);
++
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++/*
++ * args0 = "Topic"
++ * args1 = "<nickname> changed the topic to "<topic>"
++ */
++static void status_topic(ICB_SERVER_REC *server, char **args)
++{
++	char *topic, *setby, *p1, *p2;
++
++	p1 = strchr(args[1], '"');
++	p2 = strrchr(args[1], '"');
++
++	if (p1++) {
++		topic = g_strdup(p1);
++		p2 = strrchr(topic, '"');
++		*p2 = '\0';
++
++		setby = g_strdup(args[1]);
++		p2 = strchr(setby, ' ');
++		*p2 = '\0';
++
++		icb_change_topic(server, topic, setby, time(NULL));
++
++		g_free(topic);
++		g_free(setby);
++	}
++
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++/*
++ * args0 = "Pass"
++ * args1 = "<nickname> just passed you moderation of group <group>"
++ * args1 = "<nickname> has passed moderation to <nickname>"
++ * args1 = "<nickname> is now mod."
++ *
++ * If the moderator signs off and you are passed moderation, then the third
++ * args1 is used.
++ *
++ */
++static void status_pass(ICB_SERVER_REC *server, char **args)
++{
++	/*
++	 * Eventually we might want to track this, for now just print status
++	 * to the group window
++	 */
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
++static void status_default(ICB_SERVER_REC *server, char **args)
++{
++	/* Send messages to the group window by default */
++	printformat(server, server->group->name, MSGLEVEL_CRAP,
++		    ICBTXT_STATUS, args[0], args[1]);
++}
++
+ static void sig_server_add_fill(SERVER_SETUP_REC *rec,
+ 				GHashTable *optlist)
+ {
+@@ -109,13 +485,23 @@
+ {
+ 	theme_register(fecommon_icb_formats);
+ 
+-	signal_add("icb event status", (SIGNAL_FUNC) event_status);
+         signal_add("icb event error", (SIGNAL_FUNC) event_error);
+         signal_add("icb event important", (SIGNAL_FUNC) event_important);
          signal_add("icb event beep", (SIGNAL_FUNC) event_beep);
          signal_add("icb event open", (SIGNAL_FUNC) event_open);
          signal_add("icb event personal", (SIGNAL_FUNC) event_personal);
++        signal_add("icb cmdout co", (SIGNAL_FUNC) cmdout_co);
 +        signal_add("icb cmdout wl", (SIGNAL_FUNC) cmdout_wl);
          signal_add("default icb cmdout", (SIGNAL_FUNC) cmdout_default);
++        signal_add("icb status arrive", (SIGNAL_FUNC) status_arrive);
++        signal_add("icb status depart", (SIGNAL_FUNC) status_depart);
++        signal_add("icb status sign-on", (SIGNAL_FUNC) status_signon);
++        signal_add("icb status sign-off", (SIGNAL_FUNC) status_signoff);
++        signal_add("icb status status", (SIGNAL_FUNC) status_join);
++        signal_add("icb status topic", (SIGNAL_FUNC) status_topic);
++        signal_add("icb status name", (SIGNAL_FUNC) status_name);
++        signal_add("icb status pass", (SIGNAL_FUNC) status_pass);
++        signal_add("default icb status", (SIGNAL_FUNC) status_default);
  
  	signal_add("server add fill", (SIGNAL_FUNC) sig_server_add_fill);
-@@ -131,6 +258,7 @@
+ 	command_set_options("server add", "-icbnet");
+@@ -125,13 +511,23 @@
+ 
+ void fe_icb_deinit(void)
+ {
+-        signal_remove("icb event status", (SIGNAL_FUNC) event_status);
+         signal_remove("icb event error", (SIGNAL_FUNC) event_error);
+         signal_remove("icb event important", (SIGNAL_FUNC) event_important);
          signal_remove("icb event beep", (SIGNAL_FUNC) event_beep);
          signal_remove("icb event open", (SIGNAL_FUNC) event_open);
          signal_remove("icb event personal", (SIGNAL_FUNC) event_personal);
++        signal_remove("icb cmdout co", (SIGNAL_FUNC) cmdout_co);
 +        signal_remove("icb cmdout wl", (SIGNAL_FUNC) cmdout_wl);
          signal_remove("default icb cmdout", (SIGNAL_FUNC) cmdout_default);
++        signal_remove("icb status arrive", (SIGNAL_FUNC) status_arrive);
++        signal_remove("icb status depart", (SIGNAL_FUNC) status_depart);
++        signal_remove("icb status sign-on", (SIGNAL_FUNC) status_signon);
++        signal_remove("icb status sign-off", (SIGNAL_FUNC) status_signoff);
++        signal_remove("icb status status", (SIGNAL_FUNC) status_join);
++        signal_remove("icb status topic", (SIGNAL_FUNC) status_topic);
++        signal_remove("icb status name", (SIGNAL_FUNC) status_name);
++        signal_remove("icb status pass", (SIGNAL_FUNC) status_pass);
++        signal_remove("default icb status", (SIGNAL_FUNC) status_default);
  
  	signal_remove("server add fill", (SIGNAL_FUNC) sig_server_add_fill);
+ }
