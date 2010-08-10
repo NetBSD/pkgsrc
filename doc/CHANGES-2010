@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2819 2010/08/10 15:47:09 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2820 2010/08/10 16:01:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3733,3 +3733,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29 to 2.9.1 [taca 2010-08-10]
 	Updated www/contao29-translations to 20100809 [taca 2010-08-10]
 	Updated www/typo3 to 4.4.2 [taca 2010-08-10]
+	Updated www/geeklog to 1.7.0 [taca 2010-08-10]
