@@ -1,11 +1,10 @@
-$NetBSD: patch-aj,v 1.4 2009/11/30 15:44:45 taca Exp $
+$NetBSD: patch-aj,v 1.5 2010/08/10 16:00:42 taca Exp $
 
 * Change for pkgsrc.
-* Output Content-Type header explicitly.
 
---- public_html/admin/install/index.php.orig	2009-08-30 18:08:41.000000000 +0900
+--- public_html/admin/install/index.php.orig	2010-04-25 06:56:58.000000000 +0000
 +++ public_html/admin/install/index.php
-@@ -867,16 +867,8 @@ function INST_defaultPluginInstall()
+@@ -918,16 +918,8 @@ function INST_defaultPluginInstall()
  // | Main                                                                      |
  // +---------------------------------------------------------------------------+
  
