@@ -1,15 +1,20 @@
-$NetBSD: patch-aj,v 1.1 2010/08/10 07:49:57 asau Exp $
+$NetBSD: patch-aj,v 1.2 2010/08/10 08:26:20 asau Exp $
 
 Fix staged installation.
 
 --- packages/http/Makefile.in.orig	2010-08-04 21:36:28.000000000 +0400
-+++ packages/http/Makefile.in	2010-08-10 11:26:28.000000000 +0400
-@@ -110,7 +110,7 @@
++++ packages/http/Makefile.in	2010-08-10 12:22:07.000000000 +0400
+@@ -110,11 +110,11 @@
  		$(INSTALL_PROGRAM) $(SOLIBS) $(BINTARGET)
  		mkdir -p $(PLTARGET)
  		mkdir -p $(PLTARGET)/web/icons
 -		mkdir -p $(LIBDIR)/web/css
-+		mkdir -p $(DESTDIR)$(LIBDIR)/web/css
++		mkdir -p $(PLTARGET)/web/css
  		$(INSTALL_DATA) $(LIBPL) $(PLTARGET)
  		$(INSTALL_DATA) $(srcdir)/README $(PLTARGET)
  		$(INSTALL_DATA) $(srcdir)/web/icons/*.png $(PLTARGET)/web/icons
+-		$(INSTALL_DATA) $(srcdir)/web/css/*.css $(DESTDIR)$(LIBDIR)/web/css
++		$(INSTALL_DATA) $(srcdir)/web/css/*.css $(PLTARGET)/web/css
+ 		$(PL) -f none -g make -t halt
+ 
+ ln-install:	$(LIBPL)
