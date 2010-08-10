@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/10 17:03:39 drochner Exp $
+
+--- setup.py.orig	2010-02-25 01:42:13.000000000 +0000
++++ setup.py
+@@ -83,7 +83,7 @@ setup(
+ 
+     entry_points = {
+         'console_scripts': [
+-            'coverage = coverage:main',
++            'coverage%s = coverage:main' % sys.version[:3],
+             ]
+         },
+ 
