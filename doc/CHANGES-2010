@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2813 2010/08/10 08:50:14 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2814 2010/08/10 10:33:22 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3727,3 +3727,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Dir-Self version 0.10 [seb 2010-08-09]
 	Updated lang/yap to 6.0.6 [asau 2010-08-10]
 	Updated databases/py-mysqldb to 1.2.3 [tron 2010-08-10]
+	Updated lang/racket to 5.0.1 [asau 2010-08-10]
