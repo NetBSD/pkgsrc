@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1 2010/08/10 20:26:36 sketch Exp $
+
+--- src/core/icb-servers.h	(revision 5174)
++++ src/core/icb-servers.h	(working copy)
+@@ -31,6 +31,9 @@
+ 	unsigned char *sendbuf;
+ 	int sendbuf_size;
+ 
++	int silentwho;		/* silence /who output when updating nicks */
++	int updatenicks;	/* parse /who output for topic/nicks */
++
+ 	unsigned char *recvbuf;
+ 	int recvbuf_size, recvbuf_pos;
+         int recvbuf_next_packet;
