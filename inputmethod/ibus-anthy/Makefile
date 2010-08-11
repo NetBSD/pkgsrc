@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 01:50:52 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/11 13:11:57 obache Exp $
 #
 
 DISTNAME=	ibus-anthy-1.2.1
@@ -32,6 +32,8 @@ SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	engine/ibus-engine-anthy.in setup/ibus-setup-anthy.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
+
+.include "../../inputmethod/ibus/bad-env-usage.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
