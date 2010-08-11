@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2010/02/25 11:30:03 drochner Exp $
+$NetBSD: distinfo,v 1.8 2010/08/11 13:28:08 drochner Exp $
 
-SHA1 (pinentry-0.7.6.tar.gz) = 0c525ce81e5589bc9a4f2eb72705bed2b3e9a8b9
-RMD160 (pinentry-0.7.6.tar.gz) = 6e69eee88b5cbb919ced79971cd4794f5e659023
-Size (pinentry-0.7.6.tar.gz) = 475101 bytes
+SHA1 (pinentry-0.8.0.tar.gz) = 381f9ee47b9f198e1be5d3ec4e043067a7e97912
+RMD160 (pinentry-0.8.0.tar.gz) = 966e830fb86c1820057979f581ca71f82a4fc9e0
+Size (pinentry-0.8.0.tar.gz) = 487629 bytes
 SHA1 (patch-aa) = cd30ad4f3a3737687dc5786ebd861ef3b17c600e
-SHA1 (patch-ab) = 2b38195696dc841c5ae9c895e324d27c887d672a
-SHA1 (patch-ac) = 1974e3ea91c187544a2c240547fe76e0b3a5da60
+SHA1 (patch-ad) = 3e0cbe86d0b6c192e9598ec486adc48783fbc9cb
+SHA1 (patch-ae) = 0a8fb600b4f8c28c7e6f0eae69a0eacfce38f4c9
