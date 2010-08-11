@@ -76,3 +76,5 @@ Pullup ticket #3199 - requested by gls
 security/gnupg2: security patch
 Pullup ticket #3200 - requested by tnn
 graphics/freetype2: security update
+Pulluped ticket #3201 - requested by gls
+archivers/cabextract: security update
