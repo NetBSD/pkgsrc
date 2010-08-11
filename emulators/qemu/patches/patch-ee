@@ -1,7 +1,7 @@
-$NetBSD: patch-ee,v 1.1 2010/05/17 14:31:07 tsutsui Exp $
+$NetBSD: patch-ee,v 1.2 2010/08/11 17:05:13 tsutsui Exp $
 
-See NetBSD PR pkg/43311 and QEMU Bugs #581737:
-https://bugs.launchpad.net/qemu/+bug/581737
+qemu-0.13.x will include this fix:
+http://git.qemu.org/qemu.git/commit/?id=9651ac55e5de0e1534d898316cc851af6ffc4334
 
 --- hw/e1000.c.orig	2010-02-24 05:54:38.000000000 +0900
 +++ hw/e1000.c	2010-05-08 04:04:39.000000000 +0900
