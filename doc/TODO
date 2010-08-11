@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9529 2010/08/11 13:13:24 wiz Exp $
+$NetBSD: TODO,v 1.9530 2010/08/11 20:07:05 asau Exp $
 
 Suggested new packages
 ======================
@@ -986,7 +986,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o netpipe-3.6.2
 	o netramet-50
 	o newmail-1.0.2
-	o newmat-11 [pkg/43741]
 	o newt-0.52.2 (ubuntu)
 	o ng-1.4.4
 	o nikto-2.0.1
