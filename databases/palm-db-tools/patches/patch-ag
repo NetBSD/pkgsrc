@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2010/08/11 12:21:56 dsainty Exp $
+
+Don't unnecessarily remove const, which complicates casting.
+
+--- libflatfile/MobileDB.cpp.orig	2010-08-08 23:23:04.940277744 +1200
++++ libflatfile/MobileDB.cpp	2010-08-08 23:24:13.267340616 +1200
+@@ -221,7 +221,7 @@
+         if (field + 1 > fields.size()) fields.resize(field + 1);
+ 
+         // Now search for the end of the current field.
+-        pi_char_t* q = reinterpret_cast<pi_char_t*>
++        const pi_char_t* q = reinterpret_cast<const pi_char_t*>
+             (memchr(p, 0, rec.end() - p));
+         if (!q)
+             throw PalmLib::error("field terminiator is missing");

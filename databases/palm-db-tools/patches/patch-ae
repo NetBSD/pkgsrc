@@ -1,10 +1,21 @@
-$NetBSD: patch-ae,v 1.1 2007/10/21 03:53:45 dsainty Exp $
+$NetBSD: patch-ae,v 1.2 2010/08/11 12:21:56 dsainty Exp $
+
+Don't unnecessarily remove const, which complicates casting.
 
 Correctly terminate default string values on NUL.
 
 --- libflatfile/DB.cpp.orig	2003-06-20 11:37:46.000000000 +1200
-+++ libflatfile/DB.cpp	2007-10-12 17:57:05.000000000 +1300
-@@ -275,7 +276,8 @@
++++ libflatfile/DB.cpp	2010-08-08 23:26:16.387306351 +1200
+@@ -221,7 +221,7 @@
+             throw PalmLib::error("list view is corrupt");
+ 
+         // Determine the length of the name string.
+-        pi_char_t* null_ptr = reinterpret_cast<pi_char_t*>
++        const pi_char_t* null_ptr = reinterpret_cast<const pi_char_t*>
+             (memchr(chunk.data() + 4, 0, 32));
+         if (null_ptr)
+             lv.name = std::string((char *) (chunk.data() + 4),
+@@ -275,7 +275,8 @@
          switch (type) {
  
              case PalmLib::FlatFile::Field::STRING:
