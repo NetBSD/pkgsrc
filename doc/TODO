@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9530 2010/08/11 20:07:05 asau Exp $
+$NetBSD: TODO,v 1.9531 2010/08/11 20:33:50 asau Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mtr-0.80
 	o multitail-5.2.6
 	o munin-1.4.4
-	o muparser-132 [pkg/43743]
 	o muse-0.9.2
 	o mysql51-client-5.1.49
 	o nagios-3.2.0
