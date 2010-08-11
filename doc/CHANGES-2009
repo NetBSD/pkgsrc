@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4710 2010/06/19 14:47:36 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4711 2010/08/11 11:41:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6158,6 +6158,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/pam_ssh_agent_auth version 0.9.1 [agc 2009-12-11]
 	Updated mail/dovecot to 1.2.8 [ghen 2009-12-11]
 	Removed mail/dovecot-sieve [ghen 2009-12-11]
+	Added math/muparser version 130 [drochner 2009-12-11]
 	Updated inputmethod/scim-anthy to 1.2.7nb1 [obache 2009-12-12]
 	Updated mbone/common-mml to 1.2.16nb4 [snj 2009-12-12]
 	Added parallel/openmpi version 1.4 [asau 2009-12-13]
