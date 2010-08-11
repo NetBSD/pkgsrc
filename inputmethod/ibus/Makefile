@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 01:48:31 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/11 13:11:56 obache Exp $
 #
 
 DISTNAME=	ibus-1.3.7
@@ -40,6 +40,8 @@ SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
+
+.include "bad-env-usage.mk"
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
