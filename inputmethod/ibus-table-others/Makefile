@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 02:20:15 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/11 12:32:00 obache Exp $
 #
 
 DISTNAME=	ibus-table-others-1.3.0.20100528
@@ -16,5 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pkg-config
 
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/python/application.mk"
 .include "../../inputmethod/ibus-table/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
