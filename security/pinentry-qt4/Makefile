@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/11 13:29:19 drochner Exp $
 #
 
-DISTNAME=		pinentry-0.7.6
-PKGNAME=		pinentry-qt4-0.7.6
-PKGREVISION=		1
+DISTNAME=		pinentry-0.8.0
+PKGNAME=		pinentry-qt4-0.8.0
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 
@@ -32,6 +31,11 @@ USE_TOOLS+=		pkg-config gmake
 INFO_FILES=		yes
 
 INSTALL_DIRS=		qt4
+
+post-configure:
+	cd $(WRKSRC)/qt4 && \
+	$(QTDIR)/bin/moc pinentrydialog.h -o pinentrydialog.moc && \
+	$(QTDIR)/bin/moc qsecurelineedit.h -o qsecurelineedit.moc
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 .include "../../x11/qt4-libs/buildlink3.mk"
