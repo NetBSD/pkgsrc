@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2822 2010/08/11 12:45:31 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2823 2010/08/11 20:07:05 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3736,3 +3736,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/geeklog to 1.7.0 [taca 2010-08-10]
 	Updated chat/irssi-icb to 0.14nb18 [sketch 2010-08-10]
 	Updated inputmethod/ibus-skk to 0.0.10nb1 [obache 2010-08-11]
+	Updated math/newmat to 11 [asau 2010-08-11]
