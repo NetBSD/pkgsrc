@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 20:47:52 joerg Exp $
-include/newmat/boolean.h
+@comment $NetBSD: PLIST,v 1.4 2010/08/11 20:06:25 asau Exp $
 include/newmat/controlw.h
 include/newmat/include.h
 include/newmat/myexcept.h
@@ -8,6 +7,9 @@ include/newmat/newmatap.h
 include/newmat/newmatio.h
 include/newmat/newmatnl.h
 include/newmat/newmatrc.h
+include/newmat/newmatrm.h
 include/newmat/precisio.h
+include/newmat/solution.h
+include/newmat/tmt.h
 lib/libnewmat.a
-share/doc/html/newmat/index.html
+share/doc/newmat/index.html
