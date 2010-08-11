@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/07/18 12:19:47 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2010/08/11 19:11:55 tsutsui Exp $
 
 SNAPSHOT_DATE=		20090920
 
@@ -30,6 +30,10 @@ BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
 .  endif
 .elif ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--disable-asm
+.elif ${MACHINE_ARCH} == "arm"
+.  if ${OPSYS} == "NetBSD"	# pre-ARMv6 is default on NetBSD/arm
+CONFIGURE_ARGS+=	--disable-asm
+.  endif
 .endif
 
 USE_TOOLS+=		gmake bash
