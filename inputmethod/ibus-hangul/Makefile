@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 01:58:15 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/11 13:11:57 obache Exp $
 #
 
 DISTNAME=	ibus-hangul-1.3.0.20100329
@@ -21,6 +21,8 @@ SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	setup/ibus-setup-hangul.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
+
+.include "../../inputmethod/ibus/bad-env-usage.mk"
 
 BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.0.10
 .include "../../inputmethod/libhangul/buildlink3.mk"
