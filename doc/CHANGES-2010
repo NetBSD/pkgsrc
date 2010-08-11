@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2824 2010/08/11 20:33:50 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2825 2010/08/11 21:57:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3738,3 +3738,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ibus-skk to 0.0.10nb1 [obache 2010-08-11]
 	Updated math/newmat to 11 [asau 2010-08-11]
 	Updated math/muparser to 132 [asau 2010-08-11]
+	Updated www/drupal6 to 6.18 [taca 2010-08-11]
