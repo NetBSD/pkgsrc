@@ -1,9 +1,9 @@
-$NetBSD: patch-ak,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+$NetBSD: patch-ak,v 1.2 2010/08/11 23:18:04 taca Exp $
 
---- mysql-test/Makefile.in.orig	2010-02-04 11:46:20.000000000 +0000
+--- mysql-test/Makefile.in.orig	2010-07-09 12:38:13.000000000 +0000
 +++ mysql-test/Makefile.in
-@@ -401,7 +401,7 @@ yassl_libs = @yassl_libs@
- yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
+@@ -402,7 +402,7 @@ yassl_taocrypt_extra_cxxflags = @yassl_t
+ yassl_thread_cxxflags = @yassl_thread_cxxflags@
  zlib_dir = @zlib_dir@
  testroot = $(prefix)
 -testdir = $(testroot)/mysql-test
