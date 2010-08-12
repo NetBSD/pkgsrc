@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/05/28 07:40:22 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/12 02:09:22 obache Exp $
 #
 
-DISTNAME=	milter-manager-1.4.2
-PKGREVISION=	1
+DISTNAME=	milter-manager-1.6.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
 
@@ -58,6 +57,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/milter-manager \
 	applicable-conditions/restrict-accounts.conf \
 	applicable-conditions/s25r.conf \
 	applicable-conditions/sendmail-compatible.conf \
+	applicable-conditions/stress.conf \
+	applicable-conditions/trust.conf \
 	defaults/pkgsrc.conf
 CONF_FILES+=	${EGDIR}/${conf} ${PKG_SYSCONFDIR}/${conf}
 .endfor

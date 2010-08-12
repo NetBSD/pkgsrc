@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 12:40:23 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/12 02:09:22 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-test-client
+bin/milter-test-client-libmilter
 bin/milter-test-server
 include/milter-manager/libmilter/libmilter/mfapi.h
 include/milter-manager/libmilter/libmilter/mfdef.h
 include/milter-manager/milter/client.h
 include/milter-manager/milter/client/milter-client-context.h
 include/milter-manager/milter/client/milter-client-enum-types.h
+include/milter-manager/milter/client/milter-client-objects.h
+include/milter-manager/milter/client/milter-client-private.h
 include/milter-manager/milter/core.h
 include/milter-manager/milter/core/milter-agent.h
 include/milter-manager/milter/core/milter-command-decoder.h
@@ -22,6 +25,7 @@ include/milter-manager/milter/core/milter-finished-emittable.h
 include/milter-manager/milter/core/milter-headers.h
 include/milter-manager/milter/core/milter-logger.h
 include/milter-manager/milter/core/milter-macros-requests.h
+include/milter-manager/milter/core/milter-memory-profile.h
 include/milter-manager/milter/core/milter-message-result.h
 include/milter-manager/milter/core/milter-option.h
 include/milter-manager/milter/core/milter-protocol-agent.h
@@ -30,6 +34,7 @@ include/milter-manager/milter/core/milter-reader.h
 include/milter-manager/milter/core/milter-reply-decoder.h
 include/milter-manager/milter/core/milter-reply-encoder.h
 include/milter-manager/milter/core/milter-reply-signals.h
+include/milter-manager/milter/core/milter-session-result.h
 include/milter-manager/milter/core/milter-syslog-logger.h
 include/milter-manager/milter/core/milter-utils.h
 include/milter-manager/milter/core/milter-version.h
@@ -71,18 +76,29 @@ lib/milter-manager/binding/ext/milter_manager.la
 lib/milter-manager/binding/ext/milter_toolkit.la
 lib/milter-manager/binding/lib/milter.rb
 lib/milter-manager/binding/lib/milter/client.rb
+lib/milter-manager/binding/lib/milter/client/command-line.rb
 lib/milter-manager/binding/lib/milter/compatible.rb
 lib/milter-manager/binding/lib/milter/manager.rb
+lib/milter-manager/binding/lib/milter/manager/address-matcher.rb
+lib/milter-manager/binding/lib/milter/manager/breaker.rb
 lib/milter-manager/binding/lib/milter/manager/child-context.rb
 lib/milter-manager/binding/lib/milter/manager/clamav-milter-config-parser.rb
+lib/milter-manager/binding/lib/milter/manager/condition-table.rb
+lib/milter-manager/binding/lib/milter/manager/connection-check-context.rb
 lib/milter-manager/binding/lib/milter/manager/debian-init-detector.rb
 lib/milter-manager/binding/lib/milter/manager/detector.rb
 lib/milter-manager/binding/lib/milter/manager/enma-socket-detector.rb
+lib/milter-manager/binding/lib/milter/manager/exception.rb
 lib/milter-manager/binding/lib/milter/manager/freebsd-rc-detector.rb
 lib/milter-manager/binding/lib/milter/manager/init-detector.rb
 lib/milter-manager/binding/lib/milter/manager/milter-greylist-config-parser.rb
+lib/milter-manager/binding/lib/milter/manager/netstat-connection-checker.rb
 lib/milter-manager/binding/lib/milter/manager/opendkim-config-parser.rb
 lib/milter-manager/binding/lib/milter/manager/pkgsrc-rc-detector.rb
+lib/milter-manager/binding/lib/milter/manager/policy-manager.rb
+lib/milter-manager/binding/lib/milter/manager/postfix-cidr-table.rb
+lib/milter-manager/binding/lib/milter/manager/postfix-condition-table-parser.rb
+lib/milter-manager/binding/lib/milter/manager/postfix-regexp-table.rb
 lib/milter-manager/binding/lib/milter/manager/rcng-detector.rb
 lib/milter-manager/binding/lib/milter/manager/redhat-detector.rb
 lib/milter-manager/binding/lib/milter/manager/redhat-init-detector.rb
@@ -106,6 +122,7 @@ man/man1/milter-performance-check.1
 man/man1/milter-test-client.1
 man/man1/milter-test-server.1
 sbin/milter-manager
+share/doc/milter-manager/available-milters.html
 share/doc/milter-manager/commands.html
 share/doc/milter-manager/configuration.html
 share/doc/milter-manager/home.png
@@ -125,6 +142,7 @@ share/doc/milter-manager/install.html
 share/doc/milter-manager/introduction.html
 share/doc/milter-manager/ja/api-index-deprecated.xml
 share/doc/milter-manager/ja/api-index-full.xml
+share/doc/milter-manager/ja/available-milters.html
 share/doc/milter-manager/ja/client.xml
 share/doc/milter-manager/ja/commands.html
 share/doc/milter-manager/ja/configuration.html
@@ -216,6 +234,9 @@ share/doc/milter-manager/ja/news.html
 share/doc/milter-manager/ja/readme.html
 share/doc/milter-manager/ja/reverse-dictionary.html
 share/doc/milter-manager/ja/right.png
+share/doc/milter-manager/ja/ruby-milter-reference.html
+share/doc/milter-manager/ja/ruby-milter-tutorial.html
+share/doc/milter-manager/ja/ruby.html
 share/doc/milter-manager/ja/sendmail-and-milter-ja.png
 share/doc/milter-manager/ja/sendmail-and-milter.png
 share/doc/milter-manager/ja/sendmail-and-postfix-and-milter-ja.png
@@ -250,6 +271,9 @@ share/doc/milter-manager/news.html
 share/doc/milter-manager/readme.html
 share/doc/milter-manager/reverse-dictionary.html
 share/doc/milter-manager/right.png
+share/doc/milter-manager/ruby-milter-reference.html
+share/doc/milter-manager/ruby-milter-tutorial.html
+share/doc/milter-manager/ruby.html
 share/doc/milter-manager/sendmail-and-milter-ja.png
 share/doc/milter-manager/sendmail-and-milter.png
 share/doc/milter-manager/sendmail-and-postfix-and-milter-ja.png
@@ -272,6 +296,8 @@ share/examples/milter-manager/applicable-conditions/remote-network.conf
 share/examples/milter-manager/applicable-conditions/restrict-accounts.conf
 share/examples/milter-manager/applicable-conditions/s25r.conf
 share/examples/milter-manager/applicable-conditions/sendmail-compatible.conf
+share/examples/milter-manager/applicable-conditions/stress.conf
+share/examples/milter-manager/applicable-conditions/trust.conf
 share/examples/milter-manager/cron.d/debian/milter-manager-log
 share/examples/milter-manager/cron.d/freebsd/milter-manager-log
 share/examples/milter-manager/cron.d/redhat/milter-manager-log
@@ -445,6 +471,7 @@ share/milter-manager/admin/vendor/plugins/restful-auth/lib/authentication/by_pas
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/authorization.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/authorization/aasm_roles.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/authorization/stateful_roles.rb
+share/milter-manager/admin/vendor/plugins/restful-auth/lib/tasks/auth.rake
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/trustification.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/trustification/email_validation.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/notes/AccessControl.txt
@@ -458,10 +485,15 @@ share/milter-manager/admin/vendor/plugins/restful-auth/notes/Tradeoffs.txt
 share/milter-manager/admin/vendor/plugins/restful-auth/notes/Trustification.txt
 share/milter-manager/admin/vendor/plugins/restful-auth/rails/init.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/restful-authentication.gemspec
-share/milter-manager/admin/vendor/plugins/restful-auth/tasks/auth.rake
 share/milter-manager/license/agpl.txt
 share/milter-manager/license/fdl.txt
 share/milter-manager/license/gpl.txt
 share/milter-manager/license/lgpl.txt
 share/milter-manager/license/ruby.ja.txt
 share/milter-manager/license/ruby.txt
+share/milter-manager/munin/plugins/milter_manager_
+share/milter-manager/munin/plugins/milter_manager_memory
+share/milter-manager/munin/plugins/postfix_processes
+share/milter-manager/munin/plugins/sendmail_processes
+share/milter-manager/sample/ruby/milter-regexp.rb
+share/milter-manager/sample/ruby/milter-test-client.rb
