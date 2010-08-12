@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9531 2010/08/11 20:33:50 asau Exp $
+$NetBSD: TODO,v 1.9532 2010/08/12 12:54:08 obache Exp $
 
 Suggested new packages
 ======================
@@ -1330,6 +1330,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529]
+	o uim-1.6.0
 	o unicap-0.9.8
 	o units-88 [pkg/43742]
 	o ups-nut-2.2.1 [pkgsrc-wip]
