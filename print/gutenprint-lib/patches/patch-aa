@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2008/12/20 00:54:17 gdt Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/12 12:22:44 gdt Exp $
+
+Force, somewhat hackishly, the use of cups lpstat.  Probably upstream
+should find these paths at configure time.
 
 --- src/gutenprintui2/plist.c.orig	2008-02-02 11:06:55.000000000 -0500
 +++ src/gutenprintui2/plist.c
