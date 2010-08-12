@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2830 2010/08/12 10:23:01 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2831 2010/08/12 12:15:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3751,3 +3751,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/milter-manager to 1.6.0 [obache 2010-08-12]
 	Updated lang/ksi to 3.9.0 [asau 2010-08-12]
 	Updated lang/tinyscheme to 1.39 [asau 2010-08-12]
+	Updated print/gutenprint-lib to 5.2.6 [gdt 2010-08-12]
