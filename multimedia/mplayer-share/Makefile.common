@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2010/01/03 23:42:44 ahoka Exp $
+# $NetBSD: Makefile.common,v 1.45 2010/08/12 15:28:46 tsutsui Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -59,6 +59,21 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR:Q}
 # The configure script misdetects endianness on mipseb
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipseb"
 CONFIGURE_ARGS+=        --enable-big-endian
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm)
+# Avoid crash with system include file:
+pre-patch:
+	mv ${WRKSRC}/libavutil/arm/bswap.h ${WRKSRC}/libavutil/arm/avbswap.h
+
+SUBST_CLASSES+=			arm_bswap
+SUBST_STAGE.arm_bswap=		pre-configure
+SUBST_FILES.arm_bswap=		libavutil/bswap.h
+SUBST_SED.arm_bswap=		-e s,\"arm/bswap.h\",\"arm/avbswap.h\",g
+SUBST_MESSAGE.arm_bswap=	Fixing "arm/bswap.h" conflict in libavutil
+
+# autodetect code enables these options on NetBSD/arm but it should not
+CONFIGURE_ARGS+=        --disable-armv5te --disable-armv6 --disable-armv6t2
 .endif
 
 .include "../../multimedia/mplayer-share/options.mk"
