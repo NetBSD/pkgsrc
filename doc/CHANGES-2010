@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2827 2010/08/12 00:50:15 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2828 2010/08/12 02:09:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3748,3 +3748,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/drupal6 to 6.18 [taca 2010-08-11]
 	Updated databases/mysql51-client to 5.1.49 [taca 2010-08-11]
 	Updated databases/mysql51-server to 5.1.49 [taca 2010-08-11]
+	Updated mail/milter-manager to 1.6.0 [obache 2010-08-12]
