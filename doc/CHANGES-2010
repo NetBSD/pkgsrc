@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2828 2010/08/12 02:09:36 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2829 2010/08/12 09:28:32 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3749,3 +3749,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-client to 5.1.49 [taca 2010-08-11]
 	Updated databases/mysql51-server to 5.1.49 [taca 2010-08-11]
 	Updated mail/milter-manager to 1.6.0 [obache 2010-08-12]
+	Updated lang/ksi to 3.9.0 [asau 2010-08-12]
