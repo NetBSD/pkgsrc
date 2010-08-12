@@ -1,179 +1,65 @@
-$NetBSD: patch-aa,v 1.6 2009/11/26 00:48:58 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2010/08/12 10:22:41 asau Exp $
 
---- makefile	2003-01-07 19:01:04.000000000 +0000
-+++ makefile	2005-03-24 16:19:11.000000000 +0000
-@@ -1,84 +1,90 @@
--# Makefile for TinyScheme 
--# Time-stamp: <2002-06-24 14:13:27 gildea> 
--  
--# Windows/2000 
--#CC = cl -nologo 
--#DEBUG= -W3 -Z7 -MD 
--#DL_FLAGS= 
--#SYS_LIBS= 
--#Osuf=obj 
--#SOsuf=dll 
--#LIBsuf=.lib
--#EXE_EXT=.exe 
--#LD = link -nologo 
--#LDFLAGS = -debug -map -dll -incremental:no 
--#LIBPREFIX = 
--#OUT = -out:$@ 
--#RM= -del
--#AR= echo
--
--# Unix, generally 
+--- makefile.orig	2006-12-07 13:29:24.000000000 +0300
++++ makefile	2010-08-12 14:14:07.000000000 +0400
+@@ -18,7 +18,7 @@
+ #AR= echo
+ 
+ # Unix, generally 
 -CC = gcc -fpic 
--DEBUG=-g -Wall -Wno-char-subscripts -O 
--Osuf=o 
--SOsuf=so 
--LIBsuf=a
--EXE_EXT=
--LIBPREFIX=lib
--OUT = -o $@ 
--RM= -rm -f
--AR= ar crs
-- 
--# Linux 
--LD = gcc 
--LDFLAGS = -shared 
--DEBUG=-g -Wno-char-subscripts -O
++#CC = gcc -fpic 
+ DEBUG=-g -Wall -Wno-char-subscripts -O 
+ Osuf=o 
+ SOsuf=so 
+@@ -28,16 +28,17 @@
+ OUT = -o $@ 
+ RM= -rm -f
+ AR= ar crs
++SYS_LIBS= -lm
+  
+ # Linux 
+ LD = gcc 
+ LDFLAGS = -shared 
+ DEBUG=-g -Wno-char-subscripts -O
 -SYS_LIBS= -ldl
--PLATFORM_FEATURES= -DSUN_DL=1
--
-- 
--# Solaris 
--#SYS_LIBS= -ldl -lc 
--#Osuf=o 
--#SOsuf=so 
--#EXE_EXT= 
--#LD = ld 
--#LDFLAGS = -G -Bsymbolic -z text 
--#LIBPREFIX = lib 
--#OUT = -o $@ 
-- 
--FEATURES = $(PLATFORM_FEATURES) -DUSE_DL=1 -DUSE_MATH=0 -DUSE_ASCII_NAMES=0 
-- 
--OBJS = scheme.$(Osuf) dynload.$(Osuf) 
-- 
--LIBTARGET = $(LIBPREFIX)tinyscheme.$(SOsuf) 
--STATICLIBTARGET = $(LIBPREFIX)tinyscheme.$(LIBsuf)
--
++#SYS_LIBS= -ldl
+ PLATFORM_FEATURES= -DSUN_DL=1
+ 
+ # Cygwin
+-PLATFORM_FEATURES = -DUSE_STRLWR=0
++#PLATFORM_FEATURES = -DUSE_STRLWR=0
+ 
+  
+ # Solaris 
+@@ -57,19 +58,23 @@
+ LIBTARGET = $(LIBPREFIX)tinyscheme.$(SOsuf) 
+ STATICLIBTARGET = $(LIBPREFIX)tinyscheme.$(LIBsuf)
+ 
 -all: $(LIBTARGET) $(STATICLIBTARGET) scheme$(EXE_EXT)
--
++all: $(STATICLIBTARGET) scheme$(EXE_EXT)
+ 
 -%.$(Osuf): %.c 
 -	$(CC) -I. -c $(DEBUG) $(FEATURES) $(DL_FLAGS) $< 
 -
 -$(LIBTARGET): $(OBJS) 
 -	$(LD) $(LDFLAGS) $(OUT) $(OBJS) $(SYS_LIBS) 
--
--scheme$(EXE_EXT): $(OBJS) 
++.c.$(Osuf):
++	$(LIBTOOL) --mode=compile $(CC) -I. -c $(DEBUG) $(FEATURES) $(DL_FLAGS) $< 
+ 
+ scheme$(EXE_EXT): $(OBJS) 
 -	$(CC) -o $@ $(DEBUG) $(OBJS) $(SYS_LIBS) 
--
--$(STATICLIBTARGET): $(OBJS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(DEBUG) $(OBJS) $(LIBS:.a=.la) $(SYS_LIBS) 
+ 
+ $(STATICLIBTARGET): $(OBJS)
 -	$(AR) $@ $(OBJS)
--
--$(OBJS): scheme.h scheme-private.h opdefines.h
--dynload.$(Osuf): dynload.h 
--
--clean: 
--	$(RM) $(OBJS) $(LIBTARGET) $(STATICLIBTARGET) scheme$(EXE_EXT)
--	$(RM) tinyscheme.ilk tinyscheme.map tinyscheme.pdb tinyscheme.exp
--	$(RM) scheme.ilk scheme.map scheme.pdb scheme.lib scheme.exp
--	$(RM) *~
--
--TAGS_SRCS = scheme.h scheme.c dynload.h dynload.c
--
--tags: TAGS 
--TAGS: $(TAGS_SRCS) 
--	etags $(TAGS_SRCS) 
-+# Makefile for TinyScheme 
-+# Time-stamp: <2002-06-24 14:13:27 gildea> 
-+  
-+# Windows/2000 
-+#CC = cl -nologo 
-+#DEBUG= -W3 -Z7 -MD 
-+#DL_FLAGS= 
-+#SYS_LIBS= 
-+#Osuf=obj 
-+#SOsuf=dll 
-+#LIBsuf=.lib
-+#EXE_EXT=.exe 
-+#LD = link -nologo 
-+#LDFLAGS = -debug -map -dll -incremental:no 
-+#LIBPREFIX = 
-+#OUT = -out:$@ 
-+#RM= -del
-+#AR= echo
-+
-+# Unix, generally 
-+#CC = gcc
-+DEBUG=-g -Wall -Wno-char-subscripts -O 
-+Osuf=o 
-+SOsuf=so 
-+LIBsuf=a
-+EXE_EXT=
-+LIBPREFIX=lib
-+OUT = -o $@ 
-+RM= -rm -f
-+AR= ar crs
-+SYS_LIBS= -lm
-+ 
-+# Linux 
-+LD = gcc 
-+LDFLAGS = -shared 
-+DEBUG=-g -Wno-char-subscripts -O
-+#SYS_LIBS= -ldl
-+PLATFORM_FEATURES= -DSUN_DL=1
-+
-+ 
-+# Solaris 
-+#SYS_LIBS= -ldl -lc 
-+#Osuf=o 
-+#SOsuf=so 
-+#EXE_EXT= 
-+#LD = ld 
-+#LDFLAGS = -G -Bsymbolic -z text 
-+#LIBPREFIX = lib 
-+#OUT = -o $@ 
-+ 
-+DIRS=	-DTINYSCHEMEPREFIX='"${PREFIX}"' -DTINYSCHEMEDIR='"/share/tinyscheme/"'
-+FEATURES = ${DIRS} $(PLATFORM_FEATURES) -DUSE_DL=1 -DUSE_MATH=0 -DUSE_ASCII_NAMES=0 
-+ 
-+OBJS = scheme.$(Osuf) dynload.$(Osuf) 
-+ 
-+LIBTARGET = $(LIBPREFIX)tinyscheme.$(SOsuf) 
-+STATICLIBTARGET = $(LIBPREFIX)tinyscheme.$(LIBsuf)
-+
-+all: $(STATICLIBTARGET) scheme$(EXE_EXT)
-+  
-+.c.o:
-+	${LIBTOOL} --mode=compile ${CC} -I. -c $(DEBUG) $(FEATURES) $(DL_FLAGS) $< 
-+
-+scheme$(EXE_EXT): $(OBJS) 
-+	${LIBTOOL} --mode=link ${CC} ${DEBUG} ${OBJS} ${SYS_LIBS} ${LIBS:.a=.la} -o scheme${EXE_EXT}
-+
-+$(STATICLIBTARGET): $(OBJS)
-+	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:35
++	$(LIBTOOL) --mode=link $(CC) -o $(.TARGET:.a=.la) $(OBJS:.o=.lo) -rpath $(PREFIX)/lib -version-info 1:39
 +
 +install: all
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${STATICLIBTARGET:.a=.la} ${DESTDIR}${PREFIX}/lib
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} scheme${EXE_EXT} ${DESTDIR}${PREFIX}/bin/tinyscheme
-+	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/tinyscheme
-+	${BSD_INSTALL_DATA} init.scm ${DESTDIR}${PREFIX}/share/tinyscheme
-+	${BSD_INSTALL_DATA} scheme.h ${DESTDIR}${PREFIX}/include/tinyscheme.h
-+
-+$(OBJS): scheme.h scheme-private.h opdefines.h
-+dynload.$(Osuf): dynload.h 
-+
-+clean: 
-+	$(RM) $(OBJS) $(LIBTARGET) $(STATICLIBTARGET) scheme$(EXE_EXT)
-+	$(RM) tinyscheme.ilk tinyscheme.map tinyscheme.pdb tinyscheme.exp
-+	$(RM) scheme.ilk scheme.map scheme.pdb scheme.lib scheme.exp
-+	$(RM) *~
-+
-+TAGS_SRCS = scheme.h scheme.c dynload.h dynload.c
-+
-+tags: TAGS 
-+TAGS: $(TAGS_SRCS) 
-+	etags $(TAGS_SRCS) 
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(STATICLIBTARGET:.a=.la) $(DESTDIR)$(PREFIX)/lib
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) scheme$(EXE_EXT) $(DESTDIR)$(PREFIX)/bin/tinyscheme
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/tinyscheme
++	$(BSD_INSTALL_DATA) init.scm $(DESTDIR)$(PREFIX)/share/tinyscheme
++	$(BSD_INSTALL_DATA) scheme.h $(DESTDIR)$(PREFIX)/include/tinyscheme.h
+ 
+ $(OBJS): scheme.h scheme-private.h opdefines.h
+ dynload.$(Osuf): dynload.h 
