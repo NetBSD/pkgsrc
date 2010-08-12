@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2010/02/18 01:06:49 gdt Exp $
+$NetBSD: distinfo,v 1.8 2010/08/12 12:15:08 gdt Exp $
 
-SHA1 (gutenprint-5.2.5.tar.bz2) = 380d9f870e7f12088fc5dffac02413cae9a9ccb4
-RMD160 (gutenprint-5.2.5.tar.bz2) = cd88cd3ffc28fcc54e1de94d2f5ee069102d23a6
-Size (gutenprint-5.2.5.tar.bz2) = 5215539 bytes
+SHA1 (gutenprint-5.2.6.tar.bz2) = 9fbe1ab899d5e83f34e21534cc5c1b8921c9039b
+RMD160 (gutenprint-5.2.6.tar.bz2) = ede2dea11742c77fede450880685efcde3a91967
+Size (gutenprint-5.2.6.tar.bz2) = 5283223 bytes
 SHA1 (patch-aa) = b085bcf736d230c7f05d7b27bd1831165f958579
 SHA1 (patch-ab) = bc9633845555e1bfeeddb94eb1b45353dd96ba7b
