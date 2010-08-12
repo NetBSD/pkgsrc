@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2010/04/19 19:52:13 zafer Exp $
+# $NetBSD: Makefile,v 1.24 2010/08/12 17:54:14 zafer Exp $
 
-DISTNAME=	socat-1.7.1.2
+DISTNAME=	socat-1.7.1.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 
