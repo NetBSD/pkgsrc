@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/04/20 22:43:01 asau Exp $
+$NetBSD: distinfo,v 1.7 2010/08/12 09:27:54 asau Exp $
 
-SHA1 (ksi-3.4.3.tar.gz) = ce5f0af66b8ff998c5ea1434bea73715a547a4f2
-RMD160 (ksi-3.4.3.tar.gz) = f1a6f7ee278fc2fcbbb340bac49438152d2fe683
-Size (ksi-3.4.3.tar.gz) = 1127832 bytes
+SHA1 (ksi-3.9.0.tar.gz) = ee24486793f23f48f4a2e848db4ab58282e3a39c
+RMD160 (ksi-3.9.0.tar.gz) = c8edf574c42448ed50887322a5fd7d1d13e94803
+Size (ksi-3.9.0.tar.gz) = 489597 bytes
 SHA1 (patch-aa) = b361c1dd64726cac15f3c0aea469f45cb433a044
