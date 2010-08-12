@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.7 2010/08/12 04:02:28 mrg Exp $
+
+Index: source/mkmksiginc.pl
+===================================================================
+RCS file: /home/cvs/ircii/source/mkmksiginc.pl,v
+retrieving revision 1.6
+retrieving revision 1.9
+diff -p -u -r1.6 -r1.9
+--- source/mkmksiginc.pl	16 Feb 2004 09:55:53 -0000	1.6
++++ source/mkmksiginc.pl	12 Aug 2010 03:50:39 -0000	1.9
+@@ -46,8 +46,8 @@ IRCII_RCSID("@(#)$eterna$");
+ #define NSIG 64
+ #endif
+ 
+-#define MAXSIG NSIG+1
+-char *signames[MAXSIG];
++#define MY_MAXSIG NSIG+1
++char *signames[MY_MAXSIG];
+ 
+ int main(int, char *[], char *[]);
+ int
+@@ -59,7 +59,7 @@ main(argc, argv, envp)
+ 	int i;
+ 
+ 	signames[0] = "ZERO";
+-	for (i = 1; i < MAXSIG; i++);
++	for (i = 1; i < MY_MAXSIG; i++)
+ 		signames[i] = 0;
+ 
+ __eop1__
+@@ -69,7 +69,7 @@ sub main {
+ 	print $part_one;
+ 	while ($_ = <DATA>) {
+ 		chomp;
+-		print "#ifdef SIG$_\n";
++		print "#if defined(SIG$_) && SIG$_ < MY_MAXSIG\n";
+ 		print "\tsignames[SIG$_] = \"$_\";\n";
+ 		print "#endif\n\n";
+ 	}
+@@ -79,7 +79,7 @@ sub main {
+ $part_two = <<'__eop2__';
+ 	printf("int max_signo = %d;\n", NSIG);
+ 	puts("char *signals[] = { ");
+-	for (i = 0; i < MAXSIG; i++)
++	for (i = 0; i < MY_MAXSIG; i++)
+ 		if (signames[i])
+ 			printf("\"%s\", ", signames[i]);
+ 		else
