@@ -1,0 +1,315 @@
+$NetBSD: patch-ab,v 1.9 2010/08/12 04:02:28 mrg Exp $
+
+--- source/mksiginc.c.orig	2004-02-16 02:00:58.000000000 -0800
++++ source/mksiginc.c	2010-08-11 20:57:26.000000000 -0700
+@@ -39,8 +39,8 @@
+ #define NSIG 64
+ #endif
+ 
+-#define MAXSIG NSIG+1
+-char *signames[MAXSIG];
++#define MY_MAXSIG NSIG+1
++char *signames[MY_MAXSIG];
+ 
+ int main(int, char *[], char *[]);
+ int
+@@ -52,240 +52,240 @@
+ 	int i;
+ 
+ 	signames[0] = "ZERO";
+-	for (i = 1; i < MAXSIG; i++);
++	for (i = 1; i < MY_MAXSIG; i++)
+ 		signames[i] = 0;
+ 
+-#ifdef SIGABRT
++#if defined(SIGABRT) && SIGABRT < MY_MAXSIG
+ 	signames[SIGABRT] = "ABRT";
+ #endif
+ 
+-#ifdef SIGALRM
++#if defined(SIGALRM) && SIGALRM < MY_MAXSIG
+ 	signames[SIGALRM] = "ALRM";
+ #endif
+ 
+-#ifdef SIGALRM1
++#if defined(SIGALRM1) && SIGALRM1 < MY_MAXSIG
+ 	signames[SIGALRM1] = "ALRM1";
+ #endif
+ 
+-#ifdef SIGBUS
++#if defined(SIGBUS) && SIGBUS < MY_MAXSIG
+ 	signames[SIGBUS] = "BUS";
+ #endif
+ 
+-#ifdef SIGCANCEL
++#if defined(SIGCANCEL) && SIGCANCEL < MY_MAXSIG
+ 	signames[SIGCANCEL] = "CANCEL";
+ #endif
+ 
+-#ifdef SIGCHLD
++#if defined(SIGCHLD) && SIGCHLD < MY_MAXSIG
+ 	signames[SIGCHLD] = "CHLD";
+ #endif
+ 
+-#ifdef SIGCLD
++#if defined(SIGCLD) && SIGCLD < MY_MAXSIG
+ 	signames[SIGCLD] = "CLD";
+ #endif
+ 
+-#ifdef SIGCONT
++#if defined(SIGCONT) && SIGCONT < MY_MAXSIG
+ 	signames[SIGCONT] = "CONT";
+ #endif
+ 
+-#ifdef SIGDANGER
++#if defined(SIGDANGER) && SIGDANGER < MY_MAXSIG
+ 	signames[SIGDANGER] = "DANGER";
+ #endif
+ 
+-#ifdef SIGDIL
++#if defined(SIGDIL) && SIGDIL < MY_MAXSIG
+ 	signames[SIGDIL] = "DIL";
+ #endif
+ 
+-#ifdef SIGEMT
++#if defined(SIGEMT) && SIGEMT < MY_MAXSIG
+ 	signames[SIGEMT] = "EMT";
+ #endif
+ 
+-#ifdef SIGFPE
++#if defined(SIGFPE) && SIGFPE < MY_MAXSIG
+ 	signames[SIGFPE] = "FPE";
+ #endif
+ 
+-#ifdef SIGFREEZE
++#if defined(SIGFREEZE) && SIGFREEZE < MY_MAXSIG
+ 	signames[SIGFREEZE] = "FREEZE";
+ #endif
+ 
+-#ifdef SIGGRANT
++#if defined(SIGGRANT) && SIGGRANT < MY_MAXSIG
+ 	signames[SIGGRANT] = "GRANT";
+ #endif
+ 
+-#ifdef SIGHUP
++#if defined(SIGHUP) && SIGHUP < MY_MAXSIG
+ 	signames[SIGHUP] = "HUP";
+ #endif
+ 
+-#ifdef SIGILL
++#if defined(SIGILL) && SIGILL < MY_MAXSIG
+ 	signames[SIGILL] = "ILL";
+ #endif
+ 
+-#ifdef SIGINFO
++#if defined(SIGINFO) && SIGINFO < MY_MAXSIG
+ 	signames[SIGINFO] = "INFO";
+ #endif
+ 
+-#ifdef SIGINT
++#if defined(SIGINT) && SIGINT < MY_MAXSIG
+ 	signames[SIGINT] = "INT";
+ #endif
+ 
+-#ifdef SIGIO
++#if defined(SIGIO) && SIGIO < MY_MAXSIG
+ 	signames[SIGIO] = "IO";
+ #endif
+ 
+-#ifdef SIGIOT
++#if defined(SIGIOT) && SIGIOT < MY_MAXSIG
+ 	signames[SIGIOT] = "IOT";
+ #endif
+ 
+-#ifdef SIGKAP
++#if defined(SIGKAP) && SIGKAP < MY_MAXSIG
+ 	signames[SIGKAP] = "KAP";
+ #endif
+ 
+-#ifdef SIGKILL
++#if defined(SIGKILL) && SIGKILL < MY_MAXSIG
+ 	signames[SIGKILL] = "KILL";
+ #endif
+ 
+-#ifdef SIGKILLTHR
++#if defined(SIGKILLTHR) && SIGKILLTHR < MY_MAXSIG
+ 	signames[SIGKILLTHR] = "KILLTHR";
+ #endif
+ 
+-#ifdef SIGLOST
++#if defined(SIGLOST) && SIGLOST < MY_MAXSIG
+ 	signames[SIGLOST] = "LOST";
+ #endif
+ 
+-#ifdef SIGLWP
++#if defined(SIGLWP) && SIGLWP < MY_MAXSIG
+ 	signames[SIGLWP] = "LWP";
+ #endif
+ 
+-#ifdef SIGMIGRATE
++#if defined(SIGMIGRATE) && SIGMIGRATE < MY_MAXSIG
+ 	signames[SIGMIGRATE] = "MIGRATE";
+ #endif
+ 
+-#ifdef SIGMSG
++#if defined(SIGMSG) && SIGMSG < MY_MAXSIG
+ 	signames[SIGMSG] = "MSG";
+ #endif
+ 
+-#ifdef SIGPIPE
++#if defined(SIGPIPE) && SIGPIPE < MY_MAXSIG
+ 	signames[SIGPIPE] = "PIPE";
+ #endif
+ 
+-#ifdef SIGPOLL
++#if defined(SIGPOLL) && SIGPOLL < MY_MAXSIG
+ 	signames[SIGPOLL] = "POLL";
+ #endif
+ 
+-#ifdef SIGPRE
++#if defined(SIGPRE) && SIGPRE < MY_MAXSIG
+ 	signames[SIGPRE] = "PRE";
+ #endif
+ 
+-#ifdef SIGPROF
++#if defined(SIGPROF) && SIGPROF < MY_MAXSIG
+ 	signames[SIGPROF] = "PROF";
+ #endif
+ 
+-#ifdef SIGPWR
++#if defined(SIGPWR) && SIGPWR < MY_MAXSIG
+ 	signames[SIGPWR] = "PWR";
+ #endif
+ 
+-#ifdef SIGQUIT
++#if defined(SIGQUIT) && SIGQUIT < MY_MAXSIG
+ 	signames[SIGQUIT] = "QUIT";
+ #endif
+ 
+-#ifdef SIGRETRACT
++#if defined(SIGRETRACT) && SIGRETRACT < MY_MAXSIG
+ 	signames[SIGRETRACT] = "RETRACT";
+ #endif
+ 
+-#ifdef SIGRTMAX
++#if defined(SIGRTMAX) && SIGRTMAX < MY_MAXSIG
+ 	signames[SIGRTMAX] = "RTMAX";
+ #endif
+ 
+-#ifdef SIGRTMIN
++#if defined(SIGRTMIN) && SIGRTMIN < MY_MAXSIG
+ 	signames[SIGRTMIN] = "RTMIN";
+ #endif
+ 
+-#ifdef SIGSAK
++#if defined(SIGSAK) && SIGSAK < MY_MAXSIG
+ 	signames[SIGSAK] = "SAK";
+ #endif
+ 
+-#ifdef SIGSEGV
++#if defined(SIGSEGV) && SIGSEGV < MY_MAXSIG
+ 	signames[SIGSEGV] = "SEGV";
+ #endif
+ 
+-#ifdef SIGSOUND
++#if defined(SIGSOUND) && SIGSOUND < MY_MAXSIG
+ 	signames[SIGSOUND] = "SOUND";
+ #endif
+ 
+-#ifdef SIGSTOP
++#if defined(SIGSTOP) && SIGSTOP < MY_MAXSIG
+ 	signames[SIGSTOP] = "STOP";
+ #endif
+ 
+-#ifdef SIGSYS
++#if defined(SIGSYS) && SIGSYS < MY_MAXSIG
+ 	signames[SIGSYS] = "SYS";
+ #endif
+ 
+-#ifdef SIGTERM
++#if defined(SIGTERM) && SIGTERM < MY_MAXSIG
+ 	signames[SIGTERM] = "TERM";
+ #endif
+ 
+-#ifdef SIGTHAW
++#if defined(SIGTHAW) && SIGTHAW < MY_MAXSIG
+ 	signames[SIGTHAW] = "THAW";
+ #endif
+ 
+-#ifdef SIGTRAP
++#if defined(SIGTRAP) && SIGTRAP < MY_MAXSIG
+ 	signames[SIGTRAP] = "TRAP";
+ #endif
+ 
+-#ifdef SIGTSTP
++#if defined(SIGTSTP) && SIGTSTP < MY_MAXSIG
+ 	signames[SIGTSTP] = "TSTP";
+ #endif
+ 
+-#ifdef SIGTTIN
++#if defined(SIGTTIN) && SIGTTIN < MY_MAXSIG
+ 	signames[SIGTTIN] = "TTIN";
+ #endif
+ 
+-#ifdef SIGTTOU
++#if defined(SIGTTOU) && SIGTTOU < MY_MAXSIG
+ 	signames[SIGTTOU] = "TTOU";
+ #endif
+ 
+-#ifdef SIGURG
++#if defined(SIGURG) && SIGURG < MY_MAXSIG
+ 	signames[SIGURG] = "URG";
+ #endif
+ 
+-#ifdef SIGUSR1
++#if defined(SIGUSR1) && SIGUSR1 < MY_MAXSIG
+ 	signames[SIGUSR1] = "USR1";
+ #endif
+ 
+-#ifdef SIGUSR2
++#if defined(SIGUSR2) && SIGUSR2 < MY_MAXSIG
+ 	signames[SIGUSR2] = "USR2";
+ #endif
+ 
+-#ifdef SIGVIRT
++#if defined(SIGVIRT) && SIGVIRT < MY_MAXSIG
+ 	signames[SIGVIRT] = "VIRT";
+ #endif
+ 
+-#ifdef SIGVTALRM
++#if defined(SIGVTALRM) && SIGVTALRM < MY_MAXSIG
+ 	signames[SIGVTALRM] = "VTALRM";
+ #endif
+ 
+-#ifdef SIGWAITING
++#if defined(SIGWAITING) && SIGWAITING < MY_MAXSIG
+ 	signames[SIGWAITING] = "WAITING";
+ #endif
+ 
+-#ifdef SIGWINCH
++#if defined(SIGWINCH) && SIGWINCH < MY_MAXSIG
+ 	signames[SIGWINCH] = "WINCH";
+ #endif
+ 
+-#ifdef SIGWINDOW
++#if defined(SIGWINDOW) && SIGWINDOW < MY_MAXSIG
+ 	signames[SIGWINDOW] = "WINDOW";
+ #endif
+ 
+-#ifdef SIGXCPU
++#if defined(SIGXCPU) && SIGXCPU < MY_MAXSIG
+ 	signames[SIGXCPU] = "XCPU";
+ #endif
+ 
+-#ifdef SIGXFSZ
++#if defined(SIGXFSZ) && SIGXFSZ < MY_MAXSIG
+ 	signames[SIGXFSZ] = "XFSZ";
+ #endif
+ 
+ 	printf("int max_signo = %d;\n", NSIG);
+ 	puts("char *signals[] = { ");
+-	for (i = 0; i < MAXSIG; i++)
++	for (i = 0; i < MY_MAXSIG; i++)
+ 		if (signames[i])
+ 			printf("\"%s\", ", signames[i]);
+ 		else
