@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.157 2010/03/19 14:11:11 seanb Exp $
+# $NetBSD: bootstrap,v 1.158 2010/08/13 18:57:36 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -316,6 +316,7 @@ checkarg_sane_absolute_path() {
 	"")	;; # the default value will be used.
 	*[!-A-Za-z0-9_./]*)
 		die "ERROR: Invalid characters in path $1 (from $2)." ;;
+	*/)	die "ERROR: The argument to $2 must not end in /." ;;
 	/*)	;;
 	*)	die "ERROR: The argument to $2 must be an absolute path." ;;
 	esac
