@@ -1,8 +1,19 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+$NetBSD: patch-ae,v 1.2 2010/08/13 14:25:35 taca Exp $
 
---- configure.in.orig	2010-02-04 11:36:59.000000000 +0000
+* check sizeof time_t.
+* check existence of sigsend().
+
+--- configure.in.orig	2010-07-09 12:34:57.000000000 +0000
 +++ configure.in
-@@ -2023,7 +2023,7 @@ AC_CHECK_HEADERS(varargs.h stdarg.h dire
+@@ -1946,6 +1946,7 @@ if test "$ac_cv_sizeof_off_t" -eq 0
+ then
+   AC_MSG_ERROR("MySQL needs a off_t type.")
+ fi
++AC_CHECK_SIZEOF(time_t, 4)
+ 
+ dnl
+ dnl check if time_t is unsigned
+@@ -2039,7 +2040,7 @@ AC_CHECK_HEADERS(varargs.h stdarg.h dire
  paths.h semaphore.h)
  
  # Already-done: strcasecmp
