@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2833 2010/08/12 17:56:22 zafer Exp $
+$NetBSD: CHANGES-2010,v 1.2834 2010/08/13 11:58:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3754,3 +3754,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/gutenprint-lib to 5.2.6 [gdt 2010-08-12]
 	Updated lang/scala to 2.8.0 [asau 2010-08-12]
 	Updated net/socat to 1.7.1.3 [zafer 2010-08-12]
+	Updated net/ruby-twitter-stream to 0.1.8 [obache 2010-08-13]
