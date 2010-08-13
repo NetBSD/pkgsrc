@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/08/03 06:31:45 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/13 11:58:28 obache Exp $
 
-DISTNAME=	twitter-stream-0.1.7
+DISTNAME=	twitter-stream-0.1.8
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 
