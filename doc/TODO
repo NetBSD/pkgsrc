@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9533 2010/08/12 18:12:53 zafer Exp $
+$NetBSD: TODO,v 1.9534 2010/08/14 05:53:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
-	o apache-ant-1.8.1
+	o apache-ant-1.8.1 [pkg/43752]
 	o apache-maven-3.0
 	o apache-tomcat55-5.5.29
 	o apache-tomcat6-6.0.26
@@ -464,18 +464,20 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
-	o cfitsio-3240
+	o cfitsio-3250
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.30.1 [GNOME 2.30]
-	o cherokee-1.0.7
+	o cherokee-1.0.8
 	o chromium-0.9.14.1
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clamav-0.96.2
 	o classpath-0.98
 	o climm-0.6.4
 	o clustalw-2.0.12 [pkg/43395]
+	o clutter-gtk-0.10.6
 	o cmus-2.3.3
 	o colorize-0.3.4
 	o confuse-2.7
@@ -493,6 +495,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o cssc-1.2.0
 	o cups-1.4.4
+	o curl-7.21.1
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.18
 	o cygwin_lib-1.5.24.2
@@ -564,10 +567,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-647
+	o etm-649
 	o eukleides-1.5.4
+	o evolution-2.30.3
 	o evolution-couchdb-0.4.5
-	o evolution-mapi-0.30.2 [GNOME 2.30]
+	o evolution-data-server-2.30.3
+	o evolution-exchange-2.30.3
+	o evolution-mapi-0.30.3 [GNOME 2.30]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.1
@@ -651,7 +657,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdeskcal-1.01
 	o gdl-2.28.2 [GNOME 2.28]
 	o gdm-2.20.11
-	o gdm-2.30.3 [GNOME 2.30]
+	o gdm-2.30.5 [GNOME 2.30]
 	o gdsreader-0.3.2
 	o geany-0.19
 	o gedit-plugins-2.30.0 [GNOME 2.30]
@@ -718,6 +724,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.1
 	o gtkglarea-2.0.1
+	o gtkhtml324-3.30.3
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtodo-0.16.0rc2
@@ -726,7 +733,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-gtk-2.0
 	o guile-www-2.26
 	o gupnp-0.13.4
-	o gutenprint-5.2.6
 	o gwaei-1.4.1
 	o gzip-1.4
 	o hackbot-2.21
@@ -830,7 +836,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-4.0.5
-	o libX11-1.3.4
+	o libX11-1.3.5
 	o libXau-1.0.6
 	o libXcomposite-0.4.2
 	o libXdamage-1.1.3
@@ -840,6 +846,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXi-1.3.2
 	o libXrender-0.9.6
 	o libXt-1.0.8
+	o libXvMC-1.0.6
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.21
@@ -877,14 +884,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o librep-0.90.6
 	o libssh-0.4.5
 	o libssh2-1.2.6
-	o libstree-0.4.2
+	o libstree-0.4.3 [pkg/43748]
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.10
 	o libtool-base-2.2.10
 	o libusb-1.0
 	o libv4l-0.8.0
+	o libxcb-1.7
 	o libxml++-2.30.1 [GNOME 2.30]
 	o licq-1.3.8
+	o lighttpd-1.4.27
 	o links-2.3pre1
 	o listres-1.0.2
 	o lincvs-2.1.4 [now called CrossVC]
@@ -1023,7 +1032,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0a
 	o openttd-1.0.3
 	o open-vm-tools-2010.03.20.243334
-	o opera-10.60
+	o opera-10.61
 	o orca-2.30.2 [GNOME 2.30]
 	o oroborus-2.0.18
 	o ortp-0.16.3
@@ -1072,7 +1081,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pidgin-2.7.2
 	o pim6dd-20040819a
 	o pim6sd-20040824a
-	o pinentry-0.8.0
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.6
@@ -1129,8 +1137,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-psycopg2-2.2.2
 	o py-pytz-2010h
 	o py-sybase-0.37
-	o py-sympy-0.6.7 [pkg/43731]
 	o py-uwsgi-0.9.5.1 [pkg/43400]
+	o py-xdg-0.19 [pkg/43747]
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]
 	o python-2.7
 	o python-3.1.2
@@ -1336,7 +1344,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-2.90
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.9.4
+	o vala-0.9.5 [pkg/43749]
 	o valgrind-3.5.0
 	o vera-1.17
 	o vfu-4.09
@@ -1367,6 +1375,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webmin-1.510
 	o weechat-0.3.3
 	o weewm-0.01
+	o wesnoth-1.8.4
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-1.2
@@ -1508,7 +1517,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yorick-2.1.05
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.18
+	o zile-2.3.19
 	o zircon-1.18.256
 	o zlib-1.2.5
 	o zoom-1.1.3
