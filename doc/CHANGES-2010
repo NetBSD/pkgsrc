@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2837 2010/08/14 02:58:05 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2838 2010/08/14 11:29:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3758,3 +3758,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-server to 5.1.49nb1 [taca 2010-08-13]
 	Updated wm/evilwm to 1.0.1 [sketch 2010-08-13]
 	Updated security/ruby-oauth to 0.4.2 [obache 2010-08-14]
+	Updated graphics/clutter-gtk to 0.10.6 [obache 2010-08-14]
