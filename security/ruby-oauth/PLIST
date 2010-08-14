@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/16 11:45:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/14 02:55:24 obache Exp $
 bin/oauth
 ${GEM_HOME}/cache/oauth-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/HISTORY
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
