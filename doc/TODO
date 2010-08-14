@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9535 2010/08/14 11:30:53 obache Exp $
+$NetBSD: TODO,v 1.9536 2010/08/14 12:39:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-pytz-2010h
 	o py-sybase-0.37
 	o py-uwsgi-0.9.5.1 [pkg/43400]
-	o py-xdg-0.19 [pkg/43747]
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]
 	o python-2.7
 	o python-3.1.2
