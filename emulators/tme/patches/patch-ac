@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.6 2010/08/14 06:32:34 tsutsui Exp $
+
+--- libtme/misc.c.orig	2010-06-05 19:02:38.000000000 +0000
++++ libtme/misc.c
+@@ -430,7 +430,7 @@ tme_misc_cycles_per_ms(void)
+ union tme_value64
+ tme_misc_cycles(void)
+ {
+-#ifdef TME_HAVE_INT64_T */
++#ifdef TME_HAVE_INT64_T
+   struct timeval now;
+   tme_uint64_t cycles;
+   union tme_value64 value;
