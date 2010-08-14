@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2839 2010/08/14 12:39:16 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2840 2010/08/14 14:33:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3760,3 +3760,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/ruby-oauth to 0.4.2 [obache 2010-08-14]
 	Updated graphics/clutter-gtk to 0.10.6 [obache 2010-08-14]
 	Updated devel/py-xdg to 0.19 [obache 2010-08-14]
+	Updated inputmethod/zinnia to 0.06 [obache 2010-08-14]
+	Updated inputmethod/p5-zinnia to 0.06 [obache 2010-08-14]
+	Updated inputmethod/py-zinnia to 0.06 [obache 2010-08-14]
+	Updated inputmethod/ruby-zinnia to 0.06 [obache 2010-08-14]
