@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2010/08/14 06:32:34 tsutsui Exp $
+
+--- configure.in.orig	2010-06-05 19:56:37.000000000 +0000
++++ configure.in
+@@ -599,7 +599,7 @@ i[3456789]86-* | x86_64-*) misc_hosts="x
+ esac
+ changequote([, ])dnl
+ AC_MSG_RESULT([${misc_hosts}])
+-if test "x${misc_hosts}" = no; then
++if test "x${misc_hosts}" = xno; then
+     misc_hosts=
+ fi
+ 
