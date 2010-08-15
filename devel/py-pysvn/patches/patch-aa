@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/15 10:33:20 drochner Exp $
+
+#Set up the correct call for python.
+
+--- Tests/test-01.sh.orig	2010-08-12 10:52:02.000000000 +0000
++++ Tests/test-01.sh
+@@ -43,7 +43,7 @@ cmd_pysvn ls file://${TESTROOT}/repos -v
+ 
+ echo Info: Testing - checkout
+ cmd_pysvn checkout file://${TESTROOT}/repos/trunk ${TESTROOT}/wc1
+-cmd python ${WORKDIR}/Tests/find.py ${TESTROOT}/wc1
++cmd ${PYTHON} ${WORKDIR}/Tests/find.py ${TESTROOT}/wc1
+ cmd cd ${TESTROOT}/wc1/test
+ 
+ echo Info: Testing - add
