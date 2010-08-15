@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9540 2010/08/15 12:09:09 wiz Exp $
+$NetBSD: TODO,v 1.9541 2010/08/15 12:12:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o htop-0.8.3
 	o httping-1.43
 	o httptunnel-3.3
-	o hunspell-de-20100727
 	o hydrogen-0.9.3 [pkg/37424]
 	o hylafax-5.4.2
 	o ical-2.3.2
