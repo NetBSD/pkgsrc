@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/25 06:15:38 bjs Exp $
+$NetBSD: distinfo,v 1.2 2010/08/15 02:31:54 obache Exp $
 
-SHA1 (cproto.tar.gz) = 7a7f9964770b2091074964ba2906f687519942d6
-RMD160 (cproto.tar.gz) = 95ad5c790af622d491117a4f346b13b895622047
-Size (cproto.tar.gz) = 149616 bytes
+SHA1 (cproto-4.7i.tgz) = 325639213a7c252720e75a88f699a13bcbf16942
+RMD160 (cproto-4.7i.tgz) = 5c594d9a936d2fa8f34389f95fa46f6b486f69f2
+Size (cproto-4.7i.tgz) = 159739 bytes
