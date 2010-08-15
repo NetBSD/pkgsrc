@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2010/07/29 15:49:36 joerg Exp $
+# $NetBSD: Makefile,v 1.77 2010/08/15 12:08:59 wiz Exp $
 
-DISTNAME=		autoconf-2.65
-PKGREVISION=		2
+DISTNAME=		autoconf-2.67
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
@@ -32,6 +31,8 @@ INFO_FILES=		YES
 
 AUTOMAKE_OVERRIDE=	NO
 
+# [GNU Autoconf 2.67] testsuite: 213 268 269 failed
+# 213?; other two ok because of buildlink
 TEST_TARGET=		check
 
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/autoconf/autoconf.m4f
@@ -39,15 +40,5 @@ CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/autotest/autotest.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/m4sugar/m4sugar.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/m4sugar/m4sh.m4f
 
-# wiz 20090809: next section commented out because it seems not to be needed.
-# re-enable if it is; otherwise it will be removed during the next
-# update:
-# pkgsrc symlinks config/config.guess and config.sub to mk/gnu-config
-# when you do not preserve timestamps in mk, this can cause
-# config.guess and config.sub to be newer than config.guess.1 and
-# config.sub.1.  In that case, the man pages need to be rebuilt, and
-# build fails because pkgsrc lacks help2man.  Work around this situation.
-#pre-build:
-#	${TOUCH} ${WRKSRC}/man/config.sub.1 ${WRKSRC}/man/config.guess.1
 
 .include "../../mk/bsd.pkg.mk"
