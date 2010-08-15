@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/05/08 15:44:36 drochner Exp $
+# $NetBSD: options.mk,v 1.2 2010/08/15 10:51:27 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eric4
 PKG_SUPPORTED_OPTIONS=	sqlite mysql pgsql enchant pylint cxfreeze rope
@@ -32,10 +32,10 @@ DEPENDS+=		${PYPKGPREFIX}-enchant>=1.4.2:../../textproc/py-enchant
 
 #Enable support for freezing Python scripts
 .if !empty(PKG_OPTIONS:Mcxfreeze)
-.include "../../wip/cxfreeze/buildlink3.mk"
+.include "../../lang/py-cxfreeze/buildlink3.mk"
 .endif
 
 #Enable support for code refactoring
 .if !empty(PKG_OPTIONS:Mrope)
-.include "../../wip/rope/buildlink3.mk"
+.include "../../devel/py-rope/buildlink3.mk"
 .endif
