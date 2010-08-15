@@ -489,6 +489,7 @@ sybase			Enable Sybase/MS SQL Server support.
 syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
 syslogng-spoof		Spoof the original source address of forwarded packets.
+terminfo		Use terminfo.
 tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
 tests			Build and install tests.
