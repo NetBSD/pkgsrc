@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2848 2010/08/15 12:09:09 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2849 2010/08/15 12:12:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3772,3 +3772,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/dtpstree version 1.0.3 [obache 2010-08-15]
 	Updated print/poppler-data to 0.4.3 [wiz 2010-08-15]
 	Updated devel/autoconf to 2.67 [wiz 2010-08-15]
+	Updated textproc/hunspell-de to 20100727 [wiz 2010-08-15]
