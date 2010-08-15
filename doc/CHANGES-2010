@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2840 2010/08/14 14:33:00 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2841 2010/08/15 02:32:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3764,3 +3764,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/p5-zinnia to 0.06 [obache 2010-08-14]
 	Updated inputmethod/py-zinnia to 0.06 [obache 2010-08-14]
 	Updated inputmethod/ruby-zinnia to 0.06 [obache 2010-08-14]
+	Updated devel/cproto to 4.7i [obache 2010-08-15]
