@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2010/07/30 07:02:36 dholland Exp $
+$NetBSD: patch-ab,v 1.2 2010/08/15 03:34:37 dholland Exp $
 
 Recognize dfly, from Antonio Huete Jimenez in PR 43685.
+Has been applied upstream.
 
 --- configure.orig	2010-07-14 00:45:38.000000000 +0000
 +++ configure
