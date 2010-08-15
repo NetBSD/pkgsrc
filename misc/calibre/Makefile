@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/06/16 17:20:27 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2010/08/15 12:33:32 drochner Exp $
 #
 
 DISTNAME=	calibre-0.6.24
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 MASTER_SITES=	http://calibre.kovidgoyal.net/downloads/
 
