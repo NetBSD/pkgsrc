@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/06 12:13:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/15 19:57:12 wiz Exp $
 bin/do_train
 bin/rftg
 libexec/rftg
@@ -20,6 +20,12 @@ share/rftg/network/rftg.eval.2.3.net
 share/rftg/network/rftg.eval.2.4.net
 share/rftg/network/rftg.eval.2.5.net
 share/rftg/network/rftg.eval.2.6.net
+share/rftg/network/rftg.eval.3.2.net
+share/rftg/network/rftg.eval.3.2a.net
+share/rftg/network/rftg.eval.3.3.net
+share/rftg/network/rftg.eval.3.4.net
+share/rftg/network/rftg.eval.3.5.net
+share/rftg/network/rftg.eval.3.6.net
 share/rftg/network/rftg.role.0.2.net
 share/rftg/network/rftg.role.0.2a.net
 share/rftg/network/rftg.role.0.3.net
@@ -35,3 +41,9 @@ share/rftg/network/rftg.role.2.3.net
 share/rftg/network/rftg.role.2.4.net
 share/rftg/network/rftg.role.2.5.net
 share/rftg/network/rftg.role.2.6.net
+share/rftg/network/rftg.role.3.2.net
+share/rftg/network/rftg.role.3.2a.net
+share/rftg/network/rftg.role.3.3.net
+share/rftg/network/rftg.role.3.4.net
+share/rftg/network/rftg.role.3.5.net
+share/rftg/network/rftg.role.3.6.net
