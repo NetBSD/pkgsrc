@@ -1,0 +1,4 @@
+cx_Freeze is a set of scripts and modules for freezing Python scripts into
+executables in much the same way that py2exe and py2app do. Unlike these
+two tools, cx_Freeze is cross platform and should work on any platform that
+Python itself works on.
