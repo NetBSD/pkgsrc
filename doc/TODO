@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9539 2010/08/15 11:57:30 wiz Exp $
+$NetBSD: TODO,v 1.9540 2010/08/15 12:09:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aterm-1.0.1
 	o auctex-11.86
 	o audacious-plugins-2.3
-	o autoconf-2.67
 	o autoconvert-0.3.16
 	o autogen-5.11
 	o avcheck-0.91
