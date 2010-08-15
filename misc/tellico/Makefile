@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2010/07/14 11:11:26 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2010/08/15 12:33:32 drochner Exp $
 #
 
 DISTNAME=	tellico-2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://tellico-project.org/files/
 EXTRACT_SUFX=	.tar.bz2
