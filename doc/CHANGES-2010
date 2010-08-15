@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2845 2010/08/15 08:49:15 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2846 2010/08/15 09:07:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3769,3 +3769,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/djview4 to 4.5 [obache 2010-08-15]
 	Updated misc/libquantum to 1.0.0 [obache 2010-08-15]
 	Updated devel/p5-local-lib to 1.6.7 [seb 2010-08-15]
+	Added sysutils/dtpstree version 1.0.3 [obache 2010-08-15]
