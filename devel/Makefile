@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1389 2010/08/15 10:38:30 drochner Exp $
+# $NetBSD: Makefile,v 1.1390 2010/08/15 18:54:43 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -759,6 +759,7 @@ SUBDIR+=	p5-Log-Report
 SUBDIR+=	p5-Log-Trace
 SUBDIR+=	p5-MRO-Compat
 SUBDIR+=	p5-Mac-Carbon
+SUBDIR+=	p5-Mac-SystemDirectory
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
