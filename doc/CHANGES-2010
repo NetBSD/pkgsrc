@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2850 2010/08/15 15:11:00 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2851 2010/08/15 15:17:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3774,3 +3774,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/autoconf to 2.67 [wiz 2010-08-15]
 	Updated textproc/hunspell-de to 20100727 [wiz 2010-08-15]
 	Updated emulators/mednafen to 0.8.13.2 [wiz 2010-08-15]
+	Updated devel/bison to 2.4.3 [wiz 2010-08-15]
