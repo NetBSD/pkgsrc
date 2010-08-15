@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.7 2010/07/14 17:04:23 drochner Exp $
+$NetBSD: patch-ag,v 1.8 2010/08/15 11:19:18 drochner Exp $
 
---- qt4/src/Makefile.in.orig	2010-07-08 18:57:57.000000000 +0000
+--- qt4/src/Makefile.in.orig	2010-08-10 18:02:11.000000000 +0000
 +++ qt4/src/Makefile.in
 @@ -79,7 +79,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
@@ -10,9 +10,9 @@ $NetBSD: patch-ag,v 1.7 2010/07/14 17:04:23 drochner Exp $
 +	$(prefix)/lib/libpoppler.la \
  	$(top_builddir)/poppler/libpoppler-arthur.la \
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
- am_libpoppler_qt4_la_OBJECTS = poppler-document.lo poppler-page.lo \
-@@ -384,7 +384,7 @@ libpoppler_qt4_la_SOURCES = \
- 	poppler-page-transition-private.h
+ am_libpoppler_qt4_la_OBJECTS = libpoppler_qt4_la-poppler-document.lo \
+@@ -397,7 +397,7 @@ libpoppler_qt4_la_CXXFLAGS = \
+ 	-Dpoppler_qt4_EXPORTS
  
  libpoppler_qt4_la_LIBADD = \
 -	$(top_builddir)/poppler/libpoppler.la	\
