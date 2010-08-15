@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2010/07/14 18:32:45 drochner Exp $
+# $NetBSD: Makefile,v 1.498 2010/08/15 09:08:58 obache Exp $
 #
 
 COMMENT=	System utilities
@@ -81,6 +81,7 @@ SUBDIR+=	dmidecode
 SUBDIR+=	dmsdos
 SUBDIR+=	dog
 SUBDIR+=	dptutil
+SUBDIR+=	dtpstree
 SUBDIR+=	duplicity
 SUBDIR+=	dvd+rw-tools
 SUBDIR+=	dvdisaster
