@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/15 10:45:57 drochner Exp $
+
+--- setup.py.orig	2010-07-19 19:00:21.000000000 +0000
++++ setup.py
+@@ -238,7 +238,7 @@ setup(name = "cx_Freeze",
+         maintainer="Anthony Tuininga",
+         maintainer_email="anthony.tuininga@gmail.com",
+         url = "http://cx-freeze.sourceforge.net",
+-        scripts = ["cxfreeze"],
++        scripts = ["cxfreeze" + sys.version[:3]],
+         classifiers = classifiers,
+         keywords = "freeze",
+         license = "Python Software Foundation License")
