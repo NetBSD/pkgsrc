@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9545 2010/08/15 19:55:45 wiz Exp $
+$NetBSD: TODO,v 1.9546 2010/08/15 19:57:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1161,7 +1161,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rep-gtk-0.90.3
 	o rep-gtk2-0.90.2
 	o resize_image-0.7
-	o rftg-0.7.3
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
