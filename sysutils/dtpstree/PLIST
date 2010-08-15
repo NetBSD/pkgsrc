@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/15 09:07:11 obache Exp $
+bin/dtpstree
+man/man1/dtpstree.1
