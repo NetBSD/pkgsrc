@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/11/22 21:02:00 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2010/08/15 07:09:27 obache Exp $
 
---- Makefile.in.orig	2007-11-02 12:49:49.000000000 -0300
+--- Makefile.in.orig	2009-02-22 16:50:53.000000000 +0000
 +++ Makefile.in
-@@ -76,13 +76,11 @@ install-djview: install-djview-bin insta
+@@ -81,13 +81,11 @@ install-djview: install-djview-bin insta
  install-djview-bin: FORCE
  	${INSTALL} -d ${DESTDIR}${bindir}
  	${INSTALL_PROGRAM} src/djview ${DESTDIR}${bindir}/djview4
