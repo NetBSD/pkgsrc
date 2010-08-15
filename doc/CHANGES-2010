@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2853 2010/08/15 19:17:34 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2854 2010/08/15 19:55:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3777,3 +3777,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/bison to 2.4.3 [wiz 2010-08-15]
 	Added devel/p5-Mac-SystemDirectory version 0.04 [sno 2010-08-15]
 	Updated devel/p5-File-HomeDir to 0.91 [sno 2010-08-15]
+	Updated misc/tellico to 2.3 [wiz 2010-08-15]
