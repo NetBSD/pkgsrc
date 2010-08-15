@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2844 2010/08/15 07:36:09 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2845 2010/08/15 08:49:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3768,3 +3768,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/youtube-dl to 20100804 [obache 2010-08-15]
 	Updated graphics/djview4 to 4.5 [obache 2010-08-15]
 	Updated misc/libquantum to 1.0.0 [obache 2010-08-15]
+	Updated devel/p5-local-lib to 1.6.7 [seb 2010-08-15]
