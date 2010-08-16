@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:45:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/16 09:56:22 wiz Exp $
 #
 
 DISTNAME=	gupnp-0.13.3
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://www.gupnp.org/sources/gupnp/
+MASTER_SITES=	http://www.gupnp.org/sites/all/files/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
