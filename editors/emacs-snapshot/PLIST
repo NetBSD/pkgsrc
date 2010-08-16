@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/08/01 16:58:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/08/16 17:34:38 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1673,6 +1673,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package-x.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package-x.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/package.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/pcase.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/pcase.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/pp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/pp.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/re-builder.el.gz
@@ -2057,6 +2059,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-start.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-start.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-sum.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-sum.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-sync.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-sync.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-topic.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-topic.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-undo.el.gz
