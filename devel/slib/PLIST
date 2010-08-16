@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:49:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/08/16 08:29:26 wiz Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
@@ -120,6 +120,7 @@ share/slib/record.scm
 share/slib/repl.scm
 share/slib/require.scm
 share/slib/root.scm
+share/slib/s7.init
 share/slib/sc2.scm
 share/slib/sc4opt.scm
 share/slib/sc4sc3.scm
@@ -146,6 +147,7 @@ share/slib/srfi-1.scm
 share/slib/srfi-11.scm
 share/slib/srfi-2.scm
 share/slib/srfi-23.scm
+share/slib/srfi-39.scm
 share/slib/srfi-61.scm
 share/slib/srfi-8.scm
 share/slib/srfi-9.scm
