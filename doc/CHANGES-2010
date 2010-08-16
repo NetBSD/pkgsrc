@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2864 2010/08/16 09:46:53 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2865 2010/08/16 11:26:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3788,3 +3788,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-YAML-Syck to 1.12 [wiz 2010-08-16]
 	Updated www/p5-HTML-Element-Extended to 1.18 [wiz 2010-08-16]
 	Updated devel/p5-Test-Simple to 0.96 [wiz 2010-08-16]
+	Updated editors/Sigil to 0.2.4 [wiz 2010-08-16]
