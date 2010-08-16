@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/07/25 02:35:35 obache Exp $
+# $NetBSD: Makefile,v 1.10 2010/08/16 09:48:01 wiz Exp $
 #
 
 DISTNAME=	ares-1.1.1
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/ares/
 
-MAINTAINER=	sommerfeld@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	Asynchronous DNS resolver library
 
