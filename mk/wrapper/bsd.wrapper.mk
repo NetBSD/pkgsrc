@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.84 2009/11/23 00:25:13 tron Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.85 2010/08/16 10:03:44 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -495,7 +495,7 @@ ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
 	if [ ! -x ${.TARGET} -a -x $$wrapper ]; then			\
 		${ECHO_WRAPPER_MSG} "=> Linking ${_wrappee_} wrapper: ${.TARGET}"; \
-		${LN} -f $$wrapper ${.TARGET};				\
+		${LN} -f${WRAPPER_USE_SYMLINK:Ds} $$wrapper ${.TARGET};	\
 	fi
 .    endif
 .  endfor
