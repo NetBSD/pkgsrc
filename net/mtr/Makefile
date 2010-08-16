@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.61 2010/08/16 09:39:21 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2010/08/16 09:39:41 wiz Exp $
 
 DISTNAME=	mtr-0.80
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bitwizard.nl/mtr/
 
-MAINTAINER=	sommerfeld@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 LICENSE=	gnu-gpl-v2
