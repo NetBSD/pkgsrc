@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2010/03/24 19:43:23 asau Exp $
+# $NetBSD: Makefile,v 1.27 2010/08/16 11:29:11 wiz Exp $
 
-DISTNAME=	guile-www-2.25
-PKGREVISION=	1
+DISTNAME=	guile-www-2.26
 CATEGORIES=	devel www
 MASTER_SITES=	http://www.gnuvola.org/software/guile-www/
 
@@ -16,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
-INFO_FILES=	# PLIST
+INFO_FILES=	YES
 
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
