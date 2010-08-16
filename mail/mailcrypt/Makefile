@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/08/06 01:44:53 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2010/08/16 09:48:01 wiz Exp $
 
 DISTNAME=	mailcrypt-3.5.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	mail security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailcrypt/}
 
-MAINTAINER=	sommerfeld@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mailcrypt.sourceforge.net/
 COMMENT=	Emacs frontend for PGP and GPG
 
