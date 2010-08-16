@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2859 2010/08/16 09:09:01 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2860 2010/08/16 09:36:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/ruby18-base to 1.8.7.174nb6 [taca 2010-08-16]
 	Updated devel/slib to 3.2.3 [wiz 2010-08-16]
 	Updated mail/p5-MIME-tools to 5.428 [wiz 2010-08-16]
+	Updated www/p5-WWW-Curl to 4.12 [wiz 2010-08-16]
