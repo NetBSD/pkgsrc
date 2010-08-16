@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2869 2010/08/16 21:39:45 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2870 2010/08/16 21:42:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3793,3 +3793,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/gbrainy to 1.50 [wiz 2010-08-16]
 	Updated editors/emacs-snapshot to 24.0.50.20100814 [minskim 2010-08-16]
 	Updated misc/JBidwatcher to 2.1.1 [wiz 2010-08-16]
+	Updated security/libassuan2 to 2.0.1 [wiz 2010-08-16]
