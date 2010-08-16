@@ -1,4 +1,4 @@
-# $NetBSD: Haiku.mk,v 1.3 2010/07/08 04:57:36 dholland Exp $
+# $NetBSD: Haiku.mk,v 1.4 2010/08/16 10:03:44 obache Exp $
 #
 # Variable definitions for the Haiku operating system.
 
@@ -9,6 +9,10 @@ PS?=		/bin/ps
 # and remove this comment.
 SU?=		/bin/su
 TYPE?=		type			# Shell builtin
+ 
+# Use symlink for wrapper in mk/wrapper/bsd.wrapper.mk,
+# due to lack of hard link support.
+WRAPPER_USE_SYMLINK=	# defined
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
