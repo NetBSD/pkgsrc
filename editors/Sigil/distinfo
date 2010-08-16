@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/06/15 12:01:58 wiz Exp $
+$NetBSD: distinfo,v 1.9 2010/08/16 11:26:12 wiz Exp $
 
-SHA1 (Sigil-0.2.0-Code.zip) = 61257a6baa6a31c2bc99319282cabf18eda4b03a
-RMD160 (Sigil-0.2.0-Code.zip) = ac90d205017cf209dedb789be5fdc31df94ab2b4
-Size (Sigil-0.2.0-Code.zip) = 9254950 bytes
+SHA1 (Sigil-0.2.4-Code.zip) = b8fa0280e621166ec31b6c85a476fb01fd5fadc2
+RMD160 (Sigil-0.2.4-Code.zip) = e134a12b9453113332fbaad5a7214fe39160f464
+Size (Sigil-0.2.4-Code.zip) = 9299387 bytes
