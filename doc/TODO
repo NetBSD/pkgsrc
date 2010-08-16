@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9546 2010/08/15 19:57:24 wiz Exp $
+$NetBSD: TODO,v 1.9547 2010/08/16 01:55:46 obache Exp $
 
 Suggested new packages
 ======================
@@ -880,7 +880,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o librep-0.90.6
 	o libssh-0.4.5
 	o libssh2-1.2.6
-	o libstree-0.4.3 [pkg/43748]
+	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.10
 	o libtool-base-2.2.10
