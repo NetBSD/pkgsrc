@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2867 2010/08/16 13:22:30 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2868 2010/08/16 17:35:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/Sigil to 0.2.4 [wiz 2010-08-16]
 	Updated devel/guile-www to 2.26 [wiz 2010-08-16]
 	Updated games/gbrainy to 1.50 [wiz 2010-08-16]
+	Updated editors/emacs-snapshot to 24.0.50.20100814 [minskim 2010-08-16]
