@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9551 2010/08/16 09:37:59 wiz Exp $
+$NetBSD: TODO,v 1.9552 2010/08/16 09:41:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Test-Simple-0.96
 	o p5-Text-Markdown-1.000031
 	o p5-XML-RSS-1.48
-	o p5-YAML-Syck-1.12
 	o p5-YAML-Tiny-1.44
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
