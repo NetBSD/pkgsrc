@@ -86,3 +86,5 @@ Pullup ticket #3205 - requested by taca
 www/drupal6: security update
 Pullup ticket #3206 - requested by tron
 net/socat: security update
+Pullup ticket #3207 - requested by taca
+lang/ruby18-base: security patch
