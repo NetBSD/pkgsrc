@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2010/01/16 22:49:47 sno Exp $
+# $NetBSD: Makefile,v 1.36 2010/08/17 06:14:56 sno Exp $
 
-DISTNAME=	HTML-Mason-1.44
+DISTNAME=	HTML-Mason-1.45
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 SVR4_PKGNAME=	p5hma
