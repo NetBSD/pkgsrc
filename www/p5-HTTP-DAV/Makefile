@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2010/03/15 19:19:12 sno Exp $
+# $NetBSD: Makefile,v 1.19 2010/08/17 06:07:47 sno Exp $
 #
 
-DISTNAME=	HTTP-DAV-0.40
+DISTNAME=	HTTP-DAV-0.41
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5htd
 CATEGORIES=	www perl5
