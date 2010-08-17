@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9566 2010/08/17 11:05:53 obache Exp $
+$NetBSD: TODO,v 1.9567 2010/08/17 11:09:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -562,7 +562,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-649
+	o etm-651
 	o eukleides-1.5.4
 	o evolution-2.30.3
 	o evolution-couchdb-0.4.5
@@ -695,7 +695,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.16
-	o gnuplot-4.4.0 [pkg/43711]
+	o gnuplot-4.4.0 [pkg/43771]
 	o gnutls-2.10.1
 	o gob2-2.0.17
 	o gogo-3.11p1
@@ -1029,11 +1029,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-ExtUtils-CBuilder-0.2703
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
-	o p5-Lingua-EN-Inflect-1.892
 	o p5-Module-Build-0.36090
 	o p5-POE-1.289 [pkg/43115]
 	o p5-PerlMagick-6.6.3.6
-	o p5-Search-Xapian-1.0.20.0
+	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-Text-Markdown-1.000031
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1071,7 +1070,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pkg-config-0.25
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
-	o plone3-3.3.4
+	o plone-3.3.4
 	o ploticus-2.41
 	o ploticus-examples-230
 	o plptools-1.0.10
@@ -1234,7 +1233,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sjeng-11.2
 	o skipstone-1.0.1
 	o skype-2.1.0.47
-	o slib-3b3
 	o smalltalk-3.2.2
 	o smproxy-1.0.3
 	o smtpfeed-1.20
@@ -1338,6 +1336,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vifm-0.5
 	o vigra-1.7.0
 	o vile-9.8
+	o vim-7.3
 	o visual-regexp-3.1
 	o vlc-1.1.2
 	o vm-8.0.7.522 [pkg/37707]
@@ -1376,8 +1375,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x11vnc-0.9.11 [need newer libVNCServer, not released]
 	o x264-devel-20100807
 	o xanalyser-1.30
-	o xapian-1.0.21
-	o xapian-omega-1.0.21
+	o xapian-1.2.2
+	o xapian-omega-1.2.2
 	o xaric-0.13.2
 	o xbiff-1.0.2
 	o xbindkeys-1.8.3
