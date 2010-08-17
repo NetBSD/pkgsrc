@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2892 2010/08/17 14:34:51 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2893 2010/08/17 15:02:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3816,3 +3816,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/dbus-glib to 0.88 [wiz 2010-08-17]
 	Updated audio/mp3diags to 1.0.06.051 [wiz 2010-08-17]
 	Updated misc/goffice0.8 to 0.8.9 [wiz 2010-08-17]
+	Updated math/gnumeric110 to 1.10.9 [wiz 2010-08-17]
