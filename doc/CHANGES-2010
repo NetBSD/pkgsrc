@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2877 2010/08/17 06:08:18 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2878 2010/08/17 06:15:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3801,3 +3801,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CSS-Tiny to 1.17 [sno 2010-08-17]
 	Updated www/p5-Template-Stash-EscapeHTML to 0.02 [sno 2010-08-17]
 	Updated www/p5-HTTP-DAV to 0.41 [sno 2010-08-17]
+	Updated www/p5-HTML-Mason to 1.45 [sno 2010-08-17]
