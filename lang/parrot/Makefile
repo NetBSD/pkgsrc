@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2010/04/23 14:08:17 he Exp $
+# $NetBSD: Makefile,v 1.33 2010/08/17 13:27:51 he Exp $
 #
 
-VERSION=		2.3.0
-RTYPE=			supported
+VERSION=		2.4.0
+RTYPE=			devel
 DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${RTYPE}/${VERSION}/
@@ -26,7 +26,8 @@ HAS_CONFIGURE=		yes
 CONFIG_SHELL=		perl
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
-			--icu-config=${PREFIX}/bin/icu-config
+			--icu-config=${PREFIX}/bin/icu-config \
+			--optimize
 
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	post-configure
@@ -52,8 +53,6 @@ REPLACE_PERL+=		tools/dev/gen_makefile.pl
 REPLACE_PERL+=		tools/dev/mk_language_shell.pl
 REPLACE_PERL+=		tools/dev/reconfigure.pl
 REPLACE_PERL+=		lib/Parrot/Op.pm
-#REPLACE_PERL+=		lib/Parrot/OpLib/core.pm
-REPLACE_PERL+=		lib/Parrot/OpTrans/CPrederef.pm
 REPLACE_PERL+=		lib/Parrot/OpsFile.pm
 
 
@@ -69,4 +68,5 @@ pre-install:
 	${CHMOD} -R g-w ${WRKSRC}
 
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
