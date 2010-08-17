@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2884 2010/08/17 06:45:55 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2885 2010/08/17 06:49:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBD-CSV to 0.30nb1 [sno 2010-08-17]
 	Updated devel/p5-Config-Any to 0.20 [sno 2010-08-17]
 	Updated devel/p5-Log-Report to 0.28 [sno 2010-08-17]
+	Updated devel/p5-PPIx-Regexp to 0.010 [sno 2010-08-17]
