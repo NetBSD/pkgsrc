@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2010/07/17 08:27:19 sno Exp $
+# $NetBSD: Makefile,v 1.27 2010/08/17 06:35:28 sno Exp $
 #
 
 DISTNAME=	DBD-CSV-0.30
 PKGNAME=	p5-${DISTNAME:S/_/beta/}
-#PKGREVISION=	1
+PKGREVISION=	1
 SVR4_PKGNAME=	p5dcs
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
@@ -16,7 +16,7 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-SQL-Statement>=1.28:../../databases/p5-SQL-Statement
+DEPENDS+=	p5-SQL-Statement>=1.31:../../databases/p5-SQL-Statement
 DEPENDS+=	p5-Text-CSV_XS>=0.71:../../textproc/p5-Text-CSV_XS
 
 CONFLICTS+=	p5-SQL-Statement<=1.27
