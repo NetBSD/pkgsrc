@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9571 2010/08/17 14:32:24 wiz Exp $
+$NetBSD: TODO,v 1.9572 2010/08/17 14:34:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -699,7 +699,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnuplot-4.4.0 [pkg/43771]
 	o gnutls-2.10.1
 	o gob2-2.0.17
-	o goffice0.8-0.8.9
 	o gogo-3.11p1
 	o gok-2.30.0 [GNOME 2.30]
 	o golem-0.0.6

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2891 2010/08/17 13:53:04 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.2892 2010/08/17 14:34:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3815,3 +3815,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/mapm to 4.9.5a [obache 2010-08-17]
 	Updated sysutils/dbus-glib to 0.88 [wiz 2010-08-17]
 	Updated audio/mp3diags to 1.0.06.051 [wiz 2010-08-17]
+	Updated misc/goffice0.8 to 0.8.9 [wiz 2010-08-17]
