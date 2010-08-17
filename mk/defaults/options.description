@@ -321,6 +321,7 @@ mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
+modperl			Use modperl to improve speed of Perl scripts in Apache
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
