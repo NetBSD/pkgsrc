@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/08/17 11:24:20 obache Exp $
 bin/mapm-calc
 include/m_apm.h
 lib/libmapm.a
 share/doc/mapm/README
 share/doc/mapm/algorithms.used
+share/doc/mapm/article.pdf
 share/doc/mapm/function.ref
