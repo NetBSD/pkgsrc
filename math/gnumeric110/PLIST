@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/08/05 18:43:14 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/08/17 15:02:48 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -36,6 +36,7 @@ include/libspreadsheet-1.10/spreadsheet/gnm-format.h
 include/libspreadsheet-1.10/spreadsheet/gnm-graph-window.h
 include/libspreadsheet-1.10/spreadsheet/gnm-pane.h
 include/libspreadsheet-1.10/spreadsheet/gnm-plugin.h
+include/libspreadsheet-1.10/spreadsheet/gnm-random.h
 include/libspreadsheet-1.10/spreadsheet/gnm-sheet-slicer.h
 include/libspreadsheet-1.10/spreadsheet/gnm-so-filled.h
 include/libspreadsheet-1.10/spreadsheet/gnm-so-line.h
@@ -848,6 +849,8 @@ share/locale/hr/LC_MESSAGES/gnumeric-functions.mo
 share/locale/hr/LC_MESSAGES/gnumeric.mo
 share/locale/hu/LC_MESSAGES/gnumeric-functions.mo
 share/locale/hu/LC_MESSAGES/gnumeric.mo
+share/locale/id/LC_MESSAGES/gnumeric-functions.mo
+share/locale/id/LC_MESSAGES/gnumeric.mo
 share/locale/it/LC_MESSAGES/gnumeric-functions.mo
 share/locale/it/LC_MESSAGES/gnumeric.mo
 share/locale/ja/LC_MESSAGES/gnumeric-functions.mo
