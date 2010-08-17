@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 12:06:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2010/08/17 11:24:20 obache Exp $
 
-SHA1 (mapm-4.9.2.tar.gz) = e6270b4b88fb1e02acd5699c9c2d6c8a1824153d
-RMD160 (mapm-4.9.2.tar.gz) = 59763de606943e684addbc88c84e7ba073a2cfad
-Size (mapm-4.9.2.tar.gz) = 161575 bytes
+SHA1 (mapm-4.9.5a.tar.gz) = 481bb2f1958bf62ca3ffff23e0d4b994c40b5a80
+RMD160 (mapm-4.9.5a.tar.gz) = 59f17ef04a068ef05f43c9dbf747e9eed22cae2c
+Size (mapm-4.9.5a.tar.gz) = 163651 bytes
