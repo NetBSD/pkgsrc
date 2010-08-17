@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2010/02/02 18:32:05 sno Exp $
+# $NetBSD: Makefile,v 1.34 2010/08/17 06:31:01 sno Exp $
 #
 
-DISTNAME=	Test-Harness-3.21
+DISTNAME=	Test-Harness-3.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= auto/Test/Harness/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
