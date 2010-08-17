@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/05/15 08:51:30 adam Exp $
+$NetBSD: distinfo,v 1.6 2010/08/17 13:52:53 wiz Exp $
 
-SHA1 (MP3Diags-1.0.05.050.tar.gz) = 797858bfc7ed122f068779d0068d7b5a2452c0d6
-RMD160 (MP3Diags-1.0.05.050.tar.gz) = 47ecd72dd7621bf4e645604477e843bee55bbdf5
-Size (MP3Diags-1.0.05.050.tar.gz) = 958268 bytes
+SHA1 (MP3Diags-1.0.06.051.tar.gz) = 811db45f2ec2e6ff5612df87a6fb0d7adb12aeb4
+RMD160 (MP3Diags-1.0.06.051.tar.gz) = 0e47359a58ab8c5cff0cb6bce1c4f3240b0fed32
+Size (MP3Diags-1.0.06.051.tar.gz) = 962026 bytes
 SHA1 (patch-aa) = 206f2c462124a7a987ba81eda705b07110eb98e4
