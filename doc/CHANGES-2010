@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2882 2010/08/17 06:35:55 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2883 2010/08/17 06:38:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3806,3 +3806,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Harness to 3.22 [sno 2010-08-17]
 	Updated databases/p5-SQL-Statement to 1.31 [sno 2010-08-17]
 	Updated databases/p5-DBD-CSV to 0.30nb1 [sno 2010-08-17]
+	Updated devel/p5-Config-Any to 0.20 [sno 2010-08-17]
