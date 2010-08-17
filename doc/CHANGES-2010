@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2875 2010/08/17 05:57:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2876 2010/08/17 06:03:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/ruby-roauth to 0.0.3 [obache 2010-08-17]
 	Updated time/p5-DateTime-Format-Natural to 0.89 [sno 2010-08-17]
 	Updated www/p5-CSS-Tiny to 1.17 [sno 2010-08-17]
+	Updated www/p5-Template-Stash-EscapeHTML to 0.02 [sno 2010-08-17]
