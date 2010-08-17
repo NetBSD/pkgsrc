@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2879 2010/08/17 06:25:22 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2880 2010/08/17 06:31:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3803,3 +3803,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTTP-DAV to 0.41 [sno 2010-08-17]
 	Updated www/p5-HTML-Mason to 1.45 [sno 2010-08-17]
 	Updated textproc/p5-YAML-Tiny to 1.44 [sno 2010-08-17]
+	Updated devel/p5-Test-Harness to 3.22 [sno 2010-08-17]
