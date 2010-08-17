@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2010/08/05 18:43:14 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/17 15:02:48 wiz Exp $
 #
 
-DISTNAME=		gnumeric-1.10.8
+DISTNAME=		gnumeric-1.10.9
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gnumeric/
-COMMENT=		Spreadsheet program from the GNOME project (development version)
+COMMENT=		Spreadsheet program from the GNOME project
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
