@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/07 16:09:40 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/08/17 05:57:27 sno Exp $
 
-SHA1 (CSS-Tiny-1.15.tar.gz) = ccbc9b94b7c39aee29e595af7eed6d069c727f1a
-RMD160 (CSS-Tiny-1.15.tar.gz) = ce750be38e66a487e142e6aca6dd3da0c7c0833e
-Size (CSS-Tiny-1.15.tar.gz) = 16238 bytes
+SHA1 (CSS-Tiny-1.17.tar.gz) = 1c85a615e13fc70a15179b2cbec8fb34bc6751bd
+RMD160 (CSS-Tiny-1.17.tar.gz) = 5802e8483f0a6643d01b8c13aa1e5a4d0f844097
+Size (CSS-Tiny-1.17.tar.gz) = 16946 bytes
