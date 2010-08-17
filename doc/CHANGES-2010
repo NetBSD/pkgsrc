@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2889 2010/08/17 11:24:32 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2890 2010/08/17 13:33:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3813,3 +3813,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/pixman to 0.18.4 [wiz 2010-08-17]
 	Updated time/py-pytz to 2010k [obache 2010-08-17]
 	Updated math/mapm to 4.9.5a [obache 2010-08-17]
+	Updated sysutils/dbus-glib to 0.88 [wiz 2010-08-17]
