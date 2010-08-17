@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/10 23:24:05 abs Exp $
+$NetBSD: distinfo,v 1.2 2010/08/17 06:03:02 sno Exp $
 
-SHA1 (Template-Stash-EscapeHTML-0.01.tar.gz) = 0a539f1e84c1a98bf74420a8a3a57b4eb9694e5a
-RMD160 (Template-Stash-EscapeHTML-0.01.tar.gz) = 5e68d9988b0c2e051867707722e58a36b23ddfe4
-Size (Template-Stash-EscapeHTML-0.01.tar.gz) = 2611 bytes
+SHA1 (Template-Stash-EscapeHTML-0.02.tar.gz) = 7057bdab1613e7fa2fc424e298d39269b1de0e58
+RMD160 (Template-Stash-EscapeHTML-0.02.tar.gz) = 2a1c0761739a4e23fbe82f66c2964dc828495cf9
+Size (Template-Stash-EscapeHTML-0.02.tar.gz) = 2920 bytes
