@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9570 2010/08/17 13:53:04 wiz Exp $
+$NetBSD: TODO,v 1.9571 2010/08/17 14:32:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -553,6 +553,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enscript-1.6.5.2
 	o eog-plugins-2.30.2 [GNOME 2.30]
 	o epic4-2.6
+	o epiphany-2.30.3
 	o epstool-3.08
 	o eric5-5.0.0
 	o erlang-13b4
@@ -693,10 +694,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnumeric110-1.10.9
 	o gnupg2-2.0.16
 	o gnuplot-4.4.0 [pkg/43771]
 	o gnutls-2.10.1
 	o gob2-2.0.17
+	o goffice0.8-0.8.9
 	o gogo-3.11p1
 	o gok-2.30.0 [GNOME 2.30]
 	o golem-0.0.6
@@ -804,6 +807,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kismet-2010.07r1
 	o kmess-1.5.1
 	o kmp-0.5
+	o kmymoney2-4.5
 	o kodos-2.4.5
 	o koffice-2.2.1
 	o koffice-l10n-de-2.0.2
