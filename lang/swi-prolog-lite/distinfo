@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2010/05/16 18:46:10 asau Exp $
+$NetBSD: distinfo,v 1.11 2010/08/18 22:32:00 asau Exp $
 
-SHA1 (swi-prolog/pl-5.11.0.tar.gz) = be355025bfcbf19f58e652973695506b49c1160d
-RMD160 (swi-prolog/pl-5.11.0.tar.gz) = 0075c16c82b3c4f0ff37de0b5ca5e7061bfecad5
-Size (swi-prolog/pl-5.11.0.tar.gz) = 12882832 bytes
+SHA1 (swi-prolog/pl-5.11.4.tar.gz) = ccae547fd6f41509d55f1ca0c4c4cbf1d512df9b
+RMD160 (swi-prolog/pl-5.11.4.tar.gz) = d85ea3ad7e9bfc39f40ef71ad8d435f44c7241f3
+Size (swi-prolog/pl-5.11.4.tar.gz) = 12959938 bytes
 SHA1 (patch-ad) = 7b3899fe4162582efe955c67d5dc3ed42e7d1702
 SHA1 (patch-aq) = 5bda4d5bec0520e1019b663326e32d74b9c2ee08
 SHA1 (patch-ar) = 2bf3648f29c6263ea2efe13b95309a1fe72b14b8

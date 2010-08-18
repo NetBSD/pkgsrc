@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/05/16 18:46:11 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/08/18 22:32:01 asau Exp $
 bin/xpce-client
 lib/swi-prolog-${PKGVERSION}/Makefile
 lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_GNU_PLATFORM}/xpce
@@ -99,10 +99,12 @@ lib/swi-prolog-${PKGVERSION}/library/http/http_error.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_exception.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_header.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_hook.pl
+lib/swi-prolog-${PKGVERSION}/library/http/http_host.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_json.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_log.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_mime_plugin.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_open.pl
+lib/swi-prolog-${PKGVERSION}/library/http/http_openid.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_parameters.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_path.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_pwp.pl
@@ -113,18 +115,22 @@ lib/swi-prolog-${PKGVERSION}/library/http/http_ssl_plugin.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_stream.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_wrapper.pl
 lib/swi-prolog-${PKGVERSION}/library/http/inetd_httpd.pl
+lib/swi-prolog-${PKGVERSION}/library/http/js_write.pl
 lib/swi-prolog-${PKGVERSION}/library/http/json.pl
 lib/swi-prolog-${PKGVERSION}/library/http/json_convert.pl
 lib/swi-prolog-${PKGVERSION}/library/http/mimepack.pl
 lib/swi-prolog-${PKGVERSION}/library/http/mimetype.pl
 lib/swi-prolog-${PKGVERSION}/library/http/thread_httpd.pl
 lib/swi-prolog-${PKGVERSION}/library/http/web/css/dirindex.css
+lib/swi-prolog-${PKGVERSION}/library/http/web/css/openid.css
 lib/swi-prolog-${PKGVERSION}/library/http/web/icons/back.png
 lib/swi-prolog-${PKGVERSION}/library/http/web/icons/c.png
 lib/swi-prolog-${PKGVERSION}/library/http/web/icons/compressed.png
 lib/swi-prolog-${PKGVERSION}/library/http/web/icons/folder.png
 lib/swi-prolog-${PKGVERSION}/library/http/web/icons/generic.png
 lib/swi-prolog-${PKGVERSION}/library/http/web/icons/layout.png
+lib/swi-prolog-${PKGVERSION}/library/http/web/icons/openid-logo-square.png
+lib/swi-prolog-${PKGVERSION}/library/http/web/icons/openid-logo-tiny.png
 lib/swi-prolog-${PKGVERSION}/library/http/xpce_httpd.pl
 lib/swi-prolog-${PKGVERSION}/library/iso_639.pl
 lib/swi-prolog-${PKGVERSION}/library/memfile.pl
@@ -188,6 +194,7 @@ lib/swi-prolog-${PKGVERSION}/library/semweb/rdf_turtle_write.pl
 lib/swi-prolog-${PKGVERSION}/library/semweb/rdf_zlib_plugin.pl
 lib/swi-prolog-${PKGVERSION}/library/semweb/rdfs.pl
 lib/swi-prolog-${PKGVERSION}/library/semweb/rdfs.rdfs
+lib/swi-prolog-${PKGVERSION}/library/semweb/sparql_client.pl
 lib/swi-prolog-${PKGVERSION}/library/semweb/turtle_base.pl
 lib/swi-prolog-${PKGVERSION}/library/sgml.pl
 lib/swi-prolog-${PKGVERSION}/library/sgml_write.pl
@@ -1183,3 +1190,4 @@ lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/xref/common.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/xref/mkcommon.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/xref/quintus.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/xref/sicstus.pl
+man/man1/xpce-client.1
