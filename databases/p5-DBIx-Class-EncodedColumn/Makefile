@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/12 19:34:39 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/18 05:38:06 sno Exp $
 
-DISTNAME=	DBIx-Class-EncodedColumn-0.00006
+DISTNAME=	DBIx-Class-EncodedColumn-0.00009
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	databases perl5
@@ -29,6 +29,7 @@ DEPENDS+=	p5-Crypt-OpenPGP-[0-9]*:../../security/p5-Crypt-OpenPGP
 DEPENDS+=	p5-Crypt-CAST5_PP-[0-9]*:../../security/p5-Crypt-CAST5_PP
 
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+BUILD_DEPENDS+=	p5-Dir-Self-[0-9]*:../../devel/p5-Dir-Self
 BUILD_DEPENDS+=	p5-SQL-Translator>=0.11002:../../databases/p5-SQL-Translator
 
 USE_LANGUAGES=		# empty
