@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2010/08/18 17:40:31 asau Exp $
+
+Fix tabulation.
+
+--- gtkextra/Makefile.in.orig	2010-08-18 11:13:33.000000000 +0400
++++ gtkextra/Makefile.in	2010-08-18 21:27:52.000000000 +0400
+@@ -800,11 +800,11 @@
+ 
+ 
+ $(srcdir)/gtkextra-marshal.h: gtkextra-marshal.list
+-        ( @GLIB_GENMARSHAL@ --prefix=gtkextra gtkextra-marshal.list --header > gtkextra-marshal.tmp \
++	( @GLIB_GENMARSHAL@ --prefix=gtkextra gtkextra-marshal.list --header > gtkextra-marshal.tmp \
+         && mv gtkextra-marshal.tmp gtkextra-marshal.h ) \
+         || ( rm -f gtkextra-marshal.tmp && exit 1 )
+ $(srcdir)/gtkextra-marshal.c: gtkextra-marshal.h
+-        ( @GLIB_GENMARSHAL@ --prefix=gtkextra gtkextra-marshal.list --body > gtkextra-marshal.tmp \
++	( @GLIB_GENMARSHAL@ --prefix=gtkextra gtkextra-marshal.list --body > gtkextra-marshal.tmp \
+         && mv gtkextra-marshal.tmp gtkextra-marshal.c ) \
+         || ( rm -f gtkextra-marshal.tmp && exit 1 )
+ 
