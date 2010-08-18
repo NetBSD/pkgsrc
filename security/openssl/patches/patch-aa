@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.23 2010/02/26 03:15:13 taca Exp $
+$NetBSD: patch-aa,v 1.24 2010/08/18 11:20:56 wiz Exp $
 
---- config.orig	2009-10-15 12:58:00.000000000 +0000
+--- config.orig	2010-03-09 17:08:24.000000000 +0000
 +++ config
 @@ -49,6 +49,7 @@ done
  # First get uname entries that we use below
@@ -53,8 +53,9 @@ $NetBSD: patch-aa,v 1.23 2010/02/26 03:15:13 taca Exp $
    powerpc64-*-*bsd*)	OUT="BSD-generic64"; options="$options -DB_ENDIAN" ;;
    sparc64-*-*bsd*)	OUT="BSD-sparc64" ;;
    ia64-*-*bsd*)		OUT="BSD-ia64" ;;
-   amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
+-  amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
 -  *86*-*-*bsd*)		# mimic ld behaviour when it's looking for libc...
++  amd64-*-*bsd*|x86_64-*-dragonfly*)	OUT="BSD-x86_64" ;;
 +  *86*-*-*bsd*|*-dragonfly*) # mimic ld behaviour when it's looking for libc...
  			if [ -L /usr/lib/libc.so ]; then	# [Free|Net]BSD
  			    libc=/usr/lib/libc.so
