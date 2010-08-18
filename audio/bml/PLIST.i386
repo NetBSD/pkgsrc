@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2010/08/18 04:03:28 obache Exp $
+lib/win32/BuzzMachineLoader.dll
