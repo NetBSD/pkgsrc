@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/08/18 16:46:24 reed Exp $
 #
 
 DISTNAME=	libnotify-0.4.5
@@ -20,6 +20,7 @@ PKGCONFIG_OVERRIDE=	libnotify.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+BUILDLINK_API_DEPENDS.dbus-glib+=       dbus-glib>=0.76
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
