@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2894 2010/08/18 04:36:31 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2895 2010/08/18 05:38:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/goffice0.8 to 0.8.9 [wiz 2010-08-17]
 	Updated math/gnumeric110 to 1.10.9 [wiz 2010-08-17]
 	Updated devel/check to 0.9.8 [obache 2010-08-18]
+	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00009 [sno 2010-08-18]
