@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/01/26 12:13:32 sno Exp $
+$NetBSD: distinfo,v 1.5 2010/08/18 06:03:27 sno Exp $
 
-SHA1 (DBIx-Class-Fixtures-1.001009.tar.gz) = da294969200ad7e3ef4ec754f4589f645be018eb
-RMD160 (DBIx-Class-Fixtures-1.001009.tar.gz) = 390c114901fa992792886917ef2a5ae234d5f66d
-Size (DBIx-Class-Fixtures-1.001009.tar.gz) = 39671 bytes
+SHA1 (DBIx-Class-Fixtures-1.001010.tar.gz) = 7cbc3cd1e9717d449651d0478b907c842934b122
+RMD160 (DBIx-Class-Fixtures-1.001010.tar.gz) = 515945b473ad01aceae27c9855f5fb8781a071ba
+Size (DBIx-Class-Fixtures-1.001010.tar.gz) = 42257 bytes
