@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2897 2010/08/18 06:11:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2898 2010/08/18 15:51:18 reed Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3821,3 +3821,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00009 [sno 2010-08-18]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001010 [sno 2010-08-18]
 	Updated databases/p5-DBIx-Class-RDBOHelpers to 0.09 [sno 2010-08-18]
+	Updated net/dhcpcd-gtk to 0.5.1 [reed 2010-08-18]
