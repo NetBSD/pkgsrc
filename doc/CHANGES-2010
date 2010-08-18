@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2898 2010/08/18 15:51:18 reed Exp $
+$NetBSD: CHANGES-2010,v 1.2899 2010/08/18 22:32:56 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001010 [sno 2010-08-18]
 	Updated databases/p5-DBIx-Class-RDBOHelpers to 0.09 [sno 2010-08-18]
 	Updated net/dhcpcd-gtk to 0.5.1 [reed 2010-08-18]
+	Updated lang/swi-prolog to 5.11.4 [asau 2010-08-18]
