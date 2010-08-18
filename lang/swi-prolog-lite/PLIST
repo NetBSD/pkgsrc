@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2010/05/16 18:46:10 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/08/18 22:32:00 asau Exp $
 bin/swi-prolog
 bin/swipl-ld
 bin/swipl-rc
 lib/pkgconfig/swipl.pc
+lib/swi-prolog-${PKGVERSION}/bin/swipl.home
 lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_GNU_PLATFORM}/swi-prolog
 lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_GNU_PLATFORM}/swipl-ld
 lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_GNU_PLATFORM}/swipl-rc
-lib/swi-prolog-${PKGVERSION}/bin/swipl.home
 lib/swi-prolog-${PKGVERSION}/boot/apply.pl
 lib/swi-prolog-${PKGVERSION}/boot/attvar.pl
 lib/swi-prolog-${PKGVERSION}/boot/autoload.pl
@@ -264,6 +264,7 @@ lib/swi-prolog-${PKGVERSION}/library/clp/clp_distinct.pl
 lib/swi-prolog-${PKGVERSION}/library/clp/clp_events.pl
 lib/swi-prolog-${PKGVERSION}/library/clp/clpfd.pl
 lib/swi-prolog-${PKGVERSION}/library/clp/simplex.pl
+lib/swi-prolog-${PKGVERSION}/library/coinduction.pl
 lib/swi-prolog-${PKGVERSION}/library/csv.pl
 lib/swi-prolog-${PKGVERSION}/library/ctypes.pl
 lib/swi-prolog-${PKGVERSION}/library/date.pl
