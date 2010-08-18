@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9573 2010/08/18 04:36:31 obache Exp $
+$NetBSD: TODO,v 1.9574 2010/08/18 06:02:23 obache Exp $
 
 Suggested new packages
 ======================
@@ -992,7 +992,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p2
 	o ntp4-4.2.6
 	o nulib2-220
-	o nut-15.7
+	o nut-15.7 [pkg/43776]
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1091,7 +1091,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o puppet-2.6.0
 	o pure-ftpd-1.0.29
-	o puzzle-5.2
+	o puzzle-5.2 [pkg/43775]
 	o puzzles-8972
 	o pv-1.1.4
 	o pwlib-1.11.1
