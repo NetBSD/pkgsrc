@@ -1,0 +1,11 @@
+Implements a Portuguese stemming algorithm proposed in the paper A
+Stemming Algorithm for the Portuguese Language by Moreira, V. and
+Huyck, C.
+
+Galician is an endangered language spoken in northwest region of Spain.
+Galician is morphologically similar to Portuguese but phonetics differs
+greatly. Due to the morphological similarity between Portuguese and
+Galician, Portuguese stemming algorithm can be adopted to stem Galician
+texts.
+
+See http://bvg.udc.es/recursos_lingua/stemming.html for stemming rules.
