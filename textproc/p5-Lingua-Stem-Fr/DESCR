@@ -1,0 +1,12 @@
+This module use the a modified version of the Porter Stemming Algorithm
+to return a stemmed words.
+
+The algorithm is implemented as described in:
+
+    * http://snowball.tartarus.org/french/stemmer.html
+
+with some improvement.
+
+The code is carefully crafted to work in conjunction with the Lingua::Stem
+module by Benjamin Franz. This french version is based too, on the work
+of Aldo Calpini (Italian Version)
