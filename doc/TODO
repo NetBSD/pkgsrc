@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9578 2010/08/19 08:08:39 asau Exp $
+$NetBSD: TODO,v 1.9579 2010/08/19 08:56:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -356,7 +356,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.0.1
-	o abcmidi-20100729
+	o abcmidi-20100812
 	o abiword-2.8
 	o abook-0.6.0pre2 [pkg/42672]
 	o accerciser-1.10.1 [GNOME 2.30]
@@ -377,7 +377,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alsa-1.0.23
 	o alsa-lib-1.0.23
 	o alsa-plugins-1.0.22
-	o amanda-2.6.1p2
+	o amanda-3.1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.4
 	o amaya-11.1
@@ -425,6 +425,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avl-2.0.2a
 	o awesome-3.4.5
 	o baci-20040415
+	o bacula-5.0.3
 	o balance-3.52
 	o bash-completion-1.1
 	o bbdb-2.35
@@ -492,7 +493,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cssc-1.2.0
 	o cups-1.4.4
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsd-1.0.18
+	o cvsd-1.0.19
 	o cygwin_lib-1.5.24.2
 	o dansguardian-2.10.0.3
 	o dante-1.2.1
@@ -511,7 +512,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o diffpdf-1.1.4
 	o diffstat-1.53
-	o digikam-1.3.0
+	o digikam-1.3.0 [needs libkdcraw>=1.1.0, libkexiv2>=1.1.0]
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dnsmasq-2.55
@@ -617,7 +618,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-10.8
+	o fotoxx-10.8.4
 	o frama-c-20100401
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -875,7 +876,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.90.6
 	o libssh-0.4.5
-	o libssh2-1.2.6
+	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.10
@@ -1324,6 +1325,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o vala-0.9.5 [pkg/43749]
+	o vala-0.9.7
 	o valgrind-3.5.0
 	o vera-1.17
 	o vfu-4.09
@@ -1336,7 +1338,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vile-9.8
 	o vim-7.3
 	o visual-regexp-3.1
-	o vlc-1.1.2
+	o vlc-1.1.3
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
