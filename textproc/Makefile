@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2010/08/19 06:27:21 sno Exp $
+# $NetBSD: Makefile,v 1.554 2010/08/19 06:36:29 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -244,6 +244,7 @@ SUBDIR+=	p5-Lingua-Stem-Fr
 SUBDIR+=	p5-Lingua-Stem-It
 SUBDIR+=	p5-Lingua-Stem-Ru
 SUBDIR+=	p5-Lingua-Stem-Snowball
+SUBDIR+=	p5-Lingua-Stem-Snowball-Da
 SUBDIR+=	p5-List-Compare
 SUBDIR+=	p5-Net-Dict
 SUBDIR+=	p5-Number-Format
