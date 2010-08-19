@@ -1,8 +1,15 @@
-$NetBSD: patch-zc,v 1.3 2008/10/10 21:58:44 he Exp $
-
---- Policy_sh.SH.orig	2007-12-18 11:47:07.000000000 +0100
-+++ Policy_sh.SH
-@@ -184,10 +184,10 @@ do
+--- Policy_sh.SH.orig	2010-04-26 08:08:20.000000000 +0000
++++ Policy_sh.SH	2010-05-27 09:34:44.000000000 +0000
+@@ -165,7 +165,7 @@
+ 
+     # We don't know what to do with these yet.
+     html1dir)	dflt='' ;;
+-    htm31dir)	dflt='' ;;
++    html3dir)	dflt='' ;;
+ 
+     # Directories for site-specific add-on files
+     sitebin)	dflt=$siteprefix/bin ;;
+@@ -184,11 +184,11 @@
  	;;
      sitearch)	dflt="$sitelib/$archname" ;;
  
@@ -12,11 +19,13 @@ $NetBSD: patch-zc,v 1.3 2008/10/10 21:58:44 he Exp $
 +    siteman3dir)	dflt="$siteprefix/man/man3" ;;
      # We don't know what to do with these yet.
 -    sitehtml1)	dflt='' ;;
+-    sitehtm31dir)	dflt='' ;;
 +    sitehtml1dir)	dflt='' ;;
-     sitehtm31dir)	dflt='' ;;
++    sitehtml3dir)	dflt='' ;;
      
      # Directories for vendor-supplied add-on files
-@@ -213,11 +213,11 @@ do
+     # These are all usually empty.
+@@ -213,11 +213,11 @@
  		;;
  	    vendorarch)	dflt="$vendorlib/$archname" ;;
  

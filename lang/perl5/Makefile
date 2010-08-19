@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.159 2010/06/27 13:38:39 spz Exp $
+# $NetBSD: Makefile,v 1.160 2010/08/19 20:47:09 seb Exp $
 
 .include "license.mk"
 
-DISTNAME=	perl-5.10.1
+DISTNAME=	perl-5.12.1
 CATEGORIES=	lang devel perl5
-PKGREVISION=	2
+#PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/5.0/,}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -69,63 +69,35 @@ PERL5_SITELIB=		${PERL5_SITEBASE}/lib/perl5/site_perl/${PERL5_API_VERS}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
-CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
-CONFIGURE_ARGS+=	-Dcc=${CC:Q}
-CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:M*:Q}
-CONFIGURE_ARGS+=	-Ui_malloc
-CONFIGURE_ARGS+=	-Uinstallusrbinperl
 MAKE_ENV+=		LC_ALL="C"
 
 TEST_TARGET=		test
 
-###
-### Installation directories for "perl", "vendor" and "site" bits.
-###
-CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
-CONFIGURE_ARGS+=	-Dprefix=${PERL5_PREFIX:Q}
-CONFIGURE_ARGS+=	-Dsiteprefix=${PERL5_SITEPREFIX:Q}
-CONFIGURE_ARGS+=	-Dvendorprefix=${PERL5_VENDORPREFIX:Q}
-
-# The Perl Configure script will install scripts into "*/script"
-# directories if they exist, so override with explicit settings.
-#
+# Policy.sh generation
+# (see comments in files/Policy.sh)
+SUBST_CLASSES+=	policysh
+SUBST_STAGE.policysh=	pre-configure
+SUBST_FILES.policysh=	Policy.sh
+SUBST_VARS.policysh+=	MACHINE_ARCH
+SUBST_VARS.policysh+=	LOWER_OPSYS
+SUBST_VARS.policysh+=	CC
+SUBST_VARS.policysh+=	CFLAGS
+SUBST_VARS.policysh+=	PERL5_PREFIX
+SUBST_VARS.policysh+=	PERL5_SITEPREFIX
+SUBST_VARS.policysh+=	PERL5_VENDORPREFIX
 PERL5_SCRIPTDIR=	${PERL5_PERLBASE}/bin
-
-CONFIGURE_ARGS+=	-Dscriptdir=${PERL5_SCRIPTDIR:Q}
-CONFIGURE_ARGS+=	-Dsitescript=${PERL5_SITEBASE:Q}/bin
-CONFIGURE_ARGS+=	-Dvendorscript=${PERL5_VENDORBASE:Q}/bin
-
-# Put any compiled binaries into vendor- and site-specific locations to
-# avoid conflicts with each other.  The perllink script will handle all
-# the appropriate symlinking.
-#
-CONFIGURE_ARGS+=	-Dsitebin=${PERL5_SITEBASE:Q}/bin
-CONFIGURE_ARGS+=	-Dvendorbin=${PERL5_VENDORBASE:Q}/bin
-
-# Put the API-specific files into API-specific directories instead
-# of the default version-specific directories.
-#
-CONFIGURE_ARGS+=	-Dprivlib=${PERL5_PRIVLIB:Q}
-CONFIGURE_ARGS+=	-Dsitelib=${PERL5_SITELIB:Q}
-CONFIGURE_ARGS+=	-Dvendorlib=${PERL5_VENDORLIB:Q}
-
-# Search for version-specific directories under these directories.
-CONFIGURE_ARGS+=	-Dsitelib_stem=${PERL5_SITEBASE:Q}
-CONFIGURE_ARGS+=	-Dvendorlib_stem=${PERL5_VENDORBASE:Q}
-
-# Avoid manpage conflicts between the standard Perl library, 3rd-party
-# modules, and other packages.
-#
+SUBST_VARS.policysh+=	PERL5_SCRIPTDIR
+SUBST_VARS.policysh+=	PERL5_PERLBASE
+SUBST_VARS.policysh+=	PERL5_SITEBASE
+SUBST_VARS.policysh+=	PERL5_VENDORBASE
+SUBST_VARS.policysh+=	PERL5_PRIVLIB
+SUBST_VARS.policysh+=	PERL5_SITELIB
+SUBST_VARS.policysh+=	PERL5_VENDORLIB
 PERL5_MAN1DIR=		${PERL5_PERLBASE}/${PKGMANDIR}/man1
-
-CONFIGURE_ARGS+=	-Dman1ext="1"
-CONFIGURE_ARGS+=	-Dman1dir=${PERL5_MAN1DIR:Q}
-CONFIGURE_ARGS+=	-Dsiteman1dir=${PERL5_SITEBASE:Q}/${PKGMANDIR:Q}/man1
-CONFIGURE_ARGS+=	-Dvendorman1dir=${PERL5_VENDORBASE:Q}/${PKGMANDIR:Q}/man1
-CONFIGURE_ARGS+=	-Dman3ext="3"
-CONFIGURE_ARGS+=	-Dman3dir=${PERL5_PERLBASE:Q}/${PKGMANDIR:Q}/man3
-CONFIGURE_ARGS+=	-Dsiteman3dir=${PERL5_SITEBASE:Q}/${PKGMANDIR:Q}/man3
-CONFIGURE_ARGS+=	-Dvendorman3dir=${PERL5_VENDORBASE:Q}/${PKGMANDIR:Q}/man3
+SUBST_VARS.policysh+=	PERL5_MAN1DIR
+SUBST_VARS.policysh+=	PKGMANDIR
+SUBST_VARS.policysh+=	LOCALBASE
+SUBST_VARS.policysh+=	PTHREAD_LDFLAGS
 
 .if ${OPSYS} == "Darwin"
 #
@@ -149,13 +121,13 @@ CONFIGURE_ARGS+=	-Duseshrplib
 # files, so make sure the paths to the ones in ${TOOLS_DIR} aren't used.
 #
 USE_TOOLS+=		hostname ln sed test
-CONFIGURE_ARGS+=	-Daphostname=${TOOLS_HOSTNAME_CMD:Q}
-CONFIGURE_ARGS+=	-Dln=${TOOLS_LN:Q}
-CONFIGURE_ARGS+=	-Dsed=${TOOLS_SED:Q}
+SUBST_VARS.policysh+=	TOOLS_HOSTNAME_CMD
+SUBST_VARS.policysh+=	TOOLS_LN
 TOOLS_ALIASES.sed+=	${TOOLS_SED:T}
-CONFIGURE_ARGS+=	-Dsh=${TOOLS_SH:Q}
-CONFIGURE_ARGS+=	-Dissymlink="${TOOLS_TEST} -h"
-CONFIGURE_ARGS+=	-Dperl5=${FALSE}
+SUBST_VARS.policysh+=	TOOLS_SED
+SUBST_VARS.policysh+=	TOOLS_SH
+SUBST_VARS.policysh+=	TOOLS_TEST
+SUBST_VARS.policysh+=	FALSE
 
 # Nail down the needed libraries for each platform here to avoid hidden
 # dependencies.  If this isn't defined, then use the perl defaults for the
@@ -164,14 +136,16 @@ CONFIGURE_ARGS+=	-Dperl5=${FALSE}
 LIBSWANTED.Darwin=	m c
 LIBSWANTED.DragonFly=	m crypt
 LIBSWANTED.FreeBSD=	m crypt
+LIBSWANTED.HPUX=	cl pthread $$libswanted # see Perl's README.hpux
 LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.Interix=	m dl
 LIBSWANTED.Linux=	m crypt dl nsl
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
-LIBSWANTED.AIX= 	m crypt dl socket nsl bind c
+LIBSWANTED.AIX=		m crypt dl socket nsl bind c
 LIBSWANTED=		${LIBSWANTED.${OPSYS}}
+SUBST_VARS.policysh+=	LIBSWANTED
 
 # Nail down the directories in which the system libraries may be found.
 # If this isn't defined, then use the perl defaults for the particular
@@ -186,21 +160,16 @@ SYSLIBPATH.OpenBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
 SYSLIBPATH.AIX=		/usr/lib
 SYSLIBPATH=		${SYSLIBPATH.${OPSYS}}
-
-# Nail down the directories in which headers and libraries of
-# locally-installed software may be found.
-#
-LOCLIBPATH=		${LOCALBASE}/lib
-LOCINCPATH=		${LOCALBASE}/include
+SUBST_VARS.policysh+=	SYSLIBPATH
 
 # On a.out platforms, we link with "ld" and on ELF platforms, we link with
 # "cc", so we need to use different options to pass the run-time search path
 # flags to the link command in the right way.
 #
 .if ${OBJECT_FMT} == "a.out"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${LINKER_RPATH_FLAG} /g}
+LOCLIBRPATHFLAGS=	${LINKER_RPATH_FLAG} ${LOCALBASE}/lib
 .elif ${OBJECT_FMT} == "ELF" || ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
+LOCLIBRPATHFLAGS=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 .else
 LOCLIBRPATHFLAGS=	# empty
 .endif
@@ -283,34 +252,31 @@ CONFIGURE_ARGS+=	-Uusemymalloc
 
 .if !empty(PKG_OPTIONS:M64bitint)
 CONFIGURE_ARGS+=	-Duse64bitint
-.if ${OBJECT_FMT} == "XCOFF"
+.  if ${OBJECT_FMT} == "XCOFF"
 LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int/CORE
-.endif
+.  endif
 .elif !empty(PKG_OPTIONS:M64bitmore)
 CONFIGURE_ARGS+=	-Dusemorebits
-.if ${OBJECT_FMT} == "XCOFF"
+.  if ${OBJECT_FMT} == "XCOFF"
 LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int-ld/CORE
-.endif
+.  endif
 .elif !empty(PKG_OPTIONS:M64bitall)
 CONFIGURE_ARGS+=	-Duse64bitall
-.if ${OBJECT_FMT} == "XCOFF"
+.  if ${OBJECT_FMT} == "XCOFF"
 LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64all/CORE
-.endif
+.  endif
 .elif !empty(PKG_OPTIONS:M64bitnone)
 CONFIGURE_ARGS+=	-Uuse64bitall -Uusemorebits -Uuse64bitint
-.if ${OBJECT_FMT} == "XCOFF"
+.  if ${OBJECT_FMT} == "XCOFF"
 LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi/CORE
-.endif
+.  endif
 .else
-.if ${OBJECT_FMT} == "XCOFF"
+.  if ${OBJECT_FMT} == "XCOFF"
 BROKEN=		XCOFF targets need the path specified where libperl.a resides.\
 Please choose on of 64bitint 64bitmore 64bitall or 64bitnone to allow this.
+.  endif
 .endif
-.endif
-
-.if !empty(LIBSWANTED)
-CONFIGURE_ARGS+=	-Dlibswanted=${LIBSWANTED:Q}
-.endif
+SUBST_VARS.policysh+=	LOCLIBRPATHFLAGS
 
 # Remove a spurious workdir reference
 SUBST_CLASSES+=		rm
@@ -319,11 +285,10 @@ SUBST_FILES.rm=		lib/Config_heavy.pl
 SUBST_SED.rm=	-e "s!^rm_try='/.*/\.tools/bin/rm -f!rm_try='/bin/rm -f!"
 
 # Replace our perl as the interpreter
-REPLACE_PERL+=		lib/Class/ISA.pm
 REPLACE_PERL+=		lib/File/DosGlob.pm
 REPLACE_PERL+=		lib/version.pm
-REPLACE_PERL+=		lib/Math/BigFloat/Trace.pm
-REPLACE_PERL+=		lib/Math/BigInt/Trace.pm
+REPLACE_PERL+=		cpan/bignum/lib/Math/BigFloat/Trace.pm
+REPLACE_PERL+=		cpan/bignum/lib/Math/BigInt/Trace.pm
 REPLACE_PERL+=		lib/unicore/mktables
 
 # And replace a perl interpreter during the pre-install stage
@@ -338,11 +303,11 @@ SUBST_SED.miniperl=	-e "1s:\#!./miniperl:\#!${PERL5}:"
 SUBST_CLASSES+=		cpprun
 SUBST_STAGE.cpprun=	pre-install
 SUBST_FILES.cpprun=	lib/Config_heavy.pl
-.if !empty(PKG_OPTIONS:Mthreads)
+.  if !empty(PKG_OPTIONS:Mthreads)
 SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun='cc_r -E'/"
-.else
+.  else
 SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun='cc -E'/"
-.endif
+.  endif
 .endif
 
 # Some platforms may want the directory mode not to be 0755.  This
@@ -351,65 +316,12 @@ SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun='cc -E'/"
 #
 SUBST_CLASSES+=		dirmode
 SUBST_STAGE.dirmode=	post-patch
-SUBST_FILES.dirmode=	installhtml installman installperl		\
-			lib/ExtUtils/Install.pm
+SUBST_FILES.dirmode=	installhtml install_lib.pl	\
+			dist/ExtUtils-Install/lib/ExtUtils/Install.pm
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
-# It's tough to guess which hints file will be used, so add our modifications
-# to all of them:
-#
-# - Add the pkgsrc-derived LDFLAGS for linking against pthreads to the
-#   usethreads.cbu call-back script.
-#
-# - Generate a pkgsrc.cbu call-back script that sets the correct LDFLAGS
-#   for linking against pkgsrc-installed libraries.
-#
-# - Explicitly set the local compiler search paths to contain only the
-#   pkgsrc-controlled directories.
-#
-pre-configure:
-.if defined(PTHREAD_LDFLAGS) && !empty(PTHREAD_LDFLAGS)
-	hintdir="${WRKSRC}/hints";					\
-	for hints in $${hintdir}/*.sh; do				\
-		${CHMOD} +w $${hints};					\
-		{ ${ECHO} "";						\
-		  ${ECHO} "cat >> UU/usethreads.cbu <<'EOCBU'";		\
-		  ${ECHO} "";						\
-		  ${ECHO} "# Add pkgsrc-derived ldflags to link with thread support."; \
-		  ${ECHO} 'ldflags="'${PTHREAD_LDFLAGS:Q}' $$ldflags"';	\
-		  ${ECHO} 'lddlflags="'${PTHREAD_LDFLAGS:Q}' $$lddlflags"'; \
-		  ${ECHO} "EOCBU";					\
-		} >> $${hints};						\
-	done
-.endif
-	hintdir="${WRKSRC}/hints";					\
-	for hints in $${hintdir}/*.sh; do				\
-		${CHMOD} +w $${hints};					\
-		{ ${ECHO} "";						\
-		  ${ECHO} "cat > UU/pkgsrc.cbu <<'EOCBU'";		\
-		  ${ECHO} "# This script UU/pkgsrc.cbu will get 'called-back' by Configure to set"; \
-		  ${ECHO} '# linker options after all other call-back scripts have been invoked.'; \
-		  ${ECHO} 'ldflags="'${LOCLIBRPATHFLAGS:Q}' $$ldflags"'; \
-		  ${ECHO} 'lddlflags="'${LOCLIBRPATHFLAGS:Q}' $$lddlflags"'; \
-		  ${ECHO} "EOCBU";					\
-		} >> $${hints};						\
-	done
-	hintdir="${WRKSRC}/hints";					\
-	for hints in $${hintdir}/*.sh; do				\
-		${CHMOD} +w $${hints};					\
-		{ ${ECHO} "";						\
-		  ${ECHO} "# Set pkgsrc defaults for library and header search paths."; \
-		  ${ECHO} 'locincpth="'${LOCINCPATH:Q}'"';		\
-		  ${ECHO} 'loclibpth="'${LOCLIBPATH:Q}'"';		\
-		} >> $${hints};						\
-	done
-.if !empty(SYSLIBPATH)
-	hintdir="${WRKSRC}/hints";					\
-	for hints in $${hintdir}/*.sh; do				\
-		${CHMOD} +w $${hints};					\
-		${ECHO} 'glibpth="'${SYSLIBPATH:Q}'"' >> $${hints};	\
-	done
-.endif
+post-extract:
+		cp ${FILESDIR}/Policy.sh ${WRKSRC}/Policy.sh
 
 post-build:
 	${SED}	-e "s,@PERL5@,"${PERL5:Q}",g"				\
@@ -429,10 +341,10 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 post-install: perl5-post-install
 
 perl5-post-install:
-	if ${TEST} -x ${DESTDIR}${PREFIX}/bin/a2p; then			\
+	${RUN}if ${TEST} -x ${DESTDIR}${PREFIX}/bin/a2p; then		\
 		strip ${DESTDIR}${PREFIX}/bin/a2p;			\
 	fi
-	${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh ${DESTDIR}${PERL5_SCRIPTDIR}/perllink;	\
+	${RUN}${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh ${DESTDIR}${PERL5_SCRIPTDIR}/perllink;	\
 	${INSTALL_MAN} ${FILESDIR}/perllink.1 ${DESTDIR}${PERL5_MAN1DIR}/perllink.1;	\
 	${RM} -f ${DESTDIR}${PREFIX}/bin/perllink				\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;		\

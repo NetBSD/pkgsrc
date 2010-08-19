@@ -1,8 +1,6 @@
-$NetBSD: patch-ah,v 1.10 2008/10/10 21:58:43 he Exp $
-
---- perl.c.orig	2007-12-18 11:47:08.000000000 +0100
-+++ perl.c
-@@ -1454,8 +1454,10 @@ S_procself_val(pTHX_ SV *sv, const char 
+--- perl.c.orig	2010-05-21 14:41:18.000000000 +0000
++++ perl.c	2010-05-21 14:44:01.000000000 +0000
+@@ -1414,8 +1414,10 @@
         to the executable (or returning an error from the readlink).  Any valid
         path has a '/' in it somewhere, so use that to validate the result.
         See http://www.freebsd.org/cgi/query-pr.cgi?pr=35703
@@ -14,94 +12,3 @@ $NetBSD: patch-ah,v 1.10 2008/10/10 21:58:43 he Exp $
  	sv_setpvn(sv,buf,len);
      }
      else {
-@@ -4747,45 +4749,8 @@ S_init_perllib(pTHX)
-     }
- 
- /* Use the ~-expanded versions of APPLLIB (undocumented),
--    ARCHLIB PRIVLIB SITEARCH SITELIB VENDORARCH and VENDORLIB
-+    SITEARCH SITELIB VENDORARCH VENDORLIB ARCHLIB and PRIVLIB
- */
--#ifdef APPLLIB_EXP
--    incpush(APPLLIB_EXP, TRUE, TRUE, TRUE, TRUE);
--#endif
--
--#ifdef ARCHLIB_EXP
--    incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE, TRUE);
--#endif
--#ifdef MACOS_TRADITIONAL
--    {
--	Stat_t tmpstatbuf;
--    	SV * privdir = newSV(0);
--	char * macperl = PerlEnv_getenv("MACPERL");
--	
--	if (!macperl)
--	    macperl = "";
--	
--	Perl_sv_setpvf(aTHX_ privdir, "%slib:", macperl);
--	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
--	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE, FALSE);
--	Perl_sv_setpvf(aTHX_ privdir, "%ssite_perl:", macperl);
--	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
--	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE, FALSE);
--	
--   	SvREFCNT_dec(privdir);
--    }
--    if (!PL_tainting)
--	incpush(":", FALSE, FALSE, TRUE, FALSE);
--#else
--#ifndef PRIVLIB_EXP
--#  define PRIVLIB_EXP "/usr/local/lib/perl5:/usr/local/lib/perl"
--#endif
--#if defined(WIN32)
--    incpush(PRIVLIB_EXP, TRUE, FALSE, TRUE, TRUE);
--#else
--    incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE, TRUE);
--#endif
--
- #ifdef SITEARCH_EXP
-     /* sitearch is always relative to sitelib on Windows for
-      * DLL-based path intuition to work correctly */
-@@ -4828,6 +4793,43 @@ S_init_perllib(pTHX)
-     incpush(PERL_VENDORLIB_STEM, FALSE, TRUE, TRUE, TRUE);
- #endif
- 
-+#ifdef APPLLIB_EXP
-+    incpush(APPLLIB_EXP, TRUE, TRUE, TRUE, TRUE);
-+#endif
-+
-+#ifdef ARCHLIB_EXP
-+    incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE, TRUE);
-+#endif
-+#ifdef MACOS_TRADITIONAL
-+    {
-+	Stat_t tmpstatbuf;
-+    	SV * privdir = newSV(0);
-+	char * macperl = PerlEnv_getenv("MACPERL");
-+	
-+	if (!macperl)
-+	    macperl = "";
-+	
-+	Perl_sv_setpvf(aTHX_ privdir, "%slib:", macperl);
-+	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
-+	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE, FALSE);
-+	Perl_sv_setpvf(aTHX_ privdir, "%ssite_perl:", macperl);
-+	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
-+	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE, FALSE);
-+	
-+   	SvREFCNT_dec(privdir);
-+    }
-+    if (!PL_tainting)
-+	incpush(":", FALSE, FALSE, TRUE, FALSE);
-+#else
-+#ifndef PRIVLIB_EXP
-+#  define PRIVLIB_EXP "/usr/local/lib/perl5:/usr/local/lib/perl"
-+#endif
-+#if defined(WIN32)
-+    incpush(PRIVLIB_EXP, TRUE, FALSE, TRUE, TRUE);
-+#else
-+    incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE, TRUE);
-+#endif
-+
- #ifdef PERL_OTHERLIBDIRS
-     incpush(PERL_OTHERLIBDIRS, TRUE, TRUE, TRUE, TRUE);
- #endif
