@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2908 2010/08/19 11:27:17 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2909 2010/08/19 19:05:42 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3832,3 +3832,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Snowball-Swedish version 1.2 [sno 2010-08-19]
 	Updated lang/ocaml to 3.12.0 [asau 2010-08-19]
 	Updated inputmethod/ibus-qt to 1.3.1 [obache 2010-08-19]
+	Added textproc/p5-Text-German version 0.06 [sno 2010-08-19]
