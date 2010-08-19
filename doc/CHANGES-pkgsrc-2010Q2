@@ -88,3 +88,10 @@ Pullup ticket #3206 - requested by tron
 net/socat: security update
 Pullup ticket #3207 - requested by taca
 lang/ruby18-base: security patch
+Pullup ticket #3208 - requested by taca
+databases/mysql51-client: security update
+databases/mysql51-server: security update
+Pullup ticket #3209 - requested by wiz
+sysutils/dbus-glib: security update
+Pullup ticket #3210 - requested by obache
+x11/wxGTK24: build fix
