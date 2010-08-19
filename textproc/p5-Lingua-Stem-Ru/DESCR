@@ -1,0 +1,10 @@
+This module applies the Porter Stemming Algorithm to its parameters,
+returning the stemmed words.
+
+The algorithm is implemented exactly as described in:
+
+    * http://snowball.tartarus.org/russian/stemmer.html
+
+The code is carefully crafted to work in conjunction with the Lingua::Stem
+module by Benjamin Franz. This stemmer is also based on the work of Aldo
+Capini, see Lingua::Stem::It.
