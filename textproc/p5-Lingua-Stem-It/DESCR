@@ -1,0 +1,10 @@
+This module applies the Porter Stemming Algorithm to its parameters,
+returning the stemmed words.
+
+The algorithm is implemented exactly (I hope :-) as described in:
+
+    http://snowball.tartarus.org/algorithms/italian/stemmer.html
+
+The code is carefully crafted to work in conjunction with the
+Lingua::Stem module by Benjamin Franz, from which I've also borrowed
+some functionalities (caching and exception list).
