@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/06/13 22:45:53 wiz Exp $
+$NetBSD: patch-aa,v 1.5.2.1 2010/08/19 19:51:48 tron Exp $
 
 --- configure.orig	2003-09-21 11:31:30.000000000 +0000
 +++ configure
@@ -11,13 +11,17 @@ $NetBSD: patch-aa,v 1.5 2010/06/13 22:45:53 wiz Exp $
      USE_BSD=1
      USE_FREEBSD=1
      cat >> confdefs.h <<\EOF
-@@ -11498,9 +11498,10 @@ SEARCH_INCLUDE="\
-     /usr/local/x11r5/include  \
-     /usr/lpp/Xamples/include  \
+@@ -11436,6 +11436,7 @@ EOF
+ 
+ 
+ SEARCH_INCLUDE="\
++    ${BUILDLINK_DIR}/include  \
+     /usr/local/include        \
                                \
--    /usr/openwin/share/include"
-+    /usr/openwin/share/include\
-+    ${PREFIX}/include"
+     /usr/Motif-1.2/include    \
+@@ -11500,7 +11501,7 @@ SEARCH_INCLUDE="\
+                               \
+     /usr/openwin/share/include"
  
 -SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s/include/lib/g` "
 +SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s/include/lib/g`"
