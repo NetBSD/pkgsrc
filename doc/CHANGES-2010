@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2913 2010/08/19 19:45:43 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2914 2010/08/19 19:51:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3836,3 +3836,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Lingua-Stem version 0.84 [sno 2010-08-19]
 	Updated www/p5-HTML-Parser to 3.67 [sno 2010-08-19]
 	Updated devel/p5-Memoize-ExpireLRU to 0.55nb4 [sno 2010-08-19]
+	Added textproc/p5-Lingua-EN-Tagger version 0.16 [sno 2010-08-19]
