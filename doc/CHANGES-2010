@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2901 2010/08/19 06:12:38 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2902 2010/08/19 06:20:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/swi-prolog to 5.11.4 [asau 2010-08-18]
 	Added textproc/p5-Lingua-PT-Stemmer version 0.01 [sno 2010-08-19]
 	Added textproc/p5-Lingua-Stem-Fr version 0.02 [sno 2010-08-19]
+	Added textproc/p5-Lingua-Stem-It version 0.02 [sno 2010-08-19]
