@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/09/07 21:48:13 tonio Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/08/19 08:06:53 asau Exp $
 bin/camlp4
 bin/camlp4boot
 bin/camlp4o
@@ -21,11 +21,11 @@ bin/ocamldoc
 bin/ocamllex
 bin/ocamlmklib
 bin/ocamlmktop
+bin/ocamlobjinfo
 bin/ocamlprof
 bin/ocamlrun
 bin/ocamlyacc
 lib/ocaml/Makefile.config
-lib/ocaml/addlabels
 lib/ocaml/arg.cmi
 lib/ocaml/arg.ml
 lib/ocaml/arg.mli
@@ -61,6 +61,8 @@ lib/ocaml/caml/misc.h
 lib/ocaml/caml/mlvalues.h
 lib/ocaml/caml/printexc.h
 lib/ocaml/caml/signals.h
+lib/ocaml/caml/socketaddr.h
+lib/ocaml/caml/threads.h
 lib/ocaml/caml/unixsupport.h
 lib/ocaml/camlheader
 lib/ocaml/camlheader_ur
@@ -233,9 +235,9 @@ lib/ocaml/lexing.ml
 lib/ocaml/lexing.mli
 lib/ocaml/libbigarray.a
 lib/ocaml/libcamlrun.a
+lib/ocaml/libcamlstr.a
 lib/ocaml/libmldbm.a
 lib/ocaml/libnums.a
-lib/ocaml/libstr.a
 lib/ocaml/libthreads.a
 lib/ocaml/libunix.a
 lib/ocaml/list.cmi
@@ -265,6 +267,7 @@ lib/ocaml/nums.cma
 lib/ocaml/obj.cmi
 lib/ocaml/obj.ml
 lib/ocaml/obj.mli
+lib/ocaml/objinfo_helper
 lib/ocaml/ocamlbuild/ocamlbuild.cmo
 lib/ocaml/ocamlbuild/ocamlbuild.o
 lib/ocaml/ocamlbuild/ocamlbuild_executor.cmi
@@ -356,7 +359,6 @@ lib/ocaml/ratio.mli
 lib/ocaml/scanf.cmi
 lib/ocaml/scanf.ml
 lib/ocaml/scanf.mli
-lib/ocaml/scrapelabels
 lib/ocaml/set.cmi
 lib/ocaml/set.ml
 lib/ocaml/set.mli
