@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9576 2010/08/18 15:45:24 taca Exp $
+$NetBSD: TODO,v 1.9577 2010/08/19 00:02:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -703,7 +703,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o golem-0.0.6
 	o gossip-0.31
 	o gourmet-0.13.3
-	o gperiodic-2.0.10
+	o gperiodic-2.0.10 [pkg/43779]
 	o gplcver-2.12a
 	o gpredict-1.1
 	o gpsdrive-2.09
