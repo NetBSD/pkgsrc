@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.556 2010/08/19 06:55:08 sno Exp $
+# $NetBSD: Makefile,v 1.557 2010/08/19 19:06:01 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -306,6 +306,7 @@ SUBDIR+=	p5-Text-Emoticon
 SUBDIR+=	p5-Text-Emoticon-MSN
 SUBDIR+=	p5-Text-FindIndent
 SUBDIR+=	p5-Text-Format
+SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Text-Glob
 SUBDIR+=	p5-Text-Kakasi
 SUBDIR+=	p5-Text-LevenshteinXS
