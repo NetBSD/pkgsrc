@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2906 2010/08/19 06:54:49 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2907 2010/08/19 08:07:25 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3830,3 +3830,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Lingua-Stem-Snowball-Da version 1.01 [sno 2010-08-19]
 	Added textproc/p5-Snowball-Norwegian version 1.2 [sno 2010-08-19]
 	Added textproc/p5-Snowball-Swedish version 1.2 [sno 2010-08-19]
+	Updated lang/ocaml to 3.12.0 [asau 2010-08-19]
