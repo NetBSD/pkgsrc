@@ -1,0 +1,22 @@
+$NetBSD: patch-ba,v 1.1.2.2 2010/08/19 16:42:18 tron Exp $
+
+* if long is int64_t and time_t is int32_t, "(time_t) MY_TIME_T_MAX"
+  results -1 and val is always parsed as exceeding limit.
+  So, use TIMESTAMP_MAX_VALUE which is INT_MAX32 and make val to ulonglong
+  for safer comparsion.
+
+--- sql/set_var.cc.orig	2010-07-09 12:34:53.000000000 +0000
++++ sql/set_var.cc
+@@ -2720,10 +2720,9 @@ int set_var_collation_client::update(THD
+ 
+ bool sys_var_timestamp::check(THD *thd, set_var *var)
+ {
+-  time_t val;
++  ulonglong val;
+   var->save_result.ulonglong_value= var->value->val_int();
+-  val= (time_t) var->save_result.ulonglong_value;
+-  if (val < (time_t) MY_TIME_T_MIN || val > (time_t) MY_TIME_T_MAX)
++  if (val < TIMESTAMP_MIN_VALUE || val > TIMESTAMP_MAX_VALUE)
+   {
+     my_message(ER_UNKNOWN_ERROR, 
+                "This version of MySQL doesn't support dates later than 2038",

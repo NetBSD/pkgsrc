@@ -1,0 +1,25 @@
+$NetBSD: patch-bb,v 1.1.2.2 2010/08/19 16:42:18 tron Exp $
+
+* if long is int64_t and time_t is int32_t, "(time_t) MY_TIME_T_MAX"
+  results -1 and server_start_time is always parsed as exceeding limit.
+  So, use TIMESTAMP_MAX_VALUE which is INT_MAX32.
+* if time_t is int32_t, comparsion with TIMESTAMP_MAX_VALUE is always
+  true here.  So, limit the comparsion to other cases.
+
+--- sql/sql_class.h.orig	2010-07-09 12:34:57.000000000 +0000
++++ sql/sql_class.h
+@@ -2031,8 +2031,12 @@ public:
+   }
+   /*TODO: this will be obsolete when we have support for 64 bit my_time_t */
+   inline bool	is_valid_time() 
+-  { 
+-    return (start_time < (time_t) MY_TIME_T_MAX); 
++  {
++#if defined(TIME_T_UNSIGNE) || (SIZEOF_TIME_T > 4)
++    return (start_time < TIMESTAMP_MAX_VALUE); 
++#else
++    return 1;
++#endif
+   }
+   void set_time_after_lock()  { utime_after_lock= my_micro_time(); }
+   ulonglong current_utime()  { return my_micro_time(); }
