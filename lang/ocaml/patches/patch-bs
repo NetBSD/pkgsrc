@@ -1,63 +1,65 @@
-$NetBSD: patch-bs,v 1.6 2009/09/07 21:48:14 tonio Exp $
+$NetBSD: patch-bs,v 1.7 2010/08/19 08:06:53 asau Exp $
 
---- tools/Makefile.shared.orig	2007-11-22 23:14:43.000000000 +0100
-+++ tools/Makefile.shared
-@@ -51,9 +51,9 @@ clean::
+--- tools/Makefile.shared.orig	2010-06-07 10:58:41.000000000 +0400
++++ tools/Makefile.shared	2010-08-12 14:44:51.000000000 +0400
+@@ -52,9 +52,9 @@
  	rm -f ocamldep.opt
  
  install::
 -	cp ocamldep $(BINDIR)/ocamldep$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamldep $(BINDIR)/ocamldep$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamldep $(BINDIR)/ocamldep$(EXE)
  	if test -f ocamldep.opt; \
 -	  then cp ocamldep.opt $(BINDIR)/ocamldep.opt$(EXE); else :; fi
-+	  then ${BSD_INSTALL_PROGRAM} ocamldep.opt $(BINDIR)/ocamldep.opt$(EXE); else :; fi
++	  then $(BSD_INSTALL_PROGRAM) ocamldep.opt $(BINDIR)/ocamldep.opt$(EXE); else :; fi
  
  # The profiler
  
-@@ -69,15 +69,15 @@ ocamlcp: ocamlcp.cmo
- 	$(CAMLC) $(LINKFLAGS) -o ocamlcp main_args.cmo ocamlcp.cmo
+@@ -70,15 +70,15 @@
+ 	$(CAMLC) $(LINKFLAGS) -o ocamlcp warnings.cmo main_args.cmo ocamlcp.cmo
  
  install::
 -	cp ocamlprof $(BINDIR)/ocamlprof$(EXE)
 -	cp ocamlcp $(BINDIR)/ocamlcp$(EXE)
 -	cp profiling.cmi profiling.cmo $(LIBDIR)
-+	${BSD_INSTALL_SCRIPT} ocamlprof $(BINDIR)/ocamlprof$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamlcp $(BINDIR)/ocamlcp$(EXE)
-+	${BSD_INSTALL_DATA} profiling.cmi profiling.cmo $(LIBDIR)
++	$(BSD_INSTALL_SCRIPT) ocamlprof $(BINDIR)/ocamlprof$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamlcp $(BINDIR)/ocamlcp$(EXE)
++	$(BSD_INSTALL_DATA) profiling.cmi profiling.cmo $(LIBDIR)
  
  clean::
  	rm -f ocamlprof ocamlcp
  
  install::
 -	cp ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
  
  clean::
  	rm -f ocamlmktop
-@@ -97,7 +97,7 @@ myocamlbuild_config.ml: ../config/Makefi
+@@ -98,7 +98,7 @@
  	cp ../myocamlbuild_config.ml .
  
  install::
 -	cp ocamlmklib $(BINDIR)/ocamlmklib$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamlmklib $(BINDIR)/ocamlmklib$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamlmklib $(BINDIR)/ocamlmklib$(EXE)
  
  clean::
  	rm -f ocamlmklib
-@@ -121,7 +121,7 @@ clean::
+@@ -122,7 +122,7 @@
  # To make custom toplevels (see Makefile/Makefile.nt)
  
  install::
 -	cp ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
  
  clean::
  	rm -f ocamlmktop
-@@ -171,7 +171,7 @@ addlabels: addlabels.ml
- 		$(ADDLABELS_IMPORTS) addlabels.ml
+@@ -239,8 +239,8 @@
+ 	$(CAMLC) -o objinfo $(OBJINFO)
  
  install::
--	cp addlabels $(LIBDIR)
-+	${BSD_INSTALL_DATA} addlabels $(LIBDIR)
+-	cp objinfo $(BINDIR)/ocamlobjinfo$(EXE)
+-	cp objinfo_helper$(EXE) $(LIBDIR)/objinfo_helper$(EXE)
++	$(BSD_INSTALL_SCRIPT) objinfo $(BINDIR)/ocamlobjinfo$(EXE)
++	$(BSD_INSTALL_SCRIPT) objinfo_helper$(EXE) $(LIBDIR)/objinfo_helper$(EXE)
  
  clean::
- 	rm -f addlabels
+ 	rm -f objinfo objinfo_helper$(EXE)

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.15 2009/09/07 21:48:13 tonio Exp $
+@comment $NetBSD: PLIST.opt,v 1.16 2010/08/19 08:06:53 asau Exp $
 bin/camlp4o.opt
 bin/camlp4of.opt
 bin/camlp4oof.opt
@@ -20,7 +20,6 @@ lib/ocaml/big_int.cmx
 lib/ocaml/bigarray.a
 lib/ocaml/bigarray.cmx
 lib/ocaml/bigarray.cmxa
-lib/ocaml/bigarray.cmxs
 lib/ocaml/buffer.cmx
 lib/ocaml/callback.cmx
 lib/ocaml/camlinternalLazy.cmx
@@ -65,11 +64,7 @@ lib/ocaml/complex.cmx
 lib/ocaml/dbm.a
 lib/ocaml/dbm.cmx
 lib/ocaml/dbm.cmxa
-lib/ocaml/dbm.cmxs
 lib/ocaml/digest.cmx
-lib/ocaml/dynlink.a
-lib/ocaml/dynlink.cmx
-lib/ocaml/dynlink.cmxa
 lib/ocaml/filename.cmx
 lib/ocaml/format.cmx
 lib/ocaml/gc.cmx
@@ -94,7 +89,6 @@ lib/ocaml/nativeint.cmx
 lib/ocaml/num.cmx
 lib/ocaml/nums.a
 lib/ocaml/nums.cmxa
-lib/ocaml/nums.cmxs
 lib/ocaml/obj.cmx
 lib/ocaml/ocamlbuild/ocamlbuild.cmx
 lib/ocaml/ocamlbuild/ocamlbuild_executor.cmx
@@ -127,7 +121,6 @@ lib/ocaml/stdlib.p.cmxa
 lib/ocaml/str.a
 lib/ocaml/str.cmx
 lib/ocaml/str.cmxa
-lib/ocaml/str.cmxs
 lib/ocaml/stream.cmx
 lib/ocaml/string.cmx
 lib/ocaml/stringLabels.cmx
@@ -142,6 +135,5 @@ lib/ocaml/threads/threads.cmxa
 lib/ocaml/unix.a
 lib/ocaml/unix.cmx
 lib/ocaml/unix.cmxa
-lib/ocaml/unix.cmxs
 lib/ocaml/unixLabels.cmx
 lib/ocaml/weak.cmx

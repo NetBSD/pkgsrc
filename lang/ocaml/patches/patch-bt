@@ -1,28 +1,28 @@
-$NetBSD: patch-bt,v 1.4 2009/09/07 21:48:14 tonio Exp $
+$NetBSD: patch-bt,v 1.5 2010/08/19 08:06:53 asau Exp $
 
---- ./Makefile.orig	2008-10-23 17:29:11.000000000 +0200
-+++ ./Makefile
-@@ -268,25 +268,25 @@ opt.opt: checkstack runtime core ocaml o
+--- Makefile.orig	2010-06-16 05:32:26.000000000 +0400
++++ Makefile	2010-08-12 14:47:49.000000000 +0400
+@@ -273,25 +273,25 @@
  
  # Installation
  install:
 -	if test -d $(BINDIR); then : ; else $(MKDIR) $(BINDIR); fi
 -	if test -d $(LIBDIR); then : ; else $(MKDIR) $(LIBDIR); fi
 -	if test -d $(STUBLIBDIR); then : ; else $(MKDIR) $(STUBLIBDIR); fi
-+	if test -d $(BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(BINDIR); fi
-+	if test -d $(LIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(LIBDIR); fi
-+	if test -d $(STUBLIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(STUBLIBDIR); fi
++	if test -d $(BINDIR); then : ; else $(BSD_INSTALL_PROGRAM_DIR) $(BINDIR); fi
++	if test -d $(LIBDIR); then : ; else $(BSD_INSTALL_DATA_DIR) $(LIBDIR); fi
++	if test -d $(STUBLIBDIR); then : ; else $(BSD_INSTALL_DATA_DIR) $(STUBLIBDIR); fi
  	if test -d $(MANDIR)/man$(MANEXT); then : ; \
 -	  else $(MKDIR) $(MANDIR)/man$(MANEXT); fi
-+	  else ${BSD_INSTALL_MAN_DIR} $(MANDIR)/man$(MANEXT); fi
++	  else $(BSD_INSTALL_MAN_DIR) $(MANDIR)/man$(MANEXT); fi
  	cd $(LIBDIR); rm -f dllbigarray.so dlllabltk.so dllnums.so \
-           dllthreads.so dllunix.so dllgraphics.so dllmldbm.so dllstr.so \
-           dlltkanim.so
+ 	  dllthreads.so dllunix.so dllgraphics.so dllmldbm.so dllstr.so \
+ 	  dlltkanim.so
  	cd byterun; $(MAKE) install
 -	cp ocamlc $(BINDIR)/ocamlc$(EXE)
 -	cp ocaml $(BINDIR)/ocaml$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamlc $(BINDIR)/ocamlc$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocaml $(BINDIR)/ocaml$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamlc $(BINDIR)/ocamlc$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocaml $(BINDIR)/ocaml$(EXE)
  	cd stdlib; $(MAKE) install
 -	cp lex/ocamllex $(BINDIR)/ocamllex$(EXE)
 -	cp yacc/ocamlyacc$(EXE) $(BINDIR)/ocamlyacc$(EXE)
@@ -31,35 +31,43 @@ $NetBSD: patch-bt,v 1.4 2009/09/07 21:48:14 tonio Exp $
 -	cp typing/outcometree.cmi typing/outcometree.mli $(LIBDIR)
 -	cp toplevel/topstart.cmo $(LIBDIR)
 -	cp toplevel/toploop.cmi toplevel/topdirs.cmi toplevel/topmain.cmi \
-+	${BSD_INSTALL_SCRIPT} lex/ocamllex $(BINDIR)/ocamllex$(EXE)
-+	${BSD_INSTALL_PROGRAM} yacc/ocamlyacc$(EXE) $(BINDIR)/ocamlyacc$(EXE)
-+	${BSD_INSTALL_DATA} toplevel/toplevellib.cma $(LIBDIR)/toplevellib.cma
-+	${BSD_INSTALL_DATA} expunge $(LIBDIR)/expunge$(EXE)
-+	${BSD_INSTALL_DATA} typing/outcometree.cmi typing/outcometree.mli $(LIBDIR)
-+	${BSD_INSTALL_DATA} toplevel/topstart.cmo $(LIBDIR)
-+	${BSD_INSTALL_DATA} toplevel/toploop.cmi toplevel/topdirs.cmi toplevel/topmain.cmi \
++	$(BSD_INSTALL_SCRIPT) lex/ocamllex $(BINDIR)/ocamllex$(EXE)
++	$(BSD_INSTALL_PROGRAM) yacc/ocamlyacc$(EXE) $(BINDIR)/ocamlyacc$(EXE)
++	$(BSD_INSTALL_DATA) toplevel/toplevellib.cma $(LIBDIR)/toplevellib.cma
++	$(BSD_INSTALL_DATA) expunge $(LIBDIR)/expunge$(EXE)
++	$(BSD_INSTALL_DATA) typing/outcometree.cmi typing/outcometree.mli $(LIBDIR)
++	$(BSD_INSTALL_DATA) toplevel/topstart.cmo $(LIBDIR)
++	$(BSD_INSTALL_DATA) toplevel/toploop.cmi toplevel/topdirs.cmi toplevel/topmain.cmi \
  	   $(LIBDIR)
  	cd tools; $(MAKE) install
- 	-$(MAKE) -C man install
-@@ -304,17 +304,17 @@ install:
+ 	-cd man; $(MAKE) install
+@@ -302,24 +302,24 @@
+ 	if test -f ocamlopt; then $(MAKE) installopt; else :; fi
+ 	if test -f debugger/ocamldebug; then (cd debugger; $(MAKE) install); \
+ 	   else :; fi
+-	cp config/Makefile $(LIBDIR)/Makefile.config
++	$(BSD_INSTALL_DATA) config/Makefile $(LIBDIR)/Makefile.config
+ 	BINDIR=$(BINDIR) LIBDIR=$(LIBDIR) PREFIX=$(PREFIX) \
+ 	  ./build/partial-install.sh
+ 
  # Installation of the native-code compiler
  installopt:
  	cd asmrun; $(MAKE) install
 -	cp ocamlopt $(BINDIR)/ocamlopt$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamlopt $(BINDIR)/ocamlopt$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamlopt $(BINDIR)/ocamlopt$(EXE)
  	cd stdlib; $(MAKE) installopt
  	cd ocamldoc; $(MAKE) installopt
  	for i in $(OTHERLIBRARIES); \
  	  do (cd otherlibs/$$i; $(MAKE) installopt) || exit $$?; done
  	if test -f ocamlc.opt; \
 -	  then cp ocamlc.opt $(BINDIR)/ocamlc.opt$(EXE); else :; fi
-+	  then ${BSD_INSTALL_PROGRAM} ocamlc.opt $(BINDIR)/ocamlc.opt$(EXE); else :; fi
++	  then $(BSD_INSTALL_PROGRAM) ocamlc.opt $(BINDIR)/ocamlc.opt$(EXE); else :; fi
  	if test -f ocamlopt.opt; \
 -	  then cp ocamlopt.opt $(BINDIR)/ocamlopt.opt$(EXE); else :; fi
-+	  then ${BSD_INSTALL_PROGRAM} ocamlopt.opt $(BINDIR)/ocamlopt.opt$(EXE); else :; fi
++	  then $(BSD_INSTALL_PROGRAM) ocamlopt.opt $(BINDIR)/ocamlopt.opt$(EXE); else :; fi
  	if test -f lex/ocamllex.opt; \
 -	  then cp lex/ocamllex.opt $(BINDIR)/ocamllex.opt$(EXE); else :; fi
-+	  then ${BSD_INSTALL_PROGRAM} lex/ocamllex.opt $(BINDIR)/ocamllex.opt$(EXE); else :; fi
++	  then $(BSD_INSTALL_PROGRAM) lex/ocamllex.opt $(BINDIR)/ocamllex.opt$(EXE); else :; fi
  
  clean:: partialclean
  
