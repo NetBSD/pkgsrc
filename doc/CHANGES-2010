@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2916 2010/08/19 20:27:45 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2917 2010/08/19 20:47:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3839,3 +3839,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Lingua-EN-Tagger version 0.16 [sno 2010-08-19]
 	Added textproc/p5-Lingua-EN-Inflect-Phrase version 0.04 [sno 2010-08-19]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07001 [sno 2010-08-19]
+	Updated lang/perl5 to 5.12.1 [seb 2010-08-19]
