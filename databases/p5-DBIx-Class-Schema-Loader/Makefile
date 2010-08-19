@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/08/19 20:27:18 sno Exp $
+# $NetBSD: Makefile,v 1.10 2010/08/19 20:28:24 sno Exp $
 
 DISTNAME=	DBIx-Class-Schema-Loader-0.07001
 PKGNAME=	p5-${DISTNAME}
@@ -44,7 +44,7 @@ DEPENDS+=	p5-Scope-Guard-[0-9]*:../../devel/p5-Scope-Guard
 DEPENDS+=	p5-Text-Balanced>=0:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 #DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
-BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
+DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 # Avoid complaints if we do not have DB2, Oracle, Pg and mysql
 MAKE_ENV+=	DBIC_FEATURE_NOQUESTIONS=1
