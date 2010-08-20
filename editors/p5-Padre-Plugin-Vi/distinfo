@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 18:32:32 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/08/20 19:15:28 sno Exp $
 
-SHA1 (Padre-Plugin-Vi-0.22.tar.gz) = f47c59fe84a0836133ca05eef212782637ca8408
-RMD160 (Padre-Plugin-Vi-0.22.tar.gz) = 2ed81c5432a0a021501e43fabd04961e129de710
-Size (Padre-Plugin-Vi-0.22.tar.gz) = 25170 bytes
-SHA1 (patch-aa) = 28a1a7403a94e8fcc8cadb90aafc9a98e487b8d6
+SHA1 (Padre-Plugin-Vi-0.23.0.tar.gz) = e2a241bacb4101804dc0b162afcbb35d5b0496df
+RMD160 (Padre-Plugin-Vi-0.23.0.tar.gz) = 5b8c78895f46d8ba1c6ea07350928978a5767bf9
+Size (Padre-Plugin-Vi-0.23.0.tar.gz) = 29422 bytes
+SHA1 (patch-ab) = 96f98a006db9c21d63893507fd3648edf2b93de4
+SHA1 (patch-ac) = 88a5bd6341f10f35cfb158abbbacd6272d8c6d62
