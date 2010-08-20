@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 21:44:12 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/08/20 18:47:54 sno Exp $
 
-SHA1 (Padre-Plugin-SVN-0.04.tar.gz) = 1448247123a821c222ce6e658a775d23a93be4ea
-RMD160 (Padre-Plugin-SVN-0.04.tar.gz) = c33e4c0e7e76c84ea93fa692eb5fe9b2e4d3a931
-Size (Padre-Plugin-SVN-0.04.tar.gz) = 26217 bytes
+SHA1 (Padre-Plugin-SVN-0.05.tar.gz) = f6e57fa0a35d961a2ba6ff51c0883d2a1950cd39
+RMD160 (Padre-Plugin-SVN-0.05.tar.gz) = a9afe6eac9c8788e174dddc936c516dbcb6b0061
+Size (Padre-Plugin-SVN-0.05.tar.gz) = 30880 bytes
