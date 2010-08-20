@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2923 2010/08/20 06:46:55 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2924 2010/08/20 07:02:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Module-Manifest version 1.08 [sno 2010-08-20]
 	Updated databases/p5-ORLite to 1.45 [sno 2010-08-20]
 	Added textproc/p5-POD2-Base version 0.043 [sno 2010-08-20]
+	Updated editors/p5-Padre to 0.69 [sno 2010-08-20]
