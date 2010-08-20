@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2010/08/20 16:54:02 gdt Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGNAME=	gimp-print-ijs-4.2.7
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITES_SOURCEFORGE:=gimp-print/}
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	GIMP print IJS server
 
