@@ -1,0 +1,17 @@
+This module is an abstraction of the code in POD2::IT and POD2::FR. These
+modules belong to the Italian and the French translation projects of core
+Perl pods.
+
+Once a translation package had been installed, the translated
+documentation can be accessed with:
+
+    $ perldoc POD2::<lang>::<podname>
+
+(where <lang> is a language abbreviation like IT, FR, TLH, etc.)
+
+To improve the support to read translated docs, the perldoc utility (since
+version 3.14_01) was updated to find translated PODs via:
+
+    $ perldoc -L IT <podpage>
+    $ perldoc -L FR -f <function>
+    $ perldoc -L TH -q <FAQregex>
