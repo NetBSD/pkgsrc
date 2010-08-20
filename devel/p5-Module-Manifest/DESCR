@@ -1,0 +1,13 @@
+Module::Manifest is a simple utility module created originally for use in
+Module::Inspector.
+
+It can load a MANIFEST file that comes in a Perl distribution tarball,
+examine the contents, and perform some simple tasks. It can also load the
+MANIFEST.SKIP file and check that.
+
+Granted, the functionality needed to do this is quite simple, but the Perl
+distribution MANIFEST specification contains a couple of little
+idiosyncracies, such as line comments and space-seperated inline comments.
+
+The use of this module means that any little nigglies are dealt with behind
+the scenes, and you can concentrate the main task at hand.
