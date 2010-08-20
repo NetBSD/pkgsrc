@@ -1,8 +1,27 @@
-$NetBSD: patch-am,v 1.1 2005/07/23 14:44:39 he Exp $
+$NetBSD: patch-am,v 1.2 2010/08/20 21:25:02 tron Exp $
 
---- approve.orig	1997-04-05 21:18:36.000000000 +0200
-+++ approve
-@@ -214,6 +214,11 @@ sub process_bounce {
+--- approve.orig	1997-04-05 20:18:36.000000000 +0100
++++ approve	2010-08-20 22:22:40.000000000 +0100
+@@ -137,6 +137,7 @@
+ 
+ sub process_approve {
+     local($FILE) = shift;
++    my @words;
+     while (<$FILE>) {
+ 	if ((/^\tsubscribe\s/) || (/^\tunsubscribe\s/)) {
+ 	    if (!defined($reply_to)) {
+@@ -144,8 +145,8 @@
+ 		exit(1);
+ 	    }
+ 	    s/^\t//;
+-	    split;
+-	    $list = $_[1];
++	    @words = split;
++	    $list = $words[1];
+ 	    $list =~ tr/A-Z/a-z/;
+ 	    $passwd = $passwd{"$list\@$reply_to"};
+ 	    if (! $passwd) {
+@@ -214,6 +215,11 @@
  	    $from_skipped = 1;
  	    next;
  	}
@@ -14,3 +33,23 @@ $NetBSD: patch-am,v 1.1 2005/07/23 14:44:39 he Exp $
  	s/^~/~~/;
  	print MAIL $_;
      }
+@@ -231,12 +237,13 @@
+ 	s/\n$//;
+ 	s/#.*//;
+ 	if (/^$/) { next; }
+-	split;
+-	$l = $_[0];	$l =~ tr/A-Z/a-z/;	# list
+-	$p = $_[1];				# password
+-	$m = $_[2];	$m =~ tr/A-Z/a-z/;	# majordomo@site
+-	split(/\@/, $m);
+-	$s = $_[1];	$s =~ tr/A-Z/a-z/;	# site
++	my @words = split;
++
++	$l = $words[0];	$l =~ tr/A-Z/a-z/;	# list
++	$p = $words[1];				# password
++	$m = $words[2];	$m =~ tr/A-Z/a-z/;	# majordomo@site
++	@words = split(/\@/, $m);
++	$s = $words[1];	$s =~ tr/A-Z/a-z/;	# site
+ 
+ 	$passwd{$l} = $p;
+ 	$passwd{"$l\@$m"} = $p;
