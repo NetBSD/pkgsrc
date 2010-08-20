@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2010/02/16 15:22:45 sno Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/20 19:15:28 sno Exp $
 #
 
-DISTNAME=	Padre-Plugin-Vi-0.22
-PKGNAME=	p5-${DISTNAME}
+DISTNAME=	Padre-Plugin-Vi-0.23.0
+PKGNAME=	p5-${DISTNAME:S/.0//}
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/.0//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Padre-Plugin-Vi/
@@ -13,13 +14,17 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Padre>=0.25:../../editors/p5-Padre
+MAKE_JOBS_SAFE=	NO
+
+BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
+
+DEPENDS+=	p5-Padre>=0.37:../../editors/p5-Padre
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Vi/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f -exec ${RM} {} \;
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
