@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/08/17 15:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/08/20 00:32:29 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.10.9
@@ -44,7 +44,7 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-BUILDLINK_API_DEPENDS.goffice0.6+= goffice0.8-0.8.8{,nb*}
+BUILDLINK_API_DEPENDS.goffice0.8+= goffice0.8>=0.8.8{,nb*}
 .include "../../misc/goffice0.8/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
