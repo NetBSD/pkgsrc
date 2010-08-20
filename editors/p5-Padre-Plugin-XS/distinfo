@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 18:30:55 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/08/20 19:29:01 sno Exp $
 
-SHA1 (Padre-Plugin-XS-0.01.tar.gz) = 927a70c7979e9a85119d3e21e1f3e378172d6c19
-RMD160 (Padre-Plugin-XS-0.01.tar.gz) = 46ed1b89dd51449778f63930060a95755037bbb9
-Size (Padre-Plugin-XS-0.01.tar.gz) = 17667 bytes
+SHA1 (Padre-Plugin-XS-0.02.tar.gz) = 813a97d919bf53d59de2b50dc6591a6deada21ea
+RMD160 (Padre-Plugin-XS-0.02.tar.gz) = 1bfb4c4217cc15ecb5ac4d5116a3f2a7b9c3aff9
+Size (Padre-Plugin-XS-0.02.tar.gz) = 19908 bytes
