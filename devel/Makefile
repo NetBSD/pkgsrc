@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1390 2010/08/15 18:54:43 sno Exp $
+# $NetBSD: Makefile,v 1.1391 2010/08/20 06:25:08 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -780,6 +780,7 @@ SUBDIR+=	p5-Module-Install-RTx
 SUBDIR+=	p5-Module-Install-Substitute
 SUBDIR+=	p5-Module-Install-XSUtil
 SUBDIR+=	p5-Module-Load
+SUBDIR+=	p5-Module-Manifest
 SUBDIR+=	p5-Module-Pluggable
 SUBDIR+=	p5-Module-Refresh
 SUBDIR+=	p5-Module-ScanDeps
