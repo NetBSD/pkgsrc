@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2919 2010/08/20 05:43:15 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2920 2010/08/20 05:50:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/perl5 to 5.12.1 [seb 2010-08-19]
 	Updated devel/p5-ExtUtils-XSpp to 0.15 [sno 2010-08-20]
 	Updated x11/p5-Wx to 0.98 [sno 2010-08-20]
+	Updated devel/p5-App-cpanminus to 1.0011 [sno 2010-08-20]
