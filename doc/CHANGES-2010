@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2926 2010/08/20 18:51:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2927 2010/08/20 19:15:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/p5-Padre to 0.69 [sno 2010-08-20]
 	Updated editors/p5-Padre-Plugin-SVN to 0.05 [sno 2010-08-20]
 	Updated editors/p5-Padre-Plugin-PerlCritic to 0.08 [sno 2010-08-20]
+	Updated editors/p5-Padre-Plugin-Vi to 0.23 [sno 2010-08-20]
