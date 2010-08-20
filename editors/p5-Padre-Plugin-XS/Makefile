@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/16 18:30:55 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/20 19:29:01 sno Exp $
 #
 
-DISTNAME=	Padre-Plugin-XS-0.01
+DISTNAME=	Padre-Plugin-XS-0.02
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Padre>=0.49:../../editors/p5-Padre
-DEPENDS+=	p5-Perl-APIReference>=0.03:../../devel/p5-Perl-APIReference
+DEPENDS+=	p5-Perl-APIReference>=0.04:../../devel/p5-Perl-APIReference
 
 PERL5_PACKLIST=		auto/Padre/Plugin/XS/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
