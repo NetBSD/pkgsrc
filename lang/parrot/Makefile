@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2010/08/17 13:27:51 he Exp $
+# $NetBSD: Makefile,v 1.34 2010/08/20 09:29:18 he Exp $
 #
 
-VERSION=		2.4.0
+VERSION=		2.5.0
 RTYPE=			devel
 DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
@@ -52,9 +52,6 @@ REPLACE_PERL+=		tools/build/pmc2c.pl
 REPLACE_PERL+=		tools/dev/gen_makefile.pl
 REPLACE_PERL+=		tools/dev/mk_language_shell.pl
 REPLACE_PERL+=		tools/dev/reconfigure.pl
-REPLACE_PERL+=		lib/Parrot/Op.pm
-REPLACE_PERL+=		lib/Parrot/OpsFile.pm
-
 
 REPLACE_INTERPRETER+=	parrot
 REPLACE.parrot.old=	.*parrot[^[:space:]]*
