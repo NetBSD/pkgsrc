@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2930 2010/08/20 19:37:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2931 2010/08/20 21:25:13 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3853,3 +3853,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Perl-APIReference to 0.04 [sno 2010-08-20]
 	Updated editors/p5-Padre-Plugin-XS to 0.02 [sno 2010-08-20]
 	Updated print/p5-LaTeX-Table to 1.0.2 [sno 2010-08-20]
+	Updated mail/majordomo to 1.94.5nb3 [tron 2010-08-20]
