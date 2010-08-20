@@ -1,5 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2010/08/20 23:35:38 wiz Exp $
+
 Please read the documentation in the directory
 
   ${PREFIX}/share/doc/xv
 
 for proper usage.
+===========================================================================
