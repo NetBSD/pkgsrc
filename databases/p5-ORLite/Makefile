@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/08/01 19:57:36 sno Exp $
+# $NetBSD: Makefile,v 1.8 2010/08/20 06:30:10 sno Exp $
 
-DISTNAME=	ORLite-1.44
+DISTNAME=	ORLite-1.45
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AD/ADAMK/}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-Test-Script>=1.06:../../devel/p5-Test-Script
 
 DEPENDS+=	p5-DBD-SQLite>=1.27:../../databases/p5-DBD-SQLite
-DEPENDS+=	p5-File-Path>=2.04:../../devel/p5-File-Path
+DEPENDS+=	{perl>=5.10.1,p5-File-Path>=2.04}:../../devel/p5-File-Path
 DEPENDS+=	p5-File-Remove>=1.40:../../sysutils/p5-File-Remove
 DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.20}:../../devel/p5-File-Temp
 DEPENDS+=	p5-Params-Util>=0.33:../../devel/p5-Params-Util
