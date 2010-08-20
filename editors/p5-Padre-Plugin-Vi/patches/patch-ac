@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2010/08/20 19:15:28 sno Exp $
+
+Patch to switch from Wx::Perl::Dialog (Padre-0.66) to Padre::Wx::Dialog
+
+--- Makefile.PL.orig	2010-08-20 19:07:24.000000000 +0000
++++ Makefile.PL
+@@ -7,7 +7,7 @@ license 'perl';
+ author 'Gabor Szabo <szabgab@gmail.com>';
+ all_from 'lib/Padre/Plugin/Vi.pm';
+ requires 'Padre'            => '0.37';                #Padre::Constant
+-requires 'Wx::Perl::Dialog' => '0.04';
++requires 'Padre::Wx::Dialog' => '0.04';
+ test_requires 'Test::More'  => '0.47';
+ no_index 'directory'        => qw{ t xt eg share inc};
+ homepage 'http://padre.perlide.org/';
