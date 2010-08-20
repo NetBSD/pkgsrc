@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.35 2010/03/21 16:48:43 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.36 2010/08/20 17:56:49 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -1155,12 +1155,14 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 		return (NULL);
 
 	if ((path = fetchUnquotePath(url)) == NULL) {
+		fetch_close(conn);
 		fetch_syserr();
 		return NULL;
 	}
 
 	/* change directory */
 	if (ftp_cwd(conn, path, op_arg != NULL) == -1) {
+		fetch_close(conn);
 		free(path);
 		return (NULL);
 	}
@@ -1173,12 +1175,14 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 	if (us && ftp_stat(conn, path, us) == -1
 	    && fetchLastErrCode != FETCH_PROTO
 	    && fetchLastErrCode != FETCH_UNAVAIL) {
+		fetch_close(conn);
 		free(path);
 		return (NULL);
 	}
 
 	if (if_modified_since && url->last_modified > 0 &&
 	    url->last_modified >= us->mtime) {
+		fetch_cache_put(conn, ftp_disconnect);
 		free(path);
 		fetchLastErrCode = FETCH_UNCHANGED;
 		snprintf(fetchLastErrString, MAXERRSTRING, "Unchanged");
@@ -1187,6 +1191,7 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 
 	/* just a stat */
 	if (strcmp(op, "STAT") == 0) {
+		fetch_cache_put(conn, ftp_disconnect);
 		free(path);
 		return fetchIO_unopen(NULL, NULL, NULL, NULL);
 	}
