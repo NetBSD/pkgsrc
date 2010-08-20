@@ -1,13 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/06/13 22:44:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/08/20 00:31:14 wiz Exp $
 
-BUILDLINK_TREE+=	goffice0.6
+BUILDLINK_TREE+=	goffice0.8
 
-.if !defined(GOFFICE0.6_BUILDLINK3_MK)
-GOFFICE0.6_BUILDLINK3_MK:=
+.if !defined(GOFFICE0.8_BUILDLINK3_MK)
+GOFFICE0.8_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.goffice0.6+=	goffice0.8>=0.8.0
-BUILDLINK_ABI_DEPENDS.goffice0.6?=	goffice0.8>=0.8.3nb1
-BUILDLINK_PKGSRCDIR.goffice0.6?=	../../misc/goffice0.8
+BUILDLINK_API_DEPENDS.goffice0.8+=	goffice0.8>=0.8.0
+BUILDLINK_ABI_DEPENDS.goffice0.8?=	goffice0.8>=0.8.3nb1
+BUILDLINK_PKGSRCDIR.goffice0.8?=	../../misc/goffice0.8
 
 #.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
@@ -20,6 +20,6 @@ BUILDLINK_PKGSRCDIR.goffice0.6?=	../../misc/goffice0.8
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.endif # GOFFICE0.6_BUILDLINK3_MK
+.endif # GOFFICE0.8_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-goffice0.6
+BUILDLINK_TREE+=	-goffice0.8
