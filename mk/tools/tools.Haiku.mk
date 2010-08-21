@@ -1,4 +1,4 @@
-# $NetBSD: tools.Haiku.mk,v 1.3 2010/06/21 11:17:21 obache Exp $
+# $NetBSD: tools.Haiku.mk,v 1.4 2010/08/21 12:32:25 obache Exp $
 #
 # System-supplied tools for the Haiku operating system.
 
@@ -27,7 +27,7 @@ TOOLS_PLATFORM.env?=		/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
 TOOLS_PLATFORM.false?=		false			# shell builtin
 TOOLS_PLATFORM.fgrep?=		/bin/fgrep
-#TOOLS_PLATFORM.file?=		/usr/bin/file
+TOOLS_PLATFORM.file?=		/bin/printf "%s: text\n"	# Hack
 TOOLS_PLATFORM.find?=		/bin/find
 TOOLS_PLATFORM.ftp?=		/bin/ftp
 TOOLS_PLATFORM.gawk?=		/bin/gawk
