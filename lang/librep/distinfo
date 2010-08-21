@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/07/14 10:01:28 tnn Exp $
+$NetBSD: distinfo,v 1.15 2010/08/21 16:55:06 asau Exp $
 
-SHA1 (librep-0.90.0.tar.bz2) = b99f353c23ec853df0a58e3f918e2b7f4c30fafc
-RMD160 (librep-0.90.0.tar.bz2) = 373812a545ad4fec2bee621dea3298b66e995230
-Size (librep-0.90.0.tar.bz2) = 696345 bytes
-SHA1 (patch-aa) = 53f785e75205f64e7b44b84e9b8f3483d2492c28
-SHA1 (patch-ab) = fca1a67b17d5ae87ec9675907ba8c63ac4839f50
+SHA1 (librep-0.90.5.tar.bz2) = 01d6d7b0713743b07a17b4512c7ef8e97aed99d1
+RMD160 (librep-0.90.5.tar.bz2) = d65ec5dc49a3dce5ef01f745809091c947c11b1e
+Size (librep-0.90.5.tar.bz2) = 672253 bytes
