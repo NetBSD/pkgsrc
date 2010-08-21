@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/10/19 19:17:40 he Exp $
+# $NetBSD: Makefile,v 1.14 2010/08/21 16:32:43 seb Exp $
 #
 
 DISTNAME=	Compress-Bzip2-2.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AR/ARJAY/}
 
