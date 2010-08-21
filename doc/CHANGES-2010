@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2932 2010/08/21 00:53:07 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2933 2010/08/21 06:08:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3855,3 +3855,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/p5-LaTeX-Table to 1.0.2 [sno 2010-08-20]
 	Updated mail/majordomo to 1.94.5nb3 [tron 2010-08-20]
 	Updated mail/milter-manager to 1.6.1 [obache 2010-08-21]
+	Updated databases/p5-DBM-Deep to 2.0000 [sno 2010-08-21]
