@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2008/10/19 19:19:00 he Exp $
+# $NetBSD: Makefile,v 1.24 2010/08/21 16:36:18 seb Exp $
 #
 
 DISTNAME=	XML-Xerces-2.7.0-0
 PKGNAME=	p5-${DISTNAME:C/-([0-9]*)$/.\1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=xml/xerces-p/}
 

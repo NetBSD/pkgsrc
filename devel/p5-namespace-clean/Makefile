@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 20:33:17 seb Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/21 16:34:46 seb Exp $
 
 DISTNAME=	namespace-clean-0.18
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=namespace/}
 
