@@ -287,6 +287,7 @@ liblqr			Enable liblqr (liquid rescale) support.
 libmp4v2		Enable libmp4v2 (MP4) support.
 libmtp			Enable MTP via libmtp support.
 libofx			Enable OFX support.
+libsmi			Use libsmi for SMI MIB support.
 libspiff		Use libspiff for XML shareable playlist support.
 libssh2 	 	Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
