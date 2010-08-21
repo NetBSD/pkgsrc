@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/06/14 19:46:43 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/21 16:34:28 seb Exp $
 #
 
 DISTNAME=	Task-Weaken-1.03
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Task/}
 
