@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/02/16 15:22:44 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/21 16:34:29 seb Exp $
 #
 
 DISTNAME=	Template-Plugin-VMethods-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 

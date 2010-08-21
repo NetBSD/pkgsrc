@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/05/21 10:32:13 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/21 16:37:00 seb Exp $
 #
 
 DISTNAME=	LWP-UserAgent-Determined-1.04
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5lud
 CATEGORIES=	www net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/10/30 16:25:34 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/21 16:37:07 seb Exp $
 
 DISTNAME=	Template-Plugin-Clickable-Email-0.01
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
