@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/08/20 05:50:24 sno Exp $
+# $NetBSD: Makefile,v 1.11 2010/08/21 20:41:40 seb Exp $
 #
 
-DISTNAME=		App-cpanminus-1.0011
+DISTNAME=		App-cpanminus-1.0012
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=App/}
@@ -15,8 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/App/cpanminus/.packlist
-
-DEPENDS+=		p5-Module-Build>=0.36000:../../devel/p5-Module-Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
