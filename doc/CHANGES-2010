@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2940 2010/08/21 18:50:26 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2941 2010/08/21 20:42:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/rep-gtk2 to 0.90.2 [asau 2010-08-21]
 	Updated wm/sawfish to 1.6.3.1 [asau 2010-08-21]
 	Updated mail/milter-greylist to 4.2.6 [tron 2010-08-21]
+	Updated devel/p5-App-cpanminus to 1.0012 [seb 2010-08-21]
