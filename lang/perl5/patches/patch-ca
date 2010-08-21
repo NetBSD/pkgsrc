@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
+$NetBSD: patch-ca,v 1.8 2010/08/21 03:12:46 obache Exp $
 
---- Configure.orig	2009-12-06 17:23:10.000000000 +0000
-+++ Configure	2009-12-06 17:51:02.000000000 +0000
-@@ -3233,13 +3233,14 @@
+--- Configure.orig	2010-05-13 22:01:07.000000000 +0000
++++ Configure
+@@ -3251,13 +3251,14 @@ EOM
  			osvers="$3"
  			;;
  		dragonfly) osname=dragonfly
@@ -19,7 +19,7 @@ $NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3261,7 +3262,7 @@
+@@ -3279,7 +3280,7 @@ EOM
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -28,7 +28,7 @@ $NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3272,7 +3273,7 @@
+@@ -3290,7 +3291,7 @@ EOM
  		next*) osname=next ;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -37,7 +37,7 @@ $NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
                  	;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -4772,7 +4773,7 @@
+@@ -4790,7 +4791,7 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -46,7 +46,7 @@ $NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
  *) dlist="$libpth";;
  esac
  
-@@ -6503,7 +6504,9 @@
+@@ -6521,7 +6522,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -57,7 +57,7 @@ $NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -7015,7 +7018,9 @@
+@@ -7033,7 +7036,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -68,7 +68,16 @@ $NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -9381,6 +9386,13 @@
+@@ -8339,7 +8344,7 @@ if "$useshrplib"; then
+ 		# beos doesn't like the default, either.
+ 		;;
+ 	haiku)
+-		# Haiku doesn't like the default, either.
++		xxx="-Wl,-rpath,$shrpdir"
+ 		;;
+ 	hpux*)
+ 		# hpux doesn't like the default, either.
+@@ -9410,6 +9415,13 @@ EOCP
  	;;
  esac
  
@@ -82,7 +91,7 @@ $NetBSD: patch-ca,v 1.7 2009/12/14 06:36:57 seb Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -18816,7 +18828,15 @@
+@@ -18925,7 +18937,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1

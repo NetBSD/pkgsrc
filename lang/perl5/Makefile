@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2010/08/19 20:47:09 seb Exp $
+# $NetBSD: Makefile,v 1.161 2010/08/21 03:12:46 obache Exp $
 
 .include "license.mk"
 
@@ -355,6 +355,9 @@ perl5-post-install:
 	  ${ECHO} "${PERL5_SCRIPTDIR}/perllink";			\
 	  ${ECHO} "${PERL5_MAN1DIR}/perllink.1";			\
 	} | ${SED} -e "s,^"${PREFIX:Q}"/,," > ${PLIST_SRC}
+.if ${OPSYS} == "Haiku"
+	${CHMOD} a+x ${DESTDIR}${PREFIX}/bin/perl
+.endif
 
 .include "packlist.mk"
 .include "../../mk/bsd.pkg.mk"
