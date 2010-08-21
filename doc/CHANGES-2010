@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2937 2010/08/21 16:55:20 asau Exp $
+$NetBSD: CHANGES-2010,v 1.2938 2010/08/21 16:57:08 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3860,3 +3860,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/kali to 0.52.2 [asau 2010-08-21]
 	Updated devel/ocaml-findlib to 1.2.6 [asau 2010-08-21]
 	Updated lang/librep to 0.90.5 [asau 2010-08-21]
+	Updated x11/rep-gtk2 to 0.90.2 [asau 2010-08-21]
