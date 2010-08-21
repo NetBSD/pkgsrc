@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9581 2010/08/21 16:57:08 asau Exp $
+$NetBSD: TODO,v 1.9582 2010/08/21 17:33:46 asau Exp $
 
 Suggested new packages
 ======================
@@ -1194,7 +1194,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o samba-3.5.4
 	o sane-backends-1.0.21
 	o sarg-2.2.5
-	o sawfish-1.6.3.1
 	o saxon-9.2
 	o scala-2.8.0
 	o scamper-20070201
