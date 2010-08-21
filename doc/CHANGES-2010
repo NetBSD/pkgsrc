@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2934 2010/08/21 07:50:12 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2935 2010/08/21 14:16:44 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3857,3 +3857,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/milter-manager to 1.6.1 [obache 2010-08-21]
 	Updated databases/p5-DBM-Deep to 2.0000 [sno 2010-08-21]
 	Updated databases/phpmyadmin to 2.11.10.1 [tron 2010-08-21]
+	Updated lang/kali to 0.52.2 [asau 2010-08-21]
