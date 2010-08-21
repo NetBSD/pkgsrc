@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.8 2010/05/03 06:58:27 obache Exp $
+# $NetBSD: find-libs.mk,v 1.9 2010/08/21 05:07:51 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -61,6 +61,19 @@ USE_TOOLS+=	test
 
 .for _lib_ in ${BUILTIN_FIND_LIBS}
 .  if !defined(BUILTIN_LIB_FOUND.${_lib_})
+.    if ${OPSYS} == "Haiku" && defined(BELIBRARIES) && !empty(BELIBRARIES)
+BUILTIN_LIB_FOUND.${_lib_}=	no
+.      for _path_ in ${BELIBRARIES:S/:/ /g}
+.        if ${BUILTIN_LIB_FOUND.${_lib_}} == "no"
+BUILTIN_LIB_FOUND.${_lib_}!=    \
+	if ${TEST} "`${ECHO} ${_path_}/lib${_lib_}.*`" != "${_path_}/lib${_lib_}.*"; then \
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    else
 BUILTIN_LIB_FOUND.${_lib_}!=	\
 	if ${TEST} "`${ECHO} /usr/lib${ABI}/lib${_lib_}.*`" != "/usr/lib${ABI}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
@@ -71,6 +84,7 @@ BUILTIN_LIB_FOUND.${_lib_}!=	\
 	else								\
 		${ECHO} no;						\
 	fi
+.    endif
 .  endif
 MAKEVARS+=	BUILTIN_LIB_FOUND.${_lib_}
 .endfor
