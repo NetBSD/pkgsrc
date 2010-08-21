@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/01 22:19:05 sno Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/21 16:35:35 seb Exp $
 
 DISTNAME=	PostScript-Simple-0.07
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PostScript/}
 

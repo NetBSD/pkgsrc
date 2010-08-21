@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/25 20:22:07 abs Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:34:51 seb Exp $
 
 DISTNAME=	Algorithm-LUHN-1.00
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TA/TAYERS/}
 

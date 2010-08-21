@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2009/09/23 11:49:11 obache Exp $
+# $NetBSD: Makefile,v 1.14 2010/08/21 16:36:20 seb Exp $
 #
 
 DISTNAME=		po4a-0.23
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		textproc
 MASTER_SITES=		http://alioth.debian.org/download.php/1317/
 

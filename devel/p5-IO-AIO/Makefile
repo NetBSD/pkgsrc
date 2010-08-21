@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/18 04:18:53 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:33:51 seb Exp $
 #
 
 DISTNAME=	IO-AIO-3.65
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 

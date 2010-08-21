@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/03/10 16:11:02 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/21 16:35:09 seb Exp $
 #
 
 DISTNAME=	Net-validMX-2.2.0
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

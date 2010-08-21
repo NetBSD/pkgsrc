@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2010/01/17 12:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2010/08/21 16:32:56 seb Exp $
 #
 
 DISTNAME=		DBD-Sybase-1.09
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		p5dsy
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}

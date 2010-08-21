@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2010/04/27 00:39:37 seb Exp $
+# $NetBSD: Makefile,v 1.29 2010/08/21 16:34:01 seb Exp $
 
 DISTNAME=	Module-Build-0.3607
 PKGNAME=	p5-${DISTNAME}0
+PKGREVISION=	1
 SVR4_PKGNAME=	p5mob
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}

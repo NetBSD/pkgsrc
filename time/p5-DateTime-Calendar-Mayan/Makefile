@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/07 18:39:02 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:36:21 seb Exp $
 #
 
 DISTNAME=	DateTime-Calendar-Mayan-0.0601
 PKGNAME=	p5-${DISTNAME:S/0601/06.01/}
+PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 

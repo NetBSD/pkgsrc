@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/07 01:29:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:36:29 seb Exp $
 #
 
 DISTNAME=	rem2ics-0.93
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://mark.atwood.name/code/rem2ics/
 EXTRACT_SUFX=	.zip

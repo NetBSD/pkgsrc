@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/02/22 16:30:40 sno Exp $
+# $NetBSD: Makefile,v 1.11 2010/08/21 16:35:47 seb Exp $
 
 DISTNAME=	Lchown-1.01
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	2
+PKGREVISION=	1
 SVR4_PKGNAME=	p5lc
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NC/NCLEATON/

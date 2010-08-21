@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/10/19 19:18:09 he Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/21 16:33:08 seb Exp $
 #
 
 DISTNAME=	RTx-Shredder-0.03
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RTx/}
 

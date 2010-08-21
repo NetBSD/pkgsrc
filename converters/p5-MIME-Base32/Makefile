@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:17:42 he Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/21 16:32:49 seb Exp $
 #
 
 VERS=			1.01
 DISTNAME=		MIME-Base32-${VERS}
 PKGNAME=		p5-MIME-Base32-${VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		converters perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MIME/}
 

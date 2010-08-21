@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/10/19 19:18:09 he Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/21 16:34:43 seb Exp $
 
 DISTNAME=	VCP-Dest-svk-0.29
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
 MODULE_DIR=	modules/by-module

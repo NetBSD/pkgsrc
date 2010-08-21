@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/07 08:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:36:20 seb Exp $
 #
 
 DISTNAME=	mobiperl-0.0.43
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 # no https support in pkgsrc
 MASTER_SITES=	# https://dev.mobileread.com/dist/tompe/mobiperl/

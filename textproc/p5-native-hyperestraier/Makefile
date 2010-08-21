@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2009/05/25 09:48:50 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/21 16:36:20 seb Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../textproc/hyperestraier/Makefile.common"
 
 PKGNAME=	p5-native-hyperestraier-1.0.0.${HYPERESTRAIER_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases perl5
 
 COMMENT=	Perl native interface of Hyper Estraier

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/03/08 18:10:25 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/21 16:35:31 seb Exp $
 #
 
 DISTNAME=	RadiusPerl-0.17
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MANOWAR/
 
