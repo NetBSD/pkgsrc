@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/10/19 19:18:31 he Exp $
+# $NetBSD: Makefile,v 1.15 2010/08/21 16:35:19 seb Exp $
 #
 
 DISTNAME=	acidrip-0.14
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=acidrip/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2009/07/08 08:03:57 sno Exp $
+# $NetBSD: Makefile,v 1.10 2010/08/21 16:33:14 seb Exp $
 #
 
 DISTNAME=	B-Hooks-OP-Check-0.18
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
 
