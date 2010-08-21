@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/11 11:16:33 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:33:53 seb Exp $
 #
 
 DISTNAME=	IO-Pipeline-0.009002
 PKGNAME=	p5-IO-Pipeline-0.9.2
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 

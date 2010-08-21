@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 10:41:39 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:34:13 seb Exp $
 #
 
 DISTNAME=	PPIx-Utilities-1.000001
 PKGNAME=	p5-${DISTNAME:S/000001/000.001/}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EL/ELLIOTJS/}
 
