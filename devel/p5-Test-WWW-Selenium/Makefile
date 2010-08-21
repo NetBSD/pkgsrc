@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/02/23 17:49:49 sno Exp $
+# $NetBSD: Makefile,v 1.7 2010/08/21 16:34:38 seb Exp $
 #
 
 DISTNAME=	Test-WWW-Selenium-1.21
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 

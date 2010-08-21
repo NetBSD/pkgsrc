@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:18:08 he Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/21 16:34:40 seb Exp $
 #
 
 DISTNAME=	Tie-Array-Sorted-1.41
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	p5tas
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}

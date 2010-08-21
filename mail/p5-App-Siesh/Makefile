@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/22 18:21:08 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:35:00 seb Exp $
 
 DISTNAME=	App-Siesh-0.20
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MD/MDOM/}

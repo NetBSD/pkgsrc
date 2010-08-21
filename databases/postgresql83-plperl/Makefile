@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/04/12 09:53:50 adam Exp $
+# $NetBSD: Makefile,v 1.7 2010/08/21 16:33:08 seb Exp $
 
 PKGNAME=	postgresql83-plperl-${BASE_VERS}
+PKGREVISION=	1
 COMMENT=	PL/Perl procedural language for the PostgreSQL backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir

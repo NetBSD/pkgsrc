@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 16:35:20 seb Exp $
 #
 
 DISTNAME=		OCSNG_UNIX_AGENT-1.02
 PKGNAME=		ocsinventory-agent-1.0.2
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ocsinventory/}
 

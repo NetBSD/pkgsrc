@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/10/19 19:17:54 he Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/21 16:33:48 seb Exp $
 #
 
 DISTNAME=		Getopt-ArgvFile-1.11
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Getopt/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/16 18:14:36 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/21 16:36:45 seb Exp $
 
 DISTNAME=	CatalystX-LeakChecker-0.05
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 

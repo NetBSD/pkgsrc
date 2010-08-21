@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/01/16 17:39:53 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/21 16:34:04 seb Exp $
 #
 
 DISTNAME=	Moose-Policy-0.04
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/F/FL/FLORA/}
 

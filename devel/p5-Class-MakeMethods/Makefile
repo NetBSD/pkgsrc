@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/10/19 19:17:49 he Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/21 16:33:22 seb Exp $
 #
 
 DISTNAME=		Class-MakeMethods-1.01
 PKGNAME=		p5-${DISTNAME}0 # developer uses three-digit versions
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 

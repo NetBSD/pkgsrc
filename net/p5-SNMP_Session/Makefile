@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/10/19 19:18:44 he Exp $
+# $NetBSD: Makefile,v 1.19 2010/08/21 16:35:32 seb Exp $
 
 DISTNAME=	SNMP_Session-1.08
 PKGNAME=	p5-SNMP_Session-1.08
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	p5sns
 CATEGORIES=	net perl5
 MASTER_SITES=	http://www.switch.ch/misc/leinen/snmp/perl/dist/

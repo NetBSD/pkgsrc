@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/08/16 09:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/21 16:33:52 seb Exp $
 #
 
 DISTNAME=	IO-Pager-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JP/JPIERCE/}
 EXTRACT_SUFX=  .tgz
