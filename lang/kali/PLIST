@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/08/21 14:16:17 asau Exp $
 bin/kali
 include/kali.h
 lib/kali/big/array.scm
@@ -25,7 +25,6 @@ lib/kali/big/search-tree.scm
 lib/kali/big/socket.scm
 lib/kali/big/sort.scm
 lib/kali/big/strong.scm
-lib/kali/daemon
 lib/kali/env/assem.scm
 lib/kali/env/basic-command.scm
 lib/kali/env/build.scm
@@ -77,16 +76,15 @@ lib/kali/misc/require.scm
 lib/kali/misc/separate.scm
 lib/kali/misc/shift-reset.scm
 lib/kali/misc/sicp.scm
-lib/kali/misc/slib-init.scm
 lib/kali/misc/static.scm
 lib/kali/misc/syscall.scm
 lib/kali/misc/test-doodl.scm
 lib/kali/opt/analyze.scm
-lib/kali/opt/expand.scm
 lib/kali/opt/flatten.scm
 lib/kali/opt/inline.scm
 lib/kali/opt/sort.scm
 lib/kali/opt/tst.scm
+lib/kali/opt/usage.scm
 lib/kali/rts/bignum.scm
 lib/kali/rts/defenum.scm
 lib/kali/rts/floatnum.scm
