@@ -1,0 +1,11 @@
+$NetBSD: README.Haiku,v 1.1 2010/08/22 04:32:53 obache Exp $
+
+Please read the general README file as well.
+
+bootstrap-pkgsrc has been tested on Haiku R1 alpha1 and alpha2 (i386) with
+both gcc2 and gcc4.
+
+Known problems:
+ * Only tested with --unprivileged.
+ * With gcc2, need to patch for system header files
+   http://dev.haiku-os.org/ticket/5784
