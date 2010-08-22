@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2010/06/30 22:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2010/08/22 20:54:08 markd Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -249,6 +249,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/n[a-s]*
 	rm -rf ${WRKSRC}/doc/latex/oberdiek
 	rm -rf ${WRKSRC}/doc/latex/paralist
+	rm -rf ${WRKSRC}/doc/latex/pgf
 	rm -rf ${WRKSRC}/doc/latex/placeins
 	rm -rf ${WRKSRC}/doc/latex/preprint
 	rm -rf ${WRKSRC}/doc/latex/ps[g-n]*
@@ -414,6 +415,7 @@ post-extract:
 	rm -f ${WRKSRC}/tex/latex/oberdiek/[a-u]*
 	rm -rf ${WRKSRC}/tex/latex/optional
 	rm -rf ${WRKSRC}/tex/latex/par*
+	rm -rf ${WRKSRC}/tex/latex/pgf
 	rm -rf ${WRKSRC}/tex/latex/placeins
 	rm -rf ${WRKSRC}/tex/latex/preprint
 	rm -rf ${WRKSRC}/tex/latex/psl*
