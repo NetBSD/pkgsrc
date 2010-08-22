@@ -1,0 +1,16 @@
+$NetBSD: patch-as,v 1.1 2010/08/22 07:47:56 obache Exp $
+
+make gcc-4.3 compilant
+http://id3lib.cvs.sourceforge.net/viewvc/id3lib/id3lib-devel/examples/demo_copy.cpp?r1=1.12&r2=1.13
+
+--- examples/demo_copy.cpp.orig	2003-03-02 00:23:00.000000000 +0000
++++ examples/demo_copy.cpp
+@@ -81,7 +81,7 @@ void DisplayTags(ostream &os, luint nTag
+   }
+ }
+ 
+-int main( unsigned int argc, char * const argv[])
++int main( int argc, char * const argv[])
+ {
+   int ulFlag = ID3TT_ID3;
+   ID3D_INIT_DOUT();

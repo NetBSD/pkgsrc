@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2006/09/23 13:26:24 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2010/08/22 07:47:56 obache Exp $
+
+* make gcc-4.3 compilant
+  http://id3lib.cvs.sourceforge.net/viewvc/id3lib/id3lib-devel/include/id3/id3lib_strings.h?r1=1.7&r2=1.8
+* add missing arguments
+* make gcc-3.4 compliant
 
 --- include/id3/id3lib_strings.h.orig	2003-03-02 00:23:00.000000000 +0000
 +++ include/id3/id3lib_strings.h
-@@ -100,10 +100,10 @@ namespace std
+@@ -30,6 +30,7 @@
+ #define _ID3LIB_STRINGS_H_
+ 
+ #include <string>
++#include <cstring>
+ 
+ #if (defined(__GNUC__) && (__GNUC__ >= 3) || (defined(_MSC_VER) && _MSC_VER > 1000))
+ namespace std
+@@ -100,10 +101,10 @@ namespace std
  
        static char_type
        to_char_type(const int_type& __c)
@@ -15,7 +28,7 @@ $NetBSD: patch-aa,v 1.4 2006/09/23 13:26:24 wiz Exp $
  
        static bool
        eq_int_type(const int_type& __c1, const int_type& __c2)
-@@ -117,7 +117,8 @@ namespace std
+@@ -117,7 +118,8 @@ namespace std
        { return eq_int_type(__c, eof()) ? int_type(0) : __c; }
      };
  
