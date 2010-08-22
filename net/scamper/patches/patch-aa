@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2010/08/22 21:11:10 markd Exp $
+
+--- scamper_firewall.c.orig	2010-05-06 22:54:22.000000000 +0000
++++ scamper_firewall.c
+@@ -830,7 +830,7 @@ static void ipfw_cleanup(void)
+ 
+ #endif /* HAVE_IPFW */
+ 
+-#if defined(HAVE_IPTABLES) || defined(__sun__) || defined(_WIN32)
++#if defined(HAVE_IPTABLES) || defined(__sun__) || defined(_WIN32) || defined(__NetBSD__)
+ static scamper_firewall_entry_t *firewall_entry_get(void)
+ {
+   return malloc_zero(sizeof(scamper_firewall_entry_t));
