@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1 2010/08/22 07:47:56 obache Exp $
+
+make gcc-4.3 compilant
+http://id3lib.cvs.sourceforge.net/viewvc/id3lib/id3lib-devel/configure?r1=1.78&r2=1.79
+
+--- configure.orig	2003-03-02 00:23:00.000000000 +0000
++++ configure
+@@ -10296,7 +10296,7 @@ done
+ 
+ for ac_header in \
+   string                        \
+-  iomanip.h                     \
++  iomanip                       \
+ 
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
