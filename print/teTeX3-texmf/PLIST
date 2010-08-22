@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/06/17 00:35:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/08/22 20:54:08 markd Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bib/plbib/plbib.bib
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
@@ -3027,11 +3027,6 @@ share/texmf-dist/doc/latex/pdfpages/pdf-hyp.tex
 share/texmf-dist/doc/latex/pdfpages/pdf-toc.tex
 share/texmf-dist/doc/latex/pdfpages/pdfpages.dvi
 share/texmf-dist/doc/latex/pdfpages/readme
-share/texmf-dist/doc/latex/pgf/AUTHORS
-share/texmf-dist/doc/latex/pgf/ChangeLog
-share/texmf-dist/doc/latex/pgf/README
-share/texmf-dist/doc/latex/pgf/TODO
-share/texmf-dist/doc/latex/pgf/pgfuserguide.pdf
 share/texmf-dist/doc/latex/picinpar/picinpar.dvi
 share/texmf-dist/doc/latex/picins/picins.txt
 share/texmf-dist/doc/latex/pict2e/README.pict2e
@@ -7968,13 +7963,6 @@ share/texmf-dist/tex/latex/pb-diagram/pb-xy.sty
 share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 share/texmf-dist/tex/latex/pdfpages/pppdftex.def
 share/texmf-dist/tex/latex/pdfpages/ppvtex.def
-share/texmf-dist/tex/latex/pgf/pgf.sty
-share/texmf-dist/tex/latex/pgf/pgfarrows.sty
-share/texmf-dist/tex/latex/pgf/pgfautomata.sty
-share/texmf-dist/tex/latex/pgf/pgfheaps.sty
-share/texmf-dist/tex/latex/pgf/pgfnodes.sty
-share/texmf-dist/tex/latex/pgf/pgfshade.sty
-share/texmf-dist/tex/latex/pgf/xxcolor.sty
 share/texmf-dist/tex/latex/picinpar/picinpar.sty
 share/texmf-dist/tex/latex/picins/picins.sty
 share/texmf-dist/tex/latex/pict2e/p2e-dvipdfm.def
