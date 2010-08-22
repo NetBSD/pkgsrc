@@ -95,3 +95,7 @@ Pullup ticket #3209 - requested by wiz
 sysutils/dbus-glib: security update
 Pullup ticket #3210 - requested by obache
 x11/wxGTK24: build fix
+Pullup ticket #3211 - requested by tez
+devel/glib2: build fix
+Pullup ticket #3212 - requested by tron
+databases/phpmyadmin: security update
