@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 16:33:28 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/22 05:32:33 sno Exp $
 
 DISTNAME=	Data-Alias-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-Alias/
 COMMENT=	Comprehensive set of aliasing operations
+
+# see https://rt.cpan.org/Ticket/Display.html?id=36165
+PKG_FAIL_REASON=	Broken with perl-5.12
 
 PERL5_PACKLIST=	auto/Data/Alias/.packlist
 
