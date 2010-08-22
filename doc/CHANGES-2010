@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2942 2010/08/21 21:41:03 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2943 2010/08/22 21:14:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3865,3 +3865,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/milter-greylist to 4.2.6 [tron 2010-08-21]
 	Updated devel/p5-App-cpanminus to 1.0012 [seb 2010-08-21]
 	Updated devel/p5-Git-CPAN-Patch to 0.4.5 [seb 2010-08-21]
+	Updated textproc/py-sphinx to 1.0.1 [markd 2010-08-22]
+	Updated net/scamper to 20100517 [markd 2010-08-22]
