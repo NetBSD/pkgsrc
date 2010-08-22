@@ -1,0 +1,16 @@
+$NetBSD: patch-au,v 1.1 2010/08/22 07:47:56 obache Exp $
+
+make gcc-4.3 compilant
+http://id3lib.cvs.sourceforge.net/viewvc/id3lib/id3lib-devel/include/id3/writers.h?r1=1.12&r2=1.13
+
+--- include/id3/writers.h.orig	2003-03-02 00:23:00.000000000 +0000
++++ include/id3/writers.h
+@@ -30,7 +30,7 @@
+ 
+ #include "id3/writer.h"
+ #include "id3/id3lib_streams.h"
+-//#include <string.h>
++#include <cstring>
+ 
+ class ID3_CPP_EXPORT ID3_OStreamWriter : public ID3_Writer
+ {
