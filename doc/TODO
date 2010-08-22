@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9582 2010/08/21 17:33:46 asau Exp $
+$NetBSD: TODO,v 1.9583 2010/08/22 12:48:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GutenMark-20090216
-	o ImageMagick-6.6.3.6
+	o ImageMagick-6.6.3.9
 	o MAMEDiff-2.30
 	o Mesa-7.8.2
 	o MesaLib-7.8.0
@@ -362,7 +362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o accerciser-1.10.1 [GNOME 2.30]
 	o acme-091
 	o acr-0.5.2
-	o acroread9-9.3.3
+	o acroread9-9.3.4
 	o adobe-flash-10.0.32.18
 	o adobe-flash-plugin-091508
 	o adocman-0.13
@@ -415,7 +415,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
-	o asymptote-2.03
+	o asymptote-2.04
 	o aterm-1.0.1
 	o auctex-11.86
 	o audacious-plugins-2.3
@@ -453,7 +453,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.14
+	o calibre-0.7.15
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.0.1
@@ -504,6 +504,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dbench-4.0
 	o dbus-1.2.24 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbxml-2.5.13
+	o dd_rescue-1.18
 	o ddclient-3.7.3
 	o ddrescue-1.12
 	o defendguin-0.0.11
@@ -554,6 +555,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eog-plugins-2.30.2 [GNOME 2.30]
 	o epic4-2.6
 	o epiphany-2.30.3
+	o epiphany-extensions-2.30.2
 	o epstool-3.08
 	o eric5-5.0.0
 	o erlang-13b4
@@ -714,6 +716,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grep-2.6.3
 	o gsasl-1.4.1
 	o gsharutils-4.9
+	o gsoap-2.7.17 [pkg/43789]
 	o gss-1.0.1
 	o gtick-0.4.2
 	o gtk-systrace-20030623
@@ -872,7 +875,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.1
 	o liboobs-2.30.1 [GNOME 2.30]
 	o libpciaccess-0.12.0
-	o libproxy-0.4.4
+	o libproxy-0.4.5
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.90.6
 	o libssh-0.4.5
@@ -951,7 +954,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkvtoolnix-4.1.1
 	o mlterm-3.0.0
 	o moc-2.4.4
-	o modular-xorg-server-1.8.2
+	o modular-xorg-server-1.9.0
 	o modular-xorg-server-1.8.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
@@ -1026,13 +1029,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.3
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-Archive-Tar-1.68
+	o p5-DateTime-TimeZone-1.21
 	o p5-ExtUtils-CBuilder-0.2703
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-Module-Build-0.36090
+	o p5-Module-CoreList-2.37
 	o p5-POE-1.289 [pkg/43115]
-	o p5-PerlMagick-6.6.3.6
+	o p5-PerlMagick-6.6.3.9
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-Text-Markdown-1.000031
+	o p5-Text-vFile-asData-0.06
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.57
@@ -1057,7 +1064,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
-	o phpmyadmin-3.3.5
+	o phpmyadmin-3.3.5.1
 	o picp-0.6.8
 	o pidgin-2.7.2
 	o pim6dd-20040819a
@@ -1104,6 +1111,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cheetah-2.4.2.1 [pkg/43458]
 	o py-cups-1.9.51
 	o py-docutils-0.7
+	o py-enchant-1.6.3
 	o py-ephem-3.7.3.4 [pkg/43737]
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
@@ -1115,6 +1123,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-m2crypto-0.20.2
 	o py-markdown-2.0.3 [pkg/43448]
 	o py-matplotlib-0.99.3
+	o py-networkx-1.2 [pkg/43790]
 	o py-psycopg2-2.2.1 [pkg/43627]
 	o py-psycopg2-2.2.2
 	o py-sybase-0.37
@@ -1142,6 +1151,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o renderproto-0.11.1
 	o rep-gtk-0.90.3
 	o resize_image-0.7
+	o rftg-0.7.4
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
@@ -1202,9 +1212,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.2.0
 	o scm-5e7
-	o scmgit-base-1.7.2.1
-	o scmgit-docs-1.7.2.1
+	o scmgit-base-1.7.2.2
+	o scmgit-docs-1.7.2.2
 	o scons-1.3.1 [pkg/43759]
+	o scons-2.0.1
 	o scribus-1.3.7
 	o scrollz-1.9.99
 	o scrotwm-0.9.25
@@ -1246,7 +1257,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ssh-askpass-1.2.4.1
 	o star-1.5.1
 	o statist-1.3.0
-	o stella-3.1.2
+	o stella-3.2
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
@@ -1259,7 +1270,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o suse_base-11.0
 	o sympa-6.0.2
 	o sysinfo-4.2.2
-	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
+	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
 	o t-prot-2.100
 	o tacacs-4.0.4.14
@@ -1342,7 +1353,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vobcopy-1.2.0
 	o vorbis-tools-1.4.0
 	o vp-1.6
-	o vsftpd-2.3.0
+	o vsftpd-2.3.1
 	o vttest-20100528
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1358,7 +1369,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-1.2
-	o wine-devel-1.3.0
+	o wine-devel-1.3.1
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1370,7 +1381,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11vnc-0.9.11 [need newer libVNCServer, not released]
-	o x264-devel-20100807
+	o x264-devel-20100821
 	o xanalyser-1.30
 	o xapian-1.2.2
 	o xapian-omega-1.2.2
@@ -1378,8 +1389,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xbiff-1.0.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
-	o xboard-4.4.3
-	o xcalc-1.0.3
+	o xboard-4.4.4
+	o xcalc-1.0.3 [pkg/43788]
 	o xchat2-2.8.8
 	o xcircuit-3.6.85
 	o xcmsdb-1.0.2 [unpackaged]
@@ -1488,6 +1499,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xzip-182
 	o yafc-1.1
 	o yasm-1.1.0
+	o yaz-4.0.12
 	o yelp-2.30.0 [GNOME 2.30]
 	o yodl-2.14.3
 	o ysm-2.9.9.1
