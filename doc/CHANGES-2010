@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2945 2010/08/23 01:50:40 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2946 2010/08/23 14:42:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3869,3 +3869,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/scamper to 20100517 [markd 2010-08-22]
 	Updated editors/emacs-snapshot to 24.0.50.20100821 [minskim 2010-08-23]
 	Updated sysutils/capistrano to 2.5.19 [gls 2010-08-23]
+	Updated www/contao29-translations to 20100823 [taca 2010-08-23]
