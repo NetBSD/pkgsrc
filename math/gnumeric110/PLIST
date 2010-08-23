@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/08/17 15:02:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/08/23 13:33:36 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -225,8 +225,8 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
-lib/goffice/0.8.8/plugins/gnumeric/gnumeric.la
-lib/goffice/0.8.8/plugins/gnumeric/plugin.xml
+lib/goffice/0.8.9/plugins/gnumeric/gnumeric.la
+lib/goffice/0.8.9/plugins/gnumeric/plugin.xml
 lib/libspreadsheet.la
 lib/pkgconfig/libspreadsheet-1.10.pc
 man/man1/gnumeric.1
