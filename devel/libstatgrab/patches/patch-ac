@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
+$NetBSD: patch-ac,v 1.3 2010/08/24 06:33:11 sno Exp $
 
---- src/libstatgrab/disk_stats.c.orig	2006-10-09 14:09:38.000000000 +0000
+--- src/libstatgrab/disk_stats.c.orig	2009-12-04 22:09:30.000000000 +0000
 +++ src/libstatgrab/disk_stats.c
 @@ -64,7 +64,9 @@
  #include <sys/mount.h>
@@ -10,9 +10,9 @@ $NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
  #include <sys/dkstat.h>
 +#endif
  #include <devstat.h>
- #define VALID_FS_TYPES {"hpfs", "msdosfs", "ntfs", "udf", "ext2fs", \
- 			"ufs", "mfs", "nfs"}
-@@ -430,7 +432,11 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+ #include <sys/param.h>
+ #include <sys/mount.h>
+@@ -457,7 +459,11 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
  	struct devstat *dev_ptr;
  #endif
  #ifdef NETBSD
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
  #endif
  #ifdef OPENBSD
  	int diskcount;
-@@ -577,9 +583,15 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+@@ -604,9 +610,15 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
  
  #if defined(NETBSD) || defined(OPENBSD)
  	mib[0] = CTL_HW;
@@ -40,7 +40,7 @@ $NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
  #endif
  
  	if (sysctl(mib, MIBSIZE, NULL, &size, NULL, 0) < 0) {
-@@ -588,8 +600,12 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+@@ -615,8 +627,12 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
  	}
  
  #ifdef NETBSD
@@ -53,7 +53,7 @@ $NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
  	num_disks = size / sizeof(struct diskstats);
  #endif
  
-@@ -608,6 +624,7 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+@@ -635,6 +651,7 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
  		u_int64_t rbytes, wbytes;
  
  #ifdef NETBSD
@@ -61,7 +61,7 @@ $NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
  #ifdef HAVE_DK_RBYTES
  		rbytes = stats[i].dk_rbytes;
  		wbytes = stats[i].dk_wbytes;
-@@ -616,6 +633,10 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+@@ -643,6 +660,10 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
  		rbytes = wbytes = stats[i].dk_bytes;
  #endif
  #else
@@ -72,7 +72,7 @@ $NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
  #ifdef HAVE_DS_RBYTES
  		rbytes = stats[i].ds_rbytes;
  		wbytes = stats[i].ds_wbytes;
-@@ -638,8 +659,12 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+@@ -665,8 +686,12 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
  		diskio_stats_ptr->read_bytes = rbytes;
  		diskio_stats_ptr->write_bytes = wbytes;
  #ifdef NETBSD
