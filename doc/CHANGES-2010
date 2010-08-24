@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2947 2010/08/24 01:48:23 gls Exp $
+$NetBSD: CHANGES-2010,v 1.2948 2010/08/24 05:23:47 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3871,3 +3871,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/capistrano to 2.5.19 [gls 2010-08-23]
 	Updated www/contao29-translations to 20100823 [taca 2010-08-23]
 	Updated textproc/dblatex to 0.3 [gls 2010-08-24]
+	Updated databases/p5-Class-DBI-Pg to 0.09nb3 [seb 2010-08-24]
