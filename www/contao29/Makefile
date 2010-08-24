@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/08/10 15:37:32 taca Exp $
+# $NetBSD: Makefile,v 1.7 2010/08/24 11:56:25 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -11,6 +12,7 @@ HOMEPAGE=	http://www.contao.org/
 COMMENT=	Contao Open Source CMS
 LICENSE=	gnu-lgpl-v3
 
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
