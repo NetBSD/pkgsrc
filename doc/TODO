@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9587 2010/08/24 11:34:45 obache Exp $
+$NetBSD: TODO,v 1.9588 2010/08/24 19:09:54 bad Exp $
 
 Suggested new packages
 ======================
@@ -620,7 +620,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-10.8.4
 	o frama-c-20100401
 	o freeglut-2.4.0
 	o freenet-0.7
