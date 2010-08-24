@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/24 18:58:03 bad Exp $
 
---- Makefile.orig	2008-12-05 13:36:40.000000000 +0000
-+++ Makefile
-@@ -18,7 +18,7 @@ DATADIR = $(PREFIX)/share/$(PROGRAM)
- 
+--- Makefile.orig	2010-08-18 11:23:51.000000000 +0000
++++ Makefile	2010-08-23 00:06:09.000000000 +0000
+@@ -20,8 +20,7 @@
+ MANDIR = $(PREFIX)/share/man/man1
  
  $(PROGRAM): $(PROGRAM).o zfuncs.o
--	@g++ $(LFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o
-+	@g++ $(LFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o -lcompat
+-	@ ./dependencies.sh
+-	$(CXX) $(LFLAGS) -ltiff -o $(PROGRAM) $(PROGRAM).o zfuncs.o
++	$(CXX) $(LFLAGS) -ltiff -o $(PROGRAM) $(PROGRAM).o zfuncs.o -lcompat
  
- $(PROGRAM).o: $(SOURCE) zfuncs.h
- 	@g++ $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
+ $(PROGRAM).o: $(SOURCE)
+ 	$(CXX) $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
