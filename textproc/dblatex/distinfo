@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/05/21 21:32:34 reed Exp $
+$NetBSD: distinfo,v 1.4 2010/08/24 01:45:10 gls Exp $
 
-SHA1 (dblatex-0.2.10.tar.bz2) = 3b6016525a2615eccaa73c58ef3898618a50a729
-RMD160 (dblatex-0.2.10.tar.bz2) = 6d22aa1cfb03bc3672ac4ce27226e62170f9df9b
-Size (dblatex-0.2.10.tar.bz2) = 1017352 bytes
+SHA1 (dblatex-0.3.tar.bz2) = 60a853354de23a44c2f32bca812909e3a5dd76ba
+RMD160 (dblatex-0.3.tar.bz2) = 987090d2282b8ff802f6e806f788d9fdc42187e2
+Size (dblatex-0.3.tar.bz2) = 1129409 bytes
