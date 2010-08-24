@@ -1,17 +1,46 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2010/08/24 18:58:03 bad Exp $
 
---- zfuncs.cpp.orig	2008-12-05 13:36:40.000000000 +0000
-+++ zfuncs.cpp
-@@ -29,10 +29,12 @@ void appcrash(cchar *pMess, ... )
+--- zfuncs.cc.orig	2010-08-18 11:23:51.000000000 +0000
++++ zfuncs.cc	2010-08-23 00:03:30.000000000 +0000
+@@ -46,10 +46,12 @@
     
-    printf("appcrash: %s \n",message);
+    printf("appcrash: \n %s \n",message);
     
 +#ifdef backtrace
-    nstack = backtrace(stacklist,nstack);                                   //  good for g++ -rdynamic    v.16
+    nstack = backtrace(stacklist,nstack);                                   //  good for g++ -rdynamic
     stackents = backtrace_symbols(stacklist,nstack);
-    for (ii = 0; ii < nstack; ii++)
-       printf("function: %s \n",stackents[ii]);
+    for (ii = 0; ii < nstack; ii++) 
+       printf(" %s \n",stackents[ii]);
 +#endif
  
-    abort();                                                                //  good for gdb backtrace    v.16
+    abort();                                                                //  good for gdb backtrace
  }
+@@ -79,10 +81,12 @@
+ 
+    fprintf(fid,"zappcrash: \n %s \n",message);
+ 
++#ifdef backtrace
+    nstack = backtrace(stacklist,nstack);
+    stackents = backtrace_symbols(stacklist,nstack);
+    for (ii = 0; ii < nstack; ii++) 
+       fprintf(fid," %s \n",stackents[ii]);
++#endif
+ 
+    fclose(fid);
+    
+@@ -739,6 +743,7 @@
+ 
+ ***************************************************************************/
+ 
++#ifdef zmondirk
+ int zmondirk(cchar *action, cchar *dirk, char **file)
+ {
+    struct inotify_event {
+@@ -831,6 +836,7 @@
+    zappcrash("zmondirk() call error");
+    return -1;
+ }
++#endif
+ 
+ 
+ /**************************************************************************
