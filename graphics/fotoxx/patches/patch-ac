@@ -1,13 +1,17 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2010/08/24 18:58:03 bad Exp $
 
---- zfuncs.h.orig	2008-12-05 13:36:40.000000000 +0000
-+++ zfuncs.h
-@@ -17,7 +17,7 @@
+--- zfuncs.h.orig	2010-08-18 11:23:51.000000000 +0000
++++ zfuncs.h	2010-08-22 23:33:33.000000000 +0000
+@@ -34,9 +34,10 @@
  #include <pthread.h>
  #include <errno.h>
  #include <signal.h>
 -#include <execinfo.h>
++//#include <execinfo.h>
 +#include <sys/wait.h>
- 
- #include <libintl.h>                                                       //  gettext   v.2.9
  #include <locale.h>
+-#include <sys/inotify.h>
++//#include <sys/inotify.h>
+ 
+ #define  int8   char                                                       //  number types
+ #define  int16  short
