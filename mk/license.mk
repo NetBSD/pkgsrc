@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.34 2010/05/06 13:16:59 obache Exp $
+# $NetBSD: license.mk,v 1.35 2010/08/24 19:08:29 bad Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -125,7 +125,7 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 .endif
 
 .if !defined(LICENSE)
-.  if defined(PKG_DEVELOPER)
+.  if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
 WARNINGS+=		"[license.mk] Every package should define a LICENSE."
 .  endif
 
