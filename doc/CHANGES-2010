@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2946 2010/08/23 14:42:35 taca Exp $
+$NetBSD: CHANGES-2010,v 1.2947 2010/08/24 01:48:23 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20100821 [minskim 2010-08-23]
 	Updated sysutils/capistrano to 2.5.19 [gls 2010-08-23]
 	Updated www/contao29-translations to 20100823 [taca 2010-08-23]
+	Updated textproc/dblatex to 0.3 [gls 2010-08-24]
