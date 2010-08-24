@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.2 2009/01/07 23:42:04 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/08/24 18:58:02 bad Exp $
 
-SHA1 (fotoxx-5.8.tar.gz) = c8f52f899773caa5304164e83d80c51b7e083cc5
-RMD160 (fotoxx-5.8.tar.gz) = 5a4fc01954e0d8c3eb15983018a03d99a681f2d4
-Size (fotoxx-5.8.tar.gz) = 933025 bytes
-SHA1 (patch-aa) = 2f5b2b650c557296f073d816e9c12998e7f874ad
-SHA1 (patch-ab) = 45705b890257cd34571e4896494ee0d643bdf168
-SHA1 (patch-ac) = e213a84e029d51af8e672da8b58945c3f32bc5c2
+SHA1 (fotoxx-10.8.4.tar.gz) = 3a1ead13324b5c50811247279c3de43b6e0d776a
+RMD160 (fotoxx-10.8.4.tar.gz) = fc755d00f6f169bca7de165803a81b9511f5fb4f
+Size (fotoxx-10.8.4.tar.gz) = 1133275 bytes
+SHA1 (patch-aa) = 3052ebfdaf7d5c21e1ea15aff5167641f763137c
+SHA1 (patch-ab) = 3a6cc4a86e4422c62b917a634704650de3c84f48
+SHA1 (patch-ac) = a1c448450a50e6552066797d07eedeb2f214f577
+SHA1 (patch-ad) = f096dc3412c28369278da594ef858e93e4304cd9
