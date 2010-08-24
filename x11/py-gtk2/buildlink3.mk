@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2010/06/13 22:45:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2010/08/24 09:04:56 wiz Exp $
 
 BUILDLINK_TREE+=	pygtk2
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.pygtk2?=	../../x11/py-gtk2
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .endif # PYGTK2_BUILDLINK3_MK
 
