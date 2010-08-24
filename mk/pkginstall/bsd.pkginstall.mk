@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.51 2010/07/08 04:57:36 dholland Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.52 2010/08/24 19:08:29 bad Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -986,7 +986,7 @@ FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS:Q}
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:Q}
 FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:Q}
 
-.if defined(PKG_DEVELOPER)
+.if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
 PKGINSTALL_VERBOSE?=	all
 .else
 PKGINSTALL_VERBOSE?=	# empty
