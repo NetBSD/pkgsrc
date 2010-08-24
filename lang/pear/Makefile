@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/03/15 16:50:15 taca Exp $
+# $NetBSD: Makefile,v 1.14 2010/08/24 11:33:51 obache Exp $
 #
 
-DISTNAME=	PEAR-1.9.0
-#PKGREVISION=	1
+DISTNAME=	PEAR-1.9.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -11,6 +10,9 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/
 COMMENT=	PEAR Base System for PHP
+LICENSE=	2-clause-bsd
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 EXTRACT_ONLY=	# none
@@ -27,11 +29,11 @@ BUNDLE=		${WRKSRC}/install/go-pear-bundle
 
 # everything else that forms a part of the "base" PEAR install
 #
-PEAR_SRCS=		PEAR-1.9.0${EXTRACT_SUFX}
+PEAR_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${PEAR_SRCS}
 EXTRACT_ONLY+=		${PEAR_SRCS}
 
-ARCHIVE_SRCS=		Archive_Tar-1.3.3${EXTRACT_SUFX}
+ARCHIVE_SRCS=		Archive_Tar-1.3.7${EXTRACT_SUFX}
 ARCHIVE_WRKSRC=		${WRKDIR}/${ARCHIVE_SRCS:S/${EXTRACT_SUFX}//}
 DISTFILES+=		${ARCHIVE_SRCS}
 EXTRACT_ONLY+=		${ARCHIVE_SRCS}
@@ -53,13 +55,7 @@ SUBST_SED.config=	-e "s|@WRKSRC@|${WRKSRC}|g"
 SUBST_SED.config+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.config=	Fixing configuration files.
 
-SUBST_CLASSES+=		pear
-SUBST_STAGE.pear=	post-patch
-SUBST_FILES.pear=	pear.sh
-SUBST_SED.pear=		-e "s|@php_bin@|${PREFIX}/bin/php|g"
-SUBST_SED.pear+=	-e "s|@php_dir@|${PREFIX}/lib/php|g"
-SUBST_SED.pear+=	-e "s|@SH@|${SH}|g"
-SUBST_MESSAGE.pear=	Fixing pear installation script.
+REPLACE_SH+=		script/pear.sh
 
 INSTALLATION_DIRS+=	share/examples/pear
 
@@ -68,7 +64,6 @@ post-extract:
 	${MKDIR} ${WRKSRC}/install
 	${MKDIR} ${BUNDLE}
 	${CP} ${FILESDIR}/go-pear.php ${WRKSRC}/install
-	${CP} ${FILESDIR}/pear.sh ${WRKSRC}
 	${CP} ${FILESDIR}/PEAR.php ${BUNDLE}
 
 do-build:
@@ -85,8 +80,7 @@ do-build:
 	${CP} ${CONSOLE_WRKSRC}/Console/Getopt.php ${BUNDLE}
 
 do-install:
-	${PREFIX}/bin/php ${WRKSRC}/install/go-pear.php local
-	${INSTALL_SCRIPT} ${WRKSRC}/pear.sh ${DESTDIR}${PREFIX}/bin/pear
+	${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/php ${WRKSRC}/install/go-pear.php local
 	${INSTALL_DATA} ${WRKSRC}/pear.conf \
 		${DESTDIR}${PREFIX}/share/examples/pear/pear.conf
 
