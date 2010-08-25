@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2972 2010/08/25 22:54:55 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2973 2010/08/25 22:59:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-File-Path-Tiny version 0.1 [seb 2010-08-25]
 	Updated devel/p5-App-perlbrew to 0.10 [seb 2010-08-25]
 	Updated www/p5-Plack to 0.9945 [seb 2010-08-25]
+	Updated sysutils/brasero to 2.30.2nb1 [jnemeth 2010-08-25]
