@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/01/30 00:41:26 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2010/08/25 09:01:02 jnemeth Exp $
 # TeX Live Revision 16770
 
 DISTNAME=	pdftex
 PKGNAME=	tex-${DISTNAME}-1.40.10
+PKGREVISION=	1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX extension for direct creation of PDF
@@ -26,4 +27,5 @@ post-install:
 	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/etex
 	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/pdfetex
 
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
