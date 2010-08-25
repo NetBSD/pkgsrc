@@ -1,0 +1,25 @@
+$NetBSD: patch-ak,v 1.1 2010/08/25 08:02:21 manu Exp $
+
+Take care of NetBSD so that we can link with -lperfuse in makefile.
+--- configure.in.orig	2010-08-24 09:26:08.000000000 +0200
++++ configure.in	2010-08-24 09:27:01.000000000 +0200
+@@ -15,8 +15,9 @@
+ fi
+ 
+ case $target_os in
+      *linux*)	arch=linux;;
++     *netbsd*)  arch=netbsd;;
+      *bsd*)	arch=bsd;;
+      *)		arch=unknown;;
+ esac
+ 
+@@ -90,8 +91,9 @@
+ 
+ AC_SUBST(subdirs2)
+ 
+ AM_CONDITIONAL(LINUX, test "$arch" = linux)
++AM_CONDITIONAL(NETBSD, test "$arch" = netbsd)
+ AM_CONDITIONAL(BSD, test "$arch" = bsd)
+ 
+ AC_CONFIG_FILES([fuse.pc Makefile lib/Makefile util/Makefile example/Makefile include/Makefile])
+ AC_OUTPUT
