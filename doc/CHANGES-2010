@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2956 2010/08/25 08:04:27 manu Exp $
+$NetBSD: CHANGES-2010,v 1.2957 2010/08/25 09:01:17 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3880,3 +3880,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/asciidoc to 8.6.1 [gls 2010-08-25]
 	Added perfuse-20100825 [manu 2010-08-25]
 	Updated filesystems/fuse to 2.8.4 [manu 2010-08-25]
+	Updated print/tex-pdftex to 1.40.10nb1 [jnemeth 2010-08-25]
