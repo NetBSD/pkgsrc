@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2965 2010/08/25 21:13:08 darcy Exp $
+$NetBSD: CHANGES-2010,v 1.2966 2010/08/25 21:28:29 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3878,7 +3878,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29 to 2.9.1nb1 [taca 2010-08-24]
 	Updated graphics/fotoxx to 10.8.4 [bad 2010-08-24]
 	Updated textproc/asciidoc to 8.6.1 [gls 2010-08-25]
-	Added filesystems/perfuse 20100825 [manu 2010-08-25]
+	Added filesystems/perfuse version 20100825 [manu 2010-08-25]
 	Updated filesystems/fuse to 2.8.4 [manu 2010-08-25]
 	Updated print/tex-pdftex to 1.40.10nb1 [jnemeth 2010-08-25]
 	Updated net/quagga-devel to 0.99.17 [gdt 2010-08-25]
