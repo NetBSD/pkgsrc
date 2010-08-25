@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2968 2010/08/25 22:08:55 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2969 2010/08/25 22:09:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IPC-Run3 to 0.044 [sno 2010-08-25]
 	Updated devel/p5-Module-CoreList to 2.37 [seb 2010-08-25]
 	Updated devel/p5-Class-MOP to 1.07 [seb 2010-08-25]
+	Updated devel/p5-Moose to 1.10 [seb 2010-08-25]
