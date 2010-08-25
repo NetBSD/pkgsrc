@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2010/02/05 19:07:43 minskim Exp $
+$NetBSD: MESSAGE,v 1.3 2010/08/25 13:22:34 reed Exp $
 
 After upgrading LyX or adding new converters, document previewers,
 TeX fonts, or other features, LyX users should consider running
@@ -9,9 +9,8 @@ options to further configure these features.
 
 Examples of packages that can be used to extend LyX include:
 converters/latex2rtf, converters/wv, graphics/ImageMagick,
-graphics/tgif, graphics/tiff, print/dvipdfmx, print/ghostscript-esp,
-print/ghostscript-gnu, print/ghostscript-nox11, print/gv,
-print/transfig, textproc/dsssl-docbook-modular, textproc/ispell-base,
-textproc/latex2html, and x11/kdebase3.
+graphics/tgif, graphics/tiff, print/dvipdfmx, print/gv, print/transfig,
+textproc/dsssl-docbook-modular, textproc/ispell-base, textproc/latex2html,
+and x11/kdebase3.
 
 ===========================================================================
