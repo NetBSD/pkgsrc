@@ -1,0 +1,31 @@
+$NetBSD: patch-ar,v 1.1 2010/08/25 22:50:13 tez Exp $
+
+Cater to compilers too stupid to interpret a bitwise OR in a template
+argument as a constant.  (From https://svn.boost.org/trac/boost/ticket/4146)
+
+--- boost/property_tree/detail/xml_parser_read_rapidxml.hpp.orig	2010-08-20 13:41:30.645363600 -0500
++++ boost/property_tree/detail/xml_parser_read_rapidxml.hpp	2010-08-20 13:46:11.091510100 -0500
+@@ -94,9 +94,12 @@
+         try {
+             // Parse using appropriate flags
+             using namespace rapidxml;
+-            const int f_tws = parse_normalize_whitespace
+-                            | parse_trim_whitespace;
++            const int f_tws = (parse_normalize_whitespace
++                            | parse_trim_whitespace);
+             const int f_c = parse_comment_nodes;
++            const int f_tws_c = (parse_normalize_whitespace
++                                 | parse_trim_whitespace
++                                 | parse_comment_nodes);
+             xml_document<Ch> doc;
+             if (flags & no_comments) {
+                 if (flags & trim_whitespace)
+@@ -105,7 +108,7 @@
+                     doc.BOOST_NESTED_TEMPLATE parse<0>(&v.front());
+             } else {
+                 if (flags & trim_whitespace)
+-                    doc.BOOST_NESTED_TEMPLATE parse<f_tws | f_c>(&v.front());
++                    doc.BOOST_NESTED_TEMPLATE parse<f_tws_c>(&v.front());
+                 else
+                     doc.BOOST_NESTED_TEMPLATE parse<f_c>(&v.front());
+             }
