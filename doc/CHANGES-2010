@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2970 2010/08/25 22:36:22 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2971 2010/08/25 22:44:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3892,3 +3892,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-MOP to 1.07 [seb 2010-08-25]
 	Updated devel/p5-Moose to 1.10 [seb 2010-08-25]
 	Added devel/p5-File-Path-Tiny version 0.1 [seb 2010-08-25]
+	Updated devel/p5-App-perlbrew to 0.10 [seb 2010-08-25]
