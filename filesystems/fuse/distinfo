@@ -1,6 +1,17 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/20 23:48:30 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2010/08/25 08:02:21 manu Exp $
 
-SHA1 (fuse-2.5.2.tar.gz) = b353237dc7964c7337a837470b1f7d5ebc71aa0e
-RMD160 (fuse-2.5.2.tar.gz) = 840f0f13d9d493b1c2969471cfb9414a5368780e
-Size (fuse-2.5.2.tar.gz) = 407845 bytes
-SHA1 (patch-aa) = 2bed299164f56d72623b79eb69b011bcf5f97fed
+SHA1 (fuse-2.8.4.tar.gz) = b1bc296c3e5b90b3658edb5d8d7aa0ee97c145d7
+RMD160 (fuse-2.8.4.tar.gz) = 75093d0ddf8c4b9fc2e4764bdf86c43c5937c297
+Size (fuse-2.8.4.tar.gz) = 500345 bytes
+SHA1 (patch-aa) = 651517ebbc440cb84a7b21c45b48aa717babc227
+SHA1 (patch-ab) = c53da5e8e9bd934ae9753b604c11d6a49b45731c
+SHA1 (patch-ac) = f31f83ca7cd7f75845f90d00b4c62f28935b93f3
+SHA1 (patch-ad) = e3e013137fbafca9a2944d23265e66553408b503
+SHA1 (patch-ae) = b275cd57b8f7c331fb730c27a8f1c901c11a9d01
+SHA1 (patch-af) = fdd24a2c94b31b4c3586e8ed56a78583e85f029d
+SHA1 (patch-ag) = e3fa9eac0a8e6de91f43c43cd904f12a1eb3621a
+SHA1 (patch-ai) = cc40e939f884c6c9b7b413021b9f18671507a2ab
+SHA1 (patch-ak) = 222faa9b6549063428c89e65dfcb77e002dc798e
+SHA1 (patch-al) = 358d734dbfa43e306bf0bb0a39b006be5822f1a3
+SHA1 (patch-am) = 2abd07b403896bff5aad6cd865cb473553851a22
+SHA1 (patch-an) = 3f119dae5f08996dd483a0fb4fa0365507be2070

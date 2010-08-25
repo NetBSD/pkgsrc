@@ -1,0 +1,16 @@
+$NetBSD: patch-an,v 1.1 2010/08/25 08:02:21 manu Exp $
+
+Link with -lperfuse on NetBSD
+--- lib/Makefile.in.orig	2010-08-24 09:33:40.000000000 +0200
++++ lib/Makefile.in	2010-08-24 09:35:20.000000000 +0200
+@@ -263,8 +263,10 @@
+ 
+ libfuse_la_LDFLAGS = @libfuse_libs@ -version-number 2:8:4 \
+ 	-Wl,--version-script,$(srcdir)/fuse_versionscript
+ 
++@NETBSD_TRUE@libfuse_la_LIBADD = -lperfuse -lpuffs
++
+ libulockmgr_la_SOURCES = ulockmgr.c
+ libulockmgr_la_LDFLAGS = -pthread -version-number 1:0:1
+ EXTRA_DIST = fuse_versionscript
+ all: all-am

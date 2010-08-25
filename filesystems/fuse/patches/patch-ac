@@ -1,0 +1,49 @@
+$NetBSD: patch-ac,v 1.1 2010/08/25 08:02:21 manu Exp $
+
+NetBSD has the same build oddities af FreeBSD. We also have this strange 
+problem with fuse_req_ctx_compat24
+--- ./lib/fuse_lowlevel.c.orig	2010-07-25 15:18:20.000000000 +0200
++++ ./lib/fuse_lowlevel.c	2010-08-04 03:53:16.000000000 +0200
+@@ -1366,9 +1366,11 @@
+ const struct fuse_ctx *fuse_req_ctx_compat24(fuse_req_t req)
+ {
+ 	return fuse_req_ctx(req);
+ }
++#ifndef __NetBSD__
+ FUSE_SYMVER(".symver fuse_req_ctx_compat24,fuse_req_ctx@FUSE_2.4");
++#endif
+ 
+ 
+ void fuse_req_interrupt_func(fuse_req_t req, fuse_interrupt_func_t func,
+ 			     void *data)
+@@ -1735,9 +1733,9 @@
+ 	return -ENOSYS;
+ }
+ #endif
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ 
+ static void fill_open_compat(struct fuse_open_out *arg,
+ 			     const struct fuse_file_info_compat *f)
+ {
+@@ -1837,17 +1835,17 @@
+ FUSE_SYMVER(".symver fuse_reply_statfs_compat,fuse_reply_statfs@FUSE_2.4");
+ FUSE_SYMVER(".symver fuse_reply_open_compat,fuse_reply_open@FUSE_2.4");
+ FUSE_SYMVER(".symver fuse_lowlevel_new_compat,fuse_lowlevel_new@FUSE_2.4");
+ 
+-#else /* __FreeBSD__ */
++#else /* __FreeBSD__ || __NetBSD__ */
+ 
+ int fuse_sync_compat_args(struct fuse_args *args)
+ {
+ 	(void) args;
+ 	return 0;
+ }
+ 
+-#endif /* __FreeBSD__ */
++#endif /* __FreeBSD__ || __NetBSD__ */
+ 
+ struct fuse_session *fuse_lowlevel_new_compat25(struct fuse_args *args,
+ 				const struct fuse_lowlevel_ops_compat25 *op,
+ 				size_t op_size, void *userdata)
