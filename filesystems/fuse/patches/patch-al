@@ -1,0 +1,59 @@
+$NetBSD: patch-al,v 1.1 2010/08/25 08:02:21 manu Exp $
+
+Take care of NetBSD so that we can link with -lperfuse in makefile.
+--- configure.orig	2010-08-24 09:28:13.000000000 +0200
++++ configure	2010-08-24 09:31:20.000000000 +0200
+@@ -788,8 +788,10 @@
+ LTLIBOBJS
+ LIBOBJS
+ BSD_FALSE
+ BSD_TRUE
++NETBSD_FALSE
++NETBSD_TRUE
+ LINUX_FALSE
+ LINUX_TRUE
+ subdirs2
+ INIT_D_PATH
+@@ -12082,8 +12084,9 @@
+ fi
+ 
+ case $target_os in
+      *linux*)	arch=linux;;
++     *netbsd*)	arch=netbsd;;
+      *bsd*)	arch=bsd;;
+      *)		arch=unknown;;
+ esac
+ 
+@@ -13671,8 +13674,16 @@
+   LINUX_TRUE='#'
+   LINUX_FALSE=
+ fi
+ 
++ if test "$arch" = netbsd; then
++  NETBSD_TRUE=
++  NETBSD_FALSE='#'
++else
++  NETBSD_TRUE='#'
++  NETBSD_FALSE=
++fi
++
+  if test "$arch" = bsd; then
+   BSD_TRUE=
+   BSD_FALSE='#'
+ else
+@@ -13822,8 +13833,15 @@
+ $as_echo "$as_me: error: conditional \"LINUX\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++if test -z "${NETBSD_TRUE}" && test -z "${NETBSD_FALSE}"; then
++  { { $as_echo "$as_me:$LINENO: error: conditional \"NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&5
++$as_echo "$as_me: error: conditional \"NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&2;}
++   { (exit 1); exit 1; }; }
++fi
+ if test -z "${BSD_TRUE}" && test -z "${BSD_FALSE}"; then
+   { { $as_echo "$as_me:$LINENO: error: conditional \"BSD\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&5
+ $as_echo "$as_me: error: conditional \"BSD\" was never defined.
