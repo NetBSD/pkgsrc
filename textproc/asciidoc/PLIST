@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2010/05/15 20:23:38 gls Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/08/25 02:16:24 gls Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
 man/man1/asciidoc.1
 share/asciidoc/asciidoc.conf
+share/asciidoc/dblatex/asciidoc-dblatex.sty
+share/asciidoc/dblatex/asciidoc-dblatex.xsl
+share/asciidoc/dblatex/dblatex-readme.txt
 share/asciidoc/docbook-xsl/chunked.xsl
 share/asciidoc/docbook-xsl/common.xsl
 share/asciidoc/docbook-xsl/epub.xsl
@@ -20,6 +23,8 @@ share/asciidoc/filters/code/code-filter.py
 share/asciidoc/filters/graphviz/asciidoc-graphviz-sample.txt
 share/asciidoc/filters/graphviz/graphviz-filter.conf
 share/asciidoc/filters/graphviz/graphviz2png.py
+share/asciidoc/filters/latex/latex-filter.conf
+share/asciidoc/filters/latex/latex2png.py
 share/asciidoc/filters/music/music-filter-test.txt
 share/asciidoc/filters/music/music-filter.conf
 share/asciidoc/filters/music/music2png.py
@@ -67,6 +72,10 @@ share/asciidoc/lang-pt-BR.conf
 share/asciidoc/lang-ru.conf
 share/asciidoc/latex.conf
 share/asciidoc/stylesheets/docbook-xsl.css
+share/asciidoc/stylesheets/pygments.css
+share/asciidoc/stylesheets/volnitsky-manpage.css
+share/asciidoc/stylesheets/volnitsky-quirks.css
+share/asciidoc/stylesheets/volnitsky.css
 share/asciidoc/stylesheets/xhtml11-manpage.css
 share/asciidoc/stylesheets/xhtml11-quirks.css
 share/asciidoc/stylesheets/xhtml11.css
@@ -74,5 +83,28 @@ share/asciidoc/text.conf
 share/asciidoc/wordpress.conf
 share/asciidoc/xhtml11-quirks.conf
 share/asciidoc/xhtml11.conf
-share/doc/asciidoc/asciidoc.html
+share/doc/asciidoc/a2x.1.txt
+share/doc/asciidoc/article.pdf
+share/doc/asciidoc/article.txt
+share/doc/asciidoc/asciidoc.1.txt
 share/doc/asciidoc/asciidoc.txt
+share/doc/asciidoc/asciidocapi.txt
+share/doc/asciidoc/asciimathml.txt
+share/doc/asciidoc/book-multi.txt
+share/doc/asciidoc/book.epub
+share/doc/asciidoc/book.txt
+share/doc/asciidoc/customers.csv
+share/doc/asciidoc/epub-notes.txt
+share/doc/asciidoc/faq.txt
+share/doc/asciidoc/latex-backend.txt
+share/doc/asciidoc/latex-bugs.txt
+share/doc/asciidoc/latex-filter.pdf
+share/doc/asciidoc/latex-filter.txt
+share/doc/asciidoc/latexmath.txt
+share/doc/asciidoc/latexmathml.txt
+share/doc/asciidoc/music-filter.pdf
+share/doc/asciidoc/music-filter.txt
+share/doc/asciidoc/publishing-ebooks-with-asciidoc.txt
+share/doc/asciidoc/source-highlight-filter.pdf
+share/doc/asciidoc/source-highlight-filter.txt
+share/doc/asciidoc/testasciidoc.txt
