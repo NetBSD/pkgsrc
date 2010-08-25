@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9588 2010/08/24 19:09:54 bad Exp $
+$NetBSD: TODO,v 1.9589 2010/08/25 08:04:26 manu Exp $
 
 Suggested new packages
 ======================
@@ -629,7 +629,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o freewais-sf-2.2.14
 	o frozen-bubble-2.2.0
 	o ftplibpp-2.0.2
-	o fuse-2.8.4
 	o fuse-archivemount-0.6.0
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2009.11.14
