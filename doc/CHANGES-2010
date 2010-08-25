@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2959 2010/08/25 17:54:05 tron Exp $
+$NetBSD: CHANGES-2010,v 1.2960 2010/08/25 19:26:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3883,3 +3883,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pdftex to 1.40.10nb1 [jnemeth 2010-08-25]
 	Updated net/quagga-devel to 0.99.17 [gdt 2010-08-25]
 	Updated www/squid31 to 3.1.7 [tron 2010-08-25]
+	Updated devel/p5-AnyEvent to 5.271 [sno 2010-08-25]
