@@ -118,6 +118,7 @@ emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 embedded-server		Enable embedded server support for MySQL.
 enchant			Add spell checking support using enchant.
 enchant-zemberek	Add spell checking support for Turkish.
+epub			Enable epub support.
 epoll			Enable support for epoll I/O event notification facility.
 esound			Enable support for the Enlightment Sound Daemon.
 evolution-data-server	Enable support for evolution-data-server.
