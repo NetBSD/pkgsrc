@@ -1,0 +1,71 @@
+$NetBSD: patch-ab,v 1.1 2010/08/25 08:02:21 manu Exp $
+
+NetBSD has the same build oddities af FreeBSD.
+--- ./lib/fuse.c.orig	2010-07-25 15:16:03.000000000 +0200
++++ ./lib/fuse.c	2010-08-07 03:25:21.000000000 +0200
+@@ -953,9 +953,9 @@
+ 	if (f->conf.intr)
+ 		fuse_do_prepare_interrupt(req, d);
+ }
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ 
+ static int fuse_compat_open(struct fuse_fs *fs, const char *path,
+ 			    struct fuse_file_info *fi)
+ {
+@@ -1048,9 +1048,9 @@
+ 	}
+ 	return err;
+ }
+ 
+-#else /* __FreeBSD__ */
++#else /* __FreeBSD__ || __NetBSD__ */
+ 
+ static inline int fuse_compat_open(struct fuse_fs *fs, char *path,
+ 				   struct fuse_file_info *fi)
+ {
+@@ -1074,9 +1074,9 @@
+ {
+ 	return fs->op.statfs(fs->compat == 25 ? "/" : path, buf);
+ }
+ 
+-#endif /* __FreeBSD__ */
++#endif /* __FreeBSD__ || __NetBSD__ */
+ 
+ int fuse_fs_getattr(struct fuse_fs *fs, const char *path, struct stat *buf)
+ {
+ 	fuse_get_context()->private_data = fs->user_data;
+@@ -3720,9 +3720,9 @@
+ 
+ 	if (!f->conf.ac_attr_timeout_set)
+ 		f->conf.ac_attr_timeout = f->conf.attr_timeout;
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__) 
+ 	/*
+ 	 * In FreeBSD, we always use these settings as inode numbers
+ 	 * are needed to make getcwd(3) work.
+ 	 */
+@@ -3896,9 +3896,9 @@
+ 	mod->next = fuse_modules;
+ 	fuse_modules = mod;
+ }
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ 
+ static struct fuse *fuse_new_common_compat(int fd, const char *opts,
+ 					   const struct fuse_operations *op,
+ 					   size_t op_size, int compat)
+@@ -3953,9 +3953,9 @@
+ FUSE_SYMVER(".symver fuse_set_getcontext_func,__fuse_set_getcontext_func@");
+ FUSE_SYMVER(".symver fuse_new_compat2,fuse_new@");
+ FUSE_SYMVER(".symver fuse_new_compat22,fuse_new@FUSE_2.2");
+ 
+-#endif /* __FreeBSD__ */
++#endif /* __FreeBSD__ || __NetBSD__  */
+ 
+ struct fuse *fuse_new_compat25(int fd, struct fuse_args *args,
+ 			       const struct fuse_operations_compat25 *op,
+ 			       size_t op_size)

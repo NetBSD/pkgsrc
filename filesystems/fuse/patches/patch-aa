@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/20 23:48:30 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/25 08:02:21 manu Exp $
 
---- util/Makefile.in.orig	2006-02-11 00:41:46.000000000 +0100
-+++ util/Makefile.in	2006-02-11 01:01:48.000000000 +0100
-@@ -461,7 +461,7 @@
+mount.fuse is a script, not a binary
+--- util/Makefile.in.orig	2010-08-24 10:08:52.000000000 +0200
++++ util/Makefile.in	2010-08-24 10:08:59.000000000 +0200
+@@ -591,9 +591,9 @@
+ 	fi
  
  install-exec-local:
  	$(mkdir_p) $(DESTDIR)$(MOUNT_FUSE_PATH)
 -	$(INSTALL_PROGRAM) $(srcdir)/mount.fuse $(DESTDIR)$(MOUNT_FUSE_PATH)/mount.fuse
 +	$(INSTALL_SCRIPT) $(srcdir)/mount.fuse $(DESTDIR)$(MOUNT_FUSE_PATH)/mount.fuse
- 
- install-data-local:
- 	$(mkdir_p) $(DESTDIR)$(UDEV_RULES_PATH)
+ 	$(mkdir_p) $(DESTDIR)$(INIT_D_PATH)
+ 	$(INSTALL_SCRIPT) $(srcdir)/init_script $(DESTDIR)$(INIT_D_PATH)/fuse
+ 	@if test -x /usr/sbin/update-rc.d; then \
+ 		echo "/usr/sbin/update-rc.d fuse start 34 S . start 41 0 6 . || true"; \

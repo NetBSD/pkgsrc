@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2010/08/25 08:02:21 manu Exp $
+bin/fusermount

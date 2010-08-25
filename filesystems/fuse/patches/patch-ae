@@ -1,0 +1,69 @@
+$NetBSD: patch-ae,v 1.1 2010/08/25 08:02:21 manu Exp $
+
+NetBSD uses libperfuse(3). Also remap MNT_* flags to Linux MS_*, and
+unmount(2) to umount2(2)
+--- lib/mount.c.orig	2010-04-26 14:11:30.000000000 +0200
++++ lib/mount.c	2010-08-24 09:20:25.000000000 +0200
+@@ -16,16 +16,30 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <stddef.h>
++#include <string.h>
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <sys/poll.h>
+ #include <sys/socket.h>
+ #include <sys/un.h>
+ #include <sys/wait.h>
+ #include <sys/mount.h>
+ 
++#ifdef __NetBSD__
++#include <perfuse.h>
++
++#define MS_RDONLY 	MNT_RDONLY
++#define MS_NOSUID 	MNT_NOSUID
++#define MS_NODEV 	MNT_NODEV
++#define MS_NOEXEC 	MNT_NOEXEC
++#define MS_SYNCHRONOUS 	MNT_SYNCHRONOUS
++#define MS_NOATIME 	MNT_NOATIME
++
++#define umount2(mnt, flags) unmount(mnt, (flags == 2) ? MNT_FORCE : 0)
++#endif
++
+ #define FUSERMOUNT_PROG		"fusermount"
+ #define FUSE_COMMFD_ENV		"_FUSE_COMMFD"
+ 
+ #ifndef HAVE_FORK
+@@ -154,9 +168,11 @@
+ 	{"async",   MS_SYNCHRONOUS, 0},
+ 	{"sync",    MS_SYNCHRONOUS, 1},
+ 	{"atime",   MS_NOATIME,	    0},
+ 	{"noatime", MS_NOATIME,	    1},
++#ifndef __NetBSD__
+ 	{"dirsync", MS_DIRSYNC,	    1},
++#endif
+ 	{NULL,	    0,		    0}
+ };
+ 
+ static void set_mount_flag(const char *s, int *flags)
+@@ -483,8 +499,9 @@
+ 
+ 		goto out_close;
+ 	}
+ 
++#ifndef __NetBSD__
+ 	if (geteuid() == 0) {
+ 		char *newmnt = fuse_mnt_resolve_path("fuse", mnt);
+ 		res = -1;
+ 		if (!newmnt)
+@@ -495,8 +512,9 @@
+ 		free(newmnt);
+ 		if (res == -1)
+ 			goto out_umount;
+ 	}
++#endif /* __NetBSD__ */
+ 	free(type);
+ 	free(source);
+ 
+ 	return fd;
