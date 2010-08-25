@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2961 2010/08/25 19:30:55 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2962 2010/08/25 19:33:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3885,3 +3885,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/squid31 to 3.1.7 [tron 2010-08-25]
 	Updated devel/p5-AnyEvent to 5.271 [sno 2010-08-25]
 	Updated converters/p5-JSON to 2.22 [sno 2010-08-25]
+	Updated converters/p5-JSON-XS to 2.300 [sno 2010-08-25]
