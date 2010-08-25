@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2957 2010/08/25 09:01:17 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.2958 2010/08/25 17:52:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3881,3 +3881,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added perfuse-20100825 [manu 2010-08-25]
 	Updated filesystems/fuse to 2.8.4 [manu 2010-08-25]
 	Updated print/tex-pdftex to 1.40.10nb1 [jnemeth 2010-08-25]
+	Updated net/quagga-devel to 0.99.17 [gdt 2010-08-25]
