@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2963 2010/08/25 19:47:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2964 2010/08/25 19:53:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3887,3 +3887,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/p5-JSON to 2.22 [sno 2010-08-25]
 	Updated converters/p5-JSON-XS to 2.300 [sno 2010-08-25]
 	Updated devel/p5-PAR to 1.002 [sno 2010-08-25]
+	Updated devel/p5-IPC-Run3 to 0.044 [sno 2010-08-25]
