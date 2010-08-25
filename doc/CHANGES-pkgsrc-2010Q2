@@ -99,3 +99,5 @@ Pullup ticket #3211 - requested by tez
 devel/glib2: build fix
 Pullup ticket #3212 - requested by tron
 databases/phpmyadmin: security update
+Pullup ticket #3213 - requested by obache
+graphics/pear-Image_Color: build fix
