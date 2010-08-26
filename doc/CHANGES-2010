@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2978 2010/08/26 05:22:55 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2979 2010/08/26 05:51:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3898,3 +3898,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Config-General to 2.49 [sno 2010-08-26]
 	Updated devel/p5-Class-XSAccessor to 1.07 [sno 2010-08-26]
 	Updated devel/p5-Class-Accessor-Grouped to 0.09004 [sno 2010-08-26]
+	Updated mail/clamav to 0.96.2 [adam 2010-08-26]
