@@ -1,0 +1,57 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
+
+--- ./src/OpenThreads/pthreads/PThread.c++.orig	2009-06-22 12:51:46.000000000 +0200
++++ ./src/OpenThreads/pthreads/PThread.c++	2009-06-22 16:55:54.000000000 +0200
+@@ -124,6 +124,15 @@
+         {
+ #if defined(__sgi)
+             pthread_setrunon_np( pd->cpunum );
++#elif defined(__NetBSD__) && defined(HAVE_PTHREAD_SETAFFINITY_NP)
++            cpuset_t *cset;
++            cset = cpuset_create();
++            if (cset != NULL)
++            {
++                cpuset_set(pd->cpunum, cset);
++                pthread_setaffinity_np(pthread_self(), cpuset_size(cset), cset);
++                cpuset_destroy(cset);
++            }
+ #elif defined(HAVE_PTHREAD_SETAFFINITY_NP) || defined(HAVE_THREE_PARAM_SCHED_SETAFFINITY) || defined(HAVE_TWO_PARAM_SCHED_SETAFFINITY)
+             cpu_set_t cpumask;
+             CPU_ZERO( &cpumask );
+@@ -537,6 +546,18 @@
+     status = pthread_attr_setscope( &thread_attr, PTHREAD_SCOPE_BOUND_NP );
+     return status;
+ 
++#elif defined(__NetBSD__) && defined(HAVE_PTHREAD_SETAFFINITY_NP)
++    if (pd->isRunning && Thread::CurrentThread()==this)
++    {
++            cpuset_t *cset;
++            cset = cpuset_create();
++            if (cset != NULL)
++            {
++                cpuset_set(pd->cpunum, cset);
++                pthread_setaffinity_np(pthread_self(), cpuset_size(cset), cset);
++                cpuset_destroy(cset);
++            }
++    }
+ #elif defined(HAVE_PTHREAD_SETAFFINITY_NP) || defined(HAVE_THREE_PARAM_SCHED_SETAFFINITY) || defined(HAVE_TWO_PARAM_SCHED_SETAFFINITY)
+ 
+     if (pd->isRunning && Thread::CurrentThread()==this)
+@@ -974,7 +995,16 @@
+     }
+     else
+     {
+-#if defined(HAVE_PTHREAD_SETAFFINITY_NP) || defined(HAVE_THREE_PARAM_SCHED_SETAFFINITY) || defined(HAVE_TWO_PARAM_SCHED_SETAFFINITY)
++#if defined(__NetBSD__) && defined(HAVE_PTHREAD_SETAFFINITY_NP)
++        cpuset_t *cset;
++        cset = cpuset_create();
++        if (cset != NULL)
++        {
++            cpuset_set(cpunum, cset);
++            pthread_setaffinity_np(pthread_self(), cpuset_size(cset), cset);
++            cpuset_destroy(cset);
++        }
++#elif defined(HAVE_PTHREAD_SETAFFINITY_NP) || defined(HAVE_THREE_PARAM_SCHED_SETAFFINITY) || defined(HAVE_TWO_PARAM_SCHED_SETAFFINITY)
+         cpu_set_t cpumask;
+         CPU_ZERO( &cpumask );
+         CPU_SET( cpunum, &cpumask );
