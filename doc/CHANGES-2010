@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2976 2010/08/26 05:12:16 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2977 2010/08/26 05:21:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3896,3 +3896,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/brasero to 2.30.2nb1 [jnemeth 2010-08-25]
 	Updated www/p5-Starlet to 0.10 [seb 2010-08-25]
 	Updated devel/p5-Config-General to 2.49 [sno 2010-08-26]
+	Updated devel/p5-Class-XSAccessor to 1.07 [sno 2010-08-26]
