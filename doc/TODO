@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9591 2010/08/26 05:51:08 adam Exp $
+$NetBSD: TODO,v 1.9592 2010/08/26 06:32:42 sno Exp $
 
 Suggested new packages
 ======================
@@ -1027,7 +1027,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Archive-Tar-1.68
-	o p5-DateTime-TimeZone-1.21
 	o p5-ExtUtils-CBuilder-0.2703
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-Module-Build-0.36090
