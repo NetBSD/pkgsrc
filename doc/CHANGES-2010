@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2983 2010/08/26 06:46:30 sno Exp $
+$NetBSD: CHANGES-2010,v 1.2984 2010/08/26 06:52:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3903,3 +3903,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Crypt-SSLeay to 0.58 [sno 2010-08-26]
 	Updated textproc/p5-String-ShellQuote to 1.04 [sno 2010-08-26]
 	Updated security/p5-Text-Password-Pronounceable to 0.30 [sno 2010-08-26]
+	Updated net/p5-IO-Socket-Multicast to 1.12 [sno 2010-08-26]
