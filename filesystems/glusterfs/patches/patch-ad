@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+
+Works around "error: 'EBADFD' undeclared" on NetBSD
+--- xlators/protocol/server/src/server-resolve.c.orig	2010-07-16 11:54:50.000000000 +0200
++++ xlators/protocol/server/src/server-resolve.c	2010-07-16 12:00:29.000000000 +0200
+@@ -23,9 +23,9 @@
+ #endif
+ 
+ #include "server-protocol.h"
+ #include "server-helpers.h"
+-
++#include "compat-errno.h"
+ 
+ int
+ server_resolve_all (call_frame_t *frame);
+ int

@@ -1,0 +1,19 @@
+$NetBSD: patch-bb,v 1.1.1.1 2010/08/26 14:26:19 manu Exp $
+
+On NetBSD and FreeBSD, O_DIRECTORY does not exists and is defined as 0
+by glusterfs. ((flags & O_DIRECTORY) == O_DIRECTORY) always evaluate
+to true, and this is a bug.
+
+--- ./xlators/performance/quick-read/src/quick-read.c.orig	2010-08-24 17:31:30.000000000 +0200
++++ ./xlators/performance/quick-read/src/quick-read.c	2010-08-24 17:32:13.000000000 +0200
+@@ -642,9 +642,9 @@
+                 }
+         }
+         UNLOCK (&table->lock);
+ 
+-        if (content_cached && ((flags & O_DIRECTORY) == O_DIRECTORY)) {
++        if (content_cached && (flags & O_DIRECTORY)) {
+                 op_ret = -1;
+                 op_errno = ENOTDIR;
+                 goto unwind;
+         }

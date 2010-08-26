@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+
+NetBSD does not have EDOOFUS.
+--- libglusterfs/src/compat-errno.c.orig	2010-07-16 11:44:51.000000000 +0200
++++ libglusterfs/src/compat-errno.c	2010-07-16 11:50:55.000000000 +0200
+@@ -857,11 +857,13 @@
+   /*	ENOATTR		87		/ * Attribute not found */
+   gf_error_to_errno_array[GF_ERROR_CODE_NOATTR] = ENOATTR;
+   gf_errno_to_error_array[ENOATTR] = GF_ERROR_CODE_NOATTR;
+   
++#ifdef EDOOFUS /* Undefined on NetBSD */
+   /*    EDOOFUS		88		/ * Programming error */
+   gf_error_to_errno_array[GF_ERROR_CODE_DOOFUS] = EDOOFUS;
+   gf_errno_to_error_array[EDOOFUS] = GF_ERROR_CODE_DOOFUS;
++#endif /* EDOOFUS */
+ 
+   /*	EBADMSG		89		/ * Bad message */
+   gf_error_to_errno_array[GF_ERROR_CODE_BADMSG] = EBADMSG;
+   gf_errno_to_error_array[EBADMSG] = GF_ERROR_CODE_BADMSG;

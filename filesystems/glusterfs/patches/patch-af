@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+
+Works around "error: 'TCP_KEEPALIVE' undeclared" on NetBSD
+--- transport/socket/src/socket.c.orig	2010-07-16 12:18:27.000000000 +0200
++++ transport/socket/src/socket.c	2010-07-16 12:19:46.000000000 +0200
+@@ -258,9 +258,9 @@
+ 
+         if (keepalive_intvl == GF_USE_DEFAULT_KEEPALIVE)
+                 goto done;
+ 
+-#ifndef GF_LINUX_HOST_OS
++#if !defined(GF_LINUX_HOST_OS) && !defined(__NetBSD__)
+         ret = setsockopt (fd, IPPROTO_TCP, TCP_KEEPALIVE, &keepalive_intvl,
+                           sizeof (keepalive_intvl));
+         if (ret == -1)
+                 goto err;

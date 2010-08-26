@@ -1,0 +1,46 @@
+$NetBSD: patch-ba,v 1.1.1.1 2010/08/26 14:26:19 manu Exp $
+
+glibc dirname() modify the string it is given and returns it.
+glusterfs takes this behavior for granted, and assume that if it
+gives a malloc'ed string to dirname(), then it can free()) the 
+return value.
+
+Here is what SUSv2 says:
+http://opengroup.org/onlinepubs/007908799/xsh/dirname.html
+"The dirname() function may modify the string pointed to by path,            
+and may return a pointer to static storage"
+
+At least NetBSD returns a static storage. glusterfs will return it to 
+a calling function that has the responsability to free it, causing
+a SIGSEGV.
+
+--- ./xlators/performance/stat-prefetch/src/stat-prefetch.c.orig	2010-08-24 14:06:54.000000000 +0200
++++ ./xlators/performance/stat-prefetch/src/stat-prefetch.c	2010-08-24 14:20:10.000000000 +0200
+@@ -815,18 +815,25 @@
+                 path = dirname (cpy);
+                 switch (i)
+                 {
+                 case 0:
+-                        *parent = path;
++                        *parent = strdup(path);
++			if (*parent == NULL)
++				goto out;
+                         break;
+                 case 1:
+-                        *grand_parent = path;
++                        *grand_parent = strdup(path);
++			if (*grand_parent == NULL)
++				goto out;
+                         break;
+                 }
+         }
+ 
+         ret = 0;
+ out:
++	if (cpy != NULL)
++		free(cpy);
++
+         return ret; 
+ }
+ 
+ 

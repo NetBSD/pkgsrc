@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+
+NetBSD does not have AI_ADDRCONFIG. This patch has a side effect: glusterfsd
+listens on IPv6 adresses only by default. Option transport.socket.bind-address 
+in volume server-tcp must be used to listen on an IPv4 address.
+--- libglusterfs/src/common-utils.c.orig	2010-07-16 11:38:26.000000000 +0200
++++ libglusterfs/src/common-utils.c	2010-07-16 11:41:03.000000000 +0200
+@@ -45,8 +45,12 @@
+ #include "revision.h"
+ #include "glusterfs.h"
+ #include "stack.h"
+ 
++#ifndef AI_ADDRCONFIG
++#define AI_ADDRCONFIG 0
++#endif /* AI_ADDRCONFIG */
++
+ typedef int32_t (*rw_op_t)(int32_t fd, char *buf, int32_t size);
+ typedef int32_t (*rwv_op_t)(int32_t fd, const struct iovec *buf, int32_t size);
+ static glusterfs_ctx_t *gf_global_ctx;
+ 
