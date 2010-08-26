@@ -1,0 +1,52 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+
+On NetBSD use libperfuse(3), rename umount2(2) as unmount(2), and skip
+inexistant /etc/mtab management. 
+--- contrib/fuse-lib/mount.c.orig	2010-08-23 09:56:52.000000000 +0200
++++ contrib/fuse-lib/mount.c	2010-08-23 10:29:03.000000000 +0200
+@@ -19,16 +19,23 @@
+ #include <limits.h>
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <dirent.h>
++#ifndef __NetBSD__
+ #include <mntent.h>
++#endif
+ #include <sys/stat.h>
+ #include <sys/poll.h>
+ #include <sys/socket.h>
+ #include <sys/un.h>
+ #include <sys/wait.h>
+ #include <sys/mount.h>
+ 
++#ifdef __NetBSD__
++#include <perfuse.h>
++#define umount2(dir, flags) unmount(dir, ((flags) != 0) ? MNT_FORCE : 0)
++#endif
++
+ #ifdef FUSE_UTIL
+ #define MALLOC(size) malloc (size)
+ #define FREE(ptr) free (ptr)
+ #define GFFUSE_LOGERR(...) fprintf (stderr, ## __VA_ARGS__)
+@@ -57,8 +64,9 @@
+  * - s/free/FREE/, s/malloc/MALLOC/
+  * - there are some other minor things
+  */
+ 
++#ifndef __NetBSD__
+ static int
+ mtab_needs_update (const char *mnt)
+ {
+         int res;
+@@ -90,8 +98,11 @@
+         }
+ 
+         return 1;
+ }
++#else /* __NetBSD__ */
++#define mtab_needs_update(x) 1
++#endif 
+ 
+ #ifndef FUSE_UTIL
+ static
+ #endif
