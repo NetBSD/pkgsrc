@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9590 2010/08/25 21:30:43 seb Exp $
+$NetBSD: TODO,v 1.9591 2010/08/26 05:51:08 adam Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
-	o clamav-0.96.2
 	o classpath-0.98
 	o climm-0.6.4
 	o clustalw-2.0.12 [pkg/43395]
