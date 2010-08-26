@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/05/07 03:16:06 asau Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/08/26 10:21:12 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -192,6 +192,7 @@ share/maxima/${PKGVERSION}/doc/html/maxima_92.html
 share/maxima/${PKGVERSION}/doc/html/maxima_93.html
 share/maxima/${PKGVERSION}/doc/html/maxima_94.html
 share/maxima/${PKGVERSION}/doc/html/maxima_95.html
+share/maxima/${PKGVERSION}/doc/html/maxima_96.html
 share/maxima/${PKGVERSION}/doc/html/maxima_abt.html
 share/maxima/${PKGVERSION}/doc/html/maxima_fot.html
 share/maxima/${PKGVERSION}/doc/html/maxima_ovr.html
@@ -303,8 +304,11 @@ share/maxima/${PKGVERSION}/share/calculus/qual.usg
 share/maxima/${PKGVERSION}/share/calculus/qualsp.lisp
 share/maxima/${PKGVERSION}/share/calculus/revert.mac
 share/maxima/${PKGVERSION}/share/calculus/taylor1.mac
+share/maxima/${PKGVERSION}/share/colnew/colnew-if.lisp
 share/maxima/${PKGVERSION}/share/colnew/colnew-lisp.system
 share/maxima/${PKGVERSION}/share/colnew/colnew-package.lisp
+share/maxima/${PKGVERSION}/share/colnew/colnew.mac
+share/maxima/${PKGVERSION}/share/colnew/colnew.system
 share/maxima/${PKGVERSION}/share/colnew/lisp/approx.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/appsln.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/colnew.lisp
@@ -334,6 +338,8 @@ share/maxima/${PKGVERSION}/share/colnew/lisp/subbak.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/subfor.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/vmonde.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/vwblok.lisp
+share/maxima/${PKGVERSION}/share/colnew/prob1.mac
+share/maxima/${PKGVERSION}/share/colnew/prob2.mac
 share/maxima/${PKGVERSION}/share/combinatorics/README
 share/maxima/${PKGVERSION}/share/contrib/Grobner/README
 share/maxima/${PKGVERSION}/share/contrib/Grobner/grobner-demo.output
@@ -441,6 +447,7 @@ share/maxima/${PKGVERSION}/share/contrib/ezunits/ezunits.mac
 share/maxima/${PKGVERSION}/share/contrib/ezunits/physical_constants.mac
 share/maxima/${PKGVERSION}/share/contrib/ezunits/rtestezunits.mac
 share/maxima/${PKGVERSION}/share/contrib/f90.lisp
+share/maxima/${PKGVERSION}/share/contrib/finance/finance.es.texi
 share/maxima/${PKGVERSION}/share/contrib/finance/finance.mac
 share/maxima/${PKGVERSION}/share/contrib/finance/finance.texi
 share/maxima/${PKGVERSION}/share/contrib/floatproperties.lisp
@@ -694,8 +701,10 @@ share/maxima/${PKGVERSION}/share/contrib/rand/twovar.usg
 share/maxima/${PKGVERSION}/share/contrib/rand/vandpol.mac
 share/maxima/${PKGVERSION}/share/contrib/rand/vandpol.usg
 share/maxima/${PKGVERSION}/share/contrib/rtest_lsquares.mac
+share/maxima/${PKGVERSION}/share/contrib/rtest_mnewton.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_opproperties.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_sequence.mac
+share/maxima/${PKGVERSION}/share/contrib/rtest_solve_rat_ineq.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_to_poly_solver.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_topoly.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_z_transform.mac
@@ -913,6 +922,7 @@ share/maxima/${PKGVERSION}/share/lapack/blas/ztrmm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrmv.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsv.lisp
+share/maxima/${PKGVERSION}/share/lapack/dgesv.lisp
 share/maxima/${PKGVERSION}/share/lapack/eigensys.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack-package.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack.mac
@@ -1227,6 +1237,7 @@ share/maxima/${PKGVERSION}/share/sym/testsuite.lisp
 share/maxima/${PKGVERSION}/share/sym/treillis.lisp
 share/maxima/${PKGVERSION}/share/sym/tri.lisp
 share/maxima/${PKGVERSION}/share/sym/util.lisp
+share/maxima/${PKGVERSION}/share/template-standalone.texi
 share/maxima/${PKGVERSION}/share/template.texi
 share/maxima/${PKGVERSION}/share/tensor/ademo.dem
 share/maxima/${PKGVERSION}/share/tensor/adsitter.dem
@@ -1294,6 +1305,7 @@ share/maxima/${PKGVERSION}/share/trigonometry/spangl.usg
 share/maxima/${PKGVERSION}/share/trigonometry/trgsmp.mac
 share/maxima/${PKGVERSION}/share/trigonometry/trigrat.lisp
 share/maxima/${PKGVERSION}/share/utils/mactex-utilities.lisp
+share/maxima/${PKGVERSION}/share/vector/rtest_vect.mac
 share/maxima/${PKGVERSION}/share/vector/vect.dem
 share/maxima/${PKGVERSION}/share/vector/vect.mac
 share/maxima/${PKGVERSION}/share/vector/vect.usg
