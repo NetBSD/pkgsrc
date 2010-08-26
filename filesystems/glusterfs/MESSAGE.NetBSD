@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+
+glusterfs on NetBSD is extremely experimental. Do not feed it with 
+important data right now.
+
+===========================================================================
