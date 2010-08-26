@@ -1,0 +1,27 @@
+$NetBSD: patch-an,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+
+NetBSD uses libperfuse(3). Also enable debugging (-g) for now.
+--- configure.ac.orig	2010-08-23 15:31:49.000000000 +0200
++++ configure.ac	2010-08-23 16:39:32.000000000 +0200
+@@ -378,8 +378,21 @@
+ 	GF_BOOSTER_SUBDIR=""
+         BUILD_FUSE_CLIENT=no
+         FUSE_CLIENT_SUBDIR=""
+ 	;;
++     *netbsd*)
++        GF_HOST_OS="GF_BSD_HOST_OS"
++	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS}"
++	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
++	GF_LDADD="${ARGP_STANDALONE_LDADD}"
++	if test "x$ac_cv_header_execinfo_h" = "xyes"; then
++	   GF_GLUSTERFS_LDFLAGS="-lexecinfo"
++	fi				      
++	GF_FUSE_LDADD="-liconv -lperfuse"
++	BUILD_LIBGLUSTERFSCLIENT=no
++	LIBGLUSTERFSCLIENT_SUBDIR=""
++	GF_BOOSTER_SUBDIR=""
++	;;
+      *bsd*)
+         GF_HOST_OS="GF_BSD_HOST_OS"
+ 	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS}"
+ 	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
