@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/05/15 05:42:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/08/26 17:40:58 adam Exp $
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
 share/boost-build/boost_build.png
@@ -243,6 +243,7 @@ share/boost-build/test/example_gettext.py
 share/boost-build/test/example_libraries.py
 share/boost-build/test/example_make.py
 share/boost-build/test/example_qt4.py
+share/boost-build/test/exit_status.py
 share/boost-build/test/expansion.py
 share/boost-build/test/explicit.py
 share/boost-build/test/file_name_handling.py
@@ -468,7 +469,7 @@ share/boost-build/tools/builtin.jam
 share/boost-build/tools/builtin.py
 share/boost-build/tools/cast.jam
 share/boost-build/tools/clang-darwin.jam
-share/boost-build/tools/clang-unix.jam
+share/boost-build/tools/clang-linux.jam
 share/boost-build/tools/clang.jam
 share/boost-build/tools/common.jam
 share/boost-build/tools/common.py
@@ -485,6 +486,8 @@ share/boost-build/tools/docutils.jam
 share/boost-build/tools/doxproc.py
 share/boost-build/tools/doxygen-config.jam
 share/boost-build/tools/doxygen.jam
+share/boost-build/tools/doxygen/windows-paths-check.doxyfile
+share/boost-build/tools/doxygen/windows-paths-check.hpp
 share/boost-build/tools/fop.jam
 share/boost-build/tools/fortran.jam
 share/boost-build/tools/gcc.jam
@@ -555,6 +558,9 @@ share/boost-build/tools/whale.jam
 share/boost-build/tools/xlf.jam
 share/boost-build/tools/xsltproc-config.jam
 share/boost-build/tools/xsltproc.jam
+share/boost-build/tools/xsltproc/included.xsl
+share/boost-build/tools/xsltproc/test.xml
+share/boost-build/tools/xsltproc/test.xsl
 share/boost-build/user-config.jam
 share/boost-build/util/__init__.py
 share/boost-build/util/assert.jam
