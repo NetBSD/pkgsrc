@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/08/25 07:34:11 manu Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/08/26 14:18:08 manu Exp $
 
 BUILDLINK_TREE+=	perfuse
 
