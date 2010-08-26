@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/08/25 07:36:17 manu Exp $
+# $NetBSD: Makefile,v 1.30 2010/08/26 14:29:38 manu Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -28,6 +28,7 @@ SUBDIR+=	fuse-svnfs
 SUBDIR+=	fuse-unionfs
 SUBDIR+=	fuse-wdfs
 SUBDIR+=	fuse-wikipediafs
+SUBDIR+=	glusterfs
 SUBDIR+=	perfuse
 SUBDIR+=	py-fuse-bindings
 SUBDIR+=	tahoe-lafs
