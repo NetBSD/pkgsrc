@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/22 19:35:32 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/08/26 06:46:00 sno Exp $
 
-SHA1 (Text-Password-Pronounceable-0.28.tar.gz) = ab913347b14dad8a9fe51c6aa85dc3c4e1ad041f
-RMD160 (Text-Password-Pronounceable-0.28.tar.gz) = ec82558004930355603ccdf9cd3b5df1ad54ec5e
-Size (Text-Password-Pronounceable-0.28.tar.gz) = 13457 bytes
+SHA1 (Text-Password-Pronounceable-0.30.tar.gz) = 48f4519678f6f1a8e6aae811bf8b6b053f983b6a
+RMD160 (Text-Password-Pronounceable-0.30.tar.gz) = e8411e5a467d4bb5c1146ee322f2456bf34addaa
+Size (Text-Password-Pronounceable-0.30.tar.gz) = 21015 bytes
