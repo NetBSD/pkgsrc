@@ -1,0 +1,42 @@
+$NetBSD: patch-aq,v 1.1.1.1 2010/08/26 14:26:19 manu Exp $
+
+Emulate missing sem_timedwait(3) on NetBSD
+--- xlators/performance/io-threads/src/io-threads.c.orig	2010-08-23 17:49:40.000000000 +0200
++++ xlators/performance/io-threads/src/io-threads.c	2010-08-23 18:43:35.000000000 +0200
+@@ -32,8 +32,36 @@
+ #include <sys/time.h>
+ #include <time.h>
+ #include "locking.h"
+ 
++#ifdef __NetBSD__
++static inline int sem_timedwait(sem_t *sem, struct timespec *ts) {
++	struct timespec onems = { 0, 1000000 };
++	struct timespec total = { 0, 0 };
++	struct timespec unslept;
++	struct timespec elapsed;
++	struct timespec tmp;
++
++	while (timespeccmp(ts, &total, >)) {
++		if (sem_trywait(sem) == 0)
++			  return 0;
++
++		if (errno != EAGAIN)
++			  return -1;
++
++		(void)nanosleep(&onems, &unslept);
++
++		timespecsub(&onems, &unslept, &elapsed);
++		timespecadd(&total, &elapsed, &tmp);
++		total.tv_sec = tmp.tv_sec;
++		total.tv_nsec = tmp.tv_nsec;
++	}
++
++	errno = ETIMEDOUT;
++	return -1;
++}
++#endif /* __NetBSD__ */
++
+ typedef void *(*iot_worker_fn)(void*);
+ 
+ void
+ iot_stop_worker (iot_worker_t *worker);

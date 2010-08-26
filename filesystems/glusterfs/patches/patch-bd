@@ -1,0 +1,60 @@
+$NetBSD: patch-bd,v 1.1.1.1 2010/08/26 14:26:19 manu Exp $
+
+glibc dirname() modify the string it is given and returns it.
+glusterfs takes this behavior for granted, and assume that if it
+gives a malloc'ed string to dirname(), then it can free()) the
+return value.
+
+Here is what SUSv2 says:
+http://opengroup.org/onlinepubs/007908799/xsh/dirname.html
+"The dirname() function may modify the string pointed to by path,
+and may return a pointer to static storage"
+
+At least NetBSD returns a static storage. glusterfs will return it to
+a calling function that has the responsability to free it, causing
+a SIGSEGV.
+
+--- libglusterfsclient/src/libglusterfsclient-dentry.c.orig	2010-08-24 18:36:08.000000000 +0200
++++ libglusterfsclient/src/libglusterfsclient-dentry.c	2010-08-24 18:41:09.000000000 +0200
+@@ -231,8 +231,9 @@
+                    char lookup_basename)
+ {
+         int32_t         op_ret = -1;
+         char           *resolved  = NULL;
++        char           *restmp  = NULL;
+         inode_t        *parent = NULL, *inode = NULL;
+         dentry_t       *dentry = NULL;
+         loc_t          new_loc = {0, };
+ 	char           *pathname = NULL, *directory = NULL;
+@@ -244,10 +245,10 @@
+                 gf_log ("libglusterfsclient-dentry", GF_LOG_DEBUG,
+                         "loc->parent(%"PRId64") already present. sending "
+                         "lookup for %"PRId64"/%s", parent->ino, parent->ino,
+                         loc->path);
+-                resolved = strdup (loc->path);
+-                resolved = dirname (resolved);
++                restmp = strdup (loc->path);
++                resolved = dirname (restmp);
+         } else {
+                 parent = __libgf_client_path_to_parenti (ctx, ctx->itable,
+                                                          loc->path, &resolved);
+         }
+@@ -342,17 +343,13 @@
+ out:
+         loc->inode = inode;
+         loc->parent = parent;
+ 
+-        FREE (resolved);
++        FREE (restmp);
+ 	if (pathname) {
+ 		FREE (pathname);
+ 	}
+ 
+-	if (directory) {
+-		FREE (directory);
+-	}
+-
+         return op_ret;
+ }
+ 
+ 
