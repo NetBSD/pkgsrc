@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2974 2010/08/25 23:07:27 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2975 2010/08/26 00:14:35 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3880,7 +3880,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/asciidoc to 8.6.1 [gls 2010-08-25]
 	Added filesystems/perfuse version 20100825 [manu 2010-08-25]
 	Updated filesystems/fuse to 2.8.4 [manu 2010-08-25]
-	Updated print/tex-pdftex to 1.40.10nb1 [jnemeth 2010-08-25]
 	Updated net/quagga-devel to 0.99.17 [gdt 2010-08-25]
 	Updated www/squid31 to 3.1.7 [tron 2010-08-25]
 	Updated devel/p5-AnyEvent to 5.271 [sno 2010-08-25]
