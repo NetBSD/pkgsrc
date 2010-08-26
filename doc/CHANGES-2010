@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2987 2010/08/26 14:29:38 manu Exp $
+$NetBSD: CHANGES-2010,v 1.2988 2010/08/26 17:42:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3908,3 +3908,10 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/osg version 2.8.3 [adam 2010-08-26]
 	Updated filesystems/perfuse to 20100826 [manu 2010-08-26]
 	Added filesystems/glusterfs 3.0.5 [manu 2010-08-26]
+	Updated devel/boost-jam to 1.44.0 [adam 2010-08-26]
+	Updated devel/boost-headers to 1.44.0 [adam 2010-08-26]
+	Updated devel/boost-libs to 1.44.0 [adam 2010-08-26]
+	Updated devel/boost-docs to 1.44.0 [adam 2010-08-26]
+	Updated devel/boost-build to 1.44.0 [adam 2010-08-26]
+	Updated devel/boost-python to 1.44.0 [adam 2010-08-26]
+	Updated meta-pkgs/boost to 1.44.0 [adam 2010-08-26]
