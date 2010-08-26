@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
+
+--- src/osgDB/FileUtils.cpp.orig	2009-01-12 17:28:37.000000000 +0200
++++ src/osgDB/FileUtils.cpp	2009-01-12 17:30:14.000000000 +0200
+@@ -47,7 +47,7 @@
+     #if (MAC_OS_X_VERSION_MAX_ALLOWED <= 1040)
+         #define stat64 stat
+     #endif
+-#elif defined(__CYGWIN__) || defined(__FreeBSD__) || (defined(__hpux) && !defined(_LARGEFILE64_SOURCE))
++#elif defined(__CYGWIN__) || defined(__FreeBSD__) || defined (__NetBSD__) || (defined(__hpux) && !defined(_LARGEFILE64_SOURCE))
+     #define stat64 stat
+ #endif
+ 
