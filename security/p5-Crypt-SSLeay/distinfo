@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2009/09/02 11:43:30 plunky Exp $
+$NetBSD: distinfo,v 1.9 2010/08/26 06:37:10 sno Exp $
 
-SHA1 (Crypt-SSLeay-0.57.tar.gz) = 6e83137fac79a37346a5f862b6d6cf3fdeefe721
-RMD160 (Crypt-SSLeay-0.57.tar.gz) = 81b9f9da6a74f39e14bce176249b3c30f667912d
-Size (Crypt-SSLeay-0.57.tar.gz) = 122980 bytes
+SHA1 (Crypt-SSLeay-0.58.tar.gz) = 62f31de72a1ccd9608d70ac967ba888bd48054ca
+RMD160 (Crypt-SSLeay-0.58.tar.gz) = 6f5ff6a93050a4fbf151fc32bfd7d51144f7ee08
+Size (Crypt-SSLeay-0.58.tar.gz) = 123845 bytes
 SHA1 (patch-aa) = ada70c84a3dce44871d9c5b1846c488a2e038606
