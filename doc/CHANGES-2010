@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3001 2010/08/27 08:10:18 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3002 2010/08/27 11:47:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3930,3 +3930,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Renamed games/flightgear-base to games/flightgear-data [adam 2010-08-27]
 	Updated games/flightgear-data to 2.0.0 [adam 2010-08-27]
 	Updated databases/slony1 to 2.0.4 [adam 2010-08-27]
+	Updated geography/gdal-lib to 1.7.2 [adam 2010-08-27]
+	Added geography/qgis version 1.5.0 [adam 2010-08-27]
