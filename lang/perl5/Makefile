@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.162 2010/08/27 05:27:37 sno Exp $
+# $NetBSD: Makefile,v 1.163 2010/08/27 16:34:59 tron Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Practical Extraction and Report Language
 
 PKG_DESTDIR_SUPPORT=	user-destdir
