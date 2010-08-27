@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.11 2010/05/23 18:46:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/08/27 08:24:27 adam Exp $
+bin/atari-hd-image.sh
 bin/hatari
 bin/hatari-console.py
 bin/hatariui
 bin/hmsa
-bin/zip2st
+bin/zip2st.sh
 man/man1/hatari.1
+man/man1/hatariui.1
 share/applications/hatariui.desktop
 share/doc/hatari/authors.txt
-share/doc/hatari/changelog.txt
 share/doc/hatari/compatibility.html
 share/doc/hatari/emutos.txt
-share/doc/hatari/gpl.txt
 share/doc/hatari/images/devices.png
 share/doc/hatari/images/fileselector.png
 share/doc/hatari/images/floppydisks.png
@@ -19,6 +19,7 @@ share/doc/hatari/images/joystick.png
 share/doc/hatari/images/keyboard.png
 share/doc/hatari/images/main.png
 share/doc/hatari/images/memory.png
+share/doc/hatari/images/monitor.png
 share/doc/hatari/images/newfloppy.png
 share/doc/hatari/images/screen.png
 share/doc/hatari/images/sound.png
@@ -28,11 +29,9 @@ share/doc/hatari/keymap-sample.txt
 share/doc/hatari/manual.html
 share/doc/hatari/memory-usage.txt
 share/doc/hatari/midi-linux.txt
-share/doc/hatari/readme.txt
 share/doc/hatari/release-notes.txt
 share/doc/hatari/todo.txt
 share/hatari/hatari-icon.bmp
-share/hatari/hatariui/Changelog
 share/hatari/hatariui/README
 share/hatari/hatariui/TODO
 share/hatari/hatariui/config.py
@@ -42,6 +41,7 @@ share/hatari/hatariui/hatari-icon.png
 share/hatari/hatariui/hatari.png
 share/hatari/hatariui/hatari.py
 share/hatari/hatariui/hatariui.py
+share/hatari/hatariui/release-notes.txt
 share/hatari/hatariui/uihelpers.py
 share/hatari/tos.img
 share/icons/hicolor/32x32/apps/hatari-icon.png
