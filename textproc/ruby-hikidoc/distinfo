@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/01 12:14:34 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/08/27 05:06:17 obache Exp $
 
-SHA1 (hikidoc-0.0.4.tgz) = aa7e65ccb66140c07e05054aa617f17f55704263
-RMD160 (hikidoc-0.0.4.tgz) = 3f07934efd89be2d382fe14e342d0b9ba652beb8
-Size (hikidoc-0.0.4.tgz) = 40561 bytes
+SHA1 (hikidoc-0.0.5.tgz) = f0170bed34aea4ac109778fb4d8a22d33793f584
+RMD160 (hikidoc-0.0.5.tgz) = bef6ccf91513796527289b7abbce7a37a3a76cbf
+Size (hikidoc-0.0.5.tgz) = 27174 bytes
