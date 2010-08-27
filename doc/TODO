@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9595 2010/08/27 08:10:18 adam Exp $
+$NetBSD: TODO,v 1.9596 2010/08/27 11:47:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -644,7 +644,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcompris-9.0
 	o gconfmm-2.28.2
 	o gcpio-2.10
-	o gdal-lib-1.7.2 [pkg/43467]
 	o gdb-7.1
 	o gdeskcal-1.01
 	o gdl-2.28.2 [GNOME 2.28]
