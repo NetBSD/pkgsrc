@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.46 2010/08/19 20:47:09 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2010/08/27 05:27:37 sno Exp $
 
 BUILDLINK_TREE+=	perl
 
-.if !defined(PERL5_BUILDLINK3_MK)
-PERL5_BUILDLINK3_MK:=
+.if !defined(PERL_BUILDLINK3_MK)
+PERL_BUILDLINK3_MK:=
 
 .include "../../mk/bsd.fast.prefs.mk"
 PERL5_REQD+=			5.12.0
@@ -37,6 +37,6 @@ INSTALL_TEMPLATES+=	${.CURDIR}/../../lang/perl5/files/install_threads.tmpl
 .include "../../lang/perl5/vars.mk"
 BUILDLINK_FILES.perl=	${PERL5_SUB_INSTALLARCHLIB}/CORE/*
 .endif
-.endif # PERL5_BUILDLINK3_MK
+.endif # PERL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-perl
