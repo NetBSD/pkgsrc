@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2994 2010/08/27 05:15:46 obache Exp $
+$NetBSD: CHANGES-2010,v 1.2995 2010/08/27 05:31:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3920,3 +3920,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBM-Deep to 2.0001 [seb 2010-08-27]
 	Updated textproc/ruby-hikidoc to 0.0.5 [obache 2010-08-27]
 	Updated graphics/ruby-rcairo to 1.8.4 [obache 2010-08-27]
+	Updated lang/perl5 to 5.12.1nb1 [sno 2010-08-27]
