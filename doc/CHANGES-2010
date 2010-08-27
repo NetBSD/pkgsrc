@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3000 2010/08/27 06:36:30 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3001 2010/08/27 08:10:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3926,3 +3926,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Safe-Hole to 0.13 [sno 2010-08-27]
 	Updated devel/p5-Path-Class to 0.21 [sno 2010-08-27]
 	Updated devel/p5-Scope-Upper to 0.12 [sno 2010-08-27]
+	Updated games/flightgear to 2.0.0 [adam 2010-08-27]
+	Renamed games/flightgear-base to games/flightgear-data [adam 2010-08-27]
+	Updated games/flightgear-data to 2.0.0 [adam 2010-08-27]
+	Updated databases/slony1 to 2.0.4 [adam 2010-08-27]
