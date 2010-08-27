@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/08/27 11:43:05 adam Exp $
+
+--- src/plugins/grass/qtermwidget/kpty.cpp.orig	2009-12-31 06:59:10.000000000 +0000
++++ src/plugins/grass/qtermwidget/kpty.cpp
+@@ -61,6 +61,8 @@
+ #include <unistd.h>
+ #include <grp.h>
+ 
++#define HAVE_UTMPX
++
+ #if defined(HAVE_PTY_H)
+ # include <pty.h>
+ #endif
+@@ -565,7 +567,7 @@ void KPty::logout()
+     ut->ut_type = DEAD_PROCESS;
+ #  endif
+ #  ifdef HAVE_UTMPX
+-    gettimeofday( ut->ut_tv, 0 );
++    gettimeofday( &(ut->ut_tv), 0 );
+     pututxline( ut );
+   }
+   endutxent();

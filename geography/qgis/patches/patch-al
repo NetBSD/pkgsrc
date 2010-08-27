@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 2010/08/27 11:43:05 adam Exp $
+
+--- src/plugins/grass/CMakeLists.txt.orig	2009-12-03 09:13:55.000000000 +0000
++++ src/plugins/grass/CMakeLists.txt
+@@ -147,6 +147,10 @@ INCLUDE_DIRECTORIES(
+      qtermwidget
+ )
+ 
++IF (UNIX)
++  SET_TARGET_PROPERTIES(grassplugin PROPERTIES LINK_FLAGS "-L${GRASS_PREFIX}/lib -Wl,-rpath,${GRASS_PREFIX}/lib")
++ENDIF (UNIX)
++
+ TARGET_LINK_LIBRARIES(grassplugin
+   qgisgrass
+   qgis_gui
