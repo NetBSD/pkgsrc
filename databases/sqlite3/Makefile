@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2010/08/08 12:04:37 adam Exp $
+# $NetBSD: Makefile,v 1.32 2010/08/27 09:50:21 adam Exp $
 
-DISTNAME=	sqlite-amalgamation-3.7.0.1
+DISTNAME=	sqlite-amalgamation-3.7.2
 PKGNAME=	${DISTNAME:S/sqlite-amalgamation/sqlite3/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
@@ -13,15 +13,14 @@ LICENSE=	public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-USE_LIBTOOL=		yes
 WRKSRC=			${WRKDIR}/sqlite-${PKGVERSION_NOREV}
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-CONFIGURE_ARGS+=	--with-readline-inc= --enable-threadsafe
 
 .include "../../mk/bsd.prefs.mk"
 
