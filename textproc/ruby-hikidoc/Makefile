@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/01 12:14:34 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/27 05:06:17 obache Exp $
 #
 
-DISTNAME=	hikidoc-0.0.4
+DISTNAME=	hikidoc-0.0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc converters ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/62246/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/72248/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	obache@NetBSD.org
