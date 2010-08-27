@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2010/01/18 09:36:09 adam Exp $
+# $NetBSD: options.mk,v 1.2 2010/08/27 11:14:23 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
-PKG_SUPPORTED_OPTIONS=	pgsql mysql
+PKG_SUPPORTED_OPTIONS=	pgsql mysql sqlite
 PKG_SUGGESTED_OPTIONS=	pgsql
 
 .include "../../mk/bsd.options.mk"
@@ -18,4 +18,11 @@ CONFIGURE_ARGS+=	--without-pg
 CONFIGURE_ARGS+=	--with-mysql
 .else
 CONFIGURE_ARGS+=	--without-mysql
+.endif
+
+.if !empty(PKG_OPTIONS:Msqlite)
+. include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
+.else
+CONFIGURE_ARGS+=	--without-sqlite3
 .endif
