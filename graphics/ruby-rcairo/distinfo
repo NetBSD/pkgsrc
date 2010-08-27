@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2010/05/25 04:39:46 obache Exp $
+$NetBSD: distinfo,v 1.11 2010/08/27 02:06:50 obache Exp $
 
-SHA1 (rcairo-1.8.1.tar.gz) = d5ea5ab624b9e00372cb7009e8cbfdae0e7d8c9a
-RMD160 (rcairo-1.8.1.tar.gz) = e0e8681e3abd324c33c3e11c0df37f34e470d59c
-Size (rcairo-1.8.1.tar.gz) = 278045 bytes
+SHA1 (rcairo-1.8.3.tar.gz) = 0b4bbfcb3080feb7afef6f6b12e634eff35f3a80
+RMD160 (rcairo-1.8.3.tar.gz) = 813b7efe3bb248bcb00e566fa131975d9b38f1e0
+Size (rcairo-1.8.3.tar.gz) = 265477 bytes
+SHA1 (patch-aa) = 21ec39db7cb085ee5b2d8990a76d7b61b655a2e2
