@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/08/27 07:54:22 adam Exp $
+# $NetBSD: Makefile,v 1.11 2010/08/27 10:00:49 wiz Exp $
 
 DISTNAME=	FlightGear-2.0.0
 PKGNAME=	${DISTNAME:tl}
@@ -10,7 +10,6 @@ MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Source/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.flightgear.org/
 COMMENT=	The FlightGear Simulator
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -26,6 +25,7 @@ CONFIGURE_ARGS+=	--with-threads
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.simgear+=	simgear>=2.0.0
 .include "../../games/simgear/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
