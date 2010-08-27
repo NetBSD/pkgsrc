@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2010/08/27 02:06:50 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/27 02:11:13 obache Exp $
 
 --- extconf.rb.orig	2010-08-26 12:57:21.000000000 +0000
 +++ extconf.rb
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2010/08/27 02:06:50 obache Exp $
  
  Dir.chdir(ext_dir.to_s) do
 -  system(ruby, "extconf.rb")
-+  system(ruby, "extconf.rb", *$*)
++  system(ruby, "extconf.rb", *ARGV)
  end
  
  create_makefile("cairo")
