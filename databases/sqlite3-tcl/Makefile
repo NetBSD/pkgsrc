@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2010/08/08 12:04:37 adam Exp $
+# $NetBSD: Makefile,v 1.18 2010/08/27 09:50:21 adam Exp $
 
-DISTNAME=	sqlite-3_7_0_1-tea
+DISTNAME=	sqlite-3_7_2-tea
 PKGNAME=	${DISTNAME:S/sqlite/sqlite3-tcl/:S/-tea//:S/_/./g}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
@@ -13,9 +13,9 @@ LICENSE=	public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
+WRKSRC=			${WRKDIR}/sqlite${PKGVERSION_NOREV}
 USE_TOOLS+=		gmake
-
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 
 PLIST_SUBST+=		TCL_TRIM_DOTS=${PKGVERSION_NOREV:S/.//g}
@@ -23,6 +23,6 @@ PLIST_SUBST+=		TCL_TRIM_DOTS=${PKGVERSION_NOREV:S/.//g}
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
