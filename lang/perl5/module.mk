@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.62 2010/05/09 18:46:34 morr Exp $
+# $NetBSD: module.mk,v 1.63 2010/08/27 05:27:37 sno Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -32,8 +32,8 @@
 
 .include "../../lang/perl5/license.mk"
 
-.if !defined(_PERL5_MODULE_MK)
-_PERL5_MODULE_MK=	# defined
+.if !defined(PERL5_MODULE_MK)
+PERL5_MODULE_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -52,18 +52,18 @@ TEST_TARGET?=		test
 .include "../../mk/compiler.mk"
 
 .if ${PERL5_MODULE_TYPE} == "Module::Build"
-_PERL5_MODTYPE=		modbuild
+PERL5_MODTYPE=		modbuild
 .  if ${_USE_DESTDIR} != "no"
-_PERL5_MODBUILD_DESTDIR_OPTION=--destdir ${DESTDIR:Q}
+PERL5_MODBUILD_DESTDIR_OPTION=--destdir ${DESTDIR:Q}
 .  else
-_PERL5_MODBUILD_DESTDIR_OPTION=
+PERL5_MODBUILD_DESTDIR_OPTION=
 .  endif
 .elif ${PERL5_MODULE_TYPE} == "Module::Install"
-_PERL5_MODTYPE=		modinst
+PERL5_MODTYPE=		modinst
 .elif ${PERL5_MODULE_TYPE} == "Module::Install::Bundled"
-_PERL5_MODTYPE=		modinst
+PERL5_MODTYPE=		modinst
 .elif ${PERL5_MODULE_TYPE} == "MakeMaker"
-_PERL5_MODTYPE=		makemaker
+PERL5_MODTYPE=		makemaker
 .endif
 
 
@@ -96,6 +96,7 @@ PERL5_CONFIGURE?=	yes
 PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
 
 MAKE_ENV+=	LC_ALL=C
+MAKE_ENV+=	PERL_MM_USE_DEFAULT=1
 
 # All pkgsrc-installed Perl modules are installed into the "vendor"
 # directories.
@@ -104,7 +105,7 @@ MAKE_PARAMS.makemaker+=	INSTALLDIRS=vendor
 MAKE_PARAMS.modbuild+=	installdirs=vendor
 MAKE_PARAMS.modinst+=	installdirs=vendor
 
-MAKE_PARAMS+=	${MAKE_PARAMS.${_PERL5_MODTYPE}}
+MAKE_PARAMS+=	${MAKE_PARAMS.${PERL5_MODTYPE}}
 
 .PHONY: do-makemaker-configure
 do-makemaker-configure:
@@ -158,7 +159,7 @@ do-modinst-configure:
 .endif
 
 .PHONY: perl5-configure
-perl5-configure: do-${_PERL5_MODTYPE}-configure
+perl5-configure: do-${PERL5_MODTYPE}-configure
 
 .if !empty(PERL5_CONFIGURE:M[yY][eE][sS])
 do-configure: perl5-configure
@@ -166,22 +167,22 @@ do-configure: perl5-configure
 
 .PHONY: do-modbuild-build
 do-modbuild-build:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
 
 .PHONY: do-modbuild-test
 do-modbuild-test:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build test
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build test
 
 .PHONY: do-modbuild-install
 do-modbuild-install:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install ${_PERL5_MODBUILD_DESTDIR_OPTION}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install ${PERL5_MODBUILD_DESTDIR_OPTION}
 
-.if target(do-${_PERL5_MODTYPE}-build) && !defined(NO_BUILD)
-do-build: do-${_PERL5_MODTYPE}-build
-do-test: do-${_PERL5_MODTYPE}-test
+.if target(do-${PERL5_MODTYPE}-build) && !defined(NO_BUILD)
+do-build: do-${PERL5_MODTYPE}-build
+do-test: do-${PERL5_MODTYPE}-test
 .endif
-.if target(do-${_PERL5_MODTYPE}-install)
-do-install: do-${_PERL5_MODTYPE}-install
+.if target(do-${PERL5_MODTYPE}-install)
+do-install: do-${PERL5_MODTYPE}-install
 .endif
 
 
@@ -209,17 +210,17 @@ PERL5_MAKE_FLAGS.makemaker+=	OTHERLDFLAGS=${LDFLAGS:Q}
 PERL5_MAKE_FLAGS.makemaker+=	${_var_}=${PERL5_${_var_}:Q}
 .endfor
 #
-# The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
+# The PREFIX in the generated Makefile will point to ${PERL5_PREFIX},
 # so override its value to the module's ${PREFIX}.
 # Also, set VENDORARCHEXP, so existing .packlist won't be read.
 #
 PERL5_MAKE_FLAGS.makemaker+=   PREFIX=${PREFIX:Q} VENDORARCHEXP=${DESTDIR}${PERL5_INSTALLVENDORARCH}
 
-PERL5_MAKE_FLAGS+=	${PERL5_MAKE_FLAGS.${_PERL5_MODTYPE}}
+PERL5_MAKE_FLAGS+=	${PERL5_MAKE_FLAGS.${PERL5_MODTYPE}}
 MAKE_FLAGS+=		${PERL5_MAKE_FLAGS}
 
 .if defined(PERL5_LDFLAGS) && !empty(PERL5_LDFLAGS)
-FIX_RPATH+=	PERL5_LDFLAGS
+#FIX_RPATH+=	PERL5_LDFLAGS
 LDFLAGS+=	${PERL5_LDFLAGS}
 .endif
 
@@ -227,4 +228,4 @@ LDFLAGS+=	${PERL5_LDFLAGS}
 
 .include "../../mk/pthread.buildlink3.mk"
 
-.endif	# _PERL5_MODULE_MK
+.endif	# PERL5_MODULE_MK

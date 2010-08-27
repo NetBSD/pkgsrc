@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.161 2010/08/21 03:12:46 obache Exp $
+# $NetBSD: Makefile,v 1.162 2010/08/27 05:27:37 sno Exp $
 
 .include "license.mk"
+.include "Makefile.common"
 
-DISTNAME=	perl-5.12.1
-CATEGORIES=	lang devel perl5
-#PKGREVISION=	1
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/5.0/,}
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.perl.org/
+PKGREVISION=	1
 COMMENT=	Practical Extraction and Report Language
-LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
-		p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2]
+		p5-CGI-2.66{,nb*} p5-CGI-2.75{,nb*} p5-CGI-2.75.[0-2]	\
+		p5-Tie-File-0.96{,nb*}					\
+		p5-Memoize-1.01{,nb*}
+
+SUPERSEDES+=	p5-Tie-File<0.97
+SUPERSEDES+=	p5-Memoize<1.02
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,34 +33,7 @@ PERL5_API_VERS_cmd=	\
 		${ECHO} "unknown";					\
 	fi
 
-PERL5_PREFIX=		${PREFIX}
-PERL5_VENDORPREFIX=	${PERL5_PREFIX}
-PERL5_SITEPREFIX?=	${PERL5_PREFIX}
-BUILD_DEFS+=		PERL5_SITEPREFIX
-
-PERL5=			${PERL5_PREFIX}/bin/perl
-PERL5_PERLBASE=		${PERL5_PREFIX}/lib/perl5
-PERL5_VENDORBASE=	${PERL5_VENDORPREFIX}/lib/perl5/vendor_perl
-#
-# The unusual check for empty(PERL5_SITEPREFIX) is because ${PREFIX} isn't
-# defined until bsd.pkg.mk is included, so when we inspect its value at
-# this point, it's empty.
-#
-.if empty(PERL5_SITEPREFIX) || \
-    !empty(PERL5_SITEPREFIX:M${LOCALBASE}) || \
-    !empty(PERL5_SITEPREFIX:M${LOCALBASE}/*)
-PERL5_SITEBASE=		${PERL5_SITEPREFIX}/lib/perl5/site_perl
-.else
-PERL5_SITEBASE=		${PERL5_SITEPREFIX}
-.endif
-
-PERL5_PRIVLIB=		${PERL5_PERLBASE}/${PERL5_API_VERS}
-PERL5_VENDORLIB=	${PERL5_VENDORBASE}/${PERL5_API_VERS}
-.if !empty(PERL5_SITEBASE:M*lib/perl5/site_perl)
-PERL5_SITELIB=		${PERL5_SITEBASE}/${PERL5_API_VERS}
-.else
-PERL5_SITELIB=		${PERL5_SITEBASE}/lib/perl5/site_perl/${PERL5_API_VERS}
-.endif
+.include "dirs.mk"
 
 .include "../../mk/compiler.mk"
 
@@ -282,7 +253,7 @@ SUBST_VARS.policysh+=	LOCLIBRPATHFLAGS
 SUBST_CLASSES+=		rm
 SUBST_STAGE.rm=		pre-install
 SUBST_FILES.rm=		lib/Config_heavy.pl
-SUBST_SED.rm=	-e "s!^rm_try='/.*/\.tools/bin/rm -f!rm_try='/bin/rm -f!"
+SUBST_SED.rm=	-e "s!^rm_try='/.*/\\.tools/bin/rm -f!rm_try='/bin/rm -f!"
 
 # Replace our perl as the interpreter
 REPLACE_PERL+=		lib/File/DosGlob.pm

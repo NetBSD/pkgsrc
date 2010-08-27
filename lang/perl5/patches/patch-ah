@@ -1,3 +1,7 @@
+$NetBSD: patch-ah,v 1.12 2010/08/27 05:27:37 sno Exp $
+
+NetBSD's implementation sometimes returns "/"; reject that too.
+
 --- perl.c.orig	2010-05-21 14:41:18.000000000 +0000
 +++ perl.c	2010-05-21 14:44:01.000000000 +0000
 @@ -1414,8 +1414,10 @@
