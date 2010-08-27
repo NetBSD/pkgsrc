@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.15 2010/01/31 12:14:24 sno Exp $
+# $NetBSD: packlist.mk,v 1.16 2010/08/27 05:27:37 sno Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -37,6 +37,7 @@ _PERL5_REAL_PACKLIST=	${PERL5_PACKLIST:S/^/${PERL5_PACKLIST_DIR}\//}
 _PERL5_PACKLIST=	${_PERL5_REAL_PACKLIST:S/^/${DESTDIR}/}
 .endif
 
+USE_TOOLS+=	gawk
 
 ###########################################################################
 ###
