@@ -1,0 +1,20 @@
+$NetBSD: patch-am,v 1.1.1.1 2010/08/27 11:43:05 adam Exp $
+
+--- src/providers/grass/CMakeLists.txt.orig	2009-11-28 16:02:15.000000000 +0000
++++ src/providers/grass/CMakeLists.txt
+@@ -27,6 +27,7 @@ IF (WIN32)
+   SET_TARGET_PROPERTIES(qgisgrass PROPERTIES COMPILE_FLAGS "\"-DGRASS_EXPORT=__declspec(dllexport)\"" )
+ ELSE (WIN32)
+   SET_TARGET_PROPERTIES(qgisgrass PROPERTIES COMPILE_FLAGS "-DGRASS_EXPORT=" )
++  SET_TARGET_PROPERTIES(qgisgrass PROPERTIES LINK_FLAGS "-L${GRASS_PREFIX}/lib -Wl,-rpath,${GRASS_PREFIX}/lib")
+ ENDIF (WIN32)
+ 
+ TARGET_LINK_LIBRARIES (qgisgrass
+@@ -48,6 +49,7 @@ IF (WIN32)
+   SET_TARGET_PROPERTIES(grassprovider PROPERTIES COMPILE_FLAGS "\"-DGRASS_EXPORT=__declspec(dllimport)\"" )
+ ELSE (WIN32)
+   SET_TARGET_PROPERTIES(grassprovider PROPERTIES COMPILE_FLAGS "-DGRASS_EXPORT=" )
++  SET_TARGET_PROPERTIES(grassprovider PROPERTIES LINK_FLAGS "-L${GRASS_PREFIX}/lib -Wl,-rpath,${GRASS_PREFIX}/lib")
+ ENDIF (WIN32)
+ 
+ TARGET_LINK_LIBRARIES (grassprovider
