@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/07/02 10:14:09 obache Exp $
-
-SHA1 (perl-5.8.8.tar.bz2) = 4aab490040727ca4419098720eca2ba4367df539
-RMD160 (perl-5.8.8.tar.bz2) = e78f26d9b96e6db35f946ad4ff55e3a69385c71b
-Size (perl-5.8.8.tar.bz2) = 10123359 bytes

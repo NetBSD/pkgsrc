@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.33 2010/08/21 16:33:06 seb Exp $
+# $NetBSD: Makefile,v 1.34 2010/08/27 05:32:59 sno Exp $
 
-DISTNAME=	perl-5.8.8
-PKGNAME=	p5-gdbm-1.08
-PKGREVISION=	2
+.include "../../lang/perl5/Makefile.common"
+PKGNAME=	p5-${DISTNAME:S/perl/gdbm/}
+#PKGREVISION=	2
 SVR4_PKGNAME=	p5gdm
 CATEGORIES=	databases perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		Perl interface to gdbm - GNU database manager
+#PATCHDIR=	${.CURDIR}/../../lang/perl5/patches
+DISTINFO_FILE=	${.CURDIR}/../../lang/perl5/distinfo
+
+COMMENT=	Perl interface to gdbm - GNU database manager
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
