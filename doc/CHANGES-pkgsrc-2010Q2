@@ -101,3 +101,5 @@ Pullup ticket #3212 - requested by tron
 databases/phpmyadmin: security update
 Pullup ticket #3213 - requested by obache
 graphics/pear-Image_Color: build fix
+Pullup ticket #3214 - requested by gdt
+net/quagga-devel: security update
