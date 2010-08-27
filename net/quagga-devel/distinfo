@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2010/03/10 19:57:06 gdt Exp $
+$NetBSD: distinfo,v 1.10.4.1 2010/08/27 13:03:02 tron Exp $
 
-SHA1 (quagga-0.99.16.tar.gz) = 2ba554a41671988257e51cf1cb5cb25015fb942f
-RMD160 (quagga-0.99.16.tar.gz) = c4930bc2ef23b469e8d56f25c97edacff292b93a
-Size (quagga-0.99.16.tar.gz) = 2168417 bytes
+SHA1 (quagga-0.99.17.tar.gz) = 31f42fa9f4d96aadf1bf97c3d9bf3308eb0d56c1
+RMD160 (quagga-0.99.17.tar.gz) = f00bf01930f781ae0de9fe9981c74e7bae0798b5
+Size (quagga-0.99.17.tar.gz) = 2202151 bytes
