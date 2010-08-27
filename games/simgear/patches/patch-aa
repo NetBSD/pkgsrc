@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2008/03/14 14:49:53 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2010/08/27 06:11:50 adam Exp $
 
---- configure.orig	2008-01-21 16:52:07.000000000 +0200
-+++ configure	2008-01-21 16:58:07.000000000 +0200
-@@ -2249,7 +2249,7 @@
+--- configure.orig	2010-02-17 16:05:40.000000000 +0000
++++ configure
+@@ -2477,7 +2477,7 @@ if test "${with_cxx+set}" = set; then
  ##       CFLAGS=
       ;;
     esac
@@ -11,20 +11,20 @@ $NetBSD: patch-aa,v 1.3 2008/03/14 14:49:53 drochner Exp $
        CXX_DEBUG_FLAGS="-g +K0"
      ;;
    esac
-@@ -7064,9 +7064,9 @@
+@@ -7483,9 +7483,9 @@ $as_echo "$ac_cv_header_pthread_h" >&6; 
  fi
  
  
--{ echo "$as_me:$LINENO: checking for library containing pthread_exit" >&5
--echo $ECHO_N "checking for library containing pthread_exit... $ECHO_C" >&6; }
+-{ $as_echo "$as_me:$LINENO: checking for library containing pthread_exit" >&5
+-$as_echo_n "checking for library containing pthread_exit... " >&6; }
 -if test "${ac_cv_search_pthread_exit+set}" = set; then
-+{ echo "$as_me:$LINENO: checking for library containing pthread_create" >&5
-+echo $ECHO_N "checking for library containing pthread_create... $ECHO_C" >&6; }
++{ $as_echo "$as_me:$LINENO: checking for library containing pthread_create" >&5
++$as_echo_n "checking for library containing pthread_create... " >&6; }
 +if test "${ac_cv_search_pthread_create+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+   $as_echo_n "(cached) " >&6
  else
    ac_func_search_save_LIBS=$LIBS
-@@ -7083,11 +7083,11 @@
+@@ -7502,11 +7502,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -38,18 +38,18 @@ $NetBSD: patch-aa,v 1.3 2008/03/14 14:49:53 drochner Exp $
    ;
    return 0;
  }
-@@ -7133,7 +7133,7 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
+@@ -7539,7 +7539,7 @@ $as_echo "$ac_try_echo") >&5
+ 	 test "$cross_compiling" = yes ||
+ 	 $as_test_x conftest$ac_exeext
+        }; then
 -  ac_cv_search_pthread_exit=$ac_res
 +  ac_cv_search_pthread_create=$ac_res
  else
-   echo "$as_me: failed program was:" >&5
+   $as_echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -7143,21 +7143,21 @@
- 
- rm -f core conftest.err conftest.$ac_objext \
+@@ -7550,21 +7550,21 @@ fi
+ rm -rf conftest.dSYM
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
        conftest$ac_exeext
 -  if test "${ac_cv_search_pthread_exit+set}" = set; then
 +  if test "${ac_cv_search_pthread_create+set}" = set; then
@@ -66,16 +66,16 @@ $NetBSD: patch-aa,v 1.3 2008/03/14 14:49:53 drochner Exp $
  rm conftest.$ac_ext
  LIBS=$ac_func_search_save_LIBS
  fi
--{ echo "$as_me:$LINENO: result: $ac_cv_search_pthread_exit" >&5
--echo "${ECHO_T}$ac_cv_search_pthread_exit" >&6; }
+-{ $as_echo "$as_me:$LINENO: result: $ac_cv_search_pthread_exit" >&5
+-$as_echo "$ac_cv_search_pthread_exit" >&6; }
 -ac_res=$ac_cv_search_pthread_exit
-+{ echo "$as_me:$LINENO: result: $ac_cv_search_pthread_create" >&5
-+echo "${ECHO_T}$ac_cv_search_pthread_create" >&6; }
++{ $as_echo "$as_me:$LINENO: result: $ac_cv_search_pthread_create" >&5
++$as_echo "$ac_cv_search_pthread_create" >&6; }
 +ac_res=$ac_cv_search_pthread_create
  if test "$ac_res" != no; then
    test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
  
-@@ -7167,7 +7167,7 @@
+@@ -7574,7 +7574,7 @@ if test "x$ac_cv_header_pthread_h" = "xy
      CXXFLAGS="$CXXFLAGS -D_REENTRANT"
      CFLAGS="$CFLAGS -D_REENTRANT"
  
@@ -84,7 +84,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/14 14:49:53 drochner Exp $
      CXXFLAGS="-pthread $CXXFLAGS"
      CFLAGS="-pthread $CFLAGS"
    fi
-@@ -9233,7 +9233,7 @@
+@@ -9724,7 +9724,7 @@ fi
  
  esac
  
@@ -93,7 +93,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/14 14:49:53 drochner Exp $
      echo
      echo "You *must* have the openal library installed on your system to build"
      echo "SimGear!"
-@@ -9244,7 +9244,7 @@
+@@ -9735,7 +9735,7 @@ if test "$OPENAL_OK" == "no"; then
      exit
  fi
  

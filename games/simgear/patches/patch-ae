@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2007/10/05 21:06:00 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2010/08/27 06:11:50 adam Exp $
 
---- configure.ac.orig	2007-10-05 20:03:36.000000000 +0000
+--- configure.ac.orig	2010-02-17 15:56:16.000000000 +0000
 +++ configure.ac
-@@ -163,12 +163,12 @@ dnl Checks for libraries.
+@@ -200,12 +200,12 @@ dnl Checks for libraries.
  
  dnl Thread related checks
  AC_CHECK_HEADER(pthread.h)
