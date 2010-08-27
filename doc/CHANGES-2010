@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.2989 2010/08/26 19:16:04 seb Exp $
+$NetBSD: CHANGES-2010,v 1.2990 2010/08/27 02:07:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3915,3 +3915,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/boost-build to 1.44.0 [adam 2010-08-26]
 	Updated devel/boost-python to 1.44.0 [adam 2010-08-26]
 	Updated meta-pkgs/boost to 1.44.0 [adam 2010-08-26]
+	Updated graphics/ruby-rcairo to 1.8.3 [obache 2010-08-27]
