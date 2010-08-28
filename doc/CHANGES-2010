@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3006 2010/08/28 11:34:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3007 2010/08/28 15:22:27 gson Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3936,3 +3936,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/mdoclint to 1.9 [wiz 2010-08-27]
 	Updated www/ja-trac to 0.12pl1 [obache 2010-08-28]
 	Updated devel/mercurial to 1.6.3 [wiz 2010-08-28]
+	Updated misc/py-anita to 1.12 [gson 2010-08-28]
