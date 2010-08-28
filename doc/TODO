@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9596 2010/08/27 11:47:51 adam Exp $
+$NetBSD: TODO,v 1.9597 2010/08/28 16:13:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -814,7 +814,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o krusader-2.0
 	o ktorrent-4.0
 	o ktorrent3-3.3.4
-	o lablgtk-2.14.1
 	o lapack-3.2.1
 	o latd-1.21
 	o latex2rtf-1.9.19
