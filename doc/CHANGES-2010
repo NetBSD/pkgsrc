@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3007 2010/08/28 15:22:27 gson Exp $
+$NetBSD: CHANGES-2010,v 1.3008 2010/08/28 15:30:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3937,3 +3937,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ja-trac to 0.12pl1 [obache 2010-08-28]
 	Updated devel/mercurial to 1.6.3 [wiz 2010-08-28]
 	Updated misc/py-anita to 1.12 [gson 2010-08-28]
+	Updated devel/boost-libs to 1.44.0nb1 [adam 2010-08-26]
