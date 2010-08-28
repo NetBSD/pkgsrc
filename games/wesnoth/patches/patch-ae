@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.5 2009/04/22 19:29:26 hasso Exp $
+$NetBSD: patch-ae,v 1.6 2010/08/28 20:08:40 adam Exp $
 
---- src/network_worker.cpp.orig	2009-04-13 13:17:34 +0300
-+++ src/network_worker.cpp	2009-04-13 13:18:38 +0300
-@@ -36,6 +36,10 @@
- #include <cerrno>
+--- src/network_worker.cpp.orig	2010-01-01 13:16:49.000000000 +0000
++++ src/network_worker.cpp
+@@ -37,6 +37,10 @@
  #include <deque>
+ #include <sstream>
  
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
 +#undef HAVE_SENDFILE
