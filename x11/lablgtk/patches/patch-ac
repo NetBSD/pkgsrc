@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1 2010/08/28 16:13:25 wiz Exp $
+
+From
+http://wwwfun.kurims.kyoto-u.ac.jp/soft/lsl/dist/lablgtk2-20100626.tar.gz
+for building against ocaml-3.12.*.
+
+--- src/gButton.mli.orig	2008-08-03 14:43:59.000000000 +0000
++++ src/gButton.mli
+@@ -357,9 +357,10 @@ end
+ (** @gtkdoc gtk GtkToolItem 
+     @since GTK 2.4 *)
+ class tool_item : 
+-  [> Gtk.tool_item] obj ->
++  ([> Gtk.tool_item] as 'a) obj ->
+   object
+     inherit tool_item_skel
++    val obj : 'a obj
+     method connect : GContainer.container_signals
+   end
+ 
+@@ -423,9 +424,10 @@ class tool_button_skel :
+ (** @gtkdoc gtk GtkToolButton
+     @since GTK 2.4 *)
+ class tool_button : 
+-  [> Gtk.tool_button] obj ->
++  ([> Gtk.tool_button] as 'a) obj ->
+   object
+     inherit tool_button_skel
++    val obj : 'a obj
+     method connect : tool_button_signals
+   end
+ 
