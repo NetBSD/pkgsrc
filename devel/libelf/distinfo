@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/11/15 21:26:51 wiz Exp $
+$NetBSD: distinfo,v 1.6 2010/08/28 05:25:31 cherry Exp $
 
 SHA1 (libelf-0.8.13.tar.gz) = c1d6ac5f182d19dd685c4dfd74eedbfe3992425d
 RMD160 (libelf-0.8.13.tar.gz) = 06962fbbcd91da25f02b964ad9513b9536f67baa
 Size (libelf-0.8.13.tar.gz) = 148529 bytes
 SHA1 (patch-aa) = bb70182806c0541e46af884e324d6ae2b8831665
 SHA1 (patch-ab) = d04cb8da2a84478b15d4ff71cc45e30fc35d1a23
+SHA1 (patch-ac) = 3ab7c2bd85382c865f5abfbba26f8a3cc9a5550e

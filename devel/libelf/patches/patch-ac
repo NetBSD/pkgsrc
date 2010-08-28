@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2010/08/28 05:25:31 cherry Exp $
+
+--- configure.in.orig	2008-05-23 08:17:56.000000000 +0000
++++ configure.in
+@@ -60,10 +60,19 @@ AC_CACHE_CHECK([if ${CC} can compile elf
+     [libelf_cv_elf_h_works=yes],
+     [libelf_cv_elf_h_works=no])
+ ])
++
++# NetBSD defines a type Elf64_Quarter
++# We don't use the NetBSD elf.h because of 64bit breakage
++# See: http://mail-index.netbsd.org/tech-toolchain/2010/08/20/msg001355.html
++
++AC_CACHE_CHECK([for Elf64_Quarter], libelf_cv_dummyelf_h_works,
++    [libelf_cv_elf_h_works=no])
++
+ if test "$libelf_cv_elf_h_works" = no; then
+   ac_cv_header_elf_h=no
+   ac_cv_header_sys_elf_h=no
+ fi
++
+ if test "$ac_cv_header_elf_h" = yes; then
+   AC_DEFINE(__LIBELF_HEADER_ELF_H, [<elf.h>])
+ elif test "$ac_cv_header_sys_elf_h" = yes; then
