@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3010 2010/08/28 18:53:09 seb Exp $
+$NetBSD: CHANGES-2010,v 1.3011 2010/08/28 19:17:41 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3932,7 +3932,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/slony1 to 2.0.4 [adam 2010-08-27]
 	Updated geography/gdal-lib to 1.7.2 [adam 2010-08-27]
 	Added geography/qgis version 1.5.0 [adam 2010-08-27]
-	Updated lang/perl5 to 5.12.1nb1 [tron 2010-08-27]
+	Updated lang/perl5 to 5.12.1nb2 [tron 2010-08-27]
 	Updated textproc/mdoclint to 1.9 [wiz 2010-08-27]
 	Updated www/ja-trac to 0.12pl1 [obache 2010-08-28]
 	Updated devel/mercurial to 1.6.3 [wiz 2010-08-28]
