@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2010/08/28 20:08:40 adam Exp $
+# $NetBSD: Makefile,v 1.61 2010/08/28 21:28:09 wiz Exp $
 
 DISTNAME=	wesnoth-1.8.4
 CATEGORIES=	games
@@ -23,38 +23,29 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 
 UNLIMIT_RESOURCES+=	datasize
 
-REPLACE_PERL+=		utils/webtgz.pl
-REPLACE_PERL+=		utils/weblist.pl
 REPLACE_PERL+=		utils/wesnothd.pl
-REPLACE_PERL+=		utils/unit.pl
-REPLACE_PERL+=		utils/mp-lobby-logger.pl
 USE_TOOLS+=		perl:run msgfmt
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-build
-SUBST_FILES.python+=	data/tools/scoutDefault.py
 SUBST_FILES.python+=	data/tools/expand-terrain-macros.py
+SUBST_FILES.python+=	data/tools/scoutDefault.py
 SUBST_FILES.python+=	data/tools/wesnoth/wescamp.py
-SUBST_FILES.python+=	data/tools/wesnoth/wmlparser.py
 SUBST_FILES.python+=	data/tools/wesnoth/wmldata.py
-SUBST_FILES.python+=	utils/unused_functions.py
-SUBST_FILES.python+=	utils/test_libsvn.py
-SUBST_FILES.python+=	utils/pofix.py
-SUBST_FILES.python+=	utils/wiki_grabber.py
+SUBST_FILES.python+=	data/tools/wesnoth/wmlparser.py
+SUBST_FILES.python+=	utils/ai_test/ai_test.py
 SUBST_FILES.python+=	utils/mediawiki.py
+SUBST_FILES.python+=	utils/pofix.py
+SUBST_FILES.python+=	utils/test_libsvn.py
+SUBST_FILES.python+=	utils/unused_functions.py
+SUBST_FILES.python+=	utils/wiki_grabber.py
 SUBST_MESSAGE.python=	Fixing path to python.
 # Best we can do without pulling in a python dependency.
-SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.5,'
-SUBST_SED.python+=	-e 's,/bin/env.*python,${PREFIX}/bin/python2.5,'
-SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.5,'
+SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.6,'
+SUBST_SED.python+=	-e 's,/bin/env.*python,${PREFIX}/bin/python2.6,'
+SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.6,'
 
 REPLACE_RUBY=		data/tools/terrain2wiki.rb
-REPLACE_RUBY+=		utils/stats/website/tools/wesnoth_process_dbase.rb
-REPLACE_RUBY+=		utils/stats/website/tools/wmlnode.rb
-REPLACE_RUBY+=		utils/stats/website/tools/sqlitedb2wml.rb
-REPLACE_RUBY+=		utils/stats/website/tools/wmlparser.rb
-REPLACE_RUBY+=		utils/stats/website/tools/sqlite2mysql.rb
-REPLACE_RUBY+=		utils/stats/website/public/dispatch.rb
 .include "../../lang/ruby/replace.mk"
 
 REPLACE_SH+=		data/tools/castle-cutter/mk-castle.sh
