@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 09:23:51 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/28 23:10:19 pettai Exp $
 ${GEM_HOME}/cache/dnsruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/DNSSEC
 ${GEM_LIBDIR}/EVENTMACHINE
@@ -9,7 +9,7 @@ ${GEM_LIBDIR}/demo/axfr.rb
 ${GEM_LIBDIR}/demo/check_soa.rb
 ${GEM_LIBDIR}/demo/check_zone.rb
 ${GEM_LIBDIR}/demo/digdlv.rb
-${GEM_LIBDIR}/demo/digitar.rb
+${GEM_LIBDIR}/demo/digroot.rb
 ${GEM_LIBDIR}/demo/example_recurse.rb
 ${GEM_LIBDIR}/demo/mresolv.rb
 ${GEM_LIBDIR}/demo/mx.rb
@@ -91,7 +91,6 @@ ${GEM_LIBDIR}/test/tc_escapedchars.rb
 ${GEM_LIBDIR}/test/tc_header.rb
 ${GEM_LIBDIR}/test/tc_hip.rb
 ${GEM_LIBDIR}/test/tc_ipseckey.rb
-${GEM_LIBDIR}/test/tc_itar.rb
 ${GEM_LIBDIR}/test/tc_misc.rb
 ${GEM_LIBDIR}/test/tc_name.rb
 ${GEM_LIBDIR}/test/tc_naptr.rb
