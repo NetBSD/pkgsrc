@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.5 2010/08/28 21:35:00 wiz Exp $
+
+From upstream CVS, fixing compilation with ocaml-3.12.
+
+--- src/gtk2/gui/guiOptions.ml.orig	2007-07-01 13:00:11.000000000 +0000
++++ src/gtk2/gui/guiOptions.ml
+@@ -166,6 +166,16 @@ let gtk_connection_http_use_proxy = defi
+     "Direct TCP connections to HTTP proxy (the proxy should support CONNECT)"
+     bool_option false
+ 
++let gtk_connection_http_proxy_login = define_option current_section
++    ["gtk_connection_http_proxy_login"]
++    "HTTP proxy login (leave empty if proxy doesn't require authentication)"
++    string_option ""
++
++let gtk_connection_http_proxy_password = define_option current_section
++    ["gtk_connection_http_proxy_password"]
++    "HTTP proxy password"
++    string_option ""
++
+ (* {Client} *)
+ 
+ let gtk_client_login = define_option current_section
