@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.38 2010/06/13 22:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/08/28 16:13:25 wiz Exp $
 #
 
-DISTNAME=	lablgtk-2.12.0
-PKGREVISION=	3
+DISTNAME=	lablgtk-2.14.1
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
 COMMENT=	GTK+ 2.x bindings for Objective Caml
+# for installed files; more restrictions on applications/
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
