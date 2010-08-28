@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3004 2010/08/27 21:13:21 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3005 2010/08/28 00:44:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3934,3 +3934,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added geography/qgis version 1.5.0 [adam 2010-08-27]
 	Updated lang/perl5 to 5.12.1nb1 [tron 2010-08-27]
 	Updated textproc/mdoclint to 1.9 [wiz 2010-08-27]
+	Updated www/ja-trac to 0.12pl1 [obache 2010-08-28]
