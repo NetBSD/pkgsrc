@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9597 2010/08/28 16:13:45 wiz Exp $
+$NetBSD: TODO,v 1.9598 2010/08/28 20:12:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -1356,7 +1356,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webmin-1.510
 	o weechat-0.3.3
 	o weewm-0.01
-	o wesnoth-1.8.4
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-1.2
