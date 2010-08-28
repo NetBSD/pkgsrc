@@ -1,12 +1,150 @@
-$NetBSD: patch-ab,v 1.3 2009/07/06 22:42:24 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2010/08/28 16:13:25 wiz Exp $
 
---- src/ml_panel.c.orig	2010-05-31 16:31:03.000000000 +0200
-+++ src/ml_panel.c
-@@ -23,6 +23,7 @@
- #include <string.h>
+From
+http://wwwfun.kurims.kyoto-u.ac.jp/soft/lsl/dist/lablgtk2-20100626.tar.gz
+for building against ocaml-3.12.*.
+
+--- src/gAction.mli.orig	2008-08-03 14:43:59.000000000 +0000
++++ src/gAction.mli
+@@ -20,6 +20,9 @@
+ (*                                                                        *)
+ (**************************************************************************)
  
- #include <libgnomeui/gnome-client.h>
-+#include <libgnomeui/gnome-ui-init.h>
- #include <panel-applet.h>
++
++open Gobject
++
+ (** Action-based menus and toolbars *)
  
- #include <caml/mlvalues.h>
+ (** {3 GtkAction} *)
+@@ -27,9 +30,9 @@
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkAction *)
+ class action_signals :
+-  ([> Gtk.action ] as 'b) Gobject.obj ->
++  ([> Gtk.action ] as 'b) obj ->
+   object ('a)
+-    val obj : 'b Gobject.obj
++    val obj : 'b obj
+     val after : bool
+     method after : < after : 'a; .. > as 'a
+     method activate : callback:(unit -> unit) -> GtkSignal.id
+@@ -38,10 +41,10 @@ class action_signals :
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkAction *)
+ class action_skel :
+-  ([> Gtk.action ] as 'a) Gobject.obj ->
++  ([> Gtk.action ] as 'a) obj ->
+   object
+-    val obj : 'a Gobject.obj
+-    method as_action : Gtk.action Gobject.obj
++    val obj : 'a obj
++    method as_action : Gtk.action obj
+ 
+     (** Properties *)
+ 
+@@ -88,10 +91,10 @@ class action_skel :
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkAction *)
+ class action :
+-  ([> Gtk.action ] as 'a) Gobject.obj ->
++  ([> Gtk.action ] as 'a) obj ->
+   object
+     inherit action_skel
+-    val obj : 'a Gobject.obj
++    val obj : 'a obj
+     method connect : action_signals
+   end
+ 
+@@ -103,20 +106,20 @@ val action : name:string -> unit -> acti
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkToggleAction *)
+ class toggle_action_signals :
+-  ([> Gtk.toggle_action ] as 'b) Gobject.obj ->
++  ([> Gtk.toggle_action ] as 'b) obj ->
+   object
+     inherit action_signals
+-    val obj : 'b Gobject.obj
++    val obj : 'b obj
+     method toggled : callback:(unit -> unit) -> GtkSignal.id
+   end
+ 
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkToggleAction *)
+ class toggle_action_skel :
+-  ([> Gtk.toggle_action ] as 'a) Gobject.obj ->
++  ([> Gtk.toggle_action ] as 'a) obj ->
+   object
+     inherit action_skel
+-    val obj : 'a Gobject.obj
++    val obj : 'a obj
+     method draw_as_radio : bool
+     method get_active : bool
+     method set_active : bool -> unit
+@@ -127,9 +130,10 @@ class toggle_action_skel :
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkToggleAction *)
+ class toggle_action :
+-  ([> Gtk.toggle_action ] as 'a) Gobject.obj ->
++  ([> Gtk.toggle_action ] as 'a) obj ->
+   object
+     inherit toggle_action_skel
++    val obj : 'a obj
+     method connect : toggle_action_signals
+   end
+ 
+@@ -140,10 +144,10 @@ val toggle_action : name:string -> unit 
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkRadioAction *)
+ class radio_action_signals :
+-  ([> Gtk.radio_action] as 'b) Gobject.obj ->
++  ([> Gtk.radio_action] as 'b) obj ->
+   object
+     inherit toggle_action_signals
+-    val obj : 'b Gobject.obj
++    val obj : 'b obj
+     method changed :
+       callback:(int -> unit) -> GtkSignal.id
+   end
+@@ -151,12 +155,12 @@ class radio_action_signals :
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkRadioAction *)
+ class radio_action :
+-  ([> Gtk.radio_action] as 'a) Gobject.obj ->
++  ([> Gtk.radio_action] as 'a) obj ->
+   object
+     inherit toggle_action_skel
+-    val obj : 'a Gobject.obj
++    val obj : 'a obj
+     method connect : radio_action_signals
+-    method as_radio_action : Gtk.radio_action Gobject.obj
++    method as_radio_action : Gtk.radio_action obj
+     method get_current_value : int
+     method set_group : Gtk.radio_action Gtk.group -> unit
+     method set_value : int -> unit
+@@ -172,10 +176,10 @@ val radio_action : ?group:radio_action -
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkActionGroup *)
+ class action_group_signals :
+-  ([> Gtk.action_group ] as 'b) Gobject.obj ->
++  ([> Gtk.action_group ] as 'b) obj ->
+   object ('a)
+     val after : bool
+-    val obj : 'b Gobject.obj
++    val obj : 'b obj
+     method after : 'a
+     method connect_proxy : callback:(action -> GObj.widget -> unit) -> GtkSignal.id
+     method disconnect_proxy : callback:(action -> GObj.widget -> unit) -> GtkSignal.id
+@@ -186,10 +190,10 @@ class action_group_signals :
+ (** @since GTK 2.4
+     @gtkdoc gtk GtkActionGroup *)
+ class action_group :
+-  ([> Gtk.action_group ] as 'a) Gobject.obj ->
++  ([> Gtk.action_group ] as 'a) obj ->
+   object
+-    val obj : 'a Gobject.obj
+-    method as_group : Gtk.action_group Gobject.obj
++    val obj : 'a obj
++    method as_group : Gtk.action_group obj
+     method connect : action_group_signals
+     method sensitive : bool
+     method set_sensitive : bool -> unit
