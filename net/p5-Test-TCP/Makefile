@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/08/21 16:35:32 seb Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/29 13:01:48 seb Exp $
 #
 
-DISTNAME=	Test-TCP-0.16
+DISTNAME=	Test-TCP-1.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -17,9 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/TCP/.packlist
 
-DEPENDS+=	p5-Test-SharedFork>=0.09:../../devel/p5-Test-SharedFork
-# For test target
-BUILD_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+DEPENDS+=	p5-Test-SharedFork>=0.12:../../devel/p5-Test-SharedFork
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
