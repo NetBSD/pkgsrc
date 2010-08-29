@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3024 2010/08/29 17:56:44 seb Exp $
+$NetBSD: CHANGES-2010,v 1.3025 2010/08/29 18:23:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3953,3 +3953,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/rftg to 0.7.4 [wiz 2010-08-29]
 	Updated devel/p5-IO-All to 0.41 [seb 2010-08-29]
 	Updated www/p5-CGI-Compile to 0.12 [seb 2010-08-29]
+	Updated editors/emacs-snapshot to 24.0.50.20100829 [minskim 2010-08-29]
