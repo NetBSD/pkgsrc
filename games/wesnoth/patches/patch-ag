@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2010/08/29 08:53:12 adam Exp $
+$NetBSD: patch-ag,v 1.6 2010/08/29 10:51:30 wiz Exp $
 
-On MacOSX use Pasteboard Manager instead of depreciated Scrap Manager.
+On MacOSX use Pasteboard Manager instead of deprecated Scrap Manager.
 
 --- src/clipboard.cpp.orig	2010-02-06 10:50:29.000000000 +0000
 +++ src/clipboard.cpp
