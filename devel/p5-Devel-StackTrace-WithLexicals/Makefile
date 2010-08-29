@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 16:33:37 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/29 14:15:10 seb Exp $
 #
 
-DISTNAME=	Devel-StackTrace-WithLexicals-0.05
+DISTNAME=	Devel-StackTrace-WithLexicals-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -19,7 +18,7 @@ PERL5_PACKLIST=		auto/Devel/StackTrace/WithLexicals/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-Devel-StackTrace>=1.2200:../../devel/p5-Devel-StackTrace
-DEPENDS+=	p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
+DEPENDS+=	p5-PadWalker>=1.9.2:../../devel/p5-PadWalker
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
