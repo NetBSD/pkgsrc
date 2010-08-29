@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3018 2010/08/29 11:02:41 nonaka Exp $
+$NetBSD: CHANGES-2010,v 1.3019 2010/08/29 13:01:59 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3947,3 +3947,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Plack to 0.9946 [seb 2010-08-29]
 	Updated devel/p5-Test-SharedFork to 0.12 [seb 2010-08-29]
 	Updated devel/ply to 3.3 [nonaka 2010-08-29]
+	Updated net/p5-Test-TCP to 1.04 [seb 2010-08-29]
