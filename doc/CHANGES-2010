@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3023 2010/08/29 15:06:38 seb Exp $
+$NetBSD: CHANGES-2010,v 1.3024 2010/08/29 17:56:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3952,3 +3952,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-StackTrace-WithLexicals to 0.06 [seb 2010-08-29]
 	Updated games/rftg to 0.7.4 [wiz 2010-08-29]
 	Updated devel/p5-IO-All to 0.41 [seb 2010-08-29]
+	Updated www/p5-CGI-Compile to 0.12 [seb 2010-08-29]
