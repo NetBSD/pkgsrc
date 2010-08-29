@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2010/08/28 20:08:40 adam Exp $
+$NetBSD: distinfo,v 1.39 2010/08/29 08:53:12 adam Exp $
 
 SHA1 (wesnoth-1.8.4.tar.bz2) = 30b82e06523f9a82b770a6fc4e2d4251bd358eca
 RMD160 (wesnoth-1.8.4.tar.bz2) = 86b6f6ca39cf87134d89e989ed20840836aeac28
@@ -6,5 +6,5 @@ Size (wesnoth-1.8.4.tar.bz2) = 300557790 bytes
 SHA1 (patch-aa) = 363dead4e4a6974db5a2d71a460e60404cc1246a
 SHA1 (patch-ae) = 9e0ee531c33da80565791d81f716b313fa85af18
 SHA1 (patch-af) = d3554b1c164ff95ee2b86c17990ed236f0e00c32
-SHA1 (patch-ag) = f87094daa3a03b2a56ab4d729c92b98f13ff8a38
+SHA1 (patch-ag) = 653521d3ac87c1a6a9a74563a5934e3ee9c40d99
 SHA1 (patch-ah) = ca06ab21724812290c4f4785cfbd42d3406202fb
