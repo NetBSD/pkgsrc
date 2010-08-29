@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.19 2010/08/25 06:37:20 obache Exp $
+# $NetBSD: pear.mk,v 1.20 2010/08/29 06:08:07 obache Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -37,11 +37,11 @@ PEAR_LIB=	lib/php
 PEAR_DESTDIR=	-P ${DESTDIR} -f
 .endif
 
-# Dynamic PLIST, generated via a helper PHP script, which parses the package
-# XML config file.
+# Dynamic PLIST, generated via a helper PHP script, which use registry.
 PEAR_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated"; \
-	PEAR_LIB="${PEAR_LIB}" WRKSRC="${WRKSRC}" \
+	${SETENV} PEAR_LIB=${PEAR_LIB:Q} WRKSRC=${WRKSRC:Q} \
+	${INSTALL_ENV} PREFIX=${PREFIX:Q} \
 	${PREFIX}/bin/php -d include_path=".:${PREFIX}/lib/php" \
 		-C -n ${PKGDIR}/../../lang/php/pear_plist.php;
 GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
@@ -53,20 +53,15 @@ post-extract:
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} TZ=UTC \
-		${PEAR_CMD} "install" ${PEAR_DESTDIR} -n package.xml || exit 1
+		${PEAR_CMD} "install" ${PEAR_DESTDIR} -n -O package.xml || exit 1
 
 .if ${_USE_DESTDIR} != "no"
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/.alias/phpdocs.txt
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/.alias/pear.txt
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/.alias/pecl.txt
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/__uri.reg
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/doc.php.net.reg
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/pear.php.net.reg
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/pecl.php.net.reg
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.depdb
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.depdblock
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.filemap
-CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.lock
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/\.alias/.*\.txt
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/.*\.reg
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.depdb
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.depdblock
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.filemap
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/\.lock
 .endif
 
 .include "../../lang/php/phpversion.mk"
