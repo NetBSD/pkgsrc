@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/08/17 13:33:39 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/08/29 09:42:45 obache Exp $
 #
 
 DISTNAME=	dbus-glib-0.88
@@ -18,10 +18,6 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	dbus-glib-1.pc.in
-
-# Workaround for Upstream Bug#562310.
-# for more detail, see also PR#41475.
-TOOLS_NOOP+=		gtkdoc-rebase
 
 CONFIGURE_ARGS+=	--disable-ansi
 CONFIGURE_ARGS+=	--disable-asserts
