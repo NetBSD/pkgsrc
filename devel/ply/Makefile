@@ -1,28 +1,30 @@
-# $NetBSD: Makefile,v 1.12 2010/02/10 19:17:36 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/08/29 11:00:31 nonaka Exp $
 
-DISTNAME=	ply-1.5
-PKGREVISION=	3
-CATEGORIES=	devel
+DISTNAME=	ply-3.3
+CATEGORIES=	devel python
 MASTER_SITES=	http://www.dabeaz.com/ply/
 
-MAINTAINER=	aw9k-nnk@asahi-net.or.jp
+MAINTAINER=	nonaka@netbsd.org
 HOMEPAGE=	http://www.dabeaz.com/ply/
 COMMENT=	Python Lex-Yacc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	pax
-
-PYDISTUTILSPKG=	yes
+USE_LANGUAGES=	# none
 
 DOCDIR=	${PREFIX}/share/doc/ply
 EGDIR=	${PREFIX}/share/examples/ply
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+
+do-test:
+.for filtst in testlex.py testyacc.py
+	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/$${filtst}
+.endfor
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/ply.html ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}/example && pax -rwppm * ${DESTDIR}${EGDIR}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
