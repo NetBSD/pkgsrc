@@ -1,0 +1,3 @@
+The xml-coreutils are a collection of Unix/POSIX command line tools
+for processing XML files.  The aim is to make XML processing for
+shell users exactly as easy as text processing.
