@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.29 2010/07/26 07:23:59 dholland Exp $
+# $NetBSD: builtin.mk,v 1.30 2010/08/29 01:16:08 obache Exp $
 
 BUILTIN_PKG:=	ncurses
 
 BUILTIN_FIND_LIBS:=		ncurses curses terminfo
 BUILTIN_FIND_FILES_VAR:=	H_NCURSES H_CURSES H_CURSES1
 BUILTIN_FIND_FILES.H_NCURSES=	/usr/include/ncurses.h /usr/include/curses.h
+BUILTIN_FIND_FILES.H_NCURSES+=	/boot/develop/headers/3rdparty/curses.h
 BUILTIN_FIND_GREP.H_NCURSES=	\#define[ 	]*NCURSES_VERSION
 BUILTIN_FIND_FILES.H_CURSES=	/usr/include/ncurses.h /usr/include/curses.h
 BUILTIN_FIND_GREP.H_CURSES=	mvwchgat
