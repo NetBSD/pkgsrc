@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.11 2010/08/27 21:13:11 wiz Exp $
+# $NetBSD: mdoclint,v 1.12 2010/08/30 12:20:44 wiz Exp $
 #
 # Copyright (c) 2001-2010 Thomas Klausner
 # All rights reserved.
@@ -104,14 +104,14 @@ my $valid_date_re;
 		NETBSD ? "LIBRARY" : undef,
 		"SYNOPSIS",
 		"DESCRIPTION",
-		"IMPLEMENTATION NOTES",
+		NETBSD ? "IMPLEMENTATION NOTES" : undef,
 		"RETURN VALUES",
 		"ENVIRONMENT",
 		"FILES",
 		"EXIT STATUS",
 		"EXAMPLES",
 		"DIAGNOSTICS",
-		"COMPATIBILITY",
+		NETBSD ? "COMPATIBILITY" : undef,
 		"ERRORS",
 		"SEE ALSO",
 		"STANDARDS",
