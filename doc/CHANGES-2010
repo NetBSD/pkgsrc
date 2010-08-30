@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3037 2010/08/30 13:52:24 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3038 2010/08/30 14:43:39 gson Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3964,3 +3964,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/eekboard version 0.0.5 [obache 2010-08-30]
 	Updated textproc/mdoclint to 1.10 [wiz 2010-08-30]
 	Updated security/opendnssec to 1.1.2 [pettai 2010-08-30]
+	Updated misc/py-anita to 1.13 [gson 2010-08-30]
