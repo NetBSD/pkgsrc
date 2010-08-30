@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
+$NetBSD: patch-ab,v 1.9 2010/08/30 11:17:16 adam Exp $
 
---- doc/example_silcd.conf.in.orig	Sat Nov 30 15:09:21 2002
-+++ doc/example_silcd.conf.in	Fri Dec  6 19:04:31 2002
-@@ -166,14 +166,14 @@
+--- doc/example_silcd.conf.in.orig	2008-10-25 13:59:17.000000000 +0000
++++ doc/example_silcd.conf.in
+@@ -186,7 +186,7 @@ ServerInfo {
  	#
  	# Server name (FQDN)
  	#
@@ -11,15 +11,16 @@ $NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
  
  	#
  	# Primary listener.  Specify the IP address and the port to bind
- 	# the server.
+@@ -194,7 +194,7 @@ ServerInfo {
+ 	# if the server is behind NAT.
  	#
  	Primary {
 -		ip = "10.2.1.6";
 +		ip = "127.0.0.1";
+ 		# public_ip = "11.1.1.1";
  		port = 706;
  	};
- 
-@@ -181,8 +181,7 @@
+@@ -203,8 +203,7 @@ ServerInfo {
  	# Secondary listener(s).  If you need to bind your server into
  	# several interfaces use the Secondary to specify the listener(s).
  	#
@@ -29,7 +30,7 @@ $NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
  
  	#
  	# ServerType field specifies the purpose of this server
-@@ -193,7 +192,7 @@
+@@ -215,7 +214,7 @@ ServerInfo {
  	#
  	# Geographic location
  	#
@@ -38,7 +39,7 @@ $NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
  
  	#
  	# Full admin name
-@@ -209,8 +208,8 @@
+@@ -231,8 +230,8 @@ ServerInfo {
  	# Run SILC server as specific user and group.  The server must be
  	# initially run as root.
  	#
@@ -49,7 +50,7 @@ $NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
  
  	#
  	# Public and private keys
-@@ -223,7 +222,7 @@
+@@ -245,7 +244,7 @@ ServerInfo {
  	#
  	# Specifies the text file displayed on client connection
  	#
@@ -58,7 +59,7 @@ $NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
  
  	#
  	# Pid file
-@@ -255,7 +254,7 @@
+@@ -278,7 +277,7 @@ Logging {
  	# reduces memory usage.  By default it is false and log files are
  	# written with FlushDelay timeout.
  	#
@@ -67,7 +68,7 @@ $NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
  
  	# FlushDelay tells log files update delay (seconds) in case you
  	# have chosen buffering output.  This setting has effect only if
-@@ -435,9 +434,9 @@
+@@ -458,9 +457,9 @@ Client {
  # required.
  #
  Admin {
@@ -80,7 +81,7 @@ $NetBSD: patch-ab,v 1.8 2002/12/06 19:52:38 salo Exp $
  	Passphrase = "verysecret";
  	# PublicKey = "/path/to/the/public.pub";
  };
-@@ -496,17 +495,17 @@
+@@ -520,17 +519,17 @@ ServerConnection {
  # backup router is in our cell then set the "BackupLocal" option to true.
  # If the backup router is in other cell then set it to false.
  #

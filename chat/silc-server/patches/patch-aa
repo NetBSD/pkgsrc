@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2010/02/14 20:18:06 joerg Exp $
+$NetBSD: patch-aa,v 1.12 2010/08/30 11:17:16 adam Exp $
 
---- apps/silcd/Makefile.in.orig	2005-05-10 18:59:04.000000000 +0200
-+++ apps/silcd/Makefile.in	2005-06-19 02:36:04.000000000 +0200
-@@ -581,13 +581,10 @@
+--- apps/silcd/Makefile.in.orig	2009-09-26 20:34:14.000000000 +0000
++++ apps/silcd/Makefile.in
+@@ -580,13 +580,10 @@ uninstall-am: uninstall-sbinPROGRAMS
  
  install-dirs-server:
  	-mkdir -p $(docdir)
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.11 2010/02/14 20:18:06 joerg Exp $
  	-@if test -f $(top_srcdir)/doc/silcd.8 ; then \
  	 $(INSTALL_DATA) $(top_srcdir)/doc/silcd.8 $(mandir)/man8; \
  	fi
-@@ -605,8 +602,10 @@
+@@ -604,8 +601,10 @@ etc-install-server:
  	fi
  
  examples-install:
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.11 2010/02/14 20:18:06 joerg Exp $
  
  generate-server-key:
  	-@if test '!' -f $(etcdir)/silcd.pub ; then \
-@@ -616,9 +615,7 @@
+@@ -615,9 +614,7 @@ generate-server-key:
  install-data-hook: 		\
  	install-dirs-server 	\
  	doc-install-server	\
