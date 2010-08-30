@@ -1,34 +1,29 @@
-# $NetBSD: Makefile,v 1.91 2009/09/22 02:05:50 minskim Exp $
+# $NetBSD: Makefile,v 1.92 2010/08/30 02:48:40 asau Exp $
 #
 
-DISTNAME=		mathomatic-14.5.5
+DISTNAME=		mathomatic-15.2.0
 CATEGORIES=		math
-MASTER_SITES=		http://www.panix.com/~gesslein/
+MASTER_SITES=		http://mathomatic.org/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://www.mathomatic.org/
 COMMENT=		Small portable symbolic math program
+LICENSE=		gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 MAKE_FILE=		makefile
+USE_TOOLS+=		gmake
 
 CFLAGS.SunOS+=		-DSOLARIS
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+TEST_TARGET=		test
 
 BUILDLINK_API_DEPENDS.readline+=	readline>=5.1pl1nb1
 .include "../../devel/readline/buildlink3.mk"
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mathomatic ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mathomatic.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${WRKSRC}/README.txt \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-
+#.include "../../devel/ncurses/buildlink3.mk"
+#.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
