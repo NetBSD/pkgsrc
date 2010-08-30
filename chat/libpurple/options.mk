@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2010/04/03 21:00:42 gdt Exp $
+# $NetBSD: options.mk,v 1.16 2010/08/30 11:18:01 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
@@ -10,13 +10,13 @@ PKG_SUGGESTED_OPTIONS+=		avahi dbus farsight gnome gnutls gstreamer
 PLIST_VARS+=		avahi dbus gnome gnutls nss perl tcl
 
 .if !empty(PKG_OPTIONS:Mavahi)
-PLIST.avahi=            yes
+PLIST.avahi=		yes
 CONFIGURE_ARGS+=	--enable-avahi
 .  include "../../net/avahi/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
-PLIST.gnome= 		yes
+PLIST.gnome=		yes
 .  include "../../devel/GConf/schemas.mk"
 GCONF_SCHEMAS+=		purple.schemas
 .endif

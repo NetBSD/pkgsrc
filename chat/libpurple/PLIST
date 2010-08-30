@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/02/26 09:48:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/08/30 11:18:01 adam Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -24,6 +24,10 @@ include/libpurple/log.h
 include/libpurple/marshallers.h
 include/libpurple/media-gst.h
 include/libpurple/media.h
+include/libpurple/media/backend-iface.h
+include/libpurple/media/candidate.h
+include/libpurple/media/codec.h
+include/libpurple/media/enum-types.h
 include/libpurple/mediamanager.h
 include/libpurple/mime.h
 include/libpurple/nat-pmp.h
@@ -74,6 +78,7 @@ lib/purple-2/libicq.la
 lib/purple-2/libirc.la
 lib/purple-2/libjabber.la
 lib/purple-2/libmsn.la
+lib/purple-2/libmxit.la
 lib/purple-2/libmyspace.la
 lib/purple-2/libnovell.la
 lib/purple-2/liboscar.la
@@ -102,6 +107,7 @@ share/locale/az/LC_MESSAGES/pidgin.mo
 share/locale/be@latin/LC_MESSAGES/pidgin.mo
 share/locale/bg/LC_MESSAGES/pidgin.mo
 share/locale/bn/LC_MESSAGES/pidgin.mo
+share/locale/bn_IN/LC_MESSAGES/pidgin.mo
 share/locale/bs/LC_MESSAGES/pidgin.mo
 share/locale/ca/LC_MESSAGES/pidgin.mo
 share/locale/ca@valencia/LC_MESSAGES/pidgin.mo
@@ -139,12 +145,15 @@ share/locale/lo/LC_MESSAGES/pidgin.mo
 share/locale/lt/LC_MESSAGES/pidgin.mo
 share/locale/mk/LC_MESSAGES/pidgin.mo
 share/locale/mn/LC_MESSAGES/pidgin.mo
+share/locale/mr/LC_MESSAGES/pidgin.mo
+share/locale/ms_MY/LC_MESSAGES/pidgin.mo
 share/locale/my_MM/LC_MESSAGES/pidgin.mo
 share/locale/nb/LC_MESSAGES/pidgin.mo
 share/locale/ne/LC_MESSAGES/pidgin.mo
 share/locale/nl/LC_MESSAGES/pidgin.mo
 share/locale/nn/LC_MESSAGES/pidgin.mo
 share/locale/oc/LC_MESSAGES/pidgin.mo
+share/locale/or/LC_MESSAGES/pidgin.mo
 share/locale/pa/LC_MESSAGES/pidgin.mo
 share/locale/pl/LC_MESSAGES/pidgin.mo
 share/locale/ps/LC_MESSAGES/pidgin.mo
@@ -175,6 +184,7 @@ share/purple/ca-certs/AOL_Member_CA.pem
 share/purple/ca-certs/America_Online_Root_Certification_Authority_1.pem
 share/purple/ca-certs/CAcert_Class3.pem
 share/purple/ca-certs/CAcert_Root.pem
+share/purple/ca-certs/Entrust.net_Secure_Server_CA.pem
 share/purple/ca-certs/Equifax_Secure_CA.pem
 share/purple/ca-certs/Equifax_Secure_Global_eBusiness_CA-1.pem
 share/purple/ca-certs/GTE_CyberTrust_Global_Root.pem
@@ -183,6 +193,7 @@ share/purple/ca-certs/Microsoft_Secure_Server_Authority.pem
 share/purple/ca-certs/StartCom_Certification_Authority.pem
 share/purple/ca-certs/StartCom_Free_SSL_CA.pem
 share/purple/ca-certs/Thawte_Premium_Server_CA.pem
+share/purple/ca-certs/ValiCert_Class_2_VA.pem
 share/purple/ca-certs/VeriSign_Class3_Extended_Validation_CA.pem
 share/purple/ca-certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
 share/purple/ca-certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5_2.pem
