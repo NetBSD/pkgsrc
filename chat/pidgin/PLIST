@@ -1,7 +1,4 @@
-${PLIST.dbus}lib/pidgin/musicmessaging.la
-${PLIST.dbus}share/pixmaps/pidgin/buttons/music.png
-${PLIST.vv}lib/pidgin/vvconfig.la
-@comment $NetBSD: PLIST,v 1.16 2010/08/30 11:18:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/08/30 19:05:48 adam Exp $
 bin/pidgin
 include/pidgin/gtkaccount.h
 include/pidgin/gtkblist-theme-loader.h
@@ -60,6 +57,7 @@ lib/pidgin/gtkbuddynote.la
 lib/pidgin/history.la
 lib/pidgin/iconaway.la
 lib/pidgin/markerline.la
+${PLIST.dbus}lib/pidgin/musicmessaging.la
 lib/pidgin/notify.la
 lib/pidgin/pidginrc.la
 lib/pidgin/relnot.la
@@ -69,6 +67,7 @@ lib/pidgin/themeedit.la
 lib/pidgin/ticker.la
 lib/pidgin/timestamp.la
 lib/pidgin/timestamp_format.la
+${PLIST.vv}lib/pidgin/vvconfig.la
 lib/pidgin/xmppconsole.la
 lib/pidgin/xmppdisco.la
 lib/pkgconfig/pidgin.pc
@@ -131,6 +130,7 @@ share/pixmaps/pidgin/arrow-right.xpm
 share/pixmaps/pidgin/arrow-up.xpm
 share/pixmaps/pidgin/buttons/edit.png
 share/pixmaps/pidgin/buttons/info.png
+${PLIST.dbus}share/pixmaps/pidgin/buttons/music.png
 share/pixmaps/pidgin/buttons/pause.png
 share/pixmaps/pidgin/dialogs/16/auth.png
 share/pixmaps/pidgin/dialogs/16/error.png
