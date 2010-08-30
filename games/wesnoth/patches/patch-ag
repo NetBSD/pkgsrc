@@ -1,6 +1,7 @@
-$NetBSD: patch-ag,v 1.6 2010/08/29 10:51:30 wiz Exp $
+$NetBSD: patch-ag,v 1.7 2010/08/30 19:29:26 adam Exp $
 
 On MacOSX use Pasteboard Manager instead of deprecated Scrap Manager.
+For details, see http://gna.org/bugs/?16576
 
 --- src/clipboard.cpp.orig	2010-02-06 10:50:29.000000000 +0000
 +++ src/clipboard.cpp
@@ -38,7 +39,7 @@ On MacOSX use Pasteboard Manager instead of deprecated Scrap Manager.
  	if (err != noErr) return;
 -	PutScrapFlavor(scrap, kScrapFlavorTypeText, kScrapFlavorMaskNone, text.size(), new_str.c_str());
 +	syncFlags = PasteboardSynchronize(clipboard);
-+	if (!(syncFlags&kPasteboardModified) || (syncFlags&kPasteboardClientIsOwner)) return;
++	if ((syncFlags&kPasteboardModified) && !(syncFlags&kPasteboardClientIsOwner)) return;
 +	textData = CFDataCreate(kCFAllocatorDefault, (const UInt8 *)new_str.c_str(), text.size());
 +	PasteboardPutItemFlavor(clipboard, (PasteboardItemID)1, CFSTR("public.utf8-plain-text"), textData, 0);
  }
