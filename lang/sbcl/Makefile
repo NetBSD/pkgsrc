@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2010/08/06 08:29:01 asau Exp $
+# $NetBSD: Makefile,v 1.30 2010/08/30 00:18:57 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-1.0.41
+PKGNAME=		sbcl-1.0.42
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -69,7 +69,7 @@ SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
 SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
 
 do-build:
-	cd ${WRKSRC} && ${SH} make.sh ${SBCL_BOOT_SYSTEM:Q}
+	cd ${WRKSRC} && ${SH} make.sh --prefix=${PREFIX} --xc-host=${SBCL_BOOT_SYSTEM:Q}
 post-build:
 	cd ${WRKSRC} && ${RM} -f contrib/sb-cover/test-output/*
 
