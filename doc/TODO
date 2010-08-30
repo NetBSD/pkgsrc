@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9601 2010/08/30 02:49:48 asau Exp $
+$NetBSD: TODO,v 1.9602 2010/08/30 19:09:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -1067,7 +1067,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php-jpgraph-3.0.6
 	o phpmyadmin-3.3.6
 	o picp-0.6.8
-	o pidgin-2.7.2
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
@@ -1233,8 +1232,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o shc-3.8
 	o shmux-1.0.2
 	o sign-1.0.7
-	o silc-server-1.1.18
-	o silc-toolkit-1.1.10
 	o simulavr-0.1.2.2
 	o singularity-0.30
 	o sitescooper-3.1.2

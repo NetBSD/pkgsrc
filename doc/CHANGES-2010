@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3040 2010/08/30 18:17:36 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3041 2010/08/30 19:09:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3961,6 +3961,13 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/wxMaxima to 0.8.6 [asau 2010-08-30]
 	Updated inputmethod/ibus-skk to 1.0.0 [obache 2010-08-30]
 	Added x11/libfakekey version 0.1 [obache 2010-08-30]
+	Updated devel/silc-toolkit to 1.1.10 [adam 2010-08-30]
+	Updated chat/silc-server to 1.1.18 [adam 2010-08-30]
+	Updated chat/libpurple to 2.7.3 [adam 2010-08-30]
+	Updated chat/finch to 2.7.3 [adam 2010-08-30]
+	Updated chat/pidgin to 2.7.3 [adam 2010-08-30]
+	Updated chat/pidgin-sametime to 2.7.3 [adam 2010-08-30]
+	Updated chat/pidgin-silc to 2.7.3 [adam 2010-08-30]
 	Added x11/eekboard version 0.0.5 [obache 2010-08-30]
 	Updated textproc/mdoclint to 1.10 [wiz 2010-08-30]
 	Updated security/opendnssec to 1.1.2 [pettai 2010-08-30]
