@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3035 2010/08/30 13:39:20 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3036 2010/08/30 13:43:03 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3943,6 +3943,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/wesnoth to 1.8.4 [adam 2010-08-28]
 	Updated net/mldonkey to 3.0.4 [wiz 2010-08-28]
 	Updated net/mldonkey-gui to 3.0.4 [wiz 2010-08-28]
+	Updated net/ruby-dnsruby to 1.49 [pettai 2010-08-29]
 	Added textproc/xml-coreutils version 0.8a [seb 2010-08-29]
 	Updated www/p5-Plack to 0.9946 [seb 2010-08-29]
 	Updated devel/p5-Test-SharedFork to 0.12 [seb 2010-08-29]
@@ -3954,6 +3955,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IO-All to 0.41 [seb 2010-08-29]
 	Updated www/p5-CGI-Compile to 0.12 [seb 2010-08-29]
 	Updated editors/emacs-snapshot to 24.0.50.20100829 [minskim 2010-08-29]
+	Updated net/ldns to 1.6.6 [pettai 2010-08-29]
 	Updated lang/sbcl to 1.0.42 [asau 2010-08-30]
 	Updated math/mathomatic to 15.2.0 [asau 2010-08-30]
 	Updated math/wxMaxima to 0.8.6 [asau 2010-08-30]
@@ -3961,5 +3963,3 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/libfakekey version 0.1 [obache 2010-08-30]
 	Added x11/eekboard version 0.0.5 [obache 2010-08-30]
 	Updated textproc/mdoclint to 1.10 [wiz 2010-08-30]
-	Updated net/ruby-dnsruby to 1.49 [pettai 2010-08-30]
-	Updated net/ldns to 1.6.6 [pettai 2010-08-30]
