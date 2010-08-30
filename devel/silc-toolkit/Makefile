@@ -1,44 +1,38 @@
-# $NetBSD: Makefile,v 1.15 2010/01/16 17:57:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2010/08/30 11:17:16 adam Exp $
 
-DISTNAME=		silc-toolkit-0.9.13
-PKGREVISION=		1
-CATEGORIES=		devel chat security
-MASTER_SITES=		http://www.silcnet.org/download/toolkit/sources/ \
-			ftp://ftp.silcnet.org/silc/toolkit/sources/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	silc-toolkit-1.1.10
+CATEGORIES=	devel chat security
+MASTER_SITES=	http://www.silcnet.org/download/toolkit/sources/ \
+		ftp://ftp.silcnet.org/silc/toolkit/sources/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		salo@NetBSD.org
-HOMEPAGE=		http://www.silcnet.org/
-COMMENT=		Secure Internet Live Conferencing (SILC) protocol Toolkit
+MAINTAINER=	salo@NetBSD.org
+HOMEPAGE=	http://www.silcnet.org/
+COMMENT=	Secure Internet Live Conferencing (SILC) protocol Toolkit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_JOBS_SAFE=		no
-
 CONFLICTS+=		silc-client<1.0.1nb1
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-OVERRIDE_DIRDEPTH=	3	# */*/*/libtool
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-optimizations
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/silc
+CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silc/modules
+CONFIGURE_ARGS+=	--without-gmp
+CONFIGURE_ARGS+=	--without-iconv
+#.if ${MACHINE_ARCH} != "i386"
+#CONFIGURE_ARGS+=	--disable-asm
+#.endif
+
+PKGCONFIG_OVERRIDE+=	lib/silc.pc.in
+PKGCONFIG_OVERRIDE+=	lib/silcclient.pc.in
+PKGCONFIG_OVERRIDE+=	lib/silcserver.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/silc
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/silc
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silc-toolkit
-CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silc/modules
-CONFIGURE_ARGS+=	--without-iconv
-CONFIGURE_ARGS+=	--without-irssi
-CONFIGURE_ARGS+=	--without-silcd
-CONFIGURE_ARGS+=	--without-libtoolfix
-
 # lib/silcclient/client_attrs.c causes an ICE with xlc on Darwin.
-NOT_FOR_COMPILER+=	xlc
-
-.if ${MACHINE_ARCH} != "i386"
-CONFIGURE_ARGS+=	--disable-asm
-.endif
+NOT_FOR_COMPILER=	xlc
 
 .include "options.mk"
 
