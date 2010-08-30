@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3036 2010/08/30 13:43:03 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3037 2010/08/30 13:52:24 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3963,3 +3963,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/libfakekey version 0.1 [obache 2010-08-30]
 	Added x11/eekboard version 0.0.5 [obache 2010-08-30]
 	Updated textproc/mdoclint to 1.10 [wiz 2010-08-30]
+	Updated security/opendnssec to 1.1.2 [pettai 2010-08-30]
