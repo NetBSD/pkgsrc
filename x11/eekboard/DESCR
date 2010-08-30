@@ -1,0 +1,3 @@
+eekboard is a virtual keyboard software package which ships with a standalone
+virtual keyboard application (eekboard), and a library to create keyboard-like
+UI (libeek).
