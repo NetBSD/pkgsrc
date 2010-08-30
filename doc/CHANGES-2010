@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3034 2010/08/30 13:38:51 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3035 2010/08/30 13:39:20 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3962,3 +3962,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/eekboard version 0.0.5 [obache 2010-08-30]
 	Updated textproc/mdoclint to 1.10 [wiz 2010-08-30]
 	Updated net/ruby-dnsruby to 1.49 [pettai 2010-08-30]
+	Updated net/ldns to 1.6.6 [pettai 2010-08-30]
