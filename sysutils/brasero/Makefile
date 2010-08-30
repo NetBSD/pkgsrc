@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/08/25 22:57:15 jnemeth Exp $
+# $NetBSD: Makefile,v 1.20 2010/08/30 17:22:09 drochner Exp $
 #
 
 DISTNAME=	brasero-2.30.2
@@ -34,7 +34,6 @@ BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.10
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.15
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
