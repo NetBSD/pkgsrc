@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3031 2010/08/30 09:42:58 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3032 2010/08/30 11:47:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3959,3 +3959,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/wxMaxima to 0.8.6 [asau 2010-08-30]
 	Updated inputmethod/ibus-skk to 1.0.0 [obache 2010-08-30]
 	Added x11/libfakekey version 0.1 [obache 2010-08-30]
+	Added x11/eekboard version 0.0.5 [obache 2010-08-30]
