@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/06/13 22:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2010/08/30 20:42:44 wiz Exp $
 #
 
 DISTNAME=	ogre-v1-6-3
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ogre.sourceforge.net/
 COMMENT=	Object-Oriented Graphics Rendering Engine
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
