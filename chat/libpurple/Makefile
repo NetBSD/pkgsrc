@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2010/04/03 21:00:42 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.21 2010/08/30 11:18:01 adam Exp $
 
 PKGNAME=	libpurple-${PIDGIN_VERSION}
-PKGREVISION=	3
 COMMENT=	Multi-protocol Instant Messaging client backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include		"../../chat/libpurple/Makefile.common"
 
+USE_TOOLS+=		msgfmt intltool
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-
-USE_TOOLS+=		msgfmt intltool
 
 PKGCONFIG_OVERRIDE+=	gaim.pc.in
 PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
