@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/08/11 12:59:35 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/30 07:36:48 obache Exp $
 #
 
-DISTNAME=	ibus-skk-0.0.10
-PKGREVISION=	1
+DISTNAME=	ibus-skk-1.0.0
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://cloud.github.com/downloads/ueno/ibus-skk/
 
@@ -29,8 +28,6 @@ SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	engine/ibus-engine-skk.in setup/ibus-setup-skk.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
-
-.include "../../inputmethod/ibus/bad-env-usage.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
