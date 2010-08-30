@@ -1,12 +1,14 @@
-# $NetBSD: builtin.mk,v 1.19 2008/02/27 22:10:34 jlam Exp $
+# $NetBSD: builtin.mk,v 1.20 2010/08/30 02:04:58 obache Exp $
 
 BUILTIN_PKG:=	iconv
 
 BUILTIN_FIND_LIBS:=			iconv
 BUILTIN_FIND_FILES_VAR:=		H_ICONV H_GLIBC_ICONV H_CITRUS_ICONV
-BUILTIN_FIND_FILES.H_ICONV=		/usr/include/iconv.h
+BUILTIN_FIND_FILES.H_ICONV=		/usr/include/iconv.h \
+					/boot/common/include/iconv.h
 BUILTIN_FIND_GREP.H_ICONV=		GNU LIBICONV Library
-BUILTIN_FIND_FILES.H_GLIBC_ICONV=	/usr/include/iconv.h
+BUILTIN_FIND_FILES.H_GLIBC_ICONV=	/usr/include/iconv.h \
+					/boot/common/include/iconv.h
 BUILTIN_FIND_GREP.H_GLIBC_ICONV=	This file is part of the GNU C Library
 BUILTIN_FIND_FILES.H_CITRUS_ICONV=	/usr/include/iconv.h
 BUILTIN_FIND_GREP.H_CITRUS_ICONV=	Copyright.*Citrus Project
