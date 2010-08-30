@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3043 2010/08/30 21:56:40 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3044 2010/08/30 22:30:55 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3976,3 +3976,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/unbound to 1.4.6 [pettai 2010-08-30]
 	Updated devel/pango to 1.28.1nb1 [jakllsch 2010-08-30]
 	Updated mail/mimedefang to 2.71 [pettai 2010-08-30]
+	Updated security/aide to 0.14.2 [pettai 2010-08-30]
