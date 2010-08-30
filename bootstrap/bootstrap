@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.158 2010/08/13 18:57:36 joerg Exp $
+# $NetBSD: bootstrap,v 1.159 2010/08/30 06:21:49 obache Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -362,6 +362,7 @@ pkgdbdir=
 pkgmandir=
 sysconfdir=
 varbase=
+workdir=
 
 full=no
 compiler=""
@@ -370,8 +371,8 @@ mk_fragment=
 
 while [ $# -gt 0 ]; do
 	case $1 in
-	--workdir=*)	wrkdir=`get_optarg "$1"` ;;
-	--workdir)	wrkdir="$2"; shift ;;
+	--workdir=*)	wrkdir=`get_optarg "$1"`; workdir=${wrkdir} ;;
+	--workdir)	wrkdir="$2"; shift; workdir=${wrkdir} ;;
 	--prefix=*)	prefix=`get_optarg "$1"` ;;
 	--prefix)	prefix="$2"; shift ;;
 	--pkgdbdir=*)	pkgdbdir=`get_optarg "$1"` ;;
@@ -1054,6 +1055,9 @@ fi
 opsys_finish
 
 echo "WRKOBJDIR=		${wrkdir}/wrk" >> ${BOOTSTRAP_MKCONF}
+if [ ! -z "${workdir}" ]; then
+	echo "WRKOBJDIR=		${workdir}/pkgsrc" >> ${TARGET_MKCONF}
+fi
 
 echo "" >> ${TARGET_MKCONF}
 echo "" >> ${BOOTSTRAP_MKCONF}
