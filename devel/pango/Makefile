@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2010/08/05 12:41:27 obache Exp $
+# $NetBSD: Makefile,v 1.147 2010/08/30 21:43:00 jakllsch Exp $
 
 DISTNAME=		pango-1.28.1
+PKGREVISION=		1
 CATEGORIES=		devel fonts
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pango/1.28/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +19,8 @@ GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+
+BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 PKGCONFIG_OVERRIDE=	pango-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pango.pc.in
