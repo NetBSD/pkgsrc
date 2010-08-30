@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3039 2010/08/30 18:00:49 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3040 2010/08/30 18:17:36 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3966,3 +3966,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/opendnssec to 1.1.2 [pettai 2010-08-30]
 	Updated misc/py-anita to 1.13 [gson 2010-08-30]
 	Updated net/nsd to 3.2.6 [pettai 2010-08-30]
+	Updated net/unbound to 1.4.6 [pettai 2010-08-30]
