@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3027 2010/08/30 02:49:48 asau Exp $
+$NetBSD: CHANGES-2010,v 1.3028 2010/08/30 02:51:07 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3955,5 +3955,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CGI-Compile to 0.12 [seb 2010-08-29]
 	Updated editors/emacs-snapshot to 24.0.50.20100829 [minskim 2010-08-29]
 	Updated lang/sbcl to 1.0.42 [asau 2010-08-30]
-	Updated math/mathomatic to 15.2.0 [asau 2010-08-30]
 	Updated math/mathomatic to 15.2.0 [asau 2010-08-30]
