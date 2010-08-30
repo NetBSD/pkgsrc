@@ -61,6 +61,7 @@ cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support.
 clisp			Common/C Lisp.
+clutter			Use Clutter for graphics support.
 compface		Enable compface support.
 coqide			Enable ide support for coq.
 courier-dsn		Delivery Status Notification (DNS) mail delivery.
