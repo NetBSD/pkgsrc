@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.617 2010/07/09 19:37:11 asau Exp $
+# $NetBSD: Makefile,v 1.618 2010/08/30 09:44:05 obache Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -224,6 +224,7 @@ SUBDIR+=	libXxf86dga
 SUBDIR+=	libXxf86misc
 SUBDIR+=	libXxf86vm
 SUBDIR+=	libdrm
+SUBDIR+=	libfakekey
 SUBDIR+=	libgnomekbd
 SUBDIR+=	liblbxutil
 SUBDIR+=	liboldXrandr
