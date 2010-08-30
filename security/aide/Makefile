@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2010/03/14 13:30:02 pettai Exp $
+# $NetBSD: Makefile,v 1.31 2010/08/30 22:30:27 pettai Exp $
 #
 
-DISTNAME=	aide-0.13.1
+DISTNAME=	aide-0.14.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
