@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2010/08/09 10:49:28 drochner Exp $
+# $NetBSD: builtin.mk,v 1.2 2010/08/30 17:27:11 drochner Exp $
 
 BUILTIN_PKG:=	librfuncs
 .include "../../mk/buildlink3/bsd.builtin.mk"
@@ -40,5 +40,7 @@ CHECK_BUILTIN.librfuncs?=	no
 .if !empty(CHECK_BUILTIN.librfuncs:M[nN][oO])
 .  if !empty(USE_BUILTIN.librfuncs:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=		rm:-lrfuncs
+.  else
+BUILDLINK_LDFLAGS.librfuncs+=	-lrfuncs
 .  endif
 .endif	# CHECK_BUILTIN.librfuncs
