@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/08/30 22:30:27 pettai Exp $
+
+--- contrib/gpg2_check.sh.orig	2010-08-31 00:22:49.000000000 +0200
++++ contrib/gpg2_check.sh	2010-08-31 00:23:06.000000000 +0200
+@@ -17,7 +17,7 @@
+ 		echo ""
+ 	        gpg --verify aide.db.sig
+ 		echo ""
+-		if [ "$?" == "1" ]; then
++		if [ "$?" = "1" ]; then
+ 		    echo "************************************************************"
+ 		    echo "GPG signature FAILED!  Your database has been tampered with!"
+ 		    echo "************************************************************"
