@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.14 2010/08/30 11:17:16 adam Exp $
+
+--- configure.orig	2010-08-30 10:05:32.000000000 +0000
++++ configure
+@@ -19018,9 +19018,6 @@ if test -n "$with_silc_includes" || test
+     has_threads=true
+   fi
+   f=`$EGREP __SILC_HAVE_SIM $ac_silc_includes/silc.h`
+-  if test -n "$f"; then
+-    LIBS="$LIBS -ldl"
+-  fi
+ 
+ else
+   # pkg-config check
