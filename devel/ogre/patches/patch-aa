@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2009/09/01 16:53:40 hasso Exp $
+$NetBSD: patch-aa,v 1.3 2010/08/30 20:30:28 wiz Exp $
 
---- configure.orig	2009-08-31 16:44:00 +0300
-+++ configure	2009-08-31 16:45:14 +0300
-@@ -25739,11 +25739,11 @@ fi
+--- configure.orig	2009-07-26 10:31:54.000000000 +0000
++++ configure
+@@ -23623,7 +23623,8 @@ fi
+ echo "${ECHO_T}$ogre_cv_prog_compiler_supports_visibility" >&6; }
+ 
+ if test x"$ogre_cv_prog_compiler_supports_visibility" = xyes; then
+-    CFLAGS_VISIBILITY="-fvisibility=hidden -fvisibility-inlines-hidden -DOGRE_GCC_VISIBILITY";
++#    CFLAGS_VISIBILITY="-fvisibility=hidden -fvisibility-inlines-hidden -DOGRE_GCC_VISIBILITY";
++    CFLAGS_VISIBILITY=""
+     case $target_cpu in
+         x86_64* )
+             if ! echo "$CFLAGS $CXXFLAGS" | grep -q "\-O"; then
+@@ -25739,11 +25740,11 @@ fi
      rm -f OgreMain/src/OgreConfigDialog.lo OgreMain/src/OgreErrorDialog.lo
  
      # Prefer win32, then Xt. gtk is being phased out and must be explicitly specified.
@@ -16,7 +26,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/01 16:53:40 hasso Exp $
  
  pkg_failed=no
  { echo "$as_me:$LINENO: checking for GTK" >&5
-@@ -25825,15 +25825,15 @@ echo "${ECHO_T}yes" >&6; }
+@@ -25825,15 +25826,15 @@ echo "${ECHO_T}yes" >&6; }
  fi
      fi
  
@@ -36,7 +46,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/01 16:53:40 hasso Exp $
          OGRE_GUI=GLX
          PLATFORM_LIBS="$PLATFORM_LIBS -lXt -lSM -lICE"
      else
-@@ -26708,14 +26708,14 @@ else
+@@ -26708,14 +26709,14 @@ else
    with_allocator=ned
  fi
  
@@ -53,7 +63,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/01 16:53:40 hasso Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define OGRE_MEMORY_ALLOCATOR 2
-@@ -29360,7 +29360,7 @@ fi
+@@ -29358,7 +29361,7 @@ fi
  
  
  ft_detected=yes
@@ -62,7 +72,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/01 16:53:40 hasso Exp $
  
  echo "--------=== Configuration summary ===--------"
  echo "    Target platform                 : $OGRE_PLATFORM"
-@@ -29374,7 +29374,7 @@ echo "    Use FreeType                  
+@@ -29372,7 +29375,7 @@ echo "    Use FreeType                  
  echo "    Use FreeImage                   : $build_freeimage"
  echo "    Use DevIL                       : $build_il"
  echo "    Build OGRE demos                : $build_ogre_demos"
