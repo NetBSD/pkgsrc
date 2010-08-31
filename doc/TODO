@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9602 2010/08/30 19:09:33 adam Exp $
+$NetBSD: TODO,v 1.9603 2010/08/31 05:12:53 sno Exp $
 
 Suggested new packages
 ======================
@@ -1040,7 +1040,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-Text-Markdown-1.000031
 	o p5-Text-vFile-asData-0.07
-	o p5-YAML-Syck-1.14
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.57

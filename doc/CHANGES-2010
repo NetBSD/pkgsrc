@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3044 2010/08/30 22:30:55 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3045 2010/08/31 05:12:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/pango to 1.28.1nb1 [jakllsch 2010-08-30]
 	Updated mail/mimedefang to 2.71 [pettai 2010-08-30]
 	Updated security/aide to 0.14.2 [pettai 2010-08-30]
+	Updated textproc/p5-YAML-Syck to 1.14 [sno 2010-08-31]
