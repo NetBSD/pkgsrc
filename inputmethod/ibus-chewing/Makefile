@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 01:56:36 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/31 00:53:04 obache Exp $
 #
 
 DISTNAME=	ibus-chewing-1.3.6.20100730-Source
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgmerge
+USE_TOOLS+=		msgmerge pkg-config
 
 SUBST_CLASSES+=		msgctxt
 SUBST_STAGE.msgctxt=	post-extract
