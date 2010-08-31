@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3057 2010/08/31 16:28:56 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3058 2010/08/31 16:56:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3990,3 +3990,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/quagga to 0.99.17 [gdt 2010-08-31]
 	Removed net/quagga-devel successor net/quagga [gdt 2010-08-31]
 	Updated lang/ruby18-base to 1.8.7.174nb7 [taca 2010-08-31]
+	Updated converters/help2man to 1.38.2nb1 [tron 2010-08-31]
