@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/05 12:18:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/31 01:00:56 obache Exp $
 bin/runxlrd.py
 ${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/xlrd-${PKGVERSION}-py2.6.egg-info
 ${PYSITELIB}/xlrd/__init__.py
 ${PYSITELIB}/xlrd/__init__.py
 ${PYSITELIB}/xlrd/__init__.pyc
