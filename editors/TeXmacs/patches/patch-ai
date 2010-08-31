@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.13 2010/05/17 15:50:30 drochner Exp $
+$NetBSD: patch-ai,v 1.14 2010/08/31 12:20:15 drochner Exp $
 
 --- plugins/maxima/bin/maxima_detect.orig	2008-08-22 07:38:00.000000000 +0000
 +++ plugins/maxima/bin/maxima_detect
@@ -16,7 +16,7 @@ $NetBSD: patch-ai,v 1.13 2010/05/17 15:50:30 drochner Exp $
    then
      if [ "$1" ]
      then
-@@ -63,9 +63,16 @@ version 5.10
+@@ -63,9 +63,17 @@ version 5.10
  version 5.11
  version 5.12
  version 5.13
@@ -28,10 +28,11 @@ $NetBSD: patch-ai,v 1.13 2010/05/17 15:50:30 drochner Exp $
 +version 5.18
 +version 5.19
 +version 5.20
-+version 5.21" >/dev/null
++version 5.21
++version 5.22" >/dev/null
          then
 -          # 5.9.1 or 5.9.2 or 5.9.3 or 5.10 or 5.11 or 5.12 or 5.13 or 5.14
-+          # 5.9.1 or 5.9.2 or 5.9.3 or 5.10 or 5.11 or 5.12 or 5.13 or 5.14 or 5.15 or 5.16 or 5.17 or 5.18 or 5.19 or 5.20 or 5.21
++          # 5.9.1 or 5.9.2 or 5.9.3 or 5.10 or 5.11 or 5.12 or 5.13 or 5.14 or 5.15 or 5.16 or 5.17 or 5.18 or 5.19 or 5.20 or 5.21 or 5.22
            maxima -d | grep -F 'maxima-htmldir=' | sed -e \
            's/maxima-htmldir=/"/' -e 's|$|/maxima_toc.html"|'
          else
