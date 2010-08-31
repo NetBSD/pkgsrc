@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/19 11:26:59 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/31 00:56:24 obache Exp $
 #
 
 DISTNAME=	ibus-qt-1.3.1-Source
@@ -28,4 +28,5 @@ BUILDLINK_API_DEPENDS.ibus+=	ibus>=1.3.7
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
