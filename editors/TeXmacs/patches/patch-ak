@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.10 2010/05/17 15:50:30 drochner Exp $
+$NetBSD: patch-ak,v 1.11 2010/08/31 12:20:15 drochner Exp $
 
 --- plugins/maxima/bin/tm_maxima.orig	2008-08-22 07:38:00.000000000 +0000
 +++ plugins/maxima/bin/tm_maxima
@@ -7,7 +7,7 @@ $NetBSD: patch-ak,v 1.10 2010/05/17 15:50:30 drochner Exp $
    5.9.1.1* | 5.9.2* | 5.9.3*) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.9.2.lisp";;
    5.10.*) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.10.0.lisp";;
 -  5.11.* | 5.12.* | 5.13.* | 5.14.*) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.11.0.lisp";;
-+  5.11.* | 5.12.* | 5.13.* | 5.14.* | 5.15.* | 5.16.* | 5.17.* | 5.18.* | 5.19.* | 5.20.* | 5.21.*) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.11.0.lisp";;
++  5.11.* | 5.12.* | 5.13.* | 5.14.* | 5.15.* | 5.16.* | 5.17.* | 5.18.* | 5.19.* | 5.20.* | 5.21.* | 5.22.*) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.11.0.lisp";;
    cygwin)
      exec maxima.bat -p "`echo $TEXMACS_MAXIMA_PATH/texmacs-maxima-5.11.0.lisp|cygpath --windows -f -`";;
    *) echo -e "\2latex:\\red Unsupported version of maxima: $1\5"
