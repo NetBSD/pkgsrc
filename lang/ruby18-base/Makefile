@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2010/08/16 07:08:12 taca Exp $
+# $NetBSD: Makefile,v 1.57 2010/08/31 16:28:13 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-PKGREVISION=	6
+PKGREVISION=	7
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
@@ -28,8 +28,14 @@ TEST_TARGET=	test
 CONFIGURE_ARGS+= --enable-shared \
 		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
 		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
-CONFIGURE_ENV+=		PREFIX=${PREFIX}
 WRKSRC=		${RUBY_WRKSRC}
+
+#
+# Don't refrect pkgsrc's INSTALL macro since Ruby expect it could
+# execute by unprivileged user.
+#
+CONFIGURE_ENV+=	INSTALL="${INSTALL} ${COPY}" \
+		INSTALL_DATA= INSTALL_PROGRAM= INSTALL_SCRIPT=
 
 .include "../../mk/compiler.mk"
 
