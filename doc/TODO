@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9603 2010/08/31 05:12:53 sno Exp $
+$NetBSD: TODO,v 1.9604 2010/08/31 10:53:06 tnn Exp $
 
 Suggested new packages
 ======================
@@ -152,10 +152,6 @@ Suggested new packages
 	LabelNation
 	http://www.red-bean.com/labelnation/
 	Command-line label, business card printing program.
-
-	Enigmail
-	http://enigmail.mozdev.org/
-	GnuPG extension for the Mozilla/Thunderbird mail client
 
 	VirtualBox
 	http://www.virtualbox.org/
