@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3051 2010/08/31 07:03:41 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3052 2010/08/31 08:25:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Most to 0.22 [sno 2010-08-31]
 	Updated devel/p5-Test-Weaken to 3.004.000 [sno 2010-08-31]
 	Updated devel/gmake to 3.82nb1 [taca 2010-08-31]
+	Added inputmethod/input-pad version 0.1.1 [obache 2010-08-31]
