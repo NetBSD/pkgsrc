@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/08/21 16:33:29 seb Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/31 20:41:19 sno Exp $
 #
 
-DISTNAME=	Data-Dumper-Concise-1.200
+DISTNAME=	Data-Dumper-Concise-2.012
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -13,6 +13,8 @@ COMMENT=	Perl 5 module to dump references with concision and deparsing
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# XXX recommended: Devel::ArgNames - import
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/Dumper/Concise/.packlist
