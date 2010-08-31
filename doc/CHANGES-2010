@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3047 2010/08/31 05:28:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3048 2010/08/31 05:36:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3980,3 +3980,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-YAML-Syck to 1.14 [sno 2010-08-31]
 	Updated print/p5-LaTeX-Table to 1.0.5 [sno 2010-08-31]
 	Updated devel/p5-Devel-Leak-Object to 1.01 [sno 2010-08-31]
+	Updated devel/p5-Test-Class to 0.36 [sno 2010-08-31]
