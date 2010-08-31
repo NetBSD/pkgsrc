@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2010/08/31 12:55:16 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2010/08/31 13:20:13 gdt Exp $
 #
 
-DISTNAME=	quagga-0.98.6
-PKGREVISION=	5
+DISTNAME=	quagga-0.99.17
 CATEGORIES=	net
 MASTER_SITES=	http://www.quagga.net/download/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.quagga.net/
-COMMENT=	Free multithreaded routing daemon software (fork of zebra)
+COMMENT=	Free multithreaded routing daemon software
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -16,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gawk gmake perl
 USE_LIBTOOL=		YES
 
 PKG_SYSCONFSUBDIR?=	zebra
