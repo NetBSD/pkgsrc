@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3062 2010/08/31 20:52:52 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3063 2010/08/31 20:58:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3995,3 +3995,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-Dump to 1.17 [sno 2010-08-31]
 	Updated devel/p5-Data-Dumper-Concise to 2.012 [sno 2010-08-31]
 	Updated databases/p5-DBD-mysql to 4.017 [sno 2010-08-31]
+	Updated devel/p5-Data-UUID to 1.215 [sno 2010-08-31]
