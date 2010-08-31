@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/31 08:27:52 obache Exp $
+libexec/ibus-engine-input-pad
+libexec/ibus-setup-input-pad
+share/ibus-input-pad/setup/setup-gtk2.ui
+share/ibus/component/input-pad.xml
+share/locale/fr/LC_MESSAGES/ibus-input-pad.mo
+share/locale/ja/LC_MESSAGES/ibus-input-pad.mo
