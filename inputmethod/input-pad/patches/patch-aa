@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/31 08:25:20 obache Exp $
+
+Don't load kbdui/foo.so in addition to kbdui/foo.la.
+http://github.com/fujiwarat/input-pad/commit/ed250b079e0a64a4780b821a37f285e5c35f866e
+
+--- input-pad/window-gtk.c.orig	2010-07-08 10:07:08.000000000 +0000
++++ input-pad/window-gtk.c
+@@ -3508,6 +3508,27 @@ input_pad_gtk_window_xtest_gdk_setup (In
+ 
+ #endif /* MODULE_XTEST_GDK_BASE */
+ 
++static gboolean
++check_module_filename (const gchar *filename)
++{
++    if (!g_str_has_prefix (filename, "lib") ||
++        !g_str_has_prefix (filename + 3, MODULE_NAME_PREFIX)) {
++        g_warning ("File prefix is not input-pad library: %s", filename);
++        return FALSE;
++    }
++#ifdef G_MODULE_SUFFIX
++    /* G_MODULE_SUFFIX is defined in glibconfig.h */
++    g_assert (G_MODULE_SUFFIX != NULL);
++    if (!g_str_has_suffix (filename, "." G_MODULE_SUFFIX)) {
++        /* filename is ignored due to no suffix G_MODULE_SUFFIX. */
++        return FALSE;
++    }
++#else
++    g_debug ("Recommend to have G_MODULE_SUFFIX to avoid '.la' file.\n");
++#endif
++    return TRUE;
++}
++
+ static GModule *
+ kbdui_module_open (const gchar *filepath)
+ {
+@@ -3774,9 +3795,7 @@ input_pad_gtk_window_parse_kbdui_modules
+     }
+ 
+     while ((filename = g_dir_read_name (dir)) != NULL) {
+-        if (!g_str_has_prefix (filename, "lib") ||
+-            !g_str_has_prefix (filename + 3, MODULE_NAME_PREFIX)) {
+-            g_warning ("File prefix is not input-pad library: %s", filename);
++        if (!check_module_filename (filename)) {
+             continue;
+         }
+         filepath = g_build_filename (dirname, filename, NULL);
+@@ -4295,9 +4314,7 @@ input_pad_gtk_window_get_kbdui_name_list
+         const gchar *subname = NULL;
+         gchar *name = NULL;
+ 
+-        if (!g_str_has_prefix (filename, "lib") ||
+-            !g_str_has_prefix (filename + 3, MODULE_NAME_PREFIX)) {
+-            g_warning ("File prefix is not input-pad library: %s", filename);
++        if (!check_module_filename (filename)) {
+             continue;
+         }
+         filepath = g_build_filename (dirname, filename, NULL);
+@@ -4315,11 +4332,11 @@ input_pad_gtk_window_get_kbdui_name_list
+             g_warning ("Filename is invalid %s", filename);
+             continue;
+         }
+-        if (g_str_has_suffix (subname, ".so")) {
+-            name = g_strndup (subname, strlen (subname) - 3);
+-        } else {
+-            name = g_strdup (subname);
+-        }
++#ifdef G_MODULE_SUFFIX
++        name = g_strndup (subname, strlen (subname) - strlen (G_MODULE_SUFFIX) - 1);
++#else
++        name = g_strdup (subname);
++#endif
+         if (name == NULL || *name == '\0') {
+             g_warning ("Filename is invalid %s", filename);
+             g_free (name);

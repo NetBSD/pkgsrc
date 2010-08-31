@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/08/31 08:25:20 obache Exp $
+#
+# used by inputmethod/input-pad/Makefile
+# used by inputmethod/py-input-pad/Makefile
+
+DISTNAME=	input-pad-0.1.1
+CATEGORIES=	inputmethod
+MASTER_SITES=	http://input-pad.googlecode.com/files/
+
+HOMEPAGE=	http://code.google.com/p/input-pad/
+LICENSE=	gnu-lgpl-v2.1
+
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/input-pad/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/input-pad/patches
