@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:09:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/08/31 13:20:13 gdt Exp $
 include/quagga/buffer.h
+include/quagga/checksum.h
 include/quagga/command.h
 include/quagga/distribute.h
 include/quagga/filter.h
@@ -11,8 +12,9 @@ include/quagga/jhash.h
 include/quagga/keychain.h
 include/quagga/linklist.h
 include/quagga/log.h
-include/quagga/md5-gnu.h
+include/quagga/md5.h
 include/quagga/memory.h
+include/quagga/memtypes.h
 include/quagga/network.h
 include/quagga/ospfd/ospf_api.h
 include/quagga/ospfd/ospf_asbr.h
@@ -27,6 +29,7 @@ include/quagga/plist.h
 include/quagga/pqueue.h
 include/quagga/prefix.h
 include/quagga/privs.h
+include/quagga/route_types.h
 include/quagga/routemap.h
 include/quagga/sigevent.h
 include/quagga/smux.h
@@ -39,6 +42,7 @@ include/quagga/thread.h
 include/quagga/vector.h
 include/quagga/version.h
 include/quagga/vty.h
+include/quagga/workqueue.h
 include/quagga/zassert.h
 include/quagga/zclient.h
 include/quagga/zebra.h
