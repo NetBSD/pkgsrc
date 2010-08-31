@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2010/08/21 16:34:54 seb Exp $
+# $NetBSD: Makefile,v 1.83 2010/08/31 18:18:38 drochner Exp $
 
 DISTNAME=	graphviz-2.24.0
 PKGREVISION=	5
@@ -12,8 +12,6 @@ LICENSE=	cpl-1.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-DEPENDS+= ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 CHECK_FILES_SKIP=	${PREFIX}/lib/graphviz/config6
 
