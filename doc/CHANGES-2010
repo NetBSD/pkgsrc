@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3049 2010/08/31 05:45:38 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3050 2010/08/31 06:03:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3982,3 +3982,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-Leak-Object to 1.01 [sno 2010-08-31]
 	Updated devel/p5-Test-Class to 0.36 [sno 2010-08-31]
 	Updated devel/p5-Test-Most to 0.22 [sno 2010-08-31]
+	Updated devel/p5-Test-Weaken to 3.004.000 [sno 2010-08-31]
