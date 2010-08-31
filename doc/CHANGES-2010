@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3052 2010/08/31 08:25:38 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3053 2010/08/31 08:27:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Weaken to 3.004.000 [sno 2010-08-31]
 	Updated devel/gmake to 3.82nb1 [taca 2010-08-31]
 	Added inputmethod/input-pad version 0.1.1 [obache 2010-08-31]
+	Added inputmethod/py-input-pad version 0.1.1 [obache 2010-08-31]
