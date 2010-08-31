@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/04/12 10:59:47 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/08/31 05:45:14 sno Exp $
 
-SHA1 (Test-Most-0.21.tar.gz) = 9254d88cd126fa8f732791ca3c92ea741c6e129a
-RMD160 (Test-Most-0.21.tar.gz) = 721acbe934e61b58c19bce976234993c883b0a89
-Size (Test-Most-0.21.tar.gz) = 10732 bytes
+SHA1 (Test-Most-0.22.tar.gz) = 54f52f5a40aaba21b4a31a541dba7fe31ac545dc
+RMD160 (Test-Most-0.22.tar.gz) = b5cd934061b420080861bdf4d1ba76422e6c452d
+Size (Test-Most-0.22.tar.gz) = 15221 bytes
