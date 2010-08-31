@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/31 08:26:54 obache Exp $
+${PYSITELIB}/input-pad-0.1/_input_pad.la
+${PYSITELIB}/input-pad-0.1/_input_pad_group.la
+${PYSITELIB}/input-pad-0.1/_input_pad_window_gtk.la
+${PYSITELIB}/input-pad-0.1/input_pad.py
+${PYSITELIB}/input-pad-0.1/input_pad.pyc
+${PYSITELIB}/input-pad-0.1/input_pad.pyo
+${PYSITELIB}/input-pad-0.1/input_pad_group.py
+${PYSITELIB}/input-pad-0.1/input_pad_group.pyc
+${PYSITELIB}/input-pad-0.1/input_pad_group.pyo
+${PYSITELIB}/input-pad-0.1/input_pad_window_gtk.py
+${PYSITELIB}/input-pad-0.1/input_pad_window_gtk.pyc
+${PYSITELIB}/input-pad-0.1/input_pad_window_gtk.pyo
+${PYSITELIB}/pyinput_pad.pth
