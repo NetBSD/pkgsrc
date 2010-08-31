@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/19 22:00:10 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/08/31 06:02:41 sno Exp $
 
-SHA1 (Test-Weaken-3.002000.tar.gz) = 51fd3b970af1e03dd4d54a82c54eb27b4836dd9a
-RMD160 (Test-Weaken-3.002000.tar.gz) = 68cf9009e458bb6113f0e1b9830d1bb19b61c2fb
-Size (Test-Weaken-3.002000.tar.gz) = 36869 bytes
+SHA1 (Test-Weaken-3.004000.tar.gz) = 2609b29464640ad826944abe697a9822c4fc8e44
+RMD160 (Test-Weaken-3.004000.tar.gz) = 498d691e7d822bdac9f0f9a9cbb48ea960284026
+Size (Test-Weaken-3.004000.tar.gz) = 37332 bytes
