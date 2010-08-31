@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9604 2010/08/31 10:53:06 tnn Exp $
+$NetBSD: TODO,v 1.9605 2010/08/31 19:05:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -402,6 +402,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
+	o aria2-1.10.1
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -503,7 +504,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dbxml-2.5.13
 	o dd_rescue-1.20
 	o ddclient-3.7.3
-	o ddrescue-1.12
+	o ddrescue-1.13
 	o defendguin-0.0.11
 	o delegate-9.9.7
 	o denemo-0.8.18
@@ -553,8 +554,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enscript-1.6.5.2
 	o eog-plugins-2.30.2 [GNOME 2.30]
 	o epic4-2.6
-	o epiphany-2.30.3
-	o epiphany-extensions-2.30.2
 	o epstool-3.08
 	o eric5-5.0.0
 	o erlang-13b4
@@ -723,6 +722,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
+	o gucharmap-2.30.3
 	o guile-gtk-2.0
 	o gupnp-0.13.5
 	o gwaei-1.4.1
@@ -798,7 +798,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbibtex-0.2.2
 	o kbproto-1.0.5
 	o kdbg-2.2.2
-	o kde4-4.5.0
+	o kde4-4.5.1
 	o kdrill-6.5
 	o kid3-1.4
 	o kipi-plugins-1.4.0
@@ -947,7 +947,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
 	o mkvtoolnix-4.1.1
-	o mlterm-3.0.0
+	o mlterm-3.0.1 [pkg/43822]
 	o moc-2.4.4
 	o modular-xorg-server-1.9.0
 	o modular-xorg-server-1.8.0
@@ -1228,7 +1228,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o shmux-1.0.2
 	o sign-1.0.7
 	o simulavr-0.1.2.2
-	o singularity-0.30
+	o singularity-0.30b
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skipstone-1.0.1
@@ -1347,7 +1347,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vorbis-tools-1.4.0
 	o vp-1.6
 	o vsftpd-2.3.1
-	o vttest-20100528
+	o vttest-20100830
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.4
@@ -1362,6 +1362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o windowlab-1.40
 	o wine-1.2
 	o wine-devel-1.3.1
+	o wireshark-1.4.0
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1478,7 +1479,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsd-3.3.0
 	o xset-1.2.0
 	o xsoldier-1.4
-	o xterm-261
+	o xterm-262
 	o xtraceroute-0.9.1
 	o xtrans-1.2.5
 	o xtu-1.3
