@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3060 2010/08/31 20:33:56 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3061 2010/08/31 20:41:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3993,3 +3993,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/help2man to 1.38.2nb1 [tron 2010-08-31]
 	Updated devel/p5-Params-Classify to 0.011 [sno 2010-08-31]
 	Updated devel/p5-Data-Dump to 1.17 [sno 2010-08-31]
+	Updated devel/p5-Data-Dumper-Concise to 2.012 [sno 2010-08-31]
