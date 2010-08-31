@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2010/08/12 05:08:42 obache Exp $
+# $NetBSD: Makefile,v 1.43 2010/08/31 08:29:42 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -22,6 +22,7 @@ SUBDIR+=	ibus-chewing
 SUBDIR+=	ibus-el
 SUBDIR+=	ibus-handwrite
 SUBDIR+=	ibus-hangul
+SUBDIR+=	ibus-input-pad
 SUBDIR+=	ibus-m17n
 SUBDIR+=	ibus-pinyin
 SUBDIR+=	ibus-qt
@@ -38,6 +39,7 @@ SUBDIR+=	iiimecf
 SUBDIR+=	im-ja
 SUBDIR+=	imhangul
 SUBDIR+=	imhangul_status_applet
+SUBDIR+=	input-pad
 SUBDIR+=	ja-freewnn-dict
 SUBDIR+=	ja-freewnn-lib
 SUBDIR+=	ja-freewnn-server
@@ -57,6 +59,7 @@ SUBDIR+=	p5-zinnia
 SUBDIR+=	prime
 SUBDIR+=	prime-dict
 SUBDIR+=	prime-el
+SUBDIR+=	py-input-pad
 SUBDIR+=	py-zinnia
 SUBDIR+=	ruby-zinnia
 SUBDIR+=	scim
