@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/08/20 19:37:30 sno Exp $
+$NetBSD: distinfo,v 1.7 2010/08/31 05:21:10 sno Exp $
 
-SHA1 (LaTeX-Table-v1.0.2.tar.gz) = 8ba856a6d8966ed1a2f41cdeb33d858e30919f10
-RMD160 (LaTeX-Table-v1.0.2.tar.gz) = db6c073bf05401a09da7a1c2f01dc6fad5c8cc92
-Size (LaTeX-Table-v1.0.2.tar.gz) = 296134 bytes
+SHA1 (LaTeX-Table-v1.0.5.tar.gz) = e1ac94dca64d657ade7fd5d998a03da58f7e078b
+RMD160 (LaTeX-Table-v1.0.5.tar.gz) = 27d0319e3e1686864497bf47ff2f7c2f5522839f
+Size (LaTeX-Table-v1.0.5.tar.gz) = 308221 bytes
