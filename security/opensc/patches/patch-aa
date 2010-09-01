@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/02/26 10:50:05 hasso Exp $
+$NetBSD: patch-aa,v 1.2 2010/09/01 15:59:23 drochner Exp $
 
---- etc/Makefile.in.orig	2008-08-06 01:38:42 +0300
-+++ etc/Makefile.in	2008-08-06 01:39:11 +0300
-@@ -422,12 +422,8 @@ opensc.conf: opensc.conf.in force
+--- etc/Makefile.in.orig	2010-02-16 09:32:17.000000000 +0000
++++ etc/Makefile.in
+@@ -471,12 +471,7 @@ opensc.conf: opensc.conf.in force
  		-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
  		-e 's|@DEFAULT_PCSC_PROVIDER[@]|$(DEFAULT_PCSC_PROVIDER)|g' \
  		< $< > $@
@@ -13,7 +13,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/02/26 10:50:05 hasso Exp $
 -		$(INSTALL_DATA) opensc.conf "$(DESTDIR)$(sysconfdir)/opensc.conf"; \
 -	fi
 +install-exec-hook:
-+
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
