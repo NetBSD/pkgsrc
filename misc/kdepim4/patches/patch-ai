@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1 2010/09/01 13:45:25 wiz Exp $
+
+libassuan2 support from
+http://websvn.kde.org/?view=revision&revision=1078528
+
+--- kleopatra/libkleopatraclient/core/CMakeLists.txt.orig	2010-01-19 23:22:25.000000000 +0000
++++ kleopatra/libkleopatraclient/core/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-include_directories( ${ASSUAN_INCLUDES} ${CMAKE_SOURCE_DIR}/kleopatra )
++include_directories( ${ASSUAN2_INCLUDES} ${CMAKE_SOURCE_DIR}/kleopatra )
+ 
+ add_definitions( -D_ASSUAN_ONLY_GPG_ERRORS -DQT_NO_CAST_FROM_ASCII -DQT_NO_KEYWORDS -DQT_NO_CAST_TO_ASCII )
+ 
+@@ -27,9 +27,9 @@ set_target_properties( kleopatraclientco
+ 
+ 
+ if ( WIN32 )
+-  target_link_libraries( kleopatraclientcore ${QT_QTCORE_LIBRARY} ${ASSUAN_VANILLA_LIBRARIES} ws2_32 )
++  target_link_libraries( kleopatraclientcore ${QT_QTCORE_LIBRARY} ${ASSUAN2_LIBRARIES} ws2_32 )
+ else ( WIN32 )
+-  target_link_libraries( kleopatraclientcore ${QT_QTCORE_LIBRARY} ${ASSUAN_PTHREAD_LIBRARIES} )
++  target_link_libraries( kleopatraclientcore ${QT_QTCORE_LIBRARY} ${ASSUAN2_LIBRARIES} )
+ endif ( WIN32 )
+ 
+ install(

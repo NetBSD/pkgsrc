@@ -1,0 +1,39 @@
+$NetBSD: patch-ap,v 1.1 2010/09/01 13:45:25 wiz Exp $
+
+libassuan2 support from
+http://websvn.kde.org/?view=revision&revision=1078528
+
+--- kleopatra/uiserver/uiserver_unix.cpp.orig	2009-01-27 23:05:13.000000000 +0000
++++ kleopatra/uiserver/uiserver_unix.cpp
+@@ -61,11 +61,7 @@ QString UiServer::Private::systemErrorSt
+ 
+ void UiServer::Private::doMakeListeningSocket( const QByteArray & encodedFileName ) {
+     // Create a Unix Domain Socket:
+-#ifdef HAVE_ASSUAN_SOCK_GET_NONCE
+     const assuan_fd_t sock = assuan_sock_new( AF_UNIX, SOCK_STREAM, 0 );
+-#else
+-    const assuan_fd_t sock = ::socket( AF_UNIX, SOCK_STREAM, 0 );
+-#endif
+     if ( sock == ASSUAN_INVALID_FD )
+         throw_<std::runtime_error>( i18n( "Could not create socket: %1", systemErrorString() ) );
+ 
+@@ -75,19 +71,13 @@ void UiServer::Private::doMakeListeningS
+         std::memset( &sa, 0, sizeof(sa) );
+         sa.sun_family = AF_UNIX;
+         std::strncpy( sa.sun_path, encodedFileName.constData(), sizeof( sa.sun_path ) - 1 );
+-#ifdef HAVE_ASSUAN_SOCK_GET_NONCE
+         if ( assuan_sock_bind( sock, (struct sockaddr*)&sa, sizeof( sa ) ) )
+-#else
+-        if ( ::bind( sock, (struct sockaddr*)&sa, sizeof( sa ) ) )
+-#endif
+             throw_<std::runtime_error>( i18n( "Could not bind to socket: %1", systemErrorString() ) );
+ 
+         // ### TODO: permissions?
+ 
+-#ifdef HAVE_ASSUAN_SOCK_GET_NONCE
+         if ( assuan_sock_get_nonce( (struct sockaddr*)&sa, sizeof( sa ), &nonce ) )
+             throw_<std::runtime_error>( i18n("Could not get socket nonce: %1", systemErrorString() ) );
+-#endif
+ 
+         // Listen
+         if ( ::listen( sock, SOMAXCONN ) )
