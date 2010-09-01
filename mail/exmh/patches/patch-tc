@@ -1,0 +1,18 @@
+$NetBSD: patch-tc,v 1.1 2010/09/01 09:23:18 wiz Exp $
+
+patch from upstream cvs repository to allow exmh to function
+correctly with tcl 8.5 (or any earlier version).  This patch
+will not be needed after the next exmh upgrade.
+
+
+--- exmh-2.7.2/lib/html_get_http.tcl	2002-04-23 13:04:09.000000000 +0700
++++ lib/html_get_http.tcl	2010-08-27 03:50:58.000000000 +0700
+@@ -155,7 +155,7 @@
+     }
+     if {$protocol == "http"} {
+ 	# Callback to determine if a proxy is necessary
+-	lassign {proxy pport} [Http_Proxy $host]
++	exmh_lassign {proxy pport} [Http_Proxy $host]
+ 	if [catch {
+ 	    if [string length $proxy] {
+ 		set sock [HttpConnect $proxy $pport $data(protocol) $url]
