@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3066 2010/09/01 05:36:27 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3067 2010/09/01 06:04:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3999,3 +3999,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ikiwiki to 3.20100831 [schmonz 2010-09-01]
 	Updated devel/p5-Exception-Class to 1.32 [sno 2010-09-01]
 	Updated devel/p5-File-chdir to 0.1004 [sno 2010-09-01]
+	Updated devel/p5-Perl-Critic to 1.109 [sno 2010-09-01]
