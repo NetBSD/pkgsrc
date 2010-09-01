@@ -1,0 +1,26 @@
+$NetBSD: patch-ah,v 1.3 2010/09/01 13:45:25 wiz Exp $
+
+libassuan2 support from
+http://websvn.kde.org/?view=revision&revision=1078528
+
+--- kleopatra/config-kleopatra.h.cmake.orig	2008-07-29 11:51:01.000000000 +0000
++++ kleopatra/config-kleopatra.h.cmake
+@@ -1,18 +1,6 @@
+ /* Define to 1 if you have a recent enough libassuan */
+ #cmakedefine HAVE_USABLE_ASSUAN 1
+ 
+-/* Define to 1 if your libassuan has the assuan_fd_t type  */
+-#cmakedefine HAVE_ASSUAN_FD_T 1
+-
+-/* Define to 1 if your libassuan has the assuan_inquire_ext function */
+-#cmakedefine HAVE_ASSUAN_INQUIRE_EXT 1
+-
+-/* Define to 1 if your assuan_inquire_ext puts the buffer arguments into the callback signature */
+-#cmakedefine HAVE_NEW_STYLE_ASSUAN_INQUIRE_EXT 1
+-
+-/* Define to 1 if your libassuan has the assuan_sock_get_nonce function */
+-#cmakedefine HAVE_ASSUAN_SOCK_GET_NONCE 1
+-
+ /* Define to 1 if you build libkleopatraclient */
+ #cmakedefine HAVE_KLEOPATRACLIENT_LIBRARY 1
+ 
