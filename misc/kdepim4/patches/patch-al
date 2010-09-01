@@ -1,0 +1,60 @@
+$NetBSD: patch-al,v 1.1 2010/09/01 13:45:25 wiz Exp $
+
+libassuan2 support from
+http://websvn.kde.org/?view=revision&revision=1078528
+
+--- kleopatra/tests/test_uiserver.cpp.orig	2009-07-17 21:45:43.000000000 +0000
++++ kleopatra/tests/test_uiserver.cpp
+@@ -89,17 +89,17 @@ static void usage( const std::string & m
+     exit( 1 );
+ }
+ 
+-static assuan_error_t data( void * void_ctx, const void * buffer, size_t len ) {
++static gpg_error_t data( void * void_ctx, const void * buffer, size_t len ) {
+     (void)void_ctx; (void)buffer; (void)len;
+     return 0; // ### implement me
+ }
+ 
+-static assuan_error_t status( void * void_ctx, const char * line ) {
++static gpg_error_t status( void * void_ctx, const char * line ) {
+     (void)void_ctx; (void)line;
+     return 0;
+ }
+ 
+-static assuan_error_t inquire( void * void_ctx, const char * keyword ) {
++static gpg_error_t inquire( void * void_ctx, const char * keyword ) {
+     assuan_context_t ctx = (assuan_context_t)void_ctx;
+     assert( ctx );
+     const std::map<std::string,std::string>::const_iterator it = inquireData.find( keyword );
+@@ -121,7 +121,7 @@ int main( int argc, char * argv[] ) {
+ 
+     const Kleo::WSAStarter _wsastarter;
+ 
+-    assuan_set_assuan_err_source( GPG_ERR_SOURCE_DEFAULT );
++    assuan_set_gpg_err_source( GPG_ERR_SOURCE_DEFAULT );
+ 
+     if ( argc < 3 )
+         usage(); // need socket and command, at least
+@@ -185,7 +185,12 @@ int main( int argc, char * argv[] ) {
+ 
+     assuan_context_t ctx = 0;
+ 
+-    if ( const gpg_error_t err = assuan_socket_connect_ext( &ctx, socket, -1, ASSUAN_CONNECT_FLAGS ) ) {
++    if ( const gpg_error_t err = assuan_new( &ctx ) ) {
++        qDebug( "%s", Exception( err, "assuan_new" ).what() );
++        return 1;
++    }
++
++    if ( const gpg_error_t err = assuan_socket_connect( ctx, socket, -1, ASSUAN_CONNECT_FLAGS ) ) {
+         qDebug( "%s", Exception( err, "assuan_socket_connect_ext" ).what() );
+         return 1;
+     }
+@@ -279,7 +284,7 @@ int main( int argc, char * argv[] ) {
+         return 1;
+     }
+ 
+-    assuan_disconnect( ctx );
++    assuan_release( ctx );
+ 
+     return 0;
+ }
