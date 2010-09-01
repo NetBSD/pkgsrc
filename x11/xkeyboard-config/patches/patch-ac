@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.5 2010/09/01 12:55:50 wiz Exp $
+
+Fix syntax error.
+https://bugs.freedesktop.org/show_bug.cgi?id=29887
+
+--- symbols/lk.orig	2010-02-01 23:00:18.000000000 +0000
++++ symbols/lk
+@@ -74,7 +74,7 @@ xkb_symbols "sin_phonetic" {
+   key <AB10> { [ any, any, 0x0100200d, NoSymbol ] };
+ 
+   // Space
+-  include "nbsp(zwnj2nb3s)";
++  include "nbsp(zwnj2nb3s)"
+ 
+   include "level3(ralt_switch)"
+ };
