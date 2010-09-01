@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3074 2010/09/01 20:31:01 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3075 2010/09/01 20:42:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Config-INI to 0.015 [sno 2010-09-01]
 	Updated devel/p5-Config-IniFiles to 2.58 [sno 2010-09-01]
 	Updated textproc/p5-YAML to 0.72 [sno 2010-09-01]
+	Added multimedia/libvdpau version 0.4 [wiz 2010-09-01]
