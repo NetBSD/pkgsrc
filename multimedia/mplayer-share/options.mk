@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.39 2009/11/04 16:00:54 pooka Exp $
+# $NetBSD: options.mk,v 1.40 2010/09/01 20:55:56 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -7,6 +7,7 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
 .include "../../mk/oss.buildlink3.mk"
+.include "../../multimedia/libvdpau/available.mk"
 
 # -------------------------------------------------------------------------
 # Define PKG_SUPPORTED_OPTIONS based on the current package and system.
@@ -26,6 +27,10 @@ PKG_SUGGESTED_OPTIONS+=		mplayer-internal-faad
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
 PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas pulseaudio sdl
+
+.if ${VDPAU_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+=	vdpau
+.endif
 
 .  if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=	arts
@@ -76,7 +81,7 @@ PKG_SUPPORTED_OPTIONS+= xvid
 .for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \
-	    nas oss pulseaudio png sdl theora vorbis x264 xvid
+	    nas oss pulseaudio png sdl theora vorbis x264 xvid vdpau
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_o_})
 PKG_SUGGESTED_OPTIONS+=	${_o_}
 .  endif
@@ -317,6 +322,12 @@ CONFIGURE_ARGS+=	--disable-xvid
 .include "../../devel/binutils/override-as.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ssse3
+.endif
+
+.if !empty(PKG_OPTIONS:Mvdpau)
+.  include "../../multimedia/libvdpau/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-vdpau
 .endif
 
 # -------------------------------------------------------------------------
