@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.11 2009/06/18 10:19:46 drochner Exp $
+$NetBSD: patch-ab,v 1.12 2010/09/01 16:32:17 drochner Exp $
 
---- doc/Makefile.in.orig	2009-06-10 16:22:21.000000000 +0200
+--- doc/Makefile.in.orig	2010-07-25 09:34:19.000000000 +0000
 +++ doc/Makefile.in
-@@ -746,7 +746,7 @@ top_srcdir = @top_srcdir@
+@@ -922,7 +922,7 @@ top_srcdir = @top_srcdir@
  EXTRA_DIST = TODO README.gaa certtool.cfg gnutls.ps gnutls.pdf \
- 	gnutls.html extract-guile-c-doc.scm doxygen/Doxyfile.in \
- 	doxygen/Doxyfile.orig texinfo.css $(guile_texi)
+ 	gnutls.html doxygen/Doxyfile.in doxygen/Doxyfile.orig \
+ 	texinfo.css $(guile_texi) extract-guile-c-doc.scm
 -SUBDIRS = examples cyclo scripts manpages credentials $(am__append_1)
 +SUBDIRS = cyclo scripts manpages credentials $(am__append_1)
  info_TEXINFOS = gnutls.texi
  
- # Generated texinfos.
-@@ -957,7 +957,7 @@ gnutls.dvi: gnutls.texi $(srcdir)/versio
+ # Examples.
+@@ -1139,7 +1139,7 @@ gnutls.dvi: gnutls.texi $(srcdir)/versio
  gnutls.pdf: gnutls.texi $(srcdir)/version.texi $(gnutls_TEXINFOS)
  gnutls.html: gnutls.texi $(srcdir)/version.texi $(gnutls_TEXINFOS)
  $(srcdir)/version.texi:  $(srcdir)/stamp-vti
