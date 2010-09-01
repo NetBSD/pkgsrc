@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+
+--- bin/scripts/omkdirhier.orig	2004-02-11 21:36:28.000000000 +0600
++++ bin/scripts/omkdirhier
+@@ -81,7 +81,7 @@ do
+ 				fi
+ 			done
+ 
+-			mkdir $paths || status=$?
++			mkdir -m 0755 $paths || status=$?
+ 
+ 			break
+ 		}
