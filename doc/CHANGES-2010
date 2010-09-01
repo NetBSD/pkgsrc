@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3072 2010/09/01 20:12:00 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3073 2010/09/01 20:17:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4005,3 +4005,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/kdepim4 to 4.4.5nb2 [wiz 2010-09-01]
 	Updated time/p5-DateTime-Format-Flexible to 0.16 [sno 2010-09-01]
 	Updated devel/p5-Config-INI to 0.015 [sno 2010-09-01]
+	Updated devel/p5-Config-IniFiles to 2.58 [sno 2010-09-01]
