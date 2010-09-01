@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/09/01 13:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/01 13:45:52 wiz Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 PKGREVISION=	2
@@ -63,6 +63,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=full
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
 .include "../../x11/kdebase-workspace4/buildlink3.mk"
