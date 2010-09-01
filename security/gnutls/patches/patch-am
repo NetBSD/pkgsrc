@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2010/09/01 16:32:17 drochner Exp $
+
+--- tests/openpgp-certs/testselfsigs.orig	2010-06-07 14:32:23.000000000 +0000
++++ tests/openpgp-certs/testselfsigs
+@@ -25,7 +25,7 @@ set -e
+ srcdir="${srcdir:-.}"
+ CERTTOOL="${CERTTOOL:-../../src/certtool$EXEEXT}"
+ 
+-unset RETCODE
++unset RETCODE || true
+ 
+ fail() {
+    echo "Failure: $1" >&2
