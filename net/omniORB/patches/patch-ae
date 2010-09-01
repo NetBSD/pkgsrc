@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+
+--- mk/beforeauto.mk.in.orig	2007-05-11 12:17:21.000000000 +0200
++++ mk/beforeauto.mk.in
+@@ -1030,7 +1030,11 @@ endif
+ ifdef NetBSD
+ IMPORT_CPPFLAGS += -D__netbsd__
+ 
+-OMNITHREAD_CPPFLAGS = -D_REENTRANT
++CLINKOPTIONS    = $(CDEBUGFLAGS) $(COPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++CXXLINKOPTIONS  = $(CXXDEBUGFLAGS) $(CXXOPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++SharedLibraryPlatformLinkFlagsTemplate = $(CXXLINKOPTIONS) -shared -Wl,-soname,$$soname
++
++OMNITHREAD_CPPFLAGS = -D_REENTRANT -D_THREAD_SAFE
+ OMNITHREAD_POSIX_CPPFLAGS = -DUsePthread -DPthreadDraftVersion=10
+ OMNITHREAD_LIB += -pthread
+ endif

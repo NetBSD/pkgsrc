@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+
+--- include/omnithread.h.orig	2004-07-02 02:11:21.000000000 +0700
++++ include/omnithread.h
+@@ -151,6 +151,9 @@ class omni_thread;
+ #elif defined(__irix__)
+ #include <omnithread/posix.h>
+ 
++#elif defined(__netbsd__)
++#include <omnithread/posix.h>
++
+ #elif defined(__freebsd__)
+ #include <omnithread/posix.h>
+ 

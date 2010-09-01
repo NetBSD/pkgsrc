@@ -1,0 +1,24 @@
+omniORB is a robust high performance CORBA ORB for C++ and Python. It is
+freely available under the terms of the GNU Lesser General Public License
+(for the libraries), and GNU General Public License (for the tools). It is
+one of only three ORBs to have been awarded the Open Group's Open Brand for
+CORBA. This means that omniORB has been tested and certified CORBA 2.1
+compliant.
+The technical highlights are:
+  * C++ and Python language bindings.
+  * Adheres to the CORBA 2.6 specification.
+  * Support for GIOP and IIOP 1.0, 1.1 and 1.2.
+  * Fully multithreaded runtime.
+  * TypeCode and type Any.
+  * CORBA 2.6 DynAny interfaces.
+  * Dynamic Invocation and Dynamic Skeleton interfaces.
+  * Complete Naming Service, omniNames.
+  * Support for wchar, wstring and code set negotiation.
+  * Full long long, long double, fixed point support.
+  * PortableServer::Current.
+  * Unix domain socket transport.
+  * Bidirectional GIOP.
+  * Interoperable Secure Socket Layer transport.
+  * Flexible thread management.
+  * Interceptors.
+  * Fully interoperable with other CORBA ORBs.
