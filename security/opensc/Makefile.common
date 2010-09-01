@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2009/08/03 18:45:31 hasso Exp $
+# $NetBSD: Makefile.common,v 1.5 2010/09/01 15:59:22 drochner Exp $
 #
 # used by security/opensc/Makefile
 # used by security/opensc-signer/Makefile
 
-OPENSC_PKG_VERSION=	0.11.9
+OPENSC_PKG_VERSION=	0.11.13
 DISTNAME=		opensc-${OPENSC_PKG_VERSION}
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/opensc/
