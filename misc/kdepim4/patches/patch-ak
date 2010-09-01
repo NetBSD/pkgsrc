@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1 2010/09/01 13:45:25 wiz Exp $
+
+libassuan2 support from
+http://websvn.kde.org/?view=revision&revision=1078528
+
+--- kleopatra/libkleopatraclient/core/initialization.cpp.orig	2008-07-08 09:56:21.000000000 +0000
++++ kleopatra/libkleopatraclient/core/initialization.cpp
+@@ -29,7 +29,7 @@
+ using namespace KLEOPATRACLIENT_NAMESPACE;
+ 
+ Initialization::Initialization() {
+-    assuan_set_assuan_err_source( GPG_ERR_SOURCE_DEFAULT );
++    assuan_set_gpg_err_source( GPG_ERR_SOURCE_DEFAULT );
+ }
+ 
+ Initialization::~Initialization() {
