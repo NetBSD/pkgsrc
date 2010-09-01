@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3064 2010/09/01 05:13:53 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.3065 2010/09/01 05:27:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3997,3 +3997,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBD-mysql to 4.017 [sno 2010-08-31]
 	Updated devel/p5-Data-UUID to 1.215 [sno 2010-08-31]
 	Updated www/ikiwiki to 3.20100831 [schmonz 2010-09-01]
+	Updated devel/p5-Exception-Class to 1.32 [sno 2010-09-01]
