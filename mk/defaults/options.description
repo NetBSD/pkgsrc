@@ -533,6 +533,7 @@ unrealircd-topicisnuhost	/topic command to show the nick!user@host of the person
 unrealircd-ziplinks	Compress data before transmitting it between servers.
 upnp			Enable support for UPnP.
 uucp			Enable support for uucp.
+vdpau			Enable support for VDPAU.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
 viewvc-php		Use php to colorize .php and .inc files.
