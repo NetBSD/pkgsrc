@@ -1,0 +1,19 @@
+$NetBSD: patch-tf,v 1.1 2010/09/01 09:23:18 wiz Exp $
+
+patch from upstream cvs repository to allow exmh to function
+correctly with tcl 8.5 (or any earlier version).  This patch
+will not be needed after the next exmh upgrade.
+
+
+--- exmh-2.7.2/lib/utils.tcl	2004-11-12 02:36:20.000000000 +0700
++++ lib/utils.tcl	2010-08-27 03:50:58.000000000 +0700
+@@ -23,7 +23,8 @@
+ # Assign a set of variables from a list of values.
+ # If there are more values than variables, they are ignored.
+ # If there are fewer values than variables, the variables get the empty string.
+-proc lassign {varList value} {
++# renamed to avoid conflicting with tcl8.5 lassign which has different calling
++proc exmh_lassign {varList value} {
+     if {[string length $value] == 0} {
+ 	foreach var $varList {
+ 	    uplevel [list set $var {}]

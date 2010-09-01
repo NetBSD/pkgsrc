@@ -1,0 +1,25 @@
+$NetBSD: patch-td,v 1.1 2010/09/01 09:23:18 wiz Exp $
+
+patch from upstream cvs repository to allow exmh to function
+correctly with tcl 8.5 (or any earlier version).  This patch
+will not be needed after the next exmh upgrade.
+
+
+--- exmh-2.7.2/lib/html_links.tcl	2001-05-15 00:51:38.000000000 +0700
++++ lib/html_links.tcl	2010-08-27 03:50:58.000000000 +0700
+@@ -79,13 +81,13 @@
+ }
+ proc Url_Hit {win x y} {
+     dputs Url_Hit $x $y
+-    lassign {href name} [UrlGetLink $win $x $y]
++    exmh_lassign {href name} [UrlGetLink $win $x $y]
+     Html_HistoryAdd $win $href
+     Frame_Display $win $name $href
+ }
+ # This is like Url_Hit for regular hits, but it opens a new window.
+ proc Url_HitNew {win x y} {
+-    lassign {href target} [UrlGetLink $win $x $y]
++    exmh_lassign {href target} [UrlGetLink $win $x $y]
+     Url_DisplayNew $href $win
+ }
+ 
