@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.850 2010/08/31 13:26:05 gdt Exp $
+# $NetBSD: Makefile,v 1.851 2010/09/01 16:30:57 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -315,6 +315,7 @@ SUBDIR+=	ocamlnet
 SUBDIR+=	ocsinventory-agent
 SUBDIR+=	oidentd
 SUBDIR+=	oinkmaster
+SUBDIR+=	omniORB
 SUBDIR+=	openafs
 SUBDIR+=	openag
 SUBDIR+=	openh323
