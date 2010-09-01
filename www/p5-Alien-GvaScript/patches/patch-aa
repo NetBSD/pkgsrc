@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2010/09/01 21:21:37 sno Exp $
+
+remove group/world write bits and any execution bits from a js file
+
+--- GvaScript_Builder.pm.orig	2010-03-17 22:00:27.000000000 +0000
++++ GvaScript_Builder.pm
+@@ -42,7 +42,7 @@ sub generate_js { # concatenates sources
+                    customButtons paginator grid
+                    repeat form/;
+   my $dest = "lib/Alien/GvaScript/lib/GvaScript.js";
+-  chmod 0777, $dest;
++  chmod 0644, $dest;
+   open my $dest_fh, ">$dest"  or die "open >$dest : $!";
+ 
+   print $dest_fh <<__EOJS__;

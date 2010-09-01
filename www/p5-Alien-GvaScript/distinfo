@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/02/03 22:34:58 seb Exp $
+$NetBSD: distinfo,v 1.5 2010/09/01 21:21:37 sno Exp $
 
-SHA1 (Alien-GvaScript-1.21.tar.gz) = 29ec121626ae372882bc0831a8fcd217441252ea
-RMD160 (Alien-GvaScript-1.21.tar.gz) = 3536c9215e7ed4fbb9b814a5bd75db154c8cf070
-Size (Alien-GvaScript-1.21.tar.gz) = 263292 bytes
+SHA1 (Alien-GvaScript-1.22.tar.gz) = 91e4687bbcc397c85bb2e991df94850efa844c0f
+RMD160 (Alien-GvaScript-1.22.tar.gz) = ca85e249c55cef59ccd3da65b7e627374a96bfc5
+Size (Alien-GvaScript-1.22.tar.gz) = 323686 bytes
+SHA1 (patch-aa) = 50df9bee65c8556a9021d2eefc84edc21d87fdec
