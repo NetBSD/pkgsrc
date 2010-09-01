@@ -1,0 +1,8 @@
+The Video Decode and Presentation API for Unix (VDPAU) provides a complete
+solution for decoding, post-processing, compositing, and displaying
+compressed or uncompressed video streams. These video streams may be
+combined (composited) with bitmap content, to implement OSDs and other
+application user interfaces.
+
+This VDPAU API allows video programs to offload portions of the video
+decoding process and video post-processing to the GPU video-hardware.
