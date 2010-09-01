@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/03 18:45:31 hasso Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/01 15:59:22 drochner Exp $
 bin/cardos-info
 bin/cardos-tool
 bin/cryptoflex-tool
@@ -13,6 +13,7 @@ bin/pkcs15-crypt
 bin/pkcs15-init
 bin/pkcs15-tool
 bin/rutoken-tool
+bin/westcos-tool
 include/opensc/asn1.h
 include/opensc/cardctl.h
 include/opensc/compression.h
@@ -20,8 +21,8 @@ include/opensc/emv.h
 include/opensc/errors.h
 include/opensc/log.h
 include/opensc/opensc.h
-include/opensc/pkcs11.h
 include/opensc/pkcs11-opensc.h
+include/opensc/pkcs11.h
 include/opensc/pkcs15-init.h
 include/opensc/pkcs15.h
 include/opensc/scconf.h
@@ -49,6 +50,7 @@ man/man1/pkcs11-tool.1
 man/man1/pkcs15-crypt.1
 man/man1/pkcs15-init.1
 man/man1/pkcs15-tool.1
+man/man1/westcos-tool.1
 man/man3/sc_app_info_t.3
 man/man3/sc_append_record.3
 man/man3/sc_asn1_decode.3
@@ -121,9 +123,11 @@ share/opensc/incrypto34.profile
 share/opensc/jcop.profile
 share/opensc/miocos.profile
 share/opensc/muscle.profile
+share/opensc/myeid.profile
 share/opensc/oberthur.profile
 share/opensc/pkcs15.profile
 share/opensc/rutoken.profile
 share/opensc/rutoken_ecp.profile
 share/opensc/setcos.profile
 share/opensc/starcos.profile
+share/opensc/westcos.profile
