@@ -1,0 +1,18 @@
+$NetBSD: patch-te,v 1.1 2010/09/01 09:23:18 wiz Exp $
+
+patch from upstream cvs repository to allow exmh to function
+correctly with tcl 8.5 (or any earlier version).  This patch
+will not be needed after the next exmh upgrade.
+
+
+--- exmh-2.7.2/lib/msgShow.tcl	2005-01-08 06:17:57.000000000 +0700
++++ lib/msgShow.tcl	2010-08-31 20:15:16.000000000 +0700
+@@ -496,7 +496,7 @@
+ #	    continue
+ #        }
+ 
+-	lassign {qt_cnt qt_str} [MsgHighlightQuoteLevel $txt]
++	exmh_lassign {qt_cnt qt_str} [MsgHighlightQuoteLevel $txt]
+ 	if {$qt_cnt >= 5} {
+ 	    set qt_cnt 5
+ 	}
