@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2010/01/17 12:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2010/09/01 16:40:53 drochner Exp $
 #
 
-DISTNAME=		dirmngr-1.0.3
-PKGREVISION=		1
+DISTNAME=		dirmngr-1.1.0
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/dirmngr/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		pth-2.0.7.tar.gz
-SITES.pth-2.0.7.tar.gz=	${MASTER_SITE_GNU:=pth/}
-DISTFILES+=		libassuan-1.0.5.tar.bz2
-SITES.libassuan-1.0.5.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		shannonjr@NetBSD.org
@@ -43,8 +37,6 @@ CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/libdata
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_openldap-client=${BUILDLINK_PREFIX.openldap-client}
-CONFIGURE_ARGS+=	--with-pth-prefix=${WRKDIR}/pth
-CONFIGURE_ARGS+=	--with-libassuan-prefix=${WRKDIR}/libassuan
 
 FILES_SUBST+=		VARBASE=${VARBASE:Q}
 FILES_SUBST+=		PREFIX=${PREFIX:Q}
@@ -65,16 +57,6 @@ OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
 INSTALLATION_DIRS=	sbin
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# We are building a static pth library and linking against it
-# We are also building libassuan here to get libassuan-pth.
-pre-configure:
-	cd  ${WRKDIR}/pth-2.0.7 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
-	cd  ${WRKDIR}/libassuan-1.0.5 && \
-	${SETENV} ${CONFIGURE_ENV} ./autogen.sh && \
-	${SETENV} ${CONFIGURE_ENV} ./configure --enable-maintainer-mode --prefix=${WRKDIR}/libassuan --with-pth-prefix=${WRKDIR}/pth && \
-	${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} install
-	cd  ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./autogen.sh
-
 pre-build:
 	${CP} ${FILESDIR}/runDirmngr.c ${WRKDIR}/runDirmngr.c
 
@@ -92,4 +74,8 @@ post-install:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
+# previous pth versions have a bug which breaks CRL fetch on NetBSD
+BUILDLINK_ABI_DEPENDS.pth+= pth>=2.0.7nb1
+.include "../../devel/pth/buildlink3.mk"
+.include "../../security/libassuan2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
