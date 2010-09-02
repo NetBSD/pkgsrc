@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gpgsm,v 1.9 2010/09/01 16:46:41 drochner Exp $
+@comment $NetBSD: PLIST.gpgsm,v 1.10 2010/09/02 06:58:35 obache Exp $
 bin/gpg-connect-agent
 bin/gpg2
 bin/gpgconf
@@ -21,7 +21,6 @@ libexec/gpg-check-pattern
 man/man1/gpg-agent.1
 man/man1/gpg-connect-agent.1
 man/man1/gpg-preset-passphrase.1
-man/man1/gpg-zip.1
 man/man1/gpg2.1
 man/man1/gpgconf.1
 man/man1/gpgparsemail.1

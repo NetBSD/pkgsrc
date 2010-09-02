@@ -1,4 +1,7 @@
-$NetBSD: patch-ak,v 1.1 2009/12/16 18:52:49 drochner Exp $
+$NetBSD: patch-ak,v 1.2 2010/09/02 06:58:35 obache Exp $
+
+gpg-zip script will not be installed, so man page also should not be installed.
+If will introduce conflict with security/gnupg.
 
 --- doc/Makefile.am.orig	2009-12-16 18:23:55.000000000 +0000
 +++ doc/Makefile.am
