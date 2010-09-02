@@ -110,6 +110,7 @@ dvdread			Enable reproduction of DVDs.
 dvi			Enable device independent file format (mostly TeX) support.
 eb			Enable EB dictionary library support.
 ecl			Use Embeddable Common Lisp.
+eekboard		Use eekboard for virtual keyboard support.
 efnet			Enable tweaks to support EFNet.
 elinks-exmode		Enable vi-like command entry.
 elinks-fastmem		Allow direct use of system memory allocation functions.
@@ -568,6 +569,7 @@ xscreensaver-webcollage	Install webcollage screensaver.
 xterm-256color		Enable 256 color support.
 xterm-88color		Enable 88 color support.
 xterm-luit		Enable locale <> UTF encoding translation.
+xtest			Use XTEST Extension Library.
 xvid			Enable usage of XVid codecs.
 zaptel			Enable usage of Zaptel drivers.
 zenmap			Enable nmap GUI frontend.
