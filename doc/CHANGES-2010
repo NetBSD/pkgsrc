@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3083 2010/09/02 06:58:50 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3084 2010/09/02 11:33:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4016,3 +4016,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBIx-Class-TimeStamp to 0.13 [sno 2010-09-02]
 	Updated databases/p5-DBIx-DBSchema to 0.39 [sno 2010-09-02]
 	Updated security/gnupg2 to 2.0.16nb1 [obache 2010-09-02]
+	Updated inputmethod/ibus-m17n to 1.3.1 [obache 2010-09-02]
