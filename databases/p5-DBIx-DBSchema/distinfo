@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/01/26 12:34:06 sno Exp $
+$NetBSD: distinfo,v 1.5 2010/09/02 06:16:33 sno Exp $
 
-SHA1 (DBIx-DBSchema-0.38.tar.gz) = ad81b84a7f37b8bbb0a61f861dfb7698fe32066c
-RMD160 (DBIx-DBSchema-0.38.tar.gz) = 9ed7eecd2794c98c8ba21d1f20b2850f6b47bdff
-Size (DBIx-DBSchema-0.38.tar.gz) = 27093 bytes
+SHA1 (DBIx-DBSchema-0.39.tar.gz) = 6cf0aa98d254acd2213d7409f5ca00db767a1e67
+RMD160 (DBIx-DBSchema-0.39.tar.gz) = 40ba0b2bf31880ffc9b5e1492a6f2dc3b2d3e6af
+Size (DBIx-DBSchema-0.39.tar.gz) = 27587 bytes
