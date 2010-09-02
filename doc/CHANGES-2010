@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3085 2010/09/02 15:33:52 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.3086 2010/09/02 19:11:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4037,3 +4037,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/clawsker to 0.7.2 [drochner 2010-09-02]
 	Updated www/epiphany to 2.30.5 [drochner 2010-09-02]
 	Updated www/epiphany-extensions to 2.30.2 [drochner 2010-09-02]
+	Updated devel/p5-Class-Accessor-Grouped to 0.09005 [sno 2010-09-02]
