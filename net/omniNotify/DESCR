@@ -1,0 +1,8 @@
+omniNotify is an implementation of the OMG CORBA Notification Service
+(current specification: ftp://ftp.omg.org/pub/docs/telecom/99-07-01.pdf)
+- Implemented in C++
+- Scalable filter evaluation and event dispatching architecture
+- Support for Any, Structured, and Batch events
+- Push and Pull models of event distribution
+- Administrative and Notification QoS properties
+- Backward compatible with the OMG Event Service Specification
