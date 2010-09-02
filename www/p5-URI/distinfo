@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2010/07/31 12:29:16 sno Exp $
+$NetBSD: distinfo,v 1.21 2010/09/02 20:34:24 sno Exp $
 
-SHA1 (URI-1.54.tar.gz) = e0ef831aed3b3dd44b3027075b610a81c135ddae
-RMD160 (URI-1.54.tar.gz) = 0b22ee09f348275c0ceea195526f8d0418f12c56
-Size (URI-1.54.tar.gz) = 80214 bytes
+SHA1 (URI-1.55.tar.gz) = 938b4e93804f9cf02b1ac3721f54bd5f267fbfc9
+RMD160 (URI-1.55.tar.gz) = 862061e0b2a2d293d684c5c772649e6761201e4d
+Size (URI-1.55.tar.gz) = 80410 bytes
