@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3078 2010/09/01 21:43:18 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3079 2010/09/02 00:36:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-NetPacket to 0.43.1 [sno 2010-09-01]
 	Updated www/p5-Alien-GvaScript to 1.22 [sno 2010-09-01]
 	Updated textproc/p5-Text-FindIndent to 0.09 [sno 2010-09-01]
+	Updated security/ruby-oauth to 0.4.3 [obache 2010-09-02]
