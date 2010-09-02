@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3094 2010/09/02 20:30:46 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3095 2010/09/02 20:34:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4046,3 +4046,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Getopt to 0.33 [sno 2010-09-02]
 	Updated devel/p5-MooseX-NonMoose to 0.15 [sno 2010-09-02]
 	Updated www/p5-HTML-Parser to 3.68 [sno 2010-09-02]
+	Updated www/p5-URI to 1.55 [sno 2010-09-02]
