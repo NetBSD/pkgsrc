@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9605 2010/08/31 19:05:17 wiz Exp $
+$NetBSD: TODO,v 1.9606 2010/09/02 06:58:50 obache Exp $
 
 Suggested new packages
 ======================
@@ -691,7 +691,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnumeric110-1.10.9
-	o gnupg2-2.0.16
 	o gnuplot-4.4.0 [pkg/43771]
 	o gnutls-2.10.1
 	o gob2-2.0.17
