@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/02 15:08:10 drochner Exp $
+
+SHA1 (omniORBpy-3.4.tar.gz) = e598bd25289d0a2a09da4c7241513202c8b9adb4
+RMD160 (omniORBpy-3.4.tar.gz) = 5b389a31907510800ef0913e2e3855038e6a4cf9
+Size (omniORBpy-3.4.tar.gz) = 721891 bytes
+SHA1 (patch-aa) = da768cb94abd970037675535b5350f84480f6ff3

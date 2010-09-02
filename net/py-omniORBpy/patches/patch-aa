@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/02 15:08:10 drochner Exp $
+
+--- mk/beforeauto.mk.in.orig	2007-05-11 11:23:25.000000000 +0200
++++ mk/beforeauto.mk.in
+@@ -347,6 +347,9 @@ endef
+ # Patterns for various file types
+ #
+ LibPathPattern    = -L%
++ifeq ($(shell uname -s),NetBSD)
++LibRPathPattern    = -Wl,-rpath -Wl,%
++endif
+ LibNoDebugPattern = lib%.a
+ LibDebugPattern = lib%.a
+ LibPattern = lib%.a
+@@ -405,7 +408,12 @@ endef
+ # i.e. we need to filter out the lib_depends from the command
+ #
+ 
++ifeq ($(shell uname -s),NetBSD)
++IMPORT_LIBRARY_FLAGS = $(patsubst %,$(LibPathPattern),$(IMPORT_LIBRARY_DIRS)) \
++	$(patsubst %,$(LibRPathPattern),$(IMPORT_LIBRARY_DIRS))
++else
+ IMPORT_LIBRARY_FLAGS = $(patsubst %,$(LibPathPattern),$(IMPORT_LIBRARY_DIRS))
++endif
+ 
+ define CXXExecutable
+ (set -x; \
