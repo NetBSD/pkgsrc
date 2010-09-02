@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/08/14 02:55:24 obache Exp $
+$NetBSD: distinfo,v 1.4 2010/09/02 00:35:57 obache Exp $
 
-SHA1 (oauth-0.4.2.gem) = 8709fcca8ad7377312294563c871ee6628e36e07
-RMD160 (oauth-0.4.2.gem) = fbdf1a3eef37ed50509fae77ced40fbd2495e0f6
-Size (oauth-0.4.2.gem) = 48640 bytes
+SHA1 (oauth-0.4.3.gem) = c103bca6aa3b191ec7c9ee492d3d7572ad5cc9cb
+RMD160 (oauth-0.4.3.gem) = 5dd5c5ae42dc05d82292502d51ecc83a85f0d360
+Size (oauth-0.4.3.gem) = 48640 bytes
