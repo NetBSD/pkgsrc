@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.63 2010/08/25 06:26:34 agc Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.64 2010/09/02 02:37:59 obache Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -286,18 +286,6 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 	named "root" is the privileged user.  To accommodate these, you
 	may create such a user; make sure it is in the local group
 	Administrators (or your language equivalent).</para>
-
-	<para>On Interix 3.5, before bootstrapping pkgsrc, the directory
-	which will contain pkgsrc shared libraries must be added to the
-	start of the <varname>LD_LIBRARY_PATH</varname> variable,
-	in the following manner.</para>
-
-	<screen>
-&rprompt; <userinput>export LD_LIBRARY_PATH=/usr/pkg/lib:$LD_LIBRARY_PATH
-	</screen>
-	
-	<para>Interix 3.5 requires this, as the setting is made globally in
-	<filename>/etc/profile</filename>.</para>
 
 	<para><command>pkg_add</command> creates directories of mode
 	0755, not 0775, in <filename>$PKG_DBDIR</filename>.  For the
