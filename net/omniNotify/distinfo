@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/02 15:20:36 drochner Exp $
+
+SHA1 (omniNotify-2.1.tar.gz) = 1413c0fda02b2b70333f5ca8df1ac39e1a7ed50b
+RMD160 (omniNotify-2.1.tar.gz) = de2a8d7ab6ada6c6e4970e89e232b8a2fbf1bfbf
+Size (omniNotify-2.1.tar.gz) = 539019 bytes
+SHA1 (patch-aa) = 110f537b10fa9cf0a78d57782e2240a1613ebc3d
+SHA1 (patch-ab) = 6e8d53db70a7e7d0608631429a9b1bbb0ce04b16
