@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 16:32:58 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/02 06:02:20 sno Exp $
 
-DISTNAME=	DBIx-Class-EncodedColumn-0.00009
+DISTNAME=	DBIx-Class-EncodedColumn-0.00010
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
