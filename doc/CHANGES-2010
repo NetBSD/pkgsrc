@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3080 2010/09/02 06:02:45 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3081 2010/09/02 06:12:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4013,3 +4013,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-FindIndent to 0.09 [sno 2010-09-01]
 	Updated security/ruby-oauth to 0.4.3 [obache 2010-09-02]
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00010 [sno 2010-09-02]
+	Updated databases/p5-DBIx-Class-TimeStamp to 0.13 [sno 2010-09-02]
