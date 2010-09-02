@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 02:00:08 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/09/02 11:33:12 obache Exp $
 
-SHA1 (ibus-m17n-1.3.0.tar.gz) = 2f205c07aef8f85204d990656914ddf7f69c5882
-RMD160 (ibus-m17n-1.3.0.tar.gz) = 211842368b6779a64e9eb17b9bb079a94312d2fb
-Size (ibus-m17n-1.3.0.tar.gz) = 391768 bytes
+SHA1 (ibus-m17n-1.3.1.tar.gz) = 95733c4c78b273103c99ff2a17f3d2e6692bba4a
+RMD160 (ibus-m17n-1.3.1.tar.gz) = 44bb51299a053200d3a6a56d59db6ec6aeef81d0
+Size (ibus-m17n-1.3.1.tar.gz) = 404890 bytes
