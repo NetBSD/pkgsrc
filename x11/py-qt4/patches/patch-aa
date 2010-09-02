@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.3 2009/07/29 19:47:24 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2010/09/02 09:20:19 drochner Exp $
 
---- configure.py.orig	2009-07-14 15:31:43.000000000 +0200
+--- configure.py.orig	2010-08-31 08:28:48.000000000 +0000
 +++ configure.py
-@@ -1680,11 +1680,7 @@ int main(int, char **)
+@@ -365,8 +365,8 @@ class ConfigurePyQt4:
+         check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
+         check_module("QtXml", "qdom.h", "new QDomDocument()")
+         check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
+-        check_module("phonon", "phonon/videowidget.h",
+-                "new Phonon::VideoWidget()")
++#        check_module("phonon", "phonon/videowidget.h",
++#                "new Phonon::VideoWidget()")
+         check_module("QtAssistant", "qassistantclient.h",
+                 "new QAssistantClient(\"foo\")", extra_lib_dirs=ass_lib_dirs,
+                 extra_libs=ass_libs)
+@@ -1855,11 +1855,7 @@ int main(int, char **)
  
      out << QLibraryInfo::licensee() << '\\n';
  
