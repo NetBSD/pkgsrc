@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/09/02 15:20:36 drochner Exp $
+
+--- configure.orig	2003-10-12 18:51:19.000000000 +0000
++++ configure
+@@ -2955,6 +2955,7 @@ case "$host" in
+   *-*-freebsd3*) platform_name="FreeBSD";  os_version="3";;
+   *-*-freebsd4*) platform_name="FreeBSD";  os_version="4";;
+   *-*-freebsd5*) platform_name="FreeBSD";  os_version="5";;
++  *-*-netbsd*)   platform_name="NetBSD";   os_version="0";;
+   *-*-sco*)      platform_name="OSR5";     os_version="5";;
+ esac
+ 
