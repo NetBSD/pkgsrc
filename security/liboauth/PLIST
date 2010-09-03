@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/03 07:14:12 agc Exp $
+include/oauth.h
+lib/liboauth.la
+lib/pkgconfig/oauth.pc
+man/man3/oauth.3
