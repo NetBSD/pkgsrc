@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9608 2010/09/03 05:12:33 sno Exp $
+$NetBSD: TODO,v 1.9609 2010/09/03 10:32:12 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o efax-gtk-3.2.4
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
-	o ejabberd-2.1.5
 	o ekiga-3.2.7
 	o electric-8.11
 	o electricfence-2.4.16
