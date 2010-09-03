@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3101 2010/09/03 05:36:44 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3102 2010/09/03 06:02:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4053,3 +4053,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/p5-Archive-Tar to 1.68 [sno 2010-09-03]
 	Updated devel/p5-Devel-CheckOS to 1.63 [sno 2010-09-03]
 	Updated devel/p5-Devel-Checklib to 0.7 [sno 2010-09-03]
+	Updated devel/p5-Devel-Cover to 0.70 [sno 2010-09-03]
