@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3107 2010/09/03 20:53:35 asau Exp $
+$NetBSD: CHANGES-2010,v 1.3108 2010/09/03 22:33:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4059,3 +4059,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/m4 to 1.4.15 [wiz 2010-09-03]
 	Added fonts/AnonymousPro version 1.001 [wiz 2010-09-03]
 	Updated biology/gromacs to 4.5.1 [asau 2010-09-03]
+	Updated devel/p5-pango to 1.221 [wiz 2010-09-03]
