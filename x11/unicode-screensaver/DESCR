@@ -1,0 +1,4 @@
+unicode-screensaver is a simple screensaver application that
+repeatedly randomly picks an unicode character and displays it in
+a very large font size together with its unicode code point and
+the character name.
