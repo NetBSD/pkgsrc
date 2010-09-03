@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/08/08 06:33:11 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2010/09/03 22:41:15 wiz Exp $
 
-DISTNAME=	p5-gnome-bindings-2.26.1.91
+DISTNAME=	p5-gnome-bindings-2.30.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -10,19 +10,15 @@ COMMENT=	Meta-package for Perl bindings for the GNOME desktop
 
 META_PACKAGE=	yes
 
-# see http://ftp.gnome.org/pub/GNOME/bindings/2.26/2.26.2/sources/perl/
+# see http://ftp.gnome.org/pub/GNOME/bindings/2.30/2.30.2/sources/perl/
 
-DEPENDS+=	p5-glib2>=1.220:../../devel/p5-glib2
-# unpackaged
-#DEPENDS+=	p5-Gnome2>=1.042:../../devel/p5-Gnome2
-# unpackaged
-#DEPENDS+=	p5-Gnome2-Canvas>=1.002:../../devel/p5-Gnome2-Canvas
-# unpackaged
-#DEPENDS+=	p5-Gnome2-GConf>=1.044:../../devel/p5-Gnome2-GConf
-# unpackaged
-#DEPENDS+=	p5-Gnome2-VFS>=1.081:../../devel/p5-Gnome2-VFS
-DEPENDS+=	p5-gtk2>=1.220:../../x11/p5-gtk2
+DEPENDS+=	p5-glib2>=1.222:../../devel/p5-glib2
+DEPENDS+=	p5-Gnome2>=1.042:../../devel/p5-Gnome2
+DEPENDS+=	p5-Gnome2-Canvas>=1.002:../../graphics/p5-Gnome2-Canvas
+DEPENDS+=	p5-Gnome2-GConf>=1.044:../../devel/p5-Gnome2-GConf
+DEPENDS+=	p5-Gnome2-VFS>=1.081:../../sysutils/p5-Gnome2-VFS
+DEPENDS+=	p5-gtk2>=1.221:../../x11/p5-gtk2
 DEPENDS+=	p5-Gtk2-GladeXML>=1.007:../../devel/p5-Gtk2-GladeXML
-DEPENDS+=	p5-pango>=1.220:../../devel/p5-pango
+DEPENDS+=	p5-pango>=1.221:../../devel/p5-pango
 
 .include "../../mk/bsd.pkg.mk"
