@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.619 2010/08/30 11:49:08 obache Exp $
+# $NetBSD: Makefile,v 1.620 2010/09/03 22:50:39 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -351,6 +351,7 @@ SUBDIR+=	transset-df
 SUBDIR+=	trapproto
 SUBDIR+=	tzosdclock
 SUBDIR+=	unclutter
+SUBDIR+=	unicode-screensaver
 SUBDIR+=	videoproto
 SUBDIR+=	vte
 SUBDIR+=	wdm
