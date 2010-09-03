@@ -1,0 +1,16 @@
+OAuth (Open Authorization) is an open standard that allows users to
+share their private resources (e.g.  photos, videos, contact lists)
+stored on one site with another site without having to hand out their
+username and password.
+
+OAuth allows users to hand out tokens instead of usernames and
+passwords to their data hosted by a given service provider.  Each
+token grants access to a specific site (e.g.  a video editing site)
+for specific resources (e.g.  just videos from a specific album) and
+for a defined duration (e.g.  the next 2 hours).
+
+Thus OAuth allows a user to grant a third party site access to their
+information stored with another service provider, without sharing
+their access permissions or the full extent of their data.
+
+OAuth is a service that is complementary to but distinct from OpenID.

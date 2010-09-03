@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/03 07:14:12 agc Exp $
+
+Remove some assumptions about the test(1) (sub)command
+
+--- configure	2010/08/31 17:01:09	1.1
++++ configure	2010/08/31 17:01:34
+@@ -12044,7 +12044,7 @@
+ 
+ report_curltimeout="-"
+ if test -n "${with_curltimeout}"; then
+-  if test "${with_curltimeout}" == "yes"; then
++  if test "${with_curltimeout}" = "yes"; then
+     $as_echo "#define OAUTH_CURL_TIMEOUT 60" >>confdefs.h
+ 
+     report_curltimeout="60"
+@@ -12062,7 +12062,7 @@
+ 
+ 
+ 
+-if test "${enable_nss}" == "yes"; then :
++if test "${enable_nss}" = "yes"; then :
+ 
+ 
+ pkg_failed=no
+@@ -12364,7 +12364,7 @@
+ fi
+ 
+ 
+-if test "$PERL" == "no"; then
++if test "$PERL" = "no"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: dude, where's your perl? doxygen will not like this!)" >&5
+ $as_echo "$as_me: WARNING: dude, where's your perl? doxygen will not like this!)" >&2;}
+ fi
