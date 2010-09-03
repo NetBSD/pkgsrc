@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/03 23:01:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/03 23:04:02 wiz Exp $
 #
 
 DISTNAME=	bullet-2.76
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bullet.googlecode.com/
 COMMENT=	Collision detection, soft body and rigid body dynamics library
-#LICENSE=	zlib
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
