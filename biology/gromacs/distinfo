@@ -1,16 +1,12 @@
-$NetBSD: distinfo,v 1.4 2010/07/31 19:14:08 dholland Exp $
+$NetBSD: distinfo,v 1.5 2010/09/03 20:52:39 asau Exp $
 
-SHA1 (gromacs-4.0.7.tar.gz) = 8519bef2fa989fb487d54612b0a2d0228f228b30
-RMD160 (gromacs-4.0.7.tar.gz) = 4fa8e5c90f549ef627a98a907a166676692a4c4b
-Size (gromacs-4.0.7.tar.gz) = 8404518 bytes
-SHA1 (patch-aa) = dcf39e862c2087bca0cd4e577438633bf70fe57f
-SHA1 (patch-ab) = 333fea1f0844f8628795f593de16c941744b11d2
-SHA1 (patch-ac) = 164a7b3e06ab4f4cc1142615c1281eec82adee9b
+SHA1 (gromacs-4.5.1.tar.gz) = 4352565278e39fb619208950780d8cb0b470a200
+RMD160 (gromacs-4.5.1.tar.gz) = b28973526859359c84ba5d4fe2a5018b158f932b
+Size (gromacs-4.5.1.tar.gz) = 10300446 bytes
+SHA1 (patch-aa) = 29c6683c71989621f0f41682b1c225f524a2d84f
 SHA1 (patch-ad) = 68b37154ba466e28cad0e539e25253c901421aaa
 SHA1 (patch-ae) = 59a5e88abeee883483b557cab1681c9a9098870f
-SHA1 (patch-af) = 58e97df84e64e071257fd36d09840ef719461ea5
-SHA1 (patch-ag) = 5d46a0dba7db4dbf08ea83d448a6e5201871d217
-SHA1 (patch-ah) = ad930cbb9f448780ca8745b899fe54c5470fff3b
+SHA1 (patch-ag) = 810d58d3ad787c9508f775674541775245402596
+SHA1 (patch-ah) = 36ceeb409e59d8d3f0abe3bfa3ea3108f61f7a8e
 SHA1 (patch-ai) = ed4aa71eb56d1300c67cd17057f72ea452739f3d
 SHA1 (patch-aj) = 080d2923d729ff00de0f2cae75a82ec6c3769d6c
-SHA1 (patch-ak) = bdfebf85422a6a9025d1f2c71921c4cc1c3069c4

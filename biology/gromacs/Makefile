@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/07/31 19:14:08 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/03 20:52:39 asau Exp $
 #
 
-DISTNAME=		gromacs-4.0.7
-PKGREVISION=		2
+DISTNAME=		gromacs-4.5.1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.gromacs.org/pub/gromacs/
 
@@ -18,10 +17,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-double --program-suffix=
 CONFIGURE_ARGS+=	--with-gsl
+CONFIGURE_ARGS+=	--disable-gcc41-check
 
 .include "options.mk"
 
