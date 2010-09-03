@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2010/08/21 16:33:33 seb Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/03 05:24:40 sno Exp $
 #
 
-DISTNAME=	Devel-CheckOS-1.61
+DISTNAME=	Devel-CheckOS-1.63
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-CheckOS/
-COMMENT=	Perl extension to check what OS we're running on
-#LICENSE=	${PERL_LICENSE}
+COMMENT=	Perl extension to check what OS we are running on
+LICENSE=	gnu-gpl-v2 OR artistic
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
