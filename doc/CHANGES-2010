@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3112 2010/09/03 22:39:02 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3113 2010/09/03 22:40:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4064,3 +4064,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/p5-Gnome2-VFS version 1.081 [wiz 2010-09-03]
 	Added devel/p5-Gnome2-GConf version 1.044 [wiz 2010-09-03]
 	Added graphics/p5-Gnome2-Canvas version 1.002 [wiz 2010-09-03]
+	Added devel/p5-Gnome2 version 1.042 [wiz 2010-09-03]
