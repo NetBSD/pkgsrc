@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/03 18:24:47 wiz Exp $
+lib/X11/fonts/TTF/AnonymousProB.ttf
+lib/X11/fonts/TTF/AnonymousProBI.ttf
+lib/X11/fonts/TTF/AnonymousProI.ttf
+lib/X11/fonts/TTF/AnonymousPro.ttf
+share/doc/AnonymousPro/FONTLOG.txt
+share/doc/AnonymousPro/OFL-FAQ.txt
+share/doc/AnonymousPro/OFL.txt
+share/doc/AnonymousPro/README.txt
