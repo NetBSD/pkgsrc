@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3115 2010/09/03 22:50:51 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3116 2010/09/03 23:02:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Gnome2 version 1.042 [wiz 2010-09-03]
 	Updated meta-pkgs/p5-gnome-bindings to 2.30.2 [wiz 2010-09-03]
 	Added x11/unicode-screensaver version 0.3 [wiz 2010-09-03]
+	Added devel/bullet version 2.76 [wiz 2010-09-03]
