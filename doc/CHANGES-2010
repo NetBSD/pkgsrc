@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3113 2010/09/03 22:40:34 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3114 2010/09/03 22:41:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4065,3 +4065,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Gnome2-GConf version 1.044 [wiz 2010-09-03]
 	Added graphics/p5-Gnome2-Canvas version 1.002 [wiz 2010-09-03]
 	Added devel/p5-Gnome2 version 1.042 [wiz 2010-09-03]
+	Updated meta-pkgs/p5-gnome-bindings to 2.30.2 [wiz 2010-09-03]
