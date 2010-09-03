@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/03 23:01:47 wiz Exp $
+
+SHA1 (bullet-2.76.tgz) = 95043d586001387eab50cd773f4082e1a0d6f1b0
+RMD160 (bullet-2.76.tgz) = 2024f8674791e596dd6b605000dad8052a796eed
+Size (bullet-2.76.tgz) = 6193578 bytes
+SHA1 (patch-aa) = de9d5ce6e67c8e5a4a2efa5c67e48bbb790d54ce
