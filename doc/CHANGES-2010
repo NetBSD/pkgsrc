@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3099 2010/09/03 05:12:33 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3100 2010/09/03 05:25:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4051,3 +4051,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Software-License to 0.102.340 [sno 2010-09-02]
 	Updated devel/p5-Contextual-Return to 0.003.001 [sno 2010-09-02]
 	Updated archivers/p5-Archive-Tar to 1.68 [sno 2010-09-03]
+	Updated devel/p5-Devel-CheckOS to 1.63 [sno 2010-09-03]
