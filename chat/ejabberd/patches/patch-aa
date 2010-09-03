@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
+$NetBSD: patch-aa,v 1.8 2010/09/03 10:31:43 fhajny Exp $
 
---- src/Makefile.in.orig	2010-03-12 10:40:41.000000000 +0000
+--- src/Makefile.in.orig	2010-08-02 16:33:20.000000000 +0000
 +++ src/Makefile.in
-@@ -59,7 +59,7 @@ endif
+@@ -65,7 +65,7 @@ endif
  
  INSTALL_EPAM=
  ifeq (@pam@, pam)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
  endif
  
  prefix = @prefix@
-@@ -76,13 +76,13 @@ BEAMS = $(SOURCES:.erl=.beam)
+@@ -83,13 +83,13 @@ BEAMS = $(SOURCES:.erl=.beam)
  DESTDIR =
  
  # /etc/ejabberd/
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
  
  # /share/doc/ejabberd
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -108,16 +108,16 @@ SODIR = $(PRIVDIR)/lib
+@@ -115,16 +115,16 @@ SODIR = $(PRIVDIR)/lib
  MSGSDIR = $(PRIVDIR)/msgs
  
  # /var/lib/ejabberd/
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
  
  # Assume Linux-style dynamic library flags
  DYNAMIC_LIB_CFLAGS = -fpic -shared
-@@ -170,10 +170,10 @@ translations:
+@@ -177,10 +177,10 @@ translations:
  install: all
  	#
  	# Configuration files
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
  	sed -e "s*@rootdir@*@prefix@*" \
  		-e "s*@installuser@*@INSTALLUSER@*" \
  		-e "s*@LIBDIR@*@libdir@*" \
-@@ -183,13 +183,13 @@ install: all
+@@ -190,13 +190,13 @@ install: all
  		-e "s*@erl@*@ERL@*" ejabberdctl.template \
  		> ejabberdctl.example
  	[ -f $(ETCDIR)/ejabberdctl.cfg ] \
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
  	#
  	# Init script
  	sed -e "s*@ctlscriptpath@*$(SBINDIR)*" \
-@@ -197,59 +197,53 @@ install: all
+@@ -204,64 +204,58 @@ install: all
  		> ejabberd.init
  	#
  	# Binary Erlang files
@@ -145,7 +145,7 @@ $NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
  	#
  	# ejabberdctl lock directory
 -	install -d -m 750 $(O_USER) $(CTLLOCKDIR)
-+	$(BSD_INSTALL_DATA_DIR) -m 750 ${O_USER} ${CTLLOCKDIR}
++	$(BSD_INSTALL_DATA_DIR) -m 750 $(O_USER) $(CTLLOCKDIR)
  	$(CHOWN_COMMAND) -R @INSTALLUSER@ $(CTLLOCKDIR) >$(CHOWN_OUTPUT)
  	chmod -R 750 $(CTLLOCKDIR)
  	#
@@ -157,13 +157,21 @@ $NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
  	#
  	# Documentation
 -	install -d $(DOCDIR)
+-	install -m 644 ../doc/dev.html $(DOCDIR)
 -	install -m 644 ../doc/guide.html $(DOCDIR)
 -	install -m 644 ../doc/*.png $(DOCDIR)
 -	install -m 644 ../doc/*.txt $(DOCDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
-+	$(BSD_INSTALL_DATA) ../doc/guide.html $(DOCDIR)
-+	$(BSD_INSTALL_DATA) ../doc/*.png $(DOCDIR)
-+	$(BSD_INSTALL_DATA) ../doc/*.txt $(DOCDIR)
++	$(BSD_INSTALL_DATA) -m 644 ../doc/dev.html $(DOCDIR)
++	$(BSD_INSTALL_DATA) -m 644 ../doc/guide.html $(DOCDIR)
++	$(BSD_INSTALL_DATA) -m 644 ../doc/*.png $(DOCDIR)
++	$(BSD_INSTALL_DATA) -m 644 ../doc/*.txt $(DOCDIR)
+ 	[ -f ../doc/guide.pdf ] \
+-		&& install -m 644 ../doc/guide.pdf $(DOCDIR) \
++		&& $(BSD_INSTALL_DATA) -m 644 ../doc/guide.pdf $(DOCDIR) \
+ 		|| echo "No ../doc/guide.pdf was built"
+-	install -m 644 ../COPYING $(DOCDIR)
++	$(BSD_INSTALL_DATA) -m 644 ../COPYING $(DOCDIR)
  
  uninstall: uninstall-binary
  
