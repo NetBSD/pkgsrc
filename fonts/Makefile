@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.157 2010/07/17 03:08:09 obache Exp $
+# $NetBSD: Makefile,v 1.158 2010/09/03 18:25:17 wiz Exp $
 #
 
 COMMENT=	Fonts
 
+SUBDIR+=	AnonymousPro
 SUBDIR+=	Xft2
 SUBDIR+=	Xg
 SUBDIR+=	acroread-chsfont
