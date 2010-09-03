@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3110 2010/09/03 22:35:49 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3111 2010/09/03 22:37:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4062,3 +4062,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-pango to 1.221 [wiz 2010-09-03]
 	Updated x11/p5-gtk2 to 1.221 [wiz 2010-09-03]
 	Added sysutils/p5-Gnome2-VFS version 1.081 [wiz 2010-09-03]
+	Added devel/p5-Gnome2-GConf version 1.044 [wiz 2010-09-03]
