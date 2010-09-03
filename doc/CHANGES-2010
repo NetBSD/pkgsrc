@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3105 2010/09/03 07:39:55 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3106 2010/09/03 18:25:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4057,3 +4057,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Getopt-Simple to 1.52 [sno 2010-09-03]
 	Added security/liboauth version 0.8.9 [agc 2010-09-03]
 	Updated devel/m4 to 1.4.15 [wiz 2010-09-03]
+	Added fonts/AnonymousPro version 1.001 [wiz 2010-09-03]
