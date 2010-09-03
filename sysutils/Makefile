@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.498 2010/08/15 09:08:58 obache Exp $
+# $NetBSD: Makefile,v 1.499 2010/09/03 22:35:38 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -222,6 +222,7 @@ SUBDIR+=	p5-Filesys-Df
 SUBDIR+=	p5-Filesys-DfPortable
 SUBDIR+=	p5-Filesys-Statvfs
 SUBDIR+=	p5-GTop
+SUBDIR+=	p5-Gnome2-VFS
 SUBDIR+=	p5-IO-KQueue
 SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Linux-Inotify2
