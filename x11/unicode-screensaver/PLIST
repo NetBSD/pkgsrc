@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/03 22:50:09 wiz Exp $
+libexec/xscreensaver/unicode
+man/man6/unicode.6
+share/applications/screensavers/unicode.desktop
+share/xscreensaver/config/unicode.xml
