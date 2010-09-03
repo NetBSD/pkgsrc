@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9609 2010/09/03 10:32:12 fhajny Exp $
+$NetBSD: TODO,v 1.9610 2010/09/03 10:46:10 drochner Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enca-1.13
 	o enlightenment-1.0.0
 	o enscript-1.6.5.2
-	o eog-plugins-2.30.2 [GNOME 2.30]
 	o epic4-2.6
 	o epstool-3.08
 	o eric5-5.0.0
@@ -563,9 +562,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o etach-1.4.1
 	o etm-655
 	o eukleides-1.5.4
-	o evolution-2.30.3
 	o evolution-couchdb-0.4.5
-	o evolution-data-server-2.30.3
 	o evolution-exchange-2.30.3
 	o evolution-mapi-0.30.3 [GNOME 2.30]
 	o ex-20050325
@@ -636,7 +633,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gbdfed-1.6
 	o gcal-3.6
 	o gcc-4.5.1
-	o gcdmaster-1.2.3
 	o gcin-1.4.1
 	o gcombust-0.1.55
 	o gcompris-9.0
@@ -668,7 +664,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.12
 	o gmime-2.2.26
-	o gmime24-2.4.18
 	o gnash-0.8.8
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -689,9 +684,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnumeric110-1.10.9
 	o gnuplot-4.4.0 [pkg/43771]
-	o gnutls-2.10.1
 	o gob2-2.0.17
 	o gogo-3.11p1
 	o gok-2.30.0 [GNOME 2.30]
@@ -714,13 +707,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.1
 	o gtkglarea-2.0.1
-	o gtkhtml324-3.30.3
-	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
-	o gucharmap-2.30.3
 	o guile-gtk-2.0
 	o gupnp-0.13.5
 	o gwaei-1.4.1
@@ -840,16 +830,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.21
-	o libebml-1.0.0
 	o libesmtp-1.0.6
 	o libextractor-0.6.2
 	o libflash-0.4.13
 	o libgda-4.0.11 [GNOME 2.30]
 	o libgee-0.5.2 [pkg/43729]
 	o libgiigic-1.1.2
-	o libgnome-keyring-2.30.2 [GNOME 2.30]
 	o libgnomedb-3.1.2
-	o libgpg-error-1.9
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
@@ -858,7 +845,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libltdl-2.2.10
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmatroska-1.0.0
 	o libmcs-0.7.2
 	o libmowgli-0.7.1 [pkg/43760]
 	o libmp3splt-0.5.8
@@ -944,7 +930,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
-	o mkvtoolnix-4.1.1
 	o mlterm-3.0.1 [pkg/43822]
 	o moc-2.4.4
 	o modular-xorg-server-1.9.0
@@ -1117,7 +1102,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-psycopg2-2.2.2
 	o py-sybase-0.37
 	o py-uwsgi-0.9.5.1 [pkg/43400]
-	o python-2.6.6
 	o python-2.7
 	o python-3.1.2
 	o python26-2.6.6
@@ -1487,7 +1471,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yafc-1.1
 	o yasm-1.1.0
 	o yaz-4.0.12
-	o yelp-2.30.0 [GNOME 2.30]
 	o yodl-2.14.3
 	o ysm-2.9.9.1
 	o yudit-2.9.2
