@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2010/06/15 19:52:02 tron Exp $
+# $NetBSD: Makefile,v 1.47 2010/09/04 19:23:00 tron Exp $
 
-DISTNAME=	rpm2pkg-3.0.2
+DISTNAME=	rpm2pkg-3.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
+NO_CHECKSUM=	yes
 
 OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
@@ -15,20 +16,17 @@ CONFLICTS+=	suse-base<=6.4
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c99
+USE_TOOLS+=	lzcat:run
 WRKSRC=		${WRKDIR}
 
 CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} ${BUILDLINK_CPPFLAGS.rpm} \
-		${BUILDLINK_CPPFLAGS.zlib}
+		${BUILDLINK_CPPFLAGS.zlib} -DLZCAT=\"${TOOLS_PATH.lzcat:Q}\"
 LIBS+=		-lintl -lz -lbz2
 
 .include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-*)
 CFLAGS+=	-Wall -Wshadow -Wsign-compare -Wunused-value
-.endif
-
-.if ${OPSYS} == "NetBSD" && defined(USE_SSP) && (${USE_SSP} != "no")
-CFLAGS+=	-fstack-protector -Wstack-protector --param ssp-buffer-size=1
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
