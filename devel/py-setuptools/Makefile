@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2009/10/31 02:10:34 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2010/09/04 15:57:16 tron Exp $
 
 EGG_VERSION=		0.6c11
 DISTNAME=		setuptools-${EGG_VERSION}
 EGG_NAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://pypi.python.org/packages/source/s/setuptools/
 
@@ -42,6 +42,11 @@ PLIST_VARS+=	py24 py25
 PLIST.py24=		yes
 .else
 PLIST.py25=		yes
+.endif
+
+.if ${OPSYS} == "Darwin" && \
+    (${PYPKGPREFIX} != "py24" && ${PYPKGPREFIX} != "py25")
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
 
 post-extract:
