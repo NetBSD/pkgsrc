@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2010/09/04 05:12:00 obache Exp $
 
---- Lib/distutils/command/build_ext.py.orig	2007-04-24 09:27:25.000000000 -0600
+--- Lib/distutils/command/build_ext.py.orig	2010-08-02 20:26:41.000000000 +0000
 +++ Lib/distutils/command/build_ext.py
-@@ -496,8 +496,19 @@ class build_ext (Command):
+@@ -514,8 +514,19 @@ class build_ext (Command):
          # that go into the mix.
          if ext.extra_objects:
              objects.extend(ext.extra_objects)
