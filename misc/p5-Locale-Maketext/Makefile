@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/09/04 11:52:17 sno Exp $
+# $NetBSD: Makefile,v 1.15 2010/09/04 12:18:53 sno Exp $
 #
 
 DISTNAME=		Locale-Maketext-1.13
@@ -16,7 +16,7 @@ COMMENT=		Perl framework for localization
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		p5-I18N-LangTags>=0.30:../../misc/p5-I18N-LangTags
+DEPENDS+=		{perl>=5.10.0,p5-I18N-LangTags>=0.30}:../../misc/p5-I18N-LangTags
 
 PERL5_PACKLIST=		auto/Locale-Maketext/.packlist
 
