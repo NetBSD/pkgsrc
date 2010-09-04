@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3127 2010/09/04 12:15:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3128 2010/09/04 12:16:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4079,3 +4079,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Plugin-I18N to 0.09nb3 [sno 2010-09-04]
 	Updated devel/svk to 2.2.3 [sno 2010-09-04]
 	Updated www/p5-Handel to 1.00011nb3 [sno 2010-09-04]
+	Updated www/p5-SVN-Web to 0.53nb5 [sno 2010-09-04]
