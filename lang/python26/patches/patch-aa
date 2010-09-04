@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/09/04 05:12:00 obache Exp $
 
---- Include/py_curses.h.orig	2003-06-29 11:46:21.000000000 -0400
+--- Include/py_curses.h.orig	2009-09-06 21:23:05.000000000 +0000
 +++ Include/py_curses.h
-@@ -39,6 +39,21 @@
+@@ -44,6 +44,21 @@
  #endif
  #endif
  
