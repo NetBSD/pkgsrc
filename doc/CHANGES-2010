@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3123 2010/09/04 11:50:48 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3124 2010/09/04 11:56:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4075,3 +4075,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-PerlIO-gzip version 0.18 [sno 2010-09-04]
 	Updated games/gbrainy to 1.51 [wiz 2010-09-04]
 	Updated devel/p5-App-CLI to 0.08nb2 [sno 2010-09-04]
+	Updated www/p5-CGI-Kwiki to 0.18nb5 [sno 2010-09-04]
