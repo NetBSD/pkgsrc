@@ -1,7 +1,7 @@
-/*	$NetBSD: rpm2pkg.c,v 1.11 2010/06/15 19:52:02 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.12 2010/09/04 19:23:00 tron Exp $	*/
 
 /*-
- * Copyright (c) 2004-2009 The NetBSD Foundation, Inc.
+ * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -31,9 +31,14 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
+
+#include <arpa/inet.h>
 
 #include <errno.h>
 #include <fcntl.h>
+#include <inttypes.h>
+#include <signal.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,12 +49,36 @@
 #include <zlib.h>
 
 /*
- * Lead of an RPM archive as described here:
+ * The following definitions are based on the documentation of the
+ * RPM format which can be found here:
+ *
  * http://www.rpm.org/max-rpm/s1-rpm-file-format-rpm-file-format.html
  */
-static const unsigned char RPMMagic[] = { 0xed, 0xab, 0xee, 0xdb };
 
-#define	RPM_LEAD_SIZE	96
+/* Lead of an RPM archive. */
+typedef struct RPMLead_s {
+    uint8_t	magic[4];
+    uint8_t	major, minor;
+    int16_t	type;
+    int16_t	archnum;
+    int8_t	name[66];
+    int16_t	osnum;
+    uint16_t	signature_type;
+    int8_t	reserved[16];
+} RPMLead;
+
+static const uint8_t RPMLeadMagic[] = { 0xed, 0xab, 0xee, 0xdb };
+
+/* Header section of an RPM archive. */
+typedef struct RPMHeader_s {
+  uint8_t	magic[3];
+  uint8_t	version;
+  uint8_t	reserved[4];
+  uint32_t	indexSize;
+  uint32_t	dataSize;
+} RPMHeader;
+
+static const uint8_t RPMHeaderMagic[] = { 0x8e, 0xad, 0xe8 };
 
 /* Magic bytes for "bzip2" and "gzip" compressed files. */
 static const unsigned char BZipMagic[] = { 'B', 'Z', 'h' };
@@ -132,6 +161,8 @@ typedef struct FileHandleStruct {
 	BZFILE	*fh_BZFile;
 	gzFile	*fh_GZFile;
 	off_t	fh_Pos;
+	int	fh_Pipe;
+	pid_t	fh_Child;
 } FileHandle;
 
 static bool
@@ -159,84 +190,97 @@ Close(FileHandle *fh)
 
 		(void)BZ2_bzReadClose(&bzerror, fh->fh_BZFile);
 		(void)fclose(fh->fh_File);
-	} else {
+	}
+
+	if (fh->fh_GZFile != NULL) {
 		(void)gzclose(fh->fh_GZFile);
 	}
+
+	if (fh->fh_Pipe >= 0) {
+		(void)close(fh->fh_Pipe);
+	}
+
+	if (fh->fh_Child != -1) {
+		(void)kill(fh->fh_Child, SIGTERM);
+		(void)waitpid(fh->fh_Child, NULL, 0);
+	}
+
 	free(fh);
 }
 
+/* Check whether we got an RPM file and find the data section. */
 static bool
 IsRPMFile(int fd)
 {
-	char buffer[RPM_LEAD_SIZE];
+	RPMLead		rpmLead;
+	bool		padding;
+	RPMHeader	rpmHeader;
 
-	if (read(fd, buffer, sizeof(buffer)) != sizeof(buffer))
+	/* Check for RPM lead. */
+	if (read(fd, &rpmLead, sizeof(RPMLead)) != sizeof(RPMLead))
 		return false;
 
-	return (memcmp(buffer, RPMMagic, sizeof(RPMMagic)) == 0);
+	if (memcmp(rpmLead.magic, RPMLeadMagic, sizeof(RPMLeadMagic)) != 0)
+		return false;
+
+	/* We don't support very old RPMs. */
+	if (rpmLead.major < 3)
+		return false;
+
+	/*
+	 * The RPM file format has a horrible requirement for extra padding
+	 * depending on what type of signature is used.
+	 */
+	padding = htons(rpmLead.signature_type) == 5;
+
+	/* Skip over RPM header(s). */
+	while (read(fd, &rpmHeader, sizeof(RPMHeader)) == sizeof(RPMHeader)) {
+		uint32_t	indexSize, dataSize;
+		off_t		offset = 0;
+
+		/* Did we find another header? */		
+		if (memcmp(rpmHeader.magic, RPMHeaderMagic,
+		    sizeof(RPMHeaderMagic)) != 0) {
+			/* Nope, seek backwards and return. */
+			return (lseek(fd, -(off_t)sizeof(RPMHeader),
+			    SEEK_CUR) != -1);
+		}
+
+		/* Find out how large the header is ... */
+		indexSize = htonl(rpmHeader.indexSize);
+		dataSize = htonl(rpmHeader.dataSize);
+
+		/* .. and skip over it. */
+		offset = indexSize * 4 * sizeof(uint32_t) + dataSize;
+		if (padding) {
+			offset = ((offset + 7) / 8) * 8;
+			padding = false;
+		}
+		if (lseek(fd, offset, SEEK_CUR) == -1)
+			return false;
+	}
+
+	return false;
 }
 
 static FileHandle *
 Open(int fd)
 {
-	unsigned char	buffer[16384];
-	size_t		bzMatch, gzMatch;
-	int		archive_type;
-	off_t		offset;
+	unsigned char	buffer[3];
 	FileHandle	*fh;
 
-	bzMatch = 0;
-	gzMatch = 0;
-	archive_type = 0;
-	offset = 0;
-	do {
-		ssize_t	bytes, i;
-
-		bytes = read(fd, buffer, sizeof(buffer));
-		if (bytes <= 0)
-			return NULL;
-
-		for (i = 0; i < bytes; i++) {
-			unsigned char cur_char;
-
-			cur_char = buffer[i];
-
-			/* Look for bzip2 header. */
-			if (cur_char == BZipMagic[bzMatch]) {
-				bzMatch++;
-				if (bzMatch == sizeof(BZipMagic)) {
-					archive_type = 1;
-					offset = (off_t)i - (off_t)bytes -
-					    sizeof(BZipMagic) + 1;
-					break;
-				}
-			} else {
-				bzMatch = (cur_char == BZipMagic[0]) ? 1 : 0;
-			}
-
-			/* Look for gzip header. */
-			if (cur_char == GZipMagic[gzMatch]) {
-				gzMatch++;
-				if (gzMatch == sizeof(GZipMagic)) {
-					archive_type = 2;
-					offset = (off_t)i - (off_t)bytes -
-					    sizeof(GZipMagic) + 1;
-					break;
-				}
-			} else {
-				gzMatch = (cur_char == GZipMagic[0]) ? 1 : 0;
-			}
-		}
-	} while (archive_type == 0);
-
-	/* Go back to the beginning of the archive. */
-	if (lseek(fd, offset, SEEK_CUR) < RPM_LEAD_SIZE)
+	if (read(fd, buffer, sizeof(buffer)) != sizeof(buffer))
+		return NULL;
+	if (lseek(fd, -(off_t)sizeof(buffer), SEEK_CUR) == -1)
 		return NULL;
 
 	if ((fh = calloc(1, sizeof (FileHandle))) == NULL)
 		return NULL;
 
-	if (archive_type == 1) {
+	fh->fh_Pipe = -1;
+	fh->fh_Child = -1;
+
+	if (memcmp(buffer, BZipMagic, sizeof(BZipMagic)) == 0) {
 		/* bzip2 archive */
 		int	bzerror;
 
@@ -245,7 +289,6 @@ Open(int fd)
 			return NULL;
 		}
 		if ((fh->fh_File = fdopen(fd, "rb")) == NULL) {
-			perror("fdopen");
 			(void)close(fd);
 			free(fh);
 			return NULL;
@@ -256,29 +299,76 @@ Open(int fd)
 			free(fh);
 			return (NULL);
 		}
-	} else {
+	} else if (memcmp(buffer, GZipMagic, sizeof(GZipMagic)) == 0) {
 		/* gzip archive */
 		if ((fh->fh_GZFile = gzdopen(fd, "r")) == NULL) {
 			free(fh);
 			return (NULL);
 		}
+	} else {	/* lzma ... hopefully */
+#ifdef LZCAT
+		int	pfds[2];
+		pid_t	pid;
+
+		if (pipe(pfds) != 0) {
+			free(fh);
+			return (NULL);
+		}
+
+		pid = vfork();
+		switch (pid) {
+		case -1:
+			(void)close(pfds[0]);
+			(void)close(pfds[1]);
+			free(fh);
+			return NULL;
+
+		case 0:
+			(void)close(pfds[0]);
+			if (dup2(fd, STDIN_FILENO) == -1 ||
+			    dup2(pfds[1], STDOUT_FILENO) == -1) {
+				exit(EXIT_FAILURE);
+			}
+			(void)close(fd);
+			(void)close(pfds[1]);
+
+			(void)execl(LZCAT, LZCAT, "-f", NULL);
+			exit(EXIT_FAILURE);
+			
+		default:
+			(void)close(pfds[1]);
+			fh->fh_Pipe = pfds[0];
+			fh->fh_Child = pid;
+			return fh;
+		}			
+#else
+		return NULL;
+#endif
 	}
 
 	return (fh);
 }
 
-static int
-Read(FileHandle *fh, void *buffer, int length)
+static bool
+Read(FileHandle *fh, void *buffer, size_t length)
 {
-	int	bzerror, bytes;
+	ssize_t bytes;
 
-	bytes = (fh->fh_BZFile != NULL) ?
-	    BZ2_bzRead(&bzerror, fh->fh_BZFile, buffer, length) :
-	    gzread(fh->fh_GZFile, buffer, length);
+	if (fh->fh_BZFile != NULL) {
+		int bzerror;
+		bytes = BZ2_bzRead(&bzerror, fh->fh_BZFile, buffer, length);
+	} else if (fh->fh_GZFile != NULL) {
+		bytes = gzread(fh->fh_GZFile, buffer, length);
+	} else if (fh->fh_Pipe >= 0) {
+		bytes = read(fh->fh_Pipe, buffer, length);
+	} else {
+		bytes = -1;
+	}
+
 	if (bytes > 0)
 		fh->fh_Pos += bytes;
 
-	return (bytes == length);
+	return (bytes == (ssize_t)length);
 }
 
 static bool
@@ -815,7 +905,7 @@ main(int argc, char **argv)
 
 		if ((In = Open(FD)) == NULL) {
 			(void)fprintf(stderr,
-			    "%s: cannot read cpio data.\n", argv[Index]);
+			    "%s: cannot get RPM data.\n", argv[Index]);
 			return EXIT_FAILURE;
 		}
 
