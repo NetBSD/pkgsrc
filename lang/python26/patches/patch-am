@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.11 2010/05/02 14:09:12 wiz Exp $
+$NetBSD: patch-am,v 1.12 2010/09/04 05:12:00 obache Exp $
 
 Disabled modules for normal build:
 bsdddb
@@ -12,10 +12,10 @@ headers and libraries from the system.
 
 Build the 1.85 compat module all the time against the BDB version of choice.
 
---- setup.py.orig	2010-03-08 07:08:25.000000000 +0000
+--- setup.py.orig	2010-07-17 12:31:09.000000000 +0000
 +++ setup.py
-@@ -17,7 +17,7 @@ from distutils.command.install import in
- from distutils.command.install_lib import install_lib
+@@ -18,7 +18,7 @@ from distutils.command.install_lib impor
+ from distutils.spawn import find_executable
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
@@ -23,7 +23,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -309,9 +309,15 @@ class PyBuildExt(build_ext):
+@@ -355,9 +355,15 @@ class PyBuildExt(build_ext):
          return sys.platform
  
      def detect_modules(self):
@@ -42,7 +42,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -629,9 +635,7 @@ class PyBuildExt(build_ext):
+@@ -703,9 +709,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -53,7 +53,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -741,151 +745,6 @@ class PyBuildExt(build_ext):
+@@ -815,172 +819,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -108,12 +108,19 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -
 -        db_ver_inc_map = {}
 -
+-        if sys.platform == 'darwin':
+-            sysroot = macosx_sdk_root()
+-
 -        class db_found(Exception): pass
 -        try:
 -            # See whether there is a Sleepycat header in the standard
 -            # search path.
 -            for d in inc_dirs + db_inc_paths:
 -                f = os.path.join(d, "db.h")
+-
+-                if sys.platform == 'darwin' and is_macosx_sdk_path(d):
+-                    f = os.path.join(sysroot, d[1:], "db.h")
+-
 -                if db_setup_debug: print "db: looking for db.h in", f
 -                if os.path.exists(f):
 -                    f = open(f).read()
@@ -160,7 +167,21 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -                    db_incdir.replace("include", 'lib64'),
 -                    db_incdir.replace("include", 'lib'),
 -                ]
--                db_dirs_to_check = filter(os.path.isdir, db_dirs_to_check)
+-
+-                if sys.platform != 'darwin':
+-                    db_dirs_to_check = filter(os.path.isdir, db_dirs_to_check)
+-
+-                else:
+-                    # Same as other branch, but takes OSX SDK into account
+-                    tmp = []
+-                    for dn in db_dirs_to_check:
+-                        if is_macosx_sdk_path(dn):
+-                            if os.path.isdir(os.path.join(sysroot, dn[1:])):
+-                                tmp.append(dn)
+-                        else:
+-                            if os.path.isdir(dn):
+-                                tmp.append(dn)
+-                    db_dirs_to_check = tmp
 -
 -                # Look for a version specific db-X.Y before an ambiguoius dbX
 -                # XXX should we -ever- look for a dbX name?  Do any
@@ -205,11 +226,17 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -992,25 +851,12 @@ class PyBuildExt(build_ext):
+@@ -1094,31 +932,12 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
 -        f = "/usr/include/db.h"
+-
+-        if sys.platform == 'darwin':
+-            if is_macosx_sdk_path(f):
+-                sysroot = macosx_sdk_root()
+-                f = os.path.join(sysroot, f[1:])
+-
 -        if os.path.exists(f) and not db_incs:
 -            data = open(f).read()
 -            m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
@@ -236,7 +263,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -1023,7 +869,7 @@ class PyBuildExt(build_ext):
+@@ -1131,7 +950,7 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -245,7 +272,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
                  gdbm_libs = ['gdbm']
                  if self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
                      gdbm_libs.append('gdbm_compat')
-@@ -1039,14 +885,11 @@ class PyBuildExt(build_ext):
+@@ -1147,14 +966,11 @@ class PyBuildExt(build_ext):
                          libraries = gdbm_libs ) )
                  else:
                      missing.append('dbm')
@@ -262,7 +289,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
              else:
                  missing.append('dbm')
  
-@@ -1304,6 +1147,14 @@ class PyBuildExt(build_ext):
+@@ -1408,6 +1224,14 @@ class PyBuildExt(build_ext):
                  )
              libraries = []
  
@@ -277,7 +304,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -1909,9 +1760,9 @@ def main():
+@@ -2026,9 +1850,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
