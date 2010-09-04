@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/11 13:11:56 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/04 05:04:57 obache Exp $
 #
 
 DISTNAME=	ibus-1.3.7
@@ -25,6 +25,7 @@ GCONF_SCHEMAS+=		ibus.schemas
 PKGCONFIG_OVERRIDE+=	ibus-1.0.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
