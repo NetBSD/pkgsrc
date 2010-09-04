@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/05/31 17:02:24 tron Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/04 18:45:22 tron Exp $
 
 DISTNAME=	parsedatetime-0.8.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	time python
 MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code-bear.com/code/parsedatetime/
 COMMENT=	Python module for parsing human-readable date/time text
 LICENSE=	apache-2.0
