@@ -1,4 +1,4 @@
-$NetBSD: patch-au,v 1.5 2009/10/21 11:33:32 tron Exp $
+$NetBSD: patch-au,v 1.6 2010/09/04 05:12:00 obache Exp $
 
 --- Makefile.pre.in.orig	2009-02-24 11:07:44.000000000 +0000
 +++ Makefile.pre.in
@@ -8,7 +8,7 @@ $NetBSD: patch-au,v 1.5 2009/10/21 11:33:32 tron Exp $
  
 +libpython$(VERSION).dylib: $(LIBRARY_OBJS)
 +	$(LINKCC) -dynamiclib -install_name $(LIBDIR)/$@ \
-+	    -current_version 2.6.2 -compatibility_version $(VERSION) \
++	    -current_version 2.6.6 -compatibility_version $(VERSION) \
 +	    -o $@ -flat_namespace -undefined suppress $(LDFLAGS) \
 +	    $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM)
 +
