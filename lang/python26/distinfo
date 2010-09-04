@@ -1,19 +1,18 @@
-$NetBSD: distinfo,v 1.22 2010/06/29 08:15:42 tron Exp $
+$NetBSD: distinfo,v 1.23 2010/09/04 05:12:00 obache Exp $
 
-SHA1 (Python-2.6.5.tar.bz2) = 24c94f5428a8c94c9d0b316e3019fee721fdb5d1
-RMD160 (Python-2.6.5.tar.bz2) = 909c6a13749396f2b19fed51821d3e2577b2833b
-Size (Python-2.6.5.tar.bz2) = 11095581 bytes
-SHA1 (patch-aa) = d44e67645dc86ff14f5daf5705de02c6f330cc48
-SHA1 (patch-ab) = d35025df83e70d129f9fbcd277652b0eea83b026
-SHA1 (patch-ac) = 858580a4e5c7474127eafb27bdfa96dc96cafad5
+SHA1 (Python-2.6.6.tar.bz2) = a1daf2c2c7cffe0939c015260447572fe75c7e50
+RMD160 (Python-2.6.6.tar.bz2) = 2d63f4f0ad3c124a8e62215ca94bd0231350e912
+Size (Python-2.6.6.tar.bz2) = 11080872 bytes
+SHA1 (patch-aa) = 0528fc5da76d5f1d19586ea3dda1acd09a4b0113
+SHA1 (patch-ab) = b47aa9d18a7c1a99ac8cc8b29c64867443f303e5
+SHA1 (patch-ac) = 57c88d47f82630e67bcd27ab61bf4362035da2f2
 SHA1 (patch-ad) = a997e39d16a8f0023125362b180d19ee97ab519b
-SHA1 (patch-ae) = 5425515c6bf130eee204ca2749386f6447eaa35b
-SHA1 (patch-af) = 42a93a321f6f480133513082c54bcab30e91445f
-SHA1 (patch-ah) = f973ac5a82ba5c665d2ec4b0f6130e903b5a5d7c
-SHA1 (patch-al) = d753e00ab65564a08988f7934870716aca9b02a9
-SHA1 (patch-am) = 77f8ca811777d53d7a1972c177e59568dc49651b
+SHA1 (patch-ae) = a6d578b5f12eb42fbbcc11791576d2686a4807d9
+SHA1 (patch-ah) = 501d220b41e578402f3400fe88e582aa2408a147
+SHA1 (patch-al) = e5bf2a7f50534a18bb18f7111b3c5d097b528778
+SHA1 (patch-am) = d16a765ef8dfdf78d3208016d4300dad170a6cf2
 SHA1 (patch-an) = 17b4e17b3b562c29a050e9bb20447084ce82b8ab
 SHA1 (patch-ao) = 8c6a156b0f0c2a6d319658477fff348e6a0c3603
-SHA1 (patch-ap) = 39d81b01fa9e1b894be9ae0922881337bb4d17da
-SHA1 (patch-au) = cf68c1975f60d18bf37262fa41cbfef1585aeb55
-SHA1 (patch-av) = a1d41cb3a93879d54f0964ff84a63a297c333156
+SHA1 (patch-ap) = d23a869a449ab9dc166cfa149913b20c9acad9cb
+SHA1 (patch-au) = e0e6595311d4ee1eda45d381cab87cbba46b21d3
+SHA1 (patch-av) = d6bf0419015656a8d2f13d3132873e453c8a6b6e

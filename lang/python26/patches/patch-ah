@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.2 2010/05/02 14:09:11 wiz Exp $
+$NetBSD: patch-ah,v 1.3 2010/09/04 05:12:00 obache Exp $
 
---- Modules/_cursesmodule.c.orig	2010-02-22 17:06:22.000000000 +0000
+--- Modules/_cursesmodule.c.orig	2010-08-05 16:35:53.000000000 +0000
 +++ Modules/_cursesmodule.c
 @@ -317,17 +317,9 @@ Window_NoArg2TupleReturnFunction(getpary
  
@@ -21,66 +21,66 @@ $NetBSD: patch-ah,v 1.2 2010/05/02 14:09:11 wiz Exp $
  Window_OneArgNoReturnFunction(scrollok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(winsdelln, int, "i;nlines")
 @@ -886,11 +878,7 @@ PyCursesWindow_GetKey(PyCursesWindowObje
-     return Py_BuildValue("c", rtn);
-   } else {
-     const char *knp;
+         return Py_BuildValue("c", rtn);
+     } else {
+         const char *knp;
 -#if defined(__NetBSD__)
--    knp = unctrl(rtn);
+-        knp = unctrl(rtn);
 -#else
-     knp = keyname(rtn);
+         knp = keyname(rtn);
 -#endif
-     return PyString_FromString((knp == NULL) ? "" : knp);
-   }
+         return PyString_FromString((knp == NULL) ? "" : knp);
+     }
  }
-@@ -2100,7 +2088,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
- }
+@@ -2100,7 +2088,6 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
+         }
  #endif /* HAVE_CURSES_IS_TERM_RESIZED */
  
 -#if !defined(__NetBSD__)
- static PyObject *
- PyCurses_KeyName(PyObject *self, PyObject *args)
- {
-@@ -2119,7 +2106,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
+         static PyObject *
+             PyCurses_KeyName(PyObject *self, PyObject *args)
+         {
+@@ -2119,7 +2106,6 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
  
-   return PyString_FromString((knp == NULL) ? "" : (char *)knp);
- }
+             return PyString_FromString((knp == NULL) ? "" : (char *)knp);
+         }
 -#endif
  
- static PyObject *  
- PyCurses_KillChar(PyObject *self)  
-@@ -2664,9 +2650,7 @@ static PyMethodDef PyCurses_methods[] = 
+         static PyObject *
+             PyCurses_KillChar(PyObject *self)
+@@ -2664,9 +2650,7 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
  #ifdef HAVE_CURSES_IS_TERM_RESIZED
-   {"is_term_resized",     (PyCFunction)PyCurses_Is_Term_Resized, METH_VARARGS},
+             {"is_term_resized",     (PyCFunction)PyCurses_Is_Term_Resized, METH_VARARGS},
  #endif
 -#if !defined(__NetBSD__)
-   {"keyname",             (PyCFunction)PyCurses_KeyName, METH_VARARGS},
+             {"keyname",             (PyCFunction)PyCurses_KeyName, METH_VARARGS},
 -#endif
-   {"killchar",            (PyCFunction)PyCurses_KillChar, METH_NOARGS}, 
-   {"longname",            (PyCFunction)PyCurses_longname, METH_NOARGS}, 
-   {"meta",                (PyCFunction)PyCurses_Meta, METH_VARARGS},
-@@ -2775,9 +2759,7 @@ init_curses(void)
- 	SetDictInt("A_DIM",		A_DIM);
- 	SetDictInt("A_BOLD",		A_BOLD);
- 	SetDictInt("A_ALTCHARSET",	A_ALTCHARSET);
+             {"killchar",            (PyCFunction)PyCurses_KillChar, METH_NOARGS},
+             {"longname",            (PyCFunction)PyCurses_longname, METH_NOARGS},
+             {"meta",                (PyCFunction)PyCurses_Meta, METH_VARARGS},
+@@ -2775,9 +2759,7 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
+             SetDictInt("A_DIM",                 A_DIM);
+             SetDictInt("A_BOLD",                A_BOLD);
+             SetDictInt("A_ALTCHARSET",          A_ALTCHARSET);
 -#if !defined(__NetBSD__)
- 	SetDictInt("A_INVIS",           A_INVIS);
+             SetDictInt("A_INVIS",           A_INVIS);
 -#endif
- 	SetDictInt("A_PROTECT",         A_PROTECT);
- 	SetDictInt("A_CHARTEXT",        A_CHARTEXT);
- 	SetDictInt("A_COLOR",           A_COLOR);
-@@ -2849,7 +2831,6 @@ init_curses(void)
- 	  int key;
- 	  char *key_n;
- 	  char *key_n2;
+             SetDictInt("A_PROTECT",         A_PROTECT);
+             SetDictInt("A_CHARTEXT",        A_CHARTEXT);
+             SetDictInt("A_COLOR",           A_COLOR);
+@@ -2849,7 +2831,6 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
+                 int key;
+                 char *key_n;
+                 char *key_n2;
 -#if !defined(__NetBSD__)
- 	  for (key=KEY_MIN;key < KEY_MAX; key++) {
- 	    key_n = (char *)keyname(key);
- 	    if (key_n == NULL || strcmp(key_n,"UNKNOWN KEY")==0)
-@@ -2877,7 +2858,6 @@ init_curses(void)
- 	    if (key_n2 != key_n)
- 	      free(key_n2);
- 	  }
+                 for (key=KEY_MIN;key < KEY_MAX; key++) {
+                     key_n = (char *)keyname(key);
+                     if (key_n == NULL || strcmp(key_n,"UNKNOWN KEY")==0)
+@@ -2877,7 +2858,6 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
+                     if (key_n2 != key_n)
+                         free(key_n2);
+                 }
 -#endif
- 	  SetDictInt("KEY_MIN", KEY_MIN);
- 	  SetDictInt("KEY_MAX", KEY_MAX);
- 	}
+                 SetDictInt("KEY_MIN", KEY_MIN);
+                 SetDictInt("KEY_MAX", KEY_MAX);
+             }

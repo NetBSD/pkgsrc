@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2010/05/02 14:09:11 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.11 2010/09/04 05:12:00 obache Exp $
 bin/2to3
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1839,6 +1839,9 @@ lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_exec.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_execfile.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_execfile.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_execfile.pyo
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_exitfunc.py
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_exitfunc.pyc
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_exitfunc.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_filter.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_filter.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_filter.pyo
@@ -2646,6 +2649,7 @@ lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/sgml_input.html
+lib/python${PY_VER_SUFFIX}/test/sha256.pem
 lib/python${PY_VER_SUFFIX}/test/sortperf.py
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyc
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyo

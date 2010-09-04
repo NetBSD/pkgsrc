@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.2 2009/04/24 01:32:50 hasso Exp $
+$NetBSD: patch-ap,v 1.3 2010/09/04 05:12:00 obache Exp $
 
---- Modules/socketmodule.c.orig	2009-03-31 21:20:48 +0300
-+++ Modules/socketmodule.c	2009-04-20 16:16:04 +0300
+--- Modules/socketmodule.c.orig	2010-05-23 15:22:08.000000000 +0000
++++ Modules/socketmodule.c
 @@ -379,7 +379,7 @@ const char *inet_ntop(int af, const void
  #define SOCKETCLOSE close
  #endif
@@ -27,56 +27,56 @@ $NetBSD: patch-ap,v 1.2 2009/04/24 01:32:50 hasso Exp $
  #define _BT_RC_MEMB(sa, memb) ((sa)->bt_##memb)
  #define _BT_HCI_MEMB(sa, memb) ((sa)->bt_##memb)
 @@ -1076,9 +1078,13 @@ makesockaddr(int sockfd, struct sockaddr
- 		case BTPROTO_HCI:
- 		{
- 			struct sockaddr_hci *a = (struct sockaddr_hci *) addr;
+         case BTPROTO_HCI:
+         {
+             struct sockaddr_hci *a = (struct sockaddr_hci *) addr;
 +#if defined(__NetBSD__) || defined(__DragonFly__)
-+			return makebdaddr(&_BT_HCI_MEMB(a, bdaddr));
++            return makebdaddr(&_BT_HCI_MEMB(a, bdaddr));
 +#else
- 			PyObject *ret = NULL;
- 			ret = Py_BuildValue("i", _BT_HCI_MEMB(a, dev));
- 			return ret;
+             PyObject *ret = NULL;
+             ret = Py_BuildValue("i", _BT_HCI_MEMB(a, dev));
+             return ret;
 +#endif
- 		}
+         }
  
  #if !defined(__FreeBSD__)
-@@ -1345,12 +1351,25 @@ getsockaddrarg(PySocketSockObject *s, Py
- 		case BTPROTO_HCI:
- 		{
- 			struct sockaddr_hci *addr = (struct sockaddr_hci *)addr_ret;
+@@ -1350,12 +1356,25 @@ getsockaddrarg(PySocketSockObject *s, Py
+         case BTPROTO_HCI:
+         {
+             struct sockaddr_hci *addr = (struct sockaddr_hci *)addr_ret;
 +#if defined(__NetBSD__) || defined(__DragonFly__)
-+			char *straddr = PyString_AsString(args);
++            char *straddr = PyString_AsString(args);
 +
-+			_BT_HCI_MEMB(addr, family) = AF_BLUETOOTH;
-+			if (straddr == NULL) {
-+				PyErr_SetString(socket_error, "getsockaddrarg: "
-+						"wrong format");
-+				return 0;
-+			}
-+			if (setbdaddr(straddr, &_BT_HCI_MEMB(addr, bdaddr)) < 0)
-+				return 0;
++            _BT_HCI_MEMB(addr, family) = AF_BLUETOOTH;
++            if (straddr == NULL) {
++                PyErr_SetString(socket_error, "getsockaddrarg: "
++                                "wrong format");
++                return 0;
++            }
++            if (setbdaddr(straddr, &_BT_HCI_MEMB(addr, bdaddr)) < 0)
++                return 0;
 +#else
- 			_BT_HCI_MEMB(addr, family) = AF_BLUETOOTH;
- 			if (!PyArg_ParseTuple(args, "i", &_BT_HCI_MEMB(addr, dev))) {
- 				PyErr_SetString(socket_error, "getsockaddrarg: "
- 						"wrong format");
- 				return 0;
- 			}
+             _BT_HCI_MEMB(addr, family) = AF_BLUETOOTH;
+             if (!PyArg_ParseTuple(args, "i", &_BT_HCI_MEMB(addr, dev))) {
+                 PyErr_SetString(socket_error, "getsockaddrarg: "
+                                 "wrong format");
+                 return 0;
+             }
 +#endif
- 			*len_ret = sizeof *addr;
- 			return 1;
- 		}
-@@ -4564,9 +4583,13 @@ init_socket(void)
- 	PyModule_AddIntConstant(m, "BTPROTO_L2CAP", BTPROTO_L2CAP);
- 	PyModule_AddIntConstant(m, "BTPROTO_HCI", BTPROTO_HCI);
- 	PyModule_AddIntConstant(m, "SOL_HCI", SOL_HCI);
+             *len_ret = sizeof *addr;
+             return 1;
+         }
+@@ -4588,9 +4607,13 @@ init_socket(void)
+     PyModule_AddIntConstant(m, "BTPROTO_L2CAP", BTPROTO_L2CAP);
+     PyModule_AddIntConstant(m, "BTPROTO_HCI", BTPROTO_HCI);
+     PyModule_AddIntConstant(m, "SOL_HCI", SOL_HCI);
 +#if !defined(__NetBSD__) && !defined(__DragonFly__)
- 	PyModule_AddIntConstant(m, "HCI_FILTER", HCI_FILTER);
+     PyModule_AddIntConstant(m, "HCI_FILTER", HCI_FILTER);
 +#endif
  #if !defined(__FreeBSD__)
 +#if !defined(__NetBSD__) && !defined(__DragonFly__)
- 	PyModule_AddIntConstant(m, "HCI_TIME_STAMP", HCI_TIME_STAMP);
+     PyModule_AddIntConstant(m, "HCI_TIME_STAMP", HCI_TIME_STAMP);
 +#endif
- 	PyModule_AddIntConstant(m, "HCI_DATA_DIR", HCI_DATA_DIR);
- 	PyModule_AddIntConstant(m, "BTPROTO_SCO", BTPROTO_SCO);
+     PyModule_AddIntConstant(m, "HCI_DATA_DIR", HCI_DATA_DIR);
+     PyModule_AddIntConstant(m, "BTPROTO_SCO", BTPROTO_SCO);
  #endif
