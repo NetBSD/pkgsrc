@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9610 2010/09/03 10:46:10 drochner Exp $
+$NetBSD: TODO,v 1.9611 2010/09/04 05:12:17 obache Exp $
 
 Suggested new packages
 ======================
@@ -1104,7 +1104,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-uwsgi-0.9.5.1 [pkg/43400]
 	o python-2.7
 	o python-3.1.2
-	o python26-2.6.6
 	o qbrew-0.3.9
 	o qemu-0.12.5
 	o qnetwalk-1.3

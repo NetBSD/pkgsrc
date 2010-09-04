@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3116 2010/09/03 23:02:23 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3117 2010/09/04 05:12:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4068,3 +4068,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated meta-pkgs/p5-gnome-bindings to 2.30.2 [wiz 2010-09-03]
 	Added x11/unicode-screensaver version 0.3 [wiz 2010-09-03]
 	Added devel/bullet version 2.76 [wiz 2010-09-03]
+	Updated lang/python26 to 2.6.6 [obache 2010-09-04]
