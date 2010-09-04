@@ -1,0 +1,2 @@
+PerlIO::via::Bzip2 implements a PerlIO layer which will let you handle
+bzip2 compressed files transparently.
