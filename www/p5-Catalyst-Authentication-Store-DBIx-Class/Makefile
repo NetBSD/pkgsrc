@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/08/21 16:36:38 seb Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/05 11:22:19 sno Exp $
 
-DISTNAME=	Catalyst-Authentication-Store-DBIx-Class-0.1083
+DISTNAME=	Catalyst-Authentication-Store-DBIx-Class-0.1400
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -13,8 +13,12 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Catalyst-Model-DBIC-Schema>=0.18:../../databases/p5-Catalyst-Model-DBIC-Schema
 DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.10008:../../www/p5-Catalyst-Plugin-Authentication
-DEPENDS+=	p5-Catalyst-Runtime-[0-9]*:../../www/p5-Catalyst-Runtime
-DEPENDS+=     	p5-DBIx-Class>=0:../../databases/p5-DBIx-Class
+DEPENDS+=	p5-Catalyst-Runtime>=5.80000:../../www/p5-Catalyst-Runtime
+DEPENDS+=     	p5-DBIx-Class>=0.08000:../../databases/p5-DBIx-Class
+DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
+DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 PERL5_PACKLIST= 	auto/Catalyst/Authentication/Store/DBIx/Class/.packlist
 PERL5_MODULE_TYPE=	Module::Install
