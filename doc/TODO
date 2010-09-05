@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9613 2010/09/05 15:08:49 jakllsch Exp $
+$NetBSD: TODO,v 1.9614 2010/09/05 17:12:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,7 +337,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GutenMark-20090216
-	o ImageMagick-6.6.3.10
+	o ImageMagick-6.6.4.0
 	o MAMEDiff-2.30
 	o Mesa-7.8.2
 	o MesaLib-7.8.0
@@ -517,6 +517,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-mode-9.3e
 	o dnsmasq-2.55
 	o dnstracer-1.9
+	o docbook-xsl-1.76.0
 	o doclifter-2.4
 	o doxygen-1.7.1
 	o dpkg-1.14.25
@@ -685,8 +686,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnumeric110-1.10.10
 	o gnuplot-4.4.0 [pkg/43771]
 	o gob2-2.0.17
+	o goffice0.8-0.8.10
 	o gogo-3.11p1
 	o gok-2.30.0 [GNOME 2.30]
 	o golem-0.0.6
@@ -705,7 +708,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.10
 	o gsoap-2.7.17 [pkg/43789]
 	o gss-1.0.1
+	o gst-plugins0.10-bad-0.10.20
 	o gst-plugins0.10-good-0.10.25
+	o gst-plugins0.10-ugly-0.10.16
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.1
@@ -857,7 +862,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.1
 	o liboobs-2.30.1 [GNOME 2.30]
 	o libpciaccess-0.12.0
-	o libproxy-0.4.5
+	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.90.6
 	o libssh-0.4.5
@@ -867,7 +872,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-2.2.10
 	o libtool-base-2.2.10
 	o libusb-1.0
-	o libv4l-0.8.0
+	o libv4l-0.8.1
 	o libxcb-1.7
 	o libxml++-2.30.1 [GNOME 2.30]
 	o licq-1.3.8
@@ -900,7 +905,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mathomatic-15.2.1
 	o mawk-1.3.4.20100625
-	o mc-4.7.0.6
+	o mc-4.7.0.8
 	o mdocml-1.10.5
 	o mediatomb-0.12.1
 	o memconf-2.9 [pkg/40201]
@@ -1014,10 +1019,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
+	o p5-Module-Signature-0.65
 	o p5-POE-1.289 [pkg/43115]
-	o p5-PerlMagick-6.6.3.10
+	o p5-PerlMagick-6.6.4.0
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-Text-vFile-asData-0.07
+	o p5-WWW-Curl-4.13
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.57
@@ -1186,8 +1193,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.2.0
 	o scm-5e7
-	o scmgit-base-1.7.2.2
-	o scmgit-docs-1.7.2.2
+	o scmgit-base-1.7.2.3
+	o scmgit-docs-1.7.2.3
 	o scons-1.3.1 [pkg/43759]
 	o scons-2.0.1
 	o scribus-1.3.7
@@ -1305,7 +1312,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o vala-0.9.5 [pkg/43749]
-	o vala-0.9.7
+	o vala-0.9.8
 	o valgrind-3.5.0
 	o vera-1.17
 	o vfu-4.09
@@ -1353,7 +1360,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o x11vnc-0.9.11 [need newer libVNCServer, not released]
-	o x264-devel-20100828
+	o x264-devel-20100904
 	o xanalyser-1.30
 	o xapian-1.2.2
 	o xapian-omega-1.2.2
