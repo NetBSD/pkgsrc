@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.12 2010/09/04 19:23:00 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.13 2010/09/05 00:24:30 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
@@ -332,7 +332,7 @@ Open(int fd)
 			(void)close(fd);
 			(void)close(pfds[1]);
 
-			(void)execl(LZCAT, LZCAT, "-f", NULL);
+			(void)execlp(LZCAT, LZCAT, "-f", NULL);
 			exit(EXIT_FAILURE);
 			
 		default:
@@ -360,7 +360,21 @@ Read(FileHandle *fh, void *buffer, size_t length)
 	} else if (fh->fh_GZFile != NULL) {
 		bytes = gzread(fh->fh_GZFile, buffer, length);
 	} else if (fh->fh_Pipe >= 0) {
-		bytes = read(fh->fh_Pipe, buffer, length);
+		bytes = 0;
+		while (length > 0) {
+			ssize_t chunk = read(fh->fh_Pipe, buffer, length);
+			if (chunk < 0) {
+				bytes = -1;
+				break;
+			} else if (chunk == 0) {
+				break;
+			}
+
+			buffer += chunk;
+			length -= chunk;
+
+			bytes += chunk;
+		}
 	} else {
 		bytes = -1;
 	}
