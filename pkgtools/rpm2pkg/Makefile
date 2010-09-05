@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2010/09/05 00:24:30 tron Exp $
+# $NetBSD: Makefile,v 1.49 2010/09/05 01:22:29 tron Exp $
 
-DISTNAME=	rpm2pkg-3.1.1
+DISTNAME=	rpm2pkg-3.1.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -28,6 +28,9 @@ LIBS+=		-lintl -lz -lbz2
 .if !empty(CC_VERSION:Mgcc-*)
 CFLAGS+=	-Wall -Wshadow -Wsign-compare -Wunused-value
 .endif
+
+CFLAGS+=	-g
+LDFLAGS+=	-g
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
