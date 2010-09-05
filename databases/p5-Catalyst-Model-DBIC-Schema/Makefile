@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/08/21 16:32:53 seb Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/05 15:55:12 sno Exp $
 
-DISTNAME=	Catalyst-Model-DBIC-Schema-0.40
+DISTNAME=	Catalyst-Model-DBIC-Schema-0.43
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -17,6 +17,7 @@ DEPENDS+=	p5-CatalystX-Component-Traits>=0.14:../../www/p5-CatalystX-Component-T
 DEPENDS+=	p5-DBIx-Class>=0.08114:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
+DEPENDS+=	p5-MooseX-NonMoose-[0-9]*:../../devel/p5-MooseX-NonMoose
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
@@ -31,7 +32,7 @@ DEPENDS+=	p5-DBIx-Class-Cursor-Cached-[0-9]*:../../databases/p5-DBIx-Class-Curso
 DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-Test-Simple>=0.94:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Model/DBIC/Schema/.packlist
