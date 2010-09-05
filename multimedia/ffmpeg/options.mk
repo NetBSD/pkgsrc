@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2010/05/04 18:33:43 drochner Exp $
+# $NetBSD: options.mk,v 1.17 2010/09/05 22:55:58 wiz Exp $
 
 # Global and legacy options
 
@@ -7,6 +7,13 @@ PKG_SUPPORTED_OPTIONS=	theora xvid faad faac x264 opencore-amr
 PKG_SUGGESTED_OPTIONS=	theora xvid x264
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faad faac
+
+### Add vdpau if it is available
+.include "../../multimedia/libvdpau/available.mk"
+.if ${VDPAU_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+= vdpau
+PKG_SUGGESTED_OPTIONS+=	vdpau
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -81,4 +88,13 @@ BUILDLINK_API_DEPENDS.x264-devel+=	x264-devel>=20090920
 BUILDLINK_API_DEPENDS.x264-devel+=	x264-devel<20090921
 CONFIGURE_ARGS+=  --enable-libx264
 .include "../../multimedia/x264-devel/buildlink3.mk"
+.endif
+
+###
+### VDPAU support
+###
+.if !empty(PKG_OPTIONS:Mvdpau)
+.include "../../multimedia/libvdpau/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=        --disable-vdpau
 .endif
