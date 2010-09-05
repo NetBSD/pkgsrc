@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3146 2010/09/05 11:35:52 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3147 2010/09/05 11:41:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4096,3 +4096,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Plugin-ConfigLoader to 0.30 [sno 2010-09-05]
 	Updated www/p5-Catalyst-View-TT to 0.35 [sno 2010-09-05]
 	Updated www/p5-Catalyst-View-JSON to 0.30 [sno 2010-09-05]
+	Updated www/p5-Catalyst-View-Excel-Template-Plus to 0.03 [sno 2010-09-05]
