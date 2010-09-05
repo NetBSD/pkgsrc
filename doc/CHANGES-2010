@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3130 2010/09/04 19:23:11 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3131 2010/09/05 00:25:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4081,4 +4081,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Handel to 1.00011nb3 [sno 2010-09-04]
 	Updated www/p5-SVN-Web to 0.53nb5 [sno 2010-09-04]
 	Updated devel/py-setuptools to 0.6c11nb1 [tron 2010-09-04]
-	Updated pkgtools/rpm2pkg to 3.1 [tron 2010-09-04]
+	Updated pkgtools/rpm2pkg to 3.1.1 [tron 2010-09-05]
