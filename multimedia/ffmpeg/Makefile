@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2010/05/04 18:33:43 drochner Exp $
+# $NetBSD: Makefile,v 1.61 2010/09/05 22:55:18 wiz Exp $
 
 PKGREVISION=	8
 
@@ -12,14 +12,14 @@ CONFIGURE_ARGS+=	--enable-avfilter \
 			--enable-avfilter-lavf \
 			--enable-postproc \
 			--enable-libvorbis \
-			--enable-libmp3lame 
+			--enable-libmp3lame
 
 INSTALLATION_DIRS=	lib share/examples/ffmpeg share/doc/ffmpeg
 
 CONF_FILES+=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf
 
-post-install:   
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/libavcodec/api-example.c \
 		${DESTDIR}${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/doc/TODO \
