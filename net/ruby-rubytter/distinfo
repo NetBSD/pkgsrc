@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/07/09 05:25:56 obache Exp $
+$NetBSD: distinfo,v 1.4 2010/09/05 02:18:59 obache Exp $
 
-SHA1 (rubytter-1.4.0.gem) = 0b8d4cae926c01bd8305723dd70b553127b576a7
-RMD160 (rubytter-1.4.0.gem) = abbec394aa003f38767bac4133f8dd79787719a3
-Size (rubytter-1.4.0.gem) = 14848 bytes
+SHA1 (rubytter-1.4.1.gem) = 06b4254364b1944bb3f8bf8871e475e2c23758f9
+RMD160 (rubytter-1.4.1.gem) = 7dfc83d9ec9223b158a5b4ddeb8f5a65a8d7073a
+Size (rubytter-1.4.1.gem) = 14848 bytes
