@@ -1,4 +1,4 @@
-# $NetBSD: pkg-rpm.mk,v 1.2 2007/10/09 19:19:13 martti Exp $
+# $NetBSD: pkg-rpm.mk,v 1.3 2010/09/05 16:13:41 tron Exp $
 #
 # RPM package format
 #
@@ -56,7 +56,7 @@
 #	files listed in RPMFILES.
 #
 
-BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=		rpm2pkg>=3.1.3:../../pkgtools/rpm2pkg
 EVAL_PREFIX+=		_RPM2PKG_PREFIX=rpm2pkg
 RPM2PKG=		${_RPM2PKG_PREFIX}/sbin/rpm2pkg
 
