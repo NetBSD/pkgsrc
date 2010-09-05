@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3156 2010/09/05 15:05:48 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3157 2010/09/05 15:08:49 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4106,3 +4106,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Plugin-I18N to 0.10 [sno 2010-09-05]
 	Updated www/p5-CatalystX-Component-Traits to 0.16 [sno 2010-09-05]
 	Updated www/p5-CatalystX-LeakChecker to 0.06 [sno 2010-09-05]
+	Updated multimedia/mplayer to 1.0rc20091017nb3 [jakllsch 2010-09-05]
