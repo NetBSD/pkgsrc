@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9614 2010/09/05 17:12:13 wiz Exp $
+$NetBSD: TODO,v 1.9615 2010/09/05 20:29:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,6 +433,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bbweather-0.6.3
 	o bdb-xml-2.0.9
 	o benchfft-3.1
+	o bftpd-3.0
 	o biew-6.1.0
 	o binutils-2.20.1
 	o bioperl-1.5.0
@@ -491,7 +492,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cssc-1.2.0
 	o cups-1.4.4
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsd-1.0.19
+	o cvsd-1.0.20
 	o cygwin_lib-1.5.24.2
 	o dansguardian-2.10.0.3
 	o dante-1.2.1
@@ -554,6 +555,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enscript-1.6.5.2
 	o epic4-2.6
 	o epstool-3.08
+	o eric4-4.4.8
 	o eric5-5.0.0
 	o erlang-13b4
 	o erubis-2.6.2
@@ -640,7 +642,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcompris-9.0
 	o gconfmm-2.28.2
 	o gcpio-2.10
-	o gdb-7.1
+	o gdb-7.2
 	o gdeskcal-1.01
 	o gdl-2.28.2 [GNOME 2.28]
 	o gdm-2.20.11
@@ -795,6 +797,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbproto-1.0.5
 	o kdbg-2.2.2
 	o kde4-4.5.1
+	o kdevelop-4.0.2
 	o kdrill-6.5
 	o kid3-1.4
 	o kipi-plugins-1.4.0
@@ -939,6 +942,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
+	o mkvtoolnix-4.3.0
 	o mlterm-3.0.1 [pkg/43822]
 	o moc-2.4.4
 	o modular-xorg-server-1.9.0
