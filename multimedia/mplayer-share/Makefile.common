@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2010/08/12 15:28:46 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.46 2010/09/05 23:01:48 wiz Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -29,7 +29,6 @@ HOMEPAGE?=		http://www.mplayerhq.hu/
 #
 
 PATCHDIR=		${.CURDIR}/../../multimedia/mplayer-share/patches
-FILESDIR=		${.CURDIR}/../../multimedia/mplayer-share/files
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/mplayer-share/distinfo
 
 RESTRICTED=		Prohibited by USAs DMCA and patent law
