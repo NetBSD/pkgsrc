@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2010/08/27 16:34:59 tron Exp $
+# $NetBSD: Makefile,v 1.164 2010/09/05 08:29:51 sno Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -11,10 +11,18 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
 		p5-CGI-2.66{,nb*} p5-CGI-2.75{,nb*} p5-CGI-2.75.[0-2]	\
 		p5-Tie-File-0.96{,nb*}					\
-		p5-Memoize-1.01{,nb*}
+		p5-Memoize-1.01{,nb*}					\
+		p5-I18N-LangTags<0.35{,nb*}				\
+		p5-Locale-Maketext-1.[0-9]*{,nb*}			\
+		p5-Locale-Maketext-Simple<0.21{,nb*}			\
+		p5-Digest<=1.16{,nb*}					\
+		p5-Digest-MD5<=2.39{,nb*}				\
+		p5-Digest-SHA<2.48
 
 SUPERSEDES+=	p5-Tie-File<0.97
 SUPERSEDES+=	p5-Memoize<1.02
+SUPERSEDES+=	p5-I18N-LangTags<=0.35{,nb*}
+SUPERSEDES+=	p5-Locale-Maketext<=1.15
 
 .include "../../mk/bsd.prefs.mk"
 
