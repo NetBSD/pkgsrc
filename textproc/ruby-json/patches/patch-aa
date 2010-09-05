@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2010/05/16 09:12:30 obache Exp $
+$NetBSD: patch-aa,v 1.5 2010/09/05 02:13:51 obache Exp $
 
 Do not install executables, those are part of ruby-json-pure
 
---- ../json-1.4.3.gemspec.orig	2010-05-16 09:01:44.000000000 +0000
-+++ ../json-1.4.3.gemspec
+--- ../json-1.4.6.gemspec.orig	2010-09-05 01:59:16.000000000 +0000
++++ ../json-1.4.6.gemspec
 @@ -10,14 +10,12 @@ bindir: bin
  cert_chain: []
  
- date: 2010-05-04 22:00:00 +00:00
+ date: 2010-08-08 22:00:00 +00:00
 -default_executable: edit_json.rb
 +default_executable: []
  dependencies: []

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/06/15 13:35:52 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/05 02:13:51 obache Exp $
 
-DISTNAME=	json-1.4.3
-PKGREVISION=	1
+DISTNAME=	json-1.4.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 
@@ -15,6 +14,8 @@ GEM_CLEANBUILD=	ext/json/ext/generator/* ext/json/ext/parser/*
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -xdev -type f -print | ${XARGS} ${CHMOD} g-w
+
+REPLACE_RUBY_DIRS=	tools
 
 .include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
