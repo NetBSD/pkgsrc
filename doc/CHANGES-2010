@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3134 2010/09/05 01:23:54 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3135 2010/09/05 02:15:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4083,3 +4083,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/py-setuptools to 0.6c11nb1 [tron 2010-09-04]
 	Updated textproc/p5-Search-Xapian to 1.0.21.0 [schmonz 2010-09-05]
 	Updated pkgtools/rpm2pkg to 3.1.2 [tron 2010-09-05]
+	Updated textproc/ruby-json to 1.4.6 [obache 2010-09-05]
+	Updated textproc/ruby-json-pure to 1.4.6 [obache 2010-09-05]
