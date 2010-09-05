@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3136 2010/09/05 02:19:12 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3137 2010/09/05 09:07:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4086,3 +4086,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/ruby-json to 1.4.6 [obache 2010-09-05]
 	Updated textproc/ruby-json-pure to 1.4.6 [obache 2010-09-05]
 	Updated net/ruby-rubytter to 1.4.1 [obache 2010-09-05]
+	Updated devel/p5-IO-Stty to 0.03 [sno 2010-09-05]
