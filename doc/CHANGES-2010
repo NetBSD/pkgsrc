@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3142 2010/09/05 11:22:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3143 2010/09/05 11:25:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4092,3 +4092,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-PHP-Serialization to 0.34 [sno 2010-09-05]
 	Updated www/p5-Catalyst-Action-REST to 0.86 [sno 2010-09-05]
 	Updated www/p5-Catalyst-Authentication-Store-DBIx-Class to 0.1400 [sno 2010-09-05]
+	Updated www/p5-Catalyst-Model-Adaptor to 0.09 [sno 2010-09-05]
