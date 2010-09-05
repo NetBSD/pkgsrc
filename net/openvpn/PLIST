@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/06/16 07:30:26 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/09/05 20:33:48 adam Exp $
 man/man8/openvpn.8
 sbin/openvpn
 share/examples/openvpn/config/README
@@ -31,7 +31,6 @@ share/examples/openvpn/keys/server.key
 share/examples/openvpn/scripts/auth-pam.pl
 share/examples/openvpn/scripts/bridge-start
 share/examples/openvpn/scripts/bridge-stop
-share/examples/openvpn/scripts/bs
 share/examples/openvpn/scripts/openvpn.init
 share/examples/openvpn/scripts/ucn.pl
 share/examples/openvpn/scripts/verify-cn
