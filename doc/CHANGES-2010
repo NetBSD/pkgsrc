@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3138 2010/09/05 09:25:21 manu Exp $
+$NetBSD: CHANGES-2010,v 1.3139 2010/09/05 10:52:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4088,3 +4088,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/ruby-rubytter to 1.4.1 [obache 2010-09-05]
 	Updated devel/p5-IO-Stty to 0.03 [sno 2010-09-05]
 	Updated filesystems/perfuse to 20100906 [manu 2010-09-05]
+	Updated www/p5-Catalyst-Runtime to 5.80027 [sno 2010-09-05]
