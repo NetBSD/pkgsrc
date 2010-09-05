@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.13 2010/09/05 00:24:30 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.14 2010/09/05 01:22:29 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
@@ -360,9 +360,12 @@ Read(FileHandle *fh, void *buffer, size_t length)
 	} else if (fh->fh_GZFile != NULL) {
 		bytes = gzread(fh->fh_GZFile, buffer, length);
 	} else if (fh->fh_Pipe >= 0) {
+		size_t remainder;
+
+		remainder = length;
 		bytes = 0;
-		while (length > 0) {
-			ssize_t chunk = read(fh->fh_Pipe, buffer, length);
+		while (remainder > 0) {
+			ssize_t chunk = read(fh->fh_Pipe, buffer, remainder);
 			if (chunk < 0) {
 				bytes = -1;
 				break;
@@ -370,8 +373,8 @@ Read(FileHandle *fh, void *buffer, size_t length)
 				break;
 			}
 
-			buffer += chunk;
-			length -= chunk;
+			buffer = (uint8_t *)buffer + chunk;
+			remainder -= chunk;
 
 			bytes += chunk;
 		}
