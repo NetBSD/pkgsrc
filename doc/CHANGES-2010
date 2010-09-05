@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3154 2010/09/05 14:22:14 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3155 2010/09/05 15:01:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4104,3 +4104,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Catalyst-View-Email to 0.30 [sno 2010-09-05]
 	Updated www/p5-Catalyst-Plugin-Session-Store-Delegate to 0.06 [sno 2010-09-05]
 	Updated www/p5-Catalyst-Plugin-I18N to 0.10 [sno 2010-09-05]
+	Updated www/p5-CatalystX-Component-Traits to 0.16 [sno 2010-09-05]
