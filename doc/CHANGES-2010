@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3135 2010/09/05 02:15:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3136 2010/09/05 02:19:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4085,3 +4085,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/rpm2pkg to 3.1.2 [tron 2010-09-05]
 	Updated textproc/ruby-json to 1.4.6 [obache 2010-09-05]
 	Updated textproc/ruby-json-pure to 1.4.6 [obache 2010-09-05]
+	Updated net/ruby-rubytter to 1.4.1 [obache 2010-09-05]
