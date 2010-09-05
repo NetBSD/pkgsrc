@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.14 2010/09/05 01:22:29 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.15 2010/09/05 15:51:56 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
@@ -161,7 +161,7 @@ typedef struct FileHandleStruct {
 	BZFILE	*fh_BZFile;
 	gzFile	*fh_GZFile;
 	off_t	fh_Pos;
-	int	fh_Pipe;
+	int	fh_FD;
 	pid_t	fh_Child;
 } FileHandle;
 
@@ -196,13 +196,15 @@ Close(FileHandle *fh)
 		(void)gzclose(fh->fh_GZFile);
 	}
 
-	if (fh->fh_Pipe >= 0) {
-		(void)close(fh->fh_Pipe);
+	if (fh->fh_FD >= 0) {
+		(void)close(fh->fh_FD);
 	}
 
 	if (fh->fh_Child != -1) {
-		(void)kill(fh->fh_Child, SIGTERM);
-		(void)waitpid(fh->fh_Child, NULL, 0);
+		if (waitpid(fh->fh_Child, NULL, WNOHANG) != fh->fh_Child) {
+			(void)kill(fh->fh_Child, SIGTERM);
+			(void)waitpid(fh->fh_Child, NULL, 0);
+		}
 	}
 
 	free(fh);
@@ -236,7 +238,7 @@ IsRPMFile(int fd)
 	/* Skip over RPM header(s). */
 	while (read(fd, &rpmHeader, sizeof(RPMHeader)) == sizeof(RPMHeader)) {
 		uint32_t	indexSize, dataSize;
-		off_t		offset = 0;
+		off_t		offset;
 
 		/* Did we find another header? */		
 		if (memcmp(rpmHeader.magic, RPMHeaderMagic,
@@ -266,23 +268,34 @@ IsRPMFile(int fd)
 static FileHandle *
 Open(int fd)
 {
-	unsigned char	buffer[3];
+	unsigned char	buffer[8];
 	FileHandle	*fh;
 
-	if (read(fd, buffer, sizeof(buffer)) != sizeof(buffer))
+	/*
+	 * Read enough bytes to identify the compression and seek back to
+	 * the beginning of the data section.
+	 */
+	if (read(fd, buffer, sizeof(buffer)) != sizeof(buffer) ||
+	    lseek(fd, -(off_t)sizeof(buffer), SEEK_CUR) == -1) {
 		return NULL;
-	if (lseek(fd, -(off_t)sizeof(buffer), SEEK_CUR) == -1)
-		return NULL;
+	}
 
 	if ((fh = calloc(1, sizeof (FileHandle))) == NULL)
 		return NULL;
 
-	fh->fh_Pipe = -1;
+	fh->fh_FD = -1;
 	fh->fh_Child = -1;
 
-	if (memcmp(buffer, BZipMagic, sizeof(BZipMagic)) == 0) {
+	/* Determine the compression method. */
+	if (memcmp(buffer, CPIOMagic, sizeof(CPIOMagic)) == 0) {
+		/* uncompressed data */
+		if ((fh->fh_FD = dup(fd)) < 0) {
+			free(fh);
+			return NULL;
+		}
+	} else if (memcmp(buffer, BZipMagic, sizeof(BZipMagic)) == 0) {
 		/* bzip2 archive */
-		int	bzerror;
+		int bzerror;
 
 		if ((fd = dup(fd)) < 0) {
 			free(fh);
@@ -305,15 +318,23 @@ Open(int fd)
 			free(fh);
 			return (NULL);
 		}
-	} else {	/* lzma ... hopefully */
+	} else {
+		/* lzma ... hopefully */
 #ifdef LZCAT
 		int	pfds[2];
+		char	*path, *argv[3];
 		pid_t	pid;
 
 		if (pipe(pfds) != 0) {
 			free(fh);
 			return (NULL);
 		}
+
+		path = LZCAT;
+		argv[0] = strrchr(path, '/');
+		if (argv[0] == NULL)
+			argv[0] = path;
+		argv[1] = NULL;
 
 		pid = vfork();
 		switch (pid) {
@@ -324,25 +345,30 @@ Open(int fd)
 			return NULL;
 
 		case 0:
-			(void)close(pfds[0]);
 			if (dup2(fd, STDIN_FILENO) == -1 ||
 			    dup2(pfds[1], STDOUT_FILENO) == -1) {
-				exit(EXIT_FAILURE);
+				_exit(EXIT_FAILURE);
 			}
 			(void)close(fd);
+			(void)close(pfds[0]);
 			(void)close(pfds[1]);
 
-			(void)execlp(LZCAT, LZCAT, "-f", NULL);
-			exit(EXIT_FAILURE);
+			(void)execvp(path, argv);
+			_exit(EXIT_FAILURE);
 			
 		default:
 			(void)close(pfds[1]);
-			fh->fh_Pipe = pfds[0];
+			if (waitpid(pid, NULL, WNOHANG) == pid) {
+				(void)close(pfds[0]);
+				free(fh);
+				return NULL;
+			}
+			fh->fh_FD = pfds[0];
 			fh->fh_Child = pid;
-			return fh;
 		}			
 #else
-		return NULL;
+		free(fh);
+		fh = NULL;
 #endif
 	}
 
@@ -359,13 +385,13 @@ Read(FileHandle *fh, void *buffer, size_t length)
 		bytes = BZ2_bzRead(&bzerror, fh->fh_BZFile, buffer, length);
 	} else if (fh->fh_GZFile != NULL) {
 		bytes = gzread(fh->fh_GZFile, buffer, length);
-	} else if (fh->fh_Pipe >= 0) {
-		size_t remainder;
+	} else if (fh->fh_FD >= 0) {
+		uint8_t	*ptr;
 
-		remainder = length;
 		bytes = 0;
-		while (remainder > 0) {
-			ssize_t chunk = read(fh->fh_Pipe, buffer, remainder);
+		ptr = buffer;
+		while (bytes < (ssize_t)length) {
+			ssize_t chunk = read(fh->fh_FD, ptr, length - bytes);
 			if (chunk < 0) {
 				bytes = -1;
 				break;
@@ -373,9 +399,7 @@ Read(FileHandle *fh, void *buffer, size_t length)
 				break;
 			}
 
-			buffer = (uint8_t *)buffer + chunk;
-			remainder -= chunk;
-
+			ptr += chunk;
 			bytes += chunk;
 		}
 	} else {
@@ -392,7 +416,7 @@ static bool
 SkipAndAlign(FileHandle *fh, off_t Skip)
 
 {
-	off_t		NewPos;
+	off_t NewPos;
 
 	NewPos = (fh->fh_Pos + Skip + 3) & ~3;
 	if (fh->fh_Pos == NewPos)
