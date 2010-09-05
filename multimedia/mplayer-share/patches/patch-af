@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.6 2010/09/05 23:00:55 wiz Exp $
+
+Fix build on Solaris, see http://bugzilla.mplayerhq.hu/show_bug.cgi?id=1787
+
+--- libswscale/mlib/yuv2rgb_mlib.c.orig	2009-08-16 21:11:28.000000000 +0000
++++ libswscale/mlib/yuv2rgb_mlib.c
+@@ -29,6 +29,7 @@
+ #include <assert.h>
+ 
+ #include "libswscale/swscale.h"
++#include "libswscale/swscale_internal.h"
+ 
+ static int mlib_YUV2ARGB420_32(SwsContext *c, uint8_t* src[], int srcStride[], int srcSliceY,
+                                int srcSliceH, uint8_t* dst[], int dstStride[])
