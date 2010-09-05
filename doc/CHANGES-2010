@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3149 2010/09/05 12:09:33 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3150 2010/09/05 12:13:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4099,3 +4099,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-View-Excel-Template-Plus to 0.03 [sno 2010-09-05]
 	Updated mail/p5-Email-MIME to 1.904 [sno 2010-09-05]
 	Updated mail/p5-Email-Abstract to 3.002 [sno 2010-09-05]
+	Updated mail/p5-Email-Address to 1.892 [sno 2010-09-05]
