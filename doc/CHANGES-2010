@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3160 2010/09/05 15:34:12 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3161 2010/09/05 15:55:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4110,3 +4110,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CatalystX-CRUD-YUI to 0.024 [sno 2010-09-05]
 	Updated databases/p5-CatalystX-CRUD to 0.51 [sno 2010-09-05]
 	Updated www/p5-Catalyst-Devel to 1.28 [sno 2010-09-05]
+	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.43 [sno 2010-09-05]
