@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3185 2010/09/06 11:24:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3186 2010/09/06 11:26:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-WWW-Curl to 4.13 [wiz 2010-09-06]
 	Updated x11/p5-gtk2 to 1.222 [wiz 2010-09-06]
 	Updated graphics/p5-GD to 2.45 [wiz 2010-09-06]
+	Updated graphics/p5-Image-Imlib2 to 2.03 [wiz 2010-09-06]
