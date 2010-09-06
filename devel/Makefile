@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1394 2010/09/03 23:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.1395 2010/09/06 18:13:52 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -892,6 +892,8 @@ SUBDIR+=	p5-Perl6-Export-Attrs
 SUBDIR+=	p5-Perl6-Junction
 SUBDIR+=	p5-Perl6-Slurp
 SUBDIR+=	p5-PerlIO-eol
+SUBDIR+=	p5-PerlIO-gzip
+SUBDIR+=	p5-PerlIO-via-Bzip2
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
 SUBDIR+=	p5-Probe-Perl
@@ -916,6 +918,7 @@ SUBDIR+=	p5-Rose-Object
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-SUPER
 SUBDIR+=	p5-SVN-Class
+SUBDIR+=	p5-SVN-Dump
 SUBDIR+=	p5-SVN-Mirror
 SUBDIR+=	p5-SVN-Notify
 SUBDIR+=	p5-SVN-Simple
