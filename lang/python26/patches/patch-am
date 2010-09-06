@@ -1,11 +1,18 @@
-$NetBSD: patch-am,v 1.12 2010/09/04 05:12:00 obache Exp $
+$NetBSD: patch-am,v 1.13 2010/09/06 17:33:57 drochner Exp $
 
 Disabled modules for normal build:
 bsdddb
 curses
 curses_panel
 elementtree
-Those have separate packages.
+sqlite3
+tkinter
+gdbm
+pyexpat
+readline
+{linux,oss,sun}audiodev
+spwb
+Those have separate packages where needed.
 
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
 headers and libraries from the system.
@@ -19,7 +26,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
-+disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree", "_sqlite3", "_tkinter", "gdbm", "pyexpat", "readline"]
++disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree", "_sqlite3", "_tkinter", "gdbm", "pyexpat", "readline", "linuxaudiodev", "ossaudiodev", "spwd", "sunaudiodev"]
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
