@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3175 2010/09/06 11:00:34 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3176 2010/09/06 11:01:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4125,3 +4125,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/p5-MIME-Base32 to 1.02a [wiz 2010-09-06]
 	Updated geography/p5-Geo-Coordinates-UTM to 0.09 [wiz 2010-09-06]
 	Updated multimedia/p5-GStreamer to 0.15 [wiz 2010-09-06]
+	Updated math/p5-Set-Crontab to 1.03 [wiz 2010-09-06]
