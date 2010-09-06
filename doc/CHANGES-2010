@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3198 2010/09/06 12:20:35 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3199 2010/09/06 12:44:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated filesystems/perfuse to 20100906nb1 [wiz 2010-09-06]
 	Updated converters/jcode-perl to 2.13nb3 [taca 2010-09-06]
 	Updated mail/im to 150nb2 [taca 2010-09-06]
+	Updated filesystems/perfuse to 20100906nb2 [wiz 2010-09-06]
