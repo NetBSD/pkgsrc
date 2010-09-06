@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3179 2010/09/06 11:05:28 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3180 2010/09/06 11:07:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4129,3 +4129,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-vFile-asData to 0.07 [wiz 2010-09-06]
 	Updated textproc/p5-Text-vCard to 2.09 [wiz 2010-09-06]
 	Updated devel/p5-glib2 to 1.223 [wiz 2010-09-06]
+	Updated misc/p5-File-MMagic-XS to 0.09006 [wiz 2010-09-06]
