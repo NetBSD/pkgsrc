@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/17 15:03:16 abs Exp $
+$NetBSD: distinfo,v 1.2 2010/09/06 11:58:24 wiz Exp $
 
-SHA1 (POE-Component-Cron-0.019.tar.gz) = 47e68a0780fdebd42c90c1098d992827d0255045
-RMD160 (POE-Component-Cron-0.019.tar.gz) = cd529dbbaf38fe6e4d32629e626ee61520dba5b0
-Size (POE-Component-Cron-0.019.tar.gz) = 4484 bytes
+SHA1 (POE-Component-Cron-0.021.tar.gz) = f3387fc77e33dd0e83ca8d6c7bf928ce3700c0a7
+RMD160 (POE-Component-Cron-0.021.tar.gz) = 7b794717343028ff61766165ca663068ca4255a8
+Size (POE-Component-Cron-0.021.tar.gz) = 3368 bytes
