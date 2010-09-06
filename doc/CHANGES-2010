@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3173 2010/09/06 10:55:11 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3174 2010/09/06 10:56:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4123,3 +4123,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/p5-Device-Modem to 1.53 [wiz 2010-09-06]
 	Updated comms/p5-Device-Gsm to 1.55 [wiz 2010-09-06]
 	Updated converters/p5-MIME-Base32 to 1.02a [wiz 2010-09-06]
+	Updated geography/p5-Geo-Coordinates-UTM to 0.09 [wiz 2010-09-06]
