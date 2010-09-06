@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3197 2010/09/06 12:12:49 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3198 2010/09/06 12:20:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4147,3 +4147,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-POE-Component-Client-Ident to 1.16 [wiz 2010-09-06]
 	Updated www/p5-POE-Filter-HTTP-Parser to 1.04 [wiz 2010-09-06]
 	Updated filesystems/perfuse to 20100906nb1 [wiz 2010-09-06]
+	Updated converters/jcode-perl to 2.13nb3 [taca 2010-09-06]
+	Updated mail/im to 150nb2 [taca 2010-09-06]
