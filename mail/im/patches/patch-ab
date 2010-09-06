@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/09/06 12:19:45 taca Exp $
+
+Fix for perl-5.12.
+
+--- IM/Config.pm.in.orig	2010-02-14 15:52:20.000000000 +0000
++++ IM/Config.pm.in
+@@ -487,7 +487,7 @@ sub set_selector($;$) {
+ 
+     foreach $s (split(',', $selector)) { ### xxx lc
+ 	next if ($s eq 'default');
+-	unless (defined(%{$s})) {
++	unless (%{$s}) {
+ 	    im_err("no 'case $s' in config file.\n");
+ 	    return -1;
+ 	} else {
