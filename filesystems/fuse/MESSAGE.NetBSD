@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2010/08/25 08:02:21 manu Exp $
-
-On NetBSD, there is no kernel FUSE support. perfused(8) must be
-started prior using FUSE filesystems. It will take care of creating
-a /dev/fuse socket.
-
-===========================================================================

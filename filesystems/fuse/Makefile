@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/08/25 08:02:21 manu Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/06 12:13:38 wiz Exp $
 #
 
 DISTNAME=		fuse-2.8.4
+PKGREVISION=		1
 CATEGORIES=		filesystems
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
