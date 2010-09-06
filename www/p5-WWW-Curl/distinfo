@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2010/08/16 09:36:39 wiz Exp $
+$NetBSD: distinfo,v 1.11 2010/09/06 11:10:26 wiz Exp $
 
-SHA1 (WWW-Curl-4.12.tar.gz) = ca883b202c083cfeecfada6e6da108edb6a40077
-RMD160 (WWW-Curl-4.12.tar.gz) = 23efd345e4682e3f45902ddb85232fffdf76e682
-Size (WWW-Curl-4.12.tar.gz) = 45493 bytes
+SHA1 (WWW-Curl-4.13.tar.gz) = 9b7e3ca6380387cc6fca69850296d40c8aba526b
+RMD160 (WWW-Curl-4.13.tar.gz) = c2e54b46e18334f49b1ca402a9a4c13275c5569d
+Size (WWW-Curl-4.13.tar.gz) = 45863 bytes
