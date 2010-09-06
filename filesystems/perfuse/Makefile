@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/09/06 10:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/06 12:12:40 wiz Exp $
 #
 
 DISTNAME=	perfuse-20100906
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/perfuse/
 EXTRACT_SUFX=	.tgz
@@ -16,20 +17,21 @@ WRKSRC=	${WRKDIR}/src/
 BUILD_DIRS=	lib/libperfuse usr.sbin/perfused
 BUILDLINK_TRANSFORM=	rm:-Werror
 
+INSTALLATION_DIRS=	include lib sbin
+
 pre-build:
 	${LN} -s ${WRKSRC}/lib/libperfuse/perfuse.h ${BUILDLINK_DIR}/include/
 	${LN} -s ${WRKSRC}/lib/libperfuse/libperfuse.so ${BUILDLINK_DIR}/lib
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/lib/libperfuse/perfuse.h \
 	    ${DESTDIR}/${PREFIX}/include/
-
-	${INSTALL_LIB_DIR} ${DESTDIR}/${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/lib/libperfuse/libperfuse.so \
 	    ${DESTDIR}/${PREFIX}/lib/
+	cd ${DESTDIR}${PREFIX}/lib && \
+		ln -s libperfuse.so libperfuse.so.0 && \
+		ln -s libperfuse.so libperfuse.so.0.0
 
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/usr.sbin/perfused/perfused \
 	    ${DESTDIR}/${PREFIX}/sbin
 
