@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3163 2010/09/05 20:34:46 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3164 2010/09/06 04:34:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4113,3 +4113,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.43 [sno 2010-09-05]
 	Updated pkgtools/rpm2pkg to 3.1.3 [tron 2010-09-05]
 	Updated net/openvpn to 2.1.3 [adam 2010-09-05]
+	Updated filesystems/perfuse to 20100906 [manu 2010-09-06]
