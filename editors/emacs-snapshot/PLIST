@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/08/16 17:34:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/09/06 23:07:44 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2017,6 +2017,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-fun.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-fun.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-group.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-group.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-html.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-html.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-int.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-int.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-kill.el.gz
@@ -2029,8 +2031,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-ml.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-ml.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-mlspl.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-mlspl.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-move.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-move.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-msg.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-msg.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-nocem.el.gz
@@ -2049,8 +2049,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-setup.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-setup.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-sieve.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-sieve.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-soup.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-soup.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-spec.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-spec.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-srvr.el.gz
@@ -2125,8 +2123,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/nnagent.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnagent.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnbabyl.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnbabyl.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nndb.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nndb.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nndiary.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nndiary.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nndir.el.gz
@@ -2147,10 +2143,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/nnimap.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnimap.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnir.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnir.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnkiboze.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnkiboze.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnlistserv.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnlistserv.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnmail.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnmail.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnmaildir.el.gz
@@ -2169,24 +2161,14 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/nnoo.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnoo.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnrss.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnrss.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnslashdot.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnslashdot.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnsoup.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnsoup.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnspool.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnspool.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nntp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nntp.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnultimate.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnultimate.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnvirtual.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnvirtual.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnwarchive.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnwarchive.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnwfm.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/nnwfm.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/qp.el.gz
