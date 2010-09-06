@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9620 2010/09/06 15:20:24 taca Exp $
+$NetBSD: TODO,v 1.9621 2010/09/06 23:10:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -451,6 +451,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20080824
 	o c4-1.10 [schmonz]
+	o cairo-1.10.0
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.7.17
@@ -531,7 +532,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.3.2
 	o eclipse-3.2.0
-	o ed-1.4
+	o ed-1.5
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.2.4
@@ -868,7 +869,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.90.6
-	o libssh-0.4.5
+	o libssh-0.4.6
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
