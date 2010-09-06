@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3191 2010/09/06 11:53:16 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3192 2010/09/06 11:54:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4141,3 +4141,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Log-Log4perl to 1.30 [wiz 2010-09-06]
 	Updated devel/p5-POE to 1.293 [wiz 2010-09-06]
 	Updated devel/p5-POE-Component-Schedule to 0.95 [wiz 2010-09-06]
+	Updated devel/p5-POE-Component-Pluggable to 1.26 [wiz 2010-09-06]
