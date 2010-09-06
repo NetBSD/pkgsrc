@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3169 2010/09/06 10:42:02 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3170 2010/09/06 10:49:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4119,3 +4119,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/p5-Audio-Scan to 0.84 [wiz 2010-09-06]
 	Updated audio/p5-Audio-Wav to 0.12 [wiz 2010-09-06]
 	Updated audio/p5-CDDB to 1.220 [wiz 2010-09-06]
+	Updated chat/p5-POE-Component-IRC to 6.39 [wiz 2010-09-06]
