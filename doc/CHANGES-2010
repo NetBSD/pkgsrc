@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3172 2010/09/06 10:52:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3173 2010/09/06 10:55:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4122,3 +4122,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated chat/p5-POE-Component-IRC to 6.39 [wiz 2010-09-06]
 	Updated comms/p5-Device-Modem to 1.53 [wiz 2010-09-06]
 	Updated comms/p5-Device-Gsm to 1.55 [wiz 2010-09-06]
+	Updated converters/p5-MIME-Base32 to 1.02a [wiz 2010-09-06]
