@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/02/10 12:13:50 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/09/06 10:40:16 wiz Exp $
 
-SHA1 (Audio-Wav-0.08.tar.gz) = b1352368fae5cd0b44e702f214e32a1e4690e851
-RMD160 (Audio-Wav-0.08.tar.gz) = 92ae7fe85db25641ab9014e67a157302faac51ca
-Size (Audio-Wav-0.08.tar.gz) = 20237 bytes
+SHA1 (Audio-Wav-0.12.tar.gz) = c1a4a585c31f030f66759574f07912a421f7507e
+RMD160 (Audio-Wav-0.12.tar.gz) = 1d54fe7dce4707e292c00bbec0eb64b7fff39d16
+Size (Audio-Wav-0.12.tar.gz) = 22903 bytes
