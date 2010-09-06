@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/09/04 05:12:00 obache Exp $
+# $NetBSD: Makefile,v 1.26 2010/09/06 17:33:57 drochner Exp $
 
 DISTNAME=	Python-2.6.6
 PKGNAME=	${DISTNAME:S/Python/python26/}
@@ -51,6 +51,8 @@ PLIST_SRC+=	${.CURDIR}/../../lang/python26/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 PRIVILEGED_STAGES+=	clean
+# XXX work around a botched autoconf check which ignores libintl
+CONFIGURE_ENV+=		ac_cv_func_bind_textdomain_codeset=yes
 .endif
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
@@ -95,13 +97,6 @@ PLIST.openssl097=	yes
 PLIST_VARS+=	extra-so
 .if !empty(IS_64BIT_PLATFORM:M[nN][oO])
 PLIST.extra-so=	yes
-.endif
-
-# ossaudiodev is only available on x86 for the following platforms
-PLIST_VARS+=	oss
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-    (${PY_PLATNAME} == "linux2" || ${OPSYS} == "FreeBSD")
-PLIST.oss=	yes
 .endif
 
 # Make sure python modules can link correctly
@@ -173,5 +168,4 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
