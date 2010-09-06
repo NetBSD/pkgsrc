@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2010/09/06 12:19:45 taca Exp $
+
+Fix for perl-5.12.
+
+--- IM/Scan.pm.orig	2010-02-14 15:52:20.000000000 +0000
++++ IM/Scan.pm
+@@ -509,7 +509,7 @@ sub friendly_addr($$) {
+     my($a, $f, $p);
+     while (($a, $addr, $f) = &fetch_addr($addr, 1), $a ne '') {
+ 	$a =~ s/\/[^@]*//;
+-	if (defined(%petnames) && $petnames{lc($a)}) {
++	if (%petnames && $petnames{lc($a)}) {
+ 	    $p = $petnames{lc($a)};
+ 	} elsif (!$need_addr && $f) {
+ 	    $p = &mime_decode_string($f);

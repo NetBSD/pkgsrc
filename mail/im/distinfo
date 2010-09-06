@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2010/02/19 11:53:43 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/09/06 12:19:45 taca Exp $
 
 SHA1 (im-150.tar.gz) = 4f6ec70d52fffc6c4a44831ebed6ac8e33a769d0
 RMD160 (im-150.tar.gz) = 057142296747b8b2629e8d8265a221f703e7b27a
 Size (im-150.tar.gz) = 267337 bytes
 SHA1 (patch-aa) = 71bb1bed56be580c30f291360e7320a85a818087
+SHA1 (patch-ab) = 132c0026941cc48a24f49cf77b4dd0b25599a2e6
+SHA1 (patch-ac) = d66a6ea0e23865cc8d6dfb25a6472bd3ad48be68
