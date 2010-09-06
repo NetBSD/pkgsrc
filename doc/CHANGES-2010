@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3167 2010/09/06 10:39:22 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3168 2010/09/06 10:40:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4117,3 +4117,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-WWW-Selenium to 1.23 [sno 2010-09-06]
 	Updated inputmethod/ibus-pinyin to 1.3.11 [obache 2010-09-06]
 	Updated audio/p5-Audio-Scan to 0.84 [wiz 2010-09-06]
+	Updated audio/p5-Audio-Wav to 0.12 [wiz 2010-09-06]
