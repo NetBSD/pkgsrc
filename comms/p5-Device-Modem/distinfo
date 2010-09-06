@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/07/21 22:43:16 sno Exp $
+$NetBSD: distinfo,v 1.7 2010/09/06 10:51:56 wiz Exp $
 
-SHA1 (Device-Modem-1.51.tar.gz) = c301fb707e35857bbfce9fc0948c411abc7fc028
-RMD160 (Device-Modem-1.51.tar.gz) = aa97a27ca7991f98bd4ed25040036b7986c7d107
-Size (Device-Modem-1.51.tar.gz) = 42268 bytes
+SHA1 (Device-Modem-1.53.tar.gz) = 186f937cad8f58b86fe52ca7d27bcd9d13205604
+RMD160 (Device-Modem-1.53.tar.gz) = af49fdd7903463ec323d997bc6f9d816f1787ca4
+Size (Device-Modem-1.53.tar.gz) = 44062 bytes
