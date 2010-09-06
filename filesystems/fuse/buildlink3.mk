@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/09/06 10:30:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/09/06 12:13:30 wiz Exp $
 
 BUILDLINK_TREE+=	fuse
 
-.if !defined(FUSEFS_BUILDLINK3_MK)
-FUSEFS_BUILDLINK3_MK:=
+.if !defined(FUSE_BUILDLINK3_MK)
+FUSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fuse+=	fuse>=2.5.2
 BUILDLINK_PKGSRCDIR.fuse?=	../../filesystems/fuse
@@ -13,6 +13,6 @@ BUILDLINK_PKGSRCDIR.fuse?=	../../filesystems/fuse
 .if ${OPSYS} == "NetBSD"
 .include "../../filesystems/perfuse/buildlink3.mk"
 .endif
-.endif # FUSEFS_BUILDLINK3_MK
+.endif # FUSE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-fuse
