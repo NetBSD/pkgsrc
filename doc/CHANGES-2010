@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3187 2010/09/06 11:27:57 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3188 2010/09/06 11:29:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4137,3 +4137,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/p5-GD to 2.45 [wiz 2010-09-06]
 	Updated graphics/p5-Image-Imlib2 to 2.03 [wiz 2010-09-06]
 	Updated graphics/p5-Image-Size to 3.230 [wiz 2010-09-06]
+	Updated graphics/p5-RRDTool-OO to 0.31 [wiz 2010-09-06]
