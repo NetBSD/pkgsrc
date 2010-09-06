@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/03 23:36:38 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/09/06 12:07:05 wiz Exp $
 
-SHA1 (POE-Filter-HTTP-Parser-1.02.tar.gz) = ab5f309fadd0b44d564175fc60b8544550738b0c
-RMD160 (POE-Filter-HTTP-Parser-1.02.tar.gz) = 8ee733fe2d82303231494853a4a4c8819044875d
-Size (POE-Filter-HTTP-Parser-1.02.tar.gz) = 27870 bytes
+SHA1 (POE-Filter-HTTP-Parser-1.04.tar.gz) = fa87ebd75b773faeac6f5bb0af8fed515a882371
+RMD160 (POE-Filter-HTTP-Parser-1.04.tar.gz) = 27d9b80c478a5f093e895b57050747544a18a24f
+Size (POE-Filter-HTTP-Parser-1.04.tar.gz) = 31277 bytes
