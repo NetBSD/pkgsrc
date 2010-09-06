@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9619 2010/09/06 15:10:54 taca Exp $
+$NetBSD: TODO,v 1.9620 2010/09/06 15:20:24 taca Exp $
 
 Suggested new packages
 ======================
@@ -1176,7 +1176,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-rspec-1.2.9
 	o ruby-rttool-1.0.3.0
 	o ruby-sequel-3.12.1 [pkg/43498]
-	o ruby-sequel-core-2.2.0
 	o ruby-simple-rss-1.2.3 [pkg/43606]
 	o ruby-will-paginate-2.3.12
 	o rudiments-0.30
