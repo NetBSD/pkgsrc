@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/08/21 16:34:38 seb Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/06 05:03:48 sno Exp $
 #
 
-DISTNAME=	Test-WWW-Selenium-1.21
+DISTNAME=	Test-WWW-Selenium-1.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	devel perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -19,7 +19,8 @@ PERL5_PACKLIST=		auto/Test/WWW/Selenium/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
+# contains URI::Escape 3.30
+DEPENDS+=	p5-URI>=1.54:../../www/p5-URI
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Mock-LWP-[0-9]*:../../devel/p5-Test-Mock-LWP
