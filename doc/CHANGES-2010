@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3182 2010/09/06 11:09:18 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3183 2010/09/06 11:10:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4132,3 +4132,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/p5-File-MMagic-XS to 0.09006 [wiz 2010-09-06]
 	Updated misc/p5-Locale-Codes to 3.13 [wiz 2010-09-06]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.82 [wiz 2010-09-06]
+	Updated www/p5-WWW-Curl to 4.13 [wiz 2010-09-06]
