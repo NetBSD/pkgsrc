@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2010/05/16 12:27:19 abs Exp $
+# $NetBSD: Makefile,v 1.115 2010/09/07 05:52:36 sno Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -40,6 +40,7 @@ SUBDIR+=	lmclock
 SUBDIR+=	logtime
 SUBDIR+=	ocaml-calendar
 SUBDIR+=	p5-Calendar-Simple
+SUBDIR+=	p5-Convert-NLS_DATE_FORMAT
 SUBDIR+=	p5-Data-ICal
 SUBDIR+=	p5-Data-ICal-DateTime
 SUBDIR+=	p5-DateTime
@@ -60,6 +61,7 @@ SUBDIR+=	p5-DateTime-Format-ISO8601
 SUBDIR+=	p5-DateTime-Format-Mail
 SUBDIR+=	p5-DateTime-Format-MySQL
 SUBDIR+=	p5-DateTime-Format-Natural
+SUBDIR+=	p5-DateTime-Format-Oracle
 SUBDIR+=	p5-DateTime-Format-Pg
 SUBDIR+=	p5-DateTime-Format-SQLite
 SUBDIR+=	p5-DateTime-Format-Strptime
