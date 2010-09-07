@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2010/02/11 15:44:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2010/09/07 19:04:15 adam Exp $
 
-DISTNAME=	gmime-2.2.25
-PKGREVISION=	1
+DISTNAME=	gmime-2.4.18
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.4/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spruce.sourceforge.net/gmime/
@@ -21,7 +20,7 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--disable-mono
-PKGCONFIG_OVERRIDE+=	gmime-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gmime-2.4.pc.in
 TEST_TARGET=		check
 
 .include "options.mk"
