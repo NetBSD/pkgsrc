@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.228 2010/09/05 16:13:41 tron Exp $
+# $NetBSD: replace.mk,v 1.229 2010/09/07 17:33:40 tron Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -701,7 +701,7 @@ TOOLS_PATH.pod2man=		${TOOLS_PREFIX.pod2man}/bin/pod2man
 .  if !empty(PKGPATH:Mpkgtools/rpm2pkg)
 MAKEFLAGS+=			TOOLS_IGNORE.rpm2pkg=
 .  elif !empty(_TOOLS_USE_PKGSRC.rpm2pkg:M[yY][eE][sS])
-TOOLS_DEPENDS.rpm2pkg?=		rpm2pkg>=3.1.3:../../pkgtools/rpm2pkg
+TOOLS_DEPENDS.rpm2pkg?=		rpm2pkg>=3.1.4:../../pkgtools/rpm2pkg
 TOOLS_CREATE+=			rpm2pkg
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.rpm2pkg=rpm2pkg
 TOOLS_PATH.rpm2pkg=		${TOOLS_PREFIX.rpm2pkg}/sbin/rpm2pkg
