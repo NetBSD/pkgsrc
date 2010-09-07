@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2010/08/20 09:29:18 he Exp $
+$NetBSD: distinfo,v 1.29 2010/09/07 07:41:51 he Exp $
 
-SHA1 (parrot-2.5.0.tar.gz) = 490397c8a28f4c49cd2edde91a9d2207dc197f69
-RMD160 (parrot-2.5.0.tar.gz) = 7690307c735152d492f7ef494296cf49f03e6765
-Size (parrot-2.5.0.tar.gz) = 4076239 bytes
+SHA1 (parrot-2.6.0.tar.gz) = e7de16241d00690bef161f9904dfbb8e68f85b2c
+RMD160 (parrot-2.6.0.tar.gz) = 9bc413f1d4e016de72ea0eaa98ae7e087bb5d9e0
+Size (parrot-2.6.0.tar.gz) = 4094631 bytes
 SHA1 (patch-ad) = aae66d32722d4c761132e57176469de7c7d51c88
 SHA1 (patch-ae) = 373909f50385c580065a03946a1f4f5b342189fc
 SHA1 (patch-ak) = 45df82c2240f4619feadc482bcf2636a6b5aa41a

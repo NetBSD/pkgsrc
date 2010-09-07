@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/08/20 09:29:18 he Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/09/07 07:41:51 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -36,7 +36,6 @@ include/parrot/${PKGVERSION}/parrot/extend.h
 include/parrot/${PKGVERSION}/parrot/extend_vtable.h
 include/parrot/${PKGVERSION}/parrot/feature.h
 include/parrot/${PKGVERSION}/parrot/gc_api.h
-include/parrot/${PKGVERSION}/parrot/global.h
 include/parrot/${PKGVERSION}/parrot/global_setup.h
 include/parrot/${PKGVERSION}/parrot/has_header.h
 include/parrot/${PKGVERSION}/parrot/hash.h
@@ -53,6 +52,7 @@ include/parrot/${PKGVERSION}/parrot/longopt.h
 include/parrot/${PKGVERSION}/parrot/memory.h
 include/parrot/${PKGVERSION}/parrot/misc.h
 include/parrot/${PKGVERSION}/parrot/multidispatch.h
+include/parrot/${PKGVERSION}/parrot/namespace.h
 include/parrot/${PKGVERSION}/parrot/nci.h
 include/parrot/${PKGVERSION}/parrot/oo.h
 include/parrot/${PKGVERSION}/parrot/oo_private.h
@@ -398,6 +398,7 @@ lib/parrot/${PKGVERSION}/library/Test/More.pbc
 lib/parrot/${PKGVERSION}/library/Test/More.pir
 lib/parrot/${PKGVERSION}/library/URI.pbc
 lib/parrot/${PKGVERSION}/library/URI.pir
+lib/parrot/${PKGVERSION}/library/URI/Escape.pir
 lib/parrot/${PKGVERSION}/library/YAML/Dumper.pbc
 lib/parrot/${PKGVERSION}/library/YAML/Dumper.pir
 lib/parrot/${PKGVERSION}/library/YAML/Dumper/Base.pir
