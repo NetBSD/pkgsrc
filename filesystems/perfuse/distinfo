@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/09/06 08:41:16 manu Exp $
+$NetBSD: distinfo,v 1.6 2010/09/07 04:33:53 manu Exp $
 
-SHA1 (perfuse-20100906.tgz) = 8f59e368e649be663666fc4d36aba459534cf3f2
-RMD160 (perfuse-20100906.tgz) = 0c7b0ab156e8955a1463031bfada4c3c4a456704
-Size (perfuse-20100906.tgz) = 33240 bytes
+SHA1 (perfuse-20100907.tgz) = 344eb41c421685d9982abc853d04bdb2680a8431
+RMD160 (perfuse-20100907.tgz) = 8e8a85a26e8ecbb0dd63ea40a4404e76e3b567cc
+Size (perfuse-20100907.tgz) = 33390 bytes
 SHA1 (patch-aa) = 2c043fa53fdf00c530299b3af8b3db0e192a67cc
