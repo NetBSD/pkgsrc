@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3217 2010/09/07 10:49:34 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3218 2010/09/07 16:49:04 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4166,3 +4166,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/input-pad to 0.1.2 [obache 2010-09-07]
 	Updated audio/p5-Audio-Scan to 0.84 [wiz 2010-09-07]
 	Updated audio/squeezeboxserver to 7.5.1nb3 [wiz 2010-09-07]
+	Updated x11/py-sip to 4.11.1 [drochner 2010-09-07]
+	Updated x11/py-qt4 to 4.7.6 [drochner 2010-09-07]
+	Updated devel/eric4 to 4.4.8 [drochner 2010-09-07]
+	Updated graphics/scidavis to 0.2.4 [drochner 2010-09-07]
+	Updated x11/qwt-qt4 to 5.2.1 [drochner 2010-09-07]
