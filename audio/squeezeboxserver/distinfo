@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/05 00:54:46 cube Exp $
+$NetBSD: distinfo,v 1.2 2010/09/07 10:49:00 wiz Exp $
 
 SHA1 (squeezeboxserver-7.5.1-noCPAN.tgz) = ff6bdffa4f421d066ef4cce86b8963cb67f3cac2
 RMD160 (squeezeboxserver-7.5.1-noCPAN.tgz) = f042feab287da2835905b50b9b08e197c9746d9e
 Size (squeezeboxserver-7.5.1-noCPAN.tgz) = 20719890 bytes
+SHA1 (patch-aa) = e8cacb5bf1d634d6452eac0d5399f451623bdaab
