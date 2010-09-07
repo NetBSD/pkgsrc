@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3221 2010/09/07 19:16:27 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3222 2010/09/07 19:55:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4175,3 +4175,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/py-anita to 1.14 [gson 2010-09-07]
 	Updated mail/gmime to 2.4.18 [adam 2010-09-07]
 	Updated mail/balsa to 2.4.8 [adam 2010-09-07]
+	Updated www/squid31 to 3.1.8 [tron 2010-09-07]
