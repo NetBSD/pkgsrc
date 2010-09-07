@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9621 2010/09/06 23:10:33 wiz Exp $
+$NetBSD: TODO,v 1.9622 2010/09/07 06:14:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -1110,8 +1110,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-markdown-2.0.3 [pkg/43448]
 	o py-matplotlib-0.99.3
 	o py-networkx-1.2 [pkg/43790]
-	o py-psycopg2-2.2.1 [pkg/43627]
-	o py-psycopg2-2.2.2
 	o py-sybase-0.37
 	o py-uwsgi-0.9.5.1 [pkg/43400]
 	o python-2.7
