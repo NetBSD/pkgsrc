@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.15 2010/09/05 15:51:56 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.16 2010/09/07 17:32:05 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
@@ -150,11 +150,6 @@ struct PListEntryStruct {
 #define	pe_Right	pe_Childs[1]
 
 typedef void PListEntryFunc(PListEntry *,FILE *);
-
-#define	PLIST_ORDER_FORWARD	0
-#define	PLIST_ORDER_BACKWARD	1
-
-#define INVERT_PLIST_ORDER(o)	(1 - (o))
 
 typedef struct FileHandleStruct {
 	FILE	*fh_File;
@@ -509,36 +504,6 @@ StrCat(char *Prefix, char *Suffix)
 	return Str;
 }
 
-static void
-PListEntryLink(PListEntry *Node, FILE *Out)
-
-{
-	char		*Ptr;
-	struct stat	Stat;
-	int		Result;
-
-	if ((Ptr = strrchr(Node->pe_Name, '/')) != NULL) {
-		char	Old, *Targetname;
-
-		Old = Ptr[1];
-		Ptr[1] = '\0';
-		Targetname = StrCat(Node->pe_Name, Node->pe_Link);
-		Ptr[1] = Old;
-
-		Result = stat(Targetname, &Stat);
-		free(Targetname);
-	} else {
-		Result = stat(Node->pe_Link, &Stat);
-	}
-
-	if ((Result == 0) && ((Stat.st_mode & S_IFMT) == S_IFREG)) {
-		PListEntryFile(Node, Out);
-		return;
-	}
-
-	(void)fprintf(Out, "@exec ln -fs %s %%D/%s\n@unexec rm -f %%D/%s\n",
-	    Node->pe_Link, Node->pe_Name, Node->pe_Name);
-}
 
 static void
 PListEntryMakeDir(PListEntry *Node, FILE *Out)
@@ -547,18 +512,19 @@ PListEntryMakeDir(PListEntry *Node, FILE *Out)
 	if (Node->pe_DirEmpty) {
 		(void)fprintf(Out, "@exec mkdir -m %o -p %%D/%s\n",
 		     Node->pe_DirMode, Node->pe_Name);
+		(void)fprintf(Out, "@dirrm %s\n", Node->pe_Name);
 	}
 }
 
 static void
-ProcessPList(PListEntry *Tree, PListEntryFunc Func, int Order, FILE *Out)
+ProcessPList(PListEntry *Tree, PListEntryFunc Func, FILE *Out)
 
 {
 	while (Tree != NULL) {
-		if (Tree->pe_Childs[Order] != NULL)
-			ProcessPList(Tree->pe_Childs[Order], Func, Order, Out);
+		if (Tree->pe_Childs[0] != NULL)
+			ProcessPList(Tree->pe_Childs[0], Func, Out);
 		Func(Tree, Out);
-		Tree = Tree->pe_Childs[INVERT_PLIST_ORDER(Order)];
+		Tree = Tree->pe_Childs[1];
 	}
 }
 
@@ -672,7 +638,7 @@ ConvertMode(unsigned long CPIOMode)
 }
 
 static bool
-MakeTargetDir(char *Name, PListEntry **Dirs, int MarkNonEmpty)
+MakeTargetDir(char *Name, PListEntry **Dirs)
 {
 	char		*Basename;
 	PListEntry	*Dir;
@@ -685,11 +651,11 @@ MakeTargetDir(char *Name, PListEntry **Dirs, int MarkNonEmpty)
 	*Basename = '\0';
 	if ((Dir = FindPListEntry(*Dirs, Name)) != NULL) {
 		*Basename = '/';
-		Dir->pe_DirEmpty = !MarkNonEmpty;
+		Dir->pe_DirEmpty = false;
 		return true;
 	}
 
-	if (!MakeTargetDir(Name, Dirs, true)) {
+	if (!MakeTargetDir(Name, Dirs)) {
 		*Basename = '/';
 		return false;
 	}
@@ -868,7 +834,7 @@ main(int argc, char **argv)
 	FILE		*PListFile;
 	char		**Ignore, *Prefix;
 	int		Opt, Index, FD, StripCount;
-	PListEntry	*Files, *Links, *Dirs;
+	PListEntry	*Files, *Dirs;
 	FileHandle	*In;
 
 	Progname = strrchr(argv[0], '/');
@@ -928,7 +894,6 @@ main(int argc, char **argv)
 		Prefix = StrCat(Prefix, "/");
 
 	Files = NULL;
-	Links = NULL;
 	Dirs = NULL;
 	for (Index = 0; Index < argc ; Index++) {
 		PListEntry	*Last;
@@ -1013,7 +978,7 @@ main(int argc, char **argv)
 					return EXIT_FAILURE;
 				}
 
-				if (!MakeTargetDir(Name, &Dirs, true)) {
+				if (!MakeTargetDir(Name, &Dirs)) {
 					(void)fprintf(stderr, 
 					    "%s: can't create parent "
 					    "directories for \"%s\".\n", 
@@ -1045,7 +1010,7 @@ main(int argc, char **argv)
 					return EXIT_FAILURE;
 				}
 
-				if (!MakeTargetDir(Name, &Dirs, true)) {
+				if (!MakeTargetDir(Name, &Dirs)) {
 					(void)fprintf(stderr, 
 					    "%s: can't create parent "
 					    "directories for \"%s\".\n", 
@@ -1080,11 +1045,11 @@ main(int argc, char **argv)
 					return EXIT_FAILURE;
 				}
 
-		    		InsertPListEntry(&Links, Name)->pe_Link = Link;
+		    		InsertPListEntry(&Files, Name)->pe_Link = Link;
 				break;
 			}
 			case C_ISREG:
-				if (!MakeTargetDir(Name, &Dirs, true)) {
+				if (!MakeTargetDir(Name, &Dirs)) {
 					(void)fprintf(stderr, 
 					    "%s: can't create parent "
 					    "directories for \"%s\".\n", 
@@ -1129,12 +1094,8 @@ main(int argc, char **argv)
 	}
 
 	if (PListFile != NULL) {
-		ProcessPList(Files, PListEntryFile, PLIST_ORDER_FORWARD,
-		    PListFile);
-		ProcessPList(Dirs, PListEntryMakeDir, PLIST_ORDER_FORWARD,
-		    PListFile);
-		ProcessPList(Links, PListEntryLink, PLIST_ORDER_FORWARD,
-		    PListFile);
+		ProcessPList(Files, PListEntryFile, PListFile);
+		ProcessPList(Dirs, PListEntryMakeDir, PListFile);
 		(void)fclose(PListFile);
 	}
 
