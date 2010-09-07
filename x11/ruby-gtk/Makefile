@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/06/13 22:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2010/09/07 17:20:27 taca Exp $
 
 DISTNAME=	ruby-gtk-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-gtk-${VERSION}
@@ -10,6 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://ruby-gnome.sourceforge.net/
 COMMENT=	Ruby interface to Gtk+ toolkits
 
+RUBY_VERSION_SUPPORTED= 18
 VERSION=		0.34
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
