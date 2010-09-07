@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/07 16:42:08 drochner Exp $
 
-DISTNAME=	qwt-5.2.0
-PKGREVISION=	2
+DISTNAME=	qwt-5.2.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,5 +26,7 @@ do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
 
 .include "../../x11/qt4-libs/buildlink3.mk"
+# needs fix for "silent" qmake feature flag
+BUILDLINK_API_DEPENDS.qt4-tools+= qt4-tools>=4.6.3nb1
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
