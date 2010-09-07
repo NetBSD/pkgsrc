@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3211 2010/09/07 06:14:39 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3212 2010/09/07 06:22:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4162,3 +4162,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-Rose-DB-Object to 0.789 [sno 2010-09-07]
 	Updated databases/p5-Rose-DBx-Garden to 0.18 [sno 2010-09-07]
 	Updated databases/py-psycopg2 to 2.2.2 [adam 2010-09-07]
+	Updated databases/p5-Rose-DBx-Object-MoreHelpers to 0.08 [sno 2010-09-07]
