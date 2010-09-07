@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3205 2010/09/07 05:30:14 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3206 2010/09/07 05:45:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4156,3 +4156,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated filesystems/perfuse to 20100907 [manu 2010-09-07]
 	Updated databases/p5-DBIx-Class-TimeStamp to 0.14 [sno 2010-09-07]
 	Updated time/p5-Rose-DateTime to 0.534 [sno 2010-09-07]
+	Added time/p5-Convert-NLS_DATE_FORMAT version 0.02 [sno 2010-09-07]
