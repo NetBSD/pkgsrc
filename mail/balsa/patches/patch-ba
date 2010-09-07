@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.3 2007/09/20 20:50:55 wiz Exp $
+$NetBSD: patch-ba,v 1.4 2010/09/07 19:12:03 adam Exp $
 
---- ./libbalsa/address-book-ldap.c.orig	2005-08-25 23:29:45.000000000 +0200
-+++ ./libbalsa/address-book-ldap.c
-@@ -732,7 +731,7 @@ libbalsa_address_book_ldap_modify_addres
+--- libbalsa/address-book-ldap.c.orig	2009-05-23 07:02:12.000000000 +0000
++++ libbalsa/address-book-ldap.c
+@@ -815,7 +815,7 @@ libbalsa_address_book_ldap_modify_addres
  	    }
              /* fall through */
          default:
