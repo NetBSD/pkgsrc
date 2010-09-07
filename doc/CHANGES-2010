@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3202 2010/09/06 23:08:24 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3203 2010/09/07 04:33:53 manu Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4153,3 +4153,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20100905 [taca 2010-09-06]
 	Updated www/nginx to 0.8.50 [joerg 2010-09-06]
 	Updated editors/emacs-snapshot to 24.0.50.20100903 [minskim 2010-09-06]
+	Updated filesystems/perfuse to 20100907 [manu 2010-09-07]
