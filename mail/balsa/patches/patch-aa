@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.14 2008/10/29 00:18:51 wiz Exp $
+$NetBSD: patch-aa,v 1.15 2010/09/07 19:12:03 adam Exp $
 
---- configure.orig	2008-09-05 18:19:20.000000000 +0000
+--- configure.orig	2010-08-21 20:53:36.000000000 +0000
 +++ configure
-@@ -8452,7 +8452,7 @@ if test "${ac_cv_lib_esmtp_smtp_start_se
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+@@ -16317,7 +16317,7 @@ if test "${ac_cv_lib_esmtp_smtp_start_se
+   $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lesmtp -lpthread $LIBS"
@@ -11,8 +11,8 @@ $NetBSD: patch-aa,v 1.14 2008/10/29 00:18:51 wiz Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -8521,7 +8521,7 @@ if test "${ac_cv_lib_esmtp_smtp_option_r
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+@@ -16390,7 +16390,7 @@ if test "${ac_cv_lib_esmtp_smtp_option_r
+   $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lesmtp -lpthread $LIBS"
@@ -20,8 +20,8 @@ $NetBSD: patch-aa,v 1.14 2008/10/29 00:18:51 wiz Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -8600,7 +8600,7 @@ if test "${ac_cv_lib_esmtp_smtp_starttls
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+@@ -16473,7 +16473,7 @@ if test "${ac_cv_lib_esmtp_smtp_starttls
+   $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lesmtp -lpthread $LIBS"

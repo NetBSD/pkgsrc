@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/09/07 19:12:02 adam Exp $
 bin/balsa
 bin/balsa-ab
 lib/bonobo/servers/GNOME_Balsa.server
@@ -25,6 +25,13 @@ share/balsa/hicolor/16x16/apps/balsa-signature-bad.png
 share/balsa/hicolor/16x16/apps/balsa-signature-good.png
 share/balsa/hicolor/16x16/apps/balsa-signature-notrust.png
 share/balsa/hicolor/16x16/apps/balsa-signature-unknown.png
+share/balsa/hicolor/16x16/apps/mail-inbox.png
+share/balsa/hicolor/16x16/apps/mail-outbox.png
+share/balsa/hicolor/16x16/apps/stock_book_open.png
+share/balsa/hicolor/16x16/apps/stock_book_red.png
+share/balsa/hicolor/16x16/apps/stock_contact.png
+share/balsa/hicolor/16x16/apps/stock_mail-receive.png
+share/balsa/hicolor/16x16/apps/stock_mail.png
 share/balsa/hicolor/22x22
 share/balsa/hicolor/24x24/apps/balsa-crypt-check.png
 share/balsa/hicolor/24x24/apps/balsa-encrypt.png
@@ -46,6 +53,15 @@ share/balsa/hicolor/24x24/apps/balsa-signature-good.png
 share/balsa/hicolor/24x24/apps/balsa-signature-notrust.png
 share/balsa/hicolor/24x24/apps/balsa-signature-unknown.png
 share/balsa/hicolor/24x24/apps/balsa-trash-empty.png
+share/balsa/hicolor/24x24/apps/stock_book_blue.png
+share/balsa/hicolor/24x24/apps/stock_book_green.png
+share/balsa/hicolor/24x24/apps/stock_book_open.png
+share/balsa/hicolor/24x24/apps/stock_book_red.png
+share/balsa/hicolor/24x24/apps/stock_book_yellow.png
+share/balsa/hicolor/24x24/apps/stock_contact.png
+share/balsa/hicolor/24x24/apps/stock_mail-receive.png
+share/balsa/hicolor/24x24/apps/stock_mail.png
+share/balsa/hicolor/24x24/apps/stock_view-fields.png
 share/balsa/pixmaps/attachment.png
 share/balsa/pixmaps/balsa-logo.png
 share/balsa/pixmaps/balsa-top.png
@@ -53,26 +69,6 @@ share/balsa/pixmaps/balsa-watermark.png
 share/balsa/pixmaps/balsa_icon.png
 share/balsa/pixmaps/balsa_logo.png
 share/examples/balsa/balsa.soundlist
-share/gnome/help/balsa/C/balsa.xml
-share/gnome/help/balsa/C/fdl-appendix.xml
-share/gnome/help/balsa/C/figures/address-book-ldap.png
-share/gnome/help/balsa/C/figures/address-book-modify.png
-share/gnome/help/balsa/C/figures/address-book-start.png
-share/gnome/help/balsa/C/figures/address-book-vcard.png
-share/gnome/help/balsa/C/figures/address-book.png
-share/gnome/help/balsa/C/figures/balsa_logo.png
-share/gnome/help/balsa/C/figures/druid-start.png
-share/gnome/help/balsa/C/figures/example-alias.png
-share/gnome/help/balsa/C/figures/figuresdobaaddress-book-modify.png
-share/gnome/help/balsa/C/figures/main-window-toolbar.png
-share/gnome/help/balsa/C/figures/main-window.png
-share/gnome/help/balsa/C/figures/message-window.png
-share/gnome/help/balsa/C/figures/msg-part-select.png
-share/gnome/help/balsa/C/figures/newmsg-window-attachments.png
-share/gnome/help/balsa/C/figures/newmsg-window-toolbar.png
-share/gnome/help/balsa/C/figures/newmsg-window.png
-share/gnome/help/balsa/C/figures/preferences-window.png
-share/gnome/help/balsa/C/figures/spell-check.png
 share/icons/hicolor/48x48/mimetypes/gnome-mime-application-pgp-signature.png
 share/icons/hicolor/48x48/mimetypes/gnome-mime-application-pkcs7-mime.png
 share/icons/hicolor/48x48/mimetypes/gnome-mime-application-pkcs7-signature.png
@@ -88,6 +84,7 @@ share/idl/Balsa.idl
 share/locale/am/LC_MESSAGES/balsa.mo
 share/locale/ar/LC_MESSAGES/balsa.mo
 share/locale/az/LC_MESSAGES/balsa.mo
+share/locale/be/LC_MESSAGES/balsa.mo
 share/locale/bg/LC_MESSAGES/balsa.mo
 share/locale/ca/LC_MESSAGES/balsa.mo
 share/locale/cs/LC_MESSAGES/balsa.mo
@@ -99,9 +96,11 @@ share/locale/en_CA/LC_MESSAGES/balsa.mo
 share/locale/en_GB/LC_MESSAGES/balsa.mo
 share/locale/es/LC_MESSAGES/balsa.mo
 share/locale/et/LC_MESSAGES/balsa.mo
+share/locale/eu/LC_MESSAGES/balsa.mo
 share/locale/fi/LC_MESSAGES/balsa.mo
 share/locale/fr/LC_MESSAGES/balsa.mo
 share/locale/ga/LC_MESSAGES/balsa.mo
+share/locale/gl/LC_MESSAGES/balsa.mo
 share/locale/he/LC_MESSAGES/balsa.mo
 share/locale/hi/LC_MESSAGES/balsa.mo
 share/locale/hr/LC_MESSAGES/balsa.mo
@@ -112,6 +111,7 @@ share/locale/ja/LC_MESSAGES/balsa.mo
 share/locale/ko/LC_MESSAGES/balsa.mo
 share/locale/lt/LC_MESSAGES/balsa.mo
 share/locale/lv/LC_MESSAGES/balsa.mo
+share/locale/mk/LC_MESSAGES/balsa.mo
 share/locale/ml/LC_MESSAGES/balsa.mo
 share/locale/ms/LC_MESSAGES/balsa.mo
 share/locale/nb/LC_MESSAGES/balsa.mo
@@ -139,7 +139,6 @@ share/locale/wa/LC_MESSAGES/balsa.mo
 share/locale/zh_CN/LC_MESSAGES/balsa.mo
 share/locale/zh_HK/LC_MESSAGES/balsa.mo
 share/locale/zh_TW/LC_MESSAGES/balsa.mo
-share/omf/balsa/balsa-C.omf
 share/pixmaps/gnome-balsa2.png
 share/sounds/balsa/newmail.wav
 share/sounds/balsa/startup.wav
