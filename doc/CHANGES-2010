@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3216 2010/09/07 10:49:13 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3217 2010/09/07 10:49:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4165,3 +4165,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-Rose-DBx-Garden-Catalyst to 0.15 [sno 2010-09-07]
 	Updated inputmethod/input-pad to 0.1.2 [obache 2010-09-07]
 	Updated audio/p5-Audio-Scan to 0.84 [wiz 2010-09-07]
+	Updated audio/squeezeboxserver to 7.5.1nb3 [wiz 2010-09-07]
