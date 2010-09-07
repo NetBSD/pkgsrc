@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/08/31 08:25:20 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/09/07 07:08:00 obache Exp $
 #
 # used by inputmethod/input-pad/Makefile
 # used by inputmethod/py-input-pad/Makefile
 
-DISTNAME=	input-pad-0.1.1
+DISTNAME=	input-pad-0.1.2
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://input-pad.googlecode.com/files/
 
