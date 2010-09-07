@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3208 2010/09/07 05:57:51 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3209 2010/09/07 06:04:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4159,3 +4159,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added time/p5-Convert-NLS_DATE_FORMAT version 0.02 [sno 2010-09-07]
 	Added time/p5-DateTime-Format-Oracle version 0.05 [sno 2010-09-07]
 	Updated databases/p5-Rose-DB to 0.762 [sno 2010-09-07]
+	Updated databases/p5-Rose-DB-Object to 0.789 [sno 2010-09-07]
