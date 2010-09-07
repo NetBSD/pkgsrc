@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3219 2010/09/07 17:32:24 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3220 2010/09/07 19:10:59 gson Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4172,3 +4172,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/scidavis to 0.2.4 [drochner 2010-09-07]
 	Updated x11/qwt-qt4 to 5.2.1 [drochner 2010-09-07]
 	Updated pkgtools/rpm2pkg to 3.1.4 [tron 2010-09-07]
+	Updated misc/py-anita to 1.14 [gson 2010-09-07]
