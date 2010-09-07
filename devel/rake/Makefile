@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/06/10 21:51:17 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/07 17:20:24 taca Exp $
 
 DISTNAME=	rake-0.8.7
 CATEGORIES=	devel
@@ -10,6 +10,8 @@ COMMENT=	Ruby Make
 USE_TOOLS+=	gzip
 GEM_BUILD=	gemspec
 
+# rake is bundled Ruby 1.9
+RUBY_VERSION_SUPPORTED= 18
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-extract:
