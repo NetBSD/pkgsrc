@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3218 2010/09/07 16:49:04 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.3219 2010/09/07 17:32:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4171,3 +4171,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/eric4 to 4.4.8 [drochner 2010-09-07]
 	Updated graphics/scidavis to 0.2.4 [drochner 2010-09-07]
 	Updated x11/qwt-qt4 to 5.2.1 [drochner 2010-09-07]
+	Updated pkgtools/rpm2pkg to 3.1.4 [tron 2010-09-07]
