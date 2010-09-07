@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/08/21 16:33:04 seb Exp $
+# $NetBSD: Makefile,v 1.13 2010/09/07 05:57:23 sno Exp $
 
-DISTNAME=	Rose-DB-0.758
+DISTNAME=	Rose-DB-0.762
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 
@@ -15,6 +15,7 @@ DEPENDS+=	p5-Bit-Vector>=6.4:../../devel/p5-Bit-Vector
 DEPENDS+=	p5-Clone-PP-[0-9]*:../../devel/p5-Clone-PP
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-MySQL-[0-9]*:../../time/p5-DateTime-Format-MySQL
+DEPENDS+=	p5-DateTime-Format-Oracle-[0-9]*:../../time/p5-DateTime-Format-Oracle
 DEPENDS+=	p5-DateTime-Format-Pg>=0.11:../../time/p5-DateTime-Format-Pg
 DEPENDS+=	p5-Rose-DateTime>=0.532:../../time/p5-Rose-DateTime
 DEPENDS+=	p5-Rose-Object>=0.854:../../devel/p5-Rose-Object
