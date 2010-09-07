@@ -1,3 +1,62 @@
+2010-08-08  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* boot-strap (TOOL_DIFF): set this to ensure tests use
+	  the same version of diff that configure tested
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100808
+	  Merge with NetBSD make, pick up
+	  o in jobs mode, when we discover we cannot make something,
+	    call PrintOnError before exit.
+	
+2010-08-06  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100806
+	  Merge with NetBSD make, pick up
+	  o formatting fixes for ignored errors
+	  o ensure jobs are cleaned up regardless of where wait() was called.
+
+2010-06-28  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100618
+	* os.sh (MACHINE_ARCH): watch out for drivel from uname -p
+
+2010-06-16  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100616
+	  Merge with NetBSD make, pick up
+	  o man page update
+	  o call PrintOnError from JobFinish when we detect an error we
+	    are not ignoring. 
+	
+2010-06-06  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100606
+	  Merge with NetBSD make, pick up
+	  o man page update
+
+2010-06-05  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100605
+	  Merge with NetBSD make, pick up
+	  o use bmake_signal() which is a wrapper around sigaction() 
+	    in place of signal()
+	  o add .export-env to allow exporting variables to environment
+	    without tracking (so no re-export when the internal value is
+	    changed).
+	
+2010-05-24  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100524
+	  Merge with NetBSD make, pick up
+	  o fix for .info et al being greedy.
+
+2010-05-23  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100520
+	  Merge with NetBSD make, pick up
+	  o back to using realpath on argv[0] 
+	    but only if contains '/' and does not start with '/'.
+
 2010-05-10  Simon J. Gerraty  <sjg@bad.crufty.net>
 
 	* boot-strap: use absolute path for bmake when running tests.
