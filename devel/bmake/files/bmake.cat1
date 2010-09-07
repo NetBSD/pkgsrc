@@ -1,4 +1,4 @@
-MAKE(1)                 NetBSD General Commands Manual                 MAKE(1)
+BMAKE(1)                NetBSD General Commands Manual                BMAKE(1)
 
 NNAAMMEE
      bbmmaakkee -- maintain program dependencies
@@ -1206,7 +1206,17 @@ SSEEEE AALLSSOO
      mkdep(1)
 
 HHIISSTTOORRYY
-     bbmmaakkee is derived from NetBSD's make(1).  It uses autoconf to facilitate
-     portability to other platforms.
+     A bbmmaakkee command appeared in Version 7 AT&T UNIX.  bbmmaakkee is derived from
+     NetBSD's make(1).  It uses autoconf to facilitate portability to other
+     platforms.
+
+BBUUGGSS
+     The bbmmaakkee syntax is difficult to parse without actually acting of the
+     data.  For instance finding the end of a variable use should involve
+     scanning each the modifiers using the correct terminator for each field.
+     In many places bbmmaakkee just counts {} and () in order to find the end of a
+     variable expansion.
+
+     There is no way of escaping a space character in a filename.
 
 NetBSD 5.0                       June 30, 2010                      NetBSD 5.0
