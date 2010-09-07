@@ -1,4 +1,4 @@
-.\"	$NetBSD: bmake.1,v 1.6 2010/05/13 18:43:07 joerg Exp $
+.\"	$NetBSD: bmake.1,v 1.7 2010/09/07 14:28:00 joerg Exp $
 .\"
 .\" Copyright (c) 1990, 1993
 .\"	The Regents of the University of California.  All rights reserved.
@@ -29,7 +29,7 @@
 .\"
 .\"	from: @(#)make.1	8.4 (Berkeley) 3/19/94
 .\"
-.Dd April 21, 2010
+.Dd June 30, 2010
 .Dt MAKE 1
 .Os
 .Sh NAME
@@ -536,11 +536,48 @@ If the result of expanding a variable contains a dollar sign
 .Pq Ql \&$
 the string is expanded again.
 .Pp
-Variable substitution occurs at two distinct times, depending on where
+Variable substitution occurs at three distinct times, depending on where
 the variable is being used.
+.Bl -enum
+.It
 Variables in dependency lines are expanded as the line is read.
+.It
 Variables in shell commands are expanded when the shell command is
 executed.
+.It
+.Dq .for
+loop index variables are expanded on each loop iteration.
+Note that other variables are not expanded inside loops so
+the following example code:
+.Bd -literal -offset indent
+
+.Dv .for i in 1 2 3
+a+=     ${i}
+j=      ${i}
+b+=     ${j}
+.Dv .endfor
+
+all:
+	@echo ${a}
+	@echo ${b}
+
+.Ed
+will print:
+.Bd -literal -offset indent
+1 2 3
+3 3 3
+
+.Ed
+Because while ${a} contains
+.Dq 1 2 3
+after the loop is executed, ${b}
+contains
+.Dq ${j} ${j} ${j}
+which expands to
+.Dq 3 3 3
+since after the loop completes ${j} contains
+.Dq 3 .
+.El
 .Ss Variable classes
 The four different classes of variables (in order of increasing precedence)
 are:
@@ -576,7 +613,7 @@ The list of sources for this target that were deemed out-of-date; also
 known as
 .Ql Va \&? .
 .It Va .PREFIX
-The file prefix of the file, containing only the file portion, no suffix
+The file prefix of the target, containing only the file portion, no suffix
 or preceding directory components; also known as
 .Ql Va * .
 .It Va .TARGET
@@ -660,7 +697,7 @@ from which generated dependencies are read.
 The list of variables exported by
 .Nm .
 .It Va .MAKE.JOBS
-The argument to the 
+The argument to the
 .Fl j
 option.
 .It Va .MAKE.JOB.PREFIX
@@ -791,8 +828,10 @@ is set in the environment or on the command line.)
 .Pp
 Variable expansion is performed on the value before it's used,
 so expressions such as
-.Dl ${.CURDIR:C,^/usr/src,/var/obj,}
+.Dl ${.CURDIR:S,^/usr/src,/var/obj,}
 may be used.
+This is especially useful with
+.Ql Ev MAKEOBJDIR .
 .Pp
 .Ql Va .OBJDIR
 may be modified in the makefile as a global variable.
@@ -853,6 +892,8 @@ is set to the value of
 for all programs which
 .Nm
 executes.
+.It Ev .TARGETS
+The list of targets explicitly specified on the command line, if any.
 .It Ev VPATH
 Colon-separated
 .Pq Dq \&:
@@ -902,7 +943,7 @@ The standard shell wildcard characters
 .Pf ( Ql * ,
 .Ql \&? ,
 and
-.Ql Op )
+.Ql Oo Oc )
 may
 be used.
 The wildcard characters may be escaped with a backslash
@@ -1320,6 +1361,15 @@ flag, so should be used with caution.
 Appending a variable name to
 .Va .MAKE.EXPORTED
 is equivalent to exporting a variable.
+.It Ic .export-env Ar variable ...
+The same as
+.Ql .export ,
+except that the variable is not appended to
+.Va .MAKE.EXPORTED .
+This allows exporting a value to the environment which is different from that
+used by
+.Nm
+internally.
 .It Ic .info Ar message
 The message is printed along with the name of the makefile and line number.
 .It Ic .undef Ar variable
@@ -1582,6 +1632,9 @@ correspond to an actual file; it is always considered to be out of date,
 and will not be created with the
 .Fl t
 option.
+Suffix-transformation rules are not applied to
+.Ic .PHONY
+targets.
 .It Ic .PRECIOUS
 When
 .Nm

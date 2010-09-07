@@ -1,4 +1,4 @@
-/*	$NetBSD: nonints.h,v 1.5 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: nonints.h,v 1.6 2010/09/07 14:28:00 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -106,6 +106,11 @@ int For_Eval(char *);
 int For_Accum(char *);
 void For_Run(int);
 
+/* job.c */
+#ifdef WAIT_T
+void JobReapChild(pid_t, WAIT_T, Boolean);
+#endif
+
 /* main.c */
 void Main_ParseArgLine(const char *);
 void MakeMode(const char *);
@@ -195,3 +200,6 @@ void Var_Dump(GNode *);
 void Var_ExportVars(void);
 void Var_Export(char *, int);
 void Var_UnExport(char *);
+
+/* util.c */
+void (*bmake_signal(int, void (*)(int)))(int);

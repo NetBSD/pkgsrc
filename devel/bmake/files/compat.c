@@ -1,4 +1,4 @@
-/*	$NetBSD: compat.c,v 1.7 2010/04/24 21:10:29 joerg Exp $	*/
+/*	$NetBSD: compat.c,v 1.8 2010/09/07 14:28:00 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: compat.c,v 1.7 2010/04/24 21:10:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: compat.c,v 1.8 2010/09/07 14:28:00 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)compat.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: compat.c,v 1.7 2010/04/24 21:10:29 joerg Exp $");
+__RCSID("$NetBSD: compat.c,v 1.8 2010/09/07 14:28:00 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -384,6 +384,8 @@ again:
     while (1) {
 
 	while ((retstat = wait(&reason)) != cpid) {
+	    if (retstat > 0)
+		JobReapChild(retstat, reason, FALSE); /* not ours? */
 	    if (retstat == -1 && errno != EINTR) {
 		break;
 	    }
@@ -644,17 +646,17 @@ Compat_Run(Lst targs)
 
     Compat_Init();
 
-    if (signal(SIGINT, SIG_IGN) != SIG_IGN) {
-	signal(SIGINT, CompatInterrupt);
+    if (bmake_signal(SIGINT, SIG_IGN) != SIG_IGN) {
+	bmake_signal(SIGINT, CompatInterrupt);
     }
-    if (signal(SIGTERM, SIG_IGN) != SIG_IGN) {
-	signal(SIGTERM, CompatInterrupt);
+    if (bmake_signal(SIGTERM, SIG_IGN) != SIG_IGN) {
+	bmake_signal(SIGTERM, CompatInterrupt);
     }
-    if (signal(SIGHUP, SIG_IGN) != SIG_IGN) {
-	signal(SIGHUP, CompatInterrupt);
+    if (bmake_signal(SIGHUP, SIG_IGN) != SIG_IGN) {
+	bmake_signal(SIGHUP, CompatInterrupt);
     }
-    if (signal(SIGQUIT, SIG_IGN) != SIG_IGN) {
-	signal(SIGQUIT, CompatInterrupt);
+    if (bmake_signal(SIGQUIT, SIG_IGN) != SIG_IGN) {
+	bmake_signal(SIGQUIT, CompatInterrupt);
     }
 
     ENDNode = Targ_FindNode(".END", TARG_CREATE);

@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.17 2010/05/13 18:43:07 joerg Exp $
+#	$NetBSD: Makefile.in,v 1.18 2010/09/07 14:28:00 joerg Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.17 2010/05/13 18:43:07 joerg Exp $
+#	$Id: Makefile.in,v 1.18 2010/09/07 14:28:00 joerg Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -21,7 +21,7 @@ srcdir= @srcdir@
 CC?= @CC@
 
 # Base version on src date
-MAKE_VERSION= 20100510
+MAKE_VERSION= 20100808
 MACHINE=@machine@
 MACHINE_ARCH=@machine_arch@
 DEFAULT_SYS_PATH = @default_sys_path@
