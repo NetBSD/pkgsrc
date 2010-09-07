@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2010/08/20 09:29:18 he Exp $
+# $NetBSD: Makefile,v 1.35 2010/09/07 07:41:51 he Exp $
 #
 
-VERSION=		2.5.0
-RTYPE=			devel
+VERSION=		2.6.0
+RTYPE=			supported
 DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${RTYPE}/${VERSION}/
@@ -49,6 +49,7 @@ PLIST_SRC+=		PLIST.shared
 
 REPLACE_PERL+=		tools/build/ops2c.pl
 REPLACE_PERL+=		tools/build/pmc2c.pl
+REPLACE_PERL+=		tools/dev/create_language.pl
 REPLACE_PERL+=		tools/dev/gen_makefile.pl
 REPLACE_PERL+=		tools/dev/mk_language_shell.pl
 REPLACE_PERL+=		tools/dev/reconfigure.pl
