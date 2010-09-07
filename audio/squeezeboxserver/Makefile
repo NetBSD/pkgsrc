@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/08/21 16:32:45 seb Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/07 10:49:00 wiz Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -43,7 +43,7 @@
 
 DISTNAME=	${PRODUCT:tl:S/_v/-/}-noCPAN
 PKGNAME=	${DISTNAME:S/-noCPAN//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 
@@ -74,7 +74,7 @@ DEPENDS+=	flac-[0-9]*:../../audio/flac
 DEPENDS+=	faad2-[0-9]*:../../audio/faad2
 
 # Perl modules with native code
-DEPENDS+=	p5-Audio-Scan-0.82{,nb[0-9]*}:../../audio/p5-Audio-Scan
+DEPENDS+=	p5-Audio-Scan-0.84{,nb[0-9]*}:../../audio/p5-Audio-Scan
 DEPENDS+=	p5-Class-XSAccessor>=1.05:../../devel/p5-Class-XSAccessor
 DEPENDS+=	p5-Compress-Raw-Zlib-[0-9]*:../../devel/p5-Compress-Raw-Zlib
 DEPENDS+=	p5-DBD-mysql>=3.0002:../../databases/p5-DBD-mysql
