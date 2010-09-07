@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/09/07 10:46:47 drochner Exp $
 bin/pth-config
-bin/pthread-config
+${PLIST.pthread}bin/pthread-config
 include/pth.h
-include/pthread.h
+${PLIST.pthread}include/pthread.h
 lib/libpth.la
-lib/libpthread.la
+${PLIST.pthread}lib/libpthread.la
 man/man1/pth-config.1
-man/man1/pthread-config.1
+${PLIST.pthread}man/man1/pthread-config.1
 man/man3/pth.3
-man/man3/pthread.3
+${PLIST.pthread}man/man3/pthread.3
 share/aclocal/pth.m4
 share/doc/pth/ANNOUNCE
 share/doc/pth/AUTHORS
