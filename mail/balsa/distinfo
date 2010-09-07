@@ -1,17 +1,11 @@
-$NetBSD: distinfo,v 1.14 2008/10/29 00:18:51 wiz Exp $
+$NetBSD: distinfo,v 1.15 2010/09/07 19:12:02 adam Exp $
 
-SHA1 (balsa-2.3.26.tar.bz2) = 08fd06a3e93b155a0bca727f8a2bff3589bc36df
-RMD160 (balsa-2.3.26.tar.bz2) = 81b2c70a0932d035afd0853f223c9076041b2def
-Size (balsa-2.3.26.tar.bz2) = 2726954 bytes
-SHA1 (patch-aa) = 187a143e34bdce539109a21687c4271ffa81eaa6
-SHA1 (patch-ab) = 47083f65d404e64ee238bc3e4f3e25008f5f82c8
-SHA1 (patch-ac) = 808f4546204fbc4a23007291637e4b4ca4175db1
-SHA1 (patch-ad) = 496cd01810dd0e4328907dd3f433c6921dd33e03
-SHA1 (patch-ae) = fcd0ab1c062018b42469b033a98b4575ee2851f3
-SHA1 (patch-af) = 53e77f5f5df0e05f503713f7be163589c2381f07
-SHA1 (patch-ag) = 97cdeacf154eef6f6b3083ba381e2c7b05661f35
-SHA1 (patch-ah) = e9bbed1d7b837c8af071d0ebf494bf616dc1ad18
-SHA1 (patch-ai) = 44e704eefd63873900609d7c7186469b4b5214d1
-SHA1 (patch-aj) = 4d068d3aa551c11edcc2c7fdc189ebab98a69953
-SHA1 (patch-ak) = 2341a54187086e836919c6f1842619999f82c456
-SHA1 (patch-ba) = 76b51ced11626e6f36e0763ca64519cc8605c936
+SHA1 (balsa-2.4.8.tar.bz2) = 809d44a82505ca19cb202923f0683f47c8252b70
+RMD160 (balsa-2.4.8.tar.bz2) = d1723f99c4d27f722d48300863be539a5dad606a
+Size (balsa-2.4.8.tar.bz2) = 3150866 bytes
+SHA1 (patch-aa) = d3798749cadec5931e5366ed94db033cf10442df
+SHA1 (patch-ab) = eb517156e63712f7d5c7dbde7b963bae12475997
+SHA1 (patch-ac) = 0e586d99d5c53e8caa0c9aa652bf5f5d7f0e1758
+SHA1 (patch-ag) = 665610929c4a84851560ec3acb8f28d103941e35
+SHA1 (patch-ak) = abe90f5117fdcd3381c2a7061cf3ab29e9a3f025
+SHA1 (patch-ba) = 46ed4e317ef79ec58fc432c74c3e057b13ffee75
