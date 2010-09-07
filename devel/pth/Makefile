@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2010/08/06 19:21:26 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2010/09/07 10:46:47 drochner Exp $
 #
 
 DISTNAME=		pth-2.0.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=pth/}
 
@@ -19,7 +19,6 @@ MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--with-fdsetsize=1024
 #CONFIGURE_ARGS+=	--enable-debug
 
@@ -37,6 +36,14 @@ CONFIGURE_ARGS+=	--enable-syscall-hard
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ENV+=		ac_cv_check_nfdstype='unsigned int'
 CONFIGURE_ENV+=		ac_cv_typedef_nfds_t=no # in <poll.h>, but that's unused
+.endif
+
+PLIST_VARS+=		pthread
+
+.include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
+CONFIGURE_ARGS+=	--enable-pthread
+PLIST.pthread=		yes
 .endif
 
 INSTALLATION_DIRS=	share/doc/pth
