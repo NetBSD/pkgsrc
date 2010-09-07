@@ -53,7 +53,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.8 2010/05/13 18:43:08 joerg Exp $
+#	$Id: boot-strap,v 1.9 2010/09/07 14:28:00 joerg Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -293,7 +293,9 @@ if [ -s "${mksrc:-/dev/null}/install-mk" ]; then
         *) MAKESYSPATH=".../mk:${MAKESYSPATH}";;
         esac
 fi
-export MAKESYSPATH
+# make sure test below uses the same diff that configure did
+TOOL_DIFF=`type diff | sed 's,^[^/][^/]*,,;q'`
+export MAKESYSPATH TOOL_DIFF
 if [ "$mksrc" ]; then
         $objdir/bmake test || exit 1
 else
