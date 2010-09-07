@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/09/07 10:49:00 wiz Exp $
+
+--- modules.conf.orig	2010-05-28 15:49:20.000000000 +0000
++++ modules.conf
+@@ -5,7 +5,7 @@
+ # <module> <min_version> [ <max_version> ]
+ 
+ AnyEvent 5.202
+-Audio::Scan 0.82 0.82
++Audio::Scan 0.82 0.84
+ Cache::Cache 1.04
+ CGI::Cookie 1.27
+ Class::Data::Inheritable 0.04
