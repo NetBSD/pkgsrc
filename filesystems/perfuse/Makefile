@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/09/06 12:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/07 04:33:53 manu Exp $
 #
 
-DISTNAME=	perfuse-20100906
-PKGREVISION=	2
+DISTNAME=	perfuse-20100907
 CATEGORIES=	filesystems
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/perfuse/
 EXTRACT_SUFX=	.tgz
@@ -16,12 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}/src/
 BUILD_DIRS=	lib/libperfuse usr.sbin/perfused
 BUILDLINK_TRANSFORM=	rm:-Werror
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
-SUBST_SED.prefix=	-e "s,/usr/sbin/perfused,${PREFIX}/sbin/perfused,g"
-SUBST_FILES.prefix=	lib/libperfuse/perfuse_if.h
-SUBST_MESSAGE.prefix=	Fixing path to perfused.
+CFLAGS+=	-D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
 
 INSTALLATION_DIRS=	include lib sbin
 
