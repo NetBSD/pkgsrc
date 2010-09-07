@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3204 2010/09/07 04:42:45 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3205 2010/09/07 05:30:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4155,3 +4155,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20100903 [minskim 2010-09-06]
 	Updated filesystems/perfuse to 20100907 [manu 2010-09-07]
 	Updated databases/p5-DBIx-Class-TimeStamp to 0.14 [sno 2010-09-07]
+	Updated time/p5-Rose-DateTime to 0.534 [sno 2010-09-07]
