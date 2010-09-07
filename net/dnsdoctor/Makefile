@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/28 15:22:54 taca Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/07 17:20:26 taca Exp $
 #
 
 DISTNAME=		dnsdoctor-1.0.1
@@ -14,6 +14,7 @@ DEPENDS+=		ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
 
 WRKSRC=		${WRKDIR}/dnsdoctor
 
+# Config name conflict, need many changes.
 RUBY_VERSION_SUPPORTED=	18
 NO_BUILD=	yes
 

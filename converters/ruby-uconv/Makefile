@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/10/17 13:08:20 taca Exp $
+# $NetBSD: Makefile,v 1.17 2010/09/07 17:20:24 taca Exp $
 
 DISTNAME=	uconv-0.4.12
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Unicode conversion library with Japanese codesets support
 
 PKG_DESTDIR_SUPPORT=	destdir
 
+# Depends on Ruby's internal and use 1.9's encoding support.
 RUBY_VERSION_SUPPORTED= 18
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
