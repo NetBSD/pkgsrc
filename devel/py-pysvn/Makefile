@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/15 10:33:20 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/07 16:50:58 drochner Exp $
 #
 
 VERS=			1.7.2
 DISTNAME=		pysvn-${VERS}
 PKGNAME=		${PYPKGPREFIX}-pysvn-${VERS}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://pysvn.barrys-emacs.org/source_kits/
 
@@ -32,7 +33,8 @@ do-configure:
 .if ${PYVERSSUFFIX} == "2.5" || ${PYVERSSUFFIX} == "2.4"
 	cd ${WRKSRC}/${PSVNSRC} && ${PYTHONBIN} ${PYSETUP} backport
 .endif
-	cd ${WRKSRC}/${PSVNSRC} && ${PYTHONBIN} ${PYSETUP} configure
+	cd ${WRKSRC}/${PSVNSRC} && \
+	${PYTHONBIN} ${PYSETUP} configure --fixed-module-name
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/pysvn
