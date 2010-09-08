@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3232 2010/09/08 06:39:30 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3233 2010/09/08 06:43:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4186,3 +4186,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-StackTrace to 1.2500 [sno 2010-09-08]
 	Updated devel/p5-Module-CoreList to 2.38 [sno 2010-09-08]
 	Updated editors/p5-Padre-Plugin-Catalyst to 0.09 [sno 2010-09-08]
+	Updated editors/p5-Padre-Plugin-Git to 0.03 [sno 2010-09-08]
