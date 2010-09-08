@@ -1,0 +1,70 @@
+$NetBSD: patch-ah,v 1.1 2010/09/08 13:53:00 tez Exp $
+
+fix syms file for stricter solaris ld
+
+--- libxslt/libxslt_solaris.syms.orig	2010-08-23 15:27:58.923572700 -0500
++++ libxslt/libxslt_solaris.syms	2010-08-23 15:32:43.661353200 -0500
+@@ -107,7 +107,7 @@
+   xsltFreeCompMatchList;
+   xsltFreeTemplateHashes;
+   xsltGetTemplate;
+-  xsltMatchPattern;
++#  xsltMatchPattern;
+   xsltTestCompMatchList;
+ 
+ # preproc
+@@ -406,7 +406,7 @@
+     global:
+ 
+ # xsltInternals
+-  xsltConstNamespaceNameXSLT; # variable
++#  xsltConstNamespaceNameXSLT; # variable
+   xsltExtensionInstructionResultFinalize;
+   xsltExtensionInstructionResultRegister;
+   xsltInitCtxtKey;
+@@ -415,24 +415,24 @@
+   xsltInit;
+ 
+ # xsltInternals
+-  xsltParseAnyXSLTElem;
+-  xsltParseSequenceConstructor;
+-  xsltPointerListAddSize;
+-  xsltPointerListClear;
+-  xsltPointerListCreate;
+-  xsltPointerListFree;
++#  xsltParseAnyXSLTElem;
++#  xsltParseSequenceConstructor;
++#  xsltPointerListAddSize;
++#  xsltPointerListClear;
++#  xsltPointerListCreate;
++#  xsltPointerListFree;
+   xsltRegisterLocalRVT;
+   xsltReleaseRVT;
+-  xsltRestoreDocumentNamespaces;
++#  xsltRestoreDocumentNamespaces;
+ 
+ # extensions
+-  xsltStyleStylesheetLevelGetExtData;
++#  xsltStyleStylesheetLevelGetExtData;
+ 
+ # xsltInternals
+-  xsltTransStorageAdd;
+-  xsltTransStorageRemove;
++#  xsltTransStorageAdd;
++#  xsltTransStorageRemove;
+   xsltUninit;
+-  xsltXSLTAttrMarker; # variable
++#  xsltXSLTAttrMarker; # variable
+ } LIBXML2_1.1.9;
+ 
+ LIBXML2_1.1.20 {
+@@ -475,5 +475,9 @@
+ 
+ # transform
+   xsltProcessOneNode;
++
++# Solaris ld needs explicit auto-reduction (or, alternatively, "-B local")
++    local:
++  *;
+ } LIBXML2_1.1.25;
+ 
