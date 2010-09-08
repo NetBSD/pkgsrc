@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2010/09/08 11:53:04 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2010/09/08 12:07:18 drochner Exp $
 #
 
 DISTNAME=	gmime-2.2.25
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.2/}
 
@@ -12,8 +12,6 @@ COMMENT=	Library for the creation and parsing of MIME messages
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS=	gmime24-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
