@@ -1,0 +1,5 @@
+The new European currency symbol for the Euro implemented in
+MetaFont, using the official European Commission dimensions,
+and providing several shapes (normal, slanted, bold, outline).
+The package also includes a LaTeX package which defines the
+macro, pre-compiled tfm files, and documentation.
