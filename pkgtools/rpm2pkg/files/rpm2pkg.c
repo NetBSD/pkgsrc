@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.16 2010/09/07 17:32:05 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.17 2010/09/08 22:41:39 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
@@ -140,7 +140,6 @@ typedef struct PListEntryStruct PListEntry;
 struct PListEntryStruct {
 	PListEntry	*pe_Childs[2];
 	int		pe_DirEmpty;
-	mode_t		pe_DirMode;
 	unsigned long	pe_INode;
 	char		*pe_Link;
 	char		pe_Name[1];
@@ -510,9 +509,7 @@ PListEntryMakeDir(PListEntry *Node, FILE *Out)
 
 {
 	if (Node->pe_DirEmpty) {
-		(void)fprintf(Out, "@exec mkdir -m %o -p %%D/%s\n",
-		     Node->pe_DirMode, Node->pe_Name);
-		(void)fprintf(Out, "@dirrm %s\n", Node->pe_Name);
+		(void)fprintf(Out, "@pkgdir %s\n", Node->pe_Name);
 	}
 }
 
@@ -665,8 +662,7 @@ MakeTargetDir(char *Name, PListEntry **Dirs)
 	} else if (errno != ENOENT) {
 		Result = false;
 	} else if ((Result = (mkdir(Name, S_IRWXU|S_IRWXG|S_IRWXO) == 0))) {
-		InsertPListEntry(Dirs, Name)->pe_DirMode =
-		    S_IRWXU|S_IRWXG|S_IRWXO;
+		(void)InsertPListEntry(Dirs, Name);
 	}
 
 	*Basename = '/';
@@ -996,7 +992,6 @@ main(int argc, char **argv)
 				if (!OldDir) {
 					Dir = InsertPListEntry(&Dirs, Name);
 					Dir->pe_DirEmpty = true;
-					Dir->pe_DirMode = Mode;
 				}
 				break;
 			}
