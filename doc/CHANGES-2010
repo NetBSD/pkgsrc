@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3244 2010/09/08 21:15:51 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3245 2010/09/08 22:42:07 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4204,3 +4204,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Sub-Name to 0.05 [sno 2010-09-08]
 	Updated devel/p5-Test-Most to 0.23 [sno 2010-09-08]
 	Updated security/p5-Module-Signature to 0.66 [sno 2010-09-08]
+	Updated pkgtools/rpm2pkg to 3.1.5 [tron 2010-09-08]
