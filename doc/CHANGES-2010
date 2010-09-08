@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3238 2010/09/08 16:26:08 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3239 2010/09/08 16:50:02 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4192,3 +4192,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/xvkbd version 3.2 [obache 2010-09-08]
 	Updated databases/mysql51-client to 5.1.50 [taca 2010-09-08]
 	Updated databases/mysql51-server to 5.1.50 [taca 2010-09-08]
+	Updated multimedia/dvdrip to 0.98.11 [drochner 2010-09-08]
+	Updated multimedia/mkvtoolnix to 4.3.0 [drochner 2010-09-08]
+	Updated multimedia/gst-plugins0.10-gnonlin to 0.10.16 [drochner 2010-09-08]
+	Updated multimedia/gst-plugins0.10-ugly to 0.10.16 [drochner 2010-09-08]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.20 [drochner 2010-09-08]
+	Updated multimedia/gst-plugins0.10-good to 0.10.25 [drochner 2010-09-08]
