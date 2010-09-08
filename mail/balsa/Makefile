@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2010/09/07 19:12:02 adam Exp $
+# $NetBSD: Makefile,v 1.73 2010/09/08 11:46:09 drochner Exp $
 
 DISTNAME=	balsa-2.4.8
 CATEGORIES=	mail gnome
@@ -41,11 +41,9 @@ BUILDLINK_TRANSFORM+=		rm:-DGTK_DISABLE_DEPRECATED
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gmime+=	gmime>=2.1.9
-.include "../../mail/gmime/buildlink3.mk"
+.include "../../mail/gmime24/buildlink3.mk"
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
