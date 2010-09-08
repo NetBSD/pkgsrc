@@ -1,0 +1,2 @@
+It's an event notifier for USB devices only actually. It can attach
+some commands (like mount) when you plug or unplug a device.
