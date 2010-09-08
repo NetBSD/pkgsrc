@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3237 2010/09/08 12:09:32 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3238 2010/09/08 16:26:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4190,3 +4190,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/p5-Padre-Plugin-Kate to 0.04 [sno 2010-09-08]
 	Added sysutils/pluged version 0.1 [manu 2010-09-08]
 	Added x11/xvkbd version 3.2 [obache 2010-09-08]
+	Updated databases/mysql51-client to 5.1.50 [taca 2010-09-08]
+	Updated databases/mysql51-server to 5.1.50 [taca 2010-09-08]
