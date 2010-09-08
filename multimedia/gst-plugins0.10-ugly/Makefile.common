@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2010/07/21 19:05:40 drochner Exp $
+# $NetBSD: Makefile.common,v 1.17 2010/09/08 16:25:29 drochner Exp $
 #
 # used by audio/gst-plugins0.10-a52/Makefile
 # used by audio/gst-plugins0.10-mad/Makefile
@@ -8,7 +8,7 @@
 # used by multimedia/gst-plugins0.10-x264/Makefile
 
 GST_PLUGINS0.10_TYPE=	ugly
-GST_PLUGINS0.10_VER=	0.10.15
+GST_PLUGINS0.10_VER=	0.10.16
 
 # Disable all drivers and features by default.
 .for driver in	a52dec \
@@ -27,5 +27,5 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.20
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.14
 
 .include "../../multimedia/gst-plugins0.10-base/plugins.mk"
-.include "../../devel/liboil/buildlink3.mk"
+.include "../../devel/orc/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
