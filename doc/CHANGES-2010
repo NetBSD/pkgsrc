@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3235 2010/09/08 10:21:25 manu Exp $
+$NetBSD: CHANGES-2010,v 1.3236 2010/09/08 11:58:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4189,3 +4189,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/p5-Padre-Plugin-Git to 0.03 [sno 2010-09-08]
 	Updated editors/p5-Padre-Plugin-Kate to 0.04 [sno 2010-09-08]
 	Added sysutils/pluged-0.1 [manu 2010-09-08]
+	Added x11/xvkbd version 3.2 [obache 2010-09-08]
