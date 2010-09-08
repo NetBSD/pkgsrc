@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2009/04/10 10:25:16 abs Exp $
+$NetBSD: distinfo,v 1.12 2010/09/08 16:45:40 drochner Exp $
 
-SHA1 (dvdrip-0.98.10.tar.gz) = 29c1323da8e1fb89b31130f4f8cca49f1e754412
-RMD160 (dvdrip-0.98.10.tar.gz) = dff3469bbd8fb3140fdeea05f3038e91f253c1c8
-Size (dvdrip-0.98.10.tar.gz) = 1928073 bytes
+SHA1 (dvdrip-0.98.11.tar.gz) = b91d65e7307b5fecd1509ace03c02564ac9591c0
+RMD160 (dvdrip-0.98.11.tar.gz) = 008afcecd1eaf6842e907d325b079cc60f4a6b1e
+Size (dvdrip-0.98.11.tar.gz) = 2075302 bytes
 SHA1 (patch-aa) = 45ed212c5ef22950049fa34e871026b34bce188b
