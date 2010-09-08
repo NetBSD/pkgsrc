@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 21:42:24 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/09/08 06:43:09 sno Exp $
 
-SHA1 (Padre-Plugin-Git-0.01.tar.gz) = fa7116546057da48fd7d0952f5d4474dff0d4e0e
-RMD160 (Padre-Plugin-Git-0.01.tar.gz) = 27ddad3795c9b4c089e20846ad9bfeeb2f4fbb65
-Size (Padre-Plugin-Git-0.01.tar.gz) = 2383 bytes
+SHA1 (Padre-Plugin-Git-0.03.tar.gz) = 2779036578af967ee5b1e4cdf0747ab9e3573731
+RMD160 (Padre-Plugin-Git-0.03.tar.gz) = ca1b1beddc4bf5c1e07485bf6a8802bf40289346
+Size (Padre-Plugin-Git-0.03.tar.gz) = 27279 bytes
