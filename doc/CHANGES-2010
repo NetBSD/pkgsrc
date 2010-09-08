@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3225 2010/09/08 05:27:16 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3226 2010/09/08 05:38:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4179,3 +4179,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/phpmyadmin to 2.11.11 [tron 2010-09-07]
 	Updated net/p5-RPC-XML to 0.73 [eric 2010-09-08]
 	Updated textproc/p5-Text-RecordParser to 1.5.0 [sno 2010-09-08]
+	Updated devel/p5-Config-INI to 0.016 [sno 2010-09-08]
