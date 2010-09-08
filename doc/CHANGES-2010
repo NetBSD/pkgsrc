@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3239 2010/09/08 16:50:02 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.3240 2010/09/08 18:33:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4198,3 +4198,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/gst-plugins0.10-ugly to 0.10.16 [drochner 2010-09-08]
 	Updated multimedia/gst-plugins0.10-bad to 0.10.20 [drochner 2010-09-08]
 	Updated multimedia/gst-plugins0.10-good to 0.10.25 [drochner 2010-09-08]
+	Added fonts/tex-eurosym version 1.4 [minskim 2010-09-08]
+	Added fonts/tex-eurosym-doc version 1.4 [minskim 2010-09-08]
