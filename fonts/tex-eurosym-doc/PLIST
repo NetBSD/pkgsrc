@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/08 18:32:06 minskim Exp $
+share/texmf-dist/doc/fonts/eurosym/COPYING
+share/texmf-dist/doc/fonts/eurosym/Changes
+share/texmf-dist/doc/fonts/eurosym/Makefile
+share/texmf-dist/doc/fonts/eurosym/README
+share/texmf-dist/doc/fonts/eurosym/README.type1
+share/texmf-dist/doc/fonts/eurosym/c/Makefile
+share/texmf-dist/doc/fonts/eurosym/eurosym.cpp
+share/texmf-dist/doc/fonts/eurosym/makemfs
+share/texmf-dist/doc/fonts/eurosym/rundvips
+share/texmf-dist/doc/fonts/eurosym/runlatex
+share/texmf-dist/doc/fonts/eurosym/src/Makefile
+share/texmf-dist/doc/fonts/eurosym/testeuro.pdf
+share/texmf-dist/doc/fonts/eurosym/testeuro.tex
