@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2010/08/31 20:57:53 sno Exp $
+# $NetBSD: Makefile,v 1.22 2010/09/08 06:22:45 sno Exp $
 
-DISTNAME=	Data-UUID-1.215
+DISTNAME=	Data-UUID-1.216
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
