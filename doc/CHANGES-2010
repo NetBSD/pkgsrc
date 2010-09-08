@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3240 2010/09/08 18:33:18 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3241 2010/09/08 20:29:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4200,3 +4200,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/gst-plugins0.10-good to 0.10.25 [drochner 2010-09-08]
 	Added fonts/tex-eurosym version 1.4 [minskim 2010-09-08]
 	Added fonts/tex-eurosym-doc version 1.4 [minskim 2010-09-08]
+	Updated devel/p5-Module-Install-XSUtil to 0.27 [sno 2010-09-08]
