@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2010/04/13 16:14:03 drochner Exp $
+# $NetBSD: Makefile,v 1.85 2010/09/08 13:53:00 tez Exp $
 
 DISTNAME=	libxslt-1.1.26
 CATEGORIES=	textproc
@@ -28,6 +28,13 @@ TEST_TARGET=		check
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CPPFLAGS+=	-Dsocklen_t=int
+.endif
+
+post-extract:
+	cp ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms
+
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rename:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 .endif
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
