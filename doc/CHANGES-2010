@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3242 2010/09/08 20:35:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3243 2010/09/08 20:48:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4202,3 +4202,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/tex-eurosym-doc version 1.4 [minskim 2010-09-08]
 	Updated devel/p5-Module-Install-XSUtil to 0.27 [sno 2010-09-08]
 	Updated devel/p5-Sub-Name to 0.05 [sno 2010-09-08]
+	Updated devel/p5-Test-Most to 0.23 [sno 2010-09-08]
