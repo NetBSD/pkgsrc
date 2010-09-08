@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9626 2010/09/08 21:15:51 sno Exp $
+$NetBSD: TODO,v 1.9627 2010/09/08 22:06:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.5
+	o TeXmacs-1.0.7.6
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -450,6 +450,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20080824
+	o bzr-2.2.0
 	o c4-1.10 [schmonz]
 	o cairo-1.10.0
 	o cal3d-0.11.0
@@ -525,7 +526,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dpkg-1.14.25
 	o drivel-3.0.2
 	o dspam-3.9.0
-	o dvdrip-0.98.11
 	o dvipng-1.13
 	o dwm-5.8.2
 	o easymenu-0.7.2p1
@@ -556,7 +556,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enscript-1.6.5.2
 	o epic4-2.6
 	o epstool-3.08
-	o eric4-4.4.8
 	o eric5-5.0.0
 	o erlang-13b4
 	o erubis-2.6.2
@@ -710,9 +709,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.10
 	o gsoap-2.7.17 [pkg/43789]
 	o gss-1.0.1
-	o gst-plugins0.10-bad-0.10.20
-	o gst-plugins0.10-good-0.10.25
-	o gst-plugins0.10-ugly-0.10.16
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.1
@@ -942,7 +938,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
-	o mkvtoolnix-4.3.0
 	o mlterm-3.0.1 [pkg/43822]
 	o moc-2.4.4
 	o modular-xorg-server-1.9.0
@@ -1030,7 +1025,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.57
 	o packagekit-0.5.1
 	o paprefs-0.9.8
-	o parallel-20100822
+	o parallel-20100906
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-2.5.0
 	o patch-2.6.1
