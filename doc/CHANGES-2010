@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3229 2010/09/08 06:23:07 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3230 2010/09/08 06:29:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4183,3 +4183,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Config-Tiny to 2.13 [sno 2010-09-08]
 	Updated devel/p5-B-Keywords to 1.10 [sno 2010-09-08]
 	Updated devel/p5-Data-UUID to 1.216 [sno 2010-09-08]
+	Updated devel/p5-Devel-StackTrace to 1.2500 [sno 2010-09-08]
