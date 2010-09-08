@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2010/07/21 19:05:40 drochner Exp $
+# $NetBSD: Makefile.common,v 1.24 2010/09/08 16:23:11 drochner Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faad/Makefile
@@ -9,7 +9,7 @@
 # used by net/gst-plugins0.10-mms/Makefile
 
 GST_PLUGINS0.10_TYPE=	bad
-GST_PLUGINS0.10_VER=	0.10.19
+GST_PLUGINS0.10_VER=	0.10.20
 
 # Disable all drivers and features by default.
 .for driver in	amrwb \
@@ -41,6 +41,6 @@ CONFIGURE_ARGS+=	--disable-${driver}
 BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.22.1
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.22.1
 
-.include "../../devel/liboil/buildlink3.mk"
+.include "../../devel/orc/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/plugins.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
