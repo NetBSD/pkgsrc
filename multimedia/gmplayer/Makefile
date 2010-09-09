@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2010/06/13 22:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2010/09/09 05:11:46 obache Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,7 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -63,6 +63,7 @@ DIST_SUBDIR=	mplayer
 USE_TOOLS+=		gtar pkg-config
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
+CONFIGURE_ARGS+=	--enable-xvmc
 
 INSTALLATION_DIRS=	bin
 
@@ -81,14 +82,12 @@ do-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/Skin/Blue/.svn
 	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/Skin/Blue/icons/.svn
 
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
-.if ${X11_TYPE} == "modular"
 .include "../../x11/libXvMC/buildlink3.mk"
-.endif
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 
