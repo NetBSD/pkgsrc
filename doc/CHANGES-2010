@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3279 2010/09/09 18:45:03 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3280 2010/09/09 18:49:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4244,3 +4244,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/font-isas-misc to 1.0.1 [joerg 2010-09-09]
 	Updated fonts/font-jis-misc to 1.0.1 [joerg 2010-09-09]
 	Updated fonts/font-mutt-misc to 1.0.1 [joerg 2010-09-09]
+	Updated fonts/font-sony-misc to 1.0.1 [joerg 2010-09-09]
