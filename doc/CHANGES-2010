@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3260 2010/09/09 09:36:56 manu Exp $
+$NetBSD: CHANGES-2010,v 1.3261 2010/09/09 11:13:26 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4220,3 +4220,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Data-SimplePassword to 0.06 [sno 2010-09-09]
 	Updated net/p5-Net-OAuth to 0.27 [sno 2010-09-09]
 	Updated filesystems/perfuse to 20100909 [manu 2010-09-09]
+	Updated devel/nspr to 4.8.6.9 [tnn 2010-09-09]
+	Updated devel/nss to 3.12.7.0.9 [tnn 2010-09-09]
+	Updated devel/xulrunner to 1.9.2.9 [tnn 2010-09-09]
+	Updated www/firefox to 3.6.9 [tnn 2010-09-09]
+	Updated mail/thunderbird to 3.1.3 [tnn 2010-09-09]
+	Updated www/seamonkey to 2.0.7 [tnn 2010-09-09]
