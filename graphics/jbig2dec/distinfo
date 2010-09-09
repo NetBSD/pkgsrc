@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/09 02:13:50 joerg Exp $
+
+SHA1 (jbig2dec-0.11.tar.gz) = 349cd765616db7aac1f4dd1d45957d1da65ea925
+RMD160 (jbig2dec-0.11.tar.gz) = 8ee69d11d7aa6c590515a4d84644e273897bb4d0
+Size (jbig2dec-0.11.tar.gz) = 371499 bytes
