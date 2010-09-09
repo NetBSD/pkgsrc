@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:20 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/09 02:18:04 joerg Exp $
 #
 
-DISTNAME=		font-adobe-75dpi-1.0.0
+DISTNAME=		font-adobe-75dpi-1.0.1
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any gzip
 
-FONTS_DIRS.x11=		lib/X11/fonts/75dpi
+FONTS_DIRS.x11=		share/fonts/X11/75dpi
 
 INSTALLATION_DIRS=	share/doc/font-adobe-75dpi
 
