@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.3 2006/11/15 15:00:00 joerg Exp $
+$NetBSD: distinfo,v 1.2 2010/09/09 18:39:33 joerg Exp $
 
-SHA1 (font-jis-misc-1.0.0.tar.bz2) = 45c5034b5eb255ccdb0f2bb96bb0b0b9376cca4e
-RMD160 (font-jis-misc-1.0.0.tar.bz2) = 5a17c6fc987f0c4ed21fcf1fbf9248ec9211f0be
-Size (font-jis-misc-1.0.0.tar.bz2) = 564585 bytes
-SHA1 (patch-aa) = 7caedd27fc5ecb81cf8d85d93187e58b07c64984
-SHA1 (patch-ab) = 2cd773af858094c91abe832a8949e82c97f04449
-SHA1 (patch-ac) = 20a5fa0490ef9b67deb62d5c3bf5da5f7742b0c3
+SHA1 (font-jis-misc-1.0.1.tar.bz2) = adb3275d19e71e9553aa8a5fdc3b2c647277d8d4
+RMD160 (font-jis-misc-1.0.1.tar.bz2) = 087be1cb7c266a08435fa17fa5b26c81fc55886c
+Size (font-jis-misc-1.0.1.tar.bz2) = 625454 bytes
