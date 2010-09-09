@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:12 joerg Exp $
-lib/X11/fonts/Type1/c0419bt_.afm
-lib/X11/fonts/Type1/c0419bt_.pfb
-lib/X11/fonts/Type1/c0582bt_.afm
-lib/X11/fonts/Type1/c0582bt_.pfb
-lib/X11/fonts/Type1/c0583bt_.afm
-lib/X11/fonts/Type1/c0583bt_.pfb
-lib/X11/fonts/Type1/c0611bt_.afm
-lib/X11/fonts/Type1/c0611bt_.pfb
-lib/X11/fonts/Type1/c0632bt_.afm
-lib/X11/fonts/Type1/c0632bt_.pfb
-lib/X11/fonts/Type1/c0633bt_.afm
-lib/X11/fonts/Type1/c0633bt_.pfb
-lib/X11/fonts/Type1/c0648bt_.afm
-lib/X11/fonts/Type1/c0648bt_.pfb
-lib/X11/fonts/Type1/c0649bt_.afm
-lib/X11/fonts/Type1/c0649bt_.pfb
+@comment $NetBSD: PLIST,v 1.4 2010/09/09 18:24:28 joerg Exp $
+share/fonts/X11/Type1/c0419bt_.afm
+share/fonts/X11/Type1/c0419bt_.pfb
+share/fonts/X11/Type1/c0582bt_.afm
+share/fonts/X11/Type1/c0582bt_.pfb
+share/fonts/X11/Type1/c0583bt_.afm
+share/fonts/X11/Type1/c0583bt_.pfb
+share/fonts/X11/Type1/c0611bt_.afm
+share/fonts/X11/Type1/c0611bt_.pfb
+share/fonts/X11/Type1/c0632bt_.afm
+share/fonts/X11/Type1/c0632bt_.pfb
+share/fonts/X11/Type1/c0633bt_.afm
+share/fonts/X11/Type1/c0633bt_.pfb
+share/fonts/X11/Type1/c0648bt_.afm
+share/fonts/X11/Type1/c0648bt_.pfb
+share/fonts/X11/Type1/c0649bt_.afm
+share/fonts/X11/Type1/c0649bt_.pfb
 share/doc/font-bitstream-type1/COPYING
