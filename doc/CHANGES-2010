@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3255 2010/09/09 05:18:38 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3256 2010/09/09 05:26:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/font-bh-75dpi to 1.0.1 [joerg 2010-09-09]
 	Updated multimedia/gmplayer to 1.0rc20091017nb3 [obache 2010-09-09]
 	Updated security/p5-Net-OpenSSH to 0.49 [sno 2010-09-09]
+	Updated security/p5-Authen-SASL to 2.15 [sno 2010-09-09]
