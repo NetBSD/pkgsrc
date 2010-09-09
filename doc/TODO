@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9631 2010/09/09 02:22:40 joerg Exp $
+$NetBSD: TODO,v 1.9632 2010/09/09 02:24:08 joerg Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fluidsynth-1.1.2
 	o font-adobe-utopia-type1-1.0.2
 	o font-alias-1.0.2
-	o font-bh-100dpi-1.0.1
 	o font-bh-75dpi-1.0.1
 	o font-bh-lucidatypewriter-100dpi-1.0.1
 	o font-bh-lucidatypewriter-75dpi-1.0.1
