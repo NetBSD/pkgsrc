@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3267 2010/09/09 18:11:19 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3268 2010/09/09 18:14:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4232,3 +4232,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/radmind to 1.14.0rc1 [hauke 2010-09-09]
 	Updated fonts/font-bh-lucidatypewriter-100dpi to 1.0.1 [joerg 2010-09-09]
 	Updated fonts/font-bh-lucidatypewriter-75dpi to 1.0.1 [joerg 2010-09-09]
+	Updated fonts/font-bh-ttf to 1.0.1 [joerg 2010-09-09]
