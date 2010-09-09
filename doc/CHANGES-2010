@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3283 2010/09/09 21:12:30 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3284 2010/09/09 21:19:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/font-util to 1.1.1 [joerg 2010-09-09]
 	Updated lang/perl5 to 5.12.2 [sno 2010-09-09]
 	Updated databases/p5-perl-ldap to 0.40.01 [sno 2010-09-09]
+	Updated textproc/p5-Pod-Tree to 1.17 [sno 2010-09-09]
