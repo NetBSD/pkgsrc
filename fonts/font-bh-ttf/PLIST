@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:12 joerg Exp $
-lib/X11/fonts/TTF/luximb.ttf
-lib/X11/fonts/TTF/luximbi.ttf
-lib/X11/fonts/TTF/luximr.ttf
-lib/X11/fonts/TTF/luximri.ttf
-lib/X11/fonts/TTF/luxirb.ttf
-lib/X11/fonts/TTF/luxirbi.ttf
-lib/X11/fonts/TTF/luxirr.ttf
-lib/X11/fonts/TTF/luxirri.ttf
-lib/X11/fonts/TTF/luxisb.ttf
-lib/X11/fonts/TTF/luxisbi.ttf
-lib/X11/fonts/TTF/luxisr.ttf
-lib/X11/fonts/TTF/luxisri.ttf
+@comment $NetBSD: PLIST,v 1.3 2010/09/09 18:13:19 joerg Exp $
+share/fonts/X11/TTF/luximb.ttf
+share/fonts/X11/TTF/luximbi.ttf
+share/fonts/X11/TTF/luximr.ttf
+share/fonts/X11/TTF/luximri.ttf
+share/fonts/X11/TTF/luxirb.ttf
+share/fonts/X11/TTF/luxirbi.ttf
+share/fonts/X11/TTF/luxirr.ttf
+share/fonts/X11/TTF/luxirri.ttf
+share/fonts/X11/TTF/luxisb.ttf
+share/fonts/X11/TTF/luxisbi.ttf
+share/fonts/X11/TTF/luxisr.ttf
+share/fonts/X11/TTF/luxisri.ttf
 share/doc/font-bh-ttf/COPYING
