@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3259 2010/09/09 06:16:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3260 2010/09/09 09:36:56 manu Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added math/p5-Math-Random-MT version 1.11 [sno 2010-09-09]
 	Updated security/p5-Data-SimplePassword to 0.06 [sno 2010-09-09]
 	Updated net/p5-Net-OAuth to 0.27 [sno 2010-09-09]
+	Updated filesystems/perfuse to 20100909 [manu 2010-09-09]
