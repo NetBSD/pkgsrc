@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3252 2010/09/09 02:24:08 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3253 2010/09/09 02:25:04 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4212,3 +4212,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/font-adobe-utopia-100dpi to 1.0.2 [joerg 2010-09-09]
 	Updated fonts/font-adobe-utopia-75dpi to 1.0.2 [joerg 2010-09-09]
 	Updated fonts/font-bh-100dpi to 1.0.1 [joerg 2010-09-09]
+	Updated fonts/font-bh-75dpi to 1.0.1 [joerg 2010-09-09]
