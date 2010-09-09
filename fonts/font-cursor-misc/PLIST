@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:12 joerg Exp $
-lib/X11/fonts/misc/cursor.pcf.gz
+@comment $NetBSD: PLIST,v 1.3 2010/09/09 18:26:20 joerg Exp $
+share/fonts/X11/misc/cursor.pcf.gz
