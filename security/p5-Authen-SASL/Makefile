@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/08/21 16:35:36 seb Exp $
+# $NetBSD: Makefile,v 1.18 2010/09/09 05:25:50 sno Exp $
 #
 
-DISTNAME=	Authen-SASL-2.14
+DISTNAME=	Authen-SASL-2.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
@@ -16,12 +15,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Authen/SASL/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-#MAKE_PARAMS+=	< /dev/null
 
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
+DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 # recommended
 DEPENDS+=	p5-GSSAPI-[0-9]*:../../security/p5-GSSAPI
 
 .include "../../lang/perl5/module.mk"
-
 .include "../../mk/bsd.pkg.mk"
