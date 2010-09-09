@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3275 2010/09/09 18:32:05 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3276 2010/09/09 18:34:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/font-cursor-misc to 1.0.1 [joerg 2010-09-09]
 	Updated fonts/font-daewoo-misc to 1.0.1 [joerg 2010-09-09]
 	Updated fonts/font-dec-misc to 1.0.1 [joerg 2010-09-09]
+	Updated fonts/font-ibm-type1 to 1.0.1 [joerg 2010-09-09]
