@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.24 2010/08/06 08:49:34 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.25 2010/09/09 12:42:27 adam Exp $
 
-DISTNAME=		dbmail-2.2.16
-CATEGORIES=		mail
-MASTER_SITES=		http://www.dbmail.org/download/2.2/
+DISTNAME=	dbmail-2.2.17
+CATEGORIES=	mail
+MASTER_SITES=	http://www.dbmail.org/download/2.2/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.dbmail.org/
-COMMENT=		Store and retrieve mail messages in a database
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.dbmail.org/
+COMMENT=	Store and retrieve mail messages in a database
+LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
 CONFIGURE_ARGS+=	--with-pkglibdir=${PREFIX}/lib/dbmail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
-USE_TOOLS+=		gmake pkg-config
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
 
 BUILD_DEFS+=		VARBASE
 
