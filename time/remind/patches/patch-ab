@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2008/11/10 17:46:31 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2010/09/09 11:39:58 obache Exp $
 
---- src/Makefile.in.orig	2008-01-26 20:36:20.000000000 +0000
+--- src/Makefile.in.orig	2010-04-21 17:26:56.000000000 +0000
 +++ src/Makefile.in
 @@ -15,10 +15,11 @@ VERSION=@VERSION@
  
  INSTALL=@INSTALL@
  INSTALL_PROGRAM=@INSTALL_PROGRAM@
-+INSTALL_SCRIPT=@INSTALL@ -m 0555
++INSTALL_SCRIPT=@INSTALL_SCRIPT@
  INSTALL_DATA=@INSTALL_DATA@
  
  PROGS=		remind rem2ps
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 2008/11/10 17:46:31 wiz Exp $
  MANS=		$(srcdir)/../man/rem2ps.1 $(srcdir)/../man/remind.1 \
  		$(srcdir)/../man/tkremind.1 $(srcdir)/../man/cm2rem.1 \
 @@ -41,7 +42,7 @@ test: remind
- 	sh ../tests/test-rem
+ 	@sh ../tests/test-rem
  
  .c.o:
 -	@CC@ -c @CFLAGS@ @DEFS@ $(CEXTRA) $(LANGDEF) -I. -I$(srcdir) $<

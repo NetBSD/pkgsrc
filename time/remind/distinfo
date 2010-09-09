@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2009/07/22 13:00:45 wiz Exp $
+$NetBSD: distinfo,v 1.11 2010/09/09 11:39:58 obache Exp $
 
-SHA1 (remind-03.01.07.tar.gz) = cc5bd6de9675b6af972376cd1376a453a3758aa1
-RMD160 (remind-03.01.07.tar.gz) = f59fbd46e3cf04f9ca41601215ba0b6721264fe5
-Size (remind-03.01.07.tar.gz) = 319550 bytes
-SHA1 (patch-ab) = 28843c39d50a54a4e3f1086ecdf71c0141e9f24f
-SHA1 (patch-ac) = 7ddf21570f361b2d667ec331bab4059d16422dfd
+SHA1 (remind-03.01.09.tar.gz) = 275f5375ac74269fa23df0c7de7aa9226e222e8a
+RMD160 (remind-03.01.09.tar.gz) = 0e779483fe9ef10d030526da8ef6b2137aac9417
+Size (remind-03.01.09.tar.gz) = 353421 bytes
+SHA1 (patch-ab) = 5f77b26fd8cf1f34b42e337a63137a2c3e84c48b
+SHA1 (patch-ac) = a1a16349917f3fc5d5951b8c8fb92030859a3a2e
 SHA1 (patch-ad) = b91a7a59a6bd4f5c6ab45bc552c42eac2ca6bfc5
 SHA1 (patch-ae) = aabd4cc46d61f50e90341867122095370c31c50b

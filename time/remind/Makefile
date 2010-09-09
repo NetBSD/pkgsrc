@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/07/22 13:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/09/09 11:39:58 obache Exp $
 #
 
-DISTNAME=	remind-03.01.07
+DISTNAME=	remind-03.01.09
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
 CATEGORIES=	time
 MASTER_SITES=	http://www.roaringpenguin.com/files/download/
@@ -19,13 +19,15 @@ USE_FEATURES=	glob
 
 REPLACE_PERL=	www/rem2html
 
+TEST_TARGET=	test
+
 # We don't want to require tcl just for one script.
 post-build:
-	${SED} -e 's,@TCLSH@,tclsh8.0,' \
+	${SED} -e 's,@TCLSH@,tclsh8.4,' \
 		< ${WRKSRC}/scripts/cm2rem.tcl \
 		> ${WRKSRC}/scripts/cm2rem
 	${MV} ${WRKSRC}/man/cm2rem.1 ${WRKSRC}/man/cm2rem.1.bak
-	${SED} -e 's,@TCLSH@,tclsh8.0,' \
+	${SED} -e 's,@TCLSH@,tclsh8.4,' \
 		< ${WRKSRC}/man/cm2rem.1.bak \
 		> ${WRKSRC}/man/cm2rem.1
 
