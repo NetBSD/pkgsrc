@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9633 2010/09/09 02:25:04 joerg Exp $
+$NetBSD: TODO,v 1.9634 2010/09/09 11:40:12 obache Exp $
 
 Suggested new packages
 ======================
@@ -1117,7 +1117,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
-	o remind-3.1.9 [pkg/43791]
 	o renderproto-0.11.1
 	o rep-gtk-0.90.3
 	o resize_image-0.7
