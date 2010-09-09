@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3272 2010/09/09 18:25:15 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3273 2010/09/09 18:27:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4237,3 +4237,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/font-bitstream-100dpi to 1.0.1 [joerg 2010-09-09]
 	Updated fonts/font-bitstream-75dpi to 1.0.1 [joerg 2010-09-09]
 	Updated fonts/font-bitstream-type1 to 1.0.1 [joerg 2010-09-09]
+	Updated fonts/font-cursor-misc to 1.0.1 [joerg 2010-09-09]
