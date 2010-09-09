@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/11/10 16:44:06 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/09/09 09:30:24 tnn Exp $
 bin/compile-et.pl
 bin/nspr-config
 bin/prerr.properties
@@ -45,7 +45,6 @@ include/nspr/plbase64.h
 include/nspr/plerror.h
 include/nspr/plgetopt.h
 include/nspr/plhash.h
-include/nspr/plresolv.h
 include/nspr/plstr.h
 include/nspr/pratom.h
 include/nspr/prbit.h
