@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2010/06/16 19:08:37 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2010/09/09 13:34:04 adam Exp $
 
-DJANGOVERS=	1.2.1
+DJANGOVERS=	1.2.2
 DISTNAME=	Django-${DJANGOVERS}
 PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
 CATEGORIES=	www python
