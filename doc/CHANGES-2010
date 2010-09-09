@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3248 2010/09/09 02:18:36 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3249 2010/09/09 02:19:12 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4208,3 +4208,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/openjpeg version 1.3 [joerg 2010-09-09]
 	Added graphics/jbig2dec version 0.11 [joerg 2010-09-09]
 	Updated fonts/font-adobe-100dpi to 1.0.1 [joerg 2010-09-09]
+	Updated fonts/font-adobe-75dpi to 1.0.1 [joerg 2010-09-09]
