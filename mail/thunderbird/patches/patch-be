@@ -1,11 +1,11 @@
-$NetBSD: patch-be,v 1.1 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-be,v 1.2 2010/09/09 10:58:51 tnn Exp $
 
 Disable all sound support for now since it causes
 crashes and doesn't work correctly anyway ...
 
---- mozilla/widget/src/gtk2/nsSound.cpp.orig	2010-03-15 14:56:04.000000000 +0000
+--- mozilla/widget/src/gtk2/nsSound.cpp.orig	2010-08-25 14:28:44.000000000 +0000
 +++ mozilla/widget/src/gtk2/nsSound.cpp
-@@ -149,6 +149,8 @@ nsSound::Init()
+@@ -138,6 +138,8 @@ nsSound::Init()
  
      mInited = PR_TRUE;
  
@@ -13,4 +13,4 @@ crashes and doesn't work correctly anyway ...
 +
      if (!elib) {
          elib = PR_LoadLibrary("libesd.so.0");
-         if (elib) {
+     }
