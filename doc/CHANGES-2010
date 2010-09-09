@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3257 2010/09/09 05:38:01 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3258 2010/09/09 05:55:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4217,3 +4217,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Net-OpenSSH to 0.49 [sno 2010-09-09]
 	Updated security/p5-Authen-SASL to 2.15 [sno 2010-09-09]
 	Added math/p5-Math-Random-MT version 1.11 [sno 2010-09-09]
+	Updated security/p5-Data-SimplePassword to 0.06 [sno 2010-09-09]
