@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/09 02:22:09 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/09 17:59:36 joerg Exp $
 #
 
 DISTNAME=		font-adobe-utopia-75dpi-1.0.2
@@ -13,7 +13,7 @@ COMMENT=		75dpi Adobe Utopia PCF fonts
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any gzip
+USE_TOOLS+=		pkg-config bdftopcf ucs2any gzip
 
 FONTS_DIRS.x11=		share/fonts/X11/75dpi
 
