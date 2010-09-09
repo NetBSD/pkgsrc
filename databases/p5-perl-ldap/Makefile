@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2010/08/21 16:33:06 seb Exp $
+# $NetBSD: Makefile,v 1.40 2010/09/09 21:12:07 sno Exp $
 
-DISTNAME=	perl-ldap-0.39
-PKGNAME=	p5-perl-ldap-0.39
-PKGREVISION=	1
+DISTNAME=	perl-ldap-0.4001
+PKGNAME=	p5-${DISTNAME:S/4001/40.01/}
 SVR4_PKGNAME=	pldap
 CATEGORIES=	databases net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
@@ -10,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ldap.perl.org/
 COMMENT=	Perl class to access LDAP servers
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,7 +17,7 @@ BUILD_DEFS+=	IPV6_READY
 
 DEPENDS+=	p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=	p5-IO-Socket-SSL>=0.81:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	{perl>=5.8.0,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-XML-SAX-Writer-[0-9]*:../../textproc/p5-XML-SAX-Writer
 
@@ -29,7 +29,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-perl-ldap
 
 .if !empty(PKG_OPTIONS:Msasl)
 DEPENDS+=	p5-Authen-SASL>=2.00:../../security/p5-Authen-SASL
-DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=	{perl>=5.8.0,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
