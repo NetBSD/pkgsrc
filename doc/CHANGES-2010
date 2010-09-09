@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3265 2010/09/09 13:58:48 hauke Exp $
+$NetBSD: CHANGES-2010,v 1.3266 2010/09/09 18:09:37 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4230,3 +4230,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dbmail to 2.2.17 [adam 2010-09-09]
 	Updated www/py-django to 1.2.2 [adam 2010-09-09]
 	Updated sysutils/radmind to 1.14.0rc1 [hauke 2010-09-09]
+	Updated fonts/font-bh-lucidatypewriter-100dpi to 1.0.1 [joerg 2010-09-09]
