@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/06/16 19:08:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/09/09 13:34:04 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -416,6 +416,16 @@ ${PYSITELIB}/django/conf/locale/mk/__init__.pyo
 ${PYSITELIB}/django/conf/locale/mk/formats.py
 ${PYSITELIB}/django/conf/locale/mk/formats.pyc
 ${PYSITELIB}/django/conf/locale/mk/formats.pyo
+${PYSITELIB}/django/conf/locale/ml/LC_MESSAGES/django.mo
+${PYSITELIB}/django/conf/locale/ml/LC_MESSAGES/django.po
+${PYSITELIB}/django/conf/locale/ml/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/django/conf/locale/ml/LC_MESSAGES/djangojs.po
+${PYSITELIB}/django/conf/locale/ml/__init__.py
+${PYSITELIB}/django/conf/locale/ml/__init__.pyc
+${PYSITELIB}/django/conf/locale/ml/__init__.pyo
+${PYSITELIB}/django/conf/locale/ml/formats.py
+${PYSITELIB}/django/conf/locale/ml/formats.pyc
+${PYSITELIB}/django/conf/locale/ml/formats.pyo
 ${PYSITELIB}/django/conf/locale/mn/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/mn/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/mn/LC_MESSAGES/djangojs.mo
@@ -1110,6 +1120,21 @@ ${PYSITELIB}/django/contrib/flatpages/middleware.pyo
 ${PYSITELIB}/django/contrib/flatpages/models.py
 ${PYSITELIB}/django/contrib/flatpages/models.pyc
 ${PYSITELIB}/django/contrib/flatpages/models.pyo
+${PYSITELIB}/django/contrib/flatpages/tests/__init__.py
+${PYSITELIB}/django/contrib/flatpages/tests/__init__.pyc
+${PYSITELIB}/django/contrib/flatpages/tests/__init__.pyo
+${PYSITELIB}/django/contrib/flatpages/tests/csrf.py
+${PYSITELIB}/django/contrib/flatpages/tests/csrf.pyc
+${PYSITELIB}/django/contrib/flatpages/tests/csrf.pyo
+${PYSITELIB}/django/contrib/flatpages/tests/middleware.py
+${PYSITELIB}/django/contrib/flatpages/tests/middleware.pyc
+${PYSITELIB}/django/contrib/flatpages/tests/middleware.pyo
+${PYSITELIB}/django/contrib/flatpages/tests/urls.py
+${PYSITELIB}/django/contrib/flatpages/tests/urls.pyc
+${PYSITELIB}/django/contrib/flatpages/tests/urls.pyo
+${PYSITELIB}/django/contrib/flatpages/tests/views.py
+${PYSITELIB}/django/contrib/flatpages/tests/views.pyc
+${PYSITELIB}/django/contrib/flatpages/tests/views.pyo
 ${PYSITELIB}/django/contrib/flatpages/urls.py
 ${PYSITELIB}/django/contrib/flatpages/urls.pyc
 ${PYSITELIB}/django/contrib/flatpages/urls.pyo
@@ -2139,8 +2164,20 @@ ${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.py
 ${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyc
 ${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyo
+${PYSITELIB}/django/contrib/sitemaps/models.py
+${PYSITELIB}/django/contrib/sitemaps/models.pyc
+${PYSITELIB}/django/contrib/sitemaps/models.pyo
 ${PYSITELIB}/django/contrib/sitemaps/templates/sitemap.xml
 ${PYSITELIB}/django/contrib/sitemaps/templates/sitemap_index.xml
+${PYSITELIB}/django/contrib/sitemaps/tests/__init__.py
+${PYSITELIB}/django/contrib/sitemaps/tests/__init__.pyc
+${PYSITELIB}/django/contrib/sitemaps/tests/__init__.pyo
+${PYSITELIB}/django/contrib/sitemaps/tests/basic.py
+${PYSITELIB}/django/contrib/sitemaps/tests/basic.pyc
+${PYSITELIB}/django/contrib/sitemaps/tests/basic.pyo
+${PYSITELIB}/django/contrib/sitemaps/tests/urls.py
+${PYSITELIB}/django/contrib/sitemaps/tests/urls.pyc
+${PYSITELIB}/django/contrib/sitemaps/tests/urls.pyo
 ${PYSITELIB}/django/contrib/sitemaps/views.py
 ${PYSITELIB}/django/contrib/sitemaps/views.pyc
 ${PYSITELIB}/django/contrib/sitemaps/views.pyo
