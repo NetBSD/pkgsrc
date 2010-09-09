@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:13 joerg Exp $
-lib/X11/fonts/Type1/cour.afm
-lib/X11/fonts/Type1/cour.pfa
-lib/X11/fonts/Type1/courb.afm
-lib/X11/fonts/Type1/courb.pfa
-lib/X11/fonts/Type1/courbi.afm
-lib/X11/fonts/Type1/courbi.pfa
-lib/X11/fonts/Type1/couri.afm
-lib/X11/fonts/Type1/couri.pfa
+@comment $NetBSD: PLIST,v 1.3 2010/09/09 18:32:57 joerg Exp $
+share/fonts/X11/Type1/cour.afm
+share/fonts/X11/Type1/cour.pfa
+share/fonts/X11/Type1/courb.afm
+share/fonts/X11/Type1/courb.pfa
+share/fonts/X11/Type1/courbi.afm
+share/fonts/X11/Type1/courbi.pfa
+share/fonts/X11/Type1/couri.afm
+share/fonts/X11/Type1/couri.pfa
