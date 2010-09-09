@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2010/06/24 07:51:37 tron Exp $
+# $NetBSD: options.mk,v 1.19.2.1 2010/09/09 19:50:18 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	snmp ssl \
@@ -64,11 +64,15 @@ PKG_SUGGESTED_OPTIONS+=	squid-ipf
 PKG_SUGGESTED_OPTIONS+=	squid-pf
 .endif
 
-# Darwin dosen't support System V IPC support.
-.if empty(OPSYS:MDarwin)
+.if ${OPSYS} == "Darwin"
+PKG_SUPPORTED_OPTIONS+=	squid-ipfw
+PKG_SUGGESTED_OPTIONS+=	squid-ipfw
+.endif
+
+# Darwin doesn't support System V IPC support.
+.if empty(PKGNAME:Msquid-[0-2].*) || empty(OPSYS:MDarwin)
 PKG_SUPPORTED_OPTIONS+=	squid-backend-diskd
 PKG_SUGGESTED_OPTIONS+=	squid-backend-diskd
-PLIST.diskd=		yes
 .endif
 
 # limited platform support squid-arp-acl
@@ -96,6 +100,8 @@ CONFIGURE_ARGS+=	--enable-linux-netfilter
 CONFIGURE_ARGS+=	--enable-pf-transparent
 .elif !empty(PKG_OPTIONS:Msquid-ipf)
 CONFIGURE_ARGS+=	--enable-ipf-transparent
+.elif !empty(PKG_OPTIONS:Msquid-ipfw)
+CONFIGURE_ARGS+=	--enable-ipfw-transparent
 .endif
 
 .if !empty(PKG_OPTIONS:Msquid-arp-acl)
