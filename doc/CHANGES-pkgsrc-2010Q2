@@ -105,3 +105,5 @@ Pullup ticket #3214 - requested by gdt
 net/quagga-devel: security update
 Pullup ticket #3215 - requested by drochner
 graphics/dia: package list fix
+Pullup ticket #3216 - requested by tron
+www/squid31: security update
