@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/09 02:15:22 joerg Exp $
+
+SHA1 (openjpeg_v1_3.tar.gz) = 8d6870d9500ea09e0b1d30b981bea1c8de534de4
+RMD160 (openjpeg_v1_3.tar.gz) = 2a22cc123058b1974cd1bf3898044acabceba26c
+Size (openjpeg_v1_3.tar.gz) = 1004678 bytes
+SHA1 (patch-aa) = ed29c12b2e56b7f4d35241970f54351395174097
