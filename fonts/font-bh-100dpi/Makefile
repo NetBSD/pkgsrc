@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/09 02:23:38 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/09 17:59:36 joerg Exp $
 #
 
 DISTNAME=		font-bh-100dpi-1.0.1
@@ -13,7 +13,7 @@ COMMENT=		Standard 100dpi Bigelow & Holmes PCF fonts
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any gzip
+USE_TOOLS+=		pkg-config bdftopcf ucs2any gzip
 
 FONTS_DIRS.x11=		share/fonts/X11/100dpi
 
