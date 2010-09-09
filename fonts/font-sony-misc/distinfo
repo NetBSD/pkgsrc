@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/17 19:06:47 drochner Exp $
+$NetBSD: distinfo,v 1.2 2010/09/09 18:48:52 joerg Exp $
 
-SHA1 (font-sony-misc-1.0.0.tar.bz2) = 8f8dbf44a03725d8769ebaae4a61575c5b948464
-RMD160 (font-sony-misc-1.0.0.tar.bz2) = a4c3e12f27ad2b9c8bc7876244a1568dd5c2760f
-Size (font-sony-misc-1.0.0.tar.bz2) = 48480 bytes
-SHA1 (patch-aa) = d644e603a9c6534339a9fb8e33c22ddd03affcc2
-SHA1 (patch-ab) = 2d4870e1738d909e2f117c48042906005c76c9ff
-SHA1 (patch-ac) = 30644be1fe73ca98516a65a74aff81367b010c8e
+SHA1 (font-sony-misc-1.0.1.tar.bz2) = e9717546682382ebf3e6e7039766fe52bdb8846c
+RMD160 (font-sony-misc-1.0.1.tar.bz2) = 4c87d664847fb735e095e5c0f37cdf1d2d21b76d
+Size (font-sony-misc-1.0.1.tar.bz2) = 98394 bytes
