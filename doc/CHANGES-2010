@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3263 2010/09/09 12:43:51 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3264 2010/09/09 13:35:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/seamonkey to 2.0.7 [tnn 2010-09-09]
 	Updated time/remind to 3.1.9 [obache 2010-09-09]
 	Updated mail/dbmail to 2.2.17 [adam 2010-09-09]
+	Updated www/py-django to 1.2.2 [adam 2010-09-09]
