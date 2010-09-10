@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 2010/09/10 23:33:42 gdt Exp $
+
+(Part of) patch to add option to not scan mail from authenticated
+users, from:
+
+  http://lists.freebsd.org/pipermail/freebsd-ports-bugs/2006-November/106024.html
+
+--- spamass-milter.1.in.orig	2004-03-18 18:37:08.000000000 +0000
++++ spamass-milter.1.in
+@@ -199,6 +199,9 @@ The resulting username is then passed to
+ Requires the
+ .Fl u
+ flag.  
++.It Fl a
++Causes spamass-milter to pass through unchecked any messages from connections
++established using SMTP authentication.  This is useful for sites with remote users.
+ .It Fl - Ar spamc flags ...
+ Pass all remaining options to spamc. 
+ This allows you to connect to a remote spamd with
