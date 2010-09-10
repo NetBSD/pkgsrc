@@ -1,0 +1,29 @@
+$NetBSD: patch-ec,v 1.1 2010/09/10 03:29:01 taca Exp $
+
+* r18172: suppress warnings.
+* r26835: backport fixes in 1.9.
+* r26838: backport the commit from trunk.
+
+--- ext/openssl/ossl.h.orig	2010-06-21 09:18:59.000000000 +0000
++++ ext/openssl/ossl.h
+@@ -114,10 +114,19 @@ extern VALUE eOSSLError;
+ #define STACK _STACK
+ #endif
+ 
++#if 0
++/*
++ * Compatibility
++ */
++#if OPENSSL_VERSION_NUMBER >= 0x10000000L
++#define STACK _STACK
++#endif
++#endif
++
+ /*
+  * String to HEXString conversion
+  */
+-int string2hex(char *, int, char **, int *);
++int string2hex(const unsigned char *, int, char **, int *);
+ 
+ /*
+  * Data Conversion

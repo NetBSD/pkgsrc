@@ -1,0 +1,15 @@
+$NetBSD: patch-aw,v 1.3 2010/09/10 03:29:00 taca Exp $
+
+* r26786: (get_device_once): raise on error when fail is non-zero.
+
+--- ext/pty/pty.c.orig	2008-04-15 03:35:55.000000000 +0000
++++ ext/pty/pty.c
+@@ -369,7 +369,7 @@ get_device_once(master, slave, SlaveName
+ 	}
+ 	close(i);
+     }
+-    if (!fail) rb_raise(rb_eRuntimeError, "can't get Master/Slave device");
++    if (fail) rb_raise(rb_eRuntimeError, "can't get Master/Slave device");
+     return -1;
+ #else
+     char **p;
