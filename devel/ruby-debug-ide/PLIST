@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:48:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/09/10 05:30:11 taca Exp $
 bin/rdebug-ide
-${GEM_HOME}/cache/ruby-debug-ide-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/ChangeLog.archive
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/rdebug-ide
-${GEM_LIBDIR}/lib/ruby-debug.rb
+${GEM_LIBDIR}/lib/ruby-debug-ide.rb
 ${GEM_LIBDIR}/lib/ruby-debug/command.rb
 ${GEM_LIBDIR}/lib/ruby-debug/commands/breakpoints.rb
 ${GEM_LIBDIR}/lib/ruby-debug/commands/catchpoint.rb
@@ -22,4 +27,14 @@ ${GEM_LIBDIR}/lib/ruby-debug/interface.rb
 ${GEM_LIBDIR}/lib/ruby-debug/printers.rb
 ${GEM_LIBDIR}/lib/ruby-debug/processor.rb
 ${GEM_LIBDIR}/lib/ruby-debug/xml_printer.rb
-${GEM_HOME}/specifications/ruby-debug-ide-${PKGVERSION}.gemspec
+${GEM_LIBDIR}/test/rd_basic_test.rb
+${GEM_LIBDIR}/test/rd_catchpoint_test.rb
+${GEM_LIBDIR}/test/rd_condition_test.rb
+${GEM_LIBDIR}/test/rd_enable_disable_test.rb
+${GEM_LIBDIR}/test/rd_inspect_test.rb
+${GEM_LIBDIR}/test/rd_stepping_breakpoints_test.rb
+${GEM_LIBDIR}/test/rd_test_base.rb
+${GEM_LIBDIR}/test/rd_threads_and_frames_test.rb
+${GEM_LIBDIR}/test/rd_variables_test.rb
+${GEM_LIBDIR}/test/ruby-debug/xml_printer_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
