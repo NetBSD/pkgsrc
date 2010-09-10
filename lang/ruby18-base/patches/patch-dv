@@ -1,8 +1,12 @@
-$NetBSD: patch-dv,v 1.1 2009/08/11 14:26:59 taca Exp $
+$NetBSD: patch-dv,v 1.2 2010/09/10 03:29:00 taca Exp $
 
-Constify.
+* r18172: suppress warnings.
+* r18943: (ossl_ocspreq_initialize): fix for initialization of r18168.
+* r26835: backport fixes in 1.9.
+* r26840: added X509::Name#hash_old as a wrapper for X509_NAME_hash_old
+	  in OpenSSL 1.0.0.
 
---- ext/openssl/ossl_x509name.c.orig	2007-07-15 22:24:51.000000000 +0900
+--- ext/openssl/ossl_x509name.c.orig	2010-06-21 09:18:59.000000000 +0000
 +++ ext/openssl/ossl_x509name.c
 @@ -135,7 +135,7 @@ ossl_x509name_initialize(int argc, VALUE
  	    rb_block_call(tmp, rb_intern("each"), 0, 0, ossl_x509name_init_i, args);
@@ -11,5 +15,32 @@ Constify.
 -	    unsigned char *p;
 +	    const unsigned char *p;
  	    VALUE str = ossl_to_der_if_possible(arg);
+ 	    X509_NAME *x;
  	    StringValue(str);
- 	    p = RSTRING_PTR(str);
+@@ -167,7 +167,7 @@ VALUE ossl_x509name_add_entry(int argc, 
+     if(NIL_P(type)) type = rb_aref(OBJECT_TYPE_TEMPLATE, oid);
+     GetX509Name(self, name);
+     if (!X509_NAME_add_entry_by_txt(name, RSTRING_PTR(oid), NUM2INT(type),
+-		RSTRING_PTR(value), RSTRING_LEN(value), -1, 0)) {
++		(unsigned char *)RSTRING_PTR(value), RSTRING_LEN(value), -1, 0)) {
+ 	ossl_raise(eX509NameError, NULL);
+     }
+ 
+@@ -248,7 +248,7 @@ ossl_x509name_to_a(VALUE self)
+ 	}
+ 	short_name = OBJ_nid2sn(OBJ_ln2nid(long_name));
+ 	ary = rb_ary_new3(3, rb_str_new2(short_name),
+-        		  rb_str_new(entry->value->data, entry->value->length),
++        		  rb_str_new((const char *)entry->value->data, entry->value->length),
+         		  INT2FIX(entry->value->type));
+ 	rb_ary_push(ret, ary);
+     }
+@@ -343,7 +364,7 @@ ossl_x509name_to_der(VALUE self)
+     if((len = i2d_X509_NAME(name, NULL)) <= 0)
+ 	ossl_raise(eX509NameError, NULL);
+     str = rb_str_new(0, len);
+-    p = RSTRING_PTR(str);
++    p = (unsigned char *)RSTRING_PTR(str);
+     if(i2d_X509_NAME(name, &p) <= 0)
+ 	ossl_raise(eX509NameError, NULL);
+     ossl_str_adjust(str, p);
