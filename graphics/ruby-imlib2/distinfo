@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2008/04/04 15:30:01 jlam Exp $
+$NetBSD: distinfo,v 1.6 2010/09/10 06:49:22 taca Exp $
 
 SHA1 (imlib2-ruby-0.5.2.gem) = 2d723441dae7630f7bec8c55486333a8efb2dbf1
 RMD160 (imlib2-ruby-0.5.2.gem) = ebc3cdbcbefd90d38c6723dc620ed82fa4abff8b
 Size (imlib2-ruby-0.5.2.gem) = 119296 bytes
+SHA1 (patch-aa) = 7922179aad42bfaf340a85ef7611422696dfdab3
+SHA1 (patch-ab) = 04f72f6b839756c00b65feddc8bbec6ac6703642
