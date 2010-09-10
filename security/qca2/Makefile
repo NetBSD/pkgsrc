@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:45:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/10 15:02:49 wiz Exp $
 
 DISTNAME=	qca-2.0.2
 PKGNAME=	qca2-${DISTNAME:C/.*-//}
@@ -26,6 +26,7 @@ INSTALLATION_DIRS=	qt4/include qt4/lib qt4/plugins/crypto lib/pkgconfig
 CONFIGURE_ARGS+=	--prefix=${QTDIR}
 CONFIGURE_ARGS+=	--qtdir=${QTDIR}
 CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--certstore-internal
 
 post-install:
 	${INSTALL_DATA} ${DESTDIR}${QTDIR}/lib/pkgconfig/qca2.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/qca2.pc
