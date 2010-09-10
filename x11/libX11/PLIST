@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2010/01/15 18:55:11 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/09/10 20:28:03 joerg Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
+include/X11/Xlib-xcb.h
 include/X11/Xlib.h
 include/X11/XlibConf.h
 include/X11/Xlibint.h
@@ -11,7 +12,9 @@ include/X11/Xresource.h
 include/X11/Xutil.h
 include/X11/cursorfont.h
 lib/X11/Xcms.txt
+lib/libX11-xcb.la
 lib/libX11.la
+lib/pkgconfig/x11-xcb.pc
 lib/pkgconfig/x11.pc
 man/man3/AllPlanes.3
 man/man3/BitmapBitOrder.3
@@ -655,7 +658,7 @@ man/man3/XkbGetBounceKeysDelay.3
 man/man3/XkbGetCompatMap.3
 man/man3/XkbGetControls.3
 man/man3/XkbGetControlsChanges.3
-man/man3/XkbGetDetectableAutorepeat.3
+man/man3/XkbGetDetectableAutoRepeat.3
 man/man3/XkbGetDeviceButtonActions.3
 man/man3/XkbGetDeviceInfo.3
 man/man3/XkbGetDeviceInfoChanges.3
@@ -748,7 +751,7 @@ man/man3/XkbSetBounceKeysDelay.3
 man/man3/XkbSetCompatMap.3
 man/man3/XkbSetControls.3
 man/man3/XkbSetDebuggingFlags.3
-man/man3/XkbSetDetectableAutorepeat.3
+man/man3/XkbSetDetectableAutoRepeat.3
 man/man3/XkbSetDeviceButtonActions.3
 man/man3/XkbSetDeviceInfo.3
 man/man3/XkbSetIgnoreLockMods.3
@@ -830,6 +833,7 @@ man/man3/XwcTextListToTextProperty.3
 man/man3/XwcTextPerCharExtents.3
 man/man3/XwcTextPropertyToTextList.3
 man/man5/Compose.5
+man/man5/XCompose.5
 share/X11/XErrorDB
 share/X11/XKeysymDB
 share/X11/locale/C/Compose
@@ -1015,4 +1019,3 @@ share/X11/locale/zh_TW.big5/XLC_LOCALE
 share/X11/locale/zh_TW/Compose
 share/X11/locale/zh_TW/XI18N_OBJS
 share/X11/locale/zh_TW/XLC_LOCALE
-@pkgdir share/doc/libX11
