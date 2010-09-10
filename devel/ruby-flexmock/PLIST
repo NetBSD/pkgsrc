@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/10 05:38:02 taca Exp $
 ${GEM_HOME}/cache/flexmock-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TAGS
 ${GEM_LIBDIR}/doc/GoogleExample.rdoc
@@ -20,6 +20,9 @@ ${GEM_LIBDIR}/doc/releases/flexmock-0.7.0.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.7.1.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.8.0.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.8.2.rdoc
+${GEM_LIBDIR}/doc/releases/flexmock-0.8.3.rdoc
+${GEM_LIBDIR}/doc/releases/flexmock-0.8.4.rdoc
+${GEM_LIBDIR}/doc/releases/flexmock-0.8.5.rdoc
 ${GEM_LIBDIR}/flexmock.blurb
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/flexmock.rb
