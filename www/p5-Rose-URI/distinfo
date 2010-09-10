@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/12/16 21:44:06 he Exp $
+$NetBSD: distinfo,v 1.3 2010/09/10 05:21:49 sno Exp $
 
-SHA1 (Rose-URI-0.50.tar.gz) = 4d1bb6e91b745e0aeb28bd603d3ee9c1379c7f87
-RMD160 (Rose-URI-0.50.tar.gz) = edcfc18fbf9b93bcf3b01cafc38da0d6b05b4048
-Size (Rose-URI-0.50.tar.gz) = 9045 bytes
+SHA1 (Rose-URI-1.00.tar.gz) = 88136266469e54361cf3f86345a259ff39a0b6e6
+RMD160 (Rose-URI-1.00.tar.gz) = 5d74213aed2c3db7eef8510abd8e72d8a195e23e
+Size (Rose-URI-1.00.tar.gz) = 9260 bytes
