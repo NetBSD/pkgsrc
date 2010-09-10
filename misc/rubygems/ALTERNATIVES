@@ -1,0 +1,1 @@
+bin/gem @PREFIX@/bin/gem@RUBY_VER@
