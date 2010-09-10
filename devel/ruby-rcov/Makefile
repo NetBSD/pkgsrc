@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2010/09/07 17:20:25 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 06:18:16 taca Exp $
 
-DISTNAME=	rcov-0.8.1.2.0
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	rcov-0.9.8
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://eigenclass.org/hiki.rb?rcov
+HOMEPAGE=	http://github.com/relevance/rcov
 COMMENT=	code coverage analysis for Ruby
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
-RUBY_VERSION_SUPPORTED= 18
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/rcov ${DESTDIR}${PREFIX}/bin/rcov${RUBY_VER}
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
