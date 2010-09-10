@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9651 2010/09/10 06:18:42 obache Exp $
+$NetBSD: TODO,v 1.9652 2010/09/10 07:18:15 taca Exp $
 
 Suggested new packages
 ======================
@@ -1117,7 +1117,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rt3-3.8.8
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
-	o ruby-1.8.7.302 (Ruby 1.8.7-p302)
 	o ruby-1.9.2.0 (Ruby 1.9.2-p0)
 	o ruby-SDL-2.1.1.1
 	o ruby-builder-2.2.0
