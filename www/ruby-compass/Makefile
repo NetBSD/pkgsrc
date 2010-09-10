@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/31 19:40:17 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 12:58:46 taca Exp $
 
-DISTNAME=	chriseppstein-compass-0.8.17
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/^chriseppstein-//}
+DISTNAME=	compass-0.10.5
 CATEGORIES=	www
-MASTER_SITES=	http://gems.github.com/gems/
+#MASTER_SITES=	http://gems.github.com/gems/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compass-style.org/
 COMMENT=	Stylesheet authoring framework based on Sass
+LICENSE=	mit
 
-GEM_BUILD=	gemspec
+DEPENDS+=	${RUBY_PKGPREFIX}-haml>=3.0.0:../../textproc/ruby-haml
 
-DEPENDS+=	${RUBY_PKGPREFIX}-haml>=2.2.0:../../textproc/ruby-haml
+CONFLICTS+=	ruby[1-9][0-9]-compass-*
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
