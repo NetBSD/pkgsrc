@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/11/23 13:39:42 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2010/09/10 06:37:04 taca Exp $
 
-SHA1 (rubyforge-2.0.3.gem) = 7d2fe77f806bf999920d26b9d44de3f27f064f19
-RMD160 (rubyforge-2.0.3.gem) = f1d9c0eb21188bb73c62b4142d085c7805091fb3
-Size (rubyforge-2.0.3.gem) = 15360 bytes
+SHA1 (rubyforge-2.0.4.gem) = e497a1e92500ff679c227bae6417e04e1c429420
+RMD160 (rubyforge-2.0.4.gem) = 7b4fcf19270928c57af753f87e4f5026badaff76
+Size (rubyforge-2.0.4.gem) = 15360 bytes
