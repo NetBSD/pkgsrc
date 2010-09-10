@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2010/08/31 08:29:42 obache Exp $
+# $NetBSD: Makefile,v 1.44 2010/09/10 09:12:53 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -12,6 +12,7 @@ SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
 SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
+SUBDIR+=	dbskkd-cdb
 SUBDIR+=	fcitx
 SUBDIR+=	gcin
 SUBDIR+=	gtk-im-libthai
@@ -89,6 +90,7 @@ SUBDIR+=	sj3-client
 SUBDIR+=	sj3-server
 SUBDIR+=	skk
 SUBDIR+=	skk-jisyo
+SUBDIR+=	skk-jisyo-cdb
 SUBDIR+=	skkfep
 SUBDIR+=	skkinput
 SUBDIR+=	skkserv
