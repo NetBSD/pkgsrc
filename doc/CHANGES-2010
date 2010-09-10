@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3302 2010/09/10 06:00:39 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3303 2010/09/10 06:01:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4286,3 +4286,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Email-Valid to 0.184 [sno 2010-09-10]
 	Added fonts/font-screen-cyrillic version 1.0.2 [obache 2010-09-10]
 	Added fonts/font-sun-misc version 1.0.1 [obache 2010-09-10]
+	Added fonts/font-winitzki-cyrillic version 1.0.1 [obache 2010-09-10]
