@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/07 19:10:37 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/09/10 10:56:06 taca Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	4
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://instiki.org/show/HomePage
 COMMENT=	Wiki clone that focuses on simple installation and running
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
