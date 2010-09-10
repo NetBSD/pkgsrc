@@ -1,0 +1,14 @@
+$NetBSD: patch-ev,v 1.1 2010/09/10 03:29:01 taca Exp $
+
+* r26583: don't use NOFOLLOW because /dev/urandom is a symlink in OpenSolaris.
+
+--- lib/securerandom.rb.orig	2007-10-10 14:37:42.000000000 +0000
++++ lib/securerandom.rb
+@@ -57,7 +57,6 @@ module SecureRandom
+       flags = File::RDONLY
+       flags |= File::NONBLOCK if defined? File::NONBLOCK
+       flags |= File::NOCTTY if defined? File::NOCTTY
+-      flags |= File::NOFOLLOW if defined? File::NOFOLLOW
+       begin
+         File.open("/dev/urandom", flags) {|f|
+           unless f.stat.chardev?

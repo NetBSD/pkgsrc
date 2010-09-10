@@ -1,10 +1,11 @@
-$NetBSD: patch-dn,v 1.1 2009/08/11 14:26:59 taca Exp $
+$NetBSD: patch-dn,v 1.2 2010/09/10 03:29:00 taca Exp $
 
-* Constify.
+* r18172: suppress warnings.
+* r26835: backport fixes in 1.9.
 
---- ext/openssl/ossl_engine.c.orig	2007-06-09 00:02:04.000000000 +0900
+--- ext/openssl/ossl_engine.c.orig	2010-06-21 09:18:59.000000000 +0000
 +++ ext/openssl/ossl_engine.c
-@@ -326,7 +326,7 @@ static VALUE
+@@ -344,7 +344,7 @@ static VALUE
  ossl_engine_inspect(VALUE self)
  {
      VALUE str;

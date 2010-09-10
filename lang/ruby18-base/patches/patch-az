@@ -1,0 +1,49 @@
+$NetBSD: patch-az,v 1.4 2010/09/10 03:29:00 taca Exp $
+
+Fix IO#readpartial test failure.
+
+--- io.c.orig	2010-06-08 09:02:21.000000000 +0000
++++ io.c
+@@ -120,9 +120,6 @@ extern void Init_File _((void));
+ # endif
+ #endif
+ 
+-#define preserving_errno(stmts) \
+-	do {int saved_errno = errno; stmts; errno = saved_errno;} while (0)
+-
+ VALUE rb_cIO;
+ VALUE rb_eEOFError;
+ VALUE rb_eIOError;
+@@ -491,7 +488,16 @@ io_fwrite(str, fptr)
+ 	r = write(fileno(f), RSTRING(str)->ptr+offset, l);
+         TRAP_END;
+ #if BSD_STDIO
+-	preserving_errno(fseeko(f, lseek(fileno(f), (off_t)0, SEEK_CUR), SEEK_SET));
++	{
++	    int saved_errno;
++	    off_t pos;
++
++	    saved_errno = errno;
++	    pos = lseek(fileno(f), (off_t)0, SEEK_CUR);
++	    if (pos != -1)
++		fseeko(f, pos, SEEK_SET);
++	    errno = saved_errno;
++	}
+ #endif
+         if (r == n) return len;
+         if (0 <= r) {
+@@ -1300,8 +1306,13 @@ io_getpartial(int argc, VALUE *argv, VAL
+                 goto again;
+             rb_sys_fail(fptr->path);
+         }
+-        if (fptr->f) /* update pos in FILE structure [ruby-core:21561] */
++        if (fptr->f) { /* update pos in FILE structure [ruby-core:21561] */
+             fflush(fptr->f);
++#if defined(__SOFF) && defined(__NetBSD__)
++	    fptr->f->_flags &= ~__SOFF;
++	    (void)io_tell(fptr);
++#endif
++	}
+     }
+     rb_str_resize(str, n);
+ 

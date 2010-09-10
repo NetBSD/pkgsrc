@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.3 2010/09/10 03:29:00 taca Exp $
+
+Suppress warnings.
+
+--- ext/openssl/ossl_config.c.orig	2010-06-21 09:18:59.000000000 +0000
++++ ext/openssl/ossl_config.c
+@@ -449,7 +449,7 @@ static VALUE
+ ossl_config_inspect(VALUE self)
+ {
+     VALUE str, ary = ossl_config_get_sections(self);
+-    char *cname = rb_class2name(rb_obj_class(self));
++    const char *cname = rb_class2name(rb_obj_class(self));
+ 
+     str = rb_str_new2("#<");
+     rb_str_cat2(str, cname);

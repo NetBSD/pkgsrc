@@ -1,0 +1,31 @@
+$NetBSD: patch-em,v 1.1 2010/09/10 03:29:01 taca Exp $
+
+* r18172: suppress warnings.
+* r26835: backport fixes in 1.9.
+* r26850: (ossl_ssl_session_{get,set}_time{,out}): fixed a bug introduced by
+	  backporting. (see [ruby-dev:40573])  use long in according to
+	  OpenSSL API. (SSL_SESSION_{get,set}_time{,out})
+* r26861: (ossl_pkcs5_pbkdf2_hmac): follows function definition in
+	  OpenSSL 1.0.0beta5. PKCS5_PBKDF2_HMAC is from 1.0.0 (0.9.8 only
+	  has PKCS5_PBKDF2_HMAC_SHA1)
+
+--- ext/openssl/ossl_ssl_session.c.orig	2010-06-21 09:18:59.000000000 +0000
++++ ext/openssl/ossl_ssl_session.c
+@@ -36,8 +36,6 @@ static VALUE ossl_ssl_session_alloc(VALU
+ static VALUE ossl_ssl_session_initialize(VALUE self, VALUE arg1)
+ {
+ 	SSL_SESSION *ctx = NULL;
+-	VALUE obj;
+-	unsigned char *p;
+ 
+ 	if (RDATA(self)->data)
+ 		ossl_raise(eSSLSession, "SSL Session already initialized");
+@@ -55,7 +53,7 @@ static VALUE ossl_ssl_session_initialize
+ 		ctx = PEM_read_bio_SSL_SESSION(in, NULL, NULL, NULL);
+ 
+ 		if (!ctx) {
+-			BIO_reset(in);
++			(void)BIO_reset(in);
+ 			ctx = d2i_SSL_SESSION_bio(in, NULL);
+ 		}
+ 

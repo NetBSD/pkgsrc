@@ -1,10 +1,12 @@
-$NetBSD: patch-dj,v 1.4 2009/08/11 14:26:58 taca Exp $
+$NetBSD: patch-dj,v 1.5 2010/09/10 03:29:00 taca Exp $
 
-* Constify.
+* r18172: suppress warnings.
+* r18943: (ossl_ocspreq_initialize): fix for initialization of r18168.
+* r18975: (ossl_ocspres_initialize): fix for initialization of r18168.
 
---- ext/openssl/ossl_ocsp.c.orig	2009-03-09 20:59:27.000000000 +0900
+--- ext/openssl/ossl_ocsp.c.orig	2010-05-24 23:58:49.000000000 +0000
 +++ ext/openssl/ossl_ocsp.c
-@@ -103,7 +103,7 @@ static VALUE
+@@ -103,15 +103,17 @@ static VALUE
  ossl_ocspreq_initialize(int argc, VALUE *argv, VALUE self)
  {
      VALUE arg;
@@ -13,7 +15,37 @@ $NetBSD: patch-dj,v 1.4 2009/08/11 14:26:58 taca Exp $
  
      rb_scan_args(argc, argv, "01", &arg);
      if(!NIL_P(arg)){
-@@ -310,7 +310,7 @@ static VALUE
++	OCSP_REQUEST *req = DATA_PTR(self), *x;
+ 	arg = ossl_to_der_if_possible(arg);
+ 	StringValue(arg);
+ 	p = (unsigned char*)RSTRING_PTR(arg);
+-	if(!d2i_OCSP_REQUEST((OCSP_REQUEST**)&DATA_PTR(self), &p,
+-			     RSTRING_LEN(arg))){
++	x = d2i_OCSP_REQUEST(&req, &p, RSTRING_LEN(arg));
++	DATA_PTR(self) = req;
++	if(!x){
+ 	    ossl_raise(eOCSPError, "cannot load DER encoded request");
+ 	}
+     }
+@@ -134,7 +136,7 @@ ossl_ocspreq_add_nonce(int argc, VALUE *
+     else{
+ 	StringValue(val);
+ 	GetOCSPReq(self, req);
+-	ret = OCSP_request_add1_nonce(req, RSTRING_PTR(val), RSTRING_LEN(val));
++	ret = OCSP_request_add1_nonce(req, (unsigned char *)RSTRING_PTR(val), RSTRING_LEN(val));
+     }
+     if(!ret) ossl_raise(eOCSPError, NULL);
+ 
+@@ -265,7 +267,7 @@ ossl_ocspreq_to_der(VALUE self)
+     if((len = i2d_OCSP_REQUEST(req, NULL)) <= 0)
+ 	ossl_raise(eOCSPError, NULL);
+     str = rb_str_new(0, len);
+-    p = RSTRING_PTR(str);
++    p = (unsigned char *)RSTRING_PTR(str);
+     if(i2d_OCSP_REQUEST(req, &p) <= 0)
+ 	ossl_raise(eOCSPError, NULL);
+     ossl_str_adjust(str, p);
+@@ -310,15 +312,17 @@ static VALUE
  ossl_ocspres_initialize(int argc, VALUE *argv, VALUE self)
  {
      VALUE arg;
@@ -22,3 +54,34 @@ $NetBSD: patch-dj,v 1.4 2009/08/11 14:26:58 taca Exp $
  
      rb_scan_args(argc, argv, "01", &arg);
      if(!NIL_P(arg)){
++	OCSP_RESPONSE *res = DATA_PTR(self), *x;
+ 	arg = ossl_to_der_if_possible(arg);
+ 	StringValue(arg);
+-	p = RSTRING_PTR(arg);
+-	if(!d2i_OCSP_RESPONSE((OCSP_RESPONSE**)&DATA_PTR(self), &p,
+-			      RSTRING_LEN(arg))){
++	p = (unsigned char *)RSTRING_PTR(arg);
++	x = d2i_OCSP_RESPONSE(&res, &p, RSTRING_LEN(arg));
++	DATA_PTR(self) = res;
++	if(!x){
+ 	    ossl_raise(eOCSPError, "cannot load DER encoded response");
+ 	}
+     }
+@@ -377,7 +381,7 @@ ossl_ocspres_to_der(VALUE self)
+     if((len = i2d_OCSP_RESPONSE(res, NULL)) <= 0)
+ 	ossl_raise(eOCSPError, NULL);
+     str = rb_str_new(0, len);
+-    p = RSTRING_PTR(str);
++    p = (unsigned char *)RSTRING_PTR(str);
+     if(i2d_OCSP_RESPONSE(res, &p) <= 0)
+ 	ossl_raise(eOCSPError, NULL);
+     ossl_str_adjust(str, p);
+@@ -436,7 +440,7 @@ ossl_ocspbres_add_nonce(int argc, VALUE 
+     else{
+ 	StringValue(val);
+ 	GetOCSPBasicRes(self, bs);
+-	ret = OCSP_basic_add1_nonce(bs, RSTRING_PTR(val), RSTRING_LEN(val));
++	ret = OCSP_basic_add1_nonce(bs, (unsigned char *)RSTRING_PTR(val), RSTRING_LEN(val));
+     }
+     if(!ret) ossl_raise(eOCSPError, NULL);
+ 

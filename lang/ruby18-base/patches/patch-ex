@@ -1,0 +1,18 @@
+$NetBSD: patch-ex,v 1.1 2010/09/10 03:29:01 taca Exp $
+
+* r17429: (Net::POP3#set_all_uids): speed up.
+
+--- lib/net/pop.rb.orig	2009-02-03 05:35:56.000000000 +0000
++++ lib/net/pop.rb
+@@ -683,9 +683,8 @@ module Net
+     end
+ 
+     def set_all_uids   #:nodoc: internal use only (called from POPMail#uidl)
+-      command().uidl.each do |num, uid|
+-        @mails.find {|m| m.number == num }.uid = uid
+-      end
++      uidl = command().uidl
++      @mails.each {|m| m.uid = uidl[m.number] }
+     end
+ 
+     def logging(msg)

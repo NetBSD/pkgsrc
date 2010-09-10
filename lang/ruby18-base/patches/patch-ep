@@ -1,0 +1,11 @@
+$NetBSD: patch-ep,v 1.1 2010/09/10 03:29:01 taca Exp $
+
+* r26209: rename {addr,name}info functions to ensure those are used on darwin.
+
+--- ext/socket/depend.orig	2007-02-12 23:01:19.000000000 +0000
++++ ext/socket/depend
+@@ -1,3 +1,3 @@
+-socket.o : socket.c $(hdrdir)/ruby.h $(topdir)/config.h $(hdrdir)/defines.h $(hdrdir)/rubyio.h $(hdrdir)/rubysig.h sockport.h
++socket.o : socket.c $(hdrdir)/ruby.h $(topdir)/config.h $(hdrdir)/defines.h $(hdrdir)/rubyio.h $(hdrdir)/rubysig.h addrinfo.h sockport.h
+ getnameinfo.o: getnameinfo.c $(topdir)/config.h addrinfo.h sockport.h
+ getaddrinfo.o: getaddrinfo.c $(topdir)/config.h addrinfo.h sockport.h

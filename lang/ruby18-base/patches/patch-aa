@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.13 2009/08/11 14:26:58 taca Exp $
+$NetBSD: patch-aa,v 1.14 2010/09/10 03:29:00 taca Exp $
 
 * Adding Interix support.
 
---- configure.in.orig	2008-06-09 03:23:46.000000000 +0900
+--- configure.in.orig	2010-06-08 09:26:34.000000000 +0000
 +++ configure.in
-@@ -452,6 +452,9 @@ bsdi*)          LIBS="-lm $LIBS"
+@@ -456,6 +456,9 @@ bsdi*)          LIBS="-lm $LIBS"
  		AC_DEFINE(BROKEN_SETREUID, 1)
  		AC_DEFINE(BROKEN_SETREGID, 1)
                  ac_cv_sizeof_rlim_t=8;;
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.13 2009/08/11 14:26:58 taca Exp $
  freebsd*)	LIBS="-lm $LIBS"
  		AC_CACHE_CHECK([whether -lxpg4 has to be linked],
  		  rb_cv_lib_xpg4_needed,
-@@ -1165,6 +1168,13 @@ if test "$with_dln_a_out" != yes; then
+@@ -1226,6 +1229,13 @@ if test "$with_dln_a_out" != yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
  			fi
  			rb_cv_dlopen=yes ;;
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.13 2009/08/11 14:26:58 taca Exp $
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
  			LIBPATHFLAG=" -L%1\$-s"
-@@ -1508,6 +1518,14 @@ if test "$enable_shared" = 'yes'; then
+@@ -1575,6 +1585,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.13 2009/08/11 14:26:58 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
  	;;
-@@ -1517,6 +1535,7 @@ if test "$enable_shared" = 'yes'; then
+@@ -1584,6 +1602,7 @@ if test "$enable_shared" = 'yes'; then
  fi
  if test "$enable_rpath" = yes; then
      LIBRUBYARG_SHARED="${linker_flag}-R ${linker_flag}\$(libdir) -L\$(libdir) $LIBRUBYARG_SHARED"

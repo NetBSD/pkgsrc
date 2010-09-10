@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 20:34:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/09/10 03:29:00 taca Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -7,9 +7,9 @@ bin/ri${RUBY_VER}
 bin/${RUBY_NAME}
 bin/testrb${RUBY_VER}
 lib/libruby${RUBY_VER}-static.a
-lib/libruby${RUBY_VER}.so
-${RUBY_NOSHLIBMAJOR}lib/libruby${RUBY_VER}.so.${RUBY_SHLIBMAJOR}
-lib/libruby${RUBY_VER}.so.${RUBY_SHLIBVER}
+lib/libruby${RUBY_VER}.${RUBY_DLEXT}
+${RUBY_NOSHLIBMAJOR}lib/libruby${RUBY_VER}.${RUBY_DLEXT}.${RUBY_SHLIBMAJOR}
+lib/libruby${RUBY_VER}.${RUBY_DLEXT}.${RUBY_SHLIBVER}
 ${RUBY_LIB}/English.rb
 ${RUBY_LIB}/Env.rb
 ${RUBY_LIB}/abbrev.rb
@@ -176,7 +176,9 @@ ${RUBY_LIB}/openssl/buffering.rb
 ${RUBY_LIB}/openssl/cipher.rb
 ${RUBY_LIB}/openssl/digest.rb
 ${RUBY_LIB}/openssl/pkcs7.rb
+${RUBY_LIB}/openssl/ssl-internal.rb
 ${RUBY_LIB}/openssl/ssl.rb
+${RUBY_LIB}/openssl/x509-internal.rb
 ${RUBY_LIB}/openssl/x509.rb
 ${RUBY_LIB}/optparse.rb
 ${RUBY_LIB}/optparse/date.rb
