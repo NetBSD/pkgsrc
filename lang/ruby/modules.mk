@@ -1,9 +1,14 @@
-# $NetBSD: modules.mk,v 1.27 2009/06/14 22:58:03 joerg Exp $
+# $NetBSD: modules.mk,v 1.28 2010/09/10 03:21:57 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
 
 .include "../../lang/ruby/rubyversion.mk"
+
+#
+# Default package name would prefixed by RUBY_PKGPREFIX.
+#
+PKGNAME?=	${RUBY_PKGPREFIX}-${DISTNAME}
 
 .if defined(NO_BUILD) && empty(NO_BUILD:M[Nn][Oo])
 DEPENDS+= ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
@@ -38,7 +43,8 @@ do-configure:	ruby-extconf-configure
 .if defined(RUBY_EXTCONF_SUBDIRS)
 ruby-extconf-configure:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
-	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} in ${d} to configure"
+	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} in ${d} to configure"; \
+	${ECHO_MSG} "${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}"
 	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
 .if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
@@ -69,7 +75,8 @@ ruby-extconf-install:
 
 .else
 ruby-extconf-configure:
-	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} to configure"
+	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} to configure"; \
+	${ECHO_MSG} "${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}"
 	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
 .if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
@@ -161,6 +168,24 @@ ruby-simple-install:
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBY} ${RUBY_SIMPLE_INSTALL} ${INSTALL_TARGET}
 .endif
 .endif # USE_RUBY_INSTALL
+
+.if defined(USE_RAKE) && empty(USE_RAKE:M[nN][oO])
+
+.if ${RUBY_VER} == "18"
+.if !empty(USE_RAKE:M[Rr][Uu][Nn])
+DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.1:../../devel/rake
+.else
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.1:../../devel/rake
+.endif
+.endif
+
+# RAKE
+#	The path to the ``rake'' binary.
+#
+EVAL_PREFIX+=	RAKE_PREFIX=${RAKE_NAME}
+RAKE=		${RAKE_PREFIX}/bin/${RAKE_NAME}
+MAKE_ENV+=	RAKE=${RAKE:Q}
+.endif
 
 .include "replace.mk"
 .endif
