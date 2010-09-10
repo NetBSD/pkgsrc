@@ -1,0 +1,67 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 06:19:50 taca Exp $
+
+Use modern Ruby API.
+
+--- rb-rcsparse.c.orig	2009-08-06 22:21:50.000000000 +0000
++++ rb-rcsparse.c
+@@ -170,9 +170,9 @@ rb_rcsfile_initialize(int argc, VALUE *a
+ 	Data_Get_Struct(self, struct rb_rcsfile, rb_rf);
+ 	rb_scan_args(argc, argv, "1", &fname);
+ 	SafeStringValue(fname);
+-	rb_rf->rf = rcsopen(RSTRING(fname)->ptr);
++	rb_rf->rf = rcsopen(RSTRING_PTR(fname));
+ 	if (rb_rf->rf == NULL)
+-		rb_sys_fail(RSTRING(fname)->ptr);
++		rb_sys_fail(RSTRING_PTR(fname));
+ 	rb_rf->symbols = Qnil;
+ 	return self;
+ }
+@@ -311,7 +311,7 @@ rb_rcsfile_checkout(int argc, VALUE *arg
+ 
+ 	if (rb_scan_args(argc, argv, "01", &rev) == 1) {
+ 		StringValue(rev);
+-		revstr = RSTRING(rev)->ptr;
++		revstr = RSTRING_PTR(rev);
+ 	}
+ 	data = rcscheckout(rb_rf->rf, revstr, &len);
+ 	if (data == NULL)
+@@ -332,7 +332,7 @@ rb_rcsfile_resolve_sym(int argc, VALUE *
+ 
+ 	if (rb_scan_args(argc, argv, "01", &sym) == 1) {
+ 		StringValue(sym);
+-		symstr = RSTRING(sym)->ptr;
++		symstr = RSTRING_PTR(sym);
+ 	}
+ 	rev = rcsrevfromsym(rb_rf->rf, symstr);
+ 	if (rev == NULL)
+@@ -350,7 +350,7 @@ rb_rcsfile_getlog(VALUE self, VALUE rev)
+ 	char *data;
+ 
+ 	StringValue(rev);
+-	data = rcsgetlog(rb_rf->rf, RSTRING(rev)->ptr);
++	data = rcsgetlog(rb_rf->rf, RSTRING_PTR(rev));
+ 	if (data == NULL)
+ 		return Qnil;
+ 	ret = rb_tainted_str_new2(data);
+@@ -378,8 +378,8 @@ rb_revtree_aref(VALUE self, VALUE index)
+ 
+ 	StringValue(index);
+ 	s.rev = &st;
+-	st.str = RSTRING(index)->ptr;
+-	st.len = RSTRING(index)->len;
++	st.str = RSTRING_PTR(index);
++	st.len = RSTRING_LEN(index);
+ 	f = RB_FIND(rcsrevtree, rb_rcsfile_revs(self), &s);
+ 	if (f == NULL)
+ 		return Qnil;
+@@ -466,8 +466,8 @@ rb_revtree_key_p(VALUE self, VALUE index
+ 
+ 	StringValue(index);
+ 	s.rev = &st;
+-	st.str = RSTRING(index)->ptr;
+-	st.len = RSTRING(index)->len;
++	st.str = RSTRING_PTR(index);
++	st.len = RSTRING_LEN(index);
+ 	f = RB_FIND(rcsrevtree, rb_rcsfile_revs(self), &s);
+ 	if (f == NULL)
+ 		return Qfalse;
