@@ -1,0 +1,52 @@
+$NetBSD: patch-ac,v 1.1 2010/09/10 06:02:58 taca Exp $
+
+Use modern Ruby API.
+
+--- menu_wrap.c.orig	2009-07-31 10:52:36.000000000 +0000
++++ menu_wrap.c
+@@ -370,7 +370,7 @@ static VALUE rbncurs_m_item_index(VALUE 
+  * Item creation/destruction functions - mitem_new(3X) man page
+  */
+ static VALUE rbncurs_m_new_item(VALUE dummy, VALUE name, VALUE description)
+-{ return wrap_item(new_item(STR2CSTR(name), STR2CSTR(description))); }
++{ return wrap_item(new_item(StringValuePtr(name), StringValuePtr(description))); }
+ 
+ static VALUE rbncurs_c_free_item(VALUE rb_item)
+ {
+@@ -661,14 +661,16 @@ static VALUE rbncurs_m_menu_opts(VALUE d
+  */
+ static VALUE rbncurs_c_menu_request_name(VALUE request)
+ {
+-  return rb_str_new2(menu_request_name(NUM2INT(request)));
++  const char *s;
++  s = menu_request_name(NUM2INT(request));
++  return rb_str_new2(s);
+ }
+ static VALUE rbncurs_m_menu_request_name(VALUE dummy, VALUE request)
+ { return rbncurs_c_menu_request_name(request); }
+ 
+ static VALUE rbncurs_c_menu_request_by_name(VALUE name)
+ {
+-  return INT2NUM(menu_request_by_name(STR2CSTR(name)));
++  return INT2NUM(menu_request_by_name(StringValuePtr(name)));
+ }
+ static VALUE rbncurs_m_menu_request_by_name(VALUE dummy, VALUE name)
+ { return rbncurs_c_menu_request_by_name(name); }
+@@ -907,7 +909,7 @@ static VALUE rbncurs_m_menu_format(VALUE
+ static VALUE rbncurs_c_set_menu_mark(VALUE rb_menu, VALUE value)
+ {
+   MENU *menu = get_menu(rb_menu);
+-  return INT2NUM(set_menu_mark(menu, STR2CSTR(value)));
++  return INT2NUM(set_menu_mark(menu, StringValuePtr(value)));
+ }
+ static VALUE rbncurs_m_set_menu_mark(VALUE dummy, VALUE rb_field, VALUE value)
+ { return rbncurs_c_set_menu_mark(rb_field, value); }
+@@ -927,7 +929,7 @@ static VALUE rbncurs_m_menu_mark(VALUE d
+ static VALUE rbncurs_c_set_menu_pattern(VALUE rb_menu, VALUE pattern)
+ {
+   MENU *menu = get_menu(rb_menu);
+-  return INT2NUM(set_menu_pattern(menu, STR2CSTR(pattern)));
++  return INT2NUM(set_menu_pattern(menu, StringValuePtr(pattern)));
+ }
+ static VALUE rbncurs_m_set_menu_pattern(VALUE dummy, VALUE rb_menu, VALUE pattern)
+ { return rbncurs_c_set_menu_pattern(rb_menu, pattern); }
