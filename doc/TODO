@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9653 2010/09/10 13:39:55 taca Exp $
+$NetBSD: TODO,v 1.9654 2010/09/10 14:01:12 taca Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap-jk-1.2.28
 	o ap-layout-3.4
 	o ap-mp3-0.40
-	o ap-ruby-1.3.0
 	o ap-xslt-1.3.8
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
@@ -1118,29 +1117,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-1.9.2.0 (Ruby 1.9.2-p0)
 	o ruby-SDL-2.1.1.1
-	o ruby-builder-2.2.0
-	o ruby-cmd-0.8.0
-	o ruby-coderay-0.9.1
-	o ruby-columnize-0.3.1
 	o ruby-datamapper-0.10.2
-	o ruby-debug-0.10.3
-	o ruby-debug-base-0.10.3.1
-	o ruby-debug-ide-0.4.4
-	o ruby-directory-watcher-1.3.1
-	o ruby-eventmachine-0.12.2
-	o ruby-fastercsv-1.5.1
-	o ruby-itex2MML-1.3.5
-	o ruby-jsmin-1.0.1
-	o ruby-logging-1.3.0
-	o ruby-mechanize-1.0.0
-	o ruby-parsetree-3.0.3
 	o ruby-racc-1.4.6
-	o ruby-rgl-0.4.0
-	o ruby-rspec-1.2.9
-	o ruby-rttool-1.0.3.0
-	o ruby-sequel-3.12.1 [pkg/43498]
-	o ruby-simple-rss-1.2.3 [pkg/43606]
-	o ruby-will-paginate-2.3.12
 	o rudiments-0.30
 	o rxvt-unicode-9.07
 	o sabayon-2.30.0 [GNOME 2.30]
@@ -1303,7 +1281,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o wdiff-0.6.3
-	o webby-0.9.3
 	o webmin-1.520
 	o weechat-0.3.3
 	o weewm-0.01
