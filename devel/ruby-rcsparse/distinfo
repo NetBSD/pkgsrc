@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/08/08 22:59:41 wiz Exp $
+$NetBSD: distinfo,v 1.7 2010/09/10 06:19:50 taca Exp $
 
 SHA1 (rcsparse/75d93404707d.tar.bz2) = ca86839830abd00abaa666bbbb42e5220fd5a743
 RMD160 (rcsparse/75d93404707d.tar.bz2) = 1573dee21f22fb676a52e726991583c52f5523f9
 Size (rcsparse/75d93404707d.tar.bz2) = 101892 bytes
+SHA1 (patch-aa) = 4cb6e84ffa2661e8ede6dec1ef3f7bc55ea53df5
