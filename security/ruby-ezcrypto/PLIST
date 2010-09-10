@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:38 joerg Exp $
-${GEM_HOME}/cache/ezcrypto-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.3 2010/09/10 07:41:46 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/README_ACTIVE_CRYPTO
+${GEM_LIBDIR}/README_DIGITAL_SIGNATURES
 ${GEM_LIBDIR}/init.rb
 ${GEM_LIBDIR}/lib/active_crypto.rb
 ${GEM_LIBDIR}/lib/ezcrypto.rb
@@ -11,9 +12,11 @@ ${GEM_LIBDIR}/lib/ezsig.rb
 ${GEM_LIBDIR}/lib/trusted.pem
 ${GEM_LIBDIR}/rakefile
 ${GEM_LIBDIR}/test/active_crypto_test.rb
+${GEM_LIBDIR}/test/agree2.com.cert
 ${GEM_LIBDIR}/test/association_key_holder_test.rb
 ${GEM_LIBDIR}/test/database.yml
 ${GEM_LIBDIR}/test/debug.log
+${GEM_LIBDIR}/test/digest_test.rb
 ${GEM_LIBDIR}/test/dsakey.pem
 ${GEM_LIBDIR}/test/dsapubkey.pem
 ${GEM_LIBDIR}/test/dsig_test.rb
@@ -21,7 +24,8 @@ ${GEM_LIBDIR}/test/encrypt_test.rb
 ${GEM_LIBDIR}/test/ezcrypto_test.rb
 ${GEM_LIBDIR}/test/key_holder_test.rb
 ${GEM_LIBDIR}/test/protectedsigner.pem
-${GEM_LIBDIR}/test/sf_issuing.crt
+${GEM_LIBDIR}/test/sf-class2-root.crt
+${GEM_LIBDIR}/test/sf_intermediate.crt
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/testchild.pem
 ${GEM_LIBDIR}/test/testchild.req
@@ -29,5 +33,4 @@ ${GEM_LIBDIR}/test/testpub.pem
 ${GEM_LIBDIR}/test/testsigner.cert
 ${GEM_LIBDIR}/test/testsigner.pem
 ${GEM_LIBDIR}/test/valicert_class2_root.crt
-${GEM_LIBDIR}/test/wideword.net.cert
-${GEM_HOME}/specifications/ezcrypto-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
