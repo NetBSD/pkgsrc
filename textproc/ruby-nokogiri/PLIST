@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/02 13:47:29 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/09/10 08:29:06 taca Exp $
 bin/nokogiri
-${GEM_HOME}/cache/nokogiri-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
-${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGELOG.ja.rdoc
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Manifest.txt
@@ -10,6 +9,8 @@ ${GEM_LIBDIR}/README.ja.rdoc
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/nokogiri
+${GEM_LIBDIR}/deps.rip
+${GEM_LIBDIR}/ext/nokogiri/depend
 ${GEM_LIBDIR}/ext/nokogiri/extconf.rb
 ${GEM_LIBDIR}/ext/nokogiri/html_document.c
 ${GEM_LIBDIR}/ext/nokogiri/html_document.h
@@ -39,12 +40,16 @@ ${GEM_LIBDIR}/ext/nokogiri/xml_element_content.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_element_content.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_element_decl.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_element_decl.h
+${GEM_LIBDIR}/ext/nokogiri/xml_encoding_handler.c
+${GEM_LIBDIR}/ext/nokogiri/xml_encoding_handler.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_entity_decl.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_entity_decl.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_entity_reference.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_entity_reference.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_io.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_io.h
+${GEM_LIBDIR}/ext/nokogiri/xml_libxml2_hacks.c
+${GEM_LIBDIR}/ext/nokogiri/xml_libxml2_hacks.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_namespace.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_namespace.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_node.c
@@ -69,8 +74,6 @@ ${GEM_LIBDIR}/ext/nokogiri/xml_syntax_error.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_syntax_error.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_text.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_text.h
-${GEM_LIBDIR}/ext/nokogiri/xml_xpath.c
-${GEM_LIBDIR}/ext/nokogiri/xml_xpath.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_xpath_context.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_xpath_context.h
 ${GEM_LIBDIR}/ext/nokogiri/xslt_stylesheet.c
@@ -87,6 +90,7 @@ ${GEM_LIBDIR}/lib/nokogiri/css/tokenizer.rb
 ${GEM_LIBDIR}/lib/nokogiri/css/tokenizer.rex
 ${GEM_LIBDIR}/lib/nokogiri/css/xpath_visitor.rb
 ${GEM_LIBDIR}/lib/nokogiri/decorators/slop.rb
+${GEM_LIBDIR}/lib/nokogiri/ffi/encoding_handler.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/html/document.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/html/element_description.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/html/entity_lookup.rb
@@ -100,6 +104,7 @@ ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_alloc.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_attr.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_attribute.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_buffer.rb
+${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_char_encoding_handler.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_document.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_dtd.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_element.rb
@@ -121,6 +126,7 @@ ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_xpath_object.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_xpath_parser_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xslt_stylesheet.rb
+${GEM_LIBDIR}/lib/nokogiri/ffi/weak_bucket.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/xml/attr.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/xml/attribute_decl.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/xml/cdata.rb
@@ -171,7 +177,6 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/dtd.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/element_content.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/element_decl.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/entity_decl.rb
-${GEM_LIBDIR}/lib/nokogiri/xml/fragment_handler.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/namespace.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/node.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/node/save_options.rb
@@ -191,12 +196,14 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/sax/parser_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/sax/push_parser.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/schema.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/syntax_error.rb
+${GEM_LIBDIR}/lib/nokogiri/xml/text.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/xpath.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/xpath/syntax_error.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
+${GEM_LIBDIR}/tasks/cross_compile.rb
 ${GEM_LIBDIR}/tasks/test.rb
 ${GEM_LIBDIR}/test/css/test_nthiness.rb
 ${GEM_LIBDIR}/test/css/test_parser.rb
@@ -234,10 +241,11 @@ ${GEM_LIBDIR}/test/html/test_node.rb
 ${GEM_LIBDIR}/test/html/test_node_encoding.rb
 ${GEM_LIBDIR}/test/test_convert_xpath.rb
 ${GEM_LIBDIR}/test/test_css_cache.rb
-${GEM_LIBDIR}/test/test_gc.rb
+${GEM_LIBDIR}/test/test_encoding_handler.rb
 ${GEM_LIBDIR}/test/test_memory_leak.rb
 ${GEM_LIBDIR}/test/test_nokogiri.rb
 ${GEM_LIBDIR}/test/test_reader.rb
+${GEM_LIBDIR}/test/test_soap4r_sax.rb
 ${GEM_LIBDIR}/test/test_xslt_transforms.rb
 ${GEM_LIBDIR}/test/xml/node/test_save_options.rb
 ${GEM_LIBDIR}/test/xml/node/test_subclass.rb
@@ -262,6 +270,7 @@ ${GEM_LIBDIR}/test/xml/test_namespace.rb
 ${GEM_LIBDIR}/test/xml/test_node.rb
 ${GEM_LIBDIR}/test/xml/test_node_attributes.rb
 ${GEM_LIBDIR}/test/xml/test_node_encoding.rb
+${GEM_LIBDIR}/test/xml/test_node_reparenting.rb
 ${GEM_LIBDIR}/test/xml/test_node_set.rb
 ${GEM_LIBDIR}/test/xml/test_parse_options.rb
 ${GEM_LIBDIR}/test/xml/test_processing_instruction.rb
@@ -272,4 +281,4 @@ ${GEM_LIBDIR}/test/xml/test_syntax_error.rb
 ${GEM_LIBDIR}/test/xml/test_text.rb
 ${GEM_LIBDIR}/test/xml/test_unparented_node.rb
 ${GEM_LIBDIR}/test/xml/test_xpath.rb
-${GEM_HOME}/specifications/nokogiri-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
