@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9667 2010/09/10 19:20:00 joerg Exp $
+$NetBSD: TODO,v 1.9668 2010/09/10 19:24:07 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1297,7 +1297,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
 	o xboard-4.4.4
-	o xcalc-1.0.3 [pkg/43788]
 	o xchat2-2.8.8
 	o xcircuit-3.6.85
 	o xcmsdb-1.0.2 [unpackaged]
