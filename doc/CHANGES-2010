@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3349 2010/09/10 21:22:39 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3350 2010/09/10 21:25:46 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4418,3 +4418,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/libX11 to 1.3.5 [joerg 2010-09-10]
 	Updated fonts/umefont-ttf to 0.419 [wiz 2010-09-10]
 	Updated chat/bsflite to 0.85 [wiz 2010-09-10]
+	Updated fonts/font-alias to 1.0.2 [joerg 2010-09-10]
