@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3305 2010/09/10 06:03:26 schnoebe Exp $
+$NetBSD: CHANGES-2010,v 1.3306 2010/09/10 06:05:26 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -2137,7 +2137,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IPC-Run to 0.89 [seb 2010-04-25]
 	Updated devel/p5-IPC-System-Simple to 1.21 [seb 2010-04-25]
 	Updated databases/pgadmin3 to 1.10.2 [adam 2010-04-26]
-	Updated audio/id3v2 to 0.1.12 [eric 2010-04-26]
+	Updated audio/id3v2 to 0.1.12 [schnoebe 2010-04-26]
 	Added print/tex-excludeonly version 1.0 [minskim 2010-04-26]
 	Added print/tex-excludeonly-doc version 1.0 [minskim 2010-04-26]
 	Added print/tex-fncylab version 1.0 [minskim 2010-04-26]
@@ -4177,7 +4177,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/balsa to 2.4.8 [adam 2010-09-07]
 	Updated www/squid31 to 3.1.8 [tron 2010-09-07]
 	Updated databases/phpmyadmin to 2.11.11 [tron 2010-09-07]
-	Updated net/p5-RPC-XML to 0.73 [eric 2010-09-08]
+	Updated net/p5-RPC-XML to 0.73 [schnoebe 2010-09-08]
 	Updated textproc/p5-Text-RecordParser to 1.5.0 [sno 2010-09-08]
 	Updated devel/p5-Config-INI to 0.016 [sno 2010-09-08]
 	Updated devel/p5-Config-Tiny to 2.13 [sno 2010-09-08]
@@ -4288,4 +4288,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/font-sun-misc version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-winitzki-cyrillic version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-xfree86-type1 version 1.0.2 [obache 2010-09-10]
-	Updated net/p5-SNMP_Session to 1.13 [eric 2010-09-10]
+	Updated net/p5-SNMP_Session to 1.13 [schnoebe 2010-09-10]
