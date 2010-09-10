@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/10/20 01:49:43 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 04:24:49 taca Exp $
 
 DISTNAME=	dbd-odbc-0.2.5
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	databases ruby
 
@@ -13,7 +12,5 @@ LICENSE=	modified-bsd
 DEPENDS+=	${RUBY_PKGPREFIX}-dbi>=0.4.3:../../databases/ruby-dbi
 DEPENDS+=	${RUBY_PKGPREFIX}-odbc>=0.9995:../../databases/ruby-odbc
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
