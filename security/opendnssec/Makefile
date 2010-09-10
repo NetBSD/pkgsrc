@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/30 13:51:57 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/10 07:40:32 taca Exp $
 #
 
 DISTNAME=	opendnssec-1.1.2
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-4Suite-[0-9]*:../../textproc/py-4Suite
 DEPENDS+=	ldns>=1.6.6:../../net/ldns
-DEPENDS+=	rubygems-[0-9]*:../../misc/rubygems
+DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.49:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
