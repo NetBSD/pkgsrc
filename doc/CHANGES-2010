@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3310 2010/09/10 07:17:45 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3311 2010/09/10 08:55:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/ruby-rcairo to 1.8.5 [taca 2010-09-10]
 	Updated mail/ruby-mime-types to 1.16 [taca 2010-09-10]
 	Updated mail/ruby-tmail to 1.2.7.1 [taca 2010-09-10]
+	Updated textproc/oniguruma to 5.9.2 [taca 2010-09-10]
