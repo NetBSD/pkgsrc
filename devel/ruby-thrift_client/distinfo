@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/11 22:56:52 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 06:32:52 taca Exp $
 
-SHA1 (thrift_client-0.4.3.gem) = 06e61ba190a8e05e806630d9792ad81af7699642
-RMD160 (thrift_client-0.4.3.gem) = eb4361f2f650199ee1da9abd4c1b220b105b05f7
-Size (thrift_client-0.4.3.gem) = 23040 bytes
+SHA1 (thrift_client-0.4.6.gem) = d63be03ad92570b41813957fcf66e00edd5906ae
+RMD160 (thrift_client-0.4.6.gem) = bf9fb1442c99cdd0d99c932d6e45a28262ab5d89
+Size (thrift_client-0.4.6.gem) = 23040 bytes
