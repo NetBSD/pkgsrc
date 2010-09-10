@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/06/12 12:06:26 taca Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/10 08:22:12 taca Exp $
 
-DISTNAME=	maruku-0.5.9
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	maruku-0.6.0
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,5 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${RUBY_PKGPREFIX}-syntax>=1.0.0:../../textproc/ruby-syntax
 
-.include "../../misc/rubygems/rubygem.mk"
+CONFLICTS+=	ruby[1-9][0-9]-maruku-*
+
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
