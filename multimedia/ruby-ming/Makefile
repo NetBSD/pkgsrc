@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:45:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/09/10 07:31:45 taca Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
@@ -25,10 +25,16 @@ CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE}
 CONFIGURE_ARGS+=	--siterubyver=${PREFIX}/${RUBY_VENDORLIB}
 CONFIGURE_ARGS+=	--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
 
+INSTALLATION_DIRS+=	${RUBY_EG}/ming
+
+pre-configure:
+	${CHMOD} -x ${WRKSRC}/examples/rubyguts/midnightcommander/ruby.syntax \
+		${WRKSRC}/examples/rubyguts/railsconnection/index.rhtml
+
 post-install:
-		${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/ming
-		cd ${WRKSRC}/examples && \
-			pax -wrppm '-s|.*/CVS.*$$||' . ${DESTDIR}${RUBY_EXAMPLESDIR}/ming
+	cd ${WRKSRC}/examples && \
+		pax -wrppm '-s|.*/CVS.*$$||' . \
+			${DESTDIR}${PREFIX}/${RUBY_EG}/ming
 
 .include "../../multimedia/ming/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
