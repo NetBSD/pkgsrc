@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/01 12:14:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/09/10 08:13:23 taca Exp $
 bin/hikidoc
 ${RUBY_VENDORLIB}/hikidoc.rb
+${RUBY_DOC}/hikidoc/NEWS
+${RUBY_DOC}/hikidoc/NEWS.ja
+${RUBY_DOC}/hikidoc/README
+${RUBY_DOC}/hikidoc/README.ja
+${RUBY_DOC}/hikidoc/TextFormattingRules
+${RUBY_DOC}/hikidoc/TextFormattingRules.ja
