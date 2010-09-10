@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/23 14:26:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 06:12:17 taca Exp $
 
-DISTNAME=	polyglot-0.2.9
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	polyglot-0.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	filip@joyent.com
@@ -11,9 +10,7 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	hoe>=2.3.2:../../devel/hoe
+DEPENDS+=	${RUBY_PKGPREFIX}-hoe>=2.3.2:../../devel/hoe
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
