@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2010/06/13 22:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2010/09/10 06:42:52 taca Exp $
 
-DISTNAME=	rmagick-2.12.2
-PKGREVISION=	4
+DISTNAME=	rmagick-2.13.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
 CATEGORIES=	graphics
 
@@ -10,9 +9,7 @@ HOMEPAGE=	http://rmagick.rubyforge.org/
 COMMENT=	Ruby binding to ImageMagick
 LICENSE=	mit
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 
 BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=6.3.5.10
 
