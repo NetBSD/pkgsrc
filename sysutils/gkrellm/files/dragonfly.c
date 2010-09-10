@@ -809,7 +809,11 @@ static VoltDefault	voltdefault0[] =
 #include <dirent.h>
 #include <osreldate.h>
 #include <machine/cpufunc.h>
+#if (__DragonFly_version < 200700)
 #include <machine/smb.h>
+#else
+#include <bus/smbus/smb.h>
+#endif
 
 /* Interface types */
 #define INTERFACE_IO		0
