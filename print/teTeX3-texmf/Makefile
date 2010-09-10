@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2010/08/22 20:54:08 markd Exp $
+# $NetBSD: Makefile,v 1.47 2010/09/10 22:27:11 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -47,10 +47,13 @@ DEPENDS+=	tex-cyrillic>=2009:../../print/tex-cyrillic
 DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
 DEPENDS+=	tex-ec>=1.0:../../fonts/tex-ec
 DEPENDS+=	tex-eepic>=1.1e:../../graphics/tex-eepic
+DEPENDS+=	tex-endfloat-[0-9]*:../../print/tex-endfloat
 DEPENDS+=	tex-endnotes-[0-9]*:../../print/tex-endnotes
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
+DEPENDS+=	tex-eurosym-[0-9]*:../../fonts/tex-eurosym
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
+DEPENDS+=	tex-fancybox-[0-9]*:../../print/tex-fancybox
 DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
 DEPENDS+=	tex-fncylab-[0-9]*:../../print/tex-fncylab
@@ -134,6 +137,7 @@ DEPENDS+=	tex-tabls-[0-9]*:../../print/tex-tabls
 DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
 DEPENDS+=	tex-times-[0-9]*:../../fonts/tex-times
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
+DEPENDS+=	tex-tocbibind-[0-9]*:../../print/tex-tocbibind
 DEPENDS+=	tex-twoinone-[0-9]*:../../print/tex-twoinone
 DEPENDS+=	tex-txfonts-[0-9]*:../../fonts/tex-txfonts
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
@@ -201,7 +205,6 @@ TEX_MAP_FILES+=		dstroke.map
 TEX_MIXEDMAP_FILES+=	cs.map
 TEX_MIXEDMAP_FILES+=	pl.map
 TEX_MIXEDMAP_FILES+=	ccpl.map
-TEX_MIXEDMAP_FILES+=	eurosym.map
 TEX_MIXEDMAP_FILES+=	vnr.map
 
 .include "../../print/kpathsea/texmf.mk"
@@ -221,6 +224,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/fonts/am*
 	rm -rf ${WRKSRC}/doc/fonts/cm
 	rm -rf ${WRKSRC}/doc/fonts/ec
+	rm -rf ${WRKSRC}/doc/fonts/eu*
 	rm -rf ${WRKSRC}/doc/fonts/l[a-t]*
 	rm -rf ${WRKSRC}/doc/fonts/mar*
 	rm -rf ${WRKSRC}/doc/fonts/t*
@@ -232,10 +236,9 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/beamer
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/c[v-z]*
-	rm -rf ${WRKSRC}/doc/latex/eepic
-	rm -rf ${WRKSRC}/doc/latex/enumitem
+	rm -rf ${WRKSRC}/doc/latex/e[d-n]*
 	rm -rf ${WRKSRC}/doc/latex/exam
-	rm -rf ${WRKSRC}/doc/latex/fancy[c-z]*
+	rm -rf ${WRKSRC}/doc/latex/fa*
 	rm -rf ${WRKSRC}/doc/latex/float
 	rm -rf ${WRKSRC}/doc/latex/footmisc
 	rm -rf ${WRKSRC}/doc/latex/geo*
@@ -258,6 +261,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/stmaryrd
 	rm -rf ${WRKSRC}/doc/latex/sub*
 	rm -rf ${WRKSRC}/doc/latex/ti*
+	rm -rf ${WRKSRC}/doc/latex/tocbibind
 	rm -rf ${WRKSRC}/doc/latex/tools
 	rm -rf ${WRKSRC}/doc/latex/ty*
 	rm -rf ${WRKSRC}/doc/latex/wasysym/wasydoc.dvi
@@ -285,6 +289,7 @@ post-extract:
 	rmdir ${WRKSRC}/fonts/map/dvipdfm/updmap
 	rm -rf ${WRKSRC}/fonts/map/dvips/context
 	rm -rf ${WRKSRC}/fonts/map/dvips/lm
+	rm -f ${WRKSRC}/fonts/map/dvips/misc/eurosym.map
 	rm -f ${WRKSRC}/fonts/map/dvips/misc/marvosym.map
 	rmdir ${WRKSRC}/fonts/map/dvips/updmap
 	rmdir ${WRKSRC}/fonts/map/pdftex/updmap
@@ -305,6 +310,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/source/jknappen/[a-r]*
 	rm -rf ${WRKSRC}/fonts/source/lh
 	rm -rf ${WRKSRC}/fonts/source/public/cm
+	rm -rf ${WRKSRC}/fonts/source/public/eurosym
 	rm -rf ${WRKSRC}/fonts/source/public/latex
 	rm -rf ${WRKSRC}/fonts/source/public/mflogo
 	rm -f ${WRKSRC}/fonts/source/public/misc/[0-9b-w]*.mf
@@ -323,6 +329,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/public/ae*
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm
 	rm -rf ${WRKSRC}/fonts/tfm/public/cmcyr
+	rm -rf ${WRKSRC}/fonts/tfm/public/eurosym
 	rm -rf ${WRKSRC}/fonts/tfm/public/latex
 	rm -rf ${WRKSRC}/fonts/tfm/public/lm
 	rm -rf ${WRKSRC}/fonts/tfm/public/marvosym
@@ -335,6 +342,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/type1/bluesky
 	rm -rf ${WRKSRC}/fonts/type1/hoekwater
 	rm -rf ${WRKSRC}/fonts/type1/public/cmcyr
+	rm -rf ${WRKSRC}/fonts/type1/public/eurosym
 	rm -rf ${WRKSRC}/fonts/type1/public/lm
 	rm -rf ${WRKSRC}/fonts/type1/public/marvosym
 	rm -rf ${WRKSRC}/fonts/type1/public/t*
@@ -387,12 +395,11 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/con[f-z]*
 	rm -rf ${WRKSRC}/tex/latex/c[v-z]*
 	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
-	rm -rf ${WRKSRC}/tex/latex/eepic
-	rm -rf ${WRKSRC}/tex/latex/endnotes
-	rm -rf ${WRKSRC}/tex/latex/enumitem
+	rm -rf ${WRKSRC}/tex/latex/e[d-n]*
 	rm -rf ${WRKSRC}/tex/latex/etex
+	rm -rf ${WRKSRC}/tex/latex/eurosym
 	rm -rf ${WRKSRC}/tex/latex/exam
-	rm -rf ${WRKSRC}/tex/latex/fancy[c-z]*
+	rm -rf ${WRKSRC}/tex/latex/fa*
 	rm -rf ${WRKSRC}/tex/latex/float
 	rm -rf ${WRKSRC}/tex/latex/fnpara
 	rm -rf ${WRKSRC}/tex/latex/footmisc
@@ -432,6 +439,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/tabls
 	rm -rf ${WRKSRC}/tex/latex/threeparttable
 	rm -rf ${WRKSRC}/tex/latex/ti*
+	rm -rf ${WRKSRC}/tex/latex/tocbibind
 	rm -rf ${WRKSRC}/tex/latex/tools
 	rm -rf ${WRKSRC}/tex/latex/t[s-z]*
 	rm -rf ${WRKSRC}/tex/latex/ulem
