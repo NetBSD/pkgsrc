@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:27 joerg Exp $
-${GEM_HOME}/cache/Imlib2-Ruby-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.4 2010/09/10 06:49:22 taca Exp $
+${GEM_HOME}/cache/imlib2-ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
@@ -20,4 +20,4 @@ ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/imlib2.c
 ${GEM_LIBDIR}/imlib2.gemspec
 ${GEM_LIBDIR}/lib/imlib2.${RUBY_DLEXT}
-${GEM_HOME}/specifications/Imlib2-Ruby-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/imlib2-ruby-${PKGVERSION}.gemspec

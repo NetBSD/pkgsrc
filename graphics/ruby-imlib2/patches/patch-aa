@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 06:49:22 taca Exp $
+
+Fix gem's name to lower case.
+
+--- ../imlib2-ruby-0.5.2.gemspec.orig	2010-09-09 02:53:49.000000000 +0000
++++ ../imlib2-ruby-0.5.2.gemspec
+@@ -1,5 +1,5 @@
+ --- !ruby/object:Gem::Specification 
+-name: Imlib2-Ruby
++name: imlib2-ruby
+ version: !ruby/object:Gem::Version 
+   version: 0.5.2
+ platform: ruby
