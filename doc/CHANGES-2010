@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3335 2010/09/10 19:34:48 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3336 2010/09/10 19:40:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4403,3 +4403,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xcalc to 1.0.3 [joerg 2010-09-10]
 	Updated x11/xextproto to 7.1.2 [joerg 2010-09-10]
 	Updated x11/xeyes to 1.1.0 [joerg 2010-09-10]
+	Updated x11/xinit to 1.2.1 [joerg 2010-09-10]
