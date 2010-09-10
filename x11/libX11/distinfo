@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.16 2010/01/15 18:55:11 tnn Exp $
+$NetBSD: distinfo,v 1.17 2010/09/10 20:28:03 joerg Exp $
 
-SHA1 (libX11-1.3.2.tar.bz2) = d4b3966d8eeb79514daad3eeae0debf65d16edca
-RMD160 (libX11-1.3.2.tar.bz2) = 4f7c521f96688b1ea162cfc7e303bfe1286d48a0
-Size (libX11-1.3.2.tar.bz2) = 2164426 bytes
-SHA1 (patch-aa) = 6a9fec9f8cc4f47de8d21043f7f73a20b6263f7d
-SHA1 (patch-ac) = 18ab2c2daa61de901cb6dc0df458d8848849cf53
-SHA1 (patch-ad) = 9015aa648f7f90d555bcf98d00b080ec39a7c364
-SHA1 (patch-ae) = 1a86fcebfe9963ae7d6df6aae24d93e2a9717d14
-SHA1 (patch-af) = a97f3b31eecc783caecfeb315ac2cf6603ec32a5
-SHA1 (patch-ag) = 626875c0c772264ea53fbf4f6e9c2228f7628ecf
+SHA1 (libX11-1.3.5.tar.bz2) = c5dda2b6279f3e3267646576138fcd091a7f3c54
+RMD160 (libX11-1.3.5.tar.bz2) = 84544006514eec6f37b642b294ea5f3658b52934
+Size (libX11-1.3.5.tar.bz2) = 2104595 bytes
+SHA1 (patch-aa) = 5531b1334884222e6c941a3f4348e2d8520d54d2
+SHA1 (patch-ac) = e679a8c1bcf2d18f16e32f74664bf11a3476d583
