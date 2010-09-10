@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:02:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/10 05:33:41 taca Exp $
 
 DISTNAME=	eventmachine-0.12.10
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	devel
 
@@ -11,9 +10,8 @@ COMMENT=	Ruby event-driven I/O using the Reactor pattern
 LICENSE=	ruby-license
 
 USE_LANGUAGES=	c c++
-GEM_BUILD=	gemspec
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
