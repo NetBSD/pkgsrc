@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2009/02/15 03:33:59 taca Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/10 08:14:36 taca Exp $
 
 DISTNAME=	html-parser-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-html-parser-${VERSION}
 PKGREVISION=	1
 CATEGORIES=	textproc ruby
-MASTER_SITES=	http://www.jin.gr.jp/~nahi/Ruby/html-parser/
+MASTER_SITES=	# http://www.jin.gr.jp/~nahi/Ruby/html-parser/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.jin.gr.jp/~nahi/Ruby/html-parser/README.html
+HOMEPAGE=	# http://www.jin.gr.jp/~nahi/Ruby/html-parser/README.html
 COMMENT=	HTML-parser package for Ruby
 
 NO_BUILD=	yes
