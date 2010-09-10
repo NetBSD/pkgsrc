@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2010/04/22 15:01:07 taca Exp $
+$NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
 
 --- quota.c.orig	2002-03-30 14:59:12.000000000 +0000
 +++ quota.c
@@ -143,6 +143,62 @@ $NetBSD: patch-ab,v 1.8 2010/04/22 15:01:07 taca Exp $
  #elif defined(USE_BSD_QUOTA)
    dqb = rb_struct_new(rb_sDiskQuota,
  		      UINT2NUM(c_dqb->dqb_bhardlimit),
+@@ -314,7 +354,7 @@ rb_diskquota_new(struct dqblk *c_dqb)
+ static VALUE
+ rb_quota_getquota(VALUE self, VALUE dev, VALUE uid)
+ {
+-  char *c_dev = STR2CSTR(dev);
++  char *c_dev = StringValuePtr(dev);
+   struct dqblk c_dqb;
+   VALUE dqb = Qnil;
+ 
+@@ -330,7 +370,7 @@ rb_quota_getquota(VALUE self, VALUE dev,
+ VALUE
+ rb_quota_quotaoff(VALUE self, VALUE dev)
+ {
+-  char *c_dev = STR2CSTR(dev);
++  char *c_dev = StringValuePtr(dev);
+ 
+   if( rb_quotactl(Q_QUOTAOFF,c_dev,Qnil,NULL) == -1 ){
+     rb_sys_fail("quotactl");
+@@ -342,8 +382,8 @@ rb_quota_quotaoff(VALUE self, VALUE dev)
+ VALUE
+ rb_quota_quotaon(VALUE self, VALUE dev, VALUE quotas)
+ {
+-  char *c_dev = STR2CSTR(dev);
+-  char *c_quotas = STR2CSTR(quotas);
++  char *c_dev = StringValuePtr(dev);
++  char *c_quotas = StringValuePtr(quotas);
+ 
+   if( rb_quotactl(Q_QUOTAON,c_dev,Qnil,(caddr_t)c_quotas) == -1 ){
+     rb_sys_fail("quotactl");
+@@ -355,7 +395,7 @@ rb_quota_quotaon(VALUE self, VALUE dev, 
+ VALUE
+ rb_quota_setquota(VALUE self, VALUE dev, VALUE uid, VALUE dqb)
+ {
+-  char *c_dev = STR2CSTR(dev);
++  char *c_dev = StringValuePtr(dev);
+   struct dqblk c_dqb;
+ 
+   rb_diskquota_get(dqb, &c_dqb);
+@@ -371,7 +411,7 @@ VALUE
+ rb_quota_setqlim(VALUE self, VALUE dev, VALUE uid, VALUE dqb)
+ {
+ #ifdef Q_SETQLIM
+-  char *c_dev = STR2CSTR(dev);
++  char *c_dev = StringValuePtr(dev);
+   struct dqblk c_dqb;
+ 
+   rb_diskquota_get(dqb, &c_dqb);
+@@ -398,7 +438,7 @@ rb_quota_sync(VALUE self, VALUE dev)
+     c_dev = NULL;
+   }
+   else{
+-    c_dev = STR2CSTR(dev);
++    c_dev = StringValuePtr(dev);
+   };
+ 
+   if( rb_quotactl(Q_SYNC,c_dev,Qnil,NULL) == -1 ){ /* uid and addr are ignored */
 @@ -442,7 +482,7 @@ Init_quota()
  				   "curinodes",
  				   "btimelimit",
