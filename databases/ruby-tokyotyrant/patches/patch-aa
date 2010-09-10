@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2008/12/07 11:37:53 obache Exp $
+$NetBSD: patch-aa,v 1.3 2010/09/10 04:56:04 taca Exp $
+
+Add support for DESTDIR.
 
 --- install.rb.orig	2008-10-22 15:53:45.000000000 +0000
 +++ install.rb
 @@ -1,10 +1,15 @@
  require 'rbconfig'
-+require 'ftools'
++require 'fileutils'
  
  sitelibdir = Config::CONFIG.fetch("sitelibdir")
  bindir = Config::CONFIG.fetch("bindir")
@@ -14,7 +16,7 @@ $NetBSD: patch-aa,v 1.2 2008/12/07 11:37:53 obache Exp $
 +    dest = File.join(destdir, dest)
 +  end
    p dest
-+  File::makedirs(File.dirname(dest))
++  FileUtils::mkdir_p(File.dirname(dest))
    open(src, "rb") do |infile|
      open(dest, "wb") do |outfile|
        while buf = infile.read(8192)
