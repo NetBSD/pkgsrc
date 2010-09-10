@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2009/02/16 16:39:36 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 06:26:00 taca Exp $
 # $FreeBSD: ports/devel/ruby-setup.rb/Makefile,v 1.20 2006/06/08 20:25:19 sem Exp $
-#
 
-DISTNAME=	setup-3.4.0
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	setup-3.4.1
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://www.loveruby.net/archive/
+MASTER_SITES=	http://i.loveruby.net/archive/setup/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.loveruby.net/en/setup.html
 COMMENT=	Common installer script for ruby packages
+LICENSE=	gnu-lgpl-v2.1
 
 NO_BUILD=	yes
 
