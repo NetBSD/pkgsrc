@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/06/19 14:56:14 taca Exp $
+$NetBSD: distinfo,v 1.4 2010/09/10 08:15:55 taca Exp $
 
-SHA1 (itex2MML-1.2.3/itexToMML.tar.gz) = cd2dc6e23e2d3dce13b5eaac29e0869a4d35be9d
-RMD160 (itex2MML-1.2.3/itexToMML.tar.gz) = 6e49bed01c3522a36bfc677fdc76015163d6e55a
-Size (itex2MML-1.2.3/itexToMML.tar.gz) = 127327 bytes
-SHA1 (patch-aa) = abdc4f3d80878bf69cead0dea8950360495b0040
+SHA1 (itex2MML-1.3.25/itexToMML.tar.gz) = 51295b3bc94eae1c585e41bc675436c6aaf51ab4
+RMD160 (itex2MML-1.3.25/itexToMML.tar.gz) = 0e2877bc8733ee53bd0a62cd12ca331f9a320136
+Size (itex2MML-1.3.25/itexToMML.tar.gz) = 159917 bytes
+SHA1 (patch-aa) = 51ff13b1d433ae3118e70f71d7647e44a983a350

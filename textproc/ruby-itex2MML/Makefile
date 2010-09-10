@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/09/07 17:20:27 taca Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/10 08:15:55 taca Exp $
 
 DISTNAME=	itexToMML
 PKGNAME=	${RUBY_PKGPREFIX}-itex2MML-${ITEX2MML_VERSION}
-PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://golem.ph.utexas.edu/~distler/blog/files/
 DIST_SUBDIR=	itex2MML-${ITEX2MML_VERSION}
@@ -10,12 +9,14 @@ DIST_SUBDIR=	itex2MML-${ITEX2MML_VERSION}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://golem.ph.utexas.edu/~distler/blog/itex2MML.html
 COMMENT=	Ruby binding for itex2MML
+LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2 OR mpl-1.0
 
 BUILD_DEPENDS+=	swig>=1.3:../../devel/swig
 
-ITEX2MML_VERSION=	1.2.3
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+ITEX2MML_VERSION=	1.3.25
 RUBY_VERSION_SUPPORTED= 18
-RUBY_HAS_ARCHLIB=	yes
 
 USE_TOOLS+=		bison flex gmake
 WRKSRC=			${WRKDIR}/${DISTNAME}/itex-src
