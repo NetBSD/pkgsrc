@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3286 2010/09/09 21:32:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3287 2010/09/10 02:27:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4251,3 +4251,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Pod-Tree to 1.17 [sno 2010-09-09]
 	Updated net/p5-Net-Ident to 1.23 [sno 2010-09-09]
 	Updated time/p5-Time-Progress to 1.6 [sno 2010-09-09]
+	Updated www/contao29-translations to 20100909 [taca 2010-09-10]
