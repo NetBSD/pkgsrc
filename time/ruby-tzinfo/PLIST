@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2010/05/29 15:03:53 taca Exp $
-${GEM_HOME}/cache/tzinfo-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.14 2010/09/10 08:53:28 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -520,6 +520,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/PST8PDT.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Apia.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Auckland.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Chatham.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Chuuk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Easter.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Efate.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Enderbury.rb
@@ -545,6 +546,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Noumea.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Pago_Pago.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Palau.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Pitcairn.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Pohnpei.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Ponape.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Port_Moresby.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Rarotonga.rb
@@ -625,4 +627,4 @@ ${GEM_LIBDIR}/test/tc_timezone_transition_info.rb
 ${GEM_LIBDIR}/test/tc_timezone_utc.rb
 ${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_LIBDIR}/test/ts_all.rb
-${GEM_HOME}/specifications/tzinfo-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
