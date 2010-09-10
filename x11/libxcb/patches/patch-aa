@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 19:13:52 joerg Exp $
+
+--- configure.orig	2010-09-06 16:16:29.000000000 +0000
++++ configure
+@@ -11827,7 +11827,7 @@ else
+ $as_echo "yes" >&6; }
+ 
+ fi
+-NEEDED="pthread-stubs xau >= 0.99.2"
++NEEDED="xau >= 0.99.2"
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for NEEDED" >&5
