@@ -1,0 +1,4 @@
+Provides variants of \fbox: \shadowbox, \doublebox, \ovalbox, \Ovalbox,
+with helpful tools for using box macros and flexible verbatim macros.
+You can box mathematics, floats, center, flushleft, and flushright,
+lists, and pages.
