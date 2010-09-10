@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2004/11/28 15:43:32 taca Exp $
+$NetBSD: patch-ac,v 1.2 2010/09/10 10:50:27 taca Exp $
+
+cast before pass to tolower().
 
 --- apache_request.c.orig	2004-09-24 03:43:18.000000000 +0900
 +++ apache_request.c
