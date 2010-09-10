@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/01/28 15:25:54 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/10 19:01:46 joerg Exp $
 #
 
-DISTNAME=		libXt-1.0.7
+DISTNAME=		libXt-1.0.8
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Toolkit Intrinsics library
+LICENSE=		mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
