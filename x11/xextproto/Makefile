@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/04/09 09:06:52 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2010/09/10 19:25:48 joerg Exp $
 #
 
-DISTNAME=		xextproto-7.1.1
-PKGREVISION=		1
+DISTNAME=		xextproto-7.1.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		XExt extension headers from X.org
+LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

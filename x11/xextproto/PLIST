@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/09 08:33:38 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/10 19:25:48 joerg Exp $
 include/X11/extensions/EVI.h
 include/X11/extensions/EVIproto.h
 include/X11/extensions/ag.h
@@ -21,13 +21,27 @@ include/X11/extensions/secur.h
 include/X11/extensions/securproto.h
 include/X11/extensions/shapeconst.h
 include/X11/extensions/shapeproto.h
+include/X11/extensions/shapestr.h
 include/X11/extensions/shm.h
 include/X11/extensions/shmproto.h
 include/X11/extensions/shmstr.h
 include/X11/extensions/syncconst.h
 include/X11/extensions/syncproto.h
+include/X11/extensions/syncstr.h
 include/X11/extensions/xtestconst.h
 include/X11/extensions/xtestext1const.h
 include/X11/extensions/xtestext1proto.h
 include/X11/extensions/xtestproto.h
 lib/pkgconfig/xextproto.pc
+share/doc/xextproto/appgroup.xml
+share/doc/xextproto/dbe.xml
+share/doc/xextproto/dpms.xml
+share/doc/xextproto/evi.xml
+share/doc/xextproto/geproto.xml
+share/doc/xextproto/multibuf.xml
+share/doc/xextproto/security.xml
+share/doc/xextproto/shape.xml
+share/doc/xextproto/shm.xml
+share/doc/xextproto/sync.xml
+share/doc/xextproto/tog-cup.xml
+share/doc/xextproto/xtest.xml
