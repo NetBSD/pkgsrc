@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2008/06/19 15:02:17 taca Exp $
+# $NetBSD: Makefile,v 1.35 2010/09/10 10:50:27 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -13,11 +12,10 @@ COMMENT=	Apache module that embeds Ruby interpreter within
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-RUBY_HAS_ARCHLIB=	yes
 APACHE_MODULE=		yes
 PKG_APACHE_ACCEPTED=	apache13 apache2 apache22
 USE_APR=		yes
-VERSION=		1.2.6
+VERSION=		1.3.0
 HAS_CONFIGURE=  	yes
 INSTALL_TARGET=		site-install
 INSTALLATION_DIRS=	${RUBY_DOC}/mod_ruby/html ${RUBY_EG}/mod_ruby
