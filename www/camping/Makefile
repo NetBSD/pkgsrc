@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:22:40 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 10:51:56 taca Exp $
 
-DISTNAME=	camping-1.5
+DISTNAME=	camping-2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.whytheluckystiff.net/camping
+HOMEPAGE=	http://rubyforge.org/projectrs/camping/
 COMMENT=	Ruby micro-framework for web applications
+LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.3.1:../../devel/ruby-activesupport
-DEPENDS+=	${RUBY_PKGPREFIX}-markaby>=0.5:../../textproc/ruby-markaby
-DEPENDS+=	${RUBY_PKGPREFIX}-metaid>=1.0:../../devel/ruby-metaid
+DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.0:../../www/ruby-rack
 
-.include "../../misc/rubygems/rubygem.mk"
+CONFLICTS+=	ruby[1-9][0-9]-camping-[0-9]*
+
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
