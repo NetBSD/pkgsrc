@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9675 2010/09/10 19:59:06 joerg Exp $
+$NetBSD: TODO,v 1.9676 2010/09/10 20:02:17 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1365,7 +1365,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmore-1.0.2
 	o xmp-3.2.0
 	o xmule-1.12.2
 	o xnap-2.5r3
