@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/06/16 15:25:31 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/10 05:54:13 taca Exp $
 
-DISTNAME=	log4r-1.0.5
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	log4r-1.1.8
 CATEGORIES=	devel
 
-HOMEPAGE=	http://log4r.sourceforge.net/
+HOMEPAGE=	http://log4r.rubyforge.org
 COMMENT=	Flexible logging library
-
-GEM_BUILD=	gemspec
+LICENSE=	gnu-lgpl-v3
 
 # The log4r gem installs the RDoc files under ${GEM_LIBDIR}/doc instead of
 # ${GEM_DOCDIR}, so we need to generate the dynamic PLIST entries for
@@ -19,5 +17,5 @@ GENERATE_PLIST+=	\
 	  ${FIND} ${GEM_LIBDIR:S|${PREFIX}/||}/doc \! -type d -print | \
 		${SORT};
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
