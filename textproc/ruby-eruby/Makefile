@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2010/09/07 17:20:26 taca Exp $
+# $NetBSD: Makefile,v 1.25 2010/09/10 08:07:30 taca Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	7
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.modruby.net/archive/
@@ -9,6 +8,7 @@ MASTER_SITES=	http://www.modruby.net/archive/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://modruby.net/en/index.rbx/eruby/
 COMMENT=	Interprets Ruby code embedded in a text file
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,7 +18,9 @@ RUBY_VERSION_SUPPORTED= 18
 # manual page conflicts.
 CONFLICTS+=	ruby[1-9][0-9]-eruby-*
 
-RUBY_HAS_ARCHLIB=	yes
+# Need to update encoding processing.
+RUBY_VERSION_SUPPORTED= 18
+
 ERUBY_VERSION=		1.0.5
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${RUBY}
