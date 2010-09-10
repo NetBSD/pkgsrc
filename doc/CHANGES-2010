@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3352 2010/09/10 22:16:54 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3353 2010/09/10 22:27:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4423,3 +4423,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-endfloat-doc version 2.4i [minskim 2010-09-10]
 	Added print/tex-tocbibind version 1.5j [minskim 2010-09-10]
 	Added print/tex-tocbibind-doc version 1.5j [minskim 2010-09-10]
+	Updated print/teTeX3-texmf to 3.0nb28 [minskim 2010-09-10]
