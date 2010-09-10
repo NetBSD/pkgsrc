@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 06:00:21 obache Exp $
+share/doc/font-sun-misc/COPYING
+share/fonts/X11/misc/olcursor.pcf.gz
+share/fonts/X11/misc/olgl10.pcf.gz
+share/fonts/X11/misc/olgl12.pcf.gz
+share/fonts/X11/misc/olgl14.pcf.gz
+share/fonts/X11/misc/olgl19.pcf.gz
