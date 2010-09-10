@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/19 14:06:44 fhajny Exp $
-${GEM_HOME}/cache/innate-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.2 2010/09/10 13:11:29 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -81,6 +81,7 @@ ${GEM_LIBDIR}/spec/innate/cache/marshal.rb
 ${GEM_LIBDIR}/spec/innate/cache/memory.rb
 ${GEM_LIBDIR}/spec/innate/cache/yaml.rb
 ${GEM_LIBDIR}/spec/innate/dynamap.rb
+${GEM_LIBDIR}/spec/innate/etanni.rb
 ${GEM_LIBDIR}/spec/innate/helper.rb
 ${GEM_LIBDIR}/spec/innate/helper/aspect.rb
 ${GEM_LIBDIR}/spec/innate/helper/cgi.rb
@@ -116,6 +117,7 @@ ${GEM_LIBDIR}/spec/innate/provides.rb
 ${GEM_LIBDIR}/spec/innate/provides/list.html.xhtml
 ${GEM_LIBDIR}/spec/innate/provides/list.txt.xhtml
 ${GEM_LIBDIR}/spec/innate/request.rb
+${GEM_LIBDIR}/spec/innate/response.rb
 ${GEM_LIBDIR}/spec/innate/route.rb
 ${GEM_LIBDIR}/spec/innate/session.rb
 ${GEM_LIBDIR}/spec/innate/traited.rb
@@ -131,4 +133,4 @@ ${GEM_LIBDIR}/tasks/release.rake
 ${GEM_LIBDIR}/tasks/reversion.rake
 ${GEM_LIBDIR}/tasks/setup.rake
 ${GEM_LIBDIR}/tasks/ycov.rake
-${GEM_HOME}/specifications/innate-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
