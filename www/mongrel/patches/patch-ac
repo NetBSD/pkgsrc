@@ -1,6 +1,11 @@
-$NetBSD: patch-ac,v 1.2 2008/10/07 05:28:33 minskim Exp $
+$NetBSD: patch-ac,v 1.3 2010/09/10 12:27:34 taca Exp $
 
---- ../mongrel-1.1.5.gemspec.orig	2008-10-06 22:22:28.000000000 -0700
+* Remove certificate. (why?)
+* Remove dependency to fastthread and cgi_multipart_eof_fix and make
+  minimum Ruby's version to 1.8.6.  Since these depending packages aren't
+  needed by Ruby 1.8.6 at least.
+
+--- ../mongrel-1.1.5.gemspec.orig	2010-09-07 00:11:11.000000000 +0000
 +++ ../mongrel-1.1.5.gemspec
 @@ -7,51 +7,6 @@ authors: 
  - Zed A. Shaw
@@ -79,12 +84,3 @@ $NetBSD: patch-ac,v 1.2 2008/10/07 05:28:33 minskim Exp $
  description: A small fast HTTP library and server that runs Rails, Camping, Nitro and Iowa apps.
  email: ""
  executables: 
-@@ -206,7 +143,7 @@ required_ruby_version: !ruby/object:Gem:
-   requirements: 
-   - - ">="
-     - !ruby/object:Gem::Version 
--      version: 1.8.4
-+      version: 1.8.6
-   version: 
- required_rubygems_version: !ruby/object:Gem::Requirement 
-   requirements: 
