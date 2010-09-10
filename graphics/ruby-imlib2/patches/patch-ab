@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/09/10 06:49:22 taca Exp $
+
+Use modern Ruby's API.
+
+--- imlib2.c.orig	2010-08-28 10:35:15.000000000 +0000
++++ imlib2.c
+@@ -1902,7 +1902,7 @@ static VALUE image_put_data(VALUE self, 
+   new_data = (DATA32*) StringValuePtr(str);
+   
+   /* check size of new buffer */
+-  if (RSTRING(str)->len != old_size)
++  if (RSTRING_LEN(str) != old_size)
+     rb_raise(rb_eArgError, "invalid buffer size");
+   
+   /* copy new data to old address */
