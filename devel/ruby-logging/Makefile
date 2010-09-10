@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:17:43 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 13:51:45 taca Exp $
 
-DISTNAME=	logging-0.7.1
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	logging-1.4.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://logging.rubyforge.org/
+HOMEPAGE=	http://rubygems.org/gems/logging
 COMMENT=	Flexible logging library for Ruby based on log4j
+LICENSE=	ruby-license
 
-DEPENDS+=	${RUBY_PKGPREFIX}-flexmock>=0.8.0:../../devel/ruby-flexmock
+DEPENDS+=	${RUBY_PKGPREFIX}-little-plugger>=1.1.2:../../devel/ruby-little-plugger
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
