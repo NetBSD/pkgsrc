@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2010/05/07 08:34:23 ahoka Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 08:33:30 taca Exp $
 
-DISTNAME=	plist-3.0.0
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	plist-3.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plist.rubyforge.org/
 COMMENT=	Manipulate Property List files
+LICENSE=	mit
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
