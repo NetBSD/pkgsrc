@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3346 2010/09/10 20:22:36 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3347 2010/09/10 20:29:53 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4415,3 +4415,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xrandr to 1.3.3 [joerg 2010-09-10]
 	Updated x11/xset to 1.2.0 [joerg 2010-09-10]
 	Updated x11/xvidtune to 1.0.2 [joerg 2010-09-10]
+	Updated x11/libX11 to 1.3.5 [joerg 2010-09-10]

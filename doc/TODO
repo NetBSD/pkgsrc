@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9681 2010/09/10 20:22:36 joerg Exp $
+$NetBSD: TODO,v 1.9682 2010/09/10 20:29:53 joerg Exp $
 
 Suggested new packages
 ======================
@@ -800,7 +800,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-4.0.10
-	o libX11-1.3.5
 	o libXext-1.1.2
 	o libcares-1.7.2
 	o libdockapp-0.6.1
