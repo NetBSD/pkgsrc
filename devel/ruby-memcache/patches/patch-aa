@@ -1,0 +1,136 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 05:56:34 taca Exp $
+
+Use modern Ruby's API.
+
+--- memcache.c.orig	2005-01-05 07:52:43.000000000 +0000
++++ memcache.c
+@@ -114,7 +114,7 @@ rb_memcache_decr(const int argc, const V
+     rb_raise(rb_eArgError, "wrong number of arguments (1-2 args required)");
+   }
+ 
+-  return UINT2NUM(mc_decr(mc, RSTRING(argv[0])->ptr, RSTRING(argv[0])->len, 1));
++  return UINT2NUM(mc_decr(mc, RSTRING_PTR(argv[0]), RSTRING_LEN(argv[0]), 1));
+ }
+ 
+ 
+@@ -137,7 +137,7 @@ rb_memcache_delete(const int argc, const
+     rb_raise(rb_eArgError, "wrong number of arguments (1-2 args required)");
+   }
+ 
+-  return UINT2NUM(mc_delete(mc, RSTRING(argv[0])->ptr, RSTRING(argv[0])->len, hold));
++  return UINT2NUM(mc_delete(mc, RSTRING_PTR(argv[0]), RSTRING_LEN(argv[0]), hold));
+ }
+ 
+ 
+@@ -183,7 +183,7 @@ rb_memcache_get(VALUE self, const VALUE 
+   Data_Get_Struct(self, struct memcache, mc);
+ 
+   req = mc_req_new();
+-  res = mc_req_add(req, RSTRING(key)->ptr, RSTRING(key)->len);
++  res = mc_req_add(req, RSTRING_PTR(key), RSTRING_LEN(key));
+   mc_res_free_on_delete(res, 0);
+   mc_get(mc, req);
+ 
+@@ -218,7 +218,7 @@ rb_memcache_get_array(const int argc, co
+   ret = rb_ary_new2(argc);
+   req = mc_req_new();
+   for (i = 0; i < (u_int32_t)argc; i++) {
+-    res = mc_req_add(req, RSTRING(argv[i])->ptr, RSTRING(argv[0])->len);
++    res = mc_req_add(req, RSTRING_PTR(argv[i]), RSTRING_LEN(argv[0]));
+     mc_res_free_on_delete(res, 0);
+   }
+ 
+@@ -254,7 +254,7 @@ rb_memcache_get_hash(const int argc, con
+   ret = rb_hash_new();
+   req = mc_req_new();
+   for (i = 0; i < (u_int32_t)argc; i++) {
+-    res = mc_req_add(req, RSTRING(argv[i])->ptr, RSTRING(argv[0])->len);
++    res = mc_req_add(req, RSTRING_PTR(argv[i]), RSTRING_LEN(argv[0]));
+     mc_res_free_on_delete(res, 0);
+   }
+ 
+@@ -275,7 +275,7 @@ rb_memcache_get_hash(const int argc, con
+ 
+ static VALUE
+ rb_memcache_hash(VALUE self, const VALUE str) {
+-  return UINT2NUM(mc_hash_key(RSTRING(str)->ptr, RSTRING(str)->len));
++  return UINT2NUM(mc_hash_key(RSTRING_PTR(str), RSTRING_LEN(str)));
+ }
+ 
+ 
+@@ -298,7 +298,7 @@ rb_memcache_incr(const int argc, const V
+     rb_raise(rb_eArgError, "wrong number of arguments (1-2 args required)");
+   }
+ 
+-  return UINT2NUM(mc_incr(mc, RSTRING(argv[0])->ptr, RSTRING(argv[0])->len, 1));
++  return UINT2NUM(mc_incr(mc, RSTRING_PTR(argv[0]), RSTRING_LEN(argv[0]), 1));
+ }
+ 
+ 
+@@ -398,14 +398,14 @@ rb_memcache_server_add(const int argc, V
+       return INT2FIX(mc_server_add3(mc, ms));
+     default:
+       host = StringValue(argv[0]);
+-      return INT2FIX(mc_server_add4(mc, RSTRING(host)->ptr));
++      return INT2FIX(mc_server_add4(mc, RSTRING_PTR(host)));
+     }
+ 
+   case 2:
+     host = StringValue(argv[0]);
+     port = StringValue(argv[1]);
+-    return INT2FIX(mc_server_add2(mc, RSTRING(host)->ptr, RSTRING(host)->len,
+-				  RSTRING(port)->ptr, RSTRING(port)->len));
++    return INT2FIX(mc_server_add2(mc, RSTRING_PTR(host), RSTRING_LEN(host),
++				  RSTRING_PTR(port), RSTRING_LEN(port)));
+   default:
+     rb_raise(rb_eArgError, "wrong number of arguments (1 or 2 args required)");
+   }
+@@ -567,8 +567,8 @@ rb_memcache_set_cmd(const int argc, VALU
+     case T_STRING:
+       flags |= RBMC_DATA_STRING;
+       tmp = StringValue(argv[1]);
+-      val_len = RSTRING(tmp)->len;
+-      val = RSTRING(tmp)->ptr;
++      val_len = RSTRING_LEN(tmp);
++      val = RSTRING_PTR(tmp);
+       break;
+     case T_NIL:
+       flags |= RBMC_DATA_NIL;
+@@ -578,14 +578,14 @@ rb_memcache_set_cmd(const int argc, VALU
+     case T_FLOAT:
+       flags |= RBMC_DATA_FLOAT;
+       tmp = StringValue(argv[1]);
+-      val_len = RSTRING(tmp)->len;
+-      val = RSTRING(tmp)->ptr;
++      val_len = RSTRING_LEN(tmp);
++      val = RSTRING_PTR(tmp);
+       break;
+     case T_FIXNUM:
+       flags |= RBMC_DATA_FIXNUM;
+       tmp = StringValue(argv[1]);
+-      val_len = RSTRING(tmp)->len;
+-      val = RSTRING(tmp)->ptr;
++      val_len = RSTRING_LEN(tmp);
++      val = RSTRING_PTR(tmp);
+       break;
+     case T_TRUE:
+       flags |= RBMC_DATA_BOOL;
+@@ -602,14 +602,14 @@ rb_memcache_set_cmd(const int argc, VALU
+        * RBMC_DATA_MARSHAL */
+       flags |= RBMC_DATA_MARSHAL;
+       tmp = rb_marshal_dump(argv[1], Qnil);
+-      val_len = RSTRING(tmp)->len;
+-      val = RSTRING(tmp)->ptr;
++      val_len = RSTRING_LEN(tmp);
++      val = RSTRING_PTR(tmp);
+     }
+   case 1:
+     /* key */
+     tmp = StringValue(argv[0]);
+-    key_len = RSTRING(tmp)->len;
+-    key = RSTRING(tmp)->ptr;
++    key_len = RSTRING_LEN(tmp);
++    key = RSTRING_PTR(tmp);
+     break;
+   default:
+     rb_raise(rb_eArgError, "wrong number of arguments (1-3 args required)");
