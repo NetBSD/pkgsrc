@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/02/10 19:34:06 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2010/09/10 04:42:58 taca Exp $
 
 DISTNAME=	postgres-0.7.9.2008.01.28
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/postgres/&ql/}
@@ -6,13 +6,16 @@ PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubyforge.org/projects/ruby-pg/
+HOMEPAGE=	http://bitbucket.org/ged/ruby-pg/
 COMMENT=	Ruby extension for PostgreSQL
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
-GEM_BUILD=	gemspec
 CONFIGURE_ARGS=	--with-pgsql-include-dir=${PGSQL_PREFIX}/include/postgresql \
 		--with-pgsql-lib-dir=${PGSQL_PREFIX}/lib
 
-.include "../../misc/rubygems/rubygem.mk"
+pre-configure:
+	chmod -R g-w ${WRKSRC}
+
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
