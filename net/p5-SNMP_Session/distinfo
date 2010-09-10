@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/11/04 11:32:07 obache Exp $
+$NetBSD: distinfo,v 1.6 2010/09/10 06:02:31 schnoebe Exp $
 
-SHA1 (SNMP_Session-1.08.tar.gz) = bd473a9e9d464e73fb96a09989faf3fe6f125f8a
-RMD160 (SNMP_Session-1.08.tar.gz) = 024d426477765b3bb914df5749b4d5706b71a76f
-Size (SNMP_Session-1.08.tar.gz) = 66778 bytes
+SHA1 (SNMP_Session-1.13.tar.gz) = 7f4de0a9104ad6a0fb71af23ce83c71609c7e674
+RMD160 (SNMP_Session-1.13.tar.gz) = dee9008a0f378dc89ea7d89fe90b463b19826b42
+Size (SNMP_Session-1.13.tar.gz) = 65738 bytes
