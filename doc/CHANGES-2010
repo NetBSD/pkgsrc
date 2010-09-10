@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3308 2010/09/10 06:21:09 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3309 2010/09/10 06:31:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4292,3 +4292,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-SNMP_Session to 1.13 [schnoebe 2010-09-10]
 	Updated mail/p5-Email-MessageID to 1.402 [sno 2010-09-10]
 	Updated mail/p5-Email-MIME to 1.905 [sno 2010-09-10]
+	Updated mail/p5-Email-Folder to 0.855 [sno 2010-09-10]
