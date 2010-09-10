@@ -1,15 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:30 joerg Exp $
-${GEM_HOME}/cache/will_paginate-${PKGVERSION}.gem
-${GEM_LIBDIR}/CHANGELOG
+@comment $NetBSD: PLIST,v 1.3 2010/09/10 08:42:59 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/examples/apple-circle.gif
-${GEM_LIBDIR}/examples/index.haml
-${GEM_LIBDIR}/examples/index.html
-${GEM_LIBDIR}/examples/pagination.css
-${GEM_LIBDIR}/examples/pagination.sass
-${GEM_LIBDIR}/init.rb
 ${GEM_LIBDIR}/lib/will_paginate.rb
 ${GEM_LIBDIR}/lib/will_paginate/array.rb
 ${GEM_LIBDIR}/lib/will_paginate/collection.rb
@@ -41,5 +35,6 @@ ${GEM_LIBDIR}/test/lib/activerecord_test_case.rb
 ${GEM_LIBDIR}/test/lib/activerecord_test_connector.rb
 ${GEM_LIBDIR}/test/lib/load_fixtures.rb
 ${GEM_LIBDIR}/test/lib/view_test_process.rb
+${GEM_LIBDIR}/test/tasks.rake
 ${GEM_LIBDIR}/test/view_test.rb
-${GEM_HOME}/specifications/will_paginate-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
