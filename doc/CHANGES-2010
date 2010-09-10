@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3316 2010/09/10 10:58:26 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3317 2010/09/10 13:39:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4367,3 +4367,19 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/camping to 2.1 [taca 2010-09-10]
 	Updated www/erubis to 2.6.6 [taca 2010-09-10]
 	Updated www/heel to 2.0.0 [taca 2010-09-10]
+	Updated www/ramaze to 2010.06.18 [taca 2010-09-10]
+	Updated www/ruby-actionpack to 2.3.9 [taca 2010-09-10]
+	Updated www/ruby-activeresource to 2.3.9 [taca 2010-09-10]
+	Updated databases/ruby-activerecord to 2.3.9 [taca 2010-09-10]
+	Updated mail/ruby-actionmailer to 2.3.9 [taca 2010-09-10]
+	Updated www/rails to 2.3.9 [taca 2010-09-10]
+	Updated www/ruby-compass to 0.10.5 [taca 2010-09-10]
+	Updated www/ruby-compass-susy-plugin to 0.8.0 [taca 2010-09-10]
+	Updated www/ruby-fcgi to 0.8.8 [taca 2010-09-10]
+	Updated www/ruby-innate to 2010.07 [taca 2010-09-10]
+	Updated www/ruby-jsmin to 1.0.1 [taca 2010-09-10]
+	Updated www/ruby-patron to 0.4.8 [taca 2010-09-10]
+	Updated www/ruby-rack to 1.2.1 [taca 2010-09-10]
+	Updated www/termtter to 1.9.0 [taca 2010-09-10]
+	Updated www/thoth to 0.2.1 [taca 2010-09-10]
+	Updated www/webby to 0.9.4 [taca 2010-09-10]
