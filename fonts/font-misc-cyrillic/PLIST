@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 05:50:28 obache Exp $
+share/doc/font-misc-cyrillic/COPYING
+share/fonts/X11/cyrillic/koi12x24.pcf.gz
+share/fonts/X11/cyrillic/koi12x24b.pcf.gz
+share/fonts/X11/cyrillic/koi5x8.pcf.gz
+share/fonts/X11/cyrillic/koi6x13.pcf.gz
+share/fonts/X11/cyrillic/koi6x13b.pcf.gz
+share/fonts/X11/cyrillic/koi6x9.pcf.gz
+share/fonts/X11/cyrillic/koi7x14.pcf.gz
+share/fonts/X11/cyrillic/koi7x14b.pcf.gz
+share/fonts/X11/cyrillic/koi8x13.pcf.gz
+share/fonts/X11/cyrillic/koi8x16.pcf.gz
+share/fonts/X11/cyrillic/koi8x16b.pcf.gz
+share/fonts/X11/cyrillic/koi9x15.pcf.gz
+share/fonts/X11/cyrillic/koi9x15b.pcf.gz
+share/fonts/X11/cyrillic/koi9x18.pcf.gz
+share/fonts/X11/cyrillic/koi9x18b.pcf.gz
