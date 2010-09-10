@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9650 2010/09/09 18:55:19 joerg Exp $
+$NetBSD: TODO,v 1.9651 2010/09/10 06:18:42 obache Exp $
 
 Suggested new packages
 ======================
@@ -305,10 +305,7 @@ Suggested new packages
 	Open source batch jobs resource manager, successor to OpenPBS.
 
 	Missing xorg packages
-	font-arabic-misc, font-bitstream-speedo, font-cronyx-cyrillic,
-	font-micro-misc, font-misc-cyrillic, font-misc-ethiopic,
-	font-misc-meltho, font-schumacher-misc, font-screen-cyrillic,
-	font-sun-misc, font-winitzki-cyrillic, font-xfree86-type1,
+	font-bitstream-speedo,
 	libWindowsWM, libXfontcache, util-macros, viewres, windowswmproto,
 	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
 	xf86-input-joystick, xf86-input-synaptics, xf86-input-wacom,
