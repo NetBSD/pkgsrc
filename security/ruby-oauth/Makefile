@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/09/02 00:35:56 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 07:45:56 taca Exp $
 
 DISTNAME=	oauth-0.4.3
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 
 MAINTAINER=	obache@NetBSD.org
@@ -10,7 +9,5 @@ HOMEPAGE=	http://oauth.rubyforge.org/
 COMMENT=	OAuth Core Ruby implementation
 LICENSE=	mit
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
