@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/12/02 14:04:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/10 13:54:48 taca Exp $
 
-DISTNAME=	mechanize-0.9.3
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	mechanize-1.0.0
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,10 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	hoe>=1.12.2:../../devel/hoe
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.2.1:../../textproc/ruby-nokogiri
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
