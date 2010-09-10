@@ -1,25 +1,36 @@
-# $NetBSD: Makefile,v 1.7 2008/04/04 15:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/10 06:02:57 taca Exp $
 
-DISTNAME=	ncurses-ruby-1.1
-PKGNAME=	${RUBY_PKGPREFIX}-${GEM_NAME}
-PKGREVISION=	1
+DISTNAME=	ncurses-ruby-${VER}
+PKGNAME=	${RUBY_PKGPREFIX}-ncurses-${VER}
 CATEGORIES=	devel
 MASTER_SITES=	http://download.berlios.de/ncurses-ruby/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ncurses-ruby.berlios.de/
 COMMENT=	Ruby interface to ncurses
 
-USE_NCURSES=	yes	# mouse functions
-GEM_NAME=	${DISTNAME:S/-ruby//}
-GEM_BUILD=	gemspec
-GEM_CLEANBUILD=	Makefile *.o ncurses_bin.${RUBY_DLEXT} mkmf.log
+PKG_DESTDIR_SUPPORT?=	user-destdir
 
-post-extract:
-	${RUN} cp ${FILESDIR}/gemspec ${GEM_SPECFILE}
+VER=			1.2.4
+USE_NCURSES=		YES	# mouse functions
+USE_RUBY_EXTCONF=	YES
 
-.include "../../misc/rubygems/rubygem.mk"
+DOCS=			COPYING Changes MANIFEST README THANKS TODO VERSION
+DOCDIR=			${RUBY_DOC}/ncurses
+EGDIR=			${RUBY_EG}/ncurses
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+REPLACE_RUBY_DIRS=	examples
 
+PLIST_SUBST+=		DOCDIR=${DOCDIR} EGDIR=${EGDIR}
+
+post-install:
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
+
+.include "../../lang/ruby/modules.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
