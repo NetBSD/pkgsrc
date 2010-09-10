@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 09:11:34 obache Exp $
+libexec/dbskkd-cdb
+share/doc/dbskkd-cdb/CHANGES
+share/doc/dbskkd-cdb/LICENSE
+share/doc/dbskkd-cdb/README
+share/doc/dbskkd-cdb/READMEJP
+share/doc/dbskkd-cdb/example-daemontools.txt
+share/doc/dbskkd-cdb/example-inetd.txt
+share/doc/dbskkd-cdb/makeskkcdb.sh
+share/doc/dbskkd-cdb/skk-server-protocol.txt
+share/doc/dbskkd-cdb/skktocdbm.sh
