@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.28 2008/09/15 08:34:44 taca Exp $
+# $NetBSD: Makefile,v 1.29 2010/09/10 08:35:16 taca Exp $
 
 DISTNAME=	rdtool-0.6.22
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/33346/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/rdtool/
 COMMENT=	RD (Ruby Document) converter to HTML/man/etc
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Since rd2 commands depends its name and it can't rename, we cannot
 # install multiple ruby??-rd2 package (unless supported by pkgview.
-CONFLICTS+=	ruby[1-9][0-9]-rdtool-*
+CONFLICTS+=	ruby[1-9][0-9]-rdtool-[0-9]*
 
 USE_RUBY_SETUP=	yes
 REPLACE_RUBY=	bin/rd2 bin/rdswap
@@ -41,7 +41,7 @@ pre-configure:
 
 post-build:
 .for f in ${DOCS_RD}
-	cd ${WRKSRC}; ${RUBY} -I./lib bin/rd2 -r lib/rd/rd2html-lib.rb ${f} \
+	cd ${WRKSRC}; ${RUBY} -I./lib bin/rd2 -r rd/rd2html-lib.rb ${f} \
 		> ${f:S/.rd/.html/}
 .endfor
 
