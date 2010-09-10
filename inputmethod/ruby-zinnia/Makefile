@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/20 09:08:10 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 06:58:50 taca Exp $
 #
 
 .include "../../inputmethod/zinnia/Makefile.common"
 
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES+=	ruby
 
 COMMENT=	Zinnia ruby module
