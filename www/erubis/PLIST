@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/09/10 10:53:49 taca Exp $
 bin/erubis
-${GEM_HOME}/cache/erubis-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES.txt
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.txt
@@ -13,10 +13,11 @@ ${GEM_LIBDIR}/benchmark/templates/bench_erb.rhtml
 ${GEM_LIBDIR}/benchmark/templates/bench_erubis.rhtml
 ${GEM_LIBDIR}/benchmark/templates/bench_eruby.rhtml
 ${GEM_LIBDIR}/bin/erubis
-${GEM_LIBDIR}/contrib/action_view_base_rb.patch
 ${GEM_LIBDIR}/contrib/erubis
 ${GEM_LIBDIR}/contrib/erubis-run.rb
 ${GEM_LIBDIR}/contrib/inline-require
+${GEM_LIBDIR}/doc-api/classes/ActionView.html
+${GEM_LIBDIR}/doc-api/classes/ActionView/TemplateHandlers/ErubisHandler.html
 ${GEM_LIBDIR}/doc-api/classes/ERB.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/ArrayBufferEnhancer.html
@@ -61,7 +62,7 @@ ${GEM_LIBDIR}/doc-api/classes/Erubis/HeaderFooterEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Helpers.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Helpers/RailsFormHelper.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Helpers/RailsHelper.html
-${GEM_LIBDIR}/doc-api/classes/Erubis/Helpers/RailsHelper/PreprocessingEruby.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/Helpers/RailsHelper/TemplateConverter.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/InterpolationEnhancer.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/InterpolationEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/JavaGenerator.html
@@ -90,6 +91,8 @@ ${GEM_LIBDIR}/doc-api/classes/Erubis/PercentLineEnhancer.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PercentLineEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PerlGenerator.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PhpGenerator.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/PreprocessingEruby.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/PreprocessingHelper.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PrintEnabledEnhancer.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PrintEnabledEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PrintOutEnhancer.html
@@ -132,6 +135,7 @@ ${GEM_LIBDIR}/doc-api/files/erubis/helpers/rails_form_helper_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/helpers/rails_helper_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/local-setting_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/main_rb.html
+${GEM_LIBDIR}/doc-api/files/erubis/preprocessing_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/tiny_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis_rb.html
 ${GEM_LIBDIR}/doc-api/fr_class_index.html
@@ -179,6 +183,7 @@ ${GEM_LIBDIR}/lib/erubis/helpers/rails_form_helper.rb
 ${GEM_LIBDIR}/lib/erubis/helpers/rails_helper.rb
 ${GEM_LIBDIR}/lib/erubis/local-setting.rb
 ${GEM_LIBDIR}/lib/erubis/main.rb
+${GEM_LIBDIR}/lib/erubis/preprocessing.rb
 ${GEM_LIBDIR}/lib/erubis/tiny.rb
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/assert-text-equal.rb
@@ -279,8 +284,11 @@ ${GEM_LIBDIR}/test/data/users-guide/printenabled-example.eruby
 ${GEM_LIBDIR}/test/data/users-guide/printenabled-example.rb
 ${GEM_LIBDIR}/test/data/users-guide/printstatement_example.result
 ${GEM_LIBDIR}/test/data/users-guide/simplify_example.result
+${GEM_LIBDIR}/test/data/users-guide/stderr.log
 ${GEM_LIBDIR}/test/data/users-guide/stdout_exmple.result
 ${GEM_LIBDIR}/test/data/users-guide/stringbuffer_example.result
+${GEM_LIBDIR}/test/data/users-guide/tail_260.result
+${GEM_LIBDIR}/test/data/users-guide/tailnewline.rhtml
 ${GEM_LIBDIR}/test/data/users-guide/template1.rhtml
 ${GEM_LIBDIR}/test/data/users-guide/template2.rhtml
 ${GEM_LIBDIR}/test/test-engines.rb
@@ -290,4 +298,4 @@ ${GEM_LIBDIR}/test/test-main.rb
 ${GEM_LIBDIR}/test/test-users-guide.rb
 ${GEM_LIBDIR}/test/test.rb
 ${GEM_LIBDIR}/test/testutil.rb
-${GEM_HOME}/specifications/erubis-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
