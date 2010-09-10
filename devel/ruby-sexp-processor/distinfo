@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/23 14:00:06 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 06:27:05 taca Exp $
 
-SHA1 (sexp_processor-3.0.3.gem) = 2604928576c0cfc8438bd5af29ca2213ab083bed
-RMD160 (sexp_processor-3.0.3.gem) = 584477f64230085cbe14bfb4dab0705f4fd91891
-Size (sexp_processor-3.0.3.gem) = 14336 bytes
+SHA1 (sexp_processor-3.0.5.gem) = e174b5f9a45e12ba82d0d8e1a9ff398495d166ba
+RMD160 (sexp_processor-3.0.5.gem) = 35b908842ffcb0462fe2fd24e1b86544ed7edd68
+Size (sexp_processor-3.0.5.gem) = 14848 bytes
