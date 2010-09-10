@@ -1,67 +1,49 @@
-$NetBSD: patch-dk,v 1.1 2009/08/11 14:26:58 taca Exp $
+$NetBSD: patch-dk,v 1.2 2010/09/10 03:29:00 taca Exp $
 
-* Decrease warning from Ruby's repositry.
+* r18172: suppress warnings.
+* r18181: (d2i_of_void): define for older versions. [ruby-dev:35637]
+* r26835: backport fixes in 1.9.
 
---- ext/openssl/openssl_missing.h.orig	2008-08-04 13:44:17.000000000 +0900
+--- ext/openssl/openssl_missing.h.orig	2010-05-24 23:58:49.000000000 +0000
 +++ ext/openssl/openssl_missing.h
-@@ -18,6 +18,9 @@ extern "C" {
- #ifndef TYPEDEF_D2I_OF
- typedef char *d2i_of_void();
- #endif
-+#ifndef TYPEDEF_I2D_OF
-+typedef int i2d_of_void();
-+#endif
- 
- /*
-  * These functions are not included in headers of OPENSSL <= 0.9.6b
-@@ -25,39 +28,39 @@ typedef char *d2i_of_void();
+@@ -28,7 +28,7 @@ typedef int i2d_of_void();
  
  #if !defined(PEM_read_bio_DSAPublicKey)
  # define PEM_read_bio_DSAPublicKey(bp,x,cb,u) (DSA *)PEM_ASN1_read_bio( \
 -        (char *(*)())d2i_DSAPublicKey,PEM_STRING_DSA_PUBLIC,bp,(char **)x,cb,u)
-+        (d2i_of_void *)d2i_DSAPublicKey,PEM_STRING_DSA_PUBLIC,bp,x,cb,u)
++	(d2i_of_void *)d2i_DSAPublicKey,PEM_STRING_DSA_PUBLIC,bp,(void **)x,cb,u)
  #endif
  
  #if !defined(PEM_write_bio_DSAPublicKey)
- # define PEM_write_bio_DSAPublicKey(bp,x) \
--	PEM_ASN1_write_bio((int (*)())i2d_DSAPublicKey,\
-+	PEM_ASN1_write_bio((i2d_of_void *)i2d_DSAPublicKey,\
- 		PEM_STRING_DSA_PUBLIC,\
- 		bp,(char *)x, NULL, NULL, 0, NULL, NULL)
- #endif
+@@ -40,27 +40,27 @@ typedef int i2d_of_void();
  
  #if !defined(DSAPrivateKey_dup)
--# define DSAPrivateKey_dup(dsa) (DSA *)ASN1_dup((int (*)())i2d_DSAPrivateKey, \
+ # define DSAPrivateKey_dup(dsa) (DSA *)ASN1_dup((i2d_of_void *)i2d_DSAPrivateKey, \
 -	(char *(*)())d2i_DSAPrivateKey,(char *)dsa)
-+# define DSAPrivateKey_dup(dsa) (DSA *)ASN1_dup((i2d_of_void *)i2d_DSAPrivateKey, \
 +	(d2i_of_void *)d2i_DSAPrivateKey,(char *)dsa)
  #endif
  
  #if !defined(DSAPublicKey_dup)
--# define DSAPublicKey_dup(dsa) (DSA *)ASN1_dup((int (*)())i2d_DSAPublicKey, \
+ # define DSAPublicKey_dup(dsa) (DSA *)ASN1_dup((i2d_of_void *)i2d_DSAPublicKey, \
 -	(char *(*)())d2i_DSAPublicKey,(char *)dsa)
-+# define DSAPublicKey_dup(dsa) (DSA *)ASN1_dup((i2d_of_void *)i2d_DSAPublicKey, \
 +	(d2i_of_void *)d2i_DSAPublicKey,(char *)dsa)
  #endif
  
  #if !defined(X509_REVOKED_dup)
--# define X509_REVOKED_dup(rev) (X509_REVOKED *)ASN1_dup((int (*)())i2d_X509_REVOKED, \
+ # define X509_REVOKED_dup(rev) (X509_REVOKED *)ASN1_dup((i2d_of_void *)i2d_X509_REVOKED, \
 -	(char *(*)())d2i_X509_REVOKED, (char *)rev)
-+# define X509_REVOKED_dup(rev) (X509_REVOKED *)ASN1_dup((i2d_of_void *)i2d_X509_REVOKED, \
 +	(d2i_of_void *)d2i_X509_REVOKED, (char *)rev)
  #endif
  
  #if !defined(PKCS7_SIGNER_INFO_dup)
--#  define PKCS7_SIGNER_INFO_dup(si) (PKCS7_SIGNER_INFO *)ASN1_dup((int (*)())i2d_PKCS7_SIGNER_INFO, \
+ #  define PKCS7_SIGNER_INFO_dup(si) (PKCS7_SIGNER_INFO *)ASN1_dup((i2d_of_void *)i2d_PKCS7_SIGNER_INFO, \
 -	(char *(*)())d2i_PKCS7_SIGNER_INFO, (char *)si)
-+#  define PKCS7_SIGNER_INFO_dup(si) (PKCS7_SIGNER_INFO *)ASN1_dup((i2d_of_void *)i2d_PKCS7_SIGNER_INFO, \
 +	(d2i_of_void *)d2i_PKCS7_SIGNER_INFO, (char *)si)
  #endif
  
  #if !defined(PKCS7_RECIP_INFO_dup)
--#  define PKCS7_RECIP_INFO_dup(ri) (PKCS7_RECIP_INFO *)ASN1_dup((int (*)())i2d_PKCS7_RECIP_INFO, \
+ #  define PKCS7_RECIP_INFO_dup(ri) (PKCS7_RECIP_INFO *)ASN1_dup((i2d_of_void *)i2d_PKCS7_RECIP_INFO, \
 -	(char *(*)())d2i_PKCS7_RECIP_INFO, (char *)ri)
-+#  define PKCS7_RECIP_INFO_dup(ri) (PKCS7_RECIP_INFO *)ASN1_dup((i2d_of_void *)i2d_PKCS7_RECIP_INFO, \
 +	(d2i_of_void *)d2i_PKCS7_RECIP_INFO, (char *)ri)
  #endif
  

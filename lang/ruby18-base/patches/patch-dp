@@ -1,100 +1,41 @@
-$NetBSD: patch-dp,v 1.1 2009/08/11 14:26:59 taca Exp $
+$NetBSD: patch-dp,v 1.2 2010/09/10 03:29:00 taca Exp $
 
-* Instead of returning different type of value thorugh generic type,
-  use separate functions for each type.
+* r18172: suppress warnings.
+* r26838: backport the commit from trunk.
 
---- ext/openssl/ossl_pkcs7.c.orig	2007-06-09 00:02:04.000000000 +0900
+--- ext/openssl/ossl_pkcs7.c.orig	2010-06-21 09:18:59.000000000 +0000
 +++ ext/openssl/ossl_pkcs7.c
-@@ -570,12 +570,11 @@ ossl_pkcs7_add_certificate(VALUE self, V
-     return self;
- }
- 
--static STACK *
--pkcs7_get_certs_or_crls(VALUE self, int want_certs)
-+static STACK_OF(X509) *
-+pkcs7_get_certs(VALUE self)
+@@ -309,7 +309,7 @@ ossl_pkcs7_alloc(VALUE klass)
+ static VALUE
+ ossl_pkcs7_initialize(int argc, VALUE *argv, VALUE self)
  {
-     PKCS7 *pkcs7;
-     STACK_OF(X509) *certs;
--    STACK_OF(X509_CRL) *crls;
-     int i;
+-    PKCS7 *p7;
++    PKCS7 *p7, *pkcs = DATA_PTR(self);
+     BIO *in;
+     VALUE arg;
  
-     GetPKCS7(self, pkcs7);
-@@ -583,17 +582,38 @@ pkcs7_get_certs_or_crls(VALUE self, int 
-     switch(i){
-     case NID_pkcs7_signed:
-         certs = pkcs7->d.sign->cert;
--        crls = pkcs7->d.sign->crl;
-         break;
-     case NID_pkcs7_signedAndEnveloped:
-         certs = pkcs7->d.signed_and_enveloped->cert;
-+        break;
-+    default:
-+        certs = NULL;
-+    }
-+
-+    return certs;
-+}
-+
-+static STACK_OF(X509_CRL) *
-+pkcs7_get_crls(VALUE self)
-+{
-+    PKCS7 *pkcs7;
-+    STACK_OF(X509_CRL) *crls;
-+    int i;
-+
-+    GetPKCS7(self, pkcs7);
-+    i = OBJ_obj2nid(pkcs7->type);
-+    switch(i){
-+    case NID_pkcs7_signed:
-+        crls = pkcs7->d.sign->crl;
-+        break;
-+    case NID_pkcs7_signedAndEnveloped:
-         crls = pkcs7->d.signed_and_enveloped->crl;
-         break;
-     default:
--        certs = crls = NULL;
-+        crls = NULL;
+@@ -317,10 +317,12 @@ ossl_pkcs7_initialize(int argc, VALUE *a
+ 	return self;
+     arg = ossl_to_der_if_possible(arg);
+     in = ossl_obj2bio(arg);
+-    p7 = PEM_read_bio_PKCS7(in, (PKCS7 **)&DATA_PTR(self), NULL, NULL);
++    p7 = PEM_read_bio_PKCS7(in, &pkcs, NULL, NULL);
++    DATA_PTR(self) = pkcs;
+     if (!p7) {
+-	BIO_reset(in);
+-        p7 = d2i_PKCS7_bio(in, (PKCS7 **)&DATA_PTR(self));
++	(void)BIO_reset(in);
++        p7 = d2i_PKCS7_bio(in, &pkcs);
++	DATA_PTR(self) = pkcs;
      }
- 
--    return want_certs ? certs : crls;
-+    return crls;
- }
- 
- static VALUE
-@@ -608,7 +628,7 @@ ossl_pkcs7_set_certificates(VALUE self, 
-     STACK_OF(X509) *certs;
-     X509 *cert;
- 
--    certs = pkcs7_get_certs_or_crls(self, 1);
-+    certs = pkcs7_get_certs(self);
-     while((cert = sk_X509_pop(certs))) X509_free(cert);
-     rb_block_call(ary, rb_intern("each"), 0, 0, ossl_pkcs7_set_certs_i, self);
- 
-@@ -618,7 +638,7 @@ ossl_pkcs7_set_certificates(VALUE self, 
- static VALUE
- ossl_pkcs7_get_certificates(VALUE self)
- {
--    return ossl_x509_sk2ary(pkcs7_get_certs_or_crls(self, 1));
-+    return ossl_x509_sk2ary(pkcs7_get_certs(self));
- }
- 
- static VALUE
-@@ -648,7 +668,7 @@ ossl_pkcs7_set_crls(VALUE self, VALUE ar
-     STACK_OF(X509_CRL) *crls;
-     X509_CRL *crl;
- 
--    crls = pkcs7_get_certs_or_crls(self, 0);
-+    crls = pkcs7_get_crls(self);
-     while((crl = sk_X509_CRL_pop(crls))) X509_CRL_free(crl);
-     rb_block_call(ary, rb_intern("each"), 0, 0, ossl_pkcs7_set_crls_i, self);
- 
-@@ -658,7 +678,7 @@ ossl_pkcs7_set_crls(VALUE self, VALUE ar
- static VALUE
- ossl_pkcs7_get_crls(VALUE self)
- {
--    return ossl_x509crl_sk2ary(pkcs7_get_certs_or_crls(self, 0));
-+    return ossl_x509crl_sk2ary(pkcs7_get_crls(self));
- }
- 
- static VALUE
+     BIO_free(in);
+     ossl_pkcs7_set_data(self, Qnil);
+@@ -798,7 +800,7 @@ ossl_pkcs7_to_der(VALUE self)
+     if((len = i2d_PKCS7(pkcs7, NULL)) <= 0)
+ 	ossl_raise(ePKCS7Error, NULL);
+     str = rb_str_new(0, len);
+-    p = RSTRING_PTR(str);
++    p = (unsigned char *)RSTRING_PTR(str);
+     if(i2d_PKCS7(pkcs7, &p) <= 0)
+ 	ossl_raise(ePKCS7Error, NULL);
+     ossl_str_adjust(str, p);

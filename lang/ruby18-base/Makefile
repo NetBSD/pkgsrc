@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.57 2010/08/31 16:28:13 taca Exp $
+# $NetBSD: Makefile,v 1.58 2010/09/10 03:29:00 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-PKGREVISION=	7
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby 1.8 based release minimum package
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
 RUBY_VERSION=	${RUBY18_VERSION}
 
@@ -112,6 +112,7 @@ FIX_PERM=		${RUBY_ARCHLIB}/digest.h ${RUBY_ARCHLIB}/dl.h \
 			${RUBY_ARCHLIB}/dlconfig.h
 
 pre-configure:
+	${ECHO} >> ${WRKSRC}/version.h		# workaround for no EOL.
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
