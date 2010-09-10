@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/01 08:30:48 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 08:39:27 taca Exp $
 
 SHA1 (sary-ruby-1.2.0.tar.gz) = 18ad1c8a1d095dbaa99efbb4a040e77a58b9df08
 RMD160 (sary-ruby-1.2.0.tar.gz) = f35602bea532138b87c6d77b08dbc71f7ebddc41
 Size (sary-ruby-1.2.0.tar.gz) = 9155 bytes
+SHA1 (patch-aa) = 27cc4cb9ab605b5a7c1ac8dac813c002dc634e11
+SHA1 (patch-ab) = ef757061c7f2a860f4311839607f473a4ceaac7e
