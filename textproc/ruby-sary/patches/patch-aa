@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 08:39:27 taca Exp $
+
+Use moddern Ruby's API.
+
+--- builder.c.orig	2005-03-29 22:48:09.000000000 +0000
++++ builder.c
+@@ -26,7 +26,6 @@
+ #include <errno.h>
+ #include "sary.h"
+ #include "ruby.h"
+-#include "version.h"
+ 
+ #define GET_Builder(obj, dat) Data_Get_Struct(obj, SaryBuilder, dat)
+ 
+@@ -62,22 +61,14 @@ static VALUE rsbuilder_initialize(int ar
+   
+     rb_scan_args(argc, argv, "11", &file_name, &array_name);
+ 
+-    Check_SafeStr(file_name);
+-#if RUBY_VERSION_CODE >= 180
++    SafeStringValue(file_name);
+     file_name_ptr = StringValuePtr(file_name);
+-#else
+-    file_name_ptr = STR2CSTR(file_name);
+-#endif
+ 
+     if (array_name == Qnil)
+         builder = sary_builder_new(file_name_ptr);
+     else {
+-        Check_SafeStr(array_name);
+-#if RUBY_VERSION_CODE >= 180
++        SafeStringValue(array_name);
+         array_name_ptr = StringValuePtr(array_name);
+-#else
+-        array_name_ptr = STR2CSTR(array_name);
+-#endif
+         builder = sary_builder_new2(file_name_ptr, array_name_ptr);
+     }
+     if (builder == NULL)
