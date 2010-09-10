@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/09/15 15:28:58 taca Exp $
+$NetBSD: distinfo,v 1.6 2010/09/10 06:46:43 taca Exp $
 
 SHA1 (ruby-gd-0.8.0.gem) = a38a2eaa786afd1ad1fe56961ff7168e8fab7996
 RMD160 (ruby-gd-0.8.0.gem) = 73369970a3ae17feda1b428c19e0bc8bb52d05dc
 Size (ruby-gd-0.8.0.gem) = 41984 bytes
+SHA1 (patch-aa) = ffef6908e1923463756d495db6466604f7a53150
