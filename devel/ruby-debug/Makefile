@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2010/09/07 17:20:25 taca Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 05:19:13 taca Exp $
 
-DISTNAME=	ruby-debug-0.10.2
-PKGNAME=	${RUBYGEM_PKGPREFIX}-${DISTNAME}
+DISTNAME=	ruby-debug-0.10.3
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.datanoise.com/ruby-debug/
+HOMEPAGE=	http://rubyforge.org/projects/ruby-debug/
 COMMENT=	Command line interface for ruby-debug
+LICENSE=	2-clause-bsd
 
 DEPENDS+=	${RUBY_PKGPREFIX}-columnize>=0.1:../../misc/ruby-columnize
-DEPENDS+=	${RUBY_PKGPREFIX}-ruby-debug-base>=0.10.2{,nb[0-9]*}:../../devel/ruby-debug-base
+DEPENDS+=	${RUBY_PKGPREFIX}-debug-base>=0.10.3:../../devel/ruby-debug-base
 
 RUBY_VERSION_SUPPORTED= 18
 
-post-extract:
-	cd ${WRKSRC} && echo ${PKGVERSION_NOREV} > VERSION
+pre-configure:
+	cd ${WRKSRC}/cli/ruby-debug/commands && \
+		${MV} disassemble.RB disassemble.rb; \
+		${MV} source.RB source.rb; \
+		${RM} -f continue.RB.save
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
