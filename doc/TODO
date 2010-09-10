@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9679 2010/09/10 20:13:22 joerg Exp $
+$NetBSD: TODO,v 1.9680 2010/09/10 20:18:55 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1384,7 +1384,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsane-0.99.6
 	o xscope-1.2 [unpackaged]
 	o xsd-3.3.0
-	o xset-1.2.0
 	o xsoldier-1.4
 	o xterm-262
 	o xtraceroute-0.9.1
