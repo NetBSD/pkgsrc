@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 13:04:25 taca Exp $
+
+Avoid to use "ftools" which has deprecated in ruby19.
+
+--- install.rb.orig	2003-08-13 15:18:29.000000000 +0000
++++ install.rb
+@@ -1,6 +1,6 @@
+ require 'rbconfig'
+ require 'find'
+-require 'ftools'
++require 'fileutils'
+ 
+ include Config
+ 
+@@ -30,12 +30,12 @@ def install_rb(srcdir = nil, destdir = $
+   for f in dir
+     next if f == "."
+     next if f == "CVS"
+-    File::makedirs(File.join(destdir, f))
++    FileUtils::mkdir_p(File.join(destdir, f))
+   end
+   for f in path
+     next if (/\~$/ =~ f)
+     next if (/^\./ =~ File.basename(f))
+-    File::install(File.join("lib", f), File.join(destdir, f), 0644, true)
++    FileUtils::install(File.join("lib", f), File.join(destdir, f), :mode => 0644)
+   end
+ end
+ 
