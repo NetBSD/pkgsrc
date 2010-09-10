@@ -1,0 +1,56 @@
+$NetBSD: patch-ab,v 1.1 2010/09/10 06:02:58 taca Exp $
+
+--- form_wrap.c.orig	2009-07-31 10:52:36.000000000 +0000
++++ form_wrap.c
+@@ -618,12 +618,14 @@ static VALUE rbncurs_c_set_field_type(in
+ 		rb_raise(rb_eArgError, "TYPE_ENUM requires three additional arguments");
+ 	 }
+     else {
++		VALUE v;
+ 		int n = rbncurs_array_length(arg3);
+ 		/*  Will ncurses free this array of strings in free_field()? */
+ 		char** list = ALLOC_N(char*, n+1);
+ 		int i;
+ 		for (i = 0; i < n; i++) {
+-		  list[i] = STR2CSTR(rb_ary_entry(arg3, (long)i));
++		  v = rb_ary_entry(arg3, (long)i);
++		  list[i] = StringValuePtr(v);
+ 		}
+ 		list[n] = NULL;
+ 		return INT2NUM(set_field_type(field, ftype, 
+@@ -652,7 +654,7 @@ static VALUE rbncurs_c_set_field_type(in
+ 	 if (argc != 2)
+ 		rb_raise(rb_eArgError, "TYPE_REGEXP requires one additional argument");
+ 	 return INT2NUM(set_field_type(field, ftype, 
+-											 STR2CSTR(arg3)));
++											 StringValue(arg3)));
+   }
+   else if (ftype == TYPE_IPV4){	
+ 	 if (argc != 1)
+@@ -740,7 +742,7 @@ static VALUE rbncurs_m_field_pad(VALUE d
+  */
+ static VALUE rbncurs_c_set_field_buffer(VALUE rb_field, VALUE buf, VALUE value) {
+   FIELD* field = get_field(rb_field);
+-  return INT2NUM(set_field_buffer(field, NUM2INT(buf), STR2CSTR(value)));
++  return INT2NUM(set_field_buffer(field, NUM2INT(buf), StringValuePtr(value)));
+ }
+ static VALUE rbncurs_m_set_field_buffer(VALUE dummy, VALUE rb_field, VALUE buf, VALUE value)
+ { return rbncurs_c_set_field_buffer(rb_field, buf, value); }
+@@ -1044,13 +1046,15 @@ static VALUE rbncurs_m_form_opts(VALUE d
+  * form_requestname
+  */
+ static VALUE rbncurs_c_form_request_name(VALUE request) {
+-  return rb_str_new2(form_request_name(NUM2INT(request)));
++  const char *s;
++  s = form_request_name(NUM2INT(request));
++  return rb_str_new2(s);
+ }
+ static VALUE rbncurs_m_form_request_name(VALUE dummy, VALUE request)
+ { return rbncurs_c_form_request_name(request); }
+ 
+ static VALUE rbncurs_c_form_request_by_name(VALUE name) {
+-  return INT2NUM(form_request_by_name(STR2CSTR(name)));
++  return INT2NUM(form_request_by_name(StringValuePtr(name)));
+ }
+ static VALUE rbncurs_m_form_request_by_name(VALUE dummy, VALUE name)
+ { return rbncurs_c_form_request_by_name(name); }
