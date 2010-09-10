@@ -1,12 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:17:58 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 05:59:06 taca Exp $
 
 DISTNAME=	mkrf-0.2.3
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mkrf.rubyforge.org/
 COMMENT=	Library for generating Rakefiles
+LICENSE=	mit
 
-.include "../../misc/rubygems/rubygem.mk"
+USE_RAKE=	RUN
+
+SUBST_CLASSES+=		rake
+SUBST_STAGE.rake=	pre-configure
+SUBST_FILES.rake=	lib/mkrf/rakehelper.rb
+SUBST_SED.rake=		-e "s|@RAKE@|${RAKE}|"
+SUBST_MESSAGE.rake=	Fixate rake's path.
+
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
