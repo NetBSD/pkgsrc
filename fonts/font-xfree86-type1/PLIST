@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 06:02:23 obache Exp $
+share/doc/font-xfree86-type1/COPYING
+share/fonts/X11/Type1/cursor.pfa
