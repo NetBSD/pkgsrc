@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/23 14:00:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 06:27:05 taca Exp $
 
-DISTNAME=	sexp_processor-3.0.3
+DISTNAME=	sexp_processor-3.0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 
@@ -9,7 +9,5 @@ HOMEPAGE=	http://parsetree.rubyforge.org/
 COMMENT=	Generic sexp processing tools
 LICENSE=	mit
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
