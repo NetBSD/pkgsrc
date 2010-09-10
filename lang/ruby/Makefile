@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2009/04/09 00:48:09 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2010/09/10 03:38:10 taca Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION_SUFFIX}
@@ -21,12 +21,15 @@ NO_BUILD=	yes
 
 DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../../lang/${RUBY_PKGPREFIX}-base
 
-RUBY_COMMANDS=	irb ruby
-.if ${RUBY_VER} >= 18
-RUBY_COMMANDS+=	erb h2rb rdoc ri testrb
+RUBY_COMMANDS=	erb irb rdoc ri ruby testrb
+.if ${RUBY_VER} == ${RUBY18_VERSION}
+RUBY_COMMANDS+=	h2rb
+.elif ${RUBY_VER} == ${RUBY19_VERSION}
+RUBY_COMMANDS+=	gem rake
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+CHECK_INTERPRETER_SKIP=	bin/* ${PKGMANDIR}/man1/ruby.1
 
 .if ${RUBY_NAME} == "ruby"
 GENERATE_PLIST+=	${ECHO} "@comment This plist intentionally left empty";
