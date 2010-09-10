@@ -1,17 +1,26 @@
-# $NetBSD: Makefile,v 1.13 2008/06/19 15:21:35 taca Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/10 08:48:31 taca Exp $
 
-DISTNAME=	xmlparser-0.6.81
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	xmlparser-0.7.1
 CATEGORIES=	textproc
+MASTER_SITES=	http://www.yoshidam.net/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.yoshidam.net/Ruby.html#xmlparser
 COMMENT=	Ruby bindings to the Expat XML parsing library
 
-DEPENDS+=	${RUBY_PKGPREFIX}-mkrf>=0.2.1:../../devel/ruby-mkrf
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../misc/rubygems/rubygem.mk"
+WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*//}
+USE_RUBY_EXTCONF=	YES
+DOCS=			README README.ja Encodings/README.ja
+DOCDIR=			${RUBY_DOC}/xmlparser
+INSTALLATION_DIRS+=	${DOCDIR}/Encodings
 
+post-install:
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}/${f}
+.endfor
+
+.include "../../lang/ruby/modules.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
