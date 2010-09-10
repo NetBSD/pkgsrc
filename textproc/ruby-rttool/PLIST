@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 21:36:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/09/10 08:37:41 taca Exp $
 bin/rdrt2
 bin/rt2
 ${GEM_HOME}/cache/rttool-${PKGVERSION}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GPL
 ${GEM_LIBDIR}/bin/rdrt2
+${GEM_LIBDIR}/bin/rt/rdrt2
+${GEM_LIBDIR}/bin/rt/rt2
 ${GEM_LIBDIR}/bin/rt2
 ${GEM_LIBDIR}/examples/easiest.html
 ${GEM_LIBDIR}/examples/easiest.rt
