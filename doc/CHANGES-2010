@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3291 2010/09/10 05:22:19 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3292 2010/09/10 05:41:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4275,3 +4275,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-sequel to 3.15.0 [taca 2010-09-10]
 	Removed databases/ruby-sequel-core [taca 2010-09-10]
 	Updated www/p5-Rose-URI to 1.000 [sno 2010-09-10]
+	Updated www/p5-Captcha-reCAPTCHA to 0.94 [sno 2010-09-10]
