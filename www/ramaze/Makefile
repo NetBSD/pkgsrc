@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/11/19 14:11:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/10 12:42:12 taca Exp $
 
-DISTNAME=	ramaze-2009.10
+DISTNAME=	ramaze-2010.06.18
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,11 +8,8 @@ HOMEPAGE=	http://ramaze.net/
 COMMENT=	Ruby lightweight, modular, web application framework
 LICENSE=	ruby-license
 
-DEPENDS+=	rake>=0.7.3:../../devel/rake
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=0.2.0:../../www/ruby-rack
-DEPENDS+=	${RUBY_PKGPREFIX}-innate>=2009.10:../../www/ruby-innate
+DEPENDS+=	${RUBY_PKGPREFIX}-innate>=2010.03:../../www/ruby-innate
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
