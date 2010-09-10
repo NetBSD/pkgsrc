@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3311 2010/09/10 08:55:53 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3312 2010/09/10 08:56:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4331,3 +4331,32 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/ruby-mime-types to 1.16 [taca 2010-09-10]
 	Updated mail/ruby-tmail to 1.2.7.1 [taca 2010-09-10]
 	Updated textproc/oniguruma to 5.9.2 [taca 2010-09-10]
+	Updated misc/ruby-columnize to 0.3.1nb1 [taca 2010-09-10]
+	Updated misc/ruby-configuration to 1.1.0 [taca 2010-09-10]
+	Updated misc/ruby-daemons to 1.1.0 [taca 2010-09-10]
+	Updated misc/ruby-launchy to 0.3.7 [taca 2010-09-10]
+	Updated misc/ruby-transaction-simple to 1.4.0nb1 [taca 2010-09-10]
+	Updated security/ruby-ezcrypto to 0.7.2 [taca 2010-09-10]
+	Updated security/ruby-net-scp to 1.0.3 [taca 2010-09-10]
+	Updated security/ruby-net-sftp to 2.0.5 [taca 2010-09-10]
+	Updated security/ruby-net-ssh to 2.0.23 [taca 2010-09-10]
+	Updated sysutils/ruby-activesambaldap to 0.0.8 [taca 2010-09-10]
+	Updated sysutils/ruby-directory-watcher to 1.3.2 [taca 2010-09-10]
+	Updated sysutils/ruby-facter to 1.5.8 [taca 2010-09-10]
+	Updated textproc/ruby-bluecloth to 2.0.7 [taca 2010-09-10]
+	Updated textproc/ruby-coderay to 0.9.4 [taca 2010-09-10]
+	Updated textproc/ruby-fastercsv to 1.5.3 [taca 2010-09-10]
+	Updated textproc/ruby-feed-normalizer to 1.5.2 [taca 2010-09-10]
+	Updated textproc/ruby-haml to 3.0.18 [taca 2010-09-10]
+	Updated textproc/ruby-hikidoc to 0.0.6 [taca 2010-09-10]
+	Updated textproc/ruby-itex2MML to 1.3.25 [taca 2010-09-10]
+	Updated textproc/ruby-markaby to 0.7.1 [taca 2010-09-10]
+	Updated textproc/ruby-maruku to 0.6.0 [taca 2010-09-10]
+	Updated textproc/ruby-nokogiri to 1.4.3.1 [taca 2010-09-10]
+	Updated textproc/ruby-plist to 3.1.0 [taca 2010-09-10]
+	Updated textproc/ruby-redcloth to 4.2.3 [taca 2010-09-10]
+	Updated textproc/ruby-rttool to 1.0.3.0 [taca 2010-09-10]
+	Updated textproc/ruby-simple-rss to 1.2.3 [taca 2010-09-10]
+	Updated textproc/ruby-will-paginate to 2.3.14 [taca 2010-09-10]
+	Updated textproc/ruby-xmlparser to 0.7.1 [taca 2010-09-10]
+	Updated time/ruby-tzinfo to 0.3.23 [taca 2010-09-10]
