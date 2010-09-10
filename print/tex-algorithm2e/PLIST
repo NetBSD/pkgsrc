@@ -1,13 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:00 joerg Exp $
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e.pdf
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex01.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex02.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex03.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex04.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex05.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex06.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex07.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exfor.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exrepeat.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exswitch.tex
-${PKG_LOCALTEXMFPREFIX}/tex/latex/algorithm2e/algorithm2e.sty
+@comment $NetBSD: PLIST,v 1.3 2010/09/10 23:56:32 minskim Exp $
+share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
