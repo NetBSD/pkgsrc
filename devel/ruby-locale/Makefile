@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/07 10:47:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 05:51:37 taca Exp $
 
 DISTNAME=	locale-2.0.5
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	filip@joyent.com
@@ -9,7 +8,8 @@ HOMEPAGE=	http://www.yotabanana.com/hiki/ruby-locale.html
 COMMENT=	Pure ruby library which provides basic APIs for localization
 LICENSE=	ruby-license
 
-GEM_BUILD=	gemspec
+pre-configure:
+	${CHMOD} -R g-w ${WRKSRC}
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
