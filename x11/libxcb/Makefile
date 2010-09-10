@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/05/02 11:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/10 19:12:13 joerg Exp $
 #
 
-DISTNAME=	libxcb-1.6
+DISTNAME=	libxcb-1.7
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config automake
+USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
 CONFIGURE_ARGS+=	--disable-doxygen
@@ -76,9 +76,6 @@ PYTHON_VERSIONS_ACCEPTED= 26 25
 
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -v -i -f
 
 ###
 ### XXX needed to build from scratch, but we're patching right now
