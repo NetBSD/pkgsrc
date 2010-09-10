@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3343 2010/09/10 20:10:55 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3344 2010/09/10 20:13:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xproto to 7.0.18 [joerg 2010-09-10]
 	Added print/tex-fancybox version 1.4 [minskim 2010-09-10]
 	Added print/tex-fancybox-doc version 1.4 [minskim 2010-09-10]
+	Updated x11/xrandr to 1.3.3 [joerg 2010-09-10]
