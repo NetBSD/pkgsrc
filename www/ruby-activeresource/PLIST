@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/09/12 22:14:17 minskim Exp $
-${GEM_HOME}/cache/activeresource-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.6 2010/09/10 12:45:31 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
@@ -30,5 +30,7 @@ ${GEM_LIBDIR}/test/fixtures/person.rb
 ${GEM_LIBDIR}/test/fixtures/proxy.rb
 ${GEM_LIBDIR}/test/fixtures/street_address.rb
 ${GEM_LIBDIR}/test/format_test.rb
+${GEM_LIBDIR}/test/http_mock_test.rb
 ${GEM_LIBDIR}/test/setter_trap.rb
-${GEM_HOME}/specifications/activeresource-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+
