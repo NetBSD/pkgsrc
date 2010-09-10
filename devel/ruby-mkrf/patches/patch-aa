@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 05:59:06 taca Exp $
+
+Allow changeing rake command's name.
+
+--- lib/mkrf/rakehelper.rb.orig	2010-08-28 10:52:11.000000000 +0000
++++ lib/mkrf/rakehelper.rb
+@@ -5,7 +5,7 @@
+ 
+ def rake(rakedir)
+   Dir.chdir(rakedir) do
+-    sh 'rake'
++    sh '@RAKE@'
+   end
+ end
+ 
+@@ -105,7 +105,7 @@ end
+ def sub_project(project, *targets)
+   targets.each do |target|
+     Dir.chdir "projects/#{project}" do
+-      sh %{rake --trace #{target.to_s} }
++      sh %{@RAKE@ --trace #{target.to_s} }
+     end
+   end
+ end
