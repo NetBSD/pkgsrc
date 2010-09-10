@@ -1,20 +1,229 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/04 15:17:37 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2010/09/10 05:54:13 taca Exp $
 
---- ../log4r-1.0.5.gemspec.orig	2008-03-30 11:43:58.000000000 -0400
-+++ ../log4r-1.0.5.gemspec
-@@ -178,7 +178,6 @@ files: 
- - doc/images/crush/logo2.png
- - examples/fileroll.rb
- - examples/README
--- examples/logs
- - examples/customlevels.rb
+--- ../log4r-1.1.8.gemspec.orig	2010-08-28 04:26:24.000000000 +0000
++++ ../log4r-1.1.8.gemspec
+@@ -57,214 +57,6 @@ files: 
+ - examples/gmail.yaml
  - examples/log4r_yaml.yaml
  - examples/logclient.rb
-@@ -233,7 +232,6 @@ files: 
- - src/log4r/rdoc/patternformatter
- - src/log4r/rdoc/syslogoutputter
- - src/log4r/rdoc/yamlconfigurator
--- tests/junk
- - tests/xml
- - tests/include.rb
- - tests/runtest.rb
+-- examples/logs/TestSize000001.log
+-- examples/logs/TestSize000002.log
+-- examples/logs/TestSize000003.log
+-- examples/logs/TestSize000004.log
+-- examples/logs/TestSize000005.log
+-- examples/logs/TestSize000006.log
+-- examples/logs/TestSize000007.log
+-- examples/logs/TestSize000008.log
+-- examples/logs/TestSize000009.log
+-- examples/logs/TestSize000010.log
+-- examples/logs/TestSize000011.log
+-- examples/logs/TestSize000012.log
+-- examples/logs/TestSize000013.log
+-- examples/logs/TestSize000014.log
+-- examples/logs/TestSize000015.log
+-- examples/logs/TestSize000016.log
+-- examples/logs/TestSize000017.log
+-- examples/logs/TestSize000018.log
+-- examples/logs/TestSize000019.log
+-- examples/logs/TestSize000020.log
+-- examples/logs/TestSize000021.log
+-- examples/logs/TestSize000022.log
+-- examples/logs/TestSize000023.log
+-- examples/logs/TestSize000024.log
+-- examples/logs/TestSize000025.log
+-- examples/logs/TestSize000026.log
+-- examples/logs/TestSize000027.log
+-- examples/logs/TestSize000028.log
+-- examples/logs/TestSize000029.log
+-- examples/logs/TestSize000030.log
+-- examples/logs/TestSize000031.log
+-- examples/logs/TestSize000032.log
+-- examples/logs/TestSize000033.log
+-- examples/logs/TestSize000034.log
+-- examples/logs/TestSize000035.log
+-- examples/logs/TestSize000036.log
+-- examples/logs/TestSize000037.log
+-- examples/logs/TestSize000038.log
+-- examples/logs/TestSize000039.log
+-- examples/logs/TestSize000040.log
+-- examples/logs/TestSize000041.log
+-- examples/logs/TestSize000042.log
+-- examples/logs/TestSize000043.log
+-- examples/logs/TestSize000044.log
+-- examples/logs/TestSize000045.log
+-- examples/logs/TestSize000046.log
+-- examples/logs/TestSize000047.log
+-- examples/logs/TestSize000048.log
+-- examples/logs/TestSize000049.log
+-- examples/logs/TestSize000050.log
+-- examples/logs/TestSize000051.log
+-- examples/logs/TestSize000052.log
+-- examples/logs/TestSize000053.log
+-- examples/logs/TestSize000054.log
+-- examples/logs/TestSize000055.log
+-- examples/logs/TestSize000056.log
+-- examples/logs/TestSize000057.log
+-- examples/logs/TestSize000058.log
+-- examples/logs/TestSize000059.log
+-- examples/logs/TestSize000060.log
+-- examples/logs/TestSize000061.log
+-- examples/logs/TestSize000062.log
+-- examples/logs/TestSize000063.log
+-- examples/logs/TestSize000064.log
+-- examples/logs/TestSize000065.log
+-- examples/logs/TestSize000066.log
+-- examples/logs/TestSize000067.log
+-- examples/logs/TestSize000068.log
+-- examples/logs/TestSize000069.log
+-- examples/logs/TestSize000070.log
+-- examples/logs/TestSize000071.log
+-- examples/logs/TestSize000072.log
+-- examples/logs/TestSize000073.log
+-- examples/logs/TestSize000074.log
+-- examples/logs/TestSize000075.log
+-- examples/logs/TestSize000076.log
+-- examples/logs/TestSize000077.log
+-- examples/logs/TestSize000078.log
+-- examples/logs/TestSize000079.log
+-- examples/logs/TestSize000080.log
+-- examples/logs/TestSize000081.log
+-- examples/logs/TestSize000082.log
+-- examples/logs/TestSize000083.log
+-- examples/logs/TestSize000084.log
+-- examples/logs/TestSize000085.log
+-- examples/logs/TestSize000086.log
+-- examples/logs/TestSize000087.log
+-- examples/logs/TestSize000088.log
+-- examples/logs/TestSize000089.log
+-- examples/logs/TestSize000090.log
+-- examples/logs/TestSize000091.log
+-- examples/logs/TestSize000092.log
+-- examples/logs/TestSize000093.log
+-- examples/logs/TestSize000094.log
+-- examples/logs/TestSize000095.log
+-- examples/logs/TestSize000096.log
+-- examples/logs/TestSize000097.log
+-- examples/logs/TestSize000098.log
+-- examples/logs/TestSize000099.log
+-- examples/logs/TestSize000100.log
+-- examples/logs/TestSize000101.log
+-- examples/logs/TestSize000102.log
+-- examples/logs/TestSize000103.log
+-- examples/logs/TestSize000104.log
+-- examples/logs/TestSize000105.log
+-- examples/logs/TestSize000106.log
+-- examples/logs/TestSize000107.log
+-- examples/logs/TestSize000108.log
+-- examples/logs/TestSize000109.log
+-- examples/logs/TestSize000110.log
+-- examples/logs/TestSize000111.log
+-- examples/logs/TestSize000112.log
+-- examples/logs/TestSize000113.log
+-- examples/logs/TestSize000114.log
+-- examples/logs/TestSize000115.log
+-- examples/logs/TestSize000116.log
+-- examples/logs/TestSize000117.log
+-- examples/logs/TestSize000118.log
+-- examples/logs/TestSize000119.log
+-- examples/logs/TestSize000120.log
+-- examples/logs/TestSize000121.log
+-- examples/logs/TestSize000122.log
+-- examples/logs/TestSize000123.log
+-- examples/logs/TestSize000124.log
+-- examples/logs/TestSize000125.log
+-- examples/logs/TestSize000126.log
+-- examples/logs/TestSize000127.log
+-- examples/logs/TestSize000128.log
+-- examples/logs/TestSize000129.log
+-- examples/logs/TestSize000130.log
+-- examples/logs/TestSize000131.log
+-- examples/logs/TestSize000132.log
+-- examples/logs/TestSize000133.log
+-- examples/logs/TestSize000134.log
+-- examples/logs/TestSize000135.log
+-- examples/logs/TestSize000136.log
+-- examples/logs/TestSize000137.log
+-- examples/logs/TestSize000138.log
+-- examples/logs/TestSize000139.log
+-- examples/logs/TestSize000140.log
+-- examples/logs/TestSize000141.log
+-- examples/logs/TestSize000142.log
+-- examples/logs/TestSize000143.log
+-- examples/logs/TestSize000144.log
+-- examples/logs/TestSize000145.log
+-- examples/logs/TestSize000146.log
+-- examples/logs/TestSize000147.log
+-- examples/logs/TestSize000148.log
+-- examples/logs/TestSize000149.log
+-- examples/logs/TestSize000150.log
+-- examples/logs/TestSize000151.log
+-- examples/logs/TestSize000152.log
+-- examples/logs/TestSize000153.log
+-- examples/logs/TestSize000154.log
+-- examples/logs/TestSize000155.log
+-- examples/logs/TestSize000156.log
+-- examples/logs/TestSize000157.log
+-- examples/logs/TestSize000158.log
+-- examples/logs/TestSize000159.log
+-- examples/logs/TestSize000160.log
+-- examples/logs/TestSize000161.log
+-- examples/logs/TestSize000162.log
+-- examples/logs/TestSize000163.log
+-- examples/logs/TestSize000164.log
+-- examples/logs/TestSize000165.log
+-- examples/logs/TestSize000166.log
+-- examples/logs/TestSize000167.log
+-- examples/logs/TestSize000168.log
+-- examples/logs/TestSize000169.log
+-- examples/logs/TestSize000170.log
+-- examples/logs/TestSize000171.log
+-- examples/logs/TestSize000172.log
+-- examples/logs/TestSize000173.log
+-- examples/logs/TestSize000174.log
+-- examples/logs/TestSize000175.log
+-- examples/logs/TestSize000176.log
+-- examples/logs/TestSize000177.log
+-- examples/logs/TestSize000178.log
+-- examples/logs/TestSize000179.log
+-- examples/logs/TestSize000180.log
+-- examples/logs/TestSize000181.log
+-- examples/logs/TestSize000182.log
+-- examples/logs/TestSize000183.log
+-- examples/logs/TestSize000184.log
+-- examples/logs/TestSize000185.log
+-- examples/logs/TestSize000186.log
+-- examples/logs/TestSize000187.log
+-- examples/logs/TestTime000001.log
+-- examples/logs/TestTime000002.log
+-- examples/logs/TestTime000003.log
+-- examples/logs/TestTime000004.log
+-- examples/logs/TestTime000005.log
+-- examples/logs/TestTime000006.log
+-- examples/logs/TestTime000007.log
+-- examples/logs/TestTime000008.log
+-- examples/logs/TestTime000009.log
+-- examples/logs/TestTime000010.log
+-- examples/logs/TestTime000011.log
+-- examples/logs/TestTime000012.log
+-- examples/logs/TestTime000013.log
+-- examples/logs/TestTime000014.log
+-- examples/logs/TestTime000015.log
+-- examples/logs/TestTime000016.log
+-- examples/logs/TestTime000017.log
+-- examples/logs/TestTime000018.log
+-- examples/logs/TestTime000019.log
+-- examples/logs/TestTime000020.log
+-- examples/logs/TestTime000021.log
+ - examples/logserver.rb
+ - examples/moderate.xml
+ - examples/moderateconfig.rb
+@@ -323,9 +115,6 @@ files: 
+ - lib/log4r/staticlogger.rb
+ - lib/log4r/yamlconfigurator.rb
+ - lib/log4r.rb
+-- tests/junk/test
+-- tests/junk/tmp
+-- tests/junk/tmpx.log
+ - tests/README
+ - tests/testall.rb
+ - tests/testbase.rb
