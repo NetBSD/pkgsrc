@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/06/21 10:12:59 taca Exp $
+# $NetBSD: Makefile,v 1.19 2010/09/10 05:12:28 taca Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-bsearch-${VERSION}
@@ -9,6 +9,7 @@ MASTER_SITES=	http://0xcc.net/ruby-bsearch/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://0xcc.net/ruby-bsearch/
 COMMENT=	Binary search library for Ruby
+LICENSE=	ruby-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
