@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 08:30:42 taca Exp $
+
+* Avoid to use "ftools" which has deprecated in ruby19.
+
+--- install.rb.orig	2001-08-10 19:40:27.000000000 +0000
++++ install.rb
+@@ -19,7 +19,7 @@ This script installs NQXML into the Ruby
+ =end
+ 
+ require 'getoptlong'
+-require 'ftools'
++require 'fileutils'
+ require 'find'
+ 
+ SOURCE_DIR = 'nqxml'
+@@ -37,12 +37,12 @@ def instdir
+ 
+     begin
+ 	require 'rbconfig'
+-	libdir = Config::CONFIG['sitedir'] + "/" + 
++	libdir = Config::CONFIG['vendordir'] + "/" + 
+ 	    Config::CONFIG['MAJOR'] + "." +
+ 	    Config::CONFIG['MINOR']
+     rescue ScriptError
+ 	$LOAD_PATH.each do |l|
+-	    if l =~ /site_ruby/ && l =~ /\d$/ && l !~ /#{PLATFORM}/
++	    if l =~ /vendor_ruby/ && l =~ /\d$/ && l !~ /#{PLATFORM}/
+ 		libdir = l
+ 		break
+ 	    end
+@@ -55,7 +55,7 @@ def instdir
+ end
+ 
+ INSTALL_DIR = instdir()
+-File.makedirs(File.join(INSTALL_DIR, LIBDIR))
++FileUtils.mkdir_p(File.join(INSTALL_DIR, LIBDIR))
+ Find.find(SOURCE_DIR) { |f|
+-    File.install(f, File.join(INSTALL_DIR, f), 0644, true) if f =~ /.rb$/
++    FileUtils.install(f, File.join(INSTALL_DIR, f), :mode => 0644) if f =~ /.rb$/
+ }
