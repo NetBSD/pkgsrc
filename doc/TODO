@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9670 2010/09/10 19:34:48 joerg Exp $
+$NetBSD: TODO,v 1.9671 2010/09/10 19:40:45 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1343,7 +1343,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xforms-1.0.93sp1
 	o xfstt-1.7
 	o xhippo-3.5
-	o xinit-1.2.1
 	o xinput-1.5.2
 	o xjman-0.7
 	o xkbcomp-1.1.1
