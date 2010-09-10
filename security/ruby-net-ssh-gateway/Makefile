@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/02 14:35:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 07:45:12 taca Exp $
 
 DISTNAME=	net-ssh-gateway-1.0.1
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +10,5 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=1.99.1:../../security/ruby-net-ssh
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
