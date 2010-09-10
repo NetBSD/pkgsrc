@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2010/09/07 14:45:39 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2010/09/10 02:42:59 obache Exp $
 #
 
 DISTNAME=	bmake-20100808
@@ -36,6 +36,9 @@ BOOTSTRAP_ARGS=		-q -o ${OPSYS} --prefix=${PREFIX} \
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1"
 DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 BOOTSTRAP_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
+.endif
+.if ${OPSYS} == "Interix"
+MAKE_ENV+=		XDEFS=-DUSE_SELECT
 .endif
 
 do-extract:
