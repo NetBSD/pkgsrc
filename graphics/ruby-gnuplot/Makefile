@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2008/04/04 15:30:01 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 06:47:43 taca Exp $
 
-DISTNAME=	gnuplot-2.2
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	gnuplot-2.3.4
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rgplot.rubyforge.org/
 COMMENT=	Ruby interface to a gnuplot process
+LICENSE=	modified-bsd
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
