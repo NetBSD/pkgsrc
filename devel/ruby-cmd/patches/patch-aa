@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 05:13:13 taca Exp $
+
+--- ../cmd-0.7.2.gemspec.orig	2010-09-07 01:02:18.000000000 +0000
++++ ../cmd-0.7.2.gemspec
+@@ -35,8 +35,6 @@ files: 
+ - MIT-LICENSE
+ - THANKS
+ - Rakefile
+-- download
+-- rdoc
+ - setup.rb
+ - TODO
+ - CHANGELOG
