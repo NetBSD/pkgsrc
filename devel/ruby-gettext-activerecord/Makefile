@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/02/21 21:41:55 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/10 05:44:25 taca Exp $
 
 DISTNAME=	gettext_activerecord-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -19,5 +19,5 @@ post-extract:
 pre-build:
 	${FIND} ${WRKSRC} -name \*.orig -exec rm {} \;
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
