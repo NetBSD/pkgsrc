@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 05:58:07 obache Exp $
+share/doc/font-screen-cyrillic/COPYING
+share/fonts/X11/cyrillic/screen8x16.pcf.gz
+share/fonts/X11/cyrillic/screen8x16b.pcf.gz
