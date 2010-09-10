@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:29 joerg Exp $
-${GEM_HOME}/cache/plist-${PKGVERSION}.gem
-${GEM_LIBDIR}/MIT-LICENSE
-${GEM_LIBDIR}/README
+@comment $NetBSD: PLIST,v 1.3 2010/09/10 08:33:30 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/docs/USAGE
 ${GEM_LIBDIR}/lib/plist.rb
 ${GEM_LIBDIR}/lib/plist/generator.rb
 ${GEM_LIBDIR}/lib/plist/parser.rb
@@ -20,4 +20,4 @@ ${GEM_LIBDIR}/test/test_generator.rb
 ${GEM_LIBDIR}/test/test_generator_basic_types.rb
 ${GEM_LIBDIR}/test/test_generator_collections.rb
 ${GEM_LIBDIR}/test/test_parser.rb
-${GEM_HOME}/specifications/plist-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
