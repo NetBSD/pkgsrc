@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.3 2010/09/10 07:31:45 taca Exp $
+
+Use modern Ruby API.
+
+--- ext/ming/mingc/swfbutton.c.orig	2008-03-02 09:08:51.000000000 +0000
++++ ext/ming/mingc/swfbutton.c
+@@ -49,10 +49,10 @@ rb_SWFButton_s_key_press(self, key)
+ {
+   if(TYPE(key) != T_STRING)
+     rb_raise(rb_eMingError, "Argument must be a character on keyboard.");
+-  if(RSTRING(key)->len != 1)
++  if(RSTRING_LEN(key) != 1)
+         rb_raise(rb_eMingError, "Size of argument must be just 1.");
+ 
+-  return INT2FIX(SWFBUTTON_KEYPRESS(RSTRING(key)->ptr[0]));
++  return INT2FIX(SWFBUTTON_KEYPRESS(RSTRING_PTR(key)[0]));
+ }
+ 
+ static VALUE
+@@ -61,10 +61,10 @@ rb_SWFButton_s_on_key_press(self, key)
+ {
+   if(TYPE(key) != T_STRING)
+     rb_raise(rb_eMingError, "Argument must be a character on keyboard.");
+-  if(RSTRING(key)->len != 1)
++  if(RSTRING_LEN(key) != 1)
+         rb_raise(rb_eMingError, "Size of argument must be just 1.");
+ 
+-  return INT2FIX(SWFBUTTON_ONKEYPRESS(RSTRING(key)->ptr[0]));
++  return INT2FIX(SWFBUTTON_ONKEYPRESS(RSTRING_PTR(key)[0]));
+ }
+ 
+ static VALUE
