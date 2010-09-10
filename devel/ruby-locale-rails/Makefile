@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/07 11:23:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 05:52:09 taca Exp $
 
 DISTNAME=	locale_rails-2.0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,10 +11,8 @@ LICENSE=	ruby-license
 
 DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.0.5:../../devel/ruby-locale
 
-GEM_BUILD=	gemspec
-
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -xdev -type f -print | ${XARGS} ${CHMOD} g-w
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
