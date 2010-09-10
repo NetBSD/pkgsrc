@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/12/02 14:30:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 07:43:45 taca Exp $
 
-DISTNAME=	net-sftp-2.0.4
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	net-sftp-2.0.5
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +10,5 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.0.9:../../security/ruby-net-ssh
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
