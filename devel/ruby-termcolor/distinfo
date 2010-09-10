@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/02 11:48:02 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 06:29:40 taca Exp $
 
-SHA1 (termcolor-1.2.0.gem) = ccb19dc24757f5a2a27f948fe7bfc7a72e8a4601
-RMD160 (termcolor-1.2.0.gem) = 234b7c6e5fdae65febe9214442c66062908d91af
-Size (termcolor-1.2.0.gem) = 6656 bytes
+SHA1 (termcolor-1.2.1.gem) = e3d24785ab4123ca60d3a26f50b258ee8e6c8d3b
+RMD160 (termcolor-1.2.1.gem) = 2d1fc9cf80f59c9b87d64ca5110c9c6e661dec98
+Size (termcolor-1.2.1.gem) = 6656 bytes
