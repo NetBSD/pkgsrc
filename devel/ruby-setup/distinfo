@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/15 03:04:18 taca Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 06:26:00 taca Exp $
 
-SHA1 (setup-3.4.0.tar.gz) = ea2729f8a9a16669ba8a536a218ea391e540f6c3
-RMD160 (setup-3.4.0.tar.gz) = 715f000edf17470f17a63c23adcec1da7b858ea9
-Size (setup-3.4.0.tar.gz) = 45078 bytes
+SHA1 (setup-3.4.1.tar.gz) = 2e8fbdc4e0fdca917e231e3e961f9972086dd338
+RMD160 (setup-3.4.1.tar.gz) = bd32c4c8fa20b5ad858b2b7ba5e5caca25a4125b
+Size (setup-3.4.1.tar.gz) = 47192 bytes
 SHA1 (patch-aa) = df302feb77a5b7f4b89959c6bdd990658e40b5a6
