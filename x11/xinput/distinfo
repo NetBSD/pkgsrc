@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/11/09 18:52:16 tnn Exp $
+$NetBSD: distinfo,v 1.5 2010/09/10 19:43:05 joerg Exp $
 
-SHA1 (xinput-1.5.0.tar.gz) = 66cc562b6b3eeed2f1e2afa5fa7c35294612ca78
-RMD160 (xinput-1.5.0.tar.gz) = 39e067a5b735d22d4b5001f1d5aa072f17abd038
-Size (xinput-1.5.0.tar.gz) = 150874 bytes
+SHA1 (xinput-1.5.2.tar.gz) = 8ee781cdba5ff28dc58f1d2e2528d9a43b6566cb
+RMD160 (xinput-1.5.2.tar.gz) = 3adffc889738ad682477a2744ed4712b46fd43ba
+Size (xinput-1.5.2.tar.gz) = 164367 bytes
