@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2010/09/07 17:20:25 taca Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/10 05:30:11 taca Exp $
 
-DISTNAME=	ruby-debug-ide-0.3.0
-PKGNAME=	${RUBYGEM_PKGPREFIX}-${DISTNAME}
+DISTNAME=	ruby-debug-ide-0.4.10
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://debug-commons.rubyforge.org/
+HOMEPAGE=	http://rubyforge.org/projects/debug-commons/
 COMMENT=	IDEs interface to ruby-debug
+LICENSE=	mit
 
-DEPENDS+=	${RUBYGEM_PKGPREFIX}-ruby-debug-base-[0-9]*:../../devel/ruby-debug-base
+DEPENDS+=	${RUBY_PKGPREFIX}-debug-base-[0-9]*:../../devel/ruby-debug-base
 
 RUBY_VERSION_SUPPORTED= 18
 
-GEM_BUILD=	gemspec
+pre-configure:
+	${RM} -fr ${WRKSRC}/ext
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
