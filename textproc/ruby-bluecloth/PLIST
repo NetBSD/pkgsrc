@@ -1,20 +1,114 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:36:32 joerg Exp $
-${GEM_HOME}/cache/BlueCloth-${PKGVERSION}.gem
-${GEM_LIBDIR}/CHANGES
+@comment $NetBSD: PLIST,v 1.4 2010/09/10 08:02:26 taca Exp $
+bin/bluecloth
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.require_paths
+${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/LICENSE.discount
 ${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/Rakefile.local
 ${GEM_LIBDIR}/bin/bluecloth
-${GEM_LIBDIR}/install.rb
+${GEM_LIBDIR}/ext/Csio.c
+${GEM_LIBDIR}/ext/VERSION
+${GEM_LIBDIR}/ext/amalloc.h
+${GEM_LIBDIR}/ext/bluecloth.c
+${GEM_LIBDIR}/ext/bluecloth.h
+${GEM_LIBDIR}/ext/config.h
+${GEM_LIBDIR}/ext/css.c
+${GEM_LIBDIR}/ext/cstring.h
+${GEM_LIBDIR}/ext/docheader.c
+${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/ext/generate.c
+${GEM_LIBDIR}/ext/markdown.c
+${GEM_LIBDIR}/ext/markdown.h
+${GEM_LIBDIR}/ext/mkdio.c
+${GEM_LIBDIR}/ext/mkdio.h
+${GEM_LIBDIR}/ext/resource.c
+${GEM_LIBDIR}/ext/version.c
+${GEM_LIBDIR}/ext/xml.c
+${GEM_LIBDIR}/ext/xmlpage.c
 ${GEM_LIBDIR}/lib/bluecloth.rb
-${GEM_LIBDIR}/test.rb
-${GEM_LIBDIR}/tests/00_Class.tests.rb
-${GEM_LIBDIR}/tests/05_Markdown.tests.rb
-${GEM_LIBDIR}/tests/10_Bug.tests.rb
-${GEM_LIBDIR}/tests/15_Contrib.tests.rb
-${GEM_LIBDIR}/tests/bctestcase.rb
-${GEM_LIBDIR}/tests/data/antsugar.txt
-${GEM_LIBDIR}/tests/data/ml-announce.txt
-${GEM_LIBDIR}/tests/data/re-overflow.txt
-${GEM_LIBDIR}/tests/data/re-overflow2.txt
-${GEM_LIBDIR}/utils.rb
-${GEM_HOME}/specifications/BlueCloth-${PKGVERSION}.gemspec
+${GEM_LIBDIR}/lib/bluecloth_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/rake/191_compat.rb
+${GEM_LIBDIR}/rake/dependencies.rb
+${GEM_LIBDIR}/rake/helpers.rb
+${GEM_LIBDIR}/rake/hg.rb
+${GEM_LIBDIR}/rake/manual.rb
+${GEM_LIBDIR}/rake/packaging.rb
+${GEM_LIBDIR}/rake/publishing.rb
+${GEM_LIBDIR}/rake/rdoc.rb
+${GEM_LIBDIR}/rake/style.rb
+${GEM_LIBDIR}/rake/svn.rb
+${GEM_LIBDIR}/rake/testing.rb
+${GEM_LIBDIR}/rake/verifytask.rb
+${GEM_LIBDIR}/spec/bluecloth/101_changes_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/autolinks_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/blockquotes_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/code_spans_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/emphasis_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/entities_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/hrules_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/images_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/inline_html_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/links_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/lists_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/paragraphs_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/titles_spec.rb
+${GEM_LIBDIR}/spec/bluecloth_spec.rb
+${GEM_LIBDIR}/spec/bugfix_spec.rb
+${GEM_LIBDIR}/spec/contributions_spec.rb
+${GEM_LIBDIR}/spec/data/antsugar.txt
+${GEM_LIBDIR}/spec/data/markdowntest/Amps and angle encoding.html
+${GEM_LIBDIR}/spec/data/markdowntest/Amps and angle encoding.text
+${GEM_LIBDIR}/spec/data/markdowntest/Auto links.html
+${GEM_LIBDIR}/spec/data/markdowntest/Auto links.text
+${GEM_LIBDIR}/spec/data/markdowntest/Backslash escapes.html
+${GEM_LIBDIR}/spec/data/markdowntest/Backslash escapes.text
+${GEM_LIBDIR}/spec/data/markdowntest/Blockquotes with code blocks.html
+${GEM_LIBDIR}/spec/data/markdowntest/Blockquotes with code blocks.text
+${GEM_LIBDIR}/spec/data/markdowntest/Code Blocks.html
+${GEM_LIBDIR}/spec/data/markdowntest/Code Blocks.text
+${GEM_LIBDIR}/spec/data/markdowntest/Code Spans.html
+${GEM_LIBDIR}/spec/data/markdowntest/Code Spans.text
+${GEM_LIBDIR}/spec/data/markdowntest/Hard-wrapped paragraphs with list-like lines.html
+${GEM_LIBDIR}/spec/data/markdowntest/Hard-wrapped paragraphs with list-like lines.text
+${GEM_LIBDIR}/spec/data/markdowntest/Horizontal rules.html
+${GEM_LIBDIR}/spec/data/markdowntest/Horizontal rules.text
+${GEM_LIBDIR}/spec/data/markdowntest/Inline HTML (Advanced).html
+${GEM_LIBDIR}/spec/data/markdowntest/Inline HTML (Advanced).text
+${GEM_LIBDIR}/spec/data/markdowntest/Inline HTML (Simple).html
+${GEM_LIBDIR}/spec/data/markdowntest/Inline HTML (Simple).text
+${GEM_LIBDIR}/spec/data/markdowntest/Inline HTML comments.html
+${GEM_LIBDIR}/spec/data/markdowntest/Inline HTML comments.text
+${GEM_LIBDIR}/spec/data/markdowntest/Links, inline style.html
+${GEM_LIBDIR}/spec/data/markdowntest/Links, inline style.text
+${GEM_LIBDIR}/spec/data/markdowntest/Links, reference style.html
+${GEM_LIBDIR}/spec/data/markdowntest/Links, reference style.text
+${GEM_LIBDIR}/spec/data/markdowntest/Links, shortcut references.html
+${GEM_LIBDIR}/spec/data/markdowntest/Links, shortcut references.text
+${GEM_LIBDIR}/spec/data/markdowntest/Literal quotes in titles.html
+${GEM_LIBDIR}/spec/data/markdowntest/Literal quotes in titles.text
+${GEM_LIBDIR}/spec/data/markdowntest/Markdown Documentation - Basics.html
+${GEM_LIBDIR}/spec/data/markdowntest/Markdown Documentation - Basics.text
+${GEM_LIBDIR}/spec/data/markdowntest/Markdown Documentation - Syntax.html
+${GEM_LIBDIR}/spec/data/markdowntest/Markdown Documentation - Syntax.text
+${GEM_LIBDIR}/spec/data/markdowntest/Nested blockquotes.html
+${GEM_LIBDIR}/spec/data/markdowntest/Nested blockquotes.text
+${GEM_LIBDIR}/spec/data/markdowntest/Ordered and unordered lists.html
+${GEM_LIBDIR}/spec/data/markdowntest/Ordered and unordered lists.text
+${GEM_LIBDIR}/spec/data/markdowntest/Strong and em together.html
+${GEM_LIBDIR}/spec/data/markdowntest/Strong and em together.text
+${GEM_LIBDIR}/spec/data/markdowntest/Tabs.html
+${GEM_LIBDIR}/spec/data/markdowntest/Tabs.text
+${GEM_LIBDIR}/spec/data/markdowntest/Tidyness.html
+${GEM_LIBDIR}/spec/data/markdowntest/Tidyness.text
+${GEM_LIBDIR}/spec/data/ml-announce.txt
+${GEM_LIBDIR}/spec/data/re-overflow.txt
+${GEM_LIBDIR}/spec/data/re-overflow2.txt
+${GEM_LIBDIR}/spec/discount_spec.rb
+${GEM_LIBDIR}/spec/lib/constants.rb
+${GEM_LIBDIR}/spec/lib/helpers.rb
+${GEM_LIBDIR}/spec/lib/matchers.rb
+${GEM_LIBDIR}/spec/markdowntest_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
