@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/08/22 20:54:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/09/10 22:27:11 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bib/plbib/plbib.bib
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
@@ -108,11 +108,6 @@ share/texmf-dist/doc/fonts/dstroke/readme
 share/texmf-dist/doc/fonts/ecc/copyrite
 share/texmf-dist/doc/fonts/ecc/liesmich
 share/texmf-dist/doc/fonts/ecc/readme
-share/texmf-dist/doc/fonts/eurosym/COPYING
-share/texmf-dist/doc/fonts/eurosym/Changes
-share/texmf-dist/doc/fonts/eurosym/README
-share/texmf-dist/doc/fonts/eurosym/testeuro.dvi
-share/texmf-dist/doc/fonts/eurosym/testeuro.tex
 share/texmf-dist/doc/fonts/fontname/ChangeLog
 share/texmf-dist/doc/fonts/fontname/README
 share/texmf-dist/doc/fonts/fontname/fontname.dvi
@@ -2886,7 +2881,6 @@ share/texmf-dist/doc/latex/draftcopy/draftcopy-test-8.tex
 share/texmf-dist/doc/latex/draftcopy/draftcopy-test-9.tex
 share/texmf-dist/doc/latex/draftcopy/draftcopy.dvi
 share/texmf-dist/doc/latex/eclbip/ecltreesample.dvi
-share/texmf-dist/doc/latex/endfloat/endfloat.dvi
 share/texmf-dist/doc/latex/eo/README
 share/texmf-dist/doc/latex/eo/readme.dvi
 share/texmf-dist/doc/latex/eo/readme.ltx
@@ -2905,7 +2899,6 @@ share/texmf-dist/doc/latex/eulervm/README.eulervm
 share/texmf-dist/doc/latex/eulervm/eulervm.pdf
 share/texmf-dist/doc/latex/eulervm/manifest.txt
 share/texmf-dist/doc/latex/extsizes/readme.extsizes
-share/texmf-dist/doc/latex/fancybox/fancybox.dvi
 share/texmf-dist/doc/latex/filecontents/filecontents.dvi
 share/texmf-dist/doc/latex/floatflt/floatexm.dvi
 share/texmf-dist/doc/latex/floatflt/floatexm.tex
@@ -3141,8 +3134,6 @@ share/texmf-dist/doc/latex/textmerg/tmexamp2.tex
 share/texmf-dist/doc/latex/textmerg/tmexampp.tex
 share/texmf-dist/doc/latex/textpos/README
 share/texmf-dist/doc/latex/textpos/textpos.dvi
-share/texmf-dist/doc/latex/tocbibind/README
-share/texmf-dist/doc/latex/tocbibind/tocbibind.dvi
 share/texmf-dist/doc/latex/tocloft/tocloft.dvi
 share/texmf-dist/doc/latex/totpages/readme.txt
 share/texmf-dist/doc/latex/totpages/totpages.dvi
@@ -3609,7 +3600,6 @@ share/texmf-dist/fonts/map/dvips/lucida/lumath-k.map
 share/texmf-dist/fonts/map/dvips/lucida/lumath.map
 share/texmf-dist/fonts/map/dvips/misc/cs.map
 share/texmf-dist/fonts/map/dvips/misc/dstroke.map
-share/texmf-dist/fonts/map/dvips/misc/eurosym.map
 share/texmf-dist/fonts/map/dvips/misc/pcrr8rn.map
 share/texmf-dist/fonts/map/dvips/omega/omega.map
 share/texmf-dist/fonts/map/dvips/pl/pl.map
@@ -4290,13 +4280,6 @@ share/texmf-dist/fonts/source/public/ecc/toti10.mf
 share/texmf-dist/fonts/source/public/esint/bigint.mf
 share/texmf-dist/fonts/source/public/esint/esint10.mf
 share/texmf-dist/fonts/source/public/esint/mathint.mf
-share/texmf-dist/fonts/source/public/eurosym/fey.mf
-share/texmf-dist/fonts/source/public/eurosym/feybl10.mf
-share/texmf-dist/fonts/source/public/eurosym/feybo10.mf
-share/texmf-dist/fonts/source/public/eurosym/feybr10.mf
-share/texmf-dist/fonts/source/public/eurosym/feyml10.mf
-share/texmf-dist/fonts/source/public/eurosym/feymo10.mf
-share/texmf-dist/fonts/source/public/eurosym/feymr10.mf
 share/texmf-dist/fonts/source/public/euxm/euxm10.mf
 share/texmf-dist/fonts/source/public/euxm/euxm5.mf
 share/texmf-dist/fonts/source/public/euxm/euxm7.mf
@@ -5824,12 +5807,6 @@ share/texmf-dist/fonts/tfm/public/eulervm/zeusb7.tfm
 share/texmf-dist/fonts/tfm/public/eulervm/zeusm10.tfm
 share/texmf-dist/fonts/tfm/public/eulervm/zeusm5.tfm
 share/texmf-dist/fonts/tfm/public/eulervm/zeusm7.tfm
-share/texmf-dist/fonts/tfm/public/eurosym/feybl10.tfm
-share/texmf-dist/fonts/tfm/public/eurosym/feybo10.tfm
-share/texmf-dist/fonts/tfm/public/eurosym/feybr10.tfm
-share/texmf-dist/fonts/tfm/public/eurosym/feyml10.tfm
-share/texmf-dist/fonts/tfm/public/eurosym/feymo10.tfm
-share/texmf-dist/fonts/tfm/public/eurosym/feymr10.tfm
 share/texmf-dist/fonts/tfm/public/euxm/euxm10.tfm
 share/texmf-dist/fonts/tfm/public/euxm/euxm5.tfm
 share/texmf-dist/fonts/tfm/public/euxm/euxm7.tfm
@@ -6310,18 +6287,6 @@ share/texmf-dist/fonts/type1/public/dstroke/dsrom8.pfb
 share/texmf-dist/fonts/type1/public/dstroke/dsss10.pfb
 share/texmf-dist/fonts/type1/public/dstroke/dsss12.pfb
 share/texmf-dist/fonts/type1/public/dstroke/dsss8.pfb
-share/texmf-dist/fonts/type1/public/eurosym/feybl10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/feybo10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/feybr10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/feyml10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/feymo10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/geybl10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/geybo10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/geybr10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/geyml10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/geymo10.pfb
-share/texmf-dist/fonts/type1/public/eurosym/geymr10.pfb
 share/texmf-dist/fonts/type1/public/fpl/fplbij8a.pfb
 share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb
 share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb
@@ -7669,8 +7634,6 @@ share/texmf-dist/tex/latex/dvilj/graybox.sty
 share/texmf-dist/tex/latex/dvilj/hpfonts.sty
 share/texmf-dist/tex/latex/eclbip/eclbip.sty
 share/texmf-dist/tex/latex/eclbip/ecltree.sty
-share/texmf-dist/tex/latex/endfloat/efxmpl.cfg
-share/texmf-dist/tex/latex/endfloat/endfloat.sty
 share/texmf-dist/tex/latex/eo/eo.ldf
 share/texmf-dist/tex/latex/eo/eo.sty
 share/texmf-dist/tex/latex/eo/latin3eo.def
@@ -7682,7 +7645,6 @@ share/texmf-dist/tex/latex/eulervm/eulervm.sty
 share/texmf-dist/tex/latex/eulervm/uzeuex.fd
 share/texmf-dist/tex/latex/eulervm/uzeur.fd
 share/texmf-dist/tex/latex/eulervm/uzeus.fd
-share/texmf-dist/tex/latex/eurosym/eurosym.sty
 share/texmf-dist/tex/latex/example/example.sty
 share/texmf-dist/tex/latex/extsizes/autopagewidth.sty
 share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -7696,7 +7658,6 @@ share/texmf-dist/tex/latex/extsizes/size17.clo
 share/texmf-dist/tex/latex/extsizes/size20.clo
 share/texmf-dist/tex/latex/extsizes/size8.clo
 share/texmf-dist/tex/latex/extsizes/size9.clo
-share/texmf-dist/tex/latex/fancybox/fancybox.sty
 share/texmf-dist/tex/latex/fguill/fguill.sty
 share/texmf-dist/tex/latex/filecontents/filecontents.sty
 share/texmf-dist/tex/latex/floatflt/floatflt.sty
@@ -8135,7 +8096,6 @@ share/texmf-dist/tex/latex/textfit/textfit.sty
 share/texmf-dist/tex/latex/textmerg/textmerg.sty
 share/texmf-dist/tex/latex/textmerg/textmerg.tex
 share/texmf-dist/tex/latex/textpos/textpos.sty
-share/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 share/texmf-dist/tex/latex/tocloft/tocloft.sty
 share/texmf-dist/tex/latex/totpages/totpages.sty
 share/texmf-dist/tex/latex/treesvr/trees.sty
