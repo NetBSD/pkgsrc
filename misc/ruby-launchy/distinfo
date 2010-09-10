@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/06/22 16:10:16 taca Exp $
+$NetBSD: distinfo,v 1.3 2010/09/10 07:24:27 taca Exp $
 
-SHA1 (launchy-0.3.2.gem) = bcb8a1eb531c29f3d2061df736d15370acac7f72
-RMD160 (launchy-0.3.2.gem) = 68c994ca42bccdbbfe618506fe2068227304a7d2
-Size (launchy-0.3.2.gem) = 12288 bytes
+SHA1 (launchy-0.3.7.gem) = 58cd12c5ca4db2114ba6d18704f0081d54975c7e
+RMD160 (launchy-0.3.7.gem) = 61910a1e385de98124967abf086766b844c3887a
+Size (launchy-0.3.7.gem) = 17920 bytes
