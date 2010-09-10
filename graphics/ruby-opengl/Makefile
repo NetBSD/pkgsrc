@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/06/14 02:25:01 obache Exp $
+# $NetBSD: Makefile,v 1.30 2010/09/10 06:51:52 taca Exp $
 
 DISTNAME=	ruby-opengl-0.60.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -9,10 +9,13 @@ HOMEPAGE=	http://ruby-opengl.rubyforge.org/
 COMMENT=	Ruby bindings for OpenGL, GLU and GLUT
 LICENSE=	mit
 
-DEPENDS+=	rake>=0.8.1:../../devel/rake
 DEPENDS+=	${RUBY_PKGPREFIX}-mkrf>=0.2.0:../../devel/ruby-mkrf
 
-.include "../../misc/rubygems/rubygem.mk"
+USE_RAKE=	YES
 
+pre-configure:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
+
+.include "../../lang/ruby/gem.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
