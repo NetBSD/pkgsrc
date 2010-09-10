@@ -1,20 +1,20 @@
-$NetBSD: patch-ab,v 1.13 2009/08/11 14:26:58 taca Exp $
+$NetBSD: patch-ab,v 1.14 2010/09/10 03:29:00 taca Exp $
 
 * Adding Interix support.
 
---- configure.orig	2008-06-09 18:38:04.000000000 +0900
+--- configure.orig	2010-06-23 05:38:48.000000000 +0000
 +++ configure
-@@ -10374,6 +10374,9 @@ _ACEOF
- _ACEOF
+@@ -6212,6 +6212,9 @@ bsdi*)          LIBS="-lm $LIBS"
+ 		$as_echo "#define BROKEN_SETREGID 1" >>confdefs.h
  
                  ac_cv_sizeof_rlim_t=8;;
 +interix3*)	LIBS="-lm $LIBS"
 +		ac_cv_func_getpgrp_void=yes
 +		;;
  freebsd*)	LIBS="-lm $LIBS"
- 		{ echo "$as_me:$LINENO: checking whether -lxpg4 has to be linked" >&5
- echo $ECHO_N "checking whether -lxpg4 has to be linked... $ECHO_C" >&6; }
-@@ -16591,6 +16594,13 @@ fi
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether -lxpg4 has to be linked" >&5
+ $as_echo_n "checking whether -lxpg4 has to be linked... " >&6; }
+@@ -10196,6 +10199,13 @@ fi
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
  			fi
  			rb_cv_dlopen=yes ;;
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.13 2009/08/11 14:26:58 taca Exp $
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
  			LIBPATHFLAG=" -L%1\$-s"
-@@ -17334,6 +17344,14 @@ if test "$enable_shared" = 'yes'; then
+@@ -10724,6 +10734,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.13 2009/08/11 14:26:58 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
  	;;
-@@ -17343,6 +17361,7 @@ if test "$enable_shared" = 'yes'; then
+@@ -10733,6 +10751,7 @@ if test "$enable_shared" = 'yes'; then
  fi
  if test "$enable_rpath" = yes; then
      LIBRUBYARG_SHARED="${linker_flag}-R ${linker_flag}\$(libdir) -L\$(libdir) $LIBRUBYARG_SHARED"

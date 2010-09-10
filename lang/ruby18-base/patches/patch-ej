@@ -1,0 +1,71 @@
+$NetBSD: patch-ej,v 1.1 2010/09/10 03:29:01 taca Exp $
+
+* r18172: suppress warnings.
+* r23015: (GetDigestPtr): use StringValueCStr instead of STR2CSTR.
+* r26835: backport fixes in 1.9.
+* r26837: fix misc documentation along with test_dsa_sign_asn1_FIPS186_3
+
+--- ext/openssl/ossl_pkey_ec.c.orig	2010-06-21 09:18:59.000000000 +0000
++++ ext/openssl/ossl_pkey_ec.c
+@@ -186,22 +186,22 @@ static VALUE ossl_ec_key_initialize(int 
+ 
+             ec = PEM_read_bio_ECPrivateKey(in, NULL, NULL, NULL);
+             if (!ec) {
+-                BIO_reset(in);
++                (void)BIO_reset(in);
+                 ec = PEM_read_bio_EC_PUBKEY(in, NULL, NULL, NULL);
+             }
+             if (!ec) {
+-                BIO_reset(in);
++                (void)BIO_reset(in);
+                 ec = d2i_ECPrivateKey_bio(in, NULL);
+             }
+             if (!ec) {
+-                BIO_reset(in);
++                (void)BIO_reset(in);
+                 ec = d2i_EC_PUBKEY_bio(in, NULL);
+             }
+ 
+             BIO_free(in);
+ 
+             if (ec == NULL) {
+-                const char *name = STR2CSTR(arg);
++                const char *name = StringValueCStr(arg);
+                 int nid = OBJ_sn2nid(name);
+ 
+                 if (nid == NID_undef)
+@@ -778,14 +778,14 @@ static VALUE ossl_ec_group_initialize(in
+ 
+             group = PEM_read_bio_ECPKParameters(in, NULL, NULL, NULL);
+             if (!group) {
+-                BIO_reset(in);
++                (void)BIO_reset(in);
+                 group = d2i_ECPKParameters_bio(in, NULL);
+             }
+ 
+             BIO_free(in);
+ 
+             if (!group) {
+-                const char *name = STR2CSTR(arg1);
++                const char *name = StringValueCStr(arg1);
+                 int nid = OBJ_sn2nid(name);
+ 
+                 if (nid == NID_undef)
+@@ -1092,7 +1092,7 @@ static VALUE ossl_ec_group_get_seed(VALU
+     if (seed_len == 0)
+         return Qnil;
+ 
+-    return rb_str_new(EC_GROUP_get0_seed(group), seed_len);
++    return rb_str_new((const char *)EC_GROUP_get0_seed(group), seed_len);
+ }
+ 
+ /*  call-seq:
+@@ -1107,7 +1107,7 @@ static VALUE ossl_ec_group_set_seed(VALU
+     Require_EC_GROUP(self, group);
+     StringValue(seed);
+ 
+-    if (EC_GROUP_set_seed(group, RSTRING_PTR(seed), RSTRING_LEN(seed)) != RSTRING_LEN(seed))
++    if (EC_GROUP_set_seed(group, (unsigned char *)RSTRING_PTR(seed), RSTRING_LEN(seed)) != RSTRING_LEN(seed))
+         ossl_raise(eEC_GROUP, "EC_GROUP_set_seed");
+ 
+     return seed;

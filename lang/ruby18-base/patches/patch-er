@@ -1,0 +1,21 @@
+$NetBSD: patch-er,v 1.1 2010/09/10 03:29:01 taca Exp $
+
+* r26209: rename {addr,name}info functions to ensure those are used on darwin.
+
+--- ext/socket/getnameinfo.c.orig	2007-07-22 05:33:47.000000000 +0000
++++ ext/socket/getnameinfo.c
+@@ -135,11 +135,11 @@ inet_ntop(af, addr, numaddr, numaddr_len
+ int
+ getnameinfo(sa, salen, host, hostlen, serv, servlen, flags)
+ 	const struct sockaddr *sa;
+-	size_t salen;
++	socklen_t salen;
+ 	char *host;
+-	size_t hostlen;
++	socklen_t hostlen;
+ 	char *serv;
+-	size_t servlen;
++	socklen_t servlen;
+ 	int flags;
+ {
+ 	struct afd *afd;

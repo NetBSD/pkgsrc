@@ -1,24 +1,32 @@
-$NetBSD: patch-dt,v 1.1 2009/08/11 14:26:59 taca Exp $
+$NetBSD: patch-dt,v 1.2 2010/09/10 03:29:00 taca Exp $
 
-* Use proper funcition assosiated type.
+* r18172: suppress warnings.
+* r26838: backport the commit from trunk.
 
---- ext/openssl/ossl_x509crl.c.orig	2007-06-09 00:02:04.000000000 +0900
+--- ext/openssl/ossl_x509crl.c.orig	2010-06-21 09:18:59.000000000 +0000
 +++ ext/openssl/ossl_x509crl.c
-@@ -262,7 +262,7 @@ ossl_x509crl_get_revoked(VALUE self)
-     VALUE ary, revoked;
+@@ -91,7 +91,7 @@ static VALUE 
+ ossl_x509crl_initialize(int argc, VALUE *argv, VALUE self)
+ {
+     BIO *in;
+-    X509_CRL *crl;
++    X509_CRL *crl, *x = DATA_PTR(self);
+     VALUE arg;
  
-     GetX509CRL(self, crl);
--    num = sk_X509_CRL_num(X509_CRL_get_REVOKED(crl));
-+    num = sk_X509_REVOKED_num(X509_CRL_get_REVOKED(crl));
-     if (num < 0) {
- 	OSSL_Debug("num < 0???");
- 	return rb_ary_new();
-@@ -270,7 +270,7 @@ ossl_x509crl_get_revoked(VALUE self)
-     ary = rb_ary_new2(num);
-     for(i=0; i<num; i++) {
- 	/* NO DUP - don't free! */
--	rev = (X509_REVOKED *)sk_X509_CRL_value(X509_CRL_get_REVOKED(crl), i);
-+	rev = sk_X509_REVOKED_value(X509_CRL_get_REVOKED(crl), i);
- 	revoked = ossl_x509revoked_new(rev);
- 	rb_ary_push(ary, revoked);
+     if (rb_scan_args(argc, argv, "01", &arg) == 0) {
+@@ -99,10 +99,12 @@ ossl_x509crl_initialize(int argc, VALUE 
      }
+     arg = ossl_to_der_if_possible(arg);
+     in = ossl_obj2bio(arg);
+-    crl = PEM_read_bio_X509_CRL(in, (X509_CRL **)&DATA_PTR(self), NULL, NULL);
++    crl = PEM_read_bio_X509_CRL(in, &x, NULL, NULL);
++    DATA_PTR(self) = x;
+     if (!crl) {
+-	BIO_reset(in);
+-	crl = d2i_X509_CRL_bio(in, (X509_CRL **)&DATA_PTR(self));
++	(void)BIO_reset(in);
++	crl = d2i_X509_CRL_bio(in, &x);
++	DATA_PTR(self) = x;
+     }
+     BIO_free(in);
+     if (!crl) ossl_raise(eX509CRLError, NULL);

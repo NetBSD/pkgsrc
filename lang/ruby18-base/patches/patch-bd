@@ -1,33 +1,33 @@
-$NetBSD: patch-bd,v 1.3 2009/08/11 14:26:58 taca Exp $
+$NetBSD: patch-bd,v 1.4 2010/09/10 03:29:00 taca Exp $
 
-* Use modern OpenSSL API to catch up OpenSSL 1.0.0 and later.
+Suppress warnings.
 
---- ext/openssl/ossl.c.orig	2007-06-09 00:02:04.000000000 +0900
+--- ext/openssl/ossl.c.orig	2010-06-21 09:18:59.000000000 +0000
 +++ ext/openssl/ossl.c
-@@ -92,7 +92,7 @@ ossl_x509_ary2sk(VALUE ary)
+@@ -15,7 +15,7 @@
+  * String to HEXString conversion
+  */
+ int
+-string2hex(char *buf, int buf_len, char **hexbuf, int *hexbuf_len)
++string2hex(const unsigned char *buf, int buf_len, char **hexbuf, int *hexbuf_len)
+ {
+     static const char hex[]="0123456789abcdef";
+     int i, len = 2 * buf_len;
+@@ -464,7 +464,7 @@ Init_openssl()
+     /*
+      * Verify callback Proc index for ext-data
+      */
+-    if ((ossl_verify_cb_idx = X509_STORE_CTX_get_ex_new_index(0, "ossl_verify_cb_idx", 0, 0, 0)) < 0)
++    if ((ossl_verify_cb_idx = X509_STORE_CTX_get_ex_new_index(0, (void *)"ossl_verify_cb_idx", 0, 0, 0)) < 0)
+         ossl_raise(eOSSLError, "X509_STORE_CTX_get_ex_new_index");
  
- #define OSSL_IMPL_SK2ARY(name, type)	        \
- VALUE						\
--ossl_##name##_sk2ary(STACK *sk)			\
-+ossl_##name##_sk2ary(STACK_OF(type) *sk)	\
- {						\
-     type *t;					\
-     int i, num;					\
-@@ -102,7 +102,7 @@ ossl_##name##_sk2ary(STACK *sk)			\
- 	OSSL_Debug("empty sk!");		\
- 	return Qnil;				\
-     }						\
--    num = sk_num(sk);				\
-+    num = sk_##type##_num(sk);			\
-     if (num < 0) {				\
- 	OSSL_Debug("items in sk < -1???");	\
- 	return rb_ary_new();			\
-@@ -110,7 +110,7 @@ ossl_##name##_sk2ary(STACK *sk)			\
-     ary = rb_ary_new2(num);			\
- 						\
-     for (i=0; i<num; i++) {			\
--	t = (type *)sk_value(sk, i);		\
-+	t = sk_##type##_value(sk, i);		\
- 	rb_ary_push(ary, ossl_##name##_new(t));	\
-     }						\
-     return ary;					\
+     /*
+@@ -506,7 +506,7 @@ Init_openssl()
+  * Check if all symbols are OK with 'make LDSHARED=gcc all'
+  */
+ int
+-main(int argc, char *argv[], char *env[])
++main(int argc, char *argv[])
+ {
+     return 0;
+ }
