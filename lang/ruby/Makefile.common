@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2009/06/10 13:38:55 taca Exp $
+# $NetBSD: Makefile.common,v 1.20 2010/09/10 03:24:42 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -7,6 +7,8 @@
 # used by devel/ruby-mode/Makefile
 # used by lang/ruby18/Makefile
 # used by lang/ruby18-base/Makefile
+# used by lang/ruby19/Makefile
+# used by lang/ruby19-base/Makefile
 # used by x11/ruby-tk/Makefile
 
 LICENSE=	gnu-gpl-v2
@@ -28,7 +30,6 @@ MASTER_SITE_RUBY?= \
 	ftp://ftp.ring.gr.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.iij.ad.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.idaemons.org/pub/mirror/ftp.ruby-lang.org/ruby/${RUBY_SITE_SUBDIR}/
-RUBY_SITE_SUBDIR?=	${RUBY_VER_DIR}
 
 # Ruby distribution
 RUBY_DISTINFO_FILE=	${RUBY_SRCDIR}/distinfo
@@ -36,8 +37,10 @@ RUBY_DISTINFO_FILE=	${RUBY_SRCDIR}/distinfo
 RUBY_HOMEPAGE=		http://www.ruby-lang.org/en/
 
 # common default
-.if !empty(RUBY_PATCH_LEVEL)
-RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-p${RUBY_PATCH_LEVEL}
+_RUBY_PATCH_LEVEL=	${RUBY_PATCH_LEVEL:S/pl/p/:S/pre/preview/}
+
+.if !empty(_RUBY_PATCH_LEVEL)
+RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-${_RUBY_PATCH_LEVEL}
 .else
 RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
 .endif
@@ -52,6 +55,18 @@ PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 			RUBY_SHLIBMAJOR=${RUBY_SHLIBMAJOR:Q} \
 			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
 			RUBY_NAME=${RUBY_NAME:Q}
+
+.if !empty(RUBY_EXTNAME)
+DISTINFO_FILE=		${.CURDIR}/../../lang/${RUBY_BASE}/distinfo
+PATCHDIR=		${.CURDIR}/../../lang/${RUBY_BASE}/patches
+do-patch:
+	${_PKG_SILENT}${_PKG_DEBUG}	\
+	cd ${WRKSRC};			\
+	for p in `${EGREP} -l '^\+\+\+ ext/${RUBY_EXTNAME}/' ${PATCHDIR}/patch-*`;do \
+		${SED} -e 's,^+++ ext/${RUBY_EXTNAME}/,+++ ,' $$p | \
+		${PATCH} ${PATCH_ARGS}; \
+	done || ${TRUE}
+.endif
 
 .include "replace.mk"
 
