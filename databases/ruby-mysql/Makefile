@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2009/10/17 06:59:26 taca Exp $
+# $NetBSD: Makefile,v 1.31 2010/09/10 04:34:12 taca Exp $
 #
 
-DISTNAME=	mysql-ruby-2.8.1
-PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.8.1
+DISTNAME=	mysql-ruby-2.8.2
+PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.8.2
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/51087/ \
 		http://tmtm.org/downloads/mysql/ruby/
@@ -10,15 +10,15 @@ MASTER_SITES=	http://rubyforge.org/frs/download.php/51087/ \
 MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://www.tmtm.org/en/mysql/ruby/
 COMMENT=	Ruby extension for MySQL
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
-RUBY_HAS_ARCHLIB=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 RUBY_REQD=		1.8.2
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_ARGS+=	--with-mysql-config
 INSTALLATION_DIRS=	${RUBY_DOC}/mysql ${RUBY_EG}/mysql
-PKG_DESTDIR_SUPPORT=	destdir
 
 DOCS=		README.html README_ja.html tommy.css
 
