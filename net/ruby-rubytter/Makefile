@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/09/05 02:18:59 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 07:38:13 taca Exp $
 
 DISTNAME=	rubytter-1.4.1
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +11,5 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.3.6:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.1.3:../../textproc/ruby-json
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
