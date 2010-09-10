@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2009/06/12 23:02:57 minskim Exp $
+$NetBSD: patch-aa,v 1.8 2010/09/10 03:48:40 taca Exp $
+
+* Avoid access nil.
 
 --- lib/rubygems/specification.rb.orig	2009-05-19 17:41:16.000000000 -0700
 +++ lib/rubygems/specification.rb

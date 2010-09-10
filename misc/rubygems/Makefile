@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.31 2010/09/07 17:20:26 taca Exp $
+# $NetBSD: Makefile,v 1.32 2010/09/10 03:48:40 taca Exp $
 
 DISTNAME=	rubygems-1.3.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/60718/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	minskim@NetBSD.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.rubygems.org/
 COMMENT=	Ruby standard for publishing and managing third party libraries
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,12 +18,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 RUBY_REQD=	1.8.7
+RUBY_VERSION=   ${RUBY18_VERSION}
 
 RUBY_VERSION_SUPPORTED= 18
 REPLACE_RUBY_DIRS=	bin
 REPLACE_RUBY_PAT=	[a-z]*
 
-GEM_HOME=	${PREFIX}/lib/ruby/gems/${RUBY_VER_DIR}
 GEM_DOCDIR=	${GEM_HOME}/doc/${DISTNAME}
 
 REQD_DIRS=	${GEM_HOME:H}
@@ -38,7 +39,6 @@ SUBST_FILES.conf=	lib/rubygems/config_file.rb
 SUBST_SED.conf=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
-
 # Generate a dynamic PLIST for the rubygems documentation directory.
 GENERATE_PLIST+=	\
 	${ECHO} "@comment The following lines are automatically generated." && \
@@ -46,17 +46,14 @@ GENERATE_PLIST+=	\
 	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
 		${SORT};
 
-.include "../../lang/ruby/modules.mk"
-
 # Force the Gem repository to be under ${DESTDIR}.  This is harmless
 # because this package depends on no other gems.
 #
-INSTALL_ENV+=		GEM_HOME=${DESTDIR}${GEM_HOME}
-INSTALL_ENV+=		GEM_PATH=${DESTDIR}${GEM_HOME}
+INSTALL_ENV+=		GEM_HOME=${DESTDIR}${PREFIX}/${GEM_HOME}
+INSTALL_ENV+=		GEM_PATH=${DESTDIR}${PREFIX}/${GEM_HOME}
 
 INSTALL_TARGET=		install
 INSTALL_TARGET+=	--vendor
-INSTALL_TARGET+=	--no-format-executable	# "bin/gem", not "bin/gem18"
 .if ${_USE_DESTDIR} != "no"
 INSTALL_TARGET+=	--destdir=${DESTDIR:Q}
 .endif
@@ -68,4 +65,5 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${RUBY} setup.rb ${INSTALL_TARGET}
 
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
