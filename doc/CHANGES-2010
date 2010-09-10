@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3314 2010/09/10 09:11:47 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3315 2010/09/10 10:36:44 gson Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4362,3 +4362,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/ruby-tzinfo to 0.3.23 [taca 2010-09-10]
 	Added inputmethod/skk-jisyo-cdb version 201008 [obache 2010-09-10]
 	Added inputmethod/dbskkd-cdb version 2.00 [obache 2010-09-10]
+	Updated misc/py-anita to 1.15 [gson 2010-09-10]
