@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3315 2010/09/10 10:36:44 gson Exp $
+$NetBSD: CHANGES-2010,v 1.3316 2010/09/10 10:58:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4363,3 +4363,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/skk-jisyo-cdb version 201008 [obache 2010-09-10]
 	Added inputmethod/dbskkd-cdb version 2.00 [obache 2010-09-10]
 	Updated misc/py-anita to 1.15 [gson 2010-09-10]
+	Updated www/ap-ruby to 1.3.0 [taca 2010-09-10]
+	Updated www/camping to 2.1 [taca 2010-09-10]
+	Updated www/erubis to 2.6.6 [taca 2010-09-10]
+	Updated www/heel to 2.0.0 [taca 2010-09-10]
