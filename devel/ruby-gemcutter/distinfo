@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/09 12:42:50 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 05:40:31 taca Exp $
 
-SHA1 (gemcutter-0.3.0.gem) = cd3573e43bfde0f65ba9ee1420d9757927bccd39
-RMD160 (gemcutter-0.3.0.gem) = 0b38c6107714ccb53423b4daf51acb964f51ebda
-Size (gemcutter-0.3.0.gem) = 10240 bytes
+SHA1 (gemcutter-0.6.1.gem) = 02b9e92fe60102b33dae4b4d9d7237c9bd024af3
+RMD160 (gemcutter-0.6.1.gem) = ffe38bb0a155735777767bac84f20e61bae6221d
+Size (gemcutter-0.6.1.gem) = 8192 bytes
