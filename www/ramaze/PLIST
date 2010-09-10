@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/19 14:11:03 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/09/10 12:42:12 taca Exp $
 bin/ramaze
-${GEM_HOME}/cache/ramaze-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.mailmap
 ${GEM_LIBDIR}/MANIFEST
@@ -9,9 +9,11 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/benchmark/bench_templates/bench.rb
 ${GEM_LIBDIR}/benchmark/bench_templates/view/large.erb
 ${GEM_LIBDIR}/benchmark/bench_templates/view/large.haml
+${GEM_LIBDIR}/benchmark/bench_templates/view/large.lok
 ${GEM_LIBDIR}/benchmark/bench_templates/view/large.xhtml
 ${GEM_LIBDIR}/benchmark/bench_templates/view/small.erb
 ${GEM_LIBDIR}/benchmark/bench_templates/view/small.haml
+${GEM_LIBDIR}/benchmark/bench_templates/view/small.lok
 ${GEM_LIBDIR}/benchmark/bench_templates/view/small.xhtml
 ${GEM_LIBDIR}/benchmark/results.txt
 ${GEM_LIBDIR}/benchmark/run.rb
@@ -127,6 +129,7 @@ ${GEM_LIBDIR}/examples/app/wikore/src/model.rb
 ${GEM_LIBDIR}/examples/app/wikore/start.rb
 ${GEM_LIBDIR}/examples/app/wikore/view/index.xhtml
 ${GEM_LIBDIR}/examples/app/wiktacular/README
+${GEM_LIBDIR}/examples/app/wiktacular/layout/application.xhtml
 ${GEM_LIBDIR}/examples/app/wiktacular/mkd/link/2007-07-20_19-45-51.mkd
 ${GEM_LIBDIR}/examples/app/wiktacular/mkd/link/current.mkd
 ${GEM_LIBDIR}/examples/app/wiktacular/mkd/main/2007-07-20_16-31-33.mkd
@@ -148,10 +151,9 @@ ${GEM_LIBDIR}/examples/app/wiktacular/spec/wiktacular.rb
 ${GEM_LIBDIR}/examples/app/wiktacular/src/controller.rb
 ${GEM_LIBDIR}/examples/app/wiktacular/src/model.rb
 ${GEM_LIBDIR}/examples/app/wiktacular/start.rb
-${GEM_LIBDIR}/examples/app/wiktacular/template/edit.xhtml
-${GEM_LIBDIR}/examples/app/wiktacular/template/html_layout.xhtml
-${GEM_LIBDIR}/examples/app/wiktacular/template/index.xhtml
-${GEM_LIBDIR}/examples/app/wiktacular/template/new.xhtml
+${GEM_LIBDIR}/examples/app/wiktacular/view/edit.xhtml
+${GEM_LIBDIR}/examples/app/wiktacular/view/index.xhtml
+${GEM_LIBDIR}/examples/app/wiktacular/view/new.xhtml
 ${GEM_LIBDIR}/examples/basic/element.rb
 ${GEM_LIBDIR}/examples/basic/gestalt.rb
 ${GEM_LIBDIR}/examples/basic/hello.rb
@@ -180,6 +182,7 @@ ${GEM_LIBDIR}/examples/templates/template_ezamar.rb
 ${GEM_LIBDIR}/examples/templates/template_haml.rb
 ${GEM_LIBDIR}/examples/templates/template_liquid.rb
 ${GEM_LIBDIR}/examples/templates/template_markaby.rb
+${GEM_LIBDIR}/examples/templates/template_mustache.rb
 ${GEM_LIBDIR}/examples/templates/template_nagoro.rb
 ${GEM_LIBDIR}/examples/templates/template_redcloth.rb
 ${GEM_LIBDIR}/examples/templates/template_remarkably.rb
@@ -187,6 +190,7 @@ ${GEM_LIBDIR}/examples/templates/template_tenjin.rb
 ${GEM_LIBDIR}/examples/templates/view/external.haml
 ${GEM_LIBDIR}/examples/templates/view/external.liquid
 ${GEM_LIBDIR}/examples/templates/view/external.mab
+${GEM_LIBDIR}/examples/templates/view/external.mt
 ${GEM_LIBDIR}/examples/templates/view/external.nag
 ${GEM_LIBDIR}/examples/templates/view/external.redcloth
 ${GEM_LIBDIR}/examples/templates/view/external.rem
@@ -338,7 +342,9 @@ ${GEM_LIBDIR}/lib/ramaze/view/gestalt.rb
 ${GEM_LIBDIR}/lib/ramaze/view/haml.rb
 ${GEM_LIBDIR}/lib/ramaze/view/less.rb
 ${GEM_LIBDIR}/lib/ramaze/view/liquid.rb
+${GEM_LIBDIR}/lib/ramaze/view/lokar.rb
 ${GEM_LIBDIR}/lib/ramaze/view/maruku.rb
+${GEM_LIBDIR}/lib/ramaze/view/mustache.rb
 ${GEM_LIBDIR}/lib/ramaze/view/nagoro.rb
 ${GEM_LIBDIR}/lib/ramaze/view/nagoro/render_partial.rb
 ${GEM_LIBDIR}/lib/ramaze/view/redcloth.rb
@@ -358,16 +364,19 @@ ${GEM_LIBDIR}/spec/examples/element.rb
 ${GEM_LIBDIR}/spec/examples/hello.rb
 ${GEM_LIBDIR}/spec/examples/helpers/httpdigest.rb
 ${GEM_LIBDIR}/spec/examples/linking.rb
+${GEM_LIBDIR}/spec/examples/misc/sequel_scaffolding.rb
 ${GEM_LIBDIR}/spec/examples/simple.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_erubis.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_ezamar.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_haml.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_liquid.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_markaby.rb
+${GEM_LIBDIR}/spec/examples/templates/template_mustache.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_nagoro.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_redcloth.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_remarkably.rb
 ${GEM_LIBDIR}/spec/examples/templates/template_tenjin.rb
+${GEM_LIBDIR}/spec/examples/todolist.rb
 ${GEM_LIBDIR}/spec/helper.rb
 ${GEM_LIBDIR}/spec/ramaze/action/render.rb
 ${GEM_LIBDIR}/spec/ramaze/action/view/bar.xhtml
@@ -473,6 +482,12 @@ ${GEM_LIBDIR}/spec/ramaze/view/less/file.css.less
 ${GEM_LIBDIR}/spec/ramaze/view/liquid.rb
 ${GEM_LIBDIR}/spec/ramaze/view/liquid/external.liquid
 ${GEM_LIBDIR}/spec/ramaze/view/liquid/sum.liquid
+${GEM_LIBDIR}/spec/ramaze/view/lokar.rb
+${GEM_LIBDIR}/spec/ramaze/view/lokar/external.lok
+${GEM_LIBDIR}/spec/ramaze/view/lokar/sum.lok
+${GEM_LIBDIR}/spec/ramaze/view/mustache.rb
+${GEM_LIBDIR}/spec/ramaze/view/mustache/external.mt
+${GEM_LIBDIR}/spec/ramaze/view/mustache/sum.mt
 ${GEM_LIBDIR}/spec/ramaze/view/nagoro.rb
 ${GEM_LIBDIR}/spec/ramaze/view/nagoro/external.nag
 ${GEM_LIBDIR}/spec/ramaze/view/nagoro/sum.nag
@@ -525,4 +540,4 @@ ${GEM_LIBDIR}/tasks/setup.rake
 ${GEM_LIBDIR}/tasks/todo.rake
 ${GEM_LIBDIR}/tasks/traits.rake
 ${GEM_LIBDIR}/tasks/yard.rake
-${GEM_HOME}/specifications/ramaze-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
