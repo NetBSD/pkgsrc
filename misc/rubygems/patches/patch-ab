@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.10 2009/06/10 21:44:31 minskim Exp $
+$NetBSD: patch-ab,v 1.11 2010/09/10 03:48:40 taca Exp $
+
+Add install_root option for pkgsrc's rubygems support.
 
 --- lib/rubygems/dependency_installer.rb.orig	2009-03-04 17:07:04.000000000 -0800
 +++ lib/rubygems/dependency_installer.rb

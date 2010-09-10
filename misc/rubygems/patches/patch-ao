@@ -1,0 +1,34 @@
+$NetBSD: patch-ao,v 1.1 2010/09/10 03:48:40 taca Exp $
+
+Don't hard code config file's path for gem.
+
+--- lib/rubygems/config_file.rb.orig	2009-06-25 21:37:14.000000000 +0000
++++ lib/rubygems/config_file.rb
+@@ -29,26 +29,7 @@ class Gem::ConfigFile
+ 
+   PLATFORM_DEFAULTS = {}
+ 
+-  system_config_path =
+-    begin
+-      require 'Win32API'
+-
+-      CSIDL_COMMON_APPDATA = 0x0023
+-      path = 0.chr * 260
+-      if RUBY_VERSION > '1.9' then
+-        SHGetFolderPath = Win32API.new 'shell32', 'SHGetFolderPath', 'PLPLP',
+-                                       'L', :stdcall
+-        SHGetFolderPath.call nil, CSIDL_COMMON_APPDATA, nil, 1, path
+-      else
+-        SHGetFolderPath = Win32API.new 'shell32', 'SHGetFolderPath', 'LLLLP',
+-                                       'L'
+-        SHGetFolderPath.call 0, CSIDL_COMMON_APPDATA, 0, 1, path
+-      end
+-
+-      path.strip
+-    rescue LoadError
+-      '/etc'
+-    end
++  system_config_path = '@PKG_SYSCONFDIR@'
+ 
+   SYSTEM_WIDE_CONFIG_FILE = File.join system_config_path, 'gemrc'
+ 

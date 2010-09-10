@@ -1,12 +1,14 @@
-$NetBSD: patch-ac,v 1.4 2009/06/10 21:44:31 minskim Exp $
+$NetBSD: patch-ac,v 1.5 2010/09/10 03:48:40 taca Exp $
 
---- lib/rubygems/install_update_options.rb.orig	2009-03-13 16:01:10.000000000 -0700
+Add install_root option for pkgsrc's rubygems support.
+
+--- lib/rubygems/install_update_options.rb.orig	2009-06-22 22:54:36.000000000 +0000
 +++ lib/rubygems/install_update_options.rb
 @@ -34,6 +34,12 @@ module Gem::InstallUpdateOptions
        options[:bin_dir] = File.expand_path(value)
      end
  
-+    add_option(:"Install", '-B', '--install-root DIR',
++    add_option(:"Install/Update", '-B', '--install-root DIR',
 +               'Root directory for gem files on install') do |value, options|
 +      options[:install_root] = File.expand_path(value)
 +      Gem.ensure_gem_subdirectories File.join options[:install_root], Gem.dir
