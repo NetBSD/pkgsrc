@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3317 2010/09/10 13:39:55 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3318 2010/09/10 14:00:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4331,7 +4331,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/ruby-mime-types to 1.16 [taca 2010-09-10]
 	Updated mail/ruby-tmail to 1.2.7.1 [taca 2010-09-10]
 	Updated textproc/oniguruma to 5.9.2 [taca 2010-09-10]
-	Updated misc/ruby-columnize to 0.3.1nb1 [taca 2010-09-10]
+	Updated misc/ruby-columnize to 0.3.1 [taca 2010-09-10]
 	Updated misc/ruby-configuration to 1.1.0 [taca 2010-09-10]
 	Updated misc/ruby-daemons to 1.1.0 [taca 2010-09-10]
 	Updated misc/ruby-launchy to 0.3.7 [taca 2010-09-10]
@@ -4383,3 +4383,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/termtter to 1.9.0 [taca 2010-09-10]
 	Updated www/thoth to 0.2.1 [taca 2010-09-10]
 	Updated www/webby to 0.9.4 [taca 2010-09-10]
+	Updated devel/ruby-logging to 1.4.3 [taca 2010-09-10]
+	Updated www/ruby-mechanize to 1.0.0 [taca 2010-09-10]
