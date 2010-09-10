@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9682 2010/09/10 20:29:53 joerg Exp $
+$NetBSD: TODO,v 1.9683 2010/09/10 21:25:46 joerg Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flpsed-0.4.4
 	o fluidsynth-1.1.2
 	o font-adobe-utopia-type1-1.0.2
-	o font-alias-1.0.2
 	o font-misc-misc-1.1.0
 	o fotoxx-10.9
 	o frama-c-20100401
