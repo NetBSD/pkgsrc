@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3321 2010/09/10 18:39:13 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3322 2010/09/10 18:43:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4388,3 +4388,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/sudo to 1.7.4p4 [spz 2010-09-10]
 	Updated x11/xmessage to 1.0.3 [joerg 2010-09-10]
 	Updated x11/libXau to 1.0.6 [joerg 2010-09-10]
+	Updated x11/libXcomposite to 0.4.2 [joerg 2010-09-10]
