@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3290 2010/09/10 04:51:58 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3291 2010/09/10 05:22:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4274,3 +4274,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-postgres-pr to 0.6.3 [taca 2010-09-10]
 	Updated databases/ruby-sequel to 3.15.0 [taca 2010-09-10]
 	Removed databases/ruby-sequel-core [taca 2010-09-10]
+	Updated www/p5-Rose-URI to 1.000 [sno 2010-09-10]
