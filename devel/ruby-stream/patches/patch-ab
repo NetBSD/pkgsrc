@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/09/10 06:28:43 taca Exp $
+
+Correct URL which is strictly checked by RubyGems.
+
+--- ../stream-0.5.gemspec.orig	2010-09-07 04:34:21.000000000 +0000
++++ ../stream-0.5.gemspec
+@@ -27,7 +27,7 @@ files: 
+ - examples/examples.rb
+ - examples/streamtester.rb
+ has_rdoc: true
+-homepage: rgl.rubyforge.org
++homepage: http://rgl.rubyforge.org
+ licenses: 
+ post_install_message: 
+ rdoc_options: 
