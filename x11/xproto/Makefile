@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2010/01/15 18:03:32 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2010/09/10 20:07:29 joerg Exp $
 #
 
-DISTNAME=		xproto-7.0.16
+DISTNAME=		xproto-7.0.18
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X protocol and ancillary headers from Xorg X11
+LICENSE=		mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
