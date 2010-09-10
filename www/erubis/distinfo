@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/04/04 15:22:47 jlam Exp $
+$NetBSD: distinfo,v 1.3 2010/09/10 10:53:49 taca Exp $
 
-SHA1 (erubis-2.5.0.gem) = 9fd758055eadbceba77d59d2ac01f0100b30ab9d
-RMD160 (erubis-2.5.0.gem) = 35e0a01fc6804ca55d33a540b003ca57daeab73b
-Size (erubis-2.5.0.gem) = 157696 bytes
+SHA1 (erubis-2.6.6.gem) = f044e9500a272d4fb2e40368c352350bf92f46f5
+RMD160 (erubis-2.6.6.gem) = e3053b862cc6f9b4e28014691708bed80caf1815
+Size (erubis-2.6.6.gem) = 163840 bytes
