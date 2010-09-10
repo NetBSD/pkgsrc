@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:25:46 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 12:30:39 taca Exp $
 
 DISTNAME=	mongrel_console-0.2.1
-PKGNAME=	${DISTNAME:S/_/-/g}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mongrel.rubyforge.org/
+HOMEPAGE=	http://github.com/fauna/mongrel
 COMMENT=	Mongrel & Rails IRB console
+LICENSE=	# unknown
 
-DEPENDS+=	mongrel>=1.0.2:../../www/mongrel
-DEPENDS+=	${RUBY_PKGPREFIX}-gem_plugin>=0.2.3:../../misc/ruby-gem_plugin
+DEPENDS+=	${RUBY_PKGPREFIX}-mongrel>=1.0.2:../../www/mongrel
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

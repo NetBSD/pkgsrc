@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:25:54 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 12:31:33 taca Exp $
 
 DISTNAME=	mongrel_upload_progress-0.2.2
-PKGNAME=	${DISTNAME:S/_/-/g}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mongrel.rubyforge.org/
+HOMEPAGE=	http://github.com/fauna/mongrel
 COMMENT=	Mongrel plugin to track file upload status
+LICENSE=	# unknown
 
-DEPENDS+=	mongrel>=0.3.13.3:../../www/mongrel
-DEPENDS+=	${RUBY_PKGPREFIX}-gem_plugin>=0.2.1:../../misc/ruby-gem_plugin
+DEPENDS+=	${RUBY_PKGPREFIX}-mongrel>=0.3.13.3:../../www/mongrel
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
