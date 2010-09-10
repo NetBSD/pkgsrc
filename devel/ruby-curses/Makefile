@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/06/19 14:36:53 taca Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/10 03:31:12 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
-PKGNAME=		${RUBY_PKGPREFIX}-curses-${RUBY_VERSION_SUFFIX}
+PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_SUFFIX}
+RUBY_EXTNAME=		curses
 CATEGORIES=		devel ruby
 MASTER_SITES=		${MASTER_SITE_RUBY}
 
@@ -12,7 +13,6 @@ COMMENT=		Ruby extension to curses library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/curses
 WRKSRC=			${RUBY_WRKSRC}/ext/curses
