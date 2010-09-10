@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2009/02/15 03:33:02 taca Exp $
+# $NetBSD: Makefile,v 1.15 2010/09/10 08:00:53 taca Exp $
 
 DISTNAME=	amrita-1.0.2
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	textproc ruby www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=amrita/10939/}
@@ -9,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=amrita/10939/}
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://amrita.sourceforge.jp/
 COMMENT=	HTML/XHTML template library for Ruby
+LICENSE=	gnu-gpl-v2 OR ruby-license
 
 CONFLICTS+=	ruby[1-9][0-9]-amrita-*
 
