@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 05:52:47 obache Exp $
+share/doc/font-misc-meltho/COPYING
+share/fonts/X11/OTF/SyrCOMAdiabene.otf
+share/fonts/X11/OTF/SyrCOMAntioch.otf
+share/fonts/X11/OTF/SyrCOMBatnan.otf
+share/fonts/X11/OTF/SyrCOMBatnanBold.otf
+share/fonts/X11/OTF/SyrCOMCtesiphon.otf
+share/fonts/X11/OTF/SyrCOMEdessa.otf
+share/fonts/X11/OTF/SyrCOMJerusalem.otf
+share/fonts/X11/OTF/SyrCOMJerusalemBold.otf
+share/fonts/X11/OTF/SyrCOMJerusalemItalic.otf
+share/fonts/X11/OTF/SyrCOMJerusalemOutline.otf
+share/fonts/X11/OTF/SyrCOMKharput.otf
+share/fonts/X11/OTF/SyrCOMMalankara.otf
+share/fonts/X11/OTF/SyrCOMMardin.otf
+share/fonts/X11/OTF/SyrCOMMardinBold.otf
+share/fonts/X11/OTF/SyrCOMMidyat.otf
+share/fonts/X11/OTF/SyrCOMNisibin.otf
+share/fonts/X11/OTF/SyrCOMNisibinOutline.otf
+share/fonts/X11/OTF/SyrCOMQenNeshrin.otf
+share/fonts/X11/OTF/SyrCOMTalada.otf
+share/fonts/X11/OTF/SyrCOMTurAbdin.otf
+share/fonts/X11/OTF/SyrCOMUrhoy.otf
+share/fonts/X11/OTF/SyrCOMUrhoyBold.otf
