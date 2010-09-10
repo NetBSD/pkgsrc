@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/11/23 13:39:42 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/09/10 06:37:04 taca Exp $
 bin/rubyforge
-${GEM_HOME}/cache/rubyforge-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
@@ -10,4 +10,4 @@ ${GEM_LIBDIR}/lib/rubyforge.rb
 ${GEM_LIBDIR}/lib/rubyforge/client.rb
 ${GEM_LIBDIR}/test/test_rubyforge.rb
 ${GEM_LIBDIR}/test/test_rubyforge_client.rb
-${GEM_HOME}/specifications/rubyforge-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
