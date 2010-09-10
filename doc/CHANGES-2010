@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3303 2010/09/10 06:01:33 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3304 2010/09/10 06:02:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/font-screen-cyrillic version 1.0.2 [obache 2010-09-10]
 	Added fonts/font-sun-misc version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-winitzki-cyrillic version 1.0.1 [obache 2010-09-10]
+	Added fonts/font-xfree86-type1 version 1.0.2 [obache 2010-09-10]
