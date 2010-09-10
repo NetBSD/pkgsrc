@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9674 2010/09/10 19:56:17 joerg Exp $
+$NetBSD: TODO,v 1.9675 2010/09/10 19:59:06 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1349,7 +1349,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
 	o xli-2006.11.10
-	o xlsfonts-1.0.3
 	o xlog-2.0.3
 	o xlsatoms-1.1.0 [unpackaged]
 	o xm7-1020s
