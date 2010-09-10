@@ -1,0 +1,81 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 08:32:29 taca Exp $
+
+Use modern Ruby's API.
+
+--- ext/oregexp.c.orig	2010-08-29 06:22:26.000000000 +0000
++++ ext/oregexp.c
+@@ -120,8 +120,8 @@ static VALUE oregexp_initialize( VALUE s
+    VALUE pattern_str = StringValue( pattern );
+    rb_iv_set( self, "@pattern", pattern_str );
+    rb_iv_set( self, "@options", options );
+-   UChar* pat_ptr = RSTRING(pattern_str)->ptr;
+-   int pat_len = RSTRING(pattern_str)->len;
++   UChar* pat_ptr = RSTRING_PTR(pattern_str);
++   int pat_len = RSTRING_LEN(pattern_str);
+    VALUE rOptions = rb_hash_aref( options, ID2SYM( rb_intern( "options" ) ) );
+    VALUE rEncoding = rb_hash_aref( options, ID2SYM( rb_intern( "encoding" ) ) );
+    VALUE rSyntax = rb_hash_aref( options, ID2SYM( rb_intern( "syntax" ) ) );
+@@ -212,8 +212,8 @@ static VALUE oregexp_match( int argc, VA
+    }
+    
+    VALUE string_str = StringValue( argv[0] );
+-   UChar* str_ptr = RSTRING(string_str)->ptr;
+-   int str_len = RSTRING(string_str)->len;
++   UChar* str_ptr = RSTRING_PTR(string_str);
++   int str_len = RSTRING_LEN(string_str);
+    
+    int begin = 0;
+    int end = str_len;
+@@ -264,8 +264,8 @@ oregexp_append_replacement(pat, src_text
+ {
+     ORegexp 	*oregexp;
+     int32_t  replIdx = 0, name_pos, name_start, name_end ;
+-    int32_t  replacementLength = RSTRING(repl_text)->len;
+-    UChar    *replacementText = RSTRING(repl_text)->ptr;
++    int32_t  replacementLength = RSTRING_LEN(repl_text);
++    UChar    *replacementText = RSTRING_PTR(repl_text);
+     UChar    *replacementEnd  = replacementText + (replacementLength-1);
+     long numDigits = 0;
+     long groupNum  = 0, g_start, g_end;
+@@ -274,8 +274,8 @@ oregexp_append_replacement(pat, src_text
+     const UChar * matchText;
+     long  matchLen;
+     
+-    matchText = RSTRING(src_text)->ptr;
+-    matchLen  = RSTRING(src_text)->len;
++    matchText = RSTRING_PTR(src_text);
++    matchLen  = RSTRING_LEN(src_text);
+     Data_Get_Struct( pat, ORegexp, oregexp );
+     enc = onig_get_encoding( oregexp->reg );
+ 
+@@ -402,7 +402,7 @@ str_mod_check(s, p, len)
+ 	char *p;
+ 	long len;
+ {
+-	if (RSTRING(s)->ptr != p || RSTRING(s)->len != len) {
++	if (RSTRING_PTR(s) != p || RSTRING_LEN(s) != len) {
+ 		rb_raise(rb_eRuntimeError, "string modified");
+ 	}
+ }
+@@ -441,8 +441,8 @@ oregexp_gsub(self, argc, argv,  bang, on
+     Data_Get_Struct( self, ORegexp, oregexp );
+ 
+     VALUE string_str = StringValue( argv[0] );
+-    UChar* str_ptr = RSTRING(string_str)->ptr;
+-    int str_len = RSTRING(string_str)->len;
++    UChar* str_ptr = RSTRING_PTR(string_str);
++    int str_len = RSTRING_LEN(string_str);
+ 
+     beg = onig_search(oregexp->reg, str_ptr, str_ptr + str_len, str_ptr, str_ptr + str_len, region, ONIG_OPTION_NONE);
+ 
+@@ -611,8 +611,8 @@ oregexp_scan(VALUE self, VALUE str, Onig
+     Data_Get_Struct( self, ORegexp, oregexp );
+ 
+     VALUE string_str = StringValue( str );
+-    UChar* str_ptr = RSTRING(string_str)->ptr;
+-    int str_len = RSTRING(string_str)->len;
++    UChar* str_ptr = RSTRING_PTR(string_str);
++    int str_len = RSTRING_LEN(string_str);
+     beg = onig_search(oregexp->reg, str_ptr, str_ptr + str_len, str_ptr, str_ptr + str_len, region, ONIG_OPTION_NONE);
+     if (beg < 0) {
+ 	/* no match */
