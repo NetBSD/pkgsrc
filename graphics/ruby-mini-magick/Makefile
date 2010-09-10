@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/11/23 14:33:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/10 06:51:03 taca Exp $
 
-DISTNAME=	mini_magick-1.2.5
-PKGNAME=	${RUBYGEM_PKGPREFIX}-${DISTNAME:S/_/-/}
+DISTNAME=	mini_magick-2.1
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,9 +11,12 @@ LICENSE=	mit
 
 # MiniMagick uses identify(1) and mogrify(1) from ImageMagick.
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-DEPENDS+=	hoe>=1.5.1:../../devel/hoe
+DEPENDS+=	${RUBY_PKGPREFIX}-subexec>=0.0.4:../../devel/ruby-subexec
+DEPENDS+=	${RUBY_PKGPREFIX}-hoe>=1.5.1:../../devel/hoe
 
-GEM_BUILD=	gemspec
+pre-configure:
+	${RM} -f ${WRKSRC}/.gitignore
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
