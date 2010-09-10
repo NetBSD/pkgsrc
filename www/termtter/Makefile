@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/09 05:58:13 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 13:21:33 taca Exp $
 
 DISTNAME=	termtter-1.9.0
 CATEGORIES=	www
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rubytter>=0.11.0:../../net/ruby-rubytter
 DEPENDS+=	${RUBY_PKGPREFIX}-notify>=0.2.1:../../sysutils/ruby-notify
 DEPENDS+=	${RUBY_PKGPREFIX}-json-pure>=1.1.3:../../textproc/ruby-json-pure
 
-GEM_BUILD=	gemspec
+CONFLICTS+=	ruby[1-9][0-9]-termtter-*
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
