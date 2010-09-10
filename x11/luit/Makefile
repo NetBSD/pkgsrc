@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/11/09 19:31:11 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/10 19:15:54 joerg Exp $
 #
 
-DISTNAME=		luit-1.0.4
+DISTNAME=		luit-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Locale and ISO 2022 support for Unicode terminals
+LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
