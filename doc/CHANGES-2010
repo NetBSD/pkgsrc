@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3299 2010/09/10 05:54:22 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3300 2010/09/10 05:58:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4283,3 +4283,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/font-misc-ethiopic version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-misc-meltho version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-schumacher-misc version 1.1.0 [obache 2010-09-10]
+	Updated mail/p5-Email-Valid to 0.184 [sno 2010-09-10]
