@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.4 2008/04/21 16:33:19 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 13:25:11 taca Exp $
 
-DISTNAME=	thoth-0.1.4
+DISTNAME=	thoth-0.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://thothblog.org/
 COMMENT=	Minimalistic blog engine
+LICENSE=	modified-bsd
 
-DEPENDS+=	erubis>=2.5.0:../../www/erubis
-DEPENDS+=	ramaze>=0.3.9.1:../../www/ramaze
+DEPENDS+=	${RUBY_PKGPREFIX}-ramaze>=2008.06:../../www/ramaze
+DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.6.2:../../www/erubis
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=2.1.2:../../textproc/ruby-builder
 DEPENDS+=	${RUBY_PKGPREFIX}-configuration>=0.0.5:../../misc/ruby-configuration
-DEPENDS+=	${RUBY_PKGPREFIX}-cssmin>=1.0.0:../../www/ruby-cssmin
+DEPENDS+=	${RUBY_PKGPREFIX}-cssmin>=1.0.2:../../www/ruby-cssmin
 DEPENDS+=	${RUBY_PKGPREFIX}-hpricot>=0.6:../../textproc/ruby-hpricot
 DEPENDS+=	${RUBY_PKGPREFIX}-jsmin>=1.0.0:../../www/ruby-jsmin
-DEPENDS+=	${RUBY_PKGPREFIX}-json-pure>=1.1.2:../../textproc/ruby-json-pure
-DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=3.0.4:../../textproc/ruby-redcloth
-DEPENDS+=	${RUBY_PKGPREFIX}-sequel-core>=1.4.0:../../databases/ruby-sequel-core
-DEPENDS+=	${RUBY_PKGPREFIX}-sequel>=1.4.0:../../databases/ruby-sequel
-DEPENDS+=	thin>=0.7.1:../../www/thin
+DEPENDS+=	${RUBY_PKGPREFIX}-json-pure>=1.1.3:../../textproc/ruby-json-pure
+DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=4.0.3:../../textproc/ruby-redcloth
+DEPENDS+=	${RUBY_PKGPREFIX}-sequel>=2.5.0:../../databases/ruby-sequel
+DEPENDS+=	${RUBY_PKGPREFIX}-thin>=0.8.2:../../www/thin
 
-GEM_BUILD=	gemspec
+CONFLICTS+=	ruby[1-9][0-9]-thoth-*
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
