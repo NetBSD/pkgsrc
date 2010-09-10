@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3331 2010/09/10 19:17:17 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3332 2010/09/10 19:20:00 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/libxcb to 1.7 [joerg 2010-09-10]
 	Updated x11/listres to 1.0.2 [joerg 2010-09-10]
 	Updated x11/luit to 1.0.5 [joerg 2010-09-10]
+	Updated x11/videoproto to 2.3.1 [joerg 2010-09-10]

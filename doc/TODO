@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9666 2010/09/10 19:17:17 joerg Exp $
+$NetBSD: TODO,v 1.9667 2010/09/10 19:20:00 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1247,7 +1247,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vera-1.17
 	o vfu-4.09
 	o vicq-0.4.2
-	o videoproto-2.3.1
 	o viewres-1.0.2 [unpackaged]
 	o viewvc-1.1.6
 	o vifm-0.5
