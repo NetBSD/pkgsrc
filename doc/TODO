@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9676 2010/09/10 20:02:17 joerg Exp $
+$NetBSD: TODO,v 1.9677 2010/09/10 20:04:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -316,8 +316,8 @@ Suggested new packages
 	xf86-video-suntcx, xf86-video-v4l, xf86-video-vermilion,
 	xf86-video-voodoo, xf86-video-xgi, xf86-video-xgixp, xf86dga,
 	xgc, xkbevd, xkbprint, xkbutils, xlsatoms, xorg-sgml-doctools,
-	xpr, xpyb, mkcomposecache, xscope, xf86-video-qxl, xinput_calibrator,
-	xf86-input-elographics, xlsfonts, xditview
+	xpr, xpyb, mkcomposecache, xscope, xf86-video-qxl, input_calibrator,
+	xf86-input-elographics, xditview
 
 
 Suggested package updates
@@ -349,7 +349,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.0.1
-	o abcmidi-20100828
+	o abcmidi-20100831
 	o abiword-2.8
 	o abook-0.6.0pre2 [pkg/42672]
 	o accerciser-1.10.1 [GNOME 2.30]
@@ -420,7 +420,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avl-2.0.2a
 	o awesome-3.4.7
 	o baci-20040415
-	o bacula-5.0.3
+	o bacula-5.0.3 [pkg/43850]
 	o balance-3.52
 	o bash-completion-1.1
 	o bbdb-2.35
@@ -470,7 +470,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
-	o climm-0.6.4
+	o climm-0.7.1
 	o clustalw-2.0.12 [pkg/43395]
 	o cmus-2.3.3
 	o colorize-0.3.4
@@ -490,7 +490,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cssc-1.2.0
 	o cups-1.4.4
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsd-1.0.20
+	o cvsd-1.0.21
 	o cygwin_lib-1.5.24.2
 	o dansguardian-2.10.0.3
 	o dante-1.2.1
@@ -624,6 +624,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o geany-0.19
 	o gedit-plugins-2.30.0 [GNOME 2.30]
+	o genius-1.0.11
 	o gentoo-0.15.6
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
@@ -646,6 +647,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-2.30
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.30.2 [GNOME 2.30]
+	o gnome-commander-1.2.8.8
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
@@ -693,6 +695,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-gtk-2.0
 	o gupnp-0.13.5
 	o gwaei-1.4.1
+	o gworkspace-0.8.8
 	o gzip-1.4
 	o hackbot-2.21
 	o hal-0.5.14
@@ -727,6 +730,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o ilmbase-1.0.2
+	o imapsync-1.350
 	o imp-4.3.7
 	o ingo-1.2.4
 	o inkscape-0.48
@@ -782,6 +786,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o krusader-2.0
 	o ktorrent-4.0
 	o ktorrent3-3.3.4
+	o kye-0.9.5
 	o lapack-3.2.1
 	o latd-1.21
 	o latex2rtf-1.9.19
@@ -796,9 +801,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-4.0.10
 	o libX11-1.3.5
-	o libXdamage-1.1.3
 	o libXext-1.1.2
-	o libXfixes-4.0.5
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.21
@@ -837,12 +840,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-base-2.2.10
 	o libusb-1.0
 	o libv4l-0.8.1
+	o libvdpau-0.4.1
 	o libxml++-2.30.1 [GNOME 2.30]
 	o licq-1.3.8
 	o lighttpd-1.4.28
 	o lilypond-2.12.3
 	o links-2.3pre1
-	o listres-1.0.2
 	o lincvs-2.1.4 [now called CrossVC]
 	o listres-1.0.2
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -867,9 +870,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mathomatic-15.2.1
 	o mawk-1.3.4.20100625
-	o mc-4.7.0.8
+	o mc-4.7.0.9
 	o mdocml-1.10.5
 	o mediatomb-0.12.1
+	o meld-1.3.3
 	o memconf-2.9 [pkg/40201]
 	o memtester-4.2.0
 	o merb-1.0.8.1
@@ -973,7 +977,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0a
 	o openttd-1.0.3
 	o open-vm-tools-2010.03.20.243334
-	o opera-10.61
+	o opera-10.62
 	o orca-2.30.2 [GNOME 2.30]
 	o oroborus-2.0.18
 	o ortp-0.16.3
@@ -1006,7 +1010,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
-	o phpmyadmin-3.3.6
+	o phpmyadmin-3.3.7
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1233,8 +1237,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ubs-0.20
 	o ucarp-1.5.1
 	o ucblogo-5.5
-	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]]
+	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o uim-1.6.0
+	o umefont-ttf-0.419 [pkg/43855]
 	o unicap-0.9.8
 	o units-88 [pkg/43742]
 	o ups-nut-2.2.1 [pkgsrc-wip]
@@ -1248,7 +1253,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
-	o viewvc-1.1.6
+	o viewvc-1.1.7
 	o vifm-0.5
 	o vigra-1.7.0
 	o vile-9.8
