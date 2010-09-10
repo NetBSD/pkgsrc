@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3338 2010/09/10 19:49:18 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3339 2010/09/10 19:56:17 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4406,3 +4406,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xinit to 1.2.1 [joerg 2010-09-10]
 	Updated x11/xinput to 1.5.2 [joerg 2010-09-10]
 	Updated x11/xlogo to 1.0.2 [joerg 2010-09-10]
+	Updated x11/xlsclients to 1.1.0 [joerg 2010-09-10]
