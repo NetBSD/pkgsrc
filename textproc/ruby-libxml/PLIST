@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:28 joerg Exp $
-${GEM_HOME}/cache/libxml-ruby-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.6 2010/09/10 08:20:01 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -162,4 +162,4 @@ ${GEM_LIBDIR}/test/tc_xpath_context.rb
 ${GEM_LIBDIR}/test/tc_xpath_expression.rb
 ${GEM_LIBDIR}/test/tc_xpointer.rb
 ${GEM_LIBDIR}/test/test_suite.rb
-${GEM_HOME}/specifications/libxml-ruby-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
