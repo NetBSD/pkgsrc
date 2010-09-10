@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2010/06/11 01:27:58 tonnerre Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/10 07:52:13 taca Exp $
 
 DISTNAME=		puppet-0.25.5
 CATEGORIES=		sysutils
-MASTER_SITES=		http://reductivelabs.com/downloads/gems/
+#MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
 MAINTAINER=		tonnerre@NetBSD.org
-HOMEPAGE=		http://www.reductivelabs.com/projects/puppet/
+HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${RUBY_PKGPREFIX}-facter>=1.3.8:../../sysutils/ruby-facter
-
-GEM_BUILD=		gemspec
 
 PKG_SYSCONFSUBDIR=	puppet
 RCD_SCRIPTS=		puppetd puppetmasterd
@@ -31,7 +29,7 @@ SUBST_FILES.prefix+=	man/man8/puppetrun.8 man/man8/puppet.conf.8
 SUBST_SED.prefix=	-e "s|/etc/puppet|${PKG_SYSCONFDIR}|g"
 SUBST_SED.prefix+=	-e "s|/opt/csw/lib|${PREFIX}/lib|g"
 
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+EGDIR=			share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/puppet.conf ${PKG_SYSCONFDIR}/puppet.conf
 
 ## Since these users are needed only for puppet server,
@@ -49,6 +47,7 @@ CONF_FILES=		${EGDIR}/puppet.conf ${PKG_SYSCONFDIR}/puppet.conf
 #PKG_USERS=			${PUPPET_USER}:${PUPPET_GROUP}
 #PKG_GECOS.${PUPPET_USER}=       Puppet configuration management pseudo-user
 
+PLIST_SUBST+=		EGDIR=${EGDIR}
 PLIST_VARS+=		sunos
 
 BUILD_DEFS+=		VARBASE
@@ -79,17 +78,17 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/puppet.conf			\
-		${DESTDIR}${EGDIR}
+		${DESTDIR}${PREFIX}/${EGDIR}
 .if ${OPSYS} == "SunOS"
 	${INSTALL_DATA} ${WRKSRC}/conf/solaris/smf/puppetd.xml		\
-		${DESTDIR}${EGDIR}/svc
+		${DESTDIR}${PREFIX}/${EGDIR}/svc
 	${INSTALL_DATA} ${WRKSRC}/conf/solaris/smf/puppetmasterd.xml	\
-		${DESTDIR}${EGDIR}/svc
+		${DESTDIR}${PREFIX}/${EGDIR}/svc
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/solaris/smf/svc-puppetd	\
 		${DESTDIR}${PREFIX}/lib/svc/method
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/solaris/smf/svc-puppetmasterd	\
 		${DESTDIR}${PREFIX}/lib/svc/method
 .endif
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

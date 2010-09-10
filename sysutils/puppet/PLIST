@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/06/11 01:27:58 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/09/10 07:52:13 taca Exp $
 bin/filebucket
 bin/pi
 bin/puppet
@@ -1221,7 +1221,7 @@ ${GEM_LIBDIR}/test/util/storage.rb
 ${GEM_LIBDIR}/test/util/subclass_loader.rb
 ${GEM_LIBDIR}/test/util/utiltest.rb
 ${GEM_HOME}/specifications/puppet-${PKGVERSION}.gemspec
-share/examples/puppet/puppet.conf
+${EGDIR}/puppet.conf
 share/examples/rc.d/puppetd
 share/examples/rc.d/puppetmasterd
 ${PLIST.sunos}share/examples/puppet/svc/puppetd.xml
