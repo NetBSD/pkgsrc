@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3329 2010/09/10 19:11:00 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3330 2010/09/10 19:13:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4396,3 +4396,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/glproto to 1.4.12 [joerg 2010-09-10]
 	Updated x11/kbproto to 1.0.5 [joerg 2010-09-10]
 	Updated x11/libXvMC to 1.0.6 [joerg 2010-09-10]
+	Updated x11/libxcb to 1.7 [joerg 2010-09-10]
