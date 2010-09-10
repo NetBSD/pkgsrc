@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2009/11/23 13:45:51 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/09/10 05:00:50 taca Exp $
 bin/autotest
 bin/multigem
 bin/multiruby
 bin/multiruby_setup
 bin/unit_diff
 bin/zentest
-${GEM_HOME}/cache/ZenTest-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
@@ -41,4 +41,4 @@ ${GEM_LIBDIR}/test/test_focus.rb
 ${GEM_LIBDIR}/test/test_unit_diff.rb
 ${GEM_LIBDIR}/test/test_zentest.rb
 ${GEM_LIBDIR}/test/test_zentest_mapping.rb
-${GEM_HOME}/specifications/ZenTest-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
