@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/11 22:56:52 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 06:32:52 taca Exp $
 
-DISTNAME=	thrift_client-0.4.3
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	thrift_client-0.4.6
 CATEGORIES=	devel
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://blog.evanweaver.com/files/doc/fauna/thrift_client/
 COMMENT=	Thrift client wrapper for Ruby
-
-GEM_BUILD=	gemspec
+LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-thrift>=0:../../devel/ruby-thrift
 
 .include "../../devel/libthrift/buildlink3.mk"
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
