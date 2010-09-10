@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/11 20:47:16 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/09/10 07:35:41 taca Exp $
 #
 
 DISTNAME=	dtcp-20060109
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.imasy.or.jp/~ume/ipv6/ \
 MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www.imasy.or.jp/~ume/dtcp/
 COMMENT=	Dynamic Tunnel Configuration Protocol daemon and client
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
