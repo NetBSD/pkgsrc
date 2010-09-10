@@ -1,0 +1,130 @@
+$NetBSD: patch-ab,v 1.1 2010/09/10 08:39:27 taca Exp $
+
+Use moddern Ruby's API.
+
+--- searcher.c.orig	2005-03-29 22:48:09.000000000 +0000
++++ searcher.c
+@@ -27,7 +27,6 @@
+ #include <errno.h>
+ #include "sary.h"
+ #include "ruby.h"
+-#include "version.h"
+ 
+ #define GET_Searcher(obj, dat) Data_Get_Struct(obj, SarySearcher, dat)
+ 
+@@ -81,22 +80,14 @@ rsearcher_initialize(int argc, VALUE *ar
+   
+     rb_scan_args(argc, argv, "11", &file_name, &array_name);
+ 
+-    Check_SafeStr(file_name);
+-#if RUBY_VERSION_CODE >= 180
++    SafeStringValue(file_name);
+     file_name_ptr = StringValuePtr(file_name);
+-#else
+-    file_name_ptr = STR2CSTR(file_name);
+-#endif  
+ 
+     if (array_name == Qnil)
+         searcher = sary_searcher_new(file_name_ptr);
+     else {
+-        Check_SafeStr(array_name);
+-#if RUBY_VERSION_CODE >= 180
++        SafeStringValue(array_name);
+         array_name_ptr = StringValuePtr(array_name);
+-#else
+-        array_name_ptr = STR2CSTR(array_name);
+-#endif  
+         searcher = sary_searcher_new2(file_name_ptr, array_name_ptr);
+     }
+     if (searcher == NULL)
+@@ -132,13 +123,9 @@ rsearcher_search(VALUE klass, VALUE patt
+ 
+     GET_Searcher(klass, searcher);
+ 
+-    Check_SafeStr(pattern);
+-#if RUBY_VERSION_CODE >= 180
++    SafeStringValue(pattern);
+     pat = StringValuePtr(pattern);
+-    len = RSTRING(pattern)->len;
+-#else
+-    pat = str2cstr(pattern, &len);
+-#endif
++    len = RSTRING_LEN(pattern);
+ 
+     if (sary_searcher_search2(searcher, pat, len))
+ 	return Qtrue;
+@@ -157,7 +144,7 @@ rsearcher_multi_search(VALUE klass, VALU
+ 
+     GET_Searcher(klass, searcher);
+ 
+-    len = RARRAY(pattern_array)->len;
++    len = RARRAY_LEN(pattern_array);
+     if (len == 0) {
+       return Qfalse;
+     }
+@@ -165,12 +152,8 @@ rsearcher_multi_search(VALUE klass, VALU
+     pat = ALLOCA_N(char*, len);
+     for (i = 0; i < len; i++) {
+ 	pattern = rb_ary_entry(pattern_array, (long)i);
+-	Check_SafeStr(pattern);
+-#if RUBY_VERSION_CODE >= 180
++	SafeStringValue(pattern);
+         pat[i] = StringValuePtr(pattern);
+-#else
+-	pat[i] = STR2CSTR(pattern);
+-#endif  
+     }
+ 
+     if (sary_searcher_multi_search(searcher, pat, len))
+@@ -188,12 +171,8 @@ rsearcher_isearch(VALUE klass, VALUE pat
+ 
+     GET_Searcher(klass, searcher);
+ 
+-    Check_SafeStr(pattern);
+-#if RUBY_VERSION_CODE >= 180
++    SafeStringValue(pattern);
+     pat = StringValuePtr(pattern);
+-#else
+-    pat = STR2CSTR(pattern);
+-#endif  
+ 
+     if (sary_searcher_isearch(searcher, pat, NUM2INT(len)))
+ 	return Qtrue;
+@@ -223,13 +202,9 @@ rsearcher_icase_search(VALUE klass, VALU
+ 
+     GET_Searcher(klass, searcher);
+ 
+-    Check_SafeStr(pattern);
+-#if RUBY_VERSION_CODE >= 180
++    SafeStringValue(pattern);
+     pat = StringValuePtr(pattern);
+-    len = RSTRING(pattern)->len;
+-#else
+-    pat = str2cstr(pattern, &len);
+-#endif
++    len = RSTRING_LEN(pattern);
+ 
+     if (sary_searcher_icase_search2(searcher, pat, len))
+ 	return Qtrue;
+@@ -273,17 +248,12 @@ rsearcher_get_next_tagged_region(VALUE k
+     if (sary_searcher_count_occurrences(searcher) == 0)
+   	return Qnil;
+ 
+-    Check_SafeStr(start_tag);
+-    Check_SafeStr(end_tag);
+-#if RUBY_VERSION_CODE >= 180
++    SafeStringValue(start_tag);
++    SafeStringValue(end_tag);
+     stag = StringValuePtr(start_tag);
+     etag = StringValuePtr(end_tag);
+-    slen = RSTRING(stag)->len;
+-    elen = RSTRING(etag)->len;
+-#else
+-    stag = rb_str2cstr(start_tag, &slen);
+-    etag = rb_str2cstr(end_tag, &elen);
+-#endif
++    slen = RSTRING_LEN(stag);
++    elen = RSTRING_LEN(etag);
+ 
+     region = sary_searcher_get_next_tagged_region2(searcher, stag, slen,
+ 					    etag, elen, &rlen);
