@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/29 18:02:05 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 08:42:59 taca Exp $
 
-DISTNAME=	will_paginate-2.2.2
+DISTNAME=	will_paginate-2.3.14
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc
+LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/mislav/will_paginate/wikis
 COMMENT=	Pagination for views of model queries
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
