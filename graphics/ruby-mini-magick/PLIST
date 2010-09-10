@@ -1,20 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/23 14:33:24 fhajny Exp $
-${GEM_HOME}/cache/mini_magick-${PKGVERSION}.gem
-${GEM_LIBDIR}/.gitignore
+@comment $NetBSD: PLIST,v 1.4 2010/09/10 06:51:03 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
-${GEM_LIBDIR}/lib/image_temp_file.rb
+${GEM_LIBDIR}/lib/mini_gmagick.rb
 ${GEM_LIBDIR}/lib/mini_magick.rb
-${GEM_LIBDIR}/mini_magick.gemspec
 ${GEM_LIBDIR}/test/actually_a_gif.jpg
 ${GEM_LIBDIR}/test/animation.gif
 ${GEM_LIBDIR}/test/command_builder_test.rb
-${GEM_LIBDIR}/test/image_temp_file_test.rb
+${GEM_LIBDIR}/test/composited.jpg
 ${GEM_LIBDIR}/test/image_test.rb
 ${GEM_LIBDIR}/test/leaves.tiff
 ${GEM_LIBDIR}/test/not_an_image.php
+${GEM_LIBDIR}/test/simple-minus.gif
 ${GEM_LIBDIR}/test/simple.gif
 ${GEM_LIBDIR}/test/trogdor.jpg
-${GEM_HOME}/specifications/mini_magick-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
