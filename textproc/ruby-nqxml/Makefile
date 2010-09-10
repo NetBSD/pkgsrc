@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/02/15 08:24:43 taca Exp $
+# $NetBSD: Makefile,v 1.13 2010/09/10 08:30:42 taca Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nqxml/}
 MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://sourceforge.net/projects/nqxml/
 COMMENT=	XML parser written in pure Ruby
+LICENSE=	ruby-license
 
 NO_BUILD=	yes
 USE_RUBY_INSTALL= yes
