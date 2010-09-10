@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1 2010/09/10 04:52:59 taca Exp $
+
+--- ext/sqlite-api.c.orig	2010-08-27 23:55:51.000000000 +0000
++++ ext/sqlite-api.c
+@@ -270,7 +270,7 @@ static_api_open( VALUE module, VALUE fil
+   Check_Type( file_name, T_STRING );
+   Check_Type( mode,      T_FIXNUM );
+ 
+-  s_file_name = STR2CSTR( file_name );
++  s_file_name = StringValuePtr( file_name );
+   i_mode      = FIX2INT( mode );
+ 
+   db = sqlite_open( s_file_name, i_mode, &errmsg );
+@@ -329,7 +329,7 @@ static_api_compile( VALUE module, VALUE 
+   Check_Type( sql, T_STRING );
+ 
+   result = sqlite_compile( handle,
+-                           STR2CSTR( sql ),
++                           StringValuePtr( sql ),
+                            &sql_tail,
+                            &vm,
+                            &errmsg );
+@@ -545,7 +545,7 @@ static VALUE
+ static_api_complete( VALUE module, VALUE sql )
+ {
+   Check_Type( sql, T_STRING );
+-  return ( sqlite_complete( STR2CSTR( sql ) ) ? Qtrue : Qfalse );
++  return ( sqlite_complete( StringValuePtr( sql ) ) ? Qtrue : Qfalse );
+ }
+ 
+ /**
+@@ -780,8 +780,8 @@ static_api_set_result( VALUE module, VAL
+   {
+     case T_STRING:
+       sqlite_set_result_string( func_ptr,
+-        RSTRING(result)->ptr,
+-        RSTRING(result)->len );
++        RSTRING_PTR(result),
++        RSTRING_LEN(result) );
+       break;
+ 
+     case T_FIXNUM:
+@@ -817,8 +817,8 @@ static_api_set_result_error( VALUE modul
+   GetFunc( func_ptr, func );
+   Check_Type( string, T_STRING );
+ 
+-  sqlite_set_result_error( func_ptr, RSTRING(string)->ptr,
+-    RSTRING(string)->len );
++  sqlite_set_result_error( func_ptr, RSTRING_PTR(string),
++    RSTRING_LEN(string) );
+ 
+   return string;
+ }
+@@ -1188,7 +1188,7 @@ static_raise_db_error2( int code, char *
+   if( *msg ) free( *msg );
+   *msg = NULL;
+ 
+-  static_raise_db_error( code, "%s", STR2CSTR( err ) );
++  static_raise_db_error( code, "%s", StringValuePtr( err ) );
+ }
+ 
+ static void
