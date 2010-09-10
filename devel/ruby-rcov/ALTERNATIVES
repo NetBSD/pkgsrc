@@ -1,0 +1,1 @@
+bin/rcov @PREFIX@/bin/rcov@RUBY_VER@
