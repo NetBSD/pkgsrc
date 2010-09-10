@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:21:13 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 08:06:27 taca Exp $
 
-DISTNAME=	coderay-0.7.4.215
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	coderay-0.9.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://coderay.rubychan.de/
+HOMEPAGE=	http://coderay.rubychan.de
 COMMENT=	Syntax highlighter for Ruby and other languages
+LICENSE=	gnu-lgpl-v2.1
 
-GEM_BUILD=	gemspec
+CONFLICTS+=	ruby[1-9][0-9]-coderay-*
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
