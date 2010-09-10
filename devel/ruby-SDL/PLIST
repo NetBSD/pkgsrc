@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/09/10 05:08:23 taca Exp $
 ${GEM_HOME}/cache/rubysdl-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
@@ -43,12 +43,9 @@ ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/lib/rubysdl_aliases.rb
 ${GEM_LIBDIR}/lib/rubysdl_compatible_ver1.rb
 ${GEM_LIBDIR}/lib/sdl.rb
-${GEM_LIBDIR}/lib/sdl.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/sdl_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/rubysdl.h
 ${GEM_LIBDIR}/rubysdl_cdrom.c
-${GEM_LIBDIR}/rubysdl_const_list.txt
-${GEM_LIBDIR}/rubysdl_doc_old.en.rd
-${GEM_LIBDIR}/rubysdl_doc_old.rd
 ${GEM_LIBDIR}/rubysdl_event.c
 ${GEM_LIBDIR}/rubysdl_event_key.c
 ${GEM_LIBDIR}/rubysdl_image.c
@@ -100,6 +97,7 @@ ${GEM_LIBDIR}/sample/sdlskk.rb
 ${GEM_LIBDIR}/sample/sgetest.rb
 ${GEM_LIBDIR}/sample/stetris.rb
 ${GEM_LIBDIR}/sample/testgl.rb
+${GEM_LIBDIR}/sample/testgl_old.rb
 ${GEM_LIBDIR}/sample/testsprite.rb
 ${GEM_LIBDIR}/sample/transformblit.rb
 ${GEM_HOME}/specifications/rubysdl-${PKGVERSION}.gemspec
