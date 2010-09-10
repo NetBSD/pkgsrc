@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/25 16:18:35 taca Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 20:21:23 joerg Exp $
 
-SHA1 (xvidtune-1.0.1.tar.bz2) = 63ec5ecff8bdef3988bf2612a3694ad7d87d3867
-RMD160 (xvidtune-1.0.1.tar.bz2) = ee0f3cbc5bab15906bca59b664d43f564ba684f1
-Size (xvidtune-1.0.1.tar.bz2) = 87986 bytes
+SHA1 (xvidtune-1.0.2.tar.bz2) = 2f3f821943018c07efd4547afa4313ac92718b1e
+RMD160 (xvidtune-1.0.2.tar.bz2) = 9087b6784b5530b30362c23d866b73dea466d495
+Size (xvidtune-1.0.2.tar.bz2) = 113117 bytes
