@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/09/10 12:52:39 taca Exp $
 
 DISTNAME=	borges-1.1.0
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	www ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/574/ \
@@ -10,6 +9,7 @@ MASTER_SITES=	http://rubyforge.org/frs/download.php/574/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://borges.rubyforge.org/
 COMMENT=	Ruby web application framework
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
