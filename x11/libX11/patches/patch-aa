@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2009/02/21 16:44:29 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2010/09/10 20:28:03 joerg Exp $
 
 Include pthread.h as thread stubs might be macros like on NetBSD.
 
@@ -29,12 +29,3 @@ builds (from GIT).
      freebsd*)
          XTHREAD_CFLAGS="-D_THREAD_SAFE"
          XTHREADLIB="-pthread" ;;
-@@ -340,6 +340,8 @@ else
- fi
- AC_SUBST(XKBPROTO_REQUIRES)
- 
-+AM_CONDITIONAL(CROSS_COMPILING, [ test $cross_compiling = yes ])
-+
- AC_FUNC_MMAP()
- composecache_default=$ac_cv_func_mmap_fixed_mapped
- AC_CHECK_FUNC(nl_langinfo, , [composecache_default=no])
