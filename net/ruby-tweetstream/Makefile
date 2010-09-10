@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/26 10:58:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 07:38:56 taca Exp $
 
 DISTNAME=	tweetstream-1.0.4
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 
 MAINTAINER=	obache@NetBSD.org
@@ -13,7 +12,5 @@ DEPENDS+=	${RUBY_PKGPREFIX}-daemons-[0-9]*:../../misc/ruby-daemons
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter-stream-[0-9]*:../../net/ruby-twitter-stream
 DEPENDS+=	${RUBY_PKGPREFIX}-json-[0-9]*:../../textproc/ruby-json
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
