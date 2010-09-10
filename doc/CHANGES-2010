@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3319 2010/09/10 17:13:38 spz Exp $
+$NetBSD: CHANGES-2010,v 1.3320 2010/09/10 18:35:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4386,3 +4386,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/ruby-logging to 1.4.3 [taca 2010-09-10]
 	Updated www/ruby-mechanize to 1.0.0 [taca 2010-09-10]
 	Updated security/sudo to 1.7.4p4 [spz 2010-09-10]
+	Updated x11/xmessage to 1.0.3 [joerg 2010-09-10]
