@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3293 2010/09/10 05:46:47 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3294 2010/09/10 05:48:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4277,3 +4277,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Rose-URI to 1.000 [sno 2010-09-10]
 	Updated www/p5-Captcha-reCAPTCHA to 0.94 [sno 2010-09-10]
 	Added fonts/font-arabic-misc version 1.0.1 [obache 2010-09-10]
+	Added fonts/font-cronyx-cyrillic version 1.0.1 [obache 2010-09-10]
