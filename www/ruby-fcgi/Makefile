@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.13 2008/04/04 15:30:02 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/10 13:09:17 taca Exp $
 
-DISTNAME=		fcgi-0.8.7
+DISTNAME=		fcgi-0.8.8
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel www
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sugi.nemui.org/prod/ruby-fcgi/
+HOMEPAGE=		http://fcgi.rubyforge.org/wiki/wiki.pl
 COMMENT=		FastCGI interface for Ruby
+LICENSE=		gnu-gpl-v2 OR ruby-license
 
-GEM_BUILD=		gemspec
 CONFIGURE_ARGS+=	--with-fcgi-dir=${BUILDLINK_PREFIX.fcgi:Q}
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
