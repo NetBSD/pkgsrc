@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2010/06/15 13:35:52 obache Exp $
-${GEM_HOME}/cache/json-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.6 2010/09/10 08:18:49 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/COPYING
@@ -119,4 +119,4 @@ ${GEM_LIBDIR}/tests/test_json_rails.rb
 ${GEM_LIBDIR}/tests/test_json_unicode.rb
 ${GEM_LIBDIR}/tools/fuzz.rb
 ${GEM_LIBDIR}/tools/server.rb
-${GEM_HOME}/specifications/json-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
