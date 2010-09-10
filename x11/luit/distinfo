@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/11/09 19:31:11 tnn Exp $
+$NetBSD: distinfo,v 1.4 2010/09/10 19:15:54 joerg Exp $
 
-SHA1 (luit-1.0.4.tar.bz2) = d5f1326017c0cebf62e7e7df2703b3b4998a39bd
-RMD160 (luit-1.0.4.tar.bz2) = cfcf3d5b085caeb5890c0ea7d0e3d5c9aa4af09f
-Size (luit-1.0.4.tar.bz2) = 114787 bytes
+SHA1 (luit-1.0.5.tar.bz2) = 7260feca7db48d8aa80d493b4cbcf6b7c5774d8d
+RMD160 (luit-1.0.5.tar.bz2) = 1ec51b957d6aba52c880b5b322c4957e8cd815c3
+Size (luit-1.0.5.tar.bz2) = 122192 bytes
