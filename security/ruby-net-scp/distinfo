@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/12/08 14:39:14 taca Exp $
+$NetBSD: distinfo,v 1.4 2010/09/10 07:42:48 taca Exp $
 
-SHA1 (ruby-net-scp-20091203/net-scp-1.0.2.gem) = 461274d8d31e772676ec4d8d55d4db61a1def1cb
-RMD160 (ruby-net-scp-20091203/net-scp-1.0.2.gem) = 253ce62413d63df941c9b2d6ac999f5de7c9c8ec
-Size (ruby-net-scp-20091203/net-scp-1.0.2.gem) = 25600 bytes
+SHA1 (net-scp-1.0.3.gem) = fbd38b906c922cbd864ca5ef00c6813afbaba721
+RMD160 (net-scp-1.0.3.gem) = 873b4fc1c03c6f8ff67096f544a812c72e664edc
+Size (net-scp-1.0.3.gem) = 27136 bytes
