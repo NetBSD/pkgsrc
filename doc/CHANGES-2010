@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3295 2010/09/10 05:49:36 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3296 2010/09/10 05:50:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/font-arabic-misc version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-cronyx-cyrillic version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-micro-misc version 1.0.1 [obache 2010-09-10]
+	Added fonts/font-misc-cyrillic version 1.0.1 [obache 2010-09-10]
