@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:25:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/09/10 03:35:58 taca Exp $
 ${RUBY_VENDORARCHLIB}/tcltklib.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/tkutil.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/multi-tk.rb
@@ -9,6 +9,7 @@ ${RUBY_VENDORLIB}/tk/after.rb
 ${RUBY_VENDORLIB}/tk/autoload.rb
 ${RUBY_VENDORLIB}/tk/bgerror.rb
 ${RUBY_VENDORLIB}/tk/bindtag.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tk/busy.rb
 ${RUBY_VENDORLIB}/tk/button.rb
 ${RUBY_VENDORLIB}/tk/canvas.rb
 ${RUBY_VENDORLIB}/tk/canvastag.rb
@@ -22,6 +23,7 @@ ${RUBY_VENDORLIB}/tk/encodedstr.rb
 ${RUBY_VENDORLIB}/tk/entry.rb
 ${RUBY_VENDORLIB}/tk/event.rb
 ${RUBY_VENDORLIB}/tk/font.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tk/fontchooser.rb
 ${RUBY_VENDORLIB}/tk/frame.rb
 ${RUBY_VENDORLIB}/tk/grid.rb
 ${RUBY_VENDORLIB}/tk/image.rb
@@ -216,20 +218,32 @@ ${RUBY_VENDORLIB}/tkextlib/pkg_checker.rb
 ${RUBY_VENDORLIB}/tkextlib/setup.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/autoscroll.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/calendar.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/canvas_sqmap.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/canvas_zoom.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/chatwidget.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/crosshair.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/ctext.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/cursor.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/dateentry.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/datefield.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/diagrams.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/dialog.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/getstring.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/history.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/ico.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/ip_entry.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/khim.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/menuentry.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/ntext.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/panelframe.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/plotchart.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/ruler.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/screenruler.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/scrolledwindow.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/scrollwin.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/setup.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/statusbar.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/style.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/superframe.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/swaplist.rb
@@ -237,6 +251,7 @@ ${RUBY_VENDORLIB}/tkextlib/tcllib/tablelist.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/tablelist_core.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/tablelist_tile.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/tkpiechart.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/toolbar.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/tooltip.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/widget.rb
 ${RUBY_VENDORLIB}/tkextlib/tclx.rb
@@ -263,6 +278,7 @@ ${RUBY_VENDORLIB}/tkextlib/tile/treeview.rb
 ${RUBY_VENDORLIB}/tkextlib/tile/tscale.rb
 ${RUBY_VENDORLIB}/tkextlib/tile/tscrollbar.rb
 ${RUBY_VENDORLIB}/tkextlib/tile/tseparator.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tile/tspinbox.rb
 ${RUBY_VENDORLIB}/tkextlib/tile/tsquare.rb
 ${RUBY_VENDORLIB}/tkextlib/tkDND.rb
 ${RUBY_VENDORLIB}/tkextlib/tkDND/setup.rb
@@ -522,6 +538,7 @@ ${RUBY_EG}/tk/irbtkw.rbw
 ${RUBY_EG}/tk/iso2022-kr.txt
 ${RUBY_EG}/tk/menubar1.rb
 ${RUBY_EG}/tk/menubar2.rb
+${PLIST.ruby19}${RUBY_EG}/tk/menubar3.rb
 ${RUBY_EG}/tk/msgs_rb/README
 ${RUBY_EG}/tk/msgs_rb/cs.msg
 ${RUBY_EG}/tk/msgs_rb/de.msg
