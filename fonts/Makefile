@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2010/09/08 18:33:18 minskim Exp $
+# $NetBSD: Makefile,v 1.161 2010/09/10 06:10:23 obache Exp $
 #
 
 COMMENT=	Fonts
@@ -57,6 +57,7 @@ SUBDIR+=	font-adobe-utopia-100dpi
 SUBDIR+=	font-adobe-utopia-75dpi
 SUBDIR+=	font-adobe-utopia-type1
 SUBDIR+=	font-alias
+SUBDIR+=	font-arabic-misc
 SUBDIR+=	font-bh-100dpi
 SUBDIR+=	font-bh-75dpi
 SUBDIR+=	font-bh-lucidatypewriter-100dpi
@@ -66,16 +67,26 @@ SUBDIR+=	font-bh-type1
 SUBDIR+=	font-bitstream-100dpi
 SUBDIR+=	font-bitstream-75dpi
 SUBDIR+=	font-bitstream-type1
+SUBDIR+=	font-cronyx-cyrillic
 SUBDIR+=	font-cursor-misc
 SUBDIR+=	font-daewoo-misc
 SUBDIR+=	font-dec-misc
 SUBDIR+=	font-ibm-type1
 SUBDIR+=	font-isas-misc
 SUBDIR+=	font-jis-misc
+SUBDIR+=	font-micro-misc
 SUBDIR+=	font-misc-misc
+SUBDIR+=	font-misc-cyrillic
+SUBDIR+=	font-misc-ethiopic
+SUBDIR+=	font-misc-meltho
 SUBDIR+=	font-mutt-misc
+SUBDIR+=	font-schumacher-misc
+SUBDIR+=	font-screen-misc
 SUBDIR+=	font-sony-misc
+SUBDIR+=	font-sun-misc
 SUBDIR+=	font-util
+SUBDIR+=	font-winitzki-cyrillic
+SUBDIR+=	font-xfree86-type1
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
 SUBDIR+=	freefont-ttf
