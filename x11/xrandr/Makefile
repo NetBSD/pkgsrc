@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/11/09 18:27:53 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/10 20:12:01 joerg Exp $
 #
 
-DISTNAME=	xrandr-1.3.2
+DISTNAME=	xrandr-1.3.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Primitive command line interface to RandR extension
+LICENSE=	mit
 
 DEPENDS+=	nickle-[0-9]*:../../math/nickle
 
