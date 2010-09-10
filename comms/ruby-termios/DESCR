@@ -1,1 +1,3 @@
-This is a Ruby extension for termios library.
+Termios module is simple wrapper of termios(3).  It can be included into
+IO-family classes and can extend IO-family objects.  In addition, the methods
+can use as module function.

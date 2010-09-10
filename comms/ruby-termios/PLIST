@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:31:59 joerg Exp $
-${GEM_HOME}/cache/termios-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.10 2010/09/10 04:01:36 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/ChangeLog
-${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README
-${GEM_LIBDIR}/TODO.ja
 ${GEM_LIBDIR}/examples/modem_check0.rb
 ${GEM_LIBDIR}/examples/modem_check1.rb
 ${GEM_LIBDIR}/examples/modem_check2.rb
 ${GEM_LIBDIR}/examples/secret_input1.rb
 ${GEM_LIBDIR}/examples/secret_input2.rb
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/termios.rb
 ${GEM_LIBDIR}/lib/termios.${RUBY_DLEXT}
 ${GEM_LIBDIR}/termios.c
-${GEM_LIBDIR}/termios.rd
 ${GEM_LIBDIR}/test/test0.rb
-${GEM_HOME}/specifications/termios-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
