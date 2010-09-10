@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.4 2010/09/07 17:20:26 taca Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 07:34:34 taca Exp $
 #
 
-DISTNAME=		dnsdoctor-1.0.1
-CATEGORIES=		net
-MASTER_SITES=		http://www.dnsdoctor.org/download/src/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	dnsdoctor-1.0.1
+CATEGORIES=	net
+MASTER_SITES=	http://www.dnsdoctor.org/download/src/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.dnsdoctor.org/
-COMMENT=		DNS zones misconfigurations or inconsistencies diagnostic tool
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.dnsdoctor.org/
+COMMENT=	DNS zones misconfigurations or inconsistencies diagnostic tool
+LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
+DEPENDS+=	ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/dnsdoctor
 
@@ -25,6 +28,9 @@ DDOCEGDIR=		${EGDIR}/dnsdoctor
 DDOCCONFDIR=		${PKG_SYSCONFDIR}/dnsdoctor
 OWN_DIRS=		${PKG_SYSCONFDIR}/dnsdoctor
 
+RUBY_ENCODING_ARG=	-Ku
+REPLACE_RUBY+=		contrib/dig.rb dnsdoctor/zc.rb
+
 DDOC_INSTALLER_RB_ARGS+=	-DRUBY=${RUBY:Q}
 DDOC_INSTALLER_RB_ARGS+=	-DPREFIX=${PREFIX:Q}
 DDOC_INSTALLER_RB_ARGS+=	-DEGDIR=${PREFIX:Q}/${EGDIR:Q}
@@ -38,15 +44,18 @@ CONF_FILES+=	${DDOCEGDIR}/reverse.profile ${DDOCCONFDIR}/reverse.profile
 CONF_FILES+=	${DDOCEGDIR}/rootservers ${DDOCCONFDIR}/rootservers
 CONF_FILES+=	${DDOCEGDIR}/dnsdoctor.conf ${DDOCCONFDIR}/dnsdoctor.conf
 
+MAKE_ENV+=		DESTDIR=${DESTDIR}
+
 do-configure:
 	cd ${WRKSRC} && \
 	${RUBY} ./installer.rb	${DDOC_INSTALLER_RB_ARGS} configure configinfo
 
 do-install:
-	cd ${WRKSRC} &&	\
-	${RUBY} ./installer.rb ${DDOC_INSTALLER_RB_ARGS} all
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+	${RUBY} ${RUBY_ENCODING_ARG} ./installer.rb \
+		${DDOC_INSTALLER_RB_ARGS} all
 	${INSTALL_DATA} ${WRKSRC}/www/dnsdoctor.conf \
-	  ${PREFIX}/${DDOCEGDIR}/httpd-dnsdoctor.conf
+		${DESTDIR}${PREFIX}/${DDOCEGDIR}/httpd-dnsdoctor.conf
 
-.include "../../lang/ruby/rubyversion.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
