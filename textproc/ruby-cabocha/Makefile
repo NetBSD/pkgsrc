@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/19 12:39:53 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/10 08:03:39 taca Exp $
 #
 
 .include "../../textproc/cabocha/Makefile.common"
 
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES+=	ruby
 
 COMMENT=	CaboCha ruby module
@@ -25,6 +24,7 @@ pre-configure:
 		${WRKSRC}/ruby/extconf.rb.in > ${WRKSRC}/ruby/extconf.rb
 
 BUILDLINK_API_DEPENDS.cabocha+=	cabocha>=${PKGVERSION_NOREV}
+
 .include "../../textproc/cabocha/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
