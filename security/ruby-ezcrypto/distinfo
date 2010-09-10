@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/01 21:09:47 jlam Exp $
+$NetBSD: distinfo,v 1.2 2010/09/10 07:41:46 taca Exp $
 
-SHA1 (ezcrypto-0.7.gem) = 01e131a89e1c7c3f512893f7ac71fd0ef353b630
-RMD160 (ezcrypto-0.7.gem) = 456ac7dca01993c80dec269ecdc2e63d71a666dd
-Size (ezcrypto-0.7.gem) = 115200 bytes
+SHA1 (ezcrypto-0.7.2.gem) = 523dfa1fcf82d2f02d1098a8dc28c1112afc9a92
+RMD160 (ezcrypto-0.7.2.gem) = 803e027b2213834b1b2594555a1df8a9b733fb9e
+Size (ezcrypto-0.7.2.gem) = 111616 bytes
+SHA1 (patch-aa) = a3af682100240fcba91e44a8ff2191be65bcff2f
