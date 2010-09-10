@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.bg,v 1.1.1.1 2010/07/06 14:45:52 taca Exp $
+@comment $NetBSD: PLIST.bg,v 1.2 2010/09/10 02:27:01 taca Exp $
 ${CT_WEBDIR}/system/modules/backend/languages/bg/.htaccess
 ${CT_WEBDIR}/system/modules/backend/languages/bg/countries.php
 ${CT_WEBDIR}/system/modules/backend/languages/bg/default.php
@@ -22,6 +22,7 @@ ${CT_WEBDIR}/system/modules/backend/languages/bg/tl_settings.php
 ${CT_WEBDIR}/system/modules/backend/languages/bg/tl_style.php
 ${CT_WEBDIR}/system/modules/backend/languages/bg/tl_style_sheet.php
 ${CT_WEBDIR}/system/modules/backend/languages/bg/tl_task.php
+${CT_WEBDIR}/system/modules/backend/languages/bg/tl_theme.php
 ${CT_WEBDIR}/system/modules/backend/languages/bg/tl_undo.php
 ${CT_WEBDIR}/system/modules/backend/languages/bg/tl_user.php
 ${CT_WEBDIR}/system/modules/backend/languages/bg/tl_user_group.php
@@ -37,6 +38,7 @@ ${CT_WEBDIR}/system/modules/comments/languages/bg/.htaccess
 ${CT_WEBDIR}/system/modules/comments/languages/bg/modules.php
 ${CT_WEBDIR}/system/modules/comments/languages/bg/tl_comments.php
 ${CT_WEBDIR}/system/modules/comments/languages/bg/tl_content.php
+${CT_WEBDIR}/system/modules/comments/languages/bg/tl_module.php
 ${CT_WEBDIR}/system/modules/faq/languages/bg/.htaccess
 ${CT_WEBDIR}/system/modules/faq/languages/bg/default.php
 ${CT_WEBDIR}/system/modules/faq/languages/bg/modules.php
