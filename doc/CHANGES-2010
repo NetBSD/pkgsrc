@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3350 2010/09/10 21:25:46 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3351 2010/09/10 22:04:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4419,3 +4419,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/umefont-ttf to 0.419 [wiz 2010-09-10]
 	Updated chat/bsflite to 0.85 [wiz 2010-09-10]
 	Updated fonts/font-alias to 1.0.2 [joerg 2010-09-10]
+	Added print/tex-endfloat version 2.4i [minskim 2010-09-10]
+	Added print/tex-endfloat-doc version 2.4i [minskim 2010-09-10]
