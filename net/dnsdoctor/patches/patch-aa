@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/29 10:00:07 seb Exp $
+$NetBSD: patch-aa,v 1.2 2010/09/10 07:34:35 taca Exp $
 
 --- installer.rb.orig	2004-09-08 12:14:43.000000000 +0000
 +++ installer.rb
-@@ -71,6 +71,7 @@ class Installer
+@@ -65,12 +65,13 @@ class Installer
+ 	ENV['PROGNAME'  ] ||= 'dnsdoctor'
+ 	ENV['HTML_PATH' ] ||= "/#{ENV['PROGNAME']}"
+ 	ENV['ETCDIST'   ] ||= ''
+-	ENV['CHROOT'    ] ||= ''
++	ENV['CHROOT'    ] ||= ENV['DESTDIR']
+ 
+ 	ENV['LIBEXEC'   ] ||= "#{ENV['PREFIX']}/libexec"
  	ENV['BINDIR'    ] ||= "#{ENV['PREFIX']}/bin"
  	ENV['MANDIR'    ] ||= "#{ENV['PREFIX']}/man"
  	ENV['DOCDIR'    ] ||= "#{ENV['PREFIX']}/share/doc"
@@ -24,7 +31,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/29 10:00:07 seb Exp $
  	@ch_confdir    = "#{ENV['CHROOT']}#{@confdir}"
  	@ch_dnsdoctor  = "#{ENV['CHROOT']}#{@dnsdoctor}"
  	@ch_wwwdir     = "#{ENV['CHROOT']}#{@wwwdir}"
-@@ -181,10 +184,10 @@ class Installer
+@@ -141,8 +144,7 @@ class Installer
+     def patch_common
+ 	puts "==> Patching core components"
+ 	dnsdoctor_content = File.readlines(@ch_dnsdoctor)
+-	[   [ /^\#!.*ruby/, "#!#{ENV['RUBY']}" ],
+-	    [ 'DDOC_INSTALL_PATH', "\\1\"#{@installdir}\"" ],
++	[   [ 'DDOC_INSTALL_PATH', "\\1\"#{@installdir}\"" ],
+ 	    [ 'DDOC_CONFIG_DIR', "\\1\"#{ENV['ETCDIR']}/#{ENV['PROGNAME']}\""],
+ 	    [ 'DDOC_LOCALIZATION_DIR', "\\1\"#{@installdir}/locale\"" ],
+ 	    [ 'DDOC_TEST_DIR',  "\\1\"#{@installdir}/test\"" ],
+@@ -181,10 +183,10 @@ class Installer
  	puts
  
  	puts "==> Installing default configuration file"
@@ -39,7 +56,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/29 10:00:07 seb Exp $
  	puts
      end
  
-@@ -217,6 +220,7 @@ class Installer
+@@ -217,6 +219,7 @@ class Installer
  	puts "==> Installing HTML pages"
  	mkdir_p @ch_wwwdir,				:verbose => @verbose
  	Dir["www/*"].each { |entry|
@@ -47,3 +64,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/29 10:00:07 seb Exp $
  	    cp_r entry, @ch_wwwdir,			:verbose => @verbose
  	}
  	puts
+@@ -323,7 +326,7 @@ info = false
+ # Sanity check
+ #
+ rubyver = `#{ENV['RUBY']} --version`
+-m = /^ruby\s+(\d+)\.(\d+)\.(\d+)\s+/.match(rubyver)
++m = /^ruby\s+(\d+)\.(\d+)\.([p0-9]+)\s+/.match(rubyver)
+ if m.nil?
+     $stderr.puts "ERROR: Invalid interpreter: #{ENV['RUBY']}"
+     exit EXIT_ERROR
