@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/09/10 13:25:11 taca Exp $
 bin/thoth
-${GEM_HOME}/cache/thoth-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/bin/thoth
 ${GEM_LIBDIR}/lib/proto/thoth.conf.sample
 ${GEM_LIBDIR}/lib/thoth.rb
 ${GEM_LIBDIR}/lib/thoth/config.rb
 ${GEM_LIBDIR}/lib/thoth/controller/admin.rb
+${GEM_LIBDIR}/lib/thoth/controller/api/comment.rb
+${GEM_LIBDIR}/lib/thoth/controller/api/page.rb
+${GEM_LIBDIR}/lib/thoth/controller/api/post.rb
+${GEM_LIBDIR}/lib/thoth/controller/api/tag.rb
 ${GEM_LIBDIR}/lib/thoth/controller/archive.rb
 ${GEM_LIBDIR}/lib/thoth/controller/comment.rb
 ${GEM_LIBDIR}/lib/thoth/controller/main.rb
@@ -16,15 +20,19 @@ ${GEM_LIBDIR}/lib/thoth/controller/page.rb
 ${GEM_LIBDIR}/lib/thoth/controller/post.rb
 ${GEM_LIBDIR}/lib/thoth/controller/search.rb
 ${GEM_LIBDIR}/lib/thoth/controller/tag.rb
+${GEM_LIBDIR}/lib/thoth/errors.rb
 ${GEM_LIBDIR}/lib/thoth/helper/admin.rb
 ${GEM_LIBDIR}/lib/thoth/helper/cookie.rb
 ${GEM_LIBDIR}/lib/thoth/helper/error.rb
+${GEM_LIBDIR}/lib/thoth/helper/pagination.rb
 ${GEM_LIBDIR}/lib/thoth/helper/sanitize.rb
 ${GEM_LIBDIR}/lib/thoth/helper/wiki.rb
 ${GEM_LIBDIR}/lib/thoth/helper/ysearch.rb
 ${GEM_LIBDIR}/lib/thoth/importer.rb
 ${GEM_LIBDIR}/lib/thoth/importer/pants.rb
 ${GEM_LIBDIR}/lib/thoth/importer/poseidon.rb
+${GEM_LIBDIR}/lib/thoth/migrate/001_create_schema.rb
+${GEM_LIBDIR}/lib/thoth/migrate/002_add_media_size.rb
 ${GEM_LIBDIR}/lib/thoth/model/comment.rb
 ${GEM_LIBDIR}/lib/thoth/model/media.rb
 ${GEM_LIBDIR}/lib/thoth/model/page.rb
@@ -33,11 +41,19 @@ ${GEM_LIBDIR}/lib/thoth/model/tag.rb
 ${GEM_LIBDIR}/lib/thoth/model/tags_posts_map.rb
 ${GEM_LIBDIR}/lib/thoth/monkeypatch/dispatcher/file.rb
 ${GEM_LIBDIR}/lib/thoth/plugin.rb
+${GEM_LIBDIR}/lib/thoth/plugin/thoth_delicious.rb
+${GEM_LIBDIR}/lib/thoth/plugin/thoth_flickr.rb
+${GEM_LIBDIR}/lib/thoth/plugin/thoth_tags.rb
+${GEM_LIBDIR}/lib/thoth/plugin/thoth_twitter.rb
 ${GEM_LIBDIR}/lib/thoth/public/css/admin.css
 ${GEM_LIBDIR}/lib/thoth/public/css/error.css
 ${GEM_LIBDIR}/lib/thoth/public/css/thoth.css
 ${GEM_LIBDIR}/lib/thoth/public/images/admin-sprite.png
 ${GEM_LIBDIR}/lib/thoth/public/images/thoth-sprite.png
+${GEM_LIBDIR}/lib/thoth/public/js/admin/comments.js
+${GEM_LIBDIR}/lib/thoth/public/js/admin/name.js
+${GEM_LIBDIR}/lib/thoth/public/js/admin/tagcomplete.js
+${GEM_LIBDIR}/lib/thoth/public/js/lazyload-min.js
 ${GEM_LIBDIR}/lib/thoth/public/js/thoth.js
 ${GEM_LIBDIR}/lib/thoth/public/robots.txt
 ${GEM_LIBDIR}/lib/thoth/version.rb
@@ -69,6 +85,7 @@ ${GEM_LIBDIR}/lib/thoth/view/page/form.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/page/index.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/page/list.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/page/new.rhtml
+${GEM_LIBDIR}/lib/thoth/view/post/comments.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/post/compact.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/post/delete.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/post/edit.rhtml
@@ -81,5 +98,6 @@ ${GEM_LIBDIR}/lib/thoth/view/search/index.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/sidebar.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/tag/index.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/util/pager.rhtml
+${GEM_LIBDIR}/lib/thoth/view/util/simple_pager.rhtml
 ${GEM_LIBDIR}/lib/thoth/view/util/table_sortheader.rhtml
-${GEM_HOME}/specifications/thoth-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
