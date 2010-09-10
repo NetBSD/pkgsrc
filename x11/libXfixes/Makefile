@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/04/09 08:38:28 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 18:46:08 joerg Exp $
 #
 
-DISTNAME=		libXfixes-4.0.4
+DISTNAME=		libXfixes-4.0.5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xfixes library and extension of X RandR from modular X.org
+LICENSE=		mit
 
 CONFLICTS+=		Xfixes-[0-9]*
 
