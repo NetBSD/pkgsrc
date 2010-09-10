@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/01 03:16:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/09/10 13:20:04 taca Exp $
 bin/staticmatic
-${GEM_HOME}/cache/staticmatic-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
@@ -30,10 +30,7 @@ ${GEM_LIBDIR}/spec/render_spec.rb
 ${GEM_LIBDIR}/spec/rescue_spec.rb
 ${GEM_LIBDIR}/spec/sandbox/test_site/configuration.rb
 ${GEM_LIBDIR}/spec/sandbox/test_site/site/index
-${GEM_LIBDIR}/spec/sandbox/test_site/site/index.html
 ${GEM_LIBDIR}/spec/sandbox/test_site/site/layout_test
-${GEM_LIBDIR}/spec/sandbox/test_site/site/page_with_error
-${GEM_LIBDIR}/spec/sandbox/test_site/site/page_with_partial_error
 ${GEM_LIBDIR}/spec/sandbox/test_site/site/stylesheets/application.css
 ${GEM_LIBDIR}/spec/sandbox/test_site/site/sub_folder/another_sub_folder/index.html
 ${GEM_LIBDIR}/spec/sandbox/test_site/site/sub_folder/another_sub_folder/index.html.html
@@ -57,4 +54,4 @@ ${GEM_LIBDIR}/spec/server_spec.rb
 ${GEM_LIBDIR}/spec/setup_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/template_error_spec.rb
-${GEM_HOME}/specifications/staticmatic-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
