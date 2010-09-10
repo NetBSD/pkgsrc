@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3306 2010/09/10 06:05:26 schnoebe Exp $
+$NetBSD: CHANGES-2010,v 1.3307 2010/09/10 06:14:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4287,5 +4287,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/font-screen-cyrillic version 1.0.2 [obache 2010-09-10]
 	Added fonts/font-sun-misc version 1.0.1 [obache 2010-09-10]
 	Added fonts/font-winitzki-cyrillic version 1.0.1 [obache 2010-09-10]
+	Updated www/p5-Rose-HTML-Objects to 0.607 [sno 2010-09-10]
 	Added fonts/font-xfree86-type1 version 1.0.2 [obache 2010-09-10]
 	Updated net/p5-SNMP_Session to 1.13 [schnoebe 2010-09-10]
+	Updated mail/p5-Email-MessageID to 1.402 [sno 2010-09-10]
