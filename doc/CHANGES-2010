@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3359 2010/09/11 07:31:42 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3360 2010/09/11 07:39:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4431,3 +4431,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/ruby-extlib version 0.9.15 [taca 2010-09-11]
 	Added net/ruby-addressable version 2.2.0 [taca 2010-09-11]
 	Added archivers/ruby-libarchive version 0.1.1 [taca 2010-09-11]
+	Added devel/ruby-uuidtools version 2.1.1 [taca 2010-09-11]
