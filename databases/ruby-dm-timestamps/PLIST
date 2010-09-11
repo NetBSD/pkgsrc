@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 23:52:44 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/dm-timestamps.gemspec
+${GEM_LIBDIR}/lib/dm-timestamps.rb
+${GEM_LIBDIR}/spec/integration/timestamps_spec.rb
+${GEM_LIBDIR}/spec/rcov.opts
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/tasks/ci.rake
+${GEM_LIBDIR}/tasks/local_gemfile.rake
+${GEM_LIBDIR}/tasks/metrics.rake
+${GEM_LIBDIR}/tasks/spec.rake
+${GEM_LIBDIR}/tasks/yard.rake
+${GEM_LIBDIR}/tasks/yardstick.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
