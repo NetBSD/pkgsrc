@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3362 2010/09/11 07:47:36 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3363 2010/09/11 08:26:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4434,3 +4434,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/ruby-uuidtools version 2.1.1 [taca 2010-09-11]
 	Added textproc/ruby-stringex version 1.1.0 [taca 2010-09-11]
 	Updated inputmethod/input-pad to 0.1.2nb1 [obache 2010-09-11]
+	Updated databases/tinycdb to 0.77 [obache 2010-09-11]
