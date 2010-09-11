@@ -1,4 +1,4 @@
-@comment $NetBSD: xorg.xcb-util,v 1.1 2010/09/11 20:26:11 wiz Exp $
+# $NetBSD: xorg.xcb-util,v 1.2 2010/09/11 20:39:22 wiz Exp $
 include/xcb/xcb_atom.h
 include/xcb/xcb_aux.h
 include/xcb/xcb_bitops.h
