@@ -107,3 +107,9 @@ Pullup ticket #3215 - requested by drochner
 graphics/dia: package list fix
 Pullup ticket #3216 - requested by tron
 www/squid31: security update
+Pullup ticket #3218 - requested by tnn
+www/seamonkey: security update
+Pullup ticket #3219 - requested by tnn
+devel/xulrunner: security update
+devel/nspr: security update
+devel/nss: security update
