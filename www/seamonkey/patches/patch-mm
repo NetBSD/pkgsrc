@@ -1,11 +1,11 @@
-$NetBSD: patch-mm,v 1.1 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-mm,v 1.1.4.1 2010/09/11 16:10:03 spz Exp $
 
 Don't link with -lCstd on Solaris when using GCC. From Tim Zingelman.
 part of PR pkg/39085
 
---- mozilla/toolkit/library/Makefile.in.orig	2009-12-02 05:28:58.000000000 +0100
+--- mozilla/toolkit/library/Makefile.in.orig	2010-08-24 21:32:11.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -252,7 +252,14 @@ EXTRA_DSO_LDOPTS += -lbe -ltracker
+@@ -253,7 +253,10 @@ EXTRA_DSO_LDOPTS += -lbe -ltracker
  endif
  
  ifeq ($(OS_ARCH),SunOS)
@@ -14,10 +14,17 @@ part of PR pkg/39085
 +ifndef GNU_CC
 +EXTRA_DSO_LDOPTS += -lCstd
 +endif
-+endif
-+
-+ifeq ($(OS_ARCH),NetBSD)
-+EXTRA_DSO_LDOPTS += -lossaudio
  endif
  
+ ifeq ($(OS_ARCH),AIX)
+@@ -262,6 +265,10 @@ EXTRA_DSO_LDOPTS += -bbigtoc 
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++EXTRA_DSO_LDOPTS += -lossaudio
++endif
++
  ifeq ($(OS_ARCH),WINNT)
+ EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME,shell32 ole32 uuid version winspool comdlg32 imm32 winmm wsock32 msimg32)
+ ifneq (,$(MOZ_DEBUG)$(NS_TRACE_MALLOC))
