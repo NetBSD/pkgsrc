@@ -113,3 +113,5 @@ Pullup ticket #3219 - requested by tnn
 devel/xulrunner: security update
 devel/nspr: security update
 devel/nss: security update
+Pullup ticket #3220 - requested by spz
+security/sudo: security update
