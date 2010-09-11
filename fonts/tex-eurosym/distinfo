@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/08 18:31:34 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/09/11 02:16:39 minskim Exp $
 
-SHA1 (tex-eurosym-17265/eurosym.tar.xz) = 5620b1cd740a05ed7e247b4a09208bac6d26a070
-RMD160 (tex-eurosym-17265/eurosym.tar.xz) = e2aea485a13a11034bb51dfd8385661ac7d9d92b
-Size (tex-eurosym-17265/eurosym.tar.xz) = 139816 bytes
+SHA1 (tex-eurosym-17265-20090910/eurosym.tar.xz) = cac04823dffbb910d3b3ed878a1a141555c4f205
+RMD160 (tex-eurosym-17265-20090910/eurosym.tar.xz) = 258232448415d1474545a61170d97b0c16604d11
+Size (tex-eurosym-17265-20090910/eurosym.tar.xz) = 139816 bytes
