@@ -1,12 +1,12 @@
-$NetBSD: patch-mc,v 1.1 2010/04/26 12:47:08 tnn Exp $
+$NetBSD: patch-mc,v 1.1.2.1 2010/09/11 14:59:16 spz Exp $
 
 Avoid extra file appearing in PLIST on Linux.
 
---- security/nss/lib/freebl/manifest.mn.orig	2010-04-13 22:22:54.000000000 +0000
-+++ security/nss/lib/freebl/manifest.mn
-@@ -72,7 +72,7 @@ endif
+--- security/nss/lib/freebl/config.mk.orig	2010-08-24 21:32:09.000000000 +0000
++++ security/nss/lib/freebl/config.mk
+@@ -68,7 +68,7 @@ else
  
- ifdef FREEBL_NO_DEPEND
+ ifeq ($(FREEBL_NO_DEPEND),1)
  LOWHASH_SRCS = stubs.c nsslowhash.c
 -LOWHASH_EXPORTS = nsslowhash.h
 +#LOWHASH_EXPORTS = nsslowhash.h

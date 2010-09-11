@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22.2.1 2010/07/22 13:23:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.22.2.2 2010/09/11 14:59:16 spz Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -590,6 +590,7 @@ include/xulrunner/nsIContentSerializer.h
 include/xulrunner/nsIContentSink.h
 include/xulrunner/nsIContentSniffer.h
 include/xulrunner/nsIContentURIGrouper.h
+include/xulrunner/nsIContentUtils.h
 include/xulrunner/nsIContentViewer.h
 include/xulrunner/nsIContentViewerContainer.h
 include/xulrunner/nsIContentViewerEdit.h
@@ -1944,7 +1945,6 @@ include/xulrunner/nspr/plbase64.h
 include/xulrunner/nspr/plerror.h
 include/xulrunner/nspr/plgetopt.h
 include/xulrunner/nspr/plhash.h
-include/xulrunner/nspr/plresolv.h
 include/xulrunner/nspr/plstr.h
 include/xulrunner/nspr/pratom.h
 include/xulrunner/nspr/prbit.h
@@ -2067,7 +2067,6 @@ include/xulrunner/pldhash.h
 include/xulrunner/plerror.h
 include/xulrunner/plgetopt.h
 include/xulrunner/plhash.h
-include/xulrunner/plresolv.h
 include/xulrunner/plstr.h
 include/xulrunner/png.h
 include/xulrunner/pngconf.h
