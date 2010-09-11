@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.852 2010/09/02 15:24:05 drochner Exp $
+# $NetBSD: Makefile,v 1.853 2010/09/11 06:56:53 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -493,6 +493,7 @@ SUBDIR+=	rp-pppoe
 SUBDIR+=	rsync
 SUBDIR+=	rtmpdump
 SUBDIR+=	rtorrent
+SUBDIR+=	ruby-addressable
 SUBDIR+=	ruby-amqp
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-icmp
