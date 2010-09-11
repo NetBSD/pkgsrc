@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3364 2010/09/11 08:30:05 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3365 2010/09/11 14:21:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4436,3 +4436,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/input-pad to 0.1.2nb1 [obache 2010-09-11]
 	Updated databases/tinycdb to 0.77 [obache 2010-09-11]
 	Updated inputmethod/dbskkd-cdb to 2.00nb1 [obache 2010-09-11]
+	Updated games/freeciv-share to 2.2.2 [adam 2010-09-11]
+	Updated games/freeciv-client to 2.2.2 [adam 2010-09-11]
+	Updated games/freeciv-server to 2.2.2 [adam 2010-09-11]
