@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3368 2010/09/11 19:48:18 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3369 2010/09/11 20:15:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4441,3 +4441,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/freeciv-server to 2.2.2 [adam 2010-09-11]
 	Updated fonts/dejavu-ttf to 2.32 [jakllsch 2010-09-11]
 	Updated pkgtools/x11-links to 0.52 [tron 2010-09-11]
+	Updated pkgtools/x11-links to 0.53 [wiz 2010-09-11]
