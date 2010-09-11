@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/11 07:29:42 taca Exp $
+
+SHA1 (libarchive-0.1.1.gem) = bfaf5c4d6b8c92da5525156300da7c326f67fcf6
+RMD160 (libarchive-0.1.1.gem) = f939fd4a7071f92c12e7f44d5b34733fdbd8a8c3
+Size (libarchive-0.1.1.gem) = 53760 bytes
