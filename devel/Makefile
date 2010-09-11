@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1396 2010/09/11 06:55:12 taca Exp $
+# $NetBSD: Makefile,v 1.1397 2010/09/11 07:37:09 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1267,6 +1267,7 @@ SUBDIR+=	ruby-termcolor
 SUBDIR+=	ruby-test-spec
 SUBDIR+=	ruby-thrift
 SUBDIR+=	ruby-thrift_client
+SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
 SUBDIR+=	ruby2ruby
 SUBDIR+=	rubyforge
