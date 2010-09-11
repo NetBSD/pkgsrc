@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3365 2010/09/11 14:21:38 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3366 2010/09/11 18:41:37 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4439,3 +4439,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/freeciv-share to 2.2.2 [adam 2010-09-11]
 	Updated games/freeciv-client to 2.2.2 [adam 2010-09-11]
 	Updated games/freeciv-server to 2.2.2 [adam 2010-09-11]
+	Updated fonts/dejavu-ttf to 2.32 [jakllsch 2010-09-11]
