@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.5 2010/02/18 12:32:19 obache Exp $
+# $NetBSD: xorg.freetype2,v 1.6 2010/09/11 20:26:11 wiz Exp $
 #
 bin/freetype-config
 include/freetype2/freetype/config/ftconfig.h
@@ -59,6 +59,5 @@ lib/libfreetype.so.6.3.17
 lib/libfreetype.so.7
 lib/libfreetype.so.7.1
 lib/libfreetype.so.17.0
-lib/libfreetype_pic.a
 lib/pkgconfig/freetype2.pc
 share/aclocal/freetype2.m4
