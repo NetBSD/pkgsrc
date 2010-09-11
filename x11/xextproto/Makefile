@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/09/10 19:25:48 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/11 11:58:38 drochner Exp $
 #
 
 DISTNAME=		xextproto-7.1.2
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		xextensions-[0-9]*
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-xmlto
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xextproto.pc.in
 
 post-install:
