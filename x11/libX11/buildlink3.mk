@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/09/10 20:28:03 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/09/11 18:47:09 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -21,7 +21,11 @@ X11_LDFLAGS+=	-L${BUILDLINK_PREFIX.libX11}/lib
 .include "../../x11/kbproto/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
+
+.if ${X11_TYPE} == "modular" || exists(${X11BASE}/lib/pkgconfig/xcb.pc)
 .include "../../x11/libxcb/buildlink3.mk"
+.endif
+
 .include "../../x11/xproto/buildlink3.mk"
 .endif # LIBX11_BUILDLINK3_MK
 
