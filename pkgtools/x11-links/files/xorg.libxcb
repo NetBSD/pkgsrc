@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.1 2010/09/11 19:11:47 tron Exp $
+# $NetBSD: xorg.libxcb,v 1.2 2010/09/11 19:47:31 tron Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -167,7 +167,6 @@ lib/pkgconfig/xcb-icccm.pc
 lib/pkgconfig/xcb-image.pc
 lib/pkgconfig/xcb-keysyms.pc
 lib/pkgconfig/xcb-property.pc
-lib/pkgconfig/xcb-proto.pc
 lib/pkgconfig/xcb-randr.pc
 lib/pkgconfig/xcb-record.pc
 lib/pkgconfig/xcb-render.pc
