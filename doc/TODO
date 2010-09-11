@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9684 2010/09/11 00:49:44 obache Exp $
+$NetBSD: TODO,v 1.9685 2010/09/11 08:26:19 obache Exp $
 
 Suggested new packages
 ======================
@@ -1209,7 +1209,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tig-0.16
 	o tightvnc-1.5.1
 	o tile-0.7.4
-	o tinycdb-0.77 [pkg/43612]
 	o tinyproxy-1.8.0
 	o tk-8.5.8
 	o tkcvs-8.2.2
