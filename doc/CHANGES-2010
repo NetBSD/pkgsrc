@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3356 2010/09/11 00:49:44 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3357 2010/09/11 01:21:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-algorithm2e-doc version 4.01 [minskim 2010-09-10]
 	Updated print/tex-algorithm2e to 4.01 [minskim 2010-09-10]
 	Updated x11/x11vnc to 0.9.12 [obache 2010-09-11]
+	Updated inputmethod/ibus-chewing to 1.3.7.20100910 [obache 2010-09-11]
