@@ -1,35 +1,27 @@
-$NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
+$NetBSD: patch-ag,v 1.14.6.1 2010/09/11 17:24:16 tron Exp $
 
---- configure.orig	2009-11-25 01:57:27.000000000 +0000
+--- configure.orig	2010-09-06 12:03:39.000000000 +0000
 +++ configure
-@@ -1454,7 +1454,7 @@ Fine tuning of the installation director
-   --bindir=DIR           user executables [EPREFIX/bin]
-   --sbindir=DIR          system admin executables [EPREFIX/sbin]
-   --libexecdir=DIR       program executables [EPREFIX/libexec]
--  --sysconfdir=DIR       read-only single-machine data [etc]
-+  --sysconfdir=DIR       read-only single-machine data [PREFIX/etc]
-   --sharedstatedir=DIR   modifiable architecture-independent data [PREFIX/com]
-   --localstatedir=DIR    modifiable single-machine data [PREFIX/var]
-   --libdir=DIR           object code libraries [EPREFIX/lib]
-@@ -1527,6 +1527,7 @@ Optional Packages:
-   --with-devel            add development options
+@@ -1589,7 +1589,7 @@ Fine tuning of the installation director
+   --bindir=DIR            user executables [EPREFIX/bin]
+   --sbindir=DIR           system admin executables [EPREFIX/sbin]
+   --libexecdir=DIR        program executables [EPREFIX/libexec]
+-  --sysconfdir=DIR        read-only single-machine data [/etc]
++  --sysconfdir=DIR        read-only single-machine data [PREFIX/etc]
+   --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
+   --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
+   --libdir=DIR            object code libraries [EPREFIX/lib]
+@@ -1667,6 +1667,7 @@ Optional Packages:
+   --with-libraries        additional libraries to link with
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
 +  --with-nbsdops          add NetBSD standard options
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR         enable S/Key support
    --with-opie=DIR         enable OPIE support
-@@ -2183,7 +2184,6 @@ else
+@@ -4038,6 +4039,22 @@ $as_echo "$as_me: WARNING: Ignoring unkn
+ esac
  fi
- test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
- test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
--test "$sysconfdir" = '${prefix}/etc' -a X"$with_stow" != X"yes" && sysconfdir='/etc'
- 
- 
- 
-@@ -2396,6 +2396,23 @@ fi
- 
- 
  
 +# Check whether --with-nbsdops or --without-nbsdops was given.
 +if test "${with_nbsdops+set}" = set; then
@@ -47,25 +39,23 @@ $NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
 +esac
 +fi;
 +
-+
+ 
+ 
  # Check whether --with-passwd was given.
- if test "${with_passwd+set}" = set; then
-   withval=$with_passwd; case $with_passwd in
-@@ -14287,7 +14304,7 @@ if test `eval echo '${'$as_ac_Header'}'`
+@@ -14153,7 +14170,7 @@ if test "x$ac_cv_header_login_cap_h" = x
  _ACEOF
-  LOGINCAP_USAGE='[-c class|-] '; LCMAN=""
+  LOGINCAP_USAGE='[-c class|-] '; LCMAN=1
  	case "$OS" in
 -	    freebsd|netbsd)	SUDO_LIBS="${SUDO_LIBS} -lutil"
 +	    dragonfly*|freebsd*|netbsd*)	SUDO_LIBS="${SUDO_LIBS} -lutil"
  	    ;;
  	esac
  
-@@ -21537,6 +21554,8 @@ fi
+@@ -18468,7 +18485,6 @@ test "$libexecdir" = '${exec_prefix}/lib
+ test "$includedir" = '${prefix}/include' && includedir='$(prefix)/include'
+ test "$datarootdir" = '${prefix}/share' && datarootdir='$(prefix)/share'
+ test "$docdir" = '${datarootdir}/doc/${PACKAGE_TARNAME}' && docdir='$(datarootdir)/doc/$(PACKAGE_TARNAME)'
+-test "$sysconfdir" = '${prefix}/etc' -a X"$with_stow" != X"yes" && sysconfdir='/etc'
  
- rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-     AUTH_OBJS="$AUTH_OBJS kerb5.o"
-+fi
-+if test ${with_kerb5-'no'} != "no"; then
-     _LIBS="$LIBS"
-     LIBS="${LIBS} ${SUDO_LIBS}"
+ ac_config_files="$ac_config_files Makefile sudo.man visudo.man sudoers.man sudoers.ldap.man sudoreplay.man sudo_usage.h sudoers"
  

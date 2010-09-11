@@ -1,58 +1,70 @@
-$NetBSD: patch-aa,v 1.23 2010/04/16 15:33:52 taca Exp $
+$NetBSD: patch-aa,v 1.23.2.1 2010/09/11 17:24:16 tron Exp $
 
---- Makefile.in.orig	2010-04-09 21:13:21.000000000 +0000
+--- Makefile.in.orig	2010-09-03 21:43:57.000000000 +0000
 +++ Makefile.in
-@@ -196,7 +196,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
+@@ -205,7 +205,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
  	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $(DEFS) $(OPTIONS) $(srcdir)/sudo_noexec.c
  
- sudo_noexec.la: sudo_noexec.lo
+ libsudo_noexec.la: sudo_noexec.lo
 -	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ sudo_noexec.lo -avoid-version -rpath $(noexecdir)
 +	$(LIBTOOL) --mode=link $(CC) -module $(LDFLAGS) -o $@ sudo_noexec.lo -avoid-version -rpath $(noexecdir)
  
  # Uncomment the following if you want "make distclean" to clean the parser
- @DEV@GENERATED = gram.h gram.c toke.c def_data.c def_data.h
-@@ -403,36 +403,36 @@ sudoers.ldap.cat: sudoers.ldap.man
- @DEV@LICENSE: license.pod
- @DEV@	pod2text -l -i0 $> | sed '1,2d' > $@
+ @DEV@GENERATED = gram.h gram.c toke.c def_data.c def_data.h getdate
+@@ -475,43 +475,43 @@ ChangeLog:
+ 	    hg log --style=changelog -b default --date '<2010-01-18 00:00:00' >> $@; \
+ 	fi
  
--install: install-dirs install-binaries @INSTALL_NOEXEC@ install-sudoers install-man
-+install: install-dirs install-binaries @INSTALL_NOEXEC@ install-man
+-install: install-dirs install-binaries @INSTALL_NOEXEC@ install-sudoers install-doc
++install: install-dirs install-binaries @INSTALL_NOEXEC@ install-doc
  
  install-dirs:
  	$(SHELL) $(srcdir)/mkinstalldirs $(DESTDIR)$(sudodir) \
--	    $(DESTDIR)$(visudodir) $(DESTDIR)$(sudoersdir) \
-+	    $(DESTDIR)$(visudodir) \
- 	    $(DESTDIR)$(mandirsu) $(DESTDIR)$(mandirform) \
- 	    $(DESTDIR)$(noexecdir)
+ 	    $(DESTDIR)$(visudodir) $(DESTDIR)$(noexecdir) \
+-	    $(DESTDIR)$(sudoersdir) $(DESTDIR)$(docdir) \
++	    $(DESTDIR)$(docdir) \
+ 	    $(DESTDIR)$(mandirsu) $(DESTDIR)$(mandirform)
+ 	$(SHELL) $(srcdir)/mkinstalldirs -m 0700 $(DESTDIR)$(timedir)
  
  install-binaries: install-dirs $(PROGS)
--	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
-+	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
+-	$(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -M 04111 sudo $(DESTDIR)$(sudodir)/sudo
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 04111 sudo $(DESTDIR)$(sudodir)/sudo
  	rm -f $(DESTDIR)$(sudodir)/sudoedit
  	ln $(DESTDIR)$(sudodir)/sudo $(DESTDIR)$(sudodir)/sudoedit
--	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
--@SELINUX@	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0111 -s sesh $(DESTDIR)$(libexecdir)/sesh
-+	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
-+@SELINUX@	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 -s sesh $(DESTDIR)$(libexecdir)/sesh
+-	if [ -f sudoreplay ]; then $(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -M 0111 sudoreplay $(DESTDIR)$(sudodir)/sudoreplay; fi
+-	$(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -M 0111 visudo $(DESTDIR)$(visudodir)/visudo
+-	if [ -f sesh ]; then $(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -M 0111 sesh $(DESTDIR)$(libexecdir)/sesh; fi
++	if [ -f sudoreplay ]; then $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 sudoreplay $(DESTDIR)$(sudodir)/sudoreplay; fi
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 visudo $(DESTDIR)$(visudodir)/visudo
++	if [ -f sesh ]; then $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 sesh $(DESTDIR)$(libexecdir)/sesh; fi
  
- install-noexec: install-dirs sudo_noexec.la
--	test -f .libs/$(noexecfile) && $(INSTALL) -O $(install_uid) -G $(install_gid) -M 0755 .libs/$(noexecfile) $(DESTDIR)$(noexecdir)
-+	test -f .libs/$(noexecfile) && $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0755 .libs/$(noexecfile) $(DESTDIR)$(noexecdir)
+ install-noexec: install-dirs libsudo_noexec.la
+-	if [ -f .libs/lib$(noexecfile) ]; then $(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -M 0755 .libs/lib$(noexecfile) $(DESTDIR)$(noexecdir)/$(noexecfile); fi
++	if [ -f .libs/lib$(noexecfile) ]; then $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0755 .libs/lib$(noexecfile) $(DESTDIR)$(noexecdir)/$(noexecfile); fi
  
  install-sudoers: install-dirs
+-	$(INSTALL) -d -O $(sudoers_uid) -G $(sudoers_gid) -M 0750 \
++	$(INSTALL) -d -o $(sudoers_uid) -g $(sudoers_gid) -m 0750 \
+ 	    $(DESTDIR)$(sudoersdir)/sudoers.d
  	test -f $(DESTDIR)$(sudoersdir)/sudoers || \
 -	    $(INSTALL) -O $(sudoers_uid) -G $(sudoers_gid) -M $(sudoers_mode) \
 +	    $(INSTALL) -o $(sudoers_uid) -g $(sudoers_gid) -m $(sudoers_mode) \
- 		$(srcdir)/sudoers $(DESTDIR)$(sudoersdir)/sudoers
+ 		sudoers $(DESTDIR)$(sudoersdir)/sudoers
  
- install-man: install-dirs
+ install-doc: install-dirs ChangeLog
+-	(cd $(srcdir) && for f in ChangeLog HISTORY LICENSE NEWS README TROUBLESHOOTING UPGRADE sample.*; do $(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 $$f $(DESTDIR)$(docdir); done)
+-	@LDAP@(cd $(srcdir) && for f in README.LDAP schema.* sudoers2ldif; do $(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 $$f $(DESTDIR)$(docdir); done)
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
++	(cd $(srcdir) && for f in ChangeLog HISTORY LICENSE NEWS README TROUBLESHOOTING UPGRADE sample.*; do $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 $$f $(DESTDIR)$(docdir); done)
++	@LDAP@(cd $(srcdir) && for f in README.LDAP schema.* sudoers2ldif; do $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 $$f $(DESTDIR)$(docdir); done)
 +	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
  	@rm -f $(DESTDIR)$(mandirsu)/sudoedit.$(mansectsu)
  	ln $(DESTDIR)$(mandirsu)/sudo.$(mansectsu) $(DESTDIR)$(mandirsu)/sudoedit.$(mansectsu)
+-	@REPLAY@$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudoreplay.$(mantype) $(DESTDIR)$(mandirsu)/sudoreplay.$(mansectsu)
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/visudo.$(mantype) $(DESTDIR)$(mandirsu)/visudo.$(mansectsu)
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudoers.$(mantype) $(DESTDIR)$(mandirform)/sudoers.$(mansectform)
 -	@LDAP@$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudoers.ldap.$(mantype) $(DESTDIR)$(mandirform)/sudoers.ldap.$(mansectform)
++	@REPLAY@$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/sudoreplay.$(mantype) $(DESTDIR)$(mandirsu)/sudoreplay.$(mansectsu)
 +	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/visudo.$(mantype) $(DESTDIR)$(mandirsu)/visudo.$(mansectsu)
 +	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/sudoers.$(mantype) $(DESTDIR)$(mandirform)/sudoers.$(mansectform)
 +	@LDAP@$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/sudoers.ldap.$(mantype) $(DESTDIR)$(mandirform)/sudoers.ldap.$(mansectform)
