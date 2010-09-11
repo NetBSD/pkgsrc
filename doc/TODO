@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9683 2010/09/10 21:25:46 joerg Exp $
+$NetBSD: TODO,v 1.9684 2010/09/11 00:49:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -1290,7 +1290,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxGTK28-2.8.11
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
-	o x11vnc-0.9.11 [need newer libVNCServer, not released]
 	o x264-devel-20100904
 	o xanalyser-1.30
 	o xapian-1.2.2

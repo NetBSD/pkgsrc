@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3355 2010/09/10 23:56:51 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3356 2010/09/11 00:49:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4426,3 +4426,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/teTeX3-texmf to 3.0nb28 [minskim 2010-09-10]
 	Added print/tex-algorithm2e-doc version 4.01 [minskim 2010-09-10]
 	Updated print/tex-algorithm2e to 4.01 [minskim 2010-09-10]
+	Updated x11/x11vnc to 0.9.12 [obache 2010-09-11]
