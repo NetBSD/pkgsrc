@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2010/06/02 19:59:37 jakllsch Exp $
+# $NetBSD: Makefile,v 1.16 2010/09/11 18:41:09 jakllsch Exp $
 #
 
-DISTNAME=	dejavu-fonts-ttf-2.31
+DISTNAME=	dejavu-fonts-ttf-2.32
 PKGNAME=        ${DISTNAME:S/fonts-//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
