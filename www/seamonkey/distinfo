@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.50.2.1 2010/07/22 14:31:30 tron Exp $
+$NetBSD: distinfo,v 1.50.2.2 2010/09/11 16:10:03 spz Exp $
 
-SHA1 (seamonkey-2.0.6.source.tar.bz2) = 96e8ef2cc737458b55290c13f5bf1a8d3684fb30
-RMD160 (seamonkey-2.0.6.source.tar.bz2) = 70c64fec2d67c432b14083fe19ed3340b9ddf000
-Size (seamonkey-2.0.6.source.tar.bz2) = 61478578 bytes
+SHA1 (seamonkey-2.0.7.source.tar.bz2) = ec03e359accdd40d0183ee1bef623aeaf7d04b81
+RMD160 (seamonkey-2.0.7.source.tar.bz2) = 6f3fd9ea0352718631fd11c568f869f626782e56
+Size (seamonkey-2.0.7.source.tar.bz2) = 61496455 bytes
 SHA1 (patch-aa) = 0d46562e73fce3fc1bf590ac93a28b2202a8e214
 SHA1 (patch-aa-toplevel) = 458051a1b3318b49124192c6e97cb9ed0d92dead
 SHA1 (patch-ab) = c7a6961362b131f0a39f65355562b115fae3be85
@@ -19,7 +19,7 @@ SHA1 (patch-al) = 893eb0c096f61b52a6299eff1e5ab520014fbda4
 SHA1 (patch-am) = 81bcda476a7b54050ed1ae87bd47cf9de8f19919
 SHA1 (patch-an) = e30362e1a07c6c8e96dc81d134517685c3f19ca9
 SHA1 (patch-ao) = 6307d82a2eb65131908b0d4d05da7433b6cf38d1
-SHA1 (patch-ap) = 78d9944ba37b3d90d0ab9e91fc831949e54ef2ad
+SHA1 (patch-ap) = 3397db3184919afa73767c8c68c6c75c4a0ba33a
 SHA1 (patch-aq) = ac5cd0e83f0c166fae6b033ad960d7820bb7add6
 SHA1 (patch-ar) = dab688f86340bccb80db5531f4e36cb8f50254e4
 SHA1 (patch-as) = 7e283a79231909ab5fb60740b5e36c8c0744e025
@@ -46,7 +46,7 @@ SHA1 (patch-mi) = c49e917409c0542e69f57fe5571a16b6c2e4aa9a
 SHA1 (patch-mj) = 9b28802eb665a7a77e879ec44e9da52e2e79ec8b
 SHA1 (patch-mk) = 3c25934e0c7b9277d96a5635b961e1fb6682ab7b
 SHA1 (patch-ml) = ef7d87fff48f298f4c1ed037439eaf8c7c574f68
-SHA1 (patch-mm) = 04d9105ab0fb520690b58230e90bf6217b439df7
+SHA1 (patch-mm) = 1ef13fbf0872484778cb8edfff769214ea9a39a4
 SHA1 (patch-mn) = beb92ccc59f909f0d4f5f5bb62ad834b55fc94ce
 SHA1 (patch-mp) = 24bac4975548f0a058c2770865706fedb27aa0e6
 SHA1 (patch-na) = b7c0feed9546ca1168c696bf7ea6bbc8ea4564c4
