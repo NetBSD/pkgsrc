@@ -1,14 +1,24 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4.10.1 2010/09/11 17:24:16 tron Exp $
 bin/sudo
 bin/sudoedit
+bin/sudoreplay
 libexec/sudo_noexec.so
 man/man5/sudoers.5
 ${PLIST.ldap}man/man5/sudoers.ldap.5
 man/man8/sudo.8
 man/man8/sudoedit.8
+man/man8/sudoreplay.8
 man/man8/visudo.8
 sbin/visudo
+share/doc/sudo/ChangeLog
+share/doc/sudo/HISTORY
+share/doc/sudo/LICENSE
+share/doc/sudo/NEWS
 share/doc/sudo/README
 share/doc/sudo/README.LDAP
+share/doc/sudo/TROUBLESHOOTING
 share/doc/sudo/UPGRADE
+share/doc/sudo/sample.pam
+share/doc/sudo/sample.sudoers
+share/doc/sudo/sample.syslog.conf
 share/examples/sudo/sudoers
