@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2009/11/01 14:24:32 joerg Exp $
+# $NetBSD: Makefile,v 1.117 2010/09/11 07:30:53 taca Exp $
 #
 
 COMMENT=	Archivers
@@ -68,6 +68,7 @@ SUBDIR+=	ppunpack
 SUBDIR+=	rar
 SUBDIR+=	rox-archive
 SUBDIR+=	ruby-archive-tar-minitar
+SUBDIR+=	ruby-libarchive
 SUBDIR+=	ruby-zip
 SUBDIR+=	rzip
 SUBDIR+=	sapcar
