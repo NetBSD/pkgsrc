@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/09/12 03:30:06 taca Exp $
+# $NetBSD: Makefile,v 1.10 2010/09/12 03:31:10 taca Exp $
 
 DISTNAME=	raggle-0.4.4
 PKGREVISION=	4
@@ -11,6 +11,8 @@ COMMENT=	Console-based screen(1)-aware RSS reader written in Ruby
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ncurses>=0.8:../../devel/ruby-ncurses
+
+CONFLICTS+=	ruby[1-9][0-9]-raggle-[0-9]*
 
 NO_BUILD=	yes
 
