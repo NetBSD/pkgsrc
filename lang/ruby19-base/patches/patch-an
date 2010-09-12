@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+
+* Make sure to load YAML before use it.  When should YAML be loaded?
+
+--- lib/rubygems/specification.rb.orig	2010-04-22 08:24:42.000000000 +0000
++++ lib/rubygems/specification.rb
+@@ -476,6 +476,7 @@ class Gem::Specification
+   # 'input' can be anything that YAML.load() accepts: String or IO.
+ 
+   def self.from_yaml(input)
++    require 'yaml'
+     input = normalize_yaml_input input
+     spec = YAML.load input
+ 
