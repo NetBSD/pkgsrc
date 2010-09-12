@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1397 2010/09/11 07:37:09 taca Exp $
+# $NetBSD: Makefile,v 1.1398 2010/09/12 01:36:44 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1211,6 +1211,7 @@ SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-curses
 SUBDIR+=	ruby-debug
 SUBDIR+=	ruby-debug-base
+SUBDIR+=	ruby-debug-extra
 SUBDIR+=	ruby-debug-ide
 SUBDIR+=	ruby-deprecated
 SUBDIR+=	ruby-dhaka
@@ -1234,8 +1235,10 @@ SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
 SUBDIR+=	ruby-inline
 SUBDIR+=	ruby-linecache
+SUBDIR+=	ruby-little-plugger
 SUBDIR+=	ruby-locale
 SUBDIR+=	ruby-locale-rails
+SUBDIR+=	ruby-lockfile
 SUBDIR+=	ruby-log4r
 SUBDIR+=	ruby-logging
 SUBDIR+=	ruby-memcache
@@ -1262,9 +1265,11 @@ SUBDIR+=	ruby-setup
 SUBDIR+=	ruby-sexp-processor
 SUBDIR+=	ruby-simple_uuid
 SUBDIR+=	ruby-stream
+SUBDIR+=	ruby-subexec
 SUBDIR+=	ruby-subversion
 SUBDIR+=	ruby-termcolor
 SUBDIR+=	ruby-test-spec
+SUBDIR+=	ruby-test-unit
 SUBDIR+=	ruby-thrift
 SUBDIR+=	ruby-thrift_client
 SUBDIR+=	ruby-uuidtools
