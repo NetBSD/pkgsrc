@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/16 07:30:45 rillig Exp $
+$NetBSD: distinfo,v 1.3 2010/09/12 02:53:26 taca Exp $
 
-SHA1 (merb_test_unit-0.9.2.gem) = 1ef630c8c7fd48764311eb6cf35ae5aeecbdb84e
-RMD160 (merb_test_unit-0.9.2.gem) = 22bbd20611e623deef6be33ca4d9f35c4e32f66e
-Size (merb_test_unit-0.9.2.gem) = 7168 bytes
+SHA1 (merb_test_unit-0.9.13.gem) = 7c880f4108b5866664f8aa858e7453ad644efc79
+RMD160 (merb_test_unit-0.9.13.gem) = ec9b66bba940ccd1107cd6c292610c4fd9b90c92
+Size (merb_test_unit-0.9.13.gem) = 6656 bytes
