@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3385 2010/09/12 11:18:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3386 2010/09/12 11:20:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4510,3 +4510,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20100912 [taca 2010-09-12]
 	Updated chat/p5-POE-Component-IRC to 6.40 [wiz 2010-09-12]
 	Updated devel/p5-Method-Signatures-Simple to 0.06 [wiz 2010-09-12]
+	Updated devel/p5-Devel-Cover to 0.71 [wiz 2010-09-12]
