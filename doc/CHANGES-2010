@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3404 2010/09/12 22:39:04 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3405 2010/09/12 22:42:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4530,3 +4530,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/SDL_gfx to 2.0.22 [wiz 2010-09-12]
 	Updated games/rftg to 0.7.5 [wiz 2010-09-12]
 	Updated print/tex-misc to 2010 [minskim 2010-09-12]
+	Updated devel/yasm to 1.1.0 [wiz 2010-09-12]
