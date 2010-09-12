@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3400 2010/09/12 13:01:58 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3401 2010/09/12 17:14:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4525,3 +4525,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CSS-Tiny to 1.19 [wiz 2010-09-12]
 	Updated x11/p5-Tk to 804.029 [wiz 2010-09-12]
 	Updated www/p5-WWW-Mechanize to 1.66 [wiz 2010-09-12]
+	Added print/tex-tetex version 3.0.19496 [minskim 2010-09-12]
+	Added print/tex-tetex-doc version 3.0.19496 [minskim 2010-09-12]
