@@ -1,0 +1,1 @@
+bin/rlock @PREFIX@/bin/rlock@RUBY_VER@
