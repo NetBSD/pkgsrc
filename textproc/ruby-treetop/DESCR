@@ -1,0 +1,18 @@
+Languages can be split into two components, their *syntax* and their
+*semantics*. It's your understanding of English syntax that tells you
+the stream of words "Sleep furiously green ideas colorless" is not a
+valid sentence. Semantics is deeper. Even if we rearrange the above
+sentence to be "Colorless green ideas sleep furiously", which is
+syntactically correct, it remains nonsensical on a semantic
+level. With Treetop, you'll be dealing with languages that are much
+simpler than English, but these basic concepts apply. Your programs
+will need to address both the syntax and the semantics of the
+languages they interpret.
+
+Treetop equips you with powerful tools for each of these two aspects
+of interpreter writing. You'll describe the syntax of your language
+with a *parsing expression grammar*. From this description, Treetop
+will generate a Ruby parser that transforms streams of characters
+written into your language into *abstract syntax trees* representing
+their structure. You'll then describe the semantics of your language
+in Ruby by defining methods on the syntax trees the parser generates.
