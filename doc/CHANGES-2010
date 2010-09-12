@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3394 2010/09/12 12:39:42 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3395 2010/09/12 12:41:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4519,3 +4519,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Test-TCP to 1.06 [wiz 2010-09-12]
 	Updated textproc/p5-PDF-Create to 1.06 [wiz 2010-09-12]
 	Updated textproc/p5-Text-MicroTemplate to 0.18 [wiz 2010-09-12]
+	Updated textproc/p5-XML-Writer to 0.612 [wiz 2010-09-12]
