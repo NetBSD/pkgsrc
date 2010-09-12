@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3391 2010/09/12 12:34:29 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3392 2010/09/12 12:35:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4516,3 +4516,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/p5-Spreadsheet-XLSX to 0.13nb1 [wiz 2010-09-12]
 	Updated math/p5-Statistics-Descriptive to 3.0200 [wiz 2010-09-12]
 	Updated devel/p5-Test-SharedFork to 0.14 [wiz 2010-09-12]
+	Updated net/p5-Test-TCP to 1.06 [wiz 2010-09-12]
