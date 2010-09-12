@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/09/12 04:04:26 taca Exp $
+
+To use rake2thor command, please install these packages:
+
+	devel/ruby-parsetree
+	devel/ruby2ruby
+
+===========================================================================
