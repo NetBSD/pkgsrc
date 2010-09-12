@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/09/12 01:43:31 taca Exp $
+
+Fix script encoding.
+
+--- test/test_pallet.rb.orig	2010-09-03 08:05:33.000000000 +0000
++++ test/test_pallet.rb
+@@ -1,4 +1,4 @@
+-# -*- encoding: utf8 -*-
++# -*- encoding: utf-8 -*-
+ 
+ require File.dirname(__FILE__) + '/helper.rb'
+ 
