@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2010/09/12 02:04:21 taca Exp $
+
+Use modern Ruby's API.
+
+--- ruby/YamCha_wrap.cpp.orig	2004-09-20 09:43:22.000000000 +0000
++++ ruby/YamCha_wrap.cpp
+@@ -769,7 +769,11 @@ struct timeval rb_time_timeval(VALUE);
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
++#ifdef HAVE_RUBY_IO_H
++#include "ruby/io.h"
++#else
+ #include "rubyio.h"
++#endif
+ #ifdef __cplusplus
+ }
+ #endif
+@@ -844,7 +848,7 @@ _wrap_new_Chunker(int argc, VALUE *argv,
+         if (TYPE(argv[0]) != T_ARRAY) {
+             SWIG_exception(SWIG_ValueError, "Expected an array");
+         }
+-        arg1 = RARRAY(argv[0])->len;
++        arg1 = RARRAY_LEN(argv[0]);
+         if (arg1 == 0) {
+             SWIG_exception(SWIG_ValueError, "List must contain at least 1 element");
+         }
+@@ -855,7 +859,7 @@ _wrap_new_Chunker(int argc, VALUE *argv,
+                 free(arg2);
+                 SWIG_exception(SWIG_ValueError, "List items must be strings");
+             }
+-            arg2[i] = STR2CSTR(s);
++            arg2[i] = StringValuePtr(s);
+         }
+         arg2[i] = 0;
+     }
