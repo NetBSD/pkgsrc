@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3371 2010/09/12 00:03:49 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3372 2010/09/12 00:12:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4455,3 +4455,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/ruby-data_objects version 0.10.2 [taca 2010-09-11]
 	Added databases/ruby-do_sqlite3 version 0.10.2 [taca 2010-09-11]
 	Updated databases/ruby-datamapper to 1.0.2 [taca 2010-09-12]
+	Added inputmethod/scim-tables-vietnamese-ext version 0.5.6pl17 [obache 2010-09-12]
