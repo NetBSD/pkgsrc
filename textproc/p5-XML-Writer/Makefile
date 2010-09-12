@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2010/08/21 16:36:17 seb Exp $
+# $NetBSD: Makefile,v 1.21 2010/09/12 12:41:34 wiz Exp $
 #
 
-DISTNAME=	XML-Writer-0.606
+DISTNAME=	XML-Writer-0.612
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5xwr
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -11,6 +10,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://xml-writer-perl.berlios.de/
 COMMENT=	Perl module for writing XML documents
+#LICENSE=	?
+# Redistribution and use in source and compiled forms, with or without
+# modification, are permitted under any circumstances.  No warranty.
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
