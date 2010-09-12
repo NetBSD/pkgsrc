@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/12 01:43:31 taca Exp $
+
+SHA1 (color-japanese-1.0.0.gem) = 7256f40953e0165fdebccd02104f089c2a4fbe9a
+RMD160 (color-japanese-1.0.0.gem) = 7f2b4dd64e3509b2c1717a9664579079c4e689a3
+Size (color-japanese-1.0.0.gem) = 52224 bytes
+SHA1 (patch-aa) = 79e95ade6884992331b40f2a3fe33757d66d8d1e
+SHA1 (patch-ab) = c0065f239829ddd7c3e86d398a4f3fe97b2b0828
+SHA1 (patch-ac) = 95e6740114cdf9793bac9576c35fa65b60d270ab
+SHA1 (patch-ad) = 5f3cbd4c2aaaace57830f3cfc16f2d8c568166b1
+SHA1 (patch-ae) = 9f12f8c9d30ee2694d259ad3af2f591719fc5fc2
+SHA1 (patch-af) = fa93a807efa58dc5197c3483d9a8ff5c42cc5e99
+SHA1 (patch-ag) = d03e9a2c3d5d7e7575d995b9845e28547498daa8
+SHA1 (patch-ah) = db26d3b28fdd393a5e3a0e036d0af5c38a68c3ab
+SHA1 (patch-ai) = d246acf52f9c50db32557248f0eb5a3b4ed1975b
+SHA1 (patch-aj) = 9f755fcb6c041b1c5f7bf0036fb66c832ccfd6c7

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/12 01:43:31 taca Exp $
+
+Add macig comment to specify script encoding.
+
+--- bin/jcolorc.orig	2010-09-03 08:05:33.000000000 +0000
++++ bin/jcolorc
+@@ -1,4 +1,5 @@
+ #!/usr/bin/ruby
++# coding: utf-8
+ 
+ #
+ # == NAME
