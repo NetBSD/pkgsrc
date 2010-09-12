@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3402 2010/09/12 21:54:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3403 2010/09/12 21:56:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4528,3 +4528,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-tetex version 3.0.19496 [minskim 2010-09-12]
 	Added print/tex-tetex-doc version 3.0.19496 [minskim 2010-09-12]
 	Updated devel/SDL_gfx to 2.0.22 [wiz 2010-09-12]
+	Updated games/rftg to 0.7.5 [wiz 2010-09-12]
