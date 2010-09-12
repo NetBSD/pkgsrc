@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/11/10 12:14:55 seb Exp $
+$NetBSD: distinfo,v 1.4 2010/09/12 12:27:08 wiz Exp $
 
-SHA1 (Spreadsheet-XLSX-0.12.tar.gz) = de82dd4e3bb6bcc14f2a95e666601869d1a77bb5
-RMD160 (Spreadsheet-XLSX-0.12.tar.gz) = a274650ebddb988cd1090f0db8d0dae008620d7e
-Size (Spreadsheet-XLSX-0.12.tar.gz) = 50176 bytes
+SHA1 (Spreadsheet-XLSX-0.13-withoutworldwriteables.tar.gz) = 32f695bc0bf8ec9f9b004a10a03624df44dea763
+RMD160 (Spreadsheet-XLSX-0.13-withoutworldwriteables.tar.gz) = ac54a9d94e70c9c84913e708d019874d243e0f55
+Size (Spreadsheet-XLSX-0.13-withoutworldwriteables.tar.gz) = 50308 bytes
