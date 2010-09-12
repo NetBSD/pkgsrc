@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3370 2010/09/11 20:26:23 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3371 2010/09/12 00:03:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4443,3 +4443,15 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/x11-links to 0.52 [tron 2010-09-11]
 	Updated pkgtools/x11-links to 0.53 [wiz 2010-09-11]
 	Updated pkgtools/x11-links to 0.54 [wiz 2010-09-11]
+	Added databases/ruby-dm-core version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-aggregates version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-constraints version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-migrations version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-serializer version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-timestamps version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-transactions version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-types version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-dm-validations version 1.0.2 [taca 2010-09-11]
+	Added databases/ruby-data_objects version 0.10.2 [taca 2010-09-11]
+	Added databases/ruby-do_sqlite3 version 0.10.2 [taca 2010-09-11]
+	Updated databases/ruby-datamapper to 1.0.2 [taca 2010-09-12]
