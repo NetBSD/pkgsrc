@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1 2010/09/12 04:59:12 taca Exp $
+
+Try to correct some name of files.
+
+--- ../ruby-debug-0.10.3.gemspec.orig	2010-09-07 02:13:08.000000000 +0000
++++ ../ruby-debug-0.10.3.gemspec
+@@ -61,7 +61,7 @@ files: 
+ - cli/ruby-debug/commands/display.rb
+ - cli/ruby-debug/commands/eval.rb
+ - cli/ruby-debug/commands/finish.rb
+-- cli/ruby-debug/commands/source.RB
++- cli/ruby-debug/commands/source.rb
+ - cli/ruby-debug/commands/stepping.rb
+ - cli/ruby-debug/commands/threads.rb
+ - cli/ruby-debug/commands/frame.rb
+@@ -71,16 +71,14 @@ files: 
+ - cli/ruby-debug/commands/variables.rb
+ - cli/ruby-debug/commands/edit.rb
+ - cli/ruby-debug/commands/info.rb
+-- cli/ruby-debug/commands/continue.RB.save
+ - cli/ruby-debug/commands/method.rb
+ - cli/ruby-debug/commands/tmate.rb
+-- cli/ruby-debug/commands/disassemble.RB
++- cli/ruby-debug/commands/disassemble.rb
+ - cli/ruby-debug/commands/quit.rb
+ - cli/ruby-debug/commands/breakpoints.rb
+ - cli/ruby-debug/commands/show.rb
+ - cli/ruby-debug/commands/trace.rb
+ - cli/ruby-debug/commands/enable.rb
+-- cli/ruby-debug/commands/source.rb
+ - ChangeLog
+ - bin/rdebug
+ - doc/rdebug.1
