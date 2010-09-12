@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/09/16 06:28:48 taca Exp $
+$NetBSD: distinfo,v 1.5 2010/09/12 00:01:14 taca Exp $
 
-SHA1 (datamapper-0.3.2.gem) = 2a628d93ee183d8831c106cc286ec34e27d2eddb
-RMD160 (datamapper-0.3.2.gem) = 792fe852cfdfe33a8ea8929f4d1de6584225b75b
-Size (datamapper-0.3.2.gem) = 115712 bytes
-SHA1 (patch-aa) = e4a0a1d970b9addaf921c8a63df40b3723739bb6
+SHA1 (datamapper-1.0.2.gem) = bbbf97da8573a667e3fb229bdd1e2f7557324f9e
+RMD160 (datamapper-1.0.2.gem) = 4df33a82728abc13d580817f501aa997ecca61ae
+Size (datamapper-1.0.2.gem) = 5120 bytes
