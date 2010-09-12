@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/12 01:34:20 taca Exp $
+
+SHA1 (test-unit-2.1.1.gem) = 7582c397ba4672545b80beb561c0c33b0b83db54
+RMD160 (test-unit-2.1.1.gem) = 26a4c4cfc9d82aa55e92e1609b8269e5fd77a7b7
+Size (test-unit-2.1.1.gem) = 196608 bytes
+SHA1 (patch-aa) = 94ebb1b1a93df1bb878a00bd17cff1ace3c66a33
