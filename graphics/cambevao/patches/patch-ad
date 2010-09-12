@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/09/12 19:03:45 wiz Exp $
+
+--- Makefile.orig	2004-11-20 14:04:33.000000000 +0000
++++ Makefile
+@@ -14,7 +14,7 @@ RM      = rm -f
+ INSTALL = /usr/bin/install -c -s -o root -g wheel -m 555
+ CFLAGS  = -Wall -O2 -I$(includedir) -DPROGRAM=\"$(PROGRAM)\" -DMAX_CONN=3
+ # CFLAGS  = -Wall -g -I$(includedir) -DPROGRAM=\"$(PROGRAM)\" -DMAX_CONN=3
+-LDFLAGS =  -L$(libdir) -Wl,-R$(libdir)
++LDFLAGS =  -L$(libdir) -Wl,-R$(libdir) -L$(EXPAT_PATH) -Wl,-R$(EXPAT_PATH)
+ LDLIBS  = -lexpat -ljpeg -lutil -lm
+ #this for FreeBSD
+ #LDLIBS  = -lexpat -ljpeg -lm
