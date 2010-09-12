@@ -1,0 +1,6 @@
+Thor is a simple and efficient tool for building self-documenting
+command line utilities.  It removes the pain of parsing command line
+options, writing "USAGE:" banners, and can also be used as an
+alternative to the [Rake](http://github.com/jimweirich/rake) build
+tool.  The syntax is Rake-like, so it should be familiar to most Rake
+users.
