@@ -1,0 +1,6 @@
+color-japanese defines RGB value for Japanese color names.
+
+Supported color names are:
+
+	* Japanese traditional colors
+	* JIS Z 8102 (Names of non-luminous object colours)
