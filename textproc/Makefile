@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.563 2010/09/11 07:43:17 taca Exp $
+# $NetBSD: Makefile,v 1.564 2010/09/12 01:54:29 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -510,6 +510,7 @@ SUBDIR+=	ruby-stringex
 SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-textpow
+SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-will-paginate
 SUBDIR+=	ruby-xmlparser
