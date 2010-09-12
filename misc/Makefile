@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2010/07/30 16:06:37 drochner Exp $
+# $NetBSD: Makefile,v 1.349 2010/09/12 01:52:07 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -192,6 +192,7 @@ SUBDIR+=	root-tail
 SUBDIR+=	routeplanner-cli
 SUBDIR+=	rox-memo
 SUBDIR+=	rpm
+SUBDIR+=	ruby-bundler
 SUBDIR+=	ruby-columnize
 SUBDIR+=	ruby-configuration
 SUBDIR+=	ruby-daemons
