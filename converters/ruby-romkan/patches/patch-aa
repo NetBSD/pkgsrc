@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1 2010/09/12 04:52:19 taca Exp $
+
+--- romkan.rb.orig	2002-02-12 01:45:16.000000000 +0000
++++ romkan.rb
+@@ -1,3 +1,4 @@
++# coding: euc-jp
+ #
+ # Ruby/Romkan - a Romaji <-> Kana conversion library for Ruby.
+ #
