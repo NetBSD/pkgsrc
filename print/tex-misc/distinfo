@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/05/10 05:59:58 minskim Exp $
+$NetBSD: distinfo,v 1.4 2010/09/12 22:38:46 minskim Exp $
 
-SHA1 (tex-misc-2009.17497/misc.tar.xz) = 6ab23b1bf477c98b2e8299506d96f731d947367c
-RMD160 (tex-misc-2009.17497/misc.tar.xz) = 7136ab12cb6587f85efa8f362d18eae8ae51b72e
-Size (tex-misc-2009.17497/misc.tar.xz) = 42928 bytes
+SHA1 (tex-misc-17497/misc.tar.xz) = c67e01261d5d1c9ef9cc487c086cfa09bbc32a2f
+RMD160 (tex-misc-17497/misc.tar.xz) = 76ad72501068fa1be8f3c1f4ae4737d270c01f68
+Size (tex-misc-17497/misc.tar.xz) = 42928 bytes
