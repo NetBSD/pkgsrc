@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/09/12 19:04:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/09/12 19:06:42 wiz Exp $
 #
 
 DISTNAME=		cambevao-2.2
@@ -9,6 +9,7 @@ MASTER_SITES=		http://coto.marsrakete.de/projects/cambevao/
 MAINTAINER=		abs@NetBSD.org
 HOMEPAGE=		http://coto.marsrakete.de/projects/cambevao/
 COMMENT=		Grabs jpg images from bktr and ov511+ based USB webcams
+LICENSE=		modified-bsd AND original-bsd
 
 MAKE_ENV+=		prefix=${PREFIX:Q}
 MAKE_FLAGS+=		INSTALL=${INSTALL_PROGRAM:Q}
