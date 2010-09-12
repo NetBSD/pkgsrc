@@ -9,3 +9,5 @@ Systems tested with nspluginwrapper:
     - NetBSD 3.1, 4.0, 4.99.x		- works
     - firefox 2.0.0.x, 3.0.x		- works
     - seamonkey 1.1.x			- works
+
+A newer version of this plugin is in multimedia/adobe-flash-plugin.
