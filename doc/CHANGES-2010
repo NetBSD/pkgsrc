@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3376 2010/09/12 01:55:20 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3377 2010/09/12 03:14:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4466,3 +4466,29 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/ruby-mail version 2.2.5 [taca 2010-09-12]
 	Added misc/ruby-bundler version 1.0.0 [taca 2010-09-12]
 	Added textproc/ruby-treetop version 1.4.8 [taca 2010-09-12]
+	Updated www/merb-core to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-action-args to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-activerecord to 1.0.0.1 [taca 2010-09-12]
+	Updated www/merb-assets to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-builder to 0.9.8 [taca 2010-09-12]
+	Updated www/merb-cache to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-datamapper to 1.1.2 [taca 2010-09-12]
+	Updated www/merb-gen to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-haml to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-has-flash to 1.0 [taca 2010-09-12]
+	Updated www/merb-helpers to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-mailer to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-param-protection to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-parts to 0.9.8 [taca 2010-09-12]
+	Updated www/merb-sequel to 1.1.1 [taca 2010-09-12]
+	Updated www/merb-stories to 0.9.13 [taca 2010-09-12]
+	Updated www/merb-test-unit to 0.9.13 [taca 2010-09-12]
+	Added www/merb-auth-core version 1.1.1 [taca 2010-09-12]
+	Added www/merb-auth-more version 1.1.1 [taca 2010-09-12]
+	Added www/merb-auth-slice-password version 1.1.1 [taca 2010-09-12]
+	Added www/merb-auth-slice-password-reset version 1.1.0 [taca 2010-09-12]
+	Added www/merb-auth version 1.1.1 [taca 2010-09-12]
+	Added www/merb-exceptions version 1.1.3 [taca 2010-09-12]
+	Added www/merb-slices version 1.1.3 [taca 2010-09-12]
+	Updated www/merb to 1.1.3 [taca 2010-09-12]
+	Updated www/merb-more to 1.0.15 [taca 2010-09-12]
