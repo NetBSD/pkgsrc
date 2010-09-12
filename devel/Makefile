@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1398 2010/09/12 01:36:44 taca Exp $
+# $NetBSD: Makefile,v 1.1399 2010/09/12 04:08:27 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1233,6 +1233,7 @@ SUBDIR+=	ruby-gnome2-libglade
 SUBDIR+=	ruby-gnome2-pango
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
+SUBDIR+=	ruby-i18n
 SUBDIR+=	ruby-inline
 SUBDIR+=	ruby-linecache
 SUBDIR+=	ruby-little-plugger
@@ -1272,6 +1273,7 @@ SUBDIR+=	ruby-test-spec
 SUBDIR+=	ruby-test-unit
 SUBDIR+=	ruby-thrift
 SUBDIR+=	ruby-thrift_client
+SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
 SUBDIR+=	ruby2ruby
