@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.768 2010/07/29 21:42:55 seb Exp $
+# $NetBSD: Makefile,v 1.769 2010/09/12 03:05:17 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -180,6 +180,11 @@ SUBDIR+=	mMosaic
 SUBDIR+=	make_album
 SUBDIR+=	mediawiki
 SUBDIR+=	merb
+SUBDIR+=	merb-auth
+SUBDIR+=	merb-auth-core
+SUBDIR+=	merb-auth-more
+SUBDIR+=	merb-auth-slice-password
+SUBDIR+=	merb-auth-slice-password-reset
 SUBDIR+=	merb-action-args
 SUBDIR+=	merb-activerecord
 SUBDIR+=	merb-assets
@@ -187,6 +192,7 @@ SUBDIR+=	merb-builder
 SUBDIR+=	merb-cache
 SUBDIR+=	merb-core
 SUBDIR+=	merb-datamapper
+SUBDIR+=	merb-exceptions
 SUBDIR+=	merb-gen
 SUBDIR+=	merb-haml
 SUBDIR+=	merb-has-flash
@@ -196,6 +202,7 @@ SUBDIR+=	merb-more
 SUBDIR+=	merb-param-protection
 SUBDIR+=	merb-parts
 SUBDIR+=	merb-sequel
+SUBDIR+=	merb-slices
 SUBDIR+=	merb-stories
 SUBDIR+=	merb-test-unit
 SUBDIR+=	merbful-authentication
