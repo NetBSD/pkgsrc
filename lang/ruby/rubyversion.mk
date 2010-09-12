@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.49 2010/09/10 03:19:54 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.50 2010/09/12 03:53:00 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -48,12 +48,12 @@ RUBY_VERSION_SUFFIX=	${RUBY_VERSION}${RUBY_PATCH_LEVEL}
 #	supported by the package.  It should be defined by the packages
 #	for specific Ruby versions.
 #
-RUBY_VERSION_SUPPORTED?= 18 # 19
+RUBY_VERSION_SUPPORTED?= 18 19
 
 # RUBY_VERSION_LIST defines the list of ${RUBY_VER} which is known to
 #	this framework.
 #
-RUBY_VERSION_LIST= 18 # 19
+RUBY_VERSION_LIST= 18 19
 
 # RUBY_NOVERSION should be set to "Yes" if the package dosen't depend on
 #	any specific version of ruby command.  In this case, package's
