@@ -1,4 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2010/09/12 19:03:45 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2010/09/12 19:06:22 wiz Exp $
+
+Add path to expat to linker command line, so builtin expat works
+(PR 43862).
 
 --- Makefile.orig	2004-11-20 14:04:33.000000000 +0000
 +++ Makefile
