@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3383 2010/09/12 09:06:10 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3384 2010/09/12 11:16:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4508,3 +4508,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/ruby-activerecord3 version 3.0.0 [taca 2010-09-12]
 	Added www/ruby-rails3 version 3.0.0 [taca 2010-09-12]
 	Updated www/contao29-translations to 20100912 [taca 2010-09-12]
+	Updated chat/p5-POE-Component-IRC to 6.40 [wiz 2010-09-12]
