@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 00:11:45 obache Exp $
+share/scim/icons/vikb.png
+share/scim/tables/Telex.bin
+share/scim/tables/VNI.bin
