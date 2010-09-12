@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/09/10 09:12:53 obache Exp $
+# $NetBSD: Makefile,v 1.45 2010/09/12 00:13:47 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -80,6 +80,7 @@ SUBDIR+=	scim-python
 SUBDIR+=	scim-sinhala
 SUBDIR+=	scim-skk
 SUBDIR+=	scim-tables
+SUBDIR+=	scim-tables-vietnamese-ext
 SUBDIR+=	scim-tegaki
 SUBDIR+=	scim-thai
 SUBDIR+=	scim-tomoe
