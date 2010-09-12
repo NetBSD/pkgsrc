@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/10/11 09:37:45 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/09/12 11:17:07 wiz Exp $
+
+Remove interactivity.
 
 --- Makefile.PL.orig	2009-07-07 12:02:11.000000000 +0000
 +++ Makefile.PL
