@@ -1,21 +1,25 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:24:38 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/12 03:08:30 taca Exp $
 
-DISTNAME=	merb-more-0.9.2
+DISTNAME=	merb-more-1.0.15
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.merbivore.com/
 COMMENT=	Merb classes and framework for "full stack" functionality
+LICENSE=	mit
 
-DEPENDS+=	merb-action-args>=0.9.2:../../www/merb-action-args
-DEPENDS+=	merb-assets>=0.9.2:../../www/merb-assets
-DEPENDS+=	merb-builder>=0.9.2:../../www/merb-builder
-DEPENDS+=	merb-cache>=0.9.2:../../www/merb-cache
-DEPENDS+=	merb-core>=0.9.2:../../www/merb-core
-DEPENDS+=	merb-gen>=0.9.2:../../www/merb-gen
-DEPENDS+=	merb-haml>=0.9.2:../../www/merb-haml
-DEPENDS+=	merb-mailer>=0.9.2:../../www/merb-mailer
-DEPENDS+=	merb-parts>=0.9.2:../../www/merb-parts
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-core>=1.0.15:../../www/merb-core
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-action-args>=1.0.15:../../www/merb-action-args
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-assets>=1.0.15:../../www/merb-assets
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-slices>=1.0.15:../../www/merb-slices
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-auth>=1.0.15:../../www/merb-auth
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-cache>=1.0.15:../../www/merb-cache
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-exceptions>=1.0.15:../../www/merb-exceptions
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-gen>=1.0.15:../../www/merb-gen
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-haml>=1.0.15:../../www/merb-haml
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-helpers>=1.0.15:../../www/merb-helpers
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-mailer>=1.0.15:../../www/merb-mailer
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-param-protection>=1.0.15:../../www/merb-param-protection
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
