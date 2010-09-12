@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3381 2010/09/12 04:11:18 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3382 2010/09/12 04:32:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4500,3 +4500,10 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/ruby-thor version 0.14.0 [taca 2010-09-12]
 	Added www/ruby-rack-mount version 0.6.13 [taca 2010-09-12]
 	Added www/ruby-rack-test version 0.5.4 [taca 2010-09-12]
+	Added devel/ruby-activesupport3 version 3.0.0 [taca 2010-09-12]
+	Added databases/ruby-arel version 1.0.1 [taca 2010-09-12]
+	Added devel/ruby-activemodel version 3.0.0 [taca 2010-09-12]
+	Added www/ruby-activeresource3 version 3.0.0 [taca 2010-09-12]
+	Added www/ruby-actionpack3 version 3.0.0 [taca 2010-09-12]
+	Added databases/ruby-activerecord3 version 3.0.0 [taca 2010-09-12]
+	Added www/ruby-rails3 version 3.0.0 [taca 2010-09-12]
