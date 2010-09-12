@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:24:31 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/12 02:45:31 taca Exp $
 
-DISTNAME=	merb-mailer-0.9.2
+DISTNAME=	merb-mailer-1.1.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.merbivore.com/
 COMMENT=	Merb plugin that provides mailer functionality
+LICENSE=	mit
 
-DEPENDS+=	merb-core>=0.9.2:../../www/merb-core
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-core>=1.1.3:../../www/merb-core
 DEPENDS+=	${RUBY_PKGPREFIX}-mailfactory>=1.2.3:../../mail/ruby-mailfactory
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
