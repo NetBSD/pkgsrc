@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:27 joerg Exp $
-${GEM_HOME}/cache/merb_stories-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.3 2010/09/12 02:52:32 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Generators
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/lib/generators/merb_story_setup.rb
+${GEM_LIBDIR}/lib/generators/story.rb
+${GEM_LIBDIR}/lib/generators/templates/merb_story_setup/stories/helper.rb
+${GEM_LIBDIR}/lib/generators/templates/merb_story_setup/stories/stories/all.rb
+${GEM_LIBDIR}/lib/generators/templates/story/step.rbt
+${GEM_LIBDIR}/lib/generators/templates/story/story.rbt
+${GEM_LIBDIR}/lib/generators/templates/story/story.t
 ${GEM_LIBDIR}/lib/merb_stories.rb
 ${GEM_LIBDIR}/lib/merb_stories/merbtasks.rb
 ${GEM_LIBDIR}/lib/merb_stories/story.rb
-${GEM_LIBDIR}/rspec_generators/merb_story_setup/merb_story_setup_generator.rb
-${GEM_LIBDIR}/rspec_generators/merb_story_setup/templates/stories/helper.rb
-${GEM_LIBDIR}/rspec_generators/merb_story_setup/templates/stories/stories/all.rb
-${GEM_LIBDIR}/rspec_generators/story/USAGE
-${GEM_LIBDIR}/rspec_generators/story/story_generator.rb
-${GEM_LIBDIR}/rspec_generators/story/templates/stories/steps/%step_name%.rb
-${GEM_LIBDIR}/rspec_generators/story/templates/stories/stories/%full_story_path%
-${GEM_LIBDIR}/rspec_generators/story/templates/stories/stories/%full_story_path%.rb
-${GEM_HOME}/specifications/merb_stories-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
