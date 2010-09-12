@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:23:08 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/12 02:32:52 taca Exp $
 
-DISTNAME=	merb-action-args-0.9.2
+DISTNAME=	merb-action-args-1.1.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.merbivore.com/
 COMMENT=	Merb plugin to map query parameters to controller method arguments
+LICENSE=	mit
 
-DEPENDS+=	merb-core>=0.9.2:../../www/merb-core
-DEPENDS+=	${RUBY_PKGPREFIX}-ruby2ruby>=1.1.8:../../devel/ruby2ruby
+DEPENDS+=	${RUBY_PKGPREFIX}-merb-core>=1.1.3:../../www/merb-core
+DEPENDS+=	${RUBY_PKGPREFIX}-ruby2ruby>=1.1.9:../../devel/ruby2ruby
+DEPENDS+=	${RUBY_PKGPREFIX}-parsetree>=2.2.1:../../devel/ruby-parsetree
 
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
