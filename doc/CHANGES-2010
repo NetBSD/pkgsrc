@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3397 2010/09/12 12:44:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3398 2010/09/12 12:45:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4522,3 +4522,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-XML-Writer to 0.612 [wiz 2010-09-12]
 	Updated time/p5-DateTime-Event-Cron to 0.08 [wiz 2010-09-12]
 	Updated time/p5-Time-Progress to 1.7 [wiz 2010-09-12]
+	Updated www/p5-CSS-Tiny to 1.19 [wiz 2010-09-12]
