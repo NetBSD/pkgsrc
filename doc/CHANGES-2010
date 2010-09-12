@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3380 2010/09/12 03:53:48 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3381 2010/09/12 04:11:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4496,3 +4496,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/raggle to 0.4.4nb4 [taca 2010-09-12]
 	Added lang/ruby19-base version 1.9.2pl0 [taca 2010-09-12]
 	Added lang/ruby19 version 1.9.2pl0 [taca 2010-09-12]
+	Added devel/ruby-i18n version 0.4.1 [taca 2010-09-12]
+	Added devel/ruby-thor version 0.14.0 [taca 2010-09-12]
+	Added www/ruby-rack-mount version 0.6.13 [taca 2010-09-12]
+	Added www/ruby-rack-test version 0.5.4 [taca 2010-09-12]
