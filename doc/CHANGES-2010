@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3399 2010/09/12 12:59:57 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3400 2010/09/12 13:01:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4524,3 +4524,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-Time-Progress to 1.7 [wiz 2010-09-12]
 	Updated www/p5-CSS-Tiny to 1.19 [wiz 2010-09-12]
 	Updated x11/p5-Tk to 804.029 [wiz 2010-09-12]
+	Updated www/p5-WWW-Mechanize to 1.66 [wiz 2010-09-12]
