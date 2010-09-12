@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/01/18 09:58:56 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/09/12 19:03:45 wiz Exp $
 #
 
 DISTNAME=		cambevao-2.2
@@ -20,8 +20,10 @@ INSTALLATION_DIRS=	bin share/examples/cambevao share/examples/rc.d
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* DragonFly-*-*
 PKG_DESTDIR_SUPPORT= 	user-destdir
 
-INSTALLATION_DIRS+=    ${PREFIX}/share/examples/cambevao
-INSTALLATION_DIRS+=    ${PREFIX}/share/doc
+INSTALLATION_DIRS+=	${PREFIX}/share/examples/cambevao
+INSTALLATION_DIRS+=	${PREFIX}/share/doc
+
+MAKE_FLAGS+=		EXPAT_PATH=${BUILDLINK_PREFIX.expat}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cambevao ${DESTDIR}${PREFIX}/bin
