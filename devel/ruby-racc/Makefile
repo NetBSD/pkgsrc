@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:03 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/09/12 03:20:02 taca Exp $
 
 DISTNAME=	racc-${RACC_VERSION}
-PKGNAME=	${RUBY_PKGPREFIX}-racc-${RACC_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://i.loveruby.net/archive/racc/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/49028/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://i.loveruby.net/en/projects/racc/
 COMMENT=	LALR(1) parser generator for Ruby
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+CONFLICTS+=		ruby[1-9][0-9]-racc-*
+
 USE_RUBY_SETUP=		yes
-RACC_VERSION=		1.4.5
+RACC_VERSION=		1.4.6
 
 CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
 			--siterubyver=${PREFIX}/${RUBY_VENDORLIB} \
@@ -21,22 +23,18 @@ CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
 INSTALLATION_DIRS=	${RUBY_DOC}/racc/en ${RUBY_DOC}/racc/ja \
 			${RUBY_EG}/racc
 
-DOCS=		ChangeLog README.en README.ja TODO
-DOCS_HTML=	NEWS.html command.html debug.html grammar.html index.html \
-		parser.html usage.html
+DOCS=		ChangeLog README.en.rdoc README.ja.rdoc TODO
 EXAMPLES=	array.y array2.y calc-ja.y calc.y conflict.y hash.y lalr.y \
-		syntax.y yyerr.y
+		lists.y syntax.y yyerr.y
 
 post-install:
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/racc
 .endfor
-.for f in ${DOCS_HTML}
-	${INSTALL_DATA} ${WRKSRC}/doc.en/${f} \
+	${INSTALL_DATA} ${WRKSRC}/doc/en/* \
 		${DESTDIR}${PREFIX}/${RUBY_DOC}/racc/en
-	${INSTALL_DATA} ${WRKSRC}/doc.ja/${f} \
+	${INSTALL_DATA} ${WRKSRC}/doc/ja/* \
 		${DESTDIR}${PREFIX}/${RUBY_DOC}/racc/ja
-.endfor
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/sample/${f} \
 		${DESTDIR}${PREFIX}/${RUBY_EG}/racc
