@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2010/03/15 07:51:56 taca Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/12 03:30:06 taca Exp $
 
 DISTNAME=	raggle-0.4.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.raggle.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.raggle.org/
 COMMENT=	Console-based screen(1)-aware RSS reader written in Ruby
+LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ncurses>=0.8:../../devel/ruby-ncurses
 
