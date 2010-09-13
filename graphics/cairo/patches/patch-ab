@@ -1,13 +1,42 @@
-$NetBSD: patch-ab,v 1.11 2008/11/16 17:20:14 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2010/09/13 12:23:01 wiz Exp $
 
---- test/Makefile.in.orig	2008-11-14 10:12:09.000000000 +0000
-+++ test/Makefile.in
-@@ -72,7 +72,7 @@ XFAIL_TESTS = alpha-similar$(EXEEXT) big
- 	surface-pattern-big-scale-down$(EXEEXT) \
- 	surface-pattern-scale-down$(EXEEXT) \
- 	surface-pattern-scale-up$(EXEEXT)
--@HAVE_PTHREAD_TRUE@am__append_10 = -lpthread
-+@HAVE_PTHREAD_TRUE@am__append_10 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
- @BUILD_ANY2PPM_TRUE@am__append_11 = any2ppm
- @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@am__append_12 = pdf2png
- @CAIRO_CAN_TEST_SVG_SURFACE_TRUE@am__append_13 = svg2png
+Fix unportable test construct.
+
+--- configure.orig	2010-09-13 11:08:31.000000000 +0000
++++ configure
+@@ -21447,7 +21447,7 @@ xlib_xcb_NONPKGCONFIG_LIBS="$ac_env_xlib
+ xlib_xcb_NONPKGCONFIG_EXTRA_LIBS="$ac_env_xlib_xcb_NONPKGCONFIG_EXTRA_LIBS_value"
+ 
+ 
+-  if test "x$use_xcb" == "xyes" -a "x$use_xlib" == "xyes"; then
++  if test "x$use_xcb" = "xyes" -a "x$use_xlib" = "xyes"; then
+     xlib_xcb_REQUIRES="x11-xcb"
+ 
+ pkg_failed=no
+@@ -21797,7 +21797,7 @@ xcb_shm_NONPKGCONFIG_LIBS="$ac_env_xcb_s
+ xcb_shm_NONPKGCONFIG_EXTRA_LIBS="$ac_env_xcb_shm_NONPKGCONFIG_EXTRA_LIBS_value"
+ 
+ 
+-  if test "x$use_xcb" == "xyes"; then
++  if test "x$use_xcb" = "xyes"; then
+       xcb_shm_REQUIRES="xcb-shm"
+ 
+ pkg_failed=no
+@@ -25203,7 +25203,7 @@ drm_xr_NONPKGCONFIG_LIBS="$ac_env_drm_xr
+ drm_xr_NONPKGCONFIG_EXTRA_LIBS="$ac_env_drm_xr_NONPKGCONFIG_EXTRA_LIBS_value"
+ 
+ 
+-  if test "x$use_drm" == "xyes"; then
++  if test "x$use_drm" = "xyes"; then
+       drm_xr_REQUIRES="xorg-server >= 1.6 xproto xextproto >= 7.0.99.1 renderproto x11"
+ 
+ pkg_failed=no
+@@ -25845,7 +25845,7 @@ xcb_drm_NONPKGCONFIG_LIBS="$ac_env_xcb_d
+ xcb_drm_NONPKGCONFIG_EXTRA_LIBS="$ac_env_xcb_drm_NONPKGCONFIG_EXTRA_LIBS_value"
+ 
+ 
+-  if test "x$use_xcb" == "xyes" -a "x$use_drm" == "xyes"; then
++  if test "x$use_xcb" = "xyes" -a "x$use_drm" = "xyes"; then
+       xcb_drm_REQUIRES="xcb-dri2"
+ 
+ pkg_failed=no
