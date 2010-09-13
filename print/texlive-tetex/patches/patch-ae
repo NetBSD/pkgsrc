@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
+$NetBSD: patch-ae,v 1.4 2010/09/13 04:08:32 minskim Exp $
 
---- fmtutil.orig	2009-10-08 17:24:54.000000000 -0700
+--- fmtutil.orig	2010-07-04 12:26:44.000000000 +0000
 +++ fmtutil
-@@ -191,7 +191,7 @@ getmatch()
+@@ -213,7 +213,7 @@ getmatch()
  initTexmfMain()
  {
    case $MT_TEXMFMAIN in
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
    esac
    export MT_TEXMFMAIN
  }
-@@ -203,14 +203,14 @@ initTexmfMain()
+@@ -225,14 +225,14 @@ initTexmfMain()
  ###############################################################################
  cache_vars()
  {
@@ -34,7 +34,7 @@ $NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
    export MT_VARTEXFONTS MT_MKTEXNAM MT_MKTEXNAM_OPT MT_MKTEXDIR
    export MT_MKTEXDIR_OPT MT_MKTEXUPD MT_MKTEX_CNF MT_MKTEX_OPT
  }
-@@ -541,7 +541,7 @@ main()
+@@ -573,7 +573,7 @@ main()
  
    # set up destdir:
    if test -z "$destdir"; then
@@ -43,7 +43,7 @@ $NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
      destdir=$MT_TEXMFVAR/web2c
    fi
    test -d "$destdir" || mktexdir "$destdir" >/dev/null 2>&1
-@@ -650,7 +650,7 @@ parse_line()
+@@ -682,7 +682,7 @@ parse_line()
    inifile=`echo $lastarg | sed 's%^\*%%'`
  
    # See if we can find $inifile for return code:
@@ -52,16 +52,16 @@ $NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
  }
  
  ###############################################################################
-@@ -663,7 +663,7 @@ find_hyphenfile()
-   format="$1"; hyphenation="$2"
+@@ -695,7 +695,7 @@ find_hyphenfile()
+   format="$1"; hyphenation="`echo $2 | sed 's/,/ /g'`"
    case $hyphenation in
      -) ;;
--    *) kpsewhich -progname="$format" -format=tex "$hyphenation";;
-+    *) @KPSEWHICH@ -progname="$format" -format=tex "$hyphenation";;
+-    *) kpsewhich -progname="$format" -format=tex $hyphenation;;
++    *) @KPSEWHICH@ -progname="$format" -format=tex $hyphenation;;
    esac
  }
  
-@@ -694,7 +694,7 @@ run_initex()
+@@ -726,7 +726,7 @@ run_initex()
    poolfile=
    tcxflag=
    test -n "$pool" \
@@ -70,7 +70,7 @@ $NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
    if test -n "$poolfile" && test -f "$poolfile"; then
      verboseMsg "$progname: attempting to create localized format using pool=$pool and tcx=$tcx."
      cp "$poolfile" $engine.pool
-@@ -727,7 +727,7 @@ run_initex()
+@@ -762,7 +762,7 @@ run_initex()
    (
      # If necessary, set TEXPOOL. Use absolute path, because of KPSE_DOT.
      $localpool && { TEXPOOL="`pwd`:$TEXPOOL"; export TEXPOOL; }
@@ -79,7 +79,7 @@ $NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
    ) </dev/null
  
    if test $use_engine_dir; then
-@@ -850,7 +850,7 @@ recreate_by_fmt()
+@@ -885,7 +885,7 @@ recreate_by_fmt()
  create_missing()
  {
    # match_cmd='test ! -f $destdir/$fmtfile'
@@ -88,7 +88,7 @@ $NetBSD: patch-ae,v 1.3 2010/01/16 03:40:44 minskim Exp $
    recreate_loop
  }
  
-@@ -860,7 +860,7 @@ create_missing()
+@@ -895,7 +895,7 @@ create_missing()
  ###############################################################################
  recreate_existing()
  {

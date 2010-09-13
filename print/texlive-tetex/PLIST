@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/06/17 00:21:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/13 04:08:32 minskim Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -19,7 +19,6 @@ bin/rumakeindex
 bin/texconfig
 bin/texconfig-dialog
 bin/texconfig-sys
-bin/texhash
 bin/texlinks
 bin/updmap
 bin/updmap-sys
@@ -36,15 +35,7 @@ man/man1/kpsetool.1
 man/man1/kpsewhere.1
 man/man1/kpsexpand.1
 man/man1/mkjobtexmf.1
-man/man1/mkocp.1
-man/man1/mkofm.1
 man/man1/mktexfmt.1
-man/man1/ofm2opl.1
-man/man1/opl2ofm.1
-man/man1/otp2ocp.1
-man/man1/outocp.1
-man/man1/ovf2ovp.1
-man/man1/ovp2ovf.1
 man/man1/ps2frag.1
 man/man1/pslatex.1
 man/man1/rubibtex.1
@@ -52,10 +43,8 @@ man/man1/rumakeindex.1
 man/man1/texconfig-sys.1
 man/man1/texconfig.1
 man/man1/texdoctk.1
-man/man1/texhash.1
 man/man1/texlinks.1
 man/man1/thumbpdf.1
-man/man1/ttf2afm.1
 man/man1/updmap-sys.1
 man/man1/updmap.1
 man/man5/fmtutil.cnf.5
