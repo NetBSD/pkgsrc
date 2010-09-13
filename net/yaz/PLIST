@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/07/14 12:53:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/09/13 11:02:28 wiz Exp $
 bin/yaz-asncomp
 bin/yaz-client
 bin/yaz-config
@@ -22,6 +22,7 @@ include/yaz/diagsru_update.h
 include/yaz/diagsrw.h
 include/yaz/dirent.h
 include/yaz/errno.h
+include/yaz/facet.h
 include/yaz/file_glob.h
 include/yaz/gettimeofday.h
 include/yaz/icu.h
