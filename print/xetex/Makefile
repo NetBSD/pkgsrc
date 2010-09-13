@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/13 05:04:50 minskim Exp $
 
-DISTNAME=	texlive-20091011-source
-PKGNAME=	xetex-0.9995.2
-PKGREVISION=	1
+DISTNAME=	texlive-20100720-source
+PKGNAME=	xetex-0.9995.3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +13,7 @@ COMMENT=	TeX system with Unicode and modern font technologies
 CONFLICTS+=	web2c<=7.5.7
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/libs/icu \
+			${DISTNAME}/libs/graphite ${DISTNAME}/libs/icu \
 			${DISTNAME}/libs/xpdf ${DISTNAME}/libs/obsdcompat \
 			${DISTNAME}/texk/web2c
 
@@ -23,12 +22,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake lex perl yacc
+USE_TOOLS+=	gmake lex perl pkg-config yacc
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/web2c
 
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
-			--disable-luatex --disable-mf disable-mf-nowin \
-			--disable-mp --disable-web-progs
+			--disable-luatex --disable-mf --disable-mf-nowin \
+			--disable-mp --disable-ptex --disable-web-progs \
+			--enable-web2c --enable-xetex
 CONFIGURE_ARGS+= \
 	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
 	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
@@ -41,15 +41,13 @@ CONFIGURE_ARGS+=	--with-system-zlib \
 CONFIGURE_ARGS+=	--with-system-libpng \
 	--with-libpng-includes=${BUILDLINK_PREFIX.libpng}/include \
 	--with-libpng-libdir=${BUILDLINK_PREFIX.libpng}/lib
-CONFIGURE_ARGS+=	--with-system-graphite \
-	--with-graphite-includes=${BUILDLINK_PREFIX.silgraphite}/include \
-	--with-graphite-libdir=${BUILDLINK_PREFIX.silgraphite}/lib
 CONFIGURE_ARGS+=	--with-system-freetype2
 CONFIGURE_ARGS+=	--with-system-teckit \
 	--with-teckit-includes=${BUILDLINK_PREFIX.TECkit}/include/teckit \
 	--with-teckit-libdir=${BUILDLINK_PREFIX.TECkit}/lib
 
-CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}/libs/icu \
+CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}/libs/graphite \
+		${WRKDIR}/${DISTNAME}/libs/icu \
 		${WRKDIR}/${DISTNAME}/libs/xpdf \
 		${WRKDIR}/${DISTNAME}/libs/obsdcompat \
 		${WRKDIR}/${DISTNAME}/texk/web2c
@@ -68,7 +66,6 @@ CONFIGURE_ENV+=	kpse_cv_have_Carbon=no
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/silgraphite/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
 
 do-install:
