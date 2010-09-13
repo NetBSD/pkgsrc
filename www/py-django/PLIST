@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/09/09 13:34:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/09/13 16:51:05 joerg Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -1114,6 +1114,7 @@ ${PYSITELIB}/django/contrib/flatpages/__init__.pyo
 ${PYSITELIB}/django/contrib/flatpages/admin.py
 ${PYSITELIB}/django/contrib/flatpages/admin.pyc
 ${PYSITELIB}/django/contrib/flatpages/admin.pyo
+${PYSITELIB}/django/contrib/flatpages/fixtures/sample_flatpages.json
 ${PYSITELIB}/django/contrib/flatpages/middleware.py
 ${PYSITELIB}/django/contrib/flatpages/middleware.pyc
 ${PYSITELIB}/django/contrib/flatpages/middleware.pyo
@@ -1129,6 +1130,9 @@ ${PYSITELIB}/django/contrib/flatpages/tests/csrf.pyo
 ${PYSITELIB}/django/contrib/flatpages/tests/middleware.py
 ${PYSITELIB}/django/contrib/flatpages/tests/middleware.pyc
 ${PYSITELIB}/django/contrib/flatpages/tests/middleware.pyo
+${PYSITELIB}/django/contrib/flatpages/tests/templates/404.html
+${PYSITELIB}/django/contrib/flatpages/tests/templates/flatpages/default.html
+${PYSITELIB}/django/contrib/flatpages/tests/templates/registration/login.html
 ${PYSITELIB}/django/contrib/flatpages/tests/urls.py
 ${PYSITELIB}/django/contrib/flatpages/tests/urls.pyc
 ${PYSITELIB}/django/contrib/flatpages/tests/urls.pyo
