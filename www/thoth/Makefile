@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 13:25:11 taca Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/13 14:12:15 taca Exp $
 
 DISTNAME=	thoth-0.2.1
 CATEGORIES=	www
@@ -20,7 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=4.0.3:../../textproc/ruby-redcloth
 DEPENDS+=	${RUBY_PKGPREFIX}-sequel>=2.5.0:../../databases/ruby-sequel
 DEPENDS+=	${RUBY_PKGPREFIX}-thin>=0.8.2:../../www/thin
 
-CONFLICTS+=	ruby[1-9][0-9]-thoth-*
+CONFLICTS+=	ruby[1-9][0-9]-thoth-[0-9]* thoth-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
