@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2010/09/09 13:34:04 adam Exp $
+# $NetBSD: Makefile,v 1.27 2010/09/13 16:51:05 joerg Exp $
 
-DJANGOVERS=	1.2.2
+DJANGOVERS=	1.2.3
 DISTNAME=	Django-${DJANGOVERS}
 PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
 CATEGORIES=	www python
@@ -39,6 +39,15 @@ pre-configure:
 .if empty(PKG_OPTIONS:Msqlite)
 	rm -r ${WRKSRC}/django/db/backends/sqlite3
 .endif
+
+BACKEND_PATH=		${PYSITELIB}/django/db/backends
+BACKEND_PATH_PLIST=	$${PYSITELIB}/django/db/backends
+
+PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/mysql/", "$${PLIST.mysql}${BACKEND_PATH_PLIST}/mysql/") }
+PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/oracle/", "$${PLIST.oracle}${BACKEND_PATH_PLIST}/oracle/") }
+PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/postgresql/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql/") }
+PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/postgresql_psycopg2/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql_psycopg2/") }
+PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND_PATH_PLIST}/sqlite3/") }
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
