@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3422 2010/09/13 05:15:43 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3423 2010/09/13 07:53:43 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4548,3 +4548,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-kpathsea to 2010 [minskim 2010-09-13]
 	Updated print/xetex to 0.9995.3 [minskim 2010-09-13]
 	Updated print/tex-texlive-scripts to 2010 [minskim 2010-09-13]
+	Updated security/opendnssec to 1.1.3 [pettai 2010-09-13]
