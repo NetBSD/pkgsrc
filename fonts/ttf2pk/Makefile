@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/09/13 04:51:59 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2010/09/13 14:30:05 minskim Exp $
 
 DISTNAME=	texlive-20100720-source
 PKGNAME=	ttf2pk-1.5
+PKGREVISION=	3
 CATEGORIES=	fonts print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
