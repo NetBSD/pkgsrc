@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 10:51:56 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:12:14 taca Exp $
 
 DISTNAME=	camping-2.1
 CATEGORIES=	www
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.0:../../www/ruby-rack
 
-CONFLICTS+=	ruby[1-9][0-9]-camping-[0-9]*
+CONFLICTS+=	ruby[1-9][0-9]-camping-[0-9]* camping-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
