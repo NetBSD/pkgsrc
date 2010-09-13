@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/09/10 07:50:03 taca Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/13 14:49:54 taca Exp $
 
 DISTNAME=	capistrano-2.5.19
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +16,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh-gateway>=1.0.0:../../security/ruby-net-ssh-g
 DEPENDS+=	${RUBY_PKGPREFIX}-net-sftp>=2.0.0:../../security/ruby-net-sftp
 DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=1.0.0:../../security/ruby-net-scp
 DEPENDS+=	${RUBY_PKGPREFIX}-highline>=0:../../devel/ruby-highline
+
+CONFLICTS+=	ruby[1-9][0-9]-capistrano-[0-9]* capistrano-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
