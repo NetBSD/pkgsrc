@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3433 2010/09/13 13:37:49 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3434 2010/09/13 13:49:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4559,3 +4559,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/chicken to 4.6.0 [asau 2010-09-13]
 	Updated security/aide to 0.15.1 [pettai 2010-09-13]
 	Updated www/rails to 2.3.9nb1 [taca 2010-09-13]
+	Updated devel/p5-IMDB-Film to 0.46 [wiz 2010-09-13]
