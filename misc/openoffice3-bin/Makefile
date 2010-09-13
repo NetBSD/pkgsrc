@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/09/07 17:35:29 tron Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/13 22:38:38 bad Exp $
 
 DISTNAME=		openoffice3-bin	# overridden below
 PKGNAME=		openoffice3-bin-${OO_RELEASE}
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_RELEASE}/}
 
