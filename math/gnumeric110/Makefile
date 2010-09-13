@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/08/23 13:33:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/13 10:59:52 wiz Exp $
 #
 
-DISTNAME=		gnumeric-1.10.9
-PKGREVISION=		2
+DISTNAME=		gnumeric-1.10.10
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.10/}
 EXTRACT_SUFX=		.tar.bz2
@@ -25,6 +24,10 @@ PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
 
+# PLIST contains versioned directory
+GOFFICE_VERSION=	0.8.10
+PLIST_SUBST+=		GOFFICE_VERSION=${GOFFICE_VERSION}
+
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 .include "../../lang/python/application.mk"
@@ -45,8 +48,7 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-# PLIST contains versioned directory
-BUILDLINK_API_DEPENDS.goffice0.8+= goffice0.8-0.8.9{,nb*}
+BUILDLINK_API_DEPENDS.goffice0.8+= goffice0.8-${GOFFICE_VERSION}{,nb*}
 .include "../../misc/goffice0.8/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
