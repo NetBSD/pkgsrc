@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/12 03:02:22 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:32:40 taca Exp $
 
 DISTNAME=	merb-1.1.3
 CATEGORIES=	www
@@ -23,6 +23,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-merb-datamapper>=1.1:../../www/merb-datamapper
 DEPENDS+=	${RUBY_PKGPREFIX}-datamapper>=0.10.0:../../databases/ruby-datamapper
 DEPENDS+=	${RUBY_PKGPREFIX}-do_sqlite3>=0.10.0:../../databases/ruby-do_sqlite3
 DEPENDS+=	${RUBY_PKGPREFIX}-rspec>=0:../../devel/ruby-rspec
+
+CONFLICTS+=	merb-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
