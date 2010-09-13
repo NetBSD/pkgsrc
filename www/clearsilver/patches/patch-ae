@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.3 2010/09/13 03:05:24 taca Exp $
+
+Use modern Ruby's API.
+
+--- ruby/ext/hdf/neo_cs.c.orig	2007-02-16 00:31:39.000000000 +0000
++++ ruby/ext/hdf/neo_cs.c
+@@ -19,7 +19,7 @@ extern VALUE eHdfError;
+ 
+ VALUE r_neo_error(NEOERR *err);
+ 
+-#define Srb_raise(val) rb_raise(eHdfError, "%s/%d %s",__FILE__,__LINE__,RSTRING(val)->ptr)
++#define Srb_raise(val) rb_raise(eHdfError, "%s/%d %s",__FILE__,__LINE__,RSTRING_PTR(val))
+ 
+ static void c_free (CSPARSE *csd) {
+   if (csd) {
+@@ -57,7 +57,7 @@ static VALUE c_parse_file (VALUE self, V
+   char *path;
+ 
+   Data_Get_Struct(self, CSPARSE, cs);
+-  path = STR2CSTR(oPath);
++  path = StringValuePtr(oPath);
+ 
+   err = cs_parse_file (cs, path);
+   if (err) Srb_raise(r_neo_error(err));
+@@ -73,7 +73,9 @@ static VALUE c_parse_str (VALUE self, VA
+   long l;
+ 
+   Data_Get_Struct(self, CSPARSE, cs);
+-  s = rb_str2cstr(oString, &l);
++  StringValue(oString);
++  s= RSTRING_PTR(oString);
++  l = RSTRING_LEN(oString);
+ 
+   /* This should be changed to use memory from the gc */
+   ms = strdup(s);
