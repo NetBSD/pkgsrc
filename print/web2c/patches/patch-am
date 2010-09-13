@@ -1,14 +1,13 @@
-$NetBSD: patch-am,v 1.2 2010/01/16 03:15:38 minskim Exp $
+$NetBSD: patch-am,v 1.3 2010/09/13 04:09:54 minskim Exp $
 
---- man/Makefile.in.orig	2009-07-23 11:43:28.000000000 -0700
+--- man/Makefile.in.orig	2010-07-06 09:17:20.000000000 +0000
 +++ man/Makefile.in
-@@ -289,8 +289,7 @@ x_tool_libs = @x_tool_libs@
+@@ -308,7 +308,7 @@ x_tool_libs = @x_tool_libs@
  man_sources = $(bootstrap_man_sources) $(am__append_1) $(am__append_2) \
- 	$(am__append_3) $(am__append_4) $(am__append_5) \
- 	$(am__append_6) $(am__append_7) $(am__append_8) \
--	$(am__append_9) $(am__append_10) $(am__append_11) \
--	$(misc_man_sources)
-+	$(am__append_9) $(am__append_10) $(am__append_11)
+ 	$(am__append_3) $(am__append_5) $(am__append_6) \
+ 	$(am__append_7) $(am__append_9) $(am__append_10) \
+-	$(am__append_11) $(am__append_13) $(misc_man_sources)
++	$(am__append_11) $(am__append_13)
  EXTRA_DIST = $(bootstrap_man_sources) $(web_man_sources) tex.man \
  	mf.man mpost.man etex.man $(pdftex_man_sources) luatex.man \
- 	aleph.man $(misc_man_sources) amslatex.min initex.min \
+ 	$(otangle_man_sources) aleph.man $(misc_man_sources) \
