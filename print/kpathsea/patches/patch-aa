@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2009/06/09 21:29:17 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2010/09/13 04:06:12 minskim Exp $
 
 - Set paths to texmf trees for pkgsrc.
 
---- texmf.cnf.orig	2009-06-03 06:07:27.000000000 -0700
+--- texmf.cnf.orig	2010-05-30 21:52:39.000000000 +0000
 +++ texmf.cnf
 @@ -53,15 +53,15 @@
  
@@ -41,21 +41,21 @@ $NetBSD: patch-aa,v 1.5 2009/06/09 21:29:17 minskim Exp $
  
  % User texmf trees are allowed as follows.
  % This used to be HOMETEXMF.
-@@ -128,7 +128,7 @@ SYSTEXMF = $TEXMFSYSVAR;$TEXMFMAIN;$TEXM
+@@ -136,7 +136,7 @@ SYSTEXMF = $TEXMFSYSVAR;$TEXMFMAIN;$TEXM
  % Where generated fonts may be written.  This tree is used when the sources
  % were found in a system tree and either that tree wasn't writable, or the
  % varfonts feature was enabled in MT_FEATURES in mktex.cnf.
 -VARTEXFONTS = $TEXMFVAR/fonts
 +VARTEXFONTS = $TEXMFSYSVAR/fonts
  
- % Where to look for ls-R files.  There need not be an ls-R in the
- % directories in this path, but if there is one, Kpathsea will use it.
-@@ -455,7 +455,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+ % On some systems, there will be a system tree which contains all the font
+ % files that may be created as well as the formats.  For example
+@@ -463,7 +463,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
  % 
  % For security reasons, it is better not to include . in this path.
  %
 -TEXMFCNF = {$SELFAUTOLOC,$SELFAUTODIR,$SELFAUTOPARENT}{,{/share,}/texmf{-local,}/web2c}
 +TEXMFCNF = @PKG_SYSCONFDIR@
  
- # kpathsea 3.5.3 and later sets these at runtime. To avoid empty
- # expansions from binaries linked against an earlier version of the
+ % kpathsea 3.5.3 and later sets these at runtime. To avoid empty
+ % expansions from binaries linked against an earlier version of the
