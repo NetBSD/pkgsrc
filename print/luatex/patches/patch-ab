@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/09/13 04:11:52 minskim Exp $
+
+--- texk/web2c/Makefile.in.orig	2010-09-09 09:11:09.000000000 +0000
++++ texk/web2c/Makefile.in
+@@ -36,7 +36,7 @@ build_triplet = @build@
+ host_triplet = @host@
+ EXTRA_PROGRAMS = $(am__EXEEXT_1) tex$(EXEEXT) mf$(EXEEXT) \
+ 	mf-nowin$(EXEEXT) mpost$(EXEEXT) luatex$(EXEEXT)
+-bin_PROGRAMS = tangle$(EXEEXT) ctangle$(EXEEXT) $(am__EXEEXT_2) \
++bin_PROGRAMS = $(am__EXEEXT_2) \
+ 	ctie$(EXEEXT) cweave$(EXEEXT) tie$(EXEEXT) $(am__EXEEXT_3) \
+ 	$(am__EXEEXT_4) $(am__EXEEXT_5) $(am__EXEEXT_6) \
+ 	$(am__EXEEXT_7)
