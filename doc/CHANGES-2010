@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3426 2010/09/13 11:00:03 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3427 2010/09/13 11:02:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4552,3 +4552,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-enchant to 1.6.3 [wiz 2010-09-13]
 	Updated misc/goffice0.8 to 0.8.10 [wiz 2010-09-13]
 	Updated math/gnumeric110 to 1.10.10 [wiz 2010-09-13]
+	Updated net/yaz to 4.0.12 [wiz 2010-09-13]
