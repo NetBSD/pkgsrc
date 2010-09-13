@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2009/08/11 15:40:18 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2010/09/13 14:39:30 taca Exp $
 #
 
 DISTNAME=	x11rec-0.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://0xcc.net/x11rec/
 
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	gifsicle-[0-9]*:../../graphics/gifsicle
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+
+CONFLICTS+=	ruby[1-9][0-9]-x11rec-[0-9]* x11rec-[0-9]*
 
 NO_BUILD=	yes
 REPLACE_RUBY=	x11rec

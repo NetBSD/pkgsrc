@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/09/10 07:52:13 taca Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/13 14:39:30 taca Exp $
 
 DISTNAME=		puppet-0.25.5
+PKGREVISION=		1
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -12,6 +13,8 @@ LICENSE=		gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${RUBY_PKGPREFIX}-facter>=1.3.8:../../sysutils/ruby-facter
+
+CONFLICTS+=		ruby[1-9][0-9]-puppet-[0-9]* puppet-[0-9]*
 
 PKG_SYSCONFSUBDIR=	puppet
 RCD_SCRIPTS=		puppetd puppetmasterd
