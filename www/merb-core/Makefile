@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/12 02:31:28 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:12:15 taca Exp $
 
 DISTNAME=	merb-core-1.1.3
 CATEGORIES=	www
@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rack>=0:../../www/ruby-rack
 DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.16:../../mail/ruby-mime-types
 DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=0:../../misc/ruby-bundler
 
-CONFLICTS+=	ruby[1-9][0-9]-merb-core-*
+CONFLICTS+=	ruby[1-9][0-9]-merb-core-[0-9]* merb-core-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
