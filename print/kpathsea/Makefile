@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/01/16 03:06:56 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/13 04:06:12 minskim Exp $
 
-DISTNAME=	texlive-20091011-source
-PKGNAME=	kpathsea-5.0.0
-PKGREVISION=	3
+DISTNAME=	texlive-20100720-source
+PKGNAME=	kpathsea-6.0.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	teTeX-bin<=3.0nb21
 CONFLICTS+=	teTeX-texmf<=3.0nb5
+CONFLICTS+=	texlive-tetex<2010
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/kpathsea
@@ -51,8 +51,8 @@ SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	mktex.opt mktexdir mktexlsr mktexmf \
 			mktexnam mktexnam.opt mktexpk mktextfm mktexupd
-SUBST_SED.paths=	-e 's,@KPSEWHICH@,${PREFIX}/bin/kpsewhich,g' \
-			-e 's,@MKTEXMF@,${PREFIX}/bin/mktexmf,g'
+SUBST_SED.paths=	-e 's,@KPSEWHICH@,${PREFIX}/bin/kpsewhich,g'
+SUBST_SED.paths+=	-e 's,@MKTEXMF@,${PREFIX}/bin/mktexmf,g'
 
 PKG_SYSCONFSUBDIR=	texmf
 
