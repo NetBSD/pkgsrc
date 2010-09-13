@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3417 2010/09/13 04:45:28 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3418 2010/09/13 04:47:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4543,3 +4543,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/dvipdfmx to 20100328 [minskim 2010-09-13]
 	Updated print/dvipsk to 5.99 [minskim 2010-09-13]
 	Updated print/xdvik to 22.84.16nb1 [minskim 2010-09-13]
+	Updated textproc/makeindexk to 2.15nb3 [minskim 2010-09-13]
