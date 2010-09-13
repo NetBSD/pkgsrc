@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3406 2010/09/13 04:06:47 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3407 2010/09/13 04:09:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4532,3 +4532,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-misc to 2010 [minskim 2010-09-12]
 	Updated devel/yasm to 1.1.0 [wiz 2010-09-12]
 	Updated print/kpathsea to 6.0.0 [minskim 2010-09-13]
+	Updated print/texlive-tetex to 2010 [minskim 2010-09-13]
