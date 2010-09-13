@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/13 04:09:54 minskim Exp $
 
-DISTNAME=	texlive-20091011-source
-PKGNAME=	web2c-2009
-PKGREVISION=	1
+DISTNAME=	texlive-20100720-source
+PKGNAME=	web2c-2010
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,11 +10,14 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/web2c/
 COMMENT=	TeX implementation translating WEB to C
 
+CONFLICTS+=	ja-ptex-bin-[0-9]*
 CONFLICTS+=	teTeX-bin<=3.0nb28
+CONFLICTS+=	texlive-tetex<2010
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/libs/obsdcompat \
 			${DISTNAME}/libs/xpdf \
+			${DISTNAME}/texk/ptexenc \
 			${DISTNAME}/texk/web2c
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -43,6 +45,7 @@ CONFIGURE_ARGS+=	--with-system-zlib \
 
 CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}/libs/obsdcompat \
 		${WRKDIR}/${DISTNAME}/libs/xpdf \
+		${WRKDIR}/${DISTNAME}/texk/ptexenc \
 		${WRKDIR}/${DISTNAME}/texk/web2c
 INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
 
