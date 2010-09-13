@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3436 2010/09/13 14:40:40 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3437 2010/09/13 14:50:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4572,3 +4572,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/mongrel-console to 0.2.1nb1 [taca 2010-09-13]
 	Updated www/mongrel-upload-progress to 0.2.2nb1 [taca 2010-09-13]
 	Updated www/thin to 1.2.7nb1 [taca 2010-09-13]
+	Updated devel/rubigen to 1.5.5nb1 [taca 2010-09-13]
+	Updated sysutils/capistrano to 2.5.19nb1 [taca 2010-09-13]
+	Updated www/merb-slices to 1.1.3nb1 [taca 2010-09-13]
+	Updated www/ramaze to 2010.06.18nb1 [taca 2010-09-13]
