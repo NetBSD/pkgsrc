@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/12 02:43:28 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:32:41 taca Exp $
 
 DISTNAME=	merb_has_flash-1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -10,6 +10,8 @@ COMMENT=	Rails-style flash for Merb
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-merb-core>=0.9.2:../../www/merb-core
+
+CONFLICTS+=	merb-has-flash-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
