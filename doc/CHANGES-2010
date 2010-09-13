@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3430 2010/09/13 12:43:21 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3431 2010/09/13 12:43:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4556,3 +4556,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/cairo to 1.10.0 [wiz 2010-09-13]
 	Updated devel/meld to 1.3.3 [wiz 2010-09-13]
 	Updated textproc/rasqal to 0.9.20 [wiz 2010-09-13]
+	Updated lang/chicken to 4.6.0 [asau 2010-09-13]
