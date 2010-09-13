@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2010/05/13 19:32:02 asau Exp $
+@comment $NetBSD: PLIST,v 1.28 2010/09/13 12:43:16 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-install
@@ -45,6 +45,7 @@ man/man1/chicken-uninstall.1
 man/man1/chicken.1
 man/man1/csc.1
 man/man1/csi.1
+share/chicken/chicken.png
 share/chicken/setup.defaults
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
@@ -55,18 +56,20 @@ share/doc/${PKGNAME}/manual/Bibliography
 share/doc/${PKGNAME}/manual/Bugs and limitations
 share/doc/${PKGNAME}/manual/C interface
 share/doc/${PKGNAME}/manual/Callbacks
+share/doc/${PKGNAME}/manual/Cross development
 share/doc/${PKGNAME}/manual/Data representation
 share/doc/${PKGNAME}/manual/Declarations
 share/doc/${PKGNAME}/manual/Deployment
 share/doc/${PKGNAME}/manual/Deviations from the standard
 share/doc/${PKGNAME}/manual/Embedding
+share/doc/${PKGNAME}/manual/Exceptions
 share/doc/${PKGNAME}/manual/Extensions
 share/doc/${PKGNAME}/manual/Extensions to the standard
 share/doc/${PKGNAME}/manual/Foreign type specifiers
 share/doc/${PKGNAME}/manual/Getting started
 share/doc/${PKGNAME}/manual/Interface to external functions and variables
 share/doc/${PKGNAME}/manual/Locations
-share/doc/${PKGNAME}/manual/Modules and macros
+share/doc/${PKGNAME}/manual/Modules
 share/doc/${PKGNAME}/manual/Non-standard macros and special forms
 share/doc/${PKGNAME}/manual/Non-standard read syntax
 share/doc/${PKGNAME}/manual/Other support procedures
