@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/06 00:41:48 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/13 01:44:35 minskim Exp $
 
-SHA1 (tex-glyphlist-2.0/glyphlist.tar.xz) = f9b8092b03c65a0e821376a8cf6081b6e315ee8f
-RMD160 (tex-glyphlist-2.0/glyphlist.tar.xz) = 695ac05b877ddff0727e78b349ed669f3a5c8c1c
-Size (tex-glyphlist-2.0/glyphlist.tar.xz) = 22716 bytes
+SHA1 (tex-glyphlist-15878/glyphlist.tar.xz) = f26ebd24f6bd5965dc3ae7c679739f9893bd16ae
+RMD160 (tex-glyphlist-15878/glyphlist.tar.xz) = f524db4baf963a5157bbb09f02cb429bac53c26d
+Size (tex-glyphlist-15878/glyphlist.tar.xz) = 22716 bytes
