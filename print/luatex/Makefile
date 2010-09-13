@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/13 04:11:52 minskim Exp $
 
-DISTNAME=	luatex-beta-0.40.6
+DISTNAME=	luatex-beta-0.63.0
 PKGNAME=	${DISTNAME:S/-beta//}
-PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/348/1318/
+MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/382/1568/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
@@ -43,15 +42,18 @@ CONFIGURE_ARGS+=--enable-cxx-runtime-hack \
 		--disable-gsftopk \
 		--disable-lacheck \
 		--disable-lcdf-typetools \
+		--enable-luatex \
 		--disable-makeindexk \
 		--disable-mf  \
 		--disable-mmafm \
 		--disable-mmpfb \
+		--enable-mp \
 		--disable-musixflx \
 		--disable-otfinfo \
 		--disable-otftotfm  \
 		--disable-pdfopen  \
 		--disable-pdftex  \
+		--disable-ptex \
 		--disable-ps2eps   \
 		--disable-ps2pkm \
 		--disable-psutils  \
@@ -78,6 +80,7 @@ CONFIGURE_ARGS+=--enable-cxx-runtime-hack \
 		--without-system-teckit \
 		--without-system-t1lib \
 		--without-x \
+		--disable-native-texlive-build \
 		--disable-shared    \
 		--disable-largefile
 CONFIGURE_ARGS+=--with-system-kpathsea \
@@ -91,6 +94,7 @@ CONFIGURE_ARGS+=--with-system-zlib \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 CONFIGURE_DIRS+=. ./texk/web2c
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
+CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
 
 INSTALLATION_DIRS+=	bin
 
@@ -102,7 +106,7 @@ post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
 
 do-install:
-.for f in luatangle luatex
+.for f in luatex
 	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 .for f in texlua texluac
