@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/08/09 11:33:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/09/13 12:33:17 wiz Exp $
 bin/meld
 lib/meld/meld/__init__.py
 lib/meld/meld/__init__.pyc
@@ -124,14 +124,8 @@ lib/meld/meld/vcview.py
 lib/meld/meld/vcview.pyc
 lib/meld/meld/vcview.pyo
 share/applications/meld.desktop
-share/gnome/help/meld/C/figures/dirdiff.png
-share/gnome/help/meld/C/figures/filediff.png
 share/gnome/help/meld/C/meld.xml
-share/gnome/help/meld/es/figures/dirdiff.png
-share/gnome/help/meld/es/figures/filediff.png
 share/gnome/help/meld/es/meld.xml
-share/gnome/help/meld/fr/figures/dirdiff.png
-share/gnome/help/meld/fr/figures/filediff.png
 share/gnome/help/meld/fr/meld.xml
 share/icons/hicolor/16x16/apps/meld.png
 share/icons/hicolor/22x22/apps/meld.png
