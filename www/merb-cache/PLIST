@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/12 02:38:18 taca Exp $
-@comment $NetBSD: PLIST,v 1.3 2010/09/12 02:38:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/09/13 14:34:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
