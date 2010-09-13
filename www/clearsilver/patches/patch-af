@@ -1,0 +1,228 @@
+$NetBSD: patch-af,v 1.1 2010/09/13 03:05:24 taca Exp $
+
+Use modern Ruby's API.
+
+--- ruby/ext/hdf/neo_util.c.orig	2007-02-16 00:32:03.000000000 +0000
++++ ruby/ext/hdf/neo_util.c
+@@ -10,7 +10,6 @@
+  */
+ 
+ #include <ruby.h>
+-#include <version.h>
+ #include "ClearSilver.h"
+ #include "neo_ruby.h"
+ 
+@@ -19,7 +18,7 @@ static VALUE cHdf;
+ VALUE eHdfError;
+ static ID id_to_s;
+ 
+-#define Srb_raise(val) rb_raise(eHdfError, "%s/%d %s",__FILE__,__LINE__,RSTRING(val)->ptr)
++#define Srb_raise(val) rb_raise(eHdfError, "%s/%d %s",__FILE__,__LINE__,RSTRING_PTR(val))
+ 
+ VALUE r_neo_error (NEOERR *err)
+ {
+@@ -96,7 +95,7 @@ static VALUE h_get_attr (VALUE self, VAL
+   VALUE rv;
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+-  name = STR2CSTR(oName);
++  name = StringValuePtr(oName);
+ 
+   rv = rb_hash_new();
+ 
+@@ -118,12 +117,12 @@ static VALUE h_set_attr(VALUE self, VALU
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+ 
+-  name = STR2CSTR(oName);
+-  key = STR2CSTR(oKey);
++  name = StringValuePtr(oName);
++  key = StringValuePtr(oKey);
+   if ( NIL_P(oValue) )
+     value = NULL;
+   else
+-    value = STR2CSTR(oValue);
++    value = StringValuePtr(oValue);
+ 
+   err = hdf_set_attr(hdfh->hdf, name, key, value);
+   if (err) Srb_raise(r_neo_error(err));
+@@ -140,14 +139,21 @@ static VALUE h_set_value (VALUE self, VA
+   Data_Get_Struct(self, t_hdfh, hdfh);
+ 
+   if ( TYPE(oName) == T_STRING )
+-    name=STR2CSTR(oName);
+-  else
+-    name=STR2CSTR(rb_funcall(oName,id_to_s,0));
++    name=StringValuePtr(oName);
++  else {
++    VALUE v;
++
++    v =rb_funcall(oName,id_to_s,0);
++    name=StringValuePtr(v);
++  }
+ 
+   if ( TYPE(oValue) == T_STRING )
+-    value=STR2CSTR(oValue);
+-  else
+-    value=STR2CSTR(rb_funcall(oValue,id_to_s,0));
++    value=StringValuePtr(oValue);
++  else {
++    VALUE v;
++    v = rb_funcall(oValue,id_to_s,0);
++    value=StringValuePtr(v);
++  }
+ 
+   err = hdf_set_value (hdfh->hdf, name, value);
+ 
+@@ -165,7 +171,7 @@ static VALUE h_get_int_value (VALUE self
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+ 
+-  name=STR2CSTR(oName);
++  name=StringValuePtr(oName);
+   d=NUM2INT(oDefault);
+ 
+   r = hdf_get_int_value (hdfh->hdf, name, d);
+@@ -181,8 +187,8 @@ static VALUE h_get_value (VALUE self, VA
+   VALUE rv;
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+-  name=STR2CSTR(oName);
+-  d=STR2CSTR(oDefault);
++  name=StringValuePtr(oName);
++  d=StringValuePtr(oDefault);
+ 
+   r = hdf_get_value (hdfh->hdf, name, d);
+   rv = rb_str_new2(r);
+@@ -197,7 +203,7 @@ static VALUE h_get_child (VALUE self, VA
+   char *name;
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+-  name=STR2CSTR(oName);
++  name=StringValuePtr(oName);
+ 
+   r = hdf_get_child (hdfh->hdf, name);
+   if (r == NULL) {
+@@ -219,7 +225,7 @@ static VALUE h_get_obj (VALUE self, VALU
+   char *name;
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+-  name=STR2CSTR(oName);
++  name=StringValuePtr(oName);
+ 
+   r = hdf_get_obj (hdfh->hdf, name);
+   if (r == NULL) {
+@@ -243,7 +249,7 @@ static VALUE h_get_node (VALUE self, VAL
+   NEOERR *err;
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+-  name=STR2CSTR(oName);
++  name=StringValuePtr(oName);
+ 
+   err = hdf_get_node (hdfh->hdf, name, &r);
+   if (err)
+@@ -384,7 +390,7 @@ static VALUE h_read_file (VALUE self, VA
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+ 
+-  path=STR2CSTR(oPath);
++  path=StringValuePtr(oPath);
+ 
+   err = hdf_read_file (hdfh->hdf, path);
+   if (err) Srb_raise(r_neo_error(err));
+@@ -400,7 +406,7 @@ static VALUE h_write_file (VALUE self, V
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+ 
+-  path=STR2CSTR(oPath);
++  path=StringValuePtr(oPath);
+ 
+   err = hdf_write_file (hdfh->hdf, path);
+ 
+@@ -417,7 +423,7 @@ static VALUE h_write_file_atomic (VALUE 
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+ 
+-  path=STR2CSTR(oPath);
++  path=StringValuePtr(oPath);
+ 
+   err = hdf_write_file_atomic (hdfh->hdf, path);
+   if (err) Srb_raise(r_neo_error(err));
+@@ -432,7 +438,7 @@ static VALUE h_remove_tree (VALUE self, 
+   NEOERR *err;
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+-  name = STR2CSTR(oName);
++  name = StringValuePtr(oName);
+ 
+   err = hdf_remove_tree (hdfh->hdf, name);
+   if (err) Srb_raise(r_neo_error(err));
+@@ -489,7 +495,7 @@ static VALUE h_read_string (VALUE self, 
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+ 
+-  s = STR2CSTR(oString);
++  s = StringValuePtr(oString);
+   ignore = NUM2INT(oIgnore);
+ 
+   err = hdf_read_string_ignore (hdfh->hdf, s, ignore);
+@@ -508,7 +514,7 @@ static VALUE h_copy (VALUE self, VALUE o
+   Data_Get_Struct(self, t_hdfh, hdfh);
+   Data_Get_Struct(oHdfSrc, t_hdfh, hdfh_src);
+ 
+-  name = STR2CSTR(oName);
++  name = StringValuePtr(oName);
+ 
+   if (hdfh_src == NULL) rb_raise(eHdfError, "second argument must be an Hdf object");
+ 
+@@ -526,8 +532,8 @@ static VALUE h_set_symlink (VALUE self, 
+   NEOERR *err;
+ 
+   Data_Get_Struct(self, t_hdfh, hdfh);
+-  src = STR2CSTR(oSrc);
+-  dest = STR2CSTR(oDest);
++  src = StringValuePtr(oSrc);
++  dest = StringValuePtr(oDest);
+ 
+   err = hdf_set_symlink (hdfh->hdf, src, dest);
+   if (err) Srb_raise(r_neo_error(err));
+@@ -545,9 +551,11 @@ static VALUE h_escape (VALUE self, VALUE
+   char *ret = NULL;
+   NEOERR *err;
+ 
+-  s = rb_str2cstr(oString,&buflen);
+-  esc_char = STR2CSTR(oEsc_char);
+-  escape = STR2CSTR(oEsc);
++  StringValue(oString);
++  s = RSTRING_PTR(oString);
++  buflen = RSTRING_LEN(oString);
++  esc_char = StringValuePtr(oEsc_char);
++  escape = StringValuePtr(oEsc);
+ 
+   err = neos_escape((UINT8*)s, buflen, esc_char[0], escape, &ret);
+ 
+@@ -566,8 +574,10 @@ static VALUE h_unescape (VALUE self, VAL
+   char *esc_char;
+   long buflen;
+ 
+-  s = rb_str2cstr(oString,&buflen);
+-  esc_char = STR2CSTR(oEsc_char);
++  StringValue(oString);
++  s = RSTRING_PTR(oString);
++  buflen = RSTRING_LEN(oString);
++  esc_char = StringValuePtr(oEsc_char);
+ 
+   /* This should be changed to use memory from the gc */
+   copy = strdup(s);
+@@ -620,11 +630,7 @@ void Init_hdf() {
+   rb_define_singleton_method(cHdf, "unescape", h_unescape, 3);
+ 
+   eHdfError = rb_define_class_under(mNeotonic, "HdfError",
+-#if RUBY_VERSION_MINOR >= 6
+ 				    rb_eStandardError);
+-#else
+-                                    rb_eException);
+-#endif
+ 
+   Init_cs();
+ }
