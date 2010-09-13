@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9694 2010/09/13 10:37:01 wiz Exp $
+$NetBSD: TODO,v 1.9695 2010/09/13 10:58:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -663,7 +663,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnumeric110-1.10.10
 	o gnuplot-4.4.0 [pkg/43771]
 	o gob2-2.0.17
-	o goffice0.8-0.8.10
 	o gogo-3.11p1
 	o gok-2.30.0 [GNOME 2.30]
 	o golem-0.0.6
