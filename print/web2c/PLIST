@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/16 03:15:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/13 04:09:54 minskim Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -27,12 +27,17 @@ bin/outocp
 bin/ovf2ovp
 bin/ovp2ovf
 bin/patgen
+bin/pbibtex
 bin/pdftex
 bin/pdftosrc
+bin/pdvitype
 bin/pktogf
 bin/pktype
 bin/pltotf
 bin/pooltype
+bin/ppltotf
+bin/ptex
+bin/ptftopl
 bin/synctex
 bin/tangle
 bin/tex
@@ -55,13 +60,24 @@ man/man1/dvitype.1
 man/man1/gftodvi.1
 man/man1/gftopk.1
 man/man1/gftype.1
+man/man1/lamed.1
 man/man1/mf-nowin.1
 man/man1/mf.1
 man/man1/mft.1
+man/man1/mkocp.1
+man/man1/mkofm.1
 man/man1/mpost.1
 man/man1/odvicopy.1
 man/man1/odvitype.1
+man/man1/ofm2opl.1
+man/man1/opl2ofm.1
+man/man1/otangle.1
+man/man1/otp2ocp.1
+man/man1/outocp.1
+man/man1/ovf2ovp.1
+man/man1/ovp2ovf.1
 man/man1/patgen.1
+man/man1/pdflatex.1
 man/man1/pdftex.1
 man/man1/pdftosrc.1
 man/man1/pktogf.1
@@ -73,6 +89,7 @@ man/man1/tangle.1
 man/man1/tex.1
 man/man1/tftopl.1
 man/man1/tie.1
+man/man1/ttf2afm.1
 man/man1/vftovp.1
 man/man1/vptovf.1
 man/man1/weave.1
