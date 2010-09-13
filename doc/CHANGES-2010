@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3435 2010/09/13 14:30:55 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3436 2010/09/13 14:40:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4560,3 +4560,15 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/aide to 0.15.1 [pettai 2010-09-13]
 	Updated www/rails to 2.3.9nb1 [taca 2010-09-13]
 	Updated devel/p5-IMDB-Film to 0.46 [wiz 2010-09-13]
+	Updated devel/newfile to 1.0.14nb4 [taca 2010-09-13]
+	Updated graphics/x11rec to 0.3nb7 [taca 2010-09-13]
+	Updated sysutils/pdumpfs to 1.3nb2 [taca 2010-09-13]
+	Updated sysutils/puppet to 0.25.5nb1 [taca 2010-09-13]
+	Updated textproc/xhtmldiff to 1.2.2nb2 [taca 2010-09-13]
+	Updated www/merbful-authentication to 0.9.3nb1 [taca 2010-09-13]
+	Updated www/mongrel to 1.1.5nb1 [taca 2010-09-13]
+	Updated www/mongrel-cluster to 1.0.5nb1 [taca 2010-09-13]
+	Updated www/mongrel-config to 0.3.1nb1 [taca 2010-09-13]
+	Updated www/mongrel-console to 0.2.1nb1 [taca 2010-09-13]
+	Updated www/mongrel-upload-progress to 0.2.2nb1 [taca 2010-09-13]
+	Updated www/thin to 1.2.7nb1 [taca 2010-09-13]
