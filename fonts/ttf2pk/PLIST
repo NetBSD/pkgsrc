@@ -1,26 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:54:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/09/13 04:51:59 minskim Exp $
 bin/ttf2pk
 bin/ttf2tfm
 man/man1/ttf2pk.1
 man/man1/ttf2tfm.1
-share/texmf-dist/doc/ttf2pk/BUGS
-share/texmf-dist/doc/ttf2pk/README
-share/texmf-dist/doc/ttf2pk/TODO
-share/texmf-dist/doc/ttf2pk/ttf2pk.doc
-share/texmf-dist/doc/ttf2pk/ttfonts.map
-share/texmf-dist/ttf2pk
-share/texmf-dist/ttf2tfm/base/Big5.sfd
-share/texmf-dist/ttf2tfm/base/EUC.sfd
-share/texmf-dist/ttf2tfm/base/KS-HLaTeX.sfd
-share/texmf-dist/ttf2tfm/base/SJIS.sfd
-share/texmf-dist/ttf2tfm/base/T1-WGL4.enc
-share/texmf-dist/ttf2tfm/base/UBg5plus.sfd
-share/texmf-dist/ttf2tfm/base/UBig5.sfd
-share/texmf-dist/ttf2tfm/base/UGB.sfd
-share/texmf-dist/ttf2tfm/base/UGBK.sfd
-share/texmf-dist/ttf2tfm/base/UJIS.sfd
-share/texmf-dist/ttf2tfm/base/UKS-HLaTeX.sfd
-share/texmf-dist/ttf2tfm/base/UKS.sfd
-share/texmf-dist/ttf2tfm/base/Unicode.sfd
-share/texmf-dist/ttf2tfm/base/VPS.rpl
-share/texmf-dist/ttf2tfm/base/ttfonts.map
