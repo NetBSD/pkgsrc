@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/12 02:34:34 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:32:40 taca Exp $
 
 DISTNAME=	merb_activerecord-1.0.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -10,6 +10,8 @@ COMMENT=	Merb plugin for the ActiveRecord ORM
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-merb-core>=0.9.2:../../www/merb-core
+
+CONFLICTS+=	merb-activerecord-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
