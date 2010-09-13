@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/12 02:50:27 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:32:42 taca Exp $
 
 DISTNAME=	merb-parts-0.9.8
 CATEGORIES=	www
@@ -9,6 +9,8 @@ COMMENT=	Merb plugin that provides Part Controllers
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-merb-core>=0.9.8:../../www/merb-core
+
+CONFLICTS+=	merb-parts-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

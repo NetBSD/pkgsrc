@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/12 02:53:26 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:32:42 taca Exp $
 
 DISTNAME=	merb_test_unit-0.9.13
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -10,6 +10,8 @@ COMMENT=	Merb plugin that provides support for Test::Unit
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-merb-core>=0.9.9:../../www/merb-core
+
+CONFLICTS+=	merb-test-unit-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
