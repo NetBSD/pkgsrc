@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 13:32:05 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/13 14:12:15 taca Exp $
 
 DISTNAME=	webby-0.9.4
 CATEGORIES=	www
@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-hpricot>=0.6:../../textproc/ruby-hpricot
 DEPENDS+=	${RUBY_PKGPREFIX}-logging>=0.7.1:../../devel/ruby-logging
 DEPENDS+=	${RUBY_PKGPREFIX}-rspec>=1.1.3:../../devel/ruby-rspec
 
-CONFLICTS+=	ruby[1-9][0-9]-webby-[0-9]*
+CONFLICTS+=	ruby[1-9][0-9]-webby-[0-9]* webby-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/09/12 03:31:10 taca Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/13 14:12:15 taca Exp $
 
 DISTNAME=	raggle-0.4.4
 PKGREVISION=	4
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ncurses>=0.8:../../devel/ruby-ncurses
 
-CONFLICTS+=	ruby[1-9][0-9]-raggle-[0-9]*
+CONFLICTS+=	ruby[1-9][0-9]-raggle-[0-9]* raggle-[0-9]*
 
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 10:53:49 taca Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/13 14:12:14 taca Exp $
 
 DISTNAME=	erubis-2.6.6
 CATEGORIES=	www
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-abstract>=1.0.0:../../devel/ruby-abstract
 
-CONFLICTS+=	ruby[1-9][0-9]-erubis-*
+CONFLICTS+=	ruby[1-9][0-9]-erubis-[0-9]* erubis-[0-9]*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
