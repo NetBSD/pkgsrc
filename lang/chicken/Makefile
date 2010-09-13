@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2010/05/13 19:32:02 asau Exp $
-#
+# $NetBSD: Makefile,v 1.43 2010/09/13 12:43:16 asau Exp $
 
-DISTNAME=	chicken-4.5.0
+DISTNAME=	chicken-4.6.0
 CATEGORIES=	lang
-MASTER_SITES=	http://chicken.wiki.br/releases/${PKGVERSION_NOREV}/ \
-		http://galinha.ucpel.tche.br/releases/${PKGVERSION_NOREV}/ \
-		${HOMEPAGE}
+MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
-HOMEPAGE=	http://www.call-with-current-continuation.org/
+HOMEPAGE=	http://www.call-cc.org/
 COMMENT=	Scheme to C compiler, handling R5RS
 LICENSE=	modified-bsd
 
@@ -16,9 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
-INFO_FILES=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake
 UNLIMIT_RESOURCES=	datasize
 
 INSTALLATION_DIRS=	share/chicken
@@ -37,6 +33,8 @@ PLATFORM=	linux
 PLATFORM=	macosx
 .elif ${OPSYS} == "SunOS"
 PLATFORM=	solaris
+.elif ${OPSYS} == "Haiku"
+PLATFORM=	haiku
 .else
 #PLATFORM+=	${OPSYS} == "Interix"
 # possible choices left: mingw-msys mingw cygwin cross-linux-mingw
@@ -51,8 +49,6 @@ MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR}
 MAKE_FLAGS+=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
 
-TEST_TARGET=	check
-
-CHECK_PORTABILITY_SKIP += scripts/test-dist.sh
+TEST_TARGET=	check	# works only after installation
 
 .include "../../mk/bsd.pkg.mk"
