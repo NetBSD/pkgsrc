@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/10 07:14:38 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/13 05:23:41 minskim Exp $
 
-SHA1 (tex-symbol-15878/symbol.tar.xz) = 37081484a97cfb93f36510414ef6ae7f506a5e0e
-RMD160 (tex-symbol-15878/symbol.tar.xz) = ba9fb4c8516f37fcadf0ae0b2c5477092977e47c
-Size (tex-symbol-15878/symbol.tar.xz) = 36192 bytes
+SHA1 (tex-symbol-15878.2010/symbol.tar.xz) = 0cbe866da6f5401ebcab1162d972f42a1101e3fc
+RMD160 (tex-symbol-15878.2010/symbol.tar.xz) = e328585e77a1a63258ea530574fea60447bbff96
+Size (tex-symbol-15878.2010/symbol.tar.xz) = 36192 bytes
