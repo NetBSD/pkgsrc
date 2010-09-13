@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3438 2010/09/13 14:54:43 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3439 2010/09/13 14:59:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4577,3 +4577,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/merb-slices to 1.1.3nb1 [taca 2010-09-13]
 	Updated www/ramaze to 2010.06.18nb1 [taca 2010-09-13]
 	Updated www/fengoffice to 1.7.1 [taca 2010-09-13]
+	Updated www/contao29-translations to 20100912nb1 [taca 2010-09-13]
