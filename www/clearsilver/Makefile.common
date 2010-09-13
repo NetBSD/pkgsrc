@@ -1,4 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2008/10/06 01:04:28 minskim Exp $
+# $NetBSD: Makefile.common,v 1.11 2010/09/13 03:06:16 taca Exp $
+#
+# used by www/clearsilver-base/Makefile
+# used by www/py-clearsilver/Makefile
+# used by www/ruby-clearsilver/Makefile
 
 DISTNAME=		clearsilver-0.10.5
 CLEARSILVER_BASE=	${DISTNAME:S/-/-base-/}
@@ -8,9 +12,10 @@ MASTER_SITES=		http://www.clearsilver.net/downloads/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.clearsilver.net/
 COMMENT=		Fast, powerful, language-neutral HTML template system
+LICENSE=		2-clause-bsd
 
 DISTINFO_FILE=		${.CURDIR}/../../www/clearsilver/distinfo
-FILESDIR=	${.CURDIR}/../../www/clearsilver/files
+#FILESDIR=	${.CURDIR}/../../www/clearsilver/files
 PATCHDIR=		${.CURDIR}/../../www/clearsilver/patches
 
 GNU_CONFIGURE=		yes
