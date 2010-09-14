@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/06/13 22:45:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/09/14 11:00:55 wiz Exp $
 
 BUILDLINK_TREE+=	libxfce4menu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxfce4menu
 LIBXFCE4MENU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxfce4menu+=	libxfce4menu>=4.6.0
-BUILDLINK_ABI_DEPENDS.libxfce4menu?=	libxfce4menu>=4.6.1
+BUILDLINK_ABI_DEPENDS.libxfce4menu?=	libxfce4menu>=4.6.1nb1
 BUILDLINK_PKGSRCDIR.libxfce4menu?=	../../x11/libxfce4menu
 
 .include "../../devel/glib2/buildlink3.mk"

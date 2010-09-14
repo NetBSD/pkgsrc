@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2010/06/13 22:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2010/09/14 11:01:19 wiz Exp $
 
 DISTNAME=		audacity-src-1.2.6
-PKGREVISION=		6
+PKGREVISION=		7
 PKGNAME=		${DISTNAME:S/-src-/-/}
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
