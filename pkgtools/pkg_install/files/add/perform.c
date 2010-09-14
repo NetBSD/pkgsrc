@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.97 2010/06/16 23:02:48 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.98 2010/09/14 22:26:18 gdt Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.97 2010/06/16 23:02:48 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.98 2010/09/14 22:26:18 gdt Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -458,7 +458,7 @@ check_other_installed(struct pkg_task *pkg)
 				continue; /* Both match, ok. */
 			warnx("Dependency of %s fulfilled by %s, but not by %s",
 			    iter, pkg->other_version, pkg->pkgname);
-			if (!Force)
+			if (!ForceDepending)
 				status = -1;
 			break;
 		}
