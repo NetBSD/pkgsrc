@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/09/14 11:02:24 wiz Exp $
 #
 
 DISTNAME=	gwaei-1.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwaei/}
 
