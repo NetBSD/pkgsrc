@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 16:34:35 seb Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/14 05:59:50 sno Exp $
 
-DISTNAME=	Test-NoWarnings-1.01
+DISTNAME=	Test-NoWarnings-1.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-NoWarnings/
-COMMENT=	Perl5 module to make sure you didn't emit any warnings while testing
+COMMENT=	Make sure tests of Perl5 modules did not emit any warnings
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	p5-Test-Tester>=0.103:../../devel/p5-Test-Tester
+DEPENDS+=	p5-Test-Tester>=0.107:../../devel/p5-Test-Tester
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/Test/NoWarnings/.packlist
