@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3453 2010/09/14 15:27:59 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3454 2010/09/14 15:37:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4594,3 +4594,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/samba33 to 3.3.14 [taca 2010-09-14]
 	Updated print/tex-tetex to 3.0.19695 [minskim 2010-09-14]
 	Updated print/tex-tetex-doc to 3.0.19695 [minskim 2010-09-14]
+	Updated print/tex-hyphen-base to 2010 [minskim 2010-09-14]
