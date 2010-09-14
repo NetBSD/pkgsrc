@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/09/13 14:53:56 taca Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/14 00:57:11 taca Exp $
 #
 
-DISTNAME=	fengoffice_1.7.1
+DISTNAME=	fengoffice_1.7.2
 PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
@@ -51,10 +51,9 @@ post-extract:
 	cd ${WRKSRC}; ${FIND} . -type f -exec ${CHMOD} -x {} \;
 
 pre-install:
-	cd ${WRKSRC}; ${RM} -f .htaccess .project \
-		application/views/files/.cvsignore \
-		environment/classes/.cvsignore \
-		config/empty.config.php
+	${RM} -f ${WRKSRC}/config/empty.config.php
+	${FIND} ${WRKSRC} -type f \
+		\( -name .project -o -name .cvsignore \) -exec ${RM} -f {} \;
 
 do-install:
 	cd ${WRKSRC}; ${FIND} . -type f \! -name '*.orig' -print | \
