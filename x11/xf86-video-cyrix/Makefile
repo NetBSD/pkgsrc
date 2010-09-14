@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/06/15 10:49:16 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/14 11:03:13 wiz Exp $
 #
 
 DISTNAME=	xf86-video-cyrix-1.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

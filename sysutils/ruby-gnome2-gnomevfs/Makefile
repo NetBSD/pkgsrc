@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/14 11:02:49 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomevfs-${VERSION}
 COMMENT=		Ruby binding of gnomevfs
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
