@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/09/14 11:02:16 wiz Exp $
 #
 
 DISTNAME=	fetchinfo-plugin-0.4.24
 PKGNAME=	claws-mail-fetchinfo-plugin-0.4.24
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 

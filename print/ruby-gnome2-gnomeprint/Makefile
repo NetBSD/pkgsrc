@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/09/14 11:02:41 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomeprint-${VERSION}
 COMMENT=		Ruby binding of libgnomeprint
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		print
 
 PKG_DESTDIR_SUPPORT=	user-destdir
