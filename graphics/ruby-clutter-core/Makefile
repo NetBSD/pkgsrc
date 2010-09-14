@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/09/07 17:20:26 taca Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/14 11:02:03 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-clutter-core-${VERSION}
 COMMENT=		Ruby binding for Clutter Core library
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 
 PKG_DESTDIR_SUPPORT=	user-destdir

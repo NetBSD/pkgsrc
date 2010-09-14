@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/06/13 22:44:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/09/14 11:01:11 wiz Exp $
 
 BUILDLINK_TREE+=	libgsf-gnome
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgsf-gnome
 LIBGSF_GNOME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgsf-gnome+=	libgsf-gnome>=1.14.15
-BUILDLINK_ABI_DEPENDS.libgsf-gnome?=	libgsf-gnome>=1.14.18nb1
+BUILDLINK_ABI_DEPENDS.libgsf-gnome?=	libgsf-gnome>=1.14.18nb2
 BUILDLINK_PKGSRCDIR.libgsf-gnome?=	../../devel/libgsf-gnome
 
 .include "../../archivers/bzip2/buildlink3.mk"

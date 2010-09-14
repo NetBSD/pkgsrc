@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/14 11:01:24 wiz Exp $
 #
 
 DISTNAME=	paprefs-0.9.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/paprefs/
 

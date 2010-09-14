@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2010/06/13 22:44:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2010/09/14 11:00:59 wiz Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	librsvg
 LIBRSVG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.12.6nb1
-BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.26.3nb1
+BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.26.3nb2
 BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg
 
 .include "../../devel/libgsf/buildlink3.mk"

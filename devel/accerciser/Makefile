@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:44:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/14 11:01:33 wiz Exp $
 #
 
 DISTNAME=	accerciser-1.6.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/1.6/}
 EXTRACT_SUFX=	.tar.bz2

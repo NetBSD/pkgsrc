@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/06/14 19:21:06 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/14 11:02:44 wiz Exp $
 #
 
 DISTNAME=		bubblemon-dockapp-1.46
 PKGNAME=		${DISTNAME:S/-dockapp//}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ne.jp/asahi/linux/timecop/software/
 

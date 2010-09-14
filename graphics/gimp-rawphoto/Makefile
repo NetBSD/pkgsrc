@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2010/06/13 22:44:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2010/09/14 11:01:58 wiz Exp $
 #
 
 DISTNAME=		rawphoto-200410220928
 PKGNAME=		gimp-rawphoto-1.19
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		graphics
 MASTER_SITES=		#
 EXTRACT_SUFX=		.tgz

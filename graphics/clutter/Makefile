@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/07/16 14:31:46 obache Exp $
+# $NetBSD: Makefile,v 1.18 2010/09/14 11:00:51 wiz Exp $
 #
 
 DISTNAME=	clutter-1.2.12
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://source.clutter-project.org/sources/clutter/1.2/
 #		${MASTER_SITE_GNOME:=sources/clutter/1.2/}
