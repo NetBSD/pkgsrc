@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.15 2010/06/09 09:33:42 obache Exp $
+# $NetBSD: xorg,v 1.16 2010/09/14 08:55:42 tron Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -565,6 +565,7 @@ lib/libxkbui.so.1.0
 lib/libxkbui.so.2
 lib/libxkbui.so.2.0
 lib/libxkbui.so.4.0
+lib/pkgconfig/pthread-stubs.pc
 lib/pkgconfig/xaw6.pc
 lib/pkgconfig/xaw7.pc
 lib/pkgconfig/xfontcache.pc
