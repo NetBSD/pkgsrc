@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:19 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/14 00:36:52 minskim Exp $
 
 DISTNAME=	subfigure.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.5
-DIST_SUBDIR=	15878
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-subfigure
