@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/02/08 03:57:42 minskim Exp $
-# TeX Live Revision 16881
+# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:14 minskim Exp $
 
 DISTNAME=	enctex
 PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	16881
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX extension for flexible input/output reencoding
