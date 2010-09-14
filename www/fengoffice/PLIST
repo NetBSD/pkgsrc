@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/13 14:53:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/14 00:57:11 taca Exp $
+${FO_DIR}/.htaccess
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
 ${FO_DIR}/application/controllers/AccountController.class.php
@@ -601,9 +602,7 @@ ${FO_DIR}/application/views/user/user_card.php
 ${FO_DIR}/application/views/webpage/add.php
 ${FO_DIR}/application/views/webpage/view.php
 ${FO_DIR}/application/views/webpage/view_content.php
-${FO_DIR}/cache/.cvsignore
 ${FO_DIR}/cache/dummy.txt
-${FO_DIR}/config/.cvsignore
 ${FO_DIR}/config/ldap.config.example.php
 ${FO_DIR}/console.php
 ${FO_DIR}/cron.php
@@ -697,7 +696,6 @@ ${FO_DIR}/environment/templates/dump_error.php
 ${FO_DIR}/favicon.ico
 ${FO_DIR}/index.php
 ${FO_DIR}/init.php
-${FO_DIR}/language/.cvsignore
 ${FO_DIR}/language/ca_es/_config.php
 ${FO_DIR}/language/ca_es/actions.php
 ${FO_DIR}/language/ca_es/administration.php
