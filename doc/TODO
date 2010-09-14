@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9702 2010/09/14 11:40:36 obache Exp $
+$NetBSD: TODO,v 1.9703 2010/09/14 12:26:48 taca Exp $
 
 Suggested new packages
 ======================
@@ -1105,8 +1105,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rxvt-unicode-9.07
 	o sabayon-2.30.0 [GNOME 2.30]
 	o sablecc-3.2
-	o samba-3.4.8
-	o samba-3.5.4
+	o samba-3.3.14 [CVE-2010-3069]
+	o samba-3.4.9
+	o samba-3.5.5
 	o sane-backends-1.0.21
 	o sarg-2.2.5
 	o saxon-9.2
