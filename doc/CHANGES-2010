@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3451 2010/09/14 09:14:55 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3452 2010/09/14 13:09:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4591,3 +4591,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-pip to 1.18 [sno 2010-09-14]
 	Updated devel/p5-Object-InsideOut to 3.67 [sno 2010-09-14]
 	Updated pkgtools/x11-links to 0.55 [tron 2010-09-14]
+	Updated net/samba33 to 3.3.14 [taca 2010-09-14]
