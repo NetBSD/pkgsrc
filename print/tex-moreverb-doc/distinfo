@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/13 08:40:45 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:17 minskim Exp $
 
-SHA1 (tex-moreverb-15878/moreverb.doc.tar.xz) = 1829d4de98f84b21fb4563b0f8f94c28e53ba948
-RMD160 (tex-moreverb-15878/moreverb.doc.tar.xz) = 51159b12075604fc0fa12bf27e981d88ea792c2e
-Size (tex-moreverb-15878/moreverb.doc.tar.xz) = 83144 bytes
+SHA1 (tex-moreverb-doc-15878.2010/moreverb.doc.tar.xz) = 3e932e5438d859640b58c0f6259bc46e0346933d
+RMD160 (tex-moreverb-doc-15878.2010/moreverb.doc.tar.xz) = 561c7a04118256fba068fedbc8eb6f2330ea6dea
+Size (tex-moreverb-doc-15878.2010/moreverb.doc.tar.xz) = 83148 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/03 00:08:53 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:11 minskim Exp $
 
 DISTNAME=	colortbl.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.1
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-colortbl

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/16 18:03:41 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/09/14 00:18:10 minskim Exp $
 
-SHA1 (tex-chngcntr-doc-1.0a/chngcntr.doc.tar.xz) = 545aaeb263de53a82744a8388c403fe489baa851
-RMD160 (tex-chngcntr-doc-1.0a/chngcntr.doc.tar.xz) = 91eedf3940df981cda836ee413f8e231692e9e1d
-Size (tex-chngcntr-doc-1.0a/chngcntr.doc.tar.xz) = 233632 bytes
+SHA1 (tex-chngcntr-17157/chngcntr.doc.tar.xz) = 7e159954a779957fff1e8ce7ad9ea702d84caea6
+RMD160 (tex-chngcntr-17157/chngcntr.doc.tar.xz) = c3dc0a023e1746e9b582826970cff06bbd2e5ef7
+Size (tex-chngcntr-17157/chngcntr.doc.tar.xz) = 233636 bytes

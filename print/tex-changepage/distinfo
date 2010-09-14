@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/21 05:28:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/09/14 00:18:10 minskim Exp $
 
-SHA1 (tex-changepage-1.0c/changepage.tar.xz) = 1b96d642e5c6fb699404919822df7ad105ac876d
-RMD160 (tex-changepage-1.0c/changepage.tar.xz) = 38a5c7e2bbe635f0feeb6e68e4237af9743b3712
-Size (tex-changepage-1.0c/changepage.tar.xz) = 2596 bytes
+SHA1 (tex-changepage-15878/changepage.tar.xz) = 650fa4f46f9ce252d5237018574d37e7018b272d
+RMD160 (tex-changepage-15878/changepage.tar.xz) = 570d9269b519da160c165bc32f0a84bb2cc8de53
+Size (tex-changepage-15878/changepage.tar.xz) = 2596 bytes

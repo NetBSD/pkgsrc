@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/08 04:52:03 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/09/14 00:24:38 minskim Exp $
 
-SHA1 (tex-mfware-2009/mfware.tar.xz) = d365476c077accc8c9d5584dd4248bb810d5371c
-RMD160 (tex-mfware-2009/mfware.tar.xz) = d65ce40477fa4d95803779ba90150e0cb45e6db4
-Size (tex-mfware-2009/mfware.tar.xz) = 4580 bytes
+SHA1 (tex-mfware-18835/mfware.tar.xz) = da8888176f7220bcf20434bb8802a3b5c6c44889
+RMD160 (tex-mfware-18835/mfware.tar.xz) = aa398554f215f2541bf9a10a46b98cf26498f0ce
+Size (tex-mfware-18835/mfware.tar.xz) = 4580 bytes

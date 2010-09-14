@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/11 00:11:26 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:08 minskim Exp $
 
-SHA1 (tex-algorithms-15878/algorithms.doc.tar.xz) = 672f03b2fdafd00fa13669667ea4575226649b43
-RMD160 (tex-algorithms-15878/algorithms.doc.tar.xz) = 3cb8b1d5a0311fd1bc2e741991f2c16340788b16
+SHA1 (tex-algorithms-15878/algorithms.doc.tar.xz) = 97a72806fb6d0a212a1b0c1a47146a554d23695f
+RMD160 (tex-algorithms-15878/algorithms.doc.tar.xz) = cd2a72eef01670552a5f1bffeafde143487aabff
 Size (tex-algorithms-15878/algorithms.doc.tar.xz) = 293444 bytes

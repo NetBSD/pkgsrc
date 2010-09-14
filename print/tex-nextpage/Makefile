@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/28 16:38:18 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.2 2010/09/14 00:18:18 minskim Exp $
 
 DISTNAME=	nextpage
 PKGNAME=	tex-${DISTNAME}-1.1a
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Generalisations of the page advance commands

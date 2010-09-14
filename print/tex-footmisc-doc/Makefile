@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/05/11 00:33:58 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:12 minskim Exp $
 
 DISTNAME=	footmisc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-5.5a
 TEXLIVE_REV=	15878
+DIST_SUBDIR=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}.2010
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-footmisc
