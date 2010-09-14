@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3442 2010/09/14 00:34:08 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3443 2010/09/14 00:57:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4582,3 +4582,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-kpathsea-doc to 2010 [minskim 2010-09-13]
 	Updated print/tex-ifmtarg to 1.2anb1 [minskim 2010-09-14]
 	Updated print/tex-ifmtarg-doc to 1.2anb1 [minskim 2010-09-14]
+	Updated www/fengoffice to 1.7.2 [taca 2010-09-14]
