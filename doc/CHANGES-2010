@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3441 2010/09/13 22:33:48 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3442 2010/09/14 00:34:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4580,3 +4580,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20100912nb1 [taca 2010-09-13]
 	Updated www/py-django to 1.2.3 [joerg 2010-09-13]
 	Updated print/tex-kpathsea-doc to 2010 [minskim 2010-09-13]
+	Updated print/tex-ifmtarg to 1.2anb1 [minskim 2010-09-14]
+	Updated print/tex-ifmtarg-doc to 1.2anb1 [minskim 2010-09-14]
