@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3450 2010/09/14 06:19:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3451 2010/09/14 09:14:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4590,3 +4590,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/ruby-rcairo to 1.10.0 [obache 2010-09-14]
 	Updated devel/p5-pip to 1.18 [sno 2010-09-14]
 	Updated devel/p5-Object-InsideOut to 3.67 [sno 2010-09-14]
+	Updated pkgtools/x11-links to 0.55 [tron 2010-09-14]
