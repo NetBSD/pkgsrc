@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2010/05/05 17:58:45 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2010/09/14 15:37:16 minskim Exp $
 
---- texmf/tex/generic/config/language.def.orig	2010-05-03 01:52:23.000000000 +0000
+--- texmf/tex/generic/config/language.def.orig	2010-06-05 01:54:05.000000000 +0000
 +++ texmf/tex/generic/config/language.def
-@@ -25,133 +25,6 @@
+@@ -28,139 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
@@ -16,6 +16,8 @@ $NetBSD: patch-ab,v 1.4 2010/05/05 17:58:45 minskim Exp $
 -\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
 -% from hyphen-arabic:
 -\addlanguage{arabic}{zerohyph.tex}{}{2}{3}
+-% from hyphen-armenian:
+-\addlanguage{armenian}{loadhyph-hy.tex}{}{1}{2}
 -% from hyphen-basque:
 -\addlanguage{basque}{loadhyph-eu.tex}{}{2}{2}
 -% from hyphen-bulgarian:
@@ -34,6 +36,11 @@ $NetBSD: patch-ab,v 1.4 2010/05/05 17:58:45 minskim Exp $
 -\addlanguage{danish}{loadhyph-da.tex}{}{2}{2}
 -% from hyphen-dutch:
 -\addlanguage{dutch}{loadhyph-nl.tex}{}{2}{2}
+-% from hyphen-english:
+-\addlanguage{ukenglish}{loadhyph-en-gb.tex}{}{2}{3}
+-\addlanguage{british}{loadhyph-en-gb.tex}{}{2}{3}
+-\addlanguage{UKenglish}{loadhyph-en-gb.tex}{}{2}{3}
+-\addlanguage{usenglishmax}{loadhyph-en-us.tex}{}{2}{3}
 -% from hyphen-esperanto:
 -\addlanguage{esperanto}{loadhyph-eo.tex}{}{2}{2}
 -% from hyphen-estonian:
@@ -52,6 +59,7 @@ $NetBSD: patch-ab,v 1.4 2010/05/05 17:58:45 minskim Exp $
 -% from hyphen-german:
 -\addlanguage{german}{loadhyph-de-1901.tex}{}{2}{2}
 -\addlanguage{ngerman}{loadhyph-de-1996.tex}{}{2}{2}
+-\addlanguage{swissgerman}{loadhyph-de-ch-1901.tex}{}{2}{2}
 -% from hyphen-greek:
 -\addlanguage{monogreek}{loadhyph-el-monoton.tex}{}{1}{1}
 -\addlanguage{greek}{loadhyph-el-polyton.tex}{}{1}{1}
@@ -82,6 +90,8 @@ $NetBSD: patch-ab,v 1.4 2010/05/05 17:58:45 minskim Exp $
 -\addlanguage{italian}{loadhyph-it.tex}{}{2}{2}
 -% from hyphen-kurmanji:
 -\addlanguage{kurmanji}{loadhyph-kmr.tex}{}{2}{2}
+-% from hyphen-lao:
+-\addlanguage{lao}{loadhyph-lo.tex}{}{1}{1}
 -% from hyphen-latin:
 -\addlanguage{latin}{loadhyph-la.tex}{}{2}{2}
 -% from hyphen-latvian:
@@ -123,10 +133,6 @@ $NetBSD: patch-ab,v 1.4 2010/05/05 17:58:45 minskim Exp $
 -\addlanguage{turkish}{loadhyph-tr.tex}{}{2}{2}
 -% from hyphen-turkmen:
 -\addlanguage{turkmen}{loadhyph-tk.tex}{}{2}{2}
--% from hyphen-ukenglish:
--\addlanguage{ukenglish}{loadhyph-en-gb.tex}{}{2}{3}
--\addlanguage{british}{loadhyph-en-gb.tex}{}{2}{3}
--\addlanguage{UKenglish}{loadhyph-en-gb.tex}{}{2}{3}
 -% from hyphen-ukrainian:
 -\addlanguage{ukrainian}{loadhyph-uk.tex}{}{2}{2}
 -% from hyphen-uppersorbian:
