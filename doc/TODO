@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9701 2010/09/14 08:39:12 obache Exp $
+$NetBSD: TODO,v 1.9702 2010/09/14 11:40:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -936,6 +936,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newt-0.52.2 (ubuntu)
 	o ng-1.4.4
 	o nikto-2.0.1
+	o nkf-2.1.1 [broken, self test will be failed]
 	o notification-daemon-0.5.0
 	o ns-3.8
 	o ns-plugger-common-5.1.3
