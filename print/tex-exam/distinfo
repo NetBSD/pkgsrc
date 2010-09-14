@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/26 03:50:20 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:16 minskim Exp $
 
-SHA1 (tex-exam-15878/exam.tar.xz) = c43624db09f71c00c32c74216f895ac12e215cf0
-RMD160 (tex-exam-15878/exam.tar.xz) = f319f2b35eb8c4b8d311e236f22a44296841dd78
-Size (tex-exam-15878/exam.tar.xz) = 36300 bytes
+SHA1 (tex-exam-15878.2010/exam.tar.xz) = f54301d297cf3142c9642f89adebb57c07d8a6db
+RMD160 (tex-exam-15878.2010/exam.tar.xz) = e4c3be28c929f0ad4de81f9ffa92fea4576013c3
+Size (tex-exam-15878.2010/exam.tar.xz) = 36300 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/05 18:33:26 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:09 minskim Exp $
 
-SHA1 (tex-bibtex-doc-0.99c/bibtex.doc.tar.xz) = 71a5f0cfb5398841e46873f877559ab83d07e8fb
-RMD160 (tex-bibtex-doc-0.99c/bibtex.doc.tar.xz) = 5894ea2e2e72d2d3323d3fe09c2969e9aed9ccab
-Size (tex-bibtex-doc-0.99c/bibtex.doc.tar.xz) = 246552 bytes
+SHA1 (tex-bibtex-18835/bibtex.doc.tar.xz) = 58ef52f8293fca4a6b6e31953dc5c6c81053378d
+RMD160 (tex-bibtex-18835/bibtex.doc.tar.xz) = 06fb4a82bcde4c0c9d65ba6c37891899c64e1151
+Size (tex-bibtex-18835/bibtex.doc.tar.xz) = 246368 bytes
