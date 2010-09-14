@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3445 2010/09/14 05:42:46 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3446 2010/09/14 06:00:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4585,3 +4585,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/fengoffice to 1.7.2 [taca 2010-09-14]
 	Updated devel/p5-CPAN-Reporter to 1.1801 [sno 2010-09-14]
 	Updated mail/p5-Email-Stuff to 2.102 [sno 2010-09-14]
+	Updated devel/p5-Test-NoWarnings to 1.02 [sno 2010-09-14]
