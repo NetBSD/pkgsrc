@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3444 2010/09/14 05:30:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3445 2010/09/14 05:42:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-ifmtarg-doc to 1.2anb1 [minskim 2010-09-14]
 	Updated www/fengoffice to 1.7.2 [taca 2010-09-14]
 	Updated devel/p5-CPAN-Reporter to 1.1801 [sno 2010-09-14]
+	Updated mail/p5-Email-Stuff to 2.102 [sno 2010-09-14]
