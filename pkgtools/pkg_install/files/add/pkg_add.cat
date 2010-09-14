@@ -64,6 +64,11 @@ OOPPTTIIOONNSS
              rides the fatal error when the operating system or architecture
              the package was built on differ from that of the host.
 
+     --DD      Force updating even if the dependencies of depending packages are
+             not satisfied by the new package.  This is used by "make
+             replace", after which one would typically replace the depending
+             packages.
+
      --II      If an installation script exists for a given package, do not exe-
              cute it.
 
