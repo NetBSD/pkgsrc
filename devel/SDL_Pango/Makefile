@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:44:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/14 11:00:50 wiz Exp $
 #
 
 DISTNAME=	SDL_Pango-0.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlpango/}
 

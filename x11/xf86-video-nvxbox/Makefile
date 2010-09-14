@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/08 12:40:34 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/14 11:03:14 wiz Exp $
 #
 
 DISTNAME=	xf86-video-nvxbox-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 

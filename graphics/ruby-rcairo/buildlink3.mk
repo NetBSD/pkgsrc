@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2010/09/10 06:55:02 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2010/09/14 11:00:47 wiz Exp $
 
 BUILDLINK_TREE+=	ruby-rcairo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ruby-rcairo
 RUBY_RCAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ruby-rcairo+=	${RUBY_PKGPREFIX}-rcairo>=1.6.0
-BUILDLINK_ABI_DEPENDS.ruby-rcairo?=	${RUBY_PKGPREFIX}-rcairo>=1.8.1nb2
+BUILDLINK_ABI_DEPENDS.ruby-rcairo?=	ruby18-rcairo>=1.10.0nb1
 BUILDLINK_PKGSRCDIR.ruby-rcairo?=	../../graphics/ruby-rcairo
 
 .include "../../graphics/cairo/buildlink3.mk"

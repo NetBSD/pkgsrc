@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:44:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/14 11:01:38 wiz Exp $
 #
 
 DISTNAME=		qconf-1.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		http://delta.affinix.com/download/
 EXTRACT_SUFX=		.tar.bz2

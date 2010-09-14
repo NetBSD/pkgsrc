@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2010/06/13 22:43:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2010/09/14 11:01:04 wiz Exp $
 
 BUILDLINK_TREE+=	jpilot
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jpilot
 JPILOT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jpilot+=	jpilot>=1.6.0
-BUILDLINK_ABI_DEPENDS.jpilot+=	jpilot>=1.6.0nb5
+BUILDLINK_ABI_DEPENDS.jpilot+=	jpilot>=1.6.0nb6
 BUILDLINK_PKGSRCDIR.jpilot?=	../../comms/jpilot
 
 .include "../../comms/pilot-link-libs/buildlink3.mk"
