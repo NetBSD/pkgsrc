@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3447 2010/09/14 06:03:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3448 2010/09/14 06:05:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4587,3 +4587,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Email-Stuff to 2.102 [sno 2010-09-14]
 	Updated devel/p5-Test-NoWarnings to 1.02 [sno 2010-09-14]
 	Updated devel/p5-Test-SharedFork to 0.15 [sno 2010-09-14]
+	Updated graphics/ruby-rcairo to 1.10.0 [obache 2010-09-14]
