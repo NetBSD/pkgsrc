@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/04/10 16:07:14 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/09/14 20:50:12 minskim Exp $
 
 DISTNAME=	xkeyval.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.6a
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-xkeyval
