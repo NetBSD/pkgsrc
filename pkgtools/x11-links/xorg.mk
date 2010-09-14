@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.20 2010/09/14 17:30:12 tron Exp $
+# $NetBSD: xorg.mk,v 1.21 2010/09/14 19:40:15 tron Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -51,9 +51,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.if empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*-*)
 .include "../../x11/pixman/buildlink3.mk"
-.endif
 .include "../../x11/printproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/recordproto/buildlink3.mk"
@@ -84,14 +82,14 @@ FILES_LIST=	${FILESDIR}/xorg
 # XXX: maybe skip iconv and zlib too?
 .for _pkg_ in ${BUILDLINK_TREE:N-*:Nx11-links:O:u}
 CHECK_BUILTIN.${_pkg_}:=	yes
-USE_BUILTIN.${_pkg_}=		yes
 .  sinclude "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
 CHECK_BUILTIN.${_pkg_}:=	no
 .endfor
 
 .for _pkg_ in ${BUILDLINK_TREE:N-*:Nx11-links:O:u}
 IGNORE_PKG.${_pkg_}=	yes
-.  if defined(IS_BUILTIN.${_pkg_}) && !empty(IS_BUILTIN.${_pkg_}:M[yY][eE][sS])
+.  if defined(USE_BUILTIN.${_pkg_}) && \
+      !empty(USE_BUILTIN.${_pkg_}:M[yY][eE][sS])
 .    if exists(${FILESDIR}/xorg.${_pkg_})
 FILES_LIST+=	${FILESDIR}/xorg.${_pkg_}
 .    elif exists(${FILESDIR}/xfree.${_pkg_})
