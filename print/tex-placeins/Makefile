@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/05/10 23:35:51 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:18 minskim Exp $
 
 DISTNAME=	placeins
 PKGNAME=	tex-${DISTNAME}-2.2
 TEXLIVE_REV=	15878
+DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX command to control float placement

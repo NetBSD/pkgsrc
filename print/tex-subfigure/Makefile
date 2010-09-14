@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/02/04 18:06:58 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:19 minskim Exp $
 
 DISTNAME=	subfigure
 PKGNAME=	tex-${DISTNAME}-2.1.5
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Figures divided into subfigures (obsoleted by tex-subfig)

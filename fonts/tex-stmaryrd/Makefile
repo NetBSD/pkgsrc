@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 08:38:03 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/09/14 00:24:39 minskim Exp $
 
 DISTNAME=	stmaryrd
 PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	St Mary Road symbols for theoretical computer science

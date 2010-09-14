@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/03/18 16:08:59 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:09 minskim Exp $
 
-SHA1 (tex-anonchap-1.1a-17049/anonchap.tar.xz) = 6bebeb2719e7aad7bffdbf1b964eb8a9dbeff9ef
-RMD160 (tex-anonchap-1.1a-17049/anonchap.tar.xz) = ccfce96a0fa033eeda9a2611527718e4dee06019
-Size (tex-anonchap-1.1a-17049/anonchap.tar.xz) = 1452 bytes
+SHA1 (tex-anonchap-17049/anonchap.tar.xz) = 89879d56e2068a0cc211e35b8f8b3b003019a49c
+RMD160 (tex-anonchap-17049/anonchap.tar.xz) = d412c5e7b952651019080010914ed7e125f8c4b4
+Size (tex-anonchap-17049/anonchap.tar.xz) = 1452 bytes

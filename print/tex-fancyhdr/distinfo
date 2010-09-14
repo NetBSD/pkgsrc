@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/10 20:10:16 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:11 minskim Exp $
 
-SHA1 (tex-fancyhdr-15878/fancyhdr.tar.xz) = 5350260ad7d51c30df781971915fca67f2c78412
-RMD160 (tex-fancyhdr-15878/fancyhdr.tar.xz) = 7894322945b80ca7a64553b4a10255a7aac53302
-Size (tex-fancyhdr-15878/fancyhdr.tar.xz) = 8324 bytes
+SHA1 (tex-fancyhdr-15878.2010/fancyhdr.tar.xz) = 35831d8f58f38b315983cf3e911ca6203e9671af
+RMD160 (tex-fancyhdr-15878.2010/fancyhdr.tar.xz) = 53e6691305cd404b8c39c6c88c7e3094c05487aa
+Size (tex-fancyhdr-15878.2010/fancyhdr.tar.xz) = 8324 bytes

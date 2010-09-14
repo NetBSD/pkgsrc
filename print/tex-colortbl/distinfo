@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/03 00:08:53 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:10 minskim Exp $
 
-SHA1 (tex-colortbl-0.1/colortbl.tar.xz) = 6a677ff524155b17b5853a7e54fbe861b3a269f7
-RMD160 (tex-colortbl-0.1/colortbl.tar.xz) = 67c27ddb5de0b4f4c1b12769daffb58ae0827321
-Size (tex-colortbl-0.1/colortbl.tar.xz) = 3144 bytes
+SHA1 (tex-colortbl-15878/colortbl.tar.xz) = 1e947c97f43e109ffb6114d64ed6ee935463d648
+RMD160 (tex-colortbl-15878/colortbl.tar.xz) = 71e0565b999712d3498fd28254920f0e1b22879e
+Size (tex-colortbl-15878/colortbl.tar.xz) = 3144 bytes

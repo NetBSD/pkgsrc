@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/05/12 09:35:49 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/14 00:18:17 minskim Exp $
 
 DISTNAME=	listings.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
 TEXLIVE_REV=	15878
+DIST_SUBDIR=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}.2010
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-listings

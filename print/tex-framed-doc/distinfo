@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/27 18:34:43 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/09/14 00:18:16 minskim Exp $
 
-SHA1 (tex-framed-doc-0.95/framed.doc.tar.xz) = 900da51759cc975d05ef20c3beaf8a7f6cc76d57
-RMD160 (tex-framed-doc-0.95/framed.doc.tar.xz) = 14d98aed585b0f92beb1c0276c36125f067ddd89
-Size (tex-framed-doc-0.95/framed.doc.tar.xz) = 234660 bytes
+SHA1 (tex-framed-17274/framed.doc.tar.xz) = 31483634c80b55f84234bbbb9c7712edecc0432d
+RMD160 (tex-framed-17274/framed.doc.tar.xz) = f5b7586f0a85b27dc8dce93f7ffd5ec01355846c
+Size (tex-framed-17274/framed.doc.tar.xz) = 234664 bytes

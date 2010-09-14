@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/26 04:23:02 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:18:19 minskim Exp $
 
-SHA1 (tex-sectsty-15878/sectsty.tar.xz) = d3d310d8b2f5ef4f370d283a9664cfdeb330a179
-RMD160 (tex-sectsty-15878/sectsty.tar.xz) = 3b3148e08c308cbd0313b61b2f94938cc7311b0f
-Size (tex-sectsty-15878/sectsty.tar.xz) = 4832 bytes
+SHA1 (tex-sectsty-15878.2010/sectsty.tar.xz) = c194229c901ed1fb269aecfa7c2b7f8c742776a0
+RMD160 (tex-sectsty-15878.2010/sectsty.tar.xz) = b4ccb77ad32f7f2c1a0a2dbc74a33d7c5a393c4a
+Size (tex-sectsty-15878.2010/sectsty.tar.xz) = 4832 bytes

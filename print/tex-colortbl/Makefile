@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/05/03 00:08:53 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.4 2010/09/14 00:18:10 minskim Exp $
 
 DISTNAME=	colortbl
 PKGNAME=	tex-${DISTNAME}-0.1
 PKGREVISION=	1
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX package to add color to tables

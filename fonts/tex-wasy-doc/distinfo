@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/20 17:52:31 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/14 00:24:40 minskim Exp $
 
-SHA1 (tex-wasy-15878/wasy.doc.tar.xz) = 348395afbd152d56dd6ee66cb7b2eaf9cc463ca3
-RMD160 (tex-wasy-15878/wasy.doc.tar.xz) = 107b3d3986b5e5dc126f38439d28387c743b06ee
-Size (tex-wasy-15878/wasy.doc.tar.xz) = 149584 bytes
+SHA1 (tex-wasy-doc-15878.2010/wasy.doc.tar.xz) = 6ea405e0a4738c4b65e52437cb395ae4d27e9449
+RMD160 (tex-wasy-doc-15878.2010/wasy.doc.tar.xz) = d09a75a10f4789b2136faa4013e87af131180c01
+Size (tex-wasy-doc-15878.2010/wasy.doc.tar.xz) = 149584 bytes

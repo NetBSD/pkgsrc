@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/02/05 18:30:30 minskim Exp $
-# TeX Live Revision 16044
+# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:09 minskim Exp $
 
 DISTNAME=	bibtex
 PKGNAME=	tex-${DISTNAME}-0.99c
-PKGREVISION=	1
+TEXLIVE_REV=	18835
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Reference management software for LaTeX
