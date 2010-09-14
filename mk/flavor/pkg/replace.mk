@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.30 2010/06/16 15:15:05 gdt Exp $
+# $NetBSD: replace.mk,v 1.31 2010/09/14 22:30:42 gdt Exp $
 #
 
 # _flavor-replace:
@@ -183,23 +183,23 @@ replace-clean: .PHONY
 
 # Logically we would like to do a "pkg_add -U".  However, that fails
 # if there is a depending package that exactly depends on the package
-# being replaced.  Historically, 'make replace' would replace a
-# package regardless of whether that broke depending packages
-# (typically due to shlib ABI changes, especially major version
-# bumps).  Therefore, make replace in DESTDIR mode should behave the
-# same way.  unsafe_depends will be set on depending packages, and
-# then those may be rebuilt via a manual process or by
-# pkg_rolling-replace.
+# being replaced, so we override that check with -D.  Historically,
+# 'make replace' would replace a package regardless of whether that
+# broke depending packages (typically due to shlib ABI changes,
+# especially major version bumps).  Therefore, make replace in DESTDIR
+# mode should behave the same way.  unsafe_depends will be set on
+# depending packages, and then those may be rebuilt via a manual
+# process or by pkg_rolling-replace.
 replace-destdir: .PHONY
 	@${PHASE_MSG} "Updating using binary package of "${PKGNAME:Q}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
-	${PKG_ADD} -U -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE} || ${PKG_ADD} -U -f -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
+	${PKG_ADD} -U -D -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
 	@${ECHO} "Fixing recorded cwd..."
 	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
 	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
 .else
-	${PKG_ADD} -U ${PKGFILE} || ${PKG_ADD} -U -f ${PKGFILE}
+	${PKG_ADD} -U -D ${PKGFILE}
 .endif
 	${RUN}${_REPLACE_OLDNAME_CMD}; \
 	${PKG_INFO} -qR ${PKGNAME:Q} | while read pkg; do \
