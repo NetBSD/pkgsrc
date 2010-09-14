@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/11 20:56:13 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/09/14 00:18:09 minskim Exp $
 
-SHA1 (tex-cancel-doc-2.0/cancel.doc.tar.xz) = 7090776352072e2375ffe4ea969320f53131be17
-RMD160 (tex-cancel-doc-2.0/cancel.doc.tar.xz) = 1de5a88d5b90793c231eab654c7d8cf6b6c4af8f
-Size (tex-cancel-doc-2.0/cancel.doc.tar.xz) = 261512 bytes
+SHA1 (tex-cancel-17124/cancel.doc.tar.xz) = e7d76daaec51d7e13137e7acb4361ffc1eb85f70
+RMD160 (tex-cancel-17124/cancel.doc.tar.xz) = 93c3c2b5745a942e7f09924dac1d422fac863104
+Size (tex-cancel-17124/cancel.doc.tar.xz) = 261520 bytes

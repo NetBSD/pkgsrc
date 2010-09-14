@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/05/10 20:10:16 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/14 00:18:11 minskim Exp $
 
 DISTNAME=	fancyhdr
 PKGNAME=	tex-${DISTNAME}-3.1
 PKGREVISION=	1
 TEXLIVE_REV=	15878
+DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extensive control of page headers and footers in LaTeX2e

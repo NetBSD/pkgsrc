@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/10 22:54:39 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/14 00:18:14 minskim Exp $
 
 DISTNAME=	pslatex
 PKGNAME=	tex-${DISTNAME}-2009
 TEXLIVE_REV=	16416
+DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Use PostScript fonts by default
