@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.19 2010/09/11 20:26:11 wiz Exp $
+# $NetBSD: xorg.mk,v 1.20 2010/09/14 17:30:12 tron Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -51,7 +51,9 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.if empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*-*)
 .include "../../x11/pixman/buildlink3.mk"
+.endif
 .include "../../x11/printproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/recordproto/buildlink3.mk"
