@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/08/06 01:44:54 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2010/09/15 08:46:21 markd Exp $
 
-DISTNAME=	ess-5.3.4
+DISTNAME=	ess-5.11
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://ess.r-project.org/downloads/ess/
 EXTRACT_SUFX=	.tgz
