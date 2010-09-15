@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3469 2010/09/15 15:09:44 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3470 2010/09/15 19:55:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4613,3 +4613,20 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/mupdf to 0.7 [joerg 2010-09-15]
 	Updated www/contao29-translations to 20100914 [taca 2010-09-15]
 	Updated print/tex-koma-script to 3.06 [minskim 2010-09-15]
+	Updated math/ess to 5.11 [markd 2010-09-15]
+	Updated meta-pkgs/gnuradio to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-audio-jack to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-audio-oss to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-audio-portaudio to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-core to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-core-docs to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-examples to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-gsm to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-howto to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-radio-astronomy to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-trellis to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-usrp to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-video-sdl to 3.3.0 [markd 2010-09-15]
+	Updated ham/gnuradio-wxgui to 3.3.0 [markd 2010-09-15]
+	Updated ham/usrp to 3.3.0 [markd 2010-09-15]
+	Updated ham/usrp-docs to 3.3.0 [markd 2010-09-15]
