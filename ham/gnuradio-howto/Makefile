@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/09/11 16:23:29 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/15 09:38:44 markd Exp $
 
 DISTNAME=	gr-howto-write-a-block-${VERSION}
 CATEGORIES=	ham
@@ -13,9 +13,6 @@ DISTINFO_FILE=		${.CURDIR}/distinfo
 PATCHDIR=		${.CURDIR}/patches
 
 PY_PATCHPLIST=  yes
-PYTHON_PATCH_SCRIPTS+=	src/python/qa_howto.py
-PYTHON_PATCH_SCRIPTS+=	doc/qa_howto_1.py
-PYTHON_PATCH_SCRIPTS+=	doc/make_numbered_listing.py
 
 .include "../../ham/gnuradio-core/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/12 12:21:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/09/15 09:38:44 markd Exp $
 include/gnuradio/base.h
 include/gnuradio/fsm.h
 include/gnuradio/interleaver.h
@@ -66,6 +66,8 @@ include/gnuradio/trellis_viterbi_combined_si.h
 include/gnuradio/trellis_viterbi_combined_ss.h
 include/gnuradio/trellis_viterbi_i.h
 include/gnuradio/trellis_viterbi_s.h
+lib/libgnuradio-trellis.la
+lib/pkgconfig/gnuradio-trellis.pc
 ${PYSITELIB}/gnuradio/_trellis.la
 ${PYSITELIB}/gnuradio/trellis.py
 ${PYSITELIB}/gnuradio/trellis.pyc
@@ -99,3 +101,4 @@ share/gnuradio/examples/trellis/test_turbo_equalization1.py
 share/gnuradio/examples/trellis/test_turbo_equalization2.py
 share/gnuradio/examples/trellis/test_viterbi_equalization.py
 share/gnuradio/examples/trellis/test_viterbi_equalization1.py
+@pkgdir share/doc/gnuradio-${PKGVERSION}/html
