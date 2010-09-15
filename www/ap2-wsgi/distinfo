@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2009/08/31 12:42:19 gdt Exp $
+$NetBSD: distinfo,v 1.9 2010/09/15 11:51:29 adam Exp $
 
-SHA1 (mod_wsgi-2.5.tar.gz) = a2ed3fd60b390c3a790aca1c859093ab7a7c2d9d
-RMD160 (mod_wsgi-2.5.tar.gz) = c1c2b72deca98eaa9e7bee256b027b5e0488b2fc
-Size (mod_wsgi-2.5.tar.gz) = 97420 bytes
+SHA1 (mod_wsgi-3.3.tar.gz) = f32d38e5d3ed5de1efd5abefb52678f833dc9166
+RMD160 (mod_wsgi-3.3.tar.gz) = 759cf57d691924271fbc45af10596c033c063c89
+Size (mod_wsgi-3.3.tar.gz) = 117930 bytes
