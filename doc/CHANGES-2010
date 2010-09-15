@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3462 2010/09/15 06:40:53 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3463 2010/09/15 11:53:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4603,3 +4603,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTTP-Parser-XS to 0.09 [sno 2010-09-15]
 	Updated www/p5-HTTP-Server-Simple-Mason to 0.14 [sno 2010-09-15]
 	Updated www/p5-HTML-FormFu to 0.07003 [sno 2010-09-15]
+	Updated graphics/libpano13 to 2.9.17 [adam 2010-09-15]
+	Updated graphics/autopano-sift-C to 2.5.1nb3 [adam 2010-09-15]
+	Updated graphics/hugin to 2010.0.0nb4 [adam 2010-09-15]
+	Updated www/ap2-wsgi to 3.3 [adam 2010-09-15]
