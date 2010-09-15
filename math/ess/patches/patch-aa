@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2007/06/11 14:16:26 markd Exp $
+$NetBSD: patch-aa,v 1.3 2010/09/15 08:46:21 markd Exp $
 
---- Makeconf.orig	2007-04-27 05:13:11.000000000 +1200
+--- Makeconf.orig	2010-07-13 16:42:27.000000000 +0000
 +++ Makeconf
-@@ -16,14 +16,14 @@
+@@ -15,14 +15,14 @@
  ## ETCDIR          Destination of script and icon files
- ## PREFIX/DESTDIR  Directory prepended to LISPDIR, INFODIR & ETCDIR
+ ## PREFIX(DESTDIR) Directory prepended to LISPDIR, INFODIR, DOCDIR & ETCDIR
  ##                 Specify either PREFIX or DESTDIR to over-ride /usr/local
 -DESTDIR=/usr/local
 -PREFIX=$(DESTDIR)
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2007/06/11 14:16:26 markd Exp $
 +#LISPDIR=$(PREFIX)/share/emacs/site-lisp
 +#INFODIR=$(PREFIX)/info
 +#ETCDIR =$(PREFIX)/share/emacs/etc/ess
- #
+ 
  ## XEmacs
  #EMACS=xemacs
 @@ -48,7 +48,7 @@ EMACSBATCH = $(EMACS) -batch -no-site-fi
@@ -29,15 +29,15 @@ $NetBSD: patch-aa,v 1.2 2007/06/11 14:16:26 markd Exp $
  #
 -MAKEINFO = LC_ALL=C LANG=en makeinfo
 +#MAKEINFO = LC_ALL=C LANG=en makeinfo
- MAKEHTML = $(MAKEINFO) --html --no-split
+ MAKEHTML = $(MAKEINFO) --html --no-split --css-include=atouchofstyle.css -o -
  ##                            ^^^^^^^^^^ today's bandwidth is fast
- MAKETXT  = $(MAKEINFO) --no-validate --no-headers --no-split -o -
-@@ -56,7 +56,7 @@ MAKETXT  = $(MAKEINFO) --no-validate --n
+ #MAKETXT  = $(MAKEINFO) --no-validate --no-headers --no-split -o -
+@@ -57,7 +57,7 @@ MAKETXT  = $(MAKEINFO) --no-validate --p
  INSTALLDIR = install -d
  #INSTALLDIR = mkdir -p
  #
 -INSTALL = cp -p
 +#INSTALL = cp -p
  #INSTALL = install
- 
- ## Section 3
+ #
+ DOCDIR=$(PREFIX)/share/doc/ess
