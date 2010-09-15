@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2010/03/24 19:43:24 asau Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/15 09:38:43 markd Exp $
 
 PKGNAME=	usrp-${VERSION}
-PKGREVISION=	2
 COMMENT=	Non GNU Radio specific part of the USRP code base
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -17,10 +16,6 @@ PYTHON_PATCH_SCRIPTS+=	usrp/firmware/include/generate_regs.py
 PYTHON_PATCH_SCRIPTS+=	usrp/firmware/src/common/edit-gpif
 PYTHON_PATCH_SCRIPTS+=	usrp/firmware/src/common/build_eeprom.py
 PYTHON_PATCH_SCRIPTS+=	usrp/firmware/src/usrp2/edit-gpif
-PYTHON_PATCH_SCRIPTS+=	usrp/fpga/gen_makefile_extra.py
-PYTHON_PATCH_SCRIPTS+=	usrp/fpga/sdr_lib/gen_cordic_consts.py
-PYTHON_PATCH_SCRIPTS+=	usrp/fpga/toplevel/mrfm/mrfm.py
-PYTHON_PATCH_SCRIPTS+=	usrp/fpga/toplevel/mrfm/mrfm_fft.py
 PYTHON_PATCH_SCRIPTS+=	usrp/host/lib/check_data.py
 PYTHON_PATCH_SCRIPTS+=	usrp/host/lib/dump_data.py
 PYTHON_PATCH_SCRIPTS+=	usrp/host/lib/gen_usrp_dbid.py
