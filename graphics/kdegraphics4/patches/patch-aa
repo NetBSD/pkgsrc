@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1 2010/09/15 19:47:33 markd Exp $
+
+svn r1167826 for advisory 20100825-1
+
+Index: okular/generators/plucker/unpluck/image.cpp
+===================================================================
+--- okular/generators/plucker/unpluck/image.cpp	(revision 1167825)
++++ okular/generators/plucker/unpluck/image.cpp	(revision 1167826)
+@@ -289,8 +289,23 @@
+             for (j = 0; j < bytes_per_row;) {
+                 incount = *palm_ptr++;
+                 inval = *palm_ptr++;
+-                memset (rowbuf + j, inval, incount);
+-                j += incount;
++                if (incount + j <= bytes_per_row  * width)
++                {
++                    memset (rowbuf + j, inval, incount);
++                    j += incount;
++                }
++                else
++                {
++                    free (rowbuf);
++                    free (lastrow);
++                    free (jpeg_row);
++
++                    jpeg_destroy_compress (&cinfo);
++
++                    fclose( outfile );
++
++                    return false;
++                }
+             }
+         }
+         else if ((flags & PALM_IS_COMPRESSED_FLAG)
