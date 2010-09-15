@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2009/10/07 04:49:58 taca Exp $
+# $NetBSD: Makefile,v 1.23 2010/09/15 12:17:35 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${RUBY_PKGPREFIX}-mode-${RUBY_VERSION_SUFFIX}
-PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -16,11 +15,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
 WRKSRC=			${RUBY_WRKSRC}/misc
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/misc
-RUBY_VERSION=		${RUBY18_VERSION}
+RUBY_VERSION=		${RUBY19_VERSION}
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
-SRCS=			ruby-mode.el rubydb3x.el ruby-electric.el \
-			inf-ruby.el ruby-style.el
+SRCS=			inf-ruby.el ruby-electric.el ruby-mode.el \
+			ruby-style.el rubydb3x.el
 
 do-build:
 	for f in ${SRCS}; do \
