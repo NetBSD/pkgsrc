@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/10 19:38:40 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/09/15 05:54:23 sno Exp $
 
-SHA1 (HTTP-Parser-XS-0.07.tar.gz) = b831919a743ad593076a571464bedc6118c90f7f
-RMD160 (HTTP-Parser-XS-0.07.tar.gz) = 60c0d1dc2383171e4ed1705f095e3e01a46fc1ab
-Size (HTTP-Parser-XS-0.07.tar.gz) = 6436 bytes
+SHA1 (HTTP-Parser-XS-0.09.tar.gz) = d3ee911e52d6f7b31b080e7de4fc2ddba0d2d2fa
+RMD160 (HTTP-Parser-XS-0.09.tar.gz) = 5c9cfc20365d4c033c6fb15b84861acd4c99d266
+Size (HTTP-Parser-XS-0.09.tar.gz) = 7766 bytes
