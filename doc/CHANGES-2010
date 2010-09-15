@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3463 2010/09/15 11:53:43 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3464 2010/09/15 12:02:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4607,3 +4607,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/autopano-sift-C to 2.5.1nb3 [adam 2010-09-15]
 	Updated graphics/hugin to 2010.0.0nb4 [adam 2010-09-15]
 	Updated www/ap2-wsgi to 3.3 [adam 2010-09-15]
+	Updated graphics/cairo to 1.10.0nb1 [wiz 2010-09-15]
