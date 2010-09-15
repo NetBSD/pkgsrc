@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2010/05/04 18:30:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.36 2010/09/15 12:36:49 wiz Exp $
 ${PLIST.altivec}lib/vlc/misc/libmemcpyaltivec_plugin.la
 ${PLIST.altivec}lib/vlc/video_chroma/libi420_yuy2_altivec_plugin.la
 ${PLIST.cdda}lib/vlc/access/libcdda_plugin.la
@@ -26,6 +26,7 @@ ${PLIST.vcd}lib/vlc/access/libvcd_plugin.la
 ${PLIST.x11}bin/qvlc
 ${PLIST.x11}lib/vlc/access/libx11_screen_plugin.la
 ${PLIST.x11}lib/vlc/codec/libpng_plugin.la
+${PLIST.x11}lib/vlc/control/libglobalhotkeys_plugin.la
 ${PLIST.x11}lib/vlc/gui/libqt4_plugin.la
 ${PLIST.x11}lib/vlc/misc/libfreetype_plugin.la
 ${PLIST.x11}lib/vlc/misc/libosd_parser_plugin.la

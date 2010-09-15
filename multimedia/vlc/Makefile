@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2010/09/14 11:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2010/09/15 12:36:49 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +12,7 @@ VLC_VERSION=		1.0.6
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://videolan.org/
 COMMENT=		VLC media player and streaming server
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
