@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3468 2010/09/15 15:08:47 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3469 2010/09/15 15:09:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/vlc to 1.0.6nb3 [wiz 2010-09-15]
 	Updated print/mupdf to 0.7 [joerg 2010-09-15]
 	Updated www/contao29-translations to 20100914 [taca 2010-09-15]
+	Updated print/tex-koma-script to 3.06 [minskim 2010-09-15]
