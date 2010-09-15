@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/08/12 12:21:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/09/15 09:38:44 markd Exp $
 share/examples/gnuradio/python/apps/README
 share/examples/gnuradio/python/apps/hf_explorer/README
 share/examples/gnuradio/python/apps/hf_explorer/hfx2.py
@@ -33,20 +33,24 @@ share/examples/gnuradio/python/digital-bert/receive_path.py
 share/examples/gnuradio/python/digital-bert/transmit_path.py
 share/examples/gnuradio/python/digital/README
 share/examples/gnuradio/python/digital/benchmark_loopback.py
+share/examples/gnuradio/python/digital/benchmark_qt_loopback.py
+share/examples/gnuradio/python/digital/benchmark_qt_rx.py
 share/examples/gnuradio/python/digital/benchmark_rx.py
 share/examples/gnuradio/python/digital/benchmark_tx.py
 share/examples/gnuradio/python/digital/gen_whitener.py
-share/examples/gnuradio/python/digital/generic_usrp.py
 share/examples/gnuradio/python/digital/pick_bitrate.py
+share/examples/gnuradio/python/digital/qt_digital_window.py
+share/examples/gnuradio/python/digital/qt_digital_window.ui
+share/examples/gnuradio/python/digital/qt_rx_window.py
+share/examples/gnuradio/python/digital/qt_rx_window.ui
 share/examples/gnuradio/python/digital/receive_path.py
-share/examples/gnuradio/python/digital/receive_path_lb.py
 share/examples/gnuradio/python/digital/run_length.py
 share/examples/gnuradio/python/digital/rx_voice.py
 share/examples/gnuradio/python/digital/transmit_path.py
-share/examples/gnuradio/python/digital/transmit_path_lb.py
 share/examples/gnuradio/python/digital/tunnel.py
 share/examples/gnuradio/python/digital/tx_voice.py
-share/examples/gnuradio/python/digital/usrp_options.py
+share/examples/gnuradio/python/digital/usrp_receive_path.py
+share/examples/gnuradio/python/digital/usrp_transmit_path.py
 share/examples/gnuradio/python/digital_voice/cvsd_test.py
 share/examples/gnuradio/python/digital_voice/encdec.py
 share/examples/gnuradio/python/mp-sched/README
@@ -79,6 +83,12 @@ share/examples/gnuradio/python/ofdm/plot_ofdm.m
 share/examples/gnuradio/python/ofdm/receive_path.py
 share/examples/gnuradio/python/ofdm/transmit_path.py
 share/examples/gnuradio/python/ofdm/tunnel.py
+share/examples/gnuradio/python/pfb/channelize.py
+share/examples/gnuradio/python/pfb/chirp_channelize.py
+share/examples/gnuradio/python/pfb/decimate.py
+share/examples/gnuradio/python/pfb/fmtest.py
+share/examples/gnuradio/python/pfb/interpolate.py
+share/examples/gnuradio/python/pfb/resampler_demo.grc
 share/examples/gnuradio/python/usrp/fm_tx4.py
 share/examples/gnuradio/python/usrp/fm_tx_2_daughterboards.py
 share/examples/gnuradio/python/usrp/max_power.py
@@ -99,4 +109,7 @@ share/examples/gnuradio/python/usrp/usrp_wfm_rcv_nogui.py
 share/examples/gnuradio/python/usrp/usrp_wfm_rcv_pll.py
 share/examples/gnuradio/python/usrp/usrp_wfm_rcv_sca.py
 share/examples/gnuradio/python/usrp/usrp_wxapt_rcv.py
+share/examples/gnuradio/python/usrp2/qt_wfm_interface.py
+share/examples/gnuradio/python/usrp2/qt_wfm_interface.ui
+share/examples/gnuradio/python/usrp2/usrp2_wfm_qt.py
 share/examples/gnuradio/python/usrp2/usrp2_wfm_rcv.py

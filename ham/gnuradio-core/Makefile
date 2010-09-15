@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2010/08/22 20:44:31 markd Exp $
+# $NetBSD: Makefile,v 1.24 2010/09/15 09:38:43 markd Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
-PKGREVISION=	4
 COMMENT=	Runtime system and DSP blocks for GNU Radio
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -15,9 +14,6 @@ CONFIGURE_ARGS+=	--enable-gruel
 
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/swig/gen-swig-bug-fix
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/bin/microtune.py
-PYTHON_PATCH_SCRIPTS+=	gnuradio-core/doc/xml/doxy2swig.py
-PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/general/generate_all.py
-PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/general/generate_common.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/general/gen_sine_table.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/filter/generate_gr_fir_XXX.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/filter/generate_all.py
@@ -33,7 +29,6 @@ PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/benchmark_filters.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_correlate_access_code.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_add_v_and_friends.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_agc.py
-PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_basic_flow_graph.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_cma_equalizer.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_complex_to_xxx.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_fft_filter.py
@@ -43,7 +38,6 @@ PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_diff_encoder.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_diff_phasor_cc.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_frequency_modulator.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_filter_delay_fc.py
-PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_flow_graph.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_interp_fir_filter.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_fsk_stuff.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_goertzel.py

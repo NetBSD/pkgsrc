@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/08/12 12:21:39 markd Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/15 09:38:43 markd Exp $
 
 PKGNAME=	gnuradio-audio-oss-${VERSION}
 COMMENT=	Open Sound System support for GNU Radio
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=--enable-gr-audio-oss
 CONFIGURE_ARGS+=--with-gnuradio-core --with-omnithread --with-gruel
 
 PYTHON_PATCH_SCRIPTS+=	gr-audio-oss/src/qa_oss.py
-LDFLAGS = -lgnuradio-core ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+#LDFLAGS = -lgnuradio-core ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../ham/gnuradio-core/buildlink3.mk"
