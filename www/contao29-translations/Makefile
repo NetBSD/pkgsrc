@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/09/15 15:07:18 taca Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/15 15:07:59 taca Exp $
 #
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	# defined for each distfiles
 DISTFILES=	${CT_DISTFILES}
