@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/08/21 16:36:54 seb Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/15 06:02:29 sno Exp $
 #
 
-DISTNAME=	HTTP-Server-Simple-Mason-0.13
+DISTNAME=	HTTP-Server-Simple-Mason-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 SVR4_PKGNAME=	p5hsm
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
@@ -16,6 +16,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/HTTP/Server/Simple/Mason/.packlist
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-HTML-Mason>=1.25:../../www/p5-HTML-Mason
 DEPENDS+=	p5-HTTP-Server-Simple>=0.04:../../www/p5-HTTP-Server-Simple
