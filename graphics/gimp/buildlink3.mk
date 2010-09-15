@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2010/09/14 11:01:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2010/09/15 20:59:50 drochner Exp $
 
 BUILDLINK_TREE+=	gimp
 
@@ -14,10 +14,6 @@ pkgbase := gimp
 
 .if !empty(PKG_BUILD_OPTIONS.gimp:Maalib)
 .include "../../graphics/aalib/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.gimp:Mgnome)
-.include "../../www/libgtkhtml/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.gimp:Mmng)
