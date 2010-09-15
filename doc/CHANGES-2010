@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3466 2010/09/15 12:36:59 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3467 2010/09/15 13:44:42 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/cairo to 1.10.0nb1 [wiz 2010-09-15]
 	Updated devel/ruby-mode to 1.9.2pl0 [taca 2010-09-15]
 	Updated multimedia/vlc to 1.0.6nb3 [wiz 2010-09-15]
+	Updated print/mupdf to 0.7 [joerg 2010-09-15]
