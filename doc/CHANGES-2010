@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3467 2010/09/15 13:44:42 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3468 2010/09/15 15:08:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4611,3 +4611,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/ruby-mode to 1.9.2pl0 [taca 2010-09-15]
 	Updated multimedia/vlc to 1.0.6nb3 [wiz 2010-09-15]
 	Updated print/mupdf to 0.7 [joerg 2010-09-15]
+	Updated www/contao29-translations to 20100914 [taca 2010-09-15]
