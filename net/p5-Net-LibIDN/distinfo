@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/03/01 21:49:54 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/09/15 10:32:52 obache Exp $
 
 SHA1 (Net-LibIDN-0.12.tar.gz) = ac446edf66ac523d5463b59ed9698e2ccb9b04ab
 RMD160 (Net-LibIDN-0.12.tar.gz) = a595c3758c9577b6d09d856cf220c303fdc3d2a2
 Size (Net-LibIDN-0.12.tar.gz) = 14262 bytes
-SHA1 (patch-aa) = 6adeaa4b44a84efc4d143377ff6ab579272162fa
+SHA1 (patch-aa) = 2aab1ead74de84b310b5bab02c32c4993ae5a11e
