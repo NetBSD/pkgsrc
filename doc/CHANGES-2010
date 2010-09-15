@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3461 2010/09/15 06:03:14 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3462 2010/09/15 06:40:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4602,3 +4602,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Net-Twitter to 3.13008 [sno 2010-09-15]
 	Updated www/p5-HTTP-Parser-XS to 0.09 [sno 2010-09-15]
 	Updated www/p5-HTTP-Server-Simple-Mason to 0.14 [sno 2010-09-15]
+	Updated www/p5-HTML-FormFu to 0.07003 [sno 2010-09-15]
