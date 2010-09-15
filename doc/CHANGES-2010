@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3458 2010/09/15 03:44:17 manu Exp $
+$NetBSD: CHANGES-2010,v 1.3459 2010/09/15 05:51:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/nkf to 2.11 [obache 2010-09-15]
 	Updated converters/p5-nkf to 2.11 [obache 2010-09-15]
 	Updated filesystems/perfuse to 20100915 [manu 2010-09-15]
+	Updated net/p5-Net-Twitter to 3.13008 [sno 2010-09-15]
