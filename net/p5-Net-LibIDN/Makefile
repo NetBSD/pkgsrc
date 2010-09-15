@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/08/21 16:35:26 seb Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/15 10:37:06 obache Exp $
 
 DISTNAME=	Net-LibIDN-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,8 @@ LICENSE=	artistic
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_PARAMS.makemaker+=	--with-libidn=${BUILDLINK_DIR}/lib
-MAKE_PARAMS.makemaker+=	--with-libidn-inc=${BUILDLINK_DIR}/include
+MAKE_PARAMS.makemaker+=	--with-libidn=${BUILDLINK_PREFIX.libidn}/lib
+MAKE_PARAMS.makemaker+=	--with-libidn-inc=${BUILDLINK_PREFIX.libidn}/include
 
 PERL5_PACKLIST=		auto/Net/LibIDN/.packlist
 
