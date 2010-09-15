@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3456 2010/09/14 19:41:28 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3457 2010/09/15 01:01:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4596,3 +4596,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-tetex-doc to 3.0.19695 [minskim 2010-09-14]
 	Updated print/tex-hyphen-base to 2010 [minskim 2010-09-14]
 	Updated pkgtools/x11-links to 0.60 [tron 2010-09-14]
+	Updated converters/nkf to 2.11 [obache 2010-09-15]
+	Updated converters/p5-nkf to 2.11 [obache 2010-09-15]
