@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/09/14 11:02:01 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/15 10:28:09 adam Exp $
 
 DISTNAME=	hugin-2010.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 
@@ -12,6 +12,11 @@ COMMENT=	Panorama photo stitcher
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=	autopano-sift-C>=2.5.1:../../graphics/autopano-sift-C
+DEPENDS+=	panomatic>=0.9.4:../../graphics/panomatic
+DEPENDS+=	enblend-enfuse>=4.0:../../graphics/enblend-enfuse
+DEPENDS+=	p5-Image-ExifTool>=8.15:../../graphics/p5-Image-ExifTool
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
