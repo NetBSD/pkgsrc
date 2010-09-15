@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9706 2010/09/15 01:01:19 obache Exp $
+$NetBSD: TODO,v 1.9707 2010/09/15 06:58:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.17
+	o calibre-0.7.18
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.0.1
@@ -469,6 +469,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cjk-lyx-1.4.4
 	o classpath-0.98
 	o climm-0.7.1
+	o clive-2.2.15
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-gst-1.2.0
 	o cmus-2.3.3
@@ -638,6 +639,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.14.2 [GNOME 2.26]
+	o gmime24-2.4.19
 	o gnash-0.8.8
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -967,7 +969,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openoffice3-3.2.1
 	o openssh-5.6
 	o openssl-1.0.0a
-	o openttd-1.0.3
+	o openttd-1.0.4
 	o open-vm-tools-2010.03.20.243334
 	o opera-10.62
 	o orca-2.30.2 [GNOME 2.30]
@@ -1036,7 +1038,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-2.6.1
 	o pure-ftpd-1.0.29
 	o puzzle-5.2 [pkg/43775]
-	o puzzles-8972
+	o puzzles-8996
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1189,6 +1191,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o telepathy-gabble-0.9.14
+	o telepathy-glib-0.11.15
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
 	o texi2html-5.0
