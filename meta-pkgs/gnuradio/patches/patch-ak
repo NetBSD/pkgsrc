@@ -1,0 +1,18 @@
+$NetBSD: patch-ak,v 1.1 2010/09/15 09:38:42 markd Exp $
+
+--- gr-usrp/src/usrp_standard.i.orig	2010-06-01 05:04:09.000000000 +0000
++++ gr-usrp/src/usrp_standard.i
+@@ -24,11 +24,11 @@
+ 
+ %{
+ #include <usrp/usrp_standard.h>
+-#include <usrp_spi_defs.h>
++#include <usrp/usrp_spi_defs.h>
+ #include <usrp/usrp_dbid.h>
+ %}
+ 
+-%include <usrp_spi_defs.h>
++%include <usrp/usrp_spi_defs.h>
+ %include <usrp/usrp_dbid.h>
+ 
+ %constant int FPGA_MODE_NORMAL   = usrp_standard_rx::FPGA_MODE_NORMAL;

@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2010/09/15 09:38:42 markd Exp $
+
+--- gnuradio-core/src/lib/io/gr_udp_sink.cc.orig	2010-06-03 06:22:52.000000000 +0000
++++ gnuradio-core/src/lib/io/gr_udp_sink.cc
+@@ -34,6 +34,9 @@
+ #ifdef HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
++#ifdef HAVE_NETINET_IN_H
++#include <netinet/in.h>  //usually included by <netdb.h>?
++#endif
+ #ifdef HAVE_SYS_SOCKET_H
+ #include <sys/socket.h>  //usually included by <netdb.h>?
+ #endif

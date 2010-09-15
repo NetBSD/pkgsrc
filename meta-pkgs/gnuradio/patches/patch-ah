@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2010/09/15 09:38:42 markd Exp $
+
+--- configure.ac.orig	2010-06-03 06:45:00.000000000 +0000
++++ configure.ac
+@@ -297,8 +297,8 @@ BUILD_DATE=`date -u +"%a, %d %b %Y %R:%S
+ AC_SUBST(BUILD_DATE)
+ 
+ dnl SYSCONFDIR substitution
+-if test "${sysconfdir}" == "\${prefix}/etc" ; then
+-   if test "${prefix}" == "NONE" ; then
++if test "${sysconfdir}" = "\${prefix}/etc" ; then
++   if test "${prefix}" = "NONE" ; then
+       SYSCONFDIR=["$ac_default_prefix/etc"]
+    else
+       SYSCONFDIR=["${prefix}/etc"]
