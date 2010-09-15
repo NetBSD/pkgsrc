@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3465 2010/09/15 12:18:14 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3466 2010/09/15 12:36:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4609,3 +4609,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ap2-wsgi to 3.3 [adam 2010-09-15]
 	Updated graphics/cairo to 1.10.0nb1 [wiz 2010-09-15]
 	Updated devel/ruby-mode to 1.9.2pl0 [taca 2010-09-15]
+	Updated multimedia/vlc to 1.0.6nb3 [wiz 2010-09-15]
