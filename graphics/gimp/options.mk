@@ -1,21 +1,16 @@
-# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:01 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2010/09/15 20:59:50 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gimp
-PKG_SUPPORTED_OPTIONS=	aalib gnome mng svg
-PKG_SUGGESTED_OPTIONS=	aalib gnome mng svg
+PKG_SUPPORTED_OPTIONS=	aalib mng svg
+PKG_SUGGESTED_OPTIONS=	aalib mng svg
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		aalib gnome mng svg
+PLIST_VARS+=		aalib mng svg
 
 .if !empty(PKG_OPTIONS:Maalib)
 .include "../../graphics/aalib/buildlink3.mk"
 PLIST.aalib=		yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../www/libgtkhtml/buildlink3.mk"
-PLIST.gnome=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mmng)
