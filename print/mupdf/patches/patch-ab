@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1 2010/09/15 13:15:29 joerg Exp $
+
+--- Makerules.orig	2010-08-25 14:12:08.000000000 +0000
++++ Makerules
+@@ -19,39 +19,6 @@ ifeq "$(build)" "native"
+ CFLAGS += -pipe -O2 -DNDEBUG -fomit-frame-pointer -march=native -mfpmath=sse
+ endif
+ 
+-ifeq "$(OS)" "Linux"
+ SYS_FREETYPE_INC := `pkg-config --cflags freetype2`
+ X11LIBS := -lX11 -lXext
+ PDFVIEW_EXE = $(X11VIEW_EXE)
+-endif
+-
+-ifeq "$(OS)" "FreeBSD"
+-SYS_FREETYPE_INC := `pkg-config --cflags freetype2`
+-LDFLAGS += -L/usr/local/lib
+-X11LIBS := -lX11 -lXext
+-PDFVIEW_EXE = $(X11VIEW_EXE)
+-endif
+-
+-# Mac OS X build depends on some thirdparty libs
+-ifeq "$(OS)" "Darwin"
+-SYS_FREETYPE_INC := -I/usr/X11R6/include/freetype2
+-CFLAGS += -I/usr/X11R6/include
+-LDFLAGS += -L/usr/X11R6/lib
+-X11LIBS := -lX11 -lXext
+-PDFVIEW_EXE = $(X11VIEW_EXE)
+-ifeq "$(arch)" "amd64"
+-CFLAGS += -m64
+-LDFLAGS += -m64
+-else
+-CFLAGS += -m32
+-LDFLAGS += -m32
+-endif
+-endif
+-
+-# MinGW build depends on thirdparty libs
+-ifeq "$(OS)" "MINGW"
+-WINDRES ?= windres
+-W32LIBS := -lgdi32 -lcomdlg32 -luser32 -ladvapi32 -lshell32 -mwindows
+-PDFVIEW_EXE = $(WINVIEW_EXE)
+-endif
+-
