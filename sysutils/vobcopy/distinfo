@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2009/05/03 16:44:41 hasso Exp $
+$NetBSD: distinfo,v 1.11 2010/09/16 12:02:16 wiz Exp $
 
-SHA1 (vobcopy-1.1.1.tar.gz) = 5e3c2609f605700e6d3f2cff225dbb4fa04d8b4b
-RMD160 (vobcopy-1.1.1.tar.gz) = fa8fed54e7cd63322871caa3a357f518f40c8eb7
-Size (vobcopy-1.1.1.tar.gz) = 50779 bytes
-SHA1 (patch-aa) = cf48506003c85e6875a79b1d3c93acf06e197a44
+SHA1 (vobcopy-1.2.0.tar.gz) = f48e84b225e79a5ad2e388230d8f6e2c5d754bff
+RMD160 (vobcopy-1.2.0.tar.gz) = 6ce6f4b0f6bc136a20b689d03e672886e49b41c2
+Size (vobcopy-1.2.0.tar.gz) = 68214 bytes
+SHA1 (patch-aa) = 2417722599cd22c63190cc364a37ae9066d8d1e3
 SHA1 (patch-ab) = 923dcc3aa05a0c7670158b59b3a203d3349ab47d
-SHA1 (patch-ac) = f910888df999bdcc7d5b0c4605c685b89cf8fb29
+SHA1 (patch-ac) = 0a8e6ce70ab3b3556e9369579a59ebabd50d9a26

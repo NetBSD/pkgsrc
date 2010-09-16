@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2009/04/28 13:01:39 hasso Exp $
+$NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
 
---- vobcopy.h.orig	2008-02-19 07:27:04 +0200
-+++ vobcopy.h	2009-04-28 15:31:42 +0300
-@@ -43,7 +43,11 @@
+--- vobcopy.h.orig	2009-06-08 20:15:39.000000000 +0000
++++ vobcopy.h
+@@ -54,7 +54,11 @@
  #include <sys/mnttab.h>
  #include <sys/statvfs.h>
  
@@ -14,29 +14,32 @@ $NetBSD: patch-ac,v 1.3 2009/04/28 13:01:39 hasso Exp $
  
  #  if ( _FILE_OFFSET_BITS == 64 )
  #define HAS_LARGEFILE 1
-@@ -58,7 +62,7 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
- /* //////////  *BSD //////////  */
- #if ( defined( BSD ) && ( BSD >= 199306 ) )
+@@ -67,7 +71,6 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+ /*#define off_t __off64_t  THIS HERE BREAKS OSX 10.5 */
  
--#  if  !defined( __NetBSD__ ) ) || \
-+#  if  ( !defined( __NetBSD__ ) ) || \
+ /* //////////  *BSD //////////  */
+-#if ( defined( BSD ) && ( BSD >= 199306 ) )
+ 
+ #if !defined( __NetBSD__ ) || \
         ( defined( __NetBSD__) && ( __NetBSD_Version__ < 200040000 ) )
- #include <sys/mount.h>
- #define USE_STATFS 1
-@@ -88,15 +92,21 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+@@ -100,20 +103,23 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+ #define GETMNTINFO_USES_STATVFS
  
  #    endif
+-#endif
  
--#  else
-+#  elif !defined(__DragonFly__)
- 
+ #if defined(__FreeBSD__)
+ #define USE_STATFS_FOR_DEV
+ #include <sys/statvfs.h>
+-#else
++#elif !defined(__DragonFly__) && !defined(__NetBSD__)
  #include <sys/vfs.h>
+ #endif
  
- #  endif
- 
-+#ifdef O_LARGEFILE
+-# if !defined(OpenBSD)
++# if !defined(OpenBSD) && defined(O_LARGEFILE)
  #define HAS_LARGEFILE 1
-+#endif
+ #endif
  
 +#ifdef FALSE
 +typedef int bool;
@@ -46,7 +49,7 @@ $NetBSD: patch-ac,v 1.3 2009/04/28 13:01:39 hasso Exp $
  
  #else /* *BSD */
  
-@@ -117,8 +127,10 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+@@ -134,8 +140,10 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
  #define GETMNTINFO_USES_STATFS 1
  #define USE_GETMNTINFO 1
  
@@ -57,7 +60,7 @@ $NetBSD: patch-ac,v 1.3 2009/04/28 13:01:39 hasso Exp $
  typedef int bool;
  
  #  endif
-@@ -145,7 +157,11 @@ typedef int bool;
+@@ -163,7 +171,11 @@ typedef int bool;
  #define HAVE_GETOPT_LONG 1
  #define HAS_LARGEFILE    1
  
@@ -69,7 +72,7 @@ $NetBSD: patch-ac,v 1.3 2009/04/28 13:01:39 hasso Exp $
  
  #elif defined( __GLIBC__ )
  
-@@ -156,13 +172,21 @@ typedef int bool;
+@@ -174,13 +186,21 @@ typedef int bool;
  #define HAVE_GETOPT_LONG 1
  #define HAS_LARGEFILE    1
  
@@ -91,9 +94,9 @@ $NetBSD: patch-ac,v 1.3 2009/04/28 13:01:39 hasso Exp $
  
  #if defined( __USE_FILE_OFFSET64 )
  #  define HAS_LARGEFILE 1
-@@ -212,6 +236,6 @@ void watchdog_handler( int signal );
- void shutdown_handler( int signal );
- char *safestrncpy(char *dest, const char *src, size_t n);
+@@ -232,6 +252,6 @@ char *safestrncpy(char *dest, const char
+ int check_progress( void ); /* this can be removed because the one below supersedes it */
+ int progressUpdate( int starttime, int cur, int tot, int force );
  
 -#if defined(__APPLE__) && defined(__GNUC__)
 +#if (defined(__APPLE__) && defined(__GNUC__)) || defined(__DragonFly__)
