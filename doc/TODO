@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9707 2010/09/15 06:58:19 wiz Exp $
+$NetBSD: TODO,v 1.9708 2010/09/16 11:23:32 obache Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o climm-0.7.1
 	o clive-2.2.15
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-gst-1.2.0
 	o cmus-2.3.3
 	o colorize-0.3.4
 	o confuse-2.7
