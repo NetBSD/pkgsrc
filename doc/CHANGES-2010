@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3470 2010/09/15 19:55:24 markd Exp $
+$NetBSD: CHANGES-2010,v 1.3471 2010/09/16 08:07:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4630,3 +4630,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated ham/gnuradio-wxgui to 3.3.0 [markd 2010-09-15]
 	Updated ham/usrp to 3.3.0 [markd 2010-09-15]
 	Updated ham/usrp-docs to 3.3.0 [markd 2010-09-15]
+	Updated databases/db5 to 5.1.19 [adam 2010-09-15]
