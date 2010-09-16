@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3482 2010/09/16 17:32:48 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3483 2010/09/16 17:37:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4646,3 +4646,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/po-mode to 2.2 [taca 2010-09-16]
 	Updated www/mediawiki to 1.15.5 [taca 2010-09-16]
 	Updated emulators/mednafen to 0.8.13.3 [wiz 2010-09-16]
+	Updated net/clive to 2.2.15 [wiz 2010-09-16]
