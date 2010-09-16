@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9711 2010/09/16 17:37:58 wiz Exp $
+$NetBSD: TODO,v 1.9712 2010/09/16 18:28:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -841,7 +841,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libusb-1.0
 	o libv4l-0.8.1
 	o libvdpau-0.4.1
-	o libwnck-2.30.4
 	o libxml++-2.30.1 [GNOME 2.30]
 	o licq-1.3.8
 	o lighttpd-1.4.28

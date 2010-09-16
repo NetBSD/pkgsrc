@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3483 2010/09/16 17:37:58 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3484 2010/09/16 18:28:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4647,3 +4647,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/mediawiki to 1.15.5 [taca 2010-09-16]
 	Updated emulators/mednafen to 0.8.13.3 [wiz 2010-09-16]
 	Updated net/clive to 2.2.15 [wiz 2010-09-16]
+	Updated devel/libwnck to 2.30.4 [wiz 2010-09-16]
