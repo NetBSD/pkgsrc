@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3479 2010/09/16 12:07:17 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3480 2010/09/16 14:46:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4643,3 +4643,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/vobcopy to 1.2.0 [wiz 2010-09-16]
 	Updated devel/ruby-i18n to 0.4.1nb1 [taca 2010-09-16]
 	Updated misc/ruby-bundler to 1.0.0nb1 [taca 2010-09-16]
+	Updated textproc/po-mode to 2.2 [taca 2010-09-16]
