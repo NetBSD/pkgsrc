@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/06/02 12:50:03 adam Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/16 08:06:16 adam Exp $
 
+PKGREVISION=		1
 PERDITION_COMMENT=	Berkeley DB user database module
 PERDITION_PKGNAME=	bdb
 BUILD_DIRS=		makebdb perdition/db/bdb

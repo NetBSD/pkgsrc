@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/09/06 20:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/09/16 08:06:14 adam Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
-PKGREVISION=	8
+PKGREVISION=	10
 CATEGORIES=	databases python
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
@@ -16,9 +16,10 @@ CONFLICTS=	${PYPKGPREFIX}-dbxml<=1.2.1
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/python
 PYDISTUTILSPKG=	YES
-NO_CONFIGURE=	YES
 
+BDB_ACCEPTED=	db4 db5
 USE_LANGUAGES=	c c++
+NO_CONFIGURE=	YES
 
 .include "../../lang/python/extension.mk"
 PYSETUPBUILDARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4} \
@@ -26,7 +27,7 @@ PYSETUPBUILDARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4} \
 			--with-pathan=${BUILDLINK_PREFIX.libpathan}
 
 .include "../../databases/bdb-xml/buildlink3.mk"
-.include "../../databases/db4/buildlink3.mk"
 .include "../../textproc/libpathan/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
