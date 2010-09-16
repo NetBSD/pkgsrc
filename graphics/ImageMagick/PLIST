@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2010/05/04 11:14:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.67 2010/09/16 21:03:49 drochner Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -68,6 +68,7 @@ include/ImageMagick/magick/geometry.h
 include/ImageMagick/magick/hashmap.h
 include/ImageMagick/magick/histogram.h
 include/ImageMagick/magick/identify.h
+include/ImageMagick/magick/image-view.h
 include/ImageMagick/magick/image.h
 include/ImageMagick/magick/layer.h
 include/ImageMagick/magick/list.h
@@ -135,9 +136,9 @@ include/ImageMagick/wand/magick_wand.h
 include/ImageMagick/wand/mogrify.h
 include/ImageMagick/wand/montage.h
 include/ImageMagick/wand/pixel-iterator.h
-include/ImageMagick/wand/pixel-view.h
 include/ImageMagick/wand/pixel-wand.h
 include/ImageMagick/wand/stream.h
+include/ImageMagick/wand/wand-view.h
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/configure.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/delegates.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/english.xml
@@ -1006,6 +1007,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/exception.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/feature.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/fx.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/histogram.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image-view.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/layer.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/list.html
@@ -1036,6 +1038,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/statistic.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/transform.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/version.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/wand-view.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/architecture.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/binary-releases.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/changelog.html
@@ -1045,6 +1048,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/command-line-options.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/command-line-processing.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/command-line-tools.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/compare.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/compose.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/composite.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/conjure.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/contact.html
@@ -1085,5 +1089,6 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/sponsors.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/subversion.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/t-shirt.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/wand.png
 @pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
 @pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
