@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2010/09/07 16:33:23 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2010/09/16 11:09:50 obache Exp $
 
 DISTNAME=	Python-2.6.6
 PKGNAME=	${DISTNAME:S/Python/python26/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -152,6 +152,7 @@ REPLACE_FILES.py26+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
+	${MV} ${WRKSRC}/Tools/scripts/2to3 ${WRKSRC}/Tools/scripts/2to3-${PY_VER_SUFFIX}
 
 .if ${OPSYS} == "HPUX"
 post-install:
