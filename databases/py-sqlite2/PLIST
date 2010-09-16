@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/09/16 11:31:16 adam Exp $
 ${PYSITELIB}/pysqlite2/__init__.py
 ${PYSITELIB}/pysqlite2/__init__.pyc
 ${PYSITELIB}/pysqlite2/__init__.pyo
@@ -24,9 +24,12 @@ ${PYSITELIB}/pysqlite2/test/factory.pyo
 ${PYSITELIB}/pysqlite2/test/hooks.py
 ${PYSITELIB}/pysqlite2/test/hooks.pyc
 ${PYSITELIB}/pysqlite2/test/hooks.pyo
-${PLIST.python25}${PYSITELIB}/pysqlite2/test/py25tests.py
-${PLIST.python25}${PYSITELIB}/pysqlite2/test/py25tests.pyc
-${PLIST.python25}${PYSITELIB}/pysqlite2/test/py25tests.pyo
+${PYSITELIB}/pysqlite2/test/py25/__init__.py
+${PYSITELIB}/pysqlite2/test/py25/__init__.pyc
+${PYSITELIB}/pysqlite2/test/py25/__init__.pyo
+${PYSITELIB}/pysqlite2/test/py25/py25tests.py
+${PYSITELIB}/pysqlite2/test/py25/py25tests.pyc
+${PYSITELIB}/pysqlite2/test/py25/py25tests.pyo
 ${PYSITELIB}/pysqlite2/test/regression.py
 ${PYSITELIB}/pysqlite2/test/regression.pyc
 ${PYSITELIB}/pysqlite2/test/regression.pyo
