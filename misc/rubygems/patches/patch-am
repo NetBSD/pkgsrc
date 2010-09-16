@@ -1,26 +1,26 @@
-$NetBSD: patch-am,v 1.1 2010/09/10 03:48:40 taca Exp $
+$NetBSD: patch-am,v 1.2 2010/09/16 12:02:05 taca Exp $
 
 Make sure to setup under DESTDIR.
 
---- lib/rubygems/commands/setup_command.rb.orig	2009-06-26 00:43:45.000000000 +0000
+--- lib/rubygems/commands/setup_command.rb.orig	2010-04-20 06:47:36.000000000 +0000
 +++ lib/rubygems/commands/setup_command.rb
-@@ -117,7 +117,7 @@ By default, this RubyGems will install g
+@@ -118,7 +118,7 @@ By default, this RubyGems will install g
  
-     say "RubyGems #{Gem::VERSION} installed"
+     uninstall_old_gemcutter
  
 -    install_rdoc
 +    install_rdoc install_destdir
  
      say
      if @verbose then
-@@ -228,16 +228,20 @@ TEXT
+@@ -229,16 +229,20 @@ TEXT
      end
    end
  
 -  def install_rdoc
 +  def install_rdoc(install_destdir)
      gem_doc_dir = File.join Gem.dir, 'doc'
-     rubygems_name = "rubygems-#{Gem::RubyGemsVersion}"
+     rubygems_name = "rubygems-#{Gem::VERSION}"
      rubygems_doc_dir = File.join gem_doc_dir, rubygems_name
  
 +    unless install_destdir.empty?
