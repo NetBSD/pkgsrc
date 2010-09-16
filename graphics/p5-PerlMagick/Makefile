@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.71 2010/08/21 16:34:58 seb Exp $
+# $NetBSD: Makefile,v 1.72 2010/09/16 21:05:23 drochner Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
-PKGREVISION=	5
 
 SVR4_PKGNAME=	p5pma
 
