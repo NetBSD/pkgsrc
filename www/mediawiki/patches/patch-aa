@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2010/09/16 14:52:02 taca Exp $
+
+--- maintenance/storage/make-blobs.orig	2006-01-10 11:50:10.000000000 +0000
++++ maintenance/storage/make-blobs
+@@ -1,6 +1,6 @@
+ #!/bin/bash
+ 
+-if [ X$2 == X ];then
++if [ $# != 2 ];then
+ 	echo 'Usage: make-blobs <server> <db>'
+ 	exit 1
+ fi
