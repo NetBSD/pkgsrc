@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3473 2010/09/16 10:09:24 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3474 2010/09/16 11:10:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/phonon to 4.4.0nb3 [wiz 2010-09-16]
 	Removed x11/xine-xcb successor multimedia/xine-lib [wiz 2010-09-16]
 	Updated inputmethod/ibus-unikey to 0.5.1 [obache 2010-09-16]
+	Updated lang/python26 to 2.6.6nb2 [obache 2010-09-16]
