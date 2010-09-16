@@ -1,9 +1,7 @@
-# $NetBSD: Makefile.depends,v 1.18 2007/08/15 13:23:27 rillig Exp $
+# $NetBSD: Makefile.depends,v 1.19 2010/09/16 18:56:12 wiz Exp $
 #
 
-DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../multimedia/mplayer-share
-
-GCC_REQD+=	2.95.3
+DEPENDS+=	mplayer-share>=${MPLAYER_VERSION}:../../multimedia/mplayer-share
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

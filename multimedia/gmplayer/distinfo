@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.68 2010/09/09 05:11:46 obache Exp $
+$NetBSD: distinfo,v 1.69 2010/09/16 18:56:12 wiz Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -39,9 +39,9 @@ Size (mplayer/hwswskin-1.1.tar.bz2) = 20331 bytes
 SHA1 (mplayer/mentalic-1.2.tar.bz2) = 47a0c7f8cebba83b50b381ff923d91904cc5b514
 RMD160 (mplayer/mentalic-1.2.tar.bz2) = d561f0c1c3396c2776175f58f0d69b39623e9fee
 Size (mplayer/mentalic-1.2.tar.bz2) = 166570 bytes
-SHA1 (mplayer/mplayer-20091017.tar.bz2) = 8ee97842812b9867f192f521b96bb1b6e1742a23
-RMD160 (mplayer/mplayer-20091017.tar.bz2) = 015d3847b05f4d674d4740e55f117ce6085d5cc3
-Size (mplayer/mplayer-20091017.tar.bz2) = 8525942 bytes
+SHA1 (mplayer/mplayer-20100913.tar.bz2) = 6fd3acb29fa8455636bcd86f9f333da4763daa6d
+RMD160 (mplayer/mplayer-20100913.tar.bz2) = 79085d4ebdb824fc34f7bc128070ef11e874897d
+Size (mplayer/mplayer-20100913.tar.bz2) = 9073690 bytes
 SHA1 (mplayer/neutron-1.5.tar.bz2) = 757a2aef5a6eb6873024d8cafa5f862377af9239
 RMD160 (mplayer/neutron-1.5.tar.bz2) = 9434c545386357c540a43c5cb37f70a6308b1ed7
 Size (mplayer/neutron-1.5.tar.bz2) = 369303 bytes
@@ -63,16 +63,12 @@ Size (mplayer/xanim-1.6.tar.bz2) = 94564 bytes
 SHA1 (mplayer/xine-lcd-1.2.tar.bz2) = 2fa7811e0dc7316d0c996b0a5bc37f5c97d1dd18
 RMD160 (mplayer/xine-lcd-1.2.tar.bz2) = 785f6826d49eddabd7ebc431db77139771f208f5
 Size (mplayer/xine-lcd-1.2.tar.bz2) = 172270 bytes
-SHA1 (patch-aa) = 24007024e4b6bfa212817681e8d07cc079aee13b
-SHA1 (patch-ab) = 821711bc431a4ad6e73b9e4acc6a3311395e1894
-SHA1 (patch-ac) = 13ea17bcdde5ebc7e04eeb5eb833dca0cd623ba2
-SHA1 (patch-ad) = 0a43a47538f0f18f8b6aa230367821b8bb51e932
-SHA1 (patch-ae) = 5a1f1d9f6480fb67a2a12d9088990ed546e1b1e4
-SHA1 (patch-af) = c34a82b77721db7331b189cf3fe32799aea8e1e6
+SHA1 (patch-aa) = 8ee4f3d12500bcff8d06b1a3300bb821e4ffd8ba
+SHA1 (patch-ac) = 3d037c96537233cdbda582afdb878dcf3f43e923
+SHA1 (patch-ae) = 7e1f05cd6e09f8755debfff7061dadf0a8ca3a3f
 SHA1 (patch-ag) = bef25568c913dcb8535afa51976ce7c94a6af5a2
-SHA1 (patch-ah) = 7aeb9f04d622fcad8c40dc9edbb0a58277fc622b
+SHA1 (patch-ah) = 8cbd14c61e74023055770baf27201687aa34fede
 SHA1 (patch-an) = 3e72fb86abe7ab572f12a4fef002edb623ab6fae
-SHA1 (patch-ao) = 8588d0215e973045b7f1abd7fbc9813409876b99
 SHA1 (patch-ar) = df7e7cdc6fb8187bbcf0b285afc14d275a51e17a
-SHA1 (patch-vb) = d836d96c849de866cb4177b20eb1c6dec4b7a0ba
+SHA1 (patch-vb) = ce584c31e0e32865e87aa1f537a1f9e4817c7442
 SHA1 (patch-ve_x264) = 1946a2b2a7643bbc1d3f6a8963e21c4f6cbd2c89
