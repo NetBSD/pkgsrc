@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 02:22:26 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/09/16 10:09:07 obache Exp $
 
-SHA1 (ibus-unikey-0.5.tar.gz) = 525e8b8c8c0beb41f16d771c502098cf2d1fba9b
-RMD160 (ibus-unikey-0.5.tar.gz) = baf583141f01af7836a4c30d47041cdb66cc92bd
-Size (ibus-unikey-0.5.tar.gz) = 494304 bytes
+SHA1 (ibus-unikey-0.5.1.tar.gz) = 01f34cf6d32d7bffc862e9c6d3531113eccd7b3c
+RMD160 (ibus-unikey-0.5.1.tar.gz) = 8176ccf1bff44450e48def487ab4196f806a42ae
+Size (ibus-unikey-0.5.1.tar.gz) = 496451 bytes
+SHA1 (patch-aa) = 4d64f17e6a13b58aa77e75fe03d9405146657688
