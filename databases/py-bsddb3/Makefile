@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2010/06/07 19:36:41 gls Exp $
+# $NetBSD: Makefile,v 1.40 2010/09/16 08:06:14 adam Exp $
 
 DISTNAME=	bsddb3-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/b/bsddb3/
 
