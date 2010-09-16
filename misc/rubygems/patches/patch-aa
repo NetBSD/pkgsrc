@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.8 2010/09/10 03:48:40 taca Exp $
+$NetBSD: patch-aa,v 1.9 2010/09/16 12:02:05 taca Exp $
 
+* Make sure to load YAML.
 * Avoid access nil.
 
---- lib/rubygems/specification.rb.orig	2009-05-19 17:41:16.000000000 -0700
+--- lib/rubygems/specification.rb.orig	2010-04-22 04:43:03.000000000 +0000
 +++ lib/rubygems/specification.rb
-@@ -812,12 +812,12 @@ class Gem::Specification
+@@ -476,6 +476,7 @@ class Gem::Specification
+   # 'input' can be anything that YAML.load() accepts: String or IO.
+ 
+   def self.from_yaml(input)
++    require 'yaml'
+     input = normalize_yaml_input input
+     spec = YAML.load input
+ 
+@@ -837,12 +838,12 @@ class Gem::Specification
      end
  
      @files.delete_if            do |file| File.directory? file end

@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.6 2010/09/10 03:48:40 taca Exp $
+$NetBSD: patch-ah,v 1.7 2010/09/16 12:02:05 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems.rb.orig	2009-07-21 23:46:08.000000000 +0000
+--- lib/rubygems.rb.orig	2010-05-14 03:59:10.000000000 +0000
 +++ lib/rubygems.rb
-@@ -397,7 +397,10 @@ module Gem
+@@ -348,7 +348,10 @@ module Gem
    ##
    # The path where gem executables are to be installed.
  
@@ -16,7 +16,7 @@ Add install_root option for pkgsrc's rubygems support.
      return File.join(install_dir, 'bin') unless
        install_dir.to_s == Gem.default_dir
      Gem.default_bindir
-@@ -638,12 +641,12 @@ module Gem
+@@ -589,12 +592,12 @@ module Gem
    ##
    # The index to insert activated gem paths into the $LOAD_PATH.
    #
@@ -31,25 +31,11 @@ Add install_root option for pkgsrc's rubygems support.
  
      $LOAD_PATH.each_with_index do |path, i|
        if path.instance_variables.include?(:@gem_prelude_index) or
-@@ -749,14 +752,16 @@ module Gem
-   # The directory prefix this RubyGems was installed at.
+@@ -704,6 +707,7 @@ module Gem
+     prefix = File.dirname dir
  
-   def self.prefix
--    prefix = File.dirname File.expand_path(__FILE__)
-+    dir = File.dirname File.expand_path(__FILE__)
-+    prefix = File.dirname dir
- 
--    if File.dirname(prefix) == File.expand_path(ConfigMap[:sitelibdir]) or
--       File.dirname(prefix) == File.expand_path(ConfigMap[:libdir]) or
--       'lib' != File.basename(prefix) then
-+    if prefix == File.expand_path(ConfigMap[:sitelibdir]) or
+     if prefix == File.expand_path(ConfigMap[:sitelibdir]) or
 +       prefix == File.expand_path(ConfigMap[:vendorlibdir]) or
-+       prefix == File.expand_path(ConfigMap[:libdir]) or
-+       'lib' != File.basename(dir) then
+        prefix == File.expand_path(ConfigMap[:libdir]) or
+        'lib' != File.basename(dir) then
        nil
-     else
--      File.dirname prefix
-+      prefix
-     end
-   end
- 
