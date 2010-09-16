@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3475 2010/09/16 11:23:32 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3476 2010/09/16 11:32:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4638,3 +4638,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ibus-unikey to 0.5.1 [obache 2010-09-16]
 	Updated lang/python26 to 2.6.6nb2 [obache 2010-09-16]
 	Updated multimedia/clutter-gst to 1.2.0 [obache 2010-09-16]
+	Updated databases/py-sqlite2 to 2.6.0 [adam 2010-09-16]
