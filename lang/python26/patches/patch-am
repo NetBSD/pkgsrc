@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.13 2010/09/06 17:33:57 drochner Exp $
+$NetBSD: patch-am,v 1.14 2010/09/16 11:09:51 obache Exp $
 
 Disabled modules for normal build:
 bsdddb
@@ -11,7 +11,7 @@ gdbm
 pyexpat
 readline
 {linux,oss,sun}audiodev
-spwb
+spwd
 Those have separate packages where needed.
 
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
@@ -316,9 +316,10 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
            # Scripts to install
 -          scripts = ['Tools/scripts/pydoc', 'Tools/scripts/idle',
-+          scripts = ['Tools/scripts/pydoc2.6',
-                      'Tools/scripts/2to3',
+-                     'Tools/scripts/2to3',
 -                     'Lib/smtpd.py']
++          scripts = ['Tools/scripts/pydoc2.6',
++                     'Tools/scripts/2to3-2.6',
 +                     'Lib/smtpd2.6.py']
          )
  
