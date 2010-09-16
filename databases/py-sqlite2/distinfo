@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2009/07/09 19:02:58 drochner Exp $
+$NetBSD: distinfo,v 1.9 2010/09/16 11:31:16 adam Exp $
 
-SHA1 (pysqlite-2.5.5.tar.gz) = 28ea27ada86cd7ec6105f82617ea6cf1a09444d3
-RMD160 (pysqlite-2.5.5.tar.gz) = c420169cf4893b79a8638313f3327f37bc8986aa
-Size (pysqlite-2.5.5.tar.gz) = 73068 bytes
-SHA1 (patch-aa) = b9804c6a35f591b0f7b3f72efccbe9e3327469d1
+SHA1 (pysqlite-2.6.0.tar.gz) = bba2a700f98f979fdf7b224db34d95ff94c2a5d7
+RMD160 (pysqlite-2.6.0.tar.gz) = 654ac5b914dfe6f990277b5d95e1ec592e5c2ee0
+Size (pysqlite-2.6.0.tar.gz) = 74453 bytes
+SHA1 (patch-aa) = 634805bef4fc0c18c9087d3417c9d6235d8df4d8
