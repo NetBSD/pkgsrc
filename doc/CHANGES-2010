@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3480 2010/09/16 14:46:48 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3481 2010/09/16 14:52:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4644,3 +4644,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/ruby-i18n to 0.4.1nb1 [taca 2010-09-16]
 	Updated misc/ruby-bundler to 1.0.0nb1 [taca 2010-09-16]
 	Updated textproc/po-mode to 2.2 [taca 2010-09-16]
+	Updated www/mediawiki to 1.15.5 [taca 2010-09-16]
