@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3471 2010/09/16 08:07:52 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3472 2010/09/16 09:51:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4631,3 +4631,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated ham/usrp to 3.3.0 [markd 2010-09-15]
 	Updated ham/usrp-docs to 3.3.0 [markd 2010-09-15]
 	Updated databases/db5 to 5.1.19 [adam 2010-09-15]
+	Updated multimedia/xine-lib to 1.1.19nb1 [wiz 2010-09-16]
+	Updated multimedia/kdemultimedia4 to 4.4.5nb3 [wiz 2010-09-16]
+	Updated multimedia/phonon to 4.4.0nb3 [wiz 2010-09-16]
+	Removed x11/xine-xcb successor multimedia/xine-lib [wiz 2010-09-16]
