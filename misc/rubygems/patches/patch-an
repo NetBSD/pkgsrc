@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2010/09/10 03:48:40 taca Exp $
+$NetBSD: patch-an,v 1.2 2010/09/16 12:02:05 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/commands/unpack_command.rb.orig	2009-06-22 22:54:36.000000000 +0000
+--- lib/rubygems/commands/unpack_command.rb.orig	2010-04-20 06:46:32.000000000 +0000
 +++ lib/rubygems/commands/unpack_command.rb
 @@ -12,6 +12,10 @@ class Gem::Commands::UnpackCommand < Gem
            :version => Gem::Requirement.default,
@@ -12,12 +12,12 @@ Add install_root option for pkgsrc's rubygems support.
 +      options[:install_root] = value
 +    end
 +
-     add_option('--target=DIR', 'target directory for unpacking') do |value, options|
+     add_option('--target=DIR',
+                'target directory for unpacking') do |value, options|
        options[:target] = value
-     end
-@@ -44,7 +48,8 @@ class Gem::Commands::UnpackCommand < Gem
-         basename = File.basename(path).sub(/\.gem$/, '')
-         target_dir = File.expand_path File.join(options[:target], basename)
+@@ -56,7 +60,8 @@ class Gem::Commands::UnpackCommand < Gem
+         basename = File.basename path, '.gem'
+         target_dir = File.expand_path basename, options[:target]
          FileUtils.mkdir_p target_dir
 -        Gem::Installer.new(path, :unpack => true).unpack target_dir
 +        Gem::Installer.new(path, :unpack => true,
