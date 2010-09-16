@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 11:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/16 10:09:07 obache Exp $
 #
 
-DISTNAME=	ibus-unikey-0.5
-PKGREVISION=	1
+DISTNAME=	ibus-unikey-0.5.1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus-unikey.googlecode.com/files/
 
