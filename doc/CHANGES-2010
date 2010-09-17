@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3488 2010/09/17 05:34:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3489 2010/09/17 05:36:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4655,3 +4655,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/ae-mono-ttf version 1.0 [wiz 2010-09-16]
 	Updated databases/p5-DBD-SQLite to 1.31 [sno 2010-09-17]
 	Updated devel/p5-Class-Accessor-Grouped to 0.09006 [sno 2010-09-17]
+	Updated databases/p5-SQL-Abstract to 1.68 [sno 2010-09-17]
