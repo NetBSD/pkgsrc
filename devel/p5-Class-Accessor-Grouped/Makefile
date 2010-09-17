@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2010/09/02 19:11:28 sno Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/17 05:34:29 sno Exp $
 
-DISTNAME=	Class-Accessor-Grouped-0.09005
+DISTNAME=	Class-Accessor-Grouped-0.09006
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -17,6 +17,8 @@ DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 
 # For test target
 BUILD_DEPENDS+=	p5-Sub-Identify-[0-9]*:../../devel/p5-Sub-Identify
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Class/Accessor/Grouped/.packlist
