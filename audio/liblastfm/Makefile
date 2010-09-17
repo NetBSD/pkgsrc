@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2010/09/14 11:01:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/17 08:04:15 wiz Exp $
 #
 
-DISTNAME=	liblastfm-0.3.0
-PKGREVISION=	4
+DISTNAME=	mxcl-liblastfm-0.3.2-0-gc64ed83
+PKGNAME=	liblastfm-0.3.2
 CATEGORIES=	audio net
-MASTER_SITES=	http://cdn.last.fm/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://download.github.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/mxcl/liblastfm/tree/master
@@ -13,6 +12,8 @@ COMMENT=	Library for accessing last.fm
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/mxcl-liblastfm-3539836
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
