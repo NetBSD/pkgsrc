@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/15 15:51:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/09/17 08:04:15 wiz Exp $
 include/lastfm.h
 include/lastfm/Album
 include/lastfm/Artist
@@ -15,6 +15,7 @@ include/lastfm/Playlist
 include/lastfm/RadioStation
 include/lastfm/RadioTuner
 include/lastfm/Scrobble
+include/lastfm/ScrobbleCache
 include/lastfm/ScrobblePoint
 include/lastfm/Tag
 include/lastfm/Track
