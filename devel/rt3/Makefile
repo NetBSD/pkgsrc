@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2010/04/13 21:06:30 spz Exp $
+# $NetBSD: Makefile,v 1.44 2010/09/17 21:41:54 spz Exp $
 
-DISTNAME=		rt-3.8.7
+DISTNAME=		rt-3.8.8
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
-PKGREVISION=		2
 
 MAINTAINER=		spz@NetBSD.org
 HOMEPAGE=		http://bestpractical.com/rt/
@@ -18,9 +17,8 @@ USE_TOOLS+=	perl:run
 USE_LANGUAGES+=	c
 
 # Core dependencies:
-DEPENDS+=	p5-Digest-[0-9]*:../../security/p5-Digest
-DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
-DEPENDS+=	p5-DBI>=1.37:../../databases/p5-DBI
+DEPENDS+=	{perl>=5.7.3,p5-Digest-[0-9]*}:../../security/p5-Digest
+DEPENDS+=	{perl>=5.8.1,p5-Digest-MD5>=2.27}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-DBIx-SearchBuilder>=1.54:../../databases/p5-DBIx-SearchBuilder
@@ -30,7 +28,7 @@ DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-HTTP-Server-Simple>=0.34:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-HTTP-Server-Simple-Mason>=0.09:../../www/p5-HTTP-Server-Simple-Mason
 DEPENDS+=	p5-Log-Dispatch>=2.0:../../devel/p5-Log-Dispatch
-DEPENDS+=	p5-Locale-Maketext>=1.06:../../misc/p5-Locale-Maketext
+DEPENDS+=	{perl>=5.10.0,p5-Locale-Maketext>=1.06}:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.32:../../misc/p5-Locale-Maketext-Lexicon
 DEPENDS+=	p5-Locale-Maketext-Fuzzy>=0.02:../../misc/p5-Locale-Maketext-Fuzzy
 DEPENDS+=	p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
@@ -60,12 +58,14 @@ DEPENDS+=	p5-GDGraph-[0-9]*:../../graphics/p5-GDGraph
 DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
 DEPENDS+=	p5-Text-WikiFormat>=0.76:../../textproc/p5-Text-WikiFormat
 DEPENDS+=	p5-Module-Refresh>=0.03:../../devel/p5-Module-Refresh
-DEPENDS+=	p5-Encode>=2.13:../../textproc/p5-Encode
+DEPENDS+=	{perl>=5.10.1,p5-Encode>=2.13}:../../textproc/p5-Encode
 
 # Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTML-Format>=2.03:../../www/p5-HTML-Format
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
+
+# CLI dependencies
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 
 # Dashboard dependencies:
@@ -87,7 +87,7 @@ DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 .elif !empty(PKG_OPTIONS:Mfastcgi)
 DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
-DEPENDS+=	p5-CGI>=3.38:../../www/p5-CGI
+DEPENDS+=	{perl>=5.10.1,p5-CGI>=3.38}:../../www/p5-CGI
 .endif
 PLIST_VARS+=	speedycgi
 .if !empty(PKG_OPTIONS:Mspeedycgi)
@@ -146,4 +146,5 @@ post-extract:
 
 .include "Makefile.install"
 
+.include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
