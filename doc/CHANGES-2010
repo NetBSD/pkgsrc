@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3490 2010/09/17 05:39:38 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3491 2010/09/17 05:48:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-Accessor-Grouped to 0.09006 [sno 2010-09-17]
 	Updated databases/p5-SQL-Abstract to 1.68 [sno 2010-09-17]
 	Updated devel/p5-App-cpanminus to 1.0013 [sno 2010-09-17]
+	Updated devel/p5-boolean to 0.23 [sno 2010-09-17]
