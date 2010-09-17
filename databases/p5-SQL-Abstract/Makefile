@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2010/08/21 16:33:05 seb Exp $
+# $NetBSD: Makefile,v 1.21 2010/09/17 05:36:02 sno Exp $
 #
 
-DISTNAME=	SQL-Abstract-1.67
+DISTNAME=	SQL-Abstract-1.68
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 SVR4_PKGNAME=	p5sqa
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
@@ -15,9 +15,13 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	p5-Class-Accessor-Grouped>=0.09005:../../devel/p5-Class-Accessor-Grouped
+DEPENDS+=	p5-Hash-Merge>=0.12:../../devel/p5-Hash-Merge
 DEPENDS+=	{perl>=5.7.3,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 
+BUILD_DEPENDS+=	p5-Test-Deep>=0.106:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/SQL/Abstract/.packlist
