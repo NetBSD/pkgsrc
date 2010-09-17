@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3497 2010/09/17 06:09:31 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3498 2010/09/17 08:04:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4664,3 +4664,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-File-HomeDir to 0.93 [sno 2010-09-17]
 	Updated devel/p5-Format-Human-Bytes to 0.06 [sno 2010-09-17]
 	Updated devel/p5-PPIx-Regexp to 0.011 [sno 2010-09-17]
+	Updated audio/liblastfm to 0.3.2 [wiz 2010-09-17]
