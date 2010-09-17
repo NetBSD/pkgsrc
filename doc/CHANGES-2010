@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3495 2010/09/17 06:00:13 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3496 2010/09/17 06:04:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4662,3 +4662,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-MOP to 1.08 [sno 2010-09-17]
 	Updated devel/p5-Data-UUID to 1.217 [sno 2010-09-17]
 	Updated devel/p5-File-HomeDir to 0.93 [sno 2010-09-17]
+	Updated devel/p5-Format-Human-Bytes to 0.06 [sno 2010-09-17]
