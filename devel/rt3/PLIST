@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/12/04 09:30:20 spz Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/09/17 21:41:54 spz Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -109,9 +109,11 @@ lib/rt3/RT/I18N/it.po
 lib/rt3/RT/I18N/ja.po
 lib/rt3/RT/I18N/nb.po
 lib/rt3/RT/I18N/nl.po
+lib/rt3/RT/I18N/nn.po
 lib/rt3/RT/I18N/pl.po
 lib/rt3/RT/I18N/pt.po
 lib/rt3/RT/I18N/pt_BR.po
+lib/rt3/RT/I18N/pt_PT.po
 lib/rt3/RT/I18N/rt.pot
 lib/rt3/RT/I18N/ru.pm
 lib/rt3/RT/I18N/ru.po
@@ -260,6 +262,8 @@ sbin/rt-validator
 share/doc/rt3/README
 share/examples/rt3/RT_Config.pm
 share/examples/rt3/RT_SiteConfig.pm
+share/rt3/etc/3.8-branded-queues-extension
+share/rt3/etc/3.8-ical-extension
 share/rt3/etc/acl.Oracle
 share/rt3/etc/acl.Pg
 share/rt3/etc/acl.mysql
@@ -271,6 +275,9 @@ share/rt3/etc/schema.Pg
 share/rt3/etc/schema.SQLite
 share/rt3/etc/schema.mysql-4.0
 share/rt3/etc/schema.mysql-4.1
+share/rt3/etc/shrink_cgm_table.pl
+share/rt3/etc/split-out-cf-categories
+share/rt3/etc/upgrade-mysql-schema.pl
 share/rt3/etc/upgrade/3.3.0/acl.Informix
 share/rt3/etc/upgrade/3.3.0/acl.Oracle
 share/rt3/etc/upgrade/3.3.0/acl.Pg
@@ -310,6 +317,7 @@ share/rt3/etc/upgrade/3.8.3/content
 share/rt3/etc/upgrade/3.8.3/schema.Pg
 share/rt3/etc/upgrade/3.8.4/content
 share/rt3/etc/upgrade/3.8.6/content
+share/rt3/etc/upgrade/${PKGVERSION}/content
 share/rt3/html/Admin/CustomFields/GroupRights.html
 share/rt3/html/Admin/CustomFields/Modify.html
 share/rt3/html/Admin/CustomFields/Objects.html
@@ -468,6 +476,7 @@ share/rt3/html/Elements/EditCustomFieldSelect
 share/rt3/html/Elements/EditCustomFieldText
 share/rt3/html/Elements/EditCustomFieldWikitext
 share/rt3/html/Elements/EditLinks
+share/rt3/html/Elements/EditPassword
 share/rt3/html/Elements/EditTimeValue
 share/rt3/html/Elements/EmailInput
 share/rt3/html/Elements/Error
@@ -499,6 +508,7 @@ share/rt3/html/Elements/QueryString
 share/rt3/html/Elements/QueueSummary
 share/rt3/html/Elements/QuickCreate
 share/rt3/html/Elements/Quicksearch
+share/rt3/html/Elements/RT__CustomField/ColumnMap
 share/rt3/html/Elements/RT__Group/ColumnMap
 share/rt3/html/Elements/RT__Queue/ColumnMap
 share/rt3/html/Elements/RT__Scrip/ColumnMap
@@ -543,6 +553,7 @@ share/rt3/html/Elements/ShowCustomFields
 share/rt3/html/Elements/ShowLink
 share/rt3/html/Elements/ShowLinks
 share/rt3/html/Elements/ShowMemberships
+share/rt3/html/Elements/ShowRelationLabel
 share/rt3/html/Elements/ShowSearch
 share/rt3/html/Elements/ShowUser
 share/rt3/html/Elements/ShowUserConcise
@@ -944,12 +955,14 @@ share/rt3/html/NoAuth/css/3.5-default/ticket.css
 share/rt3/html/NoAuth/css/3.5-default/titlebox.css
 share/rt3/html/NoAuth/css/3.5-default/transactions.css
 share/rt3/html/NoAuth/css/autohandler
+share/rt3/html/NoAuth/css/base/misc.css
 share/rt3/html/NoAuth/css/dhandler
 share/rt3/html/NoAuth/css/print.css
 share/rt3/html/NoAuth/css/web2/InHeader
 share/rt3/html/NoAuth/css/web2/admin.css
 share/rt3/html/NoAuth/css/web2/base.css
 share/rt3/html/NoAuth/css/web2/boxes.css
+share/rt3/html/NoAuth/css/web2/collection.css
 share/rt3/html/NoAuth/css/web2/forms.css
 share/rt3/html/NoAuth/css/web2/images/dhandler
 share/rt3/html/NoAuth/css/web2/images/source/background-gradient.png
@@ -1012,6 +1025,7 @@ share/rt3/html/NoAuth/js/scriptaculous/effects.js
 share/rt3/html/NoAuth/js/scriptaculous/scriptaculous.js
 share/rt3/html/NoAuth/js/titlebox-state.js
 share/rt3/html/NoAuth/js/util.js
+share/rt3/html/NoAuth/rss/dhandler
 share/rt3/html/Prefs/Elements/Tabs
 share/rt3/html/Prefs/MyRT.html
 share/rt3/html/Prefs/Other.html
@@ -1063,6 +1077,7 @@ share/rt3/html/Search/Elements/PickBasics
 share/rt3/html/Search/Elements/PickCFs
 share/rt3/html/Search/Elements/PickCriteria
 share/rt3/html/Search/Elements/ResultViews
+share/rt3/html/Search/Elements/ResultsRSSView
 share/rt3/html/Search/Elements/SearchPrivacy
 share/rt3/html/Search/Elements/SearchesForObject
 share/rt3/html/Search/Elements/SelectAndOr
