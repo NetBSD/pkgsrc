@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3492 2010/09/17 05:52:42 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.3493 2010/09/17 05:53:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4659,3 +4659,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-App-cpanminus to 1.0013 [sno 2010-09-17]
 	Updated devel/p5-boolean to 0.23 [sno 2010-09-17]
 	Updated www/ikiwiki to 3.20100915 [schmonz 2010-09-17]
+	Updated devel/p5-Class-MOP to 1.08 [sno 2010-09-17]
