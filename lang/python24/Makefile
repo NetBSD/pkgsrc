@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2010/01/21 16:28:51 heinz Exp $
+# $NetBSD: Makefile,v 1.53 2010/09/17 07:11:41 obache Exp $
 
-DISTNAME=	Python-2.4.5
-PKGNAME=	python24-2.4.5
+.include "dist.mk"
+
+PKGNAME=	python24-${PY_DISTVERSION}
 PKGREVISION=	6
 CATEGORIES=	lang python
-MASTER_SITES=	http://www.python.org/ftp/python/2.4.5/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.python.org/
@@ -13,8 +12,6 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Remember to update pkgsrc/lang/python/srcdist.mk when version changes
 
 CONFLICTS+=	python-[0-9]*
 

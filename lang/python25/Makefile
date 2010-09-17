@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2010/09/02 11:27:55 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2010/09/17 07:11:41 obache Exp $
 
-DISTNAME=	Python-2.5.5
-PKGNAME=	python25-2.5.5
+.include "dist.mk"
+
+PKGNAME=	python25-${PY_DISTVERSION}
 PKGREVISION=	1
 CATEGORIES=	lang python
-MASTER_SITES=	http://www.python.org/ftp/python/2.5.5/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.python.org/
@@ -13,8 +12,6 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Remember to update pkgsrc/lang/python/srcdist.mk when version changes
 
 CONFLICTS+=	python-[0-9]*
 

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2010/09/16 11:09:50 obache Exp $
+# $NetBSD: Makefile,v 1.29 2010/09/17 07:11:42 obache Exp $
 
-DISTNAME=	Python-2.6.6
-PKGNAME=	${DISTNAME:S/Python/python26/}
+.include "dist.mk"
+
+PKGNAME=	python26-${PY_DISTVERSION}
 PKGREVISION=	2
 CATEGORIES=	lang python
-MASTER_SITES=	http://www.python.org/ftp/python/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
@@ -13,8 +12,6 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Remember to update pkgsrc/lang/python/srcdist.mk when version changes
 
 CONFLICTS+=	python-[0-9]*
 
