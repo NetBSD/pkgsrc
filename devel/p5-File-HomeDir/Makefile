@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2010/08/21 16:33:44 seb Exp $
+# $NetBSD: Makefile,v 1.15 2010/09/17 05:59:45 sno Exp $
 #
 
-DISTNAME=		File-HomeDir-0.91
+DISTNAME=		File-HomeDir-0.93
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+#PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
 
@@ -23,11 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-File-Which-[0-9]*:../../devel/p5-File-Which
 .if ${OPSYS} == "Darwin"
-.if ${ABI} == 64
 DEPENDS+=		p5-Mac-SystemDirectory>=0.04:../../devel/p5-Mac-SystemDirectory
-.else
-DEPENDS+=		p5-Mac-Carbon>=0.77:../../devel/p5-Mac-Carbon
-.endif
 .endif
 
 .include "../../lang/perl5/module.mk"
