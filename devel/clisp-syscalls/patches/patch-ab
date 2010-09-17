@@ -1,15 +1,43 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/07/09 21:17:32 asau Exp $
+$NetBSD: patch-ab,v 1.2 2010/09/17 09:35:58 asau Exp $
 
 --- modules/syscalls/Makefile.in.orig	2010-06-10 19:03:57.000000000 +0400
-+++ modules/syscalls/Makefile.in	2010-07-09 16:43:56.000000000 +0400
-@@ -52,8 +52,8 @@
++++ modules/syscalls/Makefile.in	2010-09-17 13:23:01.000000000 +0400
+@@ -7,6 +7,7 @@
+ CPPFLAGS = @CPPFLAGS@ -D__EXTENSIONS__ -D_REENTRANT
+ CFLAGS = @CFLAGS@
+ CLISP = @CLISP@ -norc -q
++CLISP_CFLAGS= @CLISP_CFLAGS@
+ CLISP_LIBDIR = @CLISP_LIBDIR@
+ CLISP_LINKKIT = @CLISP_LINKKIT@
+ 
+@@ -29,7 +30,7 @@
+ 
+ # no $(CPPFLAGS) $(CFLAGS) to avoid all optimizations
+ bogomips.o : $(srcdir)/bogomips.c
+-	$(CC) -c $(srcdir)/bogomips.c -o bogomips.o
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(CLISP_CFLAGS) -c $(srcdir)/bogomips.c -o bogomips.o
+ 
+ posix.fas: $(srcdir)/posix.lisp
+ 	$(CLISP) -c $(srcdir)/posix.lisp -o ./
+@@ -38,7 +39,7 @@
+ 	$(CLISP) -C $(CLISP_LINKKIT)/modprep $(srcdir)/calls.c ./
+ 
+ calls.o : calls.m.c config.h gllib
+-	$(CC) $(CPPFLAGS) $(CFLAGS) -I$(CLISP_LINKKIT) \
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(CLISP_CFLAGS) -I$(CLISP_LINKKIT) \
+ 		-Igllib -I$(srcdir)/gllib -c calls.m.c -o calls.o
+ 
+ preload.lisp : $(srcdir)/preload.lisp
+@@ -52,9 +53,9 @@
  	mkdir -p gllib
  	test -f gllib/Makefile || sh config.status gllib/Makefile depfiles
  	cd gllib; \
 -	  $(MAKE) srcdir="$(srcdir)/gllib" \
 -		ACLOCAL_M4="$(srcdir)/gllib/Makefile.am" \
+-		CFLAGS="$(CFLAGS) -I$(CLISP_LIBDIR)"; \
 +	  $(MAKE) srcdir="." \
 +		ACLOCAL_M4="./Makefile.am" \
- 		CFLAGS="$(CFLAGS) -I$(CLISP_LIBDIR)"; \
++		CFLAGS="$(CFLAGS) $(CLISP_CFLAGS) -I$(CLISP_LIBDIR)"; \
  	  $(LN) libgnu.a ../libgnu_sc.a
  
+ # Make a module distribution into $(distribdir)
