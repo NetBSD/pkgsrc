@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9712 2010/09/16 18:28:30 wiz Exp $
+$NetBSD: TODO,v 1.9713 2010/09/18 03:11:46 obache Exp $
 
 Suggested new packages
 ======================
@@ -1231,7 +1231,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
-	o uim-1.6.0 [pkg/43872]
 	o unicap-0.9.8
 	o units-88 [pkg/43742]
 	o ups-nut-2.2.1 [pkgsrc-wip]
