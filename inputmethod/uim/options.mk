@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.20 2010/05/15 07:05:57 obache Exp $
+# $NetBSD: options.mk,v 1.21 2010/09/18 03:08:31 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-#PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime sj3 uim-fep wnn xim
-PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime sj3 uim-fep xim
+#PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gtk m17nlib openssl prime sj3 sqlite uim-fep wnn xim
+PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gtk m17nlib openssl prime sj3 sqlite uim-fep xim
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde3
 PKG_OPTIONS_GROUP.qt=	qt qt3
@@ -22,7 +22,7 @@ PKG_FAIL_REASON+=	"'qt3' conflict with 'qt' or 'kde' option"
 .endif
 
 PLIST_VARS+=		helperdata uim-dict-gtk fep
-PLIST_VARS+=		anthy canna gnome gtk kde kde3 m17nlib prime qt qt3 sj3 wnn xim
+PLIST_VARS+=		anthy curl eb expat ffi gnome gtk kde kde3 m17nlib openssl qt qt3 sqlite wnn xim
 
 .if !empty(PKG_OPTIONS:Mxim)
 .include "../../x11/libX11/buildlink3.mk"
@@ -56,32 +56,44 @@ CONFIGURE_ARGS+=	--disable-fep
 
 .if !empty(PKG_OPTIONS:Manthy)
 .  include "../../inputmethod/anthy/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-dict --with-anthy-utf8
+CONFIGURE_ARGS+=	--with-anthy-utf8
 PLIST.anthy=		yes
-.  if !empty(PKG_OPTIONS:Mgtk)
-PLIST.uim-dict-gtk=	yes
-.  endif
 .else
 CONFIGURE_ARGS+=	--without-anthy
 .endif
 
 .if !empty(PKG_OPTIONS:Mcanna)
-.  include "../../inputmethod/canna-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-canna
-PLIST.canna=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mcurl)
+.  include "../../www/curl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-curl
+PLIST.curl=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Meb)
 .include "../../textproc/eb/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-eb
 CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR}/eb.conf
+PLIST.eb=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mexpat)
+.  include "../../textproc/expat/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
+PLIST.expat=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mffi)
+.  include "../../devel/libffi/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ffi
+PLIST.ffi=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
 .  include "../../x11/gnome-panel/buildlink3.mk"
 .  include "../../devel/libgnomeui/buildlink3.mk"
-CFLAGS+=		-I$(BUILDLINK_PREFIX.libgnomeui)/include/libgnomeui-2.0
-BUILDLINK_TRANSFORM+=	l:panel-applet-2:panel-applet-2:gnomeui-2
 PLIST.gnome=		yes
 .else
 CONFIGURE_ARGS+=	--disable-gnome-applet
@@ -91,6 +103,13 @@ CONFIGURE_ARGS+=	--disable-gnome-applet
 GTK2_IMMODULES=		YES
 .include "../../x11/gtk2/modules.mk"
 PLIST.gtk=		yes
+.  if !empty(PKG_OPTIONS:Manthy) || !empty(PKG_OPTIONS:Mcanna)
+.    if !empty(PKG_OPTIONS:Mcanna)
+.      include "../../inputmethod/canna-lib/buildlink3.mk"
+.    endif
+CONFIGURE_ARGS+=	--enable-dict
+PLIST.uim-dict-gtk=	yes
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-gtk2
 .endif
@@ -138,18 +157,27 @@ PLIST.helperdata=	yes
 PLIST.qt=		yes
 .endif
 
+.if !empty(PKG_OPTIONS:Mopenssl)
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-openssl
+# XXX: https://bugs.freedesktop.org/show_bug.cgi?id=30249
+#CONFIGURE_ARGS+=	--with-openssl-dir=${SSLBASE:Q}
+PLIST.openssl=		yes
+.endif
+
 .if !empty(PKG_OPTIONS:Mprime)
-.  include "../../inputmethod/prime/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-prime
-PLIST.prime=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msj3)
-.  include "../../inputmethod/sj3-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sj3
-CONFIGURE_ARGS+=	SJ3_CFLAGS=-I${BUILDLINK_PREFIX.sj3-lib}/includes
-CONFIGURE_ARGS+=	SJ3_LIBS="-L${BUILDLINK_PREFIX.sj3-lib}/lib -lsj3lib"
-PLIST.sj3=		yes
+.endif
+
+# For input prediction
+.if !empty(PKG_OPTIONS:Msqlite)
+.  include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sqlite3
+PLIST.sqlite3=		yes
 .endif
 
 #.if !empty(PKG_OPTIONS:Mwnn)
@@ -159,3 +187,11 @@ PLIST.sj3=		yes
 #CONFIGURE_ARGS+=	--with-wnn-libraries=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/lib
 #PLIST.wnn=		yes
 #.endif
+
+.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mgnome)
+CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
+.elif !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
+CONFIGURE_ARGS+=	--enable-default-toolkit=qt4
+.elif !empty(PKG_OPTIONS:Mqt3) || !empty(PKG_OPTIONS:Mkde3)
+CONFIGURE_ARGS+=	--enable-default-toolkit=qt
+.endif
