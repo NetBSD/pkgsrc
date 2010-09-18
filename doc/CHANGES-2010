@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3502 2010/09/18 11:04:35 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3503 2010/09/18 12:12:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/scim-uim to 0.2.0nb3 [obache 2010-09-18]
 	Added databases/gigabase version 3.79 [obache 2010-09-18]
 	Added inputmethod/multiskkserv version 20100128 [obache 2010-09-18]
+	Updated devel/gsoap to 2.7.17 [obache 2010-09-18]
