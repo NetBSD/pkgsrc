@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/18 11:04:17 obache Exp $
+bin/skkdic-p2cdb
+sbin/multiskkserv
+sbin/multiskkserv-ctl
+share/doc/multiskkserv/README
+share/doc/multiskkserv/README.j
+share/examples/rc.d/multiskkserv
