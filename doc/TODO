@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9714 2010/09/18 06:58:45 obache Exp $
+$NetBSD: TODO,v 1.9715 2010/09/18 12:12:04 obache Exp $
 
 Suggested new packages
 ======================
@@ -682,7 +682,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grhino-0.16.1
 	o gsasl-1.4.1
 	o gsharutils-4.10
-	o gsoap-2.7.17 [pkg/43789]
 	o gss-1.0.1
 	o gtick-0.4.2
 	o gtk-systrace-20030623
