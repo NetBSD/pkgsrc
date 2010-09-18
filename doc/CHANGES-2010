@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3501 2010/09/18 09:09:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3502 2010/09/18 11:04:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4671,3 +4671,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/uim-tomoe-gtk to 0.6.0nb5 [obache 2010-09-18]
 	Updated inputmethod/scim-uim to 0.2.0nb3 [obache 2010-09-18]
 	Added databases/gigabase version 3.79 [obache 2010-09-18]
+	Added inputmethod/multiskkserv version 20100128 [obache 2010-09-18]
