@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/18 09:09:02 obache Exp $
+
+SHA1 (gigabase-3.79.tar.gz) = 81836e153204c74e9199189f0639c659196e7c53
+RMD160 (gigabase-3.79.tar.gz) = ec8b9d78add363ccdf3fdea67bdbaec4622cb87f
+Size (gigabase-3.79.tar.gz) = 2374529 bytes
+SHA1 (patch-aa) = 90d58c4e8879194f5025adfe228f1d70330de14d
+SHA1 (patch-ab) = 5692417ac9c0fc7354135c7b53fcd06a56a2e9e7
