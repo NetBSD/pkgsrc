@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2009/05/13 18:46:17 hasso Exp $
+$NetBSD: patch-ab,v 1.2 2010/09/18 12:11:36 obache Exp $
 
---- gsoap/stdsoap2.cpp.orig	2009-05-13 17:52:06 +0300
-+++ gsoap/stdsoap2.cpp	2009-05-13 17:52:37 +0300
-@@ -3585,7 +3585,7 @@ tcp_gethost(struct soap *soap, const cha
+DragonFly support.
+
+--- gsoap/stdsoap2.cpp.orig	2010-05-09 18:10:13.000000000 +0000
++++ gsoap/stdsoap2.cpp
+@@ -3311,7 +3311,7 @@ tcp_gethost(struct soap *soap, const cha
    { memcpy(inaddr, &iadd, sizeof(iadd));
      return SOAP_OK;
    }
