@@ -1,0 +1,38 @@
+$NetBSD: patch-aj,v 1.1 2010/09/18 20:48:23 wiz Exp $
+
+--- sf-gencode.h.orig	2009-11-16 23:47:42 +0100
++++ sf-gencode.h	2009-11-16 23:47:54 +0100
+@@ -169,8 +169,13 @@
+ struct arth  *gen_loadexpire(void);
+ 
+ void bpf_optimize(struct block **);
++#ifdef __DragonFly__
++void bpf_error(const char *, ...)
++    __attribute__((volatile, __format__ (printf, 1, 2)));
++#else
+ __dead void bpf_error(const char *, ...)
+     __attribute__((volatile, __format__ (printf, 1, 2)));
++#endif
+ 
+ void finish_parse(struct block *);
+ char *sdup(const char *);
+@@ -184,11 +189,19 @@
+ #define JT(b)  ((b)->et.succ)
+ #define JF(b)  ((b)->ef.succ)
+ 
++#ifdef __DragonFly__
++void sf_error(const char *fmt, ...);
++#else
+ __dead void sf_error(const char *fmt, ...);
++#endif
+ const char *sf_get_error(void);
+ int sf_compile(struct bpf_program *, char *, int, bpf_u_int32);
+ void sf_freecode(struct bpf_program *);
++#ifdef __DragonFly__
++void bpf_dump(const struct bpf_program *, int);
++#else
+ void bpf_dump(struct bpf_program *, int);
++#endif
+ 
+ extern int no_optimize;
+ 

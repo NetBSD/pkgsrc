@@ -1,14 +1,16 @@
-$NetBSD: distinfo,v 1.6 2008/06/15 14:09:03 peter Exp $
+$NetBSD: distinfo,v 1.7 2010/09/18 20:48:23 wiz Exp $
 
 SHA1 (pftop-0.7.tar.gz) = 651afa532cfc8cf59c3598704deb9bf3788ac9e9
 RMD160 (pftop-0.7.tar.gz) = 0e0c09e5feeb07deba8b540233dcb946ba0b4508
 Size (pftop-0.7.tar.gz) = 59765 bytes
-SHA1 (patch-aa) = ffae9a5ab95b793fa8b677a58a2b69644da37de2
+SHA1 (patch-aa) = ff5c522223472188933a6ccbe9725190dc8ec1b5
 SHA1 (patch-ab) = 9e54f7d6f6e6c4c54f924b86080359efea9ba369
 SHA1 (patch-ac) = 4d5ffc354258fb39c0a4655457b0c78e4f5709cb
-SHA1 (patch-ad) = 658c26cef386c31fbed99a138be0a94bc9ca1278
+SHA1 (patch-ad) = ca20a6cd1dd61aab5b41e6ee22b08dee7741a542
 SHA1 (patch-ae) = 54619b846899a7c4f260191a772e41e1c07c178c
 SHA1 (patch-af) = 59b907b20fa215b3f0a1e690c9c71d2f7077e322
-SHA1 (patch-ag) = ea63b7e7a0ec078a0369b6a416a790538fa0a87d
-SHA1 (patch-ah) = b634d591b0fefdbf272970253eb2789a6d1cd6c2
+SHA1 (patch-ag) = 7b3b0a9d7ac73df9c258ae27a8c75e6556574ee8
+SHA1 (patch-ah) = 7b2acf95c6f8ce5f0c621ed6c4fcee67a403ab88
 SHA1 (patch-ai) = 629c1668eab0d819e590fb62b7afa6c85709fd15
+SHA1 (patch-aj) = 287b09d61d5e761c4f6842c37ed0b668b84beae9
+SHA1 (patch-ak) = 78622d902016fa559ae3090d9c8407337d7cd0ed
