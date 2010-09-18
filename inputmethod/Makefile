@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2010/09/12 00:13:47 obache Exp $
+# $NetBSD: Makefile,v 1.46 2010/09/18 11:05:08 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -56,6 +56,7 @@ SUBDIR+=	libtabe
 SUBDIR+=	m17n-im-config
 SUBDIR+=	nabi
 SUBDIR+=	novel-pinyin
+SUBDIR+=	multiskkserv
 SUBDIR+=	p5-zinnia
 SUBDIR+=	prime
 SUBDIR+=	prime-dict
