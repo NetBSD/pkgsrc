@@ -1,20 +1,22 @@
-$NetBSD: patch-aa,v 1.2 2008/06/15 14:09:03 peter Exp $
+$NetBSD: patch-aa,v 1.3 2010/09/18 20:48:23 wiz Exp $
 
---- Makefile.old	2007-11-07 07:34:18.000000000 +0100
-+++ Makefile	2008-06-15 00:43:41.000000000 +0200
+--- Makefile.orig	2007-11-07 07:34:18 +0100
++++ Makefile	2009-11-17 00:59:26 +0100
 @@ -6,17 +6,21 @@
  
  PROG=	pftop
  SRCS=	pftop.c cache.c engine.c
 -SRCS+=	sf-gencode.c sf-grammer.y sf-scanner.l pcap-nametoaddr.c
+-SRCS+=  bpf_optimize.c bpf_filter.c bpf_dump.c bpf_image.c
 +SRCS+=	sf-gencode.c sf-grammer.c sf-scanner.l pcap-nametoaddr.c
- SRCS+=  bpf_optimize.c bpf_filter.c bpf_dump.c bpf_image.c
++SRCS+=  bpf_optimize.c
  MAN=	pftop.8
  
 +CLEANFILES+= sf-grammer.c
 +
  CFLAGS+= -Wall -DOS_LEVEL=${OSLEVEL}
- LDADD+= -lcurses
+-LDADD+= -lcurses
++LDADD+= -lcurses -lpcap
  
 +NOGCCERROR=yes
 +

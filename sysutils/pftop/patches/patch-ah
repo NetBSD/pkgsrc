@@ -1,13 +1,14 @@
-$NetBSD: patch-ah,v 1.1 2008/06/15 14:09:04 peter Exp $
+$NetBSD: patch-ah,v 1.2 2010/09/18 20:48:23 wiz Exp $
 
---- sf-gencode.c.old	2008-06-14 17:44:52.000000000 +0200
-+++ sf-gencode.c	2008-06-15 01:19:43.000000000 +0200
-@@ -32,8 +32,11 @@
+--- sf-gencode.c.orig	2007-11-07 07:34:18 +0100
++++ sf-gencode.c	2010-09-16 01:35:22 +0200
+@@ -32,8 +32,12 @@
  #include <netinet/in.h>
  #include <netinet/if_ether.h>
  
 -#include <net/if_pflog.h>
 +#ifdef __DragonFly__
++#include <sys/param.h>
 +#include <net/pf/pfvar.h>
 +#else
  #include <net/pfvar.h>
@@ -15,7 +16,7 @@ $NetBSD: patch-ah,v 1.1 2008/06/15 14:09:04 peter Exp $
  
  #include <netdb.h>
  #include <stdlib.h>
-@@ -44,7 +47,7 @@
+@@ -44,7 +48,7 @@
  
  #define INET6
  
@@ -24,7 +25,30 @@ $NetBSD: patch-ah,v 1.1 2008/06/15 14:09:04 peter Exp $
  #include <pcap-namedb.h>
  #include "sf-gencode.h"
  
-@@ -733,13 +736,17 @@
+@@ -60,7 +64,11 @@
+ static char sf_errbuf[PFTOP_ERRBUF_SIZE];
+ 
+ /* VARARGS */
++#ifdef __DragonFly__
++void
++#else
+ __dead void
++#endif
+ sf_error(const char *fmt, ...)
+ {
+ 	va_list ap;
+@@ -482,8 +490,10 @@
+ 	const static int gwy_off = offsetof(pf_state_t, gwy.addr.v4);
+ 	const static int ext_off = offsetof(pf_state_t, ext.addr.v4);
+ 
++#if !defined(__DragonFly__)
+ 	addr = ntohl(addr);
+ 	mask = ntohl(mask);
++#endif
+ 
+ 	switch (dir) {
+ 
+@@ -733,13 +743,17 @@
  		b1 = gen_proto(IPPROTO_ESP);
  		break;
  
@@ -42,7 +66,17 @@ $NetBSD: patch-ah,v 1.1 2008/06/15 14:09:04 peter Exp $
  
  	default:
  		sf_error("Unknown protocol abbreviation");
-@@ -1560,7 +1567,7 @@
+@@ -756,7 +770,9 @@
+ 	const static int gwy_off = offsetof(pf_state_t, gwy.port);
+ 	const static int ext_off = offsetof(pf_state_t, ext.port);
+ 
++#if !defined(__DragonFly__)
+ 	port = ntohs(port);
++#endif
+ 
+ 	switch (dir) {
+ 
+@@ -1560,7 +1576,7 @@
  		/* NOTREACHED */
  	}
  

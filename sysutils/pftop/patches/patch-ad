@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
+$NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
 
---- engine.c.old	2008-06-14 17:38:55.000000000 +0200
-+++ engine.c	2008-06-15 12:41:47.000000000 +0200
-@@ -22,7 +22,10 @@
+--- engine.c.orig	2007-11-07 07:35:44 +0100
++++ engine.c	2009-11-17 00:31:46 +0100
+@@ -18,11 +18,18 @@
+ 
+ 
+ #include <sys/types.h>
++#ifdef __DragonFly__
++#include "queue.h"
++#else
+ #include <sys/queue.h>
++#endif
  
  #include <ctype.h>
  #include <curses.h>
@@ -13,7 +21,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  #include <stdlib.h>
  #include <string.h>
  #include <unistd.h>
-@@ -33,6 +36,10 @@
+@@ -33,6 +40,10 @@
  #define MIN(a,b) (((a)<(b))?(a):(b))
  #endif
  
@@ -24,7 +32,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  /* circular linked list of views */
  CIRCLEQ_HEAD(view_list, view_ent) view_head =
  				  CIRCLEQ_HEAD_INITIALIZER(view_head);
-@@ -55,9 +62,6 @@
+@@ -55,9 +66,6 @@
  
  volatile sig_atomic_t gotsig_close = 0;
  volatile sig_atomic_t gotsig_resize = 0;
@@ -34,7 +42,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  
  SCREEN *screen;
  
-@@ -105,7 +109,6 @@
+@@ -105,7 +113,6 @@
  
  int
  tbprintf(char *format, ...)
@@ -42,7 +50,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  {
  	int len;
  	va_list arg;
-@@ -482,7 +485,6 @@
+@@ -482,7 +489,6 @@
  	v = ve->view;
  	
  	if ((curr_view != NULL) && (curr_mgr != v->mgr)) {
@@ -50,7 +58,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  		if (v->mgr != NULL && v->mgr->select_fn != NULL)
  			v->mgr->select_fn();
  	}
-@@ -491,7 +493,6 @@
+@@ -491,7 +497,6 @@
  	curr_view = v;
  	curr_mgr = v->mgr;
  	field_setup();
@@ -58,7 +66,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  }
  
  void
-@@ -905,12 +906,6 @@
+@@ -905,12 +910,6 @@
  }
  
  void
@@ -71,7 +79,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  setup_term(int dmax)
  {
  	max_disp = dmax;
-@@ -941,8 +936,9 @@
+@@ -941,8 +940,9 @@
  		keypad(stdscr, TRUE);
  		intrflush(stdscr, FALSE);
  
@@ -82,7 +90,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  	}
  
  	if (dmax == 0)
-@@ -970,7 +966,6 @@
+@@ -970,7 +970,6 @@
  	}
  	curr_message = NULL;
  	curr_cmd = cmd;
@@ -90,7 +98,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  	return prev;
  }
  
-@@ -987,7 +982,6 @@
+@@ -987,7 +986,6 @@
  
  int
  msgprintf(char *format, ...)
@@ -98,7 +106,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  {
  	static char buf[1024];
  	int len;
-@@ -1085,28 +1079,21 @@
+@@ -1085,28 +1083,21 @@
  	if (curr_message != NULL) {
  		if (ch > 0) {
  			curr_message = NULL;
@@ -127,7 +135,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  		break;
  	case 'v':
  		/* FALLTHROUGH */
-@@ -1124,49 +1111,40 @@
+@@ -1124,49 +1115,40 @@
  		/* FALLTHROUGH */
  	case CTRL_N:
  		dispstart++;
@@ -178,7 +186,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  		set_view_hotkey(ch);
  }
  
-@@ -1177,43 +1155,15 @@
+@@ -1177,43 +1159,15 @@
  	signal(SIGINT, sig_close);
  	signal(SIGQUIT, sig_close);
  	signal(SIGWINCH, sig_resize);
@@ -223,7 +231,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/15 14:09:03 peter Exp $
  		if (gotsig_close)
  			break;
  		if (gotsig_resize) {
-@@ -1221,13 +1171,31 @@
+@@ -1221,13 +1175,31 @@
  				endwin();
  			setup_term(max_disp);
  			gotsig_resize = 0;
