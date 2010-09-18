@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3498 2010/09/17 08:04:26 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3499 2010/09/18 00:50:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4665,3 +4665,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Format-Human-Bytes to 0.06 [sno 2010-09-17]
 	Updated devel/p5-PPIx-Regexp to 0.011 [sno 2010-09-17]
 	Updated audio/liblastfm to 0.3.2 [wiz 2010-09-17]
+	Updated editors/emacs-snapshot to 24.0.50.20100916 [minskim 2010-09-18]
