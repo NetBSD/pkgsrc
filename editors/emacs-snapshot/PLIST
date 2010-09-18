@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/09/06 23:07:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/09/18 00:50:36 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -260,8 +260,6 @@ share/emacs/${EMACS_VERSION}/etc/e/eterm-color.ti
 share/emacs/${EMACS_VERSION}/etc/echo.msg
 share/emacs/${EMACS_VERSION}/etc/edt-user.el
 share/emacs/${EMACS_VERSION}/etc/emacs-buffer.gdb
-share/emacs/${EMACS_VERSION}/etc/emacs.bash
-share/emacs/${EMACS_VERSION}/etc/emacs.csh
 share/emacs/${EMACS_VERSION}/etc/emacs.desktop
 share/emacs/${EMACS_VERSION}/etc/emacs.icon
 share/emacs/${EMACS_VERSION}/etc/emacs.py
@@ -675,7 +673,6 @@ share/emacs/${EMACS_VERSION}/etc/images/up-node.xpm
 share/emacs/${EMACS_VERSION}/etc/images/zoom-in.xpm
 share/emacs/${EMACS_VERSION}/etc/images/zoom-out.pbm
 share/emacs/${EMACS_VERSION}/etc/images/zoom-out.xpm
-share/emacs/${EMACS_VERSION}/etc/ms-kermit
 share/emacs/${EMACS_VERSION}/etc/nxml/00000-0007F.el
 share/emacs/${EMACS_VERSION}/etc/nxml/00080-000FF.el
 share/emacs/${EMACS_VERSION}/etc/nxml/00100-0017F.el
@@ -2680,8 +2677,6 @@ share/emacs/${EMACS_VERSION}/lisp/net/tramp-cmds.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-cmds.elc
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-compat.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-compat.elc
-share/emacs/${EMACS_VERSION}/lisp/net/tramp-fish.el.gz
-share/emacs/${EMACS_VERSION}/lisp/net/tramp-fish.elc
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-ftp.elc
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-gvfs.el.gz
@@ -2690,6 +2685,9 @@ share/emacs/${EMACS_VERSION}/lisp/net/tramp-gw.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-gw.elc
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-imap.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-imap.elc
+share/emacs/${EMACS_VERSION}/lisp/net/tramp-loaddefs.el
+share/emacs/${EMACS_VERSION}/lisp/net/tramp-sh.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/tramp-sh.elc
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-smb.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-smb.elc
 share/emacs/${EMACS_VERSION}/lisp/net/tramp-uu.el.gz
@@ -2710,7 +2708,6 @@ share/emacs/${EMACS_VERSION}/lisp/notifications.el.gz
 share/emacs/${EMACS_VERSION}/lisp/notifications.elc
 share/emacs/${EMACS_VERSION}/lisp/novice.el.gz
 share/emacs/${EMACS_VERSION}/lisp/novice.elc
-share/emacs/${EMACS_VERSION}/lisp/nxml/TODO
 share/emacs/${EMACS_VERSION}/lisp/nxml/nxml-enc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/nxml/nxml-enc.elc
 share/emacs/${EMACS_VERSION}/lisp/nxml/nxml-glyph.el.gz
