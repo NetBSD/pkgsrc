@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2009/12/21 20:13:36 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/18 12:11:36 obache Exp $
 
-DISTNAME=		gsoap_2.7.13
-PKGNAME=		gsoap-2.7.13
-PKGREVISION=		1
+DISTNAME=		gsoap_2.7.17
+PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gsoap2/}
+EXTRACT_SUFX=		.zip
 
 MAINTAINER=		chriswareham@chriswareham.demon.co.uk
 HOMEPAGE=		http://gsoap2.sourceforge.net/
@@ -16,11 +16,20 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=			${WRKDIR}/gsoap-2.7
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		yacc flex gmake
+USE_TOOLS+=		yacc flex gmake pax
 
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoap++.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoap.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoapck++.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoapck.pc.in
+PKGCONFIG_OVERRIDE+=	gsoap++.pc.in
+PKGCONFIG_OVERRIDE+=	gsoap.pc.in
+PKGCONFIG_OVERRIDE+=	gsoapck++.pc.in
+PKGCONFIG_OVERRIDE+=	gsoapck.pc.in
+PKGCONFIG_OVERRIDE+=	gsoapssl++.pc.in
+PKGCONFIG_OVERRIDE+=	gsoapssl.pc.in
 
+INSTALLATION_DIRS=	share/doc/gsoap
+
+post-install:
+	cd ${WRKSRC}/gsoap/doc && pax -rw -pp * ${DESTDIR}${PREFIX}/share/doc/gsoap
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2009/11/29 21:31:57 dholland Exp $
+$NetBSD: patch-ac,v 1.2 2010/09/18 12:11:36 obache Exp $
 
 Get socklen_t defined correctly.
 
---- gsoap/stdsoap2.h~	2009-03-21 17:24:44.000000000 -0400
-+++ gsoap/stdsoap2.h	2009-11-29 15:47:13.000000000 -0500
-@@ -676,7 +676,7 @@ extern "C" {
+--- gsoap/stdsoap2.h.orig	2010-05-09 18:10:13.000000000 +0000
++++ gsoap/stdsoap2.h
+@@ -715,7 +715,7 @@ extern "C" {
  # endif
  #elif defined(SOCKLEN_T)
  # define SOAP_SOCKLEN_T SOCKLEN_T
--#elif defined(__socklen_t_defined) || defined(_SOCKLEN_T) || defined(CYGWIN) || defined(FREEBSD) || defined(__FreeBSD__) || defined(__QNX__) || defined(QNX) || defined(OS390)
-+#elif defined(__socklen_t_defined) || defined(_SOCKLEN_T) || defined(CYGWIN) || defined(FREEBSD) || defined(__FreeBSD__) || defined(__QNX__) || defined(QNX) || defined(OS390) || defined(__NetBSD__) || defined(__OpenBSD__)
+-#elif defined(__socklen_t_defined) || defined(_SOCKLEN_T) || defined(CYGWIN) || defined(FREEBSD) || defined(__FreeBSD__) || defined(OPENBSD) || defined(__QNX__) || defined(QNX) || defined(OS390) || defined(HP_UX)
++#elif defined(__socklen_t_defined) || defined(_SOCKLEN_T) || defined(CYGWIN) || defined(FREEBSD) || defined(__FreeBSD__) || defined(OPENBSD) || defined(__QNX__) || defined(QNX) || defined(OS390) || defined(HP_UX) || defined(__NetBSD__) || defined(__OpenBSD__)
  # define SOAP_SOCKLEN_T socklen_t
- #elif defined(IRIX) || defined(WIN32) || defined(__APPLE__) || defined(HP_UX) || defined(SUN_OS) || defined(OPENSERVER) || defined(TRU64) || defined(VXWORKS)
+ #elif defined(IRIX) || defined(WIN32) || defined(__APPLE__) || defined(SUN_OS) || defined(OPENSERVER) || defined(TRU64) || defined(VXWORKS)
  # define SOAP_SOCKLEN_T int
