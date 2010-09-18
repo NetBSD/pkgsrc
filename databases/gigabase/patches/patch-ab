@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/09/18 09:09:02 obache Exp $
+
+DragonFly support.
+
+--- unisock.cpp.orig	2009-09-17 08:35:58.000000000 +0000
++++ unisock.cpp
+@@ -167,7 +167,7 @@ char* unix_socket::get_peer_name()
+         return NULL;
+     }
+     struct sockaddr_in insock;
+-#if defined(__linux__) || (defined(__FreeBSD__) && __FreeBSD__ > 3) || defined(_AIX43) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(HPUX11) || defined(_SOCKLEN_T)
++#if defined(__linux__) || (defined(__FreeBSD__) && __FreeBSD__ > 3) || defined(_AIX43) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(HPUX11) || defined (__DragonFly__) || defined(_SOCKLEN_T)
+     socklen_t len = sizeof(insock);
+ #elif defined(_AIX41)
+     size_t len = sizeof(insock);
