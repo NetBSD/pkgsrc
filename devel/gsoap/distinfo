@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/11/29 21:31:57 dholland Exp $
+$NetBSD: distinfo,v 1.5 2010/09/18 12:11:36 obache Exp $
 
-SHA1 (gsoap_2.7.13.tar.gz) = 4c91ce860ee6853f785a11484c7298d294a53ef6
-RMD160 (gsoap_2.7.13.tar.gz) = 58f2bcd95199fdec3c5ce6579374148eaab955b1
-Size (gsoap_2.7.13.tar.gz) = 6564489 bytes
-SHA1 (patch-aa) = 6e0b1c00244c1dcada571e8d3a7c4b2be5800df3
-SHA1 (patch-ab) = 9a35355d7553d5063278574109a2c1121a2a5b18
-SHA1 (patch-ac) = 0677e3b3efed5b26770782296d9b643a670af0a9
+SHA1 (gsoap_2.7.17.zip) = 573a08ab7d8ca2d970158911482c308484fdd5ed
+RMD160 (gsoap_2.7.17.zip) = 3f947cbc5e1656dd82b8c6425816cfaf08063c19
+Size (gsoap_2.7.17.zip) = 10224444 bytes
+SHA1 (patch-aa) = d492d2e1085451fed9b70e975f813214ff2d10dd
+SHA1 (patch-ab) = c3742604ca37f2146b958dd476bd41bdbe0bb561
+SHA1 (patch-ac) = 66b9df9b97fa96b894cad2c1affe6c4285b36e1a
