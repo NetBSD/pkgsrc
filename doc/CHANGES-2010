@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3499 2010/09/18 00:50:58 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3500 2010/09/18 03:11:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4666,3 +4666,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-PPIx-Regexp to 0.011 [sno 2010-09-17]
 	Updated audio/liblastfm to 0.3.2 [wiz 2010-09-17]
 	Updated editors/emacs-snapshot to 24.0.50.20100916 [minskim 2010-09-18]
+	Updated inputmethod/uim to 1.6.0 [obache 2010-09-18]
+	Updated inputmethod/uim-elisp to 1.6.0 [obache 2010-09-18]
+	Updated inputmethod/uim-tomoe-gtk to 0.6.0nb5 [obache 2010-09-18]
+	Updated inputmethod/scim-uim to 0.2.0nb3 [obache 2010-09-18]
