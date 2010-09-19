@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/11/10 12:08:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/09/19 12:19:41 obache Exp $
 
-SHA1 (libmowgli-0.7.0.tgz) = d9a029aab1cd65189b7c8351a7f537232b2be3db
-RMD160 (libmowgli-0.7.0.tgz) = 97b05fd7cd0d4d904600fff51bc032298ff07844
-Size (libmowgli-0.7.0.tgz) = 115534 bytes
+SHA1 (libmowgli-0.7.1.tgz) = 62ef22d3ff101e369c6424a130a7af83a840deee
+RMD160 (libmowgli-0.7.1.tgz) = 4795045e65f0ac51ff6c77e070183f262fe7e85e
+Size (libmowgli-0.7.1.tgz) = 124251 bytes
+SHA1 (patch-aa) = 52b2333527afe320b492bd6196d4b09fd8222fc7
