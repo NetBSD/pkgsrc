@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/26 05:11:25 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/19 23:17:17 minskim Exp $
 
 DISTNAME=	memoir.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.618033988c.6.0f
-TEXLIVE_REV=	17927
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.6fpl6.0g
+TEXLIVE_REV=	19776
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-memoir
