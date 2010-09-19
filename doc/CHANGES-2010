@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3536 2010/09/19 16:13:06 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3537 2010/09/19 23:01:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4709,3 +4709,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/py-subversion to 1.6.12 [sno 2010-09-19]
 	Updated devel/p5-subversion to 1.6.12 [sno 2010-09-19]
 	Updated devel/java-subversion to 1.6.12 [sno 2010-09-19]
+	Updated print/tex-ifxetex to 0.6 [minskim 2010-09-19]
+	Updated print/tex-ifxetex-doc to 0.6 [minskim 2010-09-19]
