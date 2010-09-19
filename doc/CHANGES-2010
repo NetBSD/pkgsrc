@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3513 2010/09/19 11:07:22 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3514 2010/09/19 11:07:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4682,3 +4682,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Mail-Audit to 2.225 [wiz 2010-09-19]
 	Updated textproc/p5-Text-SpellChecker to 0.07 [wiz 2010-09-19]
 	Updated textproc/p5-XML-Parser to 2.40 [wiz 2010-09-19]
+	Updated textproc/p5-Encode to 2.40 [wiz 2010-09-19]
