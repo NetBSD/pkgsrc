@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2010/09/14 11:03:10 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2010/09/19 17:48:56 joerg Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -55,6 +55,18 @@ CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-vendor-web="http://www.pkgsrc.org/"
 
 CONFIGURE_ARGS+=	--enable-xorg
+
+CONFIGURE_ARGS+=	--with-fontdir=${PREFIX}/share/fonts/X11
+
+LEGACY_FONT_PATH=
+DEFAULT_FONT_PATH=
+.for f in misc TTF OTF Type1 100dpi 75dpi cyrillic
+DEFAULT_FONT_PATH+=	${PREFIX}/share/fonts/X11/${f}
+LEGACY_FONT_PATH+=	${PREFIX}/lib/X11/fonts/${f}
+.endfor
+FONT_PATH=		${DEFAULT_FONT_PATH} ${LEGACY_FONT_PATH}
+
+CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATH:ts,:Q}
 
 CONFIGURE_ARGS+=	--disable-config-hal
 CONFIGURE_ARGS+=	--disable-dmx
