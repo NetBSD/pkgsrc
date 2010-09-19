@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3507 2010/09/19 07:53:47 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3508 2010/09/19 08:38:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4676,3 +4676,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/gperiodic to 2.0.10 [obache 2010-09-19]
 	Updated biology/lucy to 1.20 [obache 2010-09-19]
 	Updated biology/nut to 15.8 [obache 2010-09-19]
+	Updated biology/puzzle to 5.2 [obache 2010-09-19]
