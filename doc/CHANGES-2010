@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3517 2010/09/19 11:25:00 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3518 2010/09/19 11:29:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4686,3 +4686,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-XML-Rabbit to 0.0.3 [wiz 2010-09-19]
 	Updated textproc/p5-XML-Sablotron to 1.01 [wiz 2010-09-19]
 	Updated textproc/p5-XML-SAX-Writer to 0.53 [wiz 2010-09-19]
+	Updated time/p5-DateTimeX-Easy to 0.089 [wiz 2010-09-19]
