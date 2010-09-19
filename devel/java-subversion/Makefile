@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/01/17 12:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/19 16:10:47 sno Exp $
 
 PKGNAME=	java-subversion-${SVNVER}
-PKGREVISION=	1
+#PKGREVISION=	1
 COMMENT=	Java bindings for Subversion
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
