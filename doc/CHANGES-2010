@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3522 2010/09/19 14:08:11 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3523 2010/09/19 14:15:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-html2text to 2.39 [wiz 2010-09-19]
 	Updated print/tex-pdftex to 1.40.11 [minskim 2010-09-19]
 	Updated print/tex-pdftex-doc to 1.40.11 [minskim 2010-09-19]
+	Updated print/tex-koma-script to 3.07 [minskim 2010-09-19]
