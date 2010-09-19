@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3505 2010/09/19 07:13:52 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3506 2010/09/19 07:53:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4675,3 +4675,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/gsoap to 2.7.17 [obache 2010-09-18]
 	Updated misc/gperiodic to 2.0.10 [obache 2010-09-19]
 	Updated biology/lucy to 1.20 [obache 2010-09-19]
+	Updated biology/nut to 15.8 [obache 2010-09-19]
+	Updated biology/nut to 15.8 [obache 2010-09-19]
