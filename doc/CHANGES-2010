@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3523 2010/09/19 14:15:16 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3524 2010/09/19 14:23:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4693,3 +4693,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pdftex to 1.40.11 [minskim 2010-09-19]
 	Updated print/tex-pdftex-doc to 1.40.11 [minskim 2010-09-19]
 	Updated print/tex-koma-script to 3.07 [minskim 2010-09-19]
+	Added fonts/tex-fontspec version 2.1 [minskim 2010-09-19]
+	Added fonts/tex-fontspec-doc version 2.1 [minskim 2010-09-19]
