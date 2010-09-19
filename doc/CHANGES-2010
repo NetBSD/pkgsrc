@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3510 2010/09/19 10:58:25 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3511 2010/09/19 10:59:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4679,3 +4679,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated biology/puzzle to 5.2 [obache 2010-09-19]
 	Updated devel/p5-Cache-Memcached to 1.29 [wiz 2010-09-19]
 	Updated devel/p5-Mouse to 0.70 [wiz 2010-09-19]
+	Updated mail/p5-Mail-Audit to 2.225 [wiz 2010-09-19]
