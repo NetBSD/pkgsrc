@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:47 agc Exp $
+$NetBSD: distinfo,v 1.3 2010/09/19 11:20:37 wiz Exp $
 
-SHA1 (XML-Sablotron-0.98.tar.gz) = 6cd176b808fd712beab009e9996ddc3c87af1795
-RMD160 (XML-Sablotron-0.98.tar.gz) = 884b9208405220f1e0fab620ae957584120c5d36
-Size (XML-Sablotron-0.98.tar.gz) = 52726 bytes
+SHA1 (XML-Sablotron-1.01.tar.gz) = 0a7b688b20300f95993e0c1f56761eb0d504772a
+RMD160 (XML-Sablotron-1.01.tar.gz) = e4a4a9ca520ed9096ea0fced2fe4d43f227e0953
+Size (XML-Sablotron-1.01.tar.gz) = 53023 bytes
