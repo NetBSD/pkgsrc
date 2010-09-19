@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/08/21 16:36:16 seb Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/19 11:20:37 wiz Exp $
 
-DISTNAME=	XML-Sablotron-0.98
+DISTNAME=	XML-Sablotron-1.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 SVR4_PKGNAME=	p5xsb
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -10,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	adam@migus.org
 HOMEPAGE=	http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 COMMENT=	Perl interface to the Sablotron XSLT processor
+LICENSE=	mpl-1.1 OR gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,8 +28,8 @@ PERL5_PACKLIST=		auto/XML/Sablotron/.packlist
 .include "../../lang/perl5/module.mk"
 
 post-patch:
-	@${MV} ${WRKSRC:Q}/Makefile.PL ${WRKSRC:Q}/Makefile.PL.orig
-	@${SED} \
+	${MV} ${WRKSRC:Q}/Makefile.PL ${WRKSRC:Q}/Makefile.PL.orig
+	${SED} \
 	-e 's|^\(my \$$expat_libpath = '\''\)\('\'';\)$$|\1${EXPATLIBPATH}\2|' \
 	-e 's|^\(my \$$expat_incpath = '\''\)\('\'';\)$$|\1${EXPATINCPATH}\2|' \
 	-e 's|^\(my \$$sablot_libpath = '\''\)\('\'';\)$$|\1${SABLOTLIBPATH}\2|' \
