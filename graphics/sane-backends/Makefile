@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2010/01/18 09:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2010/09/19 15:06:18 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,6 @@ COMMENT=	API for access to scanners, digital cameras, frame grabbers etc.
 
 DISTNAME=	sane-backends-${SANE_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-PKGREVISION=	4
 
 # lib/Makefile.in builds .o files and then .a, but rules for shlibs,
 # while apparently independent, cause libtool to create .o again,
@@ -15,7 +14,7 @@ PKGREVISION=	4
 # the .o
 MAKE_JOBS_SAFE=		NO
 
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt msgmerge
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--with-gphoto2=no
@@ -42,11 +41,12 @@ canon_dr.conf cardscan.conf coolscan.conf coolscan2.conf coolscan3.conf \
 dc210.conf dc240.conf dc25.conf dll.conf dmc.conf \
 epson.conf epjitsu.conf epson2.conf fujitsu.conf \
 genesys.conf gt68xx.conf hp.conf hp3900.conf \
-hp4200.conf hp5400.conf hs2p.conf ibm.conf leo.conf lexmark.conf \
+hp4200.conf hp5400.conf hs2p.conf ibm.conf kodak.conf leo.conf lexmark.conf \
 ma1509.conf matsushita.conf \
 microtek.conf microtek2.conf mustek.conf mustek_usb.conf \
 nec.conf net.conf \
-pie.conf pixma.conf plustek.conf plustek_pp.conf ricoh.conf rts8891.conf \
+p5.conf pie.conf pixma.conf plustek.conf plustek_pp.conf \
+ricoh.conf rts8891.conf \
 s9036.conf saned.conf sceptre.conf sharp.conf sm3840.conf snapscan.conf \
 sp15c.conf st400.conf stv680.conf \
 tamarack.conf teco1.conf teco2.conf teco3.conf \

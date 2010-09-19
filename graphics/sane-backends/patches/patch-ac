@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2006/08/05 22:41:49 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2010/09/19 15:06:18 wiz Exp $
 
---- sanei/sanei_ab306.c.orig	2003-09-09 15:04:45.000000000 +0000
+--- sanei/sanei_ab306.c.orig	2010-04-05 13:18:05.000000000 +0000
 +++ sanei/sanei_ab306.c
 @@ -78,7 +78,7 @@ inb (u_long port)
- #include "sane/sanei.h"
- #include "sane/sanei_ab306.h"
+ #include "../include/sane/sanei.h"
+ #include "../include/sane/sanei_ab306.h"
  
 -#if (defined(HAVE_IOPERM) || defined(__FreeBSD__)) && !defined(IO_SUPPORT_MISSING)
 +#if (defined(HAVE_IOPERM) || defined(__FreeBSD__) || defined(__DragonFly__)) && !defined(IO_SUPPORT_MISSING)

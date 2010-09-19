@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/08/20 03:53:20 hasso Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/09/19 15:06:18 wiz Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -41,6 +41,8 @@ lib/sane/libsane-hp5590.la
 lib/sane/libsane-hpljm1005.la
 lib/sane/libsane-hs2p.la
 lib/sane/libsane-ibm.la
+lib/sane/libsane-kodak.la
+lib/sane/libsane-kvs1025.la
 lib/sane/libsane-leo.la
 lib/sane/libsane-lexmark.la
 lib/sane/libsane-ma1509.la
@@ -49,10 +51,10 @@ lib/sane/libsane-microtek.la
 lib/sane/libsane-microtek2.la
 lib/sane/libsane-mustek.la
 lib/sane/libsane-mustek_usb.la
-lib/sane/libsane-mustek_usb2.la
 lib/sane/libsane-nec.la
 lib/sane/libsane-net.la
 lib/sane/libsane-niash.la
+lib/sane/libsane-p5.la
 lib/sane/libsane-pie.la
 ${PLIST.pint}lib/sane/libsane-pint.la
 lib/sane/libsane-pixma.la
@@ -118,6 +120,8 @@ man/man5/sane-hp5590.5
 man/man5/sane-hpljm1005.5
 man/man5/sane-hs2p.5
 man/man5/sane-ibm.5
+man/man5/sane-kodak.5
+man/man5/sane-kvs1025.5
 man/man5/sane-leo.5
 man/man5/sane-lexmark.5
 man/man5/sane-ma1509.5
@@ -126,10 +130,10 @@ man/man5/sane-microtek.5
 man/man5/sane-microtek2.5
 man/man5/sane-mustek.5
 man/man5/sane-mustek_usb.5
-man/man5/sane-mustek_usb2.5
 man/man5/sane-nec.5
 man/man5/sane-net.5
 man/man5/sane-niash.5
+man/man5/sane-p5.5
 man/man5/sane-pie.5
 ${PLIST.pint}man/man5/sane-pint.5
 man/man5/sane-pixma.5
@@ -275,6 +279,7 @@ share/examples/sane/hp4200.conf
 share/examples/sane/hp5400.conf
 share/examples/sane/hs2p.conf
 share/examples/sane/ibm.conf
+share/examples/sane/kodak.conf
 share/examples/sane/leo.conf
 share/examples/sane/lexmark.conf
 share/examples/sane/ma1509.conf
@@ -285,6 +290,7 @@ share/examples/sane/mustek.conf
 share/examples/sane/mustek_usb.conf
 share/examples/sane/nec.conf
 share/examples/sane/net.conf
+share/examples/sane/p5.conf
 share/examples/sane/pie.conf
 share/examples/sane/pixma.conf
 share/examples/sane/plustek.conf
@@ -310,22 +316,6 @@ share/examples/sane/umax.conf
 share/examples/sane/umax1220u.conf
 share/examples/sane/umax_pp.conf
 share/examples/sane/xerox_mfp.conf
-share/locale/bg/LC_MESSAGES/sane-backends.mo
-share/locale/cs/LC_MESSAGES/sane-backends.mo
-share/locale/da/LC_MESSAGES/sane-backends.mo
-share/locale/de/LC_MESSAGES/sane-backends.mo
-share/locale/en_GB/LC_MESSAGES/sane-backends.mo
-share/locale/eo/LC_MESSAGES/sane-backends.mo
-share/locale/es/LC_MESSAGES/sane-backends.mo
-share/locale/fi/LC_MESSAGES/sane-backends.mo
-share/locale/fr/LC_MESSAGES/sane-backends.mo
-share/locale/it/LC_MESSAGES/sane-backends.mo
-share/locale/nb/LC_MESSAGES/sane-backends.mo
-share/locale/nl/LC_MESSAGES/sane-backends.mo
-share/locale/pl/LC_MESSAGES/sane-backends.mo
-share/locale/pt/LC_MESSAGES/sane-backends.mo
-share/locale/ru/LC_MESSAGES/sane-backends.mo
-share/locale/sv/LC_MESSAGES/sane-backends.mo
 @pkgdir share/sane/snapscan
 @pkgdir share/sane/gt68xx
 @pkgdir share/sane/epjitsu
