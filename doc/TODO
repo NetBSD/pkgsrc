@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9723 2010/09/19 14:35:56 spz Exp $
+$NetBSD: TODO,v 1.9724 2010/09/19 15:06:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1108,7 +1108,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o samba-3.4.9
 	o samba-3.5.5
-	o sane-backends-1.0.21
 	o sarg-2.2.5
 	o saxon-9.2
 	o scala-2.8.0
