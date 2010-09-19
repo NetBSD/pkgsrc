@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/19 23:37:11 tron Exp $
-# TeX Live Revision 17039
+# $NetBSD: Makefile,v 1.2 2010/09/19 20:46:12 minskim Exp $
 
 DISTNAME=	german
 PKGNAME=	tex-${DISTNAME}-2.5e
+TEXLIVE_REV=	17039
 
 MAINTAINER=	tron@NetBSD.org
 COMMENT=	LaTeX styles for German typography
