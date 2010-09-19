@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3531 2010/09/19 16:11:38 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3532 2010/09/19 16:11:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4704,3 +4704,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/web2c to 2010nb1 [minskim 2010-09-19]
 	Updated devel/subversion to 1.6.12 [sno 2010-09-19]
 	Updated devel/subversion-base to 1.6.12 [sno 2010-09-19]
+	Updated www/ap2-subversion to 1.6.12 [sno 2010-09-19]
