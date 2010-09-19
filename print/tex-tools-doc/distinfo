@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/04/15 22:52:21 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/09/19 23:20:33 minskim Exp $
 
-SHA1 (tex-tools-doc-2009/tools.doc.tar.xz) = 3fb4ceb94ddcb0a495c6c24e81334c4350df272c
-RMD160 (tex-tools-doc-2009/tools.doc.tar.xz) = e9a1d539b52ed5c76d7900c36ba4cd17b3435fbd
-Size (tex-tools-doc-2009/tools.doc.tar.xz) = 2844744 bytes
+SHA1 (tex-tools-19766/tools.doc.tar.xz) = fe0326e3c5d3f2c39d332e05a5c279d9a296945e
+RMD160 (tex-tools-19766/tools.doc.tar.xz) = 72f239882d0f823754b4d67d550abfa4b92f78ec
+Size (tex-tools-19766/tools.doc.tar.xz) = 2844736 bytes
