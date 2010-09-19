@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/21 15:46:32 minskim Exp $
-# TeX Live Revision 17039
+# $NetBSD: Makefile,v 1.2 2010/09/19 20:46:12 minskim Exp $
 
 DISTNAME=	german.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.5e
+TEXLIVE_REV=	17039
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-german
