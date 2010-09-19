@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3524 2010/09/19 14:23:18 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3525 2010/09/19 14:35:56 spz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4695,3 +4695,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-koma-script to 3.07 [minskim 2010-09-19]
 	Added fonts/tex-fontspec version 2.1 [minskim 2010-09-19]
 	Added fonts/tex-fontspec-doc version 2.1 [minskim 2010-09-19]
+	Updated devel/rt3 to 3.8.8 [spz 2010-09-17]
+	Updated www/apache-tomcat6 to 6.0.29 [spz 2010-09-19]
