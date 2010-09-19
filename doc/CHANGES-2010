@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3529 2010/09/19 15:36:24 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3530 2010/09/19 16:11:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4702,3 +4702,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/sane-backends to 1.0.21 [wiz 2010-09-19]
 	Updated x11/lablgtk to 2.14.2 [wiz 2010-09-19]
 	Updated print/web2c to 2010nb1 [minskim 2010-09-19]
+	Updated devel/subversion to 1.6.12 [sno 2010-09-19]
