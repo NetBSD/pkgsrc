@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9719 2010/09/19 08:38:28 obache Exp $
+$NetBSD: TODO,v 1.9720 2010/09/19 12:19:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liblzo-2.02
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
-	o libmowgli-0.7.1 [pkg/43760]
 	o libmp3splt-0.5.8
 	o libnasl-2.3.1
 	o libnids-1.24
