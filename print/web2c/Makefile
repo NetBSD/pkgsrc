@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/09/13 04:09:54 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/19 15:35:59 minskim Exp $
 
 DISTNAME=	texlive-20100720-source
 PKGNAME=	web2c-2010
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,7 +17,6 @@ CONFLICTS+=	texlive-tetex<2010
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/libs/obsdcompat \
-			${DISTNAME}/libs/xpdf \
 			${DISTNAME}/texk/ptexenc \
 			${DISTNAME}/texk/web2c
 
@@ -39,12 +39,13 @@ CONFIGURE_ARGS+=	--with-system-kpathsea \
 CONFIGURE_ARGS+=	--with-system-libpng \
 			--with-libpng-includes=${BUILDLINK_PREFIX.png}/include \
 			--with-libpng-libdir=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+=	--with-system-xpdf
 CONFIGURE_ARGS+=	--with-system-zlib \
 			--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 			--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+LIBTOOL_OVERRIDE=	../*/libtool */libtool
 
 CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}/libs/obsdcompat \
-		${WRKDIR}/${DISTNAME}/libs/xpdf \
 		${WRKDIR}/${DISTNAME}/texk/ptexenc \
 		${WRKDIR}/${DISTNAME}/texk/web2c
 INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
@@ -52,6 +53,8 @@ INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
 
 post-install:
 	${LN} -sf cweb.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ctangle.1
