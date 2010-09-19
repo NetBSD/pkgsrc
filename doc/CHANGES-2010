@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3521 2010/09/19 14:05:46 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3522 2010/09/19 14:08:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4690,3 +4690,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime-Format-Epoch to 0.13 [wiz 2010-09-19]
 	Updated devel/libmowgli to 0.7.1 [obache 2010-09-19]
 	Updated textproc/py-html2text to 2.39 [wiz 2010-09-19]
+	Updated print/tex-pdftex to 1.40.11 [minskim 2010-09-19]
+	Updated print/tex-pdftex-doc to 1.40.11 [minskim 2010-09-19]
