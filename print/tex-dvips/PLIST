@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/16 03:42:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/09/19 23:58:41 minskim Exp $
 share/texmf-dist/dvips/base/ehandler.ps
 share/texmf-dist/dvips/base/resolution400.ps
 share/texmf-dist/fonts/enc/dvips/base/6w.enc
@@ -32,7 +32,6 @@ share/texmf-dist/fonts/enc/dvips/base/tex256.enc
 share/texmf-dist/fonts/enc/dvips/base/texmext.enc
 share/texmf-dist/fonts/enc/dvips/base/texmital.enc
 share/texmf-dist/fonts/enc/dvips/base/texmsym.enc
-share/texmf-dist/fonts/enc/dvips/base/texnansi.enc
 share/texmf-dist/fonts/enc/dvips/base/texnansx.enc
 share/texmf-dist/fonts/enc/dvips/base/xl2.enc
 share/texmf-dist/fonts/enc/dvips/base/xt2.enc
