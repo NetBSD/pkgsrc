@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3520 2010/09/19 12:20:41 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3521 2010/09/19 14:05:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4689,3 +4689,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTimeX-Easy to 0.089 [wiz 2010-09-19]
 	Updated time/p5-DateTime-Format-Epoch to 0.13 [wiz 2010-09-19]
 	Updated devel/libmowgli to 0.7.1 [obache 2010-09-19]
+	Updated textproc/py-html2text to 2.39 [wiz 2010-09-19]
