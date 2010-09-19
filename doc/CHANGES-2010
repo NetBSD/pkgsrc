@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3538 2010/09/19 23:10:02 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3539 2010/09/19 23:18:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4713,3 +4713,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-ifxetex-doc to 0.6 [minskim 2010-09-19]
 	Updated print/tex-hyperref to 6.81p [minskim 2010-09-19]
 	Updated print/tex-hyperref-doc to 6.81p [minskim 2010-09-19]
+	Updated print/tex-memoir to 3.6fpl6.0g [minskim 2010-09-19]
+	Updated print/tex-memoir-doc to 3.6fpl6.0g [minskim 2010-09-19]
