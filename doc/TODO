@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9715 2010/09/18 12:12:04 obache Exp $
+$NetBSD: TODO,v 1.9716 2010/09/19 02:19:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -671,7 +671,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o golem-0.0.6
 	o gossip-0.31
 	o gourmet-0.13.3
-	o gperiodic-2.0.10 [pkg/43779]
 	o gplcver-2.12a
 	o gpredict-1.1
 	o gpsdrive-2.09
