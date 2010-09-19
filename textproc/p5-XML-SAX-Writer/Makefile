@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2010/08/21 16:36:15 seb Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/19 11:24:51 wiz Exp $
 
-DISTNAME=	XML-SAX-Writer-0.52
-PKGREVISION=	2
+DISTNAME=	XML-SAX-Writer-0.53
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -9,8 +8,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-SAX-Writer/
 COMMENT=	SAX2 (XML) Writer
+LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Text-Iconv>=1.2:../../converters/p5-Text-Iconv
+DEPENDS+=	p5-Encode>=2.12:../../textproc/p5-Encode
 DEPENDS+=	p5-XML-SAX>=0.11:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-NamespaceSupport>=1.00:../../textproc/p5-XML-NamespaceSupport
 DEPENDS+=	p5-XML-Filter-BufferText>=1.00:../../textproc/p5-XML-Filter-BufferText
