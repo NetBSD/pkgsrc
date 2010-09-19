@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3525 2010/09/19 14:35:56 spz Exp $
+$NetBSD: CHANGES-2010,v 1.3526 2010/09/19 14:37:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4697,3 +4697,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/tex-fontspec-doc version 2.1 [minskim 2010-09-19]
 	Updated devel/rt3 to 3.8.8 [spz 2010-09-17]
 	Updated www/apache-tomcat6 to 6.0.29 [spz 2010-09-19]
+	Updated fonts/tex-euenc to 0.1h [minskim 2010-09-19]
+	Updated fonts/tex-euenc-doc to 0.1h [minskim 2010-09-19]
