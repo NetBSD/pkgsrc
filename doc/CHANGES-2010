@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3534 2010/09/19 16:12:28 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3535 2010/09/19 16:12:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ap2-subversion to 1.6.12 [sno 2010-09-19]
 	Updated devel/ruby-subversion to 1.6.12 [sno 2010-09-19]
 	Updated devel/py-subversion to 1.6.12 [sno 2010-09-19]
+	Updated devel/p5-subversion to 1.6.12 [sno 2010-09-19]
