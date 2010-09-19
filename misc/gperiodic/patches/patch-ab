@@ -1,33 +1,15 @@
-$NetBSD: patch-ab,v 1.3 2008/06/20 01:09:26 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2010/09/19 02:18:42 obache Exp $
 
---- po/Makefile.orig	2003-08-09 21:34:22.000000000 +0200
+--- po/Makefile.orig	2007-07-11 12:58:05.000000000 +0000
 +++ po/Makefile
-@@ -8,8 +8,8 @@ FILES_PO:=$(wildcard *.po)
- FILES_MO:=$(FILES_PO:.po=.mo)
- datadir ?= /usr/share
- 
--LOCALEDIR ?= $(datadir)/locale
--MSGFMT_OPT ?= -f -v -o
-+LOCALEDIR ?= $(PREFIX)/$(PKGLOCALEDIR)/locale
-+MSGFMT_OPT ?= -f -o
- 
- ifeq ($(enable_nls),1)
- all: mo-files
-@@ -18,9 +18,9 @@ mo-files: $(FILES_MO)
- 
+@@ -27,8 +27,8 @@ endif
  install: 
  	$(MAKE) all
--	for f in $(FILES_MO) ; do mkdir -p \
-+	for f in $(FILES_MO) ; do $(BSD_INSTALL_DATA_DIR) \
--		$(INSTALL_PREFIX)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES ; \
-+		${DESTDIR}$(INSTALL_PREFIX)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES ; \
--		cp $$f $(INSTALL_PREFIX)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES/$(PACKAGE).mo ; done
-+		$(BSD_INSTALL_DATA) $$f ${DESTDIR}$(INSTALL_PREFIX)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES/$(PACKAGE).mo ; done
+ 	for f in $(FILES_MO) ; do \
+-		mkdir -p $(DESTDIR)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES ; \
+-		install -m 644 $$f $(DESTDIR)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES/$(PACKAGE).mo ; \
++		$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES ; \
++		$(BSD_INSTALL_DATA) $$f $(DESTDIR)$(LOCALEDIR)/`basename $$f .mo`/LC_MESSAGES/$(PACKAGE).mo ; \
+ 	done
  
- %.mo: %.po
- 	$(MSGFMT) $(MSGFMT_OPT) $@ $<
-@@ -35,4 +35,3 @@ endif
- 
- clean:
- 	$(RM) $(FILES_MO)
--
+ uninstall:
