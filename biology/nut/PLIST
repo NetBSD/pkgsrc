@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2009/08/09 23:15:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/09/19 07:52:19 obache Exp $
 bin/nut
-man/man1/nut.1
+share/doc/nut/nut.html
 share/nut/FOOD_DES.txt
 share/nut/NUT_DATA.txt
 share/nut/WEIGHT.lib
 share/nut/WEIGHT.txt
-share/nut/sr21.nut
+share/nut/sr22.nut
