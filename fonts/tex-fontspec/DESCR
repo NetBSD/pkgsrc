@@ -1,6 +1,4 @@
-Fontspec is a package for XeLaTeX.  It provides an automatic and
-unified interface to feature-rich AAT and OpenType fonts through the
-NFSS in LaTeX running on XeTeX.  XeTeX (the successor to TeX-GX) is a
-TeX-variant (originally for Mac OS X, but now available in the major
-distributions for other platforms, too) that accepts unicode input and
-can access system fonts directly.
+Fontspec is a package for XeLaTeX and LuaLaTeX. It provides an
+automatic and unified interface to feature-rich AAT and
+OpenType fonts through the NFSS in LaTeX running on XeTeX or
+LuaTeX engines.
