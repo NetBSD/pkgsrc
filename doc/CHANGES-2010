@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3526 2010/09/19 14:37:01 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3527 2010/09/19 15:06:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4699,3 +4699,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/apache-tomcat6 to 6.0.29 [spz 2010-09-19]
 	Updated fonts/tex-euenc to 0.1h [minskim 2010-09-19]
 	Updated fonts/tex-euenc-doc to 0.1h [minskim 2010-09-19]
+	Updated graphics/sane-backends to 1.0.21 [wiz 2010-09-19]
