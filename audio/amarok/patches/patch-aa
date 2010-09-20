@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.19 2010/09/20 21:29:15 wiz Exp $
+
+BPM bugfix for FLAC fils, amarok commit ce57e426.
+
+--- utilities/collectionscanner/CollectionScanner.cpp.orig	2010-09-15 21:24:13.000000000 +0000
++++ utilities/collectionscanner/CollectionScanner.cpp
+@@ -701,7 +701,7 @@ CollectionScanner::readTags( const QStri
+                     attributes["composer"] = TStringToQString( file->xiphComment()->fieldListMap()["COMPOSER"].front() ).trimmed();
+ 
+                 if ( !file->xiphComment()->fieldListMap()[ "BPM" ].isEmpty() )
+-                    attributes["bpm"] = TStringToQString( file->xiphComment()->fieldListMap()["BPM"].front() ).trimmed().toFloat();
++                    attributes["bpm"] = TStringToQString( file->xiphComment()->fieldListMap()["BPM"].front() ).trimmed();
+ 
+                 if ( !file->xiphComment()->fieldListMap()[ "DISCNUMBER" ].isEmpty() )
+                     disc = TStringToQString( file->xiphComment()->fieldListMap()["DISCNUMBER"].front() ).trimmed();
