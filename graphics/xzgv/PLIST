@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/04 14:45:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/09/20 01:16:17 jakllsch Exp $
 bin/xzgv
-info/xzgv
+info/xzgv.info
 man/man1/xzgv.1
