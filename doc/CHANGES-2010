@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3541 2010/09/19 23:59:30 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3542 2010/09/20 01:16:36 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4718,3 +4718,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pdftex-def to 0.05b [minskim 2010-09-19]
 	Updated print/tex-dvips to 2010 [minskim 2010-09-19]
 	Updated print/tex-dvips-doc to 2010 [minskim 2010-09-19]
+	Updated graphics/xzgv to 0.9.1 [jakllsch 2010-09-20]
