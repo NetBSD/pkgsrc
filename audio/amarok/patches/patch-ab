@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2010/06/13 23:39:26 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2010/09/20 21:29:15 wiz Exp $
+
+Add rpath for embedded mySQL library.
 
 --- src/core-impl/collections/sqlcollection/mysqlecollection/CMakeLists.txt.orig	2010-03-10 23:12:15.000000000 +0000
 +++ src/core-impl/collections/sqlcollection/mysqlecollection/CMakeLists.txt
