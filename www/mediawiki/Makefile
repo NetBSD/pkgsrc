@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/05/28 08:11:32 martti Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2010/09/20 08:24:47 tron Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 VER=			1.15
-PVER=			4
+PVER=			5
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -41,6 +41,13 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	../mediawiki.conf
 SUBST_SED.paths=	-e "s,@MEDIAWIKI@,${MEDIAWIKI},g"
 
+SUBST_CLASSES+=		sh
+SUBST_STAGE.sh=		post-patch
+SUBST_MESSAGE.sh=	Fixing path to sh
+SUBST_FILES.sh+=	bin/ulimit-tvf.sh bin/ulimit.sh bin/ulimit4.sh
+SUBST_FILES.sh+=	maintenance/storage/make-blobs
+SUBST_SED.sh=		-e "s|/bin/bash|${SH}|"
+
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	post-patch
 SUBST_MESSAGE.perl=	Fixing path to perl
@@ -55,9 +62,10 @@ do-install:
 	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL_DATA_DIR} \
 	  ${DESTDIR}${MEDIAWIKI}/{} \; -exec ${CHOWN} \
 	  ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MEDIAWIKI}/{} \;
-	cd ${WRKSRC} && ${FIND} . \! -type d -exec ${INSTALL_DATA} {} \
-	  ${DESTDIR}${MEDIAWIKI}/{} \; -exec ${CHOWN} \
-	  ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MEDIAWIKI}/{} \;
+	cd ${WRKSRC} && ${FIND} . \! -type d \! -name '*.orig' \
+	  -exec ${INSTALL_DATA} {} ${DESTDIR}${MEDIAWIKI}/{} \; \
+	  -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
+	  ${DESTDIR}${MEDIAWIKI}/{} \;
 	${INSTALL_DATA} ${WRKDIR}/mediawiki.conf \
 	  ${DESTDIR}${PREFIX}/${EGDIR}/mediawiki.conf
 
