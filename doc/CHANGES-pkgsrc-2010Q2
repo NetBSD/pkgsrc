@@ -117,3 +117,5 @@ Pullup ticket #3220 - requested by spz
 security/sudo: security update
 Pullup ticket #3223 - requested by taca
 net/samba33: security update
+Pullup ticket #3224 - requested by taca
+www/mediawiki: security update
