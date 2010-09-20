@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3543 2010/09/20 09:52:30 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3544 2010/09/20 21:29:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4720,3 +4720,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-dvips-doc to 2010 [minskim 2010-09-19]
 	Updated graphics/xzgv to 0.9.1 [jakllsch 2010-09-20]
 	Updated math/py-ephem to 3.7.3.4 [obache 2010-09-20]
+	Updated audio/amarok to 2.3.2 [wiz 2010-09-20]
