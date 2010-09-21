@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 09:30:41 fhajny Exp $
+
+Fix default directory locations
+--- config.orig	2009-10-20 20:54:35.000000000 +0000
++++ config
+@@ -1,10 +1,10 @@
+ # Installation directories
+ 
+ # Default installation prefix
+-PREFIX=/usr/local
++PREFIX?=/usr/local
+ 
+ # System's libraries directory (where binary libraries are installed)
+-LUA_LIBDIR= $(PREFIX)/lib/lua/5.1
++LUA_LIBDIR= $(DESTDIR)$(PREFIX)/lib/lua/5.1
+ 
+ # Lua includes directory
+ LUA_INC= $(PREFIX)/include
+@@ -16,7 +16,7 @@ LIB_OPTION= -shared #for Linux
+ LIBNAME= $T.so.$V
+ 
+ # Compilation directives
+-WARN= -O2 -Wall -fPIC -W -Waggregate-return -Wcast-align -Wmissing-prototypes -Wnested-externs -Wshadow -Wwrite-strings -pedantic
++WARN= -O2 -fPIC 
+ INCS= -I$(LUA_INC)
+ CFLAGS= $(WARN) $(INCS)
+ CC= gcc
