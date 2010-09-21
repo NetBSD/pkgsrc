@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/21 10:08:48 fhajny Exp $
+lib/lua/5.1/mime/core.so
+lib/lua/5.1/socket/core.so
+share/lua/5.1/ltn12.lua
+share/lua/5.1/mime.lua
+share/lua/5.1/socket.lua
+share/lua/5.1/socket/ftp.lua
+share/lua/5.1/socket/http.lua
+share/lua/5.1/socket/smtp.lua
+share/lua/5.1/socket/tp.lua
+share/lua/5.1/socket/url.lua
