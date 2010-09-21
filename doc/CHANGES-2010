@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3554 2010/09/21 08:10:57 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3555 2010/09/21 15:58:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4741,3 +4741,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/postgresql90-plperl version 9.0.0 [adam 2010-09-21]
 	Added databases/postgresql90-plpython version 9.0.0 [adam 2010-09-21]
 	Added databases/postgresql90-pltcl version 9.0.0 [adam 2010-09-21]
+	Updated databases/mysql51-client to 5.1.50nb1 [taca 2010-09-21]
