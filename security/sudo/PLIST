@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/09/10 17:11:27 spz Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/09/21 03:05:27 taca Exp $
 bin/sudo
 bin/sudoedit
 bin/sudoreplay
@@ -15,10 +15,14 @@ share/doc/sudo/HISTORY
 share/doc/sudo/LICENSE
 share/doc/sudo/NEWS
 share/doc/sudo/README
-share/doc/sudo/README.LDAP
+${PLIST.ldap}share/doc/sudo/README.LDAP
 share/doc/sudo/TROUBLESHOOTING
 share/doc/sudo/UPGRADE
 share/doc/sudo/sample.pam
 share/doc/sudo/sample.sudoers
 share/doc/sudo/sample.syslog.conf
+${PLIST.ldap}share/doc/sudo/schema.ActiveDirectory
+${PLIST.ldap}share/doc/sudo/schema.OpenLDAP
+${PLIST.ldap}share/doc/sudo/schema.iPlanet
+${PLIST.ldap}share/doc/sudo/sudoers2ldif
 share/examples/sudo/sudoers
