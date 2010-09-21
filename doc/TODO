@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9728 2010/09/21 03:06:42 taca Exp $
+$NetBSD: TODO,v 1.9729 2010/09/21 05:43:39 sno Exp $
 
 Suggested new packages
 ======================
@@ -1310,7 +1310,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-mga-1.4.13
 	o xf86-video-neomagic-1.2.5
 	o xf86-video-newport-0.2.3 [unpackaged]
-	o xf86-video-nv-2.1.18
 	o xf86-video-rendition-4.2.4
 	o xf86-video-siliconmotion-1.7.4
 	o xf86-video-sis-0.10.3
