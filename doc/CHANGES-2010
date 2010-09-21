@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3559 2010/09/21 21:03:17 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3560 2010/09/21 21:09:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4746,3 +4746,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-CoreList to 2.39 [sno 2010-09-21]
 	Updated mail/p5-MIME-Types to 1.31 [sno 2010-09-21]
 	Updated time/p5-MooseX-Types-DateTimeX to 0.10 [sno 2010-09-21]
+	Updated x11/p5-Wx-Perl-ProcessStream to 0.28 [sno 2010-09-21]
