@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3553 2010/09/21 06:26:19 mrg Exp $
+$NetBSD: CHANGES-2010,v 1.3554 2010/09/21 08:10:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4730,3 +4730,14 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Package-Stash to 0.08 [sno 2010-09-21]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.086 [sno 2010-09-21]
 	Updated www/bozohttpd to 20100920 [mrg 2010-09-21]
+	Updated mail/clamav to 0.96.3 [adam 2010-09-21]
+	Added databases/postgresql90 version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-client version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-docs version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-server version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-adminpack version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-dblink version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-pgcrypto version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-plperl version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-plpython version 9.0.0 [adam 2010-09-21]
+	Added databases/postgresql90-pltcl version 9.0.0 [adam 2010-09-21]
