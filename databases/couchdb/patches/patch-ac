@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/09/21 12:11:39 fhajny Exp $
+
+Remove logrotate files.
+--- etc/Makefile.in.orig	2010-08-11 18:18:52.000000000 +0000
++++ etc/Makefile.in
+@@ -277,15 +277,15 @@ version_minor = @version_minor@
+ version_release = @version_release@
+ version_revision = @version_revision@
+ version_stage = @version_stage@
+-SUBDIRS = couchdb default init launchd logrotate.d windows
++SUBDIRS = couchdb default init launchd windows
+ default_sysconf_data = logrotate.d/couchdb
+ @INIT_TRUE@init_sysconf_data = default/couchdb
+ @INIT_TRUE@init_DATA = init/couchdb
+ @LAUNCHD_TRUE@launchd_DATA = launchd/org.apache.couchdb.plist
+-nobase_sysconf_DATA = $(default_sysconf_data) $(init_sysconf_data)
++nobase_sysconf_DATA = $(init_sysconf_data)
+ EXTRA_DIST = default/couchdb windows/couchdb.iss.tpl \
+ 	windows/README.txt.tpl $(am__append_1)
+-CLEANFILES = $(init_DATA) $(default_sysconf_data) $(launchd_DATA)
++CLEANFILES = $(init_DATA) $(launchd_DATA)
+ couchdb_command_name = `echo couchdb | sed '$(transform)'`
+ all: all-recursive
+ 
+@@ -721,9 +721,6 @@ init/couchdb: init/couchdb.tpl
+ 	    -e "s|%couchdb_command_name%|$(couchdb_command_name)|" \
+ 	< $< > $@
+ 
+-logrotate.d/couchdb: logrotate.d/couchdb.tpl
+-	sed -e "s|%localstatelogdir%|@localstatelogdir@|g" < $< > $@
+-
+ launchd/org.apache.couchdb.plist: launchd/org.apache.couchdb.plist.tpl
+ 	if test "$(mkdir_p)"; then \
+ 	    $(mkdir_p) launchd; \
