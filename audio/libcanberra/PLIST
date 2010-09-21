@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/29 17:51:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/09/21 01:16:28 obache Exp $
 bin/canberra-gtk-play
 include/canberra-gtk.h
 include/canberra.h
@@ -6,7 +6,7 @@ lib/gtk-2.0/modules/libcanberra-gtk-module.la
 lib/${PKGNAME}/libcanberra-gstreamer.la
 lib/${PKGNAME}/libcanberra-multi.la
 lib/${PKGNAME}/libcanberra-null.la
-lib/${PKGNAME}/libcanberra-oss.la
+${PLIST.oss}lib/${PKGNAME}/libcanberra-oss.la
 lib/libcanberra-gtk.la
 lib/libcanberra.la
 lib/pkgconfig/libcanberra-gtk.pc
