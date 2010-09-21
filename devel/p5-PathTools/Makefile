@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2010/08/21 16:34:17 seb Exp $
+# $NetBSD: Makefile,v 1.13 2010/09/21 06:11:38 sno Exp $
 
-DISTNAME=	PathTools-3.31
+DISTNAME=	PathTools-3.33
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PathTools/
 COMMENT=	Perl module for portably manipulating file specifications
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,7 +17,7 @@ DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.14}:../../devel/p5-Scalar-List-Uti
 
 CONFLICTS+=	p5-File-Spec-[0-9]*
 
-CONFIGURE_ARGS+=	DEFINE="-DHAS_GETCWD"
+CFLAGS+=	-DHAS_GETCWD
 
 PERL5_PACKLIST=	auto/Cwd/.packlist
 
