@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3552 2010/09/21 06:22:49 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3553 2010/09/21 06:26:19 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4729,3 +4729,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-PathTools to 3.33 [sno 2010-09-21]
 	Updated devel/p5-Package-Stash to 0.08 [sno 2010-09-21]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.086 [sno 2010-09-21]
+	Updated www/bozohttpd to 20100920 [mrg 2010-09-21]
