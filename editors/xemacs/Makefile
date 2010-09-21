@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2010/06/14 10:33:12 dholland Exp $
+# $NetBSD: Makefile,v 1.94 2010/09/21 02:34:12 obache Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
@@ -7,8 +7,6 @@ DISTNAME=	xemacs-21.4.17
 PKGREVISION=	9
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
-DISTFILES=	${DISTNAME}.tar.gz ${DISTNAME}-elc.tar.gz \
-		${DISTNAME}-info.tar.gz
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.xemacs.org/
