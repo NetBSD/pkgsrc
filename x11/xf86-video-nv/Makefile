@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/09/14 11:03:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/09/21 05:43:16 sno Exp $
 
-DISTNAME=	xf86-video-nv-2.1.14
-PKGREVISION=	2
+DISTNAME=	xf86-video-nv-2.1.18
+#PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg NVIDIA video driver
+LICENSE=	mit AND modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
