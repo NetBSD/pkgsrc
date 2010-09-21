@@ -1,4 +1,11 @@
-$NetBSD: patch-af,v 1.25 2010/09/10 17:11:27 spz Exp $
+$NetBSD: patch-af,v 1.26 2010/09/21 03:05:27 taca Exp $
+
+* Add "--with-nbsdops" option, NetBSD standard options.
+* Link with util(3) in the case of DragonFly, too.
+* When specified "--with-kerb5" option, test existence of several functions
+  even if there is krb5-config.  krb5-config dosen't give all definitions for
+  functions (HAVE_KRB5_*).
+* Remove setting sysconfdir to "/etc".
 
 --- configure.in.orig	2010-09-06 12:03:33.000000000 +0000
 +++ configure.in
@@ -30,15 +37,15 @@ $NetBSD: patch-af,v 1.25 2010/09/10 17:11:27 spz Exp $
  	    ;;
  	esac
      ])
-@@ -2317,6 +2329,8 @@ if test ${with_kerb5-'no'} != "no"; then
-     if test -n "$KRB5CONFIG"; then
- 	AC_DEFINE(HAVE_KERB5)
- 	AUTH_OBJS="$AUTH_OBJS kerb5.o"
-+    fi
-+    if test ${with_kerb5-'no'} != "no"; then
- 	CPPFLAGS="$CPPFLAGS `krb5-config --cflags`"
- 	SUDO_LIBS="$SUDO_LIBS `krb5-config --libs`"
- 	dnl
+@@ -2370,6 +2382,8 @@ if test ${with_kerb5-'no'} != "no" -a -z
+ 	    AC_CHECK_LIB(krb5support, main, [SUDO_LIBS="${SUDO_LIBS} -lkrb5support"])
+     ])
+     AUTH_OBJS="$AUTH_OBJS kerb5.o"
++fi
++if test ${with_kerb5-'no'} != "no"; then
+     _LIBS="$LIBS"
+     LIBS="${LIBS} ${SUDO_LIBS}"
+     AC_CHECK_FUNCS(krb5_verify_user krb5_init_secure_context)
 @@ -2798,7 +2812,6 @@ test "$libexecdir" = '${exec_prefix}/lib
  test "$includedir" = '${prefix}/include' && includedir='$(prefix)/include'
  test "$datarootdir" = '${prefix}/share' && datarootdir='$(prefix)/share'
