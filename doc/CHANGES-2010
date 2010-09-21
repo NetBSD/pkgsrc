@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3562 2010/09/21 21:19:55 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3563 2010/09/21 21:28:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4749,3 +4749,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/p5-Wx-Perl-ProcessStream to 0.28 [sno 2010-09-21]
 	Updated www/p5-libwww to 5.837 [sno 2010-09-21]
 	Updated www/p5-HTML-Tree to 4.0 [sno 2010-09-21]
+	Updated www/p5-HTML-TreeBuilder-LibXML to 0.12 [sno 2010-09-21]
