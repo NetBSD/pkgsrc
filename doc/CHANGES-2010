@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3566 2010/09/21 21:40:10 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3567 2010/09/21 21:51:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.22 [sno 2010-09-21]
 	Updated textproc/p5-XML-Encoding to 2.08 [sno 2010-09-21]
 	Updated mail/p5-Net-ManageSieve to 0.10 [sno 2010-09-21]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07002 [sno 2010-09-21]
