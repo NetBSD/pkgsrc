@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/21 10:08:48 fhajny Exp $
+
+SHA1 (luasocket-2.0.2.tar.gz) = 5ce521fc5c6efb7c1eba7f36dfeafa9e4d745464
+RMD160 (luasocket-2.0.2.tar.gz) = 24d7e4fb1c9cf0c3d94f8b36e82d494ae922e268
+Size (luasocket-2.0.2.tar.gz) = 115443 bytes
+SHA1 (patch-aa) = f4e4af32fea1b12f39aba9fe92989cfe57f8d039
