@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/21 07:53:57 adam Exp $
+${PG_SUBPREFIX}bin/pltcl_delmod
+${PG_SUBPREFIX}bin/pltcl_listmod
+${PG_SUBPREFIX}bin/pltcl_loadmod
+${PG_SUBPREFIX}lib/postgresql/pltcl.la
+${PG_SUBPREFIX}share/postgresql/unknown.pltcl
+${PG_SUBPREFIX}share/locale/de/LC_MESSAGES/pltcl0-9.0.mo
+${PG_SUBPREFIX}share/locale/es/LC_MESSAGES/pltcl0-9.0.mo
+${PG_SUBPREFIX}share/locale/fr/LC_MESSAGES/pltcl0-9.0.mo
+${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/pltcl0-9.0.mo
+${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/pltcl0-9.0.mo
+${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/pltcl0-9.0.mo
+${PG_SUBPREFIX}share/locale/tr/LC_MESSAGES/pltcl0-9.0.mo
