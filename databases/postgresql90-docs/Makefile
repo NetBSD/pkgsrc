@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/21 07:52:02 adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/21 08:14:51 adam Exp $
 
 PKGNAME=	postgresql90-docs-${BASE_VERS}
 COMMENT=	PostgreSQL database documentation
@@ -21,7 +21,7 @@ BUILD_DIRS=	${INSTALL_DIRS}
 
 post-install:
 	set -e; cd ${WRKSRC}/doc; for file in				\
-		FAQ* KNOWN_BUGS MISSING_FEATURES README.* TODO		\
+		KNOWN_BUGS MISSING_FEATURES README.* TODO		\
 		bug.template;						\
 	do								\
 		${INSTALL_DATA} $$file ${DESTDIR}${PG_DOC_DIR}/$$file;	\
