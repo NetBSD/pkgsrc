@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/09/21 10:45:56 fhajny Exp $
+
+Add Solaris support
+
+--- src/Makefile.orig	2009-10-15 12:59:54.000000000 +0000
++++ src/Makefile
+@@ -23,8 +23,11 @@ MAC_ENV=env MACOSX_DEPLOYMENT_TARGET='$(
+ MAC_CFLAGS=-O2 -fno-common $(WARN) $(INCDIR) $(DEFS)
+ MAC_LDFLAGS=-bundle -undefined dynamic_lookup $(LIBDIR)
+ 
+-CC=gcc
+-LD=$(MYENV) gcc
++SOL_CFLAGS=-O2 -fpic $(WARN) $(INCDIR) $(DEFS)
++SOL_LDFLAGS=-O -G -fpic $(LIBDIR)
++
++CC?=gcc
++LD=$(MYENV) $(CC)
+ CFLAGS=$(MYCFLAGS)
+ LDFLAGS=$(MYLDFLAGS)
+ 
+@@ -34,8 +37,8 @@ all:
+ 
+ install: $(CMOD) $(LMOD)
+ 	mkdir -p $(LUAPATH)/ssl
+-	cp $(CMOD) $(LUACPATH)
+-	cp $(LMOD) $(LUAPATH)
++	${BSD_INSTALL_LIB} $(CMOD) $(LUACPATH)
++	${BSD_INSTALL_DATA} $(LMOD) $(LUAPATH)
+ 	cp https.lua $(LUAPATH)/ssl
+ 
+ linux:
+@@ -47,6 +50,8 @@ bsd:
+ macosx:
+ 	@$(MAKE) $(CMOD) MYCFLAGS="$(MAC_CFLAGS)" MYLDFLAGS="$(MAC_LDFLAGS)" MYENV="$(MAC_ENV)"
+ 
++solaris:
++	@$(MAKE) $(CMOD) MYCFLAGS="$(SOL_CFLAGS)" MYLDFLAGS="$(SOL_LDFLAGS)"
+ 
+ $(CMOD): $(OBJS)
+ 	$(LD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)

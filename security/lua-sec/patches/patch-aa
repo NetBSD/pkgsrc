@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 10:45:56 fhajny Exp $
+
+Pass installation dirs properly, fix search paths, add Solaris support
+
+--- Makefile.orig	2009-10-15 12:59:54.000000000 +0000
++++ Makefile
+@@ -1,11 +1,11 @@
+ # Inform the location to intall the modules
+-LUAPATH=/usr/local/share/lua/5.1
+-LUACPATH=/usr/local/lib/lua/5.1
++LUAPATH=$(DESTDIR)$(PREFIX)/$(LUA_LDIR)
++LUACPATH=$(DESTDIR)$(PREFIX)/$(LUA_CDIR)
+ 
+ # Edit the lines below to inform new path, if necessary
+ #
+-#INCDIR=-I/usr/local/lua-5.1/include -I/usr/local/openssl-0.9.8/include
+-#LIBDIR=-L/usr/local/openssl-0.9.8/lib -R/usr/local/openssl-0.9.8/lib
++INCDIR=-I${PREFIX}/include
++LIBDIR=-L${PREFIX}/lib -R${PREFIX}/lib
+ 
+ # For Mac OS X: set the system version
+ MACOSX_VERSION=10.4
+@@ -24,6 +24,7 @@ none:
+ 	@echo "  * linux"
+ 	@echo "  * bsd"
+ 	@echo "  * macosx"
++	@echo "  * solaris"
+ 
+ install:
+ 	@cd src ; $(MAKE) LUACPATH="$(LUACPATH)" LUAPATH="$(LUAPATH)" install
+@@ -46,5 +47,11 @@ macosx:
+ 	@echo "------------------------------"
+ 	@cd src ; $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" DEFS="$(DEFS)" MACVER="$(MACOSX_VERSION)" $@
+ 
++solaris:
++	@echo "---------------------"
++	@echo "** Build for Solaris **"
++	@echo "---------------------"              
++	@cd src ; $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" DEFS="$(DEFS)" $@
++
+ clean:
+ 	@cd src ; $(MAKE) clean
