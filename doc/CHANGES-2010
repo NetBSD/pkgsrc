@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3557 2010/09/21 20:54:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3558 2010/09/21 20:58:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4744,3 +4744,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-client to 5.1.50nb1 [taca 2010-09-21]
 	Updated devel/p5-Devel-NYTProf to 4.05 [sno 2010-09-21]
 	Updated devel/p5-Module-CoreList to 2.39 [sno 2010-09-21]
+	Updated mail/p5-MIME-Types to 1.31 [sno 2010-09-21]
