@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3548 2010/09/21 05:55:11 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3549 2010/09/21 06:00:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4725,3 +4725,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xf86-video-nv to 2.1.18 [sno 2010-09-21]
 	Updated www/p5-Catalyst-View-JSON to 0.31 [sno 2010-09-21]
 	Updated security/p5-Digest-CRC to 0.15 [sno 2010-09-21]
+	Updated devel/p5-Class-XSAccessor to 1.08 [sno 2010-09-21]
