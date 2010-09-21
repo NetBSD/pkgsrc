@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+$NetBSD: patch-ab,v 1.2 2010/09/21 15:57:30 taca Exp $
+
+* process directories in client package.
 
 --- Makefile.in.orig	2010-02-04 11:46:48.000000000 +0000
 +++ Makefile.in
