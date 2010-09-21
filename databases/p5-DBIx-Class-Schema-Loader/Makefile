@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/08/21 16:32:59 seb Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/21 21:50:50 sno Exp $
 
-DISTNAME=	DBIx-Class-Schema-Loader-0.07001
+DISTNAME=	DBIx-Class-Schema-Loader-0.07002
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
@@ -22,6 +21,7 @@ BUILD_DEPENDS+=	p5-MooseX-NonMoose-[0-9]*:../../devel/p5-MooseX-NonMoose
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Kwalitee-[0-9]*:../../devel/p5-Test-Kwalitee
 BUILD_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 DEPENDS+=	p5-Carp-Clan-[0-9]*:../../devel/p5-Carp-Clan
