@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3546 2010/09/21 05:43:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3547 2010/09/21 05:48:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4723,3 +4723,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/amarok to 2.3.2 [wiz 2010-09-20]
 	Updated security/sudo to 1.7.4p4nb1 [taca 2010-09-21]
 	Updated x11/xf86-video-nv to 2.1.18 [sno 2010-09-21]
+	Updated www/p5-Catalyst-View-JSON to 0.31 [sno 2010-09-21]
