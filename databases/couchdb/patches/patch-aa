@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 12:11:39 fhajny Exp $
+
+Set pkgsrc standard paths.
+
+--- configure.orig	2009-11-24 23:54:09.000000000 +0000
++++ configure
+@@ -753,6 +753,7 @@ locallibdir
+ localdocdir
+ localdatadir
+ localconfdir
++localegdir
+ bug_uri
+ version_release
+ version_stage
+@@ -12081,17 +12082,19 @@ bug_uri="https://issues.apache.org/jira/
+ 
+ localconfdir=${sysconfdir}/${package_identifier}
+ 
++localegdir=@EGDIR@
++
+ localdatadir=${datadir}/${package_identifier}
+ 
+ localdocdir=${datadir}/doc/${package_identifier}
+ 
+ locallibdir=${libdir}/${package_identifier}
+ 
+-localstatelibdir=${localstatedir}/lib/${package_identifier}
++localstatelibdir=${localstatedir}/db/${package_identifier}
+ 
+ localstatelogdir=${localstatedir}/log/${package_identifier}
+ 
+-localstaterundir=${localstatedir}/run/${package_identifier}
++localstaterundir=@RUNDIR@
+ 
+ 
+ # On Windows we install directly into our erlang distribution.
+@@ -12101,9 +12104,9 @@ if test x${IS_WINDOWS} = xTRUE; then
+     localerlanglibdir=${libdir}
+ 
+ else
+-    locallibbindir=${locallibdir}/bin
++    locallibbindir=${libexecdir}/${package_identifier}
+ 
+-    localerlanglibdir=${locallibdir}/erlang/lib
++    localerlanglibdir=@ERLANG_PREFIX@/lib/erlang/lib
+ 
+ fi
+ 
