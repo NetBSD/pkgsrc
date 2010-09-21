@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2010/09/16 18:09:54 jakllsch Exp $
+# $NetBSD: Makefile,v 1.16 2010/09/21 18:51:55 jkunz Exp $
 #
 
-DISTNAME=	merkaartor-0.16.1
-PKGREVISION=	1
+DISTNAME=	merkaartor-0.16.3
 CATEGORIES=	geography
-MASTER_SITES=	http://www.merkaartor.org/downloads/source/
+MASTER_SITES=	http://merkaartor.be/attachments/download/29/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jkunz@NetBSD.org
-HOMEPAGE=	http://www.merkaartor.org/
+HOMEPAGE=	http://www.merkaartor.be/
 COMMENT=	Merkaartor is an OpenStreetMap mapping program
 
 PKG_DESTDIR_SUPPORT=	user-destdir
