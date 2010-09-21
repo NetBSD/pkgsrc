@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 10:08:48 fhajny Exp $
+
+Let CFLAGS/LDFLAGS merge with pkgsrc's ones
+
+--- config.orig	2007-10-15 04:21:05.000000000 +0000
++++ config
+@@ -49,10 +49,10 @@ INSTALL_EXEC=cp
+ #------
+ # Compiler and linker settings
+ # for Linux
+-CC=gcc
++CC?=gcc
+ DEF=-DLUASOCKET_DEBUG 
+-CFLAGS= $(LUAINC) $(DEF) -pedantic -Wall -O2 -fpic
+-LDFLAGS=-O -shared -fpic
++CFLAGS+= $(LUAINC) $(DEF) -pedantic -Wall -O2 -fpic
++LDFLAGS+=-O -shared -fpic
+ LD=gcc 
+ 
+ #------
