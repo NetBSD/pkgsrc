@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3564 2010/09/21 21:32:10 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3565 2010/09/21 21:36:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4751,3 +4751,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTML-Tree to 4.0 [sno 2010-09-21]
 	Updated www/p5-HTML-TreeBuilder-LibXML to 0.12 [sno 2010-09-21]
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.22 [sno 2010-09-21]
+	Updated textproc/p5-XML-Encoding to 2.08 [sno 2010-09-21]
