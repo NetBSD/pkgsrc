@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3544 2010/09/20 21:29:27 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3545 2010/09/21 03:06:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4721,3 +4721,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/xzgv to 0.9.1 [jakllsch 2010-09-20]
 	Updated math/py-ephem to 3.7.3.4 [obache 2010-09-20]
 	Updated audio/amarok to 2.3.2 [wiz 2010-09-20]
+	Updated security/sudo to 1.7.4p4nb1 [taca 2010-09-21]
