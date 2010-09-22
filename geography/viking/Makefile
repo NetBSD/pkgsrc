@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2010/09/14 11:01:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/09/22 12:43:47 gdt Exp $
 #
 
-DISTNAME=		viking-0.9.94
-PKGREVISION=		2
+DISTNAME=		viking-0.9.95
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}
 
@@ -18,10 +17,10 @@ GNU_CONFIGURE=		yes
 # CONFIGURE_ARGS+=	--disable-realtime-gps-tracking
 
 DEPENDS+=		gpsbabel-[0-9]*:../../geography/gpsbabel
+DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 REPLACE_PERL=		viking-remote
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
