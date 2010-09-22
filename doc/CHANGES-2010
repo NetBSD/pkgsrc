@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3578 2010/09/22 21:00:31 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3579 2010/09/22 21:15:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4765,3 +4765,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/fossil to 201009181.55143 [joerg 2010-09-22]
 	Updated databases/p5-DBI to 1.615 [sno 2010-09-22]
 	Updated databases/p5-DBD-CSV to 0.31 [sno 2010-09-22]
+	Updated databases/p5-DBD-ODBC to 1.25 [sno 2010-09-22]
