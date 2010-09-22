@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2010/08/21 16:34:10 seb Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/22 06:09:30 sno Exp $
 #
 
-DISTNAME=	Net-LDAP-Server-Test-0.08_01
-PKGNAME=	p5-Net-LDAP-Server-Test-0.8.0.01
-PKGREVISION=	1
+DISTNAME=	Net-LDAP-Server-Test-0.10
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel net perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KA/KARMAN/}
+#MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KA/KARMAN/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-LDAP-Server-Test/
 COMMENT=	Perl 5 module to test Net::LDAP code
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Net-LDAP-Server-[0-9]*:../../net/p5-Net-LDAP-Server
 DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
