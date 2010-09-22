@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9731 2010/09/22 09:33:57 obache Exp $
+$NetBSD: TODO,v 1.9732 2010/09/22 11:44:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -733,7 +733,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imapsync-1.350
 	o imp-4.3.7
 	o ingo-1.2.4
-	o inkscape-0.48
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
