@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3575 2010/09/22 12:58:53 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3576 2010/09/22 20:40:31 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4762,3 +4762,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/inkscape to 0.48.0 [adam 2010-09-22]
 	Updated geography/viking to 0.9.95 [gdt 2010-09-22]
 	Updated databases/pgadmin3 to 1.12.0 [adam 2010-09-22]
+	Updated devel/fossil to 201009181.55143 [joerg 2010-09-22]
