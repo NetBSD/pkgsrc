@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.7 2006/07/13 13:04:54 heinz Exp $
+# $NetBSD: builtin.mk,v 1.7.36.1 2010/09/22 18:04:23 tron Exp $
 
 BUILTIN_PKG:=	bzip2
 
 BUILTIN_FIND_FILES_VAR:=	H_BZIP2
-BUILTIN_FIND_FILES.H_BZIP2=	/usr/include/bzlib.h
+BUILTIN_FIND_FILES.H_BZIP2=	/usr/include/bzlib.h \
+				/boot/common/include/bzlib.h
 BUILTIN_FIND_GREP.H_BZIP2=	BZ2_
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
