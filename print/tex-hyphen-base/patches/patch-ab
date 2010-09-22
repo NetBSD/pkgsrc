@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2010/09/14 15:37:16 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2010/09/22 15:50:43 minskim Exp $
 
---- texmf/tex/generic/config/language.def.orig	2010-06-05 01:54:05.000000000 +0000
+--- texmf/tex/generic/config/language.def.orig	2010-09-20 02:04:00.000000000 +0000
 +++ texmf/tex/generic/config/language.def
-@@ -28,139 +28,6 @@
+@@ -28,141 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
@@ -11,6 +11,8 @@ $NetBSD: patch-ab,v 1.5 2010/09/14 15:37:16 minskim Exp $
 -\addlanguage{german-x-latest}{dehypht-x-2009-06-19.tex}{}{2}{2}
 -\addlanguage{ngerman-x-2009-06-19}{dehyphn-x-2009-06-19.tex}{}{2}{2}
 -\addlanguage{ngerman-x-latest}{dehyphn-x-2009-06-19.tex}{}{2}{2}
+-% from hyphen-afrikaans:
+-\addlanguage{afrikaans}{loadhyph-af.tex}{}{2}{2}
 -% from hyphen-ancientgreek:
 -\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
 -\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
