@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/08/21 16:33:00 seb Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/22 21:17:15 sno Exp $
 #
 
-DISTNAME=	DBIx-Connector-0.35
+DISTNAME=	DBIx-Connector-0.40
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
@@ -20,6 +19,7 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/DBIx/Connector/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
+BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.614
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
