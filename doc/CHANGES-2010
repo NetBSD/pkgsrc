@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3572 2010/09/22 09:33:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3573 2010/09/22 11:44:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4759,3 +4759,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Net-LDAP-Server-Test to 0.10 [sno 2010-09-22]
 	Updated devel/p5-Net-LDAP-Class to 0.25 [sno 2010-09-22]
 	Updated x11/mlterm to 3.0.1 [obache 2010-09-22]
+	Updated graphics/inkscape to 0.48.0 [adam 2010-09-22]
