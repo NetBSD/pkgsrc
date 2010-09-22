@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2010/08/21 16:32:55 seb Exp $
+# $NetBSD: Makefile,v 1.29 2010/09/22 20:59:53 sno Exp $
 #
 
-DISTNAME=	DBD-CSV-0.30
-PKGNAME=	p5-${DISTNAME:S/_/beta/}
-PKGREVISION=	2
+DISTNAME=	DBD-CSV-0.31
+PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dcs
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
@@ -17,7 +16,9 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-SQL-Statement>=1.31:../../databases/p5-SQL-Statement
-DEPENDS+=	p5-Text-CSV_XS>=0.71:../../textproc/p5-Text-CSV_XS
+DEPENDS+=	p5-Text-CSV_XS>=0.73:../../textproc/p5-Text-CSV_XS
+
+BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.90}:../../devel/p5-Test-Simple
 
 CONFLICTS+=	p5-SQL-Statement<=1.27
 CONFLICTS+=	p5-DBI<=1.611
@@ -25,7 +26,7 @@ CONFLICTS+=	p5-DBI<=1.611
 PERL5_PACKLIST=	auto/DBD/CSV/.packlist
 REPLACE_PERL+=	lib/DBD/CSV.pm
 
-BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.612
+BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.614
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
