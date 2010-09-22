@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.56 2010/09/14 11:03:03 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2010/09/22 09:33:41 obache Exp $
 
-DISTNAME=	mlterm-2.9.3
-PKGREVISION=	4
+DISTNAME=	mlterm-3.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
 MAINTAINER=	uebayasi@NetBSD.org,hira@NetBSD.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
@@ -27,12 +27,12 @@ EGDIR=			${PREFIX}/share/examples/mlterm
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-.include "../../mk/bsd.prefs.mk"
-
 CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 CONFIGURE_ARGS+=	--without-libintl-prefix
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 .include "options.mk"
 
@@ -40,11 +40,7 @@ SUBST_CLASSES+=		link
 SUBST_MESSAGE.link=	Fixing hardcoded paths and link options.
 SUBST_STAGE.link=	post-patch
 SUBST_FILES.link=	Makefile.in */Makefile.in */*/Makefile.in \
-			*/*/*/Makefile.in man/mlterm.1 \
-			mlterm/ml_config_menu.c script/config.rpath \
-			tool/mlconfig/mc_im.c tool/mlconfig/mc_sb_view.c \
-			tool/mlmenu/main.c xwindow/x_im.c \
-			xwindow/x_sb_view_factory.c xwindow/x_screen.c
+			*/*/*/Makefile.in man/mlterm.1
 SUBST_SED.link=		-e 's|(LIBTOOL_LINK).*(LIBS)|& ${X11_LDFLAGS}|g'
 SUBST_SED.link+=	-e 's|(LIBTOOL_LINK).*(LIBDIR)|& ${X11_LDFLAGS}|g'
 SUBST_SED.link+=	-e 's|/usr/local/|${PREFIX}/|g'
