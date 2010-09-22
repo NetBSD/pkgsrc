@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3569 2010/09/22 06:01:27 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3570 2010/09/22 06:09:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4756,3 +4756,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07002 [sno 2010-09-21]
 	Updated textproc/p5-Text-SpellChecker to 0.08 [sno 2010-09-22]
 	Updated net/p5-Net-LDAP-Server to 0.42 [sno 2010-09-22]
+	Updated devel/p5-Net-LDAP-Server-Test to 0.10 [sno 2010-09-22]
