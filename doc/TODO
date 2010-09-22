@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9730 2010/09/21 08:10:57 adam Exp $
+$NetBSD: TODO,v 1.9731 2010/09/22 09:33:57 obache Exp $
 
 Suggested new packages
 ======================
@@ -903,7 +903,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
-	o mlterm-3.0.1 [pkg/43822]
 	o moc-2.4.4
 	o modular-xorg-server-1.9.0
 	o modular-xorg-server-1.8.0
