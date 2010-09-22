@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2010/09/14 15:37:16 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.lua.orig	2010-06-05 01:54:08.000000000 +0000
+--- texmf/tex/generic/config/language.dat.lua.orig	2010-09-20 02:04:04.000000000 +0000
 +++ texmf/tex/generic/config/language.dat.lua
-@@ -33,603 +33,3 @@ return {
+@@ -33,612 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
@@ -22,6 +22,15 @@ $NetBSD: patch-ac,v 1.1 2010/09/14 15:37:16 minskim Exp $
 -		synonyms = { 'ngerman-x-latest' },
 -		patterns = 'hyph-de-1996.pat.txt',
 -		hyphenation = 'hyph-de-1996.hyp.txt',
+-	},
+--- from hyphen-afrikaans:
+-	['afrikaans'] = {
+-		loader = 'loadhyph-af.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-af.pat.txt',
+-		hyphenation = 'hyph-af.hyp.txt',
 -	},
 --- from hyphen-ancientgreek:
 -	['ancientgreek'] = {
@@ -605,4 +614,4 @@ $NetBSD: patch-ac,v 1.1 2010/09/14 15:37:16 minskim Exp $
 -		patterns = 'hyph-cy.pat.txt',
 -		hyphenation = 'hyph-cy.hyp.txt',
 -	},
--}
+ }
