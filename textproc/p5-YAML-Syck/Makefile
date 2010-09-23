@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/08/31 05:12:29 sno Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/23 21:42:45 sno Exp $
 
-DISTNAME=	YAML-Syck-1.14
+DISTNAME=	YAML-Syck-1.15
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=YAML/}
-#MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AU/AUDREYT/}
 
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~audreyt/YAML-Syck/
