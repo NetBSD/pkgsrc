@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/23 07:18:42 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/MANIFEST
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/example_long.rb
+${GEM_LIBDIR}/examples/example_std.rb
+${GEM_LIBDIR}/getopt.gemspec
+${GEM_LIBDIR}/lib/getopt/long.rb
+${GEM_LIBDIR}/lib/getopt/std.rb
+${GEM_LIBDIR}/test/test_getopt_long.rb
+${GEM_LIBDIR}/test/test_getopt_std.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
