@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3591 2010/09/23 06:46:18 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3592 2010/09/23 06:48:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4779,3 +4779,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/ruby-thor to 0.14.1 [taca 2010-09-23]
 	Updated mail/ruby-mail to 2.2.6.1 [taca 2010-09-23]
 	Updated net/ruby-addressable to 2.2.1 [taca 2010-09-23]
+	Updated net/ruby-dnsruby to 1.50 [taca 2010-09-23]
