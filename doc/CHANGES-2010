@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3611 2010/09/23 21:20:02 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3612 2010/09/23 21:23:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4830,3 +4830,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-vte to 0.90.1 [obache 2010-09-17]
 	Updated filesystems/perfused to 20100923 [manu 2010-09-23]
 	Updated devel/p5-App-cpanminus to 1.0014 [sno 2010-09-23]
+	Updated devel/p5-autobox to 2.71 [sno 2010-09-23]
