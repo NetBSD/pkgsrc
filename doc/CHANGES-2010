@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3598 2010/09/23 07:22:41 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3599 2010/09/23 07:26:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/pkg-config to 0.25 [adam 2010-09-23]
 	Added devel/ruby-ffi version 0.6.3 [taca 2010-09-23]
 	Added devel/ruby-getopt version 1.4.0 [taca 2010-09-23]
+	Added security/ruby-hmac version 0.4.0 [taca 2010-09-23]
