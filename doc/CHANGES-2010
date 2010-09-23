@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3593 2010/09/23 06:48:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3594 2010/09/23 06:50:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4785,3 +4785,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/ruby-dnsruby to 1.50 [taca 2010-09-23]
 >>>>>>> 1.3592
 	Updated devel/p5-Perl-Version to 1.010 [sno 2010-09-23]
+	Updated security/ruby-net-scp to 1.0.4 [taca 2010-09-23]
