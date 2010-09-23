@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3609 2010/09/23 15:40:17 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3610 2010/09/23 16:16:29 manu Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4827,3 +4827,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.1 [obache 2010-09-17]
 	Updated x11/ruby-gnome2-panelapplet to 0.90.1 [obache 2010-09-17]
 	Updated x11/ruby-gnome2-vte to 0.90.1 [obache 2010-09-17]
+	Updated filesystems/perfused to 20100923 [manu 2010-09-23]
