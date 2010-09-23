@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3628 2010/09/23 22:43:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3629 2010/09/23 22:47:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4847,3 +4847,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed net/p5-Net-IRC [sno 2010-09-23]
 	Updated www/p5-Catalyst-Controller-HTML-FormFu to 0.08002 [sno 2010-09-23]
 	Updated devel/p5-Module-Install-XSUtil to 0.33 [sno 2010-09-23]
+	Updated net/p5-Net-TFTP to 0.18 [sno 2010-09-23]
