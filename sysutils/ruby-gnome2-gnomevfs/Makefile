@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2010/09/14 11:02:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/23 15:36:02 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomevfs-${VERSION}
 COMMENT=		Ruby binding of gnomevfs
-PKGREVISION=		2
 CATEGORIES=		sysutils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_EXTCONF_SUBDIRS=	gnomevfs
-
-USE_TOOLS+=		pkg-config
 
 do-test:
 	${RUN} cd ${WRKSRC}/gnomevfs/tests; \
@@ -21,4 +18,5 @@ do-test:
 BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
+.include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
