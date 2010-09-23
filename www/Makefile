@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.772 2010/09/16 07:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.773 2010/09/23 07:32:26 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -182,6 +182,7 @@ SUBDIR+=	mediawiki
 SUBDIR+=	merb
 SUBDIR+=	merb-action-args
 SUBDIR+=	merb-activerecord
+SUBDIR+=	merb-admin
 SUBDIR+=	merb-assets
 SUBDIR+=	merb-auth
 SUBDIR+=	merb-auth-core
@@ -547,7 +548,9 @@ SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-compass
 SUBDIR+=	ruby-compass-susy-plugin
+SUBDIR+=	ruby-css-parser
 SUBDIR+=	ruby-cssmin
+SUBDIR+=	ruby-csspool
 SUBDIR+=	ruby-div
 SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-gnome2-gtkhtml2
