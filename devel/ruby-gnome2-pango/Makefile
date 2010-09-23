@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/09/14 11:00:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/23 15:36:00 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-pango-${VERSION}
 COMMENT=		Ruby binding of pango-1.x
-PKGREVISION=		2
 CATEGORIES=		devel fonts
 
 CONFLICTS+=		ruby-gnome2-pango-[0-9]*
@@ -14,11 +13,10 @@ RUBY_EXTCONF_SUBDIRS=	pango
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 
-USE_TOOLS+=		pkg-config
-
 do-test:
 	${RUN} cd ${WRKSRC}/pango/test; ${SETENV} ${TEST_ENV} ${RUBY} run-test.rb
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/ruby-rcairo/buildlink3.mk"
+.include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
