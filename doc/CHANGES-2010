@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3581 2010/09/22 21:24:12 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3582 2010/09/23 02:29:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4768,3 +4768,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBD-ODBC to 1.25 [sno 2010-09-22]
 	Updated databases/p5-DBIx-Connector to 0.40 [sno 2010-09-22]
 	Updated www/p5-Template-Toolkit-Simple to 0.08 [sno 2010-09-22]
+	Updated databases/ruby-odbc to 0.99992 [taca 2010-09-23]
