@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.71 2010/07/30 07:58:58 asau Exp $
+# $NetBSD: compiler.mk,v 1.72 2010/09/23 22:26:06 ahoka Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -12,6 +12,7 @@
 #	Valid values are:
 #		ccc		Compaq C Compilers (Tru64)
 #		ccache		compiler cache (chainable)
+#		clang		Clang C and Objective−C compiler
 #		distcc		distributed C/C++ (chainable)
 #		f2c		Fortran 77 to C compiler (chainable)
 #		icc		Intel C++ Compiler (Linux)
@@ -101,7 +102,8 @@ COMPILER_USE_SYMLINKS?=	yes
 _USE_PKGSRC_GCC=	yes
 .endif
 
-_COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode sunpro xlc hp pcc
+_COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode \
+			sunpro xlc hp pcc clang
 _PSEUDO_COMPILERS=	ccache distcc f2c g95
 
 .if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
