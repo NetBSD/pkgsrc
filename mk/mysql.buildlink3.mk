@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.12 2010/09/23 14:27:11 taca Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.13 2010/09/23 15:34:07 joerg Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -9,7 +9,7 @@
 #	The preferred MySQL version.
 #
 #	Possible: 51 50
-#	Default: 50
+#	Default: 51
 #
 # === Package-settable variables ===
 #
@@ -30,7 +30,7 @@ _SYS_VARS.mysql=	MYSQL_PKGSRCDIR
 
 .include "../../mk/bsd.prefs.mk"
 
-MYSQL_VERSION_DEFAULT?=		50
+MYSQL_VERSION_DEFAULT?=		51
 MYSQL_VERSIONS_ACCEPTED?=	51 50
 
 # transform the list into individual variables
