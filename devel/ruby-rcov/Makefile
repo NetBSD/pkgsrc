@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 06:18:16 taca Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/23 06:37:17 taca Exp $
 
-DISTNAME=	rcov-0.9.8
+DISTNAME=	rcov-0.9.9
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
