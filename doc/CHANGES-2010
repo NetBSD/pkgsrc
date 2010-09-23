@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3617 2010/09/23 21:48:19 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3618 2010/09/23 21:54:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4836,3 +4836,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-MIME-EncWords to 1.012 [sno 2010-09-23]
 	Updated textproc/p5-YAML-Syck to 1.15 [sno 2010-09-23]
 	Updated lang/perl5 to 5.12.2nb1 [sno 2010-09-23]
+	Updated editors/p5-Padre to 0.70 [sno 2010-09-23]
