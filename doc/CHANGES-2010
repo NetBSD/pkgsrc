@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3595 2010/09/23 06:52:38 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3596 2010/09/23 06:54:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4787,3 +4787,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Perl-Version to 1.010 [sno 2010-09-23]
 	Updated security/ruby-net-scp to 1.0.4 [taca 2010-09-23]
 	Updated textproc/ruby-will-paginate to 2.3.15 [taca 2010-09-23]
+	Updated www/ruby-patron to 0.4.9 [taca 2010-09-23]
