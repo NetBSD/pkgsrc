@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3619 2010/09/23 21:58:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3620 2010/09/23 22:02:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4838,3 +4838,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/perl5 to 5.12.2nb1 [sno 2010-09-23]
 	Updated editors/p5-Padre to 0.70 [sno 2010-09-23]
 	Updated math/p5-Math-BigInt-GMP to 1.32 [sno 2010-09-23]
+	Updated math/p5-Math-BigInt-Pari to 1.14 [sno 2010-09-23]
