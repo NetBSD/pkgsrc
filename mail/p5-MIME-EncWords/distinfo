@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/09/19 16:58:09 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/09/23 21:38:19 sno Exp $
 
-SHA1 (MIME-EncWords-1.011.1.tar.gz) = b47bc3e9dfd1f37d0dcf9e116e1337c43ebf1287
-RMD160 (MIME-EncWords-1.011.1.tar.gz) = b20460cc70950d400800e12e2118c36e7aaeae8b
-Size (MIME-EncWords-1.011.1.tar.gz) = 29553 bytes
+SHA1 (MIME-EncWords-1.012.tar.gz) = 68a9f05389d548ee40ad4e3e1c488459caa341fd
+RMD160 (MIME-EncWords-1.012.tar.gz) = a5e1dabb32ddcbf5b7901b6137e6cd401be14371
+Size (MIME-EncWords-1.012.tar.gz) = 29962 bytes
