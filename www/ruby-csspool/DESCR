@@ -1,0 +1,2 @@
+CSSPool is a CSS parser.  CSSPool provides a SAC interface for parsing
+CSS as well as a document oriented interface for parsing CSS.
