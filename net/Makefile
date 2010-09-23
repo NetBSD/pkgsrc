@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.853 2010/09/11 06:56:53 taca Exp $
+# $NetBSD: Makefile,v 1.854 2010/09/23 05:29:30 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -239,6 +239,7 @@ SUBDIR+=	llnlxdir
 SUBDIR+=	llnlxftp
 SUBDIR+=	logjam
 SUBDIR+=	lopster
+SUBDIR+=	lua-socket
 SUBDIR+=	mDNSResponder
 SUBDIR+=	mDNSResponder-nss
 SUBDIR+=	maradns
@@ -480,6 +481,7 @@ SUBDIR+=	qadsl
 SUBDIR+=	quagga
 SUBDIR+=	queryperf
 SUBDIR+=	ra-rtsp-proxy
+SUBDIR+=	rabbitmq
 SUBDIR+=	radiusclient-ng
 SUBDIR+=	radiusd-cistron
 SUBDIR+=	rancid
