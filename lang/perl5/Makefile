@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.165 2010/09/09 20:35:43 sno Exp $
+# $NetBSD: Makefile,v 1.166 2010/09/23 21:47:48 sno Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
-#PKGREVISION=	2
+PKGREVISION=	1
 COMMENT=	Practical Extraction and Report Language
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -301,6 +301,9 @@ SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
 post-extract:
 		cp ${FILESDIR}/Policy.sh ${WRKSRC}/Policy.sh
+
+pre-configure:
+	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f -exec ${RM} -f {} \;
 
 post-build:
 	${SED}	-e "s,@PERL5@,"${PERL5:Q}",g"				\
