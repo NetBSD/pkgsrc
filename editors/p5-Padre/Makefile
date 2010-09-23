@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2010/09/14 11:01:43 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/09/23 21:53:33 sno Exp $
 #
 
-DISTNAME=	Padre-0.69
+DISTNAME=	Padre-0.70
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
@@ -59,6 +57,7 @@ DEPENDS+=	p5-Format-Human-Bytes>=0.04:../../devel/p5-Format-Human-Bytes
 DEPENDS+=	p5-HTML-Parser>=3.58:../../www/p5-HTML-Parser
 DEPENDS+=	p5-IO-stringy>=2.110:../../devel/p5-IO-stringy
 DEPENDS+=	p5-IO-String>=1.08:../../devel/p5-IO-String
+DEPENDS+=	p5-IPC-Run>=0.83:../../devel/p5-IPC-Run
 DEPENDS+=	p5-JSON-XS>=2.290:../../converters/p5-JSON-XS
 DEPENDS+=	p5-List-MoreUtils>=0.22:../../devel/p5-List-MoreUtils
 DEPENDS+=	{perl>=5.8.8,p5-Scalar-List-Utils>=1.18}:../../devel/p5-Scalar-List-Utils
@@ -84,16 +83,13 @@ DEPENDS+=	p5-Template-Tiny>=0.11:../../textproc/p5-Template-Tiny
 DEPENDS+=	{perl>=5.12.0,p5-Text-Balanced>=2.01}:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Text-Diff>=0.35:../../textproc/p5-Text-Diff
 DEPENDS+=	p5-Text-FindIndent>=0.06:../../textproc/p5-Text-FindIndent
-# Thread::Queue 2.11 is in Perl 5.8.9, but Perl 5.10.0 contains "only" 2.00
-#DEPENDS+=	{perl>=5.10.1,p5-Thread-Queue>=2.11}:../../devel/p5-Thread-Queue # XXX missing
-PERL5_REQD+=	5.10.1
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-Wx-Perl-ProcessStream>=0.25:../../x11/p5-Wx-Perl-ProcessStream
 DEPENDS+=	p5-YAML-Tiny>=1.32:../../textproc/p5-YAML-Tiny
 DEPENDS+=	p5-libwww>=5.815:../../www/p5-libwww
-DEPENDS+=	p5-pip>=0.13:../../devel/p5-pip
-DEPENDS+=	p5-version>=0.8000:../../devel/p5-version
-# threads, threads::shared and version are in 5.10.1 core - we don't need to note again the 5.10.1 req
+DEPENDS+=	{perl>=5.12.0,p5-version>=0.8000}:../../devel/p5-version
+# required threads, threads::shared and version are in patched 5.12.2nb1 core
+PERL5_REQD+=	5.12.2nb1
 
 PERL5_PACKLIST=		auto/Padre/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
