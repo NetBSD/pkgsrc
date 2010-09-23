@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3587 2010/09/23 06:34:27 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3588 2010/09/23 06:37:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-LEOCHARRE-Debug to 1.03 [sno 2010-09-23]
 	Added devel/p5-LEOCHARRE-CLI2 version 1.16 [sno 2010-09-23]
 	Updated www/p5-WordPress-XMLRPC to 1.23 [sno 2010-09-23]
+	Updated devel/ruby-rcov to 0.9.9 [taca 2010-09-23]
