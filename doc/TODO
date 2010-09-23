@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9734 2010/09/22 20:49:59 wiz Exp $
+$NetBSD: TODO,v 1.9735 2010/09/23 07:09:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -1012,7 +1012,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.6
-	o pkg-config-0.25
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
 	o plone-3.3.4
