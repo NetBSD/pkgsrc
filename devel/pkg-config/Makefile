@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2010/01/16 19:27:18 heinz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2010/09/23 07:07:46 adam Exp $
 
-DISTNAME=	pkg-config-0.23
-PKGREVISION=	1
+DISTNAME=	pkg-config-0.25
 CATEGORIES=	devel
 MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 
@@ -14,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-threads
 
 # old name of the package
