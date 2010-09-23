@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3615 2010/09/23 21:38:44 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3616 2010/09/23 21:43:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4834,3 +4834,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-TraceUse to 2.03 [sno 2010-09-23]
 	Updated time/p5-DateTime to 0.6200 [sno 2010-09-23]
 	Updated mail/p5-MIME-EncWords to 1.012 [sno 2010-09-23]
+	Updated textproc/p5-YAML-Syck to 1.15 [sno 2010-09-23]
