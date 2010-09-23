@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/08/28 23:10:19 pettai Exp $
+$NetBSD: distinfo,v 1.5 2010/09/23 06:47:35 taca Exp $
 
-SHA1 (dnsruby-1.49.gem) = b0755a89f51a1b144fb0c781a11ae90366be1ffb
-RMD160 (dnsruby-1.49.gem) = 9f6bd0bfdcd98b3fa1d768e31f4c10ad781a9927
-Size (dnsruby-1.49.gem) = 351744 bytes
+SHA1 (dnsruby-1.50.gem) = f353b593cc6ab80c09efdbcbf9357b6c8864e61a
+RMD160 (dnsruby-1.50.gem) = bf0e4958c765d8940354b3106fa4d0993bf82a2d
+Size (dnsruby-1.50.gem) = 351744 bytes
