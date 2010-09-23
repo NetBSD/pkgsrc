@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.12 2010/03/21 11:07:37 jdolecek Exp $
+# $NetBSD: phpversion.mk,v 1.13 2010/09/23 07:38:05 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -175,7 +175,7 @@ PKG_SKIP_REASON+=	"${PKG_PHP} is not a valid package"
 #
 .if defined(_PHP_VERSION_INSTALLED)
 .if ${_PHP_VERSION} != ${_PHP_VERSION_INSTALLED}
-PKG_SKIP_REASON+=	"${PKGBASE} requires ${PKG_PHP}, but php-${_PHP_VERSION_INSTALLED} is installed."
+PKG_SKIP_REASON+=	"${PKGBASE} requires ${PKG_PHP}, but php-${_PHP_VERSION_INSTALLED} is already installed."
 .endif
 .endif
 
