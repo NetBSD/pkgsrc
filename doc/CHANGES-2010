@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3589 2010/09/23 06:42:06 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3590 2010/09/23 06:44:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-WordPress-XMLRPC to 1.23 [sno 2010-09-23]
 	Updated devel/ruby-rcov to 0.9.9 [taca 2010-09-23]
 	Updated devel/ruby-thor to 0.14.1 [taca 2010-09-23]
+	Updated mail/ruby-mail to 2.2.6.1 [taca 2010-09-23]
