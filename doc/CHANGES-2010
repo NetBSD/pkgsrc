@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3600 2010/09/23 07:33:28 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3601 2010/09/23 08:06:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4792,3 +4792,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/merb-admin version 0.8.5 [taca 2010-09-23]
 	Added www/ruby-css-parser version 1.0.1 [taca 2010-09-23]
 	Added www/ruby-csspool version 2.0.0 [taca 2010-09-23]
+	Updated mail/pear-Mail_Mime to 1.8.0 [taca 2010-09-23]
