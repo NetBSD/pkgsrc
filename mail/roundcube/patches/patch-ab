@@ -1,12 +1,11 @@
-$NetBSD: patch-ab,v 1.5 2008/10/02 15:47:15 schmonz Exp $
+$NetBSD: patch-ab,v 1.6 2010/09/23 23:54:40 pettai Exp $
 
---- config/db.inc.php.dist.orig	2008-08-26 03:21:50.000000000 -0400
+--- config/db.inc.php.dist.orig	2010-06-23 09:55:08.000000000 +0000
 +++ config/db.inc.php.dist
-@@ -62,4 +62,7 @@ $rcmail_config['db_sequence_messages'] =
- 
+@@ -71,3 +71,6 @@ $rcmail_config['db_sequence_messages'] =
  
  // end db config file
-+
+ 
 +include_once('db-local.inc.php');
 +
- ?>
++?>
