@@ -1,0 +1,4 @@
+The getopt library provides two different command line option parsers.
+They are meant as easier and more convenient replacements for the
+command line parsers that ship as part of the Ruby standard library.
+Please see the README for additional comments.
