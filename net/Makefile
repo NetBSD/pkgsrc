@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.854 2010/09/23 05:29:30 obache Exp $
+# $NetBSD: Makefile,v 1.855 2010/09/23 22:37:36 sno Exp $
 #
 
 COMMENT=	Networking tools
@@ -360,7 +360,6 @@ SUBDIR+=	p5-Net-Google-Code
 SUBDIR+=	p5-Net-IP
 SUBDIR+=	p5-Net-IPv4Addr
 SUBDIR+=	p5-Net-IPv6Addr
-SUBDIR+=	p5-Net-IRC
 SUBDIR+=	p5-Net-Ident
 SUBDIR+=	p5-Net-Interface
 SUBDIR+=	p5-Net-Jifty
