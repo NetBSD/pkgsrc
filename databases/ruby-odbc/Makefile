@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/09/10 04:34:42 taca Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/23 02:28:18 taca Exp $
 
-DISTNAME=	ruby-odbc-0.99991
+DISTNAME=	ruby-odbc-0.99992
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.ch-werner.de/rubyodbc/
