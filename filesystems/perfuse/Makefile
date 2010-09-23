@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/09/15 03:44:17 manu Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/23 16:16:29 manu Exp $
 #
 
-DISTNAME=	perfuse-20100915
+DISTNAME=	perfuse-20100923
 CATEGORIES=	filesystems
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/perfuse/
 EXTRACT_SUFX=	.tgz
