@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.397 2010/09/03 07:15:09 agc Exp $
+# $NetBSD: Makefile,v 1.398 2010/09/23 05:30:21 obache Exp $
 #
 
 COMMENT=	Security tools
@@ -136,6 +136,7 @@ SUBDIR+=	libtasn1
 SUBDIR+=	libtcpa
 SUBDIR+=	logcheck
 SUBDIR+=	lsh
+SUBDIR+=	lua-sec
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
