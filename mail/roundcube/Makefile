@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2010/09/22 09:32:13 pettai Exp $
+# $NetBSD: Makefile,v 1.27 2010/09/23 23:54:40 pettai Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
-MAINTAINER=	schmonz@NetBSD.org
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 LICENSE=	gnu-gpl-v2
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.3.1
+RCVERSION=	0.4
 VERSION=	${RCVERSION:S/-//}
 
 PKG_DESTDIR_SUPPORT=  	user-destdir
@@ -25,11 +24,12 @@ INSTALLATION_DIRS+=	${EGDIR}/SQL ${DOCDIR} ${RCDIR}/bin
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
 
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.3.3:../../net/pear-Net_SMTP
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.5.2:../../mail/pear-Mail_Mime
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.7:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.5.0:../../databases/pear-MDB2
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL-[0-9]*:../../mail/pear-Auth_SASL
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 
 PKG_SYSCONFSUBDIR?=	roundcube
 
