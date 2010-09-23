@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/23 07:24:28 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/hmac-md5.rb
+${GEM_LIBDIR}/lib/hmac-rmd160.rb
+${GEM_LIBDIR}/lib/hmac-sha1.rb
+${GEM_LIBDIR}/lib/hmac-sha2.rb
+${GEM_LIBDIR}/lib/hmac.rb
+${GEM_LIBDIR}/lib/ruby_hmac.rb
+${GEM_LIBDIR}/test/test_hmac.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
