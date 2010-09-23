@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/09/14 11:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/23 15:36:02 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomeprintui-${VERSION}
 COMMENT=		Ruby binding of libgnomeprintui
-PKGREVISION=		4
 CATEGORIES=		print
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,7 +11,6 @@ RUBY_EXTCONF_SUBDIRS=	gnomeprintui
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gnomeprint>=${VERSION}:../../print/ruby-gnome2-gnomeprint
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gtk>=${VERSION}:../../x11/ruby-gnome2-gtk
-USE_TOOLS+=		pkg-config
 
 BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib-${VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.ruby-gnome2-glib=	build
@@ -21,4 +19,5 @@ BUILDLINK_DEPMETHOD.ruby-gnome2-glib=	build
 BUILDLINK_API_DEPENDS.ruby-gnome2-gnomeprint+=	${RUBY_PKGPREFIX}-gnome2-gnomeprint>=${VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.ruby-gnome2-gnomeprint=	build
 .include "../../print/ruby-gnome2-gnomeprint/buildlink3.mk"
+.include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
