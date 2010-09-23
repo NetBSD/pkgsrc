@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1401 2010/09/12 10:04:33 wiz Exp $
+# $NetBSD: Makefile,v 1.1402 2010/09/23 05:27:32 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -378,6 +378,7 @@ SUBDIR+=	lincvs
 SUBDIR+=	log4shib
 SUBDIR+=	ltsa
 SUBDIR+=	lua-alt-getopt
+SUBDIR+=	lua-filesystem
 SUBDIR+=	lua-mode
 SUBDIR+=	lua-stdlib
 SUBDIR+=	lua-stdlib-doc
