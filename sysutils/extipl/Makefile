@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2010/02/12 14:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/23 07:39:26 taca Exp $
 #
 
 DISTNAME=	extipl-5.04
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.tsden.org/takamiti/extipl/archs/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=extipl/2166/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://www.tsden.org/takamiti/extipl/
+HOMEPAGE=	http://sourceforge.jp/projects/extipl/
 COMMENT=	IPL compatible OS boot selector
 
 PKG_DESTDIR_SUPPORT=	user-destdir
