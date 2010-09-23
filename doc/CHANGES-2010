@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3602 2010/09/23 08:09:38 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3603 2010/09/23 08:26:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4794,3 +4794,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/ruby-csspool version 2.0.0 [taca 2010-09-23]
 	Updated mail/pear-Mail_Mime to 1.8.0 [taca 2010-09-23]
 	Updated mail/pear-Mail_mimeDecode to 1.5.4 [taca 2010-09-23]
+	Updated devel/libgee to 0.5.3 [obache 2010-09-23]
+	Updated devel/libgee to 0.5.3 [obache 2010-09-23]
