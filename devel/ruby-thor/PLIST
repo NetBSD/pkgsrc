@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 04:04:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/09/23 06:41:27 taca Exp $
 bin/rake2thor
 bin/thor
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -50,6 +50,7 @@ ${GEM_LIBDIR}/spec/fixtures/bundle/execute.rb
 ${GEM_LIBDIR}/spec/fixtures/bundle/main.thor
 ${GEM_LIBDIR}/spec/fixtures/doc/%file_name%.rb.tt
 ${GEM_LIBDIR}/spec/fixtures/doc/README
+${GEM_LIBDIR}/spec/fixtures/doc/components/.empty_directory
 ${GEM_LIBDIR}/spec/fixtures/doc/config.rb
 ${GEM_LIBDIR}/spec/fixtures/group.thor
 ${GEM_LIBDIR}/spec/fixtures/invoke.thor
