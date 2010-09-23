@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.18 2010/09/23 05:38:15 obache Exp $
+
 --- mono/utils/mono-sigcontext.h.orig	2010-07-06 17:52:18.000000000 +0300
 +++ mono/utils/mono-sigcontext.h	2010-07-30 12:56:01.000000000 +0300
 @@ -80,6 +80,20 @@
