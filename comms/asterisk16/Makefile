@@ -1,31 +1,30 @@
-# $NetBSD: Makefile,v 1.20 2010/06/16 08:04:44 jnemeth Exp $
+# $NetBSD: Makefile,v 1.21 2010/09/23 23:30:38 jnemeth Exp $
 #
 
-DISTNAME=	asterisk-1.6.1.20
+DISTNAME=	asterisk-1.6.2.13
 DIST_SUBDIR=	${PKGNAME_NOREV}
-PKGREVISION=	1
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
-		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
+		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
+		http://downloads.asterisk.org/pub/telephony/sounds/releases/
 
 OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
 
+CONFLICTS+=	asterisk-sounds-extra-[0-9]*
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		bash bison gmake perl:run pkg-config
+USE_TOOLS+=		bison gmake perl:run pkg-config tar
 USE_LANGUAGES=		c c++
-REPLACE_BASH=		build_tools/mkpkgconfig
 REPLACE_PERL+=		agi/DialAnMp3.agi agi/agi-test.agi
 REPLACE_PERL+=		agi/fastagi-test agi/jukebox.agi agi/numeralize
 REPLACE_PERL+=		contrib/scripts/vmail.cgi
-
-PKGCONFIG_OVERRIDE+=	menuselect/mxml/mxml.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/libdata
@@ -35,6 +34,7 @@ CONFIGURE_ARGS+=	--without-gtk2
 INSTALL_TARGET=		install samples
 INSTALLATION_DIRS+=	lib/pkgconfig share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	share/examples/asterisk share/examples/rc.d
+INSTALLATION_DIRS+=	${ASTDATADIR}/sounds/en ${ASTDATADIR}/moh
 
 BUILD_DEFS+=		VARBASE
 
@@ -64,10 +64,11 @@ MESSAGE_SUBST+=		ASTSPOOLDIR=${ASTSPOOLDIR}
 MESSAGE_SUBST+=		ASTLOGDIR=${ASTLOGDIR}
 ASTVARRUNDIR=		${VARBASE}/run/asterisk
 FILES_SUBST+=		ASTVARRUNDIR=${ASTVARRUNDIR}
+ASTDATADIR=		${PREFIX}/libdata/asterisk
 MAKE_FLAGS+=		ASTLIBDIR=${PREFIX}/lib/asterisk
-MAKE_FLAGS+=		ASTVARLIBDIR=${PREFIX}/libdata/asterisk
-MAKE_FLAGS+=		ASTKEYDIR=${PREFIX}/libdata/asterisk
-MAKE_FLAGS+=		ASTDATADIR=${PREFIX}/libdata/asterisk
+MAKE_FLAGS+=		ASTVARLIBDIR=${ASTDATADIR}
+MAKE_FLAGS+=		ASTKEYDIR=${ASTDATADIR}
+MAKE_FLAGS+=		ASTDATADIR=${ASTDATADIR}
 MAKE_FLAGS+=		ASTSPOOLDIR=${ASTSPOOLDIR}
 MAKE_FLAGS+=		ASTLOGDIR=${ASTLOGDIR}
 MAKE_FLAGS+=		ASTHEADERDIR=${PREFIX}/include/asterisk
@@ -86,6 +87,9 @@ MAKE_FLAGS+=		HTTP_DOCSDIR=${PREFIX}/share/httpd/htdocs
 MAKE_FLAGS+=		HTTP_CGIDIR=${PREFIX}/libexec/cgi-bin
 
 .include "options.mk"
+
+# check sounds/Makefile for current version when upgrading package
+DISTFILES+=	asterisk-extra-sounds-en-gsm-1.4.11.tar.gz
 
 # Override default paths in config files
 SUBST_CLASSES+=		configs
@@ -140,7 +144,8 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	alsa.conf amd.conf asterisk.adsi cdr.conf 			\
 	cdr_adaptive_odbc.conf cdr_custom.conf cdr_manager.conf		\
 	cdr_odbc.conf cdr_pgsql.conf cdr_sqlite3_custom.conf		\
-	cdr_tds.conf chan_dahdi.conf cli.conf codecs.conf console.conf	\
+	cdr_tds.conf chan_dahdi.conf cli.conf cli_aliases.conf		\
+	cli_permissions.conf codecs.conf console.conf			\
 	dnsmgr.conf dundi.conf enum.conf extensions.ael extconfig.conf	\
 	extensions.conf	extensions.lua extensions_minivm.conf		\
 	features.conf festival.conf followme.conf func_odbc.conf	\
@@ -149,7 +154,8 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	manager.conf meetme.conf mgcp.conf minivm.conf misdn.conf	\
 	modules.conf musiconhold.conf muted.conf osp.conf oss.conf	\
 	phone.conf phoneprov.conf queuerules.conf queues.conf		\
-	res_ldap.conf res_odbc.conf res_pgsql.conf res_snmp.conf	\
+	res_config_sqlite.conf res_ldap.conf res_odbc.conf		\
+	res_pgsql.conf res_snmp.conf	\
 	rpt.conf rtp.conf say.conf sip.conf sip_notify.conf skinny.conf	\
 	sla.conf smdi.conf telcordia-1.adsi udptl.conf unistim.conf	\
 	usbradio.conf users.conf voicemail.conf vpb.conf
@@ -164,6 +170,9 @@ post-patch:
 .endif
 
 post-install:
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.19.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
+	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -183,13 +192,16 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/PEERING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/asterisk-mib.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/backtrace.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/building_queues.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/callfiles.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/chan_sip-perf-testing.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/cli.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/database_transactions.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/datastores.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/digium-mib.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/distributed_devstate.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/externalivr.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/followme.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/jabber.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/janitor-projects.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/jingle.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -215,9 +227,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/video.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/video_console.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/voicemail_odbc_postgresql.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/tex/asterisk.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

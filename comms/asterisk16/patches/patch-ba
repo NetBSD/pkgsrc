@@ -1,18 +1,20 @@
-$NetBSD: patch-ba,v 1.2 2009/07/07 08:14:43 jnemeth Exp $
+$NetBSD: patch-ba,v 1.3 2010/09/23 23:30:38 jnemeth Exp $
 
---- main/sched.c.orig	2009-02-15 13:28:55.000000000 -0800
+--- main/sched.c.orig	2010-08-10 18:04:32.000000000 +0000
 +++ main/sched.c
-@@ -435,11 +435,11 @@ void ast_sched_dump(struct sched_context
- 	AST_DLLIST_TRAVERSE(&con->schedq, q, list) {
- 		struct timeval delta = ast_tvsub(q->when, when);
- 
+@@ -564,12 +564,12 @@ void ast_sched_dump(struct sched_context
+ 		struct timeval delta;
+ 		q = ast_heap_peek(con->sched_heap, x);
+ 		delta = ast_tvsub(q->when, when);
 -		ast_debug(1, "|%.4d | %-15p | %-15p | %.6ld : %.6ld |\n", 
-+		ast_debug(1, "|%.4d | %-15p | %-15p | %.6jd : %.6ld |\n", 
++		ast_debug(1, "|%.4d | %-15p | %-15p | %.6jd : %.6jd |\n", 
  			q->id,
  			q->callback,
  			q->data,
 -			(long)delta.tv_sec,
+-			(long int)delta.tv_usec);
 +			(intmax_t)delta.tv_sec,
- 			(long int)delta.tv_usec);
++			(intmax_t)delta.tv_usec);
  	}
  	ast_mutex_unlock(&con->lock);
+ 	ast_debug(1, "=============================================================\n");

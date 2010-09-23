@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
+$NetBSD: patch-aa,v 1.7 2010/09/23 23:30:38 jnemeth Exp $
 
---- Makefile.orig	2010-05-03 17:37:13.000000000 +0000
+--- Makefile.orig	2010-06-10 20:35:06.000000000 +0000
 +++ Makefile
-@@ -123,20 +123,6 @@ DEBUG=-g3
+@@ -126,19 +126,6 @@ DEBUG=-g3
  
  # Define standard directories for various platforms
  # These apply if they are not redefined in asterisk.conf 
@@ -15,7 +15,6 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
 -  ASTSPOOLDIR=/var/spool/asterisk
 -  ASTLOGDIR=/var/log/asterisk
 -  ASTHEADERDIR=/opt/asterisk/include
--  ASTBINDIR=/opt/asterisk/bin
 -  ASTSBINDIR=/opt/asterisk/sbin
 -  ASTVARRUNDIR=/var/run/asterisk
 -  ASTMANDIR=/opt/asterisk/man
@@ -23,13 +22,13 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
    ASTETCDIR=$(sysconfdir)/asterisk
    ASTLIBDIR=$(libdir)/asterisk
    ASTHEADERDIR=$(includedir)/asterisk
-@@ -146,19 +132,12 @@ else
+@@ -147,19 +134,11 @@ else
    ASTLOGDIR=$(localstatedir)/log/asterisk
-   ASTVARRUNDIR=$(localstatedir)/run
+   ASTVARRUNDIR=$(localstatedir)/run/asterisk
    ASTMANDIR=$(mandir)
 -ifneq ($(findstring BSD,$(OSARCH)),)
    ASTVARLIBDIR=$(prefix)/share/asterisk
-   ASTVARRUNDIR=$(localstatedir)/run/asterisk
+-  ASTVARRUNDIR=$(localstatedir)/run/asterisk
    ASTDBDIR=$(localstatedir)/db/asterisk
 -else
 -  ASTVARLIBDIR=$(localstatedir)/lib/asterisk
@@ -44,7 +43,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  
  # Asterisk.conf is located in ASTETCDIR or by using the -C flag
  # when starting Asterisk
-@@ -244,10 +223,6 @@ ifeq ($(AST_DEVMODE),yes)
+@@ -245,10 +224,6 @@ ifeq ($(AST_DEVMODE),yes)
    _ASTCFLAGS+=-Wformat=2
  endif
  
@@ -55,7 +54,15 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  ifeq ($(findstring -march,$(_ASTCFLAGS) $(ASTCFLAGS)),)
    ifneq ($(PROC),ultrasparc)
      _ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
-@@ -508,9 +483,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
+@@ -493,7 +468,6 @@ datafiles: _all
+ 		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTDATADIR)/images ; \
+ 	done
+ 	mkdir -p $(DESTDIR)$(AGI_DIR)
+-	$(MAKE) -C sounds install
+ 
+ doc/core-en_US.xml: $(foreach dir,$(MOD_SUBDIRS),$(shell $(GREP) -l "language=\"en_US\"" $(dir)/*.c $(dir)/*.cc 2>/dev/null))
+ 	@printf "Building Documentation For: "
+@@ -539,9 +513,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
  OLDHEADERS=$(filter-out $(NEWHEADERS),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
  
  installdirs:
@@ -64,10 +71,10 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  	mkdir -p $(DESTDIR)$(ASTSBINDIR)
 -	mkdir -p $(DESTDIR)$(ASTETCDIR)
 +	mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
- 	mkdir -p $(DESTDIR)$(ASTBINDIR)
  	mkdir -p $(DESTDIR)$(ASTVARRUNDIR)
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/voicemail
-@@ -519,6 +495,7 @@ installdirs:
+ 	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/dictate
+@@ -549,6 +524,7 @@ installdirs:
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/tmp
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/meetme
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/monitor
@@ -75,7 +82,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  
  bininstall: _all installdirs $(SUBDIRS_INSTALL)
  	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
-@@ -614,22 +591,22 @@ upgrade: bininstall
+@@ -650,22 +626,22 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -103,7 +110,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  		if [ -f $${dst} ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s $${dst} $$x ; then \
-@@ -645,10 +622,10 @@ samples: adsi
+@@ -681,10 +657,10 @@ samples: adsi
  		echo "Installing file $$x"; \
  		$(INSTALL) -m 644 $$x $${dst} ;\
  	done
@@ -116,7 +123,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  		echo "astetcdir => $(ASTETCDIR)" ; \
  		echo "astmoddir => $(MODULES_DIR)" ; \
  		echo "astvarlibdir => $(ASTVARLIBDIR)" ; \
-@@ -705,7 +682,7 @@ samples: adsi
+@@ -745,7 +721,7 @@ samples: adsi
  		echo "pbx_realtime=1.6" ; \
  		echo "res_agi=1.6" ; \
  		echo "app_set=1.6" ; \
@@ -125,7 +132,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  	else \
  		echo "Skipping asterisk.conf creation"; \
  	fi
-@@ -733,7 +710,7 @@ samples: adsi
+@@ -773,7 +749,7 @@ samples: adsi
  webvmail:
  	@[ -d $(DESTDIR)$(HTTP_DOCSDIR)/ ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
  	@[ -d $(DESTDIR)$(HTTP_CGIDIR) ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
@@ -134,7 +141,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  	mkdir -p $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk
  	for x in images/*.gif; do \
  		$(INSTALL) -m 644 $$x $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/; \
-@@ -841,7 +818,7 @@ uninstall-all: _uninstall
+@@ -889,7 +865,7 @@ uninstall-all: _uninstall
  	rm -rf $(DESTDIR)$(ASTVARLIBDIR)
  	rm -rf $(DESTDIR)$(ASTDATADIR)
  	rm -rf $(DESTDIR)$(ASTSPOOLDIR)
@@ -143,8 +150,8 @@ $NetBSD: patch-aa,v 1.6 2010/05/22 22:21:45 jnemeth Exp $
  	rm -rf $(DESTDIR)$(ASTLOGDIR)
  
  menuconfig: menuselect
-@@ -912,6 +889,7 @@ asterisk.pdf:
- 	$(MAKE) -C doc/tex asterisk.pdf
+@@ -964,6 +940,7 @@ asterisk.txt:
+ 	$(MAKE) -C doc/tex asterisk.txt
  
  .PHONY: menuselect
 +.PHONY: menuselect.makeopts
