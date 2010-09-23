@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3597 2010/09/23 07:09:25 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3598 2010/09/23 07:22:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4786,3 +4786,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/ruby-will-paginate to 2.3.15 [taca 2010-09-23]
 	Updated www/ruby-patron to 0.4.9 [taca 2010-09-23]
 	Updated devel/pkg-config to 0.25 [adam 2010-09-23]
+	Added devel/ruby-ffi version 0.6.3 [taca 2010-09-23]
+	Added devel/ruby-getopt version 1.4.0 [taca 2010-09-23]
