@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2010/09/23 05:30:21 obache Exp $
+# $NetBSD: Makefile,v 1.399 2010/09/23 07:25:13 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -315,6 +315,7 @@ SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
 SUBDIR+=	ruby-ezcrypto
+SUBDIR+=	ruby-hmac
 SUBDIR+=	ruby-net-scp
 SUBDIR+=	ruby-net-sftp
 SUBDIR+=	ruby-net-ssh
