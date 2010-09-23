@@ -1,0 +1,4 @@
+Some quick help for writing cli scripts. Forces by default that -h
+triggers help, that -d triggers debug. Automates help, debug, etc.
+When LEOCHARRE::CLI2 is used, the OPTIONS are altered automatically.
+Also it automatically generates HELP.
