@@ -1,0 +1,5 @@
+The Y&Y 'texnansi' (TeX and ANSI, for Microsoft interpretations of ANSI
+standards) encoding lives on, even after the decease of the company; it
+is known in the LaTeX scheme of things as LY1 encoding. This bundle
+includes metrics and LaTeX macros to use the basic three (Times,
+Helvetica and Courier) Adobe Type 1 fonts in LaTeX using LY1 encoding.
