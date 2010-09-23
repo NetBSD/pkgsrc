@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2010/06/13 22:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/09/23 14:24:34 taca Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.8-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mysqlcc/}
 
@@ -31,7 +31,7 @@ SUBST_FILES.paths=	src/CApplication.cpp
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-MYSQL_VERSIONS_ACCEPTED=	50 41
+MYSQL_VERSIONS_ACCEPTED=	50
 
 INSTALLATION_DIRS=	bin share/mysqlcc/translations
 SUPPORT_FILES=		error.wav information.wav syntax.txt warning.wav
