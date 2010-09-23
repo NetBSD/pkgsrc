@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3584 2010/09/23 06:13:51 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3585 2010/09/23 06:28:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/tex-ly1 version 2010 [minskim 2010-09-23]
 	Added fonts/tex-ly1-doc version 2010 [minskim 2010-09-23]
 	Added devel/p5-LEOCHARRE-Dir version 1.08 [sno 2010-09-23]
+	Updated devel/p5-LEOCHARRE-Debug to 1.03 [sno 2010-09-23]
