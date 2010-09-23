@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3606 2010/09/23 14:25:35 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3607 2010/09/23 14:37:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4797,3 +4797,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libgee to 0.5.3 [obache 2010-09-23]
 	Updated graphics/netpbm to 10.35.77 [tron 2010-09-23]
 	Updated databases/mysqlcc to 0.9.8nb2 [taca 2010-09-23]
+	Removed databases/mysql4-server successor databases/mysql5-server [taca 2010-09-23]
+	Removed databases/mysql4-client successor databases/mysql5-client [taca 2010-09-23]
