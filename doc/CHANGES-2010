@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3583 2010/09/23 04:08:54 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3584 2010/09/23 06:13:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4771,3 +4771,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-odbc to 0.99992 [taca 2010-09-23]
 	Added fonts/tex-ly1 version 2010 [minskim 2010-09-23]
 	Added fonts/tex-ly1-doc version 2010 [minskim 2010-09-23]
+	Added devel/p5-LEOCHARRE-Dir version 1.08 [sno 2010-09-23]
