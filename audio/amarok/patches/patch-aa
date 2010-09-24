@@ -1,15 +1,78 @@
-$NetBSD: patch-aa,v 1.19 2010/09/20 21:29:15 wiz Exp $
+$NetBSD: patch-aa,v 1.20 2010/09/24 09:44:52 wiz Exp $
+
+Two fixes from upstream:
 
 BPM bugfix for FLAC fils, amarok commit ce57e426.
 
---- utilities/collectionscanner/CollectionScanner.cpp.orig	2010-09-15 21:24:13.000000000 +0000
+Re-add some tests for unprintable but also invalid chars. Apparently
+Qt's XML classes don't properly check for invalid chars when writing
+XML, even if you tel l them to.  Also switch to QXmlStreamWriter,
+as apparently going forward it is the more supported class.  BUG:
+251762, commmit 79d86829294ac54132c01153660e70e30c15c378 (I think).
+
+--- utilities/collectionscanner/CollectionScanner.cpp.orig	2010-09-24 09:21:46.000000000 +0000
 +++ utilities/collectionscanner/CollectionScanner.cpp
-@@ -701,7 +701,7 @@ CollectionScanner::readTags( const QStri
-                     attributes["composer"] = TStringToQString( file->xiphComment()->fieldListMap()["COMPOSER"].front() ).trimmed();
+@@ -37,13 +37,13 @@
+ #include <QByteArray>
+ #include <QDBusReply>
+ #include <QDir>
+-#include <QDomDocument>
+ #include <QFile>
+ #include <QtDebug>
+ #include <QTextCodec>
+ #include <QTextStream>
+ #include <QTimer>
+ #include <QThread>
++#include <QXmlStreamWriter>
  
-                 if ( !file->xiphComment()->fieldListMap()[ "BPM" ].isEmpty() )
--                    attributes["bpm"] = TStringToQString( file->xiphComment()->fieldListMap()["BPM"].front() ).trimmed().toFloat();
-+                    attributes["bpm"] = TStringToQString( file->xiphComment()->fieldListMap()["BPM"].front() ).trimmed();
+ //Taglib:
+ #include <apetag.h>
+@@ -814,8 +814,10 @@ CollectionScanner::readTags( const QStri
+ void
+ CollectionScanner::writeElement( const QString &name, const AttributeHash &attributes )
+ {
+-    QDomDocument doc; // A dummy. We don't really use DOM, but SAX2
+-    QDomElement element = doc.createElement( name );
++    QString text;
++    QXmlStreamWriter writer( &text );
++
++    writer.writeStartElement( name );
  
-                 if ( !file->xiphComment()->fieldListMap()[ "DISCNUMBER" ].isEmpty() )
-                     disc = TStringToQString( file->xiphComment()->fieldListMap()["DISCNUMBER"].front() ).trimmed();
+     QHashIterator<QString, QString> it( attributes );
+     while( it.hasNext() )
+@@ -829,7 +831,15 @@ CollectionScanner::writeElement( const Q
+         bool noCategory = false;
+         for( unsigned i = 0; i < len; i++ )
+         {
+-            if( data[i].category() == QChar::NoCategory )
++            if( data[i].category() == QChar::NoCategory ||
++                data[i].category() == QChar::Other_Surrogate ||
++                ( 
++                    data[i].unicode() < 20 &&
++                    data[i].unicode() != 9 &&
++                    data[i].unicode() != 10 &&
++                    data[i].unicode() != 13
++                )
++            )
+             {
+                 noCategory = true;
+                 break;
+@@ -838,15 +848,12 @@ CollectionScanner::writeElement( const Q
+ 
+         if( noCategory )
+             continue;
+-
+-        element.setAttribute( it.key(), it.value() );
++        writer.writeAttribute( it.key(), it.value() );
+     }
+ 
+-    QString text;
+-    QTextStream stream( &text, QIODevice::WriteOnly );
+-    element.save( stream, 0 );
++    writer.writeEndElement();
+ 
+-    std::cout << text.toUtf8().data() << std::endl;
++    std::cout << text.toUtf8().data() << std::endl << std::endl;
+ }
+ 
+ // taken verbatim from Qt's sources, since it's stupidly in the QtGui module
