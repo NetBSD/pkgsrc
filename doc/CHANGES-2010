@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3631 2010/09/24 01:38:47 chs Exp $
+$NetBSD: CHANGES-2010,v 1.3632 2010/09/24 06:29:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4896,3 +4896,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added emulators/suse113_vmware version 11.3 [chs 2010-09-24]
 	Added emulators/suse113_x11 version 11.3 [chs 2010-09-24]
 	Added meta-pkgs/suse113 version 11.3 [chs 2010-09-24]
+	Updated audio/gmpc to 0.20.0nb2 [obache 2010-09-24]
