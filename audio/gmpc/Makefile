@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2010/09/14 11:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/09/24 06:28:46 obache Exp $
 #
 
 DISTNAME=		gmpc-0.20.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/0.20.0/ \
 			${MASTER_SITE_SOURCEFORGE:=musicpd/}
@@ -31,7 +31,6 @@ BUILDLINK_API_DEPENDS.libmpd+=	libmpd>=0.20.0
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
