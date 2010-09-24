@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2010/09/24 00:16:25 pettai Exp $
+
+--- configure.orig	2005-08-26 22:22:42.000000000 +0200
++++ configure	2010-03-18 21:27:08.000000000 +0100
+@@ -6604,8 +6604,8 @@
+ LTLIBOBJS=$ac_ltlibobjs
+ 
+ 
+-tar -zxvf $srcdir/common-1.2.16.tar.gz
+-                       patch -p0 < common-beacon.patch
++#tar -zxvf $srcdir/common-1.2.16.tar.gz
++#                       patch -p0 < common-beacon.patch
+ 	               cd common
+ 	               ./configure
+ 		       cd ../
