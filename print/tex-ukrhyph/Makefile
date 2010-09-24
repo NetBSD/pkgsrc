@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/04/16 17:45:01 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/09/24 17:04:07 minskim Exp $
 
 DISTNAME=	ukrhyph
 PKGNAME=	tex-${DISTNAME}-2009
+TEXLIVE_REV=	18396
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation pattern files for Ukrainian
