@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3647 2010/09/24 18:21:11 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.3648 2010/09/24 20:21:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4916,3 +4916,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-carlisle-doc to 2010 [minskim 2010-09-24]
 	Updated security/py-cryptopp to 0.5.25 [gdt 2010-09-24]
 	Updated filesystems/tahoe-lafs to 1.8.0 [gdt 2010-09-24]
+	Updated print/tex-amscls to 2010 [minskim 2010-09-24]
+	Updated print/tex-amscls-doc to 2010 [minskim 2010-09-24]
