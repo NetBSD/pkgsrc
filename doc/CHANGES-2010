@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3649 2010/09/24 20:31:44 spz Exp $
+$NetBSD: CHANGES-2010,v 1.3650 2010/09/24 20:48:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4919,3 +4919,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-amscls to 2010 [minskim 2010-09-24]
 	Updated print/tex-amscls-doc to 2010 [minskim 2010-09-24]
 	Updated net/isc-dhcp4 to 4.1.1-P1 [spz 2010-09-24]
+	Updated print/tex-dvipdfm to 0.13.2dnb1 [minskim 2010-09-24]
