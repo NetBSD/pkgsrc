@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:27:50 chs Exp $
+
+SHA1 (suse113/i586/alsa-1.0.23-2.12.i586.rpm) = 6601c47031889183ec5442a943f3cf1c09952e6e
+RMD160 (suse113/i586/alsa-1.0.23-2.12.i586.rpm) = bb3a28c34d460c35bf28990c8c090c4509ceb7fe
+Size (suse113/i586/alsa-1.0.23-2.12.i586.rpm) = 1141019 bytes
+SHA1 (suse113/i586/libasound2-1.0.23-2.12.i586.rpm) = c207cd0a22dab5fd6ad04681147e88cd6f2e9daa
+RMD160 (suse113/i586/libasound2-1.0.23-2.12.i586.rpm) = e1f10a0cc89055a86094c6f7de9750eabcac1b09
+Size (suse113/i586/libasound2-1.0.23-2.12.i586.rpm) = 304072 bytes
+SHA1 (suse113/x86_64/alsa-1.0.23-2.12.x86_64.rpm) = a72c8c318cb1950e4bf605659ea7b96578dda99a
+RMD160 (suse113/x86_64/alsa-1.0.23-2.12.x86_64.rpm) = 949b6d3f2ac6168453343b9cd8937e0dbdc65bde
+Size (suse113/x86_64/alsa-1.0.23-2.12.x86_64.rpm) = 1141091 bytes
+SHA1 (suse113/x86_64/libasound2-1.0.23-2.12.x86_64.rpm) = 8aebb320c5a3a45b76123c90725fa4fbd50c2fc0
+RMD160 (suse113/x86_64/libasound2-1.0.23-2.12.x86_64.rpm) = e79fdb3d9d9e43f1aa6c94abd79d799e79a08aee
+Size (suse113/x86_64/libasound2-1.0.23-2.12.x86_64.rpm) = 305221 bytes
