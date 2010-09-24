@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/24 16:19:54 minskim Exp $
+share/texmf-dist/doc/latex/titleref/miscdoc.sty
+share/texmf-dist/doc/latex/titleref/titleref.pdf
+share/texmf-dist/doc/latex/titleref/titleref.tex
