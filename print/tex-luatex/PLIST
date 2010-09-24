@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/02/11 22:00:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/24 21:16:27 minskim Exp $
 bin/dviluatex
 share/texmf/tex/generic/config/luatexiniconfig.tex
+share/texmf/web2c/texmfcnf.lua
