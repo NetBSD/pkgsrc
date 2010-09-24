@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/07/23 23:17:48 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/24 18:10:46 gdt Exp $
 #
 
-DISTNAME=	pycryptopp-0.5.19
-PKGREVISION=	2
-PKGNAME=	${PYPKGPREFIX}-cryptopp-0.5.19
+VERSION=	0.5.25
+DISTNAME=	pycryptopp-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-cryptopp-${VERSION}
 CATEGORIES=	security python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pycryptopp/
 
