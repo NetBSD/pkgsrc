@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9738 2010/09/23 08:26:50 obache Exp $
+$NetBSD: TODO,v 1.9739 2010/09/24 01:39:20 chs Exp $
 
 Suggested new packages
 ======================
@@ -1166,7 +1166,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subtitleeditor-0.33.0
 	o sun-jdk6-6.0.21
 	o sun-jre6-6.0.21
-	o suse_base-11.0
 	o sympa-6.0.2
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
