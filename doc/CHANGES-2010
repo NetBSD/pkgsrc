@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3643 2010/09/24 16:40:32 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3644 2010/09/24 16:45:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4911,3 +4911,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-underscore-doc version 2010 [minskim 2010-09-24]
 	Updated print/tex-ltxmisc to 2010 [minskim 2010-09-24]
 	Updated print/tex-placeins-doc to 2.2nb1 [minskim 2010-09-24]
+	Added print/tex-printlen-doc version 1.1a [minskim 2010-09-24]
