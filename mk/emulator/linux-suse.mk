@@ -1,4 +1,4 @@
-# $NetBSD: linux-suse.mk,v 1.3 2008/03/25 13:45:39 wiz Exp $
+# $NetBSD: linux-suse.mk,v 1.4 2010/09/24 01:30:36 chs Exp $
 #
 # SuSE Linux
 #
@@ -19,16 +19,11 @@ EMUL_TYPE.linux=	suse-${SUSE_VERSION}
 # EMUL_TYPE.linux can be "suse" or "suse-[0-9]*".  If the former, then use
 # the default SuSE version, otherwise use the specific version requested.
 #
-.if !empty(EMUL_TYPE.linux:Msuse-10.0)
+.if !empty(EMUL_TYPE.linux:Msuse-10.[0x])
 .  include "${PKGSRCDIR}/emulators/suse100_linux/emulator.mk"
 
-.elif !empty(EMUL_TYPE.linux:Msuse-10.x)
-   # use the highest version of SuSE-10.x
-.  include "${PKGSRCDIR}/emulators/suse100_linux/emulator.mk"
-
-.elif !empty(EMUL_TYPE.linux:Msuse)
-   # default to highest version of SuSE
-.  include "${PKGSRCDIR}/emulators/suse100_linux/emulator.mk"
+.elif !empty(EMUL_TYPE.linux:Msuse-11.[3x])
+.  include "${PKGSRCDIR}/emulators/suse113_linux/emulator.mk"
 
 .else
 EMUL_DISTRO=		suse-0
