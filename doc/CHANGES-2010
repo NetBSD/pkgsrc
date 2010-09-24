@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3641 2010/09/24 16:30:37 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3642 2010/09/24 16:33:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-truncate-doc version 3.6 [minskim 2010-09-24]
 	Added print/tex-underscore version 2010 [minskim 2010-09-24]
 	Added print/tex-underscore-doc version 2010 [minskim 2010-09-24]
+	Updated print/tex-ltxmisc to 2010 [minskim 2010-09-24]
