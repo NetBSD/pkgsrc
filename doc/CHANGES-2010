@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3636 2010/09/24 14:18:31 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.3637 2010/09/24 15:10:44 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4828,7 +4828,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.1 [obache 2010-09-17]
 	Updated x11/ruby-gnome2-panelapplet to 0.90.1 [obache 2010-09-17]
 	Updated x11/ruby-gnome2-vte to 0.90.1 [obache 2010-09-17]
-	Updated filesystems/perfused to 20100923 [manu 2010-09-23]
+	Updated filesystems/perfuse to 20100923 [manu 2010-09-23]
 	Updated devel/p5-App-cpanminus to 1.0014 [sno 2010-09-23]
 	Updated devel/p5-autobox to 2.71 [sno 2010-09-23]
 	Updated devel/p5-Devel-TraceUse to 2.03 [sno 2010-09-23]
