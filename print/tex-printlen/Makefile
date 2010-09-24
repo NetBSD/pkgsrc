@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 00:18:19 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/24 16:46:56 minskim Exp $
 
 DISTNAME=	printlen
 PKGNAME=	tex-${DISTNAME}-1.1a
-TEXLIVE_REV=	15878
+TEXLIVE_REV=	19847
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Print lengths using specified units
