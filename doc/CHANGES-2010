@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3653 2010/09/24 21:10:14 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3654 2010/09/24 21:17:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4925,3 +4925,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/roundcube to 0.4 [pettai 2010-09-24]
 	Updated print/tex-hyph-utf8 to 2010 [minskim 2010-09-24]
 	Updated print/tex-hyph-utf8-doc to 2010 [minskim 2010-09-24]
+	Updated print/tex-luatex to 0.60.1 [minskim 2010-09-24]
+	Updated print/tex-luatex-doc to 0.60.1 [minskim 2010-09-24]
