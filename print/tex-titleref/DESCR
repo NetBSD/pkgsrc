@@ -1,0 +1,4 @@
+Defines a command \titleref that allows you to cross-reference section
+(and chapter, etc) titles and captions just like \ref and \pageref. The
+package does not interwork with hyperref; if you need hypertext
+capabilities, use nameref instead.
