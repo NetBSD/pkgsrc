@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/16 03:54:15 minskim Exp $
-# TeX Live Revision 16044
+# $NetBSD: Makefile,v 1.2 2010/09/24 21:26:28 minskim Exp $
 
 DISTNAME=	xdvi
 PKGNAME=	tex-${DISTNAME}-22.84.16
+PKGREVISION=	1
+TEXLIVE_REV=	18835
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Configuration file for xdvik
@@ -12,7 +13,7 @@ SUPERSEDES=	tex-bin-xdvi<=22.84.14.12778nb1
 
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
-TEXLIVE_IGNORE_PATTERNS=	texmf/xdvi/pixmaps texmf/xdvi/xdvi.cfg
+TEXLIVE_IGNORE_PATTERNS=	texmf/xdvi/pixmap texmf/xdvi/xdvi.cfg
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
