@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/05/17 05:23:10 minskim Exp $
-# TeX Live Revision 18137
+# $NetBSD: Makefile,v 1.5 2010/09/24 16:54:43 minskim Exp $
 
 DISTNAME=	carlisle
-PKGNAME=	tex-${DISTNAME}-2009
-PKGREVISION=	1
-DIST_SUBDIR=	${PKGBASE}-18137nb1
+PKGNAME=	tex-${DISTNAME}-2010
+TEXLIVE_REV=	18258
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX packages created by David Carlisle
