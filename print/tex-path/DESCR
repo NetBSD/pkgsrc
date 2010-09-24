@@ -1,0 +1,4 @@
+Defines a macro \path|...|, similar to the LaTeX \verb|...|, that sets
+the text in typewriter font and allows hyphen-less breaks at punctuation
+characters. The set of characters to be regarded as punctuation may be
+changed from the package's default.
