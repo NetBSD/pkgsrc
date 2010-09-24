@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/02/11 22:00:45 minskim Exp $
+$NetBSD: distinfo,v 1.4 2010/09/24 21:16:27 minskim Exp $
 
-SHA1 (tex-luatex-0.2/luatex.tar.xz) = 95c76e69b39d91c42cec4e105cdc88f7855530d9
-RMD160 (tex-luatex-0.2/luatex.tar.xz) = 172f81cd7b0c97c0a811e1d0237be23b237fc19a
-Size (tex-luatex-0.2/luatex.tar.xz) = 948 bytes
+SHA1 (tex-luatex-19324/luatex.tar.xz) = d2e5658de0c6313bff4df6f743d391acef3be281
+RMD160 (tex-luatex-19324/luatex.tar.xz) = 20dbbb99d0109618e6619a7517146ff061e76510
+Size (tex-luatex-19324/luatex.tar.xz) = 1228 bytes
