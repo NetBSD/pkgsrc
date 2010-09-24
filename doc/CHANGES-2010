@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3637 2010/09/24 15:10:44 darcy Exp $
+$NetBSD: CHANGES-2010,v 1.3638 2010/09/24 16:16:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4901,3 +4901,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/amarok to 2.3.2nb1 [wiz 2010-09-24]
 	Updated devel/autoconf to 2.68 [wiz 2010-09-24]
 	Updated mail/dovecot to 1.2.14 [ghen 2010-09-24]
+	Added print/tex-path version 3.03b [minskim 2010-09-24]
+	Added print/tex-path-doc version 3.03b [minskim 2010-09-24]
