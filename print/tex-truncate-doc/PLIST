@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/24 16:23:53 minskim Exp $
+share/texmf-dist/doc/latex/truncate/miscdoc.sty
+share/texmf-dist/doc/latex/truncate/truncate.pdf
+share/texmf-dist/doc/latex/truncate/truncate.tex
