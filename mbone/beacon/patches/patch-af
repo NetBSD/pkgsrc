@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2010/09/24 00:16:25 pettai Exp $
+
+--- Makefile.in.orig	2010-03-19 23:06:39.000000000 +0100
++++ Makefile.in	2010-03-19 23:06:58.000000000 +0100
+@@ -46,6 +46,7 @@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+ CFLAGS = @CFLAGS@
++AM_CFLAGS=	-fPIC
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
