@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.5 2009/09/09 13:04:09 obache Exp $
+# $NetBSD: linux.mk,v 1.6 2010/09/24 01:30:16 chs Exp $
 #
 # Linux binary emulation framework
 #
@@ -6,7 +6,7 @@
 .if ${OPSYS} == "Linux"
 EMUL_TYPE.linux?=	native
 .else
-EMUL_TYPE.linux?=	suse
+EMUL_TYPE.linux?=	suse-${SUSE_PREFER}
 .endif
 EMUL_MODULES.linux?=	# empty
 
@@ -50,12 +50,13 @@ _EMUL_MODULES+=		glx
 _EMUL_MODULES+=		gtk
 _EMUL_MODULES+=		gtk2
 _EMUL_MODULES+=		jpeg
+_EMUL_MODULES+=		krb5
 _EMUL_MODULES+=		libsigc++2
 _EMUL_MODULES+=		locale
 _EMUL_MODULES+=		motif
 _EMUL_MODULES+=		openssl
 _EMUL_MODULES+=		png
-_EMUL_MODULES+=		qt3
+_EMUL_MODULES+=		qt4
 _EMUL_MODULES+=		resmgr
 _EMUL_MODULES+=		slang
 _EMUL_MODULES+=		tiff
