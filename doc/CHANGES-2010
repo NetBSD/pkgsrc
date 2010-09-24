@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3652 2010/09/24 20:57:38 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3653 2010/09/24 21:10:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4923,3 +4923,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-dvipdfmx to 2010 [minskim 2010-09-24]
 	Updated print/tex-dvipdfmx-doc to 2010 [minskim 2010-09-24]
 	Updated mail/roundcube to 0.4 [pettai 2010-09-24]
+	Updated print/tex-hyph-utf8 to 2010 [minskim 2010-09-24]
+	Updated print/tex-hyph-utf8-doc to 2010 [minskim 2010-09-24]
