@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3655 2010/09/24 21:26:50 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3656 2010/09/24 21:55:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4928,3 +4928,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-luatex to 0.60.1 [minskim 2010-09-24]
 	Updated print/tex-luatex-doc to 0.60.1 [minskim 2010-09-24]
 	Updated print/tex-xdvi to 22.84.16nb1 [minskim 2010-09-24]
+	Updated print/web2c to 2010nb2 [minskim 2010-09-24]
