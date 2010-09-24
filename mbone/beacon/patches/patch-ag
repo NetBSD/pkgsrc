@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2010/09/24 00:16:25 pettai Exp $
+
+--- common/src/config.h.in.orig	2010-03-19 15:06:37.000000000 +0100
++++ common/src/config.h.in	2010-03-19 15:06:15.000000000 +0100
+@@ -48,6 +48,9 @@
+ #undef NEED_INET_PTON
+ #undef NEED_INET_NTOP
+ 
++#undef HAVE_INET_PTON
++#undef HAVE_INET_NTOP
++
+ /*
+  * If you don't have these types in <inttypes.h>, #define these to be
+  * the types you do have.
