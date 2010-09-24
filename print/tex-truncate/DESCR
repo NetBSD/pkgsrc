@@ -1,0 +1,2 @@
+The package will by default break at word boundaries, but package
+options are offered to permit breaks within words.
