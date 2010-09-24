@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.429 2010/09/24 16:25:07 minskim Exp $
+# $NetBSD: Makefile,v 1.430 2010/09/24 16:30:37 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -506,6 +506,8 @@ SUBDIR+=	tex-ukrhyph
 SUBDIR+=	tex-ukrhyph-doc
 SUBDIR+=	tex-ulem
 SUBDIR+=	tex-ulem-doc
+SUBDIR+=	tex-underscore
+SUBDIR+=	tex-underscore-doc
 SUBDIR+=	tex-url
 SUBDIR+=	tex-url-doc
 SUBDIR+=	tex-verbdef
