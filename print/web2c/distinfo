@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2010/09/13 04:09:54 minskim Exp $
+$NetBSD: distinfo,v 1.8 2010/09/24 21:54:56 minskim Exp $
 
 SHA1 (texlive-20100720-source.tar.xz) = 713b861123e3d9e073e2c93d7ed3e13262d82c34
 RMD160 (texlive-20100720-source.tar.xz) = b1120f3377ca45b4d86911b99a95c2e6e45927b5
 Size (texlive-20100720-source.tar.xz) = 33484212 bytes
-SHA1 (patch-am) = 05fca26634f16926e52820a6505dc99156dfae11
+SHA1 (patch-am) = c6c08e8c1bace8e93eb737f64f2d2f5128db0bfd

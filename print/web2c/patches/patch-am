@@ -1,7 +1,16 @@
-$NetBSD: patch-am,v 1.3 2010/09/13 04:09:54 minskim Exp $
+$NetBSD: patch-am,v 1.4 2010/09/24 21:54:57 minskim Exp $
 
 --- man/Makefile.in.orig	2010-07-06 09:17:20.000000000 +0000
 +++ man/Makefile.in
+@@ -40,7 +40,7 @@ host_triplet = @host@
+ @MP_TRUE@am__append_5 = mpost.man
+ @ETEX_TRUE@am__append_6 = etex.man
+ @PDFTEX_TRUE@am__append_7 = $(pdftex_man_sources)
+-@PDFTEX_TRUE@am__append_8 = pdftex:pdflatex
++@PDFTEX_TRUE@am__append_8 = pdftex
+ @LUATEX_TRUE@am__append_9 = luatex.man
+ @XETEX_TRUE@am__append_10 = # xetex.man
+ @OTANGLE_TRUE@am__append_11 = $(otangle_man_sources)
 @@ -308,7 +308,7 @@ x_tool_libs = @x_tool_libs@
  man_sources = $(bootstrap_man_sources) $(am__append_1) $(am__append_2) \
  	$(am__append_3) $(am__append_5) $(am__append_6) \

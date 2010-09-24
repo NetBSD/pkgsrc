@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/09/13 04:09:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/09/24 21:54:56 minskim Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -77,7 +77,6 @@ man/man1/outocp.1
 man/man1/ovf2ovp.1
 man/man1/ovp2ovf.1
 man/man1/patgen.1
-man/man1/pdflatex.1
 man/man1/pdftex.1
 man/man1/pdftosrc.1
 man/man1/pktogf.1
