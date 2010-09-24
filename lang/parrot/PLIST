@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/09/16 09:44:17 he Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/09/24 08:36:16 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -18,7 +18,6 @@ include/parrot/${PKGVERSION}/parrot/atomic/sparc.h
 include/parrot/${PKGVERSION}/parrot/caches.h
 include/parrot/${PKGVERSION}/parrot/call.h
 include/parrot/${PKGVERSION}/parrot/cclass.h
-include/parrot/${PKGVERSION}/parrot/charset.h
 include/parrot/${PKGVERSION}/parrot/compiler.h
 include/parrot/${PKGVERSION}/parrot/config.h
 include/parrot/${PKGVERSION}/parrot/context.h
@@ -40,6 +39,7 @@ include/parrot/${PKGVERSION}/parrot/global_setup.h
 include/parrot/${PKGVERSION}/parrot/has_header.h
 include/parrot/${PKGVERSION}/parrot/hash.h
 include/parrot/${PKGVERSION}/parrot/hll.h
+include/parrot/${PKGVERSION}/parrot/imageio.h
 include/parrot/${PKGVERSION}/parrot/imcc.h
 include/parrot/${PKGVERSION}/parrot/interpreter.h
 include/parrot/${PKGVERSION}/parrot/io.h
@@ -119,9 +119,10 @@ include/parrot/${PKGVERSION}/pmc/pmc_handle.h
 include/parrot/${PKGVERSION}/pmc/pmc_hash.h
 include/parrot/${PKGVERSION}/pmc/pmc_hashiterator.h
 include/parrot/${PKGVERSION}/pmc/pmc_hashiteratorkey.h
-include/parrot/${PKGVERSION}/pmc/pmc_imageio.h
+include/parrot/${PKGVERSION}/pmc/pmc_imageiofreeze.h
 include/parrot/${PKGVERSION}/pmc/pmc_imageiosize.h
 include/parrot/${PKGVERSION}/pmc/pmc_imageiostrings.h
+include/parrot/${PKGVERSION}/pmc/pmc_imageiothaw.h
 include/parrot/${PKGVERSION}/pmc/pmc_integer.h
 include/parrot/${PKGVERSION}/pmc/pmc_iterator.h
 include/parrot/${PKGVERSION}/pmc/pmc_key.h
@@ -130,6 +131,7 @@ include/parrot/${PKGVERSION}/pmc/pmc_lexpad.h
 include/parrot/${PKGVERSION}/pmc/pmc_managedstruct.h
 include/parrot/${PKGVERSION}/pmc/pmc_multisub.h
 include/parrot/${PKGVERSION}/pmc/pmc_namespace.h
+include/parrot/${PKGVERSION}/pmc/pmc_nativepccmethod.h
 include/parrot/${PKGVERSION}/pmc/pmc_nci.h
 include/parrot/${PKGVERSION}/pmc/pmc_null.h
 include/parrot/${PKGVERSION}/pmc/pmc_object.h
@@ -579,9 +581,10 @@ src/parrot/${PKGVERSION}/pmc/handle.dump
 src/parrot/${PKGVERSION}/pmc/hash.dump
 src/parrot/${PKGVERSION}/pmc/hashiterator.dump
 src/parrot/${PKGVERSION}/pmc/hashiteratorkey.dump
-src/parrot/${PKGVERSION}/pmc/imageio.dump
+src/parrot/${PKGVERSION}/pmc/imageiofreeze.dump
 src/parrot/${PKGVERSION}/pmc/imageiosize.dump
 src/parrot/${PKGVERSION}/pmc/imageiostrings.dump
+src/parrot/${PKGVERSION}/pmc/imageiothaw.dump
 src/parrot/${PKGVERSION}/pmc/integer.dump
 src/parrot/${PKGVERSION}/pmc/iterator.dump
 src/parrot/${PKGVERSION}/pmc/key.dump
@@ -590,6 +593,7 @@ src/parrot/${PKGVERSION}/pmc/lexpad.dump
 src/parrot/${PKGVERSION}/pmc/managedstruct.dump
 src/parrot/${PKGVERSION}/pmc/multisub.dump
 src/parrot/${PKGVERSION}/pmc/namespace.dump
+src/parrot/${PKGVERSION}/pmc/nativepccmethod.dump
 src/parrot/${PKGVERSION}/pmc/nci.dump
 src/parrot/${PKGVERSION}/pmc/null.dump
 src/parrot/${PKGVERSION}/pmc/object.dump
