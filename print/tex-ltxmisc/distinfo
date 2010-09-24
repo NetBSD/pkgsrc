@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/05/25 08:02:44 minskim Exp $
+$NetBSD: distinfo,v 1.4 2010/09/24 16:33:05 minskim Exp $
 
-SHA1 (tex-ltxmisc-18137/ltxmisc.tar.xz) = 51e22107f06fc9afcb72873bb9965bd5df220df2
-RMD160 (tex-ltxmisc-18137/ltxmisc.tar.xz) = 4945da49be6070cdefabad8288c4e78306280958
-Size (tex-ltxmisc-18137/ltxmisc.tar.xz) = 51108 bytes
+SHA1 (tex-ltxmisc-19851/ltxmisc.tar.xz) = 434fc6eee2a01dfc397c4ea743498a465360ef16
+RMD160 (tex-ltxmisc-19851/ltxmisc.tar.xz) = 4dda40b9682157b08a58468fa02faf6bc49551eb
+Size (tex-ltxmisc-19851/ltxmisc.tar.xz) = 40032 bytes
