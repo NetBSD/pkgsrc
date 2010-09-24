@@ -1,17 +1,18 @@
-# $NetBSD: Makefile.common,v 1.7 2010/06/25 21:56:46 joerg Exp $
+# $NetBSD: Makefile.common,v 1.8 2010/09/24 20:29:28 spz Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
 # used by net/isc-dhclient4/Makefile
 # used by net/isc-dhcrelay4/Makefile
 
-DISTNAME=		dhcp-4.1.0p1
-DHVER=			${DISTNAME:S/dhcp-//}
+DISTNAME=		dhcp-4.1.1-P1
+DHVER=			${DISTNAME:S/dhcp-//:S/-P/p/}
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.isc.org/isc/dhcp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.isc.org/sw/dhcp
+LICENSE=		isc
 
 CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
 
@@ -21,6 +22,8 @@ GNU_CONFIGURE=		yes
 DHCP_HOME?=		${VARBASE}/db/isc-dhcp
 DHCP_PID?=		${VARBASE}/run/isc-dhcp
 PKG_SYSCONFSUBDIR=	dhcp
+
+USE_LANGUAGES+=		c c++
 
 PATCHDIR=		${.CURDIR}/../isc-dhcp4/patches
 DISTINFO_FILE= 		${.CURDIR}/../isc-dhcp4/distinfo
