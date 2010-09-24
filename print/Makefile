@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.428 2010/09/24 16:21:00 minskim Exp $
+# $NetBSD: Makefile,v 1.429 2010/09/24 16:25:07 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -493,6 +493,8 @@ SUBDIR+=	tex-tools
 SUBDIR+=	tex-tools-doc
 SUBDIR+=	tex-tpslifonts
 SUBDIR+=	tex-tpslifonts-doc
+SUBDIR+=	tex-truncate
+SUBDIR+=	tex-truncate-doc
 SUBDIR+=	tex-twoinone
 SUBDIR+=	tex-twoinone-doc
 SUBDIR+=	tex-type1cm
