@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/16 17:48:36 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.2 2010/09/24 17:04:08 minskim Exp $
 
 DISTNAME=	ukrhyph.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2009
+TEXLIVE_REV=	18396
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-ukrhyph
