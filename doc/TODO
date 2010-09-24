@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9741 2010/09/24 09:19:39 wiz Exp $
+$NetBSD: TODO,v 1.9742 2010/09/24 20:31:44 spz Exp $
 
 Suggested new packages
 ======================
@@ -740,10 +740,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
-	o isc-dhclient-4.1.1p1
-	o isc-dhcpd-4.1.1p1
-	o isc-dhcpd-4.1.1p1
-	o isc-dhcrelay-4.1.1p1
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20100727
