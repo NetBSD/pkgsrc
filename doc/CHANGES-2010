@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3633 2010/09/24 09:19:38 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3634 2010/09/24 09:45:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4898,3 +4898,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added meta-pkgs/suse113 version 11.3 [chs 2010-09-24]
 	Updated audio/gmpc to 0.20.0nb2 [obache 2010-09-24]
 	Updated graphics/png to 1.4.4 [wiz 2010-09-24]
+	Updated audio/amarok to 2.3.2nb1 [wiz 2010-09-24]
