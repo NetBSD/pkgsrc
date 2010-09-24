@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3634 2010/09/24 09:45:12 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3635 2010/09/24 09:46:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4899,3 +4899,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/gmpc to 0.20.0nb2 [obache 2010-09-24]
 	Updated graphics/png to 1.4.4 [wiz 2010-09-24]
 	Updated audio/amarok to 2.3.2nb1 [wiz 2010-09-24]
+	Updated devel/autoconf to 2.68 [wiz 2010-09-24]
