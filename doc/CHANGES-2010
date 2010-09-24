@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3638 2010/09/24 16:16:13 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3639 2010/09/24 16:21:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -4903,3 +4903,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dovecot to 1.2.14 [ghen 2010-09-24]
 	Added print/tex-path version 3.03b [minskim 2010-09-24]
 	Added print/tex-path-doc version 3.03b [minskim 2010-09-24]
+	Added print/tex-titleref version 2.0 [minskim 2010-09-24]
+	Added print/tex-titleref-doc version 2.0 [minskim 2010-09-24]
