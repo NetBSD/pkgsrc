@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:28:02 chs Exp $
+
+SHA1 (suse113/i586/libpng14-14-1.4.3-2.1.i586.rpm) = e6cbc316f0998dfa52ff41a61e655df59bbcdc27
+RMD160 (suse113/i586/libpng14-14-1.4.3-2.1.i586.rpm) = 91820620a15687048051f1473716c7df9f37ecb6
+Size (suse113/i586/libpng14-14-1.4.3-2.1.i586.rpm) = 74102 bytes
+SHA1 (suse113/x86_64/libpng14-14-1.4.3-2.1.x86_64.rpm) = 8463beada974ba2ea6af7baa491ca744d6f7995f
+RMD160 (suse113/x86_64/libpng14-14-1.4.3-2.1.x86_64.rpm) = 61e299eddff9fa03ad1b45cf848ba3b90b216456
+Size (suse113/x86_64/libpng14-14-1.4.3-2.1.x86_64.rpm) = 74069 bytes
