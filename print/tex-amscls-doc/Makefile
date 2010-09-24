@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/02 16:47:23 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/09/24 20:21:00 minskim Exp $
 
 DISTNAME=	amscls.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2009
+PKGNAME=	tex-${DISTNAME:S/./-/}-2010
+TEXLIVE_REV=	18435
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-amscls

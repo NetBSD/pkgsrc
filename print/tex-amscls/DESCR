@@ -1,3 +1,5 @@
-This directory contains three AMS classes, amsart, amsbook and
-amsproc, together with some supporting material.  The material is made
-available as part of the AMS-LaTeX distribution.
+This package contains three AMS classes, amsart (for writing
+articles for the AMS), amsbook (for books) and amsproc (for
+proceedings), together with some supporting material. The
+material is made available as part of the AMS-LaTeX
+distribution.
