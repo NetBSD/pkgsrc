@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:18 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/24 16:39:59 minskim Exp $
 
 DISTNAME=	placeins.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.2
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}.2010
+PKGREVISION=	1
+TEXLIVE_REV=	19848
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-placeins
