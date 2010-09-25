@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9743 2010/09/25 00:14:53 taca Exp $
+$NetBSD: TODO,v 1.9744 2010/09/25 00:37:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -469,6 +469,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o climm-0.7.1
 	o clustalw-2.0.12 [pkg/43395]
+	o clutter-1.4.0
 	o clutter-gtk-0.10.8
 	o cmus-2.3.3
 	o colorize-0.3.4
