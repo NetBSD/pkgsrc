@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60.4.1 2010/07/04 07:20:40 agc Exp $
+# $NetBSD: Makefile,v 1.60.4.2 2010/09/25 10:02:51 tron Exp $
 
 DISTNAME=	mailman-2.1.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailman/}
 EXTRACT_SUFX=	.tgz
