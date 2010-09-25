@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3.10.1 2010/09/25 13:30:25 tron Exp $
 share/doc/tomcat/LICENSE
-share/doc/tomcat/RELEASE-NOTES
 share/doc/tomcat/NOTICE
+share/doc/tomcat/RELEASE-NOTES
 share/doc/tomcat/RUNNING.txt
 share/examples/rc.d/tomcat
 share/examples/tomcat/catalina.policy
@@ -14,9 +14,9 @@ share/examples/tomcat/web.xml
 share/tomcat/bin/bootstrap.jar
 share/tomcat/bin/catalina-tasks.xml
 share/tomcat/bin/catalina.sh
+share/tomcat/bin/commons-daemon-native.tar.gz
 share/tomcat/bin/commons-daemon.jar
 share/tomcat/bin/digest.sh
-share/tomcat/bin/jsvc.tar.gz
 share/tomcat/bin/setclasspath.sh
 share/tomcat/bin/shutdown.sh
 share/tomcat/bin/startup.sh
@@ -277,8 +277,8 @@ share/tomcat/webapps/examples/jsp/cal/cal2.jsp
 share/tomcat/webapps/examples/jsp/cal/cal2.jsp.html
 share/tomcat/webapps/examples/jsp/cal/calendar.html
 share/tomcat/webapps/examples/jsp/cal/login.html
-share/tomcat/webapps/examples/jsp/chat/chat.jsp
-share/tomcat/webapps/examples/jsp/chat/chat.jsp.html
+share/tomcat/webapps/examples/jsp/chat/index.jsp
+share/tomcat/webapps/examples/jsp/chat/index.jsp.html
 share/tomcat/webapps/examples/jsp/chat/login.jsp
 share/tomcat/webapps/examples/jsp/chat/login.jsp.html
 share/tomcat/webapps/examples/jsp/chat/post.jsp
@@ -459,6 +459,8 @@ share/tomcat/webapps/host-manager/images/void.gif
 share/tomcat/webapps/host-manager/manager.xml
 share/tomcat/webapps/manager/401.jsp
 share/tomcat/webapps/manager/META-INF/context.xml
+share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
+share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
 share/tomcat/webapps/manager/WEB-INF/web.xml
 share/tomcat/webapps/manager/images/add.gif
 share/tomcat/webapps/manager/images/asf-logo.gif
@@ -469,7 +471,5 @@ share/tomcat/webapps/manager/images/fix.gif
 share/tomcat/webapps/manager/images/tomcat.gif
 share/tomcat/webapps/manager/images/update.gif
 share/tomcat/webapps/manager/images/void.gif
-share/tomcat/webapps/manager/sessionDetail.jsp
-share/tomcat/webapps/manager/sessionsList.jsp
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
