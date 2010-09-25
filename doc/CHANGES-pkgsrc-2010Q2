@@ -125,3 +125,5 @@ Pullup ticket #3229 - requested by taca
 mail/mailman: security patch
 Pullup ticket #3230 - requested by adam
 mail/clamav: security update
+Pullup ticket #3231 - requested by spz
+apache-tomcat6: security update
