@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.8 2010/05/20 07:47:45 martti Exp $
+$NetBSD: patch-ac,v 1.8.2.1 2010/09/25 10:30:52 tron Exp $
 
 Make this pkgsrc friedly.
 
---- libclamav/c++/configure.orig	2010-05-07 21:08:04.000000000 +0300
-+++ libclamav/c++/configure	2010-05-20 10:06:33.000000000 +0300
-@@ -14504,7 +14504,7 @@
-   enable_optimized=default
- fi
- 
-- if test "x$enable_optimized" == "xno"; then
-+ if test "x$enable_optimized" = "xno"; then
-   DEBUG_BUILD_TRUE=
-   DEBUG_BUILD_FALSE='#'
- else
+--- contrib/safe_clamd/safe_clamd.orig	2010-08-25 11:26:02.000000000 +0000
++++ contrib/safe_clamd/safe_clamd
+@@ -71,7 +71,7 @@ signalClamd() {
+ 	else
+ 		echo "$CLAMDBIN is not running."
+ 	fi
+-	if [ "$1" == "TERM" ]; then
++	if [ "$1" = "TERM" ]; then
+ 		echo Exiting $0 ...
+ 		exit
+ 	fi
