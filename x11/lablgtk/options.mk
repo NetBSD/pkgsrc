@@ -1,13 +1,12 @@
-# $NetBSD: options.mk,v 1.9 2010/08/28 16:18:44 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2010/09/25 11:18:28 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk
-PKG_SUPPORTED_OPTIONS=	gnomecanvas gtksourceview gtksourceview2 gtkspell svg
-PKG_SUGGESTED_OPTIONS=	gnomecanvas gtksourceview gtksourceview2 gtkspell svg
+PKG_SUPPORTED_OPTIONS=	glade gnomecanvas gtksourceview gtksourceview2 gtkspell svg
+PKG_SUGGESTED_OPTIONS=	glade gnomecanvas gtksourceview gtksourceview2 gtkspell svg
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mglade)
-# Error: Unbound module Xml_lexer
 .include "../../devel/libglade/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-glade
 PLIST_SRC+=		PLIST.glade
