@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1.2.2 2010/09/25 10:02:52 tron Exp $
+
+* Fix for CVE-2010-3089 (XSS).
+
+--- Mailman/Utils.py.orig	2009-02-23 21:23:35.000000000 +0000
++++ Mailman/Utils.py
+@@ -908,6 +908,7 @@ _badwords = [
+     # Kludge to allow the specific tag that's in the options.html template.
+     '<link(?! rel="SHORTCUT ICON" href="<mm-favicon>">)',
+     '<meta',
++    '<object',
+     '<script',
+     r'(?:^|\W)j(?:ava)?script(?:\W|$)',
+     r'(?:^|\W)vbs(?:cript)?(?:\W|$)',
