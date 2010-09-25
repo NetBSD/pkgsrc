@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1.2.2 2010/09/25 10:02:52 tron Exp $
+
+* Fix for CVE-2010-3089 (XSS).
+
+--- Mailman/Cgi/listinfo.py.orig	2009-02-23 21:23:35.000000000 +0000
++++ Mailman/Cgi/listinfo.py
+@@ -93,7 +93,7 @@ def listinfo_overview(msg=''):
+             else:
+                 advertised.append((mlist.GetScriptURL('listinfo'),
+                                    mlist.real_name,
+-                                   mlist.description))
++                                   Utils.websafe(mlist.description)))
+     if msg:
+         greeting = FontAttr(msg, color="ff5060", size="+1")
+     else:

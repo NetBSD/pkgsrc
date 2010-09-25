@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17.10.1 2010/07/04 07:20:40 agc Exp $
+$NetBSD: distinfo,v 1.17.10.2 2010/09/25 10:02:51 tron Exp $
 
 SHA1 (mailman-2.1.12.tgz) = 6d6281f7ce322e271f0259321f4d8931ff46e6ae
 RMD160 (mailman-2.1.12.tgz) = 94d8d132bb37180bf4c02ccd2a5fb3862ce13b94
@@ -10,3 +10,5 @@ SHA1 (patch-ae) = 6c17de398014217be8f1c7a3b3a6f8d379fc0fb2
 SHA1 (patch-af) = 985a619a055151d998cefd0c1b7280a0d55f889e
 SHA1 (patch-ag) = 5fda86a90ef17a08c304ae89f0934812601d5dfc
 SHA1 (patch-ah) = c7cde35f787c003ace550a98d8d5e166ba2d48dc
+SHA1 (patch-ak) = d010a4bb1d7468ddf02ff22dbb3662a41045f8a2
+SHA1 (patch-al) = e07e6b77b4fea57683f79807ad9b9b2677e56b9e
