@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:27:52 chs Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/25 09:41:39 wiz Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
 CATEGORIES=	emulators
@@ -49,6 +49,7 @@ LINUX_LDD=		${EMULDIR}/usr/bin/ldd
 LINUX_LDCONFIG=		${EMULDIR}/usr/sbin/ldconfig
 
 INSTALLATION_DIRS+=	${EMULDIR}/etc ${EMULDIR}/dev/shm ${EMULDIR}/var/lock
+INSTALLATION_DIRS+=	sbin
 OWN_DIRS+=		${EMULSUBDIR}
 
 SUBST_CLASSES+=		suse
