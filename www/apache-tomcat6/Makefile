@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/19 13:00:28 joerg Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2010/09/25 13:30:25 tron Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -22,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-TOMCAT_VER=		6.0.24
+TOMCAT_VER=		6.0.29
 TOMCAT_HOME=		${PREFIX}/share/tomcat
 EGDIR=			${PREFIX}/share/examples/tomcat
 DOCDIR=			${PREFIX}/share/doc/tomcat
@@ -64,24 +64,24 @@ OWN_DIRS_PERMS+=	${TOMCAT_HOME}/${d} ${TOMCAT_USER} ${TOMCAT_GROUP} 0755
 INSTALLATION_DIRS+=	${TOMCAT_HOME} ${EGDIR} ${DOCDIR}
 
 do-install:
-.	for d in ${WORK_DIRS}
-		${RM} -rf ${WRKSRC}/${d}
-.	endfor
+.for d in ${WORK_DIRS}
+	${RM} -rf ${WRKSRC}/${d}
+.endfor
 
-.	for f in ${DOCFILES}
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
-		${RM} -f ${WRKSRC}/${f}
-.	endfor
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
+	${RM} -f ${WRKSRC}/${f}
+.endfor
 
-.	for f in ${PRIVATE_EGFILES}
-		${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
-		${RM} -f ${WRKSRC}/conf/${f}
-.	endfor
+.for f in ${PRIVATE_EGFILES}
+	${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
+	${RM} -f ${WRKSRC}/conf/${f}
+.endfor
 
-.	for f in ${PUBLIC_EGFILES}
-		${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
-		${RM} -f ${WRKSRC}/conf/${f}
-.	endfor
+.for f in ${PUBLIC_EGFILES}
+	${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
+	${RM} -f ${WRKSRC}/conf/${f}
+.endfor
 
 	${FIND} ${WRKSRC} -name \*.exe -type f -print | ${XARGS} ${RM} -f
 	${FIND} ${WRKSRC} -name \*.bat -type f -print | ${XARGS} ${RM} -f
