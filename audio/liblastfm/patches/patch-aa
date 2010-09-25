@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2010/09/25 10:16:46 wiz Exp $
+
+ruby-1.9 doesn't have "." in default search path.
+
+--- admin/qpp.orig	2010-09-11 14:16:54.000000000 +0000
++++ admin/qpp
+@@ -3,6 +3,7 @@
+ # RESOURCES under each argument to ARGV as directories
+ 
+ cwd=File.dirname __FILE__
++$:.push(".")
+ require 'find'
+ require "#{cwd}/findsrc"
+ 
