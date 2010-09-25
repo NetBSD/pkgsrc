@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/09/17 08:04:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/25 09:39:32 wiz Exp $
 #
 
 DISTNAME=	mxcl-liblastfm-0.3.2-0-gc64ed83
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/mxcl-liblastfm-3539836
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bash gmake perl pkg-config
+USE_TOOLS+=		bash gmake pkg-config
 PREPEND_PATH+=		${QTDIR}/bin
 
 HAS_CONFIGURE=		yes
@@ -26,14 +26,13 @@ CONFIGURE_ARGS+=	--prefix ${PREFIX}
 #CPPFLAGS+=		-fPIC
 CONFIG_SHELL=		${RUBY}
 
-REPLACE_PERL=		admin/findsrc
-
-REPLACE_RUBY+=		admin/which_qmake.rb
-REPLACE_RUBY+=		admin/lastfm.h.rb
 REPLACE_RUBY+=		admin/Makefile.rb
+REPLACE_RUBY+=		admin/findsrc.rb
+REPLACE_RUBY+=		admin/lastfm.h.rb
 REPLACE_RUBY+=		admin/platform.rb
-REPLACE_RUBY+=		admin/utils.rb
 REPLACE_RUBY+=		admin/qpp
+REPLACE_RUBY+=		admin/utils.rb
+REPLACE_RUBY+=		admin/which_qmake.rb
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
