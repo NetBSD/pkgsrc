@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3659 2010/09/25 05:42:51 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3660 2010/09/25 09:37:04 tron Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4936,3 +4936,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/mailman to 2.1.12nb2 [taca 2010-09-24]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2010Q3 branch [agc 2010-09-24]
 	Updated www/contao29-translations to 20100924 [taca 2010-09-25]
+	Updated print/tex-hyperref to 6.81pnb1 [tron 2010-09-25]
