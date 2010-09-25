@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/09/14 11:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/25 12:29:01 wiz Exp $
 #
 
 DISTNAME=	geeqie-1.0
@@ -20,6 +20,9 @@ USE_TOOLS=		bash:run gmake intltool msgfmt pkg-config
 REPLACE_BASH=		plugins/rotate/geeqie-rotate
 REPLACE_BASH+=		plugins/ufraw/geeqie-ufraw
 REPLACE_BASH+=		plugins/import/geeqie-import
+
+post-build:
+	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
 
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
