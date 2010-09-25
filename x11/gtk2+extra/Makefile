@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/09/14 11:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/25 08:45:33 obache Exp $
 #
 
 DISTNAME=	gtk+extra-2.1.2
@@ -19,6 +19,10 @@ GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	gtkextra-2.0.pc.in
+
+# avoid possibility of unwanted glib-genmarshal
+post-extract:
+	${TOUCH} ${WRKSRC}/gtkextra/gtkextra-marshal.c
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
