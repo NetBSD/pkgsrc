@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2010/09/25 10:16:46 wiz Exp $
+
+ruby-1.9 doesn't have "." in default search path.
+
+--- admin/Makefile.rb.orig	2010-09-25 10:12:30.000000000 +0000
++++ admin/Makefile.rb
+@@ -5,6 +5,7 @@
+ # class names in there which #include the file that contains the class
+ 
+ cwd = File.dirname( __FILE__ )
++$:.push(".")
+ require 'find'
+ require "#{cwd}/platform.rb"
+ 
