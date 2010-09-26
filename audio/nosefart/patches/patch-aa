@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/12/03 13:02:18 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2010/09/26 08:11:22 obache Exp $
 
---- Makefile.orig	Thu Aug 12 17:19:33 2004
-+++ Makefile	Thu Dec  2 00:52:22 2004
+--- Makefile.orig	2004-08-13 00:19:33.000000000 +0000
++++ Makefile
 @@ -1,9 +1,9 @@
  ################################
  # Configuration
@@ -15,3 +15,12 @@ $NetBSD: patch-aa,v 1.2 2004/12/03 13:02:18 wiz Exp $
  PREFIX = /usr
  WANT_DEBUG=TRUE
  
+@@ -83,7 +83,7 @@ $(BUILDTOP)/config.h: $(BUILDDIR) Makefi
+ $(BUILDDIR)/dep: $(BUILDTOP)/config.h
+ 	$(CC) $(NSFINFO_CFLAGS) $(CFLAGS) -M $(SOURCES) > $@
+ 
+--include $(BUILDDIR)/dep/
++-include $(BUILDDIR)/dep
+ 
+ install: all
+ 	mkdir -p $(PREFIX)/bin
