@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2010/09/10 06:40:06 taca Exp $
+# $NetBSD: Makefile,v 1.24 2010/09/26 07:09:59 obache Exp $
 #
 
-DISTNAME=	rabbit-0.6.5
+DISTNAME=	rabbit-0.9.0
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://www.cozmixng.org/~kou/download/
 

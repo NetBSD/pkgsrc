@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2010/08/01 12:37:18 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/09/26 07:09:59 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
 bin/rabbit-theme-manager
-bin/rabbitter
+bin/rabbiter
 bin/rabrick
 ${RUBY_VENDORLIB}/rabbit/action.rb
 ${RUBY_VENDORLIB}/rabbit/action/basic.rb
@@ -54,6 +54,7 @@ ${RUBY_VENDORLIB}/rabbit/element/slide-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/slide.rb
 ${RUBY_VENDORLIB}/rabbit/element/table.rb
 ${RUBY_VENDORLIB}/rabbit/element/tag.rb
+${RUBY_VENDORLIB}/rabbit/element/text-block-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/text-container-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/text-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/text-renderer.rb
@@ -363,6 +364,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/slide-show/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-show/slide-show.rb
 ${RUBY_VENDORLIB}/rabbit/theme/table/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/table/table.rb
+${RUBY_VENDORLIB}/rabbit/theme/tag/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/tag/tag.rb
 ${RUBY_VENDORLIB}/rabbit/theme/timer/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/timer/timer.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-background-color/property.rb
