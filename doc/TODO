@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9745 2010/09/25 11:19:24 tron Exp $
+$NetBSD: TODO,v 1.9746 2010/09/26 12:59:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,7 +334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GutenMark-20090216
-	o ImageMagick-6.6.4.4
+	o ImageMagick-6.6.4.7
 	o MAMEDiff-2.30
 	o Mesa-7.8.2
 	o MesaLib-7.8.0
@@ -448,7 +448,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.19
+	o calibre-0.7.20
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1
@@ -610,6 +610,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gawk-3.1.8
 	o gbdfed-1.6
+	o gbrainy-1.52
 	o gcal-3.6
 	o gcc-4.5.1
 	o gcin-1.5.5
@@ -659,6 +660,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.30.0 [GNOME 2.30]
 	o gnome-packagekit-2.30.3 [GNOME 2.30]
+	o gnome-pilot-2.32.0
 	o gnome-power-manager-2.30.1 [GNOME 2.30]
 	o gnome-session-2.30.2 [GNOME 2.30, wants DeviceKit-power]
 	o gnome-subtitles-1.0
@@ -761,6 +763,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o john-1.7.6
 	o jools-1.0
 	o jpilot-1.8.0
+	o json-glib-0.12.0
 	o k3b-2.0
 	o kadu-0.6.5
 	o kaffe-1.1.9
@@ -771,7 +774,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kde4-4.5.1
 	o kdevelop-4.0.2
 	o kdrill-6.5
-	o kid3-1.4
+	o kid3-1.5
 	o kipi-plugins-1.4.0
 	o kismet-2010.07r1
 	o kmess-1.5.1
@@ -811,6 +814,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.0.11 [GNOME 2.30]
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
+	o libgsf-1.14.19
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
@@ -833,9 +837,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh-0.4.6
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
+	o libtasn1-2.8
 	o libtcl-nothread-8.5.1
-	o libtool-2.2.10
-	o libtool-base-2.2.10
+	o libtool-2.4
+	o libtool-base-2.4
+	o libtool-info-2.4
 	o libusb-1.0
 	o libv4l-0.8.1
 	o libvdpau-0.4.1
@@ -976,7 +982,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
-	o p5-PerlMagick-6.6.4.4
+	o p5-PerlMagick-6.6.4.7
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1001,6 +1007,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
+	o php-libawl-0.45
 	o phpmyadmin-3.3.7
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1049,6 +1056,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
+	o py-gtk2-2.22.0
 	o py-gtksourceview-2.10.1
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
