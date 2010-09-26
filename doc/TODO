@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9746 2010/09/26 12:59:54 wiz Exp $
+$NetBSD: TODO,v 1.9747 2010/09/26 16:00:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -497,9 +497,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.3.10
 	o darcs-2.4
 	o dasher-4.11
-	o davical-0.9.9.2
+	o davical-0.9.9.3
 	o dbench-4.0
 	o dbus-1.2.24 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
+	o dbus-1.4.0
 	o dbxml-2.5.13
 	o dd_rescue-1.20
 	o ddclient-3.7.3
@@ -1280,7 +1281,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o x11perf-1.5.2
-	o x264-devel-20100918
+	o x264-devel-20100925
 	o xanalyser-1.30
 	o xapian-1.2.2
 	o xapian-omega-1.2.2
