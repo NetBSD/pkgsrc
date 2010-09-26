@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2004/11/12 06:39:20 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2010/09/26 11:27:21 obache Exp $
 
 --- src/gcc-libtool.mak.orig	2004-01-04 10:44:33.000000000 +0100
 +++ src/gcc-libtool.mak
@@ -23,9 +23,9 @@ $NetBSD: patch-aa,v 1.5 2004/11/12 06:39:20 jlam Exp $
 +# guts for common stuff
 +#
 +#
-+LINK=$(LIBTOOL) $(CXX) $(LDFLAGS) -o
++LINK=$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o
 +# 2.95 flag
-+DYN_LINK=$(LIBTOOL) $(CXX) $(LDFLAGS) -rpath $(PREFIX)/lib -version-info $(VERSION_MAJOR):$(VERSION_MINOR) -shared -o
++DYN_LINK=$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -rpath $(PREFIX)/lib -version-info $(VERSION_MAJOR):$(VERSION_MINOR) -shared -o
 +
 +OBJEXT=lo
 +DYNEXT=la
