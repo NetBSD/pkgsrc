@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3662 2010/09/25 11:19:24 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3663 2010/09/26 07:10:16 obache Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4939,3 +4939,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyperref to 6.81pnb1 [tron 2010-09-25]
 	Updated x11/lablgtk to 2.14.2nb1 [obache 2010-09-25]
 	Updated net/wireshark to 1.4.0 [tron 2010-09-25]
+	Updated graphics/rabbit to 0.9.0 [obache 2010-09-26]
