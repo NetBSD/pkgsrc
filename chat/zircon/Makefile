@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/04/27 18:14:03 frueauf Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/26 08:47:59 obache Exp $
 #
 
 DISTNAME=	zircon-1.18.245
@@ -9,18 +9,20 @@ MASTER_SITES=	ftp://catless.ncl.ac.uk/pub/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://catless.ncl.ac.uk/Programs/Zircon/
 COMMENT=	X11 interface to Internet Relay Chat
+LICENSE=	original-bsd
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INTERACTIVE_STAGE=	install
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-post-patch:
-	@${MV} ${WRKSRC}/installer/unix.tcl ${WRKSRC}/installer/unix.tcl.bak
-	@${SED} -e 's|@@@PREFIX@@@|${PREFIX}|g' \
-		< ${WRKSRC}/installer/unix.tcl.bak \
-		> ${WRKSRC}/installer/unix.tcl
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_FILES.prefix=	installer/unix.tcl
+SUBST_VARS.prefix=	PREFIX
 
 do-install:
 	@${ECHO} ""
