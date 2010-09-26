@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3663 2010/09/26 07:10:16 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3664 2010/09/26 13:17:13 taca Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4940,3 +4940,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/lablgtk to 2.14.2nb1 [obache 2010-09-25]
 	Updated net/wireshark to 1.4.0 [tron 2010-09-25]
 	Updated graphics/rabbit to 0.9.0 [obache 2010-09-26]
+	Updated lang/ruby19-base to 1.9.2pl0nb1 [taca 2010-09-26]
