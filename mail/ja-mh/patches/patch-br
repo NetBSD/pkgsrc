@@ -1,4 +1,6 @@
-$NetBSD: patch-br,v 1.1 2009/12/25 13:55:12 taca Exp $
+$NetBSD: patch-br,v 1.2 2010/09/27 12:01:49 taca Exp $
+
+* Fix confilct with getline(3).
 
 --- support/pop/popser.c.orig	1999-02-09 11:30:00.000000000 +0000
 +++ support/pop/popser.c
