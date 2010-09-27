@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/06/13 22:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/09/27 11:15:22 obache Exp $
 #
 
 DISTNAME=	fuppes-0.640
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
-USE_TOOLS+=	autoconf automake aclocal m4 autoreconf
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--enable-faad
@@ -23,11 +22,6 @@ CONFIGURE_ARGS+=	--enable-mad
 CONFIGURE_ARGS+=	--enable-lame
 
 .include "options.mk"
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -i
-
-BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
