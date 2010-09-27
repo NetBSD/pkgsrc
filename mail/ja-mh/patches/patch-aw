@@ -1,4 +1,6 @@
-$NetBSD: patch-aw,v 1.1 2004/11/29 05:09:43 taca Exp $
+$NetBSD: patch-aw,v 1.2 2010/09/27 12:01:49 taca Exp $
+
+* Don't ignore error.
 
 --- conf/makefiles/MH-Makefile.orig	1999-02-09 20:30:00.000000000 +0900
 +++ conf/makefiles/MH-Makefile
