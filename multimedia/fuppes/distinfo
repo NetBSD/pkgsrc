@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.3 2009/11/28 19:31:29 kefren Exp $
+$NetBSD: distinfo,v 1.4 2010/09/27 11:15:23 obache Exp $
 
 SHA1 (fuppes-0.640.tar.gz) = 51d7a3491a36969d8cd3d373a20f237600ab60fd
 RMD160 (fuppes-0.640.tar.gz) = 65e76c607056c9e6c975c960cc2aeaec4d37446c
 Size (fuppes-0.640.tar.gz) = 641228 bytes
-SHA1 (patch-aa) = 0956c0f509d6590f9a2c9d2cf1e34600773531c3
 SHA1 (patch-ab) = 884a4130fc15f31a495db69100e1769e2c5c2787
 SHA1 (patch-ac) = 8359d390b4a3d9963240bb6bb3c467382cef6272
 SHA1 (patch-ad) = 8602a0684e2a764810fa667d11f4339adb1bef98
