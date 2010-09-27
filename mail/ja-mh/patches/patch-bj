@@ -1,4 +1,6 @@
-$NetBSD: patch-bj,v 1.1 2006/07/21 16:43:57 minskim Exp $
+$NetBSD: patch-bj,v 1.2 2010/09/27 12:01:49 taca Exp $
+
+* Make it build on Linux by conditionally removing conflicting declarations.
 
 --- h/strings.h.orig	2001-04-02 10:35:24.000000000 +0000
 +++ h/strings.h

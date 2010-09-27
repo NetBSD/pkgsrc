@@ -1,0 +1,14 @@
+$NetBSD: patch-ca,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* Include a proper header file.
+
+--- zotnet/tws/date.c.orig	1993-12-01 04:01:43.000000000 +0000
++++ zotnet/tws/date.c
+@@ -1,6 +1,7 @@
+ /* date.c */
+ 
+ #include "tws.h"
++#include <stdlib.h>
+ #include <stdio.h>
+ 
+ 

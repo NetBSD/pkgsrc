@@ -1,0 +1,20 @@
+$NetBSD: patch-by,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* Use getcwd for BSD44.
+
+--- sbr/pwd.c.orig	2001-04-02 10:46:53.000000000 +0000
++++ sbr/pwd.c
+@@ -36,8 +36,13 @@ char   *pwd () {
+ 	admonish (NULL, "unable to determine working directory");
+ #endif	/* SYS5DIR */
+ #else	/* BSD42 */
++#ifndef	BSD44
+     if (getwd (curwd) == 0) {
+ 	admonish (NULLCP, "unable to determine working directory: %s", curwd);
++#else
++    if (getcwd (curwd, MAXPATHLEN) == NULL) {
++	admonish (NULL, "unable to determine working directory");
++#endif
+ #endif	/* BSD42 */
+ 	if (mypath == NULL
+ 		|| *mypath == 0

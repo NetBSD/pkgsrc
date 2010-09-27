@@ -1,0 +1,39 @@
+$NetBSD: patch-bz,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* Change m_tmpfil to avoid to use mktemp(3).
+
+--- uip/distsbr.c.orig	1993-12-01 04:01:35.000000000 +0000
++++ uip/distsbr.c
+@@ -150,15 +150,10 @@ register char   *msgnam;
+ 
+     if ((ifp = fopen (msgnam, "r")) == NULL)
+ 	adios (msgnam, "unable to open message");
+-
+-    (void) strcpy (tmpfil, m_tmpfil ("dist"));
+-    if ((hdrfd = creat (tmpfil, 0600)) == NOTOK)
+-	adios (tmpfil, "unable to create temporary file");
+-    (void) close (hdrfd);
+-    if ((hdrfd = open (tmpfil, 2)) == NOTOK)
+-	adios (tmpfil, "unable to re-open temporary file");
++    
++    (void) strcpy (tmpfil, m_tmpfil("dist", &hdrfd));
+     if ((out = dup (hdrfd)) == NOTOK
+-	    || (ofp = fdopen (out, "w")) == NULL)
++	   || (ofp = fdopen (out, "w")) == NULL)
+ 	adios (NULLCP, "no file descriptors -- you lose big");
+     (void) unlink (tmpfil);
+ 
+@@ -186,12 +181,7 @@ register char   *msgnam;
+ 	    case BODYEOF: 
+ 		(void) fclose (ofp);
+ 
+-		(void) strcpy (tmpfil, m_tmpfil ("dist"));
+-		if ((txtfd = creat (tmpfil, 0600)) == NOTOK)
+-		    adios (tmpfil, "unable to create temporary file");
+-		(void) close (txtfd);
+-		if ((txtfd = open (tmpfil, 2)) == NOTOK)
+-		    adios (tmpfil, "unable to re-open temporary file");
++		(void) strcpy (tmpfil, m_tmpfil("dist", &txtfd));
+ 		if ((out = dup (txtfd)) == NOTOK
+ 			|| (ofp = fdopen (out, "w")) == NULL)
+ 		    adios (NULLCP, "no file descriptors -- you lose big");

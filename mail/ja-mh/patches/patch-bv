@@ -1,0 +1,26 @@
+$NetBSD: patch-bv,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* Change m_tmpfil to avoid to use mktemp(3).
+
+--- sbr/m_tmpfil.c.orig	1993-12-01 04:01:25.000000000 +0000
++++ sbr/m_tmpfil.c
+@@ -2,15 +2,17 @@
+ 
+ #include "../h/mh.h"
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ 
+-char   *m_tmpfil (template)
++char   *m_tmpfil (template, fd)
+ register char  *template;
++int *fd;
+ {
+     static char tmpfil[BUFSIZ];
+ 
+     (void) sprintf (tmpfil, "/tmp/%sXXXXXX", template);
+-    (void) unlink (mktemp (tmpfil));
++    *fd = mkstemp(tmpfil);
+ 
+     return tmpfil;
+ }
