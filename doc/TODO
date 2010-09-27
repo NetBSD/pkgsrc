@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9748 2010/09/26 21:46:31 wiz Exp $
+$NetBSD: TODO,v 1.9749 2010/09/27 20:04:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -305,7 +305,7 @@ Suggested new packages
 	Open source batch jobs resource manager, successor to OpenPBS.
 
 	Missing xorg packages
-	font-bitstream-speedo, oclock,
+	font-bitstream-speedo, oclock, xstdcmap,
 	libWindowsWM, libXfontcache, util-macros, viewres, windowswmproto,
 	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
 	xf86-input-joystick, xf86-input-synaptics, xf86-input-wacom,
@@ -409,7 +409,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
 	o asymptote-2.04
+	o at-spi-1.32.0
 	o aterm-1.0.1
+	o atk-1.32.0
 	o auctex-11.86
 	o audacious-plugins-2.4.0
 	o autoconvert-0.3.16
@@ -563,7 +565,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eukleides-1.5.4
 	o evolution-couchdb-0.4.5
 	o evolution-exchange-2.30.3
-	o evolution-mapi-0.30.3 [GNOME 2.30]
+	o evolution-mapi-0.32.0 [GNOME 2.32]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.1
@@ -612,6 +614,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gbdfed-1.6
 	o gbrainy-1.52
 	o gcal-3.6
+	o gcalctool-5.32.0
 	o gcc-4.5.1
 	o gcin-1.5.5
 	o gcombust-0.1.55
@@ -650,21 +653,29 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.30
+	o gnome-applets-2.32.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
-	o gnome-color-manager-2.30.2 [GNOME 2.30]
+	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-commander-1.2.8.8
+	o gnome-control-center-2.32.0
+	o gnome-desktop-2.32.0
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
+	o gnome-games-2.32.0
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-menus-2.30.3
+	o gnome-menus-2.30.4
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.30.0 [GNOME 2.30]
 	o gnome-packagekit-2.30.3 [GNOME 2.30]
 	o gnome-pilot-2.32.0
 	o gnome-power-manager-2.30.1 [GNOME 2.30]
+	o gnome-power-manager-2.32.0
 	o gnome-session-2.30.2 [GNOME 2.30, wants DeviceKit-power]
+	o gnome-session-2.32.0
+	o gnome-settings-daemon-2.32.0
 	o gnome-subtitles-1.0
 	o gnome-system-tools-2.30.2 [GNOME 2.30]
+	o gnome-terminal-2.32.0
 	o gnome-user-docs-2.30.0 [GNOME 2.30]
 	o gnome-user-share-2.30.0 [GNOME 2.30]
 	o gnomeicu-0.99.14
@@ -699,6 +710,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
+	o gucharmap-2.32.0
 	o guile-gtk-2.0
 	o gupnp-0.14.0
 	o gwaei-1.4.2
@@ -706,7 +718,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gzip-1.4
 	o hackbot-2.21
 	o hal-0.5.14
-	o hamster-applet-2.30.2 [GNOME 2.30]
+	o hamster-applet-2.32.0 [GNOME 2.32]
 	o hanzim-3.2
 	o haskell-mode-1.45
 	o hatari-1.4.0
@@ -805,13 +817,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lftp-4.0.10
 	o libX11-1.3.6
 	o libXext-1.1.2
+	o libbonobo-2.32.0
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.21
 	o libesmtp-1.0.6
 	o libextractor-0.6.2
 	o libflash-0.4.13
-	o libgda-4.0.11 [GNOME 2.30]
+	o libgda-4.2.0 [GNOME 2.32]
 	o libgee-0.6.0
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
@@ -834,7 +847,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.0
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o librep-0.90.6
+	o librep-0.91.0
+	o librsvg2-2.32.0
 	o libssh-0.4.6
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
@@ -846,6 +860,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libusb-1.0
 	o libv4l-0.8.1
 	o libvdpau-0.4.1
+	o libwnck-2.30.5
 	o libxml++-2.30.1 [GNOME 2.30]
 	o licq-1.3.8
 	o lighttpd-1.4.28
@@ -861,7 +876,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lq-sp-1.3.4.13
 	o ltris-1.0.15
 	o lwm-1.2.2
-	o lzip-1.10
+	o lzip-1.11
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
@@ -875,7 +890,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mathomatic-15.2.1
 	o mawk-1.3.4.20100625
 	o mc-4.7.0.9
-	o mdocml-1.10.5
+	o mdocml-1.10.6
 	o mediatomb-0.12.1
 	o memconf-2.9 [pkg/40201]
 	o memtester-4.2.0
@@ -1090,7 +1105,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdp-1.6
 	o redland-1.0.11
 	o renderproto-0.11.1
-	o rep-gtk-0.90.3
+	o rep-gtk-0.90.4
 	o resize_image-0.7
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
@@ -1257,6 +1272,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vorbis-tools-1.4.0
 	o vp-1.6
 	o vsftpd-2.3.1
+	o vte-0.26.0
 	o vttest-20100830
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1337,6 +1353,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86dgaproto-2.1
 	o xfce4-volman-0.3.80
 	o xfe-1.32.1
+	o xfontsel-1.0.3
 	o xforms-1.0.93sp1
 	o xfstt-1.7
 	o xhippo-3.5
@@ -1379,6 +1396,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsane-0.99.6
 	o xscope-1.2 [unpackaged]
 	o xsd-3.3.0
+	o xsm-1.0.2
 	o xsoldier-1.4
 	o xterm-262
 	o xtraceroute-0.9.1
@@ -1387,6 +1405,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xtux-20030306
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.25.5
+	o xwininfo-1.1.0
 	o xwpe-1.5.30a
 	o xz-4.999.9124
 	o xzip-182
