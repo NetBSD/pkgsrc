@@ -1,4 +1,6 @@
-$NetBSD: patch-bq,v 1.1 2009/12/25 13:55:12 taca Exp $
+$NetBSD: patch-bq,v 1.2 2010/09/27 12:01:49 taca Exp $
+
+* Use standard strdup(3).
 
 --- conf/mhconfig.c.orig	2001-05-29 15:04:36.000000000 +0000
 +++ conf/mhconfig.c

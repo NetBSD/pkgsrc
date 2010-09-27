@@ -1,0 +1,13 @@
+$NetBSD: patch-bx,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* Include a proper header file.
+
+--- sbr/printsw.c.orig	1993-12-01 04:01:26.000000000 +0000
++++ sbr/printsw.c
+@@ -1,5 +1,6 @@
+ /* printsw.c - print switches */
+ 
++#include <stdio.h>
+ #include "../h/mh.h"
+ 
+ 
