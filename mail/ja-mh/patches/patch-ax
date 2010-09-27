@@ -1,4 +1,7 @@
-$NetBSD: patch-ax,v 1.2 2009/12/25 13:55:12 taca Exp $
+$NetBSD: patch-ax,v 1.3 2010/09/27 12:01:49 taca Exp $
+
+* Don't declare errno.
+* Fix confilct with getline(3).
 
 --- uip/popsbr.c.orig	2001-04-02 10:50:01.000000000 +0000
 +++ uip/popsbr.c

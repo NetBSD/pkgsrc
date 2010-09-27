@@ -1,0 +1,15 @@
+$NetBSD: patch-bu,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* Change m_tmpfil to avoid to use mktemp(3).
+
+--- sbr/llib-lmh.orig	1993-12-01 04:01:23.000000000 +0000
++++ sbr/llib-lmh
+@@ -93,7 +93,7 @@ void	m_setcur(m,i) struct msgs *m; { m_s
+ void	m_setseq(m) struct msgs *m; { m_setseq(m); }
+ void	m_setvis(m,s) struct msgs *m; { m_setvis(m,s); }
+ void	m_sync(m) struct msgs *m; { m_sync(m); }
+-char   *m_tmpfil(t) char *t; { return m_tmpfil (t); }
++char   *m_tmpfil(t, int) char *t; int *fd; { return m_tmpfil (t, fd); }
+ void	m_unknown(f) FILE *f; { m_unknown(f); }
+ void	m_update() { m_update(); }
+ int     m_whatnow(e,n,u,f,a,d,m,t,i,c) struct msgs *m; char *e,*f,*a,*t,*c;

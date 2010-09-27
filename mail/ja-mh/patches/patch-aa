@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2005/03/15 14:05:52 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2010/09/27 12:01:49 taca Exp $
+
+* Proper integer size.
 
 --- h/md5.h.orig	1999-02-09 12:30:00.000000000 +0100
 +++ h/md5.h

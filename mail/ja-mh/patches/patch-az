@@ -1,4 +1,6 @@
-$NetBSD: patch-az,v 1.1 2006/04/11 15:08:38 joerg Exp $
+$NetBSD: patch-az,v 1.2 2010/09/27 12:01:49 taca Exp $
+
+* Don't declare errno but include <errno.h>.
 
 --- uip/ftpsbr.c.orig	2006-04-11 14:28:22.000000000 +0000
 +++ uip/ftpsbr.c

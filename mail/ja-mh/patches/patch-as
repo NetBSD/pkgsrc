@@ -1,4 +1,6 @@
-$NetBSD: patch-as,v 1.2 2004/11/29 05:09:43 taca Exp $
+$NetBSD: patch-as,v 1.3 2010/09/27 12:01:49 taca Exp $
+
+* Use stdarg(3) not varargs(3).
 
 --- sbr/concat.c.orig	1993-12-01 13:01:21.000000000 +0900
 +++ sbr/concat.c

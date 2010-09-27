@@ -1,4 +1,6 @@
-$NetBSD: patch-bl,v 1.1 2009/12/25 13:55:12 taca Exp $
+$NetBSD: patch-bl,v 1.2 2010/09/27 12:01:49 taca Exp $
+
+* Nuke removing existing files.
 
 --- conf/makefiles/support/bboards.orig	2001-06-11 01:25:43.000000000 +0000
 +++ conf/makefiles/support/bboards

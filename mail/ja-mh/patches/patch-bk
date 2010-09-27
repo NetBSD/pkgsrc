@@ -1,4 +1,6 @@
-$NetBSD: patch-bk,v 1.1 2009/12/25 13:55:12 taca Exp $
+$NetBSD: patch-bk,v 1.2 2010/09/27 12:01:49 taca Exp $
+
+* Nuke removing existing files.
 
 --- conf/makefiles/doc.orig	1999-02-09 11:30:00.000000000 +0000
 +++ conf/makefiles/doc
