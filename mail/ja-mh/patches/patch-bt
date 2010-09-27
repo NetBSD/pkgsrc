@@ -1,0 +1,16 @@
+$NetBSD: patch-bt,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* set TERMINFO as options.
+
+--- conf/MH.in.orig	2001-06-13 14:28:26.000000000 +0000
++++ conf/MH.in
+@@ -41,7 +41,8 @@ options	@CONTENT_LENGTH@ @DBMPWD@ @FCNTL
+ options	@LIBLOCKFILE@ @LOCKF@ @MAILLOCK@ @NCURSES@ @NDIR@ @NFS@ @NOIOCTLH@
+ options	@NORUSERPASS@ @NTOHLSWAP@ @POSIX@ @READLINE@ @RENAME@ @SETEUID@ @SETMG@
+ options	@SETREUID@ @SHADOW@ @SIGEMT@ @SOCKETS@ @SOLARIS@ @SUN40@ @SYS5@
+-options	@SYS5DIR@ @SVR4@ @TZNAME@ @UNISTD@ @V7@ @VSPRINTF@ @WAITINT@ @ZONEINFO@
++options	@SYS5DIR@ @SVR4@ @TERMINFO@ @TZNAME@ @UNISTD@ @V7@ @VSPRINTF@
++options @WAITINT@ @ZONEINFO@
+ 
+ # POP support
+ pop	@pop@

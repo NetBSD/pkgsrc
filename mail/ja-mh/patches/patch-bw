@@ -1,0 +1,14 @@
+$NetBSD: patch-bw,v 1.1 2010/09/27 12:01:49 taca Exp $
+
+* Include a proper header file.
+
+--- sbr/m_update.c.orig	1998-04-23 21:02:00.000000000 +0000
++++ sbr/m_update.c
+@@ -5,6 +5,7 @@ static char ident[] = "@(#)$Id: m_update
+ 
+ #include "../h/mh.h"
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <signal.h>
+ #ifndef	sigmask
+ #define	sigmask(s)	(1 << ((s) - 1))
