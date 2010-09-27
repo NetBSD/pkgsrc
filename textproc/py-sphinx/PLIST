@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/08/22 21:03:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/09/27 10:29:22 adam Exp $
 bin/sphinx-autogen
 bin/sphinx-build
 bin/sphinx-quickstart
@@ -159,6 +159,9 @@ ${PYSITELIB}/sphinx/jinja2glue.pyo
 ${PYSITELIB}/sphinx/locale/__init__.py
 ${PYSITELIB}/sphinx/locale/__init__.pyc
 ${PYSITELIB}/sphinx/locale/__init__.pyo
+${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/ca/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/ca/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/ca/LC_MESSAGES/sphinx.po
@@ -361,6 +364,9 @@ ${PYSITELIB}/sphinx/util/inspect.pyo
 ${PYSITELIB}/sphinx/util/jsdump.py
 ${PYSITELIB}/sphinx/util/jsdump.pyc
 ${PYSITELIB}/sphinx/util/jsdump.pyo
+${PYSITELIB}/sphinx/util/jsonimpl.py
+${PYSITELIB}/sphinx/util/jsonimpl.pyc
+${PYSITELIB}/sphinx/util/jsonimpl.pyo
 ${PYSITELIB}/sphinx/util/matching.py
 ${PYSITELIB}/sphinx/util/matching.pyc
 ${PYSITELIB}/sphinx/util/matching.pyo
