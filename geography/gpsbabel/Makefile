@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/07/05 00:05:22 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2010/09/28 13:21:31 wiz Exp $
 #
 
 DISTNAME=	gpsbabel-1.4.1
@@ -9,8 +9,7 @@ CATEGORIES=	geography
 # pkgsrc users.
 MASTER_SITES+=	http://www.lexort.com/pkgsrc/distfiles/
 
-MAINTAINER=	martti@NetBSD.org
-# MAINTAINER+=	gdt@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gpsbabel.org/
 COMMENT=	Utility to convert and fetch GPS related data
 LICENSE=	gnu-gpl-v2
