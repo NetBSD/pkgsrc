@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.10 2010/06/15 19:23:55 joerg Exp $
+#	$NetBSD: pbulk-index.mk,v 1.11 2010/09/28 20:24:25 joerg Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -16,7 +16,7 @@
 #	_PBULK_MULTI_VAR.foo forces a specific version
 #	_PBULK_MULTI_DEFAULT.foo contains the default value
 
-_PBULK_MULTI?=	apache php python
+_PBULK_MULTI?=	apache php python ruby
 
 _PBULK_MULTI_LIST.apache=	PKG_APACHE_ACCEPTED
 _PBULK_MULTI_VAR.apache=	PKG_APACHE
@@ -29,6 +29,10 @@ _PBULK_MULTI_DEFAULT.php=	PHP_VERSION_DEFAULT
 _PBULK_MULTI_LIST.python=	_PYTHON_VERSIONS_ACCEPTED
 _PBULK_MULTI_VAR.python=	PYTHON_VERSION_REQD
 _PBULK_MULTI_DEFAULT.python=	PYTHON_VERSION_DEFAULT
+
+_PBULK_MULTI_LIST.ruby=		RUBY_VERSION_SUPPORTED
+_PBULK_MULTI_VAR.ruby=		RUBY_VERSION_REQD
+_PBULK_MULTI_DEFAULT.ruby=	_RUBY_VERSION_DEFAULT
 
 .PHONY: pbulk-index pbulk-index-item
 
@@ -104,4 +108,4 @@ pbulk-index-item:
 .endif
 
 pbulk-save-wrkdir:
-	${RUN} cd ${WRKDIR} && ${TAR} cfz ${INTO:Q} .
+	${RUN} [ ! -d ${WRKDIR} ] || cd ${WRKDIR} && tar cfz ${INTO:Q} .
