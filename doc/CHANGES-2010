@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3666 2010/09/27 15:45:56 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3667 2010/09/28 04:56:36 dsainty Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/ruby19-base to 1.9.2pl0nb1 [taca 2010-09-26]
 	Updated textproc/py-sphinx to 1.0.1nb1 [adam 2010-09-27]
 	Updated print/tex-hyperref to 6.81pnb2 [minskim 2010-09-27]
+	Updated devel/pkg-config to 0.25nb1 [dsainty 2010-09-28]
