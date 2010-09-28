@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2008/06/08 02:40:38 tonnerre Exp $
+$NetBSD: patch-ad,v 1.2 2010/09/28 17:50:07 tnn Exp $
 
---- star/extract.c.orig	2002-05-02 22:02:41.000000000 +0200
+--- star/extract.c.orig	2002-05-02 20:02:41.000000000 +0000
 +++ star/extract.c
 @@ -92,6 +92,7 @@ EXPORT	int	xt_file		__PR((FINFO * info,
  					int (*)(void *, char *, int),
@@ -18,7 +18,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/08 02:40:38 tonnerre Exp $
 +			errmsgno(EX_BAD, "'%s' contains '..', skipping ...\n",
 +				finfo.f_name);
 +			void_file(&finfo);
-+			return (FALSE);
++			return;
 +		}
  		if (interactive && !ia_change(ptb, &finfo)) {
  			if (!nflag)
@@ -31,7 +31,7 @@ $NetBSD: patch-ad,v 1.1 2008/06/08 02:40:38 tonnerre Exp $
 +				errmsgno(EX_BAD, "'%s' contains '..', "
 +					"skipping ...\n", finfo.f_lname);
 +				void_file(&finfo);
-+				return (FALSE);
++				return;
 +			}
  			if (!make_link(&finfo))
  				continue;
