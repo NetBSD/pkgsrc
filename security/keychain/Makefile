@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2010/05/18 06:29:31 pettai Exp $
+# $NetBSD: Makefile,v 1.28 2010/09/28 13:21:32 wiz Exp $
 
 DISTNAME=	keychain-2.7.1
 CATEGORIES=	security
 MASTER_SITES=	http://www.funtoo.org/archive/keychain/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	martti@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.funtoo.org/en/security/keychain/intro/
 COMMENT=	Nice ssh-agent front-end
 LICENSE=	gnu-gpl-v2
