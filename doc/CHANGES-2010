@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3667 2010/09/28 04:56:36 dsainty Exp $
+$NetBSD: CHANGES-2010,v 1.3668 2010/09/28 15:40:34 wiz Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -2742,6 +2742,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs to 23.2 [minskim 2010-06-01]
 	Updated editors/emacs-nox11 to 23.2 [minskim 2010-06-01]
 	Added emulators/gns3 version 0.7 [markd 2010-06-01]
+	Added security/libgnome-keyring version 2.30.1 [drochner 2010-06-01]
 	Updated devel/doxygen to 1.6.3 [adam 2010-06-01]
 	Updated graphics/clutter-gtk to 0.10.4 [obache 2010-06-02]
 	Updated devel/kdesdk4 to 4.4.4 [markd 2010-06-02]
