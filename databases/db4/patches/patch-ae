@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2010/09/28 11:08:29 obache Exp $
+
+* fixes build failure on MIPS arch with -mips1.
+
+--- dbinc/mutex_int.h.orig	2010-04-12 20:25:22.000000000 +0000
++++ dbinc/mutex_int.h
+@@ -778,10 +778,14 @@ MUTEX_SET(tsl_t *tsl) {
+ static inline void
+ MUTEX_UNSET(tsl_t *tsl) {
+ 	__asm__ volatile(
++	       "       .set push           \n"
++	       "       .set mips2          \n"
+ 	       "       .set noreorder      \n"
++	       "       .set nomacro        \n"
+ 	       "       sync                \n"
+ 	       "       sw      $0, %0      \n"
+ 	       "       .set reorder        \n"
++	       "       .set pop            \n"
+ 	       : "=m" (*tsl)
+ 	       : "m" (*tsl)
+ 	       : "memory");
