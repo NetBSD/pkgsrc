@@ -1,13 +1,22 @@
-$NetBSD: patch-ad,v 1.5 2010/01/29 12:09:52 tron Exp $
+$NetBSD: patch-ad,v 1.5.4.1 2010/09/28 05:36:59 spz Exp $
 
---- configure.orig	2010-01-27 16:14:11.000000000 +0000
-+++ configure	2010-01-29 11:42:14.000000000 +0000
-@@ -14889,7 +14889,7 @@
+--- configure.orig	2010-08-29 23:20:30.000000000 +0100
++++ configure	2010-09-25 11:47:16.000000000 +0100
+@@ -19604,7 +19604,7 @@
  fi
  
  
 -	if test x$have_ige_mac == x
 +	if test x$have_ige_mac = x
  	then
- 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for ige_mac_menu_set_menu_bar in -ligemacintegration" >&5
- $as_echo_n "checking for ige_mac_menu_set_menu_bar in -ligemacintegration... " >&6; }
+ 		#
+ 		# Not found - check for the old integration functions in
+@@ -19660,7 +19660,7 @@
+ 
+ 	fi
+ 
+-	if test x$have_ige_mac == x
++	if test x$have_ige_mac = x
+ 	then
+ 		#
+ 		# Not found - check for the old integration functions in
