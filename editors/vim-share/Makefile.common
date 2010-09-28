@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.141 2010/06/07 12:12:21 martti Exp $
+# $NetBSD: Makefile.common,v 1.142 2010/09/28 13:21:30 wiz Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -36,7 +36,7 @@ PATCHFILES+=		7.2.427 7.2.428 7.2.429 7.2.430 7.2.431 7.2.432 7.2.433
 PATCHFILES+=		7.2.434 7.2.435 7.2.436 7.2.437 7.2.438 7.2.439 7.2.440
 PATCHFILES+=		7.2.441 7.2.442
 
-MAINTAINER=		martti@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
 LICENSE=		vim-license
 

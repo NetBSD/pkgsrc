@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2010/06/16 18:36:48 gdt Exp $
+# $NetBSD: Makefile,v 1.115 2010/09/28 13:21:31 wiz Exp $
 
 DISTNAME=	postfix-2.8-20100603
 PKGNAME=	postfix-2.8.20100603
@@ -9,10 +9,9 @@ MASTER_SITES+=	http://mirrors.isc.org/pub/postfix/experimental/
 MASTER_SITES+=	http://mirror.postfix.jp/postfix-release/experimental/
 DIST_SUBDIR=	postfix
 
-MAINTAINER=	martti@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
-
 # The postfix license has only very minor diffs from cpl-1.0.
 LICENSE=	cpl-1.0
 #LICENSE=	postfix-license
