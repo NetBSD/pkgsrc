@@ -126,4 +126,6 @@ mail/mailman: security patch
 Pullup ticket #3230 - requested by adam
 mail/clamav: security update
 Pullup ticket #3231 - requested by spz
-apache-tomcat6: security update
+www/apache-tomcat6: security update
+Pullup ticket #3232 - requested by tron
+net/wireshark: security update
