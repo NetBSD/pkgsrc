@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.51 2010/09/24 07:44:29 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.52 2010/09/28 20:24:25 joerg Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -22,6 +22,7 @@ RUBY19_API_VERSION=	1.9.1
 #	packages and user can define in mk.conf.  (1.8 or 1.9)
 #
 RUBY_VERSION_DEFAULT?=	1.8
+_RUBY_VERSION_DEFAULT=	${RUBY_VERSION_DEFAULT:S/.//}
 
 # RUBY_VERSION defines the specific Ruby's version which is supported
 #	by the package.  It should be defined by packages whose distfiles
@@ -29,12 +30,26 @@ RUBY_VERSION_DEFAULT?=	1.8
 #
 #	Default value is set to ${RUBY_VERSION_DEFAULT}
 #
-.if ${RUBY_VERSION_DEFAULT} == "1.8"
+.if defined(RUBY_VERSION_REQD)
+.  if ${RUBY_VERSION_REQD} == "18"
 RUBY_VERSION?=		${RUBY18_VERSION}
 RUBY_API_VERSION?=	${RUBY18_API_VERSION}
-.elif ${RUBY_VERSION_DEFAULT} == "1.9"
+.  elif ${RUBY_VERSION_REQD} == "19"
 RUBY_VERSION?=		${RUBY19_VERSION}
 RUBY_API_VERSION?=	${RUBY19_API_VERSION}
+.  else
+RUBY_VERSION?=		${RUBY18_VERSION}
+RUBY_API_VERSION?=	${RUBY18_API_VERSION}
+PKG_FAIL_REASON+=	"Unknown value for ${RUBY_VERSION_REQD}"
+.  endif
+.else
+.  if ${RUBY_VERSION_DEFAULT} == "1.8"
+RUBY_VERSION?=		${RUBY18_VERSION}
+RUBY_API_VERSION?=	${RUBY18_API_VERSION}
+.  elif ${RUBY_VERSION_DEFAULT} == "1.9"
+RUBY_VERSION?=		${RUBY19_VERSION}
+RUBY_API_VERSION?=	${RUBY19_API_VERSION}
+.  endif
 .endif
 
 RUBY_PATCH_LEVEL=	${RUBY${RUBY_VER}_PATCHLEVEL}
