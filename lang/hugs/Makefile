@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/05/20 00:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2010/09/28 04:36:41 obache Exp $
 
 DISTNAME=	hugs98-Sep2006
 PKGNAME=	hugs98-200609
@@ -9,6 +9,7 @@ MASTER_SITES=	http://cvs.haskell.org/Hugs/downloads/2006-09/
 MAINTAINER=	nathanw@mit.edu
 HOMEPAGE=	http://www.haskell.org/hugs/
 COMMENT=	Functional programming system based on Haskell 98
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
