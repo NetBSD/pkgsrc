@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/15 13:15:29 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/28 13:11:26 wiz Exp $
 #
 
 DISTNAME=	mupdf-0.7
@@ -19,6 +19,8 @@ USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+LDFLAGS=	-Wl,-rpath,${X11BASE}/lib
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 post-build:
 	sed -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/mupdf.pc > ${WRKSRC}/mupdf.pc
