@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2009/05/20 00:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/09/29 22:54:38 minskim Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
 PKGNAME=	gnucap-20060708
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.gnucap.org/devel/ \
 		http://www.geda.seul.org/dist/
@@ -11,6 +11,9 @@ MASTER_SITES=	http://www.gnucap.org/devel/ \
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.gnucap.org/
 COMMENT=	General purpose circuit simulator
+
+BUILD_DEPENDS+=	dvipdfmx>=20100328:../../print/dvipdfmx
+BUILD_DEPENDS+=	tex-hyperref>=6.81pnb2:../../print/tex-hyperref
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -21,8 +24,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 USE_GNU_READLINE=	YES
 GNU_CONFIGURE=		YES
-TEX_DEPMOD=		build
-TEX_ACCEPTED=		teTeX3
 
 INSTALLATION_DIRS=	share/gnucap/manual/html
 
@@ -32,5 +33,4 @@ post-install:
 	done
 
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
