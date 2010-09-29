@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3669 2010/09/29 01:04:15 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.3670 2010/09/29 08:08:57 manu Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4946,3 +4946,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyperref to 6.81pnb2 [minskim 2010-09-27]
 	Updated devel/pkg-config to 0.25nb1 [dsainty 2010-09-28]
 	Updated www/ikiwiki to 3.20100926 [schmonz 2010-09-29]
+	Updated filesystems/perfuse to 20100929 [manu 2010-09-29]
