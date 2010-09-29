@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/09/29 10:42:40 obache Exp $
+# $NetBSD: Makefile,v 1.14 2010/09/29 10:52:25 obache Exp $
 #
 
 DISTNAME=		nrpe-2.12
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl
-USE_PKGINSTALL=		yes
 
 PKG_SYSCONFSUBDIR=	nagios
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
