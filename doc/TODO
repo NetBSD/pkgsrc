@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9750 2010/09/28 15:48:17 wiz Exp $
+$NetBSD: TODO,v 1.9751 2010/09/29 15:10:36 taca Exp $
 
 Suggested new packages
 ======================
@@ -832,7 +832,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libbonoboui-2.24.4
 	o libcares-1.7.2
 	o libdockapp-0.6.1
-	o libdrm-2.4.21
+	o libdrm-2.4.22
 	o libesmtp-1.0.6
 	o libextractor-0.6.2
 	o libflash-0.4.13
@@ -1386,6 +1386,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbevd-1.1.0 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
+	o xkeyboard-config-2.0
 	o xli-2006.11.10
 	o xload-1.1.0
 	o xlog-2.0.3
