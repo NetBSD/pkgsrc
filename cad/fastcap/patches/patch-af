@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.1 2010/09/29 21:57:04 minskim Exp $
+
+--- doc/Makefile.orig	1992-09-19 03:04:40.000000000 +0000
++++ doc/Makefile
+@@ -62,7 +62,7 @@ ug.dvi: $(UGTEX)
+ 	awk -f temp__ ug.tex > temp_ ; \
+ 	mv temp_ ug.tex ; \
+ 	/bin/rm temp__
+-	cd $(UG) ; latex ug ; latex ug ; latex ug 
++	cd $(UG) ; $(LATEX) ug ; $(LATEX) ug ; $(LATEX) ug 
+ 
+ tcad.dvi: $(TCADTEX) $(TCADSTY)
+ 	cd $(TCAD) ; pwd > temp_ ; \
+@@ -71,7 +71,7 @@ tcad.dvi: $(TCADTEX) $(TCADSTY)
+ 	awk -f temp__ tcad.tex > temp_ ; \
+ 	mv temp_ tcad.tex ; \
+ 	/bin/rm temp__
+-	cd $(TCAD) ; latex tcad ; latex tcad ; latex tcad
++	cd $(TCAD) ; $(LATEX) tcad ; $(LATEX) tcad ; $(LATEX) tcad
+ 
+ mtt.dvi: $(MTTTEX) $(MTTBIB) $(MTTSTY)
+ 	cd $(MTT) ; pwd > temp_ ; \
+@@ -80,7 +80,7 @@ mtt.dvi: $(MTTTEX) $(MTTBIB) $(MTTSTY)
+ 	awk -f temp__ mtt.tex > temp_ ; \
+ 	mv temp_ mtt.tex ; \
+ 	/bin/rm temp__
+-	cd $(MTT) ; latex mtt ; bibtex mtt ; latex mtt ; latex mtt
++	cd $(MTT) ; $(LATEX) mtt ; $(BIBTEX) mtt ; $(LATEX) mtt ; $(LATEX) mtt
+ 
+ clean:
+ 	cd $(UG) ; /bin/rm -f *.dvi *.log *.toc *.aux *.bak *.lot *.lof
