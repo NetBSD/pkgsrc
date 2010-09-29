@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2010/09/29 10:42:49 dsainty Exp $
+
+Force flush to be pipe-friendly (from ppower -m).
+
+--- src/status.c.orig	2010-09-29 22:57:25.000000000 +1300
++++ src/status.c	2010-09-29 22:58:42.000000000 +1300
+@@ -143,6 +143,9 @@
+ 	
+ 	/* End the line. */
+ 	printf("\n");
++
++	/* Force flush to be pipe-friendly. */
++	fflush(stdout);
+ 	
+ 	return;		
+ }
