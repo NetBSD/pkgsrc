@@ -1,0 +1,21 @@
+$NetBSD: patch-ak,v 1.1 2010/09/29 21:57:04 minskim Exp $
+
+--- doc/mtt-screen.tex.orig	1992-09-19 03:04:34.000000000 +0000
++++ doc/mtt-screen.tex
+@@ -7,13 +7,13 @@ matrices $P(7)$, (a), $P(5)$, (b), and $
+ \setlength{\unitlength}{1.0in}
+ \begin{picture}(6.5,3.7)
+ \put(2.5,2.6){
+-\special{psfile=\figuredir/cap7.ps,hoffset=-6,voffset=-6,hscale=0.204375,vscale=0.204375}
++\special{psfile=\figuredir/cap7.ps hoffset=-6 voffset=-6 hscale=0.204375 vscale=0.204375}
+ }
+ \put(2.67,1.4){
+-\special{psfile=\figuredir/cap5.ps,hoffset=-4,voffset=-4,hscale=0.15,vscale=0.15}
++\special{psfile=\figuredir/cap5.ps hoffset=-4 voffset=-4 hscale=0.15 vscale=0.15}
+ }
+ \put(2.87,0.2){
+-\special{psfile=\figuredir/cap3.ps,hoffset=-3,voffset=-3,hscale=0.0965625,vscale=0.0965625}
++\special{psfile=\figuredir/cap3.ps hoffset=-3 voffset=-3 hscale=0.0965625 vscale=0.0965625}
+ }
+ %%\put(0,0){\line(0,1){3}}
+ \put(3.2,2.4){(a)}

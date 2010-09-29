@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2010/09/29 21:57:04 minskim Exp $
+
+--- doc/mtt-dblevl.tex.orig	1992-09-19 03:04:34.000000000 +0000
++++ doc/mtt-dblevl.tex
+@@ -5,7 +5,7 @@
+ \setlength{\unitlength}{1.0in}
+ \begin{picture}(6.5,2.7)
+ \put(1.75,0){
+-\special{psfile=\figuredir/dblevl.ps,hoffset=-186,voffset=-230,hscale=0.947368,vscale=0.947368}
++\special{psfile=\figuredir/dblevl.ps hoffset=-186 voffset=-230 hscale=0.947368 vscale=0.947368}
+ }
+ \put(1.73,1.0){$(r_i,\phi_i,\theta_i)$}
+ \put(2.0,1.48){$r$}
