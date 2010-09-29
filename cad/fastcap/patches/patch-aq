@@ -1,0 +1,31 @@
+$NetBSD: patch-aq,v 1.1 2010/09/29 21:57:04 minskim Exp $
+
+--- doc/ug.tex.orig	2010-09-29 21:42:36.000000000 +0000
++++ doc/ug.tex
+@@ -11,7 +11,7 @@
+ \newcommand{\fig}[9]{ % filename label caption vsp placement horizo verto horizs verts
+ \begin{figure}[#5]
+ \vspace*{#4pt}
+-\special{psfile=#1,hoffset=#6,voffset=#7,hscale=#8,vscale=#9}
++\special{psfile=#1 hoffset=#6 voffset=#7 hscale=#8 vscale=#9}
+ \caption{#3}
+ \label{#2}
+ \end{figure}
+@@ -22,7 +22,7 @@
+ \newcommand{\sfig}[7]{ % filename vsp placement horizo verto horizs verts
+ \begin{figure}[#3]
+ \vspace*{#2pt}
+-\special{psfile=#1,hoffset=#4,voffset=#5,hscale=#6,vscale=#7}
++\special{psfile=#1 hoffset=#4 voffset=#5 hscale=#6 vscale=#7}
+ \end{figure}
+ }
+ %
+@@ -32,7 +32,7 @@
+ \refstepcounter{figure}
+ \begin{figure}[#4]
+ \vspace*{#3pt}
+-\special{psfile=#1,hoffset=#5,voffset=#6,hscale=#7,vscale=#8}
++\special{psfile=#1 hoffset=#5 voffset=#6 hscale=#7 vscale=#8}
+ \label{#2}
+ \end{figure}
+ }

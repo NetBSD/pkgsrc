@@ -1,0 +1,17 @@
+$NetBSD: patch-an,v 1.1 2010/09/29 21:57:04 minskim Exp $
+
+--- doc/mtt-weave.tex.orig	1992-09-19 03:04:34.000000000 +0000
++++ doc/mtt-weave.tex
+@@ -8,10 +8,10 @@ corresponding set of panels in (b).}
+ \setlength{\unitlength}{1.0in}
+ \begin{picture}(6.5,3.2)
+ \put(0,0.2){
+-\special{psfile=\figuredir/weave2.ps,hoffset=-12,voffset=-12,hscale=0.397059,vscale=0.397059}
++\special{psfile=\figuredir/weave2.ps hoffset=-12 voffset=-12 hscale=0.397059 vscale=0.397059}
+ }
+ \put(3.45,0.2){
+-\special{psfile=\figuredir/weavediscr.ps,hoffset=-9,voffset=-9,hscale=0.298343,vscale=0.298343}
++\special{psfile=\figuredir/weavediscr.ps hoffset=-9 voffset=-9 hscale=0.298343 vscale=0.298343}
+ }
+ \thicklines
+ \put(4.7,2.6){Woven1}
