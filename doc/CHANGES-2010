@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3675 2010/09/29 21:57:25 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3676 2010/09/29 22:18:19 minskim Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4952,3 +4952,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20100928 [taca 2010-09-29]
 	Updated net/bind97 to 9.7.2pl2 [taca 2010-09-29]
 	Updated cad/fastcap to 2.0.19920918nb2 [minskim 2010-09-29]
+	Updated print/tex-oberdiek to 2009nb2 [minskim 2010-09-29]
