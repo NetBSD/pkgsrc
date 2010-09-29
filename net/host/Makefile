@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/09/29 12:24:48 obache Exp $
+# $NetBSD: Makefile,v 1.21 2010/09/29 12:27:47 obache Exp $
 
 DISTNAME=	host-20040812
 CATEGORIES=	net
@@ -22,6 +22,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=	-DBIND_8_COMPAT
+BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
+BUILDLINK_TRANSFORM+=	rm:-static
+.endif
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=	-lresolve -lsocket -lnsl
 BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
