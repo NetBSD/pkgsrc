@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/09/10 10:50:27 taca Exp $
+# $NetBSD: Makefile,v 1.36 2010/09/29 23:35:35 joerg Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -11,6 +11,9 @@ HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# textproc/ruby-eruby is restricted to 1.8
+RUBY_VERSION_SUPPORTED= 18
 
 APACHE_MODULE=		yes
 PKG_APACHE_ACCEPTED=	apache13 apache2 apache22
