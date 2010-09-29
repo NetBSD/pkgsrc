@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/07/07 21:34:53 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/09/29 09:01:41 abs Exp $
 #
 
 DISTNAME=	openjade-1.3.2
@@ -16,6 +16,7 @@ USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+MAKE_JOBS_SAFE= no
 
 CONFIGURE_ENV+=	CXXFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--enable-default-catalog=${OPENJADE_DATA_DIR}/catalog \
