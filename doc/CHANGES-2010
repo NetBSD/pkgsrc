@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3672 2010/09/29 15:02:28 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3673 2010/09/29 15:05:35 taca Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4949,3 +4949,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated filesystems/perfuse to 20100929 [manu 2010-09-29]
 	Updated misc/ppower to 0.1.5nb1 [dsainty 2010-09-29]
 	Updated www/typo3 to 4.4.3 [taca 2010-09-29]
+	Updated www/contao29-translations to 20100928 [taca 2010-09-29]
