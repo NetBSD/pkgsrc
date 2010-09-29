@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/07/28 16:16:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/09/29 15:01:43 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -5919,6 +5919,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/res/list-item-act.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/res/list-item.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/res/mod_styles.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/res/mod_template.html
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/res/tasklist.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/task/clear.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/task/conf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/task/icon.gif
