@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/06/21 14:52:48 tonnerre Exp $
+$NetBSD: distinfo,v 1.5 2010/09/29 11:21:02 obache Exp $
 
 SHA1 (nrpe-2.12.tar.gz) = 208595c175d726e8e377d565b21897f4de1648cc
 RMD160 (nrpe-2.12.tar.gz) = 3413f84c9bb926a4dd55cc02d7b0a01bd7fc99ee
 Size (nrpe-2.12.tar.gz) = 405725 bytes
-SHA1 (patch-aa) = 0250746f7e0be5eb2f419fd7a3465ca66aacae94
+SHA1 (patch-aa) = f3861f83f45fc6bbfa9a21041c75e1428bf861e7
