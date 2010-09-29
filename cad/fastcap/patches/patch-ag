@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2010/09/29 21:57:04 minskim Exp $
+
+--- doc/mtt-adapt.tex.orig	1992-09-19 03:04:38.000000000 +0000
++++ doc/mtt-adapt.tex
+@@ -228,10 +228,10 @@ each lowest-level square has roughly the
+ \setlength{\unitlength}{1.0in}
+ \begin{picture}(6.5,3.2)
+ \put(0.25,0.2){
+-\special{psfile=\figuredir/adaptg.eps,hoffset=-24,voffset=-106,hscale=0.715068,vscale=0.715068}
++\special{psfile=\figuredir/adaptg.eps hoffset=-24 voffset=-106 hscale=0.715068 vscale=0.715068}
+ }
+ \put(3.35,0.2){
+-\special{psfile=\figuredir/adaptw.eps,hoffset=-23,voffset=-105,hscale=0.710204,vscale=0.710204}
++\special{psfile=\figuredir/adaptw.eps hoffset=-23 voffset=-105 hscale=0.710204 vscale=0.710204}
+ }
+ \put(1.65,0){(a)}
+ \put(4.75,0){(b)}
