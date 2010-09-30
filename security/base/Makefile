@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/07/17 18:00:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.26 2010/09/30 10:49:13 obache Exp $
 #
 
 DISTNAME=	base-1.4.3.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 

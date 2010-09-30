@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:26 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/30 10:49:13 obache Exp $
 #
 
 DISTNAME=	apache-roller-${ROLLER_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=roller/roller-4/v${ROLLER_VER}/bin/}
 

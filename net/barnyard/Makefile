@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/04/18 11:27:12 zafer Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/30 10:49:11 obache Exp $
 
 DISTNAME=	barnyard-0.2.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=barnyard/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/03/16 11:54:31 taca Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/30 10:49:15 obache Exp $
 
 MODNAME=		pdo_mysql
+PKGREVISION=		1
 CATEGORIES+=		databases
 COMMENT=		PHP extension for PHP Data Objects (MySQL)
 
