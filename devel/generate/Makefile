@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2009/10/19 18:30:31 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/09/30 18:30:20 darcy Exp $
 #
 
 DISTNAME=	generate-2.6
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.druid.net/pub/distrib/
+MASTER_SITES=	ftp://ftp.Vex.Net/pub/distrib/
 EXTRACT_SUFX=	.tgz
 
 OWNER=		darcy@NetBSD.org
-HOMEPAGE=	http://www.druid.net/darcy/readme-generate.html
+HOMEPAGE=	http://darcy.druid.net/readme-generate.html
 COMMENT=	Simple text pre-processor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
