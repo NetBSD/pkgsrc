@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.22 2007/04/21 02:59:53 kano Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.23 2010/09/30 12:21:51 obache Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -183,6 +183,10 @@ minutes!</para>
       <row>
         <entry><ulink url="http://www.hp.com/products1/unix/">HP-UX</ulink></entry>
         <entry align="center">Apr 2007</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.haiku-os.org/">Haiku</ulink></entry>
+        <entry align="center">Sep 2010</entry>
       </row>
     </tbody>
   </tgroup>
