@@ -1,10 +1,69 @@
-$NetBSD: patch-ap,v 1.2 2009/11/20 15:59:59 drochner Exp $
+$NetBSD: patch-ap,v 1.3 2010/10/01 21:32:34 spz Exp $
 
 https://bugs.freedesktop.org/show_bug.cgi?id=25189
+plus security fixes for http://secunia.com/advisories/41596/
+taken from http://cgit.freedesktop.org/poppler/
 
---- poppler/Gfx.cc.orig	2009-10-23 21:44:04.000000000 +0200
+- Make sure obj1 is a num before reading it
+- Fix crash in broken pdf (parser->getStream() is 0)
+- Properly initialize parser
+- Give a value to color.c[i]
+
+--- poppler/Gfx.cc.orig	2010-08-11 19:20:32.000000000 +0000
 +++ poppler/Gfx.cc
-@@ -2367,7 +2367,7 @@ static void bubbleSort(double array[])
+@@ -536,6 +536,7 @@ Gfx::Gfx(XRef *xrefA, OutputDev *outA, i
+   drawText = gFalse;
+   maskHaveCSPattern = gFalse;
+   mcStack = NULL;
++  parser = NULL;
+ 
+   // start the resource stack
+   res = new GfxResources(xref, resDict, NULL);
+@@ -590,6 +591,7 @@ Gfx::Gfx(XRef *xrefA, OutputDev *outA, D
+   drawText = gFalse;
+   maskHaveCSPattern = gFalse;
+   mcStack = NULL;
++  parser = NULL;
+ 
+   // start the resource stack
+   res = new GfxResources(xref, resDict, NULL);
+@@ -1531,6 +1533,8 @@ void Gfx::opSetFillColorN(Object args[],
+       for (i = 0; i < numArgs - 1 && i < gfxColorMaxComps; ++i) {
+ 	if (args[i].isNum()) {
+ 	  color.c[i] = dblToCol(args[i].getNum());
++        } else {
++          color.c[i] = 0; // TODO Investigate if this is what Adobe does
+ 	}
+       }
+       state->setFillColor(&color);
+@@ -1550,6 +1554,8 @@ void Gfx::opSetFillColorN(Object args[],
+     for (i = 0; i < numArgs && i < gfxColorMaxComps; ++i) {
+       if (args[i].isNum()) {
+ 	color.c[i] = dblToCol(args[i].getNum());
++      } else {
++        color.c[i] = 0; // TODO Investigate if this is what Adobe does
+       }
+     }
+     state->setFillColor(&color);
+@@ -1574,6 +1580,8 @@ void Gfx::opSetStrokeColorN(Object args[
+       for (i = 0; i < numArgs - 1 && i < gfxColorMaxComps; ++i) {
+ 	if (args[i].isNum()) {
+ 	  color.c[i] = dblToCol(args[i].getNum());
++        } else {
++          color.c[i] = 0; // TODO Investigate if this is what Adobe does
+ 	}
+       }
+       state->setStrokeColor(&color);
+@@ -1593,6 +1601,8 @@ void Gfx::opSetStrokeColorN(Object args[
+     for (i = 0; i < numArgs && i < gfxColorMaxComps; ++i) {
+       if (args[i].isNum()) {
+ 	color.c[i] = dblToCol(args[i].getNum());
++      } else {
++        color.c[i] = 0; // TODO Investigate if this is what Adobe does
+       }
+     }
+     state->setStrokeColor(&color);
+@@ -2421,7 +2431,7 @@ static void bubbleSort(double array[])
  void Gfx::doAxialShFill(GfxAxialShading *shading) {
    double xMin, yMin, xMax, yMax;
    double x0, y0, x1, y1;
@@ -13,7 +72,7 @@ https://bugs.freedesktop.org/show_bug.cgi?id=25189
    GBool dxZero, dyZero;
    double bboxIntersections[4];
    double tMin, tMax, tx, ty;
-@@ -2389,16 +2389,18 @@ void Gfx::doAxialShFill(GfxAxialShading 
+@@ -2443,16 +2453,18 @@ void Gfx::doAxialShFill(GfxAxialShading 
    shading->getCoords(&x0, &y0, &x1, &y1);
    dx = x1 - x0;
    dy = y1 - y0;
@@ -41,3 +100,53 @@ https://bugs.freedesktop.org/show_bug.cgi?id=25189
      bubbleSort(bboxIntersections);
      tMin = bboxIntersections[0];
      tMax = bboxIntersections[3];
+@@ -4225,8 +4237,14 @@ void Gfx::doForm(Object *str) {
+   }
+   for (i = 0; i < 4; ++i) {
+     bboxObj.arrayGet(i, &obj1);
+-    bbox[i] = obj1.getNum();
+-    obj1.free();
++    if (likely(obj1.isNum())) {
++      bbox[i] = obj1.getNum();
++      obj1.free();
++    } else {
++      obj1.free();
++      error(getPos(), "Bad form bounding box value");
++      return;
++    }
+   }
+   bboxObj.free();
+ 
+@@ -4449,8 +4467,13 @@ Stream *Gfx::buildImageStream() {
+   obj.free();
+ 
+   // make stream
+-  str = new EmbedStream(parser->getStream(), &dict, gFalse, 0);
+-  str = str->addFilters(&dict);
++  if (parser->getStream()) {
++    str = new EmbedStream(parser->getStream(), &dict, gFalse, 0);
++    str = str->addFilters(&dict);
++  } else {
++    str = NULL;
++    dict.free();
++  }
+ 
+   return str;
+ }
+@@ -4651,8 +4674,14 @@ void Gfx::drawAnnot(Object *str, AnnotBo
+     }
+     for (i = 0; i < 4; ++i) {
+       bboxObj.arrayGet(i, &obj1);
+-      bbox[i] = obj1.getNum();
+-      obj1.free();
++      if (likely(obj1.isNum())) {
++        bbox[i] = obj1.getNum();
++        obj1.free();
++      } else {
++        obj1.free();
++        error(getPos(), "Bad form bounding box value");
++        return;
++      }
+     }
+     bboxObj.free();
+ 

@@ -1,0 +1,48 @@
+$NetBSD: patch-bd,v 1.1 2010/10/01 21:32:34 spz Exp $
+
+security fixes for http://secunia.com/advisories/41596/
+taken from http://cgit.freedesktop.org/poppler
+
+- Fix crash in broken pdf (code < 0)
+
+--- fofi/FoFiType1.cc.orig	2010-06-08 20:06:31.000000000 +0000
++++ fofi/FoFiType1.cc
+@@ -13,7 +13,7 @@
+ // All changes made under the Poppler project to this file are licensed
+ // under GPL version 2 or later
+ //
+-// Copyright (C) 2005, 2008 Albert Astals Cid <aacid@kde.org>
++// Copyright (C) 2005, 2008, 2010 Albert Astals Cid <aacid@kde.org>
+ // Copyright (C) 2005 Kristian Høgsberg <krh@redhat.com>
+ // Copyright (C) 2010 Jakub Wilk <ubanus@users.sf.net>
+ //
+@@ -30,11 +30,20 @@
+ 
+ #include <stdlib.h>
+ #include <string.h>
++
+ #include "goo/gmem.h"
+ #include "FoFiEncodings.h"
+ #include "FoFiType1.h"
+ #include "poppler/Error.h"
+ 
++#if defined(__GNUC__) && (__GNUC__ > 2) && defined(__OPTIMIZE__)
++# define likely(x)      __builtin_expect((x), 1)
++# define unlikely(x)    __builtin_expect((x), 0)
++#else
++# define likely(x)      (x)
++# define unlikely(x)    (x)
++#endif
++
+ //------------------------------------------------------------------------
+ // FoFiType1
+ //------------------------------------------------------------------------
+@@ -243,7 +252,7 @@ void FoFiType1::parse() {
+ 		code = code * 8 + (*p2 - '0');
+ 	      }
+ 	    }
+-	    if (code < 256) {
++	    if (likely(code < 256 && code >= 0)) {
+ 	      for (p = p2; *p == ' ' || *p == '\t'; ++p) ;
+ 	      if (*p == '/') {
+ 		++p;
