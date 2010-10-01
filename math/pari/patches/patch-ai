@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.3 2010/03/13 22:16:34 schmonz Exp $
+$NetBSD: patch-ai,v 1.4 2010/10/01 20:50:55 minskim Exp $
 
 --- config/Makefile.SH.orig	2010-01-09 17:59:48.000000000 +0000
 +++ config/Makefile.SH
@@ -242,7 +242,23 @@ $NetBSD: patch-ai,v 1.3 2010/03/13 22:16:34 schmonz Exp $
  	-\$(INSTALL_DATA) $doc/Makefile     \$(DOCDIR)
  	-\$(INSTALL_DATA) $doc/translations \$(DOCDIR)
  	-\$(INSTALL_DATA) $doc/appa.tex     \$(DOCDIR)
-@@ -426,20 +386,9 @@ install-data:
+@@ -395,11 +355,10 @@ install-doc::
+ 	-\$(INSTALL_DATA) $doc/usersch4.tex \$(DOCDIR)
+ 	-\$(INSTALL_DATA) $doc/usersch5.tex \$(DOCDIR)
+ 	-\$(INSTALL_DATA) $doc/paricfg.tex  \$(DOCDIR)
+-	-\$(INSTALL_DATA) $doc/libpari.dvi    \$(DOCDIR)
+-	-\$(INSTALL_DATA) $doc/users.dvi    \$(DOCDIR)
+-	-\$(INSTALL_DATA) $doc/tutorial.dvi \$(DOCDIR)
+-	-\$(INSTALL_DATA) $doc/refcard.dvi  \$(DOCDIR)
+-	-\$(INSTALL_DATA) $doc/refcard.ps   \$(DOCDIR)
++	-\$(INSTALL_DATA) $doc/libpari.pdf  \$(DOCDIR)
++	-\$(INSTALL_DATA) $doc/users.pdf    \$(DOCDIR)
++	-\$(INSTALL_DATA) $doc/tutorial.pdf \$(DOCDIR)
++	-\$(INSTALL_DATA) $doc/refcard.pdf  \$(DOCDIR)
+ 
+ install-examples:
+ 	-mkdir -p \$(EXDIR)
+@@ -426,20 +385,9 @@ install-data:
  	   done; \
  	 fi
  
@@ -265,7 +281,7 @@ $NetBSD: patch-ai,v 1.3 2010/03/13 22:16:34 schmonz Exp $
  
  pariinl.h: parilvl0.h parilvl1.h
  	cat parilvl0.h parilvl1.h > pariinl.h
-@@ -462,63 +411,13 @@ dotest-$i::
+@@ -462,63 +410,13 @@ dotest-$i::
  EOT
  done
  
