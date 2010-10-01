@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/03/13 22:16:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/10/01 20:50:55 minskim Exp $
 bin/gp
 bin/gp-2.3
 ${PLIST.doc}bin/gphelp
@@ -47,17 +47,16 @@ ${PLIST.doc}share/pari/doc/Makefile
 ${PLIST.doc}share/pari/doc/appa.tex
 ${PLIST.doc}share/pari/doc/appb.tex
 ${PLIST.doc}share/pari/doc/appc.tex
-${PLIST.doc}share/pari/doc/libpari.dvi
+${PLIST.doc}share/pari/doc/libpari.pdf
 ${PLIST.doc}share/pari/doc/paricfg.tex
 ${PLIST.doc}share/pari/doc/parimacro.tex
 ${PLIST.doc}share/pari/doc/pdfmacs.tex
-${PLIST.doc}share/pari/doc/refcard.dvi
-${PLIST.doc}share/pari/doc/refcard.ps
+${PLIST.doc}share/pari/doc/refcard.pdf
 ${PLIST.doc}share/pari/doc/refcard.tex
 ${PLIST.doc}share/pari/doc/translations
-${PLIST.doc}share/pari/doc/tutorial.dvi
+${PLIST.doc}share/pari/doc/tutorial.pdf
 ${PLIST.doc}share/pari/doc/tutorial.tex
-${PLIST.doc}share/pari/doc/users.dvi
+${PLIST.doc}share/pari/doc/users.pdf
 ${PLIST.doc}share/pari/doc/users.tex
 ${PLIST.doc}share/pari/doc/usersch1.tex
 ${PLIST.doc}share/pari/doc/usersch2.tex
