@@ -1,0 +1,82 @@
+$NetBSD: patch-ba,v 1.5 2010/10/01 21:32:34 spz Exp $
+
+security fixes for http://secunia.com/advisories/41596/
+taken from http://cgit.freedesktop.org/poppler
+
+- Fix memory leak if obj2 is not a dict
+- Avoid loops in Form::fieldLookup
+
+--- poppler/Form.cc.orig	2010-06-08 20:06:31.000000000 +0000
++++ poppler/Form.cc
+@@ -22,6 +22,7 @@
+ #pragma implementation
+ #endif
+ 
++#include <set>
+ #include <stddef.h>
+ #include <string.h>
+ #include "goo/gmem.h"
+@@ -715,13 +716,14 @@ FormField::FormField(XRef* xrefA, Object
+     // Load children
+     for(int i=0; i<length; i++) { 
+       Object obj2,obj3;
+-      Object childRef;
+       array->get(i, &obj2);
+-      array->getNF(i, &childRef);
+       if (!obj2.isDict ()) {
+ 	      error (-1, "Reference to an invalid or non existant object");
++	      obj2.free();
+ 	      continue;
+       }
++      Object childRef;
++      array->getNF(i, &childRef);
+       //field child
+       if (dict->lookup ("FT", &obj3)->isName()) {
+         // If I'm not a generic container field and my children
+@@ -1180,7 +1182,7 @@ Form::~Form() {
+ }
+ 
+ // Look up an inheritable field dictionary entry.
+-Object *Form::fieldLookup(Dict *field, char *key, Object *obj) {
++static Object *fieldLookup(Dict *field, char *key, Object *obj, std::set<int> *usedParents) {
+   Dict *dict;
+   Object parent;
+ 
+@@ -1189,8 +1191,23 @@ Object *Form::fieldLookup(Dict *field, c
+     return obj;
+   }
+   obj->free();
+-  if (dict->lookup("Parent", &parent)->isDict()) {
+-    fieldLookup(parent.getDict(), key, obj);
++  dict->lookupNF("Parent", &parent);
++  if (parent.isRef()) {
++    const Ref ref = parent.getRef();
++    if (usedParents->find(ref.num) == usedParents->end()) {
++      usedParents->insert(ref.num);
++
++      Object obj2;
++      parent.fetch(dict->getXRef(), &obj2);
++      if (obj2.isDict()) {
++        fieldLookup(obj2.getDict(), key, obj, usedParents);
++      } else {
++        obj->initNull();
++      }
++      obj2.free();
++   }
++ } else if (parent.isDict()) {
++    fieldLookup(parent.getDict(), key, obj, usedParents);
+   } else {
+     obj->initNull();
+   }
+@@ -1198,6 +1215,11 @@ Object *Form::fieldLookup(Dict *field, c
+   return obj;
+ }
+ 
++Object *Form::fieldLookup(Dict *field, char *key, Object *obj) {
++  std::set<int> usedParents;
++  return ::fieldLookup(field, key, obj, &usedParents);
++}
++
+ FormField *Form::createFieldFromDict (Object* obj, XRef *xrefA, const Ref& pref)
+ {
+     Object obj2;
