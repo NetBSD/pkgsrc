@@ -1,23 +1,30 @@
-$NetBSD: patch-al,v 1.3 2010/02/06 10:37:06 sno Exp $
+$NetBSD: patch-al,v 1.4 2010/10/01 20:50:55 minskim Exp $
 
---- config/DOC_Make.SH.orig	2008-01-16 15:57:02.000000000 +0000
+--- config/DOC_Make.SH.orig	2008-03-31 11:43:59.000000000 +0000
 +++ config/DOC_Make.SH
-@@ -12,7 +12,7 @@ doc all: develop.dvi libpari.dvi users.d
+@@ -8,11 +8,11 @@ MACROS= paricfg.tex parimacro.tex
+ USERS_TEX=\$(MACROS) users.tex usersch1.tex usersch2.tex usersch3.tex
+ PARI_TEX=\$(MACROS) libpari.tex appa.tex appb.tex appc.tex usersch4.tex usersch5.tex
+ 
+-doc all: develop.dvi libpari.dvi users.dvi refcard.ps tutorial.dvi
++docdvi: develop.dvi libpari.dvi users.dvi refcard.ps tutorial.dvi
  docps: develop.ps libpari.ps refcard.ps tutorial.ps users.ps INSTALL.ps
- docpdf: develop.pdf libpari.pdf users.pdf tutorial.pdf refcard.pdf INSTALL.pdf
+-docpdf: develop.pdf libpari.pdf users.pdf tutorial.pdf refcard.pdf INSTALL.pdf
++all doc docpdf: develop.pdf libpari.pdf users.pdf tutorial.pdf refcard.pdf INSTALL.pdf
  
 -.SUFFIXES: .tex .ipf .pod .inf .dumbpod .3 .html
 +.SUFFIXES: .tex .ipf .pod .inf .dumbpod .3 .html .ps .pdf .dvi .idx .std
  
  paricfg.tex: paricfg.tex.in
  	sed -e 's/@version@/$version.$patch/'\\
-@@ -20,33 +20,33 @@ paricfg.tex: paricfg.tex.in
+@@ -20,50 +20,50 @@ paricfg.tex: paricfg.tex.in
  	    -e 's!@libdir@!$libdir!'\\
  	    -e 's!@datadir@!$datadir!' paricfg.tex.in > \$@
  
 -%.pdf: %.tex \$(MACROS)
+-	pdftex \$<
 +.tex.pdf: \$*.tex \$(MACROS)
- 	pdftex \$<
++	\$(PDFTEX) \$<
  
 -%.dvi: %.tex \$(MACROS)
 +.tex.dvi: \$*.tex \$(MACROS)
@@ -25,10 +32,12 @@ $NetBSD: patch-al,v 1.3 2010/02/06 10:37:06 sno Exp $
  
  libpari.pdf: \$(PARI_TEX) \$(MACROS)
  	-rm -f libpari.std
- 	pdftex libpari
- 	pdftex libpari
+-	pdftex libpari
+-	pdftex libpari
 -	make libpari.std; pdftex libpari; rm -f libpari.std
-+	\$(MAKE) libpari.std; pdftex libpari; rm -f libpari.std
++	\$(PDFTEX) libpari
++	\$(PDFTEX) libpari
++	\$(MAKE) libpari.std; \$(PDFTEX) libpari; rm -f libpari.std
  libpari.dvi: \$(PARI_TEX) \$(MACROS)
  	-rm -f libpari.std
  	tex libpari
@@ -38,10 +47,12 @@ $NetBSD: patch-al,v 1.3 2010/02/06 10:37:06 sno Exp $
  
  develop.pdf: develop.tex \$(MACROS)
  	-rm -f develop.std
- 	pdftex develop
- 	pdftex develop
+-	pdftex develop
+-	pdftex develop
 -	make develop.std; pdftex develop; rm -f develop.std
-+	\$(MAKE) develop.std; pdftex develop; rm -f develop.std
++	\$(PDFTEX) develop
++	\$(PDFTEX) develop
++	\$(MAKE) develop.std; \$(PDFTEX) develop; rm -f develop.std
  develop.dvi: develop.tex \$(MACROS)
  	-rm -f develop.std
  	tex develop
@@ -51,7 +62,12 @@ $NetBSD: patch-al,v 1.3 2010/02/06 10:37:06 sno Exp $
  
  tutorial.pdf: tutorial.tex \$(MACROS)
  	-rm -f tutorial.std
-@@ -57,13 +57,13 @@ tutorial.dvi: tutorial.tex \$(MACROS)
+-	pdftex tutorial
+-	pdftex tutorial
++	\$(PDFTEX) tutorial
++	\$(PDFTEX) tutorial
+ tutorial.dvi: tutorial.tex \$(MACROS)
+ 	-rm -f tutorial.std
  	tex tutorial
  	tex tutorial
  
@@ -76,10 +92,12 @@ $NetBSD: patch-al,v 1.3 2010/02/06 10:37:06 sno Exp $
  
  users.pdf: \$(USERS_TEX)
  	-rm -f users.std
- 	pdftex users
- 	pdftex users
+-	pdftex users
+-	pdftex users
 -	make users.std; pdftex users; rm -f users.std
-+	\$(MAKE) users.std; pdftex users; rm -f users.std
++	\$(PDFTEX) users
++	\$(PDFTEX) users
++	\$(MAKE) users.std; \$(PDFTEX) users; rm -f users.std
  
  gpman: gp.1
  	nroff -man gp.1 | unix2dos -ascii > gp.man
