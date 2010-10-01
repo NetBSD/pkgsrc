@@ -1,0 +1,18 @@
+$NetBSD: patch-be,v 1.1 2010/10/01 21:32:34 spz Exp $
+
+security fixes for http://secunia.com/advisories/41596/
+taken from http://cgit.freedesktop.org/poppler
+
+- Initialize properly charactersRead
+
+--- poppler/Decrypt.cc.orig	2010-06-08 20:06:31.000000000 +0000
++++ poppler/Decrypt.cc
+@@ -229,6 +229,8 @@ DecryptStream::DecryptStream(Stream *str
+   if ((objKeyLength = keyLength + 5) > 16) {
+     objKeyLength = 16;
+   }
++
++  charactersRead = 0;
+ }
+ 
+ DecryptStream::~DecryptStream() {
