@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/05/26 04:16:51 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/01 16:35:31 minskim Exp $
 
 DISTNAME=	nomencl
 PKGNAME=	tex-${DISTNAME}-3.1a
 TEXLIVE_REV=	15878
+DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Produce lists of symbols as in nomenclature
