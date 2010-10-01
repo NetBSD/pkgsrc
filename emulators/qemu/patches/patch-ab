@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.13 2010/10/01 08:32:35 tnn Exp $
+
+Rework 2MB stack allocation in qemu-img which causes SEGV with our
+default process limits.
+
+--- qemu-img.c.orig	2010-05-04 15:27:48.000000000 +0000
++++ qemu-img.c
+@@ -537,12 +537,15 @@ static int img_convert(int argc, char **
+     BlockDriverState **bs, *out_bs;
+     int64_t total_sectors, nb_sectors, sector_num, bs_offset;
+     uint64_t bs_sectors;
+-    uint8_t buf[IO_BUF_SIZE];
++    uint8_t *buf;
+     const uint8_t *buf1;
+     BlockDriverInfo bdi;
+     QEMUOptionParameter *param = NULL;
+     char *options = NULL;
+ 
++    buf = malloc(IO_BUF_SIZE);
++    if (!buf)
++        error("out of memory");
+     fmt = NULL;
+     out_fmt = "raw";
+     out_baseimg = NULL;
+@@ -792,6 +795,7 @@ static int img_convert(int argc, char **
+     for (bs_i = 0; bs_i < bs_n; bs_i++)
+         bdrv_delete(bs[bs_i]);
+     free(bs);
++    free(buf);
+     return 0;
+ }
+ 
