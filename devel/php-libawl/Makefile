@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/23 21:16:17 jym Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/02 06:30:41 obache Exp $
 #
 
 DISTNAME=	awl-${LIBAWL_VERSION}
@@ -16,7 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/phpversion.mk"
 
-DEPENDS+=       php>=5.2.0:../../lang/php5
+.if ${PKG_PHP_VERSION} == "5"
+DEPENDS+=       php>=5.2.0<5.3:../../lang/php5
+.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 
