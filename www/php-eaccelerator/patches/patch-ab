@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/10/02 19:11:35 jdolecek Exp $
+
+--- mm.c.orig	2010-02-28 20:08:30.000000000 +0100
++++ mm.c
+@@ -338,7 +338,7 @@ static int mm_init_lock(const char* key,
+     rc = semctl(lock->semid, 0, IPC_STAT, arg);
+   } while (rc < 0 && errno == EINTR);
+ 
+-  buf.sem_perm.uid = EA_USERID;
++  buf.sem_perm.uid = getuid();
+ 
+   do {
+     rc = semctl(lock->semid, 0, IPC_SET, arg);
