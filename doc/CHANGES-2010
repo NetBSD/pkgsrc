@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3680 2010/10/02 08:59:32 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3681 2010/10/02 10:08:46 wiz Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4957,3 +4957,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated cad/gnucap to 20060708nb2 [minskim 2010-09-29]
 	Updated math/pari to 2.3.5nb6 [minskim 2010-10-01]
 	Updated www/ruby-compass to 0.10.5nb1 [obache 2010-10-02]
+	Updated audio/amarok to 2.3.2nb2 [wiz 2010-10-02]
