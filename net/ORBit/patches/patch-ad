@@ -1,8 +1,15 @@
-$NetBSD: patch-ad,v 1.9 2006/03/31 22:30:02 jlam Exp $
+$NetBSD: patch-ad,v 1.10 2010/10/02 13:19:11 obache Exp $
 
---- popt/Makefile.in.orig	2002-06-06 07:34:39.000000000 -0400
+--- popt/Makefile.in.orig	2002-06-06 11:34:39.000000000 +0000
 +++ popt/Makefile.in
-@@ -114,10 +114,10 @@ INCLUDES = -I$(top_srcdir)
+@@ -108,16 +108,16 @@ AUTOMAKE_OPTIONS = 1.4 foreign
+ EXTRA_DIST = CHANGES autogen.sh $(noinst_MANS) popt.spec 	testit.sh po/Makefile.in.in po/POTFILES.in po/popt.pot popt.ps 	po/cs.po po/ro.po po/uk.po po/zh_CN.GB2312.po po/gl.po po/sk.po po/wa.po
+ 
+ 
+-SUBDIRS = intl po
++SUBDIRS = 
+ 
+ INCLUDES = -I$(top_srcdir)
  
  noinst_PROGRAMS = test1 test2
  test1_SOURCES = test1.c
