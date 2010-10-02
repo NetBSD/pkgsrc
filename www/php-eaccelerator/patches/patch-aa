@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1 2010/10/02 19:11:35 jdolecek Exp $
+
+--- config.m4.orig	2010-02-28 20:06:38.000000000 +0100
++++ config.m4
+@@ -92,13 +92,6 @@ AC_ARG_WITH(eaccelerator-debug,
+   eaccelerator_debug=no
+ ])
+ 
+-AC_ARG_WITH(eaccelerator-userid,
+-[  --with-eaccelerator-userid               eAccelerator runs under this userid, only needed when using sysvipc semaphores.],[
+-  ea_userid=$withval
+-],[
+-  ea_userid=0
+-])
+-
+ AC_ARG_WITH(eaccelerator-doc-comment-inclusion,
+ [  --with-eaccelerator-doc-comment-inclusion  If you want eAccelerator to retain doc-comments in  internal php structures.],[
+     enable_doc_comment_inclusion=$withval
+@@ -113,8 +106,6 @@ if test "$PHP_EACCELERATOR" != "no"; the
+ 
+   AC_DEFINE(WITH_EACCELERATOR_INFO, 1, [Define to be able to get information about eAccelerator])
+ 
+-  AC_DEFINE_UNQUOTED(EA_USERID, $ea_userid, [The userid eAccelerator will be running under.]) 
+-
+   if test "$enable_doc_comment_inclusion" = "yes"; then
+     AC_DEFINE(INCLUDE_DOC_COMMENTS, 1, [If you want eAccelerator to retain doc-comments in internal php structures (meta-programming)])
+   fi
+@@ -322,12 +313,8 @@ if test "$PHP_EACCELERATOR" != "no"; the
+     AC_DEFINE(MM_SEM_SPINLOCK, 1, [Define if you like to use spinlock based semaphores])
+     msg="spinlock"
+   elif test "$mm_sem_ipc" = "yes"; then
+-    if test $ea_userid = 0; then
+-        AC_MSG_ERROR("You need to pass the user id eaccelerator will be running under when using sysvipc semaphores")
+-    else
+-        AC_DEFINE(MM_SEM_IPC, 1, [Define if you like to use sysvipc based semaphores])
+-        msg="sysvipc"
+-    fi
++    AC_DEFINE(MM_SEM_IPC, 1, [Define if you like to use sysvipc based semaphores])
++    msg="sysvipc"
+   elif test "$mm_sem_fcntl" = "yes"; then
+     AC_DEFINE(MM_SEM_FCNTL, 1, [Define if you like to use fcntl based semaphores])
+     msg="fcntl"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/03/16 13:58:07 taca Exp $
+# $NetBSD: Makefile,v 1.12 2010/10/02 19:11:35 jdolecek Exp $
 
 MODNAME=	eaccelerator
 PECL_VERSION=	0.9.6
+PKGREVISION=	1
 CATEGORIES+=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eaccelerator/} \
 		http://bart.eaccelerator.net/source/${PECL_VERSION}/
