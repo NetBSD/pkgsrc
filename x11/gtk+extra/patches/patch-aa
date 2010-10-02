@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 12:25:51 rh Exp $
+$NetBSD: patch-aa,v 1.2 2010/10/02 08:48:54 obache Exp $
 
---- Makefile.in.orig	Tue Sep  5 09:07:28 2000
+--- Makefile.in.orig	2001-11-30 15:28:45.000000000 +0000
 +++ Makefile.in
-@@ -207,16 +207,6 @@
+@@ -207,16 +207,6 @@ uninstall-binSCRIPTS:
  
  install-m4dataDATA: $(m4data_DATA)
  	@$(NORMAL_INSTALL)
@@ -19,3 +19,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/10/15 12:25:51 rh Exp $
  
  uninstall-m4dataDATA:
  	@$(NORMAL_UNINSTALL)
+@@ -450,10 +440,10 @@ maintainer-clean-generic clean mostlycle
+ 
+ 
+ files:
+-        @files=`ls $(DISTFILES) 2> /dev/null `; for p in $$files; do \
++	@files=`ls $(DISTFILES) 2> /dev/null `; for p in $$files; do \
+           echo $$p; \
+         done
+-        @for subdir in $(SUBDIRS); do \
++	@for subdir in $(SUBDIRS); do \
+           files=`cd $$subdir; $(MAKE) files | grep -v "make\[[1-9]\]"`; \
+           for file in $$files; do \
+             echo $$subdir/$$file; \
