@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/17 22:38:01 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/10/03 13:03:51 obache Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -19,6 +19,8 @@ BUILD_TARGET=	hanzim
 # XXX 1.1 of this Makefile, but needs to be tested.
 # XXX
 #MAKE_ENV+=	SHELL=${SH:Q} LC_CTYPE=en_US.ISO8859-1
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
