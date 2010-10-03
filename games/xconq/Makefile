@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2010/02/19 21:48:28 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2010/10/03 10:42:00 obache Exp $
 
 DISTNAME=		xconq-7.4.1
 PKGREVISION=		8
@@ -36,12 +36,11 @@ REQD_DIRS_PERMS+=	${SCOREDIR} ${GAMEDIR_PERMS}
 BUILD_DEFS+=	VARBASE SCOREDIR
 
 post-build:
-	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} info
+	cd ${WRKSRC}/doc && ${BUILD_MAKE_CMD} info
 
 post-install:
-	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} DESTDIR=${DESTDIR}	\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} install-info
+	cd ${WRKSRC}/doc && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} 	\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install-info
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
