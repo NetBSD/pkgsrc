@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/21 08:14:51 adam Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/03 07:55:59 obache Exp $
 
 PKGNAME=	postgresql90-docs-${BASE_VERS}
 COMMENT=	PostgreSQL database documentation
@@ -12,6 +12,7 @@ BUILD_DEPENDS+=	docbook-xsl>=1.75.2:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	dsssl-docbook-modular>=1.79:../../textproc/dsssl-docbook-modular
 BUILD_DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 BUILD_DEPENDS+=	openjade>=1.3.2:../../textproc/openjade
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_TOOLS+=		gzip tar perl:build
 CONFIGURE_ENV+=		DOCBOOKSTYLE="${PREFIX}/share/sgml/docbook/dsssl/modular"
