@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/02/16 19:20:16 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2010/10/03 12:24:19 obache Exp $
 #
 
 DISTNAME=	tnt-1.9.2
@@ -18,6 +18,13 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
+
+SUBST_CLASSES+=		missing
+SUBST_MESSAGE.missing=	Subst missing replacements with configure
+SUBST_STAGE.missing=	post-configure
+SUBST_FILES.missing=	intl/Makefile
+SUBST_SED.missing=	-e 's,@GT_YES@,\#,g'
+SUBST_SED.missing+=	-e 's,@GT_NO@,,g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
