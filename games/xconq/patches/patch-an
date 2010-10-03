@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2010/02/14 08:17:12 dholland Exp $
+$NetBSD: patch-an,v 1.2 2010/10/03 10:43:03 obache Exp $
 
 DESTDIR support.
 
@@ -13,3 +13,10 @@ DESTDIR support.
  	done
  
  # Generation of DVI files.
+@@ -221,5 +221,5 @@ extraclean: distclean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=doc/$@ CONFIG_HEADERS= $(SHELL) ./config.status
