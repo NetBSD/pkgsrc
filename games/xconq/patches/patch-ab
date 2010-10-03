@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2010/02/14 08:17:12 dholland Exp $
+$NetBSD: patch-ab,v 1.7 2010/10/03 10:43:03 obache Exp $
 
 --- tcltk/Makefile.in.orig	2000-07-14 15:39:55.000000000 +0000
 +++ tcltk/Makefile.in
@@ -22,3 +22,12 @@ $NetBSD: patch-ab,v 1.6 2010/02/14 08:17:12 dholland Exp $
  
  # Usual cleaning, and flushing of anything junk-like.
  
+@@ -140,7 +140,7 @@ distclean: clean
+ realclean: distclean
+ 
+ Makefile: $(srcdir)/Makefile.in
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=tcltk/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # All the .h dependencies.

@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2010/10/03 10:43:03 obache Exp $
+
+--- curses/Makefile.in.orig	2000-11-20 03:31:12.000000000 +0000
++++ curses/Makefile.in
+@@ -137,7 +137,7 @@ extraclean: distclean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=curses/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # Dependencies.

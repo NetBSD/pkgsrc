@@ -1,0 +1,11 @@
+$NetBSD: patch-as,v 1.1 2010/10/03 10:43:03 obache Exp $
+
+--- misc/Makefile.in.orig	1999-04-28 19:37:04.000000000 +0000
++++ misc/Makefile.in
+@@ -32,5 +32,5 @@ extraclean: distclean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=misc/$@ CONFIG_HEADERS= $(SHELL) ./config.status

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2010/10/03 10:43:03 obache Exp $
+
+--- kernel/Makefile.in.orig	2000-11-16 23:33:12.000000000 +0000
++++ kernel/Makefile.in
+@@ -176,7 +176,7 @@ distclean: clean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+ 	  && CONFIG_FILES=kernel/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # All the .h dependencies.

@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.1 2010/02/14 08:17:12 dholland Exp $
+$NetBSD: patch-am,v 1.2 2010/10/03 10:43:03 obache Exp $
 
 DESTDIR support.
 
 XXX: see comment in patch-al (same issue)
 
---- images/Makefile.in~	2000-06-09 14:52:41.000000000 +0000
+--- images/Makefile.in.orig	2000-06-09 14:52:41.000000000 +0000
 +++ images/Makefile.in
 @@ -51,12 +51,12 @@ install: all install-only
  install-only:
@@ -24,3 +24,10 @@ XXX: see comment in patch-al (same issue)
  
  clean:
  
+@@ -69,5 +69,5 @@ extraclean: distclean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=lib/$@ CONFIG_HEADERS= $(SHELL) ./config.status
