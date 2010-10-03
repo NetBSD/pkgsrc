@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/18 23:38:31 tron Exp $
+# $NetBSD: Makefile,v 1.16 2010/10/03 02:14:26 obache Exp $
 
 DISTNAME=	mediatomb-0.11.0
 PKGREVISION=	8
@@ -58,8 +58,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/mediatomb.desktop \
 		${DESTDIR}${PREFIX}/share/applications/mediatomb.desktop
 
-PREFER.bind=	pkgsrc	# we need the package for the lwres lib
-
 .include "options.mk"
 
 .include "../../audio/taglib/buildlink3.mk"
@@ -67,7 +65,10 @@ PREFER.bind=	pkgsrc	# we need the package for the lwres lib
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
+.if ${OPSYS} == "NetBSD"
+PREFER.bind=	pkgsrc	# we need the package for the lwres lib
 .include "../../net/bind95/buildlink3.mk"
+.endif
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
