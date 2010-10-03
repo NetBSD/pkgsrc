@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/09/15 09:38:43 markd Exp $
+# $NetBSD: Makefile,v 1.25 2010/10/03 00:52:24 markd Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -67,6 +67,8 @@ PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/tests/test_buffers.py
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
+BUILDLINK_DEPMETHOD.guile=	build
+.include "../../lang/guile/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
