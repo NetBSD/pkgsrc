@@ -1,0 +1,13 @@
+$NetBSD: patch-bh,v 1.1 2010/10/03 21:53:17 pettai Exp $
+
+--- ./lib/Mail/SpamAssassin/HTML.pm.orig	2010-10-01 20:58:44.000000000 +0000
++++ ./lib/Mail/SpamAssassin/HTML.pm
+@@ -191,7 +191,7 @@ sub get_rendered_text {
+   my $self = shift;
+   my %options = @_;
+ 
+-  return join('', @{ $self->{text} }) unless keys %options;
++  return join('', @{ $self->{text} }) unless %options;
+ 
+   my $mask;
+   while (my ($k, $v) = each %options) {

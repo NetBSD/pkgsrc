@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1 2010/10/03 21:53:17 pettai Exp $
+
+--- ./lib/Mail/SpamAssassin/Plugin/BodyEval.pm.orig	2010-03-16 14:49:21.000000000 +0000
++++ ./lib/Mail/SpamAssassin/Plugin/BodyEval.pm
+@@ -119,7 +119,7 @@ sub _multipart_alternative_difference {
+         }
+ 
+ 	# If there are no words, mark if there's at least 1 image ...
+-	if (keys %html == 0 && exists $pms->{html}{inside}{img}) {
++	if (!%html && exists $pms->{html}{inside}{img}) {
+ 	  # Use "\n" as the mark since it can't ever occur normally
+ 	  $html{"\n"}=1;
+ 	}
