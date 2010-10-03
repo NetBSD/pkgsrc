@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/10/03 12:00:50 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/10/03 12:13:23 obache Exp $
 #
 
 DISTNAME=	fldigi-3.03
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-xmlrpc=no
+CONFIGURE_ENV+=		STRIP=${STRIP}
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
