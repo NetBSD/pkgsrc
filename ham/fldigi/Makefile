@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/10/03 12:00:50 obache Exp $
 #
 
 DISTNAME=	fldigi-3.03
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--with-xmlrpc=no
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
