@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2010/09/30 10:49:12 obache Exp $
+# $NetBSD: Makefile,v 1.29 2010/10/03 22:13:38 pettai Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
 PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.4
+RCVERSION=	0.4.1
 VERSION=	${RCVERSION:S/-//}
 
 PKG_DESTDIR_SUPPORT=  	user-destdir
