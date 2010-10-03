@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2010/10/03 12:47:20 obache Exp $
+
+--- Makefile.in.orig	2004-11-19 22:51:24.000000000 +0000
++++ Makefile.in
+@@ -54,8 +54,12 @@ bindir = @bindir@
+ mandir = @mandir@
+ 
+ # Installation locations
+-if [ ! $bindir ] ; then bindir = $(exec_prefix)/bin; fi
+-if [ ! $mandir ] ; then mandir = $(prefix)/man; fi
++ifeq ($(strip $(bindir)),)
++  bindir = $(exec_prefix)/bin
++endif
++ifeq ($(strip $(mandir)),)
++  mandir = $(prefix)/man
++endif
+ 
+ #### This is just a test---feel free to delete ###
+ printdirs:
