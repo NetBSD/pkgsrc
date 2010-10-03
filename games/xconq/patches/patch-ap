@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2010/10/03 10:43:03 obache Exp $
+
+--- SelFile/Makefile.in.orig	2000-06-09 14:52:40.000000000 +0000
++++ SelFile/Makefile.in
+@@ -76,7 +76,7 @@ extraclean: distclean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=SelFile/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # Dependencies.

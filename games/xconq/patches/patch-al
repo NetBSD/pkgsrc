@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2010/02/14 08:17:12 dholland Exp $
+$NetBSD: patch-al,v 1.2 2010/10/03 10:43:03 obache Exp $
 
 DESTDIR support.
 
@@ -35,3 +35,10 @@ XXX: (there are a lot) won't be pretty.
  
  clean:
  
+@@ -69,5 +69,5 @@ extraclean: distclean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=lib/$@ CONFIG_HEADERS= $(SHELL) ./config.status

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2010/02/14 08:17:12 dholland Exp $
+$NetBSD: patch-ac,v 1.9 2010/10/03 10:43:03 obache Exp $
 
 --- x11/Makefile.in.orig	2000-08-22 12:52:56.000000000 +0000
 +++ x11/Makefile.in
@@ -92,3 +92,18 @@ $NetBSD: patch-ac,v 1.8 2010/02/14 08:17:12 dholland Exp $
  
  # Cleanliness support.
  
+@@ -240,11 +240,11 @@ extraclean: distclean
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
++	cd .. \
+           && CONFIG_FILES=x11/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # Dependencies.
+ 
+ xconq.o:	$(ALL_H) $(krnsrcdir)/cmdline.h $(srcdir)/../tcltk/tkconq.h
+ 
+-ximfapp.o:	$(LOW_H) $(krnsrcdir)/imf.h
+\ No newline at end of file
++ximfapp.o:	$(LOW_H) $(krnsrcdir)/imf.h
