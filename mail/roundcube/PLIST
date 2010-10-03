@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2010/09/23 23:54:40 pettai Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/10/03 22:13:38 pettai Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
 share/doc/roundcube/UPGRADING
 share/examples/roundcube/SQL/mssql.initial.sql
+share/examples/roundcube/SQL/mssql.upgrade.sql
 share/examples/roundcube/SQL/mysql.initial.sql
 share/examples/roundcube/SQL/mysql.update.sql
 share/examples/roundcube/SQL/postgres.initial.sql
@@ -51,6 +52,7 @@ share/roundcube/plugins/archive/localization/es_ES.inc
 share/roundcube/plugins/archive/localization/et_EE.inc
 share/roundcube/plugins/archive/localization/fr_FR.inc
 share/roundcube/plugins/archive/localization/ja_JP.inc
+share/roundcube/plugins/archive/localization/nl_NL.inc
 share/roundcube/plugins/archive/localization/pl_PL.inc
 share/roundcube/plugins/archive/localization/ru_RU.inc
 share/roundcube/plugins/archive/localization/sv_SE.inc
@@ -72,6 +74,7 @@ share/roundcube/plugins/help/content/about.html
 share/roundcube/plugins/help/content/license.html
 share/roundcube/plugins/help/help.php
 share/roundcube/plugins/help/localization/cs_CZ.inc
+share/roundcube/plugins/help/localization/de_DE.inc
 share/roundcube/plugins/help/localization/en_GB.inc
 share/roundcube/plugins/help/localization/en_US.inc
 share/roundcube/plugins/help/localization/es_ES.inc
@@ -104,10 +107,12 @@ share/roundcube/plugins/managesieve/localization/fi_FI.inc
 share/roundcube/plugins/managesieve/localization/fr_FR.inc
 share/roundcube/plugins/managesieve/localization/hu_HU.inc
 share/roundcube/plugins/managesieve/localization/it_IT.inc
+share/roundcube/plugins/managesieve/localization/ja_JP.inc
 share/roundcube/plugins/managesieve/localization/nb_NO.inc
 share/roundcube/plugins/managesieve/localization/nl_NL.inc
 share/roundcube/plugins/managesieve/localization/pl_PL.inc
 share/roundcube/plugins/managesieve/localization/pt_BR.inc
+share/roundcube/plugins/managesieve/localization/pt_PT.inc
 share/roundcube/plugins/managesieve/localization/ru_RU.inc
 share/roundcube/plugins/managesieve/localization/sk_SK.inc
 share/roundcube/plugins/managesieve/localization/sl_SI.inc
@@ -123,10 +128,12 @@ share/roundcube/plugins/managesieve/skins/default/templates/filteredit.html
 share/roundcube/plugins/managesieve/skins/default/templates/managesieve.html
 share/roundcube/plugins/managesieve/skins/default/templates/setedit.html
 share/roundcube/plugins/markasjunk/localization/cs_CZ.inc
+share/roundcube/plugins/markasjunk/localization/de_DE.inc
 share/roundcube/plugins/markasjunk/localization/en_US.inc
 share/roundcube/plugins/markasjunk/localization/es_AR.inc
 share/roundcube/plugins/markasjunk/localization/es_ES.inc
 share/roundcube/plugins/markasjunk/localization/et_EE.inc
+share/roundcube/plugins/markasjunk/localization/ja_JP.inc
 share/roundcube/plugins/markasjunk/localization/pl_PL.inc
 share/roundcube/plugins/markasjunk/localization/ru_RU.inc
 share/roundcube/plugins/markasjunk/localization/sv_SE.inc
@@ -143,8 +150,11 @@ share/roundcube/plugins/new_user_dialog/localization/en_US.inc
 share/roundcube/plugins/new_user_dialog/localization/es_ES.inc
 share/roundcube/plugins/new_user_dialog/localization/et_EE.inc
 share/roundcube/plugins/new_user_dialog/localization/it_IT.inc
+share/roundcube/plugins/new_user_dialog/localization/ja_JP.inc
+share/roundcube/plugins/new_user_dialog/localization/nl_NL.inc
 share/roundcube/plugins/new_user_dialog/localization/pl_PL.inc
 share/roundcube/plugins/new_user_dialog/localization/ru_RU.inc
+share/roundcube/plugins/new_user_dialog/localization/sl_SI.inc
 share/roundcube/plugins/new_user_dialog/localization/sv_SE.inc
 share/roundcube/plugins/new_user_dialog/localization/zh_TW.inc
 share/roundcube/plugins/new_user_dialog/new_user_dialog.php
@@ -155,6 +165,7 @@ share/roundcube/plugins/password/README
 share/roundcube/plugins/password/config.inc.php.dist
 share/roundcube/plugins/password/drivers/chgsaslpasswd.c
 share/roundcube/plugins/password/drivers/chgvirtualminpasswd.c
+share/roundcube/plugins/password/drivers/chpass-wrapper.py
 share/roundcube/plugins/password/drivers/chpasswd.php
 share/roundcube/plugins/password/drivers/cpanel.php
 share/roundcube/plugins/password/drivers/directadmin.php
@@ -168,6 +179,7 @@ share/roundcube/plugins/password/drivers/sql.php
 share/roundcube/plugins/password/drivers/virtualmin.php
 share/roundcube/plugins/password/drivers/vpopmaild.php
 share/roundcube/plugins/password/drivers/ximss.php
+share/roundcube/plugins/password/drivers/xmail.php
 share/roundcube/plugins/password/localization/bg_BG.inc
 share/roundcube/plugins/password/localization/ca_ES.inc
 share/roundcube/plugins/password/localization/cs_CZ.inc
@@ -206,6 +218,7 @@ share/roundcube/plugins/subscriptions_option/localization/de_DE.inc
 share/roundcube/plugins/subscriptions_option/localization/en_US.inc
 share/roundcube/plugins/subscriptions_option/localization/es_ES.inc
 share/roundcube/plugins/subscriptions_option/localization/et_EE.inc
+share/roundcube/plugins/subscriptions_option/localization/ja_JP.inc
 share/roundcube/plugins/subscriptions_option/localization/pl_PL.inc
 share/roundcube/plugins/subscriptions_option/localization/ru_RU.inc
 share/roundcube/plugins/subscriptions_option/localization/sv_SE.inc
@@ -243,6 +256,7 @@ share/roundcube/plugins/virtuser_file/virtuser_file.php
 share/roundcube/plugins/virtuser_query/virtuser_query.php
 share/roundcube/program/blank.gif
 share/roundcube/program/blocked.gif
+share/roundcube/program/include/clisetup.php
 share/roundcube/program/include/html.php
 share/roundcube/program/include/iniset.php
 share/roundcube/program/include/main.inc
@@ -636,6 +650,8 @@ share/roundcube/program/js/tiny_mce/plugins/spellchecker/css/content.css
 share/roundcube/program/js/tiny_mce/plugins/spellchecker/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/spellchecker/editor_plugin_src.js
 share/roundcube/program/js/tiny_mce/plugins/spellchecker/img/wline.gif
+share/roundcube/program/js/tiny_mce/plugins/tabfocus/editor_plugin.js
+share/roundcube/program/js/tiny_mce/plugins/tabfocus/editor_plugin_src.js
 share/roundcube/program/js/tiny_mce/plugins/table/cell.htm
 share/roundcube/program/js/tiny_mce/plugins/table/css/cell.css
 share/roundcube/program/js/tiny_mce/plugins/table/css/row.css
@@ -962,6 +978,8 @@ share/roundcube/program/localization/ja_JP/labels.inc
 share/roundcube/program/localization/ja_JP/messages.inc
 share/roundcube/program/localization/ka_GE/labels.inc
 share/roundcube/program/localization/ka_GE/messages.inc
+share/roundcube/program/localization/kh_KH/labels.inc
+share/roundcube/program/localization/kh_KH/messages.inc
 share/roundcube/program/localization/ko_KR/labels.inc
 share/roundcube/program/localization/ko_KR/messages.inc
 share/roundcube/program/localization/ku/labels.inc
@@ -1067,6 +1085,7 @@ share/roundcube/program/steps/utils/error.inc
 share/roundcube/program/steps/utils/html2text.inc
 share/roundcube/program/steps/utils/killcache.inc
 share/roundcube/program/steps/utils/modcss.inc
+share/roundcube/program/steps/utils/save_pref.inc
 share/roundcube/program/steps/utils/spell.inc
 share/roundcube/program/steps/utils/spell_googie.inc
 share/roundcube/program/steps/utils/spell_html_googie.inc
