@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3682 2010/10/02 21:28:08 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3683 2010/10/03 05:54:04 manu Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4959,3 +4959,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ruby-compass to 0.10.5nb1 [obache 2010-10-02]
 	Updated audio/amarok to 2.3.2nb2 [wiz 2010-10-02]
 	Updated print/tex-dvips to 2010nb1 [minskim 2010-10-02]
+	Updated filesystems/perfuse to 20101003 [manu 2010-10-03]
