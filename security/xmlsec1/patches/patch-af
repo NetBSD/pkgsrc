@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1 2010/10/04 12:32:16 obache Exp $
+$NetBSD: patch-af,v 1.2 2010/10/04 12:46:26 obache Exp $
 
 remove redundant escape slash.
 
---- xmlsec1-openssl.pc.orig	2010-05-25 21:53:21.000000000 +0000
-+++ xmlsec1-openssl.pc
+--- xmlsec-openssl.pc.in.orig	2010-05-25 21:52:46.000000000 +0000
++++ xmlsec-openssl.pc.in
 @@ -7,5 +7,5 @@ Name: xmlsec1-openssl
- Version: 1.2.16
+ Version: @VERSION@
  Description: XML Security Library implements XML Signature and XML Encryption standards
- Requires: libxml-2.0 >= 2.7.4 libxslt >= 1.0.20 
--Cflags: -DXMLSEC_CRYPTO=\\\"openssl\\\"  -D__XMLSEC_FUNCTION__=__FUNCTION__ -DXMLSEC_NO_GOST=1 -DXMLSEC_NO_XKMS=1 -DXMLSEC_DL_LIBLTDL=1, -I${prefix}/include/xmlsec1     -DXMLSEC_OPENSSL_098=1 -DXMLSEC_CRYPTO_OPENSSL=1
-+Cflags: -DXMLSEC_CRYPTO=\"openssl\"  -D__XMLSEC_FUNCTION__=__FUNCTION__ -DXMLSEC_NO_GOST=1 -DXMLSEC_NO_XKMS=1 -DXMLSEC_DL_LIBLTDL=1, -I${prefix}/include/xmlsec1     -DXMLSEC_OPENSSL_098=1 -DXMLSEC_CRYPTO_OPENSSL=1
- Libs: -L${exec_prefix}/lib -lxmlsec1-openssl -lxmlsec1 -lltdl  -lssl -lcrypto  
+ Requires: libxml-2.0 >= @LIBXML_MIN_VERSION@ libxslt >= @LIBXSLT_MIN_VERSION@ 
+-Cflags: -DXMLSEC_CRYPTO=\\\"openssl\\\" @XMLSEC_OPENSSL_CFLAGS@
++Cflags: -DXMLSEC_CRYPTO=\"openssl\" @XMLSEC_OPENSSL_CFLAGS@
+ Libs: @XMLSEC_OPENSSL_LIBS@
