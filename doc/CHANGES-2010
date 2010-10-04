@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3684 2010/10/03 22:14:08 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3685 2010/10/04 04:10:59 manu Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4961,3 +4961,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-dvips to 2010nb1 [minskim 2010-10-02]
 	Updated filesystems/perfuse to 20101003 [manu 2010-10-03]
 	Updated mail/roundcube to 0.4.1 [pettai 2010-10-03]
+	Updated filesystems/perfuse to 20101004 [manu 2010-10-04]
