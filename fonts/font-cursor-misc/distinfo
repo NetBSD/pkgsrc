@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/09 18:26:20 joerg Exp $
+$NetBSD: distinfo,v 1.3 2010/10/04 05:33:49 dsainty Exp $
 
 SHA1 (font-cursor-misc-1.0.1.tar.bz2) = 5087a94e74f8157cb6989f71fb3b4815b236065a
 RMD160 (font-cursor-misc-1.0.1.tar.bz2) = c8c4d9a319eb97aa4b43290d739660947900dac8
 Size (font-cursor-misc-1.0.1.tar.bz2) = 92547 bytes
-SHA1 (patch-aa) = f8448e082b3cfd00785d1b42f938af1e68131811
-SHA1 (patch-ab) = a227610e2cd622716a341a7db73e0fb1874b5bf9
-SHA1 (patch-ac) = 89488891ba7ca2ce6582eba407c71e5f4cdec38a
