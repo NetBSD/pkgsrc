@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2010/10/04 12:32:16 obache Exp $
+
+remove redundant escape slash.
+
+--- xmlsec1.pc.orig	2010-05-25 21:53:20.000000000 +0000
++++ xmlsec1.pc
+@@ -7,5 +7,5 @@ Name: xmlsec1
+ Version: 1.2.16
+ Description: XML Security Library implements XML Signature and XML Encryption standards
+ Requires: libxml-2.0 >= 2.7.4 libxslt >= 1.0.20 
+-Cflags: -DXMLSEC_CRYPTO=\\\"openssl\\\" -DXMLSEC_CRYPTO_DYNAMIC_LOADING=1  -D__XMLSEC_FUNCTION__=__FUNCTION__ -DXMLSEC_NO_GOST=1 -DXMLSEC_NO_XKMS=1 -DXMLSEC_DL_LIBLTDL=1, -I${prefix}/include/xmlsec1  
++Cflags: -DXMLSEC_CRYPTO=\"openssl\" -DXMLSEC_CRYPTO_DYNAMIC_LOADING=1  -D__XMLSEC_FUNCTION__=__FUNCTION__ -DXMLSEC_NO_GOST=1 -DXMLSEC_NO_XKMS=1 -DXMLSEC_DL_LIBLTDL=1, -I${prefix}/include/xmlsec1  
+ Libs: -L${libdir} -lxmlsec1 -lltdl  
