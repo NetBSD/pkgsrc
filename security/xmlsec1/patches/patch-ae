@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/10/04 12:32:16 obache Exp $
+
+remove redundant escape slash.
+
+--- xmlsec1-gcrypt.pc.orig	2010-05-25 21:53:21.000000000 +0000
++++ xmlsec1-gcrypt.pc
+@@ -7,5 +7,5 @@ Name: xmlsec1-gcrypt
+ Version: 1.2.16
+ Description: XML Security Library implements XML Signature and XML Encryption standards
+ Requires: libxml-2.0 >= 2.7.4 libxslt >= 1.0.20
+-Cflags: -DXMLSEC_CRYPTO=\\\"gcrypt\\\"  -D__XMLSEC_FUNCTION__=__FUNCTION__ -DXMLSEC_NO_GOST=1 -DXMLSEC_NO_XKMS=1 -DXMLSEC_DL_LIBLTDL=1, -I${prefix}/include/xmlsec1     -DXMLSEC_CRYPTO_GCRYPT=1
++Cflags: -DXMLSEC_CRYPTO=\"gcrypt\"  -D__XMLSEC_FUNCTION__=__FUNCTION__ -DXMLSEC_NO_GOST=1 -DXMLSEC_NO_XKMS=1 -DXMLSEC_DL_LIBLTDL=1, -I${prefix}/include/xmlsec1     -DXMLSEC_CRYPTO_GCRYPT=1
+ Libs: -L${exec_prefix}/lib -lxmlsec1-gcrypt -lxmlsec1 -lltdl   -lgcrypt
