@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3686 2010/10/04 12:32:33 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3687 2010/10/05 06:55:51 ghen Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4963,3 +4963,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/roundcube to 0.4.1 [pettai 2010-10-03]
 	Updated filesystems/perfuse to 20101004 [manu 2010-10-04]
 	Updated security/xmlsec1 to 1.2.16nb1 [obache 2010-10-04]
+	Updated mail/dovecot to 1.2.15 [ghen 2010-10-05]
