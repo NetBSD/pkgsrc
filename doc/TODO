@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9756 2010/10/05 11:22:15 taca Exp $
+$NetBSD: TODO,v 1.9757 2010/10/05 11:57:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -550,7 +550,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emacs-muse-3.20
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o empathy-2.30.3
+	o empathy-2.32.0.1
 	o enca-1.13
 	o enlightenment-1.0.0
 	o enscript-1.6.5.2
@@ -614,7 +614,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2010.08.08
 	o fvwm2-themes-0.7.0
-	o gammu-1.28.91
+	o gammu-1.28.92
 	o gap-4r4p9
 	o gated-3.6
 	o gawk-3.1.8
@@ -623,6 +623,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcal-3.6
 	o gcalctool-5.32.0
 	o gcc-4.5.1
+	o gcc44-4.4.5
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-9.0
@@ -647,6 +648,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ghc-6.12.2
 	o ghostscript-9.0
 	o gifsicle-1.48
+	o gimp-2.6.11
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
@@ -880,6 +882,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.91.0
 	o librsvg2-2.32.0
+	o libsndfile-1.0.22
 	o libsoup24-2.32.0
 	o libssh-0.4.6
 	o libssh2-1.2.7
@@ -932,7 +935,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mediatomb-0.12.1
 	o meld-1.4.0
 	o memconf-2.9 [pkg/40201]
-	o memtester-4.2.0
+	o memtester-4.2.1
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
 	o merb-activerecord-1.0.0.1
@@ -984,7 +987,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mutt-devel-1.5.21
 	o mysql51-client-5.1.50
 	o mysql51-server-5.1.50
-	o nagios-3.2.0
+	o nagios-3.2.3
 	o nap-1.5.3
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o nautilus-sendto-2.28.5
@@ -1074,7 +1077,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
-	o pioneers-0.12.2
+	o pioneers-0.12.3.1
 	o pircbot-1.4.6
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
@@ -1220,7 +1223,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.6
 	o snes9x-1.51
-	o snort-2.8.6.1
+	o snort-2.9.0
 	o snownews-1.5.12
 	o solfege-3.16.3
 	o sope-4.6
@@ -1301,6 +1304,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
+	o umefont-ttf-0.420 [pkg/43936]
 	o unicap-0.9.8
 	o units-88 [pkg/43742]
 	o ups-nut-2.2.1 [pkgsrc-wip]
@@ -1308,7 +1312,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o vala-0.9.5 [pkg/43749]
-	o vala-0.10.0
+	o vala-0.11.0
 	o valgrind-3.5.0
 	o vera-1.17
 	o vfu-4.09
@@ -1468,6 +1472,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xzip-182
 	o yafc-1.1
 	o yodl-2.14.3
+	o youtube-dl-20101003
 	o ysm-2.9.9.1
 	o yudit-2.9.2
 	o yorick-2.1.05
