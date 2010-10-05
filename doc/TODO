@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9755 2010/10/05 03:09:01 obache Exp $
+$NetBSD: TODO,v 1.9756 2010/10/05 11:22:15 taca Exp $
 
 Suggested new packages
 ======================
@@ -598,6 +598,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fluidsynth-1.1.2
 	o font-adobe-utopia-type1-1.0.2
 	o font-misc-misc-1.1.0
+	o font-util-1.1.2
 	o fotoxx-10.10
 	o frama-c-20100401
 	o freefont-20100919
@@ -1238,6 +1239,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
+	o subversion-1.6.13 [CVE-2010-3315]
 	o sun-jdk6-6.0.21
 	o sun-jre6-6.0.21
 	o swfdec-gnome-2.30.1
@@ -1368,6 +1370,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xconsole-1.0.4
 	o xcursorgen-1.0.4
 	o xdesktopwaves-1.3
+	o xdpyinfo-1.2.0
 	o xemacs-21.4.22
 	o xemacs-current-21.5.28
 	o xerces-c-2.10.0
