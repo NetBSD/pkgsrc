@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 16:34:50 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/10/06 12:46:46 obache Exp $
 #
 
 DISTNAME=	Padre-Plugin-PerlTidy-0.10
@@ -13,6 +13,8 @@ COMMENT=	Format perl files in Padre using Perl::Tidy
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	p5-Padre>=0.54:../../editors/p5-Padre
 DEPENDS+=	p5-Perl-Tidy-[0-9]*:../../devel/p5-Perl-Tidy
