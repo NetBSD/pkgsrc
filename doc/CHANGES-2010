@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3688 2010/10/05 22:12:38 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3689 2010/10/06 12:28:13 taca Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4965,3 +4965,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/xmlsec1 to 1.2.16nb1 [obache 2010-10-04]
 	Updated mail/dovecot to 1.2.15 [ghen 2010-10-05]
 	Updated devel/mercurial to 1.6.4 [wiz 2010-10-05]
+	Updated archivers/ruby-zip to 0.9.4nb1 [taca 2010-10-06]
