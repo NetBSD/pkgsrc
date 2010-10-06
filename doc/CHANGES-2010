@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3690 2010/10/06 12:30:58 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3691 2010/10/06 12:35:35 taca Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4967,3 +4967,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/mercurial to 1.6.4 [wiz 2010-10-05]
 	Updated archivers/ruby-zip to 0.9.4nb1 [taca 2010-10-06]
 	Updated mail/mew to 6.3nb1 [taca 2010-10-06]
+	Updated www/typo3 to 4.4.4 [taca 2010-10-06]
+	Updated www/contao29-translations to 20101001 [taca 2010-10-06]
