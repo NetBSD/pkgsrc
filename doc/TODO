@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9759 2010/10/05 22:12:39 wiz Exp $
+$NetBSD: TODO,v 1.9760 2010/10/06 12:09:34 taca Exp $
 
 Suggested new packages
 ======================
@@ -1017,8 +1017,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o muse-0.9.2
 	o mutt-1.5.21
 	o mutt-devel-1.5.21
-	o mysql51-client-5.1.50
-	o mysql51-server-5.1.50
+	o mysql51-client-5.1.51
+	o mysql51-server-5.1.51
 	o nagios-3.2.3
 	o nap-1.5.3
 	o nautilus-actions-2.30.3 [GNOME 2.30]
@@ -1127,6 +1127,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
+	o postgresql-8.2.18 [CVE-2010-3433]
+	o postgresql-8.3.12 [CVE-2010-3433]
+	o postgresql-8.4.5 [CVE-2010-3433]
+	o postgresql-9.0.1 [CVE-2010-3433]
 	o pptp-1.7.1 [pkg/38038]
 	o profit-2.5.3
 	o projclock-0.9
