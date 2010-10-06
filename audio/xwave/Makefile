@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/10/06 07:38:32 obache Exp $
+# $NetBSD: Makefile,v 1.26 2010/10/06 07:39:31 obache Exp $
 #
 
 DISTNAME=		xwave2
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=		YES
 INSTALLATION_DIRS=	bin lib/X11/app-defaults
+
+MAKE_JOBS_SAFE=		no
 
 SUBST_CLASSES+=		devaudio
 SUBST_STAGE.devaudio=	pre-configure
