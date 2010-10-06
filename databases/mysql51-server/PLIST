@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/09/08 16:24:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/10/06 12:37:58 taca Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -169,6 +169,7 @@ share/mysql-test/extra/rpl_tests/rpl_row_tabledefs.test
 share/mysql-test/extra/rpl_tests/rpl_set_null.test
 share/mysql-test/extra/rpl_tests/rpl_stm_000001.test
 share/mysql-test/extra/rpl_tests/rpl_stm_EE_err2.test
+share/mysql-test/extra/rpl_tests/rpl_stm_create_if_not_exists.test
 share/mysql-test/extra/rpl_tests/rpl_sv_relay_space.test
 share/mysql-test/extra/rpl_tests/rpl_tmp_table_and_DDL.test
 share/mysql-test/extra/rpl_tests/rpl_trig004.test
@@ -323,6 +324,7 @@ share/mysql-test/include/no_running_events.inc
 share/mysql-test/include/no_valgrind_without_big.inc
 share/mysql-test/include/not_as_root.inc
 share/mysql-test/include/not_binlog_format_row.inc
+share/mysql-test/include/not_blackhole.inc
 share/mysql-test/include/not_embedded.inc
 share/mysql-test/include/not_ndb.inc
 share/mysql-test/include/not_ndb_default.inc
@@ -843,6 +845,7 @@ share/mysql-test/r/partition_list.result
 share/mysql-test/r/partition_mgm.result
 share/mysql-test/r/partition_mgm_err.result
 share/mysql-test/r/partition_mgm_err2.result
+share/mysql-test/r/partition_not_blackhole.result
 share/mysql-test/r/partition_not_embedded.result
 share/mysql-test/r/partition_not_windows.result
 share/mysql-test/r/partition_open_files_limit.result
@@ -1128,6 +1131,8 @@ share/mysql-test/std_data/parts/part_supported_sql_funcs_int_float.inc
 share/mysql-test/std_data/parts/part_supported_sql_funcs_int_int.inc
 share/mysql-test/std_data/parts/part_supported_sql_funcs_int_time.inc
 share/mysql-test/std_data/parts/t1.frm
+share/mysql-test/std_data/parts/t1_blackhole.frm
+share/mysql-test/std_data/parts/t1_blackhole.par
 share/mysql-test/std_data/parts/t1_will_crash#P#p1_first_1024.MYD
 share/mysql-test/std_data/parts/t1_will_crash#P#p2.MYD
 share/mysql-test/std_data/parts/t1_will_crash#P#p2.MYI
@@ -1166,6 +1171,7 @@ share/mysql-test/suite/binlog/r/binlog_killed.result
 share/mysql-test/suite/binlog/r/binlog_killed_simulate.result
 share/mysql-test/suite/binlog/r/binlog_mix_innodb_stat.result
 share/mysql-test/suite/binlog/r/binlog_mixed_failure_mixing_engines.result
+share/mysql-test/suite/binlog/r/binlog_mixed_load_data.result
 share/mysql-test/suite/binlog/r/binlog_multi_engine.result
 share/mysql-test/suite/binlog/r/binlog_old_versions.result
 share/mysql-test/suite/binlog/r/binlog_row_binlog.result
@@ -1225,6 +1231,7 @@ share/mysql-test/suite/binlog/t/binlog_killed_simulate-master.opt
 share/mysql-test/suite/binlog/t/binlog_killed_simulate.test
 share/mysql-test/suite/binlog/t/binlog_mix_innodb_stat.test
 share/mysql-test/suite/binlog/t/binlog_mixed_failure_mixing_engines.test
+share/mysql-test/suite/binlog/t/binlog_mixed_load_data.test
 share/mysql-test/suite/binlog/t/binlog_multi_engine.test
 share/mysql-test/suite/binlog/t/binlog_old_versions.test
 share/mysql-test/suite/binlog/t/binlog_row_binlog-master.opt
@@ -3747,6 +3754,7 @@ share/mysql-test/suite/rpl/r/rpl_stm_EE_err2.result
 share/mysql-test/suite/rpl/r/rpl_stm_auto_increment_bug33029.result
 share/mysql-test/suite/rpl/r/rpl_stm_binlog_direct.result
 share/mysql-test/suite/rpl/r/rpl_stm_conflicts.result
+share/mysql-test/suite/rpl/r/rpl_stm_create_if_not_exists.result
 share/mysql-test/suite/rpl/r/rpl_stm_flsh_tbls.result
 share/mysql-test/suite/rpl/r/rpl_stm_insert_delayed.result
 share/mysql-test/suite/rpl/r/rpl_stm_loadfile.result
@@ -4085,6 +4093,7 @@ share/mysql-test/suite/rpl/t/rpl_stm_auto_increment_bug33029.test
 share/mysql-test/suite/rpl/t/rpl_stm_binlog_direct-master.opt
 share/mysql-test/suite/rpl/t/rpl_stm_binlog_direct.test
 share/mysql-test/suite/rpl/t/rpl_stm_conflicts.test
+share/mysql-test/suite/rpl/t/rpl_stm_create_if_not_exists.test
 share/mysql-test/suite/rpl/t/rpl_stm_flsh_tbls.test
 share/mysql-test/suite/rpl/t/rpl_stm_insert_delayed.test
 share/mysql-test/suite/rpl/t/rpl_stm_loadfile.test
@@ -4664,6 +4673,8 @@ share/mysql-test/t/partition_list.test
 share/mysql-test/t/partition_mgm.test
 share/mysql-test/t/partition_mgm_err.test
 share/mysql-test/t/partition_mgm_err2.test
+share/mysql-test/t/partition_not_blackhole-master.opt
+share/mysql-test/t/partition_not_blackhole.test
 share/mysql-test/t/partition_not_embedded.test
 share/mysql-test/t/partition_not_windows-master.opt
 share/mysql-test/t/partition_not_windows.test
