@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/20 18:51:25 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/10/06 13:15:01 obache Exp $
 #
 
 DISTNAME=	Padre-Plugin-PerlCritic-0.08
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Padre>=0.54:../../editors/p5-Padre
 DEPENDS+=	p5-Perl-Critic-[0-9]*:../../devel/p5-Perl-Critic
 
 PERL5_PACKLIST=		auto/Padre/Plugin/PerlCritic/.packlist
-PERL5_MODULE_TYPE=	Module::Install::Bundled
+PERL5_MODULE_TYPE=	Module::Install
 
 #pre-configure:
 #	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f | xargs rm
