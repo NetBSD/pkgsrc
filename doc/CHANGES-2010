@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3691 2010/10/06 12:35:35 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3692 2010/10/06 12:39:59 taca Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -4969,3 +4969,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/mew to 6.3nb1 [taca 2010-10-06]
 	Updated www/typo3 to 4.4.4 [taca 2010-10-06]
 	Updated www/contao29-translations to 20101001 [taca 2010-10-06]
+	Updated databases/mysql51-client to 5.1.51 [taca 2010-10-06]
+	Updated databases/mysql51-server to 5.1.51 [taca 2010-10-06]
