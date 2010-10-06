@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/11/10 17:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/10/06 07:38:32 obache Exp $
 #
 
 DISTNAME=		xwave2
@@ -14,6 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=		YES
 INSTALLATION_DIRS=	bin lib/X11/app-defaults
+
+SUBST_CLASSES+=		devaudio
+SUBST_STAGE.devaudio=	pre-configure
+SUBST_FILES.devaudio=	src/XWave
+SUBST_SED.devaudio=	-e 's,/dev/audio,${DEVOSSAUDIO},g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xwave ${DESTDIR}${PREFIX}/bin
