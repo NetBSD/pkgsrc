@@ -1,0 +1,70 @@
+$NetBSD: patch-ac,v 1.1 2010/10/06 12:29:42 taca Exp $
+
+Two fixes for cmew problem:
+
+	http://www.mew.org/pipermail/mew-dist/2010-August/028963.html
+	http://www.mew.org/pipermail/mew-dist/2010-August/028962.html
+
+--- bin/cmew.orig	2009-09-09 00:57:27.000000000 +0000
++++ bin/cmew
+@@ -127,6 +127,8 @@ def register(db, maildir, ignore_regex, 
+   deleted = 0
+   skipdir = ''
+ 
++begin
++
+   Find.find(target) do |fpath|
+     if fpath =~ ignore_regex
+       if FileTest.directory?(fpath)
+@@ -135,7 +137,7 @@ def register(db, maildir, ignore_regex, 
+       end
+       # next
+     else
+-      st = File.lstat(fpath)
++      st = File.lstat(fpath) rescue next
+       if st.symlink?
+         if FileTest.directory?(fpath)
+           print fpath, " (ignored)\n"
+@@ -159,14 +161,14 @@ def register(db, maildir, ignore_regex, 
+       elsif st.file? and fpath =~ /\/[0-9]+(\.mew)?$/
+         next if File.dirname(fpath) == skipdir
+         next if last_mod > st.ctime.tv_sec
+-        m = Mail.new(fpath)
++        m = Mail.new(fpath) rescue next
+         id = get_id(m)
+         parid = get_parid(m)
+         date = get_date(m)
+         path = get_path(fpath)
+         newpath = true
+         if last_mod > 0
+-          get_entry.execute!(id) do |row|
++            get_entry.execute(id).each do |row|
+             past_path = row['path']
+             unless File.exist?(past_path)
+               del_entry.execute(id, past_path)
+@@ -183,10 +185,16 @@ def register(db, maildir, ignore_regex, 
+       end
+     end
+   end
++
++ensure
++
+   add_entry.close
+   get_entry.close
+   del_entry.close
+   print 'Registered: ',  registred, ', deleted: ', deleted, "\n"
++
++end
++
+ end
+ 
+ ################################################################
+@@ -209,7 +217,7 @@ OptionParser.new {|opt|
+ 
+ db_file = ARGV[0] || File.expand_path('~/Mail/id.db')
+ maildir = ARGV[1] || File.expand_path('~/Mail')
+-ignore_regex = Regexp.new(ARGV[2] || '^\./casket$|^\./casket/|/\.')
++ignore_regex = Regexp.new(ARGV[2] || '^\./casket$|^\./casket/|^\./casket_replica$|^\./casket_replica/|/\.')
+ target = if ARGV[3]; './' + ARGV[3] else '.' end
+ have_target = if ARGV[3]; true else false end
+ fullupdate = opts[:f] == true
