@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/05/30 11:51:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/10/07 15:52:40 adam Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -670,7 +670,6 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/LEGALNOTICE.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/acronyms.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/admin.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/adminpack.html
-${PG_SUBPREFIX}share/doc/postgresql/html/anoncvs.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/app-clusterdb.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/app-createdb.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/app-createlang.html
@@ -783,9 +782,6 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/contrib-spi.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/contrib.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/creating-cluster.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/cube.html
-${PG_SUBPREFIX}share/doc/postgresql/html/cvs-tree.html
-${PG_SUBPREFIX}share/doc/postgresql/html/cvs.html
-${PG_SUBPREFIX}share/doc/postgresql/html/cvsup.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/database-roles.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/datatype-binary.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/datatype-bit.html
@@ -913,6 +909,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/gist-implementation.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/gist-intro.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/gist-recovery.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/gist.html
+${PG_SUBPREFIX}share/doc/postgresql/html/git.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/high-availability.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/history.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/hstore.html
@@ -1215,6 +1212,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-27.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-28.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-29.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-3.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-30.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-4.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-5.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-6.html
@@ -1240,6 +1238,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-22.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-23.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-24.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-25.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-26.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-4.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-5.html
@@ -1262,6 +1261,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-19.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-20.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-21.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-22.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-4.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-5.html
@@ -1279,6 +1279,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-14.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-15.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-16.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-17.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-18.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-4.html
@@ -1291,6 +1292,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-10.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-11.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-12.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-4.html
@@ -1308,7 +1310,6 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/routine-reindex.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/routine-vacuuming.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/row-estimation-examples.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/rowtypes.html
-${PG_SUBPREFIX}share/doc/postgresql/html/rsync.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/rule-system.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/rules-privileges.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/rules-status.html
@@ -1339,6 +1340,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/server-shutdown.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/server-start.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/source-format.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/source.html
+${PG_SUBPREFIX}share/doc/postgresql/html/sourcerepo.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/spi-examples.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/spi-interface-support.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/spi-interface.html
