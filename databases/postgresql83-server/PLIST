@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/05/20 12:36:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/10/07 15:52:40 adam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -573,6 +573,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/PST8PDT
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Apia
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Auckland
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Chatham
+${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Chuuk
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Easter
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Efate
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Enderbury
@@ -598,6 +599,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Noumea
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Pago_Pago
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Palau
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Pitcairn
+${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Pohnpei
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Ponape
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Port_Moresby
 ${PG_SUBPREFIX}share/postgresql/timezone/Pacific/Rarotonga
