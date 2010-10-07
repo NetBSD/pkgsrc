@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9760 2010/10/06 12:09:34 taca Exp $
+$NetBSD: TODO,v 1.9761 2010/10/07 15:59:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -1127,10 +1127,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
-	o postgresql-8.2.18 [CVE-2010-3433]
-	o postgresql-8.3.12 [CVE-2010-3433]
-	o postgresql-8.4.5 [CVE-2010-3433]
-	o postgresql-9.0.1 [CVE-2010-3433]
 	o pptp-1.7.1 [pkg/38038]
 	o profit-2.5.3
 	o projclock-0.9
