@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/09/21 07:50:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/10/07 15:53:54 adam Exp $
 #
 # used by databases/postgresql90-adminpack/Makefile
 # used by databases/postgresql90-client/Makefile
@@ -46,7 +46,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql90/patches
 # DIST_VERS		version number on the postgresql distfile
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 # Note: Do not forget jdbc-postgresql90 when updating version
-DIST_VERS?=		9.0.0
+DIST_VERS?=		9.0.1
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql90-client+=	postgresql90-client>=${BASE_VERS}

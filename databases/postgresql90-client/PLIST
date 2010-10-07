@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/21 07:52:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/07 15:53:54 adam Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -596,6 +596,7 @@ ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/pg_dump-9.0.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/pg_resetxlog-9.0.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/pgscripts-9.0.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/psql-9.0.mo
+${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/initdb-9.0.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/pg_config-9.0.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/pg_controldata-9.0.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/pg_resetxlog-9.0.mo
