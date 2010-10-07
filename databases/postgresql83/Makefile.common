@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2010/05/20 12:36:28 adam Exp $
+# $NetBSD: Makefile.common,v 1.13 2010/10/07 15:52:40 adam Exp $
 #
 # used by databases/postgresql83-adminpack/Makefile
 # used by databases/postgresql83-client/Makefile
@@ -42,7 +42,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql83/patches
 # DIST_VERS		version number on the postgresql distfile
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 # Note: Do not forget jdbc-postgresql83 when updating version
-DIST_VERS?=		8.3.11
+DIST_VERS?=		8.3.12
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql83-client+=	postgresql83-client>=${BASE_VERS}
