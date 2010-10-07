@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/05/20 12:36:39 adam Exp $
+# $NetBSD: Makefile,v 1.9 2010/10/07 15:53:22 adam Exp $
 
 PKGNAME=	postgresql84-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -85,8 +85,7 @@ post-wrapper:
 
 post-install:
 	cd ${WRKSRC}/doc; for file in					\
-		FAQ* KNOWN_BUGS MISSING_FEATURES README.* TODO		\
-		bug.template;						\
+		KNOWN_BUGS MISSING_FEATURES README.* TODO bug.template;	\
 	do								\
 		${INSTALL_DATA} $$file ${DESTDIR}${PG_DOC_DIR}/$$file;	\
         done;								\
