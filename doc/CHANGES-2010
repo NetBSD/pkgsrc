@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3694 2010/10/07 15:59:25 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3695 2010/10/08 04:31:59 obache Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5006,3 +5006,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/postgresql90-plperl to 9.0.1 [adam 2010-10-07]
 	Updated databases/postgresql90-plpython to 9.0.1 [adam 2010-10-07]
 	Updated databases/postgresql90-pltcl to 9.0.1 [adam 2010-10-07]
+	Updated security/p5-SHA to 2.01nb3 [obache 2010-10-08]
