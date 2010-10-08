@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9762 2010/10/08 09:39:07 obache Exp $
+$NetBSD: TODO,v 1.9763 2010/10/08 15:27:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,8 +337,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ImageMagick-6.6.4.9
 	o JBidwatcher-2.1.2
 	o MAMEDiff-2.30
-	o Mesa-7.8.2
-	o MesaLib-7.8.0
+	o Mesa-7.9
+	o MesaLib-7.9
 	o PAM-0.99.7.1
 	o REminiscence-0.1.9
 	o ROMBuild-2.14
@@ -435,6 +435,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o binutils-2.20.1
 	o bioperl-1.5.0
 	o bitlbee-1.2.8
+	o bitmap-1.0.5
 	o bluefish-2.0.2
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -452,7 +453,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.21
+	o calibre-0.7.22
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1
@@ -528,6 +529,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drivel-3.0.2
 	o dspam-3.9.0
 	o dwm-5.8.2
+	o e2fsprogs-1.41.12 [pkg/43950]
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.3.2
@@ -583,7 +585,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o fd-3.00d
-	o feh-1.9
+	o feh-1.10
 	o festival-1.96
 	o felt-3.07
 	o fetchyahoo-2.13.8
@@ -604,6 +606,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-alias-1.0.3
 	o font-arabic-misc-1.0.2
 	o font-bh-100dpi-1.0.2
+	o font-bh-75dpi-1.0.2
 	o font-bh-lucidatypewriter-100dpi-1.0.2
 	o font-bh-lucidatypewriter-75dpi-1.0.2
 	o font-bh-ttf-1.0.2
@@ -672,7 +675,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gedit-2.30.4
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.11
-	o gentoo-0.19.1
+	o gentoo-0.19.2
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
 	o gettext-m4-0.18.1.1
@@ -839,7 +842,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kdbg-2.2.2
-	o kde4-4.5.1
+	o kde4-4.5.2
 	o kdevelop-4.0.2
 	o kdrill-6.5
 	o kid3-1.5
@@ -862,7 +865,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o latd-1.21
 	o latex2rtf-1.9.19
 	o lbdb-0.37
-	o lbreakout2-2.6.1
+	o lbreakout2-2.6.2
 	o lcc-4.2
 	o lcms-2.0
 	o ldapsdk-6.0.2
@@ -947,6 +950,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lpairs-1.0.4
 	o lq-sp-1.3.4.13
 	o ltris-1.0.15
+	o luit-1.1.0
 	o lwm-1.2.2
 	o lzip-1.11
 	o m17n-db-1.6.2
@@ -1004,13 +1008,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.9.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
+	o mono-2.8
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.0 [GNOME 2.32]
 	o mp3blaster-3.2.3
 	o mp3splt-2.2.7
 	o mpc-0.19
 	o mpeg4ip-1.6.1
-	o mpg123-1.12.4
+	o mpg123-1.12.5
 	o mpop-1.0.21
 	o mserv-devel-0.41
 	o multitail-5.2.6
@@ -1064,6 +1069,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.3
+	o openmpi-1.4.3
 	o openmsx-0.7.0
 	o openoffice3-3.2.1
 	o openssh-5.6
@@ -1128,6 +1134,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
+	o postgresql82-8.2.18
+	o postgresql83-8.3.12
+	o postgresql84-8.4.5
+	o postgresql90-9.0.1
 	o pptp-1.7.1 [pkg/38038]
 	o profit-2.5.3
 	o projclock-0.9
@@ -1190,6 +1200,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o renderproto-0.11.1
 	o rep-gtk-0.90.4
 	o resize_image-0.7
+	o rgb-1.0.4
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
@@ -1259,7 +1270,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snes9x-1.51
 	o snort-2.9.0
 	o snownews-1.5.12
-	o solfege-3.16.3
+	o solfege-3.18.1
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.4
