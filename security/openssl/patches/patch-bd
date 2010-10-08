@@ -1,0 +1,14 @@
+$NetBSD: patch-bd,v 1.1 2010/10/08 20:04:58 tez Exp $
+
+Fix for CVE-2010-2939
+
+--- ssl/s3_clnt.c.orig	2010-10-07 15:13:10.061888900 -0500
++++ ssl/s3_clnt.c	2010-10-07 15:14:30.209139600 -0500
+@@ -1377,6 +1377,7 @@
+ 		s->session->sess_cert->peer_ecdh_tmp=ecdh;
+ 		ecdh=NULL;
+ 		BN_CTX_free(bn_ctx);
++		bn_ctx = NULL;
+ 		EC_POINT_free(srvr_ecpoint);
+ 		srvr_ecpoint = NULL;
+ 		}
