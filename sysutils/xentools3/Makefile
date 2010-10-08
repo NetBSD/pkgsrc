@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/10 19:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/10/08 04:58:58 obache Exp $
 #
 
 VERSION=		3.1.4
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+
+MAKE_JOBS_SAFE=		no
 
 PKG_SYSCONFSUBDIR=	xen
 
