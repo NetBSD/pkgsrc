@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/10/08 01:05:48 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -11,7 +11,7 @@ COMMENT=	Kana Kanji conversion system
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c
-USE_TOOLS+=		gmake printf
+USE_TOOLS+=		printf
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		EMACS=no
@@ -21,6 +21,8 @@ INSTALLATION_DIRS=	share/doc/anthy
 CONF_FILES+=		${EGDIR}/anthy-conf ${PKG_SYSCONFDIR}/anthy-conf
 
 PKGCONFIG_OVERRIDE+=	anthy.pc.in
+
+UNLIMIT_RESOURCES+=	stacksize
 
 .include	"options.mk"
 
