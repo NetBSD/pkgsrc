@@ -129,3 +129,5 @@ Pullup ticket #3231 - requested by spz
 www/apache-tomcat6: security update
 Pullup ticket #3232 - requested by tron
 net/wireshark: security update
+Pullup ticket #3236 - requested by taca
+www/typo3: security update
