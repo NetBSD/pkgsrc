@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/09/24 21:54:56 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2010/10/09 07:33:43 tron Exp $
 
 DISTNAME=	texlive-20100720-source
 PKGNAME=	web2c-2010
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -62,5 +62,6 @@ post-install:
 	${LN} -sf mf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mf-nowin.1
 	${LN} -sf dvicopy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/odvicopy.1
 	${LN} -sf dvitype.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/odvitype.1
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pdftex.1
 
 .include "../../mk/bsd.pkg.mk"
