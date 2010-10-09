@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/08/25 12:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/10/09 11:36:04 obache Exp $
 #
 
 DISTNAME=		strace-4.5.15
@@ -28,8 +28,10 @@ pre-configure:
 .endif
 
 .if ${OPSYS} == "NetBSD"
+MAKE_ENV+=	NETBSD_SRCDIR=${BSD_SRCDIR:Q}
 pre-configure:
 	${CP} -f ${WRKSRC}/syscalls.pl ${WRKSRC}/netbsd
+
 .endif
 
 .include "../../mk/bsd.pkg.mk"
