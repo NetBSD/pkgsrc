@@ -7,4 +7,4 @@ transparently.  Developers can add new codecs and filters by writing a
 simple plugin with a clean, generic interface.
 
 This package provides the faad plugin for GStreamer, the ISO AAC
-audio codec.
+audio codec decoder.

@@ -6,5 +6,5 @@ Applications can take advantage of advances in codec and filter technology
 transparently.  Developers can add new codecs and filters by writing a
 simple plugin with a clean, generic interface.
 
-This package provides the faad plugin for GStreamer, the ISO AAC
-audio codec.
+This package provides the faac plugin for GStreamer, the ISO AAC
+audio codec encoder.
