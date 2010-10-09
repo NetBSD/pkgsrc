@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9763 2010/10/08 15:27:55 wiz Exp $
+$NetBSD: TODO,v 1.9764 2010/10/09 15:07:04 gdt Exp $
 
 Suggested new packages
 ======================
@@ -524,7 +524,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnstracer-1.9
 	o docbook-xsl-1.76.0
 	o doclifter-2.4
-	o doxygen-1.7.1
+	o doxygen-1.7.2
 	o dpkg-1.14.25
 	o drivel-3.0.2
 	o dspam-3.9.0
