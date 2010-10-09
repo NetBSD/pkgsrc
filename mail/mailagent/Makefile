@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/10/09 05:58:27 obache Exp $
+# $NetBSD: Makefile,v 1.20 2010/10/09 07:26:04 obache Exp $
 
 DISTNAME=		mailagent-3.0.73
 CATEGORIES=		mail
@@ -7,12 +7,13 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:S/by-module/by-authors\/id\/RAM/g}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Sophisticated automatic mail-processing tool
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		perl:run
 
 RESTRICTED=		Correct FQDN needs to be hardcoded
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-INTERACTIVE_STAGE=	configure
 
 MAKE_JOBS_SAFE=		no
 
@@ -22,9 +23,9 @@ CONFIGURE_ARGS+=	-dres
 CONFIGURE_ARGS+=	-Dperlpath=${PERL5:Q}
 CONFIGURE_ARGS+=	-Dutmp='/var/run/utmp'
 CONFIGURE_ARGS+=	-Dprefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	-Dmansrc=${PREFIX:Q}/man/man1
+CONFIGURE_ARGS+=	-Dmansrc=${PREFIX:Q}/${PKGMANDIR}/man1
 CONFIGURE_ARGS+=	-Dnotifypatches='false'
-MAKE_ENV+=		PATH=`${DIRNAME} ${PERL5}`:${PATH:Q}
+CONFIGURE_ARGS+=	-Dcat=${CAT:Q}
 INSTALL_TARGET=		install install.man
 
 MAILAGENT_DOMAIN?=		example.com
@@ -33,6 +34,12 @@ MAILAGENT_FQDN?=		test.example.com
 MAILAGENT_ORGANIZATION?=	Example Company
 
 BUILD_DEFS+=	MAILAGENT_DOMAIN MAILAGENT_EMAIL MAILAGENT_FQDN MAILAGENT_ORGANIZATION
+
+INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin
+INSTALL_MAKE_FLAGS+=	SCRIPTDIR=${DESTDIR}${PREFIX}/bin
+INSTALL_MAKE_FLAGS+=	PRIVLIB=${DESTDIR}${PREFIX}/lib/mailagent
+INSTALL_MAKE_FLAGS+=	MANSRC=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 CF=				${WRKSRC}/config.sh
 
@@ -59,10 +66,8 @@ pre-configure:
 	${ECHO} "orgname='${MAILAGENT_ORGANIZATION}'" >> ${CF}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent/misc
-	${CP} -pR ${WRKSRC}/misc/* ${PREFIX}/share/examples/mailagent/misc
-	${LN} -fs ${PREFIX}/lib/mailagent/examples \
-		${PREFIX}/share/examples/mailagent/agent
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/mailagent
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/mailagent/misc
+	${CP} -pR ${WRKSRC}/misc/* ${DESTDIR}${PREFIX}/share/examples/mailagent/misc
 
 .include "../../mk/bsd.pkg.mk"
