@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9765 2010/10/09 23:14:45 wiz Exp $
+$NetBSD: TODO,v 1.9766 2010/10/10 22:35:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,7 +334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GutenMark-20090216
-	o ImageMagick-6.6.4.9
+	o ImageMagick-6.6.4.10
 	o JBidwatcher-2.1.2
 	o MAMEDiff-2.30
 	o Mesa-7.9
@@ -393,7 +393,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-ant-1.8.1 [pkg/43752]
 	o apache-maven-3.0
 	o apache-tomcat55-5.5.29
+	o apr-1.3.12
 	o apr-1.4.2
+	o apr-util-1.3.10
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
@@ -417,9 +419,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.4.0
 	o autoconvert-0.3.16
 	o autogen-5.11
+	o avahi-0.6.28
 	o avcheck-0.91
 	o avl-2.0.2a
-	o awesome-3.4.7
+	o awesome-3.4.8
 	o baci-20040415
 	o bacula-5.0.3 [pkg/43850]
 	o balance-3.52
@@ -561,7 +564,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epic4-2.6
 	o epiphany-2.30.6
 	o epstool-3.08
-	o eric5-5.0.0
+	o eric4-4.4.9
+	o eric5-5.0.3
 	o erlang-13b4
 	o erubis-2.6.2
 	o esh-0.8.5
@@ -722,6 +726,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-screensaver-2.30.2
 	o gnome-session-2.32.0 [GNOME 2.32, wants DeviceKit-power]
 	o gnome-settings-daemon-2.32.0
+	o gnome-sharp-2.24.2
 	o gnome-subtitles-1.0
 	o gnome-system-monitor-2.28.2
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
@@ -880,7 +885,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXext-1.1.2
 	o libbonobo-2.32.0
 	o libbonoboui-2.24.4
-	o libcanberra-0.25
+	o libcanberra-0.26
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.22
@@ -909,6 +914,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
 	o libmp3splt-0.5.8
+	o libmusicbrainz-3.0.3
 	o libnasl-2.3.1
 	o libnids-1.24
 	o libnotify-0.6.0
@@ -920,7 +926,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.91.0
 	o librsvg2-2.32.0
-	o libsndfile-1.0.22
+	o libsndfile-1.0.23
 	o libsoup24-2.32.0
 	o libssh-0.4.6
 	o libssh2-1.2.7
@@ -967,7 +973,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.2.2
+	o mathomatic-15.3.0
 	o mawk-1.3.4.20100625
 	o mc-4.7.0.9
 	o mdocml-1.10.6
@@ -1079,14 +1085,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openttd-1.0.4
 	o open-vm-tools-2010.09.19.301124
 	o opera-10.62
-	o orc-0.4.9
+	o orc-0.4.10
 	o orca-2.32.0 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.3
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
-	o p5-PerlMagick-6.6.4.9
+	o p5-PerlMagick-6.6.4.10
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1132,7 +1138,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o polkit-qt-0.9.4
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.14.3
+	o poppler-0.14.4
+	o poppler-glib-0.14.4
+	o poppler-includes-0.14.4
+	o poppler-qt4-0.14.4
+	o poppler-utils-0.14.4
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1338,6 +1348,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o totem-pl-parser-2.32.0
 	o tpasm-1.2
 	o tpb-0.6.4
+	o trac-0.12.1
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
@@ -1404,7 +1415,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o x11perf-1.5.2
-	o x264-devel-20101002
+	o x264-devel-20101009
 	o xanalyser-1.30
 	o xapian-1.2.2
 	o xapian-omega-1.2.2
@@ -1518,6 +1529,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xz-4.999.9124
 	o xzip-182
 	o yafc-1.1
+	o yaz-4.1.1
 	o yodl-2.14.3
 	o youtube-dl-20101003
 	o ysm-2.9.9.1
