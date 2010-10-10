@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2010/09/14 11:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.206 2010/10/10 07:41:13 obache Exp $
 
 DISTNAME=		gtk+-2.20.1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -74,8 +74,6 @@ SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
 PYTHON_PATCH_SCRIPTS=	gtk/gtk-builder-convert
 
-.include "options.mk"
-
 # We remove the module databases during post-install since we create them
 # anew in the +INSTALL script as part of the POST-INSTALL action.
 #
@@ -98,6 +96,9 @@ BUILDLINK_API_DEPENDS.atk+=	atk>=1.30.0
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 .include "../../devel/glib2/buildlink3.mk"
+
+.include "options.mk"
+
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
