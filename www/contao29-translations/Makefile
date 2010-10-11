@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/10/06 12:34:24 taca Exp $
+# $NetBSD: Makefile,v 1.16 2010/10/11 15:23:54 taca Exp $
 #
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	contao${CT_VER}>=${CT_PKGVER}:../../www/contao${CT_VER}
 
 # Use time stamp of latest translation.
-VERS=		20101001
+VERS=		20101010
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
