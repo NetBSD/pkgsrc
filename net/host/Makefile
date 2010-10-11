@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/09/29 12:27:47 obache Exp $
+# $NetBSD: Makefile,v 1.22 2010/10/11 12:15:12 obache Exp $
 
 DISTNAME=	host-20040812
 CATEGORIES=	net
@@ -26,7 +26,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
 .if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lresolve -lsocket -lnsl
+LDFLAGS+=	-lresolv -lsocket -lnsl
 BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
