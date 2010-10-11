@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3699 2010/10/10 18:45:11 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3700 2010/10/11 06:11:42 manu Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5011,3 +5011,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/openssl to 0.9.8onb1 [tez 2010-10-08]
 	Updated print/web2c to 2010nb3 [tron 2010-10-09]
 	Updated fonts/fontforge to 20100501nb3 [wiz 2010-10-10]
+	Updated filesystems/perfuse to 20101011 [manu 2010-10-11]
