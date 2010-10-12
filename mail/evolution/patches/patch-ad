@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.12 2010/10/12 22:21:08 joerg Exp $
+
+--- addressbook/gui/contact-editor/Makefile.in.orig	2010-10-12 20:23:47.000000000 +0000
++++ addressbook/gui/contact-editor/Makefile.in
+@@ -87,7 +87,7 @@ libecontacteditor_la_DEPENDENCIES =  \
+ 	$(top_builddir)/addressbook/gui/widgets/libeabwidgets.la \
+ 	$(top_builddir)/addressbook/gui/merging/libeabbookmerging.la \
+ 	$(top_builddir)/addressbook/printing/libecontactprint.la \
+-	$(top_builddir)/widgets/menus/.libs/libmenus.la \
++	$(top_builddir)/widgets/menus/libmenus.la \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ am_libecontacteditor_la_OBJECTS = libecontacteditor_la-eab-editor.lo \
+ 	libecontacteditor_la-e-contact-editor-fullname.lo \
+@@ -451,7 +451,7 @@ libecontacteditor_la_LIBADD = \
+ 	$(top_builddir)/addressbook/gui/widgets/libeabwidgets.la	\
+ 	$(top_builddir)/addressbook/gui/merging/libeabbookmerging.la	\
+ 	$(top_builddir)/addressbook/printing/libecontactprint.la	\
+-	$(top_builddir)/widgets/menus/.libs/libmenus.la	\
++	$(top_builddir)/widgets/menus/libmenus.la			\
+ 	$(EVOLUTION_ADDRESSBOOK_LIBS)					\
+ 	$(GNOME_PLATFORM_LIBS)
+ 
