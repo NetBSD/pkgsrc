@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3702 2010/10/11 20:47:00 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3703 2010/10/12 11:07:27 taca Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5016,3 +5016,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit-base to 1.7.0.7 [minskim 2010-10-11]
 	Updated devel/scmgit-docs to 1.7.0.7 [minskim 2010-10-11]
 	Updated devel/scmgit to 1.7.0.7 [minskim 2010-10-11]
+	Updated www/contao29-translations to 20101011 [taca 2010-10-12]
