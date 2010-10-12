@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/09/22 20:39:59 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/10/12 19:43:42 minskim Exp $
 #
 
 DISTNAME=	fossil-src-20100918155143
@@ -12,6 +12,8 @@ COMMENT=	Simple, high-reliability, distributed software configuration management
 LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS+=	bin
 
