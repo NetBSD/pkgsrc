@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/10/12 16:43:00 joerg Exp $
 bin/xfs_admin
 bin/xfs_bmap
 bin/xfs_check
@@ -13,8 +13,7 @@ bin/xfs_mkfile
 bin/xfs_ncheck
 bin/xfs_quota
 bin/xfs_rtcp
-lib/libhandle.so.1
-lib/libhandle.so.1.0.3
+lib/libhandle.la
 man/man5/xfs.5
 man/man8/fsck.xfs.8
 man/man8/mkfs.xfs.8
