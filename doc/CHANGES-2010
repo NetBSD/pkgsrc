@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3705 2010/10/12 16:52:36 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3706 2010/10/12 22:12:01 tonio Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5027,3 +5027,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed databases/postgresql82-server [joerg 2010-10-12]
 	Removed databases/postgresql82-tsearch2 [joerg 2010-10-12]
 	Removed databases/jdbc-postgresql82 [joerg 2010-10-12]
+	Updated lang/camlp5 to 5.15 [tonio 2010-10-12]
