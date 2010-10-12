@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.27 2010/10/12 22:21:08 joerg Exp $
+
+Don't depend on libtool internals.
+
+--- addressbook/gui/contact-editor/Makefile.am.orig	2010-10-12 20:23:17.000000000 +0000
++++ addressbook/gui/contact-editor/Makefile.am
+@@ -33,7 +33,7 @@ libecontacteditor_la_LIBADD =						\
+ 	$(top_builddir)/addressbook/gui/widgets/libeabwidgets.la	\
+ 	$(top_builddir)/addressbook/gui/merging/libeabbookmerging.la	\
+ 	$(top_builddir)/addressbook/printing/libecontactprint.la	\
+-	$(top_builddir)/widgets/menus/.libs/libmenus.la	\
++	$(top_builddir)/widgets/menus/libmenus.la			\
+ 	$(EVOLUTION_ADDRESSBOOK_LIBS)					\
+ 	$(GNOME_PLATFORM_LIBS)
+ 
