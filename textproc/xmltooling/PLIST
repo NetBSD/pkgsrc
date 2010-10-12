@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/15 18:45:36 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/12 16:41:43 joerg Exp $
 include/xmltooling/AbstractAttributeExtensibleXMLObject.h
 include/xmltooling/AbstractComplexElement.h
 include/xmltooling/AbstractDOMCachingXMLObject.h
@@ -78,14 +78,8 @@ include/xmltooling/util/XMLObjectChildrenList.h
 include/xmltooling/validation/Validator.h
 include/xmltooling/validation/ValidatorSuite.h
 include/xmltooling/version.h
-lib/libxmltooling-lite.a
-lib/libxmltooling-lite.so
-lib/libxmltooling-lite.so.4
-lib/libxmltooling-lite.so.4.0.3
-lib/libxmltooling.a
-lib/libxmltooling.so
-lib/libxmltooling.so.4
-lib/libxmltooling.so.4.0.3
+lib/libxmltooling-lite.la
+lib/libxmltooling.la
 share/doc/${PKGNAME}/CURL.LICENSE
 share/doc/${PKGNAME}/LICENSE.txt
 share/doc/${PKGNAME}/LOG4CPP.LICENSE

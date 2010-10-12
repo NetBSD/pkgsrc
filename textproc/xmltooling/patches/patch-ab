@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2010/10/12 16:41:43 joerg Exp $
+
+--- xmltooling/Makefile.in.orig	2010-10-12 16:18:07.000000000 +0000
++++ xmltooling/Makefile.in
+@@ -1718,7 +1718,6 @@ uninstall-am: uninstall-encincludeHEADER
+ 
+ 
+ install-exec-hook:
+-	for la in $(lib_LTLIBRARIES) ; do rm -f $(DESTDIR)$(libdir)/$$la ; done
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
