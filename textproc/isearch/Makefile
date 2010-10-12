@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/01/08 18:12:11 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2010/10/12 22:15:42 joerg Exp $
 
 DISTNAME=		Isearch-1.47.01
 PKGNAME=		isearch-1.47.01
@@ -19,7 +19,7 @@ MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
-INSTALLATION_DIRS=	share/doc/isearch share/doc/html/isearch
+INSTALLATION_DIRS=	bin share/doc/isearch share/doc/html/isearch
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/TUTORIAL ${DESTDIR}${PREFIX}/share/doc/isearch
