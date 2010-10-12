@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 11:00:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/12 21:42:24 joerg Exp $
 
 DISTNAME=	OpenSceneGraph-${OSGVER}
 PKGNAME=	osg-${OSGVER}
@@ -19,6 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	packaging/pkgconfig/openscenegraph.pc.in
 PKGCONFIG_OVERRIDE+=	packaging/pkgconfig/openthreads.pc.in
 
