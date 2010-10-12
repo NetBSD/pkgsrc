@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2007/03/18 08:38:13 rillig Exp $
+$NetBSD: distinfo,v 1.4 2010/10/12 16:43:00 joerg Exp $
 
 SHA1 (xfsprogs-2.7.3.src.tar.gz) = abfe3ea13475810a0ef854f48b9ca9912ee7fbc5
 RMD160 (xfsprogs-2.7.3.src.tar.gz) = 7a4f6b0d5da640041334cef4b4aa2e60ba43af53
@@ -17,3 +17,4 @@ SHA1 (patch-ak) = d6f9027a339fe3607003b4fe34062936868f47da
 SHA1 (patch-al) = 832d5d90b9314f5aea312908df16ff3c74449d00
 SHA1 (patch-am) = 3d705bee711c5636c9ea73142560d1ff8530a48d
 SHA1 (patch-an) = a4a2b5fcbbcbcc4b49b75d7d3114da8ebd1f0377
+SHA1 (patch-ao) = 89b7c799440ad7c189c4957d5c6179973ca4def8
