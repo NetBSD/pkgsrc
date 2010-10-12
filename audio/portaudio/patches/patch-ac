@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2010/08/14 12:15:43 obache Exp $
+$NetBSD: patch-ac,v 1.8 2010/10/12 21:50:49 joerg Exp $
 
 --- Makefile.in.orig	2003-02-11 14:24:56.000000000 +0000
 +++ Makefile.in
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.7 2010/08/14 12:15:43 obache Exp $
  
  OTHER_OBJS = @OTHER_OBJS@
  
-@@ -57,20 +57,17 @@ all: lib/$(PALIB) lib/$(PADLLV) tests
+@@ -57,20 +57,16 @@ all: lib/$(PALIB) lib/$(PADLLV) tests
  tests: bin/ $(TESTS)
  
  lib/$(PALIB): lib/ $(OBJS) Makefile $(PAINC)
@@ -41,7 +41,6 @@ $NetBSD: patch-ac,v 1.7 2010/08/14 12:15:43 obache Exp $
 -	cd $(PREFIX)/lib && rm -f $(PADLL) && ln -s $(PADLLV) $(PADLL)
 -	$(INSTALL) -m 644 pa_common/portaudio.h $(PREFIX)/include/portaudio.h
 +	${LIBTOOL} --mode=install $(INSTALL) -m 644 lib/${PALIB:.a=.la} $(DESTDIR)$(PREFIX)/lib/
-+	cd $(DESTDIR)$(PREFIX)/lib && rm -f $(PADLL) && ln -s $(PADLLV) $(PADLL)
 +	$(INSTALL) -m 644 pa_common/portaudio.h $(DESTDIR)$(PREFIX)/include/portaudio.h
  	@echo ""
  	@echo "------------------------------------------------------------"
