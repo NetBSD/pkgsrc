@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3704 2010/10/12 16:43:08 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3705 2010/10/12 16:52:36 joerg Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5018,3 +5018,12 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit to 1.7.0.7 [minskim 2010-10-11]
 	Updated www/contao29-translations to 20101011 [taca 2010-10-12]
 	Updated www/nginx to 0.8.52 [joerg 2010-10-12]
+	Removed databases/postgresql82 [joerg 2010-10-12]
+	Removed databases/postgresql82-adminpack [joerg 2010-10-12]
+	Removed databases/postgresql82-client [joerg 2010-10-12]
+	Removed databases/postgresql82-plperl [joerg 2010-10-12]
+	Removed databases/postgresql82-plpython [joerg 2010-10-12]
+	Removed databases/postgresql82-pltcl [joerg 2010-10-12]
+	Removed databases/postgresql82-server [joerg 2010-10-12]
+	Removed databases/postgresql82-tsearch2 [joerg 2010-10-12]
+	Removed databases/jdbc-postgresql82 [joerg 2010-10-12]
