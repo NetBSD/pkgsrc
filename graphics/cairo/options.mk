@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2010/09/13 12:23:01 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2010/10/13 00:11:21 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
@@ -29,5 +29,5 @@ PLIST.xcb=		yes
 .endif
 
 .else
-CONFIGURE_ARGS+=	--disable-xlib --disable-xlib-xrender
+CONFIGURE_ARGS+=	--disable-xlib --disable-xlib-xrender --disable-gl
 .endif
