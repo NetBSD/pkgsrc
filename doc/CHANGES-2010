@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3707 2010/10/12 23:28:48 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.3708 2010/10/13 02:47:34 obache Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5029,3 +5029,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed databases/jdbc-postgresql82 [joerg 2010-10-12]
 	Updated lang/camlp5 to 5.15 [tonio 2010-10-12]
 	Updated geography/viking to 0.9.96 [gdt 2010-10-12]
+	Updated www/rails to 2.3.9nb2 [obache 2010-10-13]
