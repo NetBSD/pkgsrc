@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3712 2010/10/13 14:15:11 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3713 2010/10/13 19:21:27 tron Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5037,3 +5037,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-subversion to 1.6.13 [taca 2010-10-13]
 	Updated devel/ruby-subversion to 1.6.13 [taca 2010-10-13]
 	Updated www/contao29-translations to 20101013 [taca 2010-10-13]
+	Updated devel/apr-util to 1.3.10 [tron 2010-10-13]
