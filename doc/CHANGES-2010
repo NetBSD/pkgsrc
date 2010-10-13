@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3709 2010/10/13 07:35:24 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3710 2010/10/13 10:24:37 obache Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5031,3 +5031,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/viking to 0.9.96 [gdt 2010-10-12]
 	Updated www/rails to 2.3.9nb2 [obache 2010-10-13]
 	Updated net/wireshark to 1.4.1 [tron 2010-10-13]
+	Updated databases/libdbi-driver-pgsql to 0.8.3.1nb2 [obache 2010-10-13]
