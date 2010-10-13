@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9770 2010/10/13 14:00:32 taca Exp $
+$NetBSD: TODO,v 1.9771 2010/10/13 19:21:27 tron Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-tomcat55-5.5.29
 	o apr-1.3.12
 	o apr-1.4.2
-	o apr-util-1.3.10
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
