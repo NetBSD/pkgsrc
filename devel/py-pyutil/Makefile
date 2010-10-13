@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/25 17:08:36 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/13 13:00:39 joerg Exp $
 #
 
 DISTNAME=	pyutil-1.7.9
@@ -12,6 +12,8 @@ COMMENT=	Collection of mature utilities for Python programmers
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_ACCEPTED=	26
 
 # internal egg: setuptools_darcs
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
