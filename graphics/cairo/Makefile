@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2010/09/15 12:02:27 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2010/10/13 00:11:21 spz Exp $
 
 DISTNAME=	cairo-1.10.0
 PKGREVISION=	1
@@ -41,7 +41,6 @@ TEST_TARGET=			check
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.9
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 # include?
 #.include "../../print/libspectre/buildlink3.mk"
