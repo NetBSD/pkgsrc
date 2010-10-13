@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9769 2010/10/12 16:52:36 joerg Exp $
+$NetBSD: TODO,v 1.9770 2010/10/13 14:00:32 taca Exp $
 
 Suggested new packages
 ======================
@@ -1301,7 +1301,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o subversion-1.6.13 [CVE-2010-3315]
 	o sun-jdk6-6.0.21
 	o sun-jre6-6.0.21
 	o swfdec-gnome-2.30.1
