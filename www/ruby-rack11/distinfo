@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/14 11:37:46 obache Exp $
+
+SHA1 (rack-1.1.0.gem) = 6c18f0e7337d3cb79ca40ad499470582762482f4
+RMD160 (rack-1.1.0.gem) = 2df44da84bae4062c00609d80f68aa19adeaf979
+Size (rack-1.1.0.gem) = 104448 bytes
