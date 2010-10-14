@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9771 2010/10/13 19:21:27 tron Exp $
+$NetBSD: TODO,v 1.9772 2010/10/14 03:33:24 taca Exp $
 
 Suggested new packages
 ======================
@@ -636,7 +636,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-screen-cyrillic-1.0.3
 	o font-sony-misc-1.0.2
 	o font-sun-misc-1.0.2
-	o font-util-1.1.2
+	o font-util-1.2.0
 	o font-winitzki-cyrillic-1.0.2
 	o font-xfree86-type1-1.0.3
 	o fotoxx-10.10
@@ -1300,8 +1300,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o sun-jdk6-6.0.21
-	o sun-jre6-6.0.21
+	o sun-jdk6-6.0.22
+	o sun-jre6-6.0.22
 	o swfdec-gnome-2.30.1
 	o sympa-6.0.2
 	o sysinfo-4.2.2
