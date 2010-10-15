@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.774 2010/10/14 11:42:11 obache Exp $
+# $NetBSD: Makefile,v 1.775 2010/10/15 04:38:43 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -562,9 +562,9 @@ SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-net-flickr
 SUBDIR+=	ruby-patron
 SUBDIR+=	ruby-rack
-SUBDIR+=	ruby-rack11
 SUBDIR+=	ruby-rack-mount
 SUBDIR+=	ruby-rack-test
+SUBDIR+=	ruby-rack11
 SUBDIR+=	ruby-rails3
 SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
