@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/12 04:23:56 taca Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/15 11:46:20 taca Exp $
 
-DISTNAME=	rails-3.0.0
+DISTNAME=	rails-3.0.1
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
