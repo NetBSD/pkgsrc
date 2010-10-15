@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2010/02/25 17:55:48 joerg Exp $
+# $NetBSD: options.mk,v 1.7 2010/10/15 04:40:34 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hydra
 PKG_SUPPORTED_OPTIONS=	gtkfe svn pgsql
@@ -28,7 +28,7 @@ CONFIGURE_ENV+=	WITH_SVN=0
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
-.include "../../databases/postgresql82-client/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ENV+=	WITH_PGSQL=1
 .else
 CONFIGURE_ENV+=	WITH_PGSQL=0
