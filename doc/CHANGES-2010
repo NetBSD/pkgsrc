@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3717 2010/10/14 11:41:41 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3718 2010/10/15 11:53:11 taca Exp $
 
 PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
 DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
@@ -5042,3 +5042,17 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20101013nb1 [taca 2010-10-14]
 	Added www/ruby-rack11 version 1.1.0 [obache 2010-10-14]
 	Updated www/ruby-actionpack to 2.3.9nb1 [obache 2010-10-14]
+	Updated devel/ruby-activesupport to 2.3.10 [taca 2010-10-15]
+	Updated databases/ruby-activerecord to 2.3.10 [taca 2010-10-15]
+	Updated www/ruby-actionpack to 2.3.10 [taca 2010-10-15]
+	Updated mail/ruby-actionmailer to 2.3.10 [taca 2010-10-15]
+	Updated www/ruby-activeresource to 2.3.10 [taca 2010-10-15]
+	Updated www/rails to 2.3.10 [taca 2010-10-15]
+	Updated devel/ruby-activesupport3 to 3.0.1 [taca 2010-10-15]
+	Updated devel/ruby-activemodel to 3.0.1 [taca 2010-10-15]
+	Updated www/ruby-actionpack3 to 3.0.1 [taca 2010-10-15]
+	Updated databases/ruby-activerecord3 to 3.0.1 [taca 2010-10-15]
+	Updated www/ruby-activeresource3 to 3.0.1 [taca 2010-10-15]
+	Updated mail/ruby-actionmailer3 to 3.0.1 [taca 2010-10-15]
+	Updated devel/ruby-railties to 3.0.1 [taca 2010-10-15]
+	Updated www/ruby-rails3 to 3.0.1 [taca 2010-10-15]
