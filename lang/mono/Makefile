@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2010/10/04 06:09:28 kefren Exp $
+# $NetBSD: Makefile,v 1.105 2010/10/15 04:52:05 kefren Exp $
 
 DISTNAME=	mono-2.6.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -109,6 +109,7 @@ CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/1.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
 
 TEST_TARGET=	check

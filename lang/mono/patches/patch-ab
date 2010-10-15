@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.24 2010/07/31 08:40:37 kefren Exp $
+$NetBSD: patch-ab,v 1.25 2010/10/15 04:52:05 kefren Exp $
 --- configure.orig	2010-07-14 11:35:21.000000000 +0300
-+++ configure	2010-07-26 12:50:27.000000000 +0300
++++ configure	2010-10-14 22:47:41.000000000 +0300
 @@ -3118,12 +3118,15 @@
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
@@ -48,7 +48,7 @@ $NetBSD: patch-ab,v 1.24 2010/07/31 08:40:37 kefren Exp $
  
  sizeof_register="SIZEOF_VOID_P"
  
-@@ -38501,10 +38508,10 @@
+@@ -38501,10 +38508,12 @@
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
@@ -56,6 +56,8 @@ $NetBSD: patch-ab,v 1.24 2010/07/31 08:40:37 kefren Exp $
 -	INTL="libintl.so.0"
 +	LIBC="libc.so"
 +	INTL="libintl.so"
++	SQLITE="libsqlite.so"
++	SQLITE3="libsqlite3.so"
  	;;
 -    *-*-*freebsd*)
 +    *-*-*freebsd* | *-*-*dragonfly*)
