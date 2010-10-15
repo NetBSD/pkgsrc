@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2008/11/02 15:05:11 cube Exp $
-
---- configure.in.orig	2005-05-05 12:24:29.000000000 -0700
-+++ configure.in
-@@ -164,7 +164,7 @@ dnl copy apr's rules.mk into our build d
+$NetBSD: patch-aa,v 1.2.14.1 2010/10/15 07:06:49 spz Exp $
+--- configure.orig	2010-10-01 14:56:47.000000000 +0300
++++ configure	2010-10-10 10:00:59.000000000 +0300
+@@ -33407,7 +33407,7 @@
  if test ! -d ./build; then
     $mkdir_p build
  fi
 -cp $APR_BUILD_DIR/apr_rules.mk $abs_builddir/build/rules.mk
 +sed -e 's:^LIBTOOL=.*:LIBTOOL=$(WRAPPER_DIR)/bin/libtool:' -e "s:^LDFLAGS=.*:LDFLAGS=${LDFLAGS}:" $APR_BUILD_DIR/apr_rules.mk > $abs_builddir/build/rules.mk
  
- dnl
- dnl BSD/OS (BSDi) needs to use a different include syntax in the Makefiles
+ case "$host_alias" in
+ *bsdi* | BSD/OS)
