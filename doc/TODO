@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9772 2010/10/14 03:33:24 taca Exp $
+$NetBSD: TODO,v 1.9773 2010/10/15 07:56:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -398,7 +398,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
-	o aria2-1.10.3
+	o aria2-1.10.4
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -414,7 +414,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o at-spi-1.32.0
 	o aterm-1.0.1
 	o atk-1.32.0
-	o auctex-11.86
+	o auctex-11.86 [pkg/43966]
 	o audacious-plugins-2.4.0
 	o autoconvert-0.3.16
 	o autogen-5.11
@@ -496,6 +496,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o cssc-1.2.0
 	o cups-1.4.4
+	o curl-7.21.2
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.21
 	o cygwin_lib-1.5.24.2
@@ -519,7 +520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o diffpdf-1.1.4
 	o diffstat-1.54
-	o digikam-1.4.0 [needs kdegraphics>=4.5.0]
+	o digikam-1.5.0 [needs kdegraphics>=4.5.0]
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dnsmasq-2.55
@@ -540,7 +541,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ed-1.5
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.2.4
+	o efax-gtk-3.2.5
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
 	o eigen2-2.0.15
@@ -552,7 +553,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.78
 	o elinks-0.12pre5
 	o elm-me-2.5plalpha24
-	o elscreen-1.4.6
+	o elscreen-1.4.6 [pkg/43967]
 	o emacs-muse-3.20
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
@@ -690,7 +691,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gifsicle-1.48
 	o gimp-2.6.11
 	o gimp-docs-2.4.2
-	o gkrellm-2.3.1
+	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
@@ -699,43 +700,44 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.2 [pkg/39760]
 	o global-5.9.2
 	o glom-1.14.2 [GNOME 2.26]
-	o gmime24-2.4.19
+	o gmime24-2.4.20
 	o gnash-0.8.8
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.30
-	o gnome-applets-2.32.0
+	o gnome-applets-2.32.0 [GNOME 2.32]
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-commander-1.2.8.8
-	o gnome-control-center-2.32.0
-	o gnome-desktop-2.32.0
+	o gnome-control-center-2.32.0 [GNOME 2.32]
+	o gnome-desktop-2.32.0 [GNOME 2.32]
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
-	o gnome-games-2.32.0
+	o gnome-games-2.32.0 [GNOME 2.32]
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
 	o gnome-keyring-2.32.0
 	o gnome-mag-0.16.2
-	o gnome-media-2.32.0
-	o gnome-menus-2.30.4
+	o gnome-media-2.32.0 [GNOME 2.32]
+	o gnome-menus-2.30.4 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
 	o gnome-packagekit-2.32.0 [GNOME 2.32]
-	o gnome-pilot-2.32.0
+	o gnome-pilot-2.32.0 [GNOME 2.32]
+	o gnome-pilot-conduits-2.32.0 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
 	o gnome-screensaver-2.30.2
 	o gnome-session-2.32.0 [GNOME 2.32, wants DeviceKit-power]
-	o gnome-settings-daemon-2.32.0
+	o gnome-settings-daemon-2.32.0 [GNOME 2.32]
 	o gnome-sharp-2.24.2
 	o gnome-subtitles-1.0
 	o gnome-system-monitor-2.28.2
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
-	o gnome-terminal-2.32.0
-	o gnome-themes-2.32.0
+	o gnome-terminal-2.32.0 [GNOME 2.32]
+	o gnome-themes-2.32.0 [GNOME 2.32]
 	o gnome-user-docs-2.30.0 [GNOME 2.30]
 	o gnome-user-share-2.30.1 [GNOME 2.32]
-	o gnome-utils-2.32.0
-	o gnome-vfs-2.24.4
+	o gnome-utils-2.32.0 [GNOME 2.32]
+	o gnome-vfs-2.24.4 [GNOME 2.32]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -750,9 +752,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gplcver-2.12a
-	o gpredict-1.1
+	o gpredict-1.2
 	o gpsdrive-2.09
 	o gramofile-1.6P
+	o gramps-3.2.4
 	o granulate-0.2
 	o graphviz-2.26.3
 	o grep-2.7
@@ -852,7 +855,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdevelop-4.0.2
 	o kdrill-6.5
 	o kid3-1.5
-	o kipi-plugins-1.4.0
+	o kipi-plugins-1.5.0
 	o kismet-2010.07r1
 	o kmess-1.5.1
 	o kmp-0.5
@@ -942,7 +945,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libvdpau-0.4.1
 	o libwnck-2.30.5
 	o libxdg-basedir-1.1.1
-	o libxml++-2.30.1 [GNOME 2.30]
+	o libxml++-2.32.0 [GNOME 2.32]
 	o licq-1.3.8
 	o liferea-current-1.6.5
 	o lighttpd-1.4.28
@@ -1042,7 +1045,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ncmpc-0.16
 	o ncview-1.93b
 	o ne-2.01
-	o neon-0.29.4
+	o neon-0.29.5
 	o nessus-3.2.0
 	o net-snmp-5.6
 	o netcdf-4.1.1
@@ -1085,7 +1088,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0a
 	o openttd-1.0.4
 	o open-vm-tools-2010.09.19.301124
-	o opera-10.62
+	o opera-10.63
 	o orc-0.4.10
 	o orca-2.32.0 [GNOME 2.32]
 	o oroborus-2.0.18
@@ -1209,11 +1212,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcairo-1.10.0
 	o rdp-1.6
-	o redland-1.0.11
+	o redland-1.0.12
 	o renderproto-0.11.1
 	o rep-gtk-0.90.4
 	o resize_image-0.7
 	o rgb-1.0.4
+	o riece-7.0.1 [pkg/43970]
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
@@ -1389,7 +1393,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vorbis-tools-1.4.0
 	o vp-1.6
 	o vsftpd-2.3.1
-	o vte-0.26.0
+	o vte-0.26.1
 	o vttest-20100830
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1517,7 +1521,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsd-3.3.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-262
+	o xterm-263
 	o xtraceroute-0.9.1
 	o xtrans-1.2.5
 	o xtu-1.3
