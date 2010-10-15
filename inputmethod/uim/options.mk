@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2010/09/18 03:08:31 obache Exp $
+# $NetBSD: options.mk,v 1.22 2010/10/15 07:01:08 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 #PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gtk m17nlib openssl prime sj3 sqlite uim-fep wnn xim
@@ -177,7 +177,7 @@ CONFIGURE_ARGS+=	--with-sj3
 .if !empty(PKG_OPTIONS:Msqlite)
 .  include "../../databases/sqlite3/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sqlite3
-PLIST.sqlite3=		yes
+PLIST.sqlite=		yes
 .endif
 
 #.if !empty(PKG_OPTIONS:Mwnn)
