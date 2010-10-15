@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2010/06/02 13:19:43 adam Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2010/10/15 07:06:49 spz Exp $
 
-DISTNAME=	apr-util-1.3.9
-PKGREVISION=	1
+DISTNAME=	apr-util-1.3.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 
