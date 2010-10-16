@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/09/04 05:04:57 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/10/16 06:21:39 obache Exp $
 #
 
-DISTNAME=	ibus-skk-1.0.0
+DISTNAME=	ibus-skk-1.3.2
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://cloud.github.com/downloads/ueno/ibus-skk/
 
@@ -25,11 +25,6 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
 SUBST_FILES.prefix=	setup/config.py
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
-
-SUBST_CLASSES+=		epython
-SUBST_STAGE.epython=	pre-configure
-SUBST_FILES.epython=	engine/ibus-engine-skk.in setup/ibus-setup-skk.in
-SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
