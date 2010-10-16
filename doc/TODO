@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9781 2010/10/16 10:07:53 adam Exp $
+$NetBSD: TODO,v 1.9782 2010/10/16 10:17:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nessus-3.2.0
 	o net-snmp-5.6
 	o netcdf-4.1.1
-	o netpipe-3.6.2
 	o netramet-50
 	o newmail-1.0.2
 	o newt-0.52.2 (ubuntu)
