@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.2 2010/04/17 17:11:05 kefren Exp $
---- src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs.orig	2010-04-16 12:51:03.000000000 +0300
-+++ src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs	2010-04-16 12:51:58.000000000 +0300
-@@ -169,7 +169,7 @@ namespace MonoDevelop.Autotools
+$NetBSD: patch-ac,v 1.3 2010/10/16 04:40:37 kefren Exp $
+--- src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs.orig	2010-06-14 22:48:25.000000000 +0300
++++ src/addins/MonoDevelop.Autotools/MakefileProjectServiceExtension.cs	2010-10-15 18:07:01.000000000 +0300
+@@ -170,7 +170,7 @@ namespace MonoDevelop.Autotools
  				chainedOutput.ChainWriter (monitor.Log);
  				chainedOutput.ChainWriter (swOutput);
  
 -				ProcessWrapper process = Runtime.ProcessService.StartProcess ("make",
 +				ProcessWrapper process = Runtime.ProcessService.StartProcess ("MAKEPROGRAM",
- 						data.BuildTargetName,
+ 						args,
  						baseDir, 
  						chainedOutput, 
-@@ -257,7 +257,7 @@ namespace MonoDevelop.Autotools
+@@ -258,7 +258,7 @@ namespace MonoDevelop.Autotools
  		// Snatched from our codedom code :-).
  		//FIXME: Get this from the language binding.. if a known lang
  
@@ -19,7 +19,16 @@ $NetBSD: patch-ac,v 1.2 2010/04/17 17:11:05 kefren Exp $
  		
  		private static CompilerError CreateCompilerErrorFromString (string error_string, Stack<string> dirs, Regex regex)
  		{
-@@ -348,7 +348,7 @@ namespace MonoDevelop.Autotools
+@@ -284,7 +284,7 @@ namespace MonoDevelop.Autotools
+ 				return null;
+ 			}
+ 
+-			if (error_string.StartsWith ("make"))
++			if (error_string.StartsWith ("MAKEPROGRAM"))
+ 				return null;
+ 
+ 			match = regex.Match (error_string);
+@@ -349,7 +349,7 @@ namespace MonoDevelop.Autotools
  			{
  				string baseDir = proj.BaseDirectory;
  	
@@ -28,7 +37,7 @@ $NetBSD: patch-ac,v 1.2 2010/04/17 17:11:05 kefren Exp $
  						data.CleanTargetName,
  						baseDir, 
  						monitor.Log, 
-@@ -403,7 +403,7 @@ namespace MonoDevelop.Autotools
+@@ -404,7 +404,7 @@ namespace MonoDevelop.Autotools
  			monitor.BeginTask (GettextCatalog.GetString ("Executing {0}", project.Name), 1);
  			try
  			{
