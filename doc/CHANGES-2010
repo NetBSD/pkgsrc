@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3764 2010/10/16 16:56:37 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3765 2010/10/16 16:58:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5107,3 +5107,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/libtasn1 to 2.8 [wiz 2010-10-16]
 	Updated security/gnutls to 2.10.2 [wiz 2010-10-16]
 	Updated devel/orc to 0.4.11 [wiz 2010-10-16]
+	Updated databases/shared-mime-info to 0.80 [wiz 2010-10-16]
