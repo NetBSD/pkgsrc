@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2010/02/06 14:38:27 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2010/10/16 08:23:04 adam Exp $
 
-DISTNAME=	libsndfile-1.0.21
+DISTNAME=	libsndfile-1.0.23
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/files/
 
@@ -17,12 +17,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
-
-SUBST_CLASSES+=		vorbis
-SUBST_FILES.vorbis=	configure
-SUBST_SED.vorbis=	-e "s/1\.2\.1/1.2.0/g"
-SUBST_STAGE.vorbis=	pre-configure
-SUBST_MESSAGE.vorbis=	Allowing libvorbis-1.2.0.
 
 # This package compiles with gcc2, but its configure script doesn't know that
 CONFIGURE_ENV+=		ac_cv_c_struct_hack=yes

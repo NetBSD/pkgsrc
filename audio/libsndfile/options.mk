@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2010/07/30 10:36:22 asau Exp $
+# $NetBSD: options.mk,v 1.9 2010/10/16 08:23:04 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libsndfile
 PKG_SUPPORTED_OPTIONS=	octave
@@ -25,7 +25,7 @@ PKG_SUGGESTED_OPTIONS=		${SNDFILE_OUTPUT.${OPSYS}}
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Moctave)
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		gmake
 .include "../../math/octave/buildlink3.mk"
 .else
