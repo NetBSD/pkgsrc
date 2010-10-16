@@ -1,13 +1,16 @@
 Download and display weather data contained in GRIB1 files.
 
 Weather data display:
-    - atmospheric pressure at sea level
-    - wind at 10m above ground
-    - temperature at 2m above ground (degC)
-    - relative humidity at 2m above ground
-    - rainfall (mm/h)
-    - cloud cover (%)
-    - dew point (degC)
-    - altitude of 0C isotherm
-    - snow depth and risk
-    - convective available potential energy
+    - Surface Pressure
+    - Wind 10 m above mean sea level
+    - Temperature 10 m above mean sea level
+    - Potential Temperature min - max 2 m above mean sea level
+    - Relative Humidity 2 m above mean sea level
+    - Total Precipitation (mm/h)
+    - Total Cloud Cover (%)
+    - Dew Point 2 m above mean sea level
+    - 0C Isotherm
+    - Snow (Depth - Risk)
+    - CAPE (convective available potential energy) at earth level.
+    - Data in altitude (850, 700, 500, 300, 200 hPa) : geopotential altitude,
+	wind, temperature, theta-e, relative humidity.

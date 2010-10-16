@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/09/14 11:02:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/10/16 06:50:52 plunky Exp $
 #
 
-DISTNAME=	zyGrib-3.5.1
-PKGREVISION=	4
+DISTNAME=	zyGrib-3.9.4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/files/
 EXTRACT_SUFX=	.tgz
@@ -12,7 +11,9 @@ HOMEPAGE=	http://www.zygrib.org/
 COMMENT=	GRIB file viewer for weather data
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/zyGrib/src
+DEPENDS+=	liberation-ttf-[0-9]*:../../fonts/liberation-ttf
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	make
 
@@ -21,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Fixing shared data paths.
-SUBST_FILES.paths=	GisReader.cpp GribAnimator.cpp
+SUBST_FILES.paths=	map/GisReader.cpp GribAnimator.cpp
 SUBST_FILES.paths+=	MenuBar.cpp MainWindow.cpp main.cpp
 SUBST_SED.paths+=	-e "s|maps/|${PREFIX}/share/zyGrib/maps/|"
 SUBST_SED.paths+=	-e "s|img/|${PREFIX}/share/zyGrib/img/|"
@@ -40,12 +41,22 @@ INSTALL_FILES+=	img/anim.png
 INSTALL_FILES+=	img/back.png
 INSTALL_FILES+=	img/connect_no.png
 INSTALL_FILES+=	img/down.png
+INSTALL_FILES+=	img/drapeau_cz.png
+INSTALL_FILES+=	img/drapeau_de.png
+INSTALL_FILES+=	img/drapeau_en.png
+INSTALL_FILES+=	img/drapeau_es.png
+INSTALL_FILES+=	img/drapeau_fr.png
+INSTALL_FILES+=	img/drapeau_it.png
+INSTALL_FILES+=	img/drapeau_nl.png
+INSTALL_FILES+=	img/drapeau_pt.png
+INSTALL_FILES+=	img/drapeau_ru.png
 INSTALL_FILES+=	img/exit.png
 INSTALL_FILES+=	img/fileclose.png
 INSTALL_FILES+=	img/fileopen.png
 INSTALL_FILES+=	img/forward.png
 INSTALL_FILES+=	img/help.png
 INSTALL_FILES+=	img/info.png
+INSTALL_FILES+=	img/media-floppy.png
 INSTALL_FILES+=	img/network.png
 INSTALL_FILES+=	img/player_eject.png
 INSTALL_FILES+=	img/player_end.png
@@ -82,12 +93,14 @@ INSTALL_FILES+=	maps/gshhs/wdb_borders_l.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_c.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_i.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_l.b
+INSTALL_FILES+=	tr/zyGrib_cz.qm
+INSTALL_FILES+=	tr/zyGrib_cz.ts
 INSTALL_FILES+=	tr/zyGrib_de.qm
 INSTALL_FILES+=	tr/zyGrib_de.ts
-INSTALL_FILES+=	tr/zyGrib_en.qm
-INSTALL_FILES+=	tr/zyGrib_en.ts
 INSTALL_FILES+=	tr/zyGrib_es.qm
 INSTALL_FILES+=	tr/zyGrib_es.ts
+INSTALL_FILES+=	tr/zyGrib_fr.qm
+INSTALL_FILES+=	tr/zyGrib_fr.ts
 INSTALL_FILES+=	tr/zyGrib_it.qm
 INSTALL_FILES+=	tr/zyGrib_it.ts
 INSTALL_FILES+=	tr/zyGrib_nl.qm
@@ -99,9 +112,9 @@ do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/../zyGrib ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/zyGrib ${DESTDIR}${PREFIX}/bin
 .for f in ${INSTALL_FILES}
-	${INSTALL_DATA} ${WRKDIR}/zyGrib/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
