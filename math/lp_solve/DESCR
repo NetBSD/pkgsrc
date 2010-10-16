@@ -1,0 +1,6 @@
+lp_solve is a Mixed Integer Linear Programming (MILP) solver.
+
+It is a free linear (integer) programming solver based on the
+revised simplex method and the Branch-and-bound method for the
+integers.  lp_solve solves pure linear, (mixed) integer/binary,
+semi-continuous and special ordered sets (SOS) models.

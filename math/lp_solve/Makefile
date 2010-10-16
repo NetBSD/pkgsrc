@@ -1,0 +1,56 @@
+# $NetBSD: Makefile,v 1.1.1.1 2010/10/16 15:35:08 wiz Exp $
+#
+
+DISTNAME=	lp_solve_5.5.2.0_source
+PKGNAME=	${DISTNAME:S/_source//:S/_5/-5/}
+CATEGORIES=	math devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lpsolve/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://lpsolve.sourceforge.net/
+COMMENT=	Mixed Integer Linear Programming (MILP) solver
+#LICENSE=	LGPL, unclear which version (see lp_lib.h)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	automake
+
+WRKSRC=		${WRKDIR}/lp_solve_5.5
+
+SUBST_CLASSES+=		dl
+SUBST_STAGE.dl=		pre-build
+SUBST_SED.dl+=		-e "s,-ldl,${DL_LIBS},g"
+SUBST_SED.dl+=		-e "s,^opts=.*,opts=${CFLAGS},g"
+SUBST_SED.dl+=		-e "s,-fpic,-fPIC,g"
+SUBST_FILES.dl+=	lp_solve/ccc
+SUBST_FILES.dl+=	lpsolve55/ccc
+SUBST_FILES.dl+=	demo/ccc
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+LPSOLVE_ARCH=	ux32
+.else
+LPSOLVE_ARCH=	ux64
+.endif
+
+INSTALLATION_DIRS=	bin include/lpsolve lib
+
+do-build:
+	cd ${WRKSRC}/lp_solve && ${SHELL} ccc
+	cd ${WRKSRC}/lpsolve55 && ${SHELL} ccc
+	cd ${WRKSRC}/demo && ${SHELL} ccc
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/lp_solve/bin/${LPSOLVE_ARCH}/lp_solve \
+		${DESTDIR}${PREFIX}/bin
+.for i in declare.h fortify.h ini.h lp_*.h lpkit.h lpsolve.h ufortify.h yacc_read.h
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/include/lpsolve
+.endfor
+.for i in liblpsolve55.a liblpsolve55.so
+	${INSTALL_LIB} ${WRKSRC}/lpsolve55/bin/${LPSOLVE_ARCH}/${i} \
+		${DESTDIR}${PREFIX}/lib
+.endfor
+	${LN} -sf liblpsolve55.so ${DESTDIR}${PREFIX}/lib/liblpsolve55.so.1
+
+.include "../../mk/bsd.pkg.mk"
