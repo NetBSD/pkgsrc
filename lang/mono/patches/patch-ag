@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.8 2010/10/16 04:32:18 kefren Exp $
+--- mono/metadata/threadpool.c.orig	2010-10-07 22:59:36.000000000 +0300
++++ mono/metadata/threadpool.c	2010-10-07 23:00:03.000000000 +0300
+@@ -1898,7 +1898,7 @@ async_invoke_thread (gpointer data)
+ 
+ 			TP_DEBUG ("Waiting");
+ 			InterlockedIncrement (&tp->waiting);
+-#if defined(__OpenBSD__)
++#if (defined(__OpenBSD__) || defined(__NetBSD__))
+ 			while ((res = mono_sem_wait (&tp->new_job, TRUE)) == -1) {// && errno == EINTR) {
+ #else
+ 			while ((res = mono_sem_timedwait (&tp->new_job, 2000, TRUE)) == -1) {// && errno == EINTR) {
