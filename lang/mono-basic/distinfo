@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/04/09 15:48:17 kefren Exp $
+$NetBSD: distinfo,v 1.7 2010/10/16 04:35:56 kefren Exp $
 
-SHA1 (mono-basic-2.6.2.tar.bz2) = 9d4656feef5141388be6dae1b110a6db0a132570
-RMD160 (mono-basic-2.6.2.tar.bz2) = 73027b5f8f4f0b8ccbf84310d650f45111de5976
-Size (mono-basic-2.6.2.tar.bz2) = 1212428 bytes
+SHA1 (mono-basic-2.8.tar.bz2) = ea682fc8df678750bc2fdc18a2dd2a290ba5ed61
+RMD160 (mono-basic-2.8.tar.bz2) = 17209c63ebdee666b52459cd9bd2b67ecf15e7a0
+Size (mono-basic-2.8.tar.bz2) = 1845026 bytes
