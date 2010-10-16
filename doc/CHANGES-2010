@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3736 2010/10/16 11:53:05 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.3737 2010/10/16 12:53:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5079,3 +5079,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libthrift to 0.5.0 [tonnerre 2010-10-16]
 	Updated databases/libcassandra to 20101010 [tonnerre 2010-10-16]
 	Updated databases/apache-cassandra to 0.7.0beta2 [tonnerre 2010-10-16]
+	Updated misc/m17n-db to 1.6.2 [obache 2010-10-16]
