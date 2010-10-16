@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3730 2010/10/16 08:24:16 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3731 2010/10/16 10:07:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5071,3 +5071,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/libotf to 0.9.12 [obache 2010-10-16]
 	Updated misc/zyGrib to 3.9.4 [plunky 2010-10-16]
 	Updated audio/libsndfile to 1.0.23 [adam 2010-10-16]
+	Updated graphics/gimp to 2.6.11 [adam 2010-10-16]
+	Updated shells/rssh to 2.3.3 [adam 2010-10-16]
+	Updated graphics/pngcrush to 1.7.12 [adam 2010-10-16]

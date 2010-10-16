@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9780 2010/10/16 08:24:16 adam Exp $
+$NetBSD: TODO,v 1.9781 2010/10/16 10:07:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -689,7 +689,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ghc-6.12.2
 	o ghostscript-9.0
 	o gifsicle-1.48
-	o gimp-2.6.11
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
