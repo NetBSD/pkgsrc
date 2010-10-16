@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9773 2010/10/15 07:56:32 wiz Exp $
+$NetBSD: TODO,v 1.9774 2010/10/16 04:43:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -1304,8 +1304,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o sun-jdk6-6.0.22
-	o sun-jre6-6.0.22
 	o swfdec-gnome-2.30.1
 	o sympa-6.0.2
 	o sysinfo-4.2.2
