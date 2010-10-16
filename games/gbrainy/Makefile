@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2010/09/14 11:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/10/16 16:07:30 wiz Exp $
 #
 
-DISTNAME=	gbrainy-1.51
-PKGREVISION=	1
+DISTNAME=	gbrainy-1.52
 CATEGORIES=	games
 MASTER_SITES=	http://gent.softcatala.org/jmas/gbrainy/
 
@@ -32,6 +31,7 @@ PKGCONFIG_OVERRIDE=	data/gbrainy.pc.in
 .include "../../lang/mono/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
