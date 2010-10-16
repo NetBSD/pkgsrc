@@ -1,11 +1,10 @@
-$NetBSD: patch-ad,v 1.18 2010/09/23 05:38:15 obache Exp $
-
---- mono/utils/mono-sigcontext.h.orig	2010-07-06 17:52:18.000000000 +0300
-+++ mono/utils/mono-sigcontext.h	2010-07-30 12:56:01.000000000 +0300
-@@ -80,6 +80,20 @@
- 
- #ifdef __FreeBSD__
- #define UCONTEXT_GREGS(ctx)	&(((ucontext_t*)(ctx))->uc_mcontext)
+$NetBSD: patch-ad,v 1.19 2010/10/16 04:32:18 kefren Exp $
+--- mono/utils/mono-sigcontext.h.orig	2010-10-07 19:02:08.000000000 +0300
++++ mono/utils/mono-sigcontext.h	2010-10-07 19:02:31.000000000 +0300
+@@ -101,6 +101,20 @@
+ 	#define UCONTEXT_REG_R15(ctx) (((ucontext_t*)(ctx))->uc_mcontext->__ss.__r15)
+ #elif defined(__FreeBSD__)
+ #define UCONTEXT_GREGS(ctx)	((guint64*)&(((ucontext_t*)(ctx))->uc_mcontext))
 +#elif defined(__NetBSD__)
 +	#define UCONTEXT_REG_RAX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RAX])
 +	#define UCONTEXT_REG_RBX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RBX])
@@ -21,5 +20,5 @@ $NetBSD: patch-ad,v 1.18 2010/09/23 05:38:15 obache Exp $
 +	#define UCONTEXT_REG_R14(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R14])
 +	#define UCONTEXT_REG_R15(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R15])
  #elif defined(__OpenBSD__)
- 	/* OpenBSD/amd64 has no gregs array, ucontext_t == sigcontext */
+     /* OpenBSD/amd64 has no gregs array, ucontext_t == sigcontext */
  	#define UCONTEXT_REG_RAX(ctx) ((ctx)->sc_rax)

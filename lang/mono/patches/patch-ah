@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.10 2010/04/29 08:44:30 kefren Exp $
---- mono/utils/mono-semaphore.c.orig	2010-04-29 11:29:02.000000000 +0300
-+++ mono/utils/mono-semaphore.c	2010-04-29 11:19:30.000000000 +0300
+$NetBSD: patch-ah,v 1.11 2010/10/16 04:32:18 kefren Exp $
+--- mono/utils/mono-semaphore.c.orig	2010-10-07 23:41:21.000000000 +0300
++++ mono/utils/mono-semaphore.c	2010-10-07 23:44:31.000000000 +0300
 @@ -22,7 +22,7 @@
  #  ifdef USE_MACH_SEMA
  #    define TIMESPEC mach_timespec_t
@@ -10,21 +10,61 @@ $NetBSD: patch-ah,v 1.10 2010/04/29 08:44:30 kefren Exp $
  #    define TIMESPEC struct timespec
  #    define WAIT_BLOCK(a) sem_trywait(a)
  #  else
-@@ -37,7 +37,7 @@
+@@ -34,20 +34,34 @@
+ int
+ mono_sem_timedwait (MonoSemType *sem, guint32 timeout_ms, gboolean alertable)
+ {
++#if (defined(__NetBSD__) || defined(__OpenBSD__))
++	uint32_t timeout = timeout_ms;
++#else
  	TIMESPEC ts, copy;
  	struct timeval t;
- 	int res = 0;
+-	int res = 0;
 -#if defined(__OpenBSD__)
-+#if (defined(__OpenBSD__) || defined(__NetBSD__))
- 	int timeout;
+-	int timeout;
  #endif
++	int res = 0;
  
-@@ -55,7 +55,7 @@
+ #ifndef USE_MACH_SEMA
+ 	if (timeout_ms == 0)
+ 		return (!sem_trywait (sem));
+ #endif
++
+ 	if (timeout_ms == (guint32) 0xFFFFFFFF)
+ 		return mono_sem_wait (sem, alertable);
+ 
++#if (defined(__NetBSD__) || defined(__OpenBSD__))
++	if (timeout < 50)
++		timeout += 50;
++	do {
++		if ((res = WAIT_BLOCK(sem)) == 0)
++			break;
++		usleep(50000);
++		timeout -= 50;
++		if (alertable)	/* XXX: Not on EINTR */
++			return -1;
++	} while (timeout > 50);
++#else
+ 	gettimeofday (&t, NULL);
+ 	ts.tv_sec = timeout_ms / 1000 + t.tv_sec;
+ 	ts.tv_nsec = (timeout_ms % 1000) * 1000000 + t.tv_usec * 1000;
+@@ -55,19 +69,6 @@ mono_sem_timedwait (MonoSemType *sem, gu
  		ts.tv_nsec -= NSEC_PER_SEC;
  		ts.tv_sec++;
  	}
 -#if defined(__OpenBSD__)
-+#if (defined(__OpenBSD__) || defined(__NetBSD__))
- 	timeout = ts.tv_sec;
- 	while (timeout) {
- 		if ((res = WAIT_BLOCK (sem)) == 0)
+-	timeout = ts.tv_sec;
+-	while (timeout) {
+-		if ((res = WAIT_BLOCK (sem)) == 0)
+-			return res;
+-
+-		if (alertable)
+-			return -1;
+-
+-		usleep (ts.tv_nsec / 1000);
+-		timeout--;
+-	}
+-#else
+ 	copy = ts;
+ 	while ((res = WAIT_BLOCK (sem, &ts)) == -1 && errno == EINTR) {
+ 		struct timeval current;
