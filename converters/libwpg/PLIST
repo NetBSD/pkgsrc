@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/16 15:26:34 wiz Exp $
+bin/wpg2raw
+bin/wpg2svg
+bin/wpg2svgbatch.pl
+include/libwpg-0.1/libwpg/WPGBinaryData.h
+include/libwpg-0.1/libwpg/WPGBitmap.h
+include/libwpg-0.1/libwpg/WPGBrush.h
+include/libwpg-0.1/libwpg/WPGColor.h
+include/libwpg-0.1/libwpg/WPGGradient.h
+include/libwpg-0.1/libwpg/WPGPaintInterface.h
+include/libwpg-0.1/libwpg/WPGPath.h
+include/libwpg-0.1/libwpg/WPGPen.h
+include/libwpg-0.1/libwpg/WPGPoint.h
+include/libwpg-0.1/libwpg/WPGRect.h
+include/libwpg-0.1/libwpg/WPGStreamImplementation.h
+include/libwpg-0.1/libwpg/WPGString.h
+include/libwpg-0.1/libwpg/WPGraphics.h
+include/libwpg-0.1/libwpg/libwpg.h
+lib/libwpg-0.1.la
+lib/libwpg-stream-0.1.la
+lib/pkgconfig/libwpg-0.1.pc
+lib/pkgconfig/libwpg-stream-0.1.pc
