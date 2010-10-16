@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2010/07/04 05:36:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2010/10/16 09:54:37 adam Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -2004,6 +2004,8 @@ share/locale/zh_CN/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/zh_CN/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/zh_CN/LC_MESSAGES/gimp20-tips.mo
 share/locale/zh_CN/LC_MESSAGES/gimp20.mo
+share/locale/zh_HK/LC_MESSAGES/gimp20-libgimp.mo
+share/locale/zh_HK/LC_MESSAGES/gimp20-python.mo
 share/locale/zh_HK/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/zh_HK/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/zh_HK/LC_MESSAGES/gimp20-tips.mo
