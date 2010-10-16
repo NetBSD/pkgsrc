@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3766 2010/10/16 18:00:43 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3767 2010/10/16 21:46:05 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5109,3 +5109,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/orc to 0.4.11 [wiz 2010-10-16]
 	Updated databases/shared-mime-info to 0.80 [wiz 2010-10-16]
 	Updated devel/pango to 1.28.3 [wiz 2010-10-16]
+	Added databases/csharp-mysql version 6.3.5 [kefren 2010-10-17]
+	Added devel/monodevelop-database version 2.4 [kefren 2010-10-17]
