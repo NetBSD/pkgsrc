@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3746 2010/10/16 15:15:27 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3747 2010/10/16 15:20:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5089,3 +5089,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/webkit-gtk to 1.2.5 [adam 2010-10-16]
 	Updated graphics/clutter to 1.2.14 [obache 2010-10-16]
 	Updated devel/meld to 1.4.0 [wiz 2010-10-16]
+	Updated inputmethod/ibus-anthy to 1.2.3 [obache 2010-10-16]
