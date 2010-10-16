@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2010/10/14 03:32:07 taca Exp $
+$NetBSD: distinfo,v 1.19 2010/10/16 00:17:04 taca Exp $
 
 SHA1 (Contao-Bosnian-v15.zip) = 605cb5f99efa11eebf7035e824d45ce57c4c07b4
 RMD160 (Contao-Bosnian-v15.zip) = 7a8d71963755df9e643c5fe03d2b208d26ce505d
@@ -48,9 +48,9 @@ Size (Contao-Persian-v6.zip) = 138065 bytes
 SHA1 (Contao-Polish-v29.zip) = fd228a65a67656b79759e2c70a064b3cebbe58ee
 RMD160 (Contao-Polish-v29.zip) = e1167299de9a24299fc8f1e2cf54d708a28dbbce
 Size (Contao-Polish-v29.zip) = 139374 bytes
-SHA1 (Contao-Rhaeto-Romance-v1.zip) = 60aa8d645af66d7d0c4f4cb8d1d04d58451aff70
-RMD160 (Contao-Rhaeto-Romance-v1.zip) = 328c01e922088bd2b4319cce915ff64252d07b42
-Size (Contao-Rhaeto-Romance-v1.zip) = 69719 bytes
+SHA1 (Contao-Rhaeto-Romance-v2.zip) = c3fbb9f67c26f4f6881180a2ef496d7f4f731e99
+RMD160 (Contao-Rhaeto-Romance-v2.zip) = 1711a2124ed3713695132a6171493c14cc3cbc9a
+Size (Contao-Rhaeto-Romance-v2.zip) = 74280 bytes
 SHA1 (Contao-Romanian-v10.zip) = 3e4a2a1d5990685a81b805a0131d5cf8c2de6c63
 RMD160 (Contao-Romanian-v10.zip) = 17c1e23900549db4ee32290e9be158dda2545851
 Size (Contao-Romanian-v10.zip) = 134018 bytes
