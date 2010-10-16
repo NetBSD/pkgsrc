@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2010/06/06 17:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.12 2010/10/16 16:40:03 wiz Exp $
 
-DISTNAME=	redland-1.0.10
+DISTNAME=	redland-1.0.12
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://librdf.org/
-COMMENT=	libraries that support the Resource Description Framework (RDF)
+COMMENT=	Libraries supporting the Resource Description Framework (RDF)
 LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/10/16 16:40:03 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2010-10-16 16:30:21.000000000 +0000
++++ configure
+@@ -13884,7 +13884,7 @@ if test "${with_module_path+set}" = set;
+   withval=$with_module_path; REDLAND_MODULE_PATH="$witheval"
+ fi
+ 
+-if test "x$REDLAND_MODULE_PATH" == "x"; then
++if test "x$REDLAND_MODULE_PATH" = "x"; then
+ 	REDLAND_MODULE_PATH=$libdir"/redland"
+ 	if test "x$prefix" != "xNONE"; then
+ 		REDLAND_MODULE_PATH="/usr/local/lib/redland:"$REDLAND_MODULE_PATH
