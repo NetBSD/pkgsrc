@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9778 2010/10/16 06:30:49 obache Exp $
+$NetBSD: TODO,v 1.9779 2010/10/16 06:32:48 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1294,7 +1294,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ssh-askpass-1.2.4.1
 	o star-1.5.1
 	o statist-1.3.0
-	o stella-3.2.2
+	o stella-3.2.2 [dholland]
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
