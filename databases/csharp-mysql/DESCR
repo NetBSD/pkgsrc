@@ -1,0 +1,6 @@
+Connector/NET enables developers to easily create .NET applications that
+require secure, high-performance data connectivity with MySQL. It implements
+the required ADO.NET interfaces and integrates into ADO.NET aware tools.
+Developers can build applications using their choice of .NET languages.
+
+Connector/NET is a fully managed ADO.NET driver written in 100% pure C#.
