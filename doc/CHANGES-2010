@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3738 2010/10/16 12:57:36 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3739 2010/10/16 13:03:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5081,3 +5081,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/apache-cassandra to 0.7.0beta2 [tonnerre 2010-10-16]
 	Updated misc/m17n-db to 1.6.2 [obache 2010-10-16]
 	Updated misc/m17n-contrib to 1.1.12 [obache 2010-10-16]
+	Updated devel/m17n-lib to 1.6.2 [obache 2010-10-16]
