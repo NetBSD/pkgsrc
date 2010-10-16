@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3758 2010/10/16 16:11:09 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3759 2010/10/16 16:14:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5101,3 +5101,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/stella to 3.2.2 [dholland 2010-10-16]
 	Updated devel/libgsf to 1.14.19 [wiz 2010-10-16]
 	Updated devel/libgsf-gnome to 1.14.19 [wiz 2010-10-16]
+	Updated x11/gnome-sharp to 2.24.2 [wiz 2010-10-16]
