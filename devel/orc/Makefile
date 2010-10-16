@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/18 12:22:25 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/16 16:56:23 wiz Exp $
 #
 
-DISTNAME=	orc-0.4.6
+DISTNAME=	orc-0.4.11
 CATEGORIES=	devel
 MASTER_SITES=	http://code.entropywave.com/download/orc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.entropywave.com/projects/orc/
 COMMENT=	Compiler for vector operations
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS=	gmake
 
 PKGCONFIG_OVERRIDE+=	orc.pc.in
 TEST_TARGET=	check
