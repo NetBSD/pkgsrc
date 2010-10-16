@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2010/05/01 15:16:06 tonnerre Exp $
+$NetBSD: patch-aa,v 1.3 2010/10/16 11:43:30 tonnerre Exp $
+
+Remove the -pedantic flag from the configure script, it isn't terribly
+useful for C++0x code.
 
 --- configure.orig	2010-04-30 23:25:08.000000000 +0000
 +++ configure
