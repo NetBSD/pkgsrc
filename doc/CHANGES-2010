@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3731 2010/10/16 10:07:53 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3732 2010/10/16 10:17:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5074,3 +5074,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/gimp to 2.6.11 [adam 2010-10-16]
 	Updated shells/rssh to 2.3.3 [adam 2010-10-16]
 	Updated graphics/pngcrush to 1.7.12 [adam 2010-10-16]
+	Updated benchmarks/netpipe to 3.7.1 [adam 2010-10-16]
