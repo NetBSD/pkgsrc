@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3733 2010/10/16 10:46:44 gson Exp $
+$NetBSD: CHANGES-2010,v 1.3734 2010/10/16 11:38:33 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5076,3 +5076,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/pngcrush to 1.7.12 [adam 2010-10-16]
 	Updated benchmarks/netpipe to 3.7.1 [adam 2010-10-16]
 	Updated net/py-dns to 1.8.0 [gson 2010-10-16]
+	Updated devel/libthrift to 0.5.0 [tonnerre 2010-10-16]
