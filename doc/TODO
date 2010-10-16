@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9803 2010/10/16 18:00:43 wiz Exp $
+$NetBSD: TODO,v 1.9804 2010/10/16 23:58:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -494,7 +494,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o cssc-1.2.0
 	o cups-1.4.4
-	o curl-7.21.2
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.21
 	o cygwin_lib-1.5.24.2
