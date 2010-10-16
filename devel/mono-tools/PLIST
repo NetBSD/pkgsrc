@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/02/16 17:39:20 kefren Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/10/16 04:34:56 kefren Exp $
 bin/create-native-map
 bin/emveepee
 bin/gasnview
@@ -37,6 +37,7 @@ lib/gendarme/rules.xml
 lib/gsharp/gsharp.exe
 lib/gsharp/gsharp.exe.config
 lib/gui-compare/gui-compare.exe
+lib/gui-compare/gui-compare.exe.mdb
 lib/minvoke/minvoke.exe
 lib/mono-tools/Mono.Profiler.Widgets.dll
 lib/mono-tools/Mono.Profiler.Widgets.dll.mdb
