@@ -1,8 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3720 2010/10/16 00:18:06 taca Exp $
-
-PKGSRC IS IN A FREEZE FOR NEW FUNCTIONALITY RIGHT NOW - PLEASE
-DO NOT ADD ANY NEW PACKAGES, AND GET APPROVAL BEFORE UPDATING
-ANY EXISTING ONES - MANY THANKS -- agc 2010-09-24
+$NetBSD: CHANGES-2010,v 1.3721 2010/10/16 04:18:40 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5058,3 +5054,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ruby-rails3 to 3.0.1 [taca 2010-10-15]
 	Updated databases/ruby-acts-as-versioned to 0.2.3nb1 [taca 2010-10-15]
 	Updated www/contao29-translations to 20101014 [taca 2010-10-16]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2010Q3 branch [agc 2010-10-15]
