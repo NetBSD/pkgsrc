@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3754 2010/10/16 15:50:34 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3755 2010/10/16 16:07:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5097,3 +5097,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added math/lp_solve version 5.5.2.0 [wiz 2010-10-16]
 	Updated net/clive to 2.2.16 [wiz 2010-10-16]
 	Updated graphics/vigra to 1.7.0 [wiz 2010-10-16]
+	Updated games/gbrainy to 1.52 [wiz 2010-10-16]
