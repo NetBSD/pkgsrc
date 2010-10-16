@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2010/05/31 17:31:30 drochner Exp $
+$NetBSD: distinfo,v 1.37 2010/10/16 23:59:57 wiz Exp $
 
-SHA1 (atk-1.30.0.tar.bz2) = ca9380e956e37275cb0cb72805d20306686fb885
-RMD160 (atk-1.30.0.tar.bz2) = 2e862066f58208cee100711010becc06ff3d41cb
-Size (atk-1.30.0.tar.bz2) = 746014 bytes
+SHA1 (atk-1.32.0.tar.bz2) = 876e88e4259d07bb7905d66c085a50a47e37f9e4
+RMD160 (atk-1.32.0.tar.bz2) = 22d267795a7c576b90353780a9520e89fc43ea37
+Size (atk-1.32.0.tar.bz2) = 688186 bytes
