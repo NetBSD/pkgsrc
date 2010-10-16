@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3721 2010/10/16 04:18:40 agc Exp $
+$NetBSD: CHANGES-2010,v 1.3722 2010/10/16 04:43:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5055,3 +5055,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-acts-as-versioned to 0.2.3nb1 [taca 2010-10-15]
 	Updated www/contao29-translations to 20101014 [taca 2010-10-16]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2010Q3 branch [agc 2010-10-15]
+	Updated lang/sun-jre6 to 6.0.22 [obache 2010-10-15]
+	Updated lang/sun-jdk6 to 6.0.22 [obache 2010-10-15]
