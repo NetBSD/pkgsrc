@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3762 2010/10/16 16:41:29 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3763 2010/10/16 16:43:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5105,3 +5105,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/liblastfm to 0.3.3 [wiz 2010-10-16]
 	Updated textproc/redland to 1.0.12 [wiz 2010-10-16]
 	Updated security/libtasn1 to 2.8 [wiz 2010-10-16]
+	Updated security/gnutls to 2.10.2 [wiz 2010-10-16]
