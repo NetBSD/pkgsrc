@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/07/01 16:08:45 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/10/16 11:52:43 tonnerre Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
+PKGNAME=	apache-cassandra-${CASSANDRA_VER:S/-//}
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER}/}
+MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	tonnerre@NetBSD.org
@@ -21,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-CASSANDRA_VER=	0.6.2
+CASSANDRA_VER=	0.7.0-beta2
 CASSANDRA_HOME=	${PREFIX}/share/cassandra
 EGDIR=		${PREFIX}/share/examples/cassandra
 DOCDIR=		${PREFIX}/share/doc/cassandra
@@ -43,11 +44,12 @@ FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME}		\
 			CASSANDRA_USER=${CASSANDRA_USER}	\
 			CASSANDRA_GROUP=${CASSANDRA_GROUP}
 
-PRIVATE_EGFILES=	passwd.properties
-PUBLIC_EGFILES=		access.properties log4j.properties	\
-			log4j-tools.properties storage-conf.xml
+PRIVATE_EGFILES=
+PUBLIC_EGFILES=		cassandra-env.sh cassandra-rack.properties	\
+			cassandra.yaml log4j-server.properties		\
+			log4j-tools.properties
 
-DOCFILES=		CHANGES DISCLAIMER LICENSE NEWS NOTICE README
+DOCFILES=		CHANGES LICENSE NEWS NOTICE README
 
 .for f in ${PRIVATE_EGFILES}
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR.cassandra}/${f}	\
