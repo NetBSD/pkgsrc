@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9797 2010/10/16 16:18:08 wiz Exp $
+$NetBSD: TODO,v 1.9798 2010/10/16 16:40:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1195,7 +1195,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcairo-1.10.0
 	o rdp-1.6
-	o redland-1.0.12
 	o renderproto-0.11.1
 	o rep-gtk-0.90.4
 	o resize_image-0.7

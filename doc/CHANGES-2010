@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3760 2010/10/16 16:18:08 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3761 2010/10/16 16:40:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5103,3 +5103,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libgsf-gnome to 1.14.19 [wiz 2010-10-16]
 	Updated x11/gnome-sharp to 2.24.2 [wiz 2010-10-16]
 	Updated audio/liblastfm to 0.3.3 [wiz 2010-10-16]
+	Updated textproc/redland to 1.0.12 [wiz 2010-10-16]
