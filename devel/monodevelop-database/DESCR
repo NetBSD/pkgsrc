@@ -1,0 +1,5 @@
+MonoDevelop is a free GNOME IDE primarily designed
+for C# and other .NET languages.
+
+This package represents the database support add-on and it can handle the
+following databases: MySQL, PostgreSQL, Sqlite and Microsoft SQL.
