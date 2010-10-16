@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/08/13 11:58:28 obache Exp $
+$NetBSD: distinfo,v 1.4 2010/10/16 05:09:36 obache Exp $
 
-SHA1 (twitter-stream-0.1.8.gem) = 8c866c5807d6abb8dda5677cb5d4c63b49174a86
-RMD160 (twitter-stream-0.1.8.gem) = 354d3ca4d8ee1b15badd2d3e1f4371b2acc8ef46
-Size (twitter-stream-0.1.8.gem) = 10752 bytes
+SHA1 (twitter-stream-0.1.10.gem) = 48dae1ae3c06ed56485802e29f0e917947509154
+RMD160 (twitter-stream-0.1.10.gem) = 5cd2a63abbcee1220398e40c6eba7d27b983070d
+Size (twitter-stream-0.1.10.gem) = 10752 bytes
