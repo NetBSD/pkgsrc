@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.16 2010/02/07 16:08:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/10/16 16:57:45 wiz Exp $
 bin/update-mime-database
 man/man1/update-mime-database.1
-share/locale/ara/LC_MESSAGES/shared-mime-info.mo
+share/locale/ar/LC_MESSAGES/shared-mime-info.mo
 share/locale/az/LC_MESSAGES/shared-mime-info.mo
 share/locale/be@latin/LC_MESSAGES/shared-mime-info.mo
 share/locale/bg/LC_MESSAGES/shared-mime-info.mo
@@ -18,10 +18,13 @@ share/locale/eu/LC_MESSAGES/shared-mime-info.mo
 share/locale/fi/LC_MESSAGES/shared-mime-info.mo
 share/locale/fr/LC_MESSAGES/shared-mime-info.mo
 share/locale/ga/LC_MESSAGES/shared-mime-info.mo
+share/locale/gl/LC_MESSAGES/shared-mime-info.mo
+share/locale/he/LC_MESSAGES/shared-mime-info.mo
 share/locale/hu/LC_MESSAGES/shared-mime-info.mo
 share/locale/id/LC_MESSAGES/shared-mime-info.mo
 share/locale/it/LC_MESSAGES/shared-mime-info.mo
 share/locale/ja/LC_MESSAGES/shared-mime-info.mo
+share/locale/kk/LC_MESSAGES/shared-mime-info.mo
 share/locale/ko/LC_MESSAGES/shared-mime-info.mo
 share/locale/lt/LC_MESSAGES/shared-mime-info.mo
 share/locale/lv/LC_MESSAGES/shared-mime-info.mo
@@ -32,8 +35,11 @@ share/locale/nn/LC_MESSAGES/shared-mime-info.mo
 share/locale/pl/LC_MESSAGES/shared-mime-info.mo
 share/locale/pt/LC_MESSAGES/shared-mime-info.mo
 share/locale/pt_BR/LC_MESSAGES/shared-mime-info.mo
+share/locale/ro/LC_MESSAGES/shared-mime-info.mo
 share/locale/ru/LC_MESSAGES/shared-mime-info.mo
 share/locale/rw/LC_MESSAGES/shared-mime-info.mo
+share/locale/sk/LC_MESSAGES/shared-mime-info.mo
+share/locale/sl/LC_MESSAGES/shared-mime-info.mo
 share/locale/sq/LC_MESSAGES/shared-mime-info.mo
 share/locale/sr/LC_MESSAGES/shared-mime-info.mo
 share/locale/sv/LC_MESSAGES/shared-mime-info.mo
