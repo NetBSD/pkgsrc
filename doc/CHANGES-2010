@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3757 2010/10/16 16:10:56 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3758 2010/10/16 16:11:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5100,3 +5100,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/gbrainy to 1.52 [wiz 2010-10-16]
 	Updated emulators/stella to 3.2.2 [dholland 2010-10-16]
 	Updated devel/libgsf to 1.14.19 [wiz 2010-10-16]
+	Updated devel/libgsf-gnome to 1.14.19 [wiz 2010-10-16]
