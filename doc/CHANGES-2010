@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3722 2010/10/16 04:43:39 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3723 2010/10/16 04:46:34 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5057,3 +5057,10 @@ Changes to the packages collection and infrastructure in 2010:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2010Q3 branch [agc 2010-10-15]
 	Updated lang/sun-jre6 to 6.0.22 [obache 2010-10-15]
 	Updated lang/sun-jdk6 to 6.0.22 [obache 2010-10-15]
+	Updated lang/mono to 2.8 [kefren 2010-10-15]
+	Updated lang/mono-basic to 2.8 [kefren 2010-10-15]
+	Updated graphics/libgdiplus to 2.8 [kefren 2010-10-15]
+	Updated devel/mono-tools to 2.8 [kefren 2010-10-15]
+	Updated www/mono-xsp to 2.8 [kefren 2010-10-15]
+	Updated www/ap-mono to 2.8 [kefren 2010-10-15]
+	Updated devel/monodevelop to 2.4 [kefren 2010-10-15]
