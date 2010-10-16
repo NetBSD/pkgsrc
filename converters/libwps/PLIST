@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/16 15:26:08 wiz Exp $
+bin/wps2html
+bin/wps2raw
+bin/wps2text
+include/libwps-0.1/libwps/WPSDocument.h
+include/libwps-0.1/libwps/WPSStream.h
+include/libwps-0.1/libwps/WPSStreamImplementation.h
+include/libwps-0.1/libwps/libwps.h
+lib/libwps-0.1.la
+lib/libwps-stream-0.1.la
+lib/pkgconfig/libwps-0.1.pc
+lib/pkgconfig/libwps-stream-0.1.pc
