@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9783 2010/10/16 12:53:27 obache Exp $
+$NetBSD: TODO,v 1.9784 2010/10/16 12:57:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -960,7 +960,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lwm-1.2.2
 	o lzip-1.11
 	o m17n-lib-1.6.2
-	o m17n-contrib-1.1.12
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
