@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/07 13:45:01 plunky Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/10/16 06:50:52 plunky Exp $
 bin/zyGrib
 share/zyGrib/img/1leftarrow.png
 share/zyGrib/img/1rightarrow.png
@@ -8,12 +8,22 @@ share/zyGrib/img/anim.png
 share/zyGrib/img/back.png
 share/zyGrib/img/connect_no.png
 share/zyGrib/img/down.png
+share/zyGrib/img/drapeau_cz.png
+share/zyGrib/img/drapeau_de.png
+share/zyGrib/img/drapeau_en.png
+share/zyGrib/img/drapeau_es.png
+share/zyGrib/img/drapeau_fr.png
+share/zyGrib/img/drapeau_it.png
+share/zyGrib/img/drapeau_nl.png
+share/zyGrib/img/drapeau_pt.png
+share/zyGrib/img/drapeau_ru.png
 share/zyGrib/img/exit.png
 share/zyGrib/img/fileclose.png
 share/zyGrib/img/fileopen.png
 share/zyGrib/img/forward.png
 share/zyGrib/img/help.png
 share/zyGrib/img/info.png
+share/zyGrib/img/media-floppy.png
 share/zyGrib/img/network.png
 share/zyGrib/img/player_eject.png
 share/zyGrib/img/player_end.png
@@ -50,12 +60,14 @@ share/zyGrib/maps/gshhs/wdb_borders_l.b
 share/zyGrib/maps/gshhs/wdb_rivers_c.b
 share/zyGrib/maps/gshhs/wdb_rivers_i.b
 share/zyGrib/maps/gshhs/wdb_rivers_l.b
+share/zyGrib/tr/zyGrib_cz.qm
+share/zyGrib/tr/zyGrib_cz.ts
 share/zyGrib/tr/zyGrib_de.qm
 share/zyGrib/tr/zyGrib_de.ts
-share/zyGrib/tr/zyGrib_en.qm
-share/zyGrib/tr/zyGrib_en.ts
 share/zyGrib/tr/zyGrib_es.qm
 share/zyGrib/tr/zyGrib_es.ts
+share/zyGrib/tr/zyGrib_fr.qm
+share/zyGrib/tr/zyGrib_fr.ts
 share/zyGrib/tr/zyGrib_it.qm
 share/zyGrib/tr/zyGrib_it.ts
 share/zyGrib/tr/zyGrib_nl.qm
