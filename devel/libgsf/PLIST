@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2010/04/13 16:56:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.30 2010/10/16 16:10:37 wiz Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -56,7 +56,6 @@ man/man1/gsf-office-thumbnailer.1
 man/man1/gsf-vba-dump.1
 man/man1/gsf.1
 share/gconf/schemas/gsf-office-thumbnailer.schemas
-share/gtk-doc/html/gsf/GsfClipData.html
 share/gtk-doc/html/gsf/api.html
 share/gtk-doc/html/gsf/dependencies.html
 share/gtk-doc/html/gsf/gsf-Bononbo.html
@@ -75,6 +74,7 @@ share/gtk-doc/html/gsf/gsf-Text.html
 share/gtk-doc/html/gsf/gsf-XML-and-libxml.html
 share/gtk-doc/html/gsf/gsf-Zip.html
 share/gtk-doc/html/gsf/gsf-blobs.html
+share/gtk-doc/html/gsf/gsf-clip-data.html
 share/gtk-doc/html/gsf/gsf-index.html
 share/gtk-doc/html/gsf/gsf-memory.html
 share/gtk-doc/html/gsf/gsf-metadata.html
@@ -96,6 +96,7 @@ share/gtk-doc/html/gsf/sources.html
 share/gtk-doc/html/gsf/style.css
 share/gtk-doc/html/gsf/up.png
 share/locale/cs/LC_MESSAGES/libgsf.mo
+share/locale/da/LC_MESSAGES/libgsf.mo
 share/locale/de/LC_MESSAGES/libgsf.mo
 share/locale/en_GB/LC_MESSAGES/libgsf.mo
 share/locale/es/LC_MESSAGES/libgsf.mo
