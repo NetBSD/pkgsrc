@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2010/04/09 15:48:17 kefren Exp $
+# $NetBSD: Makefile,v 1.11 2010/10/16 04:35:56 kefren Exp $
 
-DISTNAME=	mono-basic-2.6.2
+DISTNAME=	mono-basic-2.8
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono-basic/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +16,8 @@ USE_LANGUAGES+=		# empty
 EXTRACT_USING=		gtar
 
 GNU_CONFIGURE=		yes
+
+REPLACE_SH+=		vbnc/vbnc/setversion.sh
 
 UNLIMIT_RESOURCES=	datasize
 UNLIMIT_RESOURCES+=	stacksize
