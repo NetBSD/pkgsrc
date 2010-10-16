@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3747 2010/10/16 15:20:29 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3748 2010/10/16 15:25:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5090,3 +5090,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.2.14 [obache 2010-10-16]
 	Updated devel/meld to 1.4.0 [wiz 2010-10-16]
 	Updated inputmethod/ibus-anthy to 1.2.3 [obache 2010-10-16]
+	Updated devel/cppunit to 1.12.1 [wiz 2010-10-16]
