@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3725 2010/10/16 05:09:51 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3726 2010/10/16 06:04:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5066,3 +5066,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monodevelop to 2.4 [kefren 2010-10-15]
 	Updated security/ruby-roauth to 0.0.6 [obache 2010-10-16]
 	Updated net/ruby-twitter-stream to 0.1.10 [obache 2010-10-16]
+	Updated inputmethod/ibus-anthy to 1.2.2.20101015 [obache 2010-10-16]
