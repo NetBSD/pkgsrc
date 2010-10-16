@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2010/10/15 04:52:05 kefren Exp $
+# $NetBSD: Makefile,v 1.106 2010/10/16 04:32:18 kefren Exp $
 
-DISTNAME=	mono-2.6.7
-PKGREVISION=	2
+DISTNAME=	mono-2.8
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -90,10 +89,14 @@ REPLACE_BASH+=	mkinstalldirs
 EGDIR=		${PREFIX}/share/examples/mono
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
 CONF_FILES+=	${EGDIR}/browscap.ini ${PKG_SYSCONFDIR}/mono/browscap.ini
-CONF_FILES+=	${EGDIR}/1.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/1.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/1.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/1.0/machine.config
+CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
+		${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/4.0/machine.config \
+		${PKG_SYSCONFDIR}/mono/4.0/machine.config
+CONF_FILES+=	${EGDIR}/4.0/settings.map \
+		${PKG_SYSCONFDIR}/mono/4.0/settings.map
+CONF_FILES+=	${EGDIR}/4.0/web.config \
+		${PKG_SYSCONFDIR}/mono/4.0/web.config
 CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
 		${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
 CONF_FILES+=	${EGDIR}/2.0/machine.config \
@@ -107,9 +110,9 @@ CONF_FILES+=	${EGDIR}/2.0/web.config \
 CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
 		${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/1.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
 
 TEST_TARGET=	check
