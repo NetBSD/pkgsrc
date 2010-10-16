@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3741 2010/10/16 13:10:21 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3742 2010/10/16 13:13:44 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/m17n-lib to 1.6.2 [obache 2010-10-16]
 	Added x11/applewmproto version 1.4.1 [obache 2010-10-16]
 	Added x11/libAppleWM version 1.4.0 [obache 2010-10-16]
+	Updated x11/xkeyboard-config to 2.0 [ghen 2010-10-16]
