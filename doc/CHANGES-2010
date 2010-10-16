@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3723 2010/10/16 04:46:34 kefren Exp $
+$NetBSD: CHANGES-2010,v 1.3724 2010/10/16 05:04:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5064,3 +5064,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/mono-xsp to 2.8 [kefren 2010-10-15]
 	Updated www/ap-mono to 2.8 [kefren 2010-10-15]
 	Updated devel/monodevelop to 2.4 [kefren 2010-10-15]
+	Updated security/ruby-roauth to 0.0.6 [obache 2010-10-16]
