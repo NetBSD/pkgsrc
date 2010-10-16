@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/17 02:10:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/10/16 13:34:29 obache Exp $
+include/json-glib-1.0/json-glib/json-builder.h
 include/json-glib-1.0/json-glib/json-enum-types.h
 include/json-glib-1.0/json-glib/json-generator.h
 include/json-glib-1.0/json-glib/json-glib.h
 include/json-glib-1.0/json-glib/json-gobject.h
 include/json-glib-1.0/json-glib/json-parser.h
+include/json-glib-1.0/json-glib/json-reader.h
 include/json-glib-1.0/json-glib/json-types.h
 include/json-glib-1.0/json-glib/json-version.h
 lib/libjson-glib-1.0.la
 lib/pkgconfig/json-glib-1.0.pc
+share/gtk-doc/html/json-glib/JsonBuilder.html
 share/gtk-doc/html/json-glib/JsonGenerator.html
 share/gtk-doc/html/json-glib/JsonParser.html
+share/gtk-doc/html/json-glib/JsonReader.html
 share/gtk-doc/html/json-glib/annotation-glossary.html
 share/gtk-doc/html/json-glib/ch01.html
 share/gtk-doc/html/json-glib/ch02.html
@@ -24,6 +28,7 @@ share/gtk-doc/html/json-glib/ix03.html
 share/gtk-doc/html/json-glib/ix04.html
 share/gtk-doc/html/json-glib/ix05.html
 share/gtk-doc/html/json-glib/ix06.html
+share/gtk-doc/html/json-glib/ix07.html
 share/gtk-doc/html/json-glib/json-advanced.html
 share/gtk-doc/html/json-glib/json-base.html
 share/gtk-doc/html/json-glib/json-glib-Boxed-Types-Serialization.html
