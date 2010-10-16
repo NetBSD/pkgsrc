@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2010/08/15 11:14:37 drochner Exp $
+$NetBSD: patch-aa,v 1.17 2010/10/16 23:58:04 wiz Exp $
 
---- configure.orig	2010-08-11 17:03:30.000000000 +0000
+--- configure.orig	2010-10-01 20:49:17.000000000 +0000
 +++ configure
-@@ -2992,7 +2992,7 @@ CONFIGURE_OPTIONS="\"$ac_configure_args\
- 
- 
- CURL_CFLAG_EXTRAS=""
--if test X"$want_werror" == Xyes; then
-+if test X"$want_werror" = Xyes; then
-   CURL_CFLAG_EXTRAS="-Werror"
- fi
- 
-@@ -14762,7 +14762,7 @@ squeeze() {
+@@ -14766,7 +14766,7 @@ squeeze() {
  
  
        #
@@ -20,7 +11,7 @@ $NetBSD: patch-aa,v 1.16 2010/08/15 11:14:37 drochner Exp $
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -19144,15 +19144,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -19176,15 +19176,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
             LIBS="$LIBS $gss_libs"
          elif test "$GSSAPI_ROOT" != "yes"; then
             LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
