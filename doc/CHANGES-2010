@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3755 2010/10/16 16:07:42 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3756 2010/10/16 16:09:54 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5098,3 +5098,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/clive to 2.2.16 [wiz 2010-10-16]
 	Updated graphics/vigra to 1.7.0 [wiz 2010-10-16]
 	Updated games/gbrainy to 1.52 [wiz 2010-10-16]
+	Updated emulators/stella to 3.2.2 [dholland 2010-10-16]
