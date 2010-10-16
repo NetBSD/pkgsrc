@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.622 2010/09/16 09:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.623 2010/10/16 13:12:17 obache Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -15,6 +15,7 @@ SUBDIR+=	Xrender
 SUBDIR+=	acidlaunch
 SUBDIR+=	alacarte
 SUBDIR+=	antiright
+SUBDIR+=	applewmproto
 SUBDIR+=	appres
 SUBDIR+=	asnap
 SUBDIR+=	aterm
@@ -191,6 +192,7 @@ SUBDIR+=	lablgtk1
 SUBDIR+=	labltk
 SUBDIR+=	lbxproxy
 SUBDIR+=	lesstif
+SUBDIR+=	libAppleWM
 SUBDIR+=	libFS
 SUBDIR+=	libICE
 SUBDIR+=	libSM
