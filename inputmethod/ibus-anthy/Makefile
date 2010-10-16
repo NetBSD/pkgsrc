@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/09/04 05:04:57 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/10/16 06:04:27 obache Exp $
 #
 
-DISTNAME=	ibus-anthy-1.2.1
+DISTNAME=	ibus-anthy-1.2.2.20101015
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -33,8 +33,6 @@ SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	engine/ibus-engine-anthy.in setup/ibus-setup-anthy.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
-
-.include "../../inputmethod/ibus/bad-env-usage.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
