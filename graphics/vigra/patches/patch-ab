@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/06/13 22:44:46 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2010/10/16 15:50:21 wiz Exp $
+
+Fix compilation with png-1.4, already included upstream.
 
 --- src/impex/png.cxx.orig	2008-08-13 13:15:45.000000000 +0000
 +++ src/impex/png.cxx
