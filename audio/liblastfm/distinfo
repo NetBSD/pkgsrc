@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2010/09/25 10:16:45 wiz Exp $
+$NetBSD: distinfo,v 1.4 2010/10/16 16:17:58 wiz Exp $
 
-SHA1 (mxcl-liblastfm-0.3.2-0-gc64ed83.tar.gz) = 6e43e01628ada589999dde8043bb99dd6e8eee56
-RMD160 (mxcl-liblastfm-0.3.2-0-gc64ed83.tar.gz) = c3368084e6f6e4ce7471081491a9468a4a48c11f
-Size (mxcl-liblastfm-0.3.2-0-gc64ed83.tar.gz) = 111666 bytes
+SHA1 (mxcl-liblastfm-0.3.3-0-gf0b3239.tar.gz) = f2e9705c9c2cbeaa14f46da9bd35ab36fe710392
+RMD160 (mxcl-liblastfm-0.3.3-0-gf0b3239.tar.gz) = 690931075f38fda78c69015ca5088c166f6e1013
+Size (mxcl-liblastfm-0.3.3-0-gf0b3239.tar.gz) = 111700 bytes
 SHA1 (patch-aa) = 2e25caf9c7e15f1c2c5a6b1d3e1ae3539710ac86
 SHA1 (patch-ab) = f9d88de85576479c903ebd165df077050f35c70e
