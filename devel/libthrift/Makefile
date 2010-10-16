@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/05/15 07:17:16 adam Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/16 11:38:05 tonnerre Exp $
 
-DISTNAME=	thrift-${THRIFT_VERSION}-incubating
+DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=incubator/thrift/${THRIFT_VERSION}-incubating/}
 
@@ -19,7 +18,7 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
 WRKSRC=		${WRKDIR}/thrift-${THRIFT_VERSION}
-THRIFT_VERSION=	0.2.0
+THRIFT_VERSION=	0.5.0
 
 # FIXME: These should be options
 CONFIGURE_ARGS+=	--without-csharp
