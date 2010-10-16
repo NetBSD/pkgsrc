@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/01 15:09:44 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/16 11:43:30 tonnerre Exp $
 #
 
-DISTNAME=		libcassandra-20100501
+DISTNAME=		libcassandra-20101010
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.ancient-solutions.com/pub/bsdprojects/NetBSD/packages/distfiles/
 
 MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://github.com/posulliv/libcassandra/
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,11 +18,16 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libthrift/buildlink3.mk"
+.include "../../lang/gcc44/buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	CPPFLAGS="-I${BUILDLINK_PREFIX.libthrift:Q}/include/thrift -I${BUILDLINK_PREFIX.boost-headers}/include/boost"
+pre-configure:
+.include "../../lang/gcc44/preconfigure.mk"
+
+CONFIGURE_ARGS+=	CPPFLAGS="-I${BUILDLINK_PREFIX.libthrift}/include/thrift -I${BUILDLINK_PREFIX.boost-headers}/include/boost"
 MAKE_ENV+=		AM_DEFAULT_VERBOSITY=1
 
 .include "../../mk/bsd.pkg.mk"
