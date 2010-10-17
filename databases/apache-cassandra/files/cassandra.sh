@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cassandra.sh,v 1.1.1.1 2010/04/27 23:12:59 tonnerre Exp $
+# $NetBSD: cassandra.sh,v 1.2 2010/10/17 23:41:12 tonnerre Exp $
 #
 # PROVIDE: cassandra
 # REQUIRE: DAEMON
@@ -36,9 +36,11 @@ fi
 
 CATALINA_HOME=@CASSANDRA_HOME@
 CASSANDRA_HOME=@CASSANDRA_HOME@
+CASSANDRA_CONF=@PKG_SYSCONFBASE@/cassandra
 CATALINA_PID=${pidfile}
 export CATALINA_HOME
 export CASSANDRA_HOME
+export CASSANDRA_CONF
 export CATALINA_PID
 
 find ${PREFIX}/lib -type f -name \*.jar -print | while read jar
