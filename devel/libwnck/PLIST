@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2010/07/06 14:54:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.30 2010/10/17 00:04:05 wiz Exp $
 bin/wnck-urgency-monitor
 bin/wnckprop
 include/libwnck-1.0/libwnck/application.h
@@ -95,6 +95,7 @@ share/locale/is/LC_MESSAGES/libwnck.mo
 share/locale/it/LC_MESSAGES/libwnck.mo
 share/locale/ja/LC_MESSAGES/libwnck.mo
 share/locale/ka/LC_MESSAGES/libwnck.mo
+share/locale/kk/LC_MESSAGES/libwnck.mo
 share/locale/kn/LC_MESSAGES/libwnck.mo
 share/locale/ko/LC_MESSAGES/libwnck.mo
 share/locale/ku/LC_MESSAGES/libwnck.mo
