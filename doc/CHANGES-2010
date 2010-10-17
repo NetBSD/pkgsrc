@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3773 2010/10/17 01:36:07 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3774 2010/10/17 14:13:39 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5117,3 +5117,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/automake to 1.11.1nb1 [wiz 2010-10-17]
 	Updated mail/pear-Mail_Mime to 1.8.0nb1 [tron 2010-10-17]
 	Updated graphics/clutter-gtk to 0.10.8 [obache 2010-10-17]
+	Updated net/netatalk to 2.1.4 [hauke 2010-10-17]
