@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3769 2010/10/17 00:00:19 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3770 2010/10/17 00:04:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5113,3 +5113,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/monodevelop-database version 2.4 [kefren 2010-10-17]
 	Updated www/curl to 7.21.2 [wiz 2010-10-16]
 	Updated devel/atk to 1.32.0 [wiz 2010-10-17]
+	Updated devel/libwnck to 2.30.5 [wiz 2010-10-17]
