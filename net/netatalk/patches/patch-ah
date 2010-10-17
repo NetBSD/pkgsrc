@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.7 2010/07/19 21:21:25 markd Exp $
+$NetBSD: patch-ah,v 1.8 2010/10/17 14:12:11 hauke Exp $
 
---- config/Makefile.in.orig	2010-02-07 18:59:32.000000000 +0000
+--- config/Makefile.in.orig	2010-10-15 10:10:05.000000000 +0000
 +++ config/Makefile.in
-@@ -668,12 +668,14 @@ uninstall-local:
- 		rm -f $(DESTDIR)$(pkgconfdir)/$$f; \
- 	done
+@@ -598,12 +598,14 @@ uninstall-local:
+ 
+ @USE_DEBIAN_TRUE@	rm -f $(DESTDIR)/etc/default/netatalk;
  
 +egconfdir = @prefix@/share/examples/netatalk
 +
@@ -12,9 +12,10 @@ $NetBSD: patch-ah,v 1.7 2010/07/19 21:21:25 markd Exp $
 -	$(mkinstalldirs) $(DESTDIR)$(pkgconfdir)
 +	$(mkinstalldirs) $(DESTDIR)$(egconfdir)
  	for f in $(CONFFILES) $(GENFILES); do \
- 		if test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(pkgconfdir)/$$f; then \
+-		if test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(pkgconfdir)/$$f; then \
 -			echo "$(INSTALL_DATA) $$f $(DESTDIR)$(pkgconfdir)"; \
 -			$(INSTALL_DATA) $$f $(DESTDIR)$(pkgconfdir); \
++		if test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(egconfdir)/$$f; then \
 +			echo "$(INSTALL_DATA) $$f $(DESTDIR)$(egconfdir)"; \
 +			$(INSTALL_DATA) $$f $(DESTDIR)$(egconfdir); \
  		else \
