@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2004/09/28 09:38:17 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2010/10/17 00:39:33 wiz Exp $
+
+Stop unnecessary regeneration of files.
 
 --- doc/Makefile.in.orig	2004-09-19 23:40:13.000000000 +0200
 +++ doc/Makefile.in
