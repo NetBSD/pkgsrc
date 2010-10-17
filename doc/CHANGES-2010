@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3771 2010/10/17 00:39:56 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3772 2010/10/17 01:08:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5115,3 +5115,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/atk to 1.32.0 [wiz 2010-10-17]
 	Updated devel/libwnck to 2.30.5 [wiz 2010-10-17]
 	Updated devel/automake to 1.11.1nb1 [wiz 2010-10-17]
+	Updated mail/pear-Mail_Mime to 1.8.0nb1 [tron 2010-10-17]
