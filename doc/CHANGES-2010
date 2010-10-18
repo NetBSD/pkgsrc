@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3775 2010/10/17 23:41:29 tonnerre Exp $
+$NetBSD: CHANGES-2010,v 1.3776 2010/10/18 07:10:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5119,3 +5119,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter-gtk to 0.10.8 [obache 2010-10-17]
 	Updated net/netatalk to 2.1.4 [hauke 2010-10-17]
 	Updated databases/apache-cassandra to 0.7.0beta2nb1 [tonnerre 2010-10-17]
+	Updated databases/sqlite3 to 3.7.3 [adam 2010-10-18]
+	Updated databases/sqlite3-tcl to 3.7.3 [adam 2010-10-18]
