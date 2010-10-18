@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3776 2010/10/18 07:10:09 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3777 2010/10/18 13:12:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/apache-cassandra to 0.7.0beta2nb1 [tonnerre 2010-10-17]
 	Updated databases/sqlite3 to 3.7.3 [adam 2010-10-18]
 	Updated databases/sqlite3-tcl to 3.7.3 [adam 2010-10-18]
+	Updated textproc/py-sphinx to 1.0.4 [adam 2010-10-18]
