@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2009/02/28 15:44:55 manu Exp $
+# $NetBSD: options.mk,v 1.8 2010/10/18 08:42:31 pettai Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dkim-milter
-PKG_SUPPORTED_OPTIONS=	inet6 dkim-milter-arlib debug dkim-stats without-libsm
+PKG_SUPPORTED_OPTIONS=	inet6 dkim-milter-arlib debug dkim-stats without-libsm vbr
 
 .include "../../mk/bsd.options.mk"
 
@@ -43,6 +43,15 @@ SUBST_SED.libs+=	-e 's|@ARLIB@|dnl|g'
 SUBST_SED.libs+=	-e 's|@WITHOUTLIBSM@||g'
 .else
 SUBST_SED.libs+=	-e 's|@WITHOUTLIBSM@|dnl|g'
+.endif
+
+###
+### Build with VBR support
+###
+.if !empty(PKG_OPTIONS:Mvbr)
+SUBST_SED.libs+=	-e 's|@VBR@||g'
+.else
+SUBST_SED.libs+=	-e 's|@VBR@|dnl|g'
 .endif
 
 ###
