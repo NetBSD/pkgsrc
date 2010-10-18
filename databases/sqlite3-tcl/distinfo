@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2010/08/27 09:50:21 adam Exp $
+$NetBSD: distinfo,v 1.8 2010/10/18 07:08:23 adam Exp $
 
-SHA1 (sqlite-3_7_2-tea.tar.gz) = 087df262843368d1fd901f9b67acb501531f143c
-RMD160 (sqlite-3_7_2-tea.tar.gz) = 357cba45aaaf1e69c704200139f4aff44fe33515
-Size (sqlite-3_7_2-tea.tar.gz) = 1237323 bytes
+SHA1 (sqlite-3_7_3.tar.gz) = 5c3303ad77af21d72bdf65e3179b3a135bc004a9
+RMD160 (sqlite-3_7_3.tar.gz) = 0f522cc5ec65d5128d813cb858a612de834ce1e8
+Size (sqlite-3_7_3.tar.gz) = 1250832 bytes
 SHA1 (patch-aa) = d4d0424eec39ede995c2c408dcf51876072d3fea
