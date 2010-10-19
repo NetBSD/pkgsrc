@@ -1,4 +1,5 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/10/19 16:37:40 abs Exp $
+$NetBSD: patch-ac,v 1.2 2010/10/19 16:41:30 abs Exp $
+
 # Add support for NetBSD - match FreeBSD
 
 --- src/modules/avformat/configure.orig	2010-09-14 06:00:09.000000000 +0000
