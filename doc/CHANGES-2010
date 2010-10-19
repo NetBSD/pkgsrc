@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3780 2010/10/19 10:35:59 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3781 2010/10/19 12:07:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5126,3 +5126,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/cmake to 2.8.2 [adam 2010-10-19]
 	Updated graphics/glew to 1.5.6 [adam 2010-10-19]
 	Updated graphics/hugin to 2010.2.0 [adam 2010-10-19]
+	Added net/p5-Net-Google-AuthSub version 0.5 [wiz 2010-10-19]
