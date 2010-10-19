@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/19 16:37:40 abs Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/19 16:41:30 abs Exp $
 #
 
 DISTNAME=	mlt-0.5.10
@@ -14,8 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
-GNU_CONFIGURE=   YES
-CONFIGURE_ARGS+=  --enable-gpl
+GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+=	--enable-gpl
 
 PKGCONFIG_OVERRIDE+=	mlt-0.5.10/mlt++.pc.in
 PKGCONFIG_OVERRIDE+=	mlt-0.5.10/mlt-framework.pc.in
