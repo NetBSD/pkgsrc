@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: asterisk.sh,v 1.2 2010/03/01 07:06:48 jnemeth Exp $
+# $NetBSD: asterisk.sh,v 1.3 2010/10/19 19:21:21 jnemeth Exp $
 #
 # PROVIDE: asterisk
 # REQUIRE: DAEMON
@@ -35,8 +35,8 @@ asterisk_prestart() {
 	chmod 0755 @ASTVARRUNDIR@
 }
 
-stop_cmd="$command -r -x 'stop gracefully' >/dev/null"
-reload_cmd="$command -r -x 'reload' >/dev/null"
+stop_cmd="$command -nr -x 'stop gracefully' >/dev/null"
+reload_cmd="$command -nr -x 'reload' >/dev/null"
 asterisk_nice="-20"
 
 load_rc_config $name
