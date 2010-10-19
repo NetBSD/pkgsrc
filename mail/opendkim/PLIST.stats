@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.stats,v 1.1.1.1 2010/10/19 23:11:42 pettai Exp $
+man/man8/opendkim-importstats.8
+man/man8/opendkim-stats.8
+sbin/opendkim-importstats.sh
+sbin/opendkim-stats
+share/doc/opendkim/mkdb.mysql
