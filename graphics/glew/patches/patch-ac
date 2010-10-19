@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2010/05/23 09:52:50 adam Exp $
+$NetBSD: patch-ac,v 1.6 2010/10/19 09:11:39 adam Exp $
 
---- Makefile.orig	2010-04-27 22:16:36.000000000 +0000
+--- Makefile.orig	2010-09-07 16:01:49.000000000 +0000
 +++ Makefile
 @@ -89,7 +89,7 @@ lib/$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) cr $@ $^
@@ -24,16 +24,18 @@ $NetBSD: patch-ac,v 1.5 2010/05/23 09:52:50 adam Exp $
  
  %.o: %.c
  	$(CC) -c $(CFLAGS) -o $@ $<
-@@ -122,32 +122,30 @@ glew.pc: glew.pc.in
+@@ -122,33 +122,31 @@ glew.pc: glew.pc.in
  
  install: all
  # directories
 -	$(INSTALL) -d -m 0755 $(BINDIR)
 -	$(INSTALL) -d -m 0755 $(INCDIR)
 -	$(INSTALL) -d -m 0755 $(LIBDIR)
+-	$(INSTALL) -d -m 0755 $(LIBDIR)/pkgconfig
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(BINDIR)
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(INCDIR)
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(LIBDIR)
++	$(INSTALL) -d -m 0755 $(DESTDIR)$(LIBDIR)/pkgconfig
  # runtime
  ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
  	$(STRIP) -x lib/$(LIB.SHARED)
