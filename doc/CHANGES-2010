@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3777 2010/10/18 13:12:43 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3778 2010/10/19 07:14:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5122,3 +5122,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/sqlite3 to 3.7.3 [adam 2010-10-18]
 	Updated databases/sqlite3-tcl to 3.7.3 [adam 2010-10-18]
 	Updated textproc/py-sphinx to 1.0.4 [adam 2010-10-18]
+	Updated inputmethod/ibus-el to 0.2.0 [obache 2010-10-19]
