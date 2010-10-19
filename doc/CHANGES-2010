@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3781 2010/10/19 12:07:04 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3782 2010/10/19 12:07:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5127,3 +5127,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/glew to 1.5.6 [adam 2010-10-19]
 	Updated graphics/hugin to 2010.2.0 [adam 2010-10-19]
 	Added net/p5-Net-Google-AuthSub version 0.5 [wiz 2010-10-19]
+	Added time/p5-Net-Google-Calendar version 1.0 [wiz 2010-10-19]
