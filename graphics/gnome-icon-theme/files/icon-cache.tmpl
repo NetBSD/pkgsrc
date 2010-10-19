@@ -1,0 +1,27 @@
+# $NetBSD: icon-cache.tmpl,v 1.1 2010/10/19 13:09:48 wiz Exp $
+#
+# Rebuild the icon cache.
+#
+
+GTK_UPDATE_ICON_CACHE="@GTK_UPDATE_ICON_CACHE@"
+ICON_THEME_DIR="@ICON_THEME_DIR@"
+
+case ${STAGE} in
+POST-INSTALL)
+	${TEST} -x ${GTK_UPDATE_ICON_CACHE} && \
+	${GTK_UPDATE_ICON_CACHE} -f -t ${ICON_THEME_DIR} >/dev/null 2>&1 || \
+		${TRUE}
+	;;
+DEINSTALL)
+	${TEST} "${PKGBASE}" = "gnome-icon-theme" && \
+		${RM} -f ${ICON_THEME_DIR}/icon-theme.cache
+	;;
+POST-DEINSTALL)
+	${TEST} "${PKGBASE}" != "gnome-icon-theme" && \
+		${TEST} -x ${GTK_UPDATE_ICON_CACHE} && \
+		${GTK_UPDATE_ICON_CACHE} -f -t ${ICON_THEME_DIR} >/dev/null \
+			2>&1 || ${TRUE}
+	;;
+*)
+	;;
+esac
