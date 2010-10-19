@@ -1,0 +1,4 @@
+AuthSub is Google's method of authentication for their web services.
+It is also used by other web sites.
+
+This package contains a perl module to interact with such sites.
