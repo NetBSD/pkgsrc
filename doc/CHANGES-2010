@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3785 2010/10/19 16:39:31 abs Exp $
+$NetBSD: CHANGES-2010,v 1.3786 2010/10/19 16:45:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5131,3 +5131,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/gnome-icon-theme to 2.30.3nb3 [wiz 2010-10-19]
 	Updated sysutils/acpica-utils to 20090625nb1 [jakllsch 2010-10-19]
 	Added multimedia/mlt version 0.5.10 [abs 2010-10-19]
+	Added multimedia/kdenlive version 0.7.8 [abs 2010-10-19]
