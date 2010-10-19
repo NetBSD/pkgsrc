@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 05:19:05 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/19 07:14:01 obache Exp $
 #
 
-DISTNAME=	ibus-el-0.1.1
+DISTNAME=	ibus-el-0.2.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www11.atwiki.jp/s-irie/pub/emacs/ibus/
