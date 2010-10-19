@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2010/10/19 16:38:44 abs Exp $
+# $NetBSD: Makefile,v 1.169 2010/10/19 16:44:22 abs Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -60,6 +60,7 @@ SUBDIR+=	handbrake
 SUBDIR+=	kaffeine
 SUBDIR+=	kdemultimedia3
 SUBDIR+=	kdemultimedia4
+SUBDIR+=	kdenlive
 SUBDIR+=	kmplayer
 SUBDIR+=	kmplayer-kde3
 SUBDIR+=	libassetml
