@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3783 2010/10/19 13:09:59 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3784 2010/10/19 14:33:33 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5129,3 +5129,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/p5-Net-Google-AuthSub version 0.5 [wiz 2010-10-19]
 	Added time/p5-Net-Google-Calendar version 1.0 [wiz 2010-10-19]
 	Updated graphics/gnome-icon-theme to 2.30.3nb3 [wiz 2010-10-19]
+	Updated sysutils/acpica-utils to 20090625nb1 [jakllsch 2010-10-19]
