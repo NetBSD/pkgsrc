@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/10/19 16:37:40 abs Exp $
+# Add support for NetBSD - match FreeBSD
+
+--- src/modules/avformat/configure.orig	2010-09-14 06:00:09.000000000 +0000
++++ src/modules/avformat/configure
+@@ -34,7 +34,7 @@ else
+ 	Darwin)
+ 		export LIBSUF=.dylib
+ 		;;
+-	Linux|FreeBSD)
++	Linux|FreeBSD|NetBSD)
+ 		export LIBSUF=.so
+ 		;;
+ 	*)
