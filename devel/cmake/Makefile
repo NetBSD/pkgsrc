@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2010/06/13 22:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2010/10/19 08:15:01 adam Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.1
-PKGREVISION=	1
+DISTNAME=	cmake-${CMAKE_API}.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
@@ -26,6 +25,12 @@ CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
 CONFIGURE_ARGS+=	--system-libs
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MAKE_JOBS)
+CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS:Q}
+.endif
+
 PLIST_SUBST+=		CMAKE_API=${CMAKE_API}
 
 # for Source/cmDependsJavaParser.cxx
@@ -35,21 +40,24 @@ UNLIMIT_RESOURCES=	datasize
 TEST_TARGET=		test
 
 SUBST_CLASSES+=		cmake
-SUBST_STAGE.cmake=	pre-configure
+SUBST_STAGE.cmake=	post-patch
 SUBST_MESSAGE.cmake=	Fixing X11 prefix.
-SUBST_FILES.cmake+=	Modules/Platform/UnixPaths.cmake
+SUBST_FILES.cmake=	Modules/Platform/UnixPaths.cmake
 SUBST_VARS.cmake=	X11BASE
 
-post-patch:
-	${RM} ${WRKSRC}/Modules/*.orig
+SUBST_CLASSES+=		flags
+SUBST_STAGE.flags=	post-patch
+SUBST_MESSAGE.flags=	Fixing compiler flags.
+SUBST_FILES.flags=	Modules/Compiler/*.cmake
+SUBST_SED.flags=	-e 's,-O.,,'
 
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/share/cmake-${CMAKE_API}/Modules/Platform/UnixPaths.cmake.orig
+post-patch:
+	${RM} ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../textproc/xmlrpc-c/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/xmlrpc-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
