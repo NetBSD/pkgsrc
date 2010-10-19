@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3779 2010/10/19 08:26:58 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3780 2010/10/19 10:35:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5124,3 +5124,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-sphinx to 1.0.4 [adam 2010-10-18]
 	Updated inputmethod/ibus-el to 0.2.0 [obache 2010-10-19]
 	Updated devel/cmake to 2.8.2 [adam 2010-10-19]
+	Updated graphics/glew to 1.5.6 [adam 2010-10-19]
+	Updated graphics/hugin to 2010.2.0 [adam 2010-10-19]
