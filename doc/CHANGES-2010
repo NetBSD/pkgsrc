@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3790 2010/10/20 06:00:18 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.3791 2010/10/20 08:21:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5136,3 +5136,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20101016 [minskim 2010-10-20]
 	Updated www/ikiwiki to 3.20101019 [schmonz 2010-10-20]
 	Updated comms/asterisk16 to 1.6.2.13nb1 [jnemeth 2010-10-20]
+	Updated devel/atf to 0.11 [jmmv 2010-10-20]
