@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2009/09/10 00:27:08 tnn Exp $
+# $NetBSD: options.mk,v 1.27 2010/10/20 20:26:31 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd # xulrunner
@@ -59,6 +59,7 @@ PLIST.gnome=		yes
 CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
