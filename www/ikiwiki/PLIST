@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2010/09/01 05:13:41 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.29 2010/10/20 02:56:13 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -44,6 +44,7 @@ share/ikiwiki/basewiki/templates/note.mdwn
 share/ikiwiki/basewiki/templates/popup.mdwn
 share/ikiwiki/basewiki/wikiicons/diff.png
 share/ikiwiki/basewiki/wikiicons/openidlogin-bg.gif
+share/ikiwiki/basewiki/wikiicons/revert.png
 share/ikiwiki/basewiki/wikiicons/search-bg.gif
 share/ikiwiki/directives/ikiwiki/directive/aggregate.mdwn
 share/ikiwiki/directives/ikiwiki/directive/brokenlinks.mdwn
@@ -406,6 +407,7 @@ share/ikiwiki/templates/passwordmail.tmpl
 share/ikiwiki/templates/pocreatepage.tmpl
 share/ikiwiki/templates/recentchanges.tmpl
 share/ikiwiki/templates/renamesummary.tmpl
+share/ikiwiki/templates/revert.tmpl
 share/ikiwiki/templates/rssitem.tmpl
 share/ikiwiki/templates/rsspage.tmpl
 share/ikiwiki/templates/searchform.tmpl

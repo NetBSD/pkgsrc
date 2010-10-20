@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.18 2010/06/23 23:52:12 schmonz Exp $
+$NetBSD: patch-aa,v 1.19 2010/10/20 02:56:13 schmonz Exp $
 
---- Makefile.PL.orig	2010-06-16 23:17:18.000000000 +0000
+--- Makefile.PL.orig	2010-10-09 00:09:24.000000000 +0000
 +++ Makefile.PL
-@@ -25,6 +25,8 @@ PROBABLE_INST_LIB=$(shell \\
+@@ -19,6 +19,8 @@ SED?=sed
  
  # Additional configurable path variables.
  W3M_CGI_BIN?=$(PREFIX)/lib/w3m/cgi-bin
@@ -11,34 +11,52 @@ $NetBSD: patch-aa,v 1.18 2010/06/23 23:52:12 schmonz Exp $
  
  tflag=$(shell if [ -n "$$NOTAINT" ] && [ "$$NOTAINT" != 1 ]; then printf -- "-T"; fi)
  extramodules=$(shell if [ "$$PROFILE" = 1 ]; then printf -- "-d:NYTProf"; fi)
-@@ -46,7 +48,7 @@ extra_build: $(outprogs) ikiwiki.setup d
+@@ -50,7 +52,7 @@ extra_build: $(outprogs) ikiwiki.setup d
  	./mdwn2man ikiwiki-update-wikilist 1 doc/ikiwiki-update-wikilist.mdwn > ikiwiki-update-wikilist.man
  	./mdwn2man ikiwiki-calendar 1 doc/ikiwiki-calendar.mdwn > ikiwiki-calendar.man
  	$(MAKE) -C po
--	sed -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
-+	#sed -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
+-	$(SED) -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
++	#$(SED) -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
  	rm -f ikiwiki.spec.bkp
  	
  docwiki:
-@@ -66,7 +68,7 @@ underlay_install:
- 	for dir in `cd underlays && find . -follow -type d ! -regex '.*\.svn.*'`; do \
+@@ -70,7 +72,7 @@ underlay_install:
+ 	for dir in `cd underlays && $(FIND) . -follow -type d ! -regex '.*\.svn.*'`; do \
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
- 		for file in `find underlays/$$dir -follow -maxdepth 1 -type f`; do \
+ 		for file in `$(FIND) underlays/$$dir -follow -maxdepth 1 -type f`; do \
 -			cp -aL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir 2>/dev/null || \
 +			cp -pRL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir 2>/dev/null || \
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
  		done; \
  	done
-@@ -99,7 +101,7 @@ extra_install: underlay_install
+@@ -79,7 +81,7 @@ underlay_install:
+ 	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/directives/ikiwiki/directive
+ 	for file in doc/ikiwiki/directive/*; do \
+ 		if [ -f "$$file" ]; then \
+-			cp -aL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/directives/ikiwiki/directive 2>/dev/null || \
++			cp -pRL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/directives/ikiwiki/directive 2>/dev/null || \
+ 			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/directives/ikiwiki/directive; \
+ 		fi \
+ 	done
+@@ -91,7 +93,7 @@ underlay_install:
+ 			if echo "$$file" | grep -q style.css; then \
+ 				(cat doc/style.css; cat $$file) >> $(DESTDIR)$(PREFIX)/share/ikiwiki/$$theme/style.css; \
+ 			elif [ -f "$$file" ]; then \
+-				cp -aL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$file 2>/dev/null || \
++				cp -pRL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$file 2>/dev/null || \
+ 				install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$file; \
+ 			fi \
+ 		done; \
+@@ -103,7 +105,7 @@ extra_install: underlay_install
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$dir; \
  	done
- 	for file in `cd doc/examples; find . -type f ! -regex '.*\.svn.*'`; do \
+ 	for file in `cd doc/examples; $(FIND) . -type f ! -regex '.*\.svn.*'`; do \
 -		cp -aL doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file 2>/dev/null || \
 +		cp -pRL doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file 2>/dev/null || \
  		install -m 644 doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file; \
  	done
  
-@@ -118,15 +120,15 @@ extra_install: underlay_install
+@@ -122,15 +124,15 @@ extra_install: underlay_install
  		install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/ikiwiki/plugins; \
  	done
  
@@ -62,7 +80,7 @@ $NetBSD: patch-aa,v 1.18 2010/06/23 23:52:12 schmonz Exp $
  	
  	install -d $(DESTDIR)$(PREFIX)/sbin
  	install ikiwiki-mass-rebuild $(DESTDIR)$(PREFIX)/sbin
-@@ -143,10 +145,10 @@ extra_install: underlay_install
+@@ -147,10 +149,10 @@ extra_install: underlay_install
  	
  	# These might fail if a regular user is installing into a home
  	# directory.
