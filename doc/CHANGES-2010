@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3787 2010/10/19 23:14:16 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3788 2010/10/20 00:07:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5133,3 +5133,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added multimedia/mlt version 0.5.10 [abs 2010-10-19]
 	Added multimedia/kdenlive version 0.7.8 [abs 2010-10-19]
 	Added mail/opendkim version 2.1.3 [pettai 2010-10-19]
+	Updated editors/emacs-snapshot to 24.0.50.20101016 [minskim 2010-10-20]
