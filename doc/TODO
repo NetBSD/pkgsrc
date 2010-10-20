@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9809 2010/10/20 00:43:58 taca Exp $
+$NetBSD: TODO,v 1.9810 2010/10/20 13:58:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -927,7 +927,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-2.4
 	o libtool-base-2.4
 	o libtool-info-2.4
-	o libupnp-1.6.7
+	o libupnp-1.6.8
 	o libusb-1.0
 	o libv4l-0.8.1
 	o libvdpau-0.4.1
