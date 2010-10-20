@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2010/09/14 11:01:33 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2010/10/20 20:26:29 wiz Exp $
 
 DISTNAME=	anjuta-2.24.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/2.24/}
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
@@ -71,6 +71,7 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
