@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/05 10:22:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/20 20:26:30 wiz Exp $
 #
 
 DISTNAME=		gnome-icon-theme-extras-2.30.1
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-extras/2.30/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,4 +24,5 @@ USE_TOOLS+=		gmake pkg-config
 BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.90
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
 BUILD_DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
