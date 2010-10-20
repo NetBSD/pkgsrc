@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/09/14 11:01:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/10/20 20:26:29 wiz Exp $
 #
 
 DISTNAME=	buzztard-0.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buzztard/}
 
@@ -38,6 +38,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.10.0
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.7
