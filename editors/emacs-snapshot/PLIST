@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/09/18 00:50:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/10/20 00:06:22 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -418,7 +418,6 @@ share/emacs/${EMACS_VERSION}/etc/images/gud/print.pbm
 share/emacs/${EMACS_VERSION}/etc/images/gud/print.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/pstar.pbm
 share/emacs/${EMACS_VERSION}/etc/images/gud/pstar.xpm
-share/emacs/${EMACS_VERSION}/etc/images/gud/rcont.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/rcont.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/recstart.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/recstop.xpm
@@ -1212,16 +1211,24 @@ share/emacs/${EMACS_VERSION}/lisp/cedet/data-debug.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/data-debug.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede.elc
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/auto.el.gz
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/auto.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/autoconf-edit.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/autoconf-edit.elc
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/base.el.gz
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/base.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/cpp-root.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/cpp-root.elc
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/custom.el.gz
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/custom.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/dired.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/dired.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/emacs.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/emacs.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/files.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/files.elc
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/generic.el.gz
+share/emacs/${EMACS_VERSION}/lisp/cedet/ede/generic.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/linux.el.gz
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/linux.elc
 share/emacs/${EMACS_VERSION}/lisp/cedet/ede/loaddefs.el
@@ -1588,8 +1595,6 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/check-declare.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/check-declare.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/checkdoc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/checkdoc.elc
-share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cl-compat.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cl-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cl-extra.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cl-extra.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cl-indent.el.gz
@@ -1660,8 +1665,6 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lisp-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lisp-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lisp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lisp.elc
-share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lmenu.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/lmenu.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/macroexp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/macroexp.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/map-ynp.el.gz
@@ -1968,8 +1971,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/compface.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/compface.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/deuglify.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/deuglify.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/earcon.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/earcon.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/ecomplete.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/ecomplete.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/flow-fill.el.gz
@@ -1982,8 +1983,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-art.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-art.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-async.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-async.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-audio.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-audio.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-bcklg.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-bcklg.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-bookmark.el.gz
@@ -2012,6 +2011,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-ems.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-ems.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-fun.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-fun.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-gravatar.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-gravatar.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-group.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-group.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-html.el.gz
@@ -2030,8 +2031,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-mlspl.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-mlspl.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-msg.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-msg.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-nocem.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-nocem.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-picon.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-picon.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-range.el.gz
@@ -2070,6 +2069,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-win.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-win.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/gravatar.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/gravatar.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/html2text.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/html2text.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/ietf-drums.el.gz
@@ -2156,6 +2157,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/nnnil.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnnil.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnoo.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnoo.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/nnregistry.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/nnregistry.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnrss.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnrss.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnspool.el.gz
@@ -2182,6 +2185,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/rfc2231.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc2231.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/score-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/score-mode.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/shr.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/shr.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-manage.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-manage.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-mode.el.gz
@@ -2204,8 +2209,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/starttls.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/starttls.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/utf7.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/utf7.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/webmail.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/webmail.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/yenc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/yenc.elc
 share/emacs/${EMACS_VERSION}/lisp/gs.el.gz
@@ -2613,6 +2616,8 @@ share/emacs/${EMACS_VERSION}/lisp/net/eudcb-mab.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/eudcb-mab.elc
 share/emacs/${EMACS_VERSION}/lisp/net/eudcb-ph.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/eudcb-ph.elc
+share/emacs/${EMACS_VERSION}/lisp/net/gnutls.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/gnutls.elc
 share/emacs/${EMACS_VERSION}/lisp/net/goto-addr.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/goto-addr.elc
 share/emacs/${EMACS_VERSION}/lisp/net/hmac-def.el.gz
@@ -2758,6 +2763,8 @@ share/emacs/${EMACS_VERSION}/lisp/nxml/xsd-regexp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/nxml/xsd-regexp.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/fast-lock.el.gz
@@ -2773,6 +2780,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lazy-lock.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/levents.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/levents.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/lmenu.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/lmenu.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lucid.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lucid.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/old-whitespace.el.gz
@@ -2781,14 +2790,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/options.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/options.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/resume.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/resume.elc
-share/emacs/${EMACS_VERSION}/lisp/obsolete/rnews.el.gz
-share/emacs/${EMACS_VERSION}/lisp/obsolete/rnews.elc
-share/emacs/${EMACS_VERSION}/lisp/obsolete/rnewspost.el.gz
-share/emacs/${EMACS_VERSION}/lisp/obsolete/rnewspost.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/s-region.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/s-region.elc
-share/emacs/${EMACS_VERSION}/lisp/obsolete/sc.el.gz
-share/emacs/${EMACS_VERSION}/lisp/obsolete/sc.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/scribe.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/scribe.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/swedish.el.gz
@@ -2797,8 +2800,6 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/sym-comp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/sym-comp.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/vc-mcvs.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/vc-mcvs.elc
-share/emacs/${EMACS_VERSION}/lisp/obsolete/x-menu.el.gz
-share/emacs/${EMACS_VERSION}/lisp/obsolete/x-menu.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-C.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-C.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-R.el.gz
