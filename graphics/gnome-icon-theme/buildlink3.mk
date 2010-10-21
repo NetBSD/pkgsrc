@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2010/10/20 20:34:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2010/10/21 12:37:59 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-icon-theme
 
@@ -26,18 +26,11 @@ DEINSTALL_TEMPLATES+=	../../graphics/gnome-icon-theme/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/gnome\/icon-theme.cache$$/ { next; }
 CHECK_FILES_SKIP+=	${PREFIX}/share/icons/gnome/icon-theme.cache
 
-BUILDLINK_TARGETS+=	guic-buildlink-fake2
-_GUIC_FAKE=		${BUILDLINK_DIR}/bin/gtk-update-icon-cache
+.if !defined(NOOP_GTK_UPDATE_ICON_CACHE)
+NOOP_GTK_UPDATE_ICON_CACHE=
+TOOLS_NOOP+=		gtk-update-icon-cache
+.endif
 
-.PHONY: guic-buildlink-fake2
-guic-buildlink-fake2:
-	${RUN}								\
-	if [ ! -f ${_GUIC_FAKE} ]; then					\
-		${ECHO_BUILDLINK_MSG} "Creating ${_GUIC_FAKE}";		\
-		${MKDIR} ${_GUIC_FAKE:H};				\
-		${ECHO} "#!${SH}" > ${_GUIC_FAKE};			\
-		${CHMOD} +x ${_GUIC_FAKE};				\
-	fi
 .endif  # GNOME_ICON_THEME_DEPEND_ONLY
 .endif # GNOME_ICON_THEME_BUILDLINK3_MK
 
