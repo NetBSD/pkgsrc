@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.1 2010/09/23 22:26:07 ahoka Exp $
+# $NetBSD: clang.mk,v 1.2 2010/10/21 13:55:13 adam Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -13,7 +13,7 @@ COMPILER_CLANG_MK=	defined
 
 # Add the dependency on clang
 # TODO: may be installed already, check for this
-BUILD_DEPENDS+= clang-[0-9]*:../../lang/clang
+#BUILD_DEPENDS+= clang-[0-9]*:../../lang/clang
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,27 +21,25 @@ CLANGBASE?=		${PREFIX}
 
 LANGUAGES.clang=	# empty
 
-#_CLANG_DIR=		${WRKDIR}/.clang
 _CLANG_DIR=		${CLANGBASE}/bin
 _CLANG_VARS=		# empty
 
 .if exists(${CLANGBASE}/bin/clang)
-LANGUAGES.hp+=		c
+LANGUAGES.clang+=	c
 _CLANG_VARS+=		CC
 _CLANG_CC=		${_CLANG_DIR}/clang
 _ALIASES.CC=		cc gcc c89 c99
-CCPATH=			${CLANGBASE}/bin/clang
+CCPATH=			${_CLANG_DIR}/clang
 PKG_CC:=		${_CLANG_CC}
 .endif
 
-# NOTE: clang C++ support is still experimental, enable later
 .if exists(${CLANGBASE}/bin/clang++)
-#LANGUAGES.hp+=		c++
-#_CLANG_VARS+=		CXX
-#_CLANG_CXX=		${_CLANG_DIR}/clang++
-#_ALIASES.CXX=		c++ g++
-#CXXPATH=		${CLANGBASE}/bin/clang++
-#PKG_CXX:=		${_CLANG_CXX}
+LANGUAGES.clang+=	c++
+_CLANG_VARS+=		CXX
+_CLANG_CXX=		${_CLANG_DIR}/clang++
+_ALIASES.CXX=		c++ g++
+CXXPATH=		${_CLANG_DIR}/clang++
+PKG_CXX:=		${_CLANG_CXX}
 .endif
 
 _COMPILER_STRIP_VARS+=	${_CLANG_VARS}
