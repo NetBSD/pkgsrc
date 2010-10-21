@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2009/06/14 22:58:01 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2010/10/21 12:37:59 wiz Exp $
 
 BUILDLINK_TREE+=	hicolor-icon-theme
 
@@ -24,18 +24,11 @@ DEINSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/hicolor\/icon-theme.cache$$/ { next; }
 CHECK_FILES_SKIP+=	${PREFIX}/share/icons/hicolor/icon-theme.cache
 
-BUILDLINK_TARGETS+=	guic-buildlink-fake
-_GUIC_FAKE=		${BUILDLINK_DIR}/bin/gtk-update-icon-cache
+.if !defined(NOOP_GTK_UPDATE_ICON_CACHE)
+NOOP_GTK_UPDATE_ICON_CACHE=
+TOOLS_NOOP+=		gtk-update-icon-cache
+.endif
 
-.PHONY: guic-buildlink-fake
-guic-buildlink-fake:
-	${RUN}								\
-	if [ ! -f ${_GUIC_FAKE} ]; then					\
-		${ECHO_BUILDLINK_MSG} "Creating ${_GUIC_FAKE}";		\
-		${MKDIR} ${_GUIC_FAKE:H};				\
-		${ECHO} "#!${SH}" > ${_GUIC_FAKE};			\
-		${CHMOD} +x ${_GUIC_FAKE};				\
-	fi
 .endif	# HICOLOR_ICON_THEME_DEPEND_ONLY
 .endif # HICOLOR_ICON_THEME_BUILDLINK3_MK
 
