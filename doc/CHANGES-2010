@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3792 2010/10/21 13:54:11 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3793 2010/10/21 15:41:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5138,3 +5138,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/asterisk16 to 1.6.2.13nb1 [jnemeth 2010-10-20]
 	Updated devel/atf to 0.11 [jmmv 2010-10-20]
 	Updated lang/clang to 2.8 [adam 2010-10-20]
+	Updated devel/diffuse to 0.4.4 [wiz 2010-10-21]
