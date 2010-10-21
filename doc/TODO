@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9811 2010/10/20 20:33:33 wiz Exp $
+$NetBSD: TODO,v 1.9812 2010/10/21 16:46:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -515,7 +515,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddrescue-1.13
 	o defendguin-0.0.11
 	o delegate-9.9.7
-	o denemo-0.8.18
+	o denemo-0.8.20
 	o dhid-5.3
 	o diffpdf-1.1.4
 	o diffstat-1.54
@@ -599,7 +599,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
-	o firefox-3.6.11
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
@@ -721,7 +720,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-nettool-2.32.0 [GNOME 2.32]
 	o gnome-packagekit-2.32.0 [GNOME 2.32]
 	o gnome-pilot-2.32.0 [GNOME 2.32]
-	o gnome-pilot-conduits-2.32.0 [GNOME 2.32]
+	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
 	o gnome-screensaver-2.30.2
 	o gnome-session-2.32.0 [GNOME 2.32, wants DeviceKit-power]
@@ -891,6 +890,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libesmtp-1.0.6
 	o libextractor-0.6.2
 	o libflash-0.4.13
+	o libfontenc-1.1.0
 	o libgda-4.2.0 [GNOME 2.32]
 	o libgdata-0.7.0
 	o libgee-0.6.0
@@ -1313,7 +1313,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texmaker-2.0
 	o tfmxplay-1.1.6
 	o thoth-0.2.1
-	o thunderbird-3.1.5
 	o tig-0.16.1
 	o tightvnc-1.5.1
 	o tile-0.7.4
@@ -1452,6 +1451,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xf86dgaproto-2.1
 	o xfce4-volman-0.3.80
+	o xfd-1.1.0
 	o xfe-1.32.1
 	o xfontsel-1.0.3
 	o xforms-1.0.93sp1
