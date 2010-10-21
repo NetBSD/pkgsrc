@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2009/11/03 07:28:17 adam Exp $
+# $NetBSD: Makefile,v 1.107 2010/10/21 21:48:12 wiz Exp $
 
-DISTNAME=	gnupg-1.4.10
+DISTNAME=	gnupg-1.4.11
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/gnupg/ \
@@ -25,7 +25,7 @@ USE_TOOLS+=		gmake msgfmt
 CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--with-mailprog=/usr/sbin/sendmail
 TEST_TARGET=		check
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -41,15 +41,15 @@ CONFIGURE_ARGS+=	--disable-asm
 .endif
 
 # XXX: still needed?
-.if ${OPSYS} == "FreeBSD"
-SUBST_CLASSES+=	    fixme
-SUBST_STAGE.fixme=  post-configure
-SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
-		    mpi/i386/mpih-mul1.S mpi/i386/mpih-mul2.S \
-		    mpi/i386/mpih-mul3.S mpi/i386/mpih-rshift.S \
-		    mpi/i386/mpih-sub1.S
-SUBST_SED.fixme=    -e "s,ALIGN (3),ALIGN (4),g"
-.endif
+#.if ${OPSYS} == "FreeBSD"
+#SUBST_CLASSES+=	    fixme
+#SUBST_STAGE.fixme=  post-configure
+#SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
+#		    mpi/i386/mpih-mul1.S mpi/i386/mpih-mul2.S \
+#		    mpi/i386/mpih-mul3.S mpi/i386/mpih-rshift.S \
+#		    mpi/i386/mpih-sub1.S
+#SUBST_SED.fixme=    -e "s,ALIGN (3),ALIGN (4),g"
+#.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/DETAILS \
