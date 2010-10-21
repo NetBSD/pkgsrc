@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/09/03 12:05:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/10/21 21:48:12 wiz Exp $
 bin/gpg
 bin/gpg-zip
 bin/gpgsplit
@@ -15,7 +15,6 @@ man/man1/gpgv.1
 man/man7/gnupg.7
 share/gnupg/DETAILS
 share/gnupg/FAQ
-share/gnupg/faq.html
 share/gnupg/options.skel
 share/locale/be/LC_MESSAGES/gnupg.mo
 share/locale/ca/LC_MESSAGES/gnupg.mo
