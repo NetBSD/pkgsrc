@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/03 20:52:39 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/10/21 12:03:57 asau Exp $
 bin/GMXRC
 bin/GMXRC.bash
 bin/GMXRC.csh
@@ -226,13 +226,13 @@ include/gromacs/sysstuff.h
 include/gromacs/tgroup.h
 include/gromacs/thread_mpi.h
 include/gromacs/thread_mpi/atomic.h
+include/gromacs/thread_mpi/atomic/cycles.h
 include/gromacs/thread_mpi/atomic/gcc.h
 include/gromacs/thread_mpi/atomic/gcc_ia64.h
 include/gromacs/thread_mpi/atomic/gcc_intrinsics.h
 include/gromacs/thread_mpi/atomic/gcc_ppc.h
 include/gromacs/thread_mpi/atomic/gcc_spinlock.h
 include/gromacs/thread_mpi/atomic/gcc_x86.h
-include/gromacs/thread_mpi/atomic/hpux.h
 include/gromacs/thread_mpi/atomic/msvc.h
 include/gromacs/thread_mpi/atomic/xlc_ppc.h
 include/gromacs/thread_mpi/barrier.h
