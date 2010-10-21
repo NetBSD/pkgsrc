@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/05/04 16:52:16 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.6 2010/10/21 13:52:15 adam Exp $
 
-DISTNAME=	clang-2.7
-PKGREVISION=	1
+DISTNAME=	clang-2.8
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-DISTFILES=	llvm-2.7.tgz clang-2.7.tgz
+DISTFILES=	llvm-2.8.tgz clang-2.8.tgz
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
@@ -13,27 +11,31 @@ COMMENT=	Low Level Virtual Machine compiler infrastructure
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/llvm-2.7
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl:build chown
-USE_LANGUAGES+=	c c++
-MAKE_DIRS+=	etc/llvm
-USE_LIBTOOL=	yes
+WRKSRC=			${WRKDIR}/llvm-2.8
 
-CONFIGURE_ARGS=	--enable-bindings=none	# no OCaml, please!
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		chown perl:build gmake
+GNU_CONFIGURE=		yes
+
+MAKE_DIRS+=		etc/llvm
 
 INSTALLATION_DIRS=	bin lib libexec
-
-# This should be changed!
-CONFIGURE_ARGS+= --enable-targets=host-only
-#CONFIGURE_ARGS+= --disable-optimized
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 TEST_TARGET=	check unittests
 
-post-extract:
-	${MV} ${WRKDIR}/clang-2.7 ${WRKDIR}/llvm-2.7/tools/clang
+SUBST_CLASSES+=		perl
+SUBST_MESSAGE.perl=	Fixing llvm-configure PERL path
+SUBST_STAGE.perl=	post-patch
+SUBST_FILES.perl=	tools/llvm-config/llvm-config.in.in
+SUBST_SED.perl=		-e 's,@PERL@,${PERL5},'
 
-.include "../../converters/libiconv/buildlink3.mk"
+post-extract:
+	mv ${WRKDIR}/clang-2.8 ${WRKDIR}/llvm-2.8/tools/clang
+
+# XXX Darwin only?
+pre-install:
+	find ${WRKSRC}/tools/clang/include/clang -name '*.inc.tmp' -exec rm {} \;
+
 .include "../../mk/bsd.pkg.mk"
