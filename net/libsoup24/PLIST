@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/06/05 11:00:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/10/21 20:33:59 drochner Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
@@ -61,6 +61,7 @@ share/gtk-doc/html/libsoup-2.4/SoupSessionAsync.html
 share/gtk-doc/html/libsoup-2.4/SoupSessionFeature.html
 share/gtk-doc/html/libsoup-2.4/SoupSessionSync.html
 share/gtk-doc/html/libsoup-2.4/SoupSocket.html
+share/gtk-doc/html/libsoup-2.4/annotation-glossary.html
 share/gtk-doc/html/libsoup-2.4/ch01.html
 share/gtk-doc/html/libsoup-2.4/ch02.html
 share/gtk-doc/html/libsoup-2.4/ch03.html
