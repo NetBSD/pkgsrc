@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3795 2010/10/22 10:12:14 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.3796 2010/10/22 10:41:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5145,3 +5145,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/thunderbird to 3.1.5 [tnn 2010-10-22]
 	Updated devel/nss to 3.12.8.0.11 [tnn 2010-10-22]
 	Updated www/seamonkey to 2.0.9 [tnn 2010-10-22]
+	Updated security/mozilla-rootcerts to 1.0.20100827 [wiz 2010-10-22]
