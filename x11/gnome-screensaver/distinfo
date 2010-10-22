@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2010/07/13 10:15:24 drochner Exp $
+$NetBSD: distinfo,v 1.23 2010/10/22 19:24:57 drochner Exp $
 
-SHA1 (gnome-screensaver-2.30.0.tar.bz2) = 4ceb44d17d8c6ff132e6785e7e7c6f48d7039e1d
-RMD160 (gnome-screensaver-2.30.0.tar.bz2) = 672ccfec0c57fac4585d299977b9142a7acc1c8d
-Size (gnome-screensaver-2.30.0.tar.bz2) = 4803639 bytes
+SHA1 (gnome-screensaver-2.30.2.tar.bz2) = f9d7c0df0efaa6916099ca56078da8b36f4c4935
+RMD160 (gnome-screensaver-2.30.2.tar.bz2) = 1b13722f3bebca709b9f44c45e995d07ed6c2044
+Size (gnome-screensaver-2.30.2.tar.bz2) = 4814653 bytes
 SHA1 (patch-aa) = 20f25a4efc3c134366280afbfb8aeb49db791208
 SHA1 (patch-ab) = 5b5f9d69fd071bfd6f9b316626e23585841dad9d
 SHA1 (patch-ae) = e7f36cb3bb673800ae2001ac3b2237cb912f56c3
