@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.2 2009/11/03 02:43:56 wiz Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.3 2010/10/22 10:41:50 wiz Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -72,7 +72,7 @@ link_hash()
 			${ECHO} 1>&2 "WARNING: Skipping duplicate certificate $_pemfile"
 			return
 		fi
-		suffix=`${EXPR} $suffix + 1`
+		_suffix=`${EXPR} $_suffix + 1`
 	done
 }
 
