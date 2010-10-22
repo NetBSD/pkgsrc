@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3794 2010/10/21 21:48:23 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3795 2010/10/22 10:12:14 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5140,3 +5140,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/clang to 2.8 [adam 2010-10-20]
 	Updated devel/diffuse to 0.4.4 [wiz 2010-10-21]
 	Updated security/gnupg to 1.4.11 [wiz 2010-10-21]
+	Updated devel/xulrunner to 1.9.2.11 [tnn 2010-10-22]
+	Updated www/firefox to 3.6.11 [tnn 2010-10-22]
+	Updated mail/thunderbird to 3.1.5 [tnn 2010-10-22]
+	Updated devel/nss to 3.12.8.0.11 [tnn 2010-10-22]
+	Updated www/seamonkey to 2.0.9 [tnn 2010-10-22]
