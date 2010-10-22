@@ -7,3 +7,5 @@ Pullup ticket #3247 - requested by kefren
 graphics/libgdiplus: security patch
 Pullup ticket #3246 - requested by tron
 mail/pear-Mail_Mime: build fix
+Pullup ticket #3250 - requested by obache
+editors/emacs: build fix
