@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/07/06 14:58:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/10/22 19:36:10 drochner Exp $
 include/libgweather/gweather-enum-types.h
 include/libgweather/gweather-gconf.h
 include/libgweather/gweather-location.h
@@ -459,6 +459,7 @@ share/libgweather/Locations.ta.xml
 share/libgweather/Locations.te.xml
 share/libgweather/Locations.th.xml
 share/libgweather/Locations.tr.xml
+share/libgweather/Locations.ug.xml
 share/libgweather/Locations.uk.xml
 share/libgweather/Locations.vi.xml
 share/libgweather/Locations.xml
