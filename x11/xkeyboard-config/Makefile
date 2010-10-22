@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/10/16 13:13:18 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2010/10/22 11:46:59 ghen Exp $
 #
 
 DISTNAME=		xkeyboard-config-2.0
 CATEGORIES=		x11
-MASTER_SITES=		http://people.freedesktop.org/~svu/
+MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		bjs@NetBSD.org
