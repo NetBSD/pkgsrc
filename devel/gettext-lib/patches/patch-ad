@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2010/10/22 16:12:48 darcy Exp $
+
+--- gettext-runtime/configure.ac.orig	2005-05-20 21:03:39.000000000 +0000
++++ gettext-runtime/configure.ac
+@@ -76,6 +76,7 @@ dnl Checks for libraries.
+ 
+ dnl Checks for header files.
+ AC_CHECK_HEADERS(string.h)
++AC_CHECK_HEADERS(search.h)
+ AM_STDBOOL_H
+ 
+ dnl Checks for typedefs, structures, and compiler characteristics.
