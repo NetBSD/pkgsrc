@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/19 16:43:34 abs Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/22 06:39:20 wiz Exp $
 #
 
 DISTNAME=	kdenlive-0.7.8
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.kdenlive.org/
 COMMENT=	KDE video editor
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 DEPENDS+=	dvdauthor>=0.6.18:../../multimedia/dvdauthor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -21,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	msgfmt
+USE_TOOLS+=	msgfmt pkg-config
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../multimedia/mlt/buildlink3.mk"
