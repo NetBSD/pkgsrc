@@ -1,0 +1,18 @@
+$NetBSD: patch-bf,v 1.8.2.2 2010/10/22 10:38:15 tron Exp $
+
+* honor PREFIX
+* reorder rpath so that additional librares will be prefered than builtin X.
+
+--- src/s/netbsd.h.orig	2010-04-03 22:26:08.000000000 +0000
++++ src/s/netbsd.h
+@@ -75,8 +75,8 @@ along with GNU Emacs.  If not, see <http
+ /* Here is how to find X Windows.  LD_SWITCH_X_SITE_AUX gives an -R option
+    says where to find X windows at run time.  We convert it to a -rpath option
+    which is what OSF1 uses.  */
+-#define LD_SWITCH_SYSTEM_tmp `echo LD_SWITCH_X_SITE_AUX | sed -e 's/-R/-Wl,-rpath,/'`
+-#define LD_SWITCH_SYSTEM LD_SWITCH_SYSTEM_tmp -Wl,-rpath,/usr/pkg/lib -L/usr/pkg/lib -Wl,-rpath,/usr/local/lib -L/usr/local/lib
++#define LD_SWITCH_SYSTEM_tmp -Wl,-rpath,@PREFIX@/lib -L@PREFIX@/lib
++#define LD_SWITCH_SYSTEM LD_SWITCH_SYSTEM_tmp `echo LD_SWITCH_X_SITE_AUX | sed -e 's/-R/-Wl,-rpath,/'`
+ 
+ /* The following is needed to make `configure' find Xpm, Xaw3d and
+    image include and library files if using /usr/bin/gcc.  That
