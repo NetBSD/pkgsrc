@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3800 2010/10/23 12:52:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3801 2010/10/23 13:09:32 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5177,3 +5177,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.3 [obache 2010-09-17]
 	Updated x11/ruby-gnome2-panelapplet to 0.90.3 [obache 2010-09-17]
 	Updated x11/ruby-gnome2-vte to 0.90.3 [obache 2010-09-17]
+	Updated net/libtrace to 3.0.7 [pettai 2010-10-23]
