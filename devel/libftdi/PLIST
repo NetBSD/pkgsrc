@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/23 15:26:46 jakllsch Exp $
+bin/libftdi-config
+include/ftdi.h
+lib/libftdi.la
+lib/pkgconfig/libftdi.pc
