@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9813 2010/10/21 21:48:23 wiz Exp $
+$NetBSD: TODO,v 1.9814 2010/10/23 12:28:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.6
+	o TeXmacs-1.0.7.7
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -438,7 +438,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o biew-6.1.0
 	o binutils-2.20.1
 	o bioperl-1.5.0
-	o bitlbee-1.2.8
+	o bitlbee-3.0
 	o bitmap-1.0.5
 	o bluefish-2.0.2
 	o blur6ex-0.3.462
@@ -672,11 +672,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdeskcal-1.01
 	o gdk-pixbuf-2.22.0
 	o gdl-2.30.1 [GNOME 2.32]
-	o gdm-2.20.11
 	o gdm-2.32.0 [GNOME 2.32]
 	o gdsreader-0.3.2
 	o geany-0.19
-	o gedit-2.30.4
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.11
 	o gentoo-0.19.3
@@ -697,7 +695,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.2 [pkg/39760]
 	o global-5.9.2
 	o glom-1.14.2 [GNOME 2.26]
-	o gmime24-2.4.20
 	o gnash-0.8.8
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -722,7 +719,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-pilot-2.32.0 [GNOME 2.32]
 	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
-	o gnome-screensaver-2.30.2
 	o gnome-session-2.32.0 [GNOME 2.32, wants DeviceKit-power]
 	o gnome-settings-daemon-2.32.0 [GNOME 2.32]
 	o gnome-subtitles-1.0
@@ -733,7 +729,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-user-docs-2.30.0 [GNOME 2.30]
 	o gnome-user-share-2.30.1 [GNOME 2.32]
 	o gnome-utils-2.32.0 [GNOME 2.32]
-	o gnome-vfs-2.24.4 [GNOME 2.32]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -759,16 +754,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.10
 	o gss-1.0.1
 	o gssdp-0.8.0
+	o gst-plugins0.10-base-0.10.30.2
+	o gstreamer0.10-0.10.30.2
 	o gthumb-2.12.0
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.1
 	o gtk2-2.22.0
-	o gtk2-engines-2.20.2
 	o gtkglarea-2.0.1
 	o gtkmm-2.22.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview2-2.10.5
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -881,12 +876,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libX11-1.3.6
 	o libXext-1.1.2
 	o libbonobo-2.32.0
-	o libbonoboui-2.24.4
 	o libcanberra-0.26
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.22
-	o libesmtp-1.0.6
 	o libextractor-0.6.2
 	o libflash-0.4.13
 	o libfontenc-1.1.0
@@ -897,8 +890,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnome-keyring-2.32.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-2.32.0
-	o libgnomeprint-2.18.8
-	o libgnomeprintui-2.18.6
 	o libgtop-2.28.2
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
@@ -921,7 +912,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.91.0
 	o librsvg2-2.32.0
-	o libsoup24-2.32.0
 	o libssh-0.4.6
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
@@ -936,7 +926,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxdg-basedir-1.1.1
 	o libxml++-2.32.0 [GNOME 2.32]
 	o licq-1.3.8
-	o liferea-current-1.6.5
 	o lighttpd-1.4.28
 	o lilypond-2.12.3
 	o links-2.3pre1
@@ -1003,6 +992,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.9.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
+	o monotone-0.48.1
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.0 [GNOME 2.32]
 	o mp3blaster-3.2.3
@@ -1122,6 +1112,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ply-3.3 [pkg/43758]
 	o pngcheck-2.3.0
 	o po4a-0.36.3
+	o podofo-0.8.3
 	o polkit-qt-0.9.4
 	o polsms-2.1.0
 	o poppass-4.0.14
@@ -1172,7 +1163,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-markdown-2.0.3 [pkg/43448]
 	o py-matplotlib-0.99.3
 	o py-networkx-1.2 [pkg/43790]
-	o py-qt4-4.7.7
+	o py-qt4-4.8
+	o py-sip-4.11.2
 	o py-sybase-0.37
 	o py-uwsgi-0.9.5.1 [pkg/43400]
 	o python-2.7
@@ -1497,7 +1489,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsd-3.3.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-263
+	o xterm-265
 	o xtraceroute-0.9.1
 	o xtrans-1.2.5
 	o xtu-1.3
