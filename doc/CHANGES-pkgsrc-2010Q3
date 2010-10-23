@@ -9,3 +9,6 @@ Pullup ticket #3246 - requested by tron
 mail/pear-Mail_Mime: build fix
 Pullup ticket #3250 - requested by obache
 editors/emacs: build fix
+Pullup ticket #3253 - requested by obache
+lang/sun-jdk6: security update
+lang/sun-jre6: security update
