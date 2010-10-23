@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/22 10:42:02 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/10/23 12:45:08 obache Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
@@ -9,6 +9,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-bonobo>=${VERSION}:../../devel/ruby-gnome2-bonobo
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-bonoboui>=${VERSION}:../../devel/ruby-gnome2-bonoboui
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gconf>=${VERSION}:../../devel/ruby-gnome2-gconf
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=${VERSION}:../../devel/ruby-gnome2-gio
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-libglade>=${VERSION}:../../devel/ruby-gnome2-libglade
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pango

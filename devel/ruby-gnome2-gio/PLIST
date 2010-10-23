@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/10/23 12:45:09 obache Exp $
+lib/pkgconfig/ruby-gio2.pc
+${RUBY_VENDORLIB}/gio2.rb
+${RUBY_VENDORARCHLIB}/gio2.${RUBY_DLEXT}
