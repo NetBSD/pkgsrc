@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.19 2010/10/16 04:41:19 obache Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.20 2010/10/23 12:26:33 obache Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -143,7 +143,6 @@ java/sun-6/lib/fonts/LucidaTypewriterBold.ttf
 java/sun-6/lib/fonts/LucidaTypewriterRegular.ttf
 java/sun-6/lib/fonts/fonts.dir
 java/sun-6/lib/i386/client/Xusage.txt
-java/sun-6/lib/i386/client/classes.jsa
 java/sun-6/lib/i386/client/libjsig.so
 java/sun-6/lib/i386/client/libjvm.so
 java/sun-6/lib/i386/headless/libmawt.so
