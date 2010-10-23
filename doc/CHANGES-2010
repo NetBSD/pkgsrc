@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3799 2010/10/23 12:50:05 zafer Exp $
+$NetBSD: CHANGES-2010,v 1.3800 2010/10/23 12:52:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5149,3 +5149,31 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ibus to 1.3.8 [obache 2010-10-22]
 	Updated lang/sun-jre6 to 6.0.22nb1 [obache 2010-10-23]
 	Updated net/filezilla to 3.3.4.1 [zafer 2010-10-23]
+	Updated meta-pkgs/ruby-gnome2 to 0.90.3 [obache 2010-10-23]
+	Updated devel/ruby-gnome2-atk to 0.90.3 [obache 2010-10-23]
+	Updated devel/ruby-gnome2-bonobo to 0.90.3 [obache 2010-10-23]
+	Updated devel/ruby-gnome2-bonoboui to 0.90.3 [obache 2010-10-23]
+	Updated devel/ruby-gnome2-gconf to 0.90.3 [obache 2010-10-23]
+	Added devel/ruby-gnome2-gio version 0.90.3 [obache 2010-10-23]
+	Updated devel/ruby-gnome2-glib to 0.90.3 [obache 2010-10-23]
+	Updated devel/ruby-gnome2-libglade to 0.90.3 [obache 2010-10-23]
+	Updated devel/ruby-gnome2-pango to 0.90.3 [obache 2010-10-23]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 0.90.3 [obache 2010-10-23]
+	Updated graphics/ruby-gnome2-gnomecanvas to 0.90.3 [obache 2010-10-23]
+	Updated graphics/ruby-gnome2-goocanvas to 0.90.3 [obache 2010-10-23]
+	Updated graphics/ruby-gnome2-gtkglext to 0.90.3 [obache 2010-10-23]
+	Updated graphics/ruby-gnome2-libart to 0.90.3 [obache 2010-10-23]
+	Updated graphics/ruby-gnome2-rsvg to 0.90.3 [obache 2010-10-23]
+	Updated multimedia/ruby-gnome2-gstreamer to 0.90.3 [obache 2010-10-23]
+	Updated print/ruby-gnome2-gnomeprint to 0.90.3 [obache 2010-09-23]
+	Updated print/ruby-gnome2-gnomeprintui to 0.90.3 [obache 2010-09-23]
+	Updated print/ruby-gnome2-poppler to 0.90.3 [obache 2010-09-23]
+	Updated sysutils/ruby-gnome2-gnomevfs to 0.90.3 [obache 2010-09-23]
+	Updated www/ruby-gnome2-gtkhtml2 to 0.90.3 [obache 2010-09-23]
+	Updated www/ruby-gnome2-gtkmozembed to 0.90.3 [obache 2010-09-23]
+	Updated x11/ruby-gnome2-gnome to 0.90.3 [obache 2010-09-17]
+	Updated x11/ruby-gnome2-gtk to 0.90.3 [obache 2010-09-17]
+	Updated x11/ruby-gnome2-gtksourceview to 0.90.3 [obache 2010-09-17]
+	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.3 [obache 2010-09-17]
+	Updated x11/ruby-gnome2-panelapplet to 0.90.3 [obache 2010-09-17]
+	Updated x11/ruby-gnome2-vte to 0.90.3 [obache 2010-09-17]
