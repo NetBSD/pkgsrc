@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3802 2010/10/23 13:17:30 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3803 2010/10/23 15:27:14 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5179,3 +5179,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-vte to 0.90.3 [obache 2010-09-17]
 	Updated net/libtrace to 3.0.7 [pettai 2010-10-23]
 	Updated mail/p5-Mail-DKIM to 0.38 [pettai 2010-10-23]
+	Added devel/libftdi version 0.18 [jakllsch 2010-10-23]
