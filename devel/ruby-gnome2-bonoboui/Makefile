@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2010/09/23 15:35:59 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/10/23 12:45:08 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-bonoboui-${VERSION}
 COMMENT=		Ruby binding of libbonoboui-2.x or later
 CATEGORIES=		devel
+
+CONFLICTS+=		ruby[0-9][0-9]-gnome2-bonoboui-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
