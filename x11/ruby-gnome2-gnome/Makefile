@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/09/23 15:36:03 obache Exp $
+# $NetBSD: Makefile,v 1.23 2010/10/23 12:45:13 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnome-${VERSION}
@@ -6,6 +6,7 @@ CATEGORIES=		gnome x11
 COMMENT=		Ruby binding of libgnome/libgnomeui-2.x
 
 CONFLICTS+=		ruby-gnome2-gnome-[0-9]*
+CONFLICTS+=		ruby[0-9][0-9]-gnome2-gnome-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.14 2010/09/23 15:35:58 obache Exp $
+# $NetBSD: Makefile.common,v 1.15 2010/10/23 12:45:08 obache Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-bonobo/Makefile
 # used by devel/ruby-gnome2-bonoboui/Makefile
 # used by devel/ruby-gnome2-gconf/Makefile
+# used by devel/ruby-gnome2-gio/Makefile
 # used by devel/ruby-gnome2-glib/Makefile
 # used by devel/ruby-gnome2-libglade/Makefile
 # used by devel/ruby-gnome2-pango/Makefile
@@ -38,13 +39,13 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://ruby-gnome2.sourceforge.jp/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		0.90.1
+VERSION=		0.90.3
 USE_RUBY_EXTCONF=	yes
 CONFIGURE_ENV+=		RUBYOPT="-Ku"
 
 INSTALL_TARGET=		install
 
-INSTALLATION_DIRS=	lib/pkgconfig
+INSTALL_MAKE_FLAGS+=	pkgconfigdir=${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

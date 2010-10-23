@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/12 03:09:31 obache Exp $
-lib/pkgconfig/ruby-gdkpixbuf2.pc
+@comment $NetBSD: PLIST,v 1.6 2010/10/23 12:45:10 obache Exp $
+lib/pkgconfig/ruby-gdk-pixbuf2.pc
 ${RUBY_VENDORLIB}/gdk_pixbuf2.rb
 ${RUBY_VENDORARCHLIB}/gdk_pixbuf2.${RUBY_DLEXT}
