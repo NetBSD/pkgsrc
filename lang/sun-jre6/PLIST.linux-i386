@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.18 2010/06/06 09:51:49 obache Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.18.4.1 2010/10/23 13:10:10 tron Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -11,7 +11,6 @@ bin/sun6-tnameserv
 java/sun-6/.systemPrefs/.system.lock
 java/sun-6/.systemPrefs/.systemRootModFile
 java/sun-6/COPYRIGHT
-java/sun-6/LICENSE
 java/sun-6/README
 java/sun-6/THIRDPARTYLICENSEREADME.txt
 java/sun-6/Welcome.html
@@ -51,6 +50,7 @@ java/sun-6/lib/deploy/messages_fr.properties.default
 java/sun-6/lib/deploy/messages_it.properties.default
 java/sun-6/lib/deploy/messages_ja.properties.default
 java/sun-6/lib/deploy/messages_ko.properties.default
+java/sun-6/lib/deploy/messages_pt_BR.properties.default
 java/sun-6/lib/deploy/messages_sv.properties.default
 java/sun-6/lib/deploy/messages_zh_CN.properties.default
 java/sun-6/lib/deploy/messages_zh_HK.properties.default
@@ -129,8 +129,8 @@ java/sun-6/lib/fontconfig.Sun.bfc.default
 java/sun-6/lib/fontconfig.Sun.properties.src.default
 java/sun-6/lib/fontconfig.Turbo.bfc.default
 java/sun-6/lib/fontconfig.Turbo.properties.src.default
-java/sun-6/lib/fontconfig.Ubuntu.bfc
-java/sun-6/lib/fontconfig.Ubuntu.properties.src
+java/sun-6/lib/fontconfig.Ubuntu.bfc.default
+java/sun-6/lib/fontconfig.Ubuntu.properties.src.default
 java/sun-6/lib/fontconfig.bfc.default
 java/sun-6/lib/fontconfig.properties.src.default
 java/sun-6/lib/fonts/LucidaBrightDemiBold.ttf
@@ -143,7 +143,6 @@ java/sun-6/lib/fonts/LucidaTypewriterBold.ttf
 java/sun-6/lib/fonts/LucidaTypewriterRegular.ttf
 java/sun-6/lib/fonts/fonts.dir
 java/sun-6/lib/i386/client/Xusage.txt
-java/sun-6/lib/i386/client/classes.jsa
 java/sun-6/lib/i386/client/libjsig.so
 java/sun-6/lib/i386/client/libjvm.so
 java/sun-6/lib/i386/headless/libmawt.so
@@ -328,6 +327,7 @@ java/sun-6/lib/zi/America/Aruba
 java/sun-6/lib/zi/America/Asuncion
 java/sun-6/lib/zi/America/Atikokan
 java/sun-6/lib/zi/America/Bahia
+java/sun-6/lib/zi/America/Bahia_Banderas
 java/sun-6/lib/zi/America/Barbados
 java/sun-6/lib/zi/America/Belem
 java/sun-6/lib/zi/America/Belize
@@ -448,6 +448,7 @@ java/sun-6/lib/zi/America/Yellowknife
 java/sun-6/lib/zi/Antarctica/Casey
 java/sun-6/lib/zi/Antarctica/Davis
 java/sun-6/lib/zi/Antarctica/DumontDUrville
+java/sun-6/lib/zi/Antarctica/Macquarie
 java/sun-6/lib/zi/Antarctica/Mawson
 java/sun-6/lib/zi/Antarctica/McMurdo
 java/sun-6/lib/zi/Antarctica/Palmer
@@ -652,6 +653,7 @@ java/sun-6/lib/zi/PST8PDT
 java/sun-6/lib/zi/Pacific/Apia
 java/sun-6/lib/zi/Pacific/Auckland
 java/sun-6/lib/zi/Pacific/Chatham
+java/sun-6/lib/zi/Pacific/Chuuk
 java/sun-6/lib/zi/Pacific/Easter
 java/sun-6/lib/zi/Pacific/Efate
 java/sun-6/lib/zi/Pacific/Enderbury
@@ -677,14 +679,13 @@ java/sun-6/lib/zi/Pacific/Noumea
 java/sun-6/lib/zi/Pacific/Pago_Pago
 java/sun-6/lib/zi/Pacific/Palau
 java/sun-6/lib/zi/Pacific/Pitcairn
-java/sun-6/lib/zi/Pacific/Ponape
+java/sun-6/lib/zi/Pacific/Pohnpei
 java/sun-6/lib/zi/Pacific/Port_Moresby
 java/sun-6/lib/zi/Pacific/Rarotonga
 java/sun-6/lib/zi/Pacific/Saipan
 java/sun-6/lib/zi/Pacific/Tahiti
 java/sun-6/lib/zi/Pacific/Tarawa
 java/sun-6/lib/zi/Pacific/Tongatapu
-java/sun-6/lib/zi/Pacific/Truk
 java/sun-6/lib/zi/Pacific/Wake
 java/sun-6/lib/zi/Pacific/Wallis
 java/sun-6/lib/zi/SystemV/AST4
