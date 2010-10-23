@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/23 15:56:19 jakllsch Exp $
+
+SHA1 (flashrom-0.9.3-r1216.tar.bz2) = 305139d3ba2605285adbd1b2d9e3c4f9eac09cf5
+RMD160 (flashrom-0.9.3-r1216.tar.bz2) = ca09d366b4fb8f1a5d851f8742891aed080a88aa
+Size (flashrom-0.9.3-r1216.tar.bz2) = 253142 bytes
