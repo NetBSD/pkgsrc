@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9814 2010/10/23 12:28:23 wiz Exp $
+$NetBSD: TODO,v 1.9815 2010/10/23 13:17:30 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1069,7 +1069,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
-	o p5-Mail-DKIM-0.38
 	o p5-PerlMagick-6.6.5.1
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-ispman-1.2
