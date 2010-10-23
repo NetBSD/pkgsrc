@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3803 2010/10/23 15:27:14 jakllsch Exp $
+$NetBSD: CHANGES-2010,v 1.3804 2010/10/23 15:57:45 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5180,3 +5180,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/libtrace to 3.0.7 [pettai 2010-10-23]
 	Updated mail/p5-Mail-DKIM to 0.38 [pettai 2010-10-23]
 	Added devel/libftdi version 0.18 [jakllsch 2010-10-23]
+	Added sysutils/flashrom version 0.9.3pre1216 [jakllsch 2010-10-23]
