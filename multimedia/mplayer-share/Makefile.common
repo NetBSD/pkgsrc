@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2010/09/16 18:56:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2010/10/24 21:56:51 ahoka Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -17,7 +17,7 @@ DIST_SUBDIR=		mplayer
 
 WRKSRC=			${WRKDIR}/mplayer-export-${MPLAYER_SNAPSHOT_DATE}
 
-MAINTAINER?=		ahoka@NetBSD.org
+MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
 
 #
