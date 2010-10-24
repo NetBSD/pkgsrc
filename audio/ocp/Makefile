@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2010/09/28 18:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/10/24 17:49:50 shattered Exp $
 
 DISTNAME=		ocp-0.1.20
 CATEGORIES=		audio
 MASTER_SITES=		http://stian.cubic.org/ocp/
 EXTRACT_SUFX=		.tar.lzma
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://stian.cubic.org/project-ocp.php
 COMMENT=		Open Cubic Player
 LICENSE=		gnu-gpl-v2
