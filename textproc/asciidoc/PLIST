@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/08/25 02:16:24 gls Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/10/24 20:35:06 gls Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -15,7 +15,7 @@ share/asciidoc/docbook-xsl/htmlhelp.xsl
 share/asciidoc/docbook-xsl/manpage.xsl
 share/asciidoc/docbook-xsl/text.xsl
 share/asciidoc/docbook-xsl/xhtml.xsl
-share/asciidoc/docbook.conf
+share/asciidoc/docbook45.conf
 share/asciidoc/filters/code/code-filter-readme.txt
 share/asciidoc/filters/code/code-filter-test.txt
 share/asciidoc/filters/code/code-filter.conf
@@ -32,6 +32,7 @@ share/asciidoc/filters/source/source-highlight-filter-test.txt
 share/asciidoc/filters/source/source-highlight-filter.conf
 share/asciidoc/help.conf
 share/asciidoc/html4.conf
+share/asciidoc/images/highlighter.png
 share/asciidoc/images/icons/README
 share/asciidoc/images/icons/callouts/1.png
 share/asciidoc/images/icons/callouts/10.png
@@ -58,9 +59,12 @@ share/asciidoc/images/icons/prev.png
 share/asciidoc/images/icons/tip.png
 share/asciidoc/images/icons/up.png
 share/asciidoc/images/icons/warning.png
+share/asciidoc/images/smallnew.png
+share/asciidoc/images/tiger.png
 share/asciidoc/javascripts/ASCIIMathML.js
 share/asciidoc/javascripts/LaTeXMathML.js
 share/asciidoc/javascripts/asciidoc-xhtml11.js
+share/asciidoc/javascripts/slidy.js
 share/asciidoc/javascripts/toc.js
 share/asciidoc/lang-de.conf
 share/asciidoc/lang-en.conf
@@ -71,8 +75,10 @@ share/asciidoc/lang-it.conf
 share/asciidoc/lang-pt-BR.conf
 share/asciidoc/lang-ru.conf
 share/asciidoc/latex.conf
+share/asciidoc/slidy.conf
 share/asciidoc/stylesheets/docbook-xsl.css
 share/asciidoc/stylesheets/pygments.css
+share/asciidoc/stylesheets/slidy.css
 share/asciidoc/stylesheets/volnitsky-manpage.css
 share/asciidoc/stylesheets/volnitsky-quirks.css
 share/asciidoc/stylesheets/volnitsky.css
@@ -105,6 +111,8 @@ share/doc/asciidoc/latexmathml.txt
 share/doc/asciidoc/music-filter.pdf
 share/doc/asciidoc/music-filter.txt
 share/doc/asciidoc/publishing-ebooks-with-asciidoc.txt
+share/doc/asciidoc/slidy-example.txt
+share/doc/asciidoc/slidy.txt
 share/doc/asciidoc/source-highlight-filter.pdf
 share/doc/asciidoc/source-highlight-filter.txt
 share/doc/asciidoc/testasciidoc.txt
