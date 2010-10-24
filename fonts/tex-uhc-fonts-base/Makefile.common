@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/07/22 09:01:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2010/10/24 18:10:39 minskim Exp $
 
 DISTNAME=	uhc-fonts-1.0
 CATEGORIES=	fonts
@@ -8,8 +8,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${UHC_FONTS}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/hlatex/install-fonts.html
 
-TEX_ACCEPTED=	teTeX3
-
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -17,15 +15,24 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-.include "../../print/teTeX/module.mk"
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/map/hlatex
-	${INSTALL_DATA} ${WRKSRC}/${TEX_FONTMAPS} \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/map/hlatex/
+.if !empty(TEX_MAP_FILES) || !empty(TEX_MIXEDMAP_FILES)
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/texmf-dist/fonts/map/hlatex
+.  for f in ${TEX_MAP_FILES} ${TEX_MIXEDMAP_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} \
+		${DESTDIR}${PREFIX}/share/texmf-dist/fonts/map/hlatex/
+.  endfor
+.endif
 .for f in ${UHC_FONTS}
 	extract_file=${_DISTDIR:Q}/${f}; \
-	cd ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts; ${EXTRACT_CMD}
+	cd ${DESTDIR}${PREFIX}/share/texmf-dist/fonts; ${EXTRACT_CMD}
 .endfor
+
+.include "../../print/kpathsea/texmf.mk"
+.if !empty(TEX_MAP_FILES) || !empty(TEX_MIXEDMAP_FILES)
+.  include "../../print/texlive-tetex/map.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
