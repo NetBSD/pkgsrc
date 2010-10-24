@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3808 2010/10/24 18:56:20 agc Exp $
+$NetBSD: CHANGES-2010,v 1.3809 2010/10/24 20:36:36 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5186,3 +5186,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-uhc-fonts-base to 1.0nb3 [minskim 2010-10-24]
 	Updated fonts/tex-uhc-fonts-extra to 1.0nb3 [minskim 2010-10-24]
 	Added devel/spin version 5.2.5 [agc 2010-10-24]
+	Updated textproc/asciidoc to 8.6.2 [gls 2010-10-24]
