@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2010/09/19 22:08:22 abs Exp $
+# $NetBSD: Makefile,v 1.96 2010/10/24 21:57:47 ahoka Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 VLC_VERSION=		1.0.6
 
-MAINTAINER=		ahoka@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://videolan.org/
 COMMENT=		VLC media player and streaming server
 LICENSE=		gnu-gpl-v2
