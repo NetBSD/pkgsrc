@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2004/01/02 16:17:40 cjep Exp $
---- cmp3listfiles.c.orig	2000-03-17 00:06:25.000000000 +0000
-+++ cmp3listfiles.c	2004-01-02 16:12:02.000000000 +0000
+$NetBSD: patch-af,v 1.2 2010/10/24 11:28:42 plunky Exp $
+--- cmp3listfiles.c.orig	2001-06-13 20:13:16.000000000 +0000
++++ cmp3listfiles.c
 @@ -7,7 +7,7 @@
  #include <stdio.h>
  #include <string.h>
@@ -10,7 +10,25 @@ $NetBSD: patch-af,v 1.1 2004/01/02 16:17:40 cjep Exp $
  
  typedef struct {
      char dirLetter;
-@@ -269,15 +269,14 @@
+@@ -121,7 +121,7 @@ void readm3u(FILE *infile)
+ {
+     char buffer[MAX_FULL];
+     
+-    while (getline(buffer, MAX_FULL, infile) == 1) {
++    while (cmp3_getline(buffer, MAX_FULL, infile) == 1) {
+         if (buffer[0] == '#')
+             continue;
+         if (doConversions(buffer) == 1)
+@@ -134,7 +134,7 @@ void readpls(FILE *infile)
+     char buffer[MAX_FULL],
+          *filename;
+     
+-    while (getline(buffer, MAX_FULL, infile) == 1) {
++    while (cmp3_getline(buffer, MAX_FULL, infile) == 1) {
+         if ((buffer[0] == '[') || (buffer[0] == '#'))
+             continue;
+         if (!Strncmp(buffer, "file", 4)) {
+@@ -269,15 +269,14 @@ void writelist(char *filepath)
      if (outfile == NULL)
  /*         XXX - alert person */
          return;
