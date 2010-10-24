@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9815 2010/10/23 13:17:30 pettai Exp $
+$NetBSD: TODO,v 1.9816 2010/10/24 16:16:57 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1126,7 +1126,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o postgresql83-8.3.12
 	o postgresql84-8.4.5
 	o postgresql90-9.0.1
-	o pptp-1.7.1 [pkg/38038]
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
