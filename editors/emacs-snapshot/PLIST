@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/10/20 00:06:22 minskim Exp $
-bin/b2m
+@comment $NetBSD: PLIST,v 1.14 2010/10/24 23:57:34 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -24,8 +23,8 @@ info/efaq
 info/eieio
 info/eintr
 info/elisp
-info/emacs
 info/emacs-mime
+info/emacs
 info/epa
 info/erc
 info/eshell
@@ -58,16 +57,13 @@ info/vip
 info/viper
 info/widget
 info/woman
-libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/digest-doc
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/fakemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/profile
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
-libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/sorted-doc
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/vcdiff
-man/man1/b2m.1
 man/man1/ctags.1
 man/man1/ebrowse.1
 man/man1/emacs.1
@@ -77,7 +73,6 @@ man/man1/grep-changelog.1
 man/man1/rcs-checkin.1
 share/applications/emacs.desktop
 share/emacs/${EMACS_VERSION}/etc/AUTHORS
-share/emacs/${EMACS_VERSION}/etc/BABYL
 share/emacs/${EMACS_VERSION}/etc/CENSORSHIP
 share/emacs/${EMACS_VERSION}/etc/CONTRIBUTE
 share/emacs/${EMACS_VERSION}/etc/COOKIES
@@ -109,6 +104,7 @@ share/emacs/${EMACS_VERSION}/etc/NEWS.20
 share/emacs/${EMACS_VERSION}/etc/NEWS.21
 share/emacs/${EMACS_VERSION}/etc/NEWS.22
 share/emacs/${EMACS_VERSION}/etc/NEWS.23
+share/emacs/${EMACS_VERSION}/etc/NEXTSTEP
 share/emacs/${EMACS_VERSION}/etc/NXML-NEWS
 share/emacs/${EMACS_VERSION}/etc/ORDERS
 share/emacs/${EMACS_VERSION}/etc/PROBLEMS
@@ -868,6 +864,23 @@ share/emacs/${EMACS_VERSION}/etc/schema/xslt.rnc
 share/emacs/${EMACS_VERSION}/etc/ses-example.ses
 share/emacs/${EMACS_VERSION}/etc/sex.6
 share/emacs/${EMACS_VERSION}/etc/spook.lines
+share/emacs/${EMACS_VERSION}/etc/srecode/cpp.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/default.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/doc-cpp.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/doc-default.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/doc-java.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/ede-make.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/el.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/getset-cpp.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/java.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/make.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/template.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/test.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/texi.srt
+share/emacs/${EMACS_VERSION}/etc/srecode/wisent.srt
+share/emacs/${EMACS_VERSION}/etc/themes/tango-dark-theme.el
+share/emacs/${EMACS_VERSION}/etc/themes/tango-theme.el
+share/emacs/${EMACS_VERSION}/etc/themes/wheatgrass-theme.el
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.bg
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.cn
@@ -1963,6 +1976,7 @@ share/emacs/${EMACS_VERSION}/lisp/fringe.el.gz
 share/emacs/${EMACS_VERSION}/lisp/fringe.elc
 share/emacs/${EMACS_VERSION}/lisp/generic-x.el.gz
 share/emacs/${EMACS_VERSION}/lisp/generic-x.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/.dir-locals.el
 share/emacs/${EMACS_VERSION}/lisp/gnus/auth-source.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/auth-source.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/canlock.el.gz
