@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2010/08/25 02:16:24 gls Exp $
+# $NetBSD: Makefile,v 1.24 2010/10/24 20:35:06 gls Exp $
 #
 
-DISTNAME=		asciidoc-8.6.1
+DISTNAME=		asciidoc-8.6.2
 CATEGORIES=		textproc
-MASTER_SITES=		${HOMEPAGE:Q} \
-			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asciidoc/}
 
-MAINTAINER=		gdt@NetBSD.org
+MAINTAINER=		gls@NetBSD.org
 HOMEPAGE=		http://www.methods.co.nz/asciidoc/
 COMMENT=		ASCII to formatted document converter
 LICENSE=		gnu-gpl-v2
@@ -36,7 +35,7 @@ SUBST_CLASSES+=		ae
 SUBST_STAGE.ae=		pre-configure
 SUBST_MESSAGE.ae=	Fixing hard-coded Python interpreter paths.
 SUBST_FILES.ae=		a2x.py asciidoc.conf
-SUBST_FILES.ae+=		xhtml11.conf xhtml11-quirks.conf
+SUBST_FILES.ae+=	xhtml11.conf xhtml11-quirks.conf
 SUBST_SED.ae=		-e 's,python,${PYTHONBIN},'
 
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
@@ -58,8 +57,7 @@ do-install:
 
 	cd ${WRKSRC} && pax -wr -pma *.conf filters \
 		filters docbook-xsl/*.xsl stylesheets/*.css	\
-		javascripts/*.js images/icons/callouts/* images/icons/*.png \
-		images/icons/README dblatex/* \
+		javascripts/*.js images/* dblatex/* \
 		${DESTDIR}${PREFIX}/share/asciidoc/.
 
 	cd ${WRKSRC}/doc && pax -wr -pma *.csv *.txt *.pdf *.epub \
