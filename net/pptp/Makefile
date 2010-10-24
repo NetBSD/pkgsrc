@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2010/02/14 19:19:37 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/10/24 16:16:28 pettai Exp $
 
-DISTNAME=	pptp-1.7.0
-PKGREVISION=	2
+DISTNAME=	pptp-1.7.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pptpclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pptpclient.sourceforge.net/
 COMMENT=	PPTP client package for Microsoft VPN servers (no encryption yet)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
