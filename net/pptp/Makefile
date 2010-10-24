@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2010/10/24 16:16:28 pettai Exp $
+# $NetBSD: Makefile,v 1.15 2010/10/24 16:55:03 pettai Exp $
 
 DISTNAME=	pptp-1.7.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pptpclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pptpclient.sourceforge.net/
-COMMENT=	PPTP client package for Microsoft VPN servers (no encryption yet)
+COMMENT=	PPTP client package for Microsoft VPN servers
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -30,9 +31,17 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 # Not quite yet---special config for MPPE in pppd.
-#.if defined(PPTP_USE_MPPE)
-#DEPENDS+=	ppp-mppe-2.3.9:../../net/ppp-mppe
-#CONFIGURE_ARGS+= --with-pppd=${PREFIX}/sbin/pppd
-#.endif
+.if defined(PPTP_USE_MPPE)
+DEPENDS+=	pppd>=2.4.3:../../net/ppp
+MAKE_FLAGS+=	PPPD=${PREFIX}/sbin/pppd
+.else
+MAKE_FLAGS+=	PPPD=/usr/sbin/pppd
+.endif
+
+SUBST_CLASSES+=		pptp
+SUBST_MESSAGE.pptp=	"Fixing hardcoded paths."
+SUBST_STAGE.pptp=	post-patch
+SUBST_FILES.pptp=	pptp.8
+SUBST_SED.pptp=		-e 's,/usr,${PREFIX},g'
 
 .include "../../mk/bsd.pkg.mk"
