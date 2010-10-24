@@ -1,0 +1,22 @@
+To verify a design, a formal model is built using PROMELA, Spin's
+input language.  PROMELA is a non-deterministic language, loosely
+based on Dijkstra's guarded command language notation and borrowing
+the notation for I/O operations from Hoare's CSP language.
+
+Spin can be used in four main modes:
+
+1.  as a simulator, allowing for rapid prototyping with a random,
+guided, or interactive simulations
+
+2.  as an exhaustive verifier, capable of rigorously proving the
+validity of user specified correctness requirements (using partial
+order reduction theory to optimize the search)
+
+3.  as proof approximation system that can validate even very large
+system models with maximal coverage of the state space.
+
+4.  as a driver for swarm verification (a new form of swarm
+computing), which can make optimal use of large numbers of available
+compute cores to leverage parallelism and search diversification
+techniques, which increases the chance of locating defects in very
+large verification models.
