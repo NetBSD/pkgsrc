@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2010/09/05 22:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2010/10/24 22:00:15 ahoka Exp $
 
 PKGREVISION=	8
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software
 
