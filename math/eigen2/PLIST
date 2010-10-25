@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/04 21:13:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/10/25 20:03:52 markd Exp $
 include/eigen2/Eigen/Array
 include/eigen2/Eigen/Cholesky
 include/eigen2/Eigen/Core
+include/eigen2/Eigen/Dense
+include/eigen2/Eigen/Eigen
 include/eigen2/Eigen/Geometry
 include/eigen2/Eigen/LU
 include/eigen2/Eigen/LeastSquares
+include/eigen2/Eigen/NewStdVector
 include/eigen2/Eigen/QR
 include/eigen2/Eigen/QtAlignedMalloc
 include/eigen2/Eigen/SVD
@@ -120,3 +123,4 @@ include/eigen2/Eigen/src/Sparse/UmfPackSupport.h
 include/eigen2/unsupported/Eigen/IterativeSolvers
 include/eigen2/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h
 include/eigen2/unsupported/Eigen/src/IterativeSolvers/IterationController.h
+share/pkgconfig/eigen2.pc

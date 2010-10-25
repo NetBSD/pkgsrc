@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/08/04 21:13:30 markd Exp $
+# $NetBSD: Makefile,v 1.7 2010/10/25 20:03:52 markd Exp $
 
-DISTNAME=	2.0.4
-PKGNAME=	eigen-2.0.4
+DISTNAME=	2.0.15
+PKGNAME=	eigen-2.0.15
 CATEGORIES=	math
-MASTER_SITES=   http://bitbucket.org/eigen/eigen2/get/
+MASTER_SITES=   http://bitbucket.org/eigen/eigen/get/
 DIST_SUBDIR=	eigen2
 EXTRACT_SUFX=	.tar.bz2
 
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2
 
 USE_LANGUAGES+= c c++
 USE_CMAKE= yes
-WRKSRC=		${WRKDIR}/eigen2
+WRKSRC=		${WRKDIR}/eigen
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
