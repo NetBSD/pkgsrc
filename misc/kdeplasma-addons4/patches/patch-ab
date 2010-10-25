@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/10/25 20:55:26 markd Exp $
+
+--- libs/lancelot-datamodels/FavoriteApplications.h.orig	2010-07-06 06:54:41.000000000 +0000
++++ libs/lancelot-datamodels/FavoriteApplications.h
+@@ -42,7 +42,7 @@ public:
+ 
+     bool addFavorite(QString url);
+ 
+-    class PassagewayViewProxy: public Lancelot::ActionTreeModelProxy {
++    class LANCELOT_EXPORT PassagewayViewProxy: public Lancelot::ActionTreeModelProxy {
+     public:
+         PassagewayViewProxy();
+         virtual ~PassagewayViewProxy();
