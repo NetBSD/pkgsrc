@@ -1,11 +1,11 @@
-$NetBSD: patch-be,v 1.1 2010/03/23 12:43:38 tnn Exp $
+$NetBSD: patch-be,v 1.1.6.1 2010/10/25 08:23:42 tron Exp $
 
 Disable all sound support for now since it causes
 crashes and doesn't work correctly anyway ...
 
---- widget/src/gtk2/nsSound.cpp.orig	2010-03-15 14:56:04.000000000 +0000
+--- widget/src/gtk2/nsSound.cpp.orig	2010-10-12 17:46:08.000000000 +0000
 +++ widget/src/gtk2/nsSound.cpp
-@@ -149,6 +149,8 @@ nsSound::Init()
+@@ -138,6 +138,8 @@ nsSound::Init()
  
      mInited = PR_TRUE;
  
@@ -13,4 +13,4 @@ crashes and doesn't work correctly anyway ...
 +
      if (!elib) {
          elib = PR_LoadLibrary("libesd.so.0");
-         if (elib) {
+     }
