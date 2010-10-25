@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.3 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-ag,v 1.3.6.1 2010/10/25 16:30:56 tron Exp $
 
---- mozilla/nsprpub/pr/include/md/_freebsd.h.orig	2009-06-29 18:15:06.000000000 +0200
+--- mozilla/nsprpub/pr/include/md/_freebsd.h.orig	2010-08-24 21:32:07.000000000 +0000
 +++ mozilla/nsprpub/pr/include/md/_freebsd.h
 @@ -79,7 +79,7 @@
- #define _PR_NO_LARGE_FILES
+ #define _PR_HAVE_LARGE_OFF_T
  
  #if defined(_PR_PTHREADS)
 -#if __FreeBSD_version >= 400008

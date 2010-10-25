@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.55 2010/09/09 11:12:27 tnn Exp $
+$NetBSD: distinfo,v 1.55.2.1 2010/10/25 16:30:55 tron Exp $
 
-SHA1 (seamonkey-2.0.7.source.tar.bz2) = ec03e359accdd40d0183ee1bef623aeaf7d04b81
-RMD160 (seamonkey-2.0.7.source.tar.bz2) = 6f3fd9ea0352718631fd11c568f869f626782e56
-Size (seamonkey-2.0.7.source.tar.bz2) = 61496455 bytes
+SHA1 (seamonkey-2.0.9.source.tar.bz2) = c23f61d06c54cda841da128b3e2a649a2390eebb
+RMD160 (seamonkey-2.0.9.source.tar.bz2) = d6f7cc463564b4e18ed5d71f15ccd611c7b7050b
+Size (seamonkey-2.0.9.source.tar.bz2) = 61599701 bytes
 SHA1 (patch-aa) = 0d46562e73fce3fc1bf590ac93a28b2202a8e214
 SHA1 (patch-aa-toplevel) = 458051a1b3318b49124192c6e97cb9ed0d92dead
 SHA1 (patch-ab) = c7a6961362b131f0a39f65355562b115fae3be85
@@ -10,12 +10,11 @@ SHA1 (patch-ac) = e181323e153ee061b7f3644b599294a4c4a3e3e8
 SHA1 (patch-ad) = f49147e2fa28400986b659ec50918e3835db0105
 SHA1 (patch-ae) = cf4cb737fc29ef7ac6ffe1b3bc504743441e4828
 SHA1 (patch-af) = 16cae98e043dedeb6331212fd15ce914196fe8c7
-SHA1 (patch-ag) = 7f8c3ac1bec475dd2b6fd6e10e5304ab9c112a67
+SHA1 (patch-ag) = 22cca24b67c85fbf9bafb35441dfcb460ecde6bf
 SHA1 (patch-ah) = 10c80ec60801295b037b4a45fbad8937922da235
 SHA1 (patch-ai) = 4d701ece9a2aaa0b640c189745fa7e731617fb7c
 SHA1 (patch-aj) = 89d390f7eeeb52256265955610b3cad4b62c5aa7
 SHA1 (patch-ak) = dca377e3cb733a48c3aa071a74bba8d2535ee161
-SHA1 (patch-al) = 893eb0c096f61b52a6299eff1e5ab520014fbda4
 SHA1 (patch-am) = 81bcda476a7b54050ed1ae87bd47cf9de8f19919
 SHA1 (patch-an) = e30362e1a07c6c8e96dc81d134517685c3f19ca9
 SHA1 (patch-ao) = 6307d82a2eb65131908b0d4d05da7433b6cf38d1
@@ -47,7 +46,7 @@ SHA1 (patch-mj) = 9b28802eb665a7a77e879ec44e9da52e2e79ec8b
 SHA1 (patch-mk) = 3c25934e0c7b9277d96a5635b961e1fb6682ab7b
 SHA1 (patch-ml) = ef7d87fff48f298f4c1ed037439eaf8c7c574f68
 SHA1 (patch-mm) = 1ef13fbf0872484778cb8edfff769214ea9a39a4
-SHA1 (patch-mn) = beb92ccc59f909f0d4f5f5bb62ad834b55fc94ce
+SHA1 (patch-mn) = 3a1c25a3f5a1532331424fc1e720f35cd0ed5d5b
 SHA1 (patch-mp) = 24bac4975548f0a058c2770865706fedb27aa0e6
 SHA1 (patch-na) = b7c0feed9546ca1168c696bf7ea6bbc8ea4564c4
 SHA1 (patch-nd) = 007b8d1310990253e86dab579397b02ced42cb71
