@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/10/18 07:08:22 adam Exp $
+# $NetBSD: Makefile,v 1.34 2010/10/25 07:44:32 tnn Exp $
 
 DISTNAME=	sqlite-amalgamation-3.7.3
 PKGNAME=	${DISTNAME:S/sqlite-amalgamation/sqlite3/}
@@ -36,10 +36,6 @@ CFLAGS+=		-DSQLITE_ENABLE_UNLOCK_NOTIFY=1
 # Uses dlopen and friends but doesn't use -ldl on Linux.
 # See http://www.sqlite.org/cvstrac/tktview?tn=3555
 LIBS+=			${BUILDLINK_LDADD.dl}
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/sqlite3.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sqlite3.1
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
