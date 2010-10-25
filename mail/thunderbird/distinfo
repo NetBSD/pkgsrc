@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.74 2010/09/09 10:58:50 tnn Exp $
+$NetBSD: distinfo,v 1.74.2.1 2010/10/25 15:34:49 tron Exp $
 
 SHA1 (enigmail-1.1.2.tar.gz) = d29fce2b20a36d210b12c28fcbbee965007c95aa
 RMD160 (enigmail-1.1.2.tar.gz) = 2c1fa3494c1c2458635a3d68929ce7ff8fdb48e7
 Size (enigmail-1.1.2.tar.gz) = 1280923 bytes
-SHA1 (thunderbird-3.1.3.source.tar.bz2) = 7db61ceb804ba766b33babf92738b4e56ff6342a
-RMD160 (thunderbird-3.1.3.source.tar.bz2) = 293f897303b0764650f41d6dcecd3620d2262a0b
-Size (thunderbird-3.1.3.source.tar.bz2) = 65759283 bytes
+SHA1 (thunderbird-3.1.5.source.tar.bz2) = fe419b1df04a53275f19f7097d1a9b3d2ee71b53
+RMD160 (thunderbird-3.1.5.source.tar.bz2) = b4aa0856cf4f2f83a5ad5753a84744a33b5f5634
+Size (thunderbird-3.1.5.source.tar.bz2) = 65846402 bytes
 SHA1 (patch-aa) = 0d46562e73fce3fc1bf590ac93a28b2202a8e214
 SHA1 (patch-aa-toplevel) = 0a872c898af5846a3493dadc2253ba3c72fa3094
 SHA1 (patch-ab) = abf862976c04594dc4f99d34a2b58725efafd5fd
@@ -44,7 +44,6 @@ SHA1 (patch-directory_c-sdk_ldap_libraries_libldap_Makefile.in) = 6e9788e5e9575f
 SHA1 (patch-ma) = 9b9bc5e5ced5831aa14e1549ed2ddf0b9c2ce986
 SHA1 (patch-ma-toplevel) = 460326a0551fecd13ca188cff907c89cce359c31
 SHA1 (patch-mb) = c27a2a8891bd5215fef9b920baa87499424d278f
-SHA1 (patch-mc) = b16bd1a88bafe14c7d9ff00e9623b6a346eb043a
 SHA1 (patch-md) = 932c2b0237c9690da06533f0abfeabddf32d8f3e
 SHA1 (patch-me) = 775262c00ac16ea78a11ede5678e3d08f97c9640
 SHA1 (patch-mf) = 9aa245b2704df3b2009a8dee0e8217cbd20df9d0
