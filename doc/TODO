@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9816 2010/10/24 16:16:57 pettai Exp $
+$NetBSD: TODO,v 1.9817 2010/10/25 08:21:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,7 +334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GutenMark-20090216
-	o ImageMagick-6.6.5.1
+	o ImageMagick-6.6.5.3
 	o JBidwatcher-2.1.2
 	o MAMEDiff-2.30
 	o Mesa-7.9
@@ -363,7 +363,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.8
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o akonadi-1.4.0
+	o akonadi-1.4.1
 	o album-4.06
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -412,7 +412,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
-	o asymptote-2.05
+	o asymptote-2.06
 	o at-spi-1.32.0
 	o aterm-1.0.1
 	o attica-0.2.0
@@ -677,13 +677,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.19
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.11
-	o gentoo-0.19.3
+	o gentoo-0.19.4
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
 	o gettext-m4-0.18.1.1
 	o gfract-0.33
 	o ghc-6.12.2
 	o ghostscript-9.0
+	o gif2png-2.5.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.5
@@ -951,7 +952,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.3.0
+	o mathomatic-15.3.1
 	o mawk-1.3.4.20100625
 	o mc-4.7.0.9
 	o mdocml-1.10.6
@@ -989,7 +990,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
 	o moc-2.4.4
-	o modular-xorg-server-1.9.0
+	o modular-xorg-server-1.9.1
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o monotone-0.48.1
@@ -1069,7 +1070,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
-	o p5-PerlMagick-6.6.5.1
+	o p5-PerlMagick-6.6.5.3
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1174,6 +1175,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qrencode-3.1.1
 	o qt4-4.7.0
 	o qt4-creator-2.0.0
+	o qt4-libs-4.7.0
 	o qvplay-0.95
 	o radiance-3.7.2
 	o raine-0.51.8
@@ -1211,7 +1213,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o samba-3.4.9
 	o samba-3.5.6
 	o sarg-2.2.5
-	o sawfish-1.7.0
+	o sawfish-1.7.0.1
 	o saxon-9.2
 	o sbcl-1.0.43
 	o scala-2.8.0
@@ -1220,9 +1222,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.2.0
 	o scm-5e7
-	o scmgit-1.7.3
-	o scmgit-base-1.7.3.1
-	o scmgit-docs-1.7.3.1
+	o scmgit-1.7.3.2
+	o scmgit-base-1.7.3.2
+	o scmgit-docs-1.7.3.2
 	o scons-1.3.1 [pkg/43759]
 	o scons-2.0.1
 	o scribus-1.3.7
@@ -1384,8 +1386,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxGTK28-2.8.11
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
+	o wyrd-1.4.5
 	o x11perf-1.5.2
-	o x264-devel-20101016
+	o x264-devel-20101023
 	o xanalyser-1.30
 	o xapian-1.2.2
 	o xapian-omega-1.2.2
@@ -1487,7 +1490,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsd-3.3.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-265
+	o xterm-266
 	o xtraceroute-0.9.1
 	o xtrans-1.2.5
 	o xtu-1.3
@@ -1500,7 +1503,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xzip-182
 	o yafc-1.1
 	o yodl-2.14.3
-	o youtube-dl-20101003
+	o youtube-dl-20101024
 	o ysm-2.9.9.1
 	o yudit-2.9.2
 	o yorick-2.1.05
