@@ -15,3 +15,9 @@ lang/sun-jre6: security update
 Pullup ticket #3255 - requested by tnn
 devel/xulrunner: security update
 www/firefox: security update
+Pullup ticket #3256 - requested by tnn
+devel/nss: security update
+Pullup ticket #3257 - requested by tnn
+mail/thunderbird: security update
+Pullup ticket #3258 - requested by tnn
+www/seamonkey: security update
