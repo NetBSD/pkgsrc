@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.12 2009/09/07 06:51:19 minskim Exp $
+# $NetBSD: modules.mk,v 1.13 2010/10/25 00:03:03 minskim Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -41,6 +41,7 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
+#			emacs24,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
@@ -62,10 +63,12 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
+#			emacs24,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
+#			emacs24,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
@@ -131,7 +134,7 @@
 #		Description:
 #			Emacs major version.
 #		Possible values:
-#			20, 21, 22, 23, <integers more than that in the future>
+#			20, 21, 22, 23, 24, <integers more than that in the future>
 #
 #	EMACS_VERSION_MINOR
 #		Description:
@@ -220,6 +223,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
 _EMACS_VERSIONS_ALL= \
 	emacs20 emacs21 emacs21nox emacs22 emacs22nox emacs23 emacs23nox \
+	emacs24 \
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -230,6 +234,7 @@ _EMACS_PKGDIR_MAP= \
 	emacs22nox@../../editors/emacs22-nox11 \
 	emacs23@../../editors/emacs \
 	emacs23nox@../../editors/emacs-nox11 \
+	emacs24@../../editors/emacs-snapshot \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
