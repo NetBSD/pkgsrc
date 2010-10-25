@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/04/10 02:45:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/10/25 20:55:25 markd Exp $
 bin/akonadi2xml
 bin/akonadi_birthdays_resource
 bin/akonadi_contacts_resource
@@ -40,16 +40,16 @@ lib/kde4/kcm_akonadi_server.so
 lib/kde4/kio_akonadi.so
 lib/libakonadi-xml.so
 lib/libakonadi-xml.so.4
-lib/libakonadi-xml.so.4.4.0
+lib/libakonadi-xml.so.4.5.0
 lib/libkdepim-copy.so
 lib/libkdepim-copy.so.4
-lib/libkdepim-copy.so.4.4.0
+lib/libkdepim-copy.so.4.5.0
 lib/libmaildir.so
 lib/libmaildir.so.4
-lib/libmaildir.so.4.4.0
+lib/libmaildir.so.4.5.0
 lib/libmbox.so
 lib/libmbox.so.4
-lib/libmbox.so.4.4.0
+lib/libmbox.so.4.5.0
 share/akonadi/agents/birthdaysresource.desktop
 share/akonadi/agents/contactsresource.desktop
 share/akonadi/agents/icalresource.desktop

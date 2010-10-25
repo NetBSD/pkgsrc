@@ -1,0 +1,18 @@
+$NetBSD: patch-an,v 1.1 2010/10/25 20:55:29 markd Exp $
+
+--- kdecore/util/kshareddatacache.cpp.orig	2010-09-30 21:19:05.000000000 +0000
++++ kdecore/util/kshareddatacache.cpp
+@@ -60,6 +60,13 @@
+ #define MAP_ANONYMOUS MAP_ANON
+ #endif
+ 
++#ifdef __NetBSD__
++int pthread_mutexattr_setpshared(pthread_mutexattr_t *attr, int pshared)
++{
++	kError(264) << "Actually called pthread_mutexattr_setpshared().";
++}
++#endif
++
+ /**
+  * This is the hash function used for our pixmap data to hopefully make the
+  * hashing used to place the pixmaps as efficient as possible.

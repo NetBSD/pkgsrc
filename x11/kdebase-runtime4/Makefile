@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2010/09/14 11:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/10/25 20:55:27 markd Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 
@@ -12,6 +11,8 @@ CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=off
 
 DEPENDS+=	htdig>=3.2.0:../../www/htdig-devel
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
+
+USE_TOOLS+=		gmake
 
 .include "options.mk"
 
@@ -34,6 +35,8 @@ REPLACE_PERL+= \
 
 CONF_FILES+=	${PREFIX}/share/examples/kdebase-runtime4/kde-information.menu \
                 ${PKG_SYSCONFDIR}/xdg/menus/kde-information.menu
+CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.kcmremotewidgets.conf \
+		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmremotewidgets.conf
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
