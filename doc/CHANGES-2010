@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3810 2010/10/24 23:58:39 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3811 2010/10/25 00:01:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5188,3 +5188,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/spin version 5.2.5 [agc 2010-10-24]
 	Updated textproc/asciidoc to 8.6.2 [gls 2010-10-24]
 	Updated editors/emacs-snapshot to 24.0.50.20101024 [minskim 2010-10-24]
+	Updated textproc/markdown-mode to 1.7 [minskim 2010-10-25]
