@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3813 2010/10/25 08:55:01 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3814 2010/10/25 16:32:54 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5192,3 +5192,22 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-fancyvrb to 2.8 [minskim 2010-10-25]
 	Updated print/tex-fancyvrb-doc to 2.8 [minskim 2010-10-25]
 	Updated textproc/xmlrpc-c to 1.06.41 [adam 2010-10-25]
+	Updated graphics/freetype2 to 2.4.3 [drochner 2010-10-25]
+	Updated mail/libesmtp to 1.0.6 [drochner 2010-10-25]
+	Updated www/liferea-current to 1.6.5 [drochner 2010-10-25]
+	Updated x11/gtksourceview2 to 2.10.5 [drochner 2010-10-25]
+	Updated x11/gtk2-engines to 2.20.2 [drochner 2010-10-25]
+	Updated x11/gnome-screensaver to 2.30.2 [drochner 2010-10-25]
+	Updated x11/gdm to 2.20.11 [drochner 2010-10-25]
+	Updated devel/libbonoboui to 2.24.4 [drochner 2010-10-25]
+	Updated devel/libgnomeui to 2.24.4 [drochner 2010-10-25]
+	Updated devel/libgweather to 2.30.3 [drochner 2010-10-25]
+	Updated print/libgnomeprint to 2.18.8 [drochner 2010-10-25]
+	Updated print/libgnomeprintui to 2.18.6 [drochner 2010-10-25]
+	Updated net/libgdata to 0.6.5 [drochner 2010-10-25]
+	Updated net/ORBit2 to 2.14.19 [drochner 2010-10-25]
+	Updated mail/gmime24 to 2.4.20 [drochner 2010-10-25]
+	Updated graphics/libgnomecanvas to 2.30.2 [drochner 2010-10-25]
+	Updated multimedia/totem-pl-parser to 2.30.4 [drochner 2010-10-25]
+	Updated editors/gedit to 2.30.4 [drochner 2010-10-25]
+	Updated sysutils/gnome-vfs to 2.24.4 [drochner 2010-10-25]
