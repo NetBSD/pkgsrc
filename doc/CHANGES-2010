@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3811 2010/10/25 00:01:45 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3812 2010/10/25 07:05:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5189,3 +5189,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/asciidoc to 8.6.2 [gls 2010-10-24]
 	Updated editors/emacs-snapshot to 24.0.50.20101024 [minskim 2010-10-24]
 	Updated textproc/markdown-mode to 1.7 [minskim 2010-10-25]
+	Updated print/tex-fancyvrb to 2.8 [minskim 2010-10-25]
+	Updated print/tex-fancyvrb-doc to 2.8 [minskim 2010-10-25]
