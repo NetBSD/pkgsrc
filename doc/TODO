@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9817 2010/10/25 08:21:54 wiz Exp $
+$NetBSD: TODO,v 1.9818 2010/10/25 21:25:46 markd Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asymptote-2.06
 	o at-spi-1.32.0
 	o aterm-1.0.1
-	o attica-0.2.0
 	o auctex-11.86 [pkg/43966]
 	o audacious-plugins-2.4.0
 	o autoconvert-0.3.16
@@ -543,7 +542,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o efax-gtk-3.2.5
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
-	o eigen2-2.0.15
 	o ekiga-3.2.7
 	o electric-8.11
 	o electricfence-2.4.16
@@ -840,7 +838,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kdbg-2.2.2
-	o kde4-4.5.2
 	o kdevelop-4.0.2
 	o kdrill-6.5
 	o kid3-1.5
