@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 23:36:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/25 20:14:49 markd Exp $
 share/cmake/SharedDesktopOntologies/SharedDesktopOntologiesConfig.cmake
 share/cmake/SharedDesktopOntologies/SharedDesktopOntologiesConfigVersion.cmake
 share/ontology/core/rdf.ontology
@@ -13,10 +13,14 @@ share/ontology/dc/dctype.ontology
 share/ontology/dc/dctype.trig
 share/ontology/nepomuk/nao.ontology
 share/ontology/nepomuk/nao.trig
+share/ontology/nepomuk/ndo.ontology
+share/ontology/nepomuk/ndo.trig
 share/ontology/nepomuk/nrl.ontology
 share/ontology/nepomuk/nrl.trig
 share/ontology/nepomuk/nso.ontology
 share/ontology/nepomuk/nso.trig
+share/ontology/nepomuk/nuao.ontology
+share/ontology/nepomuk/nuao.trig
 share/ontology/nie/ncal.ontology
 share/ontology/nie/ncal.trig
 share/ontology/nie/nco.ontology
