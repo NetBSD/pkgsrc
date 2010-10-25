@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2010/10/21 13:52:15 adam Exp $
+# $NetBSD: Makefile,v 1.7 2010/10/25 12:47:09 adam Exp $
 
 DISTNAME=	clang-2.8
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-DISTFILES=	llvm-2.8.tgz clang-2.8.tgz
+# XXX remove on next update
+DIST_SUBDIR=	${PKGNAME_NOREV}
+DISTFILES=	llvm-${PKGVERSION_NOREV}.tgz clang-${PKGVERSION_NOREV}.tgz
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
@@ -11,7 +13,7 @@ COMMENT=	Low Level Virtual Machine compiler infrastructure
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/llvm-2.8
+WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown perl:build gmake
@@ -32,7 +34,7 @@ SUBST_FILES.perl=	tools/llvm-config/llvm-config.in.in
 SUBST_SED.perl=		-e 's,@PERL@,${PERL5},'
 
 post-extract:
-	mv ${WRKDIR}/clang-2.8 ${WRKDIR}/llvm-2.8/tools/clang
+	mv ${WRKDIR}/clang-${PKGVERSION_NOREV} ${WRKDIR}/llvm-2.8/tools/clang
 
 # XXX Darwin only?
 pre-install:
