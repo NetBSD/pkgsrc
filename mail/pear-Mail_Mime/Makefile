@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/10/17 01:06:14 tron Exp $
+# $NetBSD: Makefile,v 1.16 2010/10/25 10:52:43 obache Exp $
 
 DISTNAME=	Mail_Mime-1.8.0
 PKGREVISION=	1
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		shbang
 SUBST_STAGE.shbang=	post-install
-SUBST_FILES.shbang=	${PREFIX}/lib/php/doc/Mail_Mime/scripts/phail.php
+SUBST_FILES.shbang=	${DESTDIR}${PREFIX}/lib/php/doc/Mail_Mime/scripts/phail.php
 SUBST_SED.shbang=	-e "s|@prefix@|${PREFIX}|g"
 
 
