@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/02 19:18:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/25 07:04:39 minskim Exp $
+share/texmf-dist/doc/latex/fancyvrb/Changes
+share/texmf-dist/doc/latex/fancyvrb/Makefile
 share/texmf-dist/doc/latex/fancyvrb/README
 share/texmf-dist/doc/latex/fancyvrb/README.contrib
-share/texmf-dist/doc/latex/fancyvrb/artistic2.txt
 share/texmf-dist/doc/latex/fancyvrb/fancyvrb.pdf
+share/texmf-dist/doc/latex/fancyvrb/fvrb-ex.pdf
 share/texmf-dist/doc/latex/fancyvrb/t-fvrbex.tex

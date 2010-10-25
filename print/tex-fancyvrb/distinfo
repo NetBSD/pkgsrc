@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/11 00:18:41 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/10/25 07:04:38 minskim Exp $
 
-SHA1 (tex-fancyvrb-16609/fancyvrb.tar.xz) = 04a7185b1f0d9468275f929b0c2bca8e1189b5d6
-RMD160 (tex-fancyvrb-16609/fancyvrb.tar.xz) = 17bb4fb93ac3d9f0bc7cbb664a593a21f302ceaa
-Size (tex-fancyvrb-16609/fancyvrb.tar.xz) = 12236 bytes
+SHA1 (tex-fancyvrb-18492/fancyvrb.tar.xz) = b2d4fe46894f04c9327a3ae7526f8040c2f46c01
+RMD160 (tex-fancyvrb-18492/fancyvrb.tar.xz) = 04e0080c378f957f6f4065d7c711bb57a681acdc
+Size (tex-fancyvrb-18492/fancyvrb.tar.xz) = 12160 bytes
