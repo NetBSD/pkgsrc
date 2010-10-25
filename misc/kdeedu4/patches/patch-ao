@@ -1,10 +1,10 @@
-$NetBSD: patch-ao,v 1.1 2010/04/10 02:45:03 markd Exp $
+$NetBSD: patch-ao,v 1.2 2010/10/25 20:55:25 markd Exp $
 
---- kig/objects/object_factory.cc.orig	2010-04-05 12:37:32.000000000 +0000
+--- kig/objects/object_factory.cc.orig	2010-06-08 10:11:01.000000000 +0000
 +++ kig/objects/object_factory.cc
-@@ -40,6 +40,10 @@
- #include <functional>
+@@ -41,6 +41,10 @@
  #include <limits>
+ #include <iterator>
  
 +#ifdef __NetBSD__
 +#define fmin(a,b) ((a) < (b) ? (a) : (b))

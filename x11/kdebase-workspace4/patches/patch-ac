@@ -1,17 +1,18 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
+$NetBSD: patch-ac,v 1.2 2010/10/25 20:55:28 markd Exp $
 
---- kcontrol/kdm/main.cpp.orig	2008-07-03 17:05:24.000000000 +1200
+--- kcontrol/kdm/main.cpp.orig	2010-05-27 17:23:09.000000000 +0000
 +++ kcontrol/kdm/main.cpp
-@@ -188,7 +188,11 @@ KDModule::KDModule( QWidget *parent, con
- 		kWarning() << "user(s) '" << tgmapci.value().join( "," )
- 		<< "' have unknown GID " << tgmapci.key() << endl;
+@@ -281,8 +281,12 @@ KConfig *KDModule::createTempConfig()
+     pTempConfigFile->open();
+     QString tempConfigName = pTempConfigFile->fileName();
  
--	config = new KConfig( QString::fromLatin1(KDE_CONFDIR "/kdm/kdmrc"), KConfig::SimpleConfig );
-+	QFile confFile (QString::fromLatin1( "@PKG_SYSCONFDIR@" "/kdm/kdmrc" ));
-+	if ( !confFile.exists() )
-+		confFile.setFileName (QString::fromLatin1( KDE_CONFDIR "/kdm/kdmrc" ));
++    QFile confFile (QString::fromLatin1( "@PKG_SYSCONFDIR@" "/kdm/kdmrc" ));
++    if ( !confFile.exists() )
++	confFile.setFileName (QString::fromLatin1( KDE_CONFDIR "/kdm/kdmrc" ));
 +
-+	config = new KConfig( confFile.fileName(), KConfig::SimpleConfig );
+     KConfig *pSystemKDMConfig = new KConfig(
+-        QString::fromLatin1(KDE_CONFDIR "/kdm/kdmrc"), KConfig::SimpleConfig);
++        confFile.fileName(), KConfig::SimpleConfig);
  
- 	QVBoxLayout *top = new QVBoxLayout( this );
- 	top->setMargin( 0 );
+     KConfig *pTempConfig = pSystemKDMConfig->copyTo(tempConfigName);
+     pTempConfig->sync();
