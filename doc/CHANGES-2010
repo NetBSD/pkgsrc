@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3812 2010/10/25 07:05:33 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3813 2010/10/25 08:55:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5191,3 +5191,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/markdown-mode to 1.7 [minskim 2010-10-25]
 	Updated print/tex-fancyvrb to 2.8 [minskim 2010-10-25]
 	Updated print/tex-fancyvrb-doc to 2.8 [minskim 2010-10-25]
+	Updated textproc/xmlrpc-c to 1.06.41 [adam 2010-10-25]
