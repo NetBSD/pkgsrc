@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/07/04 11:02:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/10/25 20:55:29 markd Exp $
 share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
 share/icons/oxygen/128x128/actions/appointment-new.png
@@ -78,6 +78,7 @@ share/icons/oxygen/128x128/actions/transform-crop-and-resize.png
 share/icons/oxygen/128x128/actions/transform-move.png
 share/icons/oxygen/128x128/actions/transform-scale.png
 share/icons/oxygen/128x128/actions/user-group-new.png
+share/icons/oxygen/128x128/actions/view-conversation-balloon.png
 share/icons/oxygen/128x128/actions/view-media-lyrics.png
 share/icons/oxygen/128x128/actions/view-media-playlist.png
 share/icons/oxygen/128x128/actions/view-pim-contacts.png
@@ -187,6 +188,7 @@ share/icons/oxygen/128x128/apps/preferences-desktop-user.png
 share/icons/oxygen/128x128/apps/preferences-desktop-wallpaper.png
 share/icons/oxygen/128x128/apps/preferences-kcalc-constants.png
 share/icons/oxygen/128x128/apps/preferences-plugin.png
+share/icons/oxygen/128x128/apps/preferences-system-bluetooth-inactive.png
 share/icons/oxygen/128x128/apps/preferences-system-bluetooth.png
 share/icons/oxygen/128x128/apps/preferences-system-login.png
 share/icons/oxygen/128x128/apps/preferences-system-network-sharing.png
@@ -222,6 +224,11 @@ share/icons/oxygen/128x128/categories/applications-development-web.png
 share/icons/oxygen/128x128/categories/applications-development.png
 share/icons/oxygen/128x128/categories/applications-education-language.png
 share/icons/oxygen/128x128/categories/applications-education-mathematics.png
+share/icons/oxygen/128x128/categories/applications-education-miscellaneous.png
+share/icons/oxygen/128x128/categories/applications-education-preschool.png
+share/icons/oxygen/128x128/categories/applications-education-school.png
+share/icons/oxygen/128x128/categories/applications-education-science.png
+share/icons/oxygen/128x128/categories/applications-education-university.png
 share/icons/oxygen/128x128/categories/applications-education.png
 share/icons/oxygen/128x128/categories/applications-engineering.png
 share/icons/oxygen/128x128/categories/applications-games.png
@@ -265,9 +272,9 @@ share/icons/oxygen/128x128/devices/media-flash-sd-mmc.png
 share/icons/oxygen/128x128/devices/media-flash-smart-media.png
 share/icons/oxygen/128x128/devices/media-flash.png
 share/icons/oxygen/128x128/devices/media-floppy.png
-share/icons/oxygen/128x128/devices/media-optica-data.png
 share/icons/oxygen/128x128/devices/media-optical-audio.png
 share/icons/oxygen/128x128/devices/media-optical-blu-ray.png
+share/icons/oxygen/128x128/devices/media-optical-data.png
 share/icons/oxygen/128x128/devices/media-optical-dvd-video.png
 share/icons/oxygen/128x128/devices/media-optical-dvd.png
 share/icons/oxygen/128x128/devices/media-optical-mixed-cd.png
@@ -325,7 +332,12 @@ share/icons/oxygen/128x128/mimetypes/application-rtf.png
 share/icons/oxygen/128x128/mimetypes/application-sxw.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.ms-excel.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.ms-excel.sheet.binary.macroEnabled.12.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.ms-excel.template.macroEnabled.12.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.ms-powerpoint.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.ms-powerpoint.slideshow.macroEnabled.12.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.ms-powerpoint.template.macroEnabled.12.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.ms-word.template.macroEnabled.12.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.oasis.opendocument.chart.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.oasis.opendocument.database.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.oasis.opendocument.formula.png
@@ -336,6 +348,13 @@ share/icons/oxygen/128x128/mimetypes/application-vnd.oasis.opendocument.presenta
 share/icons/oxygen/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.oasis.opendocument.text.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.slideshow.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/oxygen/128x128/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.rn-realmedia.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.scribus.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.stardivision.calc.png
@@ -663,6 +682,7 @@ share/icons/oxygen/16x16/actions/dashboard-show.png
 share/icons/oxygen/16x16/actions/debug-execute-from-cursor.png
 share/icons/oxygen/16x16/actions/debug-execute-to-cursor.png
 share/icons/oxygen/16x16/actions/debug-run-cursor.png
+share/icons/oxygen/16x16/actions/debug-run.png
 share/icons/oxygen/16x16/actions/debug-step-instruction.png
 share/icons/oxygen/16x16/actions/debug-step-into-instruction.png
 share/icons/oxygen/16x16/actions/debug-step-into.png
@@ -913,6 +933,8 @@ share/icons/oxygen/16x16/actions/mail-mark-notjunk.png
 share/icons/oxygen/16x16/actions/mail-mark-read.png
 share/icons/oxygen/16x16/actions/mail-mark-unread-new.png
 share/icons/oxygen/16x16/actions/mail-mark-unread.png
+share/icons/oxygen/16x16/actions/mail-meeting-request-reply.png
+share/icons/oxygen/16x16/actions/mail-message-new-list.png
 share/icons/oxygen/16x16/actions/mail-message-new.png
 share/icons/oxygen/16x16/actions/mail-queue.png
 share/icons/oxygen/16x16/actions/mail-receive.png
@@ -993,6 +1015,7 @@ share/icons/oxygen/16x16/actions/quickopen-function.png
 share/icons/oxygen/16x16/actions/quickopen.png
 share/icons/oxygen/16x16/actions/rating.png
 share/icons/oxygen/16x16/actions/resource-calendar-child-insert.png
+share/icons/oxygen/16x16/actions/resource-calendar-child.png
 share/icons/oxygen/16x16/actions/resource-calendar-insert.png
 share/icons/oxygen/16x16/actions/resource-group-new.png
 share/icons/oxygen/16x16/actions/resource-group.png
@@ -1097,8 +1120,10 @@ share/icons/oxygen/16x16/actions/view-certificate-sign.png
 share/icons/oxygen/16x16/actions/view-certificate.png
 share/icons/oxygen/16x16/actions/view-choose.png
 share/icons/oxygen/16x16/actions/view-close.png
+share/icons/oxygen/16x16/actions/view-conversation-balloon.png
 share/icons/oxygen/16x16/actions/view-file-columns.png
 share/icons/oxygen/16x16/actions/view-filter.png
+share/icons/oxygen/16x16/actions/view-financial-forecast.png
 share/icons/oxygen/16x16/actions/view-form-action.png
 share/icons/oxygen/16x16/actions/view-form-table.png
 share/icons/oxygen/16x16/actions/view-form.png
@@ -1148,6 +1173,7 @@ share/icons/oxygen/16x16/actions/view-split-left-right.png
 share/icons/oxygen/16x16/actions/view-split-top-bottom.png
 share/icons/oxygen/16x16/actions/view-statistics.png
 share/icons/oxygen/16x16/actions/view-task-add.png
+share/icons/oxygen/16x16/actions/view-task-child-add.png
 share/icons/oxygen/16x16/actions/view-task-child.png
 share/icons/oxygen/16x16/actions/view-task.png
 share/icons/oxygen/16x16/actions/view-time-schedule-baselined-add.png
@@ -1156,6 +1182,7 @@ share/icons/oxygen/16x16/actions/view-time-schedule-baselined.png
 share/icons/oxygen/16x16/actions/view-time-schedule-calculus.png
 share/icons/oxygen/16x16/actions/view-time-schedule-child-insert.png
 share/icons/oxygen/16x16/actions/view-time-schedule-edit.png
+share/icons/oxygen/16x16/actions/view-time-schedule-insert.png
 share/icons/oxygen/16x16/actions/view-time-schedule.png
 share/icons/oxygen/16x16/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/16x16/actions/window-close.png
@@ -1169,6 +1196,7 @@ share/icons/oxygen/16x16/actions/zoom-original.png
 share/icons/oxygen/16x16/actions/zoom-out.png
 share/icons/oxygen/16x16/animations/process-idle-kde.png
 share/icons/oxygen/16x16/animations/process-working-kde.png
+share/icons/oxygen/16x16/apps/Charm.png
 share/icons/oxygen/16x16/apps/accessories-calculator.png
 share/icons/oxygen/16x16/apps/accessories-character-map.png
 share/icons/oxygen/16x16/apps/accessories-dictionary.png
@@ -1270,6 +1298,7 @@ share/icons/oxygen/16x16/apps/preferences-desktop-wallpaper.png
 share/icons/oxygen/16x16/apps/preferences-kcalc-constants.png
 share/icons/oxygen/16x16/apps/preferences-plugin-script.png
 share/icons/oxygen/16x16/apps/preferences-plugin.png
+share/icons/oxygen/16x16/apps/preferences-system-bluetooth-inactive.png
 share/icons/oxygen/16x16/apps/preferences-system-bluetooth.png
 share/icons/oxygen/16x16/apps/preferences-system-login.png
 share/icons/oxygen/16x16/apps/preferences-system-network-sharing.png
@@ -1311,6 +1340,11 @@ share/icons/oxygen/16x16/categories/applications-development-web.png
 share/icons/oxygen/16x16/categories/applications-development.png
 share/icons/oxygen/16x16/categories/applications-education-language.png
 share/icons/oxygen/16x16/categories/applications-education-mathematics.png
+share/icons/oxygen/16x16/categories/applications-education-miscellaneous.png
+share/icons/oxygen/16x16/categories/applications-education-preschool.png
+share/icons/oxygen/16x16/categories/applications-education-school.png
+share/icons/oxygen/16x16/categories/applications-education-science.png
+share/icons/oxygen/16x16/categories/applications-education-university.png
 share/icons/oxygen/16x16/categories/applications-education.png
 share/icons/oxygen/16x16/categories/applications-engineering.png
 share/icons/oxygen/16x16/categories/applications-games.png
@@ -1383,6 +1417,7 @@ share/icons/oxygen/16x16/emblems/emblem-favorite.png
 share/icons/oxygen/16x16/emblems/emblem-important.png
 share/icons/oxygen/16x16/emblems/emblem-locked.png
 share/icons/oxygen/16x16/emblems/emblem-mounted.png
+share/icons/oxygen/16x16/emblems/emblem-new.png
 share/icons/oxygen/16x16/emblems/emblem-symbolic-link.png
 share/icons/oxygen/16x16/emblems/emblem-unlocked.png
 share/icons/oxygen/16x16/emblems/emblem-unmounted.png
@@ -1421,7 +1456,12 @@ share/icons/oxygen/16x16/mimetypes/application-rtf.png
 share/icons/oxygen/16x16/mimetypes/application-sxw.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.ms-excel.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.ms-excel.sheet.binary.macroEnabled.12.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.ms-excel.template.macroEnabled.12.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.ms-powerpoint.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.ms-powerpoint.slideshow.macroEnabled.12.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.ms-powerpoint.template.macroEnabled.12.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.ms-word.template.macroEnabled.12.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.chart.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.database.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.formula.png
@@ -1432,6 +1472,13 @@ share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.text.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.slideshow.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.rn-realmedia.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.scribus.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.stardivision.calc.png
@@ -1718,8 +1765,14 @@ share/icons/oxygen/16x16/status/script-error.png
 share/icons/oxygen/16x16/status/security-high.png
 share/icons/oxygen/16x16/status/security-low.png
 share/icons/oxygen/16x16/status/security-medium.png
+share/icons/oxygen/16x16/status/task-accepted.png
+share/icons/oxygen/16x16/status/task-attempt.png
+share/icons/oxygen/16x16/status/task-attention.png
 share/icons/oxygen/16x16/status/task-complete.png
+share/icons/oxygen/16x16/status/task-delegate.png
+share/icons/oxygen/16x16/status/task-ongoing.png
 share/icons/oxygen/16x16/status/task-recurring.png
+share/icons/oxygen/16x16/status/task-reject.png
 share/icons/oxygen/16x16/status/task-reminder.png
 share/icons/oxygen/16x16/status/user-away-extended.png
 share/icons/oxygen/16x16/status/user-away.png
@@ -1805,6 +1858,7 @@ share/icons/oxygen/22x22/actions/dashboard-show.png
 share/icons/oxygen/22x22/actions/debug-execute-from-cursor.png
 share/icons/oxygen/22x22/actions/debug-execute-to-cursor.png
 share/icons/oxygen/22x22/actions/debug-run-cursor.png
+share/icons/oxygen/22x22/actions/debug-run.png
 share/icons/oxygen/22x22/actions/debug-step-instruction.png
 share/icons/oxygen/22x22/actions/debug-step-into-instruction.png
 share/icons/oxygen/22x22/actions/debug-step-into.png
@@ -2048,6 +2102,8 @@ share/icons/oxygen/22x22/actions/mail-mark-read.png
 share/icons/oxygen/22x22/actions/mail-mark-task.png
 share/icons/oxygen/22x22/actions/mail-mark-unread-new.png
 share/icons/oxygen/22x22/actions/mail-mark-unread.png
+share/icons/oxygen/22x22/actions/mail-meeting-request-reply.png
+share/icons/oxygen/22x22/actions/mail-message-new-list.png
 share/icons/oxygen/22x22/actions/mail-message-new.png
 share/icons/oxygen/22x22/actions/mail-queue.png
 share/icons/oxygen/22x22/actions/mail-receive.png
@@ -2141,6 +2197,7 @@ share/icons/oxygen/22x22/actions/quickopen-function.png
 share/icons/oxygen/22x22/actions/quickopen.png
 share/icons/oxygen/22x22/actions/rating.png
 share/icons/oxygen/22x22/actions/resource-calendar-child-insert.png
+share/icons/oxygen/22x22/actions/resource-calendar-child.png
 share/icons/oxygen/22x22/actions/resource-calendar-insert.png
 share/icons/oxygen/22x22/actions/resource-group-new.png
 share/icons/oxygen/22x22/actions/resource-group.png
@@ -2241,8 +2298,10 @@ share/icons/oxygen/22x22/actions/view-certificate-sign.png
 share/icons/oxygen/22x22/actions/view-certificate.png
 share/icons/oxygen/22x22/actions/view-choose.png
 share/icons/oxygen/22x22/actions/view-close.png
+share/icons/oxygen/22x22/actions/view-conversation-balloon.png
 share/icons/oxygen/22x22/actions/view-file-columns.png
 share/icons/oxygen/22x22/actions/view-filter.png
+share/icons/oxygen/22x22/actions/view-financial-forecast.png
 share/icons/oxygen/22x22/actions/view-form-action.png
 share/icons/oxygen/22x22/actions/view-form-table.png
 share/icons/oxygen/22x22/actions/view-form.png
@@ -2293,6 +2352,7 @@ share/icons/oxygen/22x22/actions/view-statistics.png
 share/icons/oxygen/22x22/actions/view-table-of-contents-ltr.png
 share/icons/oxygen/22x22/actions/view-table-of-contents-rtl.png
 share/icons/oxygen/22x22/actions/view-task-add.png
+share/icons/oxygen/22x22/actions/view-task-child-add.png
 share/icons/oxygen/22x22/actions/view-task-child.png
 share/icons/oxygen/22x22/actions/view-task.png
 share/icons/oxygen/22x22/actions/view-time-schedule-baselined-add.png
@@ -2301,6 +2361,7 @@ share/icons/oxygen/22x22/actions/view-time-schedule-baselined.png
 share/icons/oxygen/22x22/actions/view-time-schedule-calculus.png
 share/icons/oxygen/22x22/actions/view-time-schedule-child-insert.png
 share/icons/oxygen/22x22/actions/view-time-schedule-edit.png
+share/icons/oxygen/22x22/actions/view-time-schedule-insert.png
 share/icons/oxygen/22x22/actions/view-time-schedule.png
 share/icons/oxygen/22x22/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/22x22/actions/window-close.png
@@ -2416,6 +2477,7 @@ share/icons/oxygen/22x22/apps/preferences-desktop-wallpaper.png
 share/icons/oxygen/22x22/apps/preferences-kcalc-constants.png
 share/icons/oxygen/22x22/apps/preferences-plugin-script.png
 share/icons/oxygen/22x22/apps/preferences-plugin.png
+share/icons/oxygen/22x22/apps/preferences-system-bluetooth-inactive.png
 share/icons/oxygen/22x22/apps/preferences-system-bluetooth.png
 share/icons/oxygen/22x22/apps/preferences-system-login.png
 share/icons/oxygen/22x22/apps/preferences-system-network-sharing.png
@@ -2456,6 +2518,11 @@ share/icons/oxygen/22x22/categories/applications-development-web.png
 share/icons/oxygen/22x22/categories/applications-development.png
 share/icons/oxygen/22x22/categories/applications-education-language.png
 share/icons/oxygen/22x22/categories/applications-education-mathematics.png
+share/icons/oxygen/22x22/categories/applications-education-miscellaneous.png
+share/icons/oxygen/22x22/categories/applications-education-preschool.png
+share/icons/oxygen/22x22/categories/applications-education-school.png
+share/icons/oxygen/22x22/categories/applications-education-science.png
+share/icons/oxygen/22x22/categories/applications-education-university.png
 share/icons/oxygen/22x22/categories/applications-education.png
 share/icons/oxygen/22x22/categories/applications-engineering.png
 share/icons/oxygen/22x22/categories/applications-games.png
@@ -2534,6 +2601,7 @@ share/icons/oxygen/22x22/emblems/emblem-favorite.png
 share/icons/oxygen/22x22/emblems/emblem-important.png
 share/icons/oxygen/22x22/emblems/emblem-locked.png
 share/icons/oxygen/22x22/emblems/emblem-mounted.png
+share/icons/oxygen/22x22/emblems/emblem-new.png
 share/icons/oxygen/22x22/emblems/emblem-symbolic-link.png
 share/icons/oxygen/22x22/emblems/emblem-unlocked.png
 share/icons/oxygen/22x22/emblems/emblem-unmounted.png
@@ -2611,7 +2679,12 @@ share/icons/oxygen/22x22/mimetypes/application-rtf.png
 share/icons/oxygen/22x22/mimetypes/application-sxw.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.ms-excel.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.ms-excel.sheet.binary.macroEnabled.12.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.ms-excel.template.macroEnabled.12.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.ms-powerpoint.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.ms-powerpoint.slideshow.macroEnabled.12.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.ms-powerpoint.template.macroEnabled.12.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.ms-word.template.macroEnabled.12.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.oasis.opendocument.chart.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.oasis.opendocument.database.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.oasis.opendocument.formula.png
@@ -2622,6 +2695,13 @@ share/icons/oxygen/22x22/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/22x22/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.oasis.opendocument.text.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.slideshow.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/oxygen/22x22/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.rn-realmedia.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.scribus.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.stardivision.calc.png
@@ -2907,8 +2987,14 @@ share/icons/oxygen/22x22/status/script-error.png
 share/icons/oxygen/22x22/status/security-high.png
 share/icons/oxygen/22x22/status/security-low.png
 share/icons/oxygen/22x22/status/security-medium.png
+share/icons/oxygen/22x22/status/task-accepted.png
+share/icons/oxygen/22x22/status/task-attempt.png
+share/icons/oxygen/22x22/status/task-attention.png
 share/icons/oxygen/22x22/status/task-complete.png
+share/icons/oxygen/22x22/status/task-delegate.png
+share/icons/oxygen/22x22/status/task-ongoing.png
 share/icons/oxygen/22x22/status/task-recurring.png
+share/icons/oxygen/22x22/status/task-reject.png
 share/icons/oxygen/22x22/status/task-reminder.png
 share/icons/oxygen/22x22/status/user-away-extended.png
 share/icons/oxygen/22x22/status/user-away.png
@@ -2950,7 +3036,6 @@ share/icons/oxygen/256x256/actions/tools-media-optical-format.png
 share/icons/oxygen/256x256/actions/tools-rip-audio-cd.png
 share/icons/oxygen/256x256/actions/tools-rip-video-cd.png
 share/icons/oxygen/256x256/apps/Charm.png
-share/icons/oxygen/256x256/apps/MameExecutor.png
 share/icons/oxygen/256x256/apps/accessories-calculator.png
 share/icons/oxygen/256x256/apps/accessories-dictionary.png
 share/icons/oxygen/256x256/apps/akonadi.png
@@ -2978,12 +3063,15 @@ share/icons/oxygen/256x256/apps/krita.png
 share/icons/oxygen/256x256/apps/kspread.png
 share/icons/oxygen/256x256/apps/kword.png
 share/icons/oxygen/256x256/apps/lokalize.png
+share/icons/oxygen/256x256/apps/mameexecutor.png
 share/icons/oxygen/256x256/apps/multimedia-volume-control.png
 share/icons/oxygen/256x256/apps/oxygen.png
 share/icons/oxygen/256x256/apps/partitionmanager.png
 share/icons/oxygen/256x256/apps/planner.png
 share/icons/oxygen/256x256/apps/preferences-desktop-locale.png
 share/icons/oxygen/256x256/apps/preferences-desktop-screensaver.png
+share/icons/oxygen/256x256/apps/preferences-system-bluetooth-inactive.png
+share/icons/oxygen/256x256/apps/preferences-system-bluetooth.svgz
 share/icons/oxygen/256x256/apps/qelectrotech.png
 share/icons/oxygen/256x256/apps/quassel.png
 share/icons/oxygen/256x256/apps/strigi.png
@@ -3048,7 +3136,12 @@ share/icons/oxygen/256x256/mimetypes/application-rss+xml.png
 share/icons/oxygen/256x256/mimetypes/application-rtf.png
 share/icons/oxygen/256x256/mimetypes/application-sxw.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.ms-excel.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.ms-excel.sheet.binary.macroEnabled.12.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.ms-excel.template.macroEnabled.12.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.ms-powerpoint.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.ms-powerpoint.slideshow.macroEnabled.12.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.ms-powerpoint.template.macroEnabled.12.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.ms-word.template.macroEnabled.12.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.oasis.opendocument.chart.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.oasis.opendocument.database.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.oasis.opendocument.formula.png
@@ -3058,6 +3151,13 @@ share/icons/oxygen/256x256/mimetypes/application-vnd.oasis.opendocument.presenta
 share/icons/oxygen/256x256/mimetypes/application-vnd.oasis.opendocument.presentation.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.oasis.opendocument.text.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.slideshow.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/oxygen/256x256/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.scribus.png
 share/icons/oxygen/256x256/mimetypes/application-x-archive.png
 share/icons/oxygen/256x256/mimetypes/application-x-bittorrent.png
@@ -3224,6 +3324,7 @@ share/icons/oxygen/32x32/actions/dashboard-show.png
 share/icons/oxygen/32x32/actions/debug-execute-from-cursor.png
 share/icons/oxygen/32x32/actions/debug-execute-to-cursor.png
 share/icons/oxygen/32x32/actions/debug-run-cursor.png
+share/icons/oxygen/32x32/actions/debug-run.png
 share/icons/oxygen/32x32/actions/debug-step-instruction.png
 share/icons/oxygen/32x32/actions/debug-step-into-instruction.png
 share/icons/oxygen/32x32/actions/debug-step-into.png
@@ -3469,6 +3570,8 @@ share/icons/oxygen/32x32/actions/mail-mark-read.png
 share/icons/oxygen/32x32/actions/mail-mark-task.png
 share/icons/oxygen/32x32/actions/mail-mark-unread-new.png
 share/icons/oxygen/32x32/actions/mail-mark-unread.png
+share/icons/oxygen/32x32/actions/mail-meeting-request-reply.png
+share/icons/oxygen/32x32/actions/mail-message-new-list.png
 share/icons/oxygen/32x32/actions/mail-message-new.png
 share/icons/oxygen/32x32/actions/mail-queue.png
 share/icons/oxygen/32x32/actions/mail-receive.png
@@ -3542,6 +3645,7 @@ share/icons/oxygen/32x32/actions/quickopen-function.png
 share/icons/oxygen/32x32/actions/quickopen.png
 share/icons/oxygen/32x32/actions/rating.png
 share/icons/oxygen/32x32/actions/resource-calendar-child-insert.png
+share/icons/oxygen/32x32/actions/resource-calendar-child.png
 share/icons/oxygen/32x32/actions/resource-calendar-insert.png
 share/icons/oxygen/32x32/actions/resource-group-new.png
 share/icons/oxygen/32x32/actions/resource-group.png
@@ -3615,6 +3719,8 @@ share/icons/oxygen/32x32/actions/user-group-delete.png
 share/icons/oxygen/32x32/actions/user-group-new.png
 share/icons/oxygen/32x32/actions/user-group-properties.png
 share/icons/oxygen/32x32/actions/user-properties.png
+share/icons/oxygen/32x32/actions/view-bank-account-checking.png
+share/icons/oxygen/32x32/actions/view-bank-account-savings.png
 share/icons/oxygen/32x32/actions/view-bank-account.png
 share/icons/oxygen/32x32/actions/view-bank.png
 share/icons/oxygen/32x32/actions/view-barcode-add.png
@@ -3638,6 +3744,7 @@ share/icons/oxygen/32x32/actions/view-calendar-whatsnext.png
 share/icons/oxygen/32x32/actions/view-calendar-workweek.png
 share/icons/oxygen/32x32/actions/view-calendar.png
 share/icons/oxygen/32x32/actions/view-catalog.png
+share/icons/oxygen/32x32/actions/view-categories.png
 share/icons/oxygen/32x32/actions/view-certificate-add.png
 share/icons/oxygen/32x32/actions/view-certificate-export-secret.png
 share/icons/oxygen/32x32/actions/view-certificate-export-server.png
@@ -3648,12 +3755,17 @@ share/icons/oxygen/32x32/actions/view-certificate-sign.png
 share/icons/oxygen/32x32/actions/view-certificate.png
 share/icons/oxygen/32x32/actions/view-choose.png
 share/icons/oxygen/32x32/actions/view-close.png
+share/icons/oxygen/32x32/actions/view-conversation-balloon.png
 share/icons/oxygen/32x32/actions/view-credit-card-account.png
 share/icons/oxygen/32x32/actions/view-currency-list.png
 share/icons/oxygen/32x32/actions/view-documents-finances.png
+share/icons/oxygen/32x32/actions/view-expenses-categories.png
 share/icons/oxygen/32x32/actions/view-file-columns.png
 share/icons/oxygen/32x32/actions/view-filter.png
+share/icons/oxygen/32x32/actions/view-financial-categories.png
+share/icons/oxygen/32x32/actions/view-financial-forecast.png
 share/icons/oxygen/32x32/actions/view-financial-list.png
+share/icons/oxygen/32x32/actions/view-financial-payment-mode.png
 share/icons/oxygen/32x32/actions/view-financial-transfer.png
 share/icons/oxygen/32x32/actions/view-form-action.png
 share/icons/oxygen/32x32/actions/view-form-table.png
@@ -3661,6 +3773,7 @@ share/icons/oxygen/32x32/actions/view-form.png
 share/icons/oxygen/32x32/actions/view-fullscreen.png
 share/icons/oxygen/32x32/actions/view-grid.png
 share/icons/oxygen/32x32/actions/view-history.png
+share/icons/oxygen/32x32/actions/view-income-categories.png
 share/icons/oxygen/32x32/actions/view-investment.png
 share/icons/oxygen/32x32/actions/view-ldap-resource.png
 share/icons/oxygen/32x32/actions/view-left-close.png
@@ -3668,6 +3781,8 @@ share/icons/oxygen/32x32/actions/view-list-details.png
 share/icons/oxygen/32x32/actions/view-list-icons.png
 share/icons/oxygen/32x32/actions/view-list-text.png
 share/icons/oxygen/32x32/actions/view-list-tree.png
+share/icons/oxygen/32x32/actions/view-loan-asset.png
+share/icons/oxygen/32x32/actions/view-loan.png
 share/icons/oxygen/32x32/actions/view-media-artist.png
 share/icons/oxygen/32x32/actions/view-media-equalizer.png
 share/icons/oxygen/32x32/actions/view-media-lyrics.png
@@ -3707,6 +3822,7 @@ share/icons/oxygen/32x32/actions/view-stock-account.png
 share/icons/oxygen/32x32/actions/view-table-of-contents-ltr.png
 share/icons/oxygen/32x32/actions/view-table-of-contents-rtl.png
 share/icons/oxygen/32x32/actions/view-task-add.png
+share/icons/oxygen/32x32/actions/view-task-child-add.png
 share/icons/oxygen/32x32/actions/view-task-child.png
 share/icons/oxygen/32x32/actions/view-task.png
 share/icons/oxygen/32x32/actions/view-time-schedule-baselined-add.png
@@ -3715,6 +3831,7 @@ share/icons/oxygen/32x32/actions/view-time-schedule-baselined.png
 share/icons/oxygen/32x32/actions/view-time-schedule-calculus.png
 share/icons/oxygen/32x32/actions/view-time-schedule-child-insert.png
 share/icons/oxygen/32x32/actions/view-time-schedule-edit.png
+share/icons/oxygen/32x32/actions/view-time-schedule-insert.png
 share/icons/oxygen/32x32/actions/view-time-schedule.png
 share/icons/oxygen/32x32/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/32x32/actions/window-close.png
@@ -3832,6 +3949,7 @@ share/icons/oxygen/32x32/apps/preferences-desktop-wallpaper.png
 share/icons/oxygen/32x32/apps/preferences-kcalc-constants.png
 share/icons/oxygen/32x32/apps/preferences-plugin-script.png
 share/icons/oxygen/32x32/apps/preferences-plugin.png
+share/icons/oxygen/32x32/apps/preferences-system-bluetooth-inactive.png
 share/icons/oxygen/32x32/apps/preferences-system-bluetooth.png
 share/icons/oxygen/32x32/apps/preferences-system-login.png
 share/icons/oxygen/32x32/apps/preferences-system-network-sharing.png
@@ -3873,6 +3991,11 @@ share/icons/oxygen/32x32/categories/applications-development-web.png
 share/icons/oxygen/32x32/categories/applications-development.png
 share/icons/oxygen/32x32/categories/applications-education-language.png
 share/icons/oxygen/32x32/categories/applications-education-mathematics.png
+share/icons/oxygen/32x32/categories/applications-education-miscellaneous.png
+share/icons/oxygen/32x32/categories/applications-education-preschool.png
+share/icons/oxygen/32x32/categories/applications-education-school.png
+share/icons/oxygen/32x32/categories/applications-education-science.png
+share/icons/oxygen/32x32/categories/applications-education-university.png
 share/icons/oxygen/32x32/categories/applications-education.png
 share/icons/oxygen/32x32/categories/applications-engineering.png
 share/icons/oxygen/32x32/categories/applications-games.png
@@ -3953,6 +4076,7 @@ share/icons/oxygen/32x32/emblems/emblem-favorite.png
 share/icons/oxygen/32x32/emblems/emblem-important.png
 share/icons/oxygen/32x32/emblems/emblem-locked.png
 share/icons/oxygen/32x32/emblems/emblem-mounted.png
+share/icons/oxygen/32x32/emblems/emblem-new.png
 share/icons/oxygen/32x32/emblems/emblem-symbolic-link.png
 share/icons/oxygen/32x32/emblems/emblem-unlocked.png
 share/icons/oxygen/32x32/emblems/emblem-unmounted.png
@@ -3990,7 +4114,12 @@ share/icons/oxygen/32x32/mimetypes/application-rss+xml.png
 share/icons/oxygen/32x32/mimetypes/application-rtf.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.ms-excel.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.ms-excel.sheet.binary.macroEnabled.12.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.ms-excel.template.macroEnabled.12.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.ms-powerpoint.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.ms-powerpoint.slideshow.macroEnabled.12.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.ms-powerpoint.template.macroEnabled.12.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.ms-word.template.macroEnabled.12.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.chart.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.database.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.formula.png
@@ -4001,6 +4130,13 @@ share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.text.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.slideshow.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.rn-realmedia.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.scribus.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.stardivision.calc.png
@@ -4287,8 +4423,14 @@ share/icons/oxygen/32x32/status/script-error.png
 share/icons/oxygen/32x32/status/security-high.png
 share/icons/oxygen/32x32/status/security-low.png
 share/icons/oxygen/32x32/status/security-medium.png
+share/icons/oxygen/32x32/status/task-accepted.png
+share/icons/oxygen/32x32/status/task-attempt.png
+share/icons/oxygen/32x32/status/task-attention.png
 share/icons/oxygen/32x32/status/task-complete.png
+share/icons/oxygen/32x32/status/task-delegate.png
+share/icons/oxygen/32x32/status/task-ongoing.png
 share/icons/oxygen/32x32/status/task-recurring.png
+share/icons/oxygen/32x32/status/task-reject.png
 share/icons/oxygen/32x32/status/task-reminder.png
 share/icons/oxygen/32x32/status/user-away-extended.png
 share/icons/oxygen/32x32/status/user-away.png
@@ -4371,6 +4513,7 @@ share/icons/oxygen/48x48/actions/dashboard-show.png
 share/icons/oxygen/48x48/actions/debug-execute-from-cursor.png
 share/icons/oxygen/48x48/actions/debug-execute-to-cursor.png
 share/icons/oxygen/48x48/actions/debug-run-cursor.png
+share/icons/oxygen/48x48/actions/debug-run.png
 share/icons/oxygen/48x48/actions/debug-step-instruction.png
 share/icons/oxygen/48x48/actions/debug-step-into-instruction.png
 share/icons/oxygen/48x48/actions/debug-step-into.png
@@ -4589,6 +4732,8 @@ share/icons/oxygen/48x48/actions/mail-mark-read.png
 share/icons/oxygen/48x48/actions/mail-mark-task.png
 share/icons/oxygen/48x48/actions/mail-mark-unread-new.png
 share/icons/oxygen/48x48/actions/mail-mark-unread.png
+share/icons/oxygen/48x48/actions/mail-meeting-request-reply.png
+share/icons/oxygen/48x48/actions/mail-message-new-list.png
 share/icons/oxygen/48x48/actions/mail-message-new.png
 share/icons/oxygen/48x48/actions/mail-queue.png
 share/icons/oxygen/48x48/actions/mail-receive.png
@@ -4656,6 +4801,7 @@ share/icons/oxygen/48x48/actions/quickopen-function.png
 share/icons/oxygen/48x48/actions/quickopen.png
 share/icons/oxygen/48x48/actions/rating.png
 share/icons/oxygen/48x48/actions/resource-calendar-child-insert.png
+share/icons/oxygen/48x48/actions/resource-calendar-child.png
 share/icons/oxygen/48x48/actions/resource-calendar-insert.png
 share/icons/oxygen/48x48/actions/resource-group-new.png
 share/icons/oxygen/48x48/actions/resource-group.png
@@ -4726,6 +4872,8 @@ share/icons/oxygen/48x48/actions/user-group-delete.png
 share/icons/oxygen/48x48/actions/user-group-new.png
 share/icons/oxygen/48x48/actions/user-group-properties.png
 share/icons/oxygen/48x48/actions/user-properties.png
+share/icons/oxygen/48x48/actions/view-bank-account-checking.png
+share/icons/oxygen/48x48/actions/view-bank-account-savings.png
 share/icons/oxygen/48x48/actions/view-bank-account.png
 share/icons/oxygen/48x48/actions/view-bank.png
 share/icons/oxygen/48x48/actions/view-barcode-add.png
@@ -4749,6 +4897,7 @@ share/icons/oxygen/48x48/actions/view-calendar-whatsnext.png
 share/icons/oxygen/48x48/actions/view-calendar-workweek.png
 share/icons/oxygen/48x48/actions/view-calendar.png
 share/icons/oxygen/48x48/actions/view-catalog.png
+share/icons/oxygen/48x48/actions/view-categories.png
 share/icons/oxygen/48x48/actions/view-certificate-add.png
 share/icons/oxygen/48x48/actions/view-certificate-export-secret.png
 share/icons/oxygen/48x48/actions/view-certificate-export-server.png
@@ -4759,12 +4908,17 @@ share/icons/oxygen/48x48/actions/view-certificate-sign.png
 share/icons/oxygen/48x48/actions/view-certificate.png
 share/icons/oxygen/48x48/actions/view-choose.png
 share/icons/oxygen/48x48/actions/view-close.png
+share/icons/oxygen/48x48/actions/view-conversation-balloon.png
 share/icons/oxygen/48x48/actions/view-credit-card-account.png
 share/icons/oxygen/48x48/actions/view-currency-list.png
 share/icons/oxygen/48x48/actions/view-documents-finances.png
+share/icons/oxygen/48x48/actions/view-expenses-categories.png
 share/icons/oxygen/48x48/actions/view-file-columns.png
 share/icons/oxygen/48x48/actions/view-filter.png
+share/icons/oxygen/48x48/actions/view-financial-categories.png
+share/icons/oxygen/48x48/actions/view-financial-forecast.png
 share/icons/oxygen/48x48/actions/view-financial-list.png
+share/icons/oxygen/48x48/actions/view-financial-payment-mode.png
 share/icons/oxygen/48x48/actions/view-financial-transfer.png
 share/icons/oxygen/48x48/actions/view-form-action.png
 share/icons/oxygen/48x48/actions/view-form-table.png
@@ -4772,6 +4926,7 @@ share/icons/oxygen/48x48/actions/view-form.png
 share/icons/oxygen/48x48/actions/view-fullscreen.png
 share/icons/oxygen/48x48/actions/view-grid.png
 share/icons/oxygen/48x48/actions/view-history.png
+share/icons/oxygen/48x48/actions/view-income-categories.png
 share/icons/oxygen/48x48/actions/view-investment-account.png
 share/icons/oxygen/48x48/actions/view-investment.png
 share/icons/oxygen/48x48/actions/view-ldap-resource.png
@@ -4779,6 +4934,8 @@ share/icons/oxygen/48x48/actions/view-left-close.png
 share/icons/oxygen/48x48/actions/view-list-details.png
 share/icons/oxygen/48x48/actions/view-list-text.png
 share/icons/oxygen/48x48/actions/view-list-tree.png
+share/icons/oxygen/48x48/actions/view-loan-asset.png
+share/icons/oxygen/48x48/actions/view-loan.png
 share/icons/oxygen/48x48/actions/view-media-artist.png
 share/icons/oxygen/48x48/actions/view-media-equalizer.png
 share/icons/oxygen/48x48/actions/view-media-lyrics.png
@@ -4816,6 +4973,7 @@ share/icons/oxygen/48x48/actions/view-stock-account.png
 share/icons/oxygen/48x48/actions/view-table-of-contents-ltr.png
 share/icons/oxygen/48x48/actions/view-table-of-contents-rtl.png
 share/icons/oxygen/48x48/actions/view-task-add.png
+share/icons/oxygen/48x48/actions/view-task-child-add.png
 share/icons/oxygen/48x48/actions/view-task-child.png
 share/icons/oxygen/48x48/actions/view-task.png
 share/icons/oxygen/48x48/actions/view-time-schedule-baselined-add.png
@@ -4824,6 +4982,7 @@ share/icons/oxygen/48x48/actions/view-time-schedule-baselined.png
 share/icons/oxygen/48x48/actions/view-time-schedule-calculus.png
 share/icons/oxygen/48x48/actions/view-time-schedule-child-insert.png
 share/icons/oxygen/48x48/actions/view-time-schedule-edit.png
+share/icons/oxygen/48x48/actions/view-time-schedule-insert.png
 share/icons/oxygen/48x48/actions/view-time-schedule.png
 share/icons/oxygen/48x48/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/48x48/actions/window-close.png
@@ -4940,6 +5099,7 @@ share/icons/oxygen/48x48/apps/preferences-desktop-wallpaper.png
 share/icons/oxygen/48x48/apps/preferences-kcalc-constants.png
 share/icons/oxygen/48x48/apps/preferences-plugin-script.png
 share/icons/oxygen/48x48/apps/preferences-plugin.png
+share/icons/oxygen/48x48/apps/preferences-system-bluetooth-inactive.png
 share/icons/oxygen/48x48/apps/preferences-system-bluetooth.png
 share/icons/oxygen/48x48/apps/preferences-system-login.png
 share/icons/oxygen/48x48/apps/preferences-system-network-sharing.png
@@ -4981,6 +5141,11 @@ share/icons/oxygen/48x48/categories/applications-development-web.png
 share/icons/oxygen/48x48/categories/applications-development.png
 share/icons/oxygen/48x48/categories/applications-education-language.png
 share/icons/oxygen/48x48/categories/applications-education-mathematics.png
+share/icons/oxygen/48x48/categories/applications-education-miscellaneous.png
+share/icons/oxygen/48x48/categories/applications-education-preschool.png
+share/icons/oxygen/48x48/categories/applications-education-school.png
+share/icons/oxygen/48x48/categories/applications-education-science.png
+share/icons/oxygen/48x48/categories/applications-education-university.png
 share/icons/oxygen/48x48/categories/applications-education.png
 share/icons/oxygen/48x48/categories/applications-engineering.png
 share/icons/oxygen/48x48/categories/applications-games.png
@@ -5058,6 +5223,7 @@ share/icons/oxygen/48x48/devices/video-television.png
 share/icons/oxygen/48x48/emblems/emblem-favorite.png
 share/icons/oxygen/48x48/emblems/emblem-important.png
 share/icons/oxygen/48x48/emblems/emblem-mounted.png
+share/icons/oxygen/48x48/emblems/emblem-new.png
 share/icons/oxygen/48x48/emblems/emblem-symbolic-link.png
 share/icons/oxygen/48x48/emotes/face-angel.png
 share/icons/oxygen/48x48/emotes/face-embarrassed.png
@@ -5088,7 +5254,12 @@ share/icons/oxygen/48x48/mimetypes/application-rtf.png
 share/icons/oxygen/48x48/mimetypes/application-sxw.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.ms-excel.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.ms-excel.sheet.binary.macroEnabled.12.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.ms-excel.template.macroEnabled.12.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.ms-powerpoint.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.ms-powerpoint.slideshow.macroEnabled.12.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.ms-powerpoint.template.macroEnabled.12.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.ms-word.template.macroEnabled.12.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.chart.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.database.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.formula.png
@@ -5099,6 +5270,13 @@ share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.text.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.slideshow.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.rn-realmedia.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.scribus.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.stardivision.calc.png
@@ -5383,6 +5561,13 @@ share/icons/oxygen/48x48/status/script-error.png
 share/icons/oxygen/48x48/status/security-high.png
 share/icons/oxygen/48x48/status/security-low.png
 share/icons/oxygen/48x48/status/security-medium.png
+share/icons/oxygen/48x48/status/task-accepted.png
+share/icons/oxygen/48x48/status/task-attempt.png
+share/icons/oxygen/48x48/status/task-attention.png
+share/icons/oxygen/48x48/status/task-complete.png
+share/icons/oxygen/48x48/status/task-delegate.png
+share/icons/oxygen/48x48/status/task-ongoing.png
+share/icons/oxygen/48x48/status/task-reject.png
 share/icons/oxygen/48x48/status/user-away-extended.png
 share/icons/oxygen/48x48/status/user-away.png
 share/icons/oxygen/48x48/status/user-busy.png
@@ -5494,6 +5679,7 @@ share/icons/oxygen/64x64/actions/transform-crop-and-resize.png
 share/icons/oxygen/64x64/actions/transform-move.png
 share/icons/oxygen/64x64/actions/transform-scale.png
 share/icons/oxygen/64x64/actions/user-group-new.png
+share/icons/oxygen/64x64/actions/view-conversation-balloon.png
 share/icons/oxygen/64x64/actions/view-media-lyrics.png
 share/icons/oxygen/64x64/actions/view-media-playlist.png
 share/icons/oxygen/64x64/actions/view-pim-contacts.png
@@ -5600,6 +5786,7 @@ share/icons/oxygen/64x64/apps/preferences-desktop-user.png
 share/icons/oxygen/64x64/apps/preferences-desktop-wallpaper.png
 share/icons/oxygen/64x64/apps/preferences-kcalc-constants.png
 share/icons/oxygen/64x64/apps/preferences-plugin.png
+share/icons/oxygen/64x64/apps/preferences-system-bluetooth-inactive.png
 share/icons/oxygen/64x64/apps/preferences-system-bluetooth.png
 share/icons/oxygen/64x64/apps/preferences-system-login.png
 share/icons/oxygen/64x64/apps/preferences-system-network-sharing.png
@@ -5633,6 +5820,11 @@ share/icons/oxygen/64x64/categories/applications-development-web.png
 share/icons/oxygen/64x64/categories/applications-development.png
 share/icons/oxygen/64x64/categories/applications-education-language.png
 share/icons/oxygen/64x64/categories/applications-education-mathematics.png
+share/icons/oxygen/64x64/categories/applications-education-miscellaneous.png
+share/icons/oxygen/64x64/categories/applications-education-preschool.png
+share/icons/oxygen/64x64/categories/applications-education-school.png
+share/icons/oxygen/64x64/categories/applications-education-science.png
+share/icons/oxygen/64x64/categories/applications-education-university.png
 share/icons/oxygen/64x64/categories/applications-education.png
 share/icons/oxygen/64x64/categories/applications-engineering.png
 share/icons/oxygen/64x64/categories/applications-games.png
@@ -5678,6 +5870,7 @@ share/icons/oxygen/64x64/devices/media-flash.png
 share/icons/oxygen/64x64/devices/media-floppy.png
 share/icons/oxygen/64x64/devices/media-optical-audio.png
 share/icons/oxygen/64x64/devices/media-optical-blu-ray.png
+share/icons/oxygen/64x64/devices/media-optical-data.png
 share/icons/oxygen/64x64/devices/media-optical-dvd-video.png
 share/icons/oxygen/64x64/devices/media-optical-dvd.png
 share/icons/oxygen/64x64/devices/media-optical-mixed-cd.png
@@ -5735,7 +5928,12 @@ share/icons/oxygen/64x64/mimetypes/application-rtf.png
 share/icons/oxygen/64x64/mimetypes/application-sxw.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.ms-excel.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.ms-excel.sheet.binary.macroEnabled.12.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.ms-excel.template.macroEnabled.12.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.ms-powerpoint.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.ms-powerpoint.slideshow.macroEnabled.12.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.ms-powerpoint.template.macroEnabled.12.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.ms-word.template.macroEnabled.12.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.oasis.opendocument.chart.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.oasis.opendocument.database.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.oasis.opendocument.formula.png
@@ -5746,6 +5944,13 @@ share/icons/oxygen/64x64/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/64x64/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.oasis.opendocument.text.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.slideshow.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/oxygen/64x64/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.rn-realmedia.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.scribus.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.stardivision.calc.png
@@ -6033,6 +6238,7 @@ share/icons/oxygen/8x8/emblems/emblem-important.png
 share/icons/oxygen/8x8/emblems/emblem-link.png
 share/icons/oxygen/8x8/emblems/emblem-locked.png
 share/icons/oxygen/8x8/emblems/emblem-mounted.png
+share/icons/oxygen/8x8/emblems/emblem-new.png
 share/icons/oxygen/8x8/emblems/emblem-unlocked.png
 share/icons/oxygen/8x8/emblems/emblem-unmounted.png
 share/icons/oxygen/8x8/emblems/vcs-added.png
