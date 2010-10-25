@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/09/16 09:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/10/25 20:10:19 markd Exp $
 
-DISTNAME=	phonon-4.4.0
-PKGREVISION=	3
+DISTNAME=	phonon-4.4.2
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.4.0/}
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.4.2/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://phonon.kde.org
@@ -17,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
-WRKSRC=		${WRKDIR}/phonon-4.4
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
