@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3814 2010/10/25 16:32:54 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.3815 2010/10/25 18:37:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5211,3 +5211,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/totem-pl-parser to 2.30.4 [drochner 2010-10-25]
 	Updated editors/gedit to 2.30.4 [drochner 2010-10-25]
 	Updated sysutils/gnome-vfs to 2.24.4 [drochner 2010-10-25]
+	Updated graphics/gegl to 0.1.2nb2 [adam 2010-10-25]
