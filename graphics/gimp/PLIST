@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2010/10/16 09:54:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2010/10/25 19:06:10 adam Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -382,6 +382,7 @@ lib/gimp/2.0/plug-ins/tile-glass
 lib/gimp/2.0/plug-ins/tile-paper
 lib/gimp/2.0/plug-ins/tile-seamless
 lib/gimp/2.0/plug-ins/tile-small
+${PLIST.twain}lib/gimp/2.0/plug-ins/twain
 lib/gimp/2.0/plug-ins/unit-editor
 lib/gimp/2.0/plug-ins/unsharp-mask
 lib/gimp/2.0/plug-ins/value-invert
@@ -990,6 +991,7 @@ share/gimp/2.0/themes/Default/images/stock-question-64.png
 share/gimp/2.0/themes/Default/images/stock-warning-64.png
 share/gimp/2.0/themes/Small/gtkrc
 share/gimp/2.0/tips/gimp-tips.xml
+${PLIST.twain}share/gimp/2.0/twain/gimp-twain.png
 share/gtk-doc/html/libgimp/GimpAspectPreview.html
 share/gtk-doc/html/libgimp/GimpBrushSelectButton.html
 share/gtk-doc/html/libgimp/GimpDrawablePreview.html
