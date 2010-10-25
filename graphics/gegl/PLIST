@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/06/28 09:09:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/10/25 18:36:53 adam Exp $
 bin/gegl
 include/gegl-0.1/gegl-buffer.h
 include/gegl-0.1/gegl-chant.h
@@ -102,7 +102,7 @@ lib/gegl-0.1/stress.la
 lib/gegl-0.1/stretch-contrast.la
 lib/gegl-0.1/subtract.la
 lib/gegl-0.1/svg-huerotate.la
-lib/gegl-0.1/svg-load.la
+${PLIST.svg}lib/gegl-0.1/svg-load.la
 lib/gegl-0.1/svg-luminancetoalpha.la
 lib/gegl-0.1/svg-matrix.la
 lib/gegl-0.1/svg-multiply.la
@@ -118,6 +118,3 @@ lib/gegl-0.1/write-buffer.la
 lib/gegl-0.1/xor.la
 lib/libgegl-0.1.la
 lib/pkgconfig/gegl.pc
-share/gtk-doc/html/gegl/gegl.css
-share/gtk-doc/html/gegl/gegl.devhelp
-share/gtk-doc/html/gegl/operations.html
