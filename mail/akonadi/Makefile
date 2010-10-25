@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2010/09/14 11:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/10/25 20:19:15 markd Exp $
 
-DISTNAME=	akonadi-1.3.1
-PKGREVISION=	3
+DISTNAME=	akonadi-1.4.0
 CATEGORIES=	mail
 MASTER_SITES=	http://download.akonadi-project.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,6 +38,7 @@ SUBST_FILES.mysql=	server/CMakeLists.txt
 SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFIX}/libexec:"
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../textproc/soprano/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
