@@ -12,3 +12,6 @@ editors/emacs: build fix
 Pullup ticket #3253 - requested by obache
 lang/sun-jdk6: security update
 lang/sun-jre6: security update
+Pullup ticket #3255 - requested by tnn
+devel/xulrunner: security update
+www/firefox: security update
