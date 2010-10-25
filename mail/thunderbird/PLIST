@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.31 2010/07/12 16:49:21 tnn Exp $
+@comment $NetBSD: PLIST,v 1.31.2.1 2010/10/25 15:34:49 tron Exp $
 bin/thunderbird
 lib/thunderbird/README.txt
 lib/thunderbird/application.ini
+lib/thunderbird/blocklist.xml
 lib/thunderbird/chrome/classic.jar
 lib/thunderbird/chrome/classic.manifest
 lib/thunderbird/chrome/comm.jar
