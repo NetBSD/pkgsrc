@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/10/25 12:47:09 adam Exp $
+# $NetBSD: Makefile,v 1.8 2010/10/26 07:29:03 adam Exp $
 
 DISTNAME=	clang-2.8
 CATEGORIES=	lang
@@ -18,6 +18,7 @@ WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown perl:build gmake
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
 
 MAKE_DIRS+=		etc/llvm
 
@@ -34,7 +35,7 @@ SUBST_FILES.perl=	tools/llvm-config/llvm-config.in.in
 SUBST_SED.perl=		-e 's,@PERL@,${PERL5},'
 
 post-extract:
-	mv ${WRKDIR}/clang-${PKGVERSION_NOREV} ${WRKDIR}/llvm-2.8/tools/clang
+	mv ${WRKDIR}/clang-${PKGVERSION_NOREV} ${WRKSRC}/tools/clang
 
 # XXX Darwin only?
 pre-install:
