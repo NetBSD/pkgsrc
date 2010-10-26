@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.6 2010/08/29 05:50:19 adam Exp $
+# $NetBSD: bjam.mk,v 1.7 2010/10/26 13:07:41 adam Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
 
@@ -13,9 +13,6 @@ BJAM_ARGS+=		-j${MAKE_JOBS}
 BJAM_ARGS+=		--builddir=${WRKSRC}/build
 BJAM_ARGS+=		--layout=system
 BJAM_ARGS+=		--toolset=${BOOST_TOOLSET}
-.if ${OPSYS} == "Darwin"
-BJAM_ARGS+=		-sTARGET_LIBDIR=${PREFIX}/lib
-.endif
 BJAM_ARGS+=		--disable-long-double
 BJAM_ARGS+=		${BJAM_BUILD}
 
