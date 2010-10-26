@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/08/28 19:59:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/10/26 13:46:06 adam Exp $
 lib/libboost_date_time.a
 lib/libboost_date_time.so
 lib/libboost_date_time.so.${BOOST_VERSION}
@@ -17,16 +17,12 @@ lib/libboost_math_c99.so.${BOOST_VERSION}
 lib/libboost_math_c99f.a
 lib/libboost_math_c99f.so
 lib/libboost_math_c99f.so.${BOOST_VERSION}
-@comment lib/libboost_math_c99l.a
-@comment lib/libboost_math_c99l.so
 lib/libboost_math_tr1.a
 lib/libboost_math_tr1.so
 lib/libboost_math_tr1.so.${BOOST_VERSION}
 lib/libboost_math_tr1f.a
 lib/libboost_math_tr1f.so
 lib/libboost_math_tr1f.so.${BOOST_VERSION}
-@comment lib/libboost_math_tr1l.a
-@comment lib/libboost_math_tr1l.so
 lib/libboost_prg_exec_monitor.a
 lib/libboost_prg_exec_monitor.so
 lib/libboost_prg_exec_monitor.so.${BOOST_VERSION}
