@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/02/01 00:57:07 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.3 2010/10/26 23:53:43 minskim Exp $
 
 DISTNAME=	pkfix.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.5
+TEXLIVE_REV=	18835
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pkfix
