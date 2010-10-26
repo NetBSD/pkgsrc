@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.8.2.2 2010/10/26 11:09:48 tron Exp $
+
+Fix for CVE-2010-3702
+
+--- kpdf/xpdf/xpdf/Gfx.cc.orig	2008-02-13 09:37:05.000000000 +0000
++++ kpdf/xpdf/xpdf/Gfx.cc
+@@ -443,6 +443,7 @@ Gfx::Gfx(XRef *xrefA, OutputDev *outA, i
+ 
+   xref = xrefA;
+   subPage = gFalse;
++  parser = NULL;
+   printCommands = globalParams->getPrintCommands();
+ 
+   // start the resource stack
+@@ -485,6 +486,7 @@ Gfx::Gfx(XRef *xrefA, OutputDev *outA, D
+ 
+   xref = xrefA;
+   subPage = gTrue;
++  parser=NULL;
+   printCommands = globalParams->getPrintCommands();
+ 
+   // start the resource stack

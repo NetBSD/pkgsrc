@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2009/06/03 12:29:42 markd Exp $
+$NetBSD: distinfo,v 1.51.12.1 2010/10/26 11:09:48 tron Exp $
 
 SHA1 (kdegraphics-3.5.10.tar.bz2) = 9634e3ab364d017152fb6d636efad8811aeec6c3
 RMD160 (kdegraphics-3.5.10.tar.bz2) = 94278e4419ab99885fc9efae9b6ba5ba787f831e
@@ -6,3 +6,5 @@ Size (kdegraphics-3.5.10.tar.bz2) = 7440912 bytes
 SHA1 (patch-aa) = e5817f29b7857575dbb375db2388b37214f5d8c6
 SHA1 (patch-ab) = f2aa9e992904add4b95ecf2553a4e1bf9510913f
 SHA1 (patch-ac) = 3738313046fbb69ac527ae472fe5db24bdff3fff
+SHA1 (patch-ad) = 39f9af23006d6b8d09d0ecbb83a382df6b125152
+SHA1 (patch-ae) = e1984e4441f2b96697ae7a17028bd59bacb7cc73
