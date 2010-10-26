@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/05 17:20:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/26 23:42:25 minskim Exp $
 share/texmf/doc/texlive/texlive-en/Makefile
 share/texmf/doc/texlive/texlive-en/README
 share/texmf/doc/texlive/texlive-en/archive/bv-live.tex
@@ -10,6 +10,8 @@ share/texmf/doc/texlive/texlive-en/archive/live-2004.tex
 share/texmf/doc/texlive/texlive-en/archive/live-2005.tex
 share/texmf/doc/texlive/texlive-en/archive/live-2007.tex
 share/texmf/doc/texlive/texlive-en/archive/live-2008.tex
+share/texmf/doc/texlive/texlive-en/archive/live-2009.tex
+share/texmf/doc/texlive/texlive-en/archive/live-${PKGVERSION}.tex
 share/texmf/doc/texlive/texlive-en/archive/live-tl7.tex
 share/texmf/doc/texlive/texlive-en/archive/live4ht.cfg-2004
 share/texmf/doc/texlive/texlive-en/archive/mod.pl
@@ -24,6 +26,8 @@ share/texmf/doc/texlive/texlive-en/archive/tex-live.sty-2004
 share/texmf/doc/texlive/texlive-en/archive/tex-live.sty-2005
 share/texmf/doc/texlive/texlive-en/archive/tex-live.sty-2007
 share/texmf/doc/texlive/texlive-en/archive/tex-live.sty-2008
+share/texmf/doc/texlive/texlive-en/archive/tex-live.sty-2009
+share/texmf/doc/texlive/texlive-en/archive/tex-live.sty-${PKGVERSION}
 share/texmf/doc/texlive/texlive-en/archive/texlive.pl
 share/texmf/doc/texlive/texlive-en/live4ht.cfg
 share/texmf/doc/texlive/texlive-en/tex-live.css
