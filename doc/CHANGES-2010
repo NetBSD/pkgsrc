@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3821 2010/10/26 21:08:46 zafer Exp $
+$NetBSD: CHANGES-2010,v 1.3822 2010/10/26 23:32:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5250,3 +5250,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/rabbit to 0.9.1 [obache 2010-10-26]
 	Updated sysutils/memtester to 4.2.1 [zafer 2010-10-26]
 	Updated audio/mpg123 to 1.12.5 [zafer 2010-10-26]
+	Updated fonts/tex-times to 2010 [minskim 2010-10-26]
