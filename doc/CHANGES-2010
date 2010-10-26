@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3823 2010/10/26 23:39:11 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3824 2010/10/26 23:42:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5252,3 +5252,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/mpg123 to 1.12.5 [zafer 2010-10-26]
 	Updated fonts/tex-times to 2010 [minskim 2010-10-26]
 	Updated print/tex-texlive-common-doc to 2010 [minskim 2010-10-26]
+	Updated print/tex-texlive-en-doc to 2010 [minskim 2010-10-26]
