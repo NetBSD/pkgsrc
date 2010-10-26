@@ -1,0 +1,4 @@
+lib/libboost_math_c99l.a
+lib/libboost_math_c99l.dylib
+lib/libboost_math_tr1l.a
+lib/libboost_math_tr1l.dylib
