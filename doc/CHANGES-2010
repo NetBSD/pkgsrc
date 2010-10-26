@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3819 2010/10/26 13:30:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3820 2010/10/26 20:24:17 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5248,3 +5248,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdelibs4 to 4.5.2 [markd 2010-10-25]
 	Updated mail/clamav to 0.96.4 [adam 2010-10-26]
 	Updated graphics/rabbit to 0.9.1 [obache 2010-10-26]
+	Updated sysutils/memtester to 4.2.1 [zafer 2010-10-26]
