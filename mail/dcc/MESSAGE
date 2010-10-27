@@ -1,0 +1,56 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/10/27 12:26:37 gdt Exp $
+
+Use of Public DCC Servers
+-------------------------
+
+This package will by default query public servers; before running it
+read the documentation and terms of use at:
+
+  http://www.rhyolite.com/dcc/#public-servers
+
+The essence is:
+
+  Public DCC servers for anonymous DCC clients handling fewer than
+  100,000 mail messages per day are provided by people and organizations
+  in the following list. The default contents of /var/dcc/map file point
+  to these servers.
+
+  Note well that it has been wrong to take and resell the bandwidth and,
+  most important, human system administration work of the public DCC
+  servers to third parties. Blunt words for that include theft and
+  stealing. Vendors of "spam appliances" or services including DCC such
+  as "managed email" must provide DCC servers of their own or contract
+  for DCC services from others. They must also buy a license for the
+  commercial version of the DCC software.
+
+(Note that these terms are similar but not identical to the license
+for the dcc software itself.)
+
+===========================================================================
+===========================================================================
+
+DCC Server (dccd)
+-----------------
+
+Running an own DCC server is strongly recommended if your site handles
+more than 100k messages per day. It will decrease the load on public DCC
+servers and increase the responsiveness of your DCC clients. When doing
+so, cron-dccd should run at least once per day in order to remove old
+checksums from the database:
+
+   ${PREFIX}/libexec/cron-dccd
+
+===========================================================================
+===========================================================================
+
+SpamAssassin DCC Module
+-----------------------
+
+For a proper initialization of the SpamAssassin DCC module (DCC.pm),
+copy dcc-spamassassin.pre into the main SpamAssassin configuration
+directory and restart spamd:
+
+   ${PREFIX}/share/examples/dcc/dcc-spamassassin.pre
+
+===========================================================================

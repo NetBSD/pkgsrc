@@ -1,0 +1,61 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2010/10/27 12:26:37 gdt Exp $
+#
+#	mostly taken from homedir/Makefile.in
+#
+#
+case ${STAGE} in
+POST-INSTALL)
+	DD=/bin/dd
+	TR=/usr/bin/tr
+	CKSUM=/usr/bin/cksum
+	CDCC=${PREFIX}/bin/cdcc
+
+	URND=/dev/urandom
+
+	DCC_USER=@DCC_USER@
+	DCC_GROUP=@DCC_GROUP@
+	DCC_HOME=@DCC_HOME@
+	DCC_EGDIR=@DCC_EGDIR@
+
+	DCC_MODE_PRIV=0600
+
+	IDS=ids
+	MAP=map
+	MAPTXT=${MAP}.txt
+
+	SECRET1=$(${DD} if=${URND} count=1 2>&1 | ${CKSUM} | ${TR} '	 ' xy)
+	SECRET2=$(${DD} if=${URND} count=1 2>&1 | ${CKSUM} | ${TR} '	 ' xy)
+	#
+	#	assemble sed-commands
+	#
+	SED_CMD1="-e /^[:blank:]*[^#]/{s/secret1/${SECRET1}/;}"
+	SED_CMD2="-e /^[:blank:]*[^#]/{s/secret2/${SECRET2}/;}"
+
+	if [ ! -f ${DCC_HOME}/${IDS} ]; then
+		#
+		#	replace secrets in ids
+		#
+		${SED} ${SED_CMD1} ${SED_CMD2} ${DCC_EGDIR}/${IDS} \
+			>${DCC_HOME}/${IDS}
+		${CHMOD} ${DCC_MODE_PRIV} ${DCC_HOME}/${IDS}
+		${CHOWN} ${DCC_USER}:${DCC_GROUP} ${DCC_HOME}/${IDS}
+	fi
+
+	if [ ! -f ${DCC_HOME}/${MAP} -a ! -f ${DCC_HOME}/${MAPTXT} ]; then
+		#
+		#	replace random secrets in MAPTXT and generate MAP
+		#
+		${SED} ${SED_CMD1} ${DCC_EGDIR}/${MAPTXT} |
+			${CDCC} -qh${DCC_HOME} "new map; load -"
+		${CHMOD} ${DCC_MODE_PRIV} ${DCC_HOME}/${MAP}
+		${CHOWN} ${DCC_USER}:${DCC_GROUP} ${DCC_HOME}/${MAP}
+		#
+		#	generate MAPTXT from MAP
+		#
+		${CDCC} -qh${DCC_HOME} "file ${MAP}; info" \
+			>${DCC_HOME}/${MAPTXT}
+		${CHMOD} ${DCC_MODE_PRIV} ${DCC_HOME}/${MAPTXT}
+		${CHOWN} ${DCC_USER}:${DCC_GROUP} ${DCC_HOME}/${MAPTXT}
+	fi
+	;;
+esac
