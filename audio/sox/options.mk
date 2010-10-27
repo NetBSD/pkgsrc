@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/07/23 07:55:12 adam Exp $
+# $NetBSD: options.mk,v 1.4 2010/10/27 21:05:37 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sox
 PKG_SUPPORTED_OPTIONS=	lame oss
@@ -11,6 +11,9 @@ PKG_SUGGESTED_OPTIONS=
 .include "../../audio/lame/buildlink3.mk"
 .endif
 
-.if empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+=	--without-oss
+.if !empty(PKG_OPTIONS:Moss)
+CONFIGURE_ARGS+=	--enable-oss=yes
+.include "../../mk/oss.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--enable-oss=no
 .endif
