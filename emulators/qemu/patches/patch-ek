@@ -1,0 +1,45 @@
+$NetBSD: patch-ek,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+
+Improve ATA IDENTIFY word 64 contents
+(fixed in upstream master but not in stable-0.13 branch)
+http://git.qemu.org/qemu.git/commit/?id=79d1d3311319f3390f540f547becaba9d957f84c
+
+Don't use <0 against unsigned variable
+(fixed in upstream master but not in stable-0.13 branch)
+http://git.qemu.org/qemu.git/commit/?id=7bccf57383cca60a778d5c543ac80c9f62d89ef2
+
+--- hw/ide/core.c.orig	2010-08-31 13:18:20.000000000 +0000
++++ hw/ide/core.c	2010-09-11 14:03:19.000000000 +0000
+@@ -138,6 +138,7 @@ static void ide_identify(IDEState *s)
+     put_le16(p + 61, s->nb_sectors >> 16);
+     put_le16(p + 62, 0x07); /* single word dma0-2 supported */
+     put_le16(p + 63, 0x07); /* mdma0-2 supported */
++    put_le16(p + 64, 0x03); /* pio3-4 supported */
+     put_le16(p + 65, 120);
+     put_le16(p + 66, 120);
+     put_le16(p + 67, 120);
+@@ -198,13 +199,12 @@ static void ide_atapi_identify(IDEState 
+     put_le16(p + 53, 7); /* words 64-70, 54-58, 88 valid */
+     put_le16(p + 62, 7);  /* single word dma0-2 supported */
+     put_le16(p + 63, 7);  /* mdma0-2 supported */
+-    put_le16(p + 64, 0x3f); /* PIO modes supported */
+ #else
+     put_le16(p + 49, 1 << 9); /* LBA supported, no DMA */
+     put_le16(p + 53, 3); /* words 64-70, 54-58 valid */
+     put_le16(p + 63, 0x103); /* DMA modes XXX: may be incorrect */
+-    put_le16(p + 64, 1); /* PIO modes */
+ #endif
++    put_le16(p + 64, 3); /* pio3-4 supported */
+     put_le16(p + 65, 0xb4); /* minimum DMA multiword tx cycle time */
+     put_le16(p + 66, 0xb4); /* recommended DMA multiword tx cycle time */
+     put_le16(p + 67, 0x12c); /* minimum PIO cycle time without flow control */
+@@ -2779,8 +2779,7 @@ static int ide_drive_pio_post_load(void 
+ {
+     IDEState *s = opaque;
+ 
+-    if (s->end_transfer_fn_idx < 0 ||
+-        s->end_transfer_fn_idx > ARRAY_SIZE(transfer_end_table)) {
++    if (s->end_transfer_fn_idx > ARRAY_SIZE(transfer_end_table)) {
+         return -EINVAL;
+     }
+     s->end_transfer_func = transfer_end_table[s->end_transfer_fn_idx];
