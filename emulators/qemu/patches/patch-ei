@@ -1,0 +1,16 @@
+$NetBSD: patch-ei,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+
+Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
+(PR lib/43832: ssp causes common names to be defines)
+
+--- rwhandler.c.orig	2010-07-28 10:55:42.000000000 +0900
++++ rwhandler.c	2010-08-08 04:03:18.000000000 +0900
+@@ -13,7 +13,7 @@
+ static uint32_t name(void *opaque, type addr) \
+ { \
+     struct ReadWriteHandler *handler = opaque; \
+-    return handler->read(handler, addr, len); \
++    return (*handler->read)(handler, addr, len); \
+ }
+ 
+ RWHANDLER_WRITE(cpu_io_memory_simple_writeb, 1, target_phys_addr_t);
