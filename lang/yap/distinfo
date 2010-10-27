@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2010/08/10 08:26:20 asau Exp $
+$NetBSD: distinfo,v 1.10 2010/10/27 12:32:52 asau Exp $
 
-SHA1 (yap-6.0.6.tar.gz) = 8fa25cd70fde024c6fa0bc455b0e7b1aa117b6f3
-RMD160 (yap-6.0.6.tar.gz) = 9e3538933967257c59a441d10ddda0d6935a9d2e
-Size (yap-6.0.6.tar.gz) = 5099543 bytes
+SHA1 (yap-6.2.0.tar.gz) = 884406c6a6333c796ab19d0f40529918be6cae97
+RMD160 (yap-6.2.0.tar.gz) = af5bb81590105234644dc072f14c37f696e7db2a
+Size (yap-6.2.0.tar.gz) = 4990807 bytes
 SHA1 (patch-aa) = dca2acac805aabd8e2815b509ad516294484ad0f
 SHA1 (patch-ab) = b311db4efa89f0b67952e62be6cd489e3e32165f
 SHA1 (patch-ac) = e945c3e4c19d8d02b53a5030ad5ac0d44b25b959
@@ -10,4 +10,5 @@ SHA1 (patch-ad) = e3765c0d6729b4d531cdea59dc8e442055091d10
 SHA1 (patch-ae) = cf4a79ccd0c34e42ca3d8a108619a9974288cde6
 SHA1 (patch-af) = 135f2f3e82242d7b17ade4a797a3077834719e77
 SHA1 (patch-ah) = 572e29729d97d5e9942a3d2c22e121d4e756d648
-SHA1 (patch-aj) = 41ae8b5649143299cd1b03d70b1b38bd623bace9
+SHA1 (patch-aj) = 61a53b4ef921270544edc79ddcb0f816824fd3ce
+SHA1 (patch-ak) = b4a31508e5d63f5e6d1099874aeb15a69859d6b5
