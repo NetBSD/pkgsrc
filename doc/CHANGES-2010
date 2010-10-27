@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3831 2010/10/27 14:05:14 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3832 2010/10/27 16:48:43 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5260,3 +5260,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/yap to 6.2.0 [asau 2010-10-27]
 	Updated emulators/qemu to 0.13.0 [tsutsui 2010-10-27]
 	Updated audio/gst-plugins0.10-fluendo-mp3 to 0.10.15 [obache 2010-10-27]
+	Updated x11/xf86-video-ati to 6.12.4nb4 [jakllsch 2010-10-27]
