@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2010/02/19 20:16:40 heinz Exp $
+# $NetBSD: Makefile,v 1.59 2010/10/27 07:17:24 markd Exp $
 #
 
 DISTNAME=		aspell-0.60.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GNU:=aspell/}
 
@@ -22,6 +22,7 @@ USE_TOOLS+=		gmake
 USE_TOOLS+=		perl:run
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+USE_NCURSES=		yes
 USE_PKGLOCALEDIR=	yes
 INFO_FILES=		yes
 
