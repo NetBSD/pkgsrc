@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9821 2010/10/27 09:46:26 adam Exp $
+$NetBSD: TODO,v 1.9822 2010/10/27 12:34:09 gdt Exp $
 
 Suggested new packages
 ======================
@@ -182,10 +182,6 @@ Suggested new packages
 
 	Compiler of the AGFL formalis [pkg/28946]
 	formalism for the syntactic description of Natural Languages
-
-	DCC [pkg/29619]
-	http://www.rhyolite.com/anti-spam/dcc/
-	Distributed Checksum Clearinghouse [pkg/29619]
 
 	Vuze
 	http://www.vuze.com/
