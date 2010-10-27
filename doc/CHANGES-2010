@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3824 2010/10/26 23:42:46 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3825 2010/10/27 04:19:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-times to 2010 [minskim 2010-10-26]
 	Updated print/tex-texlive-common-doc to 2010 [minskim 2010-10-26]
 	Updated print/tex-texlive-en-doc to 2010 [minskim 2010-10-26]
+	Updated inputmethod/ibus-anthy to 1.2.4 [obache 2010-10-27]
