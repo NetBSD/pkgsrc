@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3826 2010/10/27 07:15:48 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3827 2010/10/27 07:44:07 he Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5255,3 +5255,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-texlive-en-doc to 2010 [minskim 2010-10-26]
 	Updated inputmethod/ibus-anthy to 1.2.4 [obache 2010-10-27]
 	Updated games/scummvm to 1.2.0 [adam 2010-10-27]
+	Updated lang/parrot to 2.9.1 [he 2010-10-27]
