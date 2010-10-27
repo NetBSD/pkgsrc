@@ -8,6 +8,9 @@
 # 	autoconf (optional - used by munin-config)
 #
 # $Log: df_inode.in,v $
+# Revision 1.2  2010/10/27 18:23:13  shattered
+# Also ignore null and union filesystems, bump revision.
+#
 # Revision 1.1.1.1  2006/06/04 20:53:57  he
 # Import the client version of the Munin system monitoring/graphing
 # tool -- project homepage is at http://munin.sourceforge.net/
@@ -30,7 +33,7 @@
 
 MAXLABEL=20
 
-TYPES=noprocfs,devfs,fdescfs,ptyfs,kernfs,nfs
+TYPES=noprocfs,devfs,fdescfs,ptyfs,kernfs,nfs,null,union
 
 print_values() {
     mfs=0
