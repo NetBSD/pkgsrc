@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2010/10/01 08:32:35 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2010/10/27 13:24:09 tsutsui Exp $
 #
 
-DISTNAME=		qemu-0.12.4
-PKGREVISION=		1
+DISTNAME=		qemu-0.13.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
 
@@ -16,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
-USE_TOOLS+=		gmake perl:build
+USE_TOOLS+=		gmake makeinfo perl:build
 HAS_CONFIGURE=		yes
 
 BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
@@ -33,7 +32,7 @@ pre-patch:
 
 SUBST_CLASSES+=		qaudio
 SUBST_STAGE.qaudio=	pre-configure
-SUBST_FILES.qaudio=	monitor.c savevm.c vl.c vnc.h \
+SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
 			audio/*.c \
 			hw/ac97.c \
 			hw/adlib.c \
@@ -41,16 +40,17 @@ SUBST_FILES.qaudio=	monitor.c savevm.c vl.c vnc.h \
 			hw/es1370.c \
 			hw/gus.c \
 			hw/marvell_88w8618_audio.c \
+			hw/mips_fulong2e.c \
 			hw/mips_jazz.c \
 			hw/mips_malta.c \
 			hw/omap2.c \
 			hw/palm.c \
-			hw/pc.c \
 			hw/pcspk.c \
 			hw/sb16.c \
 			hw/spitz.c \
 			hw/tsc210x.c \
-			hw/wm8750.c
+			hw/wm8750.c \
+			ui/vnc.h
 SUBST_SED.qaudio=	-e s,audio.h\",qaudio.h\",g
 SUBST_MESSAGE.qaudio=	Fixing audio.h confusion
 
@@ -67,6 +67,7 @@ UE_ARCHS+=		sparc64 x86_64
 
 .if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
 USER_EMUL=		i386 x86_64 sparc sparc64
+PLIST.nbd=		YES
 .elif !empty(OPSYS:MDarwin)
 USER_EMUL=		i386 x86_64 sparc sparc64 ppc
 .elif !empty(OPSYS:MLinux)
