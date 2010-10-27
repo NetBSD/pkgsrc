@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/10/16 15:19:45 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/10/27 04:19:21 obache Exp $
 #
 
-DISTNAME=	ibus-anthy-1.2.3
+DISTNAME=	ibus-anthy-1.2.4
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -28,11 +28,6 @@ FIND_PREFIX:=	KASUMI_DIR=kasumi
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--with-kasumi-exec=${KASUMI_DIR}/bin/kasumi
 CONFIGURE_ARGS+=	--with-kasumi-icon=${KASUMI_DIR}/share/pixmaps/kasumi.png
-
-SUBST_CLASSES+=		epython
-SUBST_STAGE.epython=	pre-configure
-SUBST_FILES.epython=	engine/ibus-engine-anthy.in setup/ibus-setup-anthy.in
-SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
