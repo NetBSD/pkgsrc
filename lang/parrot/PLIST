@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/09/24 08:36:16 he Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/10/27 06:56:03 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -48,6 +48,7 @@ include/parrot/${PKGVERSION}/parrot/io_unix.h
 include/parrot/${PKGVERSION}/parrot/io_win32.h
 include/parrot/${PKGVERSION}/parrot/key.h
 include/parrot/${PKGVERSION}/parrot/library.h
+include/parrot/${PKGVERSION}/parrot/list.h
 include/parrot/${PKGVERSION}/parrot/longopt.h
 include/parrot/${PKGVERSION}/parrot/memory.h
 include/parrot/${PKGVERSION}/parrot/misc.h
@@ -145,8 +146,6 @@ include/parrot/${PKGVERSION}/pmc/pmc_packfileannotations.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileconstanttable.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfiledebug.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfiledirectory.h
-include/parrot/${PKGVERSION}/pmc/pmc_packfilefixupentry.h
-include/parrot/${PKGVERSION}/pmc/pmc_packfilefixuptable.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfilerawsegment.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfilesegment.h
 include/parrot/${PKGVERSION}/pmc/pmc_parrotinterpreter.h
@@ -607,8 +606,6 @@ src/parrot/${PKGVERSION}/pmc/packfileannotations.dump
 src/parrot/${PKGVERSION}/pmc/packfileconstanttable.dump
 src/parrot/${PKGVERSION}/pmc/packfiledebug.dump
 src/parrot/${PKGVERSION}/pmc/packfiledirectory.dump
-src/parrot/${PKGVERSION}/pmc/packfilefixupentry.dump
-src/parrot/${PKGVERSION}/pmc/packfilefixuptable.dump
 src/parrot/${PKGVERSION}/pmc/packfilerawsegment.dump
 src/parrot/${PKGVERSION}/pmc/packfilesegment.dump
 src/parrot/${PKGVERSION}/pmc/parrotinterpreter.dump
