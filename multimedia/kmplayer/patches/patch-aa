@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2010/04/10 04:09:22 markd Exp $
+$NetBSD: patch-aa,v 1.7 2010/10/27 07:29:21 markd Exp $
 
---- src/mediaobject.cpp.orig	2010-04-06 08:39:06.000000000 +0000
+--- src/mediaobject.cpp.orig	2010-10-02 19:47:03.000000000 +0000
 +++ src/mediaobject.cpp
-@@ -402,7 +402,7 @@ KDE_NO_EXPORT void MediaInfo::killWGet (
+@@ -417,7 +417,7 @@ KDE_NO_EXPORT void MediaInfo::killWGet (
  /**
   * Gets contents from url and puts it in m_data
   */
--KDE_NO_EXPORT bool MediaInfo::wget (const QString &str) {
-+bool MediaInfo::wget (const QString &str) {
+-KDE_NO_EXPORT bool MediaInfo::wget (const QString &str, const QString &domain) {
++bool MediaInfo::wget (const QString &str, const QString &domain) {
      clearData ();
      url = str;
  
