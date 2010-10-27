@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2010/09/24 08:36:16 he Exp $
+# $NetBSD: Makefile,v 1.38 2010/10/27 06:56:03 he Exp $
 #
 
-VERSION=		2.8.0
-RTYPE=			devel
+VERSION=		2.9.1
+RTYPE=			supported
 DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${RTYPE}/${VERSION}/
