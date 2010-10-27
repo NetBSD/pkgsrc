@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3830 2010/10/27 13:30:08 tsutsui Exp $
+$NetBSD: CHANGES-2010,v 1.3831 2010/10/27 14:05:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5259,3 +5259,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/dcc version 1.3.123 [gdt 2010-10-27]
 	Updated lang/yap to 6.2.0 [asau 2010-10-27]
 	Updated emulators/qemu to 0.13.0 [tsutsui 2010-10-27]
+	Updated audio/gst-plugins0.10-fluendo-mp3 to 0.10.15 [obache 2010-10-27]
