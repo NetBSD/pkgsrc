@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3828 2010/10/27 12:31:18 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.3829 2010/10/27 12:34:18 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5257,3 +5257,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/scummvm to 1.2.0 [adam 2010-10-27]
 	Updated lang/parrot to 2.9.1 [he 2010-10-27]
 	Added mail/dcc version 1.3.123 [gdt 2010-10-27]
+	Updated lang/yap to 6.2.0 [asau 2010-10-27]
