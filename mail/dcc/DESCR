@@ -1,0 +1,9 @@
+The Distributed Checksum Clearinghouses or DCC is an anti-spam content filter
+that runs on a variety of operating systems. As of the middle of 2007, it
+involves millions of users, more than six hundred thousand client computer
+systems, and more than 250 servers collecting and counting checksums related to
+more than 300 million mail messages on week days. The counts can be used by
+SMTP servers and mail user agents to detect and reject or filter spam or
+unsolicited bulk mail. DCC servers exchange or "flood" common checksums. The
+checksums include values that are constant across common variations in bulk
+messages, including "personalizations".
