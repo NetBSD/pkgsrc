@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2010/10/02 10:08:31 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2010/10/27 07:59:32 wiz Exp $
 #
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio multimedia
 #MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
 #		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
@@ -57,6 +57,6 @@ BUILDLINK_API_DEPENDS.mysql-server+=	mysql-server>=5.1.44nb1
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 # for plasma
 .include "../../x11/kdebase-workspace4/buildlink3.mk"
-BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.4.0
+BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.5.0
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
