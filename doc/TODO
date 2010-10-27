@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9824 2010/10/27 19:39:54 wiz Exp $
+$NetBSD: TODO,v 1.9825 2010/10/27 20:04:48 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1126,7 +1126,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.0 [pkg/42941]
 	o puf-0.93.3
 	o puppet-2.6.1
-	o pure-ftpd-1.0.29
 	o puzzles-9013
 	o pv-1.1.4
 	o pwlib-1.11.1
