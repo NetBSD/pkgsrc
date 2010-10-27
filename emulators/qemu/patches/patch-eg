@@ -1,0 +1,25 @@
+$NetBSD: patch-eg,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+
+Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
+(PR lib/43832: ssp causes common names to be defines)
+
+--- hw/etraxfs_eth.c.orig	2010-07-28 10:55:42.000000000 +0900
++++ hw/etraxfs_eth.c	2010-08-08 04:14:31.000000000 +0900
+@@ -184,7 +184,7 @@
+ 
+ 	phy = bus->devs[bus->addr];
+ 	if (phy && phy->read)
+-		bus->data = phy->read(phy, bus->req);
++		bus->data = (*phy->read)(phy, bus->req);
+ 	else 
+ 		bus->data = 0xffff;
+ }
+@@ -347,7 +347,7 @@
+ 	int new_mm = 0;
+ 
+ 	phy = eth->mdio_bus.devs[eth->phyaddr];
+-	phy_duplex = !!(phy->read(phy, 18) & (1 << 11));
++	phy_duplex = !!((*phy->read)(phy, 18) & (1 << 11));
+ 	mac_duplex = !!(eth->regs[RW_REC_CTRL] & 128);
+ 
+ 	if (mac_duplex != phy_duplex)

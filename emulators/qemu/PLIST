@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/04/10 05:57:40 sbd Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/10/27 13:24:09 tsutsui Exp $
 bin/qemu
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
@@ -45,6 +45,8 @@ share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
 share/qemu/bamboo.dtb
 share/qemu/bios.bin
+share/qemu/gpxe-eepro100-80861209.rom
+share/qemu/gpxe-eepro100-80861229.rom
 share/qemu/keymaps/ar
 share/qemu/keymaps/common
 share/qemu/keymaps/da
@@ -88,11 +90,11 @@ share/qemu/openbios-sparc64
 share/qemu/petalogix-s3adsp1800.dtb
 share/qemu/ppc_rom.bin
 share/qemu/pxe-e1000.bin
-share/qemu/pxe-i82559er.bin
 share/qemu/pxe-ne2k_pci.bin
 share/qemu/pxe-pcnet.bin
 share/qemu/pxe-rtl8139.bin
 share/qemu/pxe-virtio.bin
+share/qemu/s390-zipl.rom
 share/qemu/vgabios-cirrus.bin
 share/qemu/vgabios.bin
 share/qemu/video.x

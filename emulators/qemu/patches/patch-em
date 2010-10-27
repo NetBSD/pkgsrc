@@ -1,0 +1,24 @@
+$NetBSD: patch-em,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+
+Export libgcc builtin __clear_cache() since it's also referred from
+tcg/arm/tcg-target.h.
+
+--- exec-all.h.orig	2010-07-28 01:55:42.000000000 +0000
++++ exec-all.h
+@@ -202,11 +202,13 @@ static inline void tb_set_jmp_target1(un
+     /* no need to flush icache explicitly */
+ }
+ #elif defined(__arm__)
++#if QEMU_GNUC_PREREQ(4, 1)
++void __clear_cache(char *beg, char *end);
++#endif
++
+ static inline void tb_set_jmp_target1(unsigned long jmp_addr, unsigned long addr)
+ {
+-#if QEMU_GNUC_PREREQ(4, 1)
+-    void __clear_cache(char *beg, char *end);
+-#else
++#if !QEMU_GNUC_PREREQ(4, 1)
+     register unsigned long _beg __asm ("a1");
+     register unsigned long _end __asm ("a2");
+     register unsigned long _flg __asm ("a3");
