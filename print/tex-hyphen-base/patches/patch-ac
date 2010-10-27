@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
+$NetBSD: patch-ac,v 1.3 2010/10/27 20:15:24 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.lua.orig	2010-09-20 02:04:04.000000000 +0000
+--- texmf/tex/generic/config/language.dat.lua.orig	2010-10-20 02:05:07.000000000 +0000
 +++ texmf/tex/generic/config/language.dat.lua
-@@ -33,612 +33,4 @@ return {
+@@ -33,612 +33,3 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
@@ -39,7 +39,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-grc.pat.txt',
--		hyphenation = 'hyph-grc.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['ibycus'] = {
 -		loader = 'ibyhyph.tex',
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-hy.pat.txt',
--		hyphenation = 'hyph-hy.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-basque:
 -	['basque'] = {
@@ -72,7 +72,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-eu.pat.txt',
--		hyphenation = 'hyph-eu.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-bulgarian:
 -	['bulgarian'] = {
@@ -81,7 +81,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-bg.pat.txt',
--		hyphenation = 'hyph-bg.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-catalan:
 -	['catalan'] = {
@@ -90,7 +90,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-ca.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-ca.hyp.txt',
 -	},
 --- from hyphen-chinese:
 -	['pinyin'] = {
@@ -99,7 +99,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-zh-latn.pat.txt',
--		hyphenation = 'hyph-zh-latn.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-coptic:
 -	['coptic'] = {
@@ -108,7 +108,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-cop.pat.txt',
--		hyphenation = 'hyph-cop.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-croatian:
 -	['croatian'] = {
@@ -117,7 +117,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-hr.pat.txt',
--		hyphenation = 'hyph-hr.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-czech:
 -	['czech'] = {
@@ -126,7 +126,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = {  },
 -		patterns = 'hyph-cs.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-cs.hyp.txt',
 -	},
 --- from hyphen-danish:
 -	['danish'] = {
@@ -135,7 +135,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-da.pat.txt',
--		hyphenation = 'hyph-da.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-dutch:
 -	['dutch'] = {
@@ -144,7 +144,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-nl.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-nl.hyp.txt',
 -	},
 --- from hyphen-english:
 -	['ukenglish'] = {
@@ -153,7 +153,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = { 'british', 'UKenglish' },
 -		patterns = 'hyph-en-gb.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-en-gb.hyp.txt',
 -	},
 -	['usenglishmax'] = {
 -		loader = 'loadhyph-en-us.tex',
@@ -161,7 +161,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = {  },
 -		patterns = 'hyph-en-us.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-en-us.hyp.txt',
 -	},
 --- from hyphen-esperanto:
 -	['esperanto'] = {
@@ -170,7 +170,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-eo.pat.txt',
--		hyphenation = 'hyph-eo.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-estonian:
 -	['estonian'] = {
@@ -179,7 +179,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = {  },
 -		patterns = 'hyph-et.pat.txt',
--		hyphenation = 'hyph-et.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-farsi:
 -	['farsi'] = {
@@ -196,7 +196,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-fi.pat.txt',
--		hyphenation = 'hyph-fi.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-french:
 -	['french'] = {
@@ -205,7 +205,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = { 'patois', 'francais' },
 -		patterns = 'hyph-fr.pat.txt',
--		hyphenation = 'hyph-fr.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-galician:
 -	['galician'] = {
@@ -214,7 +214,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-gl.pat.txt',
--		hyphenation = 'hyph-gl.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-german:
 -	['german'] = {
@@ -223,7 +223,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-de-1901.pat.txt',
--		hyphenation = 'hyph-de-1901.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['ngerman'] = {
 -		loader = 'loadhyph-de-1996.tex',
@@ -231,7 +231,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-de-1996.pat.txt',
--		hyphenation = 'hyph-de-1996.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['swissgerman'] = {
 -		loader = 'loadhyph-de-ch-1901.tex',
@@ -239,7 +239,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-de-ch-1901.pat.txt',
--		hyphenation = 'hyph-de-ch-1901.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-greek:
 -	['monogreek'] = {
@@ -248,7 +248,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-el-monoton.pat.txt',
--		hyphenation = 'hyph-el-monoton.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['greek'] = {
 -		loader = 'loadhyph-el-polyton.tex',
@@ -256,7 +256,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = { 'polygreek' },
 -		patterns = 'hyph-el-polyton.pat.txt',
--		hyphenation = 'hyph-el-polyton.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-hungarian:
 -	['hungarian'] = {
@@ -265,7 +265,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-hu.pat.txt',
--		hyphenation = 'hyph-hu.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-icelandic:
 -	['icelandic'] = {
@@ -274,7 +274,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-is.pat.txt',
--		hyphenation = 'hyph-is.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-indic:
 -	['assamese'] = {
@@ -283,7 +283,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-as.pat.txt',
--		hyphenation = 'hyph-as.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['bengali'] = {
 -		loader = 'loadhyph-bn.tex',
@@ -291,7 +291,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-bn.pat.txt',
--		hyphenation = 'hyph-bn.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['gujarati'] = {
 -		loader = 'loadhyph-gu.tex',
@@ -299,7 +299,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-gu.pat.txt',
--		hyphenation = 'hyph-gu.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['hindi'] = {
 -		loader = 'loadhyph-hi.tex',
@@ -307,7 +307,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-hi.pat.txt',
--		hyphenation = 'hyph-hi.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['kannada'] = {
 -		loader = 'loadhyph-kn.tex',
@@ -315,7 +315,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-kn.pat.txt',
--		hyphenation = 'hyph-kn.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['malayalam'] = {
 -		loader = 'loadhyph-ml.tex',
@@ -323,7 +323,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-ml.pat.txt',
--		hyphenation = 'hyph-ml.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['marathi'] = {
 -		loader = 'loadhyph-mr.tex',
@@ -331,7 +331,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-mr.pat.txt',
--		hyphenation = 'hyph-mr.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['oriya'] = {
 -		loader = 'loadhyph-or.tex',
@@ -339,7 +339,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-or.pat.txt',
--		hyphenation = 'hyph-or.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['panjabi'] = {
 -		loader = 'loadhyph-pa.tex',
@@ -347,7 +347,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-pa.pat.txt',
--		hyphenation = 'hyph-pa.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['tamil'] = {
 -		loader = 'loadhyph-ta.tex',
@@ -355,7 +355,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-ta.pat.txt',
--		hyphenation = 'hyph-ta.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['telugu'] = {
 -		loader = 'loadhyph-te.tex',
@@ -363,7 +363,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-te.pat.txt',
--		hyphenation = 'hyph-te.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-indonesian:
 -	['indonesian'] = {
@@ -372,7 +372,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-id.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-id.hyp.txt',
 -	},
 --- from hyphen-interlingua:
 -	['interlingua'] = {
@@ -381,7 +381,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-ia.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-ia.hyp.txt',
 -	},
 --- from hyphen-irish:
 -	['irish'] = {
@@ -390,7 +390,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = {  },
 -		patterns = 'hyph-ga.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-ga.hyp.txt',
 -	},
 --- from hyphen-italian:
 -	['italian'] = {
@@ -399,7 +399,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-it.pat.txt',
--		hyphenation = 'hyph-it.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-kurmanji:
 -	['kurmanji'] = {
@@ -408,7 +408,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-kmr.pat.txt',
--		hyphenation = 'hyph-kmr.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-lao:
 -	['lao'] = {
@@ -417,7 +417,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-lo.pat.txt',
--		hyphenation = 'hyph-lo.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-latin:
 -	['latin'] = {
@@ -426,7 +426,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-la.pat.txt',
--		hyphenation = 'hyph-la.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-latvian:
 -	['latvian'] = {
@@ -435,7 +435,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-lv.pat.txt',
--		hyphenation = 'hyph-lv.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-lithuanian:
 -	['lithuanian'] = {
@@ -444,7 +444,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-lt.pat.txt',
--		hyphenation = 'hyph-lt.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-mongolian:
 -	['mongolian'] = {
@@ -453,7 +453,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-mn-cyrl.pat.txt',
--		hyphenation = 'hyph-mn-cyrl.hyp.txt',
+-		hyphenation = '',
 -	},
 -	['mongolianlmc'] = {
 -		loader = 'loadhyph-mn-cyrl-x-lmc.tex',
@@ -469,7 +469,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = { 'norwegian', 'norsk' },
 -		patterns = 'hyph-nb.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-nb.hyp.txt',
 -	},
 -	['nynorsk'] = {
 -		loader = 'loadhyph-nn.tex',
@@ -477,7 +477,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-nn.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-nn.hyp.txt',
 -	},
 --- from hyphen-polish:
 -	['polish'] = {
@@ -486,7 +486,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-pl.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-pl.hyp.txt',
 -	},
 --- from hyphen-portuguese:
 -	['portuguese'] = {
@@ -495,7 +495,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = { 'portuges' },
 -		patterns = 'hyph-pt.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-pt.hyp.txt',
 -	},
 --- from hyphen-romanian:
 -	['romanian'] = {
@@ -504,7 +504,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-ro.pat.txt',
--		hyphenation = 'hyph-ro.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-russian:
 -	['russian'] = {
@@ -513,7 +513,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-ru.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-ru.hyp.txt',
 -	},
 --- from hyphen-sanskrit:
 -	['sanskrit'] = {
@@ -522,7 +522,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 5,
 -		synonyms = {  },
 -		patterns = 'hyph-sa.pat.txt',
--		hyphenation = 'hyph-sa.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-serbian:
 -	['serbian'] = {
@@ -531,7 +531,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-sr-latn.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-sr-latn.hyp.txt',
 -	},
 --- from hyphen-slovak:
 -	['slovak'] = {
@@ -540,7 +540,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = {  },
 -		patterns = 'hyph-sk.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-sk.hyp.txt',
 -	},
 --- from hyphen-slovenian:
 -	['slovenian'] = {
@@ -549,7 +549,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = { 'slovene' },
 -		patterns = 'hyph-sl.pat.txt',
--		hyphenation = 'hyph-sl.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-spanish:
 -	['spanish'] = {
@@ -558,7 +558,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = { 'espanol' },
 -		patterns = 'hyph-es.pat.txt',
--		hyphenation = 'hyph-es.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-swedish:
 -	['swedish'] = {
@@ -567,7 +567,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-sv.pat.txt',
--		hyphenation = 'hyph-sv.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-turkish:
 -	['turkish'] = {
@@ -576,7 +576,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-tr.pat.txt',
--		hyphenation = 'hyph-tr.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-turkmen:
 -	['turkmen'] = {
@@ -585,7 +585,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-tk.pat.txt',
--		hyphenation = 'hyph-tk.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-ukrainian:
 -	['ukrainian'] = {
@@ -594,7 +594,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-uk.pat.txt',
--		hyphenation = 'hyph-uk.hyp.txt',
+-		hyphenation = '',
 -	},
 --- from hyphen-uppersorbian:
 -	['uppersorbian'] = {
@@ -603,7 +603,7 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-hsb.pat.txt',
--		hyphenation = '',
+-		hyphenation = 'hyph-hsb.hyp.txt',
 -	},
 --- from hyphen-welsh:
 -	['welsh'] = {
@@ -612,6 +612,6 @@ $NetBSD: patch-ac,v 1.2 2010/09/22 15:50:43 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = {  },
 -		patterns = 'hyph-cy.pat.txt',
--		hyphenation = 'hyph-cy.hyp.txt',
+-		hyphenation = '',
 -	},
- }
+-}
