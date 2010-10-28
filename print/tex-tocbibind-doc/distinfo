@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/10 22:15:49 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/10/28 15:27:10 minskim Exp $
 
-SHA1 (tex-tocbibind-16882/tocbibind.doc.tar.xz) = 43e38c767df80b564d62f7d3fbdd499bb57a32ea
-RMD160 (tex-tocbibind-16882/tocbibind.doc.tar.xz) = dc3f310dd34121ab6960a7fb83b8e4cb49388998
-Size (tex-tocbibind-16882/tocbibind.doc.tar.xz) = 311840 bytes
+SHA1 (tex-tocbibind-20085/tocbibind.doc.tar.xz) = 5ddee75811ca81b6b51127e5ed801292edd76959
+RMD160 (tex-tocbibind-20085/tocbibind.doc.tar.xz) = 7cae13f15e265e1e625c846265296a959439a2e4
+Size (tex-tocbibind-20085/tocbibind.doc.tar.xz) = 311564 bytes
