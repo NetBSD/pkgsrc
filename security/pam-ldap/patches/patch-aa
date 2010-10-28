@@ -1,45 +1,62 @@
-$NetBSD: patch-aa,v 1.4 2005/08/29 09:49:07 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2010/10/28 08:06:19 adam Exp $
 
---- Makefile.in.orig	2005-08-18 00:35:13.000000000 +0200
+--- Makefile.in.orig	2009-11-06 10:29:34.000000000 +0000
 +++ Makefile.in
-@@ -70,7 +70,7 @@ PACKAGE = @PACKAGE@
- VERSION = @VERSION@
- pam_ldap_so_LD = @pam_ldap_so_LD@
- 
--noinst_PROGRAMS = pam_ldap.so
+@@ -37,7 +37,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-noinst_PROGRAMS = pam_ldap.so$(EXEEXT)
 +noinst_PROGRAMS = pam_ldap.la
- EXTRA_DIST = COPYING.LIB CVSVersionInfo.txt ChangeLog README 	     ldap.conf pam.conf pam_ldap.spec pam.d
- 
- 
-@@ -100,6 +100,7 @@ pam_ldap_so_OBJECTS =  pam_ldap.o md5.o
+ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
+ 	$(top_srcdir)/configure AUTHORS COPYING COPYING.LIB ChangeLog \
+@@ -54,14 +54,13 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
+ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES =
+ PROGRAMS = $(noinst_PROGRAMS)
+-am_pam_ldap_so_OBJECTS = pam_ldap.$(OBJEXT) md5.$(OBJEXT) \
+-	vers.$(OBJEXT)
++am_pam_ldap_so_OBJECTS = pam_ldap.$(OBJEXT) md5.$(OBJEXT)
+ pam_ldap_so_OBJECTS = $(am_pam_ldap_so_OBJECTS)
  pam_ldap_so_LDADD = $(LDADD)
- pam_ldap_so_DEPENDENCIES = 
- CFLAGS = @CFLAGS@
-+LTCOMPILE = $(SHLIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I.
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
++COMPILE = ${LIBTOOL} --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
- man5dir = $(mandir)/man5
-@@ -122,7 +123,7 @@ OBJECTS = $(pam_ldap_so_OBJECTS)
+ SOURCES = $(pam_ldap_so_SOURCES)
+@@ -189,7 +188,7 @@ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
  
- all: all-redirect
  .SUFFIXES:
--.SUFFIXES: .S .c .o .s
-+.SUFFIXES: .S .c .lo .o .s
- $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
- 	cd $(top_srcdir) && $(AUTOMAKE) --gnu Makefile
+-.SUFFIXES: .c .o .obj
++.SUFFIXES: .c .lo .o .obj
+ am--refresh:
+ 	@:
+ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
+@@ -243,6 +242,8 @@ distclean-hdr:
  
-@@ -191,6 +192,9 @@ distclean-compile:
- 
- maintainer-clean-compile:
- 
+ clean-noinstPROGRAMS:
+ 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
 +pam_ldap.la: $(pam_ldap_so_OBJECTS:.o=.lo) $(pam_ldap_so_DEPENDENCIES)
-+	$(SHLIBTOOL) --mode=link $(CC) $(AM_LDFLAGS) $(LDFLAGS) $(pam_ldap_so_LDFLAGS) $(pam_ldap_so_OBJECTS:.o=.lo) -module -avoid-version -rpath $(libdir)/security -o $@ $(pam_ldap_so_LDADD) $(LIBS)
-+
- pam_ldap.so: $(pam_ldap_so_OBJECTS) $(pam_ldap_so_DEPENDENCIES)
- 	@rm -f pam_ldap.so
++	${LIBTOOL} --mode=link $(CC) $(AM_LDFLAGS) $(LDFLAGS) $(pam_ldap_so_LDFLAGS) $(pam_ldap_so_OBJECTS:.o=.lo) -module -avoid-version -rpath $(libdir)/security -o $@ $(pam_ldap_so_LDADD) $(LIBS)
+ pam_ldap.so$(EXEEXT): $(pam_ldap_so_OBJECTS) $(pam_ldap_so_DEPENDENCIES) 
+ 	@rm -f pam_ldap.so$(EXEEXT)
  	$(LINK) $(pam_ldap_so_LDFLAGS) $(pam_ldap_so_OBJECTS) $(pam_ldap_so_LDADD) $(LIBS)
-@@ -432,7 +436,14 @@ mostlyclean-generic distclean-generic cl
- maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+@@ -257,7 +258,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pam_ldap.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vers.Po@am__quote@
+ 
+-.c.o:
++.c.lo:
+ @am__fastdepCC_TRUE@	if $(COMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
+ @am__fastdepCC_TRUE@	then mv -f "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Po"; else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; fi
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@@ -592,7 +593,14 @@ uninstall-man: uninstall-man5
+ 	uninstall-man5
  
  
 -install-exec-local: pam_ldap.so
@@ -48,13 +65,13 @@ $NetBSD: patch-aa,v 1.4 2005/08/29 09:49:07 drochner Exp $
 +install-exec-local-libtool: pam_ldap.la
 +	@$(NORMAL_INSTALL)
 +	$(mkinstalldirs) $(DESTDIR)$(libdir)/security
-+	$(SHLIBTOOL) --mode=install $(INSTALL_PROGRAM) -c pam_ldap.la $(DESTDIR)$(libdir)/security
++	${LIBTOOL} --mode=install $(INSTALL_PROGRAM) -c pam_ldap.la $(DESTDIR)$(libdir)/security
 +
 +install-exec-local-so: pam_ldap.so
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(libdir)/security
  @EXTENSION_SO_TRUE@	$(INSTALL_PROGRAM) -o root -g root pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so
-@@ -442,9 +453,9 @@ install-exec-local: pam_ldap.so
+@@ -602,9 +610,9 @@ install-exec-local: pam_ldap.so
  
  install-data-local:
  	@$(NORMAL_INSTALL)
