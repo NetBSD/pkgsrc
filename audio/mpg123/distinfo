@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.31 2010/03/14 14:19:19 martin Exp $
+$NetBSD: distinfo,v 1.31.6.1 2010/10/28 08:19:42 tron Exp $
 
-SHA1 (mpg123-1.10.1.tar.bz2) = 81c67a63a8b698f27c80633c6f1eda179cf36f10
-RMD160 (mpg123-1.10.1.tar.bz2) = 14fdd743bf13cdb414f0b8882690ab3a2faf5a59
-Size (mpg123-1.10.1.tar.bz2) = 747089 bytes
+SHA1 (mpg123-1.12.5.tar.bz2) = 476cb47a9b6570684b5af536beedf2026522e5f8
+RMD160 (mpg123-1.12.5.tar.bz2) = a59b0f7506b004c6e7d048ebef57090e1eb857af
+Size (mpg123-1.12.5.tar.bz2) = 810881 bytes
 SHA1 (patch-aa) = 9700187dc38af7d4b7f4f3332d76556d2cb7f418
 SHA1 (patch-ad) = 7ea68b64ee8a0e58036f79558ca1484870b0335a
 SHA1 (patch-af) = ed89154abc9e4eea7934e6b11431b4b8f95d36b0
