@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3836 2010/10/28 07:59:00 plunky Exp $
+$NetBSD: CHANGES-2010,v 1.3837 2010/10/28 08:07:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5265,3 +5265,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-base to 2010nb1 [minskim 2010-10-28]
 	Updated mail/ruby-actionmailer3 to 3.0.1nb1 [obache 2010-10-28]
 	Updated misc/zyGrib to 3.9.6 [plunky 2010-10-28]
+	Updated security/pam-ldap to 185 [adam 2010-10-28]
