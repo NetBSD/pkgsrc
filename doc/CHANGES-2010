@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3841 2010/10/28 17:48:36 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3842 2010/10/28 20:23:40 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5275,3 +5275,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-epsf-doc version 2.7.3 [minskim 2010-10-28]
 	Added print/tex-lastpage version 1.2f [minskim 2010-10-28]
 	Added print/tex-lastpage-doc version 1.2f [minskim 2010-10-28]
+	Added mail/sendmail-qtool version 8.14.4 [bouyer 2010-10-28]
