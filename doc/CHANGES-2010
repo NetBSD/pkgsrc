@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3838 2010/10/28 10:25:05 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3839 2010/10/28 15:27:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5269,3 +5269,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit-base to 1.7.3.2 [adam 2010-10-28]
 	Updated devel/scmgit-docs to 1.7.3.2 [adam 2010-10-28]
 	Updated devel/scmgit to 1.7.3.2 [adam 2010-10-28]
+	Updated print/tex-tocbibind to 1.5k [minskim 2010-10-28]
+	Updated print/tex-tocbibind-doc to 1.5k [minskim 2010-10-28]
