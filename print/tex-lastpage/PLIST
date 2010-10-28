@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/28 17:47:06 minskim Exp $
+share/texmf-dist/tex/latex/lastpage/lastpage.sty
+share/texmf-dist/tex/latex/lastpage/lastpage209.sty
