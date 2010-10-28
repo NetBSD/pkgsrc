@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2010/10/27 15:43:54 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2010/10/28 09:34:19 wiz Exp $
 
 DISTNAME=	gettext-0.14.6
 PKGNAME=	gettext-lib-0.14.6
@@ -35,11 +35,6 @@ LOCALEDIR=		${PREFIX}/${PKGLOCALEDIR}/locale
 
 REQD_DIRS+=		${LOCALEDIR}
 REQD_FILES+=		${EGDIR}/locale.alias ${LOCALEDIR}/locale.alias
-
-USE_TOOLS+=            autoconf
-
-pre-configure:
-	cd ${WRKSRC}/gettext-runtime && autoconf
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
