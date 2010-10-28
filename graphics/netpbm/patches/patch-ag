@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.20 2010/10/28 07:09:13 adam Exp $
+
+--- buildtools/Makefile.orig	2010-10-28 07:01:24.000000000 +0000
++++ buildtools/Makefile
+@@ -37,7 +37,7 @@ typegen.o endiangen.o:%.o:%.c
+ 	$(CC_FOR_BUILD) -c $(CFLAGS_FOR_BUILD) -o $@ $<
+ 
+ $(PROGS):%:%.o
+-	$(LD_FOR_BUILD) -o $@ $<
++	$(LD_FOR_BUILD) $(LDFLAGS) -o $@ $<
+ 
+ distclean clean: cleanlocal
+ .PHONY: cleanlocal
