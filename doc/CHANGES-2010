@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3842 2010/10/28 20:23:40 bouyer Exp $
+$NetBSD: CHANGES-2010,v 1.3843 2010/10/28 21:35:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5276,3 +5276,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-lastpage version 1.2f [minskim 2010-10-28]
 	Added print/tex-lastpage-doc version 1.2f [minskim 2010-10-28]
 	Added mail/sendmail-qtool version 8.14.4 [bouyer 2010-10-28]
+	Updated devel/nspr to 4.8.6.12 [tron 2010-10-28]
+	Updated devel/xulrunner to 1.9.2.12 [tron 2010-10-28]
+	Updated www/firefox to 3.6.12 [tron 2010-10-28]
