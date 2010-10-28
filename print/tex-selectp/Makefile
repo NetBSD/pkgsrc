@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 00:18:19 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/28 17:21:56 minskim Exp $
 
 DISTNAME=	selectp
 PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	15878
+TEXLIVE_REV=	20185
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Select pages to be output
