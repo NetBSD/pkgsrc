@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/28 17:37:10 minskim Exp $
+share/texmf-dist/doc/generic/epsf/LICENSE
+share/texmf-dist/doc/generic/epsf/Makefile
+share/texmf-dist/doc/generic/epsf/README
+share/texmf-dist/doc/generic/epsf/bboxgrid.ps
+share/texmf-dist/doc/generic/epsf/epsf-doc.pdf
+share/texmf-dist/doc/generic/epsf/epsf-doc.tex
+share/texmf-dist/doc/generic/epsf/fndbadps
+share/texmf-dist/doc/generic/epsf/okay/teps.eps
+share/texmf-dist/doc/generic/epsf/okay/tepsf.eps
+share/texmf-dist/doc/generic/epsf/okay/tepsf1.dvi
+share/texmf-dist/doc/generic/epsf/okay/tepsf2.dvi
+share/texmf-dist/doc/generic/epsf/okay/tepsf3.dvi
+share/texmf-dist/doc/generic/epsf/teps.eps
+share/texmf-dist/doc/generic/epsf/tepsf.eps
+share/texmf-dist/doc/generic/epsf/tepsf1.tex
+share/texmf-dist/doc/generic/epsf/tepsf2.ltx
+share/texmf-dist/doc/generic/epsf/tepsf3.tex
