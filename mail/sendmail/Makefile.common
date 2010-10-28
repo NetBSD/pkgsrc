@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.51 2010/01/16 00:31:13 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.52 2010/10/28 20:25:00 bouyer Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
+# used by mail/sendmail-qtool/Makefile
 #
 
 DISTNAME=	sendmail.${DIST_VERS}
