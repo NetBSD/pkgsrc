@@ -1,0 +1,6 @@
+The original graphics inclusion macros for use with dvips; still widely
+used by Plain TeX users (in particular). For LaTeX users, the package is
+nowadays deprecated in favour of the more sophisticated standard LaTeX
+graphics bundle of packages (which are also available to Plain TeX
+users, either via its Plain TeX version, or through the support offered
+by etex).
