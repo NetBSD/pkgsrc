@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2010/01/17 12:02:43 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/10/28 08:06:19 adam Exp $
 
-DISTNAME=	pam_ldap-184
+DISTNAME=	pam_ldap-185
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.padl.com/pub/ \
 		http://www.padl.com/download/
@@ -10,6 +9,7 @@ MASTER_SITES=	ftp://ftp.padl.com/pub/ \
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html
 COMMENT=	Pluggable authentication module for LDAP directories
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -20,15 +20,13 @@ CONFIGURE_ARGS+=	--with-ldap-lib=openldap
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/pam_ldap.conf
 CONFIGURE_ARGS+=	--with-ldap-secret-file=${PKG_SYSCONFDIR}/pam_ldap.secret
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-
-MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 # Fix (workaround?) a bug with openpam/NetBSD
 # The bug is described in PR security/39313.
 #
 .include "../../mk/bsd.prefs.mk"
-#
+
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=		-DNO_STATIC_MODULES
 .endif
