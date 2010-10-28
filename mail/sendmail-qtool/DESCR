@@ -1,0 +1,3 @@
+Sendmail acts as a unified "post office" to which all mail can be
+submitted.  This package install the sendmail-qtool perl script,
+which can move or delete entries in mail queue in a safe manner.
