@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2010/10/27 20:15:24 minskim Exp $
+$NetBSD: patch-ac,v 1.4 2010/10/28 00:03:30 minskim Exp $
 
 --- texmf/tex/generic/config/language.dat.lua.orig	2010-10-20 02:05:07.000000000 +0000
 +++ texmf/tex/generic/config/language.dat.lua
-@@ -33,612 +33,3 @@ return {
+@@ -33,612 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
@@ -614,4 +614,4 @@ $NetBSD: patch-ac,v 1.3 2010/10/27 20:15:24 minskim Exp $
 -		patterns = 'hyph-cy.pat.txt',
 -		hyphenation = '',
 -	},
--}
+ }
