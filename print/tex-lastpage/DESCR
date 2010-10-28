@@ -1,0 +1,4 @@
+Reference the number of pages in your LaTeX document through the
+introduction of a new label which can be referenced like
+\pageref{LastPage} to give a reference to the last page of a document.
+It is particularly useful in the page footer that says: Page N of M.
