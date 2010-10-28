@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1408 2010/10/24 18:55:18 agc Exp $
+# $NetBSD: Makefile,v 1.1409 2010/10/28 04:51:03 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1238,6 +1238,7 @@ SUBDIR+=	ruby-gnome2-atk
 SUBDIR+=	ruby-gnome2-bonobo
 SUBDIR+=	ruby-gnome2-bonoboui
 SUBDIR+=	ruby-gnome2-gconf
+SUBDIR+=	ruby-gnome2-gio
 SUBDIR+=	ruby-gnome2-glib
 SUBDIR+=	ruby-gnome2-libglade
 SUBDIR+=	ruby-gnome2-pango
