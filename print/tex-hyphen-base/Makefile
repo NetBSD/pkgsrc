@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2010/10/27 20:15:24 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2010/10/28 00:03:29 minskim Exp $
 
 DISTNAME=	hyphen-base
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20147
 
 MAINTAINER=	minskim@NetBSD.org
