@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3840 2010/10/28 17:38:14 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3841 2010/10/28 17:48:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5273,3 +5273,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-tocbibind-doc to 1.5k [minskim 2010-10-28]
 	Added print/tex-epsf version 2.7.3 [minskim 2010-10-28]
 	Added print/tex-epsf-doc version 2.7.3 [minskim 2010-10-28]
+	Added print/tex-lastpage version 1.2f [minskim 2010-10-28]
+	Added print/tex-lastpage-doc version 1.2f [minskim 2010-10-28]
