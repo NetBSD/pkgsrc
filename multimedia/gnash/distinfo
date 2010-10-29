@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.14 2009/09/22 13:23:57 tnn Exp $
+$NetBSD: distinfo,v 1.15 2010/10/29 14:15:02 obache Exp $
 
-SHA1 (gnash-0.8.3.tar.bz2) = 3cd4a0930e772a42b0155295fca292fd94be7c42
-RMD160 (gnash-0.8.3.tar.bz2) = f7bf4d06d35c3ad40df4419b179fc6482731854b
-Size (gnash-0.8.3.tar.bz2) = 2902610 bytes
-SHA1 (patch-aa) = 05460170941019168fa072c803ad60eac919e44a
-SHA1 (patch-ab) = b86c152618ed4258bede5d95f71446db3af8ad0f
-SHA1 (patch-ac) = 6454620529a281c707f7ccf68eb17c0754dfe7a7
-SHA1 (patch-ae) = d4f18032bc091e5ef84fcb81f16ea649c5c20701
-SHA1 (patch-ag) = f4f82df7bff71464cdb3a76b91c4b2475a8e9eef
+SHA1 (gnash-0.8.8.tar.bz2) = d349e0321e7fe9abcd265d63ce282cd2a7ce59d3
+RMD160 (gnash-0.8.8.tar.bz2) = 621afbd14180ce770f60a6e158f9fda0b4d5ec02
+Size (gnash-0.8.8.tar.bz2) = 3850383 bytes
+SHA1 (patch-aa) = cd37f3200dd35d499deaae66e9f05d1a8ebfdc4c
+SHA1 (patch-ae) = a5a59452cf6e1aaa079963a628f994e66bcd1288
+SHA1 (patch-ah) = 3da0110d6e2840a4b772a0d2795d2d7f5512c502

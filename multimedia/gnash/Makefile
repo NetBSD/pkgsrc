@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2010/09/14 11:02:29 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/10/29 14:15:02 obache Exp $
 #
 
 DISTNAME=		gnash-${VER}
-VER=			0.8.3
-PKGREVISION=		11
+VER=			0.8.8
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_GNU:=gnash/${VER}/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		matias@dotbsd.org
 HOMEPAGE=		http://www.gnashdev.org/
-COMMENT=		GPL Flash movie player
+COMMENT=		GPL SWF player
+LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -19,8 +19,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bash gmake msgfmt pkg-config
-# for appending below
-INSTALL_TARGET=		install
+INSTALL_TARGET=		install install-plugin
 
 # /bin/sh finds a syntax error without line number
 CONFIG_SHELL=		${TOOLS_BASH}
@@ -33,21 +32,21 @@ CONF_FILES+=		${EGDIR}/gnashrc ${PKG_SYSCONFDIR}/gnashrc
 
 .include "options.mk"
 
-PLIST_SRC+=		${PKGDIR}/PLIST
+#ld: .libs/libgnashplugin_la-plugin.o(.text+0x5564): unresolvable relocation
+# against symbol `_ZNKSs5c_strEv'
+BUILDLINK_TRANSFORM+=	rm:-fvisibility-inlines-hidden
 
-.include "../../devel/atk/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

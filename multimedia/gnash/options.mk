@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2009/09/22 13:23:57 tnn Exp $
+# $NetBSD: options.mk,v 1.12 2010/10/29 14:15:02 obache Exp $
 #
 
 #
@@ -6,48 +6,62 @@
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnash
-# XXX: add support for SDL or FLTK GUIs?
-PKG_SUPPORTED_OPTIONS=		gtk kde mitshm
 PKG_OPTIONS_OPTIONAL_GROUPS=	gnash-media
 PKG_OPTIONS_GROUP.gnash-media=	ffmpeg gstreamer
-PKG_OPTIONS_REQUIRED_GROUPS=	gnash-renderer
+PKG_OPTIONS_REQUIRED_GROUPS=	gnash-gui gnash-renderer
+# XXX: add support for SDL or FLTK GUIs?
+PKG_OPTIONS_GROUP.gnash-gui=	gtk kde kde3
 PKG_OPTIONS_GROUP.gnash-renderer=	agg cairo opengl
-PKG_SUGGESTED_OPTIONS+=		agg gstreamer gtk mitshm
+PKG_SUGGESTED_OPTIONS+=		agg gstreamer gtk
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	gtk kde kde3 kde4 plugin gstreamer
 
 ###
 ### Select GUIs.
 ###
 .if !empty(PKG_OPTIONS:Mgtk)
 GNASH_GUIS+=		gtk
-PLIST_SRC+=		${PKGDIR}/PLIST.gtk
-CONFIGURE_ARGS+=	--with-npapi-plugindir=${PREFIX}/lib/netscape/plugins
-INSTALL_TARGET+=	install-plugin
+PLIST.gtk=		yes
 .include "../../x11/gtk2/buildlink3.mk"
 .endif
 
+.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mkde)
+#.include "../../devel/nspr/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-npapi-plugins-install=system
+CONFIGURE_ARGS+=	--with-npapi-plugindir=${PREFIX}/lib/netscape/plugins
+PLIST.plugin=		yes
+.endif
+
 .if !empty(PKG_OPTIONS:Mkde)
-GNASH_GUIS+=		kde
-PLIST_SRC+=		${PKGDIR}/PLIST.kde
-PLIST_SUBST+=		KDE="kde/"
-CONFIGURE_ARGS+=	--with-kde-pluginprefix=${PREFIX}
-# XXX: next three are ignored by configure script
-CONFIGURE_ARGS+=	--with-kde-appsdatadir=${PREFIX}/share/kde/apps
-CONFIGURE_ARGS+=	--with-kde-configdir=${PREFIX}/share/kde/config
-CONFIGURE_ARGS+=	--with-kde-servicesdir=${PREFIX}/share/kde/services
-SUBST_CLASSES+=		kde
-SUBST_FILES.kde=	configure
-SUBST_STAGE.kde=	pre-configure
-SUBST_SED.kde=		-e "s,KDE_PLUGINPREFIX./share,KDE_PLUGINPREFIX\'/share/kde,"
-SUBST_MESSAGE.kde=	Fix installation paths for KDE.
+GNASH_GUIS+=		kde4
+PLIST.kde=		yes
+PLIST.kde4=		yes
+CONFIGURE_ARGS+=	--with-plugins-install=system
+# broken, not wroked as expected.
+#CONFIGURE_ARGS+=	--with-kde4-plugindir=${PREFIX}/lib/kde4
+#CONFIGURE_ARGS+=	--with-kde-appsdatadir=${PREFIX}/share/kde/apps
+#CONFIGURE_ARGS+=	--with-kde4-configdir=${PREFIX}/share/kde4/config
+#CONFIGURE_ARGS+=	--with-kde4-servicesdir=${PREFIX}/share/kde4/services
+.include "../../x11/kdebase4/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
+
+.elif !empty(PKG_OPTIONS:Mkde3)
+GNASH_GUIS+=		kde3
+PLIST.kde=		yes
+PLIST.kde3=		yes
+CONFIGURE_ARGS+=	--with-plugins-install=system
+# broken, not wroked as expected.
+#CONFIGURE_ARGS+=	--with-kde3-plugindir=${PREFIX}/lib/kde3
+#CONFIGURE_ARGS+=	--with-kde-appsdatadir=${PREFIX}/share/kde/apps
+#CONFIGURE_ARGS+=	--with-kde3-configdir=${PREFIX}/share/kde/config
+#CONFIGURE_ARGS+=	--with-kde3-servicesdir=${PREFIX}/share/kde/services
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
-
-post-install:
-	cd ${WRKSRC}/plugin/klash && ${MAKE} install-plugin
-.else
-PLIST_SUBST+=		KDE=""
+# overwrite, or not kde ralated files also will be installed in share/kde.
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 .endif
 
 CONFIGURE_ARGS+=	--enable-gui=${GNASH_GUIS:tW:S/ /,/}
@@ -56,54 +70,49 @@ CONFIGURE_ARGS+=	--enable-gui=${GNASH_GUIS:tW:S/ /,/}
 ### Select renderers.
 ###
 .if !empty(PKG_OPTIONS:Magg)
-GNASH_RENDER=		agg
-CONFIGURE_ARGS+=	--enable-agg
+GNASH_RENDER+=		agg
 .include "../../graphics/agg/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mcairo)
-GNASH_RENDER=		cairo
-CONFIGURE_ARGS+=	--enable-cairo
+GNASH_RENDER+=		cairo
 .include "../../graphics/cairo/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
-GNASH_RENDER=		ogl
+GNASH_RENDER+=		ogl
 .include "../../x11/glproto/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mgtk)
+.  if !empty(PKG_OPTIONS:Mgtk)
 .include "../../graphics/gtkglext/buildlink3.mk"
-.endif
+.  endif
 .endif
 
-CONFIGURE_ARGS+=	--enable-renderer=${GNASH_RENDER}
+CONFIGURE_ARGS+=	--enable-renderer=${GNASH_RENDER:tW:S/ /,/}
 
 ###
 ### Select a media handler
 ###
 .if !empty(PKG_OPTIONS:Mffmpeg)
-CONFIGURE_ARGS+=	--enable-media=ffmpeg
+GNASH_MEDIA+=	ffmpeg
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
-CONFIGURE_ARGS+=	--enable-media=gst --enable-gstreamer
+GNASH_MEDIA+=	gst
+PLIST.gstreamer=	yes
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
-# see http://bjacques.org/gst-plugins
-DEPENDS+= gst-plugins0.10-base-[0-9]*:../../multimedia/gst-plugins0.10-base
-DEPENDS+= gst-plugins0.10-oss-[0-9]*:../../audio/gst-plugins0.10-oss
-DEPENDS+= gst-fluendo-mp3-0.10.[0-9]*:../../audio/gst-plugins0.10-fluendo-mp3
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 DEPENDS+= gst-ffmpeg-0.10.[0-9]*:../../multimedia/gst-plugins0.10-ffmpeg
-DEPENDS+= gst-plugins0.10-gnomevfs-[0-9]*:../../sysutils/gst-plugins0.10-gnomevfs
-DEPENDS+= gst-plugins0.10-x11-[0-9]*:../../x11/gst-plugins0.10-x11
 .endif
 
-###
-### MIT-SHM Support.
-###
-.if !empty(PKG_OPTIONS:Mmitshm)
-CONFIGURE_ARGS+=	--enable-mit-shm
+CONFIGURE_ARGS+=	--enable-media=${GNASH_MEDIA:Unone:tW:S/ /,/}
+
+.if !empty(PKG_OPTIONS:Mffmpeg)
+.include "../../multimedia/ffmpeg/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hwaccel=VAAPI
 .else
-CONFIGURE_ARGS+=	--disable-mit-shm
+.include "../../x11/libXv/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hwaccel=xvideo
 .endif
