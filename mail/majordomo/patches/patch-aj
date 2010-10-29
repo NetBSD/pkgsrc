@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-aj,v 1.2 2010/10/29 21:51:22 spz Exp $
 
 --- ./sample.cf.orig	Wed Aug 27 09:00:31 1997
 +++ ./sample.cf	Tue Jun  8 10:55:13 1999
@@ -20,7 +20,7 @@ $NetBSD: patch-aj,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
       $homedir = $ENV{"HOME"};
  } else {
 -     $homedir = "/usr/test/majordomo";
-+     $homedir = "@HOME@/@MAJORDOMO_USER@";
++     $homedir = "@HOME@";
 +}
 +
 +# $bindir -- Where can I find my extra .pl files, like majordomo.pl?
@@ -36,7 +36,7 @@ $NetBSD: patch-aj,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
  # Each list must have a subdirectory under this directory in order for
  # digest to work. E.G. The bblisa list would use:
 -# 	/usr/local/mail/digest/bblisa
-+# 	@HOME@/@MAJORDOMO_USER@/digests/bblisa
++# 	@HOME@/digests/bblisa
  # as its directory.
  #
 -$digest_work_dir = "/usr/local/mail/digest";
@@ -56,7 +56,7 @@ $NetBSD: patch-aj,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
  # To use TLB and use no outgoing alias:
  # if ($main'program_name eq 'mj_resend' && $opt_l eq 'test-list') {
 -#   $mailer = "/usr/local/majordomo/tlb /usr/local/lists/${opt_l}.tlb";
-+#   $mailer = "@HOME@/@MAJORDOMO_USER@/tlb @HOME@/@MAJORDOMO_USER@/lists/${opt_l}.tlb";
++#   $mailer = "@HOME@/tlb @HOME@/lists/${opt_l}.tlb";
  # }
  #
 @@ -128,6 +137,6 @@
@@ -64,8 +64,8 @@ $NetBSD: patch-aj,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
  # $filedir_suffix appropriately.  For instance, to look in
 -# /usr/local/mail/files/$list, use:
 -#   $filedir = "/usr/local/mail/files";
-+# @HOME@/@MAJORDOMO_USER@/mail/files/$list, use:
-+#   $filedir = "@HOME@/@MAJORDOMO_USER@/mail/files";
++# @HOME@/mail/files/$list, use:
++#   $filedir = "@HOME@/mail/files";
  #   $filedir_suffix = "";		# empty string
  # or to look in $listdir/$list.archive, use:
 @@ -135,6 +144,6 @@
@@ -73,7 +73,7 @@ $NetBSD: patch-aj,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
  
 -$filedir = "$listdir";
 -$filedir_suffix = ".archive";
-+$filedir = "@HOME@/@MAJORDOMO_USER@/archives";
++$filedir = "@HOME@/archives";
 +$filedir_suffix = "";
  
  # What command should I use to process an "index" request?
