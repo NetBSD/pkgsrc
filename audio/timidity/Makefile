@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2010/09/14 11:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2010/10/29 06:56:59 shattered Exp $
 
 DISTNAME=	TiMidity++-2.13.2
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
 PKGREVISION=	15
-CATEGORIES=     audio
+CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=timidity/}
 EXTRACT_SUFX=	.tar.bz2
 
@@ -13,14 +13,14 @@ COMMENT=	MIDI to WAV renderer and player
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS=		kdemultimedia-2.[0-9]*
+CONFLICTS=		kdemultimedia-2.*{,nb*}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-vt100
 CONFIGURE_ARGS+=	--enable-gtk --enable-wrd --enable-xaw --enable-ncurses
 CONFIGURE_ARGS+=	--with-ogg="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-vorbis="${BUILDLINK_DIR}/include"
-CONFIGURE_ARGS+=	--with-default-path=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-default-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},ao,vorbis,speex
 # flac disabled since there is currently (20070111) no patch available
 # that adapts timidity for the flac-1.1.3 API
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},ao,vorbis,speex
 
 SUBST_CLASSES+=		confdir
 SUBST_MESSAGE.confdir=	Configuring to use PKG_SYSCONFDIR.
-SUBST_STAGE.confdir=    post-patch
+SUBST_STAGE.confdir=	post-patch
 SUBST_FILES.confdir=	doc/C/timidity.cfg.5 doc/ja_JP.eucJP/timidity.cfg.5
 SUBST_SED.confdir=	-e 's,/usr/local/share/timidity,${PKG_SYSCONFDIR},g'
 
