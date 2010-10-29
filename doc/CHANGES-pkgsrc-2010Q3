@@ -25,3 +25,5 @@ Pullup ticket #3259 - requested by markd
 graphics/kdegraphics3: security patch
 Pullup ticket #3260 - requested by gls
 audio/mpg123: security update
+Pullup ticket #3261 - requested by bouyer
+mail/clamav: bug fix
