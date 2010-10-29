@@ -1,0 +1,31 @@
+$NetBSD: patch-ah,v 1.20.2.2 2010/10/29 08:08:56 tron Exp $
+
+Fix "Unknown error code ERROR" on some PDF. Will be in 0.96.4:
+http://git.clamav.net/gitweb?p=clamav-devel.git;a=commitdiff;h=e142504b07d7f81435f6ac99ec1eedf6c08f2188
+
+Fix "LibClamAV Error: cli_pdf: mmap() failed (2)" on some PDF.
+Will be in 0.96.4:
+http://git.clamav.net/gitweb?p=clamav-devel.git;a=commitdiff;h=8f6bf9fc080aa54badcd7608f253821d5a8b1786
+
+diff --git a/libclamav/pdf.c b/libclamav/pdf.c
+index cd4d25a..e242135 100644 (file)
+--- libclamav/pdf.c.orig	2010-09-20 15:24:46.000000000 +0200
++++ libclamav/pdf.c	2010-10-23 16:46:49.000000000 +0200
+@@ -1024,7 +1024,7 @@ int cli_pdf(const char *dir, cli_ctx *ctx, off_t offset)
+     offset += pdfver - start;
+ 
+     /* find trailer and xref, don't fail if not found */
+-    map_off = map->len - 2048;
++    map_off = (off_t)map->len - 2048;
+     if (map_off < 0)
+	map_off = 0;
+     bytesleft = map->len - map_off;
+@@ -1087,7 +1087,7 @@
+     rc = run_pdf_hooks(&pdf, PDF_PHASE_PRE, -1, -1);
+     if (rc) {
+ 	cli_dbgmsg("cli_pdf: returning %d\n", rc);
+-	return rc;
++	return rc == CL_BREAK ? CL_CLEAN : rc;
+     }
+     /* parse PDF and find obj offsets */
+     while ((rc = pdf_findobj(&pdf)) > 0) {
