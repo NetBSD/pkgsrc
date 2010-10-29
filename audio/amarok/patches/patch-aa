@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.20 2010/09/24 09:44:52 wiz Exp $
+$NetBSD: patch-aa,v 1.21 2010/10/29 09:28:13 wiz Exp $
 
-Two fixes from upstream:
+Three fixes from upstream:
 
 BPM bugfix for FLAC fils, amarok commit ce57e426.
 
@@ -9,6 +9,9 @@ Qt's XML classes don't properly check for invalid chars when writing
 XML, even if you tel l them to.  Also switch to QXmlStreamWriter,
 as apparently going forward it is the more supported class.  BUG:
 251762, commmit 79d86829294ac54132c01153660e70e30c15c378 (I think).
+
+Fix for previous from
+http://gitweb.kde.org/amarok.git/blobdiff_plain/0b8577293698f88f2c6e5a1661ba570d0dd264b5..182f39c15575c3c1ce2b0425f9e3ec5997f3a9fd:/utilities/collectionscanner/CollectionScanner.cpp
 
 --- utilities/collectionscanner/CollectionScanner.cpp.orig	2010-09-24 09:21:46.000000000 +0000
 +++ utilities/collectionscanner/CollectionScanner.cpp
@@ -48,7 +51,7 @@ as apparently going forward it is the more supported class.  BUG:
 +            if( data[i].category() == QChar::NoCategory ||
 +                data[i].category() == QChar::Other_Surrogate ||
 +                ( 
-+                    data[i].unicode() < 20 &&
++                    data[i].unicode() < 32 &&
 +                    data[i].unicode() != 9 &&
 +                    data[i].unicode() != 10 &&
 +                    data[i].unicode() != 13
