@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/07/20 08:41:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2010/10/29 15:59:00 adam Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -21,7 +21,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS=		VARBASE
+BUILD_DEFS+=		VARBASE
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER}
 FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP}
 PLIST_SUBST+=		RADVER=${RADVER}
@@ -37,7 +37,7 @@ RADIUS_GROUP?=		radius
 PKG_GROUPS=		${RADIUS_USER}
 PKG_USERS=		${RADIUS_USER}:${RADIUS_GROUP}
 PKG_GROUPS_VARS+=	RADIUS_GROUP
-PKG_USERS_VARS+=	RADIUS_USER
+PKG_USERS_VARS=		RADIUS_USER
 OWN_DIRS_PERMS+=	${VARBASE}/run/radiusd \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
@@ -45,7 +45,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.9
+RADVER=			2.1.10
 EGDIR=			${DESTDIR}${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -55,8 +55,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--quiet
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/radiusd
-CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
-CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-system-libltdl
+CONFIGURE_ARGS+=	--with-system-libtool
 CONFIGURE_ARGS+=	--without-rlm_python
 CONFIGURE_ARGS+=	--without-rlm_smb
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
@@ -65,7 +65,7 @@ MAKE_ENV+=		R=${DESTDIR}
 
 REPLACE_PERL=		scripts/radsqlrelay
 
-SUBST_CLASSES=		make
+SUBST_CLASSES+=		make
 SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
 SUBST_SED.make+=	-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
