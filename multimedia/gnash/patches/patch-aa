@@ -1,31 +1,41 @@
-$NetBSD: patch-aa,v 1.10 2008/06/22 15:20:56 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2010/10/29 14:15:03 obache Exp $
 
---- configure.orig	2008-06-19 10:48:05.000000000 +0000
+--- configure.orig	2010-08-21 17:30:15.000000000 +0000
 +++ configure
-@@ -53135,7 +53135,7 @@ echo "${ECHO_T}no" >&6; }
- fi
+@@ -39826,7 +39826,7 @@ else
+   ;;
+   *)
+   as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in  /usr/lib/qt-3.3/bin ${QTDIR}/bin${pathlist}
++for as_dir in  /usr/lib/qt-3.3/bin ${QTDIR}/bin ${pathlist}
+ do
+   IFS=$as_save_IFS
+   test -z "$as_dir" && as_dir=.
+@@ -40128,9 +40128,9 @@ fi
+     fi
  
- 
--    if test x"$FOP" == x; then
-+    if test x"$FOP" = x; then
-         # Extract the first word of "fop", so it can be a program name with args.
- set dummy fop; ac_word=$2
- { echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -58445,7 +58445,7 @@ fi
-         echo "               This version of ffmpeg may not work!" >&3
-         echo "               Version 51.27.0 or newer is highly recommended." >&3
-       else
--	if test x"${avformat_h}" == x; then
-+	if test x"${avformat_h}" = x; then
-           echo "        ERROR: FFMPEG's libavcodec header is installed but not libavformat." >&3
-           echo "               You can install FFMPEG from http://ffmpeg.mplayerhq.hu" >&3
-           echo "               or .deb users: apt-get install libavformat-dev" >&3
-@@ -58791,7 +58791,7 @@ if test x$ext_mysql = xyes; then
+     KDE3_PLUGINDIR="${KDE3_PREFIX}/lib/kde3"
+-    KDE3_SERVICESDIR="${KDE3_PREFIX}/share/services"
+-    KDE3_CONFIGDIR="${KDE3_PREFIX}/share/config"
+-    KDE3_APPSDATADIR="${KDE3_PREFIX}/share/apps/klash"
++    KDE3_SERVICESDIR="${KDE3_PREFIX}/share/kde/services"
++    KDE3_CONFIGDIR="${KDE3_PREFIX}/share/kde/config"
++    KDE3_APPSDATADIR="${KDE3_PREFIX}/share/kde/apps/klash"
    fi
- fi
- 
--if test "$GMSGFMT" == ":"; then
-+if test "$GMSGFMT" = ":"; then
-   echo "        WARNING: You need the gettext package installed to use translations." >&4
-   echo "                 Required for building a package or 'make distcheck'" >&4
-   echo "                 Install it from http://www.gnu.org/software/gettext/" >&4
+   if test x"${ac_cv_path_kde3_incl}" != x ; then
+     if test x"${ac_cv_path_kde3_incl}" != x"-I/usr/include"; then
+@@ -40688,12 +40688,12 @@ fi
+     if test x"${KDE4_CONFIGDIR}" != x ; then
+       KDE4_CONFIGDIR="${KDE4_CONFIGDIR}}/share/kde4/config"
+     else
+-      KDE4_CONFIGDIR="${KDE4_PREFIX}}/share/kde4/config"
++      KDE4_CONFIGDIR="${KDE4_PREFIX}/share/kde4/config"
+     fi
+     if test x"${KDE4_APPSDATADIR}" != x ; then
+       KDE4_APPSDATADIR="${KDE4_APPSDATADIR}/share/kde4/apps/klash"
+     else
+-      KDE4_APPSDATADIR="${KDE4_PREFIX}/share/kde4/apps/klash"
++      KDE4_APPSDATADIR="${KDE4_PREFIX}/share/kde/apps/klash"
+     fi
+   fi
+   if test x"${ac_cv_path_kde4_incl}" != x ; then
