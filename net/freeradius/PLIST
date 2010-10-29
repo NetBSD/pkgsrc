@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:09:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/10/29 15:55:19 adam Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -119,20 +119,17 @@ sbin/radiusd
 sbin/radwatch
 sbin/rc.radiusd
 share/doc/freeradius/Acct-Type
+share/doc/freeradius/Autz-Type
 share/doc/freeradius/CYGWIN
 share/doc/freeradius/ChangeLog
-share/doc/freeradius/Post-Auth-Type
-share/doc/freeradius/Session-Type
-share/doc/freeradius/ldap_howto.txt
-share/doc/freeradius/misc-nas
-share/doc/freeradius/release-method.txt
-share/doc/freeradius/Autz-Type
 share/doc/freeradius/DIFFS
 share/doc/freeradius/MACOSX
 share/doc/freeradius/OS2
-share/doc/freeradius/RADIUS-SQL.schema
+share/doc/freeradius/Post-Auth-Type
 share/doc/freeradius/RADIUS-LDAP-eDirectory
+share/doc/freeradius/RADIUS-SQL.schema
 share/doc/freeradius/README
+share/doc/freeradius/Session-Type
 share/doc/freeradius/Simultaneous-Use
 share/doc/freeradius/aaa.txt
 share/doc/freeradius/ascend
@@ -150,13 +147,16 @@ share/doc/freeradius/examples/openldap.schema
 share/doc/freeradius/examples/oracle.sql
 share/doc/freeradius/examples/postgresql.sql
 share/doc/freeradius/examples/postgresql.sql.extra
+share/doc/freeradius/ldap_howto.txt
 share/doc/freeradius/load-balance.txt
+share/doc/freeradius/misc-nas
 share/doc/freeradius/module_interface
 share/doc/freeradius/mssql
 share/doc/freeradius/performance-testing
 share/doc/freeradius/processing_users_file
 share/doc/freeradius/proxy
 share/doc/freeradius/radrelay
+share/doc/freeradius/release-method.txt
 share/doc/freeradius/rfc/attributes.html
 share/doc/freeradius/rfc/draft-kamath-pppext-eap-mschapv2-00.txt
 share/doc/freeradius/rfc/draft-sterman-aaa-sip-00.txt
