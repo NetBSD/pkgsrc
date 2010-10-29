@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.7.2.2 2010/10/29 21:00:17 spz Exp $
+
+Fix build problem under Mac OS X where stpcpy() is a macro.
+
+--- lib/xstrrpl.c.orig	2007-12-29 01:37:54.000000000 +0000
++++ lib/xstrrpl.c	2010-10-28 23:29:51.000000000 +0100
+@@ -22,7 +22,9 @@
+ #include <assert.h>
+ #include "xstrrpl.h"
+ 
++#ifndef stpcpy
+ extern char * stpcpy();
++#endif
+ 
+ /* Perform subsitutions in string.  Result is malloc'd
+    E.g., result = xstrrrpl ("1234", subst) gives result = "112333"
