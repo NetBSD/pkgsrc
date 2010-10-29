@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2006/06/16 17:11:25 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2010/10/29 21:51:22 spz Exp $
 
---- Makefile.orig	Wed Aug 27 16:56:21 1997
-+++ Makefile	Tue Mar 27 12:41:29 2001
+--- Makefile.orig	2000-01-18 14:01:17.000000000 +0000
++++ Makefile
 @@ -13,27 +13,29 @@
  #
   
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.3 2006/06/16 17:11:25 jlam Exp $
  # current directory (where you unpacked the distribution)
 -W_HOME = /usr/test/majordomo-$(VERSION)
 +W_HOME = @PREFIX@/libexec/majordomo
-+HOME = @HOME@/@MAJORDOMO_USER@
++HOME = @HOME@
   
  # Where do you want man pages to be installed?
 -MAN = $(W_HOME)/man
@@ -38,14 +38,14 @@ $NetBSD: patch-aa,v 1.3 2006/06/16 17:11:25 jlam Exp $
  EXEC_MODE = 755
  HOME_MODE = 751
  
-@@ -62,11 +64,11 @@
+@@ -62,11 +64,11 @@ POSIX = -DPOSIX_UID=$(W_USER) -DPOSIX_GI
  # parent process, and without the leading "W_" in the variable names) gets
  # passed to processes run by "wrapper"
  W_SHELL = /bin/sh
 -W_PATH = /bin:/usr/bin:/usr/ucb
 -W_MAJORDOMO_CF = $(W_HOME)/majordomo.cf
 +W_PATH = /bin:/usr/bin
-+W_MAJORDOMO_CF = @HOME@/@MAJORDOMO_USER@/majordomo.cf
++W_MAJORDOMO_CF = @MAJORDOMO_CF@
  
  # A directory for temp files..
 -TMPDIR = /usr/tmp
@@ -53,7 +53,7 @@ $NetBSD: patch-aa,v 1.3 2006/06/16 17:11:25 jlam Exp $
  
  #--------YOU SHOULDN'T HAVE TO CHANGE ANYTHING BELOW THIS LINE.-------------
  
-@@ -76,7 +78,7 @@
+@@ -76,7 +78,7 @@ VERSION =	1.94.5
  SHELL = /bin/sh
  
  WRAPPER_FLAGS = -DBIN=\"$(W_HOME)\" -DPATH=\"PATH=$(W_PATH)\" \
@@ -62,49 +62,98 @@ $NetBSD: patch-aa,v 1.3 2006/06/16 17:11:25 jlam Exp $
  	-DMAJORDOMO_CF=\"MAJORDOMO_CF=$(W_MAJORDOMO_CF)\"      \
  	$(POSIX)
  
-@@ -144,13 +146,12 @@
+@@ -118,12 +120,12 @@ install: wrapper install-scripts install
+ 
+ install-wrapper: wrapper
+ 	$(INSTALL) -o $(WRAPPER_OWNER) -g $(WRAPPER_GROUP) \
+-		-m $(WRAPPER_MODE) wrapper $(W_HOME)/wrapper
++		-m $(WRAPPER_MODE) wrapper $(DESTDIR)$(W_HOME)/wrapper
+ 	@echo ""
+ 	@echo "To verify that all the permissions and etc are correct,"
+ 	@echo "run the command"
+ 	@echo ""
+-	@echo "	     cd $(W_HOME); ./wrapper config-test"
++	@echo "	     cd $(DESTDIR)$(W_HOME); ./wrapper config-test"
+ 
+ # fix where perl lives.
+ # Create a tmp directory to stuff all the files in, so we 
+@@ -143,30 +145,29 @@ config-scripts:
+ 
  
  install-scripts: config-scripts
- 	$(INSTALL) -m $(HOME_MODE) $(INSTALL_FLAGS) . $(W_HOME)
+-	$(INSTALL) -m $(HOME_MODE) $(INSTALL_FLAGS) . $(W_HOME)
 -	$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) . $(W_HOME)/bin
++	$(INSTALL) -m $(HOME_MODE) $(INSTALL_FLAGS) . $(DESTDIR)$(W_HOME)
  
 -	@echo "Copying tools to $(W_HOME)/bin"
-+	@echo "Copying tools to @PREFIX@/bin"
++	@echo "Copying tools to $(DESTDIR)@PREFIX@/bin"
  
  	@for file in $(BINBIN); do \
  		$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) \
 -			$(TMP)/$$file $(W_HOME)/bin/$$file; \
-+			$(TMP)/$$file @PREFIX@/bin/$$file; \
++			$(TMP)/$$file $(DESTDIR)@PREFIX@/bin/$$file; \
  	done
  
- 	@echo "Copying Majordomo files to $(W_HOME)"
-@@ -177,45 +178,39 @@
+-	@echo "Copying Majordomo files to $(W_HOME)"
++	@echo "Copying Majordomo files to $(DESTDIR)$(W_HOME)"
+ 
+ 	@for file in $(BIN); do \
+ 		$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) \
+-			$(TMP)/$$file $(W_HOME)/$$file; \
++			$(TMP)/$$file $(DESTDIR)$(W_HOME)/$$file; \
+ 	done
+ 
+-	@echo "Copying archiving and other tools to $(W_HOME)/Tools"
++	@echo "Copying archiving and other tools to $(DESTDIR)$(W_HOME)/Tools"
+ 
+-	$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) . $(W_HOME)/Tools
++	$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) . $(DESTDIR)$(W_HOME)/Tools
+ 
+ 	@for file in $(TOOLS); do \
+ 		$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) \
+-			$(TMP)/$$file $(W_HOME)/Tools/$$file; \
++			$(TMP)/$$file $(DESTDIR)$(W_HOME)/Tools/$$file; \
+ 	done
+ 
+ 	@rm -rf $(TMP)	
+@@ -177,46 +178,40 @@ install-scripts: config-scripts
  # all cases, the sample.cf file must be installed so that config-test will
  # be able to check for new variables.
  install-cf:
 -	@if [ ! -f $(W_HOME)/majordomo.cf ]; \
-+	@if [ ! -f $(W_MAJORDOMO_CF) ]; \
- 	  then \
- 	    if [ -f majordomo.cf ]; \
- 	      then \
- 		echo "Using majordomo.cf"; \
+-	  then \
+-	    if [ -f majordomo.cf ]; \
+-	      then \
+-		echo "Using majordomo.cf"; \
 -	  	$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
 -			majordomo.cf $(W_HOME)/majordomo.cf; \
-+	  	$(INSTALL) -m $(CF_MODE) $(INSTALL_FLAGS) \
-+			majordomo.cf $(W_MAJORDOMO_CF); \
- 	      else \
- 		echo "Using sample.cf"; \
+-	      else \
+-		echo "Using sample.cf"; \
 -		$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
 -			sample.cf $(W_HOME)/majordomo.cf; \
-+		$(INSTALL) -m $(CF_MODE) $(INSTALL_FLAGS) \
-+			sample.cf $(W_MAJORDOMO_CF); \
- 	    fi; \
- 	else \
- 	   echo "Using installed majordomo.cf"; \
- 	fi;
+-	    fi; \
+-	else \
+-	   echo "Using installed majordomo.cf"; \
+-	fi;
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
+-		sample.cf $(W_HOME)
++	# @if [ ! -f $(W_MAJORDOMO_CF) ]; \
++	#   then \
++	#     if [ -f majordomo.cf ]; \
++	#       then \
++	# 	echo "Using majordomo.cf"; \
++	#   	$(INSTALL) -m $(CF_MODE) $(INSTALL_FLAGS) \
++	# 		majordomo.cf $(DESTDIR)$(W_MAJORDOMO_CF); \
++	#       else \
++	# 	echo "Using sample.cf"; \
++	# 	$(INSTALL) -m $(CF_MODE) $(INSTALL_FLAGS) \
++	# 		sample.cf $(DESTDIR)$(W_MAJORDOMO_CF); \
++	#     fi; \
++	# else \
++	#    echo "Using installed majordomo.cf"; \
++	# fi;
 +	@$(INSTALL) -m $(CF_MODE) $(INSTALL_FLAGS) \
- 		sample.cf $(W_HOME)
++		sample.cf $(DESTDIR)$(W_HOME)
  
  install-man:
  	@echo "Installing manual pages in $(MAN)"
@@ -115,26 +164,33 @@ $NetBSD: patch-aa,v 1.3 2006/06/16 17:11:25 jlam Exp $
 -	@$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) \
 -		. $(MAN)/man8
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
-+	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
- 		Doc/man/approve.1 $(MAN)/man1/approve.1
+-		Doc/man/approve.1 $(MAN)/man1/approve.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
 -		Doc/man/digest.1 $(MAN)/man1/digest.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
-+	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
-+		Doc/man/digest.1 $(MAN)/man8/digest.8
-+	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
- 		Doc/man/bounce.1 $(MAN)/man1/bounce.1
+-		Doc/man/bounce.1 $(MAN)/man1/bounce.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
-+	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
- 		Doc/man/bounce-remind.1 $(MAN)/man1/bounce-remind.1
+-		Doc/man/bounce-remind.1 $(MAN)/man1/bounce-remind.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
-+	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
- 		Doc/man/resend.1 $(MAN)/man1/resend.1
+-		Doc/man/resend.1 $(MAN)/man1/resend.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
-+	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
- 		Doc/man/majordomo.8 $(MAN)/man8/majordomo.8
+-		Doc/man/majordomo.8 $(MAN)/man8/majordomo.8
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
+-		Doc/man/resend.1 $(MAN)/man1/resend.1
 +	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
- 		Doc/man/resend.1 $(MAN)/man1/resend.1
++		Doc/man/approve.1 $(DESTDIR)$(MAN)/man1/approve.1
++	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
++		Doc/man/digest.1 $(DESTDIR)$(MAN)/man8/digest.8
++	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
++		Doc/man/bounce.1 $(DESTDIR)$(MAN)/man1/bounce.1
++	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
++		Doc/man/bounce-remind.1 $(DESTDIR)$(MAN)/man1/bounce-remind.1
++	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
++		Doc/man/resend.1 $(DESTDIR)$(MAN)/man1/resend.1
++	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
++		Doc/man/majordomo.8 $(DESTDIR)$(MAN)/man8/majordomo.8
++	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
++		Doc/man/resend.1 $(DESTDIR)$(MAN)/man1/resend.1
  
  wrapper: wrapper.c
+ 	$(CC)  $(WRAPPER_FLAGS) -o wrapper wrapper.c
