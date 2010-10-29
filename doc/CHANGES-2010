@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3845 2010/10/29 13:48:35 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3846 2010/10/29 14:15:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5281,3 +5281,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/firefox to 3.6.12 [tron 2010-10-28]
 	Updated audio/amarok to 2.3.2nb4 [wiz 2010-10-29]
 	Updated databases/nss_ldap to 265 [adam 2010-10-29]
+	Updated multimedia/gnash to 0.8.8 [obache 2010-10-29]
