@@ -1,27 +1,25 @@
-# $NetBSD: Makefile,v 1.21 2010/01/17 12:02:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2010/10/29 13:47:11 adam Exp $
 
-DISTNAME=		nss_ldap-260
-PKGREVISION=		1
-CATEGORIES=		databases
-MASTER_SITES=		http://www.padl.com/download/
+DISTNAME=	nss_ldap-265
+CATEGORIES=	databases
+MASTER_SITES=	http://www.padl.com/download/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.padl.com/OSS/nss_ldap.html
-COMMENT=		LDAP client for nsswitch
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.padl.com/OSS/nss_ldap.html
+COMMENT=	LDAP client for nsswitch
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # needs nsswitch
 ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-*
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-
-CONFIGURE_ARGS+= --with-ldap-conf-file=${PKG_SYSCONFDIR}/nss_ldap.conf
-CONFIGURE_ARGS+= --with-ldap-secret-file=${PKG_SYSCONFDIR}/nss_ldap.secret
-CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+= --enable-schema-mapping
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-schema-mapping
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/nss_ldap.conf
+CONFIGURE_ARGS+=	--with-ldap-secret-file=${PKG_SYSCONFDIR}/nss_ldap.secret
 MAKE_FLAGS+=		INST_UID=${BINOWN} INST_GID=${BINGRP}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}

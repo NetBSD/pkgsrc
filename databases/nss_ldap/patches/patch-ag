@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2005/08/08 09:47:42 drochner Exp $
+$NetBSD: patch-ag,v 1.2 2010/10/29 13:47:12 adam Exp $
 
---- config.h.in.orig	2005-08-04 21:29:33.000000000 +0200
+--- config.h.in.orig	2009-11-06 10:28:08.000000000 +0000
 +++ config.h.in
-@@ -302,3 +302,7 @@
+@@ -345,3 +345,7 @@
  
  /* Version number of package */
  #undef VERSION
