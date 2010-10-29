@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2010/08/27 08:03:16 adam Exp $
+# $NetBSD: Makefile,v 1.17 2010/10/29 15:49:58 adam Exp $
 
-DISTNAME=	slony1-2.0.4
+DISTNAME=	slony1-2.0.5
 CATEGORIES=	databases
 MASTER_SITES=	http://slony.info/downloads/2.0/source/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ COMMENT=	Replication system for PostgreSQL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PGSQL_VERSIONS_ACCEPTED=84 83
+PGSQL_VERSIONS_ACCEPTED=90 84 83
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
