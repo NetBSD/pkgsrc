@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3843 2010/10/28 21:35:08 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3844 2010/10/29 09:28:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5279,3 +5279,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/nspr to 4.8.6.12 [tron 2010-10-28]
 	Updated devel/xulrunner to 1.9.2.12 [tron 2010-10-28]
 	Updated www/firefox to 3.6.12 [tron 2010-10-28]
+	Updated audio/amarok to 2.3.2nb4 [wiz 2010-10-29]
