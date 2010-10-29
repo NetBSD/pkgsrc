@@ -27,3 +27,9 @@ Pullup ticket #3260 - requested by gls
 audio/mpg123: security update
 Pullup ticket #3261 - requested by bouyer
 mail/clamav: bug fix
+Pullup ticket #3262 - requested by tron
+devel/xulrunner: security update
+devel/nspr: security update
+www/firefox: security update
+Pullup ticket #3263 - requested by tron
+print/a2ps: build and portability fix
