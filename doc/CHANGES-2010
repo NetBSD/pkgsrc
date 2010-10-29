@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3846 2010/10/29 14:15:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3847 2010/10/29 16:00:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5282,3 +5282,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/amarok to 2.3.2nb4 [wiz 2010-10-29]
 	Updated databases/nss_ldap to 265 [adam 2010-10-29]
 	Updated multimedia/gnash to 0.8.8 [obache 2010-10-29]
+	Updated databases/slony1 to 2.0.5 [adam 2010-10-29]
+	Updated net/freeradius to 1.1.8 [adam 2010-10-29]
+	Updated net/freeradius2 to 2.1.10 [adam 2010-10-29]
