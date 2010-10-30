@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2010/10/29 21:51:21 spz Exp $
+$NetBSD: MESSAGE,v 1.6 2010/10/30 23:48:35 spz Exp $
 
 Before you can use Majordomo, you will need to complete a few steps
 manually:
@@ -18,23 +18,23 @@ manually:
 	  ${MAJORDOMO_USER} gets redirected properly.
 
 	- install majordomo aliases for your mail server software.
-	  For example, create ${PREFIX}/etc/majordomo/aliases following the
+	  For example, create ${PKG_SYSCONFDIR}/aliases following the
 	  example in ${PREFIX}/share/examples/majordomo and add it to
 	  your mailer configuration.
 
 	  For sendmail, add a line similar to the following to
 	  /etc/sendmail.cf :
 
-	  OA${PREFIX}/etc/majordomo/aliases (for 8.6.x Sendmail),
+	  OA${PKG_SYSCONFDIR}/aliases (for 8.6.x Sendmail),
 
-	  O AliasFile=/etc/mail/aliases,${PREFIX}/etc/majordomo/aliases
+	  O AliasFile=/etc/mail/aliases,${PKG_SYSCONFDIR}/aliases
 	        (for 8.7.x and up),
 
 	  or a line similar to the following to your m4 macros file:
 
-	  define(`ALIAS_FILE',`/etc/mail/aliases,${PREFIX}/etc/majordomo/aliases')
+	  define(`ALIAS_FILE',`/etc/mail/aliases,${PKG_SYSCONFDIR}/aliases')
 
-	  For postfix, add eg hash:${PREFIX}/etc/majordomo/aliases
+	  For postfix, add eg hash:${PKG_SYSCONFDIR}/aliases
 	  to the alias_maps and alias_database parameters in main.cf
 
 	- for sendmail, if the group for ${MAJORDOMO_USER} (${MAJORDOMO_GROUP}) is not

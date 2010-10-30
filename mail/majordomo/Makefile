@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2010/10/29 21:51:21 spz Exp $
+# $NetBSD: Makefile,v 1.36 2010/10/30 23:48:36 spz Exp $
 
 DISTNAME=		majordomo-1.94.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.sgi.com/other/majordomo/1.94.5/ \
 			ftp://ftp-europe.sgi.com/other/majordomo/1.94.5/
@@ -30,8 +30,8 @@ MAKE_FILE=		Makefile.netbsd
 
 .include "../../mk/bsd.prefs.mk"
 
-MAJORDOMO_TMPDIR?=	${VARBASE}/majordomo/tmp
 MAJORDOMO_HOMEDIR?=	${VARBASE}/majordomo
+MAJORDOMO_TMPDIR?=	${VARBASE}/majordomo/tmp
 MAJORDOMO_CF?=		${PREFIX}/etc/majordomo/majordomo.cf
 MAJORDOMO_USER?=	majordom
 MAJORDOMO_GROUP?=	majordom
@@ -42,9 +42,9 @@ PKG_HOME.${MAJORDOMO_USER}=	${MAJORDOMO_HOMEDIR}
 PKG_GROUPS_VARS+=	MAJORDOMO_GROUP
 PKG_USERS_VARS+=	MAJORDOMO_USER
 
-PKG_SYSCONFDIR.majordomo=	${PREFIX}/etc/majordomo
-CONF_FILES+=		${EXAMPLEDIR}/aliases.majordomo ${PKG_SYSCONFDIR.majordomo}/aliases
-CONF_FILES+=		${EXAMPLEDIR}/majordomo.cf ${PKG_SYSCONFDIR.majordomo}/majordomo.cf
+PKG_SYSCONFSUBDIR=	majordomo
+CONF_FILES+=		${EXAMPLEDIR}/aliases.majordomo ${PKG_SYSCONFDIR}/aliases
+CONF_FILES+=		${EXAMPLEDIR}/majordomo.cf ${PKG_SYSCONFDIR}/majordomo.cf
 
 MESSAGE_SUBST+=		HOME=${MAJORDOMO_HOMEDIR}			\
 			MAJORDOMO_CF=${MAJORDOMO_CF}		\
@@ -86,8 +86,7 @@ CONFIGURE_SED=		-e "s|@PREFIX@|${PREFIX}|g"			\
 			-e "s|@HOME@|${MAJORDOMO_HOMEDIR}|g"		\
 			-e "s|@MAJORDOMO_CF@|${MAJORDOMO_CF}|g"		\
 			-e "s|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g"	\
-			-e "s|@UID@|${PKG_UID.${MAJORDOMO_USER}}|g"	\
-			-e "s|@GID@|${PKG_GID.${MAJORDOMO_GROUP}}|g"	\
+			-e "s|@MAJORDOMO_GROUP@|${MAJORDOMO_GROUP}|g"	\
 			-e "s|@TMPDIR@|${MAJORDOMO_TMPDIR}|g"
 
 MESSAGE_SED=		-e 's|$${PREFIX}|${PREFIX}|g'			\
@@ -96,7 +95,8 @@ MESSAGE_SED=		-e 's|$${PREFIX}|${PREFIX}|g'			\
 			-e 's|$${MAJORDOMO_USER}|${MAJORDOMO_USER}|g'	\
 			-e 's|$${MAJORDOMO_GROUP}|${MAJORDOMO_GROUP}|g'
 
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR.majordomo}
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
+
 INSTALLATION_DIRS+=	${PREFIX}/bin
 INSTALLATION_DIRS+=	${PREFIX}/libexec/majordomo
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
