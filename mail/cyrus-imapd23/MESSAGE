@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+$NetBSD: MESSAGE,v 1.2 2010/10/30 11:48:06 obache Exp $
 
 Please refer to:
 
-	${PREFIX}/share/doc/html/cyrus-imapd/install.html
+	${PREFIX}/share/doc/cyrus-imapd/install.html
 
 for more detailed instructions on setting up the environment before
 starting the Cyrus IMAP server.  In particular, several services may
@@ -12,6 +12,6 @@ need to be added to /etc/services.
 Anyone upgrading from an earlier version of the Cyrus IMAP server should
 read:
 
-	${PREFIX}/share/doc/html/cyrus-imapd/install-upgrade.html
+	${PREFIX}/share/doc/cyrus-imapd/install-upgrade.html
 
 ===========================================================================
