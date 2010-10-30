@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3849 2010/10/30 12:14:29 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3850 2010/10/30 20:33:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/freeradius to 1.1.8 [adam 2010-10-29]
 	Updated net/freeradius2 to 2.1.10 [adam 2010-10-29]
 	Added mail/cyrus-imapd24 version 2.4.2 [obache 2010-10-30]
+	Updated net/Transmission to 2.11 [tnn 2010-10-30]
