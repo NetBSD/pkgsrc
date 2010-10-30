@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/16 08:04:15 adam Exp $
+# $NetBSD: Makefile,v 1.8 2010/10/30 07:44:35 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.16
 PKGREVISION=	3
@@ -99,7 +99,6 @@ CFLAGS+=	-DOPENSSL_LACK_BN_CONST
 .endif
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 
 # Only imap/mupdate needs to be build with pthreads support, so selectively
 # enable it via patches for just that one program.
