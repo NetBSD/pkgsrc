@@ -1,8 +1,45 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-ae,v 1.2 2010/10/30 23:48:36 spz Exp $
 
---- ./digest.orig	Wed Aug 27 08:42:52 1997
-+++ ./digest	Tue Jun  8 10:55:12 1999
-@@ -320,4 +320,8 @@
+bring up to perl 5.12 standard (this is old code)
+
+--- digest.orig	2000-01-07 11:04:34.000000000 +0000
++++ digest
+@@ -175,12 +175,12 @@ sub send_digest {
+     print STDERR "producing $V{'NAME'} V$VOLUME #$NUMBER\n";
+     foreach (@files) {
+ 	    $message = "$V{'INCOMING'}/$_";
+-	    open(message) || &abort("$message: $!\n");
++	    open(MESSAGE) || &abort("$message: $!\n");
+ 	    print STDERR "\tprocessing $message\n";
+ 	    push(@processed,$message);
+ 
+ 	    $/ = '';
+-	    $head = <message>;
++	    $head = <MESSAGE>;
+ 	    $head =~ s/\n\s+/ /g;
+ 	    $body = "";
+ 	    $subj = ($head =~ /^Subject:\s+(.*)/i)? $1: "[none]";
+@@ -188,8 +188,8 @@ sub send_digest {
+ 	    ($date) = $head =~ /^Date:\s+(.*)/i;
+ 
+ 	    undef $/;
+-	    $body = <message>;
+-	    close(message);
++	    $body = <MESSAGE>;
++	    close(MESSAGE);
+ 
+ 	    # trim message fronter and footers inserted by resend in
+ 	    # non digest version of list
+@@ -302,7 +302,6 @@ EOF
+ }
+ 
+ sub init {
+-	$* = 1;
+ 	$HOME = $ENV{"HOME"} || (getpwuid($>))[7];
+ 	chdir($HOME);
+ 	&getopt("drRmpc:Cl:z") ||
+@@ -328,6 +327,10 @@ sub readconfig {
+ 
  		chdir($homedir);
  
 +		# All these should be in the standard PERL library
@@ -11,3 +48,43 @@ $NetBSD: patch-ae,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
 +
  		$opt_l =~ tr/A-Z/a-z/;
  
+ 	   	require "config_parse.pl";
+@@ -360,7 +363,7 @@ $bounce_mailer = "$sendmail_command -f\$
+ 		    &get_config($listdir, $config_opts{$opt_l,"digest_rm_fronter"});
+ 		    $RMHEADER = $config_opts{$config_opts{$opt_l,"digest_rm_fronter"},
+ 		                           "message_fronter"};
+-		    $RMHEADER =~ s/([^A-Za-z0-9 \001])/\\\1/g;
++		    $RMHEADER =~ s/([^A-Za-z0-9 \001])/\\$1/g;
+ 		    $RMHEADER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/g;
+ 		    $RMHEADER =~ s/\001/\\n/g;
+ 		}
+@@ -371,7 +374,7 @@ $bounce_mailer = "$sendmail_command -f\$
+ 		    }
+ 		    $RMTRAILER = $config_opts{$config_opts{$opt_l,"digest_rm_footer"},
+ 		                           "message_footer"};
+-		    $RMTRAILER =~ s/([^A-Za-z0-9 \001])/\\\1/g;
++		    $RMTRAILER =~ s/([^A-Za-z0-9 \001])/\\$1/g;
+ 		    $RMTRAILER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/g;
+ 		    $RMTRAILER =~ s/\001/\\n/g;
+ 		}
+@@ -441,13 +444,13 @@ $bounce_mailer = "$sendmail_command -fma
+ 		&abort("$program_name: can't get lock '$lockfile'\n");
+ 	   $lock_set = 1;
+ 
+-	   open(header,$V{'HEADER'}) || &abort("$V{'HEADER'}: $!\n");
+-	   $HEADER = join("",<header>);
+-	   close(header);
+-
+-	   open(trailer,$V{'TRAILER'}) || &abort("$V{'TRAILER'}: $!\n");
+-	   $TRAILER = join("",<trailer>);
+-	   close(trailer);
++	   open(HEADER,$V{'HEADER'}) || &abort("$V{'HEADER'}: $!\n");
++	   $HEADER = join("",<HEADER>);
++	   close(HEADER);
++
++	   open(TRAILER,$V{'TRAILER'}) || &abort("$V{'TRAILER'}: $!\n");
++	   $TRAILER = join("",<TRAILER>);
++	   close(TRAILER);
+ 
+ 	   open(VOL_FILE,$V{'VOL_FILE'}) || &abort("$V{'VOL_FILE'}: $!\n");
+ 	   $VOLUME = join("",<VOL_FILE>);
