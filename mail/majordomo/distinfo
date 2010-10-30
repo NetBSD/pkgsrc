@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.8 2010/10/29 21:51:21 spz Exp $
+$NetBSD: distinfo,v 1.9 2010/10/30 23:48:36 spz Exp $
 
 SHA1 (majordomo-1.94.5.tgz) = 44b18c7b9133f2cd992f6e718551d613d9d45c00
 RMD160 (majordomo-1.94.5.tgz) = 7f6b48fb5cc5b23948133658b055588d0d6608c4
 Size (majordomo-1.94.5.tgz) = 312244 bytes
-SHA1 (patch-aa) = 532bfe02d535231da689d1d5968a5247d624f005
+SHA1 (patch-aa) = 884e1ffa5e8cebef17328d0e6d5a7dc498ba72c0
 SHA1 (patch-ab) = 68bdbd77029ebd8f113c492e50e60aa7efb35de9
 SHA1 (patch-ac) = bea997e785b2656b1660a11efce759a56a700ab2
 SHA1 (patch-ad) = 65370547240539128a405484e98c7ed15a869464
-SHA1 (patch-ae) = 692f5018cccef565bec3be0f24e7009ed1902edd
-SHA1 (patch-af) = 9f3d21953ada62876f7c2ba2be0fa5edb48335fb
+SHA1 (patch-ae) = d41dc97f58a294d937ffa842fed5e469757f8e7a
+SHA1 (patch-af) = b4a50a472a16eead08c189f68d47d2cf136308c6
 SHA1 (patch-ag) = b469a639270d369732e75e6ae4df7f559e9c436e
 SHA1 (patch-ah) = 666b52100cb50a948c145da0ba83c197386cbd1e
 SHA1 (patch-ai) = 771c487d1a3392bf3b523330b8d60fd9a190c58b
 SHA1 (patch-aj) = 2185ba182561ca3e003fa0879e696092c3b237fd
-SHA1 (patch-ak) = 401da2e552ff92ef35a60e45d6b8994dfd091b49
+SHA1 (patch-ak) = b33b0fc9e013642cc842c6d7ee70f590281764ae
 SHA1 (patch-al) = 776088c5916b1b0516e8abaecd69870ba57f4a76
-SHA1 (patch-am) = cb557337c586c39f86b1c8f8fe265c7db022491c
-SHA1 (patch-an) = 44fd1f5dc600136e50536c9f3f9f0179c64ba723
+SHA1 (patch-am) = 614d33806576639cd9f401e5b560d31a738d8657
+SHA1 (patch-an) = db4b9c47bd6efb1fb883cb0c505bd1d0d6f2d83e
