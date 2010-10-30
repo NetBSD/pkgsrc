@@ -1,0 +1,51 @@
+$NetBSD: patch-ap,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+
+Fix building with db5.
+
+--- lib/cyrusdb_berkeley.c.orig	2010-10-19 03:08:28.000000000 +0000
++++ lib/cyrusdb_berkeley.c
+@@ -108,7 +108,7 @@ static void db_panic(DB_ENV *dbenv __att
+     exit(EC_TEMPFAIL);
+ }
+ 
+-#if (DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 3)
++#if (DB_VERSION_MAJOR > 4) || ((DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 3))
+ static void db_err(const DB_ENV *dbenv __attribute__((unused)),
+ 		   const char *db_prfx, const char *buffer)
+ #else
+@@ -163,7 +163,7 @@ static int init(const char *dbdir, int m
+ #endif
+     }
+ 
+-#if (DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 3)
++#if (DB_VERSION_MAJOR > 4) || ((DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 3))
+     dbenv->set_msgcall(dbenv, db_msg);
+ #endif
+     dbenv->set_errcall(dbenv, db_err);
+@@ -281,7 +281,7 @@ static int mysync(void)
+ 
+     assert(dbinit);
+ 
+-#if !(DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
++#if !((DB_VERSION_MAJOR > 4) || ((DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 1)))
+     do {
+ #endif
+ #if (DB_VERSION_MAJOR > 3) || ((DB_VERSION_MAJOR == 3) && (DB_VERSION_MINOR > 0))
+@@ -289,7 +289,7 @@ static int mysync(void)
+ #else
+ 	r = txn_checkpoint(dbenv, 0, 0);
+ #endif
+-#if !(DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
++#if !((DB_VERSION_MAJOR > 4) || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1))
+     } while (r == DB_INCOMPLETE);  /* Never returned by BDB 4.1 */
+ #endif
+     if (r) {
+@@ -412,7 +412,7 @@ static int myopen(const char *fname, DBT
+     /* xxx set comparator! */
+     if (flags & CYRUSDB_MBOXSORT) db->set_bt_compare(db, mbox_compar);
+ 
+-#if DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1
++#if (DB_VERSION_MAJOR > 4) || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
+     r = (db->open)(db, NULL, fname, NULL, type, dbflags | DB_AUTO_COMMIT, 0664);
+ #else
+     r = (db->open)(db, fname, NULL, type, dbflags, 0664);
