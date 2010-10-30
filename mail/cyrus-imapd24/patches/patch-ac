@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+
+--- imap/Makefile.in.orig	2010-10-19 03:08:28.000000000 +0000
++++ imap/Makefile.in
+@@ -179,6 +179,9 @@ mupdate_err.c: mupdate_err.et
+ 
+ mupdate_err.h: mupdate_err.c
+ 
++mutex_pthread.o: mutex_pthread.c
++	$(CC) -c $(CPPFLAGS) $(DEFS) $(CFLAGS) $(PTHREAD_CFLAGS) $<
++
+ ### Services
+ idled: idled.o mutex_fake.o libimap.a $(DEPLIBS)
+ 	$(CC) $(LDFLAGS) -o idled \
+@@ -213,16 +216,16 @@ imapd.quant: $(IMAPDOBJS) mutex_fake.o l
+ 
+ mupdate: mupdate.o mupdate-slave.o mupdate-client.o mutex_pthread.o tls.o \
+ 	libimap.a $(DEPLIBS)
+-	$(CC) $(LDFLAGS) -o mupdate \
++	$(CC) $(LDFLAGS) $(PTHREAD_LDFLAGS) -o mupdate \
+ 	 $(SERVICETHREAD) mupdate.o mupdate-slave.o mupdate-client.o \
+ 	 mutex_pthread.o tls.o libimap.a \
+-	 $(DEPLIBS) $(LIBS) $(LIB_WRAP) -lpthread
++	 $(DEPLIBS) $(LIBS) $(LIB_WRAP) $(PTHREAD_LIBS)
+ 
+ mupdate.pure: mupdate.o mupdate-slave.o mupdate-client.o mutex_pthread.o \
+ 	libimap.a $(DEPLIBS)
+-	$(PURIFY) $(PUREOPT) $(CC) $(LDFLAGS) -o mupdate.pure \
++	$(PURIFY) $(PUREOPT) $(CC) $(LDFLAGS) $(PTHREAD_LDFLAGS) -o mupdate.pure \
+ 	 $(SERVICETHREAD) mupdate.o mupdate-slave.o mupdate-client.o \
+-	 mutex_pthread.o libimap.a $(DEPLIBS) $(LIBS) $(LIB_WRAP) -lpthread
++	 mutex_pthread.o libimap.a $(DEPLIBS) $(LIBS) $(LIB_WRAP) $(PTHREAD_LIBS)
+ 
+ pop3d: pop3d.o proxy.o backend.o tls.o mutex_fake.o libimap.a \
+ 	$(DEPLIBS) $(SERVICE)
