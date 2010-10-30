@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+
+--- configure.orig	2010-10-19 09:58:48.000000000 +0000
++++ configure
+@@ -7145,13 +7145,13 @@ fi
+ 
+ done
+ 
+-	if test "$ac_cv_header_pcreposix_h" == "yes"; then
++	if test "$ac_cv_header_pcreposix_h" = "yes"; then
+ 		LIBS="$LIBS -lpcre -lpcreposix";
+ 
+ $as_echo "#define ENABLE_REGEX /**/" >>confdefs.h
+ 
+ 	else
+-		if test "$ac_cv_header_rxposix_h" == "yes"; then
++		if test "$ac_cv_header_rxposix_h" = "yes"; then
+ 			LIBS="$LIBS -lrx"
+ 
+ $as_echo "#define ENABLE_REGEX /**/" >>confdefs.h
