@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.22 2010/10/30 15:10:54 drochner Exp $
+
+--- database.cc.orig	2010-10-22 00:04:05.000000000 +0000
++++ database.cc
+@@ -1489,12 +1489,19 @@ database_impl::fetch(results & res,
+       vector<string> row;
+       for (int col = 0; col < ncol; col++)
+         {
++	  // We never store NULLs, so we should never see one.
++	  int const datatype = sqlite3_column_type(i->second.stmt(), col);
++	  E(datatype != SQLITE_NULL, origin::database,
++	    F("null result in query: %s") % query.sql_cmd);
+           const char * value = (const char*)sqlite3_column_blob(i->second.stmt(), col);
+           int bytes = sqlite3_column_bytes(i->second.stmt(), col);
+-          E(value, origin::database,
+-            F("null result in query: %s") % query.sql_cmd);
+-          row.push_back(string(value, value + bytes));
+-          //L(FL("row %d col %d value='%s'") % nrow % col % value);
++	  if (value) {
++	    row.push_back(string(value, value + bytes));
++	  } else {
++	    // sqlite3_column_blob() returns null for zero-length
++	    I(bytes == 0);
++	    row.push_back(string());
++	  }
+         }
+       res.push_back(row);
+     }
