@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.51 2010/10/30 15:13:04 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2010/10/30 15:14:46 drochner Exp $
 #
 
 DISTNAME=	monotone-0.48.1
 PKGNAME=	${DISTNAME:S/-/-server-/}
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.48/
+MASTER_SITES=	http://monotone.ca/downloads/0.48.1/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
 COMMENT=	Simplifies the configuration of a dedicated Monotone server
 
 DEPENDS+=	digest>=20080510:../../pkgtools/digest
-DEPENDS+=	monotone>=0.48:../../devel/monotone
+DEPENDS+=	monotone>=0.48.1:../../devel/monotone
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
