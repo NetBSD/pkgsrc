@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9828 2010/10/29 14:15:20 obache Exp $
+$NetBSD: TODO,v 1.9829 2010/10/30 12:12:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -493,7 +493,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.21
 	o cygwin_lib-1.5.24.2
-	o cyrus-imapd-2.4.2
 	o dansguardian-2.10.0.3
 	o dante-1.2.2
 	o dap-3.7
