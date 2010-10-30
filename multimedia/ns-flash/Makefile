@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2010/02/25 15:54:18 mishka Exp $
+# $NetBSD: Makefile,v 1.35 2010/10/30 09:51:31 wiz Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://download.macromedia.com/pub/flashplayer/installers/current/9/
@@ -17,6 +17,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 # Must update communicator/navigator to at least 4.76nb1
 CONFLICTS+=		communicator<=4.76nb1
 CONFLICTS+=		navigator<=4.76nb1
+
+CONFLICTS+=		adobe-flash-plugin-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
