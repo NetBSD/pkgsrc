@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+
+--- imap/sync_client.c.orig	2010-10-19 03:08:28.000000000 +0000
++++ imap/sync_client.c
+@@ -92,6 +92,10 @@
+ #include "signals.h"
+ #include "cyrusdb.h"
+ 
++#ifndef SOL_TCP
++#define SOL_TCP IPPROTO_TCP
++#endif
++
+ /* signal to config.c */
+ const int config_need_data = 0;  /* YYY */
+ 
