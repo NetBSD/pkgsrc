@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.142 2010/09/28 13:21:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.143 2010/10/31 23:50:51 wiz Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -34,7 +34,7 @@ PATCHFILES+=		7.2.413 7.2.414 7.2.415 7.2.416 7.2.417 7.2.418 7.2.419
 PATCHFILES+=		7.2.420 7.2.421 7.2.422 7.2.423 7.2.424 7.2.425 7.2.426
 PATCHFILES+=		7.2.427 7.2.428 7.2.429 7.2.430 7.2.431 7.2.432 7.2.433
 PATCHFILES+=		7.2.434 7.2.435 7.2.436 7.2.437 7.2.438 7.2.439 7.2.440
-PATCHFILES+=		7.2.441 7.2.442
+PATCHFILES+=		7.2.441 7.2.442 7.2.443 7.2.444 7.2.445 7.2.446
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
