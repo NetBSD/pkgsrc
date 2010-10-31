@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/08/31 05:21:10 sno Exp $
+# $NetBSD: Makefile,v 1.10 2010/10/31 15:40:34 sno Exp $
 #
 
-DISTNAME=	LaTeX-Table-v1.0.5
+DISTNAME=	LaTeX-Table-v1.0.6
 PKGNAME=	p5-${DISTNAME:S/v1/1/}
 #PKGREVISION=	1
 CATEGORIES=	textproc
@@ -15,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Moose>=0.76:../../devel/p5-Moose
-#DEPENDS+=	p5-Moose-Policy-[0-9]*:../../devel/p5-Moose-Policy
 DEPENDS+=	p5-MooseX-FollowPBP>=0.03:../../devel/p5-MooseX-FollowPBP
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 
