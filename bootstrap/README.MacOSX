@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.8 2010/02/21 19:04:07 schmonz Exp $
+$NetBSD: README.MacOSX,v 1.9 2010/10/31 21:24:14 gdt Exp $
 
 
 Mac OS X Snow Leopard Binary ABI problem:
@@ -54,3 +54,45 @@ as root to install the configuration.
 to bootstrap with xlc, you need to make sure CFLAGS contains "-ma":
 
 env CC=/opt/ibmcmp/vacpp/6.0/bin/xlc CFLAGS=-ma ./bootstrap
+
+
+Mac OS X Versions
+
+
+pkgsrc is a volunteer project, and individuals support/fix packages
+and platforms as they choose.  However, pkgsrc contributors as a group
+share both a bugtracker and norms about what is ok to break and what
+is not.  To describe these norms, we define levels of concern, keeping
+in mind that there are no guarantees:
+
+  SUPPORTED doesn't mean that anyone is required to fix your problem; it
+  means that we agree that it is broadly desireable that such problems
+  be fixed and that we therefore allow them to be listed in our issue
+  tracker.
+
+  DEPRECATED means that individual problems are not of interest, but
+  pkgsrc overall working is of enough interest to be allowed to be
+  listed in the issue tracker.
+
+  IGNORED means we are not willing to expend issue tracker resources
+  (clutter for those reviewing the db) at all.
+
+Given the above definitions, the pkgsrc developers label versions of
+Mac OS X as follows:
+
+  10.6: current, PRs may be filed.  Structurally breaking pkgsrc on 10.6
+	is considered not ok.  [SUPPORTED]
+
+  10.5: old, but PRs may still be filed.  Structurally breaking pkgsrc on
+	10.5 is considered not ok. [SUPPORTED]
+
+  10.4: very old, and individual pkg PRs may be bounced to authors to
+	retest with newer versions, and closed if that doesn't happen
+	in 14 days.  We will for now consider structurally breaking
+	pkgsrc on 10.4 to be undesirable.  If keeping support for 10.4
+	causes excessive work for maintainers it may be moved to
+	IGNORED state any time, without warning. [DEPRECATED]
+
+  10.3 and below: ancient, and PRs will be summarily closed.  It is
+	acceptable to give zero consideration to causing structural
+	problems on 10.3 and below. [IGNORED]
