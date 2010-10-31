@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3851 2010/10/31 15:40:47 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3852 2010/10/31 23:51:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/cyrus-imapd24 version 2.4.2 [obache 2010-10-30]
 	Updated net/Transmission to 2.11 [tnn 2010-10-30]
 	Updated print/p5-LaTeX-Table to 1.0.6 [sno 2010-10-31]
+	Updated editors/vim to 7.2.446 [wiz 2010-10-31]
