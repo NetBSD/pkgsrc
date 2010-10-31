@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/07/08 14:02:49 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/10/31 09:08:11 shattered Exp $
 #
 
 DISTNAME=	libscsi-1.6
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.emsi.priv.at/pub/netbsd/contrib/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FreeBSD SCSI user library
 
-NOT_FOR_PLATFORM=	Interix-*-*
+ONLY_FOR_PLATFORM=	DragonFly-*-* FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
