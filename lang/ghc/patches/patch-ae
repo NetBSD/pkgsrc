@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.7 2010/10/31 19:05:02 kristerw Exp $
+
+--- ../ghc-6.4.2/mk/suffix.mk.orig	2010-10-31 18:01:35.000000000 +0100
++++ ../ghc-6.4.2/mk/suffix.mk	2010-10-31 18:01:55.000000000 +0100
+@@ -224,9 +224,11 @@
+ 
+ endif
+ 
++ifneq "$(BootingFromHc)" "YES"
+ # stubs are automatically generated and compiled by GHC
+ %_stub.$(way_)o: %.o
+ 	@:
++endif
+ 
+ # -----------------------------------------------------------------------------
+ # Flex/lex
