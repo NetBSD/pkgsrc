@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.6 2010/10/31 23:43:08 wiz Exp $
+
+Fix build on DragonFly after header moved.
+
+--- hw/xfree86/os-support/xf86_OSlib.h.orig	2010-10-30 02:24:29 +0200
++++ hw/xfree86/os-support/xf86_OSlib.h	2010-10-30 02:25:03 +0200
+@@ -346,7 +346,7 @@
+ #    include <dev/wscons/wsdisplay_usl_io.h>
+ #   endif /* WSCONS_SUPPORT */
+ #   if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
+-#    if defined(__FreeBSD_kernel_version) && (__FreeBSD_kernel_version >= 500013)
++#    if (defined(__FreeBSD_kernel_version) && (__FreeBSD_kernel_version >= 500013)) || (defined(__DragonFly_version) && (__DragonFly_version >= 200900))
+ #     include <sys/mouse.h>
+ #    else
+ #     undef MOUSE_GETINFO
