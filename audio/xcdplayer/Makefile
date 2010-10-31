@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/11/10 17:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2010/10/31 08:54:34 shattered Exp $
 
 DISTNAME=	xcdplayer-2.2
 PKGREVISION=	4
@@ -11,7 +11,7 @@ COMMENT=	CD player for X
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NOT_FOR_PLATFORM=	Interix-*-*
+ONLY_FOR_PLATFORM=	SunOS-*-* IRIX-*-* DragonFly-*-* FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 USE_IMAKE=	yes
 
