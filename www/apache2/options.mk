@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: options.mk,v 1.9 2010/11/01 18:03:04 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=	suexec
@@ -19,7 +19,7 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 	--with-suexec-caller=${APACHE_USER}				\
 	--with-suexec-safepath='${APACHE_SUEXEC_PATH:Q}'		\
 	--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT:Q}		\
-	--with-suexec-logfile=${APACHE_SUEXEC_LOGFILE:Q}
+	--with-suexec-logfile=${APACHE_SUEXEC_LOGFILE}
 
 APACHE_MODULES+=	suexec
 CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
