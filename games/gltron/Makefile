@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/06/13 22:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/11/01 00:08:11 wiz Exp $
 #
 
 DISTNAME=	gltron-0.70-source
@@ -7,7 +7,7 @@ PKGREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gltron/}
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gltron.sourceforge.net/
 COMMENT=	3D lightcycle game inspired by the movie Tron
 

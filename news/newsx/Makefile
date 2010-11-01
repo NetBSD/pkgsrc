@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/03/19 17:17:05 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2010/11/01 00:08:14 wiz Exp $
 #
 
 DISTNAME=	newsx-1.6
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	news
 MASTER_SITES=	http://www.sfr-fresh.com/unix/misc/
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kvaleberg.com/newsx.html
 COMMENT=	NNTP news exchange program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/09/14 11:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2010/11/01 00:08:10 wiz Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.20
@@ -7,7 +7,7 @@ PKGREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gkrellm.luon.net/gkrellmms.phtml
 COMMENT=	GKrellM2 plugin to remotely control XMMS
 
