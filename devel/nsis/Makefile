@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/03 15:29:46 sborrill Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/01 00:08:10 wiz Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip .tar.bz2
 DISTFILES=	${DISTNAME}.zip		\
 		${NSIS_SRC}.tar.bz2
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nsis.sourceforge.net/Main_Page
 COMMENT=	Scriptable system to build Windows installers
 
