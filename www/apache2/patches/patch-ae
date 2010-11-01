@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2009/09/04 18:55:34 wiz Exp $
+$NetBSD: patch-ae,v 1.10 2010/11/01 18:03:04 adam Exp $
 
---- modules/ssl/ssl_engine_init.c.orig	2007-12-28 15:07:53.000000000 +0000
+--- modules/ssl/ssl_engine_init.c.orig	2010-09-28 15:59:13.000000000 +0000
 +++ modules/ssl/ssl_engine_init.c
-@@ -531,7 +531,7 @@ static void ssl_init_ctx_verify(server_r
+@@ -535,7 +535,7 @@ static void ssl_init_ctx_verify(server_r
              ssl_die();
          }
  

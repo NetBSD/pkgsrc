@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/08/12 03:37:28 taca Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/01 18:03:03 adam Exp $
 
 .include "../../www/apache2/Makefile.common"
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 
 HOMEPAGE=	http://apr.apache.org/
@@ -25,6 +24,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIBS=${LIBS:M*:Q}
 LIBS.SunOS+=		-lnsl
+
+INSTALLATION_DIRS+=	include/apr-0/arch/unix
 
 APR_CONFIGURE_ARGS= \
 		--prefix=${PREFIX} \
@@ -62,7 +63,6 @@ do-configure:
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/libexec/apr/libtool
 	${INSTALL_SCRIPT} ${PKG_LIBTOOL} ${DESTDIR}${PREFIX}/libexec/apr/libtool
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/apr-0/arch/unix
 	${INSTALL_DATA} ${WRKSRC}/apr/include/arch/*.h ${DESTDIR}${PREFIX}/include/apr-0/arch
 	${INSTALL_DATA} ${WRKSRC}/apr/include/arch/unix/*.h ${DESTDIR}${PREFIX}/include/apr-0/arch/unix/
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/apr-0/*.h

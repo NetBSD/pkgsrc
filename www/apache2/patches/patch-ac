@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2009/11/27 13:28:11 joerg Exp $
+$NetBSD: patch-ac,v 1.8 2010/11/01 18:03:04 adam Exp $
 
---- configure.orig	2008-01-10 17:49:36.000000000 +0100
+--- configure.orig	2010-10-14 18:00:29.000000000 +0000
 +++ configure
-@@ -5253,7 +5253,7 @@ case $host in
+@@ -5384,7 +5384,7 @@ case $host in
                LTCFLAGS="-prefer-non-pic -static"
                ;;
            *)
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.7 2009/11/27 13:28:11 joerg Exp $
                SHLTCFLAGS=""
                LTCFLAGS=""
                ;;
-@@ -18939,7 +18939,6 @@ cat >>confdefs.h <<_ACEOF
+@@ -18868,7 +18868,6 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  
