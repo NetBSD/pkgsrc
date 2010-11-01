@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/01 00:08:15 wiz Exp $
 #
 
 DISTNAME=		srm-1.2.8
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=srm/}
 
-MAINTAINER=		cube@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://srm.sourceforge.net/
 COMMENT=		Secure replacement for rm(1)
 

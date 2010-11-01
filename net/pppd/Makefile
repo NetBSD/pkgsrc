@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/12/26 21:41:40 hasso Exp $
+# $NetBSD: Makefile,v 1.9 2010/11/01 00:08:14 wiz Exp $
 
 DISTNAME=		ppp-${PPPD_VERSION}
 PKGNAME=		${DISTNAME:S/ppp/&d/}
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/ppp/
 
-MAINTAINER=		cube@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ppp.samba.org/
 COMMENT=		PPP Daemon
 

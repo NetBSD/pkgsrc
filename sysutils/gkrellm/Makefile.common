@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2007/05/03 20:21:27 cube Exp $
+# $NetBSD: Makefile.common,v 1.17 2010/11/01 00:08:16 wiz Exp $
 
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://members.dslextreme.com/users/billw/gkrellm/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gkrellm.net/
 
 CONFLICTS+=	gkrellm-1*

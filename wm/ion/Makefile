@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/05/29 08:57:50 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2010/11/01 00:08:16 wiz Exp $
 #
 
 DISTNAME=	ion-2-20040729
@@ -7,7 +7,7 @@ PKGREVISION=	8
 CATEGORIES=	wm x11
 MASTER_SITES=	http://iki.fi/tuomov/dl/archives/
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 

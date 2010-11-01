@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/09/14 11:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/11/01 00:08:11 wiz Exp $
 #
 
 DISTNAME=		gkrellstock-0.5.1
@@ -7,7 +7,7 @@ PKGREVISION=		12
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gkrellstock/}
 
-MAINTAINER=		cube@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gkrellstock.sourceforge.net/
 COMMENT=		GKrellM2 stock ticker plugin
 

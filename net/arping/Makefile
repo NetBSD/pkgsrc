@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/12/09 12:27:27 obache Exp $
+# $NetBSD: Makefile,v 1.18 2010/11/01 00:08:13 wiz Exp $
 #
 
 DISTNAME=		arping-2.08
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.habets.pp.se/pub/synscan/
 
-MAINTAINER=		cube@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.habets.pp.se/synscan/programs.php?prog=arping
 COMMENT=		ARP-level ping utility
 LICENSE=		gnu-gpl-v2
