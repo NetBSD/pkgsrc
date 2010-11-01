@@ -1,10 +1,10 @@
-$NetBSD: patch-au,v 1.1.1.1 2007/01/24 19:31:24 epg Exp $
+$NetBSD: patch-au,v 1.2 2010/11/01 18:03:04 adam Exp $
 
 NetBSD 3.0 does not have pthread_setconcurrency().
 
 --- apr/test/testatomic.c.orig	2005-02-04 21:36:31.000000000 +0100
 +++ apr/test/testatomic.c	2006-10-04 22:30:21.000000000 +0200
-@@ -227,7 +227,7 @@ int main(int argc, char**argv)
+@@ -231,7 +231,7 @@ int main(int argc, char**argv)
      }
  
      printf("APR Atomic Test\n===============\n\n");
