@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3853 2010/11/01 04:02:41 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3854 2010/11/01 18:09:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5294,3 +5294,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/p5-LaTeX-Table to 1.0.6 [sno 2010-10-31]
 	Updated editors/vim to 7.2.446 [wiz 2010-10-31]
 	Updated security/ruby-oauth to 0.4.4 [obache 2010-11-01]
+	Updated devel/apr0 to 0.9.19.2.0.64 [adam 2010-11-01]
+	Updated devel/apr to 1.4.2 [adam 2010-11-01]
+	Updated www/apache2 to 2.0.64 [adam 2010-11-01]
+	Updated www/apache22 to 2.2.17 [adam 2010-11-01]
