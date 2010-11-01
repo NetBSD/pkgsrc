@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/05/20 11:15:17 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/01 00:08:11 wiz Exp $
 #
 
 DISTNAME=	PyOpenGL-3.0.1
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyopengl/}
 
-MAINTAINER=	cube@cubidou.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pyopengl.sourceforge.net/
 COMMENT=	Pyhton bindings for OpenGL
 
