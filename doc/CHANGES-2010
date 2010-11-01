@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3852 2010/10/31 23:51:08 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3853 2010/11/01 04:02:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5293,3 +5293,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/Transmission to 2.11 [tnn 2010-10-30]
 	Updated print/p5-LaTeX-Table to 1.0.6 [sno 2010-10-31]
 	Updated editors/vim to 7.2.446 [wiz 2010-10-31]
+	Updated security/ruby-oauth to 0.4.4 [obache 2010-11-01]
