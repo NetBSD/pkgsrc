@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2010/07/26 21:38:51 tron Exp $
+# $NetBSD: Makefile,v 1.62 2010/11/01 17:28:49 adam Exp $
 
-DISTNAME=	httpd-2.2.16
+DISTNAME=	httpd-2.2.17
 PKGNAME=	${DISTNAME:S/httpd/apache/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
@@ -26,9 +26,9 @@ CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--enable-so
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
-CONFIGURE_ARGS+=       CFLAGS=${APACHE_CUSTOM_CFLAGS:Q}
+CONFIGURE_ARGS+=	CFLAGS=${APACHE_CUSTOM_CFLAGS:M*:Q}
 
-BUILD_DEFS+=           APACHE_CUSTOM_CFLAGS
+BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
 
 # Apache Portable Runtime library configure options
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
@@ -114,7 +114,7 @@ RCD_SCRIPTS=		apache
 
 REQD_DIRS=		${PREFIX}/share/httpd
 REQD_DIRS+=		${PREFIX}/share/httpd/htdocs
-OWN_DIRS= 		${VARBASE}/log/httpd
+OWN_DIRS=		${VARBASE}/log/httpd
 OWN_DIRS+=		${VARBASE}/db/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert
@@ -186,24 +186,24 @@ AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
 
 #.if ${APACHE_MODULES} == "all-shared"
 .if !empty(PKG_OPTIONS:Mapache-shared-modules)
-.include "${AP_DEPENDS.ssl}"
-.include "${AP_DEPENDS.deflate}"
+.  include "${AP_DEPENDS.ssl}"
+.  include "${AP_DEPENDS.deflate}"
 CONFIGURE_ARGS+=	${AP_CFG_ARGS.ssl} ${AP_CFG_ARGS.deflate}
 .else
-.for ap_mod in ${APACHE_MODULES}
-.  if defined(AP_DEPENDS.${ap_mod}) && !empty(AP_DEPENDS.${ap_mod})
-.    for ap_depend in ${AP_DEPENDS.${ap_mod}}
-.      if exists(${ap_depend})
-.        include "${ap_depend}"
-.      else
+.  for ap_mod in ${APACHE_MODULES}
+.    if defined(AP_DEPENDS.${ap_mod}) && !empty(AP_DEPENDS.${ap_mod})
+.      for ap_depend in ${AP_DEPENDS.${ap_mod}}
+.        if exists(${ap_depend})
+.          include "${ap_depend}"
+.        else
 DEPENDS+=		${ap_depend}
-.      endif
-.    endfor
-.  endif
-.  if defined(AP_CFG_ARGS.${ap_mod}) && !empty(AP_CFG_ARGS.${ap_mod})
+.        endif
+.      endfor
+.    endif
+.    if defined(AP_CFG_ARGS.${ap_mod}) && !empty(AP_CFG_ARGS.${ap_mod})
 CONFIGURE_ARGS+=	${AP_CFG_ARGS.${ap_mod}}
-.  endif
-.endfor
+.    endif
+.  endfor
 .endif
 
 post-extract:
