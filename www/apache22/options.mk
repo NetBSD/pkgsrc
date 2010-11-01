@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2010/05/03 20:10:33 tron Exp $
+# $NetBSD: options.mk,v 1.9 2010/11/01 17:28:49 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_OPTIONS_REQUIRED_GROUPS=	mpm
@@ -34,12 +34,12 @@ CONFIGURE_ARGS+=	--with-mpm=prefork
 #
 PLIST_VARS+=		all-shared
 .if !empty(PKG_OPTIONS:Mapache-shared-modules)
-CONFIGURE_ARGS+=        --enable-mods-shared=${DFLT_APACHE_MODULES:Q}
+CONFIGURE_ARGS+=	--enable-mods-shared=${DFLT_APACHE_MODULES:Q}
 PLIST.all-shared=	yes
 .else
-CONFIGURE_ARGS+=        --enable-modules=${APACHE_MODULES:Q}
+CONFIGURE_ARGS+=	--enable-modules=${APACHE_MODULES:Q}
 .endif
-BUILD_DEFS+=            APACHE_MODULES
+BUILD_DEFS+=		APACHE_MODULES
 
 PLIST_VARS+=		suexec
 .if !empty(PKG_OPTIONS:Msuexec)
@@ -54,15 +54,15 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 	--with-suexec-caller=${APACHE_USER}				\
 	--with-suexec-safepath='${APACHE_SUEXEC_PATH:Q}'		\
 	--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT:Q}		\
-	--with-suexec-logfile=${APACHE_SUEXEC_LOGFILE:Q}
+	--with-suexec-logfile=${APACHE_SUEXEC_LOGFILE}
 
 .  if !empty(PKG_OPTIONS:Mapache-shared-modules)
-CONFIGURE_ARGS+=        --enable-modules="all suexec"
+CONFIGURE_ARGS+=	--enable-modules="all suexec"
 .  else
-APACHE_MODULES+=        suexec
+APACHE_MODULES+=	suexec
 .  endif
-CONFIGURE_ARGS+=        ${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
-BUILD_DEFS+=            APACHE_SUEXEC_CONFIGURE_ARGS
+CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
+BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
 BUILD_TARGET=		all suexec
 PLIST.suexec=		yes
 SPECIAL_PERMS+=		sbin/suexec ${REAL_ROOT_USER} ${APACHE_GROUP} 4510
