@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3858 2010/11/02 09:37:31 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.3859 2010/11/02 17:03:25 chs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5302,3 +5302,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/skf to 1.97.3 [obache 2010-11-02]
 	Updated www/ja-trac to 0.12.1pl1 [obache 2010-11-02]
 	Updated devel/mercurial to 1.7 [wiz 2010-11-02]
+	Updated emulators/suse113_freetype2 to 11.3nb1 [chs 2010-11-02]
