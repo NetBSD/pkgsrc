@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2010/06/16 19:24:47 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2010/11/02 18:15:28 drochner Exp $
 
---- configure.orig	2010-03-09 22:21:28.000000000 +0000
+--- configure.orig	2010-10-25 17:50:40.000000000 +0000
 +++ configure
-@@ -5076,7 +5076,7 @@ $as_echo "$EXZ" >&6; }
+@@ -5152,7 +5152,7 @@ $as_echo "$EXZ" >&6; }
  
  LIBXZ_LDADD=
  LIBXZ_CFLAGS=
@@ -11,7 +11,16 @@ $NetBSD: patch-aa,v 1.5 2010/06/16 19:24:47 drochner Exp $
  	have_liblzma=no
  	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -5169,7 +5169,7 @@ $as_echo "$EJUDY" >&6; }
+@@ -5242,7 +5242,7 @@ fi
+ $as_echo "$FASTTREE" >&6; }
+ 
+ FASTTREE_CFLAGS=
+-if test "X$FASTTREE" == "Xno"; then
++if test "X$FASTTREE" = "Xno"; then
+ 	FASTTREE_CFLAGS='-DWAVE_DISABLE_FAST_TREE'
+ fi
+ 
+@@ -5269,7 +5269,7 @@ $as_echo "$EJUDY" >&6; }
  
  LIBJUDY_LDADD=
  LIBJUDY_CFLAGS=
