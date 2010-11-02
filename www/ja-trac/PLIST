@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/08/28 00:44:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/11/02 01:45:10 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -118,6 +118,9 @@ ${PYSITELIB}/trac/htdocs/feed.png
 ${PYSITELIB}/trac/htdocs/file.png
 ${PYSITELIB}/trac/htdocs/folder.png
 ${PYSITELIB}/trac/htdocs/grip.png
+${PYSITELIB}/trac/htdocs/guide/admin-permissions-TICKET_ADMIN.png
+${PYSITELIB}/trac/htdocs/guide/admin-permissions.png
+${PYSITELIB}/trac/htdocs/guide/admin.png
 ${PYSITELIB}/trac/htdocs/guide/basic-workflow.png
 ${PYSITELIB}/trac/htdocs/guide/original-workflow.png
 ${PYSITELIB}/trac/htdocs/ics.png
@@ -131,8 +134,10 @@ ${PYSITELIB}/trac/htdocs/js/folding.js
 ${PYSITELIB}/trac/htdocs/js/ie_pre7_hacks.js
 ${PYSITELIB}/trac/htdocs/js/jquery.js
 ${PYSITELIB}/trac/htdocs/js/keyboard_nav.js
+${PYSITELIB}/trac/htdocs/js/messages/ca.js
 ${PYSITELIB}/trac/htdocs/js/messages/de.js
 ${PYSITELIB}/trac/htdocs/js/messages/en_GB.js
+${PYSITELIB}/trac/htdocs/js/messages/en_US.js
 ${PYSITELIB}/trac/htdocs/js/messages/eo.js
 ${PYSITELIB}/trac/htdocs/js/messages/es.js
 ${PYSITELIB}/trac/htdocs/js/messages/es_AR.js
