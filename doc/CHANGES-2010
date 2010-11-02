@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3855 2010/11/01 20:39:01 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3856 2010/11/02 01:25:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5299,3 +5299,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/apache2 to 2.0.64 [adam 2010-11-01]
 	Updated www/apache22 to 2.2.17 [adam 2010-11-01]
 	Updated devel/fossil to 201011011.42335 [joerg 2010-11-01]
+	Updated converters/skf to 1.97.3 [obache 2010-11-02]
