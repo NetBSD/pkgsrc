@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.4 2010/11/02 14:52:24 drochner Exp $
+
+--- gio/Makefile.in.orig	2010-09-27 16:10:12.000000000 +0000
++++ gio/Makefile.in
+@@ -1838,7 +1838,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-completionSCRIPTS install-data-local \
++install-data-am: install-data-local \
+ 	install-dist_schemaDATA install-gioincludeHEADERS \
+ 	install-giounixincludeHEADERS install-giowin32includeHEADERS
+ 	@$(NORMAL_INSTALL)

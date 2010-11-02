@@ -1,11 +1,11 @@
-$NetBSD: patch-ce,v 1.1 2010/06/01 17:28:31 drochner Exp $
+$NetBSD: patch-ce,v 1.2 2010/11/02 14:52:24 drochner Exp $
 
---- glib/gatomic-gcc.c.orig	2010-06-01 15:18:24.000000000 +0000
+--- glib/gatomic-gcc.c.orig	2010-09-13 15:57:51.000000000 +0000
 +++ glib/gatomic-gcc.c
-@@ -22,6 +22,7 @@
+@@ -21,6 +21,7 @@
+ #include "config.h"
  
- #include "glib.h"
- #include "galias.h"
+ #include "gatomic.h"
 +#include "gthreadprivate.h"
  
  gint
