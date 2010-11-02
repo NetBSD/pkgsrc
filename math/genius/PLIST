@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/09/03 13:15:20 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/11/02 18:02:34 drochner Exp $
 bin/genius
 ${PLIST.x11}bin/gnome-genius
 include/genius/compil.h
@@ -91,6 +91,7 @@ share/locale/en_GB/LC_MESSAGES/genius.mo
 share/locale/es/LC_MESSAGES/genius.mo
 share/locale/fr/LC_MESSAGES/genius.mo
 share/locale/ga/LC_MESSAGES/genius.mo
+share/locale/gl/LC_MESSAGES/genius.mo
 share/locale/hi/LC_MESSAGES/genius.mo
 share/locale/hr/LC_MESSAGES/genius.mo
 share/locale/it/LC_MESSAGES/genius.mo
@@ -108,6 +109,7 @@ share/locale/pl/LC_MESSAGES/genius.mo
 share/locale/pt/LC_MESSAGES/genius.mo
 share/locale/pt_BR/LC_MESSAGES/genius.mo
 share/locale/rw/LC_MESSAGES/genius.mo
+share/locale/sl/LC_MESSAGES/genius.mo
 share/locale/sq/LC_MESSAGES/genius.mo
 share/locale/sr/LC_MESSAGES/genius.mo
 share/locale/sr@Latn/LC_MESSAGES/genius.mo
