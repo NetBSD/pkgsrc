@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.6 2010/05/31 17:30:36 drochner Exp $
+$NetBSD: patch-ak,v 1.7 2010/11/02 14:52:24 drochner Exp $
 
---- configure.in.orig	2010-05-02 23:58:58.000000000 +0000
-+++ configure.in
+--- configure.ac.orig	2010-05-02 23:58:58.000000000 +0000
++++ configure.ac
 @@ -846,7 +846,7 @@ int main (int argc, char **argv)
  AC_MSG_RESULT($g_have_gnuc_visibility)
  AM_CONDITIONAL(HAVE_GNUC_VISIBILITY, [test x$g_have_gnuc_visibility = xyes])

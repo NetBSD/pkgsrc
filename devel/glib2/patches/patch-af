@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.11 2008/09/06 11:07:20 obache Exp $
+$NetBSD: patch-af,v 1.12 2010/11/02 14:52:24 drochner Exp $
 
---- glib/libcharset/Makefile.in.orig	2008-09-02 19:29:43.000000000 +0000
+--- glib/libcharset/Makefile.in.orig	2010-09-27 16:10:13.000000000 +0000
 +++ glib/libcharset/Makefile.in
-@@ -601,18 +601,6 @@ test-report perf-report full-report:	${T
- # run make test as part of make check
- check-local: test
+@@ -703,18 +703,6 @@ lcov-clean:
+ # run tests in cwd as part of make check
+ check-local: test-nonrecursive
  install-exec-local: all-local
 -	$(mkinstalldirs) $(DESTDIR)$(libdir)
 -	if test -f $(charset_alias); then \
