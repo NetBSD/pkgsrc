@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/11/02 15:17:29 drochner Exp $
+
+--- configure.orig	2010-09-21 18:28:58.000000000 +0000
++++ configure
+@@ -18183,9 +18183,9 @@ $as_echo "$found_introspection" >&6; }
+        INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
+        INTROSPECTION_GENERATE=`$PKG_CONFIG --variable=g_ir_generate gobject-introspection-1.0`
+        INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
+-       INTROSPECTION_GIRDIR=${INTROSPECTION_GIRDIR/$datadir/\$(datadir)}
++#       INTROSPECTION_GIRDIR=${INTROSPECTION_GIRDIR/$datadir/\$(datadir)}
+        INTROSPECTION_TYPELIBDIR="$($PKG_CONFIG --variable=typelibdir gobject-introspection-1.0)"
+-       INTROSPECTION_TYPELIBDIR=${INTROSPECTION_TYPELIBDIR/$libdir/\$(libdir)}
++#       INTROSPECTION_TYPELIBDIR=${INTROSPECTION_TYPELIBDIR/$libdir/\$(libdir)}
+        INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
+        INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
+        INTROSPECTION_MAKEFILE=`$PKG_CONFIG --variable=datadir gobject-introspection-1.0`/gobject-introspection-1.0/Makefile.introspection
+@@ -18592,7 +18592,7 @@ rm -f core conftest.err conftest.$ac_obj
+ fi
+ 
+ 
+-if test "x${enable_Bsymbolic}" == "xyes"; then
++if test "x${enable_Bsymbolic}" = "xyes"; then
+   GDK_PIXBUF_LINK_FLAGS=-Wl,-Bsymbolic-functions
+ fi
+ 
