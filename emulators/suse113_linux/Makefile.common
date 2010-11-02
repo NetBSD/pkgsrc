@@ -1,12 +1,14 @@
-# $NetBSD: Makefile.common,v 1.2 2010/11/02 16:49:59 chs Exp $
+# $NetBSD: Makefile.common,v 1.3 2010/11/02 18:39:44 chs Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		11.3
 EMUL_REQD=		suse>=${SUSE_VERSION}
 
 # The SuSE 11.x Linux packages are only usable on the following platforms.
-.if defined(SUSE_COMPAT32)
-.else
+# The SUSE_COMPAT32 packages are available only on x86_64 and they emulate i386.
+# The non-SUSE_COMPAT32 packages are available on both i386 and x86_64
+# and they emulate the corresponding linux platform.
+.if !defined(SUSE_COMPAT32)
 EMUL_PLATFORMS+=	linux-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-5.99*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[6-9]*-i386
