@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2010/10/30 23:48:36 spz Exp $
+# $NetBSD: Makefile,v 1.37 2010/11/02 08:01:08 spz Exp $
 
 DISTNAME=		majordomo-1.94.5
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.sgi.com/other/majordomo/1.94.5/ \
 			ftp://ftp-europe.sgi.com/other/majordomo/1.94.5/
@@ -30,9 +30,13 @@ MAKE_FILE=		Makefile.netbsd
 
 .include "../../mk/bsd.prefs.mk"
 
+PKG_SYSCONFSUBDIR=	majordomo
+CONF_FILES+=		${EXAMPLEDIR}/aliases.majordomo ${PKG_SYSCONFDIR}/aliases
+CONF_FILES+=		${EXAMPLEDIR}/majordomo.cf ${PKG_SYSCONFDIR}/majordomo.cf
+
 MAJORDOMO_HOMEDIR?=	${VARBASE}/majordomo
 MAJORDOMO_TMPDIR?=	${VARBASE}/majordomo/tmp
-MAJORDOMO_CF?=		${PREFIX}/etc/majordomo/majordomo.cf
+MAJORDOMO_CF?=		${PKG_SYSCONFDIR}/majordomo.cf
 MAJORDOMO_USER?=	majordom
 MAJORDOMO_GROUP?=	majordom
 
@@ -41,10 +45,6 @@ PKG_HOME.${MAJORDOMO_USER}=	${MAJORDOMO_HOMEDIR}
 
 PKG_GROUPS_VARS+=	MAJORDOMO_GROUP
 PKG_USERS_VARS+=	MAJORDOMO_USER
-
-PKG_SYSCONFSUBDIR=	majordomo
-CONF_FILES+=		${EXAMPLEDIR}/aliases.majordomo ${PKG_SYSCONFDIR}/aliases
-CONF_FILES+=		${EXAMPLEDIR}/majordomo.cf ${PKG_SYSCONFDIR}/majordomo.cf
 
 MESSAGE_SUBST+=		HOME=${MAJORDOMO_HOMEDIR}			\
 			MAJORDOMO_CF=${MAJORDOMO_CF}		\
