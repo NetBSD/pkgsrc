@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/16 12:12:17 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/02 19:25:04 drochner Exp $
 #
 
-DISTNAME=	numexpr-1.3.1
-PKGNAME=	${PYPKGPREFIX}-numexpr-1.3.1
+DISTNAME=	numexpr-1.4.1
+PKGNAME=	${PYPKGPREFIX}-numexpr-1.4.1
 CATEGORIES=	math
 MASTER_SITES=	http://numexpr.googlecode.com/files/
 
