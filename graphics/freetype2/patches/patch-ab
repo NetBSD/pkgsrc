@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.14 2010/11/03 11:56:37 drochner Exp $
+
+--- src/truetype/ttgxvar.c.orig	2010-07-12 19:03:49.000000000 +0000
++++ src/truetype/ttgxvar.c
+@@ -154,7 +154,7 @@
+         runcnt = runcnt & GX_PT_POINT_RUN_COUNT_MASK;
+         first  = points[i++] = FT_GET_USHORT();
+ 
+-        if ( runcnt < 1 )
++        if ( runcnt < 1 || i + runcnt >= n )
+           goto Exit;
+ 
+         /* first point not included in runcount */
+@@ -165,7 +165,7 @@
+       {
+         first = points[i++] = FT_GET_BYTE();
+ 
+-        if ( runcnt < 1 )
++        if ( runcnt < 1 || i + runcnt >= n )
+           goto Exit;
+ 
+         for ( j = 0; j < runcnt; ++j )
