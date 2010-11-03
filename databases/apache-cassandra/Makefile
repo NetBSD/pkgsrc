@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/10/17 23:41:11 tonnerre Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/03 23:45:42 tonnerre Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
 PKGNAME=	apache-cassandra-${CASSANDRA_VER:S/-//}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
@@ -23,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-CASSANDRA_VER=	0.7.0-beta2
+CASSANDRA_VER=	0.7.0-beta3
 CASSANDRA_HOME=	${PREFIX}/share/cassandra
 EGDIR=		${PREFIX}/share/examples/cassandra
 DOCDIR=		${PREFIX}/share/doc/cassandra
@@ -46,7 +45,7 @@ FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME}		\
 			CASSANDRA_GROUP=${CASSANDRA_GROUP}
 
 PRIVATE_EGFILES=
-PUBLIC_EGFILES=		cassandra-env.sh cassandra-rack.properties	\
+PUBLIC_EGFILES=		cassandra-env.sh cassandra-topology.properties	\
 			cassandra.yaml log4j-server.properties		\
 			log4j-tools.properties
 
