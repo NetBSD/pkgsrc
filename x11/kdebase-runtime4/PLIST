@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/25 20:55:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/11/03 20:08:45 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -355,6 +355,9 @@ share/doc/kde/HTML/en/kioslave/info/index.docbook
 share/doc/kde/HTML/en/kioslave/man/common
 share/doc/kde/HTML/en/kioslave/man/index.cache.bz2
 share/doc/kde/HTML/en/kioslave/man/index.docbook
+share/doc/kde/HTML/en/kioslave/nepomuksearch/common
+share/doc/kde/HTML/en/kioslave/nepomuksearch/index.cache.bz2
+share/doc/kde/HTML/en/kioslave/nepomuksearch/index.docbook
 share/doc/kde/HTML/en/kioslave/nfs/common
 share/doc/kde/HTML/en/kioslave/nfs/index.cache.bz2
 share/doc/kde/HTML/en/kioslave/nfs/index.docbook

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/10/25 21:11:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/11/03 20:07:34 markd Exp $
 man/nl/man1/adddebug.1
 man/nl/man1/ark.1
 man/nl/man1/checkXML.1
@@ -60,6 +60,9 @@ share/doc/kde/HTML/nl/ark/man-ark.1.docbook
 share/doc/kde/HTML/nl/blinken/common
 share/doc/kde/HTML/nl/blinken/index.cache.bz2
 share/doc/kde/HTML/nl/blinken/index.docbook
+share/doc/kde/HTML/nl/bomber/common
+share/doc/kde/HTML/nl/bomber/index.cache.bz2
+share/doc/kde/HTML/nl/bomber/index.docbook
 share/doc/kde/HTML/nl/cantor/common
 share/doc/kde/HTML/nl/cantor/index.cache.bz2
 share/doc/kde/HTML/nl/cantor/index.docbook
@@ -98,6 +101,7 @@ share/doc/kde/HTML/nl/juk/common
 share/doc/kde/HTML/nl/juk/index.cache.bz2
 share/doc/kde/HTML/nl/juk/index.docbook
 share/doc/kde/HTML/nl/juk/juk-main.png
+share/doc/kde/HTML/nl/kalgebra/commands.docbook
 share/doc/kde/HTML/nl/kalgebra/common
 share/doc/kde/HTML/nl/kalgebra/index.cache.bz2
 share/doc/kde/HTML/nl/kalgebra/index.docbook
@@ -142,6 +146,12 @@ share/doc/kde/HTML/nl/kanagram/newstuff-settings.png
 share/doc/kde/HTML/nl/kanagram/shortcuts-settings.png
 share/doc/kde/HTML/nl/kanagram/vocab-editor.png
 share/doc/kde/HTML/nl/kanagram/vocab-settings.png
+share/doc/kde/HTML/nl/kbattleship/common
+share/doc/kde/HTML/nl/kbattleship/index.cache.bz2
+share/doc/kde/HTML/nl/kbattleship/index.docbook
+share/doc/kde/HTML/nl/kblackbox/common
+share/doc/kde/HTML/nl/kblackbox/index.cache.bz2
+share/doc/kde/HTML/nl/kblackbox/index.docbook
 share/doc/kde/HTML/nl/kbruch/common
 share/doc/kde/HTML/nl/kbruch/index.cache.bz2
 share/doc/kde/HTML/nl/kbruch/index.docbook
@@ -424,6 +434,9 @@ share/doc/kde/HTML/nl/kfind/man-kfind.1.docbook
 share/doc/kde/HTML/nl/kfontview/common
 share/doc/kde/HTML/nl/kfontview/index.cache.bz2
 share/doc/kde/HTML/nl/kfontview/index.docbook
+share/doc/kde/HTML/nl/kfourinline/common
+share/doc/kde/HTML/nl/kfourinline/index.cache.bz2
+share/doc/kde/HTML/nl/kfourinline/index.docbook
 share/doc/kde/HTML/nl/kgeography/common
 share/doc/kde/HTML/nl/kgeography/first-start1.png
 share/doc/kde/HTML/nl/kgeography/first-start2.png
@@ -527,6 +540,9 @@ share/doc/kde/HTML/nl/kioslave/man/index.docbook
 share/doc/kde/HTML/nl/kioslave/mbox/common
 share/doc/kde/HTML/nl/kioslave/mbox/index.cache.bz2
 share/doc/kde/HTML/nl/kioslave/mbox/index.docbook
+share/doc/kde/HTML/nl/kioslave/nepomuksearch/common
+share/doc/kde/HTML/nl/kioslave/nepomuksearch/index.cache.bz2
+share/doc/kde/HTML/nl/kioslave/nepomuksearch/index.docbook
 share/doc/kde/HTML/nl/kioslave/network/common
 share/doc/kde/HTML/nl/kioslave/network/index.cache.bz2
 share/doc/kde/HTML/nl/kioslave/network/index.docbook
@@ -644,6 +660,9 @@ share/doc/kde/HTML/nl/kmplot/using.docbook
 share/doc/kde/HTML/nl/knetattach/common
 share/doc/kde/HTML/nl/knetattach/index.cache.bz2
 share/doc/kde/HTML/nl/knetattach/index.docbook
+share/doc/kde/HTML/nl/kolourpaint/common
+share/doc/kde/HTML/nl/kolourpaint/index.cache.bz2
+share/doc/kde/HTML/nl/kolourpaint/index.docbook
 share/doc/kde/HTML/nl/kommander/basics.docbook
 share/doc/kde/HTML/nl/kommander/commands.docbook
 share/doc/kde/HTML/nl/kommander/common
