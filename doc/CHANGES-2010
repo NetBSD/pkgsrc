@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3863 2010/11/03 20:12:38 markd Exp $
+$NetBSD: CHANGES-2010,v 1.3864 2010/11/03 23:46:06 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdebase4 to 4.5.3 [markd 2010-11-03]
 	Updated x11/kdebindings4-python to 4.5.3 [markd 2010-11-03]
 	Updated x11/kdelibs4 to 4.5.3 [markd 2010-11-03]
+	Updated databases/apache-cassandra to 0.7.0beta3 [tonnerre 2010-11-03]
