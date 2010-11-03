@@ -1,0 +1,12 @@
+$NetBSD: patch-cg,v 1.1 2010/11/03 17:07:47 drochner Exp $
+
+--- glib/gmem.c.orig	2010-09-13 15:57:51.000000000 +0000
++++ glib/gmem.c
+@@ -39,6 +39,7 @@
+ #include "gbacktrace.h"
+ #include "gtestutils.h"
+ #include "gthread.h"
++#include "gthreadprivate.h"
+ #include "glib_trace.h"
+ 
+ 
