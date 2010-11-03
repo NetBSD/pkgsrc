@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/25 20:55:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/11/03 20:08:42 markd Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -36,7 +36,9 @@ share/doc/kde/HTML/en/kmouth/kmouthctts.png
 share/doc/kde/HTML/en/kmouth/kmouthcwcp.png
 share/doc/kde/HTML/en/kmouth/kmouthedit.png
 share/doc/kde/HTML/en/kmouth/kmouthmain.png
-share/doc/kde/HTML/en/kmouth/kmouthwizard.png
+share/doc/kde/HTML/en/kmouth/kmouthwizard1.png
+share/doc/kde/HTML/en/kmouth/kmouthwizard2.png
+share/doc/kde/HTML/en/kmouth/kmouthwizard3.png
 share/doc/kde/HTML/en/kmouth/man-kmouth.1.docbook
 share/icons/hicolor/16x16/actions/followmouse.png
 share/icons/hicolor/16x16/actions/hidemouse.png
