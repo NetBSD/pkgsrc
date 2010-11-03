@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.2 2010/10/21 13:55:13 adam Exp $
+# $NetBSD: clang.mk,v 1.3 2010/11/03 18:05:05 adam Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -17,32 +17,22 @@ COMPILER_CLANG_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-CLANGBASE?=		${PREFIX}
-
+CLANGBASE?=		${LOCALBASE}
 LANGUAGES.clang=	# empty
 
-_CLANG_DIR=		${CLANGBASE}/bin
-_CLANG_VARS=		# empty
-
 .if exists(${CLANGBASE}/bin/clang)
-LANGUAGES.clang+=	c
-_CLANG_VARS+=		CC
-_CLANG_CC=		${_CLANG_DIR}/clang
-_ALIASES.CC=		cc gcc c89 c99
-CCPATH=			${_CLANG_DIR}/clang
-PKG_CC:=		${_CLANG_CC}
+LANGUAGES.clang+=	c objc
+_COMPILER_STRIP_VARS+=	CC
+CCPATH=			${CLANGBASE}/bin/clang
+PKG_CC:=		${CCPATH}
 .endif
 
 .if exists(${CLANGBASE}/bin/clang++)
 LANGUAGES.clang+=	c++
-_CLANG_VARS+=		CXX
-_CLANG_CXX=		${_CLANG_DIR}/clang++
-_ALIASES.CXX=		c++ g++
-CXXPATH=		${_CLANG_DIR}/clang++
-PKG_CXX:=		${_CLANG_CXX}
+_COMPILER_STRIP_VARS+=	CXX
+CXXPATH=		${CLANGBASE}/bin/clang++
+PKG_CXX:=		${CXXPATH}
 .endif
-
-_COMPILER_STRIP_VARS+=	${_CLANG_VARS}
 
 # Mimic GCC behaviour by defaulting to C89
 #.if !empty(USE_LANGUAGES:Mc99)
@@ -51,10 +41,6 @@ _COMPILER_STRIP_VARS+=	${_CLANG_VARS}
 #_WRAP_EXTRA_ARGS.CC+=	-std=gnu89
 #.endif
 
-_LINKER_RPATH_FLAG=	-rpath,
-
-_COMPILER_RPATH_FLAG=	-Wl,-rpath,
-
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -v 2>&1
 CC_VERSION!=		${CCPATH} -dumpversion 2>&1
@@ -62,6 +48,10 @@ CC_VERSION!=		${CCPATH} -dumpversion 2>&1
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		clang
 .endif
+
+_COMPILER_LD_FLAG=	-Wl,
+_LINKER_RPATH_FLAG=	-rpath
+_COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG},
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
 # ones requested by the package in USE_LANGUAGES.
