@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/11/17 17:08:01 wiz Exp $
+$NetBSD: distinfo,v 1.4 2010/11/03 19:56:17 drochner Exp $
 
-SHA1 (pygtksourceview-2.8.0.tar.bz2) = da87126a8dc7cf4773da2fbb34c93e0c1b0e9e9f
-RMD160 (pygtksourceview-2.8.0.tar.bz2) = 9baac92eff3f6d7b6d48ba150ca3068a9bf06536
-Size (pygtksourceview-2.8.0.tar.bz2) = 269696 bytes
+SHA1 (pygtksourceview-2.10.1.tar.bz2) = 2a8da2ade949b5d89d3217809ecb4a19127590ab
+RMD160 (pygtksourceview-2.10.1.tar.bz2) = c70845f9d597034de819ac099b1dc81f6a31ac08
+Size (pygtksourceview-2.10.1.tar.bz2) = 290249 bytes
