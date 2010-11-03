@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3862 2010/11/03 18:19:17 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.3863 2010/11/03 20:12:38 markd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5313,3 +5313,27 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/poppler to 0.14.4 [drochner 2010-11-03]
 	Added graphics/gdk-pixbuf2 version 2.22.0 [drochner 2010-11-03]
 	Updated devel/glib2 to 2.26.0 [drochner 2010-11-03]
+	Updated devel/kdesdk4 to 4.5.3 [markd 2010-11-03]
+	Updated games/kdegames4 to 4.5.3 [markd 2010-11-03]
+	Updated games/kdetoys4 to 4.5.3 [markd 2010-11-03]
+	Updated graphics/kdegraphics4 to 4.5.3 [markd 2010-11-03]
+	Updated graphics/oxygen-icons to 4.5.3 [markd 2010-11-03]
+	Updated meta-pkgs/kde4 to 4.5.3 [markd 2010-11-03]
+	Updated misc/kdeaccessibility4 to 4.5.3 [markd 2010-11-03]
+	Updated misc/kdeadmin4 to 4.5.3 [markd 2010-11-03]
+	Updated misc/kdeartwork4 to 4.5.3 [markd 2010-11-03]
+	Updated misc/kdeedu4 to 4.5.3 [markd 2010-11-03]
+	Updated misc/kdepimlibs4 to 4.5.3 [markd 2010-11-03]
+	Updated misc/kdeplasma-addons4 to 4.5.3 [markd 2010-11-03]
+	Updated misc/kdeutils4 to 4.5.3 [markd 2010-11-03]
+	Updated multimedia/kdemultimedia4 to 4.5.3 [markd 2010-11-03]
+	Updated net/kdenetwork4 to 4.5.3 [markd 2010-11-03]
+	Updated www/kdewebdev4 to 4.5.3 [markd 2010-11-03]
+	Updated x11/kde4-l10n-de to 4.5.3 [markd 2010-11-03]
+	Updated x11/kde4-l10n-en_GB to 4.5.3 [markd 2010-11-03]
+	Updated x11/kde4-l10n-nl to 4.5.3 [markd 2010-11-03]
+	Updated x11/kdebase-runtime4 to 4.5.3 [markd 2010-11-03]
+	Updated x11/kdebase-workspace4 to 4.5.3 [markd 2010-11-03]
+	Updated x11/kdebase4 to 4.5.3 [markd 2010-11-03]
+	Updated x11/kdebindings4-python to 4.5.3 [markd 2010-11-03]
+	Updated x11/kdelibs4 to 4.5.3 [markd 2010-11-03]
