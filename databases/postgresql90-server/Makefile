@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/21 07:52:56 adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/03 14:36:41 adam Exp $
 
 PKGNAME=	postgresql90-server-${BASE_VERS}
 COMMENT=	PostgreSQL database server programs
@@ -42,10 +42,6 @@ DLOPEN_REQUIRE_PTHREADS=	no
 DL_LIBS+=	-lltdl
 .  include "../../devel/libltdl/buildlink3.mk"
 .endif
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql90-server
-PKG_SUPPORTED_OPTIONS=	gssapi krb5 ldap pam
-.include "../../databases/postgresql90/options.mk"
 
 # PGUSER	username of the database administrator
 # PGGROUP	group of the database administrator

@@ -1,6 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/09/21 07:50:46 adam Exp $
+# $NetBSD: options.mk,v 1.2 2010/11/03 14:36:41 adam Exp $
 
-PKG_SUPPORTED_OPTIONS+=		# empty
+PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql90
+PKG_SUPPORTED_OPTIONS=	gssapi krb5 ldap pam
 
 .include "../../mk/bsd.options.mk"
 
