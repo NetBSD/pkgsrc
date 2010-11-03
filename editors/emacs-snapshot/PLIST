@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/10/24 23:57:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/11/03 23:46:11 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -277,6 +277,7 @@ share/emacs/${EMACS_VERSION}/etc/images/bookmark_add.pbm
 share/emacs/${EMACS_VERSION}/etc/images/bookmark_add.xpm
 share/emacs/${EMACS_VERSION}/etc/images/cancel.pbm
 share/emacs/${EMACS_VERSION}/etc/images/cancel.xpm
+share/emacs/${EMACS_VERSION}/etc/images/checked.xpm
 share/emacs/${EMACS_VERSION}/etc/images/close.pbm
 share/emacs/${EMACS_VERSION}/etc/images/close.xpm
 share/emacs/${EMACS_VERSION}/etc/images/connect.xpm
@@ -659,6 +660,7 @@ share/emacs/${EMACS_VERSION}/etc/images/tree-widget/folder/no-handle.png
 share/emacs/${EMACS_VERSION}/etc/images/tree-widget/folder/no-handle.xpm
 share/emacs/${EMACS_VERSION}/etc/images/tree-widget/folder/open.png
 share/emacs/${EMACS_VERSION}/etc/images/tree-widget/folder/open.xpm
+share/emacs/${EMACS_VERSION}/etc/images/unchecked.xpm
 share/emacs/${EMACS_VERSION}/etc/images/undo.pbm
 share/emacs/${EMACS_VERSION}/etc/images/undo.xpm
 share/emacs/${EMACS_VERSION}/etc/images/up-arrow.pbm
