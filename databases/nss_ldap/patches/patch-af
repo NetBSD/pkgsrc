@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2010/10/29 13:47:11 adam Exp $
+$NetBSD: patch-af,v 1.6 2010/11/03 11:39:08 adam Exp $
 
 --- Makefile.in.orig	2009-11-06 10:28:08.000000000 +0000
 +++ Makefile.in
@@ -61,7 +61,7 @@ $NetBSD: patch-af,v 1.5 2010/10/29 13:47:11 adam Exp $
 -		$(INSTALL_DATA) -o $(INST_UID) -g $(INST_GID) $(srcdir)/ldap.conf $(DESTDIR)$(NSS_LDAP_PATH_CONF); \
 -	fi
 +	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
-+	$(INSTALL_DATA) -o $(INST_UID) -g $(INST_GID) $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/nss_ldap.conf
++	$(INSTALL_DATA) -o $(INST_UID) -g $(INST_GID) $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/ldap.conf
  	$(INSTALL_DATA) -o $(INST_UID) -g $(INST_GID) $(srcdir)/nsswitch.ldap $(DESTDIR)$(sysconfdir)/nsswitch.ldap; 
  
  uninstall-local:
