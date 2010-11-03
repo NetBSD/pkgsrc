@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1974 2010/08/24 19:08:28 bad Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1975 2010/11/03 18:02:40 adam Exp $
 #
 # This file is in the public domain.
 #
@@ -30,7 +30,6 @@
 ##### PKGBASE, PKGNAME[_NOREV], PKGVERSION
 
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
-PKGVERSION?=		${PKGNAME:C/^.*-//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
 .if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
 .  if defined(PKGNAME)
