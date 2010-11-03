@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/03/20 19:46:14 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2010/11/03 14:21:49 adam Exp $
 
-DISTNAME=	xz-4.999.9beta
-PKGREVISION=	1
+DISTNAME=	xz-5.0.0
 CATEGORIES=	archivers
 MASTER_SITES=	http://tukaani.org/xz/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tukaani.org/xz/
