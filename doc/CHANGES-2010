@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3860 2010/11/03 10:18:50 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3861 2010/11/03 14:22:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5304,3 +5304,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/mercurial to 1.7 [wiz 2010-11-02]
 	Updated emulators/suse113_freetype2 to 11.3nb1 [chs 2010-11-02]
 	Updated www/squid31 to 3.1.9 [tron 2010-11-03]
+	Updated archivers/xz to 5.0.0 [adam 2010-11-03]
