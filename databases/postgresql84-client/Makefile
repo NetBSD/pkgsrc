@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/10/07 15:53:22 adam Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/03 14:36:40 adam Exp $
 
 PKGNAME=	postgresql84-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -42,9 +42,6 @@ BUILD_DIRS=	${INSTALL_DIRS}
 
 # Without this, the Darwin build fails (related to -bundle_loader).
 BUILD_DIRS+=	src/backend
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql84-client
-.include "../../databases/postgresql84/options.mk"
 
 .for _file_ in pg_service.conf psqlrc
 CONF_FILES+=	${PG_DATA_DIR}/${_file_}.sample ${PG_ETC_DIR}/${_file_}
