@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/10/28 08:06:19 adam Exp $
+$NetBSD: patch-aa,v 1.6 2010/11/03 11:39:08 adam Exp $
 
 --- Makefile.in.orig	2009-11-06 10:29:34.000000000 +0000
 +++ Makefile.in
@@ -71,15 +71,16 @@ $NetBSD: patch-aa,v 1.5 2010/10/28 08:06:19 adam Exp $
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(libdir)/security
  @EXTENSION_SO_TRUE@	$(INSTALL_PROGRAM) -o root -g root pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so
-@@ -602,9 +610,9 @@ install-exec-local: pam_ldap.so
+@@ -602,10 +610,8 @@ install-exec-local: pam_ldap.so
  
  install-data-local:
  	@$(NORMAL_INSTALL)
 -	@if test ! -f $(DESTDIR)$(sysconfdir)/ldap.conf; then \
-+	@if test ! -f $(DESTDIR)$(sysconfdir)/pam_ldap.conf; then \
- 		$(mkinstalldirs) $(DESTDIR)$(sysconfdir); \
+-		$(mkinstalldirs) $(DESTDIR)$(sysconfdir); \
 -		$(INSTALL_DATA) -o root -g root $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/ldap.conf; \
-+		$(INSTALL_DATA) $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/pam_ldap.conf; \
- 	fi
+-	fi
++	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(INSTALL_DATA) $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/ldap.conf; \
  
  uninstall-local:
+ 	@$(NORMAL_UNINSTALL)

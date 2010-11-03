@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2010/10/29 13:47:11 adam Exp $
+$NetBSD: distinfo,v 1.7 2010/11/03 11:39:07 adam Exp $
 
 SHA1 (nss_ldap-265.tar.gz) = 743581914fc8c9b4d33955c2cc7acd0c3c44a430
 RMD160 (nss_ldap-265.tar.gz) = 0513f1b62aface531145f739ec8e9867c77eb3ce
 Size (nss_ldap-265.tar.gz) = 280976 bytes
 SHA1 (patch-ab) = 418fca750b9b6f40dd3a904af84fababf8c55022
-SHA1 (patch-af) = 02deabc2a806a5cf82809b770bdc6122a2ff6a9d
+SHA1 (patch-af) = 27fa5ff0bbff4340ce92e109b35d900369e31a53
 SHA1 (patch-ag) = 880b8867b610b9602fc428beebdeb85dee215816

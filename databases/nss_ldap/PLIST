@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/11/03 11:39:07 adam Exp $
 lib/nss_ldap.so
 lib/nss_ldap.so.1
 man/man5/nss_ldap.5
-share/examples/nss_ldap/nss_ldap.conf
+share/examples/nss_ldap/ldap.conf
 share/examples/nss_ldap/nsswitch.ldap
