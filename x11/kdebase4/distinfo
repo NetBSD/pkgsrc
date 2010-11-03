@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2010/10/25 20:55:28 markd Exp $
+$NetBSD: distinfo,v 1.12 2010/11/03 20:08:46 markd Exp $
 
-SHA1 (kdebase-4.5.2.tar.bz2) = fb14022d7f47acc1cebce2da41d821945ec8de5c
-RMD160 (kdebase-4.5.2.tar.bz2) = ad37ed1e515cbd54db09b2f6bb5896ea3c673c2f
-Size (kdebase-4.5.2.tar.bz2) = 2640971 bytes
+SHA1 (kdebase-4.5.3.tar.bz2) = cc52a321e98fae8bca5126e94c18e10cc8f44361
+RMD160 (kdebase-4.5.3.tar.bz2) = a8012959afa83807bfd4186308a0093e5f0027f8
+Size (kdebase-4.5.3.tar.bz2) = 2640916 bytes
 SHA1 (patch-aa) = 84d234fe0ec585cd1cd92636d80bfa98b898ad2d

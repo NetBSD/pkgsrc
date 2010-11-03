@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/10/25 21:11:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/11/03 20:07:33 markd Exp $
 man/de/man1/adddebug.1
 man/de/man1/ark.1
 man/de/man1/cheatmake.1
@@ -155,6 +155,7 @@ share/doc/kde/HTML/de/juk/toolbar.png
 share/doc/kde/HTML/de/kajongg/common
 share/doc/kde/HTML/de/kajongg/index.cache.bz2
 share/doc/kde/HTML/de/kajongg/index.docbook
+share/doc/kde/HTML/de/kalgebra/commands.docbook
 share/doc/kde/HTML/de/kalgebra/common
 share/doc/kde/HTML/de/kalgebra/index.cache.bz2
 share/doc/kde/HTML/de/kalgebra/index.docbook
@@ -866,7 +867,9 @@ share/doc/kde/HTML/de/kmouth/kmouthctts.png
 share/doc/kde/HTML/de/kmouth/kmouthcwcp.png
 share/doc/kde/HTML/de/kmouth/kmouthedit.png
 share/doc/kde/HTML/de/kmouth/kmouthmain.png
-share/doc/kde/HTML/de/kmouth/kmouthwizard.png
+share/doc/kde/HTML/de/kmouth/kmouthwizard1.png
+share/doc/kde/HTML/de/kmouth/kmouthwizard2.png
+share/doc/kde/HTML/de/kmouth/kmouthwizard3.png
 share/doc/kde/HTML/de/kmouth/man-kmouth.1.docbook
 share/doc/kde/HTML/de/kmplot/commands.docbook
 share/doc/kde/HTML/de/kmplot/common

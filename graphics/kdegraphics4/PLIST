@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/25 20:55:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/11/03 20:08:41 markd Exp $
 bin/gwenview
 bin/gwenview_importer
 bin/kbackgroundsnapshot
@@ -220,11 +220,16 @@ share/doc/kde/HTML/en/ksnapshot/index.cache.bz2
 share/doc/kde/HTML/en/ksnapshot/index.docbook
 share/doc/kde/HTML/en/ksnapshot/preview.png
 share/doc/kde/HTML/en/ksnapshot/window.png
+share/doc/kde/HTML/en/okular/annotation-properties.png
+share/doc/kde/HTML/en/okular/annotations.png
 share/doc/kde/HTML/en/okular/common
 share/doc/kde/HTML/en/okular/configure.png
 share/doc/kde/HTML/en/okular/embedded-files-bar.png
+share/doc/kde/HTML/en/okular/forms-bar.png
 share/doc/kde/HTML/en/okular/index.cache.bz2
 share/doc/kde/HTML/en/okular/index.docbook
+share/doc/kde/HTML/en/okular/mainwindow.png
+share/doc/kde/HTML/en/okular/presentation.png
 share/icons/hicolor/128x128/apps/gwenview.png
 share/icons/hicolor/128x128/apps/kdcraw.png
 share/icons/hicolor/128x128/apps/kipi.png

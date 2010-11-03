@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/10/25 20:55:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/11/03 20:08:45 markd Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -441,8 +441,8 @@ lib/libtaskmanager.so
 lib/libtaskmanager.so.4
 lib/libtaskmanager.so.4.5.0
 lib/libweather_ion.so
-lib/libweather_ion.so.4
-lib/libweather_ion.so.4.5.0
+lib/libweather_ion.so.5
+lib/libweather_ion.so.5.0.0
 ${PYSITELIB}/PyKDE4/plasmascript.py
 ${PYSITELIB}/PyKDE4/plasmascript.pyc
 lib/strigi/strigita_font.so
