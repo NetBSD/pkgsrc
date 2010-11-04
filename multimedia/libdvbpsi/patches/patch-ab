@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/11/04 19:43:33 adam Exp $
+
+--- configure.orig	2010-11-04 09:06:29.000000000 +0000
++++ configure
+@@ -11226,8 +11226,6 @@ fi
+ if test "$release" = "true"
+ then
+   CFLAGS="${CFLAGS} -O6"
+-else
+-  CFLAGS="${CFLAGS} -O2"
+ fi
+ 
+ 
