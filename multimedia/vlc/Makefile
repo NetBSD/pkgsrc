@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2010/10/24 21:57:47 ahoka Exp $
+# $NetBSD: Makefile,v 1.97 2010/11/04 12:34:54 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -47,7 +47,8 @@ CONFIGURE_ARGS+=	--enable-cddax \
 			--enable-dvdread \
 			--enable-flac \
 			--enable-live555 \
-			--enable-theora
+			--enable-theora \
+			--enable-lua=no
 
 # Build optimalized modules
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
