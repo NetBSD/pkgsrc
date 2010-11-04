@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:00:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/11/04 13:34:46 asau Exp $
 bin/rigctl
 bin/rigctld
 bin/rigmem
 bin/rigsmtr
 bin/rigswr
 bin/rotctl
+bin/rotctld
 include/hamlib/rig.h
 include/hamlib/rig_dll.h
 include/hamlib/rigclass.h
@@ -14,26 +15,31 @@ include/hamlib/rotclass.h
 include/hamlib/rotlist.h
 lib/hamlib-alinco.la
 lib/hamlib-aor.la
+lib/hamlib-ars.la
 lib/hamlib-drake.la
 lib/hamlib-dummy.la
 lib/hamlib-easycomm.la
 lib/hamlib-flexradio.la
 lib/hamlib-fodtrack.la
+lib/hamlib-gs232a.la
+lib/hamlib-heathkit.la
 lib/hamlib-icom.la
 lib/hamlib-jrc.la
 lib/hamlib-kachina.la
 lib/hamlib-kenwood.la
 lib/hamlib-kit.la
 lib/hamlib-lowe.la
-lib/hamlib-microtune.la
+lib/hamlib-m2.la
 lib/hamlib-pcr.la
 lib/hamlib-racal.la
 lib/hamlib-rft.la
 lib/hamlib-rotorez.la
 lib/hamlib-rpcrig.la
 lib/hamlib-rpcrot.la
+lib/hamlib-rs.la
 lib/hamlib-sartek.la
 lib/hamlib-skanti.la
+lib/hamlib-spid.la
 lib/hamlib-tapr.la
 lib/hamlib-tentec.la
 lib/hamlib-tuner.la
@@ -50,6 +56,7 @@ man/man1/rigsmtr.1
 man/man1/rigswr.1
 man/man1/rotctl.1
 man/man8/rigctld.8
+man/man8/rotctld.8
 man/man8/rpc.rigd.8
 man/man8/rpc.rotd.8
 sbin/rpc.rigd
