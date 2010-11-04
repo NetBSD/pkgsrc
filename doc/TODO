@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9834 2010/11/03 14:39:39 adam Exp $
+$NetBSD: TODO,v 1.9835 2010/11/04 09:52:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -495,6 +495,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cups-1.4.4
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.21
+	o cwtext-0.96 [pkg/44036]
 	o cygwin_lib-1.5.24.2
 	o damageproto-1.2.1
 	o dansguardian-2.10.0.3
@@ -641,7 +642,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.2
 	o font-xfree86-type1-1.0.3
 	o fontsproto-2.1.1
-	o fotoxx-10.10.2
+	o fotoxx-10.11
 	o frama-c-20100401
 	o freefont-20100919
 	o freeglut-2.4.0
@@ -672,13 +673,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcpio-2.10
 	o gdb-7.2
 	o gdeskcal-1.01
-	o gdk-pixbuf-2.22.0
 	o gdl-2.30.1 [GNOME 2.32]
 	o gdm-2.32.0 [GNOME 2.32]
 	o gdsreader-0.3.2
 	o geany-0.19
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o genius-1.0.11
 	o gentoo-0.19.4
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
@@ -694,7 +693,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade3-3.6.7 [GNOME 2.26]
-	o glib2-2.26.0
 	o global-5.7.2 [pkg/39760]
 	o global-5.9.2
 	o glom-1.14.2 [GNOME 2.26]
@@ -774,11 +772,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gucharmap-2.32.0
 	o guile-gtk-2.0
 	o gupnp-0.14.0
+	o gvfs-1.6.5
 	o gwaei-1.4.3
 	o gworkspace-0.8.8
 	o gzip-1.4
 	o hackbot-2.21
 	o hal-0.5.14
+	o hamlib-1.2.12 [pkg/44035]
 	o hamster-applet-2.32.0 [GNOME 2.32]
 	o hanzim-3.2
 	o haskell-mode-1.45
@@ -889,6 +889,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXext-1.2.0
 	o libXfont-1.4.3
 	o libXft-2.2.0
+	o libXi-1.4.0
 	o libXinerama-1.1.1
 	o libXmu-1.1.0
 	o libXpm-3.5.9
@@ -1147,11 +1148,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o polkit-qt-0.9.4
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.14.4
-	o poppler-glib-0.14.4
-	o poppler-includes-0.14.4
-	o poppler-qt4-0.14.4
-	o poppler-utils-0.14.4
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1184,7 +1180,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-utils-1.2.1
 	o py-gobject-2.26.0
 	o py-gtk2-2.22.0
-	o py-gtksourceview-2.10.1
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
@@ -1288,7 +1283,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.6
 	o snes9x-1.51
-	o snort-2.9.0
+	o snort-2.9.0.1
 	o snownews-1.5.12
 	o solfege-3.18.7
 	o sope-4.6
@@ -1522,6 +1517,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xpad-2.13
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.0
+	o xproto-7.0.19
 	o xpuyopuyo-0.9.8
 	o xrandr-1.3.4
 	o xrmap-anthems-1.2
