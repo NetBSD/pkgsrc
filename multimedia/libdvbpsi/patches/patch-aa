@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2009/02/27 22:38:16 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/04 19:43:33 adam Exp $
 
---- examples/connect.c.orig	2007-01-18 14:57:08.000000000 +0000
+--- examples/connect.c.orig	2008-09-17 09:39:35.000000000 +0000
 +++ examples/connect.c
-@@ -38,7 +38,6 @@
+@@ -38,7 +38,7 @@
  #   include <netinet/if_ether.h>
  #endif
  #include <netdb.h>
--#include <netinet/ip.h>
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
+ #    include <netinet/ip.h>
+ #endif
  #include <netinet/udp.h>
- #include <arpa/inet.h>
- 
