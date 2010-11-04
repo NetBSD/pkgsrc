@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9835 2010/11/04 09:52:45 wiz Exp $
+$NetBSD: TODO,v 1.9836 2010/11/04 13:35:30 asau Exp $
 
 Suggested new packages
 ======================
@@ -778,7 +778,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gzip-1.4
 	o hackbot-2.21
 	o hal-0.5.14
-	o hamlib-1.2.12 [pkg/44035]
 	o hamster-applet-2.32.0 [GNOME 2.32]
 	o hanzim-3.2
 	o haskell-mode-1.45
