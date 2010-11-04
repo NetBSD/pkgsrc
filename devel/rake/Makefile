@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/09/13 14:32:40 taca Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/04 12:23:41 obache Exp $
 
 DISTNAME=	rake-0.8.7
 PKGREVISION=	1
@@ -14,7 +14,7 @@ USE_TOOLS+=	gzip
 FIX_PERM=	doc/release_notes/rake-0.7.3.rdoc \
 		lib/rake/ruby182_test_unit_fix.rb
 
-CONFLICTS+=	 rake-*
+CONFLICTS+=	 rake-[0-9]*
 
 # rake is bundled Ruby 1.9
 RUBY_VERSION_SUPPORTED= 18
