@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3866 2010/11/04 13:35:29 asau Exp $
+$NetBSD: CHANGES-2010,v 1.3867 2010/11/04 15:51:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5340,3 +5340,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/apache-cassandra to 0.7.0beta3 [tonnerre 2010-11-03]
 	Updated editors/emacs-snapshot to 24.0.50.20101030 [minskim 2010-11-03]
 	Updated ham/hamlib to 1.2.12 [asau 2010-11-04]
+	Updated www/contao29-translations to 20101030 [taca 2010-11-04]
