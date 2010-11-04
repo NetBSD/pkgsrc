@@ -1,13 +1,14 @@
-# $NetBSD: options.mk,v 1.19 2010/10/16 00:17:04 taca Exp $
+# $NetBSD: options.mk,v 1.20 2010/11/04 15:50:41 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.contao-translations
 
 # Not yet ready for Contao 2.9: af ca gl id is lt no pt sk sq sr th tl zh
 #
-CT_SUPPORTED_LANGUAGES=	bg bs cs da es fa fi fr gn hr hu it ja \
+CT_SUPPORTED_LANGUAGES=	ar bg bs cs da es fa fi fr gn hr hu it ja \
 			ku lv nl pl rm ro ru sl sv tr uk
 
 CT_TRANSLATIONS.af=	TYPOlight-Afrikaans-v1.zip	# 2008/01/15
+CT_TRANSLATIONS.ar=	Contao-Arabic-v3.zip		# 2010/10/30
 CT_TRANSLATIONS.bg=	Contao-Bulgarian-v20.zip	# 2010/09/08
 CT_TRANSLATIONS.bs=	Contao-Bosnian-v15.zip		# 2010/09/12
 CT_TRANSLATIONS.ca=	TYPOlight-Catalan-v4.zip	# 2008/09/24
