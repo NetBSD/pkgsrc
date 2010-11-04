@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.13 2010/11/04 10:57:50 adam Exp $
+
+--- pm_config.in.h.orig	2010-11-04 10:46:22.000000000 +0000
++++ pm_config.in.h
+@@ -68,7 +68,7 @@
+ #define RGB_DB3 "PBMplus_Dir:RGB.TXT"
+ #else
+ #define RGB_DB1 "/usr/lib/X11/rgb.txt"
+-#define RGB_DB2 "/usr/share/X11/rgb.txt"
++#define RGB_DB2 "@@PREFIX@@/share/netpbm/rgb.txt"
+ #define RGB_DB3 "/usr/X11R6/lib/X11/rgb.txt"
+ #endif
+ 
