@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/06/30 00:07:17 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2010/11/04 13:34:46 asau Exp $
 #
 
-DISTNAME=	hamlib-1.2.7.1
-PKGREVISION=	1
+DISTNAME=	hamlib-1.2.12
+#PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 
