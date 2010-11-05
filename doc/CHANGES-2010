@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3872 2010/11/05 08:32:58 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.3873 2010/11/05 09:25:57 roy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5349,3 +5349,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/libdvbpsi to 10.1.0 [adam 2010-11-04]
 	Updated security/netpgp to 20101104 [agc 2010-11-04]
 	Updated sysutils/dd_rescue to 1.23 [ghen 2010-11-05]
+	Updated net/openresolv to 3.4.0 [roy 2010-11-05]
