@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+
+--- src/lib/process-title.c.orig	2010-11-05 08:26:04.000000000 +0000
++++ src/lib/process-title.c
+@@ -115,7 +115,11 @@ static void proctitle_hack_set(const cha
+ void process_title_init(char **argv[])
+ {
+ #ifdef PROCTITLE_HACK
++#ifdef __APPLE__
++	char **environ = *_NSGetEnviron();
++#else
+ 	extern char **environ;
++#endif
+ 	char **orig_argv = *argv;
+ 	char **orig_environ = environ;
+ 
