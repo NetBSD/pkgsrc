@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9837 2010/11/05 08:32:58 ghen Exp $
+$NetBSD: TODO,v 1.9838 2010/11/05 22:21:41 tonio Exp $
 
 Suggested new packages
 ======================
@@ -435,7 +435,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bigreqsproto-1.1.1
 	o binutils-2.20.1
 	o bioperl-1.5.0
-	o bitlbee-3.0
 	o bitmap-1.0.5
 	o bluefish-2.0.2
 	o blur6ex-0.3.462

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3877 2010/11/05 20:22:59 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3878 2010/11/05 22:21:41 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5362,3 +5362,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/sqwebmail to 5.4.2 [adam 2010-11-05]
 	Updated databases/postgresql90-server to 9.0.1nb1 [adam 2010-11-05]
 	Updated databases/pgadmin3 to 1.12.1 [adam 2010-11-05]
+	Updated chat/bitlbee to 3.0 [tonio 2010-11-05]
