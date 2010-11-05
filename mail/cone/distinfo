@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2010/05/18 13:24:15 adam Exp $
+$NetBSD: distinfo,v 1.4 2010/11/05 14:18:52 adam Exp $
 
-SHA1 (cone-0.83.tar.bz2) = da1c39b75146a7cb5a30b524c12fe6a7f7d4a193
-RMD160 (cone-0.83.tar.bz2) = 756d8593be400f59948e3dde0af5d072cac58b71
-Size (cone-0.83.tar.bz2) = 4145506 bytes
+SHA1 (cone-0.84.tar.bz2) = 507962bd666c4435e66f7653670c9aee360fd771
+RMD160 (cone-0.84.tar.bz2) = 88a76c71807269daa7094206a39ce566726c0b23
+Size (cone-0.84.tar.bz2) = 4077181 bytes
 SHA1 (patch-aa) = 379e4875619bda6d7094f906e2cba34f19d879fe
 SHA1 (patch-ab) = 2475c6644d894d1bdbf60977cdc5f96f36e72dde
 SHA1 (patch-ac) = 2a6a8ad9c8cc6773b219bfbefabc11eac31f6cb3
