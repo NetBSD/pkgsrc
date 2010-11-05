@@ -1,0 +1,9 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2010/11/05 13:57:21 pettai Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	#${MKDIR} -p @VARBASE@/cfengine
+	${LN} -sf @PKG_SYSCONFDIR@/cfengine @VARBASE@/cfengine/inputs
+	${LN} -sf @PREFIX@/sbin @VARBASE@/cfengine/bin
+	@PREFIX@/sbin/cf-key
+esac
