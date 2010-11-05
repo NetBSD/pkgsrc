@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/11/03 14:36:41 adam Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/05 14:56:49 adam Exp $
 
 PKGNAME=	postgresql90-server-${BASE_VERS}
+PKGREVISION=	1
 COMMENT=	PostgreSQL database server programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -19,6 +20,7 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 CONFIGURE_ARGS+=	--with-openssl
 
 BUILD_DIRS=		src/backend
+BUILD_DIRS+=		src/backend/replication/libpqwalreceiver
 BUILD_DIRS+=		src/backend/utils/mb/conversion_procs
 BUILD_DIRS+=		src/backend/snowball
 BUILD_DIRS+=		src/timezone
