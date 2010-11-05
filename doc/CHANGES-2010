@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3876 2010/11/05 14:23:15 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3877 2010/11/05 20:22:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5360,3 +5360,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/courier-imap to 4.8.1 [adam 2010-11-05]
 	Updated mail/cone to 0.84 [adam 2010-11-05]
 	Updated mail/sqwebmail to 5.4.2 [adam 2010-11-05]
+	Updated databases/postgresql90-server to 9.0.1nb1 [adam 2010-11-05]
+	Updated databases/pgadmin3 to 1.12.1 [adam 2010-11-05]
