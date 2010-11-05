@@ -12,3 +12,4 @@ There are several differences:
 * It uses two block sizes, a large (soft) block size and a small (hard) block
   size. In case of errors, the size falls back to the small one and is
   promoted again after a while without errors.
+* It does not (yet) support non-seekable in- or output.

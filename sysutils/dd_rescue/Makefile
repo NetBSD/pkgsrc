@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/11/05 08:23:27 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/05 08:32:19 ghen Exp $
 
-DISTNAME=	dd_rescue-1.14
-PKGREVISION=	1
+DISTNAME=	dd_rescue-1.23
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE:Q}
 
@@ -13,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/dd_rescue
 
 BUILD_TARGET=	dd_rescue
+
+USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 PKG_DESTDIR_SUPPORT=	user-destdir

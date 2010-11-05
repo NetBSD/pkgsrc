@@ -1,19 +1,18 @@
-$NetBSD: patch-ab,v 1.4 2010/11/05 08:20:00 ghen Exp $
+$NetBSD: patch-ab,v 1.5 2010/11/05 08:32:19 ghen Exp $
 
---- dd_rescue.c.orig	2006-07-23 20:47:50.000000000 +0900
+--- dd_rescue.c.orig	2010-10-11 09:50:32.000000000 +0000
 +++ dd_rescue.c
-@@ -55,6 +55,10 @@
- #include <sys/time.h>
- #include <sys/stat.h>
+@@ -87,6 +87,9 @@ _syscall6(long, splice, int, fdin, loff_
+ # endif
+ #endif
  
 +#ifdef __DragonFly__
 +#undef O_DIRECT
 +#endif
-+
+ 
  int softbs, hardbs, syncfreq;
  int maxerr, nrerr, reverse, dotrunc, abwrerr, sparse, nosparse;
- int verbose, quiet, interact, force;
-@@ -742,7 +746,12 @@ int main(int argc, char* argv[])
+@@ -1127,7 +1130,12 @@ int main(int argc, char* argv[])
  		ipos = 0;
  
  #ifdef O_DIRECT
