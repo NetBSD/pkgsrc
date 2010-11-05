@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3875 2010/11/05 14:00:34 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3876 2010/11/05 14:23:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5353,3 +5353,10 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/dovecot2 version 2.0.6 [adam 2010-11-05]
 	Added mail/dovecot2-pigeonhole version 0.2.1 [adam 2010-11-05]
 	Added sysutils/cfengine3 version 3.0.5p1 [pettai 2010-11-05]
+	Updated mail/courier-maildir to 0.65.1 [adam 2010-11-05]
+	Updated net/couriertcpd to 0.65.1 [adam 2010-11-05]
+	Updated mail/courier-mta to 0.65.1 [adam 2010-11-05]
+	Updated mail/maildrop to 2.5.1 [adam 2010-11-05]
+	Updated mail/courier-imap to 4.8.1 [adam 2010-11-05]
+	Updated mail/cone to 0.84 [adam 2010-11-05]
+	Updated mail/sqwebmail to 5.4.2 [adam 2010-11-05]
