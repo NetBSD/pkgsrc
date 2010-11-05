@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3874 2010/11/05 12:03:52 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3875 2010/11/05 14:00:34 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5352,3 +5352,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/openresolv to 3.4.0 [roy 2010-11-05]
 	Added mail/dovecot2 version 2.0.6 [adam 2010-11-05]
 	Added mail/dovecot2-pigeonhole version 0.2.1 [adam 2010-11-05]
+	Added sysutils/cfengine3 version 3.0.5p1 [pettai 2010-11-05]
