@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:04:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/11/05 14:12:11 adam Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -50,12 +50,12 @@ man/man8/mkesmtpdcert.8
 man/man8/submit.8
 sbin/aliaslookup
 sbin/courier
+sbin/courier-showconfig
+sbin/courier-showmodules
 sbin/courierfilter
 sbin/filterctl
 sbin/makealiases
 sbin/makehosteddomains
-sbin/courier-showconfig
-sbin/courier-showmodules
 share/courier/courierctl.start
 share/courier/couriermlm/adminrequest.tmpl
 share/courier/couriermlm/confsubj.tmpl
@@ -125,10 +125,10 @@ share/courier/courierwebadmin/admin-20aliases.html
 share/courier/courierwebadmin/admin-20aliases.pl
 share/courier/courierwebadmin/admin-30esmtp.html
 share/courier/courierwebadmin/admin-30esmtp.pl
-share/courier/courierwebadmin/admin-31esmtp.html
-share/courier/courierwebadmin/admin-31esmtp.pl
 share/courier/courierwebadmin/admin-30xspf.html
 share/courier/courierwebadmin/admin-30xspf.pl
+share/courier/courierwebadmin/admin-31esmtp.html
+share/courier/courierwebadmin/admin-31esmtp.pl
 share/courier/courierwebadmin/admin-34fax.html
 share/courier/courierwebadmin/admin-34fax.pl
 share/courier/courierwebadmin/admin-35fax.html
@@ -155,11 +155,11 @@ share/courier/courierwebadmin/webadmin.pm
 share/courier/filterctl
 share/courier/makealiases
 share/courier/makehosteddomains
-share/courier/perlfilter-wrapper.pl
 share/courier/perlfilter-example.pl
+share/courier/perlfilter-wrapper.pl
 share/doc/courier/FAQ.html
-share/doc/courier/aliaslookup.html
 share/doc/courier/aliases.html
+share/doc/courier/aliaslookup.html
 share/doc/courier/bg.gif
 share/doc/courier/cancelmsg.html
 share/doc/courier/changelog.html
