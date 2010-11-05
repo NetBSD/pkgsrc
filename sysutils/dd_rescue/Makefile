@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2007/12/22 04:27:16 taca Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/05 08:20:00 ghen Exp $
 
 DISTNAME=	dd_rescue-1.14
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	ghen@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.garloff.de/kurt/linux/ddrescue/
 COMMENT=	dd(1)-like tool for rescuing data from media with errors
 
