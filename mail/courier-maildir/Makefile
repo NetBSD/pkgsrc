@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/03/21 16:29:40 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/11/05 14:05:24 adam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -101,8 +101,8 @@ do-install:
 		${DESTDIR}${EGDIR}/sharedindexupdate
 	grep "^${DOCDIR:S/${PREFIX}\///}" ${PKGDIR}/PLIST |		\
 	while read file; do						\
-		src=${WRKSRC:Q}/maildir/`basename $$file`;		\
-		dst=${DESTDIR}${PREFIX:Q}"/$$file";			\
+		src=${WRKSRC}/maildir/`basename $$file`;		\
+		dst=${DESTDIR}${PREFIX}"/$$file";			\
 		${INSTALL_DATA} "$$src" "$$dst";			\
 	done
 
