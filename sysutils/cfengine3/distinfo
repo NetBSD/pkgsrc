@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/05 13:57:21 pettai Exp $
+
+SHA1 (cfengine-3.0.5p1.tar.gz) = bc7cc5fbc6c9a973f2f74c45e6835934230b6d63
+RMD160 (cfengine-3.0.5p1.tar.gz) = 909ee306cdbd0e674fbdb54ddcbca66b0cc5213b
+Size (cfengine-3.0.5p1.tar.gz) = 1517992 bytes
