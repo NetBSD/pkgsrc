@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/21 07:52:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/11/05 14:56:49 adam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -11,6 +11,7 @@ ${PG_SUBPREFIX}lib/postgresql/euc_kr_and_mic.la
 ${PG_SUBPREFIX}lib/postgresql/euc_tw_and_big5.la
 ${PG_SUBPREFIX}lib/postgresql/latin2_and_win1250.la
 ${PG_SUBPREFIX}lib/postgresql/latin_and_mic.la
+${PG_SUBPREFIX}lib/postgresql/libpqwalreceiver.la
 ${PG_SUBPREFIX}lib/postgresql/plpgsql.la
 ${PG_SUBPREFIX}lib/postgresql/utf8_and_ascii.la
 ${PG_SUBPREFIX}lib/postgresql/utf8_and_big5.la
