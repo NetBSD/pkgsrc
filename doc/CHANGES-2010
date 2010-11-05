@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3878 2010/11/05 22:21:41 tonio Exp $
+$NetBSD: CHANGES-2010,v 1.3879 2010/11/05 23:57:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5363,3 +5363,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/postgresql90-server to 9.0.1nb1 [adam 2010-11-05]
 	Updated databases/pgadmin3 to 1.12.1 [adam 2010-11-05]
 	Updated chat/bitlbee to 3.0 [tonio 2010-11-05]
+	Added print/ptexenc version 1.1.1 [minskim 2010-11-05]
