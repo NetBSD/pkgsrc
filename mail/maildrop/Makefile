@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2010/06/15 23:14:47 pettai Exp $
+# $NetBSD: Makefile,v 1.51 2010/11/05 14:15:02 adam Exp $
 
-DISTNAME=	maildrop-2.5.0
+DISTNAME=	maildrop-2.5.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,15 +29,15 @@ PKG_SUGGESTED_OPTIONS=	authlib
 #
 MAILDROP_TRUSTED_USERS?=	${REAL_ROOT_USER} ${COURIER_USER} qmaild
 
-CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
-CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-makedatprog=${LIBEXECDIR:Q}/makedatprog
+CONFIGURE_ARGS+=	--datadir=${DATADIR}
+CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-makedatprog=${LIBEXECDIR}/makedatprog
 CONFIGURE_ARGS+=	--enable-maildirquota
-CONFIGURE_ARGS+=	--enable-maildrop-uid=${REAL_ROOT_USER:Q}
-CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP:Q}
-CONFIGURE_ARGS+=	--enable-trusted-users=${MAILDROP_TRUSTED_USERS:Q}
-CONFIGURE_ARGS+=	--enable-trusted-groups=${COURIER_GROUP:Q}
+CONFIGURE_ARGS+=	--enable-maildrop-uid=${REAL_ROOT_USER}
+CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP}
+CONFIGURE_ARGS+=	--enable-trusted-users=${MAILDROP_TRUSTED_USERS}
+CONFIGURE_ARGS+=	--enable-trusted-groups=${COURIER_GROUP}
 CONFIGURE_ARGS+=	--enable-syslog=1
 
 ###
