@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2010/08/21 16:34:59 seb Exp $
+# $NetBSD: Makefile,v 1.33 2010/11/05 14:12:11 adam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,20 +29,20 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 .include "options.mk"
 
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	ac_cv_path_REHASH=${FALSE}
+CONFIGURE_ARGS+=	ac_cv_path_REHASH=${FALSE:Q}
 .endif
 
 USERGROUP_PHASE=	configure
 
 CONFIGURE_ENV+=		CERTTOOL=${COURIER_CERTTOOL:Q}
 CONFIGURE_ENV+=		OPENSSL=${COURIER_OPENSSL:Q}
-CONFIGURE_ENV+=		PROCMAIL=${PREFIX:Q}/bin/procmail
+CONFIGURE_ENV+=		PROCMAIL=${PREFIX}/bin/procmail
 
-CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
+CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--with-mailuid=${PKG_UID.${COURIER_USER}}
 CONFIGURE_ARGS+=	--with-mailgid=${PKG_GID.${COURIER_GROUP}}
 CONFIGURE_ARGS+=	--with-paranoid-smtpext
-CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR:Q}/tmp
+CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR}/tmp
 CONFIGURE_ARGS+=	--with-transport=${COURIER_TRANSPORTS:M*:Q}
 #CONFIGURE_ARGS+=	--with-certdb=${SSLCERTS}
 
@@ -78,14 +77,14 @@ SUBST_STAGE.courier=	pre-configure
 
 SUBST_CLASSES+=		perms
 SUBST_FILES.perms=	courier/perms.sh.in
-SUBST_SED.perms+=	-e "s,@REAL_ROOT_USER@,"${REAL_ROOT_USER:Q}",g"	\
-			-e "s,@ROOT_USER@,"${ROOT_USER:Q}",g"		\
-			-e "s,@ROOT_GROUP@,"${ROOT_GROUP:Q}",g"
+SUBST_SED.perms+=	-e "s,@REAL_ROOT_USER@,"${REAL_ROOT_USER}",g"	\
+			-e "s,@ROOT_USER@,"${ROOT_USER}",g"		\
+			-e "s,@ROOT_GROUP@,"${ROOT_GROUP}",g"
 SUBST_STAGE.perms=	pre-configure
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
-SUBST_SED.paths+=	-e "s,@PREFIX@,${PREFIX:Q},g"
+SUBST_SED.paths+=	-e "s,@PREFIX@,${PREFIX},g"
 SUBST_STAGE.paths=	post-patch
 
 REPLACE_PERL+=	courier/webadmin/*.pl courier/webadmin/*.pl.in webadmin/*.pl
