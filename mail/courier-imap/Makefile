@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2010/06/15 23:07:06 pettai Exp $
+# $NetBSD: Makefile,v 1.71 2010/11/05 14:16:39 adam Exp $
 
-DISTNAME=	courier-imap-4.8.0
+DISTNAME=	courier-imap-4.8.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,11 +25,11 @@ USE_LIBTOOL=		yes
 CONFIGURE_ENV+=		CERTTOOL=${COURIER_CERTTOOL:Q}
 CONFIGURE_ENV+=		OPENSSL=${COURIER_OPENSSL:Q}
 
-CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
-CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
+CONFIGURE_ARGS+=	--datadir=${DATADIR}
+CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
 
-CONFIGURE_ARGS+=	--with-mailuser=${REAL_ROOT_USER:Q}
-CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR:Q}/tmp
+CONFIGURE_ARGS+=	--with-mailuser=${REAL_ROOT_USER}
+CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR}/tmp
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 
 # The rfc1035 and tcpd bits are built and installed by net/couriertcpd.
