@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/05 08:42:10 ghen Exp $
 
 DISTNAME=		ldapvi-1.7
 PKGREVISION=		3
@@ -31,4 +31,5 @@ do-install:
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
