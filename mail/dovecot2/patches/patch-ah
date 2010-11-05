@@ -1,0 +1,28 @@
+$NetBSD: patch-ah,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+
+--- src/lib/env-util.c.orig	2010-11-05 08:18:43.000000000 +0000
++++ src/lib/env-util.c
+@@ -55,7 +55,11 @@ void env_clean(void)
+ 	if (clearenv() < 0)
+ 		i_fatal("clearenv() failed");
+ #else
++#ifdef __APPLE__
++	char **environ = *_NSGetEnviron();
++#else
+ 	extern char **environ;
++#endif
+ 
+ 	/* Try to clear the environment.
+ 
+@@ -73,7 +77,11 @@ void env_clean(void)
+ struct env_backup *env_backup_save(void)
+ {
+ 	struct env_backup *env;
++#ifdef __APPLE__
++	char **environ = *_NSGetEnviron();
++#else
+ 	extern char **environ;
++#endif
+ 	unsigned int i, count;
+ 	pool_t pool;
+ 

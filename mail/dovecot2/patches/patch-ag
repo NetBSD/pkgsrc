@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+
+--- src/lib-settings/settings-parser.c.orig	2010-09-23 18:41:53.000000000 +0000
++++ src/lib-settings/settings-parser.c
+@@ -942,7 +942,11 @@ static int environ_cmp(char *const *s1, 
+ 
+ int settings_parse_environ(struct setting_parser_context *ctx)
+ {
++#ifdef __APPLE__
++	char **environ = *_NSGetEnviron();
++#else
+ 	extern char **environ;
++#endif
+ 	ARRAY_TYPE(string) sorted_envs_arr;
+ 	const char *key, *value;
+ 	char *const *sorted_envs;

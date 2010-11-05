@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+
+--- src/lib/lib.h.orig	2010-11-05 08:41:11.000000000 +0000
++++ src/lib/lib.h
+@@ -6,6 +6,10 @@
+ #  include "config.h"
+ #endif
+ 
++#ifdef __APPLE__
++#include <crt_externs.h>
++#endif
++
+ /* default system includes - keep these at minimum.. */
+ #include <stddef.h> /* Solaris defines NULL wrong unless this is used */
+ #include <string.h> /* strcmp() etc. */

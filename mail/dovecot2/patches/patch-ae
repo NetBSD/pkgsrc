@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+
+--- doc/example-config/conf.d/auth-system.conf.ext.orig	2010-11-04 13:34:46.000000000 +0000
++++ doc/example-config/conf.d/auth-system.conf.ext
+@@ -7,21 +7,21 @@
+ # PAM is typically used with either userdb passwd or userdb static.
+ # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
+ # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
+-passdb {
+-  driver = pam
++#passdb {
++  #driver = pam
+   # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
+   # [cache_key=<key>] [<service name>]
+   #args = dovecot
+-}
++#}
+ 
+ # System users (NSS, /etc/passwd, or similiar).
+ # In many systems nowadays this uses Name Service Switch, which is
+ # configured in /etc/nsswitch.conf. <doc/wiki/AuthDatabase.Passwd.txt>
+-#passdb {
+-  #driver = passwd
++passdb {
++  driver = passwd
+   # [blocking=no]
+   #args = 
+-#}
++}
+ 
+ # Shadow passwords for system users (NSS, /etc/shadow or similiar).
+ # Deprecated by PAM nowadays.
