@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2006/04/09 06:34:32 jlam Exp $
+# $NetBSD: hacks.mk,v 1.3.40.1 2010/11/06 23:24:28 spz Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -33,17 +33,6 @@ CFLAGS+=	-DDEBUGGING -g -msoft-quad-float -O2
 .if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 PKG_HACKS+=		powerpc-codegen
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
-.endif
-
-### [Fri Dec 10 18:46:19 EST 2004 : jlam]
-### On NetBSD/alpha, building perl with -mieee causes perl to not pass
-### the test for integer.pm (pkg/28498).  Until this is fixed in either
-### NetBSD, GCC or perl, strip out -mieee from the compiler command
-### line.
-###
-.if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
-PKG_HACKS+=		alpha-mieee
-BUILDLINK_TRANSFORM+=	rm:-mieee
 .endif
 
 ### [Mon May 9 15:35:44 UTC 2005 : jlam]
