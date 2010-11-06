@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9838 2010/11/05 22:21:41 tonio Exp $
+$NetBSD: TODO,v 1.9839 2010/11/06 15:05:06 gls Exp $
 
 Suggested new packages
 ======================
@@ -190,7 +190,7 @@ Suggested new packages
 	Webfwlog Firewall Log Analyzer [pkg/30110]
 	http://www.webfwlog.net/
 	Web-Based Firewall Log Analysis and Reporting
-	
+
 	FreeVRRPd [pkg/30113]
 	VRRP (Virtual Router Redundancy Protocol) implementation daemon
 
@@ -230,7 +230,7 @@ Suggested new packages
 
 	Fenix Project [pkg/35346]
 	http://fenix.divsite.net
-	
+
 	Skins for XMMS [pkg/35666]
 	http://www.xmms.org/skins.php
 
@@ -1366,8 +1366,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-2.90
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.9.5 [pkg/43749]
-	o vala-0.10.1
 	o valgrind-3.5.0
 	o vera-1.17
 	o vfu-4.09
