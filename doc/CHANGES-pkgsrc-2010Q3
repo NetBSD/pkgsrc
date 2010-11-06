@@ -33,3 +33,7 @@ devel/nspr: security update
 www/firefox: security update
 Pullup ticket #3263 - requested by tron
 print/a2ps: build and portability fix
+Pullup ticket #3265 - requested by adam
+www/webkit-gtk: security update
+Pullup ticket #3266 - requested by wiz
+lang/perl5: fix for alpha
