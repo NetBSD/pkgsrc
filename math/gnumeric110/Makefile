@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.15 2010/09/14 11:02:20 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2010/11/06 16:10:16 adam Exp $
 
-DISTNAME=		gnumeric-1.10.10
-PKGREVISION=		1
-CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.10/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	gnumeric-1.10.11
+CATEGORIES=	math gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.10/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/projects/gnumeric/
-COMMENT=		Spreadsheet program from the GNOME project
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/projects/gnumeric/
+COMMENT=	Spreadsheet program from the GNOME project
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
-USE_LIBTOOL=		YES
-
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 GCONF_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
 PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
