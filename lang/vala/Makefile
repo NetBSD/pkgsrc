@@ -1,39 +1,35 @@
-# $NetBSD: Makefile,v 1.9 2010/09/14 11:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/06 15:02:56 gls Exp $
 #
 
-DISTNAME=	vala-0.7.10
-PKGREVISION=	2
+DISTNAME=	vala-0.10.1
 CATEGORIES=	lang gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/0.7/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/0.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Vala
 COMMENT=	Compiler for the GObject type system
-
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison flex gmake pkg-config
+USE_TOOLS+=		bison flex gmake pkg-config
 
-PKGCONFIG_OVERRIDE+=	vala-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	libvala.pc.in
 
-BUILDLINK_API_DEPENDS.glib2+=                   glib2>=2.12.0
-BUILDLINK_API_DEPENDS.gtk2+=                    gtk2+>=2.10.0
-BUILDLINK_DEPMETHOD.libxslt?=			build
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 
-INSTALLATION_DIRS=     share/doc/vala
+INSTALLATION_DIRS=		share/doc/vala
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README \
+.for file in AUTHORS COPYING ChangeLog ChangeLog.pre-0-4 ChangeLog.pre-0-5-7 INSTALL MAINTAINERS NEWS README THANKS
+	${INSTALL_DATA} ${WRKSRC}/${file} \
 		${DESTDIR}${PREFIX}/share/doc/vala
+.endfor
 
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
