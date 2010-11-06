@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2010/09/10 14:18:13 drochner Exp $
+$NetBSD: distinfo,v 1.20.2.1 2010/11/06 20:34:30 spz Exp $
 
-SHA1 (webkit-1.2.4.tar.gz) = e4e31e6d5025d8c8d7ac81fe6d7c947918ce4790
-RMD160 (webkit-1.2.4.tar.gz) = 787997f6235911675726d903ff3b9549fb615fe5
-Size (webkit-1.2.4.tar.gz) = 6612143 bytes
+SHA1 (webkit-1.2.5.tar.gz) = 2cd50e62a0c94bba8cc8a8466ea16fac1f9fc1ce
+RMD160 (webkit-1.2.5.tar.gz) = 7510af4c5d15c06adf984a090a9e9550f5ea7147
+Size (webkit-1.2.5.tar.gz) = 6727977 bytes
 SHA1 (patch-ad) = a5edd3fbff91488d220a3bfeb506865883c912cb
 SHA1 (patch-af) = 971258e19192d058c4ca580abcbeb3b02f3bf6ce
