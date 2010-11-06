@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST.vapigen,v 1.2 2009/06/14 18:03:44 joerg Exp $
+@comment $NetBSD: PLIST.vapigen,v 1.3 2010/11/06 15:02:56 gls Exp $
 bin/vala-gen-introspect
+bin/vala-gen-introspect-0.10
 bin/vapicheck
+bin/vapicheck-0.10
 bin/vapigen
-lib/vala/gen-introspect
+bin/vapigen-0.10
+lib/vala-0.10/gen-introspect-0.10
+man/man1/vala-gen-introspect-0.10.1
 man/man1/vala-gen-introspect.1
+man/man1/vapigen-0.10.1
 man/man1/vapigen.1
