@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.28 2010/09/10 03:21:57 taca Exp $
+# $NetBSD: modules.mk,v 1.29 2010/11/06 23:44:01 obache Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -69,7 +69,7 @@ do-install:	ruby-extconf-install
 ruby-extconf-install:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Installing ${d}"
-	${RUN}cd ${WRKSRC}/${d}; ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET}
+	${RUN}cd ${WRKSRC}/${d}; ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET} ${INSTALL_MAKE_FLAGS}
 .endfor
 .endif
 
