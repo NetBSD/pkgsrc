@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3880 2010/11/06 03:43:40 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3881 2010/11/06 03:55:52 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5365,3 +5365,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated chat/bitlbee to 3.0 [tonio 2010-11-05]
 	Added print/ptexenc version 1.1.1 [minskim 2010-11-05]
 	Added textproc/mendexk version 2.6f [minskim 2010-11-06]
+	Updated security/netpgp to 20101105 [agc 2010-11-05]
