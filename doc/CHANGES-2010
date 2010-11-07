@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3895 2010/11/07 19:53:35 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3896 2010/11/07 19:59:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5379,3 +5379,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-tools to 2010 [minskim 2010-11-07]
 	Updated print/tex-tools-doc to 2010 [minskim 2010-11-07]
 	Updated print/tex-abc to 1.0nb1 [minskim 2010-11-07]
+	Added print/tex-abc-doc version 1.0 [minskim 2010-11-07]
