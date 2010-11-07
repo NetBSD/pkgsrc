@@ -1,2 +1,5 @@
-The abc package lets you include lines of music written in the ABC
-Plus language (http://abcplus.sourceforge.net).
+The abc package lets you include lines of music written in the
+ABC Plus language. The package will then employ the \write18
+facility to convert your notation to PostScript (using the
+established utility abcm2ps) and hence to the format needed for
+inclusion in your document.

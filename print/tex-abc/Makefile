@@ -1,34 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2010/01/27 15:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/07 19:52:46 minskim Exp $
 
 DISTNAME=	abc
 PKGNAME=	tex-${DISTNAME}-1.0
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
-EXTRACT_SUFX=	.zip
+PKGREVISION=	1
+TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://tug.ctan.org/tex-archive/macros/latex/contrib/
 COMMENT=	Support ABC music notation in LaTeX
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	abcm2ps-[0-9]*:../../print/abcm2ps
 DEPENDS+=	ps2eps-[0-9]*:../../graphics/ps2eps
+DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
+DEPENDS+=	tex-oberdiek>=2009nb2:../../print/tex-oberdiek
+DEPENDS+=	tex-tools>=2010:../../print/tex-tools
 
-.include "../../print/teTeX/module.mk"
-
-INSTALLATION_DIRS+=	${PKG_LOCALTEXMFPREFIX}/doc/latex/abc \
-			${PKG_LOCALTEXMFPREFIX:Q}/tex/latex/abc
-
-do-build:
-	cd ${WRKSRC} && latex abc.ins
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/abc.pdf \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/abc
-	${INSTALL_DATA} ${WRKSRC}/example.tex \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/abc
-	${INSTALL_DATA} ${WRKSRC}/abc.sty \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/abc
-
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
