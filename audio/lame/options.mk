@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2008/10/09 14:47:56 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2010/11/07 15:27:26 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lame
-PKG_SUPPORTED_OPTIONS=	gtk sndfile
+PKG_SUPPORTED_OPTIONS=	gtk sndfile unicode
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,6 +19,11 @@ CONFIGURE_ARGS+=	--with-fileio=sndfile
 CONFIGURE_ARGS+=	--with-sndfile-prefix=${BUILDLINK_PREFIX.libsndfile}
 USE_TOOLS+=		pkg-config
 .  include "../../audio/libsndfile/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Municode)
+CFLAGS+=		-DHAVE_ICONV
+.  include "../../converters/libiconv/buildlink3.mk"
 .endif
 
 # doesn't work
