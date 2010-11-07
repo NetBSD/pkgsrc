@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2007/07/19 19:35:04 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2010/11/07 23:23:56 wiz Exp $
+
+errno isn't always an int. Let header file define it.
 
 --- src/core-utils/gnc-gkeyfile-utils.c.orig	2007-04-28 23:16:20.000000000 +0000
 +++ src/core-utils/gnc-gkeyfile-utils.c
