@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3897 2010/11/07 20:55:54 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.3898 2010/11/07 23:28:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5383,3 +5383,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monotone to 0.99 [jmmv 2010-11-07]
 	Updated devel/monotone-server to 0.99 [jmmv 2010-11-07]
 	Updated devel/monotone-el to 0.99 [jmmv 2010-11-07]
+	Updated finance/gnucash to 2.2.9nb10 [wiz 2010-11-07]
