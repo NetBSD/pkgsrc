@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3893 2010/11/07 19:37:52 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3894 2010/11/07 19:47:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5376,3 +5376,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/mutt-devel to 1.5.21 [tonio 2010-11-07]
 	Updated print/tex-luatex to 0.60.1nb1 [minskim 2010-11-07]
 	Updated print/tex-graphics-doc to 1.0onb2 [minskim 2010-11-07]
+	Updated print/tex-tools to 2010 [minskim 2010-11-07]
+	Updated print/tex-tools-doc to 2010 [minskim 2010-11-07]
