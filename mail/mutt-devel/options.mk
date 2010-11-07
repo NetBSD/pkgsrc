@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.40 2010/06/02 13:15:48 adam Exp $
+# $NetBSD: options.mk,v 1.41 2010/11/07 14:52:47 tonio Exp $
 
 # Global and legacy options
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-smtp
 # Comment the following line out on updates.
 #PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
-PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
+#PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
 #PKG_SUPPORTED_OPTIONS+=	mutt-xlabel
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
@@ -96,7 +96,7 @@ CONFIGURE_ARGS+=	--without-gdbm
 # since the real -I and -L flags are added by buildlink already.
 CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BDBBASE}/include
 CONFIGURE_ENV+=		BDB_LIB_DIR=${BDBBASE}/lib
-CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:Q}
+CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
 .else
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
@@ -135,7 +135,7 @@ PATCH_FUZZ_FACTOR=	-F1
 ###
 .if !empty(PKG_OPTIONS:Mmutt-xlabel)
 PATCH_SITES=		http://home.uchicago.edu/~dgc/sw/mutt/
-PATCHFILES+=		patch-1.5.14.dgc.xlabel_ext.9
+PATCHFILES+=		patch-1.5.17.dgc.xlabel_ext.9
 PATCH_DIST_STRIP=	-p1
 .endif
 
