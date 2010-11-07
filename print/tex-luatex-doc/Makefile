@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/24 21:16:27 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/07 17:29:49 minskim Exp $
 
 DISTNAME=	luatex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.60.1
-TEXLIVE_REV=	19324
+TEXLIVE_REV=	20014
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
