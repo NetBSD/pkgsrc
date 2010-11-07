@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3884 2010/11/06 16:11:21 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3885 2010/11/07 00:54:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5165,18 +5165,18 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/ruby-gnome2-libart to 0.90.3 [obache 2010-10-23]
 	Updated graphics/ruby-gnome2-rsvg to 0.90.3 [obache 2010-10-23]
 	Updated multimedia/ruby-gnome2-gstreamer to 0.90.3 [obache 2010-10-23]
-	Updated print/ruby-gnome2-gnomeprint to 0.90.3 [obache 2010-09-23]
-	Updated print/ruby-gnome2-gnomeprintui to 0.90.3 [obache 2010-09-23]
-	Updated print/ruby-gnome2-poppler to 0.90.3 [obache 2010-09-23]
-	Updated sysutils/ruby-gnome2-gnomevfs to 0.90.3 [obache 2010-09-23]
-	Updated www/ruby-gnome2-gtkhtml2 to 0.90.3 [obache 2010-09-23]
-	Updated www/ruby-gnome2-gtkmozembed to 0.90.3 [obache 2010-09-23]
-	Updated x11/ruby-gnome2-gnome to 0.90.3 [obache 2010-09-17]
-	Updated x11/ruby-gnome2-gtk to 0.90.3 [obache 2010-09-17]
-	Updated x11/ruby-gnome2-gtksourceview to 0.90.3 [obache 2010-09-17]
-	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.3 [obache 2010-09-17]
-	Updated x11/ruby-gnome2-panelapplet to 0.90.3 [obache 2010-09-17]
-	Updated x11/ruby-gnome2-vte to 0.90.3 [obache 2010-09-17]
+	Updated print/ruby-gnome2-gnomeprint to 0.90.3 [obache 2010-10-23]
+	Updated print/ruby-gnome2-gnomeprintui to 0.90.3 [obache 2010-10-23]
+	Updated print/ruby-gnome2-poppler to 0.90.3 [obache 2010-10-23]
+	Updated sysutils/ruby-gnome2-gnomevfs to 0.90.3 [obache 2010-10-23]
+	Updated www/ruby-gnome2-gtkhtml2 to 0.90.3 [obache 2010-10-23]
+	Updated www/ruby-gnome2-gtkmozembed to 0.90.3 [obache 2010-10-23]
+	Updated x11/ruby-gnome2-gnome to 0.90.3 [obache 2010-10-23]
+	Updated x11/ruby-gnome2-gtk to 0.90.3 [obache 2010-10-23]
+	Updated x11/ruby-gnome2-gtksourceview to 0.90.3 [obache 2010-10-23]
+	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.3 [obache 2010-10-23]
+	Updated x11/ruby-gnome2-panelapplet to 0.90.3 [obache 2010-10-23]
+	Updated x11/ruby-gnome2-vte to 0.90.3 [obache 2010-10-23]
 	Updated net/libtrace to 3.0.7 [pettai 2010-10-23]
 	Updated mail/p5-Mail-DKIM to 0.38 [pettai 2010-10-23]
 	Added devel/libftdi version 0.18 [jakllsch 2010-10-23]
