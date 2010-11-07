@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/12/28 08:42:01 kim Exp $
+# $NetBSD: options.mk,v 1.9 2010/11/07 12:21:09 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
@@ -26,6 +26,7 @@ MODULES=	# empty
 
 .if !empty(PKG_OPTIONS:Mwrap)
 MODULES:=	${MODULES}:mod_wrap
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mtls)
