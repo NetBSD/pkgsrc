@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/07/16 20:23:41 tonio Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/11/07 14:52:47 tonio Exp $
 bin/flea
 bin/mutt
 bin/mutt_dotlock
@@ -10,6 +10,7 @@ man/man1/flea.1
 man/man1/mutt.1
 man/man1/mutt_dotlock.1
 man/man1/muttbug.1
+man/man1/smime_keys.1
 man/man5/mutt-mbox.5
 man/man5/mutt-mmdf.5
 man/man5/muttrc.5
