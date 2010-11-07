@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/10 20:16:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/11/07 19:52:46 minskim Exp $
 
-SHA1 (abc.zip) = 3db63b339d482714c0eef3f463b5fb305f39294c
-RMD160 (abc.zip) = 6a8a4171e2e2776aa077bc426719595818e594db
-Size (abc.zip) = 150548 bytes
+SHA1 (tex-abc-15878/abc.tar.xz) = f9afecd1c23ad778440e672caa658c42ef54be90
+RMD160 (tex-abc-15878/abc.tar.xz) = 221826124f9084fdffffad119c34202f2e9c4eb3
+Size (tex-abc-15878/abc.tar.xz) = 2492 bytes
