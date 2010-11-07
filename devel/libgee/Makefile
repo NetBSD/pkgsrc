@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/09/23 08:26:09 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/07 09:32:07 gls Exp $
 #
 
-DISTNAME=	libgee-0.5.3
+DISTNAME=	libgee-0.6.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/0.5/}
 EXTRACT_SUFX=	.tar.bz2
