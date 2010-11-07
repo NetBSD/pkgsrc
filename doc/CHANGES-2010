@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3886 2010/11/07 07:55:29 agc Exp $
+$NetBSD: CHANGES-2010,v 1.3887 2010/11/07 09:33:08 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5370,3 +5370,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/vala to 0.10.1 [gls 2010-11-06]
 	Updated math/gnumeric110 to 1.10.11 [adam 2010-11-06]
 	Updated security/netpgp to 20101107 [agc 2010-11-07]
+	Update devel/libgee to 0.6.0 [gls 2010-11-07]
