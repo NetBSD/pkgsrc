@@ -1,11 +1,9 @@
-$NetBSD: patch-an,v 1.4 2009/07/16 20:23:41 tonio Exp $
+$NetBSD: patch-an,v 1.5 2010/11/07 14:52:47 tonio Exp $
 
-Add change_folder_next option.
-
---- init.h.orig	2009-06-13 23:35:21.000000000 +0200
+--- init.h.orig	2010-09-15 15:39:31.000000000 +0000
 +++ init.h
 @@ -355,6 +355,13 @@ struct option_t MuttVars[] = {
-   ** \fBNote:\fP It should only be set in case Mutt isn't abled to determine the
+   ** \fBNote:\fP It should only be set in case Mutt isn't able to determine the
    ** character set used correctly.
    */
 +  { "change_folder_next", DT_BOOL, R_NONE, OPTCHANGEFOLDERNEXT, 0 },

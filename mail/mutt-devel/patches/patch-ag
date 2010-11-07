@@ -1,17 +1,17 @@
-$NetBSD: patch-ag,v 1.8 2009/01/26 22:35:03 tonio Exp $
+$NetBSD: patch-ag,v 1.9 2010/11/07 14:52:47 tonio Exp $
 
---- doc/Makefile.in.orig	2009-01-05 20:24:14.000000000 +0100
+--- doc/Makefile.in.orig	2010-08-25 16:31:48.000000000 +0000
 +++ doc/Makefile.in
-@@ -492,7 +492,7 @@ uninstall-am: uninstall-local
+@@ -519,7 +519,7 @@ uninstall-am: uninstall-local
  
  all: makedoc-all
  
--makedoc-all: mutt.1 muttrc.man manual.html stamp-doc-rc stamp-doc-chunked manual.txt
+-makedoc-all: mutt.1 smime_keys.1 muttrc.man manual.html stamp-doc-rc stamp-doc-chunked manual.txt
 +makedoc-all: mutt.1 muttrc.man
  
  install-data-local: makedoc-all instdoc
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man1
-@@ -504,8 +504,8 @@ install-data-local: makedoc-all instdoc
+@@ -532,8 +532,8 @@ install-data-local: makedoc-all instdoc
  	test x@DOTLOCK_TARGET@ = x || ./instdoc $(srcdir)/dotlock.man \
  		$(DESTDIR)$(mandir)/man1/mutt_dotlock.1
  	./instdoc muttrc.man $(DESTDIR)$(mandir)/man5/muttrc.5
