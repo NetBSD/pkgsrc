@@ -1,10 +1,11 @@
-# $NetBSD: hyphen-deinstall.tmpl,v 1.2 2009/04/15 05:01:28 minskim Exp $
+# $NetBSD: hyphen-deinstall.tmpl,v 1.3 2010/11/07 17:22:24 minskim Exp $
 #
 # Deinstall hyphenation patterns.
 #
 
 LANGUAGE_DAT=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.dat
 LANGUAGE_DEF=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.def
+LANGUAGE_LUA=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.dat.lua
 
 case ${STAGE} in
 DEINSTALL)
@@ -22,6 +23,13 @@ BEGIN { do_print=1; } \
 /^%%% END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_DEF} > ${LANGUAGE_DEF}.tmp &&
 	${MV} ${LANGUAGE_DEF}.tmp ${LANGUAGE_DEF}
 	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_DEF}
+	${AWK} "\
+BEGIN { do_print=1; } \
+/^--- BEGIN @PKGBASE@\$/ { do_print=0; } \
+{ if (do_print) print \$0; } \
+/^--- END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_LUA} > ${LANGUAGE_LUA}.tmp &&
+	${MV} ${LANGUAGE_LUA}.tmp ${LANGUAGE_LUA}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_LUA}
 	;;
 *)
 	;;
