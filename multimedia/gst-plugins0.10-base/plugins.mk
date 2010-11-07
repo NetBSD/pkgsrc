@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.9 2010/07/22 12:57:15 drochner Exp $
+# $NetBSD: plugins.mk,v 1.10 2010/11/07 20:31:37 jmmv Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
@@ -12,7 +12,7 @@ CATEGORIES=	multimedia gnome
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-plugins-${GST_PLUGINS0.10_TYPE}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gstreamer.net/
 COMMENT=	Open source multimedia framework -
 
