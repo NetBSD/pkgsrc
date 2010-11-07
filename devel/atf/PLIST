@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/10/20 08:21:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/11/07 13:41:14 jmmv Exp $
 bin/atf-config
 bin/atf-report
 bin/atf-run
@@ -47,6 +47,7 @@ share/doc/atf/COPYING
 share/doc/atf/NEWS
 share/doc/atf/README
 share/examples/atf/atf-run.hooks
+share/examples/atf/common.conf
 share/examples/atf/tests-results.css
 share/xml/atf/tests-results.dtd
 share/xsl/atf/tests-results.xsl
