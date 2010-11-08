@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3912 2010/11/08 17:01:16 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3913 2010/11/08 17:14:23 abs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5432,3 +5432,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-hungarian to 2010 [minskim 2010-11-08]
 	Updated print/tex-hyphen-hungarian-doc to 2010 [minskim 2010-11-08]
 	Updated print/tex-hyphen-coptic to 2010 [minskim 2010-11-08]
+	Updated net/vsftpd to 2.3.2 [abs 2010-11-08]
