@@ -1,1 +1,2 @@
-This package provides TeX hyphenation patterns for Basque.
+A shell script to generate hyphenation patterns for the Basque language,
+and a set of patterns from it.
