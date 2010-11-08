@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3902 2010/11/08 00:37:21 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3903 2010/11/08 00:41:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-arabic to 2010 [minskim 2010-11-08]
 	Updated print/tex-hyphen-basque to 2010 [minskim 2010-11-08]
 	Updated print/tex-hyphen-farsi to 2010 [minskim 2010-11-08]
+	Updated print/tex-dehyph-exptl to 0.20nb1 [minskim 2010-11-08]
