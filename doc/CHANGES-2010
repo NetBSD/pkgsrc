@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3908 2010/11/08 01:43:18 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3909 2010/11/08 07:53:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5395,3 +5395,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/tex-adobemapping version 2010 [minskim 2010-11-08]
 	Added print/tex-gustlib version 2010 [minskim 2010-11-08]
 	Added print/tex-gustlib-doc version 2010 [minskim 2010-11-08]
+	Updated mail/exim-html to 4.72 [adam 2010-11-08]
