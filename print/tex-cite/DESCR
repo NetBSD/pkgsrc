@@ -1,4 +1,6 @@
 The package supports compressed, sorted lists of numerical citations,
 and also deals with various punctuation and other issues of
-representation, including comprehensive management of break points.
-The package is compatible with both hyperref and backref.
+representation, including comprehensive management of break points. The
+package is compatible with both hyperref and backref. The package is
+(unsurprisingly) part of the cite bundle of the author's
+citation-related packages.
