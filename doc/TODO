@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9845 2010/11/08 17:14:23 abs Exp $
+$NetBSD: TODO,v 1.9846 2010/11/08 18:08:09 adam Exp $
 
 Suggested new packages
 ======================
@@ -370,7 +370,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alsa-plugins-1.0.22
 	o amanda-3.1
 	o amavis-perl-0.3.12 [called just amavis]
-	o amavisd-new-2.6.4
 	o amaya-11.1
 	o angband-3.0.9
 	o anjuta-2.32.0 [GNOME 2.32]
