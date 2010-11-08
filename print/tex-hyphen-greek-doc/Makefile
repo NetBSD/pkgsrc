@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/12 21:20:48 minskim Exp $
-# TeX Live Revision 13822
+# $NetBSD: Makefile,v 1.2 2010/11/08 16:56:08 minskim Exp $
 
 DISTNAME=	hyphen-greek.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2009
+PKGNAME=	tex-${DISTNAME:S/./-/}-5
+TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-hyphen-greek
