@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/09/14 11:02:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/08 01:05:25 wiz Exp $
 
 DISTNAME=	lottanzb-0.4.0
 PKGREVISION=	5
@@ -18,7 +18,7 @@ PYDISTUTILSPKG=         yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt pkg-config
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c6:../../devel/py-setuptools
 INSTALLATION_DIRS+=	${PYSITELIB}
 
