@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3900 2010/11/08 00:32:20 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3901 2010/11/08 00:35:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated finance/gnucash to 2.2.9nb10 [wiz 2010-11-07]
 	Updated print/tex-hyphen-ancientgreek to 2010 [minskim 2010-11-08]
 	Updated print/tex-hyphen-arabic to 2010 [minskim 2010-11-08]
+	Updated print/tex-hyphen-basque to 2010 [minskim 2010-11-08]
