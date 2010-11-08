@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/09/19 23:58:41 minskim Exp $
+$NetBSD: distinfo,v 1.5 2010/11/08 00:47:23 minskim Exp $
 
-SHA1 (tex-dvips-19724/dvips.doc.tar.xz) = 05c13c787aeebf7708d2f0d601f87611784eecba
-RMD160 (tex-dvips-19724/dvips.doc.tar.xz) = 3eefe4b0d7cd3cafc0c9198753af58c30b36b7ef
-Size (tex-dvips-19724/dvips.doc.tar.xz) = 490316 bytes
+SHA1 (tex-dvips-20191/dvips.doc.tar.xz) = 2639cdfdf5cdd765d96c5b7ab325affe0db0ba72
+RMD160 (tex-dvips-20191/dvips.doc.tar.xz) = 65d99526924980252e5ed0fea1ed797fad0c9a43
+Size (tex-dvips-20191/dvips.doc.tar.xz) = 490316 bytes
