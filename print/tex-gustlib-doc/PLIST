@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/08 01:41:12 minskim Exp $
+share/texmf-dist/doc/plain/gustlib/README
+share/texmf-dist/doc/plain/gustlib/readme.biblotex
+share/texmf-dist/doc/plain/gustlib/readme.plbtx993
+share/texmf-dist/doc/plain/gustlib/readme.plmac218
