@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3909 2010/11/08 07:53:36 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3910 2010/11/08 16:04:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5396,3 +5396,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-gustlib version 2010 [minskim 2010-11-08]
 	Added print/tex-gustlib-doc version 2010 [minskim 2010-11-08]
 	Updated mail/exim-html to 4.72 [adam 2010-11-08]
+	Updated print/tex-hyphen-chinese to 2010 [minskim 2010-11-08]
