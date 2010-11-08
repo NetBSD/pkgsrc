@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9844 2010/11/08 00:18:09 wiz Exp $
+$NetBSD: TODO,v 1.9845 2010/11/08 17:14:23 abs Exp $
 
 Suggested new packages
 ======================
@@ -1393,7 +1393,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vorbis-tools-1.4.0
 	o vp-1.6
-	o vsftpd-2.3.1
 	o vte-0.26.1
 	o vttest-20100830
 	o wMosaic-3.8.22
