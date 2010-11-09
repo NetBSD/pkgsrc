@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2010/10/27 13:24:09 tsutsui Exp $
+# $NetBSD: Makefile,v 1.75 2010/11/09 10:37:12 jmmv Exp $
 #
 
 DISTNAME=		qemu-0.13.0
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
 
@@ -25,6 +26,13 @@ BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX:Q}/share/qemu
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+CONF_FILES=		${EGDIR}/target-x86_64.conf \
+			${PKG_SYSCONFDIR}/target-x86_64.conf
+EGDIR=			${PREFIX}/share/examples/qemu
+INSTALL_MAKE_FLAGS=	egdir=${EGDIR}
+PKG_SYSCONFSUBDIR=	qemu
 
 # Avoid clash with system include file:
 pre-patch:
