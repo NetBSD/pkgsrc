@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3926 2010/11/09 16:11:14 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3927 2010/11/09 16:29:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5451,3 +5451,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/vorbis-tools to 1.4.0 [adam 2010-11-09]
 	Updated mail/dovecot2 to 2.0.7 [ghen 2010-11-09]
 	Updated print/tex-hyphen-mongolian to 2010 [minskim 2010-11-09]
+	Added print/tex-cellspace version 1.6 [minskim 2010-11-09]
+	Added print/tex-cellspace-doc version 1.6 [minskim 2010-11-09]
