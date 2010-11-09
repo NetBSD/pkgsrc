@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9847 2010/11/09 00:40:08 wiz Exp $
+$NetBSD: TODO,v 1.9848 2010/11/09 06:31:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o Sigil-0.3.0
+	o Sigil-0.3.1
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.7
 	o TiffIO-130e
@@ -457,7 +457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o calibre-0.7.27
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o ccache-3.1
+	o ccache-3.1.1
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
@@ -492,7 +492,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cpmtools-2.6
 	o cross-h8300-hms-binutils-2.17
 	o cryptopp-5.6.0
-	o cssc-1.2.0
+	o cssc-1.3.0
 	o cups-1.4.4
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.21
@@ -529,7 +529,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doxygen-1.7.2
 	o dpkg-1.14.25
 	o drivel-3.0.2
-	o drupal6-6.19
 	o dspam-3.9.0
 	o dvtm-0.6
 	o dwm-5.8.2
@@ -758,8 +757,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gssdp-0.8.0
 	o gst-plugins0.10-base-0.10.30.2
 	o gstreamer0.10-0.10.30.2
-	o gtar-1.24
-	o gtar-base-1.24
+	o gtar-1.25
+	o gtar-base-1.25
 	o gthumb-2.12.0
 	o gtick-0.4.2
 	o gtk-systrace-20030623
@@ -1398,7 +1397,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.4
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o wdiff-0.6.3
+	o wdiff-0.6.4
 	o webmin-1.520
 	o weechat-0.3.3
 	o weewm-0.01
@@ -1535,7 +1534,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsoldier-1.4
 	o xterm-266
 	o xtraceroute-0.9.1
-	o xtrans-1.2.5
+	o xtrans-1.2.6
 	o xtu-1.3
 	o xtux-20030306
 	o xvidcap-1.1.7
