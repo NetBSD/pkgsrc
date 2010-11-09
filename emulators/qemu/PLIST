@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/10/27 13:24:09 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/11/09 10:37:12 jmmv Exp $
 bin/qemu
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
@@ -43,6 +43,7 @@ man/man8/qemu-nbd.8
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
+share/examples/qemu/target-x86_64.conf
 share/qemu/bamboo.dtb
 share/qemu/bios.bin
 share/qemu/gpxe-eepro100-80861209.rom
