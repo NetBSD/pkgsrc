@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2010/01/17 12:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2010/11/09 07:11:46 adam Exp $
 
-DISTNAME=	python-ldap-2.3.8
+DISTNAME=	python-ldap-2.3.12
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ldap/
 
@@ -23,8 +22,8 @@ PY_LDAP_LIBS=			ldap_r lber ssl crypto
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	pre-configure
 SUBST_FILES.setup=	setup.cfg
-SUBST_SED.setup=	-e 's|@PY_LDAP_LIBRARY_DIRS@|${PY_LDAP_LIBRARY_DIRS}|'
-SUBST_SED.setup+=	-e 's|@PY_LDAP_INCLUDE_DIRS@|${PY_LDAP_INCLUDE_DIRS}|'
+SUBST_SED.setup=	-e 's|@PY_LDAP_LIBRARY_DIRS@|${PY_LDAP_LIBRARY_DIRS:Q}|'
+SUBST_SED.setup+=	-e 's|@PY_LDAP_INCLUDE_DIRS@|${PY_LDAP_INCLUDE_DIRS:Q}|'
 SUBST_SED.setup+=	-e 's|@PY_LDAP_LIBS@|${PY_LDAP_LIBS}|'
 
 PY_LDAP_DOCDIR=		${PREFIX}/share/doc/py-ldap
