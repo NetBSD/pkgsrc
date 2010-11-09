@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/03/21 21:24:25 kim Exp $
+@comment $NetBSD: PLIST,v 1.21.6.1 2010/11/09 20:58:59 spz Exp $
 bin/ftpcount
 bin/ftpdctl
 bin/ftptop
@@ -96,6 +96,7 @@ share/locale/bg_BG/LC_MESSAGES/proftpd.mo
 share/locale/en_US/LC_MESSAGES/proftpd.mo
 share/locale/fr_FR/LC_MESSAGES/proftpd.mo
 share/locale/it_IT/LC_MESSAGES/proftpd.mo
+share/locale/ja_JP/LC_MESSAGES/proftpd.mo
 share/locale/ko_KR/LC_MESSAGES/proftpd.mo
 share/locale/ru_RU/LC_MESSAGES/proftpd.mo
 share/locale/zh_CN/LC_MESSAGES/proftpd.mo
