@@ -1,17 +1,42 @@
-$NetBSD: patch-ai,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-ai,v 1.2 2010/11/09 07:09:59 spz Exp $
 
---- ./resend.orig	Wed Aug 27 08:59:24 1997
-+++ ./resend	Tue Jun  8 10:55:13 1999
-@@ -93,4 +93,5 @@
+--- resend.orig	2000-01-07 15:32:39.000000000 +0000
++++ resend
+@@ -92,6 +92,7 @@ require "$cf";
+ 
  chdir($homedir) || die("Can't chdir(\"$homedir\"): $!");
  
 +unshift(@INC, $bindir);
  unshift(@INC, $homedir);
  require "ctime.pl";  # For logging purposes
-@@ -316,5 +317,5 @@
+ require "majordomo.pl";
+@@ -316,7 +317,7 @@ $is_admin_header .= "\$taboo = \"\";\n};
+ if (! defined($admin_body)) {
      &bitch("resend:  \$admin_body not defined in $cf !!\n" .
  	   "Majordomo will only catch \"subscribe\" and \"unsubscribe\" in\n" .
 -	   "the body.\nLook at $homedir/sample.cf for a good definition.");
 +	   "the body.\nLook at $bindir/sample.cf for a good definition.");
      @admin_body = ('/^subject:\s*subscribe\b/i' ,
  		      '/^subject:\s*unsubscribe\b/i');
+ } else {
+@@ -747,12 +748,20 @@ sub parse_header {
+ 
+     # add new header fields
+     print OUT "Sender: $sender\n";
++    print OUT "List-Id: ".$opt_l.".".$whereami."\n";
++
+     if (defined($opt_p)) {
+ 	print OUT "Precedence: $opt_p\n";
+     }
+ 
+     if (defined($opt_r)) {
+ 	print OUT "Reply-To: ", &config'substitute_values($opt_r), "\n";   #';
++	if (defined $reply_to) {
++	    print OUT "Mail-Reply-To: $reply_to\n";   #';
++	} else {
++	    print OUT "Mail-Reply-To: $from\n";   #';
++	}
++	print OUT "Mail-Followup-To: ", &config'substitute_values($opt_r), "\n";   #';
+     }
+     
+     # print out per-list additonal headers
