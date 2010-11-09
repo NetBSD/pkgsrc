@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/11/09 07:11:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -36,6 +36,9 @@ ${PYSITELIB}/ldap/ldapobject.pyo
 ${PYSITELIB}/ldap/modlist.py
 ${PYSITELIB}/ldap/modlist.pyc
 ${PYSITELIB}/ldap/modlist.pyo
+${PYSITELIB}/ldap/resiter.py
+${PYSITELIB}/ldap/resiter.pyc
+${PYSITELIB}/ldap/resiter.pyo
 ${PYSITELIB}/ldap/sasl.py
 ${PYSITELIB}/ldap/sasl.pyc
 ${PYSITELIB}/ldap/sasl.pyo
