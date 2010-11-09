@@ -1,18 +1,15 @@
-$NetBSD: patch-ac,v 1.12 2010/03/21 21:24:25 kim Exp $
+$NetBSD: patch-ac,v 1.12.6.1 2010/11/09 20:58:59 spz Exp $
 
-Make this pkgsrc friendly.
+portability fix.
 
---- configure.in.orig	2010-02-15 14:22:26.000000000 -0500
-+++ configure.in	2010-03-21 16:38:07.000000000 -0400
-@@ -2266,9 +2266,9 @@
- locale_dir="`eval echo ${locale_dir}`"
- AC_DEFINE_UNQUOTED(PR_LOCALE_DIR, "`eval echo "${locale_dir}"`")
- 
--AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}"`")
-+AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}/run"`")
- AC_DEFINE_UNQUOTED(PR_CONFIG_FILE_PATH, "`eval echo "${sysconfdir}/proftpd.conf"`")
--AC_DEFINE_UNQUOTED(PR_PID_FILE_PATH, "`eval echo "${localstatedir}/proftpd.pid"`")
-+AC_DEFINE_UNQUOTED(PR_PID_FILE_PATH, "`eval echo "${localstatedir}/run/proftpd.pid"`")
- 
- prefix="$pr_saved_prefix"
- exec_prefix="$pr_saved_exec_prefix"
+--- configure.in.orig	2010-04-13 21:57:34.000000000 +0000
++++ configure.in
+@@ -331,7 +331,7 @@ AC_ARG_WITH(modules,
+     if test x"$withval" != x; then
+       modules_list=`echo "$withval" | sed -e 's/:/ /g'`;
+       for amodule in $modules_list; do
+-        if test x"$amodule" == xmod_dso ; then
++        if test x"$amodule" = xmod_dso ; then
+           AC_MSG_ERROR([use --enable-dso instead of --with-modules=mod_dso for DSO support])
+         fi
+       done
