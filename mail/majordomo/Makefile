@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2010/11/09 06:40:13 spz Exp $
+# $NetBSD: Makefile,v 1.39 2010/11/09 07:09:58 spz Exp $
 
 DISTNAME=		majordomo-1.94.5
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.sgi.com/other/majordomo/1.94.5/ \
 			ftp://ftp-europe.sgi.com/other/majordomo/1.94.5/
@@ -32,7 +32,7 @@ MAKE_FILE=		Makefile.netbsd
 
 PKG_SYSCONFSUBDIR=	majordomo
 CONF_FILES+=		${EXAMPLEDIR}/aliases.majordomo ${PKG_SYSCONFDIR}/aliases
-CONF_FILES+=		${EXAMPLEDIR}/majordomo.cf ${PKG_SYSCONFDIR}/majordomo.cf
+CONF_FILES+=		${EXAMPLEDIR}/majordomo.cf ${MAJORDOMO_CF}
 
 MAJORDOMO_HOMEDIR?=	${VARBASE}/majordomo
 MAJORDOMO_TMPDIR?=	${VARBASE}/majordomo/tmp
