@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2010/05/19 18:25:19 drochner Exp $
+# $NetBSD: Makefile,v 1.54 2010/11/09 13:13:03 adam Exp $
 
-DISTNAME=	vorbis-tools-1.2.0
-PKGREVISION=	4
+DISTNAME=	vorbis-tools-1.4.0
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
 
@@ -15,15 +14,14 @@ BUILD_DEFS+=	IPV6_READY
 
 CONFLICTS=	vorbis-[0-9]*
 
+USE_TOOLS+=		pkg-config
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_PREFIX.libogg}	\
-			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis} \
-			--with-ao-prefix=${BUILDLINK_PREFIX.libao} \
-			--enable-vcut
+CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_PREFIX.libogg}
+CONFIGURE_ARGS+=	--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}
 
-PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
+PLIST_SUBST+=	DISTNAME=${DISTNAME}
 
 PTHREAD_OPTS+=	require
 
