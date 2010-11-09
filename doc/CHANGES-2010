@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3927 2010/11/09 16:29:58 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3928 2010/11/09 19:02:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5453,3 +5453,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-mongolian to 2010 [minskim 2010-11-09]
 	Added print/tex-cellspace version 1.6 [minskim 2010-11-09]
 	Added print/tex-cellspace-doc version 1.6 [minskim 2010-11-09]
+	Updated print/tex-chemarrow to 0.9 [minskim 2010-11-09]
