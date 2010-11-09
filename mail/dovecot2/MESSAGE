@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2010/11/09 15:23:11 ghen Exp $
+
+The configuration for Dovecot 2.0 now lives in ${PKG_SYSCONFDIR}/dovecot/,
+and is split in multiple files.
+
+When upgrading from Dovecot 1.2.x, you can either:
+- convert your old config to a single, minimal new config file:
+  ${PREFIX}/bin/doveconf -n -c dovecot.conf > dovecot.conf.new
+- start over, editing the templates in ${PKG_SYSCONFDIR}/dovecot/conf.d/
+
+For more information, see http://wiki2.dovecot.org/Upgrading/2.0
+
+===========================================================================
