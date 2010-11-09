@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.11 2010/03/23 13:45:28 wiz Exp $
+$NetBSD: patch-ab,v 1.11.6.1 2010/11/09 20:58:59 spz Exp $
 
-Make this pkgsrc friendly.
+Portability fix.
 
---- configure.orig	2010-02-15 19:32:24.000000000 +0000
+--- configure.orig	2010-04-13 22:01:35.000000000 +0000
 +++ configure
-@@ -12862,7 +12862,7 @@ if test "${with_modules+set}" = set; the
+@@ -12866,7 +12866,7 @@ if test "${with_modules+set}" = set; the
      if test x"$withval" != x; then
        modules_list=`echo "$withval" | sed -e 's/:/ /g'`;
        for amodule in $modules_list; do
@@ -13,21 +13,3 @@ Make this pkgsrc friendly.
            { { echo "$as_me:$LINENO: error: use --enable-dso instead of --with-modules=mod_dso for DSO support" >&5
  echo "$as_me: error: use --enable-dso instead of --with-modules=mod_dso for DSO support" >&2;}
     { (exit 1); exit 1; }; }
-@@ -31715,7 +31715,7 @@ _ACEOF
- 
- 
- cat >>confdefs.h <<_ACEOF
--#define PR_RUN_DIR "`eval echo "${localstatedir}"`"
-+#define PR_RUN_DIR "`eval echo "${localstatedir}/run"`"
- _ACEOF
- 
- cat >>confdefs.h <<_ACEOF
-@@ -31723,7 +31723,7 @@ cat >>confdefs.h <<_ACEOF
- _ACEOF
- 
- cat >>confdefs.h <<_ACEOF
--#define PR_PID_FILE_PATH "`eval echo "${localstatedir}/proftpd.pid"`"
-+#define PR_PID_FILE_PATH "`eval echo "${localstatedir}/run/proftpd.pid"`"
- _ACEOF
- 
- 
