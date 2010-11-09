@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2010/10/30 23:48:36 spz Exp $
+$NetBSD: patch-ae,v 1.3 2010/11/09 06:40:13 spz Exp $
 
 bring up to perl 5.12 standard (this is old code)
 
@@ -9,7 +9,7 @@ bring up to perl 5.12 standard (this is old code)
      foreach (@files) {
  	    $message = "$V{'INCOMING'}/$_";
 -	    open(message) || &abort("$message: $!\n");
-+	    open(MESSAGE) || &abort("$message: $!\n");
++	    open(MESSAGE, $message) || &abort("$message: $!\n");
  	    print STDERR "\tprocessing $message\n";
  	    push(@processed,$message);
  
