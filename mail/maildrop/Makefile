@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2010/11/05 14:15:02 adam Exp $
+# $NetBSD: Makefile,v 1.52 2010/11/09 10:42:01 obache Exp $
 
 DISTNAME=	maildrop-2.5.1
 CATEGORIES=	security
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--with-makedatprog=${LIBEXECDIR}/makedatprog
 CONFIGURE_ARGS+=	--enable-maildirquota
 CONFIGURE_ARGS+=	--enable-maildrop-uid=${REAL_ROOT_USER}
 CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP}
-CONFIGURE_ARGS+=	--enable-trusted-users=${MAILDROP_TRUSTED_USERS}
+CONFIGURE_ARGS+=	--enable-trusted-users=${MAILDROP_TRUSTED_USERS:Q}
 CONFIGURE_ARGS+=	--enable-trusted-groups=${COURIER_GROUP}
 CONFIGURE_ARGS+=	--enable-syslog=1
 
