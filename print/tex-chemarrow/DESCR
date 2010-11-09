@@ -7,3 +7,8 @@ like the "standard" ones you will find in books or journals on chemistry.
 The macro chemarrow.sty in conjunction with the font arrow.mf is supposed
 to make the typesetting of chemical reaction schemes in LaTeX easier and
 especially nicer looking.
+
+This bundle consists of a font (available as metafont source,
+metapost source, and generated type 1 versions), and a package
+to use it. The arrows in the font are designed to look more
+like those in chemistry text-books than do Knuth's originals.
