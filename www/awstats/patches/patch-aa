@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2009/01/15 12:12:04 adam Exp $
+$NetBSD: patch-aa,v 1.10 2010/11/09 07:14:48 adam Exp $
 
---- wwwroot/cgi-bin/awstats.pl.orig	2008-11-30 16:42:46.000000000 +0100
+--- wwwroot/cgi-bin/awstats.pl.orig	2010-08-18 10:47:10.000000000 +0000
 +++ wwwroot/cgi-bin/awstats.pl
-@@ -1627,7 +1627,7 @@ sub Read_Config {
- 	my $configdir         = shift;
- 	my @PossibleConfigDir = ();
+@@ -1717,7 +1717,7 @@ sub Read_Config {
+ 			"/etc/opt/awstats"
+ 		); 
  
 -	if ($configdir) {
 +	if ($configdir && $ENV{"AWSTATS_ENABLE_CONFIG_DIR"}) {
- 
- # If from CGI, overwriting of configdir is only possible if AWSTATS_ENABLE_CONFIG_DIR defined
- #if ($ENV{'GATEWAY_INTERFACE'} && ! $ENV{"AWSTATS_ENABLE_CONFIG_DIR"})
+ 		# Check if configdir is outside default values.
+ 		my $outsidedefaultvalue=1;
+ 		foreach (@PossibleConfigDir) {
