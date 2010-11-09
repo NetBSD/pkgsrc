@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/09 03:33:28 agc Exp $
+
+SHA1 (pbc-0.5.10.tar.gz) = 79bed6f6ed76236ae60fd8d5afab2e4c36201a63
+RMD160 (pbc-0.5.10.tar.gz) = ca64d7dacb07d37d7cbfa45c4f1391fc83d975c4
+Size (pbc-0.5.10.tar.gz) = 523395 bytes
