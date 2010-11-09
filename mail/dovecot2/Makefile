@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/09 15:23:11 ghen Exp $
 
-DISTNAME=	dovecot-2.0.6
-CATEGORIES=	mail
-MASTER_SITES=	http://www.dovecot.org/releases/2.0/
+DOVECOT_VERSION=	2.0
+DOVECOT_SUBVERSION=	.6
+SIEVE_VERSION=		0.2.1
+DISTNAME=		dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}
+CATEGORIES=		mail
+MASTER_SITES=		http://www.dovecot.org/releases/${DOVECOT_VERSION}/
+DOVECOT_SIEVE_SITES=	http://www.rename-it.nl/dovecot/${DOVECOT_VERSION}/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dovecot.org/
-COMMENT=	Secure IMAP and POP3 server
-LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
+MAINTAINER=		ghen@NetBSD.org
+HOMEPAGE=		http://www.dovecot.org/
+COMMENT=		Secure IMAP and POP3 server
+LICENSE=		mit AND gnu-lgpl-v2.1 AND modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -25,12 +29,16 @@ RCD_SCRIPTS=		dovecot
 
 DOVECOT_USER?=		dovecot
 DOVECOT_GROUP?=		dovecot
-PKG_GROUPS=		${DOVECOT_GROUP}
-PKG_USERS=		${DOVECOT_USER}:${DOVECOT_GROUP}
-PKG_GROUPS_VARS+=	DOVECOT_GROUP
-PKG_USERS_VARS=		DOVECOT_USER
+DOVENULL_USER?=		dovenull
+DOVENULL_GROUP?=	dovenull
+PKG_GROUPS=		${DOVECOT_GROUP} ${DOVENULL_GROUP}
+PKG_USERS=		${DOVECOT_USER}:${DOVECOT_GROUP}	\
+			${DOVENULL_USER}:${DOVENULL_GROUP}
+PKG_GROUPS_VARS=	DOVECOT_GROUP DOVENULL_GROUP
+PKG_USERS_VARS=		DOVECOT_USER DOVENULL_USER
 
 PKG_GECOS.${DOVECOT_USER}=	Dovecot IMAP/POP3 user
+PKG_GECOS.${DOVENULL_USER}=	Dovecot login user
 
 SUBST_CLASSES+=		ssldir
 SUBST_MESSAGE.ssldir=	Fixing SSLDIR
@@ -38,47 +46,45 @@ SUBST_FILES.ssldir=	doc/example-config/conf.d/10-ssl.conf
 SUBST_STAGE.ssldir=	pre-configure
 SUBST_SED.ssldir=	-e 's,/etc/ssl,${SSLDIR},'
 
-EGDIR=		${PREFIX}/share/examples/dovecot
-CONFD=		${PKG_SYSCONFDIR}/dovecot/conf.d
-MAKE_DIRS+=	${CONFD}
-CONF_FILES+=	${EGDIR}/dovecot.conf ${PKG_SYSCONFDIR}/dovecot/dovecot.conf
-CONF_FILES+=	${EGDIR}/dovecot-db.conf.ext ${PKG_SYSCONFDIR}/dovecot/dovecot-db.conf.ext
-CONF_FILES+=	${EGDIR}/dovecot-dict-sql.conf.ext ${PKG_SYSCONFDIR}/dovecot/dovecot-dict-sql.conf.ext
-CONF_FILES+=	${EGDIR}/dovecot-ldap.conf.ext ${PKG_SYSCONFDIR}/dovecot/dovecot-ldap.conf.ext
-CONF_FILES+=	${EGDIR}/dovecot-sql.conf.ext ${PKG_SYSCONFDIR}/dovecot/dovecot-sql.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/10-auth.conf ${CONFD}/10-auth.conf
-CONF_FILES+=	${EGDIR}/conf.d/10-director.conf ${CONFD}/10-director.conf
-CONF_FILES+=	${EGDIR}/conf.d/10-logging.conf ${CONFD}/10-logging.conf
-CONF_FILES+=	${EGDIR}/conf.d/10-mail.conf ${CONFD}/10-mail.conf
-CONF_FILES+=	${EGDIR}/conf.d/10-master.conf ${CONFD}/10-master.conf
-CONF_FILES+=	${EGDIR}/conf.d/10-ssl.conf ${CONFD}/10-ssl.conf
-CONF_FILES+=	${EGDIR}/conf.d/15-lda.conf ${CONFD}/15-lda.conf
-CONF_FILES+=	${EGDIR}/conf.d/20-imap.conf ${CONFD}/20-imap.conf
-CONF_FILES+=	${EGDIR}/conf.d/20-lmtp.conf ${CONFD}/20-lmtp.conf
-CONF_FILES+=	${EGDIR}/conf.d/20-pop3.conf ${CONFD}/20-pop3.conf
-CONF_FILES+=	${EGDIR}/conf.d/90-acl.conf ${CONFD}/90-acl.conf
-CONF_FILES+=	${EGDIR}/conf.d/90-plugin.conf ${CONFD}/90-plugin.conf
-CONF_FILES+=	${EGDIR}/conf.d/90-quota.conf ${CONFD}/90-quota.conf
-CONF_FILES+=	${EGDIR}/conf.d/auth-checkpassword.conf.ext ${CONFD}/auth-checkpassword.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-deny.conf.ext ${CONFD}/auth-deny.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-ldap.conf.ext ${CONFD}/auth-ldap.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-master.conf.ext ${CONFD}/auth-master.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-passwdfile.conf.ext ${CONFD}/auth-passwdfile.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-sql.conf.ext ${CONFD}/auth-sql.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-static.conf.ext ${CONFD}/auth-static.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-system.conf.ext ${CONFD}/auth-system.conf.ext
-CONF_FILES+=	${EGDIR}/conf.d/auth-vpopmail.conf.ext ${CONFD}/auth-vpopmail.conf.ext
+SUBST_CLASSES+=		egdir
+SUBST_MESSAGE.egdir=	Fixing EGDIR
+# sieve adds another file here (in options.mk)
+SUBST_FILES.egdir=	doc/example-config/Makefile.in
+SUBST_FILES.egdir+=	doc/example-config/conf.d/Makefile.in
+SUBST_FILES.egdir+=	src/config/Makefile.in
+SUBST_STAGE.egdir=	pre-configure
+SUBST_SED.egdir=	-e 's,^exampledir = .*/example-config,exampledir = $(PREFIX)/share/examples/dovecot,'
+
+EGDIR=			${PREFIX}/share/examples/dovecot
+
+CNFS_cmd=		${SED} -ne "s,^share/examples/dovecot/,,p" PLIST
+CNFS=			${CNFS_cmd:sh}
+CONF_FILES=		${EGDIR}/dovecot.conf ${PKG_SYSCONFDIR}/dovecot/dovecot-example.conf
+.for file in ${CNFS}
+CONF_FILES+=		${EGDIR}/${file:Q} ${PKG_SYSCONFDIR}/dovecot/${file:Q}
+.endfor
 
 INSTALLATION_DIRS=	libexec/dovecot sbin share/doc/dovecot
 INSTALLATION_DIRS+=	share/examples/dovecot share/examples/dovecot/conf.d
+OWN_DIRS=		${PKG_SYSCONFDIR}/dovecot/
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dovecot/conf.d
 
 BUILD_DEFS+=		VARBASE
+
+.include "options.mk"
+
+post-build:
+.if !empty(PKG_OPTIONS:Mdovecot-sieve)
+# We need dovecot built in order to be able to configure sieve.
+	cd ${WRKSRC.sieve} \
+	&& env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} ${CONFIGURE_ARGS.sieve}
+	cd ${WRKSRC.sieve} \
+	&& env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${DESTDIR}${EGDIR}
-
-.include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
