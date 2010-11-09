@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2010/03/21 21:24:25 kim Exp $
+# $NetBSD: Makefile,v 1.58.6.1 2010/11/09 20:58:59 spz Exp $
 
-DISTNAME=		proftpd-1.3.3
+DISTNAME=		proftpd-1.3.3c
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.proftpd.org/distrib/source/ \
 			ftp://ftp.servus.at/ProFTPD/distrib/source/ \
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--disable-sendfile
 CONFIGURE_ARGS+=	--enable-ctrls
 CONFIGURE_ARGS+=	--enable-nls
@@ -35,12 +35,6 @@ REPLACE_PERL+=		contrib/ftpasswd
 CONF_FILES=		${PREFIX}/share/examples/proftpd/basic.conf \
 			${PKG_SYSCONFDIR}/proftpd.conf
 
-SUBST_CLASSES+=		man
-SUBST_MESSAGE.man=	Fixing paths in manual pages.
-SUBST_STAGE.man=	pre-configure
-SUBST_FILES.man=	utils/ftpcount.1.in utils/ftptop.1.in utils/ftpwho.1.in
-SUBST_SED.man=		-e s,@LOCALSTATEDIR@/run/proftpd,${VARBASE}/run,
-
 INSTALLATION_DIRS+=	lib/proftpd
 INSTALLATION_DIRS+=	share/doc/proftpd
 INSTALLATION_DIRS+=	share/examples/proftpd
@@ -49,11 +43,10 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 .include "options.mk"
 
-post-patch:
-	cd ${WRKSRC}/contrib \
-	&& ${CP} -p mod_wrap.c mod_wrap.c.orig \
-	&& ${SED} -e '/^...\$$Libraries: /s/ -lnsl\$$$$/$$/' \
-	    mod_wrap.c.orig > mod_wrap.c
+SUBST_CLASSES+=		libwrap
+SUBST_STAGE.libwrap=	post-patch
+SUBST_FILES.libwrap=	contrib/mod_wrap.c
+SUBST_SED.libwrap=	-e '/^...\$$Libraries: /s/ -lnsl\$$$$/$$/'
 
 post-install:
 .for i in NEWS README README.IPv6 README.LDAP README.PAM README.capabilities \
