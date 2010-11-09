@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3919 2010/11/09 03:36:02 agc Exp $
+$NetBSD: CHANGES-2010,v 1.3920 2010/11/09 05:47:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5440,3 +5440,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-plain to 3.141592653nb1 [minskim 2010-11-08]
 	Updated multimedia/libvdpau to 0.4.1 [wiz 2010-11-09]
 	Added security/libpbc version 0.5.10 [agc 2010-11-09]
+	Updated www/drupal6 to 6.19 [taca 2010-11-09]
