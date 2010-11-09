@@ -1,0 +1,20 @@
+The PBC (Pairing-Based Cryptography) library is a free C library built
+on the GMP library that performs the mathematical operations
+underlying pairing-based cryptosystems.
+
+It provides routines such as elliptic curve generation, elliptic curve
+arithmetic and pairing computation.
+
+The API is abstract enough that the PBC library can be used even if
+the programmer possesses only an elementary understanding of pairings.
+There is no need to learn about elliptic curves or much of number
+theory.  (The minimum requirement is some knowledge of cyclic groups
+and properties of the pairing.)
+
+      Boneh-Lynn-Shacham short signatures
+      Hess identity-based signatures
+      Joux tripartite Diffie-Hellman
+      Paterson identity-based signatures
+      Yuan-Li identity-based authenticated key agreement
+      Zhang-Kim identity-based blind/ring signatures
+      Zhang-Safavi-Naini-Susilo signatures
