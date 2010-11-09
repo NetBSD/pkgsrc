@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/09 16:28:53 minskim Exp $
+share/texmf-dist/doc/latex/cellspace/README
+share/texmf-dist/doc/latex/cellspace/cellspace.pdf
+share/texmf-dist/doc/latex/cellspace/cellspace.tex
