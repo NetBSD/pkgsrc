@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/11/09 15:23:11 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/09 15:35:47 ghen Exp $
 
 DOVECOT_VERSION=	2.0
-DOVECOT_SUBVERSION=	.6
+DOVECOT_SUBVERSION=	.7
 SIEVE_VERSION=		0.2.1
 DISTNAME=		dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}
 CATEGORIES=		mail
@@ -53,7 +53,7 @@ SUBST_FILES.egdir=	doc/example-config/Makefile.in
 SUBST_FILES.egdir+=	doc/example-config/conf.d/Makefile.in
 SUBST_FILES.egdir+=	src/config/Makefile.in
 SUBST_STAGE.egdir=	pre-configure
-SUBST_SED.egdir=	-e 's,^exampledir = .*/example-config,exampledir = $(PREFIX)/share/examples/dovecot,'
+SUBST_SED.egdir=	-e 's,^exampledir = .*/example-config,exampledir = ${PREFIX}/share/examples/dovecot,'
 
 EGDIR=			${PREFIX}/share/examples/dovecot
 
