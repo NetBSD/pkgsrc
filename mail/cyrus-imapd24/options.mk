@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+# $NetBSD: options.mk,v 1.2 2010/11/09 08:18:56 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--with-krb=/usr
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
-CONFIGURE_ARGS+=	--enable-krb5afspts
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
 CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
