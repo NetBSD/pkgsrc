@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.16 2010/02/02 11:20:29 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/11/09 07:14:48 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
 awstats/bin/awstats_updateall.pl
+awstats/bin/geoip_generator.pl
 awstats/bin/logresolvemerge.pl
 awstats/bin/maillogconvert.pl
 awstats/bin/urlaliasbuilder.pl
@@ -58,6 +59,7 @@ awstats/cgi-bin/lang/awstats-ua.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-br.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-cz.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-en.txt
+awstats/cgi-bin/lang/tooltips_f/awstats-tt-gl.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-gr.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-it.txt
@@ -66,6 +68,7 @@ awstats/cgi-bin/lang/tooltips_m/awstats-tt-br.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-cz.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-en.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-fr.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-gl.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-gr.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-it.txt
@@ -118,12 +121,14 @@ awstats/cgi-bin/plugins/clusterinfo.pm
 awstats/cgi-bin/plugins/decodeutfkeys.pm
 awstats/cgi-bin/plugins/export_to_csv.pm
 awstats/cgi-bin/plugins/geoip.pm
+awstats/cgi-bin/plugins/geoip_asn_maxmind.pm
 awstats/cgi-bin/plugins/geoip_city_maxmind.pm
 awstats/cgi-bin/plugins/geoip_isp_maxmind.pm
 awstats/cgi-bin/plugins/geoip_org_maxmind.pm
 awstats/cgi-bin/plugins/geoip_region_maxmind.pm
 awstats/cgi-bin/plugins/geoipfree.pm
 awstats/cgi-bin/plugins/graphapplet.pm
+awstats/cgi-bin/plugins/graphgooglechartapi.pm
 awstats/cgi-bin/plugins/hashfiles.pm
 awstats/cgi-bin/plugins/hostinfo.pm
 awstats/cgi-bin/plugins/ipv6.pm
@@ -533,17 +538,24 @@ awstats/icon/flags/zw.png
 awstats/icon/mime/ai.png
 awstats/icon/mime/archive.png
 awstats/icon/mime/audio.png
+awstats/icon/mime/crystal.png
 awstats/icon/mime/css.png
 awstats/icon/mime/doc.png
+awstats/icon/mime/dotnet.png
+awstats/icon/mime/encrypt.png
 awstats/icon/mime/flash.png
 awstats/icon/mime/glasses.png
 awstats/icon/mime/html.png
 awstats/icon/mime/image.png
 awstats/icon/mime/jnlp.png
 awstats/icon/mime/jscript.png
+awstats/icon/mime/library.png
 awstats/icon/mime/lit.png
+awstats/icon/mime/mdb.png
 awstats/icon/mime/notavailable.png
+awstats/icon/mime/ooffice.png
 awstats/icon/mime/other.png
+awstats/icon/mime/page.png
 awstats/icon/mime/pdf.png
 awstats/icon/mime/php.png
 awstats/icon/mime/phshop.png
@@ -551,7 +563,9 @@ awstats/icon/mime/pl.png
 awstats/icon/mime/ppt.png
 awstats/icon/mime/quicktime.png
 awstats/icon/mime/rar.png
+awstats/icon/mime/readme.txt
 awstats/icon/mime/real.png
+awstats/icon/mime/rss.png
 awstats/icon/mime/script.png
 awstats/icon/mime/svg.png
 awstats/icon/mime/text.png
@@ -569,8 +583,8 @@ awstats/icon/os/blackberry.png
 awstats/icon/os/bsd.png
 awstats/icon/os/bsddflybsd.png
 awstats/icon/os/bsdfreebsd.png
-awstats/icon/os/bsdkfreebsd.png
 awstats/icon/os/bsdi.png
+awstats/icon/os/bsdkfreebsd.png
 awstats/icon/os/bsdnetbsd.png
 awstats/icon/os/bsdopenbsd.png
 awstats/icon/os/commodore.png
@@ -585,6 +599,8 @@ awstats/icon/os/hpux.png
 awstats/icon/os/ibm.png
 awstats/icon/os/imode.png
 awstats/icon/os/inferno.png
+awstats/icon/os/ios.png
+awstats/icon/os/iphone.png
 awstats/icon/os/irix.png
 awstats/icon/os/j2me.png
 awstats/icon/os/java.png
@@ -630,6 +646,7 @@ awstats/icon/os/win16.png
 awstats/icon/os/win2000.png
 awstats/icon/os/win2003.png
 awstats/icon/os/win2008.png
+awstats/icon/os/win7.png
 awstats/icon/os/win95.png
 awstats/icon/os/win98.png
 awstats/icon/os/wince.png
@@ -674,6 +691,10 @@ share/doc/awstats/awstats_changelog.txt
 share/doc/awstats/awstats_compare.html
 share/doc/awstats/awstats_config.html
 share/doc/awstats/awstats_contrib.html
+share/doc/awstats/awstats_dev_plugins.html
+share/doc/awstats/awstats_dev_plugins_graphs.html
+share/doc/awstats/awstats_dev_plugins_hooks.html
+share/doc/awstats/awstats_dolibarr.html
 share/doc/awstats/awstats_extra.html
 share/doc/awstats/awstats_faq.html
 share/doc/awstats/awstats_glossary.html
@@ -713,8 +734,19 @@ share/doc/awstats/images/screen_shot_large_4.jpg
 share/doc/awstats/images/screen_shot_large_5.jpg
 share/doc/awstats/images/star.png
 share/doc/awstats/index.html
-share/doc/awstats/pad_awstats.htm
 share/doc/awstats/pad_awstats.xml
+share/doc/awstats/scripts/lang-apollo.js
+share/doc/awstats/scripts/lang-css.js
+share/doc/awstats/scripts/lang-hs.js
+share/doc/awstats/scripts/lang-lisp.js
+share/doc/awstats/scripts/lang-lua.js
+share/doc/awstats/scripts/lang-ml.js
+share/doc/awstats/scripts/lang-proto.js
+share/doc/awstats/scripts/lang-sql.js
+share/doc/awstats/scripts/lang-vb.js
+share/doc/awstats/scripts/lang-wiki.js
+share/doc/awstats/scripts/prettify.css
+share/doc/awstats/scripts/prettify.js
 share/doc/awstats/styles.css
 share/examples/awstats/awstats.conf
 share/examples/awstats/example.pm
