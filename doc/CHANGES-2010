@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3917 2010/11/08 22:55:59 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3918 2010/11/09 00:40:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-cite-doc to 5.3 [minskim 2010-11-08]
 	Updated sysutils/cfengine3 to 3.0.2 [pettai 2010-11-08]
 	Updated print/tex-plain to 3.141592653nb1 [minskim 2010-11-08]
+	Updated multimedia/libvdpau to 0.4.1 [wiz 2010-11-09]
