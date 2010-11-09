@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.42 2010/02/02 11:20:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.43 2010/11/09 07:14:48 adam Exp $
 
-DISTNAME=	awstats-6.95
+DISTNAME=	awstats-7.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
