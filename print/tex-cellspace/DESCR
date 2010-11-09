@@ -1,0 +1,7 @@
+It is well known that high or deep cells tend to touch the \hlines of a
+tabular. This package provides a modifier S acting on usual column types
+so that to ensure a minimal distance that can be controlled through two
+parameters \cellspacetoplimit and \cellspacebottomlimit. The approach
+employed by this package is noticeably simpler than that of tabls, which
+considers the dimensions of each entire row; whereas you can ask the
+cellspace only to look at the cells of potentially difficult columns.
