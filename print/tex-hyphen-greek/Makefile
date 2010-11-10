@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/08 16:56:08 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/10 17:55:31 minskim Exp $
 
 DISTNAME=	hyphen-greek
 PKGNAME=	tex-${DISTNAME}-5
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -17,20 +18,20 @@ TEX_HYPHEN_DEF+=	\addlanguage{monogreek}{loadhyph-el-monoton.tex}{}{1}{1}
 TEX_HYPHEN_DEF+=	\addlanguage{greek}{loadhyph-el-polyton.tex}{}{1}{1}
 TEX_HYPHEN_DEF+=	\addlanguage{polygreek}{loadhyph-el-polyton.tex}{}{1}{1}
 TEX_HYPHEN_LUA+=	['monogreek']={ \
-			\\tloader='loadhyph-el-monoton.tex', \
-			\\tlefthyphenmin=1, \
-			\\trighthyphenmin=1, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-el-monoton.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-el-monoton.tex', \
+			  lefthyphenmin=1, \
+			  righthyphenmin=1, \
+			  synonyms={}, \
+			  patterns='hyph-el-monoton.pat.txt', \
+			  hyphenation='', \
 			},
 TEX_HYPHEN_LUA+=	['greek']={ \
-			\\tloader='loadhyph-el-polyton.tex', \
-			\\tlefthyphenmin=1, \
-			\\trighthyphenmin=1, \
-			\\tsynonyms={'polygreek',}, \
-			\\tpatterns='hyph-el-polyton.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-el-polyton.tex', \
+			  lefthyphenmin=1, \
+			  righthyphenmin=1, \
+			  synonyms={'polygreek',}, \
+			  patterns='hyph-el-polyton.pat.txt', \
+			  hyphenation='', \
 			},
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 

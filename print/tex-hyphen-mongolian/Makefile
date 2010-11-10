@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/09 16:10:55 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:33 minskim Exp $
 
 DISTNAME=	hyphen-mongolian
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -15,19 +16,19 @@ TEX_HYPHEN_DAT+=	mongolianlmc loadhyph-mn-cyrl-x-lmc.tex
 TEX_HYPHEN_DEF+=	\addlanguage{mongolian}{loadhyph-mn-cyrl.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{mongolianlmc}{loadhyph-mn-cyrl-x-lmc.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['mongolian']={ \
-			\\tloader='loadhyph-mn-cyrl.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-mn-cyrl.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-mn-cyrl.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  patterns='hyph-mn-cyrl.pat.txt', \
+			  hyphenation='', \
 			},
 TEX_HYPHEN_LUA+=	['mongolianlmc']={ \
-			\\tloader='loadhyph-mn-cyrl-x-lmc.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tspecial='disabled:only+for+8bit+montex+with+lmc+encoding', \
+			  loader='loadhyph-mn-cyrl-x-lmc.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  special='disabled:only+for+8bit+montex+with+lmc+encoding', \
 			},
 
 .include "../../print/texlive/package.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 16:45:31 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:35 minskim Exp $
 
 DISTNAME=	hyphen-slovenian
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -15,12 +16,12 @@ TEX_HYPHEN_DAT+=	= slovene
 TEX_HYPHEN_DEF+=	\addlanguage{slovenian}{loadhyph-sl.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{slovene}{loadhyph-sl.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['slovenian']={ \
-			\\tloader='loadhyph-sl.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={'slovene',}, \
-			\\tpatterns='hyph-sl.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-sl.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={'slovene',}, \
+			  patterns='hyph-sl.pat.txt', \
+			  hyphenation='', \
 			},
 
 .include "../../print/texlive/package.mk"
