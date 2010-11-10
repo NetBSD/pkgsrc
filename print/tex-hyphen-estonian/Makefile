@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 16:44:29 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:30 minskim Exp $
 
 DISTNAME=	hyphen-estonian
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,12 +14,12 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 TEX_HYPHEN_DAT+=	estonian loadhyph-et.tex
 TEX_HYPHEN_DEF+=	\addlanguage{estonian}{loadhyph-et.tex}{}{2}{3}
 TEX_HYPHEN_LUA+=	['estonian']={ \
-			\\tloader='loadhyph-et.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=3, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-et.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-et.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=3, \
+			  synonyms={}, \
+			  patterns='hyph-et.pat.txt', \
+			  hyphenation='', \
 			},
 
 .include "../../print/texlive/package.mk"
