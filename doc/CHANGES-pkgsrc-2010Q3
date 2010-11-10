@@ -37,3 +37,10 @@ Pullup ticket #3265 - requested by adam
 www/webkit-gtk: security update
 Pullup ticket #3266 - requested by wiz
 lang/perl5: fix for alpha
+Pullup ticket #3267 - requested by wiz
+finance/gnucash: security fix
+Pullup ticket #3268 - requested by taca
+databases/mysql51-client: security update
+databases/mysql51-server: security update
+Pullup ticket #3269 - requested by obache
+net/proftpd: security update
