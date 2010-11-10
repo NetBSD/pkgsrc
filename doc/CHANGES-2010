@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3929 2010/11/09 19:03:32 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3930 2010/11/10 09:29:27 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5455,3 +5455,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-cellspace-doc version 1.6 [minskim 2010-11-09]
 	Updated print/tex-chemarrow to 0.9 [minskim 2010-11-09]
 	Added print/tex-chemarrow-doc version 0.9 [minskim 2010-11-09]
+	Updated comms/asterisk16 to 1.6.2.13nb2 [jnemeth 2010-11-10]
