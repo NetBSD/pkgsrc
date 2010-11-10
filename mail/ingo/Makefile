@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/07/17 18:00:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/10 12:50:20 adam Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -22,14 +22,14 @@ DOCDIR=		${PREFIX}/share/doc/ingo
 EGDIR=		${PREFIX}/share/examples/ingo
 HORDEDIR=	${PREFIX}/share/horde
 INGODIR=	${HORDEDIR}/ingo
-INGOVER=	1.2.1
+INGOVER=	1.2.5
 PAXDIRS=	lib locale po scripts templates themes
 
-MESSAGE_SUBST+=	INGODIR=${INGODIR:Q}
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=	INGODIR=${INGODIR}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR?=	httpd
-USE_PKGINSTALL=		YES
+USE_PKGINSTALL=		yes
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
@@ -40,7 +40,7 @@ SUBST_MESSAGE.files=	Fixing configuration files.
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*/bin/php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=      scripts/upgrades/convert_prefs_to_sql.php
+REPLACE_FILES.php=	scripts/upgrades/convert_prefs_to_sql.php
 
 PKG_USERS_VARS+=	APACHE_USER
 BUILD_DEFS=		APACHE_USER
@@ -76,15 +76,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DESTDIR}${DOCDIR}
-
-.	for d in ${PAXDIRS}
+.for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${DESTDIR}${INGODIR}/${d:Q}
-.	endfor
-
-.	for d in ${PAXDIRS}
+.endfor
+.for d in ${PAXDIRS}
 		cd ${WRKSRC}/${d:Q} && pax -rwpma . ${DESTDIR}${INGODIR}/${d:Q}
-.	endfor
-
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${INGODIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${INGODIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${INGODIR}
