@@ -44,3 +44,5 @@ databases/mysql51-client: security update
 databases/mysql51-server: security update
 Pullup ticket #3269 - requested by obache
 net/proftpd: security update
+Pullup ticket #3270 - requested by obache
+lang/ruby: fix build of GEM packages under Solaris
