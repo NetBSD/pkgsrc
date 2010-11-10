@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 16:45:41 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:36 minskim Exp $
 
 DISTNAME=	hyphen-ukrainian
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,12 +14,12 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 TEX_HYPHEN_DAT+=	ukrainian loadhyph-uk.tex
 TEX_HYPHEN_DEF+=	\addlanguage{ukrainian}{loadhyph-uk.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['ukrainian']={ \
-			\\tloader='loadhyph-uk.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-uk.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-uk.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  patterns='hyph-uk.pat.txt', \
+			  hyphenation='', \
 			},
 
 .include "../../print/texlive/package.mk"

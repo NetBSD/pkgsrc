@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 00:54:57 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:28 minskim Exp $
 
 DISTNAME=	hyphen-catalan
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,12 +14,12 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 TEX_HYPHEN_DAT+=	catalan loadhyph-ca.tex
 TEX_HYPHEN_DEF+=	\addlanguage{catalan}{loadhyph-ca.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['catalan']={ \
-			\\tloader='loadhyph-ca.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-ca.pat.txt', \
-			\\thyphenation='hyph-ca.hyp.txt', \
+			  loader='loadhyph-ca.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  patterns='hyph-ca.pat.txt', \
+			  hyphenation='hyph-ca.hyp.txt', \
 			},
 
 .include "../../print/texlive/package.mk"
