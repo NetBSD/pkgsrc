@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.37 2009/06/14 18:58:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.37.12.1 2010/11/10 06:11:58 spz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
 bin/gnc-fq-update
-bin/gnc-test-env
 bin/gnucash
 bin/gnucash-bin
 bin/gnucash-env
