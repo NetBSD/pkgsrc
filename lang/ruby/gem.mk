@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.1 2010/09/10 03:12:02 taca Exp $
+# $NetBSD: gem.mk,v 1.1.2.1 2010/11/10 17:11:47 tron Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -157,7 +157,7 @@ gem-extract: fake-home
 	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} \
 		${RUBYGEM} unpack ${_RUBYGEM_UNPACK_OPTION} \
 			${_DISTDIR:Q}/${_gem_:Q}
-	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} TZ= \
+	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} TZ=UTC \
 		${RUBYGEM} spec ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
 .  endfor
 .endif
