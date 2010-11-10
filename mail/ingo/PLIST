@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 20:45:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/11/10 12:50:20 adam Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -56,13 +56,15 @@ share/horde/ingo/locale/el_GR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/en_US/help.xml
 share/horde/ingo/locale/es_ES/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/es_ES/help.xml
+share/horde/ingo/locale/et_EE/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/eu_ES/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/eu_ES/help.xml
-share/horde/ingo/locale/et_EE/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/help.xml
 share/horde/ingo/locale/fr_FR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fr_FR/help.xml
+share/horde/ingo/locale/hr_HR/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/hr_HR/help.xml
 share/horde/ingo/locale/hu_HU/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/it_IT/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/ja_JP/LC_MESSAGES/ingo.mo
@@ -95,6 +97,7 @@ share/horde/ingo/po/et_EE.po
 share/horde/ingo/po/eu_ES.po
 share/horde/ingo/po/fi_FI.po
 share/horde/ingo/po/fr_FR.po
+share/horde/ingo/po/hr_HR.po
 share/horde/ingo/po/hu_HU.po
 share/horde/ingo/po/ingo.pot
 share/horde/ingo/po/it_IT.po
@@ -122,7 +125,10 @@ share/horde/ingo/scripts/ingo-postfix-policyd
 share/horde/ingo/scripts/sql/ingo.oci8.sql
 share/horde/ingo/scripts/sql/ingo.sql
 share/horde/ingo/scripts/sql/ingo.xml
+share/horde/ingo/scripts/upgrades/1.2.1_to_1.2.2.pgsql.sql
+share/horde/ingo/scripts/upgrades/1.2.1_to_1.2.2.sql
 share/horde/ingo/scripts/upgrades/1.2_to_1.2.1.sql
+share/horde/ingo/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/ingo/scripts/upgrades/convert_datatree_shares_to_sql.php
 share/horde/ingo/scripts/upgrades/convert_imp_filters.php
 share/horde/ingo/scripts/upgrades/convert_prefs_to_sql.php
