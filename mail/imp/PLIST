@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 20:45:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/11/10 12:48:31 adam Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -164,8 +164,8 @@ share/horde/imp/lib/UI/Message.php
 share/horde/imp/lib/api.php
 share/horde/imp/lib/base.php
 share/horde/imp/lib/prefs.php
-share/horde/imp/lib/tests/mime_viewer_html.phpt
 share/horde/imp/lib/tests/fixtures/maildirsize
+share/horde/imp/lib/tests/mime_viewer_html.phpt
 share/horde/imp/lib/tests/quota_maildir.phpt
 share/horde/imp/lib/version.php
 share/horde/imp/locale/ar_OM/LC_MESSAGES/imp.mo
@@ -197,6 +197,8 @@ share/horde/imp/locale/fr_FR/LC_MESSAGES/imp.mo
 share/horde/imp/locale/fr_FR/help.xml
 share/horde/imp/locale/gl_ES/LC_MESSAGES/imp.mo
 share/horde/imp/locale/he_IL/LC_MESSAGES/imp.mo
+share/horde/imp/locale/hr_HR/LC_MESSAGES/imp.mo
+share/horde/imp/locale/hr_HR/help.xml
 share/horde/imp/locale/hu_HU/LC_MESSAGES/imp.mo
 share/horde/imp/locale/hu_HU/help.xml
 share/horde/imp/locale/id_ID/LC_MESSAGES/imp.mo
@@ -260,6 +262,7 @@ share/horde/imp/po/fi_FI.po
 share/horde/imp/po/fr_FR.po
 share/horde/imp/po/gl_ES.po
 share/horde/imp/po/he_IL.po
+share/horde/imp/po/hr_HR.po
 share/horde/imp/po/hu_HU.po
 share/horde/imp/po/id_ID.po
 share/horde/imp/po/imp.pot
@@ -293,6 +296,8 @@ share/horde/imp/saveimage.php
 share/horde/imp/scripts/Imp.reg
 share/horde/imp/scripts/bounce_spam.php
 share/horde/imp/scripts/custom_login.php
+share/horde/imp/scripts/fetch.php
+share/horde/imp/scripts/sql/imp.oci8.sql
 share/horde/imp/scripts/sql/imp.sql
 share/horde/imp/scripts/sql/imp.xml
 share/horde/imp/scripts/upgrades/convert_vfolders.php
@@ -413,8 +418,8 @@ share/horde/imp/themes/graphics/mime/encryption.png
 share/horde/imp/themes/graphics/mime/html.png
 share/horde/imp/themes/graphics/mime/image.png
 share/horde/imp/themes/graphics/mime/itip.png
-share/horde/imp/themes/graphics/mime/pdf.png
 share/horde/imp/themes/graphics/mime/mail.png
+share/horde/imp/themes/graphics/mime/pdf.png
 share/horde/imp/themes/graphics/mime/text.png
 share/horde/imp/themes/graphics/mini-error.png
 share/horde/imp/themes/graphics/newmail.png
@@ -545,8 +550,8 @@ share/horde/imp/themes/tango-blue/graphics/mime/encryption.png
 share/horde/imp/themes/tango-blue/graphics/mime/html.png
 share/horde/imp/themes/tango-blue/graphics/mime/image.png
 share/horde/imp/themes/tango-blue/graphics/mime/itip.png
-share/horde/imp/themes/tango-blue/graphics/mime/pdf.png
 share/horde/imp/themes/tango-blue/graphics/mime/mail.png
+share/horde/imp/themes/tango-blue/graphics/mime/pdf.png
 share/horde/imp/themes/tango-blue/graphics/mime/text.png
 share/horde/imp/themes/tango-blue/graphics/mini-error.png
 share/horde/imp/themes/tango-blue/graphics/newmail.png
