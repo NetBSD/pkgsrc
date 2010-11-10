@@ -1,6 +1,12 @@
-# $NetBSD: Makefile.common,v 1.12 2010/11/05 14:12:11 adam Exp $
+# $NetBSD: Makefile.common,v 1.13 2010/11/10 10:40:15 adam Exp $
+#
+# used by mail/courier-imap/Makefile
+# used by mail/courier-maildir/Makefile
+# used by mail/maildrop/Makefile
+# used by mail/sqwebmail/Makefile
+# used by net/couriertcpd/Makefile
 
-COURIER_VERSION=	0.65.1
+COURIER_VERSION=	0.65.2
 LICENSE=		gnu-gpl-v3
 
 .include "../../mk/bsd.prefs.mk"
