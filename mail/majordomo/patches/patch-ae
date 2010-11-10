@@ -1,10 +1,44 @@
-$NetBSD: patch-ae,v 1.3 2010/11/09 06:40:13 spz Exp $
+$NetBSD: patch-ae,v 1.4 2010/11/10 07:51:37 spz Exp $
 
 bring up to perl 5.12 standard (this is old code)
 
 --- digest.orig	2000-01-07 11:04:34.000000000 +0000
 +++ digest
-@@ -175,12 +175,12 @@ sub send_digest {
+@@ -72,8 +72,8 @@ sub receive_message {
+ sub should_be_sent {
+     # fudge factors for headers and footers
+     $sum = 600 + length($HEADER) + length($HEADERS) + length($TRAILER);
+-    $lines = 25 + ($HEADER =~ s/\n/\n/g) + ($HEADERS =~ s/\n/\n/g) +
+-	($TRAILER =~ s/\n/\n/g);
++    $lines = 25 + ($HEADER =~ s/\n/\n/gm) + ($HEADERS =~ s/\n/\n/gm) +
++	($TRAILER =~ s/\n/\n/gm);
+     ##print "start: lines = $lines\n";
+     $i = shift;
+     while (1) {
+@@ -87,17 +87,17 @@ sub should_be_sent {
+ 
+ 	# only count From/Date/Subject header fields to get a
+ 	# more accurate size and line count.
+-	$head =~ s/\n\s+/ /g;
+-	$head =~ /^(From:\s+.*)/i    && ($sum += length($1)+1, $lines++);
+-	$head =~ /^(Subject:\s+.*)/i && ($sum += length($1)+1, $lines++);
+-	$head =~ /^(Date:\s+.*)/i    && ($sum += length($1)+1, $lines++);
++	$head =~ s/\n\s+/ /gm;
++	$head =~ /^(From:\s+.*)/im    && ($sum += length($1)+1, $lines++);
++	$head =~ /^(Subject:\s+.*)/im && ($sum += length($1)+1, $lines++);
++	$head =~ /^(Date:\s+.*)/im    && ($sum += length($1)+1, $lines++);
+ 	$sum++, $lines++;
+ 
+ 	# count the body of the message
+ 	undef $/;
+ 	$body = <COUNT>;
+ 	$sum += length($body);
+-	$lines += ($body =~ s/\n/\n/g);		# count newlines
++	$lines += ($body =~ s/\n/\n/gm);		# count newlines
+ 
+ 	$/ = "\n";
+ 	close(COUNT);
+@@ -175,35 +175,35 @@ sub send_digest {
      print STDERR "producing $V{'NAME'} V$VOLUME #$NUMBER\n";
      foreach (@files) {
  	    $message = "$V{'INCOMING'}/$_";
@@ -15,12 +49,16 @@ bring up to perl 5.12 standard (this is old code)
  
  	    $/ = '';
 -	    $head = <message>;
+-	    $head =~ s/\n\s+/ /g;
 +	    $head = <MESSAGE>;
- 	    $head =~ s/\n\s+/ /g;
++	    $head =~ s/\n\s+/ /gm;
  	    $body = "";
- 	    $subj = ($head =~ /^Subject:\s+(.*)/i)? $1: "[none]";
-@@ -188,8 +188,8 @@ sub send_digest {
- 	    ($date) = $head =~ /^Date:\s+(.*)/i;
+-	    $subj = ($head =~ /^Subject:\s+(.*)/i)? $1: "[none]";
+-	    ($from) = $head =~ /^From:\s+(.*)/i;
+-	    ($date) = $head =~ /^Date:\s+(.*)/i;
++	    $subj = ($head =~ /^Subject:\s+(.*)/im)? $1: "[none]";
++	    ($from) = $head =~ /^From:\s+(.*)/im;
++	    ($date) = $head =~ /^Date:\s+(.*)/im;
  
  	    undef $/;
 -	    $body = <message>;
@@ -30,7 +68,35 @@ bring up to perl 5.12 standard (this is old code)
  
  	    # trim message fronter and footers inserted by resend in
  	    # non digest version of list
-@@ -302,7 +302,6 @@ EOF
+ 	    if ($RMHEADER) {
+-	      $body =~ s/$RMHEADER/\n/;
++	      $body =~ s/$RMHEADER/\n/m;
+ 	    }
+ 	    if ($RMTRAILER) {
+-	      $body =~ s/$RMTRAILER/\n/;
++	      $body =~ s/$RMTRAILER/\n/m;
+ 	    }
+ 
+ 	    # escape ^From <user> <weekday> <month> <day> <hr:min:sec> ...
+ 	    $body =~
+-		s/^From (\S+\s+\w{3}\s+\w{3}\s+\d+\s+\d+:\d+:\d+)/>From $1/g;
+-	    $body =~ s/^-/- -/g; # escape encapsulation boundaries in message
++		s/^From (\S+\s+\w{3}\s+\w{3}\s+\d+\s+\d+:\d+:\d+)/>From $1/gm;
++	    $body =~ s/^-/- -/gm; # escape encapsulation boundaries in message
+ 	    # trim trailing \n's
+ 	    $len = length($body) - 1;
+ 	    $len-- while (substr($body,$len,1) eq "\n");
+@@ -291,7 +291,9 @@ EOF
+     } else {
+ 	$sender = $V{'ERRORS-TO'};
+ 	$mailcmd = eval qq/"$mailer"/;
++	print STDERR "$mailcmd $V{'REALLY-TO'} < $DIGEST\n";
+ 	system("$mailcmd $V{'REALLY-TO'} < $DIGEST");
++	chmod 0664, $DIGEST;
+ 	unlink(@processed);
+     }
+ 
+@@ -302,7 +304,6 @@ EOF
  }
  
  sub init {
@@ -38,7 +104,7 @@ bring up to perl 5.12 standard (this is old code)
  	$HOME = $ENV{"HOME"} || (getpwuid($>))[7];
  	chdir($HOME);
  	&getopt("drRmpc:Cl:z") ||
-@@ -328,6 +327,10 @@ sub readconfig {
+@@ -328,6 +329,10 @@ sub readconfig {
  
  		chdir($homedir);
  
@@ -49,25 +115,51 @@ bring up to perl 5.12 standard (this is old code)
  		$opt_l =~ tr/A-Z/a-z/;
  
  	   	require "config_parse.pl";
-@@ -360,7 +363,7 @@ $bounce_mailer = "$sendmail_command -f\$
+@@ -360,9 +365,9 @@ $bounce_mailer = "$sendmail_command -f\$
  		    &get_config($listdir, $config_opts{$opt_l,"digest_rm_fronter"});
  		    $RMHEADER = $config_opts{$config_opts{$opt_l,"digest_rm_fronter"},
  		                           "message_fronter"};
 -		    $RMHEADER =~ s/([^A-Za-z0-9 \001])/\\\1/g;
-+		    $RMHEADER =~ s/([^A-Za-z0-9 \001])/\\$1/g;
- 		    $RMHEADER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/g;
- 		    $RMHEADER =~ s/\001/\\n/g;
+-		    $RMHEADER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/g;
+-		    $RMHEADER =~ s/\001/\\n/g;
++		    $RMHEADER =~ s/([^A-Za-z0-9 \001])/\\\1/gm;
++		    $RMHEADER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/gm;
++		    $RMHEADER =~ s/\001/\\n/gm;
  		}
-@@ -371,7 +374,7 @@ $bounce_mailer = "$sendmail_command -f\$
+ 		if ($config_opts{$opt_l,"digest_rm_footer"}) {
+ 		    if ($config_opts{$opt_l,"digest_rm_footer"} ne 
+@@ -371,16 +376,16 @@ $bounce_mailer = "$sendmail_command -f\$
  		    }
  		    $RMTRAILER = $config_opts{$config_opts{$opt_l,"digest_rm_footer"},
  		                           "message_footer"};
 -		    $RMTRAILER =~ s/([^A-Za-z0-9 \001])/\\\1/g;
-+		    $RMTRAILER =~ s/([^A-Za-z0-9 \001])/\\$1/g;
- 		    $RMTRAILER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/g;
- 		    $RMTRAILER =~ s/\001/\\n/g;
+-		    $RMTRAILER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/g;
+-		    $RMTRAILER =~ s/\001/\\n/g;
++		    $RMTRAILER =~ s/([^A-Za-z0-9 \001])/\\\1/gm;
++		    $RMTRAILER =~ s/\\\$(SENDER|VERSION|LIST)/\[\^\\n\]\*/gm;
++		    $RMTRAILER =~ s/\001/\\n/gm;
  		}
-@@ -441,13 +444,13 @@ $bounce_mailer = "$sendmail_command -fma
+ 
+ 		# map config opts to internal variables and $V array
+ 		$HEADER = $config_opts{$opt_l,"message_fronter"};
+-		$HEADER =~ s/\001/\n/g;
++		$HEADER =~ s/\001/\n/gm;
+ 		$TRAILER = $config_opts{$opt_l,"message_footer"};
+-		$TRAILER =~ s/\001/\n/g;
++		$TRAILER =~ s/\001/\n/gm;
+ 		$VOLUME = $config_opts{$opt_l,"digest_volume"};
+ 		$NUMBER = $config_opts{$opt_l,"digest_issue"};
+ 		$Precedence = $config_opts{$opt_l,"precedence"};
+@@ -406,7 +411,7 @@ $bounce_mailer = "$sendmail_command -f\$
+ 			$from = $V{'FROM'};
+ 			$HEADERS = &config'substitute_values (
+ 			$config_opts{$opt_l,"message_headers"}, $opt_l);
+-			$HEADERS =~ s/\001/\n/g;
++			$HEADERS =~ s/\001/\n/gm;
+ 		}
+             } # list is defined
+ 	 } else { # not using -C 
+@@ -441,13 +446,13 @@ $bounce_mailer = "$sendmail_command -fma
  		&abort("$program_name: can't get lock '$lockfile'\n");
  	   $lock_set = 1;
  
