@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2010/06/15 23:18:13 pettai Exp $
+$NetBSD: patch-aa,v 1.11 2010/11/10 10:52:47 adam Exp $
 
---- Makefile.in.orig	Sat Sep 29 14:52:57 2007
+--- Makefile.in.orig	2010-11-07 18:41:57.000000000 +0000
 +++ Makefile.in
 @@ -283,18 +283,19 @@ EXTRA_DIST = INSTALL.html README NEWS RE
  
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.10 2010/06/15 23:18:13 pettai Exp $
  @HAVE_HTMLPAGES_TRUE@NEWS_SOURCE = html/index2.html
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
-@@ -975,6 +976,9 @@ uninstall-am: uninstall-libexecSCRIPTS u
+@@ -976,6 +977,9 @@ uninstall-am: uninstall-libexecSCRIPTS u
  sqwebmaild.dist: sqwebmail/sqwebmaild.dist
  	cp sqwebmail/sqwebmaild.dist .
  
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.10 2010/06/15 23:18:13 pettai Exp $
  pcpd: pcp/pcpd
  	cp pcp/pcpd .
  
-@@ -1010,7 +1014,7 @@ install-exec-local:
+@@ -1011,7 +1015,7 @@ install-exec-local:
  	$(mkinstalldirs) $(DESTDIR)$(cgibindir)
  	test -w $(DESTDIR)$(cgibindir) || exit 0; \
  		$(INSTALL_PROGRAM) sqwebmail/sqwebmail \
