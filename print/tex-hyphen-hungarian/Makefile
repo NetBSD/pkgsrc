@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 16:59:16 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:31 minskim Exp $
 
 DISTNAME=	hyphen-hungarian
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,12 +14,12 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 TEX_HYPHEN_DAT+=	hungarian loadhyph-hu.tex
 TEX_HYPHEN_DEF+=	\addlanguage{hungarian}{loadhyph-hu.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['hungarian']={ \
-			\\tloader='loadhyph-hu.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-hu.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-hu.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  patterns='hyph-hu.pat.txt', \
+			  hyphenation='', \
 			},
 
 .include "../../print/texlive/package.mk"

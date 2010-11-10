@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/08 00:28:46 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/10 17:55:27 minskim Exp $
 
 DISTNAME=	hyphen-ancientgreek
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -15,19 +16,19 @@ TEX_HYPHEN_DAT+=	ibycus ibyhyph.tex
 TEX_HYPHEN_DEF+=	\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
 TEX_HYPHEN_DEF+=	\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['ancientgreek']={ \
-			\\tloader='loadhyph-grc.tex', \
-			\\tlefthyphenmin=1, \
-			\\trighthyphenmin=1, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-grc.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-grc.tex', \
+			  lefthyphenmin=1, \
+			  righthyphenmin=1, \
+			  synonyms={}, \
+			  patterns='hyph-grc.pat.txt', \
+			  hyphenation='', \
 			},
 TEX_HYPHEN_LUA+=	['ibycus']={ \
-			\\tloader='ibyhyph.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tspecial='disabled:8-bit+only', \
+			  loader='ibyhyph.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  special='disabled:8-bit+only', \
 			},
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
