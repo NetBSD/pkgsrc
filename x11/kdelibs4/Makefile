@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/11/03 20:08:46 markd Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/10 10:14:42 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -20,6 +20,9 @@ CMAKE_MODULE_PATH_OVERRIDE+=	kjsembed/qtonly/CMakeLists.txt
 
 CMAKE_ARGS+=	-DKDE_DISTRIBUTION_TEXT:STRING="NetBSD pkgsrc"
 CMAKE_ARGS+=	-DWITH_Avahi:BOOL=off
+
+CMAKE_ARGS+=	-DLIBLZMA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.xz}/include
+CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.so
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/menus
 CONF_FILES+=	${PREFIX}/share/examples/kdelibs4/applications.menu \
