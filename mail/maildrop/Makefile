@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2010/11/09 10:42:01 obache Exp $
+# $NetBSD: Makefile,v 1.53 2010/11/10 10:23:38 adam Exp $
 
-DISTNAME=	maildrop-2.5.1
+DISTNAME=	maildrop-2.5.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
