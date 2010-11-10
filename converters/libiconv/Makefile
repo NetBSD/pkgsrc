@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2009/05/19 08:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2010/11/10 21:00:49 adam Exp $
 
-DISTNAME=	libiconv-1.12
-PKGREVISION=	1
+DISTNAME=	libiconv-1.13.1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=libiconv/}
 
@@ -57,7 +56,7 @@ pre-install:
 
 # be sure to install a new charset.alias
 post-install:
-	cd ${WRKSRC}/libcharset/lib && ${MAKE} libdir=${EGDIR} DESTDIR=${DESTDIR:Q} \
-		install-charset-alias
+	cd ${WRKSRC}/libcharset/lib && \
+		${MAKE} libdir=${EGDIR} DESTDIR=${DESTDIR} install-charset-alias
 
 .include "../../mk/bsd.pkg.mk"
