@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2010/10/19 09:11:39 adam Exp $
+$NetBSD: patch-ac,v 1.7 2010/11/10 20:22:54 adam Exp $
 
---- Makefile.orig	2010-09-07 16:01:49.000000000 +0000
+--- Makefile.orig	2010-11-03 20:55:35.000000000 +0000
 +++ Makefile
 @@ -89,7 +89,7 @@ lib/$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) cr $@ $^
@@ -8,7 +8,7 @@ $NetBSD: patch-ac,v 1.6 2010/10/19 09:11:39 adam Exp $
  lib/$(LIB.SHARED): $(LIB.SOBJS)
 -	$(LD) $(LDFLAGS.SO) -o $@ $^ $(LIB.LDFLAGS) $(LIB.LIBS)
 +	$(LD) $(LDFLAGS) $(LDFLAGS.SO) -o $@ $^ $(LIB.LDFLAGS) $(LIB.LIBS)
- ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
+ ifeq ($(filter-out mingw% cygwin,$(SYSTEM)),)
  else
  	$(LN) $(LIB.SHARED) lib/$(LIB.SONAME)
 @@ -97,10 +97,10 @@ else
@@ -37,7 +37,7 @@ $NetBSD: patch-ac,v 1.6 2010/10/19 09:11:39 adam Exp $
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(LIBDIR)
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(LIBDIR)/pkgconfig
  # runtime
- ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
+ ifeq ($(filter-out mingw% cygwin,$(SYSTEM)),)
  	$(STRIP) -x lib/$(LIB.SHARED)
  	$(INSTALL) -m 0644 lib/$(LIB.SHARED) $(BINDIR)/
  else
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.6 2010/10/19 09:11:39 adam Exp $
 +	$(INSTALL) -m 0644 include/GL/glew.h $(DESTDIR)$(INCDIR)/
 +	$(INSTALL) -m 0644 include/GL/glxew.h $(DESTDIR)$(INCDIR)/
 +	$(INSTALL) -m 0644 glew.pc $(DESTDIR)$(LIBDIR)/pkgconfig/
- ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
+ ifeq ($(filter-out mingw% cygwin,$(SYSTEM)),)
  	$(INSTALL) -m 0644 lib/$(LIB.DEVLNK) $(LIBDIR)/
  else
 -	$(STRIP) -x lib/$(LIB.STATIC)
