@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2007/03/20 00:44:53 wiz Exp $
+$NetBSD: patch-ae,v 1.7 2010/11/10 21:00:50 adam Exp $
 
---- libcharset/lib/Makefile.in.orig	2006-07-14 13:18:55.000000000 +0000
+--- libcharset/lib/Makefile.in.orig	2009-06-21 11:17:33.000000000 +0000
 +++ libcharset/lib/Makefile.in
 @@ -9,7 +9,7 @@ srcdir = @srcdir@
  prefix = @prefix@
@@ -32,10 +32,10 @@ $NetBSD: patch-ae,v 1.6 2007/03/20 00:44:53 wiz Exp $
  
  # The following is needed in order to install a simple file in $(libdir)
  # which is shared with other installed packages. We use a list of referencing
-@@ -96,7 +96,9 @@ install-lib : all force
- 
- install : all force
- 	$(mkinstalldirs) $(DESTDIR)$(libdir)
+@@ -108,7 +108,9 @@ install : all force
+ 	  need_charset_alias=false ; \
+ 	fi ; \
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir) ; \
 -	$(LIBTOOL_INSTALL) $(INSTALL_DATA) libcharset.la $(DESTDIR)$(libdir)/libcharset.la
 +	$(LIBTOOL_INSTALL) $(INSTALL) libcharset.la $(DESTDIR)$(libdir)/libcharset.la
 +
