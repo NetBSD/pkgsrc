@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.4 2010/06/15 23:01:23 pettai Exp $
+$NetBSD: patch-an,v 1.5 2010/11/10 10:40:16 adam Exp $
 
 --- courier/webmlmd.C.orig	Thu Jul  5 01:47:38 2007
 +++ courier/webmlmd.C
@@ -13,7 +13,7 @@ $NetBSD: patch-an,v 1.4 2010/06/15 23:01:23 pettai Exp $
 @@ -41,6 +42,39 @@
  #include	<sstream>
  #include	<map>
-
+ 
 +#if defined(__FreeBSD_version) && (__FreeBSD_version < 500029)
 +#include	<cwchar>
 +namespace std {

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2010/11/05 14:12:11 adam Exp $
+$NetBSD: distinfo,v 1.15 2010/11/10 10:40:16 adam Exp $
 
-SHA1 (courier-0.65.1.tar.bz2) = 0a844cebd37ecbd1795a23d94f792242c0e4f947
-RMD160 (courier-0.65.1.tar.bz2) = 6874ee37020b1baba5014f82c96501e539198f29
-Size (courier-0.65.1.tar.bz2) = 7108548 bytes
+SHA1 (courier-0.65.2.tar.bz2) = 784893216ea6c43c91606fa550cfdff13060855d
+RMD160 (courier-0.65.2.tar.bz2) = 6a81f74c85f9e78e6514f840598dde634fe070ce
+Size (courier-0.65.2.tar.bz2) = 7152680 bytes
 SHA1 (patch-aa) = eaf5ade8fb49254aeeb66a3dc07368d1559d62e8
 SHA1 (patch-ab) = 0152fc7e178cd6634142e05606b5cfa66bfa163d
 SHA1 (patch-ac) = 78ce4535d6a0d88d00cf0199c879786cde0eb1c1
@@ -14,6 +14,6 @@ SHA1 (patch-ah) = d3ee8e92a2927d25f77791db6468b17e6d0e0cf0
 SHA1 (patch-ai) = 1337870d95bb46882980553ffba6ec6956bc9147
 SHA1 (patch-aj) = cf666ac5c05e9fb5aef9c23d534edefa745ab547
 SHA1 (patch-al) = 1c7935b46b7affafa86e4a858ba6a79b7fbebbc5
-SHA1 (patch-an) = 972f23b312fdd2895a319f1549ba3563e92f8f3a
+SHA1 (patch-an) = 7c8693271f18b59515ff19ff6b447f2fd28416f4
 SHA1 (patch-ax) = cd7fc4f373e83c1d6777103dc075455f98d24f51
 SHA1 (patch-ay) = d4b391e76167cd27012f928587d5feb57ea1b4ff
