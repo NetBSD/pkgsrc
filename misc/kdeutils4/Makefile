@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/10/25 20:55:26 markd Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/10 10:16:59 markd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -9,6 +9,8 @@ COMMENT=	Utilities for the KDE integrated X11 desktop
 PYTHON_VERSIONS_ACCEPTED= 26 25
 #make sure cmake picks up the same Python version as pkgsrc
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=	-DLIBLZMA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.xz}/include
+CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.so
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
