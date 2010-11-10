@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 16:45:07 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:33 minskim Exp $
 
 DISTNAME=	hyphen-norwegian
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -20,20 +21,20 @@ TEX_HYPHEN_DEF+=	\addlanguage{norwegian}{loadhyph-nb.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{norsk}{loadhyph-nb.tex}{}{2}{2}
 TEX_HYPHEN_DEF+=	\addlanguage{nynorsk}{loadhyph-nn.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['bokmal']={ \
-			\\tloader='loadhyph-nb.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={'norwegian','norsk',}, \
-			\\tpatterns='hyph-nb.pat.txt', \
-			\\thyphenation='hyph-nb.hyp.txt', \
+			  loader='loadhyph-nb.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={'norwegian','norsk',}, \
+			  patterns='hyph-nb.pat.txt', \
+			  hyphenation='hyph-nb.hyp.txt', \
 			},
 TEX_HYPHEN_LUA+=	['nynorsk']={ \
-			\\tloader='loadhyph-nn.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-nn.pat.txt', \
-			\\thyphenation='hyph-nn.hyp.txt', \
+			  loader='loadhyph-nn.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  patterns='hyph-nn.pat.txt', \
+			  hyphenation='hyph-nn.hyp.txt', \
 			},
 
 .include "../../print/texlive/package.mk"

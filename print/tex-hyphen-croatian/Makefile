@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/08 16:16:30 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:29 minskim Exp $
 
 DISTNAME=	hyphen-croatian
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,12 +14,12 @@ DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 TEX_HYPHEN_DAT+=	croatian loadhyph-hr.tex
 TEX_HYPHEN_DEF+=	\addlanguage{croatian}{loadhyph-hr.tex}{}{2}{2}
 TEX_HYPHEN_LUA+=	['croatian']={ \
-			\\tloader='loadhyph-hr.tex', \
-			\\tlefthyphenmin=2, \
-			\\trighthyphenmin=2, \
-			\\tsynonyms={}, \
-			\\tpatterns='hyph-hr.pat.txt', \
-			\\thyphenation='', \
+			  loader='loadhyph-hr.tex', \
+			  lefthyphenmin=2, \
+			  righthyphenmin=2, \
+			  synonyms={}, \
+			  patterns='hyph-hr.pat.txt', \
+			  hyphenation='', \
 			},
 
 .include "../../print/texlive/package.mk"
