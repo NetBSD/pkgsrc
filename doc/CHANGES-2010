@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3930 2010/11/10 09:29:27 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.3931 2010/11/10 10:52:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5456,3 +5456,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-chemarrow to 0.9 [minskim 2010-11-09]
 	Added print/tex-chemarrow-doc version 0.9 [minskim 2010-11-09]
 	Updated comms/asterisk16 to 1.6.2.13nb2 [jnemeth 2010-11-10]
+	Updated mail/courier-maildir to 0.65.2 [adam 2010-11-10]
+	Updated net/couriertcpd to 0.65.2 [adam 2010-11-10]
+	Updated mail/courier-mta to 0.65.2 [adam 2010-11-10]
+	Updated mail/maildrop to 2.5.2 [adam 2010-11-10]
+	Updated mail/courier-imap to 4.8.2 [adam 2010-11-10]
+	Updated mail/sqwebmail to 5.4.3 [adam 2010-11-10]
