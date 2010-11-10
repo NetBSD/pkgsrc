@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/10/19 09:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/10 20:22:54 adam Exp $
 
-DISTNAME=	glew-1.5.6
+DISTNAME=	glew-1.5.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glew/}
 EXTRACT_SUFX=	.tgz
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://glew.sourceforge.net/
 COMMENT=	OpenGL Extension Wrangler Library
+LICENSE=	modified-bsd AND mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
