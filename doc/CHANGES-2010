@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3934 2010/11/10 21:02:27 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3935 2010/11/10 21:47:39 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5509,3 +5509,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-welsh to 2010nb1 [minskim 2010-11-10]
 	Updated graphics/glew to 1.5.7 [adam 2010-11-10]
 	Updated converters/libiconv to 1.3.1 [adam 2010-11-10]
+	Updated lang/vala to 0.10.1nb1 [gls 2010-11-10]
