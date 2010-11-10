@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.144 2010/09/14 11:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.144.2.1 2010/11/10 06:11:58 spz Exp $
 #
 
 DISTNAME=		gnucash-2.2.9
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -45,6 +45,9 @@ GCONF_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
 #GCONF_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
 GCONF_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
 
+post-install:
+	rm ${DESTDIR}${PREFIX}/bin/gnc-test-env
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -66,6 +69,7 @@ BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.10.0
 .include "../../print/libgnomeprint/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.10.0
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.3
 .include "../../www/gtkhtml314/buildlink3.mk"
