@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2008/04/10 20:56:33 jlam Exp $
+# $NetBSD: options.mk,v 1.13 2010/11/10 10:37:48 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -109,7 +109,7 @@ CONFIGURE_ARGS+=	--without-authmysql
 #
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-authpgsql
-CONFIGURE_ENV+=		PGSQL_LIBS="${BUILDLINK_LDADD.${PGSQL_TYPE}}"
+CONFIGURE_ENV+=		PGSQL_LIBS=${BUILDLINK_LDADD.${PGSQL_TYPE}:Q}
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthpgsql.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authpgsqlrc.dist
 AUTHLIB_PLIST+=		${AUTHDOCDIR}/README.authpostgres.html
