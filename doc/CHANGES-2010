@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3931 2010/11/10 10:52:59 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3932 2010/11/10 12:52:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5462,3 +5462,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/maildrop to 2.5.2 [adam 2010-11-10]
 	Updated mail/courier-imap to 4.8.2 [adam 2010-11-10]
 	Updated mail/sqwebmail to 5.4.3 [adam 2010-11-10]
+	Updated www/horde to 3.3.10 [adam 2010-11-10]
+	Updated mail/imp to 4.3.9 [adam 2010-11-10]
+	Updated mail/ingo to 1.2.5 [adam 2010-11-10]
