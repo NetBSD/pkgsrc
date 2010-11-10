@@ -1,4 +1,4 @@
-# $NetBSD: hyphen-install.tmpl,v 1.3 2010/11/08 00:25:02 minskim Exp $
+# $NetBSD: hyphen-install.tmpl,v 1.4 2010/11/10 17:55:27 minskim Exp $
 #
 # Install hyphenation patterns.
 #
@@ -46,7 +46,7 @@ BEGIN { f=\"${LANGUAGE_LUA}.tmp\"; } \
 	set -- dummy $hyphen_lua; shift;
 	${ECHO} "--- BEGIN @PKGBASE@" >> ${LANGUAGE_LUA}.tmp
 	for line in $hyphen_lua ; do
-	    ${ECHO} "\t${line}" | ${SED} -e 's/+/ /g' >> ${LANGUAGE_LUA}.tmp
+	    ${ECHO} "${line}" | ${SED} -e 'y/+/ /' -e 's/^\([a-z]\)/	\1/' -e 's/^/	/' >> ${LANGUAGE_LUA}.tmp
 	done
 	${ECHO} "--- END @PKGBASE@" >> ${LANGUAGE_LUA}.tmp
 	${CAT} ${LANGUAGE_LUA}.post >> ${LANGUAGE_LUA}.tmp
