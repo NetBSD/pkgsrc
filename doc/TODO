@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9850 2010/11/09 13:15:17 adam Exp $
+$NetBSD: TODO,v 1.9851 2010/11/10 12:52:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -792,7 +792,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-7.3
 	o highlight-3.1
 	o honeyd-1.5c
-	o horde-3.3.10
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -813,8 +812,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ilmbase-1.0.2
 	o imake-1.0.4
 	o imapsync-1.350
-	o imp-4.3.9
-	o ingo-1.2.5
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
