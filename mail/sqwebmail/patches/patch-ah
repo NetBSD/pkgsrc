@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.7 2010/06/15 23:18:13 pettai Exp $
+$NetBSD: patch-ah,v 1.8 2010/11/10 10:52:47 adam Exp $
 
---- sqwebmail/configure.orig	Sat Sep 29 14:53:22 2007
+--- sqwebmail/configure.orig	2010-11-07 18:42:06.000000000 +0000
 +++ sqwebmail/configure
-@@ -12502,7 +12502,7 @@ fi
+@@ -11712,7 +11712,7 @@ fi
  
  
  
