@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2009/07/17 18:00:16 adrianp Exp $
+# $NetBSD: Makefile,v 1.55 2010/11/10 12:48:31 adam Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -26,15 +26,15 @@ DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
-IMPVER=		4.3.4
+IMPVER=		4.3.9
 PAXDIRS=	lib locale po scripts templates themes js
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 PKG_USERS_VARS+=	APACHE_USER
 BUILD_DEFS+=		APACHE_USER
 
-MESSAGE_SUBST+=	IMPDIR=${IMPDIR:Q}
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR?=	httpd
 
@@ -94,15 +94,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${DOCDIR}
-
-.	for d in ${PAXDIRS}
+.for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${DESTDIR}${IMPDIR}/${d}
-.	endfor
-
-.	for d in ${PAXDIRS}
+.endfor
+.for d in ${PAXDIRS}
 		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${IMPDIR}/${d}
-.	endfor
-
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${IMPDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${IMPDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${IMPDIR}
