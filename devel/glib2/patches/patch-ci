@@ -1,0 +1,16 @@
+$NetBSD: patch-ci,v 1.1 2010/11/10 20:51:46 tez Exp $
+
+needed for calls to major() & minor()
+
+--- gio/gdbusmessage.c.orig	2010-11-10 14:02:41.786659900 -0600
++++ gio/gdbusmessage.c	2010-11-10 14:03:53.567042800 -0600
+@@ -49,6 +49,9 @@
+ 
+ #ifdef G_OS_UNIX
+ #include "gunixfdlist.h"
++#ifdef __sun
++#include <sys/mkdev.h>
++#endif
+ #endif
+ 
+ #include "glibintl.h"
