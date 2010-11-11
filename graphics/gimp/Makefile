@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2010/10/25 19:06:10 adam Exp $
+# $NetBSD: Makefile,v 1.199 2010/11/11 11:40:54 adam Exp $
 
 DISTNAME=	gimp-2.6.11
 PKGREVISION=	1
@@ -77,7 +77,7 @@ PLIST.remote=	yes
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-.endif
 .include "../../x11/libXpm/buildlink3.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
