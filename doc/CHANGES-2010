@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3942 2010/11/11 18:30:57 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3943 2010/11/11 20:55:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5519,3 +5519,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-xunicode-doc to 0.95 [minskim 2010-11-11]
 	Updated multimedia/libogg to 1.2.1nb1 [tron 2010-11-11]
 	Updated fonts/tex-glyphlist to 2.84 [minskim 2010-11-11]
+	Updated converters/wv to 1.2.9 [adam 2010-11-11]
