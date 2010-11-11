@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2010/10/25 19:06:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2010/11/11 11:40:54 adam Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -310,7 +310,7 @@ lib/gimp/2.0/plug-ins/file-uri
 lib/gimp/2.0/plug-ins/file-wmf
 lib/gimp/2.0/plug-ins/file-xbm
 lib/gimp/2.0/plug-ins/file-xjt
-lib/gimp/2.0/plug-ins/file-xpm
+${PLIST.remote}lib/gimp/2.0/plug-ins/file-xpm
 lib/gimp/2.0/plug-ins/file-xwd
 lib/gimp/2.0/plug-ins/film
 lib/gimp/2.0/plug-ins/filter-pack
