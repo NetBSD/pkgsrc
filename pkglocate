@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-#	$NetBSD: pkglocate,v 1.9 2004/07/04 16:12:10 jschauma Exp $
+#	$NetBSD: pkglocate,v 1.10 2010/11/11 19:56:34 agc Exp $
 #
 #-
 # Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -74,7 +74,18 @@ if [ "$verbose" = "yes" ]; then
 	echo "===> Using $grepname to find matches"
 fi
 
+# do we need to show the help message?
+showhelp=false
+case "$1" in
+--help)
+	showhelp=true
+	;;
+esac
 if [ $# -lt 1 ]; then
+	showhelp=true
+fi
+
+if $showhelp; then
 	echo "Usage: pkglocate [-i] [-f] [-p] [-v] word"
 	echo "       [-i] ignore case when searching"
 	echo "       [-f] look for a file, rather than a word or phrase"
