@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2009/11/25 19:08:18 adam Exp $
+$NetBSD: patch-aa,v 1.7 2010/11/11 08:34:02 adam Exp $
 
---- Modules/Platform/UnixPaths.cmake.orig	2009-11-13 19:32:53.000000000 +0100
+--- Modules/Platform/UnixPaths.cmake.orig	2010-11-03 19:58:27.000000000 +0000
 +++ Modules/Platform/UnixPaths.cmake
 @@ -48,7 +48,7 @@ LIST(APPEND CMAKE_SYSTEM_INCLUDE_PATH
    /usr/include/w32api
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.6 2009/11/25 19:08:18 adam Exp $
 +  @X11BASE@/include /usr/X11R6/include /usr/include/X11
  
    # Other
-   /opt/local/include /usr/pkg/include
+   /usr/pkg/include
 @@ -61,7 +61,7 @@ LIST(APPEND CMAKE_SYSTEM_LIBRARY_PATH
    /usr/lib/w32api
  
@@ -19,4 +19,4 @@ $NetBSD: patch-aa,v 1.6 2009/11/25 19:08:18 adam Exp $
 +  @X11BASE@/lib /usr/X11R6/lib /usr/lib/X11
  
    # Other
-   /opt/local/lib /usr/pkg/lib
+   /usr/pkg/lib
