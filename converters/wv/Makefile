@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2010/06/13 22:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2010/11/11 20:54:39 adam Exp $
 
-DISTNAME=	wv-1.2.5
-PKGREVISION=	3
+DISTNAME=	wv-1.2.9
 CATEGORIES=	converters
-MASTER_SITES=	http://www.abiword.com/downloads/wv/1.2.5/
+MASTER_SITES=	http://www.abiword.com/downloads/wv/${PKGVERSION_NOREV}/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://wvware.sourceforge.net/
@@ -15,11 +14,11 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libwmf=${BUILDLINK_PREFIX.libwmf}
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.libiconv}
+CONFIGURE_ARGS+=	--with-libwmf=${BUILDLINK_PREFIX.libwmf}
 CONFIGURE_ARGS+=	--with-libxml2=${BUILDLINK_PREFIX.libxml2}
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 PKGCONFIG_OVERRIDE+=	wv-1.0.pc.in
 
