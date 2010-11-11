@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2010/06/13 22:44:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2010/11/11 11:38:36 adam Exp $
 
 BUILDLINK_TREE+=	libwmf
 
@@ -9,7 +9,6 @@ BUILDLINK_API_DEPENDS.libwmf+=	libwmf>=0.2.8nb2
 BUILDLINK_ABI_DEPENDS.libwmf+=	libwmf>=0.2.8.4nb7
 BUILDLINK_PKGSRCDIR.libwmf?=	../../graphics/libwmf
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
