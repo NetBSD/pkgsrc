@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3936 2010/11/10 22:46:51 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3937 2010/11/11 10:39:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5512,3 +5512,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/vala to 0.10.1nb1 [gls 2010-11-10]
 	Updated print/tex-mhchem to 3.08 [minskim 2010-11-10]
 	Updated print/tex-mhchem-doc to 3.08 [minskim 2010-11-10]
+	Updated devel/cmake to 2.8.3 [adam 2010-11-11]
