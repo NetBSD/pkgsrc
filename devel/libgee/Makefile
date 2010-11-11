@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/11/07 09:32:07 gls Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/11 23:05:17 gls Exp $
 #
 
 DISTNAME=	libgee-0.6.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/0.5/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/0.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config gmake
+BUILD_DEPENDS+=	vala-[0-9]*:../../lang/vala
 
 PKGCONFIG_OVERRIDE+=	gee-1.0.pc.in
 
