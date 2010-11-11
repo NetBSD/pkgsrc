@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/10/19 08:15:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/11/11 08:34:01 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -71,6 +71,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeJavaInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeMSYSFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeMinGWFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeNMakeFindMake.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeParseArguments.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeParseImplicitLinkInfo.cmake
 share/cmake-${CMAKE_API}/Modules/CMakePlatformId.h.in
 share/cmake-${CMAKE_API}/Modules/CMakePrintSystemInformation.cmake
@@ -238,6 +239,7 @@ share/cmake-${CMAKE_API}/Modules/FindKDE3.cmake
 share/cmake-${CMAKE_API}/Modules/FindKDE4.cmake
 share/cmake-${CMAKE_API}/Modules/FindLAPACK.cmake
 share/cmake-${CMAKE_API}/Modules/FindLATEX.cmake
+share/cmake-${CMAKE_API}/Modules/FindLibArchive.cmake
 share/cmake-${CMAKE_API}/Modules/FindLibXml2.cmake
 share/cmake-${CMAKE_API}/Modules/FindLibXslt.cmake
 share/cmake-${CMAKE_API}/Modules/FindLua50.cmake
@@ -263,6 +265,7 @@ share/cmake-${CMAKE_API}/Modules/FindPerlLibs.cmake
 share/cmake-${CMAKE_API}/Modules/FindPhysFS.cmake
 share/cmake-${CMAKE_API}/Modules/FindPike.cmake
 share/cmake-${CMAKE_API}/Modules/FindPkgConfig.cmake
+share/cmake-${CMAKE_API}/Modules/FindPostgreSQL.cmake
 share/cmake-${CMAKE_API}/Modules/FindProducer.cmake
 share/cmake-${CMAKE_API}/Modules/FindProtobuf.cmake
 share/cmake-${CMAKE_API}/Modules/FindPythonInterp.cmake
@@ -358,6 +361,21 @@ share/cmake-${CMAKE_API}/Modules/Platform/AIX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/BSDOS.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/BeOS.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneL.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-base.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-dynamic-GNU-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-dynamic-GNU-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-dynamic-GNU-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-dynamic-XL-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-dynamic-XL-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-dynamic-XL-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-dynamic.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-static-GNU-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-static-GNU-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-static-GNU-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-static-XL-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-static-XL-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-static-XL-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/BlueGeneP-static.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU-Fortran.cmake
