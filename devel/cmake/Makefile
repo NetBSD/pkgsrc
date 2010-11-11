@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2010/10/19 08:15:01 adam Exp $
+# $NetBSD: Makefile,v 1.53 2010/11/11 08:34:01 adam Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.2
+DISTNAME=	cmake-${CMAKE_API}.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
@@ -16,13 +16,15 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 # wants wsyncup and wcursyncup
 USE_NCURSES=		yes
-GNU_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	bootstrap
 
 BUILD_TARGET=		default_target
 
 CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--system-libs
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,20 +42,21 @@ UNLIMIT_RESOURCES=	datasize
 TEST_TARGET=		test
 
 SUBST_CLASSES+=		cmake
-SUBST_STAGE.cmake=	post-patch
+SUBST_STAGE.cmake=	pre-configure
 SUBST_MESSAGE.cmake=	Fixing X11 prefix.
 SUBST_FILES.cmake=	Modules/Platform/UnixPaths.cmake
 SUBST_VARS.cmake=	X11BASE
 
 SUBST_CLASSES+=		flags
-SUBST_STAGE.flags=	post-patch
+SUBST_STAGE.flags=	pre-configure
 SUBST_MESSAGE.flags=	Fixing compiler flags.
 SUBST_FILES.flags=	Modules/Compiler/*.cmake
 SUBST_SED.flags=	-e 's,-O.,,'
 
-post-patch:
+pre-configure:
 	${RM} ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
