@@ -1,4 +1,4 @@
-The package provides access to latin accents and many other characters
-in the Unicode lower plane.  This package is designed to work with TeX
-engines that directly process UTF8 input and use Unicode and OpenType
-fonts.
+The package supports XeTeX' (and other putative future similar engines')
+need for Unicode characters, in a similar way to what the fontenc does
+for 8-bit (and the like) fonts: convert accent-glyph sequence to a
+single character in the output encoding.
