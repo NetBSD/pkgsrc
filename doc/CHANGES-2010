@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3939 2010/11/11 13:07:55 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3940 2010/11/11 18:15:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5515,3 +5515,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/cmake to 2.8.3 [adam 2010-11-11]
 	Updated graphics/libwmf to 0.2.8.4nb8 [adam 2010-11-11]
 	Updated pkgtools/rpm2pkg to 3.1.6 [tron 2010-11-11]
+	Updated print/tex-xunicode to 0.95 [minskim 2010-11-11]
+	Updated print/tex-xunicode-doc to 0.95 [minskim 2010-11-11]
