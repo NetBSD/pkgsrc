@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/09/07 16:50:58 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/11 21:07:13 jdolecek Exp $
 #
 
 VERS=			1.7.2
 DISTNAME=		pysvn-${VERS}
 PKGNAME=		${PYPKGPREFIX}-pysvn-${VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://pysvn.barrys-emacs.org/source_kits/
 
@@ -18,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++
+USE_TOOLS=		gmake
 
 PSVNSRC=			Source
 PYSETUP=		setup.py
@@ -34,7 +35,8 @@ do-configure:
 	cd ${WRKSRC}/${PSVNSRC} && ${PYTHONBIN} ${PYSETUP} backport
 .endif
 	cd ${WRKSRC}/${PSVNSRC} && \
-	${PYTHONBIN} ${PYSETUP} configure --fixed-module-name
+	${PYTHONBIN} ${PYSETUP} configure --fixed-module-name \
+		--svn-root-dir=${BUILDLINK_PREFIX.subversion-base}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/pysvn
