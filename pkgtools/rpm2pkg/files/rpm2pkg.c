@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.17 2010/09/08 22:41:39 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.18 2010/11/11 13:07:34 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
@@ -944,7 +944,8 @@ main(int argc, char **argv)
 				}
 			}
 
-			if ((Name = StripPrefix(Name, StripCount)) == NULL) {
+			if (Fields[CPIO_HDR_MODE] != 0 &&
+			    (Name = StripPrefix(Name, StripCount)) == NULL) {
 				(void)fprintf(stderr,
 					    "%s: Leading path to strip too "
 					    "big (-s %d)\n", 
