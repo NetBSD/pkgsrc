@@ -28,6 +28,8 @@ PATH=$PATH:/bin:/usr/bin:@PREFIX@/bin
 #
 #		-arch		Compile for the specified architecture (Darwin)
 #
+#		-isysroot	Change root directory for headers and libraries
+#
 #		-c		Do not call linker, leave relocatables in *.o.
 #
 #		-C		Check that subscripts are in bounds.
@@ -294,7 +296,11 @@ do
 		shift 2;
 		;;
 
-	-arch)	CFLAGS="$CFLAGS -arch $2"
+	-arch)	CFLAGS="$CFLAGS $1 $2"
+		shift 2
+		;;
+
+	-isysroot) CFLAGS="$CFLAGS $1 $(shell_quote "$2")"
 		shift 2
 		;;
 
