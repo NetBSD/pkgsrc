@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3949 2010/11/12 18:17:47 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.3950 2010/11/12 18:22:27 jym Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5527,3 +5527,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pgf to 2.10 [minskim 2010-11-12]
 	Updated print/tex-pgf-doc to 2.10 [minskim 2010-11-12]
 	Updated www/ikiwiki to 3.20101112 [schmonz 2010-11-12]
+	Updated devel/php-libawl to 0.45 [jym 2010-11-12]
