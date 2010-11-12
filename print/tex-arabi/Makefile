@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/11 06:55:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/12 16:57:12 minskim Exp $
 
 DISTNAME=	arabi
 PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	15878
+PKGREVISION=	1
+TEXLIVE_REV=	20072
 
 MAINTAINER=	kamelderouiche@yahoo.com
 COMMENT=	(La)TeX support for Arabic and Farsi, compliant with Babel
