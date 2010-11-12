@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3948 2010/11/12 17:22:47 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3949 2010/11/12 18:17:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-arabi to 1.1nb1 [minskim 2010-11-12]
 	Updated print/tex-pgf to 2.10 [minskim 2010-11-12]
 	Updated print/tex-pgf-doc to 2.10 [minskim 2010-11-12]
+	Updated www/ikiwiki to 3.20101112 [schmonz 2010-11-12]
