@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3946 2010/11/12 09:00:11 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.3947 2010/11/12 16:57:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5523,3 +5523,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/cyrus-imapd24 to 2.4.4 [obache 2010-11-12]
 	Updated print/cups to 1.4.3nb10 [sbd 2010-11-12]
 	Updated print/cups to 1.4.4 [sbd 2010-11-12]
+	Updated print/tex-arabi to 1.1nb1 [minskim 2010-11-12]
