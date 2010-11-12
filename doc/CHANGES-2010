@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3945 2010/11/12 08:25:28 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.3946 2010/11/12 09:00:11 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5522,3 +5522,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/wv to 1.2.9 [adam 2010-11-11]
 	Updated mail/cyrus-imapd24 to 2.4.4 [obache 2010-11-12]
 	Updated print/cups to 1.4.3nb10 [sbd 2010-11-12]
+	Updated print/cups to 1.4.4 [sbd 2010-11-12]
