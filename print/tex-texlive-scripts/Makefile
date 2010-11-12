@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/09/22 03:00:19 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/12 16:47:39 minskim Exp $
 
 DISTNAME=	texlive-scripts
 PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	19817
+TEXLIVE_REV=	20268
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX Live infrastructure programs
