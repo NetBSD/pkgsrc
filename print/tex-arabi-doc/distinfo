@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/11 06:56:02 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/11/12 16:57:13 minskim Exp $
 
-SHA1 (tex-arabi-15878/arabi.doc.tar.xz) = bf3d2209118d99edbdc200ecace0eb2735f34ee1
-RMD160 (tex-arabi-15878/arabi.doc.tar.xz) = fdd3afdbe74924a29569c6a8f745d6d64e03749e
-Size (tex-arabi-15878/arabi.doc.tar.xz) = 1967352 bytes
+SHA1 (tex-arabi-20072/arabi.doc.tar.xz) = ef34089fc5ba8763b3ac426c0b6e601c5083843c
+RMD160 (tex-arabi-20072/arabi.doc.tar.xz) = 4f1ae6ec07f390e60f44a216a0449f60ef6bde3c
+Size (tex-arabi-20072/arabi.doc.tar.xz) = 1967348 bytes
