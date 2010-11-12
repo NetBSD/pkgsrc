@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.26 2010/05/21 10:05:20 sbd Exp $
+$NetBSD: patch-ae,v 1.27 2010/11/12 08:54:58 sbd Exp $
 
 For proper libtool usage split CC into CC_COMPILE and CC with libtool
 mode options compile/link respectively.
 
 Same for CXX.
 
---- Makedefs.in.orig	2009-05-26 23:27:06.000000000 +0000
+--- Makedefs.in.orig	2010-04-23 18:56:34.000000000 +0000
 +++ Makedefs.in
 @@ -19,9 +19,11 @@
  
@@ -39,8 +39,8 @@ Same for CXX.
  
  .c.o:
  	echo Compiling $<...
--	$(CC) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c $<
-+	$(CC_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c $<
+-	$(CC) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
++	$(CC_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
  
  .c.32.o:
  	echo Compiling 32-bit $<...
@@ -54,8 +54,8 @@ Same for CXX.
  
  .cxx.o:
  	echo Compiling $<...
--	$(CXX) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c $<
-+	$(CXX_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c $<
+-	$(CXX) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c -o $@ $<
++	$(CXX_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c -o $@ $<
  
  .man.1 .man.1m .man.3 .man.5 .man.7 .man.8:
  	echo Linking $<...
