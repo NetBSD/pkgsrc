@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/06/02 23:27:56 jym Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/12 19:13:53 jym Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=0.9.9
+DAVICAL_VERSION=0.9.9.2
 CATEGORIES=	www
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
 
@@ -32,9 +32,10 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}/config
 
 .include "../../lang/php/phpversion.mk"
 
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.42:../../devel/php-libawl
+DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.45:../../devel/php-libawl
 DEPENDS+=	p5-DBD-postgresql>=2.16.1:../../databases/p5-DBD-postgresql
 DEPENDS+=	p5-Class-DBI-Pg>=0.09:../../databases/p5-Class-DBI-Pg
 DEPENDS+=	p5-YAML>=0.71:../../textproc/p5-YAML
@@ -116,9 +117,6 @@ do-install:
 
 .	for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${DESTDIR}${DAVICALDIR}/${d}
-.	endfor
-
-.	for d in ${PAXDIRS}
 		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${DAVICALDIR}/${d}
 .	endfor
 
