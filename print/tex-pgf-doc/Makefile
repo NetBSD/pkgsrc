@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/10 16:18:21 minskim Exp $
-# TeX Live Revision 15878
+# $NetBSD: Makefile,v 1.2 2010/11/12 17:22:22 minskim Exp $
 
 DISTNAME=	pgf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.00
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.10
+TEXLIVE_REV=	20236
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pgf
