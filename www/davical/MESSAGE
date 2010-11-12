@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2010/06/02 23:27:56 jym Exp $
+$NetBSD: MESSAGE,v 1.3 2010/11/12 19:13:53 jym Exp $
 
 For pkgsrc installations, DAViCal's package is installed in non-default
 locations:
@@ -49,7 +49,9 @@ To complete the installation of DAViCal, follow these steps:
 
 	Include ${PKG_SYSCONFDIR}/davical.conf
 
-   then restart Apache.
+   then restart Apache. Note that Davical requires the following PHP
+   extensions to be loaded: pdo.so, pdo_pgsql.so, pgsql.so, iconv.so and
+   gettext.so.
 
 5. You should now be able to access DAViCal through the URL configured
    at step 4. At login page, enter the following credentials:
