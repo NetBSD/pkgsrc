@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3963 2010/11/13 16:49:00 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3964 2010/11/13 17:07:11 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5544,3 +5544,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pkg_comp to 1.35 [jmmv 2010-11-13]
 	Updated print/tex-amsrefs to 2.09 [minskim 2010-11-13]
 	Updated print/tex-amsrefs-doc to 2.09 [minskim 2010-11-13]
+	Updated print/ghostscript to 8.71nb5 [bouyer 2010-11-13]
+	Updated net/p5-Net-SNMP to 5.2.0nb3 [bouyer 2010-11-13]
