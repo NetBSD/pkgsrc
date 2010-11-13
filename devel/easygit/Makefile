@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/21 09:11:14 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/13 21:08:55 shattered Exp $
 
 DISTNAME=		easygit-1.6.5.3
 CATEGORIES=		devel
@@ -7,7 +7,7 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		eg
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://people.gnome.org/~newren/eg
+HOMEPAGE=		http://people.gnome.org/~newren/eg/
 COMMENT=		Git porcelain wrapper in Perl
 
 LICENSE=		gnu-gpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2010/11/04 12:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2010/11/13 21:09:00 shattered Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 VLC_VERSION=		1.0.6
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://videolan.org/
+HOMEPAGE=		http://www.videolan.org/
 COMMENT=		VLC media player and streaming server
 LICENSE=		gnu-gpl-v2
 
@@ -40,7 +40,7 @@ PLIST.cdda=		yes
 BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
-CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
+CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch [1.2 in pkgsrc]
 CONFIGURE_ARGS+=	--disable-smb
 
 CONFIGURE_ARGS+=	--enable-cddax \

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:35 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/11/13 21:08:59 shattered Exp $
 
 DISTNAME=	proxsmtp-1.0
 PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://memberwebs.com/nielsen/software/proxsmtp/
+MASTER_SITES=	http://memberwebs.com/stef/software/proxsmtp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://memberwebs.com/nielsen/software/proxsmtp/
+HOMEPAGE=	http://memberwebs.com/stef/software/proxsmtp/
 COMMENT=	SMTP proxy content filter
 
 PKG_DESTDIR_SUPPORT=	user-destdir

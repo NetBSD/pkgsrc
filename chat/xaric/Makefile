@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/01/29 16:08:17 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/13 21:08:54 shattered Exp $
 #
 
 DISTNAME=	xaric-0.12.1
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://rexfeany.com/software/xaric/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rf.cx/software/xaric/
+HOMEPAGE=	http://rexfeany.com/software/xaric/
 COMMENT=	IRC client similar to BitchX and ircII
 
 PKG_DESTDIR_SUPPORT=	user-destdir

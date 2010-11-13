@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2010/04/17 15:48:22 zafer Exp $
+# $NetBSD: Makefile.common,v 1.8 2010/11/13 21:08:54 shattered Exp $
 #
 # used by comms/gammu/Makefile
 # used by comms/py-gammu/Makefile
@@ -10,5 +10,5 @@ MASTER_SITES=	http://dl.cihar.com/gammu/releases/ \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cihar.com/gammu/
+HOMEPAGE=	http://wammu.eu/gammu/
 LICENSE=	gnu-gpl-v2

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2009/10/18 20:18:54 zafer Exp $
+# $NetBSD: Makefile,v 1.35 2010/11/13 21:09:02 shattered Exp $
 
 DISTNAME=	gated-3-5-11
 PKGNAME=	gated-3.5.11
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://www.nic.funet.fi/pub/unix/tcpip/gated/
+MASTER_SITES=	http://www.funet.fi/pub/unix/tcpip/gated/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gated.org/
