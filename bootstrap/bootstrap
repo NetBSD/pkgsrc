@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.159 2010/08/30 06:21:49 obache Exp $
+# $NetBSD: bootstrap,v 1.160 2010/11/13 21:43:39 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -334,6 +334,15 @@ checkarg_sane_relative_path() {
 
 bootstrap_sh=${SH-/bin/sh}
 bootstrap_sh_set=${SH+set}
+
+case "$bootstrap_sh" in
+/*)
+	;;
+*)
+	echo "ERROR: The variable SH must contain an absolute path" 1>&2 
+	exit 1
+	;;
+esac
 
 # On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
 # whose echo(1) is not BSD-compatible.
