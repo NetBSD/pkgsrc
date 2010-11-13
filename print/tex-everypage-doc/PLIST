@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/13 03:17:17 minskim Exp $
+share/texmf-dist/doc/latex/everypage/README
+share/texmf-dist/doc/latex/everypage/everypage.pdf
