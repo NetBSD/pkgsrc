@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9855 2010/11/12 23:55:40 jym Exp $
+$NetBSD: TODO,v 1.9856 2010/11/13 00:34:54 jym Exp $
 
 Suggested new packages
 ======================
@@ -504,7 +504,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.3.10
 	o darcs-2.4
 	o dasher-4.11
-	o davical-0.9.9.3
 	o dbench-4.0
 	o dbus-1.2.24 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbus-1.4.0
