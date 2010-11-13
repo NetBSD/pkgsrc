@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2010/10/25 07:44:32 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2010/11/13 21:54:13 joerg Exp $
 
 DISTNAME=	sqlite-amalgamation-3.7.3
 PKGNAME=	${DISTNAME:S/sqlite-amalgamation/sqlite3/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
 		http://www.sqlite.org/
@@ -23,6 +24,10 @@ PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
+
+# In the past, Linux had database corruption issues with pread, so
+# only enable it on safe platforms.
+CFLAGS.NetBSD+=		-DUSE_PREAD
 
 # Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
