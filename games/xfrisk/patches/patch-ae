@@ -1,0 +1,26 @@
+$NetBSD: patch-ae,v 1.1 2010/11/13 00:08:56 dholland Exp $
+
+Fix crash on 64-bit platforms. (Pixel is an X typedef for "long".)
+
+--- registerPlayers.c~	2000-01-10 22:47:41.000000000 +0000
++++ registerPlayers.c
+@@ -73,8 +73,8 @@ static XtActionsRec actionTable[] =
+   { NULL, NULL }
+ };
+ 
+-static Int32  piPositionToPlayer[MAX_PLAYERS];
+-static Int32  iSelectColor, iUnselectColor;
++static Pixel  piPositionToPlayer[MAX_PLAYERS];
++static Pixel  iSelectColor, iUnselectColor;
+ static Cursor normalCursor, handCursor;
+ 
+ static Widget wRegisterShell, wRegisterForm, wPlayerViewport, wPlayerForm;
+@@ -645,7 +645,7 @@ void REG_RenderSlot(Int32 iSlot, Int32 i
+  ************************************************************************/
+ Flag REG_IsSelected(Int32 iSlot)
+ {
+-  Int32 iBorderColor;
++  Pixel iBorderColor;
+ 
+   /* If out of bounds then call it unselected */
+   if (iSlot<0 || iSlot>=MAX_PLAYERS)
