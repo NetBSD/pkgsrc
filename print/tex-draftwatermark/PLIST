@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:01 joerg Exp $
-${PKG_LOCALTEXMFPREFIX}/tex/latex/draftwatermark/draftwatermark.sty
-share/doc/tex-draftwatermark/README
-share/doc/tex-draftwatermark/draftwatermark.pdf
-
+@comment $NetBSD: PLIST,v 1.3 2010/11/13 03:21:33 minskim Exp $
+share/texmf-dist/tex/latex/draftwatermark/draftwatermark.sty
