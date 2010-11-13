@@ -46,3 +46,5 @@ Pullup ticket #3269 - requested by obache
 net/proftpd: security update
 Pullup ticket #3270 - requested by obache
 lang/ruby: fix build of GEM packages under Solaris
+Pullup ticket #3271 - requested by sbd
+print/cups: security patch
