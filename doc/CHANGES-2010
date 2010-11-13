@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3953 2010/11/13 00:33:48 jym Exp $
+$NetBSD: CHANGES-2010,v 1.3954 2010/11/13 02:28:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/davical to 0.9.9.2 [jym 2010-11-12]
 	Updated games/xfrisk to 1.2nb6 [dholland 2010-11-13]
 	Updated www/davical to 0.9.9.3 [jym 2010-11-13]
+	Updated print/tex-cooking to 0.9bnb1 [minskim 2010-11-13]
