@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/11/13 10:10:45 tnn Exp $
 man/man5/smartd.conf.5
 man/man8/smartctl.8
 man/man8/smartd.8
 sbin/smartctl
 sbin/smartd
+sbin/update-smart-drivedb
 share/doc/smartmontools/AUTHORS
 share/doc/smartmontools/CHANGELOG
 share/doc/smartmontools/COPYING
@@ -19,3 +20,4 @@ share/doc/smartmontools/examplescripts/Example4
 share/doc/smartmontools/examplescripts/README
 share/examples/rc.d/smartd
 share/examples/smartmontools/smartd.conf
+share/smartmontools/drivedb.h
