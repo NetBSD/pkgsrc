@@ -1,3 +1,6 @@
-The "draftwatermark" package extends LaTeX providing a means to
-add a textual, light gray watermark on every page or on the first
-page of a document.
+The "draftwatermark" package provides a means to add a textual,
+light grey watermark on every page or on the first page of a document.
+Typical usage may consist in writing words such as DRAFT or
+CONFIDENTIAL across document pages. The package performs a similar
+function to that of draftcopy, but its implementation is output
+device independent, and very made simple by relying on everpage.
