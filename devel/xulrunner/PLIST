@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/09/09 09:41:21 tnn Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/11/13 11:54:43 tnn Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -17,6 +17,17 @@ include/xulrunner/XPCIDispatch.h
 ${PLIST.jit}include/xulrunner/avmplus.h
 include/xulrunner/base64.h
 include/xulrunner/blapit.h
+include/xulrunner/cairo/cairo-deprecated.h
+include/xulrunner/cairo/cairo-features.h
+include/xulrunner/cairo/cairo-ft.h
+include/xulrunner/cairo/cairo-pdf.h
+include/xulrunner/cairo/cairo-platform.h
+include/xulrunner/cairo/cairo-ps.h
+include/xulrunner/cairo/cairo-rename.h
+include/xulrunner/cairo/cairo-version.h
+include/xulrunner/cairo/cairo-xlib-xrender.h
+include/xulrunner/cairo/cairo-xlib.h
+include/xulrunner/cairo/cairo.h
 include/xulrunner/cert.h
 include/xulrunner/certdb.h
 include/xulrunner/certt.h
@@ -2046,6 +2057,8 @@ include/xulrunner/oggz/oggz_write.h
 include/xulrunner/p12.h
 include/xulrunner/p12plcy.h
 include/xulrunner/p12t.h
+include/xulrunner/pixman-version.h
+include/xulrunner/pixman.h
 include/xulrunner/pk11func.h
 include/xulrunner/pk11pqg.h
 include/xulrunner/pk11priv.h
