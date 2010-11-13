@@ -1,11 +1,17 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2010/11/12 19:13:53 jym Exp $
+$NetBSD: MESSAGE,v 1.4 2010/11/13 00:27:24 jym Exp $
 
 For pkgsrc installations, DAViCal's package is installed in non-default
 locations:
 
 	Document root:		${DAVICALDIR}/htdocs
 	Configuration file:	${PKG_SYSCONFDIR}/config.php
+
+If you are upgrading from a previous version, see
+
+	http://wiki.davical.org/w/Release_Notes
+
+for how to perform a database upgrade.
 
 To complete the installation of DAViCal, follow these steps:
 
