@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3960 2010/11/13 11:21:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.3961 2010/11/13 12:21:13 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5538,3 +5538,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-draftwatermark to 1.0nb1 [minskim 2010-11-13]
 	Added print/tex-draftwatermark-doc version 1.0 [minskim 2010-11-13]
 	Updated archivers/lzo to 2.04 [obache 2010-11-13]
+	Updated sysutils/smartmontools to 5.40 [tnn 2010-11-13]
+	Updated mail/thunderbird to 3.1.6 [tnn 2010-11-13]
+	Updated www/seamonkey to 2.0.10 [tnn 2010-11-13]
