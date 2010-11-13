@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3958 2010/11/13 03:22:12 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3959 2010/11/13 03:24:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5536,3 +5536,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-everypage to 1.1 [minskim 2010-11-13]
 	Added print/tex-everypage-doc version 1.1 [minskim 2010-11-13]
 	Updated print/tex-draftwatermark to 1.0nb1 [minskim 2010-11-13]
+	Added print/tex-draftwatermark-doc version 1.0 [minskim 2010-11-13]
