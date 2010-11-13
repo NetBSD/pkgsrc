@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2008/05/17 13:07:54 obache Exp $
+$NetBSD: patch-aa,v 1.6 2010/11/13 10:10:46 tnn Exp $
 
---- Makefile.in.orig	2008-03-10 10:44:13.000000000 +0000
+--- Makefile.in.orig	2010-10-16 16:36:17.000000000 +0000
 +++ Makefile.in
-@@ -87,7 +87,7 @@ CONFIG_HEADER = config.h
- CONFIG_CLEAN_FILES =
- am__installdirs = "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man5dir)" \
- 	"$(DESTDIR)$(man8dir)" "$(DESTDIR)$(docsdir)" \
--	"$(DESTDIR)$(initddir)" "$(DESTDIR)$(sysconfdir)"
-+	"$(DESTDIR)$(sysconfdir)"
- sbinPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+@@ -115,7 +115,7 @@ CONFIG_CLEAN_VPATH_FILES =
+ am__installdirs = "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(sbindir)" \
+ 	"$(DESTDIR)$(man5dir)" "$(DESTDIR)$(man8dir)" \
+ 	"$(DESTDIR)$(attributelogdir)" "$(DESTDIR)$(docsdir)" \
+-	"$(DESTDIR)$(drivedbdir)" "$(DESTDIR)$(initddir)" \
++	"$(DESTDIR)$(drivedbdir)" \
+ 	"$(DESTDIR)$(savestatesdir)" "$(DESTDIR)$(sysconfdir)"
  PROGRAMS = $(sbin_PROGRAMS)
  am__smartctl_SOURCES_DIST = smartctl.cpp smartctl.h atacmdnames.cpp \
-@@ -347,8 +347,7 @@ docs_DATA = AUTHORS     \
+@@ -449,8 +449,7 @@ docs_DATA = AUTHORS     \
              NEWS        \
              README      \
              TODO        \
@@ -20,13 +20,13 @@ $NetBSD: patch-aa,v 1.5 2008/05/17 13:07:54 obache Exp $
 +            WARNINGS
  
  sysconf_DATA = smartd.conf$(smartd_suffix)
- EXTRA_DIST = smartmontools.spec                    \
-@@ -1115,7 +1114,7 @@ info: info-recursive
- 
+ EXTRA_DIST = smartd.initd.in                       \
+@@ -1475,7 +1474,7 @@ info: info-recursive
  info-am:
  
--install-data-am: install-docsDATA install-initdDATA install-man
-+install-data-am: install-docsDATA install-man
+ install-data-am: install-attributelogDATA install-docsDATA \
+-	install-drivedbDATA install-initdDATA install-man \
++	install-drivedbDATA install-man \
+ 	install-savestatesDATA
  
  install-dvi: install-dvi-recursive
- 
