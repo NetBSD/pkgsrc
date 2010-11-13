@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2010/06/21 14:49:00 tron Exp $
+# $NetBSD: Makefile.common,v 1.14 2010/11/13 21:08:56 shattered Exp $
 #
 # used by devel/ncursesw/Makefile
 
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/${NC_VERS}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dickey.his.com/ncurses/ncurses.html
+HOMEPAGE=	http://invisible-island.net/ncurses/ncurses.html
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
