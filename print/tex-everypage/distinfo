@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/10/26 16:57:51 reed Exp $
+$NetBSD: distinfo,v 1.2 2010/11/13 03:16:09 minskim Exp $
 
-SHA1 (tex-everypage-1.0/everypage.zip) = 2ae51e88189c858835433555f032f7a158445d89
-RMD160 (tex-everypage-1.0/everypage.zip) = 55ff827ac701006c256f7f80125bff176f55e29b
-Size (tex-everypage-1.0/everypage.zip) = 19746 bytes
+SHA1 (tex-everypage-15878/everypage.tar.xz) = 928cace4c1a9d09502964ce3a2d83a0c66dec999
+RMD160 (tex-everypage-15878/everypage.tar.xz) = 978024bb87f1f64a9de6beb883f891cbd1b7cb45
+Size (tex-everypage-15878/everypage.tar.xz) = 1276 bytes
