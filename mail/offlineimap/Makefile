@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/02/10 19:17:40 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/11/13 21:08:58 shattered Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://software.complete.org/offlineimap/static/download_area/${_OFFLINEIMAP_VER}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://software.complete.org/offlineimap
+HOMEPAGE=	http://software.complete.org/software/projects/show/offlineimap
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support
 
 PKG_DESTDIR_SUPPORT=	user-destdir

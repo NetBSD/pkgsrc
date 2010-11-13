@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/13 21:08:57 shattered Exp $
 #
 
 DISTNAME=	tmake-1.13
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.trolltech.com/freebies/tmake/
+MASTER_SITES=	ftp://ftp.qtsoftware.com/freebies/tmake/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.trolltech.com/developer/downloads/qt/freebies/
+HOMEPAGE=	http://www.qtsoftware.com/developer/downloads/qt/freebies/
 COMMENT=	Cross-platform Makefile Tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
