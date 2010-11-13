@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.38 2010/07/20 16:50:26 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.39 2010/11/13 16:23:22 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -414,8 +414,11 @@ pkg_makeroot()
     [ "$nflag" = "no" -a -n "$INSTALL_PACKAGES" ] &&
         pkg_install $INSTALL_PACKAGES
 
-    [ "$nflag" = "no" -a -n "$BUILD_PACKAGES" ] &&
-        build_and_install $BUILD_PACKAGES
+    if [ "$nflag" = "no" -a -n "$BUILD_PACKAGES" ]; then
+        for pkg in $BUILD_PACKAGES; do
+            build_and_install $pkg
+        done
+    fi
 }
 
 # makeroot
