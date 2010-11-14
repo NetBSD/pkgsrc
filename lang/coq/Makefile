@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.26 2010/09/14 11:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/11/14 20:53:02 tonio Exp $
 #
 
-DISTNAME=	coq-8.2pl1
-PKGREVISION=	2
+DISTNAME=	coq-8.3
 CATEGORIES=	lang math
-MASTER_SITES=	http://coq.inria.fr/distrib/V8.2pl1/files/
+MASTER_SITES=	http://coq.inria.fr/distrib/V8.3/files/
 
 MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,7 +16,6 @@ USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
-CONFIGURE_ARGS+=	-reals all
 BUILD_TARGET=		world
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
@@ -28,6 +27,14 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
 PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
 .endif
 
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
+.  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
+      !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
+      !empty(MACHINE_PLATFORM:MFreeBSD-*-*)
+PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
+.  endif
+.endif
+
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
 # See PR# 28772 as the above should work but it appears to be ignored
@@ -37,8 +44,7 @@ _STRIPFLAG_INSTALL=
 .endif
 
 REPLACE_SH=	configure install.sh
-CONFIGURE_ENV+=	SHELL=${SH:Q}
-MAKE_ENV+=	SHELL=${SH:Q}
+INSTALL_ENV+=	COQINSTALLPREFIX=${DESTDIR}
 
 PLIST_VARS=		coqide
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
