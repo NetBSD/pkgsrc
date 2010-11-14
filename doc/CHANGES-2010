@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3966 2010/11/14 15:20:17 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3967 2010/11/14 20:43:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5548,3 +5548,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Net-SNMP to 5.2.0nb3 [bouyer 2010-11-13]
 	Updated www/nginx to 0.8.53 [joerg 2010-11-13]
 	Updated print/tex-amsmath-doc to 2.13nb1 [minskim 2010-11-14]
+	Added devel/p5-File-ConfigDir version 0.004 [sno 2010-11-14]
