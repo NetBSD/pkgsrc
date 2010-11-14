@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3969 2010/11/14 20:54:25 tonio Exp $
+$NetBSD: CHANGES-2010,v 1.3970 2010/11/14 21:18:51 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5551,3 +5551,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-File-ConfigDir version 0.004 [sno 2010-11-14]
 	Added databases/p5-MLDBM-Serializer-JSON version 0.001 [sno 2010-11-14]
 	Updated lang/coq to 8.3 [tonio 2010-11-14]
+	Updated mail/imp to 4.3.9nb1 [bouyer 2010-11-14]
