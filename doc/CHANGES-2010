@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3968 2010/11/14 20:53:26 sno Exp $
+$NetBSD: CHANGES-2010,v 1.3969 2010/11/14 20:54:25 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5550,3 +5550,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-amsmath-doc to 2.13nb1 [minskim 2010-11-14]
 	Added devel/p5-File-ConfigDir version 0.004 [sno 2010-11-14]
 	Added databases/p5-MLDBM-Serializer-JSON version 0.001 [sno 2010-11-14]
+	Updated lang/coq to 8.3 [tonio 2010-11-14]
