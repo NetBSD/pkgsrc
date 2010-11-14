@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/10/16 11:38:05 tonnerre Exp $
+# $NetBSD: options.mk,v 1.3 2010/11/14 12:09:22 tonnerre Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
 PKG_SUPPORTED_OPTIONS=	csharp java erlang python perl php ruby
@@ -57,7 +57,7 @@ PERL5_CONFIGURE=	NO
 USE_TOOLS+=		perl
 PLIST.perl=		yes
 
-PERL5_PACKLIST=		auto/Thrift/.packlist
+#PERL5_PACKLIST=		auto/Thrift/.packlist
 
 .include "../../lang/perl5/module.mk"
 .else
@@ -67,11 +67,13 @@ CONFIGURE_ARGS+=	--disable-gen-perl
 
 .if !empty(PKG_OPTIONS:Mphp)
 CONFIGURE_ARGS+=	--with-php
+CONFIGURE_ARGS+=	--with-php_extension
 CONFIGURE_ARGS+=	--enable-gen-php
 
 .include "../../lang/php/ext.mk"
 .else
 CONFIGURE_ARGS+=	--without-php
+CONFIGURE_ARGS+=	--without-php_extension
 CONFIGURE_ARGS+=	--disable-gen-php
 .endif
 
