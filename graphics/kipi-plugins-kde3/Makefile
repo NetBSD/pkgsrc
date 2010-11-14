@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/14 11:02:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/14 13:35:41 obache Exp $
 
 DISTNAME=	kipi-plugins-0.1.7
 PKGREVISION=	10
@@ -20,11 +20,12 @@ SHLIBTOOL_OVERRIDE=	# empty
 
 REPLACE_BASH=		kipi-plugins/mpegencoder/images2mpg
 
+DEPENDS+=	ImageMagick>=5.5.4:../../graphics/ImageMagick
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.7.0
 .include "../../audio/libgpod/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.4
 .include "../../graphics/libkdcraw/buildlink3.mk"
