@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.354 2010/10/16 21:28:17 kefren Exp $
+# $NetBSD: Makefile,v 1.355 2010/11/14 20:54:08 sno Exp $
 #
 
 COMMENT=	Databases
@@ -149,6 +149,7 @@ SUBDIR+=	p5-Jifty-DBI
 SUBDIR+=	p5-MARC
 SUBDIR+=	p5-MARC-Record
 SUBDIR+=	p5-MLDBM
+SUBDIR+=	p5-MLDBM-Serializer-JSON
 SUBDIR+=	p5-MLDBM-Sync
 SUBDIR+=	p5-Net-Cassandra
 SUBDIR+=	p5-Net-MySQL
