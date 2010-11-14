@@ -1,0 +1,5 @@
+MLDBM::Serializer::JSON provides an extension to MLDBM to enable storing
+the additional columns as JSON instead of Data::Dumper or FreezeThaw.
+
+JSON is very widely used - from Perl over Ruby to Python and surely
+JavaScript and so on.
