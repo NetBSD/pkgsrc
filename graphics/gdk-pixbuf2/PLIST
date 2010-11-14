@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/02 15:17:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/11/14 20:11:41 drochner Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
@@ -160,6 +160,7 @@ share/locale/th/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/tk/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/tr/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/tt/LC_MESSAGES/gdk-pixbuf.mo
+share/locale/ug/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/uk/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/uz/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/uz@cyrillic/LC_MESSAGES/gdk-pixbuf.mo
