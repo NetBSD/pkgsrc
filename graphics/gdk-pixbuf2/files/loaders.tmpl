@@ -1,0 +1,22 @@
+# $NetBSD: loaders.tmpl,v 1.1 2010/11/14 20:11:41 drochner Exp $
+#
+# Rebuild the GTK2 gdk-pixbuf database.
+#
+
+GDK_PIXBUF_LOADERS_DB="@GDK_PIXBUF_LOADERS_DB@"
+GDK_PIXBUF_QUERY_LOADERS="@GDK_PIXBUF_QUERY_LOADERS@"
+
+case ${STAGE} in
+POST-INSTALL)
+	${GDK_PIXBUF_QUERY_LOADERS} > ${GDK_PIXBUF_LOADERS_DB}
+	;;
+DEINSTALL)
+	[ "${PKGBASE}" = "gdk-pixbuf2" ] && ${RM} -f ${GDK_PIXBUF_LOADERS_DB}
+	;;
+POST-DEINSTALL)
+	[ "${PKGBASE}" != "gdk-pixbuf2" ] && \
+		${GDK_PIXBUF_QUERY_LOADERS} > ${GDK_PIXBUF_LOADERS_DB}
+	;;
+*)
+	;;
+esac
