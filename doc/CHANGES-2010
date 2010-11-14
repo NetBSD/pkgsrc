@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3965 2010/11/13 22:31:33 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.3966 2010/11/14 15:20:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5547,3 +5547,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/ghostscript to 8.71nb5 [bouyer 2010-11-13]
 	Updated net/p5-Net-SNMP to 5.2.0nb3 [bouyer 2010-11-13]
 	Updated www/nginx to 0.8.53 [joerg 2010-11-13]
+	Updated print/tex-amsmath-doc to 2.13nb1 [minskim 2010-11-14]
