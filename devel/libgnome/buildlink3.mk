@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2010/09/14 11:01:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2010/11/15 18:33:17 drochner Exp $
 
 BUILDLINK_TREE+=	libgnome
 
@@ -17,6 +17,7 @@ pkgbase := libgnome
 .include "../../audio/esound/buildlink3.mk"
 .endif
 
+.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
