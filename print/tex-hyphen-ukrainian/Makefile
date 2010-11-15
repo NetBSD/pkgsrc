@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:36 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/15 21:32:17 minskim Exp $
 
 DISTNAME=	hyphen-ukrainian
 PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	20144
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,6 +10,7 @@ COMMENT=	Hyphenation patterns for Ukrainian
 
 CONFLICTS+=	teTeX-texmf<=3.0nb12
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-ukrhyph>=2009:../../print/tex-ukrhyph
 
 TEX_HYPHEN_DAT+=	ukrainian loadhyph-uk.tex
 TEX_HYPHEN_DEF+=	\addlanguage{ukrainian}{loadhyph-uk.tex}{}{2}{2}
