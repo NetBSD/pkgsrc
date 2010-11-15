@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3975 2010/11/15 13:39:17 adam Exp $
+$NetBSD: CHANGES-2010,v 1.3976 2010/11/15 17:54:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5568,3 +5568,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/py-sip to 4.11.2 [adam 2010-11-15]
 	Updated x11/py-qt4 to 4.8.1 [adam 2010-11-15]
 	Updated geography/gdal-lib to 1.7.3 [adam 2010-11-15]
+	Updated print/tex-babel to 3.8lnb2 [minskim 2010-11-15]
