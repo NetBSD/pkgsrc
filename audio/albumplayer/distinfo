@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/07/20 21:00:42 drochner Exp $
+$NetBSD: distinfo,v 1.6 2010/11/15 18:56:52 drochner Exp $
 
 SHA1 (albumplayer-0.3.1.tar.gz) = 9da99b02090a74bb133049bc7ff92ac0a66875a5
 RMD160 (albumplayer-0.3.1.tar.gz) = 332f4127e6832fa88fdf11b23ba8f1609ebcff29
 Size (albumplayer-0.3.1.tar.gz) = 200321 bytes
-SHA1 (patch-ad) = 8960d9e4c3119a93cfaed97c4075bc45d7be1744
+SHA1 (patch-ad) = 791364ae18ec8ca04170042e7554dba153be9f4a
