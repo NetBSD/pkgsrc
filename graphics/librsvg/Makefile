@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2010/10/04 09:42:44 obache Exp $
+# $NetBSD: Makefile,v 1.45 2010/11/15 18:31:00 drochner Exp $
 
-DISTNAME=	librsvg-2.26.3
-PKGREVISION=	2
+DISTNAME=	librsvg-2.32.1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,30 +19,20 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-gtk-theme --disable-tools
 
-PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
+PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
 TEST_TARGET=		check
-
-CONFIGURE_ARGS+=	--with-gimp=no
-CONFIGURE_ARGS+=	--with-tags=
-CONFIGURE_ARGS+=	--disable-mozilla-plugin
 
 # Workaround for Upstream Bug#562310.
 # for more detail, see also PR#41475.
 TOOLS_NOOP+=	gtkdoc-rebase
 
-GTK2_LOADERS=		yes
-
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.12.0
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
-
-post-install:
-	rmdir -p ${DESTDIR}${PREFIX}/lib/mozilla/plugins || ${TRUE}
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -51,5 +40,5 @@ post-install:
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/modules.mk"
+.include "../../graphics/gdk-pixbuf2/loaders.mk"
 .include "../../mk/bsd.pkg.mk"
