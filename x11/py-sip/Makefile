@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2010/09/07 16:35:09 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.19 2010/11/15 13:06:56 adam Exp $
 
-DISTNAME=	sip-4.11.1
+DISTNAME=	sip-4.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11 devel python
 MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/sip4/
@@ -13,7 +12,6 @@ COMMENT=	Tool to create Python bindings for C++ libraries
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-* ${PYPKGPREFIX}-qt3-sip-*
-
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
@@ -42,12 +40,12 @@ CONFIGURE_ARGS+=	LFLAGS_PLUGIN="-bundle -flat_namespace -undefined suppress"
 .else
 CONFIGURE_ARGS+=	CFLAGS_SHLIB=-fPIC
 CONFIGURE_ARGS+=	CXXFLAGS_SHLIB=-fPIC
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc*)
+.  if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc*)
 # gcc3 uses -mimpure-text to not pass -assert pure-text to the linker
 CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared -mimpure-text"
-.else
+.  else
 CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared"
-.endif
+.  endif
 .endif
 
 SUBST_CLASSES+=		pyversfx
@@ -59,6 +57,6 @@ do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
 
-.include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
