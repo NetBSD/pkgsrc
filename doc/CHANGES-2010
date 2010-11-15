@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3977 2010/11/15 18:41:11 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.3978 2010/11/15 19:12:00 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5577,3 +5577,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/glib2 to 2.26.1 [drochner 2010-11-15]
 	Updated graphics/gdk-pixbuf2 to 2.22.1 [drochner 2010-11-15]
 	Added graphics/py-pyfits version 2.3.1 [drochner 2010-11-15]
+	Added graphics/libgexiv2 version 0.2.1 [gls 2010-11-15]
+	Added graphics/libraw version 0.11.2 [gls 2010-11-15]
+	Added graphics/shotwell version 0.7.2 [gls 2010-11-15]
