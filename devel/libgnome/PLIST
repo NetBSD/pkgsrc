@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2010/06/11 13:23:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.29 2010/11/15 18:33:17 drochner Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -123,6 +123,7 @@ share/locale/is/LC_MESSAGES/libgnome-2.0.mo
 share/locale/it/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ja/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ka/LC_MESSAGES/libgnome-2.0.mo
+share/locale/kk/LC_MESSAGES/libgnome-2.0.mo
 share/locale/kn/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ko/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ku/LC_MESSAGES/libgnome-2.0.mo
