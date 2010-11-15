@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.7 2010/04/13 16:47:24 drochner Exp $
+$NetBSD: patch-ab,v 1.8 2010/11/15 18:31:01 drochner Exp $
 
---- gdk-pixbuf-loader/Makefile.in.orig	2010-03-30 05:34:10.000000000 +0000
+--- gdk-pixbuf-loader/Makefile.in.orig	2010-11-13 10:52:20.000000000 +0000
 +++ gdk-pixbuf-loader/Makefile.in
-@@ -598,10 +598,6 @@ uninstall-am: uninstall-loaderLTLIBRARIE
+@@ -624,10 +624,6 @@ uninstall-am: uninstall-gdk_pixbuf_modul
  
  
- install-data-hook: 
--	if [ -z "$(DESTDIR)" ] ; then \
--	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/gtk-2.0 ; \
--	  $(QUERYLOADERS) > $(DESTDIR)$(sysconfdir)/gtk-2.0/gdk-pixbuf.loaders ; \
--	fi
+ @ENABLE_PIXBUF_LOADER_TRUE@install-data-hook:
+-@ENABLE_PIXBUF_LOADER_TRUE@	if test -z "$(DESTDIR)"; then \
+-@ENABLE_PIXBUF_LOADER_TRUE@		$(mkinstalldirs) $(DESTDIR)$(gdk_pixbuf_binarydir) ; \
+-@ENABLE_PIXBUF_LOADER_TRUE@		$(GDK_PIXBUF_QUERYLOADERS) > $(DESTDIR)$(gdk_pixbuf_cache_file) ; \
+-@ENABLE_PIXBUF_LOADER_TRUE@	fi
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
