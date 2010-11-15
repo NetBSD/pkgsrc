@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3978 2010/11/15 19:12:00 gls Exp $
+$NetBSD: CHANGES-2010,v 1.3979 2010/11/15 20:28:37 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5580,3 +5580,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/libgexiv2 version 0.2.1 [gls 2010-11-15]
 	Added graphics/libraw version 0.11.2 [gls 2010-11-15]
 	Added graphics/shotwell version 0.7.2 [gls 2010-11-15]
+	Added databases/sqlite3-docs version 3.7.3 [dholland 2010-11-15]
