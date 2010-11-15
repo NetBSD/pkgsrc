@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.46 2010/10/10 10:56:44 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2010/11/15 18:28:45 drochner Exp $
 
 BUILDLINK_TREE+=	gtk2
 
@@ -21,13 +21,14 @@ pkgbase := gtk2
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
 .endif
 .endif # GTK2_BUILDLINK3_MK
 
