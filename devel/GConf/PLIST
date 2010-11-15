@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.30 2010/06/11 13:19:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.31 2010/11/15 19:55:10 drochner Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
+bin/gsettings-data-convert
+bin/gsettings-schema-convert
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
 include/gconf/2/gconf/gconf-engine.h
@@ -12,17 +14,21 @@ include/gconf/2/gconf/gconf-value.h
 include/gconf/2/gconf/gconf.h
 lib/GConf/2/libgconfbackend-oldxml.la
 lib/GConf/2/libgconfbackend-xml.la
+lib/gio/modules/libgsettingsgconfbackend.la
 lib/libgconf-2.la
 lib/pkgconfig/gconf-2.0.pc
 libexec/gconfd-2
 man/man1/gconftool-2.1
+man/man1/gsettings-data-convert.1
+man/man1/gsettings-schema-convert.1
 share/aclocal/gconf-2.m4
 share/dbus-1/services/org.gnome.GConf.service
+share/examples/GConf/autostart/gsettings-data-convert.desktop
 share/examples/GConf/path
 share/gtk-doc/html/gconf/ch01.html
-share/gtk-doc/html/gconf/gconf-GConfClient.html
 share/gtk-doc/html/gconf/gconf-gconf-backend.html
 share/gtk-doc/html/gconf/gconf-gconf-changeset.html
+share/gtk-doc/html/gconf/gconf-gconf-client.html
 share/gtk-doc/html/gconf/gconf-gconf-engine.html
 share/gtk-doc/html/gconf/gconf-gconf-error.html
 share/gtk-doc/html/gconf/gconf-gconf-internals.html
@@ -75,6 +81,7 @@ share/locale/he/LC_MESSAGES/GConf2.mo
 share/locale/hi/LC_MESSAGES/GConf2.mo
 share/locale/hr/LC_MESSAGES/GConf2.mo
 share/locale/hu/LC_MESSAGES/GConf2.mo
+share/locale/hy/LC_MESSAGES/GConf2.mo
 share/locale/id/LC_MESSAGES/GConf2.mo
 share/locale/is/LC_MESSAGES/GConf2.mo
 share/locale/it/LC_MESSAGES/GConf2.mo
