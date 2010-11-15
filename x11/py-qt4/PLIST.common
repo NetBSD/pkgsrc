@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST.common,v 1.13 2010/09/02 09:20:19 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.14 2010/11/15 13:07:24 adam Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
 ${PYSITELIB}/PyQt4/Qt.so
-${PYSITELIB}/PyQt4/QtAssistant.so
 ${PYSITELIB}/PyQt4/QtCore.so
+${PYSITELIB}/PyQt4/QtDeclarative.so
 ${PYSITELIB}/PyQt4/QtDesigner.so
 ${PYSITELIB}/PyQt4/QtGui.so
 ${PYSITELIB}/PyQt4/QtHelp.so
@@ -56,13 +56,12 @@ ${PYSITELIB}/PyQt4/uic/uiparser.py
 ${PYSITELIB}/PyQt4/uic/widget-plugins/phonon.py
 ${PYSITELIB}/PyQt4/uic/widget-plugins/qaxcontainer.py
 ${PYSITELIB}/PyQt4/uic/widget-plugins/qscintilla.py
+${PYSITELIB}/PyQt4/uic/widget-plugins/qtdeclarative.py
 ${PYSITELIB}/PyQt4/uic/widget-plugins/qtwebkit.py
 ${PYSITELIB}/dbus/mainloop/qt.so
 qt4/plugins/designer/libpythonplugin.la
 qt4/qsci/api/python/PyQt4.api
 share/sip${PYVERSSUFFIX}/Qt/Qtmod.sip
-share/sip${PYVERSSUFFIX}/QtAssistant/QtAssistantmod.sip
-share/sip${PYVERSSUFFIX}/QtAssistant/qassistantclient.sip
 share/sip${PYVERSSUFFIX}/QtCore/QtCoremod.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstractanimation.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstracteventdispatcher.sip
@@ -85,6 +84,7 @@ share/sip${PYVERSSUFFIX}/QtCore/qdatetime.sip
 share/sip${PYVERSSUFFIX}/QtCore/qdir.sip
 share/sip${PYVERSSUFFIX}/QtCore/qdiriterator.sip
 share/sip${PYVERSSUFFIX}/QtCore/qeasingcurve.sip
+share/sip${PYVERSSUFFIX}/QtCore/qelapsedtimer.sip
 share/sip${PYVERSSUFFIX}/QtCore/qeventloop.sip
 share/sip${PYVERSSUFFIX}/QtCore/qeventtransition.sip
 share/sip${PYVERSSUFFIX}/QtCore/qfile.sip
@@ -155,6 +155,25 @@ share/sip${PYVERSSUFFIX}/QtCore/qvariantanimation.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvector.sip
 share/sip${PYVERSSUFFIX}/QtCore/qwaitcondition.sip
 share/sip${PYVERSSUFFIX}/QtCore/qxmlstream.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/QtDeclarativemod.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativecomponent.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativecontext.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeengine.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeerror.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeexpression.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeextensionplugin.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeimageprovider.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeitem.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativelist.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativenetworkaccessmanagerfactory.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeparserstatus.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeproperty.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativepropertymap.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativepropertyvaluesource.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativescriptstring.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativeview.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qpydeclarativelistproperty.sip
+share/sip${PYVERSSUFFIX}/QtDeclarative/qpydeclarativepropertyvaluesource.sip
 share/sip${PYVERSSUFFIX}/QtDesigner/QtDesignermod.sip
 share/sip${PYVERSSUFFIX}/QtDesigner/abstractactioneditor.sip
 share/sip${PYVERSSUFFIX}/QtDesigner/abstractformbuilder.sip
@@ -327,6 +346,7 @@ share/sip${PYVERSSUFFIX}/QtGui/qsplitter.sip
 share/sip${PYVERSSUFFIX}/QtGui/qstackedlayout.sip
 share/sip${PYVERSSUFFIX}/QtGui/qstackedwidget.sip
 share/sip${PYVERSSUFFIX}/QtGui/qstandarditemmodel.sip
+share/sip${PYVERSSUFFIX}/QtGui/qstatictext.sip
 share/sip${PYVERSSUFFIX}/QtGui/qstatusbar.sip
 share/sip${PYVERSSUFFIX}/QtGui/qstringlistmodel.sip
 share/sip${PYVERSSUFFIX}/QtGui/qstyle.sip
@@ -402,6 +422,8 @@ share/sip${PYVERSSUFFIX}/QtNetwork/qhttp.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qlocalserver.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qlocalsocket.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkaccessmanager.sip
+share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkconfigmanager.sip
+share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkconfiguration.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkcookie.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkcookiejar.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkdiskcache.sip
@@ -409,6 +431,7 @@ share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkinterface.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkproxy.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkreply.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkrequest.sip
+share/sip${PYVERSSUFFIX}/QtNetwork/qnetworksession.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qssl.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qsslcertificate.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qsslcipher.sip
@@ -423,6 +446,7 @@ share/sip${PYVERSSUFFIX}/QtNetwork/qurlinfo.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/QtOpenGLmod.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/opengl_types.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qgl.sip
+share/sip${PYVERSSUFFIX}/QtOpenGL/qglbuffer.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qglcolormap.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qglframebufferobject.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qglpixelbuffer.sip

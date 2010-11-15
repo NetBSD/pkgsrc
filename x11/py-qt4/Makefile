@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2010/09/14 11:03:04 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.30 2010/11/15 13:07:24 adam Exp $
 
-PKGNAME=		${PYPKGPREFIX}-qt4-${PYQT_VERSION}
-PYQT_VERSION=		4.7.6
-PKGREVISION=		1
-CATEGORIES=		x11 python
-MASTER_SITES=		http://www.riverbankcomputing.com/static/Downloads/PyQt4/
+PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
+PYQT_VERSION=	4.8.1
+CATEGORIES=	x11 python
+MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		Python binding for Qt4
-HOMEPAGE=		http://www.riverbankcomputing.com/software/pyqt/intro
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Python binding for Qt4
+HOMEPAGE=	http://www.riverbankcomputing.com/software/pyqt/intro
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
@@ -24,20 +22,20 @@ CONFIGURE_ARGS+=	-q ${QTDIR}/bin/qmake
 CONFIGURE_ARGS+=	--confirm-license
 CONFIGURE_ARGS+=	--qsci-api
 
-INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
+INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
-PY_PATCHPLIST=			yes
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PY_PATCHPLIST=		yes
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 # This is a hack. CPPFLAGS and CXXFLAGS from the environment are ignored,
 # however, so I don't know a better way to fix it.
-SUBST_CLASSES+=			PIC
-SUBST_STAGE.PIC=		post-configure
-SUBST_FILES.PIC=		qpy/QtCore/Makefile qpy/QtGui/Makefile
-SUBST_SED.PIC=			-e "s/CXXFLAGS      =/CXXFLAGS      = -fPIC/"
-SUBST_MESSAGE.PIC=		Adding -fPIC to CXXFLAGS.
+SUBST_CLASSES+=		PIC
+SUBST_STAGE.PIC=	post-configure
+SUBST_FILES.PIC=	qpy/QtCore/Makefile qpy/QtGui/Makefile
+SUBST_SED.PIC=		-e "s/CXXFLAGS      =/CXXFLAGS      = -fPIC/"
+SUBST_MESSAGE.PIC=	Adding -fPIC to CXXFLAGS.
 
-#SUBST_CLASSES+=		pyversfx
+#SUBST_CLASSES+=	pyversfx
 #SUBST_STAGE.pyversfx=	pre-configure
 #SUBST_FILES.pyversfx=	pyuic4/pyuic.sbf pylupdate4/pylupdate.sbf
 #SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
@@ -46,8 +44,8 @@ SUBST_MESSAGE.PIC=		Adding -fPIC to CXXFLAGS.
 
 PLIST_SRC=		${PKGDIR}/PLIST.common
 .if ${OPSYS} == "Darwin"
+# XXX this is not recorded in distinfo
 DISTNAME=		PyQt-mac-gpl-${PYQT_VERSION}
-PLIST_SRC+=		${PKGDIR}/PLIST.Darwin
 .else
 DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
 PLIST_SRC+=		${PKGDIR}/PLIST.X11
@@ -71,8 +69,4 @@ BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb3
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.4.0nb1
 .include "../../x11/qt4-tools/buildlink3.mk"
-# ${PYSITELIB}/qt.so depends on libqassistantclient.so
-#  which is part of qt4-tools, so we need a runtime dependency
-#  XXX split this pkg?
-BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../mk/bsd.pkg.mk"
