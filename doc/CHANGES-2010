@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3973 2010/11/15 09:15:39 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.3974 2010/11/15 13:12:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5555,3 +5555,15 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/asterisk16 to 1.6.2.14 [jnemeth 2010-11-15]
 	Updated chat/centerim to 4.22.9nb3 [jnemeth 2010-11-15]
 	Updated net/Transmission to 2.12 [tnn 2010-11-15]
+	Updated x11/qt4 to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-libs to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-tools to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-docs to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-mng to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-mysql to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-pgsql to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-qdbus to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-sqlite3 to 4.7.1 [adam 2010-11-15]
+	Updated x11/qt4-tiff to 4.7.1 [adam 2010-11-15]
+	Updated x11/py-sip to 4.11.2 [adam 2010-11-15]
+	Updated x11/py-qt4 to 4.8.1 [adam 2010-11-15]
