@@ -1,22 +1,22 @@
-$NetBSD: patch-au,v 1.4 2010/01/29 18:19:09 adam Exp $
+$NetBSD: patch-au,v 1.5 2010/11/15 13:05:45 adam Exp $
 
---- src/3rdparty/javascriptcore/JavaScriptCore/runtime/JSValue.h.orig	2010-01-28 07:10:17.000000000 +0000
+--- src/3rdparty/javascriptcore/JavaScriptCore/runtime/JSValue.h.orig	2010-09-10 09:05:24.000000000 +0000
 +++ src/3rdparty/javascriptcore/JavaScriptCore/runtime/JSValue.h
-@@ -468,7 +468,7 @@ namespace JSC {
+@@ -491,7 +491,7 @@ namespace JSC {
              u.asBits.tag = CellTag;
          else
              u.asBits.tag = EmptyValueTag;
 -        u.asBits.payload = reinterpret_cast<int32_t>(ptr);
 +        u.asBits.payload = reinterpret_cast<intptr_t>(ptr);
-     }
- 
-     inline JSValue::JSValue(const JSCell* ptr)
-@@ -477,7 +477,7 @@ namespace JSC {
+ #if ENABLE(JSC_ZOMBIES)
+         ASSERT(!isZombie());
+ #endif
+@@ -503,7 +503,7 @@ namespace JSC {
              u.asBits.tag = CellTag;
          else
              u.asBits.tag = EmptyValueTag;
 -        u.asBits.payload = reinterpret_cast<int32_t>(const_cast<JSCell*>(ptr));
 +        u.asBits.payload = reinterpret_cast<intptr_t>(const_cast<JSCell*>(ptr));
-     }
- 
-     inline JSValue::operator bool() const
+ #if ENABLE(JSC_ZOMBIES)
+         ASSERT(!isZombie());
+ #endif
