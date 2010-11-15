@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2009/11/23 11:47:34 drochner Exp $
+# $NetBSD: options.mk,v 1.11 2010/11/15 18:28:45 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2
-PKG_SUPPORTED_OPTIONS=	cups debug jasper
+PKG_SUPPORTED_OPTIONS=	cups debug
 PKG_OPTIONS_REQUIRED_GROUPS=	gdk-target
 PKG_OPTIONS_GROUP.gdk-target=	x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
@@ -50,14 +50,6 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
 
-.endif
-
-PLIST_VARS+=	jasper
-.if !empty(PKG_OPTIONS:Mjasper)
-CONFIGURE_ARGS+=	--with-libjasper
-.include "../../graphics/jasper/buildlink3.mk"
-PLIST.jasper=	yes
-.else
-CONFIGURE_ARGS+=	--without-libjasper
 .endif

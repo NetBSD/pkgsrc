@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.206 2010/10/10 07:41:13 obache Exp $
+# $NetBSD: Makefile,v 1.207 2010/11/15 18:28:45 drochner Exp $
 
-DISTNAME=		gtk+-2.20.1
+DISTNAME=		gtk+-2.22.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		2
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.20/ \
-			${MASTER_SITE_GNOME:=sources/gtk+/2.20/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.22/ \
+			${MASTER_SITE_GNOME:=sources/gtk+/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -43,9 +42,9 @@ PKGCONFIG_OVERRIDE+=	gdk-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+-unix-print-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0-uninstalled.pc.in
-PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
+#PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0-uninstalled.pc.in
+#PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
+#PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
 INSTALLATION_DIRS+=	lib/gtk-2.0/immodules
 INSTALLATION_DIRS+=	lib/gtk-2.0/modules
@@ -66,11 +65,11 @@ TOOLS_PATH.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
-SUBST_CLASSES+=		pthread
-SUBST_STAGE.pthread=	pre-configure
-SUBST_MESSAGE.pthread=	Fixing pthread flags.
-SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
-SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
+#SUBST_CLASSES+=		pthread
+#SUBST_STAGE.pthread=	pre-configure
+#SUBST_MESSAGE.pthread=	Fixing pthread flags.
+#SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
+#SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
 PYTHON_PATCH_SCRIPTS=	gtk/gtk-builder-convert
 
@@ -79,7 +78,6 @@ PYTHON_PATCH_SCRIPTS=	gtk/gtk-builder-convert
 #
 post-install:
 	${RM} -f ${DESTDIR}${GTK_IMMODULES_DB}
-	${RM} -f ${DESTDIR}${GDK_PIXBUF_LOADERS_DB}
 
 EVAL_PREFIX+=		PREFIX.hicolor=hicolor-icon-theme
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk-update-icon-cache"
@@ -96,6 +94,7 @@ BUILDLINK_API_DEPENDS.atk+=	atk>=1.30.0
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 
 .include "options.mk"
 
@@ -105,9 +104,9 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.0
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
+#.include "../../graphics/jpeg/buildlink3.mk"
+#.include "../../graphics/png/buildlink3.mk"
+#.include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"
