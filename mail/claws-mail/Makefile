@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2010/09/14 11:02:18 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2010/11/15 22:57:43 abs Exp $
 
-PKGREVISION=	4
+PKGREVISION=	5
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EGDIR}
