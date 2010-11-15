@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/09/23 23:30:38 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/11/15 05:18:16 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -88,6 +88,7 @@ include/asterisk/res_odbc.h
 include/asterisk/rtp.h
 include/asterisk/say.h
 include/asterisk/sched.h
+include/asterisk/select.h
 include/asterisk/sha1.h
 include/asterisk/slin.h
 include/asterisk/slinfactory.h
@@ -2416,6 +2417,7 @@ share/doc/asterisk/UPGRADE-1.4.txt
 share/doc/asterisk/UPGRADE-1.6.txt
 share/doc/asterisk/UPGRADE.txt
 share/doc/asterisk/Zaptel-to-DAHDI.txt
+share/doc/asterisk/api-1.6.2-changes.txt
 share/doc/asterisk/asterisk-mib.txt
 share/doc/asterisk/asterisk.txt
 share/doc/asterisk/backtrace.txt
