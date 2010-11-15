@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2010/11/15 07:35:54 obache Exp $
+# $NetBSD: Makefile.common,v 1.26 2010/11/15 18:44:30 drochner Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faad/Makefile
@@ -22,7 +22,6 @@ GST_PLUGINS0.10_VER=	0.10.20
 		faac \
 		faad \
 		fbdev \
-		gsettings \
 		gsm \
 		ivorbis \
 		libmms \
