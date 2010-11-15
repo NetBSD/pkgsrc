@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2010/06/02 13:34:45 taca Exp $
+# $NetBSD: Makefile.common,v 1.40 2010/11/15 16:24:09 sketch Exp $
 #
 # used by databases/mysql5-client/Makefile
 # used by databases/mysql5-server/Makefile
@@ -9,7 +9,7 @@ CATEGORIES=		databases
 MASTER_SITES=		http://downloads.mysql.com/archives/mysql-5.0/ \
 			${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
-MAINTAINER=		sketch@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 LICENSE=		gnu-gpl-v2
 
