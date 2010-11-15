@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2010/11/15 19:55:10 drochner Exp $
+
+--- gsettings/Makefile.in.orig	2010-09-27 18:04:55.000000000 +0000
++++ gsettings/Makefile.in
+@@ -351,7 +351,7 @@ gsettings_data_convert_LDADD = \
+ 	$(GSETTINGS_LIBS)                   \
+ 	$(NULL)
+ 
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(prefix)/share/examples/GConf/autostart
+ autostart_DATA = gsettings-data-convert.desktop
+ man_MANS = \
+ 	gsettings-schema-convert.1 \
