@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/15 18:59:38 gls Exp $
+bin/4channels
+bin/dcraw_emu
+bin/dcraw_half
+bin/half_mt
+bin/mem_image
+bin/raw-identify
+bin/simple_dcraw
+bin/unprocessed_raw
+include/libraw/libraw.h
+include/libraw/libraw_alloc.h
+include/libraw/libraw_const.h
+include/libraw/libraw_datastream.h
+include/libraw/libraw_internal.h
+include/libraw/libraw_types.h
+include/libraw/libraw_version.h
+lib/libraw.a
+lib/libraw_r.a
+lib/pkgconfig/raw.pc
