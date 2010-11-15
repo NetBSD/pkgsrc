@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3970 2010/11/14 21:18:51 bouyer Exp $
+$NetBSD: CHANGES-2010,v 1.3971 2010/11/15 05:18:54 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5552,3 +5552,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/p5-MLDBM-Serializer-JSON version 0.001 [sno 2010-11-14]
 	Updated lang/coq to 8.3 [tonio 2010-11-14]
 	Updated mail/imp to 4.3.9nb1 [bouyer 2010-11-14]
+	Updated comms/asterisk16 to 1.6.2.14 [jnemeth 2010-11-15]
