@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2010/09/14 11:01:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2010/11/15 22:58:39 abs Exp $
 
 BUILDLINK_TREE+=	xfce4-diskperf-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-diskperf-plugin
 XFCE4_DISKPERF_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-diskperf-plugin+=	xfce4-diskperf-plugin>=2.1.0
-BUILDLINK_ABI_DEPENDS.xfce4-diskperf-plugin?=	xfce4-diskperf-plugin>=2.1.0nb3
+BUILDLINK_ABI_DEPENDS.xfce4-diskperf-plugin?=	xfce4-diskperf-plugin>=2.1.0nb4
 BUILDLINK_PKGSRCDIR.xfce4-diskperf-plugin?=	../../sysutils/xfce4-diskperf-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

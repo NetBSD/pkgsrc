@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/09/14 11:01:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/11/15 22:56:46 abs Exp $
 
 BUILDLINK_TREE+=	qtscriptgenerator
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qtscriptgenerator
 QTSCRIPTGENERATOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qtscriptgenerator+=	qtscriptgenerator>=0.1.0
-BUILDLINK_ABI_DEPENDS.qtscriptgenerator?=	qtscriptgenerator>=0.1.0nb5
+BUILDLINK_ABI_DEPENDS.qtscriptgenerator?=	qtscriptgenerator>=0.1.0nb6
 BUILDLINK_PKGSRCDIR.qtscriptgenerator?=	../../devel/qtscriptgenerator
 
 .include "../../x11/qt4-libs/buildlink3.mk"
