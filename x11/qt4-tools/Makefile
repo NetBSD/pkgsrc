@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2010/09/14 11:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2010/11/15 13:05:47 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
-
-PKGREVISION=	2
 
 PKGNAME=	qt4-tools-${QTVERSION}
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
@@ -37,35 +35,31 @@ post-configure:
 	ln -s ${QTPREFIX}/bin/rcc ${WRKSRC}/bin/rcc
 
 do-install:
-.for prog in assistant_adp lrelease lupdate pixeltool qmake qt3to4
+.for prog in lconvert lrelease lupdate pixeltool qdoc3 qmake qmlviewer qt3to4 qtconfig qttracereplay xmlpatterns xmlpatternsvalidator
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
 .endfor
-.for prog in assistant designer linguist qdoc3 qtconfig qhelpconverter \
-		qhelpgenerator qcollectiongenerator
+.for prog in assistant designer linguist qcollectiongenerator qhelpconverter qhelpgenerator
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
 		${DESTDIR}${QTPREFIX}/bin
 .endfor
 	cd ${WRKSRC}/tools/assistant/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
-	cd ${WRKSRC}/tools/assistant/compat/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
-		${MAKE_PROGRAM} install_assistant_headers
 	cd ${WRKSRC}/tools/designer/src/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_designer_headers
 	cd ${WRKSRC}/tools/designer/src/uitools && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_quitools_headers
-.for lib in QtAssistantClient QtCLucene QtDesigner QtDesignerComponents QtHelp QtUiTools
+.for lib in QtCLucene QtDesigner QtDesignerComponents QtHelp QtUiTools
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed -e "s:${WRKSRC}:${QTPREFIX}:g" \
 		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKDIR}/${lib}.pc
 	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 .endfor
+.for lib in qdeclarativeview qt3supportwidgets qwebview
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/designer/libqt3supportwidgets.la \
+		${WRKSRC}/plugins/designer/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/plugins/designer/
-	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/designer/libqwebview.la \
-		${DESTDIR}${QTPREFIX}/plugins/designer/
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/tools/linguist/phrasebooks/*.qph \
 		${DESTDIR}${QTPREFIX}/phrasebooks/
 	cp -R ${WRKSRC}/mkspecs ${DESTDIR}${QTPREFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2010/07/04 06:00:14 adam Exp $
+# $NetBSD: Makefile.common,v 1.22 2010/11/15 13:05:45 adam Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -34,6 +34,12 @@ CONFIGURE_ARGS.SunOS+=	-no-xrender
 CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//}
 OPSYSVARS+=		CONFIGURE_ARGS
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MAKE_JOBS)
+CONFIGURE_ENV+=		MAKE_FLAGS=-j${MAKE_JOBS:Q}
+.endif
 
 LIBQT?=			-lQtCore -lQtGui
 
@@ -98,9 +104,9 @@ CXXFLAGS+=		-DQ_INLINE_TEMPLATES=inline
 .endif
 
 pre-configure:
-	sed	-e 's:@LOCALBASE@:${LOCALBASE:Q}:g' \
-		-e 's:@X11BASE@:${X11BASE:Q}:g' \
-		-e 's:@X11PREFIX@:${X11PREFIX:Q}:g' \
+	sed	-e 's:@LOCALBASE@:${LOCALBASE}:g' \
+		-e 's:@X11BASE@:${X11BASE}:g' \
+		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
 		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \
 		-e 's:@CC@:${CC:Q}:g' \
 		-e 's:@CXX@:${CXX:Q}:g' \
@@ -108,14 +114,14 @@ pre-configure:
 		-e 's:@CFLAGS@:${CFLAGS:Q}:g' \
 		-e 's:@CXXFLAGS@:${CXXFLAGS:Q}:g' \
 		-e 's:@SYS_LIBS@:${SYS_LIBS:Q}:g' \
-		-e 's:@LEX@:${LEX:Q}:g' \
+		-e 's:@LEX@:${LEX}:g' \
 		-e 's:@YACC@:${TOOLS_CMDLINE_YACC:Q}:g' \
 		-e 's:@AR@:${AR:Q}:g' \
-		-e 's:@MKDIR@:${MKDIR:Q}:g' \
+		-e 's:@MKDIR@:${MKDIR}:g' \
 		-e 's:@LIBQT@:${LIBQT:Q}:g' \
 		-e 's:@PTHREAD_LDFLAGS@:${PTHREAD_LDFLAGS:Q}:g' \
 		-e 's:@PTHREAD_LIBS@:${PTHREAD_LIBS:Q}:g' \
-		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG:Q}:g' \
+		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
 		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
 		${FILESDIR}/qmake.conf > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \

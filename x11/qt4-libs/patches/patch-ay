@@ -1,35 +1,33 @@
-$NetBSD: patch-ay,v 1.7 2010/07/04 06:00:14 adam Exp $
+$NetBSD: patch-ay,v 1.8 2010/11/15 13:05:45 adam Exp $
 
---- src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.orig	2010-06-02 02:03:12.000000000 +0000
+--- src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.orig	2010-09-10 09:05:23.000000000 +0000
 +++ src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h
-@@ -86,6 +86,13 @@
- #define WTF_PLATFORM_OPENBSD 1
+@@ -399,7 +399,7 @@
+ 
+ /* OS(NETBSD) - NetBSD */
+ #if defined(__NetBSD__)
+-#define WTF_PLATFORM_NETBSD 1
++#define WTF_OS_NETBSD 1
  #endif
  
-+/* PLATFORM(DRAGONFLY) */
-+/* Operating system level dependencies for OpenBSD systems that */
-+/* should be used regardless of operating environment */
+ /* OS(OPENBSD) - OpenBSD */
+@@ -407,6 +407,11 @@
+ #define WTF_OS_OPENBSD 1
+ #endif
+ 
++/* OS(DRAGONFLY) - DragonFly */
 +#ifdef __DragonFly__
-+#define WTF_PLATFORM_DRAGONFLY 1
++#define WTF_OS_DRAGONFLY 1
 +#endif
 +
- /* PLATFORM(SOLARIS) */
- /* Operating system level dependencies for Solaris that should be used */
- /* regardless of operating environment */
-@@ -141,6 +148,7 @@
- /* should be used regardless of operating environment */
- #if   PLATFORM(DARWIN)     \
-    || PLATFORM(FREEBSD)    \
-+   || PLATFORM(DRAGONFLY)  \
-    || PLATFORM(SYMBIAN)    \
-    || PLATFORM(NETBSD)     \
-    || PLATFORM(SOLARIS)    \
-@@ -723,7 +731,7 @@
- #endif
- 
- #if !defined(WTF_USE_JSVALUE64) && !defined(WTF_USE_JSVALUE32) && !defined(WTF_USE_JSVALUE32_64)
--#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX) || PLATFORM(SOLARIS) || PLATFORM(HPUX))
-+#if (PLATFORM(X86_64) && (PLATFORM(UNIX) || PLATFORM(WIN_OS))) || PLATFORM(IA64) || PLATFORM(ALPHA)
- #define WTF_USE_JSVALUE64 1
- #elif (PLATFORM(IA64) && !PLATFORM(IA64_32)) || PLATFORM(SPARC64) || PLATFORM(ALPHA)
- #define WTF_USE_JSVALUE64 1
+ /* OS(QNX) - QNX */
+ #if defined(__QNXNTO__)
+ #define WTF_OS_QNX 1
+@@ -440,6 +445,7 @@
+     || OS(ANDROID)          \
+     || OS(DARWIN)           \
+     || OS(FREEBSD)          \
++    || OS(DRAGONFLY)        \
+     || OS(HAIKU)            \
+     || OS(HPUX)             \
+     || OS(LINUX)            \

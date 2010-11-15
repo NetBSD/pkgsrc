@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.22 2010/07/04 06:00:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2010/11/15 13:05:44 adam Exp $
 # used by x11/qt4-libs/Makefile.common
 # used by x11/qt4-tools/Makefile
 
-QTVERSION=	4.6.3
+QTVERSION=	4.7.1
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qt.nokia.com/
 
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3

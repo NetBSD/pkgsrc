@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2010/11/15 13:05:45 adam Exp $
+
+--- src/3rdparty/webkit/JavaScriptCore/JavaScriptCore.pri.orig	2010-11-06 01:55:19.000000000 +0000
++++ src/3rdparty/webkit/JavaScriptCore/JavaScriptCore.pri
+@@ -90,7 +90,7 @@ defineTest(addJavaScriptCoreLib) {
+         # that can't resolve symbols from QtCore if libjscore comes after.
+         QMAKE_LIBDIR = $$pathToJavaScriptCoreOutput $$QMAKE_LIBDIR
+         LIBS += -l$$JAVASCRIPTCORE_TARGET
+-        POST_TARGETDEPS += $${pathToJavaScriptCoreOutput}$${QMAKE_DIR_SEP}lib$${JAVASCRIPTCORE_TARGET}.a
++        POST_TARGETDEPS += $${pathToJavaScriptCoreOutput}$${QMAKE_DIR_SEP}lib$${JAVASCRIPTCORE_TARGET}.la
+     }
+ 
+     win32-* {
