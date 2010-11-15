@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/10/02 12:14:44 bad Exp $
+# $NetBSD: Makefile,v 1.9 2010/11/15 22:57:13 abs Exp $
 #
 
 DISTNAME=	fotoxx-10.8.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://kornelix.squarespace.com/storage/downloads/
 

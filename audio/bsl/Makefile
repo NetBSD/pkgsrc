@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/09/14 11:01:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/15 22:56:12 abs Exp $
 #
 
 DISTNAME=	bsl-0.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buzztard/}
 
