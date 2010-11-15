@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/15 18:59:38 gls Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/15 19:52:55 drochner Exp $
 #
 
 DISTNAME=		LibRaw-0.11.2
@@ -22,7 +22,7 @@ SUBST_STAGE.pc=		post-configure
 SUBST_MESSAGE.pc=	Fixing prefix and version in raw.pc file.
 SUBST_FILES.pc=		raw.pc
 SUBST_SED.pc=		-e 's,@@PREFIX@@,${PREFIX},'
-SUBST_SED.pc+=		-e 's,@@VERSION@@,${PKGVERSIONi_NOREV},'
+SUBST_SED.pc+=		-e 's,@@VERSION@@,${PKGVERSION_NOREV},'
 
 INSTALLATION_DIRS+= lib/pkgconfig
 
