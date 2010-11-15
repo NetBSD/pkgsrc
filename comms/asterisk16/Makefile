@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2010/11/10 09:29:13 jnemeth Exp $
+# $NetBSD: Makefile,v 1.25 2010/11/15 05:18:16 jnemeth Exp $
 #
 
-DISTNAME=	asterisk-1.6.2.13
+DISTNAME=	asterisk-1.6.2.14
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -9,7 +9,6 @@ CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
 		http://downloads.asterisk.org/pub/telephony/sounds/releases/
-PKGREVISION=	2
 
 OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
@@ -101,7 +100,7 @@ SUBST_FILES.configs+=	configs/http.conf.sample
 SUBST_FILES.configs+=	configs/musiconhold.conf.sample
 SUBST_FILES.configs+=	configs/osp.conf.sample
 SUBST_FILES.configs+=	configs/phoneprov.conf.sample
-SUBST_FILES.configs+=	configs/res_config_sqlite.conf
+SUBST_FILES.configs+=	configs/res_config_sqlite.conf.sample
 SUBST_SED.configs+=	-e 's|/var/lib/asterisk|${ASTVARLIBDIR}|'
 SUBST_SED.configs+=	-e "s|/usr/local/man|${ASTMANDIR}|"
 SUBST_SED.configs+=	-e "s|/usr/local|${PREFIX}|"
@@ -192,6 +191,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/India-CID.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/PEERING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/api-1.6.2-changes.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/asterisk-mib.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/backtrace.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/building_queues.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}

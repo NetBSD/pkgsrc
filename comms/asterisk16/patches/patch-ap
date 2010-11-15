@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
+$NetBSD: patch-ap,v 1.2 2010/11/15 05:18:16 jnemeth Exp $
 
---- configure.ac.orig	2008-12-15 07:48:22.000000000 -0800
+--- configure.ac.orig	2010-09-10 01:16:32.000000000 +0000
 +++ configure.ac
-@@ -568,6 +568,9 @@ AST_C_DEFINE_CHECK([IP_MTU_DISCOVER], [I
+@@ -796,6 +796,9 @@ AST_C_DEFINE_CHECK([IP_MTU_DISCOVER], [I
  AC_CHECK_HEADER([libkern/OSAtomic.h],
                  [AC_DEFINE_UNQUOTED([HAVE_OSX_ATOMICS], 1, [Define to 1 if OSX atomic operations are supported.])])
  
@@ -10,5 +10,5 @@ $NetBSD: patch-ap,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
 +                [AC_DEFINE_UNQUOTED([HAVE_SYS_ATOMIC_H], 1, [Define to 1 if sys/atomic.h atomic operations are supported.])])
 +
  AC_CHECK_SIZEOF(int)
- 
- # do the package library checks now
+ AC_CHECK_SIZEOF(long)
+ AC_CHECK_SIZEOF(long long)

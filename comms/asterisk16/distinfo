@@ -1,23 +1,17 @@
-$NetBSD: distinfo,v 1.16 2010/09/23 23:30:38 jnemeth Exp $
+$NetBSD: distinfo,v 1.17 2010/11/15 05:18:16 jnemeth Exp $
 
-SHA1 (asterisk-1.6.2.13/asterisk-1.6.2.13.tar.gz) = b412d4a8589b5b58bd64e2b7f277712b7cbbfabd
-RMD160 (asterisk-1.6.2.13/asterisk-1.6.2.13.tar.gz) = ebdd776da2e76a247a621748d8aea0c1f0cffc63
-Size (asterisk-1.6.2.13/asterisk-1.6.2.13.tar.gz) = 23679304 bytes
-SHA1 (asterisk-1.6.2.13/asterisk-core-sounds-en-gsm-1.4.19.tar.gz) = 719fee72692514fb96a0c619ed1a6b9cabfb5098
-RMD160 (asterisk-1.6.2.13/asterisk-core-sounds-en-gsm-1.4.19.tar.gz) = 9740ea2e22dfb819b0528ba0ab5b5b6424039442
-Size (asterisk-1.6.2.13/asterisk-core-sounds-en-gsm-1.4.19.tar.gz) = 1784830 bytes
-SHA1 (asterisk-1.6.2.13/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-1.6.2.13/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-1.6.2.13/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
-SHA1 (asterisk-1.6.2.13/asterisk-moh-opsound-wav-2.03.tar.gz) = f40fd6ea03dfe8d72ada2540b2288bfdc006381d
-RMD160 (asterisk-1.6.2.13/asterisk-moh-opsound-wav-2.03.tar.gz) = 9566974a836051e08f51412de508d92bf3be7e02
-Size (asterisk-1.6.2.13/asterisk-moh-opsound-wav-2.03.tar.gz) = 15359473 bytes
-SHA1 (asterisk-1.6.2.13/extract-cfile.awk) = c4f08eee1ab83c041bde1ab91672a4a3c43c28b8
-RMD160 (asterisk-1.6.2.13/extract-cfile.awk) = cd59f8e5807732023d5aec95187e2d5572f400a4
-Size (asterisk-1.6.2.13/extract-cfile.awk) = 667 bytes
-SHA1 (asterisk-1.6.2.13/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
-RMD160 (asterisk-1.6.2.13/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
-Size (asterisk-1.6.2.13/rfc3951.txt) = 373442 bytes
+SHA1 (asterisk-1.6.2.14/asterisk-1.6.2.14.tar.gz) = 452b5b9200b9ac82679102516cb7cbf006c1bd9a
+RMD160 (asterisk-1.6.2.14/asterisk-1.6.2.14.tar.gz) = 96024982e8e298c5ec61c5e3d6322a788060df51
+Size (asterisk-1.6.2.14/asterisk-1.6.2.14.tar.gz) = 23715262 bytes
+SHA1 (asterisk-1.6.2.14/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-1.6.2.14/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-1.6.2.14/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (asterisk-1.6.2.14/extract-cfile.awk) = c4f08eee1ab83c041bde1ab91672a4a3c43c28b8
+RMD160 (asterisk-1.6.2.14/extract-cfile.awk) = cd59f8e5807732023d5aec95187e2d5572f400a4
+Size (asterisk-1.6.2.14/extract-cfile.awk) = 667 bytes
+SHA1 (asterisk-1.6.2.14/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
+RMD160 (asterisk-1.6.2.14/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
+Size (asterisk-1.6.2.14/rfc3951.txt) = 373442 bytes
 SHA1 (patch-aa) = 8c2a3c75adff34474c8f416bcea5842e771e4631
 SHA1 (patch-af) = 09860d714281cb4c65d1a087cf5b16647a16e2fa
 SHA1 (patch-ag) = c71c61350cefbbe53eefa99245ca7712753f22d5
@@ -27,8 +21,8 @@ SHA1 (patch-al) = b2a1134786d7c3b118ee8c47892f91dd2a4c783a
 SHA1 (patch-am) = 98aa4648b867d193ec05d8da14434205f369c17b
 SHA1 (patch-an) = 93a5df66fd6459fb76e9191dc3bf37b9ee5483b5
 SHA1 (patch-ao) = 0663a698469550b22bb97ee1b18980bc2bc67495
-SHA1 (patch-ap) = d60274a44e10dc4e70235ac97b7ae21f37ce713e
-SHA1 (patch-aq) = 9020c4327d39276f51215d277c015477ba2cd5bb
+SHA1 (patch-ap) = 309d51a35c600f4898d99ad6ab1c492c47c6a55a
+SHA1 (patch-aq) = 1541e29ab660fa15fe2d7b4154c737b4ab0365bf
 SHA1 (patch-ar) = 44e46336c0b228ab291e025b8bb5ee505f75345a
 SHA1 (patch-as) = a887d37f0829c22d115ff08721893da49e4bfda4
 SHA1 (patch-at) = 7f366ea0075b16c81bb81ba78becc029b3265151
