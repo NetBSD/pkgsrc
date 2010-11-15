@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3972 2010/11/15 09:00:46 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.3973 2010/11/15 09:15:39 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5554,3 +5554,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/imp to 4.3.9nb1 [bouyer 2010-11-14]
 	Updated comms/asterisk16 to 1.6.2.14 [jnemeth 2010-11-15]
 	Updated chat/centerim to 4.22.9nb3 [jnemeth 2010-11-15]
+	Updated net/Transmission to 2.12 [tnn 2010-11-15]
