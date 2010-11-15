@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/09/14 11:01:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/15 22:58:39 abs Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	0.4.0
 
 DISTNAME=	xfce4-fsguard-plugin-${XFCE4_VERSION}
 #PKGREVISION=	1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-fsguard-plugin/
 COMMENT=	Xfce disk space plugin

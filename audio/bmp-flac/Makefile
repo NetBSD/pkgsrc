@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 11:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/15 22:56:11 abs Exp $
 #
 
 DISTNAME=	flac-1.1.3
 PKGNAME=	bmp-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 

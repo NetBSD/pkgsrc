@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2010/09/14 11:01:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2010/11/15 22:58:22 abs Exp $
 
 BUILDLINK_TREE+=	evince
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evince
 EVINCE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evince+=	evince>=2.30.1
-BUILDLINK_ABI_DEPENDS.evince?=	evince>=2.30.3nb3
+BUILDLINK_ABI_DEPENDS.evince?=	evince>=2.30.3nb4
 BUILDLINK_PKGSRCDIR.evince?=	../../print/evince
 
 .include "../../devel/glib2/buildlink3.mk"

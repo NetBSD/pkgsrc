@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 11:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/15 22:57:36 abs Exp $
 #
 
 DISTNAME=	scim-array-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://of.openfoundry.org/download/scimarray/1.0.1/
 

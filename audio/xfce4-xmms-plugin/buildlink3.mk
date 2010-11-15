@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2010/09/14 11:01:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2010/11/15 22:56:23 abs Exp $
 
 BUILDLINK_TREE+=	xfce4-xmms-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-xmms-plugin
 XFCE4_XMMS_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-xmms-plugin+=	xfce4-xmms-plugin>=0.5.1
-BUILDLINK_ABI_DEPENDS.xfce4-xmms-plugin?=	xfce4-xmms-plugin>=0.5.1nb3
+BUILDLINK_ABI_DEPENDS.xfce4-xmms-plugin?=	xfce4-xmms-plugin>=0.5.1nb4
 BUILDLINK_PKGSRCDIR.xfce4-xmms-plugin?=	../../audio/xfce4-xmms-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

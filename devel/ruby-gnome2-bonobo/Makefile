@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/10/23 12:45:08 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/11/15 22:56:46 abs Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-bonobo-${VERSION}
 COMMENT=		Ruby binding of libbonobo-2.x or later
+PKGREVISION=		1
 CATEGORIES=		devel
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-bonobo-[0-9]*

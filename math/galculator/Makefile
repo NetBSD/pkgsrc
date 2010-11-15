@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2010/09/14 11:02:20 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2010/11/15 22:57:50 abs Exp $
 #
 
 DISTNAME=		galculator-1.3.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=galculator/}
 

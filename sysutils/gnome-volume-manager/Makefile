@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2010/09/14 11:02:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/15 22:58:34 abs Exp $
 #
 
 DISTNAME=	gnome-volume-manager-2.24.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-volume-manager/2.24/}
 EXTRACT_SUFX=	.tar.bz2

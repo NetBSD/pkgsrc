@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2010/09/14 11:02:42 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/11/15 22:58:27 abs Exp $
 
 .include	"../../security/nessus/Makefile.common"
 
 DISTNAME=	nessus-plugins-GPL-${VERS}
 PKGNAME=	nessus-plugins-${VERS}
-PKGREVISION=	5
+PKGREVISION=	6
 # nmap.nasl was removed from the pack,
 # http://www.nessus.org/documentation/?doc=nmap-usage
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} nmap.nasl

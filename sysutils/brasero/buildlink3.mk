@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2010/09/14 11:01:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2010/11/15 22:58:30 abs Exp $
 
 BUILDLINK_TREE+=	brasero
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	brasero
 BRASERO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.brasero+=	brasero>=2.26.0
-BUILDLINK_ABI_DEPENDS.brasero?=	brasero>=2.30.2nb2
+BUILDLINK_ABI_DEPENDS.brasero?=	brasero>=2.30.2nb3
 BUILDLINK_PKGSRCDIR.brasero?=	../../sysutils/brasero
 
 .include "../../x11/gtk2/buildlink3.mk"
