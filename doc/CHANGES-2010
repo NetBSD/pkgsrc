@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3976 2010/11/15 17:54:33 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3977 2010/11/15 18:41:11 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5569,3 +5569,11 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/py-qt4 to 4.8.1 [adam 2010-11-15]
 	Updated geography/gdal-lib to 1.7.3 [adam 2010-11-15]
 	Updated print/tex-babel to 3.8lnb2 [minskim 2010-11-15]
+	Updated x11/gtk2 to 2.22.0 [drochner 2010-11-15]
+	Updated graphics/librsvg to 2.32.1 [drochner 2010-11-15]
+	Updated devel/libbonobo to 2.32.0 [drochner 2010-11-15]
+	Updated devel/libgnome to 2.32.0 [drochner 2010-11-15]
+	Updated print/poppler to 0.14.5 [drochner 2010-11-15]
+	Updated devel/glib2 to 2.26.1 [drochner 2010-11-15]
+	Updated graphics/gdk-pixbuf2 to 2.22.1 [drochner 2010-11-15]
+	Added graphics/py-pyfits version 2.3.1 [drochner 2010-11-15]
