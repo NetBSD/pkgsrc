@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2010/09/14 11:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2010/11/15 13:05:45 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 # XXX this is to test what really gets installed when 'do-install' is disabled
@@ -27,9 +26,14 @@ CONFIGURE_ARGS+=	-no-sql-sqlite
 
 INSTALLATION_DIRS=	lib/pkgconfig
 INSTALLATION_DIRS+=	${QTPREFIX}/bin
+INSTALLATION_DIRS+=	${QTPREFIX}/imports/Qt/labs/folderlistmodel
+INSTALLATION_DIRS+=	${QTPREFIX}/imports/Qt/labs/gestures
+INSTALLATION_DIRS+=	${QTPREFIX}/imports/Qt/labs/particles
+INSTALLATION_DIRS+=	${QTPREFIX}/imports/QtWebKit
 INSTALLATION_DIRS+=	${QTPREFIX}/include
 INSTALLATION_DIRS+=	${QTPREFIX}/lib
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/accessible
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/bearer
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/codecs
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/graphicssystems
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/iconengines
@@ -43,13 +47,25 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
 .endfor
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic3 \
-	    ${DESTDIR}${QTPREFIX}/bin
-.for incl in corelib gui multimedia network opengl qt3support script scripttools sql svg testlib xml xmlpatterns 3rdparty/webkit/WebCore
+		${DESTDIR}${QTPREFIX}/bin/
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/imports/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.la \
+		${DESTDIR}${QTPREFIX}/imports/Qt/labs/folderlistmodel/
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/imports/Qt/labs/gestures/libqmlgesturesplugin.la \
+		${DESTDIR}${QTPREFIX}/imports/Qt/labs/gestures/
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/imports/Qt/labs/particles/libqmlparticlesplugin.la \
+		${DESTDIR}${QTPREFIX}/imports/Qt/labs/particles/
+	 ${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/imports/QtWebKit/libqmlwebkitplugin.la \
+		${DESTDIR}${QTPREFIX}/imports/QtWebKit/
+.for incl in corelib declarative gui multimedia network opengl qt3support script scripttools sql svg testlib xml xmlpatterns 3rdparty/webkit/WebCore
 	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .endfor
 	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-.for lib in Qt3Support QtCore QtGui QtMultimedia QtNetwork QtOpenGL QtSql QtSvg QtXml QtXmlPatterns QtScript QtScriptTools QtTest QtWebKit
+.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
@@ -63,14 +79,17 @@ do-install:
 		${WRKSRC}/plugins/accessible/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/accessible/
 .endfor
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/plugins/bearer/libqgenericbearer.la \
+		${DESTDIR}${QTPREFIX}/plugins/bearer/
 .for codec in qcncodecs qjpcodecs qkrcodecs qtwcodecs
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/codecs/lib${codec}.la \
 		${DESTDIR}${QTPREFIX}/plugins/codecs/
 .endfor
-.for gfxs in qglgraphicssystem qtracegraphicssystem
+.for plug in qglgraphicssystem qtracegraphicssystem
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/graphicssystems/lib${gfxs}.la \
+		${WRKSRC}/plugins/graphicssystems/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/graphicssystems/
 .endfor
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
@@ -93,6 +112,7 @@ SUBST_FILES.socklen=	mkspecs/darwin-g++/qplatformdefs.h
 SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
