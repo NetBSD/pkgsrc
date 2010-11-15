@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3980 2010/11/15 21:30:57 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3981 2010/11/15 21:32:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5582,3 +5582,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/shotwell version 0.7.2 [gls 2010-11-15]
 	Added databases/sqlite3-docs version 3.7.3 [dholland 2010-11-15]
 	Updated print/tex-ukrhyph to 2009nb1 [minskim 2010-11-15]
+	Updated print/tex-hyphen-ukrainian to 2010nb2 [minskim 2010-11-15]
