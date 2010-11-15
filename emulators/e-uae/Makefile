@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/09/14 11:13:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/15 22:56:54 abs Exp $
 
 DISTNAME=	e-uae-0.8.28
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.rcdrummond.net/uae/e-uae-0.8.28/
 EXTRACT_SUFX=	.tar.bz2

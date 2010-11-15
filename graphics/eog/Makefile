@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2010/09/14 11:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2010/11/15 22:57:12 abs Exp $
 #
 
 DISTNAME=	eog-2.30.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.30/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/14 11:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/15 22:59:17 abs Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	1.0.0
 
 DISTNAME=	xfce4-screenshooter-plugin-${XFCE4_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-screenshooter-plugin/
 COMMENT=	Xfce screenshot plugin

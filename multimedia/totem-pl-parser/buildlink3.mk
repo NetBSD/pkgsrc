@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2010/09/14 11:00:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2010/11/15 22:58:09 abs Exp $
 
 BUILDLINK_TREE+=	totem-pl-parser
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	totem-pl-parser
 TOTEM_PL_PARSER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.totem-pl-parser+=	totem-pl-parser>=2.22.1
-BUILDLINK_ABI_DEPENDS.totem-pl-parser?=	totem-pl-parser>=2.30.2nb1
+BUILDLINK_ABI_DEPENDS.totem-pl-parser?=	totem-pl-parser>=2.30.4nb1
 BUILDLINK_PKGSRCDIR.totem-pl-parser?=	../../multimedia/totem-pl-parser
 
 .include "../../devel/glib2/buildlink3.mk"
