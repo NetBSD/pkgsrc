@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2010/07/06 15:00:27 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2010/11/15 20:35:57 drochner Exp $
 
-DISTNAME=	gnome-platform-2.30.2
+DISTNAME=	gnome-platform-2.32.0
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -18,29 +18,30 @@ PKG_SUGGESTED_OPTIONS=	fam
 
 # see http://ftp.gnome.org/pub/GNOME/platform/2.30/2.30.1/sources/
 
-DEPENDS+=	GConf>=2.28.1:../../devel/GConf
-DEPENDS+=	ORBit2>=2.14.18:../../net/ORBit2
-DEPENDS+=	at-spi>=1.30.1:../../devel/at-spi
-DEPENDS+=	atk>=1.30.0:../../devel/atk
+DEPENDS+=	GConf>=2.32.0:../../devel/GConf
+DEPENDS+=	ORBit2>=2.14.19:../../net/ORBit2
+DEPENDS+=	at-spi>=1.32.0:../../devel/at-spi
+DEPENDS+=	atk>=1.32.0:../../devel/atk
 DEPENDS+=	libaudiofile>=0.2.7:../../audio/libaudiofile
 DEPENDS+=	esound>=0.2.41:../../audio/esound
+DEPENDS+=	gdk-pixbuf2>=2.22.0:../../graphics/gdk-pixbuf2
 .if !empty(PKG_OPTIONS:Mfam)
-DEPENDS+=	gio-fam>=2.24.0:../../sysutils/gio-fam  # This is part of glib2.
+DEPENDS+=	gio-fam>=2.26.0:../../sysutils/gio-fam  # This is part of glib2.
 .endif
-DEPENDS+=	glib2>=2.24.1:../../devel/glib2
+DEPENDS+=	glib2>=2.26.0:../../devel/glib2
 DEPENDS+=	gnome-mime-data>=2.18.0:../../databases/gnome-mime-data
-DEPENDS+=	gnome-vfs>=2.24.3:../../sysutils/gnome-vfs
+DEPENDS+=	gnome-vfs>=2.24.4:../../sysutils/gnome-vfs
 DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
-DEPENDS+=	gtk2+>=2.20.1:../../x11/gtk2
-DEPENDS+=	gtk-doc>=1.14:../../textproc/gtk-doc
+DEPENDS+=	gtk2+>=2.22.0:../../x11/gtk2
+DEPENDS+=	gtk-doc>=1.15:../../textproc/gtk-doc
 DEPENDS+=	libIDL>=0.8.14:../../net/libIDL
 DEPENDS+=	libart>=2.3.21:../../graphics/libart
-DEPENDS+=	libbonobo>=2.24.3:../../devel/libbonobo
-DEPENDS+=	libbonoboui>=2.24.3:../../devel/libbonoboui
+DEPENDS+=	libbonobo>=2.32.0:../../devel/libbonobo
+DEPENDS+=	libbonoboui>=2.24.4:../../devel/libbonoboui
 DEPENDS+=	libglade>=2.6.4:../../devel/libglade
-DEPENDS+=	libgnome>=2.30.0:../../devel/libgnome
-DEPENDS+=	libgnomecanvas>=2.30.1:../../graphics/libgnomecanvas
-DEPENDS+=	libgnomeui>=2.24.3:../../devel/libgnomeui
-DEPENDS+=	pango>=1.28.1:../../devel/pango
+DEPENDS+=	libgnome>=2.32.0:../../devel/libgnome
+DEPENDS+=	libgnomecanvas>=2.30.2:../../graphics/libgnomecanvas
+DEPENDS+=	libgnomeui>=2.24.4:../../devel/libgnomeui
+DEPENDS+=	pango>=1.28.3:../../devel/pango
 
 .include "../../mk/bsd.pkg.mk"
