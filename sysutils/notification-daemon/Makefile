@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2010/09/14 11:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/15 22:58:36 abs Exp $
 #
 
 DISTNAME=	notification-daemon-0.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/notification-daemon/
 

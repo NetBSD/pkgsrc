@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2010/09/14 11:00:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2010/11/15 22:58:08 abs Exp $
 
 BUILDLINK_TREE+=	swfdec
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	swfdec
 SWFDEC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.swfdec+=	swfdec>=0.8.2
-BUILDLINK_ABI_DEPENDS.swfdec?=	swfdec>=0.8.4nb4
+BUILDLINK_ABI_DEPENDS.swfdec?=	swfdec>=0.8.4nb5
 BUILDLINK_PKGSRCDIR.swfdec?=	../../multimedia/swfdec
 
 pkgbase := swfdec

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2010/09/14 11:01:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2010/11/15 22:58:39 abs Exp $
 
 BUILDLINK_TREE+=	xfce4-netload-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-netload-plugin
 XFCE4_NETLOAD_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-netload-plugin+=	xfce4-netload-plugin>=0.4.0
-BUILDLINK_ABI_DEPENDS.xfce4-netload-plugin?=	xfce4-netload-plugin>=0.4.0nb3
+BUILDLINK_ABI_DEPENDS.xfce4-netload-plugin?=	xfce4-netload-plugin>=0.4.0nb4
 BUILDLINK_PKGSRCDIR.xfce4-netload-plugin?=	../../sysutils/xfce4-netload-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

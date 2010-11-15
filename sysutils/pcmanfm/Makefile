@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/09/14 11:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/11/15 22:58:37 abs Exp $
 #
 
 DISTNAME=	pcmanfm-0.1.8.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 

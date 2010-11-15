@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/10/23 12:45:12 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/15 22:58:37 abs Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomevfs-${VERSION}
 COMMENT=		Ruby binding of gnomevfs
+PKGREVISION=		1
 CATEGORIES=		sysutils
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gnomevfs-[0-9]*
