@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2009/09/09 16:54:13 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2010/11/15 18:56:52 drochner Exp $
 
---- main.c.orig	2009-09-08 22:05:17.000000000 +0200
+--- main.c.orig	2010-06-23 08:37:56.000000000 +0000
 +++ main.c
 @@ -55,6 +55,7 @@ GdkPixbuf *questionmark;
  GdkPixbuf *coverlayer;
@@ -10,7 +10,30 @@ $NetBSD: patch-ad,v 1.1 2009/09/09 16:54:13 drochner Exp $
  
  GdkPixbuf* scale_width(GdkPixbuf* pb, float nw) {
    double width = gdk_pixbuf_get_width(pb);
-@@ -601,6 +602,8 @@ void pause_cb(gpointer seekbar) {
+@@ -352,7 +353,7 @@ guint64 pos_within_track(int tr) {
+   return secs;
+ }
+ 
+-void pause() {
++void ap_pause() {
+   GtkWidget* pausebutton = GTK_WIDGET(gtk_builder_get_object(builder, "tool_play"));
+ 
+   gst_element_set_state(pipeline, GST_STATE_PAUSED);
+@@ -577,7 +578,7 @@ void next_cb() {
+ }
+ 
+ void stop() {
+-  pause();
++  ap_pause();
+   gst_element_set_state(pipeline, GST_STATE_NULL);
+   jump_to_track(0, 0);
+ }
+@@ -597,10 +598,12 @@ void seek_cb (gpointer seekbar) {
+ 
+ void pause_cb(gpointer seekbar) {
+   if(!playing) play();
+-  else pause();
++  else ap_pause();
  }
  
  gboolean progress_timeout_cb(gpointer seekbar) {
@@ -19,7 +42,7 @@ $NetBSD: patch-ad,v 1.1 2009/09/09 16:54:13 drochner Exp $
    if(loaded) {
      g_signal_handlers_block_by_func(seekbar, seek_cb, seekbar);
  
-@@ -860,6 +863,7 @@ main (int argc, char *argv[])
+@@ -861,6 +864,7 @@ main (int argc, char *argv[])
      gst_element_set_state(pipeline, GST_STATE_NULL);
      gst_object_unref(GST_OBJECT(pipeline));
    }
