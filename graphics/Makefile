@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.570 2010/11/14 20:15:48 drochner Exp $
+# $NetBSD: Makefile,v 1.571 2010/11/15 19:09:01 gls Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -227,6 +227,7 @@ SUBDIR+=	libcaca
 SUBDIR+=	libexif
 SUBDIR+=	libexif-gtk
 SUBDIR+=	libgdiplus
+SUBDIR+=	libgexiv2
 SUBDIR+=	libggi
 SUBDIR+=	libggigcp
 SUBDIR+=	libggimisc
@@ -243,6 +244,7 @@ SUBDIR+=	liblqr
 SUBDIR+=	libotf
 SUBDIR+=	libpano13
 SUBDIR+=	libpuzzle
+SUBDIR+=	libraw
 SUBDIR+=	librsvg
 SUBDIR+=	libscigraphica
 SUBDIR+=	libungif
@@ -384,6 +386,7 @@ SUBDIR+=	sane-frontends
 SUBDIR+=	scidavis
 SUBDIR+=	scigraphica
 SUBDIR+=	scrot
+SUBDIR+=	shotwell
 SUBDIR+=	showimg
 SUBDIR+=	silgraphite
 SUBDIR+=	silgraphite-ft
