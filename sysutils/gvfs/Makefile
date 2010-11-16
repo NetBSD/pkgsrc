@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2010/11/15 22:58:35 abs Exp $
+# $NetBSD: Makefile,v 1.30 2010/11/16 13:57:28 drochner Exp $
 #
 
-DISTNAME=	gvfs-1.4.3
-PKGREVISION=	3
+DISTNAME=	gvfs-1.6.6
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,7 +26,7 @@ PKG_SUGGESTED_OPTIONS+= hal samba
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
 # XXX fuse.bl3.mk will fail if we include it and fuse is not available
-.if ${OPSYS} == "Linux" || (${OPSYS} == "NetBSD" && exists(/usr/include/fuse.h))
+.if ${OPSYS} == "Linux" #|| (${OPSYS} == "NetBSD" && exists(/usr/include/fuse.h))
 PKG_SUGGESTED_OPTIONS+=	fuse
 .endif
 
