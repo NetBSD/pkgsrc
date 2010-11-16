@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/15 22:57:28 abs Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/16 11:46:08 tnn Exp $
 #
 
 DISTNAME=		shotwell-0.7.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://yorba.org/download/shotwell/0.7/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
-HOMEPAGE=		http://yorba.org/download/shotwell/0.7/
+HOMEPAGE=		http://yorba.org/shotwell/
 COMMENT=		Shotwell is a photo organizer for the GNOME desktop
 LICENSE=		gnu-lgpl-v2.1
 
