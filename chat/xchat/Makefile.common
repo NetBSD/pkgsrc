@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.60 2009/12/20 10:09:42 tron Exp $
+# $NetBSD: Makefile.common,v 1.61 2010/11/16 12:21:10 tron Exp $
 
-DISTNAME=	xchat-2.8.6
+DISTNAME=	xchat-2.8.8
 CATEGORIES=	chat
 MASTER_SITES=	http://xchat.org/files/source/2.8/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,10 +9,6 @@ HOMEPAGE=	http://xchat.org/
 LICENSE=	gnu-gpl-v2 
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PATCH_SITES=		http://xchat.org/files/source/2.8/patches/
-PATCHFILES=		xc286-smallfixes.diff
-PATCH_DIST_STRIP=	-p1
 
 DISTINFO_FILE=	${.CURDIR}/../../chat/xchat/distinfo
 PATCHDIR?=	${.CURDIR}/../../chat/xchat/patches
