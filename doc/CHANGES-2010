@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3985 2010/11/16 13:19:37 tron Exp $
+$NetBSD: CHANGES-2010,v 1.3986 2010/11/16 17:55:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5588,3 +5588,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated chat/xchat to 2.8.8 [tron 2010-11-16]
 	Updated chat/xchat-perl to 2.8.8 [tron 2010-11-16]
 	Updated chat/xchat-python to 2.8.8 [tron 2010-11-16]
+	Updated print/tex-cyrillic to 2010 [minskim 2010-11-16]
+	Updated print/tex-cyrillic-doc to 2010 [minskim 2010-11-16]
