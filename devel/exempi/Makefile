@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/01/30 16:28:01 heinz Exp $
+# $NetBSD: Makefile,v 1.8 2010/11/16 13:50:56 drochner Exp $
 #
 
-DISTNAME=	exempi-2.0.0
+DISTNAME=	exempi-2.1.1
 CATEGORIES=	devel graphics
 MASTER_SITES=	http://libopenraw.freedesktop.org/download/
 
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	ac_cv_tls=none
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
