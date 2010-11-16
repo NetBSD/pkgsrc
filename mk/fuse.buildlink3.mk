@@ -1,10 +1,12 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.10 2010/02/01 21:51:55 jmmv Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.10.6.1 2010/11/16 09:28:40 tron Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
 
-.if !defined(FUSE_BUILDLINK3_MK)
-FUSE_BUILDLINK3_MK=	# defined
+# The symbol FUSE_BUILDLINK3_MK is used by filesystems/fuse's bl3.mk,
+# so use something else for our include guard.
+.if !defined(MK_FUSE_BUILDLINK3_MK)
+MK_FUSE_BUILDLINK3_MK=	# defined
 
 .include "bsd.fast.prefs.mk"
 
@@ -87,4 +89,4 @@ PKG_FAIL_REASON+=	"Your OS is not supported by the FUSE pkgsrc framework."
 
 .  endif # end of Operating Systems
 
-.endif # FUSE_BUILDLINK3_MK
+.endif # MK_FUSE_BUILDLINK3_MK
