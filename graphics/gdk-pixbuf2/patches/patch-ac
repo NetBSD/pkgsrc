@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2010/11/16 16:45:08 drochner Exp $
+
+--- contrib/gdk-pixbuf-xlib/Makefile.in.orig	2010-11-05 23:56:05.000000000 +0000
++++ contrib/gdk-pixbuf-xlib/Makefile.in
+@@ -85,7 +85,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
+ 	"$(DESTDIR)$(libgdk_pixbuf_xlibincludedir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+-libgdk_pixbuf_xlib_2_0_la_DEPENDENCIES = $(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GDK_PIXBUF_API_VERSION).la \
++libgdk_pixbuf_xlib_2_0_la_DEPENDENCIES = \
+ 	$(am__DEPENDENCIES_1)
+ am_libgdk_pixbuf_xlib_2_0_la_OBJECTS = gdk-pixbuf-xlib.lo \
+ 	gdk-pixbuf-xlib-render.lo gdk-pixbuf-xlib-drawable.lo \
+@@ -368,7 +368,7 @@ libgdk_pixbuf_xlib_2_0_la_LDFLAGS = \
+ 	-version-info $(LT_VERSION_INFO)
+ 
+ libgdk_pixbuf_xlib_2_0_la_LIBADD = \
+-        $(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GDK_PIXBUF_API_VERSION).la \
++        $(prefix)/lib/libgdk_pixbuf-$(GDK_PIXBUF_API_VERSION).la \
+ 	$(GDK_PIXBUF_XLIB_DEP_LIBS)
+ 
+ libgdk_pixbuf_xlib_2_0_la_SOURCES = \
