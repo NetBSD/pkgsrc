@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1412 2010/11/14 20:43:58 sno Exp $
+# $NetBSD: Makefile,v 1.1413 2010/11/16 19:53:24 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -139,6 +139,7 @@ SUBDIR+=	cvsync
 SUBDIR+=	cxref
 SUBDIR+=	darcs
 SUBDIR+=	darts
+SUBDIR+=	dconf
 SUBDIR+=	ddd
 SUBDIR+=	dejagnu
 SUBDIR+=	dev86
