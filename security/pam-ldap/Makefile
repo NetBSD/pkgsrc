@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2010/11/03 11:39:08 adam Exp $
+# $NetBSD: Makefile,v 1.35 2010/11/16 09:53:50 adam Exp $
 
-DISTNAME=	pam_ldap-185
+DISTNAME=	pam_ldap-186
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.padl.com/pub/ \
 		http://www.padl.com/download/
@@ -25,7 +24,6 @@ CONFIGURE_ARGS+=	--with-ldap-secret-file=${PKG_SYSCONFDIR}/ldap.secret
 
 # Fix (workaround?) a bug with openpam/NetBSD
 # The bug is described in PR security/39313.
-#
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
