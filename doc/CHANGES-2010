@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3982 2010/11/15 22:25:32 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3983 2010/11/16 09:54:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5584,3 +5584,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-ukrhyph to 2009nb1 [minskim 2010-11-15]
 	Updated print/tex-hyphen-ukrainian to 2010nb2 [minskim 2010-11-15]
 	Updated print/tex-hyphen-russian to 2010nb2 [minskim 2010-11-15]
+	Updated security/pam-ldap to 186 [adam 2010-11-16]
