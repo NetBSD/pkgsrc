@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2009/10/21 15:48:50 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2010/11/16 15:12:19 drochner Exp $
 #
 
 .include "../../devel/GConf/Makefile.common"
@@ -17,6 +17,8 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/gconf.xml.system
 EGDIR=		${PREFIX}/share/examples/GConf
 CONF_FILES=	${EGDIR}/path ${PKG_SYSCONFDIR}/2/path
 
+REPLACE_PYTHON=	gsettings/gsettings-schema-convert
+
 # XXX: We need to use XML_CATALOGS here to register the installed DTD.
 #      But we have to wait until a public identifier is choosen for it.
 
@@ -24,6 +26,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gconf/schemas
 
 BUILDLINK_ABI_DEPENDS.dbus-glib+=	dbus-glib>=0.74
+.include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
