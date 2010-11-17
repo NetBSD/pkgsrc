@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3999 2010/11/17 19:27:22 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.4000 2010/11/17 19:33:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5604,3 +5604,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-latexconfig to 2010 [minskim 2010-11-17]
 	Updated comms/obexapp to 1.4.14 [plunky 2010-11-17]
 	Updated print/kpathsea to 6.0.0nb1 [minskim 2010-11-17]
+	Updated print/tex-dvips to 2010nb3 [minskim 2010-11-17]
