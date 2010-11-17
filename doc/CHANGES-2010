@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3994 2010/11/17 17:46:28 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3995 2010/11/17 17:48:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5599,3 +5599,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20101116 [minskim 2010-11-17]
 	Added print/tex-lazylist version 1.0a [minskim 2010-11-17]
 	Added print/tex-lazylist-doc version 1.0a [minskim 2010-11-17]
+	Updated print/tex-polytable to 0.8.2nb1 [minskim 2010-11-17]
