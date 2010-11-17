@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.72 2010/09/23 22:26:06 ahoka Exp $
+# $NetBSD: compiler.mk,v 1.73 2010/11/17 08:38:15 obache Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -12,7 +12,7 @@
 #	Valid values are:
 #		ccc		Compaq C Compilers (Tru64)
 #		ccache		compiler cache (chainable)
-#		clang		Clang C and Objective−C compiler
+#		clang		Clang C and Objective-C compiler
 #		distcc		distributed C/C++ (chainable)
 #		f2c		Fortran 77 to C compiler (chainable)
 #		icc		Intel C++ Compiler (Linux)
@@ -21,6 +21,7 @@
 #		hp		HP-UX C/aC++ compilers
 #		mipspro		Silicon Graphics, Inc. MIPSpro (n32/n64)
 #		mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
+#		msc		Microsoft Visual C++ wrapper cc (Interix)
 #		pcc		Portable C Compiler
 #		sunpro		Sun Microsystems, Inc. WorkShip/Forte/Sun
 #				ONE Studio
@@ -103,6 +104,7 @@ _USE_PKGSRC_GCC=	yes
 .endif
 
 _COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode \
+			msc \
 			sunpro xlc hp pcc clang
 _PSEUDO_COMPILERS=	ccache distcc f2c g95
 
