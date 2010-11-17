@@ -1,0 +1,3 @@
+This package provides a pile of lambda-calculus and list-handling
+macros of an incredibly obtuse nature. The TUGboat paper serves as a
+manual for the macros. This TeX code was formally verified.
