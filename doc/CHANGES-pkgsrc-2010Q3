@@ -52,3 +52,5 @@ Pullup ticket #3272 - requested by bouyer
 net/p5-Net-SNMP: bug fix patch
 Pullup ticket #3275 - requested by dholland
 filesystems/fuse: portability fix
+Pullup ticket #3276 - requested by taca
+security/openssl: security update
