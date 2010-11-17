@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9858 2010/11/15 13:12:03 adam Exp $
+$NetBSD: TODO,v 1.9859 2010/11/17 00:12:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
 	o asymptote-2.08
-	o at-spi-1.32.0
 	o aterm-1.0.1
 	o auctex-11.86 [pkg/43966]
 	o audacious-plugins-2.4.0
@@ -579,8 +578,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o evolution-mapi-0.32.0 [GNOME 2.32]
 	o evolution-webcal-2.32.0
 	o ex-20050325
-	o exempi-2.0.2 [broken on NetBSD]
-	o exempi-2.1.1
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f-spot-0.8.0
@@ -672,7 +669,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcpio-2.10
 	o gdb-7.2
 	o gdeskcal-1.01
-	o gdk-pixbuf2-2.22.1
 	o gdl-2.30.1 [GNOME 2.32]
 	o gdm-2.32.0 [GNOME 2.32]
 	o gdsreader-0.3.2
@@ -761,7 +757,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.2
-	o gtk2-2.22.0
 	o gtkglarea-2.0.1
 	o gtkmm-2.22.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -771,7 +766,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gucharmap-2.32.0
 	o guile-gtk-2.0
 	o gupnp-0.14.0
-	o gvfs-1.6.5
 	o gwaei-1.4.3
 	o gworkspace-0.8.8
 	o gzip-1.4
@@ -893,7 +887,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXv-1.0.6
 	o libXxf86dga-1.1.2
 	o libXxf86vm-1.1.1
-	o libbonobo-2.32.0
 	o libcanberra-0.26
 	o libcares-1.7.2
 	o libdockapp-0.6.1
@@ -905,7 +898,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.2.0 [GNOME 2.32]
 	o libgdata-0.7.0
 	o libgiigic-1.1.2
-	o libgnome-keyring-2.32.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-2.32.0
 	o libgpg-error-1.10
@@ -929,7 +921,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.91.0
-	o librsvg2-2.32.0
 	o libsigsegv-2.9
 	o libssh-0.4.6
 	o libssh2-1.2.7
@@ -1096,7 +1087,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.57
 	o packagekit-0.5.1
 	o paprefs-0.9.8
-	o parallel-20100922
+	o parallel-20101113
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.1
@@ -1233,7 +1224,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sawfish-1.7.0.1
 	o saxon-9.2
 	o sbcl-1.0.43
-	o scala-2.8.0
 	o scapy-2.1.1
 	o scew-0.4.0
 	o sch-3.8.3
@@ -1372,7 +1362,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vmips-1.3.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
-	o vte-0.26.1
 	o vttest-20100830
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1409,7 +1398,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
 	o xboard-4.4.4
-	o xchat2-2.8.8
 	o xcircuit-3.6.85
 	o xclock-1.0.5
 	o xcmiscproto-1.2.1
