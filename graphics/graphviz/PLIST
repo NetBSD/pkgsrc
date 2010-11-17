@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/09/13 11:17:30 sno Exp $
+@comment $NetBSD: PLIST,v 1.37 2010/11/17 15:46:21 dholland Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -10,6 +10,7 @@ bin/dot2gxl
 bin/dotty
 bin/fdp
 bin/gc
+bin/gml2gv
 bin/gv2gxl
 bin/gvcolor
 bin/gvgen
@@ -25,6 +26,7 @@ bin/nop
 bin/osage
 bin/prune
 bin/sccmap
+bin/sfdp
 bin/tred
 bin/twopi
 bin/unflatten
@@ -49,12 +51,14 @@ include/graphviz/gvplugin_layout.h
 include/graphviz/gvplugin_loadimage.h
 include/graphviz/gvplugin_render.h
 include/graphviz/gvplugin_textlayout.h
+include/graphviz/gvpr.h
 include/graphviz/pack.h
 include/graphviz/pathgeom.h
 include/graphviz/pathplan.h
 include/graphviz/textpara.h
 include/graphviz/types.h
 include/graphviz/usershape.h
+include/graphviz/xdot.h
 ${PLIST.guile}lib/graphviz/guile/libgv_guile.la
 lib/graphviz/libgvplugin_core.la
 lib/graphviz/libgvplugin_dot_layout.la
@@ -90,14 +94,18 @@ lib/libcdt.la
 lib/libcgraph.la
 lib/libgraph.la
 lib/libgvc.la
+lib/libgvpr.la
 lib/libpathplan.la
+lib/libxdot.la
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/gv.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/gv.so
 lib/pkgconfig/libcdt.pc
 lib/pkgconfig/libcgraph.pc
 lib/pkgconfig/libgraph.pc
 lib/pkgconfig/libgvc.pc
+lib/pkgconfig/libgvpr.pc
 lib/pkgconfig/libpathplan.pc
+lib/pkgconfig/libxdot.pc
 man/man1/acyclic.1
 man/man1/bcomps.1
 man/man1/ccomps.1
@@ -107,6 +115,7 @@ man/man1/dot.1
 man/man1/dotty.1
 man/man1/fdp.1
 man/man1/gc.1
+man/man1/gml2gv.1
 man/man1/gv2gxl.1
 man/man1/gvcolor.1
 man/man1/gvgen.1
@@ -121,6 +130,8 @@ man/man1/nop.1
 man/man1/osage.1
 man/man1/prune.1
 man/man1/sccmap.1
+man/man1/sfdp.1
+man/man1/smyrna.1
 man/man1/tred.1
 man/man1/twopi.1
 man/man1/unflatten.1
@@ -137,6 +148,7 @@ man/man3/gvc.3
 man/man3/pathplan.3
 ${PLIST.tcl}man/man3/tcldot.3tcl
 ${PLIST.tcl}man/man3/tkspline.3tk
+man/man3/xdot.3
 man/man7/graphviz.7
 ${PLIST.tcl}share/graphviz/demo/doted.tcl
 ${PLIST.tcl}share/graphviz/demo/doted.tcl.README
@@ -260,12 +272,12 @@ share/graphviz/doc/html/info/forward.gif
 share/graphviz/doc/html/info/hexagon.gif
 share/graphviz/doc/html/info/house.gif
 share/graphviz/doc/html/info/html1.gif
-share/graphviz/doc/html/info/html2.dot
 share/graphviz/doc/html/info/html2.gif
-share/graphviz/doc/html/info/html3.dot
+share/graphviz/doc/html/info/html2.gv
 share/graphviz/doc/html/info/html3.gif
-share/graphviz/doc/html/info/html4.dot
+share/graphviz/doc/html/info/html3.gv
 share/graphviz/doc/html/info/html4.gif
+share/graphviz/doc/html/info/html4.gv
 share/graphviz/doc/html/info/index.html
 share/graphviz/doc/html/info/invhouse.gif
 share/graphviz/doc/html/info/invtrapezium.gif
@@ -288,6 +300,7 @@ share/graphviz/doc/html/info/record2.gif
 share/graphviz/doc/html/info/rect.gif
 share/graphviz/doc/html/info/rectangle.gif
 share/graphviz/doc/html/info/round.gif
+share/graphviz/doc/html/info/sdlshapes.jpg
 share/graphviz/doc/html/info/sdlshapes.png
 share/graphviz/doc/html/info/septagon.gif
 share/graphviz/doc/html/info/shapes.html
@@ -317,6 +330,7 @@ share/graphviz/doc/pdf/dottyguide.pdf
 share/graphviz/doc/pdf/fdp.1.pdf
 share/graphviz/doc/pdf/gc.1.pdf
 ${PLIST.tcl}${PLIST.gd}share/graphviz/doc/pdf/gdtclft.3tcl.pdf
+share/graphviz/doc/pdf/gml2gv.1.pdf
 share/graphviz/doc/pdf/graph.3.pdf
 ${PLIST.guile}share/graphviz/doc/pdf/gv.3guile.pdf
 ${PLIST.lua}share/graphviz/doc/pdf/gv.3lua.pdf
@@ -342,11 +356,14 @@ share/graphviz/doc/pdf/osage.1.pdf
 share/graphviz/doc/pdf/pathplan.3.pdf
 share/graphviz/doc/pdf/prune.pdf
 share/graphviz/doc/pdf/sccmap.1.pdf
+share/graphviz/doc/pdf/sfdp.1.pdf
+share/graphviz/doc/pdf/smyrna.1.pdf
 ${PLIST.tcl}share/graphviz/doc/pdf/tcldot.3tcl.pdf
 ${PLIST.tcl}share/graphviz/doc/pdf/tkspline.3tk.pdf
 share/graphviz/doc/pdf/tred.1.pdf
 share/graphviz/doc/pdf/twopi.1.pdf
 share/graphviz/doc/pdf/unflatten.1.pdf
+share/graphviz/doc/pdf/xdot.3.pdf
 share/graphviz/graphs/directed/KW91.gv
 share/graphviz/graphs/directed/Latin1.gv
 share/graphviz/graphs/directed/NaN.gv
