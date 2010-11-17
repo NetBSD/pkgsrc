@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2010/08/29 21:51:34 pettai Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/17 13:14:09 pettai Exp $
 
-DISTNAME=	ldns-1.6.6
+DISTNAME=	ldns-1.6.7
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
