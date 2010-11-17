@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/11/15 22:58:54 abs Exp $
+# $NetBSD: Makefile,v 1.40 2010/11/17 18:07:04 wiz Exp $
 
 DISTNAME=		devilspie-0.22
 PKGREVISION=		4
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.burtonini.com/computing/
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.burtonini.com/blog/computers/devilspie/
 COMMENT=		Window-matching utility to customize window behavior
+LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		libxslt>=1.0:../../textproc/libxslt
 
@@ -17,9 +18,9 @@ USE_TOOLS+=		intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 TEST_TARGET=		check
+INSTALLATION_DIRS=	share/doc/devilspie
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/devilspie
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/devilspie/
 
