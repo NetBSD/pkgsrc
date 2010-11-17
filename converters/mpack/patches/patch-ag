@@ -1,0 +1,80 @@
+$NetBSD: patch-ag,v 1.1 2010/11/17 22:24:40 is Exp $
+
+--- decode.c.orig	2003-07-21 20:47:54.000000000 +0000
++++ decode.c
+@@ -25,6 +25,7 @@
+  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+  * SOFTWARE.  */
+ 
++#include <errno.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <ctype.h>
+@@ -601,7 +602,7 @@ int handlePartial(struct part *inpart, c
+ {
+     char *id, *dir, *p;
+     int thispart;
+-    int nparts = 0;
++    int nparts = 0, onparts=0;
+     char buf[1024];
+     FILE *partfile, *outfile;
+     struct part *outpart;
+@@ -624,33 +625,44 @@ int handlePartial(struct part *inpart, c
+     }
+     thispart = atoi(p);
+ 
++    /* Try to retrieve number of parts from reassembly directory */
++    sprintf(buf, "%sCT", dir);
++    if (partfile = fopen(buf, "r")) {
++        if (fgets(buf, sizeof(buf), partfile)) {
++	    onparts = atoi(buf);
++	    if (onparts < 0) onparts = 0;
++        }
++        fclose(partfile);
++    }
++
+     if (p = getParam(contentParams, "total")) {
+ 	nparts = atoi(p);
+ 	if (nparts <= 0) {
+ 	    warn("partial message has invalid number of parts");
+ 	    goto ignore;
+ 	}
+-	/* Store number of parts in reassembly directory */
+-	sprintf(buf, "%sCT", dir);
+-	partfile = os_createnewfile(buf);
+-	if (!partfile) {
+-	    os_perror(buf);
++	if (onparts && nparts && nparts != onparts) {
++	    warn("messages disagree about total number of parts");
+ 	    goto ignore;
+ 	}
+-	fprintf(partfile, "%d\n", nparts);
+-	fclose(partfile);
+-    }
+-    else {
+-	/* Try to retrieve number of parts from reassembly directory */
++
++	/* Store number of parts in reassembly directory */
+ 	sprintf(buf, "%sCT", dir);
+-	if (partfile = fopen(buf, "r")) {
+-	    if (fgets(buf, sizeof(buf), partfile)) {
+-		nparts = atoi(buf);
+-		if (nparts < 0) nparts = 0;
++	partfile = fopen(buf, "w");
++	if (!partfile) {
++	    if (errno != EEXIST) {
++	    	os_perror(buf);
++	    	goto ignore;
+ 	    }
++	    onparts = nparts;
++	} else {
++	    fprintf(partfile, "%d\n", nparts);
+ 	    fclose(partfile);
+ 	}
+     }
++    else {
++	nparts = onparts;
++    }
+ 
+     /* Sanity check */
+     if (thispart <= 0 || (nparts && thispart > nparts)) {
