@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.20 2007/11/25 23:20:50 wiz Exp $
+$NetBSD: distinfo,v 1.21 2010/11/17 18:06:56 wiz Exp $
 
 SHA1 (devilspie-0.22.tar.gz) = 6bf8d04b373dd301497c5acdcde3dbb45309f59d
 RMD160 (devilspie-0.22.tar.gz) = 0e35409bdbf0e0a29df59e16ab9fd3774a001b62
 Size (devilspie-0.22.tar.gz) = 192646 bytes
+SHA1 (patch-aa) = 952eb305984180fdcf7c728507660d74277e9f13
