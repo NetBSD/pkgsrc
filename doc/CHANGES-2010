@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4000 2010/11/17 19:33:35 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.4001 2010/11/17 21:37:05 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5605,3 +5605,13 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/obexapp to 1.4.14 [plunky 2010-11-17]
 	Updated print/kpathsea to 6.0.0nb1 [minskim 2010-11-17]
 	Updated print/tex-dvips to 2010nb3 [minskim 2010-11-17]
+	Added devel/gobject-introspection version 0.9.12 [drochner 2010-11-17]
+	Added devel/dconf version 0.5.1 [drochner 2010-11-17]
+	Updated sysutils/gvfs to 1.6.6 [drochner 2010-11-17]
+	Updated x11/vte to 0.26.2 [drochner 2010-11-17]
+	Updated www/gtkhtml314 to 3.32.1 [drochner 2010-11-17]
+	Updated devel/exempi to 2.1.1 [drochner 2010-11-17]
+	Updated net/libsoup24 to 2.32.1 [drochner 2010-11-17]
+	Updated security/libgnome-keyring to 2.32.0 [drochner 2010-11-17]
+	Updated devel/at-spi to 1.32.0 [drochner 2010-11-17]
+	Updated devel/GConf to 2.32.0 [drochner 2010-11-17]
