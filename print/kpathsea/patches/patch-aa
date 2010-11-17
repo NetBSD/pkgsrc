@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2010/09/13 04:06:12 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2010/11/17 19:27:05 minskim Exp $
 
 - Set paths to texmf trees for pkgsrc.
+- Sync with kpathsea r19875.
 
 --- texmf.cnf.orig	2010-05-30 21:52:39.000000000 +0000
 +++ texmf.cnf
@@ -50,6 +51,19 @@ $NetBSD: patch-aa,v 1.6 2010/09/13 04:06:12 minskim Exp $
  
  % On some systems, there will be a system tree which contains all the font
  % files that may be created as well as the formats.  For example
+@@ -345,10 +345,10 @@ T1FONTS = .;$TEXMF/fonts/type1//;$OSFONT
+ AFMFONTS = .;$TEXMF/fonts/afm//;$OSFONTDIR//
+ 
+ % TrueType outline fonts.
+-TTFONTS = .;$TEXMF/fonts/truetype//;$OSFONTDIR//
++TTFONTS = .;$TEXMF/fonts/{truetype,opentype}//;$OSFONTDIR//
+ 
+ % Opentype outline fonts.
+-OPENTYPEFONTS = .;$TEXMF/fonts/opentype//;$OSFONTDIR//
++OPENTYPEFONTS = .;$TEXMF/fonts/{opentype,truetype}//;$OSFONTDIR//
+ 
+ % Type 42 outline fonts.
+ T42FONTS = .;$TEXMF/fonts/type42//
 @@ -463,7 +463,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
  % 
  % For security reasons, it is better not to include . in this path.
