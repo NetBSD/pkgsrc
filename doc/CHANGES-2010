@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3995 2010/11/17 17:48:53 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3996 2010/11/17 18:45:50 tez Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5600,3 +5600,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-lazylist version 1.0a [minskim 2010-11-17]
 	Added print/tex-lazylist-doc version 1.0a [minskim 2010-11-17]
 	Updated print/tex-polytable to 0.8.2nb1 [minskim 2010-11-17]
+	Updated lang/python26 to 2.6.6nb3 [tez 2010-11-17]
