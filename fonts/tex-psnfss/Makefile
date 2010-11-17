@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/09/13 15:22:09 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/17 17:37:33 minskim Exp $
 
 DISTNAME=	psnfss
 PKGNAME=	tex-${DISTNAME}-9.2a
 PKGREVISION=	1
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
+TEXLIVE_REV=	20257
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Font support for common PostScript fonts
