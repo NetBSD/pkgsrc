@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3986 2010/11/16 17:55:42 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3987 2010/11/17 00:53:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5590,3 +5590,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated chat/xchat-python to 2.8.8 [tron 2010-11-16]
 	Updated print/tex-cyrillic to 2010 [minskim 2010-11-16]
 	Updated print/tex-cyrillic-doc to 2010 [minskim 2010-11-16]
+	Updated security/openssl to 0.9.8p [taca 2010-11-17]
