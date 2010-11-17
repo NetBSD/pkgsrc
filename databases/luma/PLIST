@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:43:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/11/17 17:42:56 shattered Exp $
 bin/luma
 lib/luma/__init__.py
 lib/luma/__init__.pyc
@@ -300,6 +300,7 @@ lib/luma/plugins/usermanagement/__init__.pyc
 lib/luma/plugins/usermanagement/plugin.meta
 lib/luma/plugins/usermanagement/usermanagement_plugin.py
 lib/luma/plugins/usermanagement/usermanagement_plugin.pyc
+man/man1/luma.1
 share/luma/doc/massive.help
 share/luma/i18n/br.png
 share/luma/i18n/de.png
@@ -431,4 +432,3 @@ share/luma/icons/warning.png
 share/luma/icons/warning_big.png
 share/luma/icons/world.png
 share/luma/icons/worldmedium.png
-share/man/man1/luma.1
