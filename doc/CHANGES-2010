@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3987 2010/11/17 00:53:07 taca Exp $
+$NetBSD: CHANGES-2010,v 1.3988 2010/11/17 08:27:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5591,3 +5591,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-cyrillic to 2010 [minskim 2010-11-16]
 	Updated print/tex-cyrillic-doc to 2010 [minskim 2010-11-16]
 	Updated security/openssl to 0.9.8p [taca 2010-11-17]
+	Updated devel/p5-Data-Alias to 1.08 [obache 2010-11-17]
