@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/11/03 23:46:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/11/17 17:06:08 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2822,6 +2822,8 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-R.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-R.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-asymptote.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-asymptote.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-calc.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-calc.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-clojure.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-clojure.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-comint.el.gz
@@ -2842,10 +2844,16 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-gnuplot.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-gnuplot.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-haskell.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-haskell.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-js.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-js.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-keys.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-keys.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-latex.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-latex.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-ledger.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-ledger.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-lisp.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-lisp.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lob.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lob.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-matlab.el.gz
@@ -2856,8 +2864,12 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-ocaml.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-ocaml.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-octave.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-octave.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-org.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-org.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-perl.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-perl.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-plantuml.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-plantuml.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-python.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-python.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-ref.el.gz
@@ -2866,6 +2878,8 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-ruby.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-ruby.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-sass.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-sass.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-scheme.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-scheme.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-screen.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-screen.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-sh.el.gz
