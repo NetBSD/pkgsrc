@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9860 2010/11/17 06:38:50 obache Exp $
+$NetBSD: TODO,v 1.9861 2010/11/17 15:47:29 dholland Exp $
 
 Suggested new packages
 ======================
@@ -742,7 +742,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gramofile-1.6P
 	o gramps-3.2.4
 	o granulate-0.2
-	o graphviz-2.26.3
 	o grep-2.7
 	o grhino-0.16.1
 	o gsasl-1.4.1
