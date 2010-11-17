@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2010/03/16 15:58:54 tnn Exp $
+# $NetBSD: options.mk,v 1.22 2010/11/17 10:15:53 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
@@ -84,6 +84,7 @@ CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2 --disable-gconf
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-gtk
+.include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk
