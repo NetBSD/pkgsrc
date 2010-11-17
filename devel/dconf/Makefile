@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/16 19:47:07 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/17 14:35:32 drochner Exp $
 #
 
 DISTNAME=	dconf-0.5.1
@@ -20,5 +20,5 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in
 
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/modules.mk"
 .include "../../mk/bsd.pkg.mk"
