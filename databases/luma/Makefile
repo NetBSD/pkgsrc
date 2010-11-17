@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/17 17:42:56 shattered Exp $
 
 DISTNAME=	luma-2.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=luma/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,9 @@ SUBST_STAGE.luma=	pre-configure
 SUBST_FILES.luma=	bin/luma
 SUBST_SED.luma=		-e "s|@PREFIX@|${PREFIX}|"
 PYTHON_PATCH_SCRIPTS=	bin/luma
+
+post-extract:
+	cd ${WRKSRC} && mv share/man man
 
 do-build:
 	(cd ${WRKSRC} && ${PYTHONBIN} install.py --compile-only)
