@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/09/19 14:45:17 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/17 19:29:03 minskim Exp $
 
 DISTNAME=	kpathsea.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2010
-TEXLIVE_REV=	19789
+TEXLIVE_REV=	19875
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-kpathsea
