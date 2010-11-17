@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/10/26 08:45:51 obache Exp $
+# $NetBSD: options.mk,v 1.4 2010/11/17 21:13:09 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter
@@ -22,7 +22,7 @@ BUILDLINK_API_DEPENDS.MesaLib+= MesaLib>=7.0
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
 .include "../../mk/bsd.prefs.mk"
