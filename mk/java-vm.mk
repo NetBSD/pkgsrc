@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.73 2010/06/08 19:01:35 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.74 2010/11/17 14:24:34 obache Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -9,8 +9,8 @@
 # PKG_JVM_DEFAULT
 #	The JVM that should be used if nothing particular is specified.
 #
-#	Possible values: jdk kaffe openjdk7 openjdk7-bin
-#		jdk14 sun-jdk6 jdk15
+#	Possible values: kaffe openjdk7 openjdk7-bin
+#		sun-jdk6 jdk15
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -73,9 +73,9 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 _PKG_JVMS.7=		openjdk7 openjdk7-bin
 _PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
-_PKG_JVMS.1.4=		${_PKG_JVMS.1.5} jdk14
+_PKG_JVMS.1.4=		${_PKG_JVMS.1.5}
 _PKG_JVMS.yes=		${_PKG_JVMS.1.4} kaffe
-_PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
+_PKG_JVMS.no=		${_PKG_JVMS.yes}
 _PKG_JVMS=		${_PKG_JVMS.${USE_JAVA2}}
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
@@ -109,13 +109,6 @@ _PKG_JVM_DEFAULT?=	kaffe
 .endif
 
 # These lists are copied from the JVM package Makefiles.
-_ONLY_FOR_PLATFORMS.jdk= \
-	DragonFly-*-i386 \
-	Linux-*-i[3-6]86 \
-	NetBSD-*-i386
-_ONLY_FOR_PLATFORMS.jdk14= \
-	DragonFly-*-i386 \
-	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.jdk15= \
 	DragonFly-*-i386 \
 	NetBSD-[2-9].*-i386
@@ -207,8 +200,6 @@ PKG_FAIL_REASON=	"no acceptable JVM found"
 _PKG_JVM=		"none"
 .endif
 
-BUILDLINK_API_DEPENDS.jdk?=		jdk-[0-9]*
-BUILDLINK_API_DEPENDS.jdk14?=		jdk14-[0-9]*
 BUILDLINK_API_DEPENDS.jdk15?=		jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
@@ -216,8 +207,6 @@ BUILDLINK_API_DEPENDS.openjdk7-bin?=	openjdk7-bin-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk6?=	sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
 
-_JRE.jdk=		jdk
-_JRE.jdk14=		jdk14
 _JRE.jdk15=		jdk15
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
@@ -226,15 +215,7 @@ _JRE.sun-jdk6=		sun-jre6
 
 _JAVA_BASE_CLASSES=	classes.zip
 
-.if ${_PKG_JVM} == "jdk"
-_JDK_PKGSRCDIR=		../../lang/jdk
-_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
-.elif ${_PKG_JVM} == "jdk14"
-_JDK_PKGSRCDIR=		../../wip/jdk14
-_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.4.2
-.elif ${_PKG_JVM} == "jdk15"
+.if ${_PKG_JVM} == "jdk15"
 _JDK_PKGSRCDIR=		../../wip/jdk15
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.5.0
