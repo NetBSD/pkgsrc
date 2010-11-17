@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
+$NetBSD: patch-ab,v 1.19 2010/11/17 15:46:21 dholland Exp $
 
---- configure.orig	2009-06-17 01:24:55.000000000 +0200
+--- configure.orig	2010-01-26 16:01:10.000000000 +0000
 +++ configure
-@@ -2797,11 +2797,18 @@ case "${host_os}" in
+@@ -2822,11 +2822,18 @@ case "${host_os}" in
  	# For the build number: months since Jan 2000, day of month from the timestamp
  	# For the revision number: hour, minute from the timestamp
  	if test $GRAPHVIZ_VERSION_MICRO != "0"; then
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
  
  
  
-@@ -6729,6 +6736,9 @@ test -n "$RC" || RC="false"
+@@ -6850,6 +6857,9 @@ test -n "$RC" || RC="false"
  	    ;;
  	*-sgi-irix* )
  	    ;;
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
      esac
  else
      for ac_prog in windres
-@@ -26982,7 +26992,7 @@ $as_echo_n "checking for Lua headers and
+@@ -24867,7 +24877,7 @@ $as_echo_n "checking for Lua headers and
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
  
  		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
  		        if test  "x$?" = "x0"; then
-@@ -27046,7 +27056,7 @@ $as_echo_n "checking for Lua headers and
+@@ -24931,7 +24941,7 @@ $as_echo_n "checking for Lua headers and
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
              fi
          fi
  
-@@ -27650,8 +27660,8 @@ $as_echo "no" >&6; }
+@@ -25535,8 +25545,8 @@ $as_echo "no" >&6; }
  fi
  
  
@@ -63,7 +63,7 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
          if test "${ac_cv_header_caml_mlvalues_h+set}" = set; then
-@@ -28111,13 +28121,13 @@ fi
+@@ -26003,13 +26013,13 @@ fi
        if test "x$PHP" = "x"; then
          use_php="No (php not available)"
        else
@@ -82,7 +82,7 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
          PHP_LIBS=
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -34364,7 +34374,7 @@ fi
+@@ -32259,7 +32269,7 @@ fi
  
  # Check whether --with-platformsdkincludedir was given.
  if test "${with_platformsdkincludedir+set}" = set; then
@@ -91,7 +91,7 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
  fi
  
  
-@@ -36981,10 +36991,12 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -34907,10 +34917,12 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  	#include <stdio.h>
  	#include <assert.h>
@@ -104,3 +104,12 @@ $NetBSD: patch-ab,v 1.18 2009/09/24 15:53:12 tnn Exp $
  		sincos(PI/2.0,&sinx,&cosx);
  		assert(sinx>0.9999999);
  		assert(sinx<1.0000001);
+@@ -38777,7 +38791,7 @@ else
+     use_gv_tcl="Yes"
+   fi
+   if test "x$use_gd" != "xYes"; then
+-    if test "x$use_gd" == "xYes (internal)"; then
++    if test "x$use_gd" = "xYes (internal)"; then
+         use_gdtclft="Yes"
+     else
+         use_gdtclft="No (gd not available)"
