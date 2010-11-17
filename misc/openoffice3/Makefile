@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2010/11/15 22:58:00 abs Exp $
+# $NetBSD: Makefile,v 1.47 2010/11/17 10:13:47 tnn Exp $
 
 OO_VER=			3.1.1
 OO_TAG=			OOO310_m19
@@ -201,6 +201,7 @@ post-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../lang/python/application.mk"
