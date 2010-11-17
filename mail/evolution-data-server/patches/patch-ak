@@ -1,8 +1,16 @@
-$NetBSD: patch-ak,v 1.14 2010/07/12 17:52:29 drochner Exp $
+$NetBSD: patch-ak,v 1.15 2010/11/17 15:59:38 drochner Exp $
 
---- configure.orig	2010-04-26 03:11:28.000000000 +0000
+--- configure.orig	2010-08-11 20:55:10.000000000 +0000
 +++ configure
-@@ -17395,13 +17395,13 @@ EVO_MARSHAL_RULE=$srcdir/marshal.mk
+@@ -4397,7 +4397,6 @@ fi
+ 
+   list="-DG_DISABLE_DEPRECATED
+ 	-DPANGO_DISABLE_DEPRECATED
+-	-DGDK_DISABLE_DEPRECATED
+ 	-DGDK_PIXBUF_DISABLE_DEPRECATED
+ 	-DG_DISABLE_SINGLE_INCLUDES
+ 	-DGTK_DISABLE_SINGLE_INCLUDES
+@@ -17395,13 +17394,13 @@ EVO_MARSHAL_RULE=$srcdir/marshal.mk
  
  
  	PTHREAD_LIB=""
@@ -19,7 +27,7 @@ $NetBSD: patch-ak,v 1.14 2010/07/12 17:52:29 drochner Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -17432,7 +17432,7 @@ fi
+@@ -17432,7 +17431,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_pthread_pthread_create" >&5
  $as_echo "$ac_cv_lib_pthread_pthread_create" >&6; }
  if test "x$ac_cv_lib_pthread_pthread_create" = x""yes; then :
