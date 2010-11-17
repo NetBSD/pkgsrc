@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3997 2010/11/17 19:13:39 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.3998 2010/11/17 19:16:44 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5602,3 +5602,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-polytable to 0.8.2nb1 [minskim 2010-11-17]
 	Updated lang/python26 to 2.6.6nb3 [tez 2010-11-17]
 	Updated print/tex-latexconfig to 2010 [minskim 2010-11-17]
+	Updated comms/obexapp to 1.4.14 [plunky 2010-11-17]
