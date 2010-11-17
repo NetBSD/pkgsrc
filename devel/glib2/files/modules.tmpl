@@ -1,0 +1,18 @@
+# $NetBSD: modules.tmpl,v 1.1 2010/11/17 14:09:55 drochner Exp $
+#
+# Rebuild the GIO modules database.
+#
+
+GIO_MODULES_DIR="@GIO_MODULES_DIR@"
+GIO_QUERYMODULES="@GIO_QUERYMODULES@"
+
+case ${STAGE} in
+POST-INSTALL)
+	${GIO_QUERYMODULES} ${GIO_MODULES_DIR}
+	;;
+POST-DEINSTALL)
+	${GIO_QUERYMODULES} ${GIO_MODULES_DIR}
+	;;
+*)
+	;;
+esac
