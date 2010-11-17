@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3992 2010/11/17 15:47:29 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.3993 2010/11/17 17:06:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/ldns to 1.6.7 [pettai 2010-11-17]
 	Updated www/contao29-translations to 20101108 [taca 2010-11-17]
 	Updated graphics/graphviz to 2.26.3 [dholland 2010-11-17]
+	Updated editors/emacs-snapshot to 24.0.50.20101116 [minskim 2010-11-17]
