@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.3990 2010/11/17 13:14:42 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.3991 2010/11/17 14:31:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5594,3 +5594,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-Alias to 1.08 [obache 2010-11-17]
 	Updated net/ruby-dnsruby to 1.51 [pettai 2010-11-17]
 	Updated net/ldns to 1.6.7 [pettai 2010-11-17]
+	Updated www/contao29-translations to 20101108 [taca 2010-11-17]
