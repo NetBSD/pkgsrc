@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/11/15 22:57:09 abs Exp $
+# $NetBSD: Makefile,v 1.21 2010/11/18 12:26:54 obache Exp $
 #
 
 DISTNAME=	clutter-1.2.14
@@ -20,6 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--with-json=check
 
+PKGCONFIG_OVERRIDE+=	clutter/cogl/cogl/cogl.pc.in
 PKGCONFIG_OVERRIDE+=	clutter/x11/clutter-x11.pc.in
 PKGCONFIG_OVERRIDE+=	clutter/win32/clutter-win32.pc.in
 PKGCONFIG_OVERRIDE+=	clutter.pc.in
