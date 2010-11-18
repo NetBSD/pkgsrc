@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2010/11/15 22:56:36 abs Exp $
+# $NetBSD: Makefile,v 1.64 2010/11/18 02:05:52 obache Exp $
 
-DISTNAME=		devhelp-2.30.1
-PKGREVISION=		2
+DISTNAME=		devhelp-2.32.0
 CATEGORIES=		devel x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/2.30/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/2.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -20,7 +19,7 @@ USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=	data/libdevhelp-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	data/libdevhelp-2.0.pc.in
 GCONF_SCHEMAS=		devhelp.schemas
 
 .include "../../devel/GConf/schemas.mk"
