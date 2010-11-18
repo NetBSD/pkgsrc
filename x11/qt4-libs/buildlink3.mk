@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2010/11/15 22:59:09 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2010/11/18 07:48:46 obache Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
@@ -13,7 +13,6 @@ BUILDLINK_INCDIRS.qt4-libs+=	qt4/include
 BUILDLINK_LIBDIRS.qt4-libs+=	qt4/lib
 
 QTDIR=	${BUILDLINK_PREFIX.qt4-libs}/qt4
-BUILDLINK_PASSTHRU_DIRS+=	${QTDIR}
 
 PTHREAD_OPTS+=	require
 
