@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/02/08 09:41:59 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/18 12:09:54 obache Exp $
 #
 
 POLICYKIT_VER=		0.9
@@ -43,6 +43,10 @@ PKG_GROUPS=		${POLICYKIT_GROUP}
 PKG_USERS=		${POLICYKIT_USER}:${POLICYKIT_GROUP}
 PKG_GROUPS_VARS+=	POLICYKIT_GROUP
 PKG_USERS_VARS+=	POLICYKIT_USER
+
+PKGCONFIG_OVERRIDE+=	data/polkit-dbus.pc.in
+PKGCONFIG_OVERRIDE+=	data/polkit-grant.pc.in
+PKGCONFIG_OVERRIDE+=	data/polkit.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
