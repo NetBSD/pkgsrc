@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2010/08/31 18:46:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.40 2010/11/18 02:39:09 obache Exp $
 bin/epiphany
 include/epiphany/2.30/epiphany/ephy-adblock-manager.h
 include/epiphany/2.30/epiphany/ephy-adblock.h
@@ -223,6 +223,7 @@ share/icons/hicolor/32x32/apps/gnome-web-browser.png
 share/icons/hicolor/48x48/apps/epiphany-bookmarks.png
 share/icons/hicolor/scalable/apps/gnome-web-browser.svg
 share/locale/am/LC_MESSAGES/epiphany.mo
+share/locale/an/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
 share/locale/as/LC_MESSAGES/epiphany.mo
 share/locale/ast/LC_MESSAGES/epiphany.mo
