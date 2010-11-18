@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.1 2010/05/19 17:51:23 drochner Exp $
+$NetBSD: patch-an,v 1.2 2010/11/18 22:52:04 adam Exp $
 
---- src//plugins/projectexplorer/toolchain.cpp.orig	2010-01-15 17:36:53.000000000 +0000
-+++ src//plugins/projectexplorer/toolchain.cpp
-@@ -235,7 +235,7 @@ void GccToolChain::addToEnvironment(Proj
+--- src/plugins/projectexplorer/toolchain.cpp.orig	2010-08-24 07:46:09.000000000 +0000
++++ src/plugins/projectexplorer/toolchain.cpp
+@@ -274,7 +274,7 @@ void GccToolChain::addToEnvironment(Proj
  
  QString GccToolChain::makeCommand() const
  {
--    return "make";
-+    return "gmake";
+-    return QLatin1String("make");
++    return QLatin1String("gmake");
  }
  
- bool GccToolChain::equals(ToolChain *other) const
+ IOutputParser *GccToolChain::outputParser() const

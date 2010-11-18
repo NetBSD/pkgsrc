@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/18 22:52:04 adam Exp $
 
---- doc/doc.pri.orig	2010-01-15 17:36:52 +0000
+--- doc/doc.pri.orig	2010-08-24 07:46:09.000000000 +0000
 +++ doc/doc.pri
-@@ -24,7 +24,7 @@ qch_docs.depends += html_docs
+@@ -33,7 +33,7 @@ qch_docs.depends += html_docs
  qch_docs.files = $$QCH_FILE
  
  unix:!macx {
