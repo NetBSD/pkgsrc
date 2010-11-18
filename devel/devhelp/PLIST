@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.18 2010/07/06 16:23:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/11/18 02:05:52 obache Exp $
 bin/devhelp
-include/devhelp-1.0/devhelp/dh-assistant-view.h
-include/devhelp-1.0/devhelp/dh-assistant.h
-include/devhelp-1.0/devhelp/dh-base.h
-include/devhelp-1.0/devhelp/dh-book-tree.h
-include/devhelp-1.0/devhelp/dh-error.h
-include/devhelp-1.0/devhelp/dh-keyword-model.h
-include/devhelp-1.0/devhelp/dh-link.h
-include/devhelp-1.0/devhelp/dh-search.h
-include/devhelp-1.0/devhelp/dh-window.h
-lib/libdevhelp-1.la
-lib/pkgconfig/libdevhelp-1.0.pc
+include/devhelp-2.0/devhelp/dh-assistant-view.h
+include/devhelp-2.0/devhelp/dh-assistant.h
+include/devhelp-2.0/devhelp/dh-base.h
+include/devhelp-2.0/devhelp/dh-book-manager.h
+include/devhelp-2.0/devhelp/dh-book-tree.h
+include/devhelp-2.0/devhelp/dh-book.h
+include/devhelp-2.0/devhelp/dh-error.h
+include/devhelp-2.0/devhelp/dh-keyword-model.h
+include/devhelp-2.0/devhelp/dh-link.h
+include/devhelp-2.0/devhelp/dh-search.h
+include/devhelp-2.0/devhelp/dh-window.h
+lib/libdevhelp-2.la
+lib/pkgconfig/libdevhelp-2.0.pc
 share/applications/devhelp.desktop
 share/devhelp/assistant/assistant.css
 share/devhelp/assistant/assistant.js
