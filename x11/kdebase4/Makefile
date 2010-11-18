@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/11/15 22:59:03 abs Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/18 22:55:12 adam Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	1
@@ -8,11 +8,6 @@ COMMENT=	Base modules for the KDE 4 integrated X11 desktop
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
-
-# In 4.2.2, -j2 fails with:
-# [ 44%] Building CXX object apps/konsole/src/CMakeFiles/konsolepart.dir/ColorSchemeEditor.o                                        
-# .../kdebase-4.2.2/apps/konsole/src/ColorSchemeEditor.cpp:36:34: error: ui_ColorSchemeEditor.h: No such file or directory     
-MAKE_JOBS_SAFE=	no
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
