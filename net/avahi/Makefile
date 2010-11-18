@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2010/11/15 22:58:11 abs Exp $
+# $NetBSD: Makefile,v 1.20 2010/11/18 13:56:15 wiz Exp $
 
 DISTNAME=		avahi-0.6.27
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
@@ -111,6 +111,7 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libdaemon/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
