@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2010/06/13 22:45:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2010/11/18 07:48:45 obache Exp $
 
 BUILDLINK_TREE+=	qt3-libs
 
@@ -13,7 +13,6 @@ BUILDLINK_INCDIRS.qt3-libs+=	qt3/include
 BUILDLINK_LIBDIRS.qt3-libs+=	qt3/lib
 
 QTDIR=	${BUILDLINK_PREFIX.qt3-libs}/qt3
-BUILDLINK_PASSTHRU_DIRS+=	${QTDIR}
 
 .include "../../mk/bsd.fast.prefs.mk"
 
