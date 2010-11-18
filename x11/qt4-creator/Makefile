@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2010/11/15 22:59:09 abs Exp $
-#
+# $NetBSD: Makefile,v 1.6 2010/11/18 22:52:04 adam Exp $
 
-DISTNAME=	qt-creator-1.3.1-src
-PKGNAME=	qt4-creator-1.3.1
-PKGREVISION=	4
+DISTNAME=	qt-creator-2.0.1-src
+PKGNAME=	${DISTNAME:S/qt-/qt4-/:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://get.qt.nokia.com/qtcreator/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	fw@submerge.ch
 HOMEPAGE=	http://www.qtsoftware.com/
@@ -16,13 +15,13 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS=      bin lib/qtcreator lib/qtcreator/plugins/Nokia \
+INSTALLATION_DIRS=	bin lib/qtcreator lib/qtcreator/plugins/Nokia \
 			share/doc/qtcreator share/pixmaps share/qtcreator \
 			share/qtcreator/translations
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	qt4-tools>=4.6.0:../../x11/qt4-tools \
-		qt4-sqlite3>=4.6.0:../../x11/qt4-sqlite3
+BUILD_DEPENDS+=	qt4-tools>=4.7.0:../../x11/qt4-tools \
+		qt4-sqlite3>=4.7.0:../../x11/qt4-sqlite3
 
 BUILD_TARGET=	make_default qch_docs
 MAKE_ENV+=	PREFIX=${PREFIX}
@@ -32,7 +31,7 @@ do-configure:
 
 do-install:
 	${LIBTOOL} --mode=install \
-		${INSTALL_PROGRAM} ${WRKSRC}/bin/qtcreator.bin \
+		${INSTALL_PROGRAM} ${WRKSRC}/bin/qtcreator \
 		${DESTDIR}${PREFIX}/bin/qtcreator
 	${LIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} ${WRKSRC}/bin/qtcreator_process_stub \
@@ -47,7 +46,7 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/lib/qtcreator/plugins/Nokia/*.pluginspec \
 		${DESTDIR}${PREFIX}/lib/qtcreator/plugins/Nokia/
 	${INSTALL_DATA} \
-		 ${WRKSRC}/src/plugins/coreplugin/images/qtcreator_logo*.png \
+		${WRKSRC}/src/plugins/coreplugin/images/qtcreator_logo*.png \
 		${DESTDIR}${PREFIX}/share/pixmaps/
 	${INSTALL_DATA} ${WRKSRC}/share/doc/qtcreator/qtcreator.qch \
 		${DESTDIR}${PREFIX}/share/doc/qtcreator/
@@ -61,7 +60,6 @@ do-install:
 		schemes snippets styles templates -type f \! -name "*.orig" -exec \
                 ${INSTALL_DATA} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
-
 
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
