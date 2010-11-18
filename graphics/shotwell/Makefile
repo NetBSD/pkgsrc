@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/11/16 11:46:08 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/18 07:21:15 wiz Exp $
 #
 
 DISTNAME=		shotwell-0.7.2
 PKGREVISION=		1
 CATEGORIES=		graphics
-MASTER_SITES=	http://yorba.org/download/shotwell/0.7/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=		http://yorba.org/download/shotwell/0.7/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
 HOMEPAGE=		http://yorba.org/shotwell/
@@ -14,17 +14,17 @@ LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-HAS_CONFIGURE=	yes
-USE_TOOLS+=		gmake bash
+HAS_CONFIGURE=		yes
+USE_TOOLS+=		gmake bash pkg-config
 
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ENV+=		--define=NO_CAMERA
 
-REPLACE_SH+=	minver configure libraw-config
+REPLACE_SH+=		minver configure libraw-config
 
-GCONF_SCHEMAS= shotwell.schemas
-INSTALLATION_DIRS+= share/gconf/schemas
+GCONF_SCHEMAS=		shotwell.schemas
+INSTALLATION_DIRS+=	share/gconf/schemas
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/misc/shotwell.schemas \
