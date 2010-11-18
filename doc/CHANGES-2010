@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4003 2010/11/18 02:39:24 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4004 2010/11/18 13:36:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5617,3 +5617,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/GConf to 2.32.0 [drochner 2010-11-17]
 	Updated devel/devhelp to 2.32.0 [obache 2010-11-18]
 	Updated www/epiphany to 2.30.6 [obache 2010-11-18]
+	Updated math/gnumeric110 to 1.10.11nb2 [wiz 2010-11-18]
