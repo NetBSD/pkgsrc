@@ -1,6 +1,18 @@
-$NetBSD: patch-ac,v 1.3 2009/11/10 14:55:18 brook Exp $
+$NetBSD: patch-ac,v 1.4 2010/11/18 13:50:09 wiz Exp $
 
---- libmetrics/netbsd/metrics.c.orig	2009-01-28 16:23:20.000000000 -0700
+First chunk: update sysctl name for changes in NetBSD.
+
+Rest:
+From Manuel Tobias Schiller <mala@hinterbergen.de>:
+I managed to trace things to the file libmetrics/netbsd/metrics.c in
+the get_netbw function. Apparently, the code in get_netbw violates
+alignment constraints for sparc64. I attached a patch against the result
+of a "make patch" in parallel/ganglia-monitor-core. While I was at it, I
+also changed proc_run_func somewhat to only count actually running
+processes (having a look at NetBSD's ps(1) implementation) - without the
+change, I got around 30 running processes on an idle machine.
+
+--- libmetrics/netbsd/metrics.c.orig	2009-01-28 23:23:20.000000000 +0000
 +++ libmetrics/netbsd/metrics.c
 @@ -134,7 +134,10 @@ cpu_speed_func ( void )
  
@@ -14,3 +26,160 @@ $NetBSD: patch-ac,v 1.3 2009/11/10 14:55:18 brook Exp $
     if (sysctlbyname("machdep.est.frequency.target", &cpu_speed, &len, NULL, 0) == -1)
        val.uint32 = 0;
  #endif
+@@ -559,44 +562,40 @@ proc_total_func ( void )
+ g_val_t
+ proc_run_func( void )
+ {
+-   struct kinfo_proc *kp;
+-   int i;
+-   int state;
+-   int nentries;
+-   int what = KERN_PROC_ALL;
+    g_val_t val;
++   struct kinfo_proc2 *kp;
++   int cnt, i, j;
++   unsigned int count = 0;
+ 
+    val.uint32 = 0;
+ 
+    if (kd == NULL)
+       goto output;
+-#ifdef KERN_PROC_NOTHREADS
+-   what |= KERN_PROC_NOTHREADS
+-#endif
+-   if ((kp = kvm_getprocs(kd, what, 0, &nentries)) == 0 || nentries < 0)
++   kp = kvm_getproc2(kd, KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2), &cnt);
++   if (0 == kp || cnt < 0)
+       goto output;
+-
+-   for (i = 0; i < nentries; kp++, i++) {
+-#ifdef KINFO_PROC_SIZE
+-      state = kp->ki_stat;
+-#else
+-      state = kp->kp_proc.p_stat;
+-#endif
+-      switch(state) {
+-#if (__NetBSD_Version__ >= 200000000)
+-         case SACTIVE:
+-#else
+-         case SRUN:
+-         case SONPROC:
+-#endif
+-         case SIDL:
+-            val.uint32++;
+-            break;
++   for (i = 0; i < cnt; i++) {
++      struct kinfo_lwp* kl;
++      int nlwps;
++      if (((kp + i) -> p_realstat != SACTIVE))
++	      continue;
++      kl = kvm_getlwps(kd, (kp + i)->p_pid, (kp + i)->p_paddr,
++	      sizeof(struct kinfo_lwp), &nlwps);
++      if (kl == 0)
++	  nlwps = 0;
++      if (0 == nlwps) count ++;
++      else {
++	  for (j = 0; j < nlwps; j++) {
++	      switch (kl[j].l_stat) {
++		  case LSRUN:
++		      ++count;
++		      break;
++	      }
++	  }
+       }
+    }
+ 
+-   if (val.uint32 > 0)
+-      val.uint32--;
++   val.uint32 = count;
+ 
+ output:
+    return val;
+@@ -1135,36 +1134,41 @@ get_netbw(double *in_bytes, double *out_
+ 
+ 	next = buf;
+ 	while (next < lim) {
++		struct if_msghdr tmp;
+ 
+ 		ifm = (struct if_msghdr *)next;
++		memcpy(&tmp, ifm, sizeof(tmp));
+ 		
+-		if (ifm->ifm_type == RTM_IFINFO) {
++		if (tmp.ifm_type == RTM_IFINFO) {
+ 			sdl = (struct sockaddr_dl *)(ifm + 1);
+ 		} else {
+ 			fprintf(stderr, "out of sync parsing NET_RT_IFLIST\n");
+ 			fprintf(stderr, "expected %d, got %d\n", RTM_IFINFO,
+-				ifm->ifm_type);
+-			fprintf(stderr, "msglen = %d\n", ifm->ifm_msglen);
++				tmp.ifm_type);
++			fprintf(stderr, "msglen = %d\n", tmp.ifm_msglen);
+ 			fprintf(stderr, "buf:%p, next:%p, lim:%p\n", buf, next,
+ 				lim);
+ 			exit (1);
+ 		}
+ 
+-		next += ifm->ifm_msglen;
++		next += tmp.ifm_msglen;
+ 		while (next < lim) {
++			unsigned short msglen;
+ 			nextifm = (struct if_msghdr *)next;
+ 
+ 			if (nextifm->ifm_type != RTM_NEWADDR)
+ 				break;
+ 
+-			next += nextifm->ifm_msglen;
++			memcpy(&msglen, &nextifm->ifm_msglen,
++					sizeof(nextifm->ifm_msglen));
++			next += msglen;
+ 		}
+ 
+-		if ((ifm->ifm_flags & IFF_LOOPBACK) || 
+-		    !(ifm->ifm_flags & IFF_UP))
++		if ((tmp.ifm_flags & IFF_LOOPBACK) || 
++		    !(tmp.ifm_flags & IFF_UP))
+ 			continue;
+ 
+-		index = ifm->ifm_index;
++		index = tmp.ifm_index;
+ 
+ 		/* If we don't have a previous value yet, make a slot. */
+ 		if (index >= indexes) {
+@@ -1187,25 +1191,25 @@ get_netbw(double *in_bytes, double *out_
+ 		 */
+ 		if (!seen[index]) {
+ 			seen[index] = 1;
+-			lastcount[index].in_bytes = ifm->ifm_data.ifi_ibytes;
+-			lastcount[index].out_bytes = ifm->ifm_data.ifi_obytes;
+-			lastcount[index].in_pkts = ifm->ifm_data.ifi_ipackets;
+-			lastcount[index].out_pkts = ifm->ifm_data.ifi_opackets;
++			lastcount[index].in_bytes = tmp.ifm_data.ifi_ibytes;
++			lastcount[index].out_bytes = tmp.ifm_data.ifi_obytes;
++			lastcount[index].in_pkts = tmp.ifm_data.ifi_ipackets;
++			lastcount[index].out_pkts = tmp.ifm_data.ifi_opackets;
+ 		}
+ 
+ 		traffic.in_bytes = counterdiff(lastcount[index].in_bytes,
+-		    ifm->ifm_data.ifi_ibytes, ULONG_MAX, 0);
++		    tmp.ifm_data.ifi_ibytes, ULONG_MAX, 0);
+ 		traffic.out_bytes = counterdiff(lastcount[index].out_bytes,
+-		    ifm->ifm_data.ifi_obytes, ULONG_MAX, 0);
++		    tmp.ifm_data.ifi_obytes, ULONG_MAX, 0);
+ 		traffic.in_pkts = counterdiff(lastcount[index].in_pkts,
+-		    ifm->ifm_data.ifi_ipackets, ULONG_MAX, 0);
++		    tmp.ifm_data.ifi_ipackets, ULONG_MAX, 0);
+ 		traffic.out_pkts = counterdiff(lastcount[index].out_pkts,
+-		    ifm->ifm_data.ifi_opackets, ULONG_MAX, 0);
++		    tmp.ifm_data.ifi_opackets, ULONG_MAX, 0);
+ 
+-		lastcount[index].in_bytes = ifm->ifm_data.ifi_ibytes;
+-		lastcount[index].out_bytes = ifm->ifm_data.ifi_obytes;
+-		lastcount[index].in_pkts = ifm->ifm_data.ifi_ipackets;
+-		lastcount[index].out_pkts = ifm->ifm_data.ifi_opackets;
++		lastcount[index].in_bytes = tmp.ifm_data.ifi_ibytes;
++		lastcount[index].out_bytes = tmp.ifm_data.ifi_obytes;
++		lastcount[index].in_pkts = tmp.ifm_data.ifi_ipackets;
++		lastcount[index].out_pkts = tmp.ifm_data.ifi_opackets;
+ 
+ #ifdef NETBW_DEBUG
+ 		if_indextoname(index, name);
