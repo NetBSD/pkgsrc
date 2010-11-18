@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2010/11/15 22:57:51 abs Exp $
+# $NetBSD: Makefile,v 1.18 2010/11/18 13:36:08 wiz Exp $
 
 DISTNAME=	gnumeric-1.10.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,9 +39,6 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -49,7 +46,6 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
 .include "../../lang/perl5/buildlink3.mk"
 BUILDLINK_API_DEPENDS.goffice0.8+= goffice0.8-${GOFFICE_VERSION}{,nb*}
 .include "../../misc/goffice0.8/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
