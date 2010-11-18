@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4007 2010/11/18 13:56:27 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4008 2010/11/18 22:53:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5621,3 +5621,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/ns-flash to 9.0.289 [wiz 2010-11-18]
 	Updated parallel/ganglia-monitor-core to 3.1.2nb4 [wiz 2010-11-18]
 	Updated net/avahi to 0.6.27nb3 [wiz 2010-11-18]
+	Updated x11/qt4-creator to 2.0.1 [adam 2010-11-18]
