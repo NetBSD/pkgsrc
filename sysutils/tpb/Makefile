@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/10/12 17:23:36 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/11/18 21:00:58 shattered Exp $
 #
 
 DISTNAME=	tpb-0.6.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://savannah.nongnu.org/download/tpb/
 MAINTAINER=	soren@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/tpb/
 COMMENT=	Utility to enable the IBM ThinkPad(tm) special keys
-
-BROKEN=		Doesn't support newer x11/xosd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -34,6 +32,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/xosd/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
