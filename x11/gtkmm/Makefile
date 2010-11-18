@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2010/11/15 22:59:01 abs Exp $
+# $NetBSD: Makefile,v 1.73 2010/11/18 12:01:05 obache Exp $
 
 DISTNAME=	gtkmm-2.20.3
 PKGREVISION=	4
@@ -20,9 +20,9 @@ CONFIGURE_ARGS+=	--disable-examples
 
 EXTRACT_USING=		bsdtar
 
-PKGCONFIG_OVERRIDE=	atk/atkmm-1.6.pc.in
-PKGCONFIG_OVERRIDE+=	gdk/gdkmm-2.4.pc.in
-PKGCONFIG_OVERRIDE+=	gtk/gtkmm-2.4.pc.in
+PKGCONFIG_OVERRIDE=	atk/atkmm.pc.in
+PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
+PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.20.1
 
