@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4005 2010/11/18 13:38:29 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4006 2010/11/18 13:50:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5619,3 +5619,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/epiphany to 2.30.6 [obache 2010-11-18]
 	Updated math/gnumeric110 to 1.10.11nb2 [wiz 2010-11-18]
 	Updated multimedia/ns-flash to 9.0.289 [wiz 2010-11-18]
+	Updated parallel/ganglia-monitor-core to 3.1.2nb4 [wiz 2010-11-18]
