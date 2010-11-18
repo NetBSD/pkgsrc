@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2010/09/14 11:00:47 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2010/11/18 13:43:09 wiz Exp $
 
 DISTNAME=	rrdtool-1.4.4
-
 PKGREVISION=	2
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
@@ -21,6 +20,7 @@ CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
 CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
+CONFIGURE_ARGS+=	--disable-lua
 
 PTHREAD_OPTS+=		require
 PERL5_CONFIGURE=	no
