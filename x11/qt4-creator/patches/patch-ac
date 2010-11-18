@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2010/11/18 22:52:04 adam Exp $
 
---- share/qtcreator/static.pro.orig	2010-01-15 17:36:52 +0000
+--- share/qtcreator/static.pro.orig	2010-08-24 07:46:09.000000000 +0000
 +++ share/qtcreator/static.pro
 @@ -6,7 +6,7 @@ CONFIG -= qt
  QT =
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2010/05/18 19:44:02 drochner Exp $
      phony_src.name = CREATE phony.c
      phony_src.CONFIG += combine
      QMAKE_EXTRA_COMPILERS += phony_src
-@@ -60,7 +60,7 @@ DATA_DIRS = \
+@@ -62,7 +62,7 @@ DATA_DIRS = \
  !macx {
      for(data_dir, DATA_DIRS) {
          eval($${data_dir}.files = $$quote($$PWD/$$data_dir))
