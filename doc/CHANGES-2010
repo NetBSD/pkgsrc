@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4001 2010/11/17 21:37:05 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.4002 2010/11/18 02:06:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5615,3 +5615,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/libgnome-keyring to 2.32.0 [drochner 2010-11-17]
 	Updated devel/at-spi to 1.32.0 [drochner 2010-11-17]
 	Updated devel/GConf to 2.32.0 [drochner 2010-11-17]
+	Updated devel/devhelp to 2.32.0 [obache 2010-11-18]
