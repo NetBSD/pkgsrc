@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/09/14 11:00:47 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/11/18 11:38:19 obache Exp $
 
 DISTNAME=	pangomm-2.26.2
 PKGREVISION=	2
@@ -18,8 +18,9 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config perl:run
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/pango/pangomm-1.4.pc.in
 GNU_CONFIGURE=		yes
+
+PKGCONFIG_OVERRIDE+=	pango/pangomm.pc.in
 
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.26.0
 
