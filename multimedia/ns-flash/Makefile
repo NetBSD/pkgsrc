@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/10/30 09:51:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2010/11/18 13:38:19 wiz Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://download.macromedia.com/pub/flashplayer/installers/current/9/
@@ -43,7 +43,7 @@ WRKNAME=		install_flash_player_7_${DISTUNAME}
 WRKSRC=			${WRKDIR}/${WRKNAME}
 .else  # if ${EMUL_PLATFORM} == "linux-i386"
 # Defaults so lintpkgsrc is happy
-FLASH_VERS=		9.0r262
+FLASH_VERS=		9.0r289
 DISTUNAME=		linux
 DISTNAME=		install_flash_player_9
 WRKNAME=		install_flash_player_9_${DISTUNAME}
