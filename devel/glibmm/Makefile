@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/06/02 16:43:26 adam Exp $
+# $NetBSD: Makefile,v 1.40 2010/11/18 11:35:02 obache Exp $
 
 DISTNAME=	glibmm-2.24.2
 CATEGORIES=	devel
@@ -16,9 +16,11 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config perl:run
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/glib/glibmm-2.4.pc.in
 GNU_CONFIGURE=		yes
 EXTRACT_USING=		bsdtar # added for pkg/42258
+
+PKGCONFIG_OVERRIDE+=	gio/giomm.pc.in
+PKGCONFIG_OVERRIDE+=	glib/glibmm.pc.in
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.1
 
