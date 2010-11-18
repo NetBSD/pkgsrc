@@ -1,0 +1,32 @@
+$NetBSD: patch-ap,v 1.1 2010/11/18 22:52:04 adam Exp $
+
+--- src/libs/3rdparty/botan/src/src.pro.orig	2010-11-18 22:36:58.000000000 +0000
++++ src/libs/3rdparty/botan/src/src.pro
+@@ -277,11 +277,8 @@ unix {
+            pubkey/eckaeg/eckaeg.h \
+            pubkey/eckaeg/eckaeg_core.h \
+            pubkey/eckaeg/eckaeg_op.h \
+-           timer/gettimeofday/tm_unix.h
+-}
+-
+-linux*-g++* {
+-    HEADERS += timer/posix_rt/tm_posix.h
++           timer/gettimeofday/tm_unix.h \
++           timer/posix_rt/tm_posix.h
+ }
+ 
+ SOURCES += algo_factory/algo_factory.cpp \
+@@ -561,11 +558,8 @@ unix {
+            pubkey/eckaeg/eckaeg.cpp \
+            pubkey/eckaeg/eckaeg_core.cpp \
+            pubkey/eckaeg/eckaeg_op.cpp \
+-           timer/gettimeofday/tm_unix.cpp
+-}
+-
+-linux*-g++* {
+-    SOURCES += timer/posix_rt/tm_posix.cpp
++           timer/gettimeofday/tm_unix.cpp \
++           timer/posix_rt/tm_posix.cpp
+ }
+ 
+ linux*-g++* {
