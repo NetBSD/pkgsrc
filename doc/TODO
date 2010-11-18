@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9861 2010/11/17 15:47:29 dholland Exp $
+$NetBSD: TODO,v 1.9862 2010/11/18 02:39:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -560,7 +560,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enscript-1.6.5.2
 	o eog-2.32.0
 	o epic4-2.6
-	o epiphany-2.30.6
 	o epstool-3.08
 	o eric4-4.4.9
 	o eric5-5.0.3
