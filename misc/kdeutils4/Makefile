@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/11/15 22:58:00 abs Exp $
+# $NetBSD: Makefile,v 1.16 2010/11/19 08:29:30 mrg Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 PKGREVISION=	1
@@ -15,6 +15,8 @@ CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.so
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
+.include "options.mk"
+
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"
 
@@ -26,7 +28,6 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../print/py-cups/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase4/buildlink3.mk"
