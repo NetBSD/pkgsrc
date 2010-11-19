@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9865 2010/11/19 00:47:32 wiz Exp $
+$NetBSD: TODO,v 1.9866 2010/11/19 01:27:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -632,18 +632,18 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-isas-misc-1.0.3
 	o font-jis-misc-1.0.3
 	o font-micro-misc-1.0.3
-	o font-misc-cyrillic-1.0.2
-	o font-misc-ethiopic-1.0.2
-	o font-misc-meltho-1.0.2
-	o font-misc-misc-1.1.1
-	o font-mutt-misc-1.0.2
-	o font-schumacher-misc-1.1.1
-	o font-screen-cyrillic-1.0.3
-	o font-sony-misc-1.0.2
-	o font-sun-misc-1.0.2
+	o font-misc-cyrillic-1.0.3
+	o font-misc-ethiopic-1.0.3
+	o font-misc-meltho-1.0.3
+	o font-misc-misc-1.1.2
+	o font-mutt-misc-1.0.3
+	o font-schumacher-misc-1.1.2
+	o font-screen-cyrillic-1.0.4
+	o font-sony-misc-1.0.3
+	o font-sun-misc-1.0.3
 	o font-util-1.2.0
-	o font-winitzki-cyrillic-1.0.2
-	o font-xfree86-type1-1.0.3
+	o font-winitzki-cyrillic-1.0.3
+	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
 	o fotoxx-10.11
 	o frama-c-20100401
