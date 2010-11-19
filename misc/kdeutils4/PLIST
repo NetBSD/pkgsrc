@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/25 20:55:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/11/19 08:29:30 mrg Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -10,7 +10,7 @@ bin/ktimer
 bin/kwalletmanager
 bin/kwikdisk
 bin/okteta
-bin/printer-applet
+${PLIST.cups}bin/printer-applet
 bin/superkaramba
 bin/sweeper
 include/KDE/Kasten/AbstractConnectJob
@@ -517,9 +517,9 @@ share/doc/kde/HTML/en/kwallet/save-login-information.png
 share/doc/kde/HTML/en/okteta/common
 share/doc/kde/HTML/en/okteta/index.cache.bz2
 share/doc/kde/HTML/en/okteta/index.docbook
-share/doc/kde/HTML/en/printer-applet/common
-share/doc/kde/HTML/en/printer-applet/index.cache.bz2
-share/doc/kde/HTML/en/printer-applet/index.docbook
+${PLIST.cups}share/doc/kde/HTML/en/printer-applet/common
+${PLIST.cups}share/doc/kde/HTML/en/printer-applet/index.cache.bz2
+${PLIST.cups}share/doc/kde/HTML/en/printer-applet/index.docbook
 share/doc/kde/HTML/en/sweeper/common
 share/doc/kde/HTML/en/sweeper/index.cache.bz2
 share/doc/kde/HTML/en/sweeper/index.docbook
@@ -656,19 +656,19 @@ share/kde/apps/okteta/structures/png/png.osd
 share/kde/apps/oktetapart/oktetapartbrowserui.rc
 share/kde/apps/oktetapart/oktetapartreadonlyui.rc
 share/kde/apps/oktetapart/oktetapartreadwriteui.rc
-share/kde/apps/printer-applet/authconn.py
-share/kde/apps/printer-applet/debug.py
-share/kde/apps/printer-applet/monitor.py
-share/kde/apps/printer-applet/printer-applet-printers.ui
-share/kde/apps/printer-applet/printer-applet.notifyrc
-share/kde/apps/printer-applet/printer-applet.py
-share/kde/apps/printer-applet/printer-applet.ui
-share/kde/apps/printer-applet/printer-appletui.rc
-share/kde/apps/printer-applet/statereason.py
+${PLIST.cups}share/kde/apps/printer-applet/authconn.py
+${PLIST.cups}share/kde/apps/printer-applet/debug.py
+${PLIST.cups}share/kde/apps/printer-applet/monitor.py
+${PLIST.cups}share/kde/apps/printer-applet/printer-applet-printers.ui
+${PLIST.cups}share/kde/apps/printer-applet/printer-applet.notifyrc
+${PLIST.cups}share/kde/apps/printer-applet/printer-applet.py
+${PLIST.cups}share/kde/apps/printer-applet/printer-applet.ui
+${PLIST.cups}share/kde/apps/printer-applet/printer-appletui.rc
+${PLIST.cups}share/kde/apps/printer-applet/statereason.py
 share/kde/apps/superkaramba/superkarambaui.rc
 share/kde/apps/sweeper/sweeperui.rc
 share/kde/autostart/kgpg.desktop
-share/kde/autostart/printer-applet.desktop
+${PLIST.cups}share/kde/autostart/printer-applet.desktop
 share/kde/config.kcfg/ark.kcfg
 share/kde/config.kcfg/kcalc.kcfg
 share/kde/config.kcfg/kgpg.kcfg
