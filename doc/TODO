@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9866 2010/11/19 01:27:46 wiz Exp $
+$NetBSD: TODO,v 1.9867 2010/11/19 14:52:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -1203,7 +1203,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rcairo-1.10.0
 	o rdp-1.6
 	o recordproto-1.14.1
 	o remind-3.1.10
@@ -1229,6 +1228,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rtcw-1.41.3
 	o rtorrent-0.8.7
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
+	o ruby-gnome2-0.90.5
 	o rudiments-0.30
 	o rxvt-unicode-9.07
 	o sabayon-2.30.1 [GNOME 2.30]
