@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2010/11/15 19:55:10 drochner Exp $
+# $NetBSD: Makefile.common,v 1.14 2010/11/19 01:12:23 obache Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
@@ -36,10 +36,6 @@ PKG_SYSCONFSUBDIR=	gconf
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-sysconfsubdir=
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
-
-# Workaround for Upstream Bug#562310.
-# for more detail, see also PR#41475.
-TOOLS_NOOP+=	gtkdoc-rebase
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
 .include "../../devel/glib2/buildlink3.mk"
