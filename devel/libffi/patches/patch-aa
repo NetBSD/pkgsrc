@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.9 2010/01/16 16:28:58 asau Exp $
+$NetBSD: patch-aa,v 1.10 2010/11/20 08:45:12 tsutsui Exp $
 
 Extend which ports we accept to deal with.
 
---- configure.orig	2009-12-31 15:41:51.000000000 +0300
-+++ configure	2010-01-12 12:40:15.000000000 +0300
+--- configure.orig	2009-12-31 12:41:51.000000000 +0000
++++ configure
 @@ -12210,7 +12210,7 @@
    mips-sgi-irix5.* | mips-sgi-irix6.*)
  	TARGET=MIPS; TARGETDIR=mips
@@ -22,3 +22,12 @@ Extend which ports we accept to deal with.
  	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
  	;;
    powerpc*-*-rtems*)
+@@ -12239,7 +12239,7 @@
+ 	TARGET=S390; TARGETDIR=s390
+ 	;;
+ 
+-  sh-*-* | sh[34]*-*-*)
++  sh-*-* | shle-*-* | sh[34]*-*-*)
+ 	TARGET=SH; TARGETDIR=sh
+ 	;;
+   sh64-*-* | sh5*-*-*)
