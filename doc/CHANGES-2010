@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4016 2010/11/20 21:01:12 gls Exp $
+$NetBSD: CHANGES-2010,v 1.4017 2010/11/20 21:03:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5630,3 +5630,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dovecot to 1.2.16 [ghen 2010-11-20]
 	Updated editors/emacs-snapshot to 24.0.50.20101120 [minskim 2010-11-20]
 	Updated fonts/vlgothic-ttf to 20101022 [gls 2010-11-20]
+	Updated devel/lua-mode to 20100617 [minskim 2010-11-20]
