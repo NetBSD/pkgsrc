@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4009 2010/11/19 19:23:50 tez Exp $
+$NetBSD: CHANGES-2010,v 1.4010 2010/11/20 01:37:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/avahi to 0.6.27nb3 [wiz 2010-11-18]
 	Updated x11/qt4-creator to 2.0.1 [adam 2010-11-18]
 	Updated devel/doxygen to 1.6.3nb2 [tez 2010-11-19]
+	Updated devel/glib2 to 2.26.1nb1 [obache 2010-11-20]
