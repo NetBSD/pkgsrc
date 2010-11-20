@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4011 2010/11/20 01:54:49 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.4012 2010/11/20 02:19:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5625,3 +5625,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/doxygen to 1.6.3nb2 [tez 2010-11-19]
 	Updated devel/glib2 to 2.26.1nb1 [obache 2010-11-20]
 	Updated geography/viking to 1.0 [gdt 2010-11-20]
+	Removed graphics/gqview-gtk1 successor graphics/geeqie [gdt 2010-11-20]
