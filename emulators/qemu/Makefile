@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2010/11/09 10:37:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.76 2010/11/20 14:37:42 tsutsui Exp $
 #
 
 DISTNAME=		qemu-0.13.0
@@ -73,7 +73,20 @@ UE_ARCHS+=		alpha arm armeb cris i386 m68k microblaze mips mipsel
 UE_ARCHS+=		ppc ppc64 ppc64abi32 sh4 sh4eb sparc sparc32plus
 UE_ARCHS+=		sparc64 x86_64
 
-.if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
+.if ${OPSYS} == "NetBSD"
+.if (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*))
+# XXX
+# i386 and x86_64 user emul require newer binutils for PROVIDE_HIDDEN()
+# http://git.qemu.org/qemu.git/commit/?id=845f2c2812d9ed24b36c02a3d06ee83aeafe8b49
+# but binutils-2.19 was enabled around 5.99.22:
+# http://cvsweb.NetBSD.org/bsdweb.cgi/src/share/mk/bsd.own.mk#rev1.594
+USER_EMUL=		i386 x86_64 sparc sparc64
+.else
+CONFIGURE_ARGS+=	--disable-bsd-user
+USER_EMUL=
+.endif
+PLIST.nbd=		YES
+.elif !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
 USER_EMUL=		i386 x86_64 sparc sparc64
 PLIST.nbd=		YES
 .elif !empty(OPSYS:MDarwin)
