@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2010/08/07 16:07:56 wiz Exp $
+$NetBSD: distinfo,v 1.10 2010/11/20 20:59:13 gls Exp $
 
-SHA1 (VLGothic-20100416.tar.bz2) = 2e0d308f0b6a267b74d51c93ac2682191ccf0ab1
-RMD160 (VLGothic-20100416.tar.bz2) = fbdc256f3494717a169a563b95823522dc229360
-Size (VLGothic-20100416.tar.bz2) = 4756518 bytes
+SHA1 (VLGothic-20101022.tar.bz2) = dba349af4d738a3ef6717e69d71d2c133e759d66
+RMD160 (VLGothic-20101022.tar.bz2) = ec05c40d49d7b9c43f9901a6499355e13af43e69
+Size (VLGothic-20101022.tar.bz2) = 4752414 bytes
