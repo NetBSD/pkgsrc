@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4014 2010/11/20 15:57:46 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.4015 2010/11/20 20:20:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5628,3 +5628,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed graphics/gqview-gtk1 successor graphics/geeqie [gdt 2010-11-20]
 	Updated devel/ruby-rspec to 1.3.1 [taca 2010-11-20]
 	Updated mail/dovecot to 1.2.16 [ghen 2010-11-20]
+	Updated editors/emacs-snapshot to 24.0.50.20101120 [minskim 2010-11-20]
