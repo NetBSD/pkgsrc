@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2010/11/15 14:36:03 drochner Exp $
+# $NetBSD: Makefile.common,v 1.6 2010/11/20 01:36:49 obache Exp $
 #
 # used by devel/glib2/Makefile
 # used by sysutils/gio-fam/Makefile
@@ -80,3 +80,12 @@ CONFIGURE_ARGS+=	--disable-threads
 .else
 .include "../../mk/pthread.buildlink3.mk"
 .endif
+
+SUBST_CLASSES+=		dbusdb
+SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
+SUBST_STAGE.dbusdb=	post-patch
+SUBST_FILES.dbusdb=	gio/gdbusconnection.c
+SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
+SUBST_FILES.dbusdb+=	po/glib20.pot
+SUBST_FILES.dbusdb+=	po/*.po
+SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
