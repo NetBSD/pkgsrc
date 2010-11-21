@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4017 2010/11/20 21:03:56 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.4018 2010/11/21 13:21:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5631,3 +5631,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/emacs-snapshot to 24.0.50.20101120 [minskim 2010-11-20]
 	Updated fonts/vlgothic-ttf to 20101022 [gls 2010-11-20]
 	Updated devel/lua-mode to 20100617 [minskim 2010-11-20]
+	Updated graphics/clutter to 1.4.0 [obache 2010-11-21]
