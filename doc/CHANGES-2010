@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4018 2010/11/21 13:21:10 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4019 2010/11/21 22:55:12 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5632,3 +5632,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/vlgothic-ttf to 20101022 [gls 2010-11-20]
 	Updated devel/lua-mode to 20100617 [minskim 2010-11-20]
 	Updated graphics/clutter to 1.4.0 [obache 2010-11-21]
+	Updated net/wireshark to 1.4.2 [tron 2010-11-21]
