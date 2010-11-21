@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2010/11/18 12:26:54 obache Exp $
+# $NetBSD: Makefile,v 1.22 2010/11/21 13:20:54 obache Exp $
 #
 
-DISTNAME=	clutter-1.2.14
-PKGREVISION=	1
+DISTNAME=	clutter-1.4.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://source.clutter-project.org/sources/clutter/1.2/
-#		${MASTER_SITE_GNOME:=sources/clutter/1.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter/1.4/}
+#		http://source.clutter-project.org/sources/clutter/1.4/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://clutter-project.org/
@@ -18,7 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-CONFIGURE_ARGS+=	--with-json=check
+CONFIGURE_ARGS+=	--with-json=system
 
 PKGCONFIG_OVERRIDE+=	clutter/cogl/cogl/cogl.pc.in
 PKGCONFIG_OVERRIDE+=	clutter/x11/clutter-x11.pc.in
@@ -29,12 +28,15 @@ PKGCONFIG_OVERRIDE+=	clutter.pc.in
 
 TEST_TARGET=	check
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
+BUILDLINK_API_DEPENDS.atk+=	atk>=1.7
+.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.18.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 .include "../../devel/pango/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.0
 .include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.8.0
+BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.10.0
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
