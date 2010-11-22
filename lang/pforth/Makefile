@@ -1,45 +1,31 @@
-# $NetBSD: Makefile,v 1.23 2010/02/15 16:41:46 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2010/11/22 01:25:48 asau Exp $
 
-DISTNAME=		pfthpc21
-PKGNAME=		pforth-21
-PKGREVISION=		2
+DISTNAME=		pforth_v27_20101121
+PKGNAME=		pforth-27
 CATEGORIES=		lang
-MASTER_SITES=		http://www.softsynth.com/pforth/
+MASTER_SITES=		http://pforth.googlecode.com/files/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		asau@NetBSD.org
 HOMEPAGE=		http://www.softsynth.com/pforth/
 COMMENT=		Portable ANS-like Forth
+LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}
-USE_LANGUAGES=		c++
-USE_TOOLS+=		gmake
+WRKSRC=			$(WRKDIR)/pforth_v27
+MAKE_FILE=		build/unix/Makefile
+MAKE_FLAGS=		SRCDIR=.
+CPPFLAGS=		-DPF_DEFAULT_DICTIONARY='"$(PREFIX)/lib/pforth/pforth.dic"'
 
-NOT_FOR_PLATFORM=	${LP64PLATFORMS}
-
-INSTALLATION_DIRS=	bin
-
-post-extract:
-	${MKDIR} ${WRKSRC}/objects
-
-post-patch:
-	${MV} ${WRKSRC}/csrc/pf_main.c ${WRKSRC}/csrc/pf_main.c.dist
-	${SED} -e 's:@PREFIX@:${PREFIX}:g' ${WRKSRC}/csrc/pf_main.c.dist \
-	> ${WRKSRC}/csrc/pf_main.c
+INSTALLATION_DIRS=	bin lib/pforth share/doc/pforth share/pforth share/pforth/utils
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pforth ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pforth
 	${INSTALL_DATA} ${WRKSRC}/pforth.dic ${DESTDIR}${PREFIX}/lib/pforth
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/pforth
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${WRKSRC}/docs/* 		\
-		${DESTDIR}${PREFIX}/share/doc/pforth/
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pforth
-	${INSTALL_DATA} ${WRKSRC}/*.fth ${DESTDIR}${PREFIX}/share/pforth/
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pforth/utils
-	${INSTALL_DATA}  ${WRKSRC}/utils/*.fth				\
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/pforth/
+	${INSTALL_DATA} ${WRKSRC}/fth/*.fth ${DESTDIR}${PREFIX}/share/pforth/
+	${INSTALL_DATA}  ${WRKSRC}/fth/utils/*.fth			\
 		${DESTDIR}${PREFIX}/share/pforth/utils/
 
 .include "../../mk/bsd.pkg.mk"
