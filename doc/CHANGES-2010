@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4019 2010/11/21 22:55:12 tron Exp $
+$NetBSD: CHANGES-2010,v 1.4020 2010/11/22 02:28:19 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5633,3 +5633,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/lua-mode to 20100617 [minskim 2010-11-20]
 	Updated graphics/clutter to 1.4.0 [obache 2010-11-21]
 	Updated net/wireshark to 1.4.2 [tron 2010-11-21]
+	Updated lang/pforth to 27 [asau 2010-11-22]
