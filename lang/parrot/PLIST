@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/10/27 06:56:03 he Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/11/22 12:11:38 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -82,6 +82,7 @@ include/parrot/${PKGVERSION}/parrot/string.h
 include/parrot/${PKGVERSION}/parrot/string_funcs.h
 include/parrot/${PKGVERSION}/parrot/string_primitives.h
 include/parrot/${PKGVERSION}/parrot/sub.h
+include/parrot/${PKGVERSION}/parrot/sysmem.h
 include/parrot/${PKGVERSION}/parrot/thr_pthread.h
 include/parrot/${PKGVERSION}/parrot/thr_windows.h
 include/parrot/${PKGVERSION}/parrot/thread.h
@@ -283,6 +284,8 @@ lib/parrot/${PKGVERSION}/library/Data/Dumper/Default.pbc
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Default.pir
 lib/parrot/${PKGVERSION}/library/Digest/MD5.pbc
 lib/parrot/${PKGVERSION}/library/Digest/MD5.pir
+lib/parrot/${PKGVERSION}/library/Digest/sha256.pbc
+lib/parrot/${PKGVERSION}/library/Digest/sha256.pir
 lib/parrot/${PKGVERSION}/library/Getopt/Obj.pbc
 lib/parrot/${PKGVERSION}/library/Getopt/Obj.pir
 lib/parrot/${PKGVERSION}/library/HLL.pbc
@@ -491,6 +494,7 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/Perl.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/Tests.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/Tools.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Text2HTML.pm
+lib/parrot/${PKGVERSION}/tools/lib/Parrot/Git/Describe.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/H2inc.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/DefaultTests.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/Options.pm
@@ -527,6 +531,7 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/UtilFunctions.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/VTable.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Revision.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/SearchOps.pm
+lib/parrot/${PKGVERSION}/tools/lib/Parrot/SHA1.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Harness.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/PGE.pm
