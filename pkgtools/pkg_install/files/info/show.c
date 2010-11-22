@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.30 2009/08/02 17:56:45 joerg Exp $	*/
+/*	$NetBSD: show.c,v 1.31 2010/11/22 09:00:12 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: show.c,v 1.30 2009/08/02 17:56:45 joerg Exp $");
+__RCSID("$NetBSD: show.c,v 1.31 2010/11/22 09:00:12 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -360,7 +360,8 @@ show_summary(struct pkg_meta *meta, package_t *plist, const char *binpkgfile)
 	}
 
 	print_string_as_var("COMMENT", meta->meta_comment);
-	print_string_as_var("SIZE_PKG", meta->meta_size_pkg);
+	if (meta->meta_size_pkg)
+		print_string_as_var("SIZE_PKG", meta->meta_size_pkg);
 
 	if (meta->meta_build_info)
 		var_copy_list(meta->meta_build_info, bi_vars);
