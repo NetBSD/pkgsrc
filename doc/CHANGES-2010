@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4020 2010/11/22 02:28:19 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4021 2010/11/22 05:55:02 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5634,3 +5634,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.4.0 [obache 2010-11-21]
 	Updated net/wireshark to 1.4.2 [tron 2010-11-21]
 	Updated lang/pforth to 27 [asau 2010-11-22]
+	Updated textproc/xmlto to 0.0.21nb2 [dholland 2010-11-22]
