@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/11/22 09:32:24 ahoka Exp $
 bin/guards
 bin/quilt
 lib/quilt/backup-files
@@ -7,11 +7,12 @@ man/man1/quilt.1
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/README.MAIL
 share/doc/${PKGNAME}/quilt.pdf
+share/emacs/site-lisp/quilt.el
+share/examples/quilt/bash_completion.d/quilt
+share/examples/quilt/quilt.quiltrc
 share/locale/de/LC_MESSAGES/quilt.mo
 share/locale/fr/LC_MESSAGES/quilt.mo
 share/locale/ja/LC_MESSAGES/quilt.mo
-share/examples/quilt/bash_completion.d/quilt
-share/examples/quilt/quilt.quiltrc
 share/quilt/add
 share/quilt/annotate
 share/quilt/applied
@@ -39,8 +40,8 @@ share/quilt/pop
 share/quilt/previous
 share/quilt/push
 share/quilt/refresh
-share/quilt/remove
 share/quilt/rename
+share/quilt/revert
 share/quilt/scripts/dependency-graph
 share/quilt/scripts/edmail
 share/quilt/scripts/inspect
