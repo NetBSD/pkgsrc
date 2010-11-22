@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2009/08/25 11:56:35 wiz Exp $
+$NetBSD: distinfo,v 1.7 2010/11/22 01:25:48 asau Exp $
 
-SHA1 (pfthpc21.zip) = 550de4405f593004ff6e957a1c294bd801167e5b
-RMD160 (pfthpc21.zip) = cd5ab920efad2098351be98f86955d0e10ea61b2
-Size (pfthpc21.zip) = 295565 bytes
-SHA1 (patch-aa) = 7e875a466fb4577457120bf4165adb9339a20193
-SHA1 (patch-ab) = bce3729fabfd196b11562ccdc2e559455e29176e
+SHA1 (pforth_v27_20101121.zip) = 66b9f3927a877afecca2c303157b7127291802f6
+RMD160 (pforth_v27_20101121.zip) = e39965a79d4845763b6b767f5f7781f0d3758208
+Size (pforth_v27_20101121.zip) = 209538 bytes
+SHA1 (patch-aa) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ab) = da39a3ee5e6b4b0d3255bfef95601890afd80709
