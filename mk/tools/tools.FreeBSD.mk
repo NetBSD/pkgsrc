@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.32 2009/04/01 12:07:08 joerg Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.33 2010/11/22 12:37:05 obache Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -25,6 +25,7 @@ TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
 TOOLS_PLATFORM.false?=		false			# shell builtin
+TOOLS_PLATFORM.fetch?=		/usr/bin/fetch
 TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
