@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9871 2010/11/22 02:28:19 asau Exp $
+$NetBSD: TODO,v 1.9872 2010/11/22 13:31:22 obache Exp $
 
 Suggested new packages
 ======================
@@ -541,7 +541,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ede-2.0
 	o editres-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eekboard-0.0.6
 	o efax-gtk-3.2.6
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
