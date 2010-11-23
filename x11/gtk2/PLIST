@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2010/11/15 18:28:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.74 2010/11/23 13:31:33 tnn Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -1064,6 +1064,8 @@ share/locale/ja/LC_MESSAGES/gtk20-properties.mo
 share/locale/ja/LC_MESSAGES/gtk20.mo
 share/locale/ka/LC_MESSAGES/gtk20-properties.mo
 share/locale/ka/LC_MESSAGES/gtk20.mo
+share/locale/kg/LC_MESSAGES/gtk20-properties.mo
+share/locale/kg/LC_MESSAGES/gtk20.mo
 share/locale/kk/LC_MESSAGES/gtk20-properties.mo
 share/locale/kk/LC_MESSAGES/gtk20.mo
 share/locale/kn/LC_MESSAGES/gtk20-properties.mo
@@ -1072,6 +1074,8 @@ share/locale/ko/LC_MESSAGES/gtk20-properties.mo
 share/locale/ko/LC_MESSAGES/gtk20.mo
 share/locale/ku/LC_MESSAGES/gtk20-properties.mo
 share/locale/ku/LC_MESSAGES/gtk20.mo
+share/locale/lg/LC_MESSAGES/gtk20-properties.mo
+share/locale/lg/LC_MESSAGES/gtk20.mo
 share/locale/li/LC_MESSAGES/gtk20-properties.mo
 share/locale/li/LC_MESSAGES/gtk20.mo
 share/locale/lt/LC_MESSAGES/gtk20-properties.mo
