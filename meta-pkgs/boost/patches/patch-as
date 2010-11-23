@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1 2010/11/23 21:23:04 shattered Exp $
+
+From https://svn.boost.org/trac/boost/ticket/4794, fixes build on 4.0
+
+--- boost/math/special_functions/cbrt.hpp.orig	2010-05-21 17:23:36.000000000 +0000
++++ boost/math/special_functions/cbrt.hpp
+@@ -69,7 +69,7 @@ T cbrt_imp(T z, const Policy& pol)
+       static_cast<T>(1.5874010519681994747517056392723),   // 2^2/3
+    };
+ 
+-   if(!boost::math::isfinite(z))
++   if(!(boost::math::isfinite)(z))
+    {
+       return policies::raise_domain_error("boost::math::cbrt<%1%>(%1%)", "Argument to function must be finite but got %1%.", z, pol);
+    }
