@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4032 2010/11/23 08:24:20 tron Exp $
+$NetBSD: CHANGES-2010,v 1.4033 2010/11/23 11:10:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5646,3 +5646,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/fly to 1.6.5nb12 [obache 2010-11-23]
 	Updated net/wget to 1.12nb1 [tron 2010-11-23]
 	Updated lang/python26 to 2.6.6nb4 [tron 2010-11-23]
+	Updated print/ghostscript to 8.71nb6 [tron 2010-11-23]
