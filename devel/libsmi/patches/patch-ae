@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1 2010/11/23 11:30:50 tron Exp $
+
+Fix for CVE-2010-2891 taken from here:
+
+http://git.debian.org/?p=collab-maint/libsmi.git;a=blob_plain;f=debian/patches/cve-2010-2891.patch;hb=1b460ead526610a66d032c75d191dd65bc5727f4
+
+--- lib/smi.c.orig	2008-04-18 11:42:50.000000000 +0100
++++ lib/smi.c	2010-11-23 11:27:28.000000000 +0000
+@@ -1314,10 +1314,15 @@
+     }
+ 
+     if (isdigit((int)node2[0])) {
+-	for (oidlen = 0, p = strtok(node2, ". "); p;
++	for (oidlen = 0, p = strtok(node2, ". ");
++	     p && oidlen < sizeof(oid)/sizeof(oid[0]);
+ 	     oidlen++, p = strtok(NULL, ". ")) {
+ 	    oid[oidlen] = strtoul(p, NULL, 0);
+ 	}
++	if (p) {
++	    /* the numeric OID is too long */
++	    return NULL;
++	}
+ 	nodePtr = getNode(oidlen, oid);
+ 	if (nodePtr) {
+ 	    if (modulePtr) {
