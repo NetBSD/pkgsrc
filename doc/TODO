@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9875 2010/11/23 05:22:14 obache Exp $
+$NetBSD: TODO,v 1.9876 2010/11/23 14:21:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o calibre-0.7.28
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o ccache-3.1.1
+	o ccache-3.1.2
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
@@ -486,7 +486,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o consolekit-0.4.0
 	o cook-2.31
 	o coreutils-8.4
-	o covered-0.7.8
+	o covered-0.7.9
 	o covered-current-20090802
 	o cpio-2.9
 	o cpmtools-2.6
@@ -665,7 +665,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gawk-3.1.8
 	o gbdfed-1.6
 	o gcal-3.6
-	o gcalctool-5.32.1
+	o gcalctool-5.32.2
 	o gcc-4.5.1
 	o gcc44-4.4.5
 	o gcin-1.5.5
@@ -680,6 +680,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o geany-0.19
 	o gedit-plugins-2.32.0 [GNOME 2.32]
+	o genius-1.0.12
 	o gentoo-0.19.5
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
@@ -701,7 +702,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.30
-	o gnome-applets-2.32.0 [GNOME 2.32]
+	o gnome-applets-2.32.1.1 [GNOME 2.32]
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-commander-1.2.8.8
@@ -791,6 +792,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-7.4
 	o highlight-3.2
 	o honeyd-1.5c
+	o horde-3.3.11
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -869,12 +871,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
-	o lftp-4.0.10
+	o lftp-4.1.0
 	o lgeneral-1.2
 	o libFS-1.0.3
 	o libICE-1.0.7
 	o libSM-1.2.0
-	o libX11-1.3.6
+	o libX11-1.4.0
 	o libXScrnSaver-1.2.1
 	o libXaw-1.0.8
 	o libXcomposite-0.4.3
@@ -894,6 +896,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXtst-1.2.0
 	o libXv-1.0.6
 	o libXxf86dga-1.1.2
+	o libXxf86misc-1.0.3
 	o libXxf86vm-1.1.1
 	o libcanberra-0.26
 	o libcares-1.7.2
@@ -1001,6 +1004,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-sequel-1.0.0
 	o merb-stories-0.9.13
 	o merb-test-unit-0.9.13
+	o mercurial-1.7.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metacity-2.30.3
@@ -1086,7 +1090,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openoffice3-3.2.1
 	o openssh-5.6
 	o openssl-1.0.0b
-	o openttd-1.0.4
+	o openttd-1.0.5
 	o open-vm-tools-2010.09.19.301124
 	o opera-10.63
 	o orca-2.32.1 [GNOME 2.32]
@@ -1099,12 +1103,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Search-Xapian-1.2.2.0 [needs xapian >= 1.2.2]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
-	o p5-xmltv-0.5.57
+	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o paprefs-0.9.8
 	o parallel-20101113
 	o pari-galdata-2.2 [pkg/38117]
-	o parrot-2.10.0
 	o patch-2.6.1
 	o patchutils-0.3.1
 	o pavucontrol-0.9.8
@@ -1205,6 +1208,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdp-1.6
 	o recordproto-1.14.1
 	o remind-3.1.10
+	o rendercheck-1.4
 	o renderproto-0.11.1
 	o rep-gtk-0.90.4
 	o resize_image-0.7
@@ -1524,7 +1528,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsetroot-1.1.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-266
+	o xterm-267
 	o xtraceroute-0.9.1
 	o xtrans-1.2.6
 	o xtu-1.3
@@ -1540,7 +1544,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yafc-1.1
 	o yaz-4.1.2
 	o yodl-2.14.3
-	o youtube-dl-20101024
+	o youtube-dl-20101119
 	o ysm-2.9.9.1
 	o yudit-2.9.2
 	o yorick-2.1.05
