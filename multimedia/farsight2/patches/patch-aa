@@ -1,15 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2010/08/06 10:15:14 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2010/11/23 18:02:02 wiz Exp $
 
-https://bugs.freedesktop.org/show_bug.cgi?id=23378
+Fix compilation problem on NetBSD:
+  CC     libshm_transmitter_la-fs-shm-stream-transmitter.lo
+In file included from fs-shm-transmitter.c:56:
+/usr/include/netinet/ip.h:67: error: field 'ip_src' has incomplete type
+/usr/include/netinet/ip.h:67: error: field 'ip_dst' has incomplete type
+/usr/include/netinet/ip.h:149: error: expected specifier-qualifier-list before 'n_time'
+/usr/include/netinet/ip.h:187: error: field 'ippseudo_src' has incomplete type
+/usr/include/netinet/ip.h:188: error: field 'ippseudo_dst' has incomplete type
 
---- configure.orig	2010-06-01 21:12:47.000000000 +0000
-+++ configure
-@@ -14450,7 +14450,7 @@ rm -f core conftest.err conftest.$ac_obj
- $as_echo "$flag_ok" >&6; }
+--- transmitters/shm/fs-shm-transmitter.c.orig	2010-09-21 21:22:33.000000000 +0000
++++ transmitters/shm/fs-shm-transmitter.c
+@@ -53,7 +53,6 @@
+ #else /*G_OS_WIN32*/
+ # include <netdb.h>
+ # include <sys/socket.h>
+-# include <netinet/ip.h>
+ # include <arpa/inet.h>
+ #endif /*G_OS_WIN32*/
  
- 
--        if test "x$ERROR_CFLAGS" == "x"
-+        if test "x$ERROR_CFLAGS" = "x"
-     then
- 
-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking to see if compiler understands -errwarn=%all" >&5
