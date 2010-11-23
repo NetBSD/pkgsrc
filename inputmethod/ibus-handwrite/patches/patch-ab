@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/08/07 02:25:03 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/11/23 01:10:36 obache Exp $
 
---- src/main.c.orig	2010-04-23 07:13:02.000000000 +0000
+--- src/main.c.orig	2010-11-22 12:57:26.000000000 +0000
 +++ src/main.c
 @@ -1,7 +1,9 @@
  /* vim:set et sts=4: */
