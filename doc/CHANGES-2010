@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4048 2010/11/23 21:56:59 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4049 2010/11/23 21:57:17 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5664,3 +5664,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated biology/gromacs to 4.5.3 [asau 2010-11-23]
 	Updated lang/gambc to 4.6.0 [asau 2010-11-23]
 	Updated lang/swi-prolog-lite to 5.11.9 [asau 2010-11-23]
+	Updated lang/swi-prolog-packages to 5.11.9 [asau 2010-11-23]
