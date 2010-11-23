@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/07 02:25:03 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/23 01:10:36 obache Exp $
 
---- src/handrecog_lucykila.c.orig	2010-04-22 10:53:37.000000000 +0000
+--- src/handrecog_lucykila.c.orig	2010-11-22 12:41:39.000000000 +0000
 +++ src/handrecog_lucykila.c
-@@ -17,6 +17,12 @@
- #include "engine.h"
+@@ -18,6 +18,12 @@
  #include "handrecog.h"
+ #include "global_var.h"
  
 +#ifndef MAP_ANONYMOUS
 +#ifdef MAP_ANON

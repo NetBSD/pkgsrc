@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/11/15 22:57:32 abs Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/23 01:10:36 obache Exp $
 #
 
-DISTNAME=	ibus-handwrite-2.1.0
-PKGREVISION=	3
+DISTNAME=	ibus-handwrite-2.1.1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus-handwrite.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus-handwrite/
@@ -26,6 +24,8 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--enable-zinnia
 CONFIGURE_ARGS+=	--with-zinnia-tomoe=${ZINNIA_TOMOE_DIR}/lib/zinnia/model/tomoe
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../inputmethod/zinnia/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
