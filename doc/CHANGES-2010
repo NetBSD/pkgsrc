@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4043 2010/11/23 17:39:25 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4044 2010/11/23 17:40:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5659,3 +5659,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/yaz to 4.1.2 [wiz 2010-11-23]
 	Updated misc/tellico to 2.3.1 [wiz 2010-11-23]
 	Updated graphics/cairomm to 1.8.6 [wiz 2010-11-23]
+	Updated net/clive to 2.2.17 [wiz 2010-11-23]
