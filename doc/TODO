@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9874 2010/11/23 04:58:40 obache Exp $
+$NetBSD: TODO,v 1.9875 2010/11/23 05:22:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -1172,7 +1172,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cups-1.9.52
 	o py-docutils-0.7
 	o py-game-1.9.1
-	o py-gd-0.56 [http://newcenturycomputers.net/projects/gdmodule.html]
 	o py-gnome2-desktop-2.32.0
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
