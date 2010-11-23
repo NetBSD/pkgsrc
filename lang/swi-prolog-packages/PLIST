@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/08/18 22:32:01 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/11/23 21:56:25 asau Exp $
 bin/xpce-client
 lib/swi-prolog-${PKGVERSION}/Makefile
 lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_GNU_PLATFORM}/xpce
@@ -151,16 +151,20 @@ lib/swi-prolog-${PKGVERSION}/library/pldoc/doc_util.pl
 lib/swi-prolog-${PKGVERSION}/library/pldoc/doc_wiki.pl
 lib/swi-prolog-${PKGVERSION}/library/pldoc/edit.gif
 lib/swi-prolog-${PKGVERSION}/library/pldoc/favicon.ico
+lib/swi-prolog-${PKGVERSION}/library/pldoc/h1-bg.png
 lib/swi-prolog-${PKGVERSION}/library/pldoc/hooks.pl
+lib/swi-prolog-${PKGVERSION}/library/pldoc/multi-bg.png
 lib/swi-prolog-${PKGVERSION}/library/pldoc/pldoc.css
 lib/swi-prolog-${PKGVERSION}/library/pldoc/pldoc.js
 lib/swi-prolog-${PKGVERSION}/library/pldoc/pldoc.sty
 lib/swi-prolog-${PKGVERSION}/library/pldoc/pllisting.css
+lib/swi-prolog-${PKGVERSION}/library/pldoc/priv-bg.png
+lib/swi-prolog-${PKGVERSION}/library/pldoc/private.png
+lib/swi-prolog-${PKGVERSION}/library/pldoc/pub-bg.png
+lib/swi-prolog-${PKGVERSION}/library/pldoc/public.png
 lib/swi-prolog-${PKGVERSION}/library/pldoc/reload.gif
-lib/swi-prolog-${PKGVERSION}/library/pldoc/source.gif
+lib/swi-prolog-${PKGVERSION}/library/pldoc/source.png
 lib/swi-prolog-${PKGVERSION}/library/pldoc/up.gif
-lib/swi-prolog-${PKGVERSION}/library/pldoc/zoomin.gif
-lib/swi-prolog-${PKGVERSION}/library/pldoc/zoomout.gif
 lib/swi-prolog-${PKGVERSION}/library/plunit.pl
 lib/swi-prolog-${PKGVERSION}/library/porter_stem.pl
 lib/swi-prolog-${PKGVERSION}/library/process.pl
@@ -1191,3 +1195,4 @@ lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/xref/mkcommon.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/xref/quintus.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/xref/sicstus.pl
 man/man1/xpce-client.1
+man/man1/xpce.1
