@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/10/16 15:28:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/11/23 17:25:10 wiz Exp $
 bin/yaz-asncomp
 bin/yaz-client
 bin/yaz-config
@@ -122,6 +122,7 @@ lib/libyaz_server.la
 lib/pkgconfig/yaz.pc
 man/man1/yaz-asncomp.1
 man/man1/yaz-client.1
+man/man1/yaz-config.1
 man/man1/yaz-iconv.1
 man/man1/yaz-icu.1
 man/man1/yaz-illclient.1
@@ -131,7 +132,6 @@ man/man1/zoomsh.1
 man/man7/bib1-attr.7
 man/man7/yaz-log.7
 man/man7/yaz.7
-man/man8/yaz-config.8
 man/man8/yaz-ztest.8
 share/aclocal/yaz.m4
 share/doc/yaz/apilayer.png
@@ -197,6 +197,7 @@ share/doc/yaz/yaz-ztest.html
 share/doc/yaz/yaz.html
 share/doc/yaz/zoom.events.html
 share/doc/yaz/zoom.extendedservices.html
+share/doc/yaz/zoom.facets.html
 share/doc/yaz/zoom.html
 share/doc/yaz/zoom.options.html
 share/doc/yaz/zoom.query.html
