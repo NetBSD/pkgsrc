@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:02 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/23 11:30:50 tron Exp $
 
 DISTNAME=	libsmi-0.4.8
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/
 
