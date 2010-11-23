@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/08/31 09:17:56 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/11/23 21:22:11 asau Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
 PKGNAME=	gambc-${GAMBC_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	http://www.iro.umontreal.ca/~gambit/download/gambit/v4.2/source/
+MASTER_SITES=	http://www.iro.umontreal.ca/~gambit/download/gambit/v4.6/source/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	bjs@NetBSD.org
@@ -24,6 +24,7 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--enable-single-host
 CONFIGURE_ARGS+=	--enable-cplusplus
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--disable-absolute-shared-libs # DESTDIR bug?
 ###
 ### XXX On NetBSD/amd64 4.99.61, gcc had a resident memory size of over 384MB
 ###	while building this and ultimately exhausted all 1GB of swap I had.
@@ -56,9 +57,6 @@ GAMBC_MAKE_FLAGS+=	infodir=${PREFIX}/${PKGINFODIR}
 GAMBC_MAKE_FLAGS+=	emacsdir=${PREFIX}/share/emacs/site-lisp
 
 MAKE_FLAGS+=		${GAMBC_MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	${GAMBC_MAKE_FLAGS:@.f.@\
-				${.f.:C|${PREFIX}|${DESTDIR}&|}\
-			@:M*}
 
 SUBST_CLASSES+=		build
 SUBST_FILES.build=	configure
