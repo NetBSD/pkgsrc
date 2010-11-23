@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/08/18 22:32:00 asau Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/11/23 21:56:25 asau Exp $
 bin/swi-prolog
 bin/swipl-ld
 bin/swipl-rc
@@ -62,7 +62,6 @@ lib/swi-prolog-${PKGVERSION}/doc/Manual/check.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/chr.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/chrintro.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/clicense.html
-lib/swi-prolog-${PKGVERSION}/doc/Manual/clpclp_distinct.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/clpfd.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/clpqr.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/cmdline.html
@@ -157,6 +156,7 @@ lib/swi-prolog-${PKGVERSION}/doc/Manual/mt-xpce.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/mtoplevel.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/mtunbound.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/navigator.html
+lib/swi-prolog-${PKGVERSION}/doc/Manual/nb_set.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/nbset.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/next.gif
 lib/swi-prolog-${PKGVERSION}/doc/Manual/operators.html
@@ -177,6 +177,7 @@ lib/swi-prolog-${PKGVERSION}/doc/Manual/prev.gif
 lib/swi-prolog-${PKGVERSION}/doc/Manual/profile.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/profnode.gif
 lib/swi-prolog-${PKGVERSION}/doc/Manual/projectfiles.html
+lib/swi-prolog-${PKGVERSION}/doc/Manual/prolog_xref.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/prologxref.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/protocol.html
 lib/swi-prolog-${PKGVERSION}/doc/Manual/qsaveforeign.html
