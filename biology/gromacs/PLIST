@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/21 12:03:57 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/11/23 19:43:58 asau Exp $
 bin/GMXRC
 bin/GMXRC.bash
 bin/GMXRC.csh
@@ -39,6 +39,7 @@ bin/g_h2order
 bin/g_hbond
 bin/g_helix
 bin/g_helixorient
+bin/g_kinetics
 bin/g_lie
 bin/g_luck
 bin/g_mdmat
@@ -781,6 +782,10 @@ share/gromacs/top/charmm27.ff/aminoacids.rtp
 share/gromacs/top/charmm27.ff/aminoacids.vsd
 share/gromacs/top/charmm27.ff/atomtypes.atp
 share/gromacs/top/charmm27.ff/cmap.itp
+share/gromacs/top/charmm27.ff/dna.arn
+share/gromacs/top/charmm27.ff/dna.c.tdb
+share/gromacs/top/charmm27.ff/dna.hdb
+share/gromacs/top/charmm27.ff/dna.n.tdb
 share/gromacs/top/charmm27.ff/dna.rtp
 share/gromacs/top/charmm27.ff/ffbonded.itp
 share/gromacs/top/charmm27.ff/ffnabonded.itp
@@ -792,11 +797,17 @@ share/gromacs/top/charmm27.ff/gb.itp
 share/gromacs/top/charmm27.ff/ions.itp
 share/gromacs/top/charmm27.ff/lipids.hdb
 share/gromacs/top/charmm27.ff/lipids.rtp
+share/gromacs/top/charmm27.ff/rna.arn
+share/gromacs/top/charmm27.ff/rna.c.tdb
+share/gromacs/top/charmm27.ff/rna.hdb
+share/gromacs/top/charmm27.ff/rna.n.tdb
+share/gromacs/top/charmm27.ff/rna.r2b
 share/gromacs/top/charmm27.ff/rna.rtp
 share/gromacs/top/charmm27.ff/spc.itp
 share/gromacs/top/charmm27.ff/spce.itp
 share/gromacs/top/charmm27.ff/tip3p.itp
 share/gromacs/top/charmm27.ff/tip4p.itp
+share/gromacs/top/charmm27.ff/tip5p.itp
 share/gromacs/top/charmm27.ff/tips3p.itp
 share/gromacs/top/charmm27.ff/watermodels.dat
 share/gromacs/top/co-shift.dat
