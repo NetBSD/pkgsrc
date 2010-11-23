@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2010/11/23 13:53:54 haad Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/23 13:56:31 wiz Exp $
 Fix problem with gettext definition of LC_* variables. See 
 code below as example of warning. 
 
@@ -11,7 +11,7 @@ Prototype mismatch: sub main::LC_CTYPE: none vs () at -e line 0
 Prototype mismatch: sub main::LC_MESSAGES: none vs () at -e line 0
 Prototype mismatch: sub main::LC_COLLATE: none vs () at -e line 0
 
-Prblem fixed with patch from 
+Problem fixed with patch from 
 
 http://rt.cpan.org/Public/Bug/Display.html?id=35680
 
