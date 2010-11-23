@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4047 2010/11/23 21:22:42 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4048 2010/11/23 21:56:59 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5663,3 +5663,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/farsight2 to 0.0.22 [wiz 2010-11-23]
 	Updated biology/gromacs to 4.5.3 [asau 2010-11-23]
 	Updated lang/gambc to 4.6.0 [asau 2010-11-23]
+	Updated lang/swi-prolog-lite to 5.11.9 [asau 2010-11-23]
