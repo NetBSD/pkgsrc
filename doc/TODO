@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9879 2010/11/23 17:25:20 wiz Exp $
+$NetBSD: TODO,v 1.9880 2010/11/23 17:31:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1319,7 +1319,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o teem-1.10.0
 	o telepathy-gabble-0.9.14
 	o telepathy-glib-0.11.15
-	o tellico-2.3.1
 	o tesseract-3.00
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
