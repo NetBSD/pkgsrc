@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4034 2010/11/23 11:31:05 tron Exp $
+$NetBSD: CHANGES-2010,v 1.4035 2010/11/23 11:55:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5648,3 +5648,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/python26 to 2.6.6nb4 [tron 2010-11-23]
 	Updated print/ghostscript to 8.71nb6 [tron 2010-11-23]
 	Updated devel/libsmi to 0.4.8nb1 [tron 2010-11-23]
+	Updated www/ap2-fcgid to 2.3.6 [obache 2010-11-23]
