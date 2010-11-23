@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/10/21 12:03:57 asau Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/23 19:43:58 asau Exp $
 #
 
-DISTNAME=		gromacs-4.5.1
-PKGNAME=		$(DISTNAME:=.1)
+DISTNAME=		gromacs-4.5.3
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.gromacs.org/pub/gromacs/
 
@@ -12,12 +11,6 @@ COMMENT=		Molecular dynamics package
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# GROMACS team released another version a day after:
-# 4.5.1-20100902-2d7e855 vs.
-# 4.5.1-20100903-d982058
-# call it 4.5.1.1
-DIST_SUBDIR=		gromacs-4.5.1.1
 
 # Official recommendation is not to use the gcc 4.1.x set of compilers.
 
