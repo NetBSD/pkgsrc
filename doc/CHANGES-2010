@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4028 2010/11/23 05:22:43 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4029 2010/11/23 05:41:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5642,3 +5642,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ibus-handwrite to 2.1.1 [obache 2010-11-23]
 	Updated mail/milter-manager to 1.6.2 [obache 2010-11-23]
 	Updated graphics/py-gd to 1.3nb12 [obache 2010-11-23]
+	Updated graphics/ruby-gd to 0.8.0nb4 [obache 2010-11-23]
