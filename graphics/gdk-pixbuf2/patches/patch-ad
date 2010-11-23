@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2010/11/23 13:05:22 he Exp $
+
+This file is passed through the C preprocessor, so we have
+to use C comments to acheive the desired effect, so that these
+are not mis-interpreted as invalid C preprocessing directives.
+
+--- gdk-pixbuf/pixops/have_mmx.S.orig	2010-11-19 11:41:03.000000000 +0000
++++ gdk-pixbuf/pixops/have_mmx.S
+@@ -42,7 +42,7 @@ __pixops_have_mmx:
+ 	
+ 	push	%ebx
+ 
+-# Check if bit 21 in flags word is writeable
++/* # Check if bit 21 in flags word is writeable */
+ 
+ 	pushfl	
+ 	popl	%eax
+@@ -57,7 +57,7 @@ __pixops_have_mmx:
+ 
+ 	je .notfound
+ 
+-# OK, we have CPUID
++/* # OK, we have CPUID */
+ 
+ 	movl	$1, %eax
+ 	cpuid
