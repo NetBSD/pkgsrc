@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2010/06/13 22:44:30 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/11/23 06:22:28 obache Exp $
 
 DISTNAME=	fly-1.6.5
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics www
 MASTER_SITES=	ftp://www.unimelb.edu.au/pub/www/tools/unix/fly/
 
@@ -21,12 +21,10 @@ REPLACE_PERL=	examples/cgi-perl-example.pl \
 
 INSTALLATION_DIRS=	bin
 
-pre-configure:
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
-		< ${WRKSRC}/examples/cgi-perl-example.pl \
-		> ${WRKSRC}/examples/cgi-perl-example.pl.new
-	${MV} ${WRKSRC}/examples/cgi-perl-example.pl.new \
-		${WRKSRC}/examples/cgi-perl-example.pl
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	examples/cgi-perl-example.pl
+SUBST_VARS.prefix=	PREFIX
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fly ${DESTDIR}${PREFIX}/bin
@@ -39,7 +37,5 @@ do-install:
 	cd ${WRKSRC}/examples; ${INSTALL_DATA} * \
 		${DESTDIR}${PREFIX}/share/examples/fly
 
-.include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

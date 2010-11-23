@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2003/06/23 10:39:51 adam Exp $
+$NetBSD: patch-aa,v 1.9 2010/11/23 06:22:29 obache Exp $
 
 --- Makefile.orig	Thu Jan 14 17:42:34 1999
 +++ Makefile	Sun Oct 31 00:18:17 1999
@@ -16,8 +16,8 @@ $NetBSD: patch-aa,v 1.8 2003/06/23 10:39:51 adam Exp $
 +#    CFLAGS = -O -I$(GD)
 +#   #CFLAGS = -O -pedantic -Wall -I$(GD)
 +#      LIBS = -L$(GD) -lgd -lm
-+CFLAGS += ${CPPFLAGS}
-+LIBS = ${LDFLAGS} -lgd -lpng -lz -lttf -lintl -lXpm -lX11 -ljpeg -lm
++CFLAGS += ${CPPFLAGS} `gdlib-config --cflags`
++LIBS = ${LDFLAGS} `gdlib-config --ldflags` -lgd `gdlib-config --libs`
  
 -all: gd fly
 +all: fly
