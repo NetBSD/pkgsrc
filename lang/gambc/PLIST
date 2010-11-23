@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/11/23 21:22:11 asau Exp $
+bin/gambc-cc.bat
+bin/gambc-doc.bat
 bin/gsc
-bin/gsc-cc-o.bat
 bin/gsc-script
 bin/gsi
 bin/gsi-script
@@ -10,8 +11,8 @@ bin/scheme-r5rs
 bin/scheme-srfi-0
 bin/six
 bin/six-script
-include/gambit.h
 include/gambit-not.h
+include/gambit.h
 info/gambit-c.info
 lib/_eval#.scm
 lib/_gambc.c
@@ -34,6 +35,8 @@ lib/libgambcgsc.so
 lib/libgambcgsi.so
 lib/r4rs#.scm
 lib/r5rs#.scm
+lib/syntax-case.scm
+man/man1/gsi.1
 share/doc/gambc/gambit-c.html
 share/doc/gambc/gambit-c.pdf
 share/doc/gambc/gambit-c.txt
