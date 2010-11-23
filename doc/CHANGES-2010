@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4045 2010/11/23 18:02:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4046 2010/11/23 19:44:44 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5661,3 +5661,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/cairomm to 1.8.6 [wiz 2010-11-23]
 	Updated net/clive to 2.2.17 [wiz 2010-11-23]
 	Updated multimedia/farsight2 to 0.0.22 [wiz 2010-11-23]
+	Updated biology/gromacs to 4.5.3 [asau 2010-11-23]
