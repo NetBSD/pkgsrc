@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4033 2010/11/23 11:10:28 tron Exp $
+$NetBSD: CHANGES-2010,v 1.4034 2010/11/23 11:31:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5647,3 +5647,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/wget to 1.12nb1 [tron 2010-11-23]
 	Updated lang/python26 to 2.6.6nb4 [tron 2010-11-23]
 	Updated print/ghostscript to 8.71nb6 [tron 2010-11-23]
+	Updated devel/libsmi to 0.4.8nb1 [tron 2010-11-23]
