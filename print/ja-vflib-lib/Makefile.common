@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2010/11/23 06:37:01 obache Exp $
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
 CATEGORIES+=		japanese print
@@ -8,7 +8,7 @@ DISTFILES+=		${VFLIB_SRC}
 VFLIB_SRC=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://TypeHack.aial.hiroshima-u.ac.jp/VFlib/
+HOMEPAGE=		http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/
 
 VFLIB_VERSION=		2.24.2
 PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION:Q}
