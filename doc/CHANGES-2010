@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4037 2010/11/23 13:24:38 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4038 2010/11/23 13:33:00 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5653,3 +5653,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/mencoder to 1.0rc20100913nb1 [tron 2010-11-23]
 	Updated multimedia/gmplayer to 1.0rc20100913nb2 [tron 2010-11-23]
 	Updated pkgtools/x11-links to 0.61 [wiz 2010-11-23]
+	Updated x11/gtk2 to 2.22.1 [tnn 2010-11-23]
