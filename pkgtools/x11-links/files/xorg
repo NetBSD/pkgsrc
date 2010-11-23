@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.16 2010/09/14 08:55:42 tron Exp $
+# $NetBSD: xorg,v 1.17 2010/11/23 13:24:26 wiz Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -113,28 +113,6 @@ include/X11/Xaw/ViewportP.h
 include/X11/Xaw/XawImP.h
 include/X11/Xaw/XawInit.h
 include/X11/Xft/XftFreetype.h
-include/X11/Xmu/Atoms.h
-include/X11/Xmu/CharSet.h
-include/X11/Xmu/CloseHook.h
-include/X11/Xmu/Converters.h
-include/X11/Xmu/CurUtil.h
-include/X11/Xmu/CvtCache.h
-include/X11/Xmu/DisplayQue.h
-include/X11/Xmu/Drawing.h
-include/X11/Xmu/Editres.h
-include/X11/Xmu/EditresP.h
-include/X11/Xmu/Error.h
-include/X11/Xmu/ExtAgent.h
-include/X11/Xmu/Initer.h
-include/X11/Xmu/Lookup.h
-include/X11/Xmu/Misc.h
-include/X11/Xmu/StdCmap.h
-include/X11/Xmu/StdSel.h
-include/X11/Xmu/SysUtil.h
-include/X11/Xmu/WidgetNode.h
-include/X11/Xmu/WinUtil.h
-include/X11/Xmu/Xct.h
-include/X11/Xmu/Xmu.h
 include/X11/XprintAppUtil/xpapputil.h
 include/X11/XprintUtil/xprintutil.h
 include/X11/bitmaps/1x1
