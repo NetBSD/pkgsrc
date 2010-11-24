@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2010/11/15 21:11:29 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/11/24 19:01:49 drochner Exp $
 
-DISTNAME=	gnome-platform-2.32.0
+DISTNAME=	gnome-platform-2.32.1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -24,15 +24,15 @@ DEPENDS+=	at-spi>=1.32.0:../../devel/at-spi
 DEPENDS+=	atk>=1.32.0:../../devel/atk
 DEPENDS+=	libaudiofile>=0.2.7:../../audio/libaudiofile
 DEPENDS+=	esound>=0.2.41:../../audio/esound
-DEPENDS+=	gdk-pixbuf2>=2.22.0:../../graphics/gdk-pixbuf2
+DEPENDS+=	gdk-pixbuf2>=2.22.1:../../graphics/gdk-pixbuf2
 .if !empty(PKG_OPTIONS:Mfam)
-DEPENDS+=	gio-fam>=2.26.0:../../sysutils/gio-fam  # This is part of glib2.
+DEPENDS+=	gio-fam>=2.26.1:../../sysutils/gio-fam  # This is part of glib2.
 .endif
-DEPENDS+=	glib2>=2.26.0:../../devel/glib2
+DEPENDS+=	glib2>=2.26.1:../../devel/glib2
 DEPENDS+=	gnome-mime-data>=2.18.0:../../databases/gnome-mime-data
 DEPENDS+=	gnome-vfs>=2.24.4:../../sysutils/gnome-vfs
 DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
-DEPENDS+=	gtk2+>=2.22.0:../../x11/gtk2
+DEPENDS+=	gtk2+>=2.22.1:../../x11/gtk2
 DEPENDS+=	gtk-doc>=1.15:../../textproc/gtk-doc
 DEPENDS+=	libIDL>=0.8.14:../../net/libIDL
 DEPENDS+=	libart>=2.3.21:../../graphics/libart
