@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/14 20:12:58 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/11/24 01:56:13 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -479,6 +479,7 @@ share/openmpi/help-mca-coll-base.txt
 share/openmpi/help-mca-param.txt
 share/openmpi/help-mpi-api.txt
 share/openmpi/help-mpi-btl-base.txt
+share/openmpi/help-mpi-btl-tcp.txt
 share/openmpi/help-mpi-common-sm.txt
 share/openmpi/help-mpi-errors.txt
 share/openmpi/help-mpi-runtime.txt
