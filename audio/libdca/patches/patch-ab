@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/11/24 22:27:06 shattered Exp $
+
+--- libao/audio_out_wav.c.orig	2007-04-10 12:07:05.000000000 +0000
++++ libao/audio_out_wav.c
+@@ -163,8 +163,8 @@ static int wav_play (ao_instance_t * _in
+     union
+     {
+         float floats[256 * 6];
+-        int16_t words[0];
+-        int32_t dwords[0];
++        int16_t words[1];
++        int32_t dwords[1];
+     } ordered_samples;
+     int chans, size;
+     uint32_t speaker_flags;
