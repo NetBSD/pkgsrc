@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9884 2010/11/23 22:56:02 wiz Exp $
+$NetBSD: TODO,v 1.9885 2010/11/24 21:17:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -574,7 +574,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o evince-2.32.0
 	o evolution-2.32.1 [GNOME 2.32]
 	o evolution-couchdb-0.4.5
-	o evolution-data-server-2.32.1 [GNOME 2.32]
 	o evolution-exchange-2.32.1 [GNOME 2.32]
 	o evolution-mapi-0.32.1 [GNOME 2.32]
 	o evolution-webcal-2.32.0
@@ -703,7 +702,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-commander-1.2.8.8
 	o gnome-control-center-2.32.1 [GNOME 2.32]
-	o gnome-desktop-2.32.1 [GNOME 2.32]
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-2.32.1 [GNOME 2.32]
@@ -711,11 +709,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-keyring-2.32.1 [GNOME 2.32]
 	o gnome-mag-0.16.3
 	o gnome-media-2.32.0 [GNOME 2.32]
-	o gnome-menus-2.30.5 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
 	o gnome-packagekit-2.32.0 [GNOME 2.32]
-	o gnome-panel-2.32.1
 	o gnome-pilot-2.32.0 [GNOME 2.32]
 	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
@@ -847,7 +843,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kmp-0.5
 	o kmymoney2-4.5
 	o kodos-2.4.5
-	o koffice-2.2.1
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
 	o kronolith-2.3.5
@@ -941,7 +936,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libupnp-1.6.9 [break API/ABI compatibility]
 	o libusb-1.0
 	o libv4l-0.8.1
-	o libwnck-2.30.6
 	o libxdg-basedir-1.1.1
 	o libxkbfile-1.0.7
 	o libxml++-2.32.0 [GNOME 2.32]
@@ -1002,7 +996,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-test-unit-0.9.13
 	o mergeant-0.67
 	o mesure-0.7.2
-	o metacity-2.30.3
 	o mgetty+sendfax-1.1.35
 	o midori-0.2.9
 	o milkytracker-0.90.85
@@ -1037,7 +1030,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o musicpd-0.15.15
 	o nagios-3.2.3
 	o nap-1.5.3
-	o nautilus-2.32.1
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o nautilus-sendto-2.28.5
 	o navi2ch-1.8.1
@@ -1173,8 +1165,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnome2-desktop-2.32.0
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
-	o py-gobject-2.26.0
-	o py-gtk2-2.22.0
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
