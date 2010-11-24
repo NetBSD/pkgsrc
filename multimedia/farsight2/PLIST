@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/08/05 18:55:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/11/24 03:16:45 obache Exp $
 include/gstreamer-0.10/gst/farsight/fs-base-conference.h
 include/gstreamer-0.10/gst/farsight/fs-candidate.h
 include/gstreamer-0.10/gst/farsight/fs-codec.h
@@ -15,6 +15,7 @@ include/gstreamer-0.10/gst/farsight/fs-transmitter.h
 lib/farsight2-0.0/libmulticast-transmitter.la
 lib/farsight2-0.0/libnice-transmitter.la
 lib/farsight2-0.0/librawudp-transmitter.la
+lib/farsight2-0.0/libshm-transmitter.la
 lib/gstreamer-0.10/libfsfunnel.la
 lib/gstreamer-0.10/libfsmsnconference.la
 lib/gstreamer-0.10/libfsrtcpfilter.la
