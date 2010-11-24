@@ -56,3 +56,18 @@ Pullup ticket #3276 - requested by taca
 security/openssl: security update
 Pullup ticket #3282 - requested by obache
 www/ap2-fcgid: security update
+Pullup ticket #3277 - requested by tron
+net/wireshark: security update
+Pullup ticket #3278 - requested by tron
+net/wget: security fix
+Pullup ticket #3279 - requested by tron
+lang/python26: security fix
+Pullup ticket #3280 - requested by tron
+print/ghostscript: security fix
+Pullup ticket #3281 - requested by tron
+devel/libsmi: security fix
+Pullup ticket #3283 - requested by tron
+multimedia/mplayer-share: security fix
+multimedia/mplayer: security fix
+multimedia/gmplayer: security fix
+multimedia/mencoder: security fix
