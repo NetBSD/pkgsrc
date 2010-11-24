@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/07/15 17:41:57 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2010/11/24 17:58:22 drochner Exp $
 
---- runtests.py.orig	2010-02-02 10:11:17.000000000 +0000
+--- runtests.py.orig	2010-08-25 06:38:31.000000000 +0000
 +++ runtests.py
-@@ -604,7 +604,7 @@ class EmbedTest(unittest.TestCase):
-         os.chdir(self.old_dir)
+@@ -646,7 +646,7 @@ class EmbedTest(unittest.TestCase):
          
      def test_embed(self):
--        self.assert_(os.system("make test > make.output") == 0)
-+        self.assert_(os.system("gmake test PYTHON=%s > make.output" % sys.executable) == 0)
- 
- class MissingDependencyExcluder:
-     def __init__(self, deps):
+         self.assert_(os.system(
+-            "make PYTHON='%s' test > make.output" % sys.executable) == 0)
++            "gmake PYTHON='%s' test > make.output" % sys.executable) == 0)
+         try:
+             os.remove('make.output')
+         except OSError:
