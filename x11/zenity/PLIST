@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/07/13 10:02:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/11/24 20:59:15 drochner Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -195,6 +195,18 @@ share/gnome/help/zenity/uk/figures/zenity-question-screenshot.png
 share/gnome/help/zenity/uk/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/uk/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/uk/zenity.xml
+share/gnome/help/zenity/zh_CN/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/zh_CN/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/zh_CN/zenity.xml
 share/locale/am/LC_MESSAGES/zenity.mo
 share/locale/ar/LC_MESSAGES/zenity.mo
 share/locale/as/LC_MESSAGES/zenity.mo
@@ -296,6 +308,7 @@ share/omf/zenity/zenity-pt_BR.omf
 share/omf/zenity/zenity-ru.omf
 share/omf/zenity/zenity-sv.omf
 share/omf/zenity/zenity-uk.omf
+share/omf/zenity/zenity-zh_CN.omf
 share/zenity/clothes/gnome-tshirt.png
 share/zenity/clothes/hawaii-shirt.png
 share/zenity/clothes/monk.png
