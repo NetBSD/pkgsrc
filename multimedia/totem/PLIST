@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.25 2010/07/06 15:32:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/11/24 20:55:28 drochner Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
 lib/totem/plugins/brasero-disc-recorder/brasero-disc-recorder.totem-plugin
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.la
+lib/totem/plugins/chapters/chapters-edit.ui
+lib/totem/plugins/chapters/chapters-list.ui
+lib/totem/plugins/chapters/chapters.totem-plugin
+lib/totem/plugins/chapters/libchapters.la
 lib/totem/plugins/coherence_upnp/coherence_upnp.py
 lib/totem/plugins/coherence_upnp/coherence_upnp.pyc
 lib/totem/plugins/coherence_upnp/coherence_upnp.pyo
@@ -52,6 +56,7 @@ lib/totem/plugins/pythonconsole/pythonconsole.py
 lib/totem/plugins/pythonconsole/pythonconsole.pyc
 lib/totem/plugins/pythonconsole/pythonconsole.pyo
 lib/totem/plugins/pythonconsole/pythonconsole.totem-plugin
+lib/totem/plugins/sample-vala/sample-vala.totem-plugin
 lib/totem/plugins/screensaver/libscreensaver.la
 lib/totem/plugins/screensaver/screensaver.totem-plugin
 lib/totem/plugins/screenshot/gallery.ui
@@ -297,12 +302,15 @@ share/gtk-doc/html/totem/TotemCellRendererVideo.html
 share/gtk-doc/html/totem/TotemObject.html
 share/gtk-doc/html/totem/TotemPlugin.html
 share/gtk-doc/html/totem/TotemVideoList.html
+share/gtk-doc/html/totem/annotation-glossary.html
 share/gtk-doc/html/totem/api-index-deprecated.html
 share/gtk-doc/html/totem/api-index-full.html
 share/gtk-doc/html/totem/core-api.html
 share/gtk-doc/html/totem/home.png
 share/gtk-doc/html/totem/index.html
 share/gtk-doc/html/totem/index.sgml
+share/gtk-doc/html/totem/ix02.html
+share/gtk-doc/html/totem/ix03.html
 share/gtk-doc/html/totem/left.png
 share/gtk-doc/html/totem/right.png
 share/gtk-doc/html/totem/style.css
@@ -366,6 +374,7 @@ share/locale/is/LC_MESSAGES/totem.mo
 share/locale/it/LC_MESSAGES/totem.mo
 share/locale/ja/LC_MESSAGES/totem.mo
 share/locale/ka/LC_MESSAGES/totem.mo
+share/locale/kk/LC_MESSAGES/totem.mo
 share/locale/kn/LC_MESSAGES/totem.mo
 share/locale/ko/LC_MESSAGES/totem.mo
 share/locale/ku/LC_MESSAGES/totem.mo
