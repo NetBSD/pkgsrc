@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4053 2010/11/24 01:57:57 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4054 2010/11/24 22:46:14 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5669,3 +5669,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/JBidwatcher to 2.1.2 [wiz 2010-11-23]
 	Updated math/ltm to 0.42.0 [agc 2010-11-23]
 	Updated parallel/openmpi to 1.4.3 [asau 2010-11-24]
+	Updated math/fricas to 1.1.1 [asau 2010-11-24]
