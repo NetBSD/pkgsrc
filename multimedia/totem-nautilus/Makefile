@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/11/15 22:58:09 abs Exp $
+# $NetBSD: Makefile,v 1.15 2010/11/24 20:56:03 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../multimedia/totem/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/totem/totem-nautilus/}
-PKGREVISION=	4
 
 # override Makefile.common
 PLIST_SRC=      ${.CURDIR}/PLIST
