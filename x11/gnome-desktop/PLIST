@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2010/07/06 15:15:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.42 2010/11/24 20:24:10 drochner Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnome/gnome-desktop-utils.h
@@ -103,6 +103,7 @@ share/gtk-doc/html/gnome-desktop/up.png
 share/libgnome-desktop/pnp.ids
 share/locale/af/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/an/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/as/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ast/LC_MESSAGES/gnome-desktop-2.0.mo
