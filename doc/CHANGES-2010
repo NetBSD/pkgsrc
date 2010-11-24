@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4051 2010/11/23 22:56:02 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4052 2010/11/24 01:11:04 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/swi-prolog-packages to 5.11.9 [asau 2010-11-23]
 	Updated lang/swi-prolog to 5.11.9 [asau 2010-11-23]
 	Updated misc/JBidwatcher to 2.1.2 [wiz 2010-11-23]
+	Updated math/ltm to 0.42.0 [agc 2010-11-23]
