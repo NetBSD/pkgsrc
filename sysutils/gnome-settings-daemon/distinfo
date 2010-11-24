@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2010/07/14 16:17:41 drochner Exp $
+$NetBSD: distinfo,v 1.12 2010/11/24 20:51:19 drochner Exp $
 
-SHA1 (gnome-settings-daemon-2.30.2.tar.bz2) = 75fe75eaa7d6197514c1de8b8c47c869f2bade2c
-RMD160 (gnome-settings-daemon-2.30.2.tar.bz2) = a4547cdb13c2c5dc8f690cf198853129514adaab
-Size (gnome-settings-daemon-2.30.2.tar.bz2) = 1250365 bytes
+SHA1 (gnome-settings-daemon-2.32.1.tar.bz2) = f2550acb4a9fd8f96ead1263ba5739915c303f6e
+RMD160 (gnome-settings-daemon-2.32.1.tar.bz2) = 71aef9419eeca5f9fa59bb55990327c307f9ca31
+Size (gnome-settings-daemon-2.32.1.tar.bz2) = 1331850 bytes
 SHA1 (patch-ac) = 6e77934d2ad8a75a0b476cf26a3ec72ea8160b23

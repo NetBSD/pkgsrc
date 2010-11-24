@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/07/14 16:17:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/11/24 20:51:19 drochner Exp $
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-client.h
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-plugin.h
 lib/gnome-settings-daemon-2.0/a11y-keyboard.gnome-settings-plugin
@@ -36,13 +36,19 @@ share/gconf/schemas/apps_gnome_settings_daemon_keybindings.schemas
 share/gconf/schemas/apps_gnome_settings_daemon_xrandr.schemas
 share/gconf/schemas/desktop_gnome_font_rendering.schemas
 share/gconf/schemas/desktop_gnome_keybindings.schemas
+share/gconf/schemas/desktop_gnome_peripherals_smartcard.schemas
 share/gconf/schemas/desktop_gnome_peripherals_touchpad.schemas
 share/gconf/schemas/gnome-settings-daemon.schemas
 share/gnome-control-center/keybindings/50-accessibility.xml
 share/gnome-settings-daemon/acme.ui
 share/gnome-settings-daemon/gsd-a11y-preferences-dialog.ui
+share/gnome-settings-daemon/icons/hicolor/64x64/devices/kbd-capslock-off.png
+share/gnome-settings-daemon/icons/hicolor/64x64/devices/kbd-capslock-on.png
+share/gnome-settings-daemon/icons/hicolor/64x64/devices/kbd-numlock-off.png
+share/gnome-settings-daemon/icons/hicolor/64x64/devices/kbd-numlock-on.png
+share/gnome-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-off.png
+share/gnome-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-on.png
 share/gnome-settings-daemon/modmap-dialog.ui
-share/gnome-settings-daemon/show-layout.ui
 share/gnome-settings-daemon/xrdb/Editres.ad
 share/gnome-settings-daemon/xrdb/Emacs.ad
 share/gnome-settings-daemon/xrdb/General.ad
