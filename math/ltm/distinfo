@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/09/09 09:35:10 obache Exp $
+$NetBSD: distinfo,v 1.4 2010/11/24 01:09:48 agc Exp $
 
-SHA1 (ltm-0.39.tar.bz2) = 496224e48c4823db3046cdc9fb98c778f8e95466
-RMD160 (ltm-0.39.tar.bz2) = 9101f48fcf256b311bd017125933c2b602db2856
-Size (ltm-0.39.tar.bz2) = 1978198 bytes
+SHA1 (ltm-0.42.0.tar.bz2) = 9b192701cf62b85e9bd65fbb4d622d04cfa5ee0d
+RMD160 (ltm-0.42.0.tar.bz2) = 9994d60d7e847a066715d8c644ce9b125932bf92
+Size (ltm-0.42.0.tar.bz2) = 1968961 bytes
