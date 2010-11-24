@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2010/11/01 17:28:49 adam Exp $
+# $NetBSD: Makefile,v 1.63 2010/11/24 12:20:39 sborrill Exp $
 
 DISTNAME=	httpd-2.2.17
 PKGNAME=	${DISTNAME:S/httpd/apache/}
@@ -260,4 +260,5 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/sbin/envvars-std
 	${TEST} ! -f ${DESTDIR}${PREFIX}/sbin/suexec || ${CHMOD} -w ${DESTDIR}${PREFIX}/sbin/suexec
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
