@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.573 2010/11/20 02:15:39 gdt Exp $
+# $NetBSD: Makefile,v 1.574 2010/11/24 18:20:29 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -50,6 +50,7 @@ SUBDIR+=	clutter
 SUBDIR+=	clutter-box2d
 SUBDIR+=	clutter-cairo
 SUBDIR+=	clutter-gtk
+SUBDIR+=	clutter-mx
 SUBDIR+=	clutter-qt
 SUBDIR+=	clutter08
 SUBDIR+=	clutter08-gtk
