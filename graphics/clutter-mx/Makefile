@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.1.1.1 2010/11/24 18:19:26 drochner Exp $
+#
+
+DISTNAME=	mx-1.0.4
+PKGNAME=	clutter-mx-1.0.4
+CATEGORIES=	graphics
+MASTER_SITES=	http://source.clutter-project.org/sources/mx/1.0/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://blogs.gnome.org/thos/2010/05/20/mx-toolkit-1-0/
+COMMENT=	Clutter-based widget set
+#LICENSE=	# TODO: (see mk/license.mk)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config intltool gmake
+
+PKGCONFIG_OVERRIDE+=	mx-gtk.pc.in
+PKGCONFIG_OVERRIDE+=	mx.pc.in
+
+.include "../../graphics/clutter/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
