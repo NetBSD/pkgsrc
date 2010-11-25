@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2010/11/15 22:56:49 abs Exp $
+# $NetBSD: Makefile,v 1.35 2010/11/25 10:28:34 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../editors/abiword/Makefile.common"
 
 DISTNAME=	abiword-plugins-${ABIWORD_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 
 COMMENT=	Plugins enhancing Abiword's capabilities
 
