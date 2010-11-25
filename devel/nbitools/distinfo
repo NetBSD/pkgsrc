@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2006/07/05 04:59:47 jlam Exp $
+$NetBSD: distinfo,v 1.11 2010/11/25 15:17:50 hauke Exp $
 
 SHA1 (nbitools-R6.3.tar.gz) = 0f6751417d7ef412be04611fbe4f56386a04322a
 RMD160 (nbitools-R6.3.tar.gz) = 047f64b113a0307b045573bfe429b59063ae38ea
@@ -15,3 +15,6 @@ SHA1 (patch-ai) = 9085fda5360c672865561e2c0aeafdc34596eb66
 SHA1 (patch-aj) = b3ec58e0fcbed869e230e0e3fa8b37517ed1b52e
 SHA1 (patch-ak) = 293f304c8e4dcafd2dd0f344c322df9fae9ff4a2
 SHA1 (patch-al) = d3f31eb2594560b75508fac223680fb9a01fe35c
+SHA1 (patch-am) = 24784762135c22786e805c90d2c86b0df83b9115
+SHA1 (patch-an) = 12997783591a61c3c547b1bcfc1fb248ea5b800b
+SHA1 (patch-ao) = 86fdd0f788a992ff51871613e459b18cefb1946e
