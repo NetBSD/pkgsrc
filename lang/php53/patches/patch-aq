@@ -1,0 +1,19 @@
+$NetBSD: patch-aq,v 1.1 2010/11/25 03:43:50 taca Exp $
+
+Fix for CVE-2010-4156 (also http://secunia.com/advisories/42135/):
+
+	http://svn.php.net/viewvc?view=revision&revision=305214
+
+--- ext/mbstring/libmbfl/mbfl/mbfilter.c.orig	2010-03-12 04:55:37.000000000 +0000
++++ ext/mbstring/libmbfl/mbfl/mbfilter.c
+@@ -1397,6 +1397,10 @@ mbfl_strcut(
+ 			start = string->val + from;
+ 			end   = start + (length & -4);
+ 		} else if ((encoding->flag & MBFL_ENCTYPE_SBCS)) {
++			if (from + length >= string->len) {
++				length = string->len - from;
++			}
++
+ 			start = string->val + from;
+ 			end = start + length;
+ 		} else if (encoding->mblen_table != NULL) {
