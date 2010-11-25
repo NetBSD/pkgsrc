@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2010/10/09 12:17:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/11/25 10:27:49 wiz Exp $
 
-DISTNAME=	libwpd-0.8.14
+DISTNAME=	libwpd-0.9.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 
@@ -16,7 +16,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
-PKGCONFIG_OVERRIDE+=	libwpd-0.8.pc.in libwpd-stream-0.8.pc.in
+PKGCONFIG_OVERRIDE+=	libwpd-0.9.pc.in libwpd-stream-0.9.pc.in
 
-.include "../../devel/libgsf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
