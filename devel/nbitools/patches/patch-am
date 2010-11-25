@@ -1,0 +1,23 @@
+$NetBSD: patch-am,v 1.1 2010/11/25 15:17:51 hauke Exp $
+
+One of the three patches replacing the distribution patch
+under work/nbitools-R6.3/config/md.patch
+
+--- config/makedepend/def.h.orig	1997-08-22 08:21:35.000000000 +0000
++++ config/makedepend/def.h
+@@ -1,5 +1,6 @@
+ /* $XConsortium: def.h /main/30 1996/12/04 10:11:12 swick $ */
+ /* $XFree86: xc/config/makedepend/def.h,v 3.3 1997/01/12 10:38:17 dawes Exp $ */
++
+ /*
+ 
+ Copyright (c) 1993, 1994  X Consortium
+@@ -137,7 +138,7 @@ char			*realloc();
+ 
+ char			*copy();
+ char			*base_name();
+-char			*getline();
++char			*mdgetline();
+ struct symtab		**slookup();
+ struct symtab		**isdefined();
+ struct symtab		**fdefined();
