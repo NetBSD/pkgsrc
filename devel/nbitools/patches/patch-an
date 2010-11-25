@@ -1,0 +1,23 @@
+$NetBSD: patch-an,v 1.1 2010/11/25 15:17:51 hauke Exp $
+
+One of the three patches replacing the distribution patch
+under work/nbitools-R6.3/config/md.patch
+
+--- config/makedepend/main.c.orig	1997-08-22 08:21:36.000000000 +0000
++++ config/makedepend/main.c
+@@ -1,5 +1,6 @@
+ /* $XConsortium: main.c /main/84 1996/12/04 10:11:23 swick $ */
+ /* $XFree86: xc/config/makedepend/main.c,v 3.11.2.1 1997/05/11 05:04:07 dawes Exp $ */
++
+ /*
+ 
+ Copyright (c) 1993, 1994  X Consortium
+@@ -548,7 +549,7 @@ match(str, list)
+  * Get the next line.  We only return lines beginning with '#' since that
+  * is all this program is ever interested in.
+  */
+-char *getline(filep)
++char *mdgetline(filep)
+ 	register struct filepointer	*filep;
+ {
+ 	register char	*p,	/* walking pointer */
