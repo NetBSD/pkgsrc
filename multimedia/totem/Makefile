@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2010/11/24 20:55:28 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2010/11/25 01:14:59 obache Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,10 +12,6 @@ COMMENT+=	(using GStreamer)
 CONFLICTS+=	totem-xine-[0-9]*
 
 CONFIGURE_ARGS+=	--disable-browser-plugins
-
-# Workaround for Upstream Bug#562310.
-# for more detail, see also PR#41475.
-TOOLS_NOOP+=	gtkdoc-rebase
 
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.7
 
