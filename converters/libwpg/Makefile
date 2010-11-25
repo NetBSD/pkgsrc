@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2010/11/25 10:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/25 10:43:44 wiz Exp $
 
-DISTNAME=	libwpg-0.1.3
-PKGREVISION=	1
+DISTNAME=	libwpg-0.2.0
 CATEGORIES=	converters graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libwpg.sourceforge.net/
 COMMENT=	Library for importing and converting Corel WordPerfect Graphics images
-#LICENSE=	gnu-lgpl-v2.1
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,7 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
-PKGCONFIG_OVERRIDE+=	libwpg-0.1.pc.in libwpg-stream-0.1.pc.in
+PKGCONFIG_OVERRIDE+=	libwpg-0.2.pc.in
 
 REPLACE_PERL=		src/conv/svg/wpg2svgbatch.pl
 
