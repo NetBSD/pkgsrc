@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4057 2010/11/25 10:43:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4058 2010/11/25 10:52:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5675,3 +5675,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/php-imap to 5.3.3nb1 [taca 2010-11-25]
 	Updated converters/libwpd to 0.9.0 [wiz 2010-11-25]
 	Updated converters/libwpg to 0.2.0 [wiz 2010-11-25]
+	Updated converters/libwps to 0.2.0 [wiz 2010-11-25]
