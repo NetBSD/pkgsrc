@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/11/25 10:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/25 10:52:19 wiz Exp $
 
-DISTNAME=	libwps-0.1.2
-PKGREVISION=	1
+DISTNAME=	libwps-0.2.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwps/}
 
@@ -17,7 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
-PKGCONFIG_OVERRIDE+=	libwps-0.1.pc.in libwps-stream-0.1.pc.in
+PKGCONFIG_OVERRIDE+=	libwps-0.2.pc.in
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
