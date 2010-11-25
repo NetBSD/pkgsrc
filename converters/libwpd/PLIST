@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:39:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/11/25 10:27:49 wiz Exp $
 bin/wpd2html
 bin/wpd2raw
 bin/wpd2text
-include/libwpd-0.8/libwpd/GSFStream.h
-include/libwpd-0.8/libwpd/WPDocument.h
-include/libwpd-0.8/libwpd/WPXHLListenerImpl.h
-include/libwpd-0.8/libwpd/WPXProperty.h
-include/libwpd-0.8/libwpd/WPXPropertyList.h
-include/libwpd-0.8/libwpd/WPXPropertyListVector.h
-include/libwpd-0.8/libwpd/WPXStream.h
-include/libwpd-0.8/libwpd/WPXStreamImplementation.h
-include/libwpd-0.8/libwpd/WPXString.h
-include/libwpd-0.8/libwpd/libwpd.h
-include/libwpd-0.8/libwpd/libwpd_types.h
-lib/libwpd-0.8.la
-lib/libwpd-stream-0.8.la
-lib/pkgconfig/libwpd-0.8.pc
-lib/pkgconfig/libwpd-stream-0.8.pc
+include/libwpd-0.9/libwpd-stream/WPXStream.h
+include/libwpd-0.9/libwpd-stream/WPXStreamImplementation.h
+include/libwpd-0.9/libwpd-stream/libwpd-stream.h
+include/libwpd-0.9/libwpd/WPDocument.h
+include/libwpd-0.9/libwpd/WPXBinaryData.h
+include/libwpd-0.9/libwpd/WPXDocumentInterface.h
+include/libwpd-0.9/libwpd/WPXProperty.h
+include/libwpd-0.9/libwpd/WPXPropertyList.h
+include/libwpd-0.9/libwpd/WPXPropertyListVector.h
+include/libwpd-0.9/libwpd/WPXString.h
+include/libwpd-0.9/libwpd/libwpd.h
+lib/libwpd-0.9.la
+lib/libwpd-stream-0.9.la
+lib/pkgconfig/libwpd-0.9.pc
+lib/pkgconfig/libwpd-stream-0.9.pc
