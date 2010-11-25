@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/11/15 22:57:32 abs Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/25 10:55:43 obache Exp $
 #
 
-DISTNAME=	ibus-1.3.8
-PKGREVISION=	1
+DISTNAME=	ibus-1.3.9
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -27,6 +26,8 @@ PKGCONFIG_OVERRIDE+=	ibus-1.0.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
+CONFIGURE_ARGS+=	--enable-gtk2
+CONFIGURE_ARGS+=	--disable-gtk3
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
@@ -38,15 +39,11 @@ MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/autostart
 CONF_FILES+=		${EXAMPLESDIR}/xdg/autostart/ibus.desktop \
 			${PKG_SYSCONFBASE}/xdg/autostart/ibus.desktop
 
-SUBST_CLASSES+=		epython
-SUBST_STAGE.epython=	pre-configure
-SUBST_FILES.epython=	setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in
-SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
-
-.include "bad-env-usage.mk"
-
+BUILDLINK_API_DEPENDS.GConf+=		GConf>=2.12
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
