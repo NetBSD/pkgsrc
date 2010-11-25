@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/11/24 20:55:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/11/25 01:16:39 obache Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
@@ -56,7 +56,6 @@ lib/totem/plugins/pythonconsole/pythonconsole.py
 lib/totem/plugins/pythonconsole/pythonconsole.pyc
 lib/totem/plugins/pythonconsole/pythonconsole.pyo
 lib/totem/plugins/pythonconsole/pythonconsole.totem-plugin
-lib/totem/plugins/sample-vala/sample-vala.totem-plugin
 lib/totem/plugins/screensaver/libscreensaver.la
 lib/totem/plugins/screensaver/screensaver.totem-plugin
 lib/totem/plugins/screenshot/gallery.ui
