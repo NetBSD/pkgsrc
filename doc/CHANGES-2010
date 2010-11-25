@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4054 2010/11/24 22:46:14 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4055 2010/11/25 03:46:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5670,3 +5670,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/ltm to 0.42.0 [agc 2010-11-23]
 	Updated parallel/openmpi to 1.4.3 [asau 2010-11-24]
 	Updated math/fricas to 1.1.1 [asau 2010-11-24]
+	Updated lang/php53 to 5.3.3nb1 [taca 2010-11-25]
+	Updated lang/php5 to 5.2.14nb1 [taca 2010-11-25]
+	Updated mail/php-imap to 5.3.3nb1 [taca 2010-11-25]
