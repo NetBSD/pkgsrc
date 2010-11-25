@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.18 2010/04/13 16:04:09 drochner Exp $
+$NetBSD: patch-ab,v 1.19 2010/11/25 13:18:39 drochner Exp $
 
---- configure.orig	2010-03-15 15:18:22.000000000 +0000
+--- configure.orig	2010-11-04 17:28:14.000000000 +0000
 +++ configure
-@@ -19734,7 +19734,7 @@ fi
+@@ -13364,7 +13364,7 @@ fi
  fi
  
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ab,v 1.18 2010/04/13 16:04:09 drochner Exp $
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
+@@ -14584,7 +14584,7 @@ $as_echo "#define vsnprintf _vsnprintf" 
+ 
+  if test "${PYTHON}" != ""
+  then
+-   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython${PYTHON_VERSION//./}"
++#   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython${PYTHON_VERSION//./}"
+  fi
+  ;;
+  *-*-cygwin*)
