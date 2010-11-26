@@ -1,0 +1,53 @@
+#! /bin/sh
+#
+# Plugin to monitor swap usage.
+#
+# Parameters:
+#
+# 	config   (required)
+# 	autoconf (optional - only used by munin-config)
+#
+# Magic markers (optional - only used by munin-config and some
+# installation scripts):
+#
+#%# family=auto
+#%# capabilities=autoconf
+
+if [ "$1" = "autoconf" ]; then
+    if [ -x /sbin/sysctl ]; then
+    	if /sbin/sysctl hw.pagesize > /dev/null 2>&1; then
+	    	echo yes
+    		exit 0
+    	else
+	        echo no
+		exit 1
+	fi
+    else
+        echo no
+        exit 1
+    fi
+fi
+
+PAGESIZE=`/sbin/sysctl -n hw.pagesize`
+
+if [ "$1" = "config" ]; then
+        echo 'graph_args --base 1024 -l 0 --vertical-label Bytes'
+	echo 'graph_title Swap usage'
+	echo 'graph_category system'
+	echo 'graph_info This graph shows how the machine uses its swap.'
+
+	echo 'graph_order size used'
+
+	echo 'size.label swap size'
+	echo 'size.draw AREA'
+
+	echo 'used.label swap used'
+	echo 'used.draw AREA'
+
+	exit 0
+fi
+
+vmstat -s | awk -v bpp=$PAGESIZE '
+/swap pages in use$/	{ print "used.value "     $1 * bpp; }
+/swap pages$/		{ print "size.value "     $1 * bpp; }
+'
