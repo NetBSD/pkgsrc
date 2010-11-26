@@ -1,28 +1,41 @@
-# $NetBSD: Makefile.common,v 1.39 2009/07/22 09:01:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.40 2010/11/26 14:49:49 adam Exp $
+#
+# used by editors/abiword-plugins/Makefile
 
-# Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
-ABIWORD_VERSION=	2.6.8
-DISTNAME?=	abiword-${ABIWORD_VERSION}
+# Be sure to update PLIST for editors/abiword-plugins when updating
+ABIVERSION=	2.8.6
+DISTNAME=	abiword-${ABIVERSION}
 
 CATEGORIES=	editors
-MASTER_SITES=	http://www.abisource.com/downloads/abiword/${ABIWORD_VERSION}/source/
+MASTER_SITES=	http://www.abisource.com/downloads/abiword/${ABIVERSION}/source/
 
-MAINTAINER=	adam@NetBSD.org
+MAINTAINER?=	adam@NetBSD.org
 HOMEPAGE=	http://www.abisource.com/
+LICENSE=	gnu-gpl-v2
 
-MAKE_FILE=		GNUmakefile
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config
-USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
+CONFIGURE_ARGS+=	--enable-clipart
+CONFIGURE_ARGS+=	--enable-templates
+CONFIGURE_ARGS+=	--with-gnomevfs
+PKGCONFIG_OVERRIDE+=	libabiword.pc.in
+
+DISTINFO_FILE=	${.CURDIR}/../../editors/abiword/distinfo
+PATCHDIR=	${.CURDIR}/../../editors/abiword/patches
 
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libgsf-gnome/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"

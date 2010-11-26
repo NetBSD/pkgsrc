@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.59 2009/04/07 16:27:08 drochner Exp $
+$NetBSD: distinfo,v 1.60 2010/11/26 14:49:49 adam Exp $
 
-SHA1 (abiword-2.6.8.tar.gz) = fc979982edc3445385705afdb1e2ebb1fa53a4f6
-RMD160 (abiword-2.6.8.tar.gz) = 8fcf455a5226a5525b9a89f88c9916b20e973607
-Size (abiword-2.6.8.tar.gz) = 9516443 bytes
-SHA1 (patch-aa) = b1caaaf57d1baa9514dc4f56854ed1bb529b8652
-SHA1 (patch-ab) = 67e9ea9e8c702b9604643f887398392c371ebcd8
-SHA1 (patch-ac) = 8fe244939c96a322a4db61463b8f66af0fc61e35
-SHA1 (patch-ad) = c3191d8e0e510708d9ab22ee9c6d28a655e031c5
-SHA1 (patch-ah) = ea0a819d43e9921cb4c63a3cd4af73a169d1150f
-SHA1 (patch-sa) = cf67e1e1a75131d323d311f1d138da2d11c1b292
+SHA1 (abiword-2.8.6.tar.gz) = 998f69d038000b3fc027d4259548f02d67c8d0df
+RMD160 (abiword-2.8.6.tar.gz) = caabab25d197f9553ea12376de36fc7f5a771a58
+Size (abiword-2.8.6.tar.gz) = 9218827 bytes
+SHA1 (patch-aa) = dea737eb09e271f99e2b50f5ffc3037a68116451
+SHA1 (patch-ab) = fa589d531c08bf293eeeaa9a775015e27eaf6da4
+SHA1 (patch-ac) = a82fd781195e9ff52dbc33258fd4774cd23fe5c9
+SHA1 (patch-ad) = 48ff4fcce593f9996e90cce718b2f774b271d5a3
+SHA1 (patch-sa) = 29ee7e9891b11773217ec73bbda01e2591e78b56
