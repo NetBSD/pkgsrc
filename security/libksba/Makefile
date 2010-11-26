@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/09/01 16:35:15 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2010/11/26 18:00:17 drochner Exp $
 #
 
-DISTNAME=	libksba-1.0.8
+DISTNAME=	libksba-1.1.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libksba/
 EXTRACT_SUFX=	.tar.bz2
