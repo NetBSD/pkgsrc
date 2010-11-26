@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/08/26 17:40:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/11/26 20:47:00 adam Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -449,6 +449,7 @@ include/boost/asio/impl/read_at.hpp
 include/boost/asio/impl/read_until.hpp
 include/boost/asio/impl/serial_port_base.hpp
 include/boost/asio/impl/serial_port_base.ipp
+include/boost/asio/impl/src.hpp
 include/boost/asio/impl/write.hpp
 include/boost/asio/impl/write_at.hpp
 include/boost/asio/io_service.hpp
@@ -754,6 +755,7 @@ include/boost/config/platform/macos.hpp
 include/boost/config/platform/qnxnto.hpp
 include/boost/config/platform/solaris.hpp
 include/boost/config/platform/symbian.hpp
+include/boost/config/platform/vms.hpp
 include/boost/config/platform/vxworks.hpp
 include/boost/config/platform/win32.hpp
 include/boost/config/posix_features.hpp
@@ -984,7 +986,6 @@ include/boost/flyweight/detail/nested_xxx_if_not_ph.hpp
 include/boost/flyweight/detail/not_placeholder_expr.hpp
 include/boost/flyweight/detail/perfect_fwd.hpp
 include/boost/flyweight/detail/pp_perfect_fwd.hpp
-include/boost/flyweight/detail/process_id.hpp
 include/boost/flyweight/detail/recursive_lw_mutex.hpp
 include/boost/flyweight/detail/value_tag.hpp
 include/boost/flyweight/factory_tag.hpp
@@ -1147,6 +1148,13 @@ include/boost/functional/hash_fwd.hpp
 include/boost/functional/lightweight_forward_adapter.hpp
 include/boost/functional/value_factory.hpp
 include/boost/fusion/adapted.hpp
+include/boost/fusion/adapted/adt.hpp
+include/boost/fusion/adapted/adt/adapt_adt.hpp
+include/boost/fusion/adapted/adt/adapt_adt_named.hpp
+include/boost/fusion/adapted/adt/adapt_assoc_adt.hpp
+include/boost/fusion/adapted/adt/adapt_assoc_adt_named.hpp
+include/boost/fusion/adapted/adt/detail/adapt_base.hpp
+include/boost/fusion/adapted/adt/detail/extension.hpp
 include/boost/fusion/adapted/array.hpp
 include/boost/fusion/adapted/array/at_impl.hpp
 include/boost/fusion/adapted/array/begin_impl.hpp
@@ -1181,13 +1189,6 @@ include/boost/fusion/adapted/boost_tuple/detail/is_view_impl.hpp
 include/boost/fusion/adapted/boost_tuple/detail/size_impl.hpp
 include/boost/fusion/adapted/boost_tuple/detail/value_at_impl.hpp
 include/boost/fusion/adapted/boost_tuple/tag_of.hpp
-include/boost/fusion/adapted/class.hpp
-include/boost/fusion/adapted/class/adapt_assoc_class.hpp
-include/boost/fusion/adapted/class/adapt_assoc_class_named.hpp
-include/boost/fusion/adapted/class/adapt_class.hpp
-include/boost/fusion/adapted/class/adapt_class_named.hpp
-include/boost/fusion/adapted/class/detail/adapt_base.hpp
-include/boost/fusion/adapted/class/detail/extension.hpp
 include/boost/fusion/adapted/mpl.hpp
 include/boost/fusion/adapted/mpl/detail/at_impl.hpp
 include/boost/fusion/adapted/mpl/detail/begin_impl.hpp
@@ -1408,12 +1409,14 @@ include/boost/fusion/functional/invocation/invoke_function_object.hpp
 include/boost/fusion/functional/invocation/invoke_procedure.hpp
 include/boost/fusion/functional/invocation/limits.hpp
 include/boost/fusion/include/accumulate.hpp
+include/boost/fusion/include/adapt_adt.hpp
+include/boost/fusion/include/adapt_adt_named.hpp
+include/boost/fusion/include/adapt_assoc_adt.hpp
+include/boost/fusion/include/adapt_assoc_adt_named.hpp
 include/boost/fusion/include/adapt_assoc_class.hpp
 include/boost/fusion/include/adapt_assoc_class_named.hpp
 include/boost/fusion/include/adapt_assoc_struct.hpp
 include/boost/fusion/include/adapt_assoc_struct_named.hpp
-include/boost/fusion/include/adapt_class.hpp
-include/boost/fusion/include/adapt_class_named.hpp
 include/boost/fusion/include/adapt_struct.hpp
 include/boost/fusion/include/adapt_struct_named.hpp
 include/boost/fusion/include/adapted.hpp
@@ -1877,6 +1880,7 @@ include/boost/graph/boyer_myrvold_planar_test.hpp
 include/boost/graph/boykov_kolmogorov_max_flow.hpp
 include/boost/graph/breadth_first_search.hpp
 include/boost/graph/bron_kerbosch_all_cliques.hpp
+include/boost/graph/buffer_concepts.hpp
 include/boost/graph/chrobak_payne_drawing.hpp
 include/boost/graph/circle_layout.hpp
 include/boost/graph/closeness_centrality.hpp
@@ -2065,6 +2069,7 @@ include/boost/graph/smallest_last_ordering.hpp
 include/boost/graph/ssca_graph_generator.hpp
 include/boost/graph/st_connected.hpp
 include/boost/graph/stanford_graph.hpp
+include/boost/graph/stoer_wagner_min_cut.hpp
 include/boost/graph/strong_components.hpp
 include/boost/graph/subgraph.hpp
 include/boost/graph/tiernan_all_cycles.hpp
@@ -2123,6 +2128,7 @@ include/boost/interprocess/containers/container/detail/node_pool_impl.hpp
 include/boost/interprocess/containers/container/detail/pair.hpp
 include/boost/interprocess/containers/container/detail/pool_common.hpp
 include/boost/interprocess/containers/container/detail/preprocessor.hpp
+include/boost/interprocess/containers/container/detail/stored_ref.hpp
 include/boost/interprocess/containers/container/detail/transform_iterator.hpp
 include/boost/interprocess/containers/container/detail/tree.hpp
 include/boost/interprocess/containers/container/detail/type_traits.hpp
@@ -2178,6 +2184,7 @@ include/boost/interprocess/detail/pointer_type.hpp
 include/boost/interprocess/detail/posix_time_types_wrk.hpp
 include/boost/interprocess/detail/preprocessor.hpp
 include/boost/interprocess/detail/ptime_wrk.hpp
+include/boost/interprocess/detail/robust_emulation.hpp
 include/boost/interprocess/detail/segment_manager_helper.hpp
 include/boost/interprocess/detail/tmp_dir_helpers.hpp
 include/boost/interprocess/detail/transform_iterator.hpp
@@ -2212,6 +2219,7 @@ include/boost/interprocess/mem_algo/detail/simple_seq_fit_impl.hpp
 include/boost/interprocess/mem_algo/rbtree_best_fit.hpp
 include/boost/interprocess/mem_algo/simple_seq_fit.hpp
 include/boost/interprocess/offset_ptr.hpp
+include/boost/interprocess/permissions.hpp
 include/boost/interprocess/segment_manager.hpp
 include/boost/interprocess/shared_memory_object.hpp
 include/boost/interprocess/smart_ptr/deleter.hpp
@@ -2230,10 +2238,10 @@ include/boost/interprocess/streams/bufferstream.hpp
 include/boost/interprocess/streams/vectorstream.hpp
 include/boost/interprocess/sync/emulation/interprocess_barrier.hpp
 include/boost/interprocess/sync/emulation/interprocess_condition.hpp
-include/boost/interprocess/sync/emulation/interprocess_mutex.hpp
-include/boost/interprocess/sync/emulation/interprocess_recursive_mutex.hpp
 include/boost/interprocess/sync/emulation/interprocess_semaphore.hpp
+include/boost/interprocess/sync/emulation/mutex.hpp
 include/boost/interprocess/sync/emulation/named_creation_functor.hpp
+include/boost/interprocess/sync/emulation/recursive_mutex.hpp
 include/boost/interprocess/sync/file_lock.hpp
 include/boost/interprocess/sync/interprocess_barrier.hpp
 include/boost/interprocess/sync/interprocess_condition.hpp
@@ -2304,6 +2312,7 @@ include/boost/intrusive/list.hpp
 include/boost/intrusive/list_hook.hpp
 include/boost/intrusive/member_value_traits.hpp
 include/boost/intrusive/options.hpp
+include/boost/intrusive/parent_from_member.hpp
 include/boost/intrusive/pointer_plus_bits.hpp
 include/boost/intrusive/priority_compare.hpp
 include/boost/intrusive/rbtree.hpp
@@ -2567,6 +2576,8 @@ include/boost/math/distributions/fisher_f.hpp
 include/boost/math/distributions/fwd.hpp
 include/boost/math/distributions/gamma.hpp
 include/boost/math/distributions/hypergeometric.hpp
+include/boost/math/distributions/inverse_chi_squared.hpp
+include/boost/math/distributions/inverse_gamma.hpp
 include/boost/math/distributions/laplace.hpp
 include/boost/math/distributions/logistic.hpp
 include/boost/math/distributions/lognormal.hpp
@@ -2789,6 +2800,7 @@ include/boost/math/tools/test.hpp
 include/boost/math/tools/test_data.hpp
 include/boost/math/tools/toms748_solve.hpp
 include/boost/math/tools/traits.hpp
+include/boost/math/tools/tuple.hpp
 include/boost/math/tools/user.hpp
 include/boost/math/tools/workaround.hpp
 include/boost/math/tr1.hpp
@@ -3897,6 +3909,7 @@ include/boost/msm/back/copy_policies.hpp
 include/boost/msm/back/default_compile_policy.hpp
 include/boost/msm/back/dispatch_table.hpp
 include/boost/msm/back/favor_compile_time.hpp
+include/boost/msm/back/fold_to_list.hpp
 include/boost/msm/back/history_policies.hpp
 include/boost/msm/back/metafunctions.hpp
 include/boost/msm/back/state_machine.hpp
@@ -3924,6 +3937,7 @@ include/boost/msm/front/internal_row.hpp
 include/boost/msm/front/row2.hpp
 include/boost/msm/front/state_machine_def.hpp
 include/boost/msm/front/states.hpp
+include/boost/msm/proto_config.hpp
 include/boost/msm/row_tags.hpp
 include/boost/multi_array.hpp
 include/boost/multi_array/algorithm.hpp
@@ -4192,6 +4206,7 @@ include/boost/polygon/detail/iterator_compact_to_points.hpp
 include/boost/polygon/detail/iterator_geometry_to_set.hpp
 include/boost/polygon/detail/iterator_points_to_compact.hpp
 include/boost/polygon/detail/max_cover.hpp
+include/boost/polygon/detail/minkowski.hpp
 include/boost/polygon/detail/polygon_45_formation.hpp
 include/boost/polygon/detail/polygon_45_set_view.hpp
 include/boost/polygon/detail/polygon_45_touch.hpp
@@ -4200,6 +4215,7 @@ include/boost/polygon/detail/polygon_90_touch.hpp
 include/boost/polygon/detail/polygon_arbitrary_formation.hpp
 include/boost/polygon/detail/polygon_formation.hpp
 include/boost/polygon/detail/polygon_set_view.hpp
+include/boost/polygon/detail/polygon_sort_adaptor.hpp
 include/boost/polygon/detail/property_merge.hpp
 include/boost/polygon/detail/property_merge_45.hpp
 include/boost/polygon/detail/rectangle_formation.hpp
@@ -5193,6 +5209,7 @@ include/boost/signals2/connection.hpp
 include/boost/signals2/deconstruct.hpp
 include/boost/signals2/deconstruct_ptr.hpp
 include/boost/signals2/detail/auto_buffer.hpp
+include/boost/signals2/detail/foreign_ptr.hpp
 include/boost/signals2/detail/lwm_nop.hpp
 include/boost/signals2/detail/lwm_pthreads.hpp
 include/boost/signals2/detail/lwm_win32_cs.hpp
@@ -5922,7 +5939,7 @@ include/boost/spirit/home/qi/string/tst_map.hpp
 include/boost/spirit/home/qi/what.hpp
 include/boost/spirit/home/support.hpp
 include/boost/spirit/home/support/action_dispatch.hpp
-include/boost/spirit/home/support/adapt_class_attributes.hpp
+include/boost/spirit/home/support/adapt_adt_attributes.hpp
 include/boost/spirit/home/support/algorithm/any.hpp
 include/boost/spirit/home/support/algorithm/any_if.hpp
 include/boost/spirit/home/support/algorithm/any_if_ns.hpp
@@ -6311,7 +6328,7 @@ include/boost/spirit/include/qi_symbols.hpp
 include/boost/spirit/include/qi_uint.hpp
 include/boost/spirit/include/qi_what.hpp
 include/boost/spirit/include/support.hpp
-include/boost/spirit/include/support_adapt_class_attributes.hpp
+include/boost/spirit/include/support_adapt_adt_attributes.hpp
 include/boost/spirit/include/support_any.hpp
 include/boost/spirit/include/support_any_if.hpp
 include/boost/spirit/include/support_any_if_ns.hpp
@@ -6321,6 +6338,7 @@ include/boost/spirit/include/support_ascii.hpp
 include/boost/spirit/include/support_attributes.hpp
 include/boost/spirit/include/support_attributes_fwd.hpp
 include/boost/spirit/include/support_char_class.hpp
+include/boost/spirit/include/support_container.hpp
 include/boost/spirit/include/support_iso8859_1.hpp
 include/boost/spirit/include/support_istream_iterator.hpp
 include/boost/spirit/include/support_locals.hpp
@@ -6762,8 +6780,10 @@ include/boost/type.hpp
 include/boost/type_traits.hpp
 include/boost/type_traits/add_const.hpp
 include/boost/type_traits/add_cv.hpp
+include/boost/type_traits/add_lvalue_reference.hpp
 include/boost/type_traits/add_pointer.hpp
 include/boost/type_traits/add_reference.hpp
+include/boost/type_traits/add_rvalue_reference.hpp
 include/boost/type_traits/add_volatile.hpp
 include/boost/type_traits/aligned_storage.hpp
 include/boost/type_traits/alignment_of.hpp
@@ -6771,13 +6791,16 @@ include/boost/type_traits/alignment_traits.hpp
 include/boost/type_traits/arithmetic_traits.hpp
 include/boost/type_traits/array_traits.hpp
 include/boost/type_traits/broken_compiler_spec.hpp
+include/boost/type_traits/common_type.hpp
 include/boost/type_traits/composite_traits.hpp
+include/boost/type_traits/conditional.hpp
 include/boost/type_traits/config.hpp
 include/boost/type_traits/conversion_traits.hpp
 include/boost/type_traits/cv_traits.hpp
 include/boost/type_traits/decay.hpp
 include/boost/type_traits/detail/bool_trait_def.hpp
 include/boost/type_traits/detail/bool_trait_undef.hpp
+include/boost/type_traits/detail/common_type_imp.hpp
 include/boost/type_traits/detail/cv_traits_impl.hpp
 include/boost/type_traits/detail/false_result.hpp
 include/boost/type_traits/detail/ice_and.hpp
@@ -6919,6 +6942,7 @@ include/boost/typeof/type_encoding.hpp
 include/boost/typeof/type_template_param.hpp
 include/boost/typeof/typeof.hpp
 include/boost/typeof/typeof_impl.hpp
+include/boost/typeof/unsupported.hpp
 include/boost/typeof/vector.hpp
 include/boost/typeof/vector100.hpp
 include/boost/typeof/vector150.hpp
@@ -7256,6 +7280,7 @@ include/boost/utility/addressof.hpp
 include/boost/utility/base_from_member.hpp
 include/boost/utility/binary.hpp
 include/boost/utility/compare_pointees.hpp
+include/boost/utility/declval.hpp
 include/boost/utility/detail/in_place_factory_prefix.hpp
 include/boost/utility/detail/in_place_factory_suffix.hpp
 include/boost/utility/detail/result_of_iterate.hpp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/10/14 06:40:08 adam Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/26 20:47:00 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,11 +21,11 @@ SUBST_SED.bb=		-e 's,/usr/share/boost-build,${PREFIX}/share/boost-build,g'
 INSTALLATION_DIRS=	bin
 
 do-build:
-	cd ${WRKSRC}/tools/jam/src && \
-	    ${SETENV} ${MAKE_ENV} ${SH} ./build.sh ${BOOST_TOOLSET}
+	cd ${WRKSRC}/tools/build/v2/engine/src && \
+		${SETENV} ${MAKE_ENV} ${SH} ./build.sh ${BOOST_TOOLSET}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/jam/src/bin.*/bjam \
-	    ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/build/v2/engine/src/bin.*/bjam \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
