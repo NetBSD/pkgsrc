@@ -1,0 +1,1 @@
+bin/notify @PREFIX@/bin/notify@RUBY_VER@
