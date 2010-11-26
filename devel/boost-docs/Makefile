@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/11/24 10:13:21 adam Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/26 21:07:00 adam Exp $
 
 BOOST_PACKAGE=		docs
 BOOST_COMMENT=		(documentation)
@@ -13,6 +13,8 @@ USE_TOOLS+=	pax
 DOCDIR=			${PREFIX}/share/doc/boost
 
 NO_BUILD=		yes
+
+PLIST_SRC=	PLIST ${WRKDIR}/PLIST.auto
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
@@ -29,5 +31,7 @@ do-install:
 		-type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DESTDIR}${DOCDIR} \
 		-type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	cd ${DESTDIR}${PREFIX} && \
+		${FIND} share/doc/boost -type f -print > ${WRKDIR}/PLIST.auto
 
 .include "../../mk/bsd.pkg.mk"
