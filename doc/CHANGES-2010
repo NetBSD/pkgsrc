@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4064 2010/11/26 14:01:00 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4065 2010/11/26 14:52:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5710,3 +5710,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/py-subversion to 1.6.15 [taca 2010-11-26]
 	Updated devel/ruby-subversion to 1.6.15 [taca 2010-11-26]
 	Updated www/ap2-subversion to 1.6.15 [taca 2010-11-26]
+	Updated textproc/link-grammar to 4.7.0 [adam 2010-11-26]
+	Updated editors/abiword to 2.8.6 [adam 2010-11-26]
+	Updated editors/abiword-plugins to 2.8.6 [adam 2010-11-26]
