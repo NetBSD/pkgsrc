@@ -1,17 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/14 22:24:17 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/26 14:43:31 adam Exp $
 
---- link-grammar/Makefile.am.orig	2008-02-22 00:11:41.000000000 +0000
-+++ link-grammar/Makefile.am
-@@ -22,10 +22,10 @@ liblink_grammar_java_la_LDFLAGS = -versi
+Do not try to regenerate words.
+
+--- data/en/words/Makefile.in.orig	2010-09-12 17:48:17.000000000 +0000
++++ data/en/words/Makefile.in
+@@ -302,7 +302,7 @@ mostlyclean-libtool:
  
- if WITH_BINRELOC
- liblink_grammar_la_LIBADD  = -lpthread
--liblink_grammar_java_la_LIBADD  = -lpthread -llink-grammar
-+liblink_grammar_java_la_LIBADD  = -lpthread liblink-grammar.la
- else
- liblink_grammar_la_LIBADD  = 
--liblink_grammar_java_la_LIBADD  = -llink-grammar
-+liblink_grammar_java_la_LIBADD  = liblink-grammar.la
- endif
- 
- liblink_grammar_la_SOURCES =		\
+ clean-libtool:
+ 	-rm -rf .libs _libs
+-install-wordsDATA: $(words_DATA)
++install-wordsDATA:
+ 	@$(NORMAL_INSTALL)
+ 	test -z "$(wordsdir)" || $(MKDIR_P) "$(DESTDIR)$(wordsdir)"
+ 	@list='$(words_DATA)'; for p in $$list; do \
+@@ -354,7 +354,7 @@ distdir: $(DISTFILES)
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(DATA)
++all-am: Makefile
+ installdirs:
+ 	for dir in "$(DESTDIR)$(wordsdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
