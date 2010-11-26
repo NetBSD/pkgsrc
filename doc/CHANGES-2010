@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4063 2010/11/26 13:54:48 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4064 2010/11/26 14:01:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5703,3 +5703,10 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/ruby-notify to 0.3.0 [obache 2010-11-26]
 	Updated databases/mysql51-client to 5.1.53 [taca 2010-11-26]
 	Updated databases/mysql51-server to 5.1.53 [taca 2010-11-26]
+	Updated devel/subversion to 1.6.15 [taca 2010-11-26]
+	Updated devel/subversion-base to 1.6.15 [taca 2010-11-26]
+	Updated devel/java-subversion to 1.6.15 [taca 2010-11-26]
+	Updated devel/p5-subversion to 1.6.15 [taca 2010-11-26]
+	Updated devel/py-subversion to 1.6.15 [taca 2010-11-26]
+	Updated devel/ruby-subversion to 1.6.15 [taca 2010-11-26]
+	Updated www/ap2-subversion to 1.6.15 [taca 2010-11-26]
