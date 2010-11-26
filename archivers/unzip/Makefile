@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2010/03/05 14:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2010/11/26 16:06:03 hauke Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
@@ -27,6 +27,8 @@ CFLAGS+=	-DBSD
 .endif
 CFLAGS+=	-I. -DUNIX -Dunix -DUSE_UNSHRINK
 CFLAGS.SunOS+=	-DNO_LCHMOD
+CFLAGS.Darwin+=	-DNO_LCHMOD
+CFLAGS.OSF1+=	-DNO_LCHMOD
 MAKE_FLAGS+=	CF=${CPPFLAGS:Q}\ ${CFLAGS:Q}
 MAKE_FLAGS+=	LF2=${_STRIPFLAG_CC:Q}\ ${LDFLAGS:Q}\ -lz
 
