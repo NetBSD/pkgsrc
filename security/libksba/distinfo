@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2010/09/01 16:35:15 drochner Exp $
+$NetBSD: distinfo,v 1.14 2010/11/26 18:00:17 drochner Exp $
 
-SHA1 (libksba-1.0.8.tar.bz2) = 268e424e94e62abb51eeca9c66d886dbee8455ab
-RMD160 (libksba-1.0.8.tar.bz2) = 97cb162af21a21cc587ebfeb02ab890fa4bbc3f8
-Size (libksba-1.0.8.tar.bz2) = 583545 bytes
+SHA1 (libksba-1.1.0.tar.bz2) = 984e5ecc1ffd62f329c200bc9d0416022f1c4f5b
+RMD160 (libksba-1.1.0.tar.bz2) = 6226090b82219df56caf9eabb96f9fdbde298872
+Size (libksba-1.1.0.tar.bz2) = 584996 bytes
 SHA1 (patch-aa) = d8af1927606aa254874776f589d80b439179b77b
