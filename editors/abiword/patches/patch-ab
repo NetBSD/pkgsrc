@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.16 2009/04/07 16:27:08 drochner Exp $
+$NetBSD: patch-ab,v 1.17 2010/11/26 14:49:50 adam Exp $
 
---- src/af/util/xp/ut_iconv.cpp.orig	2008-04-06 17:32:28.000000000 +0200
+--- src/af/util/xp/ut_iconv.cpp.orig	2009-06-25 00:52:27.000000000 +0000
 +++ src/af/util/xp/ut_iconv.cpp
-@@ -265,9 +265,11 @@ const char * ucs4Internal ()
+@@ -267,9 +267,11 @@ const char * ucs4Internal ()
  #elif defined(_LIBICONV_H)
    // libiconv seems to prefer UCS-4-INTERNAL to UCS-4BE and UCS-4LE
    return "UCS-4-INTERNAL";
