@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/08/26 17:40:58 adam Exp $
+# $NetBSD: Makefile,v 1.12 2010/11/26 20:46:59 adam Exp $
 
 BOOST_PACKAGE=		build
 BOOST_COMMENT=		(Boost.Build framework)
@@ -41,7 +41,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/boost-build
-	cd ${WRKSRC}/tools/build/v2 && pax -rw -pp -pm		\
+	cd ${WRKSRC}/tools/build/v2 && pax -r -w -p pm -s ':^./engine.*$$::' \
 		-s ':^.*\.orig$$::' . ${DESTDIR}${PREFIX}/share/boost-build
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/site-config.jam ${DESTDIR}${EGDIR}
