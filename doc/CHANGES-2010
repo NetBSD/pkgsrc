@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4061 2010/11/25 14:45:16 gson Exp $
+$NetBSD: CHANGES-2010,v 1.4062 2010/11/26 13:52:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5700,3 +5700,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/py-pytables to 2.2.1 [drochner 2010-11-25]
 	Updated devel/py-cython to 0.13 [drochner 2010-11-25]
 	Updated misc/py-anita to 1.17 [gson 2010-11-25]
+	Updated sysutils/ruby-notify to 0.3.0 [obache 2010-11-26]
