@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4065 2010/11/26 14:52:21 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4066 2010/11/26 21:07:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5713,3 +5713,10 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/link-grammar to 4.7.0 [adam 2010-11-26]
 	Updated editors/abiword to 2.8.6 [adam 2010-11-26]
 	Updated editors/abiword-plugins to 2.8.6 [adam 2010-11-26]
+	Updated devel/boost-jam to 1.45.0 [adam 2010-11-26]
+	Updated devel/boost-headers to 1.45.0 [adam 2010-11-26]
+	Updated devel/boost-libs to 1.45.0 [adam 2010-11-26]
+	Updated devel/boost-docs to 1.45.0 [adam 2010-11-26]
+	Updated devel/boost-build to 1.45.0 [adam 2010-11-26]
+	Updated devel/boost-python to 1.45.0 [adam 2010-11-26]
+	Updated meta-pkgs/boost to 1.45.0 [adam 2010-11-26]
