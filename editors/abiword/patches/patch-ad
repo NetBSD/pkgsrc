@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.14 2005/01/11 11:09:27 adam Exp $
+$NetBSD: patch-ad,v 1.15 2010/11/26 14:49:50 adam Exp $
 
---- src/af/util/xp/ut_iconv.h.orig	2003-11-19 02:38:27.000000000 +0000
+--- src/af/util/xp/ut_iconv.h.orig	2009-06-25 00:52:27.000000000 +0000
 +++ src/af/util/xp/ut_iconv.h
 @@ -32,8 +32,14 @@
  
@@ -16,4 +16,4 @@ $NetBSD: patch-ad,v 1.14 2005/01/11 11:09:27 adam Exp $
 +
  #ifdef __cplusplus
  
- #include "ut_exception.h"
+ 
