@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4068 2010/11/27 06:19:50 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4069 2010/11/27 06:33:14 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5749,3 +5749,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.5 [obache 2010-11-27]
 	Updated x11/ruby-gnome2-panelapplet to 0.90.5 [obache 2010-11-27]
 	Updated x11/ruby-gnome2-vte to 0.90.5 [obache 2010-11-27]
+	Updated multimedia/mediatomb to 0.12.1 [agc 2010-11-26]
