@@ -71,3 +71,5 @@ multimedia/mplayer-share: security fix
 multimedia/mplayer: security fix
 multimedia/gmplayer: security fix
 multimedia/mencoder: security fix
+Pullup ticket #3286 - requested by tron
+Security update for "libxml2" package
