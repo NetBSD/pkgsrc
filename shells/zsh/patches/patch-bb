@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.3 2010/03/10 08:19:57 roy Exp $
+$NetBSD: patch-bb,v 1.4 2010/11/27 07:21:27 obache Exp $
 
 --- Src/Modules/terminfo.c.orig	2010-03-10 07:58:30.000000000 +0000
 +++ Src/Modules/terminfo.c	2010-03-10 07:58:40.000000000 +0000
@@ -7,7 +7,7 @@ $NetBSD: patch-bb,v 1.3 2010/03/10 08:19:57 roy Exp $
  # endif
  
 -# include <curses.h>
-+# ifdef TERM_H_NEEDS_CURSES_H
++# ifndef __NetBSD__
 +#  include <curses.h>
 +# endif
  # ifdef HAVE_TERM_H
