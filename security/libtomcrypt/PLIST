@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/27 06:11:57 agc Exp $
+include/tomcrypt.h
+include/tomcrypt_argchk.h
+include/tomcrypt_cfg.h
+include/tomcrypt_cipher.h
+include/tomcrypt_custom.h
+include/tomcrypt_hash.h
+include/tomcrypt_mac.h
+include/tomcrypt_macros.h
+include/tomcrypt_math.h
+include/tomcrypt_misc.h
+include/tomcrypt_pk.h
+include/tomcrypt_pkcs.h
+include/tomcrypt_prng.h
+include/tomcrypt_test.h
+lib/libtomcrypt.a
+share/doc/libtomcrypt/crypt.pdf
