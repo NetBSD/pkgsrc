@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.18 2010/04/13 16:04:09 drochner Exp $
+$NetBSD: patch-ab,v 1.18.4.1 2010/11/27 04:47:34 sbd Exp $
 
---- configure.orig	2010-03-15 15:18:22.000000000 +0000
+--- configure.orig	2010-11-04 17:28:14.000000000 +0000
 +++ configure
-@@ -19734,7 +19734,7 @@ fi
+@@ -11414,7 +11414,7 @@ else
+   esac
+ fi
+ 
+- if test -z "$VERSION_SCRIPT_FLAGS"; then
++ if test \! -z "$VERSION_SCRIPT_FLAGS"; then
+   USE_VERSION_SCRIPT_TRUE=
+   USE_VERSION_SCRIPT_FALSE='#'
+ else
+@@ -13364,7 +13364,7 @@ fi
  fi
  
  
@@ -11,3 +20,18 @@ $NetBSD: patch-ab,v 1.18 2010/04/13 16:04:09 drochner Exp $
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
+@@ -14582,10 +14582,10 @@ $as_echo "#define snprintf _snprintf" >>
+ 
+ $as_echo "#define vsnprintf _vsnprintf" >>confdefs.h
+ 
+- if test "${PYTHON}" != ""
+- then
+-   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython${PYTHON_VERSION//./}"
+- fi
++# if test "${PYTHON}" != ""
++# then
++#   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython${PYTHON_VERSION//./}"
++# fi
+  ;;
+  *-*-cygwin*)
+  CYGWIN_EXTRA_LDFLAGS="-no-undefined"
