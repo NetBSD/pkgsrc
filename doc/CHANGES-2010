@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4070 2010/11/27 13:01:25 roy Exp $
+$NetBSD: CHANGES-2010,v 1.4071 2010/11/27 13:26:31 roy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5751,3 +5751,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/ruby-gnome2-vte to 0.90.5 [obache 2010-11-27]
 	Updated multimedia/mediatomb to 0.12.1 [agc 2010-11-26]
 	Updated net/dhcpcd to 5.2.9 [roy 2010-11-27]
+	Updated net/dnsmasq to 2.55 [roy 2010-11-27]
