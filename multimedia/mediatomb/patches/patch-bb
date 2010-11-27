@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2009/03/30 17:07:46 drochner Exp $
+$NetBSD: patch-bb,v 1.2 2010/11/27 06:30:24 agc Exp $
 
---- src/storage/sqlite3/sqlite3_storage.h.orig	2008-03-01 23:48:34.000000000 +0100
+--- src/storage/sqlite3/sqlite3_storage.h.orig	2010-10-02 22:09:43.000000000 +0000
 +++ src/storage/sqlite3/sqlite3_storage.h
-@@ -148,6 +148,7 @@ private:
+@@ -158,6 +158,7 @@ private:
      virtual inline zmm::String quote(unsigned int val) { return zmm::String::from(val); }
      virtual inline zmm::String quote(long val) { return zmm::String::from(val); }
      virtual inline zmm::String quote(unsigned long val) { return zmm::String::from(val); }

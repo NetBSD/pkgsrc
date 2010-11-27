@@ -1,18 +1,10 @@
-$NetBSD: distinfo,v 1.6 2009/03/30 17:07:46 drochner Exp $
+$NetBSD: distinfo,v 1.7 2010/11/27 06:30:24 agc Exp $
 
-SHA1 (mediatomb-0.11.0.tar.gz) = 1d7c86924686f9999a359ba96092aa36d30832a6
-RMD160 (mediatomb-0.11.0.tar.gz) = 11c53d5757da3a689c025107331526c0486befc4
-Size (mediatomb-0.11.0.tar.gz) = 1059429 bytes
-SHA1 (patch-aa) = 00bd9c244c4a4853e65a1430921ce7b170ce9373
-SHA1 (patch-ab) = c7ec78ca4fdae632b580487bf1451ed5f1370e82
-SHA1 (patch-ac) = 801ef3895fc848103f81433b066d6ae9fddccaf9
-SHA1 (patch-ad) = 6ab358d4ad7530a8337db154017024da8bf89fbf
-SHA1 (patch-ae) = dd75f7fd3d2794dd53062d5710285ed96d030c5b
+SHA1 (mediatomb-0.12.1.tar.gz) = 86e880584cc9c8aaf3926d56048510d1d06e76b4
+RMD160 (mediatomb-0.12.1.tar.gz) = ecb61ca2483f76421beef1036ac442b8f805fa96
+Size (mediatomb-0.12.1.tar.gz) = 1240612 bytes
 SHA1 (patch-af) = ec9261d2ec645a07144f8b927fd57a50175903ca
-SHA1 (patch-ag) = 932f8f4d2764c6cb098e0e78e7476527561b198e
-SHA1 (patch-ah) = 9b12a346a61bdeb7d5cc7a7289c0b4046a7a6255
-SHA1 (patch-ai) = e9cad8e72f7e4e9d6eb7448d1380da3bcc8c28df
-SHA1 (patch-aj) = b3893ec5c8fc518673a144cb74a12eaa7e34f008
-SHA1 (patch-ba) = ee8b711de0a10bb58adb2ef25720f764e19b3ab2
-SHA1 (patch-bb) = 94f180b618dce3d0f12a009fd29a0e640667cdcc
-SHA1 (patch-bc) = 348bd87b5f586a0f16326aaafcf7f1b5e039a8b2
+SHA1 (patch-ag) = 4ceebfca5a1f0556b71bee4713cb35726208f27e
+SHA1 (patch-ba) = ff31a77e71b772be945441d3c9219cd199f5ff83
+SHA1 (patch-bb) = 27661c4d0e841b6da8b280a3cbac3c38f581b2df
+SHA1 (patch-bc) = 40ef84ec5802431c5f2a811a5bf53a76d15c3904
