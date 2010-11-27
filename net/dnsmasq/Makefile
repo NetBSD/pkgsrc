@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2010/01/29 12:33:06 roy Exp $
+# $NetBSD: Makefile,v 1.15 2010/11/27 13:24:47 roy Exp $
 #
 
-DISTNAME=		dnsmasq-2.52
+DISTNAME=		dnsmasq-2.55
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
@@ -18,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 # Override the defaults
+AUTO_MKDIRS=yes
 CFLAGS+=		-DCONFFILE=\\\"${PKG_SYSCONFDIR}/dnsmasq.conf\\\"
 BUILD_MAKE_FLAGS+=	COPTS="${CFLAGS}"
 INSTALL_MAKE_FLAGS+=	PREFIX="${PREFIX}"
@@ -29,7 +30,6 @@ BUILD_MAKE_FLAGS+=	AWK="${AWK}"
 INSTALL_MAKE_FLAGS+=	AWK="${AWK}"
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/dnsmasq
 	${INSTALL_DATA} ${WRKSRC}/dnsmasq.conf.example \
 		${DESTDIR}${PREFIX}/share/examples/dnsmasq/
 
