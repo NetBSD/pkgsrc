@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.10 2008/04/22 21:42:07 wiz Exp $
+$NetBSD: patch-ae,v 1.10.24.1 2010/11/27 04:47:34 sbd Exp $
 
---- doc/examples/Makefile.in.orig	2008-04-08 14:55:02.000000000 +0000
+--- doc/examples/Makefile.in.orig	2010-11-04 17:28:16.000000000 +0000
 +++ doc/examples/Makefile.in
-@@ -754,7 +754,8 @@ index.html: examples.xml examples.xsl
+@@ -791,7 +791,8 @@ index.html: examples.xml examples.xsl
  
  install-data-local: 
- 	$(mkinstalldirs) $(DESTDIR)$(HTML_DIR)
+ 	@MKDIR_P@ $(DESTDIR)$(HTML_DIR)
 -	-@INSTALL@ -m 0644 $(srcdir)/*.html $(srcdir)/*.c $(srcdir)/*.xml $(srcdir)/*.xsl $(srcdir)/*.res $(DESTDIR)$(HTML_DIR)
 +	-@INSTALL@ -m 0644 $(srcdir)/*.c $(srcdir)/*.xml $(srcdir)/*.xsl $(srcdir)/*.res $(DESTDIR)$(HTML_DIR)
 +	-@INSTALL@ -m 0644 $(srcdir)/*.html $(DESTDIR)$(HTML_DIR)
