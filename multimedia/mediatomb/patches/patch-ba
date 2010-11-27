@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2009/03/30 17:07:46 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2010/11/27 06:30:24 agc Exp $
 
---- src/storage/sql_storage.h.orig	2008-03-01 23:48:34.000000000 +0100
+--- src/storage/sql_storage.h.orig	2010-10-02 22:07:24.000000000 +0000
 +++ src/storage/sql_storage.h
-@@ -78,6 +78,7 @@ public:
+@@ -79,6 +79,7 @@ public:
      virtual zmm::String quote(unsigned int val) = 0;
      virtual zmm::String quote(long val) = 0;
      virtual zmm::String quote(unsigned long val) = 0;
