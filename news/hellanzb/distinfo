@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/30 13:26:39 bjs Exp $
+$NetBSD: distinfo,v 1.2 2010/11/27 13:51:24 abs Exp $
 
 SHA1 (hellanzb-0.14.1087.tar.gz) = ddc698fa53ff0e9c2ef0499bd9e6ce53c3c504d7
 RMD160 (hellanzb-0.14.1087.tar.gz) = dde0eec93172c18226e91d2bfdcd8c36f56be1f4
 Size (hellanzb-0.14.1087.tar.gz) = 164628 bytes
-SHA1 (patch-aa) = 71c5766f5198898a2e957e82db195e81479477c1
+SHA1 (patch-aa) = 18e32e534743063479e9361b3411599a35162c2c
+SHA1 (patch-ab) = 1297c10facb93faa3cb384411bead7737019ad2e
+SHA1 (patch-ac) = bcae6a33c8b792be5f3a4d3d60cb431eb0d498e9
+SHA1 (patch-ad) = 79ecb3c8f2c1a5bdd25e57bc003b2bfd70edb4cc
