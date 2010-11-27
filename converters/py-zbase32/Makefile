@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/08/01 05:44:07 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/27 14:15:29 gdt Exp $
 #
 
 DISTNAME=	zbase32-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://pypi.python.org/packages/source/z/zbase32/
 
