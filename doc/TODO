@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9886 2010/11/26 14:52:21 adam Exp $
+$NetBSD: TODO,v 1.9887 2010/11/27 06:19:50 obache Exp $
 
 Suggested new packages
 ======================
@@ -1215,7 +1215,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rtcw-1.41.3
 	o rtorrent-0.8.7
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
-	o ruby-gnome2-0.90.5
 	o rudiments-0.30
 	o rxvt-unicode-9.07
 	o sabayon-2.30.1 [GNOME 2.30]
