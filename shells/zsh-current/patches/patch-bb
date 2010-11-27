@@ -1,17 +1,18 @@
-$NetBSD: patch-bb,v 1.2 2010/11/27 07:25:25 obache Exp $
+$NetBSD: patch-bb,v 1.3 2010/11/27 12:46:53 roy Exp $
 
-terminfo does not require curses.
+$NetBSD: patch-bb,v 1.3 2010/11/27 12:46:53 roy Exp $
 
---- Src/Modules/terminfo.c.orig	2010-02-07 08:31:07.000000000 +0000
-+++ Src/Modules/terminfo.c	2010-02-07 08:31:30.000000000 +0000
-@@ -49,10 +49,6 @@
+--- Src/Modules/terminfo.c.orig	2008-03-13 09:54:14.000000000 +0000
++++ Src/Modules/terminfo.c
+@@ -49,9 +49,11 @@
  #  undef offsetof
  # endif
  
--#ifdef ZSH_HAVE_CURSES_H
--# include "../zshcurses.h"
--#endif
--
++#if !defined(__NetBSD__)
+ #ifdef ZSH_HAVE_CURSES_H
+ # include "../zshcurses.h"
+ #endif
++#endif
+ 
  # ifdef ZSH_HAVE_TERM_H
  #  include "../zshterm.h"
- # endif
