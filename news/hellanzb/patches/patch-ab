@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/11/27 13:51:24 abs Exp $
+
+Handle twisted.copyright.versions such as 10.0.0
+
+--- Hellanzb/HellaReactor.py.orig	2008-07-30 12:30:03.000000000 +0000
++++ Hellanzb/HellaReactor.py
+@@ -9,7 +9,7 @@ reactor system so it can catch signals, 
+ import Hellanzb, sys, time
+ 
+ import twisted.copyright
+-if twisted.copyright.version >= '2.0.0':
++if int(twisted.copyright.version.partition('.')[0]) >= 2:
+     from twisted.internet.selectreactor import SelectReactor
+     from twisted.internet.selectreactor import _NO_FILENO
+     from twisted.internet.selectreactor import _NO_FILEDESC

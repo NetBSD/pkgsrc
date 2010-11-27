@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2010/11/27 13:51:24 abs Exp $
+
+Handle twisted.copyright.versions such as 10.0.0
+
+--- Hellanzb/HellaXMLRPC/xmlrpc.py.orig	2008-07-30 12:30:03.000000000 +0000
++++ Hellanzb/HellaXMLRPC/xmlrpc.py
+@@ -31,7 +31,7 @@ from twisted.internet import defer, prot
+ from twisted.python import log, reflect
+ 
+ import twisted.copyright
+-if twisted.copyright.version >= '2.0.0':
++if int(twisted.copyright.version.partition('.')[0]) >= 2:
+     from twisted.web import http
+ else:
+     from twisted.protocols import http
