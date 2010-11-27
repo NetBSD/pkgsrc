@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4066 2010/11/26 21:07:21 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4067 2010/11/27 06:15:28 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5720,3 +5720,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/boost-build to 1.45.0 [adam 2010-11-26]
 	Updated devel/boost-python to 1.45.0 [adam 2010-11-26]
 	Updated meta-pkgs/boost to 1.45.0 [adam 2010-11-26]
+	Added security/libtomcrypt version 1.17 [agc 2010-11-26]
