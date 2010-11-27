@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/10/13 13:00:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/27 18:24:44 gdt Exp $
 #
 
 DISTNAME=	pyutil-1.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutil/
 
@@ -15,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	26
 
-# internal egg: setuptools_darcs
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
