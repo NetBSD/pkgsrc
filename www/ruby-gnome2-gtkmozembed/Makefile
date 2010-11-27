@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/11/15 22:58:53 abs Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/27 06:14:48 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtkmozembed-${VERSION}
 COMMENT=		Ruby binding of gtkmozembed
-PKGREVISION=		1
 CATEGORIES=		www
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtkmozembed-[0-9]*
