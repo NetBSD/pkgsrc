@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/07/06 15:37:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/11/28 13:25:01 drochner Exp $
 bin/baobab
 bin/gnome-dictionary
 bin/gnome-panel-screenshot
@@ -495,6 +495,7 @@ share/locale/el/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/en@shaw/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/eo/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/es/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/et/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/eu/LC_MESSAGES/gnome-utils-2.0.mo
@@ -550,6 +551,7 @@ share/locale/ta/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/te/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/th/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/ug/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/vi/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/wa/LC_MESSAGES/gnome-utils-2.0.mo
