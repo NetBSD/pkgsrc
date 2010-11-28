@@ -72,4 +72,11 @@ multimedia/mplayer: security fix
 multimedia/gmplayer: security fix
 multimedia/mencoder: security fix
 Pullup ticket #3286 - requested by tron
-Security update for "libxml2" package
+textproc/libxml2: security update
+Pullup ticket #3284 - requested by taca
+net/net-snmp: build fix
+Pullup ticket #3285 - requested by taca
+lang/ruby18-base: build fix
+lang/ruby19-base: build fix
+Pullup ticket #3287 - requested by is
+lang/ocaml: portability fix
