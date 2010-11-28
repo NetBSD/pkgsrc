@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/26 13:16:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2010/11/28 14:22:11 tron Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -28,10 +28,10 @@ ${RUBY_INC}/ruby/st.h
 ${RUBY_INC}/ruby/util.h
 ${RUBY_INC}/ruby/version.h
 ${RUBY_INC}/ruby/vm.h
-lib/libruby${RUBY_VER}-static.a
-lib/libruby${RUBY_VER}.${RUBY_DLEXT}
-${RUBY_NOSHLIBMAJOR}lib/libruby${RUBY_VER}.so.${RUBY_SHLIBMAJOR}
-lib/libruby${RUBY_VER}.${RUBY_DLEXT}.${RUBY_SHLIBVER}
+lib/libruby${RUBY_STATICLIB}
+lib/libruby${RUBY_VER}.${RUBY_SLEXT}
+${RUBY_SHLIBALIAS}
+lib/libruby${RUBY_SHLIB}
 ${RUBY_LIB}/English.rb
 ${RUBY_LIB}/abbrev.rb
 ${RUBY_LIB}/base64.rb

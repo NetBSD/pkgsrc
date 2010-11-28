@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.52 2010/09/28 20:24:25 joerg Exp $
+# $NetBSD: rubyversion.mk,v 1.52.2.1 2010/11/28 14:22:10 tron Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -33,29 +33,29 @@ _RUBY_VERSION_DEFAULT=	${RUBY_VERSION_DEFAULT:S/.//}
 .if defined(RUBY_VERSION_REQD)
 .  if ${RUBY_VERSION_REQD} == "18"
 RUBY_VERSION?=		${RUBY18_VERSION}
-RUBY_API_VERSION?=	${RUBY18_API_VERSION}
 .  elif ${RUBY_VERSION_REQD} == "19"
 RUBY_VERSION?=		${RUBY19_VERSION}
-RUBY_API_VERSION?=	${RUBY19_API_VERSION}
 .  else
 RUBY_VERSION?=		${RUBY18_VERSION}
-RUBY_API_VERSION?=	${RUBY18_API_VERSION}
 PKG_FAIL_REASON+=	"Unknown value for ${RUBY_VERSION_REQD}"
 .  endif
 .else
 .  if ${RUBY_VERSION_DEFAULT} == "1.8"
 RUBY_VERSION?=		${RUBY18_VERSION}
-RUBY_API_VERSION?=	${RUBY18_API_VERSION}
 .  elif ${RUBY_VERSION_DEFAULT} == "1.9"
 RUBY_VERSION?=		${RUBY19_VERSION}
-RUBY_API_VERSION?=	${RUBY19_API_VERSION}
+.  else
+RUBY_VERSION?=		${RUBY18_VERSION}
 .  endif
 .endif
 
 RUBY_PATCH_LEVEL=	${RUBY${RUBY_VER}_PATCHLEVEL}
+
 .if ${RUBY_VERSION} == ${RUBY18_VERSION}
+RUBY_API_VERSION=	${RUBY18_API_VERSION}
 RUBY_VERSION_SUFFIX=	${RUBY_VERSION}${RUBY_PATCH_LEVEL:S/pl/./}
 .elif ${RUBY_VERSION} == ${RUBY19_VERSION}
+RUBY_API_VERSION=	${RUBY19_API_VERSION}
 RUBY_VERSION_SUFFIX=	${RUBY_VERSION}${RUBY_PATCH_LEVEL}
 .endif
 
@@ -76,7 +76,7 @@ RUBY_VERSION_LIST= 18 19
 #	If RUBY_NOVERSION is "No" (default), the package's name is begin
 #	with ${RUBY_NAME}; "ruby18", "ruby19",  and so on.
 #
-#	It also affects to RUBY_DOCDIR, RUBY_EXAMPLESDIR...
+#	It also affects to RUBY_DOC, RUBY_EG...
 #
 RUBY_NOVERSION?=	No
 
@@ -169,39 +169,46 @@ RDOC?=			${PREFIX}/bin/rdoc${RUBY_VER}
 RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 
 #
-# Ruby shared library version handling.
+# Ruby shared and static library version handling.
 #
-RUBY_SHLIBMAJOR?=	${_RUBY_VER_MAJOR}
 RUBY_SHLIBVER?=		${RUBY_API_VERSION}
+RUBY_SHLIB?=		${RUBY_VER}.${RUBY_SLEXT}.${RUBY_SHLIBVER}
+RUBY_SHLIBALIAS?=	@comment
+RUBY_STATICLIB?=	${RUBY_VER}-static.a
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
-RUBY_SHLIBMAJOR=	${RUBY_VER}
 RUBY_SHLIBVER=		${RUBY_VER}.${RUBY_API_TEENY}
+_RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${RUBY_VER}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-RUBY_SHLIBMAJOR=	# unused
 RUBY_SHLIBVER=		${RUBY_VER}
 .elif ${OPSYS} == "OpenBSD"
-RUBY_SHLIBMAJOR=	# unused
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${RUBY_API_TEENY}
-.elif ${OPSYS} == "IRIX"
-RUBY_SHLIBMAJOR=	# unused
+.elif ${OPSYS} == "Darwin"
+RUBY_SHLIB=		${RUBY_VER}.${RUBY_SHLIBVER}.${RUBY_SLEXT}
+.if ${RUBY_VER} == "18"
+_RUBY_SHLIBALIAS=	${RUBY_VER}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${RUBY_SLEXT}
+.else
+_RUBY_SHLIBALIAS=	.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${RUBY_SLEXT}
+RUBY_STATICLIB=		${RUBY_VER}.${RUBY_API_VERSION}-static.a
+.endif
 .elif ${OPSYS} == "Linux"
-RUBY_SHLIBMAJOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
+_RUBY_SHLIBALIAS=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 .endif
 
-.if empty(RUBY_SHLIBMAJOR)
-RUBY_NOSHLIBMAJOR=	"@comment "
-.else
-RUBY_NOSHLIBMAJOR=
+.if !empty(_RUBY_SHLIBALIAS)
+RUBY_SHLIBALIAS=	lib/libruby${_RUBY_SHLIBALIAS}
 .endif
 
 #
 # RUBY_DLEXT is suffix of extention library.
+# RUBY_SLEXT is suffix of shared library.
 #
 .if ${OPSYS} == "Darwin"
 RUBY_DLEXT=	bundle
+RUBY_SLEXT=	dylib
 .else
 RUBY_DLEXT=	so
+RUBY_SLEXT=	so
 .endif
 
 #
@@ -321,7 +328,10 @@ PLIST_SUBST+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 			RUBY_PKGPREFIX=${RUBY_PKGPREFIX} \
 			RUBY_VERSION=${RUBY_VERSION:Q} \
 			RUBY_VER_DIR=${RUBY_VER_DIR:Q} \
-			RUBY_DLEXT=${RUBY_DLEXT:Q} \
+			RUBY_DLEXT=${RUBY_DLEXT:Q} RUBY_SLEXT=${RUBY_SLEXT:Q} \
+			RUBY_SHLIB=${RUBY_SHLIB:Q} \
+			RUBY_SHLIBALIAS=${RUBY_SHLIBALIAS:Q} \
+			RUBY_STATICLIB=${RUBY_STATICLIB:Q} \
 			RUBY_ARCH=${RUBY_ARCH:Q} \
 			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",} \
 			GEM_HOME=${GEM_HOME:Q}
@@ -369,13 +379,20 @@ RUBY_GENERATE_PLIST =	( \
 .include "../../mk/dlopen.buildlink3.mk"
 .endif
 
-.if ${RUBY_VER} == "19"
-PRINT_PLIST_AWK+=	/${RUBY_DLEXT}\.${RUBY_SHLIBVER:S|.|\\.|}$$/ \
-			{ sub(/${RUBY_DLEXT}\.${RUBY_SHLIBVER:S|.|\\.|}$$/, \
-			"$${RUBY_DLEXT}.$${RUBY_SHLIBVER}"); }
-PRINT_PLIST_AWK+=	/${RUBY_DLEXT}\.${RUBY_SHLIBMAJOR}$$/ \
-			{ sub(/${RUBY_DLEXT}\.${RUBY_SHLIBMAJOR}$$/, \
-			"$${RUBY_DLEXT}.$${RUBY_SHLIBMAJOR}"); }
+PRINT_PLIST_AWK+=	/lib\/libruby${RUBY_STATICLIB}$$/ \
+			{ sub(/${RUBY_STATICLIB}/, "$${RUBY_STATICLIB}"); }
+PRINT_PLIST_AWK+=	/lib\/libruby${RUBY_VER}\.${RUBY_SLEXT}/ \
+			{ sub(/${RUBY_VER}\.${RUBY_SLEXT}$$/, \
+			"$${RUBY_VER}.$${RUBY_SLEXT}"); }
+PRINT_PLIST_AWK+=	/${RUBY_SHLIB}$$/ \
+			{ sub(/${RUBY_SHLIB}$$/, "$${RUBY_SHLIB}"); }
+PRINT_PLIST_AWK+=	/${RUBY_SLEXT}\.${RUBY_SHLIBVER}$$/ \
+			{ sub(/${RUBY_SLEXT}\.${RUBY_SHLIBVER}$$/, \
+			"$${RUBY_SLEXT}.$${RUBY_SHLIBVER}"); }
+.if ${RUBY_SHLIBALIAS} != "@comment"
+PRINT_PLIST_AWK+=	/${RUBY_SHLIBALIAS:S/\//\\\//}$$/ \
+			{ sub(/${RUBY_SHLIBALIAS:S/\//\\\//}$$/, \
+			"$${RUBY_SHLIBALIAS}"); }
 .endif
 PRINT_PLIST_AWK+=	/^${RUBY_ARCHINC:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_ARCHINC:S|/|\\/|g}/, "$${RUBY_ARCHINC}"); \
