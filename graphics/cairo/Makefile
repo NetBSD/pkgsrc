@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2010/10/13 00:11:21 spz Exp $
+# $NetBSD: Makefile,v 1.86 2010/11/28 14:06:16 obache Exp $
 
 DISTNAME=	cairo-1.10.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -36,6 +36,12 @@ PLIST.carbon=		yes
 CPPFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
 
 TEST_TARGET=			check
+
+# PR#43928
+.include "../../mk/compiler.mk"
+.if ${MACHINE_PLATFORM:MDragonFly-*-x86_64} && ${CC_VERSION:Mgcc-4.1.*}
+CONFIGURE_ENV+=		ac_cv_type___uint128_t=no
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
