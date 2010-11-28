@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/02/24 23:15:55 cube Exp $
+$NetBSD: patch-aa,v 1.3 2010/11/28 20:52:44 dholland Exp $
+
+Find GrabWeather where we install it.
 
 --- gkrellweather.c.orig	2003-11-02 12:05:08.000000000 +0000
 +++ gkrellweather.c	2003-11-02 12:05:23.000000000 +0000
@@ -7,7 +9,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/24 23:15:55 cube Exp $
      options.pressure_unit = 1;
      strcpy(options.station, DEFAULT_STATION_ID);
 -    sprintf(options.command, "/usr/share/gkrellm/GrabWeather %s", options.station);
-+    sprintf(options.command, "GrabWeather %s", options.station);
++    sprintf(options.command, "%s/bin/GrabWeather %s", PREFIX, options.station);
      sprintf(options.filename, "%s/.wmWeatherReports/%s.dat",
              getenv("HOME"), options.station);
  }

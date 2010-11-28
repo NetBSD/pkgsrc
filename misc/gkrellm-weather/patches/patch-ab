@@ -1,7 +1,30 @@
-$NetBSD: patch-ab,v 1.1 2006/03/25 17:29:45 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2010/11/28 20:52:44 dholland Exp $
 
---- Makefile.orig	2003-03-31 11:12:57.000000000 +0000
+- use pkgsrc-provided PREFIX and LOCALEDIR
+- fix pthread linkage
+
+--- Makefile.orig	2005-02-27 13:54:47.000000000 +0000
 +++ Makefile
+@@ -3,16 +3,16 @@ VERSION = 2.0.7
+ CFLAGS = -O2 -std=gnu99 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`
+ LIBS = `pkg-config gtk+-2.0 --libs`
+ LFLAGS = -shared
+-PREFIX = /usr/local
++#PREFIX = /usr/local
+ 
+-LOCALEDIR := $(PREFIX)/share/locale
++#LOCALEDIR := $(PREFIX)/share/locale
+ 
+ ifeq ($(enable_nls),1)
+     CFLAGS += -DENABLE_NLS -DLOCALEDIR=\"$(LOCALEDIR)\"
+     export enable_nls
+ endif
+ CFLAGS += -DPACKAGE="\"$(PKGNAME)\""
+-export PKGNAME LOCALEDIR
++export PKGNAME #LOCALEDIR
+ 
+ CC = gcc
+ 
 @@ -20,7 +20,7 @@ OBJS = gkrellweather.o
  
  gkrellweather.so: $(OBJS)
