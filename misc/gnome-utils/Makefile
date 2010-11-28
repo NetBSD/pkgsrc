@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.102 2010/11/15 22:57:56 abs Exp $
+# $NetBSD: Makefile,v 1.103 2010/11/28 13:25:01 drochner Exp $
 #
 
-DISTNAME=		gnome-utils-2.30.0
-PKGREVISION=		2
+DISTNAME=		gnome-utils-2.32.0
 CATEGORIES=		misc gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.30/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
