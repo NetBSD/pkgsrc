@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2010/11/11 20:54:39 adam Exp $
+# $NetBSD: Makefile,v 1.69 2010/11/28 20:12:35 adam Exp $
 
 DISTNAME=	wv-1.2.9
 CATEGORIES=	converters
@@ -30,5 +30,4 @@ MAKE_FILE=		GNUmakefile
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
