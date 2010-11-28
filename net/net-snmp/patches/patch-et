@@ -1,12 +1,12 @@
-$NetBSD: patch-et,v 1.4 2010/05/11 04:39:54 adam Exp $
+$NetBSD: patch-et,v 1.4.4.1 2010/11/28 14:04:37 tron Exp $
 
---- agent/mibgroup/mibII/icmp.c.orig	2010-03-12 00:31:17.000000000 +0000
-+++ agent/mibgroup/mibII/icmp.c	2010-03-12 00:33:41.000000000 +0000
-@@ -127,6 +127,12 @@
+--- agent/mibgroup/mibII/icmp.c.orig	2010-10-19 03:54:57.000000000 +0000
++++ agent/mibgroup/mibII/icmp.c
+@@ -127,6 +127,12 @@ init_icmp(void)
  #define USES_SNMP_DESIGNED_ICMPSTAT
  #endif
  
-+#ifdef netbsd4
++#ifdef NETBSD_STATS_VIA_SYSCTL
 +#define ICMP_STAT_STRUCTURE     struct icmp_mib
 +#define USES_SNMP_DESIGNED_ICMPSTAT
 +#undef ICMP_NSTATS
@@ -15,11 +15,11 @@ $NetBSD: patch-et,v 1.4 2010/05/11 04:39:54 adam Exp $
  #if defined (WIN32) || defined (cygwin)
  #include <iphlpapi.h>
  #define ICMP_STAT_STRUCTURE MIB_ICMP
-@@ -706,6 +712,21 @@
+@@ -706,6 +712,21 @@ icmp_load(netsnmp_cache *cache, void *vm
      }
      return ret_value;
  }
-+#elif defined(netbsd4)
++#elif defined(NETBSD_STATS_VIA_SYSCTL)
 +int
 +icmp_load(netsnmp_cache *cache, void *vmagic)
 +{

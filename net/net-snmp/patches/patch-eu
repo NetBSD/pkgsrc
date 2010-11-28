@@ -1,12 +1,12 @@
-$NetBSD: patch-eu,v 1.1 2010/05/11 04:39:54 adam Exp $
+$NetBSD: patch-eu,v 1.1.4.1 2010/11/28 14:04:37 tron Exp $
 
---- agent/mibgroup/mibII/ip.c.orig	2010-03-12 00:31:27.000000000 +0000
-+++ agent/mibgroup/mibII/ip.c	2010-03-12 00:33:50.000000000 +0000
-@@ -199,6 +199,12 @@
+--- agent/mibgroup/mibII/ip.c.orig	2010-10-19 03:54:57.000000000 +0000
++++ agent/mibgroup/mibII/ip.c
+@@ -199,6 +199,12 @@ init_ip(void)
  #define	USES_SNMP_DESIGNED_IPSTAT
  #endif
  
-+#ifdef netbsd4
++#ifdef NETBSD_STATS_VIA_SYSCTL
 +#define IP_STAT_STRUCTURE	struct ip_mib
 +#define USES_SNMP_DESIGNED_IPSTAT
 +#undef IP_NSTATS
@@ -15,11 +15,11 @@ $NetBSD: patch-eu,v 1.1 2010/05/11 04:39:54 adam Exp $
  #if defined (WIN32) || defined (cygwin)
  #include <iphlpapi.h>
  #define IP_STAT_STRUCTURE MIB_IPSTATS
-@@ -804,6 +810,21 @@
+@@ -804,6 +810,21 @@ ip_load(netsnmp_cache *cache, void *vmag
      }
      return ret_value;
  }
-+#elif defined (netbsd4)
++#elif defined (NETBSD_STATS_VIA_SYSCTL)
 +int
 +ip_load(netsnmp_cache *cache, void *vmagic)
 +{
