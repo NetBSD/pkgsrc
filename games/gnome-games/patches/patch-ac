@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.6 2010/11/28 13:10:18 drochner Exp $
+
+--- glchess/src/lib/scene/cairo/__init__.py.orig	2010-09-27 22:37:29.000000000 +0000
++++ glchess/src/lib/scene/cairo/__init__.py
+@@ -72,7 +72,7 @@ class ChessPiece(glchess.scene.ChessPiec
+         self.path = os.path.join(glchess.defaults.BASE_DIR, 'pieces', style, self.name + '.svg')
+         try:
+             self.svg = rsvg.Handle(file = self.path)
+-        except Exception as e:
++        except Exception, e:
+             raise Exception('Error reading %s: %s' % (self.path, e))
+ 
+     def move(self, coord, delete, animate = True):
