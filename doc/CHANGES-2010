@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4072 2010/11/28 14:11:34 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4073 2010/11/28 18:15:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5753,3 +5753,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/dhcpcd to 5.2.9 [roy 2010-11-27]
 	Updated net/dnsmasq to 2.55 [roy 2010-11-27]
 	Updated graphics/cairo to 1.10.0nb2 [obache 2010-11-28]
+	Updated mail/postfix to 2.7.2 [tron 2010-11-28]
