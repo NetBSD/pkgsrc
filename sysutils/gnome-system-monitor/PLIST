@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/08/09 10:11:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/11/28 13:00:33 drochner Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -221,6 +221,7 @@ share/locale/el/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/en@shaw/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/en_CA/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/en_GB/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/eo/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/es/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/et/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/eu/LC_MESSAGES/gnome-system-monitor.mo
