@@ -1,8 +1,32 @@
-$NetBSD: patch-aw,v 1.7 2008/01/23 20:42:26 adam Exp $
+$NetBSD: patch-aw,v 1.7.26.1 2010/11/28 14:31:54 tron Exp $
 
---- ocamldoc/Makefile.orig	2007-09-02 08:28:20.000000000 +0200
+--- ocamldoc/Makefile.orig	2010-06-16 11:38:22.000000000 +0000
 +++ ocamldoc/Makefile
-@@ -258,24 +258,24 @@ odoc_see_lexer.ml: odoc_see_lexer.mll
+@@ -31,7 +31,7 @@ OCAMLPP=-pp './remove_DEBUG'
+ MKDIR=mkdir -p
+ CP=cp -f
+ OCAMLDOC=ocamldoc
+-OCAMLDOC_RUN=./ocamldoc.opt #sh ./runocamldoc $(SUPPORTS_SHARED_LIBRARIES)
++OCAMLDOC_RUN=sh ./runocamldoc $(SUPPORTS_SHARED_LIBRARIES)
+ OCAMLDOC_OPT=$(OCAMLDOC).opt
+ OCAMLDOC_LIBCMA=odoc_info.cma
+ OCAMLDOC_LIBCMI=odoc_info.cmi
+@@ -189,12 +189,13 @@ STDLIB_MLIS=../stdlib/*.mli \
+ 	../otherlibs/num/num.mli
+ 
+ all: exe lib
++	$(MAKE) manpages
+ 
+ exe: $(OCAMLDOC)
+ lib: $(OCAMLDOC_LIBCMA) $(OCAMLDOC_LIBCMI) $(ODOC_TEST)
+ 
+ opt.opt: exeopt libopt
+-	$(MAKE) manpages
++
+ exeopt: $(OCAMLDOC_OPT)
+ libopt: $(OCAMLDOC_LIBCMXA) $(OCAMLDOC_LIBCMI)
+ debug:
+@@ -259,24 +260,24 @@ odoc_see_lexer.ml: odoc_see_lexer.mll
  # Installation targets
  ######################
  install: dummy
