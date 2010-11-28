@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/11/28 10:47:40 shattered Exp $
 bin/ATR_analysis
 bin/gscriptor
 bin/pcsc_scan
 bin/scriptor
-share/man/man1/ATR_analysis.1p.gz
-share/man/man1/gscriptor.1p.gz
-share/man/man1/pcsc_scan.1.gz
-share/man/man1/scriptor.1p.gz
+man/man1/ATR_analysis.1p.gz
+man/man1/gscriptor.1p.gz
+man/man1/pcsc_scan.1.gz
+man/man1/scriptor.1p.gz
 share/pcsc/smartcard_list.txt

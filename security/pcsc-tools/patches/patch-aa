@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2010/11/28 10:47:40 shattered Exp $
+
+--- Makefile.orig	2008-09-07 11:51:40.000000000 +0000
++++ Makefile
+@@ -33,8 +33,8 @@ install: all
+ 	install -d $(DESTDIR)/share/pcsc
+ 	install -m 644 smartcard_list.txt $(DESTDIR)/share/pcsc
+ 
+-	install -d $(DESTDIR)/share/man/man1/
+-	install -m 644 $(MAN) $(DESTDIR)/share/man/man1/
++	install -d $(DESTDIR)/man/man1/
++	install -m 644 $(MAN) $(DESTDIR)/man/man1/
+ 
+ clean:
+ 	rm -f pcsc_scan.o $(BIN) $(MAN)
