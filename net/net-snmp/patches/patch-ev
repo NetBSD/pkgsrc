@@ -1,8 +1,8 @@
-$NetBSD: patch-ev,v 1.1 2010/05/11 04:39:54 adam Exp $
+$NetBSD: patch-ev,v 1.1.4.1 2010/11/28 14:04:37 tron Exp $
 
---- agent/mibgroup/mibII/kernel_netbsd.c.orig	2010-03-12 00:47:14.000000000 +0000
-+++ agent/mibgroup/mibII/kernel_netbsd.c	2010-03-12 01:40:58.000000000 +0000
-@@ -0,0 +1,194 @@
+--- agent/mibgroup/mibII/kernel_netbsd.c.orig	2010-10-19 03:54:58.000000000 +0000
++++ agent/mibgroup/mibII/kernel_netbsd.c
+@@ -0,0 +1,198 @@
 +/*
 + * NetBSD implementation for mapping the IP stat arrays into struct's
 + * Required for NetBSD versions produced after April 7th 2008 (4+)
@@ -31,6 +31,8 @@ $NetBSD: patch-ev,v 1.1 2010/05/11 04:39:54 adam Exp $
 +#include <net-snmp/agent/net-snmp-agent-includes.h>
 +
 +#include "kernel_netbsd.h"
++
++#if defined(NETBSD_STATS_VIA_SYSCTL)
 +
 +int
 +netbsd_read_icmp_stat(struct icmp_mib *mib)
@@ -197,3 +199,5 @@ $NetBSD: patch-ev,v 1.1 2010/05/11 04:39:54 adam Exp $
 +
 +    return 0;
 +}
++
++#endif

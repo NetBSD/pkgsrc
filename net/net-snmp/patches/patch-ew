@@ -1,4 +1,4 @@
-$NetBSD: patch-ew,v 1.1 2010/05/11 04:39:54 adam Exp $
+$NetBSD: patch-ew,v 1.1.4.1 2010/11/28 14:04:37 tron Exp $
 
 --- agent/mibgroup/mibII/kernel_netbsd.h.orig	2010-03-12 00:31:50.000000000 +0000
 +++ agent/mibgroup/mibII/kernel_netbsd.h	2010-03-12 00:31:50.000000000 +0000
@@ -6,7 +6,7 @@ $NetBSD: patch-ew,v 1.1 2010/05/11 04:39:54 adam Exp $
 +#ifndef _MIBGROUP_KERNEL_NETBSD_H
 +#define _MIBGROUP_KERNEL_NETBSD_H
 +
-+#if __NetBSD_Version__ >= 499005800
++#if defined(NETBSD_STATS_VIA_SYSCTL)
 +
 +struct icmp_mib {
 +    unsigned long   icmpInMsgs;
@@ -91,6 +91,6 @@ $NetBSD: patch-ew,v 1.1 2010/05/11 04:39:54 adam Exp $
 +int      netbsd_read_tcp_stat(struct tcp_mib *);
 +int      netbsd_read_udp_stat(struct udp_mib *);
 +
-+#endif /* __NetBSD_Version__ >= 499005800 */
++#endif /* NETBSD_STATS_VIA_SYSCTL */
 +
 +#endif /* _MIBGROUP_KERNEL_NETBSD_H */
