@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/01/24 13:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/11/28 07:42:19 dholland Exp $
 #
 
 DISTNAME=	gworkspace-0.8.6
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils gnustep
 MASTER_SITES=	http://www.gnustep.it/enrico/gworkspace/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnustep.it/enrico/gworkspace/
+HOMEPAGE=	http://www.gnustep.org/experience/GWorkspace.html
 COMMENT=	GNUstep Workspace manager
 LICENSE=	gnu-gpl-v2
 
