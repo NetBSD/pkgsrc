@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9888 2010/11/27 13:26:31 roy Exp $
+$NetBSD: TODO,v 1.9889 2010/11/28 21:13:55 adam Exp $
 
 Suggested new packages
 ======================
@@ -887,7 +887,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86dga-1.1.2
 	o libXxf86misc-1.0.3
 	o libXxf86vm-1.1.1
-	o libcanberra-0.26
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.22
