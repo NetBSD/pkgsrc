@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4071 2010/11/27 13:26:31 roy Exp $
+$NetBSD: CHANGES-2010,v 1.4072 2010/11/28 14:11:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5752,3 +5752,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/mediatomb to 0.12.1 [agc 2010-11-26]
 	Updated net/dhcpcd to 5.2.9 [roy 2010-11-27]
 	Updated net/dnsmasq to 2.55 [roy 2010-11-27]
+	Updated graphics/cairo to 1.10.0nb2 [obache 2010-11-28]
