@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/05/17 17:58:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/11/29 17:58:34 drochner Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -216,26 +216,6 @@ share/claws-mail/claws-mail-128x128.png
 share/claws-mail/claws-mail-64x64.png
 share/claws-mail/claws-mail.png
 share/doc/claws-mail/RELEASE_NOTES
-share/doc/claws-mail/manual/de/claws-mail-manual.html
-share/doc/claws-mail/manual/de/claws-mail-manual.pdf
-share/doc/claws-mail/manual/de/claws-mail-manual.ps
-share/doc/claws-mail/manual/de/claws-mail-manual.txt
-share/doc/claws-mail/manual/en/claws-mail-manual.html
-share/doc/claws-mail/manual/en/claws-mail-manual.pdf
-share/doc/claws-mail/manual/en/claws-mail-manual.ps
-share/doc/claws-mail/manual/en/claws-mail-manual.txt
-share/doc/claws-mail/manual/es/claws-mail-manual.html
-share/doc/claws-mail/manual/es/claws-mail-manual.pdf
-share/doc/claws-mail/manual/es/claws-mail-manual.ps
-share/doc/claws-mail/manual/es/claws-mail-manual.txt
-share/doc/claws-mail/manual/fr/claws-mail-manual.html
-share/doc/claws-mail/manual/fr/claws-mail-manual.pdf
-share/doc/claws-mail/manual/fr/claws-mail-manual.ps
-share/doc/claws-mail/manual/fr/claws-mail-manual.txt
-share/doc/claws-mail/manual/pl/claws-mail-manual.html
-share/doc/claws-mail/manual/pl/claws-mail-manual.pdf
-share/doc/claws-mail/manual/pl/claws-mail-manual.ps
-share/doc/claws-mail/manual/pl/claws-mail-manual.txt
 share/examples/claws-mail/mime.types
 share/icons/hicolor/128x128/apps/claws-mail.png
 share/icons/hicolor/48x48/apps/claws-mail.png
