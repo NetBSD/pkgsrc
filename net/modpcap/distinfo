@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
+
+SHA1 (modcap.c) = e6f41df0432dc95883606eaf2a66778ec9843552
+RMD160 (modcap.c) = 1cc60d790c446d917a0fefc15c5da06a59825533
+Size (modcap.c) = 31124 bytes
+SHA1 (patch-aa) = 4c568040d21e766d5506a88abd18291ad0c53a2c
