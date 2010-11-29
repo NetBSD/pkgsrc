@@ -1,0 +1,11 @@
+This collection of programs and modules, written in C, is intended to
+support research and education concerning Low Density Parity Check
+(LDPC) codes.  (Note, however, that the copyright notice no longer
+restricts use to these purposes).  These codes were invented by Robert
+Gallager in the early 1960's, and re-invented and shown to have very
+good performance by David MacKay and myself in the mid-1990's.  The
+decoding algorithm for LDPC codes is related to that used for Turbo
+codes, and to probabilistic inference methods used in other fields.
+Variations on LDPC and Turbo codes are currently the best practical
+codes known, in terms of their ability to transmit data at rates
+approaching channel capacity with very low error probability.
