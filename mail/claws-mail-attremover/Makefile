@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2010/11/15 22:57:43 abs Exp $
+# $NetBSD: Makefile,v 1.18 2010/11/29 17:58:35 drochner Exp $
 #
 
 DISTNAME=	att_remover-1.0.12
 PKGNAME=	claws-mail-att_remover-1.0.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Permanently deletes attachments from mail
 
 PKG_DESTDIR_SUPPORT=	user-destdir
