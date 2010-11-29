@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4078 2010/11/29 09:40:32 he Exp $
+$NetBSD: CHANGES-2010,v 1.4079 2010/11/29 12:42:26 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5759,3 +5759,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/ldpc version 20060208 [agc 2010-11-28]
 	Added net/modpcap version 0.0.5 [agc 2010-11-28]
 	Updated lang/pcc-current to 101129 [he 2010-11-29]
+	Updated net/unbound to 1.4.6nb1 [ghen 2010-11-29]
