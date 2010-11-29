@@ -1,0 +1,3 @@
+A small C program to modify PCAP files to forge them and use them for
+test and so on. It allows you to change IP address, Mac address, time
+of the capture, Mbit/second, Packets/second.
