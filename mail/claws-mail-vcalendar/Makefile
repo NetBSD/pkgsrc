@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2010/11/15 22:57:47 abs Exp $
+# $NetBSD: Makefile,v 1.23 2010/11/29 17:58:39 drochner Exp $
 #
 
-DISTNAME=	vcalendar-2.0.8
-PKGNAME=	claws-mail-vcalendar-2.0.8
-PKGREVISION=	3
+DISTNAME=	vcalendar-2.0.9
+PKGNAME=	claws-mail-vcalendar-2.0.9
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enable vCalendar message handling
 
 PKG_DESTDIR_SUPPORT=	user-destdir
