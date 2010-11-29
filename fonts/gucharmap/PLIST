@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.22 2010/07/06 15:01:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/11/29 18:29:17 drochner Exp $
 bin/charmap
 bin/gnome-character-map
 bin/gucharmap
-include/gucharmap-2/gucharmap/gucharmap-block-chapters-model.h
-include/gucharmap-2/gucharmap/gucharmap-block-codepoint-list.h
-include/gucharmap-2/gucharmap/gucharmap-chapters-model.h
-include/gucharmap-2/gucharmap/gucharmap-chapters-view.h
-include/gucharmap-2/gucharmap/gucharmap-charmap.h
-include/gucharmap-2/gucharmap/gucharmap-chartable.h
-include/gucharmap-2/gucharmap/gucharmap-codepoint-list.h
-include/gucharmap-2/gucharmap/gucharmap-script-chapters-model.h
-include/gucharmap-2/gucharmap/gucharmap-script-codepoint-list.h
-include/gucharmap-2/gucharmap/gucharmap-type-builtins.h
-include/gucharmap-2/gucharmap/gucharmap-unicode-info.h
-include/gucharmap-2/gucharmap/gucharmap.h
+include/gucharmap-2.0/gucharmap/gucharmap-block-chapters-model.h
+include/gucharmap-2.0/gucharmap/gucharmap-block-codepoint-list.h
+include/gucharmap-2.0/gucharmap/gucharmap-chapters-model.h
+include/gucharmap-2.0/gucharmap/gucharmap-chapters-view.h
+include/gucharmap-2.0/gucharmap/gucharmap-charmap.h
+include/gucharmap-2.0/gucharmap/gucharmap-chartable.h
+include/gucharmap-2.0/gucharmap/gucharmap-codepoint-list.h
+include/gucharmap-2.0/gucharmap/gucharmap-script-chapters-model.h
+include/gucharmap-2.0/gucharmap/gucharmap-script-codepoint-list.h
+include/gucharmap-2.0/gucharmap/gucharmap-type-builtins.h
+include/gucharmap-2.0/gucharmap/gucharmap-unicode-info.h
+include/gucharmap-2.0/gucharmap/gucharmap.h
 lib/libgucharmap.la
 lib/pkgconfig/gucharmap-2.pc
 share/applications/gucharmap.desktop
@@ -73,9 +73,12 @@ share/gnome/help/gucharmap/sv/gucharmap.xml
 share/gnome/help/gucharmap/vi/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/vi/figures/gucharmap_window.png
 share/gnome/help/gucharmap/vi/gucharmap.xml
+share/gnome/help/gucharmap/zh_CN/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/zh_CN/figures/gucharmap_window.png
 share/gnome/help/gucharmap/zh_CN/gucharmap.xml
-share/gnome/help/gucharmap/zh_CN/legal.xml
+share/gnome/help/gucharmap/zh_HK/figures/gucharmap_window.png
+share/gnome/help/gucharmap/zh_HK/gucharmap.xml
+share/gnome/help/gucharmap/zh_HK/legal.xml
 share/gnome/help/gucharmap/zh_TW/figures/gucharmap_window.png
 share/gnome/help/gucharmap/zh_TW/gucharmap.xml
 share/gnome/help/gucharmap/zh_TW/legal.xml
@@ -183,4 +186,5 @@ share/omf/gucharmap/gucharmap-ru.omf
 share/omf/gucharmap/gucharmap-sv.omf
 share/omf/gucharmap/gucharmap-vi.omf
 share/omf/gucharmap/gucharmap-zh_CN.omf
+share/omf/gucharmap/gucharmap-zh_HK.omf
 share/omf/gucharmap/gucharmap-zh_TW.omf
