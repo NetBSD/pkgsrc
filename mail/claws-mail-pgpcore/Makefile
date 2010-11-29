@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/11/15 22:57:45 abs Exp $
+# $NetBSD: Makefile,v 1.18 2010/11/29 17:58:37 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,9 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PLUGIN_NAME=	pgpcore
 .include "../../mail/claws-mail/plugins.mk"
 
-PKGREVISION=	2
-
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Handles core PGP functions
 
 PLIST_SRC+=	PLIST
