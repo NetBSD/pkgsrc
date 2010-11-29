@@ -80,3 +80,5 @@ lang/ruby18-base: build fix
 lang/ruby19-base: build fix
 Pullup ticket #3287 - requested by is
 lang/ocaml: portability fix
+Pullup ticket #3288 - requested by tron
+Security update for "phpmyadmin" package
