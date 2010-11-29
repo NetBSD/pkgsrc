@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/11/15 05:18:16 jnemeth Exp $
+# $NetBSD: Makefile,v 1.26 2010/11/29 04:20:32 jnemeth Exp $
 #
 
 DISTNAME=	asterisk-1.6.2.14
@@ -9,6 +9,7 @@ CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
 		http://downloads.asterisk.org/pub/telephony/sounds/releases/
+PKGREVISION=	1
 
 OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
