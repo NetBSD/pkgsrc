@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2010/11/15 22:59:19 abs Exp $
+# $NetBSD: Makefile,v 1.37 2010/11/29 18:05:23 drochner Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-demo-/}
-PKGREVISION=	3
 COMMENT=	Demo viewer and configuration tool for xscreensaver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -33,5 +32,6 @@ post-install:
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../x11/xscreensaver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
