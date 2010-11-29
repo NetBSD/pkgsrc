@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/08/10 13:39:56 asau Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/29 09:39:42 he Exp $
 
 DISTNAME=	pcc-${DATE_STR}
-PKGNAME=	pcc-current-0.9.9.20${DATE_STR}
-DATE_STR=	100810
+PKGNAME=	pcc-current-0.9.9.20-${DATE_STR}
+DATE_STR=	101129
 CATEGORIES=	lang
 MASTER_SITES=	ftp://pcc.ludd.ltu.se/pub/pcc/
 EXTRACT_SUFX=	.tgz
