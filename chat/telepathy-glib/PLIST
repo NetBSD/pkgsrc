@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/08/09 10:19:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/11/29 15:29:06 drochner Exp $
 include/telepathy-1.0/telepathy-glib/_gen/error-str.h
 include/telepathy-1.0/telepathy-glib/_gen/genums.h
 include/telepathy-1.0/telepathy-glib/_gen/gtypes.h
@@ -32,9 +32,12 @@ include/telepathy-1.0/telepathy-glib/_gen/tp-svc-generic.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-media-session-handler.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-media-stream-handler.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-protocol.h
+include/telepathy-1.0/telepathy-glib/_gen/tp-svc-tls-cert.h
+include/telepathy-1.0/telepathy-glib/account-channel-request.h
 include/telepathy-1.0/telepathy-glib/account-manager.h
 include/telepathy-1.0/telepathy-glib/account.h
 include/telepathy-1.0/telepathy-glib/add-dispatch-operation-context.h
+include/telepathy-1.0/telepathy-glib/base-channel.h
 include/telepathy-1.0/telepathy-glib/base-client.h
 include/telepathy-1.0/telepathy-glib/base-connection-manager.h
 include/telepathy-1.0/telepathy-glib/base-connection.h
@@ -99,12 +102,14 @@ include/telepathy-1.0/telepathy-glib/svc-generic.h
 include/telepathy-1.0/telepathy-glib/svc-media-interfaces.h
 include/telepathy-1.0/telepathy-glib/svc-properties-interface.h
 include/telepathy-1.0/telepathy-glib/svc-protocol.h
+include/telepathy-1.0/telepathy-glib/svc-tls.h
 include/telepathy-1.0/telepathy-glib/telepathy-glib.h
 include/telepathy-1.0/telepathy-glib/text-mixin.h
 include/telepathy-1.0/telepathy-glib/util.h
 include/telepathy-1.0/telepathy-glib/verify.h
 lib/libtelepathy-glib.la
 lib/pkgconfig/telepathy-glib.pc
+share/gtk-doc/html/telepathy-glib/TpBaseChannel.html
 share/gtk-doc/html/telepathy-glib/TpBaseConnection.html
 share/gtk-doc/html/telepathy-glib/TpBaseConnectionManager.html
 share/gtk-doc/html/telepathy-glib/TpChannelFactoryIface.html
@@ -130,11 +135,12 @@ share/gtk-doc/html/telepathy-glib/style.css
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpContactsMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpGroupMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpHeap.html
-share/gtk-doc/html/telepathy-glib/telepathy-glib-TpIntSet.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-TpIntset.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpMessageMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpPresenceMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpPropertiesMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpTextMixin.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-account-channel-request.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-account-manager.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-account.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-add-dispatch-operation-context.html
@@ -220,6 +226,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-generic.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-media-interfaces.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-protocol.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-service-point.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-tls.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-util.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp
