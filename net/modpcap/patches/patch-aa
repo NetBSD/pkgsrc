@@ -1,0 +1,79 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
+
+--- modcap.c	2010/05/26 16:25:26	1.1
++++ modcap.c	2010/05/26 16:28:42
+@@ -581,6 +581,7 @@
+ 	guint32 Prev_sec=0;
+ 	guint32 Prev_usec=0;
+ 	int 	NSP;
++	int	i;
+ 
+ 	if (Param > MICRO)
+ 	{
+@@ -629,7 +630,7 @@
+ 			/// Store beginning of burst
+ 			Prev_sec=PR.header.ts_sec;
+ 			Prev_usec=PR.header.ts_usec;
+-			for (int i=1;i<=NSP;i++)
++			for (i=1;i<=NSP;i++)
+ 			{
+ 				/// Read, shift
+ 				ReadRec(&PR);
+@@ -666,6 +667,7 @@
+ 	guint32 Prev_usec=0;
+ 	guint32 NSB=0;
+ 	guint32	NSP=0;
++	guint32 j;
+ 
+         /// From MegaBits/sec to Bytes/sec
+ 	unsigned long LParam = (unsigned long)(Param*1024*1024/8);
+@@ -715,13 +717,13 @@
+ 			/// Store beginning of burst
+ 			Prev_sec=PR.header.ts_sec;
+ 			Prev_usec=PR.header.ts_usec;
+-			for (guint32 i=1;i<=NSP;i++)
++			for (j=1;j<=NSP;j++)
+ 			{
+ 				/// Read, shift
+ 				ReadRec(&PR);
+ 				/// Compress
+ 				PR.header.ts_sec = Prev_sec;
+-				PR.header.ts_usec = (guint32)(Prev_usec + MICRO*((float)i*NSB)/((float)LParam*NSP));
++				PR.header.ts_usec = (guint32)(Prev_usec + MICRO*((float)j*NSB)/((float)LParam*NSP));
+ 				while (PR.header.ts_usec >= MICRO)
+ 				{
+ 					PR.header.ts_usec -= MICRO;
+@@ -755,6 +757,7 @@
+ 	int		DeltaCks;
+ 	guint16		cks;
+ 	guint32		Checksum=0;
++	int		i;
+ 
+ 	*ip0 = 0;
+ 	inet_aton(ip1, &dst);
+@@ -791,7 +794,7 @@
+ 			RunLen = IPHeader;
+ 			bzero (&Rec.body[ETHEADER+10],2);
+ 			Checksum=0;
+-			for (int i=0; i<RunLen; i+=2)
++			for (i=0; i<RunLen; i+=2)
+ 				Checksum+=(guint16)((Rec.body[ETHEADER+i]<<8)+Rec.body[ETHEADER+i+1]);
+                         Checksum = (Checksum >> 16) + (Checksum & 0xFFFF);
+ 			Checksum+= (Checksum >> 16);
+@@ -906,6 +909,7 @@
+ 			guint32 IPHeader=(Rec.body[ETHEADER+0] & 0x0F)<<2;
+ 			guint32 TCPHeader= IPHeader+ETHEADER;
+                         guint32 RunLen = (Rec.body[ETHEADER+2]<<8) + (Rec.body[ETHEADER+3]) - IPHeader;
++			int	i;
+ 
+ 			/// Repalce PORT
+ 			Rec.body[match]	  = (port2 & 0xFF00)>>8;
+@@ -914,7 +918,7 @@
+ 			/// Clear Previous Checksum    a Bytes
+ 			bzero (&Rec.body[TCPHeader+16],2);
+ 			/// Summ Header and Dat
+-			for (int i=0; i<RunLen; i+=2)
++			for (i=0; i<RunLen; i+=2)
+ 				Checksum+=(guint16)((Rec.body[TCPHeader+i]<<8)+Rec.body[TCPHeader+i+1]);
+ 			/// Add PseudoHeader Fields
+ 			Checksum+=(guint16) ((Rec.body[ETHEADER+12]<<8) + (Rec.body[ETHEADER+13]));
