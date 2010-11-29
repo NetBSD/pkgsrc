@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.4 2006/01/18 13:11:56 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2010/11/29 15:24:23 hauke Exp $
 
---- libsnet/snet.c.orig	2005-12-05 18:26:57.000000000 +0100
+--- libsnet/snet.c.orig	2010-11-28 20:37:52.000000000 +0000
 +++ libsnet/snet.c
-@@ -630,7 +630,6 @@ snet_readread( sn, buf, len, tv )
+@@ -792,7 +792,6 @@ snet_read1( sn, buf, len, tv )
      fd_set		fds;
      ssize_t		rc;
      struct timeval	default_tv;
 -    extern int		errno;
-     int			oflags, dontblock = 0;
+     int			oflags = 0, dontblock = 0;
  
      if (( tv == NULL ) && ( sn->sn_flag & SNET_READ_TIMEOUT )) {
-@@ -806,7 +805,6 @@ snet_getline( sn, tv )
+@@ -976,7 +975,6 @@ snet_getline( sn, tv )
  {
      char		*eol, *line;
      ssize_t		rc;
