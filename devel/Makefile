@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1414 2010/11/16 20:11:25 drochner Exp $
+# $NetBSD: Makefile,v 1.1415 2010/11/29 06:44:15 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -277,6 +277,7 @@ SUBDIR+=	kscope
 SUBDIR+=	lcc
 SUBDIR+=	lcov
 SUBDIR+=	ldapsdk
+SUBDIR+=	ldpc
 SUBDIR+=	lemon
 SUBDIR+=	libFoundation
 SUBDIR+=	libFoundation-examples
