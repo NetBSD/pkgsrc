@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/11/17 16:05:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/11/29 12:56:20 drochner Exp $
 bin/seahorse-agent
 bin/seahorse-preferences
 bin/seahorse-tool
@@ -43,6 +43,7 @@ share/icons/hicolor/48x48/apps/seahorse-applet.png
 share/icons/hicolor/scalable/apps/seahorse-applet.svg
 share/locale/ar/LC_MESSAGES/seahorse-plugins.mo
 share/locale/as/LC_MESSAGES/seahorse-plugins.mo
+share/locale/ast/LC_MESSAGES/seahorse-plugins.mo
 share/locale/az/LC_MESSAGES/seahorse-plugins.mo
 share/locale/be@latin/LC_MESSAGES/seahorse-plugins.mo
 share/locale/bg/LC_MESSAGES/seahorse-plugins.mo
@@ -56,6 +57,7 @@ share/locale/da/LC_MESSAGES/seahorse-plugins.mo
 share/locale/de/LC_MESSAGES/seahorse-plugins.mo
 share/locale/dz/LC_MESSAGES/seahorse-plugins.mo
 share/locale/el/LC_MESSAGES/seahorse-plugins.mo
+share/locale/en@shaw/LC_MESSAGES/seahorse-plugins.mo
 share/locale/en_CA/LC_MESSAGES/seahorse-plugins.mo
 share/locale/en_GB/LC_MESSAGES/seahorse-plugins.mo
 share/locale/es/LC_MESSAGES/seahorse-plugins.mo
@@ -92,6 +94,7 @@ share/locale/pa/LC_MESSAGES/seahorse-plugins.mo
 share/locale/pl/LC_MESSAGES/seahorse-plugins.mo
 share/locale/pt/LC_MESSAGES/seahorse-plugins.mo
 share/locale/pt_BR/LC_MESSAGES/seahorse-plugins.mo
+share/locale/ro/LC_MESSAGES/seahorse-plugins.mo
 share/locale/ru/LC_MESSAGES/seahorse-plugins.mo
 share/locale/rw/LC_MESSAGES/seahorse-plugins.mo
 share/locale/si/LC_MESSAGES/seahorse-plugins.mo
@@ -170,9 +173,9 @@ share/pixmaps/seahorse-plugins/scalable/seahorse-sign-bad.svg
 share/pixmaps/seahorse-plugins/scalable/seahorse-sign-ok.svg
 share/pixmaps/seahorse-plugins/scalable/seahorse-sign-unknown.svg
 share/pixmaps/seahorse-plugins/scalable/seahorse-sign.svg
-share/seahorse-plugins/glade/seahorse-agent-cache.glade
-share/seahorse-plugins/glade/seahorse-applet-preferences.glade
-share/seahorse-plugins/glade/seahorse-multi-encrypt.glade
-share/seahorse-plugins/glade/seahorse-notify.glade
-share/seahorse-plugins/glade/seahorse-prefs.glade
-share/seahorse-plugins/glade/seahorse-progress.glade
+share/seahorse-plugins/ui/seahorse-agent-cache.xml
+share/seahorse-plugins/ui/seahorse-applet-preferences.xml
+share/seahorse-plugins/ui/seahorse-multi-encrypt.xml
+share/seahorse-plugins/ui/seahorse-notify.xml
+share/seahorse-plugins/ui/seahorse-prefs.xml
+share/seahorse-plugins/ui/seahorse-progress.xml
