@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/08/30 18:16:45 pettai Exp $
+# $NetBSD: Makefile,v 1.12 2010/11/29 12:41:51 ghen Exp $
 
 DISTNAME=	unbound-1.4.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -16,6 +17,7 @@ USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound.pid
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-configure
