@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4077 2010/11/29 07:27:07 agc Exp $
+$NetBSD: CHANGES-2010,v 1.4078 2010/11/29 09:40:32 he Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5758,3 +5758,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/libcanberra to 0.26 [adam 2010-11-28]
 	Added devel/ldpc version 20060208 [agc 2010-11-28]
 	Added net/modpcap version 0.0.5 [agc 2010-11-28]
+	Updated lang/pcc-current to 101129 [he 2010-11-29]
