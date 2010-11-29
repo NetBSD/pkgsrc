@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4082 2010/11/29 19:35:47 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.4083 2010/11/29 21:33:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5764,3 +5764,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/phpmyadmin to 2.11.11.1 [tron 2010-11-29]
 	Added print/tex-xargs version 1.1 [minskim 2010-11-29]
 	Added print/tex-xargs-doc version 1.1 [minskim 2010-11-29]
+	Updated www/ikiwiki to 3.20101129 [schmonz 2010-11-29]
