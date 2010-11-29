@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/11/15 22:57:44 abs Exp $
+# $NetBSD: Makefile,v 1.17 2010/11/29 17:58:36 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,9 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PLUGIN_NAME=	dillo_viewer
 .include "../../mail/claws-mail/plugins.mk"
 
-PKGREVISION=	3
-
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Plugin to use the Dillo web browser for html rendering
 
 CONFIGURE_ARGS+=	--enable-dillo_viewer-plugin
