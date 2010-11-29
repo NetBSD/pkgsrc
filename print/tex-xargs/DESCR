@@ -1,0 +1,3 @@
+The package provides extended versions of \newcommand and related LaTeX
+commands, which allow easy and robust definition of macros with many
+optional arguments, using a clear and simple xkeyval-style syntax.
