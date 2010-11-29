@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/07/13 19:52:30 drochner Exp $
+$NetBSD: distinfo,v 1.8 2010/11/29 15:18:31 drochner Exp $
 
-SHA1 (empathy-2.30.2.tar.gz) = 8984805e4fd3df53c9cfa89455117c8c798bb2f9
-RMD160 (empathy-2.30.2.tar.gz) = 621219da0b6f5c0aa99dcd1d7085937d4aec13a7
-Size (empathy-2.30.2.tar.gz) = 3992319 bytes
+SHA1 (empathy-2.30.3.tar.gz) = 228ddfebe0b476eef182c8b2a70049e4ac986c9e
+RMD160 (empathy-2.30.3.tar.gz) = b7a3510c256711f2db84a330eea1860cb06c8323
+Size (empathy-2.30.3.tar.gz) = 4038433 bytes
