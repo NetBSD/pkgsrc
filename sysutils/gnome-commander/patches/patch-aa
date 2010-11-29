@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/07/23 15:29:23 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/29 18:51:51 drochner Exp $
 
---- configure.orig	2009-06-29 12:16:43.000000000 +0200
+--- configure.orig	2010-09-08 21:42:20.000000000 +0000
 +++ configure
-@@ -24523,6 +24523,7 @@ if test "x$have_python" != "xno"; then
+@@ -17900,6 +17900,7 @@ if test "x$have_python" != "xno"; then
  
  
  
 +if false; then
-         { $as_echo "$as_me:$LINENO: checking whether we can build a shared library depending on libpython" >&5
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether we can build a shared library depending on libpython" >&5
  $as_echo_n "checking whether we can build a shared library depending on libpython... " >&6; }
      rm -rf testpython
-@@ -24548,6 +24549,7 @@ EOF
-     { $as_echo "$as_me:$LINENO: result: $result" >&5
+@@ -17925,6 +17926,7 @@ EOF
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $result" >&5
  $as_echo "$result" >&6; }
  fi
 +fi
