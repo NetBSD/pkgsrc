@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/02/03 19:45:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/11/29 17:58:38 drochner Exp $
 lib/claws-mail/plugins/spamreport.la
 share/locale/ca/LC_MESSAGES/spam_report.mo
 share/locale/es/LC_MESSAGES/spam_report.mo
@@ -12,4 +12,5 @@ share/locale/nl/LC_MESSAGES/spam_report.mo
 share/locale/pt_BR/LC_MESSAGES/spam_report.mo
 share/locale/ru/LC_MESSAGES/spam_report.mo
 share/locale/sk/LC_MESSAGES/spam_report.mo
+share/locale/uk/LC_MESSAGES/spam_report.mo
 share/locale/cs/LC_MESSAGES/spam_report.mo
