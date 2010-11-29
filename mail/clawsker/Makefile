@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2010/09/01 10:52:48 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/29 17:58:40 drochner Exp $
 
 DISTNAME=	clawsker-0.7.2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.claws-mail.org/tools/
 
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.claws-mail.org/clawsker
 COMMENT=	Edit Claws-Mail hidden preferences
 
