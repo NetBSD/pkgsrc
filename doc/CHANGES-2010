@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4076 2010/11/29 06:47:00 agc Exp $
+$NetBSD: CHANGES-2010,v 1.4077 2010/11/29 07:27:07 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5757,3 +5757,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/gkrellm-weather to 2.0.7nb7 [dholland 2010-11-28]
 	Updated audio/libcanberra to 0.26 [adam 2010-11-28]
 	Added devel/ldpc version 20060208 [agc 2010-11-28]
+	Added net/modpcap version 0.0.5 [agc 2010-11-28]
