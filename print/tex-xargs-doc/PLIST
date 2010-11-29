@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/29 19:34:49 minskim Exp $
+share/texmf-dist/doc/latex/xargs/README
+share/texmf-dist/doc/latex/xargs/xargs-fr.pdf
+share/texmf-dist/doc/latex/xargs/xargs.pdf
