@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/11/15 22:57:35 abs Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/30 11:39:12 obache Exp $
 #
 
 .include "../../inputmethod/input-pad/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 
 MAINTAINER=	obache@NetBSD.org
 COMMENT=	Python wrapper for Input Pad
@@ -32,6 +31,7 @@ post-configure:
 
 PY_PATCHPLIST=		yes
 
+BUILDLINK_API_DEPENDS.input-pad+=	input-pad>=${PKGVERSION_NOREV}
 .include "../../inputmethod/input-pad/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
