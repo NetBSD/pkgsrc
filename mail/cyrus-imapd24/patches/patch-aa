@@ -1,16 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/30 00:45:56 obache Exp $
 
---- configure.in.orig	2010-10-19 03:08:28.000000000 +0000
+--- configure.in.orig	2010-11-29 13:28:06.000000000 +0000
 +++ configure.in
-@@ -391,11 +391,11 @@ if test "$sievedir" != "no"; then
+@@ -391,7 +391,7 @@ if test "$sievedir" != "no"; then
  	AC_CHECK_LIB(fl,main)
  
- 	AC_CHECK_HEADERS(pcreposix.h rxposix.h)
+ 	AC_CHECK_HEADER(pcreposix.h)
 -	if test "$ac_cv_header_pcreposix_h" == "yes"; then
 +	if test "$ac_cv_header_pcreposix_h" = "yes"; then
+ 		AC_MSG_CHECKING(for utf8 enabled pcre)
+ 		AC_CACHE_VAL(cyrus_cv_pcre_utf8, AC_TRY_CPP([#include <pcreposix.h>
+ #ifndef REG_UTF8
+@@ -401,13 +401,13 @@ if test "$sievedir" != "no"; then
+ 	else
+ 		cyrus_cv_pcre_utf8="no"
+ 	fi
+-	if test "$cyrus_cv_pcre_utf8" == "yes"; then
++	if test "$cyrus_cv_pcre_utf8" = "yes"; then
  		LIBS="$LIBS -lpcre -lpcreposix";
  		AC_DEFINE(ENABLE_REGEX, [], [Do we have a regex library?])
+ 		AC_DEFINE(HAVE_PCREPOSIX_H, [], [Do we have usable pcre library?])
  	else 
+ 		AC_CHECK_HEADERS(rxposix.h)
 -		if test "$ac_cv_header_rxposix_h" == "yes"; then
 +		if test "$ac_cv_header_rxposix_h" = "yes"; then
  			LIBS="$LIBS -lrx"

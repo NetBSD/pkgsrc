@@ -1,18 +1,29 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/11/30 00:45:56 obache Exp $
 
---- configure.orig	2010-10-19 09:58:48.000000000 +0000
+--- configure.orig	2010-11-29 13:29:23.000000000 +0000
 +++ configure
-@@ -7145,13 +7145,13 @@ fi
+@@ -7156,7 +7156,7 @@ if test "x$ac_cv_header_pcreposix_h" = x
+ fi
  
- done
  
 -	if test "$ac_cv_header_pcreposix_h" == "yes"; then
 +	if test "$ac_cv_header_pcreposix_h" = "yes"; then
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for utf8 enabled pcre" >&5
+ $as_echo_n "checking for utf8 enabled pcre... " >&6; }
+ 		if test "${cyrus_cv_pcre_utf8+set}" = set; then :
+@@ -7182,7 +7182,7 @@ $as_echo "$cyrus_cv_pcre_utf8" >&6; }
+ 	else
+ 		cyrus_cv_pcre_utf8="no"
+ 	fi
+-	if test "$cyrus_cv_pcre_utf8" == "yes"; then
++	if test "$cyrus_cv_pcre_utf8" = "yes"; then
  		LIBS="$LIBS -lpcre -lpcreposix";
  
  $as_echo "#define ENABLE_REGEX /**/" >>confdefs.h
+@@ -7203,7 +7203,7 @@ fi
  
- 	else
+ done
+ 
 -		if test "$ac_cv_header_rxposix_h" == "yes"; then
 +		if test "$ac_cv_header_rxposix_h" = "yes"; then
  			LIBS="$LIBS -lrx"
