@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4085 2010/11/30 00:46:12 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4086 2010/11/30 00:48:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5767,3 +5767,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ikiwiki to 3.20101129 [schmonz 2010-11-29]
 	pdated textproc/asciidoc to 8.6.3 [gls 2010-11-29]
 	Updated mail/cyrus-imapd24 to 2.4.5 [obache 2010-11-30]
+	Updated textproc/p5-ack to 1.94 [abs 2010-11-30]
