@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/30 12:48:05 adam Exp $
 
 DISTNAME=	knock-0.5
 CATEGORIES=	net
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
