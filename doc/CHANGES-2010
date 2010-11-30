@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4089 2010/11/30 10:31:50 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.4090 2010/11/30 11:41:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5773,3 +5773,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monotone to 0.99.1 [jmmv 2010-11-30]
 	Updated devel/monotone-el to 0.99.1 [jmmv 2010-11-30]
 	Updated devel/monotone-server to 0.99.1 [jmmv 2010-11-30]
+	Updated inputmethod/input-pad to 1.0.0 [obache 2010-11-30]
+	Updated inputmethod/py-input-pad to 1.0.0 [obache 2010-11-30]
+	Updated inputmethod/ibus-input-pad to 0.1.3nb3 [obache 2010-11-30]
