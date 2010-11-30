@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/11/15 22:58:05 abs Exp $
+# $NetBSD: Makefile,v 1.49 2010/11/30 18:21:01 drochner Exp $
 
 DISTNAME=	gxine-0.5.905
 PKGREVISION=	3
@@ -20,7 +20,8 @@ CONFIGURE_ARGS+=	--disable-lirc
 BROKEN_GETTEXT_DETECTION=	yes
 PTHREAD_OPTS+=			require
 # for svg->png icon conversion
-BUILD_DEPENDS+=		librsvg-[0-9]*:../../graphics/librsvg
+# XXX librsvg>=2.32 doesn't install the "rsvg" tool
+#BUILD_DEPENDS+=		librsvg-[0-9]*:../../graphics/librsvg
 
 EGDIR=			${PREFIX}/share/examples/gxine
 PKG_SYSCONFSUBDIR=	gxine
