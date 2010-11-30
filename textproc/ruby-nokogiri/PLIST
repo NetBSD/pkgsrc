@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/10 08:29:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/11/30 15:39:56 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
@@ -116,6 +116,7 @@ ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_node_set.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_notation.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_ns.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_parser_context.rb
+${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_parser_input.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_relax_ng.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_sax_handler.rb
 ${GEM_LIBDIR}/lib/nokogiri/ffi/structs/xml_sax_push_parser_context.rb
@@ -209,6 +210,7 @@ ${GEM_LIBDIR}/test/css/test_nthiness.rb
 ${GEM_LIBDIR}/test/css/test_parser.rb
 ${GEM_LIBDIR}/test/css/test_tokenizer.rb
 ${GEM_LIBDIR}/test/css/test_xpath_visitor.rb
+${GEM_LIBDIR}/test/decorators/test_slop.rb
 ${GEM_LIBDIR}/test/ffi/test_document.rb
 ${GEM_LIBDIR}/test/files/2ch.html
 ${GEM_LIBDIR}/test/files/address_book.rlx
@@ -281,4 +283,5 @@ ${GEM_LIBDIR}/test/xml/test_syntax_error.rb
 ${GEM_LIBDIR}/test/xml/test_text.rb
 ${GEM_LIBDIR}/test/xml/test_unparented_node.rb
 ${GEM_LIBDIR}/test/xml/test_xpath.rb
+${GEM_LIBDIR}/test/xslt/test_custom_functions.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

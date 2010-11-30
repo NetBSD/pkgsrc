@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 08:29:06 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/30 15:39:56 taca Exp $
 
-DISTNAME=	nokogiri-1.4.3.1
+DISTNAME=	nokogiri-1.4.4
 CATEGORIES=	textproc
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://nokogiri.org
+HOMEPAGE=	http://nokogiri.org/
 COMMENT=	HTML, XML, SAX, and Reader parser with XPath and CSS selector support
 LICENSE=	mit
 
 CONFLICTS+=	ruby[1-9][0-9]-nokogiri-*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
