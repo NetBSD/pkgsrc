@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4092 2010/11/30 15:40:46 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4093 2010/11/30 15:42:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5778,3 +5778,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ibus-input-pad to 0.1.3nb3 [obache 2010-11-30]
 	Added net/knock version 0.5 [adam 2010-11-30]
 	Updated textproc/ruby-nokogiri to 1.4.4 [taca 2010-11-30]
+	Updated www/contao29-translations to 20101123 [taca 2010-11-30]
