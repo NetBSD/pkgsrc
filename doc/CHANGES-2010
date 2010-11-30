@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4090 2010/11/30 11:41:59 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4091 2010/11/30 12:37:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5776,3 +5776,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/input-pad to 1.0.0 [obache 2010-11-30]
 	Updated inputmethod/py-input-pad to 1.0.0 [obache 2010-11-30]
 	Updated inputmethod/ibus-input-pad to 0.1.3nb3 [obache 2010-11-30]
+	Added net/knock version 0.5 [adam 2010-11-30]
