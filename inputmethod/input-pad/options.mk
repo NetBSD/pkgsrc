@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/09/11 07:47:21 obache Exp $
+# $NetBSD: options.mk,v 1.3 2010/11/30 11:20:16 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.input-pad
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	eekboard
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	eek python xtest
+PLIST_VARS+=	eek xtest
 
 #
 # Draw keyboard using libeek
