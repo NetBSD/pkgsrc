@@ -1,7 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
---- tun.c.orig	2008-10-06 08:22:21.000000000 +0100
-+++ tun.c	2008-10-09 10:06:50.000000000 +0100
-@@ -63,6 +63,7 @@
+$NetBSD: patch-ac,v 1.8 2010/11/30 08:50:17 adam Exp $
+
+--- tun.c.orig	2010-11-04 19:29:02.000000000 +0000
++++ tun.c
+@@ -63,6 +63,7 @@ static const char *netsh_get_id (const c
  
  #ifdef TARGET_SOLARIS
  static void solaris_error_close (struct tuntap *tt, const struct env_set *es, const char *actual);
@@ -9,7 +10,7 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
  #endif
  
  bool
-@@ -720,7 +721,12 @@
+@@ -701,7 +702,12 @@ do_ifconfig (struct tuntap *tt,
  			    );
  	}
        else
@@ -23,7 +24,26 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
  
        argv_msg (M_INFO, &argv);
        if (!openvpn_execve_check (&argv, es, 0, "Solaris ifconfig phase-2 failed"))
-@@ -1020,7 +1026,37 @@
+@@ -771,15 +777,15 @@ do_ifconfig (struct tuntap *tt,
+        * NetBSD has distinct tun and tap devices
+        * so we don't need the "link0" extra parameter to specify we want to do 
+        * tunneling at the ethernet level
++       * NB: The tun driver has no broadcast capability.
+        */
+ 		argv_printf (&argv,
+-			  "%s %s %s netmask %s mtu %d broadcast %s",
++			  "%s %s %s netmask %s mtu %d",
+ 			  IFCONFIG_PATH,
+ 			  actual,
+ 			  ifconfig_local,
+ 			  ifconfig_remote_netmask,
+-			  tun_mtu,
+-			  ifconfig_broadcast
++			  tun_mtu
+ 			  );
+       argv_msg (M_INFO, &argv);
+       openvpn_execve_check (&argv, es, S_FATAL, "NetBSD ifconfig failed");
+@@ -1000,7 +1006,37 @@ open_tun_generic (const char *dev, const
  	  if (dynamic && !has_digit((unsigned char *)dev))
  	    {
  	      int i;
@@ -62,7 +82,7 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
  		{
  		  openvpn_snprintf (tunname, sizeof (tunname),
  				    "/dev/%s%d", dev, i);
-@@ -1403,13 +1439,16 @@
+@@ -1383,13 +1419,16 @@ read_tun (struct tuntap* tt, uint8_t *bu
  void
  open_tun (const char *dev, const char *dev_type, const char *dev_node, bool ipv6, struct tuntap *tt)
  {
@@ -82,7 +102,7 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
  
    ipv6_support (ipv6, false, tt);
  
-@@ -1430,9 +1469,10 @@
+@@ -1410,9 +1449,10 @@ open_tun (const char *dev, const char *d
      }
    else if (tt->type == DEV_TYPE_TAP)
      {
@@ -94,7 +114,7 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
        dev_tuntap_type = "tap";
        link_type = I_PLINK; /* was: I_LINK */
        is_tun = false;
-@@ -1459,7 +1499,11 @@
+@@ -1439,7 +1479,11 @@ open_tun (const char *dev, const char *d
      msg (M_ERR, "Can't open %s", dev_node);
  
    /* Assign a new PPA and get its unit number. */
@@ -107,7 +127,7 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
      msg (M_ERR, "Can't assign new interface");
  
    if ((if_fd = open (dev_node, O_RDWR, 0)) < 0)
-@@ -1468,27 +1512,81 @@
+@@ -1448,27 +1492,81 @@ open_tun (const char *dev, const char *d
    if (ioctl (if_fd, I_PUSH, "ip") < 0)
      msg (M_ERR, "Can't push IP module");
  
@@ -174,14 +194,14 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
 +  
 +  if ((ip_muxid = ioctl (tt->ip_fd, link_type, if_fd)) < 0)
 +    msg (M_ERR, "Can't link %s device to IP", dev_tuntap_type);
-+
+ 
+-  if (ioctl (tt->ip_fd, SIOCSIFMUXID, &ifr) < 0)
 +  if (tt->type == DEV_TYPE_TAP) {
 +    if ((arp_muxid = ioctl (tt->ip_fd, link_type, arp_fd)) < 0)
 +      msg (M_ERR, "Can't link %s device to ARP", dev_tuntap_type);
 +    close (arp_fd);
 +  }
- 
--  if (ioctl (tt->ip_fd, SIOCSIFMUXID, &ifr) < 0)
++
 +  close (if_fd);
 +
 +  CLEAR (ifr);
@@ -202,7 +222,7 @@ $NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
        msg (M_ERR, "Can't set multiplexor id");
      }
  
-@@ -1506,18 +1604,24 @@
+@@ -1486,18 +1584,24 @@ solaris_close_tun (struct tuntap *tt)
      {
        if (tt->ip_fd >= 0)
  	{
