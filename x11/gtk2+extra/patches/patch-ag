@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.3 2010/11/30 20:15:49 drochner Exp $
+
+--- gtkextra/gtkitementry.c.orig	2010-03-13 05:49:00.000000000 +0000
++++ gtkextra/gtkitementry.c
+@@ -131,7 +131,9 @@ static void         gtk_entry_draw_curso
+ static PangoLayout *gtk_entry_ensure_layout            (GtkEntry       *entry,
+                                                         gboolean        include_preedit);
+ static void         gtk_entry_queue_draw               (GtkEntry       *entry);
++#if 0
+ static void         gtk_entry_reset_im_context         (GtkEntry       *entry);
++#endif
+ static void         gtk_entry_recompute                (GtkEntry       *entry);
+ static void         gtk_entry_get_cursor_locations     (GtkEntry       *entry,
+ 							CursorType      type,
+@@ -1754,6 +1756,7 @@ gtk_entry_queue_draw (GtkEntry *entry)
+     gdk_window_invalidate_rect (entry->text_area, NULL, FALSE);
+ }
+ 
++#if 0
+ static void
+ gtk_entry_reset_im_context (GtkEntry *entry)
+ {
+@@ -1763,6 +1766,7 @@ gtk_entry_reset_im_context (GtkEntry *en
+       gtk_im_context_reset (entry->im_context);
+     }
+ }
++#endif
+ 
+ static void
+ gtk_entry_get_cursor_locations (GtkEntry   *entry,
