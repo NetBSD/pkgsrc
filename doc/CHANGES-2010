@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4087 2010/11/30 03:44:51 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4088 2010/11/30 09:09:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5769,3 +5769,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/cyrus-imapd24 to 2.4.5 [obache 2010-11-30]
 	Updated textproc/p5-ack to 1.94 [abs 2010-11-30]
 	Updated editors/tomboy to 1.2.1 [obache 2010-11-30]
+	Updated net/openvpn to 2.1.4 [adam 2010-11-30]
