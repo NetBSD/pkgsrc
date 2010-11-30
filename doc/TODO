@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9890 2010/11/29 21:43:58 wiz Exp $
+$NetBSD: TODO,v 1.9891 2010/11/30 10:31:50 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -998,7 +998,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.9.2
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o monotone-0.99.1
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mp3blaster-3.2.3
