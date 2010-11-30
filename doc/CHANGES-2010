@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4086 2010/11/30 00:48:37 abs Exp $
+$NetBSD: CHANGES-2010,v 1.4087 2010/11/30 03:44:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5768,3 +5768,4 @@ Changes to the packages collection and infrastructure in 2010:
 	pdated textproc/asciidoc to 8.6.3 [gls 2010-11-29]
 	Updated mail/cyrus-imapd24 to 2.4.5 [obache 2010-11-30]
 	Updated textproc/p5-ack to 1.94 [abs 2010-11-30]
+	Updated editors/tomboy to 1.2.1 [obache 2010-11-30]
