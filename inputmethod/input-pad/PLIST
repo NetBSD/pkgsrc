@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/31 08:25:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/11/30 11:39:12 obache Exp $
 bin/input-pad
-include/input-pad-0.1/input-pad-group.h
-include/input-pad-0.1/input-pad-kbdui-gtk.h
-include/input-pad-0.1/input-pad-window-gtk.h
-include/input-pad-0.1/input-pad.h
-${PLIST.eek}lib/input-pad-0.1/modules/kbdui/libinput-pad-eek-gtk.la
-${PLIST.xtest}lib/input-pad-0.1/modules/xkeysend/libinput-pad-xtest-gdk.la
+include/input-pad-1.0/input-pad-group.h
+include/input-pad-1.0/input-pad-kbdui-gtk.h
+include/input-pad-1.0/input-pad-window-gtk.h
+include/input-pad-1.0/input-pad.h
+${PLIST.eek}lib/input-pad-1.0/modules/kbdui/libinput-pad-eek-gtk.la
+${PLIST.xtest}lib/input-pad-1.0/modules/xkeysend/libinput-pad-xtest-gdk.la
 lib/libinput-pad.la
 lib/pkgconfig/input-pad.pc
 share/input-pad/pad/group01-base.xml

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/07 07:08:00 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/11/30 11:39:12 obache Exp $
 
-SHA1 (input-pad-0.1.2.tar.gz) = 99e4a22f4a6faefb156077d387a614c24088e827
-RMD160 (input-pad-0.1.2.tar.gz) = afa43fb4b5539dd580bde76b53886166b3b26485
-Size (input-pad-0.1.2.tar.gz) = 478155 bytes
+SHA1 (input-pad-1.0.0.tar.gz) = bd16c3be7084dde26c358d89f08248f29394f78c
+RMD160 (input-pad-1.0.0.tar.gz) = cf174ef13042e8e975111873dfcb1c1b318ff785
+Size (input-pad-1.0.0.tar.gz) = 483751 bytes
