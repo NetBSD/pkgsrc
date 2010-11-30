@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/30 19:23:55 drochner Exp $
+bin/mp3splt-gtk
+man/man1/mp3splt-gtk.1
+share/applications/mp3splt-gtk.desktop
+share/locale/de/LC_MESSAGES/mp3splt-gtk.mo
+share/locale/fr/LC_MESSAGES/mp3splt-gtk.mo
+share/pixmaps/mp3splt-gtk.png
+share/pixmaps/mp3splt-gtk_ico.png
