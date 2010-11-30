@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:08:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/11/30 18:21:01 drochner Exp $
 bin/gxine
 bin/gxine_client
 lib/gxine/gxineplugin.la
@@ -14,23 +14,15 @@ share/gxine/logo.mpv
 share/gxine/mediamarks
 share/gxine/pixmaps/gxine-icon.xpm
 share/gxine/pixmaps/nospeaker.png
-share/gxine/pixmaps/set-brightness.png
 share/gxine/pixmaps/set-brightness.svg
-share/gxine/pixmaps/set-channel.png
 share/gxine/pixmaps/set-channel.svg
-share/gxine/pixmaps/set-contrast.png
 share/gxine/pixmaps/set-contrast.svg
-share/gxine/pixmaps/set-hue.png
 share/gxine/pixmaps/set-hue.svg
-share/gxine/pixmaps/set-saturation.png
 share/gxine/pixmaps/set-saturation.svg
-share/gxine/pixmaps/set-sync.png
 share/gxine/pixmaps/set-sync.svg
-share/gxine/pixmaps/set-volume.png
 share/gxine/pixmaps/set-volume.svg
 share/gxine/pixmaps/speaker.png
 share/gxine/pixmaps/splash.png
-share/gxine/pixmaps/subtitle.png
 share/gxine/pixmaps/subtitle.svg
 share/icons/hicolor/64x64/apps/gxine.png
 share/locale/cs/LC_MESSAGES/gxine.mo
