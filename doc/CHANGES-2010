@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4093 2010/11/30 15:42:27 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4094 2010/11/30 19:56:06 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5779,3 +5779,23 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/knock version 0.5 [adam 2010-11-30]
 	Updated textproc/ruby-nokogiri to 1.4.4 [taca 2010-11-30]
 	Updated www/contao29-translations to 20101123 [taca 2010-11-30]
+	Updated audio/libmusicbrainz to 3.0.3 [drochner 2010-11-30]
+	Added audio/mp3splt-gtk version 0.6 [drochner 2010-11-30]
+	Updated audio/mp3splt to 2.2.9 [drochner 2010-11-30]
+	Updated audio/libmp3splt to 0.6 [drochner 2010-11-30]
+	Added audio/mp3wrap version 0.5 [drochner 2010-11-30]
+	Updated databases/gramps3 to 3.2.5 [drochner 2010-11-30]
+	Updated sysutils/gnome-commander to 1.2.8.8 [drochner 2010-11-30]
+	Updated print/diffpdf to 1.1.4 [drochner 2010-11-30]
+	Updated net/vinagre to 2.20.3 [drochner 2010-11-30]
+	Updated misc/yelp to 2.30.2 [drochner 2010-11-30]
+	Updated editors/gconf-editor to 2.32.0 [drochner 2010-11-30]
+	Updated fonts/gucharmap to 2.32.1 [drochner 2010-11-30]
+	Updated x11/xscreensaver to 5.12 [drochner 2010-11-30]
+	Updated mail/claws-mail to 3.7.7 [drochner 2010-11-30]
+	Updated net/tor to 0.2.1.27 [drochner 2010-11-30]
+	Updated chat/telepathy-glib to 0.12.5 [drochner 2010-11-30]
+	Updated chat/empathy to 2.30.3 [drochner 2010-11-30]
+	Updated sysutils/nautilus-sendto to 2.28.5 [drochner 2010-11-30]
+	Updated security/seahorse-plugins to 2.30.1 [drochner 2010-11-30]
+	Updated time/evolution-webcal to 2.32.0 [drochner 2010-11-30]
