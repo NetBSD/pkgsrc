@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/12/02 09:29:21 wiz Exp $
+$NetBSD: distinfo,v 1.7 2010/11/30 03:44:36 obache Exp $
 
-SHA1 (tomboy-1.0.1.tar.gz) = 7401ab91758866c8d906622cde2977f2815b98a9
-RMD160 (tomboy-1.0.1.tar.gz) = 8a1383978e35a8c32795104dd1d7d987aa4fb976
-Size (tomboy-1.0.1.tar.gz) = 7517894 bytes
+SHA1 (tomboy-1.2.1.tar.gz) = 98e01ad670a3aa2c264319a5e36daa0ea4036891
+RMD160 (tomboy-1.2.1.tar.gz) = fa2e16b6e3e175e98756005853de8b6cc0ffcf25
+Size (tomboy-1.2.1.tar.gz) = 7695607 bytes
