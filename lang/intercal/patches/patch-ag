@@ -1,0 +1,31 @@
+$NetBSD: patch-ag,v 1.1 2010/11/30 20:13:30 drochner Exp $
+
+--- configure.orig	2010-11-29 18:53:59.000000000 +0000
++++ configure
+@@ -3040,7 +3040,7 @@ fi
+ done
+ test -n "$YACC" || YACC="yacc"
+ 
+-if test "x$YACC" == "xyacc"; then
++if test "x$YACC" = "xyacc"; then
+ YACC=
+ # Extract the first word of "yacc", so it can be a program name with args.
+ set dummy yacc; ac_word=$2
+@@ -4927,7 +4927,7 @@ $as_echo "#define HAVE_STDBOOL_H 1" >>co
+ 
+ fi
+ 
+-if test "x$ac_cv_header_stdbool_h" == "xyes"
++if test "x$ac_cv_header_stdbool_h" = "xyes"
+ then
+ HAVE_STDBOOL_H=1
+ fi
+@@ -5274,7 +5274,7 @@ _ACEOF
+ 
+ # Some compilers (correctly according to the standard, but dubiously for
+ # actual use in code) dislike mixing _Bool and varargs.
+-if test "x$ac_cv_type__Bool" == "xyes"
++if test "x$ac_cv_type__Bool" = "xyes"
+ then
+ HAVE__BOOL=1
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether booleans can be passed via varargs" >&5
