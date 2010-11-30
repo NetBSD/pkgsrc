@@ -1,7 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2008/10/09 10:57:23 sborrill Exp $
---- configure.ac.orig	2008-10-06 08:22:21.000000000 +0100
-+++ configure.ac	2008-10-09 10:03:55.000000000 +0100
-@@ -343,14 +343,17 @@
+$NetBSD: patch-ae,v 1.4 2010/11/30 08:50:17 adam Exp $
+
+--- configure.ac.orig	2010-11-04 19:29:02.000000000 +0000
++++ configure.ac
+@@ -362,14 +362,17 @@ if test "${WIN32}" != "yes"; then
  		 sys/mman.h fcntl.h sys/file.h stdlib.h stdint.h dnl
  		 stdarg.h unistd.h signal.h stdio.h string.h dnl
  		 strings.h ctype.h errno.h syslog.h pwd.h grp.h dnl
@@ -21,7 +22,7 @@ $NetBSD: patch-ae,v 1.3 2008/10/09 10:57:23 sborrill Exp $
  		  # include <sys/socket.h>
  		  #endif
  		 ])
-@@ -372,6 +375,9 @@
+@@ -391,6 +394,9 @@ if test "${WIN32}" != "yes"; then
  		  #ifdef HAVE_SYS_SOCKET_H
  		  # include <sys/socket.h>
  		  #endif
