@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2010/11/30 10:30:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.67 2010/11/30 11:48:39 drochner Exp $
 #
 
 DISTNAME=	monotone-0.99.1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.99/
+MASTER_SITES=	http://monotone.ca/downloads/0.99.1/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
