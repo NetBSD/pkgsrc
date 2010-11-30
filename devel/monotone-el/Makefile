@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/11/07 20:53:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/30 10:30:54 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.99
+DISTNAME=	monotone-0.99.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-el-/}
 CATEGORIES=	devel scm
 MASTER_SITES=	http://monotone.ca/downloads/0.99/
