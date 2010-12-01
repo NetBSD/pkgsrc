@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4095 2010/12/01 07:45:22 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4096 2010/12/01 10:48:30 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5800,3 +5800,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/seahorse-plugins to 2.30.1 [drochner 2010-11-30]
 	Updated time/evolution-webcal to 2.32.0 [drochner 2010-11-30]
 	Updated mail/clamav to 0.96.5 [adam 2010-12-01]
+	Updated editors/xournal to 0.4.5 [asau 2010-12-01]
