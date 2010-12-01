@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/10 06:00:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/01 19:44:23 drochner Exp $
 #
 
 DISTNAME=		font-sun-misc-1.0.1
@@ -17,7 +17,7 @@ USE_TOOLS+=		bdftopcf gzip
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
-FONTS_DIRS.x11=		lib/X11/fonts/misc
+FONTS_DIRS.x11=		share/fonts/X11/misc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
