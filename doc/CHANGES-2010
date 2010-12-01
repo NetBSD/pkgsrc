@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4100 2010/12/01 15:56:13 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4101 2010/12/01 16:54:59 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5803,3 +5803,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Added editors/xournal version 0.4.5 [asau 2010-12-01]
 	Updated inputmethod/ibus-anthy to 1.2.5 [obache 2010-12-01]
 	Updated www/fengoffice to 1.7.2nb1 [taca 2010-12-01]
+	Updated lang/mono to 2.8.1 [kefren 2010-12-01]
+	Updated graphics/libgdiplus to 2.8.1 [kefren 2010-12-01]
+	Updated www/mono-xsp to 2.8.1 [kefren 2010-12-01]
