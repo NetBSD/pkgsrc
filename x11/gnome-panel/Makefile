@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2010/11/24 20:26:20 drochner Exp $
+# $NetBSD: Makefile,v 1.126 2010/12/01 20:21:48 drochner Exp $
 #
 
 DISTNAME=		gnome-panel-2.32.1
@@ -23,6 +23,16 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+
+# XXX this pkg installs a gio module to ${PREFIX}/lib/gnome-panel/modules
+# but there are two problems with this:
+# - this is not the standard module location, glib2/modules.mk
+#   does not deal with this yet
+# - even if called with the correct path, the resulting "giomodule.cache"
+#   is empty, which looks like another problem
+# XXX so for now, just disable "giomodule.cache" creation to fix the
+# PLIST problem reported in PR pkg/44181, until the issue is understood
+TOOLS_NOOP+=	gio-querymodules
 
 GCONF_SCHEMAS=	clock.schemas
 GCONF_SCHEMAS+=	fish.schemas
