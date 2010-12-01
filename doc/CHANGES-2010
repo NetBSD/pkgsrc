@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4101 2010/12/01 16:54:59 kefren Exp $
+$NetBSD: CHANGES-2010,v 1.4102 2010/12/01 21:01:44 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5806,3 +5806,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/mono to 2.8.1 [kefren 2010-12-01]
 	Updated graphics/libgdiplus to 2.8.1 [kefren 2010-12-01]
 	Updated www/mono-xsp to 2.8.1 [kefren 2010-12-01]
+	Updated net/ocsinventory-agent to 1.1.2.1 [bouyer 2010-12-01]
