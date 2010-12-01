@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2010/09/14 11:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2010/12/01 19:39:29 drochner Exp $
 #
 
-DISTNAME=	lilypond-2.12.2
-PKGREVISION=	4
+DISTNAME=	lilypond-2.12.3
 CATEGORIES=	print
 MASTER_SITES=	http://lilypond.org/download/sources/v2.12/
 
@@ -31,11 +30,13 @@ GNU_CONFIGURE_INFODIR=	${PREFIX}/${PKGINFODIR}
 INFO_DIR=		${GNU_CONFIGURE_INFODIR}
 INFO_FILES=		YES
 
-CONFIGURE_ARGS+=	--with-ncsb-dir=${LOCALBASE}/share/ghostscript/fonts
+BUILD_DEPENDS+=		urw-fonts-[0-9]*:../../fonts/urw-fonts
+CONFIGURE_ARGS+=	--with-ncsb-dir=${LOCALBASE}/share/fonts/urw
 CONFIGURE_ARGS+=	--disable-optimising
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_ACCEPTED= 25 24
 
+REPLACE_PYTHON+= scripts/auxiliar/yyout2grammar.py
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
 # 1.7 coredumps when generating eps files
