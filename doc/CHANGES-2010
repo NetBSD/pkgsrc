@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4099 2010/12/01 14:49:39 darcy Exp $
+$NetBSD: CHANGES-2010,v 1.4100 2010/12/01 15:56:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/clamav to 0.96.5 [adam 2010-12-01]
 	Added editors/xournal version 0.4.5 [asau 2010-12-01]
 	Updated inputmethod/ibus-anthy to 1.2.5 [obache 2010-12-01]
+	Updated www/fengoffice to 1.7.2nb1 [taca 2010-12-01]
