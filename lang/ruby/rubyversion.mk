@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.53 2010/11/17 14:27:09 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.54 2010/12/01 13:51:45 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -192,7 +192,7 @@ _RUBY_SHLIBALIAS=	.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${RUBY_SLEXT}
 RUBY_STATICLIB=		${RUBY_VER}.${RUBY_API_VERSION}-static.a
 .endif
 .elif ${OPSYS} == "Linux"
-_RUBY_SHLIBALIAS=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
+_RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 .endif
 
 .if !empty(_RUBY_SHLIBALIAS)
