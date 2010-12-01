@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.12 2010/10/16 04:32:18 kefren Exp $
+@comment $NetBSD: PLIST.common,v 1.13 2010/12/01 16:49:13 kefren Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -103,6 +103,7 @@ include/mono-2.0/mono/metadata/row-indexes.h
 include/mono-2.0/mono/metadata/threads.h
 include/mono-2.0/mono/metadata/tokentype.h
 include/mono-2.0/mono/metadata/verify.h
+include/mono-2.0/mono/utils/mono-dl-fallback.h
 include/mono-2.0/mono/utils/mono-error.h
 include/mono-2.0/mono/utils/mono-logger.h
 include/mono-2.0/mono/utils/mono-publib.h
@@ -521,8 +522,8 @@ lib/mono/gac/IBM.Data.DB2/1.0.0.0__7c307b91aa13d208/IBM.Data.DB2.dll
 lib/mono/gac/IBM.Data.DB2/1.0.0.0__7c307b91aa13d208/IBM.Data.DB2.dll.mdb
 lib/mono/gac/ICSharpCode.SharpZipLib/2.6.0.0__1b03e6acf1164f73/ICSharpCode.SharpZipLib.dll
 lib/mono/gac/ICSharpCode.SharpZipLib/2.6.0.0__1b03e6acf1164f73/ICSharpCode.SharpZipLib.dll.mdb
-lib/mono/gac/ICSharpCode.SharpZipLib/${PKGVERSION}4.0.0__1b03e6acf1164f73/ICSharpCode.SharpZipLib.dll
-lib/mono/gac/ICSharpCode.SharpZipLib/${PKGVERSION}4.0.0__1b03e6acf1164f73/ICSharpCode.SharpZipLib.dll.mdb
+lib/mono/gac/ICSharpCode.SharpZipLib/2.84.0.0__1b03e6acf1164f73/ICSharpCode.SharpZipLib.dll
+lib/mono/gac/ICSharpCode.SharpZipLib/2.84.0.0__1b03e6acf1164f73/ICSharpCode.SharpZipLib.dll.mdb
 lib/mono/gac/Microsoft.Build.Engine/2.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Engine.dll
 lib/mono/gac/Microsoft.Build.Engine/2.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Engine.dll.mdb
 lib/mono/gac/Microsoft.Build.Engine/3.5.0.0__b03f5f7f11d50a3a/Microsoft.Build.Engine.dll
