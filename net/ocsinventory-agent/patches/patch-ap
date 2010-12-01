@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2010/12/01 21:00:51 bouyer Exp $
+
+--- lib/Ocsinventory/Agent/Backend/OS/Linux/Storages/3ware.pm.orig	2010-12-01 18:31:01.000000000 +0100
++++ lib/Ocsinventory/Agent/Backend/OS/Linux/Storages/3ware.pm	2010-12-01 18:31:06.000000000 +0100
+@@ -117,7 +117,7 @@
+ # How does this work with multiple older cards where serial for units is not implemented ?
+ # Need to be tested on a system with multiple 3ware cards.
+                 if (($hd->{SERIALNUMBER} eq 'AMCC_' . $sn) or ($hd->{MODEL} eq 'Logical_Disk_' . $unit_id)) {
+-                  $device = %$hd->{NAME};
++                  $device = $hd->{NAME};
+                 }
+               }
+ 
