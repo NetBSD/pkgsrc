@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2010/07/05 03:26:46 taca Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/01 15:55:27 taca Exp $
 
 Unofficial patch to avoid iconv(GNU or gnu libc) portability problem.
-http://www.fengoffice.com/web/bugs/view.php?id=6
+(mb-iconv.patch from http://www.fengoffice.com/web/bugs/view.php?id=6)
 
---- environment/classes/encoding/EncodingConverter.class.php.orig	2010-06-28 21:05:03.000000000 +0000
+--- environment/classes/encoding/EncodingConverter.class.php.orig	2010-09-13 20:30:20.000000000 +0000
 +++ environment/classes/encoding/EncodingConverter.class.php
 @@ -6,6 +6,16 @@ class EncodingConverter
  	var $_last_err_filename;
@@ -22,11 +22,13 @@ http://www.fengoffice.com/web/bugs/view.php?id=6
  
  	function _handleError($err, $msg, $errfile, $errline, $errcontext) {
  		$trace = debug_backtrace();
-@@ -25,10 +35,22 @@ class EncodingConverter
+@@ -25,12 +35,29 @@ class EncodingConverter
  	}
  
  	function convert($in_enc, $out_enc, $str, $return_original_on_error = true, $ignore_non_compatible = true) {
-+		if (is_null(self::$gnu_iconv)) {
++		$mbflag = function_exists("mb_convert_encoding");
++
++		if (!$mbflag && is_null(self::$gnu_iconv)) {
 +			$dummy = "a";
 +			$ascii = 'us-ascii';
 +			$func = set_error_handler("self::iconv_error");
@@ -39,10 +41,18 @@ http://www.fengoffice.com/web/bugs/view.php?id=6
 +
  		$this->_last_err = null;
  		set_error_handler(array(&$this, '_handleError'));
- 		
+-		
 -		if ($ignore_non_compatible) $out_enc .= "//IGNORE";
-+		if (self::$gnu_iconv)
-+			if ($ignore_non_compatible) $out_enc .= "//IGNORE";
+-		
+-		$retval = iconv($in_enc, $out_enc, $str);
++
++		if(!$mbflag) {
++			if (self::$gnu_iconv)
++				if ($ignore_non_compatible) $out_enc .= "//IGNORE";
++			$retval = iconv($in_enc, $out_enc, $str);
++		} else { 
++			$retval = mb_convert_encoding($str, $out_enc, $in_enc);
++		}
  		
- 		$retval = iconv($in_enc, $out_enc, $str);
- 		
+ 		restore_error_handler();
+ 		if ($this->hasError()) {
