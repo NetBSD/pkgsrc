@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4097 2010/12/01 11:07:44 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4098 2010/12/01 11:16:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5801,3 +5801,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/evolution-webcal to 2.32.0 [drochner 2010-11-30]
 	Updated mail/clamav to 0.96.5 [adam 2010-12-01]
 	Added editors/xournal version 0.4.5 [asau 2010-12-01]
+	Updated inputmethod/ibus-anthy to 1.2.5 [obache 2010-12-01]
