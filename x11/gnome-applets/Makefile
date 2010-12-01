@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2010/11/26 11:34:41 drochner Exp $
+# $NetBSD: Makefile,v 1.87 2010/12/01 09:38:21 cegger Exp $
 #
 
 DISTNAME=		gnome-applets-2.32.1.1
@@ -84,7 +84,7 @@ BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.13.4
+BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.31.2
 .include "../../x11/gnome-panel/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.13.0
 .include "../../x11/gtk2/buildlink3.mk"
