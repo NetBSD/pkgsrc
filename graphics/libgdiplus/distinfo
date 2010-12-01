@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2010/10/16 04:33:44 kefren Exp $
+$NetBSD: distinfo,v 1.29 2010/12/01 16:50:02 kefren Exp $
 
-SHA1 (libgdiplus-2.8.tar.bz2) = 237aa62d325342119e7baa740cc4cd46492e149c
-RMD160 (libgdiplus-2.8.tar.bz2) = 4566ede90bd2d31b0900f4c7746a3a697a9c7d86
-Size (libgdiplus-2.8.tar.bz2) = 1961057 bytes
+SHA1 (libgdiplus-2.8.1.tar.bz2) = 00e546a0acacd9155d9347420440ffe15b19f0d1
+RMD160 (libgdiplus-2.8.1.tar.bz2) = b5e9e8877e3e9f3b9af8a6e8e53d511a40407f64
+Size (libgdiplus-2.8.1.tar.bz2) = 1959852 bytes
