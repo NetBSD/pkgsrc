@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/09/14 00:57:11 taca Exp $
+# $NetBSD: Makefile,v 1.8 2010/12/01 15:55:27 taca Exp $
 #
 
 DISTNAME=	fengoffice_1.7.2
 PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
