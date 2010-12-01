@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4098 2010/12/01 11:16:45 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4099 2010/12/01 14:49:39 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5765,7 +5765,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-xargs version 1.1 [minskim 2010-11-29]
 	Added print/tex-xargs-doc version 1.1 [minskim 2010-11-29]
 	Updated www/ikiwiki to 3.20101129 [schmonz 2010-11-29]
-	pdated textproc/asciidoc to 8.6.3 [gls 2010-11-29]
+	Updated textproc/asciidoc to 8.6.3 [gls 2010-11-29]
 	Updated mail/cyrus-imapd24 to 2.4.5 [obache 2010-11-30]
 	Updated textproc/p5-ack to 1.94 [abs 2010-11-30]
 	Updated editors/tomboy to 1.2.1 [obache 2010-11-30]
