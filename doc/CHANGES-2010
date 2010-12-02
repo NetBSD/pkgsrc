@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4113 2010/12/02 12:19:53 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4114 2010/12/02 12:21:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5819,3 +5819,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IMDB-Film to 0.49 [wiz 2010-12-02]
 	Updated graphics/p5-Image-Info to 1.31 [wiz 2010-12-02]
 	Updated mail/p5-Email-MIME to 1.906 [wiz 2010-12-02]
+	Updated mail/p5-MailTools to 2.07 [wiz 2010-12-02]
