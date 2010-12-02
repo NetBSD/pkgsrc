@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4117 2010/12/02 12:25:16 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4118 2010/12/02 12:26:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5823,3 +5823,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Digest-CRC to 0.16 [wiz 2010-12-02]
 	Updated security/p5-Digest-MD5 to 2.51 [wiz 2010-12-02]
 	Updated security/p5-IO-Socket-SSL to 1.34 [wiz 2010-12-02]
+	Updated security/p5-Net-OpenSSH to 0.50 [wiz 2010-12-02]
