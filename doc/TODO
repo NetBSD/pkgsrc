@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9896 2010/12/02 14:37:02 wiz Exp $
+$NetBSD: TODO,v 1.9897 2010/12/02 14:44:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -653,7 +653,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.28.92
 	o gap-4r4p9
 	o gated-3.6
-	o gawk-3.1.8
 	o gbdfed-1.6
 	o gcal-3.6
 	o gcalctool-5.32.2
