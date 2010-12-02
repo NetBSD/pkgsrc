@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4110 2010/12/02 12:15:59 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4111 2010/12/02 12:17:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5816,3 +5816,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/p5-JSON to 2.27 [wiz 2010-12-02]
 	Updated converters/p5-MIME-Base64 to 3.13 [wiz 2010-12-02]
 	Updated devel/p5-Date-Manip to 6.14 [wiz 2010-12-02]
+	Updated devel/p5-IMDB-Film to 0.49 [wiz 2010-12-02]
