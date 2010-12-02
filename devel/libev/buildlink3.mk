@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/01/29 15:05:00 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/12/02 15:47:12 wiz Exp $
 
 BUILDLINK_TREE+=	libev
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libev
 LIBEV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libev+=libev>=3.9nb1
-BUILDLINK_ABI_DEPENDS.libev+=libev>=3.9nb1
+BUILDLINK_ABI_DEPENDS.libev+=libev>=4.01
 BUILDLINK_PKGSRCDIR.libev?=	../../devel/libev
 
 BUILDLINK_LIBDIRS.libev+=	lib/ev
