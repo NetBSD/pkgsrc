@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/11/15 22:57:24 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/12/02 13:36:56 wiz Exp $
 #
 
 BUILDLINK_TREE+=	py-clutter
@@ -9,7 +9,7 @@ PY_CLUTTER_BUILDLINK3_MK:=
 .  include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-clutter+=	${PYPKGPREFIX}-clutter>=1.0.0
-BUILDLINK_ABI_DEPENDS.py-clutter?=	${PYPKGPREFIX}-clutter>=1.0.2nb3
+BUILDLINK_ABI_DEPENDS.py-clutter?=	${PYPKGPREFIX}-clutter>=1.0.2nb4
 BUILDLINK_PKGSRCDIR.py-clutter?=	../../graphics/py-clutter
 
 .include "../../graphics/clutter/buildlink3.mk"
