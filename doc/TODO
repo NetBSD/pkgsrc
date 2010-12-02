@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9910 2010/12/02 17:00:01 wiz Exp $
+$NetBSD: TODO,v 1.9911 2010/12/02 17:01:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -822,7 +822,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdbg-2.2.2
 	o kdrill-6.5
 	o kid3-1.5
-	o kipi-plugins-1.6.0
 	o kismet-2010.07r1
 	o kmess-1.5.1
 	o kmp-0.5
