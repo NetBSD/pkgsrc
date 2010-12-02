@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9893 2010/12/02 12:43:21 wiz Exp $
+$NetBSD: TODO,v 1.9894 2010/12/02 13:26:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
-	o cdrtools-3.01alpha01
 	o celestia-1.6.0
 	o cfitsio-3250
 	o cgdb-0.6.5
