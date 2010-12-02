@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4122 2010/12/02 12:32:53 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4123 2010/12/02 12:35:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5828,3 +5828,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTML-Tree to 4.1 [wiz 2010-12-02]
 	Updated www/p5-URI to 1.56 [wiz 2010-12-02]
 	Updated www/p5-WWW-Curl to 4.15 [wiz 2010-12-02]
+	Updated x11/p5-Clipboard to 0.13 [wiz 2010-12-02]
