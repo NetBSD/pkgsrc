@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9905 2010/12/02 15:39:27 wiz Exp $
+$NetBSD: TODO,v 1.9906 2010/12/02 15:47:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -879,7 +879,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.2
 	o libdockapp-0.6.1
 	o libdrm-2.4.22
-	o libev-4.01
 	o libextractor-0.6.2
 	o libflash-0.4.13
 	o libfontenc-1.1.0
