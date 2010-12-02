@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4133 2010/12/02 15:31:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4134 2010/12/02 15:33:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5840,3 +5840,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-docutils to 0.7 [wiz 2010-12-02]
 	Updated security/qca2 to 2.0.3 [wiz 2010-12-02]
 	Updated textproc/texi2html to 5.0 [wiz 2010-12-02]
+	Updated x11/libxdg-basedir to 1.1.1 [wiz 2010-12-02]
