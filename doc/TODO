@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9902 2010/12/02 15:33:26 wiz Exp $
+$NetBSD: TODO,v 1.9903 2010/12/02 15:34:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -907,7 +907,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libraw-0.11.3
 	o librep-0.91.0
 	o libsigsegv-2.9
-	o libsoup24-2.32.2
 	o libssh-0.4.6
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
