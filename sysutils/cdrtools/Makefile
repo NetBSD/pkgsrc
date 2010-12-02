@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2010/06/05 11:40:05 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2010/12/02 13:25:58 wiz Exp $
 
-DISTNAME=	cdrtools-3.00
+DISTNAME=	cdrtools-3.01a01
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/ \
@@ -18,6 +18,8 @@ CONFLICTS=	mkisofs-[0-9]* cdrtools-ossdvd-[0-9]* cdrecord-[0-9]* cdrkit-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/${DISTNAME:C/a[0-9]*//}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -68,7 +70,6 @@ SUBST_FILES.fix+=	cdrecord/cdrecord.1
 SUBST_FILES.fix+=	libcdrdeflt/cdrdeflt.c
 SUBST_FILES.fix+=	mkisofs/diag/isoinfo.8
 SUBST_FILES.fix+=	readcd/readcd.1
-SUBST_FILES.fix+=	scgcheck/scgcheck.1
 SUBST_SED.fix=		-e "s,/etc/default/cdrecord,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
 
