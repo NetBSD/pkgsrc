@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2010/11/15 22:57:12 abs Exp $
+# $NetBSD: Makefile,v 1.62 2010/12/02 16:59:49 wiz Exp $
 #
 
-DISTNAME=	digikam-1.2.0
-PKGREVISION=	4
+DISTNAME=	digikam-1.6.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,15 +20,17 @@ USE_LANGUAGES=		c c++
 
 REPLACE_PERL=	utilities/scripts/digitaglinktree/digitaglinktree
 USE_CMAKE=	yes
+CMAKE_ARGS+=    -DMYSQLD_PATH:PATH=${BUILDLINK_PREFIX.mysql-server}/libexec
 USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 
 .include "options.mk"
 
 .include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../databases/mysql51-server/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 # for libkdcraw>=0.4.0
-BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.1.2nb1
+BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.5
 .include "../../graphics/kdegraphics4/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/liblqr/buildlink3.mk"
