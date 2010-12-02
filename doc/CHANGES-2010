@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4135 2010/12/02 15:34:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4136 2010/12/02 15:36:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5842,3 +5842,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/texi2html to 5.0 [wiz 2010-12-02]
 	Updated x11/libxdg-basedir to 1.1.1 [wiz 2010-12-02]
 	Updated net/libsoup24 to 2.32.2 [wiz 2010-12-02]
+	Updated graphics/libraw to 0.11.3 [wiz 2010-12-02]
