@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9895 2010/12/02 13:31:01 wiz Exp $
+$NetBSD: TODO,v 1.9896 2010/12/02 14:37:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -466,7 +466,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.32.0 [GNOME 2.32]
-	o cherokee-1.0.9
+	o cherokee-1.0.12
 	o chromium-0.9.14.1
 	o cinepaint-0.23
 	o cint-5.16
@@ -669,7 +669,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdl-2.30.1 [GNOME 2.32]
 	o gdm-2.32.0 [GNOME 2.32]
 	o gdsreader-0.3.2
-	o geany-0.19
+	o geany-0.19.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.12
 	o gentoo-0.19.6
@@ -729,6 +729,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gpredict-1.2
 	o gpsdrive-2.09
 	o gramofile-1.6P
+	o gramps3-3.2.5
 	o granulate-0.2
 	o grep-2.7
 	o grhino-0.16.1
@@ -843,7 +844,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lbdb-0.37
 	o lbreakout2-2.6.2
 	o lcc-4.2
-	o lcms-2.0
+	o lcms-2.1
 	o ldapsdk-6.0.2
 	o leafnode-1.11.8
 	o less-436
@@ -919,9 +920,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libupnp-1.6.9 [break API/ABI compatibility]
 	o libusb-1.0
 	o libv4l-0.8.1
-	o libwpd-0.9.0
-	o libwpg-0.2.0
-	o libwps-0.2.0
 	o libxdg-basedir-1.1.1
 	o libxkbfile-1.0.7
 	o libxml++-2.32.0 [GNOME 2.32]
@@ -1088,6 +1086,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pfstat-2.5
 	o pgpool-3.1.1
+	o phonon-4.4.3
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
@@ -1168,6 +1167,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o randread-0.2
 	o randrproto-1.3.2
 	o rapidsvn-0.12
+	o raptor-1.9.1
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
@@ -1390,7 +1390,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xdriinfo-1.0.4
 	o xemacs-21.4.22
 	o xemacs-current-21.5.28
-	o xerces-c-2.10.0
+	o xerces-c-2.11.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xev-1.1.0
