@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2010/11/15 22:57:24 abs Exp $
+# $NetBSD: Makefile,v 1.18 2010/12/02 13:36:56 wiz Exp $
 #
 
 DISTNAME=	pyclutter-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://source.clutter-project.org/sources/pyclutter/1.0/
 
