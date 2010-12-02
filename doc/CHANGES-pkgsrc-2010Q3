@@ -82,3 +82,7 @@ Pullup ticket #3287 - requested by is
 lang/ocaml: portability fix
 Pullup ticket #3288 - requested by tron
 Security update for "phpmyadmin" package
+Pullup ticket #3290 - requested by taca
+net/bind97 security update
+Pullup ticket #3291 - requested by taca
+net/bind96 security update
