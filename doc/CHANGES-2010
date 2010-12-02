@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4147 2010/12/02 18:03:30 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4148 2010/12/02 21:17:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5854,3 +5854,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/digikam to 1.6.0 [wiz 2010-12-02]
 	Updated graphics/kipi-plugins to 1.6.0 [wiz 2010-12-02]
 	Updated textproc/source-highlight to 3.1.4 [adam 2010-12-02]
+	Updated audio/pulseaudio to 0.9.21nb6 [wiz 2010-12-02]
