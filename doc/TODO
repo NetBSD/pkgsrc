@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9906 2010/12/02 15:47:22 wiz Exp $
+$NetBSD: TODO,v 1.9907 2010/12/02 16:00:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -919,7 +919,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxkbfile-1.0.7
 	o licq-1.3.8
 	o lighttpd-1.4.28
-	o links-2.3pre1
 	o lincvs-2.1.4 [now called CrossVC]
 	o listres-1.0.2
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
