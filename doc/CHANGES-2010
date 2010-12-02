@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4139 2010/12/02 15:47:22 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4140 2010/12/02 15:47:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5846,3 +5846,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/libxml++ to 2.32.0 [wiz 2010-12-02]
 	Updated www/contao29 to 2.9.2nb1 [taca 2010-12-02]
 	Updated devel/libev to 4.01 [wiz 2010-12-02]
+	Updated devel/p5-EV to 4.00 [wiz 2010-12-02]
