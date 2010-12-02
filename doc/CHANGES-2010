@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4141 2010/12/02 16:00:50 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4142 2010/12/02 16:01:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5848,3 +5848,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libev to 4.01 [wiz 2010-12-02]
 	Updated devel/p5-EV to 4.00 [wiz 2010-12-02]
 	Updated www/links to 2.3pre1 [wiz 2010-12-02]
+	Updated www/links-gui to 2.3pre1 [wiz 2010-12-02]
