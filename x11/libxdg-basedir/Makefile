@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/08 18:26:15 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/02 15:33:16 wiz Exp $
 #
 
-DISTNAME=	libxdg-basedir-1.0.2
+DISTNAME=	libxdg-basedir-1.1.1
 CATEGORIES=	x11
 MASTER_SITES=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
 
