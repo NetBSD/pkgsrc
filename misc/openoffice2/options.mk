@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2010/10/20 20:26:31 wiz Exp $
+# $NetBSD: options.mk,v 1.28 2010/12/02 07:35:05 dholland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd # xulrunner
@@ -67,6 +67,7 @@ CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-gtk
+.include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk
