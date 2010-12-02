@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9900 2010/12/02 15:04:07 wiz Exp $
+$NetBSD: TODO,v 1.9901 2010/12/02 15:31:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1282,7 +1282,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tesseract-3.00
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
-	o texi2html-5.0
 	o texmaker-2.1
 	o tfmxplay-1.1.6
 	o thoth-0.2.1
