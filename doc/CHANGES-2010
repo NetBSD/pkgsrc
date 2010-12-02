@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4129 2010/12/02 14:44:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4130 2010/12/02 14:46:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5836,3 +5836,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-example to 2.9.2 [taca 2010-12-02]
 	Updated www/fengoffice to 1.7.3.1 [taca 2010-12-02]
 	Updated lang/gawk to 3.1.8 [wiz 2010-12-02]
+	Updated devel/makedepend to 1.0.3 [wiz 2010-12-02]
