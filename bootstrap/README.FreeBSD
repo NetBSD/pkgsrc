@@ -1,4 +1,4 @@
-$NetBSD: README.FreeBSD,v 1.3 2008/06/23 21:11:39 reed Exp $
+$NetBSD: README.FreeBSD,v 1.4 2010/12/02 17:12:39 asau Exp $
 
 Please read the general README file as well.
 
@@ -17,4 +17,8 @@ good idea to move them out of the way to avoid confusion, e.g.:
 	mv pkg_delete pkg_delete.orig
 	mv pkg_info pkg_info.orig
 
-bootstrap-pkgsrc has been tested on FreeBSD 4.x, 5.x and -current (i386).
+Alternatively, take care to get pkgsrc tools first in PATH.
+
+
+bootstrap-pkgsrc has been tested on FreeBSD 4.x and 5.x (i386).
+pkgsrc works well on FreeBSD 6.2-6.4, 7.1-7.3 (i386).
