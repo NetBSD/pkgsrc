@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4103 2010/12/01 22:01:23 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4104 2010/12/02 00:34:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5808,3 +5808,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/mono-xsp to 2.8.1 [kefren 2010-12-01]
 	Updated net/ocsinventory-agent to 1.1.2.1 [bouyer 2010-12-01]
 	Added lang/ficl version 4.1.0 [asau 2010-12-01]
+	Updated net/bind97 to 9.7.2pl3 [taca 2010-12-02]
+	Updated net/bind96 to 9.6.2pl3 [taca 2010-12-02]
