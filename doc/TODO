@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9911 2010/12/02 17:01:29 wiz Exp $
+$NetBSD: TODO,v 1.9912 2010/12/02 18:03:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -1234,7 +1234,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o solfege-3.19.1
 	o sope-4.6
 	o sound-juicer-2.32.0
-	o source-highlight-3.1.4
 	o spcaview-20060501
 	o spim-7.4
 	o sqlitemanager-1.2.4

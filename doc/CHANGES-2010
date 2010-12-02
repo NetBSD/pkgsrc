@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4146 2010/12/02 17:01:29 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4147 2010/12/02 18:03:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5853,3 +5853,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/polkit-qt to 0.9.4 [wiz 2010-12-02]
 	Updated graphics/digikam to 1.6.0 [wiz 2010-12-02]
 	Updated graphics/kipi-plugins to 1.6.0 [wiz 2010-12-02]
+	Updated textproc/source-highlight to 3.1.4 [adam 2010-12-02]
