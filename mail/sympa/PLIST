@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/12/02 11:17:43 reed Exp $
 man/man8/alias_manager.8
 man/man8/archived.8
 man/man8/bounced.8
@@ -446,5 +446,3 @@ sympa/static_content/icons/right.png
 sympa/static_content/icons/sound1.png
 sympa/static_content/icons/text.png
 sympa/static_content/icons/unknown.png
-
-
