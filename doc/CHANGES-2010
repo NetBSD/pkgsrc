@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4114 2010/12/02 12:21:12 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4115 2010/12/02 12:22:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5820,3 +5820,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/p5-Image-Info to 1.31 [wiz 2010-12-02]
 	Updated mail/p5-Email-MIME to 1.906 [wiz 2010-12-02]
 	Updated mail/p5-MailTools to 2.07 [wiz 2010-12-02]
+	Updated security/p5-Digest-CRC to 0.16 [wiz 2010-12-02]
