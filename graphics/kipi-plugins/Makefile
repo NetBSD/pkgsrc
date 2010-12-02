@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2010/11/15 22:57:20 abs Exp $
+# $NetBSD: Makefile,v 1.55 2010/12/02 17:01:16 wiz Exp $
 #
 
-DISTNAME=	kipi-plugins-1.1.0
-PKGREVISION=	5
+DISTNAME=	kipi-plugins-1.6.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/kipi-plugins/1.1.0/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/kipi-plugins/1.6.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +15,6 @@ BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_JOBS_SAFE=		no
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
@@ -28,15 +26,13 @@ BUILDLINK_API_DEPENDS.kdelibs+= kdelibs4>=4.4.0
 # for IpodExport
 .include "../../audio/libgpod/buildlink3.mk"
 .include "../../graphics/kdegraphics4/buildlink3.mk"
-# for RemoveRedEyes
-.include "../../graphics/opencv/buildlink3.mk"
+# for RemoveRedEyes -- needs to be at least 2.1, pkgsrc currently has 1.0
+#.include "../../graphics/opencv/buildlink3.mk"
 # for Calendar
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 # for Shwup
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
-# for Gdk for IpodExport XXX: configure doesn't accept it.
-#.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
