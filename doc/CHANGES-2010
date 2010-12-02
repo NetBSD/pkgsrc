@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4106 2010/12/02 12:06:46 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4107 2010/12/02 12:08:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5812,3 +5812,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/bind96 to 9.6.2pl3 [taca 2010-12-02]
 	Updated devel/mercurial to 1.7.2 [wiz 2010-12-02]
 	Updated archivers/p5-Archive-Tar to 1.72 [wiz 2010-12-02]
+	Updated comms/p5-Device-Gsm to 1.56 [wiz 2010-12-02]
