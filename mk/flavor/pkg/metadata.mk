@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.35 2010/09/24 01:30:54 chs Exp $
+# $NetBSD: metadata.mk,v 1.36 2010/12/02 11:15:10 reed Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -64,11 +64,11 @@ ${_BUILD_INFO_FILE}: plist
 	bins=`${AWK} '/(^|\/)(bin|sbin|libexec)\// { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 	case ${OBJECT_FMT:Q}"" in					\
 	ELF)								\
-		libs=`${AWK} '/(^|\/)lib\/lib.*\.so(\.[0-9]+)?$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
+		libs=`${AWK} '/\/lib.*\.so(\.[0-9]+)*$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 		if ${TEST} -n "$$bins" -o -n "$$libs"; then		\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SORT} -u`; \
 		fi;							\
-		linklibs=`${AWK} '/.*\.so(\.[0-9]+)?$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
+		linklibs=`${AWK} '/.*\.so(\.[0-9]+)*$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
 		for i in $$linklibs; do					\
 			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
 				${TEST} ${PKG_DEVELOPER:Uno:Q}"" = "no" || \
@@ -78,7 +78,7 @@ ${_BUILD_INFO_FILE}: plist
 		done;							\
 		;;							\
 	Mach-O)								\
-		libs=`${AWK} '/(^|\/)lib\/lib.*\.dylib/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
+		libs=`${AWK} '/\/lib.*\.dylib/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then	\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '/compatibility version/ { print $$1 }' | ${SORT} -u`; \
 		fi;							\
@@ -89,7 +89,6 @@ ${_BUILD_INFO_FILE}: plist
 		${SORT} | uniq -c | awk '$$1 == 2 {print $$2}'`; \
 	for i in "" $$libs; do						\
 		${TEST} "$$i" != "" || continue;			\
-		${TEST} -h "$$i" && echo "$$i" | grep '[.]so$$' > /dev/null && continue;	\
 		${ECHO} "PROVIDES=$${i}";				\
 	done | ${SED} -e 's,^PROVIDES=${DESTDIR},PROVIDES=,'		\
 		>> ${.TARGET}.tmp;					\
