@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/08 15:46:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2010/12/02 12:35:26 wiz Exp $
 
-SHA1 (Clipboard-0.09.tar.gz) = ff44b197a4a33cac864bb4925e8b9c2e82c2f6e6
-RMD160 (Clipboard-0.09.tar.gz) = 04663e9acada635f2a0e7bfb737b58a2c5e593f4
-Size (Clipboard-0.09.tar.gz) = 15111 bytes
+SHA1 (Clipboard-0.13.tar.gz) = d3ebf93947c438dc7c33b3dcd5d7d380d366a1e4
+RMD160 (Clipboard-0.13.tar.gz) = 01cd96cc0981340ba4544d4aee2f7ab854fe2ec9
+Size (Clipboard-0.13.tar.gz) = 21616 bytes
