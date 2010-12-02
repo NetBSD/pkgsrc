@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9894 2010/12/02 13:26:09 wiz Exp $
+$NetBSD: TODO,v 1.9895 2010/12/02 13:31:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-TTFQuery-1.0.0
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-5.1.1
-	o py-cairo-1.8.10
 	o py-checker-0.8.17
 	o py-cheetah-2.4.2.1 [pkg/43458]
 	o py-cups-1.9.52
