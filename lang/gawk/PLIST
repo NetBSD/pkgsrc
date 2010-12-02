@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/08/08 16:23:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/12/02 14:44:04 wiz Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/igawk
@@ -30,6 +30,7 @@ share/awk/rewind.awk
 share/awk/round.awk
 share/awk/strtonum.awk
 share/awk/zerofile.awk
+share/locale/ast/LC_MESSAGES/gawk.mo
 share/locale/ca/LC_MESSAGES/gawk.mo
 share/locale/da/LC_MESSAGES/gawk.mo
 share/locale/de/LC_MESSAGES/gawk.mo
