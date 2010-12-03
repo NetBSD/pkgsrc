@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2010/09/25 09:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/03 00:22:46 wiz Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 DISTFILES+=	aaa_base-11.3-7.2.${SUSE_ARCH}.rpm
 DISTFILES+=	bash-4.1-8.1.${SUSE_ARCH}.rpm
 DISTFILES+=	coreutils-7.1-10.1.${SUSE_ARCH}.rpm
 DISTFILES+=	cyrus-sasl-2.1.23-11.1.${SUSE_ARCH}.rpm
 DISTFILES+=	findutils-4.4.2-4.1.${SUSE_ARCH}.rpm
+DISTFILES+=	gdbm-1.8.3-373.4.${SUSE_ARCH}.rpm
 DISTFILES+=	glibc-2.11.2-2.4.${SUSE_ARCH}.rpm
 DISTFILES+=	keyutils-libs-1.3-1.9.${SUSE_ARCH}.rpm
+DISTFILES+=	libFLAC8-1.2.1-75.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libacl-2.2.48-8.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libattr-2.4.44-7.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libcap2-2.16-9.1.${SUSE_ARCH}.rpm
@@ -18,15 +21,19 @@ DISTFILES+=	libidn-1.15-4.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libldap-2_4-2-2.4.21-9.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libncurses5-5.7-3.39.${SUSE_ARCH}.rpm
 DISTFILES+=	libncurses6-5.7-3.39.${SUSE_ARCH}.rpm
+DISTFILES+=	libogg0-1.1.4-7.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libpcre0-7.9.0-6.7.${SUSE_ARCH}.rpm
 DISTFILES+=	libreadline6-6.1-8.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libselinux1-2.0.91-4.2.${SUSE_ARCH}.rpm
+DISTFILES+=	libsndfile-1.0.20-7.2.${SUSE_ARCH}.rpm
 DISTFILES+=	libssh2-1-1.2.2_git200911281702-3.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libstdc++45-4.5.0_20100604-1.12.${SUSE_ARCH}.rpm
 DISTFILES+=	libuuid1-2.17.2-5.3.${SUSE_ARCH}.rpm
+DISTFILES+=	libvorbis-1.2.3-5.1.${SUSE_ARCH}.rpm
 DISTFILES+=	mozilla-nspr-4.8.4-4.1.${SUSE_ARCH}.rpm
 DISTFILES+=	mozilla-nss-3.12.6-6.1.${SUSE_ARCH}.rpm
 DISTFILES+=	net-tools-1.60-741.1.${SUSE_ARCH}.rpm
+DISTFILES+=	tcpd-7.6-863.1.${SUSE_ARCH}.rpm
 DISTFILES+=	zlib-1.2.3-141.1.${SUSE_ARCH}.rpm
 
 MAINTAINER=	tonio@NetBSD.org
