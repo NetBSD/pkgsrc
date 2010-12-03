@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 02:18:29 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/03 12:14:29 obache Exp $
 #
 
-DISTNAME=	ibus-table-chinese-1.3.0.20100527
+DISTNAME=	ibus-table-chinese-1.3.0.20101201-Source
+PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -12,12 +13,22 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	# none
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-CONFIGURE_ARGS+=	--enable-extra-phrases
+CHECK_BUILTIN.iconv:=	yes
+.include "../../converters/libiconv/builtin.mk"
+CHECK_BUILTIN.iconv:=	no
+.if ${ICONV_TYPE} != "gnu" || !exists(/usr/bin/iconv)
+BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
+FIND_PREFIX:= ICONV_PREFIX=libiconv
+.include "../../mk/find-prefix.mk"
+.else
+ICONV_PREFIX=/usr
+.endif
 
-.include "../../inputmethod/ibus-table-extraphrase/buildlink3.mk"
+CMAKE_ARGS+=	-DICONV_CMD:PATH=${ICONV_PREFIX}/bin/iconv
+
 .include "../../inputmethod/ibus-table/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
