@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1 2010/12/03 12:14:29 obache Exp $
+
+--- tables/CMakeLists.txt.orig	2010-12-02 23:22:54.000000000 +0000
++++ tables/CMakeLists.txt
+@@ -66,7 +66,7 @@ MACRO(CONVERT_ENCODING workDir outputFil
+ 	ENDIF(_arg STREQUAL "GENERATE_FREQ")
+     ENDFOREACH(_arg ${ARGN})
+ 
+-    EXECUTE_PROCESS(COMMAND ${ICONV_CMD} -f ${fromEncoding} -t UTF8 "${outputFile}.tmp"
++    EXECUTE_PROCESS(COMMAND ${ICONV_CMD} -f ${fromEncoding} -t UTF-8 "${outputFile}.tmp"
+ 	COMMAND sed -e "s/\r//"
+ 	COMMAND ${AWK_CMD} "{print tolower($0)}"
+ 	COMMAND sort
+@@ -91,7 +91,7 @@ ENDMACRO(CONVERT_ENCODING CONVERT_ENCODI
+ #
+ 
+ # Array
+-CONVERT_ENCODING(array array30_27489.utf8 UTF16 array30_27489.txt GENERATE_FREQ)
++CONVERT_ENCODING(array array30_27489.utf8 UTF-16 array30_27489.txt GENERATE_FREQ)
+ ADD_CUSTOM_COMMAND(OUTPUT array/array30.txt
+     COMMAND cat array30.head.common array30.head array30_27489.utf8 array30.tail > array30.txt
+     DEPENDS array/array30.head.common
+@@ -102,7 +102,7 @@ ADD_CUSTOM_COMMAND(OUTPUT array/array30.
+     VERBATIM
+     )
+ 
+-CONVERT_ENCODING(array array30-big.utf8 UTF16 array30_27489.txt array30_ExtB.txt GENERATE_FREQ)
++CONVERT_ENCODING(array array30-big.utf8 UTF-16 array30_27489.txt array30_ExtB.txt GENERATE_FREQ)
+ ADD_CUSTOM_COMMAND(OUTPUT array/array30-big.txt
+     COMMAND cat array30.head.common array30-big.head array30-big.utf8 array30.tail > array30-big.txt
+     DEPENDS array/array30.head.common

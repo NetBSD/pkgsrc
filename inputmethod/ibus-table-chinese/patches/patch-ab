@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1 2010/12/03 12:14:29 obache Exp $
+
+--- tables/wubi-haifeng/convertTable.sh.orig	2010-12-02 23:22:54.000000000 +0000
++++ tables/wubi-haifeng/convertTable.sh
+@@ -18,10 +18,10 @@ function append_freq(){
+ 	ch=`echo $data | $AWK  '{print $3}'`
+ 	freqOrig=`echo $data | $AWK  '{print $1}'`
+ #	echo "lastSeq=$lastSeq seq=$seq ch=$ch freqOrig=$freqOrig"
+-	if [ "$freqOrig" == "" ];then
++	if [ "$freqOrig" = "" ];then
+ 	    freqOrig=0
+ 	fi
+-	if [ "$seq" == "$lastSeq" ];then
++	if [ "$seq" = "$lastSeq" ];then
+ 	    if [ $lastFreq -le $freqOrig ];then
+ 		freq=$((lastFreq-1))
+ 	    else
+@@ -39,7 +39,7 @@ function append_freq(){
+ 	fi
+ 	count=$((count+1))
+ 	countMod=$((count % 1000))
+-	if [ "$countMod" == "0" ];then
++	if [ "$countMod" = "0" ];then
+ 	    echo -e "$count\telements processed" > /dev/stderr
+ 	fi
+     done
+@@ -48,7 +48,7 @@ function append_freq(){
+ 
+ function parse(){
+     baseFreq=100;
+-    if [ "$1" == "-b" ];then
++    if [ "$1" = "-b" ];then
+ 	baseFreq=$2
+ 	shift 2
+     fi

@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 02:18:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/03 12:14:29 obache Exp $
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/RELEASE-NOTES.txt
+share/ibus-table/icons/array30-big.png
+share/ibus-table/icons/array30.png
 share/ibus-table/icons/cangjie-big.png
 share/ibus-table/icons/cangjie3.svg
 share/ibus-table/icons/cangjie5.svg
@@ -14,21 +21,19 @@ share/ibus-table/icons/quick5.png
 share/ibus-table/icons/scj6.svg
 share/ibus-table/icons/stroke5.png
 share/ibus-table/icons/wu.png
-share/ibus-table/icons/wubi86.svg
-share/ibus-table/icons/xinhua.png
+share/ibus-table/icons/wubi-haifeng86.svg
+share/ibus-table/icons/wubi-jidian86.svg
 share/ibus-table/icons/yong.png
-share/ibus-table/icons/zhengma.svg
-share/ibus-table/icons/zhuyin-big.png
-share/ibus-table/icons/zhuyin.png
-share/ibus-table/icons/ziranma.png
+share/ibus-table/tables/array30-big.db
+share/ibus-table/tables/array30.db
 share/ibus-table/tables/cangjie-big.db
 share/ibus-table/tables/cangjie3.db
 share/ibus-table/tables/cangjie5.db
 share/ibus-table/tables/cantonese.db
 share/ibus-table/tables/cantonhk.db
 share/ibus-table/tables/easy-big.db
+share/ibus-table/tables/erbi-qs.db
 share/ibus-table/tables/erbi.db
-share/ibus-table/tables/erbi_qs.db
 share/ibus-table/tables/jyutping.db
 share/ibus-table/tables/quick-classic.db
 share/ibus-table/tables/quick3.db
@@ -36,10 +41,6 @@ share/ibus-table/tables/quick5.db
 share/ibus-table/tables/scj6.db
 share/ibus-table/tables/stroke5.db
 share/ibus-table/tables/wu.db
-share/ibus-table/tables/wubi86.db
-share/ibus-table/tables/xinhua-ibus.db
-share/ibus-table/tables/yong-ibus.db
-share/ibus-table/tables/zhengma.db
-share/ibus-table/tables/zhuyin-big.db
-share/ibus-table/tables/zhuyin.db
-share/ibus-table/tables/ziranma.db
+share/ibus-table/tables/wubi-haifeng86.db
+share/ibus-table/tables/wubi-jidian86.db
+share/ibus-table/tables/yong.db
