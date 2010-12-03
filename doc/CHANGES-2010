@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4160 2010/12/03 10:17:41 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4161 2010/12/03 12:14:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5867,3 +5867,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ibus-input-pad to 0.1.4 [obache 2010-12-03]
 	Updated inputmethod/ibus-chewing to 1.3.9.2 [obache 2010-12-03]
 	Updated graphics/exiv2 to 0.21 [adam 2010-12-03]
+	Updated inputmethod/ibus-table-chinese to 1.3.0.20101201 [obache 2010-12-03]
