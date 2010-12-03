@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4150 2010/12/03 00:18:29 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4151 2010/12/03 00:19:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5857,3 +5857,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/pulseaudio to 0.9.21nb6 [wiz 2010-12-02]
 	Updated emulators/suse113_libpng to 11.3nb1 [wiz 2010-12-03]
 	Updated security/openssl to 0.9.8q [taca 2010-12-03]
+	Updated emulators/suse113_alsa to 11.3nb1 [wiz 2010-12-03]
