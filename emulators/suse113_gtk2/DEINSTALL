@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2010/09/24 01:27:58 chs Exp $
+# $NetBSD: DEINSTALL,v 1.2 2010/12/03 00:27:05 wiz Exp $
 #
 # Remove gtk/pango module configuration.
 #
@@ -12,5 +12,6 @@ DEINSTALL)
         ${RM} -f ${GNOME_ETCDIR}/gtk-2.0/gdk-pixbuf.loaders
         ${RM} -f ${GNOME_ETCDIR}/pango/pango.modules
 	${RM} -rf ${PKG_PREFIX}/@EMULSUBDIR@/var/cache/gio-2.0
+	${RM} -f ${PKG_PREFIX}/@EMULSUBDIR@/var/lib/dbus/machine-id
 	;;
 esac
