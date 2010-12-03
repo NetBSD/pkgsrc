@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4167 2010/12/03 20:14:37 tez Exp $
+$NetBSD: CHANGES-2010,v 1.4168 2010/12/03 21:22:08 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5881,3 +5881,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/intercal to 0.29 [drochner 2010-12-03]
 	Updated textproc/mdoclint to 1.12 [wiz 2010-12-03]
 	Updated security/mit-krb5 to 1.4.2nb11 [tez 2010-12-03]
+	Updated mail/dovecot2 to 2.0.8 [ghen 2010-12-03]
