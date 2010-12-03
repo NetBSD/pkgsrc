@@ -1,19 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+$NetBSD: patch-ab,v 1.2 2010/12/03 21:21:10 ghen Exp $
 
---- doc/example-config/dovecot.conf.orig	2010-07-23 19:37:44.000000000 +0000
+--- doc/example-config/dovecot.conf.orig	2010-11-10 16:09:10.000000000 +0000
 +++ doc/example-config/dovecot.conf
-@@ -12,9 +12,6 @@
+@@ -12,12 +12,9 @@
  # Default values are shown for each setting, it's not required to uncomment
  # those. These are exceptions to this though: No sections (e.g. namespace {})
  # or plugin settings are added by default, they're listed only as examples.
 -# Paths are also just examples with the real defaults being based on configure
 -# options. The paths listed here are for configure --prefix=/usr
 -# --sysconfdir=/etc --localstatedir=/var
- 
- # Most of the actual configuration gets included below. The filenames are
- # first sorted by their ASCII value and parsed in that order. The 00-prefixes
-@@ -22,7 +19,7 @@
- !include conf.d/*.conf
  
  # Protocols we want to be serving.
 -#protocols = imap pop3 lmtp
