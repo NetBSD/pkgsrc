@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/11/26 19:16:02 shattered Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/12/03 22:22:18 abs Exp $
 lib/munin/plugins/acpi
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -112,7 +112,7 @@ lib/munin/plugins/squid_requests
 lib/munin/plugins/squid_traffic
 lib/munin/plugins/surfboard
 ${PLIST.not-sunos}lib/munin/plugins/swap
-${PLIST.not-sunos}lib/munin/plugins/swap_size
+${PLIST.netbsd}lib/munin/plugins/swap_size
 lib/munin/plugins/sybase_space
 ${PLIST.sunos}lib/munin/plugins/temperature
 ${PLIST.not-sunos}lib/munin/plugins/uptime
