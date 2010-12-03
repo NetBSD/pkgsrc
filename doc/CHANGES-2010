@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4163 2010/12/03 12:23:37 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4164 2010/12/03 12:31:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5870,3 +5870,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/ibus-table-chinese to 1.3.0.20101201 [obache 2010-12-03]
 	Removed inputmethod/ibus-table-array30 successor inputmethod/ibus-table-chinses [obache 2010-12-03]
 	Updated textproc/texi2html to 5.0nb1 [wiz 2010-12-03]
+	Removed inputmethod/ibus-table-extraphrase [obache 2010-12-03]
