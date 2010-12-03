@@ -1,5 +1,5 @@
 .\"	$OpenBSD: mdoclint.1,v 1.7 2009/04/13 19:06:38 jmc Exp $
-.\" $NetBSD: mdoclint.1,v 1.3 2010/12/03 00:33:44 wiz Exp $
+.\" $NetBSD: mdoclint.1,v 1.4 2010/12/03 09:22:08 wiz Exp $
 .\"
 .\" Copyright (c) 2001-2009 Thomas Klausner
 .\" All rights reserved.
@@ -80,10 +80,8 @@ Otherwise, the replacements are
 .Dq \e*[Gt] ,
 and
 .Dq \e*[Am] .
-This was only necessary while using
-.Ic nroff -mdoc2html
-and is now obsolete with
-.Xr mandoc 1 .
+This option is off by default,
+as these characters no longer pose any problems.
 .It Fl h
 Display usage.
 .It Fl m
