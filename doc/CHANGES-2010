@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4164 2010/12/03 12:31:11 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4165 2010/12/03 18:38:49 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5871,3 +5871,11 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed inputmethod/ibus-table-array30 successor inputmethod/ibus-table-chinses [obache 2010-12-03]
 	Updated textproc/texi2html to 5.0nb1 [wiz 2010-12-03]
 	Removed inputmethod/ibus-table-extraphrase [obache 2010-12-03]
+	Updated multimedia/py-gstreamer0.10 to 0.10.20 [drochner 2010-12-03]
+	Updated multimedia/gst-plugins0.10-good to 0.10.26 [drochner 2010-12-03]
+	Updated multimedia/gst-plugins0.10-base to 0.10.31 [drochner 2010-12-03]
+	Updated multimedia/gstreamer0.10 to 0.10.31 [drochner 2010-12-03]
+	Updated graphics/gthumb to 2.12.1 [drochner 2010-12-03]
+	Updated print/lilypond to 2.12.3 [drochner 2010-12-03]
+	Updated editors/lyx to 1.6.8 [drochner 2010-12-03]
+	Updated lang/intercal to 0.29 [drochner 2010-12-03]
