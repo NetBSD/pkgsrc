@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.208 2010/05/02 18:32:29 wiz Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.209 2010/12/03 18:59:20 abs Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -356,7 +356,7 @@ BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LIBS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
-BUILDLINK_LIBDIRS.${_pkg_}?=	lib${LIBABISUFFIX}
+BUILDLINK_LIBDIRS.${_pkg_}?=	lib
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 BUILDLINK_RPATHDIRS.${_pkg_}?=	${BUILDLINK_LIBDIRS.${_pkg_}}
 .  else
@@ -527,7 +527,7 @@ buildlink-directories:
 	${RUN}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
 .endif
 	${RUN}${MKDIR} ${BUILDLINK_DIR}/include
-	${RUN}${MKDIR} ${BUILDLINK_DIR}/lib${LIBABISUFFIX}
+	${RUN}${MKDIR} ${BUILDLINK_DIR}/lib
 
 # The following variables are all optionally defined and control which
 # package files are symlinked into ${BUILDLINK_DIR} and how their names
