@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4166 2010/12/03 20:06:52 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4167 2010/12/03 20:14:37 tez Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/lyx to 1.6.8 [drochner 2010-12-03]
 	Updated lang/intercal to 0.29 [drochner 2010-12-03]
 	Updated textproc/mdoclint to 1.12 [wiz 2010-12-03]
+	Updated security/mit-krb5 to 1.4.2nb11 [tez 2010-12-03]
