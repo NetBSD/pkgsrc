@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4155 2010/12/03 05:00:48 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.4156 2010/12/03 05:27:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5862,3 +5862,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/suse113_gtk2 to 11.3nb1 [wiz 2010-12-03]
 	Updated textproc/mdoclint to 1.11 [wiz 2010-12-03]
 	Updated www/ikiwiki to 3.20101201 [schmonz 2010-12-03]
+	Updated graphics/clutter to 1.4.2 [obache 2010-12-03]
