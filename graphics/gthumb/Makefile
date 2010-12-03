@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2010/11/15 22:57:19 abs Exp $
+# $NetBSD: Makefile,v 1.54 2010/12/03 12:51:34 drochner Exp $
 
-DISTNAME=		gthumb-2.10.12
-PKGREVISION=		3
+DISTNAME=		gthumb-2.12.1
 CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.12/}
 
 MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://gthumb.sourceforge.net/
@@ -15,31 +14,36 @@ USE_TOOLS+=		intltool msgfmt pkg-config gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 GCONF_SCHEMAS+=	gthumb.schemas
-BUILDLINK_API_DEPENDS.libglade+=   libglade>=2.4.0
+GCONF_SCHEMAS+=	gthumb-comments.schemas gthumb-image-viewer.schemas
+GCONF_SCHEMAS+=	gthumb-importer.schemas gthumb-pixbuf-savers.schemas
+GCONF_SCHEMAS+=	gthumb-slideshow.schemas gthumb_convert_format.schemas
+GCONF_SCHEMAS+=	gthumb_crop_options.schemas gthumb_image_print.schemas
+GCONF_SCHEMAS+=	gthumb_photo_importer.schemas gthumb_rename_series.schemas
+GCONF_SCHEMAS+=	gthumb_resize_images.schemas gthumb_resize_options.schemas
+GCONF_SCHEMAS+=	gthumb_webalbums.schemas
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
+# incompatible API changes in 0.21
+BUILDLINK_API_DEPENDS.exiv2+= exiv2<0.21
+.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+#.include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
+#.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
