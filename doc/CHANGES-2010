@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4151 2010/12/03 00:19:28 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4152 2010/12/03 00:22:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5858,3 +5858,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/suse113_libpng to 11.3nb1 [wiz 2010-12-03]
 	Updated security/openssl to 0.9.8q [taca 2010-12-03]
 	Updated emulators/suse113_alsa to 11.3nb1 [wiz 2010-12-03]
+	Updated emulators/suse113_base to 11.3nb1 [wiz 2010-12-03]
