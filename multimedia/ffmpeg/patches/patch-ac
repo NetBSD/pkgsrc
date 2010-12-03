@@ -1,10 +1,20 @@
-$NetBSD: patch-ac,v 1.7 2010/03/14 21:44:49 tron Exp $
+$NetBSD: patch-ac,v 1.8 2010/12/03 12:22:19 wiz Exp $
 
+Avoid using obsolete texi2html command line flags.
 Fix installation using the "install-sh" the package.
 
---- Makefile.orig	Fri May 29 00:13:17 2009
-+++ Makefile	Sun Mar 14 22:35:24 2010
-@@ -93,15 +93,15 @@
+--- Makefile.orig	2009-05-28 22:13:17.000000000 +0000
++++ Makefile
+@@ -80,7 +80,7 @@ documentation: $(addprefix doc/, ffmpeg-
+                                  ffplay-doc.html general.html $(ALLMANPAGES))
+ 
+ doc/%.html: doc/%.texi
+-	texi2html -monolithic -number $<
++	texi2html -monolithic -number-sections $<
+ 	mv $(@F) $@
+ 
+ doc/%.pod: doc/%-doc.texi
+@@ -93,15 +93,15 @@ install: $(INSTALL_TARGETS-yes)
  
  install-progs: $(PROGS) $(INSTALL_PROGS_TARGETS-yes)
  	install -d "$(BINDIR)"
