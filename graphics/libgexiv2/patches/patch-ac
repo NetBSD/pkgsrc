@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2010/12/03 16:51:04 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2010/12/03 20:34:32 adam Exp $
 
 --- gexiv2/gexiv2-metadata-exif.cpp.orig	2010-09-10 21:52:54.000000000 +0000
 +++ gexiv2/gexiv2-metadata-exif.cpp
@@ -94,3 +94,21 @@ $NetBSD: patch-ac,v 1.1 2010/12/03 16:51:04 drochner Exp $
              Exiv2::Rational r = it->toRational();
              *nom = r.first;
              *den = r.second;
+@@ -238,7 +251,7 @@ const gchar* gexiv2_metadata_get_exif_ta
+     Exiv2::ExifKey key(tag);
+     
+     try {
+-        return Exiv2::ExifTags::tagLabel (key.tag (), key.ifdId ());
++        return key.tagLabel().c_str();
+     } catch (Exiv2::Error& e) {
+         LOG_ERROR(e);
+     }
+@@ -252,7 +265,7 @@ const gchar* gexiv2_metadata_get_exif_ta
+     Exiv2::ExifKey key(tag);
+     
+     try {
+-        return Exiv2::ExifTags::tagDesc (key.tag (), key.ifdId ());
++        return key.tagDesc().c_str();
+     } catch (Exiv2::Error& e) {
+         LOG_ERROR(e);
+     }
