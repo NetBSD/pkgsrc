@@ -86,3 +86,5 @@ Pullup ticket #3290 - requested by taca
 net/bind97 security update
 Pullup ticket #3291 - requested by taca
 net/bind96 security update
+Pullup ticket #3292 - requested by taca
+pkgsrc/security/openssl security update
