@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9912 2010/12/02 18:03:30 adam Exp $
+$NetBSD: TODO,v 1.9913 2010/12/03 00:59:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -633,7 +633,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fotoxx-10.11
+	o fotoxx-10.12
 	o frama-c-20100401
 	o freefont-20100919
 	o freeglut-2.4.0
@@ -734,15 +734,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.10
 	o gss-1.0.1
 	o gssdp-0.9.0
-	o gst-plugins0.10-base-0.10.30.4
-	o gstreamer0.10-0.10.30.2
+	o gst-plugins0.10-base-0.10.31
+	o gst-plugins0.10-good-0.10.26
+	o gstreamer0.10-0.10.31
 	o gtar-1.25
 	o gtar-base-1.25
 	o gthumb-2.12.1
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.2
-	o gtk2+-2.22.1
 	o gtkglarea-2.0.1
 	o gtkmm-2.22.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -820,6 +820,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kdbg-2.2.2
+	o kde4-4.5.4
 	o kdrill-6.5
 	o kid3-1.5
 	o kismet-2010.07r1
@@ -1035,6 +1036,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opal-3.8.0 [pkg/42942]
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.12.1
+	o opencv-2.1
 	o openexr-1.7.0
 	o opengrok-0.9
 	o openh323-1.19.1
@@ -1061,7 +1063,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o paprefs-0.9.8
-	o parallel-20101113
+	o parallel-20101202
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.1
@@ -1316,7 +1318,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
-	o viewvc-1.1.7
+	o viewvc-1.1.8
 	o vifm-0.5
 	o vile-9.8
 	o vim-7.3
@@ -1450,7 +1452,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmmsctrl-1.8
 	o xmodmap-1.0.5
 	o xmon-1.5.6
-	o xmp-3.2.0
+	o xmp-3.3.0
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-docs-1.5
