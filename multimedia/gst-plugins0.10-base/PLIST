@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.21 2010/07/22 12:57:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/12/03 18:15:44 drochner Exp $
+bin/gst-discoverer-0.10
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
@@ -36,7 +37,10 @@ include/gstreamer-0.10/gst/interfaces/tunernorm.h
 include/gstreamer-0.10/gst/interfaces/videoorientation.h
 include/gstreamer-0.10/gst/interfaces/xoverlay.h
 include/gstreamer-0.10/gst/netbuffer/gstnetbuffer.h
+include/gstreamer-0.10/gst/pbutils/codec-utils.h
 include/gstreamer-0.10/gst/pbutils/descriptions.h
+include/gstreamer-0.10/gst/pbutils/gstdiscoverer.h
+include/gstreamer-0.10/gst/pbutils/gstpluginsbaseversion.h
 include/gstreamer-0.10/gst/pbutils/install-plugins.h
 include/gstreamer-0.10/gst/pbutils/missing-plugins.h
 include/gstreamer-0.10/gst/pbutils/pbutils-enumtypes.h
@@ -114,6 +118,7 @@ lib/pkgconfig/gstreamer-sdp-0.10.pc
 lib/pkgconfig/gstreamer-tag-0.10.pc
 lib/pkgconfig/gstreamer-video-0.10.pc
 man/man1/gst-visualise-0.10.1
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/annotation-glossary.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-deprecated.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-full.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/compiling.html
@@ -136,6 +141,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstb
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcddabasesrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcolorbalance.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcolorbalancechannel.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstdiscoverer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstfft.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstfftf32.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstfftf64.html
@@ -149,6 +155,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstm
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstnavigation.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstnetbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstpbutils.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstpbutilscodecutils.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstpbutilsdescriptions.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstpbutilsinstallplugins.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstpbutilsmissingplugins.html
@@ -212,6 +219,9 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/ch03.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp2
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-adder.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsamixer.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasink.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-appsink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-appsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audioconvert.html
@@ -222,17 +232,13 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugin
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-clockoverlay.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-decodebin.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-decodebin2.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-alsamixer.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-alsasink.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-alsasrc.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-gdpdepay.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-gdppay.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-giosink.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-giosrc.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-giostreamsink.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-giostreamsrc.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-element-vorbisdec.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-ffmpegcolorspace.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdpdepay.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdppay.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giosink.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giosrc.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giostreamsink.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giostreamsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-multifdsink.html
@@ -286,6 +292,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugin
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videoscale.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videotestsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-volume.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisdec.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisenc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisparse.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbistag.html
@@ -305,11 +312,13 @@ share/locale/ca/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/cs/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/da/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/de/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/el/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/en_GB/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/es/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/eu/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/fi/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/fr/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/gl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/hu/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/id/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/it/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -321,6 +330,7 @@ share/locale/nl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/or/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/pl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/pt_BR/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/ro/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/ru/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sk/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sl/LC_MESSAGES/gst-plugins-base-0.10.mo
