@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2010/11/21 13:20:54 obache Exp $
+$NetBSD: distinfo,v 1.15 2010/12/03 05:27:30 obache Exp $
 
-SHA1 (clutter-1.4.0.tar.gz) = 5156fc964c76363fc4c631635e8cab3a1915dc2c
-RMD160 (clutter-1.4.0.tar.gz) = e3a454a5291bdee730fa4c651c00ca2de9bee32c
-Size (clutter-1.4.0.tar.gz) = 5465662 bytes
+SHA1 (clutter-1.4.2.tar.gz) = acbffd2688b8c417c7f90bab1cf7bba420501aa4
+RMD160 (clutter-1.4.2.tar.gz) = 771419cc9d8756b85c7c90ca7b1ed8b19962f6af
+Size (clutter-1.4.2.tar.gz) = 5487121 bytes
