@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2005/01/12 16:08:46 adam Exp $
+$NetBSD: patch-ab,v 1.3 2010/12/03 18:49:23 drochner Exp $
 
---- src/Makefile.in.orig	2004-06-14 08:00:16.000000000 +0000
+--- src/Makefile.in.orig	2010-09-20 17:23:27.000000000 +0000
 +++ src/Makefile.in
-@@ -416,7 +416,7 @@ install-data-local:
+@@ -226,7 +226,7 @@ ltris_SOURCES = sdl.c menu.c item.c mana
+ list.c tools.c config.c chart.c tetris.c bowl.c shrapnells.c cpu.c hint.c \
+ parser.c
+ 
+-ltris_LDADD = @mixer_flag@
++ltris_LDADD = @mixer_flag@ @LTLIBINTL@
+ EXTRA_DIST = sdl.c menu.c item.c manager.c value.c main.c audio.c event.c \
+ list.c tools.c config.c chart.c tetris.c bowl.c shrapnells.c cpu.c \
+ sdl.h menu.h item.h manager.h value.h audio.h event.h list.h tools.h \
+@@ -612,7 +612,7 @@ install-data-local:
  	$(INSTALL_DATA) figures $(DESTDIR)$(inst_dir)/figures
  	$(mkinstalldirs) $(DESTDIR)$(hi_dir)
  	if ! test -f $(DESTDIR)$(hi_dir)/ltris.hscr; then \
