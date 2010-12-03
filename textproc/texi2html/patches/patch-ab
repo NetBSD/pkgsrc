@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2010/12/03 12:23:26 wiz Exp $
+
+Don't install included libintl-perl, use pkgsrc one.
+
+--- Makefile.in.orig	2010-06-30 22:02:28.000000000 +0000
++++ Makefile.in
+@@ -1080,14 +1080,6 @@ distclean-local:
+ install-data-local: i18n
+ 	$(MKDIR_P) $(DESTDIR)$(pkgdatadir)/i18n
+ 	$(INSTALL_DATA) i18n/*.thl  $(DESTDIR)$(pkgdatadir)/i18n
+-	$(MKDIR_P) $(DESTDIR)$(pkgdatadir)/lib/libintl-perl/lib/Locale/Recode \
+-	  $(DESTDIR)$(pkgdatadir)/lib/libintl-perl/lib/Locale/RecodeData
+-	$(INSTALL_DATA) $(srcdir)/lib/libintl-perl/lib/Locale/*.pm \
+-	  $(DESTDIR)$(pkgdatadir)/lib/libintl-perl/lib/Locale
+-	$(INSTALL_DATA) $(srcdir)/lib/libintl-perl/lib/Locale/Recode/*.pm \
+-	  $(DESTDIR)$(pkgdatadir)/lib/libintl-perl/lib/Locale/Recode
+-	$(INSTALL_DATA) $(srcdir)/lib/libintl-perl/lib/Locale/RecodeData/*.pm \
+-	  $(DESTDIR)$(pkgdatadir)/lib/libintl-perl/lib/Locale/RecodeData
+ 	$(MKDIR_P) $(DESTDIR)$(pkgdatadir)/lib/Unicode-EastAsianWidth/lib/Unicode
+ 	$(INSTALL_DATA) $(srcdir)/lib/Unicode-EastAsianWidth/lib/Unicode/EastAsianWidth.pm \
+ 	 $(DESTDIR)$(pkgdatadir)/lib/Unicode-EastAsianWidth/lib/Unicode
