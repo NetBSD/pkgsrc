@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4165 2010/12/03 18:38:49 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.4166 2010/12/03 20:06:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5879,3 +5879,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/lilypond to 2.12.3 [drochner 2010-12-03]
 	Updated editors/lyx to 1.6.8 [drochner 2010-12-03]
 	Updated lang/intercal to 0.29 [drochner 2010-12-03]
+	Updated textproc/mdoclint to 1.12 [wiz 2010-12-03]
