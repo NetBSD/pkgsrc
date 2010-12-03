@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4168 2010/12/03 21:22:08 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.4169 2010/12/03 23:44:31 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5882,3 +5882,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/mdoclint to 1.12 [wiz 2010-12-03]
 	Updated security/mit-krb5 to 1.4.2nb11 [tez 2010-12-03]
 	Updated mail/dovecot2 to 2.0.8 [ghen 2010-12-03]
+	Updated net/samba to 3.0.37nb5 [jmcneill 2010-12-03]
+	Updated net/samba33 to 3.3.14nb1 [jmcneill 2010-12-03]
