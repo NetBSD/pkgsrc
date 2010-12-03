@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2010/09/24 01:27:58 chs Exp $
+# $NetBSD: INSTALL,v 1.2 2010/12/03 00:27:05 wiz Exp $
 #
 # Initialize gtk/pango module configuration.
 #
@@ -13,5 +13,6 @@ POST-INSTALL)
         ${GNOME_BINDIR}/gdk-pixbuf-query-loaders@BINSUFFIX@ > ${GNOME_ETCDIR}/gtk-2.0/gdk-pixbuf.loaders
         ${GNOME_BINDIR}/pango-querymodules@BINSUFFIX@ > ${GNOME_ETCDIR}/pango/pango.modules
 	PATH=${PKG_PREFIX}/@EMULSUBDIR@/bin ROOT=${PKG_PREFIX}/@EMULSUBDIR@ bash ${SUSECONFIG} --module glib2
+	${LN} -s /../var/db/dbus/machine-id ${PKG_PREFIX}/@EMULSUBDIR@/var/lib/dbus/machine-id
 	;;
 esac

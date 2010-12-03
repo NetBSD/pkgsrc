@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:27:58 chs Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/03 00:27:05 wiz Exp $
 
 DISTNAME=	suse_gtk2-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 DISTFILES=	cairo-1.8.10-3.1.${SUSE_ARCH}.rpm			\
 		dbus-1-1.2.24-1.18.${SUSE_ARCH}.rpm			\
@@ -14,6 +15,7 @@ DISTFILES=	cairo-1.8.10-3.1.${SUSE_ARCH}.rpm			\
 		libgmodule-2_0-0-2.24.1-2.5.${SUSE_ARCH}.rpm		\
 		libgobject-2_0-0-2.24.1-2.5.${SUSE_ARCH}.rpm		\
 		libgthread-2_0-0-2.24.1-2.5.${SUSE_ARCH}.rpm		\
+		libpulse0-0.9.21-9.2.${SUSE_ARCH}.rpm			\
 		orbit2-2.14.18-2.8.${SUSE_ARCH}.rpm   			\
 		pango-1.28.0-2.7.${SUSE_ARCH}.rpm
 

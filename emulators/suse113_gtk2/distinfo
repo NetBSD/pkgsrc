@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:27:58 chs Exp $
+$NetBSD: distinfo,v 1.2 2010/12/03 00:27:05 wiz Exp $
 
 SHA1 (suse113/i586/cairo-1.8.10-3.1.i586.rpm) = bfee95d99a32cdd85e8863a0a6e3b24bcad88c4b
 RMD160 (suse113/i586/cairo-1.8.10-3.1.i586.rpm) = 57658933228536b1f3855c52f2e026c9d45a0eca
@@ -36,6 +36,9 @@ Size (suse113/i586/libgobject-2_0-0-2.24.1-2.5.i586.rpm) = 120199 bytes
 SHA1 (suse113/i586/libgthread-2_0-0-2.24.1-2.5.i586.rpm) = f80621c3f84597b0f9bdcd6f22cc65863b16add0
 RMD160 (suse113/i586/libgthread-2_0-0-2.24.1-2.5.i586.rpm) = 61cd55bd2656484382c9f130c52338a9f1bee417
 Size (suse113/i586/libgthread-2_0-0-2.24.1-2.5.i586.rpm) = 30917 bytes
+SHA1 (suse113/i586/libpulse0-0.9.21-9.2.i586.rpm) = 2121304010185ce02271079710c171b9db56c3a1
+RMD160 (suse113/i586/libpulse0-0.9.21-9.2.i586.rpm) = fa047ba0669033fec727a910bb8df6be9a0453cc
+Size (suse113/i586/libpulse0-0.9.21-9.2.i586.rpm) = 199518 bytes
 SHA1 (suse113/i586/orbit2-2.14.18-2.8.i586.rpm) = 29ba6173936256f938563529945a6b9f67cd5ab8
 RMD160 (suse113/i586/orbit2-2.14.18-2.8.i586.rpm) = 5203c84e2ce5af80468dc78249aad541688e99fe
 Size (suse113/i586/orbit2-2.14.18-2.8.i586.rpm) = 160384 bytes
@@ -78,6 +81,9 @@ Size (suse113/x86_64/libgobject-2_0-0-2.24.1-2.5.x86_64.rpm) = 126319 bytes
 SHA1 (suse113/x86_64/libgthread-2_0-0-2.24.1-2.5.x86_64.rpm) = 5d8047facb59fd625df6dd746374b1edafaba3b3
 RMD160 (suse113/x86_64/libgthread-2_0-0-2.24.1-2.5.x86_64.rpm) = 354b8cd19e780c10c28444d8f96ad9cc6667f807
 Size (suse113/x86_64/libgthread-2_0-0-2.24.1-2.5.x86_64.rpm) = 31187 bytes
+SHA1 (suse113/x86_64/libpulse0-0.9.21-9.2.x86_64.rpm) = 2215f8947b0b8abb7a56ede9f8b90d9d1de38b16
+RMD160 (suse113/x86_64/libpulse0-0.9.21-9.2.x86_64.rpm) = c481628a6c08efe6b2eaf3889b673bcf9c287b3b
+Size (suse113/x86_64/libpulse0-0.9.21-9.2.x86_64.rpm) = 208684 bytes
 SHA1 (suse113/x86_64/orbit2-2.14.18-2.8.x86_64.rpm) = 40eb44e631c7b8d2864e7382a25ffe2f6b31dba6
 RMD160 (suse113/x86_64/orbit2-2.14.18-2.8.x86_64.rpm) = e2e5d65397cdef21c23b0e358bed98ef1b1e7799
 Size (suse113/x86_64/orbit2-2.14.18-2.8.x86_64.rpm) = 165243 bytes
