@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2010/02/16 14:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/12/03 09:55:33 abs Exp $
 #
 
-DISTNAME=	xapian-core-1.0.18
+DISTNAME=	xapian-core-1.2.2
 PKGNAME=	${DISTNAME:S/-core//}
 CATEGORIES=	textproc
-MASTER_SITES=	http://oligarchy.co.uk/xapian/1.0.18/
+MASTER_SITES=	http://oligarchy.co.uk/xapian/1.2.2/
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://xapian.org/
@@ -19,9 +19,16 @@ USE_LANGUAGES=	c c++
 
 TEST_TARGET=	check
 
+.include "../../mk/bsd.prefs.mk"
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xapian
+.if ${OPSYS} == "Darwin"
 PKG_SUPPORTED_OPTIONS=	xapian-flint-backend xapian-quartz-backend
 PKG_SUGGESTED_OPTIONS=	xapian-flint-backend xapian-quartz-backend
+.else
+PKG_SUPPORTED_OPTIONS=	xapian-flint-backend
+PKG_SUGGESTED_OPTIONS=	xapian-flint-backend
+.endif
 
 .include "../../mk/bsd.options.mk"
 
