@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/08/21 16:35:46 seb Exp $
+# $NetBSD: Makefile,v 1.12 2010/12/03 20:24:58 abs Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S:-server-:_:}
 PKGNAME=	munin-server-1.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 
@@ -18,6 +18,12 @@ DEPENDS+=	p5-HTML-Template>=0:../../www/p5-HTML-Template
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 DEPENDS+=	rrdtool>=1.2:../../databases/rrdtool
 DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "modular"
+DEPENDS+=	modular-xorg-fonts>0:../../meta-pkgs/modular-xorg-fonts
+.endif
 
 USE_TOOLS+=	gmake perl:run
 USE_PKGINSTALL=	YES
@@ -78,8 +84,8 @@ FILES_SUBST+=	STATEDIR=${STATEDIR}
 
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:Q}
 
-MESSAGE_SUBST+=	MUNIN_USER=${MUNIN_USER:Q}
-MESSAGE_SUBST+=	VARBASE=${VARBASE:Q}
+MESSAGE_SUBST+=	MUNIN_USER=${MUNIN_USER}
+MESSAGE_SUBST+=	VARBASE=${VARBASE}
 
 EGDIR=		${PREFIX}/share/examples/munin
 TMPL_EGDIR=	${EGDIR}/templates
