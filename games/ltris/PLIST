@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/12/03 18:49:23 drochner Exp $
 bin/ltris
+share/applications/ltris.desktop
+share/icons/ltris48.gif
+share/locale/de/LC_MESSAGES/ltris.mo
+share/locale/fr/LC_MESSAGES/ltris.mo
+share/locale/it/LC_MESSAGES/ltris.mo
+share/locale/pt/LC_MESSAGES/ltris.mo
+share/locale/sv/LC_MESSAGES/ltris.mo
+share/locale/tr/LC_MESSAGES/ltris.mo
 share/ltris/figures
 share/ltris/gfx/back0.bmp
 share/ltris/gfx/back1.bmp
