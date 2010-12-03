@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/11/09 15:35:47 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/12/03 21:21:10 ghen Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -326,6 +326,7 @@ lib/dovecot/dovecot-config
 lib/dovecot/lib01_acl_plugin.la
 lib/dovecot/lib02_imap_acl_plugin.la
 lib/dovecot/lib02_lazy_expunge_plugin.la
+lib/dovecot/lib05_snarf_plugin.la
 lib/dovecot/lib10_quota_plugin.la
 lib/dovecot/lib11_imap_quota_plugin.la
 lib/dovecot/lib11_trash_plugin.la
@@ -335,7 +336,6 @@ lib/dovecot/lib20_expire_plugin.la
 lib/dovecot/lib20_fts_plugin.la
 lib/dovecot/lib20_listescape_plugin.la
 lib/dovecot/lib20_mail_log_plugin.la
-lib/dovecot/lib20_mbox_snarf_plugin.la
 lib/dovecot/lib20_virtual_plugin.la
 lib/dovecot/lib20_zlib_plugin.la
 lib/dovecot/lib21_fts_squat_plugin.la
@@ -429,7 +429,6 @@ share/doc/dovecot/wiki/BasicConfiguration.txt
 share/doc/dovecot/wiki/Chrooting.txt
 share/doc/dovecot/wiki/Clients.NegativeUIDs.txt
 share/doc/dovecot/wiki/Clients.txt
-share/doc/dovecot/wiki/CommandLine.txt
 share/doc/dovecot/wiki/CompilingSource.txt
 share/doc/dovecot/wiki/Debugging.Authentication.txt
 share/doc/dovecot/wiki/Debugging.ProcessTracing.txt
@@ -438,6 +437,7 @@ share/doc/dovecot/wiki/Debugging.Thunderbird.txt
 share/doc/dovecot/wiki/Design.Arrays.txt
 share/doc/dovecot/wiki/Design.AuthProcess.txt
 share/doc/dovecot/wiki/Design.Buffers.txt
+share/doc/dovecot/wiki/Design.Dsync.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
 share/doc/dovecot/wiki/Design.Indexes.MailIndexApi.txt
 share/doc/dovecot/wiki/Design.Indexes.MainIndex.txt
@@ -463,6 +463,7 @@ share/doc/dovecot/wiki/Design.Storage.MailboxList.txt
 share/doc/dovecot/wiki/Design.Storage.Plugins.txt
 share/doc/dovecot/wiki/Design.Strings.txt
 share/doc/dovecot/wiki/Design.txt
+share/doc/dovecot/wiki/Director.txt
 share/doc/dovecot/wiki/DomainLost.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
@@ -474,25 +475,24 @@ share/doc/dovecot/wiki/HowTo.Rootless.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
 share/doc/dovecot/wiki/HowTo.txt
 share/doc/dovecot/wiki/IndexFiles.txt
-share/doc/dovecot/wiki/InetdInstall.txt
 share/doc/dovecot/wiki/Iptables.txt
 share/doc/dovecot/wiki/LDA.Exim.txt
 share/doc/dovecot/wiki/LDA.Indexing.txt
 share/doc/dovecot/wiki/LDA.Postfix.txt
 share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
-share/doc/dovecot/wiki/LDA.Sieve.CMU.txt
 share/doc/dovecot/wiki/LDA.Sieve.Dovecot.txt
 share/doc/dovecot/wiki/LDA.Sieve.txt
 share/doc/dovecot/wiki/LDA.txt
+share/doc/dovecot/wiki/LMTP.txt
 share/doc/dovecot/wiki/Logging.txt
 share/doc/dovecot/wiki/LoginProcess.txt
 share/doc/dovecot/wiki/MDA.txt
 share/doc/dovecot/wiki/MTA.txt
 share/doc/dovecot/wiki/MailLocation.LocalDisk.txt
 share/doc/dovecot/wiki/MailLocation.Maildir.txt
-share/doc/dovecot/wiki/MailLocation.Mbox.txt
 share/doc/dovecot/wiki/MailLocation.SharedDisk.txt
+share/doc/dovecot/wiki/MailLocation.mbox.txt
 share/doc/dovecot/wiki/MailLocation.txt
 share/doc/dovecot/wiki/MailboxFormat.Cydir.txt
 share/doc/dovecot/wiki/MailboxFormat.MH.txt
@@ -537,7 +537,6 @@ share/doc/dovecot/wiki/PasswordDatabase.Shadow.txt
 share/doc/dovecot/wiki/PasswordDatabase.txt
 share/doc/dovecot/wiki/PerformanceTuning.txt
 share/doc/dovecot/wiki/Plugins.Autocreate.txt
-share/doc/dovecot/wiki/Plugins.Convert.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
 share/doc/dovecot/wiki/Plugins.FTS.Lucene.txt
 share/doc/dovecot/wiki/Plugins.FTS.Solr.txt
@@ -554,7 +553,7 @@ share/doc/dovecot/wiki/Plugins.txt
 share/doc/dovecot/wiki/PostLoginScripting.txt
 share/doc/dovecot/wiki/PreAuth.txt
 share/doc/dovecot/wiki/QuickConfiguration.txt
-share/doc/dovecot/wiki/Quota.1.1.txt
+share/doc/dovecot/wiki/Quota.Configuration.txt
 share/doc/dovecot/wiki/Quota.Dict.txt
 share/doc/dovecot/wiki/Quota.Dirsize.txt
 share/doc/dovecot/wiki/Quota.FS.txt
@@ -579,6 +578,7 @@ share/doc/dovecot/wiki/TimeMovedBackwards.txt
 share/doc/dovecot/wiki/Upgrading.1.0.txt
 share/doc/dovecot/wiki/Upgrading.1.1.txt
 share/doc/dovecot/wiki/Upgrading.1.2.txt
+share/doc/dovecot/wiki/Upgrading.2.0.txt
 share/doc/dovecot/wiki/Upgrading.txt
 share/doc/dovecot/wiki/UserDatabase.ExtraFields.txt
 share/doc/dovecot/wiki/UserDatabase.NSS.txt
