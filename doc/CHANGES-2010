@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4148 2010/12/02 21:17:53 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4149 2010/12/03 00:15:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5855,3 +5855,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/kipi-plugins to 1.6.0 [wiz 2010-12-02]
 	Updated textproc/source-highlight to 3.1.4 [adam 2010-12-02]
 	Updated audio/pulseaudio to 0.9.21nb6 [wiz 2010-12-02]
+	Updated emulators/suse113_libpng to 11.3nb1 [wiz 2010-12-03]
