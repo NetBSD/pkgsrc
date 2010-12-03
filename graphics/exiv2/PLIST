@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2010/01/27 12:40:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/12/03 10:16:46 adam Exp $
 bin/exiv2
 include/exiv2/basicio.hpp
 include/exiv2/bmpimage.hpp
-include/exiv2/canonmn.hpp
 include/exiv2/convert.hpp
 include/exiv2/cr2image.hpp
 include/exiv2/crwimage.hpp
@@ -10,8 +9,8 @@ include/exiv2/datasets.hpp
 include/exiv2/easyaccess.hpp
 include/exiv2/error.hpp
 include/exiv2/exif.hpp
+include/exiv2/exiv2.hpp
 include/exiv2/exv_conf.h
-include/exiv2/fujimn.hpp
 include/exiv2/futils.hpp
 include/exiv2/gifimage.hpp
 include/exiv2/image.hpp
@@ -19,24 +18,15 @@ include/exiv2/iptc.hpp
 include/exiv2/jp2image.hpp
 include/exiv2/jpgimage.hpp
 include/exiv2/metadatum.hpp
-include/exiv2/minoltamn.hpp
-include/exiv2/mn.hpp
 include/exiv2/mrwimage.hpp
-include/exiv2/nikonmn.hpp
-include/exiv2/olympusmn.hpp
 include/exiv2/orfimage.hpp
-include/exiv2/panasonicmn.hpp
-include/exiv2/pentaxmn.hpp
 include/exiv2/pgfimage.hpp
 include/exiv2/pngimage.hpp
 include/exiv2/preview.hpp
 include/exiv2/properties.hpp
 include/exiv2/psdimage.hpp
 include/exiv2/rafimage.hpp
-include/exiv2/rcsid.hpp
 include/exiv2/rw2image.hpp
-include/exiv2/sigmamn.hpp
-include/exiv2/sonymn.hpp
 include/exiv2/tags.hpp
 include/exiv2/tgaimage.hpp
 include/exiv2/tiffimage.hpp
