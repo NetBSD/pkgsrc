@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/07/22 12:51:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/12/03 18:05:58 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -36,6 +36,7 @@ include/gstreamer-0.10/gst/gstchildproxy.h
 include/gstreamer-0.10/gst/gstclock.h
 include/gstreamer-0.10/gst/gstcompat.h
 include/gstreamer-0.10/gst/gstconfig.h
+include/gstreamer-0.10/gst/gstdatetime.h
 include/gstreamer-0.10/gst/gstdebugutils.h
 include/gstreamer-0.10/gst/gstelement.h
 include/gstreamer-0.10/gst/gstelementfactory.h
@@ -81,6 +82,7 @@ include/gstreamer-0.10/gst/gstutils.h
 include/gstreamer-0.10/gst/gstvalue.h
 include/gstreamer-0.10/gst/gstversion.h
 include/gstreamer-0.10/gst/gstxml.h
+include/gstreamer-0.10/gst/math-compat.h
 include/gstreamer-0.10/gst/net/gstnet.h
 include/gstreamer-0.10/gst/net/gstnetclientclock.h
 include/gstreamer-0.10/gst/net/gstnettimepacket.h
@@ -260,10 +262,12 @@ share/locale/hu/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/id/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/it/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/ja/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/lt/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/nb/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/nl/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/pl/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/pt_BR/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/ro/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/ru/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/rw/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/sk/LC_MESSAGES/gstreamer-0.10.mo
