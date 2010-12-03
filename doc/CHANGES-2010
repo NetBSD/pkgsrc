@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4156 2010/12/03 05:27:50 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4157 2010/12/03 07:33:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5863,3 +5863,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/mdoclint to 1.11 [wiz 2010-12-03]
 	Updated www/ikiwiki to 3.20101201 [schmonz 2010-12-03]
 	Updated graphics/clutter to 1.4.2 [obache 2010-12-03]
+	Downgraded graphics/clutter to 1.2.14nb1 [obache 2010-12-03]
