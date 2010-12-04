@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4173 2010/12/04 01:35:12 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.4174 2010/12/04 01:59:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5888,3 +5888,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/p5-Image-ExifTool to 8.25nb1 [gdt 2010-12-04]
 	Updated devel/bzr-gtk to 0.98.0 [gdt 2010-12-04]
 	Updated devel/bzrtools to 2.1.0 [gdt 2010-12-04]
+	Updated filesystems/tahoe-lafs to 1.8.1 [gdt 2010-12-04]
