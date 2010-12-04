@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 01:53:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/04 04:38:20 taca Exp $
 bin/tt
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -11,6 +11,19 @@ ${GEM_LIBDIR}/doc/index.markdown
 ${GEM_LIBDIR}/doc/pitfalls_and_advanced_techniques.markdown
 ${GEM_LIBDIR}/doc/semantic_interpretation.markdown
 ${GEM_LIBDIR}/doc/site.rb
+${GEM_LIBDIR}/doc/site/contribute.html
+${GEM_LIBDIR}/doc/site/images/bottom_background.png
+${GEM_LIBDIR}/doc/site/images/middle_background.png
+${GEM_LIBDIR}/doc/site/images/paren_language_output.png
+${GEM_LIBDIR}/doc/site/images/pivotal.gif
+${GEM_LIBDIR}/doc/site/images/top_background.png
+${GEM_LIBDIR}/doc/site/index.html
+${GEM_LIBDIR}/doc/site/pitfalls_and_advanced_techniques.html
+${GEM_LIBDIR}/doc/site/robots.txt
+${GEM_LIBDIR}/doc/site/screen.css
+${GEM_LIBDIR}/doc/site/semantic_interpretation.html
+${GEM_LIBDIR}/doc/site/syntactic_recognition.html
+${GEM_LIBDIR}/doc/site/using_in_ruby.html
 ${GEM_LIBDIR}/doc/sitegen.rb
 ${GEM_LIBDIR}/doc/syntactic_recognition.markdown
 ${GEM_LIBDIR}/doc/using_in_ruby.markdown
