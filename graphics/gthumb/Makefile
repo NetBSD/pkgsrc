@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.54 2010/12/03 12:51:34 drochner Exp $
+# $NetBSD: Makefile,v 1.55 2010/12/04 21:13:44 adam Exp $
 
-DISTNAME=		gthumb-2.12.1
-CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.12/}
+DISTNAME=	gthumb-2.12.1
+#PKGREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gthumb/2.12/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		minskim@NetBSD.org
-HOMEPAGE=		http://gthumb.sourceforge.net/
-COMMENT=		Image viewer and browser for the GNOME Desktop
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://gthumb.sourceforge.net/
+COMMENT=	Image viewer and browser for the GNOME Desktop
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		intltool msgfmt pkg-config gmake
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		intltool msgfmt pkg-config gmake
+GNU_CONFIGURE=		yes
 
 GCONF_SCHEMAS+=	gthumb.schemas
 GCONF_SCHEMAS+=	gthumb-comments.schemas gthumb-image-viewer.schemas
@@ -30,8 +33,6 @@ GCONF_SCHEMAS+=	gthumb_webalbums.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-# incompatible API changes in 0.21
-BUILDLINK_API_DEPENDS.exiv2+= exiv2<0.21
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -43,7 +44,9 @@ BUILDLINK_API_DEPENDS.exiv2+= exiv2<0.21
 #.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.endif
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
