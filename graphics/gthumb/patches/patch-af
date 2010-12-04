@@ -1,0 +1,58 @@
+$NetBSD: patch-af,v 1.1 2010/12/04 21:15:00 adam Exp $
+
+Updated from http://git.gnome.org/browse/libegg/tree/libegg/smclient
+
+--- copy-n-paste/eggsmclient-xsmp.c.orig	2010-07-15 18:45:38.000000000 +0000
++++ copy-n-paste/eggsmclient-xsmp.c
+@@ -1052,13 +1052,13 @@ generate_command (char **restart_command
+ 
+   if (client_id)
+     {
+-      g_ptr_array_add (cmd, "--sm-client-id");
++      g_ptr_array_add (cmd, (char *)"--sm-client-id");
+       g_ptr_array_add (cmd, (char *)client_id);
+     }
+ 
+   if (state_file)
+     {
+-      g_ptr_array_add (cmd, "--sm-client-state-file");
++      g_ptr_array_add (cmd, (char *)"--sm-client-state-file");
+       g_ptr_array_add (cmd, (char *)state_file);
+     }
+ 
+@@ -1141,7 +1141,7 @@ array_prop (const char *name, ...) 
+ 
+   prop = g_new (SmProp, 1);
+   prop->name = (char *)name;
+-  prop->type = SmLISTofARRAY8;
++  prop->type = (char *)SmLISTofARRAY8;
+ 
+   vals = g_array_new (FALSE, FALSE, sizeof (SmPropValue));
+ 
+@@ -1175,7 +1175,7 @@ ptrarray_prop (const char *name, GPtrArr
+ 
+   prop = g_new (SmProp, 1);
+   prop->name = (char *)name;
+-  prop->type = SmLISTofARRAY8;
++  prop->type = (char *)SmLISTofARRAY8;
+ 
+   vals = g_array_new (FALSE, FALSE, sizeof (SmPropValue));
+ 
+@@ -1205,7 +1205,7 @@ string_prop (const char *name, const cha
+ 
+   prop = g_new (SmProp, 1);
+   prop->name = (char *)name;
+-  prop->type = SmARRAY8;
++  prop->type = (char *)SmARRAY8;
+ 
+   prop->num_vals = 1;
+   prop->vals = g_new (SmPropValue, 1);
+@@ -1230,7 +1230,7 @@ card8_prop (const char *name, unsigned c
+ 
+   prop = g_new (SmProp, 1);
+   prop->name = (char *)name;
+-  prop->type = SmCARD8;
++  prop->type = (char *)SmCARD8;
+ 
+   prop->num_vals = 1;
+   prop->vals = g_new (SmPropValue, 2);
