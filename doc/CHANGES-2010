@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4177 2010/12/04 04:19:07 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4178 2010/12/04 04:41:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5908,3 +5908,11 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/ruby-columnize to 0.3.2 [taca 2010-12-04]
 	Updated misc/ruby-configuration to 1.2.0 [taca 2010-12-04]
 	Updated net/ruby-addressable to 2.2.2 [taca 2010-12-04]
+	Updated textproc/ruby-bluecloth to 2.0.9 [taca 2010-12-04]
+	Updated textproc/ruby-builder to 3.0.0 [taca 2010-12-04]
+	Updated textproc/ruby-coderay to 0.9.6 [taca 2010-12-04]
+	Updated textproc/ruby-haml to 3.0.24 [taca 2010-12-04]
+	Updated textproc/ruby-hpricot to 0.8.3 [taca 2010-12-04]
+	Updated textproc/ruby-stringex to 1.2.0 [taca 2010-12-04]
+	Updated textproc/ruby-treetop to 1.4.9 [taca 2010-12-04]
+	Updated textproc/ruby-xslt to 0.9.8 [taca 2010-12-04]
