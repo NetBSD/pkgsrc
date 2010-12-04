@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/12 01:53:43 taca Exp $
+$NetBSD: distinfo,v 1.2 2010/12/04 04:38:20 taca Exp $
 
-SHA1 (treetop-1.4.8.gem) = b107eca5e06736db93a92536fde33bdbfdbc01a5
-RMD160 (treetop-1.4.8.gem) = 2760c0b944ab4676922a6c4ce09698ed2243cb17
-Size (treetop-1.4.8.gem) = 69632 bytes
+SHA1 (treetop-1.4.9.gem) = a3d96f639bad150ab4c2cb410859f6ef1cb5aae1
+RMD160 (treetop-1.4.9.gem) = 77cabdfbbf9c4988984c31ca687a754023f88981
+Size (treetop-1.4.9.gem) = 179200 bytes
