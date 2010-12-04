@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/03 02:56:32 obache Exp $
-${GEM_HOME}/cache/mocha-${PKGVERSION}.gem
-${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/MIT-LICENSE
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/RELEASE
+@comment $NetBSD: PLIST,v 1.5 2010/12/04 04:01:54 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/COPYING.rdoc
+${GEM_LIBDIR}/MIT-LICENSE.rdoc
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/RELEASE.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/misc.rb
 ${GEM_LIBDIR}/examples/mocha.rb
@@ -29,11 +29,16 @@ ${GEM_LIBDIR}/lib/mocha/instance_method.rb
 ${GEM_LIBDIR}/lib/mocha/integration.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/assertion_counter.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_131_and_above.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/exception_translation.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_13.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_140.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_141.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_142_and_above.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/assertion_counter.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_200.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_201_and_above.rb
+${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_201_to_202.rb
+${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_203_to_209.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_185_and_below.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb
 ${GEM_LIBDIR}/lib/mocha/is_a.rb
@@ -47,6 +52,7 @@ ${GEM_LIBDIR}/lib/mocha/multiple_yields.rb
 ${GEM_LIBDIR}/lib/mocha/names.rb
 ${GEM_LIBDIR}/lib/mocha/no_yields.rb
 ${GEM_LIBDIR}/lib/mocha/object.rb
+${GEM_LIBDIR}/lib/mocha/options.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/all_of.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/any_of.rb
@@ -86,6 +92,7 @@ ${GEM_LIBDIR}/test/acceptance/api_test.rb
 ${GEM_LIBDIR}/test/acceptance/bug_18914_test.rb
 ${GEM_LIBDIR}/test/acceptance/bug_21465_test.rb
 ${GEM_LIBDIR}/test/acceptance/bug_21563_test.rb
+${GEM_LIBDIR}/test/acceptance/exception_rescue_test.rb
 ${GEM_LIBDIR}/test/acceptance/expected_invocation_count_test.rb
 ${GEM_LIBDIR}/test/acceptance/failure_messages_test.rb
 ${GEM_LIBDIR}/test/acceptance/minitest_test.rb
@@ -118,9 +125,11 @@ ${GEM_LIBDIR}/test/acceptance/stubbing_non_public_any_instance_method_test.rb
 ${GEM_LIBDIR}/test/acceptance/stubbing_non_public_class_method_test.rb
 ${GEM_LIBDIR}/test/acceptance/stubbing_non_public_instance_method_test.rb
 ${GEM_LIBDIR}/test/acceptance/stubbing_on_non_mock_object_test.rb
+${GEM_LIBDIR}/test/acceptance/unstubbing_test.rb
 ${GEM_LIBDIR}/test/deprecation_disabler.rb
 ${GEM_LIBDIR}/test/execution_point.rb
 ${GEM_LIBDIR}/test/method_definer.rb
+${GEM_LIBDIR}/test/mini_test_result.rb
 ${GEM_LIBDIR}/test/simple_counter.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/test_runner.rb
@@ -171,4 +180,4 @@ ${GEM_LIBDIR}/test/unit/single_yield_test.rb
 ${GEM_LIBDIR}/test/unit/state_machine_test.rb
 ${GEM_LIBDIR}/test/unit/string_inspect_test.rb
 ${GEM_LIBDIR}/test/unit/yield_parameters_test.rb
-${GEM_HOME}/specifications/mocha-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
