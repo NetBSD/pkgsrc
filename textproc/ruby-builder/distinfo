@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:21:06 jlam Exp $
+$NetBSD: distinfo,v 1.2 2010/12/04 04:25:37 taca Exp $
 
-SHA1 (builder-2.1.2.gem) = d0ea89ea793c75853abd636ab86a79b7b57d6993
-RMD160 (builder-2.1.2.gem) = 73f0b0b5d0c2d268edbcee86599962cc94413ebb
-Size (builder-2.1.2.gem) = 22528 bytes
+SHA1 (builder-3.0.0.gem) = 911d35bf53a8678d35aea8e17e4c439eb62fffff
+RMD160 (builder-3.0.0.gem) = f17b12344de661c8baa85a726b52954907ff38e0
+Size (builder-3.0.0.gem) = 609280 bytes
