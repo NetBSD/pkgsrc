@@ -1,0 +1,45 @@
+$NetBSD: patch-ab,v 1.5 2010/12/04 21:15:00 adam Exp $
+
+Build eggsmclient-osx.c (required on Mac OS X).
+
+--- copy-n-paste/Makefile.in.orig	2010-12-04 09:03:37.000000000 +0000
++++ copy-n-paste/Makefile.in
+@@ -53,6 +53,7 @@ am__DEPENDENCIES_1 =
+ libeggsmclient_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+ am_libeggsmclient_la_OBJECTS = libeggsmclient_la-eggdesktopfile.lo \
+ 	libeggsmclient_la-eggsmclient.lo \
++	libeggsmclient_la-eggsmclient-osx.lo \
+ 	libeggsmclient_la-eggsmclient-xsmp.lo
+ libeggsmclient_la_OBJECTS = $(am_libeggsmclient_la_OBJECTS)
+ AM_V_lt = $(am__v_lt_$(V))
+@@ -288,6 +289,7 @@ libeggsmclient_la_SOURCES = eggdesktopfi
+ 			    eggdesktopfile.c \
+ 			    eggsmclient.h \
+ 			    eggsmclient.c \
++			    eggsmclient-osx.c \
+ 			    eggsmclient-private.h \
+ 			    eggsmclient-xsmp.c
+ 
+@@ -344,6 +346,7 @@ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggdesktopfile.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggsmclient-osx.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggsmclient-xsmp.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggsmclient.Plo@am__quote@
+ 
+@@ -387,6 +390,14 @@ libeggsmclient_la-eggsmclient.lo: eggsmc
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCC_FALSE@	$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libeggsmclient_la_CFLAGS) $(CFLAGS) -c -o libeggsmclient_la-eggsmclient.lo `test -f 'eggsmclient.c' || echo '$(srcdir)/'`eggsmclient.c
+ 
++libeggsmclient_la-eggsmclient-osx.lo: eggsmclient-osx.c
++@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libeggsmclient_la_CFLAGS) $(CFLAGS) -MT libeggsmclient_la-eggsmclient-osx.lo -MD -MP -MF $(DEPDIR)/libeggsmclient_la-eggsmclient-osx.Tpo -c -o libeggsmclient_la-eggsmclient-osx.lo `test -f 'eggsmclient-osx.c' || echo '$(srcdir)/'`eggsmclient-osx.c
++@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libeggsmclient_la-eggsmclient-osx.Tpo $(DEPDIR)/libeggsmclient_la-eggsmclient-osx.Plo
++@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='eggsmclient-osx.c' object='libeggsmclient_la-eggsmclient-osx.lo' libtool=yes @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCC_FALSE@	$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libeggsmclient_la_CFLAGS) $(CFLAGS) -c -o libeggsmclient_la-eggsmclient-osx.lo `test -f 'eggsmclient-osx.c' || echo '$(srcdir)/'`eggsmclient-osx.c
++
+ libeggsmclient_la-eggsmclient-xsmp.lo: eggsmclient-xsmp.c
+ @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libeggsmclient_la_CFLAGS) $(CFLAGS) -MT libeggsmclient_la-eggsmclient-xsmp.lo -MD -MP -MF $(DEPDIR)/libeggsmclient_la-eggsmclient-xsmp.Tpo -c -o libeggsmclient_la-eggsmclient-xsmp.lo `test -f 'eggsmclient-xsmp.c' || echo '$(srcdir)/'`eggsmclient-xsmp.c
+ @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libeggsmclient_la-eggsmclient-xsmp.Tpo $(DEPDIR)/libeggsmclient_la-eggsmclient-xsmp.Plo
