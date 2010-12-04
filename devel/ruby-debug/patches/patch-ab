@@ -1,33 +1,43 @@
-$NetBSD: patch-ab,v 1.1 2010/09/12 04:59:12 taca Exp $
+$NetBSD: patch-ab,v 1.2 2010/12/04 03:53:32 taca Exp $
 
-Try to correct some name of files.
+- Try to correct some name of files.
 
---- ../ruby-debug-0.10.3.gemspec.orig	2010-09-07 02:13:08.000000000 +0000
-+++ ../ruby-debug-0.10.3.gemspec
-@@ -61,7 +61,7 @@ files: 
+--- ../ruby-debug-0.10.4.gemspec.orig	2010-12-01 01:43:52.000000000 +0000
++++ ../ruby-debug-0.10.4.gemspec
+@@ -50,23 +50,23 @@ files: 
+ - VERSION
+ - Rakefile
+ - cli/ruby-debug.rb
+-- cli/ruby-debug/processor.RB
++- cli/ruby-debug/processor.rb
+ - cli/ruby-debug/helper.rb
+ - cli/ruby-debug/debugger.rb
+ - cli/ruby-debug/commands/source.rb
+ - cli/ruby-debug/commands/set.rb
+-- cli/ruby-debug/commands/raise.RB
++- cli/ruby-debug/commands/raise.rb
+ - cli/ruby-debug/commands/breakpoints.rb
+ - cli/ruby-debug/commands/list.rb
  - cli/ruby-debug/commands/display.rb
- - cli/ruby-debug/commands/eval.rb
- - cli/ruby-debug/commands/finish.rb
--- cli/ruby-debug/commands/source.RB
-+- cli/ruby-debug/commands/source.rb
- - cli/ruby-debug/commands/stepping.rb
- - cli/ruby-debug/commands/threads.rb
+-- cli/ruby-debug/commands/continue.RB
++- cli/ruby-debug/commands/continue.rb
+ - cli/ruby-debug/commands/trace.rb
  - cli/ruby-debug/commands/frame.rb
-@@ -71,16 +71,14 @@ files: 
+ - cli/ruby-debug/commands/show.rb
+ - cli/ruby-debug/commands/save.rb
  - cli/ruby-debug/commands/variables.rb
- - cli/ruby-debug/commands/edit.rb
- - cli/ruby-debug/commands/info.rb
--- cli/ruby-debug/commands/continue.RB.save
- - cli/ruby-debug/commands/method.rb
- - cli/ruby-debug/commands/tmate.rb
+ - cli/ruby-debug/commands/threads.rb
 -- cli/ruby-debug/commands/disassemble.RB
 +- cli/ruby-debug/commands/disassemble.rb
- - cli/ruby-debug/commands/quit.rb
- - cli/ruby-debug/commands/breakpoints.rb
- - cli/ruby-debug/commands/show.rb
- - cli/ruby-debug/commands/trace.rb
- - cli/ruby-debug/commands/enable.rb
--- cli/ruby-debug/commands/source.rb
- - ChangeLog
- - bin/rdebug
- - doc/rdebug.1
+ - cli/ruby-debug/commands/irb.rb
+ - cli/ruby-debug/commands/tmate.rb
+ - cli/ruby-debug/commands/kill.rb
+@@ -82,7 +82,7 @@ files: 
+ - cli/ruby-debug/commands/eval.rb
+ - cli/ruby-debug/commands/info.rb
+ - cli/ruby-debug/commands/continue.rb
+-- cli/ruby-debug/commands/source.RB
++- cli/ruby-debug/commands/source.rb
+ - cli/ruby-debug/commands/control.rb
+ - cli/ruby-debug/commands/condition.rb
+ - cli/ruby-debug/interface.rb
