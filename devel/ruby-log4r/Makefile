@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/09/10 05:54:13 taca Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/04 04:01:06 taca Exp $
 
-DISTNAME=	log4r-1.1.8
+DISTNAME=	log4r-1.1.9
 CATEGORIES=	devel
 
 HOMEPAGE=	http://log4r.rubyforge.org
