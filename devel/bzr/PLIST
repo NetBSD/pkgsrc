@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2010/02/16 11:27:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2010/12/04 01:21:06 gdt Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -48,6 +48,11 @@ ${PYSITELIB}/bzrlib/_rio_py.py
 ${PYSITELIB}/bzrlib/_rio_py.pyc
 ${PYSITELIB}/bzrlib/_rio_py.pyo
 ${PYSITELIB}/bzrlib/_rio_pyx.so
+${PYSITELIB}/bzrlib/_simple_set_pyx.so
+${PYSITELIB}/bzrlib/_static_tuple_c.so
+${PYSITELIB}/bzrlib/_static_tuple_py.py
+${PYSITELIB}/bzrlib/_static_tuple_py.pyc
+${PYSITELIB}/bzrlib/_static_tuple_py.pyo
 ${PYSITELIB}/bzrlib/add.py
 ${PYSITELIB}/bzrlib/add.pyc
 ${PYSITELIB}/bzrlib/add.pyo
@@ -210,6 +215,9 @@ ${PYSITELIB}/bzrlib/chunk_writer.pyo
 ${PYSITELIB}/bzrlib/clean_tree.py
 ${PYSITELIB}/bzrlib/clean_tree.pyc
 ${PYSITELIB}/bzrlib/clean_tree.pyo
+${PYSITELIB}/bzrlib/cleanup.py
+${PYSITELIB}/bzrlib/cleanup.pyc
+${PYSITELIB}/bzrlib/cleanup.pyo
 ${PYSITELIB}/bzrlib/cmd_version_info.py
 ${PYSITELIB}/bzrlib/cmd_version_info.pyc
 ${PYSITELIB}/bzrlib/cmd_version_info.pyo
@@ -337,11 +345,12 @@ ${PYSITELIB}/bzrlib/help_topics/__init__.pyc
 ${PYSITELIB}/bzrlib/help_topics/__init__.pyo
 ${PYSITELIB}/bzrlib/help_topics/en/authentication.txt
 ${PYSITELIB}/bzrlib/help_topics/en/configuration.txt
-${PYSITELIB}/bzrlib/help_topics/en/conflicts.txt
+${PYSITELIB}/bzrlib/help_topics/en/conflict-types.txt
 ${PYSITELIB}/bzrlib/help_topics/en/content-filters.txt
 ${PYSITELIB}/bzrlib/help_topics/en/debug-flags.txt
 ${PYSITELIB}/bzrlib/help_topics/en/diverged-branches.txt
 ${PYSITELIB}/bzrlib/help_topics/en/eol.txt
+${PYSITELIB}/bzrlib/help_topics/en/location-alias.txt
 ${PYSITELIB}/bzrlib/help_topics/en/log-formats.txt
 ${PYSITELIB}/bzrlib/help_topics/en/patterns.txt
 ${PYSITELIB}/bzrlib/help_topics/en/rules.txt
@@ -462,6 +471,9 @@ ${PYSITELIB}/bzrlib/plugins/launchpad/__init__.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/account.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/account.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/account.pyo
+${PYSITELIB}/bzrlib/plugins/launchpad/lp_api.py
+${PYSITELIB}/bzrlib/plugins/launchpad/lp_api.pyc
+${PYSITELIB}/bzrlib/plugins/launchpad/lp_api.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/lp_directory.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/lp_directory.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/lp_directory.pyo
@@ -471,6 +483,9 @@ ${PYSITELIB}/bzrlib/plugins/launchpad/lp_registration.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_account.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_account.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_account.pyo
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_api.py
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_api.pyc
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_api.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_directory.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_directory.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_directory.pyo
@@ -495,6 +510,21 @@ ${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/__init__.pyo
 ${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/test_netrc.py
 ${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/test_netrc.pyc
 ${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/test_netrc.pyo
+${PYSITELIB}/bzrlib/plugins/news_merge/__init__.py
+${PYSITELIB}/bzrlib/plugins/news_merge/__init__.pyc
+${PYSITELIB}/bzrlib/plugins/news_merge/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/news_merge/news_merge.py
+${PYSITELIB}/bzrlib/plugins/news_merge/news_merge.pyc
+${PYSITELIB}/bzrlib/plugins/news_merge/news_merge.pyo
+${PYSITELIB}/bzrlib/plugins/news_merge/parser.py
+${PYSITELIB}/bzrlib/plugins/news_merge/parser.pyc
+${PYSITELIB}/bzrlib/plugins/news_merge/parser.pyo
+${PYSITELIB}/bzrlib/plugins/news_merge/tests/__init__.py
+${PYSITELIB}/bzrlib/plugins/news_merge/tests/__init__.pyc
+${PYSITELIB}/bzrlib/plugins/news_merge/tests/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/news_merge/tests/test_news_merge.py
+${PYSITELIB}/bzrlib/plugins/news_merge/tests/test_news_merge.pyc
+${PYSITELIB}/bzrlib/plugins/news_merge/tests/test_news_merge.pyo
 ${PYSITELIB}/bzrlib/progress.py
 ${PYSITELIB}/bzrlib/progress.pyc
 ${PYSITELIB}/bzrlib/progress.pyo
@@ -606,6 +636,9 @@ ${PYSITELIB}/bzrlib/smart/vfs.pyo
 ${PYSITELIB}/bzrlib/smtp_connection.py
 ${PYSITELIB}/bzrlib/smtp_connection.pyc
 ${PYSITELIB}/bzrlib/smtp_connection.pyo
+${PYSITELIB}/bzrlib/static_tuple.py
+${PYSITELIB}/bzrlib/static_tuple.pyc
+${PYSITELIB}/bzrlib/static_tuple.pyo
 ${PYSITELIB}/bzrlib/status.py
 ${PYSITELIB}/bzrlib/status.pyc
 ${PYSITELIB}/bzrlib/status.pyo
@@ -1056,6 +1089,15 @@ ${PYSITELIB}/bzrlib/tests/per_bzrdir/test_bzrdir.pyo
 ${PYSITELIB}/bzrlib/tests/per_bzrdir/test_push.py
 ${PYSITELIB}/bzrlib/tests/per_bzrdir/test_push.pyc
 ${PYSITELIB}/bzrlib/tests/per_bzrdir/test_push.pyo
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/__init__.py
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/__init__.pyc
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/__init__.pyo
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/test_branch.py
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/test_branch.pyc
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/test_branch.pyo
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/test_repository.py
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/test_repository.pyc
+${PYSITELIB}/bzrlib/tests/per_foreign_vcs/test_repository.pyo
 ${PYSITELIB}/bzrlib/tests/per_interbranch/__init__.py
 ${PYSITELIB}/bzrlib/tests/per_interbranch/__init__.pyc
 ${PYSITELIB}/bzrlib/tests/per_interbranch/__init__.pyo
@@ -1098,6 +1140,9 @@ ${PYSITELIB}/bzrlib/tests/per_lock/test_lock.pyo
 ${PYSITELIB}/bzrlib/tests/per_lock/test_temporary_write_lock.py
 ${PYSITELIB}/bzrlib/tests/per_lock/test_temporary_write_lock.pyc
 ${PYSITELIB}/bzrlib/tests/per_lock/test_temporary_write_lock.pyo
+${PYSITELIB}/bzrlib/tests/per_merger.py
+${PYSITELIB}/bzrlib/tests/per_merger.pyc
+${PYSITELIB}/bzrlib/tests/per_merger.pyo
 ${PYSITELIB}/bzrlib/tests/per_pack_repository.py
 ${PYSITELIB}/bzrlib/tests/per_pack_repository.pyc
 ${PYSITELIB}/bzrlib/tests/per_pack_repository.pyo
@@ -1269,6 +1314,9 @@ ${PYSITELIB}/bzrlib/tests/per_tree/test_tree.pyo
 ${PYSITELIB}/bzrlib/tests/per_tree/test_walkdirs.py
 ${PYSITELIB}/bzrlib/tests/per_tree/test_walkdirs.pyc
 ${PYSITELIB}/bzrlib/tests/per_tree/test_walkdirs.pyo
+${PYSITELIB}/bzrlib/tests/per_uifactory/__init__.py
+${PYSITELIB}/bzrlib/tests/per_uifactory/__init__.pyc
+${PYSITELIB}/bzrlib/tests/per_uifactory/__init__.pyo
 ${PYSITELIB}/bzrlib/tests/per_versionedfile.py
 ${PYSITELIB}/bzrlib/tests/per_versionedfile.pyc
 ${PYSITELIB}/bzrlib/tests/per_versionedfile.pyo
@@ -1392,6 +1440,9 @@ ${PYSITELIB}/bzrlib/tests/per_workingtree/test_walkdirs.pyo
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_workingtree.py
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_workingtree.pyc
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_workingtree.pyo
+${PYSITELIB}/bzrlib/tests/script.py
+${PYSITELIB}/bzrlib/tests/script.pyc
+${PYSITELIB}/bzrlib/tests/script.pyo
 ${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.py
 ${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.pyc
 ${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.pyo
@@ -1407,6 +1458,9 @@ ${PYSITELIB}/bzrlib/tests/stub_sftp.pyo
 ${PYSITELIB}/bzrlib/tests/test__annotator.py
 ${PYSITELIB}/bzrlib/tests/test__annotator.pyc
 ${PYSITELIB}/bzrlib/tests/test__annotator.pyo
+${PYSITELIB}/bzrlib/tests/test__bencode.py
+${PYSITELIB}/bzrlib/tests/test__bencode.pyc
+${PYSITELIB}/bzrlib/tests/test__bencode.pyo
 ${PYSITELIB}/bzrlib/tests/test__chk_map.py
 ${PYSITELIB}/bzrlib/tests/test__chk_map.pyc
 ${PYSITELIB}/bzrlib/tests/test__chk_map.pyo
@@ -1425,6 +1479,12 @@ ${PYSITELIB}/bzrlib/tests/test__known_graph.pyo
 ${PYSITELIB}/bzrlib/tests/test__rio.py
 ${PYSITELIB}/bzrlib/tests/test__rio.pyc
 ${PYSITELIB}/bzrlib/tests/test__rio.pyo
+${PYSITELIB}/bzrlib/tests/test__simple_set.py
+${PYSITELIB}/bzrlib/tests/test__simple_set.pyc
+${PYSITELIB}/bzrlib/tests/test__simple_set.pyo
+${PYSITELIB}/bzrlib/tests/test__static_tuple.py
+${PYSITELIB}/bzrlib/tests/test__static_tuple.pyc
+${PYSITELIB}/bzrlib/tests/test__static_tuple.pyo
 ${PYSITELIB}/bzrlib/tests/test__walkdirs_win32.py
 ${PYSITELIB}/bzrlib/tests/test__walkdirs_win32.pyc
 ${PYSITELIB}/bzrlib/tests/test__walkdirs_win32.pyo
@@ -1443,9 +1503,6 @@ ${PYSITELIB}/bzrlib/tests/test_atomicfile.pyo
 ${PYSITELIB}/bzrlib/tests/test_bad_files.py
 ${PYSITELIB}/bzrlib/tests/test_bad_files.pyc
 ${PYSITELIB}/bzrlib/tests/test_bad_files.pyo
-${PYSITELIB}/bzrlib/tests/test_bencode.py
-${PYSITELIB}/bzrlib/tests/test_bencode.pyc
-${PYSITELIB}/bzrlib/tests/test_bencode.pyo
 ${PYSITELIB}/bzrlib/tests/test_bisect_multi.py
 ${PYSITELIB}/bzrlib/tests/test_bisect_multi.pyc
 ${PYSITELIB}/bzrlib/tests/test_bisect_multi.pyo
@@ -1482,6 +1539,9 @@ ${PYSITELIB}/bzrlib/tests/test_chunk_writer.pyo
 ${PYSITELIB}/bzrlib/tests/test_clean_tree.py
 ${PYSITELIB}/bzrlib/tests/test_clean_tree.pyc
 ${PYSITELIB}/bzrlib/tests/test_clean_tree.pyo
+${PYSITELIB}/bzrlib/tests/test_cleanup.py
+${PYSITELIB}/bzrlib/tests/test_cleanup.pyc
+${PYSITELIB}/bzrlib/tests/test_cleanup.pyo
 ${PYSITELIB}/bzrlib/tests/test_commands.py
 ${PYSITELIB}/bzrlib/tests/test_commands.pyc
 ${PYSITELIB}/bzrlib/tests/test_commands.pyo
@@ -1762,6 +1822,9 @@ ${PYSITELIB}/bzrlib/tests/test_rules.pyo
 ${PYSITELIB}/bzrlib/tests/test_sampler.py
 ${PYSITELIB}/bzrlib/tests/test_sampler.pyc
 ${PYSITELIB}/bzrlib/tests/test_sampler.pyo
+${PYSITELIB}/bzrlib/tests/test_script.py
+${PYSITELIB}/bzrlib/tests/test_script.pyc
+${PYSITELIB}/bzrlib/tests/test_script.pyo
 ${PYSITELIB}/bzrlib/tests/test_selftest.py
 ${PYSITELIB}/bzrlib/tests/test_selftest.pyc
 ${PYSITELIB}/bzrlib/tests/test_selftest.pyo
@@ -1918,9 +1981,6 @@ ${PYSITELIB}/bzrlib/textinv.pyo
 ${PYSITELIB}/bzrlib/textmerge.py
 ${PYSITELIB}/bzrlib/textmerge.pyc
 ${PYSITELIB}/bzrlib/textmerge.pyo
-${PYSITELIB}/bzrlib/textui.py
-${PYSITELIB}/bzrlib/textui.pyc
-${PYSITELIB}/bzrlib/textui.pyo
 ${PYSITELIB}/bzrlib/timestamp.py
 ${PYSITELIB}/bzrlib/timestamp.pyc
 ${PYSITELIB}/bzrlib/timestamp.pyo
@@ -1990,6 +2050,9 @@ ${PYSITELIB}/bzrlib/transport/memory.pyo
 ${PYSITELIB}/bzrlib/transport/nosmart.py
 ${PYSITELIB}/bzrlib/transport/nosmart.pyc
 ${PYSITELIB}/bzrlib/transport/nosmart.pyo
+${PYSITELIB}/bzrlib/transport/pathfilter.py
+${PYSITELIB}/bzrlib/transport/pathfilter.pyc
+${PYSITELIB}/bzrlib/transport/pathfilter.pyo
 ${PYSITELIB}/bzrlib/transport/readonly.py
 ${PYSITELIB}/bzrlib/transport/readonly.pyc
 ${PYSITELIB}/bzrlib/transport/readonly.pyo

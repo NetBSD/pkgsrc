@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2009/01/19 21:41:48 epg Exp $
+$NetBSD: MESSAGE,v 1.4 2010/12/04 01:21:06 gdt Exp $
 
 bzr requires security/py-paramiko in order to push branches over sftp
-and www/py-curl to verify https certificates.
+and www/py-curl to verify https certificates. For the "shelve" command
+devel/py-curses is required.
 
 ===========================================================================
