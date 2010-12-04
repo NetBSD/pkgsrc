@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 04:36:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/04 03:45:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/BSD
 ${GEM_LIBDIR}/ChangeLog
@@ -20,12 +20,12 @@ ${GEM_LIBDIR}/lib/pg.rb
 ${GEM_LIBDIR}/lib/pg_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/rake/191_compat.rb
 ${GEM_LIBDIR}/rake/dependencies.rb
+${GEM_LIBDIR}/rake/documentation.rb
 ${GEM_LIBDIR}/rake/helpers.rb
 ${GEM_LIBDIR}/rake/hg.rb
 ${GEM_LIBDIR}/rake/manual.rb
 ${GEM_LIBDIR}/rake/packaging.rb
 ${GEM_LIBDIR}/rake/publishing.rb
-${GEM_LIBDIR}/rake/rdoc.rb
 ${GEM_LIBDIR}/rake/style.rb
 ${GEM_LIBDIR}/rake/svn.rb
 ${GEM_LIBDIR}/rake/testing.rb
