@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2010/09/10 05:17:37 taca Exp $
+$NetBSD: patch-ab,v 1.2 2010/12/04 03:52:26 taca Exp $
 
-Avoid to install win32 binaries.
+- Avoid to install win32 binaries.
 
---- ../ruby-debug-base-0.10.3.gemspec.orig	2010-09-07 01:50:41.000000000 +0000
-+++ ../ruby-debug-base-0.10.3.gemspec
-@@ -40,10 +40,6 @@ files: 
+--- ../ruby-debug-base-0.10.4.gemspec.orig	2010-12-01 01:31:41.000000000 +0000
++++ ../ruby-debug-base-0.10.4.gemspec
+@@ -47,10 +47,6 @@ files: 
  - ext/extconf.rb
  - ext/ruby_debug.c
  - ext/ruby_debug.h
--- ext/win32/Makefile
--- ext/win32/ruby_debug.o
 -- ext/win32/breakpoint.o
+-- ext/win32/ruby_debug.o
 -- ext/win32/ruby_debug.so
- - lib/ruby-debug-base.rb
+-- ext/win32/Makefile
  - lib/ChangeLog
+ - lib/ruby-debug-base.rb
  - test/base/base.rb
