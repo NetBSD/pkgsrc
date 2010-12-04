@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 08:02:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/04 04:23:43 taca Exp $
 bin/bluecloth
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
@@ -18,13 +18,17 @@ ${GEM_LIBDIR}/ext/config.h
 ${GEM_LIBDIR}/ext/css.c
 ${GEM_LIBDIR}/ext/cstring.h
 ${GEM_LIBDIR}/ext/docheader.c
+${GEM_LIBDIR}/ext/emmatch.c
 ${GEM_LIBDIR}/ext/extconf.rb
 ${GEM_LIBDIR}/ext/generate.c
+${GEM_LIBDIR}/ext/html5.c
 ${GEM_LIBDIR}/ext/markdown.c
 ${GEM_LIBDIR}/ext/markdown.h
 ${GEM_LIBDIR}/ext/mkdio.c
 ${GEM_LIBDIR}/ext/mkdio.h
 ${GEM_LIBDIR}/ext/resource.c
+${GEM_LIBDIR}/ext/tags.c
+${GEM_LIBDIR}/ext/tags.h
 ${GEM_LIBDIR}/ext/version.c
 ${GEM_LIBDIR}/ext/xml.c
 ${GEM_LIBDIR}/ext/xmlpage.c
@@ -32,12 +36,12 @@ ${GEM_LIBDIR}/lib/bluecloth.rb
 ${GEM_LIBDIR}/lib/bluecloth_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/rake/191_compat.rb
 ${GEM_LIBDIR}/rake/dependencies.rb
+${GEM_LIBDIR}/rake/documentation.rb
 ${GEM_LIBDIR}/rake/helpers.rb
 ${GEM_LIBDIR}/rake/hg.rb
 ${GEM_LIBDIR}/rake/manual.rb
 ${GEM_LIBDIR}/rake/packaging.rb
 ${GEM_LIBDIR}/rake/publishing.rb
-${GEM_LIBDIR}/rake/rdoc.rb
 ${GEM_LIBDIR}/rake/style.rb
 ${GEM_LIBDIR}/rake/svn.rb
 ${GEM_LIBDIR}/rake/testing.rb
