@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 05:19:13 taca Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/04 03:53:32 taca Exp $
 
-DISTNAME=	ruby-debug-0.10.3
+DISTNAME=	ruby-debug-0.10.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	devel
 
@@ -15,9 +15,11 @@ DEPENDS+=	${RUBY_PKGPREFIX}-debug-base>=0.10.3:../../devel/ruby-debug-base
 RUBY_VERSION_SUPPORTED= 18
 
 pre-configure:
+	${RM} -f ${WRKSRC}/cli/ruby-debug/processor.RB
 	cd ${WRKSRC}/cli/ruby-debug/commands && \
 		${MV} disassemble.RB disassemble.rb; \
-		${MV} source.RB source.rb; \
+		${MV} raise.RB raise.rb; \
+		${MV} source.RB source.rb;
 		${RM} -f continue.RB.save
 
 .include "../../lang/ruby/gem.mk"
