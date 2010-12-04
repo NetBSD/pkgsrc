@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2010/02/20 22:42:02 schwarz Exp $
+$NetBSD: patch-af,v 1.2 2010/12/04 08:12:34 adam Exp $
 
---- darwin.c.orig	2010-02-20 23:22:35.000000000 +0100
-+++ darwin.c	2010-02-20 23:36:10.000000000 +0100
-@@ -254,7 +254,7 @@
+--- darwin.c.orig	2006-03-04 02:52:46.000000000 +0000
++++ darwin.c
+@@ -254,7 +254,7 @@ static usb_device_t **usb_get_next_devic
    
    result = IOCreatePlugInInterfaceForService(usbDevice, kIOUSBDeviceUserClientTypeID,
  					     kIOCFPlugInInterfaceID, &plugInInterface,
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1 2010/02/20 22:42:02 schwarz Exp $
    
    result = IOObjectRelease(usbDevice);
    if (result || !plugInInterface)
-@@ -557,7 +557,7 @@
+@@ -557,7 +557,7 @@ static int claim_interface (usb_dev_hand
    result = IOCreatePlugInInterfaceForService(usbInterface,
  					     kIOUSBInterfaceUserClientTypeID,
  					     kIOCFPlugInInterfaceID,
@@ -20,7 +20,7 @@ $NetBSD: patch-af,v 1.1 2010/02/20 22:42:02 schwarz Exp $
    /* No longer need the usbInterface object after getting the plug-in */
    result = IOObjectRelease(usbInterface);
    if (result || !plugInInterface)
-@@ -758,7 +758,7 @@
+@@ -758,7 +758,7 @@ static int ep_to_pipeRef (struct darwin_
  
  /* argument to handle multiple parameters to rw_completed */
  struct rw_complete_arg {
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.1 2010/02/20 22:42:02 schwarz Exp $
    IOReturn      result;
    CFRunLoopRef  cf_loop;
  };
-@@ -769,9 +769,9 @@
+@@ -769,9 +769,9 @@ static void rw_completed(void *refcon, i
  
    if (usb_debug > 2)
      fprintf(stderr, "io async operation completed: %s, size=%lu, result=0x%08x\n", darwin_error_str(result),
@@ -41,3 +41,21 @@ $NetBSD: patch-af,v 1.1 2010/02/20 22:42:02 schwarz Exp $
    rw_arg->result  = result;
  
    CFRunLoopStop(rw_arg->cf_loop);
+@@ -1064,7 +1064,7 @@ int usb_os_find_devices(struct usb_bus *
+     result = (*(device))->GetDeviceAddress(device, (USBDeviceAddress *)&address);
+ 
+     if (usb_debug >= 2)
+-      fprintf(stderr, "usb_os_find_devices: Found USB device at location 0x%08lx\n", location);
++      fprintf(stderr, "usb_os_find_devices: Found USB device at location 0x%08x\n", location);
+ 
+     /* first byte of location appears to be associated with the device's bus */
+     if (location >> 24 == bus_loc >> 24) {
+@@ -1091,7 +1091,7 @@ int usb_os_find_devices(struct usb_bus *
+       LIST_ADD(fdev, dev);
+ 
+       if (usb_debug >= 2)
+-	fprintf(stderr, "usb_os_find_devices: Found %s on %s at location 0x%08lx\n",
++	fprintf(stderr, "usb_os_find_devices: Found %s on %s at location 0x%08x\n",
+ 		dev->filename, bus->dirname, location);
+     }
+ 
