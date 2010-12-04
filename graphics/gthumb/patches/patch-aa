@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.9 2010/12/04 21:15:00 adam Exp $
+
+--- extensions/exiv2_tools/exiv2-utils.cpp.orig	2010-09-15 19:07:15.000000000 +0000
++++ extensions/exiv2_tools/exiv2-utils.cpp
+@@ -497,6 +497,17 @@ set_attributes_from_tagsets (GFileInfo *
+ static const char *
+ get_exif_default_category (const Exiv2::Exifdatum &md)
+ {
++#if (EXIV2_TEST_VERSION(0,21,0))
++	const char *ifdName = md.ifdName();
++	if (strcmp(ifdName, "Makernote") == 0)
++		return "Exif::MakerNotes";
++	if (strcmp(ifdName, "IFD1") == 0)
++		return "Exif::Thumbnail";
++	if (strcmp(ifdName, "GPSInfo") == 0)
++		return "Exif::GPS";
++	if (strcmp(ifdName, "Iop") == 0)
++		return "Exif::Versions";
++#else
+ 	if (Exiv2::ExifTags::isMakerIfd(md.ifdId()))
+ 		return "Exif::MakerNotes";
+ 
+@@ -510,6 +521,7 @@ get_exif_default_category (const Exiv2::
+ 	default:
+ 		break;
+ 	}
++#endif
+ 
+ 	return "Exif::Other";
+ }
+@@ -531,7 +543,11 @@ exiv2_read_metadata (Exiv2::Image::AutoP
+ 			stringstream description;
+ 			if (! md->tagLabel().empty())
+ 				description << md->tagLabel();
++#if (EXIV2_TEST_VERSION(0,21,0))
++			else if (strcmp(md->ifdName(), "Makernote") == 0)
++#else
+ 			else if (md->ifdId () > Exiv2::ifd1Id)
++#endif
+ 				// Must be a MakerNote - include group name
+ 				description << md->groupName() << "." << md->tagName();
+ 			else
