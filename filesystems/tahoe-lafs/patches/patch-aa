@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2010/12/04 01:58:57 gdt Exp $
+
+Upstream incorrectly installs test code.  Patch from David-Sarah
+Hopwood (of upstream) in private mail.
+
+--- setup.py.orig	2010-11-30 05:41:58.000000000 +0000
++++ setup.py
+@@ -371,7 +371,7 @@ setup(name=APPNAME,
+                 "sdist": MySdist,
+                 },
+       package_dir = {'':'src'},
+-      packages=find_packages("src"),
++      packages=find_packages("src", exclude=["buildtest"]),
+       classifiers=trove_classifiers,
+       test_suite="allmydata.test",
+       install_requires=install_requires,
