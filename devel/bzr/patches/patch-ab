@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2009/08/08 15:52:09 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2010/12/04 01:21:06 gdt Exp $
 
---- setup.py.orig	2009-08-06 10:40:13.000000000 +0200
-+++ setup.py	2009-08-06 10:41:02.000000000 +0200
-@@ -659,7 +659,7 @@
+--- setup.py.orig	2010-03-24 07:18:08.000000000 +0000
++++ setup.py
+@@ -709,7 +709,7 @@ else:
      if not 'bdist_egg' in sys.argv:
          # generate and install bzr.1 only with plain install, not the
          # easy_install one
