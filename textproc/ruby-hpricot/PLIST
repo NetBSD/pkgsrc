@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2009/11/23 14:40:02 fhajny Exp $
-${GEM_HOME}/cache/hpricot-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.5 2010/12/04 04:33:51 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/fast_xs/FastXsService.java
 ${GEM_LIBDIR}/ext/fast_xs/extconf.rb
@@ -18,7 +18,7 @@ ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.c
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.h
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.java.rl
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.rl
-${GEM_LIBDIR}/extras/mingw-rbconfig.rb
+${GEM_LIBDIR}/extras/hpricot.png
 ${GEM_LIBDIR}/lib/fast_xs.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/hpricot.rb
 ${GEM_LIBDIR}/lib/hpricot/blankslate.rb
@@ -51,4 +51,4 @@ ${GEM_LIBDIR}/test/test_parser.rb
 ${GEM_LIBDIR}/test/test_paths.rb
 ${GEM_LIBDIR}/test/test_preserved.rb
 ${GEM_LIBDIR}/test/test_xml.rb
-${GEM_HOME}/specifications/hpricot-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

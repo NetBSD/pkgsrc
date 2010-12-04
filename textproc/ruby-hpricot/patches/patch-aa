@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2009/11/23 14:40:02 fhajny Exp $
+$NetBSD: patch-aa,v 1.5 2010/12/04 04:33:52 taca Exp $
 
---- Rakefile.orig	2009-04-27 18:26:24.657742000 +0000
+Don't extract revision dynamically using git command.
+
+--- Rakefile.orig	2010-12-04 04:32:30.000000000 +0000
 +++ Rakefile
-@@ -9,7 +9,7 @@ include FileUtils
+@@ -11,7 +11,7 @@ end
  RbConfig = Config unless defined?(RbConfig)
  
  NAME = "hpricot"
@@ -10,4 +12,4 @@ $NetBSD: patch-aa,v 1.4 2009/11/23 14:40:02 fhajny Exp $
 +REV = nil
  VERS = ENV['VERSION'] || "0.8" + (REV ? ".#{REV}" : "")
  PKG = "#{NAME}-#{VERS}"
- BIN = "*.{bundle,jar,so,o,obj,pdb,lib,def,exp,class}"
+ BIN = "*.{bundle,jar,so,o,obj,pdb,lib,def,exp,class,rbc}"
