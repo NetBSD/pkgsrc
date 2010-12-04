@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 08:06:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/12/04 04:26:30 taca Exp $
 bin/coderay
 bin/coderay_stylesheet
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -69,9 +69,15 @@ ${GEM_LIBDIR}/lib/coderay/styles/murphy.rb
 ${GEM_LIBDIR}/lib/coderay/token_classes.rb
 ${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_LIBDIR}/test/functional/basic.rb
+${GEM_LIBDIR}/test/functional/basic.rbc
 ${GEM_LIBDIR}/test/functional/for_redcloth.rb
+${GEM_LIBDIR}/test/functional/for_redcloth.rbc
 ${GEM_LIBDIR}/test/functional/load_plugin_scanner.rb
+${GEM_LIBDIR}/test/functional/load_plugin_scanner.rbc
 ${GEM_LIBDIR}/test/functional/suite.rb
+${GEM_LIBDIR}/test/functional/suite.rbc
 ${GEM_LIBDIR}/test/functional/vhdl.rb
+${GEM_LIBDIR}/test/functional/vhdl.rbc
 ${GEM_LIBDIR}/test/functional/word_list.rb
+${GEM_LIBDIR}/test/functional/word_list.rbc
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
