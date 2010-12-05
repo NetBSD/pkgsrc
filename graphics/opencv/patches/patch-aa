@@ -1,17 +1,15 @@
-$NetBSD: patch-aa,v 1.2 2010/12/05 10:01:52 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2010/12/05 10:36:41 wiz Exp $
 
-Avoid linking against non-existent libdl. From upstream, see
-https://code.ros.org/trac/opencv/ticket/726
-Already included in repository.
+NetBSD doesn't have expl(3) yet.
 
---- CMakeLists.txt.orig	2010-04-06 01:24:37.000000000 +0000
-+++ CMakeLists.txt
-@@ -438,7 +438,7 @@ if(UNIX)
-             endif()
-         endif()
-         
--        if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-+        if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
-             set(OPENCV_LINKER_LIBS m pthread)
-         else()
-             set(OPENCV_LINKER_LIBS dl m pthread rt)
+--- modules/ml/src/gbt.cpp.orig	2010-12-05 03:35:25.000000000 +0000
++++ modules/ml/src/gbt.cpp
+@@ -11,7 +11,7 @@ using namespace std;
+ #define CV_CMP_FLOAT(a,b) ((a) < (b))
+ static CV_IMPLEMENT_QSORT_EX( icvSortFloat, float, CV_CMP_FLOAT, float)
+ 
+-#if ANDROID
++#if defined(ANDROID) || defined(__NetBSD__)
+ #define expl(x) exp(x)
+ #endif
+ 
