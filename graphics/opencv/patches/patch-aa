@@ -1,13 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/11/09 05:13:41 uebayasi Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/05 10:01:52 wiz Exp $
 
---- docs/Makefile.in.orig	2006-11-04 00:54:54.000000000 +0900
-+++ docs/Makefile.in
-@@ -224,7 +224,7 @@ target_alias = @target_alias@
- target_cpu = @target_cpu@
- target_os = @target_os@
- target_vendor = @target_vendor@
--opencvdocdir = $(pkgdatadir)/doc
-+opencvdocdir = $(datadir)/doc/opencv
- nobase_dist_opencvdoc_DATA = cvcam.rtf faq.htm index.htm \
-     license.txt opencv.jpg opencvman_old.pdf \
-     papers/algo_tracking.pdf papers/avbpa99.ps papers/camshift.pdf \
+Avoid linking against non-existent libdl. From upstream, see
+https://code.ros.org/trac/opencv/ticket/726
+Already included in repository.
+
+--- CMakeLists.txt.orig	2010-04-06 01:24:37.000000000 +0000
++++ CMakeLists.txt
+@@ -438,7 +438,7 @@ if(UNIX)
+             endif()
+         endif()
+         
+-        if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++        if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
+             set(OPENCV_LINKER_LIBS m pthread)
+         else()
+             set(OPENCV_LINKER_LIBS dl m pthread rt)
