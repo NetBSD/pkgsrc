@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4182 2010/12/05 10:36:55 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4183 2010/12/05 11:20:57 abs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5920,3 +5920,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/opencv to 2.1.0 [wiz 2010-12-05]
 	Updated devel/apache-ant to 1.8.1 [tonio 2010-12-05]
 	Updated graphics/opencv to 2.2.0 [wiz 2010-12-05]
+	Updated devel/cpuflags to 1.42 [abs 2010-12-05]
