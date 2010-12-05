@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/08/21 16:35:20 seb Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2010/12/05 20:31:32 tron Exp $
 #
-
-DISTNAME=		OCSNG_UNIX_AGENT-1.02
-PKGNAME=		ocsinventory-agent-1.0.2
-PKGREVISION=		1
+VERS=			1.1.2.1
+DISTNAME=		Ocsinventory-Agent-${VERS}
+PKGNAME=		ocsinventory-agent-${VERS}
 CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ocsinventory/}
+MASTER_SITES=		http://launchpad.net/ocsinventory-unix-agent/stable-1.1.2/ocsinventory-unix-agent-1.1.2.1/+download/
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.ocsinventory-ng.org/
@@ -21,7 +20,7 @@ DEPENDS+=		p5-Proc-Daemon-[0-9]*:../../devel/p5-Proc-Daemon
 DEPENDS+=		dmidecode-[0-9]*:../../sysutils/dmidecode
 .endif
 
-WRKSRC=			${WRKDIR}/Ocsinventory-Agent-1.0.1
+WRKSRC=			${WRKDIR}/Ocsinventory-Agent-${VERS}
 
 BUILD_DEFS+=		VARBASE
 AUTO_MKDIRS=yes
