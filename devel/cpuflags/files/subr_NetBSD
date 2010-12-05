@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.11 2009/03/12 23:57:28 abs Exp $
+# $NetBSD: subr_NetBSD,v 1.12 2010/12/05 11:19:39 abs Exp $
 
 AWK=awk
 SED=sed
@@ -32,7 +32,7 @@ extract_hw_details()
     fi
 
     # We're almost certainly crosscompiling
-    if [ -n "$MACHINE" -a $hw_machine != "$MACHINE" ]; then
+    if [ -n "$MACHINE" -a "$hw_machine" != "$MACHINE" ]; then
 	echo
 	exit
     fi

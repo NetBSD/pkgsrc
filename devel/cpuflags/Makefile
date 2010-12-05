@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.149 2009/11/12 05:38:58 obache Exp $
+# $NetBSD: Makefile,v 1.150 2010/12/05 11:19:39 abs Exp $
 
-DISTNAME=	cpuflags-1.41
+DISTNAME=	cpuflags-1.42
 CATEGORIES=	devel sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +10,7 @@ COMMENT=	Determine compiler flags to best target current cpu
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-* FreeBSD-*-*
+ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-* FreeBSD-*-* Darwin-*-*
 
 USE_LANGUAGES=	# empty
 NO_CONFIGURE=	yes

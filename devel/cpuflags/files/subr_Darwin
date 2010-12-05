@@ -1,0 +1,70 @@
+# $NetBSD: subr_Darwin,v 1.1 2010/12/05 11:19:39 abs Exp $
+
+AWK=awk
+SED=sed
+
+display_hw_details()
+    {
+    cat <<END
+OS		: '$(uname)'
+OS version	: '$(uname -r)'
+hw.model	: '$hw_model'
+hw.machine	: '$hw_machine'
+hw.machine_arch : '$hw_machine_arch'
+CPU		: '$cpu'
+END
+    echo "$cpu_details"
+    }
+
+extract_hw_details()
+    {
+    hw_model=$(sysctl -n hw.model | $SED 's/^  *//')
+    hw_machine=$(sysctl -n hw.machine)
+    hw_machine_arch=$(uname -p)
+    cpu_details=$(hostinfo| $AWK '/^Processor type:/{print $3}')
+
+    # We're almost certainly crosscompiling
+    if [ -n "$MACHINE" -a "$hw_machine" != "$MACHINE" ]; then
+	echo
+	exit
+    fi
+    }
+
+determine_arch()
+    {
+    ARCH=
+    case $hw_machine_arch in
+
+    powerpc) case $cpu_details in				   # Examples
+	ppc7450)		ARCH='-mcpu=7450'		;; #
+	ppc750)			ARCH='-mcpu=750'        	;; # Beige G3
+	ppc970)			ARCH='-mcpu=970'        	;; #
+    esac ;;
+
+    esac
+    echo $ARCH
+    }
+
+determine_features()
+    {
+    FEATURES=
+
+    case $hw_machine_arch in
+	i386 | x86_64)
+	    if [ -n "$cpu_feature_SSE3" ] ; then
+		FEATURES="-mfpmath=sse -msse3"
+	    elif [ -n "$cpu_feature_SSE2" ] ; then
+		FEATURES="-mfpmath=sse -msse2"
+	    elif [ -n "$cpu_feature_SSE" ] ; then
+		FEATURES="-mfpmath=sse -msse"
+	    fi
+	    ;;
+	m68k)
+	    case "$(egrep '^fpu0 ' /var/run/dmesg.boot)" in
+		*\(emulator\)*)		FEATURES="-msoft-float" ;;
+		*\(no\ math\ support\)*) FEATURES="-msoft-float" ;;
+	    esac
+	    ;;
+    esac
+    echo $FEATURES
+    }
