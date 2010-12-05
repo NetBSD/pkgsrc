@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/04/13 21:05:41 tonio Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/12/05 10:05:06 tonio Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -20,13 +20,9 @@ lib/java/ant/ant-junit.jar
 lib/java/ant/ant-launcher.jar
 lib/java/ant/ant-netrexx.jar
 lib/java/ant/ant-nodeps.jar
-lib/java/ant/ant-stylebook.jar
 lib/java/ant/ant-swing.jar
 lib/java/ant/ant-testutil.jar
-lib/java/ant/ant-trax.jar
 lib/java/ant/ant.jar
-lib/java/ant/xercesImpl.jar
-lib/java/ant/xml-apis.jar
 share/doc/java/ant/LICENSE
 share/doc/java/ant/README
 share/doc/java/ant/WHATSNEW
@@ -96,6 +92,7 @@ share/doc/java/ant/manual/CoreTasks/antstructure.html
 share/doc/java/ant/manual/CoreTasks/antversion.html
 share/doc/java/ant/manual/CoreTasks/apply.html
 share/doc/java/ant/manual/CoreTasks/apt.html
+share/doc/java/ant/manual/CoreTasks/augment.html
 share/doc/java/ant/manual/CoreTasks/available.html
 share/doc/java/ant/manual/CoreTasks/basename.html
 share/doc/java/ant/manual/CoreTasks/buildnumber.html
@@ -265,7 +262,6 @@ share/doc/java/ant/manual/OptionalTasks/splash.html
 share/doc/java/ant/manual/OptionalTasks/sshexec.html
 share/doc/java/ant/manual/OptionalTasks/sshsession.html
 share/doc/java/ant/manual/OptionalTasks/starteam.html
-share/doc/java/ant/manual/OptionalTasks/stylebook.html
 share/doc/java/ant/manual/OptionalTasks/symlink.html
 share/doc/java/ant/manual/OptionalTasks/telnet.html
 share/doc/java/ant/manual/OptionalTasks/translate.html
@@ -425,6 +421,7 @@ share/doc/java/ant/manual/api/org/apache/tools/ant/listener/CommonsLoggingListen
 share/doc/java/ant/manual/api/org/apache/tools/ant/listener/Log4jListener.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/listener/MailLogger.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/listener/ProfileLogger.html
+share/doc/java/ant/manual/api/org/apache/tools/ant/listener/SimpleBigProjectLogger.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/listener/TimestampedLogger.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/listener/package-frame.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/listener/package-summary.html
@@ -460,6 +457,7 @@ share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/Antlib.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/AntlibDefinition.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/Apt.Option.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/Apt.html
+share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/AugmentReference.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/Available.FileDir.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/Available.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/BUnzip2.html
@@ -749,7 +747,6 @@ share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/Rpm.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/SchemaValidate.SchemaLocation.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/SchemaValidate.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/Script.html
-share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/StyleBook.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/TraXLiaison.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/XMLValidateTask.Attribute.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/XMLValidateTask.Property.html
@@ -950,7 +947,6 @@ share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/TearD
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/XMLConstants.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/XMLJUnitResultFormatter.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/XMLResultAggregator.html
-share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/Xalan2Executor.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/package-frame.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/package-summary.html
 share/doc/java/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit/package-tree.html
@@ -1495,11 +1491,13 @@ share/doc/java/ant/manual/api/org/apache/tools/tar/package-tree.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/AbstractUnicodeExtraField.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/AsiExtraField.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/CentralDirectoryParsingZipExtraField.html
+share/doc/java/ant/manual/api/org/apache/tools/zip/ExtraFieldUtils.UnparseableExtraField.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/ExtraFieldUtils.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/JarMarker.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/UnicodeCommentExtraField.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/UnicodePathExtraField.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/UnixStat.html
+share/doc/java/ant/manual/api/org/apache/tools/zip/UnparseableExtraFieldData.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/UnrecognizedExtraField.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/ZipEntry.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/ZipExtraField.html
@@ -1508,6 +1506,7 @@ share/doc/java/ant/manual/api/org/apache/tools/zip/ZipLong.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/ZipOutputStream.UnicodeExtraFieldPolicy.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/ZipOutputStream.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/ZipShort.html
+share/doc/java/ant/manual/api/org/apache/tools/zip/ZipUtil.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/package-frame.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/package-summary.html
 share/doc/java/ant/manual/api/org/apache/tools/zip/package-tree.html
@@ -1570,6 +1569,8 @@ share/doc/java/ant/resources.html
 share/doc/java/ant/slides/extending_ant.odp
 share/doc/java/ant/svn.html
 share/doc/java/ant/webtest/gettest/.htaccess
+share/doc/java/ant/webtest/gettest/local.cgi
+share/doc/java/ant/webtest/gettest/testlocal.txt
 share/doc/java/ant/webtest/gettest/testother.txt
 share/doc/java/ant/webtest/gettest/testperm.txt
 share/doc/java/ant/webtest/gettest/testredir5.txt
