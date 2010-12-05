@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/07/24 12:33:19 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/12/05 17:13:09 gls Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.so
 ${PYSITELIB}/Crypto/Cipher/ARC2.so
 ${PYSITELIB}/Crypto/Cipher/ARC4.so
@@ -56,6 +56,7 @@ ${PYSITELIB}/Crypto/PublicKey/_RSA.pyo
 ${PYSITELIB}/Crypto/PublicKey/__init__.py
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyc
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyo
+${PYSITELIB}/Crypto/PublicKey/_fastmath.so
 ${PYSITELIB}/Crypto/PublicKey/_slowmath.py
 ${PYSITELIB}/Crypto/PublicKey/_slowmath.pyc
 ${PYSITELIB}/Crypto/PublicKey/_slowmath.pyo
@@ -176,6 +177,9 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_DSA.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_RSA.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_RSA.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_RSA.pyo
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_importKey.py
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_importKey.pyc
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_importKey.pyo
 ${PYSITELIB}/Crypto/SelfTest/Random/Fortuna/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Random/Fortuna/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Random/Fortuna/__init__.pyo
@@ -221,6 +225,9 @@ ${PYSITELIB}/Crypto/SelfTest/Util/__init__.pyo
 ${PYSITELIB}/Crypto/SelfTest/Util/test_Counter.py
 ${PYSITELIB}/Crypto/SelfTest/Util/test_Counter.pyc
 ${PYSITELIB}/Crypto/SelfTest/Util/test_Counter.pyo
+${PYSITELIB}/Crypto/SelfTest/Util/test_asn1.py
+${PYSITELIB}/Crypto/SelfTest/Util/test_asn1.pyc
+${PYSITELIB}/Crypto/SelfTest/Util/test_asn1.pyo
 ${PYSITELIB}/Crypto/SelfTest/Util/test_number.py
 ${PYSITELIB}/Crypto/SelfTest/Util/test_number.pyc
 ${PYSITELIB}/Crypto/SelfTest/Util/test_number.pyo
@@ -246,6 +253,9 @@ ${PYSITELIB}/Crypto/Util/_counter.so
 ${PYSITELIB}/Crypto/Util/_number_new.py
 ${PYSITELIB}/Crypto/Util/_number_new.pyc
 ${PYSITELIB}/Crypto/Util/_number_new.pyo
+${PYSITELIB}/Crypto/Util/asn1.py
+${PYSITELIB}/Crypto/Util/asn1.pyc
+${PYSITELIB}/Crypto/Util/asn1.pyo
 ${PYSITELIB}/Crypto/Util/number.py
 ${PYSITELIB}/Crypto/Util/number.pyc
 ${PYSITELIB}/Crypto/Util/number.pyo
