@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2010/05/27 12:36:02 obache Exp $
+# $NetBSD: Makefile,v 1.49 2010/12/05 18:42:29 asau Exp $
 
 DISTNAME=	dbus-1.2.4.6permissive
 PKGNAME=	dbus-1.2.4.6
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
