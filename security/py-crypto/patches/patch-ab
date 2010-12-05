@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2010/07/22 19:34:11 gdt Exp $
+$NetBSD: patch-ab,v 1.4 2010/12/05 17:13:09 gls Exp $
 
 Something in the build fails to detect that we have wchar.h.  This
 change make it build on NetBSD; a better fix is welcome.
 
---- src/libtom/tomcrypt_pk.h.orig	2009-12-13 20:39:29.000000000 +0000
+--- src/libtom/tomcrypt_pk.h.orig	2010-08-27 04:41:55.000000000 +0000
 +++ src/libtom/tomcrypt_pk.h
 @@ -495,12 +495,7 @@ int der_length_printable_string(const un
  int der_printable_char_encode(int c);
