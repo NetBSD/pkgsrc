@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4183 2010/12/05 11:20:57 abs Exp $
+$NetBSD: CHANGES-2010,v 1.4184 2010/12/05 17:17:08 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5921,3 +5921,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/apache-ant to 1.8.1 [tonio 2010-12-05]
 	Updated graphics/opencv to 2.2.0 [wiz 2010-12-05]
 	Updated devel/cpuflags to 1.42 [abs 2010-12-05]
+	Updated security/py-crypto to 2.3 [gls 2010-12-05]
