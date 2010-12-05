@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+$NetBSD: distinfo,v 1.1.1.1.10.1 2010/12/05 20:31:32 tron Exp $
 
-SHA1 (OCSNG_UNIX_AGENT-1.02.tar.gz) = 92660745140d1526568a3c02b0b4d8c7286f5e3f
-RMD160 (OCSNG_UNIX_AGENT-1.02.tar.gz) = db3ee9df9d94114b7b6ce5dcd2f0e862729d6056
-Size (OCSNG_UNIX_AGENT-1.02.tar.gz) = 1392033 bytes
+SHA1 (Ocsinventory-Agent-1.1.2.1.tar.gz) = ff8395bd281ddfdb9c3f9106b51aa75ac542f169
+RMD160 (Ocsinventory-Agent-1.1.2.1.tar.gz) = 8cd303df6f760d6ec4f64e79792544c4c8119227
+Size (Ocsinventory-Agent-1.1.2.1.tar.gz) = 1401670 bytes
 SHA1 (patch-aa) = 5022b8b1f5e98c43f7da562412bd752956320f05
-SHA1 (patch-ab) = 04e70296c005a710f1b2470451c9872c7716ea26
-SHA1 (patch-ac) = 9be5237057924628cc4d24d7620270aa9a8fd459
+SHA1 (patch-ab) = 6eca9c4fb2f9971a10437e05d40cf0c98bbe2371
+SHA1 (patch-ac) = 352825dd73ab8b9f22d60c8c4056999bf8ff3b3f
 SHA1 (patch-ad) = 5160c3ac8ae48eee578be50350c7c4ccfe74b045
 SHA1 (patch-ae) = b801ad35b3bf13323e27fe6ebf638e295aa7771d
 SHA1 (patch-af) = 8d156a6266ca6c2a7f0d8831585c9ce4e0944394
@@ -18,3 +18,4 @@ SHA1 (patch-al) = dd2ffdd4e9470677c5f0c622ae8e3c5a925843ac
 SHA1 (patch-am) = 376f95a684729ce32ded34a1a62d8ef300e52529
 SHA1 (patch-an) = 4b1e91e7f1719c84782f541cb3abc6e39f6b94e6
 SHA1 (patch-ao) = 87c6edc945e90d990d3db28687113189a723852b
+SHA1 (patch-ap) = 1ccc2218c48355039b6af9732063b430607a70e4
