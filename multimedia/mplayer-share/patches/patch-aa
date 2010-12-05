@@ -1,18 +1,31 @@
-$NetBSD: patch-aa,v 1.25 2010/09/16 18:56:12 wiz Exp $
+$NetBSD: patch-aa,v 1.26 2010/12/05 16:42:16 tsutsui Exp $
 
---- configure.orig	2010-09-04 09:39:21.000000000 +0000
+--- configure.orig	2010-09-13 03:12:07.000000000 +0000
 +++ configure
-@@ -1471,6 +1471,9 @@ if test -z "$_target" ; then
+@@ -1471,6 +1471,12 @@ if test -z "$_target" ; then
     powerpc) # Darwin returns 'powerpc'
       host_arch=ppc
       ;;
 +   mipseb|mipsel) # NetBSD
 +     host_arch=mips
 +     ;;
++   sh3eb|sh3el) # NetBSD
++     host_arch=sh
++     ;;
     *) # uname -p on Linux returns 'unknown' for the processor type,
        # OpenBSD returns 'Intel Pentium/MMX ("Genuine Intel" 586-class)'
  
-@@ -1645,7 +1648,7 @@ else
+@@ -1488,7 +1494,8 @@ if test -z "$_target" ; then
+       sparc64) host_arch=sparc64 ;;
+       parisc*|hppa*|9000*) host_arch=hppa ;;
+       arm*|zaurus|cats) host_arch=arm ;;
+-      sh3|sh4|sh4a) host_arch=sh ;;
++      sh3) host_arch=sh ;;
++      sh4|sh4a) host_arch=sh4 ;;
+       s390) host_arch=s390 ;;
+       s390x) host_arch=s390x ;;
+       *mips*) host_arch=mips ;;
+@@ -1645,7 +1652,7 @@ else
        cc_name=$cc_name_tmp
        echocheck "$_cc version"
        cc_vendor=gnu
@@ -21,7 +34,7 @@ $NetBSD: patch-aa,v 1.25 2010/09/16 18:56:12 wiz Exp $
        case $cc_version in
          2.96*)
            cc_fail=yes
-@@ -1763,7 +1766,7 @@ if x86 ; then
+@@ -1763,7 +1770,7 @@ if x86 ; then
    # gather more CPU information
    pname=$($_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -n 1)
    pvendor=$($_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -n 1)
@@ -30,7 +43,21 @@ $NetBSD: patch-aa,v 1.25 2010/09/16 18:56:12 wiz Exp $
    pmodel=$($_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
    pstepping=$($_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
  
-@@ -3710,7 +3713,6 @@ test "$_w32threads" = yes && def_threads
+@@ -2238,7 +2245,12 @@ case "$host_arch" in
+     test $_fast_clz = "auto" && _fast_clz=yes
+     ;;
+ 
+-  sh|sh4)
++  sh)
++    arch='sh'
++    iproc='sh'
++    ;;
++
++  sh4)
+     arch='sh4'
+     iproc='sh4'
+     ;;
+@@ -3713,7 +3725,6 @@ test "$_w32threads" = yes && def_threads
  echores "$_w32threads"
  
  echocheck "rpath"
@@ -38,7 +65,7 @@ $NetBSD: patch-aa,v 1.25 2010/09/16 18:56:12 wiz Exp $
  if test "$_rpath" = yes ; then
    for I in $(echo $extra_ldflags | sed 's/-L//g') ; do
      tmp="$tmp $(echo $I | sed 's/.*/ -L& -Wl,-R&/')"
-@@ -3975,7 +3977,6 @@ echores "$_vsscanf"
+@@ -3978,7 +3989,6 @@ echores "$_vsscanf"
  
  echocheck "swab()"
  cat > $TMPC << EOF
@@ -46,7 +73,7 @@ $NetBSD: patch-aa,v 1.25 2010/09/16 18:56:12 wiz Exp $
  #include <unistd.h>
  int main(void) { swab(0, 0, 0); return 0; }
  EOF
-@@ -4456,7 +4457,11 @@ EOF
+@@ -4488,7 +4498,11 @@ EOF
             -L/usr/X11/lib -L/usr/lib32 -L/usr/openwin/lib -L/usr/local/lib64 -L/usr/X11R6/lib64 \
             -L/usr/lib ; do
      if netbsd; then
@@ -59,7 +86,7 @@ $NetBSD: patch-aa,v 1.25 2010/09/16 18:56:12 wiz Exp $
      else
        _ld_tmp="$I -lXext -lX11 $_ld_pthread"
      fi
-@@ -5591,8 +5596,13 @@ if test "$_ivtv" = auto ; then
+@@ -5623,8 +5637,13 @@ if test "$_ivtv" = auto ; then
    cat > $TMPC << EOF
  #include <stdlib.h>
  #include <inttypes.h>
@@ -73,7 +100,7 @@ $NetBSD: patch-aa,v 1.25 2010/09/16 18:56:12 wiz Exp $
  #include <linux/ivtv.h>
  #include <sys/ioctl.h>
  int main(void) {
-@@ -8052,7 +8062,7 @@ echores "$_tv_v4l1"
+@@ -8057,7 +8076,7 @@ echores "$_tv_v4l1"
  echocheck "Video 4 Linux 2 TV interface"
  if test "$_tv_v4l2" = auto ; then
    _tv_v4l2=no
