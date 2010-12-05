@@ -1,15 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2006/11/19 23:13:42 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2010/12/05 10:01:52 wiz Exp $
 
-Tags: pkgsrc-only
+png-1.4.x compatibility.
+Already included in upstream repository.
 
---- configure.orig	2006-11-03 16:54:49.000000000 +0100
-+++ configure	2006-11-19 23:03:44.000000000 +0100
-@@ -20433,7 +20433,7 @@ else
- echo "${ECHO_T}no" >&6
- fi
+--- src/highgui/grfmt_png.cpp.orig	2010-04-06 01:24:44.000000000 +0000
++++ src/highgui/grfmt_png.cpp
+@@ -223,7 +223,7 @@ bool  PngDecoder::readData( Mat& img )
+                 png_set_palette_to_rgb( png_ptr );
  
--        if test x"$PKG_CONFIG" == "xno"; then
-+        if test x"$PKG_CONFIG" = "xno"; then
-             { { echo "$as_me:$LINENO: error: You have to install pkg-config to compile OpenCV with GTK+" >&5
- echo "$as_me: error: You have to install pkg-config to compile OpenCV with GTK+" >&2;}
-    { (exit 1); exit 1; }; }
+             if( m_color_type == PNG_COLOR_TYPE_GRAY && m_bit_depth < 8 )
+-                png_set_gray_1_2_4_to_8( png_ptr );
++                png_set_expand_gray_1_2_4_to_8( png_ptr );
+ 
+             if( CV_MAT_CN(m_type) > 1 && color )
+                 png_set_bgr( png_ptr ); // convert RGB to BGR
