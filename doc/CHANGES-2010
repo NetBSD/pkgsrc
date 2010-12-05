@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4186 2010/12/05 21:27:29 hauke Exp $
+$NetBSD: CHANGES-2010,v 1.4187 2010/12/05 23:22:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5924,3 +5924,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/py-crypto to 2.3 [gls 2010-12-05]
 	Updated www/wordpress to 3.0.2 [morr 2010-12-05]
 	Updated comms/conserver8 to 8.1.18 [hauke 2010-12-05]
+	Updated graphics/kdegraphics4 to 4.5.3nb2 [wiz 2010-12-05]
