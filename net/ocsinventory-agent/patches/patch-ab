@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+$NetBSD: patch-ab,v 1.1.1.1.10.1 2010/12/05 20:31:32 tron Exp $
 
---- lib/Ocsinventory/Agent/Config.pm.orig	2009-03-22 20:11:09.000000000 +0100
-+++ lib/Ocsinventory/Agent/Config.pm	2009-06-25 15:14:11.000000000 +0200
-@@ -8,9 +8,7 @@
+--- lib/Ocsinventory/Agent/Config.pm.orig	2010-10-12 20:02:53.000000000 +0200
++++ lib/Ocsinventory/Agent/Config.pm	2010-12-01 18:21:25.000000000 +0100
+@@ -67,9 +67,7 @@
  
-   @{$config->{etcdir}} = ();
+   $self->{config}{etcdir} = [];
  
--  push (@{$config->{etcdir}}, '/etc/ocsinventory');
--  push (@{$config->{etcdir}}, '/usr/local/etc/ocsinventory');
--  push (@{$config->{etcdir}}, '/etc/ocsinventory-agent');
-+  push (@{$config->{etcdir}}, '@PKG_SYSCONFDIR@');
-   push (@{$config->{etcdir}}, $ENV{HOME}.'/.ocsinventory');
+-  push (@{$self->{config}{etcdir}}, '/etc/ocsinventory');
+-  push (@{$self->{config}{etcdir}}, '/usr/local/etc/ocsinventory');
+-  push (@{$self->{config}{etcdir}}, '/etc/ocsinventory-agent');
++  push (@{$self->{config}{etcdir}}, '@PKG_SYSCONFDIR@');
+   push (@{$self->{config}{etcdir}}, $ENV{HOME}.'/.ocsinventory'); # Should I?
  
-   if (!$file || !-f $file) {
+   my $file;
