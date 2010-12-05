@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.27 2010/04/13 21:05:41 tonio Exp $
+# $NetBSD: Makefile,v 1.28 2010/12/05 10:05:06 tonio Exp $
 #
 
-DISTNAME=	apache-ant-1.8.0
-#PKGREVISION=	1
+DISTNAME=	apache-ant-1.8.1-bin
+PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
 EXTRACT_SUFX=	.tar.bz2
-DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://ant.apache.org/
-COMMENT=	Apache Project's Java-Based make(1) replacement
+COMMENT=	"Apache Project's Java-Based make(1) replacement"
+
+LICENSE=	apache-2.0
 
 # Up to version 1.5.1 inclusive this was known as "jakarta-ant".
 CONFLICTS=	jakarta-ant>=0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/${PKGNAME}
 
 USE_JAVA=	run
 USE_JAVA2=	yes
@@ -35,8 +38,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/antRun ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${DESTDIR}${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/ant-*.jar ${DESTDIR}${PREFIX}/lib/java/ant
-	${INSTALL_DATA} ${WRKSRC}/lib/xercesImpl.jar ${DESTDIR}${PREFIX}/lib/java/ant
-	${INSTALL_DATA} ${WRKSRC}/lib/xml-apis.jar ${DESTDIR}${PREFIX}/lib/java/ant
 	cd ${WRKSRC}/docs && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/java/ant
