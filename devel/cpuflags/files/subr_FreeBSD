@@ -1,4 +1,4 @@
-# $NetBSD: subr_FreeBSD,v 1.3 2008/12/10 23:27:17 abs Exp $
+# $NetBSD: subr_FreeBSD,v 1.4 2010/12/05 11:19:39 abs Exp $
 
 AWK=awk
 SED=sed
@@ -23,7 +23,7 @@ extract_hw_details()
     hw_machine_arch=$(sysctl -n hw.machine_arch)
 
     # We're almost certainly crosscompiling
-    if [ -n "$MACHINE" -a $hw_machine != "$MACHINE" ]; then
+    if [ -n "$MACHINE" -a "$hw_machine" != "$MACHINE" ]; then
 	echo
 	exit
     fi
