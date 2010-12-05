@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4185 2010/12/05 18:22:25 morr Exp $
+$NetBSD: CHANGES-2010,v 1.4186 2010/12/05 21:27:29 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5923,3 +5923,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/cpuflags to 1.42 [abs 2010-12-05]
 	Updated security/py-crypto to 2.3 [gls 2010-12-05]
 	Updated www/wordpress to 3.0.2 [morr 2010-12-05]
+	Updated comms/conserver8 to 8.1.18 [hauke 2010-12-05]
