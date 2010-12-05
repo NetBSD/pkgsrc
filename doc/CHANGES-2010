@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4179 2010/12/04 19:45:17 gson Exp $
+$NetBSD: CHANGES-2010,v 1.4180 2010/12/05 10:02:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5917,3 +5917,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/ruby-treetop to 1.4.9 [taca 2010-12-04]
 	Updated textproc/ruby-xslt to 0.9.8 [taca 2010-12-04]
 	Updated misc/py-anita to 1.18 [gson 2010-12-04]
+	Updated graphics/opencv to 2.1.0 [wiz 2010-12-05]
