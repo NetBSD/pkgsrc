@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/11/07 15:24:50 shattered Exp $
+# $NetBSD: options.mk,v 1.5 2010/12/05 18:29:17 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
 PKG_SUPPORTED_OPTIONS+=	debug x11
@@ -6,7 +6,8 @@ PKG_SUGGESTED_OPTIONS=	x11
 
 .if (${OPSYS} == "NetBSD"  ||	\
      ${OPSYS} == "FreeBSD" ||	\
-     ${OPSYS} == "OpenBSD")
+     ${OPSYS} == "OpenBSD" ||	\
+     ${OPSYS} == "DragonFly")
 PKG_SUPPORTED_OPTIONS+=	kqueue
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
