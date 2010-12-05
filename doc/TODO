@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9917 2010/12/05 10:02:06 wiz Exp $
+$NetBSD: TODO,v 1.9918 2010/12/05 10:06:03 tonio Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
-	o apache-ant-1.8.1 [pkg/43752]
 	o apache-maven-3.0
 	o apache-tomcat55-5.5.29
 	o appres-1.0.3
