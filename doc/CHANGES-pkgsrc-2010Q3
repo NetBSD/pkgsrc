@@ -81,10 +81,16 @@ lang/ruby19-base: build fix
 Pullup ticket #3287 - requested by is
 lang/ocaml: portability fix
 Pullup ticket #3288 - requested by tron
-Security update for "phpmyadmin" package
+databases/phpmyadmin: security update
 Pullup ticket #3290 - requested by taca
-net/bind97 security update
+net/bind97: security update
 Pullup ticket #3291 - requested by taca
-net/bind96 security update
+net/bind96: security update
 Pullup ticket #3292 - requested by taca
-pkgsrc/security/openssl security update
+security/openssl: security update
+Pullup ticket #3293 - requested by bouyer
+mail/imp: dependence fix
+Pullup ticket #3294 - requested by bouyer
+net/ocsinventory-agent: compatibility update
+Pullup ticket #3295 - requested by bouyer
+mail/clamav: bug fix update
