@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9918 2010/12/05 10:06:03 tonio Exp $
+$NetBSD: TODO,v 1.9919 2010/12/05 21:32:27 hauke Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o colorize-0.3.4
 	o compositeproto-0.4.2
 	o connect-1.96
-	o conserver-8.1.18
 	o consolekit-0.4.0
 	o cook-2.31
 	o coreutils-8.4
