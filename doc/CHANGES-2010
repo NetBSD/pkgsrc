@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4180 2010/12/05 10:02:06 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4181 2010/12/05 10:06:02 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5918,3 +5918,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/ruby-xslt to 0.9.8 [taca 2010-12-04]
 	Updated misc/py-anita to 1.18 [gson 2010-12-04]
 	Updated graphics/opencv to 2.1.0 [wiz 2010-12-05]
+	Updated devel/apache-ant to 1.8.1 [tonio 2010-12-05]
