@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.3 2010/12/06 12:16:03 wiz Exp $
+
+Fix build on DragonFly, PR pkg/44193.
+
+--- backend/epson2.h.orig	2010-04-05 13:18:04.000000000 +0000
++++ backend/epson2.h
+@@ -36,6 +36,10 @@
+ #include <sys/types.h>
+ #endif
+ 
++#ifdef NEED_SYS_SOCKET_H
++#include <sys/socket.h>
++#endif
++
+ #include <string.h> /* for memset and memcpy */
+ #include <stdio.h>
+ 
