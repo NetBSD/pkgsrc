@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/03/08 13:24:01 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/06 14:25:44 wiz Exp $
 bin/varnishadm
 bin/varnishhist
 bin/varnishlog
@@ -7,6 +7,8 @@ bin/varnishreplay
 bin/varnishstat
 bin/varnishtest
 bin/varnishtop
+bin/varnishtest
+bin/varnishsizes
 include/varnish/shmlog.h
 include/varnish/shmlog_tags.h
 include/varnish/stat_field.h
@@ -26,6 +28,11 @@ man/man1/varnishreplay.1
 man/man1/varnishstat.1
 man/man1/varnishtest.1
 man/man1/varnishtop.1
+man/man1/varnishadm.1
+man/man1/varnishsizes.1
 man/man7/vcl.7
 sbin/varnishd
 share/examples/varnish/default.vcl
+share/examples/rc.d/varnishd
+share/examples/rc.d/varnishlog
+share/examples/rc.d/varnishncsa
