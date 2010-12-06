@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2010/11/15 22:58:05 abs Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/06 11:43:41 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -24,6 +23,7 @@ COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 .include "../../multimedia/libtheora/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.xine-lib?=	xine-lib>=1.1.19nb1
 .include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

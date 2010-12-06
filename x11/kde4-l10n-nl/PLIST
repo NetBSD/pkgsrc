@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/11/03 20:07:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/12/06 11:43:42 markd Exp $
 man/nl/man1/adddebug.1
 man/nl/man1/ark.1
 man/nl/man1/checkXML.1
@@ -23,6 +23,8 @@ man/nl/man1/kross.1
 man/nl/man1/ktouch.1
 man/nl/man1/makekdewidgets.1
 man/nl/man1/plasmaengineexplorer.1
+man/nl/man1/plasmapkg.1
+man/nl/man1/plasmoidviewer.1
 man/nl/man1/po2xml.1
 man/nl/man1/preparetips.1
 man/nl/man1/qtdoc.1
@@ -156,9 +158,6 @@ share/doc/kde/HTML/nl/kbruch/common
 share/doc/kde/HTML/nl/kbruch/index.cache.bz2
 share/doc/kde/HTML/nl/kbruch/index.docbook
 share/doc/kde/HTML/nl/kbruch/man-kbruch.1.docbook
-share/doc/kde/HTML/nl/kbugbuster/common
-share/doc/kde/HTML/nl/kbugbuster/index.cache.bz2
-share/doc/kde/HTML/nl/kbugbuster/index.docbook
 share/doc/kde/HTML/nl/kcalc/commands.docbook
 share/doc/kde/HTML/nl/kcalc/common
 share/doc/kde/HTML/nl/kcalc/index.cache.bz2
@@ -444,6 +443,9 @@ share/doc/kde/HTML/nl/kgeography/first-start3.png
 share/doc/kde/HTML/nl/kgeography/first-start4.png
 share/doc/kde/HTML/nl/kgeography/index.cache.bz2
 share/doc/kde/HTML/nl/kgeography/index.docbook
+share/doc/kde/HTML/nl/kget/common
+share/doc/kde/HTML/nl/kget/index.cache.bz2
+share/doc/kde/HTML/nl/kget/index.docbook
 share/doc/kde/HTML/nl/kgpg/common
 share/doc/kde/HTML/nl/kgpg/index.cache.bz2
 share/doc/kde/HTML/nl/kgpg/index.docbook
@@ -660,6 +662,9 @@ share/doc/kde/HTML/nl/kmplot/using.docbook
 share/doc/kde/HTML/nl/knetattach/common
 share/doc/kde/HTML/nl/knetattach/index.cache.bz2
 share/doc/kde/HTML/nl/knetattach/index.docbook
+share/doc/kde/HTML/nl/kolf/common
+share/doc/kde/HTML/nl/kolf/index.cache.bz2
+share/doc/kde/HTML/nl/kolf/index.docbook
 share/doc/kde/HTML/nl/kolourpaint/common
 share/doc/kde/HTML/nl/kolourpaint/index.cache.bz2
 share/doc/kde/HTML/nl/kolourpaint/index.docbook
@@ -836,6 +841,10 @@ share/doc/kde/HTML/nl/kteatime/index.docbook
 share/doc/kde/HTML/nl/ktimer/common
 share/doc/kde/HTML/nl/ktimer/index.cache.bz2
 share/doc/kde/HTML/nl/ktimer/index.docbook
+share/doc/kde/HTML/nl/ktouch/common
+share/doc/kde/HTML/nl/ktouch/index.cache.bz2
+share/doc/kde/HTML/nl/ktouch/index.docbook
+share/doc/kde/HTML/nl/ktouch/man-ktouch.1.docbook
 share/doc/kde/HTML/nl/ktuberling/common
 share/doc/kde/HTML/nl/ktuberling/index.cache.bz2
 share/doc/kde/HTML/nl/ktuberling/index.docbook
@@ -889,6 +898,9 @@ share/doc/kde/HTML/nl/okular/index.docbook
 share/doc/kde/HTML/nl/onlinehelp/common
 share/doc/kde/HTML/nl/onlinehelp/index.cache.bz2
 share/doc/kde/HTML/nl/onlinehelp/index.docbook
+share/doc/kde/HTML/nl/parley/common
+share/doc/kde/HTML/nl/parley/index.cache.bz2
+share/doc/kde/HTML/nl/parley/index.docbook
 share/doc/kde/HTML/nl/plasma-desktop/common
 share/doc/kde/HTML/nl/plasma-desktop/favorite-widgets.png
 share/doc/kde/HTML/nl/plasma-desktop/index.cache.bz2
@@ -897,6 +909,9 @@ share/doc/kde/HTML/nl/plasma-desktop/taskbar-settings.png
 share/doc/kde/HTML/nl/printer-applet/common
 share/doc/kde/HTML/nl/printer-applet/index.cache.bz2
 share/doc/kde/HTML/nl/printer-applet/index.docbook
+share/doc/kde/HTML/nl/rocs/common
+share/doc/kde/HTML/nl/rocs/index.cache.bz2
+share/doc/kde/HTML/nl/rocs/index.docbook
 share/doc/kde/HTML/nl/sonnet/common
 share/doc/kde/HTML/nl/sonnet/index.cache.bz2
 share/doc/kde/HTML/nl/sonnet/index.docbook
