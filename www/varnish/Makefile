@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/03/17 17:45:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2010/12/06 14:25:44 wiz Exp $
 #
 
-DISTNAME=	varnish-2.0.6
-PKGREVISION=	1
+DISTNAME=	varnish-2.1.4
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=varnish/}
+MASTER_SITES=	http://www.varnish-software.com/sites/default/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://varnish-cache.org/
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf
+USE_TOOLS+=	autoconf pkg-config gmake
 BUILD_DEFS+=	VARBASE
 
 EGDIR=			${PREFIX}/share/examples/varnish
@@ -37,12 +36,12 @@ PKG_HOME.${VRNUSER}=	${VRNDIR}
 PKG_SHELL.${VRNUSER}=	${SH}
 PKG_GECOS.${VRNUSER}=	Varnish daemon user
 
-SUBST_CLASSES+=		pkg
-SUBST_STAGE.pkg=	post-patch
-SUBST_MESSAGE.pkg=	Fixing pkgsrc paths
-SUBST_FILES.pkg=	etc/Makefile.in
-SUBST_SED.pkg=		-e 's,@EGDIR@,${EGDIR},'
+RCD_SCRIPTS=            varnishd varnishlog varnishncsa
 
+.include "../../lang/python/pyversion.mk"
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
+
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
