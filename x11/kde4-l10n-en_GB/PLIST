@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2010/10/25 21:11:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/12/06 11:43:41 markd Exp $
 share/doc/kde/HTML/en_GB/common/fdl-translated.html
 share/doc/kde/HTML/en_GB/common/gpl-translated.html
 share/doc/kde/HTML/en_GB/common/kde-localised.css
 share/doc/kde/HTML/en_GB/common/lgpl-translated.html
-share/doc/kde/HTML/en_GB/kbugbuster/common
-share/doc/kde/HTML/en_GB/kbugbuster/index.cache.bz2
-share/doc/kde/HTML/en_GB/kbugbuster/index.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/glossary/common
 share/doc/kde/HTML/en_GB/khelpcenter/glossary/index.cache.bz2
 share/doc/kde/HTML/en_GB/khelpcenter/glossary/index.docbook
