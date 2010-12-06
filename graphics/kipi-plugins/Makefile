@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2010/12/02 17:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2010/12/06 08:43:02 wiz Exp $
 #
 
 DISTNAME=	kipi-plugins-1.6.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/kipi-plugins/1.6.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,8 +27,8 @@ BUILDLINK_API_DEPENDS.kdelibs+= kdelibs4>=4.4.0
 # for IpodExport
 .include "../../audio/libgpod/buildlink3.mk"
 .include "../../graphics/kdegraphics4/buildlink3.mk"
-# for RemoveRedEyes -- needs to be at least 2.1, pkgsrc currently has 1.0
-#.include "../../graphics/opencv/buildlink3.mk"
+# for RemoveRedEyes
+.include "../../graphics/opencv/buildlink3.mk"
 # for Calendar
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 # for Shwup
