@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2010/12/05 10:36:41 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2010/12/06 16:55:23 wiz Exp $
 
 NetBSD doesn't have expl(3) yet.
+https://code.ros.org/trac/opencv/ticket/736
 
 --- modules/ml/src/gbt.cpp.orig	2010-12-05 03:35:25.000000000 +0000
 +++ modules/ml/src/gbt.cpp
