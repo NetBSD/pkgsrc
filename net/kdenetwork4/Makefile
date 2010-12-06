@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2010/11/15 22:58:16 abs Exp $
+# $NetBSD: Makefile,v 1.18 2010/12/06 11:43:41 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -22,6 +21,7 @@ REPLACE_PERL+= \
 	kopete/kopete/kconf_update/kopete-gaim_to_pidgin_style.pl \
 	kopete/kopete/kconf_update/kopete-initialstatus.pl \
 	kopete/kopete/kconf_update/kopete-pluginloader.pl \
+	kopete/kopete/kconf_update/kopete-update_icq_server.pl \
 	kopete/kopete/kconf_update/kopete-update_yahoo_server.pl
 
 REPLACE_SH+= \
@@ -45,6 +45,7 @@ BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../net/openslp/buildlink3.mk"
 .include "../../net/ortp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
