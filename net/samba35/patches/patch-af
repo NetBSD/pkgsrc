@@ -1,0 +1,142 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/12/06 17:01:23 adam Exp $
+
+--- configure.orig	2010-10-07 16:42:24.000000000 +0000
++++ configure
+@@ -52166,6 +52166,7 @@ _ACEOF
+ 
+ 			BLDSHARED="true"
+ 			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
++			SONAMEFLAG="-install_name \$(LIBDIR)/"
+ 			CFLAGS="$CFLAGS -fno-common"
+ 			SHLD="\${CC}"
+ 			SHLIBEXT="dylib"
+@@ -52206,7 +52206,7 @@ fi
+ $as_echo "$BLDSHARED" >&6; }
+ 
+ saved_before_as_needed_ldflags="$LDFLAGS"
+-for flags in "-Wl,--as-needed" "-Wl,-z,ignore" "-z ignore" ; do
++for flags in "-Wl,-z,ignore" "-z ignore" ; do
+ 	saved_ldflags="$LDFLAGS"
+ 	{ $as_echo "$as_me:$LINENO: checking if $flags works" >&5
+ $as_echo_n "checking if $flags works... " >&6; }
+@@ -65398,9 +65398,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+ 
+ 
+ 
+-        { $as_echo "$as_me:$LINENO: checking for des_set_key in -lcrypto" >&5
+-$as_echo_n "checking for des_set_key in -lcrypto... " >&6; }
+-if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then
++        { $as_echo "$as_me:$LINENO: checking for EVP_des_cbc -lcrypto" >&5
++$as_echo_n "checking for EVP_des_cbc in -lcrypto... " >&6; }
++if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+@@ -65416,11 +65416,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char des_set_key ();
++char EVP_des_cbc ();
+ int
+ main ()
+ {
+-return des_set_key ();
++return EVP_des_cbc ();
+   ;
+   return 0;
+ }
+@@ -65446,13 +65446,13 @@ $as_echo "$ac_try_echo") >&5
+ 	 test "$cross_compiling" = yes ||
+ 	 $as_test_x conftest$ac_exeext
+        }; then
+-  ac_cv_lib_ext_crypto_des_set_key=yes;
++  ac_cv_lib_ext_crypto_EVP_des_cbc=yes;
+ 		  ac_cv_lib_ext_crypto=yes
+ else
+   $as_echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_ext_crypto_des_set_key=no;
++	ac_cv_lib_ext_crypto_EVP_des_cbc=no;
+ 		  ac_cv_lib_ext_crypto=no
+ fi
+ 
+@@ -65461,11 +65461,11 @@ rm -f core conftest.err conftest.$ac_obj
+       conftest$ac_exeext conftest.$ac_ext
+ 
+ fi
+-{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_des_set_key" >&5
+-$as_echo "$ac_cv_lib_ext_crypto_des_set_key" >&6; }
+-    if test $ac_cv_lib_ext_crypto_des_set_key = yes; then
++{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_EVP_des_cbc" >&5
++$as_echo "$ac_cv_lib_ext_crypto_EVP_des_cbc" >&6; }
++    if test $ac_cv_lib_ext_crypto_EVP_des_cbc = yes; then
+   cat >>confdefs.h <<_ACEOF
+-#define HAVE_DES_SET_KEY 1
++#define HAVE_EVP_DES_CBC 1
+ _ACEOF
+ 
+ fi
+@@ -81610,31 +81610,39 @@ case "$host_os" in
+ 		NSSSONAMEVERSIONSUFFIX=".2"
+ 		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
+ 		;;
+-	*freebsd[5-9]*)
+-		# FreeBSD winbind client is implemented as a wrapper around
+-		# the Linux version.
+-		NSSSONAMEVERSIONSUFFIX=".1"
+-		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_freebsd.o \
+-		    ../nsswitch/winbind_nss_linux.o"
+-		WINBIND_NSS="../nsswitch/nss_winbind.$SHLIBEXT"
+-		WINBIND_WINS_NSS="../nsswitch/nss_wins.$SHLIBEXT"
+-		;;
+-
+-	*netbsd*[3-9]*)
+-		# NetBSD winbind client is implemented as a wrapper
+-		# around the Linux version. It needs getpwent_r() to
+-		# indicate libc's use of the correct nsdispatch API.
+-		#
+-		if test x"$ac_cv_func_getpwent_r" = x"yes"; then
+-			WINBIND_NSS_EXTRA_OBJS="\
+-			    ../nsswitch/winbind_nss_netbsd.o \
++	*freebsd*)
++		case "$UNAME_R" in
++		[5-9]*)
++			# FreeBSD winbind client is implemented as a wrapper
++			# around the Linux version.
++			NSSSONAMEVERSIONSUFFIX=".1"
++			WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_freebsd.o \
+ 			    ../nsswitch/winbind_nss_linux.o"
+ 			WINBIND_NSS="../nsswitch/nss_winbind.$SHLIBEXT"
+ 			WINBIND_WINS_NSS="../nsswitch/nss_wins.$SHLIBEXT"
+-		else
+-			HAVE_WINBIND=no
+-			winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
+-		fi
++			;;
++		esac
++		;;
++
++	*netbsd*)
++		case "$UNAME_R" in
++		[3-9]*)
++			# NetBSD winbind client is implemented as a wrapper
++			# around the Linux version. It needs getpwent_r() to
++			# indicate libc's use of the correct nsdispatch API.
++			#
++			if test x"$ac_cv_func_getpwent_r" = x"yes"; then
++				WINBIND_NSS_EXTRA_OBJS="\
++				    ../nsswitch/winbind_nss_netbsd.o \
++				    ../nsswitch/winbind_nss_linux.o"
++				WINBIND_NSS="../nsswitch/nss_winbind.$SHLIBEXT"
++				WINBIND_WINS_NSS="../nsswitch/nss_wins.$SHLIBEXT"
++			else
++				HAVE_WINBIND=no
++				winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
++			fi
++			;;
++		esac
+ 		;;
+ 	*irix*)
+ 		# IRIX has differently named shared libraries
