@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/12/02 17:01:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/12/06 08:43:02 wiz Exp $
 bin/dngconverter
 bin/expoblending
 bin/scangui
@@ -23,6 +23,7 @@ lib/kde4/kipiplugin_picasawebexport.so
 lib/kde4/kipiplugin_piwigoexport.so
 lib/kde4/kipiplugin_printimages.so
 lib/kde4/kipiplugin_rawconverter.so
+lib/kde4/kipiplugin_removeredeyes.so
 lib/kde4/kipiplugin_sendimages.so
 lib/kde4/kipiplugin_shwup.so
 lib/kde4/kipiplugin_smug.so
@@ -227,6 +228,8 @@ share/kde/apps/kipiplugin_printimages/templates/Photoframe.desktop
 share/kde/apps/kipiplugin_printimages/templates/Thumbnails_5x4.desktop
 share/kde/apps/kipiplugin_printimages/templates/Thumbnails_6x5.desktop
 share/kde/apps/kipiplugin_printimages/templates/templates.xml
+share/kde/apps/kipiplugin_removeredeyes/controlwidget.svg
+share/kde/apps/kipiplugin_removeredeyes/removeredeyes_classifier_eye_20_20.xml
 share/kde4/services/kipiplugin_acquireimages.desktop
 share/kde4/services/kipiplugin_advancedslideshow.desktop
 share/kde4/services/kipiplugin_batchprocessimages.desktop
@@ -248,6 +251,7 @@ share/kde4/services/kipiplugin_picasawebexport.desktop
 share/kde4/services/kipiplugin_piwigoexport.desktop
 share/kde4/services/kipiplugin_printimages.desktop
 share/kde4/services/kipiplugin_rawconverter.desktop
+share/kde4/services/kipiplugin_removeredeyes.desktop
 share/kde4/services/kipiplugin_sendimages.desktop
 share/kde4/services/kipiplugin_shwup.desktop
 share/kde4/services/kipiplugin_smug.desktop
