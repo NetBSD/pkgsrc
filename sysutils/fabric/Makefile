@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2010/06/28 18:45:21 gls Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/06 23:12:34 gls Exp $
 #
 
-VERSION=		0.9.1
+VERSION=		0.9.3
 DISTNAME=		Fabric-${VERSION}
 PKGNAME=		${DISTNAME:S/F/f/}
 CATEGORIES=		sysutils net
-MASTER_SITES=		http://code.fabfile.org/projects/fabric/files/
+MASTER_SITES=	http://code.fabfile.org/projects/fabric/files/
 
 MAINTAINER=		gls@NetBSD.org
 HOMEPAGE=		http://fabfile.org/
@@ -15,6 +15,7 @@ LICENSE=		2-clause-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-paramiko>=1.7:../../security/py-paramiko
+DEPENDS+=		${PYPKGPREFIX}-crypto>=2.1:../../security/py-crypto
 
 USE_TOOLS+=		pax
 
@@ -26,8 +27,8 @@ INSTALLATION_DIRS+=	share/doc/fabric/api/core
 INSTALLATION_DIRS+=	share/doc/fabric/changes
 INSTALLATION_DIRS+=	share/doc/fabric/usage
 
-post-extract:
-	${RM} -r ${WRKSRC}/paramiko
+#post-extract:
+#	${RM} -r ${WRKSRC}/paramiko
 
 post-install:
 	${INSTALL_MAN} files/fab.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
