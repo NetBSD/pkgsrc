@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/12/06 10:56:31 abs Exp $
 bin/cpuflags
 man/man1/cpuflags.1
+share/cpuflags/subr_Darwin
 share/cpuflags/subr_FreeBSD
 share/cpuflags/subr_Linux
 share/cpuflags/subr_NetBSD
