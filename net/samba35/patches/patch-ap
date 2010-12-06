@@ -1,0 +1,15 @@
+$NetBSD: patch-ap,v 1.1.1.1 2010/12/06 17:01:23 adam Exp $
+
+--- nmbd/nmbd.c.orig	2010-10-07 16:41:16.000000000 +0000
++++ nmbd/nmbd.c
+@@ -916,6 +916,10 @@ static bool open_sockets(bool isdaemon, 
+ 		mkdir(lp_lockdir(), 0755);
+ 	}
+ 
++	if (!directory_exist(lp_statedir())) {
++		mkdir(lp_statedir(), 0755);
++	}
++
+ 	pidfile_create("nmbd");
+ 
+ 	if (!NT_STATUS_IS_OK(reinit_after_fork(nmbd_messaging_context(),

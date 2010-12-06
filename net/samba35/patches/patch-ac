@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/12/06 17:01:23 adam Exp $
+
+--- libads/kerberos.c.orig	2010-12-05 21:57:18.000000000 +0000
++++ libads/kerberos.c
+@@ -460,7 +460,7 @@ char* kerberos_secrets_fetch_des_salt( v
+ 
+ 	if ( (key = des_salt_key()) == NULL ) {
+ 		DEBUG(0,("kerberos_secrets_fetch_des_salt: failed to generate key!\n"));
+-		return False;
++		return NULL;
+ 	}
+ 
+ 	salt = (char*)secrets_fetch( key, NULL );
