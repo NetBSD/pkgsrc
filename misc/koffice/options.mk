@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2008/04/12 22:43:04 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2010/12/06 11:56:44 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.koffice
 PKG_SUPPORTED_OPTIONS=	mysql pgsql koffice-wv2 koffice-libwpd
-PKG_SUGGESTED_OPTIONS=	koffice-wv2 koffice-libwpd
+PKG_SUGGESTED_OPTIONS=	koffice-wv2
 
 .include "../../mk/bsd.options.mk"
 
