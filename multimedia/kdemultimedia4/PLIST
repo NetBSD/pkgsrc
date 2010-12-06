@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/27 05:50:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/06 11:43:41 markd Exp $
 bin/dragon
 bin/juk
 bin/kmix
@@ -49,6 +49,7 @@ share/doc/kde/HTML/en/dragonplayer/common
 share/doc/kde/HTML/en/dragonplayer/index.cache.bz2
 share/doc/kde/HTML/en/dragonplayer/index.docbook
 share/doc/kde/HTML/en/dragonplayer/main.png
+share/doc/kde/HTML/en/dragonplayer/playmedia.png
 share/doc/kde/HTML/en/juk/common
 share/doc/kde/HTML/en/juk/history-playlist.png
 share/doc/kde/HTML/en/juk/index.cache.bz2

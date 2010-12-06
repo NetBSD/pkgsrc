@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/10/25 20:55:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/12/06 11:43:38 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -228,9 +228,6 @@ share/doc/kde/HTML/en/kate/part.docbook
 share/doc/kde/HTML/en/kate/plugins.docbook
 share/doc/kde/HTML/en/kate/regular-expressions.docbook
 share/doc/kde/HTML/en/kate/unhighlighted.png
-share/doc/kde/HTML/en/kbugbuster/common
-share/doc/kde/HTML/en/kbugbuster/index.cache.bz2
-share/doc/kde/HTML/en/kbugbuster/index.docbook
 share/doc/kde/HTML/en/kcachegrind/common
 share/doc/kde/HTML/en/kcachegrind/index.cache.bz2
 share/doc/kde/HTML/en/kcachegrind/index.docbook

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/11/03 20:08:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/12/06 11:43:42 markd Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -447,6 +447,8 @@ ${PYSITELIB}/PyKDE4/plasmascript.py
 ${PYSITELIB}/PyKDE4/plasmascript.pyc
 lib/strigi/strigita_font.so
 man/man1/plasmaengineexplorer.1
+man/man1/plasmapkg.1
+man/man1/plasmoidviewer.1
 share/PolicyKit/policy/org.kde.fontinst.policy
 share/PolicyKit/policy/org.kde.kcontrol.kcmclock.policy
 share/PolicyKit/policy/org.kde.kcontrol.kcmkdm.policy

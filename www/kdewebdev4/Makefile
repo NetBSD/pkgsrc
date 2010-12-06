@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2010/11/15 22:58:51 abs Exp $
+# $NetBSD: Makefile,v 1.12 2010/12/06 11:43:41 markd Exp $
 
 DISTNAME=	kdewebdev-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 COMMENT=	HTML editor and tools suitable for experienced web developers
 
@@ -13,6 +12,7 @@ COMMENT=	HTML editor and tools suitable for experienced web developers
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/tidy/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"

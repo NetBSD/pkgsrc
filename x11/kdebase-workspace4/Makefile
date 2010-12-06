@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2010/11/18 22:55:58 adam Exp $
+# $NetBSD: Makefile,v 1.22 2010/12/06 11:43:42 markd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	base workspace for the KDE 4 integrated X11 desktop
 
@@ -101,6 +100,7 @@ PYTHON_VERSIONS_ACCEPTED= 26 25 # because kdebindings4-python
 # not yet - causes kdm logins to fail, presumably because
 #  I don't know how consolekit works
 #.include "../../sysutils/consolekit/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdebindings4-python/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
