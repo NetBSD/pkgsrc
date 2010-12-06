@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2010/12/03 23:43:15 jmcneill Exp $
+# $NetBSD: options.mk,v 1.26 2010/12/06 16:40:50 adam Exp $
 
 # Recommended package options for various setups:
 #
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=	ads ldap pam winbind
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-SAMBA_ACL_OPSYS=	AIX FreeBSD HPUX IRIX Linux OSF1 SunOS
+SAMBA_ACL_OPSYS=	AIX Darwin FreeBSD HPUX IRIX Linux OSF1 SunOS
 .if !empty(SAMBA_ACL_OPSYS:M${OPSYS})
 PKG_SUPPORTED_OPTIONS+=	acl
 .endif
