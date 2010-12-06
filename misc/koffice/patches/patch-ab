@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2009/11/03 19:02:26 markd Exp $
+$NetBSD: patch-ab,v 1.10 2010/12/06 11:56:44 markd Exp $
 
---- configure.orig	2007-05-31 09:56:35.000000000 +1200
+--- configure.orig	2007-05-30 21:56:35.000000000 +0000
 +++ configure
 @@ -33848,6 +33848,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
  
@@ -10,6 +10,28 @@ $NetBSD: patch-ab,v 1.9 2009/11/03 19:02:26 markd Exp $
  
  if test -n "$GRAPHICS_MAGICK_CONFIG"; then
   vers=`$GRAPHICS_MAGICK_CONFIG --version 2>/dev/null | $AWK 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
+@@ -37010,10 +37011,10 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
+ 
+ 
+ if test -n "$PKGCONFIG"; then
+-  vers=`$PKGCONFIG libwpd-0.8 --modversion 2>/dev/null`
++  vers=`$PKGCONFIG libwpd-0.9 --modversion 2>/dev/null`
+   if test -n "$vers"
+   then
+-     LIBWPD_LIBS="`$PKGCONFIG libwpd-0.8 --libs`"
++     LIBWPD_LIBS="`$PKGCONFIG libwpd-0.9 --libs`"
+      LIBWPD_RPATH=
+      for args in $LIBWPD_LIBS; do
+           case $args in
+@@ -37023,7 +37024,7 @@ if test -n "$PKGCONFIG"; then
+           esac
+      done
+      LIBWPD_RPATH=`echo $LIBWPD_RPATH | $SED -e "s/-L/-R/g"`
+-     LIBWPD_CFLAGS="`$PKGCONFIG libwpd-0.8 --cflags`"
++     LIBWPD_CFLAGS="`$PKGCONFIG libwpd-0.9 --cflags`"
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
 @@ -38534,7 +38535,7 @@ fi
  
  
