@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/02/10 19:17:35 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/12/06 13:57:28 gdt Exp $
 
 DISTNAME=	bzr-svn-${VER}
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://launchpad.net/bzr-svn/1.0/${VER}/+download/
 MASTER_SITES+=	http://samba.org/~jelmer/bzr/
 VER=		1.0.0
 
-MAINTAINER=	epg@NetBSD.org
+MAINTAINER=	jan.m.danielsson@gmail.com
 HOMEPAGE=	http://bazaar-vcs.org/BzrForeignBranches/Subversion
 COMMENT=	Foreign Subversion repository support for Bazaar
 LICENSE=	gnu-gpl-v2
