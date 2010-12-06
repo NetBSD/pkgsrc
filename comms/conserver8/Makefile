@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2010/12/05 21:25:55 hauke Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/06 10:59:10 hauke Exp $
 #
 
-DISTNAME=	conserver-8.1.18
-PKGNAME=	conserver8-8.1.18
+PKGVER=		8.1.18
+DISTNAME=	conserver-${PKGVER}
+PKGNAME=	conserver8-${PKGVER}
 #PKGREVISION=	1
 CATEGORIES=	comms
-MASTER_SITES=	ftp://ftp.conserver.com/conserver/
+MASTER_SITES=	http://www.conserver.com/
 
 MAINTAINER=	awrede@users.sourceforge.net
 HOMEPAGE=	http://www.conserver.com/
