@@ -1,16 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/05/26 18:26:20 gls Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/06 23:12:34 gls Exp $
 
 Disable setuptools usage
 
---- setup.py.orig	2009-11-08 23:17:10.000000000 +0000
+--- setup.py.orig	2010-11-12 20:57:34.000000000 +0000
 +++ setup.py
-@@ -15,8 +15,8 @@ For more information, please see the Fab
-     author='Jeff Forcier',
-     author_email='jeff@bitprophet.org',
-     url='http://fabfile.org',
+@@ -38,7 +38,7 @@ setup(
      packages=find_packages(),
--    install_requires=['pycrypto >=1.9'],
-+#    install_requires=['pycrypto >=1.9'],
+     test_suite='nose.collector',
+     tests_require=['nose', 'fudge'],
+-    install_requires=['pycrypto %s' % PYCRYPTO, 'paramiko >=1.7.6'],
++#    install_requires=['pycrypto %s' % PYCRYPTO, 'paramiko >=1.7.6'],
      entry_points={
          'console_scripts': [
              'fab = fabric.main:main',
