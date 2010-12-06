@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/12/03 12:14:29 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/06 05:16:14 obache Exp $
 #
 
-DISTNAME=	ibus-table-chinese-1.3.0.20101201-Source
+DISTNAME=	ibus-table-chinese-1.3.0.20101206-Source
 PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
@@ -17,6 +17,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+# Illegal byte sequence in array30_ExtB.txt
 CHECK_BUILTIN.iconv:=	yes
 .include "../../converters/libiconv/builtin.mk"
 CHECK_BUILTIN.iconv:=	no
