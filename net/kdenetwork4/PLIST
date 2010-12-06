@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/25 20:55:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/06 11:43:41 markd Exp $
 bin/kget
 bin/kopete
 bin/kopete_latexconvert.sh
@@ -393,6 +393,8 @@ share/kde/apps/kconf_update/kopete-pluginloader.pl
 share/kde/apps/kconf_update/kopete-pluginloader.upd
 share/kde/apps/kconf_update/kopete-pluginloader2.sh
 share/kde/apps/kconf_update/kopete-pluginloader2.upd
+share/kde/apps/kconf_update/kopete-update_icq_server.pl
+share/kde/apps/kconf_update/kopete-update_icq_server.upd
 share/kde/apps/kconf_update/kopete-update_yahoo_server.pl
 share/kde/apps/kconf_update/kopete-update_yahoo_server.upd
 share/kde/apps/kget/content_fetch_scripts/youtubedl/kget_youtubedl.py
