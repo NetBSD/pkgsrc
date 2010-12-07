@@ -1,0 +1,16 @@
+$NetBSD: patch-dc,v 1.1 2010/12/07 18:43:49 bouyer Exp $
+
+Fix for CVE-2010-4255, from the xen-devel list and adapted for Xen 3.1
+
+--- xen/arch/x86/traps.c.orig	2010-12-07 12:53:20.000000000 +0100
++++ xen/arch/x86/traps.c	2010-12-07 13:11:36.000000000 +0100
+@@ -950,7 +950,8 @@
+     {
+         if ( paging_mode_external(d) && guest_mode(regs) )
+             return paging_fault(addr, regs);
+-        if ( (addr >= GDT_LDT_VIRT_START) && (addr < GDT_LDT_VIRT_END) )
++        if ( !(regs->error_code & PFEC_user_mode) &&
++	     (addr >= GDT_LDT_VIRT_START) && (addr < GDT_LDT_VIRT_END) )
+             return handle_gdt_ldt_mapping_fault(
+                 addr - GDT_LDT_VIRT_START, regs);
+         return 0;
