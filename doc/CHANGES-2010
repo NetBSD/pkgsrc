@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4200 2010/12/07 13:36:43 mef Exp $
+$NetBSD: CHANGES-2010,v 1.4201 2010/12/07 17:59:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5963,3 +5963,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/odt2txt to 0.4 [reed 2010-12-07]
 	Updated mail/dovecot2-pigeonhole to 0.2.2 [ghen 2010-12-07]
 	Updated ham/cwtext to 0.96 [mef 2010-12-07]
+	Updated textproc/icu to 4.6 [adam 2010-12-07]
