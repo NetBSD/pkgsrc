@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4196 2010/12/06 23:13:56 gls Exp $
+$NetBSD: CHANGES-2010,v 1.4197 2010/12/07 01:37:17 reed Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5959,3 +5959,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/stellarium to 0.10.6 [adam 2010-12-06]
 	Updated security/py-paramiko to 1.7.6nb2 [gls 2010-12-06]
 	Updated sysutils/fabric to 0.9.3 [gls 2010-12-06]
+	Updated databases/ipa_sdb to 1.0.2 [reed 2010-12-07]
