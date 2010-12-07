@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/06/13 22:44:51 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/07 22:23:23 abs Exp $
 
 DISTNAME=	openjdk-7-ea-src-b92-06_may_2010
 PKGNAME=	openjdk7-1.7.0.92.20100521
@@ -75,6 +75,8 @@ PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 .include "bootstrap.mk"
 .include "icedtea-extras.mk"
 
+.include "options.mk"
+
 SUBST_CLASSES+=			add-rpaths
 SUBST_STAGE.add-rpaths=		pre-build
 SUBST_MESSAGE.add-rpaths=	adding X11 run path flags to Makefiles
@@ -94,7 +96,7 @@ SUBST_FILES.fontpaths+=		jdk/src/solaris/native/sun/awt/fontpath.c
 SUBST_SED.fontpaths=		-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.fontpaths+=		-e 's|@BUILDLINK_PREFIX.fontconfig@|${BUILDLINK_PREFIX.fontconfig}|g'
 
-PLIST_VARS+=	i386
+PLIST_VARS+=	i386 jce
 .if ${MACHINE_ARCH} == "i386"
 PLIST.i386=	yes
 .endif
