@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/22 17:09:55 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/12/07 22:23:23 abs Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -424,6 +424,8 @@ java/openjdk7/jre/lib/psfont.properties.ja
 java/openjdk7/jre/lib/psfontj2d.properties
 java/openjdk7/jre/lib/resources.jar
 java/openjdk7/jre/lib/rt.jar
+${PLIST.jce}java/openjdk7/jre/lib/security/COPYRIGHT.html
+${PLIST.jce}java/openjdk7/jre/lib/security/README.txt
 java/openjdk7/jre/lib/security/US_export_policy.jar
 java/openjdk7/jre/lib/security/cacerts
 java/openjdk7/jre/lib/security/java.policy
