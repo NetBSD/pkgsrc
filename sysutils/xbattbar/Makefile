@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/01/04 01:43:58 pooka Exp $
+# $NetBSD: Makefile,v 1.33 2010/12/07 22:22:21 abs Exp $
 
 DISTNAME=	xbattbar_1.4.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://iplab.aist-nara.ac.jp/member/suguru/xbattbar.html
 COMMENT=	X11 battery graph for laptops
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+NOT_FOR_PLATFORM=     Darwin-*-*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 
