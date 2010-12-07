@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/01/31 22:21:32 joerg Exp $
+$NetBSD: distinfo,v 1.4 2010/12/07 02:53:45 reed Exp $
 
-SHA1 (odt2txt-0.3.tar.gz) = efebf01e77a2bfa44ce7f4f24fc244889c480d77
-RMD160 (odt2txt-0.3.tar.gz) = 0648959ab64018c0376045e8ae6d284d804cff9c
-Size (odt2txt-0.3.tar.gz) = 28810 bytes
+SHA1 (odt2txt-0.4.tar.gz) = 331eef1c64cec809a5c7b7cfb972279cc4f9c914
+RMD160 (odt2txt-0.4.tar.gz) = bb6ef1a58a6b18f40855be4124e32b1d514e8bca
+Size (odt2txt-0.4.tar.gz) = 23997 bytes
 SHA1 (patch-aa) = d54320f8eda5b17c2e461639efb9b69e82320bb7

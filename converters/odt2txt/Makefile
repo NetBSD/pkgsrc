@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 16:47:52 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/07 02:53:45 reed Exp $
 #
 
-DISTNAME=	odt2txt-0.3
+DISTNAME=	odt2txt-0.4
 CATEGORIES=	converters textproc
 MASTER_SITES=	http://stosberg.net/odt2txt/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://stosberg.net/odt2txt/
 COMMENT=	Simple converter from OpenDocument Text to plain text
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

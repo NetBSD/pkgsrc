@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4197 2010/12/07 01:37:17 reed Exp $
+$NetBSD: CHANGES-2010,v 1.4198 2010/12/07 02:53:44 reed Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5960,3 +5960,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/py-paramiko to 1.7.6nb2 [gls 2010-12-06]
 	Updated sysutils/fabric to 0.9.3 [gls 2010-12-06]
 	Updated databases/ipa_sdb to 1.0.2 [reed 2010-12-07]
+	Updated converters/odt2txt to 0.4 [reed 2010-12-07]
