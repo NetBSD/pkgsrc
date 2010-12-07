@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/12/07 18:44:25 bouyer Exp $
+
+Fix for CVE-2010-4255, from the xen-devel list
+
+--- xen/arch/x86/traps.c.orig	2010-12-07 13:28:23.000000000 +0100
++++ xen/arch/x86/traps.c	2010-12-07 13:28:43.000000000 +0100
+@@ -1157,7 +1157,7 @@
+                 trace_trap_two_addr(TRC_PV_PAGING_FIXUP, regs->eip, addr);
+             return ret;
+         }
+-        if ( !(regs->error_code & PFEC_reserved_bit) &&
++        if ( !(regs->error_code & (PFEC_user_mode | PFEC_reserved_bit)) &&
+              (addr >= GDT_LDT_VIRT_START) && (addr < GDT_LDT_VIRT_END) )
+             return handle_gdt_ldt_mapping_fault(
+                 addr - GDT_LDT_VIRT_START, regs);
