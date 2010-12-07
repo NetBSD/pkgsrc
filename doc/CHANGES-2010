@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4201 2010/12/07 17:59:21 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4202 2010/12/07 18:46:25 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5964,3 +5964,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dovecot2-pigeonhole to 0.2.2 [ghen 2010-12-07]
 	Updated ham/cwtext to 0.96 [mef 2010-12-07]
 	Updated textproc/icu to 4.6 [adam 2010-12-07]
+	Updated sysutils/xenkernel3 to 3.1.4nb4 [bouyer 2010-12-07]
+	Updated sysutils/xenkernel33 to 3.3.2nb1 [bouyer 2010-12-07]
