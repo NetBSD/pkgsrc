@@ -1,0 +1,54 @@
+$NetBSD: patch-al,v 1.1 2010/12/07 16:58:12 drochner Exp $
+
+CVE-2010-4259
+
+--- fontforge/fvimportbdf.c.orig	2010-04-16 03:02:02.000000000 +0000
++++ fontforge/fvimportbdf.c
+@@ -560,7 +560,7 @@ static int slurp_header(FILE *bdf, int *
+ 	}
+     
+ 	if ( strcmp(tok,"FONT")==0 ) {
+-	    if ( sscanf(buf,"-%*[^-]-%[^-]-%[^-]-%[^-]-%*[^-]-", family, weight, italic )!=0 ) {
++	    if ( sscanf(buf,"-%*[^-]-%99[^-]-%99[^-]-%99[^-]-%*[^-]-", family, weight, italic )!=0 ) {
+ 		char *pt=buf;
+ 		int dcnt=0;
+ 		while ( *pt=='-' && dcnt<7 ) { ++pt; ++dcnt; }
+@@ -616,26 +616,30 @@ static int slurp_header(FILE *bdf, int *
+ 	    sscanf(buf, "%d", &defs->metricsset );
+ 	else if ( strcmp(tok,"VVECTOR")==0 )
+ 	    sscanf(buf, "%*d %d", &defs->vertical_origin );
++	/* For foundry, fontname and encname, only copy up to the buffer size */
+ 	else if ( strcmp(tok,"FOUNDRY")==0 )
+-	    sscanf(buf, "%[^\"]", foundry );
++	    sscanf(buf, "%99[^\"]", foundry );
+ 	else if ( strcmp(tok,"FONT_NAME")==0 )
+-	    sscanf(buf, "%[^\"]", fontname );
++	    sscanf(buf, "%99[^\"]", fontname );
+ 	else if ( strcmp(tok,"CHARSET_REGISTRY")==0 )
+-	    sscanf(buf, "%[^\"]", encname );
++	    sscanf(buf, "%99[^\"]", encname );
+ 	else if ( strcmp(tok,"CHARSET_ENCODING")==0 ) {
+ 	    enc = 0;
+ 	    if ( sscanf(buf, " %d", &enc )!=1 )
+ 		sscanf(buf, "%d", &enc );
++	/* These properties should be copied up to the buffer length too */
+ 	} else if ( strcmp(tok,"FAMILY_NAME")==0 ) {
+-	    strcpy(family,buf);
++	    strncpy(family,buf,99);
+ 	} else if ( strcmp(tok,"FULL_NAME")==0 || strcmp(tok,"FACE_NAME")==0 ) {
+-	    strcpy(full,buf);
++	    strncpy(full,buf,99);
+ 	} else if ( strcmp(tok,"WEIGHT_NAME")==0 )
+-	    strcpy(weight,buf);
++	    strncpy(weight,buf,99);
+ 	else if ( strcmp(tok,"SLANT")==0 )
+-	    strcpy(italic,buf);
++	    strncpy(italic,buf,99);
+ 	else if ( strcmp(tok,"COPYRIGHT")==0 ) {
+-	    strcpy(comments,buf);
++		/* LS: Assume the size of the passed-in buffer is 1000, see below in
++		 * COMMENT */
++	    strncpy(comments,buf,999);
+ 	    found_copyright = true;
+ 	} else if ( strcmp(tok,"COMMENT")==0 && !found_copyright ) {
+ 	    char *pt = comments+strlen(comments);
