@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.7 2010/12/07 17:58:13 adam Exp $
+
+--- config/Makefile.inc.in.orig	2010-12-07 11:22:10.000000000 +0000
++++ config/Makefile.inc.in
+@@ -44,7 +44,7 @@ PACKAGE = @PACKAGE@
+ LIBICU = lib$(ICUPREFIX)
+ 
+ # Static library prefix and file extension
+-STATIC_PREFIX = s
++STATIC_PREFIX =
+ LIBSICU = lib$(STATIC_PREFIX)$(ICUPREFIX)
+ A = a
+ 
