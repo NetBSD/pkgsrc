@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dovecot.sh,v 1.2 2010/12/07 11:42:07 adam Exp $
+# $NetBSD: dovecot.sh,v 1.3 2010/12/07 11:43:44 adam Exp $
 #
 
 # PROVIDE: dovecot
@@ -23,9 +23,9 @@ HARD_FDLIMIT=`ulimit -H -n`
 
 if [ ${dovecot_fdlimit} -gt ${SOFT_FDLIMIT} ]; then
   if [ ${dovecot_fdlimit} -le ${HARD_FDLIMIT} ]; then
-    ${SOFT_FDLIMIT} ${dovecot_fdlimit}
+    ulimit -S -n ${dovecot_fdlimit}
   else
-    ${HARD_FDLIMIT} ${dovecot_fdlimit}
+    ulimit -S -n ${HARD_FDLIMIT}
   fi
 fi
 
