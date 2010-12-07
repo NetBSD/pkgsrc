@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2010/02/10 19:17:40 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/12/07 13:14:57 mef Exp $
 
-DISTNAME=	cwtext-0.95
-PKGREVISION=	3
+DISTNAME=	cwtext-0.96
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 
@@ -16,6 +15,7 @@ USE_TOOLS+=	gmake
 BUILD_TARGET=	ALL
 
 INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
 post-patch:
 	${SED} 	-e "s,^PREFIX,#PREFIX,g"	\
@@ -28,6 +28,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cwpcm ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/cwtext ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/cwmm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA}    ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
