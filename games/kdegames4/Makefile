@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/12/07 10:40:17 markd Exp $
+# $NetBSD: Makefile,v 1.15 2010/12/07 14:09:55 wiz Exp $
 
 DISTNAME=	kdegames-${_KDE_VERSION}
 CATEGORIES=	games
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../games/ggz-client-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
