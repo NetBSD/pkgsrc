@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2007/03/23 12:51:13 recht Exp $
+$NetBSD: patch-aa,v 1.12 2010/12/07 17:58:13 adam Exp $
 
---- Makefile.in.orig	2006-03-30 02:33:20.000000000 +0200
+--- Makefile.in.orig	2010-10-07 00:23:38.000000000 +0000
 +++ Makefile.in
-@@ -174,7 +174,7 @@ $(top_builddir)/config/Makefile.inc: $(s
+@@ -280,7 +280,7 @@ $(top_builddir)/config/pkgdataMakefile:
  
  $(top_builddir)/config/icu-config: $(top_builddir)/Makefile $(top_srcdir)/config/icu-config-top $(top_srcdir)/config/icu-config-bottom $(top_builddir)/config/Makefile.inc @platform_make_fragment@ $(top_srcdir)/config/make2sh.sed
  	-$(RMV) $@
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.11 2007/03/23 12:51:13 recht Exp $
 +	cp -f $(top_srcdir)/config/icu-config-top $@
  	chmod u+w $@
  	@echo "# Following from @platform_make_fragment@" >> $@
- 	sed -f $(top_srcdir)/config/make2sh.sed < $(top_builddir)/config/Makefile.inc | grep -v '#M#' | uniq >> $@
+ 	LC_ALL=C sed -f $(top_srcdir)/config/make2sh.sed < $(top_builddir)/config/Makefile.inc | grep -v '#M#' | uniq >> $@
