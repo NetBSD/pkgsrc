@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/03 15:06:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/07 01:37:17 reed Exp $
 bin/ipa_sdb_dump
 include/ipa_sdb.h
+include/ipa_sdb_config.h
 lib/ipa_db_sdb.la
 lib/ipa_st_sdb.la
 man/man5/ipa_sdb.5
