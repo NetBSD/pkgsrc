@@ -94,3 +94,7 @@ Pullup ticket #3294 - requested by bouyer
 net/ocsinventory-agent: compatibility update
 Pullup ticket #3295 - requested by bouyer
 mail/clamav: bug fix update
+Pullup ticket #3296 - requested by morr
+www/wordpress: security update
+Pullup ticket #3297 - requested by obache
+multimedia/gstreamer0.10: build fix
