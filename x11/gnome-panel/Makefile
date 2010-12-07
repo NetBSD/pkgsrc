@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2010/12/01 20:21:48 drochner Exp $
+# $NetBSD: Makefile,v 1.127 2010/12/07 11:51:26 drochner Exp $
 #
 
 DISTNAME=		gnome-panel-2.32.1
@@ -29,9 +29,10 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 # - this is not the standard module location, glib2/modules.mk
 #   does not deal with this yet
 # - even if called with the correct path, the resulting "giomodule.cache"
-#   is empty, which looks like another problem
+#   is empty, due to missing symbols in dynamic loading, see
+#   https://bugzilla.gnome.org/show_bug.cgi?id=636255
 # XXX so for now, just disable "giomodule.cache" creation to fix the
-# PLIST problem reported in PR pkg/44181, until the issue is understood
+# PLIST problem reported in PR pkg/44181, until the issue is fixed
 TOOLS_NOOP+=	gio-querymodules
 
 GCONF_SCHEMAS=	clock.schemas
