@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/06/11 07:15:54 obache Exp $
+$NetBSD: distinfo,v 1.12 2010/12/08 11:30:18 markd Exp $
 
 SHA1 (ge-V62u2_1_TAG-src.tar.gz) = f4655c17ea80109aea797f76a02ead02e44ffeb3
 RMD160 (ge-V62u2_1_TAG-src.tar.gz) = fb36f8aaae2f4e9975428dca0d21e9328b77d37a
@@ -15,5 +15,8 @@ SHA1 (patch-am) = cb3c1f07a6e2f2bc24a5a98b3f2fa9c1892bde15
 SHA1 (patch-at) = d29e29e4915f8015618a4ebc5b17231c2bcc4bf5
 SHA1 (patch-av) = 1e68be936996fe3b4be21b590600cec3fa26970a
 SHA1 (patch-bd) = c24a357d5a87be61b5e0a91daf219e1cc24087a2
-SHA1 (patch-bl) = 37f5bbaeedccc0889fd3e23b2dd2ec283e2cd778
+SHA1 (patch-bl) = cf90930071e837e56258b7a0cac731ceba775503
 SHA1 (patch-bm) = 524268d07060fac00a2648e7c63377f965377c9d
+SHA1 (patch-ca) = f248651b4be0514900d30f31a75843e1b54c1e51
+SHA1 (patch-cb) = e33ffad67579c8381cffd4f5c236235205108867
+SHA1 (patch-cc) = 0a60fdce9a501f290429a1827df57fcfb3b5950f
