@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2010/11/15 22:56:52 abs Exp $
+# $NetBSD: Makefile,v 1.23 2010/12/08 09:55:41 wiz Exp $
 
 DISTNAME=	leafpad-0.8.17
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/leafpad/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tarot.freeshell.org/leafpad/
 COMMENT=	Simple and light text editor using GTK+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,6 +18,7 @@ USE_PKGLOCALEDIR=	YES
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
