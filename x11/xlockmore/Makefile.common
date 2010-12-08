@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2009/11/02 11:51:43 asau Exp $
+# $NetBSD: Makefile.common,v 1.58 2010/12/08 12:54:30 obache Exp $
 #
 # This Makefile.common is included by:
 #
@@ -58,6 +58,7 @@ CONFIGURE_ARGS+=	--without-rplay
 CONFIGURE_ARGS+=	--without-nas
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--enable-appdefaultdir=${PREFIX}/lib/X11/app-defaults
+CONFIGURE_ENV+=		ac_cv_x_app_defaults=${PREFIX}/lib/X11/app-defaults
 
 .if ${OPSYS} == "NetBSD"
 XLOCK_AUDIOPLAY?=	/usr/bin/audioplay
@@ -66,6 +67,12 @@ CONFIGURE_ARGS+=	--enable-def-play=${XLOCK_AUDIOPLAY:Q}
 
 .if empty(PKG_OPTIONS:Mxlockmore-dpms)
 CONFIGURE_ARGS+=	--without-dpms
+.else
+.  if ${X11_TYPE} != "native" || !exists(${X11BASE}/lib${LIBABISUFFIX}/libXdpms.a)
+BUILDLINK_TRANSFORM+=	l:Xdpms:Xext
+.  endif
+DPMS_ENV=	no_dpms= ac_dpms_includes=${BUILDLINK_PREFIX.xextproto}/include ac_dpms_libraries=${BUILDLINK_PREFIX.libXext}/lib
+CONFIGURE_ENV+=		ac_cv_path_dpms=${DPMS_ENV:Q}
 .endif
 
 .if empty(PKG_OPTIONS:Mxlockmore-allow-root)
@@ -92,6 +99,9 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+
+XINERAMA_ENV=	no_xenerama= ac_xinerama_includes=${BUILDLINK_PREFIX.libXinerama}/include ac_xinerama_libraries=${BUILDLINK_PREFIX.libXinerama}/lib
+CONFIGURE_ENV+=	ac_cv_path_xinerama=${XINERAMA_ENV:Q}
 
 # Set the complete paths to the sound files and set the default xlock
 # mode/screensaver.

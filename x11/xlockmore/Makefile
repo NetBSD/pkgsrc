@@ -1,11 +1,23 @@
-# $NetBSD: Makefile,v 1.84 2010/11/15 22:59:18 abs Exp $
+# $NetBSD: Makefile,v 1.85 2010/12/08 12:54:30 obache Exp $
 
 .include "Makefile.common"
-PKGREVISION=	3
+PKGREVISION=	4
 
 COMMENT=	Like the XLock session-locker/screensaver, but with more
 
-CONFIGURE_ARGS+=	--with-mesagl
+CONFIGURE_ARGS+=	--with-opengl
+CONFIGURE_ARGS+=	--with-mesa
+CONFIGURE_ARGS+=	--without-ttf
+XPM_ENV=	no_xpm= xpm_includes=${BUILDLINK_PREFIX.libXpm}/include xpm_libraries=${BUILDLINK_PREFIX.libXpm}/lib
+CONFIGURE_ENV+=	ac_cv_path_xpm=${XPM_ENV:Q}
+OPENGL_ENV= 	no_opengl= ac_opengl_includes=${BUILDLINK_PREFIX.MesaLib}/include ac_opengl_libraries=${BUILDLINK_PREFIX.MesaLib}/lib
+CONFIGURE_ENV+=	ac_cv_path_opengl=${OPENGL_ENV:Q}
+MESA_ENV= 	no_mesa= ac_mesa_includes=${BUILDLINK_PREFIX.MesaLib}/include ac_mesa_libraries=${BUILDLINK_PREFIX.MesaLib}/lib
+CONFIGURE_ENV+=	ac_cv_path_mesa=${MESA_ENV:Q}
+#BUILDLINK_TRANSFORM+=	l:MesaGL:GL
+#BUILDLINK_TRANSFORM+=	l:MesaGLU:GLU
+XEXT_ENV=	no_ext= ac_ext_includes=${BUILDLINK_PREFIX.xextproto}/include ac_ext_libraries=${BUILDLINK_PREFIX.libXext}/lib
+CONFIGURE_ENV+=	ac_cv_path_ext=${XEXT_ENV:Q}
 
 PLIST_SUBST+=    LITE=""
 
