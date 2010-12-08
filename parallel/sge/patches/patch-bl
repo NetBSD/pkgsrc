@@ -1,8 +1,18 @@
-$NetBSD: patch-bl,v 1.3 2008/09/15 16:30:57 ahoka Exp $
+$NetBSD: patch-bl,v 1.4 2010/12/08 11:30:18 markd Exp $
 
---- source/libs/comm/cl_ssl_framework.c.orig	Fri Jun 15 12:34:16 2007
-+++ source/libs/comm/cl_ssl_framework.c	Fri May 30 11:17:47 2008
-@@ -1025,7 +1025,7 @@
+--- source/libs/comm/cl_ssl_framework.c.orig	2009-02-16 08:50:41.000000000 +0000
++++ source/libs/comm/cl_ssl_framework.c
+@@ -104,6 +104,9 @@
+ #define OPENSSL_CONST const
+ #endif
+ 
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++typedef _STACK STACK;
++#endif
+ 
+ #define cl_com_ssl_func__SSL_CTX_set_mode(ctx,op) \
+ 	cl_com_ssl_func__SSL_CTX_ctrl((ctx),SSL_CTRL_MODE,(op),NULL)
+@@ -1040,7 +1043,7 @@ static int cl_com_ssl_build_symbol_table
     {
        char* func_name = NULL;
        int had_errors = 0;
@@ -11,7 +21,7 @@ $NetBSD: patch-bl,v 1.3 2008/09/15 16:30:57 ahoka Exp $
        void* cl_com_ssl_crypto_handle_saved = NULL;
  #endif
  
-@@ -1047,7 +1047,7 @@
+@@ -1062,7 +1065,7 @@ static int cl_com_ssl_build_symbol_table
        cl_com_ssl_crypto_handle = dlopen ("libssl.dylib", RTLD_NOW | RTLD_GLOBAL );
  #endif /* RTLD_NODELETE */
  
@@ -20,7 +30,7 @@ $NetBSD: patch-bl,v 1.3 2008/09/15 16:30:57 ahoka Exp $
  #ifdef RTLD_NODELETE
        cl_com_ssl_crypto_handle = dlopen ("libssl.so", RTLD_LAZY | RTLD_GLOBAL | RTLD_NODELETE);
  #else
-@@ -1076,7 +1076,7 @@
+@@ -1091,7 +1094,7 @@ static int cl_com_ssl_build_symbol_table
           return CL_RETVAL_SSL_DLOPEN_SSL_LIB_FAILED;
        }
        
@@ -29,7 +39,7 @@ $NetBSD: patch-bl,v 1.3 2008/09/15 16:30:57 ahoka Exp $
        cl_com_ssl_crypto_handle_saved = cl_com_ssl_crypto_handle;
        cl_com_ssl_crypto_handle = RTLD_DEFAULT;
  #endif
-@@ -1784,7 +1784,7 @@
+@@ -1813,7 +1816,7 @@ static int cl_com_ssl_build_symbol_table
           return CL_RETVAL_SSL_CANT_LOAD_ALL_FUNCTIONS;
        }
  
