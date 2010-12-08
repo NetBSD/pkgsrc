@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.6 2010/12/08 17:47:50 adam Exp $
+
+--- Makefile.lang.in.orig	2010-02-05 16:20:04.000000000 +0000
++++ Makefile.lang.in
+@@ -13,8 +13,8 @@ BIN_DIR       = !!BIN_DIR!!
+ LANGS_SRC     = $(shell ls $(LANG_DIR)/*.txt)
+ LANGS         = $(LANGS_SRC:$(LANG_DIR)/%.txt=%.lng)
+ CXX_BUILD     = !!CXX_BUILD!!
+-CFLAGS_BUILD  = !!CFLAGS_BUILD!!
+-LDFLAGS_BUILD = !!LDFLAGS_BUILD!!
++CFLAGS_BUILD  = !!CFLAGS!! !!CFLAGS_BUILD!!
++LDFLAGS_BUILD = !!LDFLAGS!! !!LDFLAGS_BUILD!!
+ STRGEN_FLAGS  = !!STRGEN_FLAGS!!
+ STAGE         = !!STAGE!!
+ LANG_SUPPRESS = !!LANG_SUPPRESS!!
