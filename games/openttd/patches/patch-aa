@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.9 2010/12/08 17:47:50 adam Exp $
+
+--- config.lib.orig	2010-11-20 20:25:53.000000000 +0000
++++ config.lib
+@@ -1241,7 +1241,7 @@ make_cflags_and_ldflags() {
+ 		OBJS_SUBDIR="release"
+ 		if [ "$os" = "OSX" ]; then
+ 			# these compilerflags makes the app run as fast as possible without making the app unstable. It works on G3 or newer
+-			CFLAGS="-O3 -funroll-loops -fsched-interblock -falign-loops=16 -falign-jumps=16 -falign-functions=16 -falign-jumps-max-skip=15 -falign-loops-max-skip=15 -mdynamic-no-pic $CFLAGS"
++			CFLAGS="-mdynamic-no-pic $CFLAGS"
+ 		else
+ 			if [ "$os" = "MORPHOS" ]; then
+ 				CFLAGS="-I/gg/os-include -noixemul -fstrict-aliasing -fexpensive-optimizations -mcpu=604 -fno-inline -mstring -mmultiple $CFLAGS"
+@@ -2304,7 +2304,7 @@ detect_library() {
+ 		if [ -z "$res" ]; then
+ 			log 2 "  trying /usr/local/include/$4$5... no"
+ 		fi
+-		if [ -z "$res" ] && [ "$os" = "NETBSD" ]; then
++		if [ -z "$res" ]; then
+ 			eval "$2=`ls -1 /usr/pkg/include/$4*.h 2>/dev/null | egrep \"\/$5\$\"`"
+ 			eval "res=\$$2"
+ 			if [ -z "$res" ]; then
