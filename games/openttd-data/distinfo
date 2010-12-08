@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/08 17:49:40 adam Exp $
+
+SHA1 (opengfx-0.3.1-all.zip) = 5376e89b5ccd3fa8a61e0a1814824202bb789fb7
+RMD160 (opengfx-0.3.1-all.zip) = 512ba0c3977534e4a4ca37b9402339168ed50e4a
+Size (opengfx-0.3.1-all.zip) = 3387182 bytes
+SHA1 (openmsx-0.3.1-all.zip) = e9c4203923bb9c974ac67886bd00b7090658b961
+RMD160 (openmsx-0.3.1-all.zip) = 8eff246e89e44f63ca480e9acef94a1da5fa81d2
+Size (openmsx-0.3.1-all.zip) = 136981 bytes
+SHA1 (opensfx-0.2.3-all.zip) = 368480f627b0563af80ca724695875a4aa898db3
+RMD160 (opensfx-0.2.3-all.zip) = 426b641b5a29556598d8a3033b4c4dc5b98630ce
+Size (opensfx-0.2.3-all.zip) = 11359588 bytes
