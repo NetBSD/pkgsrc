@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/11/17 17:06:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/12/08 22:00:11 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1983,6 +1983,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/auth-source.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/auth-source.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/canlock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/canlock.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/color.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/color.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/compface.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/compface.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/deuglify.el.gz
@@ -2187,6 +2189,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/proto-stream.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/proto-stream.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/qp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/qp.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc1843.el.gz
@@ -2199,10 +2203,14 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/rfc2104.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc2104.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc2231.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc2231.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/rtree.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/rtree.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/score-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/score-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/shr.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/shr.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/shr-color.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/shr-color.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-manage.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-manage.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-mode.el.gz
