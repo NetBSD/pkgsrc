@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4205 2010/12/08 12:54:58 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4206 2010/12/08 16:56:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5969,3 +5969,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-IO-Socket-SSL to 1.35 [gls 2010-12-07]
 	Added x11/fixesproto4 version 4.0 [abs 2010-12-08]
 	Updated x11/xlockmore to 5.29.1nb4 [obache 2010-12-08]
+	Updated www/contao29-translations to 20101207 [taca 2010-12-08]
