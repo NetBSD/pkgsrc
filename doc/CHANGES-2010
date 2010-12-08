@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4206 2010/12/08 16:56:40 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4207 2010/12/08 17:51:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5970,3 +5970,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/fixesproto4 version 4.0 [abs 2010-12-08]
 	Updated x11/xlockmore to 5.29.1nb4 [obache 2010-12-08]
 	Updated www/contao29-translations to 20101207 [taca 2010-12-08]
+	Updated games/openttd to 1.0.5 [adam 2010-12-08]
+	Added games/openttd-data version 0.3.1 [adam 2010-12-08]
