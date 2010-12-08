@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/12/07 14:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/08 11:24:34 markd Exp $
 
 DISTNAME=	kdegames-${_KDE_VERSION}
 CATEGORIES=	games
@@ -16,6 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
+# don't add python include dir to include path
+# as eg kolf will pick up wrong versions of header files
+BUILDLINK_INCDIRS.${PYPACKAGE}=
 .include "../../games/ggz-client-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
