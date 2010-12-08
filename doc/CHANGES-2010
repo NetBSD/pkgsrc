@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4203 2010/12/07 20:16:31 gls Exp $
+$NetBSD: CHANGES-2010,v 1.4204 2010/12/08 00:41:01 abs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5967,3 +5967,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/xenkernel3 to 3.1.4nb4 [bouyer 2010-12-07]
 	Updated sysutils/xenkernel33 to 3.3.2nb1 [bouyer 2010-12-07]
 	Updated security/p5-IO-Socket-SSL to 1.35 [gls 2010-12-07]
+	Added x11/fixesproto4 version 4.0 [abs 2010-12-08]
