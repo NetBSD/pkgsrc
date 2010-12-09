@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/12 12:30:47 is Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/09 15:32:10 is Exp $
 bin/cleanscore
 share/doc/cleanscore/README
+share/doc/cleanscore/COPYING
