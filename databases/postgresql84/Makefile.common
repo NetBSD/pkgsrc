@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2010/11/03 14:36:40 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2010/12/09 23:46:32 asau Exp $
 #
 # used by databases/postgresql84-adminpack/Makefile
 # used by databases/postgresql84-client/Makefile
@@ -146,3 +146,7 @@ pgsql-blcksz:
 		${MV} -f $$file.new $$file;				\
 	done
 .endif
+
+
+# Help to generate PLIST
+PRINT_PLIST_AWK+=	{$$0 = "$${PG_SUBPREFIX}" $$0;}
