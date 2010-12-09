@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2010/12/01 16:50:02 kefren Exp $
+# $NetBSD: Makefile,v 1.48 2010/12/09 07:42:47 kefren Exp $
 
 DISTNAME=	libgdiplus-2.8.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/libgdiplus/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,6 +28,7 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_TRANSFORM+=		rm:-Werror
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
