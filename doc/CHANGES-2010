@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4207 2010/12/08 17:51:36 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4208 2010/12/09 01:42:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20101207 [taca 2010-12-08]
 	Updated games/openttd to 1.0.5 [adam 2010-12-08]
 	Added games/openttd-data version 0.3.1 [adam 2010-12-08]
+	Updated editors/emacs-snapshot to 24.0.50.20101204 [minskim 2010-12-09]
