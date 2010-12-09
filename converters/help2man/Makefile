@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/08 20:29:05 abs Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/09 19:42:12 tron Exp $
 
 DISTNAME=		help2man-1.38.2
 PKGREVISION=		2
@@ -26,6 +26,9 @@ PLIST_VARS+=		nls
 .if ${OPSYS} == "Darwin" && ${OS_VERSION:M8.*} != ""
 CONFIGURE_ARGS+= --disable-nls
 .else
+.if ${OPSYS} == "Darwin"
+_STRIPFLAG_INSTALL=
+.endif
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
 .endif
