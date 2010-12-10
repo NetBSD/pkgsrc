@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2010/12/10 03:53:00 asau Exp $
+# $NetBSD: Makefile,v 1.358 2010/12/10 11:54:25 asau Exp $
 #
 
 COMMENT=	Databases
@@ -238,6 +238,7 @@ SUBDIR+=	postgresql90-plpython
 SUBDIR+=	postgresql90-pltcl
 SUBDIR+=	postgresql90-replicationtools
 SUBDIR+=	postgresql90-server
+SUBDIR+=	postgresql90-upgrade
 SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-bdb-xml
