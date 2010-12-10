@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4212 2010/12/10 10:34:51 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4213 2010/12/10 11:55:42 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5978,3 +5978,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/pear-Net_IDNA2 version 0.1.0 [adam 2010-12-09]
 	Added databases/postgresql90-replicationtools version 9.0.1 [asau 2010-12-10]
 	Updated databases/shared-mime-info to 0.90 [wiz 2010-12-10]
+	Added databases/postgresql90-upgrade version 9.0.1 [asau 2010-12-10]
