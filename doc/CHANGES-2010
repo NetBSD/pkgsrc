@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4210 2010/12/09 07:46:47 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4211 2010/12/10 03:54:03 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5976,3 +5976,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/sqlite3 to 3.7.4 [adam 2010-12-09]
 	Updated databases/sqlite3-tcl to 3.7.4 [adam 2010-12-09]
 	Added net/pear-Net_IDNA2 version 0.1.0 [adam 2010-12-09]
+	Added databases/postgresql90-replicationtools version 9.0.1 [asau 2010-12-10]
