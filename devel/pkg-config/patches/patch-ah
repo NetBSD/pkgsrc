@@ -1,11 +1,20 @@
-$NetBSD: patch-ah,v 1.4 2010/09/23 07:07:47 adam Exp $
-
-Don't call gnome-config, it has been dead for ages and the warnings
-just confuse users.
+$NetBSD: patch-ah,v 1.5 2010/12/10 07:45:56 hauke Exp $
 
 --- parse.c.orig	2010-05-27 20:21:36.000000000 +0000
 +++ parse.c
-@@ -1460,102 +1460,8 @@ get_compat_package (const char *name)
+@@ -880,8 +880,10 @@ parse_cflags (Package *pkg, const char *
+             pkg->other_cflags = g_slist_prepend (pkg->other_cflags,
+                                                  g_strdup (arg));
+ 	  if (strcmp("-idirafter", arg) == 0) {
++	      char *n;
++		  
+               tmp = trim_string(argv[++i]);
+-	      char *n = strdup_escape_shell(tmp);
++	      n = strdup_escape_shell(tmp);
+ 	      pkg->other_cflags = g_slist_prepend(pkg->other_cflags, n);
+ 	      g_free(tmp);
+ 	  }
+@@ -1460,102 +1462,8 @@ get_compat_package (const char *name)
      }
    else
      {
