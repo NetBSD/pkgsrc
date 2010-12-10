@@ -98,3 +98,6 @@ Pullup ticket #3296 - requested by morr
 www/wordpress: security update
 Pullup ticket #3297 - requested by obache
 multimedia/gstreamer0.10: build fix
+Pullup ticket #3298 - requested by bouyer
+sysutils/xenkernel3: security patch
+sysutils/xenkernel33: security patch
