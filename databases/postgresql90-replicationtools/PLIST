@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/10 03:51:31 asau Exp $
+${PG_SUBPREFIX}bin/pg_archivecleanup
+${PG_SUBPREFIX}bin/pg_standby
