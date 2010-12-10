@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4214 2010/12/10 12:37:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4215 2010/12/10 19:22:30 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5980,3 +5980,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/shared-mime-info to 0.90 [wiz 2010-12-10]
 	Added databases/postgresql90-upgrade version 9.0.1 [asau 2010-12-10]
 	Updated graphics/png to 1.4.5 [wiz 2010-12-10]
+	Added databases/postgresql90-monitoring version 9.0.1 [asau 2010-12-10]
