@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/11/15 16:55:27 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/10 11:41:30 asau Exp $
 
 PKGNAME=	postgresql90-server-${BASE_VERS}
 PKGREVISION=	1
@@ -25,6 +25,8 @@ BUILD_DIRS+=		src/backend/utils/mb/conversion_procs
 BUILD_DIRS+=		src/backend/snowball
 BUILD_DIRS+=		src/timezone
 BUILD_DIRS+=		src/pl
+
+LIBS.SunOS+=    -lintl
 
 # PostgreSQL has loadable server-side language modules.
 #
