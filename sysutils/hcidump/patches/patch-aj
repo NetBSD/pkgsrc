@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2006/07/25 16:28:48 salo Exp $
+$NetBSD: patch-aj,v 1.2 2010/12/10 13:06:14 plunky Exp $
 
 kill all the compiler warnings
 
---- parser/parser.c.orig	2003-09-13 00:38:11.000000000 +0100
+--- parser/parser.c.orig	2003-09-12 23:38:11.000000000 +0000
 +++ parser/parser.c
 @@ -25,6 +25,7 @@
   */
@@ -12,6 +12,15 @@ kill all the compiler warnings
  #include <netinet/in.h>
  #include <ctype.h>
  #include <stdio.h>
+@@ -65,7 +66,7 @@ void p_indent(int level, struct frame *f
+ 
+ 	if (!parser.state) {
+ 		if (parser.flags & DUMP_TSTAMP)
+-			printf("%8lu.%06lu ", f->ts.tv_sec, f->ts.tv_usec);
++			printf("%8lu.%06lu ", (unsigned long)f->ts.tv_sec, (unsigned long)f->ts.tv_usec);
+ 		printf("%c ", (f->in ? '>' : '<'));
+ 		parser.state = 1;
+ 	} else
 @@ -79,7 +80,7 @@ void p_indent(int level, struct frame *f
  
  uint8_t get_u8(struct frame *frm)
