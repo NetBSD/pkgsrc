@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2010/12/10 08:45:16 obache Exp $
 
 BUILTIN_PKG:=	libXdmcp
 
@@ -49,3 +49,33 @@ USE_BUILTIN.libXdmcp!=							\
 MAKEVARS+=	USE_BUILTIN.libXdmcp
 
 .include "../../mk/x11.builtin.mk"
+
+CHECK_BUILTIN.libXdmcp?=	no
+.if !empty(CHECK_BUILTIN.libXdmcp:M[nN][oO])
+
+# If we are using the builtin version, check whether it has a xdmcp.pc
+# file or not.  If the latter, generate a fake one.
+.  if !empty(USE_BUILTIN.libXdmcp:M[Yy][Ee][Ss])
+BUILDLINK_TARGETS+=	xdmcp-fake-pc
+
+xdmcp-fake-pc:
+	${RUN} \
+	src=${BUILDLINK_PREFIX.libXdmcp}/lib/pkgconfig/xdmcp.pc; \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/xdmcp.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{ ${ECHO} "Name: Xdmcp"; \
+	   	${ECHO} "Description: X Display Manager Control Protocol library"; \
+	   	${ECHO} "Version: 0.99"; \
+		${ECHO} "Requires: xproto"; \
+	   	${ECHO} "Cflags: -I${BUILDLINK_PREFIX.libXdmcp}/include"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.libXdmcp}/lib" \
+		"${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXdmcp}/lib" \
+		"-lXdmcp"; \
+		} >$${dst}; \
+	fi
+.  endif
+
+.endif	# CHECK_BUILTIN.libXdmcp
