@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2010/12/10 08:45:15 obache Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -49,3 +49,33 @@ USE_BUILTIN.libXau!=							\
 MAKEVARS+=	USE_BUILTIN.libXau
 
 .include "../../mk/x11.builtin.mk"
+
+CHECK_BUILTIN.libXau?=	no
+.if !empty(CHECK_BUILTIN.libXau:M[nN][oO])
+
+# If we are using the builtin version, check whether it has a xau.pc
+# file or not.  If the latter, generate a fake one.
+.  if !empty(USE_BUILTIN.libXau:M[Yy][Ee][Ss])
+BUILDLINK_TARGETS+=	xau-fake-pc
+
+xau-fake-pc:
+	${RUN} \
+	src=${BUILDLINK_PREFIX.libXau}/lib/pkgconfig/xau.pc; \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/xau.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{ ${ECHO} "Name: Xau"; \
+	   	${ECHO} "Description: X authorization file management library"; \
+	   	${ECHO} "Version: 1.0.1"; \
+		${ECHO} "Requires: xproto"; \
+	   	${ECHO} "Cflags: -I${BUILDLINK_PREFIX.libXau}/include"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.libXau}/lib" \
+		"${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXau}/lib" \
+		"-lXau"; \
+		} >$${dst}; \
+	fi
+.  endif
+
+.endif	# CHECK_BUILTIN.libXau
