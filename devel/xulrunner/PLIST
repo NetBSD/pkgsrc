@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/11/13 11:54:43 tnn Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/12/11 14:46:29 tnn Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -240,6 +240,7 @@ include/xulrunner/mozilla/CondVar.h
 include/xulrunner/mozilla/DeadlockDetector.h
 include/xulrunner/mozilla/Monitor.h
 include/xulrunner/mozilla/Mutex.h
+include/xulrunner/mozilla/PaintTracker.h
 include/xulrunner/mozilla/PluginLibrary.h
 include/xulrunner/mozilla/PluginPRLibrary.h
 include/xulrunner/mozilla/TimeStamp.h
@@ -1239,6 +1240,7 @@ include/xulrunner/nsIMultiplexInputStream.h
 include/xulrunner/nsIMutable.h
 include/xulrunner/nsIMutableArray.h
 include/xulrunner/nsIMutationObserver.h
+include/xulrunner/nsIMutationObserver2.h
 include/xulrunner/nsINIParser.h
 include/xulrunner/nsINSSCertCache.h
 include/xulrunner/nsINSSErrorsService.h
@@ -2054,6 +2056,8 @@ include/xulrunner/oggz/oggz_seek.h
 include/xulrunner/oggz/oggz_stream.h
 include/xulrunner/oggz/oggz_table.h
 include/xulrunner/oggz/oggz_write.h
+include/xulrunner/opentype-sanitiser.h
+include/xulrunner/ots-memory-stream.h
 include/xulrunner/p12.h
 include/xulrunner/p12plcy.h
 include/xulrunner/p12t.h
