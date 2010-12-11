@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/10 19:21:06 asau Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/11 17:22:30 asau Exp $
 
 PKGNAME=	postgresql90-monitoring-${BASE_VERS}
+PKGREVISION=	1
 COMMENT=	PostgreSQL monitoring tools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
