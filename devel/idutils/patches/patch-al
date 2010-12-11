@@ -1,0 +1,153 @@
+--- libidu/scanners.c.orig	2010-12-11 15:27:10.000000000 -0800
++++ libidu/scanners.c	2010-12-11 15:26:59.000000000 -0800
+@@ -1618,6 +1618,7 @@
+   switch (c)
+     {
+     case EOF:
++    out:
+       obstack_free (&tokens_obstack, obstack_finish (&tokens_obstack));
+       return 0;
+       
+@@ -1634,19 +1635,25 @@
+     case ';':				/* comment */
+       do {
+ 	c = getc (in_FILE);
+-      } while ( (c != EOF) && (c != '\n'));
++	if (c == EOF)
++	  goto out;
++      } while (c != '\n');
+       goto top;
+       
+     case '"':				/* string with or without ansi-C escapes */
+     string:
+       do {
+ 	c = getc (in_FILE);
++        if (c == EOF)
++	  goto out;
+ 	if (c == '\\')
+ 	  {
+ 	    c = getc (in_FILE);
++            if (c == EOF)
++	      goto out;
+ 	    continue;
+ 	  }
+-      } while ( (c != EOF) && (c != '"'));
++      } while (c != '"');
+       goto top;
+       
+     case '.':
+@@ -1654,11 +1661,12 @@
+       id = scanner_buffer;
+       *id++ = c;
+       c = getc (in_FILE);
++      if (c == EOF)
++	goto out;
+       if (is_DIGIT (c) ||
+ 	  (scanner_buffer[0] != '.' && (c == '.' || c == 'i' || c == 'I')))
+ 	goto number;
+-      if (c != EOF)
+-	ungetc (c, in_FILE);
++      ungetc (c, in_FILE);
+       goto ident;
+       
+     case '#':
+@@ -1667,20 +1675,23 @@
+       
+       c = getc (in_FILE);
+       if (c == EOF)
+-	goto top;
++	goto out;
+       else if (is_RADIX (c))
+ 	goto number;
+       else if (c == '\\')	/* #\... literal Character */
+ 	{
+ 	  *id++ = c;
+ 	  c = getc (in_FILE);
++          if (c == EOF)
++	    goto out;
+ 	  *id++ = c;
+ 	  if (is_LETTER (c))
+ 	    {
+ 	      while (is_LETTER (c = getc (in_FILE)))
+ 		*id++ = c;
+-	      if (c != EOF)
+-		ungetc (c, in_FILE);
++              if (c == EOF)
++	        goto out;
++	      ungetc (c, in_FILE);
+ 	    }
+ 	  *flags = TOK_LITERAL;
+ 	  obstack_grow0 (&tokens_obstack, scanner_buffer, id - scanner_buffer);
+@@ -1694,8 +1705,9 @@
+ 	{
+ 	  while (is_LETTER (c = getc (in_FILE)))
+ 	    *id++ = c;
+-	  if (c != EOF)
+-	    ungetc (c, in_FILE);
++          if (c == EOF)
++	    goto out;
++	  ungetc (c, in_FILE);
+ 	  *flags = TOK_LITERAL;
+ 	  obstack_grow0 (&tokens_obstack, scanner_buffer, id - scanner_buffer);
+ 	  return (struct token *) obstack_finish (&tokens_obstack);
+@@ -1712,13 +1724,17 @@
+ 		  break;
+ 	      }
+ 	  } while (c != EOF);
++          if (c == EOF)
++	    goto out;
+ 	  goto top;
+ 	}
+       else if (c == '@')	/* #@LENGTH ...^_ EMACS byte-code comment */
+ 	{
+ 	  do {
+ 	    c = getc (in_FILE);
+-	  } while ( (c != EOF) && (c != '\037'));
++            if (c == EOF)
++	      goto out;
++	  } while (c != '\037');
+ 	  goto top;
+ 	}
+       else if (c == '[')	/* #[ ... ] EMACS byte-code object */
+@@ -1742,23 +1758,24 @@
+ 	    {
+ 	      while (is_IDENT (c = getc (in_FILE)))
+ 		*id++ = c;
++              if (c == EOF)
++	        goto out;
+ 	      if (c == '[')
+ 		{
+ 		  c = getc (in_FILE);
++                  if (c == EOF)
++	            goto out;
+ 		  if (c == ']')
+ 		    {
+ 		      *id++ = '[';
+ 		      *id++ = ']';
+ 		      continue;
+ 		    }
+-		  if (c != EOF)
+-		    ungetc (c, in_FILE);
+-		  ungetc ('[', in_FILE);
++		  ungetc (c, in_FILE);
+ 		}
+ 	      break;
+ 	    }
+-	  if (c != EOF)
+-	    ungetc (c, in_FILE);
++	  ungetc (c, in_FILE);
+ 	  *flags = TOK_NAME | TOK_LITERAL;
+ 	  obstack_grow0 (&tokens_obstack, scanner_buffer, id - scanner_buffer);
+ 	  return (struct token *) obstack_finish (&tokens_obstack);
+@@ -1770,8 +1787,9 @@
+ 	  *id++ = c;
+ 	  while (is_NUMBER (c = getc (in_FILE)))
+ 	    *id++ = c;
+-	  if (c != EOF)
+-	    ungetc (c, in_FILE);
++          if (c == EOF)
++	    goto out;
++	  ungetc (c, in_FILE);
+ 	  *flags = TOK_NUMBER | TOK_LITERAL;
+ 	  obstack_grow0 (&tokens_obstack, scanner_buffer, id - scanner_buffer);
+ 	  return (struct token *) obstack_finish (&tokens_obstack);
