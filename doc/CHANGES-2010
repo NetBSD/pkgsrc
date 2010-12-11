@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4216 2010/12/10 23:35:24 morr Exp $
+$NetBSD: CHANGES-2010,v 1.4217 2010/12/11 08:17:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5982,3 +5982,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/png to 1.4.5 [wiz 2010-12-10]
 	Added databases/postgresql90-monitoring version 9.0.1 [asau 2010-12-10]
 	Updated www/wordpress to 3.0.3 [morr 2010-12-10]
+	Updated devel/pcre to 8.11 [adam 2010-12-11]
