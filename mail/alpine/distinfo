@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.16 2009/08/06 20:01:50 plunky Exp $
+$NetBSD: distinfo,v 1.17 2010/12/11 20:32:32 abs Exp $
 
-SHA1 (alpine-2.00/alpine-2.00.tar.bz2) = dcbd3c5419954f484ccf706feaba31ce48cdebc4
-RMD160 (alpine-2.00/alpine-2.00.tar.bz2) = 9e67704b23b3973d8b878e65ad9e6f5026c10d13
-Size (alpine-2.00/alpine-2.00.tar.bz2) = 5222673 bytes
-SHA1 (alpine-2.00/fancy.patch.gz) = 2622d3e86a76908bf4d1ca63501c6dac75563348
-RMD160 (alpine-2.00/fancy.patch.gz) = b877b97fd88fa73a8428d288f929579560faec4e
-Size (alpine-2.00/fancy.patch.gz) = 24556 bytes
-SHA1 (alpine-2.00/maildir.patch.gz) = b1b790ca644c891f52f28663867b2deb032bb98c
-RMD160 (alpine-2.00/maildir.patch.gz) = ffa3a6a588c76e33bc92fe26ddfb9f6e6dbefe20
-Size (alpine-2.00/maildir.patch.gz) = 32100 bytes
-SHA1 (alpine-2.00/searchheader.patch.gz) = 1c8dfaefa9a9ed502da454b5d1334c94bc1873c4
-RMD160 (alpine-2.00/searchheader.patch.gz) = cc1b2c3cf4cbceaf62e1c0378f5edf6bee619581
-Size (alpine-2.00/searchheader.patch.gz) = 1708 bytes
+SHA1 (alpine-2.00a/alpine-2.00.tar.bz2) = dcbd3c5419954f484ccf706feaba31ce48cdebc4
+RMD160 (alpine-2.00a/alpine-2.00.tar.bz2) = 9e67704b23b3973d8b878e65ad9e6f5026c10d13
+Size (alpine-2.00a/alpine-2.00.tar.bz2) = 5222673 bytes
+SHA1 (alpine-2.00a/fancy.patch.gz) = 2622d3e86a76908bf4d1ca63501c6dac75563348
+RMD160 (alpine-2.00a/fancy.patch.gz) = b877b97fd88fa73a8428d288f929579560faec4e
+Size (alpine-2.00a/fancy.patch.gz) = 24556 bytes
+SHA1 (alpine-2.00a/maildir.patch.gz) = 86b66c2f92e49b2edb11fa944ed9bc1089176613
+RMD160 (alpine-2.00a/maildir.patch.gz) = ed700c492479260964f804a08e6b86863cd37e52
+Size (alpine-2.00a/maildir.patch.gz) = 32216 bytes
+SHA1 (alpine-2.00a/searchheader.patch.gz) = 1c8dfaefa9a9ed502da454b5d1334c94bc1873c4
+RMD160 (alpine-2.00a/searchheader.patch.gz) = cc1b2c3cf4cbceaf62e1c0378f5edf6bee619581
+Size (alpine-2.00a/searchheader.patch.gz) = 1708 bytes
 SHA1 (patch-aa) = c306613a297d61591d577b6968a31fc85b03f852
 SHA1 (patch-ab) = f0983d8c0123b06a2970eb2736b04afad1502450
