@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/10 19:21:06 asau Exp $
-${PG_SUBPREFIX}lib/libauto_explain.la
-${PG_SUBPREFIX}lib/libpg_buffercache.la
-${PG_SUBPREFIX}lib/libpg_stat_statements.la
-${PG_SUBPREFIX}lib/libpgstattuple.la
+@comment $NetBSD: PLIST,v 1.2 2010/12/11 17:22:30 asau Exp $
+${PG_SUBPREFIX}lib/postgresql/auto_explain.la
+${PG_SUBPREFIX}lib/postgresql/pg_buffercache.la
+${PG_SUBPREFIX}lib/postgresql/pg_stat_statements.la
+${PG_SUBPREFIX}lib/postgresql/pgstattuple.la
 ${PG_SUBPREFIX}share/postgresql/contrib/pg_buffercache.sql
 ${PG_SUBPREFIX}share/postgresql/contrib/pg_stat_statements.sql
 ${PG_SUBPREFIX}share/postgresql/contrib/pgstattuple.sql
