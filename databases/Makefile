@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2010/12/10 19:25:02 asau Exp $
+# $NetBSD: Makefile,v 1.360 2010/12/11 23:06:50 asau Exp $
 #
 
 COMMENT=	Databases
@@ -230,6 +230,7 @@ SUBDIR+=	postgresql84-server
 SUBDIR+=	postgresql90
 SUBDIR+=	postgresql90-adminpack
 SUBDIR+=	postgresql90-client
+SUBDIR+=	postgresql90-datatypes
 SUBDIR+=	postgresql90-dblink
 SUBDIR+=	postgresql90-docs
 SUBDIR+=	postgresql90-monitoring
