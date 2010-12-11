@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4217 2010/12/11 08:17:52 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4218 2010/12/11 23:03:36 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5983,3 +5983,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/postgresql90-monitoring version 9.0.1 [asau 2010-12-10]
 	Updated www/wordpress to 3.0.3 [morr 2010-12-10]
 	Updated devel/pcre to 8.11 [adam 2010-12-11]
+	Added databases/postgresql90-datatypes version 9.0.1 [asau 2010-12-11]
