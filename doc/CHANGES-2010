@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4224 2010/12/12 11:55:55 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4225 2010/12/12 11:56:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5993,3 +5993,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/JBidwatcher to 2.1.3 [wiz 2010-12-12]
 	Added graphics/libjpeg-turbo version 1.0.1 [dsainty 2010-12-12]
 	Updated misc/goffice0.8 to 0.8.12 [wiz 2010-12-12]
+	Updated math/gnumeric110 to 1.10.12 [wiz 2010-12-12]
