@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:26 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2010/12/12 12:18:34 wiz Exp $
 
 BUILDLINK_TREE+=	py-dbus
 
@@ -13,7 +13,6 @@ BUILDLINK_PKGSRCDIR.py-dbus?=	../../sysutils/py-dbus
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 .endif # PY_DBUS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py-dbus
