@@ -101,3 +101,5 @@ multimedia/gstreamer0.10: build fix
 Pullup ticket #3298 - requested by bouyer
 sysutils/xenkernel3: security patch
 sysutils/xenkernel33: security patch
+Pullup ticket #3299 - requested by tez
+security/mit-krb5: security patch
