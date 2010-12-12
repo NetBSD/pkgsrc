@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/08/05 18:38:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/12/12 11:55:42 wiz Exp $
 include/libgoffice-0.8/goffice/app/error-info.h
 include/libgoffice-0.8/goffice/app/file.h
 include/libgoffice-0.8/goffice/app/go-cmd-context-impl.h
@@ -165,6 +165,7 @@ include/libgoffice-0.8/goffice/utils/go-units.h
 include/libgoffice-0.8/goffice/utils/goffice-utils.h
 include/libgoffice-0.8/goffice/utils/regutf8.h
 lib/goffice/${PKGVERSION}/plugins/plot_barcol/barcol.la
+lib/goffice/${PKGVERSION}/plugins/plot_barcol/gog-area-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_barcol/gog-barcol-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_barcol/gog-minmax-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_barcol/plot-types.xml
@@ -182,6 +183,7 @@ lib/goffice/${PKGVERSION}/plugins/plot_pie/pie.la
 lib/goffice/${PKGVERSION}/plugins/plot_pie/plot-types.xml
 lib/goffice/${PKGVERSION}/plugins/plot_pie/plugin.xml
 lib/goffice/${PKGVERSION}/plugins/plot_radar/gog-color-polar-prefs.ui
+lib/goffice/${PKGVERSION}/plugins/plot_radar/gog-polar-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_radar/plot-types.xml
 lib/goffice/${PKGVERSION}/plugins/plot_radar/plugin.xml
 lib/goffice/${PKGVERSION}/plugins/plot_radar/radar.la
@@ -192,6 +194,7 @@ lib/goffice/${PKGVERSION}/plugins/plot_surface/plugin.xml
 lib/goffice/${PKGVERSION}/plugins/plot_surface/surface.la
 lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-bubble-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-xy-color-prefs.ui
+lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-xy-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-xy-series-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_xy/plot-types.xml
 lib/goffice/${PKGVERSION}/plugins/plot_xy/plugin.xml
@@ -247,6 +250,7 @@ share/gtk-doc/html/goffice-0.8/GOFileOpener.html
 share/gtk-doc/html/goffice-0.8/GOFileSaver.html
 share/gtk-doc/html/goffice-0.8/GOFontSel.html
 share/gtk-doc/html/goffice-0.8/GOFormatSel.html
+share/gtk-doc/html/goffice-0.8/GOGraphWidget.html
 share/gtk-doc/html/goffice-0.8/GOIOContext.html
 share/gtk-doc/html/goffice-0.8/GOLocaleSel.html
 share/gtk-doc/html/goffice-0.8/GOMarker.html
@@ -317,6 +321,7 @@ share/gtk-doc/html/goffice-0.8/ch13.html
 share/gtk-doc/html/goffice-0.8/ch14.html
 share/gtk-doc/html/goffice-0.8/ch15.html
 share/gtk-doc/html/goffice-0.8/ch16.html
+share/gtk-doc/html/goffice-0.8/ch17.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GOArrow.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GOBezierSpline.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GOCSpline.html
@@ -358,6 +363,7 @@ share/gtk-doc/html/goffice-0.8/goffice-0.8-go-distribution.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-go-image.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-go-plugin.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-go-string.html
+share/gtk-doc/html/goffice-0.8/goffice-0.8-goffice.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8.devhelp
 share/gtk-doc/html/goffice-0.8/goffice-0.8.devhelp2
 share/gtk-doc/html/goffice-0.8/home.png
@@ -377,6 +383,7 @@ share/locale/ast/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/az/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/bg/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ca/LC_MESSAGES/goffice-${PKGVERSION}.mo
+share/locale/ca@valencia/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/cs/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/da/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/de/LC_MESSAGES/goffice-${PKGVERSION}.mo
