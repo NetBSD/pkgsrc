@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9932 2010/12/12 12:00:41 wiz Exp $
+$NetBSD: TODO,v 1.9933 2010/12/12 12:15:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1054,7 +1054,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
-	o pangomm-2.26.3
 	o paprefs-0.9.8
 	o parallel-20101202
 	o pari-galdata-2.2 [pkg/38117]
