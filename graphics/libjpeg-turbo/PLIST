@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/12 11:48:56 dsainty Exp $
+bin/cjpeg
+bin/djpeg
+bin/jpegtran
+bin/rdjpgcom
+bin/wrjpgcom
+include/jconfig.h
+include/jerror.h
+include/jmorecfg.h
+include/jpeglib.h
+include/turbojpeg.h
+lib/libjpeg.la
+lib/libturbojpeg.la
+man/man1/cjpeg.1
+man/man1/djpeg.1
+man/man1/jpegtran.1
+man/man1/rdjpgcom.1
+man/man1/wrjpgcom.1
