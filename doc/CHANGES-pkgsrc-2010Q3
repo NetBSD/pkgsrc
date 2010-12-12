@@ -107,3 +107,9 @@ Pullup ticket #3300 - requested by morr
 www/wordpress: security update
 Pullup ticket #3304 - requested by markd
 emulators/suse113_openssl: security patch
+Pullup ticket #3302 - requested by tnn
+mail/thunderbird: security update
+Pullup ticket #3303 - requested by tnn
+www/seamonkey: security update
+Pullup ticket #3305 - requested by spz
+security/p5-IO-Socket-SSL: security updated
