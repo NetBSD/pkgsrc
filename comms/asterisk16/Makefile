@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2010/11/29 04:20:32 jnemeth Exp $
+# $NetBSD: Makefile,v 1.27 2010/12/12 10:19:44 jnemeth Exp $
 #
+# NOTE: when updating this package, there are two places that sound
+#       tarballs need to be checked
 
-DISTNAME=	asterisk-1.6.2.14
+DISTNAME=	asterisk-1.6.2.15
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -9,7 +11,6 @@ CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
 		http://downloads.asterisk.org/pub/telephony/sounds/releases/
-PKGREVISION=	1
 
 OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
@@ -32,6 +33,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
+# XXX remove when lang/lua gets builtin.mk
+CONFIGURE_ARGS+=	--without-lua
 
 INSTALL_TARGET=		install samples
 INSTALLATION_DIRS+=	lib/pkgconfig share/doc/${PKGBASE}
@@ -172,7 +175,8 @@ post-patch:
 .endif
 
 post-install:
-	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.19.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+# check sounds directory for current versions when upgrading package
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.20.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
 	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
