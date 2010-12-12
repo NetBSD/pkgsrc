@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/12 11:48:56 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/12 12:36:39 dsainty Exp $
 #
 
 DISTNAME=	libjpeg-turbo-1.0.1
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2 # OR wxWindows Library Licence, Version 3.1
 CONFLICTS=	jpeg-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
