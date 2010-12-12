@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9934 2010/12/12 12:18:44 wiz Exp $
+$NetBSD: TODO,v 1.9935 2010/12/12 13:11:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -732,8 +732,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.10
 	o gss-1.0.1
 	o gssdp-0.9.1
-	o gtar-1.25
-	o gtar-base-1.25
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.2
