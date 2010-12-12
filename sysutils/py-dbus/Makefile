@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2010/05/02 13:31:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/12/12 12:18:34 wiz Exp $
 #
 
-DISTNAME=	dbus-python-0.83.1
+DISTNAME=	dbus-python-0.83.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
@@ -12,6 +12,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
 COMMENT=	Python bindings for the D-BUS message bus system
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
