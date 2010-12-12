@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.10 2010/12/12 13:10:40 wiz Exp $
+
+Unportable test(1) construct.
+
+--- configure.orig	2010-12-12 12:26:48.000000000 +0000
++++ configure
+@@ -35225,7 +35225,7 @@ $as_echo "$as_me: failed program was:" >
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ( exit $ac_status )
+-if test $? == 99 && test x"$FORCE_UNSAFE_CONFIGURE" = x; then
++if test $? = 99 && test x"$FORCE_UNSAFE_CONFIGURE" = x; then
+             { { $as_echo "$as_me:$LINENO: error: in \`$ac_pwd':" >&5
+ $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+ { { $as_echo "$as_me:$LINENO: error: you should not run configure as root (set FORCE_UNSAFE_CONFIGURE=1 in environment to bypass this check)
