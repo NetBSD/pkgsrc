@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/11/15 22:57:42 abs Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/12 21:32:01 adam Exp $
 
 DISTNAME=	akonadi-1.4.0
 PKGREVISION=	1
@@ -17,8 +17,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql5-server
 DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
+.include "../../mk/mysql.buildlink3.mk"
+.if ${_MYSQL_VERSION} == "51"
+DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql51-server
+.else
+DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql5-server
+.endif
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
