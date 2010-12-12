@@ -1,0 +1,39 @@
+$NetBSD: patch-cd,v 1.1.2.2 2010/12/12 15:20:09 spz Exp $
+
+CVE-2010-1323 fix
+
+--- lib/krb5/krb/mk_safe.c.orig	2010-12-03 11:41:53.890970000 -0600
++++ lib/krb5/krb/mk_safe.c	2010-12-03 11:44:00.588325800 -0600
+@@ -212,10 +212,29 @@
+ 	for (i = 0; i < nsumtypes; i++)
+ 		if (auth_context->safe_cksumtype == sumtypes[i])
+ 			break;
+-	if (i == nsumtypes)
+-		i = 0;
+-	sumtype = sumtypes[i];
+ 	krb5_free_cksumtypes (context, sumtypes);
++	if (i < nsumtypes)
++	    sumtype = auth_context->safe_cksumtype;
++	else {
++	    switch (keyblock->enctype) {
++	    case ENCTYPE_DES_CBC_MD4:
++		sumtype = CKSUMTYPE_RSA_MD4_DES;
++		break;
++	    case ENCTYPE_DES_CBC_MD5:
++	    case ENCTYPE_DES_CBC_CRC:
++		sumtype = CKSUMTYPE_RSA_MD5_DES;
++		break;
++	    default:
++		retval = krb5int_c_mandatory_cksumtype(context,
++						       keyblock->enctype,
++						       &sumtype);
++		if (retval) {
++		    CLEANUP_DONE();
++		    goto error;
++		}
++		break;
++	    }
++	}
+     }
+     if ((retval = krb5_mk_safe_basic(context, userdata, keyblock, &replaydata, 
+ 				     plocal_fulladdr, premote_fulladdr,

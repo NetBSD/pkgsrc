@@ -1,0 +1,15 @@
+$NetBSD: patch-cb,v 1.1.2.2 2010/12/12 15:20:09 spz Exp $
+
+CVE-2010-1323 fix
+
+--- lib/crypto/dk/derive.c.orig	2010-12-03 11:38:08.683111800 -0600
++++ lib/crypto/dk/derive.c	2010-12-03 11:38:50.395857000 -0600
+@@ -40,6 +40,8 @@
+     keybytes = enc->keybytes;
+     keylength = enc->keylength;
+ 
++    if (blocksize == 1)
++	return(KRB5_BAD_ENCTYPE);
+     if ((inkey->length != keylength) ||
+ 	(outkey->length != keylength))
+ 	return(KRB5_CRYPTO_INTERNAL);

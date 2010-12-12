@@ -1,0 +1,25 @@
+$NetBSD: patch-cc,v 1.1.2.2 2010/12/12 15:20:09 spz Exp $
+
+CVE-2010-1323 fix
+
+--- lib/krb5/krb/preauth2.c.orig	2010-12-03 11:39:40.124063600 -0600
++++ lib/krb5/krb/preauth2.c	2010-12-03 11:41:33.300010400 -0600
+@@ -665,7 +665,9 @@
+ 
+    cksum = sc2->sam_cksum;
+    
+-   while (*cksum) {
++   for (; *cksum; cksum++) {
++	if (!krb5_c_is_keyed_cksum((*cksum)->checksum_type))
++	    continue;
+ 	/* Check this cksum */
+ 	retval = krb5_c_verify_checksum(context, as_key,
+ 			KRB5_KEYUSAGE_PA_SAM_CHALLENGE_CKSUM,
+@@ -679,7 +681,6 @@
+ 	}
+ 	if (valid_cksum)
+ 	   break;
+-	cksum++;
+    }
+ 
+    if (!valid_cksum) {
