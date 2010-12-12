@@ -1,0 +1,22 @@
+$NetBSD: patch-ca,v 1.1.2.2 2010/12/12 15:20:09 spz Exp $
+
+CVE-2010-1323 fix
+
+--- lib/crypto/keyed_checksum_types.c.orig	2010-12-03 11:36:00.476825900 -0600
++++ lib/crypto/keyed_checksum_types.c	2010-12-03 11:37:44.915328600 -0600
+@@ -51,6 +51,15 @@
+ {
+     unsigned int i, c;
+ 
++    if (enctype == ENCTYPE_ARCFOUR_HMAC ||
++	enctype == ENCTYPE_ARCFOUR_HMAC_EXP) {
++	*count = 1;
++	if ((*cksumtypes = malloc(sizeof(krb5_cksumtype))) == NULL)
++	    return(ENOMEM);
++	(*cksumtypes)[0] = CKSUMTYPE_HMAC_MD5_ARCFOUR;
++	return(0);
++    }
++
+     c = 0;
+     for (i=0; i<krb5_cksumtypes_length; i++) {
+ 	if ((krb5_cksumtypes_list[i].keyhash &&
