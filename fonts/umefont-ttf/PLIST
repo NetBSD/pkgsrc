@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/03 12:40:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/12 13:11:52 ryoon Exp $
 lib/X11/fonts/TTF/ume-pgc4.ttf
 lib/X11/fonts/TTF/ume-pgc5.ttf
 lib/X11/fonts/TTF/ume-pgo4.ttf
@@ -17,4 +17,4 @@ lib/X11/fonts/TTF/ume-tmo3.ttf
 lib/X11/fonts/TTF/ume-tms3.ttf
 lib/X11/fonts/TTF/ume-ugo4.ttf
 lib/X11/fonts/TTF/ume-ugo5.ttf
-share/doc/umefont/license.html
+share/doc/umefont-ttf/license.html
