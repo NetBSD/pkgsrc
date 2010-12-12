@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4219 2010/12/12 00:08:38 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.4220 2010/12/12 11:37:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5988,3 +5988,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/firefox to 3.6.13 [tnn 2010-12-11]
 	Added databases/postgresql90-datatypes version 9.0.1 [asau 2010-12-11]
 	Updated www/seamonkey to 2.0.11 [tnn 2010-12-12]
+	Updated security/libtasn1 to 2.9 [wiz 2010-12-12]
