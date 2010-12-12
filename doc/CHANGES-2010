@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4229 2010/12/12 12:18:44 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4230 2010/12/12 13:11:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5998,3 +5998,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/rasqal to 0.9.21 [wiz 2010-12-12]
 	Updated devel/pangomm to 2.26.3 [wiz 2010-12-12]
 	Updated sysutils/py-dbus to 0.83.2 [wiz 2010-12-12]
+	Updated archivers/gtar-base to 1.25 [wiz 2010-12-12]
+	Updated archivers/gtar-info to 1.25 [wiz 2010-12-12]
+	Updated archivers/gtar to 1.25 [wiz 2010-12-12]
