@@ -103,3 +103,7 @@ sysutils/xenkernel3: security patch
 sysutils/xenkernel33: security patch
 Pullup ticket #3299 - requested by tez
 security/mit-krb5: security patch
+Pullup ticket #3300 - requested by morr
+www/wordpress: security update
+Pullup ticket #3304 - requested by markd
+emulators/suse113_openssl: security patch
