@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4230 2010/12/12 13:11:53 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4231 2010/12/12 13:16:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6001,3 +6001,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/gtar-base to 1.25 [wiz 2010-12-12]
 	Updated archivers/gtar-info to 1.25 [wiz 2010-12-12]
 	Updated archivers/gtar to 1.25 [wiz 2010-12-12]
+	Renamed fonts/umefont to fonts/umefont-ttf [ryoon 2010-12-12]
+	Updated fonts/umefont-ttf to 0.422 [ryoon 2010-12-12]
