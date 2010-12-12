@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:28:09 chs Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/12 09:58:21 markd Exp $
 
 DISTNAME=	suse_openssl-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
-DISTFILES=	libopenssl1_0_0-1.0.0-5.4.${SUSE_ARCH}.rpm
+DISTFILES=	libopenssl1_0_0-1.0.0-6.3.1.${SUSE_ARCH}.rpm
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Linux compatibility package for OpenSSL
