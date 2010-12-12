@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4233 2010/12/12 13:19:07 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4234 2010/12/12 15:27:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6005,3 +6005,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/umefont-ttf to 0.422 [ryoon 2010-12-12]
 	Updated sysutils/dbus-glib to 0.92 [wiz 2010-12-12]
 	Updated pkgtools/pkg_install to 20101212 [wiz 2010-12-12]
+	Updated graphics/jpeginfo to 1.6.1 [adam 2010-12-12]
