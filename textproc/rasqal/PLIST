@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/02/16 14:34:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/12/12 12:00:30 wiz Exp $
 bin/rasqal-config
 bin/roqet
 include/rasqal/rasqal.h
@@ -22,6 +22,7 @@ share/gtk-doc/html/rasqal/rasqal-section-query-results-formatter.html
 share/gtk-doc/html/rasqal/rasqal-section-query-results.html
 share/gtk-doc/html/rasqal/rasqal-section-query.html
 share/gtk-doc/html/rasqal/rasqal-section-row.html
+share/gtk-doc/html/rasqal/rasqal-section-service.html
 share/gtk-doc/html/rasqal/rasqal-section-triple.html
 share/gtk-doc/html/rasqal/rasqal-section-triples-source.html
 share/gtk-doc/html/rasqal/rasqal-section-updates.html
