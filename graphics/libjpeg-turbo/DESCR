@@ -1,0 +1,3 @@
+libjpeg-turbo is a version of libjpeg which uses MMX, SSE, and SSE2 SIMD
+instructions to accelerate baseline JPEG compression/decompression by about
+2-4x on x86 and x86-64 platforms.
