@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2010/05/18 19:59:21 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2010/12/12 11:50:43 dsainty Exp $
 #
 
 DISTNAME=		jpegsrc.v8b
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.ijg.org/files/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ijg.org/
 COMMENT=		IJG's jpeg compression utilities
+
+CONFLICTS=		libjpeg-turbo-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
