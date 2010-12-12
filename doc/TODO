@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9927 2010/12/12 11:37:37 wiz Exp $
+$NetBSD: TODO,v 1.9928 2010/12/12 11:38:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -473,7 +473,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cjk-lyx-1.4.4
 	o classpath-0.98
 	o climm-0.7.1
-	o clive-2.2.18
 	o clustalw-2.0.12 [pkg/43395]
 	o cmus-2.3.3
 	o colorize-0.3.4
