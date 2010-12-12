@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2010/03/23 19:00:10 tez Exp $
+# $NetBSD: Makefile,v 1.29 2010/12/12 13:10:40 wiz Exp $
 #
 
-DISTNAME=	tar-1.23
-PKGNAME=	gtar-info-1.23
+DISTNAME=	tar-1.25
+PKGNAME=	gtar-info-1.25
 SVR4_PKGNAME=	gtari
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
