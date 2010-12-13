@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4239 2010/12/13 20:34:04 gls Exp $
+$NetBSD: CHANGES-2010,v 1.4240 2010/12/13 20:37:49 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6012,3 +6012,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/php53 to 5.3.4 [taca 2010-12-13]
 	Updated graphics/pngcrush to 1.7.13 [adam 2010-12-13]
 	Updated graphics/libraw to 0.12.0 [gls 2010-12-13]
+	Updated graphics/shotwell to 0.7.2nb2 [gls 2010-12-13]
