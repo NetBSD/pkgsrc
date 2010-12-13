@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4235 2010/12/13 10:32:48 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4236 2010/12/13 10:51:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6007,3 +6007,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pkg_install to 20101212 [wiz 2010-12-12]
 	Updated graphics/jpeginfo to 1.6.1 [adam 2010-12-12]
 	Updated security/john to 1.7.6 [wiz 2010-12-13]
+	Updated net/clive to 2.2.19 [wiz 2010-12-13]
