@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.3 2010/12/13 19:32:11 jwise Exp $
+
+Sun's definition of SIGRTM(AX|IN) confuses us.
+
+--- source/mksiginc.c.orig	Mon Dec 13 14:24:36 2010
++++ source/mksiginc.c	Mon Dec 13 14:27:19 2010
+@@ -191,6 +191,7 @@
+ 	signames[SIGRETRACT] = "RETRACT";
+ #endif
+ 
++#ifndef __sun
+ #if defined(SIGRTMAX) && SIGRTMAX < MY_MAXSIG
+ 	signames[SIGRTMAX] = "RTMAX";
+ #endif
+@@ -198,6 +199,7 @@
+ #if defined(SIGRTMIN) && SIGRTMIN < MY_MAXSIG
+ 	signames[SIGRTMIN] = "RTMIN";
+ #endif
++#endif
+ 
+ #if defined(SIGSAK) && SIGSAK < MY_MAXSIG
+ 	signames[SIGSAK] = "SAK";
