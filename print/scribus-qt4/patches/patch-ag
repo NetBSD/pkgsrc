@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
+
+--- scribus/ioapi.h.orig	2006-01-22 22:42:17.000000000 +0000
++++ scribus/ioapi.h
+@@ -43,6 +43,7 @@ for which a new license (GPL+exception) 
+ extern "C" {
+ #endif
+ 
++#define OF(x) x
+ typedef voidpf (ZCALLBACK *open_file_func) OF((voidpf opaque, const char* filename, int mode));
+ typedef uLong  (ZCALLBACK *read_file_func) OF((voidpf opaque, voidpf stream, void* buf, uLong size));
+ typedef uLong  (ZCALLBACK *write_file_func) OF((voidpf opaque, voidpf stream, const void* buf, uLong size));
