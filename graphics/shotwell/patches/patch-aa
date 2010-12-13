@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/13 20:36:53 gls Exp $
 
 --- Makefile.orig	2010-09-10 22:55:54.000000000 +0000
 +++ Makefile
@@ -97,17 +97,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
  
  $(EXPANDED_OBJ_FILES): %.o: %.c $(CONFIG_IN) Makefile
 -	$(CC) -c $(VALA_CFLAGS) `$(LIBRAW_CONFIG) --cflags` $(CFLAGS) -o $@ $<
-+	$(CC) -c $(VALA_CFLAGS) $(CFLAGS) `pkg-config --cflags raw` -o $@ $<
++	$(CC) -c $(VALA_CFLAGS) $(CFLAGS) `pkg-config --cflags libraw` -o $@ $<
  
  $(PROGRAM): $(EXPANDED_OBJ_FILES) $(RESOURCES) $(LANG_STAMP)
 -	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `$(LIBRAW_CONFIG) --libs` $(EXPORT_FLAGS) -o $@
-+	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) $(LDFLAGS) `pkg-config --libs raw` $(EXPORT_FLAGS) -o $@
++	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) $(LDFLAGS) `pkg-config --libs libraw` $(EXPORT_FLAGS) -o $@
  
  glade: lib$(PROGRAM).so
  
  lib$(PROGRAM).so: $(EXPANDED_OBJ_FILES) $(RESOURCES) $(LANG_STAMP)
 -	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `$(LIBRAW_CONFIG) --libs` $(EXPORT_FLAGS) -shared -o $@
-+	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) $(LDFLAGS) `pkg-config --libs raw` $(EXPORT_FLAGS) -shared -o $@
++	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) $(LDFLAGS) `pkg-config --libs libraw` $(EXPORT_FLAGS) -shared -o $@
  
  shotwell-setup-$(VERSION).exe: $(PROGRAM) windows/winstall.iss
  	iscc windows\winstall.iss
