@@ -1,0 +1,21 @@
+$NetBSD: patch-ba,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
+
+--- scribus/scclocale.h.orig	2010-08-17 19:18:35.000000000 +0000
++++ scribus/scclocale.h
+@@ -21,14 +21,14 @@
+ #include <xlocale.h>
+ #endif
+ 
+-#if defined(Q_OS_SOLARIS) || defined (Q_OS_OPENBSD) || defined (Q_OS_FREEBSD)
++#if defined(Q_OS_SOLARIS) || defined (Q_OS_OPENBSD) || defined (Q_OS_FREEBSD) || defined (Q_OS_NETBSD)
+ #include <locale.h>
+ #endif
+ 
+ #if defined(Q_WS_WIN)
+ #define XLocaleType _locale_t
+ #else
+-  #if defined (Q_OS_SOLARIS) || defined (Q_OS_OPENBSD) || defined (Q_OS_FREEBSD)
++  #if defined (Q_OS_SOLARIS) || defined (Q_OS_OPENBSD) || defined (Q_OS_FREEBSD) || defined (Q_OS_NETBSD)
+   #define XLocaleType char*   //dummy?
+   #else
+   #define XLocaleType locale_t
