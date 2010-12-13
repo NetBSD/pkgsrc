@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4237 2010/12/13 13:19:38 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4238 2010/12/13 16:16:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6010,3 +6010,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/clive to 2.2.19 [wiz 2010-12-13]
 	Updated lang/php5 to 5.2.15 [taca 2010-12-13]
 	Updated lang/php53 to 5.3.4 [taca 2010-12-13]
+	Updated graphics/pngcrush to 1.7.13 [adam 2010-12-13]
