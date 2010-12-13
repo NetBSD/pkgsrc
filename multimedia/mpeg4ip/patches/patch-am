@@ -1,0 +1,20 @@
+$NetBSD: patch-am,v 1.1 2010/12/13 21:32:14 chuck Exp $
+
+--- common/video/iso-mpeg4/src/type_basic.cpp.orig	2010-12-13 15:34:35.000000000 -0500
++++ common/video/iso-mpeg4/src/type_basic.cpp	2010-12-13 15:34:47.000000000 -0500
+@@ -317,13 +317,13 @@
+ 	iHalfY = m_vctTrueHalfPel.y - iMVY * 2;
+ }
+ 
+-Void CMotionVector::setToZero (Void)
++Void CMotionVector::setToZero ()
+ {
+ 	memset (this, 0, sizeof (*this));
+ }
+ 
+ // RRV insertion
+-Void CMotionVector::scaleup (Void)
++Void CMotionVector::scaleup ()
+ {
+ 	if(m_vctTrueHalfPel.x == 0){
+ 		m_vctTrueHalfPel_x2.x = 0;
