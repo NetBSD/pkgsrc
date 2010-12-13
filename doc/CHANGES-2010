@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4234 2010/12/12 15:27:34 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4235 2010/12/13 10:32:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6006,3 +6006,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/dbus-glib to 0.92 [wiz 2010-12-12]
 	Updated pkgtools/pkg_install to 20101212 [wiz 2010-12-12]
 	Updated graphics/jpeginfo to 1.6.1 [adam 2010-12-12]
+	Updated security/john to 1.7.6 [wiz 2010-12-13]
