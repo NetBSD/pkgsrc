@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/03/14 10:17:25 martti Exp $
+$NetBSD: patch-ab,v 1.2 2010/12/13 10:32:35 wiz Exp $
 
---- src/params.h.orig	2006-03-14 09:16:37.000000000 +0200
-+++ src/params.h	2006-03-14 09:21:51.000000000 +0200
-@@ -49,15 +49,15 @@
+--- src/params.h.orig	2010-06-14 02:38:55.000000000 +0000
++++ src/params.h
+@@ -51,15 +51,15 @@
   * notes above.
   */
  #ifndef JOHN_SYSTEMWIDE
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.1 2006/03/14 10:17:25 martti Exp $
  #endif
  #define JOHN_PRIVATE_HOME		"~/.john"
  #endif
-@@ -101,8 +101,8 @@
+@@ -103,8 +103,8 @@
  /*
   * File names.
   */
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.1 2006/03/14 10:17:25 martti Exp $
  #if JOHN_SYSTEMWIDE
  #define CFG_PRIVATE_FULL_NAME		JOHN_PRIVATE_HOME "/john.conf"
  #define CFG_PRIVATE_ALT_NAME		JOHN_PRIVATE_HOME "/john.ini"
-@@ -116,7 +116,7 @@
+@@ -118,7 +118,7 @@
  #endif
  #define LOG_SUFFIX			".log"
  #define RECOVERY_SUFFIX			".rec"

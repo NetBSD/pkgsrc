@@ -1,32 +1,20 @@
-$NetBSD: patch-aa,v 1.7 2009/11/05 19:16:47 tez Exp $
+$NetBSD: patch-aa,v 1.8 2010/12/13 10:32:35 wiz Exp $
 
---- src/Makefile.orig	2008-07-17 20:28:55.000000000 -0500
-+++ src/Makefile	2009-11-05 13:04:49.538488300 -0600
-@@ -15,11 +15,11 @@
- PERL = perl
- NULL = /dev/null
- CPPFLAGS = -E
--CFLAGS = -c -Wall -O2 -fomit-frame-pointer
-+CFLAGS = -c
- ASFLAGS = -c
--LDFLAGS = -s
+--- src/Makefile.orig	2010-06-13 21:12:37.000000000 +0000
++++ src/Makefile
+@@ -19,11 +19,11 @@ OMPFLAGS =
+ #OMPFLAGS = -fopenmp
+ # Sun Studio with OpenMP (set the OMP_NUM_THREADS env var at runtime)
+ #OMPFLAGS = -xopenmp
+-CFLAGS = -c -Wall -O2 -fomit-frame-pointer $(OMPFLAGS)
++CFLAGS = -c $(OMPFLAGS)
+ ASFLAGS = -c $(OMPFLAGS)
+-LDFLAGS = -s $(OMPFLAGS)
 -OPT_NORMAL = -funroll-loops
 -OPT_INLINE = -finline-functions
-+LDFLAGS += -s
++LDFLAGS += -s $(OMPFLAGS)
 +OPT_NORMAL =
 +OPT_INLINE =
  
- JOHN_OBJS_MINIMAL = \
- 	DES_fmt.o DES_std.o DES_bs.o \
-@@ -396,7 +396,10 @@
- 	$(MAKE) solaris-sparc-any HAMMER=use-solaris-sparcv8-cc
- 
- solaris-sparc-gcc:
--	$(MAKE) solaris-sparc-any HAMMER=use-solaris-sparc-gcc
-+	$(LN) sparc32.h arch.h
-+	$(MAKE) $(PROJ) \
-+		CFLAGS="$(CFLAGS) -m32" \
-+		LDFLAGS="$(LDFLAGS) -m32 -lrt"
- 
- use-solaris-sparcv9-cc:
- 	$(MAKE) $(NAIL) \
+ JOHN_OBJS = \
+ 	DES_fmt.o DES_std.o DES_bs.o DES_bs_b.o \
