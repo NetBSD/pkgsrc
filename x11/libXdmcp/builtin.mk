@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2010/12/10 08:45:16 obache Exp $
+# $NetBSD: builtin.mk,v 1.4 2010/12/13 07:51:45 obache Exp $
 
 BUILTIN_PKG:=	libXdmcp
 
@@ -66,10 +66,15 @@ xdmcp-fake-pc:
 	if ${TEST} -f $${src}; then \
 		${LN} -sf $${src} $${dst}; \
 	else \
+		req=""; \
+		if ${TEST} -f \
+			${BUILDLINK_PREFIX.xproto}/lib/pkgconfig/xproto.pc; then \
+			req="xproto"; \
+		fi; \
 		{ ${ECHO} "Name: Xdmcp"; \
 	   	${ECHO} "Description: X Display Manager Control Protocol library"; \
 	   	${ECHO} "Version: 0.99"; \
-		${ECHO} "Requires: xproto"; \
+		${ECHO} "Requires: $${req}"; \
 	   	${ECHO} "Cflags: -I${BUILDLINK_PREFIX.libXdmcp}/include"; \
 		${ECHO} "Libs: -L${BUILDLINK_PREFIX.libXdmcp}/lib" \
 		"${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXdmcp}/lib" \
