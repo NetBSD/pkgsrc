@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2010/12/10 08:45:15 obache Exp $
+# $NetBSD: builtin.mk,v 1.4 2010/12/13 07:51:45 obache Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -66,10 +66,15 @@ xau-fake-pc:
 	if ${TEST} -f $${src}; then \
 		${LN} -sf $${src} $${dst}; \
 	else \
+		req=""; \
+		if ${TEST} -f \
+			${BUILDLINK_PREFIX.xproto}/lib/pkgconfig/xproto.pc; then \
+			req="xproto"; \
+		fi; \
 		{ ${ECHO} "Name: Xau"; \
 	   	${ECHO} "Description: X authorization file management library"; \
 	   	${ECHO} "Version: 1.0.1"; \
-		${ECHO} "Requires: xproto"; \
+		${ECHO} "Requires: $${req}"; \
 	   	${ECHO} "Cflags: -I${BUILDLINK_PREFIX.libXau}/include"; \
 		${ECHO} "Libs: -L${BUILDLINK_PREFIX.libXau}/lib" \
 		"${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXau}/lib" \
