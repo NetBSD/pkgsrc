@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 2010/12/13 13:37:49 wiz Exp $
+
+Compatibility fix for texi2html-5.0.
+
+--- ioemu-qemu-xen/Makefile.orig	2009-08-04 14:53:20.000000000 +0000
++++ ioemu-qemu-xen/Makefile
+@@ -237,7 +237,7 @@ cscope:
+ 
+ # documentation
+ %.html: %.texi
+-	texi2html -monolithic -number $<
++	texi2html -monolithic -number-sections $<
+ 
+ %.info: %.texi
+ 	makeinfo $< -o $@
