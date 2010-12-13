@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/12/13 10:32:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/12/13 10:33:24 wiz Exp $
 #
 
 DISTNAME=	john-1.7.6
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	src
+TEST_TARGET=	check
 
 .include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
