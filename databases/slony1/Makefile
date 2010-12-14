@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2010/10/29 15:49:58 adam Exp $
+# $NetBSD: Makefile,v 1.18 2010/12/14 17:57:24 adam Exp $
 
-DISTNAME=	slony1-2.0.5
+DISTNAME=	slony1-2.0.6
 CATEGORIES=	databases
 MASTER_SITES=	http://slony.info/downloads/2.0/source/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-pgincludeserverdir=${PGSQL_PREFIX}/include/postgresql/se
 CONFIGURE_ARGS+=	--with-pglibdir=${PGSQL_PREFIX}/lib
 CONFIGURE_ARGS+=	--with-pgpkglibdir=${PGSQL_PREFIX}/lib/postgresql
 CONFIGURE_ARGS+=	--with-pgsharedir=${PGSQL_PREFIX}/share/postgresql
+MAKE_FILE=		GNUmakefile
 
 post-extract:
 	cp ${WRKSRC}/makefiles/Makefile.freebsd ${WRKSRC}/makefiles/Makefile.dragonfly
