@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/09/09 09:41:21 tnn Exp $
+@comment $NetBSD: PLIST,v 1.24.2.1 2010/12/14 10:44:04 tron Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -17,6 +17,17 @@ include/xulrunner/XPCIDispatch.h
 ${PLIST.jit}include/xulrunner/avmplus.h
 include/xulrunner/base64.h
 include/xulrunner/blapit.h
+include/xulrunner/cairo/cairo-deprecated.h
+include/xulrunner/cairo/cairo-features.h
+include/xulrunner/cairo/cairo-ft.h
+include/xulrunner/cairo/cairo-pdf.h
+include/xulrunner/cairo/cairo-platform.h
+include/xulrunner/cairo/cairo-ps.h
+include/xulrunner/cairo/cairo-rename.h
+include/xulrunner/cairo/cairo-version.h
+include/xulrunner/cairo/cairo-xlib-xrender.h
+include/xulrunner/cairo/cairo-xlib.h
+include/xulrunner/cairo/cairo.h
 include/xulrunner/cert.h
 include/xulrunner/certdb.h
 include/xulrunner/certt.h
@@ -229,6 +240,7 @@ include/xulrunner/mozilla/CondVar.h
 include/xulrunner/mozilla/DeadlockDetector.h
 include/xulrunner/mozilla/Monitor.h
 include/xulrunner/mozilla/Mutex.h
+include/xulrunner/mozilla/PaintTracker.h
 include/xulrunner/mozilla/PluginLibrary.h
 include/xulrunner/mozilla/PluginPRLibrary.h
 include/xulrunner/mozilla/TimeStamp.h
@@ -1228,6 +1240,7 @@ include/xulrunner/nsIMultiplexInputStream.h
 include/xulrunner/nsIMutable.h
 include/xulrunner/nsIMutableArray.h
 include/xulrunner/nsIMutationObserver.h
+include/xulrunner/nsIMutationObserver2.h
 include/xulrunner/nsINIParser.h
 include/xulrunner/nsINSSCertCache.h
 include/xulrunner/nsINSSErrorsService.h
@@ -2043,9 +2056,13 @@ include/xulrunner/oggz/oggz_seek.h
 include/xulrunner/oggz/oggz_stream.h
 include/xulrunner/oggz/oggz_table.h
 include/xulrunner/oggz/oggz_write.h
+include/xulrunner/opentype-sanitiser.h
+include/xulrunner/ots-memory-stream.h
 include/xulrunner/p12.h
 include/xulrunner/p12plcy.h
 include/xulrunner/p12t.h
+include/xulrunner/pixman-version.h
+include/xulrunner/pixman.h
 include/xulrunner/pk11func.h
 include/xulrunner/pk11pqg.h
 include/xulrunner/pk11priv.h
