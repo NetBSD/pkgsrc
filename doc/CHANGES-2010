@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4240 2010/12/13 20:37:49 gls Exp $
+$NetBSD: CHANGES-2010,v 1.4241 2010/12/14 00:04:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6010,6 +6010,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/clive to 2.2.19 [wiz 2010-12-13]
 	Updated lang/php5 to 5.2.15 [taca 2010-12-13]
 	Updated lang/php53 to 5.3.4 [taca 2010-12-13]
+	Added net/quvi version 0.2.10 [ryoon 2010-12-13]
 	Updated graphics/pngcrush to 1.7.13 [adam 2010-12-13]
 	Updated graphics/libraw to 0.12.0 [gls 2010-12-13]
 	Updated graphics/shotwell to 0.7.2nb2 [gls 2010-12-13]
