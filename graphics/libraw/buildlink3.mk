@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/12/13 20:32:30 gls Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/12/14 07:43:45 gls Exp $
 
 BUILDLINK_TREE+=	libraw
 
@@ -7,6 +7,8 @@ LIBRAW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libraw+=	libraw>=0.12.0
 BUILDLINK_PKGSRCDIR.libraw?=	../../graphics/libraw
+
+.include "../../graphics/lcms/buildlink3.mk"
 .endif	# LIBRAW_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libraw
