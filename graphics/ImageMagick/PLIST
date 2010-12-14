@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2010/09/16 21:03:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.68 2010/12/14 10:08:40 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -195,6 +195,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_lin.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_log.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/button.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/configure.jpg
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/cylinder_shaded.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/definitive-guide.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/difference.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/examples.jpg
@@ -1018,6 +1019,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-wand.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/memory.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/module.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/mogrify.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/monitor.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/montage.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/morphology.html
@@ -1058,6 +1060,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/download.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/escape.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/examples.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/exception.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/export.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/favicon.ico
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/formats.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/fx.html
@@ -1085,10 +1088,27 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/quantize.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/resources.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/search.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/sitemap.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/analyze.c
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/coder.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/colors.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/configure.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/core.c
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/delegates.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/english.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/examples.pl
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/incantation.msl
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/locale.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/log.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/magic.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/piechart.mvg
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/piechart.svg
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/type-ghostscript.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/type.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/source/wand.c
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/sponsors.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/subversion.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/t-shirt.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/wand.png
-@pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
 @pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
+@pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
