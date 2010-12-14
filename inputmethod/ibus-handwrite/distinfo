@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2010/11/23 01:10:36 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/12/14 06:20:43 obache Exp $
 
-SHA1 (ibus-handwrite-2.1.1.tar.gz) = c12db8513f9cf4b0445d7c6fcb80871cafbb79a7
-RMD160 (ibus-handwrite-2.1.1.tar.gz) = 20fe65f689acebe0bc93e9e82bd3e16d888cf7db
-Size (ibus-handwrite-2.1.1.tar.gz) = 292768 bytes
+SHA1 (ibus-handwrite-2.1.2.tar.gz) = 51d56337ab1e14fe51249351e2248be769aa7a44
+RMD160 (ibus-handwrite-2.1.2.tar.gz) = c60e397dbd5cec3d5e834f72e98289433ad6461e
+Size (ibus-handwrite-2.1.2.tar.gz) = 293292 bytes
 SHA1 (patch-aa) = c3df000bc9f4f84bf4f3be2d472a467f995086f6
 SHA1 (patch-ab) = d9cd7f5b046337179779f0bca66459fb3f81262d
 SHA1 (patch-ac) = 5c6b951e0f581ee066b0784df6bef7ab37ff2940
