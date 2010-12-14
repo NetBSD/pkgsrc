@@ -113,3 +113,6 @@ Pullup ticket #3303 - requested by tnn
 www/seamonkey: security update
 Pullup ticket #3305 - requested by spz
 security/p5-IO-Socket-SSL: security updated
+Pullup ticket #3301 - requested by tnn
+devel/xulrunner: security update
+www/firefox: security update
