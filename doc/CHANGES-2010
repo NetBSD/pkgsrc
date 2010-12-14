@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4242 2010/12/14 06:21:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4243 2010/12/14 07:46:17 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/libraw to 0.12.0 [gls 2010-12-13]
 	Updated graphics/shotwell to 0.7.2nb2 [gls 2010-12-13]
 	Updated inputmethod/ibus-handwrite to 2.1.2 [obache 2010-12-14]
+	Updated graphics/shotwell to 0.7.2nb3 [gls 2010-12-14]
