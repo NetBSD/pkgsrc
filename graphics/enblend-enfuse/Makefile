@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:44:29 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/12/14 18:26:34 adam Exp $
 
 DISTNAME=	enblend-enfuse-4.0
 # XXX distribution file has changed; remove the line below on next update
@@ -10,7 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://enblend.sourceforge.net/
 COMMENT=	Combines overlapping images without seams, with good exposure
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -21,6 +20,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-image-cache
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,12 +29,12 @@ CONFIGURE_ARGS+=	--enable-openmp
 CONFIGURE_ARGS+=	--with-apple-opengl-framework
 .else
 CONFIGURE_ARGS+=	--with-x
-.include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libxmi/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
