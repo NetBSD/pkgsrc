@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2009/08/28 21:33:07 hasso Exp $
+# $NetBSD: Makefile,v 1.23 2010/12/14 09:55:56 adam Exp $
 
-DISTNAME=	openexr-1.6.1
-PKGREVISION=	1
+DISTNAME=	openexr-1.7.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://savannah.nongnu.org/download/openexr/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.openexr.com/
 COMMENT=	High dynamic-range (HDR) image file format library and tools
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
