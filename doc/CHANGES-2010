@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4245 2010/12/14 16:28:03 hauke Exp $
+$NetBSD: CHANGES-2010,v 1.4246 2010/12/14 17:58:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6021,3 +6021,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/ImageMagick to 6.6.6.5 [adam 2010-12-14]
 	Updated graphics/p5-PerlMagick to 6.6.6.5 [adam 2010-12-14]
 	Updated sysutils/radmind to 1.14.1 [hauke 2010-12-14]
+	Updated databases/slony1 to 2.0.6 [adam 2010-12-14]
