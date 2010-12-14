@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2010/09/16 21:03:48 drochner Exp $
+# $NetBSD: Makefile,v 1.167 2010/12/14 10:08:40 adam Exp $
 
 .include "Makefile.common"
 
@@ -15,9 +15,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-openmp
+CONFIGURE_ARGS+=	--disable-assert
+CONFIGURE_ARGS+=	--with-fontconfig
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
 PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
 
@@ -44,12 +45,21 @@ CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 
+# Put our CONFIGURE_ARGS into configure.xml, otherwise WRKDIR gets mentioned.
+SUBST_CLASSES+=		fix-cfg
+SUBST_STAGE.fix-cfg=	pre-configure
+SUBST_MESSAGE.fix-cfg=	Fixing configure.xml.
+SUBST_FILES.fix-cfg=	config/configure.xml.in
+SUBST_VARS.fix-cfg=	CONFIGURE_ARGS
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
