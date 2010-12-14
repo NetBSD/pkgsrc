@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.13 2009/08/28 21:33:08 hasso Exp $
+$NetBSD: distinfo,v 1.14 2010/12/14 09:55:56 adam Exp $
 
-SHA1 (openexr-1.6.1.tar.gz) = b3650e6542f0e09daadb2d467425530bc8eec333
-RMD160 (openexr-1.6.1.tar.gz) = 3670633be841628e9d4c11981661e9d94a9b2711
-Size (openexr-1.6.1.tar.gz) = 13632660 bytes
-SHA1 (patch-aa) = d1b9c2d817d875c30fa15cbbea5d1226b03b62d8
+SHA1 (openexr-1.7.0.tar.gz) = 91d0d4e69f06de956ec7e0710fc58ec0d4c4dc2b
+RMD160 (openexr-1.7.0.tar.gz) = 410ae4490988067cc80324e776b52ae6a261f157
+Size (openexr-1.7.0.tar.gz) = 13542910 bytes
+SHA1 (patch-aa) = 5c0d585e623d66d60e535ce3dc84c4db845c6382
 SHA1 (patch-ab) = 7d4fdf8d36f58ea5126b8c72dae901d1d68e6a60
-SHA1 (patch-ac) = fa5735431b7168dfc8b4643a976fd7f95cbcb5e7
-SHA1 (patch-ad) = b44ccc8a9ff32ebe7cc42f5c53778ebf050b4de6
-SHA1 (patch-ae) = aa70c907718f975c32698906edc9f6ca66b42e23
-SHA1 (patch-af) = ed02cf7091bfe490f33f4c8101ce84fab453b556
-SHA1 (patch-ag) = 6eebed2f16f02ba0f5b019f0f45c0f26ced0ba92
-SHA1 (patch-ah) = c7070ac42bc1c0cfb940f0aa53e04f93e887c590
 SHA1 (patch-ai) = 9bf08eb6e092848e6b194989e03320a334eff640
