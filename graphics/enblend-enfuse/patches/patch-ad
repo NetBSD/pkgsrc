@@ -1,8 +1,28 @@
-$NetBSD: patch-ad,v 1.1 2010/05/15 05:47:58 adam Exp $
+$NetBSD: patch-ad,v 1.2 2010/12/14 18:26:35 adam Exp $
 
 --- configure.orig	2009-12-20 15:40:28.000000000 +0000
 +++ configure
-@@ -14111,11 +14107,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -5533,10 +5533,6 @@ echo "${ECHO_T}no" >&6; }
+ fi
+ 
+ 
+-if test "x$GXX" = xyes; then
+-    # Fixes SourceForge bug id 2121647 on some systems with newer GCCs.
+-    CXXFLAGS="$CXXFLAGS --param inline-unit-growth=60"
+-fi
+ 
+ 
+ 
+@@ -14030,7 +14030,7 @@ if test "x$enable_debug" = "xyes" \
+ echo "${ECHO_T}yes" >&6; }
+     enable_debug=yes
+ else
+-    CXXFLAGS="$CXXFLAGS -O2 -DNDEBUG -Wall"
++    CXXFLAGS="$CXXFLAGS -DNDEBUG -Wall"
+     { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+     enable_debug=no
+@@ -14111,11 +14111,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
