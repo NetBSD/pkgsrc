@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/03/12 23:39:16 pettai Exp $
+$NetBSD: MESSAGE,v 1.2 2010/12/15 21:37:55 heas Exp $
 
 rancid is now installed.
 
@@ -15,5 +15,9 @@ To get rancid up and running asap, you have to complete these basic steps:
 
 Please read the included README (${PREFIX}/share/doc/rancid/README) file,
 for more information about configuring and starting rancid.
+
+If upgrading from a non-pkgsrc version of rancid, following the instructions
+in ${PREFIX}/share/rancid/UPGRADING for retaining your existing CVS
+respository and rancid configuration.
 
 ===========================================================================
