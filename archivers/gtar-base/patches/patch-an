@@ -1,0 +1,54 @@
+$NetBSD: patch-an,v 1.1 2010/12/15 20:37:38 tez Exp $
+
+fix bug with --one-file-system --listed-incremental 
+(used by amanda)
+
+--- src/names.c.orig	2010-10-24 13:07:55.000000000 -0500
++++ src/names.c	2010-12-15 14:17:10.636670200 -0600
+@@ -47,8 +47,6 @@
+ static uid_t cached_no_such_uid;
+ static gid_t cached_no_such_gid;
+ 
+-static void register_individual_file (char const *name);
+-
+ /* Given UID, find the corresponding UNAME.  */
+ void
+ uid_to_uname (uid_t uid, char **uname)
+@@ -360,8 +358,6 @@
+ 	{
+ 	  if (unquote_option)
+ 	    unquote_string (name_buffer);
+-	  if (incremental_option)
+-	    register_individual_file (name_buffer);
+ 	  entry.type = ep->type;
+ 	  entry.v.name = name_buffer;
+ 	  return &entry;
+@@ -1152,28 +1148,6 @@
+   return excluded_file_name (excluded, name + FILE_SYSTEM_PREFIX_LEN (name));
+ }
+ 
+-static Hash_table *individual_file_table;
+-
+-static void
+-register_individual_file (char const *name)
+-{
+-  struct stat st;
+-
+-  if (deref_stat (name, &st) != 0)
+-    return; /* Will be complained about later */
+-  if (S_ISDIR (st.st_mode))
+-    return;
+-
+-  hash_string_insert (&individual_file_table, name);
+-}
+-
+-bool
+-is_individual_file (char const *name)
+-{
+-  return hash_string_lookup (individual_file_table, name);
+-}
+-
+-
+ 
+ /* Return the size of the prefix of FILE_NAME that is removed after
+    stripping NUM leading file name components.  NUM must be
