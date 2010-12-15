@@ -1,0 +1,19 @@
+$NetBSD: patch-cc,v 1.1 2010/12/15 16:06:26 abs Exp $
+
+KAFFE_BUGGY_NETBSD_SIGWAIT is only required in older NetBSD releases, and
+in fact breaks NetBSD 5
+
+--- config/config.alias	2006-03-23 20:52:54.000000000 +0100
++++ config/config.alias.new	2010-12-15 15:07:07.000000000 +0100
+@@ -21,6 +21,11 @@
+ 
+ esac
+ 
++UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
++case "${UNAME_RELEASE}" in
++    1*) Knetbsd1=yes ;;
++esac
++
+ case "$Khost_os" in
+ 
+ aix*)		Khost_os=aix ;;
