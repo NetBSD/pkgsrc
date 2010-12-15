@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2010/12/15 02:24:23 chuck Exp $
+
+--- configure.ac.orig	2010-12-14 16:04:28.000000000 -0500
++++ configure.ac	2010-12-14 16:06:27.000000000 -0500
+@@ -120,7 +120,13 @@
+ AC_SUBST(DBUS_GLIB_LIBS)
+ 
+ if test "x$GCC" = "xyes"; then
+-  LDFLAGS="-Wl,--as-needed $LDFLAGS"
++  case "x$host_os" in 
++    xdarwin* )
++     ;;
++    * )
++     LDFLAGS="-Wl,--as-needed $LDFLAGS"
++     ;;
++  esac
+ fi
+ 
+ AC_OUTPUT([
