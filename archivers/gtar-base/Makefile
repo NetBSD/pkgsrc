@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2010/12/12 13:10:39 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2010/12/15 20:37:38 tez Exp $
 
 DISTNAME=	tar-1.25
 PKGNAME=	gtar-base-1.25
+PKGREVISION=	1
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
@@ -39,6 +40,9 @@ CONFIGURE_ARGS+=	--program-prefix=${GTAR_PROGRAM_PREFIX:Q}
 
 # lie to configure about gettext -- it does not need GNU gettext
 CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl=yes
+
+# allow configure to run as root
+CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=1
 
 PLIST_SUBST+=		GTAR_PROGRAM_PREFIX=${GTAR_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
