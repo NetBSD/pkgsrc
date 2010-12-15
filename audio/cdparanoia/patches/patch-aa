@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/08/14 15:51:06 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2010/12/15 21:08:30 chuck Exp $
 
 --- configure.in.orig	2006-08-16 20:02:25.000000000 +0200
 +++ configure.in
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.6 2009/08/14 15:51:06 drochner Exp $
 +case $host in
 +*-*-darwin*)
 +  EXTRA_OBJS=osx_interface.o
-+  EXTRA_LIBS=-framework CoreFoundation -framework IOKit
++  EXTRA_LIBS="-framework CoreFoundation -framework IOKit"
 +  ;;
 +*-*-linux*)
 +  EXTRA_OBJS="cooked_interface.o scsi_interface.o"
