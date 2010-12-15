@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/12/15 09:29:34 abs Exp $
+
+Include X11/X.h, plus adjust RENDER_MINOR down to 9 so at least cairo does not
+assume it defines XLinearGradient
+
+--- render.h.orig	2007-08-31 21:42:38.000000000 +0000
++++ render.h
+@@ -26,6 +26,8 @@
+ #ifndef _RENDER_H_
+ #define _RENDER_H_
+ 
++#include <X11/X.h>
++
+ typedef XID		Glyph;
+ typedef XID		GlyphSet;
+ typedef XID		Picture;
+@@ -33,7 +35,7 @@ typedef XID		PictFormat;
+ 
+ #define RENDER_NAME	"RENDER"
+ #define RENDER_MAJOR	0
+-#define RENDER_MINOR	10
++#define RENDER_MINOR	9
+ 
+ #define X_RenderQueryVersion		    0
+ #define X_RenderQueryPictFormats	    1
