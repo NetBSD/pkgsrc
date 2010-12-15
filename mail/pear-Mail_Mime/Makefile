@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2010/10/25 10:52:43 obache Exp $
+# $NetBSD: Makefile,v 1.17 2010/12/15 09:42:28 adam Exp $
 
-DISTNAME=	Mail_Mime-1.8.0
-PKGREVISION=	1
+DISTNAME=	Mail_Mime-1.8.1
 CATEGORIES+=	mail
 
 MAINTAINER=	jdolecek@NetBSD.org
@@ -15,7 +14,6 @@ SUBST_CLASSES+=		shbang
 SUBST_STAGE.shbang=	post-install
 SUBST_FILES.shbang=	${DESTDIR}${PREFIX}/lib/php/doc/Mail_Mime/scripts/phail.php
 SUBST_SED.shbang=	-e "s|@prefix@|${PREFIX}|g"
-
 
 .include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"
