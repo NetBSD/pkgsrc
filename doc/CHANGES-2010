@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4252 2010/12/15 13:25:16 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4253 2010/12/15 13:31:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6028,3 +6028,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/renderproto9 version 0.9.3nb2 [abs 2010-12-15]
 	Updated devel/cppcheck to 1.46.1 [wiz 2010-12-15]
 	Updated misc/tellico to 2.3.2 [wiz 2010-12-15]
+	Updated games/gbrainy to 1.60 [wiz 2010-12-15]
