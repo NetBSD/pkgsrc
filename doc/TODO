@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9943 2010/12/15 03:31:00 jnemeth Exp $
+$NetBSD: TODO,v 1.9944 2010/12/15 11:46:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o auctex-11.86 [pkg/43966]
 	o audacious-plugins-2.4.2
 	o autoconvert-0.3.16
-	o autogen-5.11.3
+	o autogen-5.11.5
 	o avahi-0.6.28
 	o avcheck-0.91
 	o avl-2.0.2a
@@ -463,7 +463,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.32.0 [GNOME 2.32]
-	o cherokee-1.0.13
+	o cherokee-1.0.14
 	o chromium-0.9.14.1
 	o cinepaint-0.23
 	o cint-5.16
@@ -533,6 +533,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o efax-gtk-3.2.6
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
+	o ejabberd-2.1.6
 	o ekiga-3.2.7
 	o electric-9.00
 	o electricfence-2.4.16
@@ -560,7 +561,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-685
+	o etm-686
 	o eukleides-1.5.4
 	o evince-2.32.0
 	o evolution-couchdb-0.4.5
@@ -578,6 +579,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o feh-1.10.1
 	o festival-1.96
 	o felt-3.07
+	o fetchmail-6.3.19
 	o fetchyahoo-2.14.0
 	o ffmpeg-0.6
 	o file-5.04
@@ -644,7 +646,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.28.92
 	o gap-4r4p9
 	o gated-3.6
+	o gauche-0.9.1
 	o gbdfed-1.6
+	o gbrainy-1.60
 	o gcal-3.6
 	o gcalctool-5.32.2
 	o gcc-4.5.1
@@ -782,6 +786,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inputproto-2.0.1
 	o inspircd-1.2.1
 	o instiki-0.13
+	o ipa-2.0.8 [pkg/44234]
 	o ircservices-5.1.21
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
@@ -967,7 +972,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mktemp-1.7 [pkg/44014]
 	o mkvtoolnix-4.4.0
 	o moc-2.4.4
-	o modular-xorg-server-1.9.2
+	o modular-xorg-server-1.9.3
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o moodle-2.0 [pkg/44195]
@@ -977,6 +982,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3splt-2.2.7
 	o mpc-0.19
 	o mpeg4ip-1.6.1
+	o mpg123-1.13.0
 	o mpop-1.0.21
 	o mserv-devel-0.41
 	o mtools-4.0.14
@@ -1299,6 +1305,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o userppp-030706
 	o valgrind-3.6.0
 	o vera-1.17
+	o veusz-1.10
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
