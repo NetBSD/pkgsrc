@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/11/15 22:56:36 abs Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/15 13:01:38 wiz Exp $
 #
 
-DISTNAME=	cppcheck-1.42
-PKGREVISION=	2
+DISTNAME=	cppcheck-1.46.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +17,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c++
+USE_TOOLS+=		gmake
 
 BUILDLINK_TRANSFORM+=	rm:-Wlogical-op
 

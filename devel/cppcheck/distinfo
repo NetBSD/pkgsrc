@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/02 10:54:40 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/12/15 13:01:38 wiz Exp $
 
-SHA1 (cppcheck-1.42.tar.bz2) = e2d5390230f23ac6a946fbd515ad304c4ab5d8d1
-RMD160 (cppcheck-1.42.tar.bz2) = a9d5103edadb7fe3493a212965472bbe0f4fdeff
-Size (cppcheck-1.42.tar.bz2) = 482465 bytes
+SHA1 (cppcheck-1.46.1.tar.bz2) = fb1bc1b44341c8fd111e06c217c91f108142b71c
+RMD160 (cppcheck-1.46.1.tar.bz2) = 5a82adb010c9bee0e96d2ac1fddd4b5fc4f7ad5c
+Size (cppcheck-1.46.1.tar.bz2) = 676586 bytes
