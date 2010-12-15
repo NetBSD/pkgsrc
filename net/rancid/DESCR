@@ -1,3 +1,14 @@
-RANCID monitors a router's (or more generally a device's) configuration,
-including software and hardware (cards, serial numbers, etc) and uses CVS
-(Concurrent Version System) or Subversion to maintain history of changes.
+RANCID, the Really Awesome New Cisco confIg Differ
+
+Rancid maintains CVS controlled copies of router (device) configurations.
+I uses expect to login to a list of devices and collect their software
+configuration, hardware information, etc.  The collected data is formatted,
+trimmed, etc.  Each is diff(1)'d against the previous and the output is
+e-mailed to a mail list, then committed to the cvs repository.
+
+It supports various Cisco routers & switches, Juniper Networks routers, and
+several others.
+
+Besides being useful for tracking configuration changes, Rancid comes with
+several scripts that are generally useful for network management, including
+the expect scripts that automate device logins.
