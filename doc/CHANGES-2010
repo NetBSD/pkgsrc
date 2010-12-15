@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4253 2010/12/15 13:31:59 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4254 2010/12/15 13:35:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6029,3 +6029,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/cppcheck to 1.46.1 [wiz 2010-12-15]
 	Updated misc/tellico to 2.3.2 [wiz 2010-12-15]
 	Updated games/gbrainy to 1.60 [wiz 2010-12-15]
+	Updated geography/viking to 1.0.2 [gdt 2010-12-15]
