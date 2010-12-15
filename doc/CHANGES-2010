@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4249 2010/12/15 09:43:22 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4250 2010/12/15 11:39:04 abs Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6025,3 +6025,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/sbcl to 1.0.45 [asau 2010-12-14]
 	Added comms/asterisk18 version 1.8.1 [jnemeth 2010-12-15]
 	Updated mail/pear-Mail_Mime to 1.8.1 [adam 2010-12-15]
+	Added x11/renderproto9 version 0.9.3nb2 [abs 2010-12-15]
