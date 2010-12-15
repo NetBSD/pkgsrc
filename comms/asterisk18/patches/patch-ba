@@ -1,0 +1,20 @@
+$NetBSD: patch-ba,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+
+--- main/sched.c.orig	2010-08-10 18:05:07.000000000 +0000
++++ main/sched.c
+@@ -579,12 +579,12 @@ void ast_sched_dump(struct sched_context
+ 		struct timeval delta;
+ 		q = ast_heap_peek(con->sched_heap, x);
+ 		delta = ast_tvsub(q->when, when);
+-		ast_debug(1, "|%.4d | %-15p | %-15p | %.6ld : %.6ld |\n", 
++		ast_debug(1, "|%.4d | %-15p | %-15p | %.6jd : %.6jd |\n", 
+ 			q->id,
+ 			q->callback,
+ 			q->data,
+-			(long)delta.tv_sec,
+-			(long int)delta.tv_usec);
++			(intmax_t)delta.tv_sec,
++			(intmax_t)delta.tv_usec);
+ 	}
+ 	ast_mutex_unlock(&con->lock);
+ 	ast_debug(1, "=============================================================\n");
