@@ -1,0 +1,126 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+
+--- Makefile.orig	2010-11-11 22:13:38.000000000 +0000
++++ Makefile
+@@ -126,7 +126,7 @@ DEBUG=-g3
+ 
+ # Asterisk.conf is located in ASTETCDIR or by using the -C flag
+ # when starting Asterisk
+-ASTCONFPATH=$(ASTETCDIR)/asterisk.conf
++ASTCONFPATH=$(ASTEXAMPLEDIR)/asterisk.conf
+ MODULES_DIR=$(ASTLIBDIR)/modules
+ AGI_DIR=$(ASTDATADIR)/agi-bin
+ 
+@@ -216,10 +216,6 @@ ifeq ($(AST_DEVMODE),yes)
+   _ASTCFLAGS+=-Wformat=2
+ endif
+ 
+-ifneq ($(findstring BSD,$(OSARCH)),)
+-  _ASTCFLAGS+=-isystem /usr/local/include
+-endif
+-
+ ifeq ($(findstring -march,$(_ASTCFLAGS) $(ASTCFLAGS)),)
+   ifneq ($(PROC),ultrasparc)
+     _ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
+@@ -449,7 +445,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
+ 	rm -rf doc/api
+ 	rm -f build_tools/menuselect-deps
+ 
+-datafiles: _all doc/core-en_US.xml
++datafiles: doc/core-en_US.xml
+ 	CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)$(libdir)/pkgconfig;
+ # Should static HTTP be installed during make samples or even with its own target ala
+ # webvoicemail?  There are portions here that *could* be customized but might also be
+@@ -468,7 +464,6 @@ datafiles: _all doc/core-en_US.xml
+ 	for x in images/*.jpg; do \
+ 		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTDATADIR)/images ; \
+ 	done
+-	$(MAKE) -C sounds install
+ 
+ doc/core-en_US.xml: $(foreach dir,$(MOD_SUBDIRS),$(shell $(GREP) -l "language=\"en_US\"" $(dir)/*.c $(dir)/*.cc 2>/dev/null))
+ 	@printf "Building Documentation For: "
+@@ -520,7 +515,7 @@ OLDHEADERS=$(filter-out $(NEWHEADERS),$(
+ installdirs:
+ 	$(INSTALL) -d "$(DESTDIR)$(MODULES_DIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTSBINDIR)"
+-	$(INSTALL) -d "$(DESTDIR)$(ASTETCDIR)"
++	$(INSTALL) -d "$(DESTDIR)$(ASTEXAMPLEDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTVARRUNDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/dictate"
+@@ -547,8 +542,9 @@ installdirs:
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTDATADIR)/static-http"
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTMANDIR)/man8"
+ 	$(INSTALL) -d "$(DESTDIR)$(AGI_DIR)"
++	$(INSTALL) -d "$(DESTDIR)$(ASTDBDIR)"
+ 
+-bininstall: _all installdirs $(SUBDIRS_INSTALL)
++bininstall: installdirs $(SUBDIRS_INSTALL)
+ 	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
+ 	$(LN) -sf asterisk $(DESTDIR)$(ASTSBINDIR)/rasterisk
+ 	$(INSTALL) -m 755 contrib/scripts/astgenkey $(DESTDIR)$(ASTSBINDIR)/
+@@ -640,21 +636,21 @@ upgrade: bininstall
+ # XXX why *.adsi is installed first ?
+ adsi:
+ 	@echo Installing adsi config files...
+-	$(INSTALL) -d $(DESTDIR)$(ASTETCDIR)
++	$(INSTALL) -d $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	@for x in configs/*.adsi; do \
+-		dst="$(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x`" ; \
++		dst="$(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x`" ; \
+ 		if [ -f $${dst} ] ; then \
+ 			echo "Overwriting $$x" ; \
+ 		else \
+ 			echo "Installing $$x" ; \
+ 		fi ; \
+-		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x` ; \
++		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x` ; \
+ 	done
+ 
+ samples: adsi
+ 	@echo Installing other config files...
+ 	@for x in configs/*.sample; do \
+-		dst="$(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x .sample`" ;	\
++		dst="$(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x .sample`" ;	\
+ 		if [ -f $${dst} ]; then \
+ 			if [ "$(OVERWRITE)" = "y" ]; then \
+ 				if cmp -s $${dst} $$x ; then \
+@@ -682,9 +678,9 @@ samples: adsi
+ 			-e 's|^astspooldir.*$$|astspooldir => $(ASTSPOOLDIR)|' \
+ 			-e 's|^astrundir.*$$|astrundir => $(ASTVARRUNDIR)|' \
+ 			-e 's|^astlogdir.*$$|astlogdir => $(ASTLOGDIR)|' \
+-			$(DESTDIR)$(ASTCONFPATH) > $(DESTDIR)$(ASTCONFPATH).tmp ; \
+-		$(INSTALL) -m 644 $(DESTDIR)$(ASTCONFPATH).tmp $(DESTDIR)$(ASTCONFPATH) ; \
+-		rm -f $(DESTDIR)$(ASTCONFPATH).tmp ; \
++			$(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf > $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp ; \
++		$(INSTALL) -m 644 $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf ; \
++		rm -f $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp ; \
+ 	fi ; \
+ 	$(INSTALL) -d $(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/INBOX
+ 	build_tools/make_sample_voicemail $(DESTDIR)/$(ASTDATADIR) $(DESTDIR)/$(ASTSPOOLDIR)
+@@ -710,7 +706,7 @@ samples: adsi
+ webvmail:
+ 	@[ -d $(DESTDIR)$(HTTP_DOCSDIR)/ ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
+ 	@[ -d $(DESTDIR)$(HTTP_CGIDIR) ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
+-	$(INSTALL) -m 4755 contrib/scripts/vmail.cgi $(DESTDIR)$(HTTP_CGIDIR)/vmail.cgi
++	$(INSTALL) contrib/scripts/vmail.cgi $(DESTDIR)$(HTTP_CGIDIR)/vmail
+ 	$(INSTALL) -d $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk
+ 	for x in images/*.gif; do \
+ 		$(INSTALL) -m 644 $$x $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/; \
+@@ -854,7 +850,7 @@ uninstall-all: _uninstall
+ 	rm -rf $(DESTDIR)$(ASTVARLIBDIR)
+ 	rm -rf $(DESTDIR)$(ASTDATADIR)
+ 	rm -rf $(DESTDIR)$(ASTSPOOLDIR)
+-	rm -rf $(DESTDIR)$(ASTETCDIR)
++	rm -rf $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	rm -rf $(DESTDIR)$(ASTLOGDIR)
+ 
+ menuconfig: menuselect
+@@ -923,6 +919,7 @@ menuselect-tree: $(foreach dir,$(filter-
+ 	@echo "</menu>" >> $@
+ 
+ .PHONY: menuselect
++.PHONY: menuselect.makeopts
+ .PHONY: main
+ .PHONY: sounds
+ .PHONY: clean
