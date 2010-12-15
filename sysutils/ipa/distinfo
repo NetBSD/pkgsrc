@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/03/10 21:16:55 gls Exp $
+$NetBSD: distinfo,v 1.8 2010/12/15 16:10:55 asau Exp $
 
-SHA1 (ipa-2.0.7.tar.bz2) = 8fb12d967234b78e57cc5fec24164df44b65adf1
-RMD160 (ipa-2.0.7.tar.bz2) = 2c1579ee6bd8a7166f46e2092d1ee65feef6091c
-Size (ipa-2.0.7.tar.bz2) = 292861 bytes
+SHA1 (ipa-2.0.8.tar.bz2) = ad6782568ffcb3118c00d87327199320f0c1822a
+RMD160 (ipa-2.0.8.tar.bz2) = 1b61221a3830f8c7df63132b19a64dbff8661cd9
+Size (ipa-2.0.8.tar.bz2) = 298517 bytes
