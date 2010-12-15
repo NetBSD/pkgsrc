@@ -1,0 +1,26 @@
+$NetBSD: patch-cb,v 1.1 2010/12/15 16:06:26 abs Exp $
+
+KAFFE_BUGGY_NETBSD_SIGWAIT is only required in older NetBSD releases, and
+in fact breaks NetBSD 5
+
+--- configure.ac	2010-12-15 15:08:20.000000000 +0100
++++ configure.ac.new	2010-12-15 15:10:10.000000000 +0100
+@@ -266,6 +266,7 @@
+ known=no
+ Khost_cpu=$host_cpu
+ Khost_os=$host_os
++Knetbsd1=no
+ if test -f $srcdir/config/config.alias ; then
+ 	. $srcdir/config/config.alias
+ fi
+@@ -709,7 +710,9 @@
+ 	CPPFLAGS="$CPPFLAGS -D_REENTRANT"
+ 
+ 	if test "x$Khost_os" = "xnetbsd1"; then
+-		AC_DEFINE(KAFFE_BUGGY_NETBSD_SIGWAIT, 1, [Defined on NetBSD because sigwait needs the handle not to be registered])
++		if test "x$Knetbsd1" = "xyes"; then
++			AC_DEFINE(KAFFE_BUGGY_NETBSD_SIGWAIT, 1, [Defined on NetBSD because sigwait needs the handle not to be registered])
++		fi
+ 	fi
+  else
+         CPPFLAGS="$CPPFLAGS -DBR_PTHREADS=0"

@@ -1,0 +1,16 @@
+$NetBSD: patch-ca,v 1.1 2010/12/15 16:06:26 abs Exp $
+
+KAFFE_BUGGY_NETBSD_SIGWAIT is only required in older NetBSD releases, and
+in fact breaks NetBSD 5
+
+--- config/config.h.in	2010-12-15 15:28:42.000000000 +0100
++++ config/config.h.in.new	2010-12-15 15:31:15.000000000 +0100
+@@ -771,7 +771,7 @@
+ /* additional directories to search for native jni libraries */
+ #undef JNI_LIBRARY_PATH
+ 
+-/* Defined on NetBSD because sigwait needs the handle not to be registered */
++/* Defined on NetBSD 1.6.2 and lower because sigwait needs the handle not to be registered */
+ #undef KAFFE_BUGGY_NETBSD_SIGWAIT
+ 
+ /* Full path to the directory containing kaffe's locales */
