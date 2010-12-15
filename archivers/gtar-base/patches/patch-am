@@ -1,0 +1,29 @@
+$NetBSD: patch-am,v 1.1 2010/12/15 20:37:38 tez Exp $
+
+fix bug with --one-file-system --listed-incremental 
+(used by amanda)
+
+--- src/incremen.c.orig	2010-12-15 13:53:32.763202200 -0600
++++ src/incremen.c	2010-12-15 13:57:33.751064600 -0600
+@@ -426,7 +426,6 @@
+ {
+   struct directory *directory;
+   struct stat *stat_data = &st->stat;
+-  dev_t device = st->parent ? st->parent->stat.st_dev : 0;
+   bool nfs = NFS_FILE_STAT (*stat_data);
+ 
+   if ((directory = find_directory (name_buffer)) != NULL)
+@@ -540,11 +539,8 @@
+ 	}
+     }
+ 
+-  /* If the directory is on another device and --one-file-system was given,
+-     omit it... */
+-  if (one_file_system_option && device != stat_data->st_dev
+-      /* ... except if it was explicitely given in the command line */
+-      && !is_individual_file (name_buffer))
++  if (one_file_system_option && st->parent
++      && stat_data->st_dev != st->parent->stat.st_dev)
+     /* FIXME:
+ 	WARNOPT (WARN_XDEV,
+ 		 (0, 0,
