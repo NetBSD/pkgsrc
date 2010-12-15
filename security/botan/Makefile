@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/10/12 19:36:43 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/12/15 21:52:15 riz Exp $
 
 DISTNAME=	Botan-1.8.7
 PKGNAME=	botan-1.8.7
@@ -34,6 +34,7 @@ PLIST_VARS+=	i386 x86 x86_64
 PLIST.x86_64=	yes
 PLIST.x86=	yes
 .elif ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--cpu=i386
 PLIST.i386=	yes
 PLIST.x86=	yes
 .elif ${MACHINE_ARCH} == "powerpc"
