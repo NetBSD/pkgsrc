@@ -1,22 +1,25 @@
-$NetBSD: patch-ac,v 1.7 2010/07/15 09:08:28 tnn Exp $
+$NetBSD: patch-ac,v 1.8 2010/12/15 22:33:42 jmcneill Exp $
 
 * Fix build on FreeBSD and DragonFly, as shown in recent bulk builds and
   PR 34022.
 * Don't try to include nonexistant ipv6 header on Solaris.
   From Volker Stolz in PR pkg/34883.
 
---- mDNSPosix/mDNSUNP.c.orig	2009-01-13 05:31:35.000000000 +0000
-+++ mDNSPosix/mDNSUNP.c
-@@ -188,7 +188,7 @@ First checkin
+--- mDNSPosix/mDNSUNP.c.orig	2009-01-13 00:31:35.000000000 -0500
++++ mDNSPosix/mDNSUNP.c	2010-12-04 19:25:49.000000000 -0500
+@@ -188,8 +188,10 @@ First checkin
      #include <net/if_dl.h>
  #endif
  
 -#if defined(AF_INET6) && HAVE_IPV6 && !HAVE_LINUX
-+#if defined(AF_INET6) && HAVE_IPV6 && !HAVE_LINUX && !defined(sun) && !defined(__NetBSD__)
++#if defined(AF_INET6) && HAVE_IPV6 && !HAVE_LINUX && !defined(sun)
++#if !defined(__NetBSD__)
  #include <net/if_var.h>
++#endif
  #include <netinet/in_var.h>
  // Note: netinet/in_var.h implicitly includes netinet6/in6_var.h for us
-@@ -239,6 +239,8 @@ struct ifi_info *get_ifi_info_linuxv6(in
+ #endif
+@@ -239,6 +241,8 @@ struct ifi_info *get_ifi_info_linuxv6(in
  					  addr[4],addr[5],addr[6],addr[7],
  					  &index, &plen, &scope, &flags, ifname) != EOF) {
  
@@ -25,7 +28,7 @@ $NetBSD: patch-ac,v 1.7 2010/07/15 09:08:28 tnn Exp $
  			myflags = 0;
  			if (strncmp(lastname, ifname, IFNAMSIZ) == 0) {
  				if (doaliases == 0)
-@@ -273,7 +275,6 @@ struct ifi_info *get_ifi_info_linuxv6(in
+@@ -273,7 +277,6 @@ struct ifi_info *get_ifi_info_linuxv6(in
  			memcpy(ifi->ifi_addr, res0->ai_addr, sizeof(struct sockaddr_in6));
  
  			/* Add netmask of the interface */
