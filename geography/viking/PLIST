@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/06/24 12:37:09 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/15 13:34:57 gdt Exp $
 bin/viking
 bin/viking-remote
 share/applications/viking.desktop
@@ -15,6 +15,7 @@ share/locale/en_GB/LC_MESSAGES/viking.mo
 share/locale/es/LC_MESSAGES/viking.mo
 share/locale/fr/LC_MESSAGES/viking.mo
 share/locale/he/LC_MESSAGES/viking.mo
+share/locale/hu/LC_MESSAGES/viking.mo
 share/locale/id/LC_MESSAGES/viking.mo
 share/locale/it/LC_MESSAGES/viking.mo
 share/locale/ja/LC_MESSAGES/viking.mo
@@ -27,6 +28,7 @@ share/locale/pt_BR/LC_MESSAGES/viking.mo
 share/locale/ru/LC_MESSAGES/viking.mo
 share/locale/sl/LC_MESSAGES/viking.mo
 share/locale/sv/LC_MESSAGES/viking.mo
+share/locale/uk/LC_MESSAGES/viking.mo
 share/locale/zh_CN/LC_MESSAGES/viking.mo
 share/locale/zh_TW/LC_MESSAGES/viking.mo
 share/omf/viking/viking-C.omf
