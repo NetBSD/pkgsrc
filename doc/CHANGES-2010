@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4247 2010/12/14 23:44:36 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4248 2010/12/15 03:31:00 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6023,3 +6023,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/radmind to 1.14.1 [hauke 2010-12-14]
 	Updated databases/slony1 to 2.0.6 [adam 2010-12-14]
 	Updated lang/sbcl to 1.0.45 [asau 2010-12-14]
+	Added comms/asterisk18 version 1.8.1 [jnemeth 2010-12-15]

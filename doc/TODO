@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9942 2010/12/14 23:44:36 asau Exp $
+$NetBSD: TODO,v 1.9943 2010/12/15 03:31:00 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -401,7 +401,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asp2php-0.77.3
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
-	o asterisk-1.8
 	o asterisk16-1.6.2.6
 	o astyle-1.15.3
 	o asymptote-2.08
