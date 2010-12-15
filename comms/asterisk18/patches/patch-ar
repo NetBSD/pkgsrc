@@ -1,0 +1,14 @@
+$NetBSD: patch-ar,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+
+--- include/asterisk/autoconfig.h.in.orig	2010-11-09 20:33:05.000000000 +0000
++++ include/asterisk/autoconfig.h.in
+@@ -864,6 +864,9 @@
+ /* Define to 1 if you have the <syslog.h> header file. */
+ #undef HAVE_SYSLOG_H
+ 
++/* Define to 1 if sys/atomic.h atomic operations are supported. */
++#undef HAVE_SYS_ATOMIC_H
++
+ /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
+    */
+ #undef HAVE_SYS_DIR_H
