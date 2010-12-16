@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4263 2010/12/16 12:14:37 ahoka Exp $
+$NetBSD: CHANGES-2010,v 1.4264 2010/12/16 12:15:28 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6041,3 +6041,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-server to 5.1.54 [taca 2010-12-16]
 	Updated archivers/gtar-base to 1.25nb3 [wiz 2010-12-16]
 	Updated sysutils/hal to 0.5.11nb28 [ahoka 2010-12-16]
+	Updated x11/gnome-applets to 2.32.1.1nb1 [ahoka 2010-12-16]
