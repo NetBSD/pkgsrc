@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2010/12/15 21:08:30 chuck Exp $
+$NetBSD: distinfo,v 1.30 2010/12/16 04:55:46 chuck Exp $
 
 SHA1 (cdparanoia-III-10.2.src.tgz) = 1901e20d3a370ca6afa4c76a9ef30d3f03044320
 RMD160 (cdparanoia-III-10.2.src.tgz) = d6c4ea9cc4aa4d5bcca4985e668ea6142d53cc55
@@ -10,14 +10,14 @@ SHA1 (patch-ad) = f0c79049cbc26e9483c410f00cb6df85c280c145
 SHA1 (patch-ae) = dda320ca0817b06cb25be86b2a891776550603ae
 SHA1 (patch-ba) = 0f4f8ddecd9f5f273f7a1687bbb1477fd64500c1
 SHA1 (patch-ca) = 9860c2227f9d359e808c0ee0989020a9a3163a48
-SHA1 (patch-cb) = 31891b99826876e8c16ecc7688972087c49f53ac
+SHA1 (patch-cb) = 48c05accf3b235a2a1bb168b88cad6e8936169b1
 SHA1 (patch-cc) = e692c8f4a9811123baa6cb25c09dea0004cc9b68
 SHA1 (patch-cd) = 7141563e10b0d23dbd4ff824224a10908741be5b
 SHA1 (patch-ce) = b343191fa2e337e2c3c091c585451c726c1f745b
 SHA1 (patch-cf) = 8d204272dace7bb1d3238e44f6ff152ab38f0930
 SHA1 (patch-cg) = fd92ca2b999c4d25ddbe5abe5f384c5c83019624
-SHA1 (patch-ch) = 37c8e5e675ed8db8ae7768918bea28d509a0563c
-SHA1 (patch-ci) = 0b334f818b35871856f386f77e0bce935ab1b3d0
+SHA1 (patch-ch) = 4b0a232bc21fc57777897269139894428d11016b
+SHA1 (patch-ci) = dabc5121436aee0efde4cda8a01903d918cb8e4a
 SHA1 (patch-cj) = e2420e2ccadd2d6ea30d6bf48af9c141dc395afc
 SHA1 (patch-ck) = 0232f8f42d98b49043f55cd6aaf1f50ab38fadfb
 SHA1 (patch-cn) = b79db0b24a042a5801b47e6db5e20cbf07a53475
