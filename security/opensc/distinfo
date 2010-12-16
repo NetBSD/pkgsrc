@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2010/09/01 15:59:22 drochner Exp $
+$NetBSD: distinfo,v 1.7 2010/12/16 18:00:59 drochner Exp $
 
 SHA1 (opensc-0.11.13.tar.gz) = 408b374286004c3df15ec17856f69fd4c2a1aceb
 RMD160 (opensc-0.11.13.tar.gz) = cd900866e51cd64fa7c5a3287cd58193dec26528
@@ -7,3 +7,7 @@ SHA1 (patch-aa) = ad1c02161590c43170137d1deeaf5e88e7fef1ce
 SHA1 (patch-ab) = 6d3d055abd1b94c7024838b9b25cc6005af0d36a
 SHA1 (patch-ac) = 6c77415312d1ab149a9cbae9c49f4cf31c950502
 SHA1 (patch-ad) = a618df0e8bc59af9ccea3f3b423b363e09ab0a4c
+SHA1 (patch-ae) = 94ca059a2e9bf5689f4193587247e443213df9a4
+SHA1 (patch-af) = 3b8db1b680c833940973f11b8abb47e34fa5ecd0
+SHA1 (patch-ag) = 1d2de187008d4ce9aac1f97f829aafd035324082
+SHA1 (patch-ah) = e9a8e3aa06af5a7ce47015f8eba41fd2bb12b32d
