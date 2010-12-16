@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/11/24 01:56:13 asau Exp $
+# $NetBSD: Makefile,v 1.8 2010/12/16 21:00:53 asau Exp $
 
-DISTNAME=	openmpi-1.4.3
+DISTNAME=	openmpi-1.5.1
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.4/downloads/
+MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.5/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	asau@inbox.ru
@@ -17,19 +17,31 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
+			${WRKSRC}/ompi/contrib/vt/vt/extlib/otf/libtool \
+			${WRKSRC}/ompi/contrib/vt/vt/libtool \
+			${WRKSRC}/ompi/mca/io/romio/romio/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
+			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
-CONFIGURE_ARGS+=	--with-ft=cr	# for compatibility with OpenMPI 1.4.1 package
 CONFIGURE_ARGS+=	--disable-mpi-f90
+CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
-BUILD_MAKE_FLAGS=	LIBLTDL=$(BUILDLINK_PREFIX.libltdl)/lib/libltdl.la # configure doesn't allow overriding it
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
+
+USE_TOOLS+=		perl:run
 
 .include "options.mk"
 
 TEST_TARGET=	check
+
+## Just in case you'll need it...
+# USE_TOOLS+=	aclocal autoconf automake bash perl
+# REPLACE_BASH=	autogen.sh
+
+# pre-configure:	replace-interpreter
+# 	cd $(WRKSRC) && $(BASH) autogen.sh
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
