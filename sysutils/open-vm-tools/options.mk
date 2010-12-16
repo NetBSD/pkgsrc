@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/08/31 06:36:47 scottr Exp $
+# $NetBSD: options.mk,v 1.2 2010/12/16 11:52:15 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.open-vm-tools
 PKG_SUPPORTED_OPTIONS=	x11
@@ -13,6 +13,7 @@ PLIST_SRC+=	PLIST.x11
 .  include "../../x11/libXrandr/buildlink3.mk"
 .  include "../../x11/libXrender/buildlink3.mk"
 .  include "../../x11/libXtst/buildlink3.mk"
+.  include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .else
 CONFIGURE_ARGS+=		--without-x
 .endif
