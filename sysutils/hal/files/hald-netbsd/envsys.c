@@ -1,4 +1,4 @@
-/* $NetBSD: envsys.c,v 1.5 2009/03/01 18:22:31 jmcneill Exp $ */
+/* $NetBSD: envsys.c,v 1.6 2010/12/16 11:34:51 ahoka Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -220,10 +220,10 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 		}
 		else if (strcmp (descr, "charge rate") == 0) {
 			battstate = CHARGING;
-			hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
+			hal_device_property_set_int (d, "battery.charge_level.rate", intval);
 		} else if (strcmp (descr, "discharge rate") == 0) {
 			battstate = DISCHARGING;
-			hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
+			hal_device_property_set_int (d, "battery.charge_level.rate", intval);
 		}
 	}
 
