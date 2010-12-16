@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.1.1.1 2009/12/12 23:30:01 asau Exp $
+$NetBSD: patch-ai,v 1.2 2010/12/16 21:00:54 asau Exp $
 
 Install configuration files into example directory.
 
---- orte/etc/Makefile.in.orig	2009-11-11 17:04:47.000000000 +0300
-+++ orte/etc/Makefile.in	2009-12-04 05:00:13.000000000 +0300
-@@ -899,6 +899,7 @@
+--- orte/etc/Makefile.in.orig	2009-11-04 18:01:21.000000000 +0300
++++ orte/etc/Makefile.in	2010-01-12 20:48:26.000000000 +0300
+@@ -1018,6 +1018,7 @@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
@@ -12,7 +12,7 @@ Install configuration files into example directory.
  target_alias = @target_alias@
  timer_aix_LIBS = @timer_aix_LIBS@
  top_build_prefix = @top_build_prefix@
-@@ -1086,19 +1087,19 @@
+@@ -1223,19 +1224,19 @@
  # details why the mkdir is in install-data-local.
  
  install-data-local:
