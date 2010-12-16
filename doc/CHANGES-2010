@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4260 2010/12/16 03:43:02 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4261 2010/12/16 03:44:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6037,3 +6037,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/php-intl to 1.1.2 [taca 2010-12-16]
 	Updated www/horde to 3.3.11 [taca 2010-12-16]
 	Updated lang/gauche to 0.9.1 [asau 2010-12-16]
+	Updated databases/mysql51-client to 5.1.54 [taca 2010-12-16]
+	Updated databases/mysql51-server to 5.1.54 [taca 2010-12-16]
