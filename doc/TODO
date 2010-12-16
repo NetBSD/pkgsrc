@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9950 2010/12/16 17:46:02 hauke Exp $
+$NetBSD: TODO,v 1.9951 2010/12/16 21:01:15 asau Exp $
 
 Suggested new packages
 ======================
@@ -1031,7 +1031,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.3
-	o openmpi-1.5
 	o openmsx-0.7.0
 	o openoffice3-3.2.1
 	o openssh-5.6

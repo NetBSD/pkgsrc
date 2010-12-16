@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4268 2010/12/16 17:46:02 hauke Exp $
+$NetBSD: CHANGES-2010,v 1.4269 2010/12/16 21:01:15 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6047,3 +6047,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/exif to 0.6.20 [adam 2010-12-16]
 	Updated www/typo3 to 4.4.5 [taca 2010-12-16]
 	Updated editors/xemacs to 21.4.22 [hauke 2010-12-16]
+	Updated parallel/openmpi to 1.5.1 [asau 2010-12-16]
