@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9946 2010/12/15 16:11:34 asau Exp $
+$NetBSD: TODO,v 1.9947 2010/12/16 03:44:08 asau Exp $
 
 Suggested new packages
 ======================
@@ -646,7 +646,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.28.92
 	o gap-4r4p9
 	o gated-3.6
-	o gauche-0.9.1
 	o gbdfed-1.6
 	o gcal-3.6
 	o gcalctool-5.32.2
