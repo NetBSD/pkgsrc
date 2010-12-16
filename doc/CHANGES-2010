@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4267 2010/12/16 15:37:01 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4268 2010/12/16 17:46:02 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6046,3 +6046,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/libexif to 0.6.20 [adam 2010-12-16]
 	Updated graphics/exif to 0.6.20 [adam 2010-12-16]
 	Updated www/typo3 to 4.4.5 [taca 2010-12-16]
+	Updated editors/xemacs to 21.4.22 [hauke 2010-12-16]
