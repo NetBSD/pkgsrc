@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4265 2010/12/16 14:21:59 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4266 2010/12/16 15:01:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6043,3 +6043,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/hal to 0.5.11nb28 [ahoka 2010-12-16]
 	Updated x11/gnome-applets to 2.32.1.1nb1 [ahoka 2010-12-16]
 	Updated lang/php5 to 5.2.16 [taca 2010-12-16]
+	Updated graphics/libexif to 0.6.20 [adam 2010-12-16]
+	Updated graphics/exif to 0.6.20 [adam 2010-12-16]
