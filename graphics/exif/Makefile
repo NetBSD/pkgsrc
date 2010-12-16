@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2009/11/15 21:23:57 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.22 2010/12/16 15:00:33 adam Exp $
 
-DISTNAME=	exif-0.6.19
+DISTNAME=	exif-0.6.20
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://libexif.sourceforge.net/
 COMMENT=	Grab Exif information from digital camera images
 
@@ -13,9 +13,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 
 LIBS+=		${BUILDLINK_LDADD.iconv}
 
@@ -23,5 +23,4 @@ LIBS+=		${BUILDLINK_LDADD.iconv}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
