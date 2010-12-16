@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.94 2010/09/21 02:34:12 obache Exp $
+# $NetBSD: Makefile,v 1.95 2010/12/16 17:45:12 hauke Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
 
-DISTNAME=	xemacs-21.4.17
-PKGREVISION=	9
+DISTNAME=	xemacs-21.4.22
+#PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
@@ -18,6 +18,8 @@ CONFLICTS+=	xemacs-nox11-[0-9]*
 NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	makeinfo
 
 HAS_CONFIGURE=		yes
 
