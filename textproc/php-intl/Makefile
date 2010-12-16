@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/21 16:57:13 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/16 03:37:28 taca Exp $
 
 MODNAME=		intl
-PECL_VERSION=		1.1.1
+PECL_VERSION=		1.1.2
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for i18n
 
