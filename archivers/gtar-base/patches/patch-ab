@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.16 2010/12/16 10:12:54 wiz Exp $
+
+Add two patches from upstream, fixing test 39:
+* src/extract.c (maybe_recoverable): Treat EMLINK like ELOOP, for
+FreeBSD.  Problem reported by Christian Weisgerber in
+<http://lists.gnu.org/archive/html/bug-tar/2010-11/msg00080.html>.
+Problem reported by Bruno Haible in
+<http://lists.gnu.org/archive/html/bug-gnulib/2010-11/msg00306.html>.
+* src/extract.c (maybe_recoverable):  Also treat EFTYPE (if defined)
+and ENOTSUP like ELOOP.
+
+--- src/extract.c.orig	2010-11-01 20:34:59.000000000 +0000
++++ src/extract.c
+@@ -609,6 +609,18 @@ maybe_recoverable (char *file_name, bool
+   switch (e)
+     {
+     case ELOOP:
++
++      /* With open ("symlink", O_NOFOLLOW|...), POSIX says errno == ELOOP,
++        but some operating systems do not conform to the standard.  */
++#ifdef EFTYPE
++      /* NetBSD uses errno == EFTYPE; see <http://gnats.netbsd.org/43154>.  */
++    case EFTYPE:
++#endif
++      /* FreeBSD 8.1 uses errno == EMLINK.  */
++    case EMLINK:
++      /* Tru64 5.1B uses errno == ENOTSUP.  */
++    case ENOTSUP:
++
+       if (! regular
+ 	  || old_files_option != OVERWRITE_OLD_FILES || dereference_option)
+ 	break;
