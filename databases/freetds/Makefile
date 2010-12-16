@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2010/02/07 17:41:46 zafer Exp $
+# $NetBSD: Makefile,v 1.43 2010/12/16 06:56:29 taca Exp $
 
 DISTNAME=	freetds-0.82
 PKGREVISION=	2
@@ -55,4 +55,5 @@ GENERATE_PLIST+=	\
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
