@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4261 2010/12/16 03:44:31 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4262 2010/12/16 10:13:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6039,3 +6039,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/gauche to 0.9.1 [asau 2010-12-16]
 	Updated databases/mysql51-client to 5.1.54 [taca 2010-12-16]
 	Updated databases/mysql51-server to 5.1.54 [taca 2010-12-16]
+	Updated archivers/gtar-base to 1.25nb3 [wiz 2010-12-16]
