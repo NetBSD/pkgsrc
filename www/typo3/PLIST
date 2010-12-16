@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/09/29 15:01:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/12/16 15:35:34 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -5424,6 +5424,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save-
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save-view.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-save.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-select.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-synchronize.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/document-view.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/edit-add.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/actions/edit-copy-release.png
@@ -5807,6 +5808,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/ie6/z_t3-icons-gifSprit
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/_t3-icon.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-actions.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-apps.css
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-manual.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-mimetypes.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-places.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/stylesheets/sprites/t3-icons-status.css
