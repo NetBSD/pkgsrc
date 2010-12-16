@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/12 15:02:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/16 13:47:19 sborrill Exp $
 ${PLIST.coss}bin/cossdump
 bin/squidclient
 libexec/cachemgr.cgi
@@ -39,4 +39,4 @@ share/examples/squid/cachemgr.conf
 share/examples/squid/mime.conf
 share/examples/squid/msntauth.conf
 share/examples/squid/squid.conf
-${PLIST.snmp}share/squid/mib.txt
+share/squid/mib.txt
