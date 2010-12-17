@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2010/12/04 23:50:33 dsainty Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/17 01:19:17 gdt Exp $
 #
 
 DISTNAME=	git-${VERSION}
-VERSION=	1.6.6.2
+VERSION=	1.7.3.4
 PKGNAME=	${DISTNAME:S/git/gitweb/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://git.or.cz/
@@ -44,7 +45,7 @@ INSTALLATION_DIRS=	libexec/cgi-bin share/httpd/htdocs  \
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gitweb/gitweb.cgi ${DESTDIR}${GITWEB_CGIBIN}
 .for f in git-favicon.png git-logo.png gitweb.css
-	${INSTALL_DATA} ${WRKSRC}/gitweb/${f} ${DESTDIR}${GITWEB_HTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/gitweb/static/${f} ${DESTDIR}${GITWEB_HTDOCS}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/gitweb/README \
 		${DESTDIR}${PREFIX}/share/doc/gitweb
