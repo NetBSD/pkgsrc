@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.41 2010/09/16 18:56:12 wiz Exp $
+# $NetBSD: options.mk,v 1.42 2010/12/17 19:05:35 shattered Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -27,7 +27,7 @@ PKG_SUGGESTED_OPTIONS+=		mplayer-internal-faad
 
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
-PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas pulseaudio sdl
+PKG_SUPPORTED_OPTIONS+=	aalib caca esound ggi mplayer-menu nas pulseaudio sdl
 
 .if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=	vdpau
@@ -113,6 +113,11 @@ EXTRA_LIBS+=		-lartsc
 .  include "../../audio/arts/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-arts
+.endif
+
+.if !empty(PKG_OPTIONS:Mcaca)
+CONFIGURE_ARGS+=	--enable-caca
+.  include "../../graphics/libcaca/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mcdparanoia)
