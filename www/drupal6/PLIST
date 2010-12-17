@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/03/04 01:29:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/12/17 00:04:00 rhaen Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -40,6 +40,7 @@ share/drupal/includes/tablesort.inc
 share/drupal/includes/theme.inc
 share/drupal/includes/theme.maintenance.inc
 share/drupal/includes/unicode.inc
+share/drupal/includes/unicode.entities.inc
 share/drupal/includes/xmlrpc.inc
 share/drupal/includes/xmlrpcs.inc
 share/drupal/index.php
@@ -263,6 +264,7 @@ share/drupal/modules/statistics/statistics.install
 share/drupal/modules/statistics/statistics.module
 share/drupal/modules/statistics/statistics.pages.inc
 share/drupal/modules/syslog/syslog.info
+share/drupal/modules/syslog/syslog.install
 share/drupal/modules/syslog/syslog.module
 share/drupal/modules/system/admin-rtl.css
 share/drupal/modules/system/admin.css
