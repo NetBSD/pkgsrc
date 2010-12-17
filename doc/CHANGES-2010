@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4278 2010/12/17 14:47:19 rhaen Exp $
+$NetBSD: CHANGES-2010,v 1.4279 2010/12/17 17:20:51 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6057,3 +6057,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added games/supertuxkart version 0.6.2a [wiz 2010-12-17]
 	Updated devel/omake to 0.9.8.6.0rc1 [wiz 2010-12-17]
 	Updated devel/p5-Devel-StackTrace to 1.26 [rhaen 2010-12-17]
+	Updated security/pcsc-lite to 1.5.5nb2 [shannonjr 2010-12-17]
