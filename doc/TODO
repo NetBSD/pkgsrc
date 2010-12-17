@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9952 2010/12/17 01:06:44 gdt Exp $
+$NetBSD: TODO,v 1.9953 2010/12/17 01:32:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.2.3
-	o abcmidi-20100928
+	o abcmidi-20101212
 	o abook-0.6.0pre2 [pkg/42672]
 	o accerciser-1.12.2 [GNOME 2.32]
 	o acme-091
@@ -446,7 +446,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20080824
-	o bzr-2.2.1
+	o bzr-2.2.2
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
@@ -519,6 +519,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drivel-3.0.2
 	o dspam-3.9.0
 	o dvdstyler-1.8.2
+	o dvipng-1.14
 	o dvtm-0.6
 	o dwm-5.8.2
 	o e2fsprogs-1.41.12 [pkg/43950]
@@ -664,7 +665,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.19.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.12
-	o gentoo-0.19.6
+	o gentoo-0.19.7
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
 	o gettext-m4-0.18.1.1
@@ -727,7 +728,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o granulate-0.2
 	o grep-2.7
 	o grhino-0.16.1
-	o gsasl-1.4.1
+	o gsasl-1.6.0
 	o gsharutils-4.10
 	o gss-1.0.1
 	o gssdp-0.9.1
@@ -742,7 +743,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtranslator-1.9.6
 	o guile-gtk-2.0
 	o gupnp-0.15.0
-	o gwaei-1.5.0
+	o gwaei-1.5.1
 	o gworkspace-0.8.8
 	o gzip-1.4
 	o hackbot-2.21
@@ -980,6 +981,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.0
 	o mpop-1.0.21
+	o mrtg-2.17.0
 	o mserv-devel-0.41
 	o mtools-4.0.14
 	o mu-0.9
@@ -1032,11 +1034,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmortal-0.7.1
 	o openmotif-2.3.3
 	o openmsx-0.7.0
-	o openoffice3-3.2.1
+	o openoffice3-3.3
 	o openssh-5.6
 	o openssl-1.0.0c
 	o open-vm-tools-2010.09.19.301124
-	o opera-10.63
+	o opera-11.0
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.3
@@ -1256,6 +1258,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o telepathy-gabble-0.9.14
+	o tellico-2.3.2
 	o tesseract-3.00
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
