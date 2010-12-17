@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4279 2010/12/17 17:20:51 shannonjr Exp $
+$NetBSD: CHANGES-2010,v 1.4280 2010/12/17 18:21:34 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6058,3 +6058,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/omake to 0.9.8.6.0rc1 [wiz 2010-12-17]
 	Updated devel/p5-Devel-StackTrace to 1.26 [rhaen 2010-12-17]
 	Updated security/pcsc-lite to 1.5.5nb2 [shannonjr 2010-12-17]
+	Updated devel/p5-IO-Tty to 1.10 [rhaen 2010-12-17]
