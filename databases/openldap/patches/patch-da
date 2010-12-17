@@ -1,24 +1,31 @@
-$NetBSD: patch-da,v 1.3 2009/10/29 13:51:19 ghen Exp $
+$NetBSD: patch-da,v 1.4 2010/12/17 10:20:51 adam Exp $
 
---- contrib/slapd-modules/smbk5pwd/Makefile.orig	2009-10-02 23:16:53.000000000 +0200
+--- contrib/slapd-modules/smbk5pwd/Makefile.orig	2010-04-13 20:22:30.000000000 +0000
 +++ contrib/slapd-modules/smbk5pwd/Makefile
-@@ -13,8 +13,8 @@
+@@ -13,21 +13,21 @@
  # <http://www.OpenLDAP.org/license.html>.
  
  LIBTOOL=../../../libtool
 -OPT=-g -O2
 -CC=gcc
-+OPT=-g -O2 ${CPPFLAGS}
++OPT=${CFLAGS} ${CPPFLAGS}
 +#CC=gcc
  
  # Omit DO_KRB5 or DO_SAMBA if you don't want to support it.
- DEFS=-DDO_KRB5 -DDO_SAMBA
-@@ -45,7 +45,7 @@ smbk5pwd.lo:	smbk5pwd.c
+-DEFS=-DDO_KRB5 -DDO_SAMBA
++#DEFS=-DDO_KRB5 -DDO_SAMBA
  
- smbk5pwd.la:	smbk5pwd.lo
- 	$(LIBTOOL) --mode=link $(CC) $(OPT) -version-info 0:0:0 \
--	-rpath $(moduledir) -module -o $@ $? $(LIBS)
-+	-rpath $(moduledir) -module -o $@ $? -ldes $(LIBS)
+ HEIMDAL_INC=-I/usr/heimdal/include
+ SSL_INC=
+ LDAP_INC=-I../../../include -I../../../servers/slapd
+-INCS=$(LDAP_INC) $(HEIMDAL_INC) $(SSL_INC)
++INCS=$(LDAP_INC) $(SSL_INC)
  
- clean:
- 	rm -f smbk5pwd.lo smbk5pwd.la
+ HEIMDAL_LIB=-L/usr/heimdal/lib -lkrb5 -lkadm5srv
+ SSL_LIB=-lcrypto
+ LDAP_LIB=-lldap_r -llber
+-LIBS=$(LDAP_LIB) $(HEIMDAL_LIB) $(SSL_LIB)
++LIBS+=$(LDAP_LIB) $(SSL_LIB)
+ 
+ prefix=/usr/local
+ exec_prefix=$(prefix)
