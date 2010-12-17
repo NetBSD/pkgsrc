@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/17 09:20:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2010/12/17 09:26:23 wiz Exp $
 
 SHA1 (supertuxkart-0.6.2a-src.tar.bz2) = f7921d0a6ab63eee5ded335c3601cf8d15604e03
 RMD160 (supertuxkart-0.6.2a-src.tar.bz2) = b36c8ecf4c98fb3074d4b7f0127361e8c907d0e1
 Size (supertuxkart-0.6.2a-src.tar.bz2) = 96913662 bytes
-SHA1 (patch-aa) = 9c65e7318cfb2c0f437d6d77f9d02bcc3ecf4555
-SHA1 (patch-ab) = ec63f05fbafc2e842a9e051f012b67a3de4d4253
+SHA1 (patch-aa) = 383e8a61b89b2f631948f7a2a80e1078e5ca317c
+SHA1 (patch-ab) = d1deec225b53da49706fd3e7a693dafee7f48469
 SHA1 (patch-ac) = 63fbfc66f7101182d9223b12a8fa212a8836accd
 SHA1 (patch-ad) = 1ecd693d0e2a7e72f9b0f1b2cf254e24052db1fe
