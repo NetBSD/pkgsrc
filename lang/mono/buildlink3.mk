@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2010/10/16 04:32:18 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2010/12/17 07:36:13 obache Exp $
 
 BUILDLINK_TREE+=	mono
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mono
 MONO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mono+=	mono>=2.8
-BUILDLINK_ABI_DEPENDS.mono?=	mono>=2.8
+BUILDLINK_ABI_DEPENDS.mono?=	mono>=2.8.1nb1
 BUILDLINK_PKGSRCDIR.mono?=	../../lang/mono
 ALL_ENV+=			MONO_SHARED_DIR=${WRKDIR:Q}
 BUILDLINK_CONTENTS_FILTER.mono+=	${EGREP} '(^include/|^lib/)'
