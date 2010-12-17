@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 16:34:27 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/17 22:23:05 rhaen Exp $
 #
 
-DISTNAME=		TAP-Formatter-HTML-0.08
+DISTNAME=		TAP-Formatter-HTML-0.09
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SP/SPURKIS/}
 
