@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/02/25 14:12:04 rhaen Exp $
+$NetBSD: distinfo,v 1.10 2010/12/17 18:20:18 rhaen Exp $
 
-SHA1 (IO-Tty-1.08.tar.gz) = 547395e3ce0f1894ec08f56fadfe0942a13f9249
-RMD160 (IO-Tty-1.08.tar.gz) = 29bb020ec7b0b8c5cc7ac74c184d0911e7457750
-Size (IO-Tty-1.08.tar.gz) = 22320 bytes
+SHA1 (IO-Tty-1.10.tar.gz) = 9eaad631cde8f49cc20757f4b1e81247ce67f333
+RMD160 (IO-Tty-1.10.tar.gz) = 80a1efbf3936875f6de9210d772f8d532ca90d5b
+Size (IO-Tty-1.10.tar.gz) = 23291 bytes
