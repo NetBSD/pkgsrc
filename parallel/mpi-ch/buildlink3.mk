@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/12/13 18:38:11 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2010/12/17 02:47:18 asau Exp $
 
 BUILDLINK_TREE+=	mpich2
 
