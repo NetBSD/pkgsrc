@@ -1,7 +1,29 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/29 10:43:14 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/12/17 09:40:14 wiz Exp $
 
-SHA1 (omake-0.9.8.5-3.tar.gz) = e78c9d8858749f5e234cba303637980e24085cbc
-RMD160 (omake-0.9.8.5-3.tar.gz) = 2364e29a7cc9bd6aaf837818bbe0a64ef4afce14
-Size (omake-0.9.8.5-3.tar.gz) = 3321245 bytes
-SHA1 (patch-aa) = b8138151041b1c99ddc752361f99c1822d88ef07
+SHA1 (omake-0.9.8.6-0.rc1.tar.gz) = f714fa992bf391b8bac49a488bc654128962d1cc
+RMD160 (omake-0.9.8.6-0.rc1.tar.gz) = b7ceebea6f4c40460625e2e9528257e200676bca
+Size (omake-0.9.8.6-0.rc1.tar.gz) = 3254283 bytes
+SHA1 (patch-aa) = 1cc195874da3db9f909993818b347211c9f3ff77
 SHA1 (patch-ab) = 449aae3ff362efbc50f188cba8a76a13334eb964
+SHA1 (patch-ac) = 21f4d1b8d822cebbd19ab2226193f137d66dfd7e
+SHA1 (patch-ad) = d522e9cd5fbbf74c876314afecbfecc85434210c
+SHA1 (patch-ae) = 2b0a400b4da3e557d6a14eab9fa76913059c084a
+SHA1 (patch-af) = 24731dd649379f22de0fd34d46d68e7acf6c8a61
+SHA1 (patch-ag) = e7c9e2e0826dc2ca69df4830f449a4d0946fd278
+SHA1 (patch-ah) = 35ffade097aa37b37be1e73b3f1521d57b9d1880
+SHA1 (patch-ai) = ea06c43ea427508f6eef0e0ade9b569977bd7ac1
+SHA1 (patch-aj) = 9c33be37c2dff423890b132984414c1fd1da457f
+SHA1 (patch-ak) = 20af5574290a4ee1dd98bcaff63ed7d93945029e
+SHA1 (patch-al) = 86b3e0bb348ad6d5813df20bad5ec8e0c77e372b
+SHA1 (patch-am) = 15f572056b66dc565cba65da04899909be784bf8
+SHA1 (patch-an) = 493e5e9bb25371b066aafe8aac70defee13370b7
+SHA1 (patch-ao) = 5f70ae344d3d0d822ed5a6ed21c75c33b2b10d0d
+SHA1 (patch-ap) = 93db626ca9bee439d513014c9aa23212d3e42a70
+SHA1 (patch-aq) = 9531c72e6d6c417b10059dabbf37b8e3a1324b02
+SHA1 (patch-ar) = 936c185d4a290ae2acb0b6f6788cef9996d2e197
+SHA1 (patch-as) = fa7a7720867a5e5b53df8c3d80f35d0aa27b5b80
+SHA1 (patch-at) = cb81d50d1a85dac9cb0fa81046b8a7b255387a4c
+SHA1 (patch-au) = efb7a298c259e645d2031fee5b016a47389621dd
+SHA1 (patch-av) = 10edbea63bca8788f922c9debb2ebc50655760a5
+SHA1 (patch-aw) = 4999a863230373cca75a6e5cbc4203430823468d
+SHA1 (patch-ax) = 0a91c5d1a561b319885e848def2a3c54d52751d7
