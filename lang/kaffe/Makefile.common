@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2010/12/15 16:06:26 abs Exp $
+# $NetBSD: Makefile.common,v 1.23 2010/12/17 22:13:16 asau Exp $
 # used by lang/kaffe-x11/Makefile
 
 DISTNAME=		kaffe-1.1.7
@@ -54,7 +54,9 @@ CONFIGURE_ARGS+=	--disable-binreloc
 CONFIGURE_ENV+=		VM_LIBS="-lc"
 .endif
 
-.if (((${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha")) || (${MACHINE_ARCH} == "powerpc") || ((${OPSYS} == "SunOS") && ${MACHINE_ARCH} == "i386"))
+.if (((${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha")) \
+ || (${OPSYS} == "DragonFly") || (${MACHINE_ARCH} == "powerpc") \
+ || ((${OPSYS} == "SunOS") && ${MACHINE_ARCH} == "i386"))
 # On these systems, jit3 is not working.
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
