@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2010/12/09 05:32:05 adam Exp $
+# $NetBSD: Makefile,v 1.37 2010/12/17 00:37:34 agc Exp $
 
 DISTNAME=	sqlite-autoconf-3070400
 PKGNAME=	sqlite3-3.7.4
@@ -12,6 +12,8 @@ COMMENT=	SQL Database Engine in a C Library
 LICENSE=	public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "options.mk"
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
