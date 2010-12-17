@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4284 2010/12/17 22:29:52 rhaen Exp $
+$NetBSD: CHANGES-2010,v 1.4285 2010/12/17 22:51:10 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6063,3 +6063,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Log-Log4perl to 1.31 [rhaen 2010-12-17]
 	Updated devel/p5-TAP-Formatter-HTML to 0.09 [rhaen 2010-12-17]
 	Updated devel/p5-Test-Deep to 0.108 [rhaen 2010-12-17]
+	Updated devel/p5-Test-Inline to 2.212 [rhaen 2010-12-17]
