@@ -151,6 +151,7 @@ flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
 ftp			Enable File Transfer Protocol (FTP) support.
+fts			Enable full-text searching.
 gd			Use GD to render graphical output.
 gdal			Use the GDAL library.
 gdb6-tui		Build the tui application.
@@ -430,6 +431,7 @@ qt3			Enable support for QT3.
 quartz			Enable Quartz support on Mac OS X.
 readline		Enable use of GNU readline library.
 rsaref			Use RSAREF library.
+rtree			Enable R-tree support.
 ruby			Enable Ruby support.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
 samplerate		Enable libsamplerate support.
