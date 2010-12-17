@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4281 2010/12/17 18:30:47 rhaen Exp $
+$NetBSD: CHANGES-2010,v 1.4282 2010/12/17 18:36:07 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6060,3 +6060,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/pcsc-lite to 1.5.5nb2 [shannonjr 2010-12-17]
 	Updated devel/p5-IO-Tty to 1.10 [rhaen 2010-12-17]
 	Updated devel/p5-Log-Dispatch to 2.28 [rhaen 2010-12-17]
+	Updated devel/p5-Log-Log4perl to 1.31 [rhaen 2010-12-17]
