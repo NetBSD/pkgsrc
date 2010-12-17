@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4272 2010/12/17 01:05:39 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.4273 2010/12/17 01:19:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6051,3 +6051,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/drupal6 to 6.20 [rhaen 2010-12-16]
 	Updated comms/asterisk18 to 1.8.1.1 [jnemeth 2010-12-16]
 	Updated devel/scmgit to 1.7.3.4 [gdt 2010-12-17]
+	Updated www/gitweb to 1.7.3.4 [gdt 2010-12-17]
