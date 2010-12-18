@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4287 2010/12/17 23:11:36 rhaen Exp $
+$NetBSD: CHANGES-2010,v 1.4288 2010/12/18 11:26:41 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6066,3 +6066,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Inline to 2.212 [rhaen 2010-12-17]
 	Updated mail/p5-Email-Abstract to 3.003 [rhaen 2010-12-17]
 	Updated textproc/p5-XML-Twig to 3.37 [rhaen 2010-12-17]
+	Updated audio/kid3 to 1.5 [shattered 2010-12-18]
