@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2010/06/16 18:15:30 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/18 14:20:03 wiz Exp $
 
-DISTNAME=		mdocml-1.10.1
+DISTNAME=		mdocml-1.10.6
 CATEGORIES=		textproc devel
 MASTER_SITES=		http://mdocml.bsd.lv/snapshots/
 
 MAINTAINER=		kristaps@kth.se
 HOMEPAGE=		http://mdocml.bsd.lv/
-COMMENT=		mdoc macro compiler
+COMMENT=		Man page tool (mdoc macro compiler)
+LICENSE=		2-clause-bsd # not exactly, but near enough
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
