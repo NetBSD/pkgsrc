@@ -176,6 +176,7 @@ graphicsmagick		Use GraphicsMagick as imaging library.
 groff-docs		Install documentation images.
 gsasl			Enable SASL support with gsasl.
 gsl			Use GNU Scientific Library.
+gssapi			Enable gssapi support.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
