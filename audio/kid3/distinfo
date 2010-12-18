@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2008/11/24 09:06:06 obache Exp $
+$NetBSD: distinfo,v 1.8 2010/12/18 11:26:14 shattered Exp $
 
-SHA1 (kid3-1.1.tar.gz) = 01dc11223179feff147af97e30fedc5240707a7a
-RMD160 (kid3-1.1.tar.gz) = abdd835ec7abc378b90bad33246bb738ff96bfc5
-Size (kid3-1.1.tar.gz) = 1160900 bytes
+SHA1 (kid3-1.5.tar.gz) = d218a311f4f1b60334e5d05d0300e1edd905944f
+RMD160 (kid3-1.5.tar.gz) = f6f3d9bd31d7b28d181d9bcc59fa8018c48852b7
+Size (kid3-1.5.tar.gz) = 1475981 bytes
 SHA1 (patch-ab) = 3db933dbee6cc2aa8c963474c162a99e3b4dc70f
 SHA1 (patch-ac) = 20c6b755c31117c34693a0d95207995116c986dc
