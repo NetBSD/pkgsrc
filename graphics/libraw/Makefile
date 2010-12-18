@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/13 20:32:30 gls Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/18 23:50:58 wiz Exp $
 #
 
 DISTNAME=		LibRaw-0.12.0
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config gmake
+MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	libraw.pc.in
 PKGCONFIG_OVERRIDE+=	libraw_r.pc.in
