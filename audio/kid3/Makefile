@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.19 2010/07/14 11:11:17 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/18 11:26:14 shattered Exp $
 #
 
-DISTNAME=		kid3-1.1
-PKGREVISION=		5
+DISTNAME=		kid3-1.5
 CATEGORIES=		kde audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kid3/}
 
 MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://kid3.sourceforge.net/
-COMMENT=		KDE ID3 tagger
+COMMENT=		ID3 tagger for KDE 3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		msgfmt
 
 CHECK_PORTABILITY_SKIP+=	make_qtonly.sh
 
