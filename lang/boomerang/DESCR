@@ -1,0 +1,15 @@
+Boomerang is a programming language for writing lenses--well-behaved
+bidirectional transformations--that operate on ad-hoc, textual data
+formats. Every lens program, when read from left to right, describes
+a function that maps an input to an output; when read from right
+to left, the very same program describes a "backwards" function
+that maps a modified output, together with the original input, back
+to a modified input.
+
+Lenses have been used to solve problems across a wide range of
+areas in computing including: in data converters and synchronizers,
+in parsers and pretty printers, in picklers and unpicklers, in
+structure editors, in constraint maintainers for user interfaces,
+in software model transformations, in schema evolution, in tools
+for managing system configuration files, and in databases where
+they provide updatable views.
