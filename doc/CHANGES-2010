@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4290 2010/12/18 13:06:13 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4291 2010/12/18 14:20:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6069,3 +6069,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/kid3 to 1.5 [shattered 2010-12-18]
 	Added lang/boomerang version 0.2 [wiz 2010-12-18]
 	Updated devel/cscope to 15.7anb1 [wiz 2010-12-18]
+	Updated textproc/mdocml to 1.10.6 [wiz 2010-12-18]
