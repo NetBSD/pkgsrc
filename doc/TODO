@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9953 2010/12/17 01:32:59 wiz Exp $
+$NetBSD: TODO,v 1.9954 2010/12/18 11:26:41 shattered Exp $
 
 Suggested new packages
 ======================
@@ -811,7 +811,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbibtex-0.2.2
 	o kdbg-2.2.2
 	o kdrill-6.5
-	o kid3-1.5
 	o kismet-2010.07r1
 	o kmess-1.5.1
 	o kmp-0.5
