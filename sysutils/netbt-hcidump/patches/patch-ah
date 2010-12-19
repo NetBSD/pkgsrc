@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+
+--- parser/parser.h.orig	2007-02-18 03:39:02.000000000 +0000
++++ parser/parser.h
+@@ -35,7 +35,7 @@ struct frame {
+ 	uint32_t	data_len;
+ 	void		*ptr;
+ 	uint32_t	len;
+-	uint16_t	dev_id;
++	char		*dev_id;
+ 	uint8_t		in;
+ 	uint8_t		master;
+ 	uint16_t	handle;
