@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2010/12/11 16:16:37 asau Exp $
+# $NetBSD: options.mk,v 1.4 2010/12/19 09:53:27 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql90
-PKG_SUPPORTED_OPTIONS=	gssapi krb5 ldap pam xml
+PKG_SUPPORTED_OPTIONS=	gssapi kerberos ldap pam xml
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--with-gssapi
 ###
 ### Kerberos5 authentication for the PostgreSQL backend.
 ###
-.if !empty(PKG_OPTIONS:Mkrb5)
+.if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-krb5
 .endif
@@ -41,5 +41,5 @@ CONFIGURE_ARGS+=	--with-pam
 ###
 .if !empty(PKG_OPTIONS:Mxml)
 .  include "../../textproc/libxml2/buildlink3.mk"
-CONFIGURE_ARGS+=        --with-libxml
+CONFIGURE_ARGS+=	--with-libxml
 .endif
