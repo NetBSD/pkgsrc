@@ -1,0 +1,63 @@
+$NetBSD: patch-al,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+
+--- src/bt_lib.c.orig	2010-01-05 12:27:30.000000000 +0000
++++ src/bt_lib.c
+@@ -35,8 +35,8 @@
+ #include <string.h>
+ #include <sys/socket.h>
+ 
+-#include "bluetooth.h"
+-#include "hci.h"
++#include <bluetooth/bluetooth.h>
++#include <bluetooth/hci.h>
+ 
+ void baswap(bdaddr_t *dst, const bdaddr_t *src)
+ {
+@@ -48,6 +48,7 @@ void baswap(bdaddr_t *dst, const bdaddr_
+ 		d[i] = s[5-i];
+ }
+ 
++#if 0
+ char *batostr(const bdaddr_t *ba)
+ {
+ 	char *str = bt_malloc(18);
+@@ -79,6 +80,7 @@ bdaddr_t *strtoba(const char *str)
+ 
+ 	return (bdaddr_t *) ba;
+ }
++#endif
+ 
+ int ba2str(const bdaddr_t *ba, char *str)
+ {
+@@ -89,6 +91,7 @@ int ba2str(const bdaddr_t *ba, char *str
+ 		b[0], b[1], b[2], b[3], b[4], b[5]);
+ }
+ 
++#if 0
+ int str2ba(const char *str, bdaddr_t *ba)
+ {
+ 	uint8_t b[6];
+@@ -197,6 +200,7 @@ int basnprintf(char *str, size_t size, c
+ 
+ 	return len;
+ }
++#endif
+ 
+ void *bt_malloc(size_t size)
+ {
+@@ -208,6 +212,7 @@ void bt_free(void *ptr)
+ 	free(ptr);
+ }
+ 
++#if 0
+ /* Bluetooth error codes to Unix errno mapping */
+ int bt_error(uint16_t code)
+ {
+@@ -282,6 +287,7 @@ int bt_error(uint16_t code)
+ 		return ENOSYS;
+ 	}
+ }
++#endif
+ 
+ char *bt_compidtostr(int compid)
+ {
