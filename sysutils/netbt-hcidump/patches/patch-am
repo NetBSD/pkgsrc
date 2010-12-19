@@ -1,0 +1,122 @@
+$NetBSD: patch-am,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+
+--- src/hci_lib.c.orig	2010-09-30 09:12:22.000000000 +0000
++++ src/hci_lib.c
+@@ -41,9 +41,9 @@
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
+ 
+-#include "bluetooth.h"
+-#include "hci.h"
+-#include "hci_lib.h"
++#include <bluetooth/bluetooth.h>
++#include <bluetooth/hci.h>
++#include <bluetooth/hci_lib.h>
+ 
+ #ifndef MIN
+ #define MIN(x, y) ((x) < (y) ? (x) : (y))
+@@ -71,6 +71,7 @@ static char *hci_bit2str(hci_map *m, uns
+ 	return str;
+ }
+ 
++#if 0
+ static int hci_str2bit(hci_map *map, char *str, unsigned int *val)
+ {
+ 	char *t, *ptr;
+@@ -94,6 +95,7 @@ static int hci_str2bit(hci_map *map, cha
+ 
+ 	return set;
+ }
++#endif
+ 
+ static char *hci_uint2str(hci_map *m, unsigned int val)
+ {
+@@ -114,6 +116,7 @@ static char *hci_uint2str(hci_map *m, un
+ 	return str;
+ }
+ 
++#if 0
+ static int hci_str2uint(hci_map *map, char *str, unsigned int *val)
+ {
+ 	char *t, *ptr;
+@@ -212,6 +215,7 @@ char *hci_dflagstostr(uint32_t flags)
+ 	}
+ 	return str;
+ }
++#endif
+ 
+ /* HCI packet type mapping */
+ static hci_map pkt_type_map[] = {
+@@ -233,6 +237,7 @@ static hci_map pkt_type_map[] = {
+ 	{ NULL }
+ };
+ 
++#if 0
+ static hci_map sco_ptype_map[] = {
+ 	{ "HV1",   0x0001   },
+ 	{ "HV2",   0x0002   },
+@@ -246,12 +251,15 @@ static hci_map sco_ptype_map[] = {
+ 	{ "3-EV5", HCI_3EV5 },
+ 	{ NULL }
+ };
++#endif
+ 
+ char *hci_ptypetostr(unsigned int ptype)
+ {
++	ptype ^= (HCI_2DH1|HCI_2DH3|HCI_2DH5|HCI_3DH1|HCI_3DH3|HCI_3DH5);
+ 	return hci_bit2str(pkt_type_map, ptype);
+ }
+ 
++#if 0
+ int hci_strtoptype(char *str, unsigned int *val)
+ {
+ 	return hci_str2bit(pkt_type_map, str, val);
+@@ -266,6 +274,7 @@ int hci_strtoscoptype(char *str, unsigne
+ {
+ 	return hci_str2bit(sco_ptype_map, str, val);
+ }
++#endif
+ 
+ /* Link policy mapping */
+ static hci_map link_policy_map[] = {
+@@ -282,6 +291,7 @@ char *hci_lptostr(unsigned int lp)
+ 	return hci_bit2str(link_policy_map, lp);
+ }
+ 
++#if 0
+ int hci_strtolp(char *str, unsigned int *val)
+ {
+ 	return hci_str2bit(link_policy_map, str, val);
+@@ -638,6 +648,7 @@ char *hci_commandstostr(uint8_t *command
+ 
+ 	return str;
+ }
++#endif
+ 
+ /* Version mapping */
+ static hci_map ver_map[] = {
+@@ -656,16 +667,19 @@ char *hci_vertostr(unsigned int ver)
+ 	return hci_uint2str(ver_map, ver);
+ }
+ 
++#if 0
+ int hci_strtover(char *str, unsigned int *ver)
+ {
+ 	return hci_str2uint(ver_map, str, ver);
+ }
++#endif
+ 
+ char *lmp_vertostr(unsigned int ver)
+ {
+ 	return hci_uint2str(ver_map, ver);
+ }
+ 
++#if 0
+ int lmp_strtover(char *str, unsigned int *ver)
+ {
+ 	return hci_str2uint(ver_map, str, ver);
+@@ -2744,3 +2758,4 @@ int hci_le_create_conn(int dd, uint16_t 
+ 
+ 	return 0;
+ }
++#endif
