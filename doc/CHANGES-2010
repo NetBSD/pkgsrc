@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4291 2010/12/18 14:20:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4292 2010/12/19 00:52:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6070,3 +6070,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added lang/boomerang version 0.2 [wiz 2010-12-18]
 	Updated devel/cscope to 15.7anb1 [wiz 2010-12-18]
 	Updated textproc/mdocml to 1.10.6 [wiz 2010-12-18]
+	Updated www/contao29-translations to 20101214 [taca 2010-12-19]
