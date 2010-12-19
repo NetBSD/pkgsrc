@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2010/10/28 20:46:07 tonio Exp $
+# $NetBSD: Makefile,v 1.68 2010/12/19 08:27:17 is Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,6 +28,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.stub
 
 # Optional components built only on certain platforms.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "arm") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=	opt opt.opt
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
@@ -36,6 +37,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.opt
       empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) && \
       empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) && \
+      empty(MACHINE_PLATFORM:MNetBSD-*-arm) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
 PLIST_SRC+=	${PKGDIR}/PLIST.prof
 .  endif
