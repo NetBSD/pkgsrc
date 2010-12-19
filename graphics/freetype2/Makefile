@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2010/08/08 16:06:02 tnn Exp $
+# $NetBSD: Makefile,v 1.74.2.1 2010/12/19 03:47:00 sbd Exp $
 
-DISTNAME=	freetype-2.4.2
+DISTNAME=	freetype-2.4.3
 PKGNAME=	${DISTNAME:S/-/2-/}
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/} \
 		ftp://ring.aist.go.jp/pub/graphics/freetype/freetype2/
