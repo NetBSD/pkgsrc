@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2010/11/06 03:43:41 minskim Exp $
+# $NetBSD: Makefile,v 1.566 2010/12/19 02:14:34 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -417,6 +417,7 @@ SUBDIR+=	php-dom
 SUBDIR+=	php-enchant
 SUBDIR+=	php-intl
 SUBDIR+=	php-json
+SUBDIR+=	php-mecab
 SUBDIR+=	php-pspell
 SUBDIR+=	php-wddx
 SUBDIR+=	php-xsl
