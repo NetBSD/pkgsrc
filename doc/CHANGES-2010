@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4293 2010/12/19 02:17:08 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4294 2010/12/19 02:23:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6072,3 +6072,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/mdocml to 1.10.6 [wiz 2010-12-18]
 	Updated www/contao29-translations to 20101214 [taca 2010-12-19]
 	Added textproc/php-mecab version 0.4.1 [taca 2010-12-19]
+	Updated security/php-suhosin to 0.9.32.1 [taca 2010-12-19]
