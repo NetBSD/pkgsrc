@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/21 07:50:46 adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/19 09:53:26 adam Exp $
 
-PKGNAME=	postgresql90-${BASE_VERS}
+PKGNAME=	${DISTNAME:C/-/90-/}
 COMMENT=	Robust, next generation, object-relational DBMS
 
-DEPENDS+=	postgresql90-client>=${BASE_VERS}:../../databases/postgresql90-client
-DEPENDS+=	postgresql90-docs>=${BASE_VERS}:../../databases/postgresql90-docs
-DEPENDS+=	postgresql90-server>=${BASE_VERS}:../../databases/postgresql90-server
+DEPENDS+=	postgresql90-client>=${PKGVERSION_NOREV}:../../databases/postgresql90-client
+DEPENDS+=	postgresql90-docs>=${PKGVERSION_NOREV}:../../databases/postgresql90-docs
+DEPENDS+=	postgresql90-server>=${PKGVERSION_NOREV}:../../databases/postgresql90-server
 
 META_PACKAGE=	yes
 

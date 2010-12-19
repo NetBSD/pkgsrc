@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/10/03 07:55:59 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/19 09:53:28 adam Exp $
 
-PKGNAME=	postgresql90-docs-${BASE_VERS}
+PKGNAME=	${DISTNAME:C/-/90-docs-/}
 COMMENT=	PostgreSQL database documentation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -16,16 +16,7 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_TOOLS+=		gzip tar perl:build
 CONFIGURE_ENV+=		DOCBOOKSTYLE="${PREFIX}/share/sgml/docbook/dsssl/modular"
-INSTALL_DIRS+=	doc
 
-BUILD_DIRS=	${INSTALL_DIRS}
-
-post-install:
-	set -e; cd ${WRKSRC}/doc; for file in				\
-		KNOWN_BUGS MISSING_FEATURES README.* TODO		\
-		bug.template;						\
-	do								\
-		${INSTALL_DATA} $$file ${DESTDIR}${PG_DOC_DIR}/$$file;	\
-	done
+BUILD_DIRS=	doc
 
 .include "../../mk/bsd.pkg.mk"

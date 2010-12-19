@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2010/12/19 09:53:27 adam Exp $
+
+--- src/makefiles/Makefile.darwin.orig	2010-12-17 18:28:46.000000000 +0000
++++ src/makefiles/Makefile.darwin
+@@ -2,11 +2,7 @@ AROPT = crs
+  
+ DLSUFFIX = .so
+ 
+-ifdef PGXS
+-  BE_DLLLIBS = -bundle_loader $(bindir)/postgres
+-else
+-  BE_DLLLIBS = -bundle_loader $(top_builddir)/src/backend/postgres
+-endif
++BE_DLLLIBS = -bundle_loader $(bindir)/postgres
+ 
+ # Rule for building a shared library from a single .o file
+ %.so: %.o

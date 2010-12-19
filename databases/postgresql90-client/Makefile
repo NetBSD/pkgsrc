@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/11/03 14:36:41 adam Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/19 09:53:27 adam Exp $
 
-PKGNAME=	postgresql90-client-${BASE_VERS}
+PKGNAME=	${DISTNAME:C/-/90-client-/}
 COMMENT=	PostgreSQL database client programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -36,14 +36,12 @@ INSTALL_DIRS=	src/include
 INSTALL_DIRS+=	src/interfaces
 INSTALL_DIRS+=	src/bin
 INSTALL_DIRS+=	src/port
-
 BUILD_DIRS=	${INSTALL_DIRS}
-
 # Without this, the Darwin build fails (related to -bundle_loader).
 BUILD_DIRS+=	src/backend
 
-.for _file_ in pg_service.conf psqlrc
-CONF_FILES+=	${PG_DATA_DIR}/${_file_}.sample ${PG_ETC_DIR}/${_file_}
+.for f in pg_service.conf psqlrc
+CONF_FILES+=	${PREFIX}/share/postgresql/${f}.sample ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 # XXX work around core dumps with the native libedit
@@ -61,16 +59,16 @@ SUBST_SED.pgxs=		-e 's,${WRKDIR}/.tools,${PREFIX},'
 SUBST_SED.pgxs+=	-e 's,${WRKDIR}/.wrapper,${PREFIX},'
 SUBST_SED.pgxs+=	-e 's,${WRKSRC},/dev/null,'
 
-INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs
-INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs/config
-INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs/src
-INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs/src/makefiles
+INSTALLATION_DIRS+=	lib/postgresql/pgxs
+INSTALLATION_DIRS+=	lib/postgresql/pgxs/config
+INSTALLATION_DIRS+=	lib/postgresql/pgxs/src
+INSTALLATION_DIRS+=	lib/postgresql/pgxs/src/makefiles
 
-DEST_PG_PGXS=	${DESTDIR}${PG_PREFIX}/lib/postgresql/pgxs
-PG_PGXS_FILES=	config/install-sh
-PG_PGXS_FILES+=	src/makefiles/pgxs.mk src/Makefile.global
-PG_PGXS_FILES+=	src/Makefile.port src/Makefile.shlib
-PG_PGXS_FILES+=	src/nls-global.mk
+DEST_PGXS=	${DESTDIR}${PREFIX}/lib/postgresql/pgxs
+PGXS_FILES=	config/install-sh
+PGXS_FILES+=	src/makefiles/pgxs.mk src/Makefile.global
+PGXS_FILES+=	src/Makefile.port src/Makefile.shlib
+PGXS_FILES+=	src/nls-global.mk
 
 # On Solaris, avoid conflicts between "${SSLBASE}/include/openssl/des.h"
 # and "/usr/include/crypt.h" -- we want the definitions in the former.
@@ -80,8 +78,8 @@ post-wrapper:
 .endif
 
 post-install:
-	for file in ${PG_PGXS_FILES}; do				\
-		${INSTALL_DATA} ${WRKSRC}/$$file ${DEST_PG_PGXS}/$$file;\
+	set -e; for file in ${PGXS_FILES}; do				\
+		${INSTALL_DATA} ${WRKSRC}/$$file ${DEST_PGXS}/$$file;	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
