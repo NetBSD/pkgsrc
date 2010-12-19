@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4298 2010/12/19 10:00:04 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4299 2010/12/19 20:23:30 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6107,3 +6107,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/postgresql90-pltcl to 9.0.2 [adam 2010-12-19]
 	Updated databases/postgresql90-replicationtools to 9.0.2 [adam 2010-12-19]
 	Updated databases/postgresql90-upgrade to 9.0.2 [adam 2010-12-19]
+	Added sysutils/netbt-hcidump version 1.42 [plunky 2010-12-19]
