@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/04 12:44:23 adam Exp $
-${PG_SUBPREFIX}lib/postgresql/plperl.la
+@comment $NetBSD: PLIST,v 1.2 2010/12/19 09:53:53 adam Exp $
+lib/postgresql/plperl.la
