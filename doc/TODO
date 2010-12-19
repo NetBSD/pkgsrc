@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9956 2010/12/19 00:44:42 wiz Exp $
+$NetBSD: TODO,v 1.9957 2010/12/19 10:00:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -1093,9 +1093,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o posh-0.5.5
 	o postal-0.70
 	o postfix-2.7.2
-	o postgresql83-8.3.12
-	o postgresql84-8.4.5
-	o postgresql90-9.0.1
 	o prboom-2.5.0.8
 	o profit-2.5.3
 	o projclock-0.9
