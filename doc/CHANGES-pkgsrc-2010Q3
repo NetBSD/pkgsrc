@@ -116,3 +116,7 @@ security/p5-IO-Socket-SSL: security updated
 Pullup ticket #3301 - requested by tnn
 devel/xulrunner: security update
 www/firefox: security update
+Pullup ticket #3307 - requested by shannonjr
+security/pcsc-lite vulnerability
+Pullup ticket #3308 - requested by drochner
+security updates for freetype2
