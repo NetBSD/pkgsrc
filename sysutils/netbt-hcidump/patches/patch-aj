@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+
+--- parser/tcpip.c.orig	2007-02-18 03:39:02.000000000 +0000
++++ parser/tcpip.c
+@@ -32,8 +32,9 @@
+ #include <string.h>
+ #include <sys/types.h>
+ 
+-#include <net/ethernet.h>
++#include <net/if.h>
+ #include <netinet/in.h>
++#include <netinet/in_systm.h>
+ #include <netinet/ip.h>
+ #include <netinet/ip6.h>
+ #include <netinet/if_ether.h>
