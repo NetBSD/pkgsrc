@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4295 2010/12/19 03:04:25 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4296 2010/12/19 08:31:03 is Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6075,3 +6075,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/php-suhosin to 0.9.32.1 [taca 2010-12-19]
 	Updated devel/php-memcache to 5.3.4.2.2.6 [taca 2010-12-19]
 	Updated www/php-apc to 5.3.4.3.1.6 [taca 2010-12-19]
+	Updated lang/ocaml to 3.12.0nb2 [is 2010-12-19]
