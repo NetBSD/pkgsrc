@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2010/12/09 23:46:32 asau Exp $
+# $NetBSD: Makefile.common,v 1.16 2010/12/19 09:53:52 adam Exp $
 #
 # used by databases/postgresql83-adminpack/Makefile
 # used by databases/postgresql83-client/Makefile
@@ -12,52 +12,31 @@
 #
 # The PostgreSQL package naming scheme, aside from the obvious piecewise
 # packages, is as follows:
-#
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 
 .include "../../databases/postgresql83/Makefile.mirrors"
-.include "../../databases/postgresql83/options.mk"
 
-DISTNAME?=	postgresql-${DIST_VERS}
-CATEGORIES+=	databases
-MASTER_SITES?=	${PGSQL_MIRRORS:=source/v${DIST_VERS}/}
+DISTNAME=	postgresql-8.3.13
+CATEGORIES=	databases
+MASTER_SITES=	${PGSQL_MIRRORS:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	adam@NetBSD.org
-HOMEPAGE?=	http://www.postgresql.org/
+HOMEPAGE=	http://www.postgresql.org/
 
 CONFLICTS+=	postgresql-[0-9]*
-CONFLICTS+=	postgresql73-*
-CONFLICTS+=	postgresql74-*
-CONFLICTS+=	postgresql80-*
-CONFLICTS+=	postgresql81-*
-CONFLICTS+=	postgresql82-*
-CONFLICTS+=	postgresql84-*
+CONFLICTS+=	postgresql7[0-9]-*
+CONFLICTS+=	postgresql8[0-2]-*
+CONFLICTS+=	postgresql8[4-9]-*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql83/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../postgresql83/files
 PATCHDIR?=		${.CURDIR}/../postgresql83/patches
 
-# Version numbering scheme:
-# DIST_VERS		version number on the postgresql distfile
-# BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
-# Note: Do not forget jdbc-postgresql83 when updating version
-DIST_VERS?=		8.3.12
-BASE_VERS?=		${DIST_VERS}
-
-BUILDLINK_API_DEPENDS.postgresql83-client+=	postgresql83-client>=${BASE_VERS}
-
-GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bison gmake lex msgfmt
 PKG_SYSCONFSUBDIR=	postgresql
-
-# in 7.4.x/8.0.x, this is done by autoconf stuff which has leading whitespace
-USE_PKGLOCALEDIR=	yes
-SUBST_CLASSES+=		pglocale
-SUBST_FILES.pglocale=	configure config/programs.m4
-SUBST_STAGE.pglocale=	pre-configure
-SUBST_SED.pglocale=	-e 's|\( localedir[	 :]*=\).*|\1${PG_LOCALE_DIR}|'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -67,33 +46,18 @@ PG_TEMPLATE.IRIX=	irix5
 PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
-PG_SUBPREFIX=		# empty
-.if empty(PG_SUBPREFIX)
-PG_PREFIX=		${PREFIX}
-PLIST_SUBST+=		PG_SUBPREFIX=
-.else
-PG_PREFIX=		${PREFIX}/${PG_SUBPREFIX}
-BUILD_DEFS+=		PG_SUBPREFIX
-PLIST_SUBST+=		PG_SUBPREFIX=${PG_SUBPREFIX}/
-BUILDLINK_PASSTHRU_DIRS+=	${PG_PREFIX}
-.endif
-PG_DATA_DIR=		${PG_PREFIX}/share/postgresql
-PG_DOC_DIR=		${PG_PREFIX}/share/doc/postgresql
-PG_LOCALE_DIR=		${PG_PREFIX}/${PKGLOCALEDIR}/locale
-PG_ETC_DIR=		${PKG_SYSCONFDIR:S/^${PREFIX}\//${PG_PREFIX}\//}
-
-GNU_CONFIGURE_PREFIX=	${PG_PREFIX}
-CONFIGURE_ARGS+=	--sysconfdir=${PG_ETC_DIR}
-CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR}
-CONFIGURE_ARGS+=	--with-docdir=${PG_DOC_DIR}
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/postgresql
 CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
-CONFIGURE_ARGS+=	--without-readline
-CONFIGURE_ARGS+=	--without-zlib
-CONFIGURE_ARGS+=	--enable-nls
 
+CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-tcl
+CONFIGURE_ARGS+=	--without-zlib
 
 # Enable Bonjour on Mac OS X
 .if ${OPSYS} == "Darwin"
@@ -110,8 +74,6 @@ USE_LIBLTDL?=		yes
 .endif
 USE_LIBLTDL?=		no
 
-FILES_SUBST+=		PG_PREFIX=${PG_PREFIX:Q}
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 
 .if !defined(META_PACKAGE)
@@ -119,12 +81,10 @@ post-extract:
 	cp -f ${COMMON_FILESDIR}/Makefile.custom ${WRKSRC}/src/Makefile.custom
 	cp -f ${COMMON_FILESDIR}/Makefile.libtool ${WRKSRC}/src/Makefile.shlib
 .  if !empty(USE_LIBLTDL:M[yY][eE][sS])
-		template=${PG_TEMPLATE.${OPSYS}:Q}
 	cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
 		${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.h
 	${ECHO} "static int dummy = 0;" \
 		> ${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.c
-	fi
 .  endif
 	touch ${WRKSRC}/src/template/dragonfly
 	cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
@@ -145,15 +105,11 @@ post-extract:
 BUILD_DEFS+=	PGSQL_BLCKSZ
 
 .if defined(PGSQL_BLCKSZ)
-.PHONY: pgsql-blcksz
-pre-configure: pgsql-blcksz
-pgsql-blcksz:
-	for file in ${WRKSRC}/src/include/pg_config_manual.h; do	\
-		${SED} -e "/^#define[ 	]*BLCKSZ[ 	]*/s/^\(#define[ 	]*BLCKSZ\).*/\1	${PGSQL_BLCKSZ}/" $$file > $$file.new; \
-		${MV} -f $$file.new $$file;				\
-	done
+SUBST_CLASSES+=		blcksz
+SUBST_STAGE.blcksz=	pre-configure
+SUBST_MESSAGE.blcksz=	Adjusting BLCKSZ.
+SUBST_FILES.blcksz=	src/include/pg_config_manual.h
+SUBST_SED.blcksz=	-e 's,define BLCKSZ.*,define BLCKSZ ${PGSQL_BLCKSZ},'
 .endif
 
-
-# Help to generate PLIST
-PRINT_PLIST_AWK+=	{$$0 = "$${PG_SUBPREFIX}" $$0;}
+.include "../../databases/postgresql83/options.mk"
