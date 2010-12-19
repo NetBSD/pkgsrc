@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+
+--- parser/rfcomm.h.orig	2007-02-18 03:39:02.000000000 +0000
++++ parser/rfcomm.h
+@@ -25,7 +25,9 @@
+ #ifndef __RFCOMM_H
+ #define __RFCOMM_H
+ 
++#if 0
+ #include <endian.h>
++#endif
+ 
+ #define RFCOMM_PSM 3
+ 
