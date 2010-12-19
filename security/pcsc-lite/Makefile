@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/10/02 12:36:13 hasso Exp $
+# $NetBSD: Makefile,v 1.8.10.1 2010/12/19 03:43:01 sbd Exp $
 #
 
 DISTNAME=	pcsc-lite-1.5.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://alioth.debian.org/frs/download.php/3082/
 EXTRACT_SUFX=	.tar.bz2
