@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2010/11/03 14:36:40 adam Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/19 09:53:43 adam Exp $
 
-PKGNAME=	postgresql84-server-${BASE_VERS}
+PKGNAME=	${DISTNAME:C/-/84-server-/}
 COMMENT=	PostgreSQL database server programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -14,15 +14,17 @@ NOT_FOR_PLATFORM=	*-*-mips
 USE_LIBTOOL=		yes
 PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
-
 CONFIGURE_ARGS+=	--with-openssl
 
-BUILD_DIRS=		src/backend
-BUILD_DIRS+=		src/backend/utils/mb/conversion_procs
-BUILD_DIRS+=		src/backend/snowball
-BUILD_DIRS+=		src/timezone
-BUILD_DIRS+=		src/pl
+INSTALL_DIRS=	src/backend
+INSTALL_DIRS+=	src/backend/utils/mb/conversion_procs
+INSTALL_DIRS+=	src/backend/snowball
+INSTALL_DIRS+=	src/timezone
+INSTALL_DIRS+=	src/pl
+BUILD_DIRS=	src/port
+BUILD_DIRS+=	${INSTALL_DIRS}
+
+LIBS.SunOS+=	-lintl
 
 # PostgreSQL has loadable server-side language modules.
 #
@@ -62,7 +64,6 @@ PKG_GROUPS=		${PGGROUP}
 PKG_USERS=		${PGUSER}:${PGGROUP}
 PKG_GECOS.${PGUSER}=	PostgreSQL database administrator
 PKG_HOME.${PGUSER}=	${PGHOME}
-PKG_SHELL.${PGUSER}=	${SH}
 
 RCD_SCRIPTS=		pgsql
 
@@ -75,10 +76,5 @@ post-wrapper:
 .if ${OPSYS} == "SunOS"
 	touch ${BUILDLINK_DIR}/include/crypt.h
 .endif
-
-pre-build:
-	${RUN}${_ULIMIT_CMD}						\
-	cd ${WRKSRC}/src/port &&					\
-	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
 .include "../../mk/bsd.pkg.mk"
