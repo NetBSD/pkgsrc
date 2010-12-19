@@ -1,3 +1,5 @@
+$NetBSD: patch-ao,v 1.2 2010/12/19 09:53:41 adam Exp $
+
 --- contrib/dblink/dblink.c.orig	2010-08-01 14:56:33.000000000 +0200
 +++ contrib/dblink/dblink.c	2010-08-01 14:56:47.000000000 +0200
 @@ -58,7 +58,7 @@
