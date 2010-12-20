@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2010/11/05 22:20:57 tonio Exp $
+# $NetBSD: Makefile,v 1.49 2010/12/20 10:49:06 tonio Exp $
 #
 
-DISTNAME=		bitlbee-3.0
+DISTNAME=		bitlbee-3.0.1
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -70,7 +70,7 @@ CONFIGURE_ARGS+=	--ipv6=0
 .endif
 
 RCD_SCRIPTS=		bitlbee
-RCD_SCRIPT_SRC.estd=	${FILESDIR}/bitlbee.sh
+RCD_SCRIPT_SRC.bitlbee=	${FILESDIR}/bitlbee.sh
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
