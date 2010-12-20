@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2006/07/02 10:37:29 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2010/12/20 08:40:19 he Exp $
+
+Redefine where we install this package.
 
 --- Makefile.config.orig	2005-01-10 11:38:22.000000000 +0100
 +++ Makefile.config
@@ -10,7 +12,7 @@ $NetBSD: patch-aa,v 1.2 2006/07/02 10:37:29 rillig Exp $
 +ifdef PREFIX
 +UPREFIX    = $(DESTDIR)$(PREFIX)
 +else
-+UPREFIX=   = $(DESTDIR)/usr/pkg
++UPREFIX=   = $(DESTDIR)$(LOCALBASE)
 +endif
  
  # Where Munin keeps its configurations (server.conf, client.conf, ++)
