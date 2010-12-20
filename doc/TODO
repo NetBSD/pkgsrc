@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9960 2010/12/20 21:42:12 wiz Exp $
+$NetBSD: TODO,v 1.9961 2010/12/20 21:46:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -894,6 +894,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.0
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o libraw-0.12.1
 	o librep-0.91.0
 	o libsigsegv-2.9
 	o libssh-0.4.6
@@ -1131,7 +1132,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-markdown-2.0.3 [pkg/43448]
 	o py-matplotlib-0.99.3
 	o py-networkx-1.2 [pkg/43790]
-	o py-psycopg2-2.3.0
+	o py-psycopg2-2.3.2
 	o py-sybase-0.37
 	o py-twisted-10.2.0
 	o py-uwsgi-0.9.5.1 [pkg/43400]
@@ -1285,6 +1286,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-1.4.2 [GNOME 2.32]
 	o top-3.8beta1
+	o tor-0.2.1.28
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.12.1
