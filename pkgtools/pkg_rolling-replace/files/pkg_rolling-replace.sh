@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.28 2010/02/11 12:54:27 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.29 2010/12/20 15:24:24 gdt Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -413,13 +413,16 @@ while [ -n "$REPLACE_TODO" ]; do
 
     echo "${OPI} Tsorting dependency graph"
     TSORTED=$(echo $DEPGRAPH_INSTALLED $DEPGRAPH_SRC | tsort)
+    pkgdir=
     for pkg in $TSORTED; do
         if is_member $pkg $REPLACE_TODO; then
+	    pkgdir=$(${PKG_INFO} -Q PKGPATH $pkg)
+	    [ -n "$pkgdir" ] || abort "Couldn't extract PKGPATH from installed package $pkg"
             break;
         fi
     done
-    pkgdir=$(${PKG_INFO} -Q PKGPATH $pkg)
-    [ -n "$pkgdir" ] || abort "Couldn't extract PKGPATH from installed package $pkg"
+    # loop should never exit without selecting a package
+    [ -n "$pkgdir" ] || abort "pkg_chk reports the following packages need replacing, but they are not installed: $REPLACE_TODO"
 
     echo "${OPI} Selecting $pkg ($pkgdir) as next package to replace"
     sleep 1
