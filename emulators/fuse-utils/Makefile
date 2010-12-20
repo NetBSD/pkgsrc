@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2009/01/15 11:50:06 adam Exp $
+# $NetBSD: Makefile,v 1.18 2010/12/20 20:54:35 adam Exp $
 
-DISTNAME=	fuse-utils-0.10.0.1
+DISTNAME=	fuse-utils-1.0.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fuse-emulator.sourceforge.net/
 COMMENT=	ZX Spectrum Emulator utilities
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
