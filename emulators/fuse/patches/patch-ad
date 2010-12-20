@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/12/20 20:53:47 adam Exp $
+
+--- ui/gtk/Makefile.in.orig	2010-12-20 20:19:38.000000000 +0000
++++ ui/gtk/Makefile.in
+@@ -256,7 +256,7 @@ libuigtk_la_SOURCES = binary.c \
+ 		     statusbar.c \
+ 		     stock.c
+ 
+-libuigtk_la_LIBADD = @GTK_LIBS@ -lX11 
++libuigtk_la_LIBADD = @GTK_LIBS@
+ BUILT_SOURCES = keysyms.c \
+ 		menu_data.c \
+ 		options.c \
