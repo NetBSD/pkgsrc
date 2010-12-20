@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.33 2010/11/15 22:56:55 abs Exp $
+# $NetBSD: Makefile,v 1.34 2010/12/20 20:53:47 adam Exp $
 
-DISTNAME=	fuse-0.10.0.2
-PKGREVISION=	4
+DISTNAME=	fuse-1.0.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fuse-emulator.sourceforge.net/
 COMMENT=	ZX Spectrum Emulator
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 
+CPPFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
 LIBS+=			${LIBOSSAUDIO}
 
 .include "options.mk"
