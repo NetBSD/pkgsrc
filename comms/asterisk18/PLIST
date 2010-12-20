@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/20 04:06:16 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -214,7 +214,7 @@ ${PLIST.unixodbc}lib/asterisk/modules/cdr_odbc.so
 lib/asterisk/modules/cdr_syslog.so
 lib/asterisk/modules/cel_custom.so
 lib/asterisk/modules/cel_manager.so
-lib/asterisk/modules/cel_odbc.so
+${PLIST.unixodbc}lib/asterisk/modules/cel_odbc.so
 lib/asterisk/modules/chan_agent.so
 lib/asterisk/modules/chan_bridge.so
 lib/asterisk/modules/chan_iax2.so
