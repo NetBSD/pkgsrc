@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.41 2010/11/07 14:52:47 tonio Exp $
+# $NetBSD: options.mk,v 1.42 2010/12/20 14:03:39 tonio Exp $
 
 # Global and legacy options
 
@@ -8,8 +8,8 @@ PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-smtp
 # Comment the following line out on updates.
-#PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
-#PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
+PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
+PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
 #PKG_SUPPORTED_OPTIONS+=	mutt-xlabel
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
@@ -105,10 +105,17 @@ CONFIGURE_ARGS+=	--disable-hcache
 ### Compressed mail boxes
 ###
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
-PATCH_SITES=		http://www.spinnaker.de/mutt/compressed/
-PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.1.gz
+PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
+PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
 PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--enable-compressed
+SUBST_CLASSES+=		compress
+SUBST_MESSAGE.compress=	Patch Makefile.in to avoid autoreconf for compress
+SUBST_STAGE.compress=	post-patch
+SUBST_FILES.compress=	Makefile.in
+SUBST_SED.compress=	-e 's,^mutt_SOURCES = ,mutt_SOURCES = compress.c ,'
+SUBST_SED.compress+=	-e 's,^EXTRA_DIST = ,EXTRA_DIST = compress.h ,'
+SUBST_SED.compress+=	-e 's,^mutt_OBJECTS = ,mutt_OBJECTS = compress.o ,'
 .endif
 
 ###
@@ -124,10 +131,16 @@ CONFIGURE_ARGS+=	--disable-smtp
 ### Sidebar support
 ###
 .if !empty(PKG_OPTIONS:Mmutt-sidebar)
-PATCH_SITES=		http://lunar-linux.org/~tchan/mutt/
-PATCHFILES+=		patch-1.5.20.sidebar.20090619.txt
+PATCH_SITES+=		http://spacehopper.org/mutt/
+PATCHFILES+=		sidebar-5302767aa6aa.gz
 PATCH_DIST_STRIP=	-p1
 PATCH_FUZZ_FACTOR=	-F1
+SUBST_CLASSES+=		sidebar
+SUBST_MESSAGE.sidebar=	Patch Makefile.in to avoid autoreconf for sidebar
+SUBST_STAGE.sidebar=	post-patch
+SUBST_FILES.sidebar=	Makefile.in
+SUBST_SED.sidebar=	-e 's,lib.c \\,lib.c sidebar.c \\,'
+SUBST_SED.sidebar+=	-e 's, lib\.\(.(OBJEXT)\), lib.\1 sidebar.\1,'
 .endif
 
 ###
