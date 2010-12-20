@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/12/15 22:33:41 jmcneill Exp $
+# $NetBSD: Makefile,v 1.33 2010/12/20 14:17:01 tez Exp $
 
 DISTNAME=	mDNSResponder-214.3.2
 PKGREVISION=	1
@@ -60,6 +60,8 @@ MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs:Q}/lib\ ${BUILDLINK_LDF
 .else
 MAKE_ENV+=	EXTRA_LIBS=
 .endif
+
+LDFLAGS.SunOS+=	-lsocket
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mDNSResponder
 PKG_SUPPORTED_OPTIONS=	inet6
