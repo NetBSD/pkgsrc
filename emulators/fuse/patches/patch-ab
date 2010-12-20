@@ -1,13 +1,27 @@
-$NetBSD: patch-ab,v 1.4 2008/12/04 07:40:20 adam Exp $
+$NetBSD: patch-ab,v 1.5 2010/12/20 20:53:47 adam Exp $
 
---- sound/Makefile.in.orig	2008-12-03 20:17:17.000000000 +0100
-+++ sound/Makefile.in
-@@ -83,7 +83,7 @@ CFLAGS = @CFLAGS@
- COMPAT_OSNAME = @COMPAT_OSNAME@
- COMPAT_SUBDIR = @COMPAT_SUBDIR@
- CPP = @CPP@
--CPPFLAGS = @CPPFLAGS@
-+CPPFLAGS = @CPPFLAGS@ -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
- CXX = @CXX@
- CXXCPP = @CXXCPP@
- CXXDEPMODE = @CXXDEPMODE@
+--- ui/gtk/gtkmouse.c.orig	2010-12-20 19:58:23.000000000 +0000
++++ ui/gtk/gtkmouse.c
+@@ -32,8 +32,10 @@
+ #include "ui/ui.h"
+ 
+ /* For XWarpPointer *only* - see below */
++#ifndef GDK_WINDOWING_QUARTZ
+ #include <gdk/gdkx.h>
+ #include <X11/Xlib.h>
++#endif
+ 
+ /* GDK1 bits */
+ #ifndef GDK_GRAB_SUCCESS
+@@ -53,9 +55,11 @@ gtkmouse_reset_pointer( void )
+    * For Win32, use SetCursorPos() -- see sdpGtkWarpPointer() at
+    * http://k3d.cvs.sourceforge.net/k3d/projects/sdplibs/sdpgtk/sdpgtkutility.cpp?view=markup
+    */
++#ifndef GDK_WINDOWING_QUARTZ
+   XWarpPointer( GDK_WINDOW_XDISPLAY( gtkui_drawing_area->window ), None,
+ 		GDK_WINDOW_XWINDOW( gtkui_drawing_area->window ),
+ 		0, 0, 0, 0, 128, 128 );
++#endif
+ }
+ 
+ gboolean
