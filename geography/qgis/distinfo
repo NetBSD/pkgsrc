@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/27 11:42:58 adam Exp $
+$NetBSD: distinfo,v 1.2 2010/12/21 17:48:13 adam Exp $
 
-SHA1 (qgis_1.5.0.tar.gz) = f17b1a1175bdfad6f8a005470bfbb70eaeaf806a
-RMD160 (qgis_1.5.0.tar.gz) = bd371640740c4f6d589d5bb9f2677a0de46d4895
-Size (qgis_1.5.0.tar.gz) = 17360308 bytes
+SHA1 (qgis-1.6.0.tar.bz2) = 815e7d7f465f878c37866b0bc38345bbd76541cc
+RMD160 (qgis-1.6.0.tar.bz2) = e98aef1bf5290dc7f4433fc1ec648ad13273604c
+Size (qgis-1.6.0.tar.bz2) = 17479207 bytes
 SHA1 (patch-ab) = 59a6f7305ae86664cad08d3d65f6450e64822535
 SHA1 (patch-ac) = 4f5fff981f42e6fbd4ed87ef67564c8999ee0914
 SHA1 (patch-ad) = 47c48d236079369a61e1c6c2522cddfb04e344f0

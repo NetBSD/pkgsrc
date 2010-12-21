@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/11/15 22:57:07 abs Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/21 17:48:13 adam Exp $
 
-DISTNAME=	qgis_1.5.0
-PKGNAME=	qgis-1.5.0
-PKGREVISION=	2
+DISTNAME=	qgis-1.6.0
 CATEGORIES=	geography
-MASTER_SITES=	http://download.osgeo.org/qgis/src/
+MASTER_SITES=	http://qgis.org/downloads/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://www.qgis.org/
@@ -30,7 +29,9 @@ USE_X11=		yes
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../www/fcgi/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qwt-qt4/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
