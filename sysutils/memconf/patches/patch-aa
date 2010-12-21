@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2010/12/21 22:43:17 shattered Exp $
+
+--- memconf.orig	2010-12-21 22:36:03.000000000 +0000
++++ memconf
+@@ -150,6 +150,7 @@ $uname="/bin/uname" if (-x '/bin/uname')
+ if (-x $uname) {
+ 	$os=&mychomp(`$uname`);
+ 	$os="Linux" if ("$os" eq "FreeBSD");
++	$os="Linux" if ("$os" eq "NetBSD");
+ 	$hostname=&mychomp(`$uname -n`);
+ 	if ("$os" eq "AIX") {
+ 		$machine=&mychomp(`$uname -M`);
