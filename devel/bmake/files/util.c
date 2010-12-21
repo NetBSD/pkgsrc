@@ -1,18 +1,18 @@
-/*	$NetBSD: util.c,v 1.8 2010/09/07 14:28:01 joerg Exp $	*/
+/*	$NetBSD: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.8 2010/09/07 14:28:01 joerg Exp $
+ *	$Id: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $
  */
 
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.8 2010/09/07 14:28:01 joerg Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.8 2010/09/07 14:28:01 joerg Exp $");
+__RCSID("$NetBSD: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $");
 #endif
 #endif
 
@@ -376,7 +376,10 @@ bmake_signal(int s, void (*a)(int)))(int)
 
     sa.sa_handler = a;
     sigemptyset(&sa.sa_mask);
-    sa.sa_flags = SA_RESTART;
+    sa.sa_flags = 0;
+#ifdef SA_RESTART
+    sa.sa_flags |= SA_RESTART;
+#endif
 
     if (sigaction(s, &sa, &osa) == -1)
 	return SIG_ERR;
