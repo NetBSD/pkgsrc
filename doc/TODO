@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9963 2010/12/21 12:56:18 jmmv Exp $
+$NetBSD: TODO,v 1.9964 2010/12/21 22:46:03 shattered Exp $
 
 Suggested new packages
 ======================
@@ -935,7 +935,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mathomatic-15.3.6
 	o mawk-1.3.4.20100625
 	o mc-4.7.0.9
-	o memconf-2.9 [pkg/40201]
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
 	o merb-activerecord-1.0.0.1
