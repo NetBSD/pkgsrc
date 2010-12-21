@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4305 2010/12/20 20:56:00 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4306 2010/12/21 00:11:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6116,3 +6116,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/libspectrum to 1.0.0 [adam 2010-12-20]
 	Updated emulators/fuse to 1.0.0 [adam 2010-12-20]
 	Updated emulators/fuse-utils to 1.0.0 [adam 2010-12-20]
+	Updated net/tor to 0.2.1.28 [gdt 2010-12-21]
