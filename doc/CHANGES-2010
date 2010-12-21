@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4307 2010/12/21 11:28:23 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4308 2010/12/21 12:56:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6118,3 +6118,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/fuse-utils to 1.0.0 [adam 2010-12-20]
 	Updated net/tor to 0.2.1.28 [gdt 2010-12-21]
 	Added devel/cutter version 1.1.5 [obache 2010-12-21]
+	Updated misc/tmux to 1.3 [jmmv 2010-12-21]
