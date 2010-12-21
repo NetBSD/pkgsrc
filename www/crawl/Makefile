@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/02/16 18:11:52 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/21 08:17:27 obache Exp $
 
 DISTNAME=	crawl-0.4
 PKGREVISION=	8
@@ -13,6 +13,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_DB185=	yes
+
+# BDB detection is not sufficient, specify manually instead.
+CONFIGURE_ARGS+=	--with-db=yes
+CONFIGURE_ENV+=		DBLIB=${BDB_LIBS:Q}
+CPPFLAGS+=		-DHAVE_DB_185_H
 
 CONF_FILES=	${PREFIX}/share/examples/crawl/crawl.conf ${PKG_SYSCONFDIR}/crawl.conf
 
