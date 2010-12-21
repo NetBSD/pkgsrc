@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2010/02/22 19:07:42 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2010/12/21 12:55:55 jmmv Exp $
 
---- configure.orig	2009-10-25 22:09:56.000000000 +0000
+--- configure.orig	2010-06-06 13:00:47.000000000 +0000
 +++ configure
-@@ -200,7 +200,7 @@ SRCS+= osdep-darwin.c \
+@@ -205,7 +205,7 @@ SRCS+= osdep-darwin.c \
  EOF
  	;;
  # ------------------------------------------------------------------------------
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.6 2010/02/22 19:07:42 drochner Exp $
 +    FreeBSD)
  	cat <<EOF >>$CONFIG_H
  #define HAVE_ASPRINTF
- #define HAVE_BZERO
-@@ -230,6 +230,38 @@ SRCS+= osdep-freebsd.c \
+ #define HAVE_BROKEN_KQUEUE
+@@ -236,6 +236,38 @@ SRCS+= osdep-freebsd.c \
  EOF
  	;;
  # ------------------------------------------------------------------------------
@@ -50,12 +50,3 @@ $NetBSD: patch-ab,v 1.6 2010/02/22 19:07:42 drochner Exp $
      NetBSD)
  	cat <<EOF >>$CONFIG_H
  #define HAVE_ASPRINTF
-@@ -252,7 +284,7 @@ EOF
- 	cat <<EOF >>$CONFIG_MK
- CPPFLAGS+= -I/usr/pkg/include
- LDFLAGS+= -L/usr/pkg/lib
--LIBS+= -lncurses -lcrypt -lutil
-+LIBS+= -lcurses -lcrypt -lutil
- SRCS+= osdep-netbsd.c \
- 	compat/strtonum.c \
- 	compat/vis.c \
