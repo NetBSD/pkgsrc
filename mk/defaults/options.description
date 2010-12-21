@@ -168,6 +168,7 @@ gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
 gnutls			Enable GNU TLS support.
+goffice			Enable goffice support.
 gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
 gqmpeg-japanese		Japanese ID3 tag support.
@@ -302,6 +303,7 @@ libmp4v2		Enable libmp4v2 (MP4) support.
 libmtp			Enable MTP via libmtp support.
 libofx			Enable OFX support.
 libsmi			Use libsmi for SMI MIB support.
+libsoup			Use libsoup for SOUP support.
 libspiff		Use libspiff for XML shareable playlist support.
 libssh2 	 	Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
