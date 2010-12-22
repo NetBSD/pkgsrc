@@ -1,0 +1,9 @@
+$NetBSD: patch-bf,v 1.1 2010/12/22 04:28:53 jnemeth Exp $
+
+--- main/netsock.c.orig	2009-10-08 19:35:30.000000000 +0000
++++ main/netsock.c
+@@ -31,3 +31,3 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
+ 
+-#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__Darwin__)
++#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__Darwin__) || (__DragonFly__)
+ #include <net/if_dl.h>
