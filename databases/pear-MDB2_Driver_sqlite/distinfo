@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/01/19 20:14:16 abs Exp $
+$NetBSD: distinfo,v 1.3 2010/12/22 15:23:25 taca Exp $
 
-SHA1 (pear/MDB2_Driver_sqlite-1.5.0b2.tgz) = b2a1f8b57986e5980f6600673b4608d793160c66
-RMD160 (pear/MDB2_Driver_sqlite-1.5.0b2.tgz) = ea3f7b524f43ab26798c26efcfb2ccab90b8437d
-Size (pear/MDB2_Driver_sqlite-1.5.0b2.tgz) = 36186 bytes
-SHA1 (patch-aa) = 7612b6d08e897749b8da8ef80eeab995fedf62ee
+SHA1 (pear/MDB2_Driver_sqlite-1.5.0b3.tgz) = 94d0cb59d5ad816d22abd43c4cf795f733b0bf0b
+RMD160 (pear/MDB2_Driver_sqlite-1.5.0b3.tgz) = e439306b776c943c174277b2d9eecc0a7d6a1149
+Size (pear/MDB2_Driver_sqlite-1.5.0b3.tgz) = 36441 bytes
+SHA1 (patch-ab) = 740b4ca7f7a43b3869897fa924da996a55365fe3
