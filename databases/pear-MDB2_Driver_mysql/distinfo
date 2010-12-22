@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/12/22 15:21:06 taca Exp $
+$NetBSD: distinfo,v 1.6 2010/12/22 15:29:34 taca Exp $
 
-SHA1 (pear/MDB2_Driver_mysql-1.5.0b2.tgz) = 3ae1d579ace24ec7ccbb769b7e6693c8a64e686e
-RMD160 (pear/MDB2_Driver_mysql-1.5.0b2.tgz) = a1280d4d2aacc664e602950b978fac08613c1367
-Size (pear/MDB2_Driver_mysql-1.5.0b2.tgz) = 45456 bytes
-SHA1 (patch-aa) = 7db47f47930ee44579b034075dd00b70627841ff
+SHA1 (pear/MDB2_Driver_mysql-1.5.0b3.tgz) = 26cdb9ec37a6f0324803bc40b6224ff31ad34939
+RMD160 (pear/MDB2_Driver_mysql-1.5.0b3.tgz) = 0be1f58a1ae7b0483791a91123a7d46a174b6504
+Size (pear/MDB2_Driver_mysql-1.5.0b3.tgz) = 45734 bytes
+SHA1 (patch-aa) = ce2847873a620145b4f961fa35427b102f8f5c80
