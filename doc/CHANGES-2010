@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4313 2010/12/22 10:34:25 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4314 2010/12/22 12:50:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6124,3 +6124,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/net-snmp to 5.4.3nb2 [sekiya 2010-12-22]
 	Updated pkgtools/rpm2pkg to 3.1.7 [tron 2010-12-22]
 	Updated sysutils/cdrtools to 3.01alpha02 [wiz 2010-12-22]
+	Updated graphics/digikam to 1.7.0 [wiz 2010-12-22]
