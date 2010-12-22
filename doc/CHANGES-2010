@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4322 2010/12/22 16:03:44 gls Exp $
+$NetBSD: CHANGES-2010,v 1.4323 2010/12/22 21:30:32 he Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6142,3 +6142,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/pear-File_Find to 1.3.1 [taca 2010-12-22]
 	Updated www/pear-HTML_TreeMenu to 1.2.2 [taca 2010-12-22]
 	Updated graphics/libraw to 0.12.1 [gls 2010-12-22]
+	Updated lang/parrot to 2.11.0 [he 2010-12-22]
