@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/22 15:12:29 taca Exp $
+
+SHA1 (pear/I18N_UnicodeNormalizer-1.0.0.tgz) = 9386143d6d89505d2c43c33a67d18cd363fafd09
+RMD160 (pear/I18N_UnicodeNormalizer-1.0.0.tgz) = e998497670f415fdc5a395403e53614a71ad057d
+Size (pear/I18N_UnicodeNormalizer-1.0.0.tgz) = 2154776 bytes
