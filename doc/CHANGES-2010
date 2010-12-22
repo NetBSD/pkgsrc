@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4311 2010/12/22 08:15:26 sekiya Exp $
+$NetBSD: CHANGES-2010,v 1.4312 2010/12/22 09:36:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6122,3 +6122,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/qgis to 1.6.0 [adam 2010-12-21]
 	Updated sysutils/memconf to 2.16 [shattered 2010-12-22]
 	Updated net/net-snmp to 5.4.3nb2 [sekiya 2010-12-22]
+	Updated pkgtools/rpm2pkg to 3.1.7 [tron 2010-12-22]
