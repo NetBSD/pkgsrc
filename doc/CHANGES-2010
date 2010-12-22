@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4315 2010/12/22 12:59:48 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4316 2010/12/22 15:14:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6126,3 +6126,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/cdrtools to 3.01alpha02 [wiz 2010-12-22]
 	Updated graphics/digikam to 1.7.0 [wiz 2010-12-22]
 	Updated graphics/kipi-plugins to 1.7.0 [wiz 2010-12-22]
+	Added converters/pear-I18n_UnicodeNormalizer version 1.0.0 [taca 2010-12-22]
