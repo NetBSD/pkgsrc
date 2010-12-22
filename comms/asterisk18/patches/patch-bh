@@ -1,0 +1,13 @@
+$NetBSD: patch-bh,v 1.1 2010/12/22 04:28:53 jnemeth Exp $
+
+--- main/asterisk.c.orig	2010-11-11 19:42:06.000000000 +0000
++++ main/asterisk.c
+@@ -85,7 +85,7 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
+ #include <sys/sysctl.h>
+ #if !defined(__OpenBSD__)
+ #include <sys/vmmeter.h>
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <vm/vm_param.h>
+ #endif
+ #endif
