@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
+$NetBSD: patch-aa,v 1.7 2010/12/22 19:44:24 chuck Exp $
 
---- configure.orig	2003-09-21 11:31:30.000000000 +0000
-+++ configure
-@@ -1247,7 +1247,7 @@ EOF
+--- configure.orig	2003-09-21 07:31:30.000000000 -0400
++++ configure	2010-12-22 13:41:03.000000000 -0500
+@@ -1247,7 +1247,7 @@
  
      DEFAULT_DEFAULT_wxUSE_MOTIF=1
    ;;
@@ -11,7 +11,29 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
      USE_BSD=1
      USE_FREEBSD=1
      cat >> confdefs.h <<\EOF
-@@ -11436,6 +11436,7 @@ EOF
+@@ -1396,6 +1396,21 @@
+     DEFAULT_DEFAULT_wxUSE_MAC=1
+   ;;
+ 
++  i386-*-darwin* )
++        USE_BSD=1
++    USE_DARWIN=1
++    SO_SUFFIX=dylib
++    cat >> confdefs.h <<\EOF
++#define __BSD__ 1
++EOF
++
++    cat >> confdefs.h <<\EOF
++#define __DARWIN__ 1
++EOF
++
++    DEFAULT_DEFAULT_wxUSE_MAC=1
++  ;;
++
+   *-*-beos* )
+         USE_BEOS=1
+     cat >> confdefs.h <<\EOF
+@@ -11436,6 +11451,7 @@
  
  
  SEARCH_INCLUDE="\
@@ -19,7 +41,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
      /usr/local/include        \
                                \
      /usr/Motif-1.2/include    \
-@@ -11500,7 +11501,7 @@ SEARCH_INCLUDE="\
+@@ -11500,7 +11516,7 @@
                                \
      /usr/openwin/share/include"
  
@@ -28,7 +50,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
  
  
  cat > confcache <<\EOF
-@@ -11972,9 +11973,9 @@ fi
+@@ -11972,9 +11988,9 @@
  echo "$ac_t""$ac_cv_header_png_h" 1>&6
  
              if test "$ac_cv_header_png_h" = "yes"; then
@@ -41,7 +63,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -11986,10 +11987,10 @@ cat > conftest.$ac_ext <<EOF
+@@ -11986,10 +12002,10 @@
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
      builtin and then its argument prototype would still apply.  */
@@ -54,7 +76,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
  ; return 0; }
  EOF
  if { (eval echo configure:11996: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-@@ -13381,6 +13382,101 @@ echo "configure:13351: checking PANGOFT2
+@@ -13381,6 +13397,101 @@
    fi
  
              fi
@@ -156,7 +178,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
          else
              if test "$wxUSE_UNICODE" = "yes"; then
                  echo "configure: warning: Unicode configuration not supported with GTK+ 1.x" 1>&2
-@@ -16104,8 +16200,8 @@ esac
+@@ -16104,8 +16215,8 @@
  WX_LIBRARY_NAME_STATIC="lib${WX_LIBRARY}.a"
  WX_LIBRARY_NAME_STATIC_GL="lib${WX_LIBRARY_GL}.a"
  
@@ -167,7 +189,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
  
  if test "$wxUSE_OPENGL" = "yes"; then
      WXCONFIG_LIBS_GL="-l${WX_LIBRARY_GL} ${OPENGL_LIBS}"
-@@ -16331,7 +16427,7 @@ fi
+@@ -16331,7 +16442,7 @@
        *-*-sunos4* | \
        *-*-osf* | \
        *-*-dgux5* | \
@@ -176,7 +198,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
                ;;
  
        *)
-@@ -18668,6 +18764,9 @@ if test "$TOOLKIT" != "MSW" -a "$TOOLKIT
+@@ -18668,6 +18779,9 @@
                      THREAD_OPTS="-mt $THREAD_OPTS"
                  fi
                  ;;
@@ -186,7 +208,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
            *-*-freebsd*)
                                                  THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
                  ;;
-@@ -18751,7 +18850,7 @@ echo "configure:18748: checking if more 
+@@ -18751,7 +18865,7 @@
                                                                                                                  LDFLAGS="-L/usr/lib/threads $LDFLAGS"
                  flag="-D_THREAD_SAFE"
                  ;;
@@ -195,7 +217,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/18 10:05:08 obache Exp $
                  flag="-D_THREAD_SAFE"
                  ;;
              *-hp-hpux* )
-@@ -22777,6 +22876,7 @@ s%@WX_RELEASE_NUMBER@%$WX_RELEASE_NUMBER
+@@ -22777,6 +22891,7 @@
  s%@WX_LIBRARY_NAME_STATIC@%$WX_LIBRARY_NAME_STATIC%g
  s%@WX_LIBRARY_NAME_SHARED@%$WX_LIBRARY_NAME_SHARED%g
  s%@WX_LIBRARY_BASENAME@%$WX_LIBRARY_BASENAME%g
