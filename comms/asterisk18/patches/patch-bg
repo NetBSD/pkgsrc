@@ -1,4 +1,4 @@
-$NetBSD: patch-bg,v 1.1 2010/12/22 04:28:53 jnemeth Exp $
+$NetBSD: patch-bg,v 1.2 2010/12/22 08:25:58 jnemeth Exp $
 
 --- main/Makefile.orig	2010-08-02 14:41:46.000000000 +0000
 +++ main/Makefile
@@ -6,7 +6,7 @@ $NetBSD: patch-bg,v 1.1 2010/12/22 04:28:53 jnemeth Exp $
    AST_LIBS+=-lcrypto -lpthread -lm $(EDITLINE_LIB)
  endif
  
-+ifeq ($(OSARCH),OpenBSD)
++ifeq ($(OSARCH),dragonfly)
 +  AST_LIBS+=-lpthread
 +endif
 +
