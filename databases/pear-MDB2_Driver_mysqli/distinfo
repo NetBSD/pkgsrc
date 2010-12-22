@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/22 15:34:53 taca Exp $
+
+SHA1 (pear/MDB2_Driver_mysqli-1.5.0b3.tgz) = 762a56401e17cb72cf995198ba3a4d152d5ea3ec
+RMD160 (pear/MDB2_Driver_mysqli-1.5.0b3.tgz) = 3e92cc727f35187d7be9587e54269ca3fcaacb62
+Size (pear/MDB2_Driver_mysqli-1.5.0b3.tgz) = 47380 bytes
+SHA1 (patch-aa) = d13806f813fd1855a1468ad24e3e6f9be3c331e3
