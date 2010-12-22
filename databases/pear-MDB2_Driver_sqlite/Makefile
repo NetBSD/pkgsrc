@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/03/15 16:45:59 taca Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/22 15:23:25 taca Exp $
 
-DISTNAME=	MDB2_Driver_sqlite-1.5.0b2
+DISTNAME=	MDB2_Driver_sqlite-1.5.0b3
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
