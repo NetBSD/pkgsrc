@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4318 2010/12/22 15:36:48 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4319 2010/12/22 15:39:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6132,3 +6132,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/pear-MDB2_Driver_pgsql to 1.5.0b3 [taca 2010-12-22]
 	Updated databases/pear-MDB2_Driver_sqlite to 1.5.0b3 [taca 2010-12-22]
 	Added databases/pear-MDB2_Driver_mysqli version 1.5.0b3 [taca 2010-12-22]
+	Updated graphics/pear-Image_Graph to 0.8.0 [taca 2010-12-22]
