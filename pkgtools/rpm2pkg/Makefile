@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2010/11/11 13:07:34 tron Exp $
+# $NetBSD: Makefile,v 1.54 2010/12/22 09:36:35 tron Exp $
 
-DISTNAME=	rpm2pkg-3.1.6
+DISTNAME=	rpm2pkg-3.1.7
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,11 +16,11 @@ CONFLICTS+=	suse-base<=6.4
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c99
-USE_TOOLS+=	lzcat:run
+USE_TOOLS+=	xzcat:run
 WRKSRC=		${WRKDIR}
 
 CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} ${BUILDLINK_CPPFLAGS.rpm} \
-		${BUILDLINK_CPPFLAGS.zlib} -DLZCAT=\"${TOOLS_PATH.lzcat:Q}\"
+		${BUILDLINK_CPPFLAGS.zlib} -DXZCAT=\"${TOOLS_PATH.xzcat:Q}\"
 LIBS+=		-lintl -lz -lbz2
 
 .include "../../mk/compiler.mk"

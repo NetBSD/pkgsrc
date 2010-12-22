@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.18 2010/11/11 13:07:34 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.19 2010/12/22 09:36:35 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2010 The NetBSD Foundation, Inc.
@@ -314,7 +314,7 @@ Open(int fd)
 		}
 	} else {
 		/* lzma ... hopefully */
-#ifdef LZCAT
+#ifdef XZCAT
 		int	pfds[2];
 		char	*path, *argv[3];
 		pid_t	pid;
@@ -324,7 +324,7 @@ Open(int fd)
 			return (NULL);
 		}
 
-		path = LZCAT;
+		path = XZCAT;
 		argv[0] = strrchr(path, '/');
 		if (argv[0] == NULL)
 			argv[0] = path;
