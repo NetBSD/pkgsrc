@@ -1,0 +1,12 @@
+PHP classes to provide Unicode Normalization.
+
+Performs the 4 normalizations:
+
+	NFD: Canonical Decomposition
+	NFC: Canonical Decomposition, followed by Canonical Composition
+	NFKD: Compatibility Decomposition
+	NFKC: Compatibility Decomposition, followed by Canonical Composition
+
+Complies with the official Unicode.org regression test.  Uses UTF8 binary
+strings natively but can normalize a string in any UTF format.  Fully tested
+with phpUnit. Code coverage test close to 100%.
