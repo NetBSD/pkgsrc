@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/02/04 16:36:05 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/22 15:22:26 taca Exp $
 
-DISTNAME=	MDB2_Driver_pgsql-1.5.0b2
+DISTNAME=	MDB2_Driver_pgsql-1.5.0b3
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
