@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/09 07:44:57 adam Exp $
+$NetBSD: distinfo,v 1.2 2010/12/22 15:44:40 taca Exp $
 
-SHA1 (pear/Net_IDNA2-0.1.0.tgz) = e0f001b7fdf8f3ebfb083eba3e5b75f9d71e9bad
-RMD160 (pear/Net_IDNA2-0.1.0.tgz) = 5b23816197255357ab8c48b4912bd86b03e07d19
-Size (pear/Net_IDNA2-0.1.0.tgz) = 22138 bytes
-SHA1 (patch-aa) = 644e752b3c7b8fab4378c9375e0dbc0f55228321
+SHA1 (pear/Net_IDNA2-0.1.1.tgz) = 32f1d5fd5348bd0fc49100045a065b2827ed55f9
+RMD160 (pear/Net_IDNA2-0.1.1.tgz) = 6e707a818e386224b7b9b43f10621fa8fd1e4af6
+Size (pear/Net_IDNA2-0.1.1.tgz) = 24193 bytes
