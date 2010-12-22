@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.32 2010/10/15 20:22:27 joerg Exp $
+# $NetBSD: extract.mk,v 1.33 2010/12/22 09:33:30 tron Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -176,7 +176,6 @@ _EXTRACT_ENV+=	${TOOLS_CP:D		CP=${TOOLS_CP:Q}}
 _EXTRACT_ENV+=	${TOOLS_ECHO:D		ECHO=${TOOLS_ECHO:Q}}
 _EXTRACT_ENV+=	${TOOLS_CMDLINE.gzcat:D	GZCAT=${TOOLS_CMDLINE.gzcat:Q}}
 _EXTRACT_ENV+=	${TOOLS_LHA:D		LHA=${TOOLS_LHA:Q}}
-_EXTRACT_ENV+=	${TOOLS_LZCAT:D		LZCAT=${TOOLS_LZCAT:Q}}
 _EXTRACT_ENV+=	${TOOLS_MKDIR:D		MKDIR=${TOOLS_MKDIR:Q}}
 _EXTRACT_ENV+=	${TOOLS_RM:D		RM=${TOOLS_RM:Q}}
 _EXTRACT_ENV+=	${TOOLS_RPM2PKG:D	RPM2PKG=${TOOLS_RPM2PKG:Q}}
