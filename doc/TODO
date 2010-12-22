@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9965 2010/12/22 16:04:41 gls Exp $
+$NetBSD: TODO,v 1.9966 2010/12/22 22:00:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -564,7 +564,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-686
+	o etm-687
 	o eukleides-1.5.4
 	o evince-2.32.0
 	o evolution-couchdb-0.4.5
@@ -711,13 +711,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-system-monitor-2.28.2
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
 	o gnome-user-docs-2.30.0 [GNOME 2.30]
-	o gnome-user-share-2.30.1 [GNOME 2.32]
+	o gnome-user-share-2.30.2 [GNOME 2.32]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.4.0
 	o gnumeric110-1.10.12
 	o gnuplot-4.4.0 [pkg/43771]
 	o gob2-2.0.17
+	o gobject-introspection-0.10.0
 	o gogo-3.11p1
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -1010,7 +1012,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newt-0.52.2 (ubuntu)
 	o ng-1.4.4
 	o nikto-2.0.1
-	o notification-daemon-0.5.0
+	o notification-daemon-0.6.0
 	o ns-3.8
 	o ns-plugger-common-5.1.3
 	o ntp4-4.2.6p2
@@ -1028,6 +1030,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
+	o opal-3.8.3
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.12.1
 	o opengrok-0.9
@@ -1054,7 +1057,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o paprefs-0.9.8
-	o parallel-20101202
+	o parallel-20101222
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.1
@@ -1103,6 +1106,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o proxsmtp-1.6
 	o psmisc-21.9
 	o ptlib-2.8.0 [pkg/42941]
+	o ptlib-2.8.3
 	o puf-0.93.3
 	o puppet-2.6.3
 	o puzzles-9023
@@ -1224,7 +1228,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.6
 	o snes9x-1.51
-	o snort-2.9.0.2
+	o snort-2.9.0.3
 	o snownews-1.5.12
 	o solfege-3.19.1
 	o sope-4.6
@@ -1351,7 +1355,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x11perf-1.5.2
 	o x264-devel-20101218
 	o xanalyser-1.30
-	o xapian-omega-1.2.2
+	o xapian-1.2.4
+	o xapian-omega-1.2.4
 	o xaric-0.13.2
 	o xauth-1.0.5
 	o xbacklight-1.1.2
@@ -1502,6 +1507,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope29-Silva-2.1
 	o zope34-3.4.0
 	o zopeedit-0.8
+	o zsh-current-4.3.11
 
 Infrastructure problems which need addressing
 =============================================
