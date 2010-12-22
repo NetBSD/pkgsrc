@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/02/06 15:51:37 taca Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/22 15:38:32 taca Exp $
 
-DISTNAME=	Image_Graph-0.7.2
+DISTNAME=	Image_Graph-0.8.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
