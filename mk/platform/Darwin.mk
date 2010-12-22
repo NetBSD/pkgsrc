@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.43 2010/07/08 04:57:36 dholland Exp $
+# $NetBSD: Darwin.mk,v 1.44 2010/12/22 20:43:45 abs Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -13,6 +13,11 @@
 # Tiger		10.4.x	8.x.y	2.x (gcc 4.0, 4.0.1 from 2.2)
 # Leopard	10.5.x	9.x.y	3.x (gcc 4.0.1, 4.0.1 and 4.2.1 from 3.1)
 # Snow Leopard	10.6.x	10.x.y	3.2+ (gcc 4.0.1 and 4.2.1)
+
+# Tiger (and earlier) use Xfree 4.4.0 (and earlier)
+.if ! empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+X11_TYPE?=modular
+.endif
 
 .if !defined(CPP) || ${CPP} == "cpp"
 CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
