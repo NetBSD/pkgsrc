@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/02/06 15:56:35 taca Exp $
+$NetBSD: distinfo,v 1.5 2010/12/22 15:43:19 taca Exp $
 
-SHA1 (pear/Net_DIME-1.0.1.tgz) = ef6184ad6921762129e774aa2df1fb2f6500aeae
-RMD160 (pear/Net_DIME-1.0.1.tgz) = bd9e78bfd2d605f2148e86146a223f9a84e92545
-Size (pear/Net_DIME-1.0.1.tgz) = 7535 bytes
+SHA1 (pear/Net_DIME-1.0.2.tgz) = a8ed4440f130865e4cea8657920f2746f4636ee2
+RMD160 (pear/Net_DIME-1.0.2.tgz) = 89ba1a8b97ca638287f6f1a81608c07bcbe866e7
+Size (pear/Net_DIME-1.0.2.tgz) = 7581 bytes
