@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.11 2010/01/16 17:08:34 wiz Exp $
+# $NetBSD: extract,v 1.12 2010/12/22 09:33:30 tron Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -194,7 +194,7 @@ ${TEST} -n "$cformat" || cformat="$_cformat"
 case "$cformat" in
 gzip|compress)	decompress_cat="${GZCAT}" ;;
 bzip)		decompress_cat="${BZCAT}" ;;
-lzma)		decompress_cat="${LZCAT} --memory=64Mi" ;;
+lzma)		decompress_cat="${XZCAT}" ;;
 xz)		decompress_cat="${XZCAT}" ;;
 none)		decompress_cat="${CAT}" ;;
 *)		decompress_cat="${CAT}" ;;
