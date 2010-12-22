@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/16 01:39:55 dsainty Exp $
+$NetBSD: distinfo,v 1.2 2010/12/22 15:50:01 taca Exp $
 
-SHA1 (pear/HTML_TreeMenu-1.2.1.tgz) = 1db309f1e4de4672fae731b74ed86a2be2e08884
-RMD160 (pear/HTML_TreeMenu-1.2.1.tgz) = 9d8a50508a07cc6674abc584a1fbd1e7e1712d69
-Size (pear/HTML_TreeMenu-1.2.1.tgz) = 50327 bytes
+SHA1 (pear/HTML_TreeMenu-1.2.2.tgz) = 5d5f039e4311cd1ae7197b000ce4231fead1112d
+RMD160 (pear/HTML_TreeMenu-1.2.2.tgz) = ef551f44353e662f66f6dd5268a04eaa696f7a21
+Size (pear/HTML_TreeMenu-1.2.2.tgz) = 55925 bytes
