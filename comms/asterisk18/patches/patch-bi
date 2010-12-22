@@ -1,0 +1,11 @@
+$NetBSD: patch-bi,v 1.1 2010/12/22 04:28:53 jnemeth Exp $
+
+--- codecs/codec_resample.c.orig	2008-10-17 21:35:23.000000000 +0000
++++ codecs/codec_resample.c
+@@ -37,5 +37,5 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
+ 
+ /* These are for SHRT_MAX and FLT_MAX -- { */
+-#if defined(__Darwin__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__CYGWIN__)
++#if defined(__Darwin__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__CYGWIN__) || defined(__DragonFly__)
+ #include <float.h>
+ #else

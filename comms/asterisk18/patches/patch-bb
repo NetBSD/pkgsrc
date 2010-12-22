@@ -1,7 +1,16 @@
-$NetBSD: patch-bb,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+$NetBSD: patch-bb,v 1.2 2010/12/22 04:28:53 jnemeth Exp $
 
 --- main/utils.c.orig	2010-08-06 18:57:10.000000000 +0000
 +++ main/utils.c
+@@ -445,7 +445,7 @@ const char *ast_inet_ntoa(struct in_addr
+ static int dev_urandom_fd;
+ #endif
+ 
+-#ifndef __linux__
++#if !defined(__linux__) && !defined(__DragonFly__)
+ #undef pthread_create /* For ast_pthread_create function only */
+ #endif /* !__linux__ */
+ 
 @@ -1353,13 +1353,13 @@ int ast_false(const char *s)
  static struct timeval tvfix(struct timeval a)
  {
