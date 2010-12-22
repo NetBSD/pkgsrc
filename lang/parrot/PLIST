@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/11/22 12:11:38 he Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/12/22 21:29:31 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -71,6 +71,7 @@ include/parrot/${PKGVERSION}/parrot/platform_limits.h
 include/parrot/${PKGVERSION}/parrot/pmc.h
 include/parrot/${PKGVERSION}/parrot/pmc_freeze.h
 include/parrot/${PKGVERSION}/parrot/pobj.h
+include/parrot/${PKGVERSION}/parrot/pointer_array.h
 include/parrot/${PKGVERSION}/parrot/runcore_api.h
 include/parrot/${PKGVERSION}/parrot/runcore_profiling.h
 include/parrot/${PKGVERSION}/parrot/runcore_trace.h
@@ -99,7 +100,6 @@ include/parrot/${PKGVERSION}/pmc/pmc_bytebuffer.h
 include/parrot/${PKGVERSION}/pmc/pmc_callcontext.h
 include/parrot/${PKGVERSION}/pmc/pmc_capture.h
 include/parrot/${PKGVERSION}/pmc/pmc_class.h
-include/parrot/${PKGVERSION}/pmc/pmc_codestring.h
 include/parrot/${PKGVERSION}/pmc/pmc_complex.h
 include/parrot/${PKGVERSION}/pmc/pmc_continuation.h
 include/parrot/${PKGVERSION}/pmc/pmc_coroutine.h
@@ -131,6 +131,7 @@ include/parrot/${PKGVERSION}/pmc/pmc_key.h
 include/parrot/${PKGVERSION}/pmc/pmc_lexinfo.h
 include/parrot/${PKGVERSION}/pmc/pmc_lexpad.h
 include/parrot/${PKGVERSION}/pmc/pmc_managedstruct.h
+include/parrot/${PKGVERSION}/pmc/pmc_mappedbytearray.h
 include/parrot/${PKGVERSION}/pmc/pmc_multisub.h
 include/parrot/${PKGVERSION}/pmc/pmc_namespace.h
 include/parrot/${PKGVERSION}/pmc/pmc_nativepccmethod.h
@@ -180,7 +181,6 @@ lib/parrot/${PKGVERSION}/VERSION
 lib/parrot/${PKGVERSION}/bin/prove.pir
 lib/parrot/${PKGVERSION}/dynext/bit_ops.so
 lib/parrot/${PKGVERSION}/dynext/debug_ops.so
-lib/parrot/${PKGVERSION}/dynext/deprecated_ops.so
 lib/parrot/${PKGVERSION}/dynext/dynlexpad.so
 lib/parrot/${PKGVERSION}/dynext/file.so
 lib/parrot/${PKGVERSION}/dynext/gziphandle.so
@@ -499,6 +499,7 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/H2inc.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/DefaultTests.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/Options.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/Smoke.pm
+lib/parrot/${PKGVERSION}/tools/lib/Parrot/Headerizer/Functions.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Headerizer.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/IO/Directory.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/IO/File.pm
@@ -563,7 +564,6 @@ src/parrot/${PKGVERSION}/pmc/bytebuffer.dump
 src/parrot/${PKGVERSION}/pmc/callcontext.dump
 src/parrot/${PKGVERSION}/pmc/capture.dump
 src/parrot/${PKGVERSION}/pmc/class.dump
-src/parrot/${PKGVERSION}/pmc/codestring.dump
 src/parrot/${PKGVERSION}/pmc/complex.dump
 src/parrot/${PKGVERSION}/pmc/continuation.dump
 src/parrot/${PKGVERSION}/pmc/coroutine.dump
@@ -595,6 +595,7 @@ src/parrot/${PKGVERSION}/pmc/key.dump
 src/parrot/${PKGVERSION}/pmc/lexinfo.dump
 src/parrot/${PKGVERSION}/pmc/lexpad.dump
 src/parrot/${PKGVERSION}/pmc/managedstruct.dump
+src/parrot/${PKGVERSION}/pmc/mappedbytearray.dump
 src/parrot/${PKGVERSION}/pmc/multisub.dump
 src/parrot/${PKGVERSION}/pmc/namespace.dump
 src/parrot/${PKGVERSION}/pmc/nativepccmethod.dump
