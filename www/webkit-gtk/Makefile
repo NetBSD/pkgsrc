@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/12/17 07:36:10 obache Exp $
+# $NetBSD: Makefile,v 1.31 2010/12/23 11:44:59 dsainty Exp $
 
 DISTNAME=	webkit-1.2.5
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
@@ -41,7 +41,7 @@ REPLACE_PERL+=	JavaScriptCore/pcre/dftables \
 #.include "../../devel/pango/buildlink3.mk"
 # A correct Webkit build requires flex 2.5.33
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"

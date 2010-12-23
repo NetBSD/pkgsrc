@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/07/20 09:56:50 markd Exp $
+# $NetBSD: Makefile,v 1.41 2010/12/23 11:44:29 dsainty Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -22,8 +22,8 @@ AFMDIR=		${PREFIX}/share/Ted/afm
 INDDIR=		${PREFIX}/share/Ted/ind
 INFODIR=	${PREFIX}/share/doc/Ted
 
-CONFIGURE_ENV+=	ac_jpeg_includes="${BUILDLINK_PREFIX.jpeg}/include"
-CONFIGURE_ENV+=	ac_jpeg_libraries="${BUILDLINK_PREFIX.jpeg}/lib"
+CONFIGURE_ENV+=	ac_jpeg_includes="${JPEGBASE}/include"
+CONFIGURE_ENV+=	ac_jpeg_libraries="${JPEGBASE}/lib"
 CONFIGURE_ENV+=	ac_png_includes="${BUILDLINK_PREFIX.png}/include"
 CONFIGURE_ENV+=	ac_png_libraries="${BUILDLINK_PREFIX.png}/lib"
 CONFIGURE_ENV+=	ac_tiff_includes="${BUILDLINK_PREFIX.tiff}/include"
@@ -68,7 +68,7 @@ do-install:
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
