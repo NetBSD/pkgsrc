@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/12/23 11:45:32 ryoon Exp $
+
+http://gna.org/bugs/?17084
+--- gui/tileddrawwidget.py.orig	2010-10-30 19:27:59.000000000 +0000
++++ gui/tileddrawwidget.py
+@@ -9,6 +9,7 @@
+ import gtk, gobject, cairo, random
+ gdk = gtk.gdk
+ from math import floor, ceil, pi, log
++from numpy import isfinite
+ 
+ from lib import helpers, tiledsurface, pixbufsurface
+ import cursor
+@@ -167,7 +168,10 @@ class TiledDrawWidget(gtk.DrawingArea):
+ 
+         xtilt = event.get_axis(gdk.AXIS_XTILT)
+         ytilt = event.get_axis(gdk.AXIS_YTILT)
+-        if xtilt is None or ytilt is None:
++        # Check whether tilt is present.  For some tablets without
++        # tilt support GTK reports a tilt axis with value nan, instead
++        # of None.  https://gna.org/bugs/?17084
++        if xtilt is None or ytilt is None or not isfinite(xtilt+ytilt):
+             xtilt = 0.0
+             ytilt = 0.0
+         
