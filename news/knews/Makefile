@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2010/06/13 22:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2010/12/23 11:44:54 dsainty Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
@@ -48,7 +48,7 @@ post-patch:
 	${ECHO} >>${WRKSRC}/configure.h "#define USE_INET6 YES"
 .endif
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mail/faces/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

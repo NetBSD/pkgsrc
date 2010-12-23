@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/10/03 12:13:23 obache Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/23 11:44:47 dsainty Exp $
 #
 
 DISTNAME=	fldigi-3.03
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		STRIP=${STRIP}
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/portaudio-devel/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"

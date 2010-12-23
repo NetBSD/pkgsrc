@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/11/18 23:59:17 obache Exp $
+# $NetBSD: Makefile,v 1.26 2010/12/23 11:44:36 dsainty Exp $
 #
 
 DISTNAME=	f-spot-0.6.2
@@ -48,7 +48,7 @@ GCONF_SCHEMAS=	f-spot.schemas
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"

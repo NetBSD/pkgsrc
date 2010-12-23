@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2010/01/18 09:59:45 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2010/12/23 11:45:03 dsainty Exp $
 #
 
 DISTNAME=	xforms-1.0
@@ -18,7 +18,7 @@ MAKE_ENV=	DEPEND_DEFINES=${CPPFLAGS:M*:Q}
 MAKE_FLAGS+=	MANPATH=${PREFIX}/${PKGMANDIR}
 SCRIPTS_ENV=	DEPEND_DEFINES="${CPPFLAGS}"
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

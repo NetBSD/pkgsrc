@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/06/13 22:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/12/23 11:44:58 dsainty Exp $
 
 # This section contains variables that might be overridden.
 PKGNAME?=	${PKGNAME_BASE}
@@ -35,6 +35,6 @@ INSTALL_MAKE_FLAGS+=	datadir=${DESTDIR}${PREFIX}/share
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:45:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/23 11:44:56 dsainty Exp $
 #
 
 DISTNAME=	xonclock-0.0.9.2
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"

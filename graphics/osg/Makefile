@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/11/15 22:57:23 abs Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/23 11:44:43 dsainty Exp $
 
 DISTNAME=	OpenSceneGraph-${OSGVER}
 PKGNAME=	osg-${OSGVER}
@@ -29,7 +29,7 @@ CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"

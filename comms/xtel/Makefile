@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/18 09:58:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/12/23 11:44:26 dsainty Exp $
 #
 
 DISTNAME=	xtel-3.3.0
@@ -23,7 +23,7 @@ INSTALL_MAKE_FLAGS=	PPPDIR=${PREFIX}/share/examples/xtel
 
 SPECIAL_PERMS+=		bin/mdmdetect ${SETUID_ROOT_PERMS}
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2010/01/18 09:58:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2010/12/23 11:44:33 dsainty Exp $
 
 BUILDLINK_TREE+=	OpenRM
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.OpenRM?=	../../graphics/OpenRM
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # OPENRM_BUILDLINK3_MK

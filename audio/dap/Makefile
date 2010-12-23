@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/01/18 09:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/12/23 11:44:24 dsainty Exp $
 
 DISTNAME=	dap-2.1.5
 PKGREVISION=	2
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/TODO ${WRKSRC}/COPYING \
 		${WRKSRC}/FEATURES ${DESTDIR}${PREFIX}/share/doc/dap
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xforms/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

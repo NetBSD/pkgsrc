@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2010/11/15 22:57:14 abs Exp $
+# $NetBSD: Makefile,v 1.64 2010/12/23 11:44:37 dsainty Exp $
 
 DISTNAME=	gimageview-0.2.27
 PKGREVISION=	20
@@ -27,7 +27,7 @@ LDFLAGS.NetBSD+=	${PTHREAD_LDFLAGS}
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"

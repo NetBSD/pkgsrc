@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/06/13 22:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2010/12/23 11:44:58 dsainty Exp $
 #
 
 DISTNAME=	chimera-2.0a19
@@ -26,7 +26,7 @@ post-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA}			\
 	    HINTS INFO LICENSE ${DESTDIR}${PREFIX}/share/doc/chimera
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"

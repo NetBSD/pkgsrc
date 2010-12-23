@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/11/10 19:56:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/23 11:44:40 dsainty Exp $
 
 DISTNAME=	jpegoptim-1.2.3
 PKGREVISION=	1
@@ -21,5 +21,5 @@ INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

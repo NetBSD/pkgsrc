@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2010/11/15 22:56:42 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2010/12/23 11:44:27 dsainty Exp $
 
 BUILDLINK_TREE+=	libgnomeui
 
@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-#.include "../../graphics/jpeg/buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

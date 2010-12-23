@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2010/06/13 22:44:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2010/12/23 11:44:33 dsainty Exp $
 
 BUILDLINK_TREE+=	SDL_image
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.SDL_image?=	../../graphics/SDL_image
 BUILDLINK_INCDIRS.SDL_image?=	include/SDL
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .endif # SDL_IMAGE_BUILDLINK3_MK

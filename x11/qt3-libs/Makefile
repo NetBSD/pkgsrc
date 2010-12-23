@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2010/06/13 22:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2010/12/23 11:45:02 dsainty Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
 PKGREVISION=	14
@@ -55,7 +55,7 @@ SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"

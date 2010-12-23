@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/11/15 22:56:38 abs Exp $
+# $NetBSD: Makefile,v 1.21 2010/12/23 11:44:27 dsainty Exp $
 
 DISTNAME=	gdl-2.26.2
 PKGREVISION=	5
@@ -23,6 +23,6 @@ PKGCONFIG_OVERRIDE+=	gdl-1.0.pc.in
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

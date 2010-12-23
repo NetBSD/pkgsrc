@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/06/13 22:45:27 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/12/23 11:44:56 dsainty Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

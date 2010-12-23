@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/11/15 22:57:54 abs Exp $
+# $NetBSD: Makefile,v 1.27 2010/12/23 11:44:49 dsainty Exp $
 
 DISTNAME=	celestia-1.4.1
 PKGREVISION=	12
@@ -50,7 +50,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

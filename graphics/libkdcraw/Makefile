@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/07/14 11:11:14 sbd Exp $
+# $NetBSD: Makefile,v 1.19 2010/12/23 11:44:41 dsainty Exp $
 #
 
 DISTNAME=	libkdcraw-0.1.9
@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 # needed by **** libjpeg detection
-CONFIGURE_ARGS+=	--includedir=${BUILDLINK_PREFIX.jpeg:Q}/include
+CONFIGURE_ARGS+=	--includedir=${JPEGBASE:Q}/include
 
 PKGCONFIG_OVERRIDE+=	libkdcraw/libkdcraw.pc.in
 
@@ -30,6 +30,6 @@ BUILDLINK_API_DEPENDS.qt3-libs+=	qt3-libs>=3.3
 .include "../../x11/kdelibs3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.lcms+=		lcms>=1.14
 .include "../../graphics/lcms/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

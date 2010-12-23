@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2010/11/28 13:04:09 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2010/12/23 11:44:36 dsainty Exp $
 #
 
 DISTNAME=	eog-2.32.1
@@ -33,7 +33,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.3
 BUILDLINK_API_DEPENDS.gnome-icon-theme+= gnome-icon-theme>=2.20.0
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libexif+=	libexif>=0.6.12
 .include "../../graphics/libexif/buildlink3.mk"

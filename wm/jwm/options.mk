@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/06/17 00:00:30 abs Exp $
+# $NetBSD: options.mk,v 1.4 2010/12/23 11:44:57 dsainty Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jwm
 PKG_SUPPORTED_OPTIONS=	debug fribidi jpeg png
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpng)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/13 11:49:42 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/23 11:44:56 dsainty Exp $
 
 DISTNAME=		scribus-1.3.9
 CATEGORIES=		print
@@ -36,7 +36,7 @@ post-install:
 .include "../../print/cups/buildlink3.mk"
 .include "../../print/podofo/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libart+= libart>=2.3.19nb1

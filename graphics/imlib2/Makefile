@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2010/06/13 22:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2010/12/23 11:44:40 dsainty Exp $
 
 DISTNAME=	imlib2-1.4.2
 PKGREVISION=	5
@@ -38,7 +38,7 @@ SUBST_SED.shlib+=	-e 's,"\.so",".${SHLIB_SUFFIX}",'
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

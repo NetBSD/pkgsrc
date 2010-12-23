@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/01/18 09:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2010/12/23 11:44:40 dsainty Exp $
 
 DISTNAME=	jasper-1.900.1
 PKGREVISION=	5
@@ -24,5 +24,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/jasper.pdf ${DESTDIR}${PREFIX}/share/doc/jasper
 	${INSTALL_DATA} ${WRKSRC}/doc/jpeg2000.pdf ${DESTDIR}${PREFIX}/share/doc/jasper
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

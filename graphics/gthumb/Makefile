@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2010/12/04 21:16:35 adam Exp $
+# $NetBSD: Makefile,v 1.57 2010/12/23 11:44:39 dsainty Exp $
 
 DISTNAME=	gthumb-2.12.1
 PKGREVISION=	1
@@ -35,7 +35,7 @@ GCONF_SCHEMAS+=	gthumb_webalbums.schemas
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 #.include "../../net/ORBit2/buildlink3.mk"

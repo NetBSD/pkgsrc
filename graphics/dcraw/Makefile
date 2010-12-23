@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/08/06 20:49:23 bad Exp $
+# $NetBSD: Makefile,v 1.34 2010/12/23 11:44:34 dsainty Exp $
 #
 
 DISTNAME=	dcraw-9.04
@@ -65,5 +65,5 @@ do-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

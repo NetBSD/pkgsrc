@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/18 09:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/12/23 11:44:59 dsainty Exp $
 
 DISTNAME=	swiggle-0.4
 PKGREVISION=	2
@@ -23,7 +23,7 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/swiggle ${DESTDIR}${PREFIX}/bin/
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

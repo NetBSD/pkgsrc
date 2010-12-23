@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/23 11:44:32 dsainty Exp $
 #
 
 DISTNAME=	gipfel-0.3.2
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"

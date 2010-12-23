@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/18 09:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/23 11:44:44 dsainty Exp $
 #
 
 DISTNAME=	resize_image-0.6
@@ -20,5 +20,5 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/resize_image ${DESTDIR}${PREFIX}/bin
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

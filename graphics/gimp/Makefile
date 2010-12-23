@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2010/11/15 22:57:15 abs Exp $
+# $NetBSD: Makefile,v 1.201 2010/12/23 11:44:38 dsainty Exp $
 
 DISTNAME=	gimp-2.6.11
 PKGREVISION=	2
@@ -64,7 +64,7 @@ PLIST.twain=		yes
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/babl/buildlink3.mk"
 .include "../../graphics/gegl/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2010/06/13 22:45:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2010/12/23 11:45:00 dsainty Exp $
 
 BUILDLINK_TREE+=	fltk
 
@@ -12,7 +12,7 @@ BUILDLINK_FILES.fltk+=		include/Fl/*
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/18 09:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/12/23 11:44:26 dsainty Exp $
 #
 
 DISTNAME=	eet-1.2.3
@@ -22,6 +22,6 @@ PKGCONFIG_OVERRIDE=	eet.pc.in
 
 .include "../../devel/eina/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

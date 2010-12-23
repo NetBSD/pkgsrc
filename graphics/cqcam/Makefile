@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2010/01/18 09:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2010/12/23 11:44:34 dsainty Exp $
 #
 
 DISTNAME=		cqcam-0.91
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

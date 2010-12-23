@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/01/18 09:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2010/12/23 11:44:53 dsainty Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
@@ -35,7 +35,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/vncviewer/README
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

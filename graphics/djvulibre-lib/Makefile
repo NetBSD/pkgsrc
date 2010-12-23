@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/08/09 11:05:54 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/23 11:44:35 dsainty Exp $
 
 DISTNAME=		djvulibre-3.5.22
 PKGNAME=		djvulibre-lib-3.5.22
@@ -29,5 +29,5 @@ INSTALL_DIRS=		libdjvu
 CFLAGS+= -march=i486
 .endif
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
