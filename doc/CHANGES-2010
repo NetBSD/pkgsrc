@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4325 2010/12/23 00:24:06 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4326 2010/12/23 00:26:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6145,3 +6145,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/parrot to 2.11.0 [he 2010-12-22]
 	Updated finance/gnucash to 2.4.0 [wiz 2010-12-23]
 	Updated www/curl to 7.21.3 [wiz 2010-12-23]
+	Updated textproc/py-enchant to 1.6.5 [wiz 2010-12-23]
