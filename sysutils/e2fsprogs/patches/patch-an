@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2007/06/20 19:51:10 jlam Exp $
+$NetBSD: patch-an,v 1.2 2010/12/23 06:34:50 ryoon Exp $
 
---- e2fsck/e2fsck.h.orig	2006-03-18 21:33:55.000000000 -0500
+--- e2fsck/e2fsck.h.orig	2010-05-13 22:59:49.000000000 +0000
 +++ e2fsck/e2fsck.h
-@@ -58,6 +58,10 @@
+@@ -61,6 +61,10 @@
  #define P_(singular, plural, n) ((n) == 1 ? (singular) : (plural))
  #endif
  
