@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4328 2010/12/23 06:18:45 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4329 2010/12/23 06:35:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6148,3 +6148,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-enchant to 1.6.5 [wiz 2010-12-23]
 	Updated print/xpdf to 3.02pl4nb4 [obache 2010-12-23]
 	Updated x11/eekboard to 0.0.7 [obache 2010-12-23]
+	Updated sysutils/e2fsprogs to 1.41.12 [ryoon 2010-12-23]
