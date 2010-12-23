@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.25 2009/10/11 20:50:48 rillig Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.26 2010/12/23 10:08:18 asau Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -24,8 +24,8 @@ and dashes.</para>
 	<literal>2009Q1</literal>.</para>
 
 	<para>The second step is to decide <emphasis>how</emphasis> you
-	want to download pkgsrc. You can get it as a tar file, via SUP,
-	or via CVS. All three ways are described here.</para>
+	want to download pkgsrc. You can get it as a tar file or via CVS.
+	Both ways are described here.</para>
 
 <sect2 id="getting-via-tar">
 <title>As tar file</title>
@@ -69,25 +69,6 @@ and dashes.</para>
 	<para>To download pkgsrc-current, run:</para>
 
 <screen>&uprompt; <userinput>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz</userinput></screen>
-
-</sect2>
-<sect2 id="getting-via-sup">
-<title>Via SUP</title>
-
-	<para>As an alternative to the tar file, you can get pkgsrc via
-	the Software Update Protocol, SUP. To do so, make sure your
-	supfile has a line
-
-<programlisting>
-release=pkgsrc
-</programlisting>
-
-	in it, see the examples in
-	<filename>/usr/share/examples/supfiles</filename>, and that the
-	<filename>/usr/pkgsrc</filename> directory exists. Then, simply
-	run:</para>
-
-<screen>&uprompt; <userinput>sup -v <replaceable>/path/to/your/supfile</replaceable></userinput>.</screen>
 
 </sect2>
 <sect2 id="getting-via-cvs">
