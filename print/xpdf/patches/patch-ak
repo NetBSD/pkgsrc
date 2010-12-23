@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.4 2010/06/13 08:56:04 spz Exp $
+$NetBSD: patch-ak,v 1.5 2010/12/23 04:44:41 obache Exp $
 
---- doc/xpdfrc.5.orig	2005-08-17 05:34:30.000000000 +0000
+--- doc/xpdfrc.5.orig	2007-02-27 22:05:51.000000000 +0000
 +++ doc/xpdfrc.5
 @@ -7,7 +7,7 @@ All of the Xpdf tools read a single conf
  .I .xpdfrc
@@ -11,20 +11,23 @@ $NetBSD: patch-ak,v 1.4 2010/06/13 08:56:04 spz Exp $
  if it exists.  (This is its default location; depending on build
  options, it may be placed elsewhere.)  On Win32 systems, the
  .I xpdfrc
-@@ -407,28 +407,28 @@ The following is a sample xpdfrc file.
+@@ -544,28 +544,31 @@ The following is a sample xpdfrc file.
  .nf
  
  # from the Thai support package
 -nameToUnicode /usr/local/share/xpdf/Thai.nameToUnicode
-+nameToUnicode @PREFIX@/share/xpdf/Thai.nameToUnicode
++nameToUnicode @PREFIX@/share/xpdf/thai/Thai.nameToUnicode
++unicodeMap    TIS-620 @PREFIX@/share/xpdf/thai/TIS-620.unicodeMap
  
  # from the Japanese support package
 -cidToUnicode Adobe-Japan1 /usr/local/share/xpdf/Adobe-Japan1.cidToUnicode
 -unicodeMap   JISX0208     /usr/local/share/xpdf/JISX0208.unicodeMap
 -cMapDir      Adobe-Japan1 /usr/local/share/xpdf/cmap/Adobe-Japan1
-+cidToUnicode Adobe-Japan1 @PREFIX@/share/xpdf/Adobe-Japan1.cidToUnicode
-+unicodeMap   JISX0208     @PREFIX@/share/xpdf/JISX0208.unicodeMap
-+cMapDir      Adobe-Japan1 @PREFIX@/share/xpdf/cmap/Adobe-Japan1
++cidToUnicode Adobe-Japan1 @PREFIX@/share/xpdf/japanese/Adobe-Japan1.cidToUnicode
++unicodeMap   ISO-2022-JP  @PREFIX@/share/xpdf/japanese/ISO-2022-JP.unicodeMap
++unicodeMap   EUC-JP       @PREFIX@/share/xpdf/japanese/EUC-JP.unicodeMap
++unicodeMap   Shift-JIS    @PREFIX@/share/xpdf/japanese/Shift-JIS.unicodeMap
++cMapDir      Adobe-Japan1 @PREFIX@/share/xpdf/japanese/CMap/Adobe-Japan1
  
  # use the Base-14 Type 1 fonts from ghostscript
 -displayFontT1 Times-Roman           /usr/local/share/ghostscript/fonts/n021003l.pfb
@@ -58,7 +61,7 @@ $NetBSD: patch-ak,v 1.4 2010/06/13 08:56:04 spz Exp $
  
  # use the Bakoma Type 1 fonts
  # (this assumes they happen to be installed in /usr/local/fonts/bakoma)
-@@ -459,7 +459,7 @@ urlCommand      "netscape -remote 'openU
+@@ -596,7 +599,7 @@ urlCommand      "netscape -remote 'openU
  .fi
  .SH FILES
  .TP
