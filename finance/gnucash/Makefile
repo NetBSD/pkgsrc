@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.147 2010/11/18 23:59:18 obache Exp $
+# $NetBSD: Makefile,v 1.148 2010/12/23 00:10:49 wiz Exp $
 #
 
-DISTNAME=		gnucash-2.2.9
-PKGREVISION=		12
+DISTNAME=		gnucash-2.4.0
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -23,6 +22,9 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool makeinfo msgfmt perl:run pkg-config
 GNU_CONFIGURE=		yes
 INFO_FILES=		YES
+
+CONFIGURE_ARGS+=	--with-html-engine=webkit
+CONFIGURE_ARGS+=	--disable-dbi
 
 REPLACE_PERL+=		src/quotes/gnc-fq-dump
 REPLACE_PERL+=		src/optional/xsl/vcard-gnccustomer.pl
@@ -48,30 +50,32 @@ GCONF_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
 post-install:
 	rm ${DESTDIR}${PREFIX}/bin/gnc-test-env
 
-.include "../../archivers/bzip2/buildlink3.mk"
+# re-add any that are necessary, will be removed completely
+# during one of the next updates
+#.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.swig+=	swig>=1.3.28
-#.include "../../devel/swig/buildlink3.mk"
-.include "../../devel/libgsf/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
+##BUILDLINK_API_DEPENDS.swig+=	swig>=1.3.28
+##.include "../../devel/swig/buildlink3.mk"
+#.include "../../devel/libgsf/buildlink3.mk"
+#.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.0
-.include "../../devel/pango/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.0
+#.include "../../devel/pango/buildlink3.mk"
+#.include "../../devel/popt/buildlink3.mk"
+#.include "../../devel/zlib/buildlink3.mk"
 .include "../../finance/libofx/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+#.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
-.include "../../misc/goffice0.6/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.10.0
-.include "../../print/libgnomeprint/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.10.0
-.include "../../print/libgnomeprintui/buildlink3.mk"
+#.include "../../lang/perl5/buildlink3.mk"
+.include "../../misc/goffice0.8/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.10.0
+#.include "../../print/libgnomeprint/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.10.0
+#.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.3
-.include "../../www/gtkhtml314/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.3
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
