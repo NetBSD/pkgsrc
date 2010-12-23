@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4326 2010/12/23 00:26:19 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4327 2010/12/23 04:46:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6146,3 +6146,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated finance/gnucash to 2.4.0 [wiz 2010-12-23]
 	Updated www/curl to 7.21.3 [wiz 2010-12-23]
 	Updated textproc/py-enchant to 1.6.5 [wiz 2010-12-23]
+	Updated print/xpdf to 3.02pl4nb4 [obache 2010-12-23]
