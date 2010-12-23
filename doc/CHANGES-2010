@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4332 2010/12/23 11:48:32 ryoon Exp $
+$NetBSD: CHANGES-2010,v 1.4333 2010/12/23 12:45:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6151,3 +6151,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/e2fsprogs to 1.41.12 [ryoon 2010-12-23]
 	Updated sysutils/pear-Log to 1.12.5 [taca 2010-12-23]
 	Added graphics/mypaint version 0.9.0 [ryoon 2010-12-23]
+	Updated sysutils/user_darwin to 20101223 [obache 2010-12-23]
