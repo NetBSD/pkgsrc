@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/06/13 22:45:15 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/23 11:44:55 dsainty Exp $
 #
 
 DISTNAME=	img2eps-0.2
@@ -17,7 +17,7 @@ TEST_TARGET=	check
 
 .include "options.mk"
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

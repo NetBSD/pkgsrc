@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/07/14 11:11:14 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/23 11:44:41 dsainty Exp $
 #
 
 DISTNAME=	libkexiv2-0.1.9
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	libkexiv2/libkexiv2.pc.in
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

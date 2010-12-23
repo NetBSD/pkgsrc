@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/18 09:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/12/23 11:44:40 dsainty Exp $
 
 DISTNAME=		jpegpixi-1.1.1
 PKGREVISION=		2
@@ -16,5 +16,5 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

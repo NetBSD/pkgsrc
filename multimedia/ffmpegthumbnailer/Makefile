@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/23 11:44:50 dsainty Exp $
 #
 
 DISTNAME=	ffmpegthumbnailer-1.5.3
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libffmpegthumbnailer.pc.in
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

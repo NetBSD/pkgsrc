@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2010/01/18 09:58:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2010/12/23 11:44:26 dsainty Exp $
 
 BUILDLINK_TREE+=	eet
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.eet?=	../../devel/eet
 
 .include "../../devel/eina/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif # EET_BUILDLINK3_MK
 
