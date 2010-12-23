@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4334 2010/12/23 16:59:30 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4335 2010/12/23 18:13:49 christos Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6154,3 +6154,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/user_darwin to 20101223 [obache 2010-12-23]
 	Added mail/fml4 version 4.0.3.20040215 [taca 2010-12-23]
 	Added mail/fml version 20100306 [taca 2010-12-23]
+	Updated security/gsasl to 1.6.0 [christos 2010-12-23]
