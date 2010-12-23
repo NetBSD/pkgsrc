@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2010/11/18 07:48:45 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2010/12/23 11:45:02 dsainty Exp $
 
 BUILDLINK_TREE+=	qt3-libs
 
@@ -19,7 +19,7 @@ QTDIR=	${BUILDLINK_PREFIX.qt3-libs}/qt3
 PTHREAD_OPTS+=	require
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"

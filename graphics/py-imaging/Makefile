@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2010/07/19 17:45:02 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2010/12/23 11:44:44 dsainty Exp $
 
 DISTNAME=	Imaging-1.1.7
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.7
@@ -34,5 +34,5 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

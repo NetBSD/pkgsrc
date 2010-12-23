@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/12/07 15:32:06 jmcneill Exp $
+# $NetBSD: options.mk,v 1.3 2010/12/23 11:44:30 dsainty Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups opengl sane esound ldap dbus hal ssl x11
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+= --without-cups
 PLIST.x11=		yes
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

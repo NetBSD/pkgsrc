@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2010/12/09 08:31:40 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2010/12/23 11:44:41 dsainty Exp $
 
 BUILDLINK_TREE+=	libgdiplus
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libgdiplus?=	../../graphics/libgdiplus
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

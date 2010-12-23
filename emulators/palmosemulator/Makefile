@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/06/13 22:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/12/23 11:44:30 dsainty Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -69,7 +69,7 @@ do-install:
 			${INSTALL_DATA} "$$i" ${DESTDIR}${POSE_SKINS_DIR}; \
 		done
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

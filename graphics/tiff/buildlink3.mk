@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2010/01/18 09:59:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2010/12/23 11:44:46 dsainty Exp $
 
 BUILDLINK_TREE+=	tiff
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.tiff+=	tiff>=3.9.2nb1
 BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .endif # TIFF_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-tiff

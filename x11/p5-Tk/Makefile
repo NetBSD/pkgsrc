@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2010/09/12 12:59:47 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2010/12/23 11:45:02 dsainty Exp $
 
 DISTNAME=	Tk-804.029
 PKGNAME=	p5-${DISTNAME}
@@ -36,6 +36,6 @@ pre-configure:
 
 .include "../../lang/perl5/module.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
