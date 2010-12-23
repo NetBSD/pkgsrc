@@ -38,57 +38,52 @@
 # ***** END LICENSE BLOCK *****
 
 #
-# Config for FreeBSD/NetBSD/OpenBSD.
+# Config stuff for SunOS5.5
 #
 
+#AS = /usr/sfw/bin/gas
+AS = gcc
 #CC = gcc
 #CCC = g++
-CFLAGS+=	-Wall -Wno-format
-OS_CFLAGS=	-DXP_UNIX -DSVR4 
-OS_CFLAGS+=	-DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE # -DHAVE_LOCALTIME_R
-INTERP_CFLAGS+=	`pkg-config --cflags-only-I nspr`
+CFLAGS +=  -Wall -Wno-format
+#else
+#CC = cc
+#CCC = CC
+#endif
 
 RANLIB = echo
-MKSHLIB = $(LD) -lm `pkg-config --libs nspr` -shared $(LDFLAGS) $(XMKSHLIBOPTS)
 
 #.c.o:
-#      $(CC) -c -MD $*.d $(CFLAGS) $<
+#	$(CC) -c -MD $*.d $(CFLAGS) $<
 
-CPU_ARCH = $(shell uname -m)
-# don't filter in x86-64 architecture
-ifneq (amd64,$(CPU_ARCH))
-ifeq (86,$(findstring 86,$(CPU_ARCH)))
-CPU_ARCH = x86
-OS_CFLAGS+= -DX86_LINUX
-
-ifeq (gcc, $(CC))
-# if using gcc on x86, check version for opt bug 
-# (http://bugzilla.mozilla.org/show_bug.cgi?id=24892)
-GCC_VERSION := $(shell gcc -v 2>&1 | grep version | awk '{ print $$3 }')
-GCC_LIST:=$(sort 2.91.66 $(GCC_VERSION) )
-ifeq (2.91.66, $(firstword $(GCC_LIST)))
-CFLAGS+= -DGCC_OPT_BUG
-endif
-endif
-endif
-endif
-
+CPU_ARCH = x86_64
 GFX_ARCH = x
 
-OS_LIBS = -lm $(LDFLAGS)
+OS_CFLAGS = -DXP_UNIX -DSYSV -DSOLARIS -DHAVE_LOCALTIME_R
+OS_LIBS = -lsocket -lnsl -ldl
 
+#ASFLAGS	        += -P -L -K PIC -D_ASM -D__STDC__=0
 ASFLAGS += -x assembler-with-cpp
 
+HAVE_PURIFY = 1
 
-ifeq ($(CPU_ARCH),alpha)
+NOSUCHFILE = /solaris-rm-f-sucks
 
-# Ask the C compiler on alpha linux to let us work with denormalized
-# double values, which are required by the ECMA spec.
+MKSHLIB = $(LD) -G
 
-OS_CFLAGS += -mieee
+# Use the editline library to provide line-editing support.
+JS_EDITLINE = 1
+
+ifeq ($(CPU_ARCH),x86_64)
+# Use VA_COPY() standard macro on x86-64
+# FIXME: better use it everywhere
+OS_CFLAGS += -DHAVE_VA_COPY -DVA_COPY=va_copy
 endif
 
-JS_READLINE = 1
+ifeq ($(CPU_ARCH),x86_64)
+# We need PIC code for shared libraries
+# FIXME: better patch rules.mk & fdlibm/Makefile*
+OS_CFLAGS += -DPIC -fPIC
+endif
 
-OS_CFLAGS += -DHAVE_VA_COPY -DVA_COPY=va_copy
-OS_CFLAGS += -DPIC -fPIC -DJS_HAVE_LONG_LONG -DHAVE_INTTYPES_H
+#JS_USE_FDLIBM_MATH=1
