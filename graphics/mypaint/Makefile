@@ -1,0 +1,58 @@
+# $NetBSD: Makefile,v 1.1.1.1 2010/12/23 11:45:32 ryoon Exp $
+#
+
+DISTNAME=	mypaint-0.9.0
+CATEGORIES=	graphics
+MASTER_SITES=	http://download.gna.org/mypaint/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://mypaint.intilinux.com/
+COMMENT=	Fast and easy open-source graphics application for digital painters
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_ACCEPTED=	26 25
+USE_LANGUAGES=	c++
+
+USE_TOOLS+=	bash:run msgfmt pkg-config
+
+BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
+DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+
+FIND_PREFIX:=	SCONSDIR=scons
+.include "../../mk/find-prefix.mk"
+
+SUBST_CLASSES+=			python-cmd
+SUBST_STAGE.python-cmd=		pre-configure
+SUBST_FILES.python-cmd=		brushlib/SConscript
+SUBST_SED.python-cmd=		-e 's,python,${PYTHONBIN},'
+
+SUBST_CLASSES+=			locale-dir
+SUBST_STAGE.locale-dir=		pre-configure
+SUBST_FILES.locale-dir=		SConstruct
+SUBST_SED.locale-dir=		-e 's,share/locale,${PKGLOCALEDIR}/locale,'
+USE_PKGLOCALEDIR=	yes
+
+REPLACE_BASH=			brushes/label-brush-mypaint.sh
+
+do-build:
+	cd ${WRKSRC} && cd ${BUILD_DIRS} && \
+		${SETENV} ${MAKE_ENV} \
+		${SCONSDIR}/bin/scons prefix=${PREFIX}
+
+do-install:
+	cd ${WRKSRC} && cd ${INSTALL_DIRS} && \
+		${SETENV} ${MAKE_ENV} \
+		${SCONSDIR}/bin/scons prefix=${DESTDIR}${PREFIX} install
+
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../devel/swig/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
