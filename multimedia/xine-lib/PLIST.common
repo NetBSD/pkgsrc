@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.30 2010/09/16 09:49:43 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.31 2010/12/23 10:46:05 obache Exp $
 bin/xine-config
 bin/xine-list-1.1
 include/xine.h
@@ -87,8 +87,6 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_mpeg2.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_mpeg2.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_nsf.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_nsf.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_real.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_real.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_rgb.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_rgb.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_speex.a
