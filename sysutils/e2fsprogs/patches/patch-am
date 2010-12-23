@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2007/06/20 19:51:09 jlam Exp $
+$NetBSD: patch-am,v 1.2 2010/12/23 06:34:50 ryoon Exp $
 
---- e2fsck/e2fsck.conf.5.in.orig	2006-03-27 00:55:38.000000000 -0500
+--- e2fsck/e2fsck.conf.5.in.orig	2010-05-13 22:59:49.000000000 +0000
 +++ e2fsck/e2fsck.conf.5.in
-@@ -157,7 +157,7 @@ things out may be dangerous.)
+@@ -238,7 +238,7 @@ things out may be dangerous.)
  		}
  .SH FILES
  .TP
