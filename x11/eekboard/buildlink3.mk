@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/12/23 05:47:32 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/12/23 06:04:36 obache Exp $
 #
 
 BUILDLINK_TREE+=	eekboard
@@ -20,6 +20,7 @@ pkgbase := eekboard
 .include "../../graphics/cairo/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.eekboard:Mclutter)
 .include "../../graphics/clutter/buildlink3.mk"
+.include "../../graphics/clutter-gtk/buildlink3.mk"
 .endif
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
