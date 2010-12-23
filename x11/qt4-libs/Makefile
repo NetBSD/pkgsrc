@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2010/11/15 22:59:09 abs Exp $
+# $NetBSD: Makefile,v 1.53 2010/12/23 11:45:02 dsainty Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -116,7 +116,7 @@ SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

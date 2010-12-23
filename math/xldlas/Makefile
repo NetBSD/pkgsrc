@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2010/01/18 09:59:13 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2010/12/23 11:44:49 dsainty Exp $
 
 DISTNAME=		xldlas-0.85
 PKGREVISION=		7
@@ -22,7 +22,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xldlas
 	${CP} -R ${WRKSRC}/help ${DESTDIR}${PREFIX}/share/xldlas
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xforms/buildlink3.mk"
 

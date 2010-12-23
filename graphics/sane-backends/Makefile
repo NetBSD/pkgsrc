@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2010/09/19 15:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2010/12/23 11:44:45 dsainty Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -64,6 +64,6 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .if (${OPSYS} != "SunOS")
 . include "../../devel/libusb/buildlink3.mk"
 .endif
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2010/12/09 08:31:40 kefren Exp $
+# $NetBSD: Makefile,v 1.50 2010/12/23 11:44:41 dsainty Exp $
 
 DISTNAME=	libgdiplus-2.8.1
 PKGREVISION=	2
@@ -29,7 +29,7 @@ BUILDLINK_TRANSFORM+=		rm:-Werror
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

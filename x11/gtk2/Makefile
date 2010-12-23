@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2010/11/23 13:31:33 tnn Exp $
+# $NetBSD: Makefile,v 1.210 2010/12/23 11:45:01 dsainty Exp $
 
 DISTNAME=		gtk+-2.22.1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -104,7 +104,7 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.0
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-#.include "../../graphics/jpeg/buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 #.include "../../graphics/png/buildlink3.mk"
 #.include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/application.mk"

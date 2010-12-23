@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/12/14 18:26:34 adam Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/23 11:44:35 dsainty Exp $
 
 DISTNAME=	enblend-enfuse-4.0
 # XXX distribution file has changed; remove the line below on next update
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--with-x
 .endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libxmi/buildlink3.mk"

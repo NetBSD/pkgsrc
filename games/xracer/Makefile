@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/08/21 16:34:53 seb Exp $
+# $NetBSD: Makefile,v 1.49 2010/12/23 11:44:32 dsainty Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -34,6 +34,6 @@ post-configure: do-makemaker-configure
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

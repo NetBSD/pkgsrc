@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/11/02 20:40:55 shattered Exp $
+# $NetBSD: Makefile,v 1.14 2010/12/23 11:44:56 dsainty Exp $
 
 DISTNAME=		steghide-0.5.1
 PKGREVISION=		5
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../security/libmcrypt/buildlink3.mk"
 .include "../../security/mhash/buildlink3.mk"
 

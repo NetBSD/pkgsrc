@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/06/07 22:44:01 minskim Exp $
+# $NetBSD: options.mk,v 1.5 2010/12/23 11:44:28 dsainty Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	--with-tiff
 CONFIGURE_ARGS+=	--with-gif
 CONFIGURE_ARGS+=	--with-png
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

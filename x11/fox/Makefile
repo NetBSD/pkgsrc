@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2010/06/13 22:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2010/12/23 11:45:00 dsainty Exp $
 
 DISTNAME=	fox-1.6.33
 PKGREVISION=	3
@@ -35,7 +35,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

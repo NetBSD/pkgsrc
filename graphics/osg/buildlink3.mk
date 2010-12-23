@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/11/15 22:57:23 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/12/23 11:44:43 dsainty Exp $
 
 BUILDLINK_TREE+=	osg
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.osg?=	../../graphics/osg
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"

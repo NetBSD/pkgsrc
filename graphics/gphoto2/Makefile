@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2010/01/18 09:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2010/12/23 11:44:38 dsainty Exp $
 
 DISTNAME=	gphoto2-2.4.7
 PKGREVISION=	2
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-aalib-prefix=${BUILDLINK_PREFIX.aalib}
 CONFIGURE_ARGS+=	--with-cdk-prefix=${BUILDLINK_PREFIX.cdk}
 CONFIGURE_ARGS+=	--with-exif-prefix=${BUILDLINK_PREFIX.libexif}
-CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
+CONFIGURE_ARGS+=	--with-jpeg-prefix=${JPEGBASE}
 
 # uses rl_completion_matches() (NetBSD 3.* don't have) and rl_copy_text()
 USE_GNU_READLINE=	yes
@@ -34,5 +34,5 @@ CFLAGS.Darwin+= -D_DARWIN_C_SOURCE
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

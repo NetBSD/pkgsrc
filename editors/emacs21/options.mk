@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/08/13 12:40:58 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2010/12/23 11:44:28 dsainty Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
@@ -39,7 +39,7 @@ PKG_OPTIONS+=		xaw
 ### Support drawing pretty X11 widgets.
 ###
 .if !empty(PKG_OPTIONS:Mx11)
-.  include "../../graphics/jpeg/buildlink3.mk"
+.  include "../../mk/jpeg.buildlink3.mk"
 .  include "../../graphics/tiff/buildlink3.mk"
 .  include "../../graphics/png/buildlink3.mk"
 .  include "../../x11/libXpm/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/06/13 22:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/12/23 11:44:59 dsainty Exp $
 #
 
 DISTNAME=	aterm-1.0.0
@@ -27,8 +27,8 @@ CONFIGURE_ARGS+=--enable-background-image \
 		--with-xpm-includes=${BUILDLINK_PREFIX.libXpm}/include \
 		--with-xpm-library=${BUILDLINK_PREFIX.libXpm}/lib \
 		--with-jpeg \
-		--with-jpeg-includes=${BUILDLINK_PREFIX.jpeg}/include \
-		--with-jpeg-library=${BUILDLINK_PREFIX.jpeg}/lib \
+		--with-jpeg-includes=${JPEGBASE}/include \
+		--with-jpeg-library=${JPEGBASE}/lib \
 		--with-png \
 		--with-png-library=${BUILDLINK_PREFIX.png}/lib \
 		--with-png-includes=${BUILDLINK_PREFIX.png}/include \
@@ -49,7 +49,7 @@ SPECIAL_PERMS=		${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

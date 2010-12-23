@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2010/06/23 03:02:37 dsainty Exp $
+# $NetBSD: Makefile,v 1.85 2010/12/23 11:44:37 dsainty Exp $
 
 DISTNAME=	gd-2.0.35
 PKGREVISION=	6
@@ -33,7 +33,7 @@ CONFIGURE_ENV+=		ac_cv_path_LIBPNG12_CONFIG=""
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"

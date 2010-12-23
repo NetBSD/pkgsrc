@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2010/06/15 13:15:15 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.7 2010/12/23 11:45:03 dsainty Exp $
 #
 # used by x11/wxGTK28/Makefile
 
@@ -62,7 +62,7 @@ pre-configure:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

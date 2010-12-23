@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/18 09:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/23 11:44:51 dsainty Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
@@ -40,5 +40,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

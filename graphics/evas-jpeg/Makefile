@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:58:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/23 11:44:36 dsainty Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-jpeg/}
 PKGREVISION=	2
@@ -16,5 +16,5 @@ MAKE_FLAGS+=	module_la_LIBADD="\$${eavs_image_loader_jpeg_libs} \$${EINA_LIBS} $
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

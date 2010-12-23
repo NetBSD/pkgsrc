@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/06/13 22:44:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/12/23 11:44:34 dsainty Exp $
 
 DISTNAME=		camlimages-2.2.0
 PKGREVISION=		9
@@ -38,7 +38,7 @@ PLIST.dll=	yes
 .endif
 
 .include "../../lang/ocaml/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"

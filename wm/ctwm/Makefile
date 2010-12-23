@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/05/15 00:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/12/23 11:44:57 dsainty Exp $
 #
 
 DISTNAME=	ctwm-3.8a
@@ -26,8 +26,8 @@ EXTRA_DEFINES.SunOS+=	-D__EXTENSIONS__
 MAKE_ENV+=		EXTRA_DEFINES=${EXTRA_DEFINES:Q}
 
 pre-configure:
-	( ${ECHO} 'USER_JPEGLIBDIR = -L${BUILDLINK_PREFIX.jpeg}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.jpeg}/lib'; \
-	  ${ECHO} 'USER_JPEGINCDIR = -I${BUILDLINK_PREFIX.jpeg}/include'; \
+	( ${ECHO} 'USER_JPEGLIBDIR = -L${JPEGBASE}/lib ${COMPILER_RPATH_FLAG}${JPEGBASE}/lib'; \
+	  ${ECHO} 'USER_JPEGINCDIR = -I${JPEGBASE}/include'; \
 	  ${CAT} ${WRKSRC}/Imakefile.local-template; \
 	) >${WRKSRC}/Imakefile.local
 
@@ -42,7 +42,7 @@ pre-install:
 	${INSTALL_DATA} ${FILESDIR}/ctwm.desktop \
 	    ${DESTDIR}${PREFIX}/share/xsessions/ctwm.desktop
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

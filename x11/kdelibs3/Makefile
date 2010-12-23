@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2010/07/14 11:11:14 sbd Exp $
+# $NetBSD: Makefile,v 1.151 2010/12/23 11:45:01 dsainty Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	9
@@ -101,7 +101,7 @@ GCC_REQD+=		2.95
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

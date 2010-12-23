@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/11/15 08:55:21 jnemeth Exp $
+# $NetBSD: Makefile,v 1.13 2010/12/23 11:44:25 dsainty Exp $
 #
 
 DISTNAME=	centerim-4.22.9
@@ -49,7 +49,7 @@ GCC_REQD+=		3.0	# see PR 29185
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 
 .if defined(BUILDLINK_LIBICONV_LDADD) && !empty(BUILDLINK_LIBICONV_LDADD)
 #

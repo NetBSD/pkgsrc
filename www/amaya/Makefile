@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2010/11/15 22:58:49 abs Exp $
+# $NetBSD: Makefile,v 1.61 2010/12/23 11:44:58 dsainty Exp $
 
 DISTNAME=	amaya-fullsrc-10.0.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -126,7 +126,7 @@ EXTRACT_ELEMENTS+=	libwww
 CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
 # link correctly with pkgsrc zlib (XXX: is this needed or correct?)
 LIBS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 

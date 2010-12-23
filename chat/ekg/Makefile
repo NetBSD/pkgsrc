@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2010/01/18 09:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2010/12/23 11:44:25 dsainty Exp $
 
 DISTNAME=	ekg-1.7
 PKGREVISION=	5
@@ -33,6 +33,6 @@ CONFIGURE_ARGS+=	--with-pthread
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

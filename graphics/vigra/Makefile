@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/10/16 15:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/23 11:44:46 dsainty Exp $
 #
 
 DISTNAME=	vigra-1.7.0-src
@@ -26,7 +26,7 @@ INSTALL_MAKE_FLAGS+=	libdir=${DESTDIR}${PREFIX}/lib
 .include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

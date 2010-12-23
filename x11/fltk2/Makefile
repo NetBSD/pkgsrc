@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/23 11:45:00 dsainty Exp $
 
 VERS=		6129
 PKGREVISION=	4
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
 
 .include "options.mk"
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"

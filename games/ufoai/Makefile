@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:44:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/23 11:44:32 dsainty Exp $
 
 DISTNAME=		ufoai-2.2.1
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufoai/}
@@ -36,7 +36,7 @@ post-install:
 	${TAR} -xf ${DISTDIR}/${DISTNAME}-data.tar -C ${DESTDIR}${PREFIX}/share/ufoai
 	${BZIP2} -d -c ${DISTDIR}/${DISTNAME}-mappack.tar.bz2 | ${TAR} -xf - -C ${DESTDIR}${PREFIX}/share/ufoai
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/09/14 11:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/12/23 11:45:04 dsainty Exp $
 
 DISTNAME=	xplanet-1.2.1
 PKGREVISION=	4
@@ -25,7 +25,7 @@ INSTALLATION_DIRS+=	${XPLANET_DIRS:C,.*,share/xplanet/&,g}
 
 .include "options.mk"
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"

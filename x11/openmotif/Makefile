@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2010/06/13 22:45:48 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2010/12/23 11:45:01 dsainty Exp $
 
 PKGVER=		2.3.1
 DISTNAME=	openmotif-${PKGVER}
@@ -53,8 +53,8 @@ SUBST_SED.man_rename+=		-e 's: Shell.3: XShell.3:g'
 
 CONFIGURE_ARGS+= \
 		--enable-jpeg --enable-png \
-		--with-libjpeg-includes=${BUILDLINK_PREFIX.jpeg}/include \
-		--with-libjpeg-lib=${BUILDLINK_PREFIX.jpeg}/lib \
+		--with-libjpeg-includes=${JPEGBASE}/include \
+		--with-libjpeg-lib=${JPEGBASE}/lib \
 		--with-libpng-includes=${BUILDLINK_PREFIX.png}/include \
 		--with-libpng-lib=${BUILDLINK_PREFIX.png}/lib \
 		--x-libraries=${X11BASE}/lib
@@ -109,7 +109,7 @@ post-build:
 		${MV} -f $${manpage}.tblized $${manpage};		\
 	done
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

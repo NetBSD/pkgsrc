@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/07/14 11:11:20 sbd Exp $
+# $NetBSD: Makefile,v 1.36 2010/12/23 11:44:31 dsainty Exp $
 #
 
 DISTNAME=		boson-all-0.8
@@ -26,6 +26,6 @@ CONFIGURE_ARGS+=	--disable-debug
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../games/kdegames3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lib3ds/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

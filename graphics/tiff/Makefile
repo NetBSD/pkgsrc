@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2010/08/04 17:48:22 tron Exp $
+# $NetBSD: Makefile,v 1.98 2010/12/23 11:44:46 dsainty Exp $
 
 DISTNAME=	tiff-3.9.4
 PKGREVISION=	1
@@ -35,5 +35,5 @@ post-install:
 .include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

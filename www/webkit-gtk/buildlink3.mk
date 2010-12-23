@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2010/12/17 07:36:10 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2010/12/23 11:44:59 dsainty Exp $
 
 BUILDLINK_TREE+=	webkit-gtk
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.webkit-gtk?=	../../www/webkit-gtk
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/03/30 04:36:54 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/23 11:44:53 dsainty Exp $
 #
 
 DISTNAME=		LibVNCServer-0.9.7
@@ -27,6 +27,6 @@ SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread||g'
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

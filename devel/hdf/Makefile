@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/07/30 10:36:23 asau Exp $
+# $NetBSD: Makefile,v 1.36 2010/12/23 11:44:27 dsainty Exp $
 
 DISTNAME=	HDF4.2r4
 PKGNAME=	hdf-4.2r4
@@ -36,6 +36,6 @@ do-test:
 
 .include "../../archivers/szip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

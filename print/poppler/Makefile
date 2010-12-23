@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2010/11/02 15:45:12 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2010/12/23 11:44:55 dsainty Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -51,7 +51,7 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
