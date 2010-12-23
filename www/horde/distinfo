@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2009/12/20 22:15:13 tonnerre Exp $
+$NetBSD: distinfo,v 1.27.8.1 2010/12/23 10:51:51 sbd Exp $
 
-SHA1 (horde-3.3.6.tar.gz) = d23d651ddc95fae2d10b7a3363a4745aded83083
-RMD160 (horde-3.3.6.tar.gz) = 098aed42a397577e743ac5372ef22b2cbb31a601
-Size (horde-3.3.6.tar.gz) = 8776361 bytes
+SHA1 (horde-3.3.11.tar.gz) = 66710a5026d78e462422969b187e78ff52b04e34
+RMD160 (horde-3.3.11.tar.gz) = e5e80e47a564b69e8e5db8648614a4fc6f6e06fd
+Size (horde-3.3.11.tar.gz) = 8788320 bytes
 SHA1 (patch-aa) = 91150235a9739231e5c4da8622f9d48ec26f1115
