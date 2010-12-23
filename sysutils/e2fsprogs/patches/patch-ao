@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2007/06/20 19:51:10 jlam Exp $
+$NetBSD: patch-ao,v 1.2 2010/12/23 06:34:50 ryoon Exp $
 
---- lib/blkid/blkidP.h.orig	2006-02-20 14:16:42.000000000 -0500
+--- lib/blkid/blkidP.h.orig	2009-08-13 01:39:57.000000000 +0000
 +++ lib/blkid/blkidP.h
 @@ -104,7 +104,11 @@ struct blkid_struct_cache
  extern char *blkid_strdup(const char *s);
@@ -12,6 +12,6 @@ $NetBSD: patch-ao,v 1.1 2007/06/20 19:51:10 jlam Exp $
 +#endif
 +
 +#define BLKID_CACHE_FILE ETC_DIR "/blkid.tab"
- extern const char *blkid_devdirs[];
  
  #define BLKID_ERR_IO	 5
+ #define BLKID_ERR_PROC	 9
