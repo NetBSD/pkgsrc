@@ -1,0 +1,17 @@
+# $NetBSD: system,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+$ML_DIR = '%FML_DATADIR%';
+%CPU_TYPE_MANUFACTURER_OS = (
+	 '%MYHOST%', 'i386-unknown-netbsd4.0', 
+);
+$DOMAIN = '%MYDOMAIN%';
+$TZ = '+0900';
+%OS_TYPE = (
+	 '%MYHOST%', 'NETBSD4.0', 
+);
+$PERSONAL_OR_GROUP = 'personal';
+$LANGUAGE = 'Japanese';
+$FQDN = '%MYHOST%';
+$EXEC_DIR = '%FML_DIR%';
+
+
+1;
