@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4329 2010/12/23 06:35:49 ryoon Exp $
+$NetBSD: CHANGES-2010,v 1.4330 2010/12/23 08:00:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -883,7 +883,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-CPAN-Reporter to 1.1710 [sno 2010-02-15]
 	Updated devel/p5-Data-Compare to 1.22 [sno 2010-02-15]
 	Moved graphics/digikam to graphics/digikam-kde3 [wiz 2010-02-15]
-	Moved graphics/digikam-doc to graphics/digikam-doc [wiz 2010-02-15]
+	Moved graphics/digikam-doc to graphics/digikam-doc-kde3 [wiz 2010-02-15]
 	Updated graphics/digikam to 1.1.0 [wiz 2010-02-15]
 	Updated devel/p5-Data-Dumper-Concise to 1.200 [sno 2010-02-15]
 	Updated devel/p5-Data-Page to 2.02 [sno 2010-02-15]
