@@ -1,0 +1,532 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+
+- use HOSTNAME as hostname when install.
+- Stop perl deprecated warnings.
+- honor PREFIX and FML_DATADIR.
+- Add support for DESTDIR.
+
+--- sbin/makefml.orig	2003-01-26 11:18:01.000000000 +0000
++++ sbin/makefml
+@@ -192,6 +192,11 @@ sub InitMakeFml
+ 
+     { # DNS AutoConfigure to set FQDN and DOMAINNAME; 
+ 	local(@n, $hostname, $list);
++	if ($ENV{'HOSTNAME'}) {
++	    $FQDN = $ENV{'HOSTNAME'};
++	    $DOMAINNAME = $FQDN;
++	    $DOMAINNAME =~  s/^[^\.]+\.//;
++	} else {
+ 	chop($hostname = `hostname`); # beth or beth.domain may be possible
+ 	$FQDN = $hostname;
+ 	@n    = (gethostbyname($hostname))[0,1]; $list .= " @n ";
+@@ -202,6 +207,7 @@ sub InitMakeFml
+ 	$FQDN       =~ s/\.$//; # for e.g. NWS3865
+ 	$DOMAINNAME = $FQDN;
+ 	$DOMAINNAME =~ s/^$hostname\.//;
++	}
+ 
+ 	$Config'FQDN = $FQDN; #';
+     }
+@@ -245,18 +251,7 @@ sub InitMakeFml
+     # XXX We should ignore $CONFIG_DIR in 'install' since it may be twice time.
+     # Anyway try once ... (may be re-installation ?) Dame moto sune:-)
+     if ((! $CONFIG_DIR) || ($ARGV[0] eq 'install')) {
+-	undef $CONFIG_DIR;
+-
+-	for ("$HOME/.fml", "/usr/local/fml/.fml") {
+-	    $CONFIG_DIR = $_ if -d $_;
+-	}
+-
+-	# re-install case
+-	if ($ARGV[0] eq 'install' && $ARGV[1]) {
+-	    $CONFIG_DIR = "$ARGV[1]/.fml" if -d "$ARGV[1]/.fml";
+-	}
+-
+-	if ($CONFIG_DIR) { $AutoLoad = 1;}
++	$CONFIG_DIR = "@PREFIX@/fml/.fml";
+     }
+ 
+     if (($ARGV[0] =~ /^install/i) && -d 'src') {
+@@ -467,17 +462,6 @@ OS_TYPE:
+ 	&main'Warn($@) if $@; #';
+     }
+ 
+-    ### CGI (fml 4.0) 
+-    if (-f $CGI_CONFIG) {
+-	package CGI_CONFIG;
+-	eval("require \"$main::CGI_CONFIG\";");
+-	print STDERR $@ if $@;
+-	$main::CurConfig{'CGI_PATH'}       = $CGI_PATH;
+-	$main::CurConfig{'REAL_CGI_PATH'}  = $REAL_CGI_PATH;
+- 	$main::CurConfig{'CGI_AUTHDB_DIR'} = $CGI_AUTHDB_DIR;
+-	package main;
+-    }
+-
+     ### anyway reload and set the present config for convenience;
+     &GetCurConfig;
+     &ResetVariables;
+@@ -533,8 +517,8 @@ sub SetHashDefaults
+ 	       ); 
+ 
+     %Default = ('PERSONAL_OR_GROUP', 'personal',
+-		'EXEC_DIR', '/usr/local/fml',
+-		'ML_DIR',   '/var/spool/ml', 
++		'EXEC_DIR', '@PREFIX@/fml',
++		'ML_DIR',   '@FML_DATADIR@', 
+ 		'DOMAIN',   $DOMAINNAME,
+ 		'FQDN',     $FQDN,
+ 		'GROUP',    '',
+@@ -818,14 +802,14 @@ sub InitFmlConfig
+ 	"Personal Use or ML-Admin-Group-Shared or fmlserv you use?";
+ 
+ 	$cmd = &Query("Personal, Group, Fmlserv", "personal/group/fmlserv", 
+-		      "personal|group|fmlserv", "personal");    
++		      "personal|group|fmlserv", "personal", 1);    
+ 	$cmd = ($cmd !~ /^\s*$/) ? $cmd : $v;
+ 	&do_setq("PERSONAL_OR_GROUP", $cmd);
+ 
+ 	if ($cmd eq 'group' || $cmd eq 'fmlserv') {
+ 	    printf "Please define the group (in /etc/group) ML Operators use";
+ 	    $cmd = &Query("Group of Mailing List Operators", 
+-			  "fml or GID ([\\w\\d]+)", "[\\w\\d]+", "fml");    
++			  "fml or GID ([\\w\\d]+)", "[\\w\\d]+", "fml", 1);    
+ 	    &do_setq("GROUP", $cmd);
+ 
+ 	    $GID = &GetGID($cmd);
+@@ -851,8 +835,7 @@ sub InitFmlConfig
+ 	    $v = $CurConfig{$_} ? $CurConfig{$_} : $Default{$_};
+ 
+ 	    printf "%-25s %s ", $p, "[$v]";
+-	    $cmd = &GetString;
+-	    $cmd = ($cmd !~ /^\s*$/) ? $cmd : $v;
++	    $cmd = $v;
+ 	    $buf .= sprintf("  %10s: %s\n", $k, $cmd);
+ 	    &do_setq($k, $cmd);
+ 	}
+@@ -861,14 +844,14 @@ sub InitFmlConfig
+ 	$deflang  = $FQDN =~ /jp$/i ? "Japanese" : "English";
+ 
+ 	$cmd = &Query("Language", 
+-		      "Japanese or English", "Japanese|English", $deflang);
++		      "Japanese or English", "Japanese|English", $deflang, 1);
+ 
+ 	&do_setq("LANGUAGE", $cmd);
+ 	$buf .= sprintf("  %10s: %s\n", "Language", $cmd);
+ 
+ 	# Time Zone
+ 	$cmd = &Query("TimeZone", 
+-		      "TZ: e.g. +0900, -0300", '[\-+]\d{4}', &ProbeTZ);
++		      "TZ: e.g. +0900, -0300", '[\-+]\d{4}', &ProbeTZ, 1);
+ 
+ 	&do_setq("TZ", $cmd);
+ 	$buf .= sprintf("  %10s: %s\n", "TimeZone", $cmd);
+@@ -914,12 +897,10 @@ sub InitFmlConfig
+ 
+ 	    $dir =~ s#//#/#g;
+ 
+-	    if (! -d $dir) {
+-		# print "   mkdir $dir\n";
+-		# here /usr/local/fml;only installer can read-write this;
+-		# print STDERR "mkdir($dir, 0755);\n";
+-		&Mkdir($dir, 0755); 
+-	    }
++	    # print "   mkdir $dir\n";
++	    # here /usr/local/fml;only installer can read-write this;
++	    # print STDERR "mkdir($dir, 0755);\n";
++	    &Mkdir($dir, 0755); 
+ 	}
+     }
+ 
+@@ -971,21 +952,31 @@ sub GetCurConfig
+ }
+ 
+ 
++sub DestDir
++{
++    my($dir) = @_;
++    my($destdir);
++    $destdir = $ENV{'DESTDIR'};
++
++    return ($destdir eq '')? $dir: ($destdir . $dir);
++}
++
+ sub SaveConfig
+ {
+     local($buf) = @_;
++    local($config);
+ 
+-    if (-f $FML_CONFIG) { rename($FML_CONFIG, "${FML_CONFIG}.bak");}
++    $config = DestDir($FML_CONFIG);
+ 
+     # /usr/local/fml/.fml/system (perl script: config for makefml)
+-    open(F, ">> $FML_CONFIG") || &Die("Cannot save config to $FML_CONFIG");
++    open(F, ">> $config") || &Die("Cannot save config to $FML_CONFIG($config)");
+     select(F); $| = 1; select(STDOUT);
+     print F $buf, "\n";
+     print F "\n1;\n";
+     close(F);
+ 
+     # /usr/local/fml/.fml/system.sh (shell script: config for shell script)
+-    open(F, ">> ${FML_CONFIG}.sh") || 
++    open(F, ">> ${config}.sh") || 
+ 	&Die("Cannot save config to ${FML_CONFIG}.sh");
+     select(F); $| = 1; select(STDOUT);
+     print F "EXEC_DIR=$EXEC_DIR\n";
+@@ -1029,10 +1020,11 @@ sub GetCurPolicy
+ sub SavePolicy
+ {
+     local($buf) = @_;
++    local($policy);
+ 
+-    if (-f $FML_POLICY) { rename($FML_POLICY, "${FML_POLICY}.bak");}
++    $policy = DestDir($FML_POLICY);
+ 
+-    open(F, ">> $FML_POLICY") || &Die("Cannot save POLICY to $FML_POLICY");
++    open(F, ">> $policy") || &Die("Cannot save POLICY to $policy");
+     select(F); $| = 1; select(STDOUT);
+     print F "$buf\n";
+     print F "\n1;\n";
+@@ -1044,19 +1036,22 @@ sub SavePolicy
+ 
+ sub FlushLog
+ {
++    local($config_dir);
++
+     if ($TempolaryLogfile eq $MAKEFML_LOGFILE) {
+ 	print STDERR "--- makefml log ($MAKEFML_LOGFILE) ---\n";
+ 	&Cat($MAKEFML_LOGFILE);
+ 	unlink $MAKEFML_LOGFILE if $TheFirstTime;
+     }
+ 
++    $config_dir = DestDir($CONFIG_DIR);
+     # touch
+-    if (-d $CONFIG_DIR && !-f "$CONFIG_DIR/log") { 
+-	&Touch("$CONFIG_DIR/log");
++    if (-d $config_dir && !-f "$config_dir/log") { 
++	&Touch("$config_dir/log");
+     }
+ 
+-    if (-w "$CONFIG_DIR/log" && -f "etc/release_version") {
+-	$LOGFILE = "$CONFIG_DIR/log";
++    if (-w "$config_dir/log" && -f "etc/release_version") {
++	$LOGFILE = "$config_dir/log";
+ 	if (open(V, "etc/release_version")) {
+ 	    chop($version = <V>);
+ 	    &Log("installing fml $version is done");
+@@ -1111,9 +1106,11 @@ sub AppendString2File
+ sub GetFile
+ {
+     local($f) = @_;
+-    local($s, $dir);
++    local($s, $dir, $d);
+ 
+     for $dir (@INC) {
++	$d = DestDir($dir);
++	if (-f "$d/$f") { $f = "$d/$f"; last;}
+ 	if (-f "$dir/$f") { $f = "$dir/$f"; last;}
+     }
+ 
+@@ -1167,13 +1164,15 @@ sub Log 
+     local($str, $s) = @_;
+     local($from) = $USER;
+     local(@c) = caller;
++    local($logfile);
+ 
+     &GetTime(time);
+ 
++    $logfile = DestDir($LOGFILE);
+     # existence and append(open system call check)
+-    if (-f $LOGFILE && open(APP, ">> $LOGFILE")) {
+-	&Append2("$Now $str ($from)", $LOGFILE);
+-	&Append2("$Now    $filename:$line% $s", $LOGFILE) if $s;
++    if (-f $logfile && open(APP, ">> $logfile")) {
++	&Append2("$Now $str ($from)", $logfile);
++	&Append2("$Now    $filename:$line% $s", $logfile) if $s;
+     }
+     elsif (-f $MAKEFML_LOGFILE && open(APP, ">> $MAKEFML_LOGFILE")) {
+ 	&Append2("$Now $str ($from)", $MAKEFML_LOGFILE);
+@@ -1736,6 +1735,36 @@ sub GetString
+     $s;
+ }
+ 
++sub TweakPath
++{
++    local($cwd, @dir, @path, $sep, $delim, $p, @npath, $inpath);
++
++    if ($UNISTD) {
++	chop($cwd = `pwd`); # ATTENTION! ONLY ON UNIX
++    }
++    else {
++	chop($cwd = `cd`);
++    }
++    $sep = ($COMPAT_ARCH eq "WINDOWS_NT4")? ';': ':';
++    $delim = ($COMPAT_ARCH eq "WINDOWS_NT4")? '\\': '/';
++    @dir = split(/$delim/, $cwd);
++    pop(@dir);
++    $cwd = join($delim, @dir);
++    @path = split(/$sep/, $ENV{'PATH'});
++
++    $inpath = 1;
++    foreach $p (@path) {
++	if ($inpath) {
++	    if (index($p, $cwd) == 0) {
++		next;
++	    } else {
++		$inpath = 0;
++	    }
++	}
++	push(@npath, $p);
++    }
++    $ENV{'PATH'} = join($sep, @npath);
++}
+ 
+ sub FixPath
+ {
+@@ -1821,7 +1850,7 @@ sub __SearchPath
+     }
+ 
+     # too pesimistic?
+-    for ("/usr/local/bin", 
++    for ("@PREFIX@/bin", 
+ 	 "/usr/share/bin", 
+ 	 "/usr/contrib/bin", 
+ 	 "/usr/gnu/bin", 
+@@ -1829,7 +1858,6 @@ sub __SearchPath
+ 	 "/bin", 
+ 	 "/usr/ucb",
+ 	 "/usr/ucblib",  # NEC EWS4800 
+-	 "/usr/pkg/bin", # NetBSD pkgsrc
+ 	 # NT Extention
+ 	 "/perl5/bin", 
+ 	 "c:\\perl\\bin", 
+@@ -2013,7 +2041,7 @@ sub OutPutLocalConfig
+ 
+ sub Query
+ {
+-    local($menu, $query, $pat, $default) = @_;
++    local($menu, $query, $pat, $default, $batch) = @_;
+     
+     print "Query(debug): ($menu, $query, $pat, $default)\n" if $debug;
+     print "\n" unless $MenuNarrowLineSkip;
+@@ -2021,7 +2049,11 @@ sub Query
+     while (1) {
+ 	#print "menu={$menu} query={$query}\n";
+ 	print "${CurTag}${menu} ($query) [$default] ";
+-	$cmd = &GetString;
++	if ($batch) {
++	    $cmd = $default;
++	} else {
++	    $cmd = &GetString;
++	}
+ 	print "\n";
+ 
+ 	if ($cmd =~ /^($pat)$/) { last;}
+@@ -2965,15 +2997,11 @@ sub do_install
+     {
+ 	&ResetVariables;
+ 
+-	if (! -d $EXEC_DIR) {
+-	    print "   mkdir $EXEC_DIR\n";
+-	    &Mkdir($EXEC_DIR, 0755);		
+-	}
++	print "   mkdir $EXEC_DIR\n";
++	&Mkdir($EXEC_DIR, 0755);		
+ 
+-	if (! -d $ML_DIR) {
+-	    print "   mkdir $ML_DIR\n";
+-	    &MakeWritableDir($ML_DIR);
+-	}
++	print "   mkdir $ML_DIR\n";
++	&MakeWritableDir($ML_DIR);
+     }
+ 
+     # installation: -f config file 
+@@ -2982,7 +3010,7 @@ sub do_install
+     }
+     else {
+ 	$cmd = &Query("---Install the Fml system to $CurConfig{'EXEC_DIR'}.", 
+-		      "y/n", "y|n", "n");
++		      "y/n", "y|n", "y", 1);
+     }
+ 
+     if ($cmd ne 'y') {
+@@ -3044,27 +3072,6 @@ sub do_install
+ 	&MakeWritableDir($ML_ETC_DIR);
+     }
+ 
+-    # backup temlate files when RE-INSTALLATION
+-    if (-d "$EXEC_DIR/drafts") {
+-	local($d, $f);
+-
+-	$d = "$EXEC_DIR/drafts";
+-	opendir(DIRD, $d) || &Warn("cannot opendir $d");
+-
+-	print STDERR "backup templates in $d ...\n";
+-
+-	for $f (readdir(DIRD)) {
+-	    next if $f =~ /^\./;
+-	    next if $f =~ /\.bak$/i;	# /i for NT4.
+-
+-	    $f = "$d/$f";
+-	    if (-f $f) { 
+-		&Copy($f, "$f.bak");
+-	    }
+-	}
+-	closedir(DIRD);
+-    }
+-
+     print STDERR "\nGenerate nroff manuals:\n";
+     for $f (<doc/man/*.?>) {
+ 	&Copy($f, "$f.bak");
+@@ -3085,8 +3092,8 @@ sub do_install
+     }
+     elsif (-f "sbin/install.sh") {
+ 	$SH = $ENV{'SH'} || "/bin/sh";
+-	system "$SH ./sbin/install.sh $EXEC_DIR";
+-	eval symlink($CONFIG_DIR, "$EXEC_DIR/Configurations");
++	system "$SH ./sbin/install.sh " . DestDir($EXEC_DIR);
++	eval symlink($CONFIG_DIR, DestDir("$EXEC_DIR/Configurations"));
+ 	&main'Warn($@) if $@; #';
+     }
+     else {
+@@ -3095,11 +3102,12 @@ sub do_install
+ 
+     # disable .crc in installation mode
+     undef $CHECK_SUM;
+-    &MakeConfigPH("$EXEC_DIR/cf/config", "$EXEC_DIR/cf/MANIFEST", 
+-		  "", "$EXEC_DIR/default_config.ph");
++    &MakeConfigPH(DestDir("$EXEC_DIR/cf/config"),
++		  DestDir("$EXEC_DIR/cf/MANIFEST"), 
++		  "", DestDir("$EXEC_DIR/default_config.ph"));
+ 
+     if ($GroupWritable eq 'fmlserv') {
+-	$cmd = &Query("Set up \"fmlserv\" system now? ", "y/n", "y|n", "n");
++	$cmd = &Query("Set up \"fmlserv\" system now? ", "y/n", "y|n", "n", 1);
+ 	if ($cmd eq 'y') { &ExecCmd("fmlserv");}
+     }
+ 
+@@ -3975,13 +3983,16 @@ sub Mkdir
+ 
+ sub MkDirHier
+ {
++    local($path, $mode) = @_;
+     local($pat) = $UNISTD ? '/|$' : '\\\\|/|$'; # on UNIX or NT4
++    local($dir);
+ 
+-    while ($_[0] =~ m:$pat:go) {
++    $dir = DestDir($path);
++    while ($dir =~ m:$pat:go) {
+ 	next if (!$UNISTD) && $` =~ /^[A-Za-z]:$/; # ignore drive letter on NT4
+ 
+ 	if ($` ne "" && !-d $`) {
+-	    mkdir($`, $_[1] || 0777) || do {
++	    mkdir($`, $mode || 0777) || do {
+ 		&Log("cannot mkdir <$`>: $!"); 
+ 		return 0;
+ 	    };
+@@ -4835,6 +4846,8 @@ sub MakeConfigPH
+ 
+     $cf = $cf || "-i";
+ 
++    &TweakPath;
++
+     if (! open(EXEC_CF, "$^X $config -m $manifest $cf|")) {
+ 	&Log("ERROR: cannot exec $config -m $manifest $cf");
+ 	&Warn("cannot exec $config -m $manifest $cf");
+@@ -5851,16 +5864,16 @@ sub do_setup_admin_cgi_scripts
+ 
+     print STDERR " * create $REAL_CGI_PATH/admin/.htaccess\n"
+ 	unless $SilentMode;
+-    &Conv($NULL, "$EXEC_DIR/www/etc/dot_htaccess.admin",
+-	  "$REAL_CGI_PATH/admin/.htaccess");
++    &Conv($NULL, DestDir("$EXEC_DIR/www/etc/dot_htaccess.admin"),
++	  DestDir("$REAL_CGI_PATH/admin/.htaccess"));
+ 
+     print STDERR " * create CGI scripts in $REAL_CGI_PATH/admin/\n   "
+ 	unless $SilentMode;
+     
+     for $f ("menu.cgi", "makefml.cgi", "mlmenu.cgi",
+ 	    "menubar.cgi", "index.cgi", "newml.cgi", "rmml.cgi") {
+-	$template = "$EXEC_DIR/www/cgi-bin/admin/$f";
+-	$outfile  = "$REAL_CGI_PATH/admin/$f";
++	$template = DestDir("$EXEC_DIR/www/cgi-bin/admin/$f");
++	$outfile  = DestDir("$REAL_CGI_PATH/admin/$f");
+ 	print STDERR $f, " " unless $SilentMode;
+ 	&Copy($template, $outfile);
+ 	chmod 0755, $outfile;
+@@ -6364,12 +6377,12 @@ sub main::Dumpvar 
+ 	    }
+ 
+ 	    if ((($] !~ /5\.\d\d\d/) && 
+-		 $key ne "_$package" && $key ne "_DB" && defined %entry
++		 $key ne "_$package" && $key ne "_DB" && %entry
+ 		 )
+ 		||
+ 		(($] =~ /5\.\d\d\d/) && 
+ 		 $key ne "$package::" && $key ne "DB::" && 
+-		 (defined %entry) && 
++		 %entry && 
+ 		 ($dumpPackages || $key !~ /::$/)
+ 		 && ($key !~ /^_</ || $dumpDBFiles)
+ 		 && !($package eq "dumpvar" && $key eq "stab")
+@@ -7319,31 +7332,25 @@ sub SetUpCGIadmin
+ 
+     &ResetVariables;
+ 
+-    # ignore cgi examles in upgrade
+-    if (-f $CGI_CONFIG) {
+-	return;
+-    }
+-    elsif ($mode eq 'install') {
+-	$SSL_REQUIRE_SSL = 'SSLRequireSSL';
+-    }
++    $SSL_REQUIRE_SSL = 'SSLRequireSSL';
+ 
+     &MkDirHier("$EXEC_DIR/www/cgi-bin/admin");
+-    &MkDirHier("$EXEC_DIR/www/share/cgi-bin/admin");
+     &MkDirHier("$REAL_CGI_PATH/admin");
+ 
+-    &Conv($NULL, "$EXEC_DIR/www/etc/dot_htaccess.admin",
+-	  "$EXEC_DIR/www/cgi-bin/admin/.htaccess");
++    &Conv($NULL, DestDir("$EXEC_DIR/www/etc/dot_htaccess.admin"),
++	  DestDir("$EXEC_DIR/www/cgi-bin/admin/.htaccess"));
+ 
+-    &Conv($NULL, "$EXEC_DIR/www/etc/dot_htaccess.admin",
+-	  "$REAL_CGI_PATH/admin/.htaccess");
++    &Conv($NULL, DestDir("$EXEC_DIR/www/etc/dot_htaccess.admin"),
++	  DestDir("$REAL_CGI_PATH/admin/.htaccess"));
+ 
+     # first time!
+-    if (! -f "$CGI_AUTHDB_DIR/admin/htpasswd") {
++    $htpasswd = DestDir("$CGI_AUTHDB_DIR/admin/htpasswd");
++    if (! -f $htpasswd) {
+ 	# we enforce valid-user in .htaccess, so empty htpasswd is invalid :)
+         &SetPublicUmask;
+ 	&MkDirHier("$CGI_AUTHDB_DIR/admin");
+-	&Touch("$CGI_AUTHDB_DIR/admin/htpasswd");
+-	chmod 0644, "$CGI_AUTHDB_DIR/admin/htpasswd";
++	&Touch($htpasswd);
++	chmod 0644, $htpasswd;
+     }
+ 
+     # make cgi-bin/admin/
+@@ -7355,7 +7362,10 @@ sub SetUpCGIadmin
+     &do_setup_admin_cgi_scripts($NULL);
+     print ".";
+     $SilentMode = 0;
+-    for (<www/examples/*/*>) { print "."; &Conv($NULL, $_, "$EXEC_DIR/$_");}
++    for (<www/examples/*/*>) {
++	print ".";
++	&Conv($NULL, $_, DestDir("$EXEC_DIR/$_"));
++    }
+     print "\n";
+     &SaveCGIConf;
+ 
+@@ -7377,6 +7387,7 @@ sub SaveCGIConf
+     local($cf, $new);
+ 
+     $cf  = $CGI_CONFIG || "$CONFIG_DIR/cgi.conf";
++    $cf = DestDir($cf);
+     $new = $cf.".new$$";
+ 
+     if (open(CF, "> $new")) {
