@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/09/13 10:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/23 00:26:09 wiz Exp $
 #
 
-DISTNAME=	pyenchant-1.6.3
+DISTNAME=	pyenchant-1.6.5
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyenchant/
