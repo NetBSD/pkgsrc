@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9969 2010/12/23 00:26:19 wiz Exp $
+$NetBSD: TODO,v 1.9970 2010/12/23 18:21:40 tron Exp $
 
 Suggested new packages
 ======================
@@ -1490,7 +1490,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xzip-182
 	o yafc-1.1
 	o yodl-2.14.3
-	o youtube-dl-20101209
 	o ysm-2.9.9.1
 	o yudit-2.9.2
 	o yorick-2.1.05
