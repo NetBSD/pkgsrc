@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2010/06/13 22:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2010/12/23 11:44:58 dsainty Exp $
 
 DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -97,7 +97,7 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

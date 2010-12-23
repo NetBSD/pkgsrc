@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/06/13 22:44:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2010/12/23 11:44:31 dsainty Exp $
 
 DISTNAME=	neverball-1.5.4
 PKGREVISION=	2
@@ -40,6 +40,6 @@ do-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

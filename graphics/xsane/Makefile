@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2010/11/15 22:57:29 abs Exp $
+# $NetBSD: Makefile,v 1.85 2010/12/23 11:44:47 dsainty Exp $
 
 DISTNAME=	xsane-0.994
 PKGNAME=	xsane-0.99.4
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"

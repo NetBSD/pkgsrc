@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2010/06/13 22:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2010/12/23 11:44:46 dsainty Exp $
 
 DISTNAME=	xfig.3.2.5b.full
 PKGNAME=	xfig-3.2.5b
@@ -62,7 +62,7 @@ XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT?.? ${DESTDIR}${XFIGDOCDIR}
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"

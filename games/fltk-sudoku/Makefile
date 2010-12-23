@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/23 11:44:31 dsainty Exp $
 
 DISTNAME=	fltk-1.1.7-source
 PKGNAME=	fltk-sudoku-1.1.7
@@ -55,7 +55,7 @@ do-install:
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

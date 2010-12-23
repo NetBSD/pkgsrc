@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/12/12 15:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/23 11:44:40 dsainty Exp $
 
 DISTNAME=	jpeginfo-1.6.1
 CATEGORIES=	graphics
@@ -17,5 +17,5 @@ GNU_CONFIGURE=		yes
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

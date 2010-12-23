@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/23 11:44:43 dsainty Exp $
 
 DISTNAME=	panomatic-0.9.4-src
 PKGNAME=	panomatic-0.9.4
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

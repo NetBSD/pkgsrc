@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2010/06/13 22:44:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2010/12/23 11:44:38 dsainty Exp $
 
 BUILDLINK_TREE+=	gimp-base
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.gimp-base+=	gimp-base>=1.2.5nb10
 BUILDLINK_PKGSRCDIR.gimp-base?=	../../graphics/gimp1-base
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../multimedia/mpeg-lib/buildlink3.mk"
