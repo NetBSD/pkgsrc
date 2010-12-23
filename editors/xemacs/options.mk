@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2009/11/09 14:09:41 joerg Exp $
+# $NetBSD: options.mk,v 1.10 2010/12/23 11:44:29 dsainty Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS=		ldap xface canna x11
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--without-canna
 ###
 PLIST_VARS+=		x11
 .if !empty(PKG_OPTIONS:Mx11)
-.  include "../../graphics/jpeg/buildlink3.mk"
+.  include "../../mk/jpeg.buildlink3.mk"
 .  include "../../graphics/png/buildlink3.mk"
 .  include "../../graphics/tiff/buildlink3.mk"
 .  include "../../x11/libXpm/buildlink3.mk"

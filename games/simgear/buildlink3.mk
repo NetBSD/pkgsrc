@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/08/27 06:11:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/12/23 11:44:32 dsainty Exp $
 
 BUILDLINK_TREE+=	simgear
 
@@ -12,7 +12,7 @@ BUILDLINK_DEPMETHOD.simgear?=	build
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .endif # SIMGEAR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-simgear

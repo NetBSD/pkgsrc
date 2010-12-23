@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/06/13 22:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/12/23 11:45:02 dsainty Exp $
 
 DISTNAME=		wdm-1.28
 PKGREVISION=		4
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--with-winmgr=${wmanager:Q}
 
 INSTALLATION_DIRS += share/pixmaps/wdm share/examples/wdm
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

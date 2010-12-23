@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/12/23 11:44:50 dsainty Exp $
 #
 
 DISTNAME=	gpac-0.4.5
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-wx
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 # doesn't work yet
 #.include "../../lang/spidermonkey/buildlink3.mk"

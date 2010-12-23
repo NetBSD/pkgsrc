@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/11/23 21:56:25 asau Exp $
+# $NetBSD: Makefile,v 1.28 2010/12/23 11:44:48 dsainty Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -86,7 +86,7 @@ CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHIN
 
 
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

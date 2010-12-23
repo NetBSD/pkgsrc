@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/06/13 22:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/12/23 11:44:26 dsainty Exp $
 #
 
 DISTNAME=	DevIL-${DEVIL_VERSION}
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-ILUT
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
