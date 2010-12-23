@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9968 2010/12/23 00:24:06 wiz Exp $
+$NetBSD: TODO,v 1.9969 2010/12/23 00:26:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1120,7 +1120,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.17
 	o py-cheetah-2.4.2.1 [pkg/43458]
 	o py-cups-1.9.53
-	o py-enchant-1.6.5
 	o py-game-1.9.1
 	o py-gnome2-desktop-2.32.0 [GNOME 2.32]
 	o py-gnosis-1.2.2
