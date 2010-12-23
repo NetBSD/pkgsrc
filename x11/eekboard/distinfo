@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/22 13:31:05 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/12/23 06:18:27 obache Exp $
 
-SHA1 (eekboard-0.0.6.tar.gz) = c3f1de9e8b2b117f17bb82c151bb0054811a794c
-RMD160 (eekboard-0.0.6.tar.gz) = 2009143099bbbcc5cf758f2d699a5f9ee32dacd1
-Size (eekboard-0.0.6.tar.gz) = 500222 bytes
+SHA1 (eekboard-0.0.7.tar.gz) = e6c3c3385e2a91e5b1501ea92b8f2afd8474248d
+RMD160 (eekboard-0.0.7.tar.gz) = b9fd239e3951dd73178134d55e0e62b0c4f16c19
+Size (eekboard-0.0.7.tar.gz) = 501429 bytes
