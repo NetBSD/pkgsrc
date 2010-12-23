@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/11/15 22:56:12 abs Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/23 05:50:10 obache Exp $
 #
 
 DISTNAME=	buzztard-0.5.0
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config msgfmt msgmerge xgettext
 
 PKGCONFIG_OVERRIDE+=	src/lib/ic/libbuzztard-ic.pc.in
 PKGCONFIG_OVERRIDE+=	src/lib/core/libbuzztard-core.pc.in
