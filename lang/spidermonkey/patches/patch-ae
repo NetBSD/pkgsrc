@@ -1,47 +1,24 @@
-$NetBSD: patch-ae,v 1.3 2010/01/16 15:04:32 tnn Exp $
+$NetBSD: patch-ae,v 1.4 2010/12/23 12:36:02 fhajny Exp $
 
---- Makefile.ref.orig	2006-08-21 18:58:45.000000000 +0000
+--- Makefile.ref.orig	2009-02-25 13:24:29.000000000 +0000
 +++ Makefile.ref
-@@ -55,8 +55,6 @@ include config.mk
- 
- ifdef USE_MSVC
- OTHER_LIBS += fdlibm/$(OBJDIR)/fdlibm.lib
--else
--OTHER_LIBS += -Lfdlibm/$(OBJDIR) -lfdm
- endif
- 
- ifdef JS_THREADSAFE
-@@ -80,7 +78,8 @@ endif
- #
+@@ -83,7 +83,7 @@ endif
  # XCFLAGS may be set in the environment or on the gmake command line
  #
+ #CFLAGS += -DDEBUG -DDEBUG_brendan -DJS_ARENAMETER -DJS_HASHMETER -DJS_DUMP_PROPTREE_STATS -DJS_DUMP_SCOPE_METERS -DJS_SCOPE_DEPTH_METER -DJS_BASIC_STATS
 -CFLAGS          += $(OPTIMIZER) $(OS_CFLAGS) $(DEFINES) $(INCLUDES) $(XCFLAGS)
-+CFLAGS          += -L$(PREFIX)/lib $(OPTIMIZER) $(OS_CFLAGS) $(DEFINES) \
-+			$(INCLUDES) $(XCFLAGS) `pkg-config --cflags nspr`
++CFLAGS          += -L$(PREFIX)/lib $(OPTIMIZER) $(OS_CFLAGS) $(DEFINES) $(INCLUDES) $(XCFLAGS)
+ INTERP_CFLAGS   += $(INTERP_OPTIMIZER) $(OS_CFLAGS) $(DEFINES) $(INCLUDES) $(XCFLAGS) $(INTERP_XCFLAGS)
  
  LDFLAGS		= $(XLDFLAGS)
- 
-@@ -248,12 +247,9 @@ JS_CFILES =		\
- 	prmjtime.c	\
- 	$(NULL)
- 
--PREDIRS	+= fdlibm
- 
- ifdef USE_MSVC
- FDLIBM_LIBRARY = fdlibm/$(OBJDIR)/fdlibm.lib
--else
--FDLIBM_LIBRARY = fdlibm/$(OBJDIR)/libfdm.a
- endif
- JSMATH_PRELINK	= $(OBJDIR)/jsmathtemp.o
- # Flag for incremental linking
-@@ -307,9 +303,9 @@ ifdef USE_MSVC
- $(PROGRAM): $(PROG_OBJS) $(LIBRARY) $(FDLIBM_LIBRARY)
+@@ -318,9 +318,9 @@ ifdef USE_MSVC
+ $(PROGRAM): $(PROG_OBJS) $(LIBRARY)
  	link.exe -out:"$@" $(EXE_LINK_FLAGS) $^
  else
--$(PROGRAM): $(PROG_OBJS) $(LIBRARY) $(FDLIBM_LIBRARY)
+-$(PROGRAM): $(PROG_OBJS) $(LIBRARY)
 -	$(CC) -o $@ $(CFLAGS) $(PROG_OBJS) $(LIBRARY) $(LDFLAGS) $(OTHER_LIBS) \
 -	    $(PROG_LIBS)
-+$(PROGRAM): $(PROG_OBJS) $(SHARED_LIBRARY) $(FDLIBM_LIBRARY)
++$(PROGRAM): $(PROG_OBJS) $(SHARED_LIBRARY)
 +	$(CC) -o $@ $(CFLAGS) $(PROG_OBJS) -L$(OBJDIR) $(LDFLAGS) \
 +		$(OTHER_LIBS) $(PROG_LIBS) -ljs -lm
  endif
