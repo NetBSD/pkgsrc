@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2010/01/16 15:04:32 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/23 12:36:01 fhajny Exp $
 
-DISTNAME=	js-1.60
-PKGNAME=	${DISTNAME:S/js/spidermonkey/}
-PKGREVISION=	3
+DISTNAME=	js-1.8.0-rc1
+PKGNAME=	spidermonkey-1.8.0rc1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=js/}
 
@@ -21,14 +20,9 @@ USE_TOOLS+=	gmake pkg-config
 MAKE_FILE=	Makefile.ref
 CFLAGS+=	-DJS_USE_FDLIBM_MATH=0
 
-# JS_THREADSAFE
-PTHREAD_AUTO_VARS=	yes
-MAKE_FLAGS+=		BUILD_OPT=1 LDFLAGS=${LDFLAGS:Q} PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=	BUILD_OPT=1 LDFLAGS=${LDFLAGS:Q} PREFIX=${PREFIX:Q}
 
 INSTALLATION_DIRS=	bin include lib
-
-DIST_HEADERS=	jsapi.h jsautocfg.h jscompat.h jslong.h	\
-	       	jsosdep.h jsotypes.h jspubtd.h jstypes.h
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,6 +31,9 @@ DIST_HEADERS=	jsapi.h jsautocfg.h jscompat.h jslong.h	\
 BUILDDIRPREFIX=	pkgsrc
 .elif ${OPSYS} == "Linux"
 BUILDDIRPREFIX=	Linux_All
+.elif ${OPSYS} == "SunOS"
+SUN_PLATFORM!=	${UNAME} -i
+BUILDDIRPREFIX=	${OPSYS}${OS_VERSION}_${SUN_PLATFORM}
 .else
 BUILDDIRPREFIX=	${OPSYS}
 .endif
@@ -48,8 +45,12 @@ SO_SUFFIX=so
 .endif
 PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
 
+.include "options.mk"
+
 post-extract:
 	${CP} ${FILESDIR}/pkgsrc.mk ${WRKSRC}/config
+	${CP} ${FILESDIR}/opensolaris.mk ${WRKSRC}/config/${BUILDDIRPREFIX}.mk
+	${RM} ${WRKSRC}/lock_SunOS.s
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${BUILDDIRPREFIX}_OPT.OBJ/js \
@@ -57,11 +58,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/${BUILDDIRPREFIX}_OPT.OBJ/libjs.${SO_SUFFIX} \
 	  ${DESTDIR}${PREFIX}/lib
 	${CP} ${WRKSRC}/${BUILDDIRPREFIX}_OPT.OBJ/jsautocfg.h ${WRKSRC}
-.for f in ${DIST_HEADERS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/include
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/*.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/*.tbl ${DESTDIR}${PREFIX}/include
 
-.include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

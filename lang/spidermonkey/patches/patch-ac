@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2007/08/12 03:04:33 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2010/12/23 12:36:02 fhajny Exp $
 
---- config/Darwin.mk.orig	2005-02-12 15:10:33.000000000 -0500
+--- config/Darwin.mk.orig	2008-03-02 23:10:49.000000000 +0000
 +++ config/Darwin.mk
 @@ -43,13 +43,13 @@
  # Just ripped from Linux config
@@ -9,18 +9,18 @@ $NetBSD: patch-ac,v 1.3 2007/08/12 03:04:33 wiz Exp $
 -CC = cc
 +CC = gcc
  CCC = g++
--CFLAGS +=  -Wall -Wno-format
+-CFLAGS +=  -Wall -Wno-format -MMD
 -OS_CFLAGS = -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DDARWIN
-+CFLAGS +=  -Wall -Wno-format -no-cpp-precomp -fno-common -pipe
-+OS_CFLAGS = -DJS_THREADSAFE -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DDARWIN
++CFLAGS +=  -Wall -Wno-format -MMD -no-cpp-precomp -fno-common -pipe
++OS_CFLAGS = -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DDARWIN
  
  RANLIB = ranlib
--MKSHLIB = libtool $(XMKSHLIBOPTS) -framework System
-+MKSHLIB = $(CC) -framework System -dynamiclib $(XMKSHLIBOPTS) -lm -lplds4 -lplc4 -lnspr4 $(LDFLAGS)
+-MKSHLIB = $(CC) -dynamiclib $(XMKSHLIBOPTS) -framework System
++MKSHLIB = $(CC) -dynamiclib $(XMKSHLIBOPTS) -framework System -lm -lplds4 -lplc4 -lnspr4 $(LDFLAGS)
  
- #.c.o:
- #      $(CC) -c -MD $*.d $(CFLAGS) $<
-@@ -57,7 +57,6 @@ MKSHLIB = libtool $(XMKSHLIBOPTS) -frame
+ SO_SUFFIX = dylib
+ 
+@@ -59,7 +59,6 @@ SO_SUFFIX = dylib
  CPU_ARCH = $(shell uname -m)
  ifeq (86,$(findstring 86,$(CPU_ARCH)))
  CPU_ARCH = x86
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.3 2007/08/12 03:04:33 wiz Exp $
  endif
  GFX_ARCH = x
  
-@@ -65,14 +64,6 @@ OS_LIBS = -lc -framework System
+@@ -67,14 +66,6 @@ OS_LIBS = -lc -framework System
  
  ASFLAGS += -x assembler-with-cpp
  
