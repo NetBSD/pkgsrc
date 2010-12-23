@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2010/03/28 12:45:44 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2010/12/23 11:44:27 dsainty Exp $
 
 BUILDLINK_TREE+=	hdf
 
@@ -12,6 +12,6 @@ BUILDLINK_PKGSRCDIR.hdf?=	../../devel/hdf
 
 .include "../../archivers/szip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 
 BUILDLINK_TREE+=	-hdf

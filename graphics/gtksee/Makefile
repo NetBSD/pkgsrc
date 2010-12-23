@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/06/13 22:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/12/23 11:44:39 dsainty Exp $
 #
 
 DISTNAME=		gtksee-0.5.6
@@ -25,7 +25,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/TODO	  ${DESTDIR}${PREFIX}/share/doc/gtksee
 
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

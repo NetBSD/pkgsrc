@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2010/06/13 22:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2010/12/23 11:44:47 dsainty Exp $
 
 DISTNAME=	xpaint-2.7.8.1
 PKGREVISION=	5
@@ -28,7 +28,7 @@ SUBST_SED.foo=		-e "s|@LOCALBASE@|${LOCALBASE}|g" \
 pre-configure:
 	cd ${WRKSRC} && ./configure xaw3dg
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
