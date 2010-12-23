@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+
+Remove obsolete perl syntax.
+
+--- src/libenvf.pl.orig	2003-12-17 23:46:54.000000000 +0900
++++ src/libenvf.pl
+@@ -22,7 +22,7 @@ sub __EnvelopeFilter
+     local(*e, $mode) = @_;
+     local(@pmap); # paragraph map: the array of the first ptr in paragraph
+     my ($xbuf);
+-    my ($c, $p, $r, $org_mlp, $bodylen);
++    my ($c, $p, $r, $bodylen);
+     my ($lparbuf, $fparbuf, $n_paragraph);
+     my ($one_line_check_p);
+ 
+@@ -30,10 +30,6 @@ sub __EnvelopeFilter
+     ### 0. preparation
+     $bodylen = length($e{'Body'}); # body length
+ 
+-    # force plural line match
+-    $org_mlp = $*;
+-    $* = 0;
+-
+     ### 1. run-hooks
+     # compatible 
+     # appending twice must be no problem since statments is "return".
+@@ -267,8 +263,6 @@ sub __EnvelopeFilter
+ 	    &MesgMailBodyCopyOn;
+ 	}
+     }
+-
+-    $* = $org_mlp;
+ }
+ 
+ # return 0 if reject;

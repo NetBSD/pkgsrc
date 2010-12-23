@@ -1,0 +1,49 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+
+Remove obsolete perl syntax.
+
+--- src/libconfirm.pl.orig	2003-12-17 23:47:19.000000000 +0900
++++ src/libconfirm.pl
+@@ -630,14 +630,11 @@ sub BufferSyntaxType
+ sub BufferSyntax
+ {
+     local(*e, $buffer) = @_;
+-    local($name, $_, $ml);
++    local($name, $_);
+ 
+     &Log("BufferSyntax::{$buffer}\n") if $debug_confirm;
+ 
+-    $ml = $*;
+-    $*  = 1;
+-
+-    if ($buffer =~ /$CONFIRMATION_SUBSCRIBE\s+(\S+.*)/) { # require anything;
++    if ($buffer =~ /$CONFIRMATION_SUBSCRIBE\s+(\S+.*)/m) { # require anything;
+ 	$name = $1;
+     }
+     # 0 by default
+@@ -653,7 +650,7 @@ sub BufferSyntax
+ 	local($re_euc_c) = '[\241-\376][\241-\376]';
+ 	local($re_jin)   = '\033\$[\@B]';
+ 
+-	if ($buffer =~ /($re_jin|$re_euc_c)/) {
++	if ($buffer =~ /($re_jin|$re_euc_c)/m) {
+ 	    &Log("confirm: request includes Japanese character [$&]");
+ 	    &Mesg(*e, "Error! Your request seems to include Japanese.", 
+ 		  'confirm.has_japanese_char');
+@@ -666,7 +663,7 @@ sub BufferSyntax
+ 	$name = $NULL;
+     }
+ 
+-    if (! $name) { $* =$ml; return $NULL;}
++    if (! $name) { return $NULL;}
+ 
+     if ($buffer =~ /\@/) {
+ 	&Mesg(*e, &GenConfirmReplyText(*e, *cf, 'BufferSyntax::InvalidAddr'));
+@@ -679,7 +676,6 @@ sub BufferSyntax
+ 	; # do nothing
+     }
+ 
+-    $* =$ml;
+     $name;
+ }
+ 

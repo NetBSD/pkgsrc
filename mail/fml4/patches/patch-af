@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+
+Remove obsolete perl syntax.
+
+--- src/libkern.pl.orig	2004-02-15 21:37:14.000000000 +0900
++++ src/libkern.pl
+@@ -629,7 +629,6 @@ sub GetFieldsFromHeader
+ 
+     ### Header Fields Extraction
+     $s = $Envelope{'Header'}."\n";
+-    $* = 0;			# match one line
+     if ($s =~ /^From\s+(\S+)/i) {
+ 	# XXX NO REACH HERE (1999/10/27 by fukachan)
+ 	# $Envelope{'UnixFrom'} = $UnixFrom = $1;
