@@ -1,22 +1,46 @@
-$NetBSD: patch-at,v 1.1 2007/06/20 19:51:11 jlam Exp $
+$NetBSD: patch-at,v 1.2 2010/12/23 06:34:50 ryoon Exp $
 
---- misc/mke2fs.8.in.orig	2006-05-28 21:39:03.000000000 -0400
+--- misc/mke2fs.8.in.orig	2010-02-06 03:51:19.000000000 +0000
 +++ misc/mke2fs.8.in
-@@ -347,7 +347,7 @@ enabled by default are specified by the
+@@ -159,7 +159,7 @@ option was specified.
+ .PP
+ The defaults of the parameters for the newly created filesystem, if not
+ overridden by the options listed below, are controlled by the
+-.B /etc/mke2fs.conf
++.B @root_sysconfdir@/mke2fs.conf
+ configuration file.  See the
+ .BR mke2fs.conf (5)
+ manual page for more details.
+@@ -445,7 +445,7 @@ enabled by default are specified by the
  relation, either in the
- .I [libdefaults]
+ .I [defaults]
  section in the
 -.B /etc/mke2fs.conf
 +.B @root_sysconfdir@/mke2fs.conf
- configuration file, or in the subsection of the 
+ configuration file,
+ or in the
  .I [fs_types]
- section for the filesystem type as specified by the
-@@ -441,7 +441,7 @@ Specify how the filesystem is going to b
- .B mke2fs 
- can choose optimal filesystem parameters for that use.  The filesystem
- types that are can be supported are defined in the configuration file 
+@@ -578,12 +578,12 @@ If this option is not specified,
+ will pick a default either via how
+ the command was run (for example, using a name of the form mkfs.ext2,
+ mkfs.ext3, etc.) or via a default as defined by the
+-.BR /etc/mke2fs.conf (5)
++.BR @root_sysconfdir@/mke2fs.conf (5)
+ file.   This option controls which filesystem options are used by
+ default, based on the
+ .B fstypes
+ configuration stanza in
 -.BR /etc/mke2fs.conf (5).
 +.BR @root_sysconfdir@/mke2fs.conf (5).
- The default configuration file contains definitions for the filesystem
- types: small, floppy, news, largefile, and largefile4.  
- .TP
+ .sp
+ If the
+ .B \-O
+@@ -602,7 +602,7 @@ Specify how the filesystem is going to b
+ .B mke2fs
+ can choose optimal filesystem parameters for that use.  The usage
+ types that are supported are defined in the configuration file
+-.BR /etc/mke2fs.conf (5).
++.BR @root_sysconfdir@/mke2fs.conf (5).
+ The user may specify one or more usage types
+ using a comma separated list.
+ .sp
