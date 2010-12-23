@@ -44,8 +44,9 @@
 #CC = gcc
 #CCC = g++
 CFLAGS+=	-Wall -Wno-format
-OS_CFLAGS=	-DJS_THREADSAFE -DXP_UNIX -DSVR4 
+OS_CFLAGS=	-DXP_UNIX -DSVR4 
 OS_CFLAGS+=	-DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE # -DHAVE_LOCALTIME_R
+INTERP_CFLAGS+=	`pkg-config --cflags-only-I nspr`
 
 RANLIB = echo
 MKSHLIB = $(LD) -lm `pkg-config --libs nspr` -shared $(LDFLAGS) $(XMKSHLIBOPTS)

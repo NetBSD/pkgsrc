@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2007/08/12 03:04:32 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2010/12/23 12:36:02 fhajny Exp $
 
---- config.mk.orig	2003-11-14 19:10:55.000000000 -0500
+--- config.mk.orig	2008-03-12 14:36:06.000000000 +0000
 +++ config.mk
-@@ -96,10 +96,26 @@ else
+@@ -100,10 +100,26 @@ else
  ifeq ($(OS_ARCH),Darwin)
  OS_CONFIG      := Darwin
  else
@@ -29,16 +29,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/12 03:04:32 wiz Exp $
  
  ASFLAGS         =
  DEFINES         =
-@@ -113,7 +129,7 @@ CP = cp
- endif
- 
- ifdef BUILD_OPT
--OPTIMIZER  = -O
-+#OPTIMIZER  = 
- DEFINES    += -UDEBUG -DNDEBUG -UDEBUG_$(shell whoami)
- OBJDIR_TAG = _OPT
- else
-@@ -126,7 +142,11 @@ DEFINES    += -DDEBUG -DDEBUG_$(shell wh
+@@ -139,7 +155,11 @@ DEFINES    += -DDEBUG -DDEBUG_$(USER)
  OBJDIR_TAG = _DBG
  endif
  
