@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.26 2010/12/23 10:08:18 asau Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.27 2010/12/23 10:42:16 asau Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -74,44 +74,10 @@ and dashes.</para>
 <sect2 id="getting-via-cvs">
 <title>Via anonymous CVS</title>
 
-	<para>To do an initial (full) checkout of pkgsrc, you first
-	have to set some environment variables. For the C-Shell,
-	type:</para>
+<para>To fetch a specific pkgsrc stable branch, run:</para>
 
-<screen>&cprompt; <userinput>setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot</userinput>
-&cprompt; <userinput>setenv CVS_RSH ssh</userinput>
+<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r <replaceable>pkgsrc-20xxQy</replaceable> -P pkgsrc</userinput>
 </screen>
-
-	<para>Or, the same for the bourne shell:</para>
-
-<screen>&uprompt; <userinput>export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"</userinput>
-&uprompt; <userinput>export CVS_RSH="ssh"</userinput>
-</screen>
-
-	<para>By default, CVS doesn't do things like most people would
-	expect it to do. But there is a
-	way to convince CVS, by creating a file called
-	<filename>.cvsrc</filename> in your home directory and saving
-	the following lines to it. This file will save you lots of
-	headache and some bug reports, so we strongly recommend it. You
-	can find an explanation of this file in the CVS
-	documentation.</para>
-
-<programlisting>
-# recommended CVS configuration file from the pkgsrc guide
-checkout -P
-update -dP
-release -d
-diff -upN
-cvs -q -z3
-rdiff -u
-</programlisting>
-
-
-<para>To fetch a specific pkgsrc stable branch from scratch, run:</para>
-
-<screen>&uprompt; <userinput>cd /usr</userinput>
-&uprompt; <userinput>cvs checkout -r <replaceable>pkgsrc-20xxQy</replaceable> -P pkgsrc</userinput></screen>
 
 	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the stable 
 	branch to be checked out, for example, <quote>pkgsrc-2009Q1</quote></para>
@@ -122,8 +88,43 @@ rdiff -u
 
 <para>To fetch the pkgsrc current branch, run:</para>
 
-<screen>&uprompt; <userinput>cd /usr</userinput>
-&uprompt; <userinput>cvs checkout -P pkgsrc</userinput></screen>
+<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
+</screen>
+
+	<para>Refer to <ulink url="http://NetBSD.org/FIXME">list of available CVS mirrors</ulink> to choose faster one.</para>
+
+<!-- FIXME: All this CVS magic should move into appendix or so. -->
+	<para>If you get error messages from <literal>rsh</literal>, you need to set CVS_RSH variable. E.g.:</para>
+
+<screen>&uprompt; <userinput>cd /usr &amp;&amp; env CVS_RSH=ssh cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
+</screen>
+
+	<para>Refer to documentation on your command shell how to set CVS_RSH=ssh permanently.
+	For Bourne shells, you can set it in your <filename>.profile</filename>
+	or better globally in <filename>/etc/profile</filename>:</para>
+
+<programlisting>
+# set CVS remote shell command
+CVS_RSH=ssh
+export CVS_RSH
+</programlisting>
+
+<!-- FIXME: This should move into appendix or so. -->
+	<para>By default, CVS doesn't do things like most people would expect it to do.
+	But there is a way to convince CVS, by creating a file called <filename>.cvsrc</filename>
+	in your home directory and saving the following lines to it.
+	This file will save you lots of headache and some bug reports, so we strongly recommend it.
+	You can find an explanation of this file in the CVS documentation.</para>
+
+<programlisting>
+# recommended CVS configuration file from the pkgsrc guide
+cvs -q -z3
+checkout -P
+update -dP
+diff -upN
+rdiff -u
+release -d
+</programlisting>
 
 </sect2>
 </sect1>
