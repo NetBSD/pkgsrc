@@ -120,3 +120,11 @@ Pullup ticket #3307 - requested by shannonjr
 security/pcsc-lite vulnerability
 Pullup ticket #3308 - requested by drochner
 security updates for freetype2
+Pullup ticket #3312 - requested by taca
+lang/{php5,php53} security fixes
+Pullup ticket #3309 - requested by taca
+textproc/php-intl security fix
+Pullup ticket #3310 - requested by taca
+pkgsrc/www/horde security fix
+Pullup ticket #3311 - requested by taca
+pkgsrc/www/typo3 security fix
