@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/12/23 16:57:33 taca Exp $
+
+* DESTDIR support:
+  - Allow install with normal user.
+  - Don't create ${FMLDIR}.
+
+--- install.pl.in.orig	2004-11-25 12:05:46.000000000 +0000
++++ install.pl.in
+@@ -70,8 +70,6 @@ sub _install
+     $installer->is_valid_owner( $config->{ owner } );
+     $installer->is_valid_group( $config->{ group } );
+ 
+-    if ($installer->is_run_as_root()) {
+-
+ 	my $list = $config->get_as_array_ref('mandatory_dirs');
+ 	for my $dir (@$list) {
+ 	    my $path = $installer->path($dir);
+@@ -105,15 +103,4 @@ sub _install
+ 	    $installer->install_loader();
+ 	    $installer->resymlink_loader();
+ 	}
+-
+-	# set up ml_spool_dir such as /var/spool/ml if needed.
+-	$installer->setup_ml_spool_dir();
+-    }
+-    else {
+-	my $r = "user should be not ROOT!";
+-	my $s = $installer->message_nl("installer.no_root_user", $r);
+-
+-	print $s if $s;
+-	croak("Error: run $0 as root.\n");
+-    }
+ }
