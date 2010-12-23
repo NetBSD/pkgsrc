@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.46 2010/03/18 10:56:18 wiz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.47 2010/12/23 23:54:17 abs Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -146,9 +146,7 @@ with each package.</para>
   <listitem>
     <para><filename role="pkg">devel/cpuflags</filename>: Determine
       the best compiler flags to optimise code for your current
-      CPU and compiler. Setting <varname>USE_CPUFLAGS</varname> to
-      yes in &mk.conf; will cause pkgsrc to automatically use
-      cpuflags. </para>
+      CPU and compiler. </para>
   </listitem>
 
 </itemizedlist>
