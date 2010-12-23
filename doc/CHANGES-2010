@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4323 2010/12/22 21:30:32 he Exp $
+$NetBSD: CHANGES-2010,v 1.4324 2010/12/23 00:11:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6143,3 +6143,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/pear-HTML_TreeMenu to 1.2.2 [taca 2010-12-22]
 	Updated graphics/libraw to 0.12.1 [gls 2010-12-22]
 	Updated lang/parrot to 2.11.0 [he 2010-12-22]
+	Updated finance/gnucash to 2.4.0 [wiz 2010-12-23]
