@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2010/07/13 06:46:56 adam Exp $
+# $NetBSD: Makefile,v 1.30 2010/12/24 12:25:01 asau Exp $
 
-DISTNAME=	glpk-4.44
+DISTNAME=	glpk-4.45
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.gnu.org/gnu/glpk/
+MASTER_SITES=	$(MASTER_SITE_GNU:=glpk/)
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/glpk/glpk.html
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
