@@ -1,0 +1,5 @@
+Clam AntiVirus is an anti-virus toolkit written from scratch. It is licensed
+under GNU GPL2 and uses the virus database from OpenAntiVirus, which is an
+another free anti-virus project. In contrast to OpenAntiVirus (which is written
+in Java), Clam AntiVirus is written entirely in C and its database is KEPT UP
+TO DATE. It also detects polymorphic viruses as well.
