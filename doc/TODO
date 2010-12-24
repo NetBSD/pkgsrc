@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9973 2010/12/24 12:48:47 asau Exp $
+$NetBSD: TODO,v 1.9974 2010/12/24 12:57:18 asau Exp $
 
 Suggested new packages
 ======================
@@ -754,7 +754,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hanzim-3.2
 	o haskell-mode-1.45
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
-	o hdf5-1.9.74
+	o hdf5-1.8.5
 	o heel-1.0.2
 	o heimdal-1.2.1
 	o hercules-3.04.1
