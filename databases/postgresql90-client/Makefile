@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/19 09:53:27 adam Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/24 03:41:38 asau Exp $
 
 PKGNAME=	${DISTNAME:C/-/90-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -41,7 +41,11 @@ BUILD_DIRS=	${INSTALL_DIRS}
 BUILD_DIRS+=	src/backend
 
 .for f in pg_service.conf psqlrc
-CONF_FILES+=	${PREFIX}/share/postgresql/${f}.sample ${PKG_SYSCONFDIR}/${f}
+. if !empty(PG_SUBPREFIX)
+CONF_FILES+=	${PG_SUBPREFIX:/=}/share/postgresql/${f}.sample ${PKG_SYSCONFDIR}/${f}
+. else
+CONF_FILES+=	${PG_SUBPREFIX}share/postgresql/${f}.sample ${PKG_SYSCONFDIR}/${f}
+. endif
 .endfor
 
 # XXX work around core dumps with the native libedit
@@ -59,12 +63,19 @@ SUBST_SED.pgxs=		-e 's,${WRKDIR}/.tools,${PREFIX},'
 SUBST_SED.pgxs+=	-e 's,${WRKDIR}/.wrapper,${PREFIX},'
 SUBST_SED.pgxs+=	-e 's,${WRKSRC},/dev/null,'
 
-INSTALLATION_DIRS+=	lib/postgresql/pgxs
-INSTALLATION_DIRS+=	lib/postgresql/pgxs/config
-INSTALLATION_DIRS+=	lib/postgresql/pgxs/src
-INSTALLATION_DIRS+=	lib/postgresql/pgxs/src/makefiles
+.if !empty(PG_SUBPREFIX)
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX:/=)/lib/postgresql/pgxs
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX:/=)/lib/postgresql/pgxs/config
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX:/=)/lib/postgresql/pgxs/src
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX:/=)/lib/postgresql/pgxs/src/makefiles
+.else
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX)lib/postgresql/pgxs
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX)lib/postgresql/pgxs/config
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX)lib/postgresql/pgxs/src
+INSTALLATION_DIRS+=	$(PG_SUBPREFIX)lib/postgresql/pgxs/src/makefiles
+.endif
 
-DEST_PGXS=	${DESTDIR}${PREFIX}/lib/postgresql/pgxs
+DEST_PGXS=	${DESTDIR}${PREFIX}/$(PG_SUBPREFIX)/lib/postgresql/pgxs
 PGXS_FILES=	config/install-sh
 PGXS_FILES+=	src/makefiles/pgxs.mk src/Makefile.global
 PGXS_FILES+=	src/Makefile.port src/Makefile.shlib

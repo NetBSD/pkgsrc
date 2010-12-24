@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.custom,v 1.1.1.1 2010/09/21 07:50:46 adam Exp $
+# $NetBSD: Makefile.custom,v 1.2 2010/12/24 03:41:38 asau Exp $
 #
 # This file is included at the end of Makefile.global, which is included
 # by every sub-Makefile in the build tree.  Makefiles for shared
@@ -7,12 +7,6 @@
 
 # Override any OS-specific locations for where to put SQL man pages.
 sqlmansect = 7
-
-# Override installation paths to avoid logic in Makefile.global.
-includedir = $(prefix)/include
-libdir = $(exec_prefix)/lib
-pkglibdir = $(libdir)/postgresql
-pkgincludedir = $(includedir)/postgresql
 
 # INSTALLED_LIBPQ is passed in from the environment and tells the build
 # system how to link to an installed libpq.*.
