@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9972 2010/12/24 12:25:27 asau Exp $
+$NetBSD: TODO,v 1.9973 2010/12/24 12:48:47 asau Exp $
 
 Suggested new packages
 ======================
@@ -753,7 +753,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.2
 	o haskell-mode-1.45
-	o hdf-4.2.5
+	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.9.74
 	o heel-1.0.2
 	o heimdal-1.2.1
