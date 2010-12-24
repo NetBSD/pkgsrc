@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2010/12/24 03:34:33 asau Exp $
+# $NetBSD: Makefile.common,v 1.7 2010/12/24 03:41:38 asau Exp $
 #
 # used by databases/postgresql90-adminpack/Makefile
 # used by databases/postgresql90-client/Makefile
@@ -49,10 +49,31 @@ PG_TEMPLATE.IRIX=	irix5
 PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
+PG_SUBPREFIX=		# empty
+.if empty(PG_SUBPREFIX)
+PG_PREFIX=		${PREFIX}
+PLIST_SUBST+=		PG_SUBPREFIX=
+.else
+PG_PREFIX=		${PREFIX}/${PG_SUBPREFIX}
+BUILD_DEFS+=		PG_SUBPREFIX
+PLIST_SUBST+=		PG_SUBPREFIX=${PG_SUBPREFIX:/=}/
+BUILDLINK_PASSTHRU_DIRS+=	${PG_PREFIX}
+.endif
+PG_DATA_DIR=		${PG_PREFIX}/share/postgresql
+PG_DOC_DIR=		${PG_PREFIX}/share/doc/postgresql
+PG_LOCALE_DIR=		${PG_PREFIX}/${PKGLOCALEDIR}/locale
+PG_ETC_DIR=		${PKG_SYSCONFDIR:S/^${PREFIX}\//${PG_PREFIX}\//}
+
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql
+CONFIGURE_ARGS+=	--bindir=${PG_PREFIX}/bin
+CONFIGURE_ARGS+=	--libdir=${PG_PREFIX}/lib
+CONFIGURE_ARGS+=	--includedir=${PG_PREFIX}/include
+CONFIGURE_ARGS+=	--sysconfdir=${PG_ETC_DIR}
+CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR}
+CONFIGURE_ARGS+=	--localedir=${PG_LOCALE_DIR}
+CONFIGURE_ARGS+=	--with-docdir=${PG_DOC_DIR}
 CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
+GNU_CONFIGURE_MANDIR=	$(PG_PREFIX)/$(PKGMANDIR)
 
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--without-perl
@@ -109,3 +130,6 @@ post-extract:
 .endif
 
 .include "../../databases/postgresql90/options.mk"
+
+# Help to generate PLIST
+PRINT_PLIST_AWK+=	{sub("^${PG_SUBPREFIX}/", ""); $$0 = "$${PG_SUBPREFIX}" $$0;}
