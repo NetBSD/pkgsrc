@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:10:05 agc Exp $
-
-SHA1 (amavisd-0.1.tar.gz) = 0c8cfe497ee0e42c2f5ff5c958e47e8a0d08720b
-RMD160 (amavisd-0.1.tar.gz) = d1688aa5a0a4df36e7d938f28d923b350302faa2
-Size (amavisd-0.1.tar.gz) = 329501 bytes
