@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9970 2010/12/23 18:21:40 tron Exp $
+$NetBSD: TODO,v 1.9971 2010/12/24 10:14:22 asau Exp $
 
 Suggested new packages
 ======================
@@ -572,7 +572,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f-spot-0.8.2
-	o f2c-20100903 [pkg/44076]
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o fbreader-0.12.10
