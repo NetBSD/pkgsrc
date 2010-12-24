@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4337 2010/12/24 00:03:16 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4338 2010/12/24 07:26:54 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6157,3 +6157,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/gsasl to 1.6.0 [christos 2010-12-23]
 	Updated net/youtube-dl to 20101209 [tron 2010-12-23]
 	Added chat/gajim version 0.14.1 [wiz 2010-12-24]
+	Moved security/amavisd-new to mail/amavisd-new [kefren 2010-12-24]
+	Moved security/amavis-perl to mail/amavis-perl [kefren 2010-12-24]
+	Moved mail/clamav to security/clamav [kefren 2010-12-24]
