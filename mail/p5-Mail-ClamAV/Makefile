@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/08/21 16:35:06 seb Exp $
+# $NetBSD: Makefile,v 1.31 2010/12/24 07:14:22 kefren Exp $
 
 DISTNAME=	Mail-ClamAV-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Mail-ClamAV/
-COMMENT=	Perl5 module for mail/clamav virus scanner
+COMMENT=	Perl5 module for security/clamav virus scanner
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -42,6 +42,6 @@ do-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_TARGET}
 
 .include "../../lang/perl5/module.mk"
-.include "../../mail/clamav/buildlink3.mk"
+.include "../../security/clamav/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
