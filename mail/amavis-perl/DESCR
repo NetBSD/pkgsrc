@@ -1,0 +1,5 @@
+AMaViS (A Mail Virus Scanner) scans e-mail attachments for viruses
+using third-party virus scanners available for UNIX environments.
+It resides on a UNIX machine and looks through the attached files
+arriving via e-mail, generates reports when a virus is found, and
+sets the delivery on hold.
