@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+
+You should update the virus databases to the latest ones available
+before using ClamAV.  This can be done by running the following command
+as `${ROOT_USER}' or `${CLAMAV_USER}':
+
+	${PREFIX}/bin/freshclam
+
+Note that as of version 0.80, clamav.conf has been replaced by
+clamd.conf. Be sure to update your configuration to reflect this.
+
+===========================================================================
