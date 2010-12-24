@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+
+Fix compilation error DragonFly.
+
+--- libclamav/others.h.orig	2010-03-31 19:39:38.000000000 +0300
++++ libclamav/others.h	2010-04-01 12:24:33.000000000 +0300
+@@ -33,6 +33,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <unistd.h>
+ #include "cltypes.h"
+ 
+ #include "clamav.h"
