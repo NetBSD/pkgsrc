@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+
+Make this pkgsrc friedly.
+
+--- libclamav/c++/llvm/utils/buildit/build_llvm.orig	2010-11-10 16:57:04.000000000 +0000
++++ libclamav/c++/llvm/utils/buildit/build_llvm
+@@ -224,7 +224,7 @@ make $LOCAL_MAKEFLAGS $OPTIMIZE_OPTS UNI
+     LLVM_SUBMIT_SUBVERSION=$LLVM_SUBMIT_SUBVERSION \
+     OPTIMIZE_OPTION='-O3' VERBOSE=1 install
+ 
+-if ! test $? == 0 ; then
++if ! test $? = 0 ; then
+     echo "error: LLVM 'make install' failed!"
+     exit 1
+ fi 
+@@ -332,7 +332,7 @@ if [ "$INSTALL_LIBLTO" = "yes" ]; then
+   # PPC objects!
+   strip -arch all -Sl $DT_HOME/lib/libLTO.dylib
+ 
+-  if [ "x$DISABLE_USR_LINKS" == "x" ]; then
++  if [ "x$DISABLE_USR_LINKS" = "x" ]; then
+     # Add a symlink in /usr/lib for B&I.
+     mkdir -p $DEST_DIR/usr/lib/
+     (cd $DEST_DIR/usr/lib && \
