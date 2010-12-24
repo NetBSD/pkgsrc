@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2010/12/24 03:41:38 asau Exp $
+# $NetBSD: Makefile.common,v 1.8 2010/12/24 06:30:03 asau Exp $
 #
 # used by databases/postgresql90-adminpack/Makefile
 # used by databases/postgresql90-client/Makefile
@@ -49,7 +49,7 @@ PG_TEMPLATE.IRIX=	irix5
 PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
-PG_SUBPREFIX=		# empty
+PG_SUBPREFIX?=		# empty
 .if empty(PG_SUBPREFIX)
 PG_PREFIX=		${PREFIX}
 PLIST_SUBST+=		PG_SUBPREFIX=
