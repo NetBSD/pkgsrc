@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4339 2010/12/24 12:25:27 asau Exp $
+$NetBSD: CHANGES-2010,v 1.4340 2010/12/24 14:52:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6161,3 +6161,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved security/amavis-perl to mail/amavis-perl [kefren 2010-12-24]
 	Moved mail/clamav to security/clamav [kefren 2010-12-24]
 	Updated math/glpk to 4.45 [asau 2010-12-24]
+	Updated games/scummvm to 1.2.1 [adam 2010-12-24]
