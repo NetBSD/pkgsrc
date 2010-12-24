@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+
+Fix compilation error DragonFly.
+
+--- database/Makefile.in.orig	2010-05-07 22:02:57.000000000 +0300
++++ database/Makefile.in	2010-05-20 10:07:22.000000000 +0300
+@@ -435,17 +435,6 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(DBINST);\
+ 	test -f $(DESTDIR)$(DBINST)/main.cvd || test -f $(DESTDIR)$(DBINST)/main.cld || $(INSTALL_DATA) $(srcdir)/main.cvd $(DESTDIR)$(DBINST);\
+ 	test -f $(DESTDIR)$(DBINST)/daily.cvd || test -f $(DESTDIR)$(DBINST)/daily.cld || $(INSTALL_DATA) $(srcdir)/daily.cvd $(DESTDIR)$(DBINST);\
+-	if test `id|sed -e 's/^.[^(]*(\([^)]*\)).*/\1/'` = "root" && test -n "${CLAMAVUSER}" && test -n "${CLAMAVGROUP}"; then \
+-	    chmod 775 $(DESTDIR)$(DBINST); \
+-	    chown ${CLAMAVUSER} $(DESTDIR)$(DBINST); \
+-	    chgrp ${CLAMAVGROUP} $(DESTDIR)$(DBINST); \
+-	    if test -f $(DESTDIR)$(DBINST)/main.cvd; then chmod 664 $(DESTDIR)$(DBINST)/main.cvd; fi;\
+-	    if test -f $(DESTDIR)$(DBINST)/main.cvd; then chown ${CLAMAVUSER} $(DESTDIR)$(DBINST)/main.cvd; fi;\
+-	    if test -f $(DESTDIR)$(DBINST)/main.cvd; then chgrp ${CLAMAVGROUP} $(DESTDIR)$(DBINST)/main.cvd; fi;\
+-	    if test -f $(DESTDIR)$(DBINST)/daily.cvd; then chmod 664 $(DESTDIR)$(DBINST)/daily.cvd; fi;\
+-	    if test -f $(DESTDIR)$(DBINST)/daily.cvd; then chown ${CLAMAVUSER} $(DESTDIR)$(DBINST)/daily.cvd; fi;\
+-	    if test -f $(DESTDIR)$(DBINST)/daily.cvd; then chgrp ${CLAMAVGROUP} $(DESTDIR)$(DBINST)/daily.cvd; fi;\
+-	fi
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+
+Fix compilation error DragonFly.
+
+--- clamdtop/clamdtop.c.orig	2009-06-01 19:20:12.000000000 +0300
++++ clamdtop/clamdtop.c	2009-06-11 07:31:58.000000000 +0300
+@@ -33,6 +33,7 @@
+ #endif
+ 
+ #include <unistd.h>
++#include <stdarg.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
