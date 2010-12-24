@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4336 2010/12/23 18:21:40 tron Exp $
+$NetBSD: CHANGES-2010,v 1.4337 2010/12/24 00:03:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6156,3 +6156,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/fml version 20100306 [taca 2010-12-23]
 	Updated security/gsasl to 1.6.0 [christos 2010-12-23]
 	Updated net/youtube-dl to 20101209 [tron 2010-12-23]
+	Added chat/gajim version 0.14.1 [wiz 2010-12-24]
