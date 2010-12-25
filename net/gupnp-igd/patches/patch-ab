@@ -1,9 +1,19 @@
-$NetBSD: patch-ab,v 1.1 2010/08/08 21:10:37 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2010/12/25 06:33:11 obache Exp $
 
-No code outside of targets.
+* Replace bare python-config.
+* No code outside of targets.
 
 --- python/Makefile.in.orig	2010-05-19 23:20:57.000000000 +0000
 +++ python/Makefile.in
+@@ -276,7 +276,7 @@ igd_la_LIBADD = \
+ 	$(top_builddir)/libgupnp-igd/libgupnp-igd-1.0.la
+ 
+ igd_la_LDFLAGS = \
+-	`python-config --libs`				\
++	`@PYTHONCONFIG@ --libs`				\
+ 	-module -avoid-version
+ 
+ EXTRA_DIST = \
 @@ -640,7 +640,7 @@ uninstall-am: uninstall-pygupnpigdLTLIBR
  	pdf pdf-am ps ps-am tags uninstall uninstall-am \
  	uninstall-pygupnpigdLTLIBRARIES uninstall-pygupnpigdPYTHON
