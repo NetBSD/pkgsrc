@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2010/10/04 12:46:26 obache Exp $
+$NetBSD: distinfo,v 1.10 2010/12/25 11:35:06 obache Exp $
 
 SHA1 (xmlsec1-1.2.16.tar.gz) = ecd220b4498bbe212188fffd0aded92910d4bbd9
 RMD160 (xmlsec1-1.2.16.tar.gz) = 15064b3c3ec84c87b271013cb3fa165972f0e2c4
 Size (xmlsec1-1.2.16.tar.gz) = 1803092 bytes
-SHA1 (patch-ab) = 6c771503bba0d291c26db6102dd1365a561d17a2
-SHA1 (patch-ac) = 03e9d3d97ab6ab2e753516574f1be8e7eda236c4
+SHA1 (patch-ab) = 2fb1ee3c9ab02775817340185ab3e3b261253590
+SHA1 (patch-ac) = 6d9d1180468b20b91ae3120c72e0a54e32fb7e91
 SHA1 (patch-ae) = df381960d33810f5501bd904bd4cef2bb7bf30fd
 SHA1 (patch-af) = 2b83843cbc09ae4dfdc21143fb733159ee0c79d1
 SHA1 (patch-ag) = 31aa963be3c46486cea72a98d260fb9a5d5c47ac
