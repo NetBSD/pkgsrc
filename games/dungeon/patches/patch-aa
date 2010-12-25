@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2010/12/25 09:48:09 obache Exp $
+$NetBSD: patch-aa,v 1.3 2010/12/25 09:59:25 obache Exp $
 
 Use an explicit 32-bit data type.
 
---- ../glkterm/glk.h.orig	2009-11-20 14:08:17.000000000 -0800
-+++ ../glkterm/glk.h	2009-11-20 13:06:19.000000000 -0800
+--- glkterm/glk.h.orig	2008-03-15 15:43:04.000000000 +0000
++++ glkterm/glk.h
 @@ -17,8 +17,15 @@
  /* You may have to edit the definition of glui32 to make sure it's really a
      32-bit unsigned integer type, and glsi32 to make sure it's really a
