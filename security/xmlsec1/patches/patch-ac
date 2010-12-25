@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2010/06/06 12:36:11 obache Exp $
+$NetBSD: patch-ac,v 1.3 2010/12/25 11:35:06 obache Exp $
 
-portability fix
+* portability fix
+* DragonFly also not require extra libs for OpenSSL.
 
 --- configure.in.orig	2010-05-25 21:52:46.000000000 +0000
 +++ configure.in
@@ -22,7 +23,15 @@ portability fix
      shrext=$shrext_cmds
  fi
  
-@@ -505,7 +505,7 @@ else
+@@ -348,6 +348,7 @@ elif test "z$with_openssl" != "z" ; then
+ 	*-*-osf5*) openssl_exlibs=;;
+ 	*-*-openbsd*) openssl_exlibs=;;
+ 	*-*-netbsd*) openssl_exlibs=;;
++	*-*-dragonfly*) openssl_exlibs=;;
+ 	#FIXME: check if lib "dl" is required
+ 	*)          openssl_exlibs=-ldl;;
+     esac
+@@ -505,7 +506,7 @@ else
      XMLSEC_CRYPTO_DISABLED_LIST="$XMLSEC_CRYPTO_DISABLED_LIST openssl"
  fi
  
