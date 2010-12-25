@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/15 11:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/25 06:33:11 obache Exp $
 #
 
 DISTNAME=	gupnp-igd-0.1.7
@@ -18,6 +18,15 @@ USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	gupnp-igd-1.0.pc.in
 PY_PATCHPLIST=	yes
+
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
+
+SUBST_CLASSES+=		pyconfig
+SUBST_STAGE.pyconfig=	pre-configure
+SUBST_VARS.pyconfig=	PYTHONCONFIG
+SUBST_FILES.pyconfig=	python/Makefile.in
+
+TEST_TARGET=	check
 
 .include "../../net/gupnp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
