@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2010/03/22 06:55:20 obache Exp $
+$NetBSD: distinfo,v 1.9 2010/12/25 15:00:36 wiz Exp $
 
-SHA1 (viewvc-1.0.10.tar.gz) = a07103549239f5e4d98ca097c47d186e164ea70f
-RMD160 (viewvc-1.0.10.tar.gz) = 08447309fdecd750200df26170a8a3815b5ba98b
-Size (viewvc-1.0.10.tar.gz) = 523078 bytes
+SHA1 (viewvc-1.0.12.tar.gz) = 069ae5239b3085136082fcd88bde57d9c6b784ac
+RMD160 (viewvc-1.0.12.tar.gz) = 787de2b623b0035de277af3de4eac5d383be4044
+Size (viewvc-1.0.12.tar.gz) = 523289 bytes
 SHA1 (patch-aa) = b4f5e36e5d744249aec8128d6ccaa670398afafe
 SHA1 (patch-ab) = cf4c56e5b4254d0deb1a7b51121b6b1d2113fd3e
