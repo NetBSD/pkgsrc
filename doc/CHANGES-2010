@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4352 2010/12/25 08:38:35 adam Exp $
+$NetBSD: CHANGES-2010,v 1.4353 2010/12/25 09:04:36 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6180,3 +6180,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-marginnote-doc version v1.1f [minskim 2010-12-25]
 	Updated sysutils/smbldap-tools to 0.9.6 [taca 2010-12-25]
 	Updated odbc-postgresql to 9.0.200 [adam 2010-12-25]
+	Updated lang/guile to 1.8.8 [asau 2010-12-25]
