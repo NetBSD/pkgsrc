@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/27 20:05:28 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/25 08:08:06 taca Exp $
 
-DISTNAME=	smbldap-tools-0.9.5
+DISTNAME=	smbldap-tools-${VERS}
 CATEGORIES=	sysutils net databases
-MASTER_SITES=	http://download.gna.org/smbldap-tools/packages/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://download.gna.org/smbldap-tools/sources/${VERS}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gna.org/projects/smbldap-tools/
@@ -11,7 +10,9 @@ COMMENT=	Set of ldap administration scripts for samba
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	samba>=3.0.22:../../net/samba
+VERS=		0.9.6
+
+#DEPENDS+=	samba>=3.0.22:../../net/samba33
 DEPENDS+=	p5-perl-ldap>=0.33:../../databases/p5-perl-ldap
 DEPENDS+=	p5-Crypt-SmbHash>=0.12:../../security/p5-Crypt-SmbHash
 DEPENDS+=	p5-Digest-SHA1>=2.11:../../security/p5-Digest-SHA1
@@ -19,15 +20,15 @@ DEPENDS+=	p5-Unicode-MapUTF8-[0-9]*:../../converters/p5-Unicode-MapUTF8
 
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
-WRKSRC=		${WRKDIR}/smbldap-tools-0.9.5
+WRKSRC=		${WRKDIR}/smbldap-tools-${VERS}
 
 SMBLDAP_CONF=	smbldap.conf smbldap_bind.conf
 SMBLDAP_DOCS=	doc/smbldap-tools.html doc/smbldap-tools.pdf
 SMBLDAP_EG=	doc/slapd.conf doc/smb.conf
 SMBLDAP_LIBS=	smbldap_tools.pm
 SMBLDAP_PASSWD=	smbldap-passwd
-SMBLDAP_TOOLS=	smbldap-groupadd smbldap-groupdel smbldap-groupmod \
-		smbldap-groupshow  \
+SMBLDAP_TOOLS=	smbldap-groupadd smbldap-groupdel smbldap-grouplist \
+		smbldap-groupmod smbldap-groupshow  \
 		smbldap-useradd smbldap-userdel smbldap-userinfo \
 		smbldap-usermod smbldap-usershow
 SMBLDAP_UTILS=	configure.pl smbldap-populate \
