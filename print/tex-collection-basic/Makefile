@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2010/09/24 21:30:23 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/25 05:44:34 minskim Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	tex-${DISTNAME}-2010
+PKGNAME=	tex-${DISTNAME}-2010.${TEXLIVE_REV}
 CATEGORIES=	print
 MASTER_SITES=	# empty
-TEXLIVE_REV=	17228
+TEXLIVE_REV=	20730
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Essential programs and files for TeX
 
 DEPENDS+=	tex-amsfonts>=3.0:../../fonts/tex-amsfonts
-DEPENDS+=	tex-apalike>=2009:../../print/tex-apalike
-DEPENDS+=	tex-bibtex>=0.99c:../../print/tex-bibtex
+DEPENDS+=	tex-bibtex>=0.99d:../../print/tex-bibtex
 DEPENDS+=	tex-cm>=2009.15878:../../fonts/tex-cm
 DEPENDS+=	tex-dvipdfm>=0.13.2dnb1:../../print/tex-dvipdfm
 DEPENDS+=	tex-dvipdfmx>=2010:../../print/tex-dvipdfmx
@@ -35,8 +34,8 @@ DEPENDS+=	tex-metafont>=2009nb1:../../fonts/tex-metafont
 DEPENDS+=	tex-mflogo>=2009:../../fonts/tex-mflogo
 DEPENDS+=	tex-mfware>=2009:../../fonts/tex-mfware
 DEPENDS+=	tex-misc>=2010:../../print/tex-misc
-DEPENDS+=	tex-pdftex>=1.40.11:../../print/tex-pdftex
-DEPENDS+=	tex-plain>=3.141592653:../../print/tex-plain
+DEPENDS+=	tex-pdftex>=1.40.11nb1:../../print/tex-pdftex
+DEPENDS+=	tex-plain>=3.141592653nb2:../../print/tex-plain
 DEPENDS+=	dialog>=1.1.20100428:../../misc/dialog
 DEPENDS+=	tex-tetex>=3.0.19695:../../print/tex-tetex
 DEPENDS+=	tex-tex>=3.1415926:../../print/tex-tex
