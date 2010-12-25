@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2010/12/25 14:03:57 jmcneill Exp $
 
---- usbctl.c.orig	2002-02-25 01:50:55.000000000 +0100
+--- usbctl.c.orig	2002-02-25 00:50:55.000000000 +0000
 +++ usbctl.c
 @@ -27,12 +27,18 @@
  #include <stdio.h>
@@ -21,7 +21,29 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
  
  #ifndef USB_STACK_VERSION
  #define ucr_addr addr
-@@ -62,6 +68,7 @@
+@@ -52,6 +58,21 @@
+ #define UICLASS_HUB UCLASS_HUB
+ #endif
+ 
++#ifndef UDESC_INTERFACE_ASSOC
++#define UDESC_INTERFACE_ASSOC 0x0b
++typedef struct {
++	uByte		bLength;
++	uByte		bDescriptorType;
++	uByte		bFirstInterface;
++	uByte		bInterfaceCount;
++	uByte		bFunctionClass;
++	uByte		bFunctionSubClass;
++	uByte		bFunctionProtocol;
++	uByte		iFunction
++} UPACKED usb_interface_assoc_descriptor_t;
++#define USB_INTERFACE_ASSOC_DESCRIPTOR_SIZE 8
++#endif
++
+ #define USBDEV "/dev/usb0"
+ 
+ /* Backwards compatibility */
+@@ -62,6 +83,7 @@
  #endif
  
  #define NSTRINGS
@@ -29,7 +51,7 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
  
  int num = 0;
  
-@@ -80,17 +87,43 @@ getstring(int si, char *s)
+@@ -80,17 +102,43 @@ getstring(int si, char *s)
  	int r, i, n;
  	u_int16_t c;
  	usb_string_descriptor_t us;
@@ -74,7 +96,37 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
  #ifdef NSTRINGS
  	USETW(req.ucr_request.wLength, sizeof(usb_string_descriptor_t));
  	req.ucr_flags = USBD_SHORT_XFER_OK;
-@@ -384,7 +417,7 @@ struct usb_cdc_union_descriptor {
+@@ -154,6 +202,7 @@ descTypeName(int t)
+ 	case UDESC_STRING: p = "string"; break;
+ 	case UDESC_INTERFACE: p = "interface"; break;
+ 	case UDESC_ENDPOINT: p = "endpoint"; break;
++	case UDESC_INTERFACE_ASSOC: p = "iad"; break;
+ 	case 0x20: p = "cs_undefined"; break;
+ 	case UDESC_CS_DEVICE: p = "cs_device"; break;
+ 	case UDESC_CS_CONFIG: p = "cs_config"; break;
+@@ -278,6 +327,21 @@ bInterfaceProtocol=%d iInterface=%d(%s)\
+ 	       d->iInterface, ifc);
+ }
+ 
++void
++priad(usb_interface_assoc_descriptor_t *d)
++{
++	char func[MAXSTR];
++	getstring(d->iFunction, func);
++	if (d->bDescriptorType != UDESC_INTERFACE_ASSOC) printf("weird descriptorType, should be %d\n", UDESC_INTERFACE_ASSOC);
++	printf("\
++bLength=%d bDescriptorType=%s bFirstInterface=%d bInterfaceCount=%d\n\
++bFunctionClass=%d bFunctionSubClass=%d bFunctionProtocol=%d\n\
++iFunction=%d(%s)\n",
++	    d->bLength, descTypeName(d->bDescriptorType), d->bFirstInterface,
++	    d->bInterfaceCount, d->bFunctionClass, d->bFunctionSubClass,
++	    d->bFunctionProtocol, d->iFunction, func);
++}
++
+ char *xfernames[] = { "control", "isochronous", "bulk", "interrupt" };
+ char *xfertypes[] = { "", "-async", "-adaptive", "-sync" };
+ 
+@@ -384,7 +448,7 @@ struct usb_cdc_union_descriptor {
  };
  
  void
@@ -83,7 +135,7 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
  {
  	if (ud->bDescriptorType != UDESC_CS_INTERFACE)
  		printf("prcdcd: strange bDescriptorType=%d\n", 
-@@ -630,7 +663,7 @@ gethubdesc(int f, usb_hub_descriptor_t *
+@@ -630,7 +694,7 @@ gethubdesc(int f, usb_hub_descriptor_t *
  	req.ucr_addr = addr;
  	req.ucr_request.bmRequestType = UT_READ_CLASS_DEVICE;
  	req.ucr_request.bRequest = UR_GET_DESCRIPTOR;
@@ -92,7 +144,19 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
  	USETW(req.ucr_request.wIndex, 0);
  	USETW(req.ucr_request.wLength, USB_HUB_DESCRIPTOR_SIZE);
  	req.ucr_data = d;
-@@ -1243,8 +1276,8 @@ prdesc(void *p, int *class, int *subclas
+@@ -1145,6 +1209,11 @@ prdesc(void *p, int *class, int *subclas
+ 		prhubd(p);
+ 		break;
+ #endif
++	case UDESC_INTERFACE_ASSOC:
++		printf("INTERFACE ASSOCIATION descriptor:\n");
++		priad(p);
++		break;
++		break;
+ 	case UDESC_CS_DEVICE:
+ 		if (*class == UICLASS_HID) {
+ 			usb_hid_descriptor_t *hid = p;
+@@ -1243,8 +1312,8 @@ prdesc(void *p, int *class, int *subclas
  	default:
  	def:
  		printf("Unknown descriptor (class %d/%d):\n", *class, *subclass);
@@ -103,7 +167,7 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
  		       );
  		break;
  	}
-@@ -1321,6 +1354,7 @@ main(int argc, char **argv)
+@@ -1321,6 +1390,7 @@ main(int argc, char **argv)
  
  	if (!doaddr)
  		prunits(f);
@@ -111,7 +175,7 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
  	if (!nodisc) {
  		r = ioctl(f, USB_DISCOVER);
  		if (r < 0)
-@@ -1329,6 +1363,7 @@ main(int argc, char **argv)
+@@ -1329,6 +1399,7 @@ main(int argc, char **argv)
  		if (disconly)
  			exit(0);
  	}
