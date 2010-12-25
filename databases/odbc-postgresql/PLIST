@@ -1,7 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:36:20 joerg Exp $
-lib/libpsqlodbc.a
-lib/libpsqlodbc.so
-lib/libpsqlodbc.so.0
-lib/libpsqlodbc.so.0.27
-share/postgresql/odbc.sql
+@comment $NetBSD: PLIST,v 1.6 2010/12/25 08:37:31 adam Exp $
+lib/psqlodbcw.la
+share/doc/postgresql/odbc/config-opt.html
+share/doc/postgresql/odbc/config.html
+share/doc/postgresql/odbc/faq.html
+share/doc/postgresql/odbc/howto-accesslo.html
+share/doc/postgresql/odbc/howto-accessvba.html
+share/doc/postgresql/odbc/howto-bo.html
+share/doc/postgresql/odbc/howto-ch.html
+share/doc/postgresql/odbc/howto-csharp.html
+share/doc/postgresql/odbc/howto-vb.html
+share/doc/postgresql/odbc/howto-vblo.html
+share/doc/postgresql/odbc/index.html
+share/doc/postgresql/odbc/release.html
+share/doc/postgresql/odbc/unix-compilation.html
+share/doc/postgresql/odbc/win32-compilation.html
 share/postgresql/odbc-drop.sql
+share/postgresql/odbc.sql
