@@ -1,0 +1,4 @@
+This package provides the command \marginnote that may be used instead
+of \marginpar at almost every place where \marginpar cannot be used,
+e.g., inside floats, footnotes, or in frames made with the framed
+package.
