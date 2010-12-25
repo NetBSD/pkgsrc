@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/09/14 00:18:09 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/25 05:36:07 minskim Exp $
 
 DISTNAME=	bibtex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.99c
-TEXLIVE_REV=	18835
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.99d
+TEXLIVE_REV=	20729
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-bibtex
