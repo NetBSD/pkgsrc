@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 05:30:48 minskim Exp $
-share/texmf-dist/doc/bibtex/base/bibshare
+@comment $NetBSD: PLIST,v 1.2 2010/12/25 05:36:07 minskim Exp $
+share/texmf-dist/doc/bibtex/base/README
 share/texmf-dist/doc/bibtex/base/btxbst.doc
 share/texmf-dist/doc/bibtex/base/btxdoc.bib
 share/texmf-dist/doc/bibtex/base/btxdoc.pdf
 share/texmf-dist/doc/bibtex/base/btxdoc.tex
 share/texmf-dist/doc/bibtex/base/btxhak.pdf
 share/texmf-dist/doc/bibtex/base/btxhak.tex
+share/texmf-dist/tex/generic/bibtex/apalike.sty
+share/texmf-dist/tex/generic/bibtex/apalike.tex
