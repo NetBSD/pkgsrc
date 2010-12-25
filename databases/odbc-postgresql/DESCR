@@ -1,2 +1,1 @@
-ODBC interface to PostgreSQL, including library objects and C language
-header files.
+ODBC interface to PostgreSQL.
