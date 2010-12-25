@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2010/12/18 14:20:03 wiz Exp $
+$NetBSD: distinfo,v 1.18 2010/12/25 12:12:28 wiz Exp $
 
-SHA1 (mdocml-1.10.6.tar.gz) = c3f8ea1f26a9cc8773b482bee2c90cf6e4b4dc34
-RMD160 (mdocml-1.10.6.tar.gz) = c5c041b32e800a5e8b8fd03d604fb1f0e94a5828
-Size (mdocml-1.10.6.tar.gz) = 166990 bytes
+SHA1 (mdocml-1.10.8.tar.gz) = e2d28c1ee6a316b9f9a99fe5408415cc15bc7c93
+RMD160 (mdocml-1.10.8.tar.gz) = 22bddb6b40f3b19209043a169de40d53e0a9b6a8
+Size (mdocml-1.10.8.tar.gz) = 171359 bytes
