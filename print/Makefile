@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2010/12/25 05:47:29 minskim Exp $
+# $NetBSD: Makefile,v 1.446 2010/12/25 06:25:37 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -397,6 +397,8 @@ SUBDIR+=	tex-luatex
 SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-magaz
 SUBDIR+=	tex-magaz-doc
+SUBDIR+=	tex-marginnote
+SUBDIR+=	tex-marginnote-doc
 SUBDIR+=	tex-memoir
 SUBDIR+=	tex-memoir-doc
 SUBDIR+=	tex-mfnfss
