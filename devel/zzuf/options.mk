@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/12/09 06:56:52 bjs Exp $
+# $NetBSD: options.mk,v 1.2 2010/12/25 11:00:51 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zzuf
