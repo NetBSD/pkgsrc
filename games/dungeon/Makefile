@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 20:27:03 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/25 09:59:25 obache Exp $
 #
 
 DISTNAME=	dungeon-3.2b
@@ -27,7 +27,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-WRKSRC=		${WRKDIR}/dungeon-gdt
+WRKSRC=		${WRKDIR}
 DATADIR=	${PREFIX}/share/dungeon
 
 MAKE_FLAGS+=	DATADIR=${DATADIR}
@@ -42,15 +42,13 @@ MAKE_ENV+=	GDT_FLAG=-DHAVE_GDT
 .endif
 
 # Before we build the game itself, we need to build the glkterm library
-
-pre-build:
-	cd ${WRKDIR}/glkterm && env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+BUILD_DIRS=	glkterm dungeon-gdt
 
 INSTALLATION_DIRS+=	bin ${DATADIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dungeon ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/dundat ${DESTDIR}${DATADIR}/
+	${INSTALL_PROGRAM} ${WRKSRC}/dungeon-gdt/dungeon ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/dungeon-gdt/dundat ${DESTDIR}${DATADIR}/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

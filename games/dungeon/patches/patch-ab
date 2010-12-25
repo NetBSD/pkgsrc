@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2009/11/28 20:25:40 pgoyette Exp $
+$NetBSD: patch-ab,v 1.2 2010/12/25 09:59:25 obache Exp $
 
 Remove an obsolete check that pointers fit into 32-bit data types.  I
 was unable to find any code remaining that depends on this, and at
 least one program (dungeon!) works just fine without having had to do
 any hashtable coding!
 
---- ../glkterm/main.c.orig	2009-11-20 14:08:33.000000000 -0800
-+++ ../glkterm/main.c	2009-11-20 13:14:24.000000000 -0800
-@@ -52,10 +52,12 @@
+--- glkterm/main.c.orig	2008-03-18 02:32:07.000000000 +0000
++++ glkterm/main.c
+@@ -52,10 +52,12 @@ int main(int argc, char *argv[])
          printf("Compile-time error: glui32 is not unsigned. Please fix glk.h.\n");
          return 1;
      }
