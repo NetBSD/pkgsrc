@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9978 2010/12/25 09:04:36 asau Exp $
+$NetBSD: TODO,v 1.9979 2010/12/25 11:01:07 obache Exp $
 
 Suggested new packages
 ======================
@@ -1499,7 +1499,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope34-3.4.0
 	o zopeedit-0.8
 	o zsh-current-4.3.11
-	o zzuf-0.13 [pkg/44274]
 
 Infrastructure problems which need addressing
 =============================================
