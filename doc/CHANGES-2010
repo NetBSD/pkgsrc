@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4341 2010/12/25 02:19:08 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.4342 2010/12/25 02:30:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6163,3 +6163,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/glpk to 4.45 [asau 2010-12-24]
 	Updated games/scummvm to 1.2.1 [adam 2010-12-24]
 	Updated print/tex-vertbars to 1.0b [minskim 2010-12-25]
+	Updated print/tex-latexconfig to 2010.20663 [minskim 2010-12-25]
