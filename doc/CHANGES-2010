@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4357 2010/12/25 14:04:51 jmcneill Exp $
+$NetBSD: CHANGES-2010,v 1.4358 2010/12/25 14:24:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6184,3 +6184,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/zzuf to 0.13 [obache 2010-12-25]
 	Updated textproc/mdocml to 1.10.8 [wiz 2010-12-25]
 	Updated sysutils/usbutil to 0.5nb4 [jmcneill 2010-12-25]
+	Updated print/auctex to 11.86 [mef 2010-12-25]
+	Updated ham/xlog to 2.0.4 [mef 2010-12-25]
