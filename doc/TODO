@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9979 2010/12/25 11:01:07 obache Exp $
+$NetBSD: TODO,v 1.9980 2010/12/25 13:18:10 mef Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o astyle-1.15.3
 	o asymptote-2.08
 	o aterm-1.0.1
-	o auctex-11.86 [pkg/43966]
 	o audacious-plugins-2.4.2
 	o autoconvert-0.3.16
 	o autogen-5.11.5
