@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4348 2010/12/25 05:45:56 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4349 2010/12/25 05:48:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6174,3 +6174,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-collection-basic to 2010.20730 [minskim 2010-12-25]
 	Updated print/tex-collection-basic-doc to 2010 [minskim 2010-12-25]
 	Updated lang/python26 to 2.6.6nb5 [obache 2010-12-25]
+	Removed print/tex-apalike [minskim 2010-12-25]
+	Removed print/tex-apalike-doc [minskim 2010-12-25]
