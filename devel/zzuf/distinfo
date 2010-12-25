@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/09 06:56:52 bjs Exp $
+$NetBSD: distinfo,v 1.2 2010/12/25 11:00:51 obache Exp $
 
-SHA1 (zzuf-0.12.tar.gz) = 13a5abecf585f4da893f0592485f9e50fb42ad71
-RMD160 (zzuf-0.12.tar.gz) = 2eb81c4136b2f44f012eec34484197138aed8684
-Size (zzuf-0.12.tar.gz) = 446043 bytes
-SHA1 (patch-aa) = 73c4d388d2936f4f654d1b34d464920c583ad6e0
+SHA1 (zzuf-0.13.tar.gz) = 19f904d63d045194885639c381a607ca86a319b5
+RMD160 (zzuf-0.13.tar.gz) = ef9988a6d97f213090227a0b6d87e4d942ed8c15
+Size (zzuf-0.13.tar.gz) = 461498 bytes
