@@ -1,5 +1,3 @@
---- libguile/gc_os_dep.c.orig	Fri Jun 26 13:21:44 2009
-+++ libguile/gc_os_dep.c	Sat Apr 17 13:35:43 2010
 --- libguile/gc_os_dep.c.orig	2009-06-26 20:21:44.000000000 +0000
 +++ libguile/gc_os_dep.c
 @@ -132,7 +132,7 @@ typedef int GC_bool;
@@ -39,30 +37,6 @@
   *
   * MACH_TYPE is a string representation of the machine type.
   * OS_TYPE is analogous for the OS.
-@@ -706,13 +711,17 @@ scm_get_stack_base ()
-     extern int etext;
- #   ifdef SUNOS5
- #	define OS_TYPE "SUNOS5"
--	extern int _etext;
--	extern int _end;
--	extern char * GC_SysVGetDataStart();
--#       define DATASTART (ptr_t)GC_SysVGetDataStart(0x10000, &_etext)
--#	define DATAEND (&_end)
--#	ifndef USE_MMAP
-+	extern int _etext[];
-+	extern int _end[];
-+	extern ptr_t GC_SysVGetDataStart();
-+#       define DATASTART GC_SysVGetDataStart(0x10000, _etext)
-+#	define DATAEND (_end)
-+#	if !defined(USE_MMAP) && defined(REDIRECT_MALLOC)
- #	    define USE_MMAP
-+	    /* Otherwise we now use calloc.  Mmap may result in the	*/
-+	    /* heap interleaved with thread stacks, which can result in	*/
-+	    /* excessive blacklisting.  Sbrk is unusable since it	*/
-+	    /* doesn't interact correctly with the system malloc.	*/
- #	endif
- #       ifdef USE_MMAP
- #         define HEAP_START (ptr_t)0x40000000
 @@ -720,10 +729,18 @@ scm_get_stack_base ()
  #	  define HEAP_START DATAEND
  #       endif
@@ -86,43 +60,6 @@
  #	include <unistd.h>
  #       define GETPAGESIZE()  sysconf(_SC_PAGESIZE)
  		/* getpagesize() appeared to be missing from at least one */
-@@ -797,15 +814,29 @@ scm_get_stack_base ()
- #   endif
- #   ifdef SUNOS5
- #	define OS_TYPE "SUNOS5"
--  	extern int etext, _start;
--  	extern char * GC_SysVGetDataStart();
--#       define DATASTART GC_SysVGetDataStart(0x1000, &etext)
--#	define STACKBOTTOM ((ptr_t)(&_start))
--/** At least in Solaris 2.5, PROC_VDB gives wrong values for dirty bits. */
--/*#	define PROC_VDB*/
-+        extern int _etext[], _end[];
-+  	extern ptr_t GC_SysVGetDataStart();
-+#       define DATASTART GC_SysVGetDataStart(0x1000, _etext)
-+#	define DATAEND (_end)
-+/*	# define STACKBOTTOM ((ptr_t)(_start)) worked through 2.7,  	*/
-+/*      but reportedly breaks under 2.8.  It appears that the stack	*/
-+/* 	base is a property of the executable, so this should not break	*/
-+/* 	old executables.						*/
-+/*  	HEURISTIC2 probably works, but this appears to be preferable.	*/
-+#       include <sys/vm.h>
-+#	define STACKBOTTOM USRSTACK
-+/* At least in Solaris 2.5, PROC_VDB gives wrong values for dirty bits. */
-+/* It appears to be fixed in 2.8 and 2.9.				*/
-+#	ifdef SOLARIS25_PROC_VDB_BUG_FIXED
-+#	  define PROC_VDB
-+#	endif
- #	define DYNAMIC_LOADING
--#	ifndef USE_MMAP
-+#	if !defined(USE_MMAP) && defined(REDIRECT_MALLOC)
- #	    define USE_MMAP
-+	    /* Otherwise we now use calloc.  Mmap may result in the	*/
-+	    /* heap interleaved with thread stacks, which can result in	*/
-+	    /* excessive blacklisting.  Sbrk is unusable since it	*/
-+	    /* doesn't interact correctly with the system malloc.	*/
- #	endif
- #       ifdef USE_MMAP
- #         define HEAP_START (ptr_t)0x40000000
 @@ -994,6 +1025,21 @@ scm_get_stack_base ()
  #    endif
  # endif
