@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9977 2010/12/25 08:38:35 adam Exp $
+$NetBSD: TODO,v 1.9978 2010/12/25 09:04:36 asau Exp $
 
 Suggested new packages
 ======================
@@ -742,7 +742,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
-	o guile-1.8.8
 	o guile-gtk-2.0
 	o gupnp-0.15.0
 	o gwaei-1.5.1
