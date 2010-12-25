@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4346 2010/12/25 05:36:43 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.4347 2010/12/25 05:45:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6171,3 +6171,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pdftex-doc to 1.40.11nb1 [minskim 2010-12-25]
 	Updated print/tex-bibtex to 0.99d [minskim 2010-12-25]
 	Updated print/tex-bibtex-doc to 0.99d [minskim 2010-12-25]
+	Updated print/tex-collection-basic to 2010.20730 [minskim 2010-12-25]
+	Updated print/tex-collection-basic-doc to 2010 [minskim 2010-12-25]
