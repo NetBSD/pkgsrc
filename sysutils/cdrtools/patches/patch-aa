@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.11 2010/12/25 07:11:26 dholland Exp $
+
+Suppress annoying beeping during build.
+
+--- RULES/mk-gmake.id.orig	2009-09-09 12:29:28.000000000 +0000
++++ RULES/mk-gmake.id
+@@ -51,7 +51,7 @@ MAKEPROG=	gmake
+ ifndef		ARCH_DONE
+ 
+ ifndef		GMAKE_NOWARN
+-__gmake_warn:=	$(shell cat $(SRCROOT)/$(RULESDIR)/gmake.wrn 1>&2; sleep 2)
++#__gmake_warn:=	$(shell cat $(SRCROOT)/$(RULESDIR)/gmake.wrn 1>&2; sleep 2)
+ endif
+ 
+ _MACHCMD=	(mach || uname -p || true)	2> /dev/null
