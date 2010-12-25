@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.5 2010/09/04 05:12:00 obache Exp $
+$NetBSD: patch-al,v 1.6 2010/12/25 05:45:15 obache Exp $
 
 --- configure.orig	2010-05-25 02:27:03.000000000 +0000
 +++ configure
-@@ -4736,17 +4736,18 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -4736,15 +4736,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -18,16 +18,8 @@ $NetBSD: patch-al,v 1.5 2010/09/04 05:12:00 obache Exp $
 -	  esac
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
-+    Darwin*)
-+	  LDLIBRARY='libpython$(VERSION).dylib'
-+	  BLDLIBRARY='-L. -lpython$(VERSION)'
-+	  RUNSHARED=DYLD_FALLBACK_LIBRARY_PATH=`pwd`:${DYLD_FALLBACK_LIBRARY_PATH}
-+	  INSTSONAME="$LDLIBRARY"
-+	  ;;
      hp*|HP*)
- 	  case `uname -m` in
- 		ia64)
-@@ -7359,8 +7360,8 @@ then
+@@ -7359,8 +7354,8 @@ then
  			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -38,7 +30,7 @@ $NetBSD: patch-al,v 1.5 2010/09/04 05:12:00 obache Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -7381,12 +7382,12 @@ then
+@@ -7381,12 +7376,12 @@ then
  				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -54,15 +46,17 @@ $NetBSD: patch-al,v 1.5 2010/09/04 05:12:00 obache Exp $
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -7410,6 +7411,7 @@ then
+@@ -7409,7 +7404,8 @@ then
+ 				   ;;
  				esac
  		fi;;
- 	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
+-	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
++	NetBSD*|DragonFly*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
 +	Interix*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -7445,6 +7447,7 @@ then
+@@ -7445,6 +7441,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
  	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
@@ -70,7 +64,7 @@ $NetBSD: patch-al,v 1.5 2010/09/04 05:12:00 obache Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -7502,6 +7505,7 @@ then
+@@ -7502,6 +7499,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
