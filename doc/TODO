@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9982 2010/12/25 14:54:27 wiz Exp $
+$NetBSD: TODO,v 1.9983 2010/12/25 15:00:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1311,7 +1311,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
-	o viewvc-1.0.12 [pkg/44263]
 	o vifm-0.5
 	o vigra-1.7.1
 	o vile-9.8
