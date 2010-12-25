@@ -1,21 +1,22 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/12/25 08:08:06 taca Exp $
 bin/smbldap-passwd
 ${PERL5_SUB_INSTALLVENDORLIB}/smbldap_tools.pm
 sbin/smbldap-groupadd
 sbin/smbldap-groupdel
+sbin/smbldap-grouplist
 sbin/smbldap-groupmod
 sbin/smbldap-groupshow
+sbin/smbldap-tools/configure.pl
+sbin/smbldap-tools/smbldap-migrate-pwdump-accounts
+sbin/smbldap-tools/smbldap-migrate-pwdump-groups
+sbin/smbldap-tools/smbldap-migrate-unix-accounts
+sbin/smbldap-tools/smbldap-migrate-unix-groups
+sbin/smbldap-tools/smbldap-populate
 sbin/smbldap-useradd
 sbin/smbldap-userdel
 sbin/smbldap-userinfo
 sbin/smbldap-usermod
 sbin/smbldap-usershow
-sbin/smbldap-tools/configure.pl
-sbin/smbldap-tools/smbldap-populate
-sbin/smbldap-tools/smbldap-migrate-pwdump-accounts
-sbin/smbldap-tools/smbldap-migrate-pwdump-groups
-sbin/smbldap-tools/smbldap-migrate-unix-accounts
-sbin/smbldap-tools/smbldap-migrate-unix-groups
 share/doc/smbldap-tools/smbldap-tools.html
 share/doc/smbldap-tools/smbldap-tools.pdf
 share/examples/smbldap-tools/slapd.conf

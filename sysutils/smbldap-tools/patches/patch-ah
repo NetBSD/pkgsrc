@@ -1,8 +1,10 @@
-$NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+$NetBSD: patch-ah,v 1.2 2010/12/25 08:08:06 taca Exp $
 
---- smbldap.conf.orig	2008-04-22 17:13:29.000000000 +0900
+- Fix paths for pkgsrc.
+
+--- smbldap.conf.orig	2010-11-15 14:45:49.000000000 +0000
 +++ smbldap.conf
-@@ -58,7 +58,7 @@ sambaDomain="DOMSMB"
+@@ -57,7 +57,7 @@ sambaDomain="DOMSMB"
  # Slave LDAP server
  # Ex: slaveLDAP=127.0.0.1
  # If not defined, parameter is set to "127.0.0.1"
@@ -11,7 +13,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
  
  # Slave LDAP port
  # If not defined, parameter is set to "389"
-@@ -67,7 +67,7 @@ slavePort="389"
+@@ -66,7 +66,7 @@ slavePort="389"
  # Master LDAP server: needed for write operations
  # Ex: masterLDAP=127.0.0.1
  # If not defined, parameter is set to "127.0.0.1"
@@ -20,7 +22,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
  
  # Master LDAP port
  # If not defined, parameter is set to "389"
-@@ -92,19 +92,19 @@ verify="require"
+@@ -91,19 +91,19 @@ verify="require"
  
  # CA certificate
  # see "man Net::LDAP" in start_tls section for more details
@@ -44,7 +46,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
  
  # Where are stored Users
  # Ex: usersdn="ou=Users,dc=IDEALX,dc=ORG"
-@@ -121,6 +121,14 @@ computersdn="ou=Computers,${suffix}"
+@@ -120,6 +120,14 @@ computersdn="ou=Computers,${suffix}"
  # Warning: if 'suffix' is not set here, you must set the full dn for groupsdn
  groupsdn="ou=Groups,${suffix}"
  
@@ -59,7 +61,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
  # Where are stored Idmap entries (used if samba is a domain member server)
  # Ex: groupsdn="ou=Idmap,dc=IDEALX,dc=ORG"
  # Warning: if 'suffix' is not set here, you must set the full dn for idmapdn
-@@ -151,8 +159,8 @@ crypt_salt_format="%s"
+@@ -150,8 +158,8 @@ crypt_salt_format="%s"
  
  # Login defs
  # Default Login Shell
@@ -70,7 +72,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
  
  # Home directory
  # Ex: userHome="/home/%U"
-@@ -210,7 +218,7 @@ userScript="logon.bat"
+@@ -209,7 +217,7 @@ userScript="logon.bat"
  # Domain appended to the users "mail"-attribute
  # when smbldap-useradd -M is used
  # Ex: mailDomain="idealx.com"
@@ -79,14 +81,14 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
  
  ##############################################################################
  #
-@@ -221,12 +229,12 @@ mailDomain="iallanis.info"
- # Allows not to use smbpasswd (if with_smbpasswd == 0 in smbldap_conf.pm) but
+@@ -220,12 +228,12 @@ mailDomain="iallanis.info"
+ # Allows not to use smbpasswd (if with_smbpasswd="0" in smbldap.conf) but
  # prefer Crypt::SmbHash library
  with_smbpasswd="0"
 -smbpasswd="/usr/bin/smbpasswd"
 +smbpasswd="@PREFIX@/bin/smbpasswd"
  
- # Allows not to use slappasswd (if with_slappasswd == 0 in smbldap_conf.pm)
+ # Allows not to use slappasswd (if with_slappasswd="0" in smbldap.conf)
  # but prefer Crypt:: libraries
  with_slappasswd="0"
 -slappasswd="/usr/sbin/slappasswd"
