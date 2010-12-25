@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+$NetBSD: distinfo,v 1.2 2010/12/25 08:08:06 taca Exp $
 
-SHA1 (smbldap-tools-0.9.5.tgz) = 05534385b6f7d031d0721d64f339bf8d166a68f5
-RMD160 (smbldap-tools-0.9.5.tgz) = 055d7dc059d19ad153412c449d1448858c1fe42c
-Size (smbldap-tools-0.9.5.tgz) = 303131 bytes
-SHA1 (patch-aa) = f49e131afbead61baafef55bc5d8a5dd700bbf7d
+SHA1 (smbldap-tools-0.9.6.tar.gz) = c5220c63c57c191f9342076784dad1ef595129ba
+RMD160 (smbldap-tools-0.9.6.tar.gz) = f9a497a29736673226a9c872c50893c31a0db513
+Size (smbldap-tools-0.9.6.tar.gz) = 304912 bytes
+SHA1 (patch-aa) = f4cb3a5666c780c476c3a53e5b9b2ecdebe42153
 SHA1 (patch-ab) = f785d67107435cc94ed202de84249aa4f95dd7fd
 SHA1 (patch-ac) = db681d57c9eb1b6195e77bd7d58431f3bb773421
 SHA1 (patch-ad) = ec00520ae444ed7842e6139bf592b855e0de491f
 SHA1 (patch-ae) = b9909ba4c29aa894c133d21fdd73183b51fbc0de
-SHA1 (patch-af) = 3eedae8c4fa29736231ffa0a6885a3f416f58d04
 SHA1 (patch-ag) = f8b0f27ab3938f82b22df01c126f75d196157099
-SHA1 (patch-ah) = cd2e2b15061e0f1c0c2d0cf9aedf9d90a106342a
+SHA1 (patch-ah) = 625ad9441987a6fdd844b9595ef62f4297922f75
 SHA1 (patch-ai) = ed9f750eeb5985846df3fa6652cc8796f1d7736b
