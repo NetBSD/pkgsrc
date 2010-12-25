@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2010/12/13 11:52:29 drochner Exp $
+# $NetBSD: Makefile,v 1.445 2010/12/25 05:47:29 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -168,8 +168,6 @@ SUBDIR+=	tex-anonchap
 SUBDIR+=	tex-anonchap-doc
 SUBDIR+=	tex-answers
 SUBDIR+=	tex-answers-doc
-SUBDIR+=	tex-apalike
-SUBDIR+=	tex-apalike-doc
 SUBDIR+=	tex-arabi
 SUBDIR+=	tex-arabi-doc
 SUBDIR+=	tex-arabtex
