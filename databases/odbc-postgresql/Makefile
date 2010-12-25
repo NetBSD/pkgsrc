@@ -1,27 +1,41 @@
-# $NetBSD: Makefile,v 1.15 2010/01/17 12:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/25 08:37:31 adam Exp $
+
+DISTNAME=	psqlodbc-09.00.0200
+PKGNAME=	odbc-postgresql-9.0.200
+CATEGORIES=	databases
+MASTER_SITES=	${PGSQL_MIRRORS:=odbc/versions/src/}
+
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://pgfoundry.org/projects/psqlodbc/
+COMMENT=	ODBC interface to PostgreSQL
+LICENSE=	gnu-gpl-v2
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "Makefile.common"
+CONFLICTS+=	postgresql-[0-7]*
+CONFLICTS+=	iodbc-postgresql-[0-9]*
+CONFLICTS+=	unixodbc-postgresql-[0-9]*
 
-PKGNAME=		odbc-postgresql-${BASE_VERS}
-PKGREVISION=		3
-COMMENT=		ODBC interface to PostgreSQL
+.include "../../databases/postgresql90/Makefile.mirrors"
 
-CONFIGURE_ARGS+=	--with-odbcinst=${PKG_SYSCONFDIR:Q}
+USE_LANGUAGES=		c
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-iodbc
+CONFIGURE_ARGS+=	--without-unixodbc
 
-post-extract:
-	set -e; \
-	cd ${WRKSRC}; \
-	[ ! -d src/backend/port/dynloader ] || (			\
-		cd src/backend/port/dynloader;				\
-		cp freebsd.c dragonfly.c;				\
-		cp freebsd.h dragonfly.h;				\
-	);								\
-	[ ! -d src/template ]						\
-	|| touch src/template/dragonfly;				\
-	[ ! -d src/include/port ]					\
-	|| cp src/include/port/freebsd.h src/include/port/dragonfly.h;	\
-	[ ! -d src/makefiles ]						\
-	|| cp src/makefiles/Makefile.freebsd src/makefiles/Makefile.dragonfly
+INSTALLATION_DIRS=	share/doc/postgresql/odbc
+INSTALLATION_DIRS+=	share/postgresql
 
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/odbc.sql \
+		${DESTDIR}${PREFIX}/share/postgresql/odbc.sql
+	${INSTALL_DATA} ${WRKSRC}/odbc-drop.sql \
+		${DESTDIR}${PREFIX}/share/postgresql/odbc-drop.sql
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/postgresql/odbc/
+
+.include "../../databases/iodbc/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
