@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9980 2010/12/25 13:18:10 mef Exp $
+$NetBSD: TODO,v 1.9981 2010/12/25 13:41:36 mef Exp $
 
 Suggested new packages
 ======================
@@ -1424,7 +1424,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkill-1.0.3
 	o xli-2006.11.10
 	o xload-1.1.0
-	o xlog-2.0.4 [pkg/44045]
 	o xlogo-1.0.3
 	o xlsatoms-1.1.0 [unpackaged]
 	o xlsclients-1.1.1
