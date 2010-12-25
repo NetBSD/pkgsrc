@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/11/08 22:55:32 minskim Exp $
+$NetBSD: distinfo,v 1.6 2010/12/25 02:40:11 minskim Exp $
 
-SHA1 (tex-plain-20014/plain.tar.xz) = d3289d20507be083403d7fc5b68255bd4ec2707d
-RMD160 (tex-plain-20014/plain.tar.xz) = 343dc580c1f317982b6eba5c0927e58a5089c851
-Size (tex-plain-20014/plain.tar.xz) = 42312 bytes
+SHA1 (tex-plain-20544/plain.tar.xz) = ce1ac9fa99391f403afeb8511bfbbbe069bf8ec6
+RMD160 (tex-plain-20544/plain.tar.xz) = 8a4476a9570fecbb7972c4fecad3da46b1f528b1
+Size (tex-plain-20544/plain.tar.xz) = 42312 bytes
