@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2009/11/28 20:25:40 pgoyette Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/25 09:48:09 obache Exp $
 
 Use an explicit 32-bit data type.
 
@@ -15,7 +15,7 @@ Use an explicit 32-bit data type.
 + * typedef signed long glsi32;
 + */
 +
-+#include <sys/inttypes.h>
++#include <stdint.h>
 +
 +typedef uint32_t glui32;
 +typedef int32_t glsi32;
