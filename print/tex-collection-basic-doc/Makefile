@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/05/03 18:43:50 minskim Exp $
-# TeX Live Revision 17228
+# $NetBSD: Makefile,v 1.3 2010/12/25 05:44:34 minskim Exp $
 
 DISTNAME=	collection-basic-doc
-PKGNAME=	tex-${DISTNAME}-2009
+PKGNAME=	tex-${DISTNAME}-2010
 CATEGORIES=	print
 MASTER_SITES=	# empty
+TEXLIVE_REV=	20730
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -12,7 +12,6 @@ COMMENT=	Documentation for tex-collection-basic
 
 DEPENDS+=	tex-collection-documentation-base-doc>=2009:../../print/tex-collection-documentation-base-doc
 DEPENDS+=	tex-amsfonts-doc-[0-9]*:../../fonts/tex-amsfonts-doc
-DEPENDS+=	tex-apalike-doc-[0-9]*:../../print/tex-apalike-doc
 DEPENDS+=	tex-bibtex-doc-[0-9]*:../../print/tex-bibtex-doc
 DEPENDS+=	tex-cm-doc-[0-9]*:../../fonts/tex-cm-doc
 DEPENDS+=	tex-dvipdfm-doc-[0-9]*:../../print/tex-dvipdfm-doc
