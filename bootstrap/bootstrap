@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.161 2010/11/20 00:49:33 obache Exp $
+# $NetBSD: bootstrap,v 1.162 2010/12/26 11:24:21 adam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -480,7 +480,7 @@ Darwin)
 	set_opsys=no
 	[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
 	machine_arch=`uname -p`
-	CC="gcc -isystem /usr/include"; export CC
+	CC=${CC:-"gcc -isystem /usr/include"}; export CC
 	osrev=`uname -r`
 	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
 	case "$macosx_version" in
