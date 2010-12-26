@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.775 2010/10/15 04:38:43 jnemeth Exp $
+# $NetBSD: Makefile,v 1.776 2010/12/26 15:23:59 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -538,7 +538,6 @@ SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webpy
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
-SUBDIR+=	rails
 SUBDIR+=	ramaze
 SUBDIR+=	ruby-actionpack
 SUBDIR+=	ruby-actionpack3
@@ -565,6 +564,7 @@ SUBDIR+=	ruby-rack
 SUBDIR+=	ruby-rack-mount
 SUBDIR+=	ruby-rack-test
 SUBDIR+=	ruby-rack11
+SUBDIR+=	ruby-rails
 SUBDIR+=	ruby-rails3
 SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
