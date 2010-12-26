@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2009/12/27 16:17:34 abs Exp $
+$NetBSD: patch-aa,v 1.6 2010/12/26 20:59:31 markd Exp $
 
---- tools/hal-storage-mount.c.orig	2008-05-07 23:24:23.000000000 +0000
+--- tools/hal-storage-mount.c.orig	2009-05-27 20:26:03.000000000 +0000
 +++ tools/hal-storage-mount.c
 @@ -31,7 +31,7 @@
  #include <string.h>
@@ -65,9 +65,9 @@ $NetBSD: patch-aa,v 1.5 2009/12/27 16:17:34 abs Exp $
  #elif sun
  	if (! strcmp (fstype, "iso9660"))
  		return "hsfs";
-@@ -470,11 +489,16 @@ handle_mount (LibHalContext *hal_ctx, 
- 	gboolean is_remount;
+@@ -471,11 +490,16 @@ handle_mount (LibHalContext *hal_ctx, 
  	gboolean explicit_mount_point_given;
+ 	gboolean found_alternative_fstype = FALSE;
  	const char *end;
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
@@ -83,21 +83,21 @@ $NetBSD: patch-aa,v 1.5 2009/12/27 16:17:34 abs Exp $
  	const char *label;
  	const char *uuid;
  
-@@ -731,7 +755,6 @@ handle_mount (LibHalContext *hal_ctx, 
+@@ -646,8 +670,6 @@ handle_mount (LibHalContext *hal_ctx, 
  	/* construct arguments to mount */
  	na = 0;
  	
 -	args[na++] = MOUNT;
+-
  	if (strlen (mount_fstype) > 0) {
  		mount_do_fstype = (char *) map_fstype (mount_fstype);
- 	} else if (volume == NULL) {
-@@ -742,8 +765,29 @@ handle_mount (LibHalContext *hal_ctx, 
- 	} else {
- 		mount_do_fstype = "auto";
+ 		if (volume && strcmp(mount_do_fstype, mount_fstype) == 0) {
+@@ -797,8 +819,28 @@ handle_mount (LibHalContext *hal_ctx, 
+ 		}
  	}
+ 
 -	args[na++] = MOUNT_TYPE_OPT;
 -	args[na++] = mount_do_fstype;
-+
 +#ifdef __NetBSD__
 +	rump_cmd = g_strdup_printf ("/usr/sbin/rump_%s", mount_do_fstype);
 +	if (stat (rump_cmd, &st) == 0) {
@@ -123,7 +123,7 @@ $NetBSD: patch-aa,v 1.5 2009/12/27 16:17:34 abs Exp $
  
  	args[na++] = "-o";
  #ifdef HAVE_UMOUNT_HAL
-@@ -814,7 +858,7 @@ handle_mount (LibHalContext *hal_ctx, 
+@@ -869,7 +911,7 @@ handle_mount (LibHalContext *hal_ctx, 
  			unknown_error ("Cannot create mount directory");
  		}
  		

@@ -323,8 +323,8 @@ vid = NULL;
 
 	/* add volume properties (ignoring dbus errors) */
 	libhal_device_set_property_bool   (ctx, udi, "volume.ignore", FALSE, &error);		/* make visible */
-	libhal_device_set_property_bool   (ctx, udi, "volume.ismounted", FALSE, &error);	/* XXX fixme XXX */
-	libhal_device_set_property_bool   (ctx, udi, "volume.ismounted_readonly", FALSE, &error);	/* XXX fixme XXX */
+	libhal_device_set_property_bool   (ctx, udi, "volume.is_mounted", FALSE, &error);	/* XXX fixme XXX */
+	libhal_device_set_property_bool   (ctx, udi, "volume.is_mounted_readonly", FALSE, &error);	/* XXX fixme XXX */
 	libhal_device_set_property_string (ctx, udi, "volume.fsusage", "filesystem", &error);
 	libhal_device_set_property_string (ctx, udi, "volume.fstype",  disc_fstype, &error);
 	libhal_device_set_property_string (ctx, udi, "volume.label", disc_label, &error);

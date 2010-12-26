@@ -1,9 +1,9 @@
-$NetBSD: patch-aj,v 1.1 2008/11/24 21:13:19 hasso Exp $
+$NetBSD: patch-aj,v 1.2 2010/12/26 20:59:31 markd Exp $
 
---- hald/freebsd/hf-storage.c.orig	2008-11-24 14:16:45 +0200
-+++ hald/freebsd/hf-storage.c	2008-11-24 07:16:09 +0200
-@@ -32,6 +32,9 @@
- #include <string.h>
+--- hald/freebsd/hf-storage.c.orig	2009-08-24 12:42:29.000000000 +0000
++++ hald/freebsd/hf-storage.c
+@@ -33,6 +33,9 @@
+ #include <sys/param.h>
  #include <sys/types.h>
  #include <sys/disklabel.h>
 +#ifdef __DragonFly__

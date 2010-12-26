@@ -361,6 +361,7 @@ devinfo_optical_volume_add(HalDevice *parent, const char *devnode, char *devfs_p
 	hal_device_add_capability (d, "block");
 	hal_device_add_capability (d, "volume");
 	hal_device_add_capability (d, "volume.disc");
+	hal_device_property_set_string (d, "info.category", "volume");
 
 	/* block */
 	sprintf(devstr, "/dev/%s", devnode);
