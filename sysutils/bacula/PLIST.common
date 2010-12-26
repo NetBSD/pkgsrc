@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.12 2010/03/09 07:06:00 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.13 2010/12/26 18:39:45 adam Exp $
 lib/bpipe-fd.la
 lib/libbac.la
 lib/libbaccfg.la
@@ -12,6 +12,7 @@ libexec/bacula/bacula_config
 libexec/bacula/bconsole
 libexec/bacula/btraceback.dbx
 libexec/bacula/btraceback.gdb
+libexec/bacula/btraceback.mdb
 libexec/bacula/disk-changer
 libexec/bacula/mtx-changer
 libexec/bacula/mtx-changer.conf

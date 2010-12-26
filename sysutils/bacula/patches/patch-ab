@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.7 2010/12/26 18:39:46 adam Exp $
+
+--- src/findlib/attribs.c.orig	2010-08-05 14:29:51.000000000 +0000
++++ src/findlib/attribs.c
+@@ -240,7 +240,7 @@ void encode_stat(char *buf, struct stat 
+ int decode_stat(char *buf, struct stat *statp, int32_t *LinkFI)
+ {
+    char *p = buf;
+-   int64_t val;
++   intmax_t val;
+ 
+    p += from_base64(&val, p);
+    plug(statp->st_dev, val);
+@@ -325,7 +325,7 @@ int decode_stat(char *buf, struct stat *
+ int32_t decode_LinkFI(char *buf, struct stat *statp)
+ {
+    char *p = buf;
+-   int64_t val;
++   intmax_t val;
+ 
+    skip_nonspaces(&p);                /* st_dev */
+    p++;                               /* skip space */
+@@ -632,7 +632,7 @@ int encode_attribsEx(JCR *jcr, char *att
+ static bool set_win32_attributes(JCR *jcr, ATTR *attr, BFILE *ofd)
+ {
+    char *p = attr->attrEx;
+-   int64_t val;
++   intmax_t val;
+    WIN32_FILE_ATTRIBUTE_DATA atts;
+    ULARGE_INTEGER li;
+    POOLMEM *win32_ofile;
