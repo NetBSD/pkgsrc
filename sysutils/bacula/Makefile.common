@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.55 2010/05/16 13:08:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.56 2010/12/26 18:39:45 adam Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
 # used by sysutils/bacula-wx-console/Makefile
 
-DISTNAME=	bacula-5.0.2
+DISTNAME=	bacula-5.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 
@@ -29,7 +29,7 @@ BACULA_DIR_USER?=	bacula-dir
 BACULA_SD_USER?=	bacula-sd
 
 PKG_GROUPS_VARS+=	BACULA_GROUP
-PKG_USERS_VARS+=	BACULA_DIR_USER BACULA_SD_USER
+PKG_USERS_VARS=		BACULA_DIR_USER BACULA_SD_USER
 
 PKG_SYSCONFSUBDIR?=	bacula
 BACULA_PIDDIR?=		${VARBASE}/run

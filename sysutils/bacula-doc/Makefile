@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2010/05/08 09:05:47 adam Exp $
+# $NetBSD: Makefile,v 1.25 2010/12/26 18:39:46 adam Exp $
 
-DISTNAME=	bacula-docs-5.0.2
+DISTNAME=	bacula-docs-5.0.3
 PKGNAME=	${DISTNAME:S/docs/doc/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
