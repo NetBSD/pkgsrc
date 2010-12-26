@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/11/17 14:27:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/12/26 12:31:20 taca Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -174,6 +174,7 @@ ${RUBY_LIB}/openssl.rb
 ${RUBY_LIB}/openssl/bn.rb
 ${RUBY_LIB}/openssl/buffering.rb
 ${RUBY_LIB}/openssl/cipher.rb
+${RUBY_LIB}/openssl/config.rb
 ${RUBY_LIB}/openssl/digest.rb
 ${RUBY_LIB}/openssl/pkcs7.rb
 ${RUBY_LIB}/openssl/ssl-internal.rb
