@@ -1,24 +1,13 @@
-$NetBSD: patch-ab,v 1.15 2010/11/24 18:44:54 drochner Exp $
+$NetBSD: patch-ab,v 1.16 2010/12/26 19:16:16 adam Exp $
 
-CVE-2010-3855
-
---- src/truetype/ttgxvar.c.orig	2010-07-12 19:03:49.000000000 +0000
-+++ src/truetype/ttgxvar.c
-@@ -154,7 +154,7 @@
-         runcnt = runcnt & GX_PT_POINT_RUN_COUNT_MASK;
-         first  = points[i++] = FT_GET_USHORT();
+--- builds/unix/unix-cc.in.orig	2010-12-26 19:07:52.000000000 +0000
++++ builds/unix/unix-cc.in
+@@ -101,7 +101,7 @@ LDFLAGS := @LDFLAGS@
+ CCraw_build  := @CC_BUILD@	# native CC of building system
+ E_BUILD      := @EXEEXT_BUILD@	# extension for exexutable on building system
+ EXPORTS_LIST := $(OBJ_DIR)/ftexport.sym
+-CCexe        := $(CCraw_build)	# used to compile `apinames' only
++CCexe        := $(CCraw_build) @CFLAGS@	# used to compile `apinames' only
  
--        if ( runcnt < 1 )
-+        if ( runcnt < 1 || i + runcnt >= n )
-           goto Exit;
  
-         /* first point not included in runcount */
-@@ -165,7 +165,7 @@
-       {
-         first = points[i++] = FT_GET_BYTE();
- 
--        if ( runcnt < 1 )
-+        if ( runcnt < 1 || i + runcnt >= n )
-           goto Exit;
- 
-         for ( j = 0; j < runcnt; ++j )
+ # Library linking
