@@ -1,6 +1,0 @@
-Rails is a full-stack framework for developing database-backed web
-applications according to the Model-View-Control pattern.  From the
-Ajax in the view, to the request and response in the controller, to
-the domain model wrapping the database, Rails gives you a pure-Ruby
-development environment.  To go live, all you need to add is a
-database and a web server.
