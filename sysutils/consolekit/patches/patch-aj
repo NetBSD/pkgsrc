@@ -1,0 +1,181 @@
+$NetBSD: patch-aj,v 1.1 2010/12/26 20:53:14 markd Exp $
+
+Fixed rules from ConsoleKit 0.4.x
+
+--- data/ConsoleKit.conf.orig	2008-04-19 05:39:49.000000000 +0000
++++ data/ConsoleKit.conf
+@@ -8,89 +8,134 @@
+     <allow own="org.freedesktop.ConsoleKit"/>
+ 
+     <!-- Allow all methods on interfaces -->
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Seat"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"/>
++    <allow send_destination="org.freedesktop.ConsoleKit"/>
+   </policy>
+ 
+   <!-- Deny all and then allow some methods on interfaces -->
+   <policy context="default">
+-    <deny send_interface="org.freedesktop.ConsoleKit.Manager"/>
+-    <deny send_interface="org.freedesktop.ConsoleKit.Seat"/>
+-    <deny send_interface="org.freedesktop.ConsoleKit.Session"/>
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.DBus.Introspectable"/>
++    <deny send_destination="org.freedesktop.ConsoleKit" 
++          send_interface="org.freedesktop.ConsoleKit.Manager"/>
++    <deny send_destination="org.freedesktop.ConsoleKit" 
++          send_interface="org.freedesktop.ConsoleKit.Seat"/>
++    <deny send_destination="org.freedesktop.ConsoleKit" 
++          send_interface="org.freedesktop.ConsoleKit.Session"/>
+     <deny send_destination="org.freedesktop.ConsoleKit"
+           send_interface="org.freedesktop.DBus.Properties" />
+ 
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="Restart"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="Stop"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="OpenSession"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="CloseSession"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetSeats"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
++           send_member="GetSessions"/>
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetSessionForCookie"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetSessionForUnixProcess"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetCurrentSession"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetSessionsForUnixUser"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetSessionsForUser"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetSystemIdleHint"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Manager"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Manager"
+            send_member="GetSystemIdleSinceHint"/>
+ 
+-    <allow send_interface="org.freedesktop.ConsoleKit.Seat"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Seat"
+            send_member="GetId"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Seat"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Seat"
+            send_member="GetSessions"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Seat"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Seat"
+            send_member="GetDevices"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Seat"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Seat"
+            send_member="GetActiveSession"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Seat"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Seat"
+            send_member="CanActivateSessions"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Seat"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Seat"
+            send_member="ActivateSession"/>
+ 
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetId"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetSeatId"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetLoginSessionId"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetSessionType"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetUser"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetUnixUser"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetX11Display"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetX11DisplayDevice"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetDisplayDevice"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetRemoteHostName"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="IsActive"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="IsLocal"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetCreationTime"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="Activate"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetIdleHint"/>
+-    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
++           send_member="SetIdleHint"/>
++    <allow send_destination="org.freedesktop.ConsoleKit"
++           send_interface="org.freedesktop.ConsoleKit.Session"
+            send_member="GetIdleSinceHint"/>
++    <allow send_interface="org.freedesktop.ConsoleKit.Session"
++           send_member="SetIdleHint"/>
+   </policy>
+ 
+ </busconfig>
