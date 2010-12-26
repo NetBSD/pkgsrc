@@ -1,4 +1,4 @@
-/* $NetBSD: devinfo_mass.c,v 1.3 2009/10/15 00:30:39 jmcneill Exp $ */
+/* $NetBSD: devinfo_mass.c,v 1.4 2010/12/26 20:59:31 markd Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -110,6 +110,8 @@ devinfo_mass_get_fstype(uint8_t fstype)
 		return "ext2";
 	case FS_NTFS:
 		return "ntfs";
+	case FS_APPLEUFS:
+		return "ffs";
 	default:
 		return NULL;
 	}
@@ -127,6 +129,8 @@ devinfo_mass_get_mbrtype(uint8_t fstype)
 		return MBR_PTYPE_LNXEXT2;
 	case FS_NTFS:
 		return MBR_PTYPE_NTFS;
+	case FS_APPLEUFS:
+		return MBR_PTYPE_APPLE_UFS;
 	default:
 		return MBR_PTYPE_UNUSED;
 	}
@@ -394,7 +398,7 @@ devinfo_mass_disklabel_add(HalDevice *parent, const char *devnode, char *devfs_p
 				if (strcmp (type, "vfat") == 0) {
 					HAL_INFO (("%s disklabel reports %s but libvolume_id says it is "
 					    "%s, assuming disklabel is incorrect",
-					    devpath, devinfo_mass_get_fstype (part->p_fstype)));
+					    devpath, devinfo_mass_get_fstype (part->p_fstype), type));
 					hal_device_property_set_string (d, "volume.fstype", type);
 				}
 		}

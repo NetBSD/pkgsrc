@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1 2008/11/24 21:13:19 hasso Exp $
+$NetBSD: patch-ak,v 1.2 2010/12/26 20:59:31 markd Exp $
 
---- hald/freebsd/probing/probe-volume.c.orig	2008-05-08 02:24:07 +0300
-+++ hald/freebsd/probing/probe-volume.c	2008-11-24 21:30:08 +0200
+--- hald/freebsd/probing/probe-volume.c.orig	2009-09-17 13:45:09.000000000 +0000
++++ hald/freebsd/probing/probe-volume.c
 @@ -33,7 +33,9 @@
  #include <fcntl.h>
  #include <unistd.h>
@@ -11,8 +11,8 @@ $NetBSD: patch-ak,v 1.1 2008/11/24 21:13:19 hasso Exp $
 +#endif
  #include <sys/cdio.h>
  #include <sys/param.h>
- #include <sys/types.h>
-@@ -366,6 +368,7 @@ main (int argc, char **argv)
+ #include <sys/mount.h>
+@@ -371,6 +373,7 @@ main (int argc, char **argv)
        is_blank = (! has_audio && ! has_data);
      }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ak,v 1.1 2008/11/24 21:13:19 hasso Exp $
    ioctl(fd, DIOCGMEDIASIZE, &media_size);
  
    /*
-@@ -391,6 +394,7 @@ main (int argc, char **argv)
+@@ -396,6 +399,7 @@ main (int argc, char **argv)
  	    }
  	}
      }
@@ -28,7 +28,7 @@ $NetBSD: patch-ak,v 1.1 2008/11/24 21:13:19 hasso Exp $
  
    if (! has_children && ! is_swap && ! has_audio && ! has_data && ! is_blank)
      goto end;
-@@ -582,10 +586,12 @@ main (int argc, char **argv)
+@@ -628,10 +632,12 @@ main (int argc, char **argv)
  
    libhal_device_set_property_string(hfp_ctx, hfp_udi, "volume.uuid", vid ? vid->uuid : "", &hfp_error);
  

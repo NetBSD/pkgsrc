@@ -1,17 +1,9 @@
-$NetBSD: patch-na,v 1.5 2009/09/14 15:18:36 joerg Exp $
+$NetBSD: patch-na,v 1.6 2010/12/26 20:59:31 markd Exp $
 
---- configure.in.orig	2008-05-08 01:24:31.000000000 +0200
+--- configure.in.orig	2009-08-24 12:42:29.000000000 +0000
 +++ configure.in
-@@ -30,6 +30,7 @@ AC_SUBST(LT_AGE)
- AC_ISC_POSIX
- AC_PROG_CC
- AM_PROG_CC_C_O
-+AC_PROG_CXX
- AC_HEADER_STDC
- AC_PROG_LIBTOOL
- AC_PROG_MAKE_SET
-@@ -448,7 +449,7 @@ AM_CONDITIONAL([HAVE_LIBPCI], [test "x$U
- 
+@@ -484,7 +484,7 @@ USE_LIBUSB=no
+ LIBUSB20_LIBS=""
  AC_ARG_WITH([backend],
  	    AS_HELP_STRING([--with-backend=<name>],
 -	                   [backend to use (linux/solaris/freebsd/dummy)]),
@@ -19,44 +11,43 @@ $NetBSD: patch-na,v 1.5 2009/09/14 15:18:36 joerg Exp $
  	    [backend=$withval])
  if ! test -z "$with_backend" ; then
      HALD_BACKEND="$with_backend"
-@@ -457,6 +458,9 @@ else
+@@ -493,6 +493,9 @@ else
          *-*-solaris*)
  		   HALD_BACKEND="solaris"
  		   ;;
 +        *-*-netbsd*)
-+                   HALD_BACKEND="netbsd"
++		   HALD_BACKEND="netbsd"
 +		   ;;
-         *-*-freebsd*)
+         *-*-freebsd* | *-*-kfreebsd*-gnu)
                     HALD_BACKEND="freebsd"
                     ;;
-@@ -472,6 +476,7 @@ AM_CONDITIONAL(HALD_COMPILE_DUMMY, [test
+@@ -508,6 +511,7 @@ AM_CONDITIONAL(HALD_COMPILE_DUMMY, [test
  AM_CONDITIONAL(HALD_COMPILE_LINUX, [test x$HALD_BACKEND = xlinux], [Compiling for Linux])
  AM_CONDITIONAL(HALD_COMPILE_FREEBSD, [test x$HALD_BACKEND = xfreebsd], [Compiling for FreeBSD])
  AM_CONDITIONAL(HALD_COMPILE_SOLARIS, [test x$HALD_BACKEND = xsolaris], [Compiling for Solaris])
 +AM_CONDITIONAL(HALD_COMPILE_NETBSD, [test x$HALD_BACKEND = xnetbsd], [Compiling for NetBSD])
  AC_SUBST(HALD_BACKEND)
- 
- dnl DBUS API is subject to changes
-@@ -641,13 +646,14 @@ fi
+ if test "x$HALD_BACKEND" = "xfreebsd"; then
+     AC_CHECK_LIB([usb20], [libusb20_dev_get_info], [USE_LIBUSB20=yes], [USE_LIBUSB20=no])
+@@ -707,7 +711,7 @@ fi
  AC_MSG_RESULT($have_glib_2_14)
  
- # volume_id
--case "$host" in
--*-*-solaris*)
--	;;
--*)
-+case "$HALD_BACKEND" in
-+linux|freebsd|netbsd)
- 	PKG_CHECK_MODULES(VOLUME_ID, [$volume_id_module])
+ case "$host" in
+-    *-*-freebsd*)
++    *-*-freebsd* | *-*-netbsd*)
+         PKG_CHECK_MODULES(VOLUME_ID, [$volume_id_module])
  	AC_SUBST(VOLUME_ID_CFLAGS)
  	AC_SUBST(VOLUME_ID_LIBS)
-+	;;
-+*)
-+	;;
- esac
- 
- # OS specific libs
-@@ -1004,6 +1010,9 @@ hald/linux/addons/Makefile
+@@ -720,6 +724,8 @@ esac
+ case "$host" in
+ *-*-freebsd*)
+         ;;
++*-*-netbsd*)
++        ;;
+ *-*-solaris*)
+ 	;;
+ *)
+@@ -1086,6 +1092,9 @@ hald/linux/addons/Makefile
  hald/solaris/Makefile
  hald/solaris/probing/Makefile
  hald/solaris/addons/Makefile
@@ -66,7 +57,7 @@ $NetBSD: patch-na,v 1.5 2009/09/14 15:18:36 joerg Exp $
  hald/freebsd/Makefile
  hald/freebsd/probing/Makefile
  hald/freebsd/libprobe/Makefile
-@@ -1014,6 +1023,7 @@ libhal-storage/Makefile
+@@ -1096,6 +1105,7 @@ libhal-storage/Makefile
  tools/Makefile
  tools/freebsd/Makefile
  tools/linux/Makefile
