@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4363 2010/12/26 14:58:56 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4364 2010/12/26 15:25:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6193,3 +6193,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/ruby19-base to 1.9.2pl136 [taca 2010-12-26]
 	Updated devel/ruby-mode-1.9.2pl136 [taca 2010-12-26]
 	Updated graphics/cairo to 1.10.2 [wiz 2010-12-26]
+	Moved www/rails to www/ruby-rails [taca 2010-12-26]
