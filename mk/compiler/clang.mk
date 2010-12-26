@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.5 2010/12/26 09:46:24 adam Exp $
+# $NetBSD: clang.mk,v 1.6 2010/12/26 14:09:01 asau Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -56,8 +56,8 @@ _LANGUAGES.clang=	# empty
 _LANGUAGES.clang+=	${LANGUAGES.clang:M${_lang_}}
 .endfor
 
-.if !(empty(USE_LANGUAGES:Mfortran) && empty(USE_LANGUAGES:Mfortran77))
-.include "../../mk/compiler/f2c.mk"
+.if defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN)
+.  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
 .endif
 
 .endif	# COMPILER_CLANG_MK
