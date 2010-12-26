@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.54 2010/12/01 13:51:45 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.55 2010/12/26 12:29:07 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -11,8 +11,8 @@ RUBY18_VERSION=		1.8.7
 RUBY19_VERSION=		1.9.2
 
 # patch
-RUBY18_PATCHLEVEL=	pl302
-RUBY19_PATCHLEVEL=	pl0
+RUBY18_PATCHLEVEL=	pl330
+RUBY19_PATCHLEVEL=	pl136
 
 # current API compatible version.
 RUBY18_API_VERSION=	1.8.7
