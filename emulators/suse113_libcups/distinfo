@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:28:00 chs Exp $
+$NetBSD: distinfo,v 1.2 2010/12/26 21:39:35 markd Exp $
 
-SHA1 (suse113/i586/cups-libs-1.4.4-2.3.i586.rpm) = 6cbf7e3210b1fae85a90f21aec3b7aa2932da7f7
-RMD160 (suse113/i586/cups-libs-1.4.4-2.3.i586.rpm) = 363ba2f9145f2479c5239edddc0b9531709b24a7
-Size (suse113/i586/cups-libs-1.4.4-2.3.i586.rpm) = 564484 bytes
-SHA1 (suse113/x86_64/cups-libs-1.4.4-2.3.x86_64.rpm) = 15f15b6b64943020a3912c7bdab79b3044de2e7b  
-RMD160 (suse113/x86_64/cups-libs-1.4.4-2.3.x86_64.rpm) = 824a5c927e224c0ae7fe3937e562f71b9b5428ed  
-Size (suse113/x86_64/cups-libs-1.4.4-2.3.x86_64.rpm) = 559995 bytes 
+SHA1 (suse113/i586/cups-libs-1.4.4-3.3.1.i586.rpm) = e041a22c39fe939781b9034bf3ad1425ead6bb7b
+RMD160 (suse113/i586/cups-libs-1.4.4-3.3.1.i586.rpm) = 7aeef04af71d722e239bd30a888a3ea344924f52
+Size (suse113/i586/cups-libs-1.4.4-3.3.1.i586.rpm) = 564828 bytes
+SHA1 (suse113/x86_64/cups-libs-1.4.4-3.3.1.x86_64.rpm) = 38c83381c9cc18a0b2fac350d89b92236573e27b
+RMD160 (suse113/x86_64/cups-libs-1.4.4-3.3.1.x86_64.rpm) = 98c5ac0bde402323c8c03c18b36fe797b6d2cd51
+Size (suse113/x86_64/cups-libs-1.4.4-3.3.1.x86_64.rpm) = 560636 bytes
