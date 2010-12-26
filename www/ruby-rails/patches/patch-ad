@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/12/26 15:21:40 taca Exp $
+
+--- ../rails-2.3.10.gemspec.orig	2010-10-15 02:35:21.000000000 +0000
++++ ../rails-2.3.10.gemspec
+@@ -126,7 +126,6 @@ files: 
+ - CHANGELOG
+ - fresh_rakefile
+ - MIT-LICENSE
+-- railties-3.0.0.beta3.gem
+ - Rakefile
+ - README
+ - bin/about
