@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4370 2010/12/26 22:33:48 tron Exp $
+$NetBSD: CHANGES-2010,v 1.4371 2010/12/26 23:51:32 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6204,3 +6204,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/tvtime to 1.0.2 [jmcneill 2010-12-26]
 	Updated sysutils/hal to 0.5.14 [markd 2010-12-26]
 	Updated multimedia/mediatomb to 0.12.1nb1 [tron 2010-12-26]
+	Updated math/maxima to 5.23.0 [asau 2010-12-26]
