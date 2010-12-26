@@ -1,4 +1,4 @@
-# $NetBSD: pcc.mk,v 1.3 2010/11/03 18:05:05 adam Exp $
+# $NetBSD: pcc.mk,v 1.4 2010/12/26 14:20:01 asau Exp $
 #
 # This is the compiler definition for the PCC compiler.
 #
@@ -26,7 +26,7 @@ _COMPILER_TYPE.c++ =	CXX
 _COMPILER_TYPE.fortran=	FC
 
 # PCC-specific definitions
-_COMPILER_LANGS=	c c++ fortran fortran77
+_COMPILER_LANGS=	c c++ fortran77
 _COMPILER_NAME.c=	pcc
 # TODO:
 _COMPILER_NAME.c++ =	CC
