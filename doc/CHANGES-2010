@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4361 2010/12/26 12:35:02 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4362 2010/12/26 12:39:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6191,3 +6191,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-latex-bin-doc to 2010 [minskim 2010-12-26]
 	Updated lang/ruby18-base to 1.8.7.330 [taca 2010-12-26]
 	Updated lang/ruby19-base to 1.9.2pl136 [taca 2010-12-26]
+	Updated devel/ruby-mode-1.9.2pl136 [taca 2010-12-26]
