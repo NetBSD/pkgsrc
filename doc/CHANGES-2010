@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4359 2010/12/25 15:00:47 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4360 2010/12/26 00:59:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6187,3 +6187,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/auctex to 11.86 [mef 2010-12-25]
 	Updated ham/xlog to 2.0.4 [mef 2010-12-25]
 	Updated www/viewvc to 1.0.12 [wiz 2010-12-25]
+	Updated print/tex-latex-bin to 2010 [minskim 2010-12-26]
+	Updated print/tex-latex-bin-doc to 2010 [minskim 2010-12-26]
