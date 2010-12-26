@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.4 2010/05/08 09:05:47 adam Exp $
+$NetBSD: patch-ao,v 1.5 2010/12/26 18:39:46 adam Exp $
 
---- configure.orig	2010-04-27 19:58:29.000000000 +0000
+--- configure.orig	2010-08-05 14:29:51.000000000 +0000
 +++ configure
-@@ -47193,7 +47193,7 @@ echo "$as_me: error: Could not find qmak
+@@ -47521,7 +47521,7 @@ echo "$as_me: error: Could not find qmak
     { (exit 1); exit 1; }; }
     fi
  
