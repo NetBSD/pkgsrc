@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/09/12 22:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2010/12/26 12:07:01 adam Exp $
 #
 
 DISTNAME=	yasm-1.1.0
@@ -16,6 +16,12 @@ USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
+
+SUBST_CLASSES+=		link
+SUBST_STAGE.link=	pre-configure
+SUBST_MESSAGE.link=	Fix linking command.
+SUBST_FILES.link=	Makefile.in
+SUBST_SED.link=		-e 's,$$(CCLD_FOR_BUILD) -o $$@,$$(LINK) -o $$@,'
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
