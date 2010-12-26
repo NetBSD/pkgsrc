@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4369 2010/12/26 21:02:06 markd Exp $
+$NetBSD: CHANGES-2010,v 1.4370 2010/12/26 22:33:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6203,3 +6203,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/freetype2 to 2.4.4 [adam 2010-12-26]
 	Updated multimedia/tvtime to 1.0.2 [jmcneill 2010-12-26]
 	Updated sysutils/hal to 0.5.14 [markd 2010-12-26]
+	Updated multimedia/mediatomb to 0.12.1nb1 [tron 2010-12-26]
