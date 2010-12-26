@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4360 2010/12/26 00:59:22 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.4361 2010/12/26 12:35:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6189,3 +6189,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/viewvc to 1.0.12 [wiz 2010-12-25]
 	Updated print/tex-latex-bin to 2010 [minskim 2010-12-26]
 	Updated print/tex-latex-bin-doc to 2010 [minskim 2010-12-26]
+	Updated lang/ruby18-base to 1.8.7.330 [taca 2010-12-26]
+	Updated lang/ruby19-base to 1.9.2pl136 [taca 2010-12-26]
