@@ -1,18 +1,16 @@
-$NetBSD: distinfo,v 1.45 2010/09/10 03:29:00 taca Exp $
+$NetBSD: distinfo,v 1.46 2010/12/26 12:31:20 taca Exp $
 
-SHA1 (ruby-1.8.7-p302.tar.bz2) = d93bd2f1099f3473b496cda2422b27a8da2beb00
-RMD160 (ruby-1.8.7-p302.tar.bz2) = 763bc840316cb1080d46445cdc3ca7722d576591
-Size (ruby-1.8.7-p302.tar.bz2) = 4184764 bytes
+SHA1 (ruby-1.8.7-p330.tar.bz2) = 92a7eddcfe41f8c10013cbd8122eeb88624eb335
+RMD160 (ruby-1.8.7-p330.tar.bz2) = abe8eb36618e0b3d005a883d73887686177795c2
+Size (ruby-1.8.7-p330.tar.bz2) = 4191156 bytes
 SHA1 (patch-aa) = 4c1572b5a1eb65e89a98c60540433a69cb96dd23
 SHA1 (patch-ab) = b56b6c2ba182414492c803d36433730602e0a591
 SHA1 (patch-ac) = 0119134d778bb85c58ef5bfe30d337dc76ed47e0
 SHA1 (patch-ad) = 2b194a26f3a7b9bdf3afcc0819ab239479f47c5b
-SHA1 (patch-ae) = 00a74c7bf9578868bc3c0aabc284bbaf1c1d127c
 SHA1 (patch-aw) = d3dc491da64426ff72a9417a65eb99bee2d21044
 SHA1 (patch-az) = 55c9cba404add5293168ae7fae7ae7aaf4df6550
 SHA1 (patch-bd) = 4bdf2230fd8a6ea21f28150ba5705ebd0db4af99
 SHA1 (patch-be) = 2286b14b5992686481d1d7a964c43cfc72118a45
-SHA1 (patch-cq) = db4a3927a7e0f8fdf004dd198734ce2a4dc39edd
 SHA1 (patch-dj) = 9d67b57daf6111361c478481f39ee8764a861106
 SHA1 (patch-dk) = ee85c9489f6074e6818713746691ce99ef778159
 SHA1 (patch-dl) = 0a5010f57e0f21170530fd4f940e66608c6d9630
@@ -44,11 +42,9 @@ SHA1 (patch-eo) = 41a1ff4e1037415eb50373eff64322f6e1423e27
 SHA1 (patch-ep) = f881aece8ec0836c75df3be567d57ffc3ad8bce1
 SHA1 (patch-eq) = d9dfa070d1f12de4f5f48f07d5a32d649035a657
 SHA1 (patch-er) = 666fc6c22544c7f74f7c17ffef30563effcb4df7
-SHA1 (patch-es) = 79ca11360ae94753f972a420f7c6968b07b239df
 SHA1 (patch-et) = eba90415e5279c9eb8bea67635f5f8cab5d1e7ac
 SHA1 (patch-eu) = dbf65258dcdc619d220ab39864389c4ec4c5c625
 SHA1 (patch-ev) = 6178be681ca1cf2647cab9a61c8ef989ff5b23cb
 SHA1 (patch-ew) = ddb8066a3e63b049e43c569e8d95b872eea0c247
-SHA1 (patch-ex) = 146eadb2ea1bab3c450f181da986702041912ec9
 SHA1 (patch-ga) = 73f50504baf74ee77d00dcfb5a9446bbaf122726
 SHA1 (patch-gb) = 345ad3e5df6fd9febe7b398f091662fd7c300dc4
