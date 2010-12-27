@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4372 2010/12/27 00:14:46 agc Exp $
+$NetBSD: CHANGES-2010,v 1.4373 2010/12/27 08:02:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6206,3 +6206,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/mediatomb to 0.12.1nb1 [tron 2010-12-26]
 	Updated math/maxima to 5.23.0 [asau 2010-12-26]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2010Q4 branch [agc 2010-12-26]
+	Updated net/nagios-plugins to 1.4.14nb2 [obache 2010-12-27]
