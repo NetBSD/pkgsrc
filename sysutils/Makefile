@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2010/12/19 20:30:04 plunky Exp $
+# $NetBSD: Makefile,v 1.505 2010/12/27 16:29:59 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -388,6 +388,7 @@ SUBDIR+=	wtail
 SUBDIR+=	xapply
 SUBDIR+=	xbatt
 SUBDIR+=	xbattbar
+SUBDIR+=	xc5k-firmware
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
 SUBDIR+=	xenkernel20
