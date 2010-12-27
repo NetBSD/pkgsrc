@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2010/12/23 12:36:01 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2010/12/27 23:09:22 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spidermonkey
 PKG_SUPPORTED_OPTIONS=	threads unicode
-PKG_SUGGESTED_OPTIONS=	threads
+PKG_SUGGESTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.options.mk"
 
