@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4374 2010/12/27 13:15:22 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4375 2010/12/27 15:08:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6208,3 +6208,4 @@ Changes to the packages collection and infrastructure in 2010:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2010Q4 branch [agc 2010-12-26]
 	Updated net/nagios-plugins to 1.4.14nb2 [obache 2010-12-27]
 	Updated sysutils/top to 3.6.1nb1 [obache 2010-12-27]
+	Updated graphics/sane-backends to 1.0.21nb1 [adam 2010-12-27]
