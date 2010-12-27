@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.32 2010/12/03 12:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2010/12/27 19:04:49 adam Exp $
 
 DISTNAME=	texi2html-5.0
 PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://savannah.nongnu.org/download/texi2html/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/texi2html/
+HOMEPAGE=	http://savannah.nongnu.org/projects/texi2html/
 COMMENT=	Texinfo-to-HTML direct translator
 LICENSE=	gnu-gpl-v2
 
@@ -19,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 INFO_FILES=		yes
 
 REPLACE_PERL+=	MySimple.pm
