@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/03/04 20:42:01 gls Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/12/27 02:40:23 obache Exp $
 bin/x3270
 bin/x3270if
 lib/X11/fonts/misc/3270-12.pcf.gz
@@ -18,7 +18,7 @@ lib/X11/fonts/misc/3270gt32.pcf.gz
 lib/X11/fonts/misc/3270gt32b.pcf.gz
 lib/X11/fonts/misc/3270gt8.pcf.gz
 lib/X11/fonts/misc/3270h.pcf.gz
-man/cat1/x3270.0
+${IMAKE_MAN_DIR}/x3270.${IMAKE_MAN_SUFFIX}
 man/man1/x3270-script.1
 man/man1/x3270if.1
 man/man5/ibm_hosts.5
