@@ -1,7 +1,10 @@
-$NetBSD: patch-am,v 1.1 2009/01/10 21:04:23 jmcneill Exp $
+$NetBSD: patch-am,v 1.2 2010/12/27 04:58:10 obache Exp $
 
---- libv4l1/v4l1compat.c.orig	2009-01-10 15:37:56.000000000 -0500
-+++ libv4l1/v4l1compat.c	2009-01-10 15:38:45.000000000 -0500
+* XXXX
+* `mode_t' is promoted to `int' when passed through `...'.
+
+--- libv4l1/v4l1compat.c.orig	2008-08-26 12:32:39.000000000 +0000
++++ libv4l1/v4l1compat.c
 @@ -40,6 +40,10 @@
  #define LIBV4L_PUBLIC
  #endif
@@ -13,3 +16,21 @@ $NetBSD: patch-am,v 1.1 2009/01/10 21:04:23 jmcneill Exp $
  LIBV4L_PUBLIC int open (const char *file, int oflag, ...)
  {
    int fd;
+@@ -50,7 +54,7 @@ LIBV4L_PUBLIC int open (const char *file
+     mode_t mode;
+ 
+     va_start (ap, oflag);
+-    mode = va_arg (ap, mode_t);
++    mode = (mode_t)va_arg (ap, int);
+ 
+     fd = v4l1_open(file, oflag, mode);
+ 
+@@ -71,7 +75,7 @@ LIBV4L_PUBLIC int open64 (const char *fi
+     mode_t mode;
+ 
+     va_start (ap, oflag);
+-    mode = va_arg (ap, mode_t);
++    mode = (mode_t)va_arg (ap, int);
+ 
+     fd = v4l1_open(file, oflag | O_LARGEFILE, mode);
+ 

@@ -1,7 +1,10 @@
-$NetBSD: patch-ak,v 1.1 2009/01/10 21:04:23 jmcneill Exp $
+$NetBSD: patch-ak,v 1.2 2010/12/27 04:58:10 obache Exp $
 
---- libv4l1/libv4l1.c.orig	2009-01-10 15:34:52.000000000 -0500
-+++ libv4l1/libv4l1.c	2009-01-10 15:35:47.000000000 -0500
+* XXX
+* 'mode_t' is promoted to `int' when passwd through `...'.
+
+--- libv4l1/libv4l1.c.orig	2008-08-06 08:46:06.000000000 +0000
++++ libv4l1/libv4l1.c
 @@ -44,12 +44,13 @@
  #include <stdarg.h>
  #include <stdio.h>
@@ -38,3 +41,12 @@ $NetBSD: patch-ak,v 1.1 2009/01/10 21:04:23 jmcneill Exp $
  #define V4L1_SUPPORTS_ENUMINPUT 0x01
  #define V4L1_SUPPORTS_ENUMSTD   0x02
  #define V4L1_PIX_FMT_TOUCHED    0x04
+@@ -267,7 +278,7 @@ int v4l1_open (const char *file, int ofl
+     mode_t mode;
+ 
+     va_start (ap, oflag);
+-    mode = va_arg (ap, mode_t);
++    mode = (mode_t)va_arg (ap, int);
+ 
+     fd = syscall(SYS_open, file, oflag, mode);
+ 
