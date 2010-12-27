@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2010/12/27 15:07:52 adam Exp $
+
+Avoid duplicate symbols in libepson and libepson2.
+
+--- backend/epson_usb.h.orig	2010-12-27 14:39:24.000000000 +0000
++++ backend/epson_usb.h
+@@ -3,8 +3,6 @@
+ 
+ #define SANE_EPSON_VENDOR_ID	(0x4b8)
+ 
+-extern SANE_Word sanei_epson_usb_product_ids[];
+ 
+-extern int sanei_epson_getNumberOfUSBProductIds (void);
+ 
+ #endif

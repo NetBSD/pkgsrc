@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2010/12/23 11:44:45 dsainty Exp $
+# $NetBSD: Makefile,v 1.48 2010/12/27 15:07:52 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PKGREVISION=	1
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digital cameras, frame grabbers etc.
@@ -22,11 +23,14 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/sane-${SANE_VERSION}
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		pint sm3600
+PLIST_VARS+=		mustek pint sm3600
 
 .if (${OPSYS} == "SunOS")
 # nothing
 .elif (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly")
+PLIST.sm3600=		yes
+.elif (${OPSYS} == "Darwin")
+PLIST.mustek=		yes
 PLIST.sm3600=		yes
 .else
 PLIST.pint=		yes
@@ -38,7 +42,7 @@ EGDIR=		${PREFIX}/share/examples/sane
 .for f in abaton.conf agfafocus.conf apple.conf artec.conf \
 artec_eplus48u.conf avision.conf bh.conf canon.conf canon630u.conf \
 canon_dr.conf cardscan.conf coolscan.conf coolscan2.conf coolscan3.conf \
-dc210.conf dc240.conf dc25.conf dll.conf dmc.conf \
+dc210.conf dc240.conf dc25.conf dell1600n_net.conf dll.conf dmc.conf \
 epson.conf epjitsu.conf epson2.conf fujitsu.conf \
 genesys.conf gt68xx.conf hp.conf hp3900.conf \
 hp4200.conf hp5400.conf hs2p.conf ibm.conf kodak.conf leo.conf lexmark.conf \
@@ -64,6 +68,7 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .if (${OPSYS} != "SunOS")
 . include "../../devel/libusb/buildlink3.mk"
 .endif
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
