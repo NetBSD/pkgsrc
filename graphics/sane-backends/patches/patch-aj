@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 2010/12/27 15:07:52 adam Exp $
+
+Avoid duplicate symbols in libepson and libepson2.
+
+--- backend/epson.c.orig	2010-12-27 14:36:16.000000000 +0000
++++ backend/epson.c
+@@ -333,7 +333,7 @@
+ 
+ #include  "epson.h"
+ #include  "epson_scsi.h"
+-#include  "epson_usb.h"
++#include  "epson_usb.c"
+ 
+ #define  EPSON_CONFIG_FILE      "epson.conf"
+ 

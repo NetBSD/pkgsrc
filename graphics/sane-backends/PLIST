@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/09/19 15:06:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/12/27 15:07:52 adam Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -24,6 +24,7 @@ lib/sane/libsane-coolscan3.la
 lib/sane/libsane-dc210.la
 lib/sane/libsane-dc240.la
 lib/sane/libsane-dc25.la
+lib/sane/libsane-dell1600n_net.la
 lib/sane/libsane-dll.la
 lib/sane/libsane-dmc.la
 lib/sane/libsane-epjitsu.la
@@ -51,6 +52,7 @@ lib/sane/libsane-microtek.la
 lib/sane/libsane-microtek2.la
 lib/sane/libsane-mustek.la
 lib/sane/libsane-mustek_usb.la
+${PLIST.mustek}lib/sane/libsane-mustek_usb2.la
 lib/sane/libsane-nec.la
 lib/sane/libsane-net.la
 lib/sane/libsane-niash.la
@@ -130,6 +132,7 @@ man/man5/sane-microtek.5
 man/man5/sane-microtek2.5
 man/man5/sane-mustek.5
 man/man5/sane-mustek_usb.5
+${PLIST.mustek}man/man5/sane-mustek_usb2.5
 man/man5/sane-nec.5
 man/man5/sane-net.5
 man/man5/sane-niash.5
@@ -265,6 +268,7 @@ share/examples/sane/coolscan3.conf
 share/examples/sane/dc210.conf
 share/examples/sane/dc240.conf
 share/examples/sane/dc25.conf
+share/examples/sane/dell1600n_net.conf
 share/examples/sane/dll.conf
 share/examples/sane/dmc.conf
 share/examples/sane/epjitsu.conf
