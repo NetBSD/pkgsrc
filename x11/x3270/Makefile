@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/07/25 21:23:03 gls Exp $
+# $NetBSD: Makefile,v 1.26 2010/12/27 02:40:23 obache Exp $
 
 DISTNAME=	suite3270-3.3.10ga5-src
 PKGNAME=	x3270-3.3.10ga5
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/x3270-3.3
 USE_IMAKE=	yes
+USE_TOOLS+=	bdftopcf
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
 
