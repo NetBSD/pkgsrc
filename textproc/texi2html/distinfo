@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2010/12/03 12:23:26 wiz Exp $
+$NetBSD: distinfo,v 1.10 2010/12/27 19:04:49 adam Exp $
 
-SHA1 (texi2html-5.0.tar.gz) = 79264fccd434b0f1f4398ba69c839cff669226c1
-RMD160 (texi2html-5.0.tar.gz) = e94524216b93093729db0867f14efb3b78113307
-Size (texi2html-5.0.tar.gz) = 23284843 bytes
+SHA1 (texi2html-5.0.tar.bz2) = 20072444ce814d0e74fd7e467d1506908f8c889c
+RMD160 (texi2html-5.0.tar.bz2) = 193d2ab489e61546100a57943c410deffb8d4c4b
+Size (texi2html-5.0.tar.bz2) = 15397249 bytes
 SHA1 (patch-aa) = 9f1d1cd149b9c5adee08652a5e974e21e9b93f38
 SHA1 (patch-ab) = 9da6954e03cb91fb8a51eefed9986e491d134084
 SHA1 (patch-ac) = fdccaa8679a2c80b765d89bfe5b966d7527be4fc
+SHA1 (patch-ad) = 34d5b7e10e179c65e3ef6bd7dfe4e8cd7a1a6c81
