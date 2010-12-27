@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2010/10/09 13:02:27 obache Exp $
+# $NetBSD: Makefile,v 1.37 2010/12/27 13:15:05 obache Exp $
 
 DISTNAME=	top-3.6.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.groupsys.com/pub/top/
 
