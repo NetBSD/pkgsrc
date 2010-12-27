@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/11/15 13:38:31 adam Exp $
+# $NetBSD: Makefile,v 1.32 2010/12/27 07:53:50 asau Exp $
 
 DISTNAME=	gdal-1.7.3
 PKGNAME=	gdal-lib-1.7.3
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
