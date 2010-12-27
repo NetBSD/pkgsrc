@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.1 2010/12/27 15:07:52 adam Exp $
+
+Avoid duplicate symbols in libepson and libepson2.
+
+--- backend/epson_usb.c.orig	2010-12-27 14:37:39.000000000 +0000
++++ backend/epson_usb.c
+@@ -3,7 +3,7 @@
+ #include "epson_usb.h"
+ 
+ 
+-SANE_Word sanei_epson_usb_product_ids[] = {
++static SANE_Word sanei_epson_usb_product_ids[] = {
+   0x101, /* GT-7000U, Perfection 636U */
+   0x103, /* GT-6600U, Perfection 610 */
+   0x104, /* GT-7600U, GT-7600UF, Perfection 1200U, Perfection 1200U PHOTO */
+@@ -79,7 +79,7 @@ SANE_Word sanei_epson_usb_product_ids[] 
+ 				   in the config file as "usb <vendor> <product>" */
+ };
+ 
+-int
++static int
+ sanei_epson_getNumberOfUSBProductIds (void)
+ {
+   return sizeof (sanei_epson_usb_product_ids) / sizeof (SANE_Word);
