@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/12/27 19:04:50 adam Exp $
+
+--- test/Makefile.in.orig	2010-12-27 18:55:02.000000000 +0000
++++ test/Makefile.in
+@@ -705,7 +705,7 @@ all-checks: check long-check
+ all-local:
+ 	for dir in $(htmlxref_cnf_tests); do \
+ 		$(mkdir_p) $$dir/.texinfo/ ; \
+-		${INSTALL_DATA} $(srcdir)/$$dir/htmlxref.cnf $$dir/.texinfo/ ; \
++		cp -p $(srcdir)/$$dir/htmlxref.cnf $$dir/.texinfo/ ; \
+ 	done
+ 
+ clean-local:
