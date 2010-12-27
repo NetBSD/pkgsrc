@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2010/01/17 12:02:33 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/12/27 08:01:47 obache Exp $
 #
 
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/nagiosplug/
 COMMENT=	Nagios plugins
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../net/nagios-plugins/Makefile.common"
 
@@ -20,7 +22,8 @@ CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 		--without-smbclient-command --without-snmpget-command \
 		--without-snmpgetnext-command --without-fping-command
 
-SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${REAL_ROOT_USER} ${NAGIOS_GROUP} 4550
+SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_dhcp ${SETUID_ROOT_PERMS}
 
 PLIST_VARS+=	linux
 .if ${OPSYS} == "Linux"
@@ -40,6 +43,10 @@ LIBS.SunOS+=	-lm
 
 .if !exists(/usr/bin/ssh)
 DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
+.endif
+
+.if ${OPSYS} == "DragonFly" && (!exists(/usr/bin/dig) || !exists(/usr/bin/nslookup))
+DEPENDS+=	bind-[0-9]*:../../net/bind96
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
