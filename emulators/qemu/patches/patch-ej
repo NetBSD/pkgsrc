@@ -1,4 +1,4 @@
-$NetBSD: patch-ej,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+$NetBSD: patch-ej,v 1.2 2010/12/27 12:33:32 adam Exp $
 
 1) bswap_NN() variants are not available in CONFIG_MACHINE_BSWAP_H case
    (fixed in upstream master but not in stable-0.13 branch)
@@ -16,6 +16,14 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
 
 --- ui/vnc-enc-tight.c.orig	2010-07-28 10:55:42.000000000 +0900
 +++ ui/vnc-enc-tight.c	2010-08-08 17:14:17.000000000 +0900
+@@ -35,6 +35,7 @@
+ #include <stdio.h>
+ #include <jpeglib.h>
+ #endif
++#include <sys/types.h>
+ 
+ #include "qemu-common.h"
+ 
 @@ -209,7 +209,7 @@
                       d < w - x - VNC_TIGHT_DETECT_SUBROW_WIDTH; d++) {  \
                  pix = ((uint##bpp##_t *)buf)[(y+d)*w+x+d];              \
