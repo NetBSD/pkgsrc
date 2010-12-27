@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/27 16:28:45 jmcneill Exp $
+libdata/firmware/xc5k/dvb-fe-xc5000-1.6.114.fw

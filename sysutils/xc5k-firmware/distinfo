@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/27 16:28:45 jmcneill Exp $
+
+SHA1 (dvb-fe-xc5000-1.6.114.fw) = 026472c87ca752e58e2768c94003428222d151f3
+RMD160 (dvb-fe-xc5000-1.6.114.fw) = 3377b660b94da972493b1c709219de1dd00763b0
+Size (dvb-fe-xc5000-1.6.114.fw) = 12401 bytes
