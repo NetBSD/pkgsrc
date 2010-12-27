@@ -1,7 +1,10 @@
-$NetBSD: patch-ad,v 1.3 2008/09/13 17:59:27 jmcneill Exp $
+$NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
 
---- libv4l2/libv4l2.c.orig	2008-09-03 06:23:46.000000000 -0400
-+++ libv4l2/libv4l2.c	2008-09-13 13:50:47.000000000 -0400
+* XXX
+* `mode_t' is promoted to `int' when passwd through `...'.
+
+--- libv4l2/libv4l2.c.orig	2008-09-03 10:23:46.000000000 +0000
++++ libv4l2/libv4l2.c
 @@ -59,7 +59,11 @@
  #include <stdarg.h>
  #include <stdio.h>
@@ -25,7 +28,7 @@ $NetBSD: patch-ad,v 1.3 2008/09/13 17:59:27 jmcneill Exp $
  /* Note these flags are stored together with the flags passed to v4l2_fd_open()
     in v4l2_dev_info's flags member, so care should be taken that the do not
     use the same bits! */
-@@ -154,7 +162,7 @@
+@@ -154,7 +162,7 @@ static int v4l2_map_buffers(int index)
        break;
      }
  
@@ -34,7 +37,16 @@ $NetBSD: patch-ad,v 1.3 2008/09/13 17:59:27 jmcneill Exp $
        (size_t)buf.length, PROT_READ|PROT_WRITE, MAP_SHARED, devices[index].fd,
        (__off_t)(buf.m.offset >> MMAP2_PAGE_SHIFT));
      if (devices[index].frame_pointers[i] == MAP_FAILED) {
-@@ -871,7 +879,7 @@
+@@ -408,7 +416,7 @@ int v4l2_open (const char *file, int ofl
+     mode_t mode;
+ 
+     va_start (ap, oflag);
+-    mode = va_arg (ap, mode_t);
++    mode = (mode_t)va_arg (ap, int);
+ 
+     fd = syscall(SYS_open, file, oflag, mode);
+ 
+@@ -871,7 +879,7 @@ int v4l2_ioctl (int fd, unsigned long in
  	   but we need the buffer _now_ to write our converted data
  	   to it! */
  	if (devices[index].convert_mmap_buf == MAP_FAILED) {
@@ -43,7 +55,7 @@ $NetBSD: patch-ad,v 1.3 2008/09/13 17:59:27 jmcneill Exp $
  						   (size_t)(
  						     devices[index].no_frames *
  						     V4L2_FRAME_BUF_SIZE),
-@@ -995,7 +1003,7 @@
+@@ -995,7 +1003,7 @@ void *v4l2_mmap(void *start, size_t leng
        return MAP_FAILED;
      }
  
@@ -52,7 +64,7 @@ $NetBSD: patch-ad,v 1.3 2008/09/13 17:59:27 jmcneill Exp $
  			   (__off_t)(offset >> MMAP2_PAGE_SHIFT));
    }
  
-@@ -1012,7 +1020,7 @@
+@@ -1012,7 +1020,7 @@ void *v4l2_mmap(void *start, size_t leng
    }
  
    if (devices[index].convert_mmap_buf == MAP_FAILED) {
