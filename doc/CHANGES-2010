@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4380 2010/12/28 14:56:10 taca Exp $
+$NetBSD: CHANGES-2010,v 1.4381 2010/12/28 15:35:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6214,3 +6214,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/py-django to 1.2.4 [joerg 2010-12-28]
 	Updated www/typo3 to 4.4.6 [taca 2010-12-28]
 	Updated www/contao29-translations to 20101224 [taca 2010-12-28]
+	Updated www/fengoffice to 1.7.3.1nb1 [taca 2010-12-28]
