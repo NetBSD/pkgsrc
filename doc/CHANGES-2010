@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4376 2010/12/27 16:31:12 jmcneill Exp $
+$NetBSD: CHANGES-2010,v 1.4377 2010/12/28 08:25:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6210,3 +6210,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/top to 3.6.1nb1 [obache 2010-12-27]
 	Updated graphics/sane-backends to 1.0.21nb1 [adam 2010-12-27]
 	Added sysutils/xc5k-firmware version 1.6.114 [jmcneill 2010-12-27]
+	Updated chat/tirc to 1.2nb3 [obache 2010-12-28]
