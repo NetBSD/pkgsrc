@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2010/12/28 15:34:38 taca Exp $
+
+Prevent logging error: Undefined variable: user_id in ...
+
+--- application/helpers/application.php.orig	2010-12-01 12:33:32.000000000 +0000
++++ application/helpers/application.php
+@@ -867,6 +867,7 @@ function render_object_latest_activity($
+ 	
+ 	$latest_logs = ApplicationLogs::getObjectLogs($object, false, false, 3, 0);
+ 	
++	tpl_assign('user_id', get_id());
+ 	tpl_assign('logs', $latest_logs);
+ 	return tpl_fetch(get_template_path('activity_log', 'latest_activity'));
+ 	
