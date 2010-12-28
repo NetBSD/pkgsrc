@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2010/12/28 15:34:38 taca Exp $
+
+Prevent logging error: Undefined variable: smtp_username: smtp_username ...
+
+--- application/models/notifier/Notifier.class.php.orig	2010-12-01 12:33:32.000000000 +0000
++++ application/models/notifier/Notifier.class.php
+@@ -747,6 +747,7 @@ class Notifier {
+ 			$smtp_server = config_option('smtp_server');
+ 			$smtp_port = config_option('smtp_port', 25);
+ 			$smtp_secure_connection = config_option('smtp_secure_connection', self::SMTP_SECURE_CONNECTION_NO);
++			$smtp_username = null;
+ 			$smtp_authenticate = config_option('smtp_authenticate', false);
+ 			if($smtp_authenticate) {
+ 				$smtp_username = config_option('smtp_username');
