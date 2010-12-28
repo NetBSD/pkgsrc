@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2010/02/14 20:24:11 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/12/28 08:25:20 obache Exp $
 #
 
 DISTNAME=	tirc-1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.mayn.de/pub/really_old_stuff/unix/network/irc/tirc/
 
