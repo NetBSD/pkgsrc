@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/09/13 16:51:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/12/28 13:54:52 joerg Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -818,7 +818,6 @@ ${PYSITELIB}/django/contrib/admin/templates/admin/pagination.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/prepopulated_fields_js.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/search_form.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/submit_line.html
-${PYSITELIB}/django/contrib/admin/templates/admin/template_validator.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/logged_out.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/password_change_done.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/password_change_form.html
@@ -857,9 +856,6 @@ ${PYSITELIB}/django/contrib/admin/views/decorators.pyo
 ${PYSITELIB}/django/contrib/admin/views/main.py
 ${PYSITELIB}/django/contrib/admin/views/main.pyc
 ${PYSITELIB}/django/contrib/admin/views/main.pyo
-${PYSITELIB}/django/contrib/admin/views/template.py
-${PYSITELIB}/django/contrib/admin/views/template.pyc
-${PYSITELIB}/django/contrib/admin/views/template.pyo
 ${PYSITELIB}/django/contrib/admin/widgets.py
 ${PYSITELIB}/django/contrib/admin/widgets.pyc
 ${PYSITELIB}/django/contrib/admin/widgets.pyo
@@ -961,7 +957,9 @@ ${PYSITELIB}/django/contrib/auth/tests/models.pyo
 ${PYSITELIB}/django/contrib/auth/tests/remote_user.py
 ${PYSITELIB}/django/contrib/auth/tests/remote_user.pyc
 ${PYSITELIB}/django/contrib/auth/tests/remote_user.pyo
+${PYSITELIB}/django/contrib/auth/tests/templates/registration/logged_out.html
 ${PYSITELIB}/django/contrib/auth/tests/templates/registration/login.html
+${PYSITELIB}/django/contrib/auth/tests/templates/registration/password_change_form.html
 ${PYSITELIB}/django/contrib/auth/tests/templates/registration/password_reset_complete.html
 ${PYSITELIB}/django/contrib/auth/tests/templates/registration/password_reset_confirm.html
 ${PYSITELIB}/django/contrib/auth/tests/templates/registration/password_reset_done.html
@@ -1414,6 +1412,9 @@ ${PYSITELIB}/django/contrib/gis/geometry/backend/geos.pyo
 ${PYSITELIB}/django/contrib/gis/geometry/regex.py
 ${PYSITELIB}/django/contrib/gis/geometry/regex.pyc
 ${PYSITELIB}/django/contrib/gis/geometry/regex.pyo
+${PYSITELIB}/django/contrib/gis/geometry/test_data.py
+${PYSITELIB}/django/contrib/gis/geometry/test_data.pyc
+${PYSITELIB}/django/contrib/gis/geometry/test_data.pyo
 ${PYSITELIB}/django/contrib/gis/geos/__init__.py
 ${PYSITELIB}/django/contrib/gis/geos/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/geos/__init__.pyo
@@ -1576,6 +1577,7 @@ ${PYSITELIB}/django/contrib/gis/tests/data/cities/cities.shx
 ${PYSITELIB}/django/contrib/gis/tests/data/counties/counties.dbf
 ${PYSITELIB}/django/contrib/gis/tests/data/counties/counties.shp
 ${PYSITELIB}/django/contrib/gis/tests/data/counties/counties.shx
+${PYSITELIB}/django/contrib/gis/tests/data/geometries.json.gz
 ${PYSITELIB}/django/contrib/gis/tests/data/interstates/interstates.dbf
 ${PYSITELIB}/django/contrib/gis/tests/data/interstates/interstates.prj
 ${PYSITELIB}/django/contrib/gis/tests/data/interstates/interstates.shp
@@ -1593,9 +1595,6 @@ ${PYSITELIB}/django/contrib/gis/tests/data/test_vrt/test_vrt.vrt
 ${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.py
 ${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.pyo
-${PYSITELIB}/django/contrib/gis/tests/distapp/data.py
-${PYSITELIB}/django/contrib/gis/tests/distapp/data.pyc
-${PYSITELIB}/django/contrib/gis/tests/distapp/data.pyo
 ${PYSITELIB}/django/contrib/gis/tests/distapp/models.py
 ${PYSITELIB}/django/contrib/gis/tests/distapp/models.pyc
 ${PYSITELIB}/django/contrib/gis/tests/distapp/models.pyo
@@ -1620,7 +1619,7 @@ ${PYSITELIB}/django/contrib/gis/tests/geoapp/__init__.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/feeds.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/feeds.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/feeds.pyo
-${PYSITELIB}/django/contrib/gis/tests/geoapp/fixtures/initial_data.json
+${PYSITELIB}/django/contrib/gis/tests/geoapp/fixtures/initial_data.json.gz
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/models.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/models.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/models.pyo
@@ -1652,9 +1651,6 @@ ${PYSITELIB}/django/contrib/gis/tests/geogapp/models.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geogapp/tests.py
 ${PYSITELIB}/django/contrib/gis/tests/geogapp/tests.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geogapp/tests.pyo
-${PYSITELIB}/django/contrib/gis/tests/geometries.py
-${PYSITELIB}/django/contrib/gis/tests/geometries.pyc
-${PYSITELIB}/django/contrib/gis/tests/geometries.pyo
 ${PYSITELIB}/django/contrib/gis/tests/layermap/__init__.py
 ${PYSITELIB}/django/contrib/gis/tests/layermap/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/tests/layermap/__init__.pyo
@@ -1685,9 +1681,6 @@ ${PYSITELIB}/django/contrib/gis/tests/test_measure.pyo
 ${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.py
 ${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.pyc
 ${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.pyo
-${PYSITELIB}/django/contrib/gis/tests/urls.py
-${PYSITELIB}/django/contrib/gis/tests/urls.pyc
-${PYSITELIB}/django/contrib/gis/tests/urls.pyo
 ${PYSITELIB}/django/contrib/gis/tests/utils.py
 ${PYSITELIB}/django/contrib/gis/tests/utils.pyc
 ${PYSITELIB}/django/contrib/gis/tests/utils.pyo
