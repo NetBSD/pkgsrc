@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2005/12/15 23:02:33 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2010/12/28 08:25:20 obache Exp $
 
---- screen.c.orig	2005-12-15 22:53:30.000000000 +0000
+--- screen.c.orig	1999-02-22 16:52:34 -0500
 +++ screen.c
-@@ -36,6 +36,7 @@ static char rcsid[] = "$Id: screen.c,v 1
+@@ -36,6 +36,7 @@
  #elif defined(HAVE_LIBGEN_H)
  #include <libgen.h>
  #endif
@@ -10,7 +10,25 @@ $NetBSD: patch-ad,v 1.1 2005/12/15 23:02:33 joerg Exp $
  
  #include "compat.h"
  #include "tty.h"
-@@ -109,7 +110,6 @@ extern char	*myname, nick[], *srvnm;
+@@ -66,7 +67,7 @@
+ struct ircpage {
+ 	struct ircwin	*ipg_iwa;
+ 	struct ircwin	*ipg_iwc;
+-	CIRCLEQ_ENTRY(ircpage) ipg_entries;
++	TAILQ_ENTRY(ircpage) ipg_entries;
+ 	int		ipg_upd;
+ }; 
+ 
+@@ -99,7 +100,7 @@
+ static int	dodisplay;	/* if 0, window updates and clock won't be
+ 				 * displayed (for example when in opt editor */
+ 
+-CIRCLEQ_HEAD(, ircpage)	pages_head;
++TAILQ_HEAD(, ircpage)	pages_head = TAILQ_HEAD_INITIALIZER(pages_head);
+ 
+ #define	IW_USED		1
+ #define IW_VISIBLE	2
+@@ -109,7 +110,6 @@
  extern void	(*othercmd) __P((char *));
  extern int	on_irc;
  extern int	umd;
@@ -18,3 +36,167 @@ $NetBSD: patch-ad,v 1.1 2005/12/15 23:02:33 joerg Exp $
  extern int	is_away;
  
  char		*prompt;
+@@ -167,7 +167,7 @@
+ 	tty_gotoxy(0, 0);
+ 	tty_flush();
+ 
+-	CIRCLEQ_INIT(&pages_head);
++	TAILQ_INIT(&pages_head);
+ 	cpage = NULL;
+ 	cpageno = 0;
+ 	otherpage = 0;
+@@ -307,8 +307,8 @@
+ 	}
+ 
+ 	/* Else try the other pages */
+-	for (ipg = pages_head.cqh_first; ipg != (struct ircpage *)&pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next) {
++	for (ipg = pages_head.tqh_first; ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next) {
+ 	    ipg_switchtopg(ipg);
+ 
+ 	    /*
+@@ -656,9 +656,9 @@
+ 	struct channel *ch;
+ 	struct ircpage *ipg, *savepg = cpage;
+ 
+-	for (ipg = pages_head.cqh_first;
+-	    ipg != (struct ircpage *) &pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next) {
++	for (ipg = pages_head.tqh_first;
++	    ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next) {
+ 	    ipg_switchtopg(ipg);
+ 	    /*
+ 	     * Traverse the window list. For each window, iterate through
+@@ -987,8 +987,8 @@
+ {
+ 	struct ircpage *ipg, *savepg = cpage;
+ 
+-	for (ipg = pages_head.cqh_first; ipg != (struct ircpage *)&pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next) {
++	for (ipg = pages_head.tqh_first; ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next) {
+ 		ipg_switchtopg(ipg);
+ 		equalwin();
+ 	}
+@@ -1099,8 +1099,8 @@
+ 	strcpy(t, cname);
+ 	h = elf_hash(irc_strupr(t));
+ 
+-	for (ipg = pages_head.cqh_first; ipg != (struct ircpage *) &pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next) {
++	for (ipg = pages_head.tqh_first; ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next) {
+ 		ipg_switchtopg(ipg);
+ 
+ 		w = iwa;
+@@ -2163,8 +2163,8 @@
+ 	struct ircwin *iw;
+ 	struct ircpage *ipg;
+ 
+-	for (ipg = pages_head.cqh_first; ipg != (struct ircpage *) &pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next)
++	for (ipg = pages_head.tqh_first; ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next)
+ 		for (iw = ipg->ipg_iwa; iw != NULL; iw = iw->iw_next)
+ 			reformat_backscroll(iw, t_columns);
+ }
+@@ -2197,7 +2197,7 @@
+ 	ipg->ipg_iwa = iwa;
+ 	ipg->ipg_iwc = iwc;
+ 	ipg->ipg_upd = 0;
+-	CIRCLEQ_INSERT_TAIL(&pages_head, ipg, ipg_entries);
++	TAILQ_INSERT_TAIL(&pages_head, ipg, ipg_entries);
+ 	otherpage = cpageno;
+ 	cpageno = numpages++;
+ 	set_prompt(NULL);
+@@ -2214,11 +2214,9 @@
+ 	int newpg;
+ 
+ 	if (iwa == NULL || (iwa->iw_next == NULL && iwa->iw_ch == NULL)) {
+-		if (ipg->ipg_entries.cqe_prev !=
+-		    (struct ircpage *) &pages_head)
++		if (*(ipg->ipg_entries.tqe_prev) != NULL)
+ 			newpg = cpageno - 1;
+-		else if (ipg->ipg_entries.cqe_next !=
+-		    (struct ircpage *) &pages_head)
++		else if (ipg->ipg_entries.tqe_next != NULL)
+ 			newpg = cpageno + 1;
+ 		else {
+ 			iw_printf(COLI_TEXT, "%sCannot remove the only page\n",
+@@ -2235,7 +2233,7 @@
+ 		}
+ 
+ 		ipg_switchto(newpg, 1);
+-		CIRCLEQ_REMOVE(&pages_head, ipg, ipg_entries);
++		TAILQ_REMOVE(&pages_head, ipg, ipg_entries);
+ 		free(ipg);
+ 		numpages--;
+ 		set_prompt(NULL);
+@@ -2256,11 +2254,11 @@
+ 	struct ircpage *ipg;
+ 	int pns = pageno;
+ 
+-	for (ipg = pages_head.cqh_first;
+-	    ipg != (struct ircpage *) &pages_head && pageno > 0;
+-	    ipg = ipg->ipg_entries.cqe_next, pageno--)
++	for (ipg = pages_head.tqh_first;
++	    ipg != NULL && pageno > 0;
++	    ipg = ipg->ipg_entries.tqe_next, pageno--)
+ 		;
+-	if (pageno == 0 && ipg != (struct ircpage *) &pages_head) {
++	if (pageno == 0 && ipg != NULL) {
+ 		ipg_switchtopg(ipg);
+ 		set_prompt(NULL);
+ 		otherpage = cpageno;
+@@ -2312,9 +2310,9 @@
+ 
+ 	pline[0] = 0;
+ 
+-	for (i = 0, ipg = pages_head.cqh_first; i < numpages &&
+-	    ipg != (struct ircpage *) &pages_head;
+-	    i++, ipg = ipg->ipg_entries.cqe_next) {
++	for (i = 0, ipg = pages_head.tqh_first; i < numpages &&
++	    ipg != NULL;
++	    i++, ipg = ipg->ipg_entries.tqe_next) {
+ 		if (ipg != cpage)
+ 			sprintf(t, "-%d-", i);
+ 		else
+@@ -2352,9 +2350,9 @@
+ 	struct ircpage *ipg;
+ 	int i, n = 1;
+ 	
+-	for (i = 0, ipg = pages_head.cqh_first;
+-	    ipg != (struct ircpage *) &pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next, i++)
++	for (i = 0, ipg = pages_head.tqh_first;
++	    ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next, i++)
+ 		if (ipg->ipg_upd)
+ 			pglist[n++] = i + '0';
+ 	if (n > 1) {
+@@ -2378,9 +2376,9 @@
+ 	struct ircpage *ipg;
+ 	int i;
+ 	
+-	for (i = 0, ipg = pages_head.cqh_first;
+-	    ipg != (struct ircpage *) &pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next, i++)
++	for (i = 0, ipg = pages_head.tqh_first;
++	    ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next, i++)
+ 		if (ipg->ipg_upd)
+ 			pupd |= 1 << i;
+ 	if (force_update)
+@@ -2434,8 +2432,8 @@
+ 	struct ircwin *w;
+ 	struct channel *ch;
+ 
+-	for (ipg = pages_head.cqh_first; ipg != (struct ircpage *)&pages_head;
+-	    ipg = ipg->ipg_entries.cqe_next)
++	for (ipg = pages_head.tqh_first; ipg != NULL;
++	    ipg = ipg->ipg_entries.tqe_next)
+ 	    	for (w = iwa; w != NULL && w->iw_flags & IW_USED;
+ 		    w = w->iw_next)
+ 			for (ch = w->iw_ch; ch != NULL; ch = ch->ch_wnext)
