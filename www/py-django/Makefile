@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/12/28 13:54:52 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2010/12/28 19:13:06 joerg Exp $
 
 DJANGOVERS=	1.2.4
 DISTNAME=	Django-${DJANGOVERS}
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
 
 .include "options.mk"
 
-pre-configure2:
+pre-configure:
 .if empty(PKG_OPTIONS:Moracle)
 	rm -r ${WRKSRC}/django/db/backends/oracle
 .endif
