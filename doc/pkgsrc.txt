@@ -48,8 +48,7 @@ I. The pkgsrc user's guide
         2.1. Getting pkgsrc for the first time
 
             2.1.1. As tar file
-            2.1.2. Via SUP
-            2.1.3. Via anonymous CVS
+            2.1.2. Via anonymous CVS
 
         2.2. Keeping pkgsrc up-to-date
 
@@ -149,15 +148,16 @@ I. The pkgsrc user's guide
         9.7. How to fetch files from behind a firewall
         9.8. How do I tell make fetch to do passive FTP?
         9.9. How to fetch all distfiles at once
-        9.10. What does Don't know how to make /usr/share/tmac/tmac.andoc mean?
-        9.11. What does Could not find bsd.own.mk mean?
+        9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc"
+            mean?
+        9.11. What does "Could not find bsd.own.mk" mean?
         9.12. Using 'sudo' with pkgsrc
         9.13. How do I change the location of configuration files?
         9.14. Automated security checks
         9.15. Why do some packages ignore my CFLAGS?
         9.16. A package does not build. What shall I do?
-        9.17. What does Makefile appears to contain unresolved cvs/rcs/???
-            merge conflicts mean?
+        9.17. What does "Makefile appears to contain unresolved cvs/rcs/???
+            merge conflicts" mean?
 
 II. The pkgsrc developer's guide
 
@@ -304,7 +304,7 @@ II. The pkgsrc developer's guide
         19.1. General operation
 
             19.1.1. Portability of packages
-            19.1.2. How to pull in user-settable variables from ???
+            19.1.2. How to pull in user-settable variables from mk.conf
             19.1.3. User interaction
             19.1.4. Handling licenses
             19.1.5. Restricted packages
@@ -341,7 +341,7 @@ II. The pkgsrc developer's guide
 
             19.5.1. Compiling C and C++ code conditionally
             19.5.2. How to handle compiler bugs
-            19.5.3. Undefined reference to ...
+            19.5.3. Undefined reference to "..."
             19.5.4. Running out of memory
 
         19.6. Fixing problems in the install phase
@@ -584,6 +584,8 @@ Table 1.1. Platforms supported by pkgsrc
 |OSF/1                                        |     Nov 2004     |
 |---------------------------------------------+------------------|
 |HP-UX                                        |     Apr 2007     |
+|---------------------------------------------+------------------|
+|Haiku                                        |     Sep 2010     |
 +----------------------------------------------------------------+
 
 
@@ -689,8 +691,7 @@ Table of Contents
     2.1. Getting pkgsrc for the first time
 
         2.1.1. As tar file
-        2.1.2. Via SUP
-        2.1.3. Via anonymous CVS
+        2.1.2. Via anonymous CVS
 
     2.2. Keeping pkgsrc up-to-date
 
@@ -790,15 +791,15 @@ Table of Contents
     9.7. How to fetch files from behind a firewall
     9.8. How do I tell make fetch to do passive FTP?
     9.9. How to fetch all distfiles at once
-    9.10. What does Don't know how to make /usr/share/tmac/tmac.andoc mean?
-    9.11. What does Could not find bsd.own.mk mean?
+    9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+    9.11. What does "Could not find bsd.own.mk" mean?
     9.12. Using 'sudo' with pkgsrc
     9.13. How do I change the location of configuration files?
     9.14. Automated security checks
     9.15. Why do some packages ignore my CFLAGS?
     9.16. A package does not build. What shall I do?
-    9.17. What does Makefile appears to contain unresolved cvs/rcs/??? merge
-        conflicts mean?
+    9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+        conflicts" mean?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
 
@@ -807,8 +808,7 @@ Table of Contents
 2.1. Getting pkgsrc for the first time
 
     2.1.1. As tar file
-    2.1.2. Via SUP
-    2.1.3. Via anonymous CVS
+    2.1.2. Via anonymous CVS
 
 2.2. Keeping pkgsrc up-to-date
 
@@ -832,7 +832,7 @@ of the stable branches are built from the year and the quarter, for example
 2009Q1.
 
 The second step is to decide how you want to download pkgsrc. You can get it as
-a tar file, via SUP, or via CVS. All three ways are described here.
+a tar file or via CVS. Both ways are described here.
 
 2.1.1. As tar file
 
@@ -864,49 +864,11 @@ To download pkgsrc-current, run:
 
 $ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz
 
-2.1.2. Via SUP
+2.1.2. Via anonymous CVS
 
-As an alternative to the tar file, you can get pkgsrc via the Software Update
-Protocol, SUP. To do so, make sure your supfile has a line
+To fetch a specific pkgsrc stable branch, run:
 
-release=pkgsrc
-
-in it, see the examples in /usr/share/examples/supfiles, and that the /usr/
-pkgsrc directory exists. Then, simply run:
-
-$ sup -v /path/to/your/supfile.
-
-2.1.3. Via anonymous CVS
-
-To do an initial (full) checkout of pkgsrc, you first have to set some
-environment variables. For the C-Shell, type:
-
-% setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot
-% setenv CVS_RSH ssh
-
-Or, the same for the bourne shell:
-
-$ export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
-$ export CVS_RSH="ssh"
-
-By default, CVS doesn't do things like most people would expect it to do. But
-there is a way to convince CVS, by creating a file called .cvsrc in your home
-directory and saving the following lines to it. This file will save you lots of
-headache and some bug reports, so we strongly recommend it. You can find an
-explanation of this file in the CVS documentation.
-
-# recommended CVS configuration file from the pkgsrc guide
-checkout -P
-update -dP
-release -d
-diff -upN
-cvs -q -z3
-rdiff -u
-
-To fetch a specific pkgsrc stable branch from scratch, run:
-
-$ cd /usr
-$ cvs checkout -r pkgsrc-20xxQy -P pkgsrc
+$ cd /usr && cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-20xxQy -P pkgsrc
 
 Where pkgsrc-20xxQy is the stable branch to be checked out, for example,
 "pkgsrc-2009Q1"
@@ -916,8 +878,35 @@ package source will be stored under /usr/pkgsrc/.
 
 To fetch the pkgsrc current branch, run:
 
-$ cd /usr
-$ cvs checkout -P pkgsrc
+$ cd /usr && cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
+
+Refer to list of available CVS mirrors to choose faster one.
+
+If you get error messages from rsh, you need to set CVS_RSH variable. E.g.:
+
+$ cd /usr && env CVS_RSH=ssh cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
+
+Refer to documentation on your command shell how to set CVS_RSH=ssh
+permanently. For Bourne shells, you can set it in your .profile or better
+globally in /etc/profile:
+
+# set CVS remote shell command
+CVS_RSH=ssh
+export CVS_RSH
+
+By default, CVS doesn't do things like most people would expect it to do. But
+there is a way to convince CVS, by creating a file called .cvsrc in your home
+directory and saving the following lines to it. This file will save you lots of
+headache and some bug reports, so we strongly recommend it. You can find an
+explanation of this file in the CVS documentation.
+
+# recommended CVS configuration file from the pkgsrc guide
+cvs -q -z3
+checkout -P
+update -dP
+diff -upN
+rdiff -u
+release -d
 
 2.2. Keeping pkgsrc up-to-date
 
@@ -1060,8 +1049,10 @@ officially supported. (The main difference in 3.0/3.1 is lack of pthreads, but
 other parts of libc may also be lacking.)
 
 Services for Unix Applications (aka SUA) is an integrated component of Windows
-Server 2003 R2 and Windows Vista. As of this writing, SUA's Interix 5.x
-subsystem has not yet been tested with pkgsrc.
+Server 2003 R2 (5.2), Windows Vista and Windows Server 2008 (6.0), Windows 7
+and Windows Server 2008 R2 (6.1). As of this writing, SUA's Interix 6.0 (32bit)
+subsystem has been tested. 6.0 (64bit) and 6.1 (both 32bit and 64bit) may work.
+Interix 5.x subsystem has not yet been tested with pkgsrc.
 
 3.3.3.1. When installing Interix/SFU
 
@@ -1492,11 +1483,7 @@ packages).
 In the directory from the last section, there is a subdirectory called All,
 which contains all the binary packages that are available for the platform,
 excluding those that may not be distributed via FTP or CDROM (depending on
-which medium you are using). There may be an extra directory for packages
-that have vulnerabilities and therefore are considered insecure to install
-without checking the implications first. This method has been replaced by
-setting CHECK_VULNERABILITIES=yes in pkg_install.conf so pkg_add will
-complain about vulnerabilities, instead.
+which medium you are using).
 
 To install packages directly from an FTP or HTTP server, run the following
 commands in a Bourne-compatible shell (be sure to su to root first):
@@ -1518,6 +1505,10 @@ After these preparations, installing a package is very easy:
 
 Note that any prerequisite packages needed to run the package in question will
 be installed, too, assuming they are present where you install from.
+
+Adding packages might install vulnerable packages. Thus you should run
+pkg_admin audit regularly, especially after installing new packages, and verify
+that the vulnerabilities are acceptable for your configuration.
 
 After you've installed packages, be sure to have /usr/pkg/bin and /usr/pkg/sbin
 in your PATH so you can actually start the just installed program.
@@ -1967,8 +1958,7 @@ CFLAGS+=        -your -flags
 
 Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. You may want to take a look at the devel/cpuflags
-package if you're interested in optimization for the current CPU. Setting
-USE_CPUFLAGS to yes in mk.conf will cause pkgsrc to automatically use cpuflags.
+package if you're interested in optimization specifically for the current CPU.
 
 5.4.3. Additional flags to the linker (LDFLAGS)
 
@@ -2232,9 +2222,8 @@ Some other options are scattered in the pkgsrc infrastructure:
 
   * ALLOW_VULNERABLE_PACKAGES should be set to yes. The purpose of the bulk
     builds is creating binary packages, no matter if they are vulnerable or
-    not. Leaving this variable unset would prevent the bulk build system
-    from even trying to build them, so possible building errors would not
-    show up.
+    not. Leaving this variable unset would prevent the bulk build system from
+    even trying to build them, so possible building errors would not show up.
 
   * CHECK_FILES (pkgsrc/mk/check/check-files.mk) can be set to "yes" to check
     that the installed set of files matches the PLIST.
@@ -2413,7 +2402,7 @@ src/etc, be sure the following items are present and properly configured:
 10. Make /usr/sandbox/usr/pkgsrc/packages and .../distfiles point somewhere
     appropriate. NFS- and/or nullfs-mounts may come in handy!
 
-11. Edit mk.conf, see Section 7.3.1.2, "???".
+11. Edit mk.conf, see Section 7.3.1.2, "mk.conf".
 
 12. Adjust mk/bulk/build.conf to suit your needs.
 
@@ -2778,15 +2767,15 @@ Table of Contents
 9.7. How to fetch files from behind a firewall
 9.8. How do I tell make fetch to do passive FTP?
 9.9. How to fetch all distfiles at once
-9.10. What does Don't know how to make /usr/share/tmac/tmac.andoc mean?
-9.11. What does Could not find bsd.own.mk mean?
+9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+9.11. What does "Could not find bsd.own.mk" mean?
 9.12. Using 'sudo' with pkgsrc
 9.13. How do I change the location of configuration files?
 9.14. Automated security checks
 9.15. Why do some packages ignore my CFLAGS?
 9.16. A package does not build. What shall I do?
-9.17. What does Makefile appears to contain unresolved cvs/rcs/??? merge
-    conflicts mean?
+9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+    conflicts" mean?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
 didn't find a better place for in the previous chapters, and it contains items
@@ -2858,8 +2847,7 @@ Utilities used by pkgsrc (not automatically installed):
   * pkgtools/xpkgwedge: Put X11 packages someplace else (enabled by default).
 
   * devel/cpuflags: Determine the best compiler flags to optimise code for your
-    current CPU and compiler. Setting USE_CPUFLAGS to yes in mk.conf will cause
-    pkgsrc to automatically use cpuflags.
+    current CPU and compiler.
 
 Utilities for keeping track of installed packages, being up to date, etc:
 
@@ -3077,9 +3065,9 @@ following two tools (installed as part of the pkgtools/pkg_install package):
     ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities
 
  2. pkg_admin audit, an easy way to audit the current machine, checking each
-    vulnerability which is known. If a vulnerable package is installed, it will
-    be shown by output to stdout, including a description of the type of
-    vulnerability, and a URL containing more information.
+    known vulnerability. If a vulnerable package is installed, it will be shown
+    by output to stdout, including a description of the type of vulnerability,
+    and a URL containing more information.
 
 Use of these tools is strongly recommended! After "pkg_install" is installed,
 please read the package's message, which you can get by running pkg_info -D
@@ -3283,7 +3271,7 @@ Table of Contents
     19.1. General operation
 
         19.1.1. Portability of packages
-        19.1.2. How to pull in user-settable variables from ???
+        19.1.2. How to pull in user-settable variables from mk.conf
         19.1.3. User interaction
         19.1.4. Handling licenses
         19.1.5. Restricted packages
@@ -3319,7 +3307,7 @@ Table of Contents
 
         19.5.1. Compiling C and C++ code conditionally
         19.5.2. How to handle compiler bugs
-        19.5.3. Undefined reference to ...
+        19.5.3. Undefined reference to "..."
         19.5.4. Running out of memory
 
     19.6. Fixing problems in the install phase
@@ -3848,9 +3836,9 @@ patches directory (see Section 11.3, "patches/*").
 To regenerate the distinfo file, use the make makedistinfo or make mdi command.
 
 Some packages have different sets of distfiles depending on the platform, for
-example www/navigator). These are kept in the same distinfo file and care
-should be taken when upgrading such a package to ensure distfile information is
-not lost.
+example lang/openjdk7. These are kept in the same distinfo file and care should
+be taken when upgrading such a package to ensure distfile information is not
+lost.
 
 11.3. patches/*
 
@@ -6386,7 +6374,7 @@ Table of Contents
 19.1. General operation
 
     19.1.1. Portability of packages
-    19.1.2. How to pull in user-settable variables from ???
+    19.1.2. How to pull in user-settable variables from mk.conf
     19.1.3. User interaction
     19.1.4. Handling licenses
     19.1.5. Restricted packages
@@ -6422,7 +6410,7 @@ Table of Contents
 
     19.5.1. Compiling C and C++ code conditionally
     19.5.2. How to handle compiler bugs
-    19.5.3. Undefined reference to ...
+    19.5.3. Undefined reference to "..."
     19.5.4. Running out of memory
 
 19.6. Fixing problems in the install phase
