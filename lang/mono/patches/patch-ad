@@ -1,6 +1,23 @@
-$NetBSD: patch-ad,v 1.20 2010/12/01 16:49:13 kefren Exp $
---- mono/utils/mono-sigcontext.h.orig	2010-11-12 12:24:41.000000000 +0200
-+++ mono/utils/mono-sigcontext.h	2010-12-01 18:02:44.000000000 +0200
+$NetBSD: patch-ad,v 1.21 2010/12/29 05:41:20 obache Exp $
+--- mono/utils/mono-sigcontext.h.orig	2010-11-12 10:24:41.000000000 +0000
++++ mono/utils/mono-sigcontext.h
+@@ -8,14 +8,14 @@
+ 
+ #if defined(__i386__)
+ 
+-#if defined(__FreeBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
+ #include <ucontext.h>
+ #endif
+ #if defined(__APPLE__)
+ #include <AvailabilityMacros.h>
+ #endif
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 	#define UCONTEXT_REG_EAX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.mc_eax)
+ 	#define UCONTEXT_REG_EBX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.mc_ebx)
+ 	#define UCONTEXT_REG_ECX(ctx) (((ucontext_t*)(ctx))->uc_mcontext.mc_ecx)
 @@ -101,6 +101,20 @@
  	#define UCONTEXT_REG_R15(ctx) (((ucontext_t*)(ctx))->uc_mcontext->__ss.__r15)
  #elif defined(__FreeBSD__)
