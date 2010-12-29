@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.11 2010/10/16 04:32:18 kefren Exp $
+$NetBSD: patch-ah,v 1.12 2010/12/29 05:41:20 obache Exp $
 --- mono/utils/mono-semaphore.c.orig	2010-10-07 23:41:21.000000000 +0300
 +++ mono/utils/mono-semaphore.c	2010-10-07 23:44:31.000000000 +0300
 @@ -22,7 +22,7 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-ah,v 1.11 2010/10/16 04:32:18 kefren Exp $
  #    define TIMESPEC mach_timespec_t
  #    define WAIT_BLOCK(a,b) semaphore_timedwait (*(a), *(b))
 -#  elif defined(__OpenBSD__)
-+#  elif (defined(__OpenBSD__) || defined(__NetBSD__))
++#  elif (defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__))
  #    define TIMESPEC struct timespec
  #    define WAIT_BLOCK(a) sem_trywait(a)
  #  else
@@ -14,7 +14,7 @@ $NetBSD: patch-ah,v 1.11 2010/10/16 04:32:18 kefren Exp $
  int
  mono_sem_timedwait (MonoSemType *sem, guint32 timeout_ms, gboolean alertable)
  {
-+#if (defined(__NetBSD__) || defined(__OpenBSD__))
++#if (defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
 +	uint32_t timeout = timeout_ms;
 +#else
  	TIMESPEC ts, copy;
@@ -33,7 +33,7 @@ $NetBSD: patch-ah,v 1.11 2010/10/16 04:32:18 kefren Exp $
  	if (timeout_ms == (guint32) 0xFFFFFFFF)
  		return mono_sem_wait (sem, alertable);
  
-+#if (defined(__NetBSD__) || defined(__OpenBSD__))
++#if (defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
 +	if (timeout < 50)
 +		timeout += 50;
 +	do {
