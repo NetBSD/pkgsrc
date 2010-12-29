@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.74 2010/11/17 14:24:34 obache Exp $
+# $NetBSD: java-vm.mk,v 1.75 2010/12/29 22:29:32 wiz Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -110,8 +110,8 @@ _PKG_JVM_DEFAULT?=	kaffe
 
 # These lists are copied from the JVM package Makefiles.
 _ONLY_FOR_PLATFORMS.jdk15= \
-	DragonFly-*-i386 \
-	NetBSD-[2-9].*-i386
+	DragonFly-*-* \
+	NetBSD-[2-9].*-i386 NetBSD-[4-9].*-x86_64
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
 _ONLY_FOR_PLATFORMS.sun-jdk6= \
