@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9989 2010/12/28 11:46:04 wiz Exp $
+$NetBSD: TODO,v 1.9990 2010/12/29 00:52:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -991,7 +991,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysql55-server-5.5.8 (MySQL 5.5.8)
 	o nagios-3.2.3
 	o nap-1.5.3
-	o nautilus-2.32.2 [GNOME 2.32]
+	o nautilus-2.32.2.1 [GNOME 2.32]
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o navi2ch-1.8.1
 	o nawk-20071023
@@ -1090,6 +1090,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o podofo-0.8.4
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.16.0
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1307,6 +1308,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-3.07
 	o uriparser-0.7.5
 	o userppp-030706
+	o vala-0.10.2
 	o valgrind-3.6.0
 	o vera-1.17
 	o veusz-1.10
