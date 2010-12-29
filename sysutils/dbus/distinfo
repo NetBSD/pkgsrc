@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.35 2010/02/21 19:32:25 tez Exp $
+$NetBSD: distinfo,v 1.36 2010/12/29 10:49:21 tron Exp $
 
 SHA1 (dbus-1.2.4.6permissive.tar.gz) = f71219624885fe2ec1990bb8bdd599e184dd5774
 RMD160 (dbus-1.2.4.6permissive.tar.gz) = 05d1c5fae8ae763a9beb8c7d6f390f3ff54e9c30
 Size (dbus-1.2.4.6permissive.tar.gz) = 1575270 bytes
+SHA1 (patch-CVE-2010-4352-1) = bc83f7a2b56558b6514de8de2d6319ad84f84fce
+SHA1 (patch-CVE-2010-4352-2) = 1427c2c4aea6cd21f5d19aa8fad90b87282b232b
+SHA1 (patch-CVE-2010-4352-3) = d5598dab11bad66c2f586e418a8b409ac5fc67d5
+SHA1 (patch-CVE-2010-4352-4) = 82a43bc19bf4ef73d6e2909dd1c948798585135d
 SHA1 (patch-aa) = fd7cc2e11e15e13885e882e8de51e17af8a63d70
 SHA1 (patch-ab) = b2761914edfe2c7666c5412abf79c5d7b87a2006
 SHA1 (patch-ac) = 63aab0ffac02a9cb85a80e31bbb1234534db378b
