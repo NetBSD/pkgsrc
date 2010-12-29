@@ -1,7 +1,7 @@
-$NetBSD: patch-na,v 1.7 2010/12/27 22:26:17 tron Exp $
+$NetBSD: patch-na,v 1.8 2010/12/29 00:12:15 tron Exp $
 
 --- configure.in.orig	2009-08-24 13:42:29.000000000 +0100
-+++ configure.in	2010-12-27 22:18:55.000000000 +0000
++++ configure.in	2010-12-29 00:07:13.000000000 +0000
 @@ -484,7 +484,7 @@
  LIBUSB20_LIBS=""
  AC_ARG_WITH([backend],
@@ -38,20 +38,26 @@ $NetBSD: patch-na,v 1.7 2010/12/27 22:26:17 tron Exp $
          PKG_CHECK_MODULES(VOLUME_ID, [$volume_id_module])
  	AC_SUBST(VOLUME_ID_CFLAGS)
  	AC_SUBST(VOLUME_ID_LIBS)
-@@ -720,8 +724,12 @@
+@@ -718,14 +722,13 @@
+ 
+ # blkid (util-linux-ng)
  case "$host" in
- *-*-freebsd*)
-         ;;
-+*-*-netbsd*)
-+        ;;
- *-*-solaris*)
- 	;;
-+*-*-darwin*)
-+	;;
- *)
+-*-*-freebsd*)
+-        ;;
+-*-*-solaris*)
+-	;;
+-*)
++*linux*)
  	PKG_CHECK_MODULES(BLKID, [$blkid_module])
  	AC_SUBST(BLKID_CFLAGS)
-@@ -1086,6 +1094,9 @@
+ 	AC_SUBST(BLKID_LIBS)
++	;;
++*)
++	;;
+ esac
+ 
+ # OS specific libs
+@@ -1086,6 +1089,9 @@
  hald/solaris/Makefile
  hald/solaris/probing/Makefile
  hald/solaris/addons/Makefile
@@ -61,7 +67,7 @@ $NetBSD: patch-na,v 1.7 2010/12/27 22:26:17 tron Exp $
  hald/freebsd/Makefile
  hald/freebsd/probing/Makefile
  hald/freebsd/libprobe/Makefile
-@@ -1096,6 +1107,7 @@
+@@ -1096,6 +1102,7 @@
  tools/Makefile
  tools/freebsd/Makefile
  tools/linux/Makefile
