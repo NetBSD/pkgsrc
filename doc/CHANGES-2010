@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4382 2010/12/29 10:49:35 tron Exp $
+$NetBSD: CHANGES-2010,v 1.4383 2010/12/29 12:25:43 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6216,3 +6216,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20101224 [taca 2010-12-28]
 	Updated www/fengoffice to 1.7.3.1nb1 [taca 2010-12-28]
 	Updated sysutils/dbus to 1.2.4.6nb2 [tron 2010-12-29]
+	Updated www/wiliki to 0.6.2 [uebayasi 2010-12-29]

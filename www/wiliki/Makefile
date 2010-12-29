@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:14 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/29 12:24:46 uebayasi Exp $
 #
 
-DISTNAME=	WiLiKi-0.5.3
-PKGNAME=	wiliki-0.5.3
-PKGREVISION=	1
+DISTNAME=	WiLiKi-0.6.2
+PKGNAME=	wiliki-0.6.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wiliki/}
 EXTRACT_SUFX=	.tgz
@@ -14,7 +13,8 @@ COMMENT=	WikiWiki clone written in Scheme
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	Gauche>=0.8.3nb1:../../lang/gauche
+# XXX Use >=0.9 to work-around `gauche-config --sitelibdir` change!
+DEPENDS+=	Gauche>=0.9:../../lang/gauche
 
 GNU_CONFIGURE=	yes
 
