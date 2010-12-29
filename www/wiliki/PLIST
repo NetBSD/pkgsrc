@@ -1,17 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:41 joerg Exp $
-share/gauche/site/lib/.packages/WiLiKi.gpd
-share/gauche/site/lib/wiliki.scm
-share/gauche/site/lib/wiliki/db.scm
-share/gauche/site/lib/wiliki/edit.scm
-share/gauche/site/lib/wiliki/format.scm
-share/gauche/site/lib/wiliki/history.scm
-share/gauche/site/lib/wiliki/log.scm
-share/gauche/site/lib/wiliki/macro.scm
-share/gauche/site/lib/wiliki/mcatalog.scm
-share/gauche/site/lib/wiliki/msgs.jp
-share/gauche/site/lib/wiliki/pasttime.scm
-share/gauche/site/lib/wiliki/rss.scm
-share/gauche/site/lib/wiliki/rssmix.scm
-share/gauche/site/lib/wiliki/scr-macros.scm
-share/gauche/site/lib/wiliki/util.scm
-share/gauche/site/lib/wiliki/version.scm
+@comment $NetBSD: PLIST,v 1.5 2010/12/29 12:24:46 uebayasi Exp $
+share/gauche-0.9/site/lib/.packages/WiLiKi.gpd
+share/gauche-0.9/site/lib/wiliki.scm
+share/gauche-0.9/site/lib/wiliki/auth.scm
+share/gauche-0.9/site/lib/wiliki/core.scm
+share/gauche-0.9/site/lib/wiliki/db.scm
+share/gauche-0.9/site/lib/wiliki/edit.scm
+share/gauche-0.9/site/lib/wiliki/format.scm
+share/gauche-0.9/site/lib/wiliki/history.scm
+share/gauche-0.9/site/lib/wiliki/log.scm
+share/gauche-0.9/site/lib/wiliki/macro.scm
+share/gauche-0.9/site/lib/wiliki/page.scm
+share/gauche-0.9/site/lib/wiliki/parse.scm
+share/gauche-0.9/site/lib/wiliki/pasttime.scm
+share/gauche-0.9/site/lib/wiliki/rss.scm
+share/gauche-0.9/site/lib/wiliki/rssmix.scm
+share/gauche-0.9/site/lib/wiliki/scr-macros.scm
+share/gauche-0.9/site/lib/wiliki/util.scm
+share/gauche-0.9/site/lib/wiliki/version.scm
+share/locale/ja/LC_MESSAGES/WiLiKi.mo
