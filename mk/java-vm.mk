@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.75 2010/12/29 22:29:32 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.76 2010/12/29 22:34:37 wiz Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: kaffe openjdk7 openjdk7-bin
-#		sun-jdk6 jdk15
+#		sun-jdk6 jdk15 jdk16
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -71,7 +71,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # This is a list of all of the JDKs that may be used.
 #
 _PKG_JVMS.7=		openjdk7 openjdk7-bin
-_PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6
+_PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6 jdk16
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5}
 _PKG_JVMS.yes=		${_PKG_JVMS.1.4} kaffe
@@ -112,6 +112,8 @@ _PKG_JVM_DEFAULT?=	kaffe
 _ONLY_FOR_PLATFORMS.jdk15= \
 	DragonFly-*-* \
 	NetBSD-[2-9].*-i386 NetBSD-[4-9].*-x86_64
+_ONLY_FOR_PLATFORMS.jdk16= \
+	NetBSD-[2-9].*-i386 NetBSD-[4-9].*-x86_64
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
 _ONLY_FOR_PLATFORMS.sun-jdk6= \
@@ -141,6 +143,7 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 _JAVA_PKGBASE.jdk=		jdk
 _JAVA_PKGBASE.jdk14=		jdk14
 _JAVA_PKGBASE.jdk15=		jdk15
+_JAVA_PKGBASE.jdk16=		jdk16
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk7=		openjdk7
 _JAVA_PKGBASE.openjdk7-bin=	openjdk7-bin
@@ -201,6 +204,7 @@ _PKG_JVM=		"none"
 .endif
 
 BUILDLINK_API_DEPENDS.jdk15?=		jdk15-[0-9]*
+BUILDLINK_API_DEPENDS.jdk16?=		jdk16-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk7-bin?=	openjdk7-bin-[0-9]*
@@ -208,6 +212,7 @@ BUILDLINK_API_DEPENDS.sun-jdk6?=	sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
 
 _JRE.jdk15=		jdk15
+_JRE.jdk16=		jdk16
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
 _JRE.openjdk7-bin=	openjdk7-bin
@@ -219,6 +224,10 @@ _JAVA_BASE_CLASSES=	classes.zip
 _JDK_PKGSRCDIR=		../../wip/jdk15
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.5.0
+.elif ${_PKG_JVM} == "jdk16"
+_JDK_PKGSRCDIR=		../../wip/jdk16
+_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.6.0
 .elif ${_PKG_JVM} == "kaffe"
 _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
