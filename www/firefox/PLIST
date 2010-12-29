@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2010/03/16 15:57:03 tnn Exp $
+@comment $NetBSD: PLIST,v 1.41 2010/12/29 22:38:49 tnn Exp $
 bin/firefox
 lib/firefox/.autoreg
 lib/firefox/LICENSE
@@ -25,7 +25,6 @@ lib/firefox/components/components.list
 lib/firefox/components/fuelApplication.js
 lib/firefox/components/libbrowsercomps.so
 lib/firefox/components/libbrowserdirprovider.so
-${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/nsBrowserContentHandler.js
 lib/firefox/components/nsBrowserGlue.js
 lib/firefox/components/nsMicrosummaryService.js
