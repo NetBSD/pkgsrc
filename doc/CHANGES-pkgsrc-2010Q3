@@ -128,3 +128,5 @@ Pullup ticket #3310 - requested by taca
 pkgsrc/www/horde security fix
 Pullup ticket #3311 - requested by taca
 pkgsrc/www/typo3 security fix
+Pullup ticket #3313 - requested by tron
+Security patch for "sysutils/dbus"
