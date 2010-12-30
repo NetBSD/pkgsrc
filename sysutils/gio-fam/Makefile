@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/17 14:35:32 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/30 14:36:10 obache Exp $
 #
 
 .include "../../devel/glib2/Makefile.common"
@@ -12,6 +12,8 @@ NOT_FOR_PLATFORM=	HPUX-*-* OSF1-*-*
 
 FAM_ACCEPTED=		fam gamin
 FAM_SERVER=		no
+
+USE_TOOLS+=		msgfmt
 
 CONFIGURE_ARGS+=	--enable-fam
 
