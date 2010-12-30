@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/05/09 20:53:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/12/30 14:12:45 obache Exp $
 bin/opensearch-discover
 bin/opensearch-genquery
 bin/surfraw
@@ -70,7 +70,7 @@ lib/surfraw/macports
 lib/surfraw/mathworld
 lib/surfraw/mininova
 lib/surfraw/musicbrainz
-lib/surfraw/${LOWER_OPSYS}
+lib/surfraw/netbsd
 lib/surfraw/ntrs
 lib/surfraw/openbsd
 lib/surfraw/opensearch
