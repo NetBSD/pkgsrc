@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/05/19 08:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/12/30 07:41:27 obache Exp $
 
 DISTNAME=	iozone3_308
 PKGNAME=	iozone-3.308
@@ -23,7 +23,7 @@ USE_TOOLS+=		tee
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "Linux"
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly"
 BUILD_TARGET=		${LOWER_OPSYS}
 .elif (${OPSYS} == "SunOS")
 BUILD_TARGET=		Solaris
