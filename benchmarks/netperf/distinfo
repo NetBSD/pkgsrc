@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2010/05/06 11:14:01 adam Exp $
+$NetBSD: distinfo,v 1.6 2010/12/30 08:05:18 obache Exp $
 
 SHA1 (netperf-2.4.5.tar.bz2) = ccfe3d11ce520c75dc394277b1bea49f353e032d
 RMD160 (netperf-2.4.5.tar.bz2) = 5791ebfcc798b968dd85e591bb96ade925208294
 Size (netperf-2.4.5.tar.bz2) = 960609 bytes
 SHA1 (patch-aa) = a910b966c414f3a7cd5b0d898726966e47969522
+SHA1 (patch-ab) = 0c6114063e3bf0bf0875013aa55a03f7533ff9a6
 SHA1 (patch-ah) = 6ca99c4ce567ff2a36f49426e604c7bdfd31f02d
 SHA1 (patch-ak) = 98228d85034878ff3f0c25bebcc80a6006a2f9f4
