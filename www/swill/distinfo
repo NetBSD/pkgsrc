@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/07/16 13:17:45 zafer Exp $
+$NetBSD: distinfo,v 1.4 2010/12/30 13:15:14 obache Exp $
 
 SHA1 (swill-0.3.tgz) = 765a15c22ef527a811c41c3a2fd25199c979e298
 RMD160 (swill-0.3.tgz) = 72134ac3213b6e8df3cf5c7d3d73a2378e9f5659
 Size (swill-0.3.tgz) = 438745 bytes
+SHA1 (patch-aa) = a2bdde8349e57f6d6440ce4ed02a246353dc6d93
+SHA1 (patch-ab) = c855874bfb3df83a8218ff099e52cede9ebd4478

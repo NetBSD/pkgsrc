@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 2010/12/30 13:15:14 obache Exp $
+
+* DragonFly support.
+
+--- configure.orig	2007-07-10 02:31:37.000000000 +0000
++++ configure
+@@ -3474,6 +3474,7 @@ then
+ 	dgux*) LDSHARED="ld -G";;
+ 	FreeBSD*/3*) LDSHARED="gcc -shared";;
+ 	FreeBSD*|OpenBSD*) LDSHARED="ld -Bshareable";;
++	DragonFly*) LDSHARED="cc -shared";;
+ 	NetBSD*)
+ 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
+ 		then
+@@ -3514,7 +3515,7 @@ then
+ 		 fi;;
+ 	Linux*) CCSHARED="-fpic";;
+ 	FreeBSD*|OpenBSD*) CCSHARED="-fpic";;
+-	NetBSD*) CCSHARED="-fPIC";;
++	NetBSD*|DragonFly*) CCSHARED="-fPIC";;
+ 	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+ 	IRIX*/6*)  case $CC in
+ 		   *gcc*) CCSHARED="-shared";;
