@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2010/12/22 09:36:35 tron Exp $
+# $NetBSD: Makefile,v 1.55 2010/12/30 00:39:15 tron Exp $
 
-DISTNAME=	rpm2pkg-3.1.7
+DISTNAME=	rpm2pkg-3.1.8
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,9 +19,9 @@ USE_LANGUAGES=	c99
 USE_TOOLS+=	xzcat:run
 WRKSRC=		${WRKDIR}
 
-CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} ${BUILDLINK_CPPFLAGS.rpm} \
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} \
 		${BUILDLINK_CPPFLAGS.zlib} -DXZCAT=\"${TOOLS_PATH.xzcat:Q}\"
-LIBS+=		-lintl -lz -lbz2
+LIBS+=		-lz -lbz2
 
 .include "../../mk/compiler.mk"
 
@@ -30,7 +30,6 @@ CFLAGS+=	-Wall -Wshadow -Wsign-compare -Wunused-value
 .endif
 
 CFLAGS+=	-g
-LDFLAGS+=	-g
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
@@ -43,8 +42,6 @@ do-install:
 	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
