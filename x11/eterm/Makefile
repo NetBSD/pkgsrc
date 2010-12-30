@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.62 2010/06/13 22:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2010/12/30 13:53:35 obache Exp $
 
 DISTNAME=	Eterm-0.9.5
 PKGNAME=	${DISTNAME:S/^E/e/}
 PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eterm/}
-DISTFILES=	${DEFAULT_DISTFILES} ${DEFAULT_DISTFILES:S/Eterm-/Eterm-bg-/}
+DISTFILES=	${DEFAULT_DISTFILES} ${PIXMAP_FILES}
+PIXMAP_FILES=	${DISTNAME:S/Eterm-/Eterm-bg-/}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eterm.org/
@@ -20,6 +21,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-multi-charset=unicode
 CONFIGURE_ARGS+=	--enable-auto-encoding
+
+EXTRACT_DIR.${PIXMAP_FILES}=	${WRKSRC}
 
 PKG_SYSCONFSUBDIR=	Eterm
 OWN_DIRS=		${PKG_SYSCONFDIR}/themes
@@ -38,9 +41,6 @@ SPECIAL_PERMS=		${PREFIX}/bin/Eterm ${SETUID_ROOT_PERMS}
 .endif
 
 .include "options.mk"
-
-pre-extract:
-	${LN} -sf ${WRKSRC}/bg ${WRKDIR}/bg
 
 .include "../../devel/libast/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
