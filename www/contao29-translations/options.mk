@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2010/12/28 14:55:32 taca Exp $
+# $NetBSD: options.mk,v 1.26 2010/12/30 05:41:30 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.contao-translations
 
@@ -38,7 +38,7 @@ CT_TRANSLATIONS.ro=	Contao-Romanian-v10.zip		# 2009/07/02
 CT_TRANSLATIONS.ru=	Contao-Russian-v36.zip		# 2010/12/04
 CT_TRANSLATIONS.sk=	TYPOlight-Slovak-v8.zip		# 2009/08/15
 CT_TRANSLATIONS.sl=	Contao-Slovenian-v7.zip		# 2010/07/15
-CT_TRANSLATIONS.sq=	Contao-Albanian-v5.zip		# 2010/12/14
+CT_TRANSLATIONS.sq=	Contao-Albanian-v6.zip		# 2010/12/28
 CT_TRANSLATIONS.sr=	TYPOlight-Serbian-v7.zip	# 2010/05/10
 CT_TRANSLATIONS.sv=	Contao-Swedish-v54.zip		# 2010/12/02
 CT_TRANSLATIONS.th=	TYPOlight-Thai-v2.zip		# 2008/11/23
