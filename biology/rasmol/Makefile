@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/07/08 15:26:26 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2010/12/30 08:33:47 obache Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
@@ -38,6 +38,9 @@ pre-configure:
 	${LN} -sf ${WRKDIR}/${DISTNAME}/data ${WRKSRC}
 	cd ${WRKSRC} && ${SED} "s#@@PREFIX@@#${PREFIX}#" rasmol.h > \
 		rasmol.h.new && ${MV} rasmol.h.new rasmol.h
+
+post-extract:
+	cd ${WRKSRC} && ${RM} -rf RCS doc/RCS src/RCS src/msc/RCS
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/NOTICE ${DESTDIR}${PREFIX}/share/doc/rasmol
