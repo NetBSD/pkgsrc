@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2010/12/30 13:15:14 obache Exp $
+
+* need to include <sys/socket.h> for socket(2) and related definitions.
+
+--- Source/SWILL/sock.c.orig	2008-04-10 03:55:01.000000000 +0000
++++ Source/SWILL/sock.c
+@@ -24,6 +24,7 @@ static char cvsroot[] = "$Header: /cvsro
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <signal.h>
++#include <sys/socket.h>
+ 
+ #define comm_errno errno
+ #define closesocket(s) close(s)
