@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/09/26 07:09:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/12/31 10:47:07 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
@@ -133,12 +133,14 @@ ${RUBY_VENDORLIB}/rabbit/renderer/display/drawing-area.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/gesture.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/gl.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/graffiti.rb
+${RUBY_VENDORLIB}/rabbit/renderer/display/hook-handler.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/info.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/key-handler.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/magnifier.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/mask.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/menu.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/progress.rb
+${RUBY_VENDORLIB}/rabbit/renderer/display/scroll-handler.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/search.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/spotlight.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/engine.rb
@@ -228,6 +230,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/cozmixng/cozmixng.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/day-white/day-white.rb
 ${RUBY_VENDORLIB}/rabbit/theme/day-white/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/debian/debian.rb
+${RUBY_VENDORLIB}/rabbit/theme/debian/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-block-quote/default-block-quote.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-block-quote/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-description/default-description.rb
@@ -321,6 +325,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/rabbit-title-logo/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit-title-logo/rabbit-title-logo.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit/rabbit.rb
+${RUBY_VENDORLIB}/rabbit/theme/ranguba/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/ranguba/ranguba.rb
 ${RUBY_VENDORLIB}/rabbit/theme/red-frame/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/red-frame/red-frame.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rotate-zoom-effect/property.rb
@@ -397,6 +403,14 @@ share/rabbit/image/cozmixng-images/cozmixchu.png
 share/rabbit/image/cozmixng-images/cozmixng-images.rb
 share/rabbit/image/cozmixng-images/powered-by-cozmixng.png
 share/rabbit/image/cozmixng-images/property.rb
+share/rabbit/image/debian-images/bottom.png
+share/rabbit/image/debian-images/debian-images.rb
+share/rabbit/image/debian-images/debian-logo-pink.png
+share/rabbit/image/debian-images/debian-logo.png
+share/rabbit/image/debian-images/debian-whirl.png
+share/rabbit/image/debian-images/item1.png
+share/rabbit/image/debian-images/property.rb
+share/rabbit/image/debian-images/top.png
 share/rabbit/image/rabbit-images/blue-item.png
 share/rabbit/image/rabbit-images/close-quote-blue.png
 share/rabbit/image/rabbit-images/close-quote-brown.png
@@ -436,6 +450,14 @@ share/rabbit/image/rabbit-images/tanu-kitaro.png
 share/rabbit/image/rabbit-images/usa-taro.png
 share/rabbit/image/rabbit-images/usagi.png
 share/rabbit/image/rabbit-images/yukiusa.png
+share/rabbit/image/ranguba-images/ranguba-bar.png
+share/rabbit/image/ranguba-images/ranguba-bar.svg
+share/rabbit/image/ranguba-images/ranguba-images.rb
+share/rabbit/image/ranguba-images/ranguba-item-mark-mini.png
+share/rabbit/image/ranguba-images/ranguba-item-mark.png
+share/rabbit/image/ranguba-images/ranguba-item-mark.svg
+share/rabbit/image/ranguba-images/ranguba-mark.png
+share/rabbit/image/ranguba-images/ranguba-mark.svg
 share/rabbit/image/ruby-images/property.rb
 share/rabbit/image/ruby-images/ruby-images.rb
 share/rabbit/image/ruby-images/ruby-pink-circle-icon.png
