@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/04/15 12:57:49 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/31 14:36:07 obache Exp $
 
 --- configure.orig	2009-03-05 01:37:31.000000000 +0000
 +++ configure
@@ -14,3 +14,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/04/15 12:57:49 obache Exp $
  		;;
  	*)
  		O=o
+@@ -25928,7 +25928,7 @@ case "$host" in
+ 			PORT_NONBLOCK="#define PORT_NONBLOCK O_NDELAY"
+ 			PORT_DIR="port/cygwin";;
+ 	*-darwin*)	PORT_DIR="port/darwin";;
+-	*-dragonfly*)	PORT_DIR="port/dragonfly";;
++	*-dragonfly*)	PORT_DIR="port/freebsd";;
+ 	*-osf*)		PORT_DIR="port/decunix";;
+ 	*-freebsd*)	PORT_DIR="port/freebsd";;
+ 	*-hpux9*)	PORT_DIR="port/hpux9";;
