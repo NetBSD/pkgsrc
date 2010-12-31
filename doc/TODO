@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9990 2010/12/29 00:52:27 wiz Exp $
+$NetBSD: TODO,v 1.9991 2010/12/31 10:24:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -784,6 +784,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inputproto-2.0.1
 	o inspircd-1.2.1
 	o instiki-0.13
+	o ipa-2.0.9 [pkg/44300]
 	o ircservices-5.1.21
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
