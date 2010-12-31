@@ -130,3 +130,5 @@ Pullup ticket #3311 - requested by taca
 pkgsrc/www/typo3 security fix
 Pullup ticket #3313 - requested by tron
 Security patch for "sysutils/dbus"
+Pullup ticket #3314 - requested by morr
+wordpress critical security update.
