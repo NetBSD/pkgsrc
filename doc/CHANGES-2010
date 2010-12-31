@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4387 2010/12/31 10:47:40 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4388 2010/12/31 21:57:29 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -6221,3 +6221,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/contao29-translations to 20101228 [taca 2010-12-30]
 	Updated www/wordpress to 3.0.4 [morr 2010-12-30]
 	Updated graphics/rabbit to 0.9.2 [obache 2010-12-31]
+	Updated print/latex-mk to 2.1 [dmcmahill 2010-12-31]
