@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2010/02/11 22:28:44 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2011/01/01 05:09:17 obache Exp $
 
 DISTNAME=	openh323-v1_15_2-src
 PKGNAME=	openh323-1.15.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	-tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openh323.org/
 COMMENT=	Open H.323 library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/openh323
 USE_LANGUAGES=		c c++
@@ -33,7 +31,7 @@ post-patch:
 	cd ${WRKSRC}/include; ${LN} -s . openh323
 
 # override the openh323 install - it uses cp -d, and isn't libtool-aware
-do-install:
+post-install:
 	for f in ${WRKSRC}/include/*.h ; do \
 		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/include/openh323; \
 	done
