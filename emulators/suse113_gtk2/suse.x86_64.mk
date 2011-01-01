@@ -1,4 +1,5 @@
-# $NetBSD: suse.x86_64.mk,v 1.1.1.1 2010/09/24 01:27:58 chs Exp $
+# $NetBSD: suse.x86_64.mk,v 1.2 2011/01/01 03:48:54 obache Exp $
 
 # Suffix on the GTK+-2.x/Pango binaries used in the INSTALL script
-BINSUFFIX=	-64
+ABISUFFIX=	64
+BINSUFFIX=	-${ABISUFFIX}
