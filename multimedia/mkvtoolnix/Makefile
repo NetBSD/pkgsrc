@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/01/01 13:19:37 obache Exp $
+# $NetBSD: Makefile,v 1.29 2011/01/01 13:39:14 obache Exp $
 
 DISTNAME=	mkvtoolnix-4.3.0
 PKGREVISION=	2
@@ -43,11 +43,13 @@ CONFIGURE_ARGS+=	--disable-gui
 CONFIGURE_ARGS+=	--disable-wxwidgets
 .endif
 
+INSTALL_ENV+=	SHELL=${SH}
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ruby drake
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ruby drake install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ruby drake install
 
 BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../lang/ruby/buildlink3.mk"
