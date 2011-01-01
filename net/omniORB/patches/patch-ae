@@ -1,8 +1,24 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2011/01/01 05:43:28 obache Exp $
 
---- mk/beforeauto.mk.in.orig	2007-05-11 12:17:21.000000000 +0200
+--- mk/beforeauto.mk.in.orig	2009-06-18 08:45:32.000000000 +0000
 +++ mk/beforeauto.mk.in
-@@ -1030,7 +1030,11 @@ endif
+@@ -1062,10 +1062,27 @@ OMNITHREAD_LIB += -pthread
+ endif
+ 
+ ###################
++ifdef DragonFly
++IMPORT_CPPFLAGS += -D__dragonfly__
++
++CLINKOPTIONS    = $(CDEBUGFLAGS) $(COPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++CXXLINKOPTIONS  = $(CXXDEBUGFLAGS) $(CXXOPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++SharedLibraryPlatformLinkFlagsTemplate = $(CXXLINKOPTIONS) -shared -Wl,-soname,$$soname
++
++OMNITHREAD_CPPFLAGS = -D_REENTRANT -D_THREAD_SAFE
++OMNITHREAD_POSIX_CPPFLAGS = -DUsePthread -DPthreadDraftVersion=10
++OMNITHREAD_LIB += -pthread
++endif
++
++###################
  ifdef NetBSD
  IMPORT_CPPFLAGS += -D__netbsd__
  
