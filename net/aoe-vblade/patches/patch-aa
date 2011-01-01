@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2007/03/31 13:36:27 obache Exp $
+$NetBSD: patch-aa,v 1.3 2011/01/01 12:42:28 obache Exp $
 
 --- freebsd.c.orig	2006-11-13 18:57:34.000000000 +0000
 +++ freebsd.c
@@ -15,9 +15,13 @@ $NetBSD: patch-aa,v 1.2 2007/03/31 13:36:27 obache Exp $
  #include <net/bpf.h>
  #include <net/if.h>
  #include <net/if_arp.h>
-@@ -27,6 +32,9 @@
+@@ -26,7 +31,13 @@
+ #include <net/if.h>
  #include <sys/stat.h>
  #include <sys/disklabel.h>
++#ifdef __DragonFly__
++#include <sys/disklabel32.h>
++#endif
  #include <sys/select.h>
 +#ifdef __NetBSD__
 +#include <sys/param.h>
@@ -25,3 +29,22 @@ $NetBSD: patch-aa,v 1.2 2007/03/31 13:36:27 obache Exp $
  #include <sys/sysctl.h>
  
  #include <fcntl.h>
+@@ -302,10 +313,18 @@ getsize(int fd)
+ 	vlong size;
+ 	struct stat s;
+ 	int n;
++#ifdef __DragonFly__
++	struct disklabel32 lab;
++#else
+ 	struct disklabel lab;
++#endif
+ 
+ 	// Try getting disklabel from block dev
++#ifdef __DragonFly__
++	if ((n = ioctl(fd, DIOCGDINFO32, lab)) != -1) {  
++#else
+ 	if ((n = ioctl(fd, DIOCGDINFO, lab)) != -1) {  
++#endif
+ 		size = lab.d_secsize * lab.d_secperunit;
+ 	} else {
+ 		// must not be a block special dev
