@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/02/10 19:17:43 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2011/01/01 12:34:14 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -11,6 +11,8 @@ PYDISTUTILSPKG=	yes
 
 CONFLICTS+=	bittornado-[0-9]*
 CONFLICTS+=	BitTornado-[0-9]*
+
+USE_TOOLS+=	msgfmt xgettext msgmerge
 
 .include "../../mk/bsd.prefs.mk"
 
