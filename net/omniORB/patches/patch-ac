@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2011/01/01 05:43:28 obache Exp $
+
+--- include/omniORB4/internal/SocketCollection.h.orig	2009-05-06 16:16:09.000000000 +0000
++++ include/omniORB4/internal/SocketCollection.h
+@@ -188,7 +188,7 @@
+ #   undef OMNI_IPV6_SOCKETS_ACCEPT_IPV4_CONNECTIONS
+ #endif
+ 
+-#if defined(__freebsd__) || defined(__netbsd__)
++#if defined(__freebsd__) || defined(__netbsd__) || defined(__dragonfly__)
+ #   undef OMNI_IPV6_SOCKETS_ACCEPT_IPV4_CONNECTIONS
+ #endif
+ 
