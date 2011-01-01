@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2010/06/16 16:53:56 drochner Exp $
+# $NetBSD: Makefile,v 1.42 2011/01/01 03:10:10 obache Exp $
 
 DISTNAME=		cadaver-0.23.3
 CATEGORIES=		www
@@ -12,6 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		cadaver
 GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--enable-netrc
 CONFIGURE_ARGS+=	--with-expat
 #CONFIGURE_ARGS+=	--with-included-neon
@@ -25,6 +26,7 @@ LIBS+=			${BUILDLINK_LDADD.termcap}
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 # DON'T make this package depend on the www/neon package until neon
 # becomes stable; keep it using its internal copy of neon as with
 # www/sitecopy.  This package has in the past bounced back and forth
