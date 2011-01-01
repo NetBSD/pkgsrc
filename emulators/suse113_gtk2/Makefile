@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/03 00:27:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/01 03:48:54 obache Exp $
 
 DISTNAME=	suse_gtk2-${SUSE_VERSION}
 PKGREVISION=	1
@@ -25,11 +25,13 @@ COMMENT=	Linux compatibility package for GTK+-2.x
 EMUL_MODULES.linux=	fontconfig freetype2 jpeg png tiff x11
 
 # These files are managed by the +INSTALL/+DEINSTALL scripts.
-CHECK_FILES_SKIP+=	${EMULDIR}/etc/gtk-2.0/gtk.immodules
+CHECK_FILES_SKIP+=	${EMULDIR}/etc/gtk-2.0/gtk${ABISUFFIX}.immodules
 CHECK_FILES_SKIP+=	${EMULDIR}/etc/gtk-2.0/gdk-pixbuf.loaders
-CHECK_FILES_SKIP+=	${EMULDIR}/etc/pango/pango.modules
+CHECK_FILES_SKIP+=	${EMULDIR}/etc/pango/pango${ABISUFFIX}.modules
 
+ABISUFFIX?=	# empty
 BINSUFFIX?=	# empty
+FILES_SUBST+=	ABISUFFIX=${ABISUFFIX:Q}
 FILES_SUBST+=	BINSUFFIX=${BINSUFFIX:Q}
 
 .include "../../emulators/suse113_linux/Makefile.common"
