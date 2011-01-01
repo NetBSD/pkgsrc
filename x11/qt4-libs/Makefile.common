@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2010/11/15 13:05:45 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2011/01/01 21:39:06 adam Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -32,8 +32,8 @@ CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
 CONFIGURE_ARGS+=	-qt-gif	# qt4 does not write compressed GIFs
 CONFIGURE_ARGS.SunOS+=	-no-xrender
 CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//}
+CONFIGURE_ARGS+=	-opensource -confirm-license
 OPSYSVARS+=		CONFIGURE_ARGS
-CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -92,6 +92,13 @@ QMAKE_RANLIB?=		${TRUE}
 	!exists(${X11BASE}/lib/libXinerama.dylib)
 CONFIGURE_ARGS+=	-no-xinerama
 .endif
+
+SUBST_CLASSES+=		lt
+SUBST_MESSAGE.lt=	Enabling libtool.
+SUBST_STAGE.lt=		pre-configure
+SUBST_FILES.lt=		src/gui/gui.pro
+SUBST_SED.lt=		-e 's,$$$$QMAKE_CXX -c -W,$${LIBTOOL} --mode=compile &,'
+SUBST_SED.lt+=		-e 's,$$$${first(QMAKE_EXT_OBJ)},.lo,'
 
 .include "options.mk"
 
