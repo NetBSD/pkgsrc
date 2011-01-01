@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2011/01/01 05:43:28 obache Exp $
+
+--- configure.orig	2009-07-16 13:11:17.000000000 +0000
++++ configure
+@@ -13072,6 +13072,7 @@ case "$host" in
+   *-*-irix*)     plat_name="IRIX";     plat_def="__irix__";     os_v="6";;
+   *-*-aix*)      plat_name="AIX";      plat_def="__aix__";      os_v="4";;
+   *-*-darwin*)   plat_name="Darwin";   plat_def="__darwin__";   os_v="1";;
++  *-*-dragonfly*)plat_name="DragonFly";plat_def="__dragonfly__";os_v="2";;
+   *-*-freebsd3*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="3";;
+   *-*-freebsd4*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="4";;
+   *-*-freebsd5*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="5";;

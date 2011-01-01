@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/01 05:43:28 obache Exp $
 
---- bin/scripts/omkdirhier.orig	2004-02-11 21:36:28.000000000 +0600
+--- bin/scripts/omkdirhier.orig	2005-01-06 23:07:20.000000000 +0000
 +++ bin/scripts/omkdirhier
-@@ -81,7 +81,7 @@ do
+@@ -60,7 +60,7 @@ do
  				fi
  			done
  
