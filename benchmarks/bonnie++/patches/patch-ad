@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2011/01/02 17:45:06 jdolecek Exp $
+
+--- bon_io.h.orig	2011-01-02 17:28:45.000000000 +0000
++++ bon_io.h
+@@ -33,7 +33,9 @@ private:
+   bool m_isopen;
+   char *m_name;
+   bool m_sync;
++#ifdef O_DIRECT
+   bool m_use_direct_io;
++#endif
+   const int m_chunk_bits, m_chunk_size;
+   int m_chunks_per_file, m_total_chunks;
+   int m_last_file_chunks;
