@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.19 2010/10/20 02:56:13 schmonz Exp $
+$NetBSD: patch-aa,v 1.20 2011/01/02 05:13:02 schmonz Exp $
 
---- Makefile.PL.orig	2010-10-09 00:09:24.000000000 +0000
+--- Makefile.PL.orig	2010-12-11 18:33:22.000000000 +0000
 +++ Makefile.PL
 @@ -19,6 +19,8 @@ SED?=sed
  
@@ -38,16 +38,16 @@ $NetBSD: patch-aa,v 1.19 2010/10/20 02:56:13 schmonz Exp $
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/directives/ikiwiki/directive; \
  		fi \
  	done
-@@ -91,7 +93,7 @@ underlay_install:
- 			if echo "$$file" | grep -q style.css; then \
- 				(cat doc/style.css; cat $$file) >> $(DESTDIR)$(PREFIX)/share/ikiwiki/$$theme/style.css; \
+@@ -94,7 +96,7 @@ underlay_install:
+ 			elif echo "$$file" | grep -q base.css; then \
+ 				:; \
  			elif [ -f "$$file" ]; then \
 -				cp -aL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$file 2>/dev/null || \
 +				cp -pRL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$file 2>/dev/null || \
  				install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$file; \
  			fi \
  		done; \
-@@ -103,7 +105,7 @@ extra_install: underlay_install
+@@ -106,7 +108,7 @@ extra_install: underlay_install
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$dir; \
  	done
  	for file in `cd doc/examples; $(FIND) . -type f ! -regex '.*\.svn.*'`; do \
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.19 2010/10/20 02:56:13 schmonz Exp $
  		install -m 644 doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file; \
  	done
  
-@@ -122,15 +124,15 @@ extra_install: underlay_install
+@@ -125,15 +127,15 @@ extra_install: underlay_install
  		install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/ikiwiki/plugins; \
  	done
  
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.19 2010/10/20 02:56:13 schmonz Exp $
  	
  	install -d $(DESTDIR)$(PREFIX)/sbin
  	install ikiwiki-mass-rebuild $(DESTDIR)$(PREFIX)/sbin
-@@ -147,10 +149,10 @@ extra_install: underlay_install
+@@ -150,10 +152,10 @@ extra_install: underlay_install
  	
  	# These might fail if a regular user is installing into a home
  	# directory.
