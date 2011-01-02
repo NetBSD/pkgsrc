@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2010/04/01 06:34:14 obache Exp $
+# $NetBSD: Makefile,v 1.25 2011/01/02 17:45:05 jdolecek Exp $
 #
 
 DISTNAME=	bonnie++-1.03e
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.coker.com.au/bonnie++/
 EXTRACT_SUFX=	.tgz
