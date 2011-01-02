@@ -1,7 +1,8 @@
-$NetBSD: CHANGES-2011,v 1.4 2011/01/02 12:42:06 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.5 2011/01/02 23:53:36 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
 	Updated net/py-boto to 1.9b [gson 2011-01-01]
 	Updated www/ikiwiki to 3.20101231 [schmonz 2011-01-02]
 	Updated textproc/mdoclint to 1.13 [wiz 2011-01-02]
+	Updated chat/psi to 0.14 [schnoebe 2011-01-02]
