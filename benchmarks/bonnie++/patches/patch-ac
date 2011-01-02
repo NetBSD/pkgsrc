@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2011/01/02 17:45:06 jdolecek Exp $
+
+--- bon_io.cpp.orig	2011-01-02 17:27:11.000000000 +0000
++++ bon_io.cpp
+@@ -318,7 +318,9 @@ CFileOp::CFileOp(BonTimer &timer, int fi
+  , m_isopen(false)
+  , m_name(NULL)
+  , m_sync(use_sync)
++#ifdef O_DIRECT
+  , m_use_direct_io(use_direct_io)
++#endif
+  , m_chunk_bits(chunk_bits)
+  , m_chunk_size(1 << m_chunk_bits)
+  , m_chunks_per_file(Unit / m_chunk_size * IOFileSize)
+@@ -393,10 +395,12 @@ int CFileOp::m_open(CPCCHAR base_name, i
+     createFlag = OPEN_ACTION_CREATE_IF_NEW | OPEN_ACTION_REPLACE_IF_EXISTS;
+ #else
+     flags = O_RDWR | O_CREAT | O_EXCL;
++#ifdef O_DIRECT
+     if(m_use_direct_io)
+     {
+       flags |= O_DIRECT;
+     }
++#endif /* O_DIRECT */
+ #endif
+   }
+   else
