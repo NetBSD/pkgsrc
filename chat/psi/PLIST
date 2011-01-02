@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:37:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/01/02 23:53:12 schnoebe Exp $
 bin/psi
 share/doc/psi/COPYING
 share/doc/psi/README
@@ -54,6 +54,7 @@ share/psi/iconsets/roster/crystal-sms.jisp
 share/psi/iconsets/roster/crystal-yahoo.jisp
 share/psi/iconsets/roster/default/ask.png
 share/psi/iconsets/roster/default/away.png
+share/psi/iconsets/roster/default/call.png
 share/psi/iconsets/roster/default/chat.fading.png
 share/psi/iconsets/roster/default/chatty.png
 share/psi/iconsets/roster/default/dnd.png
@@ -96,6 +97,7 @@ share/psi/iconsets/system/default/events.png
 share/psi/iconsets/system/default/eye_blue.png
 share/psi/iconsets/system/default/filemanager.png
 share/psi/iconsets/system/default/groupchat.png
+share/psi/iconsets/system/default/gstreamer-logo-50.png
 share/psi/iconsets/system/default/help.png
 share/psi/iconsets/system/default/history.png
 share/psi/iconsets/system/default/icondef.xml
@@ -161,6 +163,19 @@ share/psi/iconsets/system/default/whiteboarding/translate.png
 share/psi/iconsets/system/default/whiteboarding/ungroup.png
 share/psi/iconsets/system/default/whiteboarding/whiteboard.png
 share/psi/iconsets/system/default/xml.png
+share/psi/psi_be.qm
+share/psi/psi_cs.qm
+share/psi/psi_de.qm
+share/psi/psi_fr.qm
+share/psi/psi_it.qm
+share/psi/psi_ja.qm
+share/psi/psi_pl.qm
+share/psi/psi_ru.qm
+share/psi/psi_sl.qm
+share/psi/psi_sv.qm
+share/psi/psi_pt_BR.qm
+share/psi/psi_ur_PK.qm
+share/psi/psi_zh_TW.qm
 share/psi/sound/chat1.wav
 share/psi/sound/chat2.wav
 share/psi/sound/ft_complete.wav
