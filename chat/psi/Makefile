@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.59 2010/11/15 22:56:29 abs Exp $
+# $NetBSD: Makefile,v 1.60 2011/01/02 23:53:12 schnoebe Exp $
 
-PSI_VERSION=	0.12.1
+PSI_VERSION=	0.14
 DISTNAME=	psi-${PSI_VERSION}
-PKGREVISION=	# empty
-PKGREVISION=	5
+PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://psi-im.org/
-COMMENT=	PSI Jabber Client
+COMMENT=	Psi XMPP/Jabber Client
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
-DIST_SUBDIR=	${DISTNAME}-20071115-1
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+DIST_SUBDIR=	${DISTNAME}
+DISTFILES=	${DEFAULT_DISTFILES} ${LANG_PACK}
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake unzip
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
@@ -33,35 +32,43 @@ CONFIGURE_ARGS+=	--disable-bundled-qca
 CONFIGURE_ARGS+=	--with-zlib-inc=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
 
-# no lang files for 0.13 yet
-#LANG_FILES=	psi_bg.qm psi_ca.qm psi_eo.qm psi_es.qm psi_fr.qm	\
-#		psi_hu.qm psi_mk.qm psi_nl.qm psi_pl.qm psi_pt.qm	\
-#		psi_pt_BR.qm psi_sk.qm psi_sl.qm psi_vi.qm psi_zh.qm
-LANG_FILES=
+#
+#   LANG_PACK is an archive of all the translations..
+#
+LANG_PACK=psi-0.14_langpack_2009-12-02.zip
+SITES.${LANG_PACK}= http://fs.scs-tsa.de/psi_l10n/
 
-.for l in ${LANG_FILES}
-SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
-.endfor
+#
+#   LANG_FILES are the translations we're going to install
+#
+
+LANG_FILES= be/psi_be.qm cs/psi_cs.qm de/psi_de.qm fr/psi_fr.qm \
+	    it/psi_it.qm ja/psi_ja.qm pl/psi_pl.qm ru/psi_ru.qm \
+	    sl/psi_sl.qm sv/psi_sv.qm pt_BR/psi_pt_BR.qm \
+	    ur_PK/psi_ur_PK.qm zh_TW/psi_zh_TW.qm
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
 INSTALL_DIRS=		src
 INSTALL_TARGET=		install_target install_sharedfiles
 INSTALL_MAKE_FLAGS=	INSTALL_ROOT=${DESTDIR}
 
-# custom install targets, we don't want psi to install the desktop & icon
-# stuff
+.include "options.mk"
+
 post-install:
+	# remove some files that shouldn't be there,
+	# install some files where they should be installed
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/psi
 	${RM} ${DESTDIR}${PREFIX}/share/psi/README
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/psi
 	${RM} ${DESTDIR}${PREFIX}/share/psi/COPYING
+	# install the translations
 .for f in ${LANG_FILES}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${DESTDIR}${PREFIX}/share/psi
+	${INSTALL_DATA} ${WRKDIR}/${f} ${DESTDIR}${PREFIX}/share/psi
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/psi ${DESTDIR}${PREFIX}/bin/psi
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.4.0
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1 2011/01/02 23:53:13 schnoebe Exp $
+
+pkgsrc places IDN's stringprep in a different directory than other
+package managers.
+
+--- iris/src/xmpp/jid/jid.cpp.orig	2009-07-16 00:08:57.000000000 -0500
++++ iris/src/xmpp/jid/jid.cpp
+@@ -24,7 +24,7 @@
+ #include <QCoreApplication>
+ #include <QByteArray>
+ #include <QHash>
+-#include <libidn/stringprep.h>
++#include <stringprep.h>
+ 
+ using namespace XMPP;
+ 
