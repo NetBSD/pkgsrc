@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2011/01/02 12:23:32 obache Exp $
+
+* DragonFly not have SCTP_UNORDERD, use MSG_UNORDERED instead.
+
+--- rtsp/rtsp.c.orig	2006-10-20 13:04:53.000000000 +0000
++++ rtsp/rtsp.c
+@@ -33,6 +33,15 @@
+ #include <nemesi/rtsp.h>
+ #include <nemesi/version.h>
+ 
++#ifdef HAVE_SCTP_NEMESI
++# ifdef __DragonFly__
++#  include <netinet/sctp.h>
++#   ifdef MSG_UNORDERED
++#    define SCTP_UNORDERED MSG_UNORDERED
++#   endif
++# endif
++#endif
++
+ #ifndef BUFFERSIZE
+ #define BUFFERSIZE 163840
+ #endif
