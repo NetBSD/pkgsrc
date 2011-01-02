@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2011/01/02 12:23:32 obache Exp $
+
+* DragonFly not have SOL_SCTP, use IPPROTO_SCTP instead.
+
+--- wsocket/server_connect.c.orig	2006-11-21 11:46:34.000000000 +0000
++++ wsocket/server_connect.c
+@@ -29,6 +29,14 @@
+ #include <nemesi/wsocket.h>
+ #include <nemesi/version.h>
+ 
++#ifdef HAVE_SCTP_NEMESI
++#  ifndef SOL_SCTP
++#    ifdef IPPROTO_SCTP
++#      define SOL_SCTP IPPROTO_SCTP
++#    endif
++#  endif
++#endif
++
+ /* DOC++ */
+ /**
+  * Esegue la connessione al "server" tramite la porta "port".
