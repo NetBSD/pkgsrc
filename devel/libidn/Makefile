@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2010/06/15 09:23:05 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2011/01/03 03:11:14 obache Exp $
 
 DISTNAME=	libidn-1.19
 CATEGORIES=	devel
@@ -23,6 +23,12 @@ CONFIGURE_ENV+=		EMACS=${FALSE}
 CONFIGURE_ARGS+=	--disable-csharp --disable-java
 CONFIGURE_ARGS+=	--with-packager=pkgsrc
 CONFIGURE_ARGS+=	--with-packager-bug-reports=http://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Interix"
+CONFIGURE_ARGS+=	--disable-ld-version-script
+.endif
 
 PKGCONFIG_OVERRIDE+=	libidn.pc.in
 TEST_TARGET=		check
