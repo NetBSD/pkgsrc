@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2010/07/20 00:01:22 sbd Exp $
+@comment $NetBSD: PLIST,v 1.34 2011/01/03 05:58:49 adam Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -46,8 +46,8 @@ libexec/cups/backend/http
 libexec/cups/backend/ipp
 libexec/cups/backend/lpd
 ${PLIST.dnssd}libexec/cups/backend/mdns
-libexec/cups/backend/parallel
-libexec/cups/backend/scsi
+${PLIST.notmac}libexec/cups/backend/parallel
+${PLIST.notmac}libexec/cups/backend/scsi
 libexec/cups/backend/serial
 libexec/cups/backend/snmp
 libexec/cups/backend/socket
@@ -67,8 +67,8 @@ libexec/cups/filter/commandtopclx
 libexec/cups/filter/commandtops
 libexec/cups/filter/gziptoany
 libexec/cups/filter/hpgltops
-libexec/cups/filter/imagetops
-libexec/cups/filter/imagetoraster
+${PLIST.notmac}libexec/cups/filter/imagetops
+${PLIST.notmac}libexec/cups/filter/imagetoraster
 libexec/cups/filter/pdftops
 libexec/cups/filter/pstops
 libexec/cups/filter/rastertodymo

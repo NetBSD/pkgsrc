@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2010/12/23 11:44:54 dsainty Exp $
+# $NetBSD: Makefile,v 1.173 2011/01/03 05:58:49 adam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -38,13 +38,13 @@ AUTOCONF_REQD=		2.60
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-cachedir=${CUPS_CACHE:Q}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
-CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
-CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP:Q}
+CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
+CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
 CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-libtool
@@ -68,14 +68,19 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+PLIST_VARS+=		notmac
+.if ${OPSYS} != "Darwin"
+PLIST.notmac=		yes
+.endif
+
 # CUPS_USER	username of the CUPS administrator
 # CUPS_GROUP	group of the CUPS administrator
 #
 CUPS_USER?=		lp
 CUPS_GROUP?=		lp
 CUPS_SYSTEM_GROUPS?=	${REAL_ROOT_GROUP}
-FILES_SUBST+=		CUPS_USER=${CUPS_USER:Q}
-FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP:Q}
+FILES_SUBST+=		CUPS_USER=${CUPS_USER}
+FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP}
 FILES_SUBST+=		CUPS_SYSTEM_GROUPS=${CUPS_SYSTEM_GROUPS:Q}
 
 PKG_GROUPS_VARS+=	CUPS_GROUP CUPS_SYSTEM_GROUPS
@@ -133,7 +138,7 @@ SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g
 SUBST_STAGE.rpathfix=	post-patch
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
-INSTALL_ENV+=		DSTROOT=${DESTDIR:Q}
+INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
 pre-configure:
 .if !empty(CUPS_SYSTEM_GROUPS:M${CUPS_GROUP})
