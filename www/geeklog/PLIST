@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/08/10 16:00:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.13.2.1 2011/01/03 22:45:48 sbd Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
 ${GEEKLOG_BASE}/language/afrikaans.php
 ${GEEKLOG_BASE}/language/afrikaans_utf-8.php
@@ -88,6 +88,8 @@ ${GEEKLOG_BASE}/plugins/calendar/language/estonian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/estonian_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/french_canada.php
 ${GEEKLOG_BASE}/plugins/calendar/language/french_canada_utf-8.php
+${GEEKLOG_BASE}/plugins/calendar/language/french_france.php
+${GEEKLOG_BASE}/plugins/calendar/language/french_france_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/german.php
 ${GEEKLOG_BASE}/plugins/calendar/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/calendar/language/german_formal_utf-8.php
@@ -150,11 +152,15 @@ ${GEEKLOG_BASE}/plugins/links/language/estonian.php
 ${GEEKLOG_BASE}/plugins/links/language/estonian_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/french_canada.php
 ${GEEKLOG_BASE}/plugins/links/language/french_canada_utf-8.php
+${GEEKLOG_BASE}/plugins/links/language/french_france.php
+${GEEKLOG_BASE}/plugins/links/language/french_france_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/german.php
 ${GEEKLOG_BASE}/plugins/links/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/links/language/german_formal_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/german_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/hebrew_utf-8.php
+${GEEKLOG_BASE}/plugins/links/language/italian.php
+${GEEKLOG_BASE}/plugins/links/language/italian_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/japanese_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/korean.php
 ${GEEKLOG_BASE}/plugins/links/language/korean_utf-8.php
@@ -200,6 +206,8 @@ ${GEEKLOG_BASE}/plugins/polls/language/estonian.php
 ${GEEKLOG_BASE}/plugins/polls/language/estonian_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/french_canada.php
 ${GEEKLOG_BASE}/plugins/polls/language/french_canada_utf-8.php
+${GEEKLOG_BASE}/plugins/polls/language/french_france.php
+${GEEKLOG_BASE}/plugins/polls/language/french_france_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/german.php
 ${GEEKLOG_BASE}/plugins/polls/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/polls/language/german_formal_utf-8.php
@@ -304,6 +312,8 @@ ${GEEKLOG_BASE}/plugins/staticpages/language/estonian_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/farsi_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/french_canada.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/french_canada_utf-8.php
+${GEEKLOG_BASE}/plugins/staticpages/language/french_france.php
+${GEEKLOG_BASE}/plugins/staticpages/language/french_france_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/german.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/german_formal_utf-8.php
@@ -335,6 +345,7 @@ ${GEEKLOG_BASE}/plugins/staticpages/sql/mssql_updates.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mysql_updates.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/pgsql_install.php
+${GEEKLOG_BASE}/plugins/staticpages/sql/pgsql_updates.php
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor_advanced.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/centerblock.thtml
@@ -348,6 +359,8 @@ ${GEEKLOG_BASE}/plugins/xmlsitemap/language/english.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/english_utf-8.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/estonian.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/estonian_utf-8.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/french_france.php
+${GEEKLOG_BASE}/plugins/xmlsitemap/language/french_france_utf-8.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/german.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/xmlsitemap/language/german_formal_utf-8.php
@@ -460,6 +473,7 @@ ${GEEKLOG_BASE}/system/pear/Date/Span.php
 ${GEEKLOG_BASE}/system/pear/Date/TimeZone.php
 ${GEEKLOG_BASE}/system/pear/HTTP/Request.php
 ${GEEKLOG_BASE}/system/pear/HTTP/Request/Listener.php
+${GEEKLOG_BASE}/system/pear/LICENSE
 ${GEEKLOG_BASE}/system/pear/Mail.php
 ${GEEKLOG_BASE}/system/pear/Mail/RFC822.php
 ${GEEKLOG_BASE}/system/pear/Mail/mail.php
@@ -477,11 +491,14 @@ ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/A.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/AAAA.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/CNAME.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/HINFO.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/LOC.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/MX.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/NAPTR.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/NS.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/PTR.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/RP.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/SOA.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/SPF.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/SRV.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/TSIG.php
 ${GEEKLOG_BASE}/system/pear/Net/DNS/RR/TXT.php
