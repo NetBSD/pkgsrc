@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4388 2010/12/31 21:57:29 dmcmahill Exp $
+$NetBSD: CHANGES-2010,v 1.4389 2011/01/03 12:20:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3780,6 +3780,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-File-HomeDir to 0.91 [sno 2010-08-15]
 	Updated misc/tellico to 2.3 [wiz 2010-08-15]
 	Updated games/rftg to 0.7.3 [wiz 2010-08-15]
+	Added lang/py-cxfreeze version 4.2 [drochner 2010-08-15]
 	Updated www/ikiwiki to 3.20100815 [schmonz 2010-08-16]
 	Updated lang/ruby18-base to 1.8.7.174nb6 [taca 2010-08-16]
 	Updated devel/slib to 3.2.3 [wiz 2010-08-16]
