@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/12/13 17:29:19 abs Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/03 00:21:19 schnoebe Exp $
 #
 
 # TODO: gnupg support, ssl support, others
 
-DISTNAME=	tkabber-0.10.0
+DISTNAME=	tkabber-0.11.1
 CATEGORIES=	chat
 MASTER_SITES=	http://files.jabber.ru/tkabber/
 
@@ -25,14 +25,15 @@ AUTO_MKDIRS=		yes
 
 # XXX this is also in the tkabber's Makefile
 SUBDIRS=	emoticons \
-		    ifacetk	      \
-		    jabberlib-tclxml  \
-		    mclistbox	      \
-		    msgs	      \
-		    pixmaps	      \
-		    plugins	      \
-		    sounds	      \
-		    trans
+		ifacetk	  \
+		jabberlib \
+		tclxml    \
+		mclistbox \
+		msgs	  \
+		pixmaps	  \
+		plugins	  \
+		sounds	  \
+		trans
 
 EXTRA_FILES=	AUTHORS README COPYING INSTALL ChangeLog
 
