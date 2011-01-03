@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.3 2011/01/03 01:40:46 obache Exp $
+
+--- os_freebsd.cpp.orig	2010-10-14 18:46:33.000000000 +0000
++++ os_freebsd.cpp
+@@ -59,6 +59,9 @@
+ #if (FREEBSDVER >= 800000)
+ #include <libusb20_desc.h>
+ #include <libusb20.h>
++#elif defined(__DragonFly__)
++#include <bus/usb/usb.h>
++#include <bus/usb/usbhid.h>
+ #else
+ #include <dev/usb/usb.h>
+ #include <dev/usb/usbhid.h>
