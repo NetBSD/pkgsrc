@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2010/07/14 11:25:19 sbd Exp $
+# $NetBSD: options.mk,v 1.12 2011/01/03 05:58:49 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--enable-acl
 CONFIGURE_ARGS+=	--disable-acl
 .endif
 
-PLIST_VARS+= 		dbus
+PLIST_VARS+=		dbus
 .if !empty(PKG_OPTIONS:Mdbus)
 USE_TOOLS+=		pkg-config
 .  include "../../sysutils/dbus/buildlink3.mk"
