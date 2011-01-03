@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2010/09/14 11:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2011/01/03 16:34:37 wiz Exp $
 
 DISTNAME=	ntop-4.0
 PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.ntop.org/ntop.html
 COMMENT=	Shows network usage (similar to "top" for processes)
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
