@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2006/03/23 17:20:22 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2011/01/03 07:38:59 obache Exp $
 
 --- stumbler.c.orig	2002-08-16 14:27:13.000000000 +0000
 +++ stumbler.c
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 2006/03/23 17:20:22 joerg Exp $
 +#include <dev/ic/wi_ieee.h>
 +#elif defined(__DragonFly__)
 +#include <netproto/802_11/ieee80211.h>
-+#include <netproto/802_11/if_wavelan_ieee.h>
++#include <dev/netif/wi/if_wavelan_ieee.h>
 +#else
  #include <net/if_ieee80211.h> 
  #include <dev/ic/wi_ieee.h>
