@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2009/01/07 13:26:30 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2011/01/03 20:45:28 markd Exp $
 
---- libkexiv2/libkexiv2/kexiv2.cpp.orig	2008-12-13 11:35:51.000000000 +0100
+--- libkexiv2/libkexiv2/kexiv2.cpp.orig	2009-02-27 08:39:37.000000000 +0000
 +++ libkexiv2/libkexiv2/kexiv2.cpp
-@@ -48,6 +48,20 @@ extern "C"
+@@ -49,6 +49,20 @@ extern "C"
  #include "kexiv2private.h"
  #include "kexiv2.h"
  
@@ -23,3 +23,27 @@ $NetBSD: patch-aa,v 1.6 2009/01/07 13:26:30 drochner Exp $
  namespace KExiv2Iface
  {
  
+@@ -1603,7 +1617,11 @@ QString KExiv2::getExifTagTitle(const ch
+     {
+         std::string exifkey(exifTagName);
+         Exiv2::ExifKey ek(exifkey);
++#if (EXIV2_TEST_VERSION(0,21,0))
++	return QString::fromLocal8Bit( ek.tagLabel().c_str() );
++#else
+         return QString::fromLocal8Bit( Exiv2::ExifTags::tagTitle(ek.tag(), ek.ifdId()) );
++#endif
+     }
+     catch (Exiv2::Error& e)
+     {
+@@ -1619,7 +1637,11 @@ QString KExiv2::getExifTagDescription(co
+     {
+         std::string exifkey(exifTagName);
+         Exiv2::ExifKey ek(exifkey);
++#if (EXIV2_TEST_VERSION(0,21,0))
++	return QString::fromLocal8Bit( ek.tagDesc().c_str() );
++#else
+         return QString::fromLocal8Bit( Exiv2::ExifTags::tagDesc(ek.tag(), ek.ifdId()) );
++#endif
+     }
+     catch (Exiv2::Error& e)
+     {
