@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/12/23 11:44:44 dsainty Exp $
+# $NetBSD: Makefile,v 1.39 2011/01/03 12:17:30 adam Exp $
 
 DISTNAME=	Imaging-1.1.7
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.7
@@ -16,13 +16,12 @@ DIST_SUBDIR=	python
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
 
-FREETYPE_ROOT=	"${BUILDLINK_PREFIX.freetype2}/lib","${BUILDLINK_PREFIX.freetype2}/include"
-
-SUBST_CLASSES=		ft2
-SUBST_SED.ft2=		-e "s;FREETYPE_ROOT = None;FREETYPE_ROOT = ${FREETYPE_ROOT:Q};"
-SUBST_FILES.ft2=	setup.py
-SUBST_MESSAGE.ft2=	Fixing path to freetype2.
-SUBST_STAGE.ft2=	pre-configure
+SUBST_CLASSES=		fix-path
+SUBST_MESSAGE.fix-path=	Fixing paths.
+SUBST_STAGE.fix-path=	pre-configure
+SUBST_FILES.fix-path=	setup.py
+SUBST_SED.fix-path=	-e 's,/usr/local,${PREFIX},'
+SUBST_SED.fix-path+=	-e 's,FREETYPE_ROOT = None,FREETYPE_ROOT = libinclude("${BUILDLINK_PREFIX.freetype2}"),'
 
 INSTALLATION_DIRS=	${PYINC}/PIL
 
