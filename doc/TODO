@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9993 2011/01/03 14:55:58 obache Exp $
+$NetBSD: TODO,v 1.9994 2011/01/03 17:14:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1017,6 +1017,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o notification-daemon-0.6.0
 	o ns-3.8
 	o ns-plugger-common-5.1.3
+	o ntop-4.0.1
 	o ntp4-4.2.6p2
 	o nulib2-220
 	o nut-16.1
