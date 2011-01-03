@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/01/03 14:54:34 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/01/03 15:06:38 obache Exp $
 
 DISTNAME=	powwow-1.2.5
 PKGREVISION=	1
@@ -26,4 +26,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/powwow.doc ${DESTDIR}${POWWOW_DIR}
 	${INSTALL_DATA} ${WRKSRC}/powwow.help ${DESTDIR}${POWWOW_DIR}
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
