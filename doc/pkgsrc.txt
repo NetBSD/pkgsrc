@@ -1050,9 +1050,9 @@ other parts of libc may also be lacking.)
 
 Services for Unix Applications (aka SUA) is an integrated component of Windows
 Server 2003 R2 (5.2), Windows Vista and Windows Server 2008 (6.0), Windows 7
-and Windows Server 2008 R2 (6.1). As of this writing, SUA's Interix 6.0 (32bit)
-subsystem has been tested. 6.0 (64bit) and 6.1 (both 32bit and 64bit) may work.
-Interix 5.x subsystem has not yet been tested with pkgsrc.
+and Windows Server 2008 R2 (6.1). As of this writing, the SUA's Interix 6.0
+(32bit) and 6.1 (64bit) subsystems have been tested. Other versions may work as
+well. The Interix 5.x subsystem has not yet been tested with pkgsrc.
 
 3.3.3.1. When installing Interix/SFU
 
