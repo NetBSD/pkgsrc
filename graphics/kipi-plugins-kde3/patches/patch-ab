@@ -1,19 +1,21 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/02/15 14:37:58 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2011/01/03 20:47:01 markd Exp $
 
 --- kipi-plugins/ipodexport/ipodexportdialog.cpp.orig	2008-12-13 11:20:05.000000000 +0000
 +++ kipi-plugins/ipodexport/ipodexportdialog.cpp
-@@ -47,6 +47,10 @@
+@@ -47,6 +47,12 @@
  #include <libkipi/imagedialog.h>
  #endif
  
 +extern "C" {
++#undef signals
 +#include <gdk-pixbuf/gdk-pixbuf.h>
++#define signals protected
 +}
 +
  #define debug() kdDebug()
  
  using namespace IpodExport;
-@@ -344,9 +348,13 @@ UploadDialog::ipodItemSelected( QListVie
+@@ -344,9 +350,13 @@ UploadDialog::ipodItemSelected( QListVie
          return;
  
      Itdb_Artwork *artwork = item->artwork();
@@ -29,7 +31,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/02/15 14:37:58 wiz Exp $
      {
          debug() << "no thumb was found" << endl;
          return;
-@@ -361,6 +369,9 @@ UploadDialog::ipodItemSelected( QListVie
+@@ -361,6 +371,9 @@ UploadDialog::ipodItemSelected( QListVie
  //     QPixmap pix;
  //     pix.convertFromImage( image );
  //     m_ipodPreview->setPixmap( pix );
