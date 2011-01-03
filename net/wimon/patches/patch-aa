@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/01/08 21:29:50 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/03 07:38:58 obache Exp $
 
 --- showi.c.orig	2006-01-08 21:26:47.000000000 +0000
 +++ showi.c
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1 2006/01/08 21:29:50 joerg Exp $
 +#elif defined(__DragonFly__)
 +#include <net/if_var.h>
 +#include <net/ethernet.h>
-+#include <netproto/802_11/if_wavelan_ieee.h>
++#include <dev/netif/wi/if_wavelan_ieee.h>
 +#include <sys/endian.h>
 +
  #else

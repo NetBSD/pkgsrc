@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2006/03/22 22:03:46 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2011/01/03 07:38:58 obache Exp $
 
 --- src/wiinfo.c.orig	2006-03-22 21:38:09.000000000 +0000
 +++ src/wiinfo.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.4 2006/03/22 22:03:46 joerg Exp $
  #elif defined(HAVE_DEV_IC_WI_IEEE_H)
  #include <dev/ic/wi_ieee.h>
 +#elif defined(__DragonFly__)
-+#include <netproto/802_11/if_wavelan_ieee.h>
++#include <dev/netif/wi/if_wavelan_ieee.h>
  #endif
  
  void 
