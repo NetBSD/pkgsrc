@@ -1173,12 +1173,13 @@ release -d
 <p>Services for Unix 3.5 has been tested.  3.0 or 3.1 may work, but
       are not officially supported.  (The main difference in 3.0/3.1 is lack
       of pthreads, but other parts of libc may also be lacking.)</p>
-<p>Services for Unix Applications (aka SUA) is an integrated component
-      of Windows Server 2003 R2 (5.2), Windows Vista and Windows Server 2008
-      (6.0), Windows 7 and Windows Server 2008 R2 (6.1).  As of this writing,
-      SUA's Interix 6.0 (32bit) subsystem has been tested.  6.0 (64bit) and 6.1
-      (both 32bit and 64bit) may work.
-      Interix 5.x subsystem has not yet been tested with pkgsrc.</p>
+<p>Services for Unix Applications (aka SUA) is an integrated
+      component of Windows Server 2003 R2 (5.2), Windows Vista and
+      Windows Server 2008 (6.0), Windows 7 and Windows Server 2008 R2
+      (6.1).  As of this writing, the SUA's Interix 6.0 (32bit) and
+      6.1 (64bit) subsystems have been tested.  Other versions may
+      work as well. The Interix 5.x subsystem has not yet been tested
+      with pkgsrc.</p>
 <div class="sect3" title="3.3.3.1. When installing Interix/SFU">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="platform.interix-sfu-install"></a>3.3.3.1. When installing Interix/SFU</h4></div></div></div>
@@ -7517,7 +7518,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168230185607"></a><dl>
+<a name="id1168230185675"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7534,7 +7535,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230185611"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168230185748"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7544,7 +7545,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230185620"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168230185756"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7555,7 +7556,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230185628"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168230185765"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9561,7 +9562,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168230172474"></a><dl>
+<a name="id1168230172542"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9604,7 +9605,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230172477"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168230172546"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9620,7 +9621,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230172512"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168230172648"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9638,7 +9639,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230172548"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168230172684"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9656,7 +9657,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230172583"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168230172720"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9669,7 +9670,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230172601"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168230172738"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9685,7 +9686,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230172627"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168230172763"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9709,7 +9710,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230172694"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168230172830"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9734,7 +9735,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230172726"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168230172862"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9782,7 +9783,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230172780"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168230172917"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
