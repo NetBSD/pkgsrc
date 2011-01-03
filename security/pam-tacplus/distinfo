@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/12 22:15:27 pettai Exp $
+$NetBSD: distinfo,v 1.2 2011/01/03 02:39:32 obache Exp $
 
 SHA1 (pam_tacplus-1.2.11.tar.gz) = 74b33dde8aa80b49cc59e587eb254fd66d3e104a
 RMD160 (pam_tacplus-1.2.11.tar.gz) = 841038262f0320a5b3a39e7337294e6807a29ada
 Size (pam_tacplus-1.2.11.tar.gz) = 30736 bytes
+SHA1 (patch-aa) = 73e6cd039c81dd43ceaab048c0c289e158809d1b
+SHA1 (patch-ab) = 1b33eb64beb95e176dec67fab1c3a2fa8219fda6
+SHA1 (patch-ac) = 456209bee40e2847726faea804cdd593666cf7df
