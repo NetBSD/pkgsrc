@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9991 2010/12/31 10:24:13 obache Exp $
+$NetBSD: TODO,v 1.9992 2011/01/03 13:13:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -332,7 +332,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GutenMark-20090216
-	o ImageMagick-6.6.6.8
+	o ImageMagick-6.6.6.10
 	o MAMEDiff-2.30
 	o Mesa-7.9
 	o MesaLib-7.9
@@ -371,7 +371,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.1
 	o angband-3.2
-	o anjuta-2.32.1 [GNOME 2.32]
+	o anjuta-2.32.1.1 [GNOME 2.32]
 	o anjuta-extras-2.32.0.0 [GNOME 2.32]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
@@ -445,12 +445,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o brasero-2.32.1
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
-	o byacc-20101226
+	o byacc-20101229
 	o bzr-2.2.2
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.35
+	o calibre-0.7.36
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.3
@@ -463,7 +463,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.32.0 [GNOME 2.32]
-	o cherokee-1.0.14
+	o cherokee-1.0.15
 	o chromium-0.9.14.1
 	o cinepaint-0.23
 	o cint-5.16
@@ -496,6 +496,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.3.10
 	o darcs-2.4
 	o dasher-4.11
+	o davical-0.9.9.4
 	o dbench-4.0
 	o dbus-1.2.24 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbus-1.4.1
@@ -522,7 +523,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvipng-1.14
 	o dvtm-0.6
 	o dwm-5.8.2
-	o e2fsprogs-1.41.12 [pkg/43950]
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.3.2
@@ -554,15 +554,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enscript-1.6.5.2
 	o epic4-2.6
 	o epstool-3.08
-	o eric4-4.4.10
-	o eric5-5.0.3
+	o eric4-4.4.11 [pkg/44314]
+	o eric5-5.0.5
 	o erlang-13b4
 	o erubis-2.6.2
 	o esh-0.8.5
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-687
+	o etm-690
 	o eukleides-1.5.4
 	o evince-2.32.0
 	o evolution-couchdb-0.4.5
@@ -728,6 +728,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o granulate-0.2
 	o grep-2.7
 	o grhino-0.16.1
+	o groff-1.21
 	o gsasl-1.6.0
 	o gsharutils-4.10
 	o gss-1.0.1
@@ -755,11 +756,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hdf5-1.8.5
 	o heel-1.0.2
 	o heimdal-1.2.1
+	o help2man-1.38.4
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-7.4
-	o highlight-3.2
+	o highlight-3.3
 	o honeyd-1.5c
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
@@ -870,7 +872,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libflash-0.4.13
 	o libfontenc-1.1.0
 	o libgda-4.2.1 [GNOME 2.32]
-	o libgdata-0.7.0
+	o libgdata-0.8.0
 	o libgexiv2-0.2.2
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
@@ -894,7 +896,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.91.0
 	o libsigsegv-2.9
-	o libssh-0.4.6
+	o libssh-0.4.7
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
@@ -931,7 +933,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mathomatic-15.3.7
 	o mawk-1.3.4.20100625
-	o mc-4.7.0.9
+	o mc-4.7.0.10
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
 	o merb-activerecord-1.0.0.1
@@ -951,7 +953,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-sequel-1.0.0
 	o merb-stories-0.9.13
 	o merb-test-unit-0.9.13
+	o mercurial-1.7.3
 	o mergeant-0.67
+	o merkaartor-0.17.0 [pkg/44318]
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o midori-0.2.9
@@ -975,13 +979,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mp3blaster-3.2.3
+	o mp3diags-1.0.07
 	o mp3splt-2.2.7
 	o mpc-0.19
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.0
-	o mpop-1.0.21
+	o mpop-1.0.22
 	o mrtg-2.17.0
 	o mserv-devel-0.41
+	o msmtp-1.4.22
 	o mtools-4.0.14
 	o mu-0.9
 	o multitail-5.2.6
@@ -1013,7 +1019,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ns-plugger-common-5.1.3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-16.0
+	o nut-16.1
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1045,7 +1051,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-Perl-Tidy-20101217
-	o p5-PerlMagick-6.6.6.8
+	o p5-PerlMagick-6.6.6.10
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1070,6 +1076,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
+	o php-libawl-0.46
 	o phpmyadmin-3.3.8.1
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1118,6 +1125,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.17
 	o py-cheetah-2.4.2.1 [pkg/43458]
 	o py-cups-1.9.53
+	o py-cxfreeze-4.2.2 [pkg/44315]
 	o py-game-1.9.1
 	o py-gnome2-desktop-2.32.0 [GNOME 2.32]
 	o py-gnosis-1.2.2
@@ -1138,6 +1146,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o python-2.7.1
 	o python-3.1.2
 	o qbrew-0.3.9
+	o qlandkartegt-0.19.2 [pkg/44317]
+	o qlandkartegt-garmindev-0.3.4 [pkg/44316]
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qrencode-3.1.1
@@ -1244,6 +1254,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
+	o supertuxkart-0.7
 	o swfdec-gnome-2.30.1
 	o sympa-6.1
 	o sysinfo-4.2.2
@@ -1322,7 +1333,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vim-7.3
 	o vino-2.32.1
 	o visual-regexp-3.1
-	o vlc-1.1.5
+	o vlc-1.1.6
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
@@ -1353,7 +1364,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.2
-	o x264-devel-20101225
+	o x264-devel-20110101
 	o xanalyser-1.30
 	o xapian-1.2.4
 	o xapian-omega-1.2.4
