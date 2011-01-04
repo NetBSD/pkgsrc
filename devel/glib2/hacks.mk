@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2008/09/05 15:33:01 tron Exp $
+# $NetBSD: hacks.mk,v 1.5 2011/01/04 09:55:15 adam Exp $
 
 .if !defined(GLIB2_HACKS_MK)
 GLIB2_HACKS_MK=	# defined
@@ -11,16 +11,13 @@ PKG_HACKS+=	hppa-codegen
 CFLAGS:=	-O0 ${CFLAGS:C/[+,-]O[0-9]?//g}
 .  endif
 
-# "glib2" supports support for Universal Binaries. But a lot of packages
-# using it (e.g. "gtk2+") don't support it. We therefore disable it.
-
 .  if ${OPSYS} == "Darwin"
-PKG_HACKS+=	darwin-no-universal
-.    if ${MACHINE_ARCH} == "powerpc"
-CONFIGURE_ENV+=	ac_cv_c_bigendian=yes
-.    else
-CONFIGURE_ENV+=	ac_cv_c_bigendian=no
-.    endif
+PKG_HACKS+=		darwin-iconv
+SUBST_CLASSES+=		iconv
+SUBST_STAGE.iconv=	pre-configure
+SUBST_MESSAGE.iconv=	Changing libiconv_open to iconv_open.
+SUBST_FILES.iconv=	configure
+SUBST_SED.iconv=	-e 's,libiconv_open,iconv_open,g'
 .  endif
 
 # Work around unresolved symbol g_test_config_vars during build
