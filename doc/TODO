@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9994 2011/01/03 17:14:43 wiz Exp $
+$NetBSD: TODO,v 1.9995 2011/01/04 00:17:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.36
+	o calibre-0.7.37
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.3
@@ -628,7 +628,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fotoxx-10.12
+	o fotoxx-11.01
 	o frama-c-20100401
 	o freefont-20100919
 	o freeglut-2.4.0
@@ -1020,7 +1020,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntop-4.0.1
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-16.1
+	o nut-16.2
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1078,7 +1078,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o photopc-3.05
 	o php-jpgraph-3.0.6
 	o php-libawl-0.46
-	o phpmyadmin-3.3.8.1
+	o phpmyadmin-3.3.9
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
