@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9997 2011/01/05 00:24:47 wiz Exp $
+$NetBSD: TODO,v 1.9998 2011/01/05 23:20:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -664,7 +664,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.19.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.12
-	o gentoo-0.19.7
+	o gentoo-0.19.8
 	o gettext-0.18.1
 	o gettext-lib-0.18.1
 	o gettext-m4-0.18.1.1
@@ -894,6 +894,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.0
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o libraw-0.12.2
 	o librep-0.91.0
 	o libsigsegv-2.9
 	o libssh-0.4.7
@@ -1036,7 +1037,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opal-3.8.3
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.12.1
-	o opengrok-0.9
+	o opengrok-0.10
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.3
@@ -1312,7 +1313,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o turba-2.3.5
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
-	o twm-1.0.5
+	o twm-1.0.6
 	o txt2html-2.51
 	o uae-0.8.29
 	o ubs-0.20
