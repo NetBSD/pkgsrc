@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.8 2011/01/04 15:39:47 tron Exp $
+$NetBSD: CHANGES-2011,v 1.9 2011/01/05 00:25:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -8,4 +8,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/psi to 0.14 [schnoebe 2011-01-02]
 	Updated www/geeklog to 1.7.1.1 [taca 2011-01-03]
 	Updated net/dhcpcd to 5.2.10 [roy 2011-01-03]
+	Downgraded sysutils/py-dbus to 0.83.1 [drochner 2011-01-03]
 	Updated net/wireshark to 1.4.2nb1 [tron 2011-01-04]
