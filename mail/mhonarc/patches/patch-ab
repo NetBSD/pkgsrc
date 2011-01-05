@@ -1,0 +1,142 @@
+$NetBSD: patch-ab,v 1.1 2011/01/05 09:45:21 spz Exp $
+
+fixes for CVE-2010-4524 and CVE-2010-1677 taken from the MHonArc cvs
+
+--- lib/mhtxthtml.pl.orig	2005-05-02 00:04:39.000000000 +0000
++++ lib/mhtxthtml.pl
+@@ -59,6 +59,11 @@ my %special_to_char = (
+ ##	final filtered HTML messages.  Modification is needed so the
+ ##	resulting filtered message is valid HTML.
+ ##
++##      CAUTION: Some of these options can open up a site to attacks.
++##               The MIMEFILTERS reference page provide additional
++##               information on the risks associated with enabling
++##               a given option.
++##
+ ##	Arguments:
+ ##
+ ##	allowcomments	Preserve any comment declarations.  Normally
+@@ -90,6 +95,8 @@ my %special_to_char = (
+ ##			and Content-Disposition specifies the data as
+ ##			an attachment, the data is saved to a file
+ ##			with a link to it from the message page.
++##                      NOTE: This option can expose your site to
++##                      XSS attacks.
+ ##
+ ##	disablerelated	Disable MHTML processing.
+ ##
+@@ -100,7 +107,7 @@ my %special_to_char = (
+ ##	subdir		Place derived files in a subdirectory
+ ##
+ 
+-# DEVELOPER's NOTE:
++# CAUTION:
+ #   The script stripping code is probably not complete.  Since a
+ #   whitelist model is not being used -- because full HTML parsing
+ #   would be required (and possible reliance on non-standard modules) --
+@@ -112,6 +119,25 @@ sub filter {
+     my($fields, $data, $isdecode, $args) = @_;
+     $args = ''  unless defined $args;
+ 
++    # Bug-32013 (CVE-2010-4524): Invalid tags cause immediate rejection.
++    # Bug-32014 (CVE-2010-1677): Prevents DoS if massively nested.
++    my $allowcom = $args =~ /\ballowcomments\b/i;
++    strip_comments($fields, $data)  unless $allowcom;
++    if ($$data =~ /<[^>]*</) {
++      # XXX: This will reject HTML that includes a '<' char in a
++      #      comment declaration.  Unsure it is worth the hassle
++      #      to deal with it.  Such scenarios would normally indicate
++      #      hand generated HTML vs how most HTML email is generated.
++      #      Plus, allowcomments should not be enabled, so they get
++      #      removed above.
++      warn qq/\n/,
++           qq/Warning: Invalid HTML detected, rejecting\n/,
++           qq/         Message-Id: <$mhonarc::MHAmsgid>\n/,
++           qq/         Message Subject: /, $fields->{'x-mha-subject'}, qq/\n/,
++           qq/         Message Number: $mhonarc::MHAmsgnum\n/;
++      return undef;
++    }
++
+     ## Check if content-disposition should be checked
+     if ($args =~ /\battachcheck\b/i) {
+ 	my($disp, $nameparm, $raw) =
+@@ -134,7 +160,6 @@ sub filter {
+     my $onlycid  = $args !~ /\ballownoncidurls\b/i;
+     my $subdir   = $args =~ /\bsubdir\b/i;
+     my $norelate = $args =~ /\bdisablerelated\b/i;
+-    my $allowcom = $args =~ /\ballowcomments\b/i;
+     my $atdir    = $subdir ? $mhonarc::MsgPrefix.$mhonarc::MHAmsgnum : "";
+     my $tmp;
+ 
+@@ -149,6 +174,7 @@ sub filter {
+ 	warn qq/\n/,
+ 	     qq/Warning: Unrecognized character set: $charset\n/,
+ 	     qq/         Message-Id: <$mhonarc::MHAmsgid>\n/,
++             qq/         Message Subject: /, $fields->{'x-mha-subject'}, qq/\n/,
+ 	     qq/         Message Number: $mhonarc::MHAmsgnum\n/;
+     }
+ 
+@@ -341,12 +367,13 @@ sub filter {
+ 	$$data =~ s/\b$ahref_tmp\b/href/g;
+     }
+ 
++    ## NOTE: Comment strip moved to top.
+     ## Check comment declarations: may screw-up mhonarc processing
+     ## and avoids someone sneaking in SSIs.
+-    if (!$allowcom) {
+-      #$$data =~ s/<!(?:--(?:[^-]|-[^-])*--\s*)+>//go; # can crash perl
+-      $$data =~ s/<!--[^-]+[#X%\$\[]*/<!--/g;  # Just mung them (faster)
+-    }
++#   if (!$allowcom) {
++#     #$$data =~ s/<!(?:--(?:[^-]|-[^-])*--\s*)+>//go; # can crash perl
++#     $$data =~ s/<!--[^-]+[#X%\$\[]*/<!--/g;  # Just mung them (faster)
++#   }
+ 
+     ## Prevent comment spam
+     ## <http://www.google.com/googleblog/2005/01/preventing-comment-spam.html>
+@@ -448,4 +475,45 @@ sub dehtmlize_ascii {
+ 
+ ##---------------------------------------------------------------------------
+ 
++sub strip_comments {
++  my $fields = shift;    # for diagnostics
++  my $data = shift;      # ref to text to strip
++
++  # We avoid using regex since it can lead to performance problems.
++  # We also do not do full SGML-style comment declarations since it
++  # increases parsing complexity.  Here, we just remove any
++  # "<!-- ... -->" strings.  Although whitespace is allowed between
++  # final "--" and ">", we do not support it.
++  
++  my $n = index($$data, '<!--', 0);
++  if ($n < 0) {
++    # Nothing to do.  Good.
++    return $data;
++  }
++
++  my $ret = '';
++  while ($n >= 0) {
++    $ret .= substr($$data, 0, $n);
++    substr($$data, 0, $n) = '';
++    $n = index($$data, '-->', 0);
++    if ($n < 0) {
++      # No end to comment declaration: Warn and strip rest of data.
++      warn qq/\n/,
++           qq/Warning: HTML comment declaration not terminated.\n/,
++           qq/         Message-Id: <$mhonarc::MHAmsgid>\n/,
++           qq/         Message Subject: /, $fields->{'x-mha-subject'}, qq/\n/,
++           qq/         Message Number: $mhonarc::MHAmsgnum\n/;
++      $$data = '';
++      last;
++    }
++    substr($$data, 0, $n+3) = '';
++    $n = index($$data, '<!--', 0);
++  }
++  $ret .= $$data;
++  $$data = $ret;
++  $data;
++}
++
++##---------------------------------------------------------------------------
++
+ 1;
