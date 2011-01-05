@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.25 2010/10/27 20:13:59 zafer Exp $
+# $NetBSD: Makefile,v 1.26 2011/01/05 13:28:30 adam Exp $
 
-DISTNAME=		pure-ftpd-1.0.29
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=		http://download.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=		ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=		ftp://ftp3.fr.pureftpd.org/pure-ftpd/releases/
-MASTER_SITES+=		ftp://ftp.dk.pureftpd.org/mirrors/pure-ftpd/releases/
-MASTER_SITES+=		ftp://ftp.nl.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=		ftp://ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=		ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/
-MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pureftpd/}
+DISTNAME=	pure-ftpd-1.0.29
+CATEGORIES=	net
+MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/ \
+		http://download.pureftpd.org/pub/pure-ftpd/releases/ \
+		ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/ \
+		ftp://ftp3.fr.pureftpd.org/pure-ftpd/releases/ \
+		ftp://ftp.dk.pureftpd.org/mirrors/pure-ftpd/releases/ \
+		ftp://ftp.nl.pureftpd.org/pub/pure-ftpd/releases/ \
+		ftp://ftp.fr.pureftpd.org/pub/pure-ftpd/releases/ \
+		ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/ \
+		${MASTER_SITE_SOURCEFORGE:=pureftpd/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		dawszy@arhea.net
-HOMEPAGE=		http://www.pureftpd.org/project/pure-ftpd
-COMMENT=		Secure FTP daemon with optional SQL support
-LICENSE=		modified-bsd
+MAINTAINER=	dawszy@arhea.net
+HOMEPAGE=	http://www.pureftpd.org/project/pure-ftpd
+COMMENT=	Secure FTP daemon with optional SQL support
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-
 CONFIGURE_ARGS+=	--with-everything
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
