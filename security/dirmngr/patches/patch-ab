@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.8 2011/01/05 07:28:20 adam Exp $
+
+--- configure.orig	2011-01-05 07:14:41.000000000 +0000
++++ configure
+@@ -8608,7 +8608,7 @@ fi
+ # guess-the-dependency by using something like ./configure
+ # LDAPLIBS="-Lfoo -lbar"
+ #
+-for MY_LDAPLIBS in ${LDAPLIBS+"$LDAPLIBS"} "-lldap" "-lldap -llber" "-lldap -llber -lresolv" "-lwldap32"; do
++for MY_LDAPLIBS in ${LDAPLIBS+"$LDAPLIBS"} "-lldap -llber" "-lldap" "-lldap -llber -lresolv" "-lwldap32"; do
+     _ldap_save_libs=$LIBS
+     LIBS="$MY_LDAPLIBS $NETLIBS $LIBS"
+ 
