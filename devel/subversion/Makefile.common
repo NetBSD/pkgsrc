@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2010/06/30 15:07:10 gdt Exp $
+# $NetBSD: Makefile.common,v 1.36 2011/01/06 05:14:02 obache Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -12,7 +12,7 @@ CATEGORIES=		devel scm
 MASTER_SITES=		http://subversion.tigris.org/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://subversion.tigris.org/
+HOMEPAGE=		http://subversion.apache.org/
 LICENSE=		apache-1.1
 
 # gdt isn't set up to test ruby/python/perl and java bindings, and
