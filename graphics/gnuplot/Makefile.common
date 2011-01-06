@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2010/09/19 11:40:05 obache Exp $
+# $NetBSD: Makefile.common,v 1.21 2011/01/06 07:03:55 dholland Exp $
 # used by graphics/gnuplot/Makefile
 # used by graphics/gnuplot-nox11/Makefile
 
@@ -36,3 +36,6 @@ CONFIGURE_ARGS+=	--with-readline=bsd
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .include "../../devel/readline/buildlink3.mk"
 .endif
+
+# Make this available to patch-ah so the font path can include pkgsrc fonts.
+CFLAGS+=-DPKGSRC_PREFIX=\"${PREFIX}\"
