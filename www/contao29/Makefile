@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2010/12/02 15:41:30 taca Exp $
+# $NetBSD: Makefile,v 1.10 2011/01/06 13:19:08 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 DIST_SUBDIR=	${PKGBASE}-20101203
