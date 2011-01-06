@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2011/01/06 11:23:21 obache Exp $
+
+* for the case MIN is aready defined somewhere else.
+
+--- src/ft_file.h.orig	2009-05-20 17:57:08.000000000 +0000
++++ src/ft_file.h
+@@ -20,7 +20,9 @@
+ 
+ #include <apr_pools.h>
+ 
++#ifndef MIN
+ #define MIN(a,b) ((a)<(b)) ? (a) : (b)
++#endif
+ 
+ /* hash result is not the same for a same file whether it is considered as big or small, so use carefully */
+ apr_status_t checksum_file(const char *filename, apr_off_t size, apr_off_t excess_size, apr_uint32_t *state,
