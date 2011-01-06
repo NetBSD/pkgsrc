@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.9 2011/01/06 00:33:39 obache Exp $
+
+--- logfile.c.orig	2005-11-26 13:48:16.000000000 +0000
++++ logfile.c
+@@ -58,7 +58,7 @@ extern int atexit _PROTO(( void (*)(void
+ /* Most systems have these variables but do not declare them. On many
+    of those systems that _do_ declare them, it won't hurt */
+ 
+-#if !defined(__NetBSD__) && !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__)
++#if !defined(__NetBSD__) && !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__) && !defined(__DragonFly__)
+ extern int sys_nerr;
+ extern char *sys_errlist[];
+ #endif
