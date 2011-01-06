@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2011/01/06 12:10:21 obache Exp $
+
+* DragonFly is in same situation as other *BSD.
+
+--- validator/libsres/res_debug.c.orig	2010-04-20 17:10:00.000000000 +0000
++++ validator/libsres/res_debug.c
+@@ -406,7 +406,7 @@ p_fqname(const u_char * cp, const u_char
+  * And, for once, solaris has a better header than the rest, and has const
+  * char ptrs in res_sym.
+  */
+-#if (defined(__p_class_syms) || defined(sun) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__))
++#if (defined(__p_class_syms) || defined(sun) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__DragonFly__))
+ #define RES_SYM_TYPE res_sym
+ #else
+ #define RES_SYM_TYPE res_sym_const

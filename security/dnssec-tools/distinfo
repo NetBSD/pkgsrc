@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/22 21:08:26 pettai Exp $
+$NetBSD: distinfo,v 1.2 2011/01/06 12:10:21 obache Exp $
 
 SHA1 (dnssec-tools-1.7.tar.gz) = 754ffec89a672673cae2572fdbd5340600101528
 RMD160 (dnssec-tools-1.7.tar.gz) = 851e017aba0f32828e0ecf88c9846ebf765112c3
 Size (dnssec-tools-1.7.tar.gz) = 2151305 bytes
 SHA1 (patch-aa) = cf0f806152bf912d9e6d727f66bdb186ec2f55c7
 SHA1 (patch-ab) = 07b5a0dbbca1c41cbb30b19f5a94ec9f8c900c15
+SHA1 (patch-ac) = 582f054f0b4e8c4024d1a327ddf4236e541d4f98
