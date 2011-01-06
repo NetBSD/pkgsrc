@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/01/19 12:00:03 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/06 08:55:37 obache Exp $
 #
 
 DISTNAME=		skey-1.1.5
@@ -30,6 +30,13 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 CONFIGURE_ENV+=		ac_cv_header_md4_h=no
 CONFIGURE_ENV+=		ac_cv_header_sha1_h=no
 BUILDLINK_TRANSFORM+=	l:crypt:md5:crypt
+.endif
+# PR#44324
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ENV+=		ac_cv_header_rmd160_h=no
+.endif
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
+BUILDLINK_TRANSFORM+=	l:crypt:md:crypt
 .endif
 
 post-install:
