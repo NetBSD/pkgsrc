@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.11 2011/01/06 13:19:47 taca Exp $
+$NetBSD: CHANGES-2011,v 1.12 2011/01/06 14:24:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -13,3 +13,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/gnuplot to 4.2.6nb3 [dholland 2011-01-06]
 	Updated graphics/gnuplot-nox11 to 4.2.6nb4 [dholland 2011-01-06]
 	Updated www/contao29 to 2.9.3 [taca 2011-01-06]
+	Updated www/typolight28 to 2.8.4nb2 [taca 2011-01-06]
