@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2010/12/13 13:16:37 taca Exp $
+$NetBSD: distinfo,v 1.9 2011/01/07 09:20:16 taca Exp $
 
-SHA1 (php-5.3.4/php-5.3.4.tar.bz2) = 0b33926e78e1683e3383b3b5c840ee60ba669b0b
-RMD160 (php-5.3.4/php-5.3.4.tar.bz2) = dffbeced87117fd34c948de3ebdde01a25c24dae
-Size (php-5.3.4/php-5.3.4.tar.bz2) = 10804376 bytes
+SHA1 (php-5.3.5/php-5.3.5.tar.bz2) = 355701b723fcb497581c368be4d6e572c150a5ea
+RMD160 (php-5.3.5/php-5.3.5.tar.bz2) = 831018429b87c46da7571397e0d463b81ded11eb
+Size (php-5.3.5/php-5.3.5.tar.bz2) = 10806092 bytes
 SHA1 (patch-aa) = f51491af7c577f36979fc07d52b5857368392e09
 SHA1 (patch-ab) = 7aeb5148056e7f0b150388c4cf60a139f6aeec44
 SHA1 (patch-ac) = a896371d3343c07a5cf46c79d9ca9e1b2164797a
@@ -14,3 +14,4 @@ SHA1 (patch-ah) = b20c29c64b3099f77855a5ec28960dc1c4f65c83
 SHA1 (patch-ai) = d4766893a2c47a4e4a744248dda265b0a9a66a1f
 SHA1 (patch-aj) = d611d13fcc28c5d2b9e9586832ce4b8ae5707b48
 SHA1 (patch-al) = fbbee5502e0cd1c47c6e7c15e0d54746414ec32e
+SHA1 (patch-ar) = edad3e866106cec502ccd93bacf722a771a6c1c0
