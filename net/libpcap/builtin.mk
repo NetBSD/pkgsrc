@@ -1,15 +1,12 @@
-# $NetBSD: builtin.mk,v 1.15 2009/09/13 13:07:11 tron Exp $
+# $NetBSD: builtin.mk,v 1.16 2011/01/07 05:11:36 obache Exp $
 
 BUILTIN_PKG:=	libpcap
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILTIN_FIND_FILES_VAR:=	H_LIBPCAP
-.if empty(MACHINE_PLATFORM:MDarwin-??.*-*)
-BUILTIN_FIND_FILES.H_LIBPCAP=	/usr/include/pcap.h
-.else
 BUILTIN_FIND_FILES.H_LIBPCAP=	/usr/include/pcap/pcap.h
-.endif
+BUILTIN_FIND_FILES.H_LIBPCAP+=	/usr/include/pcap.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
