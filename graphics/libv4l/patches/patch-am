@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2010/12/27 04:58:10 obache Exp $
+$NetBSD: patch-am,v 1.3 2011/01/07 15:20:45 obache Exp $
 
 * XXXX
 * `mode_t' is promoted to `int' when passed through `...'.
@@ -21,7 +21,7 @@ $NetBSD: patch-am,v 1.2 2010/12/27 04:58:10 obache Exp $
  
      va_start (ap, oflag);
 -    mode = va_arg (ap, mode_t);
-+    mode = (mode_t)va_arg (ap, int);
++    mode = (sizeof (mode_t) < sizeof (int) ? (mode_t)va_arg (ap, int) : va_arg (ap, mode_t));
  
      fd = v4l1_open(file, oflag, mode);
  
