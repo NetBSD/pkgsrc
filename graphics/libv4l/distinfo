@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2010/12/27 04:58:10 obache Exp $
+$NetBSD: distinfo,v 1.7 2011/01/07 15:20:45 obache Exp $
 
 SHA1 (libv4l-0.4.3.tar.gz) = 2539aa6b04650b97c9fc7ba95721f1e362a73031
 RMD160 (libv4l-0.4.3.tar.gz) = 4f0435d955f15602ac093385607417fab71deb17
@@ -8,10 +8,10 @@ SHA1 (patch-ab) = 8528622d992e977d6e28388335db0a7c29ab272f
 SHA1 (patch-ac) = e886846a68d20d9c3eed905f10143f5e9f9fa4a0
 SHA1 (patch-ad) = e5a3acfb8c2411bf76c4c43cbe09ba86a19afe84
 SHA1 (patch-ae) = afb8579ac122dc2f0958b3c3d711d3641cf3c0c0
-SHA1 (patch-af) = ce15db36e94b0e386f86b4a024a5eb6d972d0958
+SHA1 (patch-af) = 88429670ab709d398d61002bddb4b210df9def6e
 SHA1 (patch-ah) = d32f2e6aa694d4f0d04e8afbf462b3e61a31bbcc
 SHA1 (patch-ai) = 8f22e4050d5e20981bfdd1fc51e572e42347c2b5
 SHA1 (patch-aj) = 2545189ac57f97ff181645132c25b32aa51f6a47
-SHA1 (patch-ak) = 3c5e709edde178619d4232c8bcd233bc6095ad52
+SHA1 (patch-ak) = 7c9f3c4c5c080b0d7a19e9069e80e4884c737519
 SHA1 (patch-al) = a6eae236be7e16e03047d09b58a6f6d8baafd193
-SHA1 (patch-am) = 477c7b372b06b98ed945772f77313773b77512e5
+SHA1 (patch-am) = 0baf169cb5177f99e0d37de5820aefaee3aa71dd
