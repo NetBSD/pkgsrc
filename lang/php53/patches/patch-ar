@@ -1,0 +1,14 @@
+$NetBSD: patch-ar,v 1.1 2011/01/07 09:20:16 taca Exp $
+
+Fix for VAX floating point handling (Bug #53682), r307192 from PHP's repositry.
+
+--- Zend/zend_strtod.c.orig	2011-01-05 13:32:26.000000000 +0000
++++ Zend/zend_strtod.c
+@@ -164,6 +164,7 @@ typedef unsigned long int uint32_t;
+ 
+ #ifdef __vax__
+ #define VAX
++#undef IEEE_LITTLE_ENDIAN
+ #endif
+ 
+ #if defined(_MSC_VER)
