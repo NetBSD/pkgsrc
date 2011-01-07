@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/01/27 21:35:44 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2011/01/07 04:15:37 obache Exp $
 #
 
 DISTNAME=	p0f-2.0.8
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/p0f
 
 PKG_SYSCONFSUBDIR=     p0f
+
+MAKE_ENV+=	LIBPCAP_PREFIX=${BUILDLINK_PREFIX.libpcap}
 
 CONF_FILES=	${PREFIX}/share/examples/p0f/p0f.fp ${PKG_SYSCONFDIR}/p0f.fp
 CONF_FILES+=	${PREFIX}/share/examples/p0f/p0fa.fp ${PKG_SYSCONFDIR}/p0fa.fp
