@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.13 2011/01/07 03:36:15 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.14 2011/01/07 09:21:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -15,3 +15,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29 to 2.9.3 [taca 2011-01-06]
 	Updated www/typolight28 to 2.8.4nb2 [taca 2011-01-06]
 	Updated www/ikiwiki to 3.20110105 [schmonz 2011-01-07]
+	Updated lang/php5 to 5.2.17 [taca 2011-01-07]
+	Updated lang/php53 to 5.3.5 [taca 2011-01-07]
