@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2.2.1 2010/12/23 10:10:54 sbd Exp $
+# $NetBSD: Makefile.common,v 1.2.2.2 2011/01/08 15:29:47 tron Exp $
 # used by lang/php53/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php53-extensions/Makefile
@@ -39,7 +39,7 @@ EXTRACT_SUFX?=		.tar.bz2
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
 
-PHP_BASE_VERS=		5.3.4
+PHP_BASE_VERS=		5.3.5
 
 PHP_EXTENSION_DIR=	lib/php/20090630
 PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
