@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.2 2009/06/14 18:16:07 joerg Exp $
-lib/hal/scripts/freebsd/hal-system-lcd-get-brightness-freebsd
-lib/hal/scripts/freebsd/hal-system-lcd-set-brightness-freebsd
-lib/hal/scripts/freebsd/hal-system-power-reboot-freebsd
-lib/hal/scripts/freebsd/hal-system-power-set-power-save-freebsd
-lib/hal/scripts/freebsd/hal-system-power-shutdown-freebsd
-lib/hal/scripts/freebsd/hal-system-power-suspend-freebsd
-lib/libhald_freebsd_probe.la
+@comment $NetBSD: PLIST.FreeBSD,v 1.3 2011/01/08 13:00:13 obache Exp $
+libexec/hald-addon-mouse-sysmouse
 libexec/hald-addon-storage
 libexec/hald-probe-hiddev
+libexec/hald-probe-mouse
 libexec/hald-probe-scsi
 libexec/hald-probe-smbios
 libexec/hald-probe-storage
 libexec/hald-probe-volume
+libexec/scripts/freebsd/hal-system-lcd-get-brightness-freebsd
+libexec/scripts/freebsd/hal-system-lcd-set-brightness-freebsd
+libexec/scripts/freebsd/hal-system-power-reboot-freebsd
+libexec/scripts/freebsd/hal-system-power-set-power-save-freebsd
+libexec/scripts/freebsd/hal-system-power-shutdown-freebsd
+libexec/scripts/freebsd/hal-system-power-suspend-freebsd
