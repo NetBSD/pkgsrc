@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/08 20:43:38 markd Exp $
+$NetBSD: distinfo,v 1.2 2011/01/08 22:30:38 dsainty Exp $
 
 SHA1 (util-linux-ng-2.18.tar.bz2) = 154db0512caae0b6e90eee4b7312d4caf3d6b978
 RMD160 (util-linux-ng-2.18.tar.bz2) = 4781871a8f86195b886e81d364d41a57d67869e3
 Size (util-linux-ng-2.18.tar.bz2) = 7669676 bytes
 SHA1 (patch-aa) = 83f8038278928899def6db0f28e3f13b78effbc4
-SHA1 (patch-ab) = bb5caeb2308fd0009d5fce20f7cea96dcdf609c7
+SHA1 (patch-ab) = 3cdd8d9c40b0b25fce088f0537f2d2443bcfb311
 SHA1 (patch-ac) = 48483270d348c466da6f7bcf822e461377830474
 SHA1 (patch-ad) = 36def63e59aff1c045d1821380b3d0191628d897
 SHA1 (patch-ae) = df77e8c6da425609309505fd447b66ade05426a3
