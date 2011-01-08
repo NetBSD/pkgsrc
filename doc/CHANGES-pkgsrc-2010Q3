@@ -4,7 +4,7 @@ pkgsrc-2010Q3 branch:
 Created pkgsrc-2010Q3 branch [agc 2010-10-16 05:16 UTC]
 
 Pullup ticket #3247 - requested by kefren
-graphics/libgdiplus: security patch
+graphics/libgdiplus: security fix
 Pullup ticket #3246 - requested by tron
 mail/pear-Mail_Mime: build fix
 Pullup ticket #3250 - requested by obache
@@ -22,7 +22,7 @@ mail/thunderbird: security update
 Pullup ticket #3258 - requested by tnn
 www/seamonkey: security update
 Pullup ticket #3259 - requested by markd
-graphics/kdegraphics3: security patch
+graphics/kdegraphics3: security fix
 Pullup ticket #3260 - requested by gls
 audio/mpg123: security update
 Pullup ticket #3261 - requested by bouyer
@@ -47,9 +47,9 @@ net/proftpd: security update
 Pullup ticket #3270 - requested by obache
 lang/ruby: fix build of GEM packages under Solaris
 Pullup ticket #3271 - requested by sbd
-print/cups: security patch
+print/cups: security fix
 Pullup ticket #3272 - requested by bouyer
-net/p5-Net-SNMP: bug fix patch
+net/p5-Net-SNMP: bug fix fix
 Pullup ticket #3275 - requested by dholland
 filesystems/fuse: portability fix
 Pullup ticket #3276 - requested by taca
@@ -99,14 +99,14 @@ www/wordpress: security update
 Pullup ticket #3297 - requested by obache
 multimedia/gstreamer0.10: build fix
 Pullup ticket #3298 - requested by bouyer
-sysutils/xenkernel3: security patch
-sysutils/xenkernel33: security patch
+sysutils/xenkernel3: security fix
+sysutils/xenkernel33: security fix
 Pullup ticket #3299 - requested by tez
-security/mit-krb5: security patch
+security/mit-krb5: security fix
 Pullup ticket #3300 - requested by morr
 www/wordpress: security update
 Pullup ticket #3304 - requested by markd
-emulators/suse113_openssl: security patch
+emulators/suse113_openssl: security fix
 Pullup ticket #3302 - requested by tnn
 mail/thunderbird: security update
 Pullup ticket #3303 - requested by tnn
@@ -117,22 +117,27 @@ Pullup ticket #3301 - requested by tnn
 devel/xulrunner: security update
 www/firefox: security update
 Pullup ticket #3307 - requested by shannonjr
-security/pcsc-lite vulnerability
+security/pcsc-lite: security update
 Pullup ticket #3308 - requested by drochner
-security updates for freetype2
+graphics/freetype2: security update
 Pullup ticket #3312 - requested by taca
-lang/{php5,php53} security fixes
+lang/php5: security fix
+lang/php53: security fix
 Pullup ticket #3309 - requested by taca
 textproc/php-intl security fix
 Pullup ticket #3310 - requested by taca
-pkgsrc/www/horde security fix
+www/horde: security fix
 Pullup ticket #3311 - requested by taca
-pkgsrc/www/typo3 security fix
+www/typo3: security fix
 Pullup ticket #3313 - requested by tron
-Security patch for "sysutils/dbus"
+sysutils/dbus: security fix
 Pullup ticket #3314 - requested by morr
-wordpress critical security update.
+www/wordpress: security update.
 Pullup ticket #3315 - requested by taca
-www/geeklog security fix
+www/geeklog: security fix
 Pullup ticket #3316 - requested by tron
-Security patch for wireshark
+net/wireshark: secuity fix
+Pullup ticket #3317 - requested by taca
+www/contao29: security update
+Pullup ticket #3318 - requested by taca
+www/typolight28: security fix
