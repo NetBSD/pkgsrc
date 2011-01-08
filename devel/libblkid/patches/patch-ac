@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/01/08 20:43:39 markd Exp $
+
+Byte order defines for other than linux
+
+--- include/bitops.h.orig	2010-02-04 11:53:56.000000000 +0000
++++ include/bitops.h
+@@ -2,7 +2,20 @@
+ #define BITOPS_H
+ 
+ #include <stdint.h>
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#include <sys/endian.h>
++#define __BYTE_ORDER		_BYTE_ORDER
++#define __LITTLE_ENDIAN		_LITTLE_ENDIAN
++#define __BIG_ENDIAN		_BIG_ENDIAN
++#elif defined(__APPLE__)
++#include <machine/endian.h>
++#include <libkern/OSByteOrder.h>
++#define __BYTE_ORDER		BYTE_ORDER
++#define __LITTLE_ENDIAN		LITTLE_ENDIAN
++#define __BIG_ENDIAN		BIG_ENDIAN
++#else
+ #include <endian.h>
++#endif
+ 
+ /*
+  * Bit map related macros. Usually provided by libc.
