@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/01/08 20:43:39 markd Exp $
+
+Dont add installed libuuid to dependecies but link it in
+
+--- shlibs/blkid/src/Makefile.in.orig	2010-06-30 12:53:06.000000000 +0000
++++ shlibs/blkid/src/Makefile.in
+@@ -382,7 +382,11 @@ libblkid_la_LIBADD = superblocks/libblki
+ 		     partitions/libblkid_partitions.la \
+ 		     $(common_ldadd)
+ 
+-libblkid_la_DEPENDENCIES = $(libblkid_la_LIBADD) blkid.sym blkid.h.in
++libblkid_la_LIBADDx = superblocks/libblkid_superblocks.la \
++		     topology/libblkid_topology.la \
++		     partitions/libblkid_partitions.la
++
++libblkid_la_DEPENDENCIES = $(libblkid_la_LIBADDx) blkid.sym blkid.h.in
+ libblkid_la_LDFLAGS = -Wl,--version-script=$(ul_libblkid_srcdir)/blkid.sym \
+                       -version-info $(LIBBLKID_VERSION_INFO)
+ 

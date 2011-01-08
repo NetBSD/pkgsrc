@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/08 20:43:39 markd Exp $
+
+sh doesn't like the empty case
+
+--- configure.orig	2010-06-30 12:53:01.000000000 +0000
++++ configure
+@@ -18952,11 +18952,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ 
+ 	  syscall=no
+-	  if test "x$linux_os" = xyes; then
+-	    case $host_cpu in
+-
+-	    esac
+-	  fi
+ 
+ fi
+ 
+@@ -19082,11 +19077,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ 
+ 	  syscall=no
+-	  if test "x$linux_os" = xyes; then
+-	    case $host_cpu in
+-
+-	    esac
+-	  fi
+ 
+ fi
+ 
+@@ -19489,11 +19479,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ 
+ 	  syscall=no
+-	  if test "x$linux_os" = xyes; then
+-	    case $host_cpu in
+-
+-	    esac
+-	  fi
+ 
+ fi
+ 
+@@ -19701,11 +19686,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ 
+ 	  syscall=no
+-	  if test "x$linux_os" = xyes; then
+-	    case $host_cpu in
+-
+-	    esac
+-	  fi
+ 
+ fi
+ 

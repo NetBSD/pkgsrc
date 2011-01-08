@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/01/08 20:43:39 markd Exp $
+
+No loff_t in NetBSD
+
+--- shlibs/blkid/src/superblocks/zfs.c.orig	2010-05-19 21:36:25.000000000 +0000
++++ shlibs/blkid/src/superblocks/zfs.c
+@@ -66,7 +66,7 @@ struct nvlist {
+ #define nvdebug(fmt, ...)	do { } while(0)
+ /*#define nvdebug(fmt, a...)	printf(fmt, ##a)*/
+ 
+-static void zfs_extract_guid_name(blkid_probe pr, loff_t offset)
++static void zfs_extract_guid_name(blkid_probe pr, blkid_loff_t offset)
+ {
+ 	struct nvlist *nvl;
+ 	struct nvpair *nvp;
+@@ -164,7 +164,7 @@ static int probe_zfs(blkid_probe pr, con
+ 	uint64_t swab_magic = swab64(UBERBLOCK_MAGIC);
+ 	struct zfs_uberblock *ub;
+ 	int swab_endian;
+-	loff_t offset;
++	blkid_loff_t offset;
+ 	int tried;
+ 	int found;
+ 
