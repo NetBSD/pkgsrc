@@ -1,0 +1,21 @@
+$NetBSD: patch-bb,v 1.1 2011/01/08 14:24:11 drochner Exp $
+
+--- WebCore/page/EventHandler.cpp.orig	2010-09-10 13:20:33.000000000 +0000
++++ WebCore/page/EventHandler.cpp
+@@ -549,13 +549,13 @@ void EventHandler::updateSelectionForMou
+     if (!targetNode)
+         return;
+ 
++    if (!canMouseDragExtendSelect(targetNode))
++	return;
++
+     RenderObject* targetRenderer = targetNode->renderer();
+     if (!targetRenderer)
+         return;
+         
+-    if (!canMouseDragExtendSelect(targetNode))
+-        return;
+-
+     VisiblePosition targetPosition(targetRenderer->positionForPoint(localPoint));
+ 
+     // Don't modify the selection if we're not on a node.
