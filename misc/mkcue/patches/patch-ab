@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2011/01/08 12:43:10 drochner Exp $
+
+--- configure.orig	2011-01-08 20:02:27 +1300
++++ configure	2011-01-08 19:58:18 +1300
+@@ -1387,6 +1387,7 @@
+   *-os2_emx*) os=os2 ;;
+   *-solaris*) os=solaris; LIBS='-lsocket -lnsl' ;;
+   *-qnx*)     os=qnx; LIBS='-lsocket' ;;
++  *-dragonfly*) os=dragonfly;;
+   *)          echo "$as_me:$LINENO: result: WARNING: unknown system" >&5
+ echo "${ECHO_T}WARNING: unknown system" >&6 ;;
+ esac

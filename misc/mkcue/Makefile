@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/27 19:35:00 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/08 12:43:10 drochner Exp $
 #
 
 DISTNAME=	mkcue_1.orig
@@ -18,5 +18,9 @@ USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
 PKG_DESTDIR_SUPPORT= user-destdir
 INSTALLATION_DIRS= bin
+
+post-extract:
+	${CP} ${FILESDIR}/mb_dragonfly.cpp ${WRKSRC}/osdep
+	${CP} ${FILESDIR}/mb_dragonfly.h ${WRKSRC}/osdep
 
 .include "../../mk/bsd.pkg.mk"
