@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.16 2011/01/08 13:40:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.17 2011/01/08 18:06:00 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -19,3 +19,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/php53 to 5.3.5 [taca 2011-01-07]
 	Updated www/contao29-translations to 20110108 [taca 2011-01-08]
 	Updated sysutils/hal to 0.5.14nb1 [obache 2011-01-08]
+	Updated lang/mono to 2.8.2 [kefren 2011-01-08]
+	Updated www/mono-xsp to 2.8.2 [kefren 2011-01-08]
+	Updated www/ap-mono to 2.8.2 [kefren 2011-01-08]
