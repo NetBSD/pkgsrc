@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.74 2010/12/29 10:42:35 obache Exp $
+$NetBSD: distinfo,v 1.75 2011/01/08 18:06:00 kefren Exp $
 
-SHA1 (mono-2.8.1.tar.bz2) = c46f9d8282803e8fd137acdb126e34421762b13c
-RMD160 (mono-2.8.1.tar.bz2) = 1d3c2a71fa46fcb93f201cdce2a19407cb1cd2ef
-Size (mono-2.8.1.tar.bz2) = 31181201 bytes
+SHA1 (mono-2.8.2.tar.bz2) = 4223a40706b422c44be5eb1c89b4f316026a02a5
+RMD160 (mono-2.8.2.tar.bz2) = 8536c1c9a481ece2ba254a7c943353f9ade66a84
+Size (mono-2.8.2.tar.bz2) = 31292886 bytes
 SHA1 (patch-aa) = f3c88247c143cba6d0475f1dabb653adbc841bdb
 SHA1 (patch-ab) = ea20eb85d29c36de8f830a5225cd271d75225407
 SHA1 (patch-ac) = 78f3b0786480e066959cc191e3f45d3f773220e2
@@ -10,7 +10,7 @@ SHA1 (patch-ad) = 55ccdedbdf80c24be110dcebc73644e1e68909b3
 SHA1 (patch-ae) = 0280993f1565ebd6fb552d12cfe12d105421de53
 SHA1 (patch-af) = c109a9a742cb70d83cf99df0ad6c907c68809d52
 SHA1 (patch-ag) = 425f470151cc8a60d1ac301b9fd1cc2abb399ea3
-SHA1 (patch-ah) = 35a76fa725ab507538e37cbf391492614a78507f
+SHA1 (patch-ah) = 5f90aa60504b9508d21e05b390626788d71d47b4
 SHA1 (patch-ai) = cd5593a7e95039980b839bdabdf59d9e68fb9f56
 SHA1 (patch-aj) = a5aab739e01fd969edb85b5b3e08c087554d0a72
 SHA1 (patch-ak) = 034d260926fb31aa6b94faf5942f6ec7c7b461df
