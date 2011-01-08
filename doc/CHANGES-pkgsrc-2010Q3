@@ -141,3 +141,6 @@ Pullup ticket #3317 - requested by taca
 www/contao29: security update
 Pullup ticket #3318 - requested by taca
 www/typolight28: security fix
+Pullup ticket #3319 - requested by taca
+lang/php5: security update
+lang/php53: security update
