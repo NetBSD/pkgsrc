@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.12 2010/12/29 05:41:20 obache Exp $
---- mono/utils/mono-semaphore.c.orig	2010-10-07 23:41:21.000000000 +0300
-+++ mono/utils/mono-semaphore.c	2010-10-07 23:44:31.000000000 +0300
+$NetBSD: patch-ah,v 1.13 2011/01/08 18:06:00 kefren Exp $
+--- mono/utils/mono-semaphore.c.orig	2011-01-04 19:39:55.000000000 +0200
++++ mono/utils/mono-semaphore.c	2011-01-08 18:52:28.000000000 +0200
 @@ -22,7 +22,7 @@
  #  ifdef USE_MACH_SEMA
  #    define TIMESPEC mach_timespec_t
@@ -10,7 +10,7 @@ $NetBSD: patch-ah,v 1.12 2010/12/29 05:41:20 obache Exp $
  #    define TIMESPEC struct timespec
  #    define WAIT_BLOCK(a) sem_trywait(a)
  #  else
-@@ -34,20 +34,34 @@
+@@ -34,12 +34,13 @@
  int
  mono_sem_timedwait (MonoSemType *sem, guint32 timeout_ms, gboolean alertable)
  {
@@ -27,9 +27,7 @@ $NetBSD: patch-ah,v 1.12 2010/12/29 05:41:20 obache Exp $
  
  #ifndef USE_MACH_SEMA
  	if (timeout_ms == 0)
- 		return (!sem_trywait (sem));
- #endif
-+
+@@ -48,6 +49,19 @@
  	if (timeout_ms == (guint32) 0xFFFFFFFF)
  		return mono_sem_wait (sem, alertable);
  
@@ -41,14 +39,15 @@ $NetBSD: patch-ah,v 1.12 2010/12/29 05:41:20 obache Exp $
 +			break;
 +		usleep(50000);
 +		timeout -= 50;
-+		if (alertable)	/* XXX: Not on EINTR */
++		if (alertable)  /* XXX: Not on EINTR */
 +			return -1;
 +	} while (timeout > 50);
 +#else
- 	gettimeofday (&t, NULL);
- 	ts.tv_sec = timeout_ms / 1000 + t.tv_sec;
- 	ts.tv_nsec = (timeout_ms % 1000) * 1000000 + t.tv_usec * 1000;
-@@ -55,19 +69,6 @@ mono_sem_timedwait (MonoSemType *sem, gu
++
+ #ifdef USE_MACH_SEMA
+ 	memset (&t, 0, sizeof (TIMESPEC));
+ #else
+@@ -59,19 +73,6 @@
  		ts.tv_nsec -= NSEC_PER_SEC;
  		ts.tv_sec++;
  	}
