@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2010/12/29 00:12:15 tron Exp $
+$NetBSD: distinfo,v 1.20 2011/01/08 13:00:13 obache Exp $
 
 SHA1 (hal-0.5.14.tar.bz2) = a6ec098d78112e18e2773afa5f9ed642b00c4c59
 RMD160 (hal-0.5.14.tar.bz2) = 0314dace9512bf49a62bd1556963fc60a6c9caf9
@@ -12,14 +12,19 @@ SHA1 (patch-af) = 161b59ee30d59dbc9e0c79f7f3162bcec5480d99
 SHA1 (patch-ag) = 3fd8b7d10b1a43311541d2c6ad67a944e286c5ec
 SHA1 (patch-ah) = 6d801a2c30cee6199b25acf46d7e9866f6004182
 SHA1 (patch-aj) = f20e4b1286d177e53a550b2ba1608d22e4b5c609
-SHA1 (patch-ak) = f4ba0655a452fc13e83a7b93703b4da417e8597f
+SHA1 (patch-ak) = c6e9f20df9230de1bbf599315ad7f32fe6433f48
 SHA1 (patch-al) = fe567d7504e961cb623e492f8dc155ef2f3b4c9e
 SHA1 (patch-am) = 6a4940006e583300d9a983511bdcb05268f74b1a
 SHA1 (patch-an) = 0307b2f0f6bb5e4a6d7bf837163e74749b7d24b2
-SHA1 (patch-ao) = e450f8d5fd4705cf9f4eb3e827a61179b4148646
+SHA1 (patch-ao) = 2bbd39404284c5c05068e87c9d20b8f6a65c3503
 SHA1 (patch-ap) = 9051ced9c00911b993198c98c6d02f5846c16728
 SHA1 (patch-aq) = 7d0b224b4b1e6052983a6512217eee4f530e0720
+SHA1 (patch-ar) = bf44c939b338359f18457b1e65434731c3605130
+SHA1 (patch-as) = a6319e523affc90701f09266949cb7891c044ba7
+SHA1 (patch-at) = 040a018a7be5b28a0dc23dd66a0c10bbb0abc6bf
+SHA1 (patch-au) = c9e843f57b8a31f1bdc42478d450ea5606b4d7db
+SHA1 (patch-av) = 075ab5e265be4733d856a17184129d0b301bc0b8
 SHA1 (patch-ax) = 278cbf10dd288f7a4aeedd7545b325c1a82715db
-SHA1 (patch-na) = 127bd8aa2c837a525685e4ab8ef0429059130b2b
+SHA1 (patch-na) = dbd9d7ae94e80163537db547f0907d700e8f13b9
 SHA1 (patch-nb) = 1693b7a2faa5bee20a594f0b60b8ff6caea0efdc
 SHA1 (patch-nc) = 32453e49734902749ce24eb4364fc7f531986227
