@@ -1,5 +1,5 @@
 ## Process this file with automake to produce Makefile.in
-# $NetBSD: Makefile.am,v 1.1 2008/11/27 03:32:19 jmcneill Exp $
+# $NetBSD: Makefile.am,v 1.2 2011/01/08 13:39:08 obache Exp $
 
 AM_CPPFLAGS = \
 	-DPACKAGE_LIBEXEC_DIR=\""$(libexecdir)"\" \
@@ -7,12 +7,12 @@ AM_CPPFLAGS = \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
 	-DPACKAGE_BIN_DIR=\""$(bindir)"\" \
 	-DPACKAGE_LOCALSTATEDIR=\""$(localstatedir)"\" \
-	-DPACKAGE_SCRIPT_DIR=\""$(libdir)/hal/scripts"\" \
+	-DPACKAGE_SCRIPT_DIR=\""$(libexecdir)/scripts"\" \
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
 	-I$(top_srcdir) -I$(top_srcdir)/libhal -I$(top_srcdir)/libhal-storage \
 	@DBUS_CFLAGS@ @GLIB_CFLAGS@ @POLKIT_CFLAGS@
 
-scriptdir = $(libdir)/hal/scripts/netbsd
+scriptdir = $(libexecdir)/scripts/netbsd
 
 script_SCRIPTS =					\
 	hal-system-power-suspend-netbsd			\
