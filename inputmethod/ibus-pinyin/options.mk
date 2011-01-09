@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/08/07 02:02:40 obache Exp $
+# $NetBSD: options.mk,v 1.2 2011/01/09 11:02:50 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ibus-pinyin
@@ -13,8 +13,8 @@ PLIST_VARS+=	lua
 #
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-lua
+CONFIGURE_ARGS+=	--enable-lua-extension
 PLIST.lua=		yes
 .else
-CONFIGURE_ARGS+=	--disable-lua
+CONFIGURE_ARGS+=	--disable-lua-extension
 .endif
