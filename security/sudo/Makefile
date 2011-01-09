@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.125 2011/01/07 17:54:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.126 2011/01/09 19:22:17 jmmv Exp $
 #
 
 DISTNAME=		sudo-1.7.4p4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -43,7 +43,7 @@ DOCDIR=			share/doc/${PKGBASE}
 EGDIR=			share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0440
-OWN_DIRS=		${PKG_SYSCONFDIR}/sudoers.d
+OWN_DIRS+=		${PKG_SYSCONFDIR}/sudoers.d
 SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
