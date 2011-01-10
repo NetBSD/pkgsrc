@@ -1,3 +1,7 @@
+$NetBSD: patch-aa,v 1.5 2011/01/10 12:17:43 obache Exp $
+
+* for the case of ${PKG_SYSCONFDIR} != ${LOCALBASE}/etc
+
 --- Makefile.orig	2006-03-19 11:32:58.000000000 +0000
 +++ Makefile	2006-09-19 14:10:20.000000000 +0100
 @@ -37,7 +37,7 @@
