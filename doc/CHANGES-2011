@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.20 2011/01/10 13:31:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.21 2011/01/10 15:23:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -26,3 +26,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/libblkid version 2.18 [markd 2011-01-08]
 	Updated mail/mhonarc to 2.6.18 [spz 2011-01-09]
 	Updated www/contao29-translations to 20110110 [taca 2011-01-10]
+	Downgraded graphics/digikam to 1.6.0 [wiz 2011-01-10]
+	Downgraded graphics/kipi-plugins to 1.6.0nb1 [wiz 2011-01-10]
