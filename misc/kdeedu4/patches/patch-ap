@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2011/01/10 11:16:34 markd Exp $
+
+--- kstars/kstars/htmesh/SkipListElement.h.orig	2010-06-08 10:11:38.000000000 +0000
++++ kstars/kstars/htmesh/SkipListElement.h
+@@ -22,7 +22,7 @@
+ #ifdef _WIN32
+ #define KEY_MAX _I64_MAX
+ #else
+-#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || ( defined(__SUNPRO_CC) && defined(__sun) )
++#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__) || ( defined(__SUNPRO_CC) && defined(__sun) )
+ #    define KEY_MAX LLONG_MAX
+ #  else
+ #    define KEY_MAX LONG_LONG_MAX
