@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.2 2010/12/19 09:53:43 adam Exp $
+# $NetBSD: pgsql.sh,v 1.3 2011/01/10 14:50:56 adam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -60,6 +60,8 @@ pgsql_precmd()
 
 pgsql_initdb()
 {
+	initdb="@PG_PREFIX@/bin/initdb"
+
 	if [ -d ${pgsql_home}/data/base ]; then
 		@ECHO@ "The PostgreSQL template databases have already been initialized."
 		@ECHO@ "Skipping database initialization."
@@ -69,7 +71,7 @@ pgsql_initdb()
 		@CHOWN@ ${pgsql_user} ${pgsql_home}
 		@CHGRP@ ${pgsql_group} ${pgsql_home}
 		@CHMOD@ 0700 ${pgsql_home}
-		doit="@SU@ -m ${pgsql_user} -c '${command} init ${command_args}'"
+		doit="@SU@ -m ${pgsql_user} -c '${initdb} -D ${pgsql_home}/data'"
 		eval $doit
 	fi
 }
