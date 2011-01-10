@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2010/04/10 02:45:04 markd Exp $
+$NetBSD: patch-af,v 1.2 2011/01/10 11:30:23 markd Exp $
 
 --- kopete/libkopete/avdevice/videodevice.h.orig	2009-03-18 10:00:00.000000000 +0000
 +++ kopete/libkopete/avdevice/videodevice.h
@@ -6,13 +6,13 @@ $NetBSD: patch-af,v 1.1 2010/04/10 02:45:04 markd Exp $
  #endif // HAVE_V4L2
  
  #endif // __linux__
-+#if defined(__NetBSD__) && defined(ENABLE_AV)
++#if (defined(__NetBSD__) || defined(__DragonFly__)) && defined(ENABLE_AV)
 +
 +#ifdef HAVE_LIBV4L2
 +#include <libv4l2.h>
 +#endif // HAVE_V4L2
 +
-+#endif // __NetBSD__
++#endif // __NetBSD__ __DragonFly__
  
  #include <qstring.h>
  #include <qfile.h>
