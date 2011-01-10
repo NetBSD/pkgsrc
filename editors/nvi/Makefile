@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/06/02 13:24:34 adam Exp $
+# $NetBSD: Makefile,v 1.40 2011/01/10 11:06:29 obache Exp $
 
 DISTNAME=	nvi-1.81.6
 PKGREVISION=	6
@@ -31,6 +31,7 @@ CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 # XXX also ignore it on Darwin (fixes Tiger build)
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ENV+=		vi_cv_include_sys_select=no
+CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 LDFLAGS+=		-flat_namespace
