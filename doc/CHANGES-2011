@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.18 2011/01/08 20:52:26 markd Exp $
+$NetBSD: CHANGES-2011,v 1.19 2011/01/10 06:45:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -24,3 +24,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ap-mono to 2.8.2 [kefren 2011-01-08]
 	Added devel/libuuid version 2.18 [markd 2011-01-08]
 	Added devel/libblkid version 2.18 [markd 2011-01-08]
+	Updated mail/mhonarc to 2.6.18 [spz 2011-01-09]
