@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2011/01/10 20:16:56 drochner Exp $
+
+--- backend/dvi/mdvi-lib/afmparse.c.orig	2009-04-24 07:24:16.000000000 +0000
++++ backend/dvi/mdvi-lib/afmparse.c
+@@ -160,7 +160,7 @@ static char *token(FILE *stream)
+     
+     idx = 0;
+     while (ch != EOF && ch != ' ' && ch != lineterm 
+-           && ch != '\t' && ch != ':' && ch != ';') 
++           && ch != '\t' && ch != ':' && ch != ';' && idx < MAX_NAME)
+     {
+         ident[idx++] = ch;
+         ch = fgetc(stream);
