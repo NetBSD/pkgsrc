@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/01/10 12:28:12 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/10 12:31:41 obache Exp $
 #
 
 DISTNAME=	tits-1.2.2
@@ -7,6 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mctavish.co.uk/tits/
 
 MAINTAINER=	scw@NetBSD.org
+HOMEPAGE=	http://www.mctavish.co.uk/tits/
 COMMENT=	Server which provides telnet(1) access to one or more tty ports
 LICENSE=	original-bsd
 
