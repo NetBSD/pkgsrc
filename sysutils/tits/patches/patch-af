@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2011/01/10 12:47:03 obache Exp $
+
+* ignore WALLSIG if not exists.
+
+--- stdio2pty.c.orig	2004-09-12 19:20:28.000000000 +0000
++++ stdio2pty.c
+@@ -18,6 +18,10 @@
+ 
+ #define	MAX_BUFF_LEN	32768
+ 
++#ifndef WALLSIG
++#define WALLSIG 0
++#endif
++
+ static int all_done, exit_status, child_pid;
+ 
+ static struct buffer_ctx *stdout_buff;

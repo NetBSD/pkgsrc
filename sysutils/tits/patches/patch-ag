@@ -1,0 +1,36 @@
+$NetBSD: patch-ag,v 1.1 2011/01/10 12:47:03 obache Exp $
+
+* only for TIOCGFLAGS avalilable.
+
+--- tty.c.orig	2006-03-19 11:32:48.000000000 +0000
++++ tty.c
+@@ -32,6 +32,7 @@
+ #include <sys/types.h>
+ #include <sys/filio.h>
+ #include <sys/ioctl.h>
++#include <sys/stat.h>
+ 
+ #include <assert.h>
+ #include <ctype.h>
+@@ -318,7 +319,9 @@ tty_open_device(struct client_ctx *cc)
+ {
+ 	struct tty_ctx *tc = cc->cc_data;
+ 	struct termios tent;
++#ifdef TIOCGFLAGS
+ 	int flags;
++#endif
+ 	int fd, fd2;
+ 
+ 	if (tc->tc_open)
+@@ -369,7 +372,11 @@ tty_open_device(struct client_ctx *cc)
+ 	 * If this is *not* a pseudo tty, ensure DTR is asserted.
+ 	 * Note: This relies on TIOCGFLAGS returning ENOTTY for pty(4)'s.
+ 	 */
++#ifdef TIOCGFLAGS
+ 	if (ioctl(fd, TIOCGFLAGS, &flags) == 0 && errno == ENOTTY &&
++#else
++	if (
++#endif
+ 	    ioctl(fd, TIOCSDTR, 0) < 0) {
+ 		syslog(LOG_ALERT, "tty_open_device(): assert DTR failed (%d)",
+ 		    errno);
