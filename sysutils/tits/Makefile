@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/01/10 12:15:13 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/01/10 12:28:12 obache Exp $
 #
 
 DISTNAME=	tits-1.2.2
@@ -30,4 +30,5 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/tits.conf ${DESTDIR}${PREFIX}/share/examples/
 
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
