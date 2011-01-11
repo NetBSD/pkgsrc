@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2010/11/15 22:58:30 abs Exp $
+# $NetBSD: Makefile,v 1.23 2011/01/11 15:27:25 drochner Exp $
 #
 
-DISTNAME=	brasero-2.30.2
-PKGREVISION=	3
+DISTNAME=	brasero-2.32.1
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/2.30/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,7 +23,6 @@ USE_TOOLS+=	pkg-config gmake intltool gawk msgfmt
 
 CONFIGURE_ARGS+=	--disable-inotify
 
-GCONF_SCHEMAS+=		brasero.schemas
 PKGCONFIG_OVERRIDE+=	libbrasero-media.pc.in
 
 .include "../../databases/shared-mime-info/mimedb.mk"
