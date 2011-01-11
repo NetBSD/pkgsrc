@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.25 2011/01/11 20:07:02 gls Exp $
+$NetBSD: CHANGES-2011,v 1.26 2011/01/11 20:47:04 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/gallery2 to 2.3.1 [jym 2011-01-11]
 	Updated graphics/libraw to 0.12.3 [gls 2011-01-11]
 	Updated lang/vala to 0.10.2 [gls 2011-01-11]
+	Updated graphics/shotwell to 0.8.0 [gls 2011-01-11]
