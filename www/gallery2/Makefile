@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/07/26 07:51:10 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/11 12:35:45 jym Exp $
 #
 
-DISTNAME=		gallery-2.2.6-full
-PKGNAME=		gallery-2.2.6
+DISTNAME=		gallery-2.3.1-full
+PKGNAME=		gallery-2.3.1
 PKGREVISION=		1
 CATEGORIES=		www graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gallery/}
@@ -28,7 +28,12 @@ WRKSRC=			${WRKDIR}/gallery2
 
 REPLACE_PERL=		lib/tools/po/*.pl
 
-PKG_SYSCONFDIR=		${G2DIR}
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*/bin/php
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	lib/tools/po/extract.php
+
+PKG_SYSCONFSUBDIR=	gallery2
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
@@ -39,18 +44,22 @@ G2DIR=			${PREFIX}/share/gallery2
 DATADIR=		${VARBASE}/gallery2
 G2DATA=			${DATADIR}/g2data
 
-CONF_FILES_PERMS=	${DESTDIR}${EGDIR}/config.php ${DESTDIR}${G2DIR}/config.php \
-			${ROOT_USER} ${ROOT_GROUP} 0644
+CONF_FILES=		${EGDIR}/gallery2.conf \
+			${PKG_SYSCONFDIR}/gallery2.conf
 
-MESSAGE_SUBST+=		G2DIR=${G2DIR}
-MESSAGE_SUBST+=		G2DATA=${G2DATA}
-FILES_SUBST+=		G2DIR=${G2DIR}
+CONF_FILES_PERMS+=	${EGDIR}/config.php \
+			${G2DIR}/config.php \
+			${APACHE_USER} ${APACHE_GROUP} 0640
+
+MESSAGE_SUBST+=		G2DIR=${G2DIR:Q}
+MESSAGE_SUBST+=		G2DATA=${G2DATA:Q}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+FILES_SUBST+=		G2DIR=${G2DIR:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/gallery2.conf
 SUBST_FILES.paths+=	${WRKDIR}/config.php
-SUBST_FILES.paths+=	${WRKSRC}/lib/tools/po/extract.php
-SUBST_VARS.paths+=	G2DIR G2DATA PREFIX
+SUBST_VARS.paths+=	G2DIR G2DATA
 SUBST_STAGE.paths=	post-patch
 
 OWN_DIRS_PERMS+=	${G2DATA} ${APACHE_USER} ${APACHE_GROUP} 755

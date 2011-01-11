@@ -1,8 +1,20 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/03/16 23:02:02 pettai Exp $
+$NetBSD: MESSAGE,v 1.2 2011/01/11 12:35:45 jym Exp $
 
-Gallery2 is now installed in the ${G2DIR} directory,
-and Gallery2's data directory is ${G2DATA}.
+For pkgsrc installations, Gallery2 is installed with the following
+locations:
+
+	Document root:		${G2DIR}
+	Data directory:		${G2DATA}
+
+You will need to make Gallery2 accessible through your HTTP server.
+If you are running Apache and ap-php, you can use the following file:
+
+	${PKG_SYSCONFDIR}/gallery2.conf
+
+and add an Include directive directly within Apache configuration:
+
+	Include ${PKG_SYSCONFDIR}/gallery2.conf
 
 To get the final installation & setup instructions, go to the Gallery2
 documentation homepage:
