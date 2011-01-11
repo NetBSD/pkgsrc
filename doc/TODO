@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10004 2011/01/11 16:34:11 wiz Exp $
+$NetBSD: TODO,v 1.10005 2011/01/11 20:08:51 gls Exp $
 
 Suggested new packages
 ======================
@@ -1330,7 +1330,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-3.07
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.10.2
 	o valgrind-3.6.0
 	o vera-1.17
 	o veusz-1.10
