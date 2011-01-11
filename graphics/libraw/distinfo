@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/12/22 16:02:18 gls Exp $
+$NetBSD: distinfo,v 1.5 2011/01/11 19:50:17 gls Exp $
 
-SHA1 (LibRaw-0.12.1.tar.gz) = bff9ad0141a34b8561503b2b59022a994f87f48f
-RMD160 (LibRaw-0.12.1.tar.gz) = 2934b40075835c5446a91e9d8d95ed95be76cdef
-Size (LibRaw-0.12.1.tar.gz) = 765610 bytes
+SHA1 (LibRaw-0.12.3.tar.gz) = e4039f7fb4124016abfb0686a496e620ea0c1268
+RMD160 (LibRaw-0.12.3.tar.gz) = aad2135d4bf6811df0258e5e28c655e4b4a7e68b
+Size (LibRaw-0.12.3.tar.gz) = 767393 bytes
