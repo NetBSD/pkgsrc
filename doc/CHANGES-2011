@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.23 2011/01/11 13:45:27 jym Exp $
+$NetBSD: CHANGES-2011,v 1.24 2011/01/11 19:51:27 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -30,3 +30,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Downgraded graphics/kipi-plugins to 1.6.0nb1 [wiz 2011-01-10]
 	Updated sysutils/ipa to 2.0.9 [obache 2011-01-11]
 	Updated www/gallery2 to 2.3.1 [jym 2011-01-11]
+	Updated graphics/libraw to 0.12.3 [gls 2011-01-11]
