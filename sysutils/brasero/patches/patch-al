@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 2011/01/11 15:27:26 drochner Exp $
+
+--- configure.orig	2010-11-15 16:04:30.000000000 +0000
++++ configure
+@@ -11223,8 +11223,8 @@ install-data-am: install-gsettings-schem
+ .SECONDARY: $(gsettings_SCHEMAS)
+ 
+ gsettings__base_list = \
+-  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
+-  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
++  gsed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
++  gsed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
+ 
+ install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid) $(gsettings__enum_file)
+ 	@$(NORMAL_INSTALL)
