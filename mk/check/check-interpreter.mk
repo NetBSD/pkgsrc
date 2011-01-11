@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.24 2010/08/24 19:08:29 bad Exp $
+# $NetBSD: check-interpreter.mk,v 1.25 2011/01/11 12:03:18 obache Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -49,6 +49,9 @@ _check-interpreter: error-check .PHONY
 		${_CHECK_INTERP_SKIP:@p@${p}) continue ;;@}		\
 		*) ;;							\
 		esac;							\
+		if [ ! -f "$$file" ]; then				\
+			continue;					\
+		fi;							\
 		if [ ! -r "$$file" ]; then				\
 			${DELAYED_WARNING_MSG} "[check-interpreter.mk] File \"${DESTDIR}${PREFIX}/$$file\" cannot be read."; \
 			continue;					\
