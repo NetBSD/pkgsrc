@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/01/11 11:53:13 drochner Exp $
 bin/nickle
 include/nickle/builtin-namespaces.h
 include/nickle/builtin.h
@@ -50,11 +50,13 @@ share/nickle/examples/turtle/COPYING
 share/nickle/examples/turtle/snowflake.5c
 share/nickle/examples/turtle/snowflake.tex
 share/nickle/examples/turtle/turtle.5c
+share/nickle/factorial.5c
 share/nickle/file.5c
 share/nickle/history.5c
 share/nickle/math.5c
 share/nickle/mutex.5c
 share/nickle/parse-args.5c
+share/nickle/prime_sieve.5c
 share/nickle/printf.5c
 share/nickle/prng.5c
 share/nickle/process.5c
