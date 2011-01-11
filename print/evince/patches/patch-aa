@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.10 2011/01/11 12:47:55 drochner Exp $
+
+--- configure.orig	2010-09-27 19:02:20.000000000 +0000
++++ configure
+@@ -18419,8 +18419,8 @@ install-data-am: install-gsettings-schem
+ .SECONDARY: $(gsettings_SCHEMAS)
+ 
+ gsettings__base_list = \
+-  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
+-  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
++  gsed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
++  gsed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
+ 
+ install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid) $(gsettings__enum_file)
+ 	@$(NORMAL_INSTALL)
+@@ -21565,7 +21565,7 @@ $as_echo "$as_me: WARNING: Offline help 
+     enable_help=no
+ fi
+ 
+-if test "x$enable_help" = "xyes" && test "x$gnome_doc_utils" == "xno"; then
++if test "x$enable_help" = "xyes" && test "x$gnome_doc_utils" = "xno"; then
+     as_fn_error "gnome-doc-utils not found; use --disable-help to disable help files
+     " "$LINENO" 5
+ fi

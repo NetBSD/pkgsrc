@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.31 2011/01/10 20:16:55 drochner Exp $
+$NetBSD: distinfo,v 1.32 2011/01/11 12:47:55 drochner Exp $
 
-SHA1 (evince-2.30.3.tar.bz2) = 381730a6fc66bbd823edbd0aa50b480e5d40f130
-RMD160 (evince-2.30.3.tar.bz2) = 67b5a9ba2da16f20946447cfcbd482505b2f4fc0
-Size (evince-2.30.3.tar.bz2) = 2180874 bytes
+SHA1 (evince-2.32.0.tar.bz2) = 2f06a2b9dfd8667f4b4c6e90be3c49f6fe026fc8
+RMD160 (evince-2.32.0.tar.bz2) = a2d52685ac119b70cf40f320de457b3dfbac2587
+Size (evince-2.32.0.tar.bz2) = 2295272 bytes
+SHA1 (patch-aa) = e42418b7431329767e95d81bf7493b5e3a85cc8b
 SHA1 (patch-ba) = d4a76caf461fb4734c05025bc8c00f2549c22e19
 SHA1 (patch-bb) = e4ef54ccb32414e335110167b4bc0363969aa612
 SHA1 (patch-bc) = 36bcaf9ecb6ac88f18272926b8fbb410f981edd9
