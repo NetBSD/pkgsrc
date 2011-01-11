@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/11 20:42:34 drochner Exp $
+
+--- setup.py.orig	2010-03-23 10:30:49.000000000 +0000
++++ setup.py	2010-05-05 09:48:51.000000000 +0000
+@@ -149,13 +149,6 @@
+         """overridden from install_lib class"""
+         install_lib.install_lib.run(self)
+         # create Products.__init__.py if needed
+-        if subpackage_of:
+-            product_init = join(self.install_dir, subpackage_of, '__init__.py')
+-            if not exists(product_init):
+-                self.announce('creating %s' % product_init)
+-                stream = open(product_init, 'w')
+-                stream.write(EMPTY_FILE)
+-                stream.close()
+         # manually install included directories if any
+         if include_dirs:
+             if subpackage_of:
