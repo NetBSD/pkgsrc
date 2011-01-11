@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/09/07 16:37:56 drochner Exp $
+$NetBSD: distinfo,v 1.7 2011/01/11 15:21:39 drochner Exp $
 
-SHA1 (eric4-4.4.8.tar.gz) = d3f1116361d32ec59f60e5994b348543a2986432
-RMD160 (eric4-4.4.8.tar.gz) = 48f3529338e892a5dd416bc016d309a5beb7931f
-Size (eric4-4.4.8.tar.gz) = 6688612 bytes
+SHA1 (eric4-4.4.11.tar.gz) = 87296d2620aa125277dff2732d643b09c61165ef
+RMD160 (eric4-4.4.11.tar.gz) = 10381411d3d03d5bc4de870affe1593b66af7047
+Size (eric4-4.4.11.tar.gz) = 6693947 bytes
