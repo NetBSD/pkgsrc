@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/15 10:45:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/11 11:39:50 drochner Exp $
 bin/cxfreeze${PYVERSSUFFIX}
 ${PYSITELIB}/cx_Freeze/__init__.py
 ${PYSITELIB}/cx_Freeze/__init__.pyc
@@ -53,6 +53,8 @@ ${PYSITELIB}/cx_Freeze/samples/simple/hello.py
 ${PYSITELIB}/cx_Freeze/samples/simple/setup.py
 ${PYSITELIB}/cx_Freeze/samples/wx/setup.py
 ${PYSITELIB}/cx_Freeze/samples/wx/wxapp.py
+${PYSITELIB}/cx_Freeze/samples/zope/qotd.py
+${PYSITELIB}/cx_Freeze/samples/zope/setup.py
 ${PYSITELIB}/cx_Freeze/util.so
 ${PYSITELIB}/cx_Freeze/windist.py
 ${PYSITELIB}/cx_Freeze/windist.pyc
