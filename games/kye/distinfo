@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2010/05/05 18:33:25 drochner Exp $
+$NetBSD: distinfo,v 1.8 2011/01/11 15:40:57 drochner Exp $
 
-SHA1 (kye-0.9.4.tar.gz) = 105d1e1601096992e42f900b6c5141ff578e06fb
-RMD160 (kye-0.9.4.tar.gz) = ff56c8911fe7d796ef797ae701f8af99e36726d7
-Size (kye-0.9.4.tar.gz) = 51974 bytes
-SHA1 (patch-aa) = 2c711e1945c68f87027ebd59ef698ab367245568
+SHA1 (kye-1.0.tar.gz) = 5524380563daab023e3fb973ba044213e9156ac6
+RMD160 (kye-1.0.tar.gz) = aeee799f55be4708dbc22218b133dc3c509a26c6
+Size (kye-1.0.tar.gz) = 55245 bytes
+SHA1 (patch-aa) = 5c11edcfdad20c740d35cfce5bf78288daec4fa0
