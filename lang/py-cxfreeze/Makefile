@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/15 10:45:57 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/11 11:39:50 drochner Exp $
 #
 
-VERS=			4.2
+VERS=			4.2.2
 DISTNAME=		cx_Freeze-${VERS}
-PKGNAME=		${PYPKGPREFIX}-cxfreeze-4.2
+PKGNAME=		${PYPKGPREFIX}-cxfreeze-${VERS}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cx-freeze/}
 
