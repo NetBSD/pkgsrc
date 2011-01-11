@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/12/22 16:02:18 gls Exp $
+# $NetBSD: Makefile,v 1.7 2011/01/11 19:50:17 gls Exp $
 #
 
-DISTNAME=		LibRaw-0.12.1
+DISTNAME=		LibRaw-0.12.3
 PKGNAME=		${DISTNAME:tl}
 CATEGORIES=		graphics
 MASTER_SITES=	http://www.libraw.org/data/
@@ -17,6 +17,10 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config gmake
 MAKE_JOBS_SAFE=	no
+
+CONFIGURE_ARGS+=	--disable-examples
+CONFIGURE_ARGS+=	--disable-demosaic-pack-gpl2
+CONFIGURE_ARGS+=	--disable-demosaic-pack-gpl3
 
 PKGCONFIG_OVERRIDE+=	libraw.pc.in
 PKGCONFIG_OVERRIDE+=	libraw_r.pc.in
