@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/12/17 07:36:11 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/11 20:46:16 gls Exp $
 #
 
-DISTNAME=		shotwell-0.7.2
-PKGREVISION=		4
+DISTNAME=		shotwell-0.8.0
 CATEGORIES=		graphics
-MASTER_SITES=		http://yorba.org/download/shotwell/0.7/
+MASTER_SITES=		http://yorba.org/download/shotwell/0.8/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
@@ -19,6 +18,7 @@ USE_TOOLS+=		gmake bash pkg-config
 
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--assume-pkgs
 CONFIGURE_ENV+=		--define=NO_CAMERA
 
 REPLACE_SH+=		minver configure libraw-config
@@ -43,6 +43,7 @@ post-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
