@@ -1,113 +1,24 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
+$NetBSD: patch-ab,v 1.2 2011/01/11 20:46:16 gls Exp $
 
---- src/CameraTable.vala.orig	2010-09-10 22:55:55.000000000 +0000
+--- src/CameraTable.vala.orig	2010-12-23 23:01:46.000000000 +0000
 +++ src/CameraTable.vala
-@@ -1,7 +1,7 @@
- /* Copyright 2009-2010 Yorba Foundation
-  *
-  * This software is licensed under the GNU Lesser General Public License
-- * (version 2.1 or later).  See the COPYING file in this distribution. 
-+ * (version 2.1 or later).  See the COPYING file in this distribution.
-  */
- 
- #if !NO_CAMERA
-@@ -9,7 +9,7 @@
- public class DiscoveredCamera {
-     public GPhoto.Camera gcamera;
-     public string uri;
--    
-+
-     public DiscoveredCamera(GPhoto.Camera gcamera, string uri) {
-         this.gcamera = gcamera;
-         this.uri = uri;
-@@ -18,70 +18,66 @@ public class DiscoveredCamera {
- 
- public class CameraTable {
-     private const int UPDATE_DELAY_MSEC = 500;
--    
-+
-     // list of subsystems being monitored for events
-     private const string[] SUBSYSTEMS = { "usb", "block", null };
--    
-+
+@@ -24,7 +24,6 @@ public class CameraTable {
+     
      private static CameraTable instance = null;
--    
+     
 -    private GUdev.Client client = new GUdev.Client(SUBSYSTEMS);
-+
      private OneShotScheduler camera_update_scheduler = null;
      private GPhoto.Context null_context = new GPhoto.Context();
      private GPhoto.CameraAbilitiesList abilities_list;
--    
-+
-     private Gee.HashMap<string, DiscoveredCamera> camera_map = new Gee.HashMap<string, DiscoveredCamera>(
-         str_hash, str_equal, direct_equal);
- 
-     public signal void camera_added(DiscoveredCamera camera);
--    
-+
-     public signal void camera_removed(DiscoveredCamera camera);
--    
-+
-     private CameraTable() {
-         camera_update_scheduler = new OneShotScheduler("CameraTable update scheduler",
+@@ -42,7 +41,6 @@ public class CameraTable {
              on_update_cameras);
--        
--        // listen for interesting events on the specified subsystems
+         
+         // listen for interesting events on the specified subsystems
 -        client.uevent.connect(on_udev_event);
--        
-+
-         // because loading the camera abilities list takes a bit of time and slows down app
-         // startup, delay loading it (and notifying any observers) for a small period of time,
-         // after the dust has settled
-         Timeout.add(500, delayed_init);
-     }
--    
-+
-     private bool delayed_init() {
-         try {
-             init_camera_table();
-         } catch (GPhotoError err) {
-             warning("Unable to initialize camera table: %s", err.message);
--            
-+
-             return false;
-         }
--        
-+
-         try {
-             update_camera_table();
-         } catch (GPhotoError err) {
-             warning("Unable to update camera table: %s", err.message);
-         }
--        
-+
-         return false;
-     }
--    
-+
-     public static CameraTable get_instance() {
-         if (instance == null)
-             instance = new CameraTable();
--        
-+
-         return instance;
-     }
--    
-+
-     public Gee.Iterable<DiscoveredCamera> get_cameras() {
-         return camera_map.values;
-     }
--    
-+
-     public int get_count() {
-         return camera_map.size;
-     }
--    
-+
-     public DiscoveredCamera? get_for_uri(string uri) {
-         return camera_map.get(uri);
-     }
-@@ -90,43 +86,18 @@ public class CameraTable {
+         volume_monitor = VolumeMonitor.get();
+         volume_monitor.volume_changed.connect(on_volume_changed);
+         volume_monitor.volume_added.connect(on_volume_changed);
+@@ -94,43 +92,18 @@ public class CameraTable {
          if (res != GPhoto.Result.OK)
              throw new GPhotoError.LIBRARY("[%d] Unable to %s: %s", (int) res, op, res.as_string());
      }
@@ -155,7 +66,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
      // USB (or libusb) is a funny beast; if only one USB device is present (i.e. the camera),
      // then a single camera is detected at port usb:.  However, if multiple USB devices are
      // present (including non-cameras), then the first attached camera will be listed twice,
-@@ -135,59 +106,59 @@ public class CameraTable {
+@@ -139,59 +112,59 @@ public class CameraTable {
      //
      // This function gleans the full port name of a particular port, even if it's the unadorned
      // "usb:", by using GUdev.
@@ -230,7 +141,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
      public static string get_port_uri(string port) {
          return "gphoto2://[%s]/".printf(port);
      }
-@@ -201,13 +172,13 @@ public class CameraTable {
+@@ -220,13 +193,13 @@ public class CameraTable {
          GPhoto.CameraList camera_list;
          do_op(GPhoto.CameraList.create(out camera_list), "create camera list");
          do_op(abilities_list.detect(port_info_list, camera_list, null_context), "detect cameras");
@@ -247,7 +158,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
          // go through the detected camera list and glean their ports
          for (int ctr = 0; ctr < camera_list.count(); ctr++) {
              string name;
-@@ -215,55 +186,55 @@ public class CameraTable {
+@@ -234,55 +207,55 @@ public class CameraTable {
  
              string port;
              do_op(camera_list.get_value(ctr, out port), "get detected camera port");
@@ -316,56 +227,32 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
              camera_removed(camera);
          }
  
-@@ -275,50 +246,42 @@ public class CameraTable {
-             if (camera_map.has_key(uri)) {
-                 // already known about
-                 debug("%s @ %s already registered, skipping", name, port);
--                
-+
+@@ -299,21 +272,6 @@ public class CameraTable {
                  continue;
              }
--            
-+
-             int index = port_info_list.lookup_path(port);
-             if (index < 0)
-                 do_op((GPhoto.Result) index, "lookup port %s".printf(port));
--            
-+
-             GPhoto.PortInfo port_info;
-             do_op(port_info_list.get_info(index, out port_info), "get port info for %s".printf(port));
--            
-+
-             // this should match, every time
-             assert(port == port_info.path);
--            
-+
-             index = abilities_list.lookup_model(name);
-             if (index < 0)
-                 do_op((GPhoto.Result) index, "lookup camera model %s".printf(name));
- 
-             GPhoto.CameraAbilities camera_abilities;
--            do_op(abilities_list.get_abilities(index, out camera_abilities), 
-+            do_op(abilities_list.get_abilities(index, out camera_abilities),
-                 "lookup camera abilities for %s".printf(name));
--                
-+
-             GPhoto.Camera gcamera;
-             do_op(GPhoto.Camera.create(out gcamera), "create camera object for %s".printf(name));
-             do_op(gcamera.set_abilities(camera_abilities), "set camera abilities for %s".printf(name));
-             do_op(gcamera.set_port_info(port_info), "set port info for %s on %s".printf(name, port));
--            
-+
-             debug("Adding to camera table: %s @ %s", name, port);
--            
-+
-             DiscoveredCamera camera = new DiscoveredCamera(gcamera, uri);
-             camera_map.set(uri, camera);
--            
-+
-             camera_added(camera);
+             
+-            // Get display name for camera.
+-            string path = get_port_path(port);
+-            if (null != path) {
+-                GUdev.Device device = client.query_by_device_file(path);
+-                string serial = device.get_property("ID_SERIAL_SHORT");
+-                if (null != serial) {
+-                    display_name = get_name_for_uuid(serial);
+-                }
+-                if (null == display_name) {
+-                    display_name = device.get_sysfs_attr("product");
+-                } 
+-                if (null == display_name) {
+-                    display_name = device.get_property("ID_MODEL");
+-                }
+-            }
+             if (null == display_name) {
+                 // Default to GPhoto detected name.
+                 display_name = name;
+@@ -351,13 +309,6 @@ public class CameraTable {
          }
      }
--    
+     
 -    private void on_udev_event(string action, GUdev.Device device) {
 -        debug("udev event: %s on %s", action, device.get_name());
 -        
@@ -373,8 +260,6 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/11/15 19:04:53 gls Exp $
 -        // update to occur when they come in all at once
 -        camera_update_scheduler.after_timeout(UPDATE_DELAY_MSEC, true);
 -    }
--    
-+
-     private void on_update_cameras() {
-         try {
-             get_instance().update_camera_table();
+     
+     public void on_volume_changed(Volume volume) {
+         camera_update_scheduler.after_timeout(UPDATE_DELAY_MSEC, true);
