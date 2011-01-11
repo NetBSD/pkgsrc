@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2010/05/05 18:33:25 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2011/01/11 15:40:57 drochner Exp $
 
---- kye/common.py.orig	2010-04-03 14:50:02.000000000 +0000
+--- kye/common.py.orig	2010-09-07 21:47:23.000000000 +0000
 +++ kye/common.py
-@@ -24,7 +24,7 @@ ysize = 20
+@@ -30,7 +30,7 @@ ysize = 20
  
- version = "0.9.4"
+ version = "1.0"
  
--kyepaths = ("levels","/usr/local/share/kye","/usr/share/kye")
-+kyepaths = ("levels","@PREFIX@/share/kye")
+-kyepaths = ("levels", "/usr/local/share/kye", "/usr/share/kye")
++kyepaths = ("levels", "@PREFIX@/share/kye")
  
- def tryopen(filename,paths):
+ def tryopen(filename, paths):
      """Returns a reading file handle for filename, searching through directories in the supplied paths."""
