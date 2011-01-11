@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/11 20:41:00 drochner Exp $
+
+--- __pkginfo__.py.orig	2011-01-07 16:49:19.000000000 +0000
++++ __pkginfo__.py
+@@ -36,7 +36,8 @@ author_email = "contact@logilab.fr"
+ 
+ 
+ from os.path import join
+-scripts = [join('bin', 'pytest')]
++import sys
++scripts = [join('bin', 'pytest' + sys.version[0:3])]
+ include_dirs = [join('test', 'data')]
+ 
+ install_requires = ['unittest2 >= 0.5.1']

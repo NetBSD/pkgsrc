@@ -1,0 +1,12 @@
+logilab-common is a collection of Python packages and modules,designed to ease:
+
+ * handling command line options and configuration files
+ * writing interactive command line tools
+ * manipulation files and character strings
+ * interfacing to OmniORB
+ * generating of SQL queries
+ * running unit tests
+ * manipulating tree structures
+ * accessing RDBMS (currently postgreSQL, MySQL and sqlite)
+ * generating text and HTML reports
+ * logging
