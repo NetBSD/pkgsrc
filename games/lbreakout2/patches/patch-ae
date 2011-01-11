@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2011/01/11 20:20:53 drochner Exp $
+
+--- client/main.c.orig	2010-10-05 17:55:43.000000000 +0000
++++ client/main.c
+@@ -23,6 +23,8 @@
+ #include <unistd.h>
+ #endif
+ 
++#include <locale.h>
++
+ #include "lbreakout.h"
+ #include "../game/game.h"
+ #include "file.h"
+@@ -72,7 +74,7 @@ int main(int argc, char *argv[])
+     /* This is where we drop our setuid/setgid privileges.
+      */
+     realgid = getgid();
+-    if (setresgid(-1, realgid, realgid) != 0) {
++    if (setregid(-1, realgid) != 0) {
+         perror("Could not drop setgid privileges.  Aborting.");
+         exit(1);
+     }
