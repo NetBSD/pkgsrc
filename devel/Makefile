@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1417 2011/01/08 20:46:39 markd Exp $
+# $NetBSD: Makefile,v 1.1418 2011/01/11 20:45:54 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -1168,6 +1168,8 @@ SUBDIR+=	py-idle
 SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
+SUBDIR+=	py-logilab-astng
+SUBDIR+=	py-logilab-common
 SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-newt
 SUBDIR+=	py-nose
