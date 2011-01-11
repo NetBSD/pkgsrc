@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.13 2009/07/30 16:51:04 drochner Exp $
+# $NetBSD: options.mk,v 1.14 2011/01/11 11:43:19 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	aac audiofile curl flac id3 libao jack libmikmod musepack ogg inet6 shout
+PKG_SUPPORTED_OPTIONS=	aac audiofile curl flac id3 libao jack libmikmod musepack ogg inet6 shout ffmpeg
 PKG_SUGGESTED_OPTIONS=	aac audiofile curl flac id3 libao musepack ogg
 
 .include "../../mk/bsd.options.mk"
@@ -92,4 +92,11 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--enable-shout
 .else
 CONFIGURE_ARGS+=	--disable-shout
+.endif
+
+.if !empty(PKG_OPTIONS:Mffmpeg)
+.  include "../../multimedia/ffmpeg/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg}
+.else
+CONFIGURE_ARGS+=	--disable-ffmpeg
 .endif
