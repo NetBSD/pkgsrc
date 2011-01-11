@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2010/06/13 22:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/01/11 15:34:18 drochner Exp $
 #
 
 DISTNAME=		pygame-1.8.1release
 PKGNAME=		${PYPKGPREFIX}-game-1.8.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		http://pygame.org/ftp/
 
@@ -34,6 +34,6 @@ post-install:
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
