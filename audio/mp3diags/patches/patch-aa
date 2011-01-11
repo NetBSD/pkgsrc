@@ -1,13 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2010/05/15 08:51:31 adam Exp $
+$NetBSD: patch-aa,v 1.5 2011/01/11 11:49:17 drochner Exp $
 
---- src/src.pro.orig	2009-11-29 21:33:13.000000000 +0000
+--- src/src.pro.orig	2010-12-29 09:47:57.000000000 +0000
 +++ src/src.pro
-@@ -150,7 +150,7 @@ ThreadRunner.ui \
-  Export.ui
+@@ -158,5 +158,5 @@ ThreadRunner.ui \
+ #DEFINES += DISABLE_CHECK_FOR_UPDATES
  
- 
--LIBS += -lboost_serialization-mt
-+LIBS += -lboost_serialization
- 
- #CONFIG += console
+ LIBS += -lz \
+-  -lboost_serialization-mt
++  -lboost_serialization
  
