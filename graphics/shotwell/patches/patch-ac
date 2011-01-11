@@ -1,0 +1,1496 @@
+$NetBSD: patch-ac,v 1.1 2011/01/11 20:46:16 gls Exp $
+
+--- src/Dialogs.vala.orig	2010-12-23 23:01:46.000000000 +0000
++++ src/Dialogs.vala
+@@ -1,7 +1,7 @@
+ /* Copyright 2009-2010 Yorba Foundation
+  *
+  * This software is licensed under the GNU LGPL (version 2.1 or later).
+- * See the COPYING file in this distribution. 
++ * See the COPYING file in this distribution.
+  */
+ 
+ namespace ExportUI {
+@@ -13,9 +13,9 @@ public File? choose_file(string current_
+ 
+     string file_chooser_title = VideoReader.is_supported_video_filename(current_file_basename) ?
+         _("Export Video") : _("Export Photo");
+-        
++
+     Gtk.FileChooserDialog chooser = new Gtk.FileChooserDialog(file_chooser_title,
+-        AppWindow.get_instance(), Gtk.FileChooserAction.SAVE, Gtk.STOCK_CANCEL, 
++        AppWindow.get_instance(), Gtk.FileChooserAction.SAVE, Gtk.STOCK_CANCEL,
+         Gtk.ResponseType.CANCEL, Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT, null);
+     chooser.set_do_overwrite_confirmation(true);
+     chooser.set_current_folder(current_export_dir.get_path());
+@@ -27,9 +27,9 @@ public File? choose_file(string current_
+         file = File.new_for_path(chooser.get_filename());
+         current_export_dir = file.get_parent();
+     }
+-    
++
+     chooser.destroy();
+-    
++
+     return file;
+ }
+ 
+@@ -41,19 +41,19 @@ public File? choose_dir(string? user_tit
+         user_title = _("Export Photos");
+ 
+     Gtk.FileChooserDialog chooser = new Gtk.FileChooserDialog(user_title,
+-        AppWindow.get_instance(), Gtk.FileChooserAction.SELECT_FOLDER, Gtk.STOCK_CANCEL, 
++        AppWindow.get_instance(), Gtk.FileChooserAction.SELECT_FOLDER, Gtk.STOCK_CANCEL,
+         Gtk.ResponseType.CANCEL, Gtk.STOCK_OK, Gtk.ResponseType.ACCEPT, null);
+     chooser.set_current_folder(current_export_dir.get_path());
+     chooser.set_local_only(false);
+-    
++
+     File dir = null;
+     if (chooser.run() == Gtk.ResponseType.ACCEPT) {
+         dir = File.new_for_path(chooser.get_filename());
+         current_export_dir = dir;
+     }
+-    
++
+     chooser.destroy();
+-    
++
+     return dir;
+ }
+ }
+@@ -84,17 +84,17 @@ public class ExportDialog : Gtk.Dialog {
+     public const int NUM_SPECIAL_FORMATS = 2;
+     public const string UNMODIFIED_FORMAT_LABEL = _("Unmodified");
+     public const string CURRENT_FORMAT_LABEL = _("Current");
+-    
++
+     public const ScaleConstraint[] CONSTRAINT_ARRAY = { ScaleConstraint.ORIGINAL,
+         ScaleConstraint.DIMENSIONS, ScaleConstraint.WIDTH, ScaleConstraint.HEIGHT };
+-    
+-    public const Jpeg.Quality[] QUALITY_ARRAY = { Jpeg.Quality.LOW, Jpeg.Quality.MEDIUM, 
++
++    public const Jpeg.Quality[] QUALITY_ARRAY = { Jpeg.Quality.LOW, Jpeg.Quality.MEDIUM,
+         Jpeg.Quality.HIGH, Jpeg.Quality.MAXIMUM };
+ 
+     private static ScaleConstraint current_constraint = ScaleConstraint.ORIGINAL;
+     private static ExportFormatParameters current_parameters = ExportFormatParameters.current();
+     private static int current_scale = DEFAULT_SCALE;
+-    
++
+     private Gtk.Table table = new Gtk.Table(0, 0, false);
+     private Gtk.ComboBox quality_combo;
+     private Gtk.ComboBox constraint_combo;
+@@ -103,7 +103,7 @@ public class ExportDialog : Gtk.Dialog {
+     private Gtk.Entry pixels_entry;
+     private Gtk.Widget ok_button;
+     private bool in_insert = false;
+-    
++
+     public ExportDialog(string title) {
+         this.title = title;
+         has_separator = false;
+@@ -117,7 +117,7 @@ public class ExportDialog : Gtk.Dialog {
+                 quality_combo.set_active(ctr);
+             ctr++;
+         }
+-        
++
+         constraint_combo = new Gtk.ComboBox.text();
+         ctr = 0;
+         foreach (ScaleConstraint constraint in CONSTRAINT_ARRAY) {
+@@ -138,7 +138,7 @@ public class ExportDialog : Gtk.Dialog {
+         pixels_entry.set_max_length(6);
+         pixels_entry.set_size_request(60, -1);
+         pixels_entry.set_text("%d".printf(current_scale));
+-        
++
+         // register after preparation to avoid signals during init
+         constraint_combo.changed.connect(on_constraint_changed);
+         format_combo.changed.connect(on_format_changed);
+@@ -152,20 +152,20 @@ public class ExportDialog : Gtk.Dialog {
+ 
+         add_label(_("_Quality:"), 0, 1, quality_combo);
+         add_control(quality_combo, 1, 1);
+-        
++
+         add_label(_("_Scaling constraint:"), 0, 2, constraint_combo);
+         add_control(constraint_combo, 1, 2);
+ 
+         Gtk.Label pixels_label = new Gtk.Label.with_mnemonic(_(" _pixels"));
+         pixels_label.set_mnemonic_widget(pixels_entry);
+-        
++
+         Gtk.HBox pixels_box = new Gtk.HBox(false, 0);
+         pixels_box.pack_start(pixels_entry, false, false, 0);
+         pixels_box.pack_end(pixels_label, false, false, 0);
+         add_control(pixels_box, 1, 3);
+-        
++
+         ((Gtk.VBox) get_content_area()).add(table);
+-        
++
+         // add buttons to action area
+         add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL);
+         ok_button = add_button(Gtk.STOCK_OK, Gtk.ResponseType.OK);
+@@ -180,12 +180,12 @@ public class ExportDialog : Gtk.Dialog {
+ 
+         ok_button.grab_focus();
+     }
+-    
++
+     private void format_add_option(string format_name) {
+         format_options.add(format_name);
+         format_combo.append_text(format_name);
+     }
+-    
++
+     private void format_set_active_text(string text) {
+         int selection_ticker = 0;
+ 
+@@ -196,10 +196,10 @@ public class ExportDialog : Gtk.Dialog {
+             }
+             selection_ticker++;
+         }
+-        
++
+         error("format_set_active_text: text '%s' isn't in combo box", text);
+     }
+-    
++
+     private PhotoFileFormat get_specified_format() {
+         int index = format_combo.get_active();
+         assert(index >= NUM_SPECIAL_FORMATS);
+@@ -208,23 +208,23 @@ public class ExportDialog : Gtk.Dialog {
+         PhotoFileFormat[] writeable_formats = PhotoFileFormat.get_writeable();
+         return writeable_formats[index];
+     }
+-    
++
+     private string get_label_for_parameters(ExportFormatParameters params) {
+         switch(params.mode) {
+             case ExportFormatMode.UNMODIFIED:
+                 return UNMODIFIED_FORMAT_LABEL;
+-            
++
+             case ExportFormatMode.CURRENT:
+                 return CURRENT_FORMAT_LABEL;
+-            
++
+             case ExportFormatMode.SPECIFIED:
+-                return params.specified_format.get_properties().get_user_visible_name();            
+-            
++                return params.specified_format.get_properties().get_user_visible_name();
++
+             default:
+                 error("get_label_for_parameters: unrecognized export format mode");
+         }
+     }
+-    
++
+     // unlike other parameters, which should be persisted across dialog executions, the
+     // format parameters must be set each time the dialog is executed -- this is why
+     // it's passed qualified as ref and not as out
+@@ -246,19 +246,19 @@ public class ExportDialog : Gtk.Dialog {
+ 
+         format_set_active_text(get_label_for_parameters(parameters));
+         on_format_changed();
+-        
++
+         bool ok = (run() == Gtk.ResponseType.OK);
+         if (ok) {
+             int index = constraint_combo.get_active();
+             assert(index >= 0);
+             constraint = CONSTRAINT_ARRAY[index];
+             current_constraint = constraint;
+-            
++
+             scale = pixels_entry.get_text().to_int();
+             if (constraint != ScaleConstraint.ORIGINAL)
+                 assert(scale > 0);
+             current_scale = scale;
+-            
++
+             if (format_combo.get_active_text() == UNMODIFIED_FORMAT_LABEL) {
+                 parameters.mode = current_parameters.mode = ExportFormatMode.UNMODIFIED;
+             } else if (format_combo.get_active_text() == CURRENT_FORMAT_LABEL) {
+@@ -270,35 +270,35 @@ public class ExportDialog : Gtk.Dialog {
+                     parameters.quality = current_parameters.quality = QUALITY_ARRAY[quality_combo.get_active()];
+             }
+         }
+-        
++
+         destroy();
+-        
++
+         return ok;
+     }
+-    
++
+     private void add_label(string text, int x, int y, Gtk.Widget? widget = null) {
+         Gtk.Alignment left_aligned = new Gtk.Alignment(0.0f, 0.5f, 0, 0);
+-        
++
+         Gtk.Label new_label = new Gtk.Label.with_mnemonic(text);
+         new_label.set_use_underline(true);
+-        
++
+         if (widget != null)
+             new_label.set_mnemonic_widget(widget);
+-        
++
+         left_aligned.add(new_label);
+-        
+-        table.attach(left_aligned, x, x + 1, y, y + 1, Gtk.AttachOptions.FILL, Gtk.AttachOptions.FILL, 
++
++        table.attach(left_aligned, x, x + 1, y, y + 1, Gtk.AttachOptions.FILL, Gtk.AttachOptions.FILL,
+             10, 5);
+     }
+-    
++
+     private void add_control(Gtk.Widget widget, int x, int y) {
+         Gtk.Alignment left_aligned = new Gtk.Alignment(0, 0.5f, 0, 0);
+         left_aligned.add(widget);
+-        
++
+         table.attach(left_aligned, x, x + 1, y, y + 1, Gtk.AttachOptions.FILL, Gtk.AttachOptions.FILL,
+             10, 5);
+     }
+-    
++
+     private void on_constraint_changed() {
+         bool original = CONSTRAINT_ARRAY[constraint_combo.get_active()] == ScaleConstraint.ORIGINAL;
+         bool jpeg = format_combo.get_active_text() ==
+@@ -313,7 +313,7 @@ public class ExportDialog : Gtk.Dialog {
+ 
+     private void on_format_changed() {
+         bool original = CONSTRAINT_ARRAY[constraint_combo.get_active()] == ScaleConstraint.ORIGINAL;
+-        
++
+         if (format_combo.get_active_text() == UNMODIFIED_FORMAT_LABEL) {
+             // if the user wishes to export the media unmodified, then we just copy the original
+             // files, so parameterizing size, quality, etc. is impossible -- these are all
+@@ -332,7 +332,7 @@ public class ExportDialog : Gtk.Dialog {
+             // format.
+             constraint_combo.set_sensitive(true);
+             quality_combo.set_sensitive(false);
+-            pixels_entry.sensitive = !original;            
++            pixels_entry.sensitive = !original;
+         } else {
+             // if the user has chosen a specific format, then allow JPEG quality customization if
+             // the format is JPEG and the user is re-sizing the image, otherwise, disallow JPEG
+@@ -342,25 +342,25 @@ public class ExportDialog : Gtk.Dialog {
+             quality_combo.sensitive = !original && jpeg;
+         }
+     }
+-    
++
+     private void on_activate() {
+         response(Gtk.ResponseType.OK);
+     }
+-    
++
+     private void on_pixels_changed() {
+         ok_button.sensitive = (pixels_entry.get_text_length() > 0) && (pixels_entry.get_text().to_int() > 0);
+     }
+-    
++
+     private void on_pixels_insert_text(string text, int length, void *position) {
+         // This is necessary because SignalHandler.block_by_func() is not properly bound
+         if (in_insert)
+             return;
+-        
++
+         in_insert = true;
+-        
++
+         if (length == -1)
+             length = (int) text.length;
+-        
++
+         // only permit numeric text
+         string new_text = "";
+         for (int ctr = 0; ctr < length; ctr++) {
+@@ -368,12 +368,12 @@ public class ExportDialog : Gtk.Dialog {
+                 new_text += ((char) text[ctr]).to_string();
+             }
+         }
+-        
++
+         if (new_text.length > 0)
+             pixels_entry.insert_text(new_text, (int) new_text.length, position);
+-        
++
+         Signal.stop_emission_by_name(pixels_entry, "insert-text");
+-        
++
+         in_insert = false;
+     }
+ }
+@@ -384,17 +384,17 @@ private const int REPORT_FAILURE_COUNT =
+ private string? generate_import_failure_list(Gee.List<BatchImportResult> failed, bool show_dest_id) {
+     if (failed.size == 0)
+         return null;
+-    
++
+     string list = "";
+     for (int ctr = 0; ctr < REPORT_FAILURE_COUNT && ctr < failed.size; ctr++) {
+-        list += "%s\n".printf(show_dest_id ? failed.get(ctr).dest_identifier : 
++        list += "%s\n".printf(show_dest_id ? failed.get(ctr).dest_identifier :
+             failed.get(ctr).src_identifier);
+     }
+-    
++
+     int remaining = failed.size - REPORT_FAILURE_COUNT;
+     if (remaining > 0)
+         list += _("(and %d more)\n").printf(remaining);
+-    
++
+     return list;
+ }
+ 
+@@ -402,7 +402,7 @@ public class QuestionParams {
+     public string question;
+     public string yes_button;
+     public string no_button;
+-    
++
+     public QuestionParams(string question, string yes_button, string no_button) {
+         this.question = question;
+         this.yes_button = yes_button;
+@@ -430,7 +430,7 @@ public string get_media_specific_string(
+     string photos_msg, string videos_msg, string both_msg) {
+     bool has_photos = import_has_photos(import_collection);
+     bool has_videos = import_has_videos(import_collection);
+-        
++
+     if (has_photos && has_videos)
+         return both_msg;
+     else if (has_photos)
+@@ -442,10 +442,10 @@ public string get_media_specific_string(
+ }
+ 
+ // Returns true if the user selected the yes action, false otherwise.
+-public bool report_manifest(ImportManifest manifest, bool show_dest_id, 
++public bool report_manifest(ImportManifest manifest, bool show_dest_id,
+     QuestionParams? question = null) {
+     string message = "";
+-    
++
+     if (manifest.already_imported.size > 0) {
+         string photos_message = (ngettext("1 duplicate photo was not imported:\n",
+             "%d duplicate photos were not imported:\n",
+@@ -459,14 +459,14 @@ public bool report_manifest(ImportManife
+ 
+         message += get_media_specific_string(manifest.already_imported, photos_message,
+             videos_message, both_message);
+-        
++
+         message += generate_import_failure_list(manifest.already_imported, show_dest_id);
+     }
+-    
++
+     if (manifest.failed.size > 0) {
+         if (message.length > 0)
+             message += "\n";
+-        
++
+         string photos_message = (ngettext("1 photo failed to import due to a file or hardware error:\n",
+             "%d photos failed to import due to a file or hardware error:\n",
+             manifest.failed.size)).printf(manifest.failed.size);
+@@ -476,13 +476,13 @@ public bool report_manifest(ImportManife
+         string both_message = (ngettext("1 photo/video failed to import due to a file or hardware error:\n",
+             "%d photos/videos failed to import due to a file or hardware error:\n",
+             manifest.failed.size)).printf(manifest.failed.size);
+-        
++
+         message += get_media_specific_string(manifest.failed, photos_message, videos_message,
+             both_message);
+-        
++
+         message += generate_import_failure_list(manifest.failed, show_dest_id);
+     }
+-    
++
+     if (manifest.camera_failed.size > 0) {
+         if (message.length > 0)
+             message += "\n";
+@@ -496,13 +496,13 @@ public bool report_manifest(ImportManife
+         string both_message = (ngettext("1 photo/video failed to import due to a camera error:\n",
+             "%d photos/videos failed to import due to a camera error:\n",
+             manifest.camera_failed.size)).printf(manifest.camera_failed.size);
+-        
++
+         message += get_media_specific_string(manifest.camera_failed, photos_message, videos_message,
+             both_message);
+-        
++
+         message += generate_import_failure_list(manifest.camera_failed, show_dest_id);
+     }
+-    
++
+     if (manifest.skipped_photos.size > 0) {
+         if (message.length > 0)
+             message += "\n";
+@@ -515,7 +515,7 @@ public bool report_manifest(ImportManife
+             manifest.skipped_photos.size);
+ 
+         message += skipped_photos_message;
+-        
++
+         message += generate_import_failure_list(manifest.skipped_photos, show_dest_id);
+     }
+ 
+@@ -531,7 +531,7 @@ public bool report_manifest(ImportManife
+ 
+         message += skipped_files_message;
+     }
+-    
++
+     if (manifest.aborted.size > 0) {
+         if (message.length > 0)
+             message += "\n";
+@@ -545,13 +545,13 @@ public bool report_manifest(ImportManife
+         string both_message = (ngettext("1 photo/video skipped due to user cancel:\n",
+             "%d photos/videos skipped due to user cancel:\n",
+             manifest.aborted.size)).printf(manifest.aborted.size);
+-        
++
+         message += get_media_specific_string(manifest.aborted, photos_message, videos_message,
+             both_message);
+-        
++
+         message += generate_import_failure_list(manifest.aborted, show_dest_id);
+     }
+-    
++
+     if (manifest.success.size > 0) {
+         if (message.length > 0)
+             message += "\n";
+@@ -565,47 +565,47 @@ public bool report_manifest(ImportManife
+         string both_message = (ngettext("1 photo/video successfully imported.\n",
+             "%d photos/videos successfully imported.\n",
+             manifest.success.size)).printf(manifest.success.size);
+-        
++
+         message += get_media_specific_string(manifest.success, photos_message, videos_message,
+             both_message);
+     }
+-    
++
+     int total = manifest.success.size + manifest.failed.size + manifest.camera_failed.size
+         + manifest.skipped_photos.size + manifest.skipped_files.size
+         + manifest.already_imported.size + manifest.aborted.size;
+     assert(total == manifest.all.size);
+-    
++
+     // if no media items were imported at all (i.e. an empty directory attempted), need to at least
+     // report that nothing was imported
+     if (total == 0)
+         message += _("No photos or videos imported.\n");
+-    
++
+     Gtk.MessageDialog dialog = null;
+     if (question == null) {
+         dialog = new Gtk.MessageDialog(AppWindow.get_instance(), Gtk.DialogFlags.MODAL,
+             Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "%s", message);
+     } else {
+         message += ("\n" + question.question);
+-    
++
+         dialog = new Gtk.MessageDialog(AppWindow.get_instance(), Gtk.DialogFlags.MODAL,
+             Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", message);
+         dialog.add_button(question.no_button, Gtk.ResponseType.NO);
+         dialog.add_button(question.yes_button, Gtk.ResponseType.YES);
+     }
+-    
++
+     dialog.title = _("Import Complete");
+-    
++
+     bool yes = (dialog.run() == Gtk.ResponseType.YES);
+-    
++
+     dialog.destroy();
+-    
++
+     return yes;
+ }
+ }
+ 
+ public abstract class TextEntryDialogMediator {
+     private TextEntryDialog dialog;
+-    
++
+     public TextEntryDialogMediator(string title, string label, string? initial_text = null,
+         Gee.Collection<string>? completion_list = null, string? completion_delimiter = null) {
+         Gtk.Builder builder = AppWindow.create_builder();
+@@ -613,7 +613,7 @@ public abstract class TextEntryDialogMed
+         dialog.set_builder(builder);
+         dialog.setup(on_modify_validate, title, label, initial_text, completion_list, completion_delimiter);
+     }
+-    
++
+     protected virtual bool on_modify_validate(string text) {
+         return true;
+     }
+@@ -627,16 +627,16 @@ public abstract class TextEntryDialogMed
+ // Partly inspired by the class of the same name in gtkmm-utils by Marko Anastasov
+ public class EntryMultiCompletion : Gtk.EntryCompletion {
+     private string delimiter;
+-    
++
+     public EntryMultiCompletion(Gee.Collection<string> completion_list, string? delimiter) {
+         assert(delimiter == null || delimiter.length == 1);
+         this.delimiter = delimiter;
+-        
++
+         set_model(create_completion_store(completion_list));
+         set_text_column(0);
+         set_match_func(match_func);
+     }
+-    
++
+     private static Gtk.ListStore create_completion_store(Gee.Collection<string> completion_list) {
+         Gtk.ListStore completion_store = new Gtk.ListStore(1, typeof(string));
+         Gtk.TreeIter store_iter;
+@@ -645,22 +645,22 @@ public class EntryMultiCompletion : Gtk.
+             completion_store.append(out store_iter);
+             completion_store.set(store_iter, 0, completion_iter.get(), -1);
+         }
+-        
++
+         return completion_store;
+     }
+-    
++
+     private bool match_func(Gtk.EntryCompletion completion, string key, Gtk.TreeIter iter) {
+         Gtk.TreeModel model = completion.get_model();
+         string possible_match;
+         model.get(iter, 0, out possible_match);
+-        
++
+         // Normalize key and possible matches to allow comparison of non-ASCII characters.
+-        // Use a "COMPOSE" normalization to allow comparison to the position value returned by 
++        // Use a "COMPOSE" normalization to allow comparison to the position value returned by
+         // Gtk.Entry, i.e. one character=one position. Using the default normalization a character
+         // like "é" or "ö" would have a length of two.
+-        possible_match = possible_match.casefold().normalize(-1, NormalizeMode.ALL_COMPOSE);        
++        possible_match = possible_match.casefold().normalize(-1, NormalizeMode.ALL_COMPOSE);
+         string normed_key = key.normalize(-1, NormalizeMode.ALL_COMPOSE);
+-        
++
+         if (delimiter == null) {
+             return possible_match.has_prefix(normed_key.strip());
+         } else {
+@@ -671,12 +671,12 @@ public class EntryMultiCompletion : Gtk.
+                 if (position <= offset)
+                     return false; // TODO: Autocompletion for tags not last in list
+             }
+-            
++
+             string last_part = get_last_part(normed_key.strip(), delimiter);
+-            
+-            if (last_part.length == 0) 
++
++            if (last_part.length == 0)
+                 return false; // need at least one character to show matches
+-                
++
+             return possible_match.has_prefix(last_part.strip());
+         }
+     }
+@@ -684,9 +684,9 @@ public class EntryMultiCompletion : Gtk.
+     public override bool match_selected(Gtk.TreeModel model, Gtk.TreeIter iter) {
+         string match;
+         model.get(iter, 0, out match);
+-        
++
+         Gtk.Entry entry = (Gtk.Entry)get_entry();
+-        
++
+         string old_text = entry.get_text();
+         if (old_text.length > 0) {
+             if (old_text.contains(delimiter)) {
+@@ -695,21 +695,21 @@ public class EntryMultiCompletion : Gtk.
+             } else
+                 old_text = "";
+         }
+-        
++
+         string new_text = old_text + match + delimiter + (delimiter != " " ? " " : "");
+         entry.set_text(new_text);
+         entry.set_position((int) new_text.length);
+-        
++
+         return true;
+     }
+-    
++
+     // Find last string after any delimiter
+     private static string get_last_part(string s, string delimiter) {
+         string[] split = s.split(delimiter);
+         int i = 0;
+         while (split[i+1] != null)
+             i++;
+-        
++
+         return split[i];
+     }
+ }
+@@ -719,18 +719,18 @@ public class SetBackgroundSlideshowDialo
+     private Gtk.Label delay_value_label;
+     private Gtk.Scale delay_scale;
+     private int delay_value = 0;
+-    
++
+     public SetBackgroundSlideshowDialog() {
+         Gtk.Builder builder = AppWindow.create_builder("set_background_dialog.glade", this);
+-        
++
+         dialog = builder.get_object("dialog1") as Gtk.Dialog;
+         dialog.set_type_hint(Gdk.WindowTypeHint.DIALOG);
+         dialog.set_parent_window(AppWindow.get_instance().get_parent_window());
+         dialog.set_transient_for(AppWindow.get_instance());
+         dialog.set_default_response(Gtk.ResponseType.OK);
+-        
++
+         delay_value_label = builder.get_object("delay_value_label") as Gtk.Label;
+-        
++
+         delay_scale = builder.get_object("delay_scale") as Gtk.Scale;
+         delay_scale.value_changed.connect(on_delay_scale_value_changed);
+         delay_scale.adjustment.value = 50;
+@@ -738,12 +738,12 @@ public class SetBackgroundSlideshowDialo
+ 
+     private void on_delay_scale_value_changed() {
+         double value = delay_scale.adjustment.value;
+-        
++
+         // f(x)=x^5 allows to have fine-grained values (seconds) to the left
+         // and very coarse-grained values (hours) to the right of the slider.
+         // We limit maximum value to 1 day and minimum to 5 seconds.
+         delay_value = (int) (Math.pow(value, 5) / Math.pow(90, 5) * 60 * 60 * 24 + 5);
+-        
++
+         // convert to text and remove fractions from values > 1 minute
+         string text;
+         if (delay_value < 60) {
+@@ -751,7 +751,7 @@ public class SetBackgroundSlideshowDialo
+         } else if (delay_value < 60 * 60) {
+             int minutes = delay_value / 60;
+             text = ngettext("%d minute", "%d minutes", minutes).printf(minutes);
+-            delay_value = minutes * 60; 
++            delay_value = minutes * 60;
+         } else if (delay_value < 60 * 60 * 24) {
+             int hours = delay_value / (60 * 60);
+             text = ngettext("%d hour", "%d hours", hours).printf(hours);
+@@ -760,35 +760,35 @@ public class SetBackgroundSlideshowDialo
+             text = _("1 day");
+             delay_value = 60 * 60 * 24;
+         }
+-        
++
+         delay_value_label.label = text;
+     }
+ 
+     public bool execute(out int delay_value) {
+         dialog.show_all();
+-        
++
+         bool result = dialog.run() == Gtk.ResponseType.OK;
+-        
++
+         dialog.destroy();
+-        
++
+         delay_value = this.delay_value;
+-        
++
+         return result;
+     }
+ }
+ 
+ public class TextEntryDialog : Gtk.Dialog {
+     public delegate bool OnModifyValidateType(string text);
+-    
++
+     private OnModifyValidateType on_modify_validate;
+     private Gtk.Entry entry;
+     private Gtk.Builder builder;
+-    
++
+     public void set_builder(Gtk.Builder builder) {
+         this.builder = builder;
+     }
+-    
+-    public void setup(OnModifyValidateType? modify_validate, string title, string label, 
++
++    public void setup(OnModifyValidateType? modify_validate, string title, string label,
+         string? initial_text, Gee.Collection<string>? completion_list, string? completion_delimiter) {
+         set_title(title);
+         set_parent_window(AppWindow.get_instance().get_parent_window());
+@@ -807,26 +807,26 @@ public class TextEntryDialog : Gtk.Dialo
+                 completion_delimiter);
+             entry.set_completion(completion);
+         }
+-        
++
+         set_default_response(Gtk.ResponseType.OK);
+     }
+ 
+     public string? execute() {
+         string? text = null;
+-        
++
+         // validate entry to start with
+         set_response_sensitive(Gtk.ResponseType.OK, on_modify_validate(entry.get_text()));
+-        
++
+         show_all();
+-        
++
+         if (run() == Gtk.ResponseType.OK)
+             text = entry.get_text();
+-        
++
+         destroy();
+-        
++
+         return text;
+     }
+-    
++
+     public void on_entry_changed() {
+         set_response_sensitive(Gtk.ResponseType.OK, on_modify_validate(entry.get_text()));
+     }
+@@ -857,17 +857,17 @@ public class EditTitleDialog : TextEntry
+ public Gtk.ResponseType remove_from_library_dialog(Gtk.Window owner, string title,
+     string user_message, int count) {
+     string trash_action = ngettext("_Trash File", "_Trash Files", count);
+-    
++
+     Gtk.MessageDialog dialog = new Gtk.MessageDialog(owner, Gtk.DialogFlags.MODAL,
+         Gtk.MessageType.WARNING, Gtk.ButtonsType.CANCEL, "%s", user_message);
+     dialog.add_button(_("Only _Remove"), Gtk.ResponseType.NO);
+     dialog.add_button(trash_action, Gtk.ResponseType.YES);
+     dialog.title = title;
+-    
++
+     Gtk.ResponseType result = (Gtk.ResponseType) dialog.run();
+-    
++
+     dialog.destroy();
+-    
++
+     return result;
+ }
+ 
+@@ -880,11 +880,11 @@ public Gtk.ResponseType remove_from_file
+     dialog.add_button(_("_Delete"), Gtk.ResponseType.YES);
+     dialog.set_default_response( Gtk.ResponseType.NO);
+     dialog.title = title;
+-    
++
+     Gtk.ResponseType result = (Gtk.ResponseType) dialog.run();
+-    
++
+     dialog.destroy();
+-    
++
+     return result;
+ }
+ 
+@@ -894,48 +894,48 @@ public bool revert_editable_dialog(Gtk.W
+         if (photo.has_editable())
+             count++;
+     }
+-    
++
+     if (count == 0)
+         return false;
+-        
++
+     string msg = ngettext(
+         "This will destroy all changes made to the external file.  Continue?",
+         "This will destroy all changes made to %d external files.  Continue?",
+         count).printf(count);
+     string action = ngettext("Re_vert External Edit", "Re_vert External Edits", count);
+-    
++
+     Gtk.MessageDialog dialog = new Gtk.MessageDialog(owner, Gtk.DialogFlags.MODAL,
+         Gtk.MessageType.WARNING, Gtk.ButtonsType.NONE, "%s", msg);
+     dialog.add_button(_("_Cancel"), Gtk.ResponseType.CANCEL);
+     dialog.add_button(action, Gtk.ResponseType.YES);
+     dialog.title = ngettext("Revert External Edit", "Revert External Edits", count);
+-    
++
+     Gtk.ResponseType result = (Gtk.ResponseType) dialog.run();
+-    
++
+     dialog.destroy();
+-    
++
+     return result == Gtk.ResponseType.YES;
+ }
+ 
+ public bool remove_offline_dialog(Gtk.Window owner, int count) {
+     if (count == 0)
+         return false;
+-    
++
+     string msg = ngettext(
+         "This will remove the photo from the library.  Continue?",
+         "This will remove %d photos from the library.  Continue?",
+         count).printf(count);
+-    
++
+     Gtk.MessageDialog dialog = new Gtk.MessageDialog(owner, Gtk.DialogFlags.MODAL,
+         Gtk.MessageType.WARNING, Gtk.ButtonsType.NONE, "%s", msg);
+     dialog.add_button(_("_Cancel"), Gtk.ResponseType.CANCEL);
+     dialog.add_button(_("_Remove"), Gtk.ResponseType.OK);
+     dialog.title = ngettext("Remove Photo From Library", "Remove Photos From Library", count);
+-    
++
+     Gtk.ResponseType result = (Gtk.ResponseType) dialog.run();
+-    
++
+     dialog.destroy();
+-    
++
+     return result == Gtk.ResponseType.OK;
+ }
+ 
+@@ -945,34 +945,34 @@ public class ProgressDialog : Gtk.Window
+     private Cancellable cancellable;
+     private uint64 last_count = uint64.MAX;
+     private int update_every = 1;
+-    
++
+     public ProgressDialog(Gtk.Window? owner, string text, Cancellable? cancellable = null) {
+         this.cancellable = cancellable;
+-        
++
+         set_title(text);
+         set_resizable(false);
+         if (owner != null)
+             set_transient_for(owner);
+         set_modal(true);
+         set_type_hint(Gdk.WindowTypeHint.DIALOG);
+-        
++
+         progress_bar.set_size_request(300, -1);
+-        
++
+         Gtk.VBox vbox_bar = new Gtk.VBox(false, 0);
+         vbox_bar.pack_start(progress_bar, true, false, 0);
+-        
++
+         if (cancellable != null) {
+             cancel_button = new Gtk.Button.from_stock(Gtk.STOCK_CANCEL);
+             cancel_button.clicked.connect(on_cancel);
+             delete_event.connect(on_window_closed);
+         }
+-        
++
+         Gtk.HBox hbox = new Gtk.HBox(false, 8);
+         hbox.pack_start(vbox_bar, true, false, 0);
+         if (cancel_button != null)
+             hbox.pack_end(cancel_button, false, false, 0);
+-        
+-        
++
++
+         Gtk.Label primary_text_label = new Gtk.Label("");
+         primary_text_label.set_markup("<span weight=\"bold\">%s</span>".printf(text));
+         primary_text_label.set_alignment(0, 0.5f);
+@@ -984,65 +984,65 @@ public class ProgressDialog : Gtk.Window
+         Gtk.Alignment alignment = new Gtk.Alignment(0.5f, 0.5f, 1.0f, 1.0f);
+         alignment.set_padding(12, 12, 12, 12);
+         alignment.add(vbox);
+-        
++
+         add(alignment);
+-        
++
+         show_all();
+-        
++
+         if (cancellable == null)
+             window.set_functions(Gdk.WMFunction.MOVE);
+     }
+-    
++
+     public void update_display_every(int update_every) {
+         assert(update_every >= 1);
+-        
++
+         this.update_every = update_every;
+     }
+-    
++
+     public void set_fraction(int current, int total) {
+         set_percentage((double) current / (double) total);
+     }
+-    
++
+     public void set_percentage(double pct) {
+         pct = pct.clamp(0.0, 1.0);
+-        
++
+         progress_bar.set_fraction(pct);
+         progress_bar.set_text(_("%d%%").printf((int) (pct * 100.0)));
+     }
+-    
++
+     // This can be used as a ProgressMonitor delegate.
+     public bool monitor(uint64 count, uint64 total) {
+         if (last_count == uint64.MAX)
+             last_count = count;
+-        
++
+         if ((count - last_count) > update_every) {
+             set_percentage((double) count / (double) total);
+-            
++
+             // TODO: get rid of this.  non-trivial, as some progress-monitor operations are blocking
+             // and need to allow the event loop to spin
+             spin_event_loop();
+-            
++
+             last_count = count;
+         }
+-        
++
+         return (cancellable != null) ? !cancellable.is_cancelled() : true;
+     }
+-    
++
+     public void close() {
+         hide();
+         destroy();
+     }
+-    
++
+     private bool on_window_closed() {
+         on_cancel();
+         return false; // return false so that the system handler will remove the window from
+                       // the screen
+     }
+-    
++
+     private void on_cancel() {
+         if (cancellable != null)
+             cancellable.cancel();
+-        
++
+         cancel_button.sensitive = false;
+     }
+ }
+@@ -1070,7 +1070,7 @@ public class AdjustDateTimeDialog : Gtk.
+         AM,
+         PM,
+         24HR;
+-    }    
++    }
+ 
+     TimeSystem previous_time_system;
+ 
+@@ -1082,7 +1082,7 @@ public class AdjustDateTimeDialog : Gtk.
+         has_separator = false;
+         set_transient_for(AppWindow.get_instance());
+ 
+-        add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL, 
++        add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                     Gtk.STOCK_OK, Gtk.ResponseType.OK);
+         set_title(Resources.ADJUST_DATE_TIME_LABEL);
+ 
+@@ -1098,7 +1098,7 @@ public class AdjustDateTimeDialog : Gtk.
+             hour = new Gtk.SpinButton.with_range(1, 12, 1);
+ 
+         hour.output.connect(on_spin_button_output);
+-        hour.set_width_chars(2);  
++        hour.set_width_chars(2);
+ 
+         minute = new Gtk.SpinButton.with_range(0, 59, 1);
+         minute.set_width_chars(2);
+@@ -1124,8 +1124,8 @@ public class AdjustDateTimeDialog : Gtk.
+         clock.pack_start(system, false, false, 3);
+ 
+         set_default_response(Gtk.ResponseType.OK);
+-        
+-        relativity_radio_button = new Gtk.RadioButton.with_mnemonic(null, 
++
++        relativity_radio_button = new Gtk.RadioButton.with_mnemonic(null,
+             _("_Shift photos by the same amount"));
+         relativity_radio_button.set_active(Config.get_instance().get_keep_relativity());
+         relativity_radio_button.sensitive = display_options && photo_count > 1;
+@@ -1155,12 +1155,12 @@ public class AdjustDateTimeDialog : Gtk.
+ 
+         Gdk.Pixbuf preview = null;
+         try {
+-            preview = source.get_pixbuf(Scaling.for_viewport(Dimensions(500, 
++            preview = source.get_pixbuf(Scaling.for_viewport(Dimensions(500,
+                 display_options ? 280 : 200), false));
+         } catch (Error err) {
+             warning("Unable to fetch preview for %s", source.to_string());
+         }
+-        
++
+         Gtk.VBox image_content = new Gtk.VBox(false, 0);
+         Gtk.Image image = (preview != null) ? new Gtk.Image.from_pixbuf(preview) : new Gtk.Image();
+         original_time_label = new Gtk.Label(null);
+@@ -1184,7 +1184,7 @@ public class AdjustDateTimeDialog : Gtk.
+         notification.set_padding(12, 6);
+ 
+         vbox.pack_start(notification, true, true, 0);
+-        
++
+         original_time = source.get_exposure_time();
+ 
+         if (original_time == 0) {
+@@ -1219,7 +1219,7 @@ public class AdjustDateTimeDialog : Gtk.
+         if (no_original_time)
+             return;
+ 
+-        original_time_label.set_text(_("Original: ") + 
++        original_time_label.set_text(_("Original: ") +
+             Time.local(original_time).format(use_24_hr_format ? _("%m/%d/%Y, %H:%M:%S") :
+             _("%m/%d/%Y, %I:%M:%S %p")));
+     }
+@@ -1246,7 +1246,7 @@ public class AdjustDateTimeDialog : Gtk.
+         return time.mktime();
+     }
+ 
+-    public bool execute(out int64 time_shift, out bool keep_relativity, 
++    public bool execute(out int64 time_shift, out bool keep_relativity,
+         out bool modify_originals) {
+         show_all();
+ 
+@@ -1310,8 +1310,8 @@ public class AdjustDateTimeDialog : Gtk.
+                 _("Exposure time will be shifted backward by\n%d %s, %d %s, %d %s, and %d %s.");
+ 
+             notification.set_text(shift_status.printf(days, ngettext("day", "days", days),
+-                hours, ngettext("hour", "hours", hours), minutes, 
+-                ngettext("minute", "minutes", minutes), seconds, 
++                hours, ngettext("hour", "hours", hours), minutes,
++                ngettext("minute", "minutes", minutes), seconds,
+                 ngettext("second", "seconds", seconds)));
+ 
+             notification.show();
+@@ -1346,7 +1346,7 @@ public class AdjustDateTimeDialog : Gtk.
+ }
+ 
+ public const int MAX_OBJECTS_DISPLAYED = 3;
+-public void multiple_object_error_dialog(Gee.ArrayList<DataObject> objects, string message, 
++public void multiple_object_error_dialog(Gee.ArrayList<DataObject> objects, string message,
+     string title) {
+     string dialog_message = message + "\n";
+ 
+@@ -1362,9 +1362,9 @@ public void multiple_object_error_dialog
+ 
+     Gtk.MessageDialog dialog = new Gtk.MessageDialog(AppWindow.get_instance(),
+         Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "%s", dialog_message);
+-    
++
+     dialog.title = title;
+-    
++
+     dialog.run();
+     dialog.destroy();
+ }
+@@ -1384,7 +1384,7 @@ public class AddTagsDialog : TagsDialog 
+         string? text = _execute();
+         if (text == null)
+             return null;
+-        
++
+         // only want to return null if the user chose cancel, however, on_modify_validate ensures
+         // that Tag.prep_tag_names won't return a zero-length array (and it never returns null)
+         return Tag.prep_tag_names(text.split(","));
+@@ -1394,57 +1394,57 @@ public class AddTagsDialog : TagsDialog 
+         // Can't simply call Tag.prep_tag_names().length because of this bug:
+         // https://bugzilla.gnome.org/show_bug.cgi?id=602208
+         string[] names = Tag.prep_tag_names(text.split(","));
+-        
++
+         return names.length > 0;
+     }
+ }
+ 
+ public class ModifyTagsDialog : TagsDialog {
+     public ModifyTagsDialog(MediaSource source) {
+-        base (Resources.MODIFY_TAGS_LABEL, _("Tags (separated by commas):"), 
++        base (Resources.MODIFY_TAGS_LABEL, _("Tags (separated by commas):"),
+             get_initial_text(source));
+     }
+-    
++
+     private static string? get_initial_text(MediaSource source) {
+         Gee.SortedSet<Tag>? sorted_tags = Tag.global.fetch_sorted_for_source(source);
+-        
++
+         if (sorted_tags == null)
+             return null;
+-        
++
+         string[] tag_names = new string[0];
+ 		foreach (Tag tag in sorted_tags)
+             tag_names += tag.get_name();
+-        
++
+         string? text = null;
+         foreach (string tag in tag_names) {
+             if (text == null)
+                 text = "";
+             else
+                 text += ", ";
+-            
++
+             text += tag;
+         }
+-        
++
+         return text;
+     }
+-    
++
+     public Gee.ArrayList<Tag>? execute() {
+         string? text = _execute();
+         if (text == null)
+             return null;
+-        
++
+         Gee.ArrayList<Tag> new_tags = new Gee.ArrayList<Tag>();
+-        
++
+         // return empty list if no tags specified
+         if (is_string_empty(text))
+             return new_tags;
+-        
++
+         // break up by comma-delimiter, prep for use, and separate into list
+         string[] tag_names = Tag.prep_tag_names(text.split(","));
+ 
+         foreach (string name in tag_names)
+             new_tags.add(Tag.for_name(name));
+-        
++
+         return new_tags;
+     }
+ }
+@@ -1475,13 +1475,13 @@ public class WelcomeDialog : Gtk.Dialog 
+         }
+         secondary_text.set_alignment(0, 0.5f);
+         Gtk.Image image = new Gtk.Image.from_pixbuf(Resources.get_icon(Resources.ICON_APP, 50));
+-        
++
+         Gtk.Widget? header_text = null;
+         if (show_fspot_import || show_system_pictures_import) {
+             header_text = primary_text;
+         } else {
+             header_text = new Gtk.VBox(false, 0);
+-            
++
+             ((Gtk.VBox) header_text).pack_start(primary_text, false, false, 5);
+             ((Gtk.VBox) header_text).pack_start(secondary_text, false, false, 0);
+         }
+@@ -1498,18 +1498,18 @@ public class WelcomeDialog : Gtk.Dialog 
+             _("Drag and drop photos onto the Shotwell window"),
+             _("Connect a camera to your computer and import")));
+         instructions.set_alignment(0, 0.5f);
+-        
++
+         Gtk.VBox? import_action_checkbox_packer = null;
+         if (show_fspot_import || show_system_pictures_import) {
+             import_action_checkbox_packer = new Gtk.VBox(false, 2);
+-            
++
+             if (show_fspot_import) {
+                 fspot_import_check = new Gtk.CheckButton.with_mnemonic(
+                     _("Import photos from your _F-Spot library"));
+                 import_action_checkbox_packer.add(fspot_import_check);
+                 fspot_import_check.set_active(true);
+             }
+-            
++
+             if (show_system_pictures_import) {
+                 system_pictures_import_check = new Gtk.CheckButton.with_mnemonic(
+                     _("_Import photos from your %s folder").printf(
+@@ -1518,14 +1518,14 @@ public class WelcomeDialog : Gtk.Dialog 
+                 system_pictures_import_check.set_active(true);
+             }
+         }
+-        
++
+         Gtk.Label? instruction_header = null;
+         if (show_fspot_import || show_system_pictures_import) {
+             instruction_header = new Gtk.Label(
+                 _("You can also import photos in any of these ways:"));
+             instruction_header.set_alignment(0.0f, 0.5f);
+         }
+-        
++
+         Gtk.VBox content = new Gtk.VBox(false, 16);
+         content.pack_start(header_content, true, true, 0);
+         if (show_fspot_import || show_system_pictures_import) {
+@@ -1537,7 +1537,7 @@ public class WelcomeDialog : Gtk.Dialog 
+         hide_button = new Gtk.CheckButton.with_mnemonic(_("_Don't show this message again"));
+         hide_button.set_active(true);
+         content.pack_start(hide_button, false, false, 6);
+-        
++
+         Gtk.Alignment alignment = new Gtk.Alignment(0, 0, 0, 0);
+         alignment.set_padding(12, 0, 12, 12);
+         alignment.add(content);
+@@ -1555,7 +1555,7 @@ public class WelcomeDialog : Gtk.Dialog 
+ 
+         if (ok)
+             show_dialog = !hide_button.get_active();
+-        
++
+         if (fspot_import_check != null)
+             do_fspot_import = fspot_import_check.get_active();
+         if (system_pictures_import_check != null)
+@@ -1565,12 +1565,12 @@ public class WelcomeDialog : Gtk.Dialog 
+ 
+         return show_dialog;
+     }
+-    
++
+     private static bool is_system_pictures_import_possible() {
+         File system_pictures = AppDirs.get_import_dir();
+         if (!system_pictures.query_exists(null))
+             return false;
+-        
++
+         if (!(system_pictures.query_file_type(FileQueryInfoFlags.NONE, null) == FileType.DIRECTORY))
+             return false;
+ 
+@@ -1582,7 +1582,7 @@ public class WelcomeDialog : Gtk.Dialog 
+             return false;
+         }
+     }
+-    
++
+     private static bool is_fspot_import_possible() {
+         return FSpotDatabaseDriver.is_available();
+     }
+@@ -1611,7 +1611,7 @@ public class PreferencesDialog {
+         dialog.response.connect(on_close);
+ 
+         bg_color_adjustment = builder.get_object("bg_color_adjustment") as Gtk.Adjustment;
+-        bg_color_adjustment.set_value(bg_color_adjustment.get_upper() - 
++        bg_color_adjustment.set_value(bg_color_adjustment.get_upper() -
+             Config.get_instance().get_bg_color().red);
+         bg_color_adjustment.value_changed.connect(on_value_changed);
+ 
+@@ -1619,7 +1619,7 @@ public class PreferencesDialog {
+         bg_color_slider.button_press_event.connect(on_bg_color_reset);
+ 
+         library_dir_button = builder.get_object("library_dir_button") as Gtk.FileChooserButton;
+-        
++
+         photo_editor_combo = builder.get_object("external_photo_editor_combo") as Gtk.ComboBox;
+         raw_editor_combo = builder.get_object("external_raw_editor_combo") as Gtk.ComboBox;
+ 
+@@ -1627,33 +1627,33 @@ public class PreferencesDialog {
+ 
+         photo_editor_combo.changed.connect(on_photo_editor_changed);
+         raw_editor_combo.changed.connect(on_raw_editor_changed);
+-        
++
+         Gtk.CheckButton auto_import_button = builder.get_object("autoimport") as Gtk.CheckButton;
+         auto_import_button.set_active(Config.get_instance().get_auto_import_from_library());
+-        
++
+         Gtk.CheckButton commit_metadata_button = builder.get_object("write_metadata") as Gtk.CheckButton;
+         commit_metadata_button.set_active(Config.get_instance().get_commit_metadata_to_masters());
+-        
++
+         dialog.map_event.connect(map_event);
+     }
+-    
++
+     public void populate_preference_options() {
+-        populate_app_combo_box(photo_editor_combo, PhotoFileFormat.get_editable_mime_types(), 
++        populate_app_combo_box(photo_editor_combo, PhotoFileFormat.get_editable_mime_types(),
+             Config.get_instance().get_external_photo_app(), out external_photo_apps);
+ 
+-        populate_app_combo_box(raw_editor_combo, PhotoFileFormat.RAW.get_mime_types(), 
++        populate_app_combo_box(raw_editor_combo, PhotoFileFormat.RAW.get_mime_types(),
+             Config.get_instance().get_external_raw_app(), out external_raw_apps);
+     }
+-    
++
+     private void populate_app_combo_box(Gtk.ComboBox combo_box, string[] mime_types,
+         string current_app_executable, out SortedList<AppInfo> external_apps) {
+         // get list of all applications for the given mime types
+         assert(mime_types.length != 0);
+         external_apps = DesktopIntegration.get_apps_for_mime_types(mime_types);
+-        
++
+         if (external_apps.size == 0)
+             return;
+-        
++
+         // populate application ComboBox with app names and icons
+         Gtk.CellRendererPixbuf pixbuf_renderer = new Gtk.CellRendererPixbuf();
+         Gtk.CellRendererText text_renderer = new Gtk.CellRendererText();
+@@ -1662,13 +1662,13 @@ public class PreferencesDialog {
+         combo_box.pack_start(text_renderer, false);
+         combo_box.add_attribute(pixbuf_renderer, "pixbuf", 0);
+         combo_box.add_attribute(text_renderer, "text", 1);
+-        
++
+         // TODO: need more space between icons and text
+         Gtk.ListStore combo_store = new Gtk.ListStore(2, typeof(Gdk.Pixbuf), typeof(string));
+         Gtk.TreeIter iter;
+-        
++
+         int current_app = -1;
+-        
++
+         foreach (AppInfo app in external_apps) {
+             combo_store.append(out iter);
+ 
+@@ -1679,10 +1679,10 @@ public class PreferencesDialog {
+                         ((FileIcon) app_icon).get_file().get_path()), Resources.DEFAULT_ICON_SCALE,
+                         Gdk.InterpType.BILINEAR, false));
+                 } else if (app_icon is ThemedIcon) {
+-                    unowned Gdk.Pixbuf icon_pixbuf = 
++                    Gdk.Pixbuf icon_pixbuf =
+                         Gtk.IconTheme.get_default().load_icon(((ThemedIcon) app_icon).get_names()[0],
+                         Resources.DEFAULT_ICON_SCALE, Gtk.IconLookupFlags.FORCE_SIZE);
+-                    
++
+                     combo_store.set_value(iter, 0, icon_pixbuf);
+                 }
+             } catch (GLib.Error error) {
+@@ -1690,11 +1690,11 @@ public class PreferencesDialog {
+             }
+ 
+             combo_store.set_value(iter, 1, app.get_name());
+-            
++
+             if (app.get_commandline() == current_app_executable)
+                 current_app = external_apps.index_of(app);
+         }
+-        
++
+         // TODO: allow users to choose unlisted applications like Nautilus's "Open with -> Other Application..."
+ 
+         combo_box.set_model(combo_store);
+@@ -1702,45 +1702,45 @@ public class PreferencesDialog {
+         if (current_app != -1)
+             combo_box.set_active(current_app);
+     }
+-    
++
+     public static void show() {
+-        if (preferences_dialog == null) 
++        if (preferences_dialog == null)
+             preferences_dialog = new PreferencesDialog();
+-        
++
+         preferences_dialog.populate_preference_options();
+         preferences_dialog.dialog.show_all();
+         preferences_dialog.library_dir_button.set_current_folder(AppDirs.get_import_dir().get_path());
+     }
+-    
++
+     // For items that should only be committed when the dialog is closed, not as soon as the change
+     // is made.
+     private void commit_on_close() {
+         Config.get_instance().commit_bg_color();
+-        
++
+         Gtk.CheckButton? autoimport = builder.get_object("autoimport") as Gtk.CheckButton;
+         if (autoimport != null)
+             Config.get_instance().set_auto_import_from_library(autoimport.active);
+-        
++
+         Gtk.CheckButton? commit_metadata = builder.get_object("write_metadata") as Gtk.CheckButton;
+         if (commit_metadata != null)
+             Config.get_instance().set_commit_metadata_to_masters(commit_metadata.active);
+-       
++
+         if (lib_dir != null)
+             AppDirs.set_import_dir(lib_dir);
+     }
+-    
++
+     private bool on_delete() {
+         commit_on_close();
+-        
++
+         return dialog.hide_on_delete(); //prevent widgets from getting destroyed
+     }
+-    
++
+     private void on_close() {
+         dialog.hide();
+-        
++
+         commit_on_close();
+     }
+-    
++
+     private void on_value_changed() {
+         set_background_color(bg_color_adjustment.get_upper() - bg_color_adjustment.get_value());
+     }
+@@ -1763,14 +1763,14 @@ public class PreferencesDialog {
+ 
+     private Gdk.Color to_grayscale(uint16 color_value) {
+         Gdk.Color color = Gdk.Color();
+-        
++
+         color.red = color_value;
+         color.green = color_value;
+         color.blue = color_value;
+-        
++
+         return color;
+     }
+-    
++
+     private void on_photo_editor_changed() {
+         AppInfo app = external_photo_apps.get_at(photo_editor_combo.get_active());
+ 
+@@ -1779,21 +1779,21 @@ public class PreferencesDialog {
+         debug("setting external photo editor to: %s", DesktopIntegration.get_app_open_command(app));
+ 
+     }
+-    
++
+     private void on_raw_editor_changed() {
+         AppInfo app = external_raw_apps.get_at(raw_editor_combo.get_active());
+-        
++
+         Config.get_instance().set_external_raw_app(app.get_commandline());
+-        
++
+         debug("setting external raw editor to: %s", app.get_commandline());
+     }
+-    
++
+     private void on_current_folder_changed() {
+         lib_dir = library_dir_button.get_current_folder();
+     }
+-    
++
+     private bool map_event() {
+-        // Set the signal for the lib dir button after the dialog is displayed, 
++        // Set the signal for the lib dir button after the dialog is displayed,
+         // because the FileChooserButton has a nasty habbit of selecting a
+         // different folder when displayed if the provided path doesn't exist.
+         // See ticket #3000 for more info.
+@@ -1815,7 +1815,7 @@ public Gtk.ResponseType copy_files_dialo
+     dialog.title = _("Import to Library");
+ 
+     Gtk.ResponseType result = (Gtk.ResponseType) dialog.run();
+-    
++
+     dialog.destroy();
+ 
+     return result;
