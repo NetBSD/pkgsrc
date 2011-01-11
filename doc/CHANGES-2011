@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.21 2011/01/10 15:23:23 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.22 2011/01/11 11:47:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -28,3 +28,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29-translations to 20110110 [taca 2011-01-10]
 	Downgraded graphics/digikam to 1.6.0 [wiz 2011-01-10]
 	Downgraded graphics/kipi-plugins to 1.6.0nb1 [wiz 2011-01-10]
+	Updated sysutils/ipa to 2.0.9 [obache 2011-01-11]
