@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.24 2011/01/11 19:51:27 gls Exp $
+$NetBSD: CHANGES-2011,v 1.25 2011/01/11 20:07:02 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -31,3 +31,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/ipa to 2.0.9 [obache 2011-01-11]
 	Updated www/gallery2 to 2.3.1 [jym 2011-01-11]
 	Updated graphics/libraw to 0.12.3 [gls 2011-01-11]
+	Updated lang/vala to 0.10.2 [gls 2011-01-11]
