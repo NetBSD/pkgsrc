@@ -1,0 +1,12 @@
+$NetBSD: patch-as,v 1.1 2011/01/11 12:17:15 drochner Exp $
+
+--- poppler/CairoOutputDev.h.orig	2010-11-02 19:20:36.000000000 +0000
++++ poppler/CairoOutputDev.h
+@@ -275,6 +275,7 @@ protected:
+   cairo_filter_t getFilterForSurface(cairo_surface_t *image,
+ 				     GBool interpolate);
+   GBool getStreamData (Stream *str, char **buffer, int *length);
++  void setMimeData(Stream *str, cairo_surface_t *image);
+   
+   GfxRGB fill_color, stroke_color;
+   cairo_pattern_t *fill_pattern, *stroke_pattern;
