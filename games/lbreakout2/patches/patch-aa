@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2006/06/21 16:00:57 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2011/01/11 20:20:53 drochner Exp $
 
---- client/Makefile.in.orig	2006-06-21 15:29:55.000000000 +0000
+--- client/Makefile.in.orig	2010-10-05 18:28:50.000000000 +0000
 +++ client/Makefile.in
-@@ -626,10 +626,6 @@ lbreakout2res.o: win32.ico 
+@@ -243,7 +243,7 @@ client_data.c client_handlers.c game.c c
+ display.c main.c win32.ico
+ 
+ lbreakout2_DEPENDENCIES = @win32_deps@
+-lbreakout2_LDADD = @win32_deps@ ../common/libcommon.a ../gui/libGui.a ../game/libgame.a @mixer_flag@ @sdlnet_lib_flag@
++lbreakout2_LDADD = @win32_deps@ ../common/libcommon.a ../gui/libGui.a ../game/libgame.a @mixer_flag@ @sdlnet_lib_flag@ -lintl
+ EXTRA_DIST = credit.h shine.h extras.h balls.h shrapnells.h  \
+ shots.h event.h paddle.h frame.h misc.h bricks.h player.h \
+ file.h config.h lbreakout.h \
+@@ -667,10 +667,6 @@ lbreakout2res.o: win32.ico 
  
  install-data-local:
  	$(mkinstalldirs) $(DESTDIR)$(inst_dir)
