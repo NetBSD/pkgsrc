@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2010/11/15 22:57:50 abs Exp $
+# $NetBSD: Makefile,v 1.94 2011/01/11 15:10:20 drochner Exp $
 #
 
-DISTNAME=		gcalctool-5.30.2
-PKGREVISION=		2
+DISTNAME=		gcalctool-5.32.2
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.30/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -20,7 +19,9 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bison gmake intltool flex msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
-GCONF_SCHEMAS=		gcalctool.schemas
+#GCONF_SCHEMAS=		gcalctool.schemas
+
+BUILD_DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/GConf/schemas.mk"

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.46 2010/07/06 15:39:35 drochner Exp $
+$NetBSD: distinfo,v 1.47 2011/01/11 15:10:20 drochner Exp $
 
-SHA1 (gcalctool-5.30.2.tar.bz2) = 3d0d2f90695dc20fbd3eadddb49f9666fb9eebed
-RMD160 (gcalctool-5.30.2.tar.bz2) = af3e031d370f2fc9a88cb821ebe59e9a5913ee2d
-Size (gcalctool-5.30.2.tar.bz2) = 1126899 bytes
-SHA1 (patch-aa) = 67e23446b886b4bb442a7650e5bbe2e394c05958
+SHA1 (gcalctool-5.32.2.tar.bz2) = a894d910a45a20d4eab1cbd5d4277939145ec64c
+RMD160 (gcalctool-5.32.2.tar.bz2) = df98f5ff659f8abc877a20e146ea791b7411a8a2
+Size (gcalctool-5.32.2.tar.bz2) = 1178049 bytes
+SHA1 (patch-ab) = 1da38334710223b87b9a59e010f77c77067f87eb
