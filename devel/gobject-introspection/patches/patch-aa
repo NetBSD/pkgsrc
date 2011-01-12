@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/01/12 20:23:34 drochner Exp $
+
+--- giscanner/ast.py.orig	2010-10-23 17:23:57.000000000 +0000
++++ giscanner/ast.py
+@@ -278,7 +278,7 @@ type_names['FILE*'] = TYPE_ANY
+ # the relevant methods, but on the other hand, since these types are just
+ # integers it's easy enough to expand them.
+ type_names['size_t'] = type_names['gsize']
+-type_names['time_t'] = TYPE_LONG
++type_names['time_t'] = @TIMET_TYPENAME@
+ type_names['off_t'] = type_names['gsize']
+ type_names['pid_t'] = TYPE_INT
+ type_names['uid_t'] = TYPE_UINT
