@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.3 2010/12/23 11:45:03 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.4 2011/01/12 11:21:28 wiz Exp $
 #
+# used by x11/wxGTK26/Makefile
+# used by x11/wxGTK26-contrib/Makefile
 
 DISTNAME=		wxGTK-2.6.3
 CATEGORIES=		x11
