@@ -1,0 +1,18 @@
+The Suds web services client is a lightweight soap-based client for python the
+is licensed under LGPL. Basic features:
+* No class generation
+* Provides an object-like API.
+* Reads wsdl at runtime for encoding/decoding
+* Provides for the following SOAP (style) binding/encoding:
+	- Document/Literal
+	- RPC/Literal
+	- RPC/Encoded (section 5)
+
+The goal of suds is to present an RPC-like interface into soap-based web
+services. This means that in most cases, users do not need to be concerned with
+the complexities of the WSDL and referenced schemas. Regardless of which soap
+message style is specified, the signature of the service methods remain the
+same. Uses that do examine the WSDL will notice that even with the document
+soap message style, the signature of each method resembles an RPC. The method
+signature contains the contents of the document defined for the message instead
+of the document itself.
