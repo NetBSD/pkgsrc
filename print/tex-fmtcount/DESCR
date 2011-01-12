@@ -1,0 +1,7 @@
+The package fmtcount.sty provides commands that display the value of a
+LaTeX counter in a variety of formats (ordinal, text, hexadecimal,
+decimal, octal, binary etc). The package offers some multilingual
+support; configurations for use in English (both British and American
+usage), French, German, Portuguese and Spanish documents are provided.
+This package was originally provided as part of the author's datetime
+package, but is now distributed separately.

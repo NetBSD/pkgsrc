@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 16:30:54 minskim Exp $
+share/texmf-dist/tex/latex/fmtcount/fc-UKenglish.def
+share/texmf-dist/tex/latex/fmtcount/fc-USenglish.def
+share/texmf-dist/tex/latex/fmtcount/fc-british.def
+share/texmf-dist/tex/latex/fmtcount/fc-english.def
+share/texmf-dist/tex/latex/fmtcount/fc-french.def
+share/texmf-dist/tex/latex/fmtcount/fc-german.def
+share/texmf-dist/tex/latex/fmtcount/fc-italian.def
+share/texmf-dist/tex/latex/fmtcount/fc-portuges.def
+share/texmf-dist/tex/latex/fmtcount/fc-spanish.def
+share/texmf-dist/tex/latex/fmtcount/fmtcount.sty
