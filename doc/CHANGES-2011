@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.33 2011/01/12 09:17:43 obache Exp $
+$NetBSD: CHANGES-2011,v 1.34 2011/01/12 09:29:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mDNSResponder to 258.14 [adam 2011-01-12]
 	Updated textproc/json-glib to 0.12.2 [obache 2011-01-12]
 	Updated graphics/goocanvas to 1.0.0 [obache 2011-01-12]
+	Updated mail/exim-html to 4.73 [adam 2011-01-12]
