@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.21 2011/01/12 08:11:49 obache Exp $
+# $NetBSD: pear.mk,v 1.22 2011/01/12 08:15:45 obache Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -40,7 +40,7 @@ PEAR_DESTDIR=	-P ${DESTDIR} -f
 # Dynamic PLIST, generated via a helper PHP script, which use registry.
 PEAR_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated"; \
-	${SETENV} PEAR_LIB=${PEAR_LIB:Q} WRKSRC=${WRKSRC:Q} \
+	${SETENV} PEAR_LIB=${PEAR_LIB:Q} WRKSRC=${WRKSRC:Q} TZ=UTC \
 	${INSTALL_ENV} PREFIX=${PREFIX:Q} \
 	${PREFIX}/bin/php -d include_path=".:${PREFIX}/lib/php" \
 		-d log_errors=On -d display_errors=Off \
