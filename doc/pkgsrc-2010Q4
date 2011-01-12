@@ -1,6 +1,6 @@
 The pkgsrc-2010Q4 branch was created in pkgsrc at 2011-01-11 04:20 UTC.
 
-There are xxxxx packages in this branch.
+There are 10483 packages in this branch.
 
 Headline versions of packages:
 
@@ -10,8 +10,9 @@ New packages:
 
 Infrastructure changes:
 
-pkgsrc-releng team:
+releng-pkgsrc team:
+tron sbd spz salo rtr pettai schnoebe
 
 pkgsrc-security team:
-
+agc joerg kefren obache gls tez tnn tonnerre wiz pettai
 
