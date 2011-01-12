@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.40 2011/01/12 16:32:04 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.41 2011/01/12 16:37:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -88,3 +88,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-kotex-dev-doc to 0.2 [minskim 2011-01-12]
 	Added print/tex-fmtcount version 1.31 [minskim 2011-01-12]
 	Added print/tex-fmtcount-doc version 1.31 [minskim 2011-01-12]
+	Added print/tex-datetime version 2.58 [minskim 2011-01-12]
+	Added print/tex-datetime-doc version 2.58 [minskim 2011-01-12]
