@@ -1,31 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2010/01/27 16:14:26 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/12 17:07:10 minskim Exp $
 
 DISTNAME=	fixme
-PKGNAME=	tex-${DISTNAME}-3.2
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
-EXTRACT_SUFX=	.zip
+PKGNAME=	tex-${DISTNAME}-4.1
+TEXLIVE_REV=	16169
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://tug.ctan.org/tex-archive/macros/latex/contrib/fixme/
 COMMENT=	Insert "fixme" notes into draft documents
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+DEPENDS+=	tex-changebar-[0-9]*:../../print/tex-changebar
+DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
+DEPENDS+=	tex-latex>=2009:../../print/tex-latex
+DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
+DEPENDS+=	tex-marginnote-[0-9]*:../../print/tex-marginnote
+DEPENDS+=	tex-pdfcomment-[0-9]*:../../print/tex-pdfcomment
+DEPENDS+=	tex-tools>=2010:../../print/tex-tools
+DEPENDS+=	tex-xcolor>=2.11:../../print/tex-xcolor
+DEPENDS+=	tex-xkeyval>=2.6a:../../print/tex-xkeyval
 
-DIST_SUBDIR=	${PKGNAME}
-
-.include "../../print/teTeX/module.mk"
-
-INSTALLATION_DIRS+=	${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme \
-			${PKG_LOCALTEXMFPREFIX}/tex/latex/fixme
-
-do-build:
-	cd ${WRKSRC} && latex fixme.ins
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${WRKSRC}/README ${WRKSRC}/fixme.pdf \
-	    ${WRKSRC}/fixme.el ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme
-	${INSTALL_DATA} ${WRKSRC}/fixme.sty \
-	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/fixme
-
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
