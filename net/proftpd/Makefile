@@ -1,31 +1,30 @@
-# $NetBSD: Makefile,v 1.59 2010/11/07 12:21:09 obache Exp $
+# $NetBSD: Makefile,v 1.60 2011/01/12 07:31:00 adam Exp $
 
-DISTNAME=		proftpd-1.3.3c
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.proftpd.org/distrib/source/ \
-			ftp://ftp.servus.at/ProFTPD/distrib/source/ \
-			ftp://ftp.fsn.hu/pub/proftpd/distrib/source/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	proftpd-1.3.3d
+CATEGORIES=	net
+MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
+		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
+		ftp://ftp.fsn.hu/pub/proftpd/distrib/source/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		kim@tac.nyc.ny.us
-HOMEPAGE=		http://www.proftpd.org/
-COMMENT=		FTP server with Apache like configuration
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	kim@tac.nyc.ny.us
+HOMEPAGE=	http://www.proftpd.org/
+COMMENT=	FTP server with Apache like configuration
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt
-
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--disable-sendfile
 CONFIGURE_ARGS+=	--enable-ctrls
 CONFIGURE_ARGS+=	--enable-nls
-
-CONFIGURE_ENV+=		install_user=${ROOT_USER} install_group=${ROOT_GROUP}
+CONFIGURE_ENV+=		install_group=${ROOT_GROUP}
+CONFIGURE_ENV+=		install_user=${ROOT_USER}
 
 BUILD_DEFS+=		VARBASE
 

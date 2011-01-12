@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.mod_quota,v 1.1 2007/01/24 05:22:01 martti Exp $
-include/proftpd/mod_quotatab.h
