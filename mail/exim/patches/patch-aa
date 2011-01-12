@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
+$NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
 
---- Local/Makefile.pkgsrc.orig	2009-11-16 07:56:01.000000000 +0100
+--- Local/Makefile.pkgsrc.orig	2011-01-12 07:35:17.000000000 +0000
 +++ Local/Makefile.pkgsrc
 @@ -100,7 +100,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -20,16 +20,16 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  # It is possible to specify a colon-separated list of files for CONFIGURE_FILE.
  # In this case, Exim will use the first of them that exists when it is run.
-@@ -134,7 +134,7 @@ CONFIGURE_FILE=/usr/exim/configure
- # owner of a local mailbox.) Specifying these values as root is very strongly
- # discouraged.
+@@ -133,7 +133,7 @@ CONFIGURE_FILE=/usr/exim/configure
+ # deliveries. (Local deliveries run as various non-root users, typically as the
+ # owner of a local mailbox.) Specifying these values as root is not supported.
  
 -EXIM_USER=
 +EXIM_USER=ref:@EXIM_USER@
  
  # If you specify EXIM_USER as a name, this is looked up at build time, and the
  # uid number is built into the binary. However, you can specify that this
-@@ -155,7 +155,7 @@ EXIM_USER=
+@@ -154,7 +154,7 @@ EXIM_USER=
  # for EXIM_USER (e.g. EXIM_USER=exim), you don't need to set EXIM_GROUP unless
  # you want to use a group other than the default group for the given user.
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  # Many sites define a user called "exim", with an appropriate default group,
  # and use
-@@ -176,7 +176,7 @@ EXIM_USER=
+@@ -175,7 +175,7 @@ EXIM_USER=
  
  # Almost all installations choose this:
  
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  
  
-@@ -333,7 +333,7 @@ PCRE_LIBS=-lpcre
+@@ -332,7 +332,7 @@ PCRE_LIBS=-lpcre
  # files are defaulted in the OS/Makefile-Default file, but can be overridden in
  # local OS-specific make files.
  
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -486,11 +486,11 @@ FIXED_NEVER_USERS=root
+@@ -527,11 +527,11 @@ FIXED_NEVER_USERS=root
  # included in the Exim binary. You will then need to set up the run time
  # configuration to make use of the mechanism(s) selected.
  
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -656,7 +656,7 @@ HEADERS_CHARSET="ISO-8859-1"
+@@ -697,7 +697,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -897,13 +897,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -945,13 +945,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -101,7 +101,7 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -1097,7 +1097,7 @@ TMPDIR="/tmp"
+@@ -1145,7 +1145,7 @@ TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
@@ -110,7 +110,7 @@ $NetBSD: patch-aa,v 1.20 2009/11/17 06:39:32 adam Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1149,3 +1149,10 @@ TMPDIR="/tmp"
+@@ -1197,3 +1197,10 @@ TMPDIR="/tmp"
  # ENABLE_DISABLE_FSYNC=yes
  
  # End of EDITME for Exim 4.

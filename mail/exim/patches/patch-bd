@@ -1,0 +1,20 @@
+$NetBSD: patch-bd,v 1.1 2011/01/12 07:52:44 adam Exp $
+
+--- src/globals.c.orig	2009-11-16 19:50:37.000000000 +0000
++++ src/globals.c
+@@ -75,8 +75,15 @@ uschar *ibase_servers          = NULL;
+ #endif
+ 
+ #ifdef LOOKUP_LDAP
++uschar *eldap_ca_cert_dir      = NULL;
++uschar *eldap_ca_cert_file     = NULL;
++uschar *eldap_cert_file        = NULL;
++uschar *eldap_cert_key         = NULL;
++uschar *eldap_cipher_suite     = NULL;
+ uschar *eldap_default_servers  = NULL;
++uschar *eldap_require_cert     = NULL;
+ int     eldap_version          = -1;
++BOOL    eldap_start_tls        = FALSE;
+ #endif
+ 
+ #ifdef LOOKUP_MYSQL
