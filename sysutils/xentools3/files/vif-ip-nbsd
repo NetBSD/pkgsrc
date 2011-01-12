@@ -1,8 +1,11 @@
 #!/bin/sh -e
 
-# $NetBSD: vif-ip-nbsd,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
+# $NetBSD: vif-ip-nbsd,v 1.2 2011/01/12 00:11:19 jym Exp $
 # Called by xenbackendd
 # Usage: vif-ip xsdir_backend_path state
+
+dir=$(dirname $0)
+. "$dir/xen-subr"
 
 PATH=/bin:/usr/bin:@PREFIX@/bin:/sbin:/usr/sbin:@PREFIX@/sbin
 export PATH
@@ -20,7 +23,7 @@ case $xstatus in
 	xip=$(xenstore-read "$xpath/ip")
 	xfid=$(xenstore-read "$xpath/frontend-id")
 	xhandle=$(xenstore-read "$xpath/handle")
-	iface=xvif$xfid.$xhandle
+	iface=$(xenstore_read_default "$xpath/vifname" "xvif$xfid.$xhandle")
 	echo ifconfig $iface $xip up
 	ifconfig $iface $xip up
 	xenstore-write $xpath/hotplug-status connected
