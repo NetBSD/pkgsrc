@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.27 2011/01/11 21:03:14 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.28 2011/01/12 00:13:20 jym Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -58,3 +58,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/mp3diags to 1.0.07.052 [drochner 2011-01-11]
 	Updated audio/musicpd to 0.15.15 [drochner 2011-01-11]
 	Updated lang/py-cxfreeze to 4.2.2 [drochner 2011-01-11]
+	Updated sysutils/xentools3 to 3.1.4nb7 [jym 2011-01-12]
+	Updated sysutils/xentools33 to 3.3.2nb5 [jym 2011-01-12]
