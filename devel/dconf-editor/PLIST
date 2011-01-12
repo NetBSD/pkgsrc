@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2011/01/12 13:52:10 drochner Exp $
+bin/dconf-editor
