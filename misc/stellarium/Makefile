@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2010/12/06 21:03:18 adam Exp $
+# $NetBSD: Makefile,v 1.42 2011/01/12 07:22:38 adam Exp $
 
 DISTNAME=	stellarium-0.10.6
 CATEGORIES=	misc
@@ -18,6 +18,12 @@ USE_TOOLS+=		gmake msgfmt perl
 CMAKE_ARGS+= -D FreeType2_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CMAKE_ARGS+= -D FreeType2_LIBRARIES:PATH=${BUILDLINK_PREFIX.freetype2}/lib
 CMAKE_ARGS+= -D SDLMIXER_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.SDL}/include/SDL
+
+SUBST_CLASSES+=		mac
+SUBST_MESSAGE.mac=	Disabling Mac OS X paths.
+SUBST_FILES.mac=	src/core/StelFileMgr.cpp
+SUBST_STAGE.mac=	pre-configure
+SUBST_SED.mac=		-e 's,Q_OS_MAC,Q_XX_MAC,'
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"

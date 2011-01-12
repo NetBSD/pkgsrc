@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2010/12/06 21:03:18 adam Exp $
+$NetBSD: distinfo,v 1.17 2011/01/12 07:22:38 adam Exp $
 
 SHA1 (stellarium-0.10.6.tar.gz) = b28f74d145c89656d9f79b86abe00297a3559cef
 RMD160 (stellarium-0.10.6.tar.gz) = 31ba1a9042984939f135195c31f15f0a20021085
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = e5c3968a2d8bde8a651cf87d0b5d99a3f01680b0
 SHA1 (patch-ab) = e7e1042cb674462f43fbb7c6ad5b023e62b54a59
 SHA1 (patch-ac) = e9436d4f9f34127f176931dda4665ddc5d6f8bfa
 SHA1 (patch-ad) = 5e4912f60fd74a868933e4afe27a67ddb73514a8
+SHA1 (patch-ae) = d033aabef7777ad8c7593d067620c7cdd1a8b998
