@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/13 15:19:41 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/12 17:27:36 minskim Exp $
 
 DISTNAME=	courier
-PKGNAME=	tex-${DISTNAME}-2009
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
+PKGNAME=	tex-${DISTNAME}-2010
+TEXLIVE_REV=	20926
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Adobe Type 1 "free" copies of Courier
