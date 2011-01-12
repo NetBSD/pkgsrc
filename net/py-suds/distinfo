@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/12 08:04:14 adam Exp $
+
+SHA1 (suds-0.4.tar.gz) = d76ca8bdebb09116a36aababe0ee297b023cc55e
+RMD160 (suds-0.4.tar.gz) = d2c5fa050c172ba316a3e81f875fe3ff04f43cff
+Size (suds-0.4.tar.gz) = 104013 bytes
