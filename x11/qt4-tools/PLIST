@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/11/15 13:05:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/01/12 07:18:00 adam Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -10,6 +10,7 @@ qt4/bin/lconvert
 qt4/bin/linguist
 qt4/bin/lrelease
 qt4/bin/lupdate
+${PLIST.mac}qt4/bin/macdeployqt
 qt4/bin/pixeltool
 qt4/bin/qcollectiongenerator
 qt4/bin/qdoc3
@@ -18,7 +19,7 @@ qt4/bin/qhelpgenerator
 qt4/bin/qmake
 qt4/bin/qmlviewer
 qt4/bin/qt3to4
-qt4/bin/qtconfig
+${PLIST.unix}qt4/bin/qtconfig
 qt4/bin/qttracereplay
 qt4/bin/xmlpatterns
 qt4/bin/xmlpatternsvalidator
