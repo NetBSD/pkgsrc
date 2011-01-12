@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/01/11 15:27:25 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/12 12:23:47 drochner Exp $
 #
 
 DISTNAME=	brasero-2.32.1
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-inotify
 PKGCONFIG_OVERRIDE+=	libbrasero-media.pc.in
 
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf/schemas.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.10
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
