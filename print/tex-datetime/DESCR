@@ -1,0 +1,5 @@
+Provides various different formats for the text created by the command
+\today, and also provides commands for displaying the current time (or
+any given time), in 12-hour, 24-hour or text format. The package
+overrides babel's date format, having its own library of date formats in
+different languages. The package requires the fmtcount package.
