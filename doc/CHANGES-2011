@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.36 2011/01/12 11:47:13 adam Exp $
+$NetBSD: CHANGES-2011,v 1.37 2011/01/12 11:58:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -77,3 +77,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/exim-html to 4.73 [adam 2011-01-12]
 	Updated devel/mercurial to 1.7.3 [wiz 2011-01-12]
 	Updated graphics/hugin to 2010.4.0 [adam 2011-01-12]
+	Updated graphics/goocanvasmm to 0.15.3nb3 [obache 2011-01-12]
