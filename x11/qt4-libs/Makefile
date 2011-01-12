@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.54 2011/01/12 07:07:06 adam Exp $
+# $NetBSD: Makefile,v 1.55 2011/01/12 14:40:42 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	C++ X GUI toolkit
 
 # XXX this is to test what really gets installed when 'do-install' is disabled
@@ -70,7 +70,7 @@ do-install:
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .endfor
 	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore phonon
+.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
