@@ -1,0 +1,5 @@
+Identify areas of text to be marked with changebars with the \cbstart
+and \cbend commands; the bars may be coloured. The package uses
+'drivers' to place the bars; the available drivers can work with
+dvitoln03, dvitops, dvips, the emTeX and TeXtures DVI drivers, and VTeX
+and PDFTeX.
