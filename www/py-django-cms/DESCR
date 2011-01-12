@@ -1,0 +1,5 @@
+A Django app for managing hierarchical pages of content in multiple languages,
+on different sites. Django CMS handles the navigation rendering for you in
+multiple languages with internationalization (i18n) slugs, and the navigation
+can be extended by your own models. Pages are rendered with a template that
+has placeholders which get filled via plugins.
