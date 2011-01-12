@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10009 2011/01/12 11:29:42 obache Exp $
+$NetBSD: TODO,v 1.10010 2011/01/12 20:02:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.32.0 [GNOME 2.32]
-	o cherokee-1.0.15
+	o cherokee-1.0.16
 	o chromium-0.9.14.1
 	o cinepaint-0.23
 	o cint-5.16
@@ -688,10 +688,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-2.30
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.2.8.9
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
-	o gnome-doc-utils-0.20.4
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
 	o gnome-keyring-2.32.1 [GNOME 2.32]
 	o gnome-mag-0.16.3
@@ -706,7 +704,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-subtitles-1.1
 	o gnome-system-monitor-2.28.2
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
-	o gnome-user-docs-2.30.0 [GNOME 2.30]
 	o gnome-user-share-2.30.2 [GNOME 2.32]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
@@ -734,6 +731,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.10
 	o gss-1.0.1
 	o gssdp-0.9.1
+	o gthumb-2.12.2
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.2
@@ -831,7 +829,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o latd-1.21
 	o latex2rtf-1.9.19
 	o lbdb-0.37
-	o lbreakout2-2.6.2
 	o lcc-4.2
 	o lcms-2.1
 	o ldapsdk-6.0.2
@@ -844,9 +841,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libFS-1.0.3
 	o libICE-1.0.7
 	o libSM-1.2.0
-	o libX11-1.4.0
+	o libX11-1.4.1
 	o libXScrnSaver-1.2.1
-	o libXaw-1.0.8
+	o libXaw-1.0.9
 	o libXcomposite-0.4.3
 	o libXcursor-1.1.11
 	o libXdmcp-1.1.0
@@ -875,7 +872,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.3
 	o libgdata-0.8.0
-	o libgexiv2-0.2.2
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libhydrogen-0.9.2
@@ -897,7 +893,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.0
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o libraw-0.12.3
 	o librep-0.91.0
 	o libsigsegv-2.9
 	o libssh-0.4.7
@@ -935,7 +930,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.3.7
+	o mathomatic-15.4.0
 	o mawk-1.3.4.20100625
 	o mc-4.7.0.10
 	o mdocml-1.10.9
@@ -1023,13 +1018,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-16.4
+	o nut-16.5
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
-	o ocrad-0.20
+	o ocrad-0.21
 	o ocsigen-1.1.0 [pkg/40761]
 	o offlineimap-6.2.0
 	o olvwm-4.5
