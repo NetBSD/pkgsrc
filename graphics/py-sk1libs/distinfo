@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/12 07:57:58 adam Exp $
+
+SHA1 (sk1libs-0.9.1.tar.gz) = dd948558128bb6547b1f277087bf3066104912da
+RMD160 (sk1libs-0.9.1.tar.gz) = 38f22205e0b5b6078e31ec6dc4c1d93845533046
+Size (sk1libs-0.9.1.tar.gz) = 1019443 bytes
