@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2009/10/18 16:34:34 ahoka Exp $
+# $NetBSD: options.mk,v 1.5 2011/01/12 07:07:06 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt4
 PKG_SUPPORTED_OPTIONS=	cups debug gtk2
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	-no-gtkstyle
 .if !empty(PKG_OPTIONS:Mdebug)
 CC+=			-ggdb
 CXX+=			-ggdb
-CONFIGURE_ARGS+=	--debug
+CONFIGURE_ARGS+=	-debug
 INSTALL_UNSTRIPPED=	yes
+.else
+CONFIGURE_ARGS+=	-no-debug
 .endif
