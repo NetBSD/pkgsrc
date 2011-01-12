@@ -1,4 +1,4 @@
-/*	$NetBSD: package-list.c,v 1.1 2011/01/12 00:26:33 tron Exp $	*/
+/*	$NetBSD: package-list.c,v 1.2 2011/01/12 08:47:52 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2011 The NetBSD Foundation, Inc.
@@ -32,7 +32,7 @@
 #include "package-list.h"
 
 #include <stdlib.h>
-#include <strings.h>
+#include <string.h>
 
 PListEntry *
 PListInsert(PListEntry **Tree,char *Name)
