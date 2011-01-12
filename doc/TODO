@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10005 2011/01/11 20:08:51 gls Exp $
+$NetBSD: TODO,v 1.10006 2011/01/12 09:03:15 obache Exp $
 
 Suggested new packages
 ======================
@@ -806,7 +806,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jhead-2.90
 	o jools-1.0
 	o jpilot-1.8.0
-	o json-glib-0.12.2
 	o k3b-2.0
 	o kadu-0.6.5
 	o kaffe-1.1.9
