@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 16:42:10 minskim Exp $
+share/texmf-dist/doc/latex/pdfcomment/CHANGES
+share/texmf-dist/doc/latex/pdfcomment/INSTALL
+share/texmf-dist/doc/latex/pdfcomment/README
+share/texmf-dist/doc/latex/pdfcomment/example.pdf
+share/texmf-dist/doc/latex/pdfcomment/example.tex
+share/texmf-dist/doc/latex/pdfcomment/example_latex_dvipdfmx.pdf
+share/texmf-dist/doc/latex/pdfcomment/example_latex_dvipdfmx.tex
+share/texmf-dist/doc/latex/pdfcomment/example_latex_dvips_ps2pdf.pdf
+share/texmf-dist/doc/latex/pdfcomment/example_latex_dvips_ps2pdf.tex
+share/texmf-dist/doc/latex/pdfcomment/example_math_markup.pdf
+share/texmf-dist/doc/latex/pdfcomment/example_math_markup.tex
+share/texmf-dist/doc/latex/pdfcomment/example_xelatex.pdf
+share/texmf-dist/doc/latex/pdfcomment/example_xelatex.tex
+share/texmf-dist/doc/latex/pdfcomment/manifest.txt
+share/texmf-dist/doc/latex/pdfcomment/pdfcomment.pdf
+share/texmf-dist/doc/latex/pdfcomment/pdfcomment.tex
+share/texmf-dist/doc/latex/pdfcomment/pdfcomment_de.pdf
+share/texmf-dist/doc/latex/pdfcomment/pdfcomment_de.tex
