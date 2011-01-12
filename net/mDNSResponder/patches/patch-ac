@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2010/12/15 22:33:42 jmcneill Exp $
+$NetBSD: patch-ac,v 1.9 2011/01/12 08:53:52 adam Exp $
 
 * Fix build on FreeBSD and DragonFly, as shown in recent bulk builds and
   PR 34022.
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.8 2010/12/15 22:33:42 jmcneill Exp $
 
 --- mDNSPosix/mDNSUNP.c.orig	2009-01-13 00:31:35.000000000 -0500
 +++ mDNSPosix/mDNSUNP.c	2010-12-04 19:25:49.000000000 -0500
-@@ -188,8 +188,10 @@ First checkin
+@@ -54,8 +54,10 @@ First checkin
      #include <net/if_dl.h>
  #endif
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.8 2010/12/15 22:33:42 jmcneill Exp $
  #include <netinet/in_var.h>
  // Note: netinet/in_var.h implicitly includes netinet6/in6_var.h for us
  #endif
-@@ -239,6 +241,8 @@ struct ifi_info *get_ifi_info_linuxv6(in
+@@ -105,6 +107,8 @@ struct ifi_info *get_ifi_info_linuxv6(in
  					  addr[4],addr[5],addr[6],addr[7],
  					  &index, &plen, &scope, &flags, ifname) != EOF) {
  
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.8 2010/12/15 22:33:42 jmcneill Exp $
  			myflags = 0;
  			if (strncmp(lastname, ifname, IFNAMSIZ) == 0) {
  				if (doaliases == 0)
-@@ -273,7 +277,6 @@ struct ifi_info *get_ifi_info_linuxv6(in
+@@ -139,7 +143,6 @@ struct ifi_info *get_ifi_info_linuxv6(in
  			memcpy(ifi->ifi_addr, res0->ai_addr, sizeof(struct sockaddr_in6));
  
  			/* Add netmask of the interface */

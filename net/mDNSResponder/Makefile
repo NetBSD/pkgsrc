@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.33 2010/12/20 14:17:01 tez Exp $
+# $NetBSD: Makefile,v 1.34 2011/01/12 08:53:52 adam Exp $
 
-DISTNAME=	mDNSResponder-214.3.2
-PKGREVISION=	1
+DISTNAME=	mDNSResponder-258.14
 CATEGORIES=	net
 MASTER_SITES=	http://www.opensource.apple.com/tarballs/mDNSResponder/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://developer.apple.com/bonjour/
 COMMENT=	Apple's mDNS responder
+LICENSE=	apache-2.0 AND modified-bsd
 
-MAKE_JOBS_SAFE=	no
-
-USE_TOOLS+=	gmake flex bison
-BUILD_DIRS=	mDNSPosix
-BUILDDIR=	${WRKSRC}/mDNSPosix/build/prod
-AUTO_MKDIRS=	yes
+USE_TOOLS+=		gmake flex bison
+BUILD_DIRS=		mDNSPosix
+BUILDDIR=		${WRKSRC}/mDNSPosix/build/prod
+AUTO_MKDIRS=		yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -32,13 +30,7 @@ MAKE_ENV+=	os=solaris
 .elif ${OPSYS} == "Linux"
 MAKE_ENV+=	os=linux
 .elif ${OPSYS} == "Darwin"
-.  if !empty(OS_VERSION:M6*)
-MAKE_ENV+=	os=jaguar
-.  elif !empty(OS_VERSION:M7*)
-MAKE_ENV+=	os=panther
-.  elif !empty(OS_VERSION:M8*)
-MAKE_ENV+=	os=tiger
-.  endif
+MAKE_ENV+=	os=x
 SO_SUFFIX=	dylib
 .else
 MAKE_ENV+=	os=netbsd
@@ -56,7 +48,7 @@ SBINARY=	mdnsd dnsextd
     !empty(MACHINE_PLATFORM:MSunOS-5.[0-9]-*)
 .include "../../devel/librfuncs/buildlink3.mk"
 
-MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs:Q}/lib\ ${BUILDLINK_LDFLAGS.librfuncs:Q}
+MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs}/lib\ ${BUILDLINK_LDFLAGS.librfuncs:Q}
 .else
 MAKE_ENV+=	EXTRA_LIBS=
 .endif
