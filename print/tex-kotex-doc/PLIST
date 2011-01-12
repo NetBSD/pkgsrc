@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/07 20:09:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/12 15:18:12 minskim Exp $
 share/texmf-dist/doc/latex/kotex/ChangLog
 share/texmf-dist/doc/latex/kotex/INSTALL
 share/texmf-dist/doc/latex/kotex/LICENSE
@@ -31,4 +31,4 @@ share/texmf-dist/doc/latex/kotex/kotexguide/writinghdoc.tex
 share/texmf-dist/doc/latex/kotex/manifest.txt
 share/texmf-dist/doc/latex/kotex/memucs-manual/memucs-manual.pdf
 share/texmf-dist/doc/latex/kotex/news-0.0.alpha.txt
-share/texmf-dist/doc/latex/kotex/news-${PKGVERSION}.txt
+share/texmf-dist/doc/latex/kotex/news-0.1.1.txt
