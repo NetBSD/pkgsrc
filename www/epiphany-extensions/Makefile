@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2010/12/17 07:36:10 obache Exp $
+# $NetBSD: Makefile,v 1.63 2011/01/12 18:53:21 drochner Exp $
 #
 
-DISTNAME=	epiphany-extensions-2.30.2
-PKGREVISION=	3
+DISTNAME=	epiphany-extensions-2.32.0
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.30/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +22,7 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
 CONFIGURE_ARGS+=	--with-extensions=all
 
-.include "../../devel/GConf/schemas.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.5
 .include "../../devel/glib2/buildlink3.mk"
