@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.43 2011/01/12 17:00:31 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.44 2011/01/12 17:07:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -94,3 +94,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-pdfcomment-doc version 2.1 [minskim 2011-01-12]
 	Added print/tex-changebar version 3.5c [minskim 2011-01-12]
 	Added print/tex-changebar-doc version 3.5c [minskim 2011-01-12]
+	Updated print/tex-fixme to 4.1 [minskim 2011-01-12]
