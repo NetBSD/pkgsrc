@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2010/11/15 22:59:11 abs Exp $
+# $NetBSD: Makefile,v 1.38 2011/01/12 07:18:00 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,17 +31,29 @@ INSTALLATION_DIRS+=	${QTPREFIX}/tools/qdoc3
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 post-configure:
-	ln -s ${QTPREFIX}/bin/moc ${WRKSRC}/bin/moc
-	ln -s ${QTPREFIX}/bin/uic ${WRKSRC}/bin/uic
-	ln -s ${QTPREFIX}/bin/rcc ${WRKSRC}/bin/rcc
+	ln -sf ${QTPREFIX}/bin/moc ${WRKSRC}/bin/moc
+	ln -sf ${QTPREFIX}/bin/uic ${WRKSRC}/bin/uic
+	ln -sf ${QTPREFIX}/bin/rcc ${WRKSRC}/bin/rcc
+
+QTPROG_BIN=	lconvert lrelease lupdate pixeltool qdoc3 qmake qt3to4
+QTPROG_BIN+=	qttracereplay xmlpatterns xmlpatternsvalidator
+QTPROG_LT=	qcollectiongenerator qhelpconverter qhelpgenerator
+.if ${OPSYS} == "Darwin"
+QTPROG_BIN+=	QMLViewer macdeployqt
+QTPROG_LT+=	Assistant Designer Linguist
+.else
+QTPROG_BIN+=	qmlviewer qtconfig
+QTPROG_LT+=	assistant designer linguist
+.endif
 
 do-install:
-.for prog in lconvert lrelease lupdate pixeltool qdoc3 qmake qmlviewer qt3to4 qtconfig qttracereplay xmlpatterns xmlpatternsvalidator
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
+.for prog in ${QTPROG_BIN}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
+		${DESTDIR}${QTPREFIX}/bin/${prog:tl}
 .endfor
-.for prog in assistant designer linguist qcollectiongenerator qhelpconverter qhelpgenerator
+.for prog in ${QTPROG_LT}
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
-		${DESTDIR}${QTPREFIX}/bin
+		${DESTDIR}${QTPREFIX}/bin/${prog:tl}
 .endfor
 	cd ${WRKSRC}/tools/assistant/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
