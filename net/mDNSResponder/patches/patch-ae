@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2010/07/19 14:14:14 tnn Exp $
+$NetBSD: patch-ae,v 1.3 2011/01/12 08:53:52 adam Exp $
 
---- mDNSShared/CommonServices.h.orig	2009-03-30 19:51:29.000000000 +0000
+--- mDNSShared/CommonServices.h.orig	2009-08-11 01:13:47.000000000 +0000
 +++ mDNSShared/CommonServices.h
-@@ -102,6 +102,24 @@ Common Services and portability support 
+@@ -64,6 +64,24 @@
  	#endif
  #endif
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ae,v 1.2 2010/07/19 14:14:14 tnn Exp $
  // Solaris
  
  #if( !defined( TARGET_OS_SOLARIS ) )
-@@ -128,7 +146,7 @@ Common Services and portability support 
+@@ -90,7 +108,7 @@
  	
  	// No predefined macro for VxWorks so just assume VxWorks if nothing else is set.
  	
@@ -36,7 +36,7 @@ $NetBSD: patch-ae,v 1.2 2010/07/19 14:14:14 tnn Exp $
  		#define	TARGET_OS_VXWORKS		1
  	#else
  		#define	TARGET_OS_VXWORKS		0
-@@ -224,6 +242,19 @@ Common Services and portability support 
+@@ -186,6 +204,19 @@
  	#include	<stdint.h>
  	#include	<arpa/inet.h>
  	
@@ -56,7 +56,7 @@ $NetBSD: patch-ae,v 1.2 2010/07/19 14:14:14 tnn Exp $
  #elif( TARGET_OS_SOLARIS )
  	
  	// Solaris
-@@ -493,7 +524,7 @@ Common Services and portability support 
+@@ -455,7 +486,7 @@
  // - Windows
  
  #if( TARGET_LANGUAGE_C_LIKE )
