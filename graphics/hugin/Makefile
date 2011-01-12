@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2010/11/15 22:57:20 abs Exp $
+# $NetBSD: Makefile,v 1.16 2011/01/12 11:46:28 adam Exp $
 
-DISTNAME=	hugin-2010.2.0
-PKGREVISION=	2
+DISTNAME=	hugin-2010.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hugin.sourceforge.net/
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	autopano-sift-C>=2.5.1:../../graphics/autopano-sift-C
-DEPENDS+=	panomatic>=0.9.4:../../graphics/panomatic
 DEPENDS+=	enblend-enfuse>=4.0:../../graphics/enblend-enfuse
 DEPENDS+=	p5-Image-ExifTool>=8.15:../../graphics/p5-Image-ExifTool
 
