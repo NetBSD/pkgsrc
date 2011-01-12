@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2010/11/15 22:56:10 abs Exp $
+# $NetBSD: Makefile,v 1.31 2011/01/12 10:33:13 wiz Exp $
 #
+# included by ../../audio/bmp/buildlink3.mk
+# included by ../../audio/bmp-esound/buildlink3.mk
 
 BMP_ENABLE_ENCODERS=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
