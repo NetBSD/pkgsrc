@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/13 15:19:41 minskim Exp $
+$NetBSD: distinfo,v 1.4 2011/01/12 17:27:36 minskim Exp $
 
-SHA1 (tex-courier-15878.2010/courier.tar.xz) = de0777708dd63070c6b228eaeb2f89da82be3ee2
-RMD160 (tex-courier-15878.2010/courier.tar.xz) = f7ba079192f18bb9bb5565c1190ca17b5229a9af
-Size (tex-courier-15878.2010/courier.tar.xz) = 509148 bytes
+SHA1 (tex-courier-20926/courier.tar.xz) = 91d376cfdb76af83d4e50c1c88a1c3fde200f70b
+RMD160 (tex-courier-20926/courier.tar.xz) = 84a7e841e5bcfce029d85465e1970d99de862b6a
+Size (tex-courier-20926/courier.tar.xz) = 507868 bytes
