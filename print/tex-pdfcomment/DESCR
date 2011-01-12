@@ -1,0 +1,11 @@
+For a long time pdfLaTeX has offered the command \pdfannot for inserting
+arbitrary PDF annotations. However, the command is presented in a form
+where additional knowledge of the definition of the PDF format is
+indispensable. This package is an answer to the - occasional - questions
+in newsgroups, about how one could use the comment function of Adobe
+Reader. At least for the writer of LaTeX code, the package offers a
+convenient and user-friendly means of using \pdfannot to provide
+comments in PDF files. Since version v1.1, pdfcomment.sty also supports:
+LaTeX -> dvips -> ps2pdf, LaTeX - > dvipdfmx and XeLaTeX. Unfortunately,
+support of PDF annotations by PDF viewers is sparse to nonexistent. The
+reference viewer for the development of this package is Adobe Reader.
