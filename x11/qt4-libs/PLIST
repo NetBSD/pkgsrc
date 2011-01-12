@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/01/12 07:07:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/01/12 14:40:42 adam Exp $
 lib/pkgconfig/Qt3Support.pc
 lib/pkgconfig/QtCore.pc
 lib/pkgconfig/QtDeclarative.pc
@@ -15,7 +15,6 @@ lib/pkgconfig/QtWebKit.pc
 lib/pkgconfig/QtXml.pc
 lib/pkgconfig/QtXmlPatterns.pc
 lib/pkgconfig/jscore.pc
-lib/pkgconfig/phonon.pc
 qt4/bin/moc
 qt4/bin/rcc
 qt4/bin/uic
@@ -40,7 +39,6 @@ qt4/lib/libQtWebKit.la
 qt4/lib/libQtXml.la
 qt4/lib/libQtXmlPatterns.la
 qt4/lib/libjscore.la
-qt4/lib/libphonon.la
 qt4/plugins/accessible/libqtaccessiblecompatwidgets.la
 qt4/plugins/accessible/libqtaccessiblewidgets.la
 qt4/plugins/bearer/libqgenericbearer.la
