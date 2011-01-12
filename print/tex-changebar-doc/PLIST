@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 16:59:39 minskim Exp $
+share/texmf-dist/doc/latex/changebar/00readme.txt
+share/texmf-dist/doc/latex/changebar/catalog.txt
+share/texmf-dist/doc/latex/changebar/cbtest1-ltx.pdf
+share/texmf-dist/doc/latex/changebar/cbtest1-pdf.pdf
+share/texmf-dist/doc/latex/changebar/cbtest1.tex
+share/texmf-dist/doc/latex/changebar/cbtest2-ltx.pdf
+share/texmf-dist/doc/latex/changebar/cbtest2-pdf.pdf
+share/texmf-dist/doc/latex/changebar/cbtest2.tex
+share/texmf-dist/doc/latex/changebar/changebar.bug
+share/texmf-dist/doc/latex/changebar/changebar.pdf
+share/texmf-dist/doc/latex/changebar/chbar.1
+share/texmf-dist/doc/latex/changebar/chbar.sh
+share/texmf-dist/doc/latex/changebar/manifest.txt
