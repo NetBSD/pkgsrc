@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/03 23:17:48 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/01/12 15:18:12 minskim Exp $
 
-SHA1 (ko.tex-macro.tar.gz) = 3eb45288fad43301686a75f46199a8968564aecc
-RMD160 (ko.tex-macro.tar.gz) = 845a92ce3b94c54694ea3379aebd52eb6960ed16
-Size (ko.tex-macro.tar.gz) = 1392662 bytes
+SHA1 (kotex-util-source-20100509.tar.gz) = 877246e94033206302f84ee2aca625ca5ee513f4
+RMD160 (kotex-util-source-20100509.tar.gz) = c05f79281d6ee2d787cca73283da8dbc001a76c2
+Size (kotex-util-source-20100509.tar.gz) = 94647 bytes
