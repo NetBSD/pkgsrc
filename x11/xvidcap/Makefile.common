@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2010/12/23 11:45:04 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/01/12 11:22:33 wiz Exp $
 #
+# used by x11/xvidcap/Makefile
+# used by x11/xvidcap-gtk2/Makefile
 
 DISTNAME=		xvidcap-1.1.3
-PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xvidcap/}
 
