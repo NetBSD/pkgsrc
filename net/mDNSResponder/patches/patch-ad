@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2010/07/14 10:14:43 sbd Exp $
+$NetBSD: patch-ad,v 1.2 2011/01/12 08:53:52 adam Exp $
 
 --- Clients/Makefile.orig	2008-09-05 17:37:08.000000000 +0000
 +++ Clients/Makefile
-@@ -81,7 +81,7 @@ build:
+@@ -42,7 +42,7 @@ build:
  	mkdir build
  
  build/dns-sd: build dns-sd.c ClientCommon.c

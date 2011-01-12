@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2010/07/14 09:29:04 sbd Exp $
+$NetBSD: patch-ab,v 1.8 2011/01/12 08:53:52 adam Exp $
 
 1) add patch from http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/147007
 
@@ -6,9 +6,9 @@ $NetBSD: patch-ab,v 1.7 2010/07/14 09:29:04 sbd Exp $
  -fix some RFC2292 vs 3542 confusion which made the former fail
  -on NetBSD, build a HINFO record from hw.model and kern.osrelease
 
---- mDNSPosix/mDNSPosix.c.orig	2009-01-25 03:16:46.000000000 +0000
+--- mDNSPosix/mDNSPosix.c.orig	2010-05-20 22:35:08.000000000 +0000
 +++ mDNSPosix/mDNSPosix.c
-@@ -581,7 +581,7 @@ mDNSexport int ParseDNSServers(mDNS *m, 
+@@ -467,7 +467,7 @@ mDNSexport int ParseDNSServers(mDNS *m, 
  	{
  	char line[256];
  	char nameserver[16];
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.7 2010/07/14 09:29:04 sbd Exp $
  	int  numOfServers = 0;
  	FILE *fp = fopen(filePath, "r");
  	if (fp == NULL) return -1;
-@@ -600,6 +600,7 @@ mDNSexport int ParseDNSServers(mDNS *m, 
+@@ -486,6 +486,7 @@ mDNSexport int ParseDNSServers(mDNS *m, 
  			numOfServers++;
  			}
  		}  
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.7 2010/07/14 09:29:04 sbd Exp $
  	return (numOfServers > 0) ? 0 : -1;
  	}
  
-@@ -802,7 +803,13 @@ mDNSlocal int SetupSocket(struct sockadd
+@@ -690,7 +691,13 @@ mDNSlocal int SetupSocket(struct sockadd
  		{
  		struct ipv6_mreq imr6;
  		struct sockaddr_in6 bindAddr6;
@@ -40,7 +40,7 @@ $NetBSD: patch-ab,v 1.7 2010/07/14 09:29:04 sbd Exp $
  		if (err == 0)
  			{
  				err = setsockopt(*sktPtr, IPPROTO_IPV6, IPV6_PKTINFO, &kOn, sizeof(kOn));
-@@ -811,7 +818,13 @@ mDNSlocal int SetupSocket(struct sockadd
+@@ -699,7 +706,13 @@ mDNSlocal int SetupSocket(struct sockadd
  	#else
  		#warning This platform has no way to get the destination interface information for IPv6 -- will only work for single-homed hosts
  	#endif
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.7 2010/07/14 09:29:04 sbd Exp $
  		if (err == 0)
  			{
  				err = setsockopt(*sktPtr, IPPROTO_IPV6, IPV6_HOPLIMIT, &kOn, sizeof(kOn));
-@@ -1293,6 +1306,36 @@ mDNSlocal mDNSBool mDNSPlatformInit_CanR
+@@ -1181,6 +1194,36 @@ mDNSlocal mDNSBool mDNSPlatformInit_CanR
  	return(err == 0);
  	}
  
@@ -92,7 +92,7 @@ $NetBSD: patch-ab,v 1.7 2010/07/14 09:29:04 sbd Exp $
  // mDNS core calls this routine to initialise the platform-specific data.
  mDNSexport mStatus mDNSPlatformInit(mDNS *const m)
  	{
-@@ -1314,6 +1357,10 @@ mDNSexport mStatus mDNSPlatformInit(mDNS
+@@ -1202,6 +1245,10 @@ mDNSexport mStatus mDNSPlatformInit(mDNS
  	GetUserSpecifiedRFC1034ComputerName(&m->hostlabel);
  	if (m->hostlabel.c[0] == 0) MakeDomainLabelFromLiteralString(&m->hostlabel, "Computer");
  
