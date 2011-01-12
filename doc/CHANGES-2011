@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.28 2011/01/12 00:13:20 jym Exp $
+$NetBSD: CHANGES-2011,v 1.29 2011/01/12 00:16:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -60,3 +60,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/py-cxfreeze to 4.2.2 [drochner 2011-01-11]
 	Updated sysutils/xentools3 to 3.1.4nb7 [jym 2011-01-12]
 	Updated sysutils/xentools33 to 3.3.2nb5 [jym 2011-01-12]
+	Updated net/wireshark to 1.4.3 [tron 2011-01-12]
