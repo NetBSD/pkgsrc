@@ -1,5 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2010/11/07 12:21:09 obache Exp $
-#
+# $NetBSD: options.mk,v 1.10 2011/01/12 07:31:00 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
 PKG_SUGGESTED_OPTIONS=	pam inet6
@@ -8,6 +7,8 @@ PKG_OPTIONS_OPTIONAL_GROUPS+=	sql
 PKG_OPTIONS_GROUP.sql=		mysql pgsql
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	quota sql tls
 
 .if !empty(PKG_OPTIONS:Mpam)
 CONFIGURE_ARGS+=	--enable-auth-pam
@@ -31,12 +32,13 @@ MODULES:=	${MODULES}:mod_wrap
 
 .if !empty(PKG_OPTIONS:Mtls)
 MODULES:=	${MODULES}:mod_tls
+PLIST.tls=	yes
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mquota)
 MODULES:=	${MODULES}:mod_quotatab:mod_quotatab_file
-PLIST_SRC+=	${PKGDIR}/PLIST.mod_quota
+PLIST.quota=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mquota) && !empty(PKG_OPTIONS:Mmysql)
@@ -58,7 +60,7 @@ MODULES:=	${MODULES}:mod_ldap
 
 .if !empty(PKG_OPTIONS:Mmysql)
 MODULES:=	${MODULES}:mod_sql:mod_sql_mysql
-PLIST_SRC+=	${PKGDIR}/PLIST.mod_sql
+PLIST.sql=	yes
 .include "../../mk/mysql.buildlink3.mk"
 .endif
 
