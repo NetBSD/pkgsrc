@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2010/10/08 04:58:58 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/01/12 00:11:19 jym Exp $
 #
 
 VERSION=		3.1.4
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools3-${VERSION}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=		.tar.gz
@@ -128,7 +128,7 @@ FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN:Q}
 FILES_SUBST+=		PROCPATH=${PROCPATH:Q}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
-XEND_SCRIPTS=		block vif-bridge vif-ip
+XEND_SCRIPTS=		block vif-bridge vif-ip xen-subr
 
 CONF_FILES=		${EGDIR}/xend-config.sxp \
 			${PKG_SYSCONFDIR}/xend-config.sxp
