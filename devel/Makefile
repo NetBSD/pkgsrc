@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1418 2011/01/11 20:45:54 drochner Exp $
+# $NetBSD: Makefile,v 1.1419 2011/01/12 13:52:09 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -141,6 +141,7 @@ SUBDIR+=	cxref
 SUBDIR+=	darcs
 SUBDIR+=	darts
 SUBDIR+=	dconf
+SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
 SUBDIR+=	dejagnu
 SUBDIR+=	dev86
