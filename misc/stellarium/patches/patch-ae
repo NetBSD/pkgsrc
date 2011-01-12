@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1 2011/01/12 07:22:38 adam Exp $
+
+--- CMakeLists.txt.orig	2010-12-05 16:31:01.000000000 +0000
++++ CMakeLists.txt
+@@ -28,7 +28,6 @@ IF(NOT CMAKE_BUILD_TYPE)
+ ENDIF()
+ 
+ IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+-  SET(APPLE 1)
+ ENDIF()
+ 
+ 
+@@ -216,12 +215,8 @@ ENDIF()
+ 
+ ########### Set some global variables ###########
+ IF(UNIX AND NOT WIN32)
+-IF(APPLE)
+-  SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
+-ELSE(APPLE)
+   ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/share/stellarium")
+   ADD_DEFINITIONS(-DINSTALL_LOCALEDIR="${CMAKE_INSTALL_PREFIX}/share/locale")
+-ENDIF()
+ ELSE()
+   ADD_DEFINITIONS(-DINSTALL_DATADIR=".")
+   ADD_DEFINITIONS(-DINSTALL_LOCALEDIR="./locale")
+@@ -290,9 +285,6 @@ IF(GENERATE_PACKAGE_TARGET)
+ ENDIF()
+ 
+ ########### Macosx Bundling ###############
+-IF(APPLE)
+-ADD_CUSTOM_TARGET(macosx_bundle bash util/macosx_bundle.sh ${CMAKE_INSTALL_PREFIX} ${PROJECT_SOURCE_DIR} DEPENDS install WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMENT "making the macosx bundle." VERBATIM)
+-ENDIF()
+ 
+ 
+ ########### Generate doxygen doc ###############
