@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.11 2010/11/15 13:05:45 adam Exp $
+$NetBSD: patch-ad,v 1.12 2011/01/12 07:07:07 adam Exp $
 
 --- src/corelib/global/qglobal.h.orig	2010-09-10 09:05:25.000000000 +0000
 +++ src/corelib/global/qglobal.h
@@ -20,21 +20,3 @@ $NetBSD: patch-ad,v 1.11 2010/11/15 13:05:45 adam Exp $
  #elif defined(__OpenBSD__)
  #  define Q_OS_OPENBSD
  #  define Q_OS_BSD4
-@@ -266,8 +270,6 @@ namespace QT_NAMESPACE {}
- #endif
- 
- #if defined(Q_OS_DARWIN)
--#  define Q_OS_MAC /* Q_OS_MAC is mostly for compatibility, but also more clear */
--#  define Q_OS_MACX /* Q_OS_MACX is only for compatibility.*/
- #  if defined(Q_OS_DARWIN64)
- #     define Q_OS_MAC64
- #  elif defined(Q_OS_DARWIN32)
-@@ -804,8 +806,6 @@ namespace QT_NAMESPACE {}
- #  error "Qt does not work with OS/2 Presentation Manager or Workplace Shell"
- #elif defined(Q_OS_UNIX)
- #  if defined(Q_OS_MAC) && !defined(__USE_WS_X11__) && !defined(Q_WS_QWS)
--#    define Q_WS_MAC
--#    define Q_WS_MACX
- #    if defined(Q_OS_MAC64)
- #      define Q_WS_MAC64
- #    elif defined(Q_OS_MAC32)

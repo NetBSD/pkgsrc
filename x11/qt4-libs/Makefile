@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.53 2010/12/23 11:45:02 dsainty Exp $
+# $NetBSD: Makefile,v 1.54 2011/01/12 07:07:06 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
 # XXX this is to test what really gets installed when 'do-install' is disabled
@@ -39,7 +39,11 @@ INSTALLATION_DIRS+=	${QTPREFIX}/plugins/codecs
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/graphicssystems
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/iconengines
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/imageformats
+.if ${OPSYS} == "Darwin"
+INSTALLATION_DIRS+=	${QTPREFIX}/qt_menu.nib
+.else
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/inputmethods
+.endif
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
@@ -66,7 +70,7 @@ do-install:
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .endfor
 	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore
+.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore phonon
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
@@ -101,29 +105,29 @@ do-install:
 		${WRKSRC}/plugins/imageformats/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/imageformats/
 .endfor
+.if ${OPSYS} == "Darwin"
+	${INSTALL_DATA} ${WRKSRC}/src/gui/mac/qt_menu.nib/*.nib \
+		${DESTDIR}${QTPREFIX}/qt_menu.nib/
+.else
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/inputmethods/libqimsw-multi.la \
 		${DESTDIR}/${QTPREFIX}/plugins/inputmethods/
+.endif
 
-.if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
-SUBST_CLASSES+=		socklen
-SUBST_MESSAGE.socklen=	Correcting socklen_t.
-SUBST_STAGE.socklen=	pre-configure
-SUBST_FILES.socklen=	mkspecs/darwin-g++/qplatformdefs.h
-SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'
+.if ${OPSYS} != "Darwin"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

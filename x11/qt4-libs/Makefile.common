@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2011/01/01 21:39:06 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2011/01/12 07:07:06 adam Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -26,12 +26,13 @@ USE_TOOLS+=		gmake
 
 QTPREFIX=		${PREFIX}/qt4
 
-#CONFIGURE_ARGS+=	-arch ${MACHINE_ARCH}
+CONFIGURE_ARGS+=	-no-phonon-backend
 CONFIGURE_ARGS+=	-optimized-qmake
 CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
 CONFIGURE_ARGS+=	-qt-gif	# qt4 does not write compressed GIFs
 CONFIGURE_ARGS.SunOS+=	-no-xrender
-CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//}
+CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*}
+CONFIGURE_ARGS+=	${LDFLAGS:M-Wl*:S/-Wl,//:S/-syslibroot,/-sdk /}
 CONFIGURE_ARGS+=	-opensource -confirm-license
 OPSYSVARS+=		CONFIGURE_ARGS
 
@@ -45,6 +46,16 @@ LIBQT?=			-lQtCore -lQtGui
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 MAKE_ENV+=		QTDIR=${WRKSRC}
+PLIST_VARS+=		mac unix
+.if ${OPSYS} == "Darwin"
+PLIST.mac=		yes
+QMAKE_CONF=		qmake.conf.mac
+QMAKE_RANLIB=		${RANLIB}
+.else
+PLIST.unix=		yes
+QMAKE_CONF=		qmake.conf
+QMAKE_RANLIB=		${TRUE}
+.endif
 
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
@@ -75,8 +86,9 @@ SYS_LIBS=		-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .elif ${OPSYS} == "Darwin"
-#CONFIGURE_ARGS+=	-cocoa
-QMAKE_RANLIB=		${RANLIB}
+CONFIGURE_ARGS+=	-platform macx-g++
+CONFIGURE_ARGS+=	-no-dwarf2
+CONFIGURE_ARGS+=	-no-framework
 .  if exists(/usr/lib/libresolv.dylib)
 LDFLAGS+=		-lresolv
 .  endif
@@ -84,14 +96,24 @@ LDFLAGS+=		-lresolv
 LDFLAGS+=		-ldl
 .endif
 
-QMAKE_RANLIB?=		${TRUE}
-
-.if ${X11_TYPE} != "native"
+.if ${OPSYS} != "Darwin" && ${X11_TYPE} != "native"
 .include "../../x11/libXinerama/buildlink3.mk"
 .elif !exists(${X11BASE}/lib/libXinerama.so) && \
 	!exists(${X11BASE}/lib/libXinerama.dylib)
 CONFIGURE_ARGS+=	-no-xinerama
 .endif
+
+SUBST_CLASSES+=		dnr
+SUBST_MESSAGE.dnr=	Disabling debug_and_release.
+SUBST_STAGE.dnr=	pre-configure
+SUBST_FILES.dnr=	mkspecs/features/debug_and_release.prf
+SUBST_SED.dnr=		-e 's,^,\#\#\#,'
+
+SUBST_CLASSES+=		nib
+SUBST_MESSAGE.nib=	Fixing nib loading on Mac OS X.
+SUBST_STAGE.nib=	pre-configure
+SUBST_FILES.nib=	src/gui/kernel/qapplication_mac.mm
+SUBST_VARS.nib=		QTPREFIX
 
 SUBST_CLASSES+=		lt
 SUBST_MESSAGE.lt=	Enabling libtool.
@@ -130,7 +152,7 @@ pre-configure:
 		-e 's:@PTHREAD_LIBS@:${PTHREAD_LIBS:Q}:g' \
 		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
 		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
-		${FILESDIR}/qmake.conf > ${WRKSRC}/qmake.conf
+		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \
 		cp ${WRKSRC}/qmake.conf $${dir}; \
 		rm -f $${dir}/*.orig; \
