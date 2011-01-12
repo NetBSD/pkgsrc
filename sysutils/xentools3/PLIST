@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/01/12 00:11:19 jym Exp $
 bin/pygrub
 bin/readnotes
 bin/xc_restore
@@ -366,6 +366,7 @@ share/examples/xen/block
 share/examples/xen/netbsd1
 share/examples/xen/vif-bridge
 share/examples/xen/vif-ip
+share/examples/xen/xen-subr
 share/examples/xen/xend-config.sxp
 share/examples/xen/xmexample1
 share/examples/xen/xmexample2
