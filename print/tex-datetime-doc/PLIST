@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 16:36:13 minskim Exp $
+share/texmf-dist/doc/latex/datetime/CHANGES
+share/texmf-dist/doc/latex/datetime/README
+share/texmf-dist/doc/latex/datetime/datetime-manual.css
+share/texmf-dist/doc/latex/datetime/datetime-manual.html
+share/texmf-dist/doc/latex/datetime/datetime-manual.tex
+share/texmf-dist/doc/latex/datetime/datetime.pdf
