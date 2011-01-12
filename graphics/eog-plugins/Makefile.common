@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/07/26 11:16:27 drochner Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/01/12 10:38:50 wiz Exp $
 #
+# used by graphics/eog-plugins/Makefile
+# used by graphics/eog-plugins-map/Makefile
 
 DISTNAME=	eog-plugins-2.30.1
 CATEGORIES=	graphics

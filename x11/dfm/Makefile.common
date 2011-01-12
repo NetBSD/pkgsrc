@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.14 2007/02/22 19:27:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2011/01/12 10:47:41 wiz Exp $
 #
+# used by x11/dfm/Makefile
 
 DISTNAME=	dfm-0.99.9
 MASTER_SITES=	http://www.kaisersite.de/dfm/
