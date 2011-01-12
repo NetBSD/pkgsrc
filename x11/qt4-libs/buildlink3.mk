@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2010/12/23 11:45:02 dsainty Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2011/01/12 07:07:06 adam Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
@@ -20,16 +20,18 @@ PTHREAD_OPTS+=	require
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.if ${X11_TYPE} == "modular"
-.include "../../x11/libXinerama/buildlink3.mk"
+.  if ${X11_TYPE} == "modular"
+.  include "../../x11/libXinerama/buildlink3.mk"
+.  endif
 .endif
 .include "../../mk/pthread.buildlink3.mk"
 

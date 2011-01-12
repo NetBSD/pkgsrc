@@ -1,13 +1,12 @@
-$NetBSD: patch-ar,v 1.5 2010/01/29 18:19:09 adam Exp $
+$NetBSD: patch-ar,v 1.6 2011/01/12 07:07:07 adam Exp $
 
---- src/corelib/global/qglobal.h.orig	2010-01-27 13:03:02.000000000 +0000
-+++ src/corelib/global/qglobal.h
-@@ -177,7 +177,7 @@ namespace QT_NAMESPACE {}
- */
+--- mkspecs/features/default_post.prf.orig	2010-12-29 20:37:11.000000000 +0000
++++ mkspecs/features/default_post.prf
+@@ -12,7 +12,6 @@ QT_BREAKPAD_ROOT_PATH = $$(QT_BREAKPAD_R
  
- #if defined(__APPLE__) && (defined(__GNUC__) || defined(__xlC__) || defined(__xlc__))
--#  define Q_OS_DARWIN
-+/* #  define Q_OS_DARWIN *//* Else it'll try to use MacOS, no X, stuff - HF */
- #  define Q_OS_BSD4
- #  ifdef __LP64__
- #    define Q_OS_DARWIN64
+ CONFIG(debug, debug|release):load(debug)
+ else:load(release)
+-debug_and_release:load(debug_and_release)
+ incredibuild_xge {
+     CONFIG -= incredibuild_xge
+     CONFIG = incredibuild_xge $$CONFIG
