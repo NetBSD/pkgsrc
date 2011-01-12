@@ -1,0 +1,11 @@
+# $NetBSD: xen-subr-nbsd,v 1.1 2011/01/12 00:11:19 jym Exp $
+#
+# Contains commonly used functions which are used by Xen scripts
+
+# xenstore_read_default path default
+#
+# Read the given path in XenStore. Return default if path does not exist
+#
+xenstore_read_default() {
+  xenstore-read "$1" 2>/dev/null || echo "$2"
+}
