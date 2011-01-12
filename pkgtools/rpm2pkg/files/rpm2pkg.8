@@ -26,7 +26,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd January 27, 2001
+.Dd January 12, 2011
 .Dt RPM2PKG 8
 .Os
 .Sh NAME
@@ -46,7 +46,8 @@ helps in building BSD packages from RPM files by unpacking each specified
 .Ar rpm_file ,
 and by building a
 .Ar package_list
-according to what was extracted. The
+according to what was extracted.
+The
 .Ar package_list
 has the format expected by the
 .Nx
@@ -54,9 +55,10 @@ package system.
 .Pp
 .Nm
 also provides a mechanism that helps in selecting what is actually
-extracted from the RPM files. It is therefore possible to reject files
-that are of no interest when building a BSD package. This is especially
-useful for files that are to be extracted in
+extracted from the RPM files.
+It is therefore possible to reject files that are of no interest
+when building a BSD package.
+This is especially useful for files that are to be extracted in
 .Pa /var
 or
 .Pa /etc .
