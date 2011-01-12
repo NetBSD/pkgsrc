@@ -1,8 +1,7 @@
-This package provides you with a way of inserting fixme notes in your
-documents.  Such notes can appear inline, as marginal notes,
-footnotes, index entries, in the log file and as warnings on stdout.
-It is also possible to summarize them in a list.  When you switch from
-draft to final mode, any remaining fixme note will be logged, but
-removed from the document's body.  Additionally, critical notes will
-abort compilation with an informative message.  FiXme also comes with
+This package provides a way to insert fixme notes in documents
+being developed (in draft mode). Such notes can appear in the
+margin of the document, as index entries, in the log file and
+as warnings on stdout. It is also possible to summarize them in
+a list. If your document is in a final version, any remaining
+fixme notes will produce an error. FiXme also comes with
 support for AUC-TeX.

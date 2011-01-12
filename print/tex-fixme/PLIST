@@ -1,6 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:01 joerg Exp $
-${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme/NEWS
-${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme/README
-${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme/fixme.el
-${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme/fixme.pdf
-${PKG_LOCALTEXMFPREFIX}/tex/latex/fixme/fixme.sty
+@comment $NetBSD: PLIST,v 1.3 2011/01/12 17:07:10 minskim Exp $
+share/texmf-dist/tex/latex/fixme/fixme.sty
+share/texmf-dist/tex/latex/fixme/layouts/env/fxenvlayoutcolor.sty
+share/texmf-dist/tex/latex/fixme/layouts/env/fxenvlayoutcolorsig.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutmarginnote.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfcmargin.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfcnote.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfcsigmargin.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfcsignote.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfmargin.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfnote.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfsigmargin.sty
+share/texmf-dist/tex/latex/fixme/layouts/fxlayoutpdfsignote.sty
+share/texmf-dist/tex/latex/fixme/layouts/target/fxtargetlayoutchangebar.sty
+share/texmf-dist/tex/latex/fixme/layouts/target/fxtargetlayoutcolor.sty
+share/texmf-dist/tex/latex/fixme/layouts/target/fxtargetlayoutcolorcb.sty
+share/texmf-dist/tex/latex/fixme/themes/fxthemecolor.sty
+share/texmf-dist/tex/latex/fixme/themes/fxthemecolorsig.sty
+share/texmf-dist/tex/latex/fixme/themes/fxthemesignature.sty
