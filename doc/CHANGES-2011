@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.29 2011/01/12 00:16:54 tron Exp $
+$NetBSD: CHANGES-2011,v 1.30 2011/01/12 00:27:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -61,3 +61,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/xentools3 to 3.1.4nb7 [jym 2011-01-12]
 	Updated sysutils/xentools33 to 3.3.2nb5 [jym 2011-01-12]
 	Updated net/wireshark to 1.4.3 [tron 2011-01-12]
+	Updated pkgtools/rpm2pkg to 3.2.0 [tron 2011-01-12]
