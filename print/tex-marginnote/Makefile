@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/25 06:14:09 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/12 16:39:53 minskim Exp $
 
 DISTNAME=	marginnote
-PKGNAME=	tex-${DISTNAME}-v1.1f
+PKGNAME=	tex-${DISTNAME}-1.1f
 TEXLIVE_REV=	16624
 
 MAINTAINER=	minskim@NetBSD.org
