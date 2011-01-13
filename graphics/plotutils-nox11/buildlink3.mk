@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2010/06/13 22:44:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2011/01/13 13:36:11 wiz Exp $
 
 BUILDLINK_TREE+=	plotutils-nox11
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plotutils-nox11
 PLOTUTILS_NOX11_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plotutils-nox11+=	plotutils-nox11>=2.4.1
-BUILDLINK_ABI_DEPENDS.plotutils-nox11?=	plotutils-nox11>=2.4.1nb3
+BUILDLINK_ABI_DEPENDS.plotutils-nox11?=	plotutils-nox11>=2.6nb2
 BUILDLINK_PKGSRCDIR.plotutils-nox11?=	../../graphics/plotutils-nox11
 
 .include "../../graphics/png/buildlink3.mk"

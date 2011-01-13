@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/07/26 10:01:45 adam Exp $
+# $NetBSD: Makefile,v 1.22 2011/01/13 13:37:53 wiz Exp $
 
 DISTNAME=	wormux-0.9.2.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://download.gna.org/wormux/
 EXTRACT_SUFX=	.tar.bz2
