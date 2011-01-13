@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2010/10/06 21:40:35 pettai Exp $
-#
+# $NetBSD: Makefile,v 1.31 2011/01/13 12:19:19 adam Exp $
 
-DISTNAME=	roundcubemail-${RCVERSION}-dep
-PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
+DISTNAME=	roundcubemail-0.5-dep
+PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -14,16 +13,15 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.4.2
-VERSION=	${RCVERSION:S/-//}
 
-PKG_DESTDIR_SUPPORT=  	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${RCDIR}/plugins ${RCDIR}/program ${RCDIR}/skins
 INSTALLATION_DIRS+=	${EGDIR}/SQL ${DOCDIR} ${RCDIR}/bin
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
 
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_IDNA2>=0.1.0:../../net/pear-Net_IDNA2
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.7:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.5.0:../../databases/pear-MDB2
@@ -31,13 +29,13 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL-[0-9]*:../../mail/pear-Auth_SASL
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 
-PKG_SYSCONFSUBDIR?=	roundcube
+PKG_SYSCONFSUBDIR=	roundcube
 
 WWW_USER?=		${APACHE_USER}
 WWW_GROUP?=		${APACHE_GROUP}
 
 PKG_GROUPS_VARS+=	WWW_GROUP
-PKG_USERS_VARS+=	WWW_USER
+PKG_USERS_VARS=		WWW_USER
 BUILD_DEFS+=		VARBASE WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
 
 RCDIR=			${PREFIX}/share/roundcube
@@ -45,9 +43,9 @@ EGDIR=			${PREFIX}/share/examples/roundcube
 DOCDIR=			${PREFIX}/share/doc/roundcube
 PAX_DIRS=		plugins program skins installer bin
 
-MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-MESSAGE_SUBST+=		VARBASE=${VARBASE:Q} RCDIR=${RCDIR:Q}
-FILES_SUBST+=		RCDIR=${RCDIR:Q}
+MESSAGE_SUBST+=		DOCDIR=${DOCDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=		VARBASE=${VARBASE} RCDIR=${RCDIR}
+FILES_SUBST+=		RCDIR=${RCDIR}
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}
 OWN_DIRS_PERMS+=	${VARBASE}/log/roundcube \
@@ -112,13 +110,13 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist \
 		${DESTDIR}${EGDIR}/main.inc.php.dist
 
-.	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${RCDIR}/${i}
-		${FIND} ${DESTDIR}${RCDIR}/${i} -type f | \
-			${XARGS} ${CHMOD} ${SHAREMODE}
-		${FIND} ${DESTDIR}${RCDIR}/${i} -type d | \
-			${XARGS} ${CHMOD} ${PKGDIRMODE}
-		${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${RCDIR}/${i}
-.	endfor
+.for i in ${PAX_DIRS}
+	cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${RCDIR}/${i}
+	${FIND} ${DESTDIR}${RCDIR}/${i} -type f | \
+		${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${DESTDIR}${RCDIR}/${i} -type d | \
+		${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${RCDIR}/${i}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
