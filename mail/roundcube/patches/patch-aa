@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2010/09/23 23:54:40 pettai Exp $
+$NetBSD: patch-aa,v 1.8 2011/01/13 12:19:19 adam Exp $
 
---- config/main.inc.php.dist.orig	2010-06-23 09:55:08.000000000 +0000
+--- config/main.inc.php.dist.orig	2011-01-12 08:13:40.000000000 +0000
 +++ config/main.inc.php.dist
-@@ -135,10 +135,10 @@ $rcmail_config['enable_installer'] = fal
+@@ -163,10 +163,10 @@ $rcmail_config['enable_installer'] = fal
  
  // use this folder to store log files (must be writeable for apache user)
  // This is used by the 'file' log driver.
@@ -15,10 +15,10 @@ $NetBSD: patch-aa,v 1.7 2010/09/23 23:54:40 pettai Exp $
  
  // enable caching of messages and mailbox data in the local database.
  // this is recommended if the IMAP server does not run on the same machine
-@@ -560,3 +560,6 @@ $rcmail_config['delete_always'] = false;
+@@ -626,3 +626,6 @@ $rcmail_config['dsn_default'] = 0;
+ $rcmail_config['reply_same_folder'] = false;
  
  // end of config file
- 
-+include_once('main-local.inc.php');
 +
++include_once('main-local.inc.php');
 +?>
