@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2010/11/15 22:57:57 abs Exp $
+# $NetBSD: Makefile,v 1.51 2011/01/13 13:38:45 wiz Exp $
 
 DISTNAME=		gperiodic-2.0.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc x11
 MASTER_SITES=		http://www.frantz.fi/software/
 

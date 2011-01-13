@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2010/11/15 22:58:18 abs Exp $
+# $NetBSD: Makefile,v 1.35 2011/01/13 13:39:07 wiz Exp $
 #
 
 DISTNAME=	nicotine-1.0.8
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net audio x11
 MASTER_SITES=	http://nicotine.thegraveyard.org/
 EXTRACT_SUFX=	.tar.bz2

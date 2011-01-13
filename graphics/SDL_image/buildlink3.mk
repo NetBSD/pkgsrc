@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2010/12/23 11:44:33 dsainty Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2011/01/13 13:36:11 wiz Exp $
 
 BUILDLINK_TREE+=	SDL_image
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDL_image
 SDL_IMAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.3nb1
-BUILDLINK_ABI_DEPENDS.SDL_image+=	SDL_image>=1.2.10nb2
+BUILDLINK_ABI_DEPENDS.SDL_image+=	SDL_image>=1.2.10nb3
 BUILDLINK_PKGSRCDIR.SDL_image?=	../../graphics/SDL_image
 BUILDLINK_INCDIRS.SDL_image?=	include/SDL
 

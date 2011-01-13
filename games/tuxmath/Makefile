@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2010/06/25 22:47:50 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/13 13:37:52 wiz Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
 PKGNAME=	tuxmath-20010907
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	games math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxmath/}
 

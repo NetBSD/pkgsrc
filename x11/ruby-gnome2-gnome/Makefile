@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2010/11/27 06:14:48 obache Exp $
+# $NetBSD: Makefile,v 1.26 2011/01/13 13:40:05 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnome-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		gnome x11
 COMMENT=		Ruby binding of libgnome/libgnomeui-2.x
 

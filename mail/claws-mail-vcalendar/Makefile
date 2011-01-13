@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2010/11/29 17:58:39 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/13 13:38:37 wiz Exp $
 #
 
 DISTNAME=	vcalendar-2.0.9
 PKGNAME=	claws-mail-vcalendar-2.0.9
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 

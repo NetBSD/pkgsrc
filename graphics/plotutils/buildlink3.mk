@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2010/06/13 22:44:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/01/13 13:36:05 wiz Exp $
 
 BUILDLINK_TREE+=	plotutils
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plotutils
 PLOTUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plotutils+=	plotutils>=2.4.1nb2
-BUILDLINK_ABI_DEPENDS.plotutils+=	plotutils>=2.6nb1
+BUILDLINK_ABI_DEPENDS.plotutils+=	plotutils>=2.6nb2
 BUILDLINK_PKGSRCDIR.plotutils?=	../../graphics/plotutils
 
 .include "../../graphics/png/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/11/15 22:58:20 abs Exp $
+# $NetBSD: Makefile,v 1.14 2011/01/13 13:39:08 wiz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../net/wistumbler2/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/wistumbler2-/wistumbler2-gtk-/}
-PKGREVISION=		7
+PKGREVISION=		8
 
 CONFLICTS+=		wistumbler2-[0-9]*
 

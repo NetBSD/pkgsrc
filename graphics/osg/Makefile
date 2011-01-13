@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/12/23 11:44:43 dsainty Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/13 13:36:09 wiz Exp $
 
 DISTNAME=	OpenSceneGraph-${OSGVER}
 PKGNAME=	osg-${OSGVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-${OSGVER}/source/
 EXTRACT_SUFX=	.zip

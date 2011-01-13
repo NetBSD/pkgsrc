@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2010/11/15 22:59:02 abs Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/13 13:36:27 wiz Exp $
 #
 
 DISTNAME=	gtksourceview-${DISTVER}
 PKGNAME=	gtksourceview2-${DISTVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/2.10/}
 EXTRACT_SUFX=	.tar.bz2

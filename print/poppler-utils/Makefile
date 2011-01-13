@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2010/11/02 15:45:13 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2011/01/13 13:39:14 wiz Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-utils-${POPPLER_VERS}
+PKGREVISION=		1
 
 COMMENT=		PDF utilities (from poppler)
 MAINTAINER=		reed@reedmedia.net

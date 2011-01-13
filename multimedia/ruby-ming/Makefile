@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/09/10 07:31:45 taca Exp $
+# $NetBSD: Makefile,v 1.14 2011/01/13 13:38:58 wiz Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://rubyforge.org/frs/download.php/44137/
 
