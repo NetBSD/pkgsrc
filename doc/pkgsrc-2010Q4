@@ -29,13 +29,21 @@ wireshark-1.4.3			net/wireshark
 zope3-3.3.1nb1			www/zope3
 
 Removed packages:
+gqview-gtk1, ibus-table-array30, ibus-table-extraphrase, hcidump,
+tex-apilike, and tex-apilike-doc
 
 EOL packages:
 postgresql82
 
-New packages:
+New packages (selection):
+libAppleWM, monodevelop-database, kdenlive, opendkim, flashrom, dcc,
+cyrus-imapd24, dovecot2, cfengine3, libpbc, some TeX packages, libraw,
+shotwell, dconf, libtomcrypt, ldpc, knock, xournal, ficl, samba35,
+libjpeg-turbo, quvi, asterisk18, renderproto9, supertuxkart,
+boomerang, netbt-hcidump, cutter, mypaint, fml, and gajim.
 
 Infrastructure changes:
+None
 
 Pkgsrc platforms:
 AIX
