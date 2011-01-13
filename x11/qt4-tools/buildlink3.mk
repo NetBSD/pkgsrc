@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2010/11/15 22:59:11 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2011/01/13 13:36:55 wiz Exp $
 
 BUILDLINK_TREE+=	qt4-tools
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt4-tools
 QT4_TOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.1.0
-BUILDLINK_ABI_DEPENDS.qt4-tools+=	qt4-tools>=4.7.1
+BUILDLINK_ABI_DEPENDS.qt4-tools+=	qt4-tools>=4.7.1nb2
 BUILDLINK_PKGSRCDIR.qt4-tools?=	../../x11/qt4-tools
 BUILDLINK_DEPMETHOD.qt4-tools?=	build
 

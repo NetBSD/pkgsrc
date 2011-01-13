@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2010/06/13 22:44:31 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2011/01/13 13:36:14 wiz Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PKGREVISION=	12
+PKGREVISION=	13
 COMMENT=	The GNOME image loading library
 
 # XXX hopefully there is no x.gnome-config.x in PATH

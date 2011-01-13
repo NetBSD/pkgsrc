@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2010/12/23 06:04:36 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2011/01/13 13:36:22 wiz Exp $
 #
 
 BUILDLINK_TREE+=	eekboard
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	eekboard
 EEKBOARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.eekboard+=	eekboard>=0.0.4
-BUILDLINK_ABI_DEPENDS.eekboard+=	eekboard>=0.0.5nb2
+BUILDLINK_ABI_DEPENDS.eekboard+=	eekboard>=0.0.7nb1
 BUILDLINK_PKGSRCDIR.eekboard?=	../../x11/eekboard
 
 .include "../../mk/bsd.fast.prefs.mk"

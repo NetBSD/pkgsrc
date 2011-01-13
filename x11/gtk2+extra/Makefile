@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/11/15 22:59:00 abs Exp $
+# $NetBSD: Makefile,v 1.13 2011/01/13 13:36:36 wiz Exp $
 #
 
 DISTNAME=	gtk+extra-2.1.2
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkextra/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/12/23 11:44:46 dsainty Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/13 13:36:10 wiz Exp $
 #
 
 DISTNAME=	vigra-1.7.0-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
 

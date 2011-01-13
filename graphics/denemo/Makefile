@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2010/11/15 22:57:11 abs Exp $
+# $NetBSD: Makefile,v 1.27 2011/01/13 13:37:58 wiz Exp $
 #
 
 DISTNAME=	denemo-0.7.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denemo/}
 

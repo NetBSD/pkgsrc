@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/11/15 22:58:48 abs Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/13 13:40:11 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	4.6.0
 DISTNAME=	xfwm4-themes-${XFCE4_VERSION}
 PKGNAME=	xfce4-wm-themes-${XFCE4_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm
 COMMENT=	Xfce window manager themes
 

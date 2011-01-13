@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2010/11/15 22:56:14 abs Exp $
+# $NetBSD: Makefile,v 1.36 2011/01/13 13:37:01 wiz Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.20
 PKGNAME=	${DISTNAME:S/mms/m-xmms/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
 

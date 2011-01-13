@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2010/11/15 22:59:15 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2011/01/13 13:36:49 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-clipman-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-clipman-plugin
 XFCE4_CLIPMAN_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-clipman-plugin+=	xfce4-clipman-plugin>=0.8.0
-BUILDLINK_ABI_DEPENDS.xfce4-clipman-plugin?=	xfce4-clipman-plugin>=0.8.0nb4
+BUILDLINK_ABI_DEPENDS.xfce4-clipman-plugin?=	xfce4-clipman-plugin>=0.8.0nb5
 BUILDLINK_PKGSRCDIR.xfce4-clipman-plugin?=	../../x11/xfce4-clipman-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

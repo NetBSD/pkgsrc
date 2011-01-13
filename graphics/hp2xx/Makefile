@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2010/06/13 22:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2011/01/13 13:38:09 wiz Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNU:=hp2xx/}
 

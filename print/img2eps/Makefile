@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2010/12/23 11:44:55 dsainty Exp $
+# $NetBSD: Makefile,v 1.21 2011/01/13 13:39:12 wiz Exp $
 #
 
 DISTNAME=	img2eps-0.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print graphics
 MASTER_SITES=	http://www.nih.at/img2eps/
 

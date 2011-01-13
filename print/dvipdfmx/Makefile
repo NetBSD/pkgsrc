@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2010/09/13 04:35:43 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2011/01/13 13:39:10 wiz Exp $
 
 DISTNAME=	texlive-20100720-source
 PKGNAME=	dvipdfmx-20100328
+PKGREVISION=	1
 CATEGORIES=	print converters
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz

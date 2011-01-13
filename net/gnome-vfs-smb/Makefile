@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2010/11/15 22:58:15 abs Exp $
+# $NetBSD: Makefile,v 1.10 2011/01/13 13:40:12 wiz Exp $
 #
 
 GNOME_VFS_NAME=		smb
 GNOME_VFS_FLAG=		samba
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 
 PKG_DESTDIR_SUPPORT=	user-destdir

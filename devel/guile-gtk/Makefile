@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2010/06/13 22:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2011/01/13 13:37:23 wiz Exp $
 #
 
 DISTNAME=		guile-gtk-0.60
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_GNU:=guile-gtk/}
 

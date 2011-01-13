@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2010/11/15 22:57:31 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2011/01/13 13:36:15 wiz Exp $
 
 BUILDLINK_TREE+=	gnuradio-wxgui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnuradio-wxgui
 GNURADIO_WXGUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-wxgui+=	gnuradio-wxgui>=3.0.4
-BUILDLINK_ABI_DEPENDS.gnuradio-wxgui?=	gnuradio-wxgui>=3.3.0
+BUILDLINK_ABI_DEPENDS.gnuradio-wxgui?=	gnuradio-wxgui>=3.3.0nb2
 BUILDLINK_PKGSRCDIR.gnuradio-wxgui?=	../../ham/gnuradio-wxgui
 
 .include "../../ham/gnuradio-core/buildlink3.mk"

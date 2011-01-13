@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2010/06/13 22:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2011/01/13 13:37:17 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../comms/pilot-link/Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Tools to talk to the 3Com Pilot PDA
 
 BUILDLINK_API_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
