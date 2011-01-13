@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10015 2011/01/13 16:52:17 jmmv Exp $
+$NetBSD: TODO,v 1.10016 2011/01/13 20:07:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -656,7 +656,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-9.0
-	o gconfmm-2.28.2
 	o gcpio-2.10
 	o gdb-7.2
 	o gdeskcal-1.01
@@ -711,10 +710,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnumeric110-1.10.12
 	o gnuplot-4.4.0 [pkg/43771]
+	o gobject-introspection-0.10.1
 	o gogo-3.11p1
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
-	o goocanvasmm-0.15.4 [needs gtkmm=>2.22.0]
+	o goocanvasmm-0.15.4
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gplcver-2.12a
@@ -735,7 +735,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.2
 	o gtkglarea-2.0.1
-	o gtkmm-2.22.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.18
 	o gtodo-0.16.0rc2
