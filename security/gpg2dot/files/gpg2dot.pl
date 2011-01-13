@@ -1,6 +1,6 @@
 #! @PREFIX@/bin/perl
 #
-# $NetBSD: gpg2dot.pl,v 1.4 2005/03/03 22:43:49 agc Exp $
+# $NetBSD: gpg2dot.pl,v 1.5 2011/01/13 00:40:09 lukem Exp $
 
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
@@ -17,8 +17,11 @@
 #		dot	http://www.graphviz.org/
 #
 
-$date = localtime();
-$mykeyid = shift;
+$url_statistics='http://webware.lysator.liu.se/jc/wotsap/search/keystatistics?key=%s';
+$url_pathfinder='http://webware.lysator.liu.se/jc/wotsap/search/paths?top=%s&bottom=%s';
+
+$now = localtime();
+$mykeyid = uc shift;
 
 open(GPG, "gpg --list-sigs --with-colons --no-sig-cache --verbose 2>/dev/null |");
 while (<GPG>) {
@@ -26,7 +29,7 @@ while (<GPG>) {
     my @fields = split /:/;
     if ($fields[0] eq "pub" || $fields[0] eq "uid") {
 	if ($fields[0] eq "pub") {
-	    ($lkeyid, $date, $kuid) = ($fields[4], $fields[5], $fields[9]);
+	    ($keyid, $date, $kuid) = ($fields[4], $fields[5], $fields[9]);
 	}
 	else {
 	    next; # XXX --with-colons doesn't seem to produce uid records with useable values
@@ -34,13 +37,14 @@ while (<GPG>) {
 	}
 	$kuid =~ s/\"/\\\"/g;
 	$kuid =~ s/\\x([0-9a-fA-F]+)/chr(hex($1))/eg;
-	($keyid = $lkeyid) =~ s:.*/::;
+	$keyid = substr($keyid, -8);
 	$kuid{$keyid} = $kuid;
 	next if ($label{$keyid} != "");
-	$label{$keyid} = "$lkeyid - $date\\n$kuid";
+	$label{$keyid} = "$keyid - $date\\n$kuid";
     }
     elsif ($fields[0] eq "sig") {
 	($skeyid, $date, $suid) = ($fields[4], $fields[5], $fields[9]);
+	$skeyid = substr($skeyid, -8);
 	next if ($suid =~ /id not found/ ||
 		 $skeyid eq $keyid);
 	push(@isigs, "$keyid $skeyid $date $suid");
@@ -68,8 +72,11 @@ foreach (@isigs) {
     } elsif ($skeyid eq $mykeyid) {	# i trust you (one way)
 	$color = "red";
     }
-    push(@sigs, sprintf("\"%s\" -> \"%s\"[tailURL=\"http://webware.lysator.liu.se/jc/wotsap/?top=0x%s&bottom=0x%s\",headURL=\"http://webware.lysator.liu.se/jc/wotsap/?top=0x%s&bottom=0x%s\",color=\"%s\"%s];\t// %s -> %s\n",
-			$skeyid, $keyid, $keyid, $skeyid, $skeyid, $keyid, $color, $attrs,
+    push(@sigs, sprintf("\"%s\" -> \"%s\"[tailURL=\"%s\",headURL=\"%s\",color=\"%s\"%s];\t// %s -> %s\n",
+			$skeyid, $keyid,
+			sprintf($url_pathfinder, $keyid, $skeyid),
+			sprintf($url_pathfinder, $skeyid, $keyid),
+			$color, $attrs,
 			$kuid{$skeyid}, $kuid{$keyid}));
     $signer{$skeyid} = "yes";
     $signed{$keyid} = "yes";
@@ -77,8 +84,8 @@ foreach (@isigs) {
 
 foreach (keys %label) {
     next if (!$signer{$_} && !$signed{$_});
-    push(@keys, sprintf("\"%s\" [URL=\"http://webware.lysator.liu.se/jc/wotsap/?top=0x%s\",label=\"%s\",shape=\"box\"];\n",
-			$_, $_, $label{$_}));
+    push(@keys, sprintf("\"%s\" [URL=\"%s\",label=\"%s\",shape=\"box\"];\n",
+			$_, sprintf($url_statistics, $_), $label{$_}));
 }
 
 @sigs = uniq(sort(@sigs));
@@ -86,7 +93,7 @@ foreach (keys %label) {
 $" = "";
 print(<<"EOF")
 digraph "gpg" {
-label = "gpg signature graph, $date";
+label = "gpg signature graph, $now";
 
 @keys
 @sigs
