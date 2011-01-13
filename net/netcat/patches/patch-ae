@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.6 2003/11/23 01:23:58 jlam Exp $
+$NetBSD: patch-ae,v 1.7 2011/01/13 15:09:58 pooka Exp $
 
 --- Makefile.orig	Tue Mar 19 19:16:06 1996
 +++ Makefile	Sat Nov 22 17:32:15 2003
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.6 2003/11/23 01:23:58 jlam Exp $
  
  nc:	netcat.c
 -	$(LD) $(DFLAGS) $(XFLAGS) $(STATIC) -o nc netcat.c $(XLIBS)
-+	$(CC) $(CFLAGS) $(DFLAGS) $(XFLAGS) $(STATIC) -o nc netcat.c $(XLIBS)
++	$(CC) $(CFLAGS) $(DFLAGS) $(XFLAGS) -o nc netcat.c $(XLIBS)
  
  nc-dos:
  	@echo "DOS?!  Maybe someday, but not now"
