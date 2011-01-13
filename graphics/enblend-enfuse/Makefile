@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2010/12/23 11:44:35 dsainty Exp $
+# $NetBSD: Makefile,v 1.10 2011/01/13 13:37:59 wiz Exp $
 
 DISTNAME=	enblend-enfuse-4.0
 # XXX distribution file has changed; remove the line below on next update
 DIST_SUBDIR=	${PKGNAME_NOREV}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 

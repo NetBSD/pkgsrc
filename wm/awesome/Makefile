@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/09/14 11:02:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/01/13 13:39:31 wiz Exp $
 #
 
 DISTNAME=		awesome-2.3.6
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		wm
 MASTER_SITES=		http://awesome.naquadah.org/download/
 

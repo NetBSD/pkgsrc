@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2010/06/13 22:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/01/13 13:37:44 wiz Exp $
 #
 
 DISTNAME=	glaxium_0.5
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	http://xhosxe.free.fr/glaxium/
 
