@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2011/01/13 09:39:41 wiz Exp $
+$NetBSD: distinfo,v 1.20 2011/01/13 10:14:16 wiz Exp $
 
 SHA1 (mdocml-1.10.9.tar.gz) = a8e0342912ac782a9baf0c173ca2338fafecdb1d
 RMD160 (mdocml-1.10.9.tar.gz) = 932882dace9475f72fd45e532f8fd8bb4702a9c7
 Size (mdocml-1.10.9.tar.gz) = 185048 bytes
+SHA1 (patch-aa) = c71cdc89b3dbef6f992aca4f8386b7f1a992a3f4
