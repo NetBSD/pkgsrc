@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2010/12/07 16:58:12 drochner Exp $
+$NetBSD: patch-aj,v 1.2 2011/01/13 13:52:52 wiz Exp $
 
 --- gutils/gimagereadpng.c.orig	2010-04-29 03:53:22.000000000 +0000
 +++ gutils/gimagereadpng.c
@@ -7,7 +7,7 @@ $NetBSD: patch-aj,v 1.1 2010/12/07 16:58:12 drochner Exp $
  
  #  if !defined(_LIBPNG12)
 -    libpng = dlopen("libpng" SO_EXT,RTLD_LAZY);
-+    libpng = dlopen("libpng14" SO_EXT,RTLD_LAZY);
++    libpng = dlopen("libpng15" SO_EXT,RTLD_LAZY);
  #    ifdef SO_2_EXT
      if ( libpng==NULL )
  	libpng = dlopen("libpng" SO_2_EXT,RTLD_LAZY);
