@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2011/01/13 13:39:47 wiz Exp $
 #
 
 DISTNAME=	hsetroot-1.0.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://thegraveyard.org/files/
 

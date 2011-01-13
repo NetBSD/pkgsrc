@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/06/13 22:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/13 13:38:26 wiz Exp $
 #
 
 DISTNAME=	ami-1.0.11
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	korean inputmethod
 MASTER_SITES=	http://kldp.net/frs/download.php/942/
 # http://kldp.net/frs/download.php/942/ami-1.2.3.tar.gz

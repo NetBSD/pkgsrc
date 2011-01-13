@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2010/12/15 13:31:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2011/01/13 13:37:43 wiz Exp $
 #
 
 DISTNAME=	gbrainy-1.60
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://gent.softcatala.org/jmas/gbrainy/
 

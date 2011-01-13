@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2010/11/15 22:57:03 abs Exp $
+# $NetBSD: Makefile,v 1.39 2011/01/13 13:37:45 wiz Exp $
 
 DISTNAME=	gtkballs-3.1.5
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	games
 MASTER_SITES=	http://gtkballs.antex.ru/dist/
 

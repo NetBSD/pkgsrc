@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/11/15 22:58:39 abs Exp $
+# $NetBSD: Makefile,v 1.21 2011/01/13 13:36:48 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	2.1.0
 
 DISTNAME=	xfce4-diskperf-plugin-${XFCE4_VERSION}
 #PKGREVISION=	1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-diskperf-plugin/
 COMMENT=	Xfce disk performance plugin
