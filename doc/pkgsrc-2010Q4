@@ -16,7 +16,9 @@ openoffice-3.1.1nb9		misc/openoffice3
 openoffice-bin-3.2.1nb1		misc/openoffice3-bin
 perl-5.12.2nb1			lang/perl5
 php-5.3.5			lang/php53
-postgresql-9.0.2		databases/postgresql90
+postgresql83-8.3.13		databases/postgresql83
+postgresql84-8.4.6		databases/postgresql84
+postgresql90-9.0.2		databases/postgresql90
 python-2.5.5nb1			lang/python25
 python-2.6.6nb5			lang/python26
 ruby18-1.8.7.330		lang/ruby
