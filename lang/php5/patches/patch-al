@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.4 2010/06/13 22:44:51 wiz Exp $
+$NetBSD: patch-al,v 1.5 2011/01/13 13:52:53 wiz Exp $
 
 --- ext/gd/config.m4.orig	2007-07-03 17:25:43.000000000 +0000
 +++ ext/gd/config.m4
@@ -35,12 +35,12 @@ $NetBSD: patch-al,v 1.4 2010/06/13 22:44:51 wiz Exp $
  
      for i in $PHP_PNG_DIR /usr/local /usr; do
 -      test -f $i/$PHP_LIBDIR/libpng.$SHLIB_SUFFIX_NAME || test -f $i/$PHP_LIBDIR/libpng.a && GD_PNG_DIR=$i && break
-+      test -f $i/$PHP_LIBDIR/libpng14.$SHLIB_SUFFIX_NAME || test -f $i/$PHP_LIBDIR/libpng14.a && GD_PNG_DIR=$i && break
++      test -f $i/$PHP_LIBDIR/libpng15.$SHLIB_SUFFIX_NAME || test -f $i/$PHP_LIBDIR/libpng15.a && GD_PNG_DIR=$i && break
      done
  
      if test -z "$GD_PNG_DIR"; then
 -      AC_MSG_ERROR([libpng.(a|so) not found.])
-+      AC_MSG_ERROR([libpng14.(a|so) not found.])
++      AC_MSG_ERROR([libpng15.(a|so) not found.])
      fi
  
      if test "$PHP_ZLIB_DIR" = "no"; then
@@ -49,15 +49,15 @@ $NetBSD: patch-al,v 1.4 2010/06/13 22:44:51 wiz Exp $
      fi
  
 -    PHP_CHECK_LIBRARY(png,png_write_image,
-+    PHP_CHECK_LIBRARY(png14,png_write_image,
++    PHP_CHECK_LIBRARY(png15,png_write_image,
      [
        PHP_ADD_INCLUDE($GD_PNG_DIR/include)
        PHP_ADD_LIBRARY_WITH_PATH(z, $PHP_ZLIB_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
 -      PHP_ADD_LIBRARY_WITH_PATH(png, $GD_PNG_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
-+      PHP_ADD_LIBRARY_WITH_PATH(png14, $GD_PNG_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
++      PHP_ADD_LIBRARY_WITH_PATH(png15, $GD_PNG_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
      ],[
 -      AC_MSG_ERROR([Problem with libpng.(a|so) or libz.(a|so). Please check config.log for more information.])
-+      AC_MSG_ERROR([Problem with libpng14.(a|so) or libz.(a|so). Please check config.log for more information.])
++      AC_MSG_ERROR([Problem with libpng15.(a|so) or libz.(a|so). Please check config.log for more information.])
      ],[
        -L$PHP_ZLIB_DIR/$PHP_LIBDIR -lz -L$GD_PNG_DIR/$PHP_LIBDIR
      ])
