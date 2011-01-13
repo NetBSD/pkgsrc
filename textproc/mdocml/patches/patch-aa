@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2011/01/13 10:14:16 wiz Exp $
+
+Post-release patch from upstream fixing a core dump in pcap-save*.
+
+--- tbl_data.c.orig	2011-01-07 15:07:54.000000000 +0000
++++ tbl_data.c
+@@ -167,13 +167,19 @@ tbl_data(struct tbl_node *tbl, int ln, c
+ 	/* 
+ 	 * Choose a layout row: take the one following the last parsed
+ 	 * span's.  If that doesn't exist, use the last parsed span's.
+-	 * If there's no last parsed span, use the first row.  This can
+-	 * be NULL!
++	 * If there's no last parsed span, use the first row.  Lastly,
++	 * if the last span was a horizontal line, use the same layout
++	 * (it doesn't "consume" the layout).
++	 *
++	 * In the end, this can be NULL!
+ 	 */
+ 
+ 	if (tbl->last_span) {
+ 		assert(tbl->last_span->layout);
+-		rp = tbl->last_span->layout->next;
++		if (tbl->last_span->pos == TBL_SPAN_DATA)
++			rp = tbl->last_span->layout->next;
++		else
++			rp = tbl->last_span->layout;
+ 		if (NULL == rp)
+ 			rp = tbl->last_span->layout;
+ 	} else
