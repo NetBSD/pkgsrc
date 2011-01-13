@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2010/07/21 03:17:33 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2011/01/13 13:36:06 wiz Exp $
 
 BUILDLINK_TREE+=	cups
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cups
 CUPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cups+=	cups>=1.1.19nb3
-BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.4.3nb5
+BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.4.4nb1
 BUILDLINK_PKGSRCDIR.cups?=	../../print/cups
 
 pkgbase := cups
