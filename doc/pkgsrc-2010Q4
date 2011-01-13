@@ -37,6 +37,24 @@ New packages:
 
 Infrastructure changes:
 
+Pkgsrc platforms:
+AIX
+BSD/OS
+Darwin (Mac OS X)
+DragonFly
+FreeBSD
+FreeMiNT
+HPUX
+Haiku
+IRIX
+Interix
+Linux
+NetBSD
+OSF/1
+OpenBSD
+SunOS (Solaris)
+UnixWare
+
 releng-pkgsrc team:
 tron sbd spz salo rtr pettai schnoebe
 
