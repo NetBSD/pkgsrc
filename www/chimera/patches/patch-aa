@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/06/13 22:45:32 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2011/01/13 13:52:54 wiz Exp $
 
 --- Common.tmpl.dist.orig	1999-05-30 21:43:52.000000000 +0000
 +++ Common.tmpl.dist
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.5 2010/06/13 22:45:32 wiz Exp $
 -PNGDEPLIB = $(PNGDIR)/lib/libpng$(IMGLEXT).a $(PNGDIR)/lib/libz$(IMGLEXT).a
 -*/
 +PNGLIB = -L$(PNGDIR)/lib -lpng$(IMGLEXT) -lz$(IMGLEXT) -Wl,-R$(PNGDIR)/lib
-+PNGDEPLIB = $(PNGDIR)/lib/libpng14$(IMGLEXT).a
++PNGDEPLIB = $(PNGDIR)/lib/libpng15$(IMGLEXT).a
 +
  
  /* Tells Imakefile to set the flags for debugging.  Comment for -O. */
