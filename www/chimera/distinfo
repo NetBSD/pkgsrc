@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2010/06/13 22:45:32 wiz Exp $
+$NetBSD: distinfo,v 1.8 2011/01/13 13:52:54 wiz Exp $
 
 SHA1 (chimera-2.0a19.tar.gz) = c69b70b11cf12837e260eaa20e548bf9eb9ce309
 RMD160 (chimera-2.0a19.tar.gz) = d3f4d2ff3328c3bf5020490ed851b281e0492fe2
 Size (chimera-2.0a19.tar.gz) = 248431 bytes
-SHA1 (patch-aa) = fb77753229ef9f2b9ef1424818ce704cdead18e0
+SHA1 (patch-aa) = a49455c9e2ce2a9bd3b276ae870739ece6249373
 SHA1 (patch-ab) = 1fc2f5f97f46403359a00e42cc25f4cbf9bc5331
 SHA1 (patch-ac) = 5f18afd9a1452bfba010fe3eb4e773f5395789c6
 SHA1 (patch-ad) = fcfc16397954269a8493017ca06707f043a0cf06
