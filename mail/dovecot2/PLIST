@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/12/03 21:21:10 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/01/13 12:59:08 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -463,6 +463,7 @@ share/doc/dovecot/wiki/Design.Storage.MailboxList.txt
 share/doc/dovecot/wiki/Design.Storage.Plugins.txt
 share/doc/dovecot/wiki/Design.Strings.txt
 share/doc/dovecot/wiki/Design.txt
+share/doc/dovecot/wiki/Dict.txt
 share/doc/dovecot/wiki/Director.txt
 share/doc/dovecot/wiki/DomainLost.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
@@ -475,13 +476,11 @@ share/doc/dovecot/wiki/HowTo.Rootless.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
 share/doc/dovecot/wiki/HowTo.txt
 share/doc/dovecot/wiki/IndexFiles.txt
-share/doc/dovecot/wiki/Iptables.txt
 share/doc/dovecot/wiki/LDA.Exim.txt
 share/doc/dovecot/wiki/LDA.Indexing.txt
 share/doc/dovecot/wiki/LDA.Postfix.txt
 share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
-share/doc/dovecot/wiki/LDA.Sieve.Dovecot.txt
 share/doc/dovecot/wiki/LDA.Sieve.txt
 share/doc/dovecot/wiki/LDA.txt
 share/doc/dovecot/wiki/LMTP.txt
@@ -492,6 +491,7 @@ share/doc/dovecot/wiki/MTA.txt
 share/doc/dovecot/wiki/MailLocation.LocalDisk.txt
 share/doc/dovecot/wiki/MailLocation.Maildir.txt
 share/doc/dovecot/wiki/MailLocation.SharedDisk.txt
+share/doc/dovecot/wiki/MailLocation.dbox.txt
 share/doc/dovecot/wiki/MailLocation.mbox.txt
 share/doc/dovecot/wiki/MailLocation.txt
 share/doc/dovecot/wiki/MailboxFormat.Cydir.txt
@@ -502,12 +502,7 @@ share/doc/dovecot/wiki/MailboxFormat.mailstore.txt
 share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
-share/doc/dovecot/wiki/ManageSieve.Clients.txt
-share/doc/dovecot/wiki/ManageSieve.Configuration.txt
-share/doc/dovecot/wiki/ManageSieve.Install.1.0.txt
-share/doc/dovecot/wiki/ManageSieve.Install.txt
-share/doc/dovecot/wiki/ManageSieve.Troubleshooting.txt
-share/doc/dovecot/wiki/ManageSieve.txt
+share/doc/dovecot/wiki/MboxChildFolders.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt
 share/doc/dovecot/wiki/Migration.BincIMAP.txt
@@ -515,6 +510,7 @@ share/doc/dovecot/wiki/Migration.Courier.txt
 share/doc/dovecot/wiki/Migration.Cyrus.txt
 share/doc/dovecot/wiki/Migration.Linuxconf.txt
 share/doc/dovecot/wiki/Migration.MailFormat.txt
+share/doc/dovecot/wiki/Migration.Online.txt
 share/doc/dovecot/wiki/Migration.Teapop.txt
 share/doc/dovecot/wiki/Migration.UW.txt
 share/doc/dovecot/wiki/Migration.Vm-pop3d.txt
@@ -534,9 +530,24 @@ share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.User.txt
 share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.txt
 share/doc/dovecot/wiki/PasswordDatabase.PAM.txt
 share/doc/dovecot/wiki/PasswordDatabase.Shadow.txt
+share/doc/dovecot/wiki/PasswordDatabase.Static.txt
 share/doc/dovecot/wiki/PasswordDatabase.txt
 share/doc/dovecot/wiki/PerformanceTuning.txt
+share/doc/dovecot/wiki/Pigeonhole.Installation.txt
+share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Clients.txt
+share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Configuration.txt
+share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Install.txt
+share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Troubleshooting.txt
+share/doc/dovecot/wiki/Pigeonhole.ManageSieve.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Configuration.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Examples.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extdata.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Usage.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.txt
+share/doc/dovecot/wiki/Pigeonhole.txt
 share/doc/dovecot/wiki/Plugins.Autocreate.txt
+share/doc/dovecot/wiki/Plugins.Compress.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
 share/doc/dovecot/wiki/Plugins.FTS.Lucene.txt
 share/doc/dovecot/wiki/Plugins.FTS.Solr.txt
@@ -545,7 +556,7 @@ share/doc/dovecot/wiki/Plugins.FTS.txt
 share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
 share/doc/dovecot/wiki/Plugins.Listescape.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
-share/doc/dovecot/wiki/Plugins.MboxSnarf.txt
+share/doc/dovecot/wiki/Plugins.Snarf.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
 share/doc/dovecot/wiki/Plugins.Virtual.txt
 share/doc/dovecot/wiki/Plugins.Zlib.txt
