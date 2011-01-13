@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/11/15 22:56:43 abs Exp $
+# $NetBSD: Makefile,v 1.11 2011/01/13 13:36:27 wiz Exp $
 #
 
 DISTNAME=	libsexy-0.1.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexy/
 

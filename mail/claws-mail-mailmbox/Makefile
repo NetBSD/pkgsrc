@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2010/11/29 17:58:36 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2011/01/13 13:38:36 wiz Exp $
 #
 
 DISTNAME=	mailmbox-1.14.5
 PKGNAME=	claws-mail-mailmbox-1.14.5
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2011/01/13 13:36:56 wiz Exp $
 
 DISTNAME=	pycups-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-cups-${VERSION}
 VERSION=	1.9.47
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	http://cyberelk.net/tim/data/pycups/
 EXTRACT_SUFX=	.tar.bz2
