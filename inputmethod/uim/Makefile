@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2010/11/15 22:57:40 abs Exp $
+# $NetBSD: Makefile,v 1.46 2011/01/13 13:53:28 wiz Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
 
 COMMENT=		Multilingual input method library
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFLICTS+=		uim-qt4-immodule-[0-9]*
 
