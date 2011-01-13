@@ -10,8 +10,8 @@ git-1.7.3.4			devel/scmgit
 gnome-2.32.1 (mostly)		meta-pkgs/gnome-platform
 kde-4.5.4			meta-pkgs/kde4
 mercurial-1.7.2			devel/mercurial
-mysql-client-5.1.1		databases/mysql51-{client,server}
-mysql-server-5.1.1		databases/mysql51-{client,server}
+mysql-client-5.1.1		databases/mysql51-client
+mysql-server-5.1.1		databases/mysql51-server
 openoffice-3.1.1nb9		misc/openoffice3
 openoffice-bin-3.2.1nb1		misc/openoffice3-bin
 perl-5.12.2nb1			lang/perl5
