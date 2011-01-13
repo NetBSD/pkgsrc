@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/02/10 00:07:37 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/13 08:56:19 obache Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	INS_BASE=${DESTDIR}${PREFIX}
+MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
