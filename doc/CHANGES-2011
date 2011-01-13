@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.48 2011/01/13 09:39:49 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.49 2011/01/13 12:20:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -99,3 +99,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-courier to 2010 [minskim 2011-01-12]
 	Updated security/gpg2dot to 1.5 [lukem 2011-01-13]
 	Updated textproc/mdocml to 1.10.9 [wiz 2011-01-13]
+	Updated mail/roundcube to 0.5 [adam 2011-01-13]
