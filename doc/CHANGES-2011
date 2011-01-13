@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.50 2011/01/13 12:23:18 taca Exp $
+$NetBSD: CHANGES-2011,v 1.51 2011/01/13 12:59:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -101,3 +101,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/mdocml to 1.10.9 [wiz 2011-01-13]
 	Updated mail/roundcube to 0.5 [adam 2011-01-13]
 	Updated security/sudo to 1.7.4p5 [taca 2011-01-13]
+	Updated mail/dovecot2 to 2.0.9 [adam 2011-01-13]
