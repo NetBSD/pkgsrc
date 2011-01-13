@@ -3,6 +3,30 @@ The pkgsrc-2010Q4 branch was created in pkgsrc at 2011-01-11 04:20 UTC.
 There are 10483 packages in this branch.
 
 Headline versions of packages:
+apache-2.2.17			www/apache-22
+bzr-2.1.1			devel/bzr
+firefox-3.6.13			www/firefox
+git-1.7.3.4			devel/scmgit
+gnome-2.32.1 (mostly)		meta-pkgs/gnome-platform
+kde-4.5.4			meta-pkgs/kde4
+mercurial-1.7.2			devel/mercurial
+mysql-client-5.1.1		databases/mysql51-{client,server}
+mysql-server-5.1.1		databases/mysql51-{client,server}
+openoffice-3.1.1nb9		misc/openoffice3
+openoffice-bin-3.2.1nb1		misc/openoffice3-bin
+perl-5.12.2nb1			lang/perl5
+php-5.3.5			lang/php53
+postgresql-9.0.2		databases/postgresql90
+python-2.5.5nb1			lang/python25
+python-2.6.6nb5			lang/python26
+ruby18-1.8.7.330		lang/ruby
+ruby19-1.9.2pl136		lang/ruby19
+samba-3.3.14nb1			net/samba33
+samba-3.5.6			net/samba35
+seamonkey-2.0.11		www/seamonkey
+subversion-1.6.15		devel/subversion
+wireshark-1.4.3			net/wireshark
+zope3-3.3.1nb1			www/zope3
 
 Removed packages:
 
