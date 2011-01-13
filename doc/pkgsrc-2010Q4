@@ -32,10 +32,7 @@ zope3-3.3.1nb1			www/zope3
 
 Removed packages:
 gqview-gtk1, ibus-table-array30, ibus-table-extraphrase, hcidump,
-tex-apilike, and tex-apilike-doc
-
-EOL packages:
-postgresql82
+postgresql82 (EOL), tex-apilike, and tex-apilike-doc
 
 New packages (selection):
 libAppleWM, monodevelop-database, kdenlive, opendkim, flashrom, dcc,
