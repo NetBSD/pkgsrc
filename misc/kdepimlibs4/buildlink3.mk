@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/11/15 22:57:59 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2011/01/13 13:36:55 wiz Exp $
 
 BUILDLINK_TREE+=	kdepimlibs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdepimlibs
 KDEPIMLIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdepimlibs+=	kdepimlibs4>=4.0.0
-BUILDLINK_ABI_DEPENDS.kdepimlibs?=	kdepimlibs4>=4.5.3nb1
+BUILDLINK_ABI_DEPENDS.kdepimlibs?=	kdepimlibs4>=4.5.4nb1
 BUILDLINK_PKGSRCDIR.kdepimlibs?=	../../misc/kdepimlibs4
 
 .include "../../databases/openldap-client/buildlink3.mk"

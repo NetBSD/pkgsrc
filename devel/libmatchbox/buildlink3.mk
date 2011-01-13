@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2010/06/13 22:44:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2011/01/13 13:36:14 wiz Exp $
 
 BUILDLINK_TREE+=	libmatchbox
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmatchbox
 LIBMATCHBOX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmatchbox+=	libmatchbox>=1.4
-BUILDLINK_ABI_DEPENDS.libmatchbox+=	libmatchbox>=1.9nb1
+BUILDLINK_ABI_DEPENDS.libmatchbox+=	libmatchbox>=1.9nb2
 BUILDLINK_PKGSRCDIR.libmatchbox?=	../../devel/libmatchbox
 
 .include "../../graphics/png/buildlink3.mk"
