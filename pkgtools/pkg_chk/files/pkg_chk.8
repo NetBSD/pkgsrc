@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.28 2009/10/28 21:29:00 abs Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.29 2011/01/13 17:07:01 jmmv Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -289,7 +289,7 @@ pkgsrc database directory.
 If not set in environment then read from
 .Pa ${MAKECONF} .
 Defaults to
-.Pa /var/db/pkg
+.Pa @PKG_DBDIR@ .
 .It Ev PACKAGES
 Location of binary packages.
 If not set in environment then read from
