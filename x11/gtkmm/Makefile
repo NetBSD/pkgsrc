@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2011/01/13 13:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2011/01/13 16:05:00 drochner Exp $
 
-DISTNAME=	gtkmm-2.20.3
-PKGREVISION=	5
+DISTNAME=	gtkmm-2.22.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
@@ -16,16 +15,15 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-examples
 
 EXTRACT_USING=		bsdtar
 
-PKGCONFIG_OVERRIDE=	atk/atkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.20.1
 
+.include "../../devel/atkmm/buildlink3.mk"
 .include "../../devel/pangomm/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
