@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2011/01/13 13:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2011/01/13 16:55:24 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -8,7 +8,6 @@ PKGREVISION=	1
 
 COMMENT=		Document viewer
 
-GCONF_SCHEMAS=		evince.schemas
 GCONF_SCHEMAS+=	evince-thumbnailer.schemas
 GCONF_SCHEMAS+=	evince-thumbnailer-ps.schemas
 
