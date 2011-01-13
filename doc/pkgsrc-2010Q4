@@ -48,22 +48,9 @@ Infrastructure changes:
 None
 
 Pkgsrc platforms:
-AIX
-BSD/OS
-Darwin (Mac OS X)
-DragonFly
-FreeBSD
-FreeMiNT
-HPUX
-Haiku
-IRIX
-Interix
-Linux
-NetBSD
-OSF/1
-OpenBSD
-SunOS (Solaris)
-UnixWare
+AIX, BSD/OS, Darwin (Mac OS X), DragonFly, FreeBSD, FreeMiNT, HP/UX,
+Haiku, IRIX, Interix, Linux, NetBSD, OSF/1, OpenBSD, SunOS (Solaris),
+and UnixWare
 
 releng-pkgsrc team:
 tron sbd spz salo rtr pettai schnoebe
