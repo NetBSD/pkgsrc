@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2010/11/23 13:05:22 he Exp $
+$NetBSD: distinfo,v 1.5 2011/01/13 17:14:43 wiz Exp $
 
 SHA1 (gdk-pixbuf-2.22.1.tar.bz2) = b452208963ddd84f7280865695b50255fcafaa2e
 RMD160 (gdk-pixbuf-2.22.1.tar.bz2) = d05d6642e147281b7dc1dd21657595333f13f6f1
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = d18a235ce973ef132e9dc777b1cf029b064c02ef
 SHA1 (patch-ac) = f8c8ff3175cee6a88938a0aaa081d3bd832a050d
 SHA1 (patch-ad) = 00b9186e0d3513a518c263b6d2f8350fc977580d
 SHA1 (patch-ae) = d4ad340e16589c579ec964bf95fd951b334adf04
+SHA1 (patch-af) = ee6fdf4c2ef334873b56487dafe4e2a0d055318b
