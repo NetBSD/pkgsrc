@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.6.1 2011/01/13 20:56:29 jkunz Exp $
+# $NetBSD: Makefile,v 1.1.6.2 2011/01/13 21:59:03 jkunz Exp $
 #
 
-DISTNAME=	garmindev-0.3.4
+DISTNAME=	garmindev-0.3.3
 PKGNAME=	qlandkartegt-${DISTNAME}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qlandkartegt/}
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+WRKSRC=		${WRKDIR}/garmindev-0.3.3
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
