@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4389 2011/01/03 12:20:32 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4390 2011/01/13 04:05:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5727,7 +5727,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/ruby-gnome2-bonobo to 0.90.5 [obache 2010-11-27]
 	Updated devel/ruby-gnome2-bonoboui to 0.90.5 [obache 2010-11-27]
 	Updated devel/ruby-gnome2-gconf to 0.90.5 [obache 2010-11-27]
-	Added devel/ruby-gnome2-gio version 0.90.5 [obache 2010-11-27]
+	Updated devel/ruby-gnome2-gio to 0.90.5 [obache 2010-11-27]
 	Updated devel/ruby-gnome2-glib to 0.90.5 [obache 2010-11-27]
 	Updated devel/ruby-gnome2-libglade to 0.90.5 [obache 2010-11-27]
 	Updated devel/ruby-gnome2-pango to 0.90.5 [obache 2010-11-27]
