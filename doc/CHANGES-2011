@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.52 2011/01/13 13:27:42 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.53 2011/01/13 16:52:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -103,3 +103,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/sudo to 1.7.4p5 [taca 2011-01-13]
 	Updated mail/dovecot2 to 2.0.9 [adam 2011-01-13]
 	Updated graphics/png to 1.5.1beta01 [wiz 2011-01-13]
+	Updated misc/tmux to 1.4 [jmmv 2011-01-13]
