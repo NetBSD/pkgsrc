@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2010/03/02 21:51:06 jkunz Exp $
+$NetBSD: distinfo,v 1.2 2011/01/13 22:34:17 jkunz Exp $
 
-SHA1 (garmindev-0.3.3.tar.gz) = 50a06296352ffe3ff7d0c17011d44bfdb3b0a09f
-RMD160 (garmindev-0.3.3.tar.gz) = 0ecabdeee0dd1a7ee2807bf9e3f126a94be68ca0
-Size (garmindev-0.3.3.tar.gz) = 76209 bytes
+SHA1 (garmindev-0.3.4.tar.gz) = 0349f0d9f486de22440d6d028c8e092c32faf83a
+RMD160 (garmindev-0.3.4.tar.gz) = f35f4274775bdcac69a1b2973afbde7bec3c78da
+Size (garmindev-0.3.4.tar.gz) = 85173 bytes
