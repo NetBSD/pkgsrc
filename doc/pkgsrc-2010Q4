@@ -6,6 +6,9 @@ Headline versions of packages:
 
 Removed packages:
 
+EOL packages:
+postgresql82
+
 New packages:
 
 Infrastructure changes:
@@ -15,4 +18,7 @@ tron sbd spz salo rtr pettai schnoebe
 
 pkgsrc-security team:
 joerg kefren obache gls tez tnn tonnerre wiz pettai
+
+Over 1000 Secunia advisories evaluated and 269 entries added or
+updated in vulnerability audit database.
 
