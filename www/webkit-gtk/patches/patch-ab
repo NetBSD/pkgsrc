@@ -1,0 +1,80 @@
+$NetBSD: patch-ab,v 1.3 2011/01/14 12:34:25 wiz Exp $
+
+Fix build with png-1.5.
+
+--- WebCore/platform/image-decoders/png/PNGImageDecoder.cpp.orig	2010-12-28 12:28:51.000000000 +0000
++++ WebCore/platform/image-decoders/png/PNGImageDecoder.cpp
+@@ -60,7 +60,11 @@ const unsigned long cMaxPNGSize = 100000
+ // Called if the decoding of the image fails.
+ static void PNGAPI decodingFailed(png_structp png, png_const_charp)
+ {
++#if (PNG_LIBPNG_VER < 10500)
+     longjmp(JMPBUF(png), 1);
++#else
++    png_longjmp(png, 1);
++#endif
+ }
+ 
+ // Callbacks given to the read struct.  The first is for warnings (we want to
+@@ -216,18 +220,26 @@ void PNGImageDecoder::headerAvailable()
+ {
+     png_structp png = m_reader->pngPtr();
+     png_infop info = m_reader->infoPtr();
+-    png_uint_32 width = png->width;
+-    png_uint_32 height = png->height;
++    png_uint_32 width = png_get_image_width(png, info);
++    png_uint_32 height = png_get_image_height(png, info);
+     
+     // Protect against large images.
+-    if (png->width > cMaxPNGSize || png->height > cMaxPNGSize) {
++    if (png_get_image_width(png, info) > cMaxPNGSize || png_get_image_height(png, info) > cMaxPNGSize) {
++#if (PNG_LIBPNG_VER < 10500)
+         longjmp(JMPBUF(png), 1);
++#else
++        png_longjmp(png, 1);
++#endif
+         return;
+     }
+     
+     // We can fill in the size now that the header is available.
+     if (!setSize(width, height)) {
++#if (PNG_LIBPNG_VER < 10500)
+         longjmp(JMPBUF(png), 1);
++#else
++        png_longjmp(png, 1);
++#endif
+         return;
+     }
+ 
+@@ -277,8 +289,8 @@ void PNGImageDecoder::headerAvailable()
+ 
+     if (m_reader->decodingSizeOnly()) {
+         // If we only needed the size, halt the reader.     
+-        m_reader->setReadOffset(m_reader->currentBufferSize() - png->buffer_size);
+-        png->buffer_size = 0;
++        m_reader->setReadOffset(m_reader->currentBufferSize() - png_get_compression_buffer_size(png));
++        png_set_compression_buffer_size(png, 0);
+     }
+ }
+ 
+@@ -291,7 +303,11 @@ void PNGImageDecoder::rowAvailable(unsig
+     RGBA32Buffer& buffer = m_frameBufferCache[0];
+     if (buffer.status() == RGBA32Buffer::FrameEmpty) {
+         if (!buffer.setSize(scaledSize().width(), scaledSize().height())) {
++#if (PNG_LIBPNG_VER < 10500)
+             longjmp(JMPBUF(m_reader->pngPtr()), 1);
++#else
++            png_longjmp(m_reader->pngPtr(), 1);
++#endif
+             return;
+         }
+         buffer.setStatus(RGBA32Buffer::FramePartial);
+@@ -300,7 +316,7 @@ void PNGImageDecoder::rowAvailable(unsig
+         // For PNGs, the frame always fills the entire image.
+         buffer.setRect(IntRect(IntPoint(), size()));
+ 
+-        if (m_reader->pngPtr()->interlaced)
++        if (png_get_interlace_type(m_reader->pngPtr(), m_reader->infoPtr()) != PNG_INTERLACE_NONE)
+             m_reader->createInterlaceBuffer((m_reader->hasAlpha() ? 4 : 3) * size().width() * size().height());
+     }
+ 
