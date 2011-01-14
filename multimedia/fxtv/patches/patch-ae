@@ -1,16 +1,19 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
+$NetBSD: patch-ae,v 1.2 2011/01/14 10:55:42 wiz Exp $
 
---- imgsav.c.orig	Sun Sep 26 16:35:06 1999
+Support png screenshots.
+
+--- imgsav.c.orig	1999-09-26 14:35:06.000000000 +0000
 +++ imgsav.c
-@@ -29,6 +29,7 @@
+@@ -29,6 +29,8 @@
  
  /*      ******************** Include Files                ************** */
  
 +#include <png.h>
++#include <zlib.h>
  #include <stdio.h>
  #include <stdlib.h>
  #include <unistd.h>
-@@ -254,6 +255,96 @@ void TVIMGSAVDoSaveTIFF( char filename[]
+@@ -254,6 +256,96 @@ void TVIMGSAVDoSaveTIFF( char filename[]
  }
  
  
@@ -107,13 +110,13 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
  void TVIMGSAVDoSavePPM( char filename[], TV_IMAGE *img )
  {
      static char     *S_fp_buf   = NULL;
-@@ -407,6 +498,9 @@ void TVIMGSAVDoSave( char filename[], TV
-                 exit(1);
+@@ -408,6 +500,9 @@ void TVIMGSAVDoSave( char filename[], TV
              }
              TVIMGSAVDoSaveTIFF( filename, img );  break;
-+
+ 
 +        case TV_STILL_FMT_PNG :
 +            TVIMGSAVDoSavePNG ( filename, img );  break;
- 
++
          case TV_STILL_FMT_PPM :
              TVIMGSAVDoSavePPM ( filename, img );  break;
+ 
