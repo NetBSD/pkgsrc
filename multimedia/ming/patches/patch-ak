@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 2011/01/14 07:53:39 obache Exp $
+
+* Use API instead of direct access, for png>=1.5.
+
+--- util/png2dbl.c.orig	2008-12-22 13:33:59.000000000 +0000
++++ util/png2dbl.c
+@@ -91,7 +91,7 @@ struct pngdata readPNG(FILE *fp)
+     error("Couldn't create end_info\n");
+   }
+ 
+-  if(setjmp(png_ptr->jmpbuf))
++  if(setjmp(png_jmpbuf(png_ptr)))
+   {
+     png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
+     fclose(fp);
