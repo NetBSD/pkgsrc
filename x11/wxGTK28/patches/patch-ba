@@ -1,9 +1,20 @@
-$NetBSD: patch-ba,v 1.2 2010/02/16 17:38:14 taca Exp $
+$NetBSD: patch-ba,v 1.3 2011/01/14 11:54:04 wiz Exp $
 
-deal with CVE-2009-2369.
+deal with CVE-2009-2369. (chunks 2 + 3)
 
---- src/common/imagpng.cpp.orig	2009-03-06 13:17:40.000000000 +0100
+Fix build with png-1.5. (chunks 1 + 4)
+
+--- src/common/imagpng.cpp.orig	2009-03-06 12:17:40.000000000 +0000
 +++ src/common/imagpng.cpp
+@@ -529,7 +529,7 @@ wxPNGHandler::LoadFile(wxImage *image,
+     png_structp png_ptr = png_create_read_struct
+                           (
+                             PNG_LIBPNG_VER_STRING,
+-                            (voidp) NULL,
++                            NULL,
+                             wx_png_error,
+                             wx_png_warning
+                           );
 @@ -568,18 +568,16 @@ wxPNGHandler::LoadFile(wxImage *image,
      if (!image->Ok())
          goto error;
@@ -26,3 +37,29 @@ deal with CVE-2009-2369.
      }
  
      png_read_image( png_ptr, lines );
+@@ -588,16 +586,20 @@ wxPNGHandler::LoadFile(wxImage *image,
+ #if wxUSE_PALETTE
+     if (color_type == PNG_COLOR_TYPE_PALETTE)
+     {
+-        const size_t ncolors = info_ptr->num_palette;
++        png_colorp palette;
++        int ncolors;
++
++        png_get_PLTE( png_ptr, info_ptr, &palette, &ncolors);
++
+         unsigned char* r = new unsigned char[ncolors];
+         unsigned char* g = new unsigned char[ncolors];
+         unsigned char* b = new unsigned char[ncolors];
+ 
+-        for (size_t j = 0; j < ncolors; j++)
++        for (int j = 0; j < ncolors; j++)
+         {
+-            r[j] = info_ptr->palette[j].red;
+-            g[j] = info_ptr->palette[j].green;
+-            b[j] = info_ptr->palette[j].blue;
++            r[j] = palette[j].red;
++            g[j] = palette[j].green;
++            b[j] = palette[j].blue;
+         }
+ 
+         image->SetPalette(wxPalette(ncolors, r, g, b));
