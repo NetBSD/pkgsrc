@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.50 2010/12/02 16:00:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.51 2011/01/14 10:37:21 wiz Exp $
 # used by www/links/Makefile
+# used by www/links-gui/Makefile
 
 DISTNAME=	links-2.3pre1
 CATEGORIES=	www
