@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.54 2011/01/14 08:23:09 tron Exp $
+$NetBSD: CHANGES-2011,v 1.55 2011/01/14 11:18:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -105,3 +105,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/png to 1.5.1beta01 [wiz 2011-01-13]
 	Updated misc/tmux to 1.4 [jmmv 2011-01-13]
 	Updated multimedia/mediatomb to 0.12.1nb2 [tron 2011-01-14]
+	Updated devel/cmake to 2.8.3nb1 [wiz 2011-01-14]
