@@ -1,0 +1,25 @@
+$NetBSD: patch-au,v 1.1 2011/01/14 08:35:24 obache Exp $
+
+* for png>=1.5
+  * zlib.h is not included from png.h.
+  * use API instead of direct acess to the main linpng control structures.
+
+--- libart/src/rbart_canvas.c.orig	2010-10-28 08:12:38.000000000 +0000
++++ libart/src/rbart_canvas.c
+@@ -14,6 +14,7 @@
+ #include "rbart.h"
+ 
+ #include <jpeglib.h>
++#include <zlib.h>
+ #include <png.h>
+ 
+ #define ART_CANVAS_PNG_INTERLACE_ADAM7 1
+@@ -352,7 +353,7 @@ canvas_to_png(argc, argv, r_self)
+         return Qnil;
+     }
+ 
+-    if (setjmp(png_ptr->jmpbuf))
++    if (setjmp(png_jmpbuf(png_ptr)))
+     {
+         png_destroy_write_struct(&png_ptr, &info_ptr);
+         return Qnil;
