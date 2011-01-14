@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2010/06/13 22:45:54 wiz Exp $
+$NetBSD: distinfo,v 1.10 2011/01/14 11:54:04 wiz Exp $
 
 SHA1 (wxGTK-2.8.10-libtool.diff.bz2) = 62ff30c26efdd73252bed2d07b82a9b9d3ef890f
 RMD160 (wxGTK-2.8.10-libtool.diff.bz2) = 64e1c32caa4bd6a0503bce4764e3ddc1cba68f8a
@@ -10,7 +10,7 @@ SHA1 (patch-aa) = fbcfd8e6abaabab393f24dc368c1c6b8447a75be
 SHA1 (patch-ab) = 82960daef0616824718f3c04929871aeb0e258a2
 SHA1 (patch-ac) = 50cf253797f2dee8b9dab08d138d0070e25e7a8c
 SHA1 (patch-ad) = b07a55257347633edb8997201c82f83619d1d650
-SHA1 (patch-ba) = 367553169526acd6c1c938b0f57c5b6a444d2b10
+SHA1 (patch-ba) = b6b07cbed81cccb2619f671346e9cfe78bda83d3
 SHA1 (patch-bb) = 27855267bd13a1db65cafc96eaba1ef7f71dc65f
 SHA1 (patch-ca) = 7da457e1dbafb42766aa87c1ca9baca675e211ed
 SHA1 (patch-cb) = 8e3ca3df50ef678656787201317a2d2b385c861e
