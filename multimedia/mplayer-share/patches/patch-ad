@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.11 2011/01/14 10:44:27 wiz Exp $
+
+Fix build with png-1.5.
+
+--- libmpcodecs/vd_mpng.c.orig	2010-02-26 15:01:37.000000000 +0000
++++ libmpcodecs/vd_mpng.c
+@@ -74,7 +74,7 @@ static int    pngLength;
+ 
+ static void pngReadFN( png_structp pngstr,png_bytep buffer,png_size_t size )
+ {
+- char * p = pngstr->io_ptr;
++ char * p = png_get_io_ptr(pngstr);
+  if(size>pngLength-pngPointer && pngLength>=pngPointer) size=pngLength-pngPointer;
+  fast_memcpy( buffer,(char *)&p[pngPointer],size );
+  pngPointer+=size;
+@@ -111,7 +111,7 @@ static mp_image_t* decode(sh_video_t *sh
+  png_get_IHDR( png,info,&png_width,&png_height,&depth,&color,NULL,NULL,NULL );
+  png_set_bgr( png );
+ 
+- switch( info->color_type ) {
++ switch( png_get_color_type( png,info ) ) {
+    case PNG_COLOR_TYPE_GRAY_ALPHA:
+       mp_msg( MSGT_DECVIDEO,MSGL_INFO,"Sorry gray scaled png with alpha channel not supported at moment.\n" );
+       break;
+@@ -128,7 +128,7 @@ static mp_image_t* decode(sh_video_t *sh
+       out_fmt=IMGFMT_BGR24;
+       break;
+    default:
+-      mp_msg( MSGT_DECVIDEO,MSGL_INFO,"Sorry, unsupported PNG colorspace: %d.\n" ,info->color_type);
++      mp_msg( MSGT_DECVIDEO,MSGL_INFO,"Sorry, unsupported PNG colorspace: %d.\n" ,png_get_color_type( png,info ));
+  }
+ 
+  // (re)init libvo if image parameters changed (width/height/colorspace)
