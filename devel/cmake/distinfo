@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2010/11/11 08:34:01 adam Exp $
+$NetBSD: distinfo,v 1.28 2011/01/14 11:18:02 wiz Exp $
 
 SHA1 (cmake-2.8.3.tar.gz) = e9bfbec47b3939be6f83ffa8006884285c687dc2
 RMD160 (cmake-2.8.3.tar.gz) = 8bcba88ad884e22bbadf4c594a5f3b0bdbf2e12c
@@ -6,3 +6,4 @@ Size (cmake-2.8.3.tar.gz) = 5436543 bytes
 SHA1 (patch-aa) = c16ba8be422ec243995cd5d475324d469d08c37a
 SHA1 (patch-ab) = 0bd090b19c729710f8822840ec6026b156cd8e13
 SHA1 (patch-ac) = c4d6da48690bed6a2ab632dbf1a96d938ac1aa4e
+SHA1 (patch-ad) = 18d9f0a5865b6bef04ffee2b33f945b243a2342a

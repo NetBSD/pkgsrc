@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.9 2011/01/14 11:18:02 wiz Exp $
+
+Find png-1.5.
+
+--- Modules/FindPNG.cmake.orig	2010-11-03 19:58:27.000000000 +0000
++++ Modules/FindPNG.cmake
+@@ -33,7 +33,7 @@ if(ZLIB_FOUND)
+   /usr/local/include/libpng             # OpenBSD
+   )
+ 
+-  set(PNG_NAMES ${PNG_NAMES} png libpng png14 libpng14 png14d libpng14d png12 libpng12 png12d libpng12d)
++  set(PNG_NAMES ${PNG_NAMES} png libpng png15 libpng15 png14 libpng14 png14d libpng14d png12 libpng12 png12d libpng12d)
+   find_library(PNG_LIBRARY NAMES ${PNG_NAMES} )
+ 
+   if (PNG_LIBRARY AND PNG_PNG_INCLUDE_DIR)
