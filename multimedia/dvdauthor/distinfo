@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2010/05/08 16:11:06 drochner Exp $
+$NetBSD: distinfo,v 1.10 2011/01/14 10:57:50 wiz Exp $
 
 SHA1 (dvdauthor-0.6.18.tar.gz) = 7b6e190a3903f617d08368e3cc5e6fd80677e2fb
 RMD160 (dvdauthor-0.6.18.tar.gz) = d7571a8371305aefb283f433440b3be2264e9e34
 Size (dvdauthor-0.6.18.tar.gz) = 392809 bytes
 SHA1 (patch-aa) = b8daa292a38786f7da2a6dcba9d03cd00260086c
+SHA1 (patch-ab) = 4f96e7ec097af871e190d61c9cfaab72ad74bc82
