@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2010/04/21 05:43:28 wiz Exp $
+$NetBSD: distinfo,v 1.29 2011/01/14 19:41:10 tron Exp $
 
 SHA1 (WindowMaker-0.92.0.tar.bz2) = 4f7fea6f40b9ba9f870d2e2f0ce46274750edb2c
 RMD160 (WindowMaker-0.92.0.tar.bz2) = c161eee64092fafb4868181fe2a0b6db96ed6de0
@@ -16,3 +16,4 @@ SHA1 (patch-aj) = 9d993770f77cd53d005b1f2c81baff49831fe96a
 SHA1 (patch-ak) = aca311941e7c2fa7860934cd029ff87fde96c8ff
 SHA1 (patch-al) = b900fcc52c3fb5b5184b28e22c29e111317ea7ad
 SHA1 (patch-am) = b25f546dc8192cfa910461e3dc5111703aecc586
+SHA1 (patch-ao) = 50e4156541ef0f7b6ceef5059c40e8fd9a097fc8
