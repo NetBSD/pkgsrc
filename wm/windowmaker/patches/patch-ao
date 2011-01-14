@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2011/01/14 19:41:10 tron Exp $
+
+Fix build with "png" 1.5.1beta01 and newer.
+
+--- wrlib/png.c.orig	2004-10-12 19:22:04.000000000 +0100
++++ wrlib/png.c	2011-01-14 19:38:22.000000000 +0000
+@@ -97,7 +97,7 @@
+     }
+ 
+     RErrorCode = RERR_INTERNAL;
+-    if (setjmp(png->jmpbuf)) {
++    if (png_jmpbuf(png)) {
+         fclose(f);
+         png_destroy_read_struct(&png, &pinfo, &einfo);
+         if (image)
