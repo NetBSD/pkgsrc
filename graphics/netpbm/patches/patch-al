@@ -1,0 +1,19 @@
+$NetBSD: patch-al,v 1.5 2011/01/15 18:37:46 tron Exp $
+
+Fix build with png-1.5.
+
+--- converter/other/pamrgbatopng.c.orig	2006-08-19 04:12:28.000000000 +0100
++++ converter/other/pamrgbatopng.c	2011-01-15 18:24:36.000000000 +0000
+@@ -101,10 +101,8 @@
+     if (!infoP)
+         pm_error("Could not allocate PNG info structure");
+     else {
+-        infoP->width      = pamP->width;
+-        infoP->height     = pamP->height;
+-        infoP->bit_depth  = 8;
+-        infoP->color_type = PNG_COLOR_TYPE_RGB_ALPHA;
++        png_set_IHDR(pngP, infoP, pamP->width, pamP->height,
++                     8, PNG_COLOR_TYPE_RGB_ALPHA, 0, 0, 0);
+         
+         png_init_io(pngP, ofP);
+ 
