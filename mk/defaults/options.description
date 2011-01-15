@@ -120,8 +120,8 @@ emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 embedded-server		Enable embedded server support for MySQL.
 enchant			Add spell checking support using enchant.
 enchant-zemberek	Add spell checking support for Turkish.
-epub			Enable epub support.
 epoll			Enable support for epoll I/O event notification facility.
+epub			Enable epub support.
 esound			Enable support for the Enlightment Sound Daemon.
 evolution-data-server	Enable support for evolution-data-server.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
@@ -307,9 +307,9 @@ libsoup			Use libsoup for SOUP support.
 libspiff		Use libspiff for XML shareable playlist support.
 libssh2 	 	Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
+libusb			Enable USB access.
 libvisual		Enable libvisual (audio visualisation) support.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
-libusb			Enable USB access.
 libxml2			Use the libxml2 library for XML support.
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
 liferea-mozilla		Use xulrunner to render HTML.
@@ -318,8 +318,8 @@ links-zlib		Enable zlib support for the links WWW browser.
 live			Enable live555 support.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
-lsof-more-secure	Only allow root to view all open files with lsof.
 lsof-less-secure-sockets	If 'lsof-more-secure' is set, allow all sockets to be viewed at all times.
+lsof-more-secure	Only allow root to view all open files with lsof.
 lua			Enable Lua support.
 lynx			Use and enable support for the lynx browser.
 lzma			Enable LZMA (de)compression support.
@@ -338,24 +338,25 @@ mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
+mng			Enable mng (Multiple-image Network Graphics) support.
 modperl			Use modperl to improve speed of Perl scripts in Apache
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
 motif			Enable motif support.
 mozilla			Use mozilla as gecko rendering engine.
+mozilla-enigmail	Enable the Enigmail OpenPGP extension.
 mozilla-jemalloc	Enable building with Mozilla'a jemalloc.
 mozilla-jit		Enable nanojit javascript acceleration.
 mozilla-lightning	Enable the lightning calendar extension.
-mozilla-enigmail	Enable the Enigmail OpenPGP extension.
 mozilla-single-profile	Enable single profiles on mozilla browsers.
 mp3tunes		Enable support for mp3tunes.com.
 mpcdec			Enable the portable Musepack decoder library.
 mpeg4ip			Enable mpeg4ip support.
-mpg123-fifo		Enable FIFO support for the mpg123 control interface.
-mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow).
-mpg123-with-fpu		Enable generic fpu code.
 mpg123-altivec		Enable altivec optimized dithering code.
+mpg123-fifo		Enable FIFO support for the mpg123 control interface.
+mpg123-with-fpu		Enable generic fpu code.
+mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow).
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
@@ -508,9 +509,9 @@ sybase			Enable Sybase/MS SQL Server support.
 syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
 syslogng-spoof		Spoof the original source address of forwarded packets.
-terminfo		Use terminfo.
 tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
+terminfo		Use terminfo.
 tests			Build and install tests.
 theora			Use the theora codecs.
 threads			Enable threads support.
