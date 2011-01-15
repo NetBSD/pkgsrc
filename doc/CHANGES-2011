@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.59 2011/01/15 16:47:16 taca Exp $
+$NetBSD: CHANGES-2011,v 1.60 2011/01/15 21:15:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -110,3 +110,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/ruby-tzinfo to 0.3.24 [taca 2011-01-15]
 	Updated databases/ruby-odbc to 0.99994 [taca 2011-01-15]
 	Updated www/contao29-translations to 20110114 [taca 2011-01-15]
+	Updated devel/pcre to 8.12 [adam 2011-01-15]
