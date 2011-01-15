@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2009/07/19 23:05:38 tron Exp $
+$NetBSD: patch-ad,v 1.6 2011/01/15 10:32:08 adam Exp $
 
---- tools/Makefile.in.orig	2009-07-19 06:11:36.000000000 +0100
-+++ tools/Makefile.in	2009-07-19 15:20:43.000000000 +0100
-@@ -805,7 +805,7 @@
+--- tools/Makefile.in.orig	2010-12-22 05:47:59.000000000 +0000
++++ tools/Makefile.in
+@@ -1008,7 +1008,7 @@ info: info-recursive
  
  info-am:
  
