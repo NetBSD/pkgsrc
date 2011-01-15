@@ -10,3 +10,5 @@ graphics/goocanvasmm: build fix
 Pullup ticket #3323 - requested by jym
 sysutils/xentools3: improve NetBSD support
 sysutils/xentools33: improve NetBSD support
+Pullup ticket #3325 - requested by taca
+security/sudo: security update
