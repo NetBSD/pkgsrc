@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.21 2011/01/15 08:15:47 tron Exp $
+$NetBSD: patch-ac,v 1.22 2011/01/15 18:37:46 tron Exp $
 
 Fix build with png-1.5.
 
---- converter/other/pnmtopng.c.orig	2010-07-10 02:38:01.000000000 +0100
-+++ converter/other/pnmtopng.c	2011-01-14 21:49:17.000000000 +0000
+--- converter/other/pnmtopng.c.orig	2010-12-10 18:19:40.000000000 +0000
++++ converter/other/pnmtopng.c	2011-01-15 11:15:25.000000000 +0000
 @@ -61,7 +61,8 @@
  #include <assert.h>
  #include <string.h> /* strcat() */
@@ -14,19 +14,21 @@ Fix build with png-1.5.
  #include "pnm.h"
  #include "pngtxt.h"
  #include "shhopt.h"
-@@ -69,11 +70,6 @@
+@@ -69,13 +70,6 @@
  #include "nstring.h"
  #include "version.h"
  
 -#if PNG_LIBPNG_VER >= 10400
 -#error Your PNG library (<png.h>) is incompatible with this Netpbm source code.
 -#error You need either an older PNG library (older than 1.4)
--#error newer Netpbm source code (at least 10.48)
+-#error newer Netpbm source code (at least 10.47.04)
 -#endif
- 
- 
+-
+-
  struct zlibCompression {
-@@ -2079,6 +2075,7 @@
+     /* These are parameters that describe a form of zlib compression.
+        Values have the same meaning as the similarly named arguments to
+@@ -2079,6 +2073,7 @@
              gray *               const alpha_mask,
              colorhash_table      const cht,
              coloralphahash_table const caht,
@@ -34,7 +36,7 @@ Fix build with png-1.5.
              png_info *           const info_ptr,
              xelval               const png_maxval,
              unsigned int         const depth) {
-@@ -2091,20 +2088,20 @@
+@@ -2091,20 +2086,20 @@
          xel p_png;
          xel const p = xelrow[col];
          PPM_DEPTH(p_png, p, maxval, png_maxval);
@@ -60,7 +62,7 @@ Fix build with png-1.5.
              if (depth == 16)
                  *pp++ = PPM_GETR(p_png) >> 8;
              *pp++ = PPM_GETR(p_png) & 0xff;
-@@ -2117,7 +2114,7 @@
+@@ -2117,7 +2112,7 @@
          } else
              pm_error("INTERNAL ERROR: undefined color_type");
                  
@@ -69,7 +71,7 @@ Fix build with png-1.5.
              int const png_alphaval = (int)
                  alpha_mask[col] * (float) png_maxval / maxval + 0.5;
              if (depth == 16)
-@@ -2174,7 +2171,7 @@
+@@ -2174,7 +2169,7 @@
              
              makePngLine(line, xelrow, cols, maxval,
                          alpha, alpha ? alpha_mask[row] : NULL,
@@ -78,7 +80,7 @@ Fix build with png-1.5.
  
              png_write_row(png_ptr, line);
          }
-@@ -2186,12 +2183,12 @@
+@@ -2186,12 +2181,12 @@
  
  static void
  doGamaChunk(struct cmdlineInfo const cmdline,
@@ -93,7 +95,7 @@ Fix build with png-1.5.
      }
  }
  
-@@ -2199,20 +2196,15 @@
+@@ -2199,20 +2194,15 @@
  
  static void
  doChrmChunk(struct cmdlineInfo const cmdline,
@@ -119,7 +121,7 @@ Fix build with png-1.5.
      }
  }
  
-@@ -2220,15 +2212,12 @@
+@@ -2220,15 +2210,12 @@
  
  static void
  doPhysChunk(struct cmdlineInfo const cmdline,
@@ -137,7 +139,7 @@ Fix build with png-1.5.
      }
  }
  
-@@ -2237,26 +2226,28 @@
+@@ -2237,26 +2224,28 @@
  
  static void
  doTimeChunk(struct cmdlineInfo const cmdline,
@@ -171,7 +173,7 @@ Fix build with png-1.5.
          (pngMaxval > maxval || (alpha && pngMaxval > alphaMaxval))) {
  
          /* We're writing in a bit depth that doesn't match the maxval
-@@ -2275,26 +2266,28 @@
+@@ -2275,26 +2264,28 @@
             sBIT chunk.
          */
  
@@ -213,7 +215,7 @@ Fix build with png-1.5.
          }
      }
  }
-@@ -2391,6 +2384,8 @@
+@@ -2391,6 +2382,8 @@
    xelval maxmaxval;
    gray ** alpha_mask;
  
@@ -222,7 +224,7 @@ Fix build with png-1.5.
    /* these guys are initialized to quiet compiler warnings: */
    maxmaxval = 255;
    alpha_mask = NULL;
-@@ -2576,43 +2571,42 @@
+@@ -2576,43 +2569,42 @@
      pm_error ("setjmp returns error condition (2)");
    }
  
@@ -288,7 +290,7 @@ Fix build with png-1.5.
      }
      /* creating hIST chunk */
      if (cmdline.hist) {
-@@ -2638,18 +2632,17 @@
+@@ -2638,18 +2630,17 @@
  
          ppm_freecolorhash(cht);
  
@@ -313,7 +315,7 @@ Fix build with png-1.5.
          }
      } else {
          /* This is PNG_COLOR_MASK_ALPHA.  Transparency will be handled
-@@ -2657,43 +2650,43 @@
+@@ -2657,43 +2648,49 @@
          */
      }
      if (verbose) {
@@ -343,10 +345,15 @@ Fix build with png-1.5.
 -      info_ptr->valid |= PNG_INFO_bKGD;
 -      if (info_ptr->color_type == PNG_COLOR_TYPE_PALETTE) {
 -          info_ptr->background.index = background_index;
--      } else {
++      if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_PALETTE) {
++          png_color_16 background;
++
++          (void)memset(&background, 0, sizeof(background));
++          background.index = background_index;
++          png_set_bKGD(png_ptr, info_ptr, &background);
+       } else {
 -          info_ptr->background = 
 -              xelToPngColor_16(backcolor, maxval, png_maxval);
-+      if (png_get_color_type(png_ptr, info_ptr) != PNG_COLOR_TYPE_PALETTE) {
 +          png_color_16 background = xelToPngColor_16(backcolor, maxval, png_maxval);
 +          png_set_bKGD(png_ptr, info_ptr, &background);
            if (verbose)
@@ -376,7 +383,7 @@ Fix build with png-1.5.
  
    if (cmdline.filterSet != 0)
        png_set_filter(png_ptr, 0, cmdline.filterSet);
-@@ -2703,6 +2696,7 @@
+@@ -2703,6 +2700,7 @@
    /* write the png-info struct */
    png_write_info(png_ptr, info_ptr);
  
@@ -384,7 +391,7 @@ Fix build with png-1.5.
    if (cmdline.text || cmdline.ztxt)
        /* prevent from being written twice with png_write_end */
        info_ptr->num_text = 0;
-@@ -2710,6 +2704,7 @@
+@@ -2710,6 +2708,7 @@
    if (cmdline.modtime)
        /* prevent from being written twice with png_write_end */
        info_ptr->valid &= ~PNG_INFO_tIME;
