@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2011/01/15 14:51:26 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2011/01/15 14:51:52 wiz Exp $
 
-Fix build with png-1.5.
+Fix build with png-1.5. From John Bowler.
 
 --- WebCore/platform/image-decoders/png/PNGImageDecoder.cpp.orig	2010-12-28 12:28:51.000000000 +0000
 +++ WebCore/platform/image-decoders/png/PNGImageDecoder.cpp
