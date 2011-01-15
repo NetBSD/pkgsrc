@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.4 2009/06/07 08:36:36 tron Exp $
+$NetBSD: patch-al,v 1.5 2011/01/15 10:32:08 adam Exp $
 
---- helpers/basic_auth/MSNT/Makefile.in.orig	2009-05-23 13:31:17.000000000 +0100
-+++ helpers/basic_auth/MSNT/Makefile.in	2009-06-06 23:29:51.000000000 +0100
-@@ -542,11 +542,11 @@
+--- helpers/basic_auth/MSNT/Makefile.in.orig	2010-12-22 05:47:43.000000000 +0000
++++ helpers/basic_auth/MSNT/Makefile.in
+@@ -718,13 +718,13 @@ info: info-am
  
  info-am:
  
@@ -10,6 +10,8 @@ $NetBSD: patch-al,v 1.4 2009/06/07 08:36:36 tron Exp $
 +install-data-am:
  
  install-dvi: install-dvi-am
+ 
+ install-dvi-am:
  
 -install-exec-am: install-libexecPROGRAMS install-sysconfDATA
 +install-exec-am: install-libexecPROGRAMS
