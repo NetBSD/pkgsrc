@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.21 2011/01/15 15:07:11 wiz Exp $
+
+Fix build with png-1.5.
+
+--- src/af/util/xp/ut_png.cpp.orig	2008-02-24 03:33:07.000000000 +0000
++++ src/af/util/xp/ut_png.cpp
+@@ -71,7 +71,7 @@ bool UT_PNG_getDimensions(const UT_ByteB
+ 	 * the normal method of doing things with libpng).  REQUIRED unless you
+ 	 * set up your own error handlers in the png_create_read_struct() earlier.
+ 	 */
+-	if (setjmp(png_ptr->jmpbuf))
++	if (setjmp(png_jmpbuf(png_ptr)))
+ 	{
+ 		/* Free all of the memory associated with the png_ptr and info_ptr */
+ 		png_destroy_read_struct(&png_ptr, &info_ptr, static_cast<png_infopp>(NULL));
