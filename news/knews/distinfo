@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:19:55 agc Exp $
+$NetBSD: distinfo,v 1.9 2011/01/15 19:16:00 tron Exp $
 
 SHA1 (knews-1.0b.1.tar.gz) = b56046036d4c6688439e6730b8ae2a2eade922db
 RMD160 (knews-1.0b.1.tar.gz) = c29cd8401bd802852f875d3c531f2f0f8805cc43
@@ -32,7 +32,7 @@ SHA1 (patch-az) = 1d91236b5f1dd59e54e9d8b02f31090abe70b67b
 SHA1 (patch-ba) = a46041cc02ec99379d1c7a69534ca4574a1d8b77
 SHA1 (patch-bb) = 05963335420741b8ce5658ad43cbfa83379fe289
 SHA1 (patch-bc) = 74b0c0ee543f3753886dc75ea7d32a61256eb5b5
-SHA1 (patch-bd) = bda85621f338cecd8796a42170bfa493bb0592f4
+SHA1 (patch-bd) = ed7df6088ef3bf837b4ea52e404030fa2108c399
 SHA1 (patch-be) = 3cf47af64e7865f3336b0549b78e3f56bbff2252
 SHA1 (patch-bf) = 5d51af81738c227de3ec6d23bbfe33c593410614
 SHA1 (patch-bg) = 84e4daf47ca111831661448c4411da4d9c803d27
