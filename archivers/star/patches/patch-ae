@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2011/01/15 17:46:01 tron Exp $
+
+Remove unused custom function "getline" which conflicts with getline(3)
+which is part of the POSIX standard.
+
+--- include/schily.h.orig	2002-12-24 18:28:01.000000000 +0000
++++ include/schily.h	2011-01-15 17:41:23.000000000 +0000
+@@ -183,7 +183,6 @@
+ extern	char	*findbytes __PR((const void *, int, char));
+ extern	int	findline __PR((const char *, char, const char *,
+ 							int, char **, int));
+-extern	int	getline __PR((char *, int));
+ extern	int	getstr __PR((char *, int));
+ extern	int	breakline __PR((char *, char, char **, int));
+ extern	int	getallargs __PR((int *, char * const**, const char *, ...));
