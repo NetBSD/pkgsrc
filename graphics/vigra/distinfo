@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/10/16 15:50:21 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/01/15 16:31:18 wiz Exp $
 
 SHA1 (vigra-1.7.0-src.tar.gz) = 31875646cbb1928d93c96fc4da4fda31772cf8f6
 RMD160 (vigra-1.7.0-src.tar.gz) = 496479bcf133c3352ffad146308b7496f2fa4d9b
 Size (vigra-1.7.0-src.tar.gz) = 26637626 bytes
-SHA1 (patch-ab) = 10a50856d690fc2ad41f14e9fe0817b162c11586
+SHA1 (patch-ab) = e9104d7804bfe51cd2abca29a6d4850f578cd5fc
