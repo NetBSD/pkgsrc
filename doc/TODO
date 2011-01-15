@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10016 2011/01/13 20:07:57 wiz Exp $
+$NetBSD: TODO,v 1.10017 2011/01/15 10:33:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -1243,7 +1243,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spcaview-20060501
 	o spim-7.4
 	o sqlitemanager-1.2.4
-	o squid-3.1.10
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o star-1.5.1
