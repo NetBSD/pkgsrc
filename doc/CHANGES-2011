@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.56 2011/01/15 10:33:20 adam Exp $
+$NetBSD: CHANGES-2011,v 1.57 2011/01/15 16:35:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/mediatomb to 0.12.1nb2 [tron 2011-01-14]
 	Updated devel/cmake to 2.8.3nb1 [wiz 2011-01-14]
 	Updated www/squid31 to 3.1.10 [adam 2011-01-14]
+	Updated time/ruby-tzinfo to 0.3.24 [taca 2011-01-15]
