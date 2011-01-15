@@ -12,3 +12,5 @@ sysutils/xentools3: improve NetBSD support
 sysutils/xentools33: improve NetBSD support
 Pullup ticket #3325 - requested by taca
 security/sudo: security update
+Pullup ticket #3324 - requested by obache
+archivers/star: build fix
