@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.36 2011/01/13 13:25:56 wiz Exp $
+# $NetBSD: license.mk,v 1.37 2011/01/16 13:13:14 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -169,7 +169,7 @@ _PKG_INSTALL_CONF?=	${PREFIX}/etc/pkg_install.conf
 .  if empty(LICENSE:MAND) && empty(LICENSE:MOR) && empty(LICENSE:M*[()]*)
 PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license condition: " \
     "    "${LICENSE:Q} \
-    "You can mark the license \`\`license'' as acceptable by adding" \
+    "You can mark the license \`\`${LICENSE}'' as acceptable by adding" \
     "    ACCEPTABLE_LICENSES+= ${LICENSE}" \
     "to ${_MAKE_CONF} or by adding" \
     "    ACCEPTABLE_LICENSES= ${LICENSE}" \
@@ -179,10 +179,12 @@ PKG_FAIL_REASON+= "The following command will show you the license text:" \
 .  else
 PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license condition: " \
     "    "${LICENSE:Q} \
-    "You can mark the license \`\`license'' as acceptable by adding" \
-    "    ACCEPTABLE_LICENSES+= license" \
+    "" \
+    "Check that you have accepted all necessary licenses." \
+    "You can mark a particular license \`\`foo'' as acceptable by adding" \
+    "    ACCEPTABLE_LICENSES+= foo" \
     "to ${_MAKE_CONF} or by adding" \
-    "    ACCEPTABLE_LICENSES= license" \
+    "    ACCEPTABLE_LICENSES= foo" \
     "to ${_PKG_INSTALL_CONF}."
 .  endif
 
