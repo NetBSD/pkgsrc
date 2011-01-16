@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.62 2011/01/16 10:00:02 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.63 2011/01/16 13:07:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -113,3 +113,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/pcre to 8.12 [adam 2011-01-15]
 	Updated comms/asterisk16 to 1.6.2.16 [jnemeth 2011-01-16]
 	Added textproc/fop version 1.0 [wiz 2011-01-16]
+	Updated net/jigdo to 0.7.3nb8 [wiz 2011-01-16]
