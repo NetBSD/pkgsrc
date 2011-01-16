@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10017 2011/01/15 10:33:20 adam Exp $
+$NetBSD: TODO,v 1.10018 2011/01/16 13:57:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -368,6 +368,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alsa-lib-1.0.23
 	o alsa-plugins-1.0.22
 	o amanda-3.1
+	o amarok-2.4.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.1
 	o angband-3.2
@@ -641,6 +642,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o freewais-sf-2.2.14
 	o frozen-bubble-2.2.0
 	o ftplibpp-2.0.2
+	o fuse-1.0.0.1
 	o fuse-archivemount-0.6.1
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2010.08.08
@@ -655,7 +657,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcc44-4.4.5
 	o gcin-1.5.5
 	o gcombust-0.1.55
-	o gcompris-9.0
+	o gcompris-9.5
 	o gcpio-2.10
 	o gdb-7.2
 	o gdeskcal-1.01
@@ -688,6 +690,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-2.30
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
+	o gnome-commander-1.2.8.10
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
@@ -709,6 +712,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnumeric110-1.10.12
+	o gnupg2-2.0.17
 	o gnuplot-4.4.0 [pkg/43771]
 	o gobject-introspection-0.10.1
 	o gogo-3.11p1
@@ -732,6 +736,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gssdp-0.9.1
 	o gthumb-2.12.2
 	o gtick-0.4.2
+	o gtk-doc-1.16
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.2
 	o gtkglarea-2.0.1
@@ -809,6 +814,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kaffeine-0.8.7
 	o kapooka-0.3
 	o kbibtex-0.2.2
+	o kchmviewer-5.3
 	o kdbg-2.2.2
 	o kde4-4.5.5
 	o kdrill-6.5
@@ -853,6 +859,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXi-1.4.0
 	o libXinerama-1.1.1
 	o libXmu-1.1.0
+	o libXp-1.0.1
 	o libXpm-3.5.9
 	o libXrandr-1.3.1
 	o libXres-1.0.5
@@ -865,6 +872,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.4
 	o libdockapp-0.6.1
 	o libdrm-2.4.23
+	o libev-4.03
 	o libextractor-0.6.2
 	o libflash-0.4.13
 	o libfontenc-1.1.0
@@ -884,7 +892,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmp3splt-0.5.8
 	o libnasl-2.3.1
 	o libnids-1.24
-	o libnotify-0.6.0
+	o libnotify-0.7.1
 	o libntlm-1.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libosip-3.5.0
@@ -952,7 +960,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-stories-0.9.13
 	o merb-test-unit-0.9.13
 	o mergeant-0.67
-	o merkaartor-0.17.0 [pkg/44318]
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o midori-0.2.9
@@ -1016,7 +1023,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-16.5
+	o nut-16.6
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1143,8 +1150,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o python-2.7.1
 	o python-3.1.2
 	o qbrew-0.3.9
-	o qlandkartegt-0.19.2 [pkg/44317]
-	o qlandkartegt-garmindev-0.3.4 [pkg/44316]
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qrencode-3.1.1
@@ -1319,6 +1324,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-3.07
 	o uriparser-0.7.5
 	o userppp-030706
+	o vala-0.11.4
 	o valgrind-3.6.0
 	o vera-1.17
 	o veusz-1.10
@@ -1344,7 +1350,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wcalc-2.4
 	o wdiff-0.6.5
 	o webmin-1.530
-	o weechat-0.3.3
+	o weechat-0.3.4
 	o weewm-0.01
 	o whohas-0.24
 	o windowlab-1.40
