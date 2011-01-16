@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.15 2011/01/16 10:38:44 wiz Exp $
+
+FIx build with png-1.5.
+
+--- common/libkipiplugins/tools/kpwriteimage.cpp.orig	2010-11-22 17:24:50.000000000 +0000
++++ common/libkipiplugins/tools/kpwriteimage.cpp
+@@ -399,7 +399,7 @@ bool KPWriteImage::write2PNG(const QStri
+     if (!d->iccProfile.isEmpty())
+     {
+         png_set_iCCP(png_ptr, info_ptr, (png_charp)"icc", PNG_COMPRESSION_TYPE_BASE,
+-                     d->iccProfile.data(), d->iccProfile.size());
++                     (png_bytep)d->iccProfile.data(), d->iccProfile.size());
+     }
+ 
+     // Write Software info.
