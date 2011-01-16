@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.24 2010/01/27 19:38:51 drochner Exp $
+$NetBSD: distinfo,v 1.25 2011/01/16 17:03:06 tnn Exp $
 
 SHA1 (dia-0.97.1.tar.gz) = eefeb10634a6a478ed5aa01297f3011eb183b9ca
 RMD160 (dia-0.97.1.tar.gz) = b191c91b7fa56802d5f5501818d5e24bde1539f7
 Size (dia-0.97.1.tar.gz) = 9136499 bytes
 SHA1 (patch-aa) = 110f2d4c12df73a0dbae31d5c82ecf8937ba11fa
+SHA1 (patch-ab) = 0843d7337627d2c30e5e78ccf79524de8fd283b9
 SHA1 (patch-be) = dab7626daefcd702b31f54d198311d9be921e1ff
 SHA1 (patch-ca) = 8737f3ff19244e2f87ffb571da21159bc2248648
 SHA1 (patch-cb) = 02210139cbf38e91a61ad1e090f63f5635bb26ef
