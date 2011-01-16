@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.3 2011/01/16 18:18:19 tnn Exp $
+
+--- src/extension/internal/pdfinput/svg-builder.cpp.orig	2010-07-13 03:48:40.000000000 +0000
++++ src/extension/internal/pdfinput/svg-builder.cpp
+@@ -1440,7 +1440,7 @@ Inkscape::XML::Node *SvgBuilder::_create
+         return NULL;
+     }
+     // Set error handler
+-    if (setjmp(png_ptr->jmpbuf)) {
++    if (setjmp(png_jmpbuf(png_ptr))) {
+         png_destroy_write_struct(&png_ptr, &info_ptr);
+         return NULL;
+     }
