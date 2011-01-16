@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2011/01/16 15:07:16 wiz Exp $
+
+Fix to build with png-1.5.
+
+--- pdftexdir/writeimg.c.orig	2010-05-02 13:21:48.000000000 +0000
++++ pdftexdir/writeimg.c
+@@ -137,7 +137,7 @@ integer imagecolordepth(integer img)
+ {
+     switch (img_type(img)) {
+     case IMAGE_TYPE_PNG:
+-        return png_info(img)->bit_depth;
++        return png_get_bit_depth(png_ptr(img), png_info(img));
+     case IMAGE_TYPE_JPG:
+         return jpg_ptr(img)->bits_per_component;
+     case IMAGE_TYPE_JBIG2:
+@@ -389,7 +389,7 @@ void deleteimage(integer img)
+         epdf_delete();
+         break;
+     case IMAGE_TYPE_PNG:
+-        xfclose((FILE *) png_ptr(img)->io_ptr, cur_file_name);
++        xfclose((FILE *) png_get_io_ptr(png_ptr(img)), cur_file_name);
+         png_destroy_read_struct(&(png_ptr(img)), &(png_info(img)), NULL);
+         break;
+     case IMAGE_TYPE_JPG:

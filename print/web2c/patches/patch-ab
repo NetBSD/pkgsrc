@@ -1,0 +1,98 @@
+$NetBSD: patch-ab,v 1.3 2011/01/16 15:07:16 wiz Exp $
+
+Incomplete fix to build with png-1.5.
+
+--- pdftexdir/writepng.c.orig	2010-06-22 15:35:42.000000000 +0000
++++ pdftexdir/writepng.c
+@@ -33,7 +33,6 @@ Franklin Street, Fifth Floor, Boston, MA
+ #define png_height(N)		png_get_image_height(png_ptr(N), png_info(N))
+ #define png_interlace_type(N)	png_get_interlace_type(png_ptr(N), png_info(N))
+ #define png_io_ptr(N)		png_get_io_ptr(png_ptr(N))
+-#define png_num_palette(N)	png_info(N)->num_palette
+ #define png_palette(N)		png_info(N)->palette
+ #define png_rowbytes(N)		png_get_rowbytes(png_ptr(N), png_info(N))
+ #define png_transformations(N)	png_ptr(N)->transformations
+@@ -50,7 +49,6 @@ Franklin Street, Fifth Floor, Boston, MA
+ #define png_height(N)		png_info(N)->height
+ #define png_interlace_type(N)	png_info(N)->interlace_type
+ #define png_io_ptr(N)		png_ptr(N)->io_ptr
+-#define png_num_palette(N)	png_info(N)->num_palette
+ #define png_palette(N)		png_info(N)->palette
+ #define png_rowbytes(N)		png_info(N)->rowbytes
+ #define png_transformations(N)	png_ptr(N)->transformations
+@@ -201,14 +199,18 @@ static void write_png_palette(integer im
+     int i, j, k, l;
+     png_bytep row, r, *rows;
+     integer palette_objnum = 0;
++    png_colorp palette;
++    int num_palette;
++
++    png_get_PLTE(png_ptr(img), png_info(img), &palette, &num_palette);
++
+     pdfcreateobj(0, 0);
+     palette_objnum = objptr;
+     if (img_colorspace_ref(img) != 0) {
+         pdf_printf("%i 0 R\n", (int) img_colorspace_ref(img));
+     } else {
+         pdf_printf("[/Indexed /DeviceRGB %i %i 0 R]\n",
+-                   (int) (png_num_palette(img) - 1),
+-                   (int) palette_objnum);
++                   num_palette -1, (int) palette_objnum);
+     }
+     pdfbeginstream();
+     if (png_interlace_type(img) == PNG_INTERLACE_NONE) {
+@@ -230,11 +232,11 @@ static void write_png_palette(integer im
+     if (palette_objnum > 0) {
+         pdfbegindict(palette_objnum, 0);
+         pdfbeginstream();
+-        for (i = 0; (unsigned) i < png_num_palette(img); i++) {
++        for (i = 0; (unsigned) i < num_palette; i++) {
+             pdfroom(3);
+-            pdfbuf[pdfptr++] = png_palette(img)[i].red;
+-            pdfbuf[pdfptr++] = png_palette(img)[i].green;
+-            pdfbuf[pdfptr++] = png_palette(img)[i].blue;
++            pdfbuf[pdfptr++] = palette[i].red;
++            pdfbuf[pdfptr++] = palette[i].green;
++            pdfbuf[pdfptr++] = palette[i].blue;
+         }
+         pdfendstream();
+     }
+@@ -553,7 +555,12 @@ void write_png(integer img)
+     double gamma, checked_gamma;
+     int i;
+     integer palette_objnum = 0;
++    png_colorp palette;
++    int num_palette;
+     last_png_needs_page_group = false;
++
++    png_get_PLTE(png_ptr(img), png_info(img), &palette, &num_palette);
++
+     if (fixedpdfminorversion < 5)
+         fixedimagehicolor = 0;
+ 
+@@ -590,8 +597,7 @@ void write_png(integer img)
+                 pdfcreateobj(0, 0);
+                 palette_objnum = objptr;
+                 pdf_printf("[/Indexed /DeviceRGB %i %i 0 R]\n",
+-                           (int) (png_num_palette(img) - 1),
+-                           (int) palette_objnum);
++                           num_palette - 1, (int) palette_objnum);
+                 break;
+             case PNG_COLOR_TYPE_GRAY:
+                 pdf_puts("/DeviceGray\n");
+@@ -605,11 +611,11 @@ void write_png(integer img)
+         if (palette_objnum > 0) {
+             pdfbegindict(palette_objnum, 0);
+             pdfbeginstream();
+-            for (i = 0; i < png_num_palette(img); i++) {
++            for (i = 0; i < num_palette; i++) {
+                 pdfroom(3);
+-                pdfbuf[pdfptr++] = png_palette(img)[i].red;
+-                pdfbuf[pdfptr++] = png_palette(img)[i].green;
+-                pdfbuf[pdfptr++] = png_palette(img)[i].blue;
++                pdfbuf[pdfptr++] = palette[i].red;
++                pdfbuf[pdfptr++] = palette[i].green;
++                pdfbuf[pdfptr++] = palette[i].blue;
+             }
+             pdfendstream();
+         }
