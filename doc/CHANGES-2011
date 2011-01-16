@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.64 2011/01/16 17:52:59 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.65 2011/01/16 22:57:24 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -115,3 +115,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/fop version 1.0 [wiz 2011-01-16]
 	Updated net/jigdo to 0.7.3nb8 [wiz 2011-01-16]
 	Updated comms/asterisk18 to 1.8.2 [jnemeth 2011-01-16]
+	Updated pkgtools/pkgin to 0.3.3.2 [imil 2011-01-16]
