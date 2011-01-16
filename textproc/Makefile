@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2010/12/19 02:14:34 taca Exp $
+# $NetBSD: Makefile,v 1.567 2011/01/16 09:59:50 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -84,6 +84,7 @@ SUBDIR+=	expat
 SUBDIR+=	expatobjc
 SUBDIR+=	ezxml
 SUBDIR+=	flyspell
+SUBDIR+=	fop
 SUBDIR+=	freepwing
 SUBDIR+=	gdome2
 SUBDIR+=	glimpse
