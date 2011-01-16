@@ -1,0 +1,5 @@
+FOP is a print formatter driven by XSL formatting objects (XSL-FO).
+It is a Java application that reads a formatting object (FO) tree
+and renders it into a specified output.
+Many output formats are supported, including PDF, PS, PCL, AFP, XML,
+Print, AWT, Tiff, PNG, RTF, TXT. The primary output target is PDF.
