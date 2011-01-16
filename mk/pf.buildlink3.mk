@@ -1,4 +1,4 @@
-# $NetBSD: pf.buildlink3.mk,v 1.1 2008/06/26 20:58:48 peter Exp $
+# $NetBSD: pf.buildlink3.mk,v 1.2 2011/01/16 02:18:36 obache Exp $
 #
 # Makefile fragment for packages using pf.
 #
@@ -37,6 +37,16 @@ PFCTL?=		/sbin/pfctl
 PF_VERSION=	3.0
 
 .if !empty(PFVAR_H)
+# OpenBSD 4.7: pf_state_rm_src_node added
+_PF_4_7!=	${GREP} -c pf_state_rm_src_node ${PFVAR_H} || ${TRUE}
+# OpenBSD 4.6: pf_normalize_mss added
+_PF_4_6!=	${GREP} -c pf_normalize_mss ${PFVAR_H} || ${TRUE}
+# OpenBSD 4.5: pf_send_deferred_syn added
+_PF_4_5!=	${GREP} -c pf_send_deferred_syn ${PFVAR_H} || ${TRUE}
+# OpenBSD 4.4: pf_match_tag added
+_PF_4_4!=	${GREP} -c pf_match_tag ${PFVAR_H} || ${TRUE}
+# OpenBSD 4.3: pf_match_addr_range added
+_PF_4_3!=	${GREP} -c pf_match_addr_range ${PFVAR_H} || ${TRUE}
 # OpenBSD 4.2: pf_statelist added
 _PF_4_2!=	${GREP} -c pf_statelist ${PFVAR_H} || ${TRUE}
 # OpenBSD 4.1: PF_OSFP_INET6 added
@@ -50,7 +60,17 @@ _PF_3_6!=	${GREP} -c pf_cksum_fixup ${PFVAR_H} || ${TRUE}
 # OpenBSD 3.5: pfi_lookup_if added
 _PF_3_5!=	${GREP} -c pfi_lookup_if ${PFVAR_H} || ${TRUE}
 
-.    if ${_PF_4_2} != "0"
+.    if ${_PF_4_7} != "0"
+PF_VERSION=	4.7
+.    elif ${_PF_4_6} != "0"
+PF_VERSION=	4.6
+.    elif ${_PF_4_5} != "0"
+PF_VERSION=	4.5
+.    elif ${_PF_4_4} != "0"
+PF_VERSION=	4.4
+.    elif ${_PF_4_3} != "0"
+PF_VERSION=	4.3
+.    elif ${_PF_4_2} != "0"
 PF_VERSION=	4.2
 .    elif ${_PF_4_1} != "0"
 PF_VERSION=	4.1
