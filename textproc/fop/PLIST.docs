@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.docs,v 1.1.1.1 2011/01/16 09:56:01 wiz Exp $
+@comment $NetBSD: PLIST.docs,v 1.2 2011/01/16 09:58:37 wiz Exp $
 share/java/fop/docs/.htaccess
 share/java/fop/docs/skin/CommonMessages_en_US.xml
 share/java/fop/docs/skin/CommonMessages_fr.xml
