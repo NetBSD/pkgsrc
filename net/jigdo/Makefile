@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2011/01/13 13:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/01/16 13:07:19 wiz Exp $
 
 DISTNAME=		jigdo-0.7.3
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net
 MASTER_SITES=		http://atterer.net/jigdo/
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://atterer.net/jigdo/
 COMMENT=		Tool to ease downloading of large files from the Internet
+
+DEPENDS+=		wget-[0-9]*:../../net/wget
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
