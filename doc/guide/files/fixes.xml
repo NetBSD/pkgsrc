@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.102 2010/01/05 08:55:32 adam Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.103 2011/01/16 08:40:28 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1048,6 +1048,13 @@ pre-configure:
       implementation, <quote>1.4</quote> insists on versions 1.4 or
       above, and <quote>1.5</quote> only accepts versions 1.5 or
       above. This variable is not set by default.</para></listitem>
+
+      <listitem><para><varname>PKG_JAVA_HOME</varname> is
+      automatically set to the runtime location of the used Java
+      implementation dependency. It may be used to set
+      <varname>JAVA_HOME</varname> to a good value if the program
+      needs this variable to be defined.
+      </para></listitem>
       <!-- XXX: describe PKG_JVM_DEFAULT and PKG_JVMS_ACCEPTED, but
 	   not here -->
     </itemizedlist>
