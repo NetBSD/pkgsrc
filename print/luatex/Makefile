@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.8 2011/01/13 13:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2011/01/17 10:33:43 wiz Exp $
 
-DISTNAME=	luatex-beta-0.63.0
-PKGNAME=	${DISTNAME:S/-beta//}
-PKGREVISION=	1
+DISTNAME=	luatex-beta-0.65.0-source
+PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
 CATEGORIES=	print
-MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/382/1568/
+MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/386/1704/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
 COMMENT=	Extended version of pdfTeX using Lua
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=no
 
 CONFLICTS+=	web2c<=7.5.7nb3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/${DISTNAME}/source
+USE_TOOLS+=	gmake pkg-config
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}/source
 
 CONFIGURE_ARGS+=--enable-cxx-runtime-hack \
 		--disable-afm2pl    \
@@ -93,15 +94,24 @@ CONFIGURE_ARGS+=--with-system-libpng \
 CONFIGURE_ARGS+=--with-system-zlib \
 		--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_DIRS+=. ./texk/web2c
+CONFIGURE_ARGS+=--with-system-zziplib \
+		--with-zziplib-include=${BUILDLINK_PREFIX.zziplib}/include \
+		--with-zziplib-libdir=${BUILDLINK_PREFIX.zziplib}/lib
+CONFIGURE_ARGS+=--with-system-poppler \
+		--with-poppler-include=${BUILDLINK_PREFIX.poppler}/include \
+		--with-poppler-libdir=${BUILDLINK_PREFIX.poppler}/lib
+CONFIGURE_DIRS+=. texk/web2c
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
 CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
 
 INSTALLATION_DIRS+=	bin
 
+.include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
 
 post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
