@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:30 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2011/01/17 16:14:58 dholland Exp $
 
 DISTNAME=		gofish-1.1
 PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gofish/}
 
-MAINTAINER=		emil@math.su.se
+MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://gofish.sourceforge.net/
 COMMENT=		Gopher server
 
