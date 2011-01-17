@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/02/24 19:25:40 drochner Exp $
+$NetBSD: distinfo,v 1.3 2011/01/17 14:14:52 drochner Exp $
 
-SHA1 (foomatic-filters-4.0.4.tar.gz) = d0b335773f50c1123254b93bb0d8ef7511af2d50
-RMD160 (foomatic-filters-4.0.4.tar.gz) = 3b652288c0bd7a04600cb91fb60c988938734278
-Size (foomatic-filters-4.0.4.tar.gz) = 241279 bytes
+SHA1 (foomatic-filters-4.0.6.tar.gz) = 5ebeb6fbf856433053bb5dc8d6a2fde824b88efd
+RMD160 (foomatic-filters-4.0.6.tar.gz) = a218d8d279cb7256194b11323ed823095f65e152
+Size (foomatic-filters-4.0.6.tar.gz) = 244365 bytes
 SHA1 (patch-ac) = 5013be198bca54423d520382bf686e9c6280dc43
 SHA1 (patch-ad) = 40f620a2f26d0872f87a2e332dd45853634ca5dc
