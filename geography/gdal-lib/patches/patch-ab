@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.6 2011/01/17 09:14:15 wiz Exp $
+
+Fix build with png-1.5.
+
+--- frmts/png/pngdataset.cpp.orig	2010-11-07 18:28:47.000000000 +0000
++++ frmts/png/pngdataset.cpp
+@@ -1296,7 +1296,7 @@ png_vsi_read_data(png_structp png_ptr, p
+     * instead of an int, which is what fread() actually returns.
+     */
+    check = (png_size_t)VSIFReadL(data, (png_size_t)1, length,
+-                                 (png_FILE_p)png_ptr->io_ptr);
++                                 (png_FILE_p)png_get_io_ptr(png_ptr));
+ 
+    if (check != length)
+       png_error(png_ptr, "Read Error");
+@@ -1311,7 +1311,7 @@ png_vsi_write_data(png_structp png_ptr, 
+ {
+    png_uint_32 check;
+ 
+-   check = VSIFWriteL(data, 1, length, (png_FILE_p)(png_ptr->io_ptr));
++   check = VSIFWriteL(data, 1, length, (png_FILE_p)(png_get_io_ptr(png_ptr)));
+ 
+    if (check != length)
+       png_error(png_ptr, "Write Error");
+@@ -1322,7 +1322,7 @@ png_vsi_write_data(png_structp png_ptr, 
+ /************************************************************************/
+ static void png_vsi_flush(png_structp png_ptr)
+ {
+-    VSIFFlushL( (png_FILE_p)(png_ptr->io_ptr) );
++    VSIFFlushL( (png_FILE_p)(png_get_io_ptr(png_ptr)) );
+ }
+ 
+ /************************************************************************/
+@@ -1338,10 +1338,13 @@ static void png_gdal_error( png_structp 
+     // libpng is generally not built as C++ and so won't honour unwind
+     // semantics.  Ugg. 
+ 
+-    jmp_buf* psSetJmpContext = (jmp_buf*) png_ptr->error_ptr;
+-    if (psSetJmpContext)
++    if (png_jmpbuf(png_ptr))
+     {
+-        longjmp( *psSetJmpContext, 1 );
++#if (PNG_LIBPNG_VER < 10500)
++        longjmp( (jmp_buf*) png_ptr->error_ptr, 1 );
++#else
++        png_longjmp (png_ptr, 1);
++#endif
+     }
+ }
+ 
