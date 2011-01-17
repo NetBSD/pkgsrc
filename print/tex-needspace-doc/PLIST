@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/17 21:35:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/17 23:37:36 minskim Exp $
+share/texmf-dist/doc/latex/needspace/README
 share/texmf-dist/doc/latex/needspace/needspace.pdf
-share/texmf-dist/doc/latex/needspace/needspace.tex
