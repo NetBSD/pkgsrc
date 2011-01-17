@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.66 2011/01/17 09:14:08 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.67 2011/01/17 10:33:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -117,3 +117,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/asterisk18 to 1.8.2 [jnemeth 2011-01-16]
 	Updated pkgtools/pkgin to 0.3.3.2 [imil 2011-01-16]
 	Updated pkgtools/pkglint to 4.95 [wiz 2011-01-17]
+	Updated print/luatex to 0.65.0 [wiz 2011-01-17]
