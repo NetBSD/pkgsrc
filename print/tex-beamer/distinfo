@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/09 21:39:02 markd Exp $
+$NetBSD: distinfo,v 1.2 2011/01/17 22:41:25 minskim Exp $
 
-SHA1 (tex-beamer-3.07/beamer.tar.xz) = d96d05df078dfc5bbd69c1d7ac151808d58e6595
-RMD160 (tex-beamer-3.07/beamer.tar.xz) = 052fe23da0a225a0cf68c65a21b430a153df525a
-Size (tex-beamer-3.07/beamer.tar.xz) = 94756 bytes
+SHA1 (tex-beamer-19443/beamer.tar.xz) = caed365df29f1955966f1d9faecd5fe65cb2bc4f
+RMD160 (tex-beamer-19443/beamer.tar.xz) = 46da7c9cd9e50caecb6f6ceccf558f508e970816
+Size (tex-beamer-19443/beamer.tar.xz) = 105176 bytes
