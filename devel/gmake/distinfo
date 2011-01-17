@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2010/08/31 08:23:15 taca Exp $
+$NetBSD: distinfo,v 1.20 2011/01/17 14:17:29 is Exp $
 
 SHA1 (make-3.82.tar.bz2) = b8a8a99e4cb636a213aad3816dda827a92b9bbed
 RMD160 (make-3.82.tar.bz2) = e3d1f7019549553b9fc7a88884c9b85d25a60d21
 Size (make-3.82.tar.bz2) = 1242186 bytes
-SHA1 (patch-aa) = 978356bb287b1d6c500a05c82297a5ddd8f1f444
+SHA1 (patch-aa) = 38d14dd12346fece8489f41c327d1736544c16fd
 SHA1 (patch-ac) = de18956fde66fa3fc61a991bb3e6724d9c5b1eac
 SHA1 (patch-af) = aafc56a38b07ad6dc1bebb602beeb8c31cbb8c49
 SHA1 (patch-ah) = 0805ae7b6001283d1cc04297b762322684c113a2
