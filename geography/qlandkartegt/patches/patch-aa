@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2011/01/13 22:55:20 jkunz Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/17 11:22:43 drochner Exp $
 
 --- cmake/Modules/DefineInstallationPaths.cmake.orig	2010-12-27 12:52:18.000000000 +0000
 +++ cmake/Modules/DefineInstallationPaths.cmake
-@@ -101,7 +101,7 @@ if (UNIX)
-     FORCE
-   )
+@@ -103,7 +103,6 @@ if (UNIX)
    SET(MAN_INSTALL_DIR
--    "${SHARE_INSTALL_PREFIX}/man"
-+    "${CMAKE_INSTALL_PREFIX}/man"
+     "${SHARE_INSTALL_PREFIX}/man"
      CACHE PATH "The ${_APPLICATION_NAME} man install dir (default prefix/man)"
-     FORCE
+-    FORCE
    )
+   SET(INFO_INSTALL_DIR
+     "${SHARE_INSTALL_PREFIX}/info"
