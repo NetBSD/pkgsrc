@@ -1,78 +1,53 @@
-$NetBSD: patch-aa,v 1.10 2010/05/07 09:34:43 drochner Exp $
+$NetBSD: patch-aa,v 1.11 2011/01/17 16:46:42 drochner Exp $
 
---- configure.orig	2009-09-20 20:45:09.000000000 +0000
-+++ configure
-@@ -117,7 +117,7 @@ for opt do
-             LDFLAGS="$LDFLAGS ${opt#--extra-ldflags=}"
-             ;;
-         --enable-pthread)
--            pthread="auto" # can't skip detection, since it differs by OS
-+            pthread="yes"
-             ;;
-         --disable-pthread)
-             pthread="no"
-@@ -137,7 +137,7 @@ for opt do
-             shared="yes"
-             ;;
-         --enable-visualize)
--            LDFLAGS="$LDFLAGS -L/usr/X11R6/lib -lX11"
-+            LDFLAGS="$LDFLAGS -lX11"
-             CFLAGS="$CFLAGS -DVISUALIZE=1"
-             vis="yes"
-             ;;
-@@ -187,6 +187,10 @@ case $host_os in
-     SYS="FREEBSD"
-     LDFLAGS="$LDFLAGS -lm"
-     ;;
-+  dragonfly*)
-+    SYS="DRAGONFLY"
-+    LDFLAGS="$LDFLAGS -lm"
-+    ;;
-   kfreebsd*-gnu)
-     SYS="FREEBSD"
-     CFLAGS="$CFLAGS -DHAVE_MALLOC_H"
-@@ -250,7 +254,7 @@ case $host_cpu in
-       ASFLAGS="$ASFLAGS -f elf"
-     fi
-     ;;
--  x86_64)
-+  x86_64|amd64)
-     ARCH="X86_64"
-     AS="yasm"
-     if [ "$SYS" = MACOSX ];then
-@@ -264,11 +268,11 @@ case $host_cpu in
-     fi
-     ;;
-   powerpc|powerpc64)
--    ARCH="PPC"
-     if [ $SYS = MACOSX ]
-     then
--      ALTIVECFLAGS="$ALTIVECFLAGS -faltivec -fastf -mcpu=G4"
-+      ARCH="POWERPC"
-     else
-+      ARCH="PPC"
-       ALTIVECFLAGS="$ALTIVECFLAGS -maltivec -mabi=altivec -DHAVE_ALTIVEC_H"
-     fi
-     ;;
-@@ -354,7 +358,7 @@ grep -q BIGE conftest.o && CFLAGS="$CFLA
- 
- # autodetect options that weren't forced nor disabled
+--- configure.orig	2011-01-02 06:45:05.000000000 +0900
++++ configure	2011-01-09 21:33:08.000000000 +0900
+@@ -306,6 +306,10 @@
+         SYS="FREEBSD"
+         LDFLAGS="$LDFLAGS -lm"
+         ;;
++    dragonfly*)
++        SYS="DRAGONFLY"
++        LDFLAGS="$LDFLAGS -lm"
++        ;;
+     kfreebsd*-gnu)
+         SYS="FREEBSD"
+         define HAVE_MALLOC_H
+@@ -369,7 +373,7 @@
+             ASFLAGS="$ASFLAGS -f elf"
+         fi
+         ;;
+-    x86_64)
++    x86_64|amd64)
+         ARCH="X86_64"
+         AS="yasm"
+         if [ "$SYS" = MACOSX ]; then
+@@ -386,13 +390,14 @@
+         fi
+         ;;
+     powerpc|powerpc64)
+-        ARCH="PPC"
+         if [ $asm = auto ] ; then
+             define HAVE_ALTIVEC
+             AS="${AS-${cross_prefix}gcc}"
+             if [ $SYS = MACOSX ] ; then
++	        ARCH="POWERPC"
+                 CFLAGS="$CFLAGS -faltivec -fastf -mcpu=G4"
+             else
++	        ARCH="PPC"
+                 CFLAGS="$CFLAGS -maltivec -mabi=altivec"
+                 define HAVE_ALTIVEC_H
+             fi
+@@ -522,7 +527,7 @@
+ # pthread-win32 is lgpl, prevent its use if --disable-gpl is specified and targeting windows
+ [ "$SYS" = "MINGW" -a "$gpl" = "no" -a "$thread" = "auto" ] && thread="win32"
  
 -libpthread=""
 +libpthread="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
- if test "$pthread" = "auto" ; then
-     pthread="no"
+ if [ "$thread" = "auto" ]; then
+     thread="no"
      case $SYS in
-@@ -387,7 +391,7 @@ if test "$pthread" = "auto" ; then
-     esac
- fi
- if test "$pthread" = "yes" ; then
--    CFLAGS="$CFLAGS -DHAVE_PTHREAD"
-+    CFLAGS="$CFLAGS -DHAVE_PTHREAD $PTHREAD_CFLAGS"
-     LDFLAGS="$LDFLAGS $libpthread"
- fi
- 
-@@ -424,7 +428,8 @@ if [ "$avis_input" = "yes" ] ; then
+@@ -712,7 +717,8 @@
  fi
  
  if [ "$pic" = "yes" ] ; then
