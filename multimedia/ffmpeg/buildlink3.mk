@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/06/12 16:39:49 ahoka Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/01/17 16:51:05 drochner Exp $
 
 BUILDLINK_TREE+=	ffmpeg
 
 .if !defined(FFMPEG_BUILDLINK3_MK)
 FFMPEG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=20090611
-BUILDLINK_ABI_DEPENDS.ffmpeg?=	ffmpeg>=20090611
+BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=0.6.1
+BUILDLINK_ABI_DEPENDS.ffmpeg?=	ffmpeg>=0.6.1
 BUILDLINK_PKGSRCDIR.ffmpeg?=	../../multimedia/ffmpeg
 
 pkgbase := ffmpeg
