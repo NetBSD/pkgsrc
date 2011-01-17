@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/01/13 22:55:20 jkunz Exp $
+# $NetBSD: Makefile,v 1.9 2011/01/17 11:22:43 drochner Exp $
 #
 
 DISTNAME=	qlandkartegt-1.0.0
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PREFIX}/${PKGMANDIR}
 
 DEPENDS+=	qlandkartegt-garmindev>=0.3:../../geography/qlandkartegt-garmindev
 
@@ -24,5 +25,6 @@ DEPENDS+=	qlandkartegt-garmindev>=0.3:../../geography/qlandkartegt-garmindev
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
