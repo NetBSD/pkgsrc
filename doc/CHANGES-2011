@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.70 2011/01/17 22:41:59 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.71 2011/01/17 23:38:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -127,3 +127,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/tor to 0.2.1.29 [drochner 2011-01-17]
 	Updated print/tex-beamer to 3.10 [minskim 2011-01-17]
 	Updated print/tex-beamer-doc to 3.10 [minskim 2011-01-17]
+	Updated print/tex-needspace to 1.3c [minskim 2011-01-17]
+	Updated print/tex-needspace-doc to 1.3c [minskim 2011-01-17]
