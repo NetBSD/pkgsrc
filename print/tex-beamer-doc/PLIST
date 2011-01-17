@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:09:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/17 22:41:25 minskim Exp $
 share/texmf-dist/doc/latex/beamer/AUTHORS
 share/texmf-dist/doc/latex/beamer/ChangeLog
 share/texmf-dist/doc/latex/beamer/FILES
@@ -9,6 +9,7 @@ share/texmf-dist/doc/latex/beamer/doc/Makefile
 share/texmf-dist/doc/latex/beamer/doc/beamercolorthemeexample.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerfontthemeexample.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerinnerthemeexample.tex
+share/texmf-dist/doc/latex/beamer/doc/beamerlogo.pdf
 share/texmf-dist/doc/latex/beamer/doc/beamerouterthemeexample.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerthemeexample.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerthemeexamplebase.tex
@@ -33,7 +34,8 @@ share/texmf-dist/doc/latex/beamer/doc/beamerug-notes.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerug-overlays.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerug-solutions.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerug-themes.tex
-share/texmf-dist/doc/latex/beamer/doc/beamerug-transparancies.tex
+share/texmf-dist/doc/latex/beamer/doc/beamerug-translator.tex
+share/texmf-dist/doc/latex/beamer/doc/beamerug-transparencies.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerug-tricks.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerug-tutorial.tex
 share/texmf-dist/doc/latex/beamer/doc/beamerug-twoscreens.tex
@@ -41,14 +43,11 @@ share/texmf-dist/doc/latex/beamer/doc/beamerug-workflow.tex
 share/texmf-dist/doc/latex/beamer/doc/beameruserguide.pdf
 share/texmf-dist/doc/latex/beamer/doc/beameruserguide.tex
 share/texmf-dist/doc/latex/beamer/doc/licenses/LICENSE
-share/texmf-dist/doc/latex/beamer/doc/licenses/gnu-free-documentation-license-1.2.txt
-share/texmf-dist/doc/latex/beamer/doc/licenses/gnu-public-license-2.txt
-share/texmf-dist/doc/latex/beamer/doc/licenses/latex-project-public-license-1.3c.txt
-share/texmf-dist/doc/latex/beamer/doc/licenses/manifest-code.txt
-share/texmf-dist/doc/latex/beamer/doc/licenses/manifest-documentation.txt
-share/texmf-dist/doc/latex/beamer/examples/a-conference-talk/beamerexample-conference-talk.pdf
+share/texmf-dist/doc/latex/beamer/doc/themeexamples/beamerthemeexample.tex
+share/texmf-dist/doc/latex/beamer/doc/themeexamples/beamerthememakeexamples.sh
+share/texmf-dist/doc/latex/beamer/emacs/beamer.el
+share/texmf-dist/doc/latex/beamer/examples/Makefile
 share/texmf-dist/doc/latex/beamer/examples/a-conference-talk/beamerexample-conference-talk.tex
-share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-beamer-version.pdf
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-beamer-version.tex
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-body.tex
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-logo.pdf
@@ -58,9 +57,11 @@ share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-pic3.
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-pic4.jpg
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-pic5.jpg
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-pic6.jpg
-share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-print-version.pdf
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-print-version.tex
 share/texmf-dist/doc/latex/beamer/examples/a-lecture/beamerexample-lecture-style.tex
+share/texmf-dist/doc/latex/beamer/examples/beamerexample-conference-talk.pdf
+share/texmf-dist/doc/latex/beamer/examples/beamerexample-lecture-beamer-version.pdf
+share/texmf-dist/doc/latex/beamer/examples/beamerexample-lecture-print-version.pdf
 share/texmf-dist/doc/latex/beamer/examples/lyx-based-presentation/beamerexample-lyx.lyx
 share/texmf-dist/doc/latex/beamer/solutions/conference-talks/conference-ornate-20min.de.lyx
 share/texmf-dist/doc/latex/beamer/solutions/conference-talks/conference-ornate-20min.de.tex
