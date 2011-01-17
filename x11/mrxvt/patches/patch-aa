@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2011/01/17 21:28:09 tnn Exp $
+
+--- src/logging.c.orig	2008-02-17 22:04:50.000000000 +0000
++++ src/logging.c
+@@ -105,7 +105,7 @@ rxvt_makeutent(rxvt_t *r, int page, cons
+     else if (sscanf(pty, "pts/%d", &i) == 1)
+ 	sprintf(ut_id, "vt%02x", (i & 0xff));	/* sysv naming */
+ #endif
+-    else if (STRNCMP(pty, "pty", 3) && STRNCMP(pty, "tty", 3)) {
++    else if (STRNCMP(pty, "pty", 3) && STRNCMP(pty, "tty", 3) && STRNCMP(pty, "pts", 3)) {
+ 	rxvt_msg (DBG_ERROR, DBG_LOGGING, "can't parse tty name \"%s\"", pty);
+ 	return;
+     }
