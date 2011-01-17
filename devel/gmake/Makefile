@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2010/08/31 07:02:48 taca Exp $
+# $NetBSD: Makefile,v 1.75 2011/01/17 12:53:23 is Exp $
 
 DISTNAME=	make-3.82
 PKGNAME=	g${DISTNAME}
@@ -59,5 +59,7 @@ post-install:
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
 	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${DESTDIR}${PREFIX}/bin/gmake
 .endif
+
+USE_TOOLS+=perl
 
 .include "../../mk/bsd.pkg.mk"
