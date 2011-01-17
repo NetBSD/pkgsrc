@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/17 21:35:25 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/01/17 23:37:36 minskim Exp $
 
-SHA1 (tex-needspace-17999/needspace.doc.tar.xz) = d0275729d4941ae7c9fc7957b08735677f61de79
-RMD160 (tex-needspace-17999/needspace.doc.tar.xz) = 2b72084ecbbc594a740c50322407aac521265407
-Size (tex-needspace-17999/needspace.doc.tar.xz) = 266376 bytes
+SHA1 (tex-needspace-19684/needspace.doc.tar.xz) = 4a5e54b9cfa650755d32abefb005fd288f0f19b6
+RMD160 (tex-needspace-19684/needspace.doc.tar.xz) = a079790e35eb96c09bf32374d0dc8df87cd25a9e
+Size (tex-needspace-19684/needspace.doc.tar.xz) = 138380 bytes
