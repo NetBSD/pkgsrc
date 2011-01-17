@@ -1,16 +1,16 @@
-# $NetBSD: Makefile.common,v 1.7 2010/09/05 22:55:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2011/01/17 16:51:04 drochner Exp $
 # used by multimedia/ffplay/Makefile
 # used by multimedia/ffmpeg/Makefile
 
 DISTNAME=	ffmpeg-${DISTVERSION:S/-//g}
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/ahoka/dist/ \
+MASTER_SITES=	http://www.ffmpeg.org/releases/ \
+		ftp://ftp.NetBSD.org/pub/NetBSD/misc/ahoka/dist/ \
 		http://irkmaffia.com/~ahoka/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
-DISTVERSION=	2009-06-11
+DISTVERSION=	0.6.1
 PREV_PKGPATH=	multimedia/ffmpeg-devel
-WRKSRC=		${WRKDIR}/ffmpeg-export-${DISTVERSION}
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg/patches
 
 HAS_CONFIGURE=	YES
@@ -48,21 +48,25 @@ MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q}
 # LOCALBASE=${LOCALBASE:Q}
 
 # Let's not put garbage into /tmp
-CONFIGURE_ENV+=		TMPDIR=${WRKSRC:Q}/tmp
+CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
-			--cc=${CC:Q} \
-			--prefix=${PREFIX:Q} \
-			--disable-debug \
-			--disable-stripping \
-			--enable-shared \
-			--enable-pthreads \
-			--enable-gpl
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--cc=${CC:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-optimizations
+CONFIGURE_ARGS+=	--disable-stripping
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-pthreads
+CONFIGURE_ARGS+=	--enable-gpl
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-amd3dnow --disable-amd3dnowext
-CONFIGURE_ARGS+=	--disable-mmx --disable-mmx2
-CONFIGURE_ARGS+=	--disable-sse --disable-ssse3
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-amd3dnow
+CONFIGURE_ARGS+=	--disable-amd3dnowext
+CONFIGURE_ARGS+=	--disable-mmx
+CONFIGURE_ARGS+=	--disable-mmx2
+CONFIGURE_ARGS+=	--disable-sse
+CONFIGURE_ARGS+=	--disable-ssse3
 .else
 CONFIGURE_ARGS+=	--enable-runtime-cpudetect
 .endif

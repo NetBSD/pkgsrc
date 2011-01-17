@@ -1,31 +1,22 @@
-$NetBSD: patch-configure,v 1.10 2010/05/04 18:33:43 drochner Exp $
+$NetBSD: patch-configure,v 1.11 2011/01/17 16:51:05 drochner Exp $
 
---- configure.orig	2009-06-10 20:50:53.000000000 +0000
+--- configure.orig	2010-06-15 19:44:30.000000000 +0000
 +++ configure
-@@ -1619,6 +1619,10 @@ case $target_os in
-         add_cflags -D__EXTENSIONS__
+@@ -2160,6 +2160,10 @@ case $target_os in
+         nm_opts='-P -g'
          ;;
      netbsd)
-+	if test "${subarch}" != "x86_32"; then
-+	    LIBOBJFLAGS='$(PIC)'
-+	    SHFLAGS='-shared'
-+	fi
-         oss_demuxer_extralibs="-lossaudio"
-         oss_muxer_extralibs="-lossaudio"
-         ;;
-@@ -1632,6 +1636,8 @@ case $target_os in
-     freebsd)
-         disable need_memalign
-         ;;
-+    dragonfly)
-+        ;;
-     bsd/os)
-         osextralibs="-lpoll -lgnugetopt"
-         strip="strip -d"
-@@ -1996,10 +2002,13 @@ enabled vis && add_cflags -mcpu=ultraspa
++        if test "${subarch}" != "x86_32"; then
++            LIBOBJFLAGS='$(PIC)'
++            SHFLAGS='-shared'
++        fi
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         add_cppflags -D_XOPEN_SOURCE=600
+@@ -2387,10 +2391,13 @@ check_cc <<EOF && enable attribute_may_a
+ union { int x; } __attribute__((may_alias)) x;
+ EOF
  
- # ---
- # big/little-endian test
 -check_cc <<EOF || die "endian test failed"
 -unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
 +check_exec <<EOF || enable bigendian
@@ -35,16 +26,23 @@ $NetBSD: patch-configure,v 1.10 2010/05/04 18:33:43 drochner Exp $
 + return !(*((char *)(&one)));
 +}
  EOF
--od -A n -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
+-od -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
  
- # ---
- # check availability of some header files
-@@ -2101,7 +2110,7 @@ enabled libschroedinger && add_cflags $(
- enabled libspeex   && require  libspeex speex/speex.h speex_decoder_init -lspeex
- enabled libtheora  && require  libtheora theora/theora.h theora_info_init -ltheora -logg
- enabled libvorbis  && require  libvorbis vorbis/vorbisenc.h vorbis_info_init -lvorbisenc -lvorbis -logg
--enabled libx264    && require  libx264 x264.h x264_encoder_open -lx264 -lm &&
-+enabled libx264    && require  libx264 x264.h x264_encoder_close -lx264 -lm &&
-                       { check_cpp_condition x264.h "X264_BUILD >= 65" ||
-                         die "ERROR: libx264 version must be >= 0.65."; }
- enabled libxvid    && require  libxvid xvid.h xvid_global -lxvidcore
+ if enabled alpha; then
+ 
+@@ -2738,6 +2745,7 @@ check_ldflags -Wl,--as-needed
+ check_ldflags '-Wl,-rpath-link,\$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,\$(BUILD_ROOT)/libswscale -Wl,-rpath-link,\$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,\$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,\$(BUILD_ROOT)/libavformat -Wl,-rpath-link,\$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,\$(BUILD_ROOT)/libavutil'
+ check_ldflags -Wl,-Bsymbolic
+ 
++if false; then
+ echo "X{};" > $TMPV
+ if test_ldflags -Wl,--version-script,$TMPV; then
+     append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
+@@ -2750,6 +2758,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
+ void ff_foo(void) {}
+ EOF
+ fi
++fi
+ 
+ if enabled small; then
+     add_cflags $size_cflags
