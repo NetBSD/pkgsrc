@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2011/01/16 15:07:16 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2011/01/17 10:36:54 wiz Exp $
 
-Incomplete fix to build with png-1.5.
+Fix to build with png-1.5.
+->transformations part removed on recommendation by John Bowler.
 
 --- pdftexdir/writepng.c.orig	2010-06-22 15:35:42.000000000 +0000
 +++ pdftexdir/writepng.c
@@ -70,7 +71,16 @@ Incomplete fix to build with png-1.5.
      if (fixedpdfminorversion < 5)
          fixedimagehicolor = 0;
  
-@@ -590,8 +597,7 @@ void write_png(integer img)
+@@ -574,8 +581,6 @@ void write_png(integer img)
+      */
+     if (fixedpdfminorversion > 1
+         && png_interlace_type(img) == PNG_INTERLACE_NONE
+-        && (png_transformations(img) == PNG_TRANSFORM_IDENTITY
+-            || png_transformations(img) == 0x2000)
+         /* gamma */
+         && !(png_ptr_color_type(img) == PNG_COLOR_TYPE_GRAY_ALPHA ||
+              png_ptr_color_type(img) == PNG_COLOR_TYPE_RGB_ALPHA)
+@@ -590,8 +595,7 @@ void write_png(integer img)
                  pdfcreateobj(0, 0);
                  palette_objnum = objptr;
                  pdf_printf("[/Indexed /DeviceRGB %i %i 0 R]\n",
@@ -80,7 +90,7 @@ Incomplete fix to build with png-1.5.
                  break;
              case PNG_COLOR_TYPE_GRAY:
                  pdf_puts("/DeviceGray\n");
-@@ -605,11 +611,11 @@ void write_png(integer img)
+@@ -605,11 +609,11 @@ void write_png(integer img)
          if (palette_objnum > 0) {
              pdfbegindict(palette_objnum, 0);
              pdfbeginstream();
@@ -96,3 +106,13 @@ Incomplete fix to build with png-1.5.
              }
              pdfendstream();
          }
+@@ -619,9 +623,6 @@ void write_png(integer img)
+             if (fixedimageapplygamma &&
+                 (checked_gamma > 1.01 || checked_gamma < 0.99))
+                 tex_printf("gamma delta=%lf ", checked_gamma);
+-            if (png_transformations(img) != PNG_TRANSFORM_IDENTITY)
+-                tex_printf("transform=%lu",
+-                           (long) png_transformations(img));
+             if ((png_color_type(img) != PNG_COLOR_TYPE_GRAY)
+                 && (png_color_type(img) != PNG_COLOR_TYPE_RGB)
+                 && (png_color_type(img) != PNG_COLOR_TYPE_PALETTE))
