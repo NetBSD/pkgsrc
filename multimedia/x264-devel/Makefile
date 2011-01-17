@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/01/17 16:46:42 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2011/01/17 21:51:09 tron Exp $
 
 SNAPSHOT_DATE=		20110101
 
@@ -22,7 +22,8 @@ CFLAGS+=	-DHAVE_STDLIB_H
 
 .if ${MACHINE_ARCH} == "i386"
 .  if ${OPSYS} == "SunOS" || (${OPSYS} == "NetBSD" && \
-	(!empty(OS_VERSION:M[1-5].*) && empty(OS_VERSION:M5.99.*)))
+	(!empty(OS_VERSION:M[1-5].*) && empty(OS_VERSION:M5.99.*))) || \
+      ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-asm
 .  else
 BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
