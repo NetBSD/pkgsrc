@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2011/01/17 16:51:04 drochner Exp $
+# $NetBSD: Makefile,v 1.64 2011/01/17 22:14:02 tron Exp $
 
 # XXX This is release 0.6.1 but we had date-based pkgnames before.
 PKGNAME=	ffmpeg-20101018.0.6.1
@@ -20,6 +20,12 @@ INSTALLATION_DIRS=	lib share/examples/ffmpeg share/doc/ffmpeg
 
 CONF_FILES+=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--disable-asm
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/libavcodec/api-example.c \
