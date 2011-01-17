@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2010/10/24 22:00:15 ahoka Exp $
+# $NetBSD: Makefile,v 1.63 2011/01/17 16:51:04 drochner Exp $
 
-PKGREVISION=	8
+# XXX This is release 0.6.1 but we had date-based pkgnames before.
+PKGNAME=	ffmpeg-20101018.0.6.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
@@ -8,11 +9,12 @@ COMMENT=	Decoding, encoding and streaming software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFIGURE_ARGS+=	--enable-avfilter \
-			--enable-avfilter-lavf \
-			--enable-postproc \
-			--enable-libvorbis \
-			--enable-libmp3lame
+CONFIGURE_ARGS+=	--enable-avfilter
+CONFIGURE_ARGS+=	--enable-avfilter-lavf
+CONFIGURE_ARGS+=	--enable-postproc
+CONFIGURE_ARGS+=	--enable-libvorbis
+CONFIGURE_ARGS+=	--enable-libmp3lame
+CONFIGURE_ARGS+=	--enable-libx264
 
 INSTALLATION_DIRS=	lib share/examples/ffmpeg share/doc/ffmpeg
 

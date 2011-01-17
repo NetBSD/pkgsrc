@@ -1,35 +1,27 @@
-$NetBSD: patch-ac,v 1.8 2010/12/03 12:22:19 wiz Exp $
+$NetBSD: patch-ac,v 1.9 2011/01/17 16:51:05 drochner Exp $
 
-Avoid using obsolete texi2html command line flags.
-Fix installation using the "install-sh" the package.
-
---- Makefile.orig	2009-05-28 22:13:17.000000000 +0000
-+++ Makefile
-@@ -80,7 +80,7 @@ documentation: $(addprefix doc/, ffmpeg-
-                                  ffplay-doc.html general.html $(ALLMANPAGES))
+--- Makefile.orig	2010-04-19 22:05:26.000000000 +0900
++++ Makefile	2011-01-05 17:04:14.000000000 +0900
+@@ -107,7 +107,7 @@
  
+ doc/%.html: TAG = HTML
  doc/%.html: doc/%.texi
--	texi2html -monolithic -number $<
-+	texi2html -monolithic -number-sections $<
- 	mv $(@F) $@
+-	$(M)cd doc && texi2html -monolithic -number $(<:doc/%=%)
++	$(M)cd doc && texi2html -monolithic -number-sections $(<:doc/%=%)
  
+ doc/%.pod: TAG = POD
  doc/%.pod: doc/%-doc.texi
-@@ -93,15 +93,15 @@ install: $(INSTALL_TARGETS-yes)
- 
- install-progs: $(PROGS) $(INSTALL_PROGS_TARGETS-yes)
- 	install -d "$(BINDIR)"
--	install -c -m 755 $(PROGS) "$(BINDIR)"
-+	install -c -c -m 755 $(PROGS) "$(BINDIR)"
+@@ -125,11 +125,11 @@
  
  install-data: $(DATA_FILES)
- 	install -d "$(DATADIR)"
--	install -m 644 $(DATA_FILES) "$(DATADIR)"
-+	install -c -m 644 $(DATA_FILES) "$(DATADIR)"
+ 	$(Q)mkdir -p "$(DATADIR)"
+-	$(INSTALL) -m 644 $(DATA_FILES) "$(DATADIR)"
++	$(INSTALL) -c -m 644 $(DATA_FILES) "$(DATADIR)"
  
  install-man: $(MANPAGES)
- 	install -d "$(MANDIR)/man1"
--	install -m 644 $(MANPAGES) "$(MANDIR)/man1"
-+	install -c -m 644 $(MANPAGES) "$(MANDIR)/man1"
+ 	$(Q)mkdir -p "$(MANDIR)/man1"
+-	$(INSTALL) -m 644 $(MANPAGES) "$(MANDIR)/man1"
++	$(INSTALL) -c -m 644 $(MANPAGES) "$(MANDIR)/man1"
  
  uninstall: uninstall-progs uninstall-data uninstall-man
  

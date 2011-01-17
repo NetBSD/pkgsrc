@@ -1,33 +1,33 @@
-$NetBSD: patch-ad,v 1.8 2010/03/14 21:44:49 tron Exp $
+$NetBSD: patch-ad,v 1.9 2011/01/17 16:51:05 drochner Exp $
 
-Fix installation using the "install-sh" the package.
-
---- subdir.mak.orig	Wed May 20 20:37:34 2009
-+++ subdir.mak	Sun Mar 14 22:37:07 2010
-@@ -64,7 +64,7 @@
+--- subdir.mak.orig	2010-03-17 23:43:05.000000000 +0900
++++ subdir.mak	2011-01-05 17:06:02.000000000 +0900
+@@ -59,7 +59,7 @@
  
  install-lib$(NAME)-shared: $(SUBDIR)$(SLIBNAME)
- 	install -d "$(SHLIBDIR)"
--	install -m 755 $$< "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
-+	install -c -m 755 $$< "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
- 	$(STRIP) "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
- 	cd "$(SHLIBDIR)" && \
+ 	$(Q)mkdir -p "$(SHLIBDIR)"
+-	$$(INSTALL) -m 755 $$< "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
++	$$(INSTALL) -c -m 755 $$< "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
+ 	$$(STRIP) "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
+ 	$(Q)cd "$(SHLIBDIR)" && \
  		$(LN_S) $(SLIBNAME_WITH_VERSION) $(SLIBNAME_WITH_MAJOR)
-@@ -74,14 +74,14 @@
+@@ -69,16 +69,16 @@
  
  install-lib$(NAME)-static: $(SUBDIR)$(LIBNAME)
- 	install -d "$(LIBDIR)"
--	install -m 644 $$< "$(LIBDIR)"
-+	install -c -m 644 $$< "$(LIBDIR)"
+ 	$(Q)mkdir -p "$(LIBDIR)"
+-	$$(INSTALL) -m 644 $$< "$(LIBDIR)"
++	$$(INSTALL) -c -m 644 $$< "$(LIBDIR)"
  	$(LIB_INSTALL_EXTRA_CMD)
  
- install-headers::
- 	install -d "$(INCINSTDIR)"
- 	install -d "$(LIBDIR)/pkgconfig"
--	install -m 644 $(addprefix "$(SRC_DIR)"/,$(HEADERS)) "$(INCINSTDIR)"
--	install -m 644 $(BUILD_ROOT)/lib$(NAME)/lib$(NAME).pc "$(LIBDIR)/pkgconfig"
-+	install -c -m 644 $(addprefix "$(SRC_DIR)"/,$(HEADERS)) "$(INCINSTDIR)"
-+	install -c -m 644 $(BUILD_ROOT)/lib$(NAME)/lib$(NAME).pc "$(LIBDIR)/pkgconfig"
+ install-lib$(NAME)-headers: $(addprefix $(SUBDIR),$(HEADERS) $(BUILT_HEADERS))
+ 	$(Q)mkdir -p "$(INCINSTDIR)"
+-	$$(INSTALL) -m 644 $$^ "$(INCINSTDIR)"
++	$$(INSTALL) -c -m 644 $$^ "$(INCINSTDIR)"
+ 
+ install-lib$(NAME)-pkgconfig: $(SUBDIR)lib$(NAME).pc
+ 	$(Q)mkdir -p "$(LIBDIR)/pkgconfig"
+-	$$(INSTALL) -m 644 $$^ "$(LIBDIR)/pkgconfig"
++	$$(INSTALL) -c -m 644 $$^ "$(LIBDIR)/pkgconfig"
  
  uninstall-libs::
- 	-rm -f "$(SHLIBDIR)/$(SLIBNAME_WITH_MAJOR)" \
+ 	-$(RM) "$(SHLIBDIR)/$(SLIBNAME_WITH_MAJOR)" \
