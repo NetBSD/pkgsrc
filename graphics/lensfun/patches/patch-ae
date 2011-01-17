@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2011/01/17 16:38:21 drochner Exp $
+
+--- configure.orig	2010-03-24 00:22:24.000000000 +0000
++++ configure
+@@ -52,11 +52,7 @@ if tibs.check_program ("makedep", "maked
+ else:
+     makedep = "no"
+ 
+-if tibs.check_program ("Doxygen", "doxygen --version", "([0-9\.]+)", "1.5.0"):
+-    tibs.add_config_mak ("DOXYGEN", "doxygen")
+-    doxygen = "yes"
+-else:
+-    doxygen = "no"
++doxygen = "no"
+ 
+ tibs.pkgconfig_check_library ("glib-2.0", "2.0",
+     "this is the low-level library that libLensFun relies on")
