@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/09 21:39:02 markd Exp $
-# TeX Live Revision 17093
+# $NetBSD: Makefile,v 1.2 2011/01/17 22:41:24 minskim Exp $
 
 DISTNAME=	beamer
-PKGNAME=	tex-${DISTNAME}-3.07
+PKGNAME=	tex-${DISTNAME}-3.10
+TEXLIVE_REV=	19443
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	A LaTeX class for producing presentations and slides
