@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/05/10 16:52:22 taca Exp $
+# $NetBSD: Makefile,v 1.30 2011/01/18 23:12:29 schwarz Exp $
 
 DISTNAME=	unixODBC-2.3.0
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--enable-driverc
 CONFIGURE_ARGS+=	--enable-drivers
 CONFIGURE_ARGS+=	--enable-threads
 PTHREAD_OPTS+=		require
+
+LIBS.SunOS+=		-lsocket -lnsl
 
 # Override the local definitions that point to the self-contained libtool
 # convenience library.  We want the one installed by pkgsrc.  Also override
