@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10019 2011/01/16 14:31:00 wiz Exp $
+$NetBSD: TODO,v 1.10020 2011/01/18 01:43:12 obache Exp $
 
 Suggested new packages
 ======================
@@ -1344,6 +1344,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
 	o vttest-20100830
+	o w3m-0.5.3
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.6
