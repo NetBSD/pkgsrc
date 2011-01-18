@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/12/05 17:13:09 gls Exp $
+# $NetBSD: Makefile,v 1.21 2011/01/18 12:06:57 drochner Exp $
 #
 
 DISTNAME=	pycrypto-2.3
@@ -12,7 +12,7 @@ COMMENT=	Cryptographic and hash functions for Python
 # mostly public domain, but a few bits are:
 LICENSE=	python-software-foundation
 
-CONFLICTS+=	py-amkCrypto-[0-9]*
+CONFLICTS+=	${PYPKGPREFIX}-amkCrypto-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
