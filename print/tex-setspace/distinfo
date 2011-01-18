@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:18:19 minskim Exp $
+$NetBSD: distinfo,v 1.4 2011/01/18 19:28:47 minskim Exp $
 
-SHA1 (tex-setspace-15878.2010/setspace.tar.xz) = 72cf8f13b0165335768b5de841471644494aa122
-RMD160 (tex-setspace-15878.2010/setspace.tar.xz) = 122b7d3ae565c992d486cfd29494c7503d041053
-Size (tex-setspace-15878.2010/setspace.tar.xz) = 7176 bytes
+SHA1 (tex-setspace-21104/setspace.tar.xz) = ef682288fa4d3988b5d3344d791e2296aa7a402a
+RMD160 (tex-setspace-21104/setspace.tar.xz) = b3c980814942849d99defea5d13bc9d70eae1bdf
+Size (tex-setspace-21104/setspace.tar.xz) = 7192 bytes
