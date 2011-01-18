@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/10 20:47:03 minskim Exp $
+$NetBSD: distinfo,v 1.3 2011/01/18 21:13:35 minskim Exp $
 
-SHA1 (tex-natbib-16643/natbib.tar.xz) = 46432cbeadd361901c0fff68f48127655680d268
-RMD160 (tex-natbib-16643/natbib.tar.xz) = bb801618844f8329b6e957b44474e8e2387c972b
-Size (tex-natbib-16643/natbib.tar.xz) = 16568 bytes
+SHA1 (tex-natbib-20668/natbib.tar.xz) = 8a956edc224ff6f3ea9b06cbdff466220d2d075c
+RMD160 (tex-natbib-20668/natbib.tar.xz) = f4852348fe33e7e5fccb9d8198d6a8280bcb761c
+Size (tex-natbib-20668/natbib.tar.xz) = 16576 bytes
