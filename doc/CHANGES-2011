@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.82 2011/01/18 21:58:49 gls Exp $
+$NetBSD: CHANGES-2011,v 1.83 2011/01/18 23:04:10 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -146,3 +146,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-helvetic to 2010 [minskim 2011-01-18]
 	Updated fonts/tex-courier to 2010.21101 [minskim 2011-01-18]
 	Updated graphics/shotwell to 0.8.1 [gls 2010-01-18]
+	Updated audio/cmus to 2.3.3 [gls 2010-01-18]
