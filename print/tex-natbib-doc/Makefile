@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/10 20:47:03 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/18 21:13:36 minskim Exp $
 
 DISTNAME=	natbib.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-8.31a
-TEXLIVE_REV=	16643
+PKGNAME=	tex-${DISTNAME:S/./-/}-8.31b
+TEXLIVE_REV=	20668
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-natbib
