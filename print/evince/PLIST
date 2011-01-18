@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2011/01/11 12:47:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.31 2011/01/18 10:08:44 jmmv Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -393,4 +393,3 @@ share/omf/evince/evince-sv.omf
 share/omf/evince/evince-uk.omf
 share/omf/evince/evince-vi.omf
 share/omf/evince/evince-zh_CN.omf
-@pkgdir share/glib-2.0/schemas

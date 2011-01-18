@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2011/01/13 13:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/01/18 10:08:44 jmmv Exp $
 #
 
 DISTNAME=	brasero-2.32.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,7 @@ PKGCONFIG_OVERRIDE+=	libbrasero-media.pc.in
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.10
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
