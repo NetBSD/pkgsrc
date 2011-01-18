@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2010/05/18 21:11:47 gls Exp $
+# $NetBSD: Makefile,v 1.25 2011/01/18 23:03:22 gls Exp $
 #
 
-DISTNAME=		cmus-v2.3.2
+DISTNAME=		cmus-v2.3.3
 PKGNAME=		${DISTNAME:S/-v/-/}
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cmus/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://cmus.sourceforge.net/
-COMMENT=		cmus is a small, fast and powerful text mode music player
+COMMENT=		Cmus is a small, fast and powerful text mode music player
 
 CONFLICTS+=		cmus-unofficial-[0-9]*
 
@@ -26,9 +26,9 @@ PLIST_VARS+=		sunaudio oss
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
 PLIST.oss=	yes
-CONFIGURE_ARGS+=        CONFIG_OSS=y
+CONFIGURE_ARGS+=	CONFIG_OSS=y
 .else
-CONFIGURE_ARGS+=        CONFIG_OSS=n
+CONFIGURE_ARGS+=	CONFIG_OSS=n
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=        CONFIG_OSS=n
 CONFIGURE_ARGS+=	CONFIG_SUN=y
 PLIST.sunaudio=		yes
 .else
-CONFIGURE_ARGS+=        CONFIG_SUN=n
+CONFIGURE_ARGS+=	CONFIG_SUN=n
 .endif
 
 .include "options.mk"
