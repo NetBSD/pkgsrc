@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2011/01/18 11:57:53 drochner Exp $
+
+SHA1 (giflib-4.1.6.tar.bz2) = 22680f604ec92065f04caf00b1c180ba74fb8562
+RMD160 (giflib-4.1.6.tar.bz2) = bdb99f7048a79b9e771b069f90ac151537011d19
+Size (giflib-4.1.6.tar.bz2) = 506050 bytes
+SHA1 (patch-aa) = e1d98d2b0da5773ab820db1d21d022d2df08cbbc
