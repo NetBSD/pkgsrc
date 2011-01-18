@@ -1,0 +1,18 @@
+# $NetBSD: schemas.tmpl,v 1.1 2011/01/18 10:03:59 jmmv Exp $
+#
+# Recompile the GSettings schemas.
+#
+
+GLIB_SCHEMAS_DIR="@GLIB_SCHEMAS_DIR@"
+GLIB_COMPILE_SCHEMAS="@GLIB_COMPILE_SCHEMAS@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	XDG_DATA_DIRS= "${GLIB_COMPILE_SCHEMAS}" "${GLIB_SCHEMAS_DIR}"
+	;;
+POST-DEINSTALL)
+	XDG_DATA_DIRS= "${GLIB_COMPILE_SCHEMAS}" "${GLIB_SCHEMAS_DIR}"
+	;;
+*)
+	;;
+esac
