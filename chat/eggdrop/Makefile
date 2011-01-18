@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/06/10 13:33:39 obache Exp $
+# $NetBSD: Makefile,v 1.32 2011/01/18 18:39:13 tez Exp $
 
 DISTNAME=	eggdrop1.6.19
 PKGNAME=	eggdrop-1.6.19
@@ -22,6 +22,12 @@ PLIST_VARS=		dynamic
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(PKGSRC_COMPILER:Msunpro)
+# fix for PR#44382
+CONFIGURE_ENV+=         ac_cv_c_inline=
+.endif
 
 EGDIR=		${PREFIX}/share/examples/eggdrop
 CONF_FILES=	${EGDIR}/eggdrop.conf ${PKG_SYSCONFDIR}/eggdrop.conf
