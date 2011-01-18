@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/12 17:45:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/01/18 21:35:46 minskim Exp $
 share/texmf-dist/dvips/helvetic/config.uhv
 share/texmf-dist/fonts/afm/adobe/helvetic/phvb8a.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvb8an.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvbo8a.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvbo8an.afm
-share/texmf-dist/fonts/afm/adobe/helvetic/phvl8a.afm
-share/texmf-dist/fonts/afm/adobe/helvetic/phvl8ac.afm
-share/texmf-dist/fonts/afm/adobe/helvetic/phvlo8a.afm
-share/texmf-dist/fonts/afm/adobe/helvetic/phvlo8ac.afm
-share/texmf-dist/fonts/afm/adobe/helvetic/phvlr8ac.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvr8a.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvr8an.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvro8a.afm
@@ -31,8 +26,6 @@ share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8rn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8tn.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8y.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8yn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbc.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7tn.tfm
@@ -47,20 +40,8 @@ share/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8r.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8rn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8tn.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8y.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8yn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbon.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvbrn.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvl7t.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvl8c.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvl8r.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvl8t.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvlc7t.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvlc8t.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvlo7t.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvlo8c.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvlo8r.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvlo8t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvr.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvr7tn.tfm
@@ -70,8 +51,6 @@ share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8rn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8tn.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8y.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8yn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvrc.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvrc7t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvrc7tn.tfm
@@ -86,13 +65,8 @@ share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8r.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8rn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8t.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8tn.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8y.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/phvro8yn.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvron.tfm
 share/texmf-dist/fonts/tfm/adobe/helvetic/phvrrn.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/rphvro.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/rphvron.tfm
-share/texmf-dist/fonts/tfm/adobe/helvetic/rphvrrn.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvb8z.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvbc8z.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/phvbn8z.tfm
@@ -110,6 +84,9 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvbo.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvbon.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvbrn.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvr.tfm
+share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvro.tfm
+share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvron.tfm
+share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvrrn.tfm
 share/texmf-dist/fonts/tfm/groff/helvetic/phvb8g.tfm
 share/texmf-dist/fonts/tfm/groff/helvetic/phvb8gn.tfm
 share/texmf-dist/fonts/tfm/groff/helvetic/phvbo8g.tfm
@@ -240,14 +217,7 @@ share/texmf-dist/fonts/vf/adobe/helvetic/phvbo8cn.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvbo8t.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvbo8tn.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvbon.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvl7t.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvl8c.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvl8t.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvlc7t.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvlc8t.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvlo7t.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvlo8c.vf
-share/texmf-dist/fonts/vf/adobe/helvetic/phvlo8t.vf
+share/texmf-dist/fonts/vf/adobe/helvetic/phvbrn.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvr.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 share/texmf-dist/fonts/vf/adobe/helvetic/phvr7tn.vf
