@@ -1,16 +1,49 @@
-$NetBSD: patch-da,v 1.3 2010/11/28 12:55:46 drochner Exp $
+$NetBSD: patch-da,v 1.4 2011/01/18 13:46:38 jmmv Exp $
 
 --- configure.orig	2010-09-28 09:37:06.000000000 +0000
 +++ configure
-@@ -12021,7 +12021,7 @@ $as_echo_n "checking for libgtop sysdeps
+@@ -12019,35 +12019,35 @@ $as_echo_n "checking for libgtop sysdeps
+ 	  libgtop_sysdeps_dir=bsd
+ 	  libgtop_use_machine_h=yes
  	  libgtop_need_server=yes
- 	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server2 && chmod 2755 $(bindir)/libgtop_server2'
+-	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server2 && chmod 2755 $(bindir)/libgtop_server2'
++	  libgtop_postinstall='chgrp kmem $(DESTDIR)$(bindir)/libgtop_server2 && chmod 2755 $(DESTDIR)$(bindir)/libgtop_server2'
  	  ;;
 -	freebsd*|kfreebsd*)
 +	freebsd*|kfreebsd*|dragonfly*)
  	  libgtop_sysdeps_dir=freebsd
  	  libgtop_use_machine_h=yes
  	  libgtop_need_server=yes
+ 	  libgtop_sysdeps_private_mountlist=yes
+ 	  libgtop_sysdeps_private_fsusage=yes
+-	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server2 && chmod 2755 $(bindir)/libgtop_server2'
++	  libgtop_postinstall='chgrp kmem $(DESTDIR)$(bindir)/libgtop_server2 && chmod 2755 $(DESTDIR)$(bindir)/libgtop_server2'
+ 	  ;;
+ 	solaris*)
+ 	  libgtop_sysdeps_dir=solaris
+ 	  libgtop_use_machine_h=yes
+ 	  libgtop_need_server=yes
+-	  libgtop_postinstall='chgrp sys $(bindir)/libgtop_server && chmod 2755 $(bindir)/libgtop_server'
++	  libgtop_postinstall='chgrp sys $(DESTDIR)$(bindir)/libgtop_server && chmod 2755 $(DESTDIR)$(bindir)/libgtop_server'
+ 	  ;;
+ 	aix*)
+ 	  libgtop_sysdeps_dir=aix
+ 	  libgtop_use_machine_h=yes
+ 	  libgtop_need_server=yes
+ 	  libgtop_have_sysinfo=yes
+-	  libgtop_postinstall='chgrp system $(bindir)/libgtop_server && chmod g+s $(bindir)/libgtop_server2'
++	  libgtop_postinstall='chgrp system $(DESTDIR)$(bindir)/libgtop_server && chmod g+s $(DESTDIR)$(bindir)/libgtop_server2'
+ 	  ;;
+ 	darwin*)
+ 	  libgtop_sysdeps_dir=darwin
+ 	  libgtop_use_machine_h=yes
+ 	  libgtop_need_server=yes
+ 	  libgtop_have_sysinfo=yes
+-	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server2 && chmod g+s $(bindir)/libgtop_server2'
++	  libgtop_postinstall='chgrp kmem $(DESTDIR)$(bindir)/libgtop_server2 && chmod g+s $(DESTDIR)$(bindir)/libgtop_server2'
+ 	  ;;
+ 	cygwin*)
+ 	  libgtop_sysdeps_dir=cygwin
 @@ -12094,7 +12094,7 @@ $as_echo "$libgtop_sysdeps_dir" >&6; }
  
  
@@ -20,3 +53,12 @@ $NetBSD: patch-da,v 1.3 2010/11/28 12:55:46 drochner Exp $
  		case "$host_os" in
  		*kfreebsd*)
  		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for kvm_open in -lkvm" >&5
+@@ -18051,6 +18051,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
