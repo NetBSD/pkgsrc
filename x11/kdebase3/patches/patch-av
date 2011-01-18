@@ -1,0 +1,24 @@
+$NetBSD: patch-av,v 1.4 2011/01/18 10:25:52 markd Exp $
+
+svn revision 975372 fix build with gcc 4.4
+
+--- kcontrol/kfontinst/kfontinst/Fontmap.cpp.orig	2006-01-19 17:00:49.000000000 +0000
++++ kcontrol/kfontinst/kfontinst/Fontmap.cpp
+@@ -44,7 +44,7 @@
+ 
+ using namespace std;
+ 
+-static char * findSpace(char *str)
++static const char * findSpace(const char *str)
+ {
+     while(str && *str!=' ' && *str!='\t')
+         str++;
+@@ -65,7 +65,7 @@ static bool parseLine(const char *line, 
+     char a[constMaxLen+1],
+          b[constFileMaxLen+1];
+ 
+-    char *slash1=strchr(line, '/'),
++    const char *slash1=strchr(line, '/'),
+          *space1=slash1 ? findSpace(slash1) : NULL, //strchr(slash1, ' ') : NULL,
+          *ob=slash1 ? strchr(slash1, '(') : NULL,
+          *cb=ob ? strchr(ob, ')') : NULL,
