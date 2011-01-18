@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:24:38 minskim Exp $
+$NetBSD: distinfo,v 1.4 2011/01/18 21:35:46 minskim Exp $
 
-SHA1 (tex-helvetic-16767/helvetic.tar.xz) = 7d431fc8f4b031700a6cf7b212d514b682fd192d
-RMD160 (tex-helvetic-16767/helvetic.tar.xz) = 3c4600ea92b7fa2c89810129f347b6a74bd3bbde
-Size (tex-helvetic-16767/helvetic.tar.xz) = 679560 bytes
+SHA1 (tex-helvetic-21101/helvetic.tar.xz) = 1dcfcb23dd3434ea36a6a6e58f4c0e2a2a9dddbb
+RMD160 (tex-helvetic-21101/helvetic.tar.xz) = ce15d4885fb81662a4354f2a5c43f6417c10df06
+Size (tex-helvetic-21101/helvetic.tar.xz) = 661428 bytes
