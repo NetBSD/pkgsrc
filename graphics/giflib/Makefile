@@ -1,22 +1,21 @@
-# New ports collection makefile for:	giflib
-# Version required:	3.0
-# Date created:		03 May 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
-#
-# $Id: Makefile,v 1.1.1.1 1997/12/29 02:51:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2011/01/18 11:53:33 drochner Exp $
 #
 
-DISTNAME=	giflib-3.0
+DISTNAME=	giflib-4.1.6
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.ccil.org/~esr/giflib/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tg@FreeBSD.ORG
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://giflib.sourceforge.net/
+COMMENT=	GIF image format library
+#LICENSE=	# TODO: (see mk/license.mk)
 
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${PREFIX}/share/doc/giflib
-	@${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/giflib
-.endif
-	@${LDCONFIG} -m ${PREFIX}/lib
+CONFLICTS+=	libungif-[0-9]*
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include <bsd.port.mk>
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.pkg.mk"
