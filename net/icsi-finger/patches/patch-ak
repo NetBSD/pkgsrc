@@ -1,0 +1,28 @@
+$NetBSD: patch-ak,v 1.1 2011/01/18 12:28:25 is Exp $
+
+--- src/in.fingerd.c.orig	1996-01-10 19:26:24.000000000 +0000
++++ src/in.fingerd.c
+@@ -805,12 +805,12 @@ finger_users (user, options, stream)
+ 	  fprintf (stream, "%s (%s) seen at %s on %s",
+ 		   upackets[i]->real_name, upackets[i]->name,
+ 		   strip_hostname (upackets[i]->host),
+-		   ctime (&upackets[i]->idle_time));
++		   ctime32 (&upackets[i]->idle_time));
+ 	else
+ 	  fprintf (stream, "%s seen at %s on %s",
+ 		   upackets[i]->name,
+ 		   strip_hostname (upackets[i]->host),
+-		   ctime (&upackets[i]->idle_time));
++		   ctime32 (&upackets[i]->idle_time));
+     }
+   else
+     {
+@@ -1262,7 +1262,7 @@ show_unlogged_packet (packet, stream)
+ 
+   /* In SunOS4 getpwnam() seems to call ctime(), so we move this call down
+    * here to be sure the intended result doesn't get overwritten. */
+-  char *the_time = ctime(&packet->idle_time);
++  char *the_time = ctime32(&packet->idle_time);
+   the_time[strlen(the_time) - 1] = '\0';	/* delete newline */
+ 
+   if (*(packet->real_name))
