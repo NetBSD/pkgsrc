@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2010/08/27 11:47:51 adam Exp $
+# $NetBSD: Makefile,v 1.35 2011/01/18 19:15:34 drochner Exp $
 #
 
 COMMENT=	Software for geographical-related uses
 
 SUBDIR+=	cm2gpx
 SUBDIR+=	cmconvert
+SUBDIR+=	emerillon
 SUBDIR+=	epsg
 SUBDIR+=	epsg-docs
 SUBDIR+=	garmin-utils
