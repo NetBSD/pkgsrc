@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2011/01/18 12:28:25 is Exp $
+
+--- include/os.h.orig	2011-01-18 11:18:06.000000000 +0000
++++ include/os.h
+@@ -76,4 +76,7 @@ char *tty_lookup ();
+ /* Strip ttyname to compact format */
+ char *strip_ttyname ();
+ 
++/* ctime() that always reads 32bit */
++char *ctime32 ();
++
+ #endif /* _OS_H_ */

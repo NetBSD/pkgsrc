@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2011/01/18 12:28:25 is Exp $
+
+--- lib/packet.c.orig	1994-01-11 02:14:20.000000000 +0000
++++ lib/packet.c
+@@ -218,7 +218,7 @@ print_packet (packet, stream)
+   char *idle = idle_time_string (packet->idle_time, 1);
+ #define DATE_OFFSET	4
+ #define TIME_OFFSET	11
+-  char *when = ctime (&packet->login_time);
++  char *when = ctime32 (&packet->login_time);
+ #define WEEKS_TIME (7 * 24 * 60 * 60)
+   int old_login = time(NULL) -  packet->login_time > WEEKS_TIME;
+ 
+@@ -277,7 +277,7 @@ debug_packet (packet)
+         what: \"%s\"\n\
+ }", packet,
+ 	   packet->name, packet->real_name, packet->host,
+-	   ctime (&(packet->login_time)), idle,
++	   ctime32 (&(packet->login_time)), idle,
+ 	   packet->ttyname, packet->ttyloc, packet->what);
+   free (idle);
+   fflush (stderr);

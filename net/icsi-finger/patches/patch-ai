@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 2011/01/18 12:28:25 is Exp $
+
+--- include/packet.h.orig	1994-01-11 02:15:10.000000000 +0000
++++ include/packet.h
+@@ -44,12 +44,12 @@ typedef struct {
+   char name[USERNAME_LEN];
+   char real_name[REALNAME_LEN];
+   char host[HOSTNAME_LEN];
+-  time_t login_time;
+-  time_t idle_time;
++  int32_t login_time;
++  int32_t idle_time;
+   char ttyname[TTYNAME_LEN];
+   char ttyloc[TTYLOC_LEN];
+   char what[WHAT_LEN];
+-} FINGER_PACKET;
++} __attribute__((__packed__)) FINGER_PACKET;
+ 
+ /* Strings used in dummy packets to signal host is free or down */
+ #define HOST_NOUSERS	"Host has no users"
