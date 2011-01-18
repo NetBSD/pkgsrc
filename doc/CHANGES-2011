@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.78 2011/01/18 21:22:08 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.79 2011/01/18 21:28:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -141,3 +141,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-natbib-doc to 8.31b [minskim 2011-01-18]
 	Updated print/tex-answers to 2.13 [minskim 2011-01-18]
 	Updated print/tex-answers-doc to 2.13 [minskim 2011-01-18]
+	Updated print/tex-ulem to 2010 [minskim 2011-01-18]
+	Updated print/tex-ulem-doc to 2010 [minskim 2011-01-18]
