@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/01/17 16:40:28 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/01/18 21:39:51 minskim Exp $
 share/texmf-dist/dvips/courier/config.ucr
 share/texmf-dist/fonts/afm/adobe/courier/pcrb8a.afm
 share/texmf-dist/fonts/afm/adobe/courier/pcrbo8a.afm
@@ -43,10 +43,6 @@ share/texmf-dist/fonts/tfm/adobe/courier/pcrro7t.tfm
 share/texmf-dist/fonts/tfm/adobe/courier/pcrro8c.tfm
 share/texmf-dist/fonts/tfm/adobe/courier/pcrro8r.tfm
 share/texmf-dist/fonts/tfm/adobe/courier/pcrro8t.tfm
-share/texmf-dist/fonts/tfm/adobe/courier/rpcrb.tfm
-share/texmf-dist/fonts/tfm/adobe/courier/rpcrbo.tfm
-share/texmf-dist/fonts/tfm/adobe/courier/rpcrr.tfm
-share/texmf-dist/fonts/tfm/adobe/courier/rpcrro.tfm
 share/texmf-dist/fonts/tfm/cg/courier/ccrb.tfm
 share/texmf-dist/fonts/tfm/cg/courier/ccrb8t.tfm
 share/texmf-dist/fonts/tfm/cg/courier/ccrbi.tfm
@@ -85,6 +81,10 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/pcrbo8u.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/pcrr8u.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/pcrrc8u.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/pcrro8u.tfm
+share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrb.tfm
+share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrbo.tfm
+share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrr.tfm
+share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrro.tfm
 share/texmf-dist/fonts/tfm/groff/courier/pcrb8g.tfm
 share/texmf-dist/fonts/tfm/groff/courier/pcrbo8g.tfm
 share/texmf-dist/fonts/tfm/groff/courier/pcrr8g.tfm
