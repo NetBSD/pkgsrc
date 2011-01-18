@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/01/13 13:39:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/01/18 09:14:13 wiz Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
 DISTNAME=	kdebindings-${_KDE_VERSION}
@@ -33,7 +33,7 @@ post-extract:
 	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
 
 # patched by pkgsrc; remove them, otherwise they get installed
-post-patch:
+post-build:
 	rm ${WRKSRC}/python/pykde4/sip/kdecore/typedefs.sip.orig
 
 .include "../../meta-pkgs/kde4/kde4.mk"
