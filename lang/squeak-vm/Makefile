@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/01/13 13:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/18 15:28:13 asau Exp $
 #
 
 SQUEAK_VERSION=	3.11.3.2135
@@ -30,6 +30,13 @@ CMAKE_ARGS+=	-DPKGMANDIR=$(PKGMANDIR)
 CMAKE_ARGS+=	-DVM_HOST=$(MACHINE_GNU_PLATFORM:Q) -DVM_VERSION=$(SQUEAK_VERSION)
 CMAKE_ARGS+=	-DLIBOSSAUDIO=$(LIBOSSAUDIO) -DDEVOSSAUDIO=$(DEVOSSAUDIO)
 #CFLAGS=		-g -fomit-frame-pointer
+
+.include "../../mk/bsd.prefs.mk"
+
+.if $(OPSYS) == "NetBSD"
+# UUID routines are in libc:
+BUILDLINK_TRANSFORM+=	rm:-luuid
+.endif
 
 PLIST_SUBST=	SQUEAK_VERSION=$(SQUEAK_VERSION)
 
