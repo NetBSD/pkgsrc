@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/05/03 21:35:38 wiz Exp $
+$NetBSD: distinfo,v 1.7 2011/01/18 10:34:38 markd Exp $
 
 SHA1 (libvolume_id-0.81.1.tar.bz2) = 3d2f22654042e5995d119d61d2aecf4b5d8efb8a
 RMD160 (libvolume_id-0.81.1.tar.bz2) = 222fbe2ff595eeedafe41c9c47987ead34aa455e
@@ -7,4 +7,4 @@ SHA1 (patch-aa) = f1bc3a47df3d98bba4b08e96f957e11f56155c18
 SHA1 (patch-ab) = f9f80eeeb67b8f8babf777bf59226249b03576b8
 SHA1 (patch-ac) = d99ce65248e2520f107081b8474225ab1449d72e
 SHA1 (patch-ad) = c09ecb39f154c37e72dfb6bb6241ec33d77c0b60
-SHA1 (patch-ae) = 82d0bdd10818ed75eb1c555891c093eddbffaa7a
+SHA1 (patch-ae) = 9382586dab03ed7691d26b029d930940dc3e7302

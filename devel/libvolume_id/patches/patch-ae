@@ -1,7 +1,20 @@
-$NetBSD: patch-ae,v 1.1 2009/01/04 23:10:06 dbj Exp $
+$NetBSD: patch-ae,v 1.2 2011/01/18 10:34:39 markd Exp $
 
 --- Makefile.orig	2007-12-26 16:52:36.000000000 -0800
 +++ Makefile	2009-01-04 15:05:52.000000000 -0800
+@@ -8,9 +8,9 @@ includedir = 	${prefix}/include
+ libdir =	${prefix}/lib
+ usrlibdir =	${prefix}/lib
+ 
+-INSTALL = /usr/bin/install -c
+-INSTALL_DATA  = ${INSTALL} -m 644
+-INSTALL_LIB = ${INSTALL} -m 755
++#INSTALL = /usr/bin/install -c
++#INSTALL_DATA  = ${INSTALL} -m 644
++#INSTALL_LIB = ${INSTALL} -m 755
+ 
+ SHLIB_CUR = 0
+ SHLIB_REV = 81
 @@ -59,12 +59,19 @@ HEADERS=			\
  	libvolume_id.h		\
  	util.h
