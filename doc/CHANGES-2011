@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.72 2011/01/17 23:43:16 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.73 2011/01/18 09:01:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -131,3 +131,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-needspace-doc to 1.3c [minskim 2011-01-17]
 	Updated print/tex-geometry to 5.6 [minskim 2011-01-17]
 	Updated print/tex-geometry-doc to 5.6 [minskim 2011-01-17]
+	Updated geography/gdal-lib to 1.7.3nb2 [wiz 2011-01-18]
