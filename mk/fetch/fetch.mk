@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.44 2010/06/27 17:46:22 joerg Exp $
+# $NetBSD: fetch.mk,v 1.45 2011/01/18 15:20:54 reed Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -163,7 +163,7 @@ fetch-check-interactive: .USEBEFORE
 ### transfer the files from the appropriate sites if needed.
 ###
 #
-# FETCH_CMD is the program used to fetch files for FETCH_USING=manual.
+# FETCH_CMD is the program used to fetch files for FETCH_USING=custom.
 #       It must understand fetching files located via URLs,
 #	e.g. NetBSD's ftp, net/tnftp, etc.
 #
