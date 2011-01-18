@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2011/01/13 13:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/18 10:59:12 markd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	base workspace for the KDE 4 integrated X11 desktop
 
@@ -38,6 +38,9 @@ CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.fontinst.conf \
 CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.kcmclock.conf \
 			${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmclock.conf
 
+SPECIAL_PERMS+=		${PREFIX}/lib/kde4/libexec/kcheckpass \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 6555
+
 REPLACE_PERL+= \
 	kcontrol/keys/convertShortcuts.pl \
 	kwin/data/kwin3_plugin.pl \
@@ -48,7 +51,7 @@ PY_PATCHPLIST=	yes
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-SUBST_CLASSES+=		paths qtpath
+SUBST_CLASSES+=		paths qtpath isocodes
 SUBST_FILES.paths=	kcontrol/kdm/main.cpp
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
@@ -56,6 +59,10 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.qtpath=	startkde.cmake
 SUBST_SED.qtpath=	-e 's,/usr/pkg/qt4,${QTDIR},g'
 SUBST_STAGE.qtpath=	post-patch
+
+SUBST_FILES.isocodes=	kcontrol/keyboard/iso_codes.h
+SUBST_SED.isocodes=	-e 's,/usr/share/xml/iso-codes,${BUILDLINK_PREFIX.iso-codes}/share/xml/iso-codes,g'
+SUBST_STAGE.isocodes=	post-patch
 
 ICONDIR=		share/icons
 
@@ -102,6 +109,7 @@ PYTHON_VERSIONS_ACCEPTED= 26 25 # because kdebindings4-python
 #  I don't know how consolekit works
 #.include "../../sysutils/consolekit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/kdebindings4-python/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
