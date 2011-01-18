@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2010/11/28 12:55:46 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2011/01/18 13:46:38 jmmv Exp $
 
 DISTNAME=		libgtop-2.28.2
+PKGREVISION=		1
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.28/}
 EXTRACT_SUFX=		.tar.bz2
@@ -55,11 +56,6 @@ PLIST.server=	yes
 .else
 PLIST.server=	yes
 PLIST.suid.h=	yes
-.endif
-
-.if defined(PLIST.server)
-post-install:
-	${CHMOD} g+s ${DESTDIR}${PREFIX}/bin/libgtop_server2
 .endif
 
 PLIST_VARS+=    glibtop_private.h
