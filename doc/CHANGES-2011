@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.75 2011/01/18 19:18:27 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.76 2011/01/18 19:29:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -136,3 +136,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added geography/emerillon version 0.1.2 [drochner 2011-01-18]
 	Added www/librest version 0.6 [drochner 2011-01-18]
 	Added graphics/giflib version 4.1.6 [drochner 2011-01-18]
+	Updated print/tex-setspace to 6.7nb1 [minskim 2011-01-18]
