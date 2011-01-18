@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/01/24 17:11:19 heinz Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/18 10:34:38 markd Exp $
 #
 
 DISTNAME=		libvolume_id-0.81.1
@@ -16,5 +16,8 @@ INSTALLATION_DIRS=	include lib lib/pkgconfig
 USE_TOOLS+=		gmake pkg-config
 
 USE_LIBTOOL=yes
+
+MAKE_ENV+=		INSTALL_DATA=${INSTALL_DATA:Q}
+MAKE_ENV+=		INSTALL_LIB=${INSTALL_LIB:Q}
 
 .include "../../mk/bsd.pkg.mk"
