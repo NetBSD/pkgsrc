@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 04:19:08 jmcneill Exp $
+bin/vaapi_h264
+bin/vaapi_mpeg2
+bin/vaapi_mpeg4
+bin/vaapi_vc1
+share/hwdecode-demos/h264.mp4
+share/hwdecode-demos/mpeg2.m2v
+share/hwdecode-demos/mpeg4.mp4
+share/hwdecode-demos/vc1.raw
