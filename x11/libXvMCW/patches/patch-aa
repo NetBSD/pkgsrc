@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/19 00:42:12 jmcneill Exp $
+
+Install to PREFIX instead of X11BASE, and don't install the config file to
+PREFIX/etc
+
+--- Makefile.in.orig	2004-11-18 15:26:09.000000000 -0500
++++ Makefile.in	2011-01-18 19:13:57.000000000 -0500
+@@ -178,8 +178,8 @@
+ target_alias = @target_alias@
+ INCLUDES = @WINCLUDES@
+ EXTRA_DIST = reconf libXvMCW.spec
+-xincludedir = @XEXTINCLUDE@
+-xlibdir = @XLIB@
++xincludedir = @prefix@/include/X11/extensions
++xlibdir = @prefix@/lib
+ xconfigdir = @XCONFIG@
+ xinclude_HEADERS = vldXvMC.h
+ xconfig_HEADERS = XvMCConfig
+@@ -574,7 +574,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-xconfigHEADERS install-xincludeHEADERS \
++install-data-am: install-xincludeHEADERS \
+ 	install-xlibLTLIBRARIES
+ 
+ install-exec-am:
