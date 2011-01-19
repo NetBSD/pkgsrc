@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.17 2010/11/23 13:24:26 wiz Exp $
+# $NetBSD: xorg,v 1.18 2011/01/19 16:33:51 jmcneill Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -453,6 +453,11 @@ lib/libXvMC.so.5.0
 lib/libXvMCW.1.0.0.dylib
 lib/libXvMCW.1.dylib
 lib/libXvMCW.dylib
+lib/libXvMCW.a
+lib/libXvMCW.la
+lib/libXvMCW.so
+lib/libXvMCW.so.1
+lib/libXvMCW.so.1.0
 lib/libXxf86misc.1.1.0.dylib
 lib/libXxf86misc.1.dylib
 lib/libXxf86misc.dylib
