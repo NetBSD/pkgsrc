@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2011/01/03 05:58:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2011/01/19 03:28:42 sbd Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -110,7 +110,6 @@ man/man5/ppdcfile.5
 man/man5/printers.conf.5
 man/man5/subscriptions.conf.5
 man/man7/backend.7
-man/man7/drv.7
 man/man7/filter.7
 man/man7/notifier.7
 man/man8/accept.8
@@ -883,7 +882,6 @@ share/doc/cups/help/man-cupsd.html
 share/doc/cups/help/man-cupsenable.html
 share/doc/cups/help/man-cupstestdsc.html
 share/doc/cups/help/man-cupstestppd.html
-share/doc/cups/help/man-drv.html
 share/doc/cups/help/man-filter.html
 share/doc/cups/help/man-lp.html
 share/doc/cups/help/man-lpadmin.html
@@ -946,6 +944,7 @@ share/doc/cups/images/cups-icon.png
 share/doc/cups/images/cups-postscript-chain.png
 share/doc/cups/images/cups-raster-chain.png
 share/doc/cups/images/cups.png
+share/doc/cups/images/generic.png
 share/doc/cups/images/left.gif
 share/doc/cups/images/raster.png
 share/doc/cups/images/right.gif
