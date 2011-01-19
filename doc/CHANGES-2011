@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.85 2011/01/19 00:46:35 jmcneill Exp $
+$NetBSD: CHANGES-2011,v 1.86 2011/01/19 03:28:58 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -149,3 +149,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/cmus to 2.3.3 [gls 2010-01-18]
 	Added x11/libXvMCW version 0.9.3 [jmcneill 2011-01-18]
 	Updated multimedia/mplayer to mplayer-1.0rc20100913nb3 [jmcneill 2011-01-18]
+	Updated print/cups to 1.4.6nb1 [sbd 2011-01-19]
