@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.17 2011/01/19 00:12:50 tron Exp $
+$NetBSD: distinfo,v 1.18 2011/01/19 19:14:15 drochner Exp $
 
-SHA1 (transfig.3.2.5.tar.gz) = 2657c104d0099dcb4565a8762a9543310e55e767
-RMD160 (transfig.3.2.5.tar.gz) = 435615bded662225127ea564fc746e9cb0058f18
-Size (transfig.3.2.5.tar.gz) = 394296 bytes
+SHA1 (transfig.3.2.5d.tar.gz) = 90ff277cc9b3fa0d0313052fcf5e3ffad8652abc
+RMD160 (transfig.3.2.5d.tar.gz) = 6d6aff522bd9e886029bf317e7b9dcd495a5c0ef
+Size (transfig.3.2.5d.tar.gz) = 497451 bytes
 SHA1 (patch-aa) = bd898082a8c34825efe04d0102ddb33b2f4cffbd
 SHA1 (patch-ab) = b056ff88914bccfc172f15adb663eda0f254e125
 SHA1 (patch-ac) = 0258794cf6f6d22d3355ed01c2cc89c7ee0088d4
-SHA1 (patch-ad) = 58343868c70e52bd0aee485d590f262a3fdc7b98
-SHA1 (patch-ae) = d3d0eeb08083092f717525914c64e72c7ceaa1fd
+SHA1 (patch-ad) = b15995d7b3282d68bbcea0a161ed2db8188141ac
+SHA1 (patch-ae) = 07a18544e7c2d6aac7d0d3f950b7820f33869b06
 SHA1 (patch-af) = 544bae557e193f9bbee4dbe1aefa454c38100c69
