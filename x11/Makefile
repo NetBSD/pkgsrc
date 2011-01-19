@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2010/12/15 09:31:14 abs Exp $
+# $NetBSD: Makefile,v 1.626 2011/01/19 00:42:55 jmcneill Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -224,6 +224,7 @@ SUBDIR+=	libXt
 SUBDIR+=	libXtst
 SUBDIR+=	libXv
 SUBDIR+=	libXvMC
+SUBDIR+=	libXvMCW
 SUBDIR+=	libXxf86dga
 SUBDIR+=	libXxf86misc
 SUBDIR+=	libXxf86vm
