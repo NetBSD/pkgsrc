@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/19 00:42:12 jmcneill Exp $
+
+SHA1 (libXvMCW-0.9.3.tar.gz) = d7ec5243bc4fc6afe2f391c3023c3ad820f89d2f
+RMD160 (libXvMCW-0.9.3.tar.gz) = 7da779dbddbb054114b798690c0ae87abac938bf
+Size (libXvMCW-0.9.3.tar.gz) = 193316 bytes
+SHA1 (patch-aa) = 6e8d9b21ffa37dbdc38b60a0882b8b234d604212
+SHA1 (patch-ab) = 038a070bbac3191ed1bf5f88a58c18b11a1671d4
