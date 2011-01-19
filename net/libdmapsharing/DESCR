@@ -1,0 +1,14 @@
+Libdmapsharing is a library you may use to access and share media content
+using DMAP (DAAP, DPAP & DACP).  The library presently supports Linux and
+other POSIX-based systems.  It is written in C using GObject and libsoup.
+
+The DMAP family of protocols are used by products such as Apple iTunes(TM),
+Apple iPhoto(TM), and the Roku SoundBridge(TM) family to share media such
+as music and photos.
+
+Possible uses for libdmapsharing include:
+
+* Adding picture sharing capabilities to a photograph application.
+* Adding music sharing capabilities to an audio application.
+* Developing DPAP server software for a home networking product.
+* Developing DMAP client software for a media player appliance.

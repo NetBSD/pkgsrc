@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/19 23:30:12 jmmv Exp $
+
+SHA1 (libdmapsharing-2.1.9.tar.gz) = d31a41e5ce296896e68ae854d60a84d7ac463d52
+RMD160 (libdmapsharing-2.1.9.tar.gz) = 089870d145355ad9f5552b10d5c9d0dda1596db9
+Size (libdmapsharing-2.1.9.tar.gz) = 644796 bytes
+SHA1 (patch-aa) = 91697ea045dc2487ef683e4f7a268ff929d67beb
