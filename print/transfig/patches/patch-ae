@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.4 2005/11/10 14:29:01 itohy Exp $
+$NetBSD: patch-ae,v 1.5 2011/01/19 19:14:15 drochner Exp $
 
---- fig2dev/fig2dev.h.orig	Wed Jul 16 01:21:12 2003
-+++ fig2dev/fig2dev.h	Wed Nov  9 21:52:22 2005
-@@ -213,13 +213,14 @@
+--- fig2dev/fig2dev.h.orig	2010-03-16 18:53:20.000000000 +0000
++++ fig2dev/fig2dev.h
+@@ -214,13 +214,14 @@ struct Cmap {
  #endif /* MAXPATHLEN */
  #endif /* PATH_MAX */
  
--#if ( !defined(__NetBSD__) && !defined(__DARWIN__))
-+#if ( !defined(__NetBSD__) && !defined(__DARWIN__) && !defined(__FreeBSD__) &&!defined(__DragonFly__))
+-#if ( !defined(__NetBSD__) && !defined(__DARWIN__) && !defined(__FreeBSD) )
++#if ( !defined(__NetBSD__) && !defined(__DARWIN__) && !defined(__FreeBSD) && !defined(__DragonFly__) )
  extern int		sys_nerr, errno;
  #endif
  
