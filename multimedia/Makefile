@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2011/01/19 21:30:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.173 2011/01/19 21:34:36 drochner Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -51,6 +51,7 @@ SUBDIR+=	gst-plugins0.10-resindvd
 SUBDIR+=	gst-plugins0.10-theora
 SUBDIR+=	gst-plugins0.10-ugly
 SUBDIR+=	gst-plugins0.10-v4l2
+SUBDIR+=	gst-plugins0.10-vp8
 SUBDIR+=	gst-plugins0.10-x264
 SUBDIR+=	gst-plugins0.10-xvid
 SUBDIR+=	gstreamer0.10
