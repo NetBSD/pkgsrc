@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.98 2011/01/19 19:53:41 kefren Exp $
+$NetBSD: CHANGES-2011,v 1.99 2011/01/19 21:32:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -162,3 +162,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-advdate to 2010 [minskim 2011-01-19]
 	Updated print/tex-advdate-doc to 2010 [minskim 2011-01-19]
 	Added games/pingus version 0.7.3 [kefren 2011-01-19]
+	Added multimedia/libvpx version 0.9.5 [ryoon 2011-01-20]
