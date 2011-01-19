@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2010/12/17 19:05:35 shattered Exp $
+# $NetBSD: Makefile,v 1.75 2011/01/19 00:45:20 jmcneill Exp $
 
 PKGNAME=	mplayer-${MPLAYER_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Fast, cross-platform movie player
 
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 CONFIGURE_ARGS+=	--disable-mencoder
 CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 CONFIGURE_ARGS+=	--enable-xvmc
+CONFIGURE_ARGS+=	--with-xvmclib=XvMCW
 
 # Solaris/x86 has Xv, but the header files live in /usr/X11R6, not
 # ${X11_BASE}, so we need to also look for headers in this path.
@@ -36,6 +37,7 @@ do-install:
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXvMC/buildlink3.mk"
+.include "../../x11/libXvMCW/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 
