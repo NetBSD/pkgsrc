@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/19 19:47:59 kefren Exp $
+
+SHA1 (pingus-0.7.3.tar.bz2) = ca7fe5cea65fb3392d1e81056a879831925502f2
+RMD160 (pingus-0.7.3.tar.bz2) = 664d259a98a172d10480be9aa4ec87a424ecd6f1
+Size (pingus-0.7.3.tar.bz2) = 11127278 bytes
+SHA1 (patch-aa) = 32a40991e57918163c9b7c2c740dd29b08ccadef
+SHA1 (patch-ab) = 2f897472e0c006e6fa325c17eda34b05d0ba6a01
