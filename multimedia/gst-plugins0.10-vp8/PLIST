@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 21:30:03 drochner Exp $
+lib/gstreamer-0.10/libgstvp8.la
