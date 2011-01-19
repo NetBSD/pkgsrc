@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/19 04:15:41 jmcneill Exp $
+
+SHA1 (libva-1.0.6.tar.bz2) = 3b0f8032d74cfab54b83bb081d935ae14188a8b8
+RMD160 (libva-1.0.6.tar.bz2) = bf6d1010be69176f6b1c1614faa5d3d7ea1a985b
+Size (libva-1.0.6.tar.bz2) = 453303 bytes
+SHA1 (patch-aa) = 0a7ffecaedef805031b13a5f9a7262a761484201
+SHA1 (patch-ab) = b98ce4693eda7f06459be78e69e1b05b9253ca78
+SHA1 (patch-ac) = 8a2e2a7dfd6eda11ce36b50e1e50e5ac22f548da
+SHA1 (patch-ad) = 0542e7f4e533f78d32ab01b1a1e91f9ddaffaed6
