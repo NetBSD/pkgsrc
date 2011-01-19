@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/11/05 18:03:49 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2011/01/19 13:46:13 adam Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGREVISION=	2
@@ -54,6 +54,8 @@ BUILD_TARGET=	generic
 
 PKGCONFIG_OVERRIDE=	${WRKSRC}/etc/lua.pc
 
+INSTALLATION_DIRS+=	lib/pkgconfig
+
 SUBST_CLASSES+=		pc-prefix
 SUBST_FILES.pc-prefix+=	${WRKSRC}/etc/lua.pc
 SUBST_SED.pc-prefix+=	-e "s,/usr/local,${PREFIX},"
@@ -79,7 +81,6 @@ post-install:
 	cd ${WRKSRC}/etc; for f in README *.c *.ico *.lua; do \
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR}/etc;		\
 	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/etc/lua.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../devel/readline/buildlink3.mk"
