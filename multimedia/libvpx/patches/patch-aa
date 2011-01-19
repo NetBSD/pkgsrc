@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/19 21:15:51 ryoon Exp $
+
+--- build/make/Makefile.orig	2010-10-28 13:14:14.000000000 +0000
++++ build/make/Makefile
+@@ -102,7 +102,7 @@ $(BUILD_PFX)%.c.d: %.c
+ 
+ $(BUILD_PFX)%.c.o: %.c
+ 	$(if $(quiet),@echo "    [CC] $@")
+-	$(qexec)$(CC) $(CFLAGS) -c -o $@ $<
++	$(qexec)${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
+ 
+ $(BUILD_PFX)%.asm.d: %.asm
+ 	$(if $(quiet),@echo "    [DEP] $@")
+@@ -112,7 +112,8 @@ $(BUILD_PFX)%.asm.d: %.asm
+ 
+ $(BUILD_PFX)%.asm.o: %.asm
+ 	$(if $(quiet),@echo "    [AS] $@")
+-	$(qexec)$(AS) $(ASFLAGS) -o $@ $<
++	$(qexec)${LIBTOOL} --mode=compile --tag=CC sh strip_fPIC.sh \
++	    $(AS) $(ASFLAGS) -o $@ $<
+ 
+ $(BUILD_PFX)%.s.d: %.s
+ 	$(if $(quiet),@echo "    [DEP] $@")
+@@ -188,7 +189,8 @@ define linker_template
+ $(1): $(filter-out -%,$(2))
+ $(1):
+ 	$(if $(quiet),@echo    "    [LD] $$@")
+-	$(qexec)$$(LD) $$(strip $$(LDFLAGS) -o $$@ $(2) $(3) $$(extralibs))
++	$(qexec)${LIBTOOL} --mode=link $(CC) -o $$@ $$(filter-out -lvpx,$(2)) \
++	    libvpx.la $$(extralibs)
+ endef
+ # make-3.80 has a bug with expanding large input strings to the eval function,
+ # which was triggered in some cases by the following component of
+@@ -201,8 +203,12 @@ endef
+ define install_map_template
+ $(DIST_DIR)/$(1): $(2)
+ 	$(if $(quiet),@echo "    [INSTALL] $$@")
+-	$(qexec)mkdir -p $$(dir $$@)
+-	$(qexec)cp -p $$< $$@
++	$(qexec)${BSD_INSTALL_DATA} -d -m 755 $$(dir $$@)
++	$$(if $$(filter %.a,$$<), \
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} -c $$(patsubst %.a,%.la,$$<) $$(dir $$@), \
++	$$(if $$(filter %.h,$$<), \
++	${BSD_INSTALL_DATA} -c -m 644 $$< $$(dir $$@), \
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} -c -s $$< $$(dir $$@)))
+ endef
+ 
+ define archive_template
+@@ -211,7 +217,9 @@ define archive_template
+ # for creating them.
+ $(1):
+ 	$(if $(quiet),@echo "    [AR] $$@")
+-	$(qexec)$$(AR) $$(ARFLAGS) $$@ $$?
++	$(qexec)${LIBTOOL} --mode=link $(CC) -o $$(patsubst %.a,%.la,$$@) \
++	    $$(patsubst %.o,%.lo,$$?) -rpath $(DIST_DIR)/lib $$(extralibs) \
++	    -version-info $(VERSION_MINOR):$(VERSION_PATCH):$(VERSION_MINOR)
+ endef
+ 
+ define so_template
+@@ -290,7 +298,7 @@ clean::
+ LIBS=$(call enabled,LIBS)
+ .libs: $(LIBS)
+ 	@touch $@
+-$(foreach lib,$(filter %_g.a,$(LIBS)),$(eval $(call archive_template,$(lib))))
++$(foreach lib,$(filter %.a,$(LIBS)),$(eval $(call archive_template,$(lib))))
+ $(foreach lib,$(filter %so.$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH),$(LIBS)),$(eval $(call so_template,$(lib))))
+ 
+ INSTALL-LIBS=$(call cond_enabled,CONFIG_INSTALL_LIBS,INSTALL-LIBS)
