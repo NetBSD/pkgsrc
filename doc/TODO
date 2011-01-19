@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10024 2011/01/19 12:19:11 wiz Exp $
+$NetBSD: TODO,v 1.10025 2011/01/19 22:48:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -463,7 +463,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.32.0 [GNOME 2.32]
-	o cherokee-1.0.16
+	o cherokee-1.0.17
 	o chromium-0.9.14.1
 	o cinepaint-0.23
 	o cint-5.16
@@ -645,7 +645,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2010.08.08
 	o fvwm2-themes-0.7.0
-	o gammu-1.28.95
+	o gammu-1.29.0
 	o gap-4r4p9
 	o gated-3.6
 	o gbdfed-1.6
@@ -816,7 +816,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kde4-4.5.5
 	o kdrill-6.5
 	o kipi-plugins-1.7.0
-	o kismet-2010.07r1
+	o kismet-2011.01r1
 	o kmess-1.5.1
 	o kmp-0.5
 	o kmymoney2-4.5
@@ -1086,7 +1086,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.3.1
 	o pircbot-1.4.6
-	o pixman-0.20.0
+	o pixman-0.20.2
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
 	o plone-3.3.4
