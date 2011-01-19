@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/01/19 04:15:41 jmcneill Exp $
+
+Don't build tests.
+
+--- Makefile.am.orig	2011-01-19 01:42:40.000000000 +0000
++++ Makefile.am
+@@ -22,7 +22,7 @@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ 
+-SUBDIRS = va test
++SUBDIRS = va
+ if BUILD_DUMMY_DRIVER
+ SUBDIRS += dummy_drv_video
+ endif

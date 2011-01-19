@@ -1,0 +1,39 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/01/19 04:15:41 jmcneill Exp $
+
+Don't hardcode -ldl
+
+--- va/Makefile.am.orig	2011-01-19 01:42:46.000000000 +0000
++++ va/Makefile.am
+@@ -30,12 +30,12 @@ LDADD = \
+ libva_la_SOURCES = va.c va_trace.c va_fool.c
+ libva_ladir = $(libdir)
+ libva_la_LDFLAGS = $(LDADD) -no-undefined
+-libva_la_LIBADD = $(LIBVA_LIBS) -ldl
++libva_la_LIBADD = $(LIBVA_LIBS)
+ 
+ libva_tpi_la_SOURCES = va_tpi.c
+ libva_tpi_ladir = $(libdir)
+ libva_tpi_la_LDFLAGS = $(LDADD) -no-undefined
+-libva_tpi_la_LIBADD = $(libvacorelib) -ldl
++libva_tpi_la_LIBADD = $(libvacorelib)
+ libva_tpi_la_DEPENDENCIES = $(libvacorelib) 
+ 
+ 
+@@ -43,7 +43,7 @@ libva_x11_backend      = libva-x11.la
+ libva_x11_backenddir   = x11
+ 
+ libva_x11_la_SOURCES = 
+-libva_x11_la_LIBADD  = $(libvacorelib) x11/libva_x11.la $(LIBVA_LIBS) $(X11_LIBS) $(XEXT_LIBS) $(DRM_LIBS) $(XFIXES_LIBS) -ldl
++libva_x11_la_LIBADD  = $(libvacorelib) x11/libva_x11.la $(LIBVA_LIBS) $(X11_LIBS) $(XEXT_LIBS) $(DRM_LIBS) $(XFIXES_LIBS)
+ libva_x11_la_LDFLAGS = $(LDADD)
+ libva_x11_la_DEPENDENCIES = $(libvacorelib) x11/libva_x11.la
+ 
+@@ -65,7 +65,7 @@ libva_glx_backend      = libva-glx.la
+ libva_glx_backenddir   = glx
+ 
+ libva_glx_la_SOURCES =
+-libva_glx_la_LIBADD  = $(libvacorelib) glx/libva_glx.la libva-x11.la $(GL_DEPS_LIBS) -ldl
++libva_glx_la_LIBADD  = $(libvacorelib) glx/libva_glx.la libva-x11.la $(GL_DEPS_LIBS)
+ libva_glx_la_LDFLAGS = $(LDADD)
+ libva_glx_la_DEPENDENCIES = $(libvacorelib) glx/libva_glx.la libva-x11.la
+ 

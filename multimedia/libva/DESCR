@@ -1,0 +1,4 @@
+VAAPI (Video Acceleration API) enables hardware accelerated video
+decode/encode at various entry-points (VLD, IDCT, Motion Compensation etc.)
+for the prevailing coding standards today (MPEG-2, MPEG-4 ASP/H.263, MPEG-4
+AVC/H.264, and VC-1/VMW3).
