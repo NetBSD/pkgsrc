@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.91 2011/01/19 09:30:09 tron Exp $
+$NetBSD: CHANGES-2011,v 1.92 2011/01/19 12:12:11 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added multimedia/hwdecode-demos version 0.9.4 [jmcneill 2011-01-18]
 	Updated devel/global to 5.9.3 [uebayasi 2011-01-19]
 	Updated multimedia/mplayer to 1.0rc20100913nb4 [tron 2011-01-19]
+	Updated pkgtools/pkgin to 0.3.3.3 [imil 2011-01-19]
