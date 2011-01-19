@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/01/19 19:47:59 kefren Exp $
+
+delinuxify install script
+
+--- install.sh.orig	2007-10-30 11:23:37.000000000 +0200
++++ install.sh	2011-01-19 21:32:39.000000000 +0200
+@@ -22,30 +22,13 @@
+     mkdir -p "$BINDIR"
+     mkdir -p "$DATADIR"
+ 
+-    install -v pingus "$BINDIR/pingus"
++    install pingus "$BINDIR/pingus"
+ 
+-    find data/ \
+-        -type f -a  \( \
+-        -name "*.png" -o \
+-        -name "*.jpg" -o \
+-        -name "*.wav" -o \
+-        -name "*.scm" -o \
+-        -name "*.font" -o \
+-        -name "*.it" -o \
+-        -name "*.ogg" -o \
+-        -name "*.s3m" -o \
+-        -name "*.po" -o \
+-        -name "*.worldmap" -o \
+-        -name "*.res" -o \
+-        -name "*.pingus" -o \
+-        -name "*.levelset" \
+-        \) -exec cp --parents -v {} "$DATADIR" \;
++    # Don't install regen scripts
++    rm -f data/gen-scrfile.scm data/po/extract-levels.guile \
++       data/po/extract-strings.rb data/po/update-po.sh
++    cp -Rp data "$DATADIR"
+         
+-   echo ""
+-   echo "Pingus installation complete, you can start the games with:"
+-   echo ""
+-   echo "  ${BINDIR}pingus"
+-   echo
+ fi
+ 
+ # EOF #

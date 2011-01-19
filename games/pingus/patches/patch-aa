@@ -1,0 +1,60 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/19 19:47:59 kefren Exp $
+
+NetBSD config & path fixes
+
+--- SConstruct.orig	2010-03-18 15:34:15.000000000 +0200
++++ SConstruct	2011-01-19 20:02:53.000000000 +0200
+@@ -19,7 +19,7 @@
+ ##  along with this program; if not, write to the Free Software
+ ##  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
+-import sys, os
++import sys, os, re
+ import SCons.Util
+ 
+ pingus_sources = [
+@@ -348,7 +348,10 @@
+ 
+    opts.Add(BoolVariable('with_xinput',        'Build with Xinput support', False))
+    opts.Add(BoolVariable('with_linuxusbmouse', 'Build with Linux USB mouse support', True))
+-   opts.Add(BoolVariable('with_linuxevdev',    'Build with Linux evdev support', True))
++   if sys.platform == 'linux':
++      opts.Add(BoolVariable('with_linuxevdev',    'Build with Linux evdev support', True))
++   else:
++      opts.Add(BoolVariable('with_linuxevdev',    'Build with Linux evdev support', False))
+    opts.Add(BoolVariable('with_wiimote',       'Build with Wiimote support', False))
+    opts.Add(BoolVariable('ignore_errors',      'Ignore any fatal configuration errors', False))
+    opts.Add('optional_sources', 'Additional source files', [])
+@@ -383,7 +386,10 @@
+    return 0;
+ }
+ """
+-   config.CheckLibWithHeader('iconv', 'iconv.h', 'c++') # Ok to fail
++   if re.match("netbsd*", sys.platform):
++     config.CheckLibWithHeader('iconv_std', 'iconv.h', 'c++')
++   else:
++     config.CheckLibWithHeader('iconv', 'iconv.h', 'c++') # Ok to fail
+    context.Message('Check how to call iconv...')
+ 
+    for i in ['', 'const']:
+@@ -478,8 +484,8 @@
+     if not config.CheckLibWithHeader('boost_signals', 'boost/signals.hpp', 'c++'):
+         fatal_error += "  * library 'boost_signals' not found\n"
+ 
+-    if not config.CheckLibWithHeader('png', 'png.h', 'c++'):
+-       fatal_error += "  * library 'png' not found\n"
++    if not config.CheckLibWithHeader('png14', 'png.h', 'c++'):
++       fatal_error += "  * library 'png14' not found\n"
+ 
+     if config.CheckMyProgram('sdl-config'):
+        env.ParseConfig('sdl-config  --cflags --libs')
+@@ -539,7 +545,8 @@
+     Help(opts.GenerateHelpText(env))
+ 
+     opts.Update(env)
+-    env['CPPPATH'] += ['.', 'src/']
++    env['CPPPATH'] += ['.', 'src/', 'BUILDLINK_DIR/include']
++    env['LIBPATH'] += ['BUILDLINK_DIR/lib', '/usr/lib/i18n']
+     Default(env.Program('pingus', pingus_sources + env['optional_sources']))
+     Clean('pingus', ['config.py', 'config.h'])
+ 
