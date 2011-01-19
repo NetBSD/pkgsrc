@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/01/19 22:13:04 hubertf Exp $
+
+--- rfc.orig	2011-01-19 21:50:02.000000000 +0000
++++ rfc
+@@ -105,7 +105,7 @@ if ($ARGV[0] eq "-i") {
+     print "original lines \t= $indexlength\t$indexpath\n";
+     #system ("$viewer -source http://www.faqs.org/rfc/rfc-index.txt > $indexpath");
+     #system ("$viewer -source http://www.dewn.com/rfc/rfc-index.txt > $indexpath");
+-    system ("$viewer -source http://ftp.isi.edu/in-notes/rfc-index.txt > $indexpath");
++    system ("$viewer -source http://www.ietf.org/download/rfc-index.txt | gunzip > $indexpath");
+     $indexlength=numlines($indexpath); print "new lines \t= $indexlength\t$indexpath\n";
+     exit }
+ 
