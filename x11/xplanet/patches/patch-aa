@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2011/01/19 10:23:54 tron Exp $
+
+Fix build with png-1.5.
+
+--- src/libimage/png.c.orig	2006-03-25 22:50:51.000000000 +0000
++++ src/libimage/png.c	2011-01-19 10:20:09.000000000 +0000
+@@ -57,7 +57,7 @@
+         return(0);
+     }
+   
+-    if (setjmp(png_ptr->jmpbuf))
++    if (setjmp(png_jmpbuf(png_ptr)))
+     {
+         png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp) NULL);
+         fclose(infile);
