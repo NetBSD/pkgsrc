@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 00:42:12 jmcneill Exp $
+include/X11/extensions/vldXvMC.h
+lib/libXvMCW.la
+share/examples/libXvMCW/XvMCConfig
