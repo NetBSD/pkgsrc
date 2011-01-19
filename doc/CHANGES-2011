@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.96 2011/01/19 17:53:10 tron Exp $
+$NetBSD: CHANGES-2011,v 1.97 2011/01/19 18:28:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -159,3 +159,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/x11-links to 0.63 [jmcneill 2011-01-19]
 	Updated print/tex-a4wide to 2010 [minskim 2011-01-19]
 	Updated print/tex-a4wide-doc to 2010 [minskim 2011-01-19]
+	Updated print/tex-advdate to 2010 [minskim 2011-01-19]
+	Updated print/tex-advdate-doc to 2010 [minskim 2011-01-19]
