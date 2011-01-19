@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2011/01/12 00:26:33 tron Exp $
+# $NetBSD: Makefile,v 1.57 2011/01/19 16:23:02 tron Exp $
 
-DISTNAME=	rpm2pkg-3.2.0
+DISTNAME=	rpm2pkg-3.2.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,10 +25,15 @@ WRKSRC=		${WRKDIR}
 
 .include "../../mk/compiler.mk"
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 ${PKGMANDIR}/cat8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 \
+	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
