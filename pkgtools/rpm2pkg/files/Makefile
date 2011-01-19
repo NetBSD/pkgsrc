@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1 2011/01/12 00:26:33 tron Exp $
+#	$NetBSD: Makefile,v 1.2 2011/01/19 11:49:18 tron Exp $
 
 PROG=		rpm2pkg
 SRCS=		fileio.c package-list.c parse-rpm.c rpm2pkg.c
@@ -8,6 +8,8 @@ MAN=		rpm2pkg.8
 BINDIR=		${PREFIX}/sbin
 LDADD=		-lbz2 -llzma -lz
 WARNS=		4
+
+NEED_OWN_INSTALL_TARGET=	yes
 
 #CFLAGS+=	-g
 #LDFLAGS+=	-g
