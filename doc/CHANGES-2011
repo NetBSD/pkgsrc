@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.93 2011/01/19 16:23:17 tron Exp $
+$NetBSD: CHANGES-2011,v 1.94 2011/01/19 16:34:20 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/mplayer to 1.0rc20100913nb4 [tron 2011-01-19]
 	Updated pkgtools/pkgin to 0.3.3.3 [imil 2011-01-19]
 	Updated pkgtools/rpm2pkg to 3.2.1 [tron 2011-01-19]
+	Updated pkgtools/x11-links to 0.63 [jmcneill 2011-01-19]
