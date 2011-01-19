@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/01/19 21:15:51 ryoon Exp $
+
+--- examples.mk.orig	2010-10-28 13:14:14.000000000 +0000
++++ examples.mk
+@@ -153,7 +153,6 @@ BINS-$(NOT_MSVS)           += $(addprefi
+ # Instantiate linker template for all examples.
+ CODEC_LIB=$(if $(CONFIG_DEBUG_LIBS),vpx_g,vpx)
+ $(foreach bin,$(BINS-yes),\
+-    $(if $(BUILD_OBJS),$(eval $(bin): $(LIB_PATH)/lib$(CODEC_LIB).a))\
+     $(if $(BUILD_OBJS),$(eval $(call linker_template,$(bin),\
+         $(call objs,$($(notdir $(bin)).SRCS)) \
+         -l$(CODEC_LIB) $(addprefix -l,$(CODEC_EXTRA_LIBS))\
