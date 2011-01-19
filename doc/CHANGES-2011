@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.87 2011/01/19 03:39:49 jmcneill Exp $
+$NetBSD: CHANGES-2011,v 1.88 2011/01/19 04:16:49 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -151,3 +151,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/mplayer to mplayer-1.0rc20100913nb3 [jmcneill 2011-01-18]
 	Updated print/cups to 1.4.6nb1 [sbd 2011-01-19]
 	Updated pkgtools/x11-links to 0.62 [jmcneill 2011-01-18]
+	Added multimedia/libva version 1.0.6 [jmcneill 2011-01-18]
