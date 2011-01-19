@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2011/01/19 00:12:50 tron Exp $
+$NetBSD: patch-ad,v 1.5 2011/01/19 19:14:15 drochner Exp $
 
 Fix build with png-1.5.
 
---- fig2dev/dev/readpng.c.orig	2003-01-13 19:16:41.000000000 +0000
-+++ fig2dev/dev/readpng.c	2011-01-19 00:09:24.000000000 +0000
-@@ -39,6 +39,8 @@
+--- fig2dev/dev/readpng.c.orig	2010-04-21 16:02:14.000000000 +0000
++++ fig2dev/dev/readpng.c
+@@ -39,6 +39,8 @@ read_png(file,filetype,pic,llx,lly)
      char	   *ptr;
      int		    num_palette;
      png_colorp	    palette;
@@ -13,7 +13,7 @@ Fix build with png-1.5.
      png_color_16    png_background;
  
      *llx = *lly = 0;
-@@ -62,7 +64,7 @@
+@@ -62,7 +64,7 @@ read_png(file,filetype,pic,llx,lly)
      }
  
      /* set long jump here */
@@ -22,31 +22,22 @@ Fix build with png-1.5.
  	/* if we get here there was a problem reading the file */
  	png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
  	return 0;
-@@ -78,14 +80,14 @@
+@@ -78,14 +80,14 @@ read_png(file,filetype,pic,llx,lly)
      png_get_IHDR(png_ptr, info_ptr, &w, &h, &bit_depth, &color_type,
  	&interlace_type, &compression_type, &filter_type);
  
 -    if (info_ptr->valid & PNG_INFO_gAMA)
 -	png_set_gamma(png_ptr, 2.2, info_ptr->gamma);
-+    if (png_get_gAMA(png_ptr, info_ptr, &gamma) & PNG_INFO_gAMA)
++    if (png_get_gAMA(png_ptr, info_ptr, &gamma))
 +	png_set_gamma(png_ptr, 2.2, gamma);
      else
  	png_set_gamma(png_ptr, 2.2, 0.45);
  
 -    if (info_ptr->valid & PNG_INFO_bKGD)
-+    if (png_get_bKGD(png_ptr, info_ptr, &file_background) & PNG_INFO_bKGD)
++    if (png_get_bKGD(png_ptr, info_ptr, &file_background))
  	/* set the background to the one supplied */
 -	png_set_background(png_ptr, &info_ptr->background,
 +	png_set_background(png_ptr, file_background,
  		PNG_BACKGROUND_GAMMA_FILE, 1, 1.0);
      else {
  	/* blend the canvas background using the alpha channel */
-@@ -127,7 +129,7 @@
- 
- 	if (png_get_PLTE(png_ptr, info_ptr, &palette, &num_palette)) {
- 	    png_get_hIST(png_ptr, info_ptr, &histogram);
--	    png_set_dither(png_ptr, palette, num_palette, 256, histogram, 0);
-+	    png_set_quantize(png_ptr, palette, num_palette, 256, histogram, 0);
- 	}
-     }
-     if (color_type == PNG_COLOR_TYPE_GRAY || color_type == PNG_COLOR_TYPE_GRAY_ALPHA) {
