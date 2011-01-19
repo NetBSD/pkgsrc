@@ -16,3 +16,7 @@ Pullup ticket #3324 - requested by obache
 archivers/star: build fix
 Pullup ticket #3326 - requested by tron
 archivers/star: build fix
+Pullup ticket #3327 - requested by markd
+Fix previous commit to Linux.bsd.man.mk
+Pullup ticket #3328 - requested by drochner
+tor security update
