@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libdrm,v 1.4 2010/05/31 21:20:02 wiz Exp $
+# $NetBSD: xorg.libdrm,v 1.5 2011/01/19 03:39:13 jmcneill Exp $
 #
 include/libdrm/drm.h
 include/libdrm/drm_mode.h
@@ -32,6 +32,14 @@ lib/libdrm.so.2.4
 lib/libdrm.so.3
 lib/libdrm.so.3.1
 lib/libdrm.so.3.2
+lib/libdrm_intel.a
+lib/libdrm_intel.so
+lib/libdrm_intel.so.0
+lib/libdrm_intel.so.0.0
+lib/libdrm_radeon.a
+lib/libdrm_radeon.so
+lib/libdrm_radeon.so.0
+lib/libdrm_radeon.so.0.0
 lib/pkgconfig/libdrm.pc
 lib/pkgconfig/libdrm_intel.pc
 lib/pkgconfig/libdrm_radeon.pc
