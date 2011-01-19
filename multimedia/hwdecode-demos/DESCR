@@ -1,0 +1,2 @@
+hwdecode-demos consists of simple test programs to address various HW
+video decoding APIs: Crystal HD, VA-API, VDPAU and XvBA.
