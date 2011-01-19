@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2011/01/13 13:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2011/01/19 03:01:06 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -137,6 +137,14 @@ SUBST_FILES.rpathfix=	cups-config.in
 SUBST_MESSAGE.rpathfix=	Adding rpath to cups-config.
 SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g'
 SUBST_STAGE.rpathfix=	post-patch
+
+.if !empty(OPSYS:MNetBSD) && !empty(MACHINE_ARCH:Mpowerpc)
+SUBST_CLASSES+=		piefix
+SUBST_FILES.piefix=	Makedefs.in
+SUBST_MESSAGE.piefix=	Removing PIE flags
+SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
+SUBST_STAGE.piefix=	post-patch
+.endif
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR}
