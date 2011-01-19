@@ -1,2 +1,0 @@
-libXvMC is a wrapper for XvMC libraries that allows the X server or user to
-specify the hardware dependent XvMC library at run-time.
