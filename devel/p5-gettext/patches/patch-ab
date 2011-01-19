@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2011/01/19 13:18:27 adam Exp $
+
+--- Makefile.PL.orig	2005-01-30 23:30:22.000000000 +0000
++++ Makefile.PL
+@@ -3,7 +3,7 @@ use Config;
+ 
+ my $cc;
+ if (defined($ENV{'CC'})) {
+-	$cc = $ENV{'CC'};
++	$cc = $ENV{'CC'}." ".$ENV{'CFLAGS'};
+ } else {
+ 	$cc = $Config{'cc'};
+ }
