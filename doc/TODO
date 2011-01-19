@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10022 2011/01/19 03:28:58 sbd Exp $
+$NetBSD: TODO,v 1.10023 2011/01/19 04:27:37 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -680,8 +680,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade3-3.6.7 [GNOME 2.26]
-	o global-5.7.2 [pkg/39760]
-	o global-5.9.2
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
