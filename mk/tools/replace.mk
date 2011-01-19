@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.229 2010/09/07 17:33:40 tron Exp $
+# $NetBSD: replace.mk,v 1.230 2011/01/19 13:05:39 jym Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -885,7 +885,7 @@ TOOLS_VALUE_GNU.yacc=		${TOOLS_CMDLINE.yacc}
 
 ######################################################################
 
-# These tools are all supplied by the sysutuils/coreutils package if
+# These tools are all supplied by the sysutils/coreutils package if
 # there is no native tool available.
 #
 _TOOLS.coreutils=	basename cat chgrp chmod chown cp cut date	\
