@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.92 2011/01/19 12:12:11 imil Exp $
+$NetBSD: CHANGES-2011,v 1.93 2011/01/19 16:23:17 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -156,3 +156,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/global to 5.9.3 [uebayasi 2011-01-19]
 	Updated multimedia/mplayer to 1.0rc20100913nb4 [tron 2011-01-19]
 	Updated pkgtools/pkgin to 0.3.3.3 [imil 2011-01-19]
+	Updated pkgtools/rpm2pkg to 3.2.1 [tron 2011-01-19]
