@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.4 2010/12/21 22:43:17 shattered Exp $
+$NetBSD: distinfo,v 1.5 2011/01/19 22:57:13 shattered Exp $
 
 SHA1 (memconf-2.16/memconf.gz) = b6f4b736cac388dddc5070670351cf7262aba048
 RMD160 (memconf-2.16/memconf.gz) = ef3fac05eebc32d89624f70fd9de032ea9743297
 Size (memconf-2.16/memconf.gz) = 69394 bytes
+SHA1 (memconf-2.16/memconf.man) = 32bb367ad116a2e47a5e730a18f7702ddaac4a51
+RMD160 (memconf-2.16/memconf.man) = 1ef9c37d069a04878e11ca6538b622c1c01b7e3c
+Size (memconf-2.16/memconf.man) = 2973 bytes
 SHA1 (patch-aa) = 9dd88ace5ee17e41eb391ee4e831bccf50f63c9e
