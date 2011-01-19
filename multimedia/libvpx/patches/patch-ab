@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/01/19 21:15:51 ryoon Exp $
+
+--- libs.mk.orig	2010-10-28 13:14:14.000000000 +0000
++++ libs.mk
+@@ -176,8 +176,8 @@ endif
+ else
+ LIBVPX_OBJS=$(call objs,$(CODEC_SRCS))
+ OBJS-$(BUILD_LIBVPX) += $(LIBVPX_OBJS)
+-LIBS-$(BUILD_LIBVPX) += $(BUILD_PFX)libvpx.a $(BUILD_PFX)libvpx_g.a
+-$(BUILD_PFX)libvpx_g.a: $(LIBVPX_OBJS)
++LIBS-$(BUILD_LIBVPX) += $(BUILD_PFX)libvpx.a
++$(BUILD_PFX)libvpx.a: $(LIBVPX_OBJS)
+ 
+ BUILD_LIBVPX_SO         := $(if $(BUILD_LIBVPX),$(CONFIG_SHARED))
+ LIBVPX_SO               := libvpx.so.$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)
