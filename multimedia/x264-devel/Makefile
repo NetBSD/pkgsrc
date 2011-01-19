@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/01/19 00:16:38 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2011/01/19 02:04:02 dsainty Exp $
 
 SNAPSHOT_DATE=		20110101
 
@@ -25,15 +25,13 @@ CFLAGS+=	-DHAVE_STDLIB_H
 # "libtool" to create shared libraries. We therefore need to switch
 # them off even if the C versions are slower.
 .if ${MACHINE_ARCH} == "i386"
-.  if ${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" ||
-      ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-asm
 .  else
 BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
 .  endif
 .elif ${MACHINE_ARCH} == "x86_64"
-.  if ${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" ||
-      ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-asm
 .  else
 BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
