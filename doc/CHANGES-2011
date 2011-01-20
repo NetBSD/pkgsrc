@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.100 2011/01/19 23:31:22 jmmv Exp $
+$NetBSD: CHANGES-2011,v 1.101 2011/01/20 08:56:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -162,5 +162,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-advdate to 2010 [minskim 2011-01-19]
 	Updated print/tex-advdate-doc to 2010 [minskim 2011-01-19]
 	Added games/pingus version 0.7.3 [kefren 2011-01-19]
-	Added multimedia/libvpx version 0.9.5 [ryoon 2011-01-20]
 	Added net/libdmapsharing version 2.1.9 [jmmv 2011-01-19]
+	Added multimedia/libvpx version 0.9.5 [ryoon 2011-01-20]
+	Updated security/gnupg2 to 2.0.17 [adam 2011-01-20]
