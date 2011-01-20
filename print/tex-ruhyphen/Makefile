@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 20:50:12 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/20 16:27:15 minskim Exp $
 
 DISTNAME=	ruhyphen
 PKGNAME=	tex-${DISTNAME}-1.6
-TEXLIVE_REV=	18394
+TEXLIVE_REV=	21081
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Russian hyphenation
