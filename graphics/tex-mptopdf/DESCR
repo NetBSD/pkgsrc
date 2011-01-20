@@ -1,0 +1,7 @@
+The mptopdf script does standalone conversion from mpost to PDF, using
+the supp-* and syst-* files.  They also allow native MetaPost graphics
+inclusion in LaTeX (via pdftex.def) and ConTeXt.  They can be used
+independently of the rest of ConTeXt, yet are maintained as part of it.
+So in TeX Live we pull them out to this separate package for the benefit
+of LaTeX users who do not install the rest of ConTeXt.  This can be
+found on CTAN in macros/pdftex/graphics.
