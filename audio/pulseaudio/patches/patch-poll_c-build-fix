@@ -1,0 +1,21 @@
+$NetBSD: patch-poll_c-build-fix,v 1.1 2011/01/20 13:08:59 ahoka Exp $
+
+--- src/pulsecore/poll.c.orig	2009-03-05 11:28:10.000000000 +0000
++++ src/pulsecore/poll.c
+@@ -41,11 +41,16 @@
+ #include <sys/select.h>
+ #endif
+ 
++#ifdef HAVE_SYS_SOCKET_H
++#include <sys/socket.h>
++#endif
++
+ #include "winsock.h"
+ 
+ #ifndef HAVE_POLL_H
+ 
+ #include <pulsecore/core-util.h>
++#include <pulse/util.h>
+ 
+ #include "poll.h"
+ 
