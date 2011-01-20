@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2011/01/20 11:23:54 markd Exp $
+
+Add <cstring> for memcpy(). Fixes build on ArchLinux
+
+--- exrenvmap/blurImage.cpp.orig	2009-02-26 12:39:27.000000000 +1300
++++ exrenvmap/blurImage.cpp	2011-01-18 11:39:58.539804898 +1300
+@@ -43,6 +43,7 @@
+ 
+ #include <resizeImage.h>
+ #include "Iex.h"
++#include <cstring>
+ #include <iostream>
+ #include <algorithm>
+ 
