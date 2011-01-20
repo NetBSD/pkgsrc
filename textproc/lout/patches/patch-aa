@@ -1,23 +1,24 @@
-$NetBSD: patch-aa,v 1.6 2010/06/28 10:41:53 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2011/01/20 09:46:56 adam Exp $
 
---- makefile.orig	2002-10-15 23:11:05.000000000 +0000
+--- makefile.orig	2008-10-13 21:35:17.000000000 +0000
 +++ makefile
-@@ -276,10 +276,10 @@ SAFEDFT = 0
- DEBUGGING = 1
- TRACING = -g
+@@ -269,11 +269,11 @@ TRACING =
+ # DEBUGGING = 1
+ # TRACING = -g
  
--BINDIR	= /home/jeff/bin
--LIBDIR	= /home/jeff/lout.lib
--DOCDIR	= /home/jeff/lout.doc
--MANDIR	= /home/jeff/lout.man
-+BINDIR	= ${DESTDIR}@PREFIX@/bin
-+LIBDIR	= ${DESTDIR}@PREFIX@/share/lout
-+DOCDIR	= ${DESTDIR}@PREFIX@/share/doc/lout
-+MANDIR	= ${DESTDIR}@PREFIX@/${PKGMANDIR}/man1
+-PREFIX	= /home/jeff
++PREFIX	= ${DESTDIR}/usr/pkg
+ BINDIR	= $(PREFIX)/bin
+-LOUTLIBDIR	= $(PREFIX)/lout.lib
+-LOUTDOCDIR	= $(PREFIX)/lout.doc
+-MANDIR	= $(PREFIX)/lout.man
++LOUTLIBDIR	= $(PREFIX)/share/lout
++LOUTDOCDIR	= $(PREFIX)/share/doc/lout
++MANDIR	= $(PREFIX)/${PKGMANDIR}/man1
  
  LIBFONT = font
  LIBMAPS = maps
-@@ -297,8 +297,8 @@ LOC_DE	= de
+@@ -291,17 +291,16 @@ LOC_DE	= de
  
  COLLATE	= 1
  
@@ -27,17 +28,54 @@ $NetBSD: patch-aa,v 1.6 2010/06/28 10:41:53 joerg Exp $
 +ZLIB		= -lz
  ZLIBPATH	=
  
- CC	= gcc
-@@ -392,7 +392,7 @@ install: lout prg2lout
- 	chmod 755 $(LIBDIR)/$(LIBLOCA)
+-CC	= gcc
+ 
+ RCOPY	= cp -r
+ 
+-COPTS	= -ansi -pedantic -Wall -O3
++COPTS	= -ansi -pedantic -Wall
+ 
+-CFLAGS	= -DOS_UNIX=$(OSUNIX)					\
++CFLAGS	+= -DOS_UNIX=$(OSUNIX)					\
+ 	  -DOS_DOS=$(OSDOS)					\
+ 	  -DOS_MAC=$(OSMAC)					\
+ 	  -DDB_FIX=$(DBFIX)					\
+@@ -333,7 +332,7 @@ OBJS	= z01.o z02.o z03.o z04.o z05.o z06
+ 	  z49.o z50.o z51.o z52.o
+ 
+ lout:	$(OBJS)
+-	$(CC) -o lout $(OBJS) $(ZLIB) -lm
++	$(CC) $(CFLAGS) $(LDFLAGS) -o lout $(OBJS) $(ZLIB) -lm
+ 	chmod a+x lout
+ 
+ $(OBJS): externs.h
+@@ -341,7 +340,7 @@ $(OBJS): externs.h
+ externs.h:
+ 
+ prg2lout:	prg2lout.c
+-	$(CC) $(COPTS) -o prg2lout prg2lout.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o prg2lout prg2lout.c
+ 	chmod a+x prg2lout
+ 
+ all:	lout prg2lout
+@@ -387,7 +386,7 @@ install: lout prg2lout
+ 	chmod 755 $(LOUTLIBDIR)/$(LIBLOCA)
  	@echo ""
  	@echo "(c) Initializing run (should be silent, no errors expected)"
--	$(BINDIR)/lout -x -s $(LIBDIR)/$(LIBINCL)/init
-+	$(BINDIR)/lout -D $(LIBDIR)/$(LIBDATA) -H $(LIBDIR)/$(LIBHYPH) -I $(LIBDIR)/$(LIBINCL) -x -s $(LIBDIR)/$(LIBINCL)/init
+-	$(BINDIR)/lout -x -s $(LOUTLIBDIR)/$(LIBINCL)/init
++	$(BINDIR)/lout -D $(LIBDIR)/$(LIBDATA) -H $(LIBDIR)/$(LIBHYPH) -I $(LIBDIR)/$(LIBINCL) -x -s $(LOUTLIBDIR)/$(LIBINCL)/init
  	@echo ""
  	@echo "(d) Changing mode of files just created by initializing run"
- 	chmod 644 $(LIBDIR)/$(LIBDATA)/*
-@@ -450,3 +450,6 @@ clean:	
+ 	chmod 644 $(LOUTLIBDIR)/$(LIBDATA)/*
+@@ -406,6 +405,7 @@ installman:
+ installdoc:
+ 	@echo ""
+ 	@echo "Creating LOUTDOCDIR $(LOUTDOCDIR) and copying documentation into it"
++	mkdir $(LOUTDOCDIR)
+ 	$(RCOPY) doc/* $(LOUTDOCDIR)
+ 	chmod 755 $(LOUTDOCDIR)
+ 	chmod 755 $(LOUTDOCDIR)/*
+@@ -447,3 +447,6 @@ clean:	
  	-rm -f lout prg2lout *.o
  
  restart:	clean uninstall
