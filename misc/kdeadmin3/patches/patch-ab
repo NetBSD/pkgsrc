@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2011/01/20 12:05:57 markd Exp $
+
+--- kpackage/packageDisplay.cpp.orig	2005-10-10 14:53:28.000000000 +0000
++++ kpackage/packageDisplay.cpp
+@@ -389,7 +389,7 @@ void packageDisplayWidget::updateFileLis
+      KURL url;
+      if (package && package->packageState == packageInfo::INSTALLED) {
+        url.setPath( fileList->item2Path(index) ); // from local file to URL
+-       KRun::displayOpenWithDialog(KURL::List::List(url) );
++       KRun::displayOpenWithDialog(KURL::List(url) );
+       }      
+  }
+  
