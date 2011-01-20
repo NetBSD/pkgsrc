@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/15 20:44:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/01/20 16:23:59 minskim Exp $
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.m
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.sh
 share/texmf-dist/scripts/pgfplots/pgf2pdf.sh
@@ -17,9 +17,11 @@ share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.t
 share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex
 share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code.tex
 share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.coltype.code.tex
+share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_misc.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfcoreexternal.code.tex
+share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfcoreimage.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfkeys.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfkeysfiltered.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgflibraryfpu.code.tex
@@ -28,11 +30,13 @@ share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmanua
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmanual.pdflinks.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmanual.prettyprinter.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmathfloat.code.tex
+share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmathparse.opt.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_tikzexternal.sty
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_tikzexternalshared.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_tikzlibraryexternal.code.tex
 share/texmf-dist/tex/generic/pgfplots/oldpgfplotscompatib/tikzlibrarydateplot.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex
@@ -42,6 +46,7 @@ share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-
 share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
 share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
 share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+share/texmf-dist/tex/latex/pgfplots/bugtracker.sty
 share/texmf-dist/tex/latex/pgfplots/libs/tikzlibrarypgfplots.clickable.code.tex
 share/texmf-dist/tex/latex/pgfplots/libs/tikzlibrarypgfplotsclickable.code.tex
 share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
