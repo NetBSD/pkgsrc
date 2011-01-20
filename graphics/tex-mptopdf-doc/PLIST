@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/20 17:08:16 minskim Exp $
+man/man1/mptopdf.1
