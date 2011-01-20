@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10027 2011/01/20 08:56:47 adam Exp $
+$NetBSD: TODO,v 1.10028 2011/01/20 09:55:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -725,7 +725,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grep-2.7
 	o grhino-0.16.1
 	o groff-1.21
-	o gsasl-1.6.0
 	o gsharutils-4.10
 	o gss-1.0.1
 	o gssdp-0.9.1
@@ -882,7 +881,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
 	o libltdl-2.4
-	o liblzo-2.02
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
 	o libmp3splt-0.5.8
@@ -916,7 +914,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
 	o lottanzb-0.5.3
-	o lout-3.38
 	o lpairs-1.0.4
 	o lq-sp-1.3.4.13
 	o luit-1.1.0
@@ -1139,7 +1136,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-markdown-2.0.3 [pkg/43448]
 	o py-matplotlib-0.99.3
 	o py-networkx-1.2 [pkg/43790]
-	o py-psycopg2-2.3.2
 	o py-sybase-0.37
 	o py-twisted-10.2.0
 	o py-uwsgi-0.9.5.1 [pkg/43400]
