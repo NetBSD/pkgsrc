@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.107 2011/01/20 17:09:45 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.108 2011/01/20 17:21:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -176,3 +176,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-amscls-doc to 2010.20248 [minskim 2011-01-20]
 	Added graphics/tex-mptopdf version 2010 [minskim 2011-01-20]
 	Added graphics/tex-mptopdf-doc version 2010 [minskim 2011-01-20]
+	Updated print/tex-collection-latex to 2010 [minskim 2011-01-20]
+	Updated print/tex-collection-latex-doc to 2010 [minskim 2011-01-20]
