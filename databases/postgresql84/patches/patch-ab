@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/07/29 06:26:18 adam Exp $
+$NetBSD: patch-ab,v 1.2 2011/01/20 12:38:49 markd Exp $
 
 --- configure.orig	2009-06-27 02:14:46.000000000 +0200
 +++ configure
@@ -21,3 +21,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/07/29 06:26:18 adam Exp $
  if test -z "$perl_embed_ldflags" ; then
  	{ echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6; }
+@@ -18537,10 +18536,10 @@ done
+ 
+ fi
+ 
+-# Some versions of libedit contain strlcpy(); so disregard that library while
++# Some versions of libedit and libroken contain strlcpy(); so disregard that library while
+ # checking for these standard libc functions.
+ pgac_save_LIBS="$LIBS"
+-LIBS=`echo "$LIBS" | sed -e 's/-ledit//g' -e 's/-lreadline//g'`
++LIBS=`echo "$LIBS" | sed -e 's/-ledit//g' -e 's/-lreadline//g' -e 's/-lgssapi//g' -e 's/-lkrb5//g'`
+ 
+ 
+ 
