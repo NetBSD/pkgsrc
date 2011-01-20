@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2011/01/20 12:10:23 markd Exp $
+bin/apogee_ppi
+bin/meade_lpi
+bin/sbigccd
+bin/v4ldriver
+bin/v4lphilips
