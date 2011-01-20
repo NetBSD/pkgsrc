@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gpgsm,v 1.10 2010/09/02 06:58:35 obache Exp $
+@comment $NetBSD: PLIST.gpgsm,v 1.11 2011/01/20 08:54:56 adam Exp $
 bin/gpg-connect-agent
 bin/gpg2
 bin/gpgconf
@@ -46,7 +46,6 @@ share/doc/gnupg/examples/gpgconf.conf
 share/doc/gnupg/examples/pwpattern.list
 share/doc/gnupg/examples/scd-event
 share/doc/gnupg/examples/trustlist.txt
-share/doc/gnupg/faq.html
 share/gnupg/com-certs.pem
 share/gnupg/gpg-conf.skel
 share/gnupg/help.be.txt
