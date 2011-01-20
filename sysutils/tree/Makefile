@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/08 05:20:02 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/20 15:54:28 wiz Exp $
 #
 
 DISTNAME=	tree-1.5.1.1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	cjs@NetBSD.org
 HOMEPAGE=	http://mama.indstate.edu/users/ice/tree/
 COMMENT=	Print a text or HTML tree diagram of a directory structure
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
