@@ -1,7 +1,16 @@
-$NetBSD: patch-ag,v 1.3 2006/10/12 10:47:18 markd Exp $
+$NetBSD: patch-ag,v 1.4 2011/01/20 12:19:30 markd Exp $
 
---- kopete/protocols/oscar/liboscar/rtf.cc.orig	2005-09-10 20:20:23.000000000 +1200
+--- kopete/protocols/oscar/liboscar/rtf.cc.orig	2005-09-10 08:20:23.000000000 +0000
 +++ kopete/protocols/oscar/liboscar/rtf.cc
+@@ -2131,7 +2131,7 @@ void Level::setText(const char *str)
+ 
+         FontDef& def = p->fonts[m_nFont-1];
+ 
+-        char *pp = strchr(str, ';');
++        const char *pp = strchr(str, ';');
+         unsigned size;
+         if (pp != NULL)
+            size = (pp - str);
 @@ -2194,7 +2194,7 @@ const unsigned RED			= 2;
  const unsigned GREEN		= 3;
  const unsigned BLUE			= 4;
