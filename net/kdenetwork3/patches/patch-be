@@ -1,0 +1,16 @@
+$NetBSD: patch-be,v 1.1 2011/01/20 12:19:30 markd Exp $
+
+aligned_u64/__aligned_u64 mixup on ArchLinux
+
+--- kppp/pppstats.cpp.orig	2008-02-13 09:37:48.000000000 +0000
++++ kppp/pppstats.cpp
+@@ -41,6 +41,9 @@
+ 
+ #include <config.h>
+ 
++#if defined(linux)
++#define aligned_u64 __aligned_u64
++#endif
+ #include <ctype.h>
+ #include <errno.h>
+ 

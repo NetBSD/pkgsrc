@@ -1,0 +1,16 @@
+$NetBSD: patch-bd,v 1.1 2011/01/20 12:19:30 markd Exp $
+
+aligned_u64/__aligned_u64 mixup on ArchLinux
+
+--- kppp/opener.cpp.orig	2008-02-13 09:37:48.000000000 +0000
++++ kppp/opener.cpp
+@@ -36,6 +36,9 @@
+ 
+ #include <config.h>
+ 
++#if defined(linux)
++#define aligned_u64 __aligned_u64
++#endif
+ #if defined(__osf__) || defined(__svr4__)
+ #define _POSIX_PII_SOCKET
+ extern "C" int sethostname(char *name, int name_len);

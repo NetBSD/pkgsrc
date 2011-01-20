@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2011/01/20 12:19:30 markd Exp $
+
+--- kopete/protocols/testbed/testbedaccount.h.orig	2006-10-01 17:26:55.000000000 +0000
++++ kopete/protocols/testbed/testbedaccount.h
+@@ -59,7 +59,7 @@ public:
+ 	/**
+ 	 * 'Connect' to the testbed server.  Only sets myself() online.
+ 	 */
+-	virtual void connect( const Kopete::OnlineStatus& initialStatus = Kopete::OnlineStatus::OnlineStatus() );
++	virtual void connect( const Kopete::OnlineStatus& initialStatus = Kopete::OnlineStatus() );
+ 	/**
+ 	 * Disconnect from the server.  Only sets myself() offline.
+ 	 */
