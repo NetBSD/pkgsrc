@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.9 2006/10/12 10:47:18 markd Exp $
+$NetBSD: patch-af,v 1.10 2011/01/20 12:19:30 markd Exp $
 
---- kopete/protocols/groupwise/libgroupwise/rtf.cc.orig	2005-09-10 20:20:20.000000000 +1200
+--- kopete/protocols/groupwise/libgroupwise/rtf.cc.orig	2005-09-10 08:20:20.000000000 +0000
 +++ kopete/protocols/groupwise/libgroupwise/rtf.cc
+@@ -2235,7 +2235,7 @@ void Level::setText(const char *str)
+ 
+         FontDef& def = p->fonts[m_nFont-1];
+ 
+-        char *pp = strchr(str, ';');
++        const char *pp = strchr(str, ';');
+         unsigned size;
+         if (pp != NULL)
+            size = (pp - str);
 @@ -2298,7 +2298,7 @@ const unsigned RED			= 2;
  const unsigned GREEN		= 3;
  const unsigned BLUE			= 4;
