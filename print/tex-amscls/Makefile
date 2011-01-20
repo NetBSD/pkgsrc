@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/09/24 20:20:58 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/20 16:37:17 minskim Exp $
 
 DISTNAME=	amscls
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	18435
+PKGNAME=	tex-${DISTNAME}-2010.20248
+TEXLIVE_REV=	20248
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	AMS document classes for LaTeX
