@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/11 20:49:55 minskim Exp $
-# TeX Live Revision 17126
+# $NetBSD: Makefile,v 1.2 2011/01/20 16:16:43 minskim Exp $
 
 DISTNAME=	breakcites
-PKGNAME=	tex-${DISTNAME}-2009
+PKGNAME=	tex-${DISTNAME}-2010
+TEXLIVE_REV=	21014
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX package to a line break in multiple citations

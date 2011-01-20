@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/11 20:50:07 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/01/20 16:16:44 minskim Exp $
 
-SHA1 (tex-breakcites-doc-2009/breakcites.doc.tar.xz) = f18b5532e1ce5b87135d4795145305b31ebbd54e
-RMD160 (tex-breakcites-doc-2009/breakcites.doc.tar.xz) = 2cbb5c03c7d0c01051cd38598641c746821115b2
-Size (tex-breakcites-doc-2009/breakcites.doc.tar.xz) = 147932 bytes
+SHA1 (tex-breakcites-21014/breakcites.doc.tar.xz) = 2f9f8235eb3aa1a89d26bec04c3c243a82a154cc
+RMD160 (tex-breakcites-21014/breakcites.doc.tar.xz) = 6a766de0bbb19db950b28abddf11d306ee944f0a
+Size (tex-breakcites-21014/breakcites.doc.tar.xz) = 148116 bytes
