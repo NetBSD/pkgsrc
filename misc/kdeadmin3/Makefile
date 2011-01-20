@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2011/01/13 13:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2011/01/20 12:05:56 markd Exp $
 
 DISTNAME=	kdeadmin-${_KDE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	6
 CATEGORIES=	misc
 COMMENT=	System administration tools for the KDE integrated X11 desktop
 
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--with-shadow
 .else
 CONFIGURE_ARGS+=	--without-shadow
 .endif
-CONFIGURE_ENV+=		DO_NOT_COMPILE=ksysv
+CONFIGURE_ENV+=		DO_NOT_COMPILE="ksysv kdat"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
