@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/09/07 06:13:12 adam Exp $
+$NetBSD: distinfo,v 1.7 2011/01/20 09:55:30 adam Exp $
 
-SHA1 (psycopg2-2.2.2.tar.gz) = 850f6bfa2bf986376b45e49334b7f153a33e4960
-RMD160 (psycopg2-2.2.2.tar.gz) = df51d6bfe81a603cfac54afe2c5eb07de165c0ab
-Size (psycopg2-2.2.2.tar.gz) = 530021 bytes
+SHA1 (psycopg2-2.3.2.tar.gz) = 221c1b7d3c1d352ff0bad7ee5ca13fea6e9be3d0
+RMD160 (psycopg2-2.3.2.tar.gz) = 4b0247a9cb823ce172e00b79af230777c4e6c0e6
+Size (psycopg2-2.3.2.tar.gz) = 587987 bytes
