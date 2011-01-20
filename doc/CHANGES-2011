@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.110 2011/01/20 20:25:41 gavan Exp $
+$NetBSD: CHANGES-2011,v 1.111 2011/01/20 21:37:57 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -180,3 +180,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-collection-latex-doc to 2010 [minskim 2011-01-20]
 	Updated pkgtools/pkgin to 0.3.3.4 [imil 2011-01-20]
 	Updated multimedia/ffmpegthumbnailer to 2.0.6 [gavan 2011-01-20]
+	Added misc/ruby-commander version 4.0.2 [tonnerre 2011-01-20]
