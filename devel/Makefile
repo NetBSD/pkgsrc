@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1420 2011/01/13 15:57:56 drochner Exp $
+# $NetBSD: Makefile,v 1.1421 2011/01/20 21:39:46 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -406,6 +406,7 @@ SUBDIR+=	memcached
 SUBDIR+=	menhir
 SUBDIR+=	mercurial
 SUBDIR+=	mico
+SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
 SUBDIR+=	mono-addins
 SUBDIR+=	mono-tools
