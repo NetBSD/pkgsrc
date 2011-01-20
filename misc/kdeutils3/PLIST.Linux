@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2011/01/20 12:23:36 markd Exp $
+lib/kde3/kcm_kvaio.la
+lib/kde3/kmilo_delli8k.la
+lib/kde3/kmilo_kvaio.la
+share/applications/kde/kvaio.desktop
+share/kde/services/kmilo/kmilo_delli8k.desktop
+share/kde/services/kmilo/kmilo_kvaio.desktop
