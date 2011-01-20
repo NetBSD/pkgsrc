@@ -1,0 +1,18 @@
+	$NetBSD: patch-ac,v 1.3 2011/01/20 13:06:15 pooka Exp $
+
+--- src/npw-viewer.sh.orig	2008-12-14 12:24:19.000000000 +0100
++++ src/npw-viewer.sh	2011-01-19 12:20:26.000000000 +0100
+@@ -40,6 +40,13 @@
+     ;;
+ esac
+ 
++case $OS in
++FreeBSD|NetBSD)
++    # preset LD_PRELOAD is most likely for the native emul
++    unset LD_PRELOAD
++    ;;
++esac
++
+ if test "$ARCH" != "$TARGET_ARCH"; then
+     case $TARGET_ARCH in
+     i386)
