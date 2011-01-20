@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2011/01/20 13:08:59 ahoka Exp $
+# $NetBSD: Makefile,v 1.44 2011/01/20 14:23:42 ahoka Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
 
 PULSEAUDIO_VER=	0.9.21
-PKGREVISION=	8
+PKGREVISION=	7
 DISTNAME=	pulseaudio-${PULSEAUDIO_VER}
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
@@ -65,11 +65,6 @@ SUBST_SED.padsp=	-e 's@libpulsedsp\.so@${PREFIX}/lib/&@'
 .if ${OPSYS} == "NetBSD"
 # broken test for TLS
 CONFIGURE_ENV+=		cc_cv_tls___thread=no
-.endif
-# try to avoid an assertion in rtpoll.c (could be caused by a possible
-# bug in NetBSD-current's poll) by using the select(2) wrapper
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M5.99.*)
-CONFIGURE_ENV+=		ac_cv_header_poll_h=no
 .endif
 # see PR 42820
 .if ${OPSYS} == "NetBSD" && ${OS_VERSION:M4.*} != ""
