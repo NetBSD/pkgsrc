@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/01/19 19:47:59 kefren Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/20 23:41:02 wiz Exp $
 
 NetBSD config & path fixes
 
@@ -43,8 +43,8 @@ NetBSD config & path fixes
  
 -    if not config.CheckLibWithHeader('png', 'png.h', 'c++'):
 -       fatal_error += "  * library 'png' not found\n"
-+    if not config.CheckLibWithHeader('png14', 'png.h', 'c++'):
-+       fatal_error += "  * library 'png14' not found\n"
++    if not config.CheckLibWithHeader('png15', 'png.h', 'c++'):
++       fatal_error += "  * library 'png15' not found\n"
  
      if config.CheckMyProgram('sdl-config'):
         env.ParseConfig('sdl-config  --cflags --libs')
