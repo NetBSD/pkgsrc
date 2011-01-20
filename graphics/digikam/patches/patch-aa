@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.11 2011/01/20 23:37:36 wiz Exp $
+
+Fix build with png-1.5.
+
+--- libs/dimg/loaders/pngloader.cpp.orig	2010-11-22 17:47:36.000000000 +0000
++++ libs/dimg/loaders/pngloader.cpp
+@@ -494,7 +494,8 @@ bool PNGLoader::load(const QString& file
+ 
+     if (m_loadFlags & LoadICCData)
+     {
+-        png_charp   profile_name, profile_data=NULL;
++        png_charp   profile_name;
++        png_bytep   profile_data=NULL;
+         png_uint_32 profile_size;
+         int         compression_type;
+ 
+@@ -730,7 +731,7 @@ bool PNGLoader::save(const QString& file
+ 
+     if (!profile_rawdata.isEmpty())
+     {
+-        png_set_iCCP(png_ptr, info_ptr, (png_charp)("icc"), PNG_COMPRESSION_TYPE_BASE, profile_rawdata.data(), profile_rawdata.size());
++        png_set_iCCP(png_ptr, info_ptr, (png_charp)("icc"), PNG_COMPRESSION_TYPE_BASE, (png_bytep)profile_rawdata.data(), profile_rawdata.size());
+     }
+ 
+     // -------------------------------------------------------------------
