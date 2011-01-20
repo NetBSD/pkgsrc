@@ -1,0 +1,3 @@
+RUNAWK is a small wrapper for AWK interpreter that impements module system
+(similar to Perl's "use" command) and helps to write the standalone AWK
+programs. A few modules ready for use are also provided.
