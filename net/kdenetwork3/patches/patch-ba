@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2011/01/20 12:19:30 markd Exp $
+
+--- kopete/kopete/contactlist/kopetegroupviewitem.cpp.orig	2005-09-10 08:20:25.000000000 +0000
++++ kopete/kopete/contactlist/kopetegroupviewitem.cpp
+@@ -169,7 +169,7 @@ void KopeteGroupViewItem::refreshDisplay
+ 	// the sorting itself is rather slow. Therefore we call delayedSort, which tries
+ 	// to group multiple sort requests into one.
+ 	using namespace Kopete::UI::ListView;
+-	if ( ListView::ListView *lv = dynamic_cast<ListView::ListView *>( listView() ) )
++	if ( ListView *lv = dynamic_cast<ListView *>( listView() ) )
+ 		lv->delayedSort();
+ 	else
+ 		listView()->sort();
