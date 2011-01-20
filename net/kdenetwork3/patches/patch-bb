@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2011/01/20 12:19:30 markd Exp $
+
+--- kopete/kopete/chatwindow/krichtexteditpart.cpp.orig	2006-10-01 17:27:05.000000000 +0000
++++ kopete/kopete/chatwindow/krichtexteditpart.cpp
+@@ -38,7 +38,7 @@ public:
+ KopeteRichTextEditPart::KopeteRichTextEditPart( QWidget *wparent, const char *wname, QObject*, const char*, const QStringList& )
+ 	: KParts::ReadOnlyPart( wparent, wname ? wname : "rich_text_part" )
+ {
+-	KopeteRichTextEditPart::KopeteRichTextEditPart( wparent, wname, false );
++	KopeteRichTextEditPart( wparent, wname, false );
+ }
+ 
+ KopeteRichTextEditPart::KopeteRichTextEditPart( QWidget *parent, const char *name, int capabilities )
