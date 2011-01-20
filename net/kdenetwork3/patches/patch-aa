@@ -1,11 +1,23 @@
-$NetBSD: patch-aa,v 1.17 2008/02/20 10:00:24 markd Exp $
+$NetBSD: patch-aa,v 1.18 2011/01/20 12:19:30 markd Exp $
+
+aligned_u64/__aligned_u64 mixup on ArchLinux
 
 utmpx patch gets ktalkd to build on Solaris 10 but wont actually
 read the file properly - needs to be fixed.
 
---- configure.orig	2006-10-03 07:24:51.000000000 +1300
+--- configure.orig	2008-08-20 15:49:39.000000000 +0000
 +++ configure
-@@ -44334,6 +44340,7 @@ else
+@@ -43655,6 +43655,9 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++#if defined(linux)
++#define aligned_u64 __aligned_u64
++#endif
+ #if defined(__osf__) || defined(__svr4__)
+   #define _POSIX_PII_SOCKET
+   extern "C" int sethostname(char *name, int name_len);
+@@ -44540,6 +44543,7 @@ else
  	/var/run/utmp \
  	/var/adm/utmp \
  	/etc/utmp     \
