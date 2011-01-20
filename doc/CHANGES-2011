@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.105 2011/01/20 16:31:44 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.106 2011/01/20 16:37:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -172,3 +172,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-pgfplots to 1.4.1 [minskim 2011-01-20]
 	Updated print/tex-pgfplots-doc to 1.4.1 [minskim 2011-01-20]
 	Updated print/tex-ukrhyph to 2010 [minskim 2011-01-20]
+	Updated print/tex-amscls to 2010.20248 [minskim 2011-01-20]
+	Updated print/tex-amscls-doc to 2010.20248 [minskim 2011-01-20]
