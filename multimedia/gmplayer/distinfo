@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2010/12/07 20:34:32 abs Exp $
+$NetBSD: distinfo,v 1.72 2011/01/20 07:13:31 obache Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -66,6 +66,7 @@ Size (mplayer/xine-lcd-1.2.tar.bz2) = 172270 bytes
 SHA1 (patch-aa) = 9eae4563081e370d14560bb407a9b986b0128d7f
 SHA1 (patch-ab) = 1a927d956155a7b9a2daa1a4f522e47d830c5af6
 SHA1 (patch-ac) = 3d037c96537233cdbda582afdb878dcf3f43e923
+SHA1 (patch-ad) = 84ce5a0f5cd8f59831c56b14dd2bc762793427ac
 SHA1 (patch-ae) = 7e1f05cd6e09f8755debfff7061dadf0a8ca3a3f
 SHA1 (patch-ag) = bef25568c913dcb8535afa51976ce7c94a6af5a2
 SHA1 (patch-ah) = 8cbd14c61e74023055770baf27201687aa34fede
