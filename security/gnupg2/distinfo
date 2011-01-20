@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.20 2010/09/02 06:58:35 obache Exp $
+$NetBSD: distinfo,v 1.21 2011/01/20 08:54:56 adam Exp $
 
-SHA1 (gnupg-2.0.16.tar.bz2) = e7eb4f60026884bd90803b531472bc518804b95d
-RMD160 (gnupg-2.0.16.tar.bz2) = 3a0ed7a3ebb28fdb875533ff3368f6af3a0bb742
-Size (gnupg-2.0.16.tar.bz2) = 4004033 bytes
+SHA1 (gnupg-2.0.17.tar.bz2) = 41ef5460417ca0a1131fc730849fe3afd49ad2de
+RMD160 (gnupg-2.0.17.tar.bz2) = f919947a1896ac20c455534d91a3e2d3e5b60c1f
+Size (gnupg-2.0.17.tar.bz2) = 3997356 bytes
 SHA1 (patch-ah) = 0c9e061611ebfe22441a161aca016436a70ccc60
-SHA1 (patch-ai) = 555b8768c30f470e98e5be62a4a4bea29eefdf78
-SHA1 (patch-aj) = 20be6b455167962ffa556979d8d0f167dd14131e
-SHA1 (patch-ak) = 0480f4be019de80e2683d6edb9beeecf27c26d9c
+SHA1 (patch-ai) = 4445d30150518f71f996e3b368a81523daded2e2
+SHA1 (patch-aj) = bfd21504e0d55f99df543912b1cdf2c573de2f98
+SHA1 (patch-ak) = 2eeb4e8a51ae569867730fa8f0bafd27c56a6f16
 SHA1 (patch-al) = ef7c698ed102c4e27bbf707ae5d1fce4c2b5d8d4
-SHA1 (patch-an) = 17e6f789af2853884eb6dd8488a2b91c9b06188d
-SHA1 (patch-ao) = e8433f99da5e8b8e63239389513f0e352c0020f0
+SHA1 (patch-ao) = a4040ac226d93d7bbf406ef2233f096dd8100ba2
