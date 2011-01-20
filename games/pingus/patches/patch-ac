@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2011/01/20 23:41:02 wiz Exp $
+
+Fix build with png-1.5.
+
+--- src/screenshot.cpp.orig	2007-09-30 16:07:08.000000000 +0000
++++ src/screenshot.cpp
+@@ -159,7 +159,7 @@ Screenshot::save_png(const std::string& 
+       return;
+     }
+ 
+-  if (setjmp(png_ptr->jmpbuf))
++  if (setjmp(png_jmpbuf(png_ptr)))
+     {
+       // If we get here, we had a problem reading the file
+       fclose(fp);
