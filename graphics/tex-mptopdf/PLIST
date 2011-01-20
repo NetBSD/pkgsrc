@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/20 17:08:02 minskim Exp $
+bin/mptopdf
+share/texmf-dist/scripts/context/perl/mptopdf.pl
+share/texmf-dist/tex/context/base/supp-mis.mkii
+share/texmf-dist/tex/context/base/supp-mpe.mkii
+share/texmf-dist/tex/context/base/supp-pdf.mkii
+share/texmf-dist/tex/context/base/syst-tex.mkii
+share/texmf-dist/tex/generic/context/mptopdf.tex
