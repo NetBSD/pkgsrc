@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:14:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/20 16:23:59 minskim Exp $
+share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample.pdf
 share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample.tex
 share/texmf-dist/doc/generic/pgfplots/README
 share/texmf-dist/doc/latex/pgfplots/ChangeLog
 share/texmf-dist/doc/latex/pgfplots/Makefile
 share/texmf-dist/doc/latex/pgfplots/TeX-programming-notes.pdf
 share/texmf-dist/doc/latex/pgfplots/TeX-programming-notes.tex
+share/texmf-dist/doc/latex/pgfplots/bugtracker/minimal_0.pdf
+share/texmf-dist/doc/latex/pgfplots/bugtracker/minimal_0.tex
+share/texmf-dist/doc/latex/pgfplots/cartesian_phase_diagram.pdf
 share/texmf-dist/doc/latex/pgfplots/figures/external1.gnuplot
 share/texmf-dist/doc/latex/pgfplots/figures/external1.png
 share/texmf-dist/doc/latex/pgfplots/figures/external2.pdf
@@ -16,10 +20,13 @@ share/texmf-dist/doc/latex/pgfplots/figures/pgfplotsclickable.tex
 share/texmf-dist/doc/latex/pgfplots/gallery/Makefile
 share/texmf-dist/doc/latex/pgfplots/gallery/extractexamples.pl
 share/texmf-dist/doc/latex/pgfplots/gallery/gallery.css
+share/texmf-dist/doc/latex/pgfplots/gibbs_phase_diagram.pdf
 share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_DoG.gnuplot
 share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_DoG.table
+share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_exp
 share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_exp.gnuplot
 share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_exp.table
+share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_exp.vrs
 share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_filesuffix.gnuplot
 share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_filesuffix.table
 share/texmf-dist/doc/latex/pgfplots/gnuplot/pgfplots_gnuplot_ppp.gnuplot
@@ -58,6 +65,7 @@ share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.closingplots.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.coordfiltering.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.errorbars.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.gridoptions-axiscoordinates.tex
+share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.linefitting.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.markers-meta.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.miscellaneous.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplots.reference.numberformatting.tex
@@ -75,15 +83,22 @@ share/texmf-dist/doc/latex/pgfplots/pgfplots.testtable
 share/texmf-dist/doc/latex/pgfplots/pgfplots.testtable2.dat
 share/texmf-dist/doc/latex/pgfplots/pgfplots.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplots.timeseries.dat
+share/texmf-dist/doc/latex/pgfplots/pgfplots_contourtmp0.dat
+share/texmf-dist/doc/latex/pgfplots/pgfplots_contourtmp0.script
+share/texmf-dist/doc/latex/pgfplots/pgfplots_contourtmp0.table
+share/texmf-dist/doc/latex/pgfplots/pgfplotsexample.pdf
 share/texmf-dist/doc/latex/pgfplots/pgfplotsexample.tex
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.example1.csv
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.example1.dat
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.example2.dat
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.example3.dat
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.example4.dat
+share/texmf-dist/doc/latex/pgfplots/pgfplotstable.example5.dat
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.mst
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.pdf
 share/texmf-dist/doc/latex/pgfplots/pgfplotstable.tex
+share/texmf-dist/doc/latex/pgfplots/pgfplotstodo.pdf
+share/texmf-dist/doc/latex/pgfplots/pgfplotstodo.tex
 share/texmf-dist/doc/latex/pgfplots/pgfshell_cos.sh
 share/texmf-dist/doc/latex/pgfplots/pgfshell_replot.sh
 share/texmf-dist/doc/latex/pgfplots/plotdata/accounts.dat
@@ -105,6 +120,7 @@ share/texmf-dist/doc/latex/pgfplots/plotdata/pgfplots_scatterdata4.dat
 share/texmf-dist/doc/latex/pgfplots/plotdata/pgfplotsexample4.dat
 share/texmf-dist/doc/latex/pgfplots/plotdata/pgfplotsexample4_grid.dat
 share/texmf-dist/doc/latex/pgfplots/plotdata/scattercl.dat
+share/texmf-dist/doc/latex/pgfplots/plotdata/ternary_data.txt
 share/texmf-dist/doc/latex/pgfplots/texmf.cnf
-share/texmf-dist/doc/latex/pgfplots/todo.txt
+share/texmf-dist/doc/plain/pgfplots/pgfplotsexample.pdf
 share/texmf-dist/doc/plain/pgfplots/pgfplotsexample.tex
