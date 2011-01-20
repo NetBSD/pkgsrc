@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.103 2011/01/20 16:17:21 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.104 2011/01/20 16:24:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -169,3 +169,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/py-psycopg2 to 2.3.2 [adam 2011-01-20]
 	Updated print/tex-breakcites to 2010 [minskim 2011-01-20]
 	Updated print/tex-breakcites-doc to 2010 [minskim 2011-01-20]
+	Updated print/tex-pgfplots to 1.4.1 [minskim 2011-01-20]
+	Updated print/tex-pgfplots-doc to 1.4.1 [minskim 2011-01-20]
