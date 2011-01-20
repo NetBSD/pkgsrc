@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/11/26 17:55:21 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2011/01/20 07:43:02 adam Exp $
 
 DISTNAME=	libgpg-error-1.10
 CATEGORIES=	security
@@ -17,24 +17,24 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
+MAKE_ENV+=		LC_ALL="C"
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
 # XXX See HACKS
-.if ${OPSYS} == IRIX || !empty(MACHINE_PLATFORM:MNetBSD-[3-9]*)
+.if ${OPSYS} == "IRIX" || !empty(MACHINE_PLATFORM:MNetBSD-[3-9]*)
 USE_TOOLS+=		nawk
 .else
 USE_TOOLS+=		gawk
 .endif
 
-MAKE_ENV+=		LC_ALL="C"
-
 TEST_TARGET=		check
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
