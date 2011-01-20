@@ -1,10 +1,18 @@
-$NetBSD: patch-ag,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+$NetBSD: patch-ag,v 1.2 2011/01/20 11:48:18 markd Exp $
 
 * Attempt fallback to ffmpeg decoder if loading the "native" one fails.
 * Reset resampler/converter if it isn't necessary any more.
 
 --- akode/lib/player.cpp.orig	2009-02-20 15:04:49 +0200
 +++ akode/lib/player.cpp	2009-02-20 15:11:55 +0200
+@@ -37,6 +37,7 @@
+ 
+ #include "player.h"
+ 
++#include <cstring>
+ #ifndef NDEBUG
+ #include <iostream>
+ #define AKODE_DEBUG(x) {std::cerr << "akode: " << x << "\n";}
 @@ -345,8 +345,11 @@ bool Player::load() {
              d->src = 0;
              return false;
