@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/09/10 22:27:11 minskim Exp $
+# $NetBSD: Makefile,v 1.48 2011/01/20 12:30:25 markd Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
@@ -212,7 +212,8 @@ TEX_MIXEDMAP_FILES+=	vnr.map
 
 post-extract:
 	rm -f ${WRKSRC}/ls-R
-	rm -rf ${WRKSRC}/bibtex/bib/[A-Za-o]*
+	rm -rf ${WRKSRC}/bibtex/bib/[a-o]*
+	rm -rf ${WRKSRC}/bibtex/bib/README
 	rm -rf ${WRKSRC}/bibtex/bst/ams
 	rm -rf ${WRKSRC}/bibtex/bst/[b-c]*
 	rm -rf ${WRKSRC}/bibtex/bst/misc
