@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.106 2011/01/20 16:37:45 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.107 2011/01/20 17:09:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -174,3 +174,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-ukrhyph to 2010 [minskim 2011-01-20]
 	Updated print/tex-amscls to 2010.20248 [minskim 2011-01-20]
 	Updated print/tex-amscls-doc to 2010.20248 [minskim 2011-01-20]
+	Added graphics/tex-mptopdf version 2010 [minskim 2011-01-20]
+	Added graphics/tex-mptopdf-doc version 2010 [minskim 2011-01-20]
