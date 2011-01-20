@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.102 2011/01/20 09:55:56 adam Exp $
+$NetBSD: CHANGES-2011,v 1.103 2011/01/20 16:17:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -167,3 +167,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/gnupg2 to 2.0.17 [adam 2011-01-20]
 	Updated textproc/lout to 3.38 [adam 2011-01-20]
 	Updated databases/py-psycopg2 to 2.3.2 [adam 2011-01-20]
+	Updated print/tex-breakcites to 2010 [minskim 2011-01-20]
+	Updated print/tex-breakcites-doc to 2010 [minskim 2011-01-20]
