@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/11 20:50:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/20 16:16:44 minskim Exp $
+share/texmf-dist/doc/latex/breakcites/README
 share/texmf-dist/doc/latex/breakcites/breakcites.pdf
 share/texmf-dist/doc/latex/breakcites/breakcites.tex
