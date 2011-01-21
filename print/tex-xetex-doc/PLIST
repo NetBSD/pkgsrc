@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/21 17:56:10 minskim Exp $
+share/texmf-dist/doc/xetex/base/XeTeX-notes.pdf
+share/texmf-dist/doc/xetex/base/XeTeX-notes.tex
