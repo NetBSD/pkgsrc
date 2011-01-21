@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.128 2011/01/21 23:15:50 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.129 2011/01/21 23:17:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -211,3 +211,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated converters/p5-Convert-UUlib to 1.34 [gls 2011-02-21]
 	Updated games/gbrainy to 1.61 [wiz 2011-01-21]
 	Updated games/puzzles to 9076 [wiz 2011-01-21]
+	Updated x11/libXp to 1.0.1 [wiz 2011-01-21]
