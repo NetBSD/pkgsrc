@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2009/08/17 11:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2011/01/21 21:18:12 wiz Exp $
 #
 
-DISTNAME=	tidy-20090326
-PKGREVISION=	1
+DISTNAME=	tidy-20091027
 CATEGORIES=	www
 MASTER_SITES=	# manually created tarballs on ftp.NetBSD.org only
 
