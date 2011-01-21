@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.3 2011/01/21 22:52:56 wiz Exp $
+
+Fix error:
+./Logic/PuzzleExtraCircle.cs(47,25): error CS0843: An automatically
+implemented property
+`gbrainy.Games.Logic.PuzzleExtraCircle.CircleParameters.Colors'
+must be fully assigned before control leaves the constructor.
+Consider calling default contructor
+
+Sent upstream.
+
+--- src/Games/Logic/PuzzleExtraCircle.cs.orig	2011-01-06 15:38:23.000000000 +0000
++++ src/Games/Logic/PuzzleExtraCircle.cs
+@@ -43,7 +43,7 @@ namespace gbrainy.Games.Logic
+ 		{
+ 			public Color [] Colors {get; set; }
+ 
+-			public CircleParameters (Color [] colors)
++			public CircleParameters (Color [] colors) : this()
+ 			{
+ 				Colors = colors;
+ 			}
