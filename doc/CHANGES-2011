@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.116 2011/01/21 12:10:48 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.117 2011/01/21 18:02:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -187,3 +187,14 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/asterisk18 to 1.8.2.2 [jnemeth 2011-01-21]
 	Updated graphics/jpeg to 8c [adam 2011-01-21]
 	Updated net/quvi to 0.2.12 [ryoon 2011-01-21]
+	Added print/tex-xetexconfig version 2010 [minskim 2011-01-21]
+	Added print/tex-metalogo version 0.12 [minskim 2011-01-21]
+	Added print/tex-metalogo-doc version 0.12 [minskim 2011-01-21]
+	Updated fonts/tex-fontspec to 2.1e [minskim 2011-01-21]
+	Updated fonts/tex-fontspec-doc to 2.1e [minskim 2011-01-21]
+	Added print/tex-realscripts version 0.3 [minskim 2011-01-21]
+	Added print/tex-realscripts-doc version 0.3 [minskim 2011-01-21]
+	Added print/tex-xetex version 2010 [minskim 2011-01-21]
+	Added print/tex-xetex-doc version 2010 [minskim 2011-01-21]
+	Updated print/tex-xltxtra to 0.5e [minskim 2011-01-21]
+	Updated print/tex-xltxtra-doc to 0.5e [minskim 2011-01-21]
