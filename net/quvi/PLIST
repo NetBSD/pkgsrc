@@ -1,20 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/13 12:43:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/21 12:09:10 ryoon Exp $
 bin/quvi
 include/quvi/quvi.h
 lib/libquvi.la
 lib/pkgconfig/libquvi.pc
 man/man1/quvi.1
 share/doc/quvi/CodingStyle
-share/doc/quvi/HowtoContributeCode
 share/doc/quvi/HowtoGetDevelopmentCode
 share/doc/quvi/HowtoHelp
 share/doc/quvi/HowtoSubmitPatches
+share/doc/quvi/HowtoWriteWebsiteScript
 share/quvi/lua/README
 share/quvi/lua/util/charset.lua
 share/quvi/lua/util/content_type.lua
 share/quvi/lua/util/trim.lua
 share/quvi/lua/website/README
 share/quvi/lua/website/academicearth.lua
+share/quvi/lua/website/bloomberg.lua
 share/quvi/lua/website/break.lua
 share/quvi/lua/website/buzzhumor.lua
 share/quvi/lua/website/cbsnews.lua
@@ -25,9 +26,14 @@ share/quvi/lua/website/dailymotion.lua
 share/quvi/lua/website/funnyhub.lua
 share/quvi/lua/website/funnyordie.lua
 share/quvi/lua/website/gaskrank.lua
+share/quvi/lua/website/globo.lua
 share/quvi/lua/website/golem.lua
 share/quvi/lua/website/google.lua
 share/quvi/lua/website/liveleak.lua
+share/quvi/lua/website/publicsenat.lua
+share/quvi/lua/website/quvi/bit.lua
+share/quvi/lua/website/quvi/const.lua
+share/quvi/lua/website/quvi/util.lua
 share/quvi/lua/website/sapo.lua
 share/quvi/lua/website/sevenload.lua
 share/quvi/lua/website/spiegel.lua
