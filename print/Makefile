@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.451 2011/01/12 17:08:27 minskim Exp $
+# $NetBSD: Makefile,v 1.452 2011/01/21 18:02:15 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -408,6 +408,8 @@ SUBDIR+=	tex-marginnote
 SUBDIR+=	tex-marginnote-doc
 SUBDIR+=	tex-memoir
 SUBDIR+=	tex-memoir-doc
+SUBDIR+=	tex-metalogo
+SUBDIR+=	tex-metalogo-doc
 SUBDIR+=	tex-mfnfss
 SUBDIR+=	tex-mfnfss-doc
 SUBDIR+=	tex-mhchem
@@ -476,6 +478,8 @@ SUBDIR+=	tex-pspicture
 SUBDIR+=	tex-pspicture-doc
 SUBDIR+=	tex-rcsinfo
 SUBDIR+=	tex-rcsinfo-doc
+SUBDIR+=	tex-realscripts
+SUBDIR+=	tex-realscripts-doc
 SUBDIR+=	tex-relsize
 SUBDIR+=	tex-resume
 SUBDIR+=	tex-rotating
@@ -550,6 +554,9 @@ SUBDIR+=	tex-xargs-doc
 SUBDIR+=	tex-xcolor
 SUBDIR+=	tex-xcolor-doc
 SUBDIR+=	tex-xdvi
+SUBDIR+=	tex-xetex
+SUBDIR+=	tex-xetex-doc
+SUBDIR+=	tex-xetexconfig
 SUBDIR+=	tex-xfor
 SUBDIR+=	tex-xfor-doc
 SUBDIR+=	tex-xkeyval
