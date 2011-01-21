@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.127 2011/01/21 22:53:05 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.128 2011/01/21 23:15:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/kchmviewer to 5.3 [wiz 2011-01-21]
 	Updated converters/p5-Convert-UUlib to 1.34 [gls 2011-02-21]
 	Updated games/gbrainy to 1.61 [wiz 2011-01-21]
+	Updated games/puzzles to 9076 [wiz 2011-01-21]
