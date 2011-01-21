@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/17 00:00:31 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/21 04:12:18 minskim Exp $
 
 DISTNAME=	context.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2009
-TEXLIVE_REV=	16044
+PKGNAME=	tex-${DISTNAME:S/./-/}-2010
+TEXLIVE_REV=	20438
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-context
