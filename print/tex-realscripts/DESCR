@@ -1,0 +1,7 @@
+This small package replaces \textsuperscript and \textsubscript commands
+by equivalent commands that use OpenType font features to access
+appropriate glyphs if possible. The package also patches LaTeX's default
+footnote command to use this new \textsuperscript for footnote symbols.
+The package requires fontspec running on either XeLaTeX or LuaLaTeX. The
+package holds functions that were once parts of the xltxtra package,
+which now loads realscripts by default.
