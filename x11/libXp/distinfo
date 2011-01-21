@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 21:01:49 joerg Exp $
+$NetBSD: distinfo,v 1.2 2011/01/21 23:17:12 wiz Exp $
 
-SHA1 (libXp-1.0.0.tar.bz2) = fac67954e247fc805af6e495ff8695b5724cd1e2
-RMD160 (libXp-1.0.0.tar.bz2) = 5d12e6bd1598654d1aa47a818047d1e0c6f50145
-Size (libXp-1.0.0.tar.bz2) = 244470 bytes
+SHA1 (libXp-1.0.1.tar.bz2) = 9c76823c7cfcb43f097963d0c930dcc4e38807a8
+RMD160 (libXp-1.0.1.tar.bz2) = e8c952ec53e429e7892f27354314ee2a7433c021
+Size (libXp-1.0.1.tar.bz2) = 300427 bytes
