@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/21 17:25:41 minskim Exp $
+share/texmf-dist/doc/latex/metalogo/README
+share/texmf-dist/doc/latex/metalogo/TeXoutline.pdf
+share/texmf-dist/doc/latex/metalogo/eLaToutline.pdf
+share/texmf-dist/doc/latex/metalogo/metalogo.pdf
