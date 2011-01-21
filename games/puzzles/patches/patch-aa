@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2010/01/16 17:23:50 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2011/01/21 23:15:39 wiz Exp $
 
---- Makefile.orig	2010-01-16 01:39:44.000000000 +0000
+Rename "net" to "netgame" so there's less chances of conflicts
+with other packages.
+
+--- Makefile.orig	2011-01-21 01:38:52.000000000 +0000
 +++ Makefile
 @@ -31,7 +31,7 @@ all: blackbox bridges cube dominosa fift
  		galaxies galaxiespicture galaxiessolver guess inertia keen \
@@ -8,19 +11,19 @@ $NetBSD: patch-aa,v 1.2 2010/01/16 17:23:50 wiz Exp $
  		loopysolver magnets magnetssolver map mapsolver mineobfusc \
 -		mines net netslide nullgame obfusc pattern patternsolver \
 +		mines netgame netslide nullgame obfusc pattern patternsolver \
- 		pegs rect samegame singles singlessolver sixteen slant \
- 		slantsolver solo solosolver tents tentssolver towers \
- 		towerssolver twiddle unequal unequalsolver untangle
-@@ -168,7 +168,7 @@ mines: drawing.o gtk.o malloc.o midend.o
- 		mines-icon.o misc.o printing.o ps.o random.o tree234.o \
- 		version.o 
+ 		pegs range rect samegame signpost signpostsolver singles \
+ 		singlessolver sixteen slant slantsolver solo solosolver \
+ 		tents tentssolver towers towerssolver twiddle unequal \
+@@ -167,7 +167,7 @@ mines: drawing.o gtk.o malloc.o midend.o
+ 		misc.o printing.o ps.o random.o tree234.o version.o  \
+ 		$(XLIBS)
  
 -net: drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o net-icon.o \
 +netgame: drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o net-icon.o \
  		printing.o ps.o random.o tree234.o version.o
- 	$(CC) $(XLDFLAGS) -o $@ drawing.o dsf.o gtk.o malloc.o midend.o \
- 		misc.o net.o net-icon.o printing.o ps.o random.o tree234.o \
-@@ -582,7 +582,7 @@ GAMES += loopy
+ 	$(CC) -o $@ drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o \
+ 		net-icon.o printing.o ps.o random.o tree234.o version.o  \
+@@ -609,7 +609,7 @@ GAMES += loopy
  GAMES += magnets
  GAMES += map
  GAMES += mines
@@ -29,9 +32,9 @@ $NetBSD: patch-aa,v 1.2 2010/01/16 17:23:50 wiz Exp $
  GAMES += netslide
  GAMES += pattern
  GAMES += pegs
-@@ -613,4 +613,4 @@ install:
+@@ -649,4 +649,4 @@ install:
  	done
  
  clean:
--	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia keen keensolver latincheck lightup lightupsolver loopy loopysolver magnets magnetssolver map mapsolver mineobfusc mines net netslide nullgame obfusc pattern patternsolver pegs rect samegame singles singlessolver sixteen slant slantsolver solo solosolver tents tentssolver towers towerssolver twiddle unequal unequalsolver untangle
+-	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia keen keensolver latincheck lightup lightupsolver loopy loopysolver magnets magnetssolver map mapsolver mineobfusc mines net netslide nullgame obfusc pattern patternsolver pegs range rect samegame signpost signpostsolver singles singlessolver sixteen slant slantsolver solo solosolver tents tentssolver towers towerssolver twiddle unequal unequalsolver untangle
 +	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia keen keensolver latincheck lightup lightupsolver loopy loopysolver magnets magnetssolver map mapsolver mineobfusc mines netgame netslide nullgame obfusc pattern patternsolver pegs rect samegame singles singlessolver sixteen slant slantsolver solo solosolver tents tentssolver towers towerssolver twiddle unequal unequalsolver untangle
