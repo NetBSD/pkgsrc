@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.122 2011/01/21 21:18:21 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.123 2011/01/21 22:01:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-xunicode to 0.96 [minskim 2011-01-21]
 	Updated print/tex-xunicode-doc to 0.96 [minskim 2011-01-21]
 	Updated www/tidy to 20091027 [wiz 2011-01-21]
+	Updated games/powder to 115 [wiz 2011-01-21]
