@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.120 2011/01/21 18:43:32 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.121 2011/01/21 18:48:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -203,3 +203,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed print/tex-supp-pdf successor graphics/tex-mptopdf [minskim 2011-01-21]
 	Updated fonts/tex-ly1 to 2010.21086 [minskim 2011-01-21]
 	Updated fonts/tex-ly1-doc to 2010.21086 [minskim 2011-01-21]
+	Updated print/tex-xunicode to 0.96 [minskim 2011-01-21]
+	Updated print/tex-xunicode-doc to 0.96 [minskim 2011-01-21]
