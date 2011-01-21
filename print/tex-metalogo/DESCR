@@ -1,0 +1,3 @@
+This package exposes spacing parameters for various TeX logos to the end
+user, to optimise the logos for different fonts. Written especially for
+XeLaTeX users.
