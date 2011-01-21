@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2005/10/04 18:00:49 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2011/01/21 21:18:12 wiz Exp $
+
+Use subdirectory for include files.
 
 --- build/gnuauto/include/Makefile.am.orig	2005-07-03 14:59:55.000000000 +0200
 +++ build/gnuauto/include/Makefile.am	2005-07-03 15:00:07.000000000 +0200
