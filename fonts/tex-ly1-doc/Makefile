@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/23 04:07:39 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/21 18:42:04 minskim Exp $
 
 DISTNAME=	ly1.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2010
-TEXLIVE_REV=	18995
+PKGNAME=	tex-${DISTNAME:S/./-/}-2010.21086
+TEXLIVE_REV=	21086
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-ly1
