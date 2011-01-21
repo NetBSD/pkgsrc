@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/19 14:21:29 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/21 17:32:29 minskim Exp $
 
 DISTNAME=	fontspec
-PKGNAME=	tex-${DISTNAME}-2.1
-TEXLIVE_REV=	19796
+PKGNAME=	tex-${DISTNAME}-2.1e
+TEXLIVE_REV=	20472
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Advanced font selection in XeLaTeX and LuaLaTeX
