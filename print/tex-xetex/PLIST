@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/21 17:56:02 minskim Exp $
+share/texmf-dist/fonts/misc/xetex/fontmapping/base/qx-unicode.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/base/qx-unicode.tec
+share/texmf-dist/fonts/misc/xetex/fontmapping/base/tex-text.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/base/tex-text.tec
+share/texmf-dist/scripts/xetex/perl/lib/PDF/Reuse.pm
+share/texmf-dist/scripts/xetex/perl/lib/PDF/Reuse/Util.pm
+share/texmf-dist/scripts/xetex/perl/xdv2pdf_mergemarks
