@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.55 2009/09/02 08:34:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.56 2011/01/21 23:34:13 wiz Exp $
 #
+# used by www/w3m/Makefile
+# used by www/w3m-img/Makefile
 
 DISTNAME=	w3m-${W3M_VERS}
 CATEGORIES=	www
@@ -13,11 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake	# Needed for some combinations of options...
 USE_TOOLS+=	msgfmt
 USE_PKGLOCALEDIR=       yes
 
-W3M_VERS=	0.5.2
+W3M_VERS=	0.5.3
 
 # For w3mman, xface2xpm, cgi scripts.
 USE_TOOLS+=	perl:run pax
@@ -57,9 +60,9 @@ SUBST_FILES.man-ja=	Makefile.in config.h.dist
 SUBST_SED.man-ja=	-e 's|/ja/|/ja_JP.eucJP/|g'
 
 post-extract:
-	@cd ${WRKSRC}/doc; ${RM} -fr CVS
-	@cd ${WRKSRC}/doc-jp; ${RM} -fr CVS
-	@cd ${WRKSRC}; ${RM} -fr gc
+	cd ${WRKSRC}/doc; ${RM} -fr CVS
+	cd ${WRKSRC}/doc-jp; ${RM} -fr CVS
+	cd ${WRKSRC}; ${RM} -fr gc
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
@@ -67,7 +70,7 @@ INSTALL_TARGET=		install install-helpfile
 
 post-install:
 	# Use pax to discard uid/gid.  Exclude manuals (*.1).
-	@cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
+	cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
 	    ( cd ${DESTDIR}${PREFIX}/${DOCDIR}; pax -r )
 
 .include "../../devel/boehm-gc/buildlink3.mk"
