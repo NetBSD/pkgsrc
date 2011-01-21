@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.43 2010/12/12 11:50:43 dsainty Exp $
-#
+# $NetBSD: Makefile,v 1.44 2011/01/21 11:28:13 adam Exp $
 
-DISTNAME=		jpegsrc.v8b
-PKGNAME=		jpeg-8b
-CATEGORIES=		graphics
-MASTER_SITES=		http://www.ijg.org/files/
+DISTNAME=	jpegsrc.v8c
+PKGNAME=	${DISTNAME:S/src.v/-/}
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.ijg.org/files/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ijg.org/
-COMMENT=		IJG's jpeg compression utilities
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.ijg.org/
+COMMENT=	IJG's jpeg compression utilities
 
 CONFLICTS=		libjpeg-turbo-[0-9]*
 
@@ -18,11 +17,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-TEST_TARGET=		test
+CONFIGURE_ARGS+=	--disable-ld-version-script
 
 INSTALLATION_DIRS=	bin include share/doc/jpeg
 
-CONFIGURE_ARGS+=	--disable-ld-version-script
+TEST_TARGET=		test
 
 post-extract:
 	${CP} ${FILESDIR}/jpegexiforient.c ${WRKSRC}
