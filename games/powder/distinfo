@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/08 08:45:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/01/21 22:01:36 wiz Exp $
 
-SHA1 (powder114_src.tar.gz) = c402b2f8064c0c884cacd9d9a2ac7b1ac49387f5
-RMD160 (powder114_src.tar.gz) = 92dc3412394300982a7ae0352c9c247e48c7a1cc
-Size (powder114_src.tar.gz) = 1863082 bytes
+SHA1 (powder115_src.tar.gz) = 3a48cb199bf8bdd236a9c0094ad014eb58f90561
+RMD160 (powder115_src.tar.gz) = dc6656736e25ea34072fd0e3c57932efd23eb4ed
+Size (powder115_src.tar.gz) = 1872955 bytes
