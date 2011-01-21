@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.21 2010/07/01 18:50:14 tron Exp $
+$NetBSD: distinfo,v 1.22 2011/01/21 23:34:13 wiz Exp $
 
-SHA1 (w3m-0.5.2.tar.gz) = 484522547ae6dbb342d3858a2a53a65451e273f9
-RMD160 (w3m-0.5.2.tar.gz) = 09ce72d8ef5e621a2e49496b63e22f2773edbe79
-Size (w3m-0.5.2.tar.gz) = 1906812 bytes
+SHA1 (w3m-0.5.3.tar.gz) = 444b6c8cf7094ee95f8e9de96b37f814b9d83237
+RMD160 (w3m-0.5.3.tar.gz) = 6a0153bc53f7c107c700404262ce1b4d02e6dd91
+Size (w3m-0.5.3.tar.gz) = 2202328 bytes
 SHA1 (patch-aa) = 2de78a6db9bd483416895b393935ccadab879932
 SHA1 (patch-ab) = 2d60d7a2946f13a185591c0b927cf0f8b5ea351b
-SHA1 (patch-ac) = 800d4b8c2ed93ccaa000564366ad07fabcc5bdc2
-SHA1 (patch-ad) = 7a11f6f97fb5d01a420c95bcd03e577ffd3a241f
+SHA1 (patch-ac) = 37c6c78a208c50876641aa90164cc46106403260
 SHA1 (patch-ak) = ac0ee99d5ab49c431cfa496d0d2d509efd6b06fa
