@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.113 2011/01/21 05:13:52 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.114 2011/01/21 07:01:00 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -184,3 +184,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-context to 2010 [minskim 2011-01-21]
 	Updated print/tex-context-doc to 2010 [minskim 2011-01-21]
 	Updated comms/asterisk16 to 1.6.2.16.1 [jnemeth 2011-01-21]
+	Updated comms/asterisk18 to 1.8.2.2 [jnemeth 2011-01-21]
