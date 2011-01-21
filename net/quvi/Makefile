@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2011/01/21 12:09:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/21 12:20:38 ryoon Exp $
 #
 
 DISTNAME=	quvi-0.2.12
 CATEGORIES=	net multimedia www
-MASTER_SITES=	http://quvi.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quvi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/quvi/
+HOMEPAGE=	http://quvi.sourceforge.net/
 COMMENT=	The quvi is command line tool and library for parsing video links
 LICENSE=	gnu-gpl-v3
 
