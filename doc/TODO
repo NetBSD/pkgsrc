@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10033 2011/01/21 22:53:05 wiz Exp $
+$NetBSD: TODO,v 1.10034 2011/01/21 23:15:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1109,7 +1109,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.3
 	o puf-0.93.3
 	o puppet-2.6.3
-	o puzzles-9076
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
