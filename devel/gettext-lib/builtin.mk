@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.39 2008/02/28 20:30:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.40 2011/01/21 21:24:11 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -122,8 +122,6 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl="yes"
 .    endif
 .    if !empty(USE_BUILTIN.gettext:M[nN][oO])
 CONFIGURE_ARGS+=	--with-libintl-prefix="${BUILDLINK_PREFIX.gettext}"
-.    else
-CONFIGURE_ARGS+=	--without-libintl-prefix
 .    endif
 .  endif
 
