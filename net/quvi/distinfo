@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/13 12:43:17 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2011/01/21 12:09:10 ryoon Exp $
 
-SHA1 (quvi-0.2.10.tar.bz2) = f79282628eb8adcb6fadec484c53e0b25053435c
-RMD160 (quvi-0.2.10.tar.bz2) = 4cdbb8d714893bfdcbf78b5e9a666f632fe051c3
-Size (quvi-0.2.10.tar.bz2) = 388308 bytes
+SHA1 (quvi-0.2.12.tar.bz2) = b06357cd13339d98efe25011948d25d0326bf167
+RMD160 (quvi-0.2.12.tar.bz2) = f45acaf0bd82e1d67f8080d779fd0b6454d1e11f
+Size (quvi-0.2.12.tar.bz2) = 397172 bytes
