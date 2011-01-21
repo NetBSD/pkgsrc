@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/01/13 13:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2011/01/21 23:15:39 wiz Exp $
 #
 
-DISTNAME=	puzzles-r8839
+DISTNAME=	puzzles-r9076
 PKGNAME=	${DISTNAME:S/-r/-/}
-PKGREVISION=	4
 CATEGORIES=	games
 # distfile changes daily
 MASTER_SITES=	# http://www.chiark.greenend.org.uk/~sgtatham/puzzles/
@@ -21,6 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 BUILDLINK_TRANSFORM+=	rm:-Werror
 MAKE_FLAGS=	prefix=${PREFIX}
 MAKE_FLAGS=	gamesdir=${PREFIX}/bin
+CFLAGS+=	-DREVISION=${DISTNAME:S/puzzles-r//}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/puzzles.txt \
