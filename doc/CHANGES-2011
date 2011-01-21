@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.118 2011/01/21 18:34:52 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.119 2011/01/21 18:37:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -200,3 +200,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-xltxtra-doc to 0.5e [minskim 2011-01-21]
 	Updated print/tex-dvipdfmx to 2010.20279 [minskim 2011-01-21]
 	Updated print/tex-dvipdfmx-doc to 2010.20279 [minskim 2011-01-21]
+	Removed print/tex-supp-pdf successor graphics/tex-mptopdf [minskim 2011-01-21]
