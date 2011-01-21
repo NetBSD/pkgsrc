@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.115 2011/01/21 11:29:15 adam Exp $
+$NetBSD: CHANGES-2011,v 1.116 2011/01/21 12:10:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/asterisk16 to 1.6.2.16.1 [jnemeth 2011-01-21]
 	Updated comms/asterisk18 to 1.8.2.2 [jnemeth 2011-01-21]
 	Updated graphics/jpeg to 8c [adam 2011-01-21]
+	Updated net/quvi to 0.2.12 [ryoon 2011-01-21]
