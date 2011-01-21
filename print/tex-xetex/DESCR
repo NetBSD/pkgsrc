@@ -1,0 +1,3 @@
+XeTeX is an extension of TeX with built-in support for Unicode and
+OpenType.  This package builds and installs formats for XeTeX and
+XeLaTeX.
