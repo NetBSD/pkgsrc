@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/23 04:07:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/21 18:42:53 minskim Exp $
 share/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc
 share/texmf-dist/fonts/map/dvips/ly1/pag8y.map
 share/texmf-dist/fonts/map/dvips/ly1/pbk8y.map
@@ -26,8 +26,6 @@ share/texmf-dist/fonts/tfm/adobe/ly1/phvb8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/phvb8yn.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/phvbo8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/phvbo8yn.tfm
-share/texmf-dist/fonts/tfm/adobe/ly1/phvl8y.tfm
-share/texmf-dist/fonts/tfm/adobe/ly1/phvlo8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/phvr8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/phvr8yn.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/phvro8y.tfm
@@ -48,7 +46,6 @@ share/texmf-dist/fonts/tfm/adobe/ly1/pplri8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/pplro8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/pplrr8ye.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/pplru8y.tfm
-share/texmf-dist/fonts/tfm/adobe/ly1/psyr.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/ptmb8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/ptmbc8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/ptmbi8y.tfm
@@ -60,7 +57,8 @@ share/texmf-dist/fonts/tfm/adobe/ly1/ptmri8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/ptmro8y.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/ptmrr8ye.tfm
 share/texmf-dist/fonts/tfm/adobe/ly1/pzcmi8y.tfm
-share/texmf-dist/fonts/tfm/adobe/ly1/pzdr.tfm
+share/texmf-dist/fonts/vf/adobe/ly1/ptmbc8y.vf
+share/texmf-dist/fonts/vf/adobe/ly1/ptmrc8y.vf
 share/texmf-dist/tex/latex/ly1/ly1enc.def
 share/texmf-dist/tex/latex/ly1/ly1pag.fd
 share/texmf-dist/tex/latex/ly1/ly1pbk.fd
