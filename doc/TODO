@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10029 2011/01/21 02:56:53 obache Exp $
+$NetBSD: TODO,v 1.10030 2011/01/21 11:29:15 adam Exp $
 
 Suggested new packages
 ======================
@@ -801,7 +801,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jed-0.99-18
 	o jhead-2.90
 	o jools-1.0
-	o jpeg-8c
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
 	o k3b-2.0
