@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.453 2011/01/21 18:36:38 minskim Exp $
+# $NetBSD: Makefile,v 1.454 2011/01/22 21:53:52 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -179,6 +179,8 @@ SUBDIR+=	tex-babelbib-doc
 SUBDIR+=	tex-bagpipetex
 SUBDIR+=	tex-beamer
 SUBDIR+=	tex-beamer-doc
+SUBDIR+=	tex-beton
+SUBDIR+=	tex-beton-doc
 SUBDIR+=	tex-bibtex
 SUBDIR+=	tex-bibtex-doc
 SUBDIR+=	tex-block
