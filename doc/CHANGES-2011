@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.155 2011/01/22 23:24:56 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.156 2011/01/22 23:28:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -245,3 +245,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-amsrefs to 2.09nb1 [minskim 2011-01-22]
 	Updated print/tex-memoir to 3.6g [minskim 2011-01-22]
 	Updated print/tex-memoir-doc to 3.6g [minskim 2011-01-22]
+	Updated print/tex-texlive-en-doc to 2010.20605 [minskim 2011-01-22]
