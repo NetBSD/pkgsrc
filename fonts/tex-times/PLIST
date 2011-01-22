@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/10/26 23:32:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/01/22 21:12:00 minskim Exp $
 share/texmf-dist/dvips/times/config.utm
 share/texmf-dist/fonts/afm/adobe/times/ptmb8a.afm
 share/texmf-dist/fonts/afm/adobe/times/ptmbi8a.afm
@@ -23,30 +23,25 @@ share/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmb8c.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
-share/texmf-dist/fonts/tfm/adobe/times/ptmb8y.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbc.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbc7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbc8t.tfm
-share/texmf-dist/fonts/tfm/adobe/times/ptmbc8y.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbi.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbi8c.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbi8r.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbi8t.tfm
-share/texmf-dist/fonts/tfm/adobe/times/ptmbi8y.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbo.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbo7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbo8c.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbo8r.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmbo8t.tfm
-share/texmf-dist/fonts/tfm/adobe/times/ptmbo8y.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmr.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmr8rn.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
-share/texmf-dist/fonts/tfm/adobe/times/ptmr8y.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmrc.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
@@ -55,13 +50,11 @@ share/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmri8c.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
-share/texmf-dist/fonts/tfm/adobe/times/ptmri8y.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmro.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmro7t.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmro8c.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmro8r.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmro8t.tfm
-share/texmf-dist/fonts/tfm/adobe/times/ptmro8y.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmrr8re.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmrre.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmrrn.tfm
