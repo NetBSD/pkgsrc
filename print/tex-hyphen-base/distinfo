@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2010/10/28 00:03:29 minskim Exp $
+$NetBSD: distinfo,v 1.10 2011/01/22 21:18:16 minskim Exp $
 
-SHA1 (tex-hyphen-base-20147/hyphen-base.tar.xz) = 636888d9a28e545320296e14c45614f5770f1474
-RMD160 (tex-hyphen-base-20147/hyphen-base.tar.xz) = 1d30d1b0e67b3ffcd2c0be6c7e4cfb9d956650e0
-Size (tex-hyphen-base-20147/hyphen-base.tar.xz) = 21832 bytes
-SHA1 (patch-aa) = 09dc29bc67460b0edfa0dea9845d9aa942314a76
-SHA1 (patch-ab) = e1e7a0394b0ab45cb22994846e2d124076c01807
-SHA1 (patch-ac) = 3a0b37884696dbbb6330c8343cf959e8101fbc49
+SHA1 (tex-hyphen-base-21066/hyphen-base.tar.xz) = 1364ba44d20a9278885159d8e634865ca4b5f7ce
+RMD160 (tex-hyphen-base-21066/hyphen-base.tar.xz) = f4bb4998da150de3591039b9089cadc7a9bb714e
+Size (tex-hyphen-base-21066/hyphen-base.tar.xz) = 21888 bytes
+SHA1 (patch-aa) = a50794d49e6ef8fb70e30eeebbceac42525a76dc
+SHA1 (patch-ab) = 8c3d20c1d37ad4113f1c281c80601af98237a529
+SHA1 (patch-ac) = 4746fa094f27035214143b2150037f4fe0e4365a
