@@ -1,0 +1,6 @@
+Provides the H option for floats in LaTeX to signify that the environemt
+is not really a float (and should therefore be placed "here" and not
+float at all). The package emulates an older package of the same name,
+which has long been been suppressed by its author. The job is done by
+nothing more than loading the float package, which has long provided the
+option in an acceptable framework.
