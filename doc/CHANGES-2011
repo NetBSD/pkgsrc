@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.145 2011/01/22 22:02:00 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.146 2011/01/22 22:07:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -230,3 +230,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-beton-doc version 2010 [minskim 2011-01-22]
 	Added print/tex-euler version 2.5 [minskim 2011-01-22]
 	Added print/tex-euler-doc version 2.5 [minskim 2011-01-22]
+	Added print/tex-here version 2010 [minskim 2011-01-22]
+	Added print/tex-here-doc version 2010 [minskim 2011-01-22]
