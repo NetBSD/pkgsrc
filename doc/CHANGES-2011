@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.151 2011/01/22 22:50:14 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.152 2011/01/22 22:55:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -240,3 +240,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-hyperref to 6.81y [minskim 2011-01-22]
 	Updated print/tex-hyperref-doc to 6.81y [minskim 2011-01-22]
 	Updated print/tex-listings to 1.4nb1 [minskim 2011-01-22]
+	Updated print/tex-passivetex to 1.25nb1 [minskim 2011-01-22]
