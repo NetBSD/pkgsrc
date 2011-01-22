@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2011/01/20 12:30:25 markd Exp $
+# $NetBSD: Makefile,v 1.49 2011/01/22 23:54:25 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -33,6 +33,7 @@ DEPENDS+=	tex-capt-of-[0-9]*:../../print/tex-capt-of
 DEPENDS+=	tex-captdef-[0-9]*:../../print/tex-captdef
 DEPENDS+=	tex-caption-[0-9]*:../../print/tex-caption
 DEPENDS+=	tex-cases-[0-9]*:../../print/tex-cases
+DEPENDS+=	tex-changebar-[0-9]*:../../print/tex-changebar
 DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
 DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
 DEPENDS+=	tex-changepage-[0-9]*:../../print/tex-changepage
@@ -50,6 +51,7 @@ DEPENDS+=	tex-eepic>=1.1e:../../graphics/tex-eepic
 DEPENDS+=	tex-endfloat-[0-9]*:../../print/tex-endfloat
 DEPENDS+=	tex-endnotes-[0-9]*:../../print/tex-endnotes
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
+DEPENDS+=	tex-epsf>=2.7.3:../../print/tex-epsf
 DEPENDS+=	tex-eurosym-[0-9]*:../../fonts/tex-eurosym
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
@@ -62,6 +64,7 @@ DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
 DEPENDS+=	tex-framed-[0-9]*:../../print/tex-framed
 DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
 DEPENDS+=	tex-fwlw-[0-9]*:../../print/tex-fwlw
+DEPENDS+=	tex-gustlib-[0-9]*:../../print/tex-gustlib
 DEPENDS+=	tex-helvetic-[0-9]*:../../fonts/tex-helvetic
 DEPENDS+=	tex-hypernat-[0-9]*:../../print/tex-hypernat
 DEPENDS+=	tex-hyphen-basque-[0-9]*:../../print/tex-hyphen-basque
@@ -212,12 +215,12 @@ TEX_MIXEDMAP_FILES+=	vnr.map
 
 post-extract:
 	rm -f ${WRKSRC}/ls-R
-	rm -rf ${WRKSRC}/bibtex/bib/[a-o]*
-	rm -rf ${WRKSRC}/bibtex/bib/README
+	rm -rf ${WRKSRC}/bibtex/bib
 	rm -rf ${WRKSRC}/bibtex/bst/ams
 	rm -rf ${WRKSRC}/bibtex/bst/[b-c]*
 	rm -rf ${WRKSRC}/bibtex/bst/misc
 	rm -rf ${WRKSRC}/bibtex/bst/natbib
+	rm -rf ${WRKSRC}/bibtex/bst/plbib
 	rm -rf ${WRKSRC}/doc/bibtex/base
 	rmdir ${WRKSRC}/doc/generic/pdfcrop
 	rm -rf ${WRKSRC}/doc/etex
@@ -234,10 +237,12 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/generic/xk*
 	rm -rf ${WRKSRC}/doc/latex/a[f-m]*
 	rm -rf ${WRKSRC}/doc/latex/base
-	rm -rf ${WRKSRC}/doc/latex/beamer
+	rm -rf ${WRKSRC}/doc/latex/be[a-y]*
 	rm -rf ${WRKSRC}/doc/latex/ca*
+	rm -rf ${WRKSRC}/doc/latex/changebar
 	rm -rf ${WRKSRC}/doc/latex/c[v-z]*
 	rm -rf ${WRKSRC}/doc/latex/e[d-n]*
+	rm -rf ${WRKSRC}/doc/latex/euler
 	rm -rf ${WRKSRC}/doc/latex/exam
 	rm -rf ${WRKSRC}/doc/latex/fa*
 	rm -rf ${WRKSRC}/doc/latex/float
@@ -247,7 +252,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/k*
 	rm -rf ${WRKSRC}/doc/latex/lis*
 	rm -rf ${WRKSRC}/doc/latex/m[e-g]*
-	rm -rf ${WRKSRC}/doc/latex/microtype
+	rm -rf ${WRKSRC}/doc/latex/mi*
 	rm -rf ${WRKSRC}/doc/latex/moreverb
 	rm -rf ${WRKSRC}/doc/latex/ms
 	rm -rf ${WRKSRC}/doc/latex/n[a-s]*
@@ -373,6 +378,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/generic/[a-b]*
 	rm -rf ${WRKSRC}/tex/generic/con*
 	rm -rf ${WRKSRC}/tex/generic/enctex
+	rm -rf ${WRKSRC}/tex/generic/epsf
 	rm -rf ${WRKSRC}/tex/generic/german
 	rm -rf ${WRKSRC}/tex/generic/hyphen
 	rm -rf ${WRKSRC}/tex/generic/null
@@ -387,9 +393,11 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/a[f-m]*
 	rm -rf ${WRKSRC}/tex/latex/base
 	rm -rf ${WRKSRC}/tex/latex/beamer
+	rm -rf ${WRKSRC}/tex/latex/beton
 	rm -rf ${WRKSRC}/tex/latex/bo[a-np-z]*
 	rm -rf ${WRKSRC}/tex/latex/ca[m-z]*
 	rm -rf ${WRKSRC}/tex/latex/carlisle
+	rm -rf ${WRKSRC}/tex/latex/changebar
 	rm -rf ${WRKSRC}/tex/latex/chngpage
 	rm -rf ${WRKSRC}/tex/latex/cite
 	rm -rf ${WRKSRC}/tex/latex/concrete
@@ -398,6 +406,7 @@ post-extract:
 	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
 	rm -rf ${WRKSRC}/tex/latex/e[d-n]*
 	rm -rf ${WRKSRC}/tex/latex/etex
+	rm -rf ${WRKSRC}/tex/latex/euler
 	rm -rf ${WRKSRC}/tex/latex/eurosym
 	rm -rf ${WRKSRC}/tex/latex/exam
 	rm -rf ${WRKSRC}/tex/latex/fa*
@@ -409,13 +418,14 @@ post-extract:
 	rm -f ${WRKSRC}/tex/latex/graphics/[a-l]*
 	rm -f ${WRKSRC}/tex/latex/graphics/p[a-r]*
 	rm -f ${WRKSRC}/tex/latex/graphics/t[cr]*
+	rm -rf ${WRKSRC}/tex/latex/here
 	rm -rf ${WRKSRC}/tex/latex/hyperref
 	rm -rf ${WRKSRC}/tex/latex/k*
 	rm -rf ${WRKSRC}/tex/latex/lis*
 	rm -rf ${WRKSRC}/tex/latex/lm
 	rm -rf ${WRKSRC}/tex/latex/marvosym
 	rm -rf ${WRKSRC}/tex/latex/m[e-g]*
-	rm -rf ${WRKSRC}/tex/latex/microtype
+	rm -rf ${WRKSRC}/tex/latex/mi*
 	rm -rf ${WRKSRC}/tex/latex/moreverb
 	rm -rf ${WRKSRC}/tex/latex/ms
 	rm -rf ${WRKSRC}/tex/latex/multirow
