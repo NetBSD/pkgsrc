@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2010/09/22 15:50:43 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2011/01/22 21:18:16 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.orig	2010-09-20 02:03:56.000000000 +0000
+--- texmf/tex/generic/config/language.dat.orig	2011-01-14 03:13:12.000000000 +0000
 +++ texmf/tex/generic/config/language.dat
-@@ -57,138 +57,3 @@ english		hyphen.tex  % do not change!
+@@ -57,142 +57,3 @@ english		hyphen.tex  % do not change!
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
@@ -47,6 +47,10 @@ $NetBSD: patch-aa,v 1.6 2010/09/22 15:50:43 minskim Exp $
 -esperanto loadhyph-eo.tex
 -% from hyphen-estonian:
 -estonian loadhyph-et.tex
+-% from hyphen-ethiopic:
+-ethiopic loadhyph-mul-ethi.tex
+-=amharic
+-=geez
 -% from hyphen-farsi:
 -farsi zerohyph.tex
 -=persian
