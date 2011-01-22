@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/09/19 23:09:00 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/22 22:45:32 minskim Exp $
 
 DISTNAME=	hyperref.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-6.81p
-TEXLIVE_REV=	19782
+PKGNAME=	tex-${DISTNAME:S/./-/}-6.81y
+TEXLIVE_REV=	20783
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-hyperref
