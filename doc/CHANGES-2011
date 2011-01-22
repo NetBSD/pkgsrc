@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.135 2011/01/22 20:56:54 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.136 2011/01/22 20:59:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/sudo to 1.7.4p6 [taca 2011-01-22]
 	Updated misc/zyGrib to 3.9.9 [plunky 2011-01-22]
 	Updated print/tex-dvipdfm to 0.13.2dnb2 [minskim 2011-01-22]
+	Updated print/tex-pdftex-def to 0.05c [minskim 2011-01-22]
