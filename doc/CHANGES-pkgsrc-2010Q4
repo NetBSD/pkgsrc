@@ -19,4 +19,10 @@ archivers/star: build fix
 Pullup ticket #3327 - requested by markd
 Fix previous commit to Linux.bsd.man.mk
 Pullup ticket #3328 - requested by drochner
-tor security update
+net/tor: security update
+Pullup ticket #3329 - requested by gls
+mail/exim-html: security update
+Pullup ticket #3330 - requested by gls
+mail/exim: security update
+Pullup ticket #3331 - requested by gls
+converters/p5-Convert-UUlib: security update
