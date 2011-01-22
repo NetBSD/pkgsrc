@@ -1,0 +1,8 @@
+Thr purpose of the package is to provide an alternative interface to the
+CM Sans Serif boldface fonts. The EC (T1, Cork) encoded versions of the
+'CM Sans Serif boldface extended' fonts differ considerably from the
+traditionally (OT1) encoded ones: at large sizes, >10pt, they have
+thinner strokes and are much wider. At 25pt they are hardly to be
+recognized as being 'boldface'. This package attempts to make these T1
+fonts look like the traditional ones did. You do not need any new fonts;
+the package just changes the way LaTeX makes use of the current ones.
