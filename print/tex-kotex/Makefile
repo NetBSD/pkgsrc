@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/01/12 15:18:12 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/22 23:12:39 minskim Exp $
 
 DISTNAME=	kotex
 PKGNAME=	tex-${DISTNAME}-0.2
+PKGREVISION=	1
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/texlive/2010/archive/
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGBASE}-0.2
 TEXLIVE_REV=	1
 
 MAINTAINER=	minskim@NetBSD.org
@@ -12,12 +13,10 @@ COMMENT=	ko.TeX macros to typeset Korean with etex or pdftex
 
 DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
-DEPENDS+=	tex-etex-pkg-[0-9]*:../../print/tex-etex-pkg
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-kotex-base>=0.1.1nb1:../../fonts/tex-kotex-base
 DEPENDS+=	tex-kotex-utils>=0.1.1:../../print/tex-kotex-utils
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
 DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
@@ -27,6 +26,7 @@ DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
 DEPENDS+=	tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
+DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 .include "../../print/texlive/package.mk"
