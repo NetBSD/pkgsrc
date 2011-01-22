@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/09/24 16:33:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/01/22 23:53:36 minskim Exp $
 share/texmf-dist/tex/latex/ltxmisc/abstbook.cls
 share/texmf-dist/tex/latex/ltxmisc/beletter.cls
 share/texmf-dist/tex/latex/ltxmisc/bibcheck.sty
@@ -7,16 +7,6 @@ share/texmf-dist/tex/latex/ltxmisc/flashcard.cls
 share/texmf-dist/tex/latex/ltxmisc/iagproc.cls
 share/texmf-dist/tex/latex/ltxmisc/linsys.sty
 share/texmf-dist/tex/latex/ltxmisc/mitpress.sty
-share/texmf-dist/tex/latex/ltxmisc/parskip.sty
-share/texmf-dist/tex/latex/ltxmisc/romanneg.sty
-share/texmf-dist/tex/latex/ltxmisc/secdot.sty
-share/texmf-dist/tex/latex/ltxmisc/section.sty
-share/texmf-dist/tex/latex/ltxmisc/sepnum.sty
-share/texmf-dist/tex/latex/ltxmisc/shadow.sty
-share/texmf-dist/tex/latex/ltxmisc/showtags.sty
-share/texmf-dist/tex/latex/ltxmisc/sphack.sty
-share/texmf-dist/tex/latex/ltxmisc/statex.sty
-share/texmf-dist/tex/latex/ltxmisc/subfigmat.sty
 share/texmf-dist/tex/latex/ltxmisc/thrmappendix.sty
 share/texmf-dist/tex/latex/ltxmisc/topcapt.sty
 share/texmf-dist/tex/latex/ltxmisc/verbasef.sty
