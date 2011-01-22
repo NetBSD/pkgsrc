@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/22 22:13:07 minskim Exp $
+share/texmf-dist/tex/latex/cmsd/cmsd.sty
+share/texmf-dist/tex/latex/cmsd/t1cmsd.fd
+share/texmf-dist/tex/latex/cmsd/ts1cmsd.fd
