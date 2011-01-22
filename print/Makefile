@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.455 2011/01/22 22:02:00 minskim Exp $
+# $NetBSD: Makefile,v 1.456 2011/01/22 22:07:23 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -313,6 +313,8 @@ SUBDIR+=	tex-gustlib
 SUBDIR+=	tex-gustlib-doc
 SUBDIR+=	tex-harvard
 SUBDIR+=	tex-harvard-doc
+SUBDIR+=	tex-here
+SUBDIR+=	tex-here-doc
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hyper
 SUBDIR+=	tex-hyper-doc
