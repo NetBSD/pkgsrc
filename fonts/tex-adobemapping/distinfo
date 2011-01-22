@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/08 01:24:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/01/22 21:08:10 minskim Exp $
 
-SHA1 (tex-adobemapping-20273/adobemapping.tar.xz) = e618c0b1714feaab51a86023e5f29f3d8d9ec421
-RMD160 (tex-adobemapping-20273/adobemapping.tar.xz) = 2a1a57147aa019870a26f88cdd9d1544fb6396ca
-Size (tex-adobemapping-20273/adobemapping.tar.xz) = 1875124 bytes
+SHA1 (tex-adobemapping-20535/adobemapping.tar.xz) = 3b5129595cfcb6a03f42ca382d894ead683c2b19
+RMD160 (tex-adobemapping-20535/adobemapping.tar.xz) = 89b4d5f8ca6bdbd206db556d6f807bdd9f5aac35
+Size (tex-adobemapping-20535/adobemapping.tar.xz) = 1874628 bytes
