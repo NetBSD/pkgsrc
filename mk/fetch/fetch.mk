@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.45 2011/01/18 15:20:54 reed Exp $
+# $NetBSD: fetch.mk,v 1.46 2011/01/22 02:22:17 obache Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -215,8 +215,8 @@ _FETCH_OUTPUT_ARGS.wget=	-O
 _FETCH_CMD.wget=		${PREFIX}/bin/wget
 
 _FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv} \
-				${FETCH_TIMEOUT:D--connect-timeout=${FETCH_TIMEOUT}} \
-				${FETCH_TIMEOUT:D--speed-time=${FETCH_TIMEOUT}}
+				${FETCH_TIMEOUT:D--connect-timeout ${FETCH_TIMEOUT}} \
+				${FETCH_TIMEOUT:D--speed-time ${FETCH_TIMEOUT}}
 _FETCH_AFTER_ARGS.curl=		-O # must be here to honor -o option
 _FETCH_RESUME_ARGS.curl=	-C -
 _FETCH_OUTPUT_ARGS.curl=	-o
