@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.148 2011/01/22 22:25:00 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.149 2011/01/22 22:32:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -236,3 +236,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-cmsd-doc version 2010 [minskim 2011-01-22]
 	Added print/tex-minitoc version 60 [minskim 2011-01-22]
 	Added print/tex-minitoc-doc version 60 [minskim 2011-01-22]
+	Updated print/tex-amscls to 2010.20248nb1 [minskim 2011-01-22]
