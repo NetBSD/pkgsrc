@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/12 17:13:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/01/22 21:04:05 minskim Exp $
 share/texmf/dvips/tetex/config.builtin35
 share/texmf/dvips/tetex/config.dfaxhigh
 share/texmf/dvips/tetex/config.dfaxlo
@@ -21,6 +21,7 @@ share/texmf/fonts/enc/dvips/tetex/d9b29452.enc
 share/texmf/fonts/enc/dvips/tetex/f7b6d320.enc
 share/texmf/fonts/enc/dvips/tetex/mtex.enc
 share/texmf/fonts/map/dvipdfm/tetex/cm-dvipdfm-fix.map
+share/texmf/fonts/map/dvips/tetex/README
 share/texmf/fonts/map/dvips/tetex/cid-base.map
 share/texmf/fonts/map/dvips/tetex/dvipdfm35.map
 share/texmf/fonts/map/dvips/tetex/dvips35.map
@@ -28,3 +29,4 @@ share/texmf/fonts/map/dvips/tetex/mathpple.map
 share/texmf/fonts/map/dvips/tetex/pdftex35.map
 share/texmf/fonts/map/dvips/tetex/ps2pk35.map
 share/texmf/scripts/tetex/updmap.pl
+@pkgdir share/texmf/web2c
