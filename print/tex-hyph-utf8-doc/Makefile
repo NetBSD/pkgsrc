@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/09/24 21:09:27 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/22 21:23:43 minskim Exp $
 
 DISTNAME=	hyph-utf8.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2010
-TEXLIVE_REV=	19815
+PKGNAME=	tex-${DISTNAME:S/./-/}-2010.21077
+TEXLIVE_REV=	21077
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-hyph-utf8
