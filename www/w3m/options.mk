@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2010/03/15 08:41:05 obache Exp $
+# $NetBSD: options.mk,v 1.12 2011/01/22 13:27:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.w3m
 PKG_SUPPORTED_OPTIONS=	inet6 migemo w3m-lynx-key
@@ -53,6 +53,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .  else
 USE_TOOLS+=	pkg-config
 .    include "../../x11/${_W3M_IMAGELIB}/buildlink3.mk"
+.    include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .  endif
 .else
 CONFIGURE_ARGS+=	--disable-image
