@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.137 2011/01/22 21:04:28 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.138 2011/01/22 21:08:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -220,3 +220,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-dvipdfm to 0.13.2dnb2 [minskim 2011-01-22]
 	Updated print/tex-pdftex-def to 0.05c [minskim 2011-01-22]
 	Updated print/tex-tetex to 3.0.21040 [minskim 2011-01-22]
+	Updated fonts/tex-adobemapping to 2010.20535 [minskim 2011-01-22]
