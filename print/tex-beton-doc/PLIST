@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/22 21:52:57 minskim Exp $
+share/texmf-dist/doc/latex/beton/beton.pdf
+share/texmf-dist/doc/latex/beton/legal.txt
