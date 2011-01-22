@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/10/26 23:32:22 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/22 21:12:00 minskim Exp $
 
 DISTNAME=	times
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	20188
+PKGNAME=	tex-${DISTNAME}-2010.20926
+TEXLIVE_REV=	20926
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Select Adobe Times Roman (or equivalent) as default font
