@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2010/03/20 00:04:21 schwarz Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/22 14:48:00 schwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.4.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.login.com/pub/software/traceroute/
-MASTER_SITES+=	http://gd.tuwien.ac.at/infosys/network/tools/traceroute/
 DISTFILES=	traceroute.c
 DIST_SUBDIR=	traceroute-nanog
 
 # for the man page:
 PATCH_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/traceroute-nanog/}
-PATCHFILES=	traceroute-nanog_6.3.10-2.diff.gz
+PATCHFILES=	traceroute-nanog_6.4.2-1.diff.gz
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -58,6 +57,6 @@ do-build:
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${DESTDIR}${PREFIX}/sbin
-		${INSTALL_MAN} ${WRKDIR}/traceroute-nanog-6.3.10/debian/traceroute-nanog.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+		${INSTALL_MAN} ${WRKDIR}/traceroute-nanog-6.4.2/debian/traceroute-nanog.genuine.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/traceroute-nanog.8
 
 .include "../../mk/bsd.pkg.mk"
