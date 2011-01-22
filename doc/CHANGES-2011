@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.142 2011/01/22 21:27:28 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.143 2011/01/22 21:30:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -225,3 +225,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-hyph-utf8 to 2010.21077 [minskim 2011-01-22]
 	Updated print/tex-hyph-utf8-doc to 2010.21077 [minskim 2011-01-22]
 	Updated print/tex-pdftex to 1.40.11nb2 [minskim 2011-01-22]
+	Updated print/tex-dvips to 2010.21040 [minskim 2011-01-22]
