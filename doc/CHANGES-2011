@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.140 2011/01/22 21:22:06 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.141 2011/01/22 21:24:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -223,3 +223,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-adobemapping to 2010.20535 [minskim 2011-01-22]
 	Updated fonts/tex-times to 2010.20926 [minskim 2011-01-22]
 	Updated print/tex-hyph-utf8 to 2010.21077 [minskim 2011-01-22]
+	Updated print/tex-hyph-utf8-doc to 2010.21077 [minskim 2011-01-22]
