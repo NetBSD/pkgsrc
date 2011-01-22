@@ -1,0 +1,6 @@
+Provides a setup for using the AMS Euler family of fonts for mathematics
+in LaTeX documents. "The underlying philosophy of Zapf's Euler design
+was to capture the flavour of mathematics as it might be written by a
+mathematician with excellent handwriting." [concrete-tug] The euler
+package is based on Knuth's macros for the book 'Concrete Mathematics'.
+The text fonts for the Concrete book are supported by the beton package.
