@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.5 2011/01/23 23:58:01 dholland Exp $
+
+Avoid truncating warning messages; some from libpng are more than 80
+characters long.
+
+--- xvinfo.c.orig	2011-01-23 23:25:49.000000000 +0000
++++ xvinfo.c
+@@ -26,7 +26,7 @@
+ #define INFOHIGH 270
+ 
+ /* max length of an Info String */
+-#define ISTRLEN 80
++#define ISTRLEN 256
+ 
+ /* baseline of top line of text */
+ #define TOPBASE (36 + penn_height/2 + 4 + 8 + ASCENT)
