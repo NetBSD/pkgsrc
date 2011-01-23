@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.11 2011/01/23 14:28:58 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2011/01/23 14:36:10 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
 PKG_OPTIONS_GROUP.screen=	ncurses slang
-PKG_SUPPORTED_OPTIONS=	glib12 mc-charset mc-edit mc-samba mc-subshell mc-vfs x11
+PKG_SUPPORTED_OPTIONS=	mc-charset mc-edit mc-samba mc-subshell mc-vfs x11
 PKG_SUGGESTED_OPTIONS=	mc-charset mc-edit mc-subshell mc-vfs slang
 
 # remove after pkgsrc-2010Q1
@@ -34,15 +34,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST.mcedit
 CONFIGURE_ARGS+=	--without-edit
 .endif
 
-### On some systems where glib-2.0 does not build, glib-1.2 can be used
-### instead.
-.if !empty(PKG_OPTIONS:Mglib12)
-CONFIGURE_ARGS+=	--with-glib12
-.include "../../devel/glib/buildlink3.mk"
-.else
-.include "../../devel/glib2/buildlink3.mk"
-.endif
-
 ### Enable the Samba virtual file system. You can connect to Windows
 ### file servers or Samba servers in your network.
 .if !empty(PKG_OPTIONS:Mmc-samba)
@@ -62,11 +53,10 @@ CONFIGURE_ARGS+=	--without-subshell
 ### VFS you can access files via FTP, SSH, in various archive formats
 ### like if they were on your local disk.
 .if !empty(PKG_OPTIONS:Mmc-vfs)
-CONFIGURE_ARGS+=	--with-vfs
 PLIST_SRC+=		${PKGDIR}/PLIST.vfs
 USE_TOOLS+=		perl:run
 .else
-CONFIGURE_ARGS+=	--without-vfs
+CONFIGURE_ARGS+=	--disable-vfs
 .endif
 
 ### X11 support allows better key handling (detection of the Alt, Ctrl,
