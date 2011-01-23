@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/04 11:58:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/01/23 08:19:35 obache Exp $
 include/goocanvasmm-1.0/goocanvasmm.h
 include/goocanvasmm-1.0/goocanvasmm/bounds.h
 include/goocanvasmm-1.0/goocanvasmm/canvas.h
@@ -202,6 +202,7 @@ share/doc/goocanvasmm-1.0/reference/html/inherit__graph__3.png
 share/doc/goocanvasmm-1.0/reference/html/inherit__graph__4.png
 share/doc/goocanvasmm-1.0/reference/html/inherits.html
 share/doc/goocanvasmm-1.0/reference/html/modules.html
+share/doc/goocanvasmm-1.0/reference/html/namespaceAtk.html
 share/doc/goocanvasmm-1.0/reference/html/namespaceGoocanvas.html
 share/doc/goocanvasmm-1.0/reference/html/namespacemembers.html
 share/doc/goocanvasmm-1.0/reference/html/namespacemembers_enum.html
