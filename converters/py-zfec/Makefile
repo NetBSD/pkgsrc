@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/23 22:16:30 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/23 22:19:09 tnn Exp $
 #
 
 DISTNAME=	zfec-1.4.7
@@ -14,8 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-darcsver:../../devel/py-darcsver-[0-9]*
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat-[0-9]*
+DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
