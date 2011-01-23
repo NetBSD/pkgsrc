@@ -1,0 +1,62 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/01/23 14:31:56 wiz Exp $
+
+--- src/find.c.orig	2005-05-27 14:19:18.000000000 +0000
++++ src/find.c
+@@ -606,18 +606,7 @@ do_search (struct Dlg_head *h)
+ 		    stop_idle (h);
+ 		    return 0;
+ 		}
+-		if (find_ignore_dirs){
+-                    int found;
+-		    char *temp_dir = g_strconcat (":", tmp, ":", (char *) NULL);
+-
+-                    found = strstr (find_ignore_dirs, temp_dir) != 0;
+-                    g_free (temp_dir);
+-		    if (found)
+-			g_free (tmp);
+-		    else
+-			break;
+-		} else
+-		    break;
++		break;
+ 	    } 
+ 
+ 	    g_free (directory);
+@@ -652,14 +641,30 @@ do_search (struct Dlg_head *h)
+ 	return 1;
+     }
+ 
+-    if (subdirs_left && directory) { /* Can directory be NULL ? */
+-	char *tmp_name = concat_dir_and_file (directory, dp->d_name);
+-	if (!mc_lstat (tmp_name, &tmp_stat)
+-	    && S_ISDIR (tmp_stat.st_mode)) {
+-	    push_directory (tmp_name);
+-	    subdirs_left--;
++    if (directory) { /* Can directory be NULL ? */
++	char *tmp_name;
++	if (find_ignore_dirs){
++	    int found;
++
++    	    tmp_name = g_strconcat (":", dp->d_name, ":", (char *) NULL);
++
++            found = strstr (find_ignore_dirs, tmp_name) != 0;
++            g_free (tmp_name);
++	    if (found) {
++		dp = mc_readdir (dirp);
++		return 1;
++	    }
++	}
++
++	if (subdirs_left) {
++	    tmp_name = concat_dir_and_file (directory, dp->d_name);
++	    if (!mc_lstat (tmp_name, &tmp_stat)
++		&& S_ISDIR (tmp_stat.st_mode)) {
++		push_directory (tmp_name);
++		subdirs_left--;
++	    }
++	    g_free (tmp_name);
+ 	}
+-	g_free (tmp_name);
+     }
+ 
+     if (regexp_match (find_pattern, dp->d_name, match_file)){
