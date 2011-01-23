@@ -2,7 +2,7 @@
 # derrived from /etc/rc_d/os.sh
 
 # RCSid:
-#	$Id: machine.sh,v 1.2 2008/03/09 19:54:29 joerg Exp $
+#	$Id: machine.sh,v 1.3 2011/01/23 19:07:25 agc Exp $
 #
 #	@(#) Copyright (c) 1994-2002 Simon J. Gerraty
 #
@@ -42,6 +42,9 @@ Which() {
 }
 
 case $OS in
+MirBSD)
+	MACHINE=$OS$OSMAJOR.$machine
+	;;
 OpenBSD)
 	MACHINE=$OS$OSMAJOR.$machine
 	arch=`Which arch /usr/bin:/usr/ucb:$PATH`
