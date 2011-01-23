@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.311 2010/08/24 19:08:28 bad Exp $
+# $NetBSD: bsd.prefs.mk,v 1.312 2011/01/23 19:07:25 agc Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -198,6 +198,15 @@ OS_VERSION=		3.0
 .    endif
 .  endif
 
+.elif ${OPSYS} == "MirBSD"
+LOWER_OPSYS?=		mirbsd
+LOWER_OS_VERSION=	${OS_VERSION}
+LOWER_OPSYS_VERSUFFIX=	${OS_VERSION}
+LOWER_ARCH!=		arch -s
+LOWER_VENDOR?=		unknown
+MACHINE_ARCH=		${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
+
 .elif !empty(OPSYS:MIRIX*)
 LOWER_ARCH!=		${UNAME} -p
 LOWER_OPSYS?=		irix
@@ -343,6 +352,9 @@ OBJECT_FMT?=	a.out
 .  endif
 .elif ${OPSYS} == "DragonFly"
 OBJECT_FMT=	ELF
+.elif ${OPSYS} == "MirBSD"
+OBJECT_FMT=	ELF
+MKPROFILE=	no
 .elif ${OPSYS} == "AIX"
 OBJECT_FMT=	XCOFF
 .elif ${OPSYS} == "OSF1"

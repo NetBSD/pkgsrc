@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.18 2010/09/07 14:28:00 joerg Exp $
+#	$NetBSD: Makefile.in,v 1.19 2011/01/23 19:07:25 agc Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.18 2010/09/07 14:28:00 joerg Exp $
+#	$Id: Makefile.in,v 1.19 2011/01/23 19:07:25 agc Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -47,7 +47,7 @@ OS!= uname -s
 ARCH!= uname -p 2>/dev/null || uname -m
 
 # list of OS's which are derrived from BSD4.4
-isBSD44= NetBSD FreeBSD OpenBSD DragonFly
+isBSD44= NetBSD FreeBSD OpenBSD DragonFly MirBSD
 
 .if ${OS} == "NetBSD"
 # Don't set these for anyone else since we don't know what the effect may be.
