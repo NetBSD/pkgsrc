@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/10/21 10:31:00 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2011/01/23 11:18:51 markd Exp $
 
 .include "../../devel/xulrunner/dist.mk"
 PKGNAME=		nss-${NSS_RELEASE}${MOZ_BRANCH_MINOR}
@@ -16,6 +16,10 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 USE_TOOLS+=		gmake perl pax pkg-config
 
 .include		"../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+MAKE_ENV+=	FREEBL_NO_DEPEND=0
+.endif
 
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=		so
