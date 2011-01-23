@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2011/01/13 13:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2011/01/23 08:19:35 obache Exp $
 #
 
-DISTNAME=	goocanvasmm-0.15.3
-PKGREVISION=	4
+DISTNAME=	goocanvasmm-0.15.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/goocanvasmm/0.15/}
 
@@ -24,6 +23,6 @@ BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.14.2
 .include "../../devel/glibmm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.goocanvas+=	goocanvas>=0.15
 .include "../../graphics/goocanvas/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtkmm+=	gtkmm>=2.10.9
+BUILDLINK_API_DEPENDS.gtkmm+=	gtkmm>=2.22.0
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
