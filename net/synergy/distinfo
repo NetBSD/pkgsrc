@@ -1,19 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/09/19 19:14:54 tnn Exp $
+$NetBSD: distinfo,v 1.7 2011/01/23 02:24:29 tnn Exp $
 
-SHA1 (synergy-1.3.1.tar.gz) = 03113ec8aadfecaeba8e369b083f4fb5b44f5c62
-RMD160 (synergy-1.3.1.tar.gz) = 5f5d7cb8fcfb57a6c8eae83fb53c704cb85c6c16
-Size (synergy-1.3.1.tar.gz) = 793172 bytes
-SHA1 (patch-aa) = da4ad36cdcec251bf4334c2dccd68346042894de
-SHA1 (patch-ab) = fae459f7063a6a879b385a94d5e889877c94860d
-SHA1 (patch-ac) = 8f8714f20da9e3744ed82ee8ba9d7b652b78935d
-SHA1 (patch-ad) = 2635ceb0cfa0fdd0af5ac362dd0d97353ca65440
-SHA1 (patch-ae) = b5430ec4d8a3d80cb71b21f786dac8c825c7c660
-SHA1 (patch-af) = bd866b8e22962ad94957ca7f93644d58a9f94c89
-SHA1 (patch-ag) = c9c9a2b064e230684e5cecfa014f7e1bc7f87204
-SHA1 (patch-ah) = c683524d97330150d2922fb66e2b252761ac6bb1
-SHA1 (patch-ai) = f00c16eaa0850320a7b4b33440ad8b1cdcb5c304
-SHA1 (patch-aj) = 543c18157715898155a6bdbfb66aaa7904c03b24
-SHA1 (patch-ak) = 7a5c2f7bfa2d36c0b0fe8ffcb353927639eefb66
-SHA1 (patch-al) = d41c717b9b7256b9afa3f5e810288cfe96dd60e4
-SHA1 (patch-am) = fc25d0d0d86316e6463745d5200f0abc77aef1c2
-SHA1 (patch-an) = 99d90958e5446842a42821522e801753ce4e0421
+SHA1 (synergy-1.3.6-Source.tar.gz) = acbb8c62bc7f18cd4646c8b116c9acdeb2b405da
+RMD160 (synergy-1.3.6-Source.tar.gz) = adcd5b7a2de7370a03b404c7827be58cb9f7467a
+Size (synergy-1.3.6-Source.tar.gz) = 659025 bytes
