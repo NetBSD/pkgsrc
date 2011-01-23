@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/10/27 09:53:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/01/23 08:53:09 markd Exp $
 bin/kdevelop
 include/kdevelop/make/imakebuilder.h
 lib/kde4/kcm_kdev_makebuilder.so
@@ -198,6 +198,7 @@ share/locale/de/LC_MESSAGES/kdevelop.mo
 share/locale/de/LC_MESSAGES/kdevformatters.mo
 share/locale/de/LC_MESSAGES/kdevgdb.mo
 share/locale/de/LC_MESSAGES/kdevmakebuilder.mo
+share/locale/de/LC_MESSAGES/kdevokteta.mo
 share/locale/de/LC_MESSAGES/kdevqthelp.mo
 share/locale/en_GB/LC_MESSAGES/kdevcmake.mo
 share/locale/en_GB/LC_MESSAGES/kdevcmakebuilder.mo
@@ -295,16 +296,6 @@ share/locale/pt_BR/LC_MESSAGES/kdevgdb.mo
 share/locale/pt_BR/LC_MESSAGES/kdevmakebuilder.mo
 share/locale/pt_BR/LC_MESSAGES/kdevokteta.mo
 share/locale/pt_BR/LC_MESSAGES/kdevqthelp.mo
-share/locale/ru/LC_MESSAGES/kdevcmake.mo
-share/locale/ru/LC_MESSAGES/kdevcmakebuilder.mo
-share/locale/ru/LC_MESSAGES/kdevcpp.mo
-share/locale/ru/LC_MESSAGES/kdevcustommake.mo
-share/locale/ru/LC_MESSAGES/kdevelop.mo
-share/locale/ru/LC_MESSAGES/kdevformatters.mo
-share/locale/ru/LC_MESSAGES/kdevgdb.mo
-share/locale/ru/LC_MESSAGES/kdevmakebuilder.mo
-share/locale/ru/LC_MESSAGES/kdevokteta.mo
-share/locale/ru/LC_MESSAGES/kdevqthelp.mo
 share/locale/sl/LC_MESSAGES/kdevelop.mo
 share/locale/sv/LC_MESSAGES/kdevcmake.mo
 share/locale/sv/LC_MESSAGES/kdevcmakebuilder.mo
