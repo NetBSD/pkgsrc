@@ -1,4 +1,4 @@
-/*	$NetBSD: lex.c,v 1.4 2009/02/21 20:06:30 tnn Exp $	*/
+/*	$NetBSD: lex.c,v 1.5 2011/01/23 17:29:30 hauke Exp $	*/
 
 /*
  * lexical analysis and source input
@@ -239,6 +239,9 @@ yylex(cf)
 
 		  Subst:
 			switch (c) {
+			  Lex_state *s;
+			  Lex_state *base;
+
 			  case '\\':
 				c = getsc();
 				switch (c) {
@@ -335,8 +338,8 @@ yylex(cf)
 				 * posix mode was not in effect.
 				 */
 				statep->ls_sbquote.indquotes = 0;
-				Lex_state *s = statep;
-				Lex_state *base = state_info.base;
+				s = statep;
+				base = state_info.base;
 				while (1) {
 					for (; s != base; s--) {
 						if (s->ls_state == SDQUOTE) {
