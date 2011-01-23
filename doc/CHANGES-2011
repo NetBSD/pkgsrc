@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.160 2011/01/23 01:27:54 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.161 2011/01/23 01:38:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-plain to 3.141592653nb3 [minskim 2011-01-23]
 	Added print/tex-ptex version 3.1.9 [minskim 2011-01-23]
 	Added print/tex-ptex-doc version 3.1.9 [minskim 2011-01-23]
+	Added print/tex-jsclasses version 2010 [minskim 2011-01-23]
