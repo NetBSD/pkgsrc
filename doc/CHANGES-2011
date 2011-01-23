@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.166 2011/01/23 11:25:03 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.167 2011/01/23 11:35:12 markd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -257,3 +257,32 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/goocanvasmm to 0.15.4 [obache 2011-01-23]
 	Updated pkgtools/pkglint to 4.96 [obache 2011-01-23]
 	Updated graphics/png to 1.5.1beta08 [wiz 2011-01-23]
+	Updated devel/kdesdk4 to 4.5.5 [markd 2011-01-23]
+	Updated games/kdegames4 to 4.5.5 [markd 2011-01-23]
+	Updated games/kdetoys4 to 4.5.5 [markd 2011-01-23]
+	Updated graphics/kdegraphics4 to 4.5.5 [markd 2011-01-23]
+	Updated graphics/oxygen-icons to 4.5.5 [markd 2011-01-23]
+	Updated meta-pkgs/kde4 to 4.5.5 [markd 2011-01-23]
+	Updated misc/kdeaccessibility4 to 4.5.5 [markd 2011-01-23]
+	Updated misc/kdeadmin4 to 4.5.5 [markd 2011-01-23]
+	Updated misc/kdeartwork4 to 4.5.5 [markd 2011-01-23]
+	Updated misc/kdeedu4 to 4.5.5 [markd 2011-01-23]
+	Updated misc/kdepimlibs4 to 4.5.5 [markd 2011-01-23]
+	Updated misc/kdepim4 to 4.4.9 [markd 2011-01-23]
+	Updated misc/kdepim-runtime4 to 4.4.9 [markd 2011-01-23]
+	Updated misc/kdeplasma-addons4 to 4.5.5 [markd 2011-01-23]
+	Updated misc/kdeutils4 to 4.5.5 [markd 2011-01-23]
+	Updated multimedia/kdemultimedia4 to 4.5.5 [markd 2011-01-23]
+	Updated net/kdenetwork4 to 4.5.5 [markd 2011-01-23]
+	Updated www/kdewebdev4 to 4.5.5 [markd 2011-01-23]
+	Updated x11/kde4-l10n-de to 4.5.5 [markd 2011-01-23]
+	Updated x11/kde4-l10n-en_GB to 4.5.5 [markd 2011-01-23]
+	Updated x11/kde4-l10n-nl to 4.5.5 [markd 2011-01-23]
+	Updated x11/kdebase-runtime4 to 4.5.5 [markd 2011-01-23]
+	Updated x11/kdebase-workspace4 to 4.5.5 [markd 2011-01-23]
+	Updated x11/kdebase4 to 4.5.5 [markd 2011-01-23]
+	Updated x11/kdebindings4-python to 4.5.5 [markd 2011-01-23]
+	Updated x11/kdelibs4 to 4.5.5 [markd 2011-01-23]
+	Updated devel/kdevelop4 to 4.1.1 [markd 2011-01-23]
+	Updated devel/kdevplatform to 1.1.1 [markd 2011-01-23]
+	Updated lang/g95 to 0.92 [markd 2011-01-23]
