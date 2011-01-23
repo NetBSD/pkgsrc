@@ -1,8 +1,42 @@
-$NetBSD: patch-aa,v 1.13 2002/03/19 16:16:08 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2011/01/23 16:16:39 wiz Exp $
 
---- gdk_imlib/io-png.c.orig	Mon Mar  4 17:26:51 2002
+Fix build with png-1.5.
+
+--- gdk_imlib/io-png.c.orig	2002-03-04 17:06:29.000000000 +0000
 +++ gdk_imlib/io-png.c
-@@ -301,6 +301,9 @@
+@@ -40,13 +40,13 @@ loader_png (FILE * f, int *w, int *h, in
+       return NULL;
+     }
+ 
+-  if (setjmp(png_ptr->jmpbuf))
++  if (setjmp(png_jmpbuf(png_ptr)))
+     {
+       png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+       return NULL;
+     }
+ 
+-  if (info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA)
++  if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB_ALPHA)
+     {
+       png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+       return NULL;
+@@ -275,13 +275,13 @@ inline_png(unsigned char *data, int data
+       return NULL;
+     }
+   
+-  if (setjmp(png_ptr->jmpbuf))
++  if (setjmp(png_jmpbuf(png_ptr)))
+     {
+       png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+       return NULL;
+     }
+   
+-  if (info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA)
++  if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB_ALPHA)
+     {
+       png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+       return NULL;
+@@ -301,6 +301,9 @@ inline_png(unsigned char *data, int data
    /* Setup Translators */
    if (color_type == PNG_COLOR_TYPE_PALETTE)
      png_set_expand(png_ptr);
@@ -12,3 +46,28 @@ $NetBSD: patch-aa,v 1.13 2002/03/19 16:16:08 wiz Exp $
    png_set_strip_16(png_ptr);
    png_set_packing(png_ptr);
    if (png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS))
+@@ -440,13 +443,13 @@ _loader_alpha_png (FILE * f, int *w, int
+ 		return NULL;
+ 	}
+ 	
+-	if (setjmp(png_ptr->jmpbuf))
++	if (setjmp(png_jmpbuf(png_ptr)))
+ 	{
+ 		png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+ 		return NULL;
+ 	}
+ 	
+-	if (info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA)
++	if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB_ALPHA)
+ 	{
+ 		png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+ 		return NULL;
+@@ -635,7 +638,7 @@ saver_png (GdkImlibImage *im, char *file
+ 	      png_destroy_write_struct(&png_ptr, (png_infopp) NULL);
+ 	      return 0;
+ 	    }
+-	  if (setjmp(png_ptr->jmpbuf))
++	  if (setjmp(png_jmpbuf(png_ptr)))
+ 	    {
+ 	      fclose(f);
+ 	      png_destroy_write_struct(&png_ptr, (png_infopp) NULL);

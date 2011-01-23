@@ -1,8 +1,11 @@
-$NetBSD: patch-aj,v 1.1 2004/12/10 09:30:42 salo Exp $
+$NetBSD: patch-aj,v 1.2 2011/01/23 16:16:39 wiz Exp $
 
---- Imlib/utils.c.orig	2004-09-21 02:22:59.000000000 +0200
-+++ Imlib/utils.c	2004-12-10 09:58:18.000000000 +0100
-@@ -1496,36 +1496,56 @@
+First chunks: ???
+Last 2 chunks: Fix build with png-1.5.
+
+--- Imlib/utils.c.orig	2004-09-21 00:22:59.000000000 +0000
++++ Imlib/utils.c
+@@ -1496,36 +1496,56 @@ Imlib_create_image_from_xpm_data(ImlibDa
    context = 0;
    ptr = NULL;
    end = NULL;
@@ -63,7 +66,7 @@ $NetBSD: patch-aj,v 1.1 2004/12/10 09:30:42 salo Exp $
  	      return NULL;
  	    }
  	  cmap = malloc(sizeof(struct _cmap) * ncolors);
-@@ -1533,6 +1553,7 @@
+@@ -1533,6 +1553,7 @@ Imlib_create_image_from_xpm_data(ImlibDa
  	  if (!cmap)
  	    {
  	      free(im);
@@ -71,7 +74,7 @@ $NetBSD: patch-aj,v 1.1 2004/12/10 09:30:42 salo Exp $
  	      return NULL;
  	    }
  	  im->rgb_width = w;
-@@ -1542,6 +1563,7 @@
+@@ -1542,6 +1563,7 @@ Imlib_create_image_from_xpm_data(ImlibDa
  	    {
  	      free(cmap);
  	      free(im);
@@ -79,7 +82,7 @@ $NetBSD: patch-aj,v 1.1 2004/12/10 09:30:42 salo Exp $
  	      return NULL;
  	    }
  	  im->alpha_data = NULL;
-@@ -1817,6 +1839,7 @@
+@@ -1817,6 +1839,7 @@ Imlib_create_image_from_xpm_data(ImlibDa
  	}
        if ((ptr) && ((ptr - im->rgb_data) >= w * h * 3))
  	done = 1;
@@ -87,3 +90,19 @@ $NetBSD: patch-aj,v 1.1 2004/12/10 09:30:42 salo Exp $
      }
    if (!transp)
      {
+@@ -1959,13 +1982,13 @@ Imlib_inlined_png_to_image(ImlibData *id
+       return NULL;
+     }
+   
+-  if (setjmp(png_ptr->jmpbuf))
++  if (setjmp(png_jmpbuf(png_ptr)))
+     {
+       png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+       return NULL;
+     }
+   
+-  if (info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA)
++  if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB_ALPHA)
+     {
+       png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+       return NULL;
