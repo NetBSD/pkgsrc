@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/23 01:26:46 minskim Exp $
+
+SHA1 (tex-ptex-21070/ptex.tar.xz) = 4b69f0922295e2ee7181e6532b02f6ac536e362f
+RMD160 (tex-ptex-21070/ptex.tar.xz) = 42e3dca3386f1b2441d8c68b3af18d4c7cfa94f9
+Size (tex-ptex-21070/ptex.tar.xz) = 84752 bytes
+SHA1 (patch-aa) = c14d5c1e5c2bfd603e18feb72b31f6d81b0935f1
