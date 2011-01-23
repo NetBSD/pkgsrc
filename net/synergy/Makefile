@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/01/23 02:24:29 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2011/01/23 02:26:58 tnn Exp $
 #
 
 DISTNAME=		synergy-1.3.6-Source
@@ -15,16 +15,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 
 # Below rpath fix is copypasted from graphics/vtk.
-CMAKE_OPTS+=    -DCMAKE_INSTALL_RPATH:STRING=${PREFIX}/lib:${X11BASE}/lib${LIBABISUFFIX:Q}      \
-CMAKE_OPTS+=    -DCMAKE_SKIP_BUILD_RPATH:BOOL=ON                \
-CMAKE_OPTS+=    -DCMAKE_BUILD_WITH_INSTALL_RPATH:BOOL=ON        \
-CMAKE_OPTS+=    -DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
+CMAKE_OPTS+=	-DCMAKE_INSTALL_RPATH:STRING=${PREFIX}/lib:${X11BASE}/lib${LIBABISUFFIX:Q}	\
+CMAKE_OPTS+=	-DCMAKE_SKIP_BUILD_RPATH:BOOL=ON		\
+CMAKE_OPTS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH:BOOL=ON	\
+CMAKE_OPTS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=          lib/arch/CArchFileUnix.cpp
-SUBST_SED.fix-paths=            -e 's,"/etc","${PKG_SYSCONFDIR}",g'
+SUBST_FILES.fix-paths=		lib/arch/CArchFileUnix.cpp
+SUBST_SED.fix-paths=		-e 's,"/etc","${PKG_SYSCONFDIR}",g'
 
 do-configure:
 	cd ${WRKSRC} && ${PREFIX}/bin/cmake ${CMAKE_OPTS} .
