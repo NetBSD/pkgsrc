@@ -1,13 +1,17 @@
-$NetBSD: patch-ab,v 1.13 2008/02/14 12:26:56 drochner Exp $
+$NetBSD: patch-ab,v 1.14 2011/01/23 14:36:10 wiz Exp $
 
---- vfs/sfs.c.orig	2008-02-14 12:27:01.000000000 +0100
-+++ vfs/sfs.c
-@@ -314,7 +314,7 @@ static int sfs_init (struct vfs_class *m
-     FILE *cfg;
-     char key[256];
+http://midnight-commander.org/ticket/2476
+--- lib/vfs/mc-vfs/ftpfs.c.orig	2010-11-08 11:46:13.000000000 +0000
++++ lib/vfs/mc-vfs/ftpfs.c
+@@ -115,9 +115,9 @@ What to do with this?
+ #define INADDR_NONE 0xffffffff
+ #endif
  
--    mc_sfsini = concat_dir_and_file (mc_home, "extfs" PATH_SEP_STR "sfs.ini");
-+    mc_sfsini = concat_dir_and_file ("@PKG_SYSCONFDIR@", "sfs.ini");
-     cfg = fopen (mc_sfsini, "r");
+-/* for uclibc < 0.9.29 */
++/* for systems that doesn't provide AI_ADDRCONFIG */
+ #ifndef AI_ADDRCONFIG
+-#define AI_ADDRCONFIG 0x0020
++#define AI_ADDRCONFIG 0
+ #endif
  
-     if (!cfg){
+ #define RFC_AUTODETECT 0
