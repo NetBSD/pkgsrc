@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2011/01/18 10:59:12 markd Exp $
+# $NetBSD: Makefile,v 1.25 2011/01/23 07:55:16 markd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	base workspace for the KDE 4 integrated X11 desktop
 
@@ -57,7 +56,7 @@ SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
 
 SUBST_FILES.qtpath=	startkde.cmake
-SUBST_SED.qtpath=	-e 's,/usr/pkg/qt4,${QTDIR},g'
+SUBST_VARS.qtpath=	QTDIR
 SUBST_STAGE.qtpath=	post-patch
 
 SUBST_FILES.isocodes=	kcontrol/keyboard/iso_codes.h
