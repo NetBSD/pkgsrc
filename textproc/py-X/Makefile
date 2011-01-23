@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.8 2009/07/17 18:00:24 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2011/01/23 03:00:04 minskim Exp $
 #
 
 DISTNAME=	PyX-0.9
 PKGNAME=	${PYPKGPREFIX}-X-0.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyx/}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
+DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
+DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 PYDISTUTILSPKG=	yes
 
