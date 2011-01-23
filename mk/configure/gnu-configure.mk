@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.9 2009/09/12 00:52:45 joerg Exp $
+# $NetBSD: gnu-configure.mk,v 1.10 2011/01/23 19:07:25 agc Exp $
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
@@ -19,6 +19,10 @@ CONFIGURE_ENV+=	ac_given_INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP}
 .if (defined(USE_LIBTOOL) || !empty(PKGPATH:Mdevel/libtool-base)) && \
     defined(_OPSYS_MAX_CMDLEN_CMD)
 CONFIGURE_ENV+=	lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
+.endif
+
+.if ${OPSYS} == "MirBSD"
+CONFIGURE_ENV+=	lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|\.so|_pic\.a)$$'
 .endif
 
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
@@ -100,6 +104,47 @@ configure-scripts-override:
 	done
 .else
 	${RUN} \
+	cd ${WRKSRC};							\
+	depth=0; pattern=${CONFIGURE_SCRIPT:T};				\
+	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.configure}; do	\
+		for file in $$pattern; do				\
+			${TEST} -f "$$file" || continue;		\
+			${_SCRIPT.${.TARGET}};				\
+		done;							\
+		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
+	done
+.endif
+
+######################################################################
+### configure-scripts-osdep (PRIVATE)
+######################################################################
+### configure-scripts-osdep modifies the GNU configure scripts in
+### ${WRKSRC} to support operating systems without upstream support
+### in for example libtool.
+###
+do-configure-pre-hook: configure-scripts-osdep
+
+.if ${OPSYS} == "MirBSD"
+# awk script by Benny Siegert <bsiegert@mirbsd.de>
+_SCRIPT.configure-scripts-osdep=					\
+	${AWK} 'BEGIN { found = 0 }					\
+		/dynamic linker characteristics.../ { found = 1 }	\
+		/^netbsd/ {						\
+			if (found) {					\
+				sub("netbsd","mirbsd*|netbsd");		\
+				found = 0;				\
+			}						\
+		}							\
+		{ print $0 }' $$file >$$file.override;			\
+	${CHMOD} +x $$file.override;					\
+	${MV} -f $$file.override $$file
+.endif
+
+.PHONY: configure-scripts-osdep
+configure-scripts-osdep:
+.if defined(_SCRIPT.configure-scripts-osdep) && !empty(_SCRIPT.configure-scripts-osdep)
+	@${STEP_MSG} "Modifying GNU configure scripts for OS dependent support"
+	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	depth=0; pattern=${CONFIGURE_SCRIPT:T};				\
 	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.configure}; do	\

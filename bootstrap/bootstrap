@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.162 2010/12/26 11:24:21 adam Exp $
+# $NetBSD: bootstrap,v 1.163 2011/01/23 19:07:25 agc Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -621,6 +621,35 @@ Linux)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
+	;;
+MirBSD)
+	root_group=wheel
+	need_pax=yes
+	need_mtree=no
+	need_bsd_install=no
+	need_awk=no
+	need_sed=no
+	set_opsys=no
+	check_prog mtreeprog mtree
+	machine_arch=`arch -s`
+	[ -z "$fetch_cmd" ] && fetch_cmd=/usr/bin/ftp
+	# there is no /usr/bin/cc, so use mgcc if unset
+	test -n "$CC" || { CC=mgcc; export CC; }
+	# get some variables from the native make if unset
+	for var in CFLAGS CPPFLAGS LDFLAGS; do
+		# check if variable is already set
+		eval _tmp=\"\$$var\"
+		[ "x$_tmp" != x ] && continue
+		# ask the native make (EXPERIMENTAL = don't add -Werror)
+		# the -I${.CURDIR} dance is to prevent junk in CPPFLAGS
+		_tmp=`printf '%s\nall:\n\t@%s %%s %s=${%s:M*:Q:Q}\n%s\n%s\n' \
+		    $var'+=-I${.CURDIR}' printf $var $var':S/-I${.CURDIR}//' \
+		    EXPERIMENTAL=yes '.include <bsd.prog.mk>' | \
+		    (unset MAKECONF; /usr/bin/make -f - all 2>/dev/null) | \
+		    sed 's/^x//'`
+		eval $_tmp
+		eval export $var
+	done
 	;;
 NetBSD)
 	root_group=wheel
