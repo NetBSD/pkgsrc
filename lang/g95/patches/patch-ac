@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2011/01/23 09:42:10 markd Exp $
+
+--- configure.orig	2011-01-18 12:06:11.000000000 +0000
++++ configure
+@@ -4669,7 +4669,7 @@ target_version=0
+ 
+ if test "x$with_gcc_dir" != x -a -d "$with_gcc_dir"; then
+    CFLAGS="$CFLAGS -DIN_GCC"
+-   CPPFLAGS="-I- -I$with_gcc_dir/gcc -I$with_gcc_dir/include -I$with_gcc_dir/gcc/config -I$with_gcc_dir/libcpp/include -I$with_gcc_dir/g95/gcc $CPPFLAGS"
++   CPPFLAGS="-I$with_gcc_dir/gcc -I$with_gcc_dir/include -I$with_gcc_dir/gcc/config -I$with_gcc_dir/libcpp/include -I$with_gcc_dir/g95/gcc $CPPFLAGS"
+ 
+    DEFAULT_INCLUDES=" "
+ 
