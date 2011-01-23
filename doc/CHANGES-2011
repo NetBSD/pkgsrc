@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.165 2011/01/23 08:30:16 obache Exp $
+$NetBSD: CHANGES-2011,v 1.166 2011/01/23 11:25:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -256,3 +256,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-X to 0.9nb2 [minskim 2011-01-23]
 	Updated graphics/goocanvasmm to 0.15.4 [obache 2011-01-23]
 	Updated pkgtools/pkglint to 4.96 [obache 2011-01-23]
+	Updated graphics/png to 1.5.1beta08 [wiz 2011-01-23]
