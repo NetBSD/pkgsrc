@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.168 2011/01/23 14:33:15 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.169 2011/01/23 14:36:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -287,3 +287,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/kdevplatform to 1.1.1 [markd 2011-01-23]
 	Updated lang/g95 to 0.92 [markd 2011-01-23]
 	Added sysutils/mc46 version 4.6.1nb7 [wiz 2011-01-23]
+	Updated sysutils/mc to 4.7.0.10nb1 [wiz 2011-01-23]
