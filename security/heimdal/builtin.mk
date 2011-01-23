@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.12 2008/04/04 21:10:45 markd Exp $
+# $NetBSD: builtin.mk,v 1.13 2011/01/23 10:01:37 markd Exp $
 
 BUILTIN_PKG:=	heimdal
 
 BUILTIN_FIND_FILES_VAR:=		H_HEIMDAL SH_KRB5_CONFIG
-BUILTIN_FIND_FILES.H_HEIMDAL=		/usr/include/krb5/krb5.h
+BUILTIN_FIND_FILES.H_HEIMDAL=		/usr/include/krb5/krb5.h /usr/include/krb5.h
 BUILTIN_FIND_GREP.H_HEIMDAL=		heimdal_version
 BUILTIN_FIND_FILES.SH_KRB5_CONFIG=	/usr/bin/krb5-config
 BUILTIN_FIND_GREP.SH_KRB5_CONFIG=	^[ 	]*--version)
