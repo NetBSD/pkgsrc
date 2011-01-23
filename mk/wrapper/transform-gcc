@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.20 2009/08/15 13:36:48 joerg Exp $
+# $NetBSD: transform-gcc,v 1.21 2011/01/23 19:07:26 agc Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -28,6 +28,7 @@ case $arg in
 -fexpensive-optimizations |\
 -ffast-math		|\
 -ffloat-store		|\
+-fhonour-copts		|\
 -finline-functions	|\
 -fno-builtin*		|\
 -fno-common		|\
@@ -68,6 +69,7 @@ case $arg in
 -W			|\
 -W[cLlS],*		|\
 -Wall			|\
+-Wbounded		|\
 -Wcast-align		|\
 -Wcast-qual		|\
 -Wchar-subscripts	|\
