@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.161 2011/01/23 01:38:08 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.162 2011/01/23 02:28:14 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -252,3 +252,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-ptex version 3.1.9 [minskim 2011-01-23]
 	Added print/tex-ptex-doc version 3.1.9 [minskim 2011-01-23]
 	Added print/tex-jsclasses version 2010 [minskim 2011-01-23]
+	Updated net/synergy to 1.3.6 [tnn 2011-01-23]
