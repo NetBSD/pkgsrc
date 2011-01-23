@@ -1,0 +1,3 @@
+Classes jsarticle and jsbook are provided, together with packages
+okumacro, okuverb and morisawa. These classes are designed to work under
+ASCII Corporation's Japanese TeX system ptex.
