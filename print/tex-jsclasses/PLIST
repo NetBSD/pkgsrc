@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/23 01:37:29 minskim Exp $
+share/texmf-dist/tex/platex/jsclasses/jsarticle.cls
+share/texmf-dist/tex/platex/jsclasses/jsbook.cls
+share/texmf-dist/tex/platex/jsclasses/jspf.cls
+share/texmf-dist/tex/platex/jsclasses/jsverb.sty
+share/texmf-dist/tex/platex/jsclasses/kiyou.cls
+share/texmf-dist/tex/platex/jsclasses/minijs.sty
+share/texmf-dist/tex/platex/jsclasses/morisawa.sty
+share/texmf-dist/tex/platex/jsclasses/okumacro.sty
+share/texmf-dist/tex/platex/jsclasses/okuverb.sty
