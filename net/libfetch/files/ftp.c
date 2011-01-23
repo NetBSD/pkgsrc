@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.36 2010/08/20 17:56:49 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.37 2011/01/23 18:37:31 agc Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -464,7 +464,7 @@ ftp_stat(conn_t *conn, const char *file, struct url_stat *us)
 {
 	char *ln;
 	const char *filename;
-	int filenamelen, type;
+	int filenamelen, type, year;
 	struct tm tm;
 	time_t t;
 	int e;
@@ -516,13 +516,13 @@ ftp_stat(conn_t *conn, const char *file, struct url_stat *us)
 		return (-1);
 	}
 	if (sscanf(ln, "%04d%02d%02d%02d%02d%02d",
-	    &tm.tm_year, &tm.tm_mon, &tm.tm_mday,
+	    &year, &tm.tm_mon, &tm.tm_mday,
 	    &tm.tm_hour, &tm.tm_min, &tm.tm_sec) != 6) {
 		ftp_seterr(FTP_PROTOCOL_ERROR);
 		return (-1);
 	}
 	tm.tm_mon--;
-	tm.tm_year -= 1900;
+	tm.tm_year = year - 1900;
 	tm.tm_isdst = -1;
 	t = timegm(&tm);
 	if (t == (time_t)-1)

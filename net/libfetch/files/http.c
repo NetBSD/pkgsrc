@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.29 2010/01/24 19:10:35 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.30 2011/01/23 18:37:31 agc Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -797,9 +797,9 @@ set_if_modified_since(conn_t *conn, time_t last_modified)
 	struct tm tm;
 	char buf[80];
 	gmtime_r(&last_modified, &tm);
-	snprintf(buf, sizeof(buf), "%.3s, %02d %.3s %4d %02d:%02d:%02d GMT",
+	snprintf(buf, sizeof(buf), "%.3s, %02d %.3s %4ld %02d:%02d:%02d GMT",
 	    weekdays + tm.tm_wday * 3, tm.tm_mday, months + tm.tm_mon * 3,
-	    tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec);
+	    (long)(tm.tm_year + 1900), tm.tm_hour, tm.tm_min, tm.tm_sec);
 	http_cmd(conn, "If-Modified-Since: %s\r\n", buf);
 }
 
