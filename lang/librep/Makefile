@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2010/11/22 20:02:50 shattered Exp $
+# $NetBSD: Makefile,v 1.53 2011/01/23 23:54:21 tnn Exp $
 #
 
-DISTNAME=		librep-0.90.5
-PKGREVISION=		1
+DISTNAME=		librep-0.91.0
 CATEGORIES=		lang devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=librep/}
+MASTER_SITES=		http://download.tuxfamily.org/sawfish/librep/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

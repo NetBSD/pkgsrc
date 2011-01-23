@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/11/22 20:02:50 shattered Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/01/23 23:54:21 tnn Exp $
 bin/rep
 bin/rep-remote
 bin/rep-xgettext
@@ -35,10 +35,10 @@ lib/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/timers.la
 lib/rep/${MACHINE_GNU_PLATFORM}/install-aliases
 lib/rep/${MACHINE_GNU_PLATFORM}/libtool
 lib/rep/${MACHINE_GNU_PLATFORM}/rules.mk
-man/man1/rep-remote.1.gz
-man/man1/rep-xgettext.1.gz
-man/man1/rep.1.gz
-man/man1/repdoc.1.gz
+man/man1/rep-remote.1
+man/man1/rep-xgettext.1
+man/man1/rep.1
+man/man1/repdoc.1
 share/emacs/site-lisp/rep-debugger.el
 share/rep/${PKGVERSION}/lisp/cgi-get.jl
 share/rep/${PKGVERSION}/lisp/cgi-get.jlc
