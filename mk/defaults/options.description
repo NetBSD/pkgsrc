@@ -331,6 +331,11 @@ mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
 maintainer-zts		Enable the Zend Thread Safety option for PHP.
 marble			Enable marble (virtual globe) support.
+mc-charset		Enable charset selection and conversion.
+mc-edit			Enable internal editor.
+mc-samba		Enable smb virtual file system.
+mc-subshell		Enable support for subshell.
+mc-vfs			Support for VFS (virtual file system).
 mecab			Use MeCab as the Japanese Morphological Analzer.
 mex			Enable matlab mex support (Linux and Solaris only).
 migemo			Enable migemo (Japanese text search tool/library) support.
