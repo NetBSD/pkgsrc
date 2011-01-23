@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2008/09/07 01:59:26 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/23 09:42:10 markd Exp $
 
 DISTNAME=		g95_source
-VERSION=		0.91
+VERSION=		0.92
 PKGNAME=		g95-${VERSION}
-PKGREVISION=		2
 CATEGORIES=		lang
 EXTRACT_SUFX.g95_source=	.tgz
 DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX.g95_source}
 DISTFILES+=		gcc-core-4.0.3.tar.gz
-SITES.g95_source.tgz=	http://ftp.g95.org/v0.91/
+SITES.g95_source.tgz=	http://ftp.g95.org/v0.92/
 SITES.gcc-core-4.0.3.tar.gz= ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.0.3/
 
 MAINTAINER=		wennmach@NetBSD.org
@@ -36,6 +35,9 @@ post-extract:
 	cd ${WRKSRC} && ${GTAR} -xzf libf95.a-${VERSION}.tar.gz
 
 pre-configure:
+	rm -f ${GCC_DIR}/config.sub ${GCC_DIR}/config.guess
+	ln -fs ${PKGSRCDIR}/mk/gnu-config/config.sub ${GCC_DIR}/config.sub
+	ln -fs ${PKGSRCDIR}/mk/gnu-config/config.guess ${GCC_DIR}/config.guess
 	cd ${GCC_G95_DIR} && ${GCC_CONFIGURE_SCRIPT} ${GCC_CONFIGURE_ARGS} && ${GMAKE}
 
 post-build:
