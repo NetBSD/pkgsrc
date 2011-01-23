@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.9 2011/01/23 16:16:39 wiz Exp $
+
+Fix build with png-1.5.
+
+--- Imlib/save.c.orig	2004-09-21 00:22:59.000000000 +0000
++++ Imlib/save.c
+@@ -342,7 +342,7 @@ Imlib_save_image(ImlibData * id, ImlibIm
+ 	      png_destroy_write_struct(&png_ptr, (png_infopp) NULL);
+ 	      return 0;
+ 	    }
+-	  if (setjmp(png_ptr->jmpbuf))
++	  if (setjmp(png_jmpbuf(png_ptr)))
+ 	    {
+ 	      fclose(f);
+ 	      png_destroy_write_struct(&png_ptr, (png_infopp) NULL);
