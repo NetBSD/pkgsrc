@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10036 2011/01/21 23:34:23 wiz Exp $
+$NetBSD: TODO,v 1.10037 2011/01/23 08:20:17 obache Exp $
 
 Suggested new packages
 ======================
@@ -712,7 +712,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gogo-3.11p1
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
-	o goocanvasmm-0.15.4
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gplcver-2.12a
