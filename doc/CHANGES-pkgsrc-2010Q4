@@ -26,3 +26,7 @@ Pullup ticket #3330 - requested by gls
 mail/exim: security update
 Pullup ticket #3331 - requested by gls
 converters/p5-Convert-UUlib: security update
+Pullup ticket #3332 - requested by imil
+pkgtools/pkgin: bug fix update
+Pullup ticket #3333 - requested by obache
+inputmethod/ibus-input-pad: build fix
