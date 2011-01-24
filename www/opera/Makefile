@@ -1,46 +1,58 @@
-# $NetBSD: Makefile,v 1.89 2009/08/29 13:15:54 obache Exp $
+# $NetBSD: Makefile,v 1.90 2011/01/24 21:46:18 ahoka Exp $
+#
 
-DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
-CATEGORIES=		www
-MASTER_SITES+=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
-MASTER_SITES+=		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/
-MASTER_SITES+=		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/
-MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/
-MASTER_SITES+=		ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/${OPERA_DIR}/
-MASTER_SITES+=		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
-DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}${EXTRACT_SUFX}
+DISTNAME=	opera-11.00-1176.i386
+PKGNAME=	${DISTNAME:S/-1176.i386//}
+CATEGORIES=	www
+MASTER_SITES=	ftp://ftp.opera.com/pub/opera/linux/1100/
+EXTRACT_SUFX=	.rpm
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.opera.com/
-COMMENT=		Small, fast and customizable WWW client
-LICENSE=		opera-850-license
+MAINTAINER=	ahoka@NetBSD.org
+HOMEPAGE=	http://www.opera.com/
+COMMENT=	Opera web browser
+LICENSE=	opera-eula
 
-EMUL_PLATFORMS=		freebsd-i386
-EMUL_PLATFORMS+=	linux-i386
-EMUL_PLATFORMS+=	solaris-sparc
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
+
+EMUL_PLATFORMS+=        linux-i386
+
+# TODO: add gstreamer
+EMUL_MODULES.linux=     x11 fontconfig
+EMUL_REQD=              suse>=10.0
+
+EMUL_PKG_FMT=           rpm
+RPM2PKG_PREFIX=         ${DESTDIR}${PREFIX}
+RPM2PKG_SUBPREFIX=      ${EMULSUBDIR}
+RPM2PKG_STAGE=          do-install
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../mk/bsd.prefs.mk"
+#.include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES=		# empty
+WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
+USE_LANGUAGES=		# none
 
-OPERA_LANG=		en
-OPERA_VER_DATE=		20090303
-OPERA_PKG_BUILD=	2480
-OPERA_PKG_VERSION=	9.64
-OPERA_PKG_VERSION_DIR=	964
+SUBST_CLASSES+=		opera-sh
+SUBST_STAGE.opera-sh=	post-build
+SUBST_FILES.opera-sh=	opera.sh
+SUBST_VARS.opera-sh=	EMULDIR SH
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 PLIST_SUBST+=		OPERA_VER_DATE=${OPERA_VER_DATE:Q}
 PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 
-.if ${EMUL_PLATFORM} == "linux-i386"
-.  include "Makefile.rpm"
-.else
-.  include "Makefile.plain"
-.endif
+post-extract:
+	${CP} ${FILESDIR}/opera.sh ${WRKSRC}
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/opera.sh ${DESTDIR}${PREFIX}/bin/opera
+	${LN} -fs ${EMULDIR}/usr/share/man/man1/opera.1			\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${ECHO} "bin/opera" >> ${RPM2PKG_PLIST}
+	${ECHO} "${PKGMANDIR}/man1/opera.1" >> ${RPM2PKG_PLIST}
+	${ECHO} "${PREFIX}/lib/netscape/plugins=1" >> \
+		${DESTDIR}${PREFIX}/${EMULSUBDIR}/usr/share/opera/defaults/pluginpath.ini
 
 .include "../../mk/bsd.pkg.mk"
