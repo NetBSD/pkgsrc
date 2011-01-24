@@ -1,9 +1,19 @@
-$NetBSD: patch-af,v 1.1 2010/02/16 17:35:34 taca Exp $
+$NetBSD: patch-af,v 1.2 2011/01/24 09:33:33 wiz Exp $
 
+Fix build with png-1.5.
 deal with CVE-2009-2369.
 
 --- src/common/imagpng.cpp.orig	2006-03-21 23:42:10.000000000 +0000
 +++ src/common/imagpng.cpp
+@@ -528,7 +528,7 @@ wxPNGHandler::LoadFile(wxImage *image,
+     png_structp png_ptr = png_create_read_struct
+                           (
+                             PNG_LIBPNG_VER_STRING,
+-                            (voidp) NULL,
++                            NULL,
+                             wx_png_error,
+                             wx_png_warning
+                           );
 @@ -570,18 +570,16 @@ wxPNGHandler::LoadFile(wxImage *image,
      if (!image->Ok())
          goto error;

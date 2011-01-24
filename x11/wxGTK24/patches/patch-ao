@@ -1,9 +1,28 @@
-$NetBSD: patch-ao,v 1.1 2010/02/16 17:33:39 taca Exp $
+$NetBSD: patch-ao,v 1.2 2011/01/24 09:38:13 wiz Exp $
 
+Fix build with png-1.5.
 deal with CVE-2009-2369.
 
 --- src/common/imagpng.cpp.orig	2003-09-21 11:31:39.000000000 +0000
 +++ src/common/imagpng.cpp
+@@ -167,7 +167,7 @@ bool wxPNGHandler::LoadFile( wxImage *im
+     image->Destroy();
+ 
+     png_structp png_ptr = png_create_read_struct( PNG_LIBPNG_VER_STRING,
+-        (voidp) NULL,
++        NULL,
+         (png_error_ptr) NULL,
+         (png_error_ptr) NULL );
+     if (!png_ptr)
+@@ -186,7 +186,7 @@ bool wxPNGHandler::LoadFile( wxImage *im
+     if (setjmp(wxinfo.jmpbuf))
+         goto error_nolines;
+ 
+-    if (info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA)
++    if (png_get_color_type( png_ptr, info_ptr ) == PNG_COLOR_TYPE_RGB_ALPHA)
+         goto error_nolines;
+ 
+     png_uint_32 width,height;
 @@ -213,18 +213,16 @@ bool wxPNGHandler::LoadFile( wxImage *im
      if (!image->Ok())
          goto error_nolines;
