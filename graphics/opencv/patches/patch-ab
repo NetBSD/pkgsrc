@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2011/01/14 11:22:37 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2011/01/24 14:37:51 wiz Exp $
 
 Fix build with png-1.5.
+https://code.ros.org/trac/opencv/ticket/834
 
 --- modules/highgui/src/grfmt_png.cpp.orig	2010-12-05 03:35:25.000000000 +0000
 +++ modules/highgui/src/grfmt_png.cpp
