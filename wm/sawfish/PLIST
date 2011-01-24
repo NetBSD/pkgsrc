@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/08/21 17:33:11 asau Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/01/24 00:03:29 tnn Exp $
 bin/sawfish
 bin/sawfish-client
 bin/sawfish-config
@@ -23,11 +23,13 @@ lib/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.la
 lib/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.la
 lib/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/selection.la
 lib/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/x.la
-man/man1/sawfish-client.1.gz
-man/man1/sawfish-config.1.gz
-man/man1/sawfish.1.gz
+man/man1/sawfish-client.1
+man/man1/sawfish-config.1
+man/man1/sawfish.1
 share/applications/sawfish.desktop
 share/gnome/wm-properties/sawfish-wm.desktop
+share/icons/hicolor/32x32/apps/sawfish-config.png
+share/kde4/apps/ksmserver/windowmanagers/sawfish.desktop
 share/locale/am/LC_MESSAGES/sawfish.mo
 share/locale/ar/LC_MESSAGES/sawfish.mo
 share/locale/az/LC_MESSAGES/sawfish.mo
@@ -145,8 +147,6 @@ share/sawfish/${PKGVERSION}/lisp/prompt.jl
 share/sawfish/${PKGVERSION}/lisp/prompt.jlc
 share/sawfish/${PKGVERSION}/lisp/rects.jl
 share/sawfish/${PKGVERSION}/lisp/rects.jlc
-share/sawfish/${PKGVERSION}/lisp/sawfish-defaults.jl
-share/sawfish/${PKGVERSION}/lisp/sawfish-defaults.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/apply.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/apply.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/config.jl
@@ -165,6 +165,8 @@ share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/shell.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/shell.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/slot.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/slot.jlc
+share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/utils.jl
+share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/utils.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/widgets/command.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/widgets/command.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/widgets/event.jl
@@ -183,12 +185,6 @@ share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/widgets/workspace-geometry.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/widgets/workspace-geometry.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/wm.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/cfg/wm.jlc
-share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/stock.jl
-share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/stock.jlc
-share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widget-dialog.jl
-share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widget-dialog.jlc
-share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widget-test.jl
-share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widget-test.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widget.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widget.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets/alist.jl
@@ -207,6 +203,8 @@ share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets/program.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets/program.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets/scheme-boolean.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets/scheme-boolean.jlc
+share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets/simple-dialog.jl
+share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets/simple-dialog.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/animation/outline.jl
@@ -256,10 +254,6 @@ share/sawfish/${PKGVERSION}/lisp/sawfish/wm/custom.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/custom.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/customize.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/customize.jlc
-share/sawfish/${PKGVERSION}/lisp/sawfish/wm/defaults.jl
-share/sawfish/${PKGVERSION}/lisp/sawfish/wm/defaults.jlc
-share/sawfish/${PKGVERSION}/lisp/sawfish/wm/ext/3d-hack.jl
-share/sawfish/${PKGVERSION}/lisp/sawfish/wm/ext/3d-hack.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/ext/apps-menu.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/ext/apps-menu.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/ext/audio-events.jl
@@ -298,8 +292,8 @@ share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/gnome.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/gnome.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/kde.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/kde.jlc
-share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/standalone.jl
-share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/standalone.jlc
+share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/xfce.jl
+share/sawfish/${PKGVERSION}/lisp/sawfish/wm/integration/xfce.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/keymaps.jl
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/keymaps.jlc
 share/sawfish/${PKGVERSION}/lisp/sawfish/wm/menus.jl
@@ -418,8 +412,6 @@ share/sawfish/${PKGVERSION}/lisp/shading.jl
 share/sawfish/${PKGVERSION}/lisp/shading.jlc
 share/sawfish/${PKGVERSION}/lisp/shrink-yank.jl
 share/sawfish/${PKGVERSION}/lisp/shrink-yank.jlc
-share/sawfish/${PKGVERSION}/lisp/standalone-int.jl
-share/sawfish/${PKGVERSION}/lisp/standalone-int.jlc
 share/sawfish/${PKGVERSION}/lisp/tab.jl
 share/sawfish/${PKGVERSION}/lisp/tab.jlc
 share/sawfish/${PKGVERSION}/lisp/tabgroup.jl
@@ -438,7 +430,8 @@ share/sawfish/${PKGVERSION}/lisp/with-output.jl
 share/sawfish/${PKGVERSION}/lisp/with-output.jlc
 share/sawfish/${PKGVERSION}/lisp/x-cycle.jl
 share/sawfish/${PKGVERSION}/lisp/x-cycle.jlc
-share/sawfish/${PKGVERSION}/monitor.png
+share/sawfish/${PKGVERSION}/lisp/xfce-int.jl
+share/sawfish/${PKGVERSION}/lisp/xfce-int.jlc
 share/sawfish/${PKGVERSION}/sounds/focused.wav
 share/sawfish/${PKGVERSION}/sounds/iconify.wav
 share/sawfish/${PKGVERSION}/sounds/map-transient.wav
