@@ -1,6 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2011/01/16 13:02:38 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2011/01/24 16:33:19 wiz Exp $
 
 Fix build with png-1.5.
+http://www.htmldoc.org/str.php?L243+P0+S-2+C0+I0+E0+M10+Q
 
 --- htmldoc/image.cxx.orig	2006-05-31 19:00:02.000000000 +0000
 +++ htmldoc/image.cxx
