@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2010/11/14 20:11:42 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2011/01/24 12:29:42 wiz Exp $
+
+Unportable test(1) construct.
+https://bugzilla.gnome.org/show_bug.cgi?id=640407
 
 --- configure.orig	2010-11-05 23:56:08.000000000 +0000
 +++ configure

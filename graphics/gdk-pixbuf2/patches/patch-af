@@ -1,6 +1,7 @@
-$NetBSD: patch-af,v 1.1 2011/01/13 17:14:43 wiz Exp $
+$NetBSD: patch-af,v 1.2 2011/01/24 12:29:42 wiz Exp $
 
 Fix build with png-1.5.
+https://bugzilla.gnome.org/show_bug.cgi?id=640404
 
 --- gdk-pixbuf/io-png.c.orig	2010-07-10 00:54:35.000000000 +0000
 +++ gdk-pixbuf/io-png.c
