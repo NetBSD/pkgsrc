@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 2011/01/24 12:35:33 wiz Exp $
+$NetBSD: patch-af,v 1.7 2011/01/24 16:51:59 wiz Exp $
 
 Fix build with png-1.5.
 https://bugzilla.gnome.org/show_bug.cgi?id=640409
@@ -310,7 +310,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=640409
        /* otherwise the default is fine */
      }
  
-+  png_set_IHDR(pp, info, drawable->width, drawable->height, bit_depth, color_type, PNG_FILTER_TYPE_BASE, PNG_COMPRESSION_TYPE_BASE, pngvals.interlaced ? PNG_INTERLACE_ADAM7 : PNG_INTERLACE_NONE);
++  png_set_IHDR(pp, info, drawable->width, drawable->height, bit_depth, color_type, pngvals.interlaced ? PNG_INTERLACE_ADAM7 : PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
 +
    /* All this stuff is optional extras, if the user is aiming for smallest
       possible file size she can turn them all off */
