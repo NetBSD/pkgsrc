@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2011/01/18 09:01:29 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2011/01/24 16:26:16 wiz Exp $
 
 Fix build with png-1.5.
+http://trac.osgeo.org/gdal/ticket/3914
 
 --- frmts/png/pngdataset.cpp.orig	2010-11-07 18:28:47.000000000 +0000
 +++ frmts/png/pngdataset.cpp
