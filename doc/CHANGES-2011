@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.181 2011/01/24 21:48:41 ahoka Exp $
+$NetBSD: CHANGES-2011,v 1.182 2011/01/24 21:51:49 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -302,3 +302,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/ja-vfxdvik to 22.40v.j1.14nb15 [minskim 2011-01-24]
 	Updated security/opendnssec to 1.2.0 [pettai 2011-01-24]
 	Updated www/opera to 11.00 [ahoka 2011-01-24]
+	Updated emulators/suse113_fontconfig to 11.3nb1 [ahoka 2011-01-24]
