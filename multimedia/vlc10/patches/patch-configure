@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1.1.1 2011/01/24 18:45:54 drochner Exp $
+
+First chunk: http://trac.videolan.org/vlc/ticket/3762
+Second chunk: http://trac.videolan.org/vlc/ticket/3761
+
+--- configure.ac.orig	2009-09-19 21:30:21.000000000 +0200
++++ configure.ac
+@@ -572,7 +572,7 @@ AC_CHECK_FUNCS(fdatasync,,
+ ])
+ 
+ dnl Check for non-standard system calls
+-AC_CHECK_FUNCS([vmsplice eventfd fstatfs])
++AC_CHECK_FUNCS([vmsplice eventfd fstatvfs fstatfs])
+ 
+ AH_BOTTOM([#include <vlc_fixups.h>])
+ 
+@@ -2498,7 +2498,7 @@ then
+   fi
+ 
+   CPPFLAGS="${CPPFLAGS_save} ${CPPFLAGS_v4l2}"
+-  AC_CHECK_HEADERS(linux/videodev2.h, [
++  AC_CHECK_HEADERS(linux/videodev2.h sys/videoio.h, [
+     VLC_ADD_PLUGIN([v4l2])
+   ],[])
+   CPPFLAGS="${CPPFLAGS_save}"
