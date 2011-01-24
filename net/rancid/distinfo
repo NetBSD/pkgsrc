@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/07/19 11:22:25 pettai Exp $
+$NetBSD: distinfo,v 1.3 2011/01/24 14:54:57 pettai Exp $
 
-SHA1 (rancid-2.3.4.tar.gz) = 7be67dbf6ae7a270e53d030cda1903b63a9e555f
-RMD160 (rancid-2.3.4.tar.gz) = 68fb3a8f74d6fe7796308e45f9b558bb28290d90
-Size (rancid-2.3.4.tar.gz) = 368120 bytes
-SHA1 (patch-aa) = effca21e1e9ecb39f0c31a8555ac7cca10046a46
+SHA1 (rancid-2.3.6.tar.gz) = d6f47f7733435681ca9c34fadbcc965ac6b7567f
+RMD160 (rancid-2.3.6.tar.gz) = 8bfaa861b4b8f64e1c2a889605488621b0dcb042
+Size (rancid-2.3.6.tar.gz) = 372836 bytes
