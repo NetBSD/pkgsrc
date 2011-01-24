@@ -1,0 +1,89 @@
+$NetBSD: patch-ac,v 1.7 2011/01/24 10:04:21 wiz Exp $
+
+Fix build with png-1.5.
+
+--- lavtools/png2yuv.c.orig	2007-11-08 17:31:50.000000000 +0000
++++ lavtools/png2yuv.c
+@@ -78,6 +78,8 @@ png_structp png_ptr;
+ png_infop info_ptr, end_info;
+ uint8_t *raw0, *raw1, *raw2;  /* buffer for RGB first, and then Y/Cb/Cr planes of decoded PNG */
+ 
++static int png_row_number = 0;
++
+ /*
+  * The User Interface parts 
+  */
+@@ -240,9 +242,13 @@ static void parse_commandline(int argc, 
+     }
+ }
+ 
++void read_row_callback(png_structp ptr, png_uint_32 row, int pass)
++{
++  png_row_number++;
++}
++
+ void png_separation(png_structp png_ptr, png_row_infop row_info, png_bytep data)
+ {
+-  int row_nr = png_ptr->row_number; // internal variable ? 
+   int i, width = row_info->width; 
+   int new_width = sh_param->new_width;
+ 
+@@ -256,28 +262,28 @@ void png_separation(png_structp png_ptr,
+    */
+ 
+   //mjpeg_debug("PNG YUV transformation callback; color_type is %d row_number %d\n", 
+-  //	 row_info->color_type, row_nr);
++  //	 row_info->color_type, png_row_number);
+ 
+   if(row_info->color_type == PNG_COLOR_TYPE_GRAY) // only Z available
+     {
+-      //mjpeg_debug("Grayscale to YUV, row %d", row_nr);
++      //mjpeg_debug("Grayscale to YUV, row %d", png_row_number);
+       for (i = 0; i < width; i++)
+ 	{
+-	  raw0[i + row_nr * new_width] = data[i];
+-	  raw1[i + row_nr * new_width] = data[i];
+-	  raw2[i + row_nr * new_width] = data[i];
++	  raw0[i + png_row_number * new_width] = data[i];
++	  raw1[i + png_row_number * new_width] = data[i];
++	  raw2[i + png_row_number * new_width] = data[i];
+ 	}
+       return;
+     }
+ 
+   if(row_info->color_type == PNG_COLOR_TYPE_RGB) // Z and Alpha available
+     {
+-      //mjpeg_info("RGB to YUV, row %d", row_nr);
++      //mjpeg_info("RGB to YUV, row %d", png_row_number);
+       for (i = 0; i < width; i++)
+ 	{
+-	  raw0[i + row_nr * new_width] = data[i*3];
+-	  raw1[i + row_nr * new_width] = data[i*3 + 1];
+-	  raw2[i + row_nr * new_width] = data[i*3 + 2];
++	  raw0[i + png_row_number * new_width] = data[i*3];
++	  raw1[i + png_row_number * new_width] = data[i*3 + 1];
++	  raw2[i + png_row_number * new_width] = data[i*3 + 2];
+ 	}
+       return;
+     }
+@@ -352,8 +358,10 @@ int decode_png(const char *pngname, int 
+       return -1;
+     }
+   
+-  if (process)
++  if (process) {
++    png_set_read_status_fn(png_ptr, read_row_callback);
+     png_set_read_user_transform_fn(png_ptr, png_separation);
++  }
+   png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_STRIP_16 | PNG_TRANSFORM_STRIP_ALPHA, NULL);
+   
+   if (png_get_IHDR(png_ptr, info_ptr, &param->width, &param->height, &bit_depth,
+@@ -402,7 +410,7 @@ int decode_png(const char *pngname, int 
+     }
+   png_read_end(png_ptr, info_ptr);
+ #endif  
+-  if (setjmp(png_ptr->jmpbuf)) {
++  if (setjmp(png_jmpbuf(png_ptr))) {
+     png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
+     return 2;
+     }
