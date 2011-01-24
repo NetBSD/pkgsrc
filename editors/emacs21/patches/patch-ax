@@ -1,0 +1,27 @@
+$NetBSD: patch-ax,v 1.1 2011/01/24 09:42:40 wiz Exp $
+
+Fix build with png-1.5.
+
+--- src/xfns.c.orig	2002-12-06 17:05:35.000000000 +0000
++++ src/xfns.c
+@@ -8541,7 +8541,11 @@ my_png_error (png_ptr, msg)
+ {
+   xassert (png_ptr != NULL);
+   image_error ("PNG error: %s", build_string (msg), Qnil);
++#if (PNG_LIBPNG_VER < 10500)
+   longjmp (png_ptr->jmpbuf, 1);
++#else
++  png_longjmp (png_ptr, 1);
++#endif
+ }
+ 
+ 
+@@ -8699,7 +8703,7 @@ png_load (f, img)
+ 
+   /* Set error jump-back.  We come back here when the PNG library
+      detects an error.  */
+-  if (setjmp (png_ptr->jmpbuf))
++  if (setjmp (png_jmpbuf(png_ptr)))
+     {
+     error:
+       if (png_ptr)
