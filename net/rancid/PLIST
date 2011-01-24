@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/07/25 20:27:33 pettai Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/01/24 14:54:57 pettai Exp $
 bin/agmrancid
 bin/alogin
 bin/arancid
@@ -16,6 +16,7 @@ bin/erancid
 bin/f10rancid
 bin/f5rancid
 bin/flogin
+bin/fnlogin
 bin/fnrancid
 bin/francid
 bin/hlogin
@@ -70,6 +71,7 @@ man/man1/erancid.1
 man/man1/f10rancid.1
 man/man1/f5rancid.1
 man/man1/flogin.1
+man/man1/fnlogin.1
 man/man1/fnrancid.1
 man/man1/francid.1
 man/man1/hlogin.1
@@ -128,3 +130,4 @@ share/doc/rancid/rancid.conf.sample
 share/doc/rancid/rtrfilter
 share/examples/rancid/lg.conf.sample
 share/examples/rancid/rancid.conf.sample
+@pkgdir etc/rancid

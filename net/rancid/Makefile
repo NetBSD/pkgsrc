@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/07/19 11:22:25 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/24 14:54:57 pettai Exp $
 #
 
-DISTNAME=		rancid-2.3.4
+DISTNAME=		rancid-2.3.6
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 
@@ -51,8 +51,8 @@ MESSAGE_SUBST+=		RC_USER=${RC_USER}
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/etc/lg.conf.sample.in
 SUBST_FILES.paths+=	${WRKSRC}/etc/rancid.conf.sample.in
-SUBST_STAGE.paths=      post-extract
-SUBST_SED.paths=        -e 's,@ENV_PATH@,${PREFIX}/sbin:/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin,'
+SUBST_STAGE.paths=	post-extract
+SUBST_SED.paths=	-e 's,@ENV_PATH@,${PREFIX}/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin,'
 
 OWN_DIRS_PERMS+=	${VARBASE}/rancid ${RC_USER} ${RC_GROUP} 0755
 
