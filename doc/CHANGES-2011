@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.170 2011/01/23 22:48:30 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.171 2011/01/24 00:04:54 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -289,3 +289,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/mc46 version 4.6.1nb7 [wiz 2011-01-23]
 	Updated sysutils/mc to 4.7.0.10nb1 [wiz 2011-01-23]
 	Removed audio/gogo successor audio/lame [tnn 2011-01-23]
+	Updated lang/librep to 0.91.0 [tnn 2011-01-23]
+	Updated x11/rep-gtk2 to 0.90.4 [tnn 2011-01-23]
+	Updated wm/sawfish to 1.7.1 [tnn 2011-01-23]
