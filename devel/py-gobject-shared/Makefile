@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2011/01/13 13:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/01/24 08:30:00 obache Exp $
 
 PKGNAME=		py-gobject-shared-2.26.0
-PKGREVISION=		2
+PKGREVISION=		3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,7 +21,10 @@ do-install:
 		${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
 
 .include "../../lang/python/application.mk"
+BUILDLINK_DEPMETHOD.pycairo=	build
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
