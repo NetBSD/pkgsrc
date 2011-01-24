@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.18 2011/01/17 16:51:05 drochner Exp $
+# $NetBSD: options.mk,v 1.19 2011/01/24 19:07:16 drochner Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	theora xvid faad faac x264 opencore-amr
-PKG_SUGGESTED_OPTIONS=	theora xvid x264
+PKG_SUPPORTED_OPTIONS=	theora xvid faad faac x264 opencore-amr libvpx
+PKG_SUGGESTED_OPTIONS=	theora xvid x264 libvpx
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faad faac
 
@@ -92,4 +92,11 @@ CONFIGURE_ARGS+=	--enable-libx264
 .include "../../multimedia/libvdpau/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-vdpau
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibvpx)
+CONFIGURE_ARGS+=	--enable-libvpx
+.include "../../multimedia/libvpx/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libvpx
 .endif
