@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2010/11/23 13:05:22 he Exp $
+$NetBSD: patch-ad,v 1.2 2011/01/24 12:29:42 wiz Exp $
 
 This file is passed through the C preprocessor, so we have
 to use C comments to acheive the desired effect, so that these
 are not mis-interpreted as invalid C preprocessing directives.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=640405
 
 --- gdk-pixbuf/pixops/have_mmx.S.orig	2010-11-19 11:41:03.000000000 +0000
 +++ gdk-pixbuf/pixops/have_mmx.S
