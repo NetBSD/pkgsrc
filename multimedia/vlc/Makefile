@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.101 2011/01/13 13:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2011/01/24 18:54:04 drochner Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		6
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
-VLC_VERSION=		1.0.6
+VLC_VERSION=		1.1.6
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
@@ -94,14 +93,14 @@ post-install:
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
 DEFAULT_FONT?=		${PREFIX}/lib/X11/fonts/TTF/DejaVuSans.ttf
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
+# libX11 should be built with xcb enabled
+DEPENDS+=		libX11>=1.3.5:../../x11/libX11
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_FILES.oss+=	modules/access/oss.c
 SUBST_FILES.oss+=	modules/audio_output/oss.c
-SUBST_FILES.oss+=	modules/gui/pda/pda_interface.c
-SUBST_FILES.oss+=	modules/gui/pda/pda.glade
 SUBST_FILES.oss+=	po/*.po
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
@@ -118,8 +117,8 @@ REPLACE_SH+=		vlc-config.in.in
 #
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so \
-			lib/libvlccore.so.2 \
-			lib/libvlccore.so.2.1.2
+			lib/libvlccore.so.4 \
+			lib/libvlccore.so.4.0.1
 
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
@@ -153,8 +152,9 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 # needs x264_encoder_delayed_frames
-BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20090920
+BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .include "../../multimedia/x264-devel/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

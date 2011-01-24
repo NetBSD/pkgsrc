@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.18 2010/11/04 12:35:10 wiz Exp $
+# $NetBSD: options.mk,v 1.19 2011/01/24 18:54:04 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl pulseaudio x11 gnome
-PKG_SUGGESTED_OPTIONS=		x11 pulseaudio
+PKG_SUGGESTED_OPTIONS=		x11
 
 .include "../../mk/bsd.options.mk"
 
