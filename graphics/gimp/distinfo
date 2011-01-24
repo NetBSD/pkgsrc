@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2011/01/24 12:35:32 wiz Exp $
+$NetBSD: distinfo,v 1.61 2011/01/24 16:51:59 wiz Exp $
 
 SHA1 (gimp-2.6.11.tar.bz2) = 2f9d596e727bdbf304fa78257c1731d9faf3934c
 RMD160 (gimp-2.6.11.tar.bz2) = a116377499e58dc2bfe231ab3c057d0be94091ff
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = 80e7235178e53e873efa0b16098b74fa0b981f76
 SHA1 (patch-ac) = 42f44b45640bdde305c1e52b95ee633360ebccb8
 SHA1 (patch-ad) = 4e2ce2f7d8729fb760eac1bad89cfe09fef499b0
 SHA1 (patch-ae) = 67aafb1b76925c239795c5dbda34ccb0f11dd6a8
-SHA1 (patch-af) = 00240483c647d90fabb8a43d0ef0d6d1ea2c8007
+SHA1 (patch-af) = a8379ea6835ac1a44a1a933000cb92336377cf99
