@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.172 2011/01/24 04:39:00 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.173 2011/01/24 07:35:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/rep-gtk2 to 0.90.4 [tnn 2011-01-23]
 	Updated wm/sawfish to 1.7.1 [tnn 2011-01-23]
 	Updated www/ikiwiki to 3.20110123 [schmonz 2011-01-24]
+	Updated inputmethod/ibus-el to 0.2.1 [obache 2011-01-24]
