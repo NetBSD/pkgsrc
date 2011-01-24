@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.179 2011/01/24 18:58:23 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.180 2011/01/24 20:30:56 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -300,3 +300,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/rancid to 2.3.6 [pettai 2011-01-24]
 	Updated graphics/gimp to 2.6.11nb4 [wiz 2011-01-24]
 	Updated print/ja-vfxdvik to 22.40v.j1.14nb15 [minskim 2011-01-24]
+	Updated security/opendnssec to 1.2.0 [pettai 2011-01-24]
