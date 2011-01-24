@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.177 2011/01/24 14:55:34 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.178 2011/01/24 16:52:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -298,3 +298,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-gobject-shared to 2.26.0nb3 [obache 2011-01-24]
 	Updated graphics/gif2png to 2.5.4 [wiz 2011-01-24]
 	Updated net/rancid to 2.3.6 [pettai 2011-01-24]
+	Updated graphics/gimp to 2.6.11nb4 [wiz 2011-01-24]
