@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2011/01/13 13:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2011/01/24 09:54:35 wiz Exp $
 
 DISTNAME=	mjpegtools-1.9.0
 PKGREVISION=	4
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mjpeg.sourceforge.net/
 COMMENT=	Programs for compressing video streams
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
