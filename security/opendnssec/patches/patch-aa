@@ -1,45 +1,45 @@
-$NetBSD: patch-aa,v 1.2 2010/06/16 00:19:08 pettai Exp $
+$NetBSD: patch-aa,v 1.3 2011/01/24 20:30:28 pettai Exp $
 
---- conf/Makefile.in.orig	2009-12-19 21:39:52.000000000 +0100
-+++ conf/Makefile.in	2009-12-19 21:43:40.000000000 +0100
-@@ -166,6 +166,7 @@
- sharedstatedir = @sharedstatedir@
+--- conf/Makefile.in.orig	2010-11-17 09:07:35.000000000 +0000
++++ conf/Makefile.in
+@@ -277,6 +277,7 @@ sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
+ subdirs = @subdirs@
  sysconfdir = @sysconfdir@/opendnssec
 +EGDIR=@EGDIR@
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -540,19 +541,19 @@
+@@ -530,19 +531,19 @@ regress: $(RNG)
  		(echo "kasp.xml built")
  
  install-data-hook:
 -	test -d ${DESTDIR}${sysconfdir} || mkdir -p ${DESTDIR}${sysconfdir}
 -	test -f ${DESTDIR}${sysconfdir}/conf.xml || \
--		${INSTALL_DATA} -m 0640 ${top_builddir}/conf.xml ${DESTDIR}${sysconfdir}
--	${INSTALL_DATA} -m 640 ${top_builddir}/conf.xml ${DESTDIR}${sysconfdir}/conf.xml.sample
+-		${INSTALL_DATA} -m 0640 conf.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} -m 640 conf.xml ${DESTDIR}${sysconfdir}/conf.xml.sample
 -	test -f ${DESTDIR}${sysconfdir}/zonelist.xml || \
--		${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${sysconfdir}
--	${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${sysconfdir}/zonelist.xml.sample
+-		${INSTALL_DATA} zonelist.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} zonelist.xml ${DESTDIR}${sysconfdir}/zonelist.xml.sample
 -	test -f ${DESTDIR}${sysconfdir}/zonefetch.xml || \
--		${INSTALL_DATA} -m 0640 ${top_builddir}/zonefetch.xml ${DESTDIR}${sysconfdir}
--	${INSTALL_DATA} -m 640 ${top_builddir}/zonefetch.xml ${DESTDIR}${sysconfdir}/zonefetch.xml.sample
+-		${INSTALL_DATA} -m 0640 zonefetch.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} -m 640 zonefetch.xml ${DESTDIR}${sysconfdir}/zonefetch.xml.sample
 -	test -f ${DESTDIR}${sysconfdir}/kasp.xml || \
--		${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${sysconfdir}
--	${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${sysconfdir}/kasp.xml.sample
+-		${INSTALL_DATA} kasp.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} kasp.xml ${DESTDIR}${sysconfdir}/kasp.xml.sample
 +	test -d ${DESTDIR}${EGDIR} || mkdir -p ${DESTDIR}${EGDIR}
 +	test -f ${DESTDIR}${EGDIR}/conf.xml || \
-+		${INSTALL_DATA} -m 0640 ${top_builddir}/conf.xml ${DESTDIR}${EGDIR}
-+	${INSTALL_DATA} -m 640 ${top_builddir}/conf.xml ${DESTDIR}${EGDIR}/conf.xml.sample
++		${INSTALL_DATA} -m 0640 conf.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} -m 640 conf.xml ${DESTDIR}${EGDIR}/conf.xml.sample
 +	test -f ${DESTDIR}${EGDIR}/zonelist.xml || \
-+		${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${EGDIR}
-+	${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${EGDIR}/zonelist.xml.sample
++		${INSTALL_DATA} zonelist.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} zonelist.xml ${DESTDIR}${EGDIR}/zonelist.xml.sample
 +	test -f ${DESTDIR}${EGDIR}/zonefetch.xml || \
-+		${INSTALL_DATA} -m 0640 ${top_builddir}/zonefetch.xml ${DESTDIR}${EGDIR}
-+	${INSTALL_DATA} -m 640 ${top_builddir}/zonefetch.xml ${DESTDIR}${EGDIR}/zonefetch.xml.sample
++		${INSTALL_DATA} -m 0640 zonefetch.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} -m 640 zonefetch.xml ${DESTDIR}${EGDIR}/zonefetch.xml.sample
 +	test -f ${DESTDIR}${EGDIR}/kasp.xml || \
-+		${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${EGDIR}
-+	${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
++		${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
