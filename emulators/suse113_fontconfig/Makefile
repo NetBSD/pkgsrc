@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:27:55 chs Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/24 21:51:06 ahoka Exp $
 
 DISTNAME=	suse_fontconfig-${SUSE_VERSION}
 CATEGORIES=	emulators
 DISTFILES=	fontconfig-2.8.0-7.1.${SUSE_ARCH}.rpm
+PKGREVISION=	1
 
 MAINTAINER=	tonio@NetBSD.org
 COMMENT=	Linux compatibility package for fontconfig
