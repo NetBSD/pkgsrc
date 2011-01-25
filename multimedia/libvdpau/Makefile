@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/09 00:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/25 11:22:43 markd Exp $
 #
 
 DISTNAME=	libvdpau-0.4.1
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
+CONFIGURE_ARGS+=	--disable-documentation
 
 INSTALLATION_DIRS+=	share/doc/libvdpau
 
