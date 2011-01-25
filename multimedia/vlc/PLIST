@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2011/01/24 18:54:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.38 2011/01/25 19:00:29 drochner Exp $
 bin/cvlc
 bin/qvlc
 bin/rvlc
@@ -356,9 +356,9 @@ share/icons/hicolor/32x32/apps/vlc.png
 share/icons/hicolor/32x32/apps/vlc.xpm
 share/icons/hicolor/48x48/apps/vlc-christmas.png
 share/icons/hicolor/48x48/apps/vlc.png
-share/kde4/apps/solid/actions/vlc-opencda.desktop
-share/kde4/apps/solid/actions/vlc-opendvd.desktop
-share/kde4/apps/solid/actions/vlc-openvcd.desktop
+share/kde/apps/solid/actions/vlc-opencda.desktop
+share/kde/apps/solid/actions/vlc-opendvd.desktop
+share/kde/apps/solid/actions/vlc-openvcd.desktop
 share/locale/af/LC_MESSAGES/vlc.mo
 share/locale/ar/LC_MESSAGES/vlc.mo
 share/locale/ast/LC_MESSAGES/vlc.mo

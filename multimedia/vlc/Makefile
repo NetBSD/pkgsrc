@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2011/01/24 18:54:04 drochner Exp $
+# $NetBSD: Makefile,v 1.103 2011/01/25 19:00:29 drochner Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -21,6 +21,7 @@ USE_TOOLS+=		gmake perl pkg-config \
 			autoconf automake autoreconf
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
 PLIST_VARS+=		x86simd altivec v4l2 vcd cdda
