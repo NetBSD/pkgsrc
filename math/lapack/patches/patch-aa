@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2008/08/12 21:32:04 markd Exp $
+$NetBSD: patch-aa,v 1.7 2011/01/25 12:45:43 adam Exp $
 
 --- SRC/Makefile.orig	2007-02-26 19:20:07.000000000 +0100
 +++ SRC/Makefile
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.6 2008/08/12 21:32:04 markd Exp $
  ../$(LAPACKLIB): $(ALLOBJ)
 -	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ)
 -	$(RANLIB) $@
-+	${LIBTOOL} --mode=link --tag=F77 ${FC} -o ../$(LAPACKLIB) \
++	${LIBTOOL} --mode=link --tag=F77 ${FC} ${LDFLAGS} -o ../$(LAPACKLIB) \
 +	$(ALLOBJ:.o=.lo) -rpath ${PREFIX}/lib -version-info 3:0
  
  single: $(SLASRC) $(ALLAUX) $(SCLAUX) 
