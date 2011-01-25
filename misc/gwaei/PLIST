@@ -1,13 +1,23 @@
-@comment $NetBSD: PLIST,v 1.8 2009/12/15 14:46:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/01/25 11:02:35 ryoon Exp $
 bin/gwaei
 bin/waei
 man/man1/waei.1
 share/doc/gwaei/COPYING
 share/doc/gwaei/ChangeLog
 share/doc/gwaei/NEWS
+share/glib-2.0/schemas/org.gnome.gwaei.dictionary.gschema.xml
+share/glib-2.0/schemas/org.gnome.gwaei.fonts.gschema.xml
+share/glib-2.0/schemas/org.gnome.gwaei.gschema.xml
+share/glib-2.0/schemas/org.gnome.gwaei.highlight.gschema.xml
+share/glib-2.0/schemas/org.gnome.gwaei.kanjipad_window.gschema.xml
+share/glib-2.0/schemas/org.gnome.gwaei.main_window.gschema.xml
+share/glib-2.0/schemas/org.gnome.gwaei.radicals_window.gschema.xml
+share/locale/cs/LC_MESSAGES/gwaei.mo
+share/locale/de/LC_MESSAGES/gwaei.mo
 share/locale/en@boldquot/LC_MESSAGES/gwaei.mo
 share/locale/en@quot/LC_MESSAGES/gwaei.mo
 share/locale/es/LC_MESSAGES/gwaei.mo
 share/locale/fr/LC_MESSAGES/gwaei.mo
 share/locale/it/LC_MESSAGES/gwaei.mo
 share/locale/ja/LC_MESSAGES/gwaei.mo
+share/locale/tr/LC_MESSAGES/gwaei.mo
