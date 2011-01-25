@@ -34,3 +34,5 @@ Pullup ticket #3334 - requested by obache
 inputmethod/ibus-table-chinese: build fix
 Pullup ticket #3335 - requested by gls
 comms/asterisk16: security update
+Pullup ticket #3336 - requested by gls
+comms/asterisk18: security update
