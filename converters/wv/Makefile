@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2011/01/25 18:07:26 chuck Exp $
+# $NetBSD: Makefile,v 1.72 2011/01/25 18:33:41 drochner Exp $
 
 DISTNAME=	wv-1.2.9
 PKGREVISION=	1
@@ -30,6 +30,5 @@ MAKE_FILE=		GNUmakefile
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
