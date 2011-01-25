@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2011/01/15 14:51:52 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2011/01/25 18:38:16 drochner Exp $
 
 Fix build with png-1.5. From John Bowler.
 
@@ -16,47 +16,7 @@ Fix build with png-1.5. From John Bowler.
  }
  
  // Callbacks given to the read struct.  The first is for warnings (we want to
-@@ -139,14 +143,31 @@ public:
- 
-         const char* segment;
-         while (unsigned segmentLength = data.getSomeData(segment, m_readOffset)) {
--            m_readOffset += segmentLength;
--            m_currentBufferSize = m_readOffset;
--            png_process_data(m_png, m_info, reinterpret_cast<png_bytep>(const_cast<char*>(segment)), segmentLength);
--            // We explicitly specify the superclass isSizeAvailable() because we
--            // merely want to check if we've managed to set the size, not
--            // (recursively) trigger additional decoding if we haven't.
--            if (sizeOnly ? decoder->ImageDecoder::isSizeAvailable() : decoder->isComplete())
--                return;
-+           if (sizeOnly) {
-+               while (segmentLength > 0)  {
-+                   // Unfortunately if we read the image at this point it will be ignored,
-+                   // therefore take small steps through the data until the head is read.
-+                   // This is crude but effective.
-+                   m_currentBufferSize = ++m_readOffset;
-+                   png_process_data(m_png, m_info, reinterpret_cast<png_bytep>(const_cast<char*>(segment)), 1);
-+
-+                   // We explicitly specify the superclass isSizeAvailable() because we
-+                   // merely want to check if we've managed to set the size, not
-+                   // (recursively) trigger additional decoding if we haven't.
-+                   if (decoder->ImageDecoder::isSizeAvailable())
-+                       return;
-+
-+                   --segmentLength;
-+                   ++segment;
-+               }
-+           } else {
-+               // Just process the whole segment at once:
-+               m_readOffset += segmentLength;
-+               m_currentBufferSize = m_readOffset;
-+               png_process_data(m_png, m_info, reinterpret_cast<png_bytep>(const_cast<char*>(segment)), segmentLength);
-+               if (decoder->isComplete())
-+                   return;
-+           }
-         }
-         if (!decoder->isComplete() && decoder->isAllDataReceived())
-             decoder->pngComplete();
-@@ -216,18 +237,26 @@ void PNGImageDecoder::headerAvailable()
+@@ -216,18 +220,26 @@ void PNGImageDecoder::headerAvailable()
  {
      png_structp png = m_reader->pngPtr();
      png_infop info = m_reader->infoPtr();
@@ -86,20 +46,17 @@ Fix build with png-1.5. From John Bowler.
          return;
      }
  
-@@ -274,12 +303,6 @@ void PNGImageDecoder::headerAvailable()
-     ASSERT(channels == 3 || channels == 4);
+@@ -277,8 +289,7 @@ void PNGImageDecoder::headerAvailable()
  
-     m_reader->setHasAlpha(channels == 4);
--
--    if (m_reader->decodingSizeOnly()) {
--        // If we only needed the size, halt the reader.     
+     if (m_reader->decodingSizeOnly()) {
+         // If we only needed the size, halt the reader.     
 -        m_reader->setReadOffset(m_reader->currentBufferSize() - png->buffer_size);
 -        png->buffer_size = 0;
--    }
++        m_reader->setReadOffset(m_reader->currentBufferSize() - png_process_data_pause(png, 0/*do not save the data*/));
+     }
  }
  
- void PNGImageDecoder::rowAvailable(unsigned char* rowBuffer, unsigned rowIndex, int interlacePass)
-@@ -291,7 +314,11 @@ void PNGImageDecoder::rowAvailable(unsig
+@@ -291,7 +302,11 @@ void PNGImageDecoder::rowAvailable(unsig
      RGBA32Buffer& buffer = m_frameBufferCache[0];
      if (buffer.status() == RGBA32Buffer::FrameEmpty) {
          if (!buffer.setSize(scaledSize().width(), scaledSize().height())) {
@@ -111,7 +68,7 @@ Fix build with png-1.5. From John Bowler.
              return;
          }
          buffer.setStatus(RGBA32Buffer::FramePartial);
-@@ -300,7 +327,8 @@ void PNGImageDecoder::rowAvailable(unsig
+@@ -300,7 +315,8 @@ void PNGImageDecoder::rowAvailable(unsig
          // For PNGs, the frame always fills the entire image.
          buffer.setRect(IntRect(IntPoint(), size()));
  
