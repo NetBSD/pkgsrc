@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/12/16 22:52:42 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2011/01/25 11:02:35 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gwaei
 PKG_SUPPORTED_OPTIONS=	gnome
@@ -7,15 +7,10 @@ PKG_SUGGESTED_OPTIONS=	gnome
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnome)
-GCONF_SCHEMAS=		gwaei.schemas
 PLIST_SRC+=		PLIST.gnome
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/schemas/gwaei.schemas \
-		${DESTDIR}${PREFIX}/share/gconf/schemas/
-
-BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.22.0
-.include "../../devel/GConf/schemas.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
+.include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.22.0
 .include "../../devel/libgnome/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsexy+=		libsexy>=0.1.11
