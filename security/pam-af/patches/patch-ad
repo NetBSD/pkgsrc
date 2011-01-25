@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2011/01/25 09:07:58 obache Exp $
+
+* Recent OpemPAM define `OPENPAM', not `_OPENPAM'.
+
+--- common/subr.c.orig	2006-11-07 00:22:37.000000000 +0000
++++ common/subr.c
+@@ -66,7 +66,7 @@
+ # define LOGERR(...) warnx(__VA_ARGS__)
+ #else /* !PAM_AF_DEFS */
+ # include <security/pam_appl.h>
+-# ifdef _OPENPAM
++# if defined(_OPENPAM) || defined(OPENPAM)
+ #  include <security/pam_mod_misc.h>
+ #  include <security/openpam.h>
+ # endif
