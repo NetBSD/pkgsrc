@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10045 2011/01/24 21:48:41 ahoka Exp $
+$NetBSD: TODO,v 1.10046 2011/01/25 08:33:41 obache Exp $
 
 Suggested new packages
 ======================
@@ -1474,7 +1474,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xorg-docs-1.6
 	o xorg-util-macros-1.10.1 [pkg/43891]
 	o xorg-util-macros-1.11.0
-	o xpad-2.13
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.0
 	o xproto-7.0.20
