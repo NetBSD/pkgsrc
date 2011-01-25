@@ -1,0 +1,15 @@
+$NetBSD: patch-aw,v 1.9 2011/01/25 11:13:13 markd Exp $
+
+Fix login non-kde session with csh/tcsh
+
+--- kdm/kfrontend/genkdmconf.c.orig	2008-02-13 09:40:49.000000000 +0000
++++ kdm/kfrontend/genkdmconf.c
+@@ -673,7 +673,7 @@ static const char def_session1[] =
+ "    xsess_tmp=";
+ static const char def_session2[] =
+ "\n"
+-"    $SHELL -c \"if (-f /etc/csh.login) source /etc/csh.login; if (-f ~/.login) source ~/.login; /bin/sh -c export -p >! $xsess_tmp\"\n"
++"    $SHELL -c \"if (-f /etc/csh.login) source /etc/csh.login; if (-f ~/.login) source ~/.login; /bin/sh -c 'export -p' >! $xsess_tmp\"\n"
+ "    . $xsess_tmp\n"
+ "    rm -f $xsess_tmp\n"
+ "    ;;\n"
