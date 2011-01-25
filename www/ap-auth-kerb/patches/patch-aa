@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2011/01/25 11:17:43 markd Exp $
+
+recent heimdal's dont implicitly include mech headers
+so include explicitly.
+
+--- src/mod_auth_kerb.c.orig	2008-12-04 10:14:03.000000000 +0000
++++ src/mod_auth_kerb.c
+@@ -89,6 +89,7 @@
+ #include <krb5.h>
+ #ifdef HEIMDAL
+ #  include <gssapi.h>
++#  include <gssapi/gssapi_krb5.h>
+ #else
+ #  include <gssapi/gssapi.h>
+ #  include <gssapi/gssapi_generic.h>
