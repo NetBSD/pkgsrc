@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2011/01/25 23:47:22 wiz Exp $
+
+Fix build with png-1.5.
+
+--- images/fl_png.cxx.orig	2007-04-16 14:48:06.000000000 +0000
++++ images/fl_png.cxx
+@@ -111,7 +111,7 @@ bool pngImage::fetch()
+     png_set_sig_bytes(png_ptr, 8);
+   }
+ 
+-  if (setjmp(png_ptr->jmpbuf))
++  if (setjmp(png_jmpbuf(png_ptr)))
+     goto error;
+ 
+   png_read_info(png_ptr, info_ptr);
