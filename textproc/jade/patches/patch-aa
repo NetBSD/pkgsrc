@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2006/01/20 11:36:18 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2011/01/25 22:22:16 shattered Exp $
 
 --- configure.orig	2006-01-19 21:35:56.000000000 +0100
 +++ configure
@@ -57,14 +57,3 @@ $NetBSD: patch-aa,v 1.3 2006/01/20 11:36:18 jmmv Exp $
  # Check whether --enable-http or --disable-http was given.
  if test "${enable_http+set}" = set; then
    enableval="$enable_http"
-@@ -2609,6 +2630,10 @@ for ac_option
- do
-   case "\$ac_option" in
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
-     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
-   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
