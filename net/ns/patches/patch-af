@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.8 2008/09/18 04:48:12 minskim Exp $
+$NetBSD: patch-af,v 1.9 2011/01/25 22:22:14 shattered Exp $
 
 --- configure.orig	2008-03-31 19:00:25.000000000 -0700
 +++ configure
@@ -29,12 +29,3 @@ $NetBSD: patch-af,v 1.8 2008/09/18 04:48:12 minskim Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -11052,6 +11052,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
