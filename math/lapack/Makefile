@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/07/30 10:36:29 asau Exp $
+# $NetBSD: Makefile,v 1.33 2011/01/25 12:45:43 adam Exp $
 
 DISTNAME=	lapack-lite-3.1.1
 PKGNAME=	lapack-3.1.1
@@ -24,14 +24,14 @@ INSTALLATION_DIRS=	lib
 FFLAGS+=		-ffloat-store
 
 # With f2c-20090411nb4, libf2c-20090201nb3, we need EXT_ETIME but gcc44-4.4.1nb3
-# needs INT_ETIME.  Rather than trying to enumerate all possible fortran compilers,
-# just do a test for it.
+# needs INT_ETIME.  Rather than trying to enumerate all possible fortran
+# compilers, just do a test for it.
 do-configure:
-	@${ECHO_N} "Checking if your fortran compiler  has etime() as an intrinsic... "
-	@cd ${WRKDIR} && ${FC} -o etime_test ${FILESDIR}/etime_test.f >${WRKDIR}/etime_test.log 2>&1; \
-		if test $$? -eq 0 ; then \
-		${ECHO} "TIMER=INT_ETIME" >> ${WRKSRC}/make.inc ; echo "YES" ; else \
-		${ECHO} "TIMER=EXT_ETIME" >> ${WRKSRC}/make.inc ; echo "NO" ; fi
+	@${ECHO_N} "Checking if your fortran compiler has etime() as an intrinsic... "
+	${FC} -o ${WRKDIR}/etime_test ${FILESDIR}/etime_test.f >${WRKDIR}/etime_test.log 2>&1; \
+	if ${TEST} $$? -eq 0 ; then \
+	${ECHO} "TIMER=INT_ETIME" >> ${WRKSRC}/make.inc ; ${ECHO} "YES" ; else \
+	${ECHO} "TIMER=EXT_ETIME" >> ${WRKSRC}/make.inc ; ${ECHO} "NO" ; fi
 	@${ECHO} "See ${WRKDIR}/etime_test.log for details on the test"
 
 do-install:

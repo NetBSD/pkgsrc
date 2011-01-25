@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2010/03/17 21:47:11 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.3 2011/01/25 12:45:43 adam Exp $
 
 --- /dev/null	2007-11-22 18:29:57.000000000 +0100
 +++ make.inc
@@ -10,5 +10,5 @@ $NetBSD: patch-ac,v 1.2 2010/03/17 21:47:11 dmcmahill Exp $
 +DRVOPTS=	$(OPTS)
 +NOOPT=
 +LOADER=		${FC}
-+LOADOPTS=
++LOADOPTS=	${LDFLAGS}
 +LAPACKLIB=	liblapack.la
