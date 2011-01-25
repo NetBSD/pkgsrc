@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2009/12/15 18:59:54 bouyer Exp $
+$NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
 
 --- configure.orig	2009-09-16 10:38:03.000000000 +0200
 +++ configure	2009-12-15 17:29:32.000000000 +0100
@@ -92,14 +92,3 @@ $NetBSD: patch-ab,v 1.5 2009/12/15 18:59:54 bouyer Exp $
    EXTRAS="$EXTRAS check_nt"
  elif test -f ../plugins/check_nt.c ; then
    EXTRAS="$EXTRAS check_nt"
-@@ -56260,6 +56260,10 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
