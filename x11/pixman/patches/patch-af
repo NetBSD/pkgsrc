@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.8 2010/06/16 16:35:57 drochner Exp $
+$NetBSD: patch-af,v 1.9 2011/01/26 19:25:55 drochner Exp $
 
---- pixman/pixman-compiler.h.orig	2010-05-12 20:15:42.000000000 +0000
+--- pixman/pixman-compiler.h.orig	2011-01-19 13:05:40.000000000 +0000
 +++ pixman/pixman-compiler.h
-@@ -70,7 +70,7 @@
- #endif
+@@ -82,7 +82,7 @@
+ #   define PIXMAN_GET_THREAD_LOCAL(name)				\
+     (&name)
  
- /* TLS */
--#if defined(TOOLCHAIN_SUPPORTS__THREAD)
-+#if defined(TOOLCHAIN_SUPPORTS__THREAD) && !defined(__NetBSD__)
+-#elif defined(TOOLCHAIN_SUPPORTS__THREAD)
++#elif defined(TOOLCHAIN_SUPPORTS__THREAD) && !defined(__NetBSD__)
  
  #   define PIXMAN_DEFINE_THREAD_LOCAL(type, name)			\
      static __thread type name
-@@ -149,7 +149,7 @@ extern __stdcall int ReleaseMutex (void 
+@@ -149,7 +149,7 @@
  #   define PIXMAN_GET_THREAD_LOCAL(name)				\
      (&name)
  

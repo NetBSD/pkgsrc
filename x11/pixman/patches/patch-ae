@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.11 2010/06/16 16:35:57 drochner Exp $
+$NetBSD: patch-ae,v 1.12 2011/01/26 19:25:55 drochner Exp $
 
---- configure.orig	2010-05-12 20:26:22.000000000 +0000
+--- configure.orig	2011-01-19 13:22:54.000000000 +0000
 +++ configure
-@@ -11070,7 +11070,7 @@ fi
+@@ -11366,7 +11366,7 @@ fi
  # if we're using Sun Studio and neither the user nor a config.site
  # has set CFLAGS.
  if test $SUNCC = yes &&			\
@@ -11,19 +11,19 @@ $NetBSD: patch-ae,v 1.11 2010/06/16 16:35:57 drochner Exp $
     test "$CFLAGS" = "-g"
  then
    CFLAGS="-O -g"
-@@ -11161,6 +11161,7 @@ fi
+@@ -11677,6 +11677,7 @@ fi
  
  
- have_gcc4=no
+ 
 +if false; then
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -fvisibility" >&5
- $as_echo_n "checking for -fvisibility... " >&6; }
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -11177,6 +11178,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
-   have_gcc4=yes
- fi
- rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports -fvisibility=hidden" >&5
+ $as_echo_n "checking whether the compiler supports -fvisibility=hidden... " >&6; }
+ 		save_CFLAGS="$CFLAGS"
+@@ -11727,6 +11728,7 @@ rm -f core conftest.err conftest.$ac_obj
+ 	fi
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $_yesno" >&5
+ $as_echo "$_yesno" >&6; }
 +fi
  
- if test "x$have_gcc4" = "xyes"; then
-    CFLAGS="$CFLAGS -fvisibility=hidden"
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports -xldscope=hidden" >&5
