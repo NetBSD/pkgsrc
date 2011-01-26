@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/05/19 08:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/26 12:27:05 obache Exp $
 #
 
 DISTNAME=	espeak-1.31-source
-PKGNAME=	espeak-1.31
+PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=espeak/}
 EXTRACT_SUFX=	.zip
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/espeak-1.31-source/src
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 INSTALLATION_DIRS=	bin include lib share
 
