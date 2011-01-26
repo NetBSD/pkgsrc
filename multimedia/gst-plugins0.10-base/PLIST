@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/12/03 18:15:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2011/01/26 23:18:57 drochner Exp $
 bin/gst-discoverer-0.10
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
@@ -39,6 +39,8 @@ include/gstreamer-0.10/gst/interfaces/xoverlay.h
 include/gstreamer-0.10/gst/netbuffer/gstnetbuffer.h
 include/gstreamer-0.10/gst/pbutils/codec-utils.h
 include/gstreamer-0.10/gst/pbutils/descriptions.h
+include/gstreamer-0.10/gst/pbutils/encoding-profile.h
+include/gstreamer-0.10/gst/pbutils/encoding-target.h
 include/gstreamer-0.10/gst/pbutils/gstdiscoverer.h
 include/gstreamer-0.10/gst/pbutils/gstpluginsbaseversion.h
 include/gstreamer-0.10/gst/pbutils/install-plugins.h
@@ -79,6 +81,7 @@ lib/gstreamer-0.10/libgstaudioresample.la
 lib/gstreamer-0.10/libgstaudiotestsrc.la
 lib/gstreamer-0.10/libgstdecodebin.la
 lib/gstreamer-0.10/libgstdecodebin2.la
+lib/gstreamer-0.10/libgstencodebin.la
 lib/gstreamer-0.10/libgstffmpegcolorspace.la
 lib/gstreamer-0.10/libgstgdp.la
 lib/gstreamer-0.10/libgstplaybin.la
@@ -122,11 +125,11 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/annotation-glossary.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-deprecated.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-full.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/compiling.html
-share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/compiling.sgml
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp2
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-appsink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-appsrc.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-encoding-profile.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstaudio.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstaudioclock.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstaudiofilter.html
@@ -232,6 +235,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugin
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-clockoverlay.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-decodebin.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-decodebin2.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-encodebin.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-ffmpegcolorspace.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdpdepay.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdppay.html
@@ -255,6 +259,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugin
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audiotestsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-cdparanoia.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-encoding.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ffmpegcolorspace.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gdp.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gio.html
