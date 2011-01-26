@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2009/09/08 19:20:49 joerg Exp $
+$NetBSD: distinfo,v 1.10 2011/01/26 00:16:31 wiz Exp $
 
 SHA1 (XmHTML-1.1.7.tar.gz) = 4d8c82f88cf0700f6fc8898323d865b83d2a1ff1
 RMD160 (XmHTML-1.1.7.tar.gz) = 0e5cf4a0d24fc73277186a726a3997dea4ea82db
@@ -12,3 +12,4 @@ SHA1 (patch-af) = de3658ddbe191deb3d838f500d985c950ab4a967
 SHA1 (patch-ag) = acac76543e8fe98d79064bbec7830f285e9c50cd
 SHA1 (patch-ah) = 78ad8dc486da8aad6911f79eb8bd22d8417aec1f
 SHA1 (patch-ai) = 300b35e24698d6e717f0b1bdfd577df91244fba4
+SHA1 (patch-aj) = 7dbd41eb4c07f094f614a0ad91fbda242d167c31
