@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.187 2011/01/26 02:39:13 obache Exp $
+$NetBSD: CHANGES-2011,v 1.188 2011/01/26 21:44:48 is Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -308,3 +308,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/gwaei to 1.5.2 [ryoon 2011-01-25]
 	Updated www/ikiwiki to 3.20110124 [schmonz 2011-01-25]
 	Updated inputmethod/ibus-handwrite to 2.1.3 [obache 2011-01-26]
+	Added net/ether2dns version 1.5 [is 2011-01-26]
