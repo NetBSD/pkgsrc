@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2010/05/21 09:36:58 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2011/01/26 19:35:20 drochner Exp $
 
---- wscript.orig	2010-05-16 18:32:33.000000000 +0000
+--- wscript.orig	2010-10-31 22:20:48.000000000 +0000
 +++ wscript
-@@ -88,7 +88,7 @@ def configure (conf):
- 
-     conf.check_tool ('compiler_cc')
-     # Circumvent mandatory check for valac
--    if find_program_impl (conf.env, 'valac'):
-+    if 0:
-         conf.check_tool ('vala')
-     else:
-          conf.check_message ('program', 'valac', False, False)
-@@ -454,7 +454,7 @@ def build (bld):
+@@ -421,7 +421,7 @@ def build (bld):
              'AUTHORS COPYING ChangeLog EXPAT README')
  
      # Install default configuration
@@ -20,12 +11,12 @@ $NetBSD: patch-aa,v 1.4 2010/05/21 09:36:58 drochner Exp $
  
      if bld.env['RST2HTML']:
          # FIXME: Build only if needed
-@@ -533,13 +533,13 @@ def build (bld):
-         bld.install_files ('${MDATADIR}/' + APPNAME + '/res', 'data/autosuggestcontrol.css')
- 
-         # FIXME: Determine the library naming for other platforms
--        if Options.platform == 'linux':
-+        if 1:
+@@ -508,13 +508,13 @@ def build (bld):
+                 if os.path.exists (source):
+                     bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + \
+                                        '/extensions/' + folder, source)
+-        elif Options.platform == 'linux':
++        elif 1:
              extensions = os.listdir ('data/extensions')
              for extension in extensions:
                  folder = 'lib' + extension + '.so'
