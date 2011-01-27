@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8.4.1 2011/01/27 15:14:54 gdt Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.8.4.2 2011/01/27 16:03:46 gdt Exp $
 ${PYSITELIB}/pysqlite2/__init__.py
 ${PYSITELIB}/pysqlite2/__init__.pyc
 ${PYSITELIB}/pysqlite2/__init__.pyo
