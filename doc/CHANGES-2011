@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.195 2011/01/27 17:24:30 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.196 2011/01/27 18:04:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -326,3 +326,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/mk-configure version 0.21.0 [drochner 2011-01-27]
 	Added lang/runawk version 1.3.1 [drochner 2011-01-27]
 	Updated audio/amarok to 2.4.0 [wiz 2011-01-27]
+	Removed games/wormux successor games/warmux [adam 2011-01-27]
+	Added games/warmux version 11.01 [adam 2011-01-27]
