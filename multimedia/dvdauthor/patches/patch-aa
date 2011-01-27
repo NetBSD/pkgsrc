@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2010/05/08 16:11:06 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2011/01/27 00:00:58 wiz Exp $
+
+times(3) argument is not optional.
+Accepted upstream in
+https://github.com/ldo/dvdauthor/commit/1c1c707a44fe6959fb9d1b9713ba996f462ffbce
 
 --- src/dvdunauthor.c.orig	2010-03-05 04:20:47.000000000 +0000
 +++ src/dvdunauthor.c
