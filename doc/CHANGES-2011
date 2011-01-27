@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.189 2011/01/27 07:49:53 adam Exp $
+$NetBSD: CHANGES-2011,v 1.190 2011/01/27 11:19:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/ether2dns version 1.5 [is 2011-01-26]
 	Updated mail/exim to 4.74 [adam 2011-01-27]
 	Updated mail/exim-html to 4.74 [adam 2011-01-27]
+	Updated mail/milter-manager to 1.6.4 [obache 2011-01-27]
