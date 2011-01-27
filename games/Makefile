@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2011/01/19 19:49:57 kefren Exp $
+# $NetBSD: Makefile,v 1.342 2011/01/27 18:03:07 adam Exp $
 #
 
 COMMENT=	Games
@@ -260,9 +260,9 @@ SUBDIR+=	ufoai
 SUBDIR+=	urban
 SUBDIR+=	velena
 SUBDIR+=	vms-empire
+SUBDIR+=	warmux
 SUBDIR+=	warzone2100
 SUBDIR+=	wesnoth
-SUBDIR+=	wormux
 SUBDIR+=	wormz
 SUBDIR+=	wxhugo
 SUBDIR+=	xarchon
