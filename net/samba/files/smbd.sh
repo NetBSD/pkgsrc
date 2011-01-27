@@ -1,16 +1,14 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: smbd.sh,v 1.12 2005/12/21 04:17:53 jlam Exp $
+# $NetBSD: smbd.sh,v 1.13 2011/01/27 07:55:39 adam Exp $
 #
 # PROVIDE: smbd
-# REQUIRE: nmbd
 
 . /etc/rc.subr
 
 name="smbd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-required_vars="nmbd"
 required_files="@SAMBA_ETCDIR@/smb.conf"
 extra_commands="reload"
 command_args="-D"		# _must_ start as daemon from rc.d;
