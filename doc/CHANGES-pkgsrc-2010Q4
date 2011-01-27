@@ -36,3 +36,5 @@ Pullup ticket #3335 - requested by gls
 comms/asterisk16: security update
 Pullup ticket #3336 - requested by gls
 comms/asterisk18: security update
+Pullup ticket #3338 - requested by tron
+Security patch for "phpmyadmin" package
