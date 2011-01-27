@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/01/27 18:00:50 adam Exp $
+
+--- tools/servers/game_server/Makefile.in.orig	2011-01-27 14:37:44.000000000 +0000
++++ tools/servers/game_server/Makefile.in
+@@ -161,7 +161,7 @@ LIBINTL = @LIBINTL@
+ LIBOBJS = @LIBOBJS@
+ LIBPNG_CFLAGS = @LIBPNG_CFLAGS@
+ LIBPNG_LIBS = @LIBPNG_LIBS@
+-LIBS = @LIBS@ @LIBCURL@
++LIBS = @LIBS@ @LIBCURL@ @LIBINTL@
+ LIBXML2_CFLAGS = @LIBXML2_CFLAGS@
+ LIBXML2_LIBS = @LIBXML2_LIBS@
+ LOCALEDIR = @LOCALEDIR@
