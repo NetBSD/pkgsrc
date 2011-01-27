@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.191 2011/01/27 13:41:20 hauke Exp $
+$NetBSD: CHANGES-2011,v 1.192 2011/01/27 14:02:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -313,3 +313,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/exim-html to 4.74 [adam 2011-01-27]
 	Updated mail/milter-manager to 1.6.4 [obache 2011-01-27]
 	Updated net/netatalk to 2.1.5 [hauke 2011-01-27]
+	Updated databases/phpmyadmin to 2.11.11.1nb1 [tron 2011-01-27]
