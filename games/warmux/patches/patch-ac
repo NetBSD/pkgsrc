@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/01/27 18:00:50 adam Exp $
+
+--- tools/servers/index_server/net_data.cpp.orig	2011-01-27 14:44:09.000000000 +0000
++++ tools/servers/index_server/net_data.cpp
+@@ -30,6 +30,10 @@
+ #include <time.h>
+ #include <WSERVER_debug.h>
+ 
++#ifndef MSG_NOSIGNAL
++#define MSG_NOSIGNAL 0
++#endif
++
+ #include "net_data.h"
+ 
+ #ifdef WIN32

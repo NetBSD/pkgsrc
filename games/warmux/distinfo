@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/27 18:00:48 adam Exp $
+
+SHA1 (warmux-11.01.tar.bz2) = 18e5d5bf144f069405c75ff8fe51296d9a7871a5
+RMD160 (warmux-11.01.tar.bz2) = 85a7bbfed5ca2ccbd793a12d7ea548948a747a88
+Size (warmux-11.01.tar.bz2) = 110379327 bytes
+SHA1 (patch-aa) = 163449e2cc6fadede8ce1a77bee08fcda59a0f0f
+SHA1 (patch-ab) = 48893791c36ae88b3fc5f565a39d3de786bc88d4
+SHA1 (patch-ac) = 24179b2ccdc2dc2dc6c95c33f12b7e55bb6f5a6e
