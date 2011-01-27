@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:43:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/01/27 13:45:55 tron Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -26,7 +26,6 @@ share/phpmyadmin/db_search.php
 share/phpmyadmin/db_sql.php
 share/phpmyadmin/db_structure.php
 share/phpmyadmin/docs.css
-share/phpmyadmin/error.php
 share/phpmyadmin/export.php
 share/phpmyadmin/import.php
 share/phpmyadmin/index.php
@@ -197,6 +196,7 @@ share/phpmyadmin/libraries/engines/merge.lib.php
 share/phpmyadmin/libraries/engines/mrg_myisam.lib.php
 share/phpmyadmin/libraries/engines/myisam.lib.php
 share/phpmyadmin/libraries/engines/ndbcluster.lib.php
+share/phpmyadmin/libraries/error.inc.php
 share/phpmyadmin/libraries/export/csv.php
 share/phpmyadmin/libraries/export/excel.php
 share/phpmyadmin/libraries/export/htmlexcel.php
