@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.15 2011/01/27 14:04:51 drochner Exp $
+
+https://bugzilla.gnome.org/show_bug.cgi?id=636348
+
+--- pango/pangocairo-font.c.orig	2010-07-01 14:00:29.000000000 +0000
++++ pango/pangocairo-font.c
+@@ -433,6 +433,8 @@ _pango_cairo_font_private_get_hex_box_in
+   pango_ctm.x0 = cairo_ctm.x0;
+   pango_ctm.y0 = cairo_ctm.y0;
+ 
++  size /= pango_matrix_get_font_scale_factor (&pango_ctm);
++
+   if (is_hinted)
+     {
+       /* prepare for some hinting */
