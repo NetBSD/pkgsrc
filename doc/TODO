@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10048 2011/01/26 00:10:03 wiz Exp $
+$NetBSD: TODO,v 1.10049 2011/01/27 11:19:55 obache Exp $
 
 Suggested new packages
 ======================
@@ -960,7 +960,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mgetty+sendfax-1.1.35
 	o midori-0.2.9
 	o milkytracker-0.90.85
-	o milter-manager-1.6.4
 	o mined-2000.16
 	o minicom-2.4
 	o minivmac-3.0.4
