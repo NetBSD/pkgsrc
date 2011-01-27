@@ -1,7 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2011/01/25 08:33:27 obache Exp $
+$NetBSD: patch-ac,v 1.2 2011/01/27 05:26:50 obache Exp $
 
 * Use API for set window properties.
   construct property "type" for object can't be set after construction.
+  https://bugs.launchpad.net/xpad/+bug/591978
 
 --- src/xpad-pad.c.orig	2009-05-11 01:44:09.000000000 +0000
 +++ src/xpad-pad.c
