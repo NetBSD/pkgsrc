@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2010/11/29 19:13:30 tron Exp $
+# $NetBSD: Makefile,v 1.86 2011/01/27 13:45:55 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -54,6 +55,10 @@ INSTALL_DIRS=	js lang libraries libraries/auth libraries/dbg \
 		themes themes/darkblue_orange \
 		themes/darkblue_orange/css themes/darkblue_orange/img \
 		themes/original themes/original/css themes/original/img
+
+# Part of the fix for CVE-2010-4480.
+post-extract:
+	${RM} -f ${WRKSRC}/error.php
 
 do-configure:
 	${SED} -e "s|@PMDIR@|${PMDIR}|g" ${FILESDIR}/phpmyadmin.conf	\
