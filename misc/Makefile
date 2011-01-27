@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2010/09/12 01:52:07 taca Exp $
+# $NetBSD: Makefile,v 1.350 2011/01/27 04:57:29 jnemeth Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -194,6 +194,7 @@ SUBDIR+=	rox-memo
 SUBDIR+=	rpm
 SUBDIR+=	ruby-bundler
 SUBDIR+=	ruby-columnize
+SUBDIR+=	ruby-commander
 SUBDIR+=	ruby-configuration
 SUBDIR+=	ruby-daemons
 SUBDIR+=	ruby-gem_plugin
