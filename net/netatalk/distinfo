@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.35 2010/10/17 14:12:10 hauke Exp $
+$NetBSD: distinfo,v 1.36 2011/01/27 13:40:30 hauke Exp $
 
-SHA1 (netatalk-2.1.4.tar.bz2) = eed42b3958c315be0a1bf453e1a7b829d4d4f9cf
-RMD160 (netatalk-2.1.4.tar.bz2) = 10da904a80a6e81262e6a0ac987a4f8b89db1de1
-Size (netatalk-2.1.4.tar.bz2) = 1123981 bytes
+SHA1 (netatalk-2.1.5.tar.bz2) = 689856ed96ccf34f2f7b83d70c97d30213638a70
+RMD160 (netatalk-2.1.5.tar.bz2) = 9265b34f303a21b89c78401c24ed464c61041ff3
+Size (netatalk-2.1.5.tar.bz2) = 1125946 bytes
+SHA1 (patch-adv1tov2.c) = f72a55c65a1f5f60ad49e6bd52696103d3993bbf
+RMD160 (patch-adv1tov2.c) = 7fed71cba8494afb2dafdde3f392103ccbdf2e93
+Size (patch-adv1tov2.c) = 714 bytes
 SHA1 (patch-adv1tov2.c) = f72a55c65a1f5f60ad49e6bd52696103d3993bbf
 RMD160 (patch-adv1tov2.c) = 7fed71cba8494afb2dafdde3f392103ccbdf2e93
 Size (patch-adv1tov2.c) = 714 bytes
