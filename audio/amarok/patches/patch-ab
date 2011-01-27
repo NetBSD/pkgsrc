@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.7 2010/09/20 21:29:15 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2011/01/27 17:24:19 wiz Exp $
 
 Add rpath for embedded mySQL library.
 
---- src/core-impl/collections/sqlcollection/mysqlecollection/CMakeLists.txt.orig	2010-03-10 23:12:15.000000000 +0000
-+++ src/core-impl/collections/sqlcollection/mysqlecollection/CMakeLists.txt
+--- src/core-impl/collections/db/sql/mysqlecollection/CMakeLists.txt.orig	2010-03-10 23:12:15.000000000 +0000
++++ src/core-impl/collections/db/sql/mysqlecollection/CMakeLists.txt
 @@ -49,6 +49,7 @@ if(APPLE)
  	SET_TARGET_PROPERTIES(amarok_collection-mysqlecollection PROPERTIES LINK_FLAGS "-undefined dynamic_lookup")
  endif(APPLE)
