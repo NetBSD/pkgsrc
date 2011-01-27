@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/01/27 11:16:39 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/27 11:19:36 obache Exp $
 #
 
 DISTNAME=	milter-manager-1.6.4
@@ -79,7 +79,7 @@ REPLACE_RUBY=		admin/public/dispatch.*
 .include "../../lang/ruby/replace.mk"
 
 .include "../../lang/ruby/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	ruby-gnome2-glib>=0.90.5
+BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=0.90.5
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.12.3
 .include "../../devel/glib2/buildlink3.mk"
