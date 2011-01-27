@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.86 2010/10/16 18:00:02 wiz Exp $
+$NetBSD: distinfo,v 1.87 2011/01/27 14:04:51 drochner Exp $
 
 SHA1 (pango-1.28.3.tar.bz2) = e72887d6e147b9abf54628c003836e61d97767a1
 RMD160 (pango-1.28.3.tar.bz2) = cdfd6d695b169e15801956fbfd54438c109f7a61
 Size (pango-1.28.3.tar.bz2) = 1509501 bytes
 SHA1 (patch-aa) = 1a87d055dc722eff28517a11d0832ae19df5eb59
 SHA1 (patch-ab) = 12c09b12ba31be19fa0d602f89909811e6221bd8
+SHA1 (patch-ac) = 349eaf578f26e9d55df01c736951f27cd70a89fc
+SHA1 (patch-ad) = 135fda8c8ff2e37f048374b1840291f7d2f6369f
