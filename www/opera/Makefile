@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.90 2011/01/24 21:46:18 ahoka Exp $
+# $NetBSD: Makefile,v 1.91 2011/01/28 09:33:35 ahoka Exp $
 #
 
-DISTNAME=	opera-11.00-1176.i386
-PKGNAME=	${DISTNAME:S/-1176.i386//}
+DISTNAME=	opera-${OPERA_VERSION}-${OPERA_BUILD}.i386
+PKGNAME=	${DISTNAME:S/-${OPERA_BUILD}.i386//}
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.opera.com/pub/opera/linux/1100/
+MASTER_SITES=	ftp://ftp.opera.com/pub/opera/linux/${OPERA_VERSION:S/.//}/
 EXTRACT_SUFX=	.rpm
 
 MAINTAINER=	ahoka@NetBSD.org
@@ -13,8 +13,10 @@ COMMENT=	Opera web browser
 LICENSE=	opera-eula
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
-
 EMUL_PLATFORMS+=        linux-i386
+
+OPERA_VERSION=		11.01
+OPERA_BUILD=		1190
 
 # TODO: add gstreamer
 EMUL_MODULES.linux=     x11 fontconfig
