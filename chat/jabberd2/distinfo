@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.22 2010/11/09 07:33:11 adam Exp $
+$NetBSD: distinfo,v 1.23 2011/01/28 13:35:51 adam Exp $
 
 SHA1 (jabberd-2.2.11.tar.bz2) = 32956231dd5ab5a242545907341fab9bc6007d22
 RMD160 (jabberd-2.2.11.tar.bz2) = d4bac0f0cbf41788e5504ca1796f910b27c813d1
 Size (jabberd-2.2.11.tar.bz2) = 659500 bytes
 SHA1 (patch-aa) = 0db128003f37425a1b7b315f526828f2e328ddb4
-SHA1 (patch-ab) = c33cefcb0ddbcec732e475eaf5b931cdc8dd6cc7
-SHA1 (patch-ac) = 9bb5547c01fa3cc0f4df2133007a843aaed66bef
-SHA1 (patch-ad) = 2930f23bc8616ba2a5783cc8bb2a42c5d1c5eff7
-SHA1 (patch-ae) = 0c57279c309ef4f6a226d65a491fd040e03ae4f0
 SHA1 (patch-af) = 0a30ddc50345278eb8a20825f87754c914720b05
-SHA1 (patch-ag) = 2423bc1f7aced7d0010b51949fb2f9b5ddb44cc0
