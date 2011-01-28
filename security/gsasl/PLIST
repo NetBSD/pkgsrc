@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/11/07 18:40:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/01/28 08:16:55 adam Exp $
 bin/gsasl
 include/gsasl-compat.h
 include/gsasl-mech.h
@@ -60,6 +60,7 @@ man/man3/gsasl_encode_inline.3
 man/man3/gsasl_finish.3
 man/man3/gsasl_free.3
 man/man3/gsasl_hmac_md5.3
+man/man3/gsasl_hmac_sha1.3
 man/man3/gsasl_init.3
 man/man3/gsasl_md5.3
 man/man3/gsasl_md5pwd_get_password.3
@@ -112,6 +113,7 @@ man/man3/gsasl_server_suggest_mechanism.3
 man/man3/gsasl_server_support_p.3
 man/man3/gsasl_session_hook_get.3
 man/man3/gsasl_session_hook_set.3
+man/man3/gsasl_sha1.3
 man/man3/gsasl_simple_getpass.3
 man/man3/gsasl_step.3
 man/man3/gsasl_step64.3
@@ -126,18 +128,23 @@ share/locale/en@boldquot/LC_MESSAGES/libgsasl.mo
 share/locale/en@quot/LC_MESSAGES/gsasl.mo
 share/locale/en@quot/LC_MESSAGES/libgsasl.mo
 share/locale/eu/LC_MESSAGES/gsasl.mo
+share/locale/fi/LC_MESSAGES/gsasl.mo
+share/locale/fi/LC_MESSAGES/libgsasl.mo
 share/locale/fr/LC_MESSAGES/gsasl.mo
 share/locale/fr/LC_MESSAGES/libgsasl.mo
 share/locale/ga/LC_MESSAGES/gsasl.mo
 share/locale/ga/LC_MESSAGES/libgsasl.mo
 share/locale/id/LC_MESSAGES/gsasl.mo
 share/locale/id/LC_MESSAGES/libgsasl.mo
+share/locale/it/LC_MESSAGES/gsasl.mo
+share/locale/it/LC_MESSAGES/libgsasl.mo
 share/locale/nl/LC_MESSAGES/gsasl.mo
 share/locale/nl/LC_MESSAGES/libgsasl.mo
 share/locale/pl/LC_MESSAGES/gsasl.mo
 share/locale/pl/LC_MESSAGES/libgsasl.mo
 share/locale/ro/LC_MESSAGES/gsasl.mo
 share/locale/ro/LC_MESSAGES/libgsasl.mo
+share/locale/sk/LC_MESSAGES/gsasl.mo
 share/locale/sk/LC_MESSAGES/libgsasl.mo
 share/locale/sq/LC_MESSAGES/gsasl.mo
 share/locale/sr/LC_MESSAGES/gsasl.mo
