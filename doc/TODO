@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10051 2011/01/27 17:24:30 wiz Exp $
+$NetBSD: TODO,v 1.10052 2011/01/28 08:20:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -891,7 +891,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnice-0.1.0
 	o libnids-1.24
 	o libnotify-0.7.1
-	o libntlm-1.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libosip-3.5.0
 	o libpcap-1.1.1
@@ -1084,7 +1083,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.3.1
 	o pircbot-1.4.6
-	o pixman-0.20.2
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
 	o plone-3.3.4
@@ -1202,8 +1200,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.2.0
 	o scm-5e7
-	o scmgit-base-1.7.3.5
-	o scmgit-docs-1.7.3.5
 	o scons-1.3.1 [pkg/43759]
 	o scons-2.0.1
 	o scribus-1.3.9
@@ -1243,7 +1239,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spcaview-20060501
 	o spim-7.4
 	o sqlitemanager-1.2.4
-	o squid-3.1.9
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o star-1.5.1
