@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/01 02:41:22 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2011/01/28 08:29:34 adam Exp $
 
-SHA1 (udns_0.0.9.tar.gz) = 9792ac12619d23d3086f960561428238c41a25e0
-RMD160 (udns_0.0.9.tar.gz) = c2d79b97cda87614a644da6a1be2d55f354d8a22
-Size (udns_0.0.9.tar.gz) = 84307 bytes
-SHA1 (patch-aa) = 0a931b98584a8b1ab83cec093de95f76b2494aa4
+SHA1 (udns-0.1.tar.gz) = e3326684653701f9219cc213bdc3656dff269c80
+RMD160 (udns-0.1.tar.gz) = b0efb3587b419a483c32d66f7f295c05dff3dc47
+Size (udns-0.1.tar.gz) = 87703 bytes
+SHA1 (patch-aa) = d0bab8fd8d987198a38c85086a9a7d490f188603
+SHA1 (patch-ab) = 3261f7f420c2baab49830d148c969c7595d31a04
