@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.204 2011/01/28 10:37:14 adam Exp $
+$NetBSD: CHANGES-2011,v 1.205 2011/01/28 13:24:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -339,3 +339,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-docs to 1.7.3.5 [adam 2011-01-28]
 	Updated www/opera to 11.01 [ahoka 2011-01-28]
 	Updated misc/xchm to 1.18 [adam 2011-01-28]
+	Updated mail/ruby-mail to 2.2.15 [taca 2011-01-28]
