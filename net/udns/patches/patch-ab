@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2011/01/28 08:29:34 adam Exp $
+
+Pass LDFLAGS for compiler test.
+
+--- configure.lib.orig	2011-01-28 08:24:46.000000000 +0000
++++ configure.lib
+@@ -125,7 +125,7 @@ ac_prog_c_compiler_v() {
+   echo 'int main(int argc, char **argv) { return 0; }' >conftest.c
+ 
+   if [ -n "$CC" ]; then
+-    if ac_run $CC -o conftest conftest.c && ac_run ./conftest; then
++    if ac_run $CC $LDFLAGS -o conftest conftest.c && ac_run ./conftest; then
+       ac_result "\$CC ($CC)"
+     else
+       ac_result no
