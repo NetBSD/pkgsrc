@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.200 2011/01/28 01:55:06 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.201 2011/01/28 07:29:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/rss2email to 2.70 [schmonz 2011-01-28]
 	Updated comms/asterisk18 to 1.8.2.3nb1 [jnemeth 2011-01-28]
 	Updated print/web2c to 2010nb5 [minskim 2011-01-28]
+	Updated graphics/optipng to 0.6.5 [adam 2011-01-28]
