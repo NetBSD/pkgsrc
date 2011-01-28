@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.206 2011/01/28 13:28:27 obache Exp $
+$NetBSD: CHANGES-2011,v 1.207 2011/01/28 20:33:14 is Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -341,3 +341,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/xchm to 1.18 [adam 2011-01-28]
 	Updated mail/ruby-mail to 2.2.15 [taca 2011-01-28]
 	Updated sysutils/pdumpfs to 1.3nb3 [obache 2011-01-28]
+	Updated net/ether2dns to 1.6 [is 2011-01-28]
