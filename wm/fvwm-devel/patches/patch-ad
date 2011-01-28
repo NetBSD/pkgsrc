@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2011/01/28 22:05:03 jmmv Exp $
+
+Fix build with png-1.5.
+
+--- libs/PictureImageLoader.c.orig	2007-07-19 09:30:21.000000000 +0000
++++ libs/PictureImageLoader.c
+@@ -458,16 +458,16 @@ Bool PImageLoadPng(FIMAGE_CMD_ARGS)
+ 	{
+ 		Fpng_set_expand(Fpng_ptr);
+ 	}
+-	if (Finfo_ptr->color_type == FPNG_COLOR_TYPE_RGB_ALPHA)
++	if (png_get_color_type(Fpng_ptr, Finfo_ptr) == FPNG_COLOR_TYPE_RGB_ALPHA)
+ 	{
+ 		hasa = 1;
+ 	}
+-	if (Finfo_ptr->color_type == FPNG_COLOR_TYPE_GRAY_ALPHA)
++	if (png_get_color_type(Fpng_ptr, Finfo_ptr) == FPNG_COLOR_TYPE_GRAY_ALPHA)
+ 	{
+ 		hasa = 1;
+ 		hasg = 1;
+ 	}
+-	if (Finfo_ptr->color_type == FPNG_COLOR_TYPE_GRAY)
++	if (png_get_color_type(Fpng_ptr, Finfo_ptr) == FPNG_COLOR_TYPE_GRAY)
+ 	{
+ 		hasg = 1;
+ 	}
