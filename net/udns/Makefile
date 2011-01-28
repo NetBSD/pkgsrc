@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/01 02:41:22 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/28 08:29:34 adam Exp $
 
-DISTNAME=	udns_0.0.9
-PKGNAME=	${DISTNAME:S/_/-/}
+DISTNAME=	udns-0.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.corpit.ru/mjt/udns/
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.corpit.ru/mjt/udns.html
 COMMENT=	Lightweight DNS resolver supporting asynchronous queries
-
 LICENSE=	gnu-lgpl-v2.1
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
