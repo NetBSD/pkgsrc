@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2011/01/13 13:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2011/01/28 20:46:11 adam Exp $
 
-DISTNAME=	pngcrush-1.7.13-nolib
+DISTNAME=	pngcrush-1.7.14
 PKGNAME=	${DISTNAME:C/-nolib//}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmt/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,10 +15,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin
 
-do-build:
-	cd ${WRKSRC} && ${CC} -DPNG_USE_LOCAL_ARRAYS \
-		${CFLAGS} `libpng-config --cflags` -o pngcrush pngcrush.c \
-		${LDFLAGS} `libpng-config --ldflags` -lz
+#do-build:
+#	cd ${WRKSRC} && ${CC} -DPNG_USE_LOCAL_ARRAYS \
+#		${CFLAGS} `libpng-config --cflags` -o pngcrush pngcrush.c \
+#		${LDFLAGS} `libpng-config --ldflags` -lz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pngcrush ${DESTDIR}${PREFIX}/bin
