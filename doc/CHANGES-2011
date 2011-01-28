@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.201 2011/01/28 07:29:39 adam Exp $
+$NetBSD: CHANGES-2011,v 1.202 2011/01/28 08:20:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -333,3 +333,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/asterisk18 to 1.8.2.3nb1 [jnemeth 2011-01-28]
 	Updated print/web2c to 2010nb5 [minskim 2011-01-28]
 	Updated graphics/optipng to 0.6.5 [adam 2011-01-28]
+	Updated devel/libntlm to 1.2 [adam 2011-01-28]
+	Updated devel/scmgit to 1.7.3.5 [adam 2011-01-28]
+	Updated devel/scmgit-base to 1.7.3.5 [adam 2011-01-28]
+	Updated devel/scmgit-docs to 1.7.3.5 [adam 2011-01-28]
