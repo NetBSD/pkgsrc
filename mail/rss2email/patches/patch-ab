@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2011/01/28 01:41:53 schmonz Exp $
+
+--- r2e.orig	2006-03-16 23:43:03.000000000 +0000
++++ r2e
+@@ -1,2 +1,7 @@
+ #!/bin/sh
+-python rss2email.py feeds.dat $*
++set -e
++if [ ! -d ~/.rss2email ]; then
++	mkdir ~/.rss2email
++fi
++cd ~/.rss2email
++exec @PYTHONBIN@ @PREFIX@/share/rss2email/rss2email.py feeds.dat $*
