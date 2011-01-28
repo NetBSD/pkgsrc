@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10053 2011/01/28 10:37:14 adam Exp $
+$NetBSD: TODO,v 1.10054 2011/01/28 13:20:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,7 +445,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20101229
-	o bzr-2.2.2
+	o bzr-2.2.3
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
@@ -483,7 +483,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cpmtools-2.6
 	o cross-h8300-hms-binutils-2.17
 	o cryptopp-5.6.0
-	o cssc-1.3.0
+	o cssc-1.3.0 [pkg/44475]
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.21
 	o cygwin_lib-1.5.24.2
@@ -566,7 +566,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-696
+	o etm-697
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evolution-couchdb-0.4.5
@@ -581,7 +581,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o fd-3.00d
-	o feh-1.11
+	o feh-1.11.1
 	o festival-1.96
 	o felt-3.07
 	o fetchmail-6.3.19
@@ -652,7 +652,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gap-4r4p9
 	o gated-3.6
 	o gbdfed-1.6
-	o gcal-3.6
+	o gcal-3.6 [pkg/44477]
 	o gcc-4.5.1
 	o gcc44-4.4.5
 	o gcin-1.5.5
@@ -670,8 +670,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gegl-0.1.5
 	o genius-1.0.12
 	o gentoo-0.19.8
-	o gettext-0.18.1
-	o gettext-lib-0.18.1
+	o gettext-0.18.1.1
+	o gettext-lib-0.18.1.1
 	o gettext-m4-0.18.1.1
 	o gfract-0.33
 	o ghc-7.0.1
@@ -731,11 +731,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.10
 	o gss-1.0.1
 	o gssdp-0.9.1
-	o gst-plugins0.10-bad-0.10.21
-	o gst-plugins0.10-base-0.10.32
-	o gst-plugins0.10-good-0.10.27
-	o gst-plugins0.10-ugly-0.10.17
-	o gstreamer0.10-0.10.32
 	o gthumb-2.12.2
 	o gtick-0.4.2
 	o gtk-doc-1.16
@@ -779,6 +774,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ical-2.3.2
 	o icdprog-0.5
 	o iceauth-1.0.4
+	o icewm-1.3.7
 	o ico-1.0.3
 	o icsi-finger-1.0.29
 	o ifile-1.3.8
@@ -816,8 +812,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kdbg-2.2.2
+	o kde4-4.6.0
 	o kdrill-6.5
-	o kipi-plugins-1.7.0
+	o kipi-plugins-1.8.0
 	o kismet-2011.01r1
 	o kmess-1.5.1
 	o kmp-0.5
@@ -1090,6 +1087,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ploticus-examples-230
 	o plptools-1.0.11
 	o ply-3.3 [pkg/43758]
+	o png-1.5.1beta10
 	o pngcheck-2.3.0
 	o po4a-0.36.3
 	o podofo-0.8.4
@@ -1208,8 +1206,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scrotwm-0.9.28
 	o scsh-1.3.0
 	o sdcc-2.9.0
-	o sdlmame-0.140
-	o sdlmess-0.140
+	o sdlmame-0.141
+	o sdlmess-0.141
 	o seahorse-2.32.0
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1237,7 +1235,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o spcaview-20060501
-	o spim-7.4
+	o spim-8.0 [pkg/44465]
 	o sqlitemanager-1.2.4
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
@@ -1275,7 +1273,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tesseract-3.00
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
-	o texmaker-2.1
+	o texmaker-2.2
 	o tfmxplay-1.1.6
 	o thoth-0.2.1
 	o tig-0.16.1
@@ -1440,6 +1438,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbevd-1.1.2 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
+	o xkeyboard-config-2.1
 	o xkill-1.0.3
 	o xli-2006.11.10
 	o xload-1.1.0
@@ -1515,7 +1514,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope29-Silva-2.1
 	o zope34-3.4.0
 	o zopeedit-0.8
-	o zsh-current-4.3.11
+	o zsh-current-4.3.11 [pkg/44460]
 
 Infrastructure problems which need addressing
 =============================================
