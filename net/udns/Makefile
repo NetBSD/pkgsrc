@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/28 08:29:34 adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/28 09:09:40 adam Exp $
 
 DISTNAME=	udns-0.1
 CATEGORIES=	net
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	bin lib include ${PKGMANDIR}/man1 ${PKGMANDIR}/man3
 .include "options.mk"
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} \
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/libudns.la ${DESTDIR}${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/dnsget ${DESTDIR}${PREFIX}/bin
