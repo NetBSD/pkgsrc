@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/01 02:41:22 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/28 08:29:34 adam Exp $
 
-# update to use libtool for portability
+Make use of libtool.
 
---- Makefile.in.orig	2007-01-15 22:19:08.000000000 +0100
+--- Makefile.in.orig	2010-12-27 17:35:02.000000000 +0000
 +++ Makefile.in
-@@ -34,7 +34,7 @@ DIST   = COPYING.LGPL udns.h udns.3 dnsg
+@@ -35,7 +35,7 @@ DIST   = COPYING.LGPL udns.h udns.3 dnsg
  
  OBJS   = $(SRCS:.c=.o) $(GEN:.c=.o)
  LIB    = lib$(NAME).a
 -LIBFL  = -L. -l$(NAME)
 +LIBFL  = lib$(NAME).la
  
- SOVER  = 0
  SOBJS  = $(OBJS:.o=.lo)
+ SOLIB  = lib$(NAME)_s.so
 @@ -63,10 +63,10 @@ all: static
  static: $(LIB) $(UTILS)
  staticlib: $(LIB)
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/08/01 02:41:22 schnoebe Exp $
  shared: $(SOLIBV) $(SOUTILS)
  sharedlib: $(SOLIBV)
 @@ -183,14 +183,14 @@ dnsget.o dnsget.lo: dnsget.c config.h ud
- rblcheck.o rblcheck.lo: rblcheck.c udns.h getopt.c
+ rblcheck.o rblcheck.lo: rblcheck.c config.h udns.h getopt.c
  ex-rdns.o ex-rdns.lo: ex-rdns.c udns.h
  dnsget: dnsget.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ dnsget.o $(LIBFL)
