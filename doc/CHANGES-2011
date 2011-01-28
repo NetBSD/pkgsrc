@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.198 2011/01/28 01:42:00 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.199 2011/01/28 01:50:55 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added games/warmux version 11.01 [adam 2011-01-27]
 	Updated textproc/py-feedparser to 5.0 [schmonz 2011-01-28]
 	Updated mail/rss2email to 2.70 [schmonz 2011-01-28]
+	Updated comms/asterisk18 to 1.8.2.3nb1 [jnemeth 2011-01-28]
