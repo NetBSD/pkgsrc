@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.4 2011/01/28 01:41:53 schmonz Exp $
+
+--- config.py.example.orig	2011-01-28 01:22:26.000000000 +0000
++++ config.py.example
+@@ -92,3 +92,14 @@ PROXY=""
+ # To most correctly encode emails with international characters, we iterate through the list below and use the first character set that works
+ # Eventually (and theoretically) ISO-8859-1 and UTF-8 are our catch-all failsafes
+ CHARSET_LIST='US-ASCII', 'BIG5', 'ISO-2022-JP', 'ISO-8859-1', 'UTF-8'
++
++## html2text options ##
++
++# Use Unicode characters instead of their ascii psuedo-replacements
++UNICODE_SNOB = 0
++
++# Put the links after each paragraph instead of at the end.
++LINKS_EACH_PARAGRAPH = 0
++
++# Wrap long lines at position. 0 for no wrapping. (Requires Python 2.3.)
++BODY_WIDTH = 0
