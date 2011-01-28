@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2010/11/09 07:33:10 adam Exp $
+# $NetBSD: Makefile,v 1.62 2011/01/28 13:35:49 adam Exp $
 
 DISTNAME=	jabberd-2.2.11
 CATEGORIES=	chat
@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+# XXX force linking against pthread, so some modules do not fail to dlopen()
+LDFLAGS+=	${PTHREAD_LDFLAGS}
+LIBS+=		${PTHREAD_LIBS}
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -83,13 +87,24 @@ post-extract:
 
 pre-configure:
 .for f in ${FILES}
-	sed	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
-		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
-		-e "s|@LOGDIR@|${JABBERD_LOGDIR}|g"			\
-		-e "s|@SSLCERTS@|${SSLCERTS}|g"				\
-		-e "s|@BINDIR@|${PREFIX}/bin|g"				\
-		-e "s|@DBDIR@|${JABBERD_DBDIR}|g"			\
+	sed	-e "s|@bindir@|${PREFIX}/bin|g"				\
+		-e "s|@jabberd_router_bin@|router|g"			\
+		-e "s|@jabberd_c2s_bin@|c2s|g"				\
+		-e "s|@jabberd_s2s_bin@|s2s|g"				\
+		-e "s|@jabberd_sm_bin@|sm|g"				\
+		-e "s|@localstatedir@/jabberd/db|${JABBERD_DBDIR}|g"	\
+		-e "s|@localstatedir@/jabberd/log|${JABBERD_LOGDIR}|g"	\
+		-e "s|@localstatedir@/jabberd/pid|${JABBERD_PIDDIR}|g"	\
+		-e "s|@localstatedir@/jabberd/run|${JABBERD_PIDDIR}|g"	\
+		-e "s|@localstatedir@/jabberd/stats|${JABBERD_LOGDIR}|g"\
+		-e "s|@localstatedir@/lib/jabberd2|${JABBERD_DBDIR}|g"	\
 		-e "s|@pkglibdir@|${PREFIX}/lib/jabberd|g"		\
+		-e "s|<cachain>@sysconfdir@|<cachain>${SSLCERTS}|g"	\
+		-e "s|<pemfile>@sysconfdir@|<pemfile>${SSLCERTS}|g"	\
+		-e "s|cachain='@sysconfdir@|cachain='${SSLCERTS}|g"	\
+		-e "s|pemfile='@sysconfdir@|pemfile='${SSLCERTS}|g"	\
+		-e "s|@sysconfdir@/templates|${PKG_SYSCONFDIR}|g"	\
+		-e "s|@sysconfdir@|${PKG_SYSCONFDIR}|g"			\
 		${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor
 
@@ -113,4 +128,6 @@ post-install:
 .include "../../net/udns/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
