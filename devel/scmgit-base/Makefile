@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2010/12/23 23:42:40 abs Exp $
-#
+# $NetBSD: Makefile,v 1.28 2011/01/28 08:11:30 adam Exp $
 
 .include "../../devel/scmgit/Makefile.common"
 
 PKGNAME=		scmgit-base-${GIT_VERSION}
-PKGREVISION=		1
 COMMENT=		GIT Tree History Storage Tool (base package)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -40,12 +38,11 @@ GIT_COREDIR=		git-core
 GIT_TEMPLATEDIR=	templates
 
 GIT_TEMPLATES=		description info/exclude
-GIT_TEMPLATES+=		hooks/applypatch-msg.sample hooks/commit-msg.sample 	\
-			hooks/post-commit.sample hooks/post-receive.sample	\
-			hooks/post-update.sample hooks/pre-applypatch.sample	\
-			hooks/pre-commit.sample hooks/pre-rebase.sample		\
-			hooks/prepare-commit-msg.sample hooks/update.sample
-GIT_TEMPLATES+=
+GIT_TEMPLATES+=		hooks/applypatch-msg.sample hooks/commit-msg.sample
+GIT_TEMPLATES+=		hooks/post-commit.sample hooks/post-receive.sample
+GIT_TEMPLATES+=		hooks/post-update.sample hooks/pre-applypatch.sample
+GIT_TEMPLATES+=		hooks/pre-commit.sample hooks/pre-rebase.sample
+GIT_TEMPLATES+=		hooks/prepare-commit-msg.sample hooks/update.sample
 
 # XXX unused as of now
 #GIT_CORE_EXECDIR=	libexec/${GIT_COREDIR}
@@ -60,7 +57,6 @@ REQD_FILES+=		${GIT_TEMPLATES:@.t.@\
 				${EGDIR}/${GIT_TEMPLATEDIR}/${.t.}\
 				${PREFIX}/${GIT_CORE_TEMPLATEDIR}/${.t.}\
 			@:M*}
-
 
 CONFIGURE_ENV+=		HOME=${PREFIX}
 CONFIGURE_ENV+=		gitexecdir=${GITCOREDIR}
