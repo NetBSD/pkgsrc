@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.197 2011/01/28 01:41:15 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.198 2011/01/28 01:42:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -329,3 +329,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed games/wormux successor games/warmux [adam 2011-01-27]
 	Added games/warmux version 11.01 [adam 2011-01-27]
 	Updated textproc/py-feedparser to 5.0 [schmonz 2011-01-28]
+	Updated mail/rss2email to 2.70 [schmonz 2011-01-28]
