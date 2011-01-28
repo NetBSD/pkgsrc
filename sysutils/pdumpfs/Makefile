@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/09/13 14:39:30 taca Exp $
+# $NetBSD: Makefile,v 1.11 2011/01/28 13:28:08 obache Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://0xcc.net/pdumpfs/
 
@@ -22,11 +22,11 @@ BUILD_TARGET=	pdumpfs
 
 REPLACE_RUBY=	pdumpfs.in
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${PKGMANDIR}/ja_JP.EUC/man8 \
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 ${PKGMANDIR}/ja_JP.EUC/man8 \
 			share/doc/pdumpfs
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pdumpfs ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/pdumpfs ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/man/man8/pdumpfs.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/man/ja/man8/pdumpfs.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man8
 	cd ${WRKSRC}/doc && \
