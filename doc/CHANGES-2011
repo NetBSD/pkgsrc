@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.211 2011/01/29 15:48:33 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.212 2011/01/29 16:32:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -346,3 +346,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/gnome-subtitles to 1.1 [obache 2011-01-29]
 	Added devel/py-mock version 0.7.0b4 [gdt 2011-01-29]
 	Updated net/py-foolscap to 0.6.1 [gdt 2011-01-29]
+	Updated graphics/vigra to 1.7.1 [adam 2011-01-29]
