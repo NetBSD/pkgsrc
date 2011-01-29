@@ -1,7 +1,18 @@
-$NetBSD: patch-ai,v 1.2 2010/11/09 07:09:59 spz Exp $
+$NetBSD: patch-ai,v 1.3 2011/01/29 17:16:33 spz Exp $
 
 --- resend.orig	2000-01-07 15:32:39.000000000 +0000
 +++ resend
+@@ -78,8 +78,8 @@ if (! defined($opt_l)) {
+   die("resend: must specify '-l list'");
+ }
+     
+-# Read and execute the .cf file
+-$cf = $opt_C || $opt_c || $ENV{"MAJORDOMO_CF"} || "/etc/majordomo.cf";
++# Read and execute the .cf file. For security reasons, let the environment win
++$cf = $ENV{"MAJORDOMO_CF"} || $opt_C || $opt_c || "/etc/majordomo.cf";
+ 
+ # Despite not having a place to send the remains of the body,
+ # it would be nice to send a message to root or postmaster, at least...
 @@ -92,6 +92,7 @@ require "$cf";
  
  chdir($homedir) || die("Can't chdir(\"$homedir\"): $!");
