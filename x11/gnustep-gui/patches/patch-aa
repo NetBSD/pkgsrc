@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2011/01/29 12:34:39 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2011/01/29 12:40:14 wiz Exp $
 
 Fix build with png-1.5.
+https://savannah.gnu.org/bugs/index.php?32290
 
 --- Source/NSBitmapImageRep+PNG.m.orig	2008-06-10 04:01:49.000000000 +0000
 +++ Source/NSBitmapImageRep+PNG.m
