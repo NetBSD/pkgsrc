@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2011/01/29 21:36:10 markd Exp $
+
+include <string.h> for strcmp()
+
+--- amarok/src/metadata/mp4/mp4properties.cpp.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/metadata/mp4/mp4properties.cpp
+@@ -23,6 +23,7 @@ email                : andrew.leadbetter
+ 
+ 
+ #include <tstring.h>
++#include <string.h>
+ 
+ #include <config.h>
+ #ifdef HAVE_SYSTEMS_H

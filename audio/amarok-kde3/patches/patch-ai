@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2011/01/29 21:36:10 markd Exp $
+
+fix build with gcc4.3
+
+--- amarok/src/metadata/mp4/mp4file.cpp.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/metadata/mp4/mp4file.cpp
+@@ -30,6 +30,7 @@ email                : aumuell@reserv.at
+ #include <audioproperties.h>
+ 
+ #include <stdint.h>
++#include <stdlib.h>
+ 
+ #define MP4V2_HAS_WRITE_BUG 1
+ 

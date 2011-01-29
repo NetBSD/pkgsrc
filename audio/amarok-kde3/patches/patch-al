@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 2011/01/29 21:36:10 markd Exp $
+
+fix build with gcc4.3
+
+--- amarok/src/metabundlesaver.cpp.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/metabundlesaver.cpp
+@@ -6,7 +6,7 @@
+ 
+ #include <stdlib.h>
+ #include <unistd.h>
+-#include <stdio.h>
++#include <cstdio>
+ #include <time.h>
+ #include <sys/time.h>
+ #include <sys/types.h>
