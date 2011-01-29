@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2011/01/29 21:48:41 markd Exp $
+
+fix build with gcc4.3
+
+--- ../src/dbxml/Buffer.cpp.orig	2003-05-09 00:01:43.000000000 +0000
++++ ../src/dbxml/Buffer.cpp
+@@ -13,6 +13,7 @@ static const char revid[] = "$Id: Buffer
+ 
+ #include <sstream>
+ #include <cassert>
++#include <cstring>
+ 
+ using namespace std;
+ using namespace DbXml;
