@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2010/10/03 12:53:47 obache Exp $
+$NetBSD: distinfo,v 1.8 2011/01/29 22:28:01 markd Exp $
 
 SHA1 (xlispstat-3-52-20.tar.gz) = a62c353ce136ba7111536457272fa20f82ae23e0
 RMD160 (xlispstat-3-52-20.tar.gz) = 834442693df99692c80efd6149315639329379c4
 Size (xlispstat-3-52-20.tar.gz) = 1527951 bytes
-SHA1 (patch-aa) = 8cbacc89c180aab353a0e1cd9e6c636998d4c9c1
+SHA1 (patch-aa) = 84eb15a37fadad963ed125e0bf0b2ff826a0937a
 SHA1 (patch-ac) = 0d7a966ad49e0c4b0173792f2c26262bec65312b
 SHA1 (patch-ad) = 832133137b104facbd90189e5dd163bb35ff9174
