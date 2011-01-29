@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10054 2011/01/28 13:20:44 wiz Exp $
+$NetBSD: TODO,v 1.10055 2011/01/29 09:09:49 obache Exp $
 
 Suggested new packages
 ======================
@@ -704,7 +704,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
 	o gnome-session-2.32.1 [GNOME 2.32, wants DeviceKit-power]
-	o gnome-subtitles-1.1
 	o gnome-system-monitor-2.28.2
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
 	o gnome-user-share-2.30.2 [GNOME 2.32]
