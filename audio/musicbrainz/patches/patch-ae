@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2011/01/29 21:05:00 markd Exp $
+
+include <cstring> for strncpy(), memset() etc
+
+--- lib/comsocket.h.orig	2006-11-14 16:34:49.000000000 +0000
++++ lib/comsocket.h
+@@ -34,6 +34,7 @@ ________________________________________
+ #define COMSOCKET_H
+ #include <stdio.h>
+ #include <string>
++#include <cstring>
+ 
+ #ifdef WIN32
+ #include <winsock.h>
