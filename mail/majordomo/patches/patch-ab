@@ -1,10 +1,30 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-ab,v 1.2 2011/01/29 17:16:33 spz Exp $
 
---- ./archive2.pl.orig	Wed Aug 27 09:07:44 1997
-+++ ./archive2.pl	Tue Jun  8 10:55:12 1999
-@@ -61,4 +61,5 @@
+--- archive2.pl.orig	2000-01-07 11:00:49.000000000 +0000
++++ archive2.pl
+@@ -47,19 +47,23 @@
+ # Change directory to our home
+ chdir($ENV{'HOME'}) if $ENV{'HOME'};
+  
+-# Read and execute the .cf file
+-$cf = $ENV{"MAJORDOMO_CF"} || "/etc/majordomo.cf";
++# Read and execute the .cf file. For security reasons, let the environment win
++$cf = "/etc/majordomo.cf";
+ if ($ARGV[0] eq "-C") {
+     $cf = $ARGV[1];
+     shift(@ARGV); 
+     shift(@ARGV); 
+ }
++if ($ENV{"MAJORDOMO_CF"}) {
++	$cf = $ENV{"MAJORDOMO_CF"};
++}
+ if (! -r $cf) {
+     die("$cf not readable; stopped");
+ }
+ require "$cf";
  
  # All these should be in the standard PERL library
 +unshift(@INC, $bindir);
  unshift(@INC, $homedir);
  require "ctime.pl";		# To get MoY definitions for month abbrevs
+ require "majordomo_version.pl";	# What version of Majordomo is this?
