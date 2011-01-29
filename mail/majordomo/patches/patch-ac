@@ -1,10 +1,33 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-ac,v 1.2 2011/01/29 19:39:14 spz Exp $
 
---- ./bounce-remind.orig	Mon Dec  9 09:49:46 1996
-+++ ./bounce-remind	Tue Jun  8 10:55:12 1999
-@@ -34,4 +34,5 @@
+avoid the wrapper + -C trap
+
+--- bounce-remind.orig	1996-12-09 16:49:46.000000000 +0000
++++ bounce-remind
+@@ -17,13 +17,16 @@
+ 
+ $main'program_name = 'mj_bounce-remind';
+ 
+-# Read and execute the .cf file
+-$cf = $ENV{"MAJORDOMO_CF"} || "/etc/majordomo.cf";
++# Read and execute the .cf file. For security reasons, let the environment win
++$cf = "/etc/majordomo.cf";
+ if ($ARGV[0] eq "-C") {
+     $cf = $ARGV[1];
+     shift(@ARGV);
+     shift(@ARGV);
+ }
++if ($ENV{"MAJORDOMO_CF"}) {
++	$cf = $ENV{"MAJORDOMO_CF"};
++}
+ if (! -r $cf) {
+     die("$cf not readable; stopped");
+ }
+@@ -33,6 +36,7 @@ require "$cf";
+ chdir("$homedir");
  
  # All these should be in the standard PERL library
 +unshift(@INC, $bindir);
  unshift(@INC, $homedir);
  
+ # Set these here so that they can be interploated on the $mailer command line.

@@ -1,6 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2010/11/10 07:51:37 spz Exp $
+$NetBSD: patch-ae,v 1.5 2011/01/29 19:39:14 spz Exp $
 
 bring up to perl 5.12 standard (this is old code)
+
+avoid the wrapper + -c trap
 
 --- digest.orig	2000-01-07 11:04:34.000000000 +0000
 +++ digest
@@ -104,7 +106,14 @@ bring up to perl 5.12 standard (this is old code)
  	$HOME = $ENV{"HOME"} || (getpwuid($>))[7];
  	chdir($HOME);
  	&getopt("drRmpc:Cl:z") ||
-@@ -328,6 +329,10 @@ sub readconfig {
+@@ -322,12 +323,15 @@ sub readconfig {
+ 		&abort("-C used without -l");
+ 	    } else {
+ 		# Read and execute the .cf file
+-		$cf = $opt_c || $ENV{"MAJORDOMO_CF"} || 
+-		    "/etc/majordomo.cf";
++		$cf = $ENV{"MAJORDOMO_CF"} || $opt_c || "/etc/majordomo.cf";
+ 		require "$cf";
  
  		chdir($homedir);
  
@@ -115,7 +124,7 @@ bring up to perl 5.12 standard (this is old code)
  		$opt_l =~ tr/A-Z/a-z/;
  
  	   	require "config_parse.pl";
-@@ -360,9 +365,9 @@ $bounce_mailer = "$sendmail_command -f\$
+@@ -360,9 +364,9 @@ $bounce_mailer = "$sendmail_command -f\$
  		    &get_config($listdir, $config_opts{$opt_l,"digest_rm_fronter"});
  		    $RMHEADER = $config_opts{$config_opts{$opt_l,"digest_rm_fronter"},
  		                           "message_fronter"};
@@ -128,7 +137,7 @@ bring up to perl 5.12 standard (this is old code)
  		}
  		if ($config_opts{$opt_l,"digest_rm_footer"}) {
  		    if ($config_opts{$opt_l,"digest_rm_footer"} ne 
-@@ -371,16 +376,16 @@ $bounce_mailer = "$sendmail_command -f\$
+@@ -371,16 +375,16 @@ $bounce_mailer = "$sendmail_command -f\$
  		    }
  		    $RMTRAILER = $config_opts{$config_opts{$opt_l,"digest_rm_footer"},
  		                           "message_footer"};
@@ -150,7 +159,7 @@ bring up to perl 5.12 standard (this is old code)
  		$VOLUME = $config_opts{$opt_l,"digest_volume"};
  		$NUMBER = $config_opts{$opt_l,"digest_issue"};
  		$Precedence = $config_opts{$opt_l,"precedence"};
-@@ -406,7 +411,7 @@ $bounce_mailer = "$sendmail_command -f\$
+@@ -406,7 +410,7 @@ $bounce_mailer = "$sendmail_command -f\$
  			$from = $V{'FROM'};
  			$HEADERS = &config'substitute_values (
  			$config_opts{$opt_l,"message_headers"}, $opt_l);
@@ -159,7 +168,7 @@ bring up to perl 5.12 standard (this is old code)
  		}
              } # list is defined
  	 } else { # not using -C 
-@@ -441,13 +446,13 @@ $bounce_mailer = "$sendmail_command -fma
+@@ -441,13 +445,13 @@ $bounce_mailer = "$sendmail_command -fma
  		&abort("$program_name: can't get lock '$lockfile'\n");
  	   $lock_set = 1;
  
