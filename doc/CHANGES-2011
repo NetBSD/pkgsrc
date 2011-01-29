@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.210 2011/01/29 15:00:44 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.211 2011/01/29 15:48:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -345,3 +345,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/pngcrush to 1.7.14 [adam 2011-01-28]
 	Updated textproc/gnome-subtitles to 1.1 [obache 2011-01-29]
 	Added devel/py-mock version 0.7.0b4 [gdt 2011-01-29]
+	Updated net/py-foolscap to 0.6.1 [gdt 2011-01-29]
