@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.209 2011/01/29 09:09:49 obache Exp $
+$NetBSD: CHANGES-2011,v 1.210 2011/01/29 15:00:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -344,3 +344,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ether2dns to 1.6 [is 2011-01-28]
 	Updated graphics/pngcrush to 1.7.14 [adam 2011-01-28]
 	Updated textproc/gnome-subtitles to 1.1 [obache 2011-01-29]
+	Added devel/py-mock version 0.7.0b4 [gdt 2011-01-29]
