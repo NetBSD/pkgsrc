@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.3 2011/01/29 11:09:44 wiz Exp $
+
+Fix build with png-1.5.
+
+--- libmb/mbpixbuf.c.orig	2006-07-26 19:12:25.000000000 +0000
++++ libmb/mbpixbuf.c
+@@ -247,7 +247,7 @@ _load_png_file( const char *file, 
+     return NULL;
+   }
+ 
+-  if ( setjmp( png_ptr->jmpbuf ) ) {
++  if ( setjmp( png_jmpbuf( png_ptr ) ) ) {
+     png_destroy_read_struct( &png_ptr, &info_ptr, NULL);
+     fclose(fd);
+     return NULL;
+@@ -269,8 +269,8 @@ _load_png_file( const char *file, 
+       ( color_type == PNG_COLOR_TYPE_GRAY_ALPHA ))
+     png_set_gray_to_rgb(png_ptr);
+  
+-  if ( info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA 
+-       || info_ptr->color_type == PNG_COLOR_TYPE_GRAY_ALPHA
++  if ( png_get_color_type( png_ptr, info_ptr ) == PNG_COLOR_TYPE_RGB_ALPHA 
++       || png_get_color_type ( png_ptr, info_ptr ) == PNG_COLOR_TYPE_GRAY_ALPHA
+        )
+     *has_alpha = 1;
+   else
