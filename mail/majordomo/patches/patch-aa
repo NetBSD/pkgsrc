@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/10/30 23:48:36 spz Exp $
+$NetBSD: patch-aa,v 1.6 2011/01/29 17:16:33 spz Exp $
 
 warp the Makefile template to fit into pkgsrc
 
@@ -40,15 +40,17 @@ warp the Makefile template to fit into pkgsrc
  EXEC_MODE = 755
  HOME_MODE = 751
  
-@@ -41,7 +43,7 @@ HOME_MODE = 751
+@@ -41,8 +43,8 @@ HOME_MODE = 751
  # BSDI or other 4.4-based BSD, Linux) use the following four lines.  Do not
  # change these values!
  WRAPPER_OWNER = root
 -WRAPPER_GROUP = $(W_GROUP)
+-WRAPPER_MODE = 4755
 +WRAPPER_GROUP = $(W_MAJORDOMO_GROUP)
- WRAPPER_MODE = 4755
++WRAPPER_MODE = 4555
  POSIX = -DPOSIX_UID=$(W_USER) -DPOSIX_GID=$(W_GROUP)
  # Otherwise, if your system is NOT POSIX (e.g. SunOS 4.x, SGI Irix 4,
+ # HP DomainOS) then comment out the above four lines and uncomment
 @@ -62,11 +64,14 @@ POSIX = -DPOSIX_UID=$(W_USER) -DPOSIX_GI
  # parent process, and without the leading "W_" in the variable names) gets
  # passed to processes run by "wrapper"
@@ -83,7 +85,7 @@ warp the Makefile template to fit into pkgsrc
  		shlock.pl config-test archive2.pl digest
  
 -INSTALL_FLAGS = -O $(W_USER) -g $(W_GROUP)
-+INSTALL_FLAGS = -O $(W_MAJORDOMO_USER) -g $(W_MAJORDOMO_GROUP)
++INSTALL_FLAGS = -O root -g $(W_MAJORDOMO_GROUP)
  
  default: 
  	@echo "make what?"
