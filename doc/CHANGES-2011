@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.208 2011/01/28 20:47:46 adam Exp $
+$NetBSD: CHANGES-2011,v 1.209 2011/01/29 09:09:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -343,3 +343,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/pdumpfs to 1.3nb3 [obache 2011-01-28]
 	Updated net/ether2dns to 1.6 [is 2011-01-28]
 	Updated graphics/pngcrush to 1.7.14 [adam 2011-01-28]
+	Updated textproc/gnome-subtitles to 1.1 [obache 2011-01-29]
