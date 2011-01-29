@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.5 2011/01/29 17:16:33 spz Exp $
+$NetBSD: patch-af,v 1.6 2011/01/29 19:39:14 spz Exp $
+
+avoid the wrapper + -C trap
 
 --- majordomo.orig	2000-01-13 17:29:31.000000000 +0000
 +++ majordomo
@@ -8,7 +10,7 @@ $NetBSD: patch-af,v 1.5 2011/01/29 17:16:33 spz Exp $
  
 -# Read and execute the .cf file
 -$cf = $ENV{"MAJORDOMO_CF"} || "/etc/majordomo.cf"; 
-+# Read and execute the .cf file. for security reasons, make the env value win
++# Read and execute the .cf file. For security reasons, make the env value win
 +# (the wrapper will set the env value and setuid to majordomo. If you want
 +# to test a config and are properly authorized, su to the majordomo user
 +# and don't use the wrapper
