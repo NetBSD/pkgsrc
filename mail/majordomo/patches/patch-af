@@ -1,8 +1,34 @@
-$NetBSD: patch-af,v 1.4 2010/10/30 23:48:36 spz Exp $
+$NetBSD: patch-af,v 1.5 2011/01/29 17:16:33 spz Exp $
 
---- majordomo.orig	Sat Nov 27 17:28:39 1999
-+++ majordomo	Sat Nov 27 17:29:16 1999
-@@ -58,6 +58,7 @@
+--- majordomo.orig	2000-01-13 17:29:31.000000000 +0000
++++ majordomo
+@@ -24,8 +24,11 @@
+ # The mj_ prefix is reserved for tools that are part of majordomo proper.
+ $main'program_name = 'mj_majordomo';#';
+ 
+-# Read and execute the .cf file
+-$cf = $ENV{"MAJORDOMO_CF"} || "/etc/majordomo.cf"; 
++# Read and execute the .cf file. for security reasons, make the env value win
++# (the wrapper will set the env value and setuid to majordomo. If you want
++# to test a config and are properly authorized, su to the majordomo user
++# and don't use the wrapper
++$cf = "/etc/majordomo.cf"; 
+ 
+ while ($ARGV[0]) {	# parse for config file or default list
+     if ($ARGV[0] =~ /^-C$/i) {	# sendmail v8 clobbers case
+@@ -40,6 +43,11 @@ while ($ARGV[0]) {	# parse for config fi
+ 	die "Unknown argument $ARGV[0]\n";
+     }
+ }
++
++if ($ENV{"MAJORDOMO_CF"}) {
++	$cf = $ENV{"MAJORDOMO_CF"}; 
++}
++
+ if (! -r $cf) {
+     die("$cf not readable; stopped");
+ }
+@@ -58,6 +66,7 @@ if (! -t STDERR) {
  print STDERR "$0: starting\n" if $DEBUG;
  
  # All these should be in the standard PERL library
@@ -10,7 +36,7 @@ $NetBSD: patch-af,v 1.4 2010/10/30 23:48:36 spz Exp $
  unshift(@INC, $homedir);
  require "ctime.pl";		# To get MoY definitions for month abbrevs
  require "majordomo_version.pl";	# What version of Majordomo is this?
-@@ -1138,7 +1139,7 @@
+@@ -1095,7 +1104,7 @@ sub do_mkdigest { 
  	# The password is valid, so run digest
  
      	    open(DIGEST, 

@@ -1,10 +1,32 @@
-$NetBSD: patch-ag,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-ag,v 1.2 2011/01/29 17:16:33 spz Exp $
 
---- ./medit.orig	Mon Apr 28 12:38:05 1997
-+++ ./medit	Tue Jun  8 10:55:13 1999
-@@ -30,4 +30,5 @@
+--- medit.orig	1997-04-28 18:38:05.000000000 +0000
++++ medit
+@@ -16,19 +16,25 @@
+ # set our path explicitly
+ $ENV{'PATH'} = "/bin:/usr/bin:/usr/ucb";
+ 
+-# Read and execute the .cf file
+-$cf = $ENV{"MAJORDOMO_CF"} || "/etc/majordomo.cf";
++# Read and execute the .cf file. Let the environment variable win
++$cf = "/etc/majordomo.cf";
+ if ($ARGV[0] eq "-C") {
+     $cf = $ARGV[1];
+     shift(@ARGV); 
+     shift(@ARGV); 
+ }
++
++if ($ENV{"MAJORDOMO_CF"}) {
++        $cf = $ENV{"MAJORDOMO_CF"};
++}
++
+ if (! -r $cf) {
+     die("$cf not readable; stopped");
+ }
+ require "$cf";
  
  # All these should be in the standard PERL library
 +unshift(@INC, $bindir);
  unshift(@INC, $homedir);
  require "shlock.pl";		# NNTP-style file locking
+ require "majordomo.pl";

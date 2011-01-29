@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2010/11/10 07:51:36 spz Exp $
+# $NetBSD: Makefile,v 1.41 2011/01/29 17:16:33 spz Exp $
 
 DISTNAME=		majordomo-1.94.5
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.sgi.com/other/majordomo/1.94.5/ \
 			ftp://ftp-europe.sgi.com/other/majordomo/1.94.5/
@@ -71,15 +71,15 @@ USERGROUP_PHASE=	configure
 PKG_GROUPS=		${MAJORDOMO_GROUP}
 PKG_USERS=		${MAJORDOMO_USER}:${MAJORDOMO_GROUP}
 OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}		\
-			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0755
 OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}/archives	\
-			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0755
 OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}/digests	\
-			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0755
 OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}/lists	\
-			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0755
 OWN_DIRS_PERMS+=	${MAJORDOMO_TMPDIR}		\
-			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0755
 
 CONFIGURE_SED=		-e "s|@PREFIX@|${PREFIX}|g"			\
 			-e "s|@PERL@|${PERL5}|g"			\
@@ -126,28 +126,28 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Doc/${file} ${DESTDIR}${DOCDIR}/${file}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/post-install-notes ${DESTDIR}${DOCDIR}/post-install-notes
-	${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL} -d -m 755 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${DESTDIR}${EXAMPLEDIR}
 .for dir in ${EXDIRS}
-	${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${DESTDIR}${EXAMPLEDIR}/${dir}
+	${INSTALL} -d -m 755 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${DESTDIR}${EXAMPLEDIR}/${dir}
 .endfor
-	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
-		${WRKSRC}/aliases.majordomo ${DESTDIR}${EXAMPLEDIR}/aliases.majordomo
-	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL_DATA} ${WRKSRC}/aliases.majordomo \
+		${DESTDIR}${EXAMPLEDIR}/aliases.majordomo
+	${INSTALL} -m 644 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${FILESDIR}/keep_me ${DESTDIR}${EXAMPLEDIR}/archives/example-l/.keep_me
-	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL} -m 644 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${FILESDIR}/keep_me ${DESTDIR}${EXAMPLEDIR}/digests/example-l-digest/.keep_me
 .for file in ${EXFILES}
-	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL} -m 644 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${FILESDIR}/${file} ${DESTDIR}${EXAMPLEDIR}/lists/${file}
 .endfor
 .for file in ${EXLISTS}
-	${INSTALL} -m 664 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL} -m 644 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		/dev/null ${DESTDIR}${EXAMPLEDIR}/lists/${file}
 .endfor
 	${LN} -sf example-l.info ${DESTDIR}${EXAMPLEDIR}/lists/example-l-digest.info
 	${LN} -sf example-l.passwd ${DESTDIR}${EXAMPLEDIR}/lists/example-l-digest.passwd
-	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
-		${WRKSRC}/majordomo.cf ${DESTDIR}${EXAMPLEDIR}/majordomo.cf
+	${INSTALL_DATA} ${WRKSRC}/majordomo.cf \
+		${DESTDIR}${EXAMPLEDIR}/majordomo.cf
 
 # verify installation; requires interaction
 test: install
