@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/23 21:45:52 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/29 15:46:58 gdt Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -52,9 +52,6 @@ ${PYSITELIB}/foolscap/copyable.pyo
 ${PYSITELIB}/foolscap/crypto.py
 ${PYSITELIB}/foolscap/crypto.pyc
 ${PYSITELIB}/foolscap/crypto.pyo
-${PYSITELIB}/foolscap/deprecated.py
-${PYSITELIB}/foolscap/deprecated.pyc
-${PYSITELIB}/foolscap/deprecated.pyo
 ${PYSITELIB}/foolscap/eventual.py
 ${PYSITELIB}/foolscap/eventual.pyc
 ${PYSITELIB}/foolscap/eventual.pyo
