@@ -1,17 +1,32 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-ad,v 1.2 2011/01/29 19:39:14 spz Exp $
 
---- ./config-test.orig	Wed Aug 27 09:17:13 1997
-+++ ./config-test	Tue Jun  8 10:55:12 1999
-@@ -126,4 +126,5 @@
+avoid the wrapper + -C trap
+
+--- config-test.orig	1997-08-27 15:17:13.000000000 +0000
++++ config-test
+@@ -117,7 +117,7 @@ wellokay
+ print "\n\tNon obvious things that cause headaches:\n\n";
+ &header('');
+ 
+-$cf = $ARGV[0] || $ENV{'MAJORDOMO_CF'};
++$cf = $ENV{'MAJORDOMO_CF'};
+ 
+ if (eval "require '$cf'") { 
+     &good("'require'd $cf okay.");    
+@@ -125,6 +125,7 @@ if (eval "require '$cf'") { 
+     &bad("something's wrong with $cf: $@");
  }
  
 +unshift(@INC, $bindir);
  foreach (@requires) {
      if (require $_) {
-@@ -287,5 +288,5 @@
+ 	&good("found $_ okay.");
+@@ -286,7 +287,7 @@ print "Checking to see if there are new 
+ print "your majordomo.cf file...";
  
  open($cf, $cf) || &bad("Couldn't open $cf for reading, $!");
 -open(S, 'sample.cf') || &bad("Couldn't open sample.cf for reading, $!");
 +open(S, "$bindir/sample.cf") || &bad("Couldn't open $bindir/sample.cf for reading, $!");
  
  while (<S>) {
+     next unless /^\s*(\$\w+(('|::)\w+)*)/;
