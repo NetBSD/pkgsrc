@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2011/01/29 22:39:27 markd Exp $
+
+Fix build with gcc4.5
+
+--- digikam/utilities/imageeditor/editor/imageiface.cpp.orig	2009-07-03 05:19:41.000000000 +0000
++++ digikam/utilities/imageeditor/editor/imageiface.cpp
+@@ -140,7 +140,7 @@ DColor ImageIface::getColorInfoFromTarge
+     if ( d->targetPreviewImage.isNull() || point.x() > previewWidth() || point.y() > previewHeight() )
+     {
+         DWarning() << k_funcinfo << "Coordinate out of range or no image data available!" << endl;
+-        return DColor::DColor();
++        return DColor();
+     }
+ 
+     return d->targetPreviewImage.getPixelColor(point.x(), point.y());

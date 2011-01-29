@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 2011/01/29 22:39:27 markd Exp $
+
+Fix build with gcc4.5
+
+--- digikam/imageplugins/border/bordertool.cpp.orig	2009-07-03 05:19:41.000000000 +0000
++++ digikam/imageplugins/border/bordertool.cpp
+@@ -144,9 +144,9 @@ BorderTool::BorderTool(QObject* parent)
+     // -------------------------------------------------------------------
+ 
+     m_labelForeground   = new QLabel(m_gboxSettings->plainPage());
+-    m_firstColorButton  = new KColorButton( QColor::QColor( 192, 192, 192 ), m_gboxSettings->plainPage() );
++    m_firstColorButton  = new KColorButton( QColor( 192, 192, 192 ), m_gboxSettings->plainPage() );
+     m_labelBackground   = new QLabel(m_gboxSettings->plainPage());
+-    m_secondColorButton = new KColorButton( QColor::QColor( 128, 128, 128 ), m_gboxSettings->plainPage() );
++    m_secondColorButton = new KColorButton( QColor( 128, 128, 128 ), m_gboxSettings->plainPage() );
+ 
+     // -------------------------------------------------------------------
+ 
