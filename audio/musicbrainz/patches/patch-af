@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2011/01/29 21:05:00 markd Exp $
+
+include <cstring> for strncpy(), memset() etc
+
+--- lib/comhttpsocket.h.orig	2006-11-14 16:34:49.000000000 +0000
++++ lib/comhttpsocket.h
+@@ -11,6 +11,7 @@
+ #define MBCOMHTTPSocket_H
+ #include <stdio.h>
+ #include <string>
++#include <cstring>
+ 
+ using namespace std;
+ 

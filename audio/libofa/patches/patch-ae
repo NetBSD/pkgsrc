@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2011/01/29 21:09:09 markd Exp $
+
+build with gcc4.3
+
+--- examples/example.cpp.orig	2006-05-10 18:05:37.000000000 +0000
++++ examples/example.cpp
+@@ -9,6 +9,9 @@
+ 
+ #include "protocol.h"
+ 
++#include <cstring>
++#include <cstdio>
++
+ AudioData* loadWaveFile(char *file);
+ AudioData* loadDataUsingLAME(char *file);
+ 

@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2011/01/29 21:09:09 markd Exp $
+
+build with gcc4.3
+
+--- examples/protocol.cpp.orig	2006-05-10 18:05:42.000000000 +0000
++++ examples/protocol.cpp
+@@ -9,6 +9,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string>
++#include <cstring>
+ #include <map>
+ #include <expat.h>
+ #include <curl/curl.h>

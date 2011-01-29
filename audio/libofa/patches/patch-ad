@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2011/01/29 21:09:09 markd Exp $
+
+build with gcc4.3
+
+--- lib/signal_op.cpp.orig	2006-05-10 18:01:12.000000000 +0000
++++ lib/signal_op.cpp
+@@ -12,6 +12,7 @@
+ // DATE CREATED: 1/12/06
+ 
+ 
++#include <cstdlib>
+ #include <math.h>
+ #include "signal_op.h"
+ #include "AFLIB/aflibConverter.h"
