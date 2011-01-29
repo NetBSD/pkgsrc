@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2011/01/29 21:15:11 markd Exp $
+
+fix build with gcc4.3
+
+--- lib/protocol.cpp.orig	2006-11-28 20:25:04.000000000 +0000
++++ lib/protocol.cpp
+@@ -8,6 +8,7 @@
+ -------------------------------------------------------------------*/
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <string>
+ #include <map>
+ #include <expat.h>
