@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/01/13 13:40:07 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2011/01/29 14:17:33 wiz Exp $
 #
 
 DISTNAME=		XaoS-3.4
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xaos/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xaos.sourceforge.net/
 COMMENT=		Zoomable fractal rendering doodad
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
