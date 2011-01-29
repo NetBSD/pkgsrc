@@ -1,8 +1,25 @@
-$NetBSD: patch-ae,v 1.1.1.1 2007/02/09 19:57:48 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2011/01/29 21:00:45 markd Exp $
 
---- include/mpeg4ip.h.orig	2006-06-08 12:22:14.000000000 +0900
-+++ include/mpeg4ip.h	2006-06-08 12:23:04.000000000 +0900
-@@ -233,7 +233,8 @@
+let <string.h> declare strcasestr() correctly
+
+--- include/mpeg4ip.h.orig	2006-08-07 18:27:00.000000000 +0000
++++ include/mpeg4ip.h
+@@ -120,14 +120,6 @@
+ #endif
+ #include <sys/param.h>
+ 
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-char *strcasestr(const char *haystack, const char *needle);
+-#ifdef __cplusplus
+-}
+-#endif
+-
+ #define OPEN_RDWR O_RDWR
+ #define OPEN_CREAT O_CREAT 
+ #define OPEN_RDONLY O_RDONLY
+@@ -233,7 +225,8 @@ char *strsep(char **strp, const char *de
  
  #define ADV_SPACE(a) {while (isspace(*(a)) && (*(a) != '\0'))(a)++;}
  
