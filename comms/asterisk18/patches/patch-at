@@ -1,4 +1,6 @@
-$NetBSD: patch-at,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+$NetBSD: patch-at,v 1.2 2011/01/29 22:50:32 jnemeth Exp $
+
+# Reported upstream as https://issues.asterisk.org/view.php?id=18705
 
 --- utils/extconf.c.orig	2010-06-10 08:15:45.000000000 +0000
 +++ utils/extconf.c
