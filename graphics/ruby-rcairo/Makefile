@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/01/13 13:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2011/01/29 11:58:04 obache Exp $
 
 DISTNAME=		rcairo-1.10.0
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		pkg-config
 
 USE_RUBY_EXTCONF=	yes
-RUBY_HAS_ARCHILIB=	yes
 
 #do-test:
 #	${RUN} cd ${WRKSRC}; \
