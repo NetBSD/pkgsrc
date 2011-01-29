@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/10/23 13:08:56 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/29 22:31:36 markd Exp $
 #
 
 DISTNAME=	libtrace-3.0.7
@@ -25,6 +25,8 @@ CONFIGURE_ENV+=	libtrace_doxygen='false'
 CONFIGURE_ENV+=	ac_cv_have_decl_BIOCSETIF=no
 CFLAGS+=	-DHAVE_VSNPRINTF
 .endif
+
+CFLAGS.Linux+=	-DHAVE_VSNPRINTF
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
