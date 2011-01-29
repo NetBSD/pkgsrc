@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/02/04 01:57:26 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2011/01/29 17:16:33 spz Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -28,9 +28,9 @@ DIST_SUBDIR=	distribute
 PATCH_DIST_STRIP=	-p1
 
 # customize below if you would like to
-# mail/majordomo likes this
-MAJORDOMO_DIR=		/home/majordom
-MAJORDOMO_LIST_DIR=	${MAJORDOMO_DIR}/lists
+# this needs to be the same as majordomo uses
+MAJORDOMO_HOMEDIR?=	${VARBASE}/majordomo
+MAJORDOMO_LIST_DIR=	${MAJORDOMO_HOMEDIR}/lists
 # just as example, you may disagree with these
 MAILINGLIST_DIR=	/var/mail-list
 ARCHIVE_DIR=		/var/spool/mail-list
