@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2011/01/29 11:32:19 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2011/01/29 16:55:13 wiz Exp $
 
 Fix build with png-1.5.
+Fed back upstream, will be included in 1.6.42.
 
 --- src/fxpngio.cpp.orig	2006-01-22 17:58:54.000000000 +0000
 +++ src/fxpngio.cpp
