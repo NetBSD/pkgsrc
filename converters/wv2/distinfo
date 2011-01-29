@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2006/06/18 19:38:50 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/01/29 22:11:54 markd Exp $
 
 SHA1 (wv2-0.2.3.tar.bz2) = 8378f43806bc2614ccea2b265159ce0548192601
 RMD160 (wv2-0.2.3.tar.bz2) = 0534ddb23ec5a6e222cbbc76e695f8ea5cf532c7
 Size (wv2-0.2.3.tar.bz2) = 908983 bytes
 SHA1 (patch-aa) = 38ba31ab9a1b3411ebcd6de7f1152da09f5312b6
+SHA1 (patch-ab) = 9ce1fa495008df7fcf9b4ae6cf02bd2e651aa9cb
