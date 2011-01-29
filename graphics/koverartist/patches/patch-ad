@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2011/01/29 21:52:52 markd Exp $
+
+fix build with gcc4.3
+
+--- src/cddbquery.cpp.orig	2006-11-01 10:42:59.000000000 +0000
++++ src/cddbquery.cpp
+@@ -34,6 +34,7 @@
+ #include <iostream>
+ #include <errno.h>
+ #include <string.h>
++#include <cstdlib>
+ 
+ 
+ 

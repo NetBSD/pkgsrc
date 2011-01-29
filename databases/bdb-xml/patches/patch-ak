@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 2011/01/29 21:48:41 markd Exp $
+
+fix build with gcc4.3
+
+--- ../src/dbxml/XmlException.cpp.orig	2003-05-09 00:01:57.000000000 +0000
++++ ../src/dbxml/XmlException.cpp
+@@ -15,6 +15,8 @@ static const char revid[] = "$Id: XmlExc
+ 
+ #include <string>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ using namespace DbXml;
+ 

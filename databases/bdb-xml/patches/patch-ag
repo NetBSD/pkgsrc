@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2011/01/29 21:48:41 markd Exp $
+
+fix build with gcc4.3
+
+--- ../lib/antlr/lib/cpp/src/Parser.cpp.orig	2003-04-11 02:04:08.000000000 +0000
++++ ../lib/antlr/lib/cpp/src/Parser.cpp
+@@ -12,6 +12,7 @@
+ #include "antlr/MismatchedTokenException.hpp"
+ //#include "antlr/ASTFactory.hpp"
+ #include <iostream>
++#include <cstdlib>
+ 
+ #ifdef ANTLR_CXX_SUPPORTS_NAMESPACE
+ namespace antlr {
