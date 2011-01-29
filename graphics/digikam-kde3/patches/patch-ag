@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1 2011/01/29 22:39:27 markd Exp $
+
+Fix build with gcc4.5
+
+--- digikam/imageplugins/superimpose/dirselectwidget.cpp.orig	2009-07-03 05:19:41.000000000 +0000
++++ digikam/imageplugins/superimpose/dirselectwidget.cpp
+@@ -61,7 +61,7 @@ DirSelectWidget::DirSelectWidget(QWidget
+     if ( headerLabel.isNull() )
+         header()->hide();
+         
+-    setAlternateBackground(QColor::QColor());
++    setAlternateBackground(QColor());
+ }
+ 
+ DirSelectWidget::DirSelectWidget(KURL rootUrl, KURL currentUrl, 
+@@ -75,7 +75,7 @@ DirSelectWidget::DirSelectWidget(KURL ro
+     if ( headerLabel.isNull() )
+         header()->hide();
+         
+-    setAlternateBackground(QColor::QColor());
++    setAlternateBackground(QColor());
+     setRootPath(rootUrl, currentUrl);
+ }
+ 
