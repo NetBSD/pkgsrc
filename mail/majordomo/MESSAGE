@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2010/10/30 23:48:35 spz Exp $
+$NetBSD: MESSAGE,v 1.7 2011/01/29 17:16:33 spz Exp $
 
 Before you can use Majordomo, you will need to complete a few steps
 manually:
@@ -53,6 +53,14 @@ manually:
 
 	- add entries in /etc/newsyslog.conf to rotate the log in
 	  ${HOME}/Log if necessary.
+
++++++++++++++++++++++++++++ UPDATERS NOTICE +++++++++++++++++++++++++++++++
+
+for resend, archive, request-answer and medit, the environment setting for
+majordomo.cf now overrides the value given on the command line with -C;
+this is a cheap (and ugly) fix for a vulnerability. Since that environment
+variable is compiled into the wrapper program, the listed perl programs
+will be locked to ${MAJORDOMO_CF} when started via the wrapper.
 
 Enjoy Majordomo!
 ===========================================================================
