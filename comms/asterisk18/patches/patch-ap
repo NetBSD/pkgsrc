@@ -1,4 +1,6 @@
-$NetBSD: patch-ap,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+$NetBSD: patch-ap,v 1.2 2011/01/29 22:50:32 jnemeth Exp $
+
+# Reported upstream as https://issues.asterisk.org/view.php?id=18705
 
 --- configure.ac.orig	2010-11-09 20:33:05.000000000 +0000
 +++ configure.ac
