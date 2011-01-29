@@ -1,7 +1,17 @@
-$NetBSD: patch-ae,v 1.4 2009/11/22 21:05:18 drochner Exp $
+$NetBSD: patch-ae,v 1.5 2011/01/29 20:48:07 markd Exp $
+
+Fix building with GLIBC 2.12 gentoo bug #332237
 
 --- dao/ScsiIf-linux.cc.orig	2009-09-28 12:12:03.000000000 +0200
 +++ dao/ScsiIf-linux.cc
+@@ -30,6 +30,7 @@
+ #include <asm/param.h>
+ #include <scsi/scsi.h>
+ #include <scsi/sg.h>
++#include <sys/stat.h>
+ 
+ #include "ScsiIf.h"
+ #include "sg_err.h"
 @@ -269,6 +269,12 @@ int ScsiIf::inquiry()
      for (i = 3; i >= 0 && revision_[i] == ' '; i--) {
  	revision_[i] = 0;
