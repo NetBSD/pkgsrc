@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1 2011/01/29 21:36:10 markd Exp $
+
+fix build with gcc4.3
+
+--- amarok/src/metadata/wav/wavfile.h.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/metadata/wav/wavfile.h
+@@ -28,6 +28,7 @@
+ 
+ #include <taglib/tfile.h>
+ #include "wavproperties.h"
++#include <cstdio>
+ 
+ namespace TagLib { 
+ 

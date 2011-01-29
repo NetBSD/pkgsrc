@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2011/01/29 21:36:10 markd Exp $
+
+fix build with gcc4.5
+
+--- amarok/src/osd.h.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/osd.h
+@@ -37,7 +37,7 @@ class OSDWidget : public QWidget
+ 
+       public slots:
+         /** calls setText() then show(), after setting image if needed */
+-        void show( const QString &text, QImage newImage = QImage::QImage() );
++        void show( const QString &text, QImage newImage = QImage() );
+         void ratingChanged( const short rating );
+         void ratingChanged( const QString& path, int rating );
+         void volChanged( unsigned char volume );
