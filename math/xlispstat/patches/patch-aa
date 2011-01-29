@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/10/03 12:53:47 obache Exp $
+$NetBSD: patch-aa,v 1.6 2011/01/29 22:28:02 markd Exp $
 
 --- lowess.c.orig	2000-11-25 00:17:38.000000000 +0100
 +++ lowess.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.5 2010/10/03 12:53:47 obache Exp $
  /* forward declarations */
  static double pow2 P1H(double);
  static double pow3 P1H(double x);
-+#if !(defined(__DragonFly__) && __DragonFly_version >= 200204) && !(defined(__NetBSD__) && (__NetBSD_Version__ >= 599002100 || (__NetBSD_Version__ >= 501000000 && __NetBSD_Version__ < 599000000)))
++#if !(defined(__DragonFly__) && __DragonFly_version >= 200204) && !(defined(__NetBSD__) && (__NetBSD_Version__ >= 599002100 || (__NetBSD_Version__ >= 501000000 && __NetBSD_Version__ < 599000000))) && !defined(__linux__)
  static double fmax P2H(double, double);
 +#endif
  static VOID sort P2H(double *, int);
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2010/10/03 12:53:47 obache Exp $
  
  static double pow2 P1C(double, x) { return(x * x); }
  static double pow3 P1C(double, x) { return(x * x * x); }
-+#if !(defined(__DragonFly__) && __DragonFly_version >= 200204) && !(defined(__NetBSD__) && (__NetBSD_Version__ >= 599002100 || (__NetBSD_Version__ >= 501000000 && __NetBSD_Version__ < 599000000)))
++#if !(defined(__DragonFly__) && __DragonFly_version >= 200204) && !(defined(__NetBSD__) && (__NetBSD_Version__ >= 599002100 || (__NetBSD_Version__ >= 501000000 && __NetBSD_Version__ < 599000000))) && !defined(__linux__)
  static double fmax P2C(double, x, double, y) { return (x > y ? x : y); }
 +#endif
  
