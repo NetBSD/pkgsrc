@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2009/07/17 18:26:30 hasso Exp $
+$NetBSD: distinfo,v 1.9 2011/01/29 21:48:41 markd Exp $
 
 SHA1 (dbxml-1.2.1.tar.gz) = cc6ce354b3fb2e00d5b424c0b15ecee4ec340842
 RMD160 (dbxml-1.2.1.tar.gz) = 162f3e14e509aefd764bb97af80d5bbf06151df7
@@ -8,3 +8,9 @@ SHA1 (patch-ab) = 4e124704238d4d3c6fc753d28ce3cb0bd5e3731f
 SHA1 (patch-ac) = b19ca080112614634660a8d77303bbdc0a4b7adc
 SHA1 (patch-ad) = dfbfa3fe27f8da99b35964223a754f8223a5b7e9
 SHA1 (patch-ae) = 75a640c3d00541891ff46096096d434d37c28669
+SHA1 (patch-af) = 57894e4e5735d13e660e363e03584b47aa3db542
+SHA1 (patch-ag) = 9353901e470ae6ba793218ae1f782cadb05c02d9
+SHA1 (patch-ah) = 12472b2fc40b348c7e98c9d0f094ee731486fa82
+SHA1 (patch-ai) = 51c28a08a59f2b7348e7f9a37fb91c6a321198f7
+SHA1 (patch-aj) = 1e28fe0c1df2e86362438883aded7ac5691d3226
+SHA1 (patch-ak) = 27c90d33fcaedb91615bce884eed353ee8419963
