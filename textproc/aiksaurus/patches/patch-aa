@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2011/01/29 20:51:34 markd Exp $
+
+Fix build with gcc 4.3
+
+--- base/aiksaurus.t.cpp.orig	2003-06-27 01:44:38.000000000 +0000
++++ base/aiksaurus.t.cpp
+@@ -22,6 +22,7 @@
+ #include "Aiksaurus.h"
+ #include "AsciiCompare.h"
+ #include "config.h"
++#include <cstdlib>
+ #include <iostream>
+ #include <string>
+ using namespace std;
