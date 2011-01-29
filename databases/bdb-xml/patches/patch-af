@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 2011/01/29 21:48:41 markd Exp $
+
+fix build with gcc4.3
+
+--- ../lib/antlr/lib/cpp/antlr/CharScanner.hpp.orig	2003-04-11 02:04:00.000000000 +0000
++++ ../lib/antlr/lib/cpp/antlr/CharScanner.hpp
+@@ -17,6 +17,9 @@
+ #else
+ #include <cctype>
+ #endif
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
+ 
+ #include <antlr/TokenStream.hpp>
+ #include <antlr/RecognitionException.hpp>
