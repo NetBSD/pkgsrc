@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2011/01/29 21:36:10 markd Exp $
+
+fix build with gcc4.3
+
+--- amarok/src/metadata/mp4/mp4tag.cpp.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/metadata/mp4/mp4tag.cpp
+@@ -24,6 +24,7 @@ email                : andrew.leadbetter
+ 
+ #include <tag.h>
+ #include <stdint.h>
++#include <stdlib.h>
+ 
+ using namespace TagLib;
+ 

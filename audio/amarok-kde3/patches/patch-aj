@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2011/01/29 21:36:10 markd Exp $
+
+fix build with gcc4.3
+
+--- amarok/src/metadata/mp4/taglib_mp4filetyperesolver.cpp.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/metadata/mp4/taglib_mp4filetyperesolver.cpp
+@@ -24,6 +24,7 @@
+ 
+ #include "taglib_mp4filetyperesolver.h"
+ #include "mp4file.h"
++#include <string.h>
+ 
+ TagLib::File *MP4FileTypeResolver::createFile(const char *fileName,
+         bool readProperties,
