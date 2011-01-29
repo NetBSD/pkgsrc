@@ -1,4 +1,4 @@
-$NetBSD: patch-bv,v 1.2 2004/08/27 06:29:10 jlam Exp $
+$NetBSD: patch-bv,v 1.3 2011/01/29 20:37:35 markd Exp $
 
 --- gexamples/Makefile.aimk.orig	Wed Feb 16 21:48:37 2000
 +++ gexamples/Makefile.aimk	Thu Mar 25 02:04:18 2004
@@ -7,8 +7,8 @@ $NetBSD: patch-bv,v 1.2 2004/08/27 06:29:10 jlam Exp $
  
 +LTCC=		${LIBTOOL} --mode=compile ${CC}
 +LTCC_LINK=	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
-+LTFORT=		${LIBTOOL} --mode=compile ${FC}
-+LTFORT_LINK=	${LIBTOOL} --mode=link ${FC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
++LTFORT=		${LIBTOOL} --mode=compile --tag=F77 ${FC}
++LTFORT_LINK=	${LIBTOOL} --mode=link --tag=F77 ${FC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
 +
  all:  $(PROGS)
  
