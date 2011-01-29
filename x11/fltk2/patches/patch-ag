@@ -1,6 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2011/01/25 23:47:22 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2011/01/29 14:58:50 wiz Exp $
 
 Fix build with png-1.5.
+http://www.fltk.org/str.php?L2363+P0+S-2+C0+I0+E0+Q
 
 --- images/fl_png.cxx.orig	2007-04-16 14:48:06.000000000 +0000
 +++ images/fl_png.cxx
