@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/16 08:59:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/01/29 21:36:10 markd Exp $
 
 SHA1 (amarok-1.4.10.tar.bz2) = cb0bebe99c6f4dc1b01601f2f3aee3a86da08fbd
 RMD160 (amarok-1.4.10.tar.bz2) = f86c71dd0459e0cf1ff586cd6de240ca6501cf62
@@ -7,3 +7,11 @@ SHA1 (patch-aa) = 53316f334f45a8a4780ae71061d528374a75cb5a
 SHA1 (patch-ab) = 91097c1d901fb66c5c8e593005c462b1874f50bf
 SHA1 (patch-ac) = ea6900aafc3cd99069ac59929ae14296662d095f
 SHA1 (patch-ad) = eea8105897ce4cd9d4a086430ec0588125b3517b
+SHA1 (patch-ae) = ceeccf0eaa9091bd2422354abdf98c34f8a9802b
+SHA1 (patch-af) = 4c9f82603e8209ce1f598749b3d81dfaf8df5f46
+SHA1 (patch-ag) = 7d3353973722af565b37d47e4dac360bee2e25bc
+SHA1 (patch-ah) = 9feed2c659c7c543ddd25568c79e3f853b1bb8e8
+SHA1 (patch-ai) = 8afc89b7511971012d2335d1032dc99fbc8df32c
+SHA1 (patch-aj) = 667768476d217c78540368e450ca6048fa86d931
+SHA1 (patch-ak) = cc0b3d773af3441d99a0b3a5327ca694a0961d56
+SHA1 (patch-al) = f7cf6ade2fcdd4993287bde82cf41231dbb5b512
