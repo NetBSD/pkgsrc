@@ -1,4 +1,4 @@
-$NetBSD: patch-bu,v 1.2 2004/08/27 06:29:10 jlam Exp $
+$NetBSD: patch-bu,v 1.3 2011/01/29 20:37:35 markd Exp $
 
 --- examples/Makefile.aimk.orig	Wed Feb 16 21:49:35 2000
 +++ examples/Makefile.aimk	Thu Mar 25 03:43:25 2004
@@ -14,8 +14,8 @@ $NetBSD: patch-bu,v 1.2 2004/08/27 06:29:10 jlam Exp $
  
 +LTCC=		${LIBTOOL} --mode=compile ${CC}
 +LTCC_LINK=	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
-+LTFORT=		${LIBTOOL} --mode=compile ${FC}
-+LTFORT_LINK=	${LIBTOOL} --mode=link ${FC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
++LTFORT=		${LIBTOOL} --mode=compile --tag=F77 ${FC}
++LTFORT_LINK=	${LIBTOOL} --mode=link --tag=F77 ${FC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
 +
  hello$(EXESFX):  $(SDIR)/hello.c $(XDIR)
 -	$(CC) $(CFLAGS) -o $@ $(SDIR)/hello.c $(LDFLAGS) $(LIBS)
