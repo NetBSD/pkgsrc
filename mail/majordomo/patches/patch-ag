@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2011/01/29 17:16:33 spz Exp $
+$NetBSD: patch-ag,v 1.3 2011/01/29 19:39:14 spz Exp $
+
+avoid the wrapper + -C trap
 
 --- medit.orig	1997-04-28 18:38:05.000000000 +0000
 +++ medit
