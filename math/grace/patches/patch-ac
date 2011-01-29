@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2011/01/26 09:29:26 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2011/01/29 23:01:50 wiz Exp $
 
 Fix build with png-1.5.
+http://plasma-gate.weizmann.ac.il/Grace/phpbb/viewtopic.php?f=3&t=2080&p=4606#p4606
 
 --- src/rstdrv.c.orig	2004-07-03 20:47:46.000000000 +0000
 +++ src/rstdrv.c
