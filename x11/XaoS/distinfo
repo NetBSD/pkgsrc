@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2011/01/29 14:17:33 wiz Exp $
+$NetBSD: distinfo,v 1.14 2011/01/29 14:42:51 wiz Exp $
 
 SHA1 (XaoS-3.4.tar.gz) = 4e419715ae0479fa3a20ed5f48ede7ad222f2d10
 RMD160 (XaoS-3.4.tar.gz) = 37ce4728940e80c2876792650aa656236893d5f7
 Size (XaoS-3.4.tar.gz) = 1977108 bytes
 SHA1 (patch-aa) = f4327652392714bbe27e4655de40f7208a528990
-SHA1 (patch-ab) = 3864bf56d3758fdbb931fdbc62d5419c99bb5efb
+SHA1 (patch-ab) = 49d5deea7c1c620e46e98836458fad3b048d8df5
 SHA1 (patch-ac) = 98355581b4d45f927d58722cacb39ec83b7a540e
 SHA1 (patch-ad) = e783ed91ba611af333256a660d537bcf77992893
 SHA1 (patch-al) = dc5adebc2220aa1f76920570d1212730adb2e7e7
