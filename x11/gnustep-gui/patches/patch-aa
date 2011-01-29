@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2011/01/29 12:34:39 wiz Exp $
+
+Fix build with png-1.5.
+
+--- Source/NSBitmapImageRep+PNG.m.orig	2008-06-10 04:01:49.000000000 +0000
++++ Source/NSBitmapImageRep+PNG.m
+@@ -225,7 +225,7 @@ static void reader_func(png_structp png_
+     initWithBytesNoCopy: buf
+ 		 length: bytes_per_row * height];
+ 
+-  if (PNG_INFO_gAMA & png_info->valid)
++  if (png_get_valid(png_struct, png_info, PNG_INFO_gAMA))
+   {
+     double file_gamma = 2.2;
+     if (PNG_FLOATING_POINT)
