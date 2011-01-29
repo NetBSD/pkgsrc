@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2011/01/29 21:05:00 markd Exp $
+
+include <cstring> for strncpy(), memset() etc
+
+--- lib/c_wrapper.cpp.orig	2006-11-14 16:34:49.000000000 +0000
++++ lib/c_wrapper.cpp
+@@ -24,6 +24,7 @@
+ #include "musicbrainz.h"
+ #include "trm.h"
+ #include "mb_c.h"
++#include <cstring>
+ 
+ extern "C"
+ {
