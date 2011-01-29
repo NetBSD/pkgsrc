@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/01/26 09:29:26 wiz Exp $
+$NetBSD: distinfo,v 1.11 2011/01/29 23:01:50 wiz Exp $
 
 SHA1 (grace-5.1.22.tar.gz) = 3ce88c7c264d2de73b8935f835a1c1f8e368c78f
 RMD160 (grace-5.1.22.tar.gz) = ca7b1abe240de7cd3dbdc52d5182020c410b9772
 Size (grace-5.1.22.tar.gz) = 2516576 bytes
 SHA1 (patch-aa) = 5ccd1cc8bbf449c92b2216a52f1e6b9d6bd4cfce
 SHA1 (patch-ab) = 60a7657a4d191b76dae97ba0a7d8ba378da2a748
-SHA1 (patch-ac) = ef66aa5ae9152ff6260b31424eb4746ff6aaddf3
+SHA1 (patch-ac) = c312703604541f4cd14ce530d5a166cbc7004534
