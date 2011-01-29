@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2006/10/14 21:26:47 markd Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/29 22:00:59 markd Exp $
 
---- showimg/showimg/imagelistview.cpp.orig	2006-01-07 21:48:04.000000000 +1300
+--- showimg/showimg/imagelistview.cpp.orig	2006-01-07 08:48:04.000000000 +0000
 +++ showimg/showimg/imagelistview.cpp
-@@ -542,7 +542,9 @@ ImageListView::initMenu(KActionCollectio
+@@ -108,6 +108,7 @@
+ #include <qstringlist.h>
+ #include <qlistview.h>
+ #include <qtextcodec.h>
++#include <cstdlib>
+ 
+ #define MYDEBUG kdDebug(0)<<__FILE__<<" " <<__LINE__ << " " << __FUNCTION__ << " "
+ 
+@@ -542,7 +543,9 @@ ImageListView::initMenu(KActionCollectio
  	////////
  	m_popup->insertSeparator();
  	aImageInfo->plug(m_popup);

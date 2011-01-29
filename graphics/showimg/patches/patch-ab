@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2011/01/29 22:00:59 markd Exp $
+
+fix build with gcc4.5
+
+--- showimg/showimg/misc/exif.cpp.orig	2006-01-07 08:47:58.000000000 +0000
++++ showimg/showimg/misc/exif.cpp
+@@ -409,7 +409,7 @@ static void RelativeName(char * OutFileN
+     // If the filename contains substring "&i", then substitute the
+     // filename for that.  This gives flexibility in terms of processing
+     // multiple files at a time.
+-    char * Subst;
++    const char * Subst;
+     Subst = strstr(NamePattern, "&i");
+     if (Subst){
+         strncpy(OutFileName, NamePattern, Subst-NamePattern);
