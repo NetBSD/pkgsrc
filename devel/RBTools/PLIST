@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/30 00:55:59 jnemeth Exp $
+bin/post-review
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rbtools/__init__.py
+${PYSITELIB}/rbtools/__init__.pyc
+${PYSITELIB}/rbtools/__init__.pyo
+${PYSITELIB}/rbtools/postreview.py
+${PYSITELIB}/rbtools/postreview.pyc
+${PYSITELIB}/rbtools/postreview.pyo
+${PYSITELIB}/rbtools/tests.py
+${PYSITELIB}/rbtools/tests.pyc
+${PYSITELIB}/rbtools/tests.pyo
