@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2010/04/20 12:52:00 seanb Exp $
+# $NetBSD: Makefile,v 1.134 2011/01/30 01:33:44 markd Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -26,8 +26,8 @@ USE_LIBTOOL=		yes
 MAKE_ENV+=		LIBTOOL=libtool
 MAKE_ENV+=		LTCOMPILE="libtool --tag=CC --mode=compile"
 MAKE_ENV+=		LTLINK="libtool --tag=CC --mode=link"
-LTINSTALL_PROGRAM=	${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_PROGRAM}
-LTINSTALL_LIB=		${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_LIB}
+LTINSTALL_PROGRAM=	${SETENV} ${MAKE_ENV} ${LIBTOOL} --tag=CC --mode=install ${INSTALL_PROGRAM}
+LTINSTALL_LIB=		${SETENV} ${MAKE_ENV} ${LIBTOOL} --tag=CC --mode=install ${INSTALL_LIB}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/2$//}
 
