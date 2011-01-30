@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.213 2011/01/30 00:57:19 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.214 2011/01/30 10:52:40 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -348,3 +348,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-foolscap to 0.6.1 [gdt 2011-01-29]
 	Updated graphics/vigra to 1.7.1 [adam 2011-01-29]
 	Added devel/RBTools version 0.2 [jnemeth 2011-01-30]
+	Updated lang/parrot to 3.0.0 [he 2011-01-30]
