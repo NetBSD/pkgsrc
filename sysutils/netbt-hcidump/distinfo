@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/19 20:20:42 plunky Exp $
+$NetBSD: distinfo,v 1.2 2011/01/30 20:41:29 plunky Exp $
 
-SHA1 (bluez-4.81.tar.gz) = 852c79e2af55ca7db4e4dd66a2e98f839464093b
-RMD160 (bluez-4.81.tar.gz) = 700c3ac877279bcb4636ed175ea3cdbb04107967
-Size (bluez-4.81.tar.gz) = 1104444 bytes
-SHA1 (bluez-hcidump-1.42.tar.gz) = b18e41cbf92c00cfd0331506312fa248b39a0eee
-RMD160 (bluez-hcidump-1.42.tar.gz) = c80eab49c75b8782d35e64eecfbc5a0e56214d4c
-Size (bluez-hcidump-1.42.tar.gz) = 150060 bytes
+SHA1 (bluez-4.87.tar.gz) = a7b0f04d3005e130a193afd457e4fe5450ea9aa0
+RMD160 (bluez-4.87.tar.gz) = 1caa1068d99dc37f1fe48cfc3c83dd756ff03c14
+Size (bluez-4.87.tar.gz) = 1114526 bytes
+SHA1 (bluez-hcidump-2.0.tar.gz) = e6f2e7d63fb92efc8683be8f5bb6373893a7fd72
+RMD160 (bluez-hcidump-2.0.tar.gz) = 277702f4deb364d44f73ab109f6cb97b9ab35bf3
+Size (bluez-hcidump-2.0.tar.gz) = 149918 bytes
 SHA1 (patch-aa) = 6e30f3bd8e06e152bd2b65b32e173de039320787
 SHA1 (patch-ab) = b938aa1d4cba4891b58e7d4a2add3e88f86605f7
 SHA1 (patch-ac) = adbc1e33996e61ccc5c016154bee3c4af72d784d
 SHA1 (patch-ad) = b7007a6c55011ac6a1da2fd1883f953532d75ea5
 SHA1 (patch-ae) = e59424e971879f368c09adae894088952612f1be
 SHA1 (patch-af) = 7748d6d83ce118eff90b9d8158badd0664faa308
-SHA1 (patch-ag) = 858aa64a1495b81231a0ebd20b1b14576d3fbaab
 SHA1 (patch-ah) = b5a190251ccb9e55d2ac8460a436df3026d6be3d
 SHA1 (patch-ai) = 46239a7931f8fecee9216b13f98227711c69c54d
 SHA1 (patch-aj) = 3ef708a26e82ea209ef66c556889ba0cb9c9dd86
@@ -20,6 +19,4 @@ SHA1 (patch-ak) = 0d7d144bb67cd5ebf8e3c74fbb0fbdcce87bc4ac
 SHA1 (patch-al) = cdef6a512fc1fa4e64c59ae43ce07506103061d4
 SHA1 (patch-am) = 0f3d33c1f06edabed5fef4500109a83eff599219
 SHA1 (patch-an) = 35d9fd1b0d82addf0688e2997fdf589fbc89d921
-SHA1 (patch-ao) = 519b39a8dc2217c06d618c45029df6bd4437117a
-SHA1 (patch-ap) = f957985946117ffadcd10c39bfe74e132e173c86
-SHA1 (patch-aq) = a6a49e3469768971121def3cf329f16be53c2e1e
+SHA1 (patch-ao) = 742edc8200deff8baeee34513e8353ee1ef2d9a1
