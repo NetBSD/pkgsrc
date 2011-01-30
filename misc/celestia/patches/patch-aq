@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1 2011/01/30 01:07:00 wiz Exp $
+
+Fix build with png-1.5.
+https://sourceforge.net/tracker/index.php?func=detail&aid=3018741&group_id=21302&atid=121302
+
+--- src/celestia/imagecapture.cpp.orig	2004-11-16 07:14:20.000000000 +0000
++++ src/celestia/imagecapture.cpp
+@@ -30,6 +30,7 @@ extern "C" {
+ #else
+ #include "png.h"
+ #endif
++#include <zlib.h>
+ 
+ // Define png_jmpbuf() in case we are using a pre-1.0.6 version of libpng
+ #ifndef png_jmpbuf
