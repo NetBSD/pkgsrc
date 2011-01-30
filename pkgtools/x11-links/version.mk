@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.4 2011/01/08 21:46:56 dholland Exp $
+# $NetBSD: version.mk,v 1.5 2011/01/30 17:26:32 wiz Exp $
 #
 # This Makefile fragment is included by Makefiles that need to access
 # the X11_TYPE and version number of a native X11 distribution.
@@ -13,6 +13,7 @@
 #
 
 .if !defined(BUILTIN_X11_VERSION.native)
+.  include "xorg-version.mk"
 .  include "xfree-version.mk"
 
 .  if defined(BUILTIN_X11_VERSION.xorg)
