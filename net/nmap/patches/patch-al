@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2011/01/30 01:25:09 markd Exp $
+$NetBSD: patch-al,v 1.2 2011/01/30 09:24:40 markd Exp $
 
 --- nping/configure.orig	2011-01-26 10:07:02.311910853 +0000
 +++ nping/configure
@@ -6,7 +6,7 @@ $NetBSD: patch-al,v 1.1 2011/01/30 01:25:09 markd Exp $
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-+#define  __USE_BSD
++#define  _BSD_SOURCE
 +#include <sys/types.h>
  #include <stdio.h>
  #ifdef HAVE_SYS_IOCCOM_H
