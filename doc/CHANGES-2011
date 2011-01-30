@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.214 2011/01/30 10:52:40 he Exp $
+$NetBSD: CHANGES-2011,v 1.215 2011/01/30 12:20:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -349,3 +349,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/vigra to 1.7.1 [adam 2011-01-29]
 	Added devel/RBTools version 0.2 [jnemeth 2011-01-30]
 	Updated lang/parrot to 3.0.0 [he 2011-01-30]
+	Updated devel/ruby-pkg-config to 1.0.8 [obache 2011-01-30]
