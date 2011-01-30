@@ -1,4 +1,4 @@
-$NetBSD: patch-ze,v 1.1 2010/04/01 22:03:09 fhajny Exp $
+$NetBSD: patch-ze,v 1.2 2011/01/30 21:35:24 wiz Exp $
 
 Fixes compilation problem on Solaris/SPARC.
 
@@ -8,7 +8,7 @@ Fixes compilation problem on Solaris/SPARC.
   */
  
  #if defined(I_SYSMODE) && !defined(PERL_MICRO)
-+#if defined(__sun__)
++#if defined(__sun)
 +#include <sys/stat.h>
 +#include <sys/vnode.h>
 +#endif
