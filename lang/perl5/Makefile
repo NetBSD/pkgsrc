@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2011/01/23 19:07:26 agc Exp $
+# $NetBSD: Makefile,v 1.170 2011/01/30 21:31:42 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -179,6 +179,14 @@ PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
     !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
 PKG_HACKS+=			broken-vax-pthreads
 PERL5_BUILD_THREADS_SUPPORT=	no
+.endif
+
+.if !empty(MACHINE_PLATFORM:MMirBSD*)
+SUBST_CLASSES+=			mirbsd-paths
+SUBST_STAGE.mirbsd-paths=	pre-configure
+SUBST_FILES.mirbsd-paths=	hints/mirbsd.sh
+SUBST_SED.mirbsd-paths=		-e 's,/usr/mpkg,${PREFIX},g'
+SUBST_MESSAGE.mirbsd-paths=	Do not use non-pkgsrc paths on MirBSD.
 .endif
 
 .include "../../mk/compiler.mk"
