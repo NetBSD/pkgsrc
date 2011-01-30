@@ -1,0 +1,9 @@
+RBTools provides the post-review command:
+
+post-review is a command line tool for Windows, Linux and MacOS X
+that simplifies both creating and updating review requests.  It
+can look at your source directory, generate a diff, and upload it
+to a new or existing review request on an associated Review Board
+server.  This saves a lot of time over the web UI, and for some
+types of code repositories (such as Perforce), its actually required
+in order to produce a compatible diff.
