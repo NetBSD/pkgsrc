@@ -1,4 +1,4 @@
-$NetBSD: patch-dt,v 1.1 2010/09/23 21:47:48 sno Exp $
+$NetBSD: patch-dt,v 1.2 2011/01/30 21:35:12 wiz Exp $
 
 update of threads to 1.78
 
@@ -533,8 +533,6 @@ update of threads to 1.78
  
  Source repository:
  L<http://code.google.com/p/threads-shared/>
---- /dev/null
-+++ dist/threads/t/kill2.t
 --- /dev/null	2010-09-23 21:51:28.000000000 +0200
 +++ dist/threads/t/kill2.t	2010-09-23 21:47:56.000000000 +0200
 @@ -0,0 +1,68 @@
