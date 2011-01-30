@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/12/22 21:29:31 he Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/01/30 10:52:09 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -10,6 +10,7 @@ bin/pbc_disassemble
 bin/pbc_dump
 bin/pbc_merge
 bin/pbc_to_exe
+include/parrot/${PKGVERSION}/parrot/api.h
 include/parrot/${PKGVERSION}/parrot/atomic.h
 include/parrot/${PKGVERSION}/parrot/atomic/fallback.h
 include/parrot/${PKGVERSION}/parrot/atomic/gcc_pcc.h
@@ -81,7 +82,6 @@ include/parrot/${PKGVERSION}/parrot/settings.h
 include/parrot/${PKGVERSION}/parrot/stat.h
 include/parrot/${PKGVERSION}/parrot/string.h
 include/parrot/${PKGVERSION}/parrot/string_funcs.h
-include/parrot/${PKGVERSION}/parrot/string_primitives.h
 include/parrot/${PKGVERSION}/parrot/sub.h
 include/parrot/${PKGVERSION}/parrot/sysmem.h
 include/parrot/${PKGVERSION}/parrot/thr_pthread.h
@@ -145,9 +145,11 @@ include/parrot/${PKGVERSION}/pmc/pmc_orderedhashiterator.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfile.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileannotation.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileannotations.h
+include/parrot/${PKGVERSION}/pmc/pmc_packfilebytecodesegment.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileconstanttable.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfiledebug.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfiledirectory.h
+include/parrot/${PKGVERSION}/pmc/pmc_packfileopmap.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfilerawsegment.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfilesegment.h
 include/parrot/${PKGVERSION}/pmc/pmc_parrotinterpreter.h
@@ -476,6 +478,7 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Group.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/HTMLPage.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Item.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/POD2HTML.pm
+lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/PodToHtml.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/C.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/Compilers.pm
@@ -609,9 +612,11 @@ src/parrot/${PKGVERSION}/pmc/orderedhashiterator.dump
 src/parrot/${PKGVERSION}/pmc/packfile.dump
 src/parrot/${PKGVERSION}/pmc/packfileannotation.dump
 src/parrot/${PKGVERSION}/pmc/packfileannotations.dump
+src/parrot/${PKGVERSION}/pmc/packfilebytecodesegment.dump
 src/parrot/${PKGVERSION}/pmc/packfileconstanttable.dump
 src/parrot/${PKGVERSION}/pmc/packfiledebug.dump
 src/parrot/${PKGVERSION}/pmc/packfiledirectory.dump
+src/parrot/${PKGVERSION}/pmc/packfileopmap.dump
 src/parrot/${PKGVERSION}/pmc/packfilerawsegment.dump
 src/parrot/${PKGVERSION}/pmc/packfilesegment.dump
 src/parrot/${PKGVERSION}/pmc/parrotinterpreter.dump
