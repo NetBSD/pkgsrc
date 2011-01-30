@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.216 2011/01/30 17:26:50 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.217 2011/01/30 19:35:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -351,3 +351,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/parrot to 3.0.0 [he 2011-01-30]
 	Updated devel/ruby-pkg-config to 1.0.8 [obache 2011-01-30]
 	Updated pkgtools/x11-links to 0.64 [wiz 2011-01-30]
+	Updated www/py-django-cms to 2.1.0 [adam 2011-01-30]
