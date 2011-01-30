@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.13 2007/08/03 17:03:30 obache Exp $
+$NetBSD: patch-aj,v 1.14 2011/01/30 01:33:44 markd Exp $
 
 --- src/osdep/unix/Makefile.gss.orig	2007-04-05 02:20:04.000000000 +0000
 +++ src/osdep/unix/Makefile.gss
@@ -7,7 +7,7 @@ $NetBSD: patch-aj,v 1.13 2007/08/03 17:03:30 obache Exp $
  GSSINCLUDE=$(GSSDIR)/include
  GSSLIB=$(GSSDIR)/lib
 -GSSCFLAGS= -I$(GSSINCLUDE) -DGSS_C_NT_HOSTBASED_SERVICE=gss_nt_service_name -DKRB5_DEPRECATED=1
-+GSSCFLAGS= -I$(GSSINCLUDE) -I$(GSSDIR)/include/krb5 -DKRB5_DEPRECATED=1
++GSSCFLAGS= -I$(GSSINCLUDE) -I$(GSSDIR)/include/krb5
  GSSOLDLDFLAGS= -L$(GSSLIB) -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err
  GSSNEWLDFLAGS= -L$(GSSLIB) -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
  
