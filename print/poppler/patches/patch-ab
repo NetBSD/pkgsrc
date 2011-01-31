@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.12 2009/10/21 10:18:57 drochner Exp $
+$NetBSD: patch-ab,v 1.13 2011/01/31 16:55:29 drochner Exp $
 
---- utils/Makefile.in.orig	2009-10-18 01:28:49.000000000 +0200
+--- utils/Makefile.in.orig	2011-01-27 19:32:04.000000000 +0000
 +++ utils/Makefile.in
 @@ -55,7 +55,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  	$(top_builddir)/poppler/poppler-config.h
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.12 2009/10/21 10:18:57 drochner Exp $
 -pdfinfo_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdfinfo_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
- am__pdftoabw_SOURCES_DIST = pdftoabw.cc parseargs.c parseargs.h
+ am__pdftoabw_SOURCES_DIST = pdftoabw.cc parseargs.cc parseargs.h
  @BUILD_ABIWORD_OUTPUT_TRUE@am_pdftoabw_OBJECTS = pdftoabw.$(OBJEXT) \
  @BUILD_ABIWORD_OUTPUT_TRUE@	$(am__objects_1)
  pdftoabw_OBJECTS = $(am_pdftoabw_OBJECTS)
@@ -50,7 +50,7 @@ $NetBSD: patch-ab,v 1.12 2009/10/21 10:18:57 drochner Exp $
 -pdftohtml_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdftohtml_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
- am__pdftoppm_SOURCES_DIST = pdftoppm.cc parseargs.c parseargs.h
+ am__pdftoppm_SOURCES_DIST = pdftoppm.cc parseargs.cc parseargs.h
 -@BUILD_SPLASH_OUTPUT_TRUE@am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT) \
 -@BUILD_SPLASH_OUTPUT_TRUE@	$(am__objects_1)
 +am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT) \
@@ -75,7 +75,7 @@ $NetBSD: patch-ab,v 1.12 2009/10/21 10:18:57 drochner Exp $
  	$(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -366,12 +366,12 @@ top_build_prefix = @top_build_prefix@
+@@ -389,12 +389,12 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  win32_libs = @win32_libs@
@@ -93,7 +93,7 @@ $NetBSD: patch-ab,v 1.12 2009/10/21 10:18:57 drochner Exp $
  INCLUDES = \
  	-I$(top_srcdir)				\
  	-I$(top_srcdir)/goo			\
-@@ -382,9 +382,10 @@ INCLUDES = \
+@@ -405,9 +405,10 @@ INCLUDES = \
  	$(ABIWORD_CFLAGS)
  
  LDADD = \
