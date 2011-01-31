@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2011/01/31 20:23:10 wiz Exp $
+
+Fix build with png-1.5.
+
+--- RGBGraph.cc.orig	2006-03-14 01:59:34.000000000 +0000
++++ RGBGraph.cc
+@@ -118,7 +118,7 @@ RGBGraph::writeAsPNG (png_rw_ptr write_d
+    /* Set error handling.  REQUIRED if you aren't supplying your own
+     * error hadnling functions in the png_create_write_struct() call.
+     */
+-   if (setjmp(png_ptr->jmpbuf))
++   if (setjmp(png_jmpbuf(png_ptr)))
+      barf (PNG_WRITE_FAILURE);
+ 
+    /* set up the output control if you are using standard C streams */
