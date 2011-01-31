@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/12/23 11:44:55 dsainty Exp $
+# $NetBSD: Makefile,v 1.7 2011/01/31 17:44:30 drochner Exp $
 #
 
 DISTNAME=	mupdf-0.7
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://ccxvii.net/mupdf/download/ \
 		http://ccxvii.net/mupdf/download/archive/
