@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/07/14 17:04:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/01/31 16:58:42 drochner Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
@@ -15,19 +15,27 @@ include/poppler/glib/poppler.h
 lib/libpoppler-glib.la
 lib/pkgconfig/poppler-cairo.pc
 lib/pkgconfig/poppler-glib.pc
+share/gtk-doc/html/poppler/PopplerAnnot.html
+share/gtk-doc/html/poppler/PopplerAttachment.html
+share/gtk-doc/html/poppler/PopplerDocument.html
+share/gtk-doc/html/poppler/PopplerFormField.html
+share/gtk-doc/html/poppler/PopplerLayer.html
+share/gtk-doc/html/poppler/PopplerMedia.html
+share/gtk-doc/html/poppler/PopplerMovie.html
+share/gtk-doc/html/poppler/PopplerPage.html
+share/gtk-doc/html/poppler/annotation-glossary.html
+share/gtk-doc/html/poppler/api-index-0-12.html
+share/gtk-doc/html/poppler/api-index-0-14.html
+share/gtk-doc/html/poppler/api-index-0-16.html
+share/gtk-doc/html/poppler/api-index-deprecated.html
+share/gtk-doc/html/poppler/api-index-full.html
 share/gtk-doc/html/poppler/ch01.html
 share/gtk-doc/html/poppler/home.png
 share/gtk-doc/html/poppler/index.html
 share/gtk-doc/html/poppler/index.sgml
 share/gtk-doc/html/poppler/left.png
-share/gtk-doc/html/poppler/poppler-poppler-action.html
-share/gtk-doc/html/poppler/poppler-poppler-annot.html
-share/gtk-doc/html/poppler/poppler-poppler-document.html
-share/gtk-doc/html/poppler/poppler-poppler-enums.html
-share/gtk-doc/html/poppler/poppler-poppler-features.html
-share/gtk-doc/html/poppler/poppler-poppler-form-field.html
-share/gtk-doc/html/poppler/poppler-poppler-layer.html
-share/gtk-doc/html/poppler/poppler-poppler-page.html
+share/gtk-doc/html/poppler/poppler-PopplerAction.html
+share/gtk-doc/html/poppler/poppler-Version-and-Features-Information.html
 share/gtk-doc/html/poppler/poppler-poppler.html
 share/gtk-doc/html/poppler/poppler.devhelp
 share/gtk-doc/html/poppler/poppler.devhelp2
