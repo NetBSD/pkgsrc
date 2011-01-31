@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2010/02/11 21:34:34 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2011/01/31 08:42:09 adam Exp $
 
-DISTNAME=	iperf-2.0.2
-CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
+DISTNAME=	iperf-2.0.5
+CATEGORIES=	net benchmarks
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iperf/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dast.nlanr.net/Projects/Iperf/
+HOMEPAGE=	http://iperf.sourceforge.net/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,18 +19,14 @@ GCC_REQD+=	3.0
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-#CONFIGURE_DIRS=		${WRKSRC}/cfg
-#INSTALL_DIRS=		${WRKSRC}/src
-#MAKE_ENV+=		INSTALL_DIR=${PREFIX}/bin
 
-INSTALLATION_DIRS+=	share/doc/html/${PKGBASE}
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
-PTHREAD_OPTS+=	native optional
+PTHREAD_OPTS+=		native optional
 .include "../../mk/pthread.buildlink3.mk"
 
 post-install:
-	for f in ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.gif; do		\
-		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/doc/html/${PKGBASE}; \
-	done
+	${INSTALL_DATA} ${WRKSRC}/doc/*.gif ${WRKSRC}/doc/*.html \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
