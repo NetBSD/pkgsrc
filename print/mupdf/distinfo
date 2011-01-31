@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2010/09/15 13:15:29 joerg Exp $
+$NetBSD: distinfo,v 1.4 2011/01/31 17:44:30 drochner Exp $
 
 SHA1 (mupdf-0.7.tar.gz) = 3e97cefa9a65b770cc1be7584d6a5da9dc064d84
 RMD160 (mupdf-0.7.tar.gz) = 82723652fb967be7665cfc55f4b2bb7c3ff55b69
 Size (mupdf-0.7.tar.gz) = 3557621 bytes
 SHA1 (patch-ab) = ab4f0f5518dcc8e76ef2578f8c539b94e95d4f0a
 SHA1 (patch-ac) = 2c2b4a64b486e0b628e1a097c71f8e011daf85f5
+SHA1 (patch-ad) = 58aa0c2006e1222c4575a33ee276995cf02e6c5b
