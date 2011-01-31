@@ -378,6 +378,7 @@ nas			Enable usage of the Network Audio System.
 ncurses			Enable ncurses support.
 ncursesw		Enable wide character ncurses support.
 ndb-cluster		Build NDB Cluster support.
+ndiff			Enable tool to compare Nmap scans.
 nextstep		Enable Cocoa or GNUstep support.
 nfdump-ftconv		Build the flow-tools to nfdump converter.
 nfdump-nfprofile	Build the netflow profiler.
