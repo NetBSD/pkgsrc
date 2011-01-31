@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/31 20:46:02 jym Exp $
+Prepare for substitution of the Java home path.
+--- bin/ec2-cmd.orig	2010-12-15 17:41:53.000000000 +0000
++++ bin/ec2-cmd
+@@ -14,7 +14,7 @@ EC2_HOME=${EC2_HOME:-EC2_HOME is not set
+ LIBDIR=$EC2_HOME/lib
+ 
+ # Check our Java env
+-JAVA_HOME=${JAVA_HOME:?JAVA_HOME is not set}
++JAVA_HOME=@PKG_JAVA_HOME@
+ 
+ # If a classpath exists preserve it
+ CP=$CLASSPATH
