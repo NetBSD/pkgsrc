@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/07/07 22:01:50 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2011/01/31 10:36:21 adam Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
@@ -8,15 +8,24 @@ MASTER_SITES=	http://www.mbayer.de/html2text/downloads/	\
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.mbayer.de/html2text/
 COMMENT=	Advanced HTML-to-text converter
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		gunzip
 GCC_REQD+=		3.0
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		ECHO=${ECHO:Q}
-USE_TOOLS+=		gunzip
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+
+SUBST_CLASSES+=		configure
+SUBST_STAGE.configure=	pre-configure
+SUBST_MESSAGE.configure=Fixing 'configure' script
+SUBST_FILES.configure=	configure
+SUBST_SED.configure=	-e 's,^$$echo,$$echo -n,'
+SUBST_SED.configure+=	-e 's,\\c,,'
+SUBST_SED.configure+=	-e 's,$$CXX $$tmp_file.C,$$CXX $$LDFLAGS $$tmp_file.C,'
 
 post-build:
 	${GUNZIP_CMD} -d ${WRKSRC}/html2text.1.gz ${WRKSRC}/html2textrc.5.gz
