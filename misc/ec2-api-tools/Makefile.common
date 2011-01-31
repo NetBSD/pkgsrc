@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/01/31 20:46:01 jym Exp $
+
+# used by misc/ec2-ami-tools/Makefile
+#
+# Default path to Amazon EC2 scripts, binaries and tools
+EC2_DIR=	amazon-ec2
+EC2_HOME=	${PREFIX}/${EC2_DIR}

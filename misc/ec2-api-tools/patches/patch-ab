@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/01/31 20:46:02 jym Exp $
+Remove bashism.
+--- bin/ec2-cmd.orig	2010-12-15 17:41:53.000000000 +0000
++++ bin/ec2-cmd
+@@ -29,7 +29,7 @@ esac 
+ cygprop=""
+ 
+ # And add our own libraries too
+-if [ "$cygwin" == "true" ] ; then
++if [ "$cygwin" = "true" ] ; then
+ 	cygprop="-Dec2.cygwin=true"
+ 
+ 	# Make sure that when using Cygwin we use Unix 
