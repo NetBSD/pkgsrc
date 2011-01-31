@@ -1,0 +1,2 @@
+- write the Ruby modules to build the AMIs. See solaris and linux examples.
+  Should be fairly trivial.
