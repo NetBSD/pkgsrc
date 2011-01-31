@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2011/01/31 03:05:17 jym Exp $
+
+Execute these commands to extract and rehash all CA root certificates
+distributed by the Mozilla Project, so that they can be used by third
+party applications:
+
+	# cd /etc/openssl/certs # Default SSLCERTS path for NetBSD
+	# mozilla-rootcerts extract
+	# mozilla-rootcerts rehash
+===========================================================================
