@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.222 2011/01/31 21:05:12 jym Exp $
+$NetBSD: CHANGES-2011,v 1.223 2011/01/31 23:23:35 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -358,3 +358,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/log4cxx version 0.10.0 [reed 2011-01-31]
 	Added misc/ec2-api-tools version 1.3.62308 [jym 2011-01-31]
 	Added misc/ec2-ami-tools version 1.3.57676 [jym 2011-01-31]
+	Updated net/nmap to 5.50 [pettai 2011-01-31]
