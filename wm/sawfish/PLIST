@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/01/24 00:03:29 tnn Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/01/31 15:39:11 tnn Exp $
 bin/sawfish
 bin/sawfish-client
 bin/sawfish-config
@@ -29,7 +29,7 @@ man/man1/sawfish.1
 share/applications/sawfish.desktop
 share/gnome/wm-properties/sawfish-wm.desktop
 share/icons/hicolor/32x32/apps/sawfish-config.png
-share/kde4/apps/ksmserver/windowmanagers/sawfish.desktop
+share/kde/apps/ksmserver/windowmanagers/sawfish.desktop
 share/locale/am/LC_MESSAGES/sawfish.mo
 share/locale/ar/LC_MESSAGES/sawfish.mo
 share/locale/az/LC_MESSAGES/sawfish.mo
