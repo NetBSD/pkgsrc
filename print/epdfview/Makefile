@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/01/13 13:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2011/01/31 17:04:32 drochner Exp $
 #
 
 DISTNAME=	epdfview-0.1.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	print
 MASTER_SITES=	http://trac.emma-soft.com/epdfview/chrome/site/releases/
 EXTRACT_SUFX=	.tar.bz2
