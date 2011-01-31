@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2011/01/31 16:47:56 drochner Exp $
+
+--- modules/demux/mkv/mkv.hpp.orig	2010-05-21 08:48:24.000000000 +0000
++++ modules/demux/mkv/mkv.hpp
+@@ -119,7 +119,7 @@ extern "C" {
+ 
+ #define MKVD_TIMECODESCALE 1000000
+ 
+-#define MKV_IS_ID( el, C ) ( EbmlId( (*el) ) == C::ClassInfos.GlobalId )
++#define MKV_IS_ID( el, C ) ( el != NULL && typeid( *el ) == typeid( C ) )
+ 
+ 
+ using namespace LIBMATROSKA_NAMESPACE;
