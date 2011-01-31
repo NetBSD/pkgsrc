@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.220 2011/01/31 08:42:44 adam Exp $
+$NetBSD: CHANGES-2011,v 1.221 2011/01/31 17:29:51 reed Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -355,3 +355,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/netbt-hcidump to 2.0 [plunky 2011-01-30]
 	Updated www/contao29-translations to 20110116 [taca 2011-01-31]
 	Updated net/iperf to 2.0.5 [adam 2011-01-31]
+	Added devel/log4cxx version 0.10.0 [reed 2011-01-31]
