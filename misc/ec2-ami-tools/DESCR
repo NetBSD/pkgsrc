@@ -1,0 +1,3 @@
+The Amazon EC2 AMI Tools are command-line utilities to help bundle
+an Amazon Machine Image (AMI), create an AMI from an existing machine
+or installed volume, and upload a bundled AMI to Amazon S3.
