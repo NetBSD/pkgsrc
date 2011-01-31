@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/31 20:46:01 jym Exp $
+
+SHA1 (ec2-api-tools-1.3-62308.zip) = 28e3944391ad197e235a549ecf573007eb0a786d
+RMD160 (ec2-api-tools-1.3-62308.zip) = e00874fd258af7912b4c1b6acfb56e6746ac7c77
+Size (ec2-api-tools-1.3-62308.zip) = 8946930 bytes
+SHA1 (patch-aa) = 7fcc4576ad658054f0f42ec688269839951135e8
+SHA1 (patch-ab) = adf5fa6a389b275aa9d6d408c3982efdbcc61aa7
