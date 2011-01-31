@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.23 2009/07/20 19:40:08 adrianp Exp $
+$NetBSD: patch-aa,v 1.24 2011/01/31 23:22:48 pettai Exp $
 
---- Makefile.in.orig	2009-06-24 22:35:54.000000000 +0100
+--- Makefile.in.orig	2011-01-29 20:52:20.000000000 +0000
 +++ Makefile.in
-@@ -24,8 +24,8 @@ CXX = @CXX@
+@@ -25,8 +25,8 @@ CXX = @CXX@
  CCOPT = 
  DBGFLAGS = 
  STRIP = @STRIP@
@@ -11,24 +11,5 @@ $NetBSD: patch-aa,v 1.23 2009/07/20 19:40:08 adrianp Exp $
 +#LIBPCAPDIR = @libpcapdir@
 +#LIBPCREDIR = @LIBPCREDIR@
  export LIBDNETDIR = @LIBDNETDIR@
- ZENMAPDIR = zenmap
- NDIFFDIR = ndiff
-@@ -95,14 +95,14 @@ $(TARGET): @LUA_DEPENDS@ @PCAP_DEPENDS@ 
- 	rm -f $@
- 	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
- 
--pcre_build: $(LIBPCREDIR)/Makefile
--	@echo Compiling libpcre; cd $(LIBPCREDIR) && $(MAKE)
-+#pcre_build: $(LIBPCREDIR)/Makefile
-+#	@echo Compiling libpcre; cd $(LIBPCREDIR) && $(MAKE)
- 
- dnet_build: $(LIBDNETDIR)/Makefile
- 	@echo Compiling libdnet; cd $(LIBDNETDIR) && $(MAKE)
- 
--pcap_build: $(LIBPCAPDIR)/Makefile
--	@echo Compiling libpcap; cd $(LIBPCAPDIR) && $(MAKE)
-+#pcap_build: $(LIBPCAPDIR)/Makefile
-+#	@echo Compiling libpcap; cd $(LIBPCAPDIR) && $(MAKE)
- 
- nbase_build: $(NBASEDIR)/Makefile
- 	@echo Compiling libnbase;
+ ZENMAPDIR = @ZENMAPDIR@
+ NDIFFDIR = @NDIFFDIR@

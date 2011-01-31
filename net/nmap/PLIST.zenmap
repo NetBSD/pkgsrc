@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zenmap,v 1.7 2010/07/22 20:46:29 pettai Exp $
+@comment $NetBSD: PLIST.zenmap,v 1.8 2011/01/31 23:22:47 pettai Exp $
 bin/nmapfe
 bin/uninstall_zenmap
 bin/xnmap
@@ -77,6 +77,8 @@ ${PYSITELIB}/zenmapCore/Diff.py
 ${PYSITELIB}/zenmapCore/Diff.pyc
 ${PYSITELIB}/zenmapCore/I18N.py
 ${PYSITELIB}/zenmapCore/I18N.pyc
+${PYSITELIB}/zenmapCore/NSEDocParser.py
+${PYSITELIB}/zenmapCore/NSEDocParser.pyc
 ${PYSITELIB}/zenmapCore/Name.py
 ${PYSITELIB}/zenmapCore/Name.pyc
 ${PYSITELIB}/zenmapCore/NetworkInventory.py
@@ -91,8 +93,14 @@ ${PYSITELIB}/zenmapCore/Paths.py
 ${PYSITELIB}/zenmapCore/Paths.pyc
 ${PYSITELIB}/zenmapCore/RecentScans.py
 ${PYSITELIB}/zenmapCore/RecentScans.pyc
+${PYSITELIB}/zenmapCore/ScriptArgsParser.py
+${PYSITELIB}/zenmapCore/ScriptArgsParser.pyc
+${PYSITELIB}/zenmapCore/ScriptMetadata.py
+${PYSITELIB}/zenmapCore/ScriptMetadata.pyc
 ${PYSITELIB}/zenmapCore/SearchResult.py
 ${PYSITELIB}/zenmapCore/SearchResult.pyc
+${PYSITELIB}/zenmapCore/StringPool.py
+${PYSITELIB}/zenmapCore/StringPool.pyc
 ${PYSITELIB}/zenmapCore/TargetList.py
 ${PYSITELIB}/zenmapCore/TargetList.pyc
 ${PYSITELIB}/zenmapCore/UmitConf.py
@@ -159,6 +167,8 @@ ${PYSITELIB}/zenmapGUI/ScanToolbar.py
 ${PYSITELIB}/zenmapGUI/ScanToolbar.pyc
 ${PYSITELIB}/zenmapGUI/ScansListStore.py
 ${PYSITELIB}/zenmapGUI/ScansListStore.pyc
+${PYSITELIB}/zenmapGUI/ScriptInterface.py
+${PYSITELIB}/zenmapGUI/ScriptInterface.pyc
 ${PYSITELIB}/zenmapGUI/SearchGUI.py
 ${PYSITELIB}/zenmapGUI/SearchGUI.pyc
 ${PYSITELIB}/zenmapGUI/SearchWindow.py
