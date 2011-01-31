@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2008/11/23 18:41:16 tron Exp $
+$NetBSD: patch-aa,v 1.13 2011/01/31 10:22:26 wiz Exp $
+
+Debian patch to fix a buffer overflow in the XPM file loader.
 
 --- src/modules/loaders/loader_xpm.c.orig	2008-10-21 03:32:51.000000000 +0100
 +++ src/modules/loaders/loader_xpm.c	2008-11-23 18:36:37.000000000 +0000

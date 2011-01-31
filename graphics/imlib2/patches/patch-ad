@@ -1,4 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2005/11/04 20:11:47 tv Exp $
+$NetBSD: patch-ad,v 1.5 2011/01/31 10:22:26 wiz Exp $
+
+Use my_lround() on Interix too.
+
+Add minimalist #ifndef blocks to rip out XShm support on Interix.
 
 --- src/lib/rend.c.orig	2004-11-01 04:39:42.000000000 -0500
 +++ src/lib/rend.c

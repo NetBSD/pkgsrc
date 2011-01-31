@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2007/09/18 19:18:11 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2011/01/31 10:22:26 wiz Exp $
+
+Use my_lround() on Interix too.
+
+Add minimalist #ifndef blocks to rip out XShm support on Interix.
 
 --- src/lib/grab.c.orig	2007-02-16 12:58:53.000000000 +0100
 +++ src/lib/grab.c
