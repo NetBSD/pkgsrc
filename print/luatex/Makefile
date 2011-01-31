@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/01/17 10:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/01/31 17:05:48 drochner Exp $
 
 DISTNAME=	luatex-beta-0.65.0-source
 PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/386/1704/
 EXTRACT_SUFX=	.tar.bz2
@@ -77,7 +78,7 @@ CONFIGURE_ARGS+=--enable-cxx-runtime-hack \
 		--disable-xdv2pdf \
 		--disable-xdvipdfmx \
 		--disable-xetex \
-		--without-system-freetype2 \
+		--with-system-freetype2 \
 		--without-system-gd \
 		--without-system-teckit \
 		--without-system-t1lib \
@@ -112,6 +113,7 @@ INSTALLATION_DIRS+=	bin
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 
 post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
