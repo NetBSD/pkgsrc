@@ -1,4 +1,7 @@
-$NetBSD: patch-cb,v 1.1 2006/11/24 12:46:12 drochner Exp $
+$NetBSD: patch-cb,v 1.2 2011/01/31 10:22:26 wiz Exp $
+
+fix some insufficient validation of graphics files, patches from Ubuntu
+(CVE-2006-4806, CVE-2006-4807, CVE-2006-4808, CVE-2006-4809)
 
 --- src/modules/loaders/loader_jpeg.c.orig	2006-09-05 02:37:07.000000000 +0200
 +++ src/modules/loaders/loader_jpeg.c
