@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.8 2010/01/09 15:33:07 joerg Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/01/31 10:17:41 wiz Exp $
+# used by graphics/evas-png/Makefile
 
 DISTNAME=	evas-0.9.9.063
 CATEGORIES=	graphics
