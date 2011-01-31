@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/04/12 22:43:01 jlam Exp $
+# $NetBSD: options.mk,v 1.9 2011/01/31 10:21:41 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,4 +32,3 @@ PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif
-
