@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/31 20:56:14 jym Exp $
+
+SHA1 (ec2-ami-tools-1.3-57676.zip) = 195406a962ee022927833186a84f0c5502b47354
+RMD160 (ec2-ami-tools-1.3-57676.zip) = 64f662c8c7b7607abe9700a03682062bebb8a361
+Size (ec2-ami-tools-1.3-57676.zip) = 137908 bytes
+SHA1 (patch-aa) = 4b6b7013032cc7c5db1a91dd6c2ed70e98d73659
