@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/31 17:27:43 reed Exp $
+
+SHA1 (apache-log4cxx-0.10.0.tar.gz) = d79c053e8ac90f66c5e873b712bb359fd42b648d
+RMD160 (apache-log4cxx-0.10.0.tar.gz) = 6df384e5c746c3c6903efae6c9f0d64e4f07a5ad
+Size (apache-log4cxx-0.10.0.tar.gz) = 1667425 bytes
