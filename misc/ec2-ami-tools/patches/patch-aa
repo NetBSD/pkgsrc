@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/31 20:56:14 jym Exp $
+Avoid using full path for bash.
+
+--- lib/ec2/platform/base/pipeline.rb.orig	2010-09-27 04:37:10.000000000 +0000
++++ lib/ec2/platform/base/pipeline.rb
+@@ -115,7 +115,7 @@ module EC2    
+           @results = []
+           create_tempfiles
+           escaped_command = command.gsub("'","'\"'\"'")
+-          invocation = "/bin/bash -c '#{escaped_command}'"
++          invocation = "bash -c '#{escaped_command}'"
+           
+           # Execute the pipeline invocation
+           STDERR.puts("Pipeline.execute: command = [#{invocation}]") if verbose
