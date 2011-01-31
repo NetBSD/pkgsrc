@@ -1,0 +1,3 @@
+Apache log4cxx is a logging framework for C++ patterned after Apache
+log4j. Logging can be selectively enabled or disabled, and sent to
+different and multiple output targets in user-chosen formats.
