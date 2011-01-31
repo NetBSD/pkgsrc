@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2011/01/30 09:24:40 markd Exp $
+$NetBSD: patch-ab,v 1.16 2011/01/31 23:22:48 pettai Exp $
 
---- configure.orig	2010-07-16 00:43:59.000000000 +0000
+--- configure.orig	2011-01-21 21:00:04.000000000 +0000
 +++ configure
-@@ -6212,7 +6212,7 @@ if test "${am_cv_pathless_PYTHON+set}" =
+@@ -5308,7 +5308,7 @@ if test "${am_cv_pathless_PYTHON+set}" =
    $as_echo_n "(cached) " >&6
  else
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.15 2011/01/30 09:24:40 markd Exp $
  	  test "$am_cv_pathless_PYTHON" = none && break
  	  prog="import sys
  # split strings by '.' and convert to numeric.  Append some zeros
-@@ -6466,7 +6466,7 @@ if test "${am_cv_pathless_PYTHON+set}" =
+@@ -5558,7 +5558,7 @@ if test "${am_cv_pathless_PYTHON+set}" =
    $as_echo_n "(cached) " >&6
  else
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.15 2011/01/30 09:24:40 markd Exp $
  	  test "$am_cv_pathless_PYTHON" = none && break
  	  prog="import sys
  # split strings by '.' and convert to numeric.  Append some zeros
-@@ -7664,6 +7664,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -6115,6 +6115,7 @@ else
  extern char pcap_version[];
  int main() {
    int major, minor1, minor2;
@@ -28,11 +28,11 @@ $NetBSD: patch-ab,v 1.15 2011/01/30 09:24:40 markd Exp $
    sscanf(pcap_version,"%d.%d.%d", &major, &minor1, &minor2);
    if (major > 0)
      exit(0);
-@@ -7714,6 +7715,8 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
+@@ -6137,6 +6138,8 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-+#define  _BSD_SOURCE
++#define BSD_SOURCE
 +#include <sys/types.h>
  #include <stdio.h>
  #ifdef HAVE_SYS_IOCCOM_H
