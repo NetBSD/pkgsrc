@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.225 2011/02/01 02:07:01 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.226 2011/02/01 04:42:28 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -361,3 +361,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/nmap to 5.50 [pettai 2011-01-31]
 	Updated games/enigma to 1.01nb5 [wiz 2011-02-01]
 	Updated filesystems/tahoe-lafs to 1.8.2 [gdt 2011-02-01]
+	Updated x11/stalonetray to 0.8.1 [schnoebe 2011-02-01]
