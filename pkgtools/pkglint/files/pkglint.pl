@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.824 2010/10/26 22:32:40 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.825 2011/02/01 09:08:01 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6868,7 +6868,7 @@ sub checkfile_distinfo($) {
 			next;
 		}
 		my ($alg, $chksum_fname, $sum) = ($1, $2, $3);
-		my $is_patch = (($chksum_fname =~ m"^patch-[A-Za-z0-9]+$") ? true : false);
+		my $is_patch = (($chksum_fname =~ m"^patch-.+$") ? true : false);
 
 		if ($chksum_fname !~ m"^\w") {
 			$line->log_error("All file names should start with a letter.");
@@ -7096,8 +7096,8 @@ sub checkfile_package_Makefile($$) {
 		$pkgctx_vardef->{"NO_CONFIGURE"}->log_warning("... NO_CONFIGURE is set.");
 	}
 
-	if (exists($pkgctx_vardef->{"RESTRICTED"}) && !exists($pkgctx_vardef->{"LICENSE"})) {
-		$pkgctx_vardef->{"RESTRICTED"}->log_error("Restricted packages must have a LICENSE.");
+	if (!exists($pkgctx_vardef->{"LICENSE"})) {
+		log_error($fname, NO_LINE_NUMBER, "All packages must define their LICENSE.");
 	}
 
 	if (exists($pkgctx_vardef->{"GNU_CONFIGURE"}) && exists($pkgctx_vardef->{"USE_LANGUAGES"})) {
@@ -7991,14 +7991,14 @@ sub checkfile($) {
 	} elsif ($basename =~ m"^MESSAGE") {
 		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
 
-	} elsif ($basename =~ m"^patch-[A-Za-z0-9]*$") {
+	} elsif ($basename =~ m"^patch-[-A-Za-z0-9_\.]*$") {
 		$opt_check_patches and checkfile_patch($fname);
 
 	} elsif ($fname =~ m"(?:^|/)patches/manual-[^/]*$") {
 		$opt_debug_unchecked and log_debug($fname, NO_LINE_NUMBER, "Unchecked file \"${fname}\".");
 
 	} elsif ($fname =~ m"(?:^|/)patches/[^/]*$") {
-		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
+		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.");
 
 	} elsif ($basename =~ m"^PLIST") {
 		$opt_check_PLIST and checkfile_PLIST($fname);
@@ -8339,7 +8339,7 @@ sub checkdir_package() {
 		} else {
 			checkfile($fname);
 		}
-		if ($fname =~ m"/patches/patch-[A-Za-z0-9]*$") {
+		if ($fname =~ m"/patches/patch-*$") {
 			$have_patches = true;
 		} elsif ($fname =~ m"/distinfo$") {
 			$have_distinfo = true;
