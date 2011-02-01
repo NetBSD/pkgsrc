@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/01/13 13:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/01 10:27:56 wiz Exp $
 
 DISTNAME=	panomatic-0.9.4-src
 PKGNAME=	panomatic-0.9.4
@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aorlinsk2.free.fr/panomatic/
 COMMENT=	Tool that automates the creation of control points in Hugin
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
