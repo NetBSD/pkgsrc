@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/01/13 13:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2011/02/01 09:05:49 wiz Exp $
 #
 
 DISTNAME=		h5utils-1.12.1
@@ -9,6 +9,7 @@ MASTER_SITES=		http://ab-initio.mit.edu/h5utils/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ab-initio.mit.edu/h5utils/
 COMMENT=		Utilities for conversion from/to HDF5
+LICENSE=		mit AND gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
