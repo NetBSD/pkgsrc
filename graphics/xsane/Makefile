@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2011/01/13 13:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2011/02/01 10:31:53 wiz Exp $
 
 DISTNAME=	xsane-0.994
 PKGNAME=	xsane-0.99.4
@@ -12,6 +12,7 @@ MASTER_SITES=	http://www.xsane.org/download/old/ \
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.xsane.org/
 COMMENT=	New improved frontend for SANE
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
