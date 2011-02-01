@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/03/15 20:35:26 smb Exp $
+$NetBSD: distinfo,v 1.3 2011/02/01 04:38:11 schnoebe Exp $
 
-SHA1 (stalonetray-0.7.6.tar.gz) = 0900717162b2ea79ac0eb8f1f4e8f0d31e655c25
-RMD160 (stalonetray-0.7.6.tar.gz) = 5c58f6b5d7f9bc0ac9234f9b656031b5a7456798
-Size (stalonetray-0.7.6.tar.gz) = 172358 bytes
-SHA1 (patch-pa) = 70c1fa740edabf6b1057afe860102938785b393f
+SHA1 (stalonetray-0.8.1.tar.gz) = 80a137a80a469354f59dd6c228834d72db82777a
+RMD160 (stalonetray-0.8.1.tar.gz) = be340f5390669c975bb525407f0963a2ad2ded6f
+Size (stalonetray-0.8.1.tar.gz) = 195544 bytes
