@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2011/01/13 13:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/02/01 00:09:08 wiz Exp $
 
 DISTNAME=	enigma-1.01
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://download.berlios.de/enigma-game/
 
 MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/enigma/
 COMMENT=	Puzzle game similar to Oxyd/Rock'n'Roll/Marble Madness
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -36,5 +37,6 @@ BUILDLINK_API_DEPENDS.xerces-c+=	xerces-c>=2.7.0
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
