@@ -1,0 +1,80 @@
+$NetBSD: patch-cj,v 1.1 2011/02/01 19:20:14 jwise Exp $
+
+The mem-overflow test contains a declaration of an empty struct, which breaks
+on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
+test for now, pending a better fix.
+
+--- glib/tests/Makefile.in.orig	Sun Nov 14 01:02:00 2010
++++ glib/tests/Makefile.in	Tue Feb  1 12:25:15 2011
+@@ -59,7 +59,7 @@
+ 	string$(EXEEXT) markup-parse$(EXEEXT) markup-collect$(EXEEXT) \
+ 	markup-escape$(EXEEXT) markup-subparser$(EXEEXT) \
+ 	array-test$(EXEEXT) hostutils$(EXEEXT) gvariant$(EXEEXT) \
+-	mem-overflow$(EXEEXT) utils$(EXEEXT) regex$(EXEEXT) \
++	utils$(EXEEXT) regex$(EXEEXT) \
+ 	base64$(EXEEXT) sequence$(EXEEXT) scannerapi$(EXEEXT) \
+ 	shell$(EXEEXT) collate$(EXEEXT) utf8-pointer$(EXEEXT) \
+ 	utf8-validate$(EXEEXT) utf8-misc$(EXEEXT) checksum$(EXEEXT) \
+@@ -134,8 +134,6 @@
+ markup_subparser_SOURCES = markup-subparser.c
+ markup_subparser_OBJECTS = markup-subparser.$(OBJEXT)
+ markup_subparser_DEPENDENCIES = $(progs_ldadd)
+-mem_overflow_SOURCES = mem-overflow.c
+-mem_overflow_OBJECTS = mem-overflow.$(OBJEXT)
+ mem_overflow_DEPENDENCIES = $(progs_ldadd)
+ node_SOURCES = node.c
+ node_OBJECTS = node.$(OBJEXT)
+@@ -231,7 +229,7 @@
+ 	$(gdatetime_SOURCES) gvariant.c hash.c hostutils.c \
+ 	$(keyfile_SOURCES) list.c logging.c markup-collect.c \
+ 	markup-escape.c markup-parse.c markup-subparser.c \
+-	mem-overflow.c node.c $(option_context_SOURCES) pattern.c \
++	node.c $(option_context_SOURCES) pattern.c \
+ 	$(printf_SOURCES) $(protocol_SOURCES) queue.c $(rand_SOURCES) \
+ 	regex.c scannerapi.c sequence.c shell.c slist.c \
+ 	$(strfuncs_SOURCES) $(string_SOURCES) $(testing_SOURCES) \
+@@ -242,7 +240,7 @@
+ 	$(gdatetime_SOURCES) gvariant.c hash.c hostutils.c \
+ 	$(keyfile_SOURCES) list.c logging.c markup-collect.c \
+ 	markup-escape.c markup-parse.c markup-subparser.c \
+-	mem-overflow.c node.c $(option_context_SOURCES) pattern.c \
++	node.c $(option_context_SOURCES) pattern.c \
+ 	$(printf_SOURCES) $(protocol_SOURCES) queue.c $(rand_SOURCES) \
+ 	regex.c scannerapi.c sequence.c shell.c slist.c \
+ 	$(strfuncs_SOURCES) $(string_SOURCES) $(testing_SOURCES) \
+@@ -458,7 +456,7 @@
+ install_sh = @install_sh@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+-localedir = @localedir@
++localedir = /opt/tnf/lib/locale
+ localstatedir = @localstatedir@
+ mandir = @mandir@
+ mkdir_p = @mkdir_p@
+@@ -489,7 +487,7 @@
+ EXTRA_DIST = 4096-random-bytes keyfiletest.ini bookmarks.xbel
+ TEST_PROGS = testing option-context keyfile fileutils printf protocol \
+ 	rand strfuncs string markup-parse markup-collect markup-escape \
+-	markup-subparser array-test hostutils gvariant mem-overflow \
++	markup-subparser array-test hostutils gvariant \
+ 	utils regex base64 sequence scannerapi shell collate \
+ 	utf8-pointer utf8-validate utf8-misc checksum hash date node \
+ 	convert list slist queue tree uri dir pattern logging error \
+@@ -666,9 +664,6 @@
+ markup-subparser$(EXEEXT): $(markup_subparser_OBJECTS) $(markup_subparser_DEPENDENCIES) 
+ 	@rm -f markup-subparser$(EXEEXT)
+ 	$(AM_V_CCLD)$(LINK) $(markup_subparser_OBJECTS) $(markup_subparser_LDADD) $(LIBS)
+-mem-overflow$(EXEEXT): $(mem_overflow_OBJECTS) $(mem_overflow_DEPENDENCIES) 
+-	@rm -f mem-overflow$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(mem_overflow_OBJECTS) $(mem_overflow_LDADD) $(LIBS)
+ node$(EXEEXT): $(node_OBJECTS) $(node_DEPENDENCIES) 
+ 	@rm -f node$(EXEEXT)
+ 	$(AM_V_CCLD)$(LINK) $(node_OBJECTS) $(node_LDADD) $(LIBS)
+@@ -760,7 +755,6 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-escape.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-parse.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-subparser.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mem-overflow.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/node.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/option-context.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pattern.Po@am__quote@
