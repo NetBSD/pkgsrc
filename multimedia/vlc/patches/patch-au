@@ -1,4 +1,6 @@
-$NetBSD: patch-au,v 1.1 2011/01/31 16:47:56 drochner Exp $
+$NetBSD: patch-au,v 1.2 2011/02/01 11:45:05 drochner Exp $
+
+CVE-2011-0531
 
 --- modules/demux/mkv/mkv.hpp.orig	2010-05-21 08:48:24.000000000 +0000
 +++ modules/demux/mkv/mkv.hpp
