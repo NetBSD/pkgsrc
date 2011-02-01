@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2011/01/15 15:07:11 wiz Exp $
+$NetBSD: distinfo,v 1.62 2011/02/01 10:48:14 wiz Exp $
 
 SHA1 (abiword-2.8.6.tar.gz) = 998f69d038000b3fc027d4259548f02d67c8d0df
 RMD160 (abiword-2.8.6.tar.gz) = caabab25d197f9553ea12376de36fc7f5a771a58
@@ -9,4 +9,6 @@ SHA1 (patch-ac) = a82fd781195e9ff52dbc33258fd4774cd23fe5c9
 SHA1 (patch-ad) = 48ff4fcce593f9996e90cce718b2f774b271d5a3
 SHA1 (patch-ae) = ec3bb0a00100fea97f46b3a25440d7a4e46e30eb
 SHA1 (patch-af) = fc6927eb963c4be956825d1656e8957b358ed1ad
+SHA1 (patch-plugins_bmp_xp_ie__impGraphic__BMP.cpp) = 65852f6f934c9fdf2aa9bf02d0a2ad66b5c2db09
+SHA1 (patch-plugins_garble_xp_abiword-garble-png.cpp) = c9b4b7030fa038da9ba37b5489d8d8571a0e6c77
 SHA1 (patch-sa) = 29ee7e9891b11773217ec73bbda01e2591e78b56
