@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2009/12/10 17:35:45 drochner Exp $
+$NetBSD: distinfo,v 1.6 2011/02/01 09:05:30 wiz Exp $
 
 SHA1 (h5utils-1.12.1.tar.gz) = 1bd8ef8c50221da35aafb5424de9b5f177250d2d
 RMD160 (h5utils-1.12.1.tar.gz) = f7d1d1b9254e5946c382fad2bd5ffc41e238860d
 Size (h5utils-1.12.1.tar.gz) = 156785 bytes
 SHA1 (patch-aa) = 2961c8a4ef4319f5e74d6252f82364b94c2d24be
+SHA1 (patch-writepng.c) = cec1487f77f4534aa081e1e209a603876a288145
