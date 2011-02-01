@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/12/04 01:58:57 gdt Exp $
+$NetBSD: distinfo,v 1.4 2011/02/01 02:05:18 gdt Exp $
 
-SHA1 (allmydata-tahoe-1.8.1.tar.bz2) = bc653df007de93792bbd80e532c54318bf4b76b0
-RMD160 (allmydata-tahoe-1.8.1.tar.bz2) = a1375050cacfad838e23789355a11e3dafbb7c49
-Size (allmydata-tahoe-1.8.1.tar.bz2) = 1110783 bytes
+SHA1 (allmydata-tahoe-1.8.2.tar.bz2) = 8518fde2211fd08c9005b25f8fe57384f8403e5c
+RMD160 (allmydata-tahoe-1.8.2.tar.bz2) = 65deadde52f81bbc9e5cfb2c0d688a748f0dab4e
+Size (allmydata-tahoe-1.8.2.tar.bz2) = 1051279 bytes
 SHA1 (patch-aa) = be8b873d419ae688fdcc9cf0efbb9269259ebd13
