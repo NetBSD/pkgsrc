@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2011/01/20 21:45:36 drochner Exp $
+# $NetBSD: Makefile,v 1.298 2011/02/01 20:34:20 drochner Exp $
 #
 
 COMMENT=	Programming languages
@@ -58,6 +58,7 @@ SUBDIR+=	gcc34-ada
 SUBDIR+=	gcc44
 SUBDIR+=	gforth
 SUBDIR+=	ghc
+SUBDIR+=	gnat-aux
 SUBDIR+=	gpc
 SUBDIR+=	gprolog
 SUBDIR+=	guile
