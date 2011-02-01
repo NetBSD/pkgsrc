@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/01 20:32:56 drochner Exp $
+
+SHA1 (gnat-aux-20110125.tar.bz2) = 821726cd5c626013e74a330a17725d16b0c4edff
+RMD160 (gnat-aux-20110125.tar.bz2) = f243e89e714eaa2728fdd168810cae0b2696b3cd
+Size (gnat-aux-20110125.tar.bz2) = 23256093 bytes
+SHA1 (gnat-bootstrap.i386.dragonfly.tar.bz2) = d7a8103243a2df3723d9d3c3ec0da9c3bb725214
+RMD160 (gnat-bootstrap.i386.dragonfly.tar.bz2) = 9e6fde444e0ed76ee404810af6d6b7eb48659c09
+Size (gnat-bootstrap.i386.dragonfly.tar.bz2) = 28205489 bytes
+SHA1 (gnat-bootstrap.i386.netbsd.tar.bz2) = 19b61f54fae8e237a4e678ff03f20f50b47db1df
+RMD160 (gnat-bootstrap.i386.netbsd.tar.bz2) = ade03f223b2af229daece20a749915f7da0eb0a6
+Size (gnat-bootstrap.i386.netbsd.tar.bz2) = 27654956 bytes
+SHA1 (gnat-bootstrap.x86_64.dragonfly.tar.bz2) = 77a637a497c61e4085de31b24a205f24b1776a15
+RMD160 (gnat-bootstrap.x86_64.dragonfly.tar.bz2) = 4d0eb7b8a5f901333f1ffd190a5bf72072b2b52e
+Size (gnat-bootstrap.x86_64.dragonfly.tar.bz2) = 31380342 bytes
+SHA1 (gnat-bootstrap.x86_64.netbsd.tar.bz2) = 84f0e9179998daa643046a5d139321c4130ea84d
+RMD160 (gnat-bootstrap.x86_64.netbsd.tar.bz2) = 0b2943349536c323a62b56dc05ff1fedd6d7e17a
+Size (gnat-bootstrap.x86_64.netbsd.tar.bz2) = 30572187 bytes
