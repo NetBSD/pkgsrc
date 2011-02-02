@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/11/03 23:45:42 tonnerre Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/02 22:26:45 tonnerre Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
@@ -22,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-CASSANDRA_VER=	0.7.0-beta3
+CASSANDRA_VER=	0.7.0
 CASSANDRA_HOME=	${PREFIX}/share/cassandra
 EGDIR=		${PREFIX}/share/examples/cassandra
 DOCDIR=		${PREFIX}/share/doc/cassandra
