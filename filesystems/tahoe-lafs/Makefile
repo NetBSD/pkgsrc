@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2011/02/01 02:05:18 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/02 01:58:57 gdt Exp $
 #
 
 VERSION=	1.8.2
 DISTNAME=	allmydata-tahoe-${VERSION}
 EGG_NAME=	allmydata_tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://tahoe-lafs.org/source/tahoe-lafs/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 # Included egg darcsver, but depend anyway.
 DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
 DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-pyutil
-DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-mock
+DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 # Included egg setuptools_trial, not used.
 # Included egg setuptools_darcs, used (no package yet).
 DEPENDS+=	${PYPKGPREFIX}-foolscap-[0-9]*:../../net/py-foolscap
