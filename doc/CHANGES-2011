@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.232 2011/02/02 13:21:46 adam Exp $
+$NetBSD: CHANGES-2011,v 1.233 2011/02/02 13:49:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin to 2.7.9 [adam 2011-02-02]
 	Updated chat/pidgin-sametime to 2.7.9 [adam 2011-02-02]
 	Updated chat/pidgin-silc to 2.7.9 [adam 2011-02-02]
+	Updated time/gcal to 3.6 [ryoon 2011-02-02]
