@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.237 2011/02/02 18:28:13 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.238 2011/02/02 18:30:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -379,3 +379,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-dvipdfm to 0.13.2dnb3 [minskim 2011-02-02]
 	Updated print/tex-dvipdfm-doc to 0.13.2dnb1 [minskim 2011-02-02]
 	Updated print/tex-dvips to 2010.21248 [minskim 2011-02-02]
+	Updated print/tex-pdftex to 1.40.11nb3 [minskim 2011-02-02]
