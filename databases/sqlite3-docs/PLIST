@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/15 20:27:06 dholland Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/02/02 09:03:09 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -24,6 +24,7 @@ share/doc/sqlite3/c3ref/blob_bytes.html
 share/doc/sqlite3/c3ref/blob_close.html
 share/doc/sqlite3/c3ref/blob_open.html
 share/doc/sqlite3/c3ref/blob_read.html
+share/doc/sqlite3/c3ref/blob_reopen.html
 share/doc/sqlite3/c3ref/blob_write.html
 share/doc/sqlite3/c3ref/busy_handler.html
 share/doc/sqlite3/c3ref/busy_timeout.html
@@ -133,6 +134,7 @@ share/doc/sqlite3/c3ref/sqlite3.html
 share/doc/sqlite3/c3ref/status.html
 share/doc/sqlite3/c3ref/step.html
 share/doc/sqlite3/c3ref/stmt.html
+share/doc/sqlite3/c3ref/stmt_readonly.html
 share/doc/sqlite3/c3ref/stmt_status.html
 share/doc/sqlite3/c3ref/strnicmp.html
 share/doc/sqlite3/c3ref/table_column_metadata.html
@@ -178,17 +180,18 @@ share/doc/sqlite3/doc_target_crossref.html
 share/doc/sqlite3/doclist.html
 share/doc/sqlite3/docs.html
 share/doc/sqlite3/download.html
+share/doc/sqlite3/eqp.html
 share/doc/sqlite3/famous.html
 share/doc/sqlite3/faq.html
 share/doc/sqlite3/favicon.ico
 share/doc/sqlite3/features.html
-share/doc/sqlite3/fileformat.html
 share/doc/sqlite3/fileformat2.html
 share/doc/sqlite3/fileio.html
 share/doc/sqlite3/foreignkeys.html
 share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
 share/doc/sqlite3/howtocompile.html
+share/doc/sqlite3/howtocorrupt.html
 share/doc/sqlite3/images/2005osaward.gif
 share/doc/sqlite3/images/SQLite.gif
 share/doc/sqlite3/images/SQLite_big.gif
@@ -262,8 +265,12 @@ share/doc/sqlite3/images/fileformat/tableshortrecord.gif
 share/doc/sqlite3/images/fileformat/tabletree.gif
 share/doc/sqlite3/images/fileformat/vfs_role.gif
 share/doc/sqlite3/images/fileformat/write_transaction.gif
+share/doc/sqlite3/images/foreignlogos/Airbus1.jpg
+share/doc/sqlite3/images/foreignlogos/AirbusLogo2.jpg
 share/doc/sqlite3/images/foreignlogos/adobe-logo.gif
 share/doc/sqlite3/images/foreignlogos/adobe.gif
+share/doc/sqlite3/images/foreignlogos/airbus1.gif
+share/doc/sqlite3/images/foreignlogos/airbus2.gif
 share/doc/sqlite3/images/foreignlogos/apple.gif
 share/doc/sqlite3/images/foreignlogos/bloomberg.gif
 share/doc/sqlite3/images/foreignlogos/dropbox.gif
@@ -419,6 +426,7 @@ share/doc/sqlite3/lang_expr.html
 share/doc/sqlite3/lang_indexedby.html
 share/doc/sqlite3/lang_insert.html
 share/doc/sqlite3/lang_keywords.html
+share/doc/sqlite3/lang_naming.html
 share/doc/sqlite3/lang_reindex.html
 share/doc/sqlite3/lang_replace.html
 share/doc/sqlite3/lang_savepoint.html
@@ -534,9 +542,12 @@ share/doc/sqlite3/releaselog/3_7_0_1.html
 share/doc/sqlite3/releaselog/3_7_1.html
 share/doc/sqlite3/releaselog/3_7_2.html
 share/doc/sqlite3/releaselog/3_7_3.html
+share/doc/sqlite3/releaselog/3_7_4.html
+share/doc/sqlite3/releaselog/3_7_5.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rtree.html
+share/doc/sqlite3/search
 share/doc/sqlite3/selfcontained.html
 share/doc/sqlite3/serverless.html
 share/doc/sqlite3/sharedcache.html

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/15 20:27:06 dholland Exp $
+$NetBSD: distinfo,v 1.2 2011/02/02 09:03:09 adam Exp $
 
-SHA1 (sqlite_docs_3_7_3.zip) = 49ef65bfd52f9dc275dd94c3cf10c5720c2de7e5
-RMD160 (sqlite_docs_3_7_3.zip) = f44e79c0b299942c1351765c6cd5ac693261e3ed
-Size (sqlite_docs_3_7_3.zip) = 3277639 bytes
+SHA1 (sqlite-doc-3070500.zip) = d103de0bc344dde0153d170af74d56db0437d770
+RMD160 (sqlite-doc-3070500.zip) = 2e84f51d7f755af65fd502d64a44e3f7d0ffbd3a
+Size (sqlite-doc-3070500.zip) = 3491310 bytes
