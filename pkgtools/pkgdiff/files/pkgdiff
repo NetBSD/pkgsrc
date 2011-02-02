@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkgdiff,v 1.17 2009/12/10 20:26:33 abs Exp $
+# $NetBSD: pkgdiff,v 1.18 2011/02/02 10:23:02 wiz Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -10,6 +10,7 @@
 # oldfile is assumed as newfile.orig.
 #
 # Copyright (c) 2000 by Hubert Feyrer <hubertf@netbsd.org>
+# Copyright (c) 2011 by Thomas Klausner <wiz@NetBSD.org>
 # All Rights Reserved.  Absolutely no warranty.  
 #
 
@@ -34,7 +35,10 @@ basename_new="`basename $new`"
 dodiff() {
 	case x"$basename_new" in
 		xconfigure)
-		@DIFF@ -I '\(echo .*as_me:[0-9][0-9]*:\|echo .*configure:[0-9][0-9]*:\|line [0-9][0-9]* "configure\)' $*
+		@DIFF@ -I '\(echo .*as_me:[0-9][0-9]*:\|echo .*configure:[0-9][0-9]*:\|line [0-9][0-9]* "configure\)' -I '\(Avoid regenerating within pkgsrc\|exit 0\)' $*
+		;;
+                xMakefile*)
+                @DIFF@ -I '\(localedir.*=.*localedir\|localedir.*=.*share/locale\)' $*
 		;;
 		*)
 		@DIFF@ $*
