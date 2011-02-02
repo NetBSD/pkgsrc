@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2010/08/31 18:00:52 drochner Exp $
+# $NetBSD: options.mk,v 1.18 2011/02/02 13:18:48 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--enable-avahi
 PLIST.gnome=		yes
 .  include "../../devel/GConf/schemas.mk"
 GCONF_SCHEMAS+=		purple.schemas
+.else
+CONFIGURE_ARGS+=	--disable-schemas-install
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)
@@ -26,7 +28,6 @@ PLIST.gnutls=		yes
 CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+= --with-gnutls-includes=${BUILDLINK_PREFIX.gnutls}/include
 CONFIGURE_ARGS+= --with-gnutls-libs=${BUILDLINK_PREFIX.gnutls}/lib
-
 .  include "../../security/gnutls/buildlink3.mk"
 .else
 PLIST.nss=		yes
@@ -35,7 +36,6 @@ CONFIGURE_ARGS+= --with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
 CONFIGURE_ARGS+= --with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib/nspr
 CONFIGURE_ARGS+= --with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
 CONFIGURE_ARGS+= --with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
-
 .  include "../../devel/nss/buildlink3.mk"
 .endif
 
