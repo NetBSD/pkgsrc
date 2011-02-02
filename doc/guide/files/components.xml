@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.41 2010/06/07 16:06:58 tnn Exp $ -->
+<!-- $NetBSD: components.xml,v 1.42 2011/02/02 10:25:36 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -228,8 +228,7 @@ converters    games         mbone         print         x11
   applied to the files in <varname>WRKSRC</varname> directory after
   extracting them, in <ulink
   url="http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_13_03">alphabetic
-  order</ulink>, so <filename>patch-aa</filename> is applied before
-  <filename>patch-ab</filename>, etc.</para>
+  order</ulink>.</para>
 
 <sect2 id="components.patch.structure">
 <title>Structure of a single patch file</title>
@@ -250,10 +249,6 @@ converters    games         mbone         print         x11
 
   <itemizedlist>
 
-  <listitem><para>Patches that replace the <literal>==</literal>
-  operator for &man.test.1; with <literal>=</literal> in shell scripts
-  are so common that they don't need a comment at all.</para></listitem>
-
   <listitem><para>Patches for commonly known vulnerabilities should
   mention the vulnerability ID (CAN, CVE).</para></listitem>
 
@@ -263,7 +258,7 @@ converters    games         mbone         print         x11
 
   </itemizedlist>
 
-  <para>In all other cases, the patch should be commented so that any
+  <para>In all, the patch should be commented so that any
   developer who knows the code of the application can make some use of
   the patch. Special care should be taken for the upstream developers,
   since we generally want that they accept our patches, so we have less
@@ -288,9 +283,9 @@ converters    games         mbone         print         x11
   using <command>pkgvi</command> again from the same package. If
   you upgrade a package this way, you can easily compare the new
   set of patches with the previously existing one with
-  <command>patchdiff</command>. Copy the patches you want to use
-  or update from the <filename>work/.newpatches</filename>
-  directory to <filename>patches/</filename>.</para>
+  <command>patchdiff</command>. The files in <filename>patches</filename>
+  are replaced by new files, so carefully check if you want to take all
+  the changes.</para>
 
   <para>When you have finished a package, remember to generate
   the checksums for the patch files by using the <command>make
@@ -305,7 +300,13 @@ converters    games         mbone         print         x11
   version.</para>
 
   <para>The file names of the patch files are usually of the form
-  <filename>patch-<replaceable>[a-z][a-z]</replaceable></filename>.</para>
+  <filename>patch-<replaceable>path_to_file__with__underscores.c</replaceable></filename>.
+  Many packages still use the previous convention
+  <filename>patch-<replaceable>[a-z][a-z]</replaceable></filename>,
+  but new patches should be of the form containing the filename.
+  <command>mkpatches</command> included in <filename
+  role="pkg">pkgtools/pkgdiff</filename> takes care of the name
+  automatically.</para>
 
 </sect2>
 <sect2 id="components.patches.sources">
@@ -482,6 +483,9 @@ monitor_file(...)
       <emphasis>extremely important</emphasis> that you do it so that
       the packages in pkgsrc are kept simple and thus further changes
       can be done without much hassle.</para>
+
+      <para>When you have done this, please add a URL to the upstream
+      bug report to the patch comment.</para>
 
       <para>Support the idea of free software!</para>
 
