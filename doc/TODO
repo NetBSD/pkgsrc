@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10062 2011/02/02 11:54:20 ryoon Exp $
+$NetBSD: TODO,v 1.10063 2011/02/02 13:50:55 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -654,7 +654,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gap-4r4p9
 	o gated-3.6
 	o gbdfed-1.6
-	o gcal-3.6 [pkg/44477]
 	o gcc-4.5.1
 	o gcc44-4.4.5
 	o gcin-1.5.5
