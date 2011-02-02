@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/02 21:35:35 gls Exp $
+bin/mpdas
+man/man1/mpdas.1
+share/doc/mpdas/README
+share/examples/mpdas/mpdasrc.example
+share/examples/rc.d/mpdas
