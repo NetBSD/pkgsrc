@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2008/11/03 22:04:49 bjs Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/02 08:44:28 wiz Exp $
 #
 
 DISTNAME=	vbetool_0.7-1
 PKGNAME=	vbetool-0.7.1
 PKGREVISION=	2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.srcf.ucam.org/~mjg59/vbetool/
+MASTER_SITES=	http://www.codon.org.uk/~mjg59/vbetool/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.srcf.ucam.org/~mjg59/vbetool/
+HOMEPAGE=	http://www.codon.org.uk/~mjg59/vbetool/
 COMMENT=	Run real-mode video BIOS code to alter hardware state
 
 PKG_DESTDIR_SUPPORT=	user-destdir
