@@ -1,19 +1,18 @@
 #!@PERL5@
 #
-# $NetBSD: patchdiff.pl,v 1.12 2010/07/04 22:20:04 sbd Exp $
+# $NetBSD: patchdiff.pl,v 1.13 2011/02/02 10:23:02 wiz Exp $
 #
-# patchdiff: compares a set of patches patch-aa, patch-ab, ... in
-#   $WRKDIR/.newpatches in the with another set in patches.
+# patchdiff: compares a set of patches in the patch dir with their predecessors
 #
-# Copyright (c) 2000 by Dieter Baron <dillo@giga.or.at> and
-#                       Thomas Klausner <wiz@NetBSD.org>  
+# Copyright (c) 2000, 2011 by Dieter Baron <dillo@giga.or.at> and
+#                             Thomas Klausner <wiz@NetBSD.org>  
 # All Rights Reserved.  Absolutely no warranty.  
 
 use Getopt::Std;
 use Cwd;
 use File::Spec;
 
-my $oldpatchdir, $newpatchdir;
+my $patchdir, $patchdir;
 my $wrkdir, $thisdir;
 my %orig, %new;
 
@@ -48,14 +47,12 @@ sub putinhash {
      close(handle);
 }
 
-getopts('d:h');
+getopts('h');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog [-d output-directory]
-    -d dirname	directory to compare the patches in patches/ to;
-		defaults to \$WRKDIR/.newpatches
+usage: $prog
 EOF
 		exit 0;
 };
@@ -64,38 +61,28 @@ EOF
 %new=();
 $thisdir=cwd();
 chomp($thisdir);
-$oldpatchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
+$patchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
     die ("can't find PATCHDIR -- wrong dir?");
-chomp($oldpatchdir);
+chomp($patchdir);
 
-$wrkdir=`@MAKE@ show-var VARNAME=WRKDIR` or 
-    die ("can't find WRKDIR -- wrong dir?");
-chomp($wrkdir);
-
-if ($opt_d) {
-    $newpatchdir = cwd()."/$opt_d";
-} 
-else {
-    $newpatchdir="$wrkdir"."/.newpatches";
-}
-
-if ( ! -d $oldpatchdir) {
-    print "No old patches found (directory $oldpatchdir not found)\n";
+if ( ! -d $patchdir) {
+    print "No patches found (directory $patchdir not found)\n";
     exit(0);
 }
-if ( ! -d $newpatchdir ) {
-    print "No new patches found (directory $newpatchdir not found)\n";
-    exit(0);
-}
-putinhash(\%orig,"$oldpatchdir/patch-*");
-putinhash(\%new,"$newpatchdir/patch-*");
-foreach $patch (keys%orig) {
-    print "Only in old: $orig{$patch} ($patch)\n" unless defined($new{$patch});
-}
-foreach $patch (keys%new) {
-    if (defined($orig{$patch})) {
+
+open(HANDLE, "find ${patchdir} -type f -name \\\*.orig |");
+
+foreach (sort <HANDLE>) {
+    $orig = $_;
+    chomp($orig);
+    $new = $orig;
+    $new =~ s/.orig$//;
+
+    if (! -f "$new") {
+	print "File $new removed\n";
+    } else {
 #	system("diff",$orig{$patch},$new{$patch});
-	$diff=`diff $orig{$patch} $new{$patch}`;
+	$diff=`diff $orig $new`;
 	# the following regex try to eliminate uninteresting differences
 	# The general structure of the diffs-to-be-removed is:
 	# 25c25
@@ -107,17 +94,22 @@ foreach $patch (keys%new) {
 	# . NetBSD RCS Id tag differences
 	$diff=~s/^[\d,]+c[\d,]+\n..\$[N]etBSD.*\$\n---\n..\$[N]etBSD.*\$\n//m;
 	# . the name of the input file changed
-	#   (if the name of the output file has changed values in $orig{$patch}
-	#    and $new{$patch} won't match so the files don't get compared)
+	#   (if the name of the output file has changed, patches
+	#    won't get matched up anyway)
 	# . time of the input and/or output file changed
 	# . line numbers changed
-	$diff=~s/^[\d,]+c[\d,]+\n(?:.\s---\s(:?\S*).*\n)?(?:.\s\+\+\+\s(\S*).*\n)?(?:.\s@@\s(?:.*)\s@@.*\n)?---\n(?:.\s---\s.*\n)?(?:.\s\+\+\+\s\1.*\n)?(?:.\s@@\s.*\s@@.*\n)?//m;
+	$diff=~s/^[\d,]+c[\d,]+\n(?:.\s---\s(:?\S+).*\n)?(?:.\s\+\+\+\s(\S+).*\n)?(?:.\s@@\s(?:.*)\s@@.*\n)?---\n(?:.\s---\s\S+.*\n)?(?:.\s\+\+\+\s\S+.*\n)?(?:.\s@@\s.*\s@@.*\n)?//m;
 	# . only line numbers changed
 	$diff=~s/^[\d,]+c[\d,]+\n.\s@@\s.*\s@@.*\n---\n.\s@@\s.*\s@@.*\n//mg;
 	if ($diff) {
-	     print "Comparing $orig{$patch} to $new{$patch}\n$diff";
+	    if (! -s $orig) {
+		print "New file $new\n";
+	    } else {
+		print "Comparing $orig to $new\n$diff";
+	    }
+	} else {
+	    # restore previous version to get rid of uninteresting diffs
+	    rename "$orig", "$new";
 	}
-     } else {
-	print "Only in new: $new{$patch} ($patch)\n" 
-     }
+    }
 }

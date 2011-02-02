@@ -1,7 +1,7 @@
 FEEDBACK-PATCHES(1)     NetBSD General Commands Manual     FEEDBACK-PATCHES(1)
 
 NNAAMMEE
-     ffeeeeddbbaacckk--ppaattcchheess - help sending pkgsrc patches back
+     ffeeeeddbbaacckk--ppaattcchheess -- help sending pkgsrc patches back
 
 SSYYNNOOPPSSIISS
      ffeeeeddbbaacckk--ppaattcchheess _c_a_t_e_g_o_r_y_/_p_k_g [maintainer@software.org]
@@ -56,4 +56,4 @@ AAUUTTHHOORRSS
 BBUUGGSS
      Currently the pkgsrc base directory is hardcoded to _/_u_s_r_/_p_k_g_s_r_c.
 
-NetBSD 2.0_BETA                  Sep 29, 2003                  NetBSD 2.0_BETA
+NetBSD 5.0                       Sep 29, 2003                       NetBSD 5.0
