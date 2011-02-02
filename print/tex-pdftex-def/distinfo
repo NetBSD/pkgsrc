@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/01/22 20:59:07 minskim Exp $
+$NetBSD: distinfo,v 1.6 2011/02/02 18:16:17 minskim Exp $
 
-SHA1 (tex-pdftex-def-20593/pdftex-def.tar.xz) = 2fbd4abfc94570979e09ec7e17a57f678c71e6ea
-RMD160 (tex-pdftex-def-20593/pdftex-def.tar.xz) = 5e9282bbd2d8d2885d5e79725a11294bcebdce14
-Size (tex-pdftex-def-20593/pdftex-def.tar.xz) = 13284 bytes
+SHA1 (tex-pdftex-def-21241/pdftex-def.tar.xz) = 38ba984f45fa191b705c3bdd69803188c1e8a7ca
+RMD160 (tex-pdftex-def-21241/pdftex-def.tar.xz) = 9007b396e7663a7e5221d60d0665191c8e95f9d6
+Size (tex-pdftex-def-21241/pdftex-def.tar.xz) = 13456 bytes
