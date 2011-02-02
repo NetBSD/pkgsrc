@@ -1,7 +1,7 @@
 PKGDIFF(1)              NetBSD General Commands Manual              PKGDIFF(1)
 
 NNAAMMEE
-     ppkkggddiiffff - diff files in a way appropriate for pkgsrc
+     ppkkggddiiffff -- diff files in a way appropriate for pkgsrc
 
 SSYYNNOOPPSSIISS
      ppkkggddiiffff [_o_p_t_i_o_n_s] _o_l_d_f_i_l_e _n_e_w_f_i_l_e
@@ -24,4 +24,4 @@ EENNVVIIRROONNMMEENNTT
 SSEEEE AALLSSOO
      cvs(1), diff(1), mkpatches(1), patch(1), pkgvi(1)
 
-NetBSD 1.6                       Jun 14, 2003                       NetBSD 1.6
+NetBSD 5.0                       Jun 14, 2003                       NetBSD 5.0
