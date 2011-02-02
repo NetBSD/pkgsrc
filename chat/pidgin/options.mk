@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.10 2010/08/30 11:18:02 adam Exp $
+# $NetBSD: options.mk,v 1.11 2011/02/02 13:18:48 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
-PKG_SUPPORTED_OPTIONS+=		dbus debug farsight gstreamer gtkspell
-PKG_SUGGESTED_OPTIONS+=		dbus gtkspell farsight gstreamer
+PKG_SUPPORTED_OPTIONS+=		dbus debug gstreamer gtkspell farsight x11
+PKG_SUGGESTED_OPTIONS+=		dbus gstreamer gtkspell farsight x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dbus vv
+PLIST_VARS+=		dbus vv x11
 
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
@@ -40,5 +40,16 @@ CONFIGURE_ARGS+=	--enable-gstreamer
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+= --enable-debug
+CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+.if !empty(PKG_OPTIONS:Mx11)
+PLIST.x11=		yes
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-startup-notification
+CONFIGURE_ARGS+=	--without-x
 .endif

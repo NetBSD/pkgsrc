@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2010/08/30 11:18:01 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2011/02/02 13:18:48 adam Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -6,7 +6,7 @@
 # used by chat/pidgin-sametime/Makefile
 # used by chat/pidgin-silc/Makefile
 
-PIDGIN_VERSION=	2.7.3
+PIDGIN_VERSION=	2.7.9
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
@@ -16,10 +16,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pidgin.im/
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config gmake
+GNU_CONFIGURE=		yes
 
 PATCHDIR=		${.CURDIR}/../../chat/libpurple/patches
 DISTINFO_FILE?=		${.CURDIR}/../../chat/libpurple/distinfo
