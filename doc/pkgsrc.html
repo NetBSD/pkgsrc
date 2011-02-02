@@ -4407,8 +4407,7 @@ converters    games         mbone         print         x11
 <p>In the <span class="emphasis"><em>patch</em></span> phase, these patches are
   applied to the files in <code class="varname">WRKSRC</code> directory after
   extracting them, in <a class="ulink" href="http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_13_03" target="_top">alphabetic
-  order</a>, so <code class="filename">patch-aa</code> is applied before
-  <code class="filename">patch-ab</code>, etc.</p>
+  order</a>.</p>
 <div class="sect2" title="11.3.1. Structure of a single patch file">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="components.patch.structure"></a>11.3.1. Structure of a single patch file</h3></div></div></div>
@@ -4425,16 +4424,13 @@ converters    games         mbone         print         x11
   each change that the patch does. There are a number of standard
   cases:</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc">
-<li class="listitem"><p>Patches that replace the <code class="literal">==</code>
-  operator for <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?test+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">test</span>(1)</span></a> with <code class="literal">=</code> in shell scripts
-  are so common that they don't need a comment at all.</p></li>
 <li class="listitem"><p>Patches for commonly known vulnerabilities should
   mention the vulnerability ID (CAN, CVE).</p></li>
 <li class="listitem"><p>Patches that change source code should mention the
   platform and other environment (for example, the compiler) that the
   patch is needed for.</p></li>
 </ul></div>
-<p>In all other cases, the patch should be commented so that any
+<p>In all, the patch should be commented so that any
   developer who knows the code of the application can make some use of
   the patch. Special care should be taken for the upstream developers,
   since we generally want that they accept our patches, so we have less
@@ -4456,9 +4452,9 @@ converters    games         mbone         print         x11
   using <span class="command"><strong>pkgvi</strong></span> again from the same package. If
   you upgrade a package this way, you can easily compare the new
   set of patches with the previously existing one with
-  <span class="command"><strong>patchdiff</strong></span>. Copy the patches you want to use
-  or update from the <code class="filename">work/.newpatches</code>
-  directory to <code class="filename">patches/</code>.</p>
+  <span class="command"><strong>patchdiff</strong></span>. The files in <code class="filename">patches</code>
+  are replaced by new files, so carefully check if you want to take all
+  the changes.</p>
 <p>When you have finished a package, remember to generate
   the checksums for the patch files by using the <span class="command"><strong>make
   makepatchsum</strong></span> command, see <a class="xref" href="#components.distinfo" title="11.2. distinfo">Section 11.2, &#8220;<code class="filename">distinfo</code>&#8221;</a>.</p>
@@ -4469,7 +4465,12 @@ converters    games         mbone         print         x11
   and usually makes it possible to remove the patch in future
   version.</p>
 <p>The file names of the patch files are usually of the form
-  <code class="filename">patch-<em class="replaceable"><code>[a-z][a-z]</code></em></code>.</p>
+  <code class="filename">patch-<em class="replaceable"><code>path_to_file__with__underscores.c</code></em></code>.
+  Many packages still use the previous convention
+  <code class="filename">patch-<em class="replaceable"><code>[a-z][a-z]</code></em></code>,
+  but new patches should be of the form containing the filename.
+  <span class="command"><strong>mkpatches</strong></span> included in <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a> takes care of the name
+  automatically.</p>
 </div>
 <div class="sect2" title="11.3.3. Sources where the patch files come from">
 <div class="titlepage"><div><div><h3 class="title">
@@ -4630,6 +4631,8 @@ monitor_file(...)
       <span class="emphasis"><em>extremely important</em></span> that you do it so that
       the packages in pkgsrc are kept simple and thus further changes
       can be done without much hassle.</p>
+<p>When you have done this, please add a URL to the upstream
+      bug report to the patch comment.</p>
 <p>Support the idea of free software!</p>
 </div>
 </div>
@@ -7518,7 +7521,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168230185675"></a><dl>
+<a name="id1168230185389"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7535,7 +7538,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230185748"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168230185393"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7545,7 +7548,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230185756"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168230185401"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7556,7 +7559,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230185765"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168230185411"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8516,6 +8519,12 @@ pre-configure:
       implementation, <span class="quote">&#8220;<span class="quote">1.4</span>&#8221;</span> insists on versions 1.4 or
       above, and <span class="quote">&#8220;<span class="quote">1.5</span>&#8221;</span> only accepts versions 1.5 or
       above. This variable is not set by default.</p></li>
+<li class="listitem"><p><code class="varname">PKG_JAVA_HOME</code> is
+      automatically set to the runtime location of the used Java
+      implementation dependency. It may be used to set
+      <code class="varname">JAVA_HOME</code> to a good value if the program
+      needs this variable to be defined.
+      </p></li>
 </ul></div>
 </div>
 <div class="sect2" title="19.4.3. Packages containing perl scripts">
@@ -9562,7 +9571,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168230172542"></a><dl>
+<a name="id1168230172265"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9605,7 +9614,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230172546"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168230172268"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9621,7 +9630,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230172648"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168230172302"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9639,7 +9648,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230172684"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168230172339"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9657,7 +9666,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230172720"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168230172374"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9670,7 +9679,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230172738"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168230172392"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9686,7 +9695,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230172763"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168230172418"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9710,7 +9719,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230172830"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168230172485"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9735,7 +9744,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230172862"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168230172517"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9783,7 +9792,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230172917"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168230172571"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
