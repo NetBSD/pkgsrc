@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/02/02 22:26:45 tonnerre Exp $
+# $NetBSD: Makefile,v 1.8 2011/02/02 23:15:52 tonnerre Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
@@ -44,10 +44,10 @@ FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME}		\
 			CASSANDRA_USER=${CASSANDRA_USER}	\
 			CASSANDRA_GROUP=${CASSANDRA_GROUP}
 
-PRIVATE_EGFILES=
+PRIVATE_EGFILES=	passwd.properties
 PUBLIC_EGFILES=		cassandra-env.sh cassandra-topology.properties	\
 			cassandra.yaml log4j-server.properties		\
-			log4j-tools.properties
+			log4j-tools.properties access.properties
 
 DOCFILES=		CHANGES LICENSE NEWS NOTICE README
 
