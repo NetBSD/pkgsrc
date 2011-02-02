@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/11/03 23:45:42 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/02/02 22:26:45 tonnerre Exp $
 share/cassandra/CHANGES.txt
 share/cassandra/LICENSE.txt
 share/cassandra/NEWS.txt
@@ -17,6 +17,7 @@ share/cassandra/bin/sstablekeys
 share/cassandra/bin/stop-server
 share/cassandra/conf/README.txt
 share/cassandra/conf/access.properties
+share/cassandra/conf/passwd.properties
 share/cassandra/interface/avro/cassandra.avpr
 share/cassandra/interface/cassandra.genavro
 share/cassandra/interface/cassandra.thrift
@@ -624,6 +625,7 @@ share/cassandra/javadoc/org/apache/cassandra/net/Header.html
 share/cassandra/javadoc/org/apache/cassandra/net/HeaderTypes.html
 share/cassandra/javadoc/org/apache/cassandra/net/IAsyncCallback.html
 share/cassandra/javadoc/org/apache/cassandra/net/IAsyncResult.html
+share/cassandra/javadoc/org/apache/cassandra/net/IMessageCallback.html
 share/cassandra/javadoc/org/apache/cassandra/net/IVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/net/IncomingTcpConnection.html
 share/cassandra/javadoc/org/apache/cassandra/net/Message.html
@@ -638,6 +640,7 @@ share/cassandra/javadoc/org/apache/cassandra/net/class-use/Header.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/HeaderTypes.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/IAsyncCallback.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/IAsyncResult.html
+share/cassandra/javadoc/org/apache/cassandra/net/class-use/IMessageCallback.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/IVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/IncomingTcpConnection.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/Message.html
@@ -1202,12 +1205,14 @@ share/cassandra/javadoc/org/apache/cassandra/thrift/package-summary.html
 share/cassandra/javadoc/org/apache/cassandra/thrift/package-tree.html
 share/cassandra/javadoc/org/apache/cassandra/thrift/package-use.html
 share/cassandra/javadoc/org/apache/cassandra/tools/ClusterCmd.html
+share/cassandra/javadoc/org/apache/cassandra/tools/NodeCmd.NodeCommand.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeCmd.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeProbe.html
 share/cassandra/javadoc/org/apache/cassandra/tools/SSTableExport.html
 share/cassandra/javadoc/org/apache/cassandra/tools/SSTableImport.html
 share/cassandra/javadoc/org/apache/cassandra/tools/SchemaTool.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/ClusterCmd.html
+share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeCmd.NodeCommand.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeCmd.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeProbe.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/SSTableExport.html
@@ -1224,6 +1229,8 @@ share/cassandra/javadoc/org/apache/cassandra/utils/BoundedStatsDeque.html
 share/cassandra/javadoc/org/apache/cassandra/utils/ByteBufferUtil.html
 share/cassandra/javadoc/org/apache/cassandra/utils/CLibrary.html
 share/cassandra/javadoc/org/apache/cassandra/utils/CloseableIterator.html
+share/cassandra/javadoc/org/apache/cassandra/utils/DefaultDouble.html
+share/cassandra/javadoc/org/apache/cassandra/utils/DefaultInteger.html
 share/cassandra/javadoc/org/apache/cassandra/utils/DestructivePQIterator.html
 share/cassandra/javadoc/org/apache/cassandra/utils/EstimatedHistogram.EstimatedHistogramSerializer.html
 share/cassandra/javadoc/org/apache/cassandra/utils/EstimatedHistogram.html
@@ -1255,6 +1262,8 @@ share/cassandra/javadoc/org/apache/cassandra/utils/class-use/BoundedStatsDeque.h
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/ByteBufferUtil.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/CLibrary.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/CloseableIterator.html
+share/cassandra/javadoc/org/apache/cassandra/utils/class-use/DefaultDouble.html
+share/cassandra/javadoc/org/apache/cassandra/utils/class-use/DefaultInteger.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/DestructivePQIterator.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/EstimatedHistogram.EstimatedHistogramSerializer.html
 share/cassandra/javadoc/org/apache/cassandra/utils/class-use/EstimatedHistogram.html
@@ -1291,14 +1300,14 @@ share/cassandra/javadoc/resources/inherit.gif
 share/cassandra/javadoc/serialized-form.html
 share/cassandra/javadoc/stylesheet.css
 share/cassandra/lib/antlr-3.1.3.jar
-share/cassandra/lib/apache-cassandra-0.7.0-beta3.jar
+share/cassandra/lib/${PKGNAME}.jar
 share/cassandra/lib/avro-1.4.0-fixes.jar
 share/cassandra/lib/avro-1.4.0-sources-fixes.jar
-share/cassandra/lib/clhm-production.jar
 share/cassandra/lib/commons-cli-1.1.jar
 share/cassandra/lib/commons-codec-1.2.jar
 share/cassandra/lib/commons-collections-3.2.1.jar
 share/cassandra/lib/commons-lang-2.4.jar
+share/cassandra/lib/concurrentlinkedhashmap-lru-1.1.jar
 share/cassandra/lib/guava-r05.jar
 share/cassandra/lib/high-scale-lib.jar
 share/cassandra/lib/ivy-2.1.0.jar
@@ -1312,11 +1321,11 @@ share/cassandra/lib/jug-2.0.0.jar
 share/cassandra/lib/libthrift-0.5.jar
 share/cassandra/lib/licenses/antlr-3.1.3.txt
 share/cassandra/lib/licenses/avro-1.3.1-dev.txt
-share/cassandra/lib/licenses/clhm-production.txt
 share/cassandra/lib/licenses/commons-cli-1.1.txt
 share/cassandra/lib/licenses/commons-codec-1.2.txt
 share/cassandra/lib/licenses/commons-collections-3.2.1.txt
 share/cassandra/lib/licenses/commons-lang-2.4.txt
+share/cassandra/lib/licenses/concurrentlinkedhashmap-lru-1.1.txt
 share/cassandra/lib/licenses/guava-r05.txt
 share/cassandra/lib/licenses/high-scale-lib.txt
 share/cassandra/lib/licenses/jackson-core-asl-1.4.0.txt
@@ -1329,13 +1338,13 @@ share/cassandra/lib/licenses/jug-2.0.0.txt
 share/cassandra/lib/licenses/libthrift-0.5.txt
 share/cassandra/lib/licenses/log4j-1.2.16.txt
 share/cassandra/lib/licenses/servlet-api-2.5-20081211.txt
-share/cassandra/lib/licenses/slf4j-api-1.5.8.txt
-share/cassandra/lib/licenses/slf4j-log4j12-1.5.8.txt
+share/cassandra/lib/licenses/slf4j-api-1.6.1.txt
+share/cassandra/lib/licenses/slf4j-log4j12-1.6.1.txt
 share/cassandra/lib/licenses/snakeyaml-1.6.txt
 share/cassandra/lib/log4j-1.2.16.jar
 share/cassandra/lib/servlet-api-2.5-20081211.jar
-share/cassandra/lib/slf4j-api-1.5.8.jar
-share/cassandra/lib/slf4j-log4j12-1.5.8.jar
+share/cassandra/lib/slf4j-api-1.6.1.jar
+share/cassandra/lib/slf4j-log4j12-1.6.1.jar
 share/cassandra/lib/snakeyaml-1.6.jar
 share/doc/cassandra/CHANGES
 share/doc/cassandra/LICENSE
