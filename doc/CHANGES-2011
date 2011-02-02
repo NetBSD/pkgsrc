@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.229 2011/02/02 09:04:03 adam Exp $
+$NetBSD: CHANGES-2011,v 1.230 2011/02/02 11:20:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -366,3 +366,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3 to 3.7.5 [adam 2011-02-02]
 	Updated databases/sqlite3-docs to 3.7.5 [adam 2011-02-02]
 	Updated databases/sqlite3-tcl to 3.7.5 [adam 2011-02-02]
+	Updated mail/msmtp to 1.4.23 [ryoon 2011-02-02]
