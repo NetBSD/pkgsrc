@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.228 2011/02/02 05:08:20 obache Exp $
+$NetBSD: CHANGES-2011,v 1.229 2011/02/02 09:04:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -363,3 +363,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/tahoe-lafs to 1.8.2 [gdt 2011-02-01]
 	Updated x11/stalonetray to 0.8.1 [schnoebe 2011-02-01]
 	Updated pkgtools/pkglint to 4.97 [wiz 2011-02-01]
+	Updated databases/sqlite3 to 3.7.5 [adam 2011-02-02]
+	Updated databases/sqlite3-docs to 3.7.5 [adam 2011-02-02]
+	Updated databases/sqlite3-tcl to 3.7.5 [adam 2011-02-02]
