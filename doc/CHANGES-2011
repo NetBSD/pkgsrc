@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.241 2011/02/02 22:21:14 tron Exp $
+$NetBSD: CHANGES-2011,v 1.242 2011/02/02 22:27:00 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -383,3 +383,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-tetex to 3.0.21248 [minskim 2011-02-02]
 	Added audio/mpdas version 0.3.0 [gls 2011-02-02]
 	Updated mail/dovecot2 to 2.0.9nb1 [tron 2011-02-02]
+	Updated databases/apache-cassandra to 0.7.0 [tonnerre 2011-02-02]
