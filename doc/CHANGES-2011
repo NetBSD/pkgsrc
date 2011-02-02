@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.227 2011/02/01 09:08:11 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.228 2011/02/02 05:08:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -208,7 +208,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/tidy to 20091027 [wiz 2011-01-21]
 	Updated games/powder to 115 [wiz 2011-01-21]
 	Updated misc/kchmviewer to 5.3 [wiz 2011-01-21]
-	Updated converters/p5-Convert-UUlib to 1.34 [gls 2011-02-21]
+	Updated converters/p5-Convert-UUlib to 1.34 [gls 2011-01-21]
 	Updated games/gbrainy to 1.61 [wiz 2011-01-21]
 	Updated games/puzzles to 9076 [wiz 2011-01-21]
 	Updated x11/libXp to 1.0.1 [wiz 2011-01-21]
