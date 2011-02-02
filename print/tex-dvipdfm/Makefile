@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/01/22 20:56:29 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/02 18:23:36 minskim Exp $
 
 DISTNAME=	dvipdfm
 PKGNAME=	tex-${DISTNAME}-0.13.2d
-PKGREVISION=	2
-TEXLIVE_REV=	21040
+PKGREVISION=	3
+TEXLIVE_REV=	21248
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supplementary files for dvipdfm
