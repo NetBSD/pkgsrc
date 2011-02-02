@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/01/22 21:30:05 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2011/02/02 18:27:51 minskim Exp $
 
 DISTNAME=	dvips.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2010
-TEXLIVE_REV=	21040
+TEXLIVE_REV=	21248
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-dvips
