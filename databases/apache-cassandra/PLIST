@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/02/02 22:26:45 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/02/02 23:15:52 tonnerre Exp $
 share/cassandra/CHANGES.txt
 share/cassandra/LICENSE.txt
 share/cassandra/NEWS.txt
@@ -16,8 +16,6 @@ share/cassandra/bin/sstable2json
 share/cassandra/bin/sstablekeys
 share/cassandra/bin/stop-server
 share/cassandra/conf/README.txt
-share/cassandra/conf/access.properties
-share/cassandra/conf/passwd.properties
 share/cassandra/interface/avro/cassandra.avpr
 share/cassandra/interface/cassandra.genavro
 share/cassandra/interface/cassandra.thrift
@@ -1351,9 +1349,11 @@ share/doc/cassandra/LICENSE
 share/doc/cassandra/NEWS
 share/doc/cassandra/NOTICE
 share/doc/cassandra/README
+share/examples/cassandra/access.properties
 share/examples/cassandra/cassandra-env.sh
 share/examples/cassandra/cassandra-topology.properties
 share/examples/cassandra/cassandra.yaml
 share/examples/cassandra/log4j-server.properties
 share/examples/cassandra/log4j-tools.properties
+share/examples/cassandra/passwd.properties
 share/examples/rc.d/cassandra
