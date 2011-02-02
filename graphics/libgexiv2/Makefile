@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/12 18:46:35 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/02 14:44:45 drochner Exp $
 
 DISTNAME=	libgexiv2-0.3.0
 CATEGORIES=	graphics devel
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake m4 pkg-config
+USE_TOOLS+=		gmake m4 pkg-config bash
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
