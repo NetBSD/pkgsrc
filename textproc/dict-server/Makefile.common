@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2009/12/31 00:42:24 abs Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/02/03 12:55:51 obache Exp $
 # used by textproc/dict-server/Makefile
 # used by textproc/dict-client/Makefile
-DISTNAME=	dictd-1.11.2
+DISTNAME=	dictd-1.12.0
 
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 		ftp://ftp.dict.org/pub/dict/

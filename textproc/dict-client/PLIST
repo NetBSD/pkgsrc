@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/22 16:09:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/02/03 12:55:50 obache Exp $
 bin/dict
+bin/dict_lookup
 bin/dictl
 man/man1/dict.1
+man/man1/dict_lookup.1
 man/man1/dictl.1
