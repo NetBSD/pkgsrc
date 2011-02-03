@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.506 2011/01/23 14:33:05 wiz Exp $
+# $NetBSD: Makefile,v 1.507 2011/02/03 13:37:02 imil Exp $
 #
 
 COMMENT=	System utilities
@@ -288,6 +288,7 @@ SUBDIR+=	setquota
 SUBDIR+=	sformat
 SUBDIR+=	shc
 SUBDIR+=	shmux
+SUBDIR+=	shelldap
 SUBDIR+=	skill
 SUBDIR+=	slay
 SUBDIR+=	smartmontools
