@@ -1,0 +1,17 @@
+$NetBSD: patch-bf,v 1.1.1.1 2011/02/03 18:57:15 drochner Exp $
+
+--- docs/gtkada_ug/Makefile.in.orig	2011-02-02 18:47:06.000000000 +0000
++++ docs/gtkada_ug/Makefile.in
+@@ -17,10 +17,10 @@ all: gtkada_ug.texi gfdl.texi
+ 	-$(RM) *.aux *.cp *.cps *.dvi *.fn *.ky *.log *.pg *.toc *.tp *.vr
+ 
+ install:
+-	-$(MKDIR) $(docdir)
++	-$(MKDIR) $(DESTDIR)$(docdir)
+ 	for i in `ls *.html *.info* *.ps *.texi *.txt *.tex *.gif *.jpg`; \
+ 	do \
+-	   $(INSTALL_DATA) $$i $(docdir); \
++	   $(INSTALL_DATA) $$i $(DESTDIR)$(docdir); \
+ 	done
+ 
+ clean:
