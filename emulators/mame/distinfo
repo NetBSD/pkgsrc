@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/03 22:22:36 wiz Exp $
+
+SHA1 (mame0141s.zip) = 80225e2694469dac39a75815f227b864a4992f5e
+RMD160 (mame0141s.zip) = c09ef461280dfd7e45ca638caaa66d8752a9794b
+Size (mame0141s.zip) = 17092788 bytes
+SHA1 (patch-makefile) = 59c3f439e3a250564e82ad6addc30b6c85dbc80c
+SHA1 (patch-src_emu_debug_debugcpu.c) = 1838cca446d62ebd824a540d30770fe56819cf03
+SHA1 (patch-src_emu_emucore.h) = 096ae265c2b0eb1021bd9b04b0b8b26e73519a9c
+SHA1 (patch-src_lib_util_astring.h) = 9cd5fbc7bd477707ba4de328e0429c0d6cbe6924
+SHA1 (patch-src_osd_sdl_sdlsync__ntc.c) = 1a8e940ad9cd59bd6bbc1850f24040a7d074b57a
