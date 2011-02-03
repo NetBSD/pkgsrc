@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1425 2011/02/01 20:56:21 drochner Exp $
+# $NetBSD: Makefile,v 1.1426 2011/02/03 08:04:37 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -411,7 +411,6 @@ SUBDIR+=	mercurial
 SUBDIR+=	mico
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
-SUBDIR+=	mock
 SUBDIR+=	mono-addins
 SUBDIR+=	mono-tools
 SUBDIR+=	monodevelop
@@ -1177,6 +1176,7 @@ SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
+SUBDIR+=	py-mock
 SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-newt
 SUBDIR+=	py-nose
