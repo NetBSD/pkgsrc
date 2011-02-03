@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/03 22:22:35 wiz Exp $
+bin/chdman
+bin/jedutil
+bin/ldresample
+bin/ldverify
+bin/mame
+bin/romcmp
+bin/unidasm
+man/man1/chdman.1
+man/man1/jedutil.1
+man/man1/ldverify.1
+man/man1/mame.1
+man/man1/romcmp.1
+share/doc/mame/config.txt
+share/doc/mame/license.txt
+share/doc/mame/mame.txt
