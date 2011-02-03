@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10065 2011/02/03 09:21:08 wiz Exp $
+$NetBSD: TODO,v 1.10066 2011/02/03 12:40:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1503,7 +1503,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xz-5.0.1
 	o xzip-182
 	o yafc-1.1
-	o yaz-4.1.3
 	o yodl-2.14.3
 	o ysm-2.9.9.1
 	o yudit-2.9.2
