@@ -1,0 +1,25 @@
+$NetBSD: patch-makefile,v 1.1.1.1 2011/02/03 22:22:36 wiz Exp $
+
+First chunk accepted upstream, second pkgsrc-only.
+
+--- makefile.orig	2010-12-29 22:50:26.000000000 +0000
++++ makefile
+@@ -86,6 +88,9 @@ endif
+ ifeq ($(firstword $(filter GNU/kFreeBSD,$(UNAME))),GNU/kFreeBSD)
+ TARGETOS = freebsd
+ endif
++ifeq ($(firstword $(filter NetBSD,$(UNAME))),NetBSD)
++TARGETOS = netbsd
++endif
+ ifeq ($(firstword $(filter OpenBSD,$(UNAME))),OpenBSD)
+ TARGETOS = openbsd
+ endif
+@@ -344,7 +349,7 @@ NAME = $(TARGET)$(SUBTARGET)
+ endif
+ 
+ # fullname is prefix+name+suffix+suffix64+suffixdebug
+-FULLNAME = $(PREFIX)$(PREFIXSDL)$(NAME)$(SUFFIX)$(SUFFIX64)$(SUFFIXDEBUG)$(SUFFIXPROFILE)
++FULLNAME = $(PREFIXSDL)$(NAME)$(SUFFIX)$(SUFFIXDEBUG)$(SUFFIXPROFILE)
+ 
+ # add an EXE suffix to get the final emulator name
+ EMULATOR = $(FULLNAME)$(EXE)
