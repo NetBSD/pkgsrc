@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.252 2011/02/03 14:47:23 uebayasi Exp $
+$NetBSD: CHANGES-2011,v 1.253 2011/02/03 19:39:21 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -396,3 +396,11 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/mutt-devel to 1.5.21nb1 [tron 2011-02-03]
 	Updated benchmarks/randread to 0.2 [obache 2011-02-03]
 	Updated inputmethod/skk to 14.2 [uebayasi 2011-02-03]
+	Updated x11/py-qt4 to 4.8.3 [drochner 2011-02-03]
+	Updated x11/py-sip to 4.12.1 [drochner 2011-02-03]
+	Added devel/gprbuild-aux version 20101120 [drochner 2011-02-03]
+	Added x11/gtkada version 2.22 [drochner 2011-02-03]
+	Added textproc/xmlada version 4.1w [drochner 2011-02-03]
+	Added devel/gnatpython version 20101207 [drochner 2011-02-03]
+	Added lang/gnat-aux version 20110125 [drochner 2011-02-03]
+	Updated print/poppler to 0.16.2 [drochner 2011-02-03]
