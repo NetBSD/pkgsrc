@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10071 2011/02/03 14:17:34 obache Exp $
+$NetBSD: TODO,v 1.10072 2011/02/03 15:38:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -868,6 +868,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.4
 	o libdockapp-0.6.1
 	o libdrm-2.4.23
+	o liberation-ttf-1.06
 	o libev-4.03
 	o libextractor-0.6.2
 	o libflash-0.4.13
