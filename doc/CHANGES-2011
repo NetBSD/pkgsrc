@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.248 2011/02/03 13:03:22 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.249 2011/02/03 13:41:51 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -391,3 +391,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/dict-server to 1.12.0 [obache 2011-02-03]
 	Updated textproc/dict-client to 1.12.0 [obache 2011-02-03]
 	Updated misc/dialog to 1.1.20110118 [wiz 2011-02-03]
+	Added devel/p5-Term-Shell version 0.02 [imil 2011-02-03]
+	Added sysutils/shelldap version 0.2 [imil 2011-02-03]
