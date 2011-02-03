@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tinyproxy.sh,v 1.1.1.1 2003/03/07 23:46:01 salo Exp $
+# $NetBSD: tinyproxy.sh,v 1.2 2011/02/03 19:27:55 shattered Exp $
 #
 
 # PROVIDE: tinyproxy
