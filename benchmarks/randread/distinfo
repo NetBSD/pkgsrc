@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2010/12/30 08:20:42 obache Exp $
+$NetBSD: distinfo,v 1.5 2011/02/03 14:15:12 obache Exp $
 
-SHA1 (randread-0.1.tar.gz) = fefdf7ebeda6767a85215898e67606745f57d149
-RMD160 (randread-0.1.tar.gz) = 012cfc71799affe061bff87a511c6298a7d61361
-Size (randread-0.1.tar.gz) = 3490 bytes
-SHA1 (patch-aa) = 9d29d08e0830320c3e9964b80c008f2b1b95711c
-SHA1 (patch-ab) = 2f7193cfb153d45c14b9fac960260c0244bc6a1f
+SHA1 (randread-0.2.tar.gz) = 5085d07cb6c4395d018addb4ab81f060473ea620
+RMD160 (randread-0.2.tar.gz) = e8806da27cc231748b9416b16949c4921abc1d91
+Size (randread-0.2.tar.gz) = 8112 bytes
+SHA1 (patch-Makefile) = 0b709cc55687b274eda350cd263477644964c6e9
+SHA1 (patch-filelist.c) = eee8bb8586cdcc568e8cf44965465d5f1885cd93
+SHA1 (patch-filelist__test.c) = 15bf7f34db587812061f2e9aa5bf743c72ad458a
+SHA1 (patch-test.c) = 0257aea93fdc12840c12e3818672fc8e4c2fb232
