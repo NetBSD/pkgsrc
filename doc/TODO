@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10067 2011/02/03 12:41:00 wiz Exp $
+$NetBSD: TODO,v 1.10068 2011/02/03 12:57:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -507,8 +507,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o denemo-0.8.22
 	o dhid-5.3
 	o dialog-1.1.20110118
-	o dict-client-1.12.0 [pkg/44363]
-	o dict-server-1.12.0 [pkg/44363]
 	o diffstat-1.54
 	o digikam-1.8.0
 	o dinotrace-9.3e
