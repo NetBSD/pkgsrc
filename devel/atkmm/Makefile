@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/13 15:56:24 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.2 2011/02/03 21:52:33 adam Exp $
 
 DISTNAME=	atkmm-2.22.2
 CATEGORIES=	devel
@@ -9,19 +8,22 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	C++ bindings for atk
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 CONFLICTS+=	gtkmm<2.22.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	pkg-config gmake perl
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c++
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		autoconf gmake perl pkg-config
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	atkmm-2.22.1/atk/PaxHeaders.17805/atkmm.pc.in
 PKGCONFIG_OVERRIDE+=	atkmm-2.22.1/atk/atkmm.pc.in
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
