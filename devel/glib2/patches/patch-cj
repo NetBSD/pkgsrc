@@ -1,8 +1,9 @@
-$NetBSD: patch-cj,v 1.1 2011/02/01 19:20:14 jwise Exp $
+$NetBSD: patch-cj,v 1.2 2011/02/03 15:12:45 wiz Exp $
 
 The mem-overflow test contains a declaration of an empty struct, which breaks
 on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
 test for now, pending a better fix.
+https://bugzilla.gnome.org/show_bug.cgi?id=641350
 
 --- glib/tests/Makefile.in.orig	Sun Nov 14 01:02:00 2010
 +++ glib/tests/Makefile.in	Tue Feb  1 12:25:15 2011
@@ -42,15 +43,6 @@ test for now, pending a better fix.
  	$(printf_SOURCES) $(protocol_SOURCES) queue.c $(rand_SOURCES) \
  	regex.c scannerapi.c sequence.c shell.c slist.c \
  	$(strfuncs_SOURCES) $(string_SOURCES) $(testing_SOURCES) \
-@@ -458,7 +456,7 @@
- install_sh = @install_sh@
- libdir = @libdir@
- libexecdir = @libexecdir@
--localedir = @localedir@
-+localedir = /opt/tnf/lib/locale
- localstatedir = @localstatedir@
- mandir = @mandir@
- mkdir_p = @mkdir_p@
 @@ -489,7 +487,7 @@
  EXTRA_DIST = 4096-random-bytes keyfiletest.ini bookmarks.xbel
  TEST_PROGS = testing option-context keyfile fileutils printf protocol \
