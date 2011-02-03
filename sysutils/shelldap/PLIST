@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/03 13:34:10 imil Exp $
+bin/shelldap

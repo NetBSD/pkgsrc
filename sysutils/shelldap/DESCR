@@ -1,0 +1,3 @@
+A handy shell-like interface for browsing LDAP servers and editing their
+content. It keeps command history, has sane autocompletes, credential caching,
+site-wide and individual configs, and it's fun to say.
