@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.14 2010/11/15 13:07:24 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.15 2011/02/03 19:28:48 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -119,6 +119,7 @@ share/sip${PYVERSSUFFIX}/QtCore/qpluginloader.sip
 share/sip${PYVERSSUFFIX}/QtCore/qpoint.sip
 share/sip${PYVERSSUFFIX}/QtCore/qprocess.sip
 share/sip${PYVERSSUFFIX}/QtCore/qpropertyanimation.sip
+share/sip${PYVERSSUFFIX}/QtCore/qpynullvariant.sip
 share/sip${PYVERSSUFFIX}/QtCore/qreadwritelock.sip
 share/sip${PYVERSSUFFIX}/QtCore/qrect.sip
 share/sip${PYVERSSUFFIX}/QtCore/qregexp.sip
