@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1426 2011/02/03 08:04:37 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1427 2011/02/03 13:31:17 imil Exp $
 #
 
 COMMENT=	Development utilities
@@ -989,6 +989,7 @@ SUBDIR+=	p5-Term-ReadLine
 SUBDIR+=	p5-Term-ReadLine-Perl
 SUBDIR+=	p5-Term-ReadPassword
 SUBDIR+=	p5-Term-Screen
+SUBDIR+=	p5-Term-Shell
 SUBDIR+=	p5-Term-ShellUI
 SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-Aggregate
