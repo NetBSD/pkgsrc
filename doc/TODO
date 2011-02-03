@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10070 2011/02/03 13:03:22 wiz Exp $
+$NetBSD: TODO,v 1.10071 2011/02/03 14:17:34 obache Exp $
 
 Suggested new packages
 ======================
@@ -1152,7 +1152,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o radiance-3.7.2
 	o rails-3.0.3
 	o raine-0.51.8
-	o randread-0.2 [pkg/44354]
 	o randrproto-1.3.2
 	o rapidsvn-0.12
 	o raptor-2.0.0
