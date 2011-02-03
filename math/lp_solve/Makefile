@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/16 15:35:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/03 11:30:54 wiz Exp $
 #
 
 DISTNAME=	lp_solve_5.5.2.0_source
@@ -37,9 +37,9 @@ LPSOLVE_ARCH=	ux64
 INSTALLATION_DIRS=	bin include/lpsolve lib
 
 do-build:
-	cd ${WRKSRC}/lp_solve && ${SHELL} ccc
-	cd ${WRKSRC}/lpsolve55 && ${SHELL} ccc
-	cd ${WRKSRC}/demo && ${SHELL} ccc
+	cd ${WRKSRC}/lp_solve && ${SH} ccc
+	cd ${WRKSRC}/lpsolve55 && ${SH} ccc
+	cd ${WRKSRC}/demo && ${SH} ccc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lp_solve/bin/${LPSOLVE_ARCH}/lp_solve \
