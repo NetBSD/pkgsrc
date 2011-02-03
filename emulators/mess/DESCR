@@ -1,0 +1,6 @@
+MESS is a source-available project which documents the hardware
+for a wide variety of (mostly vintage) computers, video game
+consoles, and calculators through software emulation, as MAME does
+for arcade games. As a nice side effect to this documentation, MESS
+allows software and games for these hardware platforms to be run
+on modern PCs.
