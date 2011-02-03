@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/03 13:34:10 imil Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/03 21:33:09 imil Exp $
 #
 
 PKGNAME=	shelldap-0.2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://projects.martini.nu/shelldap
 COMMENT=	Shell-like interface for browsing LDAP servers
-# LICENSE=	none given by the author
+LICENSE=	modified-bsd
 
 DEPENDS+=	p5-YAML-Syck>=1.15:../../textproc/p5-YAML-Syck
 DEPENDS+=	p5-Term-Shell>=0.02:../../devel/p5-Term-Shell
