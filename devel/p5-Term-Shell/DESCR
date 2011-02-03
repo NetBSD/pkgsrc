@@ -1,0 +1,3 @@
+Term::Shell makes it joyfully easy to write command-line interfaces in Perl.
+All the boring details like command-line parsing and terminal handling are
+done for you.
