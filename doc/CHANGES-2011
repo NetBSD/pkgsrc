@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.249 2011/02/03 13:41:51 imil Exp $
+$NetBSD: CHANGES-2011,v 1.250 2011/02/03 14:12:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -393,3 +393,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/dialog to 1.1.20110118 [wiz 2011-02-03]
 	Added devel/p5-Term-Shell version 0.02 [imil 2011-02-03]
 	Added sysutils/shelldap version 0.2 [imil 2011-02-03]
+	Updated mail/mutt-devel to 1.5.21nb1 [tron 2011-02-03]
