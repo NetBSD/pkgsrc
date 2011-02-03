@@ -1,0 +1,51 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/02/03 22:22:35 wiz Exp $
+#
+# used by emulators/mame/Makefile
+# used by emulators/mess/Makefile
+
+CATEGORIES=		emulators
+EXTRACT_SUFX=		.zip
+
+MAINTAINER=		wiz@NetBSD.org
+HOMEPAGE=		http://www.mamedev.org/
+LICENSE=		mame-license
+
+RESTRICTED=		selling is not allowed
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
+DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}
+
+# separate distinfos though, so don't forget 'make mdi' when
+# adding or changing patches
+PATCHDIR=		${.CURDIR}/../../emulators/mame/patches
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake pkg-config
+UNLIMIT_RESOURCES+=	datasize
+MAKE_FILE=		makefile
+# 0.141 has too many conversion warnings
+MAKE_ENV=		NOWERROR=1
+
+.  include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN:Mbig}
+MAKE_FLAGS+=	BIGENDIAN=true
+.endif
+
+# mame source is double-zipped
+post-extract:
+	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
+	rm ${WRKDIR}/mame.zip
+
+.include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
