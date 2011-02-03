@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.567 2011/01/16 09:59:50 wiz Exp $
+# $NetBSD: Makefile,v 1.568 2011/02/03 18:52:26 drochner Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -575,6 +575,7 @@ SUBDIR+=	xhtmldiff
 SUBDIR+=	xml-coreutils
 SUBDIR+=	xml2
 SUBDIR+=	xml2doc
+SUBDIR+=	xmlada
 SUBDIR+=	xmlcatmgr
 SUBDIR+=	xmlindent
 SUBDIR+=	xmlrpc-c
