@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/07/31 08:45:09 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/02/03 14:42:53 uebayasi Exp $
 #
 
-DISTNAME=	ddskk-14.0.91
+DISTNAME=	ddskk-14.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/^ddskk/skk/}
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/ \
@@ -17,7 +17,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	ddskk-[0-9]*
 
 EMACS_MODULES+=	base leim
-EMACS_BUILDLINK=# defined
+EMACS_BUILDLINK=YES
+
+EMACS_VERSIONS_ACCEPTED=	emacs24 emacs23 emacs22 emacs22nox \
+				emacs21 emacs21nox
 
 MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV=	prefix=${DESTDIR:Q}${PREFIX:Q} \
@@ -25,7 +28,7 @@ MAKE_ENV=	prefix=${DESTDIR:Q}${PREFIX:Q} \
 		EMACS_LISPPREFIX=${DESTDIR:Q}${EMACS_LISPPREFIX:Q}
 BUILD_TARGET=	elc
 
-INFO_FILES=	# PLIST
+INFO_FILES=	YES
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -35,14 +38,22 @@ SUBST_SED.fix-paths=		-e 's,@TUT@,${PREFIX}/share/skk/SKK.tut,g'
 
 # Substitute directory definitions during do-configure.
 post-extract:
-	@${MV} ${WRKSRC}/SKK-CFG ${WRKSRC}/SKK-CFG.orig
-	@${CP} ${FILESDIR}/SKK-CFG ${WRKSRC}
-	@${CHMOD} +w ${WRKSRC}/skk-dic.* ${WRKSRC}/doc/skk.texi
+	set -e; \
+	${MV} ${WRKSRC}/SKK-CFG ${WRKSRC}/SKK-CFG.orig; \
+	${CP} ${FILESDIR}/SKK-CFG ${WRKSRC}
 
 .include "options.mk"
 
 .include "../../editors/emacs/modules.mk"
 
-.include "../../devel/apel/buildlink3.mk"
+PLIST_VARS+=	jisx0213
+
+.if ${EMACS_VERSION_MAJOR} >= 23 || ${EMACS_VERSION_MAJOR} == 21
+PLIST.jisx0213=	yes
+.endif
+
+.if ${EMACS_VERSION_MAJOR} == 21
+.  include "../../devel/apel/buildlink3.mk"
+.endif
 .include "../../editors/mule-ucs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
