@@ -1,0 +1,3 @@
+Eso-pic is an extension of everyshi. Using everyshi's \EveryShipout
+command, eso-pic adds one or more user commands to LaTeX's shipout
+actions.
