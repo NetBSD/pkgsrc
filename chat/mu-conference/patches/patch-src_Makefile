@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile,v 1.1 2011/02/04 12:05:45 adam Exp $
+
+--- src/Makefile.orig	2011-02-04 09:37:28.000000000 +0000
++++ src/Makefile
+@@ -1,9 +1,8 @@
+-CC:=gcc
+-CFLAGS:=$(CFLAGS) -O2 -Wall -I../../lib -I../include `pkg-config --cflags glib-2.0` -D_JCOMP -D_REENTRANT -DLIBIDN
++CFLAGS:=$(CFLAGS) -Wall -I../../lib -I../include `pkg-config --cflags glib-2.0` -D_JCOMP -D_REENTRANT -DLIBIDN
+ #CFLAGS:=$(CFLAGS) -O2 -Wall -I../../lib -I../include `pkg-config --cflags glib-2.0` -D_JCOMP -D_REENTRANT -DLIBIDN -DHAVE_MYSQL
+ LIBS:=$(LIBS) -ljcomp -lm `pkg-config --libs glib-2.0` `pkg-config --libs gthread-2.0` -lexpat -lidn
+ #LIBS:=$(LIBS) -ljcomp -lm `pkg-config --libs glib-2.0` `pkg-config --libs gthread-2.0` -lexpat -lidn `mysql_config --libs`
+-LDFLAGS:=-L.
++LDFLAGS:=-L. $(LDFLAGS)
+ 
+ # Debug/Experimental
+ #CFLAGS:=$(CFLAGS) -pipe -Os -I../../jabberd -I../include 
