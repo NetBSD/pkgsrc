@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.259 2011/02/04 12:06:57 adam Exp $
+$NetBSD: CHANGES-2011,v 1.260 2011/02/04 22:15:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -412,3 +412,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated converters/skf to 1.97.4 [obache 2011-02-04]
 	Updated www/ap2-chroot to 0.5 [obache 2011-02-04]
 	Updated chat/mu-conference to 0.8 [adam 2011-02-04]
+	Added fonts/tex-palatino version 2010 [minskim 2011-02-04]
