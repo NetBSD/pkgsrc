@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.261 2011/02/04 22:19:04 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.262 2011/02/04 22:40:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -415,3 +415,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-palatino version 2010 [minskim 2011-02-04]
 	Added print/tex-pdfpages version 0.4l [minskim 2011-02-04]
 	Added print/tex-pdfpages-doc version 0.4l [minskim 2011-02-04]
+	Added print/tex-eso-pic version 2.0c [minskim 2011-02-04]
+	Added print/tex-eso-pic-doc version 2.0c [minskim 2011-02-04]
