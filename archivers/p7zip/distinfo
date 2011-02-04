@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.36 2010/06/16 08:30:09 adam Exp $
+$NetBSD: distinfo,v 1.37 2011/02/04 21:08:17 adam Exp $
 
 SHA1 (p7zip_9.13_src_all.tar.bz2) = 81da0729561ce123c0a82656ec96a04ad5bfa522
 RMD160 (p7zip_9.13_src_all.tar.bz2) = beb9181330f4dfa75aa4f473c68a462c76b7ab19
 Size (p7zip_9.13_src_all.tar.bz2) = 3753579 bytes
+SHA1 (patch-CPP_Common_DynamicBuffer.h) = c4a5eee3ddc0c9b44dec607a4e6cb3b6d59391bc
 SHA1 (patch-aa) = 6df31ad2f391b7f1b5220f05ff0142ee258a92e7
 SHA1 (patch-ab) = fedaf15990d9c01bdefcd2a0bd9a740f965247b0
 SHA1 (patch-ac) = f5f0acd488a7c524b692b5660042baa79f9937ce
