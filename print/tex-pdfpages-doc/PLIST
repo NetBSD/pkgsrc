@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/04 22:17:57 minskim Exp $
+share/texmf-dist/doc/latex/pdfpages/dummy-l.pdf
+share/texmf-dist/doc/latex/pdfpages/dummy.pdf
+share/texmf-dist/doc/latex/pdfpages/pdf-ex.tex
+share/texmf-dist/doc/latex/pdfpages/pdf-hyp.tex
+share/texmf-dist/doc/latex/pdfpages/pdf-toc.tex
+share/texmf-dist/doc/latex/pdfpages/pdfpages.pdf
