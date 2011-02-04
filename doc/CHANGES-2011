@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.258 2011/02/04 11:40:25 obache Exp $
+$NetBSD: CHANGES-2011,v 1.259 2011/02/04 12:06:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -411,3 +411,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed emulators/sdlmess successor emulators/mess [wiz 2011-02-03]
 	Updated converters/skf to 1.97.4 [obache 2011-02-04]
 	Updated www/ap2-chroot to 0.5 [obache 2011-02-04]
+	Updated chat/mu-conference to 0.8 [adam 2011-02-04]
