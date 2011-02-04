@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.22 2010/06/02 12:06:22 adam Exp $
+$NetBSD: patch-ab,v 1.23 2011/02/04 12:26:01 obache Exp $
 
 --- dist/configure.orig	2010-04-12 20:25:23.000000000 +0000
 +++ dist/configure
@@ -38,12 +38,3 @@ $NetBSD: patch-ab,v 1.22 2010/06/02 12:06:22 adam Exp $
  	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
  	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
  	osf*)		_JNI_INC_SUBDIRS="alpha";;
-@@ -18748,7 +18748,7 @@ if test "$db_cv_mutex" = no; then
- 	# If the user specified we use POSIX pthreads mutexes, and we fail to
- 	# find the full interface, try and configure for just intra-process
- 	# support.
--	if test "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
-+	if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
- 		LIBS="$LIBS -lpthread"
- 
- if test "$cross_compiling" = yes; then :
