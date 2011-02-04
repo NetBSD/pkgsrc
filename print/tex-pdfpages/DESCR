@@ -1,0 +1,7 @@
+This package simplifies the inclusion of external multi-page PDF
+documents in LaTeX documents. Pages may be freely selected and similar
+to psnup it is possible to put several logical pages onto each sheet of
+paper. Furthermore a lot of hypertext features like hyperlinks and
+article threads are provided. The package supports pdfTeX (pdflatex) and
+VTeX. With VTeX it is even possible to use this package to insert
+PostScript files, in addition to PDF files.
