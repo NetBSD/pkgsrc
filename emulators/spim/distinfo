@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.11 2009/03/22 19:55:42 markd Exp $
+$NetBSD: distinfo,v 1.12 2011/02/05 13:38:14 ryoon Exp $
 
-SHA1 (spim-7.3.tar.gz) = 630b75ebc9365093e1b3d0c98ca0524f772d8647
-RMD160 (spim-7.3.tar.gz) = f87116820755ff76087889bbd0f39eaacbce201a
-Size (spim-7.3.tar.gz) = 347226 bytes
-SHA1 (patch-aa) = 8dfa13e5d986d02bd0a995401b0a8582c849a0b9
-SHA1 (patch-ab) = 175b8ac38b140c8b284a21663f2be86cc6196979
-SHA1 (patch-ac) = 198d1d95302463348043281ed4e2e14d83fb5855
-SHA1 (patch-ad) = 66a7b90a20764eb022e45552775be21fcfef6b5a
-SHA1 (patch-ae) = 1f5610a0458acb132a108bfc29504b1d05fca5f0
+SHA1 (spim-8.0.tar.gz) = 979b91e0acb792310593d31aa65e49cccec73036
+RMD160 (spim-8.0.tar.gz) = 129e61a6ee2f338abe2eafb175ac16fc0ebd20c7
+Size (spim-8.0.tar.gz) = 355204 bytes
+SHA1 (patch-aa) = 8232ff358f1bf2ede3216187faf77aad85b1da87
+SHA1 (patch-ab) = 6f52160d99f363dc0b8d327e05bee2470b59dd41
+SHA1 (patch-ac) = 0150642458e8e7feabf7ab02ed219107c4e5b778
+SHA1 (patch-ad) = 056ef015de5daff3003a834ff4867f97db70c79f
