@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10078 2011/02/05 17:56:23 ryoon Exp $
+$NetBSD: TODO,v 1.10079 2011/02/05 19:33:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -554,6 +554,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o encodings-1.0.4
 	o enlightenment-1.0.0
 	o enscript-1.6.5.2
+	o eog-plugins-2.30.2
 	o epic4-2.6
 	o epstool-3.08
 	o eric5-5.0.5
