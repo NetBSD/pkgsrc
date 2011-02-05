@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10075 2011/02/05 14:36:25 ryoon Exp $
+$NetBSD: TODO,v 1.10076 2011/02/05 15:18:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -1320,6 +1320,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o userppp-030706
 	o vala-0.11.5
 	o valgrind-3.6.0
+	o varnish-2.1.5 [pkg/44520]
 	o vbetool-1.1
 	o vera-1.17
 	o veusz-1.10
