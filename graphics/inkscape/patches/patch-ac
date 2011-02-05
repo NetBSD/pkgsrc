@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2010/12/14 22:19:52 adam Exp $
+$NetBSD: patch-ac,v 1.7 2011/02/05 07:57:15 adam Exp $
 
---- configure.orig	2010-08-04 16:46:39.000000000 +0000
+--- configure.orig	2011-01-09 21:01:51.000000000 +0000
 +++ configure
-@@ -8133,11 +8133,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
+@@ -7156,7 +7156,7 @@ fi
+ 
+ ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
+ 
+-if test "x$GXX" = "xyes"; then
++if 0; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking GNU compiler version" >&5
+ $as_echo_n "checking GNU compiler version... " >&6; }
+ 
+@@ -8147,11 +8147,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -16,11 +25,11 @@ $NetBSD: patch-ac,v 1.6 2010/12/14 22:19:52 adam Exp $
    ;
    return 0;
  }
-@@ -10765,7 +10765,7 @@ $as_echo "#define HAVE_CAIRO_PDF 1" >>co
+@@ -10785,7 +10785,7 @@ $as_echo "#define HAVE_CAIRO_PDF 1" >>co
  
  fi
  
--INKSCAPE_LIBS="$INKSCAPE_LIBS -lpng -lz -lX11 -lxml2"
+-INKSCAPE_LIBS="$INKSCAPE_LIBS -lpng -lz -lX11 -lxml2 -ldl"
 +INKSCAPE_LIBS="$INKSCAPE_LIBS -lpng -lz -lxml2"
  if test "x$openmp_ok" = "xyes"; then
  	INKSCAPE_LIBS="$INKSCAPE_LIBS -lgomp"
