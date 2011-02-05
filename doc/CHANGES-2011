@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.264 2011/02/05 13:58:29 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.265 2011/02/05 17:55:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -420,3 +420,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/inkscape to 0.48.1 [adam 2011-02-05]
 	Updated emulators/spim to 8.0 [ryoon 2011-02-05]
 	Updated audio/twolame to 0.3.13 [ryoon 2011-02-05]
+	Updated textproc/wdiff to 0.6.5 [ryoon 2011-02-05]
