@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10077 2011/02/05 16:02:14 wiz Exp $
+$NetBSD: TODO,v 1.10078 2011/02/05 17:56:23 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1343,7 +1343,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.6
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o wdiff-0.6.5 [pkg/44519]
 	o webmin-1.530
 	o weechat-0.3.4
 	o weewm-0.01
