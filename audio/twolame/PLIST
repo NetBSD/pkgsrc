@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/02/05 13:32:44 ryoon Exp $
 bin/twolame
 include/twolame.h
 lib/libtwolame.la
@@ -11,15 +11,17 @@ share/doc/twolame/html/changelog.html
 share/doc/twolame/html/doxygen.css
 share/doc/twolame/html/doxygen.png
 share/doc/twolame/html/index.html
+share/doc/twolame/html/nav_f.png
+share/doc/twolame/html/nav_h.png
 share/doc/twolame/html/psycho.html
 share/doc/twolame/html/readme.html
+share/doc/twolame/html/tabs.css
 share/doc/twolame/html/todo.html
 share/doc/twolame/html/twolame-manpage.css
-share/doc/twolame/html/twolame-quirks.css
 share/doc/twolame/html/twolame.1.html
 share/doc/twolame/html/twolame.css
-share/doc/twolame/html/twolame_8h-source.html
 share/doc/twolame/html/twolame_8h.html
+share/doc/twolame/html/twolame_8h_source.html
 share/doc/twolame/html/vbr.html
 share/doc/twolame/psycho.txt
 share/doc/twolame/vbr.txt
