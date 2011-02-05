@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4390 2011/01/13 04:05:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.4391 2011/02/05 19:21:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3489,6 +3489,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Moose to 1.09 [seb 2010-07-26]
 	Updated www/apache22 to 2.2.16 [tron 2010-07-26]
 	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.08nb1 [seb 2010-07-26]
+	Added graphics/eog-plugins version 2.30.1 [drochner 2010-07-26]
+	Added graphics/eog-plugins-map version 2.30.1 [drochner 2010-07-26]
 	Updated devel/xulrunner to 1.9.2.8 [tnn 2010-07-27]
 	Updated www/firefox to 3.6.8 [tnn 2010-07-27]
 	Updated devel/p5-File-ChangeNotify to 0.16 [seb 2010-07-27]
