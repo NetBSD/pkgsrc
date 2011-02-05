@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.263 2011/02/05 07:58:11 adam Exp $
+$NetBSD: CHANGES-2011,v 1.264 2011/02/05 13:58:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -418,3 +418,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-eso-pic version 2.0c [minskim 2011-02-04]
 	Added print/tex-eso-pic-doc version 2.0c [minskim 2011-02-04]
 	Updated graphics/inkscape to 0.48.1 [adam 2011-02-05]
+	Updated emulators/spim to 8.0 [ryoon 2011-02-05]
+	Updated audio/twolame to 0.3.13 [ryoon 2011-02-05]
