@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10074 2011/02/05 14:00:05 ryoon Exp $
+$NetBSD: TODO,v 1.10075 2011/02/05 14:36:25 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -712,7 +712,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnumeric110-1.10.12
 	o gnuplot-4.4.0 [pkg/43771]
 	o gobject-introspection-0.10.1
-	o gogo-3.11p1
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o gossip-0.31
