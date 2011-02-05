@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2009/03/22 19:55:42 markd Exp $
+$NetBSD: patch-ab,v 1.3 2011/02/05 13:38:15 ryoon Exp $
 
---- xspim/Configure.orig	2006-08-29 14:23:19.000000000 +1200
+--- xspim/Configure.orig	2010-01-09 05:22:58.000000000 +0000
 +++ xspim/Configure
-@@ -153,13 +153,14 @@ fi;
+@@ -170,14 +170,14 @@ fi;
+ 
  
  echo
- echo Checking for /usr/include/termios.h
+-echo Checking for /usr/include/termios.h
 -if [ -f /usr/include/termios.h ]; then
 -  echo "-DUSE_TERMIOS" >> ./configuration
 -  echo "Yes, it is there"
@@ -13,7 +14,7 @@ $NetBSD: patch-ab,v 1.2 2009/03/22 19:55:42 markd Exp $
 -  # No termios
 -  echo "No, it is not there"
 -fi;
-+# The pkg uses unportable termios.h stuff, so disable it.
++#echo Checking for /usr/include/termios.h
 +#if [ -f /usr/include/termios.h ]; then
 +#  echo "-DUSE_TERMIOS" >> ./configuration
 +#  echo "Yes, it is there"
