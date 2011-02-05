@@ -38,3 +38,5 @@ Pullup ticket #3336 - requested by gls
 comms/asterisk18: security update
 Pullup ticket #3338 - requested by tron
 Security patch for "phpmyadmin" package
+Pullup ticket #3340 - requested by tron
+mail/dovecot2: functionality fix
