@@ -1,11 +1,14 @@
-$NetBSD: patch-al,v 1.1 2010/05/08 16:53:06 tez Exp $
+$NetBSD: patch-al,v 1.2 2011/02/05 20:33:43 markd Exp $
+
+fix build on solaris 9
 
 --- hacks/asm6502.c.orig	Mon Mar 22 16:06:34 2010
 +++ hacks/asm6502.c	Mon Mar 22 16:07:18 2010
-@@ -31,7 +31,11 @@
+@@ -31,7 +31,12 @@
  #include <assert.h>
  #include <ctype.h>
  #include <math.h>
++#include <config.h>
 +#if defined(HAVE_STDINT_H)
  #include <stdint.h>
 +#elif defined(HAVE_INTTYPES_H)

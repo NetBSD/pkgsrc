@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2010/11/29 18:04:35 drochner Exp $
+$NetBSD: distinfo,v 1.59 2011/02/05 20:33:43 markd Exp $
 
 SHA1 (xscreensaver-5.12.tar.gz) = 7252540b1b1853459a56453714c0974de26fa4c5
 RMD160 (xscreensaver-5.12.tar.gz) = c0fbd8cfad2919b06c8479bcebfa9af81aa97ae6
@@ -11,5 +11,5 @@ SHA1 (patch-ae) = 16d0c8b50b2601458aaec09d1c7425fb23308225
 SHA1 (patch-af) = d8261f1c8fd01b455a151f97837712dc46aff6f3
 SHA1 (patch-ai) = ceda5f16e4fca352a3c4cd6cbdc55d43d3e7b6d5
 SHA1 (patch-aj) = 09c06207549ab5adf286dcf04e48a900f1ea9e1e
-SHA1 (patch-ak) = 8b48c63575f6d186a65131586737ba31e3b91953
-SHA1 (patch-al) = 1a9b3ba359aecc30539a194c893abb7c35c66a31
+SHA1 (patch-ak) = e296e59bec9a11ddab8412751e91395b869686d1
+SHA1 (patch-al) = c1266ddbe4e0638579cde7ec0a7308ac7c463222
