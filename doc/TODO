@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10073 2011/02/03 21:38:30 gls Exp $
+$NetBSD: TODO,v 1.10074 2011/02/05 14:00:05 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1240,7 +1240,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o spcaview-20060501
-	o spim-8.0 [pkg/44465]
 	o sqlitemanager-1.2.4
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
@@ -1306,7 +1305,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o twm-1.0.6
-	o twolame-0.3.13 [pkg/44487]
 	o txt2html-2.51
 	o uae-0.8.29
 	o ubs-0.20
