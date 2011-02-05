@@ -1,11 +1,14 @@
-$NetBSD: patch-ak,v 1.1 2010/05/08 16:53:06 tez Exp $
+$NetBSD: patch-ak,v 1.2 2011/02/05 20:33:43 markd Exp $
+
+fix build on solaris 9
 
 --- hacks/m6502.c.orig	Mon Mar 22 15:24:30 2010
 +++ hacks/m6502.c	Mon Mar 22 15:27:33 2010
-@@ -12,7 +12,11 @@
+@@ -12,7 +12,12 @@
   * Created: 07-May-2007 
   */
  
++#include <config.h>
 +#if defined(HAVE_STDINT_H)
  #include <stdint.h> 
 +#elif defined(HAVE_INTTYPES_H)
