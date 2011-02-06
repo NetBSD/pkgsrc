@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2010/06/11 20:41:41 martti Exp $
+# $NetBSD: Makefile,v 1.198 2011/02/06 11:31:18 obache Exp $
 
 DISTNAME=		openssh-5.5p1
 PKGNAME=		openssh-5.5.1
@@ -46,11 +46,17 @@ PLIST_SRC=		# empty
 
 # OpenSSH on Interix has some important caveats
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.Interix
-BUILDLINK_PASSTHRU_DIRS+= /usr/local/include/bind /usr/local/lib/bind
+BUILDLINK_PASSTHRU_DIRS+= /usr/local/lib/bind
 CONFIGURE_ENV+=		ac_cv_func_openpty=no
 CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
 CPPFLAGS+=		-DIOV_MAX=16 # default is INT_MAX, way too large
+.if exists(/usr/local/include/bind/resolv.h)
 CPPFLAGS+=		-I/usr/local/include/bind
+BUILDLINK_PASSTHRU_DIRS+= /usr/local/include/bind
+.elif exists(/usr/local/bind/include/resolv.h)
+CPPFLAGS+=		-I/usr/local/bind/include
+BUILDLINK_PASSTHRU_DIRS+= /usr/local/bind/include
+.endif
 LDFLAGS+=		-L/usr/local/lib/bind
 LIBS+=			-lbind -ldb -lcrypt
 
