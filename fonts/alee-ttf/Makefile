@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.19 2006/12/15 17:34:27 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2011/02/06 00:33:06 ryoon Exp $
 #
 
-DISTNAME=	ttf-alee_11.1
+DISTNAME=	ttf-alee_12
 PKGNAME=	${DISTNAME:S/ttf-alee_/alee-ttf-/}
-PKGREVISION=	1
 CATEGORIES=	fonts korean
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/ttf-alee/}
 
 MAINTAINER=	fox9@netb.co.kr
 HOMEPAGE=	http://packages.debian.org/unstable/x11/ttf-alee
 COMMENT=	A Lee's Hangul truetype fonts
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CONFIGURE=   YES
-NO_BUILD=       YES
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 FONTS_DIRS.ttf=	lib/X11/fonts/TTF
