@@ -1,7 +1,38 @@
-$NetBSD: patch-ab,v 1.1 2010/06/13 22:44:29 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2011/02/06 17:35:05 wiz Exp $
+
+Fix build with png-1.5.
 
 --- digikam/kioslave/digikamthumbnail.cpp.orig	2009-07-03 05:19:41.000000000 +0000
 +++ digikam/kioslave/digikamthumbnail.cpp
+@@ -392,7 +392,7 @@ QImage kio_digikamthumbnailProtocol::loa
+         return qimage;
+     }
+ 
+-    if (setjmp(png_ptr->jmpbuf))
++    if (setjmp(png_jmpbuf(png_ptr)))
+     {
+         png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+         fclose(f);
+@@ -413,16 +413,16 @@ QImage kio_digikamthumbnailProtocol::loa
+     if (color_type == PNG_COLOR_TYPE_PALETTE)
+         png_set_expand(png_ptr);
+ 
+-    if (info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA)
++    if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB_ALPHA)
+         has_alpha = 1;
+ 
+-    if (info_ptr->color_type == PNG_COLOR_TYPE_GRAY_ALPHA)
++    if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY_ALPHA)
+     {
+         has_alpha = 1;
+         has_grey = 1;
+     }
+ 
+-    if (info_ptr->color_type == PNG_COLOR_TYPE_GRAY)
++    if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY)
+         has_grey = 1;
+ 
+     unsigned char **lines;
 @@ -465,7 +465,7 @@ QImage kio_digikamthumbnailProtocol::loa
      {
          png_set_gray_to_rgb(png_ptr);
