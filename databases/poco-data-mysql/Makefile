@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/06 14:42:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/06 14:44:07 wiz Exp $
 #
 
 PKGNAME=	poco-data-mysql-${POCO_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 
 COMMENT=	POCO C++ MySQL RDBMS Accessor libraries
 
-.include "../../databases/poco/Makefile.common"
+.include "../../devel/poco/Makefile.common"
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--omit=Data/SQLite,Data/ODBC,Zip,XML
