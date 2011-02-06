@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10080 2011/02/06 00:34:56 ryoon Exp $
+$NetBSD: TODO,v 1.10081 2011/02/06 11:05:08 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GConf-2.32.1
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o GutenMark-20090216
 	o ImageMagick-6.6.7.4
 	o MAMEDiff-2.30
 	o Mesa-7.10
