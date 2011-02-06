@@ -1,7 +1,18 @@
-$NetBSD: patch-aa,v 1.1 2010/06/13 22:44:29 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/06 17:35:05 wiz Exp $
+
+Fix build with png-1.5.
 
 --- digikam/libs/dimg/loaders/pngloader.cpp.orig	2009-07-03 05:19:41.000000000 +0000
 +++ digikam/libs/dimg/loaders/pngloader.cpp
+@@ -120,7 +120,7 @@ bool PNGLoader::load(const QString& file
+     // PNG error handling. If an error occurs during reading, libpng
+     // will jump here
+ 
+-    if (setjmp(png_ptr->jmpbuf))
++    if (setjmp(png_jmpbuf(png_ptr)))
+     {
+         DDebug() << k_funcinfo << "Internal libPNG error during reading file. Process aborted!" << endl;
+         png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
 @@ -252,7 +252,7 @@ bool PNGLoader::load(const QString& file
  #ifdef ENABLE_DEBUG_MESSAGES
                  DDebug() << "PNG in PNG_COLOR_TYPE_GRAY" << endl;
@@ -11,3 +22,31 @@ $NetBSD: patch-aa,v 1.1 2010/06/13 22:44:29 wiz Exp $
                  png_set_gray_to_rgb(png_ptr);
  
                  if (QImage::systemByteOrder() == QImage::LittleEndian)       // Intel
+@@ -403,7 +403,8 @@ bool PNGLoader::load(const QString& file
+ 
+     QMap<int, QByteArray>& metaData = imageMetaData();
+ 
+-    png_charp   profile_name, profile_data=NULL;
++    png_charp   profile_name;
++    png_bytep profile_data=NULL;
+     png_uint_32 profile_size;
+     int         compression_type;
+ 
+@@ -526,7 +527,7 @@ bool PNGLoader::save(const QString& file
+     // PNG error handling. If an error occurs during writing, libpng
+     // will jump here
+ 
+-    if (setjmp(png_ptr->jmpbuf))
++    if (setjmp(png_jmpbuf(png_ptr)))
+     {
+         DDebug() << k_funcinfo << "Internal libPNG error during writing file. Process aborted!" << endl;
+         fclose(f);
+@@ -599,7 +600,7 @@ bool PNGLoader::save(const QString& file
+ 
+     if (!profile_rawdata.isEmpty())
+     {
+-        png_set_iCCP(png_ptr, info_ptr, (png_charp)"icc", PNG_COMPRESSION_TYPE_BASE, profile_rawdata.data(), profile_rawdata.size());
++        png_set_iCCP(png_ptr, info_ptr, (png_charp)"icc", PNG_COMPRESSION_TYPE_BASE, (png_bytep)profile_rawdata.data(), profile_rawdata.size());
+     }
+ 
+     // -------------------------------------------------------------------
