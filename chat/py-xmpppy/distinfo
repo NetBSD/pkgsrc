@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/06 21:06:08 schnoebe Exp $
+
+SHA1 (xmpppy-0.5.0rc1.tar.gz) = 9cff61d0133857f1e97bca615763989374b2e045
+RMD160 (xmpppy-0.5.0rc1.tar.gz) = 5a62b9de440d05d423be9f74ca437ff1f874b2fc
+Size (xmpppy-0.5.0rc1.tar.gz) = 84996 bytes
+SHA1 (patch-xmpp_debug.py) = a410b7abd534f37bba583ca9f15bf05252bc55a0
