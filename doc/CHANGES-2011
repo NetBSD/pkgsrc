@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.269 2011/02/06 08:33:31 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.270 2011/02/06 11:04:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -425,3 +425,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed emulators/xmame successor emulators/mame [wiz 2011-02-06]
 	Removed emulators/xmess successor emulators/mess [wiz 2011-02-06]
 	Added comms/spandsp version 0.0.6pre18 [jnemeth 2011-02-06]
+	Updated textproc/GutenMark to 20090510 [ryoon 2011-02-06]
