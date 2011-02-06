@@ -1,14 +1,14 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cfagent.sh,v 1.1.1.1 2010/11/05 13:57:21 pettai Exp $
+# $NetBSD: cfmonitord.sh,v 1.1 2011/02/06 18:44:23 pettai Exp $
 
-# PROVIDE: cfagent
+# PROVIDE: cfmonitord
 
 . /etc/rc.subr
 
-name="cfagent"
+name="cfmonitord"
 rcvar=$name
-command="@PREFIX@/sbin/cf-agent"
+command="@PREFIX@/sbin/cf-monitord"
 required_files="/var/cfengine/inputs/promises.cf"
 
 load_rc_config $name
