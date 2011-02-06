@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.46 2010/06/11 20:41:42 martti Exp $
+$NetBSD: patch-aa,v 1.47 2011/02/06 11:31:18 obache Exp $
 
 --- configure.orig	2010-04-16 03:17:11.000000000 +0300
 +++ configure	2010-06-09 21:30:29.000000000 +0300
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.46 2010/06/11 20:41:42 martti Exp $
  		;;
  	esac
  	;;
-+*-*-interix3)
++*-*-interix*)
 +        cat >>confdefs.h <<\_ACEOF
 +#define HAVE_INTERIX 1
 +_ACEOF
