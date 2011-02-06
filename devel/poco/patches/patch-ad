@@ -1,0 +1,34 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
+
+# comment out the atttempts at shared memory (at least for NetBSD)
+
+--- Foundation/src/SharedMemory_POSIX.cpp.orig	2010-12-16 05:43:25.000000000 +0000
++++ Foundation/src/SharedMemory_POSIX.cpp
+@@ -69,7 +69,8 @@ SharedMemoryImpl::SharedMemoryImpl(const
+ 		flags |= O_RDONLY;
+ 
+ 	// open the shared memory segment
+-	_fd = ::shm_open(_name.c_str(), flags, S_IRUSR | S_IWUSR);
++	// _fd = ::shm_open(_name.c_str(), flags, S_IRUSR | S_IWUSR);
++	_fd = -1;
+ 	if (_fd == -1)
+ 		throw SystemException("Cannot create shared memory object", _name);
+ 
+@@ -78,7 +79,7 @@ SharedMemoryImpl::SharedMemoryImpl(const
+ 	{
+ 		::close(_fd);
+ 		_fd = -1;
+-		::shm_unlink(_name.c_str());
++		//::shm_unlink(_name.c_str());
+ 		throw SystemException("Cannot resize shared memory object", _name);
+ 	}
+ 	map(addrHint);
+@@ -148,7 +149,7 @@ void SharedMemoryImpl::close()
+ 	}
+ 	if (!_fileMapped && !_server)
+ 	{
+-		::shm_unlink(_name.c_str());
++		//::shm_unlink(_name.c_str());
+ 	}
+ }
+ 
