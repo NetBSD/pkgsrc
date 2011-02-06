@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.266 2011/02/06 00:33:54 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.267 2011/02/06 00:36:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -421,4 +421,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/spim to 8.0 [ryoon 2011-02-05]
 	Updated audio/twolame to 0.3.13 [ryoon 2011-02-05]
 	Updated textproc/wdiff to 0.6.5 [ryoon 2011-02-05]
-	Updated fonts/alee-ttf.ryoon to 12 [ryoon 2011-02-06]
+	Updated fonts/alee-ttf to 12 [ryoon 2011-02-06]
