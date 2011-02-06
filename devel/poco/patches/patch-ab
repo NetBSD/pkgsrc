@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
+
+# include NetBSD with the HP-UX portion of the event handling
+
+--- Foundation/src/NamedEvent_UNIX.cpp.orig	2008-10-09 18:14:00.000000000 +0200
++++ Foundation/src/NamedEvent_UNIX.cpp
+@@ -60,7 +60,7 @@ namespace Poco {
+ 		unsigned short int* array;
+ 		struct seminfo*     __buf;
+ 	};
+-#elif defined(__hpux)
++#elif defined(__hpux) || defined(__NetBSD__)
+ 	union semun
+ 	{
+ 		int              val;

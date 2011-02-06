@@ -1,0 +1,11 @@
+The POCO C++ Libraries (POCO stands for POrtable COmponents) are
+open source C++ class libraries that simplify and accelerate the
+development of network-centric, portable applications in C++. The
+libraries integrate perfectly with the C++ Standard Library and
+fill many of the functional gaps left open by it. Their modular
+and efficient design and implementation makes the POCO C++ Libraries
+extremely well suited for embedded development, an area where the
+C++ programming language is becoming increasingly popular, due to
+its suitability for both low-level (device I/O, interrupt handlers,
+etc.) and high-level object-oriented development. Of course, the
+POCO C++ Libraries are also ready for enterprise-level challenges.

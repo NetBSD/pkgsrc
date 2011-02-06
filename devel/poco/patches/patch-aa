@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
+
+# correct a common error with test(1)
+
+--- build/script/makeldpath.orig	2008-10-09 18:14:00.000000000 +0200
++++ build/script/makeldpath
+@@ -7,7 +7,7 @@
+ # Create a LD_LIBRARY_PATH for all project libraries.
+ #
+ 
+-if [ "$POCO_BASE" == "" ] ; then
++if [ "$POCO_BASE" = "" ] ; then
+ 	echo $0": POCO_BASE is not set." 
+ 	exit 1
+ fi
