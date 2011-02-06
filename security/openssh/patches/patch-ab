@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.28 2010/06/11 20:41:42 martti Exp $
+$NetBSD: patch-ab,v 1.29 2011/02/06 11:31:18 obache Exp $
 
 --- configure.ac.orig	2010-04-10 15:58:01.000000000 +0300
 +++ configure.ac	2010-06-09 21:32:22.000000000 +0300
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.28 2010/06/11 20:41:42 martti Exp $
  		;;
  	esac
  	;;
-+*-*-interix3*)
++*-*-interix*)
 +        AC_DEFINE(HAVE_INTERIX)
 +        AC_DEFINE(DISABLE_FD_PASSING)
 +        AC_DEFINE(DISABLE_SHADOW)
