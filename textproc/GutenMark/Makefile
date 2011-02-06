@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:47 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2011/02/06 10:58:29 ryoon Exp $
 #
 
-DISTNAME=	GutenMark_source_${GVER}
+DISTNAME=	GutenMark_source_dev-${GVER}
 PKGNAME=	GutenMark-${GVER}
-PKGREVISION=	2
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.sandroid.org/GutenMark/SoftwareSnapshots/
+MASTER_SITES=	http://www.sandroid.org/GutenMark/wasftp.GutenMark/SoftwareSnapshots/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sandroid.org/GutenMark/
@@ -16,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	GutenMark-words-[0-9]*:../../textproc/GutenMark-words
 
 WRKSRC=		${WRKDIR}/GutenMark-source
-GVER=		20020714
+GVER=		20090510
 USE_TOOLS+=	gmake
 BUILD_TARGET=	GutenMark
 
