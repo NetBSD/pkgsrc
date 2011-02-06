@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+# $NetBSD: options.mk,v 1.2 2011/02/06 08:30:17 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
-PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap
+PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
 PKG_SUGGESTED_OPTIONS=		ldap
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap
+PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
 
 # Asterisk now uses DAHDI, not zaptel; not implemented yet...
 #.if !empty(PKG_OPTIONS:Mzaptel)
@@ -48,6 +48,14 @@ DISTFILES+=		extract-cfile.awk
 SITES.extract-cfile.awk=	http://www.ilbcfreeware.org/documentation/
 USE_TOOLS+=		awk
 PLIST.ilbc=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mspandsp)
+.  include "../../comms/spandsp/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-spandsp
+PLIST.spandsp=		yes
+.else
+CONFIGURE_ARGS+=	--without-spandsp
 .endif
 
 MAKE_FLAGS+=	GLOBAL_MAKEOPTS=${WRKSRC}/pkgsrc.makeopts
