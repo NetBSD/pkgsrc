@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.125 2011/01/13 13:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2011/02/06 23:59:50 wiz Exp $
 
 DISTNAME=	koffice-1.6.3
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	misc kde
 MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.3/src/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
@@ -64,6 +65,7 @@ post-install:
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/poppler-qt/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
