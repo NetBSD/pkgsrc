@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/06 06:00:08 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/06 06:08:06 schnoebe Exp $
 #
 
 PKGNAME=	poco-data-${POCO_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 
 COMMENT=	POCO C++ RDBMS Master Accessor libraries
 
-.include "../../wip/poco/Makefile.common"
+.include "../../devel/poco/Makefile.common"
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--omit=Data/MySQL,Data/ODBC,Zip,XML
@@ -30,5 +30,5 @@ do-install:
 	cd ${WRKSRC}/Data && \
 	    ${PAX} -rw -v -pp include ${DESTDIR}${PREFIX}
 
-.include "../../wip/poco/buildlink3.mk"
+.include "../../devel/poco/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

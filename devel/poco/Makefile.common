@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/02/06 05:55:14 schnoebe Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/02/06 06:08:07 schnoebe Exp $
 #
-# used by wip/poco/Makefile
-# used by wip/poco-data/Makefile
-# used by wip/poco-data-sqlite/Makefile
-# used by wip/poco-data-mysql/Makefile
-# used by wip/poco-data-odbc/Makefile
+# used by devel/poco/Makefile
+# used by databases/poco-data/Makefile
+# used by databases/poco-data-sqlite/Makefile
+# used by databases/poco-data-mysql/Makefile
+# used by databases/poco-data-odbc/Makefile
 
 POCO_VERSION=1.4.0
 
@@ -17,8 +17,8 @@ HOMEPAGE=	http://www.pocoproject.org/
 PKG_DESTDIR_SUPPORT=	user-destdir
 LICENSE=		boost
 
-PATCHDIR=	${.CURDIR}/../../wip/poco/patches
-DISTINFO_FILE=	${.CURDIR}/../../wip/poco/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/poco/patches
+DISTINFO_FILE=	${.CURDIR}/../../devel/poco/distinfo
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
