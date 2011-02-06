@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/11/16 13:57:02 tron Exp $
+# $NetBSD: Makefile,v 1.34 2011/02/06 08:39:59 obache Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -34,7 +34,7 @@ BUILD_TARGET=		${BUILD_TARGET.${OPSYS}}
 .if !empty(PKG_OPTIONS:Minet6)
 .  if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 MAKE_ENV+=	IPV6="-DHAVE_IPV6 -DUSE_GETHOSTBYNAME2"
-.  elif ${OPSYS} != "Linux"
+.  elif ${OPSYS} != "Linux" && ${OPSYS} != "Interix"
 MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .  endif
 .endif
