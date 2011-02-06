@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2011/02/03 22:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2011/02/06 05:00:57 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -227,8 +227,6 @@ SUBDIR+=	xbeeb
 SUBDIR+=	xcopilot
 SUBDIR+=	xhomer
 SUBDIR+=	xm7
-SUBDIR+=	xmame
-SUBDIR+=	xmess
 SUBDIR+=	xtrs
 SUBDIR+=	xyame
 SUBDIR+=	yabause
