@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2011/02/06 21:06:33 schnoebe Exp $
+# $NetBSD: Makefile,v 1.159 2011/02/06 21:15:46 schnoebe Exp $
 #
 
 COMMENT=	Communication programs
@@ -94,6 +94,7 @@ SUBDIR+=	pidgin-silc
 SUBDIR+=	pircbot
 SUBDIR+=	prosody
 SUBDIR+=	psi
+SUBDIR+=	py-xmpppy
 SUBDIR+=	quirc
 SUBDIR+=	riece
 SUBDIR+=	roxirc
