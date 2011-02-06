@@ -1,7 +1,73 @@
-$NetBSD: patch-ab,v 1.3 2010/06/13 22:44:42 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2011/02/06 08:57:07 markd Exp $
+
+Fix build with png 1.5
 
 --- src/_png.cpp.orig	2009-08-01 19:14:01.000000000 +0000
 +++ src/_png.cpp
+@@ -122,7 +122,7 @@ Py::Object _png_module::write_png(const 
+       throw Py::RuntimeError("Could not create info struct");
+     }
+ 
+-    if (setjmp(png_ptr->jmpbuf)) {
++    if (setjmp(png_jmpbuf(png_ptr))) {
+       throw Py::RuntimeError("Error building image");
+     }
+ 
+@@ -210,10 +210,10 @@ _png_module::read_png(const Py::Tuple& a
+   png_set_sig_bytes(png_ptr, 8);
+   png_read_info(png_ptr, info_ptr);
+ 
+-  png_uint_32 width = info_ptr->width;
+-  png_uint_32 height = info_ptr->height;
++  png_uint_32 width = png_get_image_width(png_ptr, info_ptr);
++  png_uint_32 height = png_get_image_height(png_ptr, info_ptr);
+ 
+-  int bit_depth = info_ptr->bit_depth;
++  int bit_depth = png_get_bit_depth(png_ptr, info_ptr);
+ 
+   // Unpack 1, 2, and 4-bit images
+   if (bit_depth < 8)
+@@ -221,7 +221,7 @@ _png_module::read_png(const Py::Tuple& a
+ 
+   // If sig bits are set, shift data
+   png_color_8p sig_bit;
+-  if ((info_ptr->color_type != PNG_COLOR_TYPE_PALETTE) && png_get_sBIT(png_ptr, info_ptr, &sig_bit))
++  if ((png_get_color_type(png_ptr, info_ptr) != PNG_COLOR_TYPE_PALETTE) && png_get_sBIT(png_ptr, info_ptr, &sig_bit))
+     png_set_shift(png_ptr, sig_bit);
+ 
+   // Convert big endian to little
+@@ -229,11 +229,11 @@ _png_module::read_png(const Py::Tuple& a
+     png_set_swap(png_ptr);
+ 
+   // Convert palletes to full RGB
+-  if (info_ptr->color_type == PNG_COLOR_TYPE_PALETTE)
++  if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_PALETTE)
+     png_set_palette_to_rgb(png_ptr);
+ 
+   // If there's an alpha channel convert gray to RGB
+-  if (info_ptr->color_type == PNG_COLOR_TYPE_GRAY_ALPHA)
++  if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY_ALPHA)
+     png_set_gray_to_rgb(png_ptr);
+ 
+   png_set_interlace_handling(png_ptr);
+@@ -254,14 +254,14 @@ _png_module::read_png(const Py::Tuple& a
+   npy_intp dimensions[3];
+   dimensions[0] = height;  //numrows
+   dimensions[1] = width;   //numcols
+-  if (info_ptr->color_type & PNG_COLOR_MASK_ALPHA)
++  if (png_get_color_type(png_ptr, info_ptr) & PNG_COLOR_MASK_ALPHA)
+     dimensions[2] = 4;     //RGBA images
+-  else if (info_ptr->color_type & PNG_COLOR_MASK_COLOR)
++  else if (png_get_color_type(png_ptr, info_ptr) & PNG_COLOR_MASK_COLOR)
+     dimensions[2] = 3;     //RGB images
+   else
+     dimensions[2] = 1;     //Greyscale images
+   //For gray, return an x by y array, not an x by y by 1
+-  int num_dims  = (info_ptr->color_type & PNG_COLOR_MASK_COLOR) ? 3 : 2;
++  int num_dims  = (png_get_color_type(png_ptr, info_ptr) & PNG_COLOR_MASK_COLOR) ? 3 : 2;
+ 
+   double max_value = (1 << ((bit_depth < 8) ? 8 : bit_depth)) - 1;
+   PyArrayObject *A = (PyArrayObject *) PyArray_SimpleNew(num_dims, dimensions, PyArray_FLOAT);
 @@ -290,7 +290,7 @@ _png_module::read_png(const Py::Tuple& a
  
    //free the png memory
