@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/01/13 13:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2011/02/06 16:26:00 wiz Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
+# not very specific which version, so take a guess
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
