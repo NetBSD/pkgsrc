@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1428 2011/02/03 19:08:19 drochner Exp $
+# $NetBSD: Makefile,v 1.1429 2011/02/06 05:56:56 schnoebe Exp $
 #
 
 COMMENT=	Development utilities
@@ -1140,6 +1140,7 @@ SUBDIR+=	pipestatus
 SUBDIR+=	pkg-config
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
+SUBDIR+=	poco
 SUBDIR+=	popt
 SUBDIR+=	prcs
 SUBDIR+=	psvn
