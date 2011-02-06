@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.15 2011/01/13 13:25:56 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.16 2011/02/06 18:54:50 schnoebe Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -63,7 +63,8 @@ const char *default_acceptable_licenses =
     "python-software-foundation "
     "ipafont "
     "isc "
-    "info-zip";
+    "info-zip "
+    "boost-license";
 
 #ifdef DEBUG
 static size_t hash_collisions;
