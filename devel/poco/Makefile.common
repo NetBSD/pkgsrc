@@ -1,0 +1,40 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/02/06 05:55:14 schnoebe Exp $
+#
+# used by wip/poco/Makefile
+# used by wip/poco-data/Makefile
+# used by wip/poco-data-sqlite/Makefile
+# used by wip/poco-data-mysql/Makefile
+# used by wip/poco-data-odbc/Makefile
+
+POCO_VERSION=1.4.0
+
+DISTNAME=	poco-${POCO_VERSION}-all
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poco/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.pocoproject.org/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=		boost
+
+PATCHDIR=	${.CURDIR}/../../wip/poco/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/poco/distinfo
+
+HAS_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --omit=Data
+# don't use the bundled versions of SQLite, zlib, etc..
+CONFIGURE_ARGS+=	--unbundled
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(OPSYS:M*BSD)
+CONFIGURE_ARGS+=	--config=FreeBSD
+.endif
+
+.if ${OPSYS} == "NetBSD"
+# NetBSD doesn't have fenv.h. We should add one.
+CONFIGURE_ARGS+=	--no-fpenvironment
+.endif
