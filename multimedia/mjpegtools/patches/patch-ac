@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2011/01/24 10:04:21 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2011/02/06 15:37:21 wiz Exp $
 
 Fix build with png-1.5.
 
@@ -66,19 +66,21 @@ Fix build with png-1.5.
  	}
        return;
      }
-@@ -352,8 +358,10 @@ int decode_png(const char *pngname, int 
+@@ -352,8 +358,12 @@ int decode_png(const char *pngname, int 
        return -1;
      }
    
 -  if (process)
 +  if (process) {
++    png_row_number = 0;
 +    png_set_read_status_fn(png_ptr, read_row_callback);
      png_set_read_user_transform_fn(png_ptr, png_separation);
 +  }
++  png_set_interlace_handling(png_ptr);
    png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_STRIP_16 | PNG_TRANSFORM_STRIP_ALPHA, NULL);
    
    if (png_get_IHDR(png_ptr, info_ptr, &param->width, &param->height, &bit_depth,
-@@ -402,7 +410,7 @@ int decode_png(const char *pngname, int 
+@@ -402,7 +412,7 @@ int decode_png(const char *pngname, int 
      }
    png_read_end(png_ptr, info_ptr);
  #endif  
