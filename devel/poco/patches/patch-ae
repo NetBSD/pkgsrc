@@ -1,0 +1,29 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
+
+# clean up the FreeBSD configuration to fit better with pkgsrc
+
+# Build a full set of shared library search paths, rather than
+# *assuming* everything is under PREFIX.
+
+--- build/config/FreeBSD.orig	2010-12-16 05:43:24.000000000 +0000
++++ build/config/FreeBSD
+@@ -20,7 +20,9 @@ CXX     = g++
+ LINK    = $(CXX)
+ LIB     = ar -cr
+ RANLIB  = ranlib
+-SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
++SHLIBFLAGS = -L$(POCO_PREFIX)/lib -Wl,-R$(POCO_PREFIX)/lib \
++		$(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
++SHLIB   = $(CXX) -Wl,-R$(POCO_PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
+ SHLIBLN = $(POCO_BASE)/build/script/shlibln
+ DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
+ STRIP   = strip
+@@ -52,7 +54,7 @@ STATICOPT_CXX   =
+ STATICOPT_LINK  = -static
+ SHAREDOPT_CC    = -fPIC
+ SHAREDOPT_CXX   = -fPIC
+-SHAREDOPT_LINK  = -Wl,-rpath,$(LIBPATH)
++SHAREDOPT_LINK  = -Wl,-rpath,$(POCO_PREFIX)/lib -L$(LIBPATH)
+ DEBUGOPT_CC     = -g -D_DEBUG
+ DEBUGOPT_CXX    = -g -D_DEBUG
+ DEBUGOPT_LINK   = -g
