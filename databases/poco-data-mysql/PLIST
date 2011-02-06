@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/06 06:02:02 schnoebe Exp $
+include/Poco/Data/MySQL/MySQLException.h
+include/Poco/Data/MySQL/Connector.h
+include/Poco/Data/MySQL/Binder.h
+include/Poco/Data/MySQL/ResultMetadata.h
+include/Poco/Data/MySQL/Extractor.h
+include/Poco/Data/MySQL/MySQL.h
+include/Poco/Data/MySQL/MySQLStatementImpl.h
+include/Poco/Data/MySQL/SessionHandle.h
+include/Poco/Data/MySQL/SessionImpl.h
+include/Poco/Data/MySQL/StatementExecutor.h
+lib/libPocoMySQLd.so.10
+lib/libPocoMySQL.so.10
+lib/libPocoMySQLd.so
+lib/libPocoMySQL.so
