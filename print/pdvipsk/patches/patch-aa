@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/02/07 19:43:28 minskim Exp $
+
+--- Makefile.in.orig	2009-06-23 02:46:14.000000000 -0700
++++ Makefile.in
+@@ -376,7 +376,7 @@ dist_prologues = \
+ 	tex.lpro \
+ 	texps.lpro
+ 
+-prologdir = ${prefix}/texmf/dvips/base
++prologdir = ${prefix}/share/texmf/dvips/base
+ prologues = $(dist_prologues:.lpro=.pro) texc.pro
+ SUFFIXES = .pro .lpro
+ EXTRA_DIST = $(dist_prologues) texc.script dvips.test pfbincl.test \
