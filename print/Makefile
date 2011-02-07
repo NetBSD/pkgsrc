@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2011/02/07 20:14:28 minskim Exp $
+# $NetBSD: Makefile,v 1.468 2011/02/07 20:17:14 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -62,7 +62,6 @@ SUBDIR+=	img2eps
 SUBDIR+=	imposter
 SUBDIR+=	ja-a2ps
 SUBDIR+=	ja-ptex
-SUBDIR+=	ja-ptex-share
 SUBDIR+=	ja-vflib
 SUBDIR+=	ja-vflib-lib
 SUBDIR+=	ja-vflib-utils
