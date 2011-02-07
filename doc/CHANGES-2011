@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.283 2011/02/07 14:41:54 reed Exp $
+$NetBSD: CHANGES-2011,v 1.284 2011/02/07 19:11:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -446,3 +446,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby19-base to 1.9.2pl136nb1 [taca 2011-02-07]
 	Updated www/typo3 to 4.5.0 [taca 2011-02-07]
 	Updated archivers/unrar to 4.0.6 [adam 2011-02-07]
+	Updated print/tex-lastpage to 1.2g [minskim 2011-02-07]
+	Updated print/tex-lastpage-doc to 1.2g [minskim 2011-02-07]
