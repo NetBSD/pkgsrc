@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/01/13 13:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/02/07 01:31:51 wiz Exp $
 #
 
 DISTNAME=		gtksee-0.5.6
@@ -9,6 +9,7 @@ MASTER_SITES=		http://download.berlios.de/gtksee/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.berlios.de/projects/gtksee/
 COMMENT=		Gtk-based image viewing and cataloging program
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
