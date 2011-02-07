@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/09/30 10:49:16 obache Exp $
+# $NetBSD: Makefile,v 1.33 2011/02/07 14:55:55 taca Exp $
 #
 
 DISTNAME=	mysql-ruby-2.8.2
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2 OR ruby-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-RUBY_REQD=		1.8.2
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_ARGS+=	--with-mysql-config
