@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/28 17:47:06 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/07 19:11:30 minskim Exp $
 
 DISTNAME=	lastpage
-PKGNAME=	tex-${DISTNAME}-1.2f
-TEXLIVE_REV=	19958
+PKGNAME=	tex-${DISTNAME}-1.2g
+TEXLIVE_REV=	21261
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Reference last page for Page N of M type footers

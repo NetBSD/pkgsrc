@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/28 17:47:25 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/07 19:11:31 minskim Exp $
 
 DISTNAME=	lastpage.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.2f
-TEXLIVE_REV=	19958
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.2g
+TEXLIVE_REV=	21261
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-lastpage
