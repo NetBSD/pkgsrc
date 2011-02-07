@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.284 2011/02/07 19:11:53 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.285 2011/02/07 19:44:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -448,3 +448,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/unrar to 4.0.6 [adam 2011-02-07]
 	Updated print/tex-lastpage to 1.2g [minskim 2011-02-07]
 	Updated print/tex-lastpage-doc to 1.2g [minskim 2011-02-07]
+	Added print/pdvipsk version 5.98pl1.7b [minskim 2011-02-07]

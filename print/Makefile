@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2011/02/07 00:59:03 minskim Exp $
+# $NetBSD: Makefile,v 1.465 2011/02/07 19:44:33 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -97,6 +97,7 @@ SUBDIR+=	pcps
 SUBDIR+=	pdfjam
 SUBDIR+=	pdflib
 SUBDIR+=	pdflib-lite
+SUBDIR+=	pdvipsk
 SUBDIR+=	php-pdflib
 SUBDIR+=	pnm2ppa
 SUBDIR+=	podofo
