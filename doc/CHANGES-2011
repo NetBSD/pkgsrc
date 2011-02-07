@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.272 2011/02/06 21:06:22 schnoebe Exp $
+$NetBSD: CHANGES-2011,v 1.273 2011/02/07 00:21:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -433,3 +433,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databasese/poco-data-sqlite version 1.4.0 [schnoebe 2011-02-06]
 	Added chat/gloox version 1.0 [schnoebe 2011-02-06]
 	Added chat/py-xmpppy version 0.5.0rc1nb2 [schnoebe 2011-02-06]
+	Added print/tex-tocloft version 2.3e [minskim 2011-02-07]
+	Added print/tex-tocloft-doc version 2.3e [minskim 2011-02-07]
