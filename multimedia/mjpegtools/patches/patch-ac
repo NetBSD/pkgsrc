@@ -1,86 +1,60 @@
-$NetBSD: patch-ac,v 1.8 2011/02/06 15:37:21 wiz Exp $
+$NetBSD: patch-ac,v 1.9 2011/02/07 10:20:10 wiz Exp $
 
 Fix build with png-1.5.
 
 --- lavtools/png2yuv.c.orig	2007-11-08 17:31:50.000000000 +0000
 +++ lavtools/png2yuv.c
-@@ -78,6 +78,8 @@ png_structp png_ptr;
- png_infop info_ptr, end_info;
- uint8_t *raw0, *raw1, *raw2;  /* buffer for RGB first, and then Y/Cb/Cr planes of decoded PNG */
- 
-+static int png_row_number = 0;
-+
- /*
-  * The User Interface parts 
-  */
-@@ -240,9 +242,13 @@ static void parse_commandline(int argc, 
+@@ -240,11 +240,18 @@ static void parse_commandline(int argc, 
      }
  }
  
 +void read_row_callback(png_structp ptr, png_uint_32 row, int pass)
 +{
-+  png_row_number++;
++  png_uint_32 *prownumber = png_get_user_transform_ptr(png_ptr);
++  *prownumber = row;
 +}
 +
  void png_separation(png_structp png_ptr, png_row_infop row_info, png_bytep data)
  {
 -  int row_nr = png_ptr->row_number; // internal variable ? 
++  int row_nr;
    int i, width = row_info->width; 
    int new_width = sh_param->new_width;
++  png_uint_32 *prow_number;
  
-@@ -256,28 +262,28 @@ void png_separation(png_structp png_ptr,
+   /* contents of row_info:
+    *  png_uint_32 width      width of row
+@@ -255,6 +262,8 @@ void png_separation(png_structp png_ptr,
+    *  png_byte pixel_depth   bits per pixel (depth*channels)
     */
  
++  *prow_number = png_get_user_transform_ptr(png_ptr);
++  row_nr = (*prow_number+1)%png_get_image_height(png_ptr, info_ptr);
    //mjpeg_debug("PNG YUV transformation callback; color_type is %d row_number %d\n", 
--  //	 row_info->color_type, row_nr);
-+  //	 row_info->color_type, png_row_number);
+   //	 row_info->color_type, row_nr);
  
-   if(row_info->color_type == PNG_COLOR_TYPE_GRAY) // only Z available
-     {
--      //mjpeg_debug("Grayscale to YUV, row %d", row_nr);
-+      //mjpeg_debug("Grayscale to YUV, row %d", png_row_number);
-       for (i = 0; i < width; i++)
- 	{
--	  raw0[i + row_nr * new_width] = data[i];
--	  raw1[i + row_nr * new_width] = data[i];
--	  raw2[i + row_nr * new_width] = data[i];
-+	  raw0[i + png_row_number * new_width] = data[i];
-+	  raw1[i + png_row_number * new_width] = data[i];
-+	  raw2[i + png_row_number * new_width] = data[i];
- 	}
-       return;
-     }
+@@ -300,6 +309,7 @@ int decode_png(const char *pngname, int 
+   int bit_depth, color_type;
+   FILE *pngfile;
+   //png_byte hdptr[8];
++  auto png_uint_32 row_number = 0;
  
-   if(row_info->color_type == PNG_COLOR_TYPE_RGB) // Z and Alpha available
-     {
--      //mjpeg_info("RGB to YUV, row %d", row_nr);
-+      //mjpeg_info("RGB to YUV, row %d", png_row_number);
-       for (i = 0; i < width; i++)
- 	{
--	  raw0[i + row_nr * new_width] = data[i*3];
--	  raw1[i + row_nr * new_width] = data[i*3 + 1];
--	  raw2[i + row_nr * new_width] = data[i*3 + 2];
-+	  raw0[i + png_row_number * new_width] = data[i*3];
-+	  raw1[i + png_row_number * new_width] = data[i*3 + 1];
-+	  raw2[i + png_row_number * new_width] = data[i*3 + 2];
- 	}
-       return;
-     }
-@@ -352,8 +358,12 @@ int decode_png(const char *pngname, int 
+   /* Now open this PNG file, and examine its header to retrieve the 
+      YUV4MPEG info that shall be written */
+@@ -352,8 +362,11 @@ int decode_png(const char *pngname, int 
        return -1;
      }
    
 -  if (process)
 +  if (process) {
-+    png_row_number = 0;
 +    png_set_read_status_fn(png_ptr, read_row_callback);
++    png_set_user_transform_info(png_ptr, &row_number, 0, 0);
      png_set_read_user_transform_fn(png_ptr, png_separation);
 +  }
-+  png_set_interlace_handling(png_ptr);
    png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_STRIP_16 | PNG_TRANSFORM_STRIP_ALPHA, NULL);
    
    if (png_get_IHDR(png_ptr, info_ptr, &param->width, &param->height, &bit_depth,
-@@ -402,7 +412,7 @@ int decode_png(const char *pngname, int 
+@@ -402,7 +415,7 @@ int decode_png(const char *pngname, int 
      }
    png_read_end(png_ptr, info_ptr);
  #endif  
