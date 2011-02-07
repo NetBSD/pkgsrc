@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.13 2011/01/12 10:46:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2011/02/07 20:14:29 minskim Exp $
 # used by print/teTeX3-bin/Makefile
-# used by print/ja-ptex-bin/Makefile
 
 TETEX_BIN_VERS=		3.0
 DIST_SUBDIR=		teTeX
