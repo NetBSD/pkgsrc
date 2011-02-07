@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.7 2007/03/02 10:52:23 drochner Exp $
+$NetBSD: distinfo,v 1.8 2011/02/07 05:45:17 obache Exp $
 
 SHA1 (libdnet-1.12.tgz) = 71302be302e84fc19b559e811951b5d600d976f8
 RMD160 (libdnet-1.12.tgz) = 4b849f07c3513522fda65af067928b7e6d504aab
 Size (libdnet-1.12.tgz) = 970125 bytes
+SHA1 (patch-aclocal.m4) = b3d2989ecaccdd73d9d753e8ba8bdb2e6c023af6
+SHA1 (patch-configure.in) = 9da072731a91a586818ab19a5bfbf6f728c436b9
+SHA1 (patch-include_config.h.in) = fb1e5aa999d3fadbbc175cb24ffdb9050d0523fa
+SHA1 (patch-src_intf.c) = 642f535103706581439658a89f824048aff5b88b
