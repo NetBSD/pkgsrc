@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.461 2011/02/04 22:40:37 minskim Exp $
+# $NetBSD: Makefile,v 1.462 2011/02/07 00:21:12 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -534,6 +534,8 @@ SUBDIR+=	tex-titlesec
 SUBDIR+=	tex-titlesec-doc
 SUBDIR+=	tex-tocbibind
 SUBDIR+=	tex-tocbibind-doc
+SUBDIR+=	tex-tocloft
+SUBDIR+=	tex-tocloft-doc
 SUBDIR+=	tex-tools
 SUBDIR+=	tex-tools-doc
 SUBDIR+=	tex-tpslifonts
