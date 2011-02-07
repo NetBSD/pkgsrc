@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.276 2011/02/07 01:10:43 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.277 2011/02/07 06:31:28 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -440,3 +440,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-ntgclass version 2010 [minskim 2011-02-07]
 	Added print/tex-ntgclass-doc version 2010 [minskim 2011-02-07]
 	Updated fonts/tex-psnfss to 9.2anb2 [minskim 2011-02-07]
+	Added chat/spectrum version 1.4.7 [schnoebe 2011-02-07]
