@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.279 2011/02/07 11:07:57 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.280 2011/02/07 11:19:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -443,3 +443,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added chat/spectrum version 1.4.7 [schnoebe 2011-02-07]
 	Updated multimedia/mjpegtools to 1.9.0nb5 [wiz 2011-02-07]
 	Updated fonts/umefont-ttf to 0.424 [ryoon 2011-02-07]
+	Updated lang/ruby19-base to 1.9.2pl136nb1 [taca 2011-02-07]
