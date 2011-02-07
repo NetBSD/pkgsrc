@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.280 2011/02/07 11:19:20 taca Exp $
+$NetBSD: CHANGES-2011,v 1.281 2011/02/07 12:58:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -444,3 +444,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/mjpegtools to 1.9.0nb5 [wiz 2011-02-07]
 	Updated fonts/umefont-ttf to 0.424 [ryoon 2011-02-07]
 	Updated lang/ruby19-base to 1.9.2pl136nb1 [taca 2011-02-07]
+	Updated www/typo3 to 4.5.0 [taca 2011-02-07]
