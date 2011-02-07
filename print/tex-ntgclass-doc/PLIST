@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/07 00:58:05 minskim Exp $
+share/texmf-dist/doc/latex/ntgclass/00readme.txt
+share/texmf-dist/doc/latex/ntgclass/a4.pdf
+share/texmf-dist/doc/latex/ntgclass/artdoc.pdf
+share/texmf-dist/doc/latex/ntgclass/artdoc.tex
+share/texmf-dist/doc/latex/ntgclass/brief.pdf
+share/texmf-dist/doc/latex/ntgclass/brief.tex
+share/texmf-dist/doc/latex/ntgclass/briefdoc.pdf
+share/texmf-dist/doc/latex/ntgclass/briefdoc.tex
+share/texmf-dist/doc/latex/ntgclass/catalog.txt
+share/texmf-dist/doc/latex/ntgclass/changes.txt
+share/texmf-dist/doc/latex/ntgclass/classdoc.pdf
+share/texmf-dist/doc/latex/ntgclass/classdoc.tex
+share/texmf-dist/doc/latex/ntgclass/manifest.txt
+share/texmf-dist/doc/latex/ntgclass/ntgclass.pdf
+share/texmf-dist/doc/latex/ntgclass/rapdoc.pdf
+share/texmf-dist/doc/latex/ntgclass/rapdoc.tex
