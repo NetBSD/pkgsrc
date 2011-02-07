@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.275 2011/02/07 00:59:03 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.276 2011/02/07 01:10:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -439,3 +439,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-hyphenat-doc version 2.3c [minskim 2011-02-07]
 	Added print/tex-ntgclass version 2010 [minskim 2011-02-07]
 	Added print/tex-ntgclass-doc version 2010 [minskim 2011-02-07]
+	Updated fonts/tex-psnfss to 9.2anb2 [minskim 2011-02-07]
