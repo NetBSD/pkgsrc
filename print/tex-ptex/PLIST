@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/23 01:26:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/02/07 19:59:44 minskim Exp $
 bin/platex
 share/texmf-dist/fonts/source/ptex/ascgrp/ascgrp.mf
 share/texmf-dist/fonts/source/ptex/ascgrp/ascii.mf
@@ -238,4 +238,7 @@ share/texmf-dist/tex/ptex/base/ptex.tex
 share/texmf-dist/tex/ptex/config/ptex.ini
 share/texmf-dist/tex/ptexgeneric/config/language.ptx
 share/texmf-dist/tex/ptexgeneric/hyphen/copthyph.tex
+share/texmf-dist/tex/ptexgeneric/hyphen/grahyph5.tex
+share/texmf-dist/tex/ptexgeneric/hyphen/grmhyph5.tex
+share/texmf-dist/tex/ptexgeneric/hyphen/grphyph5.tex
 share/texmf-dist/tex/ptexgeneric/hyphen/ibyhyph.tex
