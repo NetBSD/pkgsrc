@@ -1,0 +1,37 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/02/07 06:31:21 schnoebe Exp $
+
+Create the databases using the following files:
+    ${EGDIR}/spectrum-mysql.sql for MySQL
+    ${EGDIR}/spectrum-sqlite3.sql for sqlite3
+
+To configure specturm, copy ${EGDIR}/spectrum.cfg
+to a protocol specific name in ${PKG_SYSCONFDIR},
+and update the contents to reflect the protocol specific JID.
+
+Quick Start:
+	Update the following fields in the protocol specific
+	configuration file:
+
+	[service] settings:
+	jid		    --	The JID (public name) of the service
+				ex: yahoo.jabber.example
+				    msn.jabber.example
+				    icq.jabber.example
+
+	password	    --	the XEP-0114 componet secret
+				(the value of <secret/> in router.xml
+
+	protocol	    --	The protocol to be implemented
+				ex: yahoo, icq, msn
+
+	[database] settings:
+	type		    --	sqlite or mysql, depending on build
+				choices.
+	host/user/database  --	appropriate values for connecting to
+				the database.
+
+Then start the spectrum instances using spectrumctl, or
+the ${PREFIX}/share/examples/rc.d/spectrum rc.d script.
+
+===========================================================================
