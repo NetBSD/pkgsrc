@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2010/09/16 12:02:05 taca Exp $
+# $NetBSD: Makefile,v 1.35 2011/02/07 14:55:56 taca Exp $
 
 DISTNAME=	rubygems-1.3.7
 CATEGORIES=	misc ruby
@@ -18,7 +18,6 @@ CONFLICTS+=	rubygems-[0-9]*
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-RUBY_REQD=	1.8.7
 RUBY_VERSION=   ${RUBY18_VERSION}
 
 RUBY_VERSION_SUPPORTED= 18
