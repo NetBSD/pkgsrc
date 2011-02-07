@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.465 2011/02/07 19:44:33 minskim Exp $
+# $NetBSD: Makefile,v 1.466 2011/02/07 20:10:24 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -61,7 +61,6 @@ SUBDIR+=	ijs
 SUBDIR+=	img2eps
 SUBDIR+=	imposter
 SUBDIR+=	ja-a2ps
-SUBDIR+=	ja-jsclasses
 SUBDIR+=	ja-ptex
 SUBDIR+=	ja-ptex-bin
 SUBDIR+=	ja-ptex-share
