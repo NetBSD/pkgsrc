@@ -1,0 +1,3 @@
+Provides control over the typography of the Table of Contents, List of
+Figures and List of Tables, and the ability to create new `List of ...'.
+The ToC \parskip can be changed.
