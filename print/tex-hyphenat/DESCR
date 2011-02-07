@@ -1,0 +1,5 @@
+This package can disable all hyphenation or enable hyphenation of
+non-alphabetics or monospaced fonts. The package can also enable
+hyphenation within 'words' that contain non-alphabetic characters (e.g.,
+that include underscores), and hyphenation of text typeset in monospaced
+(e.g., cmtt) fonts.
