@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.282 2011/02/07 13:48:25 adam Exp $
+$NetBSD: CHANGES-2011,v 1.283 2011/02/07 14:41:54 reed Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -427,10 +427,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Added comms/spandsp version 0.0.6pre18 [jnemeth 2011-02-06]
 	Updated textproc/GutenMark to 20090510 [ryoon 2011-02-06]
 	Added devel/poco version 1.4.0 [schnoebe 2011-02-06]
-	Added databasese/poco-data version 1.4.0 [schnoebe 2011-02-06]
-	Added databasese/poco-data-mysql version 1.4.0 [schnoebe 2011-02-06]
-	Added databasese/poco-data-odbc version 1.4.0 [schnoebe 2011-02-06]
-	Added databasese/poco-data-sqlite version 1.4.0 [schnoebe 2011-02-06]
+	Added databases/poco-data version 1.4.0 [schnoebe 2011-02-06]
+	Added databases/poco-data-mysql version 1.4.0 [schnoebe 2011-02-06]
+	Added databases/poco-data-odbc version 1.4.0 [schnoebe 2011-02-06]
+	Added databases/poco-data-sqlite version 1.4.0 [schnoebe 2011-02-06]
 	Added chat/gloox version 1.0 [schnoebe 2011-02-06]
 	Added chat/py-xmpppy version 0.5.0rc1nb2 [schnoebe 2011-02-06]
 	Added print/tex-tocloft version 2.3e [minskim 2011-02-07]
