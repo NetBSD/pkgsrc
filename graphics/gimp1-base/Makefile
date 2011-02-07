@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/01/13 13:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2011/02/07 21:09:06 wiz Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -12,6 +12,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gimp.org/
 COMMENT=		GNU Image Manipulation Program (base)
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
