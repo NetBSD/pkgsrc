@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/01/13 13:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/02/07 14:55:56 taca Exp $
 
 DISTNAME=	imlib2-ruby-0.5.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -12,8 +12,6 @@ COMMENT=	Imlib2 bindings for Ruby
 LICENSE=	mit
 
 GEM_CLEANBUILD=	Makefile *.o imlib2.${RUBY_DLEXT} mkmf.log
-
-RUBY_REQD=		1.8.0
 
 pre-configure:
 	${CHMOD} -R g-w ${WRKSRC}
