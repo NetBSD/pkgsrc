@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/01/23 01:26:46 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/07 19:59:44 minskim Exp $
 
---- texmf-dist/tex/ptexgeneric/config/language.ptx.orig	2011-01-14 10:08:39.000000000 +0000
+--- texmf-dist/tex/ptexgeneric/config/language.ptx.orig	2011-02-02 03:39:34.000000000 +0000
 +++ texmf-dist/tex/ptexgeneric/config/language.ptx
-@@ -15,162 +15,3 @@ english		hyphen.tex  % do not change!
+@@ -15,161 +15,3 @@ english		hyphen.tex  % do not change!
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
  
@@ -112,17 +112,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/01/23 01:26:46 minskim Exp $
 -
 -%-------------------%
 -% limited usability %
--%-------------------%----------------------------
--% (Temporary disabled due to external dependency.
--%  Might be added again.)
--%------------------------------------------------
--% % from hyphen-ancientgreek:
--% ancientgreek loadhyph-grc.tex
--% ibycus ibyhyph.tex
--% % from hyphen-greek:
--% monogreek loadhyph-el-monoton.tex
--% greek loadhyph-el-polyton.tex
--% =polygreek
+-%-------------------%--------------------------
+-% (needs some additional fixes in distribution)
+-%----------------------------------------------
+-% from hyphen-ancientgreek:
+-ancientgreek loadhyph-grc.tex
+-ibycus ibyhyph.tex
+-% from hyphen-greek:
+-monogreek loadhyph-el-monoton.tex
+-greek loadhyph-el-polyton.tex
+-=polygreek
 -
 -% from hyphen-coptic:
 -coptic loadhyph-cop.tex

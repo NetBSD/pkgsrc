@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/23 01:26:46 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/07 19:59:44 minskim Exp $
 
 DISTNAME=	ptex
 PKGNAME=	tex-${DISTNAME}-3.1.9
-TEXLIVE_REV=	21070
+PKGREVISION=	1
+TEXLIVE_REV=	21270
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX system for publishing in Japanese
