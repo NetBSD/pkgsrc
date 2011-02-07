@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.289 2011/02/07 20:18:25 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.290 2011/02/07 22:33:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -454,3 +454,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed print/ja-jsclasses successor print/tex-jsclasses [minskim 2011-02-07]
 	Removed print/ja-ptex-bin successor print/tex-ptex [minskim 2011-02-07]
 	Removed print/ja-ptex-share successor print/tex-ptex [minskim 2011-02-07]
+	Updated mail/spamdyke to 4.2.0 [schmonz 2011-02-07]
