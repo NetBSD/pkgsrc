@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10083 2011/02/07 19:19:07 wiz Exp $
+$NetBSD: TODO,v 1.10084 2011/02/07 22:33:50 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1251,7 +1251,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o solfege-3.19.1
 	o sope-4.6
 	o sound-juicer-2.32.0
-	o spamdyke-4.2.0
 	o spcaview-20060501
 	o sqlitemanager-1.2.4
 	o srp_client-1.7.5
