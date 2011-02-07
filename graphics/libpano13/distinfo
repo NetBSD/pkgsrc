@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/09/15 10:13:26 adam Exp $
+$NetBSD: distinfo,v 1.3 2011/02/07 01:03:35 wiz Exp $
 
 SHA1 (libpano13-2.9.17.tar.gz) = 418689985ea622bc234cd4eccec42180c12821b2
 RMD160 (libpano13-2.9.17.tar.gz) = 3a54295bfadbbd32009a8628968c723c7017f2df
 Size (libpano13-2.9.17.tar.gz) = 2735157 bytes
 SHA1 (patch-aa) = 021c84a642170c26f075f4bb5deba2bc2875fdc9
+SHA1 (patch-png.c) = 93c3bc1a4b7358e9ff786569e68e308ad73bd8e4
