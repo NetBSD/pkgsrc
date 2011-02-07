@@ -1,8 +1,19 @@
-$NetBSD: patch-af,v 1.2 2006/04/19 17:04:31 wiz Exp $
+$NetBSD: patch-af,v 1.3 2011/02/07 21:28:56 wiz Exp $
 
---- rw/readPNG.c.orig	1996-08-29 07:24:48.000000000 +0200
+Fix build with png-1.5.
+
+--- rw/readPNG.c.orig	1996-08-29 05:24:48.000000000 +0000
 +++ rw/readPNG.c
-@@ -46,8 +46,8 @@ Image *
+@@ -28,7 +28,7 @@
+ int
+ TestPNG(char *file)  /* gets called a LOT on the first image:  brushes? */
+ {
+-    char header[8];
++    unsigned char header[8];
+     FILE *fp = fopen(file, "rb");   /* libpng requires ANSI; so do we */
+ 
+     if (!fp)
+@@ -46,11 +46,13 @@ Image *
  ReadPNG(char *file)
  {
      FILE          *fp;
@@ -13,7 +24,12 @@ $NetBSD: patch-af,v 1.2 2006/04/19 17:04:31 wiz Exp $
      int           i, hasAlpha=FALSE;
      int           width, height, level, bit_depth, npasses;
      Image         *image = NULL;
-@@ -59,14 +59,15 @@ ReadPNG(char *file)
++    png_colorp    palette;
++    int           num_palette;
+ 
+ 
+     Trace((stderr, "\nGRR ReadPNG:  reading file %s\n", file));
+@@ -59,14 +61,15 @@ ReadPNG(char *file)
          return NULL;
      }
  
@@ -31,7 +47,7 @@ $NetBSD: patch-af,v 1.2 2006/04/19 17:04:31 wiz Exp $
      if (!info_ptr) {
          RWSetMsg("Error allocating PNG info_ptr memory");
          free(png_ptr);
-@@ -74,17 +75,13 @@ ReadPNG(char *file)
+@@ -74,38 +77,36 @@ ReadPNG(char *file)
          return NULL;
      }
  
@@ -51,8 +67,72 @@ $NetBSD: patch-af,v 1.2 2006/04/19 17:04:31 wiz Exp $
      png_init_io(png_ptr, fp);
      png_read_info(png_ptr, info_ptr);
  
-@@ -183,7 +180,7 @@ ReadPNG(char *file)
-               info_ptr->color_type);
+-    width = info_ptr->width;
+-    height = info_ptr->height;
++    width = png_get_image_width(png_ptr, info_ptr);
++    height = png_get_image_height(png_ptr, info_ptr);
+ 
+     Trace((stderr, "GRR ReadPNG:  width = %d, height = %d\n", width, height));
+-    switch (info_ptr->color_type) {
++
++    png_get_PLTE(png_ptr, info_ptr, &palette, &num_palette);
++    switch (png_get_color_type(png_ptr, info_ptr)) {
+ 
+         case PNG_COLOR_TYPE_PALETTE:
+             Trace((stderr, "GRR ReadPNG:  PNG_COLOR_TYPE_PALETTE\n"));
+-            image = ImageNewCmap(width, height, info_ptr->num_palette);
+-            for (i = 0;  i < info_ptr->num_palette;  ++i)
+-                ImageSetCmap(image, i, info_ptr->palette[i].red,
+-                  info_ptr->palette[i].green, info_ptr->palette[i].blue);
++            image = ImageNewCmap(width, height, num_palette);
++            for (i = 0;  i < num_palette;  ++i)
++                ImageSetCmap(image, i, palette[i].red,
++                  palette[i].green, palette[i].blue);
+             /* GRR:  still need to get image data into `image' */
+             break;
+ 
+         case PNG_COLOR_TYPE_RGB:
+             Trace((stderr, "GRR ReadPNG:  PNG_COLOR_TYPE_RGB\n"));
+-            if (info_ptr->bit_depth == 16) {
++            if (png_get_bit_depth(png_ptr, info_ptr) == 16) {
+                 RWSetMsg("Stripping 48-bit RGB image to 24 bits");
+                 fprintf(stderr,
+                   "ReadPNG:  stripping 48-bit RGB image to 24 bits\n");
+@@ -117,8 +118,8 @@ ReadPNG(char *file)
+ 
+         case PNG_COLOR_TYPE_GRAY:   /* treat grayscale as special colormap */
+             Trace((stderr, "GRR ReadPNG:  PNG_COLOR_TYPE_GRAY\n"));
+-            bit_depth = info_ptr->bit_depth;
+-            if (info_ptr->bit_depth == 16) {
++            bit_depth = png_get_bit_depth(png_ptr, info_ptr);
++            if (bit_depth == 16) {
+                 RWSetMsg("Stripping 16-bit grayscale image to 8 bits");
+                 fprintf(stderr,
+                   "ReadPNG:  stripping 16-bit grayscale image to 8 bits\n");
+@@ -157,7 +158,7 @@ ReadPNG(char *file)
+ 
+         case PNG_COLOR_TYPE_RGB_ALPHA:
+             Trace((stderr, "GRR ReadPNG:  PNG_COLOR_TYPE_RGB_ALPHA\n"));
+-            if (info_ptr->bit_depth == 16) {
++            if (png_get_bit_depth(png_ptr, info_ptr) == 16) {
+                 RWSetMsg("Stripping 64-bit RGBA image to 32 bits");
+                 png_set_strip_16(png_ptr);
+             }
+@@ -169,7 +170,7 @@ ReadPNG(char *file)
+ 
+         case PNG_COLOR_TYPE_GRAY_ALPHA:
+             Trace((stderr, "GRR ReadPNG:  PNG_COLOR_TYPE_GRAY_ALPHA\n"));
+-            if (info_ptr->bit_depth == 16) {
++            if (png_get_bit_depth(png_ptr, info_ptr) == 16) {
+                 RWSetMsg("Stripping 32-bit gray+alpha image to 16 bits");
+                 png_set_strip_16(png_ptr);
+             }
+@@ -180,20 +181,20 @@ ReadPNG(char *file)
+ 
+         default:
+             fprintf(stderr, "ReadPNG:  unknown image type (%d)\n",
+-              info_ptr->color_type);
++              png_get_color_type(png_ptr, info_ptr));
              fflush(stderr);
              RWSetMsg("Unknown PNG image type");
 -            png_read_destroy(png_ptr, info_ptr, (png_infop)NULL);
@@ -60,7 +140,26 @@ $NetBSD: patch-af,v 1.2 2006/04/19 17:04:31 wiz Exp $
              free(png_ptr);
              free(info_ptr);
              fclose(fp);
-@@ -217,7 +214,7 @@ ReadPNG(char *file)
+             return image;  /* NULL */
+     }
+ 
+-    if (info_ptr->bit_depth < 8)
++    if (png_get_bit_depth(png_ptr, info_ptr) < 8)
+         png_set_packing(png_ptr);
+ 
+-    if (info_ptr->interlace_type)
++    if (png_get_interlace_type(png_ptr, info_ptr))
+         npasses = png_set_interlace_handling(png_ptr);
+ 
+     png_read_update_info(png_ptr, info_ptr);
+@@ -211,13 +212,13 @@ ReadPNG(char *file)
+          * no easy way around it:  libpng returns the image and alpha channel
+          * interspersed, and interlaced alpha images just make matters worse
+          */
+-        png_data = (png_bytep)malloc(height*info_ptr->rowbytes);
++        png_data = (png_bytep)malloc(height*png_get_rowbytes(png_ptr, info_ptr));
+         if (!png_data) {
+             RWSetMsg("Unable to allocate temporary storage for alpha image");
              fprintf(stderr, "ReadPNG error:  unable to malloc png_data\n");
              fflush(stderr);
              ImageDelete(image);
@@ -69,7 +168,30 @@ $NetBSD: patch-af,v 1.2 2006/04/19 17:04:31 wiz Exp $
              free(png_ptr);
              free(info_ptr);
              fclose(fp);
-@@ -271,7 +268,7 @@ ReadPNG(char *file)
+@@ -226,11 +227,11 @@ ReadPNG(char *file)
+ 
+         /* only bit depths of 8 and 16 support alpha channels */
+         for (i = 0;  i < height;  ++i)
+-            row_pointers[i] = (png_bytep)png_data + i*info_ptr->rowbytes;
++            row_pointers[i] = (png_bytep)png_data + i*png_get_rowbytes(png_ptr, info_ptr);
+ 
+         png_read_image(png_ptr, row_pointers);
+ 
+-        if (info_ptr->color_type == PNG_COLOR_TYPE_RGB_ALPHA) {
++        if (png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB_ALPHA) {
+             png_bytep png=png_data, rgb=image->data, alpha=image->maskData;
+ 
+             for (i = 0;  i < height*width;  ++i) {
+@@ -258,7 +259,7 @@ ReadPNG(char *file)
+ 	    return NULL;
+ 	}
+         for (i = 0;  i < height;  ++i)
+-            row_pointers[i] = (png_bytep)image->data + i*info_ptr->rowbytes;
++            row_pointers[i] = (png_bytep)image->data + i*png_get_rowbytes(png_ptr, info_ptr);
+ 
+         png_read_image(png_ptr, row_pointers);
+ 
+@@ -271,7 +272,7 @@ ReadPNG(char *file)
       */
  
      png_read_end(png_ptr, info_ptr);
