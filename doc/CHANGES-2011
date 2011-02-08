@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.294 2011/02/08 13:16:42 adam Exp $
+$NetBSD: CHANGES-2011,v 1.295 2011/02/08 13:19:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -462,3 +462,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed graphics/plotutils-nox11 [adam 2011-02-08]
 	Updated graphics/gnuplot to 4.4.2 [adam 2011-02-08]
 	Removed graphics/gnuplot-nox11 [adam 2011-02-08]
+	Updated net/youtube-dl to 20110130 [ryoon 2011-02-08]
