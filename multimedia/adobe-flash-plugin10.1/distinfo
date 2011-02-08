@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/08 18:47:03 ahoka Exp $
+
+SHA1 (flash/10.1.102.65/install_flash_player_10_linux.tar.gz) = d7addfbb4a541817933d195fd20718aaa7c6ffcc
+RMD160 (flash/10.1.102.65/install_flash_player_10_linux.tar.gz) = b86be76ccfc25e0571f80a4c74e49c0196f2486a
+Size (flash/10.1.102.65/install_flash_player_10_linux.tar.gz) = 4911328 bytes
