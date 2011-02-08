@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile.common,v 1.22 2011/02/08 11:11:23 adam Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 CATEGORIES=		print
@@ -19,7 +19,7 @@ DISTINFO_FILE=		${.CURDIR}/../pdflib/distinfo
 PATCHDIR=		${.CURDIR}/../pdflib/patches
 
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-pnglib
 CONFIGURE_ARGS+=	--with-tifflib
@@ -42,6 +42,9 @@ SUBST_SED.sed=		-e "s|^sed |${SED} |g"
 SUBST_SED.sed+=		-e "s| sed | ${SED} |g"
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
