@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/08 07:56:09 adam Exp $
 
-DISTNAME=	clamav-0.96.5
+DISTNAME=	clamav-0.97
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--disable-zlib-vcheck
 # avoid multiarch libdir on Darwin
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
+
+CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/*
 
 .include "../../mk/bsd.prefs.mk"
 
