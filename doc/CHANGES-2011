@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.290 2011/02/07 22:33:50 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.291 2011/02/08 04:53:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed print/ja-ptex-bin successor print/tex-ptex [minskim 2011-02-07]
 	Removed print/ja-ptex-share successor print/tex-ptex [minskim 2011-02-07]
 	Updated mail/spamdyke to 4.2.0 [schmonz 2011-02-07]
+	Updated devel/cutter to 1.1.6 [obache 2011-02-08]
