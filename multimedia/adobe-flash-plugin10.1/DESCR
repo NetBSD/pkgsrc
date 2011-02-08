@@ -1,0 +1,10 @@
+Netscape plugin for Adobe Flash player.  This package contains
+a plugin that enables web browsers to render the Flash format.
+
+The nspluginwrapper option (enabled by default) permits the use of
+the the Linux x86 flash player in Firefox browsers on other x86
+systems.
+
+This package requires emul.linux.kern.osrelease = 2.6.18 or later.
+This means this package won't work on NetBSD 5.x or older systems!
+
