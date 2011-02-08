@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/01/13 16:48:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2011/02/08 13:16:37 roy Exp $
 
 DISTNAME=	tmux-1.4
 CATEGORIES=	misc
@@ -15,5 +15,5 @@ HAS_CONFIGURE=	yes
 USE_TERMINFO=	yes
 
 .include "../../devel/libevent/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
