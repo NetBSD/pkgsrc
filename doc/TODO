@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10084 2011/02/07 22:33:50 schmonz Exp $
+$NetBSD: TODO,v 1.10085 2011/02/08 13:16:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -714,7 +714,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnuchess-5.08
 	o gnumeric110-1.10.13
-	o gnuplot-4.4.0 [pkg/43771]
 	o gobject-introspection-0.10.1
 	o goffice0.8-0.8.13
 	o gok-2.30.1 [GNOME 2.32]
