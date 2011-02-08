@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/08 16:51:17 jakllsch Exp $
+
+SHA1 (nvramtool-r6338.tar.gz) = 16bd20ab10297935e805401d446c056c95761096
+RMD160 (nvramtool-r6338.tar.gz) = 6af3ef54ff8b2b1e39066aff4d50bf4c0cbb89a4
+Size (nvramtool-r6338.tar.gz) = 54789 bytes

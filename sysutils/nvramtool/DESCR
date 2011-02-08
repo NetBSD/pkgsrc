@@ -1,0 +1,4 @@
+nvramtool is a utility for reading/writing coreboot parameters and
+displaying information from the coreboot table in CMOS.
+
+The program works only on x86-based systems that use coreboot.
