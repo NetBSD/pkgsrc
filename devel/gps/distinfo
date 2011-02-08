@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/08 18:32:23 drochner Exp $
+
+SHA1 (gps-5.0.0.tar.bz2) = 913aca264a341e228b3b02e7bb8ea77b0cb96805
+RMD160 (gps-5.0.0.tar.bz2) = 67fd5e95e1e4fd1f728522395623812091b7dfda
+Size (gps-5.0.0.tar.bz2) = 9325721 bytes
+SHA1 (patch-aa) = 0f361b4be86052efb2926659a025b611e4d339eb
+SHA1 (patch-ab) = 59c13a902436f3953a467b914e8b3c01443263c6
+SHA1 (patch-ac) = 4c350aa10b82aef2baaf29465ffec30942ed6c0d
+SHA1 (patch-ad) = 058f89c0fa9bf2c2d4baca8d35ce11c97086697a
+SHA1 (patch-ae) = 2847e353fdec774262adc14f80c4ba6c6a5fe283
+SHA1 (patch-af) = c3c29f06eb91a7656a8c251b1914686b4aea9723
+SHA1 (patch-ag) = b1756db403619becb790c3e0641d5e0606f4e92c
