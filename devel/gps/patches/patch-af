@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/02/08 18:32:24 drochner Exp $
+
+--- gnatlib/configure.orig	2011-01-29 19:21:47.000000000 +0000
++++ gnatlib/configure
+@@ -3449,7 +3449,7 @@ echo "${ECHO_T}no" >&6
+                ;;
+            esac
+ 
+-           if test x$PYTHON_WIN32 == xyes; then
++           if test x$PYTHON_WIN32 = xyes; then
+              PYTHON_VERSION=$PYTHON_MAJOR_VERSION$PYTHON_MINOR_VERSION
+              PYTHON_DIR=${PYTHON_BASE}/libs
+            else
+@@ -3520,7 +3520,7 @@ echo "${ECHO_T}yes (version $PYTHON_MAJO
+          PYTHON_LIBS="-L${PYTHON_DIR} -lpython${PYTHON_VERSION} ${PYTHON_LIBS}"
+       fi
+ 
+-      if test x$PYTHON_WIN32 == xyes; then
++      if test x$PYTHON_WIN32 = xyes; then
+          PYTHON_CFLAGS="-I${PYTHON_BASE}/include"
+       else
+          PYTHON_CFLAGS="-I${PYTHON_BASE}/include/python${PYTHON_VERSION}"
