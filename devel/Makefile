@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1429 2011/02/06 05:56:56 schnoebe Exp $
+# $NetBSD: Makefile,v 1.1430 2011/02/08 18:36:34 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -237,6 +237,7 @@ SUBDIR+=	gobject-introspection
 SUBDIR+=	googletest
 SUBDIR+=	gperf
 SUBDIR+=	gprbuild-aux
+SUBDIR+=	gps
 SUBDIR+=	gputils
 SUBDIR+=	gsoap
 SUBDIR+=	gst-plugins0.10-pango
