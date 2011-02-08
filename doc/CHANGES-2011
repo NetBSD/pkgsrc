@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.297 2011/02/08 18:53:59 ahoka Exp $
+$NetBSD: CHANGES-2011,v 1.298 2011/02/08 19:33:30 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -465,3 +465,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/youtube-dl to 20110130 [ryoon 2011-02-08]
 	Added sysutils/nvramtool version 0pre6338 [jakllsch 2011-02-08]
 	Added multimedia/adobe-flash-plugin10.1 version 10.1.102.65 [ahoka 2011-02-08]
+	Updated sysutils/flashrom to 0.9.3 [jakllsch 2011-02-08]
