@@ -1,16 +1,65 @@
-$NetBSD: patch-ag,v 1.2 2009/10/27 20:48:07 asau Exp $
+$NetBSD: patch-ag,v 1.3 2011/02/08 13:13:41 adam Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
 
---- configure.orig	2009-10-27 23:40:36.000000000 +0300
-+++ configure	2009-10-27 23:42:16.000000000 +0300
-@@ -9584,7 +9584,7 @@
- _ACEOF
+--- configure.orig	2010-09-23 04:22:39.000000000 +0000
++++ configure
+@@ -7119,9 +7119,9 @@ fi
  
+ $as_echo "#define HAVE_LIBEDITLINE 1" >>confdefs.h
  
--for ac_header in editline/readline.h
-+for ac_header in readline/readline.h
- do
- as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
- if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
+-        for ac_header in editline/readline.h
++        for ac_header in readline/readline.h
+ do :
+-  ac_fn_c_check_header_mongrel "$LINENO" "editline/readline.h" "ac_cv_header_editline_readline_h" "$ac_includes_default"
++  ac_fn_c_check_header_mongrel "$LINENO" "readline/readline.h" "ac_cv_header_editline_readline_h" "$ac_includes_default"
+ if test "x$ac_cv_header_editline_readline_h" = x""yes; then :
+   cat >>confdefs.h <<_ACEOF
+ #define HAVE_EDITLINE_READLINE_H 1
+@@ -7381,7 +7381,7 @@ _ACEOF
+ 
+ fi
+ 
+-    if test "$ac_cv_lib_readline_rl_ding" == no; then
++    if test "$ac_cv_lib_readline_rl_ding" = no; then
+ 
+ $as_echo "#define MISSING_RL_DING 1" >>confdefs.h
+ 
+@@ -7431,7 +7431,7 @@ _ACEOF
+ 
+ fi
+ 
+-    if test "$ac_cv_lib_readline_rl_forced_update_display" == no; then
++    if test "$ac_cv_lib_readline_rl_forced_update_display" = no; then
+ 
+ $as_echo "#define MISSING_RL_FORCED_UPDATE_DISPLAY 1" >>confdefs.h
+ 
+@@ -7481,7 +7481,7 @@ _ACEOF
+ 
+ fi
+ 
+-    if test "$ac_cv_lib_readline_rl_reset_after_signal" == yes; then
++    if test "$ac_cv_lib_readline_rl_reset_after_signal" = yes; then
+ 
+ $as_echo "#define HAVE_READLINE_RESET 1" >>confdefs.h
+ 
+@@ -7533,7 +7533,7 @@ _ACEOF
+ 
+ fi
+ 
+-    if test "$ac_cv_lib_readline_rl_complete_with_tilde_expansion" == no; then
++    if test "$ac_cv_lib_readline_rl_complete_with_tilde_expansion" = no; then
+ 
+ $as_echo "#define MISSING_RL_TILDE_EXPANSION 1" >>confdefs.h
+ 
+@@ -7662,7 +7662,9 @@ else
+ 	 if test -d $withval/lib; then
+ 	   LDFLAGS="$LDFLAGS -L$withval/lib"
+ 	 fi
++	if test "x$with_x" = xyes; then
+ 	 TERMXLIBS="$X_LIBS -lXaw -lXmu -lXt -lXext -lX11"
++	fi
+ 	 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pl_textangle in -lplot" >&5
+ $as_echo_n "checking for pl_textangle in -lplot... " >&6; }
+ if test "${ac_cv_lib_plot_pl_textangle+set}" = set; then :
