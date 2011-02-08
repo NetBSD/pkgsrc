@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/08 18:47:03 ahoka Exp $
+lib/netscape/plugins/libflashplayer.so
