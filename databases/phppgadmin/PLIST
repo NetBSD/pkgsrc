@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:36:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/02/08 23:09:17 asau Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -9,11 +9,12 @@ share/doc/phppgadmin/TODO
 share/doc/phppgadmin/TRANSLATORS
 share/examples/phppgadmin/apache.conf
 share/examples/phppgadmin/config.inc.php-dist
-share/phppgadmin/aciur.js
+share/phppgadmin/admin.php
 share/phppgadmin/aggregates.php
+share/phppgadmin/ajax-ac-insert.php
 share/phppgadmin/all_db.php
-share/phppgadmin/autocomplete.php
 share/phppgadmin/browser.php
+share/phppgadmin/build_tests.php
 share/phppgadmin/casts.php
 share/phppgadmin/classes/ArrayRecordSet.php
 share/phppgadmin/classes/Gui.php
@@ -23,14 +24,12 @@ share/phppgadmin/classes/class.select.php
 share/phppgadmin/classes/database/ADODB_base.php
 share/phppgadmin/classes/database/Connection.php
 share/phppgadmin/classes/database/Postgres.php
-share/phppgadmin/classes/database/Postgres71.php
-share/phppgadmin/classes/database/Postgres72.php
-share/phppgadmin/classes/database/Postgres73.php
 share/phppgadmin/classes/database/Postgres74.php
 share/phppgadmin/classes/database/Postgres80.php
 share/phppgadmin/classes/database/Postgres81.php
 share/phppgadmin/classes/database/Postgres82.php
 share/phppgadmin/classes/database/Postgres83.php
+share/phppgadmin/classes/database/Postgres84.php
 share/phppgadmin/colproperties.php
 share/phppgadmin/constraints.php
 share/phppgadmin/conversions.php
@@ -45,15 +44,13 @@ share/phppgadmin/functions.js
 share/phppgadmin/functions.php
 share/phppgadmin/groups.php
 share/phppgadmin/help.php
-share/phppgadmin/help/PostgresDoc70.php
-share/phppgadmin/help/PostgresDoc71.php
-share/phppgadmin/help/PostgresDoc72.php
-share/phppgadmin/help/PostgresDoc73.php
 share/phppgadmin/help/PostgresDoc74.php
 share/phppgadmin/help/PostgresDoc80.php
 share/phppgadmin/help/PostgresDoc81.php
 share/phppgadmin/help/PostgresDoc82.php
 share/phppgadmin/help/PostgresDoc83.php
+share/phppgadmin/help/PostgresDoc84.php
+share/phppgadmin/help/PostgresDoc90.php
 share/phppgadmin/history.php
 share/phppgadmin/images/themes/default/AddArguments.png
 share/phppgadmin/images/themes/default/Admin.png
@@ -207,7 +204,9 @@ share/phppgadmin/lang/danish.php
 share/phppgadmin/lang/dutch.php
 share/phppgadmin/lang/english.php
 share/phppgadmin/lang/french.php
+share/phppgadmin/lang/galician.php
 share/phppgadmin/lang/german.php
+share/phppgadmin/lang/greek.php
 share/phppgadmin/lang/hebrew.php
 share/phppgadmin/lang/hungarian.php
 share/phppgadmin/lang/italian.php
@@ -228,7 +227,9 @@ share/phppgadmin/lang/recoded/danish.php
 share/phppgadmin/lang/recoded/dutch.php
 share/phppgadmin/lang/recoded/english.php
 share/phppgadmin/lang/recoded/french.php
+share/phppgadmin/lang/recoded/galician.php
 share/phppgadmin/lang/recoded/german.php
+share/phppgadmin/lang/recoded/greek.php
 share/phppgadmin/lang/recoded/hebrew.php
 share/phppgadmin/lang/recoded/hungarian.php
 share/phppgadmin/lang/recoded/italian.php
@@ -238,6 +239,7 @@ share/phppgadmin/lang/recoded/polish.php
 share/phppgadmin/lang/recoded/portuguese-br.php
 share/phppgadmin/lang/recoded/portuguese-pt.php
 share/phppgadmin/lang/recoded/romanian.php
+share/phppgadmin/lang/recoded/russian-utf8.php
 share/phppgadmin/lang/recoded/russian.php
 share/phppgadmin/lang/recoded/slovak.php
 share/phppgadmin/lang/recoded/spanish.php
@@ -245,6 +247,7 @@ share/phppgadmin/lang/recoded/swedish.php
 share/phppgadmin/lang/recoded/turkish.php
 share/phppgadmin/lang/recoded/ukrainian.php
 share/phppgadmin/lang/romanian.php
+share/phppgadmin/lang/russian-utf8.php
 share/phppgadmin/lang/russian.php
 share/phppgadmin/lang/slovak.php
 share/phppgadmin/lang/spanish.php
@@ -258,7 +261,6 @@ share/phppgadmin/libraries/adodb/adodb-datadict.inc.php
 share/phppgadmin/libraries/adodb/adodb-error.inc.php
 share/phppgadmin/libraries/adodb/adodb-iterator.inc.php
 share/phppgadmin/libraries/adodb/adodb-lib.inc.php
-share/phppgadmin/libraries/adodb/adodb-php4.inc.php
 share/phppgadmin/libraries/adodb/adodb-time.inc.php
 share/phppgadmin/libraries/adodb/adodb.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres.inc.php
@@ -305,5 +307,5 @@ share/phppgadmin/views.php
 share/phppgadmin/xloadtree/xloadtree2.js
 share/phppgadmin/xloadtree/xtree2.js
 @pkgdir share/phppgadmin/libraries/adodb/lang
-@pkgdir share/phppgadmin/classes/plugins
 @pkgdir share/phppgadmin/conf
+@pkgdir share/phppgadmin/classes/plugins

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2009/01/13 14:40:40 roy Exp $
+# $NetBSD: Makefile,v 1.24 2011/02/08 23:09:17 asau Exp $
 
-DISTNAME=	phpPgAdmin-4.2.2
+DISTNAME=	phpPgAdmin-5.0.2
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
@@ -29,6 +29,11 @@ DOCDIR=		${PREFIX}/share/doc/phppgadmin
 CONF_FILES=	${EGDIR}/config.inc.php-dist ${PHPPGBASE}/conf/config.inc.php
 DOC_FILES=	CREDITS DEVELOPERS FAQ HISTORY INSTALL LICENSE TODO \
 		TRANSLATORS
+
+REPLACE_INTERPRETER+=	pkgsrc-php
+REPLACE.pkgsrc-php.old=	.*php
+REPLACE.pkgsrc-php.new=	${PREFIX}/bin/php
+REPLACE_FILES.pkgsrc-php=	build_tests.php
 
 do-configure:
 	${SED} -e "s#/usr/bin/pg#${PREFIX}/bin/pg#" \
