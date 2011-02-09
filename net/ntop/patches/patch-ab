@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.18 2010/07/22 21:10:52 adam Exp $
+$NetBSD: patch-ab,v 1.19 2011/02/09 08:37:10 adam Exp $
 
---- configure.in.orig	2010-07-19 16:50:08.000000000 +0000
+--- configure.in.orig	2010-10-24 10:01:01.000000000 +0000
 +++ configure.in
-@@ -423,6 +423,19 @@ case "${target}:${CC}" in
+@@ -437,6 +437,19 @@ case "${target}:${CC}" in
          echo "* This appears to be ${DEFINEOS} (release not checked)"
        ;;
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.18 2010/07/22 21:10:52 adam Exp $
      * )
          echo "* ${target} is an unknown/unsupported OS"
          echo "*"
-@@ -582,8 +595,8 @@ if test ".${PCAPRING_DIR}" != .; then
+@@ -596,8 +609,8 @@ if test ".${PCAPRING_DIR}" != .; then
  else
  if test ".${PCAP_ROOT}" != .; then
    if test -d $PCAP_ROOT &&
@@ -33,10 +33,11 @@ $NetBSD: patch-ab,v 1.18 2010/07/22 21:10:52 adam Exp $
         PCAP_ROOT=`cd ${PCAP_ROOT} && pwd`
         CORELIBS="${CORELIBS} -L$PCAP_ROOT -lpcap"
         INCS="${INCS} -I$PCAP_ROOT"
-@@ -1816,10 +1829,7 @@ else
+@@ -1829,11 +1842,7 @@ if test -f "GeoLiteCity.dat"; then
+ else
     if test -f "3rd_party/GeoLiteCity.dat.gz"; then
       cp 3rd_party/GeoLiteCity.dat.gz .
-    else
+-   else
 -     wget http://www.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
     fi
 -
@@ -44,10 +45,11 @@ $NetBSD: patch-ab,v 1.18 2010/07/22 21:10:52 adam Exp $
  fi
  
  dnl> --------
-@@ -1830,10 +1840,8 @@ else
+@@ -1843,11 +1852,8 @@ if test -f "GeoIPASNum.dat"; then
+ else
     if test -f "3rd_party/GeoIPASNum.dat.gz"; then
       cp 3rd_party/GeoIPASNum.dat.gz .
-    else
+-   else
 -     wget http://www.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
     fi
  
