@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.303 2011/02/09 08:39:05 adam Exp $
+$NetBSD: CHANGES-2011,v 1.304 2011/02/09 08:51:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -471,3 +471,17 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/phppgadmin to 5.0.2 [asau 2011-02-08]
 	Updated security/openssl to 0.9.8qnb1 [taca 2011-02-09]
 	Updated net/ntop to 4.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90 to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-client to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-server to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-docs to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-adminpack to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-datatypes to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-dblink to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-monitoring to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-pgcrypto to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-plperl to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-plpython to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-pltcl to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-replicationtools to 9.0.3 [adam 2011-02-09]
+	Updated databases/postgresql90-upgrade to 9.0.3 [adam 2011-02-09]
