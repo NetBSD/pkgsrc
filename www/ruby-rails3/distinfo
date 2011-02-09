@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/10/15 11:46:20 taca Exp $
+$NetBSD: distinfo,v 1.4 2011/02/09 13:05:57 taca Exp $
 
-SHA1 (rails-3.0.1.gem) = ff78af365e71d78e738fba5056f53227f43aa3c9
-RMD160 (rails-3.0.1.gem) = 2255366a1c33926620375900428c0e19be470ad3
-Size (rails-3.0.1.gem) = 3584 bytes
+SHA1 (rails-3.0.4.gem) = f0319acc57067880ec6f73043b91a363cf894cf1
+RMD160 (rails-3.0.4.gem) = 78f31479a0655c8c0283ccec1c2792c89b7c7027
+Size (rails-3.0.4.gem) = 3584 bytes
