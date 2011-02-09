@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.306 2011/02/09 09:54:00 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.307 2011/02/09 12:45:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -487,3 +487,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/postgresql90-upgrade to 9.0.3 [adam 2011-02-09]
 	Updated archivers/xz to 5.0.1 [adam 2011-02-09]
 	Removed emulators/gxmame [wiz 2011-02-09]
+	Updated devel/ruby-activesupport to 2.3.11 [taca 2011-02-09]
+	Updated databases/ruby-activerecord to 2.3.11 [taca 2011-02-09]
+	Updated www/ruby-actionpack to 2.3.11 [taca 2011-02-09]
+	Updated mail/ruby-actionmailer to 2.3.11 [taca 2011-02-09]
+	Updated www/ruby-activeresource to 2.3.11 [taca 2011-02-09]
+	Updated www/ruby-rails to 2.3.11 [taca 2011-02-09]
