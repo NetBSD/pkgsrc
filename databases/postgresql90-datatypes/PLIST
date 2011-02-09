@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2010/12/24 08:13:34 asau Exp $
-${PG_SUBPREFIX}lib/postgresql/_int.la
+@comment $NetBSD: PLIST,v 1.4 2011/02/09 08:48:18 adam Exp $
+${PG_SUBPREFIX}lib/postgresql/_int.so
 ${PG_SUBPREFIX}lib/postgresql/citext.so
-${PG_SUBPREFIX}lib/postgresql/hstore.la
+${PG_SUBPREFIX}lib/postgresql/hstore.so
 ${PG_SUBPREFIX}lib/postgresql/isn.so
 ${PG_SUBPREFIX}lib/postgresql/lo.so
-${PG_SUBPREFIX}lib/postgresql/ltree.la
-${PG_SUBPREFIX}lib/postgresql/unaccent.la
-${PG_SUBPREFIX}lib/postgresql/uuid-ossp.la
+${PG_SUBPREFIX}lib/postgresql/ltree.so
+${PG_SUBPREFIX}lib/postgresql/unaccent.so
+${PG_SUBPREFIX}lib/postgresql/uuid-ossp.so
 ${PG_SUBPREFIX}share/postgresql/contrib/_int.sql
 ${PG_SUBPREFIX}share/postgresql/contrib/citext.sql
 ${PG_SUBPREFIX}share/postgresql/contrib/hstore.sql

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/12/24 03:41:38 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/02/09 08:48:17 adam Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -509,11 +509,23 @@ ${PG_SUBPREFIX}include/sqlca.h
 ${PG_SUBPREFIX}include/sqlda-compat.h
 ${PG_SUBPREFIX}include/sqlda-native.h
 ${PG_SUBPREFIX}include/sqlda.h
-${PG_SUBPREFIX}lib/libecpg.la
-${PG_SUBPREFIX}lib/libecpg_compat.la
+${PG_SUBPREFIX}lib/libecpg.so
+${PG_SUBPREFIX}lib/libecpg.so.6
+${PG_SUBPREFIX}lib/libecpg.so.6.2
+${PG_SUBPREFIX}lib/libecpg.a
+${PG_SUBPREFIX}lib/libecpg_compat.so
+${PG_SUBPREFIX}lib/libecpg_compat.so.3
+${PG_SUBPREFIX}lib/libecpg_compat.so.3.2
+${PG_SUBPREFIX}lib/libecpg_compat.a
 ${PG_SUBPREFIX}lib/libpgport.a
-${PG_SUBPREFIX}lib/libpgtypes.la
-${PG_SUBPREFIX}lib/libpq.la
+${PG_SUBPREFIX}lib/libpgtypes.so
+${PG_SUBPREFIX}lib/libpgtypes.so.3
+${PG_SUBPREFIX}lib/libpgtypes.so.3.1
+${PG_SUBPREFIX}lib/libpgtypes.a
+${PG_SUBPREFIX}lib/libpq.so
+${PG_SUBPREFIX}lib/libpq.so.5
+${PG_SUBPREFIX}lib/libpq.so.5.3
+${PG_SUBPREFIX}lib/libpq.a
 ${PG_SUBPREFIX}lib/postgresql/pgxs/config/install-sh
 ${PG_SUBPREFIX}lib/postgresql/pgxs/src/Makefile.global
 ${PG_SUBPREFIX}lib/postgresql/pgxs/src/Makefile.port

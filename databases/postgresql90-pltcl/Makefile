@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/19 09:53:29 adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/09 08:48:19 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/90-pltcl-/}
 COMMENT=	PL/Tcl procedural language for the PostgreSQL backend
@@ -9,12 +9,13 @@ DEPENDS+=	postgresql90-server>=${PKGVERSION_NOREV}:../../databases/postgresql90-
 
 .include "../../databases/postgresql90/Makefile.common"
 
-USE_LIBTOOL=		yes
-PKG_LIBTOOL=		${PKG_SHLIBTOOL}
+#USE_LIBTOOL=		yes
+#PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 CONFIGURE_ARGS+=	--with-tcl
 CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_PREFIX.tcl}/lib"
 CONFIGURE_ENV+=		TCLSH="${TCLSH}"
 TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
+BUILD_MAKE_FLAGS=	PGXS=1
 
 BUILD_DIRS=		src/pl/tcl
 
