@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/12/24 08:10:36 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2011/02/09 08:48:17 adam Exp $
 
 BUILDLINK_TREE+=	postgresql90-client
 
@@ -23,6 +23,7 @@ BUILDLINK_FILES.postgresql90-client+=	bin/pg_config
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif # POSTGRESQL90_CLIENT_BUILDLINK3_MK
 

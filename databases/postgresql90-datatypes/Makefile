@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/19 09:53:27 adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/09 08:48:18 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/90-datatypes-/}
 COMMENT=	PostgreSQL data types support modules
@@ -9,9 +9,12 @@ DEPENDS+=	postgresql90-server>=${PKGVERSION_NOREV}:../../databases/postgresql90-
 
 .include "../../databases/postgresql90/Makefile.common"
 
-USE_LIBTOOL=		yes
-PKG_LIBTOOL=		${PKG_SHLIBTOOL}
+#USE_LIBTOOL=		yes
+#PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 CONFIGURE_ARGS+=	--with-ossp-uuid
+BUILD_MAKE_FLAGS=	PGXS=1
+# because global pg_config.h is included, we have to define this
+CPPFLAGS+=		-DHAVE_UUID_H
 
 BUILD_DIRS+=		contrib/citext
 BUILD_DIRS+=		contrib/hstore
