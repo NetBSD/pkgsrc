@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10091 2011/02/09 09:54:21 wiz Exp $
+$NetBSD: TODO,v 1.10092 2011/02/09 16:25:52 taca Exp $
 
 Suggested new packages
 ======================
@@ -1054,7 +1054,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmsx-0.7.0
 	o openoffice3-3.3
 	o openssh-5.8p1
-	o openssl-1.0.0c
+	o openssl-1.0.0d
 	o open-vm-tools-2010.09.19.301124
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
