@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2011/01/13 13:39:07 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2011/02/09 08:37:10 adam Exp $
 
-DISTNAME=	ntop-4.0
-PKGREVISION=	2
+DISTNAME=	ntop-4.0.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.ntop.org/ntop.html
@@ -44,8 +44,10 @@ USE_BUILTIN.libevent=	no
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
-	cp ${PREFIX}/share/libtool/config/ltmain.sh .; \
+	libtoolize -c -f; cp m4/libtool.m4 libtool.m4.in; \
+	cat acinclude.m4.in libtool.m4.in acinclude.m4.ntop > acinclude.m4; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
+#	cp ${PREFIX}/share/libtool/config/ltmain.sh .; \
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
