@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/10/15 11:37:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/02/09 12:40:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -99,6 +99,7 @@ ${GEM_LIBDIR}/lib/action_view/helpers/atom_feed_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/benchmark_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/cache_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/capture_helper.rb
+${GEM_LIBDIR}/lib/action_view/helpers/csrf_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/date_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/debug_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/form_helper.rb
