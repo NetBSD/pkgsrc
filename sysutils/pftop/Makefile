@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/05/25 21:06:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2011/02/09 22:51:38 rumko Exp $
 
 DISTNAME=	pftop-0.7
+PKGREVISION=	1
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.eee.metu.edu.tr/~canacar/
 
@@ -14,6 +15,7 @@ NO_CONFIGURE=	yes
 
 MAKE_ENV+=	OSLEVEL=${PF_VERSION:S/.//}
 CFLAGS+=	-I${PREFIX}/include
+OSVERSION_SPECIFIC=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
