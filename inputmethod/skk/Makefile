@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/02/03 14:42:53 uebayasi Exp $
+# $NetBSD: Makefile,v 1.23 2011/02/09 12:44:21 ryoon Exp $
 #
 
 DISTNAME=	ddskk-14.2
@@ -19,7 +19,7 @@ CONFLICTS=	ddskk-[0-9]*
 EMACS_MODULES+=	base leim
 EMACS_BUILDLINK=YES
 
-EMACS_VERSIONS_ACCEPTED=	emacs24 emacs23 emacs22 emacs22nox \
+EMACS_VERSIONS_ACCEPTED=	emacs24 emacs23 emacs23nox emacs22 emacs22nox \
 				emacs21 emacs21nox
 
 MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
