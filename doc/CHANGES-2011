@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.304 2011/02/09 08:51:49 adam Exp $
+$NetBSD: CHANGES-2011,v 1.305 2011/02/09 09:13:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -485,3 +485,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/postgresql90-pltcl to 9.0.3 [adam 2011-02-09]
 	Updated databases/postgresql90-replicationtools to 9.0.3 [adam 2011-02-09]
 	Updated databases/postgresql90-upgrade to 9.0.3 [adam 2011-02-09]
+	Updated archivers/xz to 5.0.1 [adam 2011-02-09]
