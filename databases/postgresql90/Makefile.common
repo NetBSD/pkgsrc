@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2010/12/24 06:30:03 asau Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/02/09 08:48:16 adam Exp $
 #
 # used by databases/postgresql90-adminpack/Makefile
 # used by databases/postgresql90-client/Makefile
@@ -22,7 +22,7 @@
 
 .include "../../databases/postgresql90/Makefile.mirrors"
 
-DISTNAME=	postgresql-9.0.2
+DISTNAME=	postgresql-9.0.3
 CATEGORIES=	databases
 MASTER_SITES=	${PGSQL_MIRRORS:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -82,11 +82,6 @@ CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--without-zlib
 
-# Enable Bonjour on Mac OS X
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--with-bonjour
-.endif
-
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
 # of 2 up to 32768, and the default size is 8196.  Please don't change
@@ -110,8 +105,6 @@ USE_LIBLTDL?=		no
 
 .if !defined(META_PACKAGE)
 post-extract:
-	cp -f ${COMMON_FILESDIR}/Makefile.custom ${WRKSRC}/src/Makefile.custom
-	cp -f ${COMMON_FILESDIR}/Makefile.libtool ${WRKSRC}/src/Makefile.shlib
 .  if !empty(USE_LIBLTDL:M[yY][eE][sS])
 	cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
 		${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.h
