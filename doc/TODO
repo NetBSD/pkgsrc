@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10090 2011/02/09 09:13:11 adam Exp $
+$NetBSD: TODO,v 1.10091 2011/02/09 09:54:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -563,7 +563,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-698
+	o etm-702
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evolution-2.32.2
@@ -684,6 +684,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade3-3.6.7 [GNOME 2.26]
+	o glib2-2.28.0
 	o glom-1.14.2 [GNOME 2.26]
 	o gmime24-2.4.22
 	o gnet1-1.1.9
@@ -711,9 +712,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.4.2
 	o gnuchess-5.08
 	o gnumeric110-1.10.13
-	o gobject-introspection-0.10.1
+	o gobject-introspection-0.10.2
 	o goffice0.8-0.8.13
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -740,6 +742,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk2-2.24.0
 	o gtkglarea-2.0.1
 	o gtkhtml314-3.32.2
+	o gtkmm-2.24.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.19
 	o gtodo-0.16.0rc2
@@ -805,6 +808,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jdb-1.14
 	o jed-0.99-18
 	o jhead-2.90
+	o john-1.7.6j11
 	o jools-1.0
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
@@ -1066,7 +1070,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o paprefs-0.9.8
-	o parallel-20110122
+	o parallel-20110205
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.1
