@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2010/10/15 11:32:29 taca Exp $
+# $NetBSD: Makefile,v 1.24 2011/02/09 12:37:58 taca Exp $
 
-DISTNAME=	activesupport-2.3.10
+DISTNAME=	activesupport-2.3.11
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
