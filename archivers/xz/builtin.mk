@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2010/08/25 10:44:40 obache Exp $
+# $NetBSD: builtin.mk,v 1.2 2011/02/09 09:12:16 adam Exp $
 
 BUILTIN_PKG:=	xz
 
@@ -44,7 +44,7 @@ BUILTIN_VERSION.xz!=							\
 
 BUILTIN_PKG.xz=		xz-${BUILTIN_VERSION.xz}
 .endif
-MAKEVARS+=    BUILTIN_PKG.xz
+MAKEVARS+=	BUILTIN_PKG.xz
 
 ###
 ### Determine whether we should use the built-in implementation if it
