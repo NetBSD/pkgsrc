@@ -1,4 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2011/02/09 22:51:38 rumko Exp $
+$OpenBSD: patch-engine_c,v 1.1 2008/06/13 00:38:12 canacar Exp $
+
+* DragonFly compatibility
+* Patches to support PF > 4.1 taken from OpenBSD's ports.
 
 --- engine.c.orig	2007-11-07 07:35:44 +0100
 +++ engine.c	2009-11-17 00:31:46 +0100
@@ -66,7 +70,17 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  }
  
  void
-@@ -905,12 +910,6 @@
+@@ -809,6 +814,9 @@
+ {
+ 	order_type *o, *oc;
+ 
++	if (curr_view->mgr->order_list == NULL)
++		return;
++
+ 	oc = curr_view->mgr->order_curr;
+ 
+ 	for (o = curr_view->mgr->order_list; o->name != NULL; o++) {
+@@ -905,12 +913,6 @@
  }
  
  void
@@ -79,7 +93,7 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  setup_term(int dmax)
  {
  	max_disp = dmax;
-@@ -941,8 +940,9 @@
+@@ -941,8 +943,9 @@
  		keypad(stdscr, TRUE);
  		intrflush(stdscr, FALSE);
  
@@ -90,7 +104,7 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	}
  
  	if (dmax == 0)
-@@ -970,7 +970,6 @@
+@@ -970,7 +973,6 @@
  	}
  	curr_message = NULL;
  	curr_cmd = cmd;
@@ -98,7 +112,7 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	return prev;
  }
  
-@@ -987,7 +986,6 @@
+@@ -987,7 +989,6 @@
  
  int
  msgprintf(char *format, ...)
@@ -106,7 +120,7 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  {
  	static char buf[1024];
  	int len;
-@@ -1085,28 +1083,21 @@
+@@ -1085,28 +1086,21 @@
  	if (curr_message != NULL) {
  		if (ch > 0) {
  			curr_message = NULL;
@@ -135,7 +149,7 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  		break;
  	case 'v':
  		/* FALLTHROUGH */
-@@ -1124,49 +1115,40 @@
+@@ -1124,49 +1118,40 @@
  		/* FALLTHROUGH */
  	case CTRL_N:
  		dispstart++;
@@ -186,7 +200,7 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  		set_view_hotkey(ch);
  }
  
-@@ -1177,43 +1159,15 @@
+@@ -1177,43 +1162,15 @@
  	signal(SIGINT, sig_close);
  	signal(SIGQUIT, sig_close);
  	signal(SIGWINCH, sig_resize);
@@ -231,7 +245,7 @@ $NetBSD: patch-ad,v 1.2 2010/09/18 20:48:23 wiz Exp $
  		if (gotsig_close)
  			break;
  		if (gotsig_resize) {
-@@ -1221,13 +1175,31 @@
+@@ -1221,13 +1178,31 @@
  				endwin();
  			setup_term(max_disp);
  			gotsig_resize = 0;

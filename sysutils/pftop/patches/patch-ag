@@ -1,4 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2011/02/09 22:51:38 rumko Exp $
+$OpenBSD: patch-pftop_c,v 1.13 2009/12/02 22:59:29 sthen Exp $
+
+* DragonFly compatibility
+* Patches to support PF > 4.1 taken from OpenBSD's ports.
 
 --- pftop.c.orig	2007-11-07 07:36:46 +0100
 +++ pftop.c	2009-11-16 23:37:03 +0100
@@ -44,7 +48,21 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  #include <netdb.h>
  #include <signal.h>
  #include <stdio.h>
-@@ -371,6 +391,9 @@
+@@ -127,6 +147,13 @@
+ #define PT_NOROUTE(x) (0)
+ #endif
+ 
++#ifdef HAVE_NETWORK_ORDER
++#define PF_TSTAMP(x) ntohl(x)
++#else
++#define PF_TSTAMP(x) (x)
++#endif
++
++
+ /* view management */
+ int select_states(void);
+ int read_states(void);
+@@ -371,6 +398,9 @@
  	class_stats_t		cbq_stats;
  	struct priq_classstats	priq_stats;
  	struct hfsc_classstats	hfsc_stats;
@@ -54,7 +72,198 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  };
  
  struct queue_stats {
-@@ -736,7 +759,7 @@
+@@ -445,11 +475,11 @@
+ int
+ sort_age_callback(const void *s1, const void *s2)
+ {
+-	if (state_buf[* (u_int32_t *) s2].creation >
+-	    state_buf[* (u_int32_t *) s1].creation)
++	if (PF_TSTAMP(state_buf[* (u_int32_t *) s2].creation) >
++	    PF_TSTAMP(state_buf[* (u_int32_t *) s1].creation))
+ 		return sortdir;
+-	if (state_buf[* (u_int32_t *) s2].creation <
+-	    state_buf[* (u_int32_t *) s1].creation)
++	if (PF_TSTAMP(state_buf[* (u_int32_t *) s2].creation) <
++	    PF_TSTAMP(state_buf[* (u_int32_t *) s1].creation))
+ 		return -sortdir;
+ 	return 0;
+ }
+@@ -457,11 +487,11 @@
+ int
+ sort_exp_callback(const void *s1, const void *s2)
+ {
+-	if (state_buf[* (u_int32_t *) s2].expire >
+-	    state_buf[* (u_int32_t *) s1].expire)
++	if (PF_TSTAMP(state_buf[* (u_int32_t *) s2].expire) >
++	    PF_TSTAMP(state_buf[* (u_int32_t *) s1].expire))
+ 		return sortdir;
+-	if (state_buf[* (u_int32_t *) s2].expire <
+-	    state_buf[* (u_int32_t *) s1].expire)
++	if (PF_TSTAMP(state_buf[* (u_int32_t *) s2].expire) <
++	    PF_TSTAMP(state_buf[* (u_int32_t *) s1].expire))
+ 		return -sortdir;
+ 	return 0;
+ }
+@@ -535,6 +565,115 @@
+ 	return 0;
+ }
+ 
++#ifdef HAVE_PFSYNC_KEY
++
++#ifdef __GNUC__
++__inline__
++#endif
++int
++sort_addr_callback(const pf_state_t *s1,
++		   const pf_state_t *s2, int dir)
++{
++	const struct pf_addr *aa, *ab;
++	u_int16_t pa, pb;
++	int af, ret, ii, io;
++
++	af = s1->af;
++
++
++	if (af > s2->af)
++		return sortdir;
++	if (af < s2->af)
++		return -sortdir;
++	
++       	ii = io = 0;
++
++	if (dir == PF_OUT)	/* looking for source addr */
++		io = 1;
++	else			/* looking for dest addr */
++		ii = 1;
++	
++	if (s1->direction == PF_IN) {
++		aa = &s1->key[PF_SK_STACK].addr[ii];
++		pa =  s1->key[PF_SK_STACK].port[ii];
++	} else {
++		aa = &s1->key[PF_SK_WIRE].addr[io];
++		pa =  s1->key[PF_SK_WIRE].port[io];
++	}
++
++	if (s2->direction == PF_IN) {
++		ab = &s2->key[PF_SK_STACK].addr[ii];;
++		pb =  s2->key[PF_SK_STACK].port[ii];
++	} else {
++		ab = &s2->key[PF_SK_WIRE].addr[io];;
++		pb =  s2->key[PF_SK_WIRE].port[io];
++	}
++
++	ret = compare_addr(af, aa, ab);
++	if (ret)
++		return ret * sortdir;
++
++	if (ntohs(pa) > ntohs(pb))
++		return sortdir;
++	return -sortdir;
++}
++
++#ifdef __GNUC__
++__inline__
++#endif
++int
++sort_port_callback(const pf_state_t *s1,
++		   const pf_state_t *s2, int dir)
++{
++	const struct pf_addr *aa, *ab;
++	u_int16_t pa, pb;
++	int af, ret, ii, io;
++
++	af = s1->af;
++
++
++	if (af > s2->af)
++		return sortdir;
++	if (af < s2->af)
++		return -sortdir;
++	
++       	ii = io = 0;
++
++	if (dir == PF_OUT)	/* looking for source addr */
++		io = 1;
++	else			/* looking for dest addr */
++		ii = 1;
++	
++	if (s1->direction == PF_IN) {
++		aa = &s1->key[PF_SK_STACK].addr[ii];
++		pa =  s1->key[PF_SK_STACK].port[ii];
++	} else {
++		aa = &s1->key[PF_SK_WIRE].addr[io];
++		pa =  s1->key[PF_SK_WIRE].port[io];
++	}
++
++	if (s2->direction == PF_IN) {
++		ab = &s2->key[PF_SK_STACK].addr[ii];;
++		pb =  s2->key[PF_SK_STACK].port[ii];
++	} else {
++		ab = &s2->key[PF_SK_WIRE].addr[io];;
++		pb =  s2->key[PF_SK_WIRE].port[io];
++	}
++
++
++	if (ntohs(pa) > ntohs(pb))
++		return sortdir;
++	if (ntohs(pa) < ntohs(pb))
++		return - sortdir;
++
++	ret = compare_addr(af, aa, ab);
++	if (ret)
++		return ret * sortdir;
++	return -sortdir;
++}
++
++#else	/* HAVE_PFSYNC_KEY */
++
+ #ifdef __GNUC__
+ __inline__
+ #endif
+@@ -573,20 +712,6 @@
+ 	return -sortdir;
+ }
+ 
+-int sort_sa_callback(const void *p1, const void *p2)
+-{
+-	pf_state_t *s1 = state_buf + (* (u_int32_t *) p1);
+-	pf_state_t *s2 = state_buf + (* (u_int32_t *) p2);
+-	return sort_addr_callback(s1, s2, PF_OUT);
+-}
+-
+-int sort_da_callback(const void *p1, const void *p2)
+-{
+-	pf_state_t *s1 = state_buf + (* (u_int32_t *) p1);
+-	pf_state_t *s2 = state_buf + (* (u_int32_t *) p2);
+-	return sort_addr_callback(s1, s2, PF_IN);
+-}
+-
+ #ifdef __GNUC__
+ __inline__
+ #endif
+@@ -625,6 +750,21 @@
+ 		return sortdir;
+ 	return -sortdir;
+ }
++#endif	/* HAVE_PFSYNC_KEY */
++
++int sort_sa_callback(const void *p1, const void *p2)
++{
++	pf_state_t *s1 = state_buf + (* (u_int32_t *) p1);
++	pf_state_t *s2 = state_buf + (* (u_int32_t *) p2);
++	return sort_addr_callback(s1, s2, PF_OUT);
++}
++
++int sort_da_callback(const void *p1, const void *p2)
++{
++	pf_state_t *s1 = state_buf + (* (u_int32_t *) p1);
++	pf_state_t *s2 = state_buf + (* (u_int32_t *) p2);
++	return sort_addr_callback(s1, s2, PF_IN);
++}
+ 
+ int
+ sort_sp_callback(const void *p1, const void *p2)
+@@ -736,7 +876,7 @@
  	} else {
  		num_states = 0;
  		for (n = 0; n<num_states_all; n++)
@@ -63,7 +272,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  			    sizeof(pf_state_t), sizeof(pf_state_t)) > 0)
  				state_ord[num_states++] = n;
  	}
-@@ -828,7 +851,7 @@
+@@ -828,7 +968,7 @@
  		tbprintf(" PAUSED");
  
  	if (rawmode)
@@ -72,7 +281,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	else
  		mvprintw(0, 0, "%s", tmp_buf);
  
-@@ -843,7 +866,10 @@
+@@ -843,7 +983,10 @@
  		len = columns - strlen(tmp_buf);
  		if (len < 0)
  			len = 0;
@@ -84,7 +293,122 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	}
  
  	tb_end();
-@@ -1244,7 +1270,6 @@
+@@ -865,7 +1008,48 @@
+ 			tbprintf("/%u", unmask(mask, af));
+ 	}
+ }
++#ifdef HAVE_PFSYNC_KEY
++void
++print_fld_host2(field_def *fld, struct pfsync_state_key *ks,
++		struct pfsync_state_key *kn, int idx, int af)
++{
++	struct pf_addr *as = &ks->addr[idx];
++	struct pf_addr *an = &kn->addr[idx];
++
++	u_int16_t ps = ntohs(ks->port[idx]);
++	u_int16_t pn = ntohs(kn->port[idx]);
++
++	if (fld == NULL)
++		return;
++
++	if (fld->width < 3) {
++		print_fld_str(fld, "*");
++		return;
++	}
++
++	tb_start();
++	tb_print_addr(as, NULL, af);
++
++	if (af == AF_INET)
++		tbprintf(":%u", ps);
++	else
++		tbprintf("[%u]", ps);
++
++	print_fld_tb(fld);
++
++	if (PF_ANEQ(as, an, af) || ps != pn) {
++		tb_start();
++		tb_print_addr(an, NULL, af);
+ 
++		if (af == AF_INET)
++			tbprintf(":%u", pn);
++		else
++			tbprintf("[%u]", pn);
++		print_fld_tb(FLD_GW);
++	}
++
++}
++#else
+ void
+ print_fld_host(field_def *fld, pf_state_host_t * h, int af)
+ {
+@@ -889,6 +1073,7 @@
+ 
+ 	print_fld_tb(fld);
+ }
++#endif
+ 
+ void
+ print_fld_state(field_def *fld, unsigned int proto,
+@@ -960,6 +1145,19 @@
+ 	else
+ 		print_fld_uint(FLD_PROTO, s->proto);
+ 
++#ifdef HAVE_PFSYNC_KEY
++	if (s->direction == PF_OUT) {
++		print_fld_host2(FLD_SRC, &s->key[PF_SK_WIRE],
++		    &s->key[PF_SK_STACK], 1, s->af);
++		print_fld_host2(FLD_DEST, &s->key[PF_SK_WIRE],
++		    &s->key[PF_SK_STACK], 0, s->af);
++	} else {
++		print_fld_host2(FLD_SRC, &s->key[PF_SK_STACK],
++		    &s->key[PF_SK_WIRE], 0, s->af);
++		print_fld_host2(FLD_DEST, &s->key[PF_SK_STACK],
++		    &s->key[PF_SK_WIRE], 1, s->af);
++	}
++#else
+ 	if (s->direction == PF_OUT) {
+ 		print_fld_host(FLD_SRC, &s->lan, s->af);
+ 		print_fld_host(FLD_DEST, &s->ext, s->af);
+@@ -972,6 +1170,7 @@
+ 	    (s->lan.port != s->gwy.port)) {
+ 		print_fld_host(FLD_GW, &s->gwy, s->af);
+ 	}
++#endif
+ 
+ 	if (s->direction == PF_OUT)
+ 		print_fld_str(FLD_DIR, "Out");
+@@ -979,8 +1178,8 @@
+ 		print_fld_str(FLD_DIR, "In");
+ 
+ 	print_fld_state(FLD_STATE, s->proto, src->state, dst->state);
+-	print_fld_age(FLD_AGE, s->creation);
+-	print_fld_age(FLD_EXP, s->expire);
++	print_fld_age(FLD_AGE, PF_TSTAMP(s->creation));
++	print_fld_age(FLD_EXP, PF_TSTAMP(s->expire));
+ #ifdef HAVE_INOUT_COUNT
+ 	{
+ 		u_int64_t sz = COUNTER(s->bytes[0]) + COUNTER(s->bytes[1]);
+@@ -988,14 +1187,14 @@
+ 		print_fld_size(FLD_PKTS, COUNTER(s->packets[0]) +
+ 			       COUNTER(s->packets[1]));
+ 		print_fld_size(FLD_BYTES, sz);
+-		print_fld_rate(FLD_SA, (s->creation > 0) ?
+-			       ((double)sz/(double)s->creation) : -1);
++		print_fld_rate(FLD_SA, (s->creation) ?
++			       ((double)sz/PF_TSTAMP((double)s->creation)) : -1);
+ 	}
+ #else
+ 	print_fld_size(FLD_PKTS, s->packets);
+ 	print_fld_size(FLD_BYTES, s->bytes);
+-	print_fld_rate(FLD_SA, (s->creation > 0) ?
+-		       ((double)s->bytes/(double)s->creation) : -1);
++	print_fld_rate(FLD_SA, (s->creation) ?
++		       ((double)s->bytes/PF_TSTAMP((double)s->creation)) : -1);
+ 
+ #endif
+ #ifdef HAVE_PFSYNC_STATE
+@@ -1244,7 +1443,6 @@
  		FLD_ANCHOR->max_width = mx;
  		FLD_ANCHOR->norm_width = nx;
  		field_setup();
@@ -92,7 +416,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	}
  }
  #endif
-@@ -1279,7 +1304,6 @@
+@@ -1279,7 +1477,6 @@
  			FLD_LABEL->norm_width = nw;
  			FLD_LABEL->max_width = mw;
  			field_setup();
@@ -100,7 +424,120 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  		}
  	}
  #endif
-@@ -1924,6 +1948,10 @@
+@@ -1458,8 +1655,9 @@
+ void
+ print_rule(struct pf_rule *pr)
+ {
+-	static const char *actiontypes[] = { "Pass", "Block", "Scrub", "Nat",
+-	    "no Nat", "Binat", "no Binat", "Rdr", "no Rdr" };
++	static const char *actiontypes[] = { "Pass", "Block", "Scrub",
++	    "no Scrub", "Nat", "no Nat", "Binat", "no Binat", "Rdr",
++	    "no Rdr", "SynProxy Block", "Defer", "Match" };
+ 	int numact = sizeof(actiontypes) / sizeof(char *);
+ 
+ #ifdef HAVE_PF_ROUTE
+@@ -1475,8 +1673,12 @@
+ 	print_fld_str(FLD_LABEL, pr->label);
+ #endif
+ #ifdef HAVE_RULE_STATES
++#ifdef HAVE_PFSYNC_KEY
++	print_fld_size(FLD_STATS, pr->states_tot);
++#else
+ 	print_fld_size(FLD_STATS, pr->states);
+ #endif
++#endif
+ 
+ #ifdef HAVE_INOUT_COUNT_RULES
+ 	print_fld_size(FLD_PKTS, pr->packets[0] + pr->packets[1]);
+@@ -1486,7 +1688,13 @@
+ 	print_fld_size(FLD_BYTES, pr->bytes);
+ #endif
+ 	print_fld_uint(FLD_RULE, pr->nr);
+-	print_fld_str(FLD_DIR, pr->direction == PF_OUT ? "Out" : "In");
++	if (pr->direction == PF_OUT)
++		print_fld_str(FLD_DIR, "Out");
++	else if (pr->direction == PF_IN)
++		print_fld_str(FLD_DIR, "In");
++	else
++		print_fld_str(FLD_DIR, "Any");
++
+ 	if (pr->quick)
+ 		print_fld_str(FLD_QUICK, "Quick");
+ 
+@@ -1729,12 +1937,19 @@
+ 			prev->next = node;
+ 		}
+ 	}
+-	if (*root != node) {
+-		struct pf_altq_node	*prev_flat = *root;
+-		while (prev_flat->next_flat != NULL) {
+-			prev_flat = prev_flat->next_flat;
+-		}
+-		prev_flat->next_flat = node;
++}
++
++void
++pfctl_set_next_flat(struct pf_altq_node *node, struct pf_altq_node *up)
++{
++	while (node) {
++		struct pf_altq_node *next = node->next ? node->next : up;
++		if (node->children) {
++			node->next_flat = node->children;
++			pfctl_set_next_flat(node->children, next);
++		} else
++			node->next_flat = next;
++		node = node->next;
+ 	}
+ }
+ 
+@@ -1747,6 +1962,7 @@
+ 	u_int32_t		 nr;
+ 	struct queue_stats	 qstats;
+ 	u_int32_t		 nr_queues;
++	int			 ret = 0;
+ 
+ 	*inserts = 0;
+ 	memset(&pa, 0, sizeof(pa));
+@@ -1757,13 +1973,15 @@
+ 			  strerror(errno));
+ 		return (-1);
+ 	}
++
+ 	num_queues = nr_queues = pa.nr;
+ 	for (nr = 0; nr < nr_queues; ++nr) {
+ 		pa.nr = nr;
+ 		if (ioctl(pf_dev, DIOCGETALTQ, &pa)) {
+ 			msgprintf("Error Reading Queue (DIOCGETALTQ): %s",
+ 				  strerror(errno));
+-			return (-1);
++			ret = -1;
++			break;
+ 		}
+ 		if (pa.altq.qid > 0) {
+ 			pq.nr = nr;
+@@ -1773,7 +1991,8 @@
+ 			if (ioctl(pf_dev, DIOCGETQSTATS, &pq)) {
+ 				msgprintf("Error Reading Queue (DIOCGETQSTATS): %s",
+ 					  strerror(errno));
+-				return (-1);
++				ret = -1;
++				break;
+ 			}
+ 			qstats.valid = 1;
+ 			gettimeofday(&qstats.timestamp, NULL);
+@@ -1794,7 +2013,10 @@
+ 		else
+ 			--num_queues;
+ 	}
+-	return (0);
++
++	pfctl_set_next_flat(*root, NULL);
++
++	return (ret);
+ }
+ 
+ void
+@@ -1924,6 +2146,10 @@
  	    node->altq.scheduler == ALTQT_HFSC
  		)
  		print_fld_bw(FLD_BANDW, (double)node->altq.bandwidth);
@@ -111,7 +548,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	
  	if (node->altq.priority != DEFAULT_PRIORITY)
  		print_fld_uint(FLD_PRIO,
-@@ -1992,6 +2020,26 @@
+@@ -1992,6 +2218,26 @@
  					node->qstats_last.data.hfsc_stats.xmit_cnt.bytes, interval);
  		}
  		break;
@@ -138,7 +575,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	}
  
  	/* if (node->altq.scheduler != ALTQT_HFSC && interval > 0) { */
-@@ -2041,11 +2089,9 @@
+@@ -2041,11 +2287,9 @@
  	if (cachestates) {
  		show_field(FLD_SI);
  		show_field(FLD_SP);
@@ -150,7 +587,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	}
  	field_setup();
  }
-@@ -2105,8 +2151,10 @@
+@@ -2105,8 +2349,10 @@
  	line++;
  	mvprintw(line++, 6, "press any key to continue ...");
  
@@ -163,7 +600,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  }
  
  
-@@ -2142,7 +2190,6 @@
+@@ -2142,7 +2388,6 @@
  	del = atoi(cmdbuf);
  	if (del > 0) {
  		delay = del;
@@ -171,7 +608,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  	}
  }
  
-@@ -2175,7 +2222,6 @@
+@@ -2175,7 +2420,6 @@
  		/* FALLTHROUGH */
  	case 'h':
  		show_help();
@@ -179,7 +616,7 @@ $NetBSD: patch-ag,v 1.2 2010/09/18 20:48:23 wiz Exp $
  		break;
  	case 'n':
  		command_set(&cm_count, NULL);
-@@ -2349,8 +2395,6 @@
+@@ -2349,8 +2593,6 @@
  	if (rawmode && countmax == 0)
  		countmax = 1;
  
