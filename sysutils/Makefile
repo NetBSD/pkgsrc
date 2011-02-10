@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2011/02/03 13:37:02 imil Exp $
+# $NetBSD: Makefile,v 1.508 2011/02/10 16:26:16 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -215,6 +215,7 @@ SUBDIR+=	notification-daemon
 SUBDIR+=	nrg2iso
 SUBDIR+=	ntfsprogs
 SUBDIR+=	nvnet
+SUBDIR+=	nvramtool
 SUBDIR+=	oak
 SUBDIR+=	open-vm-tools
 SUBDIR+=	osname
@@ -287,8 +288,8 @@ SUBDIR+=	service-config
 SUBDIR+=	setquota
 SUBDIR+=	sformat
 SUBDIR+=	shc
-SUBDIR+=	shmux
 SUBDIR+=	shelldap
+SUBDIR+=	shmux
 SUBDIR+=	skill
 SUBDIR+=	slay
 SUBDIR+=	smartmontools
