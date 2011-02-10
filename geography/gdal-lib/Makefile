@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2011/01/18 09:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2011/02/10 03:45:09 brook Exp $
 
-DISTNAME=	gdal-1.7.3
-PKGNAME=	gdal-lib-1.7.3
-PKGREVISION=	2
+DISTNAME=	gdal-1.8.0
+PKGNAME=	gdal-lib-1.8.0
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/
 
@@ -19,6 +18,11 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-geos
+# This version of gdal requires the TIFF function TIFFUnsetField,
+# which apparently is not part of the tiff v3.9.4 API.  That, however,
+# is the most recent stable release of tiff.  Consequently, for the
+# time being the internal tiff library will be used.
+CONFIGURE_ARGS+=	--with-libtiff=internal
 CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-xerces
 CONFIGURE_ARGS+=	--with-xerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
@@ -39,7 +43,8 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
+# See the comment above about using the internal tiff library
+# .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
