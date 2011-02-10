@@ -1,11 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/08 18:47:03 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/10 09:49:09 ahoka Exp $
 
 CATEGORIES=	multimedia www
-#MASTER_SITES=	http://download.macromedia.com/pub/labs/flashplayer10/
 MASTER_SITES=	http://fpdownload.macromedia.com/get/flashplayer/current/
-#http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_10_linux.tar.gz
-#flash-plugin-10.1.102.65-release.i386.rpm
-MASTER_SITES+=	ftp://www.dvo.ru/pub/Gentoo/distfiles/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.adobe.com/
@@ -22,27 +18,19 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
-DIST_SUBDIR=		flash/${FLASH_VERS}
+EXTRACT_SUFX=		.rpm
 
 CRYPTO=			yes
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat gtk2 x11 krb5
-EMUL_REQD=		suse>=10.0
+EMUL_REQD=		suse>=11.3
 
-.include "../../mk/bsd.prefs.mk"
-
-# Defaults so lintpkgsrc is happy
-FLASH_VERS=		10.1.102.65
-#FLASH_VERS=		10.0.0.525
-.if ${EMUL_PLATFORM} == "linux-i386"
-DISTUNAME=		linux
-DISTNAME=		install_flash_player_10_${DISTUNAME}
-WRKNAME=		install_flash_player_10_${DISTUNAME}
-.endif
+FLASH_VERSION=		10.2.152.27
+DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
 
 CONFLICTS=		ns-flash-[0-9]*
-PKGNAME=		adobe-flash-plugin-${FLASH_VERS:S/r/./}
+PKGNAME=		adobe-flash-plugin-${FLASH_VERSION:S/r/./}
 
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
@@ -50,6 +38,7 @@ NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${DESTDIR}${NS_PLUGINS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/usr/lib/flash-plugin/libflashplayer.so \
+		${DESTDIR}${NS_PLUGINS_DIR}
 
 .include "../../mk/bsd.pkg.mk"
