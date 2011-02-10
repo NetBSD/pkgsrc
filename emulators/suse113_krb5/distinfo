@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:27:59 chs Exp $
+$NetBSD: distinfo,v 1.2 2011/02/10 02:41:18 chs Exp $
 
-SHA1 (suse113/i586/krb5-1.8.1-4.3.i586.rpm) = 6c94cdd19b188e5dd3083b2af5830ea145fc1d00
-RMD160 (suse113/i586/krb5-1.8.1-4.3.i586.rpm) = 5448464aa2d78f253777463b9db49ffa2754262b
-Size (suse113/i586/krb5-1.8.1-4.3.i586.rpm) = 513031 bytes
+SHA1 (suse113/i586/krb5-1.8.1-5.3.1.i586.rpm) = 04a8bc1053f36f71ad3ba41920b7af0a6a9de97e
+RMD160 (suse113/i586/krb5-1.8.1-5.3.1.i586.rpm) = 205cf16fb2cec5772870c4a6aa342eca20eae42c
+Size (suse113/i586/krb5-1.8.1-5.3.1.i586.rpm) = 513953 bytes
 SHA1 (suse113/i586/libcom_err2-1.41.11-1.11.i586.rpm) = 4efd4a84d4b6e29aaa3c6a56fb84b00aac2a1188
 RMD160 (suse113/i586/libcom_err2-1.41.11-1.11.i586.rpm) = d0494bbde1e445af92f1bdc6dc139e6485bbe926
 Size (suse113/i586/libcom_err2-1.41.11-1.11.i586.rpm) = 19060 bytes
-SHA1 (suse113/x86_64/krb5-1.8.1-4.3.x86_64.rpm) = 412260b0798ddc17aed619448852f2a9264d1793
-RMD160 (suse113/x86_64/krb5-1.8.1-4.3.x86_64.rpm) = 4c68f0f8d139fd20e0570860512f321356bc202d
-Size (suse113/x86_64/krb5-1.8.1-4.3.x86_64.rpm) = 512069 bytes
+SHA1 (suse113/x86_64/krb5-1.8.1-5.3.1.x86_64.rpm) = bed79aa33b67241384bcf59dea1627790ca5bad9
+RMD160 (suse113/x86_64/krb5-1.8.1-5.3.1.x86_64.rpm) = a311ceae312f130b133a8f791fa78e5687ba2ef7
+Size (suse113/x86_64/krb5-1.8.1-5.3.1.x86_64.rpm) = 513173 bytes
 SHA1 (suse113/x86_64/libcom_err2-1.41.11-1.11.x86_64.rpm) = e38c22805b1c81a66892f91c0e64f2285c883e67
 RMD160 (suse113/x86_64/libcom_err2-1.41.11-1.11.x86_64.rpm) = 284bfe2420583d52f109b85e3d97fd61580b87fd
 Size (suse113/x86_64/libcom_err2-1.41.11-1.11.x86_64.rpm) = 19426 bytes
