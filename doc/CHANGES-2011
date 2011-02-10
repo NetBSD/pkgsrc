@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.310 2011/02/09 16:25:18 taca Exp $
+$NetBSD: CHANGES-2011,v 1.311 2011/02/10 02:42:19 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -505,3 +505,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-rails3 to 3.0.4 [taca 2011-02-09]
 	Removed net/bind95 [taca 2011-02-09]
 	Updated net/bind96 to 9.6.3 [taca 2011-02-09]
+	Updated emulators/suse113_krb5 to 11.3nb1 [chs 2011-02-10]
