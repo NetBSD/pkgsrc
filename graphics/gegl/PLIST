@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2010/10/25 18:36:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/02/10 10:12:47 adam Exp $
 bin/gegl
+include/gegl-0.1/gegl-buffer-iterator.h
 include/gegl-0.1/gegl-buffer.h
 include/gegl-0.1/gegl-chant.h
 include/gegl-0.1/gegl-color.h
@@ -9,7 +10,6 @@ include/gegl-0.1/gegl-matrix.h
 include/gegl-0.1/gegl-paramspecs.h
 include/gegl-0.1/gegl-path.h
 include/gegl-0.1/gegl-plugin.h
-include/gegl-0.1/gegl-simd.h
 include/gegl-0.1/gegl-types.h
 include/gegl-0.1/gegl-utils.h
 include/gegl-0.1/gegl-version.h
@@ -56,21 +56,30 @@ lib/gegl-0.1/dst-out.la
 lib/gegl-0.1/dst-over.la
 lib/gegl-0.1/dst.la
 lib/gegl-0.1/exclusion.la
+lib/gegl-0.1/exp-combine.la
 lib/gegl-0.1/exr-load.la
+lib/gegl-0.1/fattal02.la
 lib/gegl-0.1/fractal-explorer.la
 lib/gegl-0.1/gamma.la
 lib/gegl-0.1/gaussian-blur.la
+lib/gegl-0.1/gegl-buffer-load-op.la
+lib/gegl-0.1/gegl-buffer-save-op.la
 lib/gegl-0.1/grey.la
+lib/gegl-0.1/grid.la
 lib/gegl-0.1/hard-light.la
 lib/gegl-0.1/introspect.la
 lib/gegl-0.1/invert.la
+lib/gegl-0.1/jp2-load.la
 lib/gegl-0.1/jpg-load.la
 lib/gegl-0.1/layer.la
 lib/gegl-0.1/levels.la
 lib/gegl-0.1/lighten.la
 lib/gegl-0.1/load.la
 lib/gegl-0.1/magick-load.la
+lib/gegl-0.1/mantiuk06.la
+lib/gegl-0.1/map_absolute.la
 lib/gegl-0.1/mblur.la
+lib/gegl-0.1/mirrors.la
 lib/gegl-0.1/mono-mixer.la
 lib/gegl-0.1/multiply.la
 lib/gegl-0.1/noise.la
@@ -88,8 +97,12 @@ lib/gegl-0.1/ppm-load.la
 lib/gegl-0.1/ppm-save.la
 lib/gegl-0.1/raw-load.la
 lib/gegl-0.1/rectangle.la
+lib/gegl-0.1/reinhard05.la
 lib/gegl-0.1/remap.la
+lib/gegl-0.1/rgbe-load.la
+lib/gegl-0.1/rgbe-save.la
 lib/gegl-0.1/save-pixbuf.la
+lib/gegl-0.1/save.la
 lib/gegl-0.1/screen.la
 lib/gegl-0.1/snn-mean.la
 lib/gegl-0.1/soft-light.la
@@ -112,6 +125,8 @@ lib/gegl-0.1/threshold.la
 lib/gegl-0.1/unsharp-mask.la
 ${PLIST.v4l}lib/gegl-0.1/v4l.la
 lib/gegl-0.1/value-invert.la
+lib/gegl-0.1/vector-fill.la
+lib/gegl-0.1/vector-stroke.la
 lib/gegl-0.1/weighted-blend.la
 lib/gegl-0.1/whitebalance.la
 lib/gegl-0.1/write-buffer.la
