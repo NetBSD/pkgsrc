@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2010/03/09 12:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2011/02/10 22:02:57 zafer Exp $
 #
 
 DISTNAME=	cs4235-20001009
 PKGREVISION=	1
 CATEGORIES=	audio sysutils
-MASTER_SITES=	http://www.invisible.ca/~jmcneill/
+MASTER_SITES=	http://distfiles.aydogan.net/audio/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.invisible.ca/~jmcneill/

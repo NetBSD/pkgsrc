@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2008/06/20 01:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2011/02/10 21:58:14 zafer Exp $
 #
 
 DISTNAME=		bladeenc-0.94.2-src-stable
 PKGNAME=		bladeenc-0.94.2
 PKGREVISION=		2
 CATEGORIES=		audio
-MASTER_SITES=		http://bladeenc.mp3.no/source/
+MASTER_SITES=		http://distfiles.aydogan.net/audio/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bladeenc.mp3.no/
