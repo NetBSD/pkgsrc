@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2009/05/19 08:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2011/02/10 22:10:05 zafer Exp $
 
 DISTNAME=	voice_abc_di-2.0
 PKGNAME=	festvox-abc-2.0
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	http://www.cslu.ogi.edu/tts/download/data/
+MASTER_SITES=	http://distfiles.aydogan.net/audio/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
