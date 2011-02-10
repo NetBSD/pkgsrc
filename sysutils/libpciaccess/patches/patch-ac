@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
+	$NetBSD: patch-ac,v 1.7 2011/02/10 16:20:45 pooka Exp $
 
---- src/netbsd_pci.c.orig	2009-02-17 00:10:20.000000000 +0000
-+++ src/netbsd_pci.c
+--- src/netbsd_pci.c.orig	2009-02-17 01:10:20.000000000 +0100
++++ src/netbsd_pci.c	2011-02-10 17:12:57.000000000 +0100
 @@ -1,6 +1,7 @@
  /*
   * Copyright (c) 2008 Juan Romero Pardines
@@ -10,10 +10,12 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
   *
   * Permission to use, copy, modify, and distribute this software for any
   * purpose with or without fee is hereby granted, provided that the above
-@@ -20,12 +21,15 @@
+@@ -20,12 +21,17 @@
  #include <sys/mman.h>
  #include <sys/types.h>
  
++#include "config.h"
++
 +#ifdef HAVE_MTRR
  #include <machine/sysarch.h>
  #include <machine/mtrr.h>
@@ -27,7 +29,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  
  #include <errno.h>
  #include <fcntl.h>
-@@ -35,126 +39,160 @@
+@@ -35,126 +41,162 @@
  #include <unistd.h>
  
  
@@ -155,11 +157,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  
  	if (map->flags & PCI_DEV_MAP_FLAG_WRITABLE)
  		prot |= PROT_WRITE;
--
- 	map->memory = mmap(NULL, map->size, prot, MAP_SHARED,
--	    fd, map->base);
--	if (map->memory == MAP_FAILED)
--		return errno;
++	map->memory = mmap(NULL, (size_t)map->size, prot, MAP_SHARED,
 +	    buses[dev->domain].fd, (off_t)map->base);
 +	if (map->memory == MAP_FAILED) {
 +		fd = open("/dev/mem", O_RDWR);
@@ -174,7 +172,11 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
 +		}
 +		close(fd);
 +        }
-+
+ 
+-	map->memory = mmap(NULL, map->size, prot, MAP_SHARED,
+-	    fd, map->base);
+-	if (map->memory == MAP_FAILED)
+-		return errno;
 +#ifdef HAVE_MTRR
 +	memset(&m, 0, sizeof(m));
  
@@ -185,13 +187,12 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
 -		mtrr.len = map->size;
 -		mtrr.flags = MTRR_VALID;
 -
--		if (map->flags & PCI_DEV_MAP_FLAG_CACHABLE)
--			mtrr.type = MTRR_TYPE_WB;
-+		m.base = base;
++		m.base = map->base;
 +		m.flags = MTRR_VALID | MTRR_PRIVATE;
-+		m.len = size;
++		m.len = map->size;
 +		m.owner = getpid();
-+		if (map->flags & PCI_DEV_MAP_FLAG_CACHEABLE)
+ 		if (map->flags & PCI_DEV_MAP_FLAG_CACHABLE)
+-			mtrr.type = MTRR_TYPE_WB;
 +			m.type = MTRR_TYPE_WB;
  		if (map->flags & PCI_DEV_MAP_FLAG_WRITE_COMBINE)
 -			mtrr.type = MTRR_TYPE_WC;
@@ -204,16 +205,17 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
 -		if (error) {
 -			close(fd);
 -			return errno;
--		}
--	}
 +			m.type = MTRR_TYPE_WC;
- 
--	close(fd);
-+		if ((netbsd_set_mtrr(&m, &n)) == -1)
-+			ret = errno;
-+	}
++
++		if ((netbsd_set_mtrr(&m, &n)) == -1) {
++			fprintf(stderr, "mtrr set failed: %s\n",
++			    strerror(errno));
+ 		}
+ 	}
 +#endif
  
+-	close(fd);
+-
 -	return 0;
 +	return ret;
  }
@@ -246,7 +248,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
 -			return errno;
 +		m.base = map->base;
 +		m.flags = 0;
-+		m.len = size;
++		m.len = map->size;
 +		m.type = MTRR_TYPE_UC;
 +		(void)netbsd_set_mtrr(&m, &n);
  	}
@@ -254,7 +256,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  
  	return pci_device_generic_unmap_range(dev, map);
  }
-@@ -163,25 +201,23 @@ static int
+@@ -163,25 +205,23 @@
  pci_device_netbsd_read(struct pci_device *dev, void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_read)
  {
@@ -289,7 +291,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  
  		offset += toread;
  		data = (char *)data + toread;
-@@ -196,25 +232,23 @@ static int
+@@ -196,25 +236,23 @@
  pci_device_netbsd_write(struct pci_device *dev, const void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_written)
  {
@@ -322,7 +324,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  		size -= 4;
  		*bytes_written += 4;
  	}
-@@ -225,7 +259,11 @@ pci_device_netbsd_write(struct pci_devic
+@@ -225,7 +263,11 @@
  static void
  pci_system_netbsd_destroy(void)
  {
@@ -335,7 +337,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  	free(pci_sys);
  	pci_sys = NULL;
  }
-@@ -233,17 +271,34 @@ pci_system_netbsd_destroy(void)
+@@ -233,17 +275,34 @@
  static int
  pci_device_netbsd_probe(struct pci_device *device)
  {
@@ -373,7 +375,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  	if (err)
  		return err;
  
-@@ -254,16 +309,16 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -254,16 +313,16 @@
  	region = device->regions;
  	for (bar = PCI_MAPREG_START; bar < PCI_MAPREG_END;
  	     bar += sizeof(uint32_t), region++) {
@@ -394,7 +396,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  
  		if (PCI_MAPREG_TYPE(reg) == PCI_MAPREG_TYPE_IO) {
  			region->is_IO = 1;
-@@ -286,66 +341,188 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -286,66 +345,188 @@
  
  				bar += sizeof(uint32_t);
  
@@ -611,7 +613,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  				    &reg) != 0)
  					continue;
  				if (PCI_VENDOR(reg) == PCI_VENDOR_INVALID ||
-@@ -355,37 +532,43 @@ pci_system_netbsd_create(void)
+@@ -355,37 +536,43 @@
  				ndevs++;
  			}
  		}
@@ -664,7 +666,7 @@ $NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
  					continue;
  
  				device->base.device_class =
-@@ -393,8 +576,8 @@ pci_system_netbsd_create(void)
+@@ -393,8 +580,8 @@
  				    PCI_SUBCLASS(reg) << 8;
  				device->base.revision = PCI_REVISION(reg);
  
