@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2011/01/31 12:21:34 adam Exp $
+$NetBSD: distinfo,v 1.41 2011/02/10 11:00:56 drochner Exp $
 
 SHA1 (wireshark-1.4.3.tar.bz2) = 776c757e6a6a085232ac843ec28b026bf4ca9c8d
 RMD160 (wireshark-1.4.3.tar.bz2) = 6a63023f165b2e875296340f6a57595427a13fe7
@@ -8,6 +8,8 @@ SHA1 (patch-ab) = 5ae79916603f04c2d362c764d39f0c99728e716c
 SHA1 (patch-ac) = 4e985520ea4b118aea6fc001f256b5de96de7840
 SHA1 (patch-ad) = a09b5ac9e836ef01fbd6ba103de00d08c0af2800
 SHA1 (patch-ae) = 7af195e797f8636a9636d30cdea4ee464fd853df
+SHA1 (patch-af) = 908f2050cbf0db6156f8802e93e3f193a87ef916
+SHA1 (patch-ag) = 28c2c23355090f5737f01d2c7740c430ca2b607b
 SHA1 (patch-ba) = 49825d82605a665f54a5cdb6ccb364e55c0e0ffa
 SHA1 (patch-bb) = 1e16337d1894f196f61b233423d729246dea33b5
 SHA1 (patch-bc) = 052ede4ba58502117fe7b355e22a906ff65b773e
