@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/02/03 18:50:55 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/10 10:43:41 drochner Exp $
 
 support DESTDIR
 
 --- Makefile.in.orig	2010-11-25 15:44:56.000000000 +0000
 +++ Makefile.in
-@@ -91,51 +91,47 @@ docs: force
+@@ -91,51 +91,49 @@ docs: force
  
  # Rule for installing the modules
  %_inst: force
@@ -16,6 +16,7 @@ support DESTDIR
 -	${RM} ${xmllib}libxmlada_$**
 +	${CP} $*/*.ad[bs]        $(DESTDIR)${includedir}/xmlada
 +	cd $*; ls *.ad[bs] > $(DESTDIR)${libdir}/gnat/xmlada/xmlada_$*.lgpr
++	-cd $(DESTDIR)${xmllib}; ${CHMOD} ugo+w *.ali
 +	-${CP} $*/lib/${LIBRARY_TYPE}/*.ali   $(DESTDIR)${xmllib}
  ifeq (${LIBRARY_TYPE},static)
 -	${INSTALL} $*/lib/${LIBRARY_TYPE}/libxmlada_$*.a ${xmllib}
@@ -38,6 +39,7 @@ support DESTDIR
  endif
  endif
 -	cd ${xmllib}; ${CHMOD} ugo-w *.ali
++	cd $(DESTDIR)${xmllib}; ${CHMOD} ugo-w *.ali
  
  install_dirs: force
 -	@${MKDIR} ${bindir}

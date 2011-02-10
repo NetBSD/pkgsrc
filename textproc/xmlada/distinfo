@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/03 18:50:53 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/02/10 10:43:41 drochner Exp $
 
 SHA1 (xmlada-4.1w-20101125.tar.bz2) = 350d0c2aa58905c3e3e276f5f83775573178c01a
 RMD160 (xmlada-4.1w-20101125.tar.bz2) = fd6f6e870585376416b35dd5e0d422eee89c6d25
 Size (xmlada-4.1w-20101125.tar.bz2) = 701742 bytes
-SHA1 (patch-aa) = 11f8f8e461e5e2f544f6d3946d5eec6bb71a2215
+SHA1 (patch-aa) = 5b72eef334bd1172c2040af6f7541ec4c62f880c
