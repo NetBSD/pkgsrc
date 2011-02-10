@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/03/10 11:45:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/02/10 03:45:09 brook Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_grid
@@ -9,6 +9,7 @@ bin/gdalbuildvrt
 bin/gdaldem
 bin/gdalenhance
 bin/gdalinfo
+bin/gdallocationinfo
 bin/gdalmanage
 bin/gdaltindex
 bin/gdaltransform
@@ -19,6 +20,7 @@ bin/ogrinfo
 bin/ogrtindex
 bin/testepsg
 include/cpl_atomic_ops.h
+include/cpl_base64.h
 include/cpl_config.h
 include/cpl_config_extras.h
 include/cpl_conv.h
@@ -30,6 +32,7 @@ include/cpl_list.h
 include/cpl_minixml.h
 include/cpl_minizip_ioapi.h
 include/cpl_minizip_unzip.h
+include/cpl_minizip_zip.h
 include/cpl_multiproc.h
 include/cpl_odbc.h
 include/cpl_port.h
@@ -44,6 +47,7 @@ include/cplkeywordparser.h
 include/gdal.h
 include/gdal_alg.h
 include/gdal_alg_priv.h
+include/gdal_csv.h
 include/gdal_frmts.h
 include/gdal_pam.h
 include/gdal_priv.h
@@ -54,6 +58,7 @@ include/gdal_vrt.h
 include/gdalgrid.h
 include/gdaljp2metadata.h
 include/gdalwarper.h
+include/gdalwarpkernel_opencl.h
 include/gvgcpfit.h
 include/memdataset.h
 include/ogr_api.h
@@ -73,8 +78,10 @@ share/gdal/GDALLogoBW.svg
 share/gdal/GDALLogoColor.svg
 share/gdal/GDALLogoGS.svg
 share/gdal/LICENSE.TXT
+share/gdal/compdcs.csv
 share/gdal/coordinate_axis.csv
 share/gdal/cubewerx_extra.wkt
+share/gdal/datum_shift.csv
 share/gdal/ecw_cs.wkt
 share/gdal/ellipsoid.csv
 share/gdal/epsg.wkt
@@ -86,6 +93,8 @@ share/gdal/gdalicon.png
 share/gdal/gt_datum.csv
 share/gdal/gt_ellips.csv
 share/gdal/header.dxf
+share/gdal/pci_datum.txt
+share/gdal/pci_ellips.txt
 share/gdal/pcs.csv
 share/gdal/pcs.override.csv
 share/gdal/prime_meridian.csv
@@ -103,3 +112,5 @@ share/gdal/seed_3d.dgn
 share/gdal/stateplane.csv
 share/gdal/trailer.dxf
 share/gdal/unit_of_measure.csv
+share/gdal/vertcs.csv
+share/gdal/vertcs.override.csv
