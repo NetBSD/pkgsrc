@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/02/10 02:55:46 chs Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/10 03:29:27 chs Exp $
 
 DISTNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 DISTFILES=	cairo-1.8.10-3.1.${SUSE_ARCH}.rpm			\
 		dbus-1-1.2.24-1.18.${SUSE_ARCH}.rpm			\
-		dbus-1-glib-0.86-1.19.${SUSE_ARCH}.rpm			\
 		gconf2-2.28.1-3.4.${SUSE_ARCH}.rpm			\
 		glib2-2.24.1-2.5.${SUSE_ARCH}.rpm			\
 		glib2-branding-upstream-2.24.1-2.5.${SUSE_ARCH}.rpm	\
