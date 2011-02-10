@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.313 2011/02/10 02:44:56 chs Exp $
+$NetBSD: CHANGES-2011,v 1.314 2011/02/10 02:45:57 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_krb5 to 11.3nb1 [chs 2011-02-10]
 	Updated emulators/suse113_libtiff to 11.3nb1 [chs 2011-02-10]
 	Updated emulators/suse113_libxml2 to 11.3nb1 [chs 2011-02-10]
+	Updated emulators/suse113_openssl to 11.3nb2 [chs 2011-02-10]
