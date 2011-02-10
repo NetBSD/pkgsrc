@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.322 2011/02/10 12:18:58 adam Exp $
+$NetBSD: CHANGES-2011,v 1.323 2011/02/10 12:36:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -523,3 +523,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin to 2.7.10 [adam 2011-02-10]
 	Updated chat/pidgin-sametime to 2.7.10 [adam 2011-02-10]
 	Updated chat/pidgin-silc to 2.7.10 [adam 2011-02-10]
+	Updated www/http_load to 20060312nb2 [obache 2011-02-10]
