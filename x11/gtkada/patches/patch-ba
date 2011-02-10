@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1.1.1 2011/02/03 18:57:15 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2011/02/10 10:43:41 drochner Exp $
 
---- src/Makefile.in.orig	2011-02-02 18:33:04.000000000 +0000
+--- src/Makefile.in.orig	2010-12-01 21:51:07.000000000 +0000
 +++ src/Makefile.in
-@@ -58,47 +58,41 @@ gtkada-intl.adb: gtkada-intl.gpb Makefil
+@@ -58,46 +58,44 @@ gtkada-intl.adb: gtkada-intl.gpb Makefil
  install: force
  	@if [ "$(prefix)" != `pwd` ]; then \
  	   echo Installing GtkAda in $(prefix); \
@@ -66,9 +66,10 @@ $NetBSD: patch-ba,v 1.1.1.1 2011/02/03 18:57:15 drochner Exp $
             $(MAKE) -C gnome install; \
             $(MAKE) -C tools install; \
 -	   $(CHMOD) ugo-w $(alidir)/static/*.ali; \
--	   if [ $(BUILD_SHARED) = yes ]; then \
++	   $(CHMOD) ugo-w $(DESTDIR)$(alidir)/static/*.ali; \
+ 	   if [ $(BUILD_SHARED) = yes ]; then \
 -	      $(CHMOD) ugo-w $(alidir)/relocatable/*.ali; \
--	   fi; \
++	      $(CHMOD) ugo-w $(DESTDIR)$(alidir)/relocatable/*.ali; \
+ 	   fi; \
  	fi
  
- clean:
