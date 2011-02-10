@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2011/02/10 16:15:36 agc Exp $
+
+Refer to the file of random numbers in the correct location
+
+--- Makefile	2011/02/10 04:47:36	1.1
++++ Makefile	2011/02/10 04:46:57
+@@ -104,7 +104,7 @@
+ 	$(COMPILE) mod2sparse.c
+ 	$(COMPILE) mod2convert.c
+ 	$(COMPILE) distrib.c
+-	$(COMPILE) -DRAND_FILE=\"`pwd`/randfile\" rand.c
++	$(COMPILE) -DRAND_FILE=\"${PREFIX}/share/ldpc/randfile\" rand.c
+ 
+ 
+ # CLEAN UP ALL PROGRAMS AND REMOVE ALL FILES PRODUCED BY TESTS AND EXAMPLES.
