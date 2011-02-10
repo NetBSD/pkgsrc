@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.324 2011/02/10 13:11:52 obache Exp $
+$NetBSD: CHANGES-2011,v 1.325 2011/02/10 16:42:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -525,3 +525,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin-silc to 2.7.10 [adam 2011-02-10]
 	Updated www/http_load to 20060312nb2 [obache 2011-02-10]
 	Updated x11/libxdg-basedir to 1.1.1nb1 [obache 2011-02-10]
+	Updated multimedia/mjpegtools to 1.9.0nb6 [wiz 2011-02-10]
