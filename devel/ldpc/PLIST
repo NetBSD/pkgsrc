@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/29 06:43:15 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/02/10 16:15:36 agc Exp $
 bin/alist-to-pchk
 bin/decode
 bin/encode
@@ -28,6 +28,7 @@ share/ldpc/modules.html
 share/ldpc/pchk.html
 share/ldpc/progs.html
 share/ldpc/rand.html
+share/ldpc/randfile
 share/ldpc/refs.html
 share/ldpc/release.html
 share/ldpc/sparse-LU.html
