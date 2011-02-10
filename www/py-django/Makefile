@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2010/12/28 19:13:06 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2011/02/10 10:03:59 adam Exp $
 
-DJANGOVERS=	1.2.4
+DJANGOVERS=	1.2.5
 DISTNAME=	Django-${DJANGOVERS}
 PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
 CATEGORIES=	www python
@@ -9,7 +9,6 @@ MASTER_SITES=	http://media.djangoproject.com/releases/1.2/
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
-
 LICENSE=	modified-bsd
 
 PREV_PKGPATH=	www/py-django-devel
@@ -43,11 +42,11 @@ pre-configure:
 BACKEND_PATH=		${PYSITELIB}/django/db/backends
 BACKEND_PATH_PLIST=	$${PYSITELIB}/django/db/backends
 
-PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/mysql/", "$${PLIST.mysql}${BACKEND_PATH_PLIST}/mysql/") }
-PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/oracle/", "$${PLIST.oracle}${BACKEND_PATH_PLIST}/oracle/") }
-PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/postgresql/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql/") }
-PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/postgresql_psycopg2/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql_psycopg2/") }
-PRINT_PLIST_AWK+=        { gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND_PATH_PLIST}/sqlite3/") }
+PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/mysql/", "$${PLIST.mysql}${BACKEND_PATH_PLIST}/mysql/") }
+PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/oracle/", "$${PLIST.oracle}${BACKEND_PATH_PLIST}/oracle/") }
+PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/postgresql/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql/") }
+PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/postgresql_psycopg2/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql_psycopg2/") }
+PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND_PATH_PLIST}/sqlite3/") }
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
