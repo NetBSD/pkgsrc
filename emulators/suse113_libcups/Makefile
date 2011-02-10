@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2010/12/26 21:39:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/10 02:55:46 chs Exp $
 
 DISTNAME=	suse_libcups-${SUSE_VERSION}
 PKGREVISION=	1
 CATEGORIES=	emulators
 DISTFILES=	cups-libs-1.4.4-3.3.1.${SUSE_ARCH}.rpm
 
-MAINTAINER=	markd@NetBSD.org
+MAINTAINER=	chs@NetBSD.org
 COMMENT=	Linux compatibility package for CUPS
 
 EMUL_MODULES.linux=	openssl

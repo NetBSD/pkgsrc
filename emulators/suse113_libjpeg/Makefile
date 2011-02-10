@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:28:01 chs Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/10 02:55:46 chs Exp $
 
 DISTNAME=	suse_libjpeg-${SUSE_VERSION}
 CATEGORIES=	emulators
 DISTFILES=	libjpeg8-8.0.1-1.9.${SUSE_ARCH}.rpm
 
-MAINTAINER=	tonio@NetBSD.org
+MAINTAINER=	chs@NetBSD.org
 COMMENT=	Linux compatibility package for JPEG
 
 EMUL_MODULES.linux=	base
