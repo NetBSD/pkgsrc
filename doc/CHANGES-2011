@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.319 2011/02/10 10:14:20 adam Exp $
+$NetBSD: CHANGES-2011,v 1.320 2011/02/10 10:27:18 morr Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/babl to 0.1.4 [adam 2011-02-10]
 	Updated graphics/gegl to 0.1.4 [adam 2011-02-10]
 	Updated www/py-django to 1.2.5 [adam 2011-02-10]
+	Updated www/wordpress to 3.0.5 [morr 2011-02-10]
