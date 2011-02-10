@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2011/02/10 03:45:09 brook Exp $
+# $NetBSD: Makefile,v 1.36 2011/02/10 09:57:15 wiz Exp $
 
 DISTNAME=	gdal-1.8.0
 PKGNAME=	gdal-lib-1.8.0
@@ -44,6 +44,7 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 # See the comment above about using the internal tiff library
+# also re-include in buildlink3.mk when uncommenting it!
 # .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
