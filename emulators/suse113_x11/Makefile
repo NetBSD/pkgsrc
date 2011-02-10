@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:28:13 chs Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/10 02:55:49 chs Exp $
 
 DISTNAME=	suse_x11-${SUSE_VERSION}
 CATEGORIES=	emulators
@@ -25,7 +25,7 @@ DISTFILES=	\
 	xorg-x11-libXv-7.5-1.8.${SUSE_ARCH}.rpm
 
 
-MAINTAINER=	tonio@NetBSD.org
+MAINTAINER=	chs@NetBSD.org
 COMMENT=	Linux compatibility package for X11
 
 EMUL_MODULES.linux=	base
