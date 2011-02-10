@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/29 06:43:15 agc Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/10 16:15:36 agc Exp $
 
 DISTNAME=	LDPC-2006-02-08
 PKGNAME=	ldpc-20060208
 CATEGORIES=	devel
+PKGREVISION=	1
 MASTER_SITES=	http://www.cs.utoronto.ca/~radford/ftp/LDPC-2006-02-08/
 
 MAINTAINER=	agc@NetBSD.org
@@ -25,11 +26,13 @@ LDPCDOCS+= mod2dense.html mod2sparse.html modify.html modules.html pchk.html
 LDPCDOCS+= progs.html rand.html refs.html release.html sparse-LU.html
 LDPCDOCS+= support.html
 
+LDPCRANDFILE=	randfile
+
 do-install:
 	for p in ${LDPCPROGS}; do					\
 		${INSTALL_PROGRAM} ${WRKSRC}/$$p ${DESTDIR}${PREFIX}/bin; \
 	done
-	for d in ${LDPCDOCS}; do					\
+	for d in ${LDPCDOCS} ${LDPCRANDFILE}; do			\
 		${INSTALL_DATA} ${WRKSRC}/$$d ${DESTDIR}${PREFIX}/share/ldpc; \
 	done
 
