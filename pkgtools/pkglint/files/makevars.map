@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.207 2011/01/23 08:30:06 obache Exp $
+# $NetBSD: makevars.map,v 1.208 2011/02/10 12:08:04 adam Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -62,7 +62,7 @@ PKG_DEVELOPER			Yes [$user]
 USE_ABI_DEPENDS			YesNo [$user]
 PKG_REGISTER_SHELLS		{ YES NO } [$user]
 PKGSRC_COMPILER			List of { \
-					ccache ccc distcc f2c gcc hp icc \
+					ccache ccc clang distcc f2c gcc hp icc \
 					ido gcc mipspro mipspro-ucode pcc \
 					sunpro xlc \
 				} [$user]
