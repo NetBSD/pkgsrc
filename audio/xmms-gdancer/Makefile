@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2008/07/14 12:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2011/02/10 21:45:39 zafer Exp $
 #
 
 DISTNAME=	gdancer-0.4.3
 PKGNAME=	xmms-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	audio
-MASTER_SITES=	http://figz.com/gdancer/files/old/ \
-		http://figz.com/gdancer/files/
+MASTER_SITES=	http://distfiles.aydogan.net/audio/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://figz.com/gdancer/
