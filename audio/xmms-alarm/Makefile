@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/07/14 12:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2011/02/10 21:51:37 zafer Exp $
 #
 
 DISTNAME=		xmms-alarm-0.3.7
 CATEGORIES=		audio
-MASTER_SITES=		http://www.snika.uklinux.net/xmms-alarm/
+MASTER_SITES=		http://distfiles.aydogan.net/audio/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
