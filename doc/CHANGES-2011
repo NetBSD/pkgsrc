@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.317 2011/02/10 05:17:26 obache Exp $
+$NetBSD: CHANGES-2011,v 1.318 2011/02/10 09:56:52 rumko Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -512,3 +512,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_gtk2 to 11.3nb2 [chs 2011-02-10]
 	Updated geography/gdal-lib to 1.8.0 [brook 2011-02-10]
 	Updated devel/gobject-introspection to 0.10.2 [obache 2011-02-10]
+	Updated sysutils/pftop to 0.7nb1 [rumko 2011-02-10]
