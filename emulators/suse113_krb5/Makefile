@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:27:59 chs Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/10 02:41:18 chs Exp $
 
 DISTNAME=	suse_krb5-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
-DISTFILES=	krb5-1.8.1-4.3.${SUSE_ARCH}.rpm		\
+DISTFILES=	krb5-1.8.1-5.3.1.${SUSE_ARCH}.rpm		\
 		libcom_err2-1.41.11-1.11.${SUSE_ARCH}.rpm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
