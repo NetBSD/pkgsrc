@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 01:28:08 chs Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/10 02:55:48 chs Exp $
 
 DISTNAME=	suse_openmotif-${SUSE_VERSION}
 CATEGORIES=	emulators
 DISTFILES+=	openmotif-libs-2.3.2-2.8.${SUSE_ARCH}.rpm
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	chs@NetBSD.org
 COMMENT=	Linux compatibility package for OpenMotif
 
 EMUL_MODULES.linux=	x11

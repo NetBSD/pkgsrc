@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/03 00:22:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/10 02:55:45 chs Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
 PKGREVISION=	1
@@ -36,7 +36,7 @@ DISTFILES+=	net-tools-1.60-741.1.${SUSE_ARCH}.rpm
 DISTFILES+=	tcpd-7.6-863.1.${SUSE_ARCH}.rpm
 DISTFILES+=	zlib-1.2.3-141.1.${SUSE_ARCH}.rpm
 
-MAINTAINER=	tonio@NetBSD.org
+MAINTAINER=	chs@NetBSD.org
 COMMENT=	Linux compatibility package
 
 CONFLICTS=	linux_SuSE-5.3 linux_lib-2.4 linuxppc_lib-[0-9]*
