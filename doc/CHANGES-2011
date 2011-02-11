@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.334 2011/02/11 13:57:42 obache Exp $
+$NetBSD: CHANGES-2011,v 1.335 2011/02/11 14:09:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.7 [obache 2011-02-11]
 	Removed x11/ruby-gnome2-panelapplet [obache 2011-02-11]
 	Updated x11/ruby-gnome2-vte to 0.90.7 [obache 2011-02-11]
+	Updated mail/milter-manager to 1.6.5 [obache 2011-02-11]
