@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.19 2011/01/14 08:35:23 obache Exp $
+$NetBSD: distinfo,v 1.20 2011/02/11 13:50:08 obache Exp $
 
-SHA1 (ruby-gnome2-all-0.90.5.tar.gz) = 320fc4c9b65b6494abac894e84013683584acf54
-RMD160 (ruby-gnome2-all-0.90.5.tar.gz) = 7c96480e366bac2408a3790c355ad517cc0b0023
-Size (ruby-gnome2-all-0.90.5.tar.gz) = 1754503 bytes
-SHA1 (patch-au) = bb7b7bcb362e978e4393625ecd490f20c78db70e
+SHA1 (ruby-gnome2-all-0.90.7.tar.gz) = 1030187a5e85b11014e99496e56e0209d010b532
+RMD160 (ruby-gnome2-all-0.90.7.tar.gz) = 03f1f9cbdeb24db961edda6a8144b9fc27394708
+Size (ruby-gnome2-all-0.90.7.tar.gz) = 11753981 bytes
+SHA1 (patch-glib2_lib_mkmf-gnome2.rb) = 83bcf775c3094858acf10c0f9bfc718d3807ac5d
+SHA1 (patch-goocanvas_ext_goocanvas_depend) = feab2164320315293be18efe871422ebf6786280
+SHA1 (patch-gstreamer_ext_gstreamer_depend) = 0466202cc922f1df187f9a29fabd0e4cbcf33bfc
+SHA1 (patch-gtkmozembed_ext_gtkmozembed_depend) = 6b217f4515aa9787ac94d48ae4dd935d154c5128
+SHA1 (patch-gtksourceview2_ext_gtksourceview2_depend) = 1a2c46ceb5e77fb270280499a9585e645b3f6a81
+SHA1 (patch-vte_ext_vte_depend) = a12c3e2495abd9de443f3eb5116724006c9b024e

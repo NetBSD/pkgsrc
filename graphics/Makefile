@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.580 2011/02/08 13:17:21 adam Exp $
+# $NetBSD: Makefile,v 1.581 2011/02/11 13:50:06 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -374,10 +374,7 @@ SUBDIR+=	ruby-color-japanese
 SUBDIR+=	ruby-color-tools
 SUBDIR+=	ruby-gd
 SUBDIR+=	ruby-gnome2-gdkpixbuf
-SUBDIR+=	ruby-gnome2-gnomecanvas
 SUBDIR+=	ruby-gnome2-goocanvas
-SUBDIR+=	ruby-gnome2-gtkglext
-SUBDIR+=	ruby-gnome2-libart
 SUBDIR+=	ruby-gnome2-rsvg
 SUBDIR+=	ruby-gnuplot
 SUBDIR+=	ruby-imlib2

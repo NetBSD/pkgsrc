@@ -1,0 +1,14 @@
+$NetBSD: patch-gtksourceview2_ext_gtksourceview2_depend,v 1.1 2011/02/11 13:50:08 obache Exp $
+
+* Failed to install *.pc files
+  https://sourceforge.net/tracker/?func=detail&aid=3178294&group_id=53614&atid=470969
+
+--- gtksourceview2/ext/gtksourceview2/depend.orig	2011-01-21 23:27:28.000000000 +0000
++++ gtksourceview2/ext/gtksourceview2/depend
+@@ -1,5 +1,5 @@
+ install:
+ 	if test -n "$(pkgconfigdir)"; then				\
+ 	  $(MAKEDIRS) $(pkgconfigdir);					\
+-	  $(INSTALL_DATA) ../ruby-gtksourceview2.pc $(pkgconfigdir);	\
++	  $(INSTALL_DATA) ruby-gtksourceview2.pc $(pkgconfigdir);	\
+ 	fi

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/12 03:09:31 obache Exp $
-lib/pkgconfig/ruby-gnomecanvas2.pc
-${RUBY_VENDORLIB}/gnomecanvas2.rb
-${RUBY_VENDORARCHLIB}/gnomecanvas2.${RUBY_DLEXT}

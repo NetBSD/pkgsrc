@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/12 03:09:32 obache Exp $
-lib/pkgconfig/ruby-libart2.pc
-${RUBY_VENDORLIB}/libart2.rb
-${RUBY_VENDORARCHLIB}/libart2.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/rbart.h

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/12 03:09:32 obache Exp $
-lib/pkgconfig/ruby-gnomeprint2.pc
-${RUBY_VENDORLIB}/gnomeprint2.rb
-${RUBY_VENDORARCHLIB}/gnomeprint2.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/rblibgnomeprintversion.h

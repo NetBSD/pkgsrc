@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1431 2011/02/11 08:25:35 adam Exp $
+# $NetBSD: Makefile,v 1.1432 2011/02/11 13:50:06 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1258,12 +1258,8 @@ SUBDIR+=	ruby-gettext
 SUBDIR+=	ruby-gettext-activerecord
 SUBDIR+=	ruby-gettext-rails
 SUBDIR+=	ruby-gnome2-atk
-SUBDIR+=	ruby-gnome2-bonobo
-SUBDIR+=	ruby-gnome2-bonoboui
-SUBDIR+=	ruby-gnome2-gconf
 SUBDIR+=	ruby-gnome2-gio
 SUBDIR+=	ruby-gnome2-glib
-SUBDIR+=	ruby-gnome2-libglade
 SUBDIR+=	ruby-gnome2-pango
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
