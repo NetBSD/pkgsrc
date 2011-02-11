@@ -1,0 +1,14 @@
+$NetBSD: patch-gstreamer_ext_gstreamer_depend,v 1.1 2011/02/11 13:50:08 obache Exp $
+
+* Failed to install *.pc files
+  https://sourceforge.net/tracker/?func=detail&aid=3178294&group_id=53614&atid=470969
+
+--- gstreamer/ext/gstreamer/depend.orig	2011-01-21 23:27:42.000000000 +0000
++++ gstreamer/ext/gstreamer/depend
+@@ -1,5 +1,5 @@
+ install:
+ 	if test -n "$(pkgconfigdir)"; then			\
+ 	  $(MAKEDIRS) $(pkgconfigdir);				\
+-	  $(INSTALL_DATA) ../ruby-gstreamer.pc $(pkgconfigdir);	\
++	  $(INSTALL_DATA) ruby-gstreamer.pc $(pkgconfigdir);	\
+ 	fi

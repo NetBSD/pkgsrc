@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2011/01/13 13:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2011/02/11 13:50:13 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-goocanvas-${VERSION}
 COMMENT=		Ruby binding of GooCanvas
-PKGREVISION=		1
 CATEGORIES=		graphics gnome
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-goocanvas-[0-9]*

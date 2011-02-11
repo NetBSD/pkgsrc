@@ -1,0 +1,15 @@
+$NetBSD: patch-gtkmozembed_ext_gtkmozembed_depend,v 1.1 2011/02/11 13:50:08 obache Exp $
+
+* Failed to install *.pc files
+  https://sourceforge.net/tracker/?func=detail&aid=3178294&group_id=53614&atid=470969
+
+--- gtkmozembed/ext/gtkmozembed/depend.orig	2011-01-21 23:27:48.000000000 +0000
++++ gtkmozembed/ext/gtkmozembed/depend
+@@ -1,6 +1,6 @@
+ install:
+ 	if test -n "$(pkgconfigdir)"; then				\
+ 	  $(MAKEDIRS) $(pkgconfigdir);					\
+-	  $(INSTALL_DATA) ../ruby-gtkmozembed.pc $(pkgconfigdir);	\
++	  $(INSTALL_DATA) ruby-gtkmozembed.pc $(pkgconfigdir);		\
+ 	fi
+ 

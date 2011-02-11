@@ -1,0 +1,14 @@
+$NetBSD: patch-goocanvas_ext_goocanvas_depend,v 1.1 2011/02/11 13:50:08 obache Exp $
+
+* Failed to install *.pc files
+  https://sourceforge.net/tracker/?func=detail&aid=3178294&group_id=53614&atid=470969
+
+--- goocanvas/ext/goocanvas/depend.orig	2011-01-29 04:25:51.000000000 +0000
++++ goocanvas/ext/goocanvas/depend
+@@ -1,5 +1,5 @@
+ install:
+ 	if test -n "$(pkgconfigdir)"; then			\
+ 	  $(MAKEDIRS) $(pkgconfigdir);				\
+-	  $(INSTALL_DATA) ../ruby-goocanvas.pc $(pkgconfigdir);	\
++	  $(INSTALL_DATA) ruby-goocanvas.pc $(pkgconfigdir);	\
+ 	fi
