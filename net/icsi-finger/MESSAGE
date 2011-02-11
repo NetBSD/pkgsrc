@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/08/12 16:27:19 reed Exp $
+$NetBSD: MESSAGE,v 1.5 2011/02/11 17:16:03 is Exp $
 
 ICSI-finger needs a lot of configuration to be useful. Therefore
 it isn't activated when installed.
@@ -14,5 +14,10 @@ ${PREFIX}/share/examples/icsi-finger/inetd.conf-add to /etc/inetd.conf,
 ${PREFIX}/share/examples/icsi-finger/services-add to /etc/services, and
 (on the master finger server)
 ${PREFIX}/share/examples/icsi-finger/rc.local-add to /etc/rc.local.
+
+gfingerd should be run as an unpriviledged user; it needs to be able
+to write to /var/spool/fingerdir only.
+
+in.fingerd needs to be ale to read from /var/spool/fingerdir
 
 ===========================================================================
