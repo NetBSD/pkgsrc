@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.329 2011/02/11 08:26:16 adam Exp $
+$NetBSD: CHANGES-2011,v 1.330 2011/02/11 10:06:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ecl to 11.1.1 [asau 2011-02-11]
 	Updated audio/mac to 3.99u4b5s7 [wiz 2011-02-11]
 	Added devel/py-mako version 0.3.6 [adam 2011-02-11]
+	Updated devel/lua-mode to 20110121 [jmmv 2011-02-11]
