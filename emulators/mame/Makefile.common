@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/02/03 22:22:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/02/11 12:49:33 abs Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -37,6 +37,8 @@ MAKE_FLAGS+=	BIGENDIAN=true
 .endif
 
 # mame source is double-zipped
+# Note all files have CR-LF but are marked as binary, so unzip -a
+# does not help. Hence all patches must have CR-LF
 post-extract:
 	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
 	rm ${WRKDIR}/mame.zip
