@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.326 2011/02/10 16:49:07 tron Exp $
+$NetBSD: CHANGES-2011,v 1.327 2011/02/11 01:29:04 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -527,3 +527,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/libxdg-basedir to 1.1.1nb1 [obache 2011-02-10]
 	Updated multimedia/mjpegtools to 1.9.0nb6 [wiz 2011-02-10]
 	Updated databases/phpmyadmin to 2.11.11.2 [tron 2011-02-10]
+	Updated lang/ecl to 11.1.1 [asau 2011-02-11]
