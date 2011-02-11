@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.2.2 2011/02/11 05:40:44 sbd Exp $
+
+--- tshark.c.orig	2011-01-11 19:24:25.000000000 +0000
++++ tshark.c
+@@ -2523,7 +2523,7 @@ load_cap_file(capture_file *cf, char *sa
+   int          snapshot_length;
+   wtap_dumper *pdh;
+   int          err;
+-  gchar        *err_info;
++  gchar        *err_info = NULL;
+   gint64       data_offset;
+   char         *save_file_string = NULL;
+   gboolean     filtering_tap_listeners;
