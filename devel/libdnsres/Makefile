@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2009/08/16 15:35:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2011/02/11 21:22:02 tnn Exp $
 #
 
 DISTNAME=		libdnsres-0.1a
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		devel
 MASTER_SITES=		http://www.monkey.org/~provos/
 

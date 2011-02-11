@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/10/16 11:38:05 tonnerre Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/11 21:22:02 tnn Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=incubator/thrift/${THRIFT_VERSION}-incubating/}
 
