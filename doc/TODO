@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10096 2011/02/10 16:56:29 wiz Exp $
+$NetBSD: TODO,v 1.10097 2011/02/11 12:14:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -903,7 +903,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnotify-0.7.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libosip-3.5.0
-	o libpcap-1.1.1
 	o libpciaccess-0.12.1
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
@@ -1274,7 +1273,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tcl-8.5.8
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
-	o tcpdump-4.1.1
 	o tcpillust-1.00b
 	o tcpreplay-3.4.4
 	o tcpslice-1.2a3

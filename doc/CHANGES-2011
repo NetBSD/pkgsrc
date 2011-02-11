@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.332 2011/02/11 11:50:29 obache Exp $
+$NetBSD: CHANGES-2011,v 1.333 2011/02/11 12:14:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -533,3 +533,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/lua-mode to 20110121 [jmmv 2011-02-11]
 	Updated net/ntop to 4.0.3nb1 [adam 2011-02-11]
 	Updated sysutils/ipa to 2.1 [obache 2011-02-11]
+	Updated net/libpcap to 4.1.1 [adam 2011-02-11]
+	Updated net/tcpdump to 4.1.1 [adam 2011-02-11]
