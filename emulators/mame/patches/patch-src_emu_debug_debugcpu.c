@@ -1,6 +1,4 @@
-$NetBSD: patch-src_emu_debug_debugcpu.c,v 1.1.1.1 2011/02/03 22:22:36 wiz Exp $
-
-Sent upstream and accepted.
+$NetBSD: patch-src_emu_debug_debugcpu.c,v 1.2 2011/02/11 12:49:33 abs Exp $
 
 --- src/emu/debug/debugcpu.c.orig	2010-12-31 16:41:26.000000000 +0000
 +++ src/emu/debug/debugcpu.c
