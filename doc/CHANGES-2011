@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.331 2011/02/11 11:13:03 adam Exp $
+$NetBSD: CHANGES-2011,v 1.332 2011/02/11 11:50:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -532,3 +532,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/py-mako version 0.3.6 [adam 2011-02-11]
 	Updated devel/lua-mode to 20110121 [jmmv 2011-02-11]
 	Updated net/ntop to 4.0.3nb1 [adam 2011-02-11]
+	Updated sysutils/ipa to 2.1 [obache 2011-02-11]
