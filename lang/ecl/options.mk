@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/03/15 05:20:13 asau Exp $
+# $NetBSD: options.mk,v 1.4 2011/02/11 01:28:41 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
 PKG_SUPPORTED_OPTIONS+=		threads unicode ffi clx
@@ -44,3 +44,9 @@ PLIST_VARS+=		clx
 PLIST.${option}=	yes
 .  endif
 .endfor
+
+# Help generating PLIST:
+.if !empty(PKG_OPTIONS:Mclx)
+PRINT_PLIST_AWK+=	{if ($$0 ~ /lib\/.*\/libclx.a$$/) {$$0 = "$${PLIST.clx}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /lib\/.*\/clx.(asd|fas)$$/) {$$0 = "$${PLIST.clx}" $$0;}}
+.endif
