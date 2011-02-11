@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.337 2011/02/11 14:58:34 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.338 2011/02/11 21:14:30 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -566,3 +566,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/milter-manager to 1.6.5 [obache 2011-02-11]
 	Updated mail/roundcube to 0.5.1 [adam 2011-02-11]
 	Updated net/quvi to 0.2.13 [ryoon 2011-02-11]
+	Updated devel/libevent to 2.0.10 [tnn 2011-02-11]
