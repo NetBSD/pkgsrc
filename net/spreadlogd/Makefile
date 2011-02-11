@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/08/21 16:35:33 seb Exp $
+# $NetBSD: Makefile,v 1.12 2011/02/11 21:22:03 tnn Exp $
 #
 
 DISTNAME=	spreadlogd
 PKGNAME=	spreadlogd-2.0.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	http://www.backhand.org/mod_log_spread/
 DIST_SUBDIR=	${PKGNAME_NOREV}
