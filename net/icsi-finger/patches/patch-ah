@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2008/12/15 15:37:56 is Exp $
+$NetBSD: patch-ah,v 1.2 2011/02/11 17:16:03 is Exp $
 
 --- config.h.orig	1997-10-27 20:44:06.000000000 +0100
 +++ config.h
@@ -25,7 +25,7 @@ $NetBSD: patch-ah,v 1.1 2008/12/15 15:37:56 is Exp $
  #undef FingerDir
 -#define FingerDir	/var/spool/fingerdir
 -#endif
-+#define FingerDir /var/run/fingerdir
++#define FingerDir /var/spool/fingerdir
 +
 +#undef MugShotPath
 +#define MugShotPath "/usr/pkg/images/finger"
