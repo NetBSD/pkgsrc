@@ -1,6 +1,4 @@
-$NetBSD: patch-src_emu_emucore.h,v 1.1.1.1 2011/02/03 22:22:36 wiz Exp $
-
-Sent upstream and accepted.
+$NetBSD: patch-src_emu_emucore.h,v 1.2 2011/02/11 12:49:33 abs Exp $
 
 --- src/emu/emucore.h.orig	2010-12-31 14:59:46.000000000 +0000
 +++ src/emu/emucore.h
