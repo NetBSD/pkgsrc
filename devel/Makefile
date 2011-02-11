@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1430 2011/02/08 18:36:34 drochner Exp $
+# $NetBSD: Makefile,v 1.1431 2011/02/11 08:25:35 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1180,6 +1180,7 @@ SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
+SUBDIR+=	py-mako
 SUBDIR+=	py-mock
 SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-newt
