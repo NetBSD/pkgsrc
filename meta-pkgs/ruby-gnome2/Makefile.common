@@ -1,31 +1,17 @@
-# $NetBSD: Makefile.common,v 1.16 2010/11/27 06:14:45 obache Exp $
+# $NetBSD: Makefile.common,v 1.17 2011/02/11 13:50:07 obache Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
-# used by devel/ruby-gnome2-bonobo/Makefile
-# used by devel/ruby-gnome2-bonoboui/Makefile
-# used by devel/ruby-gnome2-gconf/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
 # used by devel/ruby-gnome2-glib/Makefile
-# used by devel/ruby-gnome2-libglade/Makefile
 # used by devel/ruby-gnome2-pango/Makefile
 # used by graphics/ruby-gnome2-gdkpixbuf/Makefile
-# used by graphics/ruby-gnome2-gnomecanvas/Makefile
 # used by graphics/ruby-gnome2-goocanvas/Makefile
-# used by graphics/ruby-gnome2-gtkglext/Makefile
-# used by graphics/ruby-gnome2-libart/Makefile
 # used by graphics/ruby-gnome2-rsvg/Makefile
 # used by multimedia/ruby-gnome2-gstreamer/Makefile
-# used by print/ruby-gnome2-gnomeprint/Makefile
-# used by print/ruby-gnome2-gnomeprintui/Makefile
 # used by print/ruby-gnome2-poppler/Makefile
-# used by sysutils/ruby-gnome2-gnomevfs/Makefile
-# used by www/ruby-gnome2-gtkhtml2/Makefile
 # used by www/ruby-gnome2-gtkmozembed/Makefile
-# used by x11/ruby-gnome2-gnome/Makefile
 # used by x11/ruby-gnome2-gtk/Makefile
-# used by x11/ruby-gnome2-gtksourceview/Makefile
 # used by x11/ruby-gnome2-gtksourceview2/Makefile
-# used by x11/ruby-gnome2-panelapplet/Makefile
 # used by x11/ruby-gnome2-vte/Makefile
 
 DISTNAME=		ruby-gnome2-all-${VERSION}
@@ -39,7 +25,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://ruby-gnome2.sourceforge.jp/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		0.90.5
+VERSION=		0.90.7
 USE_RUBY_EXTCONF=	yes
 CONFIGURE_ENV+=		RUBYOPT="-Ku"
 
