@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.35 2010/01/29 15:13:00 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2011/02/11 21:13:47 tnn Exp $
 #
 
-DISTNAME=	libevent-1.4.12-stable
+DISTNAME=	libevent-2.0.10-stable
 PKGNAME=	${DISTNAME:S/-stable//}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~provos/libevent/
 COMMENT=	Asynchronous event notification library
+LICENSE=	modified-bsd
 
 CONFLICTS+=	libev<3.9nb1
 
@@ -19,6 +19,10 @@ TEST_TARGET=	verify
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 LIBS.SunOS+=	-lnsl -lresolv
+
+PKGCONFIG_OVERRIDE+=	libevent_openssl.pc.in
+PKGCONFIG_OVERRIDE+=	libevent_pthreads.pc.in
+PKGCONFIG_OVERRIDE+=	libevent.pc.in
 
 # XXX helps build, but needs more testing
 #CFLAGS.Interix+=	-Dsockaddr_storage=sockaddr_in -DNI_MAXSERV=32
@@ -30,4 +34,5 @@ CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
 CPPFLAGS+=		-Dstrtoll=__strtoll
 .endif
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
