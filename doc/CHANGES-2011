@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.327 2011/02/11 01:29:04 asau Exp $
+$NetBSD: CHANGES-2011,v 1.328 2011/02/11 01:35:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -528,3 +528,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/mjpegtools to 1.9.0nb6 [wiz 2011-02-10]
 	Updated databases/phpmyadmin to 2.11.11.2 [tron 2011-02-10]
 	Updated lang/ecl to 11.1.1 [asau 2011-02-11]
+	Updated audio/mac to 3.99u4b5s7 [wiz 2011-02-11]
