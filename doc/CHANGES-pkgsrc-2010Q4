@@ -40,3 +40,15 @@ Pullup ticket #3338 - requested by tron
 Security patch for "phpmyadmin" package
 Pullup ticket #3340 - requested by tron
 mail/dovecot2: functionality fix
+Pullup ticket #3343 - requested by taca
+mail/ruby-mail security fix
+Pullup ticket #3347 - requested by taca
+security/openssl security fix
+Pullup ticket #3348 - requested by rumko
+lang/php53 with suhosin build fix
+Pullup ticket #3349 - requested by morr
+www/wordpress update
+Pullup ticket #3350 - requested by tron
+Security update for "phpmyadmin" package
+Pullup ticket #3351 - requested by drochner
+wireshark security patches
