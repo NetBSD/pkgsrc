@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/02/10 18:26:35 drochner Exp $
+# $NetBSD: Makefile,v 1.37 2011/02/11 05:37:07 obache Exp $
 
 DISTNAME=	webkit-1.2.7
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
@@ -16,6 +16,7 @@ USE_TOOLS+=	bison gmake perl:build pkg-config msgfmt
 PKGCONFIG_OVERRIDE=	WebKit/gtk/webkit.pc.in
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 MAKE_FILE=	GNUmakefile
 GNU_CONFIGURE=	yes
