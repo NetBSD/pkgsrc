@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.336 2011/02/11 14:38:00 adam Exp $
+$NetBSD: CHANGES-2011,v 1.337 2011/02/11 14:58:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -565,3 +565,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-vte to 0.90.7 [obache 2011-02-11]
 	Updated mail/milter-manager to 1.6.5 [obache 2011-02-11]
 	Updated mail/roundcube to 0.5.1 [adam 2011-02-11]
+	Updated net/quvi to 0.2.13 [ryoon 2011-02-11]
