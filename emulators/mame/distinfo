@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2011/02/11 12:49:33 abs Exp $
+$NetBSD: distinfo,v 1.3 2011/02/11 13:16:40 abs Exp $
 
 SHA1 (mame0141s.zip) = 80225e2694469dac39a75815f227b864a4992f5e
 RMD160 (mame0141s.zip) = c09ef461280dfd7e45ca638caaa66d8752a9794b
 Size (mame0141s.zip) = 17092788 bytes
-SHA1 (patch-makefile) = 87a66c19f0fd637bd90dec41b42940a5e516c2fd
-SHA1 (patch-src_emu_debug_debugcpu.c) = b980e28e4a97086a585577c68d1d331a146276bc
-SHA1 (patch-src_emu_emucore.h) = 602eafc4d2439a206c9429495b4885672d49dc88
-SHA1 (patch-src_lib_util_astring.h) = c401491310c675996b5fb6c180e19c9c9289ab31
-SHA1 (patch-src_osd_sdl_sdlsync__ntc.c) = 697e9b178783f2a8f8d8efe749a75e0023ef6a35
+SHA1 (patch-makefile) = e8fcacd7926679d087e29d0098dfb2c660cbb96f
+SHA1 (patch-src_emu_debug_debugcpu.c) = 9223063c1aebf2e7846bd5ad46885fd8c97e9ea2
+SHA1 (patch-src_emu_emucore.h) = 3852589019a347338a05aee9151e161ed4b72696
+SHA1 (patch-src_lib_util_astring.h) = eb48db35ffc5627a102adce619abab94a15c77ce
+SHA1 (patch-src_osd_sdl_sdlsync__ntc.c) = ada3c8e8fccd681d296b543737f355d20c18f516
