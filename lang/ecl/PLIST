@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/06/16 13:57:30 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/02/11 01:28:41 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -10,17 +10,21 @@ include/ecl/ecl-inl.h
 include/ecl/ecl.h
 include/ecl/eval.h
 include/ecl/external.h
+include/ecl/impl/math_dispatch.h
+include/ecl/impl/math_dispatch2.h
+include/ecl/impl/math_fenv.h
+include/ecl/impl/math_fenv_msvc.h
 include/ecl/internal.h
 include/ecl/number.h
 include/ecl/object.h
 include/ecl/page.h
 include/ecl/stacks.h
 include/ecl/unify.h
-lib/${PKGNAME}/BUILD-STAMP
 lib/${PKGNAME}/Copyright
 lib/${PKGNAME}/LGPL
 lib/${PKGNAME}/TAGS
 lib/${PKGNAME}/asdf.fas
+lib/${PKGNAME}/build-stamp
 lib/${PKGNAME}/bytecmp.asd
 lib/${PKGNAME}/bytecmp.fas
 ${PLIST.clx}lib/${PKGNAME}/clx.asd
@@ -42,6 +46,7 @@ lib/${PKGNAME}/librt.a
 lib/${PKGNAME}/libsb-bsd-sockets.a
 lib/${PKGNAME}/libserve-event.a
 lib/${PKGNAME}/libsockets.a
+lib/${PKGNAME}/prebuilt-asdf.asd
 lib/${PKGNAME}/profile.asd
 lib/${PKGNAME}/profile.fas
 lib/${PKGNAME}/rt.asd
@@ -52,10 +57,10 @@ lib/${PKGNAME}/serve-event.asd
 lib/${PKGNAME}/serve-event.fas
 lib/${PKGNAME}/sockets.asd
 lib/${PKGNAME}/sockets.fas
-lib/${PKGNAME}/sysfun.lsp
 lib/${PKGNAME}/ucd.dat
 lib/libecl.so
 lib/libecl.so.${PKGVERSION_MAJOR}
 lib/libecl.so.${PKGVERSION_MAJOR_MINOR}
 lib/libecl.so.${PKGVERSION}
+man/man1/ecl-config.1
 man/man1/ecl.1
