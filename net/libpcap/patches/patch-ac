@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2008/10/30 16:35:08 tron Exp $
+$NetBSD: patch-ac,v 1.6 2011/02/11 12:11:26 adam Exp $
 
---- Makefile.in.orig	2008-10-28 01:26:13.000000000 +0000
-+++ Makefile.in	2008-10-30 16:30:21.000000000 +0000
-@@ -44,7 +44,7 @@
- # You shouldn't need to edit anything below.
+--- Makefile.in.orig	2010-04-05 17:54:05.000000000 +0000
++++ Makefile.in
+@@ -45,7 +45,7 @@ VPATH = @srcdir@
  #
  
+ LD = /usr/bin/ld
 -CC = @CC@
 +CC = ${LIBTOOL} --mode=compile @CC@
  CCOPT = @V_CCOPT@
  INCLS = -I. @V_INCLS@
  DEFS = @DEFS@ @V_DEFS@
-@@ -73,7 +73,8 @@
+@@ -76,7 +76,8 @@ YACC = @V_YACC@
  # Explicitly define compilation rule since SunOS 4's make doesn't like gcc.
  # Also, gcc does not remove the .o before forking 'as', which can be a
  # problem if you don't own the file but can write to the directory.
@@ -21,10 +21,10 @@ $NetBSD: patch-ac,v 1.5 2008/10/30 16:35:08 tron Exp $
  	@rm -f $@
  	$(CC) $(CFLAGS) -c $(srcdir)/$*.c
  
-@@ -83,13 +84,13 @@
- CSRC =	pcap.c inet.c gencode.c optimize.c nametoaddr.c \
- 	etherent.c savefile.c bpf_filter.c bpf_image.c bpf_dump.c
- GENSRC = scanner.c grammar.c version.c
+@@ -87,13 +88,13 @@ CSRC =	pcap.c inet.c gencode.c optimize.
+ 	savefile.c sf-pcap.c sf-pcap-ng.c pcap-common.c \
+ 	bpf_image.c bpf_dump.c
+ GENSRC = scanner.c grammar.c bpf_filter.c version.c
 -LIBOBJS = @LIBOBJS@
 +LIBOBJS = @LTLIBOBJS@
  
@@ -34,28 +34,28 @@ $NetBSD: patch-ac,v 1.5 2008/10/30 16:35:08 tron Exp $
  # hack the extra indirection
 -OBJ =	$(PSRC:.c=.o) $(FSRC:.c=.o) $(CSRC:.c=.o) $(SSRC:.c=.o) $(GENSRC:.c=.o) $(LIBOBJS)
 +OBJ =	$(PSRC:.c=.lo) $(FSRC:.c=.lo) $(CSRC:.c=.lo) $(SSRC:.c=.lo) $(GENSRC:.c=.lo) $(LIBOBJS)
- HDR = \
- 	acconfig.h \
- 	arcnet.h \
-@@ -311,12 +312,10 @@
+ PUBHDR = \
+ 	pcap.h \
+ 	pcap-bpf.h \
+@@ -324,12 +325,10 @@ EXTRA_DIST = \
  	Win32/Src/inet_net.c \
  	Win32/Src/inet_pton.c
  
--all: libpcap.a pcap-config
+-all: libpcap.a shared pcap-config
 +all: libpcap.la pcap-config
  
 -libpcap.a: $(OBJ)
 -	@rm -f $@
--	$(AR) rc $@ $(OBJ) $(LIBS)
+-	ar rc $@ $(OBJ) $(ADDLARCHIVEOBJS)
 -	$(RANLIB) $@
 +libpcap.la: $(OBJ)
 +	${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib ${LDFLAGS} $(OBJ) -o libpcap.la
  
  shared: libpcap.$(DYEXT)
  
-@@ -348,10 +347,10 @@
+@@ -413,10 +412,10 @@ scanner.c: $(srcdir)/scanner.l
  	@rm -f $@
- 	./runlex.sh $(LEX) -o$@ $<
+ 	$(srcdir)/runlex.sh $(LEX) -o$@ $<
  
 -scanner.o: scanner.c tokdefs.h
 +scanner.lo: scanner.c tokdefs.h
@@ -66,7 +66,7 @@ $NetBSD: patch-ac,v 1.5 2008/10/30 16:35:08 tron Exp $
  
  tokdefs.h: grammar.c
  grammar.c: $(srcdir)/grammar.y
-@@ -360,17 +359,17 @@
+@@ -425,17 +424,17 @@ grammar.c: $(srcdir)/grammar.y
  	mv y.tab.c grammar.c
  	mv y.tab.h tokdefs.h
  
@@ -86,18 +86,18 @@ $NetBSD: patch-ac,v 1.5 2008/10/30 16:35:08 tron Exp $
 -version.c: $(srcdir)/VERSION
 +version.c: #$(srcdir)/VERSION
  	@rm -f $@
- 	sed -e 's/.*/char pcap_version[] = "&";/' $(srcdir)/VERSION > $@
- 
-@@ -381,7 +380,7 @@
+ 	if grep GIT ${srcdir}/VERSION >/dev/null; then \
+ 		read ver <${srcdir}/VERSION; \
+@@ -452,7 +451,7 @@ version.c: $(srcdir)/VERSION
  # so we make the version string static and return it from
  # a function, which does work.
  #
 -version.h: $(srcdir)/VERSION
 +version.h: #$(srcdir)/VERSION
  	@rm -f $@
- 	sed -e 's/.*/static const char pcap_version_string[] = "libpcap version &";/' $(srcdir)/VERSION > $@
- 
-@@ -389,7 +388,7 @@
+ 	if grep GIT ${srcdir}/VERSION >/dev/null; then \
+ 		read ver <${srcdir}/VERSION; \
+@@ -466,7 +465,7 @@ bpf_filter.c: $(srcdir)/bpf/net/bpf_filt
  	rm -f bpf_filter.c
  	ln -s $(srcdir)/bpf/net/bpf_filter.c bpf_filter.c
  
@@ -106,70 +106,94 @@ $NetBSD: patch-ac,v 1.5 2008/10/30 16:35:08 tron Exp $
  	$(CC) $(CFLAGS) -c bpf_filter.c
  
  #
-@@ -413,11 +412,10 @@
- findalldevstest: findalldevstest.c libpcap.a
- 	$(CC) $(CFLAGS) -I. -L. -o findalldevstest findalldevstest.c libpcap.a
+@@ -497,7 +496,7 @@ selpolltest: selpolltest.c libpcap.a
+ opentest: opentest.c libpcap.a
+ 	$(CC) $(CFLAGS) -I. -L. -o opentest $(srcdir)/opentest.c libpcap.a $(LIBS)
  
--install: libpcap.a pcap-config
+-install: install-shared install-archive pcap-config
 +install: libpcap.la pcap-config
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
--	$(INSTALL_DATA) libpcap.a $(DESTDIR)$(libdir)/libpcap.a
--	$(RANLIB) $(DESTDIR)$(libdir)/libpcap.a
-+	${LIBTOOL} --mode=install $(INSTALL_DATA) libpcap.la $(DESTDIR)$(libdir)
  	[ -d $(DESTDIR)$(includedir) ] || \
- 	    (mkdir -p $(DESTDIR)$(includedir); chmod 755 $(DESTDIR)$(includedir))
- 	[ -d $(DESTDIR)$(includedir)/pcap ] || \
-@@ -445,31 +443,31 @@
- 	    $(DESTDIR)$(includedir)/pcap-bpf.h
- 	$(INSTALL_DATA) $(srcdir)/pcap-namedb.h \
- 	    $(DESTDIR)$(includedir)/pcap-namedb.h
+@@ -512,48 +511,49 @@ install: install-shared install-archive 
+ 	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
+ 	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
+ 	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
++	${LIBTOOL} --mode=install $(INSTALL_DATA) libpcap.la $(DESTDIR)$(libdir)
+ 	for i in $(PUBHDR); do \
+ 		$(INSTALL_DATA) $(srcdir)/$$i \
+ 		    $(DESTDIR)$(includedir)/$$i; done
+ 	[ -d $(DESTDIR)$(bindir) ] || \
+ 	    (mkdir -p $(DESTDIR)$(bindir); chmod 755 $(DESTDIR)$(bindir))
 -	$(INSTALL_PROGRAM) pcap-config $(DESTDIR)$(bindir)/pcap-config
 +	${BSD_INSTALL_SCRIPT} pcap-config $(DESTDIR)$(bindir)/pcap-config
  	for i in $(MAN1); do \
  		$(INSTALL_DATA) $(srcdir)/$$i \
  		    $(DESTDIR)$(mandir)/man1/$$i; done
--	for i in $(MAN3PCAP); do \
+-	for i in $(MAN3PCAP_NOEXPAND); do \
 -		$(INSTALL_DATA) $(srcdir)/$$i \
-+	for i in $(MAN3PCAP:.3pcap=.3); do \
++	for i in $(MAN3PCAP_NOEXPAND:.3pcap=.3); do \
 +		$(INSTALL_DATA) $(srcdir)/$${i}pcap \
  		    $(DESTDIR)$(mandir)/man3/$$i; done
+-	for i in $(MAN3PCAP_EXPAND:.in=); do \
+-		$(INSTALL_DATA) $$i \
++	for i in $(MAN3PCAP_EXPAND:.3pcap.in=.3); do \
++		$(INSTALL_DATA) $${i}pcap \
+ 		    $(DESTDIR)$(mandir)/man3/$$i; done
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_name.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_dump_open.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_perror.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_geterr.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_perror.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_inject.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_dispatch.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_loop.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_dispatch.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_minor_version.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_major_version.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_minor_version.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_next.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_next_ex.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_next.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3pcap
+-	rm -f $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3pcap
 -	ln $(DESTDIR)$(mandir)/man3/pcap_setnonblock.3pcap \
 -		 $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3pcap
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_name.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_dump_open.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_perror.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_geterr.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_perror.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_inject.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_dispatch.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_loop.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_dispatch.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_minor_version.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_major_version.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_minor_version.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_next.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_next_ex.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_next.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
++	rm -f $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3
 +	ln $(DESTDIR)$(mandir)/man3/pcap_setnonblock.3 \
 +		 $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3
  	for i in $(MANFILE); do \
- 		$(INSTALL_DATA) $(srcdir)/`echo $$i | sed 's/.manfile.in/.manfile/'` \
+ 		$(INSTALL_DATA) `echo $$i | sed 's/.manfile.in/.manfile/'` \
  		    $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@/`echo $$i | sed 's/.manfile.in/.@MAN_FILE_FORMATS@/'`; done

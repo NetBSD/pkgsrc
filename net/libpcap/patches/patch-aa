@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2008/10/30 08:12:52 adam Exp $
+$NetBSD: patch-aa,v 1.7 2011/02/11 12:11:26 adam Exp $
 
 --- pcap/pcap.h.orig	2008-10-29 15:08:55.000000000 +0100
 +++ pcap/pcap.h
-@@ -336,10 +336,12 @@ void	pcap_freealldevs(pcap_if_t *);
+@@ -349,10 +349,12 @@ void	pcap_freealldevs(pcap_if_t *);
  const char *pcap_lib_version(void);
  
  /* XXX this guy lives in the bpf tree */

@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:09:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/02/11 12:11:26 adam Exp $
 bin/pcap-config
 include/pcap-bpf.h
 include/pcap-int.h
 include/pcap-namedb.h
 include/pcap.h
+include/pcap/bluetooth.h
 include/pcap/bpf.h
+include/pcap/ipnet.h
 include/pcap/namedb.h
 include/pcap/pcap.h
 include/pcap/sll.h
 include/pcap/usb.h
+include/pcap/vlan.h
 lib/libpcap.la
 man/man1/pcap-config.1
 man/man3/pcap.3
