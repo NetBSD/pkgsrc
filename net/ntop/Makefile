@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2011/02/09 08:37:10 adam Exp $
+# $NetBSD: Makefile,v 1.65 2011/02/11 11:12:14 adam Exp $
 
 DISTNAME=	ntop-4.0.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 EXTRACT_SUFX=	.tgz
@@ -13,10 +14,11 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	ntop-[0-9]*
+DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		aclocal autoconf autoheader automake gawk gmake
+USE_TOOLS+=		aclocal autoconf autoheader automake gawk gmake gunzip
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/ntop
@@ -47,7 +49,6 @@ pre-configure:
 	libtoolize -c -f; cp m4/libtool.m4 libtool.m4.in; \
 	cat acinclude.m4.in libtool.m4.in acinclude.m4.ntop > acinclude.m4; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
-#	cp ${PREFIX}/share/libtool/config/ltmain.sh .; \
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
