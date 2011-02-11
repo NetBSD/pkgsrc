@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.8 2011/02/11 19:10:54 tnn Exp $
+
+Make an effort to pick up spamd_flags from the rc configuration when
+not running on NetBSD/DragonFlyBSD.
+
+--- spamd/netbsd-rc-script.sh.orig	2010-03-16 14:49:25.000000000 +0000
++++ spamd/netbsd-rc-script.sh
+@@ -118,6 +118,12 @@ if [ "${OPSYS}" = "NetBSD" -o "${OPSYS}"
+ 
+ else # not NetBSD or DragonFlyBSD
+ 
++	if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
++		load_rc_config $name
++	elif [ -f /etc/rc.conf ]; then
++		. /etc/rc.conf
++	fi
++
+ 	if [ -f ${pidfile} ];  then
+ 		the_spamd_pid=`head -1 ${pidfile}`
+ 	else
