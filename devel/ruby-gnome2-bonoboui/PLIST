@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/12 03:09:31 obache Exp $
-lib/pkgconfig/ruby-bonoboui2.pc
-${RUBY_VENDORLIB}/bonoboui2.rb
-${RUBY_VENDORARCHLIB}/bonoboui2.${RUBY_DLEXT}
