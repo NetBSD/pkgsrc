@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/07/22 21:10:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/02/11 11:12:14 adam Exp $
 bin/ntop
 lib/libcpacketPlugin-${PKGVERSION}.so
 lib/libcpacketPlugin.so
@@ -406,6 +406,8 @@ share/ntop/html/web.gif
 share/ntop/html/wheel.gif
 share/ntop/html/white_bg.gif
 share/ntop/html/zoom.js
+share/ntop/ntop/GeoIPASNum.dat
+share/ntop/ntop/GeoLiteCity.dat
 share/ntop/ntop/ntop-cert.pem
 share/ntop/ntop/oui.txt.gz
 share/ntop/ntop/specialMAC.txt.gz
