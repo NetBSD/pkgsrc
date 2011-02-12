@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.349 2011/02/12 18:51:42 adam Exp $
+$NetBSD: CHANGES-2011,v 1.350 2011/02/12 23:54:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -578,3 +578,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated finance/gnucash to 2.4.2 [wiz 2011-02-12]
 	Updated net/poptop to 1.3.4 [asau 2011-02-12]
 	Updated chat/jabberd2 to 2.2.12 [adam 2011-02-12]
+	Updated inputmethod/skk-jisyo-cdb to 201102 [ryoon 2011-02-12]
