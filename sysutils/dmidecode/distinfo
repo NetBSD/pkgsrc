@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2008/12/06 11:36:41 obache Exp $
+$NetBSD: distinfo,v 1.10 2011/02/12 11:09:30 shattered Exp $
 
-SHA1 (dmidecode-2.10.tar.gz) = 3eca8388c85eff8a1c3d6ae99c18e00c92030d5d
-RMD160 (dmidecode-2.10.tar.gz) = 3f7d4efbc8c884dbd1c32f65df17828f30339366
-Size (dmidecode-2.10.tar.gz) = 62579 bytes
+SHA1 (dmidecode-2.11.tar.gz) = 4b53195a10b74869fda6e0c3bf84a5e1be8761be
+RMD160 (dmidecode-2.11.tar.gz) = 8126cc464fb441f025ddf0cbef4ee04ec71b1773
+Size (dmidecode-2.11.tar.gz) = 66389 bytes
 SHA1 (patch-aa) = 15030aee9d7cc0eb91c04911cb8dcea8d5e4aee4

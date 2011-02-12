@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10102 2011/02/12 11:05:56 shattered Exp $
+$NetBSD: TODO,v 1.10103 2011/02/12 11:09:30 shattered Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.2.1
-	o dmidecode-2.11
 	o dnstracer-1.9
 	o docbook-xsl-1.76.0
 	o doclifter-2.6

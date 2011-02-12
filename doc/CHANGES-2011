@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.342 2011/02/12 11:05:56 shattered Exp $
+$NetBSD: CHANGES-2011,v 1.343 2011/02/12 11:09:30 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -571,3 +571,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/nvi-m17n to 1.79.20040401nb5 [obache 2011-02-12]
 	Updated chat/navi2ch to 1.8.3 [ryoon 2011-02-12]
 	Updated audio/kid3 to 1.6 [shattered 2011-02-12]
+	Updated sysutils/dmidecode to 2.11 [shattered 2011-02-12]

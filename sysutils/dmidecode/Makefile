@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/01/04 14:08:15 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2011/02/12 11:09:30 shattered Exp $
 #
 
-DISTNAME=	dmidecode-2.10
+DISTNAME=	dmidecode-2.11
 CATEGORIES=	sysutils
 MASTER_SITES=	http://savannah.gnu.org/download/dmidecode/
 
