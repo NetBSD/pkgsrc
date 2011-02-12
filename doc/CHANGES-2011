@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.339 2011/02/11 21:41:47 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.340 2011/02/12 02:52:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -568,3 +568,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/quvi to 0.2.13 [ryoon 2011-02-11]
 	Updated devel/libevent to 2.0.10 [tnn 2011-02-11]
 	Updated net/Transmission to 2.21 [tnn 2011-02-11]
+	Updated editors/nvi-m17n to 1.79.20040401nb5 [obache 2011-02-12]
