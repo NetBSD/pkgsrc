@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2007/01/18 16:52:34 joerg Exp $
+$NetBSD: distinfo,v 1.12 2011/02/12 02:52:34 obache Exp $
 
 SHA1 (nvi-1.79.m17n-20040401.diff.gz) = 10fa772dad4368727a7ddc740d85cdfda3062414
 RMD160 (nvi-1.79.m17n-20040401.diff.gz) = 1b1790448d38a4f92f3b2df5f6aa566f1d8efff0
@@ -18,3 +18,4 @@ SHA1 (patch-ai) = a6da171a13f01615ad4c831aad8c26ea9d2ed315
 SHA1 (patch-aj) = bc8698e2d12a88fe7024d38188723cb058ab240a
 SHA1 (patch-ak) = 2c5069a892a5204fcd3a607e6b383e8a503092f8
 SHA1 (patch-al) = 96a625d1eb906390beca232b129711b869ab3026
+SHA1 (patch-regex_regex2.h) = c9f6f28b8b7cc1d4515edcae07ff0b5c011c3a9e
