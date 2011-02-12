@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2009/02/24 21:22:41 cube Exp $
+$NetBSD: patch-ac,v 1.5 2011/02/12 16:47:44 asau Exp $
 
---- pptpctrl.c.orig	2004-04-28 11:36:07.000000000 +0000
-+++ pptpctrl.c
+--- pptpctrl.c.orig	2006-12-08 03:01:40.000000000 +0300
++++ pptpctrl.c	2011-02-12 17:02:53.000000000 +0300
 @@ -32,6 +32,11 @@
  #include <netinet/in.h>
  #include <arpa/inet.h>
@@ -13,8 +13,8 @@ $NetBSD: patch-ac,v 1.4 2009/02/24 21:22:41 cube Exp $
 +#endif
  #ifdef HAVE_PTY_H
  #include <pty.h>
- #endif
-@@ -734,7 +739,7 @@ static void launch_pppd(char **pppaddrs,
+ #include <termios.h>
+@@ -773,7 +778,7 @@ static void launch_pppd(char **pppaddrs,
  
          if (pptp_logwtmp) {
                   pppd_argv[an++] = "plugin";
