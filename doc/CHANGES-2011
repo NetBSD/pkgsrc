@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.345 2011/02/12 12:08:21 obache Exp $
+$NetBSD: CHANGES-2011,v 1.346 2011/02/12 14:11:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -574,3 +574,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/dmidecode to 2.11 [shattered 2011-02-12]
 	Updated editors/ted to 2.21nb2 [wiz 2011-02-12]
 	Updated graphics/cairo to 1.10.2nb2 [obache 2011-02-12]
+	Updated mail/rss2email to 2.70nb1 [schmonz 2011-02-12]
