@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2011/02/12 10:00:08 tnn Exp $
+$NetBSD: patch-ac,v 1.2 2011/02/12 14:18:35 drochner Exp $
 
 --- src/PDFDocument.cxx.orig	2009-02-28 21:00:35.000000000 +0000
 +++ src/PDFDocument.cxx
-@@ -686,7 +686,7 @@ PDFDocument::setTextSelection (DocumentR
+@@ -680,13 +680,13 @@ PDFDocument::setTextSelection (DocumentR
+ 
+     //for get text we must exchange y coordinate, don't ask me where logic here.
+     PopplerRectangle textRect = { rect->getX1() / getZoom(),
+-                                  (pageHeight - rect->getY2() / getZoom()),
+-                                  rect->getX2() * getZoom() / getZoom(),
+-                                  (pageHeight - rect->getY1() / getZoom())};
++                                  rect->getY1() / getZoom(),
++                                  rect->getX2() / getZoom(),
++                                  rect->getY2() / getZoom()};
      repairEmpty(textRect);
  
  #if defined (HAVE_POPPLER_0_6_0)
