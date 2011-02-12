@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2011/01/25 19:00:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.39 2011/02/12 10:53:02 tnn Exp $
 bin/cvlc
 bin/qvlc
 bin/rvlc
@@ -146,6 +146,7 @@ lib/vlc/plugins/codec/libcdg_plugin.la
 lib/vlc/plugins/codec/libcvdsub_plugin.la
 lib/vlc/plugins/codec/libdts_plugin.la
 lib/vlc/plugins/codec/libdvbsub_plugin.la
+${PLIST.faad}lib/vlc/plugins/codec/libfaad_plugin.la
 lib/vlc/plugins/codec/libfake_plugin.la
 lib/vlc/plugins/codec/libflac_plugin.la
 lib/vlc/plugins/codec/libinvmem_plugin.la
