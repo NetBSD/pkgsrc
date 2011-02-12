@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10101 2011/02/12 05:08:25 ryoon Exp $
+$NetBSD: TODO,v 1.10102 2011/02/12 11:05:56 shattered Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kde4-4.6.0
 	o kdevelop-4.2
 	o kdrill-6.5
-	o kid3-1.6
 	o kipi-plugins-1.8.0
 	o kismet-2011.01r1
 	o kmess-1.5.1
