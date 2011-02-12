@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/10 09:00:38 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/12 23:53:14 ryoon Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	tinycdb-[0-9]*:../../databases/tinycdb
 
 USE_LANGUAGES=	# empty
 
-SKKJISYO_VERS=	201008
+SKKJISYO_VERS=	201102
 
 INSTALLATION_DIRS+=	${PREFIX}/share/skk
 
