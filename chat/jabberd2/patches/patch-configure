@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2011/02/06 19:23:51 schnoebe Exp $
+$NetBSD: patch-configure,v 1.2 2011/02/12 18:50:14 adam Exp $
 
 --- configure.orig	2010-08-08 15:51:09.000000000 +0000
 +++ configure
-@@ -10878,7 +10878,7 @@ fi
+@@ -10875,7 +10875,7 @@ fi
  # check for optimisation level
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking CFLAGS optimization level" >&5
  $as_echo_n "checking CFLAGS optimization level... " >&6; }
