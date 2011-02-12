@@ -1,46 +1,49 @@
-$NetBSD: patch-ag,v 1.3 2011/02/07 22:08:42 wiz Exp $
+$NetBSD: patch-ag,v 1.4 2011/02/12 11:40:41 wiz Exp $
 
-Fix for png-1.5.
+Fix for png-1.5. Version from upstream.
 
 --- bitmap/bmpng.c.orig	2009-10-16 15:20:57.000000000 +0000
 +++ bitmap/bmpng.c
-@@ -20,23 +20,29 @@
+@@ -20,23 +20,32 @@
  /*									*/
  /************************************************************************/
  
 -static int bpPngiToBitmap(	const png_info *		pngi,
-+static int bpPngiToBitmap(	const png_structp		png,
-+				const png_info *		pngi,
++static int bpPngiToBitmap(	const png_structp		pngp,
++				png_info *			pngi,
  				BitmapDescription *		bd )
      {
      unsigned int	col;
-+    png_colorp palette;
-+    int num_palette;
-+    png_uint_32 res_x, res_y;
-+    int unit_type;
++    png_uint_32		res_x, res_y;
++    int			unit_type= 0;
  
 -    bd->bdPixelsWide= pngi->width;
 -    bd->bdPixelsHigh= pngi->height;
-+    bd->bdPixelsWide= png_get_image_width(png, pngi);
-+    bd->bdPixelsHigh= png_get_image_height(png, pngi);
++    bd->bdPixelsWide= png_get_image_width( pngp, pngi );
++    bd->bdPixelsHigh= png_get_image_height( pngp, pngi );
      bd->bdHasAlpha= 0;
  
 -    switch( pngi->color_type )
-+    png_get_PLTE( png, pngi, &palette, &num_palette );
-+    switch( png_get_color_type( png, pngi ) )
++    switch( png_get_color_type( pngp, pngi ) )
  	{
  	case PNG_COLOR_TYPE_PALETTE:
++	    {
++	    int		num_palette;
++	    png_colorp	palette;
++
++	    png_get_PLTE( pngp, pngi, &palette, &num_palette );
++
  	    bd->bdColorEncoding= BMcoRGB8PALETTE;
 -	    bd->bdColorCount= pngi->num_palette;
 +	    bd->bdColorCount= num_palette;
  	    bd->bdBitsPerSample= 8;
  	    bd->bdSamplesPerPixel= 3;
 -	    bd->bdBitsPerPixel= pngi->bit_depth;
-+	    bd->bdBitsPerPixel= png_get_bit_depth( png, pngi );
++	    bd->bdBitsPerPixel= png_get_bit_depth( pngp, pngi );
  
  	    bd->bdRGB8Palette= (RGB8Color *)
  				malloc( bd->bdColorCount* sizeof(RGB8Color) );
-@@ -46,47 +52,48 @@ static int bpPngiToBitmap(	const png_inf
+@@ -46,47 +55,51 @@ static int bpPngiToBitmap(	const png_inf
  
  	    for ( col= 0; col < bd->bdColorCount; col++ )
  		{
@@ -52,6 +55,7 @@ Fix for png-1.5.
 +		bd->bdRGB8Palette[col].rgb8Blue= palette[col].blue;
  		bd->bdRGB8Palette[col].rgb8Alpha= 0;
  		}
++	    }
  	    break;
  
  	case PNG_COLOR_TYPE_RGB:
@@ -59,9 +63,9 @@ Fix for png-1.5.
 -	    bd->bdBitsPerSample= pngi->bit_depth;
 -	    bd->bdSamplesPerPixel= pngi->channels;
 -	    bd->bdBitsPerPixel= pngi->pixel_depth;
-+	    bd->bdBitsPerSample= png_get_bit_depth( png, pngi );
-+	    bd->bdSamplesPerPixel= png_get_channels( png, pngi );
-+	    bd->bdBitsPerPixel= ( png_get_rowbytes( png, pngi ) + 7 ) / png_get_image_width( png, pngi );
++	    bd->bdBitsPerSample= png_get_bit_depth( pngp, pngi );
++	    bd->bdSamplesPerPixel= png_get_channels( pngp, pngi );
++	    bd->bdBitsPerPixel= bd->bdSamplesPerPixel* bd->bdBitsPerSample;
  	    break;
  
  	case PNG_COLOR_TYPE_GRAY:
@@ -69,9 +73,9 @@ Fix for png-1.5.
 -	    bd->bdBitsPerSample= pngi->bit_depth;
 -	    bd->bdSamplesPerPixel= pngi->channels;
 -	    bd->bdBitsPerPixel= pngi->pixel_depth;
-+	    bd->bdBitsPerSample= png_get_bit_depth( png, pngi );
-+	    bd->bdSamplesPerPixel= png_get_channels( png, pngi );
-+	    bd->bdBitsPerPixel= ( png_get_rowbytes( png, pngi ) + 7 ) / png_get_image_width( png, pngi );
++	    bd->bdBitsPerSample= png_get_bit_depth( pngp, pngi );
++	    bd->bdSamplesPerPixel= png_get_channels( pngp, pngi );
++	    bd->bdBitsPerPixel= bd->bdSamplesPerPixel* bd->bdBitsPerSample;
  	    break;
  
  	case PNG_COLOR_TYPE_RGB_ALPHA:
@@ -80,32 +84,34 @@ Fix for png-1.5.
 -	    bd->bdBitsPerSample= pngi->bit_depth;
 -	    bd->bdSamplesPerPixel= pngi->channels;
 -	    bd->bdBitsPerPixel= pngi->pixel_depth;
-+	    bd->bdBitsPerSample= png_get_bit_depth( png, pngi );
-+	    bd->bdSamplesPerPixel= png_get_channels( png, pngi );
-+	    bd->bdBitsPerPixel= ( png_get_rowbytes( png, pngi ) + 7 ) / png_get_image_width( png, pngi );
++	    bd->bdBitsPerSample= png_get_bit_depth( pngp, pngi );
++	    bd->bdSamplesPerPixel= png_get_channels( pngp, pngi );
++	    bd->bdBitsPerPixel= bd->bdSamplesPerPixel* bd->bdBitsPerSample;
  	    break;
  
  	case PNG_COLOR_TYPE_GRAY_ALPHA:
  	    bd->bdHasAlpha= 1;
 -	    LDEB(pngi->color_type); return -1;
-+	    LDEB(png_get_color_type( png, pngi )); return -1;
++	    LDEB(png_get_color_type( pngp, pngi )); return -1;
  
  	default:
 -	    LDEB(pngi->color_type); return -1;
-+	    LDEB(png_get_color_type( png, pngi )); return -1;
++	    LDEB(png_get_color_type( pngp, pngi )); return -1;
  	}
  
 -    bd->bdBytesPerRow= pngi->rowbytes;
-+    bd->bdBytesPerRow= png_get_rowbytes( png, pngi );
++    bd->bdBytesPerRow= png_get_rowbytes( pngp, pngi );
      bd->bdBufferLength= bd->bdBytesPerRow* bd->bdPixelsHigh;
  
 -    switch( pngi->phys_unit_type )
-+    png_get_pHYs( png, pngi, &res_x, &res_y, &unit_type);
++    if  ( !  png_get_pHYs( pngp, pngi, &res_x, &res_y, &unit_type ) )
++	{ unit_type= PNG_RESOLUTION_UNKNOWN;	}
++
 +    switch( unit_type )
  	{
  	case PNG_RESOLUTION_UNKNOWN:
  	    bd->bdUnit= BMunPIXEL;
-@@ -96,12 +103,12 @@ static int bpPngiToBitmap(	const png_inf
+@@ -96,12 +109,12 @@ static int bpPngiToBitmap(	const png_inf
  
  	case PNG_RESOLUTION_METER:
  	    bd->bdUnit= BMunM;
@@ -121,7 +127,7 @@ Fix for png-1.5.
  	    return -1;
  	}
  
-@@ -119,11 +126,11 @@ static int bmPngReadContents(	png_info *
+@@ -119,11 +132,11 @@ static int bmPngReadContents(	png_info *
      unsigned char *		buffer;
  
      numberOfPasses= 1;
@@ -132,11 +138,21 @@ Fix for png-1.5.
 -    if  ( pngi->color_type == PNG_COLOR_TYPE_RGB	&&
 -	  pngi->bit_depth == 16				)
 +    if  ( png_get_color_type( png, pngi ) == PNG_COLOR_TYPE_RGB	&&
-+	  png_get_bit_depth( png, pngi ) == 16				)
++	  png_get_bit_depth( png, pngi ) == 16			)
  	{
  	const unsigned short	one= 1;
  	const unsigned char *	testEndian= (const unsigned char *)&one;
-@@ -236,9 +243,9 @@ int bmPngReadPng(	BitmapDescription *	bd
+@@ -133,9 +146,6 @@ static int bmPngReadContents(	png_info *
+ 	}
+ 
+     png_start_read_image( png );
+-    /*
+-    png_read_update_info( png, pngi );
+-    */
+ 
+     buffer= (unsigned char *)malloc( bd->bdBufferLength );
+     if  ( ! buffer )
+@@ -236,9 +246,9 @@ int bmPngReadPng(	BitmapDescription *	bd
  
      png_read_info( pngp, pngip );
  
@@ -144,18 +160,23 @@ Fix for png-1.5.
 +    if  ( bpPngiToBitmap( pngp, pngip, bd ) )
  	{
 -	LLLDEB(pngip->color_type,bd->bdColorCount,bd->bdRGB8Palette); 
-+	LLLDEB(png_get_color_type( pngp, pngip ),bd->bdColorCount,bd->bdRGB8Palette); 
++	LLDEB(bd->bdColorCount,bd->bdRGB8Palette); 
  	png_destroy_read_struct( &pngp, &pngip, (png_infop *)0 );
  	return -1;
  	}
-@@ -284,94 +291,91 @@ static int bpPngiFromBitmap(	png_structp
+@@ -282,44 +292,43 @@ int bmCanWritePngFile( const BitmapDescr
+ 
+ static int bpPngiFromBitmap(	png_structp			png,
  				png_info *			pngi,
++				png_colorp *			pPalette,
  				const BitmapDescription *       bd )
      {
 -    png_info_init( pngi );
 -    pngi->width= bd->bdPixelsWide;
 -    pngi->height= bd->bdPixelsHigh;
-+    int bit_depth, color_type, interlace_type;
++    int			bit_depth;
++    int			color_type;
++    png_color_8		sig_bit;
  
      switch( bd->bdUnit )
  	{
@@ -164,7 +185,10 @@ Fix for png-1.5.
 -	    pngi->x_pixels_per_unit= bd->bdXResolution;
 -	    pngi->y_pixels_per_unit= bd->bdYResolution;
 -	    pngi->valid |= PNG_INFO_pHYs;
-+	    png_set_pHYs(png, pngi, bd->bdXResolution, bd->bdYResolution, PNG_RESOLUTION_METER);
++	    png_set_pHYs( png, pngi,
++			    bd->bdXResolution,
++			    bd->bdYResolution,
++			    PNG_RESOLUTION_METER);
  	    break;
  
  	case BMunINCH:
@@ -172,7 +196,10 @@ Fix for png-1.5.
 -	    pngi->x_pixels_per_unit= (int)( 39.37* bd->bdXResolution );
 -	    pngi->y_pixels_per_unit= (int)( 39.37* bd->bdYResolution );
 -	    pngi->valid |= PNG_INFO_pHYs;
-+	    png_set_pHYs(png, pngi, (int)( 39.37* bd->bdXResolution ), (int)( 39.37* bd->bdYResolution), PNG_RESOLUTION_METER);
++	    png_set_pHYs( png, pngi,
++			    (int)( 39.37* bd->bdXResolution ),
++			    (int)( 39.37* bd->bdYResolution ),
++			    PNG_RESOLUTION_METER);
  	    break;
  
  	case BMunPOINT:
@@ -180,7 +207,10 @@ Fix for png-1.5.
 -	    pngi->x_pixels_per_unit= POINTS_PER_M* bd->bdXResolution;
 -	    pngi->y_pixels_per_unit= POINTS_PER_M* bd->bdYResolution;
 -	    pngi->valid |= PNG_INFO_pHYs;
-+	    png_set_pHYs(png, pngi, (int)( POINTS_PER_M* bd->bdXResolution ), (int)( POINTS_PER_M* bd->bdYResolution), PNG_RESOLUTION_METER);
++	    png_set_pHYs( png, pngi,
++			    POINTS_PER_M* bd->bdXResolution,
++			    POINTS_PER_M* bd->bdYResolution,
++			    PNG_RESOLUTION_METER);
  	    break;
  
  	case BMunPIXEL:
@@ -193,15 +223,11 @@ Fix for png-1.5.
  	default:
  	    LDEB(bd->bdUnit);
 -	    pngi->phys_unit_type= PNG_RESOLUTION_UNKNOWN;
-+	    png_set_pHYs(png, pngi, 0, 0, PNG_RESOLUTION_UNKNOWN);
++	    png_set_pHYs(png, pngi, 1, 1, PNG_RESOLUTION_UNKNOWN);
  	    break;
  	}
  
-+    {
-+    png_color_8 sig_bit;
-     switch( bd->bdColorEncoding )
- 	{
- 	int	i;
+@@ -329,41 +338,48 @@ static int bpPngiFromBitmap(	png_structp
  
  	case BMcoBLACKWHITE:
  	case BMcoWHITEBLACK:
@@ -212,7 +238,7 @@ Fix for png-1.5.
 -	    else{ pngi->color_type= PNG_COLOR_TYPE_GRAY;	}
 -	    pngi->sig_bit.gray= bd->bdBitsPerSample;
 +		{ color_type= PNG_COLOR_TYPE_GRAY_ALPHA;	}
-+	    else{ color_type= PNG_COLOR_TYPE_GRAY;	}
++	    else{ color_type= PNG_COLOR_TYPE_GRAY;		}
 +	    sig_bit.gray= bd->bdBitsPerSample;
  	    break;
  
@@ -226,7 +252,7 @@ Fix for png-1.5.
 -	    pngi->sig_bit.green= bd->bdBitsPerSample;
 -	    pngi->sig_bit.blue= bd->bdBitsPerSample;
 +		{ color_type= PNG_COLOR_TYPE_RGB_ALPHA;	}
-+	    else{ color_type= PNG_COLOR_TYPE_RGB;		}
++	    else{ color_type= PNG_COLOR_TYPE_RGB;	}
 +	    sig_bit.red= bd->bdBitsPerSample;
 +	    sig_bit.green= bd->bdBitsPerSample;
 +	    sig_bit.blue= bd->bdBitsPerSample;
@@ -235,9 +261,8 @@ Fix for png-1.5.
  	case BMcoRGB8PALETTE:
 -	    pngi->bit_depth= bd->bdBitsPerPixel;
 -	    pngi->color_type= PNG_COLOR_TYPE_PALETTE;
-+	    {
-+	    png_colorp palette;
-+	    int num_palette;
++	    bit_depth= bd->bdBitsPerPixel;
++	    color_type= PNG_COLOR_TYPE_PALETTE;
  
 -	    pngi->valid |= PNG_INFO_PLTE;
 -	    pngi->palette= (png_color *)malloc( 256* sizeof( png_color ) );
@@ -248,76 +273,151 @@ Fix for png-1.5.
 -	    pngi->sig_bit.green= bd->bdBitsPerSample;
 -	    pngi->sig_bit.blue= bd->bdBitsPerSample;
 -	    for ( i= 0; i < pngi->num_palette; i++ )
-+	    bit_depth= bd->bdBitsPerPixel;
-+	    color_type= PNG_COLOR_TYPE_PALETTE;
-+
-+	    palette= (png_color *)malloc( 256* sizeof( png_color ) );
-+	    if  ( ! palette )
-+		{ XDEB(palette); return -1;	}
-+	    num_palette= bd->bdColorCount;
-+	    sig_bit.red= bd->bdBitsPerSample;
-+	    sig_bit.green= bd->bdBitsPerSample;
-+	    sig_bit.blue= bd->bdBitsPerSample;
-+	    for ( i= 0; i < num_palette; i++ )
++	    if  ( bd->bdColorCount > PNG_MAX_PALETTE_LENGTH )
  		{
 -		pngi->palette[i].red= bd->bdRGB8Palette[i].rgb8Red;
 -		pngi->palette[i].green= bd->bdRGB8Palette[i].rgb8Green;
 -		pngi->palette[i].blue= bd->bdRGB8Palette[i].rgb8Blue;
-+		palette[i].red= bd->bdRGB8Palette[i].rgb8Red;
-+		palette[i].green= bd->bdRGB8Palette[i].rgb8Green;
-+		palette[i].blue= bd->bdRGB8Palette[i].rgb8Blue;
++		LLDEB(bd->bdColorCount,PNG_MAX_PALETTE_LENGTH);
++		return -1;
  		}
-+	    png_set_PLTE( png, pngi, palette, num_palette );
-+	    }
++
++	    *pPalette= (png_color *)malloc( PNG_MAX_PALETTE_LENGTH*
++						    sizeof( png_color ) );
++	    if  ( ! *pPalette )
++		{ XDEB(*pPalette); return -1;	}
++	    sig_bit.red= bd->bdBitsPerSample;
++	    sig_bit.green= bd->bdBitsPerSample;
++	    sig_bit.blue= bd->bdBitsPerSample;
++	    for ( i= 0; i < bd->bdColorCount; i++ )
++		{
++		(*pPalette)[i].red= bd->bdRGB8Palette[i].rgb8Red;
++		(*pPalette)[i].green= bd->bdRGB8Palette[i].rgb8Green;
++		(*pPalette)[i].blue= bd->bdRGB8Palette[i].rgb8Blue;
++		}
++
++	    png_set_PLTE( png, pngi, (*pPalette), bd->bdColorCount );
  	    break;
  
  	default:
- 	    LDEB(bd->bdColorEncoding);
+@@ -371,7 +387,13 @@ static int bpPngiFromBitmap(	png_structp
  	    return -1;
  	}
-+    png_set_sBIT( png, pngi, &sig_bit);
-+    }
-+    png_set_IHDR( png, pngi, bd->bdPixelsWide, bd->bdPixelsHigh, bit_depth,
-+        color_type, 0, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
  
 -    pngi->interlace_type= 0;
++    png_set_sBIT( png, pngi, &sig_bit );
++    png_set_IHDR( png, pngi,
++			bd->bdPixelsWide, bd->bdPixelsHigh,
++			bit_depth, color_type,
++			PNG_INTERLACE_NONE,
++			PNG_COMPRESSION_TYPE_BASE,
++			PNG_FILTER_TYPE_BASE );
  
      return 0;
      }
-@@ -395,7 +399,7 @@ static void bmPngWriteContents(	png_stru
+@@ -395,8 +417,8 @@ static void bmPngWriteContents(	png_stru
  	    }
  	}
  
 -    if  ( pngi->color_type == PNG_COLOR_TYPE_RGB	&&
+-	  bd->bdBitsPerSample == 16			)
 +    if  ( png_get_color_type( png, pngi ) == PNG_COLOR_TYPE_RGB	&&
- 	  bd->bdBitsPerSample == 16			)
++	  bd->bdBitsPerSample == 16				)
  	{
  	const unsigned short	one= 1;
-@@ -431,7 +435,7 @@ static void bmPngWriteContents(	png_stru
+ 	const unsigned char *	testEndian= (const unsigned char *)&one;
+@@ -431,9 +453,9 @@ static void bmPngWriteContents(	png_stru
  	    from= scratch;
  	    }
  
 -	if  ( pngi->color_type == PNG_COLOR_TYPE_RGB	&&
+-	      bd->bdBitsPerSample == 16			&&
+-	      scratch					)
 +	if  ( png_get_color_type( png, pngi ) == PNG_COLOR_TYPE_RGB	&&
- 	      bd->bdBitsPerSample == 16			&&
- 	      scratch					)
++	      bd->bdBitsPerSample == 16					&&
++	      scratch							)
  	    {
-@@ -453,9 +457,15 @@ static void bmPngWriteContents(	png_stru
+ 	    int			col;
+ 	    const BmUint16 *	fr= (const BmUint16 *)from;
+@@ -453,10 +475,6 @@ static void bmPngWriteContents(	png_stru
  
      png_write_end( png, pngi );
  
 -    if  ( bd->bdColorEncoding == BMcoRGB8PALETTE	&&
 -	  pngi->palette					)
 -	{ free( pngi->palette );	}
-+    if  ( bd->bdColorEncoding == BMcoRGB8PALETTE )
-+	{
-+	  png_colorp palette;
-+	  int num_palette;
-+
-+	  png_get_PLTE( png, pngi, &palette, &num_palette );
-+	  if (palette) 
-+	    { free( palette );	}
-+        }
- 
+-
      if  ( scratch )
  	{ free( scratch );	}
+ 
+@@ -510,50 +528,43 @@ int bmPngWritePng(		const BitmapDescript
+ 				const unsigned char *		buffer,
+ 				SimpleOutputStream *		sos )
+     {
++    int			rval= 0;
+     png_structp		pngp= (png_structp)0;
+     png_infop		pngip= (png_infop)0;
++    png_colorp		palette= (png_colorp)0;
+ 
+     pngp = png_create_write_struct( PNG_LIBPNG_VER_STRING, (void *)0,
+ 				    (png_error_ptr)0, (png_error_ptr)0 );
+     if  ( ! pngp )
+-	{ LDEB(1); return -1;	}
++	{ XDEB(pngp); rval= -1; goto ready;	}
+ 
+     pngip = png_create_info_struct( pngp );
+     if  ( ! pngip )
+-	{
+-	LDEB(1);
+-	png_destroy_write_struct( &pngp, (png_infop *)0 );
+-	return -1;
+-	}
++	{ XDEB(pngip); rval= -1; goto ready;	}
++
++    /*
++    As the info struct is built by libpng this is not needed:
++    (The call will disappear from libpng in version 1.4)
++    png_info_init( pngi ); 
++    */
+ 
+     if  ( setjmp( png_jmpbuf( pngp ) ) )
+-	{
+-	LDEB(1);
+-	png_destroy_write_struct( &pngp, &pngip );
+-	/*  Crashes:
+-	if  ( bd->bdColorEncoding == BMcoRGB8PALETTE	&&
+-	      pngip->palette				)
+-	    { free( pngip->palette );	}
+-	*/
+-	return -1;
+-	}
++	{ LDEB(1); rval= -1; goto ready;	}
+ 
+     png_init_io( pngp, (FILE *)0 );
+     png_set_write_fn( pngp, (void *)sos, bmPngWriteBytes, bmPngFlushBytes );
+ 
+-    if  ( bpPngiFromBitmap( pngp, pngip, bd ) )
+-	{
+-	LDEB(bd->bdColorEncoding);
+-	png_destroy_write_struct( &pngp, &pngip );
+-	return -1;
+-	}
+-
+-    /*
+-    png_write_info( pngp, pngip );
+-    */
++    if  ( bpPngiFromBitmap( pngp, pngip, &palette, bd ) )
++	{ LDEB(bd->bdColorEncoding); rval= -1; goto ready; }
+ 
+     bmPngWriteContents( pngp, pngip, buffer, bd );
+ 
++  ready:
++
++    if  ( palette )
++	{ free( palette );	}
++
+     png_destroy_write_struct( &pngp, &pngip );
+-    return 0;
++
++    return rval;
+     }
