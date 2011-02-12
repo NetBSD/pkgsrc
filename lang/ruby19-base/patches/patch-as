@@ -1,6 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+$NetBSD: patch-as,v 1.1.1.1.4.1 2011/02/12 11:33:40 spz Exp $
 
-Handle 64bit size of time_t.
+* Handle 64bit size of time_t.
+* On FreeBSD and DragonFly PTHREAD_STACK_MIN is too small. Taken from
+  FreeBSD ports
 
 --- thread_pthread.c.orig	2010-07-22 13:13:57.000000000 +0000
 +++ thread_pthread.c
@@ -37,3 +39,12 @@ Handle 64bit size of time_t.
  		r = pthread_cond_timedwait(&th->native_thread_data.sleep_cond,
  					   &th->interrupt_lock, &ts);
  		if (r && r != ETIMEDOUT) rb_bug_errno("pthread_cond_timedwait", r);
+@@ -822,7 +828,7 @@
+ 	int err;
+ 
+ 	pthread_attr_init(&attr);
+-#ifdef PTHREAD_STACK_MIN
++#if defined(PTHREAD_STACK_MIN) && !defined(__FreeBSD__) && !defined(__DragonFly__)
+ 	pthread_attr_setstacksize(&attr,
+ 				  PTHREAD_STACK_MIN + (THREAD_DEBUG ? BUFSIZ : 0));
+ #endif
