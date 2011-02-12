@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2011/02/12 10:00:08 tnn Exp $
+
+--- src/PDFDocument.cxx.orig	2009-02-28 21:00:35.000000000 +0000
++++ src/PDFDocument.cxx
+@@ -686,7 +686,7 @@ PDFDocument::setTextSelection (DocumentR
+     repairEmpty(textRect);
+ 
+ #if defined (HAVE_POPPLER_0_6_0)
+-    gchar *text = poppler_page_get_text(page, POPPLER_SELECTION_GLYPH,
++    gchar *text = poppler_page_get_selected_text(page, POPPLER_SELECTION_GLYPH,
+             &textRect);
+ #else // !HAVE_POPPLER_0_6_0
+     gchar *text = poppler_page_get_text(page, &textRect);
