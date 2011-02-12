@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2010/12/23 00:10:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2011/02/12 15:08:01 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -154,8 +154,8 @@ include/gnucash/gnc-tree-view-commodity.h
 include/gnucash/gnc-tree-view-price.h
 include/gnucash/gnc-tree-view-sx-list.h
 include/gnucash/gnc-tree-view.h
-include/gnucash/gnc-ui-common.h
 include/gnucash/gnc-ui-util.h
+include/gnucash/gnc-ui.h
 include/gnucash/gnc-window.h
 include/gnucash/gncAddress.h
 include/gnucash/gncAddressP.h
@@ -232,6 +232,7 @@ include/gnucash/window-report.h
 info/gnucash-design.info
 lib/gnucash/libgncmod-app-utils.la
 lib/gnucash/libgncmod-backend-xml.la
+lib/gnucash/libgncmod-bi_import.la
 lib/gnucash/libgncmod-business-core.la
 lib/gnucash/libgncmod-business-gnome.la
 lib/gnucash/libgncmod-business-utils.la
@@ -682,6 +683,7 @@ share/gnucash/doc/projects.html
 share/gnucash/glade/account.glade
 share/gnucash/glade/acctperiod.glade
 share/gnucash/glade/autoclear.glade
+share/gnucash/glade/bi_import.glade
 share/gnucash/glade/billterms.glade
 share/gnucash/glade/budget.glade
 share/gnucash/glade/businessprefs.glade
@@ -748,6 +750,7 @@ share/gnucash/guile-modules/gnucash/report/aging.scm
 share/gnucash/guile-modules/gnucash/report/balsheet-eg.css
 share/gnucash/guile-modules/gnucash/report/balsheet-eg.eguile.scm
 share/gnucash/guile-modules/gnucash/report/business-reports.scm
+share/gnucash/guile-modules/gnucash/report/customer-summary.scm
 share/gnucash/guile-modules/gnucash/report/easy-invoice.scm
 share/gnucash/guile-modules/gnucash/report/eguile-gnc.scm
 share/gnucash/guile-modules/gnucash/report/eguile-html-utilities.scm
@@ -786,6 +789,7 @@ share/gnucash/guile-modules/gnucash/report/standard-reports/net-barchart.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/portfolio.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/price-scatter.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/register.scm
+share/gnucash/guile-modules/gnucash/report/standard-reports/sx-summary.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/transaction.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/trial-balance.scm
 share/gnucash/guile-modules/gnucash/report/stylesheet-easy.scm
@@ -814,8 +818,12 @@ share/gnucash/pixmaps/gnc-account-open-16.png
 share/gnucash/pixmaps/gnc-account-open.png
 share/gnucash/pixmaps/gnc-account.png
 share/gnucash/pixmaps/gnc-invoice-16.png
+share/gnucash/pixmaps/gnc-invoice-duplicate-16.png
+share/gnucash/pixmaps/gnc-invoice-duplicate.png
 share/gnucash/pixmaps/gnc-invoice-edit-16.png
 share/gnucash/pixmaps/gnc-invoice-edit.png
+share/gnucash/pixmaps/gnc-invoice-new-16.png
+share/gnucash/pixmaps/gnc-invoice-new.png
 share/gnucash/pixmaps/gnc-invoice-pay-16.png
 share/gnucash/pixmaps/gnc-invoice-pay.png
 share/gnucash/pixmaps/gnc-invoice-post-16.png
@@ -900,6 +908,7 @@ share/gnucash/tip_of_the_day.list
 share/gnucash/ui/gnc-main-window-ui.xml
 share/gnucash/ui/gnc-plugin-account-tree-ui.xml
 share/gnucash/ui/gnc-plugin-basic-commands-ui.xml
+share/gnucash/ui/gnc-plugin-bi_import-ui.xml
 share/gnucash/ui/gnc-plugin-budget-ui.xml
 share/gnucash/ui/gnc-plugin-business-ui.xml
 share/gnucash/ui/gnc-plugin-csv-ui.xml
