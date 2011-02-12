@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.343 2011/02/12 11:09:30 shattered Exp $
+$NetBSD: CHANGES-2011,v 1.344 2011/02/12 11:41:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/navi2ch to 1.8.3 [ryoon 2011-02-12]
 	Updated audio/kid3 to 1.6 [shattered 2011-02-12]
 	Updated sysutils/dmidecode to 2.11 [shattered 2011-02-12]
+	Updated editors/ted to 2.21nb2 [wiz 2011-02-12]
