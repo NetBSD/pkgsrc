@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2011/02/11 13:50:06 obache Exp $
+# $NetBSD: Makefile,v 1.582 2011/02/12 13:40:53 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -35,6 +35,7 @@ SUBDIR+=	blender-doc
 SUBDIR+=	blinkenthemes
 SUBDIR+=	blinkentools
 SUBDIR+=	cairo
+SUBDIR+=	cairo-gobject
 SUBDIR+=	cairomm
 SUBDIR+=	cal3d
 SUBDIR+=	cal3d-examples
