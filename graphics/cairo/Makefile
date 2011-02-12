@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2011/01/13 13:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2011/02/12 12:08:06 obache Exp $
 
 DISTNAME=	cairo-1.10.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -43,6 +43,7 @@ TEST_TARGET=			check
 CONFIGURE_ENV+=		ac_cv_type___uint128_t=no
 .endif
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.9
