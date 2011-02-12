@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2009/04/25 11:41:59 sno Exp $
+$NetBSD: distinfo,v 1.5 2011/02/12 01:58:54 obache Exp $
 
 SHA1 (cvs-1.11.23.tar.bz2) = a51c531eebaff2dfdcc0fb6d94c8c6e509e06d7d
 RMD160 (cvs-1.11.23.tar.bz2) = ff8c5c6777f1c12ee9134a3cf59e00c2ebaad279
@@ -26,3 +26,4 @@ SHA1 (patch-av) = 84da8f0a398ddf36412becb2aebd7008e3f80c44
 SHA1 (patch-ay) = 6ba3315df137028fc5b2bebfef79aa3d540994c4
 SHA1 (patch-az) = a4b14163d50c43f130715d4d8540bb4316e4290a
 SHA1 (patch-ba) = 25f9a2f7e35db0d2bfefae5ebf7be43d21a8a9ee
+SHA1 (patch-lib_xsize.h) = d16bd33322fb7e3750f425d5ea58fbc3413b910b
