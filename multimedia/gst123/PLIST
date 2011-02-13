@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/13 11:02:42 ryoon Exp $
+bin/gst123
+man/man1/gst123.1
