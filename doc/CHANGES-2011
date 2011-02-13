@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.355 2011/02/13 13:01:17 obache Exp $
+$NetBSD: CHANGES-2011,v 1.356 2011/02/13 16:06:07 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/emacs-wiki to 2.72 [ryoon 2011-02-13]
 	Added multimedia/gst123 version 0.1.4 [ryoon 2011-02-13]
 	Updated devel/cutter to 1.1.7 [obache 2011-02-13]
+	Updated pkgtools/pkgin to 0.4.0 [imil 2011-02-13]
