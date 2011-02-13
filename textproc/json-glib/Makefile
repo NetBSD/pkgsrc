@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2011/01/12 09:02:57 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/13 06:34:31 obache Exp $
 #
 
 DISTNAME=	json-glib-0.12.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/0.12/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/JsonGlib
 COMMENT=	JSON parser for GLib-based libraries and applications
 LICENSE=	gnu-lgpl-v2.1
