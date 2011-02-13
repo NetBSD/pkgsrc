@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.353 2011/02/13 10:02:36 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.354 2011/02/13 11:09:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/skk-jisyo-cdb to 201102 [ryoon 2011-02-12]
 	Updated net/tinc to 1.0.13nb1 [rumko 2011-02-13]
 	Updated misc/emacs-wiki to 2.72 [ryoon 2011-02-13]
+	Added multimedia/gst123 version 0.1.4 [ryoon 2011-02-13]
