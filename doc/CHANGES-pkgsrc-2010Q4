@@ -56,3 +56,5 @@ Pullup ticket #3344 - requested by taca
 lang/ruby: portability fix
 Pullup ticket #3345 - requested by taca
 lang/ruby19-base: portability fix
+Pullup ticket #3352 - requested by tron
+databases/phpmyadmin: security update
