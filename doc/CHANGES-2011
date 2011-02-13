@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.351 2011/02/13 00:21:12 rumko Exp $
+$NetBSD: CHANGES-2011,v 1.352 2011/02/13 02:58:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -573,7 +573,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/kid3 to 1.6 [shattered 2011-02-12]
 	Updated sysutils/dmidecode to 2.11 [shattered 2011-02-12]
 	Updated editors/ted to 2.21nb2 [wiz 2011-02-12]
-	Updated graphics/cairo to 1.10.2nb2 [obache 2011-02-12]
 	Updated mail/rss2email to 2.70nb1 [schmonz 2011-02-12]
 	Updated finance/gnucash to 2.4.2 [wiz 2011-02-12]
 	Updated net/poptop to 1.3.4 [asau 2011-02-12]
