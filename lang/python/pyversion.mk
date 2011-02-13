@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.81 2010/07/24 12:32:22 gdt Exp $
+# $NetBSD: pyversion.mk,v 1.82 2011/02/13 08:07:39 obache Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -167,14 +167,11 @@ PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 	print distutils.sysconfig.get_python_lib(0, 0, \"\")" || ${ECHO} ""
 
 PRINT_PLIST_AWK+=	/^${PYINC:S|/|\\/|g}/ \
-			{ gsub(/${PYINC:S|/|\\/|g}/, "$${PYINC}"); \
-				print; next; }
+			{ gsub(/${PYINC:S|/|\\/|g}/, "$${PYINC}") }
 PRINT_PLIST_AWK+=	/^${PYSITELIB:S|/|\\/|g}/ \
-			{ gsub(/${PYSITELIB:S|/|\\/|g}/, "$${PYSITELIB}"); \
-				print; next; }
+			{ gsub(/${PYSITELIB:S|/|\\/|g}/, "$${PYSITELIB}") }
 PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
-			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}"); \
-				print; next; }
+			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}") }
 .endif
 
 ALL_ENV+=	PYTHON=${PYTHONBIN}
