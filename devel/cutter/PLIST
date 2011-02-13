@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/02/08 04:53:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/02/13 12:59:51 obache Exp $
 bin/cut-diff
 bin/cutter
 include/cutter/cppcutter.h
@@ -90,25 +90,25 @@ include/cutter/gcutter/gcut-string.h
 include/cutter/gcutter/gcut-test-utils.h
 include/cutter/gcutter/gcut-types.h
 include/cutter/gcutter/gcut-value-equal.h
-include/cutter/gdkcutter-pixbuf.h
-include/cutter/gdkcutter-pixbuf/gdkcut-pixbuf-assertions-helper.h
-include/cutter/gdkcutter-pixbuf/gdkcut-pixbuf-assertions.h
-include/cutter/gdkcutter-pixbuf/gdkcut-pixbuf.h
-include/cutter/soupcutter.h
-include/cutter/soupcutter/soupcut-assertions-helper.h
-include/cutter/soupcutter/soupcut-assertions.h
-include/cutter/soupcutter/soupcut-client.h
-include/cutter/soupcutter/soupcut-server.h
-${PLIST.gtk}lib/cutter/module/factory/report/pdf_factory.la
+${PLIST.gtk}include/cutter/gdkcutter-pixbuf.h
+${PLIST.gtk}include/cutter/gdkcutter-pixbuf/gdkcut-pixbuf-assertions-helper.h
+${PLIST.gtk}include/cutter/gdkcutter-pixbuf/gdkcut-pixbuf-assertions.h
+${PLIST.gtk}include/cutter/gdkcutter-pixbuf/gdkcut-pixbuf.h
+${PLIST.soup}include/cutter/soupcutter.h
+${PLIST.soup}include/cutter/soupcutter/soupcut-assertions-helper.h
+${PLIST.soup}include/cutter/soupcutter/soupcut-assertions.h
+${PLIST.soup}include/cutter/soupcutter/soupcut-client.h
+${PLIST.soup}include/cutter/soupcutter/soupcut-server.h
+${PLIST.pdf}lib/cutter/module/factory/report/pdf_factory.la
 lib/cutter/module/factory/report/xml_factory.la
 lib/cutter/module/factory/stream/xml_factory.la
 lib/cutter/module/factory/ui/console_factory.la
 ${PLIST.gtk}lib/cutter/module/factory/ui/gtk_factory.la
-${PLIST.gtk}lib/cutter/module/report/pdf.la
+${PLIST.pdf}lib/cutter/module/report/pdf.la
+${PLIST.gtk}lib/cutter/module/ui/gtk.la
 lib/cutter/module/report/xml.la
 lib/cutter/module/stream/xml.la
 lib/cutter/module/ui/console.la
-${PLIST.gtk}lib/cutter/module/ui/gtk.la
 ${PLIST.gst}lib/gstreamer-0.10/libgstcuttertest.la
 lib/libcppcutter.la
 lib/libcutter.la
@@ -209,6 +209,7 @@ share/gtk-doc/html/cutter/index-1-1-3.html
 share/gtk-doc/html/cutter/index-1-1-4.html
 share/gtk-doc/html/cutter/index-1-1-5.html
 share/gtk-doc/html/cutter/index-1-1-6.html
+share/gtk-doc/html/cutter/index-1-1-7.html
 share/gtk-doc/html/cutter/index-all.html
 share/gtk-doc/html/cutter/index-deprecated.html
 share/gtk-doc/html/cutter/index.html
@@ -246,7 +247,7 @@ share/gtk-doc/html/cutter/ja/api-index-1.1.2.xml
 share/gtk-doc/html/cutter/ja/api-index-1.1.3.xml
 share/gtk-doc/html/cutter/ja/api-index-1.1.4.xml
 share/gtk-doc/html/cutter/ja/api-index-1.1.5.xml
-share/gtk-doc/html/cutter/ja/api-index-${PKGVERSION}.xml
+share/gtk-doc/html/cutter/ja/api-index-1.1.6.xml
 share/gtk-doc/html/cutter/ja/api-index-deprecated.xml
 share/gtk-doc/html/cutter/ja/api-index-full.xml
 share/gtk-doc/html/cutter/ja/colorized-diff.png
@@ -363,6 +364,7 @@ share/gtk-doc/html/cutter/ja/index-1-1-3.html
 share/gtk-doc/html/cutter/ja/index-1-1-4.html
 share/gtk-doc/html/cutter/ja/index-1-1-5.html
 share/gtk-doc/html/cutter/ja/index-1-1-6.html
+share/gtk-doc/html/cutter/ja/index-1-1-7.html
 share/gtk-doc/html/cutter/ja/index-all.html
 share/gtk-doc/html/cutter/ja/index-deprecated.html
 share/gtk-doc/html/cutter/ja/index.html
