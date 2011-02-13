@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/01/13 13:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2011/02/13 03:56:09 obache Exp $
 #
 
 DISTNAME=	Clutter-1.002
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Clutter/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
 COMMENT=	Perl bindings to the Clutter OpenGL canvas
 LICENSE=	gnu-lgpl-v2.1
