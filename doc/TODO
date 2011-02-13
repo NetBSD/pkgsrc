@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10107 2011/02/13 03:56:10 obache Exp $
+$NetBSD: TODO,v 1.10108 2011/02/13 10:03:35 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elm-me-2.5plalpha24
 	o elscreen-1.4.6 [pkg/43967]
 	o emacs-muse-3.20
-	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o empathy-2.32.2
 	o enca-1.13
