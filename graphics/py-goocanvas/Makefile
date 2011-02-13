@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/01/13 13:38:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2011/02/13 06:34:31 obache Exp $
 #
 
 DISTNAME=	pygoocanvas-0.14.1
@@ -7,7 +7,7 @@ PKGREVISION=	6
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygoocanvas/0.14/}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/PyGoocanvas
 COMMENT=	Python bindings for GooCanvas
 LICENSE=	gnu-lgpl-v2
