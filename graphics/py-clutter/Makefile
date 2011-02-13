@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/01/13 13:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/02/13 03:56:10 obache Exp $
 #
 
 DISTNAME=	pyclutter-1.0.2
@@ -7,7 +7,7 @@ PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://source.clutter-project.org/sources/pyclutter/1.0/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
 COMMENT=	Python modules for Clutter toolkit
 LICENSE=	gnu-lgpl-v2.1
