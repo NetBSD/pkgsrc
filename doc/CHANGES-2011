@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.352 2011/02/13 02:58:17 obache Exp $
+$NetBSD: CHANGES-2011,v 1.353 2011/02/13 10:02:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -579,3 +579,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/jabberd2 to 2.2.12 [adam 2011-02-12]
 	Updated inputmethod/skk-jisyo-cdb to 201102 [ryoon 2011-02-12]
 	Updated net/tinc to 1.0.13nb1 [rumko 2011-02-13]
+	Updated misc/emacs-wiki to 2.72 [ryoon 2011-02-13]
