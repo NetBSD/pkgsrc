@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.354 2011/02/13 11:09:39 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.355 2011/02/13 13:01:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -581,3 +581,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/tinc to 1.0.13nb1 [rumko 2011-02-13]
 	Updated misc/emacs-wiki to 2.72 [ryoon 2011-02-13]
 	Added multimedia/gst123 version 0.1.4 [ryoon 2011-02-13]
+	Updated devel/cutter to 1.1.7 [obache 2011-02-13]
