@@ -1,4 +1,4 @@
-# $NetBSD: distutils.mk,v 1.1 2010/07/24 12:32:22 gdt Exp $
+# $NetBSD: distutils.mk,v 1.2 2011/02/13 08:09:43 obache Exp $
 #
 # Common logic for python distributions that use distutils.
 #
@@ -36,9 +36,8 @@ PY_NO_EGG?=	yes
 # Egg files have the version encoded, so generalize in PLIST, and provide
 # our conditional.
 PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-# Somehow, this rule seems to run after PYSITELIB is de-expanded and
-# therefore not work.
-PRINT_PLIST_AWK+=	{ gsub("${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
+# PYSITELIB is already de-expanded
+PRINT_PLIST_AWK+=	{ gsub("[$$]{PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
 				"$${PLIST.eggfile}$${PYSITELIB}/$${EGG_FILE}") }
 
 .include "../../lang/python/extension.mk"
