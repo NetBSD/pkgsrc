@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.357 2011/02/13 16:11:28 tron Exp $
+$NetBSD: CHANGES-2011,v 1.358 2011/02/13 16:21:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -584,3 +584,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cutter to 1.1.7 [obache 2011-02-13]
 	Updated pkgtools/pkgin to 0.4.0 [imil 2011-02-13]
 	Updated databases/phpmyadmin to 2.11.11.3 [tron 2011-02-13]
+	Updated databases/mysql51-client to 5.1.55 [taca 2011-02-13]
+	Updated databases/mysql51-server to 5.1.55 [taca 2011-02-13]
