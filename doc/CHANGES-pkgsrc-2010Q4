@@ -58,3 +58,21 @@ Pullup ticket #3345 - requested by taca
 lang/ruby19-base: portability fix
 Pullup ticket #3352 - requested by tron
 databases/phpmyadmin: security update
+Pullup ticket #3353 - requested by taca
+databases/ruby-activerecord: dependency update
+devel/ruby-activesupport: dependency update
+mail/ruby-actionmailer: dependency update
+www/ruby-actionpack: security update
+www/ruby-activeresource: dependency update
+www/ruby-rails: dependency update
+Pullup ticket #3354 - requested by taca
+databases/ruby-activerecord3: dependency update
+databases/ruby-arel: dependency update
+devel/ruby-activemodel: dependency update
+devel/ruby-activesupport3: dependency update
+devel/ruby-railties: security update
+mail/ruby-actionmailer3: dependency update
+www/ruby-actionpack3: dependency update
+www/ruby-activeresource3: dependency update
+www/ruby-rack-test: dependency update
+www/ruby-rails3: dependency update
