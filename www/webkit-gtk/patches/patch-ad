@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.6 2010/04/12 21:12:12 drochner Exp $
+$NetBSD: patch-ad,v 1.7 2011/02/14 20:05:54 wiz Exp $
+
+https://bugs.webkit.org/show_bug.cgi?id=54407
 
 --- JavaScriptCore/wtf/Platform.h.orig	2010-04-12 13:25:16.000000000 +0000
 +++ JavaScriptCore/wtf/Platform.h
