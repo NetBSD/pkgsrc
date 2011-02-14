@@ -1,0 +1,16 @@
+$NetBSD: patch-au,v 1.1 2011/02/14 19:05:52 drochner Exp $
+
+fix build with libmatroska-1.1
+
+--- modules/demux/mkv/mkv.hpp.orig	2011-01-30 14:45:14.000000000 +0000
++++ modules/demux/mkv/mkv.hpp
+@@ -92,7 +92,8 @@
+ #include "matroska/KaxSegment.h"
+ #include "matroska/KaxTag.h"
+ #include "matroska/KaxTags.h"
+-#include "matroska/KaxTagMulti.h"
++//missing in libmatroska-1.1
++//#include "matroska/KaxTagMulti.h"
+ #include "matroska/KaxTracks.h"
+ #include "matroska/KaxTrackAudio.h"
+ #include "matroska/KaxTrackVideo.h"
