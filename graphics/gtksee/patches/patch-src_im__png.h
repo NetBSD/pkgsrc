@@ -1,6 +1,7 @@
-$NetBSD: patch-src_im__png.h,v 1.1 2011/02/07 01:31:57 wiz Exp $
+$NetBSD: patch-src_im__png.h,v 1.2 2011/02/14 19:16:14 wiz Exp $
 
 Fix build with png-1.5.
+http://developer.berlios.de/patch/?func=detailpatch&patch_id=3131&group_id=735
 
 --- src/im_png.h.orig	2004-02-14 15:16:33.000000000 +0000
 +++ src/im_png.h
