@@ -1,0 +1,22 @@
+$NetBSD: patch-av,v 1.1 2011/02/14 19:05:52 drochner Exp $
+
+fix build with libmatroska-1.1
+
+--- modules/demux/mkv/matroska_segment.cpp.orig	2010-09-27 14:38:23.000000000 +0000
++++ modules/demux/mkv/matroska_segment.cpp
+@@ -220,6 +220,7 @@ void matroska_segment_c::LoadTags( KaxTa
+                     }
+                     ep->Up();
+                 }
++#if 0 //not valid anymore
+                 else if( MKV_IS_ID( el, KaxTagGeneral ) )
+                 {
+                     msg_Dbg( &sys.demuxer, "|   + General" );
+@@ -288,6 +289,7 @@ void matroska_segment_c::LoadTags( KaxTa
+                 {
+                     msg_Dbg( &sys.demuxer, "|   + Multi Title" );
+                 }
++#endif
+                 else
+                 {
+                     msg_Dbg( &sys.demuxer, "|   + LoadTag Unknown (%s)", typeid( *el ).name() );
