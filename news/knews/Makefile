@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.57 2011/01/13 13:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2011/02/14 19:32:12 wiz Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
 PKGREVISION=	16
 CATEGORIES=	news x11
-MASTER_SITES=	http://www.matematik.su.se/~kjj/
+MASTER_SITES=	# http://www.matematik.su.se/~kjj/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.matematik.su.se/~kjj/
+#HOMEPAGE=	http://www.matematik.su.se/~kjj/
 COMMENT=	X11 newsreader with support for threading and MIME
 
 PKG_DESTDIR_SUPPORT=	user-destdir
