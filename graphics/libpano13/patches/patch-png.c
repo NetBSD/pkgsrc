@@ -1,6 +1,7 @@
-$NetBSD: patch-png.c,v 1.1 2011/02/07 01:03:35 wiz Exp $
+$NetBSD: patch-png.c,v 1.2 2011/02/14 18:29:00 wiz Exp $
 
 Fix build with png-1.5.
+https://sourceforge.net/tracker/?func=detail&aid=3181144&group_id=96188&atid=613955
 
 --- png.c.orig	2008-01-02 14:46:28.000000000 +0000
 +++ png.c
