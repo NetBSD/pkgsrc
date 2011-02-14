@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.8 2011/01/23 23:58:01 dholland Exp $
+$NetBSD: patch-af,v 1.9 2011/02/14 20:37:40 wiz Exp $
 
 Config fixups.
   - don't declare errno and sys_errlist
@@ -32,7 +32,7 @@ Config fixups.
  #  define ERRSTR(x) strerror(x, vaxc$errno)
  #else
 -#  if defined(__BEOS__) || defined(__linux__) /* or all modern/glibc systems? */
-+#  if defined(__BEOS__) || defined(__linux__) || defined(__INTERIX) /* or all modern/glibc systems? */
++#  if defined(__BEOS__) || defined(__linux__) || defined(__INTERIX) || defined(__sun) /* or all modern/glibc systems? */
  #    define ERRSTR(x) strerror(x)
  #  else
  #    define ERRSTR(x) sys_errlist[x]
