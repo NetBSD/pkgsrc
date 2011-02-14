@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2011/01/19 10:23:54 tron Exp $
+$NetBSD: patch-aa,v 1.6 2011/02/14 19:37:27 wiz Exp $
 
 Fix build with png-1.5.
+http://xplanet.sourceforge.net/FUDforum2/index.php?t=msg&th=572&start=0&S=f7bd28527eea8e9fac72e18b459d4172
 
 --- src/libimage/png.c.orig	2006-03-25 22:50:51.000000000 +0000
 +++ src/libimage/png.c	2011-01-19 10:20:09.000000000 +0000
