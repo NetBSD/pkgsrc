@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.4 2010/04/09 08:09:11 tnn Exp $
+$NetBSD: patch-aa,v 1.5 2011/02/14 21:34:05 drochner Exp $
 
 --- configure.ac.orig	2009-12-14 21:35:07.000000000 +0000
 +++ configure.ac
-@@ -75,10 +75,10 @@ case $host_os in
+@@ -74,11 +74,11 @@ case $host_os in
+ 		;;
  	*netbsd*)
  		case $host in
- 		*i386*)
+-		*i386*)
 -			PCIACCESS_LIBS="-li386"
++		*i[[3-9]]86*)
 +			PCIACCESS_LIBS="-li386 $PCIACCESS_LIBS"
  			;;
  		*x86_64*|*amd64*)
