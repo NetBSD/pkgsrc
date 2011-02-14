@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/10/15 11:40:57 taca Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2011/02/14 19:08:02 spz Exp $
 
-DISTNAME=	activesupport-3.0.1
+DISTNAME=	activesupport-3.0.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

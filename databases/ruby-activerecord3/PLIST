@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 04:22:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.4.1 2011/02/14 19:08:01 spz Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README.rdoc
@@ -82,6 +82,7 @@ ${GEM_LIBDIR}/lib/active_record/validations/associated.rb
 ${GEM_LIBDIR}/lib/active_record/validations/uniqueness.rb
 ${GEM_LIBDIR}/lib/active_record/version.rb
 ${GEM_LIBDIR}/lib/rails/generators/active_record.rb
+${GEM_LIBDIR}/lib/rails/generators/active_record/migration.rb
 ${GEM_LIBDIR}/lib/rails/generators/active_record/migration/migration_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/active_record/migration/templates/migration.rb
 ${GEM_LIBDIR}/lib/rails/generators/active_record/model/model_generator.rb
