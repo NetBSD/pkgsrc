@@ -1,15 +1,16 @@
-$NetBSD: patch-au,v 1.2 2011/02/01 11:45:05 drochner Exp $
+$NetBSD: patch-au,v 1.3 2011/02/14 19:03:19 drochner Exp $
 
-CVE-2011-0531
+fix build with libmatroska-1.1
 
---- modules/demux/mkv/mkv.hpp.orig	2010-05-21 08:48:24.000000000 +0000
+--- modules/demux/mkv/mkv.hpp.orig	2011-01-30 14:45:14.000000000 +0000
 +++ modules/demux/mkv/mkv.hpp
-@@ -119,7 +119,7 @@ extern "C" {
- 
- #define MKVD_TIMECODESCALE 1000000
- 
--#define MKV_IS_ID( el, C ) ( EbmlId( (*el) ) == C::ClassInfos.GlobalId )
-+#define MKV_IS_ID( el, C ) ( el != NULL && typeid( *el ) == typeid( C ) )
- 
- 
- using namespace LIBMATROSKA_NAMESPACE;
+@@ -92,7 +92,8 @@
+ #include "matroska/KaxSegment.h"
+ #include "matroska/KaxTag.h"
+ #include "matroska/KaxTags.h"
+-#include "matroska/KaxTagMulti.h"
++//missing in libmatroska-1.1
++//#include "matroska/KaxTagMulti.h"
+ #include "matroska/KaxTracks.h"
+ #include "matroska/KaxTrackAudio.h"
+ #include "matroska/KaxTrackVideo.h"
