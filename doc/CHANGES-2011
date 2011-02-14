@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.360 2011/02/13 17:10:39 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.361 2011/02/14 14:46:28 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -588,3 +588,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql51-server to 5.1.55 [taca 2011-02-13]
 	Updated www/contao29-translations to 20110213 [taca 2011-02-13]
 	Updated games/gbrainy to 1.62 [wiz 2011-02-13]
+	Added www/aws version 2.10.0.1 [drochner 2011-02-13]
+	Updated www/webkit-gtk to 1.2.7 [drochner 2011-02-13]
+	Updated lang/gnat-aux to 20110203 [drochner 2011-02-13]
+	Added devel/gps version 5.0.0 [drochner 2011-02-13]
