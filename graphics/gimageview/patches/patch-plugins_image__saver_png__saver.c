@@ -1,6 +1,7 @@
-$NetBSD: patch-plugins_image__saver_png__saver.c,v 1.1 2011/02/01 08:50:07 wiz Exp $
+$NetBSD: patch-plugins_image__saver_png__saver.c,v 1.2 2011/02/14 18:12:24 wiz Exp $
 
 Fix build with png-1.5.
+https://sourceforge.net/tracker/?func=detail&aid=3181113&group_id=39083&atid=424297
 
 --- plugins/image_saver/png_saver.c.orig	2004-05-23 14:08:11.000000000 +0000
 +++ plugins/image_saver/png_saver.c
