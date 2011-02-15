@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.366 2011/02/15 10:47:36 obache Exp $
+$NetBSD: CHANGES-2011,v 1.367 2011/02/15 10:54:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -613,3 +613,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/climm to 0.7.1 [adam 2011-02-15]
 	Added archivers/ruby-bz2 version 0.2.2 [obache 2011-02-15]
 	Added audio/ruby-mp3info version 0.6.13 [obache 2011-02-15]
+	Updated databases/db5 to 5.1.25 [adam 2011-02-15]
