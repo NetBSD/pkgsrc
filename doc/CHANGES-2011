@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.364 2011/02/15 10:21:19 adam Exp $
+$NetBSD: CHANGES-2011,v 1.365 2011/02/15 10:24:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -611,3 +611,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/postgresql83-plpython to 8.3.14 [adam 2011-02-15]
 	Updated databases/postgresql83-pltcl to 8.3.14 [adam 2011-02-15]
 	Updated chat/climm to 0.7.1 [adam 2011-02-15]
+	Added archivers/ruby-bz2 version 0.2.2 [obache 2011-02-15]
