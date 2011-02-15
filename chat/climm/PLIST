@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:28:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/02/15 10:18:06 adam Exp $
 bin/climm
-bin/micq
 man/de/man1/climm.1
 man/de/man5/climmrc.5
 man/de/man7/climmcmds.7
@@ -20,6 +19,9 @@ man/pt_BR/man7/climmcmds.7
 man/ru/man1/climm.1
 man/ru/man5/climmrc.5
 man/ru/man7/climmcmds.7
+man/se/man1/climm.1
+man/se/man5/climmrc.5
+man/se/man7/climmcmds.7
 man/sk/man1/climm.1
 man/sk/man5/climmrc.5
 man/sk/man7/climmcmds.7
