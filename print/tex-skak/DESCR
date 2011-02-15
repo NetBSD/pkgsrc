@@ -1,0 +1,9 @@
+This package provides macros and fonts in MetaFont format which
+can be used to typeset chess games using PGN, and to show diagrams
+of the current board in a document. The package builds on work by
+Piet Tutelaers -- the main novelty is the use of PGN for input
+instead of the more cumbersome coordinate notation (g1f3 becomes
+the more readable Nf3 in PGN). An Adobe Type 1 implementation of
+skak's fonts is available as package skaknew; an alternative chess
+notational scheme is available in package texmate, and a general
+mechanism for selecting chess fonts is provided in chessfss.

@@ -1,0 +1,9 @@
+This package offers commands to use and switch between chess fonts.
+It uses the LaTeX font selection scheme (nfss). The package doesn't
+parse, format and print PGN input like e.g. the packages skak or
+texmate; the aim of the package is to offer writers of chess packages
+a bundle of commands for fonts, so that they don't have to implement
+all these commands for themselves. A normal user can use the package
+to print e.g. single chess symbols and simple diagrams. The
+documentation contains also a section about installation of chess
+fonts.
