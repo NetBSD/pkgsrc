@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.363 2011/02/15 07:53:15 adam Exp $
+$NetBSD: CHANGES-2011,v 1.364 2011/02/15 10:21:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -594,3 +594,20 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/gps version 5.0.0 [drochner 2011-02-13]
 	Updated www/apache-tomcat6 to 6.0.32 [spz 2011-02-15]
 	Updated graphics/exiv2 to 0.21.1 [adam 2011-02-15]
+	Updated databases/postgresql84 to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-client to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-server to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-adminpack to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-dblink to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-pgcrypto to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-plperl to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-plpython to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql84-pltcl to 8.4.7 [adam 2011-02-15]
+	Updated databases/postgresql83 to 8.3.14 [adam 2011-02-15]
+	Updated databases/postgresql83-client to 8.3.14 [adam 2011-02-15]
+	Updated databases/postgresql83-server to 8.3.14 [adam 2011-02-15]
+	Updated databases/postgresql83-adminpack to 8.3.14 [adam 2011-02-15]
+	Updated databases/postgresql83-plperl to 8.3.14 [adam 2011-02-15]
+	Updated databases/postgresql83-plpython to 8.3.14 [adam 2011-02-15]
+	Updated databases/postgresql83-pltcl to 8.3.14 [adam 2011-02-15]
+	Updated chat/climm to 0.7.1 [adam 2011-02-15]

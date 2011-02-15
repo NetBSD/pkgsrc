@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10111 2011/02/13 17:10:39 wiz Exp $
+$NetBSD: TODO,v 1.10112 2011/02/15 10:21:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -467,7 +467,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
-	o climm-0.7.1
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.6.2
 	o cmus-2.3.4
