@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.376 2011/02/15 17:13:46 adam Exp $
+$NetBSD: CHANGES-2011,v 1.377 2011/02/15 19:31:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -623,3 +623,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-texmate version 2 [wiz 2011-02-15]
 	Added print/tex-texmate-doc version 2 [wiz 2011-02-15]
 	Updated graphics/gegl to 0.1.6 [adam 2011-02-15]
+	Updated multimedia/mkvtoolnix to 4.5.0 [drochner 2011-02-15]
+	Updated multimedia/vlc to 1.1.7 [drochner 2011-02-15]
+	Updated multimedia/libmatroska to 1.1.0 [drochner 2011-02-15]
+	Updated devel/libebml to 1.2.0 [drochner 2011-02-15]
