@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2011/02/10 10:12:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/02/15 17:11:46 adam Exp $
 bin/gegl
+include/gegl-0.1/gegl-buffer-backend.h
 include/gegl-0.1/gegl-buffer-iterator.h
 include/gegl-0.1/gegl-buffer.h
 include/gegl-0.1/gegl-chant.h
@@ -10,6 +11,9 @@ include/gegl-0.1/gegl-matrix.h
 include/gegl-0.1/gegl-paramspecs.h
 include/gegl-0.1/gegl-path.h
 include/gegl-0.1/gegl-plugin.h
+include/gegl-0.1/gegl-tile-backend.h
+include/gegl-0.1/gegl-tile-source.h
+include/gegl-0.1/gegl-tile.h
 include/gegl-0.1/gegl-types.h
 include/gegl-0.1/gegl-utils.h
 include/gegl-0.1/gegl-version.h
@@ -27,6 +31,7 @@ include/gegl-0.1/operation/gegl-operation-sink.h
 include/gegl-0.1/operation/gegl-operation-source.h
 include/gegl-0.1/operation/gegl-operation-temporal.h
 include/gegl-0.1/operation/gegl-operation.h
+lib/gegl-0.1/add-noise.la
 lib/gegl-0.1/add.la
 lib/gegl-0.1/affine.la
 lib/gegl-0.1/bilateral-filter.la
@@ -81,6 +86,7 @@ lib/gegl-0.1/map_absolute.la
 lib/gegl-0.1/mblur.la
 lib/gegl-0.1/mirrors.la
 lib/gegl-0.1/mono-mixer.la
+lib/gegl-0.1/motion-blur.la
 lib/gegl-0.1/multiply.la
 lib/gegl-0.1/noise.la
 lib/gegl-0.1/nop.la
@@ -90,6 +96,7 @@ lib/gegl-0.1/over.la
 lib/gegl-0.1/overlay.la
 lib/gegl-0.1/path.la
 lib/gegl-0.1/pixbuf.la
+lib/gegl-0.1/pixelise.la
 lib/gegl-0.1/plus.la
 lib/gegl-0.1/png-load.la
 lib/gegl-0.1/png-save.la
