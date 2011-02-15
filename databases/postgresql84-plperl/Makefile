@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/12/19 09:53:42 adam Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/15 08:14:16 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-plperl-/}
 COMMENT=	PL/Perl procedural language for the PostgreSQL backend
@@ -9,15 +9,13 @@ DEPENDS+=	postgresql84-server>=${PKGVERSION_NOREV}:../../databases/postgresql84-
 
 .include "../../databases/postgresql84/Makefile.common"
 
-USE_LIBTOOL=		yes
-PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 USE_TOOLS+=		perl
 PERL5_CONFIGURE=	no
 CONFIGURE_ARGS+=	--with-perl
 
 BUILD_DIRS=		src/pl/plperl
-MAKE_FILE=		GNUmakefile
 BUILD_MAKE_FLAGS=	PGXS=1
+MAKE_FILE=		GNUmakefile
 
 .include "../../databases/postgresql84-client/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
