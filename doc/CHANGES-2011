@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.361 2011/02/14 14:46:28 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.362 2011/02/15 07:05:16 spz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -592,3 +592,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/webkit-gtk to 1.2.7 [drochner 2011-02-13]
 	Updated lang/gnat-aux to 20110203 [drochner 2011-02-13]
 	Added devel/gps version 5.0.0 [drochner 2011-02-13]
+	Updated www/apache-tomcat6 to 6.0.32 [spz 2011-02-15]
