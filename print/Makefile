@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.470 2011/02/15 11:23:00 wiz Exp $
+# $NetBSD: Makefile,v 1.471 2011/02/15 11:39:48 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -530,6 +530,8 @@ SUBDIR+=	tex-tex
 SUBDIR+=	tex-texlive-common-doc
 SUBDIR+=	tex-texlive-en-doc
 SUBDIR+=	tex-texlive-scripts
+SUBDIR+=	tex-texmate
+SUBDIR+=	tex-texmate-doc
 SUBDIR+=	tex-texpower
 SUBDIR+=	tex-texpower-doc
 SUBDIR+=	tex-threeparttable
