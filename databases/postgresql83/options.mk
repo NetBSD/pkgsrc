@@ -1,9 +1,20 @@
-# $NetBSD: options.mk,v 1.5 2010/12/19 09:53:52 adam Exp $
+# $NetBSD: options.mk,v 1.6 2011/02/15 09:06:32 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql83
-PKG_SUPPORTED_OPTIONS=	gssapi kerberos ldap pam xml
+PKG_SUPPORTED_OPTIONS=	bonjour gssapi kerberos ldap pam xml
 
 .include "../../mk/bsd.options.mk"
+
+###
+### Bonjour support.
+###
+.if !empty(PKG_OPTIONS:Mbonjour)
+CONFIGURE_ARGS+=	--with-bonjour
+.  if ${OPSYS} != "Darwin"
+LIBS+=			-ldns_sd
+.  endif
+.  include "../../net/mDNSResponder/buildlink3.mk"
+.endif
 
 ###
 ### GSSAPI authentication for the PostgreSQL backend.
