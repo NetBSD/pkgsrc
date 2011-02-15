@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/15 11:22:05 wiz Exp $
+share/texmf-dist/doc/fonts/skaknew/README
+share/texmf-dist/doc/fonts/skaknew/SkakNew.pdf
+share/texmf-dist/doc/fonts/skaknew/SkakNew.tex
+share/texmf-dist/doc/fonts/skaknew/fonttables.pdf
+share/texmf-dist/doc/fonts/skaknew/install.vtex
