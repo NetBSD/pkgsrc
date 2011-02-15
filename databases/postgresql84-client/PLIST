@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/12/19 09:53:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/02/15 08:14:16 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -491,11 +491,23 @@ include/postgresql/server/utils/xml.h
 include/postgresql/server/windowapi.h
 include/sql3types.h
 include/sqlca.h
-lib/libecpg.la
-lib/libecpg_compat.la
+lib/libecpg.a
+lib/libecpg.so
+lib/libecpg.so.6
+lib/libecpg.so.6.1
+lib/libecpg_compat.a
+lib/libecpg_compat.so
+lib/libecpg_compat.so.3
+lib/libecpg_compat.so.3.1
 lib/libpgport.a
-lib/libpgtypes.la
-lib/libpq.la
+lib/libpgtypes.a
+lib/libpgtypes.so
+lib/libpgtypes.so.3
+lib/libpgtypes.so.3.1
+lib/libpq.a
+lib/libpq.so
+lib/libpq.so.5
+lib/libpq.so.5.2
 lib/postgresql/pgxs/config/install-sh
 lib/postgresql/pgxs/config/mkinstalldirs
 lib/postgresql/pgxs/src/Makefile.global
@@ -1298,6 +1310,7 @@ share/doc/postgresql/html/release-8-2-17.html
 share/doc/postgresql/html/release-8-2-18.html
 share/doc/postgresql/html/release-8-2-19.html
 share/doc/postgresql/html/release-8-2-2.html
+share/doc/postgresql/html/release-8-2-20.html
 share/doc/postgresql/html/release-8-2-3.html
 share/doc/postgresql/html/release-8-2-4.html
 share/doc/postgresql/html/release-8-2-5.html
@@ -1311,6 +1324,7 @@ share/doc/postgresql/html/release-8-3-10.html
 share/doc/postgresql/html/release-8-3-11.html
 share/doc/postgresql/html/release-8-3-12.html
 share/doc/postgresql/html/release-8-3-13.html
+share/doc/postgresql/html/release-8-3-14.html
 share/doc/postgresql/html/release-8-3-2.html
 share/doc/postgresql/html/release-8-3-3.html
 share/doc/postgresql/html/release-8-3-4.html
@@ -1326,6 +1340,7 @@ share/doc/postgresql/html/release-8-4-3.html
 share/doc/postgresql/html/release-8-4-4.html
 share/doc/postgresql/html/release-8-4-5.html
 share/doc/postgresql/html/release-8-4-6.html
+share/doc/postgresql/html/release-8-4-7.html
 share/doc/postgresql/html/release-8-4.html
 share/doc/postgresql/html/release.html
 share/doc/postgresql/html/resources.html
