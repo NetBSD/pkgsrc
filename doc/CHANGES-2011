@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.377 2011/02/15 19:31:32 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.378 2011/02/15 20:15:46 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -627,3 +627,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/vlc to 1.1.7 [drochner 2011-02-15]
 	Updated multimedia/libmatroska to 1.1.0 [drochner 2011-02-15]
 	Updated devel/libebml to 1.2.0 [drochner 2011-02-15]
+	Updated wm/fvwm-devel to 2.5.31 [jmmv 2011-02-15]
