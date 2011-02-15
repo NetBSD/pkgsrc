@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.369 2011/02/15 11:23:29 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.370 2011/02/15 11:23:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -616,3 +616,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/db5 to 5.1.25 [adam 2011-02-15]
 	Added print/tex-chessfss version 1.2a [wiz 2011-02-15]
 	Added print/tex-chessfss-doc version 1.2a [wiz 2011-02-15]
+	Added print/tex-skak version 1.5 [wiz 2011-02-15]
