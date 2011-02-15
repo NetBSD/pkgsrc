@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.443 2011/02/02 21:39:55 gls Exp $
+# $NetBSD: Makefile,v 1.444 2011/02/15 10:51:18 obache Exp $
 #
 
 COMMENT=	Audio tools
@@ -339,6 +339,7 @@ SUBDIR+=	rosegarden
 SUBDIR+=	rplay
 SUBDIR+=	rsynth
 SUBDIR+=	rtunes
+SUBDIR+=	ruby-mp3info
 SUBDIR+=	sfxr
 SUBDIR+=	shntool
 SUBDIR+=	shorten
