@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.373 2011/02/15 11:24:08 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.374 2011/02/15 11:47:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -620,3 +620,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-skak-doc version 1.5 [wiz 2011-02-15]
 	Added print/tex-chessfss version 1.2a [wiz 2011-02-15]
 	Added print/tex-chessfss-doc version 1.2a [wiz 2011-02-15]
+	Added print/tex-texmate version 2 [wiz 2011-02-15]
