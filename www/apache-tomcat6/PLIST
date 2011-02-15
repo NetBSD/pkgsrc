@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/19 14:32:04 spz Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/02/15 07:03:11 spz Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -29,9 +29,9 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
+share/tomcat/lib/ecj-3.3.1.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
-share/tomcat/lib/jasper-jdt.jar
 share/tomcat/lib/jasper.jar
 share/tomcat/lib/jsp-api.jar
 share/tomcat/lib/servlet-api.jar
@@ -102,6 +102,7 @@ share/tomcat/webapps/docs/config/cluster.html
 share/tomcat/webapps/docs/config/context.html
 share/tomcat/webapps/docs/config/engine.html
 share/tomcat/webapps/docs/config/executor.html
+share/tomcat/webapps/docs/config/filter.html
 share/tomcat/webapps/docs/config/globalresources.html
 share/tomcat/webapps/docs/config/host.html
 share/tomcat/webapps/docs/config/http.html
@@ -158,9 +159,14 @@ share/tomcat/webapps/docs/security-manager-howto.html
 share/tomcat/webapps/docs/setup.html
 share/tomcat/webapps/docs/ssi-howto.html
 share/tomcat/webapps/docs/ssl-howto.html
+share/tomcat/webapps/docs/tribes/developers.html
 share/tomcat/webapps/docs/tribes/faq.html
+share/tomcat/webapps/docs/tribes/interceptors.html
 share/tomcat/webapps/docs/tribes/introduction.html
+share/tomcat/webapps/docs/tribes/membership.html
 share/tomcat/webapps/docs/tribes/setup.html
+share/tomcat/webapps/docs/tribes/status.html
+share/tomcat/webapps/docs/tribes/transport.html
 share/tomcat/webapps/docs/virtual-hosting-howto.html
 share/tomcat/webapps/docs/windows-service-howto.html
 share/tomcat/webapps/examples/WEB-INF/classes/CookieExample.class
@@ -445,6 +451,8 @@ share/tomcat/webapps/examples/servlets/reqheaders.html
 share/tomcat/webapps/examples/servlets/reqinfo.html
 share/tomcat/webapps/examples/servlets/reqparams.html
 share/tomcat/webapps/examples/servlets/sessions.html
+share/tomcat/webapps/host-manager/401.jsp
+share/tomcat/webapps/host-manager/403.jsp
 share/tomcat/webapps/host-manager/META-INF/context.xml
 share/tomcat/webapps/host-manager/WEB-INF/web.xml
 share/tomcat/webapps/host-manager/images/add.gif
@@ -458,6 +466,7 @@ share/tomcat/webapps/host-manager/images/update.gif
 share/tomcat/webapps/host-manager/images/void.gif
 share/tomcat/webapps/host-manager/manager.xml
 share/tomcat/webapps/manager/401.jsp
+share/tomcat/webapps/manager/403.jsp
 share/tomcat/webapps/manager/META-INF/context.xml
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
@@ -473,3 +482,4 @@ share/tomcat/webapps/manager/images/update.gif
 share/tomcat/webapps/manager/images/void.gif
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
+@pkgdir share/tomcat/conf
