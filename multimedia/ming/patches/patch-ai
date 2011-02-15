@@ -1,8 +1,11 @@
-$NetBSD: patch-ai,v 1.1 2010/04/09 01:33:43 obache Exp $
+$NetBSD: patch-ai,v 1.2 2011/02/15 05:37:29 obache Exp $
 
---- configure.orig	2008-09-18 10:00:06.000000000 +0900
+* portability fix.
+  http://bugs.libming.org/show_bug.cgi?id=110
+
+--- configure.orig	2010-02-06 21:53:28.000000000 +0000
 +++ configure
-@@ -4635,7 +4635,7 @@ echo $ECHO_N "checking for Python librar
+@@ -4636,7 +4636,7 @@ echo $ECHO_N "checking for Python librar
  		py_version=`$PYTHON -c "from distutils.sysconfig import *; \
  			from string import join; \
  			print join(get_config_vars('VERSION'))"`
