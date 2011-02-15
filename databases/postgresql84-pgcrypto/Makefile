@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/19 09:53:42 adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/15 08:14:16 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-pgcrypto-/}
 COMMENT=	Module providing cryptographic functions for PostgreSQL
@@ -9,10 +9,10 @@ DEPENDS+=	postgresql84-server>=${PKGVERSION_NOREV}:../../databases/postgresql84-
 
 .include "../../databases/postgresql84/Makefile.common"
 
-USE_LIBTOOL=		yes
-PKG_LIBTOOL=		${PKG_SHLIBTOOL}
+CONFIGURE_ARGS+=	--with-zlib
 
 BUILD_DIRS=		contrib/pgcrypto
+BUILD_MAKE_FLAGS=	PGXS=1
 REQD_DIRS+=		${PG_SUBPREFIX}share/doc/postgresql/contrib
 REQD_DIRS+=		${PG_SUBPREFIX}share/postgresql/contrib
 
