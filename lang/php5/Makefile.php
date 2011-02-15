@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.42 2010/07/24 22:23:15 tron Exp $
+# $NetBSD: Makefile.php,v 1.43 2011/02/15 20:52:24 shattered Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -93,3 +93,6 @@ CONFIGURE_ARGS+=	--without-openssl
 .if !empty(PKG_OPTIONS:Mmaintainer-zts)
 CONFIGURE_ARGS+=	--enable-maintainer-zts
 .endif
+
+DL_AUTO_VARS=		yes
+.include "../../mk/dlopen.buildlink3.mk"
