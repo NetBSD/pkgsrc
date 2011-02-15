@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/19 09:53:41 adam Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/15 08:14:15 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-adminpack-/}
 COMMENT=	Admin pack module for pgAdmin management
@@ -9,12 +9,10 @@ DEPENDS+=	postgresql84-server>=${PKGVERSION_NOREV}:../../databases/postgresql84-
 
 .include "../../databases/postgresql84/Makefile.common"
 
-USE_LIBTOOL=		yes
-PKG_LIBTOOL=		${PKG_SHLIBTOOL}
-
 BUILD_DIRS=		contrib/adminpack
-REQD_DIRS+=		${PG_SUBPREFIX}share/doc/postgresql/contrib
-REQD_DIRS+=		${PG_SUBPREFIX}share/postgresql/contrib
+BUILD_MAKE_FLAGS=	PGXS=1
+REQD_DIRS+=		share/doc/postgresql/contrib
+REQD_DIRS+=		share/postgresql/contrib
 
 .include "../../databases/postgresql84-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
