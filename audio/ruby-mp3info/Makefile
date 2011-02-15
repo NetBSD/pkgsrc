@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/15 10:47:20 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/15 10:50:17 obache Exp $
 #
 
 DISTNAME=	ruby-mp3info-0.6.13
+PKGNAME=	${DISTNAME:S/ruby-/${RUBY_PKGPREFIX}-/}
 CATEGORIES=	audio
 MASTER_SITES=	http://rubyforge.org/frs/download.php/57443/
 EXTRACT_SUFX=	.tgz
