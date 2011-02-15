@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.469 2011/02/11 13:50:07 obache Exp $
+# $NetBSD: Makefile,v 1.470 2011/02/15 11:23:00 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -211,6 +211,8 @@ SUBDIR+=	tex-chbibref
 SUBDIR+=	tex-chbibref-doc
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-chemarrow-doc
+SUBDIR+=	tex-chessfss
+SUBDIR+=	tex-chessfss-doc
 SUBDIR+=	tex-chngcntr
 SUBDIR+=	tex-chngcntr-doc
 SUBDIR+=	tex-circle
@@ -506,6 +508,10 @@ SUBDIR+=	tex-sectsty
 SUBDIR+=	tex-sectsty-doc
 SUBDIR+=	tex-selectp
 SUBDIR+=	tex-setspace
+SUBDIR+=	tex-skak
+SUBDIR+=	tex-skak-doc
+SUBDIR+=	tex-skaknew
+SUBDIR+=	tex-skaknew-doc
 SUBDIR+=	tex-srcltx
 SUBDIR+=	tex-srcltx-doc
 SUBDIR+=	tex-sttools
