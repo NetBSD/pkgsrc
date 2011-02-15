@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/02/08 15:50:07 brook Exp $
+# $NetBSD: Makefile,v 1.21 2011/02/15 09:06:32 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/83-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -8,7 +8,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../databases/postgresql83/Makefile.common"
 
 USE_TOOLS+=		gzip tar
-USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-openssl
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-zlib
