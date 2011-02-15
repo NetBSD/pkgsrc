@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.17 2011/02/15 11:30:47 drochner Exp $
+
+--- util/cairo-gobject/cairo-gobject.h.orig	2010-09-09 15:56:24.000000000 +0000
++++ util/cairo-gobject/cairo-gobject.h
+@@ -39,6 +39,9 @@
+ 
+ #include <cairo.h>
+ 
++/* if this header is installed, cairo has gobject functions */
++#define CAIRO_HAS_GOBJECT_FUNCTIONS 1
++
+ #if CAIRO_HAS_GOBJECT_FUNCTIONS
+ 
+ #include <glib-object.h>
