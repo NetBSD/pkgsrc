@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.375 2011/02/15 11:47:37 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.376 2011/02/15 17:13:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -622,3 +622,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-chessfss-doc version 1.2a [wiz 2011-02-15]
 	Added print/tex-texmate version 2 [wiz 2011-02-15]
 	Added print/tex-texmate-doc version 2 [wiz 2011-02-15]
+	Updated graphics/gegl to 0.1.6 [adam 2011-02-15]
