@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2010/12/19 09:53:52 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2011/02/15 09:06:31 adam Exp $
 #
 # used by databases/postgresql83-adminpack/Makefile
 # used by databases/postgresql83-client/Makefile
@@ -17,7 +17,7 @@
 
 .include "../../databases/postgresql83/Makefile.mirrors"
 
-DISTNAME=	postgresql-8.3.13
+DISTNAME=	postgresql-8.3.14
 CATEGORIES=	databases
 MASTER_SITES=	${PGSQL_MIRRORS:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -59,11 +59,6 @@ CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--without-zlib
 
-# Enable Bonjour on Mac OS X
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--with-bonjour
-.endif
-
 # PostgreSQL explicitly forbids any use of -ffast-math
 BUILDLINK_TRANSFORM+=	rm:-ffast-math
 
@@ -78,8 +73,6 @@ USE_LIBLTDL?=		no
 
 .if !defined(META_PACKAGE)
 post-extract:
-	cp -f ${COMMON_FILESDIR}/Makefile.custom ${WRKSRC}/src/Makefile.custom
-	cp -f ${COMMON_FILESDIR}/Makefile.libtool ${WRKSRC}/src/Makefile.shlib
 .  if !empty(USE_LIBLTDL:M[yY][eE][sS])
 	cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
 		${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.h
