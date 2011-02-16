@@ -76,3 +76,5 @@ www/ruby-actionpack3: dependency update
 www/ruby-activeresource3: dependency update
 www/ruby-rack-test: dependency update
 www/ruby-rails3: dependency update
+Pullup ticket #3355 - requested by taca
+security update for net/bind96
