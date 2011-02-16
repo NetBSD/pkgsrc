@@ -1,17 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2010/06/15 13:22:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/02/16 13:29:37 ryoon Exp $
 bin/e.py
 bin/e.pyw
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${PKGNAME}-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/${PKGNAME}-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/${PKGNAME}-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/${PKGNAME}-py2.6.egg-info/requires.txt
+${PYSITELIB}/${PKGNAME}-py2.6.egg-info/top_level.txt
 ${PYSITELIB}/etm/__init__.py
 ${PYSITELIB}/etm/__init__.pyc
 ${PYSITELIB}/etm/__init__.pyo
-${PYSITELIB}/etm/etmAbout.py
-${PYSITELIB}/etm/etmAbout.pyc
-${PYSITELIB}/etm/etmAbout.pyo
 ${PYSITELIB}/etm/etmBusyFree.py
 ${PYSITELIB}/etm/etmBusyFree.pyc
 ${PYSITELIB}/etm/etmBusyFree.pyo
@@ -21,12 +18,12 @@ ${PYSITELIB}/etm/etmCAL.pyo
 ${PYSITELIB}/etm/etmData.py
 ${PYSITELIB}/etm/etmData.pyc
 ${PYSITELIB}/etm/etmData.pyo
+${PYSITELIB}/etm/etmDialog.py
+${PYSITELIB}/etm/etmDialog.pyc
+${PYSITELIB}/etm/etmDialog.pyo
 ${PYSITELIB}/etm/etmHTML.py
 ${PYSITELIB}/etm/etmHTML.pyc
 ${PYSITELIB}/etm/etmHTML.pyo
-${PYSITELIB}/etm/etmITEM.py
-${PYSITELIB}/etm/etmITEM.pyc
-${PYSITELIB}/etm/etmITEM.pyo
 ${PYSITELIB}/etm/etmParsers.py
 ${PYSITELIB}/etm/etmParsers.pyc
 ${PYSITELIB}/etm/etmParsers.pyo
@@ -50,6 +47,3 @@ ${PYSITELIB}/etm/etmlogo.ico
 ${PYSITELIB}/etm/etmlogo_128x128x32.png
 ${PYSITELIB}/etm/etmlogo_16x16x32.png
 ${PYSITELIB}/etm/etmlogo_32x32x32.png
-${PYSITELIB}/ez_setup.py
-${PYSITELIB}/ez_setup.pyc
-${PYSITELIB}/ez_setup.pyo
