@@ -1,18 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2008/06/12 02:14:43 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2011/02/16 20:46:56 ryoon Exp $
 
---- Makefile.in.orig	2005-06-25 10:15:28.000000000 +0000
+* fix documentation path.
+* support user-destdir.
+
+--- Makefile.in.orig	2011-01-27 10:03:53.000000000 +0000
 +++ Makefile.in
 @@ -19,7 +19,7 @@ VPATH = @srcdir@
  bindir = @bindir@
  libdir = @libdir@
- datadir = @datadir@
+ datadir = @datarootdir@
 -docdir = @prefix@/doc
 +docdir = @prefix@/share/doc
  
  # unix
  OBJECTS=abc2ps.o \
 @@ -32,15 +32,15 @@ $(OBJECTS): abcparse.h abc2ps.h config.h
- DOCFILES=Changes License README *.abc *.eps *.txt
+ DOCFILES=$(addprefix $(srcdir)/,Changes License README *.abc *.eps *.txt)
  
  install: abcm2ps
 -	mkdir -p $(bindir); \
@@ -23,7 +26,7 @@ $NetBSD: patch-aa,v 1.2 2008/06/12 02:14:43 joerg Exp $
 +	mkdir -p $(DESTDIR)$(datadir)/abcm2ps; \
 +	mkdir -p $(DESTDIR)$(docdir)/abcm2ps; \
 +	$(INSTALL_PROGRAM) abcm2ps $(DESTDIR)$(bindir)
- 	for f in *.fmt; do \
+ 	for f in $(srcdir)/*.fmt; do \
 -		$(INSTALL_DATA) $$f $(datadir)/abcm2ps; \
 +		$(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/abcm2ps; \
  	done
