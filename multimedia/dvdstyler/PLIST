@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/05/07 18:02:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/02/16 20:34:43 gls Exp $
 bin/dvdstyler
 man/man1/dvdstyler.1
 share/applications/dvdstyler.desktop
@@ -60,7 +60,11 @@ share/dvdstyler/data/subtitles.rgb
 share/dvdstyler/docs/help_de.zip
 share/dvdstyler/docs/help_en.zip
 share/dvdstyler/docs/help_ja.zip
+share/dvdstyler/docs/help_nb.zip
+share/dvdstyler/docs/help_pl.zip
 share/dvdstyler/docs/help_ru.zip
+share/dvdstyler/docs/help_uk.zip
+share/dvdstyler/docs/help_zh_CN.zip
 share/dvdstyler/objects/ellipse.xml
 share/dvdstyler/objects/frame.xml
 share/dvdstyler/objects/image.xml
@@ -81,12 +85,15 @@ share/dvdstyler/rc/nwse.cur
 share/dvdstyler/rc/open.png
 share/dvdstyler/rc/plus.png
 share/dvdstyler/rc/preferences.png
+share/dvdstyler/rc/remove.png
 share/dvdstyler/rc/run.png
 share/dvdstyler/rc/save.png
 share/dvdstyler/templates/blue.dvdt
 share/dvdstyler/templates/blue.png
+share/dvdstyler/templates/blueWS.dvdt
 share/dvdstyler/templates/travel.dvdt
 share/dvdstyler/templates/travel.png
+share/dvdstyler/templates/travelWS.dvdt
 share/dvdstyler/templates/turbulence.dvdt
 share/dvdstyler/templates/turbulence.png
 share/locale/cs/LC_MESSAGES/dvdstyler.mo
@@ -97,7 +104,9 @@ share/locale/es/LC_MESSAGES/dvdstyler.mo
 share/locale/eu/LC_MESSAGES/dvdstyler.mo
 share/locale/fr/LC_MESSAGES/dvdstyler.mo
 share/locale/hu/LC_MESSAGES/dvdstyler.mo
+share/locale/hy/LC_MESSAGES/dvdstyler.mo
 share/locale/it/LC_MESSAGES/dvdstyler.mo
+share/locale/ja/LC_MESSAGES/dvdstyler.mo
 share/locale/ko/LC_MESSAGES/dvdstyler.mo
 share/locale/mk/LC_MESSAGES/dvdstyler.mo
 share/locale/nb/LC_MESSAGES/dvdstyler.mo
@@ -110,6 +119,8 @@ share/locale/sk/LC_MESSAGES/dvdstyler.mo
 share/locale/sl/LC_MESSAGES/dvdstyler.mo
 share/locale/sr/LC_MESSAGES/dvdstyler.mo
 share/locale/sv/LC_MESSAGES/dvdstyler.mo
+share/locale/uk/LC_MESSAGES/dvdstyler.mo
 share/locale/vi/LC_MESSAGES/dvdstyler.mo
+share/locale/zh_CN/LC_MESSAGES/dvdstyler.mo
 share/locale/zh_TW/LC_MESSAGES/dvdstyler.mo
 share/pixmaps/dvdstyler.png
