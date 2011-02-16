@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.13 2010/06/11 20:41:42 martti Exp $
+$NetBSD: patch-ag,v 1.14 2011/02/16 17:45:08 taca Exp $
 
---- config.h.in.orig	2010-04-16 03:17:09.000000000 +0300
-+++ config.h.in	2010-06-09 20:27:35.000000000 +0300
-@@ -521,6 +521,9 @@
+--- config.h.in.orig	2011-02-04 00:59:51.000000000 +0000
++++ config.h.in
+@@ -533,6 +533,9 @@
  /* define if you have int64_t data type */
  #undef HAVE_INT64_T
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ag,v 1.13 2010/06/11 20:41:42 martti Exp $
  /* Define to 1 if you have the <inttypes.h> header file. */
  #undef HAVE_INTTYPES_H
  
-@@ -641,6 +644,9 @@
+@@ -659,6 +662,9 @@
  /* Define to 1 if you have the <net/if_tun.h> header file. */
  #undef HAVE_NET_IF_TUN_H
  
