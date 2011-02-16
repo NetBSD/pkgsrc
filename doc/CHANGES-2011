@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.391 2011/02/16 21:52:33 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.392 2011/02/16 22:17:50 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -640,3 +640,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/abcm2ps to 6.2.9 [ryoon 2011-02-16]
 	Updated devel/libgee to 0.6.1 [gls 2011-02-16]
 	Updated net/nmap to 5.51 [pettai 2011-02-16]
+	Updated graphics/libraw to 0.13.1 [gls 2011-02-16]
