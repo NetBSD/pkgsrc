@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.383 2011/02/16 17:44:03 taca Exp $
+$NetBSD: CHANGES-2011,v 1.384 2011/02/16 17:45:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -632,3 +632,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/xonclock to 0.0.9.3 [wiz 2011-02-16]
 	Updated time/etm to 702 [ryoon 2011-02-16]
 	Updated net/bind97 to 9.7.3 [taca 2011-02-16]
+	Updated security/openssh to 5.8.1 [taca 2011-02-16]
