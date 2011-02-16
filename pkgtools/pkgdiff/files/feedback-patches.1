@@ -1,4 +1,4 @@
-.\"	$NetBSD: feedback-patches.1,v 1.2 2011/02/02 21:44:13 hubertf Exp $
+.\"	$NetBSD: feedback-patches.1,v 1.3 2011/02/16 11:58:30 wiz Exp $
 .\"
 .\" Copyright (c) 2003-2011 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd Sep 29, 2003
+.Dd September 29, 2003
 .Dt FEEDBACK-PATCHES 1
 .Os
 .Sh NAME
@@ -41,9 +41,10 @@
 The
 .Nm
 script is intended to help sending back patches in the
-NetBSD Packages Collection, pkgsrc, back to the maintainers
+.Nx
+Packages Collection, pkgsrc, back to the maintainers
 of the original package, for inclusion into future releases.
-The given 
+The given
 .Pa category/pkg
 is either a path relative to the pkgsrc base directory,
 or an absolute patch, which will be stripped the base
@@ -51,12 +52,13 @@ directory.
 A pathname of
 .Pa \&.
 will be expanded to the current directory, which is useful
-when the current working directory is in a package's 
+when the current working directory is in a package's
 directory in pkgsrc.
 .Pp
 If an email address is given, the patches will be sent to that
-address, with some nice words. If no email address is given,
-the mail will only be displayed instead of sent.
+address, with some nice words.
+If no email address is given, the mail will only be displayed instead
+of sent.
 .Sh EXAMPLES
 The command:
 .Pp
@@ -74,10 +76,10 @@ to send the patches back immediately.
 .Dl feedback-patches /usr/pkgsrc/somecat/dunno whoever@foobar.baz
 .Pp
 works just as well, you can use either full path or path relative
-to pkgsrc base when specifying a package. As you're usually already
-in the pkg's directory for finding out the contact address
-(probably by looking at the HOMEPAGE variable in the pkg's Makefile),
-you can also do:
+to pkgsrc base when specifying a package.
+As you're usually already in the pkg's directory for finding out the
+contact address (probably by looking at the HOMEPAGE variable in the
+pkg's Makefile), you can also do:
 .Pp
 .Dl cd .../category/pkg
 .Dl feedback-patches `pwd` whoever@foobar.baz
@@ -86,10 +88,9 @@ or
 .Pp
 .Dl cd .../category/pkg
 .Dl feedback-patches \ . whoever@foobar.baz
-.Pp
 .Sh SEE ALSO
-.Xr pkgdiff 1 ,
-.Xr mkpatches 1
+.Xr mkpatches 1 ,
+.Xr pkgdiff 1
 .Sh AUTHORS
 The feedback-patches utility was written by
 .An Hubert Feyrer Aq hubertf@NetBSD.org .
