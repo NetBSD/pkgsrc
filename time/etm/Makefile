@@ -1,31 +1,30 @@
-# $NetBSD: Makefile,v 1.20 2010/06/15 13:22:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2011/02/16 13:29:37 ryoon Exp $
 #
 
-DISTNAME=	etm-622
+DISTNAME=	etm-702
 CATEGORIES=	time
 MASTER_SITES=	http://www.duke.edu/~dgraham/ETM/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.duke.edu/~dgraham/ETM/
-COMMENT=	Event and Task Manager
+COMMENT=	events and tasks manager using simple text files
 LICENSE=	gnu-gpl-v3
-
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-icalendar-[0-9]*:../../time/py-icalendar
-DEPENDS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*:../../x11/py-wxWidgets
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
+
 USE_LANGUAGES=	# none
 
-SUBST_CLASSES+=		python
-SUBST_SED.python+=	-e 's,\(\#! *\)python,\1${PYTHONBIN},'
-SUBST_FILES.python=	ez_setup.py
-SUBST_STAGE.python=	pre-build
-SUBST_MESSAGE.python=	Replacing python interpreter.
+PYDISTUTILSPKG=	yes
 
-REPLACE_PYTHON=		e.py etm/etmBusyFree.py
+# Delete an unnecessary file
+post-configure:
+	${RM} ${WRKSRC}/etm.egg-info/.SOURCES.txt~
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
