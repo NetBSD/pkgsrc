@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.381 2011/02/16 12:22:31 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.382 2011/02/16 13:31:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -630,3 +630,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated wm/fvwm-devel to 2.5.31 [jmmv 2011-02-15]
 	Added databases/postgresql90-fuzzystrmatch version 9.0.3 [manu 2011-02-16]
 	Updated time/xonclock to 0.0.9.3 [wiz 2011-02-16]
+	Updated time/etm to 702 [ryoon 2011-02-16]
