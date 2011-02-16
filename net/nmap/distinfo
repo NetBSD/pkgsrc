@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.48 2011/02/01 09:51:58 adam Exp $
+$NetBSD: distinfo,v 1.49 2011/02/16 21:52:01 pettai Exp $
 
-SHA1 (nmap-5.50.tar.bz2) = 49c7a858d2c0a6302df533b1c97a96790bb06f42
-RMD160 (nmap-5.50.tar.bz2) = 587bded08ecf0286228f6ca92cb7cd2568343053
-Size (nmap-5.50.tar.bz2) = 16877762 bytes
+SHA1 (nmap-5.51.tar.bz2) = 3415ad9a3915d7e162c9e91435cc35d9c73ac7f6
+RMD160 (nmap-5.51.tar.bz2) = d5ac8b245234e122936b40c80927a3c4afba53bd
+Size (nmap-5.51.tar.bz2) = 16869068 bytes
 SHA1 (patch-ab) = b709689e4bda3bc928ba120678f24a2e2321f612
 SHA1 (patch-ac) = c22e8f6411b1152a6e7582c90e5ec5bd4c6acaad
 SHA1 (patch-al) = c56396c28d96314c8d7e8b19a92bd5db7959e289
