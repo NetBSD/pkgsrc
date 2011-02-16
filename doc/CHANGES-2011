@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.382 2011/02/16 13:31:39 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.383 2011/02/16 17:44:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/postgresql90-fuzzystrmatch version 9.0.3 [manu 2011-02-16]
 	Updated time/xonclock to 0.0.9.3 [wiz 2011-02-16]
 	Updated time/etm to 702 [ryoon 2011-02-16]
+	Updated net/bind97 to 9.7.3 [taca 2011-02-16]
