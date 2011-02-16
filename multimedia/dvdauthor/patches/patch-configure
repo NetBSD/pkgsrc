@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2011/02/16 20:20:14 gls Exp $
+
+Portability fix
+
+--- configure.orig	2010-10-23 02:30:40.000000000 +0000
++++ configure
+@@ -5191,11 +5191,11 @@ fi
+ # Check whether --enable-default-video-format was given.
+ if test "${enable_default_video_format+set}" = set; then :
+   enableval=$enable_default_video_format;
+-if test "$enable_default_video_format" == "PAL" -o "$enable_default_video_format" == "pal"; then
++if test "$enable_default_video_format" = "PAL" -o "$enable_default_video_format" = "pal"; then
+ 
+ $as_echo "#define DEFAULT_VIDEO_FORMAT 2" >>confdefs.h
+ 
+-elif test "$enable_default_video_format" == "NTSC" -o "$enable_default_video_format" == "ntsc"; then
++elif test "$enable_default_video_format" = "NTSC" -o "$enable_default_video_format" = "ntsc"; then
+ 
+ $as_echo "#define DEFAULT_VIDEO_FORMAT 1" >>confdefs.h
+ 
