@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
+$NetBSD: patch-av,v 1.10 2011/02/16 17:45:08 taca Exp $
 
---- sshd.c.orig	2010-03-07 14:05:17.000000000 +0200
-+++ sshd.c	2010-06-09 20:36:56.000000000 +0300
-@@ -236,7 +236,11 @@
+--- sshd.c.orig	2011-02-16 01:25:58.000000000 +0000
++++ sshd.c
+@@ -239,7 +239,11 @@ int *startup_pipes = NULL;
  int startup_pipe;		/* in child */
  
  /* variables used for privilege separation */
@@ -14,7 +14,7 @@ $NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
  struct monitor *pmonitor = NULL;
  
  /* global authentication context */
-@@ -612,10 +616,15 @@
+@@ -618,10 +622,15 @@ privsep_preauth_child(void)
  	/* XXX not ready, too heavy after chroot */
  	do_setusercontext(privsep_pw);
  #else
@@ -30,7 +30,7 @@ $NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
  #endif
  }
  
-@@ -655,7 +664,7 @@
+@@ -661,7 +670,7 @@ privsep_preauth(Authctxt *authctxt)
  		close(pmonitor->m_sendfd);
  
  		/* Demote the child */
@@ -39,7 +39,7 @@ $NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
  			privsep_preauth_child();
  		setproctitle("%s", "[net]");
  	}
-@@ -670,7 +679,7 @@
+@@ -676,7 +685,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -48,7 +48,7 @@ $NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1310,8 +1319,10 @@
+@@ -1335,8 +1344,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -60,7 +60,7 @@ $NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1664,7 +1675,7 @@
+@@ -1690,7 +1701,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -69,7 +69,7 @@ $NetBSD: patch-av,v 1.9 2010/06/11 20:41:42 martti Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1688,8 +1699,10 @@
+@@ -1714,8 +1725,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */

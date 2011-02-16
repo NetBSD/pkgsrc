@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.47 2011/02/06 11:31:18 obache Exp $
+$NetBSD: patch-aa,v 1.48 2011/02/16 17:45:08 taca Exp $
 
 --- configure.orig	2010-04-16 03:17:11.000000000 +0300
 +++ configure	2010-06-09 21:30:29.000000000 +0300
@@ -66,15 +66,6 @@ $NetBSD: patch-aa,v 1.47 2011/02/06 11:31:18 obache Exp $
  	check_for_libcrypt_later=1
  
  cat >>confdefs.h <<\_ACEOF
-@@ -12468,7 +12502,7 @@
- 				LDFLAGS="-L${withval}/lib ${LDFLAGS}"
- 			fi
- 		fi
--		if test "x$use_pkgconfig_for_libedit" == "xyes"; then
-+		if test "x$use_pkgconfig_for_libedit" = "xyes"; then
- 			LIBEDIT=`$PKGCONFIG --libs-only-l libedit`
- 			CPPFLAGS="$CPPFLAGS `$PKGCONFIG --cflags libedit`"
- 		else
 @@ -29573,14 +29607,20 @@
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
