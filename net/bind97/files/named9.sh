@@ -1,10 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: named9.sh,v 1.1.1.1 2010/05/26 16:11:47 taca Exp $
+# $NetBSD: named9.sh,v 1.2 2011/02/16 17:43:22 taca Exp $
 #
 
 # PROVIDE: named
-# REQUIRE: SERVERS
+# REQUIRE: NETWORKING mountcritremote syslogd
 # BEFORE:  DAEMON
 # KEYWORD: chrootdir
 
