@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.18 2010/02/19 10:17:33 martti Exp $
+$NetBSD: patch-ac,v 1.19 2011/02/16 17:45:08 taca Exp $
 
---- defines.h.orig	2009-08-28 04:21:07.000000000 +0300
-+++ defines.h	2010-02-19 12:07:15.000000000 +0200
+--- defines.h.orig	2011-01-17 10:15:31.000000000 +0000
++++ defines.h
 @@ -30,6 +30,15 @@
  
  /* Constants */
@@ -18,7 +18,7 @@ $NetBSD: patch-ac,v 1.18 2010/02/19 10:17:33 martti Exp $
  #if defined(HAVE_DECL_SHUT_RD) && HAVE_DECL_SHUT_RD == 0
  enum
  {
-@@ -652,6 +661,24 @@
+@@ -698,6 +707,24 @@ struct winsize {
  #    endif
  #  endif
  #endif
