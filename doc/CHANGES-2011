@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.388 2011/02/16 20:35:02 gls Exp $
+$NetBSD: CHANGES-2011,v 1.389 2011/02/16 20:49:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -637,3 +637,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/xonclock to 0.0.9.4 [wiz 2011-02-16]
 	Updated multimedia/dvdauthor to 0.7.0 [gls 2011-02-16]
 	Updated multimedia/dvdstyler to 1.8.2.1 [gls 2011-02-16]
+	Updated print/abcm2ps to 6.2.9 [ryoon 2011-02-16]
