@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.378 2011/02/15 20:15:46 jmmv Exp $
+$NetBSD: CHANGES-2011,v 1.379 2011/02/16 06:35:29 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -628,3 +628,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/libmatroska to 1.1.0 [drochner 2011-02-15]
 	Updated devel/libebml to 1.2.0 [drochner 2011-02-15]
 	Updated wm/fvwm-devel to 2.5.31 [jmmv 2011-02-15]
+	Added databases/postgresql90-fuzzystrmatch [manu 2011-02-16]
