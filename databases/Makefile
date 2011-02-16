@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2011/02/10 16:25:55 wiz Exp $
+# $NetBSD: Makefile,v 1.364 2011/02/16 06:35:30 manu Exp $
 #
 
 COMMENT=	Databases
@@ -239,6 +239,7 @@ SUBDIR+=	postgresql90-datatypes
 SUBDIR+=	postgresql90-dblink
 SUBDIR+=	postgresql90-docs
 SUBDIR+=	postgresql90-monitoring
+SUBDIR+=	postgresql90-fuzzystrmatch
 SUBDIR+=	postgresql90-pgcrypto
 SUBDIR+=	postgresql90-plperl
 SUBDIR+=	postgresql90-plpython
