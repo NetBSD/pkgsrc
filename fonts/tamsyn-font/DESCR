@@ -1,0 +1,7 @@
+Monospaced programming font for Linux and Windows.
+
+Features:
+* Covers the ASCII character set
+* Regular and bold face are the same width for syntax highlighting
+* Bold characters don't run together
+* Aliased bitmap font
