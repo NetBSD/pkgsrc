@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10115 2011/02/16 20:50:43 ryoon Exp $
+$NetBSD: TODO,v 1.10116 2011/02/16 21:43:55 gls Exp $
 
 Suggested new packages
 ======================
@@ -878,7 +878,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.3
 	o libgdata-0.8.0
-	o libgee-0.6.1
 	o libgiigic-1.1.2
 	o libgnome-2.32.1
 	o libgnomecanvas-2.30.3
