@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/01/13 13:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2011/02/17 10:33:38 markd Exp $
 #
 
-DISTNAME=		matplotlib-0.99.1.2
-PKGNAME=		${PYPKGPREFIX}-matplotlib-tk-0.99.1.2
-PKGREVISION=		2
+DISTNAME=		matplotlib-1.0.1
+PKGNAME=		${PYPKGPREFIX}-matplotlib-tk-1.0.1
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
 
@@ -13,12 +12,23 @@ COMMENT=		Tk frontend for matplotlib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=	${WRKDIR}/matplotlib-0.99.1.1
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 USE_LANGUAGES=		c c++
 
+post-patch:
+	( echo "[directories]"; \
+	echo "basedirlist=/usr"; \
+	echo "[provide_packages]"; \
+	echo "pytz = False"; \
+	echo "dateutil = False"; \
+	echo "[gui_support]"; \
+	echo "gtk = False"; \
+	echo "gtkagg = False"; \
+	echo "tkagg = True"; \
+	echo "wxagg = False"; \
+	echo "macosx = False" ) > ${WRKSRC}/setup.cfg
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
