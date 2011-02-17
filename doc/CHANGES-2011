@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.395 2011/02/17 12:12:48 jmcneill Exp $
+$NetBSD: CHANGES-2011,v 1.396 2011/02/17 13:55:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/py-matplotlib-tk to 1.0.1 [markd 2011-02-17]
 	Updated graphics/py-matplotlib-gtk2 to 1.0.1 [markd 2011-02-17]
 	Updated sysutils/hal to 0.5.14nb2 [jmcneill 2011-02-17]
+	Updated audio/abcmidi to 20110101 [ryoon 2011-02-17]
