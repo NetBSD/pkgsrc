@@ -88,7 +88,8 @@ devinfo_computer_add(HalDevice *parent, const char *devnode, char *devfs_path, c
 
 	devinfo_add_enqueue (d, devfs_path, &devinfo_computer_handler);
 
-	if (sysctlbyname ("hw.acpi.supported_states", acpi_supported_states, &len, NULL, 0) == 0) {
+	if (sysctlbyname ("hw.acpi.supported_states", acpi_supported_states, &len, NULL, 0) == 0 ||
+	    sysctlbyname ("hw.acpi.sleep.states", acpi_supported_states, &len, NULL, 0) == 0) {
 		hal_device_property_set_string (d, "power_management.type", "acpi");
 		if (strstr (acpi_supported_states, "S3") != NULL)
 			hal_device_property_set_bool (d, "power_management.can_suspend", TRUE);
