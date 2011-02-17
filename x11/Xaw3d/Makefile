@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2009/05/03 11:50:46 tron Exp $
+# $NetBSD: Makefile,v 1.56 2011/02/17 16:59:22 gdt Exp $
 
 DISTNAME=	Xaw3d-1.5E
 PKGREVISION=	4
@@ -36,6 +36,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/Xaw3d
 	${INSTALL_DATA} ${WRKSRC}/README.XAW3D ${DESTDIR}${PREFIX}/share/doc/Xaw3d
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${CHMOD} +w ${PLIST_SRC}
 .if ${OPSYS} == "IRIX"
 	${INSTALL_DATA} /usr/lib${ABI}/libXaw3d* ${DESTDIR}${PREFIX}/lib/
 	${RM} -f /usr/lib${ABI}/libXaw3d*
