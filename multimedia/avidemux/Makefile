@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2011/01/13 13:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2011/02/17 09:20:17 markd Exp $
 #
 
-DISTNAME=	avidemux_2.4.4
+DISTNAME=	avidemux_2.5.4
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	7
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.berlios.de/avidemux/
 
@@ -19,19 +18,30 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt pkg-config
 USE_CMAKE=		yes
+CMAKE_ARG_PATH=		..
+CONFIGURE_DIRS=		_build
 
 CMAKE_ARGS+=		-DNO_ARTS=1
-CMAKE_ARGS+=		-DUSE_X264=1
+CMAKE_ARGS+=		-DUSE_SYSTEM_SPIDERMONKEY=1
 
 LIBS+=			${LIBOSSAUDIO}
 
+# make sure __STDC_CONSTANT_MACROS is set before <stdint.h> is
+# pulled in the first time - for UINT64_C()
+CFLAGS+=		-D__STDC_CONSTANT_MACROS
+
 SUBST_CLASSES=		audio
 SUBST_STAGE.audio=	post-patch
-SUBST_FILES.audio=	avidemux/ADM_audiodevice/ADM_deviceoss.cpp
+SUBST_FILES.audio=	plugins/ADM_audioDevices/Oss/ADM_deviceoss.cpp
 SUBST_SED.audio=	-e "s|\\/dev\\/dsp|${DEVOSSAUDIO}|g"
 SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
 
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+
 INSTALLATION_DIRS=	share/applications share/icons/hicolor/64x64/apps
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/_build
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/avidemux2.desktop \
@@ -59,5 +69,6 @@ post-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
