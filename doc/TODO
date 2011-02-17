@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10117 2011/02/16 22:17:50 gls Exp $
+$NetBSD: TODO,v 1.10118 2011/02/17 10:40:50 markd Exp $
 
 Suggested new packages
 ======================
@@ -410,7 +410,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o autogen-5.11.5
 	o avahi-0.6.28
 	o avcheck-0.91
-	o avidemux-2.5.4
 	o avl-2.0.2a
 	o awesome-3.4.9
 	o baci-20040415
@@ -813,7 +812,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kaffeine-0.8.7
 	o kapooka-0.3
 	o kbibtex-0.2.2
-	o kdbg-2.2.2
 	o kde4-4.6.0
 	o kdevelop-4.2
 	o kdrill-6.5
@@ -1134,7 +1132,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
 	o py-markdown-2.0.3 [pkg/43448]
-	o py-matplotlib-0.99.3
 	o py-networkx-1.2 [pkg/43790]
 	o py-sybase-0.37
 	o py-twisted-10.2.0
