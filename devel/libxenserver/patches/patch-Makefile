@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2011/02/17 09:54:02 sborrill Exp $
+
+Don't embed current build dir
+
+--- Makefile.orig	2011-02-16 16:50:42.000000000 +0000
++++ Makefile	2011-02-16 16:50:52.000000000 +0000
+@@ -25,8 +25,7 @@
+          -W -Wall -Wmissing-prototypes -Werror -std=c99 -fPIC
+ 
+ LDFLAGS = -g $(shell xml2-config --libs) \
+-          $(shell curl-config --libs) \
+-	  -Wl,-rpath,$(shell pwd)
++          $(shell curl-config --libs)
+ 
+ # -h for Solaris
+ SONAME_LDFLAG ?= -soname

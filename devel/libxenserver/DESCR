@@ -1,0 +1,21 @@
+Citrix XenServer includes a XML-RPC based API, providing programmatic access
+to the extensive set of XenServer management features and tools. The
+XenServer API can be called from a remote system as well as local to the
+XenServer host. Remote calls are generally made securely over HTTPS, using
+port 443.
+
+There are five SDKs available, one for each of C, C#, Java, PowerShell, and
+Python. These are provided under an open-source license (LGPL or GPL with
+the common linking exception). This allows use (unmodified) in both
+closed-and open-source applications.
+
+There are also several example code samples also provided for download. Some
+of the code samples demonstrate creating a VM, running VM power operations,
+and watching for events.
+
+The XenServer 5.6 Feature Pack 1 SDKs are suitable not just for 5.6 FP1
+servers, but for use with all versions of XenServer from 4.0 to 5.6 FP1,
+making it possible to address multiple XenServer versions with a single
+binary. There are, of course, features missing on the older versions, and
+client programs are expected to check host.software_version["product_version"]
+to gracefully fall back when appropriate.
