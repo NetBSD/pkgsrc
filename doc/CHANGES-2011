@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.392 2011/02/16 22:17:50 gls Exp $
+$NetBSD: CHANGES-2011,v 1.393 2011/02/17 09:55:25 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -641,3 +641,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libgee to 0.6.1 [gls 2011-02-16]
 	Updated net/nmap to 5.51 [pettai 2011-02-16]
 	Updated graphics/libraw to 0.13.1 [gls 2011-02-16]
+	Added devel/libxenserver version 5.6.100 [sborrill 2011-02-17]
