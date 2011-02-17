@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10119 2011/02/17 13:56:24 ryoon Exp $
+$NetBSD: TODO,v 1.10120 2011/02/17 22:10:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -414,6 +414,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o baci-20040415
 	o balance-3.54
 	o balsa-2.4.9
+	o bash-4.2
 	o bash-completion-1.1
 	o bbdb-2.35
 	o bbkeys-0.9.0
@@ -517,7 +518,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drupal-7
 	o dspam-3.9.0
 	o dvdisaster-0.72.2
-	o dvdstyler-1.8.2
 	o dvipng-1.14
 	o dvtm-0.6
 	o dwm-5.8.2
@@ -741,6 +741,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
+	o guile-2.0.0
 	o guile-gtk-2.0
 	o gupnp-0.15.1
 	o gworkspace-0.8.8
@@ -801,7 +802,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jdb-1.14
 	o jed-0.99-18
 	o jhead-2.90
-	o john-1.7.6j11
+	o john-1.7.6j12
 	o jools-1.0
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
@@ -873,7 +874,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libflash-0.4.13
 	o libfontenc-1.1.0
 	o libgda-4.2.1 [GNOME 2.32]
-	o libgda-4.2.3
+	o libgda-4.2.4
 	o libgdata-0.8.0
 	o libgiigic-1.1.2
 	o libgnome-2.32.1
@@ -1153,6 +1154,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
+	o readline-6.2
 	o recordproto-1.14.1
 	o redland-1.0.13.1
 	o renderproto-0.11.1
@@ -1450,7 +1452,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xman-1.1.1
 	o xmbdfed-4.6
 	o xmcd-3.3.2
-	o xmlstarlet-1.0.4
+	o xmlstarlet-1.0.5
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
