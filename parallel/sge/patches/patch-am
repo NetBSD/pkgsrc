@@ -1,7 +1,8 @@
-$NetBSD: patch-am,v 1.5 2009/05/13 21:00:25 markd Exp $
+$NetBSD: patch-am,v 1.6 2011/02/17 08:55:11 markd Exp $
 
 Pkgsrc stuff
 GridEngine dev mailing list patch for "nbsd-1" issue
+ArchLinux static crypto also needs libz.a
 
 --- source/aimk.orig	2009-02-17 22:27:39.000000000 +1300
 +++ source/aimk
@@ -47,7 +48,16 @@ GridEngine dev mailing list patch for "nbsd-1" issue
     set XLFLAGS  = "$XLIBD"
     set XLIBS    = " -lXm -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
     set RM       = "rm -f"
-@@ -1875,6 +1875,12 @@ default:
+@@ -1376,6 +1376,8 @@ case LINUXSPARC64:
+       set DEBUG_FLAG = "$DEBUG_FLAG -fprofile-arcs -ftest-coverage"
+    endif
+ 
++   set SECLIBS_STATIC = "$SECLIBS_STATIC /usr/lib/libz.a"
++
+    if ( -f /lib/libc.so.6 ) then
+       strings /lib/libc.so.6 | grep "GNU C Library" | grep '2.[234]' >& /dev/null
+       if ($status == 0) then
+@@ -1875,6 +1877,12 @@ default:
  endsw
  
  set DEPEND_FLAGS = "`echo $DEPEND_FLAGS | sed -e 's/-[^DI][^ ]*//g'`"
