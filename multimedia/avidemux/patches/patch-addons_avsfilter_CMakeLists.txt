@@ -1,0 +1,14 @@
+$NetBSD: patch-addons_avsfilter_CMakeLists.txt,v 1.1 2011/02/17 09:20:17 markd Exp $
+
+Dont assume tar will automatically uncompress
+
+--- addons/avsfilter/CMakeLists.txt.orig	2010-09-09 14:36:36.000000000 +0000
++++ addons/avsfilter/CMakeLists.txt
+@@ -4,6 +4,6 @@ IF (NOT WIN32)
+     set(addonesInstallDir ${CMAKE_INSTALL_PREFIX}/share/ADM_addons/avsfilter)
+     set(tempAvsFilterUnpackDir ${CMAKE_BINARY_DIR}/addons/avsfilter)
+     find_package(Tar)
+-    execute_process(COMMAND ${TAR_EXECUTABLE} xvf ${AVSFILTER_WINE_BINARY_ARCHIVE} -C ${tempAvsFilterUnpackDir})
++    execute_process(COMMAND ${TAR_EXECUTABLE} jxvf ${AVSFILTER_WINE_BINARY_ARCHIVE} -C ${tempAvsFilterUnpackDir})
+     install(FILES ${tempAvsFilterUnpackDir}/avsload.exe ${tempAvsFilterUnpackDir}/pipe_source.dll DESTINATION ${addonesInstallDir})
+ endif (NOT WIN32)
