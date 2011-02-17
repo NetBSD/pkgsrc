@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2009/02/24 16:09:39 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2011/02/17 09:20:17 markd Exp $
 
---- avidemux/ADM_script/ADM_JSFunctions.cpp.orig	2008-07-24 11:49:40.000000000 +0000
+--- avidemux/ADM_script/ADM_JSFunctions.cpp.orig	2010-08-02 19:07:48.000000000 +0000
 +++ avidemux/ADM_script/ADM_JSFunctions.cpp
-@@ -372,7 +372,9 @@ JSBool systemExecute(JSContext *cx, JSOb
+@@ -377,7 +377,9 @@ JSBool systemExecute(JSContext *cx, JSOb
  	// clear file descriptor table of forked process and fork
- #if defined( __linux__) || defined(__macosx__) || defined(__APPLE__)
+ #if defined( __linux__) || defined(__macosx__) || defined(__APPLE__) || defined(__CYGWIN__)
  	pid_t pidRtn = fork();
 -#elif defined(__FreeBSD__) || defined(__OpenBSD__)
 +#elif defined(__NetBSD__)
