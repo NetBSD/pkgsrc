@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/02/17 08:38:56 markd Exp $
 bin/ipmitool
 man/man1/ipmitool.1
 man/man8/ipmievd.8
@@ -7,15 +7,4 @@ share/doc/ipmitool/AUTHORS
 share/doc/ipmitool/COPYING
 share/doc/ipmitool/ChangeLog
 share/doc/ipmitool/README
-share/examples/ipmitool/README
-share/examples/ipmitool/bmclanconf
-share/examples/ipmitool/collect_data.sh
-share/examples/ipmitool/create_rrds.sh
-share/examples/ipmitool/create_webpage.sh
-share/examples/ipmitool/create_webpage_compact.sh
-share/examples/ipmitool/ipmi.init.basic
-share/examples/ipmitool/ipmi.init.redhat
-share/examples/ipmitool/ipmievd.init.debian
-share/examples/ipmitool/ipmievd.init.redhat
-share/examples/ipmitool/ipmievd.init.suse
 share/examples/ipmitool/oem_ibm_sel_map
