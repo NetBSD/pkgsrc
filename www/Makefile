@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.782 2011/02/11 16:51:21 drochner Exp $
+# $NetBSD: Makefile,v 1.783 2011/02/17 18:10:02 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -522,6 +522,7 @@ SUBDIR+=	py-blosxom
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
 SUBDIR+=	py-django
+SUBDIR+=	py-django-appmedia
 SUBDIR+=	py-django-classy-tags
 SUBDIR+=	py-django-cms
 SUBDIR+=	py-django-registration
