@@ -1,31 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2010/05/17 16:22:59 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2011/02/17 10:33:37 markd Exp $
 
---- setupext.py.orig	2008-12-10 14:53:21.000000000 +1300
+--- setupext.py.orig	2010-07-07 01:41:55.000000000 +0000
 +++ setupext.py
-@@ -99,10 +99,10 @@ options = {'display_status': True,
-            'provide_pytz': 'auto',
-            'provide_dateutil': 'auto',
-            'build_agg': True,
--           'build_gtk': 'auto',
--           'build_gtkagg': 'auto',
--           'build_tkagg': 'auto',
--           'build_wxagg': 'auto',
-+           'build_gtk': False,
-+           'build_gtkagg': False,
-+           'build_tkagg': False,
-+           'build_wxagg': False,
-            'build_macosx': 'auto',
-            'build_image': True,
-            'build_windowing': True,
-@@ -315,11 +315,8 @@ def check_for_libpng():
+@@ -344,11 +344,8 @@ def check_for_libpng():
      return True
  
  def add_base_flags(module):
 -    incdirs = filter(os.path.exists,
--                     [os.path.join(p, 'include') for p in basedir[sys.platform] ])
+-                     [os.path.join(p, 'include') for p in basedirlist ])
 -    libdirs = filter(os.path.exists,
--                     [os.path.join(p, 'lib')     for p in basedir[sys.platform] ]+
--                     [os.path.join(p, 'lib64')     for p in basedir[sys.platform] ] )
+-                     [os.path.join(p, 'lib')     for p in basedirlist ]+
+-                     [os.path.join(p, 'lib64')     for p in basedirlist ] )
 +    incdirs = [os.path.join(os.environ['LOCALBASE'], 'include')]
 +    libdirs = [os.path.join(os.environ['LOCALBASE'], 'lib')]
  
