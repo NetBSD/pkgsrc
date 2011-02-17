@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2011/01/13 13:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2011/02/17 10:33:37 markd Exp $
 #
 
-DISTNAME=		matplotlib-0.99.1.2
+DISTNAME=		matplotlib-1.0.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
 
@@ -16,11 +15,19 @@ DEPENDS+=		${PYPKGPREFIX}-dateutil>=1.2:../../time/py-dateutil
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=	${WRKDIR}/matplotlib-0.99.1.1
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+
+post-patch:
+	( echo "[directories]"; \
+	echo "basedirlist=/usr"; \
+	echo "[gui_support]"; \
+	echo "gtk = False"; \
+	echo "gtkagg = False"; \
+	echo "tkagg = False"; \
+	echo "wxagg = False" ) > ${WRKSRC}/setup.cfg
 
 .include "../../lang/python/extension.mk"
 
