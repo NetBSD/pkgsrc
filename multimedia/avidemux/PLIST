@@ -1,18 +1,47 @@
-@comment $NetBSD: PLIST,v 1.8 2009/01/27 00:56:41 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/02/17 09:20:17 markd Exp $
 bin/avidemux2_cli
 bin/avidemux2_gtk
+lib/libADM5avcodec.so.52
+lib/libADM5avcore.so.0
+lib/libADM5avformat.so.52
+lib/libADM5avutil.so.50
+lib/libADM5postproc.so.51
+lib/libADM5swscale.so.0
+lib/libADM_UICli.so
+lib/libADM_UIGtk.so
+lib/libADM_core.so
+lib/libADM_coreAudio.so
+lib/libADM_coreImage.so
+lib/libADM_coreUI.so
+lib/libADM_render_cli.so
+lib/libADM_render_gtk.so
+share/ADM_addons/avsfilter/avsload.exe
+share/ADM_addons/avsfilter/pipe_source.dll
+share/ADM_scripts/auto/Apple iPod.js
+share/ADM_scripts/auto/Optical Disc/DVD.js
+share/ADM_scripts/auto/Optical Disc/Super Video CD.js
+share/ADM_scripts/auto/Optical Disc/Video CD.js
+share/ADM_scripts/auto/Sony PlayStation Portable.js
+share/ADM_scripts/video/autoWizard.js
+share/ADM_scripts/video/filter.js
+share/ADM_scripts/video/functions.js
 share/applications/avidemux2.desktop
 share/icons/hicolor/64x64/apps/avidemux.png
+share/locale/bg/LC_MESSAGES/avidemux.mo
 share/locale/ca/LC_MESSAGES/avidemux.mo
 share/locale/cs/LC_MESSAGES/avidemux.mo
 share/locale/de/LC_MESSAGES/avidemux.mo
 share/locale/el/LC_MESSAGES/avidemux.mo
 share/locale/es/LC_MESSAGES/avidemux.mo
 share/locale/fr/LC_MESSAGES/avidemux.mo
+share/locale/hu/LC_MESSAGES/avidemux.mo
 share/locale/it/LC_MESSAGES/avidemux.mo
 share/locale/ja/LC_MESSAGES/avidemux.mo
+share/locale/pl/LC_MESSAGES/avidemux.mo
 share/locale/pt_BR/LC_MESSAGES/avidemux.mo
 share/locale/ru/LC_MESSAGES/avidemux.mo
 share/locale/sr/LC_MESSAGES/avidemux.mo
 share/locale/sr@latin/LC_MESSAGES/avidemux.mo
 share/locale/tr/LC_MESSAGES/avidemux.mo
+share/locale/zh_CN/LC_MESSAGES/avidemux.mo
+share/locale/zh_TW/LC_MESSAGES/avidemux.mo

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2008/09/18 13:23:03 joerg Exp $
+$NetBSD: patch-plugins_ADM_audioDevices_Oss_ADM_deviceoss.cpp,v 1.1 2011/02/17 09:20:17 markd Exp $
 
---- avidemux/ADM_audiodevice/ADM_deviceoss.cpp.orig	2007-09-25 22:01:54 +0300
-+++ avidemux/ADM_audiodevice/ADM_deviceoss.cpp	2008-09-18 14:08:20 +0300
+--- plugins/ADM_audioDevices/Oss/ADM_deviceoss.cpp.orig	2007-09-25 22:01:54 +0300
++++ plugins/ADM_audioDevices/Oss/ADM_deviceoss.cpp	2008-09-18 14:08:20 +0300
 @@ -26,9 +26,10 @@
  #include <fcntl.h>
  #include <sys/ioctl.h>
