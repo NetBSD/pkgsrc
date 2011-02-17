@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2009/06/22 18:29:33 drochner Exp $
+$NetBSD: patch-ab,v 1.14 2011/02/17 08:46:50 markd Exp $
 
 --- Imakefile.orig	2009-03-30 17:53:05.000000000 +0200
 +++ Imakefile
@@ -65,7 +65,7 @@ $NetBSD: patch-ab,v 1.13 2009/06/22 18:29:33 drochner Exp $
  
  XCOMM use (and change) the following if you want the multi-key data base file
  XCOMM somewhere other than the standard X11 library directory
-@@ -173,7 +176,7 @@ XFIGLIBDIR = $(LIBDIR)/xfig
+@@ -173,11 +176,11 @@ XFIGLIBDIR = $(LIBDIR)/xfig
  
  XCOMM XFIGDOCDIR tells where the html and pdf documentation should go
  XCOMM XFIGDOCDIR = $(DOCDIR)/xfig
@@ -74,6 +74,11 @@ $NetBSD: patch-ab,v 1.13 2009/06/22 18:29:33 drochner Exp $
  
  XCOMM MANDIR tells where the standard man pages should go (no need to change it
  XCOMM if you want the man pages installed in the standard place on your system
+-MANDIR = $(MANSOURCEPATH)$(MANSUFFIX)
++XCOMM MANDIR = $(MANSOURCEPATH)$(MANSUFFIX)
+ XCOMM MANDIR = /usr/local/xfig/man
+ 
+ XCOMM If your system doesn't have strstr undefine the following definition
 @@ -241,7 +244,7 @@ INSTDATFLAGS = -m 0644
  #ifdef USEJPEG
  
