@@ -1,10 +1,29 @@
-$NetBSD: patch-ak,v 1.6 2009/05/13 21:00:25 markd Exp $
+$NetBSD: patch-ak,v 1.7 2011/02/17 08:55:11 markd Exp $
 
 Add LDFLAGS
+replace $(COMMLISTSLIB) with -lcommlists so that pkgsrc wrapper
+doesnt reorder.
 
---- source/utilbin/Makefile.orig	2009-02-11 22:27:33.000000000 +1300
+--- source/utilbin/Makefile.orig	2009-02-11 09:27:33.000000000 +0000
 +++ source/utilbin/Makefile
-@@ -145,7 +145,7 @@ read_raw.o:		$(UTILBIN_DIR)/read_raw.c
+@@ -117,14 +117,14 @@ gethostbyaddr.o:	$(UTILBIN_DIR)/gethostb
+ 
+ #---------------------------------------------------------------------
+ getservbyname:	getservbyname.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) $(CFLAGS) -o $@ $(LFLAGS) getservbyname.o version.o -luti $(WINGRIDLIB) $(COMMLISTSLIB) -llck -lrmon $(DLLIB) $(LIBS)
++		$(CC) $(CFLAGS) -o $@ $(LFLAGS) getservbyname.o version.o -luti $(WINGRIDLIB) -lcommlists -llck -lrmon $(DLLIB) $(LIBS)
+ 
+ getservbyname.o:	$(UTILBIN_DIR)/getservbyname.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/getservbyname.c
+ 
+ #---------------------------------------------------------------------
+ filestat:	filestat.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) $(CFLAGS) -o $@ $(LFLAGS) filestat.o version.o -luti $(WINGRIDLIB) -llck -lrmon $(COMMLISTSLIB) $(LIBS)
++		$(CC) $(CFLAGS) -o $@ $(LFLAGS) filestat.o version.o -luti $(WINGRIDLIB) -llck -lrmon -lcommlists $(LIBS)
+ 
+ filestat.o:	$(UTILBIN_DIR)/filestat.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/filestat.c
+@@ -145,28 +145,28 @@ read_raw.o:		$(UTILBIN_DIR)/read_raw.c
  
  #---------------------------------------------------------------------
  echo_raw:		echo_raw.o version.o $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
@@ -13,6 +32,55 @@ Add LDFLAGS
  
  echo_raw.o:		$(UTILBIN_DIR)/echo_raw.c
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/echo_raw.c
+ 
+ #---------------------------------------------------------------------
+ checkprog:	checkprog.o peopen_standalone.o pids_standalone.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(COMMLISTSLIB) $(LCKLIB) $(RMONLIB)
+-		$(CC) $(CFLAGS) -o $@ $(LFLAGS) checkprog.o peopen_standalone.o pids_standalone.o version.o -luti $(WINGRIDLIB) $(COMMLISTSLIB) -llck -lrmon $(LIBS) $(DLLIB)
++		$(CC) $(CFLAGS) -o $@ $(LFLAGS) checkprog.o peopen_standalone.o pids_standalone.o version.o -luti $(WINGRIDLIB) -lcommlists -llck -lrmon $(LIBS) $(DLLIB)
+ 
+ checkprog.o:	$(UTILBIN_DIR)/checkprog.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/checkprog.c
+ 
+ #---------------------------------------------------------------------
+ checkuser:     checkuser.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) $(CFLAGS) -o $@ $(LFLAGS) checkuser.o version.o -luti $(WINGRIDLIB) -llck -lrmon $(COMMLISTSLIB) $(LIBS)
++		$(CC) $(CFLAGS) -o $@ $(LFLAGS) checkuser.o version.o -luti $(WINGRIDLIB) -llck -lrmon -lcommlists $(LIBS)
+ 
+ checkuser.o:      $(UTILBIN_DIR)/checkuser.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/checkuser.c
+ 
+ #---------------------------------------------------------------------
+ adminrun:   adminrun.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) -o $@ $(LFLAGS) adminrun.o version.o -luti $(WINGRIDLIB) -llck -lrmon $(COMMLISTSLIB) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) adminrun.o version.o -luti $(WINGRIDLIB) -llck -lrmon -lcommlists $(LIBS)
+ 
+ adminrun.o: $(UTILBIN_DIR)/adminrun.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/adminrun.c
+@@ -187,7 +187,7 @@ signals.o:	$(UTILBIN_DIR)/signals.c
+ 
+ #---------------------------------------------------------------------
+ loadcheck:	loadcheck.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) -o $@ $(LFLAGS) loadcheck.o version.o -luti $(WINGRIDLIB) -llck -lrmon $(COMMLISTSLIB) $(LOADAVGLIBS) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) loadcheck.o version.o -luti $(WINGRIDLIB) -llck -lrmon -lcommlists $(LOADAVGLIBS) $(LIBS)
+ 
+ loadcheck.o:	$(UTILBIN_DIR)/loadcheck.c 
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/loadcheck.c
+@@ -202,13 +202,13 @@ loadcheck.obj: $(UTILBIN_DIR)/loadcheck.
+ 
+ #---------------------------------------------------------------------
+ languagetest:   languagetest.o version.o  $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) -o $@ $(LFLAGS) languagetest.o version.o -luti $(WINGRIDLIB) $(COMMLISTSLIB) -llck -lrmon $(LIBS)
++		$(CC) -o $@ $(LFLAGS) languagetest.o version.o -luti $(WINGRIDLIB) -lcommlists -llck -lrmon $(LIBS)
+ 
+ languagetest.o: $(UTILBIN_DIR)/languagetest.c
+ 		$(CC) $(CFLAGS) $(GCC_NODUPLWARN) -c $(UTILBIN_DIR)/languagetest.c
+ #---------------------------------------------------------------------
+ infotext:   infotext.o  version.o $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) -o $@ $(LFLAGS) infotext.o version.o -luti $(WINGRIDLIB) $(COMMLISTSLIB) -llck -lrmon $(LIBS)
++		$(CC) -o $@ $(LFLAGS) infotext.o version.o -luti $(WINGRIDLIB) -lcommlists -llck -lrmon $(LIBS)
+ 
+ infotext.o: $(UTILBIN_DIR)/infotext.c
+ 		$(CC) $(CFLAGS) $(GCC_NODUPLWARN) -c $(UTILBIN_DIR)/infotext.c
 @@ -221,7 +221,7 @@ fstype.o: $(UTILBIN_DIR)/fstype.c
  		$(CC) $(CFLAGS) $(MEMCFLAG) $(GCC_NODUPLWARN) -c $(UTILBIN_DIR)/fstype.c
  #---------------------------------------------------------------------
