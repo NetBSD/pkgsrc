@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/06/02 13:27:39 adam Exp $
+# $NetBSD: Makefile,v 1.39 2011/02/17 08:55:11 markd Exp $
 #
 
 PKGNAME=		sge-6.2.2.1
@@ -49,6 +49,8 @@ REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
 REPLACE_FILES.tclsh=	source/dist/util/resources/jsv/jsv.tcl
 REPLACE_PERL+=		source/dist/util/resources/jsv/jsv.pl
 
+CHECK_INTERPRETER_SKIP+=	sge/ckpt/cpr_* sge/mpi/myrinet/* sge/util/resources/loadsensors/interix-loadsensor.sh
+
 .include "../../mk/bsd.prefs.mk"
 
 # SGE_ARCH should match the putput of ${WRKSRC}/source/dist/util/arch
@@ -78,6 +80,10 @@ SGE_BUILDARCH_cmd=	${ECHO} "${SGE_ARCH}" | ${TR} a-z A-Z
 .elif ${OPSYS} == "Darwin"
 SGE_ARCH=		darwin
 SGE_BUILDARCH=		DARWIN
+.elif ${OPSYS} == "Linux"
+AIMK+=			-no-dump
+SGE_ARCH=		lx26-x86
+SGE_BUILDARCH=		LINUX86
 .else
 PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
 .endif
