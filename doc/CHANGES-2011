@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.393 2011/02/17 09:55:25 sborrill Exp $
+$NetBSD: CHANGES-2011,v 1.394 2011/02/17 10:40:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -642,3 +642,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/nmap to 5.51 [pettai 2011-02-16]
 	Updated graphics/libraw to 0.13.1 [gls 2011-02-16]
 	Added devel/libxenserver version 5.6.100 [sborrill 2011-02-17]
+	Updated devel/kdbg to 2.2.2 [markd 2011-02-17]
+	Updated sysutils/ipmitool to 1.8.11 [markd 2011-02-17]
+	Updated multimedia/avidemux to 2.5.4 [markd 2011-02-17]
+	Updated graphics/py-matplotlib to 1.0.1 [markd 2011-02-17]
+	Updated graphics/py-matplotlib-tk to 1.0.1 [markd 2011-02-17]
+	Updated graphics/py-matplotlib-gtk2 to 1.0.1 [markd 2011-02-17]
