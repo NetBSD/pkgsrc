@@ -1,17 +1,19 @@
-$NetBSD: distinfo,v 1.20 2009/06/07 11:49:25 hasso Exp $
+$NetBSD: distinfo,v 1.21 2011/02/17 09:20:17 markd Exp $
 
-SHA1 (avidemux_2.4.4.tar.gz) = c50a00caf13a8ea1053e5994edeb59354192e18e
-RMD160 (avidemux_2.4.4.tar.gz) = 8bb2705b3e2d5379d833ec4fa06a01b897c06e04
-Size (avidemux_2.4.4.tar.gz) = 6894690 bytes
-SHA1 (patch-aa) = f29870ecca511e28ef3bb873026f0bf2421ebc5e
-SHA1 (patch-ab) = 7d0849c2acdd48a5f02738005b17b2b74456e521
-SHA1 (patch-ac) = 268a7df2ac824ebf6413407a235cfd20707f3958
-SHA1 (patch-as) = 9d8edeac752b0e08cec7b37e9357ec49d259b5d6
-SHA1 (patch-at) = 3b31ca6eaddbaffa37d05eee1f889b2d8b73407b
-SHA1 (patch-au) = af3179c26a298dd2c14025db891b8a10ac89fd9a
-SHA1 (patch-av) = 68e40fff1eaa735b9ac36556f308ed9a45316911
-SHA1 (patch-aw) = 2f89f7d2beb7863a831bb7ae6e539ecc2cadcb21
+SHA1 (avidemux_2.5.4.tar.gz) = 83d6f6d87442ce4fc4e4806735ec27ef5e90364c
+RMD160 (avidemux_2.5.4.tar.gz) = e20454a558210d5f7ab1418ae4013b618d1001d9
+Size (avidemux_2.5.4.tar.gz) = 18154965 bytes
+SHA1 (patch-CMakeLists.txt) = e86945a4cf51ae9275f94d2545be4ec3ed711b88
+SHA1 (patch-ab) = 2fb71f3eb3d04503ef6b34bb960a891ba3afa64f
+SHA1 (patch-addons_avsfilter_CMakeLists.txt) = f6b08d7e62f26fdb5a2ab32dd6002303b76e4111
+SHA1 (patch-as) = 391b9f173aaa329ec879cc0ac5a9a2a0ad48a924
+SHA1 (patch-avidemux_ADM_core_src_ADM_cpuCap.cpp) = c344cf9707c2e8dc9f03b6379f749997bf01b22b
+SHA1 (patch-avidemux_ADM_core_src_ADM_crashdump.cpp) = cdbd0419a100601b0c8f125228b2e3bf1c42fd14
+SHA1 (patch-avidemux_ADM_userInterfaces_ADM_render_GUI_sdlRender.cpp) = 334fb6c2195b0e9e294ea461aa88ab9bd4828c53
+SHA1 (patch-avidemux_CMakeLists.txt) = 00b6e92b77af1d575e801a824664921dae067db0
 SHA1 (patch-ax) = 09d676d910dfcccb30b4f73d1a935647492c259a
-SHA1 (patch-ay) = 7bfde827e20a9546d9a533293e6d9519b166bb95
-SHA1 (patch-da) = 162c124bed65bebcc11c77444b249b6c62fb23fd
+SHA1 (patch-cmake_admCheckMiscLibs.cmake) = 2ece918805b2561f2ec47510265aed6352433c42
+SHA1 (patch-cmake_admFFmpegPrepareTar.cmake) = 690039fb2a74f628c905200a5e767da2904f2df3
 SHA1 (patch-db) = f4fd01633de4dc459286158f15d4bc0233b5ca61
+SHA1 (patch-plugins_ADM_audioDevices_Oss_ADM_deviceoss.cpp) = a208e06b9ec8ef11c0a341a9a3bada4ee9380888
+SHA1 (patch-plugins_ADM_audioDevices_Sdl_ADM_deviceSDL.cpp) = 07e0fc94cc5c8e9bdb5a472a4dcf7f0b00ee11e9
