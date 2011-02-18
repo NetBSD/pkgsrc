@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.16 2010/06/16 23:02:48 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.17 2011/02/18 15:59:52 aymeric Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: audit.c,v 1.16 2010/06/16 23:02:48 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.17 2011/02/18 15:59:52 aymeric Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -384,8 +384,15 @@ check_pkg_history_pattern(const char *pkg, const char *pattern)
 {
 	const char *delim, *end_base;
 
-	if ((delim = strchr(pattern, '*')) != NULL) {
-		if ((end_base = strrchr(pattern, '-')) == NULL)
+	if (strpbrk(pattern, "*[") != NULL) {
+		end_base = NULL;
+		for (delim = pattern;
+				*delim != '\0' && *delim != '['; delim++) {
+			if (*delim == '-')
+				end_base = delim;
+		}
+
+		if (end_base == NULL)
 			errx(EXIT_FAILURE, "Missing - in wildcard pattern %s",
 			    pattern);
 		if ((delim = strchr(pattern, '>')) != NULL ||
