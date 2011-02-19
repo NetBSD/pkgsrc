@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2011/01/13 13:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/02/19 09:02:06 markd Exp $
 #
 
 DISTNAME=	cpia2_driver-1.0
 PKGNAME=	cpia2view-0.03
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cpia2/}
 EXTRACT_SUFX=	.tgz
@@ -38,7 +38,7 @@ do-install:
 		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f install ;	\
 	done
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
