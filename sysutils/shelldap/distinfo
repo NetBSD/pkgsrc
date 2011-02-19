@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/03 13:34:10 imil Exp $
+$NetBSD: distinfo,v 1.2 2011/02/19 09:44:32 imil Exp $
 
-SHA1 (tip.zip) = 51edb3d100a28746122f192e88724cbe3d1ca10a
-RMD160 (tip.zip) = 2420519dd022dc86e992e00e8ec095e3c9cd9ccf
-Size (tip.zip) = 12928 bytes
+SHA1 (tip.zip) = 1a67dceca171c9840b2fe78762a35eeb5b7984cb
+RMD160 (tip.zip) = efcb35cb00457a3db9a6286039825db2cafb9499
+Size (tip.zip) = 13062 bytes
