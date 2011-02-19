@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2011/01/13 13:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2011/02/19 09:02:07 markd Exp $
 #
 
 DISTNAME=	ov51x-1.65-1.11-mark
 PKGNAME=	ov519view-0.00
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://alpha.dyndns.org/ov511/download/ov51x/
 EXTRACT_SUFX=	.tar.bz2
@@ -35,7 +35,7 @@ do-install:
 		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f install ${INSTALL_MAKE_FLAGS};    \
 	done
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

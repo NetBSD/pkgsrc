@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/01/13 13:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/02/19 09:02:07 markd Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
 PKGNAME=	qcamview-0.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qce-ga/}
 
@@ -34,7 +34,7 @@ do-install:
 		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f install ${INSTALL_MAKE_FLAGS} ;	\
 	done
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

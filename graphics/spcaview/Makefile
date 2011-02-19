@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2011/01/13 13:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2011/02/19 09:02:07 markd Exp $
 #
 
 DISTNAME=	spca5xx-20060402
 PKGNAME=	spcaview-0.6b
-#PKGREVISION=	1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://mxhaard.free.fr/spca50x/Download/oldrelease/
 
@@ -25,7 +24,7 @@ MAKE_ENV+=	${BSD_MAKE_ENV}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
