@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/10/16 04:40:37 kefren Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/02/19 15:33:27 kefren Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
@@ -178,6 +178,7 @@ lib/monodevelop/bin/MonoDevelop.Core.dll.mdb
 lib/monodevelop/bin/MonoDevelop.Ide.dll
 lib/monodevelop/bin/MonoDevelop.Ide.dll.mdb
 lib/monodevelop/bin/MonoDevelop.Projects.Formats.MSBuild.exe
+lib/monodevelop/bin/MonoDevelop.Projects.Formats.MSBuild.exe.config
 lib/monodevelop/bin/MonoDevelop.Projects.Formats.MSBuild.exe.mdb
 lib/monodevelop/bin/MonoDevelop.exe
 lib/monodevelop/bin/MonoDevelop.exe.addins
