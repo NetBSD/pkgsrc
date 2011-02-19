@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.405 2011/02/19 09:22:00 markd Exp $
+$NetBSD: CHANGES-2011,v 1.406 2011/02/19 09:45:12 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -659,3 +659,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed print/tex-hlatex successor print/tex-kotex [minskim 2011-02-19]
 	Added fonts/tex-avantgar version 2010 [minskim 2011-02-19]
 	Added graphics/imlib-gtk version 1.9.15 [markd 2011-02-19]
+	Updated sysutils/shelldap to 0.4 [imil 2011-02-19]
