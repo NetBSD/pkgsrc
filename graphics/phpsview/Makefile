@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2011/01/13 13:38:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2011/02/19 09:02:07 markd Exp $
 #
 
 DISTNAME=	pwc-9.0.2
 PKGNAME=	phpsview-${DISTNAME:C/.*-//}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.smcc.demon.nl/webcam/
 
@@ -31,7 +31,7 @@ do-install:
 		${INSTALL_PROGRAM} $$f ${DESTDIR}${PREFIX}/bin;	\
 	done
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

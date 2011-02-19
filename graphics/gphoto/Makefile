@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2011/01/13 13:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2011/02/19 09:02:06 markd Exp $
 
 DISTNAME=	gphoto-0.4.3
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics
 #MASTER_SITES=	http://www.gphoto.net/dist/
 
@@ -17,5 +17,5 @@ USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		yes
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
