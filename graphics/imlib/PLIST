@@ -1,26 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:59:18 joerg Exp $
-bin/imlib_config
+@comment $NetBSD: PLIST,v 1.11 2011/02/19 08:51:25 markd Exp $
 bin/imlib-config
-include/gdk_imlib.h
-include/gdk_imlib_private.h
-include/gdk_imlib_types.h
 include/Imlib.h
 include/Imlib_private.h
 include/Imlib_types.h
 lib/libImlib.la
-lib/libgdk_imlib.la
-lib/libimlib-bmp.la
-lib/libimlib-gif.la
-lib/libimlib-jpeg.la
-lib/libimlib-png.la
-lib/libimlib-ppm.la
-lib/libimlib-ps.la
-lib/libimlib-tiff.la
-lib/libimlib-xpm.la
 lib/pkgconfig/imlib.pc
 lib/pkgconfig/imlibgdk.pc
 man/man1/imlib-config.1
-man/man1/imlib_config.1
 share/aclocal/imlib.m4
 share/doc/imlib/bg.gif
 share/doc/imlib/border_diag.gif
@@ -31,7 +17,7 @@ share/doc/imlib/curve1.gif
 share/doc/imlib/curve2.gif
 share/doc/imlib/imlib.gif
 share/doc/imlib/index.html
-share/examples/imlib/imrc
-share/examples/imlib/im_palette.pal
 share/examples/imlib/im_palette-small.pal
 share/examples/imlib/im_palette-tiny.pal
+share/examples/imlib/im_palette.pal
+share/examples/imlib/imrc
