@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10121 2011/02/18 23:56:48 shattered Exp $
+$NetBSD: TODO,v 1.10122 2011/02/19 02:36:46 obache Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.1
 	o angband-3.2
+	o ami-1.2.3
 	o anjuta-2.32.1.1 [GNOME 2.32]
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o antiright-8.6
