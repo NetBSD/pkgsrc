@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.406 2011/02/19 09:45:12 imil Exp $
+$NetBSD: CHANGES-2011,v 1.407 2011/02/19 13:08:34 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -660,3 +660,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-avantgar version 2010 [minskim 2011-02-19]
 	Added graphics/imlib-gtk version 1.9.15 [markd 2011-02-19]
 	Updated sysutils/shelldap to 0.4 [imil 2011-02-19]
+	Updated lang/parrot to 3.1.0 [he 2011-02-19]
