@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2011/02/17 09:20:17 markd Exp $
+# $NetBSD: Makefile,v 1.64 2011/02/19 09:46:55 wiz Exp $
 #
 
 DISTNAME=	avidemux_2.5.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://download.berlios.de/avidemux/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fixounet.free.fr/avidemux/
 COMMENT=	Graphical video editing program
+
+BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
