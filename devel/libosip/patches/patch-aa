@@ -1,37 +1,37 @@
-$NetBSD: patch-aa,v 1.4 2008/11/11 22:02:42 schwarz Exp $
+$NetBSD: patch-aa,v 1.5 2011/02/19 17:02:57 schwarz Exp $
 
---- src/osip2/port_sema.c.orig	2008-11-10 22:22:41.000000000 +0100
-+++ src/osip2/port_sema.c	2008-11-10 22:24:06.000000000 +0100
-@@ -236,7 +236,6 @@
- struct osip_sem *
- osip_sem_init (unsigned int value)
- {
--  union semun val;
-   int i;
-   osip_sem_t *sem = (osip_sem_t *) osip_malloc (sizeof (osip_sem_t));
+--- src/osip2/port_sema.c.orig	2011-01-28 23:06:14.000000000 +0100
++++ src/osip2/port_sema.c	2011-01-28 23:08:19.000000000 +0100
+@@ -281,7 +281,6 @@
  
-@@ -250,8 +249,7 @@
-       osip_free (sem);
-       return NULL;
-     }
--  val.val = (int) value;
--  i = semctl (sem->semid, 0, SETVAL, val);
-+  i = semctl (sem->semid, 0, SETVAL, value);
-   if (i != 0)
-     {
-       perror ("semctl error");
-@@ -264,13 +262,11 @@
- int
- osip_sem_destroy (struct osip_sem *_sem)
+ struct osip_sem *osip_sem_init(unsigned int value)
  {
--  union semun val;
-   osip_sem_t *sem = (osip_sem_t *) _sem;
+-	union semun val;
+ 	int i;
+ 	osip_sem_t *sem = (osip_sem_t *) osip_malloc(sizeof(osip_sem_t));
  
-   if (sem == NULL)
-     return OSIP_SUCCESS;
--  val.val = 0;
--  semctl (sem->semid, 0, IPC_RMID, val);
-+  semctl (sem->semid, 0, IPC_RMID, 0);
-   osip_free (sem);
-   return OSIP_SUCCESS;
+@@ -294,8 +293,7 @@
+ 		osip_free(sem);
+ 		return NULL;
+ 	}
+-	val.val = (int) value;
+-	i = semctl(sem->semid, 0, SETVAL, val);
++	i = semctl(sem->semid, 0, SETVAL, value);
+ 	if (i != 0) {
+ 		perror("semctl error");
+ 		osip_free(sem);
+@@ -306,13 +304,11 @@
+ 
+ int osip_sem_destroy(struct osip_sem *_sem)
+ {
+-	union semun val;
+ 	osip_sem_t *sem = (osip_sem_t *) _sem;
+ 
+ 	if (sem == NULL)
+ 		return OSIP_SUCCESS;
+-	val.val = 0;
+-	semctl(sem->semid, 0, IPC_RMID, val);
++	semctl(sem->semid, 0, IPC_RMID, 0);
+ 	osip_free(sem);
+ 	return OSIP_SUCCESS;
  }
