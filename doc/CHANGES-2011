@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.407 2011/02/19 13:08:34 he Exp $
+$NetBSD: CHANGES-2011,v 1.408 2011/02/19 15:34:26 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -661,3 +661,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/imlib-gtk version 1.9.15 [markd 2011-02-19]
 	Updated sysutils/shelldap to 0.4 [imil 2011-02-19]
 	Updated lang/parrot to 3.1.0 [he 2011-02-19]
+	Updated devel/monodevelop to 2.4.2 [kefren 2011-02-19]
