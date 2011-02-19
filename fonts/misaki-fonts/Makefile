@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/26 13:55:48 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/19 13:11:24 ryoon Exp $
 
 DISTNAME=		misaki_bdf_b11a
 PKGNAME=		${DISTNAME:S/misaki_bdf_b/misaki-fonts-0beta/}
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://www.geocities.jp/littlimi/arc/misaki/
 
-MAINTAINER=		ryo_on@yk.rim.or.jp
+MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.geocities.jp/littlimi/misaki.htm
 COMMENT=		8x8 dots X11 bitmap font for JIS X 0208
 #LICENSE=		M+ FONTS License
