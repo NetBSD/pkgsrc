@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2009/12/18 18:54:24 drochner Exp $
+# $NetBSD: options.mk,v 1.6 2011/02/19 00:55:31 jmcneill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libgcrypt
 PKG_SUPPORTED_OPTIONS=	idea
@@ -11,7 +11,10 @@ PKG_SUPPORTED_OPTIONS=	idea
 # cipher/rijndael.c:do_padlock()
 .  if empty(CC_VERSION:Mgcc-3.*)
 PKG_SUPPORTED_OPTIONS+=	via-padlock
+# With GCC 4.1.3 on NetBSD, do_padlock() crashes with signal 11
+.    if ${OPSYS} != "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	via-padlock
+.    endif
 .  endif
 .endif
 
