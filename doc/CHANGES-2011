@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.402 2011/02/19 00:42:40 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.403 2011/02/19 01:18:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -656,3 +656,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/abook to 0.6.0rc2 [shattered 2011-02-18]
 	Updated print/tex-amsmath to 2.13nb2 [minskim 2011-02-19]
 	Updated devel/pvs to 3.2nb3 [minskim 2011-02-19]
+	Removed print/tex-hlatex successor print/tex-kotex [minskim 2011-02-19]
