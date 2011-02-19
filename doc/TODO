@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10125 2011/02/19 16:21:00 wiz Exp $
+$NetBSD: TODO,v 1.10126 2011/02/19 17:05:14 schwarz Exp $
 
 Suggested new packages
 ======================
@@ -893,7 +893,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnids-1.24
 	o libnotify-0.7.1
 	o liboobs-2.32.0 [GNOME 2.32]
-	o libosip-3.5.0
 	o libpciaccess-0.12.1
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
