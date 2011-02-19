@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2011/01/13 13:40:06 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2011/02/19 09:06:33 markd Exp $
 
 DISTNAME=	ruby-gtk-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-gtk-${VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	x11 ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-gnome/}
 
@@ -31,5 +31,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${RUBY_EG}/gtk/testgtk
 
 .include "../../lang/ruby/modules.mk"
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
