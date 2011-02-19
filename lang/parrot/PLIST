@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/01/30 10:52:09 he Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/02/19 13:07:48 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -41,12 +41,8 @@ include/parrot/${PKGVERSION}/parrot/has_header.h
 include/parrot/${PKGVERSION}/parrot/hash.h
 include/parrot/${PKGVERSION}/parrot/hll.h
 include/parrot/${PKGVERSION}/parrot/imageio.h
-include/parrot/${PKGVERSION}/parrot/imcc.h
 include/parrot/${PKGVERSION}/parrot/interpreter.h
 include/parrot/${PKGVERSION}/parrot/io.h
-include/parrot/${PKGVERSION}/parrot/io_portable.h
-include/parrot/${PKGVERSION}/parrot/io_unix.h
-include/parrot/${PKGVERSION}/parrot/io_win32.h
 include/parrot/${PKGVERSION}/parrot/key.h
 include/parrot/${PKGVERSION}/parrot/library.h
 include/parrot/${PKGVERSION}/parrot/list.h
@@ -66,9 +62,7 @@ include/parrot/${PKGVERSION}/parrot/opsenum.h
 include/parrot/${PKGVERSION}/parrot/packfile.h
 include/parrot/${PKGVERSION}/parrot/parrot.h
 include/parrot/${PKGVERSION}/parrot/pbcversion.h
-include/parrot/${PKGVERSION}/parrot/platform.h
 include/parrot/${PKGVERSION}/parrot/platform_interface.h
-include/parrot/${PKGVERSION}/parrot/platform_limits.h
 include/parrot/${PKGVERSION}/parrot/pmc.h
 include/parrot/${PKGVERSION}/parrot/pmc_freeze.h
 include/parrot/${PKGVERSION}/parrot/pobj.h
@@ -83,7 +77,6 @@ include/parrot/${PKGVERSION}/parrot/stat.h
 include/parrot/${PKGVERSION}/parrot/string.h
 include/parrot/${PKGVERSION}/parrot/string_funcs.h
 include/parrot/${PKGVERSION}/parrot/sub.h
-include/parrot/${PKGVERSION}/parrot/sysmem.h
 include/parrot/${PKGVERSION}/parrot/thr_pthread.h
 include/parrot/${PKGVERSION}/parrot/thr_windows.h
 include/parrot/${PKGVERSION}/parrot/thread.h
@@ -337,8 +330,6 @@ lib/parrot/${PKGVERSION}/library/ProfTest/Matcher.nqp
 lib/parrot/${PKGVERSION}/library/ProfTest/NQPProfile.nqp
 lib/parrot/${PKGVERSION}/library/ProfTest/PIRProfile.nqp
 lib/parrot/${PKGVERSION}/library/ProfTest/Want.nqp
-lib/parrot/${PKGVERSION}/library/Protoobject.pbc
-lib/parrot/${PKGVERSION}/library/Protoobject.pir
 lib/parrot/${PKGVERSION}/library/Range.pbc
 lib/parrot/${PKGVERSION}/library/Range.pir
 lib/parrot/${PKGVERSION}/library/Regex.pbc
@@ -409,6 +400,8 @@ lib/parrot/${PKGVERSION}/library/YAML/Dumper.pbc
 lib/parrot/${PKGVERSION}/library/YAML/Dumper.pir
 lib/parrot/${PKGVERSION}/library/YAML/Dumper/Base.pir
 lib/parrot/${PKGVERSION}/library/YAML/Dumper/Default.pir
+lib/parrot/${PKGVERSION}/library/YAML/Tiny.pbc
+lib/parrot/${PKGVERSION}/library/YAML/Tiny.pm
 lib/parrot/${PKGVERSION}/library/config.pbc
 lib/parrot/${PKGVERSION}/library/config.pir
 lib/parrot/${PKGVERSION}/library/distutils.pbc
@@ -511,24 +504,20 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Install.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Manifest.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/PMC.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Attribute.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/ComposedMethod.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Dumper.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Emitter.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Library.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/MULTI.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Method.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/MethodEmitter.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Object.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PCCMETHOD.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PCCMETHOD_BITS.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC/Null.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC/Object.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC/ParrotClass.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC/PrintTree.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC/RO.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC/default.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMCEmitter.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Parser.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Pmc2cMain.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/UtilFunctions.pm
@@ -547,7 +536,6 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Util/Runloop.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Vtable.pm
 lib/pkgconfig/parrot/${PKGVERSION}/parrot.pc
 share/doc/parrot/${PKGVERSION}/CREDITS
-share/doc/parrot/${PKGVERSION}/DEPRECATED.pod
 share/doc/parrot/${PKGVERSION}/DONORS.pod
 share/doc/parrot/${PKGVERSION}/LICENSE
 share/doc/parrot/${PKGVERSION}/NEWS
