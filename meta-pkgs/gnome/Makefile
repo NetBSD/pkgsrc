@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2010/02/10 19:17:41 joerg Exp $
+# $NetBSD: Makefile,v 1.124 2011/02/19 00:43:10 jmcneill Exp $
 
 DISTNAME=	gnome-2.26.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -45,6 +45,7 @@ DEPENDS+=	gconf-editor>=2.26.0:../../editors/gconf-editor
 #DEPENDS+=	gdm>=2.26.1:../../x11/gdm
 DEPENDS+=	gdm>=2.20.10:../../x11/gdm
 DEPENDS+=	gedit>=2.26.2:../../editors/gedit
+DEPENDS+=	gio-fam>=2.26.1:../../sysutils/gio-fam
 DEPENDS+=	gnome-applets>=2.26.1:../../x11/gnome-applets
 DEPENDS+=	gnome-backgrounds>=2.24.1:../../graphics/gnome-backgrounds
 DEPENDS+=	gnome-control-center>=2.26.0:../../x11/gnome-control-center
