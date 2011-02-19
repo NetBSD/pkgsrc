@@ -1,0 +1,43 @@
+$NetBSD: patch-.._gcc-4.0.3_gcc_config.gcc,v 1.1 2011/02/19 16:06:31 rumko Exp $
+
+DragonFly BSD support.
+
+--- ../gcc-4.0.3/gcc/config.gcc.orig	2011-02-01 19:11:53 +0100
++++ ../gcc-4.0.3/gcc/config.gcc	2011-02-01 21:15:59 +0100
+@@ -440,6 +440,23 @@
+   esac
+   fbsd_tm_file="${fbsd_tm_file} freebsd-spec.h freebsd.h"
+   ;;
++*-*-dragonfly*)
++  gas=yes
++  gnu_ld=yes
++  extra_parts="crtbegin.o crtend.o crtbeginS.o crtendS.o"
++  tmake_file="t-slibgcc-elf-ver t-dragonfly"
++  case ${enable_threads} in
++    "" | yes | posix)
++      thread_file='posix'
++      tmake_file="${tmake_file} t-dragonfly-thread"
++      ;;
++    *)
++      echo 'Unknown thread configuration for FreeBSD'
++      exit 1
++      ;;
++  esac
++  dfly_tm_file="${dfly_tm_file} dragonfly-spec.h dragonfly.h"
++  ;;
+ *-*-linux*libc1* | *-*-linux*aout*)
+   # Avoid the generic linux case.
+   ;;
+@@ -969,6 +986,12 @@
+ x86_64-*-freebsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
+ 	;;
++i[34567]86-*-dragonfly*)
++        tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${dfly_tm_file} i386/dragonfly.h"
++        ;;
++x86_64-*-dragonfly*)
++        tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${dfly_tm_file} i386/x86-64.h i386/dragonfly.h i386/dragonfly64.h"
++        ;;
+ i[34567]86-*-netbsdelf*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
+ 	;;
