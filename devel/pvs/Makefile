@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2011/02/14 23:31:34 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2011/02/19 00:42:21 minskim Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel lang
 MASTER_SITES=		ftp://pvs.csl.sri.com/pub/pvs/pvs${VERSION}/ \
 			ftp://ftp.cs.york.ac.uk/pub/pvs/pvs${VERSION}/ \
@@ -25,6 +25,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pvs.csl.sri.com/
 COMMENT=		The PVS Specification and Verification System
 
+DEPENDS+=		tex-amsmath>=2.13nb2:../../print/tex-amsmath
 DEPENDS+=		tk>=8.0:../../x11/tk
 
 USE_TOOLS+=	pax
@@ -36,7 +37,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}
 VERSION=		3.2
 INFO_FILES=		yes
-TEX_ACCEPTED=		teTeX3
 
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.${EMUL_PLATFORM}
 MAINFILEEXT=		${EMUL_OPSYS}
@@ -55,6 +55,5 @@ do-install:
 	cd ${WRKSRC} && pax -s ,^./[.].*,, -rw . ${DESTDIR}${PREFIX}/pvs
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/pvs/pvs
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
