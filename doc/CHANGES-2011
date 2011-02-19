@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.401 2011/02/19 00:28:17 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.402 2011/02/19 00:42:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -655,3 +655,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/vlgothic-ttf to 20101218 [wiz 2011-02-18]
 	Updated databases/abook to 0.6.0rc2 [shattered 2011-02-18]
 	Updated print/tex-amsmath to 2.13nb2 [minskim 2011-02-19]
+	Updated devel/pvs to 3.2nb3 [minskim 2011-02-19]
