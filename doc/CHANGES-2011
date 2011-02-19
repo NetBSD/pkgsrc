@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.409 2011/02/19 16:20:33 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.410 2011/02/19 17:05:14 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -663,3 +663,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/parrot to 3.1.0 [he 2011-02-19]
 	Updated devel/monodevelop to 2.4.2 [kefren 2011-02-19]
 	Added x11/gtkglarea2 version 2.0.1 [wiz 2011-02-19]
+	Updated devel/libosip to 3.5.0 [schwarz 2011-02-19]
