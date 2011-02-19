@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/19 08:54:08 markd Exp $
+bin/imlib_config
+include/gdk_imlib.h
+include/gdk_imlib_private.h
+include/gdk_imlib_types.h
+lib/libgdk_imlib.la
+lib/libimlib-bmp.la
+lib/libimlib-gif.la
+lib/libimlib-jpeg.la
+lib/libimlib-png.la
+lib/libimlib-ppm.la
+lib/libimlib-ps.la
+lib/libimlib-tiff.la
+lib/libimlib-xpm.la
+man/man1/imlib_config.1
