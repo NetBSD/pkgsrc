@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2011/01/13 13:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2011/02/19 10:03:18 markd Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	wm
 MASTER_SITES=	http://www.csg.is.titech.ac.jp/~kourai/qvwm/archive/qvwm/ \
 		ftp://ftp.chg.ru/pub/X11/windowmanagers/qvwm/
