@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.416 2011/02/20 15:45:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.417 2011/02/20 22:20:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed graphics/gimp-docs successor meta-pkgs/gimp-docs [ryoon 2011-02-20]
 	Added meta-pkgs/gimp-docs version 2.6.1 [ryoon 2011-02-20]
 	Updated www/ruby-actionpack3 to 3.0.4nb1 [taca 2011-02-20]
+	Updated emulators/ckmame to 0.11 [wiz 2011-02-20]
