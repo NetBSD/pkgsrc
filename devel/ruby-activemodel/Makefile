@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/02/09 12:57:46 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/20 02:12:08 taca Exp $
 
 DISTNAME=	activemodel-3.0.4
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
