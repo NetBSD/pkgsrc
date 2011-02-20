@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2011/02/20 14:24:05 wiz Exp $
+
+Fix for SunOS/SunStudio/Sun ld
+--- src/Makefile.in.orig	2010-09-08 20:07:03.000000000 +0300
++++ src/Makefile.in	2011-02-25 07:33:48.524607086 +0200
+@@ -249,7 +249,7 @@
+     $(DLOPEN_LIBS) \
+     $(XEXT_LIBS)
+ 
+-libvdpau_la_LDFLAGS = -version-info 1:0:0 -no-undefined
++libvdpau_la_LDFLAGS = -version-info 1:0:0
+ libvdpauincludedir = $(includedir)/vdpau
+ libvdpauinclude_HEADERS = \
+     $(top_srcdir)/include/vdpau/vdpau.h \
