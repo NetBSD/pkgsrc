@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/11 12:35:45 jym Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/20 21:42:36 pettai Exp $
 #
 
 DISTNAME=		gallery-2.3.1-full
@@ -71,9 +71,6 @@ INSTALLATION_DIRS+=	${G2DATA}
 post-extract:
 	${CP} ${FILESDIR}/gallery2.conf ${WRKDIR}/
 	${CP} ${FILESDIR}/config.php ${WRKDIR}/
-
-pre-install:
-	${RM} ${WRKSRC}/lib/tools/po/extract.php.orig
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/gallery2.conf ${DESTDIR}${EGDIR}/gallery2.conf
