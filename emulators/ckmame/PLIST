@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/02/20 22:19:52 wiz Exp $
 bin/ckmame
 bin/detective
 bin/dumpgame
 bin/mkmamedb
-bin/mkmamedb-xmame.sh
 man/man1/ckmame.1
 man/man1/detective.1
 man/man1/dumpgame.1
