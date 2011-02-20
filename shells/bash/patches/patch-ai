@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2011/02/20 14:22:15 wiz Exp $
+
+Add MirBSD.
+
+--- support/shobj-conf.orig	Wed Oct 28 13:19:57 2009
++++ support/shobj-conf
+@@ -197,7 +197,7 @@ darwin*|macosx*)
+ 	SHLIB_LIBS='-lncurses'	# see if -lcurses works on MacOS X 10.1 
+ 	;;
+ 
+-openbsd*|netbsd*)
++openbsd*|netbsd*|mirbsd*)
+ 	SHOBJ_CFLAGS=-fPIC
+ 	SHOBJ_LD='${CC}'
+ 	SHOBJ_LDFLAGS='-shared'
