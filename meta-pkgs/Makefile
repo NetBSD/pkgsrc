@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2010/09/24 01:32:18 chs Exp $
+# $NetBSD: Makefile,v 1.62 2011/02/20 11:46:44 ryoon Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -9,6 +9,7 @@ SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
 SUBDIR+=	desktop-gnome
 SUBDIR+=	fxtv-capture
+SUBDIR+=	gimp-docs
 SUBDIR+=	gnome
 SUBDIR+=	gnome-admin
 SUBDIR+=	gnome-devtools
