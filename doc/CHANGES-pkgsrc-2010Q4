@@ -77,4 +77,6 @@ www/ruby-activeresource3: dependency update
 www/ruby-rack-test: dependency update
 www/ruby-rails3: dependency update
 Pullup ticket #3355 - requested by taca
-security update for net/bind96
+net/bind96: security update
+Pullup ticket #3356 - requested by aymeric
+pkgtools/pkg_install: functionality fix
