@@ -1,0 +1,25 @@
+$NetBSD: patch-aj,v 1.1 2011/02/20 14:22:15 wiz Exp $
+
+This patch fixes the build on MirBSD and OpenBSD, where LIBINTL and
+LIBICONV are incorrectly set.
+
+--- Makefile.in.orig	Wed Dec 30 18:05:16 2009
++++ Makefile.in
+@@ -341,7 +341,7 @@ INTL_LIBDIR = $(dot)/$(LIBSUBDIR)/intl
+ INTL_ABSSRC = ${topdir}/$(INTL_LIB)
+ INTL_BUILDDIR = ${LIBBUILD}/intl
+ 
+-INTL_LIB     = @LIBINTL@
++INTL_LIB     = @LTLIBINTL@
+ INTL_LIBRARY = $(INTL_LIBDIR)/libintl.a
+ INTL_DEP = @INTL_DEP@
+ INTL_INC = @INTL_INC@
+@@ -349,7 +349,7 @@ INTL_INC = @INTL_INC@
+ LIBINTL_H = @LIBINTL_H@
+ 
+ # libiconv
+-LIBICONV = @LIBICONV@
++LIBICONV = @LTLIBICONV@
+ 
+ # tests
+ LIBINTL = @LIBINTL@
