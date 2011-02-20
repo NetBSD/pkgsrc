@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2011/02/20 17:40:54 jmmv Exp $
+#
+# Forcibly remove any auto-generated caches.  The cache-regeneration tools
+# should be doing this automatically when there are no more files in the
+# directories they scan, but they don't.  And, anyway, we need to do this
+# if we want in-place updates of glib2 to work correctly.
+#
+
+GIO_MODULES_DIR="@GIO_MODULES_DIR@"
+GLIB_SCHEMAS_DIR="@GLIB_SCHEMAS_DIR@"
+
+case ${STAGE} in
+DEINSTALL)
+	${RM} -f "${GIO_MODULES_DIR}/giomodule.cache"
+	${RM} -f "${GLIB_SCHEMAS_DIR}/gschemas.compiled"
+	;;
+esac

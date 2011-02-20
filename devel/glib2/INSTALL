@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2011/02/20 17:40:54 jmmv Exp $
+#
+# Generate caches after installing the glib2 package.  This is theorically
+# not needed for a fresh install but is required for in-place updates to
+# work correctly.
+
+GIO_MODULES_DIR="@GIO_MODULES_DIR@"
+GIO_QUERYMODULES="@GIO_QUERYMODULES@"
+GLIB_COMPILE_SCHEMAS="@GLIB_COMPILE_SCHEMAS@"
+GLIB_SCHEMAS_DIR="@GLIB_SCHEMAS_DIR@"
+
+case ${STAGE} in
+POST-INSTALL)
+	"${GIO_QUERYMODULES}" "${GIO_MODULES_DIR}"
+	XDG_DATA_DIRS= "${GLIB_COMPILE_SCHEMAS}" "${GLIB_SCHEMAS_DIR}"
+	;;
+esac
