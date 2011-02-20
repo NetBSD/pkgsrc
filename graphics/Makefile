@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2011/02/19 08:55:25 markd Exp $
+# $NetBSD: Makefile,v 1.584 2011/02/20 08:11:22 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -137,7 +137,18 @@ SUBDIR+=	gimageview
 SUBDIR+=	gimmage
 SUBDIR+=	gimp
 SUBDIR+=	gimp-color-manager
-SUBDIR+=	gimp-docs
+SUBDIR+=	gimp-docs-de
+SUBDIR+=	gimp-docs-en
+SUBDIR+=	gimp-docs-es
+SUBDIR+=	gimp-docs-fr
+SUBDIR+=	gimp-docs-it
+SUBDIR+=	gimp-docs-ko
+SUBDIR+=	gimp-docs-nl
+SUBDIR+=	gimp-docs-nn
+SUBDIR+=	gimp-docs-pl
+SUBDIR+=	gimp-docs-ru
+SUBDIR+=	gimp-docs-sv
+SUBDIR+=	gimp-docs-zh_CN
 SUBDIR+=	gimp-exif-browser
 SUBDIR+=	gimp-fix-ca
 SUBDIR+=	gimp-liquid-rescale
