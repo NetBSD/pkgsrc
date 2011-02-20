@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.1 2011/01/18 10:03:59 jmmv Exp $
+# $NetBSD: schemas.mk,v 1.2 2011/02/20 15:07:40 jmmv Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GSettings schemas.  It takes care of rebuilding the corresponding databases
@@ -17,6 +17,12 @@ INSTALL_TEMPLATES+=	../../devel/glib2/files/schemas.tmpl
 DEINSTALL_TEMPLATES+=	../../devel/glib2/files/schemas.tmpl
 
 TOOLS_NOOP+=		glib-compile-schemas
+# Adding glib-compile-schemas to TOOLS_NOOP is not enough to mock out all
+# calls to this tool.  Some packages do 'pkg-config --variable
+# glib_compile_schemas gio-2.0' to get the path to the binary.  Do a best
+# effort here by overriding the possibly-defined GLIB_COMPILE_SCHEMAS
+# variable in the offending Makefiles.
+MAKE_FLAGS+=		GLIB_COMPILE_SCHEMAS=glib-compile-schemas
 
 .include "../../devel/glib2/buildlink3.mk"
 
