@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.414 2011/02/20 08:19:52 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.415 2011/02/20 11:49:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -677,4 +677,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/gimp-docs-ru version 2.6.1 [ryoon 2011-02-20]
 	Added graphics/gimp-docs-sv version 2.6.1 [ryoon 2011-02-20]
 	Added graphics/gimp-docs-zh_CN version 2.6.1 [ryoon 2011-02-20]
-	Removed graphics/gimp-docs successor graphics/gimp-docs-* [ryoon 2011-02-20]
+	Removed graphics/gimp-docs successor meta-pkgs/gimp-docs [ryoon 2011-02-20]
+	Added meta-pkgs/gimp-docs version 2.6.1 [ryoon 2011-02-20]
