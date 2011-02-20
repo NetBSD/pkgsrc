@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/20 07:57:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/20 10:14:33 ryoon Exp $
 #
 
-HELPLANGUAGE=		en
+HELPLANGUAGE=		ko
 
 DISTNAME=		gimp-help-2.6.1-html-${HELPLANGUAGE}
 PKGNAME=		gimp-docs-${HELPLANGUAGE}-${DISTNAME:S/gimp-help-//:S/-html-${HELPLANGUAGE}//}
