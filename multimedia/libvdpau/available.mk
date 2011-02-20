@@ -1,4 +1,4 @@
-# $NetBSD: available.mk,v 1.1.1.1 2010/09/01 20:41:45 wiz Exp $
+# $NetBSD: available.mk,v 1.2 2011/02/20 21:39:22 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -6,8 +6,13 @@
 # [Open]Solaris.  The following condition is here to NOT list these
 # platforms in multiple places, i.e. in mplayer, xine, xbmc etc.
 # Have a look at buildlink3.mk too.
-VDPAU_AVAILABLE_ON=	Linux FreeBSD SunOS
-.if !empty(VDPAU_AVAILABLE_ON:M${OPSYS})
+
+.if ${OPSYS} == "Linux" && (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "amd64")
+VDPAU_AVAILABLE=	yes
+.elif ${OPSYS} == "FreeBSD" && (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "amd64")
+VDPAU_AVAILABLE=	yes
+.elif ${OPSYS} == "SunOS" && (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "amd64") \
+  && !empty(OS_VERSION:M5.1[0-9]*)
 VDPAU_AVAILABLE=	yes
 .else
 VDPAU_AVAILABLE=	no
