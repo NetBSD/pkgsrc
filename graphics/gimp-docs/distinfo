@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/12/11 02:10:12 wulf Exp $
-
-SHA1 (gimp-help-2.4.0.tar.bz2) = a9d65ca8b4e54245d35db9f290f469a44710390d
-RMD160 (gimp-help-2.4.0.tar.bz2) = a84d87aa77207b9b1cc6653fd8b6fe5b8eeeead5
-Size (gimp-help-2.4.0.tar.bz2) = 81555148 bytes
-SHA1 (patch-aa) = cdd41337e4c905e272115f1525e8a78583d0cc02
