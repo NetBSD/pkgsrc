@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/08/08 22:59:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/02/21 16:01:15 taca Exp $
 
 DISTNAME=	75d93404707d
 PKGNAME=	${RUBY_PKGPREFIX}-rcsparse-0.0.0.45
+PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://ww2.fs.ei.tum.de/~corecode/hg/rcsparse/archive/
 EXTRACT_SUFX=	.tar.bz2

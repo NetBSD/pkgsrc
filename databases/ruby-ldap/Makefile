@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/09/10 04:31:57 taca Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/21 16:01:11 taca Exp $
 
 DISTNAME=	ruby-ldap-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ldap-${VER}
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://github.com/alexey-chebotar/ruby-ldap/tarball/${VER}/
 
