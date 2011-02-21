@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2011/02/19 10:03:18 markd Exp $
+# $NetBSD: Makefile,v 1.51 2011/02/21 07:33:48 wiz Exp $
 
 DISTNAME=	kterm-6.2.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
@@ -20,21 +20,7 @@ USE_IMAKE=	YES
 
 SPECIAL_PERMS=	${PREFIX:Q}/bin/kterm ${SETUID_ROOT_PERMS}
 
-BUILD_DEFS+=	KTERM_USE_WALLPAPER
-
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(KTERM_USE_WALLPAPER)
-.  if ${KTERM_USE_WALLPAPER} == "imlib"
-SITES.KTerm-BGP-Imlib-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
-PATCHFILES+=	KTerm-BGP-Imlib-1.0.patch.gz
-.    include "../../graphics/imlib/buildlink3.mk"
-#.  elif ${KTERM_USE_WALLPAPER} == "YES"
-#SITES.KTerm-BGP-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
-#PATCHFILES+=	KTerm-BGP-1.0.patch.gz
-#.    include "../../x11/libXpm/buildlink3.mk"
-.  endif
-.endif
 
 .if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm" || ${XAW_TYPE} == "neXtaw")
 post-patch:
