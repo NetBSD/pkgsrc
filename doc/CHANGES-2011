@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.421 2011/02/21 08:38:40 obache Exp $
+$NetBSD: CHANGES-2011,v 1.422 2011/02/21 14:45:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -686,3 +686,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/sun-jre6 to 6.0.24 [obache 2011-02-21]
 	Updated lang/sun-jdk6 to 6.0.24 [obache 2011-02-21]
 	Updated emulators/suse100_fontconfig to 10.0nb7 [obache 2011-02-21]
+	Updated lang/ruby18-base to 1.8.7.334 [taca 2011-02-21]
+	Updated lang/ruby19-base to 1.9.2pl180 [taca 2011-02-21]
