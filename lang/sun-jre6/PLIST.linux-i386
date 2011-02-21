@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.20 2010/10/23 12:26:33 obache Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.21 2011/02/21 07:48:20 obache Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -30,6 +30,7 @@ java/sun-6/bin/tnameserv
 java/sun-6/bin/unpack200
 java/sun-6/javaws/javaws
 java/sun-6/lib/alt-rt.jar
+java/sun-6/lib/alt-string.jar
 java/sun-6/lib/audio/soundbank.gm
 java/sun-6/lib/calendars.properties.default
 java/sun-6/lib/charsets.jar
@@ -123,6 +124,8 @@ java/sun-6/lib/fontconfig.RedHat.4.bfc.default
 java/sun-6/lib/fontconfig.RedHat.4.properties.src.default
 java/sun-6/lib/fontconfig.RedHat.bfc.default
 java/sun-6/lib/fontconfig.RedHat.properties.src.default
+java/sun-6/lib/fontconfig.SuSE.11.bfc.default
+java/sun-6/lib/fontconfig.SuSE.11.properties.src.default
 java/sun-6/lib/fontconfig.SuSE.bfc.default
 java/sun-6/lib/fontconfig.SuSE.properties.src.default
 java/sun-6/lib/fontconfig.Sun.bfc.default
