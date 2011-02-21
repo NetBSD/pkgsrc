@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/11/24 03:16:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/02/21 15:55:46 wiz Exp $
 include/gstreamer-0.10/gst/farsight/fs-base-conference.h
 include/gstreamer-0.10/gst/farsight/fs-candidate.h
 include/gstreamer-0.10/gst/farsight/fs-codec.h
@@ -12,18 +12,22 @@ include/gstreamer-0.10/gst/farsight/fs-session.h
 include/gstreamer-0.10/gst/farsight/fs-stream-transmitter.h
 include/gstreamer-0.10/gst/farsight/fs-stream.h
 include/gstreamer-0.10/gst/farsight/fs-transmitter.h
+include/gstreamer-0.10/gst/farsight/fs-utils.h
 lib/farsight2-0.0/libmulticast-transmitter.la
 lib/farsight2-0.0/libnice-transmitter.la
 lib/farsight2-0.0/librawudp-transmitter.la
 lib/farsight2-0.0/libshm-transmitter.la
 lib/gstreamer-0.10/libfsfunnel.la
 lib/gstreamer-0.10/libfsmsnconference.la
+lib/gstreamer-0.10/libfsrawconference.la
 lib/gstreamer-0.10/libfsrtcpfilter.la
 lib/gstreamer-0.10/libfsrtpconference.la
 lib/gstreamer-0.10/libfsvideoanyrate.la
 lib/libgstfarsight-0.10.la
 lib/pkgconfig/farsight2-0.10.pc
 ${PYSITELIB}/farsight.la
+share/farsight2/0.0/fsrtpconference/default-codec-preferences
+share/farsight2/0.0/fsrtpconference/default-element-properties
 share/gtk-doc/html/farsight2-libs-0.10/FsBaseConference.html
 share/gtk-doc/html/farsight2-libs-0.10/FsConference.html
 share/gtk-doc/html/farsight2-libs-0.10/FsElementAddedNotifier.html
@@ -44,6 +48,7 @@ share/gtk-doc/html/farsight2-libs-0.10/farsight2-libs-FsCodec.html
 share/gtk-doc/html/farsight2-libs-0.10/farsight2-libs-FsPlugin.html
 share/gtk-doc/html/farsight2-libs-0.10/farsight2-libs-Network-interfaces-discovery.html
 share/gtk-doc/html/farsight2-libs-0.10/farsight2-libs-fs-session.html
+share/gtk-doc/html/farsight2-libs-0.10/farsight2-libs-fs-utils.html
 share/gtk-doc/html/farsight2-libs-0.10/home.png
 share/gtk-doc/html/farsight2-libs-0.10/index.html
 share/gtk-doc/html/farsight2-libs-0.10/index.sgml
@@ -67,11 +72,16 @@ share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsMsnSession.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsMsnStream.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsMulticastStreamTransmitter.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsNiceStreamTransmitter.html
+share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRawConference.html
+share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRawParticipant.html
+share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRawSession.html
+share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRawStream.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRawUdpStreamTransmitter.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRtpConference.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRtpParticipant.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRtpSession.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsRtpStream.html
+share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-FsShmStreamTransmitter.html
 share/gtk-doc/html/farsight2-plugins-0.10/farsight2-plugins-GstVideoanyrate.html
 share/gtk-doc/html/farsight2-plugins-0.10/home.png
 share/gtk-doc/html/farsight2-plugins-0.10/index.html
