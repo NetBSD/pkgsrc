@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.419 2011/02/21 00:05:05 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.420 2011/02/21 07:49:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -683,3 +683,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/ckmame to 0.11 [wiz 2011-02-20]
 	Added fonts/tex-bookman version 2010 [minskim 2011-02-20]
 	Updated mail/opendkim to 2.2.2 [pettai 2011-02-21]
+	Updated lang/sun-jre6 to 6.0.24 [obache 2011-02-21]
+	Updated lang/sun-jdk6 to 6.0.24 [obache 2011-02-21]
