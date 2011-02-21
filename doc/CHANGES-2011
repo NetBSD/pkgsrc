@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.422 2011/02/21 14:45:50 taca Exp $
+$NetBSD: CHANGES-2011,v 1.423 2011/02/21 15:51:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -688,3 +688,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse100_fontconfig to 10.0nb7 [obache 2011-02-21]
 	Updated lang/ruby18-base to 1.8.7.334 [taca 2011-02-21]
 	Updated lang/ruby19-base to 1.9.2pl180 [taca 2011-02-21]
+	Updated net/libnice to 0.1.0 [wiz 2011-02-21]
