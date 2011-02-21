@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.57 2011/02/02 08:47:01 obache Exp $
+# $NetBSD: rubyversion.mk,v 1.58 2011/02/21 14:31:06 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -11,8 +11,8 @@ RUBY18_VERSION=		1.8.7
 RUBY19_VERSION=		1.9.2
 
 # patch
-RUBY18_PATCHLEVEL=	pl330
-RUBY19_PATCHLEVEL=	pl136
+RUBY18_PATCHLEVEL=	pl334
+RUBY19_PATCHLEVEL=	pl180
 
 # current API compatible version.
 RUBY18_API_VERSION=	1.8.7
@@ -336,8 +336,7 @@ PLIST_SUBST+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 			RUBY_SHLIBALIAS=${RUBY_SHLIBALIAS:Q} \
 			RUBY_STATICLIB=${RUBY_STATICLIB:Q} \
 			RUBY_ARCH=${RUBY_ARCH:Q} \
-			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",} \
-			GEM_HOME=${GEM_HOME:Q}
+			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",}
 
 #
 # make dynamic PLIST
