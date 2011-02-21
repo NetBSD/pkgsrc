@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.418 2011/02/20 23:33:49 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.419 2011/02/21 00:05:05 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -682,3 +682,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-actionpack3 to 3.0.4nb1 [taca 2011-02-20]
 	Updated emulators/ckmame to 0.11 [wiz 2011-02-20]
 	Added fonts/tex-bookman version 2010 [minskim 2011-02-20]
+	Updated mail/opendkim to 2.2.2 [pettai 2011-02-21]
