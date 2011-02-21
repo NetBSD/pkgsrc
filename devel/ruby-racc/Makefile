@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2010/09/12 03:20:02 taca Exp $
+# $NetBSD: Makefile,v 1.18 2011/02/21 16:01:15 taca Exp $
 
 DISTNAME=	racc-${RACC_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/49028/
 EXTRACT_SUFX=	.tgz
