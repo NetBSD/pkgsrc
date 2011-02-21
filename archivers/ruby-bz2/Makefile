@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/15 10:24:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/21 16:01:10 taca Exp $
 #
 
 DISTNAME=	bz2-0.2.2
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://rubyforge.org/frs/download.php/56889/
 
