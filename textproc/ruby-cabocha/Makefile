@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 08:03:39 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/21 16:01:20 taca Exp $
 #
 
 .include "../../textproc/cabocha/Makefile.common"
 
+PKGREVISION=	1
 CATEGORIES+=	ruby
 
 COMMENT=	CaboCha ruby module

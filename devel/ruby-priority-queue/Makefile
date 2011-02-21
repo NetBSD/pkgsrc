@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 06:12:58 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/21 16:01:15 taca Exp $
 
 DISTNAME=	PriorityQueue-0.1.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/PriorityQueue/priority-queue/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
