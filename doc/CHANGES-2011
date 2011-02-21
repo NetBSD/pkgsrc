@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.420 2011/02/21 07:49:12 obache Exp $
+$NetBSD: CHANGES-2011,v 1.421 2011/02/21 08:38:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -685,3 +685,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/opendkim to 2.2.2 [pettai 2011-02-21]
 	Updated lang/sun-jre6 to 6.0.24 [obache 2011-02-21]
 	Updated lang/sun-jdk6 to 6.0.24 [obache 2011-02-21]
+	Updated emulators/suse100_fontconfig to 10.0nb7 [obache 2011-02-21]
