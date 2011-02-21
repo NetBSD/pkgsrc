@@ -1,13 +1,46 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/10/19 23:11:42 pettai Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/21 00:04:22 pettai Exp $
 
---- opendkim/Makefile.in.orig	2010-10-18 11:31:04.000000000 +0000
+--- opendkim/Makefile.in.orig	2011-02-20 23:52:59.000000000 +0000
 +++ opendkim/Makefile.in
-@@ -410,7 +410,7 @@ top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
+@@ -255,7 +255,7 @@ man8dir = $(mandir)/man8
+ NROFF = nroff
+ MANS = $(man_MANS)
+ am__dist_doc_DATA_DIST = opendkim.conf.sample opendkim.conf.simple \
+-	opendkim.conf.simple-verify README.SQL setup.lua.sample \
++	opendkim.conf.simple-verify setup.lua.sample \
+ 	screen.lua.sample final.lua.sample
+ am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+ am__vpath_adj = case $$p in \
+@@ -422,6 +422,7 @@ builddir = @builddir@
+ datadir = @datadir@
+ datarootdir = @datarootdir@
+ docdir = @docdir@
++EGDIR = @EGDIR@
+ domainname = @domainname@
+ dvidir = @dvidir@
+ exec_prefix = @exec_prefix@
+@@ -462,7 +463,7 @@ top_srcdir = @top_srcdir@
  @DEBUG_TRUE@AM_CFLAGS = -g
- dist_sbin_SCRIPTS = opendkim-genkey.sh
--exampledir = $(docdir)
-+exampledir = @EGDIR@
- dist_example_DATA = opendkim.conf.sample
- @BUILD_FILTER_TRUE@opendkim_SOURCES = opendkim.c opendkim.h opendkim-ar.c opendkim-ar.h opendkim-arf.c opendkim-arf.h opendkim-config.h opendkim-crypto.c opendkim-crypto.h opendkim-db.c opendkim-db.h opendkim-lua.c opendkim-lua.h config.c config.h stats.c stats.h test.c test.h util.c util.h
+ dist_bin_SCRIPTS = opendkim-genkey
+ dist_doc_DATA = opendkim.conf.sample opendkim.conf.simple \
+-	opendkim.conf.simple-verify README.SQL $(am__append_51)
++	opendkim.conf.simple-verify $(am__append_51)
+ @BUILD_FILTER_TRUE@opendkim_SOURCES = opendkim.c opendkim.h opendkim-ar.c opendkim-ar.h opendkim-arf.c opendkim-arf.h opendkim-config.h opendkim-crypto.c opendkim-crypto.h opendkim-db.c opendkim-db.h opendkim-dns.c opendkim-dns.h opendkim-lua.c opendkim-lua.h config.c config.h stats.c stats.h test.c test.h util.c util.h
  @BUILD_FILTER_TRUE@opendkim_CC = $(PTHREAD_CC)
+ @BUILD_FILTER_TRUE@opendkim_CFLAGS = $(PTHREAD_CFLAGS) \
+@@ -1187,12 +1188,12 @@ uninstall-man8:
+ 	done
+ install-dist_docDATA: $(dist_doc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(docdir)" || $(MKDIR_P) "$(DESTDIR)$(docdir)"
++	test -z "$(EGDIR)" || $(MKDIR_P) "$(DESTDIR)$(EGDIR)"
+ 	@list='$(dist_doc_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(dist_docDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(docdir)/$$f'"; \
+-	  $(dist_docDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(docdir)/$$f"; \
++	  echo " $(dist_docDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(EGDIR)/$$f'"; \
++	  $(dist_docDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(EGDIR)/$$f"; \
+ 	done
+ 
+ uninstall-dist_docDATA:
