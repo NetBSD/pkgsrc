@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.425 2011/02/21 16:32:16 taca Exp $
+$NetBSD: CHANGES-2011,v 1.426 2011/02/21 17:48:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/php53 to 5.3.5nb1 [taca 2011-02-21]
 	Updated archivers/php-zip to 5.3.5nb1 [taca 2011-02-21]
 	Updated graphics/php-exif to 5.3.5nb1 [taca 2011-02-21]
+	Removed www/typo3_44 [taca 2011-02-21]
