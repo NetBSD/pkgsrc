@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.12 2010/11/23 20:37:31 wiz Exp $
+$NetBSD: distinfo,v 1.13 2011/02/21 15:55:46 wiz Exp $
 
-SHA1 (farsight2-0.0.22.tar.gz) = 315509c30c494ab7fb179d5222a996f52651428d
-RMD160 (farsight2-0.0.22.tar.gz) = 433d59500f6cfde1b7da6cad898ff59158382615
-Size (farsight2-0.0.22.tar.gz) = 1117646 bytes
-SHA1 (patch-aa) = 1940ced04a3d43b1ad4ad4271043798339726d16
+SHA1 (farsight2-0.0.25.tar.gz) = 9137b40a81a7933bacb3015ed1995c6b84b3ca1f
+RMD160 (farsight2-0.0.25.tar.gz) = b57785c931909cb7dfc87be5aa7a6587e53e96b0
+Size (farsight2-0.0.25.tar.gz) = 1164615 bytes
 SHA1 (patch-ab) = 27fd12ad2d1774cbeb7c11a4cee5b40e5ea97853
 SHA1 (patch-ai) = 6459729f80f592a2a333d683b05a139b499f46c6
 SHA1 (patch-aj) = c8f92433243a5741403721bb248e4471a23583eb
