@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10128 2011/02/20 14:13:55 wiz Exp $
+$NetBSD: TODO,v 1.10129 2011/02/21 10:41:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -675,6 +675,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ghc-7.0.1
 	o ghostscript-9.01
 	o gifsicle-1.48
+	o gimp-ufraw-0.18
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
@@ -983,7 +984,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3splt-2.2.7
 	o mpc-0.19
 	o mpeg4ip-1.6.1
-	o mpg123-1.13.1
+	o mpg123-1.13.2
 	o mplayer-1.0rc4
 	o mpop-1.0.23
 	o mrtg-2.17.1
@@ -1194,6 +1195,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sane-backends-1.0.22
 	o sarg-2.2.5
 	o saxon-9.2
+	o sbcl-1.0.46
 	o scapy-2.1.1
 	o scew-0.4.0
 	o sch-3.8.3
