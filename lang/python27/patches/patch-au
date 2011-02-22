@@ -1,0 +1,14 @@
+$NetBSD: patch-au,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+
+--- Makefile.pre.in.orig	2010-04-12 00:10:46.000000000 +0000
++++ Makefile.pre.in
+@@ -815,7 +815,8 @@ altbininstall:	$(BUILDPYTHON)
+ 				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
+ 			fi \
+ 		fi; \
+-	else	true; \
++	elif test -f $(INSTSONAME); then \
++		$(INSTALL_SHARED) $(INSTSONAME) $(DESTDIR)$(LIBDIR); \
+ 	fi
+ 
+ # Install the manual page
