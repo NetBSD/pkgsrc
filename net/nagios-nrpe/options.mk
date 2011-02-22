@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/02/22 15:09:07 gdt Exp $
+# $NetBSD: options.mk,v 1.5 2011/02/22 15:23:43 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nagios-nrpe
 PKG_SUPPORTED_OPTIONS=	ssl tcpwrappers nagios-nrpe-args
@@ -19,7 +19,10 @@ CONFIGURE_ARGS+=	--disable-ssl
 .if !empty(PKG_OPTIONS:Mnagios-nrpe-args)
 CONFIGURE_ARGS+=       --enable-command-args
 .else
-CONFIGURE_ARGS+=       --disable-command-args
+# Upstream's configure enables command args when given
+# "--disable-command-args", so (departing from pkgsrc norms) don't
+# give the --disable option.
+#CONFIGURE_ARGS+=       --disable-command-args
 .endif
 
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
