@@ -1,20 +1,23 @@
-$NetBSD: patch-ac,v 1.5 2010/11/11 08:34:02 adam Exp $
+$NetBSD: patch-ac,v 1.6 2011/02/22 15:05:34 adam Exp $
 
---- Modules/FindPythonLibs.cmake.orig	2010-11-10 20:06:34.000000000 +0000
+--- Modules/FindPythonLibs.cmake.orig	2011-02-15 17:47:27.000000000 +0000
 +++ Modules/FindPythonLibs.cmake
-@@ -27,7 +27,14 @@ INCLUDE(CMakeFindFrameworks)
+@@ -27,11 +27,17 @@ INCLUDE(CMakeFindFrameworks)
  # Search for the python framework on Apple.
  CMAKE_FIND_FRAMEWORKS(Python)
  
--FOREACH(_CURRENT_VERSION 2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
-+# for pkgsrc: force Python version (set in pyversion.mk)
 +IF(DEFINED PYVERSSUFFIX)
 +  SET(_VERSIONS ${PYVERSSUFFIX})
 +ELSE(DEFINED PYVERSSUFFIX)
 +  SET(_VERSIONS 2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
 +ENDIF(DEFINED PYVERSSUFFIX)
 +
-+FOREACH(_CURRENT_VERSION ${_VERSIONS})
+ # Set up the versions we know about, in the order we will search. Always add
+ # the user supplied additional versions to the front.
+ set(_Python_VERSIONS
+   ${Python_ADDITIONAL_VERSIONS}
+-  2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
++  ${_VERSIONS})
+ 
+ FOREACH(_CURRENT_VERSION ${_Python_VERSIONS})
    STRING(REPLACE "." "" _CURRENT_VERSION_NO_DOTS ${_CURRENT_VERSION})
-   IF(WIN32)
-     FIND_LIBRARY(PYTHON_DEBUG_LIBRARY
