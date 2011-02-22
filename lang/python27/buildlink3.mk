@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2011/02/22 10:50:37 adam Exp $
 
 BUILDLINK_TREE+=	python27
 
@@ -8,9 +8,9 @@ PYTHON27_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.python27+=	python27>=2.7
 BUILDLINK_PKGSRCDIR.python27?=		../../lang/python27
 
-.  if defined(BUILDLINK_DEPMETHOD.python)
+.if defined(BUILDLINK_DEPMETHOD.python)
 BUILDLINK_DEPMETHOD.python27?=	${BUILDLINK_DEPMETHOD.python}
-.  endif
+.endif
 
 BUILDLINK_INCDIRS.python27+=	include/python2.7
 BUILDLINK_LIBDIRS.python27+=	lib/python2.7/config
