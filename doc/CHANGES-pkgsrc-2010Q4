@@ -80,3 +80,8 @@ Pullup ticket #3355 - requested by taca
 net/bind96: security update
 Pullup ticket #3356 - requested by aymeric
 pkgtools/pkg_install: functionality fix
+Pullup ticket #3357 - requested by obache
+lang/sun-jdk6: security update
+lang/sun-jre6: security update
+Pullup ticket #3359 - requested by taca
+www/typo3: security update
