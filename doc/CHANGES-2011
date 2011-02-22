@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.428 2011/02/22 07:37:12 taca Exp $
+$NetBSD: CHANGES-2011,v 1.429 2011/02/22 08:45:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkgin to 0.4.1 [imil 2011-02-21]
 	Updated archivers/php-zip to 5.3.5nb2 [taca 2011-02-22]
 	Updated graphics/php-exif to 5.3.5nb2 [taca 2011-02-22]
+	Updated databases/py-ldap to 2.3.13 [adam 2011-02-22]
