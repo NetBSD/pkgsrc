@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.432 2011/02/22 13:39:05 sborrill Exp $
+$NetBSD: CHANGES-2011,v 1.433 2011/02/22 14:17:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -704,3 +704,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/netbsd-iscsi-lib to 20110222 [sborrill 2011-02-22]
 	Updated net/netbsd-iscsi-initiator to 20110222 [sborrill 2011-02-22]
 	Updated net/netbsd-iscsi-target to 20110222 [sborrill 2011-02-22]
+	Updated www/contao29-translations to 20110222 [taca 2011-02-22]
