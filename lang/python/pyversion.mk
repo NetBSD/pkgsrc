@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.82 2011/02/13 08:07:39 obache Exp $
+# $NetBSD: pyversion.mk,v 1.83 2011/02/22 09:01:28 obache Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 24 25 26
+#	Possible values: 24 25 26 27
 #	Default: 26
 #
 # === Package-settable variables ===
@@ -18,13 +18,13 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 26 25 24
-#	Default: 26 25 24
+#	Possible values: 27 26 25 24
+#	Default: 27 26 25 24
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 24 25 26
+#	Possible values: 24 25 26 27
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -39,13 +39,13 @@
 #	The prefix to use in PKGNAME for extensions which are meant
 #	to be installed for multiple Python versions.
 #
-#	Example: py25
+#	Example: py26
 #
 # PYVERSSUFFIX
 #	The suffix to executables and in the library path, equal to
 #	sys.version[0:3].
 #
-#	Example: 2.5
+#	Example: 2.6
 #
 # Keywords: python
 #
@@ -75,6 +75,7 @@ PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
 BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
 BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
+BUILDLINK_API_DEPENDS.python27?=		python26>=2.7
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -116,7 +117,14 @@ _PYTHON_VERSION?=	${pv}
 _PYTHON_VERSION=	none
 .endif
 
-.if ${_PYTHON_VERSION} == "26"
+.if ${_PYTHON_VERSION} == "27"
+PYPKGSRCDIR=	../../lang/python27
+PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python27}:${PYPKGSRCDIR}
+PYPACKAGE=	python27
+PYVERSSUFFIX=	2.7
+PYPKGPREFIX=	py27
+PYDISTUTILS_CREATES_EGGFILES=	yes
+.elif ${_PYTHON_VERSION} == "26"
 PYPKGSRCDIR=	../../lang/python26
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python26}:${PYPKGSRCDIR}
 PYPACKAGE=	python26
