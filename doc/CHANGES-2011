@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.431 2011/02/22 11:47:58 ahoka Exp $
+$NetBSD: CHANGES-2011,v 1.432 2011/02/22 13:39:05 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -701,3 +701,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/py-ldap to 2.3.13 [adam 2011-02-22]
 	Added lang/python27 version 2.7.1 [obache 2011-02-22]
 	Updated textproc/hunspell-hu_HU to 1.6.1 [ahoka 2011-02-22]
+	Updated devel/netbsd-iscsi-lib to 20110222 [sborrill 2011-02-22]
+	Updated net/netbsd-iscsi-initiator to 20110222 [sborrill 2011-02-22]
+	Updated net/netbsd-iscsi-target to 20110222 [sborrill 2011-02-22]
