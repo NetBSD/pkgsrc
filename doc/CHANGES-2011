@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.430 2011/02/22 08:53:14 obache Exp $
+$NetBSD: CHANGES-2011,v 1.431 2011/02/22 11:47:58 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -700,3 +700,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/php-exif to 5.3.5nb2 [taca 2011-02-22]
 	Updated databases/py-ldap to 2.3.13 [adam 2011-02-22]
 	Added lang/python27 version 2.7.1 [obache 2011-02-22]
+	Updated textproc/hunspell-hu_HU to 1.6.1 [ahoka 2011-02-22]
