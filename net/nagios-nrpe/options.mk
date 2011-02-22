@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2010/09/29 10:50:12 obache Exp $
+# $NetBSD: options.mk,v 1.4 2011/02/22 15:09:07 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nagios-nrpe
-PKG_SUPPORTED_OPTIONS=	ssl tcpwrappers
+PKG_SUPPORTED_OPTIONS=	ssl tcpwrappers nagios-nrpe-args
 PKG_SUGGESTED_OPTIONS=	tcpwrappers
 
 .include "../../mk/bsd.options.mk"
@@ -14,6 +14,12 @@ CONFIGURE_ARGS+=	--with-ssl-lib=${SSLBASE}/lib
 CONFIGURE_ARGS+=	--with-ssl-inc=${SSLBASE}/include
 .else
 CONFIGURE_ARGS+=	--disable-ssl
+.endif
+
+.if !empty(PKG_OPTIONS:Mnagios-nrpe-args)
+CONFIGURE_ARGS+=       --enable-command-args
+.else
+CONFIGURE_ARGS+=       --disable-command-args
 .endif
 
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
