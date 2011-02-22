@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/11/11 08:34:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2011/02/22 15:05:33 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -21,6 +21,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeASM-ATTInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASMCompiler.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeASMInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASM_MASMInformation.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeASM_NASMInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeAddNewLanguage.txt
 share/cmake-${CMAKE_API}/Modules/CMakeBackwardCompatibilityC.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeBackwardCompatibilityCXX.cmake
@@ -41,6 +42,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeDependentOption.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM-ATTCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM_MASMCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM_NASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineCCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineCXXCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineCompilerABI.cmake
@@ -82,6 +84,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeSystemSpecificInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASM-ATTCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASM_MASMCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeTestASM_NASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestCCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestCXXCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestCompilerCommon.cmake
@@ -147,6 +150,9 @@ share/cmake-${CMAKE_API}/Modules/CheckVariableExists.c
 share/cmake-${CMAKE_API}/Modules/CheckVariableExists.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Clang-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Clang-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/Cray-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/Cray-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/Cray-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/G95-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-CXX.cmake
@@ -161,6 +167,7 @@ share/cmake-${CMAKE_API}/Modules/Compiler/Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MIPSpro-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MIPSpro-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MIPSpro-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NAG-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PGI-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PGI-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PGI-Fortran.cmake
@@ -169,6 +176,9 @@ share/cmake-${CMAKE_API}/Modules/Compiler/PathScale-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PathScale-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PathScale-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PathScale.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/SCO-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/SCO-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/SCO.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-Fortran.cmake
@@ -380,12 +390,14 @@ share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-windres.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Catamount.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Darwin-NAG-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-VisualAge-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-XL-C.cmake
@@ -420,6 +432,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-NAG-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-PGI-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-PGI-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-PGI-Fortran.cmake
@@ -464,15 +477,16 @@ share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-NMcl.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-cl.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-cl.cmake.in
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-df.cmake
-share/cmake-${CMAKE_API}/Modules/Platform/Windows-g++.cmake
-share/cmake-${CMAKE_API}/Modules/Platform/Windows-icl.cmake
-share/cmake-${CMAKE_API}/Modules/Platform/Windows-ifort.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-wcl386.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-windres.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsPaths.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Xenix.cmake
