@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/06/04 16:14:44 sborrill Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/02/22 13:33:22 sborrill Exp $
 # Included by:
 # net/netbsd-iscsi-target/Makefile
 # net/netbsd-iscsi-initiator/Makefile
 
-DISTNAME=	netbsd-iscsi-20100416
+DISTNAME=	netbsd-iscsi-20110222
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	agc@NetBSD.org
