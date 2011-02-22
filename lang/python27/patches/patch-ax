@@ -1,0 +1,15 @@
+$NetBSD: patch-ax,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+
+chop "-RELEASE" or "-DEVELOPMENT" from release for DragonFly.
+
+--- Lib/sysconfig.py.orig	2010-11-06 04:06:18.000000000 +0000
++++ Lib/sysconfig.py
+@@ -697,6 +697,8 @@ def get_platform():
+                     machine = 'ppc64'
+                 else:
+                     machine = 'ppc'
++    elif osname[:9] == "dragonfly":
++        release = str.split(release, '-')[0]
+ 
+     return "%s-%s-%s" % (osname, release, machine)
+ 
