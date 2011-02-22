@@ -1,21 +1,24 @@
-$NetBSD: patch-ab,v 1.9 2010/11/11 08:34:02 adam Exp $
+$NetBSD: patch-ab,v 1.10 2011/02/22 15:05:33 adam Exp $
 
---- Modules/FindPythonInterp.cmake.orig	2010-11-10 20:05:11.000000000 +0000
+--- Modules/FindPythonInterp.cmake.orig	2011-02-15 17:47:27.000000000 +0000
 +++ Modules/FindPythonInterp.cmake
-@@ -19,8 +19,15 @@
+@@ -20,11 +20,18 @@
  # (To distribute this file outside of CMake, substitute the full
  #  License text for the above reference.)
  
 +# for pkgsrc: force Python version (set in pyversion.mk)
 +IF(DEFINED PYVERSSUFFIX)
-+  SET(_VERSIONS python${PYVERSSUFFIX})
++  SET(_VERSIONS ${PYVERSSUFFIX})
 +ELSE(DEFINED PYVERSSUFFIX)
-+  SET(_VERSIONS python2.7 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 python1.6 python1.5 python)
++  SET(_VERSIONS 2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
 +ENDIF(DEFINED PYVERSSUFFIX)
 +
- FIND_PROGRAM(PYTHON_EXECUTABLE
--  NAMES python2.7 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 python1.6 python1.5 python
-+  NAMES ${_VERSIONS}
-   PATHS
-   [HKEY_LOCAL_MACHINE\\SOFTWARE\\Python\\PythonCore\\2.7\\InstallPath]
-   [HKEY_LOCAL_MACHINE\\SOFTWARE\\Python\\PythonCore\\2.6\\InstallPath]
+ # Set up the versions we know about, in the order we will search. Always add
+ # the user supplied additional versions to the front.
+ set(_Python_VERSIONS
+   ${Python_ADDITIONAL_VERSIONS}
+-  2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
++  ${_VERSIONS})
+ 
+ # Run first with the Python version in the executable
+ foreach(_CURRENT_VERSION ${_Python_VERSIONS})
