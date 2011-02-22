@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.84 2011/02/22 09:12:37 obache Exp $
+# $NetBSD: pyversion.mk,v 1.85 2011/02/22 11:12:51 obache Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -168,11 +168,11 @@ PY_COMPILE_O_ALL= \
 
 .if exists(${PYTHONBIN})
 PYINC!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print distutils.sysconfig.get_python_inc(0, \"\")" || ${ECHO} ""
+	print (distutils.sysconfig.get_python_inc(0, \"\"))" || ${ECHO} ""
 PYLIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print distutils.sysconfig.get_python_lib(0, 1, \"\")" || ${ECHO} ""
+	print (distutils.sysconfig.get_python_lib(0, 1, \"\"))" || ${ECHO} ""
 PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print distutils.sysconfig.get_python_lib(0, 0, \"\")" || ${ECHO} ""
+	print (distutils.sysconfig.get_python_lib(0, 0, \"\"))" || ${ECHO} ""
 
 PRINT_PLIST_AWK+=	/^${PYINC:S|/|\\/|g}/ \
 			{ gsub(/${PYINC:S|/|\\/|g}/, "$${PYINC}") }
