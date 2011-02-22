@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1.1.1 2011/02/22 08:51:59 obache Exp $
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyo
