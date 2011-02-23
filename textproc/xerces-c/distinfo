@@ -1,25 +1,5 @@
-$NetBSD: distinfo,v 1.13 2009/08/28 05:24:34 hasso Exp $
+$NetBSD: distinfo,v 1.14 2011/02/23 08:31:13 adam Exp $
 
-SHA1 (xerces-c-src_2_8_0.tar.gz) = f0803b1330daec3f44b17dee64c3c99de6b3cd3e
-RMD160 (xerces-c-src_2_8_0.tar.gz) = d576df7870b043a338358834a0e1180dca39e838
-Size (xerces-c-src_2_8_0.tar.gz) = 7893039 bytes
-SHA1 (patch-aa) = fe4865a320c5a8690e41d8e4a6c8465bfc989b96
-SHA1 (patch-ab) = 581a7fb3faa93fd390af939d110c90d4b350910b
-SHA1 (patch-ac) = 8fe9f17f1a8be5e251885efe1bcf7466cbea7714
-SHA1 (patch-ad) = 4ba3a565455cbc5202f309b36365297396221f51
-SHA1 (patch-af) = b67265ad5ad7b3a5eb1d6eadf53265dea28a03db
-SHA1 (patch-ag) = 778c1f35e20d98336c1aabe968cd673ee80f8c16
-SHA1 (patch-ah) = fe86675faa35e458e7729d12c1c343fc1976c9ba
-SHA1 (patch-ai) = 1259dc3f5f69a7a218199825cd085a80563c04f6
-SHA1 (patch-aj) = f3ebf6265573f93ff1b75eee55fb3698f7cdb841
-SHA1 (patch-ak) = d9fba073a165e8b5cfebe546afc35efd6c74f150
-SHA1 (patch-al) = ee9aeff252afec1eba6316118e825ef27f187a2d
-SHA1 (patch-am) = d9fea604b7b34654ff6cb69d155f2d5e9ccde25b
-SHA1 (patch-an) = 168ee08b79bba4cb5e0c8ec8567dbde09e8408f3
-SHA1 (patch-ao) = 6d72b85c9883797d80d469554817e5034a77b97b
-SHA1 (patch-ap) = ff9169b12d936c9ca093e7e3ee30aa84a1c8ae7f
-SHA1 (patch-aq) = 9e25a396655fe11a068ddb4a48c23902214273e6
-SHA1 (patch-ar) = 8b8055056afdb0c3d8a556211bf44aec496727a1
-SHA1 (patch-as) = 3eaec415b91dcd129eaa7c5c6e0b5b417ad651bc
-SHA1 (patch-at) = 31682536fccb69cbf29872793b2eb798e15e3bda
-SHA1 (patch-ba) = 5bf2099aa80dfa3c91d5297fd7238a5a049131d9
+SHA1 (xerces-c-3.1.1.tar.gz) = 177ec838c5119df57ec77eddec9a29f7e754c8b2
+RMD160 (xerces-c-3.1.1.tar.gz) = bbb7ceac470db901d77926cdf21a254df0d8d1db
+Size (xerces-c-3.1.1.tar.gz) = 5051308 bytes
