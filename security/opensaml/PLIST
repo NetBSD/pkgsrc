@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/06/08 12:02:21 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/02/23 09:11:09 adam Exp $
 bin/samlsign
 include/saml/Assertion.h
 include/saml/RootObject.h
@@ -29,6 +29,7 @@ include/saml/saml2/binding/SAML2SOAPClient.h
 include/saml/saml2/core/Assertions.h
 include/saml/saml2/core/Protocols.h
 include/saml/saml2/metadata/AbstractMetadataProvider.h
+include/saml/saml2/metadata/DiscoverableMetadataProvider.h
 include/saml/saml2/metadata/DynamicMetadataProvider.h
 include/saml/saml2/metadata/EndpointManager.h
 include/saml/saml2/metadata/Metadata.h
@@ -48,8 +49,9 @@ include/saml/util/SAMLConstants.h
 include/saml/version.h
 lib/libsaml.a
 lib/libsaml.so
-lib/libsaml.so.6
-lib/libsaml.so.6.0.0
+lib/libsaml.so.7
+lib/libsaml.so.7.0.0
+lib/pkgconfig/opensaml.pc
 share/doc/opensaml-${PKGVERSION}/LICENSE.txt
 share/doc/opensaml-${PKGVERSION}/LOG4CPP.LICENSE
 share/doc/opensaml-${PKGVERSION}/NOTICE.txt
@@ -95,9 +97,13 @@ share/xml/opensaml/saml10-catalog.xml
 share/xml/opensaml/saml11-catalog.xml
 share/xml/opensaml/saml20-catalog.xml
 share/xml/opensaml/sstc-metadata-attr.xsd
+share/xml/opensaml/sstc-request-initiation.xsd
 share/xml/opensaml/sstc-saml-attribute-ext.xsd
 share/xml/opensaml/sstc-saml-delegation.xsd
+share/xml/opensaml/sstc-saml-idp-discovery.xsd
+share/xml/opensaml/sstc-saml-metadata-algsupport-v1.0.xsd
 share/xml/opensaml/sstc-saml-metadata-ext-query.xsd
+share/xml/opensaml/sstc-saml-metadata-ui-v1.0.xsd
 share/xml/opensaml/sstc-saml-protocol-ext-thirdparty.xsd
 share/xml/opensaml/sstc-saml1x-metadata.xsd
 @pkgdir share/doc/opensaml-${PKGVERSION}/api
