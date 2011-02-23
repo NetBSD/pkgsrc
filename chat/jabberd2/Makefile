@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2011/02/12 18:50:13 adam Exp $
+# $NetBSD: Makefile,v 1.65 2011/02/23 19:27:15 adam Exp $
 
-DISTNAME=	jabberd-2.2.12
+DISTNAME=	jabberd-2.2.13
 CATEGORIES=	chat
 MASTER_SITES=	http://codex.xiaoka.com/pub/jabberd2/releases/
 EXTRACT_SUFX=	.tar.bz2
