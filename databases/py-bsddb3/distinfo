@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2010/06/02 12:22:59 adam Exp $
+$NetBSD: distinfo,v 1.18 2011/02/23 10:46:17 adam Exp $
 
-SHA1 (bsddb3-5.0.0.tar.gz) = 33a150a0e8c8e0f8830011aa40f9425372c1178c
-RMD160 (bsddb3-5.0.0.tar.gz) = 8d1246b200d1561b216902c47a6956b864f1f892
-Size (bsddb3-5.0.0.tar.gz) = 202405 bytes
+SHA1 (bsddb3-5.1.1.tar.gz) = d2395260ccc9c62b351992ebf01fe9ba156e5cd4
+RMD160 (bsddb3-5.1.1.tar.gz) = 498ebe1b996cebacc96f4645d62ae42748d0ecc3
+Size (bsddb3-5.1.1.tar.gz) = 377691 bytes
+SHA1 (patch-setup2.py) = 45fe75b148fb3522b382db8f368dc788f6df6278
