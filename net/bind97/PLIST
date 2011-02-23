@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/29 15:08:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.3.4.1 2011/02/23 19:23:21 tron Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -364,10 +364,10 @@ share/doc/bind9/arm/man.rndc.conf.html
 share/doc/bind9/arm/man.rndc.html
 share/doc/bind9/draft/draft-ietf-6man-text-addr-representation-07.txt
 share/doc/bind9/draft/draft-ietf-behave-address-format-07.txt
-share/doc/bind9/draft/draft-ietf-behave-dns64-10.txt
+share/doc/bind9/draft/draft-ietf-behave-dns64-11.txt
 share/doc/bind9/draft/draft-ietf-dnsext-axfr-clarify-14.txt
 share/doc/bind9/draft/draft-ietf-dnsext-dns-tcp-requirements-03.txt
-share/doc/bind9/draft/draft-ietf-dnsext-dnssec-bis-updates-10.txt
+share/doc/bind9/draft/draft-ietf-dnsext-dnssec-bis-updates-12.txt
 share/doc/bind9/draft/draft-ietf-dnsext-dnssec-registry-fixes-06.txt
 share/doc/bind9/draft/draft-ietf-dnsext-ecc-key-07.txt
 share/doc/bind9/draft/draft-ietf-dnsext-interop3597-02.txt
