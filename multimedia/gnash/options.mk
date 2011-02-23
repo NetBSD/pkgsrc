@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2010/10/29 14:15:02 obache Exp $
+# $NetBSD: options.mk,v 1.13 2011/02/23 12:15:52 shattered Exp $
 #
 
 #
@@ -94,6 +94,7 @@ CONFIGURE_ARGS+=	--enable-renderer=${GNASH_RENDER:tW:S/ /,/}
 ###
 .if !empty(PKG_OPTIONS:Mffmpeg)
 GNASH_MEDIA+=	ffmpeg
+.include "../../audio/libdca/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
