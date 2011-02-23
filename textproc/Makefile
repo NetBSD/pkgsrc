@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.568 2011/02/03 18:52:26 drochner Exp $
+# $NetBSD: Makefile,v 1.569 2011/02/23 08:41:57 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -185,7 +185,6 @@ SUBDIR+=	libcroco
 SUBDIR+=	liblinebreak
 SUBDIR+=	liblrdf
 SUBDIR+=	libnxml
-SUBDIR+=	libpathan
 SUBDIR+=	libunicode
 SUBDIR+=	libxml
 SUBDIR+=	libxml++
@@ -563,7 +562,6 @@ SUBDIR+=	vis
 SUBDIR+=	wbxml2
 SUBDIR+=	wdiff
 SUBDIR+=	writer2latex
-SUBDIR+=	xalan-c
 SUBDIR+=	xalan-j
 SUBDIR+=	xapian
 SUBDIR+=	xapian-omega
@@ -584,6 +582,7 @@ SUBDIR+=	xmlto
 SUBDIR+=	xmltoman
 SUBDIR+=	xmltooling
 SUBDIR+=	xp
+SUBDIR+=	xqilla
 SUBDIR+=	xslide
 SUBDIR+=	xt
 SUBDIR+=	yamcha
