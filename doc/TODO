@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10132 2011/02/22 11:30:50 obache Exp $
+$NetBSD: TODO,v 1.10133 2011/02/23 10:48:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
-	o bdb-xml-2.0.9
 	o bdftopcf-1.0.3
 	o beforelight-1.0.4
 	o benchfft-3.1
@@ -1117,7 +1116,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
-	o py-bdb-xml-2.1.8
 	o py-bsddb3-5.1.1
 	o py-checker-0.8.19
 	o py-cheetah-2.4.2.1 [pkg/43458]
@@ -1387,7 +1385,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xdpyinfo-1.2.0
 	o xdriinfo-1.0.4
 	o xemacs-current-21.5.28
-	o xerces-c-2.11.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xev-1.1.0
