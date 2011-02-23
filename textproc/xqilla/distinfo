@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/23 08:34:14 adam Exp $
+
+SHA1 (XQilla-2.2.4.tar.gz) = edd1681a6bb9d310b6aaca6af0584eb96df3b8eb
+RMD160 (XQilla-2.2.4.tar.gz) = ec4268452c98d7c87e8bf7dccaf0ebc7ff19f167
+Size (XQilla-2.2.4.tar.gz) = 15667750 bytes
+SHA1 (patch-src_items_DatatypeFactoryTemplate.hpp) = 6d9ef8eb7b31d5fa8ffa7c85fe20dd45a32f90c3
