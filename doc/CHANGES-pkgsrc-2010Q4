@@ -90,3 +90,5 @@ archivers/php-zip: security patch
 graphics/php-exif: security patch
 lang/php5: security patch
 lang/php53: security patch
+Pullup ticket #3363 - requested by taca
+net/bind97: security update
