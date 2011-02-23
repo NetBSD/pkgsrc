@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.4 2007/06/15 23:43:14 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2011/02/23 10:33:47 adam Exp $
 
---- setup.py.orig	2003-12-17 14:55:18.000000000 -0600
+--- setup.py.orig	2009-12-22 13:21:17.000000000 +0000
 +++ setup.py
-@@ -42,7 +42,7 @@ if "install" in sys.argv and not "build"
+@@ -69,7 +69,7 @@ else:
  
  if os.name == "posix":
-   INCLUDES =    ["../../include",
--                 os.path.join(db_home, "include"),
-+                 os.path.join(db_home, "include", "db4"),
-                  os.path.join(pathan_home, "include"),
-                  os.path.join(xerces_home, "include")]
+   INCLUDES.append(os.path.join(dbxml_home,"include"))
+-  INCLUDES.append(os.path.join(db_home, "include"))
++  INCLUDES.append(os.path.join(db_home, "include", "@BDB_TYPE@"))
  
-@@ -52,7 +52,7 @@ if os.name == "posix":
+   LIBDIRS =     [os.path.join(dbxml_home,"build_unix/.libs"),
+                  os.path.join(dbxml_home, "lib"),
+@@ -78,7 +78,7 @@ if os.name == "posix":
                   os.path.join(xerces_home, "lib")]
  
-   LIBS =        ["dbxml-1.2",
--                 "db_cxx-4.2",
-+                 "db4_cxx",
-                  "pathan", "xerces-c"]
+   LIBS =        ["dbxml",
+-                 "db-4",
++                 "@BDB_TYPE@",
+                  "xqilla", "xerces-c"]
  
    DATAFILES =   []
