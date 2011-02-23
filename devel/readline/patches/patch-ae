@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.14 2009/02/23 12:35:46 wiz Exp $
+$NetBSD: patch-ae,v 1.15 2011/02/23 11:00:17 adam Exp $
 
---- Makefile.in.orig	2009-01-06 17:03:14.000000000 +0000
+--- Makefile.in.orig	2010-10-11 15:53:52.000000000 +0000
 +++ Makefile.in
 @@ -18,6 +18,9 @@
  RL_LIBRARY_VERSION = @LIBVERSION@
@@ -36,7 +36,7 @@ $NetBSD: patch-ae,v 1.14 2009/02/23 12:35:46 wiz Exp $
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -147,6 +157,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
+@@ -150,6 +160,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
  
  all: $(TARGETS)
  
@@ -45,7 +45,7 @@ $NetBSD: patch-ae,v 1.14 2009/02/23 12:35:46 wiz Exp $
  everything: all examples
  
  static: $(STATIC_LIBS)
-@@ -156,17 +168,33 @@ libreadline.a: $(OBJECTS)
+@@ -159,17 +171,33 @@ libreadline.a: $(OBJECTS)
  	$(AR) $(ARFLAGS) $@ $(OBJECTS)
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
@@ -55,14 +55,14 @@ $NetBSD: patch-ae,v 1.14 2009/02/23 12:35:46 wiz Exp $
 +		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR) \
 +		$(LDFLAGS)
 +
- libhistory.a: $(HISTOBJ) xmalloc.o
+ libhistory.a: $(HISTOBJ) xmalloc.o xfree.o
  	$(RM) $@
- 	$(AR) $(ARFLAGS) $@ $(HISTOBJ) xmalloc.o
+ 	$(AR) $(ARFLAGS) $@ $(HISTOBJ) xmalloc.o xfree.o
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
-+libhistory.la: $(HISTOBJ:.o=.lo) xmalloc.lo
++libhistory.la: $(HISTOBJ:.o=.lo) xmalloc.lo xfree.lo
 +	$(LIBTOOL) --mode=clean $(RM) $@
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(HISTOBJ:.o=.lo) xmalloc.lo \
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(HISTOBJ:.o=.lo) xmalloc.lo xfree.lo \
 +		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR) \
 +		$(LDFLAGS)
 +
@@ -79,7 +79,7 @@ $NetBSD: patch-ae,v 1.14 2009/02/23 12:35:46 wiz Exp $
  readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
  	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -o $@ $(top_srcdir)/examples/rl.c ./libreadline.a ${TERMCAP_LIB}
  
-@@ -251,6 +279,12 @@ install-examples: installdirs install-he
+@@ -254,6 +282,12 @@ install-examples: installdirs install-he
  uninstall-examples: maybe-uninstall-headers
  	-( cd examples; ${MAKE} ${MFLAGS} DESTDIR=${DESTDIR} uninstall )
  
