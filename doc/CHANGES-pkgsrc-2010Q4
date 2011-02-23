@@ -85,3 +85,8 @@ lang/sun-jdk6: security update
 lang/sun-jre6: security update
 Pullup ticket #3359 - requested by taca
 www/typo3: security update
+Pullup ticket #3362 - requested by taca
+archivers/php-zip: security patch
+graphics/php-exif: security patch
+lang/php5: security patch
+lang/php53: security patch
