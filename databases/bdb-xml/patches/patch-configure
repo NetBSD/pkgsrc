@@ -1,0 +1,43 @@
+$NetBSD: patch-configure,v 1.1 2011/02/23 10:32:29 adam Exp $
+
+--- configure.orig	2009-12-22 13:21:17.000000000 +0000
++++ configure
+@@ -2656,17 +2656,17 @@ DB_TEST_PATH="<replace_with:_path_to_db_
+ DB_UTIL_PATH="<replace_with:_path_to_db_build>/build_unix"
+ 
+ # Check for a DB install tree
+-if test `ls "$with_berkeleydb"/lib/libdb-*.la 2>/dev/null | wc -l` -gt 0 ; then
++if test `ls "$with_berkeleydb"/lib/lib${BDB_TYPE}-*.la 2>/dev/null | wc -l` -gt 0 ; then
+    	{ echo "$as_me:$LINENO: checking for Berkeley DB version from install tree" >&5
+ echo $ECHO_N "checking for Berkeley DB version from install tree... $ECHO_C" >&6; }
+-	db_version=`ls "$with_berkeleydb"/lib/libdb-*.la | sed 's/.*db-\(.*\).la/\1/'`
++	db_version=`ls "$with_berkeleydb"/lib/lib${BDB_TYPE}-*.la | sed 's/.*db.-\(.*\).la/\1/'`
+ 	{ echo "$as_me:$LINENO: result: $db_version" >&5
+ echo "${ECHO_T}$db_version" >&6; }
+ 
+ 	DB_TCLLIB="<replace_with:_path_to_db_libs_with_tcl>/libdb_tcl-$db_version"
+   	berkeleydb_include="-I$with_berkeleydb/include"
+ 	berkeleydb_lib="$with_berkeleydb/lib"
+-  	berkeleydb_library="db-$db_version"
++  	berkeleydb_library="${BDB_TYPE}-$db_version"
+   	berkeleydb_jar="$with_berkeleydb/lib/db.jar"
+ 
+ 
+@@ -2746,7 +2746,7 @@ echo "$as_me: error: $with_berkeleydb no
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-if test "$db_version" != "4.3" && test "$db_version" != "4.4" && test "$db_version" != "4.5" && test "$db_version" != "4.6" && test "$db_version" != "4.7" && test "$db_version" != "4.8"; then
++if test "$db_version" != "4.3" && test "$db_version" != "4.4" && test "$db_version" != "4.5" && test "$db_version" != "4.6" && test "$db_version" != "4.7" && test "$db_version" != "4.8" && test "$db_version" != "5.1"; then
+ 		{ { echo "$as_me:$LINENO: error: $with_berkeleydb is version $db_version, which is not a supported version of Berkeley DB. The version must be at least 4.3" >&5
+ echo "$as_me: error: $with_berkeleydb is version $db_version, which is not a supported version of Berkeley DB. The version must be at least 4.3" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -2995,7 +2995,7 @@ echo "${ECHO_T}$with_zlib" >&6; }
+   if test "$with_zlib" != "no"; then
+      { echo "$as_me:$LINENO: checking if the ZLIB library is present" >&5
+ echo $ECHO_N "checking if the ZLIB library is present... $ECHO_C" >&6; }
+-     if test `ls $with_zlib/lib/libz.a 2>/dev/null | wc -l` -gt 0 ; then
++     if test `ls $with_zlib/include/zlib.h 2>/dev/null | wc -l` -gt 0 ; then
+         { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+         zlib_lib="-L$with_zlib/lib -R$with_zlib/lib"
