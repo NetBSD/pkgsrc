@@ -1,33 +1,35 @@
-# $NetBSD: Makefile,v 1.16 2010/09/16 08:06:14 adam Exp $
+# $NetBSD: Makefile,v 1.17 2011/02/23 10:33:47 adam Exp $
 
-DISTNAME=	dbxml-1.2.1
+DISTNAME=	dbxml-2.5.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
-PKGREVISION=	10
 CATEGORIES=	databases python
-MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
+MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.sleepycat.com/products/xml.shtml
+HOMEPAGE=	http://www.oracle.com/us/products/database/berkeley-db/
 COMMENT=	Python wrapper for Berkeley DB XML C++ API
+LICENSE=	modified-bsd AND apache-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	${PYPKGPREFIX}-dbxml<=1.2.1
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src/python
-PYDISTUTILSPKG=	YES
+WRKSRC=		${WRKDIR}/${DISTNAME}/dbxml/src/python
 
-BDB_ACCEPTED=	db4 db5
-USE_LANGUAGES=	c c++
-NO_CONFIGURE=	YES
+USE_LANGUAGES=		c c++
+NO_CONFIGURE=		yes
+PYDISTUTILSPKG=		yes
 
-.include "../../lang/python/extension.mk"
-PYSETUPBUILDARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4} \
-			--with-xerces=${BUILDLINK_PREFIX.xerces-c} \
-			--with-pathan=${BUILDLINK_PREFIX.libpathan}
+SUBST_CLASSES+=		fix-path
+SUBST_STAGE.fix-path=	pre-build
+SUBST_MESSAGE.fix-path=	Fixing library paths.
+SUBST_FILES.fix-path=	setup.py
+SUBST_SED.fix-path=	-e 's,@prefix@,${PREFIX},'
+SUBST_SED.fix-path+=	-e 's,@DB_DIR@,${BDBBASE},'
+SUBST_SED.fix-path+=	-e 's,@XERCES_DIR@,${BUILDLINK_PREFIX.xerces-c},'
+SUBST_SED.fix-path+=	-e 's,@XQILLA_DIR@,${BUILDLINK_PREFIX.xqilla},'
+SUBST_SED.fix-path+=	-e 's,@BDB_TYPE@,${BDB_TYPE},'
 
 .include "../../databases/bdb-xml/buildlink3.mk"
-.include "../../textproc/libpathan/buildlink3.mk"
-.include "../../textproc/xerces-c/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
