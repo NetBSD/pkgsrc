@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.569 2011/02/23 08:41:57 adam Exp $
+# $NetBSD: Makefile,v 1.570 2011/02/23 08:54:31 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -396,7 +396,6 @@ SUBDIR+=	p5-XML-XPathEngine
 SUBDIR+=	p5-XML-XQL
 SUBDIR+=	p5-XML-XSLT
 SUBDIR+=	p5-XML-XUpdate-LibXML
-SUBDIR+=	p5-XML-Xerces
 SUBDIR+=	p5-YAML
 SUBDIR+=	p5-YAML-LibYAML
 SUBDIR+=	p5-YAML-Syck
