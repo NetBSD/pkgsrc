@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.9 2011/02/01 00:08:48 wiz Exp $
+$NetBSD: distinfo,v 1.10 2011/02/23 10:20:26 adam Exp $
 
-SHA1 (enigma-1.01.tar.gz) = 93f96ddd152e7474488cbb27ce0923312a851a9c
-RMD160 (enigma-1.01.tar.gz) = 9dd91152cfced5352a669e8921fdbb270c0abc4e
-Size (enigma-1.01.tar.gz) = 10847953 bytes
+SHA1 (enigma-1.01-r1914.tar.gz) = f0c4b3e8fbbcc246044fbdf0ff474a005e9905a1
+RMD160 (enigma-1.01-r1914.tar.gz) = 205e11ecc87b3a46911782366043ce80079b9918
+Size (enigma-1.01-r1914.tar.gz) = 10902129 bytes
 SHA1 (patch-aa) = c0a337a1d1098815812e117f5ca49d9ed248a446
-SHA1 (patch-aq) = 113580c3063cdfa11ee212f922edd5b40f229eea
+SHA1 (patch-aq) = a58f97c78c4ee2a98c29b53265dbc5d2993cd8df
 SHA1 (patch-lib-src_enigma-core_IMG__SavePNG.c) = 7377498a9be1425cb7c683147b37ceb894a305c8
+SHA1 (patch-lib-src_enigma-core_ecl_alist.hh) = 15c0d90cecb60010f85074d28c907f4ba416a972
+SHA1 (patch-lib-src_enigma-core_ecl_dict.hh) = 64dfc60a4a805a4b1f3af8ca3726efd14d1d7cfd
+SHA1 (patch-lib-src_enigma-core_ecl_font.cc) = 132504419ed9b045f021dc3b2023116d57ab51e9
+SHA1 (patch-src_oxyd.cc) = e70a5b6049db22be42be438c08ccfed677907a20

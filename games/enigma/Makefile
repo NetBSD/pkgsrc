@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2011/02/01 00:09:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2011/02/23 10:20:26 adam Exp $
 
-DISTNAME=	enigma-1.01
-PKGREVISION=	5
+DISTNAME=	enigma-1.01-r1914
+PKGNAME=	${DISTNAME:S/-r/./}
 CATEGORIES=	games
 MASTER_SITES=	http://download.berlios.de/enigma-game/
 
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-r1914//}
 GCC_REQD+=		3.3
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
