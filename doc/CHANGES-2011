@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.436 2011/02/23 10:48:31 adam Exp $
+$NetBSD: CHANGES-2011,v 1.437 2011/02/23 11:00:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/bdb-xml to 2.5.16 [adam 2011-02-23]
 	Updated databases/py-bdb-xml to 2.5.16 [adam 2011-02-23]
 	Updated databases/py-bsddb3 to 5.1.1 [adam 2011-02-23]
+	Updated devel/readline to 6.2 [adam 2011-02-23]
