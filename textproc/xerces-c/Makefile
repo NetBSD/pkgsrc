@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/02/23 08:31:13 adam Exp $
+# $NetBSD: Makefile,v 1.40 2011/02/23 08:32:41 adam Exp $
 
 DISTNAME=	xerces-c-3.1.1
 CATEGORIES=	textproc
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-PKGCONFIG_OVERRIDE=	${WRKSRC}/xerces-c.pc.in
+PKGCONFIG_OVERRIDE=	xerces-c.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
