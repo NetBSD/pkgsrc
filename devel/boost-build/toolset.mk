@@ -1,9 +1,11 @@
-# $NetBSD: toolset.mk,v 1.4 2010/10/30 09:29:58 adam Exp $
+# $NetBSD: toolset.mk,v 1.5 2011/02/24 11:05:34 adam Exp $
 
-.if ${OPSYS} == "Darwin"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+.  if ${OPSYS} == "Darwin"
 BOOST_TOOLSET=		darwin
-.elif !empty(PKGSRC_COMPILER:Mgcc)
+.  else
 BOOST_TOOLSET=		gcc
+.  endif
 .elif !empty(PKGSRC_COMPILER:Mclang)
 BOOST_TOOLSET=		clang
 .elif !empty(PKGSRC_COMPILER:Mmipspro*)
