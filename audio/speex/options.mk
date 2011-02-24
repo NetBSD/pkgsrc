@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/11/08 21:12:16 bjs Exp $
+# $NetBSD: options.mk,v 1.2 2011/02/24 23:02:32 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.speex
@@ -27,6 +27,6 @@ CONFIGURE_ARGS+=	--enable-sse
 .endif
 
 .if !empty(PKG_OPTIONS:Mfftw)
-CONFIGURE_ARGS+=	--with-fft=fftw3
-.  include "../../math/fftw/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-fft=gpl-fftw3
+.  include "../../math/fftwf/buildlink3.mk"
 .endif
