@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2010/08/28 20:08:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2011/02/24 13:36:56 adam Exp $
 @pkgdir var/run/wesnothd
 bin/wesnoth
 bin/wesnothd
@@ -20,6 +20,8 @@ man/gl/man6/wesnoth.6
 man/gl/man6/wesnothd.6
 man/hu/man6/wesnoth.6
 man/hu/man6/wesnothd.6
+man/id/man6/wesnoth.6
+man/id/man6/wesnothd.6
 man/it/man6/wesnoth.6
 man/it/man6/wesnothd.6
 man/ja/man6/wesnoth.6
