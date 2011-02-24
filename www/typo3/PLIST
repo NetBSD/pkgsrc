@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/02/07 12:57:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/02/24 14:09:12 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -328,7 +328,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/class.show_rechis.inc
 ${TYPO3DIR}/${TYPO3NAME}/typo3/class.webpagetree.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/classes/class.ajaxlogin.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/classes/class.clearcachemenu.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/classes/class.donatewindow.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/classes/class.livesearch.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/classes/class.modulemenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/classes/class.shortcutmenu.php
@@ -343,11 +342,11 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/close.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/.htaccess
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/RemoveXSS/RemoveXSS.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/LICENSE
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/VERSION_0.94
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/csharp/css/csharpcolors.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/csharp/index.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/csharp/js/parsecsharp.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/csharp/js/tokenizecsharp.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/groovy/index.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/lua/LICENSE
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/lua/css/luacolors.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/lua/index.html
@@ -378,8 +377,11 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/sql/LICENSE
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/sql/css/sqlcolors.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/sql/index.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/contrib/sql/js/parsesql.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/baboon.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/baboon_vector.ai
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/csscolors.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/docs.css
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/font.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/jscolors.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/people.jpg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/css/sparqlcolors.css
@@ -399,8 +401,9 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/js/stringstream.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/js/tokenize.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/js/tokenizejavascript.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/js/undo.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/js/unittests.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/js/util.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/unittests.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/codemirror/unittests.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/INCLUDE_ORDER.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/LICENSE.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/adapter/ext/ext-base-debug.js
@@ -1924,10 +1927,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/js/clearcachemenu.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/js/clickmenu.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/js/common.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/js/constantEditor.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/js/donate.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/js/extjs/PluploadWindow.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/js/extjs/debugPanel.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/js/extjs/ext.ux.plupload.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/js/extjs/iframepanel.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/js/extjs/viewport.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/js/extjs/viewportConfiguration.js
@@ -2294,6 +2294,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_medi
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_multimedia.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_offsettable.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_phpscript.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_phpscriptexternal.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_phpscriptinternal.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_quicktimeobject.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/content/class.tslib_content_records.php
@@ -2766,6 +2767,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/realurl.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/scheduler.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/templavoila.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/postgresql/postgresql-compatibility.sql
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/class.tx_em_api.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/class.tx_em_extensionmanager.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/conf.php
@@ -2821,6 +2823,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/cancel.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/download.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/drive.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/email.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/extension-required.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/filebrowser.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/flag.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/icons/image.png
@@ -2847,6 +2850,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/em_usertools.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/overrides/ext_overrides.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/ux/GridFilters.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/ux/RowPanelExpander.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/ux/TreeState.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/ux/css/GridFilters.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/ux/css/RangeMenu.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/js/ux/custom_plugins.js
@@ -6673,6 +6677,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-l
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-locked.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-media.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-news.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-opened.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-recycler.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-temp.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-folder-user.png
@@ -6746,6 +6751,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/text-html.pn
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/text-js.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/text-php.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/text-text.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/word.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/x-content-divider.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/x-content-domain.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/x-content-form-search.png
@@ -6773,8 +6779,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/x-sys_langua
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/x-sys_news.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/x-sys_workspace.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/mimetypes/x_belayout.png
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/places/folder-closed.png
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/places/folder-opened.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/status/dialog-error.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/status/dialog-information.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/status/dialog-notification.png
