@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.442 2011/02/24 14:06:16 taca Exp $
+$NetBSD: CHANGES-2011,v 1.443 2011/02/24 14:10:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -733,3 +733,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/glew to 1.5.8 [adam 2011-02-24]
 	Updated games/wesnoth to 1.8.5 [adam 2011-02-24]
 	Updated www/geeklog to 1.7.2 [taca 2011-02-24]
+	Updated www/typo3 to 4.5.1 [taca 2011-02-24]
