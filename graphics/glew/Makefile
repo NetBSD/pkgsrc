@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2010/11/10 20:22:54 adam Exp $
+# $NetBSD: Makefile,v 1.11 2011/02/24 11:06:31 adam Exp $
 
-DISTNAME=	glew-1.5.7
+DISTNAME=	glew-1.5.8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glew/}
 EXTRACT_SUFX=	.tgz
