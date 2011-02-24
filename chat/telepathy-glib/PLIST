@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/11/29 15:29:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/02/24 21:01:45 drochner Exp $
 include/telepathy-1.0/telepathy-glib/_gen/error-str.h
 include/telepathy-1.0/telepathy-glib/_gen/genums.h
 include/telepathy-1.0/telepathy-glib/_gen/gtypes.h
@@ -107,8 +107,10 @@ include/telepathy-1.0/telepathy-glib/telepathy-glib.h
 include/telepathy-1.0/telepathy-glib/text-mixin.h
 include/telepathy-1.0/telepathy-glib/util.h
 include/telepathy-1.0/telepathy-glib/verify.h
+lib/girepository-1.0/TelepathyGLib-0.12.typelib
 lib/libtelepathy-glib.la
 lib/pkgconfig/telepathy-glib.pc
+share/gir-1.0/TelepathyGLib-0.12.gir
 share/gtk-doc/html/telepathy-glib/TpBaseChannel.html
 share/gtk-doc/html/telepathy-glib/TpBaseConnection.html
 share/gtk-doc/html/telepathy-glib/TpBaseConnectionManager.html
