@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2010/11/26 20:47:01 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2011/02/24 11:05:35 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -10,7 +10,7 @@
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
 
-BOOST_VERSION=		1.45.0
+BOOST_VERSION=		1.46.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -30,6 +30,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.boost.org/
 COMMENT=		Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
+LICENSE=		boost-license
 
 CONFLICTS+=		boost<1.36.0
 
