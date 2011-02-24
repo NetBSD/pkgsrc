@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.8 2010/10/26 17:55:37 adam Exp $
+# $NetBSD: bjam.mk,v 1.9 2011/02/24 11:05:35 adam Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
 
@@ -27,9 +27,9 @@ BJAM_CMD=		${SETENV} ${MAKE_ENV} ${BJAM} ${BJAM_ARGS}
 UNLIMIT_RESOURCES+=	datasize
 
 bjam-build:
-	@${_ULIMIT_CMD}							\
+	${_ULIMIT_CMD}							\
 	cd ${WRKSRC} && ${BJAM_CMD} --prefix=${PREFIX} stage
 
 bjam-install:
-	@${_ULIMIT_CMD}							\
+	${_ULIMIT_CMD}							\
 	cd ${WRKSRC} && ${BJAM_CMD} --prefix=${DESTDIR}${PREFIX} install
