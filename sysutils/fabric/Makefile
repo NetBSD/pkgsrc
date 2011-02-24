@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2010/12/06 23:12:34 gls Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/24 21:43:45 gls Exp $
 #
 
-VERSION=		0.9.3
+VERSION=		0.9.4
 DISTNAME=		Fabric-${VERSION}
 PKGNAME=		${DISTNAME:S/F/f/}
 CATEGORIES=		sysutils net
-MASTER_SITES=	http://code.fabfile.org/projects/fabric/files/
+MASTER_SITES=	http://pypi.python.org/packages/source/F/Fabric/
 
 MAINTAINER=		gls@NetBSD.org
 HOMEPAGE=		http://fabfile.org/
