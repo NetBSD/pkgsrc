@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.454 2011/02/25 16:42:19 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.455 2011/02/25 17:03:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -758,3 +758,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/telepathy-mission-control5 to 5.6.1 [drochner 2011-02-25]
 	Updated chat/telepathy-farsight to 0.0.15 [drochner 2011-02-25]
 	Updated chat/telepathy-glib to 0.12.7 [drochner 2011-02-25]
+	Updated graphics/magicpoint to 1.13anb6 [wiz 2011-02-25]
