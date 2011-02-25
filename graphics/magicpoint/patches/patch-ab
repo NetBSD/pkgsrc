@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2008/09/10 13:32:47 taca Exp $
+$NetBSD: patch-ab,v 1.5 2011/02/25 17:02:53 wiz Exp $
 
---- mgp.h.orig	2008-01-19 02:43:20.000000000 +0900
+--- mgp.h.orig	2008-01-18 17:43:20.000000000 +0000
 +++ mgp.h
 @@ -64,7 +64,9 @@
  #ifdef USE_XFT2
@@ -26,6 +26,15 @@ $NetBSD: patch-ab,v 1.4 2008/09/10 13:32:47 taca Exp $
  	u_int ct_page;
  	struct ctrl *ct_next;
  	union {
+@@ -507,7 +515,7 @@ struct render_object {
+ 			float xzoom, yzoom;
+ #ifdef USE_IMLIB
+ 			int zoomonclk;
+-			ImlibImage *imimage;
++			Imlib_Image *imimage;
+ #endif
+ 		} image;
+ 		struct {
 @@ -745,6 +753,11 @@ extern int get_regid __P((char *));
  extern void draw_line_itemsize __P((struct render_state *, int, int, int));
  extern void draw_line_start __P((struct render_state *));

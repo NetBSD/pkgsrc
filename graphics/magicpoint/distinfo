@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.17 2010/12/15 19:08:21 chuck Exp $
+$NetBSD: distinfo,v 1.18 2011/02/25 17:02:53 wiz Exp $
 
 SHA1 (magicpoint-1.13a.tar.gz) = 2bc662ad0a482d42578766258a143b06a4718ae3
 RMD160 (magicpoint-1.13a.tar.gz) = 067d7dee3b90ec354975d9ad4ea0c0df48cca191
 Size (magicpoint-1.13a.tar.gz) = 890670 bytes
-SHA1 (patch-aa) = 7270255c2002c66d10ab911ed22ce67067183e17
-SHA1 (patch-ab) = eb6558d6981e5d5f41f55dddc1b3debc9ca27d36
+SHA1 (patch-aa) = 59bc5a8bce25ac27a77ae8d03dd42f354d1d1bff
+SHA1 (patch-ab) = 6622ca95dfcf059d9464f8cc959d23c9c787d8b6
 SHA1 (patch-ac) = b886607033a89e3ab46c41a2a5a8368b473682f4
 SHA1 (patch-ad) = 33c8fa61cb03cb53ad8783d2d79fa457cb21d235
-SHA1 (patch-ae) = ca59b94955f2de6f19ea1e2210ede7eaeba50a95
+SHA1 (patch-ae) = 49aab80a13d7daf99671c69cf62f432c03054dad
 SHA1 (patch-af) = 615e845dfbeba9b35c5a138841962631dac3b4bb
 SHA1 (patch-ag) = 96d7cac9157b9183dd2ba76b12f0927fc15dd5a6
 SHA1 (patch-ai) = 809b2cf509bab0ee1bed1fecb2cf2d8df912ce8b
@@ -29,3 +29,5 @@ SHA1 (patch-ay) = 4c618b7c51f8b41a472ddd6cba938a2ccb3d91e1
 SHA1 (patch-az) = 893ec7e21199205c07933d5525a6eb394114fd11
 SHA1 (patch-ba) = 938e5714ddfcb8ca64d1cc6f756eeb69e592905d
 SHA1 (patch-bb) = 3a6c328adcb49aef0d4792ceff08407fcbc80c16
+SHA1 (patch-image_imlib__loader.c) = 99aa122d4d4f474c448fa2767bee3496ca97110a
+SHA1 (patch-image_xloadimage.h) = 05a1caeedca9c33beecffb8f078270d88fc7184c
