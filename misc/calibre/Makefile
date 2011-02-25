@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:38:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/02/25 09:47:25 wiz Exp $
 #
 
 DISTNAME=	calibre-0.6.24
@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11:../../www/py-mechanize
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-PYTHON_VERSIONS_ACCEPTED=	26
+PYTHON_VERSIONS_ACCEPTED=	27 26
 PYDISTUTILSPKG=	yes
 PYSETUPOPTARGS=	# empty
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}

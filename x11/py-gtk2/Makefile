@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2011/01/13 13:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2011/02/25 09:47:31 wiz Exp $
 #
 
 DISTNAME=	pygtk-2.22.0
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=	gmake pkg-config
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

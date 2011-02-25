@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/11/27 13:51:24 abs Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/25 09:47:27 wiz Exp $
 #
 .include "../../news/hellanzb/Makefile.version"
 
@@ -19,7 +19,7 @@ DEPENDS+=	unrar>=3.5.4:../../archivers/unrar
 
 PYDISTUTILSPKG=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
+PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 WRKSRC=		${WRKDIR}/hellanzb-${HELLANZB_VERSION}-trunk
