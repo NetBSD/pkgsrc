@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/25 02:12:50 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/02/25 02:18:50 obache Exp $
 
 SHA1 (escape-0.2.tar.gz) = 6051baa5c9f8a0044bf3f0011f71eab123ba2d73
 RMD160 (escape-0.2.tar.gz) = 2590205a221a780080747508f31390b45deea121
 Size (escape-0.2.tar.gz) = 19317 bytes
-SHA1 (patch-aa) = a5207b6f7e71f628355c29e39bdbdbb26b382331
+SHA1 (patch-install.rb) = a5207b6f7e71f628355c29e39bdbdbb26b382331

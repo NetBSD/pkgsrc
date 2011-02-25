@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/02/25 02:12:50 obache Exp $
+$NetBSD: patch-install.rb,v 1.1 2011/02/25 02:18:51 obache Exp $
 
 staged installation support.
 
