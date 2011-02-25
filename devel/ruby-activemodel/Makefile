@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2.4.1 2011/02/14 19:08:01 spz Exp $
+# $NetBSD: Makefile,v 1.2.4.2 2011/02/25 10:50:45 tron Exp $
 
 DISTNAME=	activemodel-3.0.4
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
