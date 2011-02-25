@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2010/09/16 12:02:05 taca Exp $
+# $NetBSD: Makefile,v 1.34.4.1 2011/02/25 09:16:07 tron Exp $
 
 DISTNAME=	rubygems-1.3.7
+PKGREVISION=	1
 CATEGORIES=	misc ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/70696/
 EXTRACT_SUFX=	.tgz
