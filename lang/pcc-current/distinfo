@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/11/29 09:39:42 he Exp $
+$NetBSD: distinfo,v 1.6 2011/02/25 12:21:09 he Exp $
 
-SHA1 (pcc-101129.tgz) = bc5eb81cc7ae7969b6e93fc9a71d7e5f7c08ac8c
-RMD160 (pcc-101129.tgz) = 119aff203be93ac895432774765632f95f81548c
-Size (pcc-101129.tgz) = 642663 bytes
-SHA1 (patch-aa) = 3ca9662e342d240f2d896e95a65261e7e76cda79
+SHA1 (pcc-1.0.0.BETA-20110225.tgz) = c3d088f461880e62c0a939db055be9c7ecd5c05a
+RMD160 (pcc-1.0.0.BETA-20110225.tgz) = 005e2f8548a46453f5eab759f7af7f51c03f407f
+Size (pcc-1.0.0.BETA-20110225.tgz) = 651604 bytes
+SHA1 (patch-aa) = 09a38348102ae5ef623d646f2214fb36a135365b
