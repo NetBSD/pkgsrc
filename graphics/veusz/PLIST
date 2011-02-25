@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/09/02 10:48:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/02/25 13:22:33 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -55,6 +55,9 @@ ${PYSITELIB}/veusz/dialogs/historycombo.pyo
 ${PYSITELIB}/veusz/dialogs/historygroupbox.py
 ${PYSITELIB}/veusz/dialogs/historygroupbox.pyc
 ${PYSITELIB}/veusz/dialogs/historygroupbox.pyo
+${PYSITELIB}/veusz/dialogs/historyspinbox.py
+${PYSITELIB}/veusz/dialogs/historyspinbox.pyc
+${PYSITELIB}/veusz/dialogs/historyspinbox.pyo
 ${PYSITELIB}/veusz/dialogs/historyvaluecombo.py
 ${PYSITELIB}/veusz/dialogs/historyvaluecombo.pyc
 ${PYSITELIB}/veusz/dialogs/historyvaluecombo.pyo
@@ -128,6 +131,9 @@ ${PYSITELIB}/veusz/document/operations.pyo
 ${PYSITELIB}/veusz/document/readcsv.py
 ${PYSITELIB}/veusz/document/readcsv.pyc
 ${PYSITELIB}/veusz/document/readcsv.pyo
+${PYSITELIB}/veusz/document/selftest_export.py
+${PYSITELIB}/veusz/document/selftest_export.pyc
+${PYSITELIB}/veusz/document/selftest_export.pyo
 ${PYSITELIB}/veusz/document/simpleread.py
 ${PYSITELIB}/veusz/document/simpleread.pyc
 ${PYSITELIB}/veusz/document/simpleread.pyo
@@ -244,6 +250,9 @@ ${PYSITELIB}/veusz/widgets/axisticks.pyo
 ${PYSITELIB}/veusz/widgets/bar.py
 ${PYSITELIB}/veusz/widgets/bar.pyc
 ${PYSITELIB}/veusz/widgets/bar.pyo
+${PYSITELIB}/veusz/widgets/boxplot.py
+${PYSITELIB}/veusz/widgets/boxplot.pyc
+${PYSITELIB}/veusz/widgets/boxplot.pyo
 ${PYSITELIB}/veusz/widgets/colorbar.py
 ${PYSITELIB}/veusz/widgets/colorbar.pyc
 ${PYSITELIB}/veusz/widgets/colorbar.pyo
@@ -275,6 +284,15 @@ ${PYSITELIB}/veusz/widgets/key.pyo
 ${PYSITELIB}/veusz/widgets/line.py
 ${PYSITELIB}/veusz/widgets/line.pyc
 ${PYSITELIB}/veusz/widgets/line.pyo
+${PYSITELIB}/veusz/widgets/nonorthfunction.py
+${PYSITELIB}/veusz/widgets/nonorthfunction.pyc
+${PYSITELIB}/veusz/widgets/nonorthfunction.pyo
+${PYSITELIB}/veusz/widgets/nonorthgraph.py
+${PYSITELIB}/veusz/widgets/nonorthgraph.pyc
+${PYSITELIB}/veusz/widgets/nonorthgraph.pyo
+${PYSITELIB}/veusz/widgets/nonorthpoint.py
+${PYSITELIB}/veusz/widgets/nonorthpoint.pyc
+${PYSITELIB}/veusz/widgets/nonorthpoint.pyo
 ${PYSITELIB}/veusz/widgets/page.py
 ${PYSITELIB}/veusz/widgets/page.pyc
 ${PYSITELIB}/veusz/widgets/page.pyo
@@ -284,6 +302,9 @@ ${PYSITELIB}/veusz/widgets/plotters.pyo
 ${PYSITELIB}/veusz/widgets/point.py
 ${PYSITELIB}/veusz/widgets/point.pyc
 ${PYSITELIB}/veusz/widgets/point.pyo
+${PYSITELIB}/veusz/widgets/polar.py
+${PYSITELIB}/veusz/widgets/polar.pyc
+${PYSITELIB}/veusz/widgets/polar.pyo
 ${PYSITELIB}/veusz/widgets/polygon.py
 ${PYSITELIB}/veusz/widgets/polygon.pyc
 ${PYSITELIB}/veusz/widgets/polygon.pyo
@@ -310,6 +331,7 @@ ${PYSITELIB}/veusz/windows/consolewindow.pyc
 ${PYSITELIB}/veusz/windows/consolewindow.pyo
 ${PYSITELIB}/veusz/windows/icons/button_axis.svg
 ${PYSITELIB}/veusz/windows/icons/button_bar.svg
+${PYSITELIB}/veusz/windows/icons/button_boxplot.svg
 ${PYSITELIB}/veusz/windows/icons/button_colorbar.svg
 ${PYSITELIB}/veusz/windows/icons/button_contour.svg
 ${PYSITELIB}/veusz/windows/icons/button_ellipse.svg
@@ -322,7 +344,10 @@ ${PYSITELIB}/veusz/windows/icons/button_imagefile.svg
 ${PYSITELIB}/veusz/windows/icons/button_key.svg
 ${PYSITELIB}/veusz/windows/icons/button_label.svg
 ${PYSITELIB}/veusz/windows/icons/button_line.svg
+${PYSITELIB}/veusz/windows/icons/button_nonorthfunc.svg
+${PYSITELIB}/veusz/windows/icons/button_nonorthpoint.svg
 ${PYSITELIB}/veusz/windows/icons/button_page.svg
+${PYSITELIB}/veusz/windows/icons/button_polar.svg
 ${PYSITELIB}/veusz/windows/icons/button_polygon.svg
 ${PYSITELIB}/veusz/windows/icons/button_rect.svg
 ${PYSITELIB}/veusz/windows/icons/button_vectorfield.svg
@@ -400,6 +425,7 @@ ${PYSITELIB}/veusz/windows/icons/settings_plotmarkerfill.png
 ${PYSITELIB}/veusz/windows/icons/settings_plotmarkerline.png
 ${PYSITELIB}/veusz/windows/icons/settings_stylesheet.png
 ${PYSITELIB}/veusz/windows/icons/settings_subcontourline.svg
+${PYSITELIB}/veusz/windows/icons/settings_whisker.svg
 ${PYSITELIB}/veusz/windows/icons/veusz-capture-data.svg
 ${PYSITELIB}/veusz/windows/icons/veusz-edit-custom.svg
 ${PYSITELIB}/veusz/windows/icons/veusz-edit-cut.svg
