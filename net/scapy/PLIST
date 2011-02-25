@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:42 joerg Exp $
-bin/scapy
+@comment $NetBSD: PLIST,v 1.5 2011/02/25 15:43:51 drochner Exp $
 bin/UTscapy
+bin/scapy
 ${PYSITELIB}/scapy/__init__.py
 ${PYSITELIB}/scapy/__init__.pyc
 ${PYSITELIB}/scapy/__init__.pyo
@@ -28,6 +28,9 @@ ${PYSITELIB}/scapy/arch/solaris.pyo
 ${PYSITELIB}/scapy/arch/unix.py
 ${PYSITELIB}/scapy/arch/unix.pyc
 ${PYSITELIB}/scapy/arch/unix.pyo
+${PYSITELIB}/scapy/arch/windows/__init__.py
+${PYSITELIB}/scapy/arch/windows/__init__.pyc
+${PYSITELIB}/scapy/arch/windows/__init__.pyo
 ${PYSITELIB}/scapy/as_resolvers.py
 ${PYSITELIB}/scapy/as_resolvers.pyc
 ${PYSITELIB}/scapy/as_resolvers.pyo
@@ -61,6 +64,12 @@ ${PYSITELIB}/scapy/base_classes.pyo
 ${PYSITELIB}/scapy/config.py
 ${PYSITELIB}/scapy/config.pyc
 ${PYSITELIB}/scapy/config.pyo
+${PYSITELIB}/scapy/crypto/__init__.py
+${PYSITELIB}/scapy/crypto/__init__.pyc
+${PYSITELIB}/scapy/crypto/__init__.pyo
+${PYSITELIB}/scapy/crypto/cert.py
+${PYSITELIB}/scapy/crypto/cert.pyc
+${PYSITELIB}/scapy/crypto/cert.pyo
 ${PYSITELIB}/scapy/dadict.py
 ${PYSITELIB}/scapy/dadict.pyc
 ${PYSITELIB}/scapy/dadict.pyo
@@ -151,6 +160,9 @@ ${PYSITELIB}/scapy/layers/rip.pyo
 ${PYSITELIB}/scapy/layers/rtp.py
 ${PYSITELIB}/scapy/layers/rtp.pyc
 ${PYSITELIB}/scapy/layers/rtp.pyo
+${PYSITELIB}/scapy/layers/sctp.py
+${PYSITELIB}/scapy/layers/sctp.pyc
+${PYSITELIB}/scapy/layers/sctp.pyo
 ${PYSITELIB}/scapy/layers/sebek.py
 ${PYSITELIB}/scapy/layers/sebek.pyc
 ${PYSITELIB}/scapy/layers/sebek.pyo
@@ -166,6 +178,9 @@ ${PYSITELIB}/scapy/layers/snmp.pyo
 ${PYSITELIB}/scapy/layers/tftp.py
 ${PYSITELIB}/scapy/layers/tftp.pyc
 ${PYSITELIB}/scapy/layers/tftp.pyo
+${PYSITELIB}/scapy/layers/vrrp.py
+${PYSITELIB}/scapy/layers/vrrp.pyc
+${PYSITELIB}/scapy/layers/vrrp.pyo
 ${PYSITELIB}/scapy/layers/x509.py
 ${PYSITELIB}/scapy/layers/x509.pyc
 ${PYSITELIB}/scapy/layers/x509.pyo
@@ -196,6 +211,9 @@ ${PYSITELIB}/scapy/packet.pyo
 ${PYSITELIB}/scapy/plist.py
 ${PYSITELIB}/scapy/plist.pyc
 ${PYSITELIB}/scapy/plist.pyo
+${PYSITELIB}/scapy/pton_ntop.py
+${PYSITELIB}/scapy/pton_ntop.pyc
+${PYSITELIB}/scapy/pton_ntop.pyo
 ${PYSITELIB}/scapy/route.py
 ${PYSITELIB}/scapy/route.pyc
 ${PYSITELIB}/scapy/route.pyo
