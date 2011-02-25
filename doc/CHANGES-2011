@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.457 2011/02/25 20:03:51 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.458 2011/02/25 20:31:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -761,3 +761,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/magicpoint to 1.13anb6 [wiz 2011-02-25]
 	Added net/unison2.32 version 2.32.52nb4 [wiz 2011-02-25]
 	Updated net/unison to 2.40.61 [wiz 2011-02-25]
+	Added audio/xine-alsa version 1.1.19 [markd 2011-02-25]
