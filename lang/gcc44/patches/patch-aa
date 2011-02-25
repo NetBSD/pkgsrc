@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/09/18 11:24:50 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/25 13:34:56 hans Exp $
 
 --- gcc/config.gcc.orig	2009-04-17 13:58:41 +0200
 +++ gcc/config.gcc
-@@ -482,6 +482,33 @@ case ${target} in
+@@ -488,6 +488,33 @@ case ${target} in
+       default_use_cxa_atexit=yes;;
    esac
-   fbsd_tm_file="${fbsd_tm_file} freebsd-spec.h freebsd.h"
    ;;
 +*-*-dragonfly*)
 +  gas=yes
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/09/18 11:24:50 dmcmahill Exp $
  *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu* | *-*-kopensolaris*-gnu)
    extra_parts="crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o"
    gas=yes
-@@ -1047,6 +1074,12 @@ x86_64-*-freebsd*)
+@@ -1053,6 +1080,12 @@ x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	tmake_file="${tmake_file} i386/t-crtstuff"
  	;;
