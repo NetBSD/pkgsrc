@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/07/19 16:32:49 ver Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:21 wiz Exp $
 #
 
 DISTNAME=	jersey-0.1.2
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 26
+PYTHON_VERSIONS_ACCEPTED= 27 26
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted

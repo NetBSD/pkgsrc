@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/12/03 18:27:05 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2011/02/25 09:47:26 wiz Exp $
 #
 
 DISTNAME=		gst-python-0.10.20
@@ -14,7 +14,7 @@ LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 CONFLICTS=		gst-python-[0-9]*
 
