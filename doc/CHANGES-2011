@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.450 2011/02/25 06:35:37 obache Exp $
+$NetBSD: CHANGES-2011,v 1.451 2011/02/25 11:06:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -741,3 +741,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/ruby-httpclient version 2.1.6.1 [obache 2011-02-25]
 	Added devel/ruby-memoize version 1.3.1 [obache 2011-02-25]
 	Updated security/ruby-oauth to 0.4.4nb1 [obache 2011-02-25]
+	Added misc/howm version 1.3.9.1 [obache 2011-02-25]
