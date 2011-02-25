@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/09/18 11:24:50 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2011/02/25 13:34:56 hans Exp $
 
 --- gcc/Makefile.in.orig	2004-06-17 15:56:58.000000000 -0600
 +++ gcc/Makefile.in
-@@ -1390,6 +1390,7 @@ c-pch.o : c-pch.c $(CONFIG_H) $(SYSTEM_H
+@@ -1944,6 +1944,7 @@ c-omp.o : c-omp.c $(CONFIG_H) $(SYSTEM_H
  # Language-independent files.
  
  DRIVER_DEFINES = \
