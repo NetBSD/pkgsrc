@@ -1,12 +1,16 @@
-$NetBSD: patch-af,v 1.1 2009/06/09 12:30:02 hasso Exp $
+$NetBSD: patch-af,v 1.2 2011/02/25 15:43:51 drochner Exp $
 
---- test/run_tests.orig	2009-06-09 14:35:51 +0300
-+++ test/run_tests	2009-06-09 14:36:08 +0300
-@@ -1,6 +1,6 @@
+--- test/run_tests.orig	2009-04-13 23:10:43.000000000 +0000
++++ test/run_tests
+@@ -1,8 +1,8 @@
  #! /bin/sh
  DIR=$(dirname $0)/..
 -if [ "$*" == "" ]
 +if [ "$*" = "" ]
  then
- PYTHONPATH=$DIR exec python ${DIR}/scapy/tools/UTscapy.py -t regression.uts -f html -o /tmp/scapy_regression_test_$(date +%Y%M%d-%H%H%S).html
+-PYTHONPATH=$DIR exec python ${DIR}/scapy/tools/UTscapy.py -t regression.uts -f html -o /tmp/scapy_regression_test_$(date +%Y%M%d-%H%H%S).html
++PYTHONPATH=$DIR exec ${PYTHON} ${DIR}/scapy/tools/UTscapy.py -t regression.uts -f html -o /tmp/scapy_regression_test_$(date +%Y%M%d-%H%H%S).html
  else
+-PYTHONPATH=$DIR exec python ${DIR}/scapy/tools/UTscapy.py "$@"
++PYTHONPATH=$DIR exec ${PYTHON} ${DIR}/scapy/tools/UTscapy.py "$@"
+ fi
