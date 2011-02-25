@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/25 20:24:41 markd Exp $
+lib/xine/plugins/1.29/xineplug_ao_out_alsa.la
