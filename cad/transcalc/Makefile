@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/01/13 13:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/02/25 19:46:19 wiz Exp $
 #
 
 DISTNAME=	transcalc-0.14
@@ -17,5 +17,4 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
 .include "../../x11/gtk2/buildlink3.mk"
-#.include "../../graphics/imlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
