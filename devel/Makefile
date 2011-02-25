@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1432 2011/02/11 13:50:06 obache Exp $
+# $NetBSD: Makefile,v 1.1433 2011/02/25 02:35:12 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1273,6 +1273,7 @@ SUBDIR+=	ruby-lockfile
 SUBDIR+=	ruby-log4r
 SUBDIR+=	ruby-logging
 SUBDIR+=	ruby-memcache
+SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-metaid
 SUBDIR+=	ruby-mkrf
 SUBDIR+=	ruby-mocha
