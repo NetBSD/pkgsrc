@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.456 2011/02/25 20:02:00 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.457 2011/02/25 20:03:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -760,3 +760,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/telepathy-glib to 0.12.7 [drochner 2011-02-25]
 	Updated graphics/magicpoint to 1.13anb6 [wiz 2011-02-25]
 	Added net/unison2.32 version 2.32.52nb4 [wiz 2011-02-25]
+	Updated net/unison to 2.40.61 [wiz 2011-02-25]

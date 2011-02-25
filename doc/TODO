@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10136 2011/02/25 17:03:06 wiz Exp $
+$NetBSD: TODO,v 1.10137 2011/02/25 20:03:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1310,7 +1310,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o uim-1.6.1
 	o unicap-0.9.8
-	o unison-2.40.61
 	o units-88 [pkg/43742]
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-3.07
