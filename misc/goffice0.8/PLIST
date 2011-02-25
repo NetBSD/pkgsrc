@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/12/12 11:55:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/02/25 13:34:39 drochner Exp $
 include/libgoffice-0.8/goffice/app/error-info.h
 include/libgoffice-0.8/goffice/app/file.h
 include/libgoffice-0.8/goffice/app/go-cmd-context-impl.h
@@ -348,6 +348,7 @@ share/gtk-doc/html/goffice-0.8/goffice-0.8-GOReg.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GORegression.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GOUndo.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GOUrl.html
+share/gtk-doc/html/goffice-0.8/goffice-0.8-GOffice.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GogAxisMap.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GogChartMap.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-GogGuru.html
@@ -363,7 +364,6 @@ share/gtk-doc/html/goffice-0.8/goffice-0.8-go-distribution.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-go-image.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-go-plugin.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8-go-string.html
-share/gtk-doc/html/goffice-0.8/goffice-0.8-goffice.html
 share/gtk-doc/html/goffice-0.8/goffice-0.8.devhelp
 share/gtk-doc/html/goffice-0.8/goffice-0.8.devhelp2
 share/gtk-doc/html/goffice-0.8/home.png
