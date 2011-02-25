@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.865 2011/02/09 16:19:50 taca Exp $
+# $NetBSD: Makefile,v 1.866 2011/02/25 20:02:24 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -593,6 +593,7 @@ SUBDIR+=	udptunnel
 SUBDIR+=	unbound
 SUBDIR+=	unfs3
 SUBDIR+=	unison
+SUBDIR+=	unison2.32
 SUBDIR+=	unworkable
 SUBDIR+=	upclient
 SUBDIR+=	upnpinspector
