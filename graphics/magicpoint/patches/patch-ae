@@ -1,7 +1,54 @@
-$NetBSD: patch-ae,v 1.3 2008/09/10 13:32:47 taca Exp $
+$NetBSD: patch-ae,v 1.4 2011/02/25 17:02:53 wiz Exp $
 
---- draw.c.orig	2008-01-25 00:43:17.000000000 +0900
+--- draw.c.orig	2008-01-24 15:43:17.000000000 +0000
 +++ draw.c
+@@ -31,7 +31,7 @@
+ 
+ #include "mgp.h"
+ #ifdef USE_IMLIB
+-#include <Imlib.h>
++#include <Imlib2.h>
+ #endif
+ 
+ /* state associated with the window - how should we treat this? */
+@@ -83,8 +83,8 @@ static int obj_new_xfont __P((struct ren
+ 	u_int, char *));
+ static int obj_new_image __P((struct render_state *, int, int, Image *, int, int));
+ #ifdef USE_IMLIB
+-ImlibImage *search_imdata __P((char *));
+-static int obj_new_image2 __P((struct render_state *, int, int, Image *, int, int, ImlibImage *, int));
++Imlib_Image *search_imdata __P((char *));
++static int obj_new_image2 __P((struct render_state *, int, int, Image *, int, int, Imlib_Image *, int));
+ #endif
+ static int obj_new_icon __P((struct render_state *, int, int, u_int, u_int, u_long, u_int, XPoint *));
+ static Pixel obj_image_color __P((Image *, Image *, Pixel, int *));
+@@ -168,7 +168,7 @@ static void regist_zimage_position __P((
+ static void clear_zimage __P((int));
+ static void clear_region __P((int, int, int, int));
+ #define ZIMAGENUM 100
+-static ImlibImage *zimage[ZIMAGENUM];
++static Imlib_Image *zimage[ZIMAGENUM];
+ static int zonzoom[ZIMAGENUM];
+ static int zpage[ZIMAGENUM];
+ static int zx[ZIMAGENUM];
+@@ -1819,7 +1819,7 @@ obj_new_image2(state, x, y, image, xzoom
+ 	int x, y;
+ 	Image *image;
+ 	int xzoom, yzoom;
+-	ImlibImage *imimage;
++	Imlib_Image *imimage;
+ 	int zoomonclk;
+ {
+ 	struct render_object *obj;
+@@ -3212,7 +3212,7 @@ image_load(state, filename, numcolor, xi
+ 	static char backfile[MAXPATHLEN];
+ 	static int backzoom, backnumcolor, backx, backy;
+ #ifdef USE_IMLIB
+-	ImlibImage *imimage;
++	Imlib_Image *imimage;
+ #endif
+ 
+ 	if (!caching){
 @@ -5243,7 +5243,7 @@ xft_draw_fragment(state, p, len, registr
  	static char prefix[3][20] = { "\033$B", "\033$A", "\033$(C"};
  	char buf16[1024], *p16;
