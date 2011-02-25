@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/02/25 11:04:56 obache Exp $
+
+Write below to your ~/.emacs or ~/.emacs.el:
+
+  ;(setq howm-menu-lang 'ja)
+  (global-set-key "\C-c,," 'howm-menu)
+  (autoload 'howm-menu "howm" "Hitori Otegaru Wiki Modoki" t)
+
+===========================================================================
