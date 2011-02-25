@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/30 16:28:00 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/25 09:47:31 wiz Exp $
 #
 
 DISTNAME=	xcb-proto-1.6
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 CONFLICTS+=	xcb-proto<1.4nb1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
