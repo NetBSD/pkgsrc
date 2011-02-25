@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/12 13:52:09 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/25 20:46:11 drochner Exp $
 #
 
 DISTNAME=	dconf-0.5.1
@@ -12,6 +12,8 @@ COMMENT=	Backend for gsettings
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --disable-editor
