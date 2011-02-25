@@ -1,0 +1,1 @@
+bin/oauth @PREFIX@/bin/oauth@RUBY_VER@
