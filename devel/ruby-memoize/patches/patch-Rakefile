@@ -1,0 +1,19 @@
+$NetBSD: patch-Rakefile,v 1.1.1.1 2011/02/25 02:34:13 obache Exp $
+
+* install into vendorlibdir
+* staged installation
+
+--- Rakefile.orig	2009-08-08 14:36:30.000000000 +0000
++++ Rakefile
+@@ -5,7 +5,10 @@ include Config
+ 
+ desc 'Install the memoize library (non-gem)'
+ task :install do
+-   sitelibdir = CONFIG['sitelibdir']
++   sitelibdir = CONFIG['vendorlibdir']
++   if (destdir = ENV['DESTDIR'])
++       sitelibdir = File.join(destdir, sitelibdir)
++   end
+    file = 'lib/memoize.rb'
+    FileUtils.cp(file, sitelibdir, :verbose => true)
+ end
