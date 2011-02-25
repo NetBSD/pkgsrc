@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/31 10:57:13 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/25 09:47:22 wiz Exp $
 #
 
 VERS=		0.9.3
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 # XXX tests in contrib.codeassisttest fail
 do-test:

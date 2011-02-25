@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/01/01 17:51:06 gson Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/25 09:47:27 wiz Exp $
 #
 
 DISTNAME=	boto-1.9b
@@ -13,7 +13,7 @@ COMMENT=	Python interface to Amazon web services
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= 	yes
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

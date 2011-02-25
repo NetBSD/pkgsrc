@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/01/13 13:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2011/02/25 09:47:28 wiz Exp $
 #
 
 DISTNAME=	notify-python-0.1.1
@@ -20,7 +20,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	notify-python.pc.in
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 PY_PATCHPLIST=	yes
 
 # Missing function attach_status_icon

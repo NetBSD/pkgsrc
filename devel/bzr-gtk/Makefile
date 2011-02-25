@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/12/06 13:57:27 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2011/02/25 09:47:20 wiz Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 CATEGORIES=	devel
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-cairo>=1.0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 REPLACE_PYTHON=	create-credits.py
 
 USE_TOOLS+=	msgfmt

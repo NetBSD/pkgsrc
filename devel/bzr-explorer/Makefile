@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/06 13:57:27 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/25 09:47:20 wiz Exp $
 
 DISTNAME=	bzr-explorer-${VER}
 PKGREVISION=	1
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-qt4>=4.4:../../x11/py-qt4
 
 PYDISTUTILSPKG=	yes
 # only tested with 2.5
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
+PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 
 .include "../../devel/bzr/plugin.mk"
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/11 12:41:45 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:28 wiz Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-cElementTree-0
@@ -10,7 +10,7 @@ COMMENT=	C implementation of Python ElementTree API
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_elementtree.c
 

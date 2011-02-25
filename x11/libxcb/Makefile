@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/09/10 19:12:13 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2011/02/25 09:47:30 wiz Exp $
 #
 
 DISTNAME=	libxcb-1.7
@@ -72,7 +72,7 @@ SUBST_MESSAGE.pc=	Configuring threading in xcb.pc.in.
 SUBST_STAGE.pc=		pre-configure
 SUBST_VARS.pc=		XTHREADLIB XTHREAD_CPPFLAGS
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}

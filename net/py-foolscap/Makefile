@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/29 20:55:17 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/25 09:47:27 wiz Exp $
 #
 
 DISTNAME=	foolscap-0.6.1
@@ -22,7 +22,7 @@ TEST_TARGET=	test
 USE_LANGUAGES=	# none
 
 # Why?
-PYTHON_VERSIONS_ACCEPTED= 26
+PYTHON_VERSIONS_ACCEPTED= 27 26
 
 INSTALLATION_DIRS+=	share/doc/py-foolscap
 
