@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/25 02:25:59 obache Exp $
+${RUBY_VENDORLIB}/hexdump.rb
+${RUBY_VENDORLIB}/http-access2.rb
+${RUBY_VENDORLIB}/http-access2/cookie.rb
+${RUBY_VENDORLIB}/http-access2/http.rb
+${RUBY_VENDORLIB}/httpclient.rb
+${RUBY_VENDORLIB}/httpclient/auth.rb
+${RUBY_VENDORLIB}/httpclient/cacert.p7s
+${RUBY_VENDORLIB}/httpclient/connection.rb
+${RUBY_VENDORLIB}/httpclient/cookie.rb
+${RUBY_VENDORLIB}/httpclient/http.rb
+${RUBY_VENDORLIB}/httpclient/session.rb
+${RUBY_VENDORLIB}/httpclient/ssl_config.rb
+${RUBY_VENDORLIB}/httpclient/timeout.rb
+${RUBY_VENDORLIB}/httpclient/util.rb
+${RUBY_VENDORLIB}/oauthclient.rb
