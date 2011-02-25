@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/02/13 03:56:09 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/25 09:47:23 wiz Exp $
 #
 
 DISTNAME=	pyclutter-gtk-0.10.0
@@ -13,7 +13,7 @@ COMMENT=	Python modules for Clutter-Gtk
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
