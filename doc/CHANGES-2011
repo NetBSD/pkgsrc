@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.446 2011/02/24 22:23:52 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.447 2011/02/25 02:13:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -737,3 +737,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/fabric to 0.9.4 [gls 2011-02-24]
 	Updated textproc/asciidoc to 8.6.4 [gls 2011-02-24]
 	Updated multimedia/farsight2 to 0.0.25 [wiz 2011-02-24]
+	Added textproc/ruby-escape version 0.2 [obache 2011-02-25]
