@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10134 2011/02/23 11:00:51 adam Exp $
+$NetBSD: TODO,v 1.10135 2011/02/25 09:03:49 obache Exp $
 
 Suggested new packages
 ======================
@@ -992,6 +992,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o munin-1.4.4
 	o muse-0.9.2
 	o musicpd-0.16.0
+	o mysql5-client-5.0.92 (MySQL 5.0.92)
+	o mysql5-server-5.0.92 (MySQL 5.0.92)
 	o mysql55-client-5.5.8 (MySQL 5.5.8)
 	o mysql55-server-5.5.8 (MySQL 5.5.8)
 	o nagios-3.2.3
