@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.11 2008/09/10 13:32:47 taca Exp $
+$NetBSD: patch-aa,v 1.12 2011/02/25 17:02:53 wiz Exp $
 
---- configure.orig	2007-12-29 05:31:26.000000000 +0900
+--- configure.orig	2007-12-28 20:31:26.000000000 +0000
 +++ configure
+@@ -1285,7 +1285,7 @@ Optional Features:
+   --enable-freetype-charset16         use freetype for chaset16.
+   --disable-xft2           DON'T use xft2 libraries.
+   --enable-gif            compile gif support in (need libungif).
+-  --enable-imlib          use imlib exclusively to load images.
++  --enable-imlib          use imlib2 exclusively to load images.
+ 
+ Optional Packages:
+   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
 @@ -5090,7 +5090,7 @@ if test "$mgp_use_freetype" = "yes"; the
    # XXX: freetype2 may use freetype-config
   	{ echo "$as_me:$LINENO: checking for freetype1 library/header" >&5
@@ -118,9 +127,9 @@ $NetBSD: patch-aa,v 1.11 2008/09/10 13:32:47 taca Exp $
 -        LIBS="$LIBS `pkg-config --libs imlib`"
 -        OPTFLAGS="$OPTFLAGS `pkg-config --cflags imlib`"
 -	cat >>confdefs.h <<\_ACEOF
-+  if type pkg-config > /dev/null 2>&1 && pkg-config imlib; then
-+     LIBS="$LIBS `pkg-config --libs imlib`"
-+     OPTFLAGS="$OPTFLAGS `pkg-config --cflags imlib`"
++  if type pkg-config > /dev/null 2>&1 && pkg-config imlib2; then
++     LIBS="$LIBS `pkg-config --libs imlib2`"
++     OPTFLAGS="$OPTFLAGS `pkg-config --cflags imlib2`"
 +     cat >>confdefs.h <<\_ACEOF
  #define USE_IMLIB 1
  _ACEOF
@@ -130,12 +139,71 @@ $NetBSD: patch-aa,v 1.11 2008/09/10 13:32:47 taca Exp $
    else
  	{ echo "$as_me:$LINENO: checking for Imlib_init in -lImlib" >&5
  echo $ECHO_N "checking for Imlib_init in -lImlib... $ECHO_C" >&6; }
-@@ -7232,7 +7216,7 @@ fi
+@@ -7163,7 +7147,7 @@ if test "${ac_cv_lib_Imlib_Imlib_init+se
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lImlib -L$x_libraries -lX11 -lXext $LIBS"
++LIBS="-lImlib2 -L$x_libraries -lX11 -lXext $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -7177,11 +7161,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char Imlib_init ();
++char imlib_load_image ();
+ int
+ main ()
+ {
+-return Imlib_init ();
++return imlib_load_image ();
+   ;
+   return 0;
+ }
+@@ -7220,7 +7204,7 @@ fi
+ echo "${ECHO_T}$ac_cv_lib_Imlib_Imlib_init" >&6; }
+ if test $ac_cv_lib_Imlib_Imlib_init = yes; then
+   imlib_ok=yes
+-		LIBS="$LIBS -lImlib"
++		LIBS="$LIBS -lImlib2"
+ 		cat >>confdefs.h <<\_ACEOF
+ #define USE_IMLIB 1
+ _ACEOF
+@@ -7232,14 +7216,14 @@ fi
  		echo 'FATAL: You need libImlib to use Imlib loading.  pass proper LIBS to configure.'
  		exit 1
  	fi
 -	for i in /usr/pkg /usr/local; do
+-		if test -f $i/include/Imlib.h; then
 +	for i in ${BUILDLINK_DIR}; do
- 		if test -f $i/include/Imlib.h; then
++		if test -f $i/include/Imlib2.h; then
  			imlib_h_ok=yes
  			OPTFLAGS="$OPTFLAGS -I$i/include"
+ 			break
+ 		fi
+ 	done
+-	if test -f /usr/include/Imlib.h; then
++	if test -f /usr/include/Imlib2.h; then
+ 		imlib_h_ok=yes
+ 	fi
+ 	if test "x$gif_h_ok" != "xyes"; then
+@@ -7262,7 +7246,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <Imlib.h>
++#include <Imlib2.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (ac_try="$ac_compile"
+@@ -7302,7 +7286,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <Imlib.h>
++#include <Imlib2.h>
+ _ACEOF
+ if { (ac_try="$ac_cpp conftest.$ac_ext"
+ case "(($ac_try" in
