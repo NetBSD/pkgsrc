@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2009/06/09 12:30:02 hasso Exp $
+$NetBSD: patch-ad,v 1.2 2011/02/25 15:43:51 drochner Exp $
 
---- scapy/data.py.orig	2009-06-09 13:13:15 +0300
-+++ scapy/data.py	2009-06-09 13:13:57 +0300
-@@ -97,7 +97,7 @@ def load_ethertypes(filename):
-         pass
-     return dct
+--- scapy/data.py.orig	2009-09-23 14:27:36.000000000 +0000
++++ scapy/data.py
+@@ -176,7 +176,7 @@ if WINDOWS:
+     MANUFDB = load_manuf(os.environ["ProgramFiles"] + "\\wireshark\\manuf")
+ else:
+     IP_PROTOS=load_protocols("/etc/protocols")
+-    ETHER_TYPES=load_ethertypes("/etc/ethertypes")
++    ETHER_TYPES=load_ethertypes("@PKG_SYSCONFDIR@/ethertypes")
+     TCP_SERVICES,UDP_SERVICES=load_services("/etc/services")
+     MANUFDB = load_manuf("/usr/share/wireshark/wireshark/manuf")
  
--ETHER_TYPES=load_ethertypes("/etc/ethertypes")
-+ETHER_TYPES=load_ethertypes("@PKG_SYSCONFDIR@/ethertypes")
- 
- def load_services(filename):
-     spaces = re.compile("[ \t]+|\n")
