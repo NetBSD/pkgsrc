@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/02/25 20:01:37 wiz Exp $
+
+--- update.mli.orig	2009-05-02 02:31:27.000000000 +0000
++++ update.mli	2010-08-23 22:18:21.000000000 +0000
+@@ -1,7 +1,7 @@
+ (* Unison file synchronizer: src/update.mli *)
+ (* Copyright 1999-2009, Benjamin C. Pierce (see COPYING for details) *)
+ 
+-module NameMap : Map.S with type key = Name.t
++module NameMap : MyMap.S with type key = Name.t
+ 
+ type archive =
+     ArchiveDir of Props.t * archive NameMap.t
