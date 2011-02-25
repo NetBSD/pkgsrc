@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.447 2011/02/25 02:13:20 obache Exp $
+$NetBSD: CHANGES-2011,v 1.448 2011/02/25 02:26:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -738,3 +738,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/asciidoc to 8.6.4 [gls 2011-02-24]
 	Updated multimedia/farsight2 to 0.0.25 [wiz 2011-02-24]
 	Added textproc/ruby-escape version 0.2 [obache 2011-02-25]
+	Added www/ruby-httpclient version 2.1.6.1 [obache 2011-02-25]
