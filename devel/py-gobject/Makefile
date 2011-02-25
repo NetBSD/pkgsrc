@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/01/13 13:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2011/02/25 09:47:21 wiz Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.26.0
@@ -8,7 +8,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 SUBST_CLASSES+=		codegen
 SUBST_STAGE.codegen=	pre-configure
