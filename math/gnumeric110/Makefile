@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2011/01/13 16:15:16 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2011/02/25 13:36:43 drochner Exp $
 
-DISTNAME=	gnumeric-1.10.12
-PKGREVISION=	1
+DISTNAME=	gnumeric-1.10.13
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +23,7 @@ PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
 
 # PLIST contains versioned directory
-GOFFICE_VERSION=	0.8.12
+GOFFICE_VERSION=	0.8.13
 PLIST_SUBST+=		GOFFICE_VERSION=${GOFFICE_VERSION}
 
 CONFIGURE_ARGS+=	--with-python
