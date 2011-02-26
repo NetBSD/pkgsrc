@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.465 2011/02/26 05:59:22 obache Exp $
+$NetBSD: CHANGES-2011,v 1.466 2011/02/26 07:28:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -770,3 +770,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29-translations to 20110224 [taca 2011-02-26]
 	Updated finance/p5-Finance-Quote to 1.17nb2 [obache 2011-02-26]
 	Updated net/p5-Net-IP to 1.25nb3 [obache 2011-02-26]
+	Updated graphics/djvulibre-lib to 3.5.23 [ryoon 2011-02-26]
+	Updated graphics/djvulibre-tools to 3.5.23 [ryoon 2011-02-26]
