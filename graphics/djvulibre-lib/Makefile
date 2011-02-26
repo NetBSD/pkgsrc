@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2010/12/23 11:44:35 dsainty Exp $
+# $NetBSD: Makefile,v 1.11 2011/02/26 07:27:04 ryoon Exp $
 
-DISTNAME=		djvulibre-3.5.22
-PKGNAME=		djvulibre-lib-3.5.22
+DISTNAME=		djvulibre-3.5.23
+PKGNAME=		${DISTNAME:S/-/-lib-/}
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://djvulibre.djvuzone.org/
+HOMEPAGE=		http://djvu.sourceforge.net/
 COMMENT=		Compression library for scanned documents
 LICENSE=		gnu-gpl-v2
 
