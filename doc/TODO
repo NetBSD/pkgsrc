@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10139 2011/02/26 16:18:12 wiz Exp $
+$NetBSD: TODO,v 1.10140 2011/02/26 16:18:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1630,4 +1630,5 @@ Suggested cleanups in pkgsrc
 	o Replace inclusions of print/teTeX/module.mk and
 	  mk/tex.buildlink3.mk (pulling in a lot of tex packages)
 	  with (build) dependencies on the appropriate split tex
-	  packages.
+	  packages. In case styles are used, look for
+	  \RequirePackage{...}.
