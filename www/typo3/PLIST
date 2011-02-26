@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/02/24 14:09:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/02/26 03:02:59 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2776,11 +2776,11 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/connection/class.tx_em_connecti
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/connection/class.tx_em_connection_soap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/connection/class.tx_em_connection_ter.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/database/class.tx_em_database.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_connection_exception.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_extensionimport_exception.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_extensionxml_exception.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_mirrorxml_exception.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_xml_exception.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_connectionexception.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_extensionimportexception.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_extensionxmlexception.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_mirrorxmlexception.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/exception/class.tx_em_xmlexception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/extensions/class.tx_em_extensions_details.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/extensions/class.tx_em_extensions_list.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/import/class.tx_em_import_extensionlistimporter.php
