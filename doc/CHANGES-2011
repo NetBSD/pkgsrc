@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.459 2011/02/26 02:57:02 taca Exp $
+$NetBSD: CHANGES-2011,v 1.460 2011/02/26 02:59:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -763,3 +763,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/unison to 2.40.61 [wiz 2011-02-25]
 	Added audio/xine-alsa version 1.1.19 [markd 2011-02-25]
 	Updated textproc/php-intl to 1.1.2nb1 [taca 2011-02-26]
+	Updated databases/mysql5-client to 5.0.92 [taca 2011-02-26]
+	Updated databases/mysql5-server to 5.0.92 [taca 2011-02-26]
