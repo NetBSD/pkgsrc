@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.469 2011/02/26 09:03:54 tron Exp $
+$NetBSD: CHANGES-2011,v 1.470 2011/02/26 09:24:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -776,3 +776,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added games/lnl version 3.4.19 [obache 2011-02-26]
 	Update mail/postfix to 2.8.1 [tron 2011-02-26]
 	Removed mail/postfix-current successor mail/postfix [tron 2011-02-26]
+	Updated net/mldonkey to 3.0.7 [wiz 2011-02-26]
