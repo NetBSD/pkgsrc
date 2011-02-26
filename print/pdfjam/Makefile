@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/26 16:03:39 wiz Exp $
 #
 
 DISTNAME=	pdfjam_1.20
 PKGNAME=	${DISTNAME:C/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://www.warwick.ac.uk/go/pdfjam/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +11,12 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic/firth/software/pdfjam/
 COMMENT=	Small collection of PDF utilities
+LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
+DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
+DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,5 +35,4 @@ do-install:
 .endfor
 .undef ${_util}
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
