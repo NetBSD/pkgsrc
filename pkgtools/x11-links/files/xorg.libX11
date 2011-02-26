@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libX11,v 1.6 2011/02/26 09:30:10 wiz Exp $
+# $NetBSD: xorg.libX11,v 1.7 2011/02/26 10:00:55 wiz Exp $
 #
 include/X11/ImUtil.h
 include/X11/XKBlib.h
@@ -33,3 +33,4 @@ lib/libX11.so.6.2
 lib/libX11.so.7
 lib/libX11.so.7.0
 lib/pkgconfig/x11.pc
+lib/pkgconfig/x11-xcb.pc
