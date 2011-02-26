@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.460 2011/02/26 02:59:58 taca Exp $
+$NetBSD: CHANGES-2011,v 1.461 2011/02/26 03:03:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -765,3 +765,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/php-intl to 1.1.2nb1 [taca 2011-02-26]
 	Updated databases/mysql5-client to 5.0.92 [taca 2011-02-26]
 	Updated databases/mysql5-server to 5.0.92 [taca 2011-02-26]
+	Updated www/typo3 to 4.5.2 [taca 2011-02-26]
