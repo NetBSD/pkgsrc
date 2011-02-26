@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/27 08:02:05 adam Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/26 10:56:52 hans Exp $
 
 DISTNAME=	FlightGear-data-2.0.0
 PKGNAME=	${DISTNAME:tl}
@@ -30,7 +30,7 @@ do-install:
 	rm -f ${WRKDIR}/PLIST.F
 	set -e;	cd ${WRKSRC} &&						\
 	find . -type d -print | while read d; do			\
-		${INSTALL_DATA_DIR} ${DESTDIER}${SHAREDIR}/"$${d}";	\
+		${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/"$${d}";	\
 	done;								\
 	find . -type f -print | while read f; do			\
 		${INSTALL_DATA} "$${f}" ${DESTDIR}${SHAREDIR}/"$${f}";	\
