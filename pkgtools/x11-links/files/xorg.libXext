@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXext,v 1.4 2010/05/31 21:20:02 wiz Exp $
+# $NetBSD: xorg.libXext,v 1.5 2011/02/26 08:14:58 mrg Exp $
 #
 include/X11/extensions/MITMisc.h
 include/X11/extensions/XEVI.h
@@ -32,5 +32,6 @@ lib/libXext.so.6.3
 lib/libXext.so.6.4
 lib/libXext.so.7
 lib/libXext.so.7.0
+lib/libXext.so.7.1
 lib/libXext.so.10.0
 lib/pkgconfig/xext.pc
