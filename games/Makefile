@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.342 2011/01/27 18:03:07 adam Exp $
+# $NetBSD: Makefile,v 1.343 2011/02/26 08:19:13 obache Exp $
 #
 
 COMMENT=	Games
@@ -160,6 +160,7 @@ SUBDIR+=	libggz
 SUBDIR+=	lincity
 SUBDIR+=	liquidwar
 SUBDIR+=	lmarbles
+SUBDIR+=	lnl
 SUBDIR+=	lpairs
 SUBDIR+=	ltris
 SUBDIR+=	maelstrom-sdl
