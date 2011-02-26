@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/26 15:05:03 wiz Exp $
 DISTNAME=	BibTool-2.48
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
@@ -6,6 +6,12 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
 MAINTAINER=	smb@NetBSD.org
 HOMEPAGE=	http://www.gerd-neugebauer.de/software/TeX/BibTool.en.html
 COMMENT=	Tool to manipulate BibTeX databases
+#LICENSE=	gnu-gpl-v1
+
+BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,10 +32,6 @@ INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALL_TARGET=	install install.man
 INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLEDIR}
-
-TEX_ACCEPTED=	teTeX3
-TEX_DEPMETHOD=	build
-.include "../../mk/tex.buildlink3.mk"
 
 #pre-configure:
 #	rm ${WRKSRC:Q}/BibTcl/Makefile
