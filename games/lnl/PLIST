@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/26 08:18:13 obache Exp $
+bin/lnl
+man/man6/lnl-faq.6
+man/man6/lnl.6
