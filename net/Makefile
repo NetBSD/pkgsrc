@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.866 2011/02/25 20:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.867 2011/02/26 09:36:15 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -352,6 +352,7 @@ SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-CIDR-Set
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DNS
+SUBDIR+=	p5-Net-DNS-Zone-Parser
 SUBDIR+=	p5-Net-DNSServer
 SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-Dev-MIBLoadOrder
