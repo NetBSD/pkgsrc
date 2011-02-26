@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.471 2011/02/26 09:24:58 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.472 2011/02/26 09:30:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -778,3 +778,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed mail/postfix-current successor mail/postfix [tron 2011-02-26]
 	Updated net/mldonkey to 3.0.7 [wiz 2011-02-26]
 	Updated net/mldonkey-gui to 3.0.7 [wiz 2011-02-26]
+	Updated pkgtools/x11-links to 0.65 [wiz 2011-02-26]
