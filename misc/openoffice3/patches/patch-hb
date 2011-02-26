@@ -1,0 +1,21 @@
+$NetBSD: patch-hb,v 1.1 2011/02/26 16:02:39 aymeric Exp $
+
+--- vcl/unx/inc/xfont.hxx.orig	2008-04-11 09:42:14.000000000 +0000
++++ vcl/unx/inc/xfont.hxx
+@@ -30,15 +30,11 @@
+ #ifndef EXTENDED_FONTSTRUCT_HXX
+ #define EXTENDED_FONTSTRUCT_HXX
+ 
+-#ifndef _XLIB_H_
+-#include <prex.h>
+-#include <X11/Xlib.h>
+-#include <postx.h>
+-#endif
+ #include <tools/ref.hxx>
+ #include <rtl/tencinfo.h>
+ #include <vcl/vclenum.hxx>
+ #include <vcl/sallayout.hxx>
++#include "svunx.h"
+ 
+ typedef unsigned short sal_MultiByte;
+ 

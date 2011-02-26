@@ -1,0 +1,25 @@
+$NetBSD: patch-ha,v 1.1 2011/02/26 16:02:39 aymeric Exp $
+
+--- vcl/unx/inc/dtint.hxx.orig	2008-04-11 09:32:48.000000000 +0000
++++ vcl/unx/inc/dtint.hxx
+@@ -34,19 +34,12 @@
+ #include <tools/string.hxx>
+ #include <tools/color.hxx>
+ #include <vcl/font.hxx>
++#include "svunx.h"
+ 
+ class SalBitmap;
+ class SalDisplay;
+ class AllSettings;
+ 
+-#ifndef _XLIB_H_
+-// forwards from X
+-struct Display;
+-struct XEvent;
+-#define Atom UINT32
+-#define XLIB_Window UINT32
+-#endif
+-
+ enum DtType {
+ 	DtGeneric,
+ 	DtCDE,
