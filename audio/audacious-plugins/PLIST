@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/02/26 14:42:13 hans Exp $
 lib/audacious/Container/m3u.so
 lib/audacious/Container/pls.so
 lib/audacious/Container/xspf.so
@@ -24,7 +24,7 @@ lib/audacious/Input/console.so
 lib/audacious/Input/cuesheet.so
 lib/audacious/Input/demac.so
 lib/audacious/Input/flacng.so
-${PLIST.midi}lib/audacious/Input/libtimidity.so
+${PLIST.midi}lib/audacious/Input/timidity.so
 lib/audacious/Input/madplug.so
 lib/audacious/Input/metronom.so
 lib/audacious/Input/modplug.so
