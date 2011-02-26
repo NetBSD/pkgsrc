@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.461 2011/02/26 03:03:43 taca Exp $
+$NetBSD: CHANGES-2011,v 1.462 2011/02/26 03:04:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -766,3 +766,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql5-client to 5.0.92 [taca 2011-02-26]
 	Updated databases/mysql5-server to 5.0.92 [taca 2011-02-26]
 	Updated www/typo3 to 4.5.2 [taca 2011-02-26]
+	Updated www/ikiwiki to 3.20110225 [schmonz 2011-02-26]
