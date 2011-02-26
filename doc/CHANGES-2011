@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.467 2011/02/26 07:31:44 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.468 2011/02/26 08:18:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -773,3 +773,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/djvulibre-lib to 3.5.23 [ryoon 2011-02-26]
 	Updated graphics/djvulibre-tools to 3.5.23 [ryoon 2011-02-26]
 	Updated graphics/djview4 to 4.5nb4 [ryoon 2011-02-26]
+	Added games/lnl version 3.4.19 [obache 2011-02-26]
