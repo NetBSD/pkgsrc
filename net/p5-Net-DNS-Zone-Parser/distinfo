@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/26 09:34:23 obache Exp $
+
+SHA1 (Net-DNS-Zone-Parser-0.02.tar.gz) = 52f782884cac23b2862700382f94ae9e9e7b515f
+RMD160 (Net-DNS-Zone-Parser-0.02.tar.gz) = a50cb95edd48183833dc560a9dd7f4a5e5d390a8
+Size (Net-DNS-Zone-Parser-0.02.tar.gz) = 76885 bytes
