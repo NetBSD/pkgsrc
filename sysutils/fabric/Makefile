@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/02/24 21:43:45 gls Exp $
+# $NetBSD: Makefile,v 1.8 2011/02/26 22:09:26 gls Exp $
 #
 
 VERSION=		0.9.4
@@ -26,9 +26,6 @@ INSTALLATION_DIRS+=	share/doc/fabric/api/contrib
 INSTALLATION_DIRS+=	share/doc/fabric/api/core
 INSTALLATION_DIRS+=	share/doc/fabric/changes
 INSTALLATION_DIRS+=	share/doc/fabric/usage
-
-#post-extract:
-#	${RM} -r ${WRKSRC}/paramiko
 
 post-install:
 	${INSTALL_MAN} files/fab.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
