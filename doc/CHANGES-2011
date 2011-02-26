@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.464 2011/02/26 05:40:28 obache Exp $
+$NetBSD: CHANGES-2011,v 1.465 2011/02/26 05:59:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ikiwiki to 3.20110225 [schmonz 2011-02-26]
 	Updated www/contao29-translations to 20110224 [taca 2011-02-26]
 	Updated finance/p5-Finance-Quote to 1.17nb2 [obache 2011-02-26]
+	Updated net/p5-Net-IP to 1.25nb3 [obache 2011-02-26]
