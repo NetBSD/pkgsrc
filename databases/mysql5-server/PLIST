@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/02/18 15:46:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/02/26 02:58:55 taca Exp $
 bin/comp_err
 bin/innochecksum
 bin/my_print_defaults
@@ -273,6 +273,7 @@ share/mysql-test/r/federated.result
 share/mysql-test/r/federated_archive.result
 share/mysql-test/r/federated_bug_13118.result
 share/mysql-test/r/federated_bug_25714.result
+share/mysql-test/r/federated_bug_35333.result
 share/mysql-test/r/federated_debug.result
 share/mysql-test/r/federated_disabled.result
 share/mysql-test/r/federated_innodb.result
@@ -1545,6 +1546,7 @@ share/mysql-test/t/federated.test
 share/mysql-test/t/federated_archive.test
 share/mysql-test/t/federated_bug_13118.test
 share/mysql-test/t/federated_bug_25714.test
+share/mysql-test/t/federated_bug_35333.test
 share/mysql-test/t/federated_debug-master.opt
 share/mysql-test/t/federated_debug.test
 share/mysql-test/t/federated_disabled-master.opt
