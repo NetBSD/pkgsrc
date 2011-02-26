@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.473 2011/02/26 09:34:38 obache Exp $
+$NetBSD: CHANGES-2011,v 1.474 2011/02/26 09:42:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -774,9 +774,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/djvulibre-tools to 3.5.23 [ryoon 2011-02-26]
 	Updated graphics/djview4 to 4.5nb4 [ryoon 2011-02-26]
 	Added games/lnl version 3.4.19 [obache 2011-02-26]
-	Update mail/postfix to 2.8.1 [tron 2011-02-26]
+	Updated mail/postfix to 2.8.1 [tron 2011-02-26]
 	Removed mail/postfix-current successor mail/postfix [tron 2011-02-26]
 	Updated net/mldonkey to 3.0.7 [wiz 2011-02-26]
 	Updated net/mldonkey-gui to 3.0.7 [wiz 2011-02-26]
 	Updated pkgtools/x11-links to 0.65 [wiz 2011-02-26]
 	Added net/p5-Net-DNS-Zone-Parser version 0.02 [obache 2011-02-26]
+	Updated multimedia/avidemux to 2.5.4nb1 [wiz 2011-02-26]
