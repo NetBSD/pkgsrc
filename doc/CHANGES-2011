@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.472 2011/02/26 09:30:19 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.473 2011/02/26 09:34:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -779,3 +779,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mldonkey to 3.0.7 [wiz 2011-02-26]
 	Updated net/mldonkey-gui to 3.0.7 [wiz 2011-02-26]
 	Updated pkgtools/x11-links to 0.65 [wiz 2011-02-26]
+	Added net/p5-Net-DNS-Zone-Parser version 0.02 [obache 2011-02-26]
