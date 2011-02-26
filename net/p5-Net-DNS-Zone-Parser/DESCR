@@ -1,0 +1,4 @@
+This perl5 module is a preprocessor that "normalizes" zone files.
+
+It expands implementation specific extensions (like bind's $GENERATE)
+into RFC compliant zone files.
