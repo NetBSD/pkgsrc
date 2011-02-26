@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/09/17 21:41:54 spz Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/02/26 20:58:15 spz Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -105,6 +105,7 @@ lib/rt3/RT/I18N/hr.po
 lib/rt3/RT/I18N/hu.po
 lib/rt3/RT/I18N/i_default.pm
 lib/rt3/RT/I18N/id.po
+lib/rt3/RT/I18N/is.po
 lib/rt3/RT/I18N/it.po
 lib/rt3/RT/I18N/ja.po
 lib/rt3/RT/I18N/nb.po
@@ -264,11 +265,13 @@ share/examples/rt3/RT_Config.pm
 share/examples/rt3/RT_SiteConfig.pm
 share/rt3/etc/3.8-branded-queues-extension
 share/rt3/etc/3.8-ical-extension
+share/rt3/etc/UPGRADING
 share/rt3/etc/acl.Oracle
 share/rt3/etc/acl.Pg
 share/rt3/etc/acl.mysql
 share/rt3/etc/constraints.mysql
 share/rt3/etc/drop.Oracle
+share/rt3/etc/generate-rtaddressregexp
 share/rt3/etc/initialdata
 share/rt3/etc/schema.Oracle
 share/rt3/etc/schema.Pg
@@ -317,7 +320,9 @@ share/rt3/etc/upgrade/3.8.3/content
 share/rt3/etc/upgrade/3.8.3/schema.Pg
 share/rt3/etc/upgrade/3.8.4/content
 share/rt3/etc/upgrade/3.8.6/content
+share/rt3/etc/upgrade/3.8.8/content
 share/rt3/etc/upgrade/${PKGVERSION}/content
+share/rt3/etc/vulnerable-passwords
 share/rt3/html/Admin/CustomFields/GroupRights.html
 share/rt3/html/Admin/CustomFields/Modify.html
 share/rt3/html/Admin/CustomFields/Objects.html
@@ -581,6 +586,7 @@ share/rt3/html/Install/Initialize.html
 share/rt3/html/Install/Sendmail.html
 share/rt3/html/Install/autohandler
 share/rt3/html/Install/index.html
+share/rt3/html/NoAuth/Login.html
 share/rt3/html/NoAuth/Logout.html
 share/rt3/html/NoAuth/Reminder.html
 share/rt3/html/NoAuth/RichText/FCKeditor/editor/_source/classes/fckcontextmenu.js
