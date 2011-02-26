@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.474 2011/02/26 09:42:34 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.475 2011/02/26 15:48:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -781,3 +781,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/x11-links to 0.65 [wiz 2011-02-26]
 	Added net/p5-Net-DNS-Zone-Parser version 0.02 [obache 2011-02-26]
 	Updated multimedia/avidemux to 2.5.4nb1 [wiz 2011-02-26]
+	Updated print/chktex to 1.6.3nb2 [wiz 2011-02-26]
