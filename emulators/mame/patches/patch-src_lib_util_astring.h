@@ -1,4 +1,4 @@
-$NetBSD: patch-src_lib_util_astring.h,v 1.3 2011/02/11 13:16:40 abs Exp $
+$NetBSD: patch-src_lib_util_astring.h,v 1.4 2011/02/26 07:06:24 wiz Exp $
 
 Sent upstream and accepted.
 
