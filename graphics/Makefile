@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.585 2011/02/25 15:00:11 adam Exp $
+# $NetBSD: Makefile,v 1.586 2011/02/26 19:38:41 abs Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -289,6 +289,7 @@ SUBDIR+=	optipng
 SUBDIR+=	osg
 SUBDIR+=	ov519view
 SUBDIR+=	oxygen-icons
+SUBDIR+=	p5-Barcode-Code128
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Chart-ThreeD
 SUBDIR+=	p5-GD
