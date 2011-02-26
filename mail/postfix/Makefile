@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.236 2010/11/28 18:14:10 tron Exp $
+# $NetBSD: Makefile,v 1.237 2011/02/26 08:58:59 tron Exp $
 
-DISTNAME=	postfix-2.7.2
+DISTNAME=	postfix-2.8.1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
 MASTER_SITES+=	http://mirrors.isc.org/pub/postfix/official/
 MASTER_SITES+=	http://mirror.postfix.jp/postfix-release/official/
-DIST_SUBDIR=	postfix
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
