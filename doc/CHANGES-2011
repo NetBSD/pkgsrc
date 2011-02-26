@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.476 2011/02/26 15:57:20 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.477 2011/02/26 16:04:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -783,3 +783,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/avidemux to 2.5.4nb1 [wiz 2011-02-26]
 	Updated print/chktex to 1.6.3nb2 [wiz 2011-02-26]
 	Updated print/p5-LaTeX-Driver to 0.08nb2 [wiz 2011-02-26]
+	Updated print/pdfjam to 1.20nb2 [wiz 2011-02-26]
