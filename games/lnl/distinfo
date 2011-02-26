@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/26 08:18:13 obache Exp $
+
+SHA1 (lnl-3.4.19.tar.gz) = d6c76c6a57f178db24d7d93ed6458f143defb808
+RMD160 (lnl-3.4.19.tar.gz) = 4e86918c8dad83d261423f97eadb15b6d5cf2061
+Size (lnl-3.4.19.tar.gz) = 1083451 bytes
