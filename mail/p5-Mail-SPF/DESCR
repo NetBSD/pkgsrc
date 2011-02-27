@@ -1,0 +1,4 @@
+Mail::SPF is an object-oriented Perl implementation of the Sender Policy
+Framework (SPF) e-mail sender authentication system.
+
+See <http://www.openspf.org> for more information about SPF.
