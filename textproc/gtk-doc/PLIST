@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/06/11 13:16:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/02/27 15:14:32 wiz Exp $
 bin/gtkdoc-check
 bin/gtkdoc-depscan
 bin/gtkdoc-fixxref
@@ -22,6 +22,7 @@ share/gnome/help/gtk-doc-manual/en_GB/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/es/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/fr/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/gu/gtk-doc-manual.xml
+share/gnome/help/gtk-doc-manual/sl/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/sv/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/ta/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/te/gtk-doc-manual.xml
@@ -29,7 +30,9 @@ share/gtk-doc/data/devhelp.xsl
 share/gtk-doc/data/devhelp2.xsl
 share/gtk-doc/data/gtk-doc.dcl
 share/gtk-doc/data/gtk-doc.dsl
+share/gtk-doc/data/gtk-doc.flat.make
 share/gtk-doc/data/gtk-doc.make
+share/gtk-doc/data/gtk-doc.notmpl-flat.make
 share/gtk-doc/data/gtk-doc.notmpl.make
 share/gtk-doc/data/gtk-doc.xsl
 share/gtk-doc/data/gtkdoc-common.pl
@@ -47,6 +50,7 @@ share/omf/gtk-doc-manual/gtk-doc-manual-en_GB.omf
 share/omf/gtk-doc-manual/gtk-doc-manual-es.omf
 share/omf/gtk-doc-manual/gtk-doc-manual-fr.omf
 share/omf/gtk-doc-manual/gtk-doc-manual-gu.omf
+share/omf/gtk-doc-manual/gtk-doc-manual-sl.omf
 share/omf/gtk-doc-manual/gtk-doc-manual-sv.omf
 share/omf/gtk-doc-manual/gtk-doc-manual-ta.omf
 share/omf/gtk-doc-manual/gtk-doc-manual-te.omf
