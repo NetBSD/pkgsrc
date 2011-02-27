@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.496 2011/02/27 15:58:53 chs Exp $
+$NetBSD: CHANGES-2011,v 1.497 2011/02/27 16:06:47 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -802,3 +802,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_base to 11.3nb2 [chs 2011-02-27]
 	Added audio/gmpc-lyricwiki version 0.20.0 [wiz 2011-02-27]
 	Updated emulators/suse113_krb5 to 11.3nb2 [chs 2011-02-27]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.2.152.27nb1 [chs 2011-02-27]
