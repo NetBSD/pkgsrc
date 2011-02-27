@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2010/12/03 00:22:46 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/02/27 15:52:33 chs Exp $
 
 SHA1 (suse113/i586/aaa_base-11.3-7.2.i586.rpm) = b14fb02ff155ac83aa39432a78f56cd095b6652e
 RMD160 (suse113/i586/aaa_base-11.3-7.2.i586.rpm) = 489614d045700c0ce9f74461b955b9d29508e300
@@ -36,9 +36,6 @@ Size (suse113/i586/libattr-2.4.44-7.1.i586.rpm) = 11242 bytes
 SHA1 (suse113/i586/libcap2-2.16-9.1.i586.rpm) = a58792c4a041e419b71c2555dfdd0c0a5031a2ea
 RMD160 (suse113/i586/libcap2-2.16-9.1.i586.rpm) = e9cd9cf7645a2270378637e504f89f3c99dd9e17
 Size (suse113/i586/libcap2-2.16-9.1.i586.rpm) = 11343 bytes
-SHA1 (suse113/i586/libcurl4-7.20.1-3.4.i586.rpm) = db803d461bb1c128ce4cbd18f655d52b7dd77e28
-RMD160 (suse113/i586/libcurl4-7.20.1-3.4.i586.rpm) = c33d94c5d5ed7948cdb85ebbc8713413374eb371
-Size (suse113/i586/libcurl4-7.20.1-3.4.i586.rpm) = 153600 bytes
 SHA1 (suse113/i586/libgcc45-4.5.0_20100604-1.12.i586.rpm) = 8e5bb919ce405f2ac24c2f80400a24b7f04747ef
 RMD160 (suse113/i586/libgcc45-4.5.0_20100604-1.12.i586.rpm) = b53baf52305d7466964f814127a796166fb43897
 Size (suse113/i586/libgcc45-4.5.0_20100604-1.12.i586.rpm) = 54484 bytes
@@ -132,9 +129,6 @@ Size (suse113/x86_64/libattr-2.4.44-7.1.x86_64.rpm) = 11301 bytes
 SHA1 (suse113/x86_64/libcap2-2.16-9.1.x86_64.rpm) = 487500cfaf490f2fc29389839f45140ab655b7c4
 RMD160 (suse113/x86_64/libcap2-2.16-9.1.x86_64.rpm) = 0de970c861ce6c6e6efce5f8b9a7f103a43ca060
 Size (suse113/x86_64/libcap2-2.16-9.1.x86_64.rpm) = 11112 bytes
-SHA1 (suse113/x86_64/libcurl4-7.20.1-3.4.x86_64.rpm) = 19eeeea47d9524e7bb1e9bed26e0f33deeae566f
-RMD160 (suse113/x86_64/libcurl4-7.20.1-3.4.x86_64.rpm) = 10ee8adaa9b331215541bb1e7c5e9ee8631e3c3d
-Size (suse113/x86_64/libcurl4-7.20.1-3.4.x86_64.rpm) = 156687 bytes
 SHA1 (suse113/x86_64/libgcc45-4.5.0_20100604-1.12.x86_64.rpm) = 215853024130f97c4360df90b9b6ca383fd36664
 RMD160 (suse113/x86_64/libgcc45-4.5.0_20100604-1.12.x86_64.rpm) = eb2081787fbd87f17612a7eae3d1fd0454e3e75b
 Size (suse113/x86_64/libgcc45-4.5.0_20100604-1.12.x86_64.rpm) = 44147 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/02/10 02:55:45 chs Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/27 15:52:33 chs Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 DISTFILES+=	aaa_base-11.3-7.2.${SUSE_ARCH}.rpm
 DISTFILES+=	bash-4.1-8.1.${SUSE_ARCH}.rpm
@@ -15,7 +15,6 @@ DISTFILES+=	libFLAC8-1.2.1-75.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libacl-2.2.48-8.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libattr-2.4.44-7.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libcap2-2.16-9.1.${SUSE_ARCH}.rpm
-DISTFILES+=	libcurl4-7.20.1-3.4.${SUSE_ARCH}.rpm
 DISTFILES+=	libgcc45-4.5.0_20100604-1.12.${SUSE_ARCH}.rpm
 DISTFILES+=	libidn-1.15-4.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libldap-2_4-2-2.4.21-9.1.${SUSE_ARCH}.rpm
