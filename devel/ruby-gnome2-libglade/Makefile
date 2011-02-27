@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/11/27 06:14:46 obache Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2011/02/27 00:26:17 tron Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-libglade-${VERSION}
+PKGREVISION=		1
 COMMENT=		Ruby binding of libglade
 CATEGORIES=		devel
 

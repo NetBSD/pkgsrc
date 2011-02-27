@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/09/10 08:15:55 taca Exp $
+# $NetBSD: Makefile,v 1.6.4.1 2011/02/27 00:26:27 tron Exp $
 
 DISTNAME=	itexToMML
 PKGNAME=	${RUBY_PKGPREFIX}-itex2MML-${ITEX2MML_VERSION}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://golem.ph.utexas.edu/~distler/blog/files/
 DIST_SUBDIR=	itex2MML-${ITEX2MML_VERSION}

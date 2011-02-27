@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 06:58:50 taca Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2011/02/27 00:26:22 tron Exp $
 #
 
 .include "../../inputmethod/zinnia/Makefile.common"
 
+PKGREVISION=	1
 CATEGORIES+=	ruby
 
 COMMENT=	Zinnia ruby module

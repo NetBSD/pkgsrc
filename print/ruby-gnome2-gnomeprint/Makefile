@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2010/11/27 06:14:47 obache Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2011/02/27 00:26:24 tron Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomeprint-${VERSION}
 COMMENT=		Ruby binding of libgnomeprint
+PKGREVISION=		1
 CATEGORIES=		print
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gnomeprint-[0-9]*
