@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/12/04 04:23:43 taca Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2011/02/27 00:26:26 tron Exp $
 
 DISTNAME=	bluecloth-2.0.9
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

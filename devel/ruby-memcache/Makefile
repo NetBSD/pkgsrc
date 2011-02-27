@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 05:56:34 taca Exp $
+# $NetBSD: Makefile,v 1.3.4.1 2011/02/27 00:26:17 tron Exp $
 
 DISTNAME=	ruby-memcache-0.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://rubyforge.org/frs/download.php/2484/
 EXTRACT_SUFX=	.tar.bz2
