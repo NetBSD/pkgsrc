@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10143 2011/02/27 15:06:15 wiz Exp $
+$NetBSD: TODO,v 1.10144 2011/02/27 15:10:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -997,7 +997,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nap-1.5.3
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o nawk-20071023
-	o ncmpc-0.16
 	o ncview-1.93b
 	o ne-2.01
 	o neon-0.29.5
