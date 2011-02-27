@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.484 2011/02/27 12:21:07 obache Exp $
+$NetBSD: CHANGES-2011,v 1.485 2011/02/27 12:35:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -791,3 +791,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/musicpd to 0.16.1 [wiz 2011-02-27]
 	Added net/p5-Net-DNS-Resolver-Programmable version 0.003 [obache 2011-02-27]
 	Updated net/p5-NetAddr-IP to 4.038 [obache 2011-02-27]
+	Updated emulators/fuse to 1.0.0.1 [adam 2011-02-27]
