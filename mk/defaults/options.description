@@ -31,6 +31,7 @@ aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
 atheme-large-net	Enable support for large networks (i.e. > 2000 users).
+audiofile		Enable audio conversion using libaudiofile.
 avahi			Enable DNS service discovery and multicast DNS support.
 avahi-howl		Enable howl compatibility in avahi.
 bacula-static		Enable building of statically linked versions of the Bacula daemons.
@@ -191,6 +192,7 @@ hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
 icu			Enable icu support.
+id3			Enable id3 tagging support.
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 idn			Internationalized Domain Names (IDN) support.
 ikiwiki-amazon-s3	Enable publishing rendered pages to Amazon S3 servers.
@@ -220,6 +222,7 @@ ipa-without-thresholds	Disable thresholds support.
 irssi-perl		Enable Perl support in irssi.
 iso			Build a .iso file.
 ispell			Add spell checking support using ispell.
+jack			Enable support for the JACK audio server.
 jasper			Enable JPEG 2000 support using the jasper library.
 java			Enable Java support.
 javascript		Enable Javascript support.
@@ -356,7 +359,6 @@ mozilla-jit		Enable nanojit javascript acceleration.
 mozilla-lightning	Enable the lightning calendar extension.
 mozilla-single-profile	Enable single profiles on mozilla browsers.
 mp3tunes		Enable support for mp3tunes.com.
-mpcdec			Enable the portable Musepack decoder library.
 mpeg4ip			Enable mpeg4ip support.
 mpg123-altivec		Enable altivec optimized dithering code.
 mpg123-fifo		Enable FIFO support for the mpg123 control interface.
@@ -368,6 +370,7 @@ mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
 mstats			Enable memory statistics.
+musepack		Enable the portable Musepack decoder library.
 mutt-compressed-mbox	Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
@@ -461,6 +464,8 @@ seamonkey		Use seamonkey as gecko rendering engine.
 sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 serialconsole		Enable use of serial console.
+shout			Enable SHOUTcast support.
+sidplay			Enable support for the SID audio file format.
 sieve			Enable sieve support.
 sigver			Enable signature verification for debugging purposes.
 simd			Enable MMX/3DNOW/SSE/Altivec support.
