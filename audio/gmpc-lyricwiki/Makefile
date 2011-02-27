@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/27 16:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/27 23:16:36 wiz Exp $
 #
 
 DISTNAME=	gmpc-lyricwiki-0.20.0
@@ -14,15 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS=	intltool pkg-config
+USE_TOOLS+=	intltool pkg-config
 
-BUILDLINK_API_DEPENDS.gmpc+=	gmpc>=0.16.2
 .include "../../audio/gmpc/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libmpd+=	libmpd>=0.15.98
-.include "../../audio/libmpd/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
