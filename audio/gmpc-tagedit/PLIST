@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/27 16:12:42 wiz Exp $
+lib/gmpc/plugins/gmpctageditplugin.la
+share/locale/bg/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/bs/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/de/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/es/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/fr/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/it/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/ja/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/nb/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/nl/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/pl/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/ro/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/ru/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/sv/LC_MESSAGES/gmpc-tagedit.mo
+share/locale/zh_CN/LC_MESSAGES/gmpc-tagedit.mo
