@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.482 2011/02/27 11:01:12 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.483 2011/02/27 11:35:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -789,3 +789,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/wordpress to 3.1 [morr 2011-02-27]
 	Updated audio/musicpd to 0.16 [wiz 2011-02-27]
 	Updated audio/musicpd to 0.16.1 [wiz 2011-02-27]
+	Added net/p5-Net-DNS-Resolver-Programmable version 0.003 [obache 2011-02-27]
