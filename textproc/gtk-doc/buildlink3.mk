@@ -1,5 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:25:29 joerg Exp $
-
+# $NetBSD: buildlink3.mk,v 1.6 2011/02/27 15:14:32 wiz Exp $
+#
 # provided mostly for pkg-config
 
 BUILDLINK_TREE+=	gtk-doc
