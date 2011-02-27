@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2011/02/27 10:42:14 wiz Exp $
+
+Unportable test(1) construct.
+
+--- configure.orig	2011-02-26 16:48:03.000000000 +0000
++++ configure
+@@ -7783,7 +7783,7 @@ else
+ fi
+ 
+ 
+-if test x$with_tremor == xno || test -z $with_tremor; then
++if test x$with_tremor = xno || test -z $with_tremor; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OGG" >&5
