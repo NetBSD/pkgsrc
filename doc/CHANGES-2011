@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.480 2011/02/27 10:30:44 morr Exp $
+$NetBSD: CHANGES-2011,v 1.481 2011/02/27 10:42:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -787,3 +787,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/libhangul to 0.0.12 [obache 2011-02-27]
 	Updated inputmethod/ibus-hangul to 1.3.1 [obache 2011-02-27]
 	Updated www/wordpress to 3.1 [morr 2011-02-27]
+	Updated audio/musicpd to 0.16 [wiz 2011-02-27]
