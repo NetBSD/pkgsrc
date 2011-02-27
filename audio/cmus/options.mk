@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.9 2010/03/16 16:46:22 ahoka Exp $
+# $NetBSD: options.mk,v 1.10 2011/02/27 10:51:51 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
-PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts libao mpcdec faad wavpack pulseaudio
+PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts libao musepack faad wavpack pulseaudio
 PKG_SUPPORTED_OPTIONS+=		wide-curses ffmpeg
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 PKG_SUGGESTED_OPTIONS=		flac mad libao vorbis modplug
 PKG_OPTIONS_LEGACY_OPTS=	ao:libao
+PKG_OPTIONS_LEGACY_OPTS=	mpcdec:musepack
 
 .include "../../mk/bsd.options.mk"
 
@@ -90,10 +91,10 @@ CONFIGURE_ARGS+=	CONFIG_FLAC=n
 
 # MPCDEC support
 #
-.if !empty(PKG_OPTIONS:Mmpcdec)
+.if !empty(PKG_OPTIONS:Mmusepack)
 .include "../../audio/libmpcdec/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_MPC=y
-PLIST.mpcdec=		yes
+PLIST.musepack=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_MPC=n
 .endif
