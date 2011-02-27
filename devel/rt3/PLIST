@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/02/26 20:58:15 spz Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/02/27 17:05:57 spz Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -279,6 +279,7 @@ share/rt3/etc/schema.SQLite
 share/rt3/etc/schema.mysql-4.0
 share/rt3/etc/schema.mysql-4.1
 share/rt3/etc/shrink_cgm_table.pl
+share/rt3/etc/shrink_transactions_table.pl
 share/rt3/etc/split-out-cf-categories
 share/rt3/etc/upgrade-mysql-schema.pl
 share/rt3/etc/upgrade/3.3.0/acl.Informix
