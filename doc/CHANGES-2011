@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.492 2011/02/27 15:51:18 chs Exp $
+$NetBSD: CHANGES-2011,v 1.493 2011/02/27 15:53:21 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -799,3 +799,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/gtk-doc to 1.17 [wiz 2011-02-27]
 	Added emulators/suse113_libcurl to 11.3 [chs 2011-02-27]
 	Added emulators/suse113_32_libcurl version 11.3 [chs 2011-02-27]
+	Updated emulators/suse113_base to 11.3nb2 [chs 2011-02-27]
