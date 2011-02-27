@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2011/02/26 20:58:15 spz Exp $
+$NetBSD: MESSAGE,v 1.5 2011/02/27 17:05:57 spz Exp $
 
 You must configure RT by editing ${PKG_SYSCONFDIR}/RT_SiteConfig.pm.
 
@@ -39,11 +39,11 @@ no password authentication itself, it may still store these weak
 password hashes -- using ExternalAuth does not guarantee that you are
 not vulnerable!  To upgrade stored passwords to a stronger hash, run:
 
-    perl ${RTSHAREDIR}/etc/upgrade/vulnerable-passwords
+    perl ${RTSHAREDIR}/etc/vulnerable-passwords
 
 at this point.
 
-For other upgrading actions, see ${RTSHAREDIR}/etc/upgrade/UPGRADING
+For other upgrading actions, see ${RTSHAREDIR}/etc/UPGRADING
 
 See also the manual on ${HOMEPAGE}docs.html
 ===========================================================================
