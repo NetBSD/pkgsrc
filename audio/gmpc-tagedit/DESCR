@@ -1,0 +1,7 @@
+The tagedit plugin for GMPC adds a editor panel for editing song
+tags. With the plugin enabled, you are able to queue one or more
+songs to the Tag editor from the playlist or song browser. You may
+then enter the Tag editor panel and modify the tags of the queued
+songs one by one or by groups. The changes are recorded when you
+hit the Save button. If you made a mistake while editing tags, you
+may discard the changes you made to one song or a group of songs.
