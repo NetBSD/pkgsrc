@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/27 15:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/27 15:56:20 wiz Exp $
 #
 
+# distfile was packaged manually, since none is provided for
+# this version. Just checkout git release tag, run autogen.sh
+# and 'make dist'.
 DISTNAME=	gmpc-lyricwiki-0.20.0
 CATEGORIES=	audio
-MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/0.20.0/
+MASTER_SITES=	# http://download.sarine.nl/Programs/gmpc/0.20.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmpc.wikia.com/wiki/GMPC_PLUGIN_LYRICWIKI
