@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.586 2011/02/26 19:38:41 abs Exp $
+# $NetBSD: Makefile,v 1.587 2011/02/27 13:02:18 taca Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -142,6 +142,7 @@ SUBDIR+=	gimp-docs-en
 SUBDIR+=	gimp-docs-es
 SUBDIR+=	gimp-docs-fr
 SUBDIR+=	gimp-docs-it
+SUBDIR+=	gimp-docs-ja
 SUBDIR+=	gimp-docs-ko
 SUBDIR+=	gimp-docs-nl
 SUBDIR+=	gimp-docs-nn
