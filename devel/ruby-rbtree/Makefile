@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 06:15:47 taca Exp $
+# $NetBSD: Makefile,v 1.5.4.1 2011/02/27 00:26:18 tron Exp $
 
 DISTNAME=	rbtree-0.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
