@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2010/11/02 18:39:44 chs Exp $
+# $NetBSD: Makefile.common,v 1.4 2011/02/27 15:00:06 chs Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		11.3
@@ -59,6 +59,7 @@ PKGDIR=			${SUSE_PKGSRCDIR}
 .if defined(SUSE_COMPAT32)
 PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
 COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
+CONFLICTS:=		${CONFLICTS:S/^suse_/suse32_/}
 LINUX_BASE=		linux32
 .else
 LINUX_BASE=		linux
