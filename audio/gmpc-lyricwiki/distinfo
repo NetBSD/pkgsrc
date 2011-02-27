@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/27 15:54:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/02/27 16:34:50 wiz Exp $
 
-SHA1 (gmpc-lyricwiki-0.20.0.tar.gz) = f13b250791b1aa2e0f7a4bb6f5269875d166c446
-RMD160 (gmpc-lyricwiki-0.20.0.tar.gz) = 0baf5e9e4afe0222a8e01f6d17eedb41aba2126b
-Size (gmpc-lyricwiki-0.20.0.tar.gz) = 302977 bytes
+SHA1 (gmpc-lyricwiki-0.20.0.tar.gz) = d78e86360e8dccd7af2e483c383d66df0ef74e2d
+RMD160 (gmpc-lyricwiki-0.20.0.tar.gz) = aad76590ccde69b76354915ed283023eba5a4fb2
+Size (gmpc-lyricwiki-0.20.0.tar.gz) = 305243 bytes
