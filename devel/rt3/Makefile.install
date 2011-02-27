@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.16 2011/02/26 20:58:15 spz Exp $
+# $NetBSD: Makefile.install,v 1.17 2011/02/27 17:05:57 spz Exp $
 
 .include "dirs.mk"
 
@@ -40,8 +40,9 @@ SUBST_STAGE.path=	post-patch
 
 SUBST_CLASSES+=		hardwired
 SUBST_FILES.hardwired=	share/html/NoAuth/RichText/FCKeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.pl \
-			share/rt3/etc/shrink_cgm_table.pl \
-			share/rt3/etc/upgrade-mysql-schema.pl
+			etc/upgrade/shrink_cgm_table.pl \
+			etc/upgrade/shrink_transactions_table.pl \
+			etc/upgrade/upgrade-mysql-schema.pl
 SUBST_SED.hardwired=	-e 's,/usr/bin/perl,'${PERL5}','
 SUBST_STAGE.hardwired=	post-patch
 
@@ -60,6 +61,7 @@ RT_ETC_FILES=		acl.Oracle acl.Pg acl.mysql constraints.mysql	\
 			upgrade/3.8-ical-extension                      \
 			upgrade/generate-rtaddressregexp                \
 			upgrade/shrink_cgm_table.pl                     \
+			upgrade/shrink_transactions_table.pl            \
 			upgrade/split-out-cf-categories                 \
 			upgrade/upgrade-mysql-schema.pl                 \
 			upgrade/vulnerable-passwords
