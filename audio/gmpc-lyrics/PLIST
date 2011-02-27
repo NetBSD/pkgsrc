@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/27 19:46:01 wiz Exp $
+lib/gmpc/plugins/lyricsplugin.la

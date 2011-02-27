@@ -1,0 +1,7 @@
+A GMPC plugin for fetching lyrics.
+
+The idea is to split this plugin in two separate plugins for both
+websites. The sites used for this plugin are:
+
+    * Leo's Lyrics
+    * Lyrics tracker
