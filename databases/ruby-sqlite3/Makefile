@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/12/04 03:47:14 taca Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2011/02/27 00:26:14 tron Exp $
 
 DISTNAME=	sqlite3-ruby-1.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby//}
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

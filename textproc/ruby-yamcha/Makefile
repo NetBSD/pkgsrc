@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 08:50:55 taca Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2011/02/27 00:26:29 tron Exp $
 #
 
 .include "../../textproc/yamcha/Makefile.common"
 
+PKGREVISION=	1
 CATEGORIES+=	ruby
 
 COMMENT=	YamCha ruby module

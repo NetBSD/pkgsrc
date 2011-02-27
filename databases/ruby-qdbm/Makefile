@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2010/09/10 04:07:53 taca Exp $
+# $NetBSD: Makefile,v 1.11.4.1 2011/02/27 00:26:14 tron Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
 
 PKGNAME=	${RUBY_PKGPREFIX}-qdbm-1.0.0.${QDBM_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases ruby
 
 MAINTAINER=	obache@NetBSD.org

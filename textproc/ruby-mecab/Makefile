@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 08:22:56 taca Exp $
+# $NetBSD: Makefile,v 1.5.4.1 2011/02/27 00:26:27 tron Exp $
 
 .include "../../textproc/mecab/Makefile.common"
 
 DISTNAME=	mecab-ruby-${MECAB_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-mecab-${MECAB_VERSION}
+PKGREVISION=	1
 CATEGORIES+=	ruby
 
 COMMENT=	MeCab ruby module

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2010/09/10 04:54:04 taca Exp $
+# $NetBSD: Makefile,v 1.23.4.1 2011/02/27 00:26:14 tron Exp $
 #
 
 DISTNAME=	tokyocabinet-ruby-1.30
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby-/-/}
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	${HOMEPAGE:S/rubydoc/rubypkg/}
 

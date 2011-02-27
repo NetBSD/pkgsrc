@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2010/09/10 04:05:04 taca Exp $
+# $NetBSD: Makefile,v 1.18.4.1 2011/02/27 00:26:12 tron Exp $
 
 DISTNAME=	uconv-0.4.12
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	converters japanese ruby
 MASTER_SITES=	http://www.yoshidam.net/
 

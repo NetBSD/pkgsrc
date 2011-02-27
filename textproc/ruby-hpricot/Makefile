@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/12/04 04:33:51 taca Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2011/02/27 00:26:27 tron Exp $
 
 DISTNAME=	hpricot-0.8.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org

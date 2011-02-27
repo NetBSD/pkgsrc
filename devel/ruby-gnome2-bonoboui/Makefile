@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/11/27 06:14:45 obache Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2011/02/27 00:26:16 tron Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-bonoboui-${VERSION}
 COMMENT=		Ruby binding of libbonoboui-2.x or later
+PKGREVISION=		1
 CATEGORIES=		devel
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-bonoboui-[0-9]*
