@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.493 2011/02/27 15:53:21 chs Exp $
+$NetBSD: CHANGES-2011,v 1.494 2011/02/27 15:55:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -800,3 +800,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added emulators/suse113_libcurl to 11.3 [chs 2011-02-27]
 	Added emulators/suse113_32_libcurl version 11.3 [chs 2011-02-27]
 	Updated emulators/suse113_base to 11.3nb2 [chs 2011-02-27]
+	Added audio/gmpc-lyricwiki version 0.20.0 [wiz 2011-02-27]
