@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/02/27 12:37:24 obache Exp $
+# $NetBSD: Makefile,v 1.20 2011/02/27 12:48:05 obache Exp $
 
 DISTNAME=	libspf_alt-0.4.0
 PKGREVISION=	4
@@ -11,10 +11,8 @@ COMMENT=	Sender Permitted Framework (SPF) library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILDLINK_API_DEPENDS.bind+=	bind>=9.2.3nb3
-
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-bind=${BUILDLINK_PREFIX.bind}
+CONFIGURE_ARGS+=--with-bind=${BUILDLINK_PREFIX.libbind}
 
 CONFLICTS+=	libspf2-*
 
