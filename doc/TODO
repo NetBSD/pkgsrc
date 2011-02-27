@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10145 2011/02/27 15:12:03 wiz Exp $
+$NetBSD: TODO,v 1.10146 2011/02/27 15:14:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -729,7 +729,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gst-plugins0.10-gnonlin-0.10.17
 	o gthumb-2.12.2
 	o gtick-0.4.2
-	o gtk-doc-1.17
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
 	o gtk2-2.24.1
