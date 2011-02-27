@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.487 2011/02/27 15:05:53 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.488 2011/02/27 15:06:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -794,3 +794,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/fuse to 1.0.0.1 [adam 2011-02-27]
 	Added mail/p5-Mail-SPF version 2.007 [obache 2011-02-27]
 	Added audio/libmpdclient version 2.4 [wiz 2011-02-27]
+	Updated audio/mpc to 0.20 [wiz 2011-02-27]
