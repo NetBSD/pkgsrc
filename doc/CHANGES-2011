@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.485 2011/02/27 12:35:07 adam Exp $
+$NetBSD: CHANGES-2011,v 1.486 2011/02/27 12:56:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -792,3 +792,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/p5-Net-DNS-Resolver-Programmable version 0.003 [obache 2011-02-27]
 	Updated net/p5-NetAddr-IP to 4.038 [obache 2011-02-27]
 	Updated emulators/fuse to 1.0.0.1 [adam 2011-02-27]
+	Added mail/p5-Mail-SPF version 2.007 [obache 2011-02-27]
