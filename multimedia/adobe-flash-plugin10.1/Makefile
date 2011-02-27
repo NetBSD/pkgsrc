@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/10 10:36:19 ahoka Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/27 16:06:05 chs Exp $
 
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://fpdownload.macromedia.com/get/flashplayer/current/
@@ -23,7 +23,7 @@ EXTRACT_SUFX=		.rpm
 CRYPTO=			yes
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	compat gtk2 x11 krb5 alsa
+EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl
 EMUL_REQD=		suse>=11.3
 
 FLASH_VERSION=		10.2.152.27
@@ -31,6 +31,7 @@ DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
 
 CONFLICTS=		ns-flash-[0-9]*
 PKGNAME=		adobe-flash-plugin-${FLASH_VERSION:S/r/./}
+PKGREVISION=		1
 
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
