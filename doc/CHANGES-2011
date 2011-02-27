@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.489 2011/02/27 15:10:47 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.490 2011/02/27 15:14:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added audio/libmpdclient version 2.4 [wiz 2011-02-27]
 	Updated audio/mpc to 0.20 [wiz 2011-02-27]
 	Updated audio/ncmpc to 0.18 [wiz 2011-02-27]
+	Updated textproc/gtk-doc to 1.17 [wiz 2011-02-27]
