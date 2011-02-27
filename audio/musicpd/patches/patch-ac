@@ -1,12 +1,15 @@
-$NetBSD: patch-ac,v 1.3 2010/05/19 18:25:19 drochner Exp $
+$NetBSD: patch-ac,v 1.4 2011/02/27 10:42:14 wiz Exp $
 
---- src/output/ao_plugin.c.orig	2010-05-19 14:49:45.000000000 +0000
+Initialise structure.
+
+--- src/output/ao_plugin.c.orig	2010-12-11 12:17:51.000000000 +0000
 +++ src/output/ao_plugin.c
-@@ -175,6 +175,7 @@ ao_output_open(void *data, struct audio_
- 	if (audio_format->bits > 16)
- 		audio_format->bits = 16;
+@@ -170,6 +170,8 @@ ao_output_open(void *data, struct audio_
+ 	ao_sample_format format;
+ 	struct ao_data *ad = (struct ao_data *)data;
  
 +	memset(&format, 0, sizeof(format));
- 	format.bits = audio_format->bits;
- 	format.rate = audio_format->sample_rate;
- 	format.byte_format = AO_FMT_NATIVE;
++
+ 	switch (audio_format->format) {
+ 	case SAMPLE_FORMAT_S8:
+ 		format.bits = 8;

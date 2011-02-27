@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.46 2011/01/11 11:43:19 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2011/02/27 10:42:13 wiz Exp $
 
-DISTNAME=		mpd-0.15.15
+DISTNAME=		mpd-0.16
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
 CATEGORIES=		audio
 #MASTER_SITES=		http://musicpd.org/uploads/files/
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 EXTRACT_SUFX=		.tar.bz2
 
-CONFLICTS=		mpd-[0-9]*
-
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://musicpd.org/
 COMMENT=		Remote controllable audio player
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		mpd-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
