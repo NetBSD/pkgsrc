@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/02/27 15:52:33 chs Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/28 01:45:43 chs Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 DISTFILES+=	aaa_base-11.3-7.2.${SUSE_ARCH}.rpm
 DISTFILES+=	bash-4.1-8.1.${SUSE_ARCH}.rpm
@@ -9,7 +9,7 @@ DISTFILES+=	coreutils-7.1-10.1.${SUSE_ARCH}.rpm
 DISTFILES+=	cyrus-sasl-2.1.23-11.1.${SUSE_ARCH}.rpm
 DISTFILES+=	findutils-4.4.2-4.1.${SUSE_ARCH}.rpm
 DISTFILES+=	gdbm-1.8.3-373.4.${SUSE_ARCH}.rpm
-DISTFILES+=	glibc-2.11.2-2.4.${SUSE_ARCH}.rpm
+DISTFILES+=	glibc-2.11.2-3.3.1.${SUSE_ARCH}.rpm
 DISTFILES+=	keyutils-libs-1.3-1.9.${SUSE_ARCH}.rpm
 DISTFILES+=	libFLAC8-1.2.1-75.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libacl-2.2.48-8.1.${SUSE_ARCH}.rpm
