@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.511 2011/02/28 18:11:25 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.512 2011/02/28 18:39:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -819,3 +819,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/p5-Mojolicious version 1.11 [wiz 2011-02-28]
 	Removed www/p5-Mojo successor www/p5-Mojolicious [wiz 2011-02-28]
 	Added devel/mdds version 0.5.1 [wiz 2011-02-28]
+	Added benchmarks/super_pi version 20030927 [wiz 2011-02-28]
