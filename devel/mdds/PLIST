@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/28 18:10:51 wiz Exp $
+include/mdds/flat_segment_tree.hpp
+include/mdds/flat_segment_tree_def.inl
+include/mdds/flat_segment_tree_itr.hpp
+include/mdds/global.hpp
+include/mdds/hash_container/map.hpp
+include/mdds/mixed_type_matrix.hpp
+include/mdds/mixed_type_matrix_def.inl
+include/mdds/mixed_type_matrix_element.hpp
+include/mdds/mixed_type_matrix_flag_storage.hpp
+include/mdds/mixed_type_matrix_storage.hpp
+include/mdds/node.hpp
+include/mdds/point_quad_tree.hpp
+include/mdds/quad_node.hpp
+include/mdds/rectangle_set.hpp
+include/mdds/segment_tree.hpp
