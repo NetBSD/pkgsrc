@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/03/10 14:06:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/02/28 08:54:04 obache Exp $
 bin/pygmentize
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -96,6 +96,9 @@ ${PYSITELIB}/pygments/lexers/dotnet.pyo
 ${PYSITELIB}/pygments/lexers/functional.py
 ${PYSITELIB}/pygments/lexers/functional.pyc
 ${PYSITELIB}/pygments/lexers/functional.pyo
+${PYSITELIB}/pygments/lexers/hdl.py
+${PYSITELIB}/pygments/lexers/hdl.pyc
+${PYSITELIB}/pygments/lexers/hdl.pyo
 ${PYSITELIB}/pygments/lexers/math.py
 ${PYSITELIB}/pygments/lexers/math.pyc
 ${PYSITELIB}/pygments/lexers/math.pyo
