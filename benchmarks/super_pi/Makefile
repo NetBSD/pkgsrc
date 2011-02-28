@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/28 18:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/28 18:39:34 wiz Exp $
 #
 
 DISTNAME=		super_pi
 PKGNAME=		super_pi-20030927
-CATEGORIES=		math
+CATEGORIES=		benchmarks math
 MASTER_SITES=		ftp://pi.super-computing.org/Linux/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
