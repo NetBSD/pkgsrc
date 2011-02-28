@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10149 2011/02/28 20:15:14 ryoon Exp $
+$NetBSD: TODO,v 1.10150 2011/02/28 20:17:07 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1214,8 +1214,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scrotwm-0.9.28
 	o scsh-1.3.0
 	o sdcc-2.9.0
-	o sdlmame-0.141
-	o sdlmess-0.141
 	o seahorse-2.32.0
 	o sendfile-20010424
 	o ser-0.9.6
