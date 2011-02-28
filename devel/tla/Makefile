@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2010/01/29 19:29:04 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2011/02/28 14:52:47 wiz Exp $
 #
 
 DISTNAME=	tla-1.3.5
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GNU:=gnu-arch/}
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://regexps.srparish.net/
 COMMENT=	Revision control system ideal for widely distributed development
 

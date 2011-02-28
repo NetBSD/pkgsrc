@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2010/10/03 12:24:19 obache Exp $
+# $NetBSD: Makefile,v 1.27 2011/02/28 14:52:52 wiz Exp $
 #
 
 DISTNAME=	tnt-1.9.2
 CATEGORIES=	ham
 MASTER_SITES=	ftp://ftp.wspse.de/pub/packet_radio/tnt/
 
-MAINTAINER=	wulf@ping.net.au
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wspse.de/WSPse/Packet.php3
 COMMENT=	Amateur packet radio terminal program for TNC2, AEA PK232 and PK88
 
