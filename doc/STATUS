@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.38 2008/05/14 15:27:41 wiz Exp $
+$NetBSD: STATUS,v 1.39 2011/02/28 15:21:54 wiz Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -117,14 +117,10 @@ Solaris/opera7: spell checking with textproc/aspell not tested
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
-meta-pkgs/gnome			    Y[*]
+meta-pkgs/gnome			    
 misc/koffice
 x11/kde3
 ---------------------------------------------------------------------------
 'yowza'
 ---------------------------------------------------------------------------
 notes:
-
-[*] meta-pkgs/gnome FreeBSD: it builds cleanly, but there is a problem with
-    gnome-session or any dependent library, which we'll fix soon. [xtraeme]
-
