@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:07 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/28 14:52:54 wiz Exp $
 #
 
 DISTNAME=	libytnef-1.5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ytnef/}
 
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tnef.sourceforge.net/
 COMMENT=	Yerase's TNEF Stream Reader
 

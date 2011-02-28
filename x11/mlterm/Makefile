@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2011/01/13 13:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2011/02/28 14:53:07 wiz Exp $
 
 DISTNAME=	mlterm-3.0.1
 PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
-MAINTAINER=	uebayasi@NetBSD.org,hira@NetBSD.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
 LICENSE=	modified-bsd
