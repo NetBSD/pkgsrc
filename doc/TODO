@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10148 2011/02/28 15:17:52 wiz Exp $
+$NetBSD: TODO,v 1.10149 2011/02/28 20:15:14 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1231,7 +1231,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skipstone-1.0.1
-	o skk-14.2 [pkg/44486]
 	o skype-2.1.0.47
 	o smalltalk-3.2.3
 	o smproxy-1.0.3
