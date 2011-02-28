@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/02/15 19:50:53 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2011/02/28 20:37:55 adam Exp $
 
 DISTNAME=	exiv2-0.21.1
 PKGNAME=	exiv2-organize-0.21.1
@@ -8,29 +8,25 @@ MASTER_SITES=	http://www.exiv2.org/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.exiv2.org/
 COMMENT=	Image metadata manipulation
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-INSTALLATION_DIRS=	bin
 
 USE_LANGUAGES=		c c++
-GCC_REQD+=		3.3
-
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-
 # The visibility feature seems complicated and causes problems on DragonFly
 # (reported by Matt Madden) and on Gentoo (http://bugs.gentoo.org/185907).
 CONFIGURE_ARGS+=	--disable-visibility
 
-do-build:
-	(cd ${WRKSRC}/contrib/organize && ${MAKE_ENV} ${GMAKE})
+GCC_REQD+=		3.3
+BUILD_DIRS=		contrib/organize
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/contrib/organize/organize \
-	 ${DESTDIR}${PREFIX}/bin/exiv2-organize
+		${DESTDIR}${PREFIX}/bin/exiv2-organize
 
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
