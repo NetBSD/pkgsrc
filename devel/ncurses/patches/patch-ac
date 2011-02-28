@@ -1,17 +1,8 @@
-$NetBSD: patch-ac,v 1.16 2008/11/05 16:12:38 wiz Exp $
+$NetBSD: patch-ac,v 1.17 2011/02/28 11:02:46 adam Exp $
 
---- configure.orig	2008-10-26 00:04:38.000000000 +0000
+--- configure.orig	2011-02-21 01:40:36.000000000 +0000
 +++ configure
-@@ -2663,7 +2663,7 @@ if test "$cross_compiling" = yes ; then
-   LDCONFIG=:
- else
- case "$cf_cv_system_name" in #(vi
--freebsd*) #(vi
-+dragonfly*|freebsd*) #(vi
-   test -z "$LDCONFIG" && LDCONFIG="/sbin/ldconfig -R"
-   ;;
- *) LDPATH=$PATH:/sbin:/usr/sbin
-@@ -8516,12 +8516,7 @@ case ".$MANPAGE_RENAMES" in #(vi
+@@ -9640,12 +9640,7 @@ case ".$MANPAGE_RENAMES" in #(vi
  .no) #(vi
    ;;
  .|.yes)
@@ -24,3 +15,12 @@ $NetBSD: patch-ac,v 1.16 2008/11/05 16:12:38 wiz Exp $
    ;;
  esac
  
+@@ -18449,7 +18444,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
+ 
+ ### Construct the list of include-directories to be generated
+ 
+-CPPFLAGS="$CPPFLAGS -I. -I../include"
++CPPFLAGS="-I. -I../include $CPPFLAGS"
+ if test "$srcdir" != "."; then
+ 	CPPFLAGS="$CPPFLAGS -I\${srcdir}/../include"
+ fi
