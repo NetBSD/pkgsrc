@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2009/12/15 21:30:52 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:39 wiz Exp $
 #
 
 PKGNAME=		akode-plugins-resampler-${AKODE_VERSION}
 PKGREVISION=		1
 
-MAINTAINER=		hasso@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Resampler plugin for aKode framework
 LICENSE=		gnu-gpl-v2
 

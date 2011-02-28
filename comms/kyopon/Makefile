@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2008/12/19 09:35:14 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/02/28 14:52:42 wiz Exp $
 
 DISTNAME=		kyopon-0.5
 CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		itohy@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=		tool to manipulate data of Kyocera PHS handset
 

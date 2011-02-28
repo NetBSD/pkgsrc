@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/02/10 19:34:06 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/28 14:52:43 wiz Exp $
 #
 
 DISTNAME=	pgtcl1.5
@@ -8,7 +8,7 @@ CATEGORIES=	databases tcl
 CATEGORIES=	databases
 MASTER_SITES=	ftp://gborg.postgresql.org/pub/pgtcl/stable/
 
-MAINTAINER=	cjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gborg.postgresql.org/project/pgtcl/projdisplay.php
 COMMENT=	TCL interface to PostgreSQL
 

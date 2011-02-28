@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2010/12/23 11:44:26 dsainty Exp $
+# $NetBSD: Makefile,v 1.81 2011/02/28 14:52:44 wiz Exp $
 
 DISTNAME=	doxygen-1.6.3.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 		http://ftp.stack.nl/pub/users/dimitri/
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
 COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2

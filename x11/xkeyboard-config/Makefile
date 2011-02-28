@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/10/22 11:46:59 ghen Exp $
+# $NetBSD: Makefile,v 1.14 2011/02/28 14:53:09 wiz Exp $
 #
 
 DISTNAME=		xkeyboard-config-2.0
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		bjs@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freedesktop.org/wiki/Software/XKeyboardConfig
 COMMENT=		X Keyboard Configuration Database
 

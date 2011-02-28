@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2011/02/25 09:47:31 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2011/02/28 14:53:08 wiz Exp $
 #
 
 DISTNAME=	pygtk-2.22.0
@@ -8,7 +8,7 @@ CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pygtk.org/
 COMMENT=	Python bindings for GTK+2
 LICENSE=	gnu-lgpl-v2.1

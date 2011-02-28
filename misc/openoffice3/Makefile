@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/01/13 13:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2011/02/28 14:52:56 wiz Exp $
 
 OO_VER=			3.1.1
 OO_TAG=			OOO310_m19
@@ -15,7 +15,7 @@ DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_extensions.tar.bz2
 
-MAINTAINER=		hira@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (version 3)
 LICENSE=		gnu-lgpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2008/10/15 01:58:53 bjs Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/02/28 14:52:40 wiz Exp $
 #
 # used by audio/libmpg123/Makefile
 
@@ -9,7 +9,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mpg123.sourceforge.net/
 
 

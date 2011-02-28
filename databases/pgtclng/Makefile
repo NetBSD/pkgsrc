@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/02/10 19:34:06 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/28 14:52:43 wiz Exp $
 #
 
 VER=		1.5.3
@@ -8,7 +8,7 @@ PKGREVISION=	4
 CATEGORIES=	databases tcl
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/1075/
 
-MAINTAINER=	cjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pgtclng.projects.postgresql.org/
 COMMENT=	Next Generation TCL interface to PostgreSQL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/11/04 13:34:46 asau Exp $
+# $NetBSD: Makefile,v 1.27 2011/02/28 14:52:52 wiz Exp $
 #
 
 DISTNAME=	hamlib-1.2.12
@@ -6,7 +6,7 @@ DISTNAME=	hamlib-1.2.12
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 
-MAINTAINER=	wulf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hamlib.sourceforge.net/
 COMMENT=	API for digital communications equipment
 

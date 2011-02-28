@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2011/01/13 13:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2011/02/28 14:52:56 wiz Exp $
 #
 
 OO_VER=			2.4.3
@@ -15,7 +15,7 @@ DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 #DISTFILES+=		OOo_${OO_VER}_src_sdk.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
 
-MAINTAINER=		hira@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (version 2)
 

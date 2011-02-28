@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:47 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2011/02/28 14:53:03 wiz Exp $
 #
 
 DISTNAME=	aiksaurus-1.2.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aiksaurus/}
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aiksaurus.sourceforge.net/
 COMMENT=	English-language thesaurus
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/02/07 23:29:00 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2011/02/28 14:53:00 wiz Exp $
 #
 
 DISTNAME=	spread-src-3.17.3
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cnds.jhu.edu/download/noformdown/
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.spread.org/
 COMMENT=	Group communication system providing a number of messaging services
 

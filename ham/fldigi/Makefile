@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/01/13 13:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2011/02/28 14:52:51 wiz Exp $
 #
 
 DISTNAME=	fldigi-3.03
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/fldigi-distro/
 
-MAINTAINER=	wulf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.w1hkj.com/Fldigi.html
 COMMENT=	Digital radio modem
 

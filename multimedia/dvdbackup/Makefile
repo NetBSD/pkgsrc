@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2009/08/22 22:05:23 abs Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/28 14:52:57 wiz Exp $
 
 DISTNAME=	dvdbackup-0.1.1
 PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://dvd-create.sourceforge.net/
 
-MAINTAINER=	wulf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dvd-create.sourceforge.net/
 COMMENT=	DVD backup utility
 

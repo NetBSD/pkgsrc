@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/02/28 14:52:39 wiz Exp $
 #
 # used by audio/akode/Makefile
 # used by audio/akode-plugins-alsa/Makefile
@@ -18,7 +18,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.kde-apps.org/CONTENT/content-files/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		hasso@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://carewolf.com/akode/
 
 WRKSRC=			${WRKDIR}/akode-${AKODE_VERSION}

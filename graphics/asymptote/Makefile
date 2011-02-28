@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/31 14:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:49 wiz Exp $
 #
 
 DISTNAME=	asymptote-1.85
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asymptote/}
 EXTRACT_SUFX=	.tgz
 DISTFILES=	${DISTNAME}.src${EXTRACT_SUFX}
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://asymptote.sourceforge.net/
 COMMENT=	Powerful descriptive vector graphics language for technical drawings
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2010/06/02 19:59:52 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2011/02/28 14:52:44 wiz Exp $
 
 DISTNAME=	gc-7.1
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 COMMENT=	Garbage collection and memory leak detection for C and C++
 
