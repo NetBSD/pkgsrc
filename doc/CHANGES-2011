@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.507 2011/02/28 11:04:03 adam Exp $
+$NetBSD: CHANGES-2011,v 1.508 2011/02/28 14:36:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -814,3 +814,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-pygments to 1.4 [obache 2011-02-28]
 	Updated devel/ncurses to 5.8 [adam 2011-02-28]
 	Updated devel/ncursesw to 5.8 [adam 2011-02-28]
+	Updated net/samba33 to 3.3.15 [taca 2011-02-28]
+	Updated net/samba35 to 3.5.7 [taca 2011-02-28]
