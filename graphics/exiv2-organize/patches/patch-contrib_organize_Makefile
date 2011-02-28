@@ -1,0 +1,27 @@
+$NetBSD: patch-contrib_organize_Makefile,v 1.1 2011/02/28 20:37:56 adam Exp $
+
+--- contrib/organize/Makefile.orig	2011-02-28 20:05:59.000000000 +0000
++++ contrib/organize/Makefile
+@@ -50,7 +50,6 @@ all: ozbin
+ # Include system configuration
+ top_srcdir = ../..
+ include $(top_srcdir)/config/config.mk
+-include boost.mk
+ 
+ # ******************************************************************************
+ # Source files
+@@ -68,12 +67,12 @@ SHELL = /bin/sh
+ 
+ .PRECIOUS: %.cpp
+ 
+-CPPFLAGS := -I$(BOOST_INC_DIR) `pkg-config exiv2 --cflags`
++CPPFLAGS += -DBOOST_FILESYSTEM_DEPRECATED -I${PREFIX}/include/boost `pkg-config exiv2 --cflags`
+ ifdef HAVE_STDINT
+ 	CPPFLAGS += -DEXV_HAVE_STDINT_H=1
+ endif
+ 
+-LDFLAGS := $(BOOST_LIBS) `pkg-config exiv2 --libs`
++LDFLAGS += -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lboost_system -lboost_filesystem -lboost_regex -lboost_program_options `pkg-config exiv2 --libs`
+ 
+ OZOBJ = $(OZSRC:.cpp=.o) $(OZMAIN:.cpp=.o)
+ OZBIN = $(OZMAIN:.cpp=)
