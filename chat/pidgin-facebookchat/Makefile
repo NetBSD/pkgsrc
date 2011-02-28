@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/02/21 15:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2011/02/28 14:52:41 wiz Exp $
 
 VERSION=	1.27
 DISTNAME=	pidgin-facebookchat-source-${VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	http://pidgin-facebookchat.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 WRKSRC=		${WRKDIR}
 
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pidgin-facebookchat/
 COMMENT=	Plugin for pidgin to support Facebook IM
 

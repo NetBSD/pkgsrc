@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/10 17:20:38 epg Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:06 wiz Exp $
 
 DISTNAME=	loggerhead-${VER}
 PKGREVISION=	1
@@ -8,7 +8,7 @@ VER=		1.17
 
 WRKSRC=		${WRKDIR}/loggerhead
 
-MAINTAINER=	epg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/loggerhead
 COMMENT=	Web viewer for Bazaar branches
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/11/09 05:19:57 bjs Exp $
+# $NetBSD: Makefile,v 1.10 2011/02/28 14:52:46 wiz Exp $
 #
 
 DISTNAME=		patchutils-0.3.0
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://cyberelk.net/tim/data/patchutils/stable/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		recht@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cyberelk.net/tim/patchutils/index.html
 COMMENT=		Some programs for manipulating patch files
 
