@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/07/24 01:24:38 christos Exp $
+# $NetBSD: Makefile,v 1.21 2011/02/28 14:52:41 wiz Exp $
 #
 
 # Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
@@ -9,7 +9,7 @@ PKGREVISION=		6
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		cjs@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icb.net/
 COMMENT=		Internet CB - a mostly-defunct chat client
 

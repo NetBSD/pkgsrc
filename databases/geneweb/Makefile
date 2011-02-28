@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/06/13 22:57:08 gdt Exp $
+# $NetBSD: Makefile,v 1.33 2011/02/28 14:52:42 wiz Exp $
 #
 
 DISTNAME=	geneweb-5.01
@@ -7,8 +7,7 @@ EXTRACT_SUFX=	.tgz
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/ \
 		http://www.sartorelli.gen.nz/GeneWeb/Src/
 
-MAINTAINER=	wulf@NetBSD.org
-# also gdt@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.geneweb.org/
 COMMENT=	GeneWeb is a genealogy database that runs as a web server
 

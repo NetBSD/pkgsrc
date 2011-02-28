@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/07 21:02:16 heinz Exp $
+# $NetBSD: Makefile,v 1.23 2011/02/28 14:52:58 wiz Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
@@ -6,7 +6,7 @@ PKGREVISION=	14
 CATEGORIES=	devel multimedia
 MASTER_SITES=	#
 
-MAINTAINER=	wulf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lokigames.com/development/smpeg.php3
 COMMENT=	SDL MPEG Player Library
 LICENSE=	gnu-lgpl-v2

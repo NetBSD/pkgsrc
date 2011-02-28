@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/11/23 21:22:11 asau Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/28 14:52:53 wiz Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.iro.umontreal.ca/~gambit/download/gambit/v4.6/source/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iro.umontreal.ca/~gambit/
 COMMENT=	GambitC Scheme System
 

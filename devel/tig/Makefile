@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/11/08 10:44:12 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:47 wiz Exp $
 #
 
 DISTNAME=	tig-0.12.1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jonas.nitro.dk/tig/
 COMMENT=	Ncurses-based GIT repository tool
 

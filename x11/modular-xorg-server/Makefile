@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2010/09/19 17:48:56 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2011/02/28 14:53:07 wiz Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X11 server from modular X.org
 
