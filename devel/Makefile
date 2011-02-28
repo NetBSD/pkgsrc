@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1433 2011/02/25 02:35:12 obache Exp $
+# $NetBSD: Makefile,v 1.1434 2011/02/28 18:11:17 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -388,6 +388,7 @@ SUBDIR+=	libview
 SUBDIR+=	libvolume_id
 SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
+SUBDIR+=	libxenserver
 SUBDIR+=	lincvs
 SUBDIR+=	log4cxx
 SUBDIR+=	log4shib
@@ -405,6 +406,7 @@ SUBDIR+=	makedepf90
 SUBDIR+=	maketool
 SUBDIR+=	mantis
 SUBDIR+=	matio
+SUBDIR+=	mdds
 SUBDIR+=	meld
 SUBDIR+=	mell
 SUBDIR+=	memcached
