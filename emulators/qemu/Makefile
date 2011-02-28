@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2010/12/27 12:33:32 adam Exp $
+# $NetBSD: Makefile,v 1.78 2011/02/28 17:49:30 wiz Exp $
 
 DISTNAME=		qemu-0.13.0
 PKGREVISION=		1
@@ -19,6 +19,8 @@ USE_TOOLS+=		gmake makeinfo perl:build
 HAS_CONFIGURE=		yes
 
 BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -109,7 +111,6 @@ post-install:
 
 # On Darwin, qemu uses Cocoa and CoreAudio
 .if empty(OPSYS:MDarwin)
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
