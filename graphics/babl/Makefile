@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/02/10 07:41:25 adam Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/28 14:52:50 wiz Exp $
 
 DISTNAME=	babl-0.1.4
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/babl/0.1/ \
 		http://ftp.gwdg.de/pub/misc/grafik/gimp/babl/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gegl.org/babl/
 COMMENT=	Dynamic pixel conversion library
 LICENSE=	gnu-gpl-v3

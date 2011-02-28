@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/19 08:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/02/28 14:52:57 wiz Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -10,7 +10,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${LIBDVDCSS_MASTER_SITES}/${DISTNAME:S/libdvdcss-//}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${LIBDVDCSS_HOMEPAGE}
 COMMENT=	Simple library designed for accessing DVDs
 # XXX missing

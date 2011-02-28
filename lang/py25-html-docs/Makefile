@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:28:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:53 wiz Exp $
 #
 
 DISTNAME=	html-2.5.2
@@ -7,7 +7,7 @@ CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/doc/2.5.2/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/
 COMMENT=	HTML Documentation for Python
 

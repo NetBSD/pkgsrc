@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/02/10 16:20:45 pooka Exp $
+# $NetBSD: Makefile,v 1.10 2011/02/28 14:53:02 wiz Exp $
 #
 
 DISTNAME=	libpciaccess-0.11.0
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	PCI access utility library from X.org
 

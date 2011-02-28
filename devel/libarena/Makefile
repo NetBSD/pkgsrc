@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/22 08:12:58 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/28 14:52:45 wiz Exp $
 #
 
 DISTNAME=	libarena-${SNAPSHOT_DATE}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tgz
 SNAPSHOT_DATE=	20080221
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.25thandclement.com/~william/projects/libarena.html
 COMMENT=	Memory allocator API and implementation
 

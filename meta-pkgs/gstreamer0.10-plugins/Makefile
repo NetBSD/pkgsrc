@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/16 11:43:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:55 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	gstreamer0.10-plugins-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs multimedia
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gstreamer.net/
 COMMENT=	Open-source multimedia framework (plug-in meta-package)
 

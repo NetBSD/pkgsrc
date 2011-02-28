@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/16 19:26:07 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/02/28 14:53:02 wiz Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 
-MAINTAINER=	wrstuden@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
 COMMENT=	Command Line Interface HFS (not HFS+) disk access tools
 

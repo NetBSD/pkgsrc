@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/09/17 07:11:41 obache Exp $
+# $NetBSD: Makefile,v 1.29 2011/02/28 14:52:54 wiz Exp $
 
 .include "dist.mk"
 
@@ -6,7 +6,7 @@ PKGNAME=	python25-${PY_DISTVERSION}
 PKGREVISION=	1
 CATEGORIES=	lang python
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/02/11 21:21:55 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2011/02/28 14:52:59 wiz Exp $
 #
 
 DISTNAME=	SOAPpy-0.11.6
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pywebsvcs/}
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pywebsvcs.sourceforge.net/
 COMMENT=	SOAP implementation
 

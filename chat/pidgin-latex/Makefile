@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/02/21 15:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2011/02/28 14:52:41 wiz Exp $
 
 VERSION=	1.2.1
 PKGREVISION=	9
@@ -8,7 +8,7 @@ CATEGORIES=	chat print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin-latex/}
 WRKSRC=		${WRKDIR}/pidgin-latex
 
-MAINTAINER=	smb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/pidgin-latex/
 COMMENT=	Plugin for pidgin to render LaTeX as images
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/07/23 23:47:16 bjs Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:03 wiz Exp $
 #
 
 DISTNAME=	psftools-1.0.7
 CATEGORIES=	sysutils fonts
 MASTER_SITES=	http://www.seasip.info/Unix/PSF/
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.seasip.info/Unix/PSF/index.html
 COMMENT=	Tools for manipulating fixed-width, [typically] console fonts
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2010/10/16 15:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/02/28 14:52:44 wiz Exp $
 #
 
 DISTNAME=	cppunit-1.12.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppunit/}
 
-MAINTAINER=	wulf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cppunit.sourceforge.net/
 COMMENT=	CppUnit is a C++ unit testing framework
 LICENSE=	gnu-lgpl-v2.1
