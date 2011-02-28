@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2009/07/13 20:36:42 ahoka Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2011/02/28 11:02:46 adam Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -24,8 +24,8 @@ BUILDLINK_INCDIRS.ncurses+=	include/ncurses
 .PHONY: buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 buildlink-ncurses-curses-h:
 	${RUN}									\
-	src=${BUILDLINK_PREFIX.ncurses:Q}"/include/ncurses/curses.h";		\
-	dest=${BUILDLINK_DIR:Q}"/include/curses.h";				\
+	src=${BUILDLINK_PREFIX.ncurses}"/include/ncurses/curses.h";		\
+	dest=${BUILDLINK_DIR}"/include/curses.h";				\
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
 		${ECHO_BUILDLINK_MSG} "Linking ncurses/curses.h -> curses.h.";	\
 		${MKDIR} `${DIRNAME} "$$dest"`;					\
@@ -34,8 +34,8 @@ buildlink-ncurses-curses-h:
 
 buildlink-ncurses-ncurses-h:
 	${RUN}									\
-	src=${BUILDLINK_PREFIX.ncurses:Q}"/include/ncurses/ncurses.h";		\
-	dest=${BUILDLINK_DIR:Q}"/include/ncurses.h";				\
+	src=${BUILDLINK_PREFIX.ncurses}"/include/ncurses/ncurses.h";		\
+	dest=${BUILDLINK_DIR}"/include/ncurses.h";				\
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
 		${ECHO_BUILDLINK_MSG} "Linking ncurses/ncurses.h -> ncurses.h.";\
 		${MKDIR} `${DIRNAME} "$$dest"`;					\

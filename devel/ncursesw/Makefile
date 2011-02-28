@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/07/26 05:47:45 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/28 11:02:46 adam Exp $
 
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
-PKGREVISION=	4
 COMMENT=	Wide character CRT screen handling and optimization package
 
 PATCHDIR=	${.CURDIR}/../../devel/ncurses/patches
@@ -24,8 +23,8 @@ SUBST_CLASSES+=		includes
 SUBST_MESSAGE.includes=	Fixing include paths for ncurses headers.
 SUBST_STAGE.includes=	post-build
 SUBST_FILES.includes=	include/curses.h
-SUBST_SED.includes=	-e 's,<ncurses_dll\.h>,<ncurses/ncurses_dll\.h>,' \
-			-e 's,<unctrl\.h>,<ncurses/unctrl\.h>,'
+SUBST_SED.includes=	-e 's,<ncurses_dll\.h>,<ncurses/ncurses_dll\.h>,'
+SUBST_SED.includes+=	-e 's,<unctrl\.h>,<ncurses/unctrl\.h>,'
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/curses.h ${DESTDIR}${PREFIX}/include/ncursesw/ncurses.h

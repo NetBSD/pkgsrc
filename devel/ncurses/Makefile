@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.84 2010/06/21 14:49:00 tron Exp $
+# $NetBSD: Makefile,v 1.85 2011/02/28 11:02:46 adam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	4
 COMMENT=	CRT screen handling and optimization package
 
 INSTALLATION_DIRS+=	share/examples
 
 .if ${OPSYS} == "SunOS"
-# misc/screen  installs screen, screen-bce and screen-s
-# so we need to remove these  here to avoid a conflict.
-# this means we also remove the entries which have a
-# use=screen in them
+# misc/screen installs screen, screen-bce and screen-s, so we need to remove
+# these here to avoid a conflict; this means we also remove the entries which
+# have a use=screen in them
 SUBST_CLASSES+=		ti
 SUBST_STAGE.ti=		post-configure
 SUBST_MESSAGE.ti=	Removing screen entries from the terminfo database.

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.30 2010/08/29 01:16:08 obache Exp $
+# $NetBSD: builtin.mk,v 1.31 2011/02/28 11:02:46 adam Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -99,9 +99,9 @@ MAKEVARS+=	USE_BUILTIN.ncurses
 # If USE_NCURSES is set to yes, the use of an ncurses implementation
 # is forced.
 .if defined(USE_NCURSES) && !empty(USE_NCURSES:M[yY][eE][sS])
-.if !empty(IS_BUILTIN.ncurses:M[nN][oO])
+.  if !empty(IS_BUILTIN.ncurses:M[nN][oO])
 USE_BUILTIN.ncurses=	no
-.endif
+.  endif
 .endif
 # If it is set to chgat, a curses implementation with chgat(3) support
 # is considered good enough.
@@ -117,9 +117,9 @@ USE_BUILTIN.ncurses=	no
 
 # if terminfo is needed and we don't have it, use pkgsrc ncurses
 .if defined(USE_TERMINFO)
-.if !empty(BUILTIN_LIB_FOUND.terminfo:M[nN][oO])
+.  if !empty(BUILTIN_LIB_FOUND.terminfo:M[nN][oO])
 USE_BUILTIN.ncurses=	no
-.endif
+.  endif
 .endif
 
 # Define BUILTIN_LIBNAME.ncurses to be the base name of the built-in
@@ -164,8 +164,8 @@ buildlink-ncurses-extra-includes:
 	${RUN}								\
 	extra_includes="include/term.h";				\
 	for f in $$extra_includes; do					\
-		src=${BUILDLINK_PREFIX.ncurses:Q}"/$$f";		\
-		dest=${BUILDLINK_DIR:Q}"/$$f";				\
+		src=${BUILDLINK_PREFIX.ncurses}"/$$f";			\
+		dest=${BUILDLINK_DIR}"/$$f";				\
 		if ${TEST} ! -f "$$src"; then				\
 			${ECHO_BUILDLINK_MSG} "Touching extra ncurses header ($$f)"; \
 			${MKDIR} `${DIRNAME} "$$dest"`;			\
@@ -179,7 +179,7 @@ buildlink-ncurses-extra-includes:
 buildlink-curses-ncurses-h:
 	${RUN}								\
 	src=${H_NCURSES:Q};						\
-	dest=${BUILDLINK_DIR:Q}"/include/ncurses.h";			\
+	dest=${BUILDLINK_DIR}"/include/ncurses.h";			\
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
 		fname=`${BASENAME} $$src`;				\
 		${ECHO_BUILDLINK_MSG} "Linking $$fname -> ncurses.h.";	\
