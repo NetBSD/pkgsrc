@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10150 2011/02/28 20:17:07 ryoon Exp $
+$NetBSD: TODO,v 1.10151 2011/02/28 20:57:05 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1511,7 +1511,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yafc-1.1
 	o yaz-4.1.4
 	o yodl-2.14.3
-	o youtube-dl-20110225
 	o ysm-2.9.9.1
 	o yudit-2.9.2
 	o yorick-2.1.05
