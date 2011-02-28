@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.504 2011/02/27 20:10:56 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.505 2011/02/28 01:46:07 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -810,3 +810,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added audio/gmpc-lyrics version 0.20.0 [wiz 2011-02-27]
 	Added audio/gmpc-albumview version 0.20.0 [wiz 2011-02-27]
 	Added net/nicovideo-dl version 0.0.20110122 [ryoon 2011-02-27]
+	Updated emulators/suse113_base to 11.3nb3 [chs 2011-02-28]
