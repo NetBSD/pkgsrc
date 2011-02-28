@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2011/01/28 08:11:30 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2011/02/28 14:52:46 wiz Exp $
 #
 # used by devel/scmgit-base/Makefile
 # used by devel/scmgit-docs/Makefile
@@ -10,7 +10,7 @@ CATEGORIES=	devel scm
 MASTER_SITES?=	http://www.kernel.org/pub/software/scm/git/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER?=	bjs@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://git.or.cz/
 LICENSE=	gnu-gpl-v2
 

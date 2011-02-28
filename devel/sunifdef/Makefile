@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/22 03:10:01 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/28 14:52:47 wiz Exp $
 #
 
 DISTNAME=	sunifdef-3.1.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.strudl.org/public_ftp/sunifdef/nix/stable/
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.strudl.org/public_ftp/sunifdef/nix/stable/
 COMMENT=	Tool for eliminating superfluous C preprocessor conditionals
 

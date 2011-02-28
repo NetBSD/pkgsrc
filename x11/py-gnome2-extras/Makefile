@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/02/25 09:47:31 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2011/02/28 14:53:08 wiz Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.14.3
@@ -8,7 +8,7 @@ CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python binding for GNOME2
 

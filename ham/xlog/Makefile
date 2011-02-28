@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/01/13 13:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2011/02/28 14:52:53 wiz Exp $
 #
 
 DISTNAME=	xlog-2.0.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	http://download.savannah.gnu.org/releases/xlog/
 
-MAINTAINER=	wulf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/xlog/
 COMMENT=	Amateur Radio logging program
 

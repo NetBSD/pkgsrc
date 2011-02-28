@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2011/01/13 13:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2011/02/28 14:52:51 wiz Exp $
 
 DISTNAME=	gpredict-0.8.0
 PKGREVISION=	6
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=groundstation/}
 
-MAINTAINER=	wulf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://groundstation.sourceforge.net/
 COMMENT=	Gnome satellite tracking program
 
