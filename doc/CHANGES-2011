@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.513 2011/02/28 18:56:43 adam Exp $
+$NetBSD: CHANGES-2011,v 1.514 2011/02/28 20:56:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -821,3 +821,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/mdds version 0.5.1 [wiz 2011-02-28]
 	Added benchmarks/super_pi version 20030927 [wiz 2011-02-28]
 	Updated www/squid31 to 3.1.11 [adam 2011-02-28]
+	Updated net/youtube-dl to 20110225c [ryoon 2011-02-28]
