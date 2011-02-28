@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/02/27 16:06:05 chs Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/28 18:00:38 wiz Exp $
 
-CATEGORIES=	multimedia www
-MASTER_SITES=	http://fpdownload.macromedia.com/get/flashplayer/current/
+PKGNAME=		adobe-flash-plugin-${FLASH_VERSION:S/r/./}
+PKGREVISION=		1
+CATEGORIES=		multimedia www
+MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.adobe.com/
@@ -15,6 +17,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+NOT_FOR_PLATFORM=	NetBSD-*-[0-4]* NetBSD-*-5.[0-9].*
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
@@ -30,8 +34,6 @@ FLASH_VERSION=		10.2.152.27
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
 
 CONFLICTS=		ns-flash-[0-9]*
-PKGNAME=		adobe-flash-plugin-${FLASH_VERSION:S/r/./}
-PKGREVISION=		1
 
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
