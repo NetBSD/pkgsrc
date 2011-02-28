@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/02/21 16:01:17 taca Exp $
+# $NetBSD: Makefile,v 1.25 2011/02/28 15:46:08 taca Exp $
 
 DISTNAME=	imlib2-ruby-0.5.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -19,6 +19,10 @@ pre-configure:
 .include "../../lang/ruby/gem.mk"
 
 BUILDLINK_API_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
+
+# use pre-generated gemspec file to avoid rubygems's incompatibility.
+post-extract:
+	${CP} ${FILESDIR}/gemspec ${WRKDIR}/${DISTNAME}.gemspec
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

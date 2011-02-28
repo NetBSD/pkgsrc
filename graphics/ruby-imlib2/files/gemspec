@@ -1,0 +1,80 @@
+--- !ruby/object:Gem::Specification 
+name: imlib2-ruby
+version: !ruby/object:Gem::Version 
+  version: 0.5.2
+platform: ruby
+authors: 
+- Paul Duncan
+autorequire: imlib2
+bindir: bin
+cert_chain: 
+date: 2005-06-11
+default_executable: 
+dependencies: []
+
+description: Imlib2 bindings for Ruby.
+email: pabs@pablotron.org
+executables: []
+
+extensions: 
+- extconf.rb
+extra_rdoc_files: []
+
+files: 
+- ChangeLog
+- AUTHORS
+- COPYING
+- examples
+- MANIFEST
+- README
+- TODO
+- depend
+- extconf.rb
+- imlib2.c
+- imlib2.gemspec
+- examples/fonts
+- examples/checkerboard.rb
+- examples/oo-board.rb
+- examples/test_attach.rb
+- examples/test_font.rb
+- examples/test_imlib2.rb
+- examples/test_poly.rb
+- examples/images
+- examples/fonts/yudit.ttf
+- examples/images/bill_gates.jpg
+- examples/images/clown.jpg
+has_rdoc: true
+homepage: http://www.pablotron.org/software/imlib2-ruby/
+licenses: 
+post_install_message: 
+rdoc_options: 
+- --title
+- Imlib2-Ruby API Documentation
+- --webcvs
+- http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/imlib2-ruby/
+- imlib2.c
+- README
+- ChangeLog
+- AUTHORS
+- COPYING
+- TODO
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">"
+    - !ruby/object:Gem::Version 
+      version: 0.0.0
+  version: 
+required_rubygems_version: 
+requirements: 
+- Imlib2, version 1.2.0 (or newer)
+- Ruby, version 1.8.2 (or newer)
+rubyforge_project: imlib2-ruby
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 1
+summary: Imlib2 bindings for Ruby.
+test_files: []
+
+
