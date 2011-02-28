@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/28 14:53:01 wiz Exp $
 #
 
 DISTNAME=		libp11-0.2.6
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/libp11/
 
-MAINTAINER=		hasso@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opensc-project.org/libp11/
 COMMENT=		Convenience library for easy PKCS\#11 implementation
 LICENSE=		gnu-lgpl-v2.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2009/11/10 20:15:40 markd Exp $
+# $NetBSD: Makefile.common,v 1.17 2011/02/28 14:52:55 wiz Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
@@ -10,7 +10,7 @@ DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
 MASTER_SITES?=	http://gnuradio.org/releases/gnuradio/
 
-MAINTAINER?=	wulf@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
 LICENSE=	gnu-gpl-v3
 

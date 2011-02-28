@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/05/20 00:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2011/02/28 14:52:40 wiz Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 JACK_VERSION=	0.115.1
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jackaudio.org/
 COMMENT=	JACK audio connection kit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2011/02/11 09:43:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2011/02/28 14:52:50 wiz Exp $
 
 DISTNAME=	vigra-1.7.1-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	graphics
 MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hci.iwr.uni-heidelberg.de/vigra/
 COMMENT=	Computer vision library
 LICENSE=	mit
