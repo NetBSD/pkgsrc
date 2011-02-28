@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.514 2011/02/28 20:56:18 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.515 2011/02/28 22:37:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added benchmarks/super_pi version 20030927 [wiz 2011-02-28]
 	Updated www/squid31 to 3.1.11 [adam 2011-02-28]
 	Updated net/youtube-dl to 20110225c [ryoon 2011-02-28]
+	Updated lang/python26 to 2.6.6nb6 [tron 2011-02-28]
