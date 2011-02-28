@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2010/02/25 16:01:47 drochner Exp $
+# $NetBSD: builtin.mk,v 1.10 2011/02/28 11:02:46 adam Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -147,10 +147,10 @@ buildlink-ncursesw-curses-h:
 	${RUN}								\
 	curses_h="ncursesw/ncurses.h curses.h";				\
 	for f in $$curses_h; do						\
-		src=${BUILDLINK_PREFIX.ncursesw:Q}"/include/$$f";	\
+		src=${BUILDLINK_PREFIX.ncursesw}"/include/$$f";	\
 		dests="ncursesw/ncurses.h ncursesw/curses.h ncurses.h curses.h"; \
 		for dest in $$dests; do					\
-			dest=${BUILDLINK_DIR:Q}"/include/$$dest";	\
+			dest=${BUILDLINK_DIR}"/include/$$dest";	\
 			if ${TEST} -f "$$src"; then			\
 				${ECHO_BUILDLINK_MSG} "Linking $$dest -> $$f."; \
 				${MKDIR} `${DIRNAME} "$$dest"`;		\

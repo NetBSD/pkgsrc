@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2007/01/08 11:01:05 adam Exp $
+$NetBSD: patch-aa,v 1.16 2011/02/28 11:02:46 adam Exp $
 
 --- misc/run_tic.in.orig	2006-10-28 21:43:30.000000000 +0200
 +++ misc/run_tic.in
-@@ -96,7 +96,7 @@ TICDIR=`echo $TERMINFO | sed -e 's%/shar
+@@ -122,7 +122,7 @@ TICDIR=`echo $TERMINFO | sed -e 's%/shar
  # would generate a lot of confusing error messages if we tried to overwrite it.
  # We explicitly remove its contents rather than the directory itself, in case
  # the directory is actually a symbolic link.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.15 2007/01/08 11:01:05 adam Exp $
  
  if test "$ext_funcs" = 1 ; then
  cat <<EOF
-@@ -138,6 +138,9 @@ else
+@@ -164,6 +164,9 @@ else
  fi
  fi
  
