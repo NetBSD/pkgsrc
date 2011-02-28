@@ -1,0 +1,9 @@
+Multi-Dimensional Data Structure (mdds)
+
+A collection of multi-dimensional data structure and indexing algorithm.
+
+It implements the following data structure:
+
+    * flat segment tree
+    * segment tree
+    * rectangle set
