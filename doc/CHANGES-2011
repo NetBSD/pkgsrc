@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.506 2011/02/28 08:54:16 obache Exp $
+$NetBSD: CHANGES-2011,v 1.507 2011/02/28 11:04:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -812,3 +812,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/nicovideo-dl version 0.0.20110122 [ryoon 2011-02-27]
 	Updated emulators/suse113_base to 11.3nb3 [chs 2011-02-28]
 	Updated textproc/py-pygments to 1.4 [obache 2011-02-28]
+	Updated devel/ncurses to 5.8 [adam 2011-02-28]
+	Updated devel/ncursesw to 5.8 [adam 2011-02-28]
