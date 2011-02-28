@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.785 2011/02/25 02:27:11 obache Exp $
+# $NetBSD: Makefile,v 1.786 2011/02/28 17:24:09 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -422,7 +422,7 @@ SUBDIR+=	p5-LWP-Online
 SUBDIR+=	p5-LWP-UserAgent-Determined
 SUBDIR+=	p5-LWPx-ParanoidAgent
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
-SUBDIR+=	p5-Mojo
+SUBDIR+=	p5-Mojolicious
 SUBDIR+=	p5-Net-FastCGI
 SUBDIR+=	p5-POE-Component-Server-PSGI
 SUBDIR+=	p5-POE-Filter-HTTP-Parser
