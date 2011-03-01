@@ -193,3 +193,13 @@ x11/ruby-gnome2-gtksourceview: dependence update
 x11/ruby-gnome2-gtksourceview2: dependence update
 x11/ruby-gnome2-panelapplet: dependence update
 x11/ruby-gnome2-vte: dependence update
+Pullup ticket #3365 - requested by taca
+textproc/php-intl security fix
+Pullup ticket #3366 - requested by taca
+databases/mysql5-{client,server} security fixes.
+Pullup ticket #3367 - requested by taca
+net/samba33 security fix.
+Pullup ticket #3369 - requested by tron
+Security patch for "python26" package
+Pullup ticket #3370 - requested by taca
+lang/pear security fix.
