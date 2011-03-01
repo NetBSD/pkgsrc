@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.518 2011/03/01 07:45:06 tron Exp $
+$NetBSD: CHANGES-2011,v 1.519 2011/03/01 09:00:23 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/pear to 1.9.2 [taca 2011-03-01]
 	Updated editors/emacs-snapshot to 24.0.50.20110224 [minskim 2011-03-01]
 	Updated net/rtorrent to 0.8.6nb2 [tron 2011-03-01]
+	Updated lang/pcc-current to 1.0.0.BETA.20110228 [he 2011-03-01]
