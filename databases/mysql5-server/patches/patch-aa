@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2010/02/18 15:46:10 taca Exp $
+$NetBSD: patch-aa,v 1.6.8.1 2011/03/01 08:28:33 sbd Exp $
 
---- Makefile.in.orig	2010-01-15 09:54:05.000000000 +0000
+--- Makefile.in.orig	2011-01-25 11:32:06.000000000 +0000
 +++ Makefile.in
-@@ -375,12 +375,8 @@ AUTOMAKE_OPTIONS = foreign
+@@ -376,12 +376,8 @@ AUTOMAKE_OPTIONS = foreign
  EXTRA_DIST = INSTALL-SOURCE INSTALL-WIN-SOURCE \
- 			README COPYING EXCEPTIONS-CLIENT CMakeLists.txt
+ 			README COPYING CMakeLists.txt
  
 -SUBDIRS = . include @docs_dirs@ @zlib_dir@ @yassl_dir@ \
 -			@readline_topdir@ sql-common scripts \
