@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/10/18 08:42:31 pettai Exp $
+# $NetBSD: Makefile,v 1.26 2011/03/01 11:19:49 obache Exp $
 
 DISTNAME=	dkim-milter-2.8.3
 PKGREVISION=	1
@@ -9,6 +9,8 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://sourceforge.net/projects/dkim-milter/
 COMMENT=	Open source DKIM filter software from Sendmail, Inc
 LICENSE=		sendmail-open-source-license
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dkim-filter
@@ -48,6 +50,7 @@ CONF_FILES=		${EGDIR}/dkim-filter.conf.sample \
 			${PKG_SYSCONFDIR}/dkim-filter.conf
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
+			bin lib include \
 			share/doc/dkim-milter ${EGDIR} \
 			share/doc/dkim-milter/libdkim
 
@@ -65,44 +68,44 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ./Build install
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/dkim-filter/dkim-filter.conf.sample ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/dkim-filter/dkim-filter.conf.sample ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/FEATURES ${DESTDIR}${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${DESTDIR}${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DESTDIR}${PREFIX}/share/doc/dkim-milter
 
 	cd ${WRKSRC} && for f in draft-*.txt; do \
 		${INSTALL_DATA} $${f} \
-			${PREFIX}/share/doc/dkim-milter; \
+			${DESTDIR}${PREFIX}/share/doc/dkim-milter; \
 	done
 
 	cd ${WRKSRC} && for f in rfc*.txt; do \
 		${INSTALL_DATA} $${f} \
-			${PREFIX}/share/doc/dkim-milter; \
+			${DESTDIR}${PREFIX}/share/doc/dkim-milter; \
 	done
 
 	cd ${WRKSRC}/libdkim/docs/ && for f in *.html; do \
 		${INSTALL_DATA} $${f} \
-			${PREFIX}/share/doc/dkim-milter/libdkim; \
+			${DESTDIR}${PREFIX}/share/doc/dkim-milter/libdkim; \
 	done
 
-	${CHMOD} ${SHAREMODE} ${PREFIX}/include/dkim.h
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/dkim.h
 
 .	if !empty(PKG_OPTIONS:Mdkim-milter-arlib)
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`/libar && \
-		${INSTALL_LIB} libar.a ${PREFIX}/lib && \
-		${INSTALL_MAN} ar.3 ${PREFIX}/${PKGMANDIR}/man3
+		${INSTALL_LIB} libar.a ${DESTDIR}${PREFIX}/lib && \
+		${INSTALL_MAN} ar.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 .	endif
 
 .	if !empty(PKG_OPTIONS:Mdkim-stats)
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`/dkim-filter && \
-		${INSTALL_PROGRAM} dkim-stats ${PREFIX}/bin && \
+		${INSTALL_PROGRAM} dkim-stats ${DESTDIR}${PREFIX}/bin && \
 		${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-stats.8 \
-			${PREFIX}/${PKGMANDIR}/man8
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 .	endif
 
 BUILDLINK_API_DEPENDS.openssl+=		openssl>=0.9.8
