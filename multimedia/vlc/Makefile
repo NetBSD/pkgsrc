@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2011/02/14 19:03:18 drochner Exp $
+# $NetBSD: Makefile,v 1.108 2011/03/01 11:18:34 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -94,8 +94,6 @@ post-install:
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
 DEFAULT_FONT?=		${PREFIX}/lib/X11/fonts/TTF/DejaVuSans.ttf
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
-# libX11 should be built with xcb enabled
-DEPENDS+=		libX11>=1.3.5:../../x11/libX11
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
@@ -149,6 +147,8 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+# libX11 should be built with xcb enabled
+BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.3.5
 .include "../../x11/libX11/buildlink3.mk"
 # needs x264_encoder_delayed_frames
 BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
