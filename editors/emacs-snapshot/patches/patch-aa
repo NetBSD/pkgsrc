@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2010/06/07 22:44:01 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/01 04:12:45 minskim Exp $
 
 --- configure.in.orig	2010-06-02 16:53:45.000000000 +0000
 +++ configure.in
-@@ -45,7 +45,7 @@ archlibdir='${libexecdir}/emacs/${versio
- docdir='${datadir}/emacs/${version}/etc'
- gamedir='${localstatedir}/games/emacs'
- 
--gameuser=games
-+gameuser=${GAMEOWN}
- 
- dnl OPTION_DEFAULT_OFF(NAME, HELP-STRING)
- dnl Create a new --with option that defaults to being disabled.
 @@ -403,6 +403,14 @@ case "${canonical}" in
        sparc64-*)        machine=sparc ;;
      esac
