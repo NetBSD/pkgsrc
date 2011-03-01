@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.519 2011/03/01 09:00:23 he Exp $
+$NetBSD: CHANGES-2011,v 1.520 2011/03/01 09:48:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -827,3 +827,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/emacs-snapshot to 24.0.50.20110224 [minskim 2011-03-01]
 	Updated net/rtorrent to 0.8.6nb2 [tron 2011-03-01]
 	Updated lang/pcc-current to 1.0.0.BETA.20110228 [he 2011-03-01]
+	Added fonts/urbanrenewal-ttf version 201102 [wiz 2011-03-01]
