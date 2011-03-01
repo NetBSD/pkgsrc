@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.515 2011/02/28 22:37:32 tron Exp $
+$NetBSD: CHANGES-2011,v 1.516 2011/03/01 03:16:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -823,3 +823,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/squid31 to 3.1.11 [adam 2011-02-28]
 	Updated net/youtube-dl to 20110225c [ryoon 2011-02-28]
 	Updated lang/python26 to 2.6.6nb6 [tron 2011-02-28]
+	Updated lang/pear to 1.9.2 [taca 2011-03-01]
