@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2010/08/24 11:33:52 obache Exp $
+$NetBSD: patch-aa,v 1.6 2011/03/01 03:15:16 taca Exp $
+
+Add support for DESTDIR.
 
 --- install/go-pear.php.orig	2010-08-24 08:12:01.000000000 +0000
 +++ install/go-pear.php
