@@ -1,7 +1,11 @@
-$NetBSD: patch-af,v 1.1 2009/07/07 21:22:08 joerg Exp $
+$NetBSD: patch-af,v 1.2 2011/03/01 07:44:53 tron Exp $
 
---- src/display/canvas.h.orig	2008-05-07 14:19:11.000000000 +0200
-+++ src/display/canvas.h
+Make this work with "ncurses" 5.8. Patch taken from here.
+
+http://www.mail-archive.com/arch-general@archlinux.org/msg18728.html
+
+--- src/display/canvas.h.orig	2009-11-12 08:03:47.000000000 +0000
++++ src/display/canvas.h	2011-03-01 07:40:08.000000000 +0000
 @@ -37,6 +37,7 @@
  #ifndef RTORRENT_DISPLAY_CANVAS_H
  #define RTORRENT_DISPLAY_CANVAS_H
@@ -9,4 +13,13 @@ $NetBSD: patch-af,v 1.1 2009/07/07 21:22:08 joerg Exp $
 +#include <cstdarg>
  #include <string>
  #include <vector>
+ 
+@@ -48,7 +49,7 @@
+ public:
+   typedef std::vector<Attributes> attributes_list;
+ 
+-  Canvas(int x = 0, int y = 0, int width = 0, int height = 0) :
++  Canvas(int x = 0, int y = 0, int width = 1, int height = 1) :
+     m_window(newwin(height, width, y, x)) {}
+   ~Canvas() { delwin(m_window); }
  
