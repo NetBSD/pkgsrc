@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/12/03 23:43:15 jmcneill Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2011/03/01 09:09:03 sbd Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
-PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 
@@ -12,7 +11,7 @@ HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite
 LICENSE=		gnu-gpl-v3
 
-VERSION=		3.3.14
+VERSION=		3.3.15
 CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]*	\
 			winbind-[0-9]*
 MAKE_JOBS_SAFE=		NO
