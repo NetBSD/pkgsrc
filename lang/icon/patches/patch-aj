@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.8 2009/09/21 16:38:08 tnn Exp $
+$NetBSD: patch-aj,v 1.9 2011/03/01 10:08:26 wiz Exp $
 
 --- Makefile.orig	2005-11-09 00:24:34.000000000 +0100
 +++ Makefile
@@ -27,8 +27,8 @@ $NetBSD: patch-aj,v 1.8 2009/09/21 16:38:08 tnn Exp $
 -		cp lib/*.* $D/lib
 -		cp doc/*.* $D/doc
 -		cp man/man1/*.* $D/man/man1
-+		./bin/patchstr ./bin/icont $(DESTDIR)$(PREFIX)/bin/iconx
-+		./bin/patchstr ./bin/iconc $(DESTDIR)$(PREFIX)/lib/icon/
++		./bin/patchstr ./bin/icont $(PREFIX)/bin/iconx
++		./bin/patchstr ./bin/iconc $(PREFIX)/lib/icon/
 +		cd bin; $(BSD_INSTALL_PROGRAM) icont iconx iconc	\
 +			patchstr rtt $(DESTDIR)$(PREFIX)/bin
 +		cd $(DESTDIR)$(PREFIX)/bin && ln -sf icont icon
