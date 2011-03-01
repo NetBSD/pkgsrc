@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/28 14:34:56 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/01 11:28:59 sbd Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -72,7 +72,7 @@ PLIST_VARS+=		cifsmount macosx
 
 # Only Linux supports mount.cifs for mounting a CIFS share into the filesystem.
 .if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--with-cifsmount
+CONFIGURE_ARGS+=	--with-cifsmount --with-cifsumount
 PLIST.cifsmount=	yes
 .endif
 
