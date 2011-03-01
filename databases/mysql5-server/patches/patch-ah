@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.7 2010/02/18 15:46:10 taca Exp $
+$NetBSD: patch-ah,v 1.7.8.1 2011/03/01 08:28:33 sbd Exp $
 
---- include/Makefile.in.orig	2010-01-15 09:53:42.000000000 +0000
+--- include/Makefile.in.orig	2011-01-25 11:31:43.000000000 +0000
 +++ include/Makefile.in
-@@ -363,13 +363,7 @@ HEADERS_GEN = mysql_version.h my_config.
+@@ -364,13 +364,7 @@ HEADERS_GEN = mysql_version.h my_config.
  HEADERS_ABI = mysql.h mysql_com.h mysql_time.h \
  			my_list.h my_alloc.h typelib.h
  
@@ -15,5 +15,5 @@ $NetBSD: patch-ah,v 1.7 2010/02/18 15:46:10 taca Exp $
 -			m_ctype.h my_attribute.h $(HEADERS_GEN)
 +pkginclude_HEADERS = 
  
- noinst_HEADERS = config-win.h config-os2.h config-netware.h \
+ noinst_HEADERS = config-win.h config-netware.h \
  			heap.h my_bitmap.h\
