@@ -203,3 +203,7 @@ Pullup ticket #3369 - requested by tron
 Security patch for "python26" package
 Pullup ticket #3370 - requested by taca
 lang/pear security fix.
+Pullup ticket #3371 - requested by tron
+net/wireshark: security update
+Pullup ticket #3372 - requested by sbd
+net/samba35: build fix
