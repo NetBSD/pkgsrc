@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:50:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/03/02 13:33:12 ryoon Exp $
 bin/mytool
 bin/uniconv
 bin/uniprint
@@ -26,6 +26,7 @@ share/yudit/data/Berbere-conversion1.my
 share/yudit/data/Berbere-etendu.my
 share/yudit/data/Berbere-standard.my
 share/yudit/data/BlissSymbolics.my
+share/yudit/data/Bulgarian-Translit.my
 share/yudit/data/Bulgarian.my
 share/yudit/data/CS-qwerty.my
 share/yudit/data/CS.my
@@ -68,6 +69,7 @@ share/yudit/data/Hangul3.my
 share/yudit/data/Hanunoo.my
 share/yudit/data/Hebrew.my
 share/yudit/data/HebrewIsraeli.my
+share/yudit/data/Hosszu.my
 share/yudit/data/Hungarian-prefix.my
 share/yudit/data/Hungarian.my
 share/yudit/data/HungarianRunes.my
@@ -101,6 +103,7 @@ share/yudit/data/Mongolian.my
 share/yudit/data/OldItalic.my
 share/yudit/data/Oriya-Inscript.my
 share/yudit/data/Oriya.my
+share/yudit/data/Pali.my
 share/yudit/data/Persian.my
 share/yudit/data/Polish-slash.my
 share/yudit/data/Polish.my
@@ -135,6 +138,7 @@ share/yudit/data/TeX.my
 share/yudit/data/Telugu-Inscript.my
 share/yudit/data/Telugu-Rts.my
 share/yudit/data/Telugu.my
+share/yudit/data/TestH.my
 share/yudit/data/Thai.my
 share/yudit/data/Tibetan-Wylie.my
 share/yudit/data/Troff.my
@@ -158,6 +162,7 @@ share/yudit/data/charclass.my
 share/yudit/data/cluster.my
 share/yudit/data/cp-1250.my
 share/yudit/data/cp-1251.my
+share/yudit/data/cp-1252.my
 share/yudit/data/example.my
 share/yudit/data/gb-18030.my
 share/yudit/data/gb-2312-l.my
@@ -168,6 +173,7 @@ share/yudit/data/hiragana.hwd
 share/yudit/data/indic.my
 share/yudit/data/iso-646.my
 share/yudit/data/iso-8859-1.my
+share/yudit/data/iso-8859-13.my
 share/yudit/data/iso-8859-15.my
 share/yudit/data/iso-8859-16.my
 share/yudit/data/iso-8859-2.my
@@ -211,15 +217,20 @@ share/yudit/data/wingreek.my
 share/yudit/doc/COPYING.TXT
 share/yudit/doc/FAQ.TXT
 share/yudit/doc/HOWTO-arabic.txt
+share/yudit/doc/HOWTO-baybayin.txt
 share/yudit/doc/HOWTO-berber.txt
 share/yudit/doc/HOWTO-bidi.txt
+share/yudit/doc/HOWTO-build.txt
 share/yudit/doc/HOWTO-configure.txt
 share/yudit/doc/HOWTO-devanagari.txt
 share/yudit/doc/HOWTO-freehand.txt
+share/yudit/doc/HOWTO-georgian.txt
+share/yudit/doc/HOWTO-greekancient.txt
 share/yudit/doc/HOWTO-japanese.txt
 share/yudit/doc/HOWTO-keymap.txt
 share/yudit/doc/HOWTO-malayalam.txt
 share/yudit/doc/HOWTO-rovasiras.txt
+share/yudit/doc/HOWTO-syntax.txt
 share/yudit/doc/HOWTO-tamil.txt
 share/yudit/doc/HOWTO-tibetan.txt
 share/yudit/doc/HOWTO-vietnamese.txt
@@ -284,6 +295,7 @@ share/yudit/locale/ur/LC_MESSAGES/messages.mo
 share/yudit/locale/vi/LC_MESSAGES/messages.mo
 share/yudit/locale/yi/LC_MESSAGES/messages.mo
 share/yudit/locale/zh/LC_MESSAGES/messages.mo
+share/yudit/locale/zh_CN/LC_MESSAGES/messages.mo
 share/yudit/src/ASCII-IPA.kmap
 share/yudit/src/ArabTeX.kmap
 share/yudit/src/Arabic.kmap
@@ -303,6 +315,7 @@ share/yudit/src/Berbere-conversion1.kmap
 share/yudit/src/Berbere-etendu.kmap
 share/yudit/src/Berbere-standard.kmap
 share/yudit/src/BlissSymbolics.kmap
+share/yudit/src/Bulgarian-Translit.kmap
 share/yudit/src/Bulgarian.kmap
 share/yudit/src/CS-qwerty.kmap
 share/yudit/src/CS.kmap
@@ -365,6 +378,7 @@ share/yudit/src/Mnemonic.kmap
 share/yudit/src/Mongolian.kmap
 share/yudit/src/Oriya-Inscript.kmap
 share/yudit/src/Oriya.kmap
+share/yudit/src/Pali.kmap
 share/yudit/src/Persian.kmap
 share/yudit/src/Polish-slash.kmap
 share/yudit/src/Polish.kmap
@@ -398,6 +412,7 @@ share/yudit/src/TeX.kmap
 share/yudit/src/Telugu-Inscript.kmap
 share/yudit/src/Telugu-Rts.kmap
 share/yudit/src/Telugu.kmap
+share/yudit/src/TestH.kmap
 share/yudit/src/Thai.kmap
 share/yudit/src/Tibetan-Wylie.kmap
 share/yudit/src/Troff.kmap
@@ -413,3 +428,4 @@ share/yudit/src/Vietnamese-Telex2.kmap
 share/yudit/src/Vietnamese.kmap
 share/yudit/src/Welsh.kmap
 share/yudit/src/Yiddish.kmap
+share/yudit/syntax/README.TXT

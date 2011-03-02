@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2007/06/29 22:53:21 joerg Exp $
+$NetBSD: distinfo,v 1.11 2011/03/02 13:33:12 ryoon Exp $
 
-SHA1 (yudit-2.8.1.tar.bz2) = 6de6337aa90cb89c6b6dd028f66cbfc29c0d874c
-RMD160 (yudit-2.8.1.tar.bz2) = 61c085bd903fa4760dffc0c2204b732f0a060ef2
-Size (yudit-2.8.1.tar.bz2) = 2113872 bytes
+SHA1 (yudit-2.9.2.tar.bz2) = 9e38264c3a4faef8d23583aa24c4cf2ff5527eaf
+RMD160 (yudit-2.9.2.tar.bz2) = e7eb90573ab830856442ef3ab206cb6c5a05b038
+Size (yudit-2.9.2.tar.bz2) = 2264786 bytes
 SHA1 (patch-aa) = 15aaa1323f8a84717637f18f308148337eb46969
