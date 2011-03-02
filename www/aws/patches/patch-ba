@@ -1,9 +1,23 @@
-$NetBSD: patch-ba,v 1.1.1.1 2011/02/11 16:48:53 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2011/03/02 10:14:31 drochner Exp $
 
---- makefile.orig	2011-02-10 19:28:41.000000000 +0000
+--- makefile.orig	2011-01-25 20:53:19.000000000 +0000
 +++ makefile
-@@ -424,38 +424,38 @@ install_clean:
- 	$(RM) -f $(I_GPR)/aws.gpr
+@@ -416,46 +416,46 @@ setup_tp:
+ 	$(MAKE) -C templates_parser setup $(GALL_OPTIONS)
+ 
+ install_clean:
+-	$(RM) -fr $(I_INC)/$(PLATFORM)
+-	$(RM) -fr $(I_LIB)
+-	$(RM) -fr $(I_AGP)
+-	$(RM) -fr $(prefix)/share/examples/aws
+-	$(RM) -fr $(I_DOC)
+-	$(RM) -f $(I_GPR)/aws.gpr
++	$(RM) -fr $(DESTDIR)$(I_INC)/$(PLATFORM)
++	$(RM) -fr $(DESTDIR)$(I_LIB)
++	$(RM) -fr $(DESTDIR)$(I_AGP)
++	$(RM) -fr $(DESTDIR)$(prefix)/share/examples/aws
++	$(RM) -fr $(DESTDIR)$(I_DOC)
++	$(RM) -f $(DESTDIR)$(I_GPR)/aws.gpr
  
  install_dirs: install_clean
 -	$(MKDIR) -p $(I_BIN)

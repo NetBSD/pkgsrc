@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/11 16:48:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/02 10:14:31 drochner Exp $
 bin/aws_password
 bin/awsres
 bin/templates2ada
@@ -364,7 +364,8 @@ lib/aws/native/relocatable/aws-net-poll_events.ali
 lib/aws/native/relocatable/aws-net-sets.ali
 lib/aws/native/relocatable/aws-net-ssl-certificate__dummy.ali
 lib/aws/native/relocatable/aws-net-ssl__dummy.ali
-lib/aws/native/relocatable/aws-net-std__gnat.ali
+${PLIST.noipv6}lib/aws/native/relocatable/aws-net-std__gnat.ali
+${PLIST.ipv6}lib/aws/native/relocatable/aws-net-std__ipv6.ali
 lib/aws/native/relocatable/aws-net-stream_io.ali
 lib/aws/native/relocatable/aws-net-thin.ali
 lib/aws/native/relocatable/aws-net.ali
@@ -525,7 +526,8 @@ lib/aws/native/static/aws-net-poll_events.ali
 lib/aws/native/static/aws-net-sets.ali
 lib/aws/native/static/aws-net-ssl-certificate__dummy.ali
 lib/aws/native/static/aws-net-ssl__dummy.ali
-lib/aws/native/static/aws-net-std__gnat.ali
+${PLIST.noipv6}lib/aws/native/static/aws-net-std__gnat.ali
+${PLIST.ipv6}lib/aws/native/static/aws-net-std__ipv6.ali
 lib/aws/native/static/aws-net-stream_io.ali
 lib/aws/native/static/aws-net-thin.ali
 lib/aws/native/static/aws-net.ali

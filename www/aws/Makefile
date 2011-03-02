@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/11 16:48:52 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/02 10:14:31 drochner Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -26,9 +26,6 @@ post-wrapper:
 	# avoid potential linkage problems
 	${RM} ${WRKDIR}/.wrapper/bin/*
 
-pre-configure:
-	gprconfig --batch --config=Ada --config=C --config="Project File"
-
 do-configure:
 	cd ${WRKSRC} && ${SETENV} CC=gnatgcc \
 	${GMAKE} setup ${CONFIGURE_ARGS}
@@ -42,24 +39,6 @@ do-test: install
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${GMAKE} install
 	${TOUCH} ${DESTDIR}${PREFIX}/share/examples/aws/bin/IGNORE.ME
-.if !empty (BUILD_DEMOS)
-	${MAKE} demos
-	${MAKE} demos-install
-.endif
-
-demos:
-.for dd in ${DEMO_DIRS}
-	cd ${WRKSRC}/demos/${dd} && ${GMAKE}
-.endfor
-
-demos-install:
-.if !empty (BUILD_DEMOS)
-	${MKDIR} ${DESTDIR}${PREFIX}/share/examples/aws/demos
-.for dd in ${DEMO_DIRS}
-	${FIND} ${WRKSRC}/demos/${dd} -type f -perm -0001 \
-	-exec ${INSTALL} {} ${DESTDIR}${PREFIX}/share/examples/aws/demos/ \;
-.endfor
-.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gnatpython/buildlink3.mk"
