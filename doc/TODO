@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10153 2011/03/02 13:24:59 ryoon Exp $
+$NetBSD: TODO,v 1.10154 2011/03/02 13:35:12 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1510,7 +1510,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yaz-4.1.4
 	o yodl-2.14.3
 	o ysm-2.9.9.1
-	o yudit-2.9.2
 	o yorick-2.1.05
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
