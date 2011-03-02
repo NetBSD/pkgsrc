@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/11 16:48:52 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/03/02 10:14:31 drochner Exp $
 
 SHA1 (aws-2.10.0.1.tar.bz2) = 3ea20d4328951089f93caa3693eb24d67cf76594
 RMD160 (aws-2.10.0.1.tar.bz2) = 8d6c2e9e681f18b16bbd79e76e6b65bb8f07a871
@@ -6,7 +6,7 @@ Size (aws-2.10.0.1.tar.bz2) = 1386481 bytes
 SHA1 (patch-ac) = 1985aca4185538590cea3d939f095b69495eb0fa
 SHA1 (patch-ad) = 6bfa89f2837cc0dca4f5c391b7e05e74a3d85181
 SHA1 (patch-ae) = 44f66219a999b90d626f8f581942ae4f406e6c18
-SHA1 (patch-ba) = 62e5a370d44eeeca7a9ee9e50445d20242808631
+SHA1 (patch-ba) = 334c40657793f0a6bcec295cc07329ca96bc8372
 SHA1 (patch-bb) = e2db43dd317b01b9d0e97c481b2851b19469667b
 SHA1 (patch-bc) = b4f9926351a0ab3c5e5c73601093266f0d8efaaa
 SHA1 (patch-bd) = b640a61fe75e9bfd06ea6a546ba827a71631517c
