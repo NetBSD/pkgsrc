@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.12 2009/10/07 17:41:35 joerg Exp $
+$NetBSD: patch-ac,v 1.13 2011/03/02 05:42:41 obache Exp $
 
---- compface/Makefile.orig	Wed Oct 23 22:28:06 1991
+--- compface/Makefile.orig	1991-10-24 02:28:06.000000000 +0000
 +++ compface/Makefile
 @@ -22,20 +22,22 @@
  # BINDIR, LIBDIR, and MANDIR are expected to be overridden by the
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.12 2009/10/07 17:41:35 joerg Exp $
  		  cmain.c uncmain.c
  HDRS		= compface.h data.h
  OTHERS		= README $(NAME).1 $(NAME).3 Makefile
-@@ -45,17 +47,16 @@
+@@ -45,17 +47,16 @@ CDEFS		= $(SYSV)
  CCOMP		= -g
  CFLAGS		= $(CDEFS) $(CCOMP)
  
@@ -53,7 +53,7 @@ $NetBSD: patch-ac,v 1.12 2009/10/07 17:41:35 joerg Exp $
  
  lint :
  		lint -abchx $(SOURCES)
-@@ -64,21 +65,25 @@
+@@ -64,22 +65,26 @@ clean :
  		rm -f *.o *.a *.sh core a.out $(NAME) $(UNNAME)
  
  install :	$(NAME) $(UNNAME) $(LIBNAME)
@@ -68,7 +68,7 @@ $NetBSD: patch-ac,v 1.12 2009/10/07 17:41:35 joerg Exp $
 -		-cp $(NAME).3 $(MAN3DIR)
 -		rm -f $(MAN3DIR)/$(UNNAME).3
 -		-ln $(MAN3DIR)/$(NAME).3 $(MAN3DIR)/$(UNNAME).3
-+		$(LIBTOOL) --mode=install ${BSD_INSTALL_DATA} $(LIBNAME) $(LIBDIR)
++		$(LIBTOOL) --mode=install ${BSD_INSTALL_LIB} $(LIBNAME) $(LIBDIR)
 +		$(LIBTOOL) --mode=install ${BSD_INSTALL_PROGRAM} $(NAME) $(EXECUTABLE)
 +		$(LIBTOOL) --mode=install ${BSD_INSTALL_PROGRAM} $(UNNAME) $(UNEXECUTABLE)
 +		${BSD_INSTALL_MAN} $(NAME).1 $(MAN1DIR)
@@ -82,11 +82,12 @@ $NetBSD: patch-ac,v 1.12 2009/10/07 17:41:35 joerg Exp $
  shar :
  		shar.script $(OTHERS) $(HDRS) $(SOURCES) > $(NAME).sh
  		compress $(NAME).sh
-+
+ 
 +.SUFFIXES:	.lo
 +
 +.c.lo:
 +		$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
- 
++
  arith.o:	arith.c compface.h data.h
  cmain.o:	cmain.c compface.h data.h
+ compface.o:	compface.c compface.h data.h
