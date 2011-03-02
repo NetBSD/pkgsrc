@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.526 2011/03/02 06:41:00 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.527 2011/03/02 06:46:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -834,3 +834,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/wireshark to 1.4.4 [tron 2011-03-02]
 	Updated mail/faces to 1.6.1nb5 [obache 2011-03-02]
 	Updated devel/ccache to 3.1.4 [wiz 2011-03-02]
+	Updated devel/mercurial to 1.8 [wiz 2011-03-02]
