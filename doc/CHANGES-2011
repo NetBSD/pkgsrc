@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.532 2011/03/02 19:07:07 bouyer Exp $
+$NetBSD: CHANGES-2011,v 1.533 2011/03/02 20:24:55 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -840,3 +840,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/yudit to 2.9.2 [ryoon 2011-03-02]
 	Updated emulators/bochs to 2.4.6 [ryoon 2011-03-02]
 	Updated www/typo3 to 4.5.2nb1 [bouyer 2011-03-02]
+	Updated chat/cgiirc to 0.5.10 [gls 2011-03-02]
