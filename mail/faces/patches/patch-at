@@ -1,8 +1,9 @@
-$NetBSD: patch-at,v 1.6 2005/03/12 12:53:56 schwarz Exp $
+$NetBSD: patch-at,v 1.7 2011/03/02 05:42:41 obache Exp $
 
---- x11.c.orig	Mon Nov 18 23:00:50 1991
-+++ x11.c	Fri Feb  2 20:01:06 2001
-@@ -19,8 +19,9 @@
+--- x11.c.orig	1991-11-19 04:00:50.000000000 +0000
++++ x11.c
+@@ -18,10 +18,11 @@
+  
  #include <stdio.h>
  #include <ctype.h>
 -#if ( !defined(mips) && !defined(TOPIX) ) || defined(ultrix)
@@ -14,7 +15,9 @@ $NetBSD: patch-at,v 1.6 2005/03/12 12:53:56 schwarz Exp $
 +#include <string.h>
  #else
  #ifdef SYSTYPE_BSD43
-@@ -31,13 +32,14 @@
+ #include <sys/types.h>
+@@ -30,15 +31,16 @@
+ #ifndef TOPIX
  #include <bsd/sys/types.h>
  #include <bsd/sys/time.h>
 -#include <sys/param.h>
@@ -31,13 +34,17 @@ $NetBSD: patch-at,v 1.6 2005/03/12 12:53:56 schwarz Exp $
 +
  #ifdef HASPOLL
  #include <poll.h>
-@@ -59,5 +61,4 @@
+ #endif /*HASPOLL*/
+@@ -58,7 +60,6 @@
+ 
  #define  F_ICON              0         /* Icon index to frame array. */
  #define  F_WINDOW            1         /* Window index to frame array. */
 -#define  FACES_BORDER_WIDTH  2
  #define  FRAME_MASK          (ButtonPressMask  | ExposureMask | \
                                ButtonMotionMask | KeyPressMask)
-@@ -365,9 +366,11 @@
+ #define  ICON_MASK            ExposureMask
+@@ -364,11 +365,13 @@ char *argv[] ;
+   init_font() ;
    gc_mask = GCFont | GCForeground | GCBackground | GCGraphicsExposures ;
    gc_val.font = sfont->fid ;
 -  gc_val.foreground = foregnd ;
@@ -51,33 +58,37 @@ $NetBSD: patch-at,v 1.6 2005/03/12 12:53:56 schwarz Exp $
 +  gc_val.background = backgnd ;
    tilegc = XCreateGC(dpy, root, gc_mask, &gc_val) ;
    if (depth == 1) XSetFillStyle(dpy, tilegc, FillOpaqueStippled) ;
-@@ -460,5 +463,9 @@
+   else            XSetFillStyle(dpy, tilegc, FillTiled) ;
+@@ -459,6 +462,7 @@ load_resources()
+ 
    home = getenv("HOME") ;
    XrmInitialize() ;
-+#if (defined(BSD) && BSD >= 199306)
-+  STRCPY(name, "@x11prefix@/lib/X11/app-defaults/Faces") ;
-+#else
++  STRCPY(name, "@PREFIX@/lib/X11/app-defaults/Faces") ;
    STRCPY(name, "/usr/lib/X11/app-defaults/Faces") ;
-+#endif
   
  /* Get applications defaults file, if any. */
-@@ -577,5 +584,5 @@
+@@ -576,14 +580,14 @@ char *argv[] ;
+   winattrs.event_mask = FRAME_MASK ;
  
    frame[F_WINDOW] = XCreateWindow(dpy, root, size.x, size.y,
 -                        size.width, size.height, FACES_BORDER_WIDTH,
 +                        size.width, size.height, border_width,
                          CopyFromParent, InputOutput, CopyFromParent,
                          CWBackPixel | CWBorderPixel | CWEventMask, &winattrs) ;
-@@ -584,5 +591,5 @@
+ 
+   winattrs.event_mask = ICON_MASK ;
  
    frame[F_ICON] = XCreateWindow(dpy, root,
 -                        ix, iy, imagewidth, imageheight, FACES_BORDER_WIDTH,
 +                        ix, iy, imagewidth, imageheight, border_width,
                          CopyFromParent, InputOutput, CopyFromParent, 
                          CWBackPixel | CWBorderPixel | CWEventMask, &winattrs) ;
-@@ -857,4 +864,5 @@
+ 
+@@ -856,6 +860,7 @@ char *str ;
+   XFillRectangle(dpy, pr[(int) dtype], gc, x, y-9,
                   (unsigned int) textwidth+2, 13) ;
    XSetFunction(dpy, gc, GXxor) ;
 +  XSetForeground(dpy, gc, WhitePixel(dpy, screen));
    XDrawImageString(dpy, pr[(int) dtype], gc, x, y, str, len) ;
    XSetFunction(dpy, gc, GXcopy) ;
+ }
