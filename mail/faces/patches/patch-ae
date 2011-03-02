@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 2000/07/08 12:47:05 tron Exp $
+$NetBSD: patch-ae,v 1.6 2011/03/02 05:42:41 obache Exp $
 
---- compface/file.c.orig	Wed Jun 19 08:29:13 1991
-+++ compface/file.c	Sat Jul  8 14:25:27 2000
+--- compface/file.c.orig	1991-06-19 06:29:13.000000000 +0000
++++ compface/file.c
 @@ -15,6 +15,8 @@
  
  #include "compface.h"
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.5 2000/07/08 12:47:05 tron Exp $
  void
  BigRead(fbuf)
  register char *fbuf;
-@@ -127,10 +129,19 @@
+@@ -127,10 +129,19 @@ char *fbuf;
  {
  	register char *s, *t;
  	register int i, bits, digits, words;
@@ -31,7 +31,7 @@ $NetBSD: patch-ae,v 1.5 2000/07/08 12:47:05 tron Exp $
  	while (s < F + PIXELS)
  	{
  		if ((bits == 0) && (digits == 0))
-@@ -138,25 +149,43 @@
+@@ -138,25 +149,43 @@ char *fbuf;
  			*(t++) = '0';
  			*(t++) = 'x';
  		}
@@ -75,10 +75,10 @@ $NetBSD: patch-ae,v 1.5 2000/07/08 12:47:05 tron Exp $
  				}
  			}
  		}
-+	}
+ 	}
 +	if (xbitmap) {
 +		sprintf(t, "}\n");
 +		while (*t) t++;
- 	}
++	}
  	*(t++) = '\0';
  }
