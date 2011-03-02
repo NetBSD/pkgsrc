@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.531 2011/03/02 15:44:52 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.532 2011/03/02 19:07:07 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/aria2 to 1.10.9 [ryoon 2011-03-02]
 	Updated editors/yudit to 2.9.2 [ryoon 2011-03-02]
 	Updated emulators/bochs to 2.4.6 [ryoon 2011-03-02]
+	Updated www/typo3 to 4.5.2nb1 [bouyer 2011-03-02]
