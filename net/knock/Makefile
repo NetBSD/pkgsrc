@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/30 12:48:05 adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/02 11:01:12 adam Exp $
 
 DISTNAME=	knock-0.5
 CATEGORIES=	net
@@ -21,7 +21,7 @@ BUILD_DEFS+=	VARBASE
 EGDIR=		${PREFIX}/share/examples/knock
 CONF_FILES=	${EGDIR}/knockd.conf ${PKG_SYSCONFDIR}/knockd.conf
 
-INSTALLATION_DIRS=	${EGDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR} sbin ${EGDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
