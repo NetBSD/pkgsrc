@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/02/28 14:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/03/02 13:22:38 ryoon Exp $
 #
 
-DISTNAME=	aria2-1.10.0
+DISTNAME=	aria2-1.10.9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aria2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aria2.sourceforge.net/
 COMMENT=	Multi-threaded, multi-protocol, flexible download accelerator
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,7 +30,7 @@ USE_FEATURES=		getopt_long snprintf
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-BUILDLINK_DEPMETHOD.cppunit?=	build
+BUILDLINK_DEPMETHOD.cppunit=	build
 BUILDLINK_API_DEPENDS.cppunit+=	cppunit>=1.10.2
 .  include "../../devel/cppunit/buildlink3.mk"
 .else
