@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.524 2011/03/02 00:09:30 tron Exp $
+$NetBSD: CHANGES-2011,v 1.525 2011/03/02 05:43:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -832,3 +832,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-Text-vCard to 2.10 [wiz 2011-03-01]
 	Removed security/libksba04 successor security/libksba [kleink 2011-03-01]
 	Updated net/wireshark to 1.4.4 [tron 2011-03-02]
+	Updated mail/faces to 1.6.1nb5 [obache 2011-03-02]
