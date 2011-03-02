@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.529 2011/03/02 13:24:30 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.530 2011/03/02 13:34:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -837,3 +837,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mercurial to 1.8 [wiz 2011-03-02]
 	Added games/onscripter version 20110226 [ryoon 2011-03-02]
 	Updated net/aria2 to 1.10.9 [ryoon 2011-03-02]
+	Updated editors/yudit to 2.9.2 [ryoon 2011-03-02]
