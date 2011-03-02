@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/02 12:05:18 ryoon Exp $
+bin/nsaconv
+bin/nsadec
+bin/onscripter
+bin/sarconv
+bin/sardec
+share/doc/onscripter/README
+share/doc/onscripter/ogapee.css
+share/doc/onscripter/onscripter.html
