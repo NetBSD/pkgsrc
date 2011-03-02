@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2008/05/22 14:20:08 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/02 06:40:51 wiz Exp $
 
-DISTNAME=	ccache-2.4
+DISTNAME=	ccache-3.1.4
 CATEGORIES=	devel
 MASTER_SITES=	http://samba.org/ftp/ccache/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ccache.samba.org/
 COMMENT=	Cache for C/C++ compilers
+#LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain # AND zlib-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
