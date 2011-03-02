@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/02 12:05:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/02 13:36:00 obache Exp $
 #
 
 DISTNAME=		onscripter-20110226
@@ -46,6 +46,6 @@ do-install:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
