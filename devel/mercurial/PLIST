@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/11/02 09:37:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/03/02 06:46:11 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -6,9 +6,6 @@ ${PYSITELIB}/hgext/__init__.pyo
 ${PYSITELIB}/hgext/acl.py
 ${PYSITELIB}/hgext/acl.pyc
 ${PYSITELIB}/hgext/acl.pyo
-${PYSITELIB}/hgext/bookmarks.py
-${PYSITELIB}/hgext/bookmarks.pyc
-${PYSITELIB}/hgext/bookmarks.pyo
 ${PYSITELIB}/hgext/bugzilla.py
 ${PYSITELIB}/hgext/bugzilla.pyc
 ${PYSITELIB}/hgext/bugzilla.pyo
@@ -164,6 +161,9 @@ ${PYSITELIB}/mercurial/archival.pyc
 ${PYSITELIB}/mercurial/archival.pyo
 ${PYSITELIB}/mercurial/base85.so
 ${PYSITELIB}/mercurial/bdiff.so
+${PYSITELIB}/mercurial/bookmarks.py
+${PYSITELIB}/mercurial/bookmarks.pyc
+${PYSITELIB}/mercurial/bookmarks.pyo
 ${PYSITELIB}/mercurial/bundlerepo.py
 ${PYSITELIB}/mercurial/bundlerepo.pyc
 ${PYSITELIB}/mercurial/bundlerepo.pyo
