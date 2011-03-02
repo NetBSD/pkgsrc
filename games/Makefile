@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2011/02/26 08:19:13 obache Exp $
+# $NetBSD: Makefile,v 1.344 2011/03/02 12:07:25 ryoon Exp $
 #
 
 COMMENT=	Games
@@ -187,6 +187,7 @@ SUBDIR+=	newvox
 SUBDIR+=	nighthawk
 SUBDIR+=	ninvaders
 SUBDIR+=	omega
+SUBDIR+=	onscripter
 SUBDIR+=	openmortal
 SUBDIR+=	openttd
 SUBDIR+=	openttd-data
