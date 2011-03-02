@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2009/05/19 08:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2011/03/02 05:42:41 obache Exp $
 
 DISTNAME=	faces-1.6.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1/
 EXTRACT_SUFX=	.tar.Z
@@ -17,6 +17,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 DEPENDS+=	netpbm>=9.2:../../graphics/netpbm
 
 CONFLICTS=	compface-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/faces
 USE_X11BASE=		YES
@@ -39,29 +41,27 @@ MAKE_ENV+=	CPPFLAGS=
 MAKE_ENV+=	NISLOOKUP=-DNISLOOKUP
 .endif
 
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
+INSTALLATION_DIRS+=	bin lib include ${PKGMANDIR}/man1 ${PKGMANDIR}/man3
+
 REPLACE_PERL=	scripts/addxface scripts/deepen scripts/facesaddr \
 		scripts/facesall scripts/from.faces scripts/lpqall.faces \
 		scripts/mailq.faces scripts/mailqto scripts/mailqto.faces \
 		scripts/mkfacesindex scripts/newscheck.faces \
 		scripts/newsfrom.faces scripts/rotary.faces
 
-do-configure:
+post-extract:
 	${LN} -sf Makefile.dist ${WRKSRC}/${MAKE_FILE}
-	cd ${WRKSRC};							\
-	files="								\
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=							\
 		x11.c							\
 		scripts/addxface					\
 		scripts/facesall					\
-		scripts/mkfacesindex					\
-	";								\
-	for FILE in $${files}; do					\
-		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
-			$${FILE} > $${FILE}.fixed;			\
-		if [ -x $${FILE} ]; then				\
-			${CHMOD} +x $${FILE}.fixed;			\
-		fi;							\
-		${MV} -f $${FILE}.fixed $${FILE};			\
-	done
+		scripts/mkfacesindex
+SUBST_VARS.prefix=	PREFIX
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
