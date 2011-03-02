@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.523 2011/03/01 15:44:34 kleink Exp $
+$NetBSD: CHANGES-2011,v 1.524 2011/03/02 00:09:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/icon to 9.4.3nb1 [wiz 2011-03-01]
 	Updated textproc/p5-Text-vCard to 2.10 [wiz 2011-03-01]
 	Removed security/libksba04 successor security/libksba [kleink 2011-03-01]
+	Updated net/wireshark to 1.4.4 [tron 2011-03-02]
