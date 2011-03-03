@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.540 2011/03/03 19:15:06 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.541 2011/03/03 21:06:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added x11/py-vte version 0.26.2 [obache 2011-03-03]
 	Updated graphics/ocrad to 0.21 [gdt 2011-03-03]
 	Added fonts/tex-cmextra version 2010 [minskim 2011-03-03]
+	Updated print/latex-mk to 2.1nb1 [minskim 2011-03-03]
