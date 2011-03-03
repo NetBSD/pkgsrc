@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/02/26 10:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/03/03 12:55:48 obache Exp $
 #
 
 DISTNAME=	arcem-1.00-src
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arcem/}
 NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
 EXTRACT_SUFX=	.tgz
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LINUX_FILES=	\
 		linux.rom.gz \
@@ -31,7 +33,7 @@ USE_TOOLS+=	gmake
 
 MAKE_ENV+=	SYSTEM=X
 
-INSTALLATION_DIRS+=	share/arcem
+INSTALLATION_DIRS+=	bin share/arcem
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/linux.rom \
