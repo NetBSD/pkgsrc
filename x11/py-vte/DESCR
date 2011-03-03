@@ -1,0 +1,4 @@
+Terminal widget with improved font, internationalisation and
+accessibility support for the GNOME 2 desktop.
+
+This pakcage provide python bindings for the Vte terminal widget.

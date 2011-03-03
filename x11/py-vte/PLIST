@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/03 12:07:40 obache Exp $
+lib/pkgconfig/pyvte.pc
+${PYSITELIB}/gtk-2.0/vtemodule.la
+share/pygtk/2.0/defs/vte.defs
