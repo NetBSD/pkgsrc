@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.8 2010/11/15 13:05:45 adam Exp $
+$NetBSD: patch-aq,v 1.9 2011/03/03 05:50:04 adam Exp $
 
---- configure.orig	2010-11-06 01:55:00.000000000 +0000
+--- configure.orig	2011-02-22 12:02:53.000000000 +0000
 +++ configure
-@@ -3272,7 +3272,7 @@ fi
+@@ -3297,7 +3297,7 @@ fi
  if [ "$PLATFORM_MAC" = "yes" ] && [ '!' -z "$CFG_SDK" ]; then
      # get the darwin version. 10.0.0 and up means snow leopard.
      VERSION=`uname -r | tr '.' ' ' | awk '{print $1}'`
@@ -11,7 +11,7 @@ $NetBSD: patch-aq,v 1.8 2010/11/15 13:05:45 adam Exp $
          echo
          echo "WARNING: The 10.4u SDK does not support gcc 4.2. Configure with -platform macx-g++40. "
          echo
-@@ -4733,7 +4733,7 @@ if true; then ###[ '!' -f "$outpath/bin/
+@@ -4755,7 +4755,7 @@ if true; then ###[ '!' -f "$outpath/bin/
      done
  
      QMAKE_BUILD_ERROR=no
@@ -20,7 +20,7 @@ $NetBSD: patch-aq,v 1.8 2010/11/15 13:05:45 adam Exp $
      [ '!' -z "$QCONFIG_H" ] && mv -f "$QCONFIG_H" "$QMAKE_QCONFIG_H" #move qmake's qconfig.h to qconfig.h.qmake
      [ '!' -z "$OLD_QCONFIG_H" ] && mv -f "${OLD_QCONFIG_H}.old" "$OLD_QCONFIG_H" #put back qconfig.h
      [ "$QMAKE_BUILD_ERROR" = "yes" ] && exit 2
-@@ -6556,7 +6556,7 @@ fi
+@@ -6580,7 +6580,7 @@ fi
  # select Carbon on 10.4 Tiger.
  if [ "$PLATFORM_MAC" = "yes" ]; then
      VERSION=`uname -r | tr '.' ' ' | awk '{print $1}'`
@@ -29,7 +29,7 @@ $NetBSD: patch-aq,v 1.8 2010/11/15 13:05:45 adam Exp $
          CFG_MAC_COCOA="no";
          CFG_MAC_CARBON="yes";
      fi
-@@ -7754,7 +7754,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
+@@ -7788,7 +7788,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
  [ "$CFG_EXCEPTIONS" = "no" ] && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_EXCEPTIONS"
  [ "$CFG_IPV6" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IPV6"
  [ "$CFG_SXE" = "no" ]        && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_SXE"
