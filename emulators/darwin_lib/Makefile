@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/25 15:05:31 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2011/03/03 13:06:49 obache Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 PKGREVISION=	2
@@ -25,13 +25,15 @@ EMUL_PLATFORMS=		darwin-i386 darwin-powerpc
 ONLY_FOR_PLATFORM=	NetBSD-1.6Z*-powerpc NetBSD-1.6Z*-i386		\
 			NetBSD-[2-9]*-powerpc NetBSD-[2-9]*-i386
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 DARWIN_PKG=		yes
 DARWIN_ARCH=		${MACHINE_ARCH:C/powerpc/ppc/:C/x86_64/i386/}
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 
 EMUL_PKG_FMT=		rpm
-RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
 RPM2PKG_STAGE=		do-install
 RPMIGNOREPATH=		./Developer ./usr/X11R6/lib/X11/doc/html	\
