@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/12/26 00:58:41 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/03 23:13:19 minskim Exp $
 
 DISTNAME=	latex-bin.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2010
-TEXLIVE_REV=	20552
+PKGNAME=	tex-${DISTNAME:S/./-/}-2010.21345
+TEXLIVE_REV=	21345
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-latex-bin
