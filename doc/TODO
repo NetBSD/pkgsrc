@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10155 2011/03/02 15:45:50 ryoon Exp $
+$NetBSD: TODO,v 1.10156 2011/03/03 10:31:30 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -633,7 +633,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fotoxx-11.02
 	o fox-1.6.41
 	o frama-c-20101202
-	o freefont-20100919
 	o freeglut-2.4.0
 	o freenet-0.7
 	o freesci-0.6.4
