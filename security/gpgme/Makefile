@@ -1,24 +1,16 @@
-# $NetBSD: Makefile,v 1.62 2010/06/25 22:11:10 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.63 2011/03/03 11:39:47 adam Exp $
 
-DISTNAME=	gpgme-1.1.8
-PKGREVISION=	2
+DISTNAME=	gpgme-1.3.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PKG_OPTIONS_VAR=        PKG_OPTIONS.gpgme
-PKG_SUPPORTED_OPTIONS=	gpgsm
-PKG_SUGGESTED_OPTIONS=	gpgsm
-.include "../../mk/bsd.options.mk"
-.if empty(PKG_OPTIONS:Mgpgsm)
-DEPENDS+=		gnupg>=1.4.2:../../security/gnupg
-.endif
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -45,25 +37,7 @@ TEST_TARGET=		check
 CONFIGURE_ARGS+=	--without-pth --without-pth-test
 .endif
 
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
-.include "../../security/libgpg-error/buildlink3.mk"
-
-# we want the getenv_r() semantics of NetBSD-current
-BUILDLINK_API_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
-.include "../../devel/librfuncs/buildlink3.mk"
-
-##
-## Option to build with gpgsm. This provides SMIME support
-##
-.if !empty(PKG_OPTIONS:Mgpgsm)
-.  include "../../security/gnupg2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg2}/bin/gpgsm
-CONFIGURE_ARGS+=	--with-gpg=${BUILDLINK_PREFIX.gnupg2}/bin/gpg2
-REPLACE_SH+=		tests/gpg/pinentry
-.else
-CONFIGURE_ARGS+=	--without-gpgsm
-CONFIGURE_ARGS+=	--without-gpgconf
-.endif
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -71,4 +45,10 @@ CONFIGURE_ARGS+=	--without-gpgconf
 CONFIGURE_ENV+=		ac_cv_lib_pthread_pthread_create=yes
 .endif
 
+BUILDLINK_API_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
+.include "../../devel/librfuncs/buildlink3.mk"
+.include "../../security/libassuan2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
+.include "../../security/libgpg-error/buildlink3.mk"
+# we want the getenv_r() semantics of NetBSD-current
 .include "../../mk/bsd.pkg.mk"
