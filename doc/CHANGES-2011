@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.541 2011/03/03 21:06:16 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.542 2011/03/03 23:16:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -860,3 +860,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/ocrad to 0.21 [gdt 2011-03-03]
 	Added fonts/tex-cmextra version 2010 [minskim 2011-03-03]
 	Updated print/latex-mk to 2.1nb1 [minskim 2011-03-03]
+	Updated print/tex-context-doc to 2010nb1 [minskim 2011-03-03]
+	Updated print/tex-latex-bin-doc to 2010.21345 [minskim 2011-03-03]
+	Updated print/tex-luatex-doc to 0.60.1nb1 [minskim 2011-03-03]
+	Updated print/tex-pdftex to 1.40.11nb4 [minskim 2011-03-03]
+	Updated print/tex-pdftex-doc to 1.40.11nb2 [minskim 2011-03-03]
