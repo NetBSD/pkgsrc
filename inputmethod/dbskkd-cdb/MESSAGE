@@ -1,8 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/09/10 09:11:34 obache Exp $
+$NetBSD: MESSAGE,v 1.2 2011/03/03 10:50:52 ryoon Exp $
 
 Please add the following lines to /etc/inetd.conf.
 
 skkserv stream  tcp     nowait  nobody ${PREFIX}/libexec/dbskkd-cdb dbskkd-cdb
 skkserv stream  tcp6    nowait  nobody ${PREFIX}/libexec/dbskkd-cdb dbskkd-cdb
+
+And please add the following line to /etc/services and update database.
+
+skkserv		1178/tcp
 ===========================================================================
