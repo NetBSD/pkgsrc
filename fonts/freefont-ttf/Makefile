@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2009/01/08 09:12:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/03 10:29:03 ryoon Exp $
 #
 
-DISTNAME=		freefont-ttf-20090104
+DISTNAME=		freefont-ttf-20100919
 CATEGORIES=		fonts
-MASTER_SITES=		http://savannah.nongnu.org/download/freefont/
+MASTER_SITES=		${MASTER_SITE_GNU:=freefont/}
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.nongnu.org/freefont/
 COMMENT=		Free UCS Outline Fonts: FreeMono, FreeSans, and FreeSerif
+LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,9 +17,10 @@ NO_CONFIGURE=		yes
 NO_BUILD=		yes
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		pax
-INSTALLATION_DIRS=	share/doc/freefont ${FONTS_DIRS.ttf}
+INSTALLATION_DIRS=	share/doc/freefont lib/X11/fonts/TTF
 
-FONTS_DIRS.ttf=		lib/X11/fonts/TTF
+FONTSDIR=		${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=		${FONTSDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
@@ -28,6 +30,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/CREDITS \
 		${DESTDIR}${PREFIX}/share/doc/freefont/
 	cd ${WRKSRC} && \
-		pax -rw Free*.ttf ${DESTDIR}${PREFIX}/${FONTS_DIRS.ttf}
+		pax -rw Free*.ttf ${DESTDIR}/${FONTSDIR}
 
 .include "../../mk/bsd.pkg.mk"
