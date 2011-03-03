@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/11/17 19:29:03 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2011/03/03 23:13:19 minskim Exp $
 
 DISTNAME=	kpathsea
 PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	19875
+TEXLIVE_REV=	21345
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Translation tables for TeX

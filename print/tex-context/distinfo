@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/01/21 04:09:21 minskim Exp $
+$NetBSD: distinfo,v 1.3 2011/03/03 23:13:18 minskim Exp $
 
-SHA1 (tex-context-20438/context.tar.xz) = a440878e6e01a847725205d78110bf7229ba6144
-RMD160 (tex-context-20438/context.tar.xz) = e9d72531ffb7db3a8c15902308683ea640dd4de5
-Size (tex-context-20438/context.tar.xz) = 3604280 bytes
+SHA1 (tex-context-21345/context.tar.xz) = 899a5afa81eb58f2dbf7efb1d185b5d81903284a
+RMD160 (tex-context-21345/context.tar.xz) = e1400aa509fe57a06f0f279ee3a407dd3f051873
+Size (tex-context-21345/context.tar.xz) = 3604276 bytes

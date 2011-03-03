@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 03:32:10 minskim Exp $
-# TeX Live Revision 16381
+# $NetBSD: Makefile,v 1.3 2011/03/03 23:13:18 minskim Exp $
 
 DISTNAME=	etex
 PKGNAME=	tex-${DISTNAME}-2.1
-DIST_SUBDIR=	${PKGNAME}-2009
+TEXLIVE_REV=	21345
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX implementation filling the gap between TeX3 and NTS
