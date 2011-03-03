@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2009/11/15 18:41:55 drochner Exp $
+$NetBSD: patch-ae,v 1.5 2011/03/03 11:39:48 adam Exp $
 
 --- src/engine-gpgsm.c.orig	2008-11-03 17:50:12.000000000 +0100
 +++ src/engine-gpgsm.c
-@@ -28,6 +28,9 @@
+@@ -29,6 +29,9 @@
  #include <sys/types.h>
  #include <assert.h>
  #include <unistd.h>
