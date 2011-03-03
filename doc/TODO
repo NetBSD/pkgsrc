@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10156 2011/03/03 10:31:30 ryoon Exp $
+$NetBSD: TODO,v 1.10157 2011/03/03 19:00:30 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1023,7 +1023,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o objc-3.2.8
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
-	o ocrad-0.21
 	o ocsigen-1.1.0 [pkg/40761]
 	o octave-3.4.0
 	o offlineimap-6.2.0
