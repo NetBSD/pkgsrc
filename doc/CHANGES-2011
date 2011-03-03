@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.535 2011/03/03 04:14:40 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.536 2011/03/03 10:30:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -844,3 +844,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-dvips to 2010.21308 [minskim 2011-03-03]
 	Added fonts/tex-charter version 2010 [minskim 2011-03-03]
 	Added fonts/tex-charter-doc version 2010 [minskim 2011-03-03]
+	Updated fonts/freefont-ttf to 20100919 [ryoon 2011-03-03]
