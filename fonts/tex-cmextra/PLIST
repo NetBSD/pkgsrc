@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/03 19:14:05 minskim Exp $
+share/texmf-dist/fonts/source/public/cmextra/cmbxcd10.mf
+share/texmf-dist/fonts/source/public/cmextra/cmbxti12.mf
+share/texmf-dist/fonts/source/public/cmextra/cmbxti7.mf
+share/texmf-dist/fonts/source/public/cmextra/cmcscsl10.mf
+share/texmf-dist/fonts/source/public/cmextra/cmfibs8.mf
+share/texmf-dist/fonts/source/public/cmextra/cmitt12.mf
+share/texmf-dist/fonts/source/public/cmextra/cmitt9.mf
+share/texmf-dist/fonts/source/public/cmextra/cmsl6.mf
+share/texmf-dist/fonts/source/public/cmextra/cmsltt9.mf
+share/texmf-dist/fonts/source/public/cmextra/cmssbxo10.mf
+share/texmf-dist/fonts/source/public/cmextra/cmsslu30.mf
+share/texmf-dist/fonts/source/public/cmextra/cmssu30.mf
+share/texmf-dist/fonts/source/public/cmextra/cmvtti10.mf
+share/texmf-dist/fonts/tfm/public/cmextra/cmbxcd10.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmbxti12.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmbxti7.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmcscsl10.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmfibs8.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmitt12.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmitt9.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmsl6.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmsltt9.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmssbxo10.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmsslu30.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmssu30.tfm
+share/texmf-dist/fonts/tfm/public/cmextra/cmvtti10.tfm
