@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/03/03 05:50:05 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-qdbus-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	QT DBus support
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib

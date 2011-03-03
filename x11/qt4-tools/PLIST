@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/01/12 07:18:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/03/03 05:50:04 adam Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -160,6 +160,7 @@ qt4/mkspecs/common/mac.conf
 qt4/mkspecs/common/posix/qplatformdefs.h
 qt4/mkspecs/common/qmake.conf
 qt4/mkspecs/common/qws.conf
+qt4/mkspecs/common/symbian/appCaptionForTranslation.cpp
 qt4/mkspecs/common/symbian/header-wrappers/AknBitmapAnimation.h
 qt4/mkspecs/common/symbian/header-wrappers/AknDoc.h
 qt4/mkspecs/common/symbian/header-wrappers/AknFontAccess.h
@@ -179,6 +180,7 @@ qt4/mkspecs/common/symbian/header-wrappers/ApDataHandler.h
 qt4/mkspecs/common/symbian/header-wrappers/ApUtils.h
 qt4/mkspecs/common/symbian/header-wrappers/CDirectoryLocalizer.h
 qt4/mkspecs/common/symbian/header-wrappers/DocumentHandler.h
+qt4/mkspecs/common/symbian/packageNameForTranslation.cpp
 qt4/mkspecs/common/symbian/qplatformdefs.h
 qt4/mkspecs/common/symbian/stl-off/new
 qt4/mkspecs/common/symbian/symbian-makefile.conf
@@ -229,6 +231,7 @@ qt4/mkspecs/features/qtestlib.prf
 qt4/mkspecs/features/qtopia.prf
 qt4/mkspecs/features/qtopiainc.prf
 qt4/mkspecs/features/qtopialib.prf
+qt4/mkspecs/features/qttest_p4.prf
 qt4/mkspecs/features/release.prf
 qt4/mkspecs/features/resources.prf
 qt4/mkspecs/features/shared.prf
@@ -247,6 +250,7 @@ qt4/mkspecs/features/symbian/default_post.prf
 qt4/mkspecs/features/symbian/default_pre.prf
 qt4/mkspecs/features/symbian/do_not_build_as_thumb.prf
 qt4/mkspecs/features/symbian/epocallowdlldata.prf
+qt4/mkspecs/features/symbian/localize_deployment.prf
 qt4/mkspecs/features/symbian/moc.prf
 qt4/mkspecs/features/symbian/nested_exceptions.prf
 qt4/mkspecs/features/symbian/opengl.prf
