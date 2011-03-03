@@ -1,0 +1,11 @@
+--- libgfortran/intrinsics/c99_functions.c.orig	2009-04-10 01:23:07.000000000 +0200
++++ libgfortran/intrinsics/c99_functions.c
+@@ -538,7 +538,7 @@
+   if (x > DBL_MAX || x < -DBL_MAX)
+     {
+ #ifdef HAVE_NEXTAFTERL
+-      static long double prechalf = nexafterl (0.5L, LDBL_MAX);
++      long double prechalf = nextafterl (0.5L, LDBL_MAX);
+ #else
+       static long double prechalf = 0.5L;
+ #endif
