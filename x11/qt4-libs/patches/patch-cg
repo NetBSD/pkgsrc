@@ -1,0 +1,15 @@
+$NetBSD: patch-cg,v 1.1 2011/03/03 05:50:04 adam Exp $
+
+Avoid error when compiling with Clang.
+
+--- src/gui/dialogs/qfontdialog_mac.mm.orig	2011-01-12 10:16:56.000000000 +0000
++++ src/gui/dialogs/qfontdialog_mac.mm
+@@ -509,7 +509,7 @@ void QFontDialogPrivate::setFont(void *d
+ 
+ #if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5
+     if (qstrcmp(fe->name(), "CoreText") == 0) {
+-        nsFont = reinterpret_cast<const NSFont *>(static_cast<QCoreTextFontEngineMulti *>(fe)->ctfont);
++        nsFont = (NSFont *)reinterpret_cast<const NSFont *>(static_cast<QCoreTextFontEngineMulti *>(fe)->ctfont);
+     } else
+ #endif
+     {
