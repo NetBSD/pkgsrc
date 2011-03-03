@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.533 2011/03/02 20:24:55 gls Exp $
+$NetBSD: CHANGES-2011,v 1.534 2011/03/03 03:17:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -841,3 +841,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/bochs to 2.4.6 [ryoon 2011-03-02]
 	Updated www/typo3 to 4.5.2nb1 [bouyer 2011-03-02]
 	Updated chat/cgiirc to 0.5.10 [gls 2011-03-02]
+	Updated print/tex-dvips to 2010.21308 [minskim 2011-03-03]
