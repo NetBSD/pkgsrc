@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/04 19:05:21 minskim Exp $
+share/texmf-dist/tex/latex/fp/defpattern.sty
+share/texmf-dist/tex/latex/fp/fp-addons.sty
+share/texmf-dist/tex/latex/fp/fp-basic.sty
+share/texmf-dist/tex/latex/fp/fp-eqn.sty
+share/texmf-dist/tex/latex/fp/fp-eval.sty
+share/texmf-dist/tex/latex/fp/fp-exp.sty
+share/texmf-dist/tex/latex/fp/fp-pas.sty
+share/texmf-dist/tex/latex/fp/fp-random.sty
+share/texmf-dist/tex/latex/fp/fp-snap.sty
+share/texmf-dist/tex/latex/fp/fp-trigo.sty
+share/texmf-dist/tex/latex/fp/fp-upn.sty
+share/texmf-dist/tex/latex/fp/fp.sty
+share/texmf-dist/tex/latex/fp/lfp.sty
+share/texmf-dist/tex/plain/fp/fp.tex
