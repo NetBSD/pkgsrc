@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.551 2011/03/04 19:06:26 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.552 2011/03/04 19:14:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -893,3 +893,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/p5-Net-INET6Glue version 0.5 [tron 2011-03-04]
 	Added math/tex-fp version 2010 [minskim 2011-03-04]
 	Added math/tex-fp-doc version 2010 [minskim 2011-03-04]
+	Added finance/tex-euro version 1.1 [minskim 2011-03-04]
+	Added finance/tex-euro-doc version 1.1 [minskim 2011-03-04]
