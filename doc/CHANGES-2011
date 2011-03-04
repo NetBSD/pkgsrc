@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.542 2011/03/03 23:16:05 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.543 2011/03/04 03:14:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -865,3 +865,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-luatex-doc to 0.60.1nb1 [minskim 2011-03-03]
 	Updated print/tex-pdftex to 1.40.11nb4 [minskim 2011-03-03]
 	Updated print/tex-pdftex-doc to 1.40.11nb2 [minskim 2011-03-03]
+	Updated devel/subversion to 1.6.16 [taca 2011-03-04]
+	Updated devel/java-subversion to 1.6.16 [taca 2011-03-04]
+	Updated devel/p5-subversion to 1.6.16 [taca 2011-03-04]
+	Updated devel/py-subversion to 1.6.16 [taca 2011-03-04]
+	Updated devel/ruby-subversion to 1.6.16 [taca 2011-03-04]
+	Updated www/ap2-subversion to 1.6.16 [taca 2011-03-04]
