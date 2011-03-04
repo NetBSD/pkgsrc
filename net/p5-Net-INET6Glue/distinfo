@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/04 16:40:59 tron Exp $
+
+SHA1 (Net-INET6Glue-0.5.tar.gz) = 76f3e9414e2eb2b3ed2f0164f1c628068da496dd
+RMD160 (Net-INET6Glue-0.5.tar.gz) = ddb36b3e0974f4748812ec22cb4b8d0a45b1682e
+Size (Net-INET6Glue-0.5.tar.gz) = 4293 bytes

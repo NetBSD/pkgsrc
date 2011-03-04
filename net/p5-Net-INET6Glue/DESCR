@@ -1,0 +1,4 @@
+Net::INET6Glue is a hack to make more of Perl IPv6 able.
+This is partly done by replacing IO::Socket::INET with IO::Socket::INET6
+and by adding IPv6 Protocol functionality to Net::FTP.
+Works for Net::SMTP, LWP, Net::FTP and probably others too.
