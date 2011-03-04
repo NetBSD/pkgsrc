@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/02/11 01:28:41 asau Exp $
+# $NetBSD: options.mk,v 1.5 2011/03/04 14:46:32 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
 PKG_SUPPORTED_OPTIONS+=		threads unicode ffi clx
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--with-__thread=yes
 .else
 CONFIGURE_ARGS+=	--with-__thread=no
 .endif
+PLIST_SRC+=		PLIST.threads
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 
