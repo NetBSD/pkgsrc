@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.544 2011/03/04 03:53:57 taca Exp $
+$NetBSD: CHANGES-2011,v 1.545 2011/03/04 04:35:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -872,3 +872,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-subversion to 1.6.16 [taca 2011-03-04]
 	Updated www/ap2-subversion to 1.6.16 [taca 2011-03-04]
 	Added net/bind98 version 9.8.0 [taca 2011-03-04]
+	Updated www/ja-trac to 0.12.2pl1 [obache 2011-03-03]
