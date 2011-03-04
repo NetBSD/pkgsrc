@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/22 16:57:55 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/04 11:57:04 obache Exp $
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af.jar
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/install.rdf
@@ -8,6 +8,9 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as.jar
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/install.rdf
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast.jar
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be.jar
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/install.rdf
@@ -77,6 +80,9 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE.jar
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/install.rdf
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd.jar
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl.jar
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/install.rdf
@@ -191,6 +197,9 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE.jar
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/install.rdf
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK.jar
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta.jar
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/install.rdf
