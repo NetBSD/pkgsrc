@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.543 2011/03/04 03:14:51 taca Exp $
+$NetBSD: CHANGES-2011,v 1.544 2011/03/04 03:53:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-subversion to 1.6.16 [taca 2011-03-04]
 	Updated devel/ruby-subversion to 1.6.16 [taca 2011-03-04]
 	Updated www/ap2-subversion to 1.6.16 [taca 2011-03-04]
+	Added net/bind98 version 9.8.0 [taca 2011-03-04]
