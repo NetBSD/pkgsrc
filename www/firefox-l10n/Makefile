@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/22 16:57:53 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/04 11:57:04 obache Exp $
 #
 
-FIREFOX_VER=	3.6.3
+FIREFOX_VER=	3.6.13
 PKGNAME=	firefox-l10n-${FIREFOX_VER}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -18,18 +18,23 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-FIREFOX_LOCALES=	af ar as be bg bn-BD bn-IN ca cs cy		\
+FIREFOX_LOCALES=	af ar as ast be bg bn-BD bn-IN ca cs cy		\
 			da de el en-GB eo es-AR es-CL es-ES es-MX et	\
-			eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN	\
+			eu fa fi fr fy-NL ga-IE gd gl gu-IN he hi-IN	\
 			hr hu id is it ja ka kk kn ko			\
 			ku lt lv mk ml mr nb-NO nl nn-NO oc		\
 			or pa-IN pl pt-BR pt-PT rm ro ru si sk		\
-			sl sq sr sv-SE ta te th tr uk			\
+			sl sq sr sv-SE ta-LK ta te th tr uk		\
 			vi zh-CN zh-TW
-# ta-LK is broken
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/extensions
 XPI_FILES=		${FIREFOX_LOCALES:=.xpi}
+
+# remove head of 3 empty lines
+SUBST_CLASSES+=		chop
+SUBST_STAGE.chop=	post-configure
+SUBST_FILES.chop=	ta-LK/install.rdf
+SUBST_SED.chop=		-e '1,3d'
 
 .include "../../devel/xulrunner/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
