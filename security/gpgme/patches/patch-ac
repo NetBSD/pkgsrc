@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2011/03/03 11:39:47 adam Exp $
+$NetBSD: patch-ac,v 1.8 2011/03/04 11:34:12 obache Exp $
 
 --- configure.orig	2010-01-11 11:06:55.000000000 +0000
 +++ configure
@@ -20,6 +20,15 @@ $NetBSD: patch-ac,v 1.7 2011/03/03 11:39:47 adam Exp $
  do :
    ac_fn_c_check_header_mongrel "$LINENO" "sys/select.h" "ac_cv_header_sys_select_h" "$ac_includes_default"
  if test "x$ac_cv_header_sys_select_h" = x""yes; then :
+@@ -17302,7 +17302,7 @@ else
+ /* end confdefs.h.  */
+ __thread int foo;
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   gpgme_cv_tls_works=yes
+ else
+   gpgme_cv_tls_works=no
 @@ -18105,7 +18105,7 @@ IFS=$as_save_IFS
  esac
  fi
