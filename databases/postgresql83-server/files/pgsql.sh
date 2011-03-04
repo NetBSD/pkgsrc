@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.4 2011/01/10 14:51:04 adam Exp $
+# $NetBSD: pgsql.sh,v 1.5 2011/03/04 14:26:23 adam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -60,7 +60,7 @@ pgsql_precmd()
 
 pgsql_initdb()
 {
-	initdb="@PG_PREFIX@/bin/initdb"
+	initdb="@PREFIX@/bin/initdb"
 
 	if [ -d ${pgsql_home}/data/base ]; then
 		@ECHO@ "The PostgreSQL template databases have already been initialized."
