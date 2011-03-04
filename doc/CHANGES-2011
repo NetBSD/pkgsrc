@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.550 2011/03/04 16:54:04 tron Exp $
+$NetBSD: CHANGES-2011,v 1.551 2011/03/04 19:06:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -891,3 +891,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-vte to 0.90.8 [obache 2011-03-04]
 	Updated pkgtools/pkgdiff to 1.1 [wiz 2011-03-04]
 	Added net/p5-Net-INET6Glue version 0.5 [tron 2011-03-04]
+	Added math/tex-fp version 2010 [minskim 2011-03-04]
+	Added math/tex-fp-doc version 2010 [minskim 2011-03-04]
