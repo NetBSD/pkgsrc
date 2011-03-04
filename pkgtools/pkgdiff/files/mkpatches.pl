@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.15 2011/02/02 23:35:11 wiz Exp $
+# $NetBSD: mkpatches.pl,v 1.16 2011/03/04 15:57:07 wiz Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -46,6 +46,7 @@ use File::Spec;
 my $patchdir;
 my $old_patchdir;
 my $wrkdir;
+my $wrksrc;
 my %old_filename;
 my %old_header;
 
@@ -54,23 +55,30 @@ my %old_header;
 sub create_patchdir {
     if (! -d $patchdir) {
 	mkdir($patchdir, 0755);
+	if (-d $origpatchdir && "$origpatchdir" != "$patchdir") {
+	    system("cp", "$origpatchdir/p*", "$patchdir");
+	}
     }
 }
 
 # read command line arguments
 
 undef($opt_c);
+undef($opt_D);
+undef($opt_d);
 undef($opt_h);
 undef($opt_r);
 undef($opt_v);
 
-getopts('chrv');
+getopts('cDd:hrv');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog [-chv]
+usage: $prog [-hv] [-c | -r] [-D | -d dir]
     -c   	commit -- clean up old patches backups
+    -d dir   	create patches in this directory
+    -D   	create patches in \$WRKDIR/.newpatches
     -h   	show this help
     -r   	revert -- remove new patches, put old patches back
     -v   	verbose - list .orig files as processed
@@ -78,14 +86,36 @@ EOF
 		exit 0;
 };
 
-# get WRKDIR
+if ($opt_d && $opt_D) {
+    print STDERR "-D and -d conflict, choose one\n";
+    exit 1;
+}
 
+# get some pkgsrc variables
+
+$wrksrc=`@MAKE@ show-var VARNAME=WRKSRC` or 
+    die ("can't find WRKSRC -- wrong dir?");
+chomp($wrksrc);
 $wrkdir=`@MAKE@ show-var VARNAME=WRKDIR` or
     die ("can't find WRKDIR -- wrong dir?");
 chomp($wrkdir);
-$patchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
+$origpatchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
     die ("can't find PATCHDIR -- wrong dir?");
-chomp($patchdir);
+chomp($origpatchdir);
+
+if ($opt_D) {
+    $patchdir = "$wrkdir/.newpatches";
+} elsif ($opt_d) {
+    if (-d "/$opt_d") {
+	$patchdir = $opt_d;
+    } else {
+	my $pwd = cwd();
+	chomp($pwd);
+	$patchdir = "$pwd/$opt_d";
+    }
+} else {
+    $patchdir = $origpatchdir;
+}
 
 if ($opt_c) {
     open(HANDLE, "find ${patchdir} -type f -name \\\*.orig |");
@@ -113,11 +143,6 @@ if ($opt_r) {
 
 create_patchdir();
 
-# get WRKSRC
-
-$wrksrc=`@MAKE@ show-var VARNAME=WRKSRC` or 
-    die ("can't find WRKSRC -- wrong dir?");
-chomp($wrksrc);
 
 move_away_old_patches();
 
@@ -127,7 +152,7 @@ chdir $wrksrc or die ("can't cd to WRKSRC ($wrksrc)");
 
 # find files
 
-open(HANDLE, "find ${wrkdir} -type f -name \\\*.orig |");
+open(HANDLE, "find ${wrksrc} -type f -name \\\*.orig |");
 
 # create patches
 
