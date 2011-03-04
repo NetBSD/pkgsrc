@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.14 2008/06/19 22:33:25 epg Exp $
+$NetBSD: patch-ad,v 1.15 2011/03/04 03:12:36 taca Exp $
 
---- Makefile.in.orig	2008-02-24 03:36:03.000000000 +0000
-+++ Makefile.in	2008-03-20 05:15:54.000000000 +0000
-@@ -638,7 +638,7 @@
+--- Makefile.in.orig	2010-11-25 17:55:59.000000000 +0000
++++ Makefile.in
+@@ -682,7 +682,7 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
  	./config.status subversion/bindings/swig/perl/native/Makefile.PL
  
  $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
 -	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL
 +	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL INSTALLDIRS=vendor
  
- swig-pl_DEPS = autogen-swig-pl libsvn_swig_perl \
-   $(SWIG_PL_DIR)/native/Makefile
+ # There is a "readlink -f" command on some systems for the same purpose,
+ # but it's not as portable (e.g. Mac OS X doesn't have it).  These should
