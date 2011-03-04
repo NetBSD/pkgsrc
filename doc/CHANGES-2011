@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.546 2011/03/04 11:57:21 obache Exp $
+$NetBSD: CHANGES-2011,v 1.547 2011/03/04 13:10:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -874,3 +874,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/bind98 version 9.8.0 [taca 2011-03-04]
 	Updated www/ja-trac to 0.12.2pl1 [obache 2011-03-03]
 	Updated www/firefox-l10n to 3.6.13 [obache 2011-03-04]
+	Updated www/contao29-translations to 20110304 [taca 2011-03-04]
