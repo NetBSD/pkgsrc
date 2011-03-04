@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/04 19:52:01 minskim Exp $
+share/texmf-dist/doc/fonts/euro-ce/euro-ce.doc
+share/texmf-dist/doc/fonts/euro-ce/euro-ce.dvi
+share/texmf-dist/doc/fonts/euro-ce/euro-ce.tex
