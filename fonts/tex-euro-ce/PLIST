@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/04 19:51:53 minskim Exp $
+share/texmf-dist/fonts/source/public/euro-ce/ceit.mf
+share/texmf-dist/fonts/source/public/euro-ce/cemac.mf
+share/texmf-dist/fonts/source/public/euro-ce/cerm.mf
+share/texmf-dist/fonts/source/public/euro-ce/cesl.mf
+share/texmf-dist/fonts/source/public/euro-ce/eurobf.mf
+share/texmf-dist/fonts/source/public/euro-ce/eurobfit.mf
+share/texmf-dist/fonts/source/public/euro-ce/eurobfsl.mf
+share/texmf-dist/fonts/source/public/euro-ce/euroit.mf
+share/texmf-dist/fonts/source/public/euro-ce/euromac.mf
+share/texmf-dist/fonts/source/public/euro-ce/euroof.mf
+share/texmf-dist/fonts/source/public/euro-ce/eurorm.mf
+share/texmf-dist/fonts/source/public/euro-ce/eurosl.mf
+share/texmf-dist/fonts/source/public/euro-ce/eurosp.mf
+share/texmf-dist/fonts/tfm/public/euro-ce/ceit.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/cerm.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/cesl.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/eurobf.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/eurobfit.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/eurobfsl.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/euroit.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/euroof.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/eurorm.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/eurosl.tfm
+share/texmf-dist/fonts/tfm/public/euro-ce/eurosp.tfm
