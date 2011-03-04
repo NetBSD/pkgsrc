@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2011/02/06 05:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2011/03/04 08:15:50 jnemeth Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -174,6 +174,7 @@ SUBDIR+=	suse113_32_glx
 SUBDIR+=	suse113_32_gtk2
 SUBDIR+=	suse113_32_krb5
 SUBDIR+=	suse113_32_libcups
+SUBDIR+=	suse113_32_libcurl
 SUBDIR+=	suse113_32_libjpeg
 SUBDIR+=	suse113_32_libpng
 SUBDIR+=	suse113_32_libsigc++2
@@ -197,6 +198,7 @@ SUBDIR+=	suse113_glx
 SUBDIR+=	suse113_gtk2
 SUBDIR+=	suse113_krb5
 SUBDIR+=	suse113_libcups
+SUBDIR+=	suse113_libcurl
 SUBDIR+=	suse113_libjpeg
 SUBDIR+=	suse113_libpng
 SUBDIR+=	suse113_libsigc++2
