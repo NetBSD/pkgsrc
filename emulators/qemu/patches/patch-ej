@@ -1,4 +1,4 @@
-$NetBSD: patch-ej,v 1.2 2010/12/27 12:33:32 adam Exp $
+$NetBSD: patch-ej,v 1.3 2011/03/04 13:03:48 tsutsui Exp $
 
 1) bswap_NN() variants are not available in CONFIG_MACHINE_BSWAP_H case
    (fixed in upstream master but not in stable-0.13 branch)
@@ -14,8 +14,10 @@ http://git.qemu.org/qemu.git/commit/?id=aee474ebc62686ae8827747b0b1aed85b8122979
 http://git.qemu.org/qemu.git/commit/?id=d167f9bc06a577d6c85b8ed6991c1efe175aae7d
 http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
 
---- ui/vnc-enc-tight.c.orig	2010-07-28 10:55:42.000000000 +0900
-+++ ui/vnc-enc-tight.c	2010-08-08 17:14:17.000000000 +0900
+4) include <sys/types.h> to fix build on Mac OS X
+
+--- ui/vnc-enc-tight.c.orig	2010-10-15 20:56:09.000000000 +0000
++++ ui/vnc-enc-tight.c
 @@ -35,6 +35,7 @@
  #include <stdio.h>
  #include <jpeglib.h>
@@ -24,7 +26,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
  
  #include "qemu-common.h"
  
-@@ -209,7 +209,7 @@
+@@ -209,7 +210,7 @@
                       d < w - x - VNC_TIGHT_DETECT_SUBROW_WIDTH; d++) {  \
                  pix = ((uint##bpp##_t *)buf)[(y+d)*w+x+d];              \
                  if (endian) {                                           \
@@ -33,7 +35,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
                  }                                                       \
                  for (c = 0; c < 3; c++) {                               \
                      left[c] = (int)(pix >> shift[c] & max[c]);          \
-@@ -218,7 +218,7 @@
+@@ -218,7 +219,7 @@
                       dx++) {                                            \
                      pix = ((uint##bpp##_t *)buf)[(y+d)*w+x+d+dx];       \
                      if (endian) {                                       \
@@ -42,7 +44,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
                      }                                                   \
                      sum = 0;                                            \
                      for (c = 0; c < 3; c++) {                           \
-@@ -281,7 +281,7 @@
+@@ -281,7 +282,7 @@
          return 0;
      }
  
@@ -51,7 +53,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
          if (w * h < VNC_TIGHT_JPEG_MIN_RECT_SIZE) {
              return 0;
          }
-@@ -294,7 +294,7 @@
+@@ -294,7 +295,7 @@
      if (vs->clientds.pf.bytes_per_pixel == 4) {
          if (vs->tight.pixel24) {
              errors = tight_detect_smooth_image24(vs, w, h);
@@ -60,7 +62,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
                  return (errors < tight_conf[quality].jpeg_threshold24);
              }
              return (errors < tight_conf[compression].gradient_threshold24);
-@@ -443,7 +443,7 @@
+@@ -443,7 +444,7 @@
               * Should never happen, but don't break everything          \
               * if it does, use the first color instead                  \
               */                                                         \
@@ -69,7 +71,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
                  idx = 0;                                                \
              }                                                           \
              while (rep >= 0) {                                          \
-@@ -608,7 +608,7 @@
+@@ -608,7 +609,7 @@
              for (x = 0; x < w; x++) {                                   \
                  pix = *buf;                                             \
                  if (endian) {                                           \
@@ -78,7 +80,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
                  }                                                       \
                  diff = 0;                                               \
                  for (c = 0; c < 3; c++) {                               \
-@@ -628,7 +628,7 @@
+@@ -628,7 +629,7 @@
                          << shift[c];                                    \
                  }                                                       \
                  if (endian) {                                           \
@@ -87,7 +89,7 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
                  }                                                       \
                  *buf++ = diff;                                          \
              }                                                           \
-@@ -1469,6 +1469,8 @@
+@@ -1469,6 +1470,8 @@
          ret = send_mono_rect(vs, x, y, w, h, bg, fg);
      } else if (colors <= 256) {
          ret = send_palette_rect(vs, x, y, w, h, palette);
@@ -96,16 +98,16 @@ http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
      }
      return ret;
  }
-@@ -1500,6 +1502,8 @@
-             ret = send_jpeg_rect(vs, x, y, w, h, quality);
+@@ -1501,6 +1504,8 @@
          } else {
              ret = send_palette_rect(vs, x, y, w, h, palette);
-+        } else {
-+	    ret = 0;
          }
++    } else {
++	    ret = 0;
      }
      return ret;
-@@ -1522,7 +1526,7 @@
+ }
+@@ -1522,7 +1527,7 @@
      colors = tight_fill_palette(vs, x, y, w * h, &fg, &bg, &palette);
  
  #ifdef CONFIG_VNC_JPEG
