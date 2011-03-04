@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2011/02/02 23:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2011/03/04 15:57:07 wiz Exp $
 #
 
-DISTNAME=	pkgdiff-1.0
+DISTNAME=	pkgdiff-1.1
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty

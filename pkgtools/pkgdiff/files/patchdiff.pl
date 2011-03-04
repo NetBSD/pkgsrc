@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: patchdiff.pl,v 1.14 2011/02/02 23:35:11 wiz Exp $
+# $NetBSD: patchdiff.pl,v 1.15 2011/03/04 15:57:07 wiz Exp $
 #
 # patchdiff: compares a set of patches in the patch dir with their predecessors
 #
@@ -69,12 +69,14 @@ sub putinhash {
      close(handle);
 }
 
-getopts('h');
+getopts('Dd:h');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog
+usage: $prog [-D | -d dir]
+    -D		look at patches in \$WRKDIR/.newpatches
+    -d dir	look at patches in this directory
 EOF
 		exit 0;
 };
@@ -83,9 +85,24 @@ EOF
 %new=();
 $thisdir=cwd();
 chomp($thisdir);
-$patchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
+$wrkdir=`@MAKE@ show-var VARNAME=WRKDIR` or
+    die ("can't find WRKDIR -- wrong dir?");
+chomp($wrkdir);
+$origpatchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
     die ("can't find PATCHDIR -- wrong dir?");
-chomp($patchdir);
+chomp($origpatchdir);
+
+if ($opt_D) {
+    $patchdir = "$wrkdir/.newpatches";
+} elsif ($opt_d) {
+    if (-d "/$opt_d") {
+	$patchdir = $opt_d;
+    } else {
+	$patchdir = "$thisdir/$opt_d";
+    }
+} else {
+    $patchdir = $origpatchdir;
+}
 
 if ( ! -d $patchdir) {
     print "No patches found (directory $patchdir not found)\n";
