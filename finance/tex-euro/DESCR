@@ -1,0 +1,6 @@
+Converts arbitrary national currency amounts using the Euro as base
+unit, and typesets monetary amounts in almost any desired way. Write,
+e.g., \ATS{17.6} to get something like '17,60 oS (1,28 Euro)'
+automatically. Conversion rates for the initial Euro-zone countries are
+already built-in. Further rates can be added easily. The package uses
+the fp package to do its sums.
