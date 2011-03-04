@@ -1,0 +1,13 @@
+BIND, the Berkeley Internet Name Daemon, version 9 is a major rewrite
+of nearly all aspects of the underlying BIND architecture.  Some
+of the important features of BIND-9 are:
+
+	- DNS Security
+	- IP version 6
+	- DNS Protocol Enhancements
+	- Views
+	- Multiprocessor Support
+	- Improved Portability Architecture
+	- Full NSEC3 support
+	- Automatic zone re-signing
+	- New update-policy methods tcp-self and 6to4-self
