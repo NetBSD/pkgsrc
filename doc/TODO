@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10158 2011/03/05 19:19:54 ryoon Exp $
+$NetBSD: TODO,v 1.10159 2011/03/05 20:32:12 asau Exp $
 
 Suggested new packages
 ======================
@@ -1191,7 +1191,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sane-backends-1.0.22
 	o sarg-2.2.5
 	o saxon-9.2
-	o sbcl-1.0.46
 	o scapy-2.2.0
 	o scew-0.4.0
 	o sch-3.8.3

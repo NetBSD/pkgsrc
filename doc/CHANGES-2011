@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.557 2011/03/05 19:19:26 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.558 2011/03/05 20:32:12 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/postgresql84-uuid version 1.0.2 [brook 2011-03-05]
 	Added databases/postgresql90-uuid version 1.0.2 [brook 2011-03-05]
 	Updated fonts/liberation-ttf to 1.06.0.20100721 [ryoon 2011-03-05]
+	Updated lang/sbcl to 1.0.46 [asau 2011-03-05]
