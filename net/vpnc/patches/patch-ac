@@ -1,38 +1,34 @@
-$NetBSD: patch-ac,v 1.7 2009/02/04 21:51:27 drochner Exp $
+$NetBSD: patch-ac,v 1.8 2011/03/05 17:46:41 cegger Exp $
 
---- vpnc-script.in.orig	2009-02-04 14:40:43.000000000 +0100
+--- vpnc-script.in.orig	2011-03-01 14:40:25.000000000 +0000
 +++ vpnc-script.in
-@@ -48,18 +48,19 @@ PATH=/sbin:/usr/sbin:$PATH
+@@ -94,7 +94,7 @@ do_ifconfig() {
+ 		DEV=$($IPROUTE route | grep ^default | sed 's/^.* dev \([[:alnum:]-]\+\).*$/\1/')
+ 		MTU=$(($($IPROUTE link show "$DEV" | grep mtu | sed 's/^.* mtu \([[:digit:]]\+\).*$/\1/') - 88))
+ 	else
+-		MTU=1412
++		MTU=1390
+ 	fi
  
- OS="`uname -s`"
+ 	# Point to point interface require a netmask of 255.255.255.255 on some systems
+@@ -440,6 +440,20 @@ do_pre_init() {
+ }
  
--DEFAULT_ROUTE_FILE=/var/run/vpnc/defaultroute
--RESOLV_CONF_BACKUP=/var/run/vpnc/resolv.conf-backup
-+STATEDIR=@VARBASE@/run/vpnc
-+DEFAULT_ROUTE_FILE=$STATEDIR/defaultroute
-+RESOLV_CONF_BACKUP=$STATEDIR/resolv.conf-backup
- FULL_SCRIPTNAME=@PREFIX@/sbin/vpnc
- SCRIPTNAME=`basename $FULL_SCRIPTNAME`
- 
- # some systems, eg. Darwin & FreeBSD, prune /var/run on boot
--if [ ! -d "/var/run/vpnc" ]; then
--	mkdir -p /var/run/vpnc
-+if [ ! -d $STATEDIR ]; then
-+	mkdir -p $STATEDIR
- fi
- 
- # stupid SunOS: no blubber in /usr/local/bin ... (on stdout)
--IPROUTE="`which ip | grep '^/' 2> /dev/null`"
-+IPROUTE="`command -v ip | grep '^/' 2> /dev/null`"
- 
- if [ "$OS" = "Linux" ]; then
- 	ifconfig_syntax_ptp="pointopoint"
-@@ -163,7 +164,7 @@ else # use route command
- 		# isn't -n supposed to give --numeric output?
- 		# apperently not...
- 		# Get rid of lines containing IPv6 addresses (':')
--		netstat -r -n | awk '/:/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
-+		netstat -r -n | awk '/:/ { next; } $2 ~ /^link/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
- 	}
- 	
- 	set_vpngateway_route() {
+ do_connect() {
++	if test "$TARGET_NETWORKS" ; then
++		i=0
++		for network in $TARGET_NETWORKS ; do
++			eval CISCO_SPLIT_INC_${i}_ADDR=`echo $network | cut -f1 -d/`
++			eval CISCO_SPLIT_INC_${i}_MASKLEN=`echo $network | cut -f2 -d/`
++			eval CISCO_SPLIT_INC_${i}_MASK=$( perl -e '$ARGV[0]=~s,.*/,,;$m=(2**$ARGV[0]-1)<<(32-$ARGV[0]);printf "%d.%d.%d.%d\n", $m>>24 & 0xff, $m>>16 & 0xff, $m>>8 & 0xff, $m & 0xff;' $network )
++			eval CISCO_SPLIT_INC_${i}_PROTOCOL=0
++			eval CISCO_SPLIT_INC_${i}_SPORT=0
++			eval CISCO_SPLIT_INC_${i}_DPORT=0
++			i=`expr $i + 1`
++		done
++		CISCO_SPLIT_INC=$i
++	fi
++
+ 	if [ -n "$CISCO_BANNER" ]; then
+ 		echo "Connect Banner:"
+ 		echo "$CISCO_BANNER" | while read LINE ; do echo "|" "$LINE" ; done
