@@ -1,0 +1,6 @@
+The ``uuid'' PostgreSQL package implements creation of Universally
+Unique Identifiers (UUIDs), also referred to as Globally Unique
+Identifiers (GUIDs).  Although PostgreSQL supports storing UUIDs as a
+native datatype, it does not provide any mechanism for creating them.
+This package wraps openssl-supplied md5 and sha1 functions to create
+UUIDs within PostgreSQL.
