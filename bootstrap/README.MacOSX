@@ -1,15 +1,17 @@
-$NetBSD: README.MacOSX,v 1.9 2010/10/31 21:24:14 gdt Exp $
+$NetBSD: README.MacOSX,v 1.10 2011/03/05 12:36:39 gdt Exp $
 
 
-Mac OS X Snow Leopard Binary ABI problem:
+Mac OS X Snow Leopard 32/64 (i386/x86_64) ABI issue:
 
-Mac OS X Snow Leopard supports 64-Bit binaries on most Intel Macs
-and builds those by default on such machine. This causes problems
-with a lot of packages which get confused because "MACHINE_ARCH"
-is set to "i386" (on a 64-bit system!). There are also packages
-that don't support 64-bit under Mac OS X at all. It is therefore
-recommended that use the "--abi 32" option of "bootstrap"
-under Mac OS X Snow Leopard at the moment.
+Mac OS X Snow Leopard (10.6) supports 64-bit binaries on most Intel
+Macs and builds those by default on such machine.  This causes
+problems with a lot of packages which get confused because
+"MACHINE_ARCH" is set to "i386" (on a 64-bit system!).  There are also
+packages that don't support 64-bit under Mac OS X at all.  Because of
+this, the default for pkgsrc is use use the 32-bit ABI, which results
+in packages being compiled and run in i386 mode.  For a longer
+discussion, see:
+http://mail-index.netbsd.org/pkgsrc-users/2009/09/24/msg010817.html
 
 
 Developer tools:
@@ -58,7 +60,6 @@ env CC=/opt/ibmcmp/vacpp/6.0/bin/xlc CFLAGS=-ma ./bootstrap
 
 Mac OS X Versions
 
-
 pkgsrc is a volunteer project, and individuals support/fix packages
 and platforms as they choose.  However, pkgsrc contributors as a group
 share both a bugtracker and norms about what is ok to break and what
@@ -96,3 +97,6 @@ Mac OS X as follows:
   10.3 and below: ancient, and PRs will be summarily closed.  It is
 	acceptable to give zero consideration to causing structural
 	problems on 10.3 and below. [IGNORED]
+
+(Note that with the impending release of 10.7, it is likely that 10.4
+will be moved to IGNORED.)
