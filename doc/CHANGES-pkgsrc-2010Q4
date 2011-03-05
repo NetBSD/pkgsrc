@@ -215,3 +215,7 @@ Pullup ticket #3374 - requested by taca
 www/mongrel: build fix
 Pullup ticket #3375 - requested by taca
 www/typo3: dependence fix
+Pullup ticket #3377 - requested by tron
+devel/pango: security fix
+Pullup ticket #3378 - requested by tron
+devel/pango: security fix
