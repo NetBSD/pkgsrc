@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/03/05 17:54:35 brook Exp $
+#
+# used by databases/postgresql83-uuid
+# used by databases/postgresql84-uuid
+# used by databases/postgresql90-uuid
+
+DISTNAME=	uuid-freebsd-1.0.2
+PKGNAME=	postgresql${PGSQL_VERSION}-uuid
+CATEGORIES=	databases
+MASTER_SITES=	http://pgfoundry.org/frs/download.php/2605/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	brook@nmsu.edu
+HOMEPAGE=	http://pgfoundry.org/projects/uuid-freebsd/
+COMMENT=	UUID creation functions for PostgreSQL
+LICENSE=	ag-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	gmake
+
+DESCR_SRC=	../../databases/postgresql-uuid/DESCR
+DISTINFO_FILE=	${.CURDIR}/../../databases/postgresql-uuid/distinfo
+PATCHDIR=	../../databases/postgresql-uuid/patches
+PLIST_SRC=	../../databases/postgresql-uuid/PLIST
+
+post-extract:
+	${MV} ${WRKSRC}/uuid-freebsd.c ${WRKSRC}/uuid.c
+	${MV} ${WRKSRC}/uninstall_uuid-freebsd.sql \
+		${WRKSRC}/uninstall_uuid.sql
+	${MV} ${WRKSRC}/uuid-freebsd.sql.in ${WRKSRC}/uuid.sql.in
+
+.include "../../databases/postgresql${PGSQL_VERSION}-client/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
