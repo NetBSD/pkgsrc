@@ -1,0 +1,101 @@
+$NetBSD: patch-bb,v 1.1 2011/03/05 17:54:17 cegger Exp $
+
+--- vpnc.c.orig	2008-11-19 20:55:51.000000000 +0000
++++ vpnc.c
+@@ -360,6 +360,8 @@ static void config_tunnel(struct sa_bloc
+ {
+ 	setenv("VPNGATEWAY", inet_ntoa(s->dst), 1);
+ 	setenv("reason", "connect", 1);
++	setenv("DNS_UPDATE", config[CONFIG_DNS_UPDATE], 1);
++	setenv("TARGET_NETWORKS", config[CONFIG_TARGET_NETWORKS], 1);
+ 	system(config[CONFIG_SCRIPT]);
+ }
+ 
+@@ -1147,7 +1149,7 @@ static struct isakmp_payload *make_our_s
+ 
+ static void lifetime_ike_process(struct sa_block *s, struct isakmp_attribute *a)
+ {
+-	uint32_t value;
++	uint32_t value = 0;
+ 	
+ 	assert(a != NULL);
+ 	assert(a->type == IKE_ATTRIB_LIFE_TYPE);
+@@ -1174,7 +1176,7 @@ static void lifetime_ike_process(struct 
+ 
+ static void lifetime_ipsec_process(struct sa_block *s, struct isakmp_attribute *a)
+ {
+-	uint32_t value;
++	uint32_t value = 0;
+ 	
+ 	assert(a != NULL);
+ 	assert(a->type == ISAKMP_IPSEC_ATTRIB_SA_LIFE_TYPE);
+@@ -2861,28 +2863,34 @@ static void do_phase2_qm(struct sa_block
+ 		free(dh_shared_secret);
+ 		free_isakmp_packet(r);
+ 		
+-		if ((opt_natt_mode == NATT_CISCO_UDP) && s->ipsec.peer_udpencap_port) {
+-			s->esp_fd = make_socket(s, opt_udpencapport, s->ipsec.peer_udpencap_port);
+-			s->ipsec.encap_mode = IPSEC_ENCAP_UDP_TUNNEL;
+-			s->ipsec.natt_active_mode = NATT_ACTIVE_CISCO_UDP;
+-		} else if (s->ipsec.encap_mode != IPSEC_ENCAP_TUNNEL) {
+-			s->esp_fd = s->ike_fd;
+-		} else {
++		if (s->esp_fd == 0) {
++			if ((opt_natt_mode == NATT_CISCO_UDP) && s->ipsec.peer_udpencap_port) {
++				s->esp_fd = make_socket(s, opt_udpencapport, s->ipsec.peer_udpencap_port);
++				s->ipsec.encap_mode = IPSEC_ENCAP_UDP_TUNNEL;
++				s->ipsec.natt_active_mode = NATT_ACTIVE_CISCO_UDP;
++			} else if (s->ipsec.encap_mode != IPSEC_ENCAP_TUNNEL) {
++				s->esp_fd = s->ike_fd;
++			} else {
+ #ifdef IP_HDRINCL
+-			int hincl = 1;
++				int hincl = 1;
+ #endif
+ 		
+-			s->esp_fd = socket(PF_INET, SOCK_RAW, IPPROTO_ESP);
+-			if (s->esp_fd == -1) {
+-				close_tunnel(s);
+-				error(1, errno, "Couldn't open socket of ESP. Maybe something registered ESP already.\nPlease try '--natt-mode force-natt' or disable whatever is using ESP.\nsocket(PF_INET, SOCK_RAW, IPPROTO_ESP)");
+-			}
++				s->esp_fd = socket(PF_INET, SOCK_RAW, IPPROTO_ESP);
++				if (s->esp_fd == -1) {
++					close_tunnel(s);
++					error(1, errno, "Couldn't open socket of ESP. Maybe something registered ESP already.\nPlease try '--natt-mode force-natt' or disable whatever is using ESP.\nsocket(PF_INET, SOCK_RAW, IPPROTO_ESP)");
++				}
++#ifdef FD_CLOEXEC
++				/* do not pass socket to vpnc-script, etc. */
++				fcntl(s->esp_fd, F_SETFD, FD_CLOEXEC);
++#endif
+ #ifdef IP_HDRINCL
+-			if (setsockopt(s->esp_fd, IPPROTO_IP, IP_HDRINCL, &hincl, sizeof(hincl)) == -1) {
+-				close_tunnel(s);
+-				error(1, errno, "setsockopt(esp_fd, IPPROTO_IP, IP_HDRINCL, 1)");
+-			}
++				if (setsockopt(s->esp_fd, IPPROTO_IP, IP_HDRINCL, &hincl, sizeof(hincl)) == -1) {
++					close_tunnel(s);
++					error(1, errno, "setsockopt(esp_fd, IPPROTO_IP, IP_HDRINCL, 1)");
++				}
+ #endif
++			}
+ 		}
+ 		
+ 		s->ipsec.rx.seq_id = s->ipsec.tx.seq_id = 1;
+@@ -3224,9 +3232,14 @@ void process_late_ike(struct sa_block *s
+ 			 */
+ 			/* FIXME: any cleanup needed??? */
+ 
+-			free_isakmp_packet(r);
+-			do_phase2_qm(s);
+-			return;
++			if (rp->u.d.num_spi >= 1 && memcmp(rp->u.d.spi[0], &s->ipsec.tx.spi, 4) == 0) {
++				free_isakmp_packet(r);
++				do_phase2_qm(s);
++				return;
++			} else {
++				DEBUG(2, printf("got isakmp delete with bogus spi, ignoring...\n"));
++				continue;
++			}
+ 		}
+ 		/* skip ipsec-esp delete */
+ 		if (rp->u.d.protocol != ISAKMP_IPSEC_PROTO_ISAKMP) {
