@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/03/12 14:36:57 tonio Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/03/05 22:48:07 tonio Exp $
 bin/weechat-curses
 include/weechat/weechat-plugin.h
 lib/pkgconfig/weechat.pc
@@ -8,9 +8,12 @@ ${PLIST.python}lib/weechat/plugins/python.la
 ${PLIST.ruby}lib/weechat/plugins/ruby.la
 ${PLIST.charset}lib/weechat/plugins/charset.la
 lib/weechat/plugins/alias.la
+lib/weechat/plugins/charset.la
 lib/weechat/plugins/fifo.la
 lib/weechat/plugins/irc.la
 lib/weechat/plugins/logger.la
+lib/weechat/plugins/relay.la
+lib/weechat/plugins/rmodifier.la
 lib/weechat/plugins/xfer.la
 share/locale/cs/LC_MESSAGES/weechat.mo
 share/locale/de/LC_MESSAGES/weechat.mo
@@ -19,4 +22,5 @@ share/locale/fr/LC_MESSAGES/weechat.mo
 share/locale/hu/LC_MESSAGES/weechat.mo
 share/locale/it/LC_MESSAGES/weechat.mo
 share/locale/pl/LC_MESSAGES/weechat.mo
+share/locale/pt_BR/LC_MESSAGES/weechat.mo
 share/locale/ru/LC_MESSAGES/weechat.mo

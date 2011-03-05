@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2008/12/18 20:27:47 ahoka Exp $
+$NetBSD: patch-ab,v 1.6 2011/03/05 22:48:07 tonio Exp $
 
---- src/gui/curses/gui-curses.h.orig	2008-12-18 21:17:01.000000000 +0100
+--- src/gui/curses/gui-curses.h.orig	2011-01-01 13:52:16.000000000 +0000
 +++ src/gui/curses/gui-curses.h
 @@ -21,6 +21,8 @@
  #define __WEECHAT_GUI_CURSES_H 1
