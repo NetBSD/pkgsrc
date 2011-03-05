@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2011/03/05 17:54:17 cegger Exp $
+
+--- config.h.orig	2008-11-19 20:36:12.000000000 +0000
++++ config.h
+@@ -58,6 +58,8 @@ enum config_enum {
+ 	CONFIG_AUTH_MODE,
+ 	CONFIG_CA_FILE,
+ 	CONFIG_CA_DIR,
++	CONFIG_DNS_UPDATE,
++	CONFIG_TARGET_NETWORKS,
+ 	LAST_CONFIG
+ };
+ 
