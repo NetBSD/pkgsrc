@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/01/18 21:57:36 gls Exp $
+# $NetBSD: Makefile,v 1.11 2011/03/05 21:19:58 gls Exp $
 #
 
 DISTNAME=		shotwell-0.8.1
@@ -14,7 +14,7 @@ LICENSE=		gnu-lgpl-v2.1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
-USE_TOOLS+=		gmake bash pkg-config
+USE_TOOLS+=		gmake bash pkg-config msgfmt
 
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
