@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.365 2011/02/17 17:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.366 2011/03/05 18:09:39 brook Exp $
 #
 
 COMMENT=	Databases
@@ -223,6 +223,7 @@ SUBDIR+=	postgresql83-plperl
 SUBDIR+=	postgresql83-plpython
 SUBDIR+=	postgresql83-pltcl
 SUBDIR+=	postgresql83-server
+SUBDIR+=	postgresql83-uuid
 SUBDIR+=	postgresql84
 SUBDIR+=	postgresql84-adminpack
 SUBDIR+=	postgresql84-client
@@ -232,6 +233,7 @@ SUBDIR+=	postgresql84-plperl
 SUBDIR+=	postgresql84-plpython
 SUBDIR+=	postgresql84-pltcl
 SUBDIR+=	postgresql84-server
+SUBDIR+=	postgresql84-uuid
 SUBDIR+=	postgresql90
 SUBDIR+=	postgresql90-adminpack
 SUBDIR+=	postgresql90-client
@@ -247,6 +249,7 @@ SUBDIR+=	postgresql90-pltcl
 SUBDIR+=	postgresql90-replicationtools
 SUBDIR+=	postgresql90-server
 SUBDIR+=	postgresql90-upgrade
+SUBDIR+=	postgresql90-uuid
 SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-bdb-xml
