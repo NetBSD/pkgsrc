@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.554 2011/03/05 13:37:33 tron Exp $
+$NetBSD: CHANGES-2011,v 1.555 2011/03/05 14:51:26 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -898,3 +898,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-euro-ce version 2010 [minskim 2011-03-04]
 	Added fonts/tex-euro-ce-doc version 2010 [minskim 2011-03-04]
 	Updated devel/pango to 1.28.3nb3 [tron 2011-03-05]
+	Updated devel/xulrunner to 1.9.2.15 [tnn 2011-03-05]
+	Updated www/firefox to 3.6.15 [tnn 2011-03-05]
+	Updated www/seamonkey to 2.0.12 [tnn 2011-03-05]
+	Updated mail/thunderbird to 3.1.8 [tnn 2011-03-05]
