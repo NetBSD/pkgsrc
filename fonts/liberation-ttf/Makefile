@@ -1,35 +1,31 @@
-# $NetBSD: Makefile,v 1.3 2008/12/13 15:34:17 ahoka Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/05 19:16:46 ryoon Exp $
 #
 
-DISTNAME=	liberation-fonts-1.04
-PKGNAME=	${DISTNAME:S/fonts/ttf/}
+DISTNAME=	liberation-fonts-ttf-1.06.0.20100721
+PKGNAME=	${DISTNAME:S/-fonts//}
 CATEGORIES=	fonts
-
-# The official repo is https only,
-# so we have to fetch from this strange URL.
-#
-LF_HASH=	4846797ef0fc70b0cbaede2514677c58
-LF_BASEURL=	http://cvs.fedoraproject.org/repo/pkgs/liberation-fonts
-MASTER_SITES=	${LF_BASEURL}/${DISTNAME}.tar.gz/${LF_HASH}/
+MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
 COMMENT=	TrueType fonts from RedHat
+LICENSE=	gnu-gpl-v2 # with some exception
+
+FETCH_USING=	curl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:S/ttf/fonts/}
-
-DOCDIR=		${PREFIX}/share/doc/liberation-ttf
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 FONTS_DIR.ttf=	${FONTDIR}
 
 INSTALLATION_DIRS=	${DOCDIR} ${FONTDIR}
 
 do-install:
+	set -e; \
 	cd ${WRKSRC} && for f in *.ttf ; do \
 		${INSTALL_DATA} $$f ${DESTDIR}${FONTDIR}/$$f ; \
 	done
