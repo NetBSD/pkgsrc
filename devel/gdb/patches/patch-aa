@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/03/10 23:50:49 seb Exp $
+$NetBSD: patch-aa,v 1.4 2011/03/05 09:14:24 obache Exp $
 
 --- Makefile.in.orig	2002-12-10 21:30:40.000000000 +0000
 +++ Makefile.in
@@ -17,7 +17,15 @@ $NetBSD: patch-aa,v 1.3 2003/03/10 23:50:49 seb Exp $
  
  INSTALL_DOSREL = install-dosrel-fake
  
-@@ -707,7 +707,6 @@ INSTALL_MODULES = \
+@@ -372,6 +372,7 @@ BASE_FLAGS_TO_PASS = \
+ 	"CXXFLAGS_FOR_TARGET=$(CXXFLAGS_FOR_TARGET)" \
+ 	"CXX_FOR_TARGET=$(CXX_FOR_TARGET)" \
+ 	"DLLTOOL_FOR_TARGET=$(DLLTOOL_FOR_TARGET)" \
++	"DESTDIR=$(DESTDIR)" \
+ 	"INSTALL=$(INSTALL)" \
+ 	"INSTALL_DATA=$(INSTALL_DATA)" \
+ 	"INSTALL_PROGRAM=$(INSTALL_PROGRAM)" \
+@@ -707,7 +708,6 @@ INSTALL_MODULES = \
  	install-perl \
  	install-prms \
  	install-rcs \
