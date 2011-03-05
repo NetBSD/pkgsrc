@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/02 21:35:35 gls Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/05 21:18:28 gls Exp $
 #
 
 DISTNAME=			mpdas-0.3.0
@@ -13,6 +13,7 @@ LICENSE=			modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=			pkg-config
 USE_LANGUAGES=		c++
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EGDIR}
