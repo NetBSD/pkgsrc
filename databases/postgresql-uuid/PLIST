@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/05 17:54:35 brook Exp $
+lib/postgresql/uuid.so
+share/postgresql/contrib/uninstall_uuid.sql
+share/postgresql/contrib/uuid.sql
