@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.4.1 2011/02/27 00:26:29 tron Exp $
+# $NetBSD: Makefile,v 1.11.4.2 2011/03/05 11:03:04 tron Exp $
 
 DISTNAME=	mongrel-1.1.5
 PKGREVISION=	2
@@ -14,7 +14,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gem_plugin>=0.2.3:../../misc/ruby-gem_plugin
 
 CONFLICTS+=	ruby[1-9][0-9]-mongrel-[0-9]* mongrel-[0-9]*
 
-RUBY_REQD=	1.8.6.110
+# use pre-generated gemspec file to avoid rubygems's incompatibility.
+post-extract:
+	${CP} ${FILESDIR}/gemspec ${WRKDIR}/${DISTNAME}.gemspec
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

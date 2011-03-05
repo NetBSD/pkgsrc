@@ -1,0 +1,176 @@
+--- !ruby/object:Gem::Specification 
+name: mongrel
+version: !ruby/object:Gem::Version 
+  version: 1.1.5
+platform: ruby
+authors: 
+- Zed A. Shaw
+autorequire: 
+bindir: bin
+date: 2008-05-22 04:00:00 +00:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: gem_plugin
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 0.2.3
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: daemons
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 1.0.3
+    version: 
+description: A small fast HTTP library and server that runs Rails, Camping, Nitro and Iowa apps.
+email: ""
+executables: 
+- mongrel_rails
+extensions: 
+- ext/http11/extconf.rb
+extra_rdoc_files: 
+- CHANGELOG
+- COPYING
+- lib/mongrel/camping.rb
+- lib/mongrel/cgi.rb
+- lib/mongrel/command.rb
+- lib/mongrel/configurator.rb
+- lib/mongrel/const.rb
+- lib/mongrel/debug.rb
+- lib/mongrel/gems.rb
+- lib/mongrel/handlers.rb
+- lib/mongrel/header_out.rb
+- lib/mongrel/http_request.rb
+- lib/mongrel/http_response.rb
+- lib/mongrel/init.rb
+- lib/mongrel/rails.rb
+- lib/mongrel/stats.rb
+- lib/mongrel/tcphack.rb
+- lib/mongrel/uri_classifier.rb
+- lib/mongrel.rb
+- LICENSE
+- README
+files: 
+- bin/mongrel_rails
+- CHANGELOG
+- COPYING
+- examples/builder.rb
+- examples/camping/blog.rb
+- examples/camping/README
+- examples/camping/tepee.rb
+- examples/httpd.conf
+- examples/mime.yaml
+- examples/mongrel.conf
+- examples/mongrel_simple_ctrl.rb
+- examples/mongrel_simple_service.rb
+- examples/monitrc
+- examples/random_thrash.rb
+- examples/simpletest.rb
+- examples/webrick_compare.rb
+- ext/http11/ext_help.h
+- ext/http11/extconf.rb
+- ext/http11/http11.c
+- ext/http11/http11_parser.c
+- ext/http11/http11_parser.h
+- ext/http11/http11_parser.java.rl
+- ext/http11/http11_parser.rl
+- ext/http11/http11_parser_common.rl
+- ext/http11_java/Http11Service.java
+- ext/http11_java/org/jruby/mongrel/Http11.java
+- ext/http11_java/org/jruby/mongrel/Http11Parser.java
+- lib/mongrel/camping.rb
+- lib/mongrel/cgi.rb
+- lib/mongrel/command.rb
+- lib/mongrel/configurator.rb
+- lib/mongrel/const.rb
+- lib/mongrel/debug.rb
+- lib/mongrel/gems.rb
+- lib/mongrel/handlers.rb
+- lib/mongrel/header_out.rb
+- lib/mongrel/http_request.rb
+- lib/mongrel/http_response.rb
+- lib/mongrel/init.rb
+- lib/mongrel/mime_types.yml
+- lib/mongrel/rails.rb
+- lib/mongrel/stats.rb
+- lib/mongrel/tcphack.rb
+- lib/mongrel/uri_classifier.rb
+- lib/mongrel.rb
+- LICENSE
+- Manifest
+- mongrel-public_cert.pem
+- mongrel.gemspec
+- README
+- setup.rb
+- test/mime.yaml
+- test/mongrel.conf
+- test/test_cgi_wrapper.rb
+- test/test_command.rb
+- test/test_conditional.rb
+- test/test_configurator.rb
+- test/test_debug.rb
+- test/test_handlers.rb
+- test/test_http11.rb
+- test/test_redirect_handler.rb
+- test/test_request_progress.rb
+- test/test_response.rb
+- test/test_stats.rb
+- test/test_uriclassifier.rb
+- test/test_ws.rb
+- test/testhelp.rb
+- TODO
+- tools/trickletest.rb
+has_rdoc: true
+homepage: http://mongrel.rubyforge.org
+licenses: 
+post_install_message: 
+rdoc_options: 
+- --line-numbers
+- --inline-source
+- --title
+- Mongrel
+- --main
+- README
+require_paths: 
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: 1.8.4
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: mongrel
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 2
+summary: A small fast HTTP library and server that runs Rails, Camping, Nitro and Iowa apps.
+test_files: 
+- test/test_cgi_wrapper.rb
+- test/test_command.rb
+- test/test_conditional.rb
+- test/test_configurator.rb
+- test/test_debug.rb
+- test/test_handlers.rb
+- test/test_http11.rb
+- test/test_redirect_handler.rb
+- test/test_request_progress.rb
+- test/test_response.rb
+- test/test_stats.rb
+- test/test_uriclassifier.rb
+- test/test_ws.rb
+
