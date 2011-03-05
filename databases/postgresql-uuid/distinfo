@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/05 17:54:35 brook Exp $
+
+SHA1 (uuid-freebsd-1.0.2.tgz) = c472fc8b3a2ca7c325db1f2e6a289566260ce494
+RMD160 (uuid-freebsd-1.0.2.tgz) = 90264bf8258f165b038c14d1eed3485121fcc2a6
+Size (uuid-freebsd-1.0.2.tgz) = 3055 bytes
+SHA1 (patch-Makefile) = 2ec9a8318c521e507ed839141474efdee0aef580
+SHA1 (patch-uuid.c) = 59fe4b25bc310b3a3b190569ffbbf7d86516ccd3
