@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2008/01/09 12:25:41 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 2011/03/05 17:46:41 cegger Exp $
 
---- vpnc.8.template.orig	2007-09-10 22:39:48.000000000 +0200
-+++ vpnc.8.template	2007-09-14 16:08:21.000000000 +0200
+--- vpnc.8.template.orig	2008-11-19 20:36:12.000000000 +0000
++++ vpnc.8.template
 @@ -48,9 +48,9 @@ command line options
  .IP \(bu
  config file(s) specified on the command line
@@ -81,3 +81,44 @@ $NetBSD: patch-ae,v 1.1 2008/01/09 12:25:41 hubertf Exp $
  
  See also the
  .B \-\-print\-config
+@@ -187,6 +187,40 @@ Advanced features like manual setting of
+ disabling /etc/resolv.conf rewriting is documented in the README of the
+ vpnc package.
+ 
++.SH ADVANCED USAGE
++The vpnc-connect script shipped with this package some additional
++features:
++.IP "Custom route setting"
++By default, the default route is deleted after connection and replaced
++with the new one (going trough the VPN tunnel device). However, some
++people wish to limit the target address range to few IP ranges.
++This can be done using the config directive
++.B Target networks
++in the config file. For example:
++.RS
++.PD 0
++Target networks 123.234.210.0/24 10.1.0.0/16
++.PD
++.RE
++.IP "Multiple config profiles management"
++You can have multiple config files and select one on connection by
++specifying a short profile name instead of a config file path. In this
++case, the file
++.I @PKG_SYSCONFDIR@/vpnc/PROFILE.conf
++is used as config file (where PROFILE is the short profile name).
++.IP "/etc/resolv.conf update"
++If the package 
++.B resolvconf
++is installed and the VPN gateway sends some DNS server data, the
++script will use resolution to integrate the received data into
++.I /etc/resolv.conf.
++To disable this behaviour, set the config directive
++.I DNSUpdate
++to the
++.I "no"
++value.
++
++
+ .SH TODO
+ .PD 0
+ Certificate support (Pre-Shared-Key + XAUTH is known to be insecure).
