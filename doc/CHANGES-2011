@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.555 2011/03/05 14:51:26 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.556 2011/03/05 18:21:49 brook Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -902,3 +902,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/firefox to 3.6.15 [tnn 2011-03-05]
 	Updated www/seamonkey to 2.0.12 [tnn 2011-03-05]
 	Updated mail/thunderbird to 3.1.8 [tnn 2011-03-05]
+	Added databases/postgresql83-uuid version 1.0.2 [brook 2011-03-05]
+	Added databases/postgresql84-uuid version 1.0.2 [brook 2011-03-05]
+	Added databases/postgresql90-uuid version 1.0.2 [brook 2011-03-05]
