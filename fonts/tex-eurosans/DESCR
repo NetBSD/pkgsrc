@@ -1,0 +1,10 @@
+Provides a convenient interface for using Adobe's freely available Type
+1 Euro fonts. Loading the package defines a new command \euro which
+typesets a Euro symbol. The symbol is always taken from the 'EuroSans'
+family, with the weight (medium or boldface) and shape (normal or
+oblique) varying according to the font currently selected. This Euro
+symbol meets the official design and matches most font families well
+enough, except for typewriter fonts. The fonts themselves are only
+available from Adobe (though the fonts are free of charge, the licence
+conditions prevent CTAN from distributing them). Metrics and maps for
+using the fonts (at all) are available via the adobe-euro package.
