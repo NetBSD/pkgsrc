@@ -1,0 +1,15 @@
+The particular symbol printed by \euro will in general change depending
+on the font family, weight, and shape in use at the time. This symbol
+can come from any source, and the package user has complete control over
+which euro symbol is used in any given situation. The package is
+pre-configured to behave sensibly with many common text fonts and
+available euro symbols. The \euro command can print 'faked' euro symbols
+from a C with two lines across it when no suitable real euro symbol is
+available; the package also includes code for printing fake bold euro
+symbols for use when no real bold symbol exists, as well as
+pre-configured support for a faked italic version of the marvosym font.
+Eurofont comes set up to use euro symbols from Adobe's Eurofonts, the
+marvosym font, the Eurosym font, and any available Text Companion fonts.
+The selection between these can be done using options passed to the
+package. The eurofont package also 'knows' about the China2e font's euro
+symbol, and can be configured to use it.
