@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.569 2011/03/06 19:35:07 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.570 2011/03/06 20:52:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -981,3 +981,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added audio/xmms-nas version 0.2 [wiz 2011-03-06]
 	Added audio/xmms-cdread version 0.14a [wiz 2011-03-06]
 	Updated pkgtools/pkgin to 0.4.2 [imil 2011-03-06]
+	Added fonts/tex-bera version 2010 [minskim 2011-03-06]
+	Added fonts/tex-bera-doc version 2010 [minskim 2011-03-06]
