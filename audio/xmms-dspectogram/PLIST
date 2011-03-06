@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:25 joerg Exp $
-lib/xmms/Visualization/libdspectogram.la
-share/xmms/dspectogram_themes/bg_gtk.xpm
-share/xmms/dspectogram_themes/bg_xmms.xpm
-share/xmms/dspectogram_themes/bg_xmms1.xpm
-share/xmms/dspectogram_themes/bg_xmms2.xpm

@@ -1,4 +1,0 @@
-USB cameras based OV519 Utility Programs
-
-ov519shot ... simple image capture program ( output stdout JPEG file )
-ov519view ... sequential image viewer program
