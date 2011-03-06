@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/02/05 13:38:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2011/03/06 10:22:31 ryoon Exp $
 
 DISTNAME=	spim-8.0
 CATEGORIES=	emulators
@@ -17,7 +17,7 @@ BUILD_DIRS=		spim xspim
 CONFIGURE_SCRIPT=	./Configure
 USE_IMAKE=		yes
 USE_TOOLS+=		gzip flex yacc
-INSTALL_TARGET=		install install-man
+INSTALL_TARGET=		install
 
 SUBST_CLASSES+=		cpudir
 SUBST_STAGE.cpudir=	post-patch
@@ -32,18 +32,18 @@ post-configure:
                 ${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
                         ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 
-#post-install:
-#	@${ECHO} "Installing spim/xspim documentation"
-#	${INSTALL_DATA} ${WRKSRC}/Documentation/spim.man \
-#		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/spim.1
-#	${INSTALL_DATA} ${WRKSRC}/Documentation/xspim.man \
-#		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xspim.1
-#	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/spim.tex \
-#		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-#	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/*.id \
-#		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-#	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/cycle.ps \
-#		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+post-install:
+	@${ECHO} "Installing spim/xspim documentation"
+	${INSTALL_DATA} ${WRKSRC}/Documentation/spim.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/spim.1
+	${INSTALL_DATA} ${WRKSRC}/Documentation/xspim.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xspim.1
+	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/spim.tex \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/*.id \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/cycle.ps \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
