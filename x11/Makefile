@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.631 2011/03/03 12:08:46 obache Exp $
+# $NetBSD: Makefile,v 1.632 2011/03/06 16:02:30 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -12,7 +12,6 @@ SUBDIR+=	Xcomposite
 SUBDIR+=	Xfixes
 SUBDIR+=	XmHTML
 SUBDIR+=	Xrender
-SUBDIR+=	acidlaunch
 SUBDIR+=	alacarte
 SUBDIR+=	antiright
 SUBDIR+=	applewmproto
@@ -30,7 +29,6 @@ SUBDIR+=	damageproto
 SUBDIR+=	desklaunch
 SUBDIR+=	deskmenu
 SUBDIR+=	devilspie
-SUBDIR+=	dfm
 SUBDIR+=	dmenu
 SUBDIR+=	docker
 SUBDIR+=	dri2proto
@@ -82,7 +80,6 @@ SUBDIR+=	gselt
 SUBDIR+=	gst-plugins0.10-x11
 SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
-SUBDIR+=	gtk-engines
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk2
 SUBDIR+=	gtk2+extra
@@ -331,7 +328,6 @@ SUBDIR+=	rox-wallpaper
 SUBDIR+=	ruby-gnome2-gtk
 SUBDIR+=	ruby-gnome2-gtksourceview2
 SUBDIR+=	ruby-gnome2-vte
-SUBDIR+=	ruby-gtk
 SUBDIR+=	ruby-tk
 SUBDIR+=	rxvt
 SUBDIR+=	rxvt-unicode

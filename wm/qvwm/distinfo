@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/06/10 23:59:51 martin Exp $
-
-SHA1 (qvwm-1.1.12.tar.gz) = 27b43148a750e5b6b3efac6a6506819adbc2ed4d
-RMD160 (qvwm-1.1.12.tar.gz) = ed8d78b43e4e5778224af3a490daa2d31eb9a914
-Size (qvwm-1.1.12.tar.gz) = 434618 bytes
-SHA1 (patch-aa) = f6417e645c7a17e7f826cebea51ba34713071a9d
-SHA1 (patch-ab) = 8f1b98de794a524cc58a75850c8384c92f7faf1d
-SHA1 (patch-ac) = b066895160e6123aed9372477ea881d146b2b8aa
-SHA1 (patch-ad) = 8e4d793b37de9b64132e105b19d5a7533d04db24

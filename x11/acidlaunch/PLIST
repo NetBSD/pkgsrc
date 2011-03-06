@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:44 joerg Exp $
-bin/acidlaunch
-man/man1/acidlaunch.1
-share/acidlaunch/config.xml
-share/acidlaunch/default.png

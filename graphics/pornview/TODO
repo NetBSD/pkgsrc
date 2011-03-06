@@ -1,2 +1,0 @@
-Dumps core when compiled with xine support (NetBSD 2.1.0/i386).
-Patch it to use pkgsrc's libexif?
