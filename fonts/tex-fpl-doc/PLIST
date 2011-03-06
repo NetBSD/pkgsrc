@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 23:24:03 minskim Exp $
+share/texmf-dist/doc/fonts/fpl/COPYING
+share/texmf-dist/doc/fonts/fpl/README
