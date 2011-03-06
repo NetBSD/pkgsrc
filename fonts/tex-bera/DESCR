@@ -1,0 +1,6 @@
+The package contains the Bera Type 1 fonts, and a zip archive containing
+files to use the fonts with LaTeX. Bera is a set of three font families:
+Bera Serif (a slab-serif Roman), Bera Sans (a Frutiger descendant), and
+Bera Mono (monospaced/typewriter). Support for use in LaTeX is also
+provided. The Bera family is a repackaging, for use with TeX, of the
+Bitstream Vera family.
