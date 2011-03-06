@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/06/20 01:09:07 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2011/03/06 16:04:32 wiz Exp $
 
 DISTNAME=	normalize-0.7.7
 CATEGORIES=	audio
@@ -19,8 +19,6 @@ CONFIGURE_ARGS+=	--with-audiofile
 CONFIGURE_ARGS+=	--with-mad
 
 REPLACE_PERL=		src/normalize-mp3
-
-.include "options.mk"
 
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
