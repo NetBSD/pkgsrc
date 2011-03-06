@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.588 2011/03/06 16:02:29 wiz Exp $
+# $NetBSD: Makefile,v 1.589 2011/03/06 16:20:00 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -156,7 +156,6 @@ SUBDIR+=	gimp-refocus-it
 SUBDIR+=	gimp-resynthesizer
 SUBDIR+=	gimp-ufraw
 SUBDIR+=	gimp-warp-sharp
-SUBDIR+=	gimp1-base
 SUBDIR+=	gimp2-wideangle
 SUBDIR+=	giram
 SUBDIR+=	gle

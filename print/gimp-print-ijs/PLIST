@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/11 19:05:26 jlam Exp $
-bin/ijsgimpprint
-share/doc/gimp-print-ijs/README
