@@ -228,3 +228,5 @@ chat/cgiirc: security update
 Pullup ticket #3381 -- requested by tnn
 www/firefox: dependency update
 devel/xulrunner: security fixes
+Pullup ticket #3379 - requested by tnn
+mail/thunderbird: security update
