@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.3 2001/04/08 00:24:56 itojun Exp $
+$NetBSD: patch-ac,v 1.4 2011/03/06 03:47:27 dholland Exp $
 
---- agent/filter/io.c.orig	Sun Mar 18 03:31:20 2001
-+++ agent/filter/io.c	Sun Apr  8 09:11:37 2001
-@@ -130,6 +130,9 @@
+--- agent/filter/io.c.orig	2001-03-17 18:31:20.000000000 +0000
++++ agent/filter/io.c
+@@ -97,6 +97,7 @@
+ #include "portable.h"
+ #include <sys/types.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <errno.h>
+ #include <sys/stat.h>
+ 
+@@ -130,6 +131,9 @@
  #ifdef I_SYS_IOCTL
  #include <sys/ioctl.h>
  #endif
@@ -12,7 +20,17 @@ $NetBSD: patch-ac,v 1.3 2001/04/08 00:24:56 itojun Exp $
  
  /*
   * The following should be defined in <sys/stat.h>.
-@@ -724,7 +727,7 @@
+@@ -217,9 +221,6 @@ struct pool {
+ private int queued = 0;			/* True when mail queued safely */
+ private struct mail mail;		/* Where mail is expected to lie */
+ 
+-extern int errno;				/* System call error status */
+-extern char *malloc();			/* Memory allocation */
+-extern char *realloc();			/* Re-allocation of memory pool */
+ extern char *logname();			/* User's login name */
+ extern char *strsave();			/* Save string somewhere in core */
+ extern int loglvl;				/* Logging level */
+@@ -724,7 +725,7 @@ char *location;
  	 */
  
  	char **envp;			/* Environment pointer */
