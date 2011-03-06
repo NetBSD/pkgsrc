@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 23:22:16 minskim Exp $
+share/texmf-dist/doc/latex/eurosans/README
+share/texmf-dist/doc/latex/eurosans/eurosans.pdf
+share/texmf-dist/doc/latex/eurosans/eurosans.tex
