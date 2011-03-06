@@ -1,0 +1,11 @@
+The FPL Fonts provide a set of SC/OsF fonts for URW Palladio L which are
+compatible with respect to metrics with the Palatino SC/OsF fonts from
+Adobe. Note that it is not the aim to exactly reproduce the outlines of
+the original Adobe fonts. The SC and OsF in the FPL Fonts were designed
+with the glyphs from URW Palladio L as starting point. For some glyphs
+(e.g. 'o') I got the best result by scaling and boldening. For others
+(e.g. 'h') shifting selected portions of the character gave more
+satisfying results. All this was done using the free font editor
+FontForge. The kerning data in these fonts comes from Walter Schmidt's
+improved Palatino metrics. LaTeX use is enabled by the mathpazo package,
+which is part of the psnfss distribution.
