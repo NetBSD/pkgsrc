@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10160 2011/03/05 22:48:57 tonio Exp $
+$NetBSD: TODO,v 1.10161 2011/03/06 16:10:26 asau Exp $
 
 Suggested new packages
 ======================
@@ -868,7 +868,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.4
 	o libdockapp-0.6.1
 	o libdrm-2.4.23
-	o libev-4.04
 	o libextractor-0.6.2
 	o libflash-0.4.13
 	o libfontenc-1.1.0
