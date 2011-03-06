@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/03/06 16:46:04 wiz Exp $
+
+--- cdread.c.orig	2001-08-18 14:29:43.000000000 +0300
++++ cdread.c
+@@ -377,7 +377,7 @@ init_thread(gchar *device)
+ }
+ 
+ void
+-_fini(void)
++cd_finish(void)
+ {
+ 	CD_LOCK();
+ 	while (cd_list)
+@@ -388,6 +388,9 @@ _fini(void)
+ 		xmms_usleep(10000);
+ }
+ 
++static void destruct(void) __attribute__((destructor));
++static void destruct(void) { cd_finish(); }
++
+ static void
+ cd_init(void)
+ {

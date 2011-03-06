@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/06 16:46:04 wiz Exp $
+
+--- playlist.c.orig	2001-06-03 19:58:51.000000000 +0300
++++ playlist.c
+@@ -5,6 +5,8 @@
+ #include "cdread.h"
+ #include "playlist.h"
+ 
++#include <string.h>
++
+ extern GList *playlist;
+ extern pthread_mutex_t playlist_mutex;
+ 
+@@ -161,7 +163,7 @@ playlist_replace(gchar *prefix, GList *l
+ 	pthread_mutex_unlock(&playlist_mutex);
+ 	
+ 	playlistwin_update_list();
+-	if (regen_shuffle) playlist_generate_shuffle_list();
++
+ 	if (set_info_text) mainwin_set_info_text();
+ 	if (restart_playing)
+ 	{
