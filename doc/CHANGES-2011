@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.559 2011/03/05 22:48:57 tonio Exp $
+$NetBSD: CHANGES-2011,v 1.560 2011/03/06 06:01:14 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -908,3 +908,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/liberation-ttf to 1.06.0.20100721 [ryoon 2011-03-05]
 	Updated lang/sbcl to 1.0.46 [asau 2011-03-05]
 	Updated chat/weechat to 0.3.4 [tonio 2011-03-05]
+	Updated lang/python25 to 2.5.5nb2 [dholland 2011-03-06]
+	Updated mail/mailagent to 3.0.73nb1 [dholland 2011-03-06]
+	Updated x11/lesstif to 0.95.2nb1 [dholland 2011-03-06]
+	Updated chat/irssi to 0.8.15nb1 [dholland 2011-03-06]
