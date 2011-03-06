@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2009/07/08 15:00:28 joerg Exp $
-
-SHA1 (xmms-FMRadio-1.4.tgz) = 8c22a2532df986f425341295c7b37f7b93d09560
-RMD160 (xmms-FMRadio-1.4.tgz) = 4dbc178634d9cceb84291d44825d34ab343f6e3e
-Size (xmms-FMRadio-1.4.tgz) = 10378 bytes
-SHA1 (patch-aa) = 51839dd489748321d71d19ac0937966cea96f8a3
-SHA1 (patch-ab) = 8a6411ff75409019b5fde7796866079fef62bf33
-SHA1 (patch-ac) = 945b3c30d80d9602b15223b9852b86d13c5a66fe
-SHA1 (patch-ad) = 32daee9f65164ce7560cf2fa92120bdcd8ce32f7

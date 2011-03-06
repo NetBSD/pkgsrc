@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/12/11 20:29:12 joerg Exp $
-
-SHA1 (liveice-xmms.tar.gz) = a1986bbd7532cc3eb148bc98e0a3baca680b5d96
-RMD160 (liveice-xmms.tar.gz) = d2356bc0bd1ce7268cad9b603c8127de4bcb266e
-Size (liveice-xmms.tar.gz) = 132719 bytes
-SHA1 (patch-aa) = c6dc0b3d423b3f8cbbb3174867a1e037ca9f34d8
-SHA1 (patch-ab) = 2ff694005c49f69ea47fce4a3a30df59ccc961b6
-SHA1 (patch-ac) = 5805b66113494c5f6bab194055662c05d98bbd54
