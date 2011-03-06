@@ -223,3 +223,5 @@ Pullup ticket #3376 - requested by tron
 security/clamav: security fix
 Pullup ticket #3382 - requested by tnn
 www/seamonkey: security fixes.
+Pullup ticket #3380 - requested by gls
+chat/cgiirc: security update
