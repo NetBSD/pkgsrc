@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2011/02/10 16:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2011/03/06 16:36:50 wiz Exp $
 
 DISTNAME=	mjpegtools-1.9.0
 PKGREVISION=	6
@@ -45,12 +45,6 @@ BUILDLINK_TRANSFORM+=	rm:-laudio
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-#
-# GTK+ support is disabled to avoid a dependency on GTK+ when building GNOME2.
-# This only disables the "glav" program.  If you really need it, please add an
-# external package for it.
-#
-#.include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
