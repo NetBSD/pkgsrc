@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.563 2011/03/06 09:01:05 obache Exp $
+$NetBSD: CHANGES-2011,v 1.564 2011/03/06 16:10:26 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -915,3 +915,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/py-django-classy-tags to 0.3.3 [adam 2011-03-06]
 	Updated graphics/mypaint to 0.9.1 [ryoon 2011-03-06]
 	Updated www/firefox-l10n to 3.6.15 [obache 2011-03-06]
+	Updated devel/libev to 4.04 [asau 2011-03-06]
