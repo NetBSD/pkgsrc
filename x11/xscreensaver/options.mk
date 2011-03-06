@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2010/05/08 16:53:06 tez Exp $
+# $NetBSD: options.mk,v 1.7 2011/03/06 16:04:33 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
-PKG_SUPPORTED_OPTIONS=	pam webcollage opengl gdk-pixbuf
+PKG_SUPPORTED_OPTIONS=	pam webcollage opengl
 PKG_SUGGESTED_OPTIONS=	opengl
 
 .include "../../mk/bsd.options.mk"
@@ -39,11 +39,4 @@ CONFIGURE_ARGS+=	--with-gle
 .else
 CONFIGURE_ARGS+=	--without-gl
 CONFIGURE_ARGS+=	--without-gle
-.endif
-
-.if !empty(PKG_OPTIONS:Mgdk-pixbuf)
-CONFIGURE_ARGS+=	--with-pixbuf
-.include "../../graphics/gdk-pixbuf/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-pixbuf
 .endif

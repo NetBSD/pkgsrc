@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/02/26 09:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2011/03/06 16:04:32 wiz Exp $
 #
 
 .include "../../net/mldonkey/Makefile.common"
@@ -13,7 +13,7 @@ USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin libexec/mldonkey
 
-.include "options.mk"
+CONFIGURE_ARGS+=	--enable-gui=newgui2
 
 do-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/mlgui
@@ -24,4 +24,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mlnet+gui \
 		${DESTDIR}${PREFIX}/libexec/mldonkey
 
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+# 2.6.0 is the first ~stable version (for mldonkey)
+BUILDLINK_API_DEPENDS.lablgtk+=	lablgtk>=2.6.0
+.include "../../x11/lablgtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
