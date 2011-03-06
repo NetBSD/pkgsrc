@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.574 2011/03/06 22:31:03 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.575 2011/03/06 23:23:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -991,3 +991,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-bibtopic-doc version 1.1a [minskim 2011-03-06]
 	Updated print/tex-dvipdfm to 0.13.2dnb4 [minskim 2011-03-06]
 	Updated print/tex-dvipdfm-doc to 0.13.2dnb2 [minskim 2011-03-06]
+	Added fonts/tex-eurosans version 2.1 [minskim 2011-03-06]
+	Added fonts/tex-eurosans-doc version 2.1 [minskim 2011-03-06]
