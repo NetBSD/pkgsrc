@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2009/07/17 18:00:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.16.12.1 2011/03/06 12:05:24 tron Exp $
 
-DISTNAME=	cgiirc-0.5.9
-PKGREVISION=	2
+DISTNAME=	cgiirc-0.5.10
+#PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgiirc/}
+MASTER_SITES=	http://cgiirc.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cgiirc.sourceforge.net/
+HOMEPAGE=	http://cgiirc.org/
 COMMENT=	Access IRC from a web browser
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
