@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.475 2011/03/06 21:32:31 minskim Exp $
+# $NetBSD: Makefile,v 1.476 2011/03/06 21:49:58 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -176,6 +176,8 @@ SUBDIR+=	tex-bezos
 SUBDIR+=	tex-bezos-doc
 SUBDIR+=	tex-bibtex
 SUBDIR+=	tex-bibtex-doc
+SUBDIR+=	tex-bibtopic
+SUBDIR+=	tex-bibtopic-doc
 SUBDIR+=	tex-block
 SUBDIR+=	tex-block-doc
 SUBDIR+=	tex-bold-extra
