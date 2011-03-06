@@ -1,0 +1,9 @@
+The package allows the user to include several bibliographies covering
+different 'topics' or bibliographic material into a document (e.g., one
+bibliography for primary literature and one for secondary literature).
+The package provides commands to include either all references from a
+.bib file, only the references actually cited or those not cited in your
+document. The user has to construct a separate .bib file for each
+bibliographic 'topic', each of which will be processed separately by
+BibTeX. If you want to have bibliographies specific to one part of a
+document, see the packages bibunits or chapterbib.
