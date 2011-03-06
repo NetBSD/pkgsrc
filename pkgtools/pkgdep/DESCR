@@ -7,6 +7,6 @@ Usage: pkgdep [opts] package
   -v output graph data for xvcg (graphics/vcg package)
 
 Examples:
-	pkgdep -I /cvs/pkgsrc/INDEX x11/gtk
+	pkgdep -I /cvs/pkgsrc/INDEX x11/gtk2
 	pkgdep -e jpeg
-	pkgdep -v -e imlib |xvcg -
+	pkgdep -v -e imlib2 |xvcg -
