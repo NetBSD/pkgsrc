@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 23:28:17 minskim Exp $
+share/texmf-dist/doc/latex/mathpazo/README.txt
+share/texmf-dist/doc/latex/mathpazo/gpl.txt
+share/texmf-dist/doc/latex/mathpazo/mapfplm.tex
+share/texmf-dist/doc/latex/mathpazo/mapppl.tex
+share/texmf-dist/doc/latex/mathpazo/mapzplm.tex
+share/texmf-dist/doc/latex/mathpazo/pazofnst.tex
+share/texmf-dist/doc/latex/mathpazo/pazotest.pdf
