@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 21:13:34 minskim Exp $
+share/texmf-dist/doc/fonts/eurofont/README.europs
+share/texmf-dist/doc/fonts/eurofont/README.eurosans
+share/texmf-dist/doc/fonts/eurofont/dvidrive.txt
+share/texmf-dist/doc/fonts/eurofont/eurofont.dtx
+share/texmf-dist/doc/fonts/eurofont/eurofont.ins
+share/texmf-dist/doc/fonts/eurofont/eurosamp.pdf
+share/texmf-dist/doc/fonts/eurofont/eurosamp.tex
+share/texmf-dist/doc/fonts/eurofont/eutest.dvi
+share/texmf-dist/doc/fonts/eurofont/eutest.tex
+share/texmf-dist/doc/fonts/eurofont/readme.txt
