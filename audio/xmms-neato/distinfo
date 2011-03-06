@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:55 agc Exp $
-
-SHA1 (neato.tar.gz) = 43bbbf0f87a24073924dd0f6b7c095c468cec867
-RMD160 (neato.tar.gz) = 5354449185c2948ff7a9009139164ab9ae614a82
-Size (neato.tar.gz) = 138206 bytes
-SHA1 (patch-aa) = e91166f84d265f36aa8a0690391dd228b823defa
