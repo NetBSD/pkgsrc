@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.c,v 1.6 2009/06/07 17:59:50 joerg Exp $ */
+/* $NetBSD: pscan.c,v 1.7 2011/03/06 02:23:32 seanb Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -51,7 +51,6 @@
 int verbosity;
 
 static const char *bmake_path;
-static const char *bmake_cmd;
 static const char *output_file;
 static const char *pkgsrc_tree;
 
@@ -122,12 +121,6 @@ main(int argc, char **argv)
 		usage();
 	}
 
-	bmake_cmd = strrchr(bmake_path, '/');
-	if (bmake_cmd == NULL)
-		bmake_cmd = bmake_path;
-	else
-		++bmake_cmd;
-
 	if (client_port) {
 		if (limited_scan != 0 || argc != 1)
 			usage();
@@ -161,7 +154,7 @@ char *
 scan_pkglocation(const char *pkg_location)
 {
 	const char * extract_pbulk_index[] = {
-		bmake_cmd,
+		bmake_path,
 		"pbulk-index",
 		NULL
 	};
@@ -196,7 +189,7 @@ static void
 find_full_tree(void)
 {
 	const char * extract_subdir[] = {
-		bmake_cmd,
+		bmake_path,
 		"show-subdir-var",
 		"VARNAME=SUBDIR",
 		NULL
