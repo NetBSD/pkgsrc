@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 16:46:04 wiz Exp $
+lib/xmms/Input/libcdread.la
+share/doc/${PKGBASE}/AUTHORS
+share/doc/${PKGBASE}/ChangeLog
+share/doc/${PKGBASE}/COPYING
+share/doc/${PKGBASE}/NEWS
+share/doc/${PKGBASE}/README
