@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/03/16 12:35:05 obache Exp $
-
-SHA1 (xmms-nebulus-0.8.0.tar.bz2) = 341bd75b9f38727c2891102815f1608852b81fdc
-RMD160 (xmms-nebulus-0.8.0.tar.bz2) = 2f5f4e20919ca757bd96e3388b39fc21d6fd8ada
-Size (xmms-nebulus-0.8.0.tar.bz2) = 532050 bytes
-SHA1 (patch-aa) = 57462f08d0a7ae5ac4c86d1458a47576c2502463
-SHA1 (patch-ab) = 0333ccdf8d7b9580c195f6ff1d3be2ddf2302234
