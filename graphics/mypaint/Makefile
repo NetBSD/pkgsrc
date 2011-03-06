@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/02/25 09:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/06 07:33:52 ryoon Exp $
 #
 
-DISTNAME=	mypaint-0.9.0
+DISTNAME=	mypaint-0.9.1
 PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gna.org/mypaint/
@@ -25,11 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 FIND_PREFIX:=	SCONSDIR=scons
 .include "../../mk/find-prefix.mk"
-
-SUBST_CLASSES+=			python-cmd
-SUBST_STAGE.python-cmd=		pre-configure
-SUBST_FILES.python-cmd=		brushlib/SConscript
-SUBST_SED.python-cmd=		-e 's,python,${PYTHONBIN},'
 
 SUBST_CLASSES+=			locale-dir
 SUBST_STAGE.locale-dir=		pre-configure
