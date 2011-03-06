@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.3 2001/04/08 00:24:56 itojun Exp $
+$NetBSD: patch-aa,v 1.4 2011/03/06 03:47:27 dholland Exp $
 
---- agent/filter/logfile.c.orig	Sun Mar 18 03:31:21 2001
-+++ agent/filter/logfile.c	Sun Apr  8 09:10:12 2001
-@@ -71,6 +71,9 @@
+Header fixes.
+
+--- agent/filter/logfile.c.orig	2001-03-17 18:31:21.000000000 +0000
++++ agent/filter/logfile.c
+@@ -45,6 +45,10 @@
+ #include "config.h"
+ #include "portable.h"
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <errno.h>
++#include <time.h>
+ #include <sys/types.h>
+ 
+ #ifdef I_TIME
+@@ -71,6 +75,9 @@
  #include <sys/fcntl.h>	/* Try this one in last resort */
  #endif
  #endif
@@ -12,3 +25,14 @@ $NetBSD: patch-aa,v 1.3 2001/04/08 00:24:56 itojun Exp $
  
  #include "confmagic.h"
  
+@@ -86,10 +93,7 @@ private int add_errcode();			/* Print th
+ public char *progname = "ram";	/* Program name */
+ public Pid_t progpid = 0;		/* Program PID */
+ 
+-extern Time_t time();			/* Time in seconds since the Epoch */
+-extern char *malloc();			/* Memory allocation */
+ extern char *strsave();			/* Save string in memory */
+-extern int errno;				/* System error report variable */
+ 
+ /* VARARGS2 */
+ public void add_log(level, format, arg1, arg2, arg3, arg4, arg5)
