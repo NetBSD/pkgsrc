@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2011/03/06 23:25:19 minskim Exp $
+# $NetBSD: Makefile,v 1.181 2011/03/06 23:29:20 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -208,6 +208,8 @@ SUBDIR+=	tex-ly1-doc
 SUBDIR+=	tex-manfnt
 SUBDIR+=	tex-marvosym
 SUBDIR+=	tex-marvosym-doc
+SUBDIR+=	tex-mathpazo
+SUBDIR+=	tex-mathpazo-doc
 SUBDIR+=	tex-metafont
 SUBDIR+=	tex-mflogo
 SUBDIR+=	tex-mflogo-doc
