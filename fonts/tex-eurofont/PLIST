@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 21:13:25 minskim Exp $
+share/texmf-dist/fonts/map/dvips/eurofont/zpeu.map
+share/texmf-dist/tex/latex/eurofont/eurofont.cfg
+share/texmf-dist/tex/latex/eurofont/eurofont.sty
+share/texmf-dist/tex/latex/eurofont/europs.sty
+share/texmf-dist/tex/latex/eurofont/uzmvs.fd
+share/texmf-dist/tex/latex/eurofont/uzpeu.fd
+share/texmf-dist/tex/latex/eurofont/uzpeur.fd
+share/texmf-dist/tex/latex/eurofont/uzpeus.fd
+share/texmf-dist/tex/latex/eurofont/uzpeuss.fd
+share/texmf-dist/tex/latex/eurofont/uzpeut.fd
+share/texmf-dist/tex/latex/eurofont/uzpeutt.fd
