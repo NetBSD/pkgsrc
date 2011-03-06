@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 23:23:50 minskim Exp $
+share/texmf-dist/fonts/afm/public/fpl/fplbij8a.afm
+share/texmf-dist/fonts/afm/public/fpl/fplbj8a.afm
+share/texmf-dist/fonts/afm/public/fpl/fplrc8a.afm
+share/texmf-dist/fonts/afm/public/fpl/fplrij8a.afm
+share/texmf-dist/fonts/afm/public/fpl/pplb9d-kern.afm
+share/texmf-dist/fonts/afm/public/fpl/pplbi9d-kern.afm
+share/texmf-dist/fonts/afm/public/fpl/pplrc9d-kern.afm
+share/texmf-dist/fonts/afm/public/fpl/pplri9d-kern.afm
+share/texmf-dist/fonts/type1/public/fpl/fplbij8a.pfb
+share/texmf-dist/fonts/type1/public/fpl/fplbij8a.pfm
+share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb
+share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfm
+share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb
+share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfm
+share/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb
+share/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfm
