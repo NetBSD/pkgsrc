@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/12/02 15:47:12 wiz Exp $
+$NetBSD: distinfo,v 1.5 2011/03/06 16:09:42 asau Exp $
 
-SHA1 (libev-4.01.tar.gz) = c1d78fd00800fca8ecf3af2c23fb9ad39119d78b
-RMD160 (libev-4.01.tar.gz) = 7bb9f9f0473e8d22d4a776ff10905deb92e97328
-Size (libev-4.01.tar.gz) = 466183 bytes
+SHA1 (libev-4.04.tar.gz) = 7768c2bcce30dbf76672e51642a655479dd45772
+RMD160 (libev-4.04.tar.gz) = cd82228834c51cf152a0214b77a57b0359aead7b
+Size (libev-4.04.tar.gz) = 471713 bytes
