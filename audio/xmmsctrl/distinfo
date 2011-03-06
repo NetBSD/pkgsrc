@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:56 agc Exp $
-
-SHA1 (xmmsctrl-1.6.tar.gz) = 0cfb33cf841eba3bbc0230f66f22d1fa3347a799
-RMD160 (xmmsctrl-1.6.tar.gz) = 1701e9c3b27baccd5021daaf13bc22c9940483e3
-Size (xmmsctrl-1.6.tar.gz) = 7843 bytes
-SHA1 (patch-aa) = 7ef892ee09bee6d3e80863f5599973021b076ff0
-SHA1 (patch-ab) = 1e208da231e3b547a9dccf8cfcf406b7143732c8

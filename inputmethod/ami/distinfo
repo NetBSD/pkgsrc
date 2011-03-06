@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/06/12 02:14:33 joerg Exp $
-
-SHA1 (ami-1.0.11.tar.gz) = 3caf11b08b61b22d7d7f947198e2b18e35eb9fff
-RMD160 (ami-1.0.11.tar.gz) = 41fcda411b76d4b58ec7d38354097fa0e3186621
-Size (ami-1.0.11.tar.gz) = 296596 bytes
-SHA1 (patch-aa) = 7f337fa358819e9ae6327602703353ea2a9ba6a8
-SHA1 (patch-ab) = 08e25131ea5c099fcf46193ea925fb1d9d0a6fdb
-SHA1 (patch-ac) = b07887aceb8041de3e4675338ea133ad28169d90
