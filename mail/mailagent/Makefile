@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/10/09 07:26:04 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/03/06 03:47:26 dholland Exp $
 
 DISTNAME=		mailagent-3.0.73
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:S/by-module/by-authors\/id\/RAM/g}
 
