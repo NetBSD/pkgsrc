@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 21:30:32 minskim Exp $
+share/texmf-dist/doc/latex/bezos/README
+share/texmf-dist/doc/latex/bezos/accents.pdf
+share/texmf-dist/doc/latex/bezos/accents.tex
+share/texmf-dist/doc/latex/bezos/babeltools.pdf
+share/texmf-dist/doc/latex/bezos/babeltools.tex
+share/texmf-dist/doc/latex/bezos/bezos.pdf
+share/texmf-dist/doc/latex/bezos/bezos.tex
+share/texmf-dist/doc/latex/bezos/esindex.pdf
+share/texmf-dist/doc/latex/bezos/esindex.tex
+share/texmf-dist/doc/latex/bezos/tensind.pdf
+share/texmf-dist/doc/latex/bezos/tensind.tex
