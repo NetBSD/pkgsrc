@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.566 2011/03/06 16:47:41 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.567 2011/03/06 16:47:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -979,3 +979,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed x11/ruby-gtk [wiz 20110306]
 	Removed graphics/gimp1-base [wiz 20110306]
 	Added audio/xmms-nas version 0.2 [wiz 2011-03-06]
+	Added audio/xmms-cdread version 0.14a [wiz 2011-03-06]
