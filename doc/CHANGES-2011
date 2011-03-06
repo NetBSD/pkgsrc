@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.561 2011/03/06 06:29:02 adam Exp $
+$NetBSD: CHANGES-2011,v 1.562 2011/03/06 07:36:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/lesstif to 0.95.2nb1 [dholland 2011-03-06]
 	Updated chat/irssi to 0.8.15nb1 [dholland 2011-03-06]
 	Updated www/py-django-classy-tags to 0.3.3 [adam 2011-03-06]
+	Updated graphics/mypaint to 0.9.1 [ryoon 2011-03-06]
