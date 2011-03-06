@@ -1,10 +1,10 @@
-$NetBSD: patch-directory_c-sdk_ldap_include_portable.h,v 1.2 2010/07/21 11:48:05 tnn Exp $
+$NetBSD: patch-directory_c-sdk_ldap_include_portable.h,v 1.2.6.1 2011/03/06 19:04:10 tron Exp $
 
 Add DragonFly support.
 https://bugzilla.mozilla.org/show_bug.cgi?id=577298
 
---- directory/c-sdk/ldap/include/portable.h.orig	2006-10-03 20:43:40.000000000 +0000
-+++ directory/c-sdk/ldap/include/portable.h
+--- directory/sdks/c-sdk/ldap/include/portable.h.orig	2006-10-03 20:43:40.000000000 +0000
++++ directory/sdks/c-sdk/ldap/include/portable.h
 @@ -122,8 +122,11 @@
   * some systems don't have the BSD re_comp and re_exec routines
   */

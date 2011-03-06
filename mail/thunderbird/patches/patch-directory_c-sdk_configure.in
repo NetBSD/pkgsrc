@@ -1,10 +1,10 @@
-$NetBSD: patch-directory_c-sdk_configure.in,v 1.1 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-directory_c-sdk_configure.in,v 1.1.6.1 2011/03/06 19:04:10 tron Exp $
 
 Add DragonFly support.
 https://bugzilla.mozilla.org/show_bug.cgi?id=577298
 
---- directory/c-sdk/configure.in.orig	2009-10-06 21:43:08.000000000 +0000
-+++ directory/c-sdk/configure.in
+--- directory/sdks/c-sdk/configure.in.orig	2009-10-06 21:43:08.000000000 +0000
++++ directory/sdks/c-sdk/configure.in
 @@ -1233,6 +1233,16 @@ tools are selected during the Xcode/Deve
      _DEBUG_FLAGS=
      ;;
