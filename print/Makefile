@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.473 2011/03/06 16:02:29 wiz Exp $
+# $NetBSD: Makefile,v 1.474 2011/03/06 16:20:01 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -45,10 +45,6 @@ SUBDIR+=	foomatic4-db
 SUBDIR+=	foomatic4-db-engine
 SUBDIR+=	foomatic4-filters
 SUBDIR+=	ghostscript
-SUBDIR+=	gimp-print-cups
-SUBDIR+=	gimp-print-escputil
-SUBDIR+=	gimp-print-ijs
-SUBDIR+=	gimp-print-lib
 SUBDIR+=	glabels
 SUBDIR+=	gtklp
 SUBDIR+=	gutenprint-lib
