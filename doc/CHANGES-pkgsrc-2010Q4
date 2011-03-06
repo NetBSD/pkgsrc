@@ -225,3 +225,6 @@ Pullup ticket #3382 - requested by tnn
 www/seamonkey: security fixes.
 Pullup ticket #3380 - requested by gls
 chat/cgiirc: security update
+Pullup ticket #3381 -- requested by tnn
+www/firefox: dependency update
+devel/xulrunner: security fixes
