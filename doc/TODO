@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10161 2011/03/06 16:10:26 asau Exp $
+$NetBSD: TODO,v 1.10162 2011/03/06 16:43:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -331,10 +331,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GConf-2.32.1
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.6.7.10
-	o JBidwatcher-2.1.4
+	o ImageMagick-6.6.8.0
+	o JBidwatcher-2.1.4.1
 	o MAMEDiff-2.30
-	o Mesa-7.10
+	o Mesa-7.10.1
 	o MesaLib-7.10
 	o PAM-0.99.7.1
 	o REminiscence-0.1.9
@@ -343,7 +343,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RealPlayer-11
 	o Sigil-0.3.4
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.9
+	o TeXmacs-1.0.7.10
 	o TiffIO-130e
 	o XaoS-3.5
 	o YoSucker-81
@@ -357,7 +357,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.9.0
 	o aewm++-1.0.27
 	o afterstep-2.2.11
-	o akonadi-1.5.0
+	o akonadi-1.5.1
 	o album-4.06
 	o aliados-0.2.0
 	o alsa-1.0.23
@@ -445,10 +445,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.7.46
+	o calibre-0.7.48
 	o camlimages-4.0.0
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
+	o cdialog-1.1.20110302
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
@@ -502,9 +503,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.7
 	o denemo-0.8.22
 	o dhid-5.3
+	o dialog-1.1.20110302
 	o diffpdf-1.1.5
 	o diffstat-1.54
-	o digikam-1.8.0
+	o digikam-1.9.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.2.1
@@ -630,9 +632,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fotoxx-11.02
+	o fotoxx-11.03
 	o fox-1.6.41
-	o frama-c-20101202
+	o frama-c-20110201
+	o freeciv-2.2.5
 	o freeglut-2.4.0
 	o freenet-0.7
 	o freesci-0.6.4
@@ -713,7 +716,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gplcver-2.12a
-	o gpredict-1.2
+	o gpredict-1.3
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps3-3.2.5
@@ -751,7 +754,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hdf5-1.8.5
 	o heel-1.0.2
 	o heimdal-1.2.1
-	o help2man-1.38.4
+	o help2man-1.39.1
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.9.0
@@ -809,10 +812,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kaffeine-0.8.7
 	o kapooka-0.3
 	o kbibtex-0.2.2
-	o kde4-4.6.0
+	o kde4-4.6.1
 	o kdevelop-4.2
 	o kdrill-6.5
-	o kipi-plugins-1.8.0
+	o kipi-plugins-1.9.0
 	o kismet-2011.01r1
 	o kmess-1.5.1
 	o kmp-0.5
@@ -856,7 +859,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXpm-3.5.9
 	o libXrandr-1.3.1
 	o libXres-1.0.5
-	o libXt-1.0.9
+	o libXt-1.1.0
 	o libXtst-1.2.0
 	o libXv-1.0.6
 	o libXxf86dga-1.1.2
@@ -880,6 +883,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnomedb-3.1.2
 	o libgnomeui-2.24.5
 	o libhydrogen-0.9.2
+	o libidn-1.20
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o libjpeg-turbo-1.1.0
@@ -918,6 +922,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lottanzb-0.5.3
 	o lpairs-1.0.4
 	o lq-sp-1.3.4.13
+	o ltris-1.0.16
 	o luit-1.1.0
 	o lwm-1.2.2
 	o lyx-1.6.9
@@ -974,6 +979,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-2.10.1
+	o mono-addins-0.6
 	o moodle-2.0 [pkg/44195]
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
@@ -986,7 +992,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mrtg-2.17.1
 	o mserv-devel-0.41
 	o mtools-4.0.14
-	o mu-0.9.3
 	o multitail-5.2.7
 	o munin-1.4.4
 	o muse-0.9.2
@@ -1047,7 +1052,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-Perl-Tidy-20101217
-	o p5-PerlMagick-6.6.7.10
+	o p5-PerlMagick-6.6.8.0
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1108,7 +1113,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.0 [pkg/42941]
 	o ptlib-2.8.3
 	o puf-0.93.3
-	o puppet-2.6.3
+	o puppet-2.6.4
 	o puzzles-9109
 	o pv-1.1.4
 	o pwlib-1.11.1
@@ -1132,6 +1137,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-markdown-2.0.3 [pkg/43448]
 	o py-networkx-1.2 [pkg/43790]
 	o py-psycopg-2.4
+	o py-simplejson-2.1.3
 	o py-sybase-0.37
 	o py-twisted-10.2.0
 	o py-uwsgi-0.9.5.1 [pkg/43400]
@@ -1156,12 +1162,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdp-1.6
 	o recordproto-1.14.1
 	o redland-1.0.13.1
-	o renderproto-0.11.1
-	o resourceproto-1.1.1
 	o remind-3.1.10
 	o rendercheck-1.4
 	o renderproto-0.11.1
-	o rep-gtk-0.90.4
+	o rep-gtk-0.90.5
 	o resize_image-0.7
 	o resourceproto-1.1.1
 	o rgb-1.0.4
@@ -1193,7 +1197,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scapy-2.2.0
 	o scew-0.4.0
 	o sch-3.8.3
-	o scilab-5.3.0
+	o scilab-5.3.1
 	o scm-5e7
 	o scmgit-base-1.7.4.1
 	o scmgit-docs-1.7.4.1
@@ -1342,7 +1346,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-1.2.2
-	o wine-devel-1.3.14
+	o wine-devel-1.3.15
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1356,7 +1360,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.3
-	o x264-devel-20110219
+	o x264-devel-20110305
 	o xanalyser-1.30
 	o xapian-1.2.4
 	o xapian-omega-1.2.4
@@ -1386,7 +1390,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xeyes-1.1.1
 	o xf86-input-keyboard-1.5.0
 	o xf86-input-mouse-1.6.0
-	o xf86-input-vmmouse-12.6.10
+	o xf86-input-vmmouse-12.7.0
 	o xf86-input-void-1.3.1
 	o xf86-video-apm-1.2.3
 	o xf86-video-ark-0.7.3
@@ -1503,9 +1507,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yodl-2.14.3
 	o ysm-2.9.9.1
 	o yorick-2.1.05
+	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.21
+	o zile-2.3.22
 	o zircon-1.18.256
 	o zlib-1.2.5
 	o zoom-1.1.3
