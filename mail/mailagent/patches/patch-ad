@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1 2011/03/06 03:47:27 dholland Exp $
+
+--- agent/filter/hash.c~	2001-03-17 18:31:20.000000000 +0000
++++ agent/filter/hash.c
+@@ -27,6 +27,9 @@
+  *
+  */
+ 
++#include <stdlib.h>
++#include <string.h>
++
+ #include "config.h"
+ #include "portable.h"
+ #include "hash.h"
+@@ -41,8 +44,6 @@ private uint32 hashcode();			/* The hahs
+ private int prime();				/* Is a number a prime one? */
+ private uint32 nprime();			/* Find next prime number */
+ 
+-extern char *malloc();				/* Memory allocation */
+-extern char *calloc();				/* Character allocation */
+ extern char *strsave();				/* Save string in memory */
+ 
+ public int ht_create(ht, n)
