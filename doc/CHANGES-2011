@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.576 2011/03/06 23:25:19 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.577 2011/03/06 23:29:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -995,3 +995,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-eurosans-doc version 2.1 [minskim 2011-03-06]
 	Added fonts/tex-fpl version 1.002 [minskim 2011-03-06]
 	Added fonts/tex-fpl-doc version 1.002 [minskim 2011-03-06]
+	Added fonts/tex-mathpazo version 1.003 [minskim 2011-03-06]
+	Added fonts/tex-mathpazo-doc version 1.003 [minskim 2011-03-06]
