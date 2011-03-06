@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 21:49:03 minskim Exp $
+share/texmf-dist/doc/latex/bibtopic/README
+share/texmf-dist/doc/latex/bibtopic/articles.bib
+share/texmf-dist/doc/latex/bibtopic/bibtopic.pdf
+share/texmf-dist/doc/latex/bibtopic/books.bib
+share/texmf-dist/doc/latex/bibtopic/sample.tex
