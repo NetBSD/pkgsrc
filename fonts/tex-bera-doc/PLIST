@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/06 20:51:26 minskim Exp $
+share/texmf-dist/doc/fonts/bera/LICENSE
+share/texmf-dist/doc/fonts/bera/README
+share/texmf-dist/doc/fonts/bera/bera.pdf
+share/texmf-dist/doc/fonts/bera/bera.txt
