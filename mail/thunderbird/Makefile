@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2010/12/11 14:34:40 tnn Exp $
+# $NetBSD: Makefile,v 1.64.2.1 2011/03/06 19:04:09 tron Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		3.1.7
+TB_VER=		3.1.8
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +17,8 @@ WRKSRC=		${WRKDIR}/comm-1.9.2
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	PLIST
 
-CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
-CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
+CONFIG_GUESS_OVERRIDE+=	directory/sdks/c-sdk/config/autoconf/config.guess
+CONFIG_SUB_OVERRIDE+=	directory/sdks/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=mail
 CONFIGURE_ARGS+=	--enable-static
@@ -26,12 +26,12 @@ CONFIGURE_ARGS+=	--enable-static
 ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 
 pre-configure:
-	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/directory/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
-	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/directory/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
