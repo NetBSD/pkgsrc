@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/03/06 16:45:08 wiz Exp $
+
+--- nas.h.orig	1999-08-07 05:52:06.000000000 +0300
++++ nas.h
+@@ -21,7 +21,7 @@
+ #ifndef NAS_H
+ #define NAS_H
+ 
+-#include "config.h"
++/* #include "config.h" */
+ 
+ #include <gtk/gtk.h>
+ 
