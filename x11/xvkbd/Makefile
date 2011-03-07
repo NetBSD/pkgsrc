@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 11:57:36 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/07 08:52:46 ryoon Exp $
 #
 
 DISTNAME=	xvkbd-3.2
 CATEGORIES=	x11
 MASTER_SITES=	http://homepage3.nifty.com/tsato/xvkbd/
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://homepage3.nifty.com/tsato/xvkbd/
 COMMENT=	The xvkbd is a virtual (graphical) keyboard program for X
 LICENSE=	gnu-gpl-v2
