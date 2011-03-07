@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/06/16 06:40:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/07 21:32:47 gls Exp $
 
-DISTNAME=	moodle-1.9.9
+DISTNAME=	moodle-2.0.2
 CATEGORIES=	www
-MASTER_SITES=	http://download.moodle.org/stable19/ \
-		http://download2.moodle.org/stable19/ \
-		http://download3.moodle.org/stable19/ \
-		http://download4.moodle.org/stable19/
+MASTER_SITES=	http://download.moodle.org/stable20/ \
+		http://download2.moodle.org/stable20/ \
+		http://download3.moodle.org/stable20/ \
+		http://download4.moodle.org/stable20/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wenheping@gmail.com
@@ -19,10 +19,15 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.2.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.2.0:../../net/php-xmlrpc
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.2.0:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.2.0:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
 
 EGDIR=			share/examples/moodle
 MOODLEDIR=		${PREFIX}/share/moodle
-MOODLEDATADIR=		${PREFIX}/share/moodledata
+MOODLEDATADIR=		${PREFIX}/moodledata
 
 PKG_DESTDIR_SUPPORT=	destdir
 INSTALLATION_DIRS=	${EGDIR} share/moodle
@@ -56,18 +61,19 @@ SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
 SUBST_STAGE.php=	post-patch
 SUBST_FILES.php=	admin/mailout-debugger.php admin/process_email.php mod/chat/chatd.php
-SUBST_SED.php=		-e "s,/usr/bin/php,/usr/pkg/bin/php,g"
+SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
-SUBST_CLASSES+=         perl
+SUBST_CLASSES+=		perl
 SUBST_MESSAGE.perl=	Fixing the path of perl.
 SUBST_STAGE.perl=	post-patch
 SUBST_FILES.perl=	filter/algebra/algebra2tex.pl
-SUBST_SED.perl=		-e "s,/usr/bin/perl,/usr/pkg/bin/perl,g"
+SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 
 WRKSRC=			${WRKDIR}/moodle
 
 post-extract:
 	${CP} ${FILESDIR}/moodle.conf ${WRKDIR}/moodle.conf
+	${RM} ${WRKSRC}/.gitignore
 
 do-install:
 	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL_DATA_DIR} \
