@@ -1,0 +1,13 @@
+$NetBSD: patch-src_defines.h.in,v 1.1.1.1 2011/03/07 07:02:06 ryoon Exp $
+
+--- src/defines.h.in.orig	2010-11-20 20:07:29.000000000 +0000
++++ src/defines.h.in
+@@ -74,7 +74,7 @@ arg(release_label);
+ #endif
+ 
+ 
+- #ifdef Q_OS_FREEBSD
++ #if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
+   const QString qgt_plugins_dir = "${QGT_PLUGIN_DIRECTORY}";
+   const QString qgt_l10n_dir = "${QGT_L10N_DIRECTORY}";
+   const QString qgt_config_path = QDir::homePath() + QDir::separator() +".config"
