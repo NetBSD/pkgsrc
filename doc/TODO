@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10164 2011/03/07 13:46:14 adam Exp $
+$NetBSD: TODO,v 1.10165 2011/03/07 21:33:08 gls Exp $
 
 Suggested new packages
 ======================
@@ -979,7 +979,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o monit-5.1.1
 	o mono-2.10.1
 	o mono-addins-0.6
-	o moodle-2.0 [pkg/44195]
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mp3splt-2.2.7
