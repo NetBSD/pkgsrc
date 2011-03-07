@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/07 07:02:06 ryoon Exp $
+
+SHA1 (qgoogletranslator-1.2.1.tar.bz2) = 7c41aef23f770f462ffa3fae502fc62e8fe56453
+RMD160 (qgoogletranslator-1.2.1.tar.bz2) = 1e0032ff76be79a826d8329f5021ef6ee5fdf969
+Size (qgoogletranslator-1.2.1.tar.bz2) = 279120 bytes
+SHA1 (patch-aa) = a2665fbd93aa3115f901d4ba519e2bc1aa76ccb7
+SHA1 (patch-ab) = 9334616d59488f8c66daa6ac17a0202dd8fb4bf5
+SHA1 (patch-src_3rdparty_qtsingleapplication_qtlocalpeer.cpp) = 8cfb8aab491ebdf3b46dea7cab089a85718e5cdb
