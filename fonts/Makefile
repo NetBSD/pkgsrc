@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.182 2011/03/07 19:54:30 minskim Exp $
+# $NetBSD: Makefile,v 1.183 2011/03/07 20:05:22 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -218,6 +218,8 @@ SUBDIR+=	tex-ncntrsbk
 SUBDIR+=	tex-palatino
 SUBDIR+=	tex-psnfss
 SUBDIR+=	tex-psnfss-doc
+SUBDIR+=	tex-pxfonts
+SUBDIR+=	tex-pxfonts-doc
 SUBDIR+=	tex-rsfs
 SUBDIR+=	tex-rsfs-doc
 SUBDIR+=	tex-stmaryrd

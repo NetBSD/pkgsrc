@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.584 2011/03/07 19:54:30 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.585 2011/03/07 20:05:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1005,3 +1005,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-dvipdfmx-doc to 2010.21369 [minskim 2011-03-07]
 	Added fonts/tex-ncntrsbk version 2010 [minskim 2011-03-07]
 	Added fonts/tex-zapfchan version 2010 [minskim 2011-03-07]
+	Added fonts/tex-pxfonts version 2010 [minskim 2011-03-07]
+	Added fonts/tex-pxfonts-doc version 2010 [minskim 2011-03-07]
