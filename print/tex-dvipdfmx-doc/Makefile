@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/01/21 18:34:14 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/07 19:33:18 minskim Exp $
 
 DISTNAME=	dvipdfmx.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2010.20279
-TEXLIVE_REV=	20279
+PKGNAME=	tex-${DISTNAME:S/./-/}-2010.21369
+TEXLIVE_REV=	21369
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-dvipdfmx
