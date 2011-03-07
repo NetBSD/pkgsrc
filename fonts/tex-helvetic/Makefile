@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/01/18 21:35:46 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/07 19:52:16 minskim Exp $
 
 DISTNAME=	helvetic
 PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	21101
+TEXLIVE_REV=	21570
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Adobe Helvetica fonts
