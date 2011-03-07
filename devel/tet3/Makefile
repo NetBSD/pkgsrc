@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/07/12 02:46:37 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2011/03/07 05:37:41 obache Exp $
 
 DISTNAME=	tet3.7-unsup.src
 PKGNAME=	tet3-3.7
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tetworks.opengroup.org/
 COMMENT=	The Open Group test harness
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
