@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.585 2011/03/07 20:05:22 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.586 2011/03/07 20:52:22 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-zapfchan version 2010 [minskim 2011-03-07]
 	Added fonts/tex-pxfonts version 2010 [minskim 2011-03-07]
 	Added fonts/tex-pxfonts-doc version 2010 [minskim 2011-03-07]
+	Updated www/py-moin to 1.9.3nb1 [gls 2011-03-07]
