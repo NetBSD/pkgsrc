@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/20 23:33:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/03/07 19:52:16 minskim Exp $
 
-SHA1 (tex-bookman-21101/bookman.tar.xz) = aa2bf637a2233c358f6433d8befd8af31df41674
-RMD160 (tex-bookman-21101/bookman.tar.xz) = f78be1a9d7e46ac4651528387b137a43d7c8319c
-Size (tex-bookman-21101/bookman.tar.xz) = 288828 bytes
+SHA1 (tex-bookman-21570/bookman.tar.xz) = 3817bb1189278cd3902889cb2b07396622c07743
+RMD160 (tex-bookman-21570/bookman.tar.xz) = 16f7964cfa7c4202a3607642c5b2a97dc645bb03
+Size (tex-bookman-21570/bookman.tar.xz) = 289204 bytes
