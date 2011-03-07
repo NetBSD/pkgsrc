@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/12 23:53:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/07 08:52:45 ryoon Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
@@ -7,7 +7,7 @@ CATEGORIES=	japanese inputmethod
 MASTER_SITES=	${MASTER_SITE_FREEBSD_LOCAL:=matusita/skk-jisyo/}
 EXTRACT_SUFX=	.bz2
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/wiki/wiki.cgi?page=SKK%BC%AD%BD%F1
 COMMENT=	Dictionary collection for SKK
 
