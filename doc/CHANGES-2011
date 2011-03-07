@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.586 2011/03/07 20:52:22 gls Exp $
+$NetBSD: CHANGES-2011,v 1.587 2011/03/07 21:33:08 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-pxfonts version 2010 [minskim 2011-03-07]
 	Added fonts/tex-pxfonts-doc version 2010 [minskim 2011-03-07]
 	Updated www/py-moin to 1.9.3nb1 [gls 2011-03-07]
+	Updated www/moodle to 2.0.2 [gls 2011-03-07]
