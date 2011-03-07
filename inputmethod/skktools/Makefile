@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/17 08:36:41 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/07 08:52:46 ryoon Exp $
 #
 
 DISTNAME=	skktools-1.3.1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/tools/
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/
 COMMENT=	SKK dictionary manipulation tools
 
