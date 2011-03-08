@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.594 2011/03/08 16:15:54 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.595 2011/03/08 18:34:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1016,3 +1016,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/ruby-itex2MML to 1.4.5 [taca 2011-03-08]
 	Updated print/lilypond to 2.12.3nb2 [ryoon 2011-03-08]
 	Updated audio/gqmpeg-skins to 20030712nb6 [wiz 2011-03-08]
+	Added fonts/tex-tex-gyre version 2.004 [minskim 2011-03-08]
+	Added fonts/tex-tex-gyre-doc version 2.004 [minskim 2011-03-08]
