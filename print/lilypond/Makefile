@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2011/03/08 15:55:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2011/03/08 15:59:04 ryoon Exp $
 #
 
 DISTNAME=	lilypond-2.12.3
@@ -9,6 +9,7 @@ MASTER_SITES=	http://lilypond.org/download/sources/v2.12/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lilypond.org/
 COMMENT=	GNU Music Typesetter
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
