@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.591 2011/03/08 15:34:34 taca Exp $
+$NetBSD: CHANGES-2011,v 1.592 2011/03/08 15:57:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1014,3 +1014,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql51-server to 5.1.56 [taca 2011-03-08]
 	Updated www/contao29 to 2.9.4 [taca 2011-03-08]
 	Updated textproc/ruby-itex2MML to 1.4.5 [taca 2011-03-08]
+	Updated print/lilypond to 2.12.3nb2 [ryoon 2011-03-08]
