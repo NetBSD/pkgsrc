@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/08 19:20:41 minskim Exp $
+share/texmf-dist/tex/latex/wasysym/uwasy.fd
+share/texmf-dist/tex/latex/wasysym/uwasyvar.fd
+share/texmf-dist/tex/latex/wasysym/wasysym.sty
