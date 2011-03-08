@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.589 2011/03/08 14:08:17 taca Exp $
+$NetBSD: CHANGES-2011,v 1.590 2011/03/08 14:12:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1012,3 +1012,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/samba35 to 3.5.8 [adam 2011-03-08]
 	Updated databases/mysql51-client to 5.1.56 [taca 2011-03-08]
 	Updated databases/mysql51-server to 5.1.56 [taca 2011-03-08]
+	Updated www/contao29 to 2.9.4 [taca 2011-03-08]
