@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.598 2011/03/08 19:21:45 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.599 2011/03/08 21:21:35 reed Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1024,3 +1024,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-collection-fontsrecommended-doc version 2010 [minskim 2011-03-08]
 	Added fonts/tex-wasysym version 2.0 [minskim 2011-03-08]
 	Added fonts/tex-wasysym-doc version 2.0 [minskim 2011-03-08]
+	Updated net/clive to 2.2.23 [reed 2011-03-08]
