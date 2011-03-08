@@ -1,0 +1,23 @@
+The TeX-GYRE bundle consists of six font families: TeX Gyre Adventor is
+based on the URW Gothic L family of fonts (which is derived from ITC
+Avant Garde Gothic, designed by Herb Lubalin and Tom Carnase). TeX Gyre
+Bonum is based on the URW Bookman L family (from Bookman Old Style,
+designed by Alexander Phemister). TeX Gyre Chorus is based on URW
+Chancery L Medium Italic (from ITC Zapf Chancery, designed by Hermann
+Zapf in 1979). TeX-Gyre Cursor is based on URW Nimbus Mono L (based on
+Courier, designed by Howard G. Kettler in 1955, for IBM). TeX Gyre Heros
+is based on URW Nimbus Sans L (from Helvetica, prepared by Max
+Miedinger, with Eduard Hoffmann in 1957). TeX Gyre Pagella is based on
+URW Palladio L (from Palation, designed by Hermann Zapf in the 1940s).
+TeX Gyre Schola is based on the URW Century Schoolbook L family (which
+was designed by Morris Fuller Benton for the American Type Founders).
+TeX Gyre Termes is based on the URW Nimbus Roman No9 L family of fonts
+(whose original, Times, was designed by Stanley Morison together with
+Starling Burgess and Victor Lardent and first offered by Monotype). The
+constituent standard faces of each family have been greatly extended,
+and contain nearly 1200 glyphs each (though Chorus omits Greek support,
+has no small-caps family and has approximately 900 glyphs). Each family
+is available in Adobe Type 1 and Open Type formats, and LaTeX support
+(for use with a variety of encodings) is provided. Vietnamese and
+Cyrillic characters were added by Han The Thanh and Valek Filippov,
+respectively.
