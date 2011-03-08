@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/02/24 21:43:45 gls Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/08 21:29:34 gls Exp $
 bin/fab
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/fabric/__init__.pyo
 ${PYSITELIB}/fabric/api.py
 ${PYSITELIB}/fabric/api.pyc
 ${PYSITELIB}/fabric/api.pyo
+${PYSITELIB}/fabric/auth.py
+${PYSITELIB}/fabric/auth.pyc
+${PYSITELIB}/fabric/auth.pyo
 ${PYSITELIB}/fabric/colors.py
 ${PYSITELIB}/fabric/colors.pyc
 ${PYSITELIB}/fabric/colors.pyo
@@ -35,6 +38,9 @@ ${PYSITELIB}/fabric/contrib/project.pyo
 ${PYSITELIB}/fabric/decorators.py
 ${PYSITELIB}/fabric/decorators.pyc
 ${PYSITELIB}/fabric/decorators.pyo
+${PYSITELIB}/fabric/io.py
+${PYSITELIB}/fabric/io.pyc
+${PYSITELIB}/fabric/io.pyo
 ${PYSITELIB}/fabric/main.py
 ${PYSITELIB}/fabric/main.pyc
 ${PYSITELIB}/fabric/main.pyo
@@ -44,9 +50,15 @@ ${PYSITELIB}/fabric/network.pyo
 ${PYSITELIB}/fabric/operations.py
 ${PYSITELIB}/fabric/operations.pyc
 ${PYSITELIB}/fabric/operations.pyo
+${PYSITELIB}/fabric/sftp.py
+${PYSITELIB}/fabric/sftp.pyc
+${PYSITELIB}/fabric/sftp.pyo
 ${PYSITELIB}/fabric/state.py
 ${PYSITELIB}/fabric/state.pyc
 ${PYSITELIB}/fabric/state.pyo
+${PYSITELIB}/fabric/thread_handling.py
+${PYSITELIB}/fabric/thread_handling.pyc
+${PYSITELIB}/fabric/thread_handling.pyo
 ${PYSITELIB}/fabric/utils.py
 ${PYSITELIB}/fabric/utils.pyc
 ${PYSITELIB}/fabric/utils.pyo
@@ -67,8 +79,10 @@ share/doc/fabric/api/core/utils.rst
 share/doc/fabric/changes/0.9.1.rst
 share/doc/fabric/changes/0.9.2.rst
 share/doc/fabric/changes/0.9.3.rst
-share/doc/fabric/changes/${PKGVERSION}.rst
+share/doc/fabric/changes/0.9.4.rst
+share/doc/fabric/changes/0.9.5.rst
 share/doc/fabric/changes/0.9.rst
+share/doc/fabric/changes/1.0.rst
 share/doc/fabric/development.rst
 share/doc/fabric/faq.rst
 share/doc/fabric/index.rst
@@ -78,6 +92,7 @@ share/doc/fabric/usage/env.rst
 share/doc/fabric/usage/execution.rst
 share/doc/fabric/usage/fab.rst
 share/doc/fabric/usage/fabfiles.rst
+share/doc/fabric/usage/interactivity.rst
 share/doc/fabric/usage/library.rst
 share/doc/fabric/usage/output_controls.rst
 share/doc/fabric/usage/ssh.rst
