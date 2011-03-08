@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.597 2011/03/08 19:05:05 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.598 2011/03/08 19:21:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1022,3 +1022,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-utopia-doc version 2010 [minskim 2011-03-08]
 	Added fonts/tex-collection-fontsrecommended version 2010 [minskim 2011-03-08]
 	Added fonts/tex-collection-fontsrecommended-doc version 2010 [minskim 2011-03-08]
+	Added fonts/tex-wasysym version 2.0 [minskim 2011-03-08]
+	Added fonts/tex-wasysym-doc version 2.0 [minskim 2011-03-08]
