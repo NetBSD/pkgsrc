@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/03/05 17:54:35 brook Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/03/08 03:05:07 brook Exp $
 #
 # used by databases/postgresql83-uuid
 # used by databases/postgresql84-uuid
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://pgfoundry.org/projects/uuid-freebsd/
 COMMENT=	UUID creation functions for PostgreSQL
-LICENSE=	ag-license
+LICENSE=	isc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
