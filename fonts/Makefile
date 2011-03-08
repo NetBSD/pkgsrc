@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2011/03/08 18:38:34 minskim Exp $
+# $NetBSD: Makefile,v 1.186 2011/03/08 19:05:06 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -177,6 +177,8 @@ SUBDIR+=	tex-cmcyr-doc
 SUBDIR+=	tex-cmextra
 SUBDIR+=	tex-cmsd
 SUBDIR+=	tex-cmsd-doc
+SUBDIR+=	tex-collection-fontsrecommended
+SUBDIR+=	tex-collection-fontsrecommended-doc
 SUBDIR+=	tex-courier
 SUBDIR+=	tex-ec
 SUBDIR+=	tex-ec-doc
