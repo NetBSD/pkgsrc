@@ -1,4 +1,6 @@
-$NetBSD: patch-uuid.c,v 1.1.1.1 2011/03/05 17:54:35 brook Exp $
+$NetBSD: patch-uuid.c,v 1.2 2011/03/08 03:20:16 brook Exp $
+
+Use the openssl SHA1 API instead of the FreeBSD API.
 
 --- uuid.c.orig	2010-03-14 03:04:29.000000000 -0600
 +++ uuid.c	2011-02-12 10:51:10.000000000 -0700
