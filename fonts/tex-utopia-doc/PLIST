@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/08 18:37:34 minskim Exp $
+share/texmf-dist/doc/fonts/utopia/LICENSE-utopia.txt
+share/texmf-dist/doc/fonts/utopia/README-utopia.txt
