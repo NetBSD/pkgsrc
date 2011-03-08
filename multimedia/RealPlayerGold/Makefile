@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/02/15 12:25:59 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/03/08 12:00:15 obache Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
@@ -19,6 +19,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PKGVER=			${PKGNAME_NOREV:S/^RealPlayerGold-//}
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
@@ -30,7 +32,7 @@ EMUL_MODULES.linux=	base fontconfig freetype2 gtk2 x11
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_STRIP=		3
-RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
 RPM2PKG_SUBPREFIX=	lib
 RPM2PKG_STAGE=		do-install
 RUN_LDCONFIG=		no
@@ -39,9 +41,11 @@ REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-install
-SUBST_FILES.paths=	${REALPLAYER_HOME}/realplay
+SUBST_FILES.paths=	${DESTDIR}${REALPLAYER_HOME}/realplay
 SUBST_SED.paths=	-e 's,/bin/true,${TRUE},g'
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+
+INSTALLATION_DIRS+=	bin
 
 # Verify that the version of the distfile (which changes often without
 # the name changing) is still correct.  This helps sort out download
@@ -60,7 +64,7 @@ do-build:
 		${FILESDIR}/realplay.sh > ${WRKSRC}/realplay
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/realplay ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/realplay ${DESTDIR}${PREFIX}/bin
 	${ECHO} bin/realplay >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
