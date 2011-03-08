@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/01/26 23:15:03 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2011/03/08 15:25:56 hiramatsu Exp $
 #
 
 DISTNAME=		gstreamer-0.10.32
@@ -25,6 +25,9 @@ CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ENV+=		ac_cv_path_PYTHON=${TRUE:Q}
 CONFIGURE_ENV+=		ac_cv_path_XSLTPROC=${TRUE:Q}
+.if ${OPSYS} == "FreeBSD"
+CONFIGURE_ENV+=		ac_cv_func_register_printf_function="no"
+.endif
 
 BUILD_DEPENDS+=		flex>=2.5.31:../../devel/flex
 TOOLS_PLATFORM.flex=	${LOCALBASE}/bin/flex
