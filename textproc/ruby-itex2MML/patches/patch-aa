@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2010/09/10 08:15:55 taca Exp $
+$NetBSD: patch-aa,v 1.4 2011/03/08 15:33:49 taca Exp $
 
 * Make ruby and swig commands are settable.
 * support DESTDIR.
+* Add an include directory for ruby 1.9 and later.
 
 --- Makefile.orig	2010-06-09 17:13:08.000000000 +0000
 +++ Makefile
@@ -17,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 2010/09/10 08:15:55 taca Exp $
  
  RM=rm -f
  INSTALL=install -c
-@@ -44,8 +43,8 @@ RUBY_PREFIX =  $(shell $(RUBY) -e 'requi
+@@ -44,11 +43,12 @@ RUBY_PREFIX =  $(shell $(RUBY) -e 'requi
  RUBY_ARCH = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["arch"]')
  RUBYDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["archdir"]')
  RUBYHDRDIR = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["rubyhdrdir"]')
@@ -28,7 +29,20 @@ $NetBSD: patch-aa,v 1.3 2010/09/10 08:15:55 taca Exp $
  LIBRUBYARG = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["LIBRUBYARG"]')
  DYLIB_EXT = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["DLEXT"]')
  RUBY_target_os = $(shell $(RUBY) -e 'require "rbconfig"; print Config::CONFIG["target_os"]')
-@@ -77,5 +76,5 @@ test_ruby:
++RUBYARCHINCLUDE = $(shell $(RUBY) -e 'require "rbconfig"; if Config::CONFIG["ruby_version"] > "1.8"; print "-I" + File.join(Config::CONFIG["rubyhdrdir"], Config::CONFIG["arch"]); end ')
+ 
+ ifneq (, $(findstring darwin, $(RUBY_target_os)) )
+ EXTRA_CFLAGS = -DHAVE_SNPRINTF -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE
+@@ -62,7 +62,7 @@ itex2MML_ruby.c:	itex2MML.i
+ 			$(SWIG) -ruby -o itex2MML_ruby.c  itex2MML.i
+ 
+ itex2MML_ruby.o:	itex2MML_ruby.c
+-			$(CC) $(RUBY_CFLAGS)  $(EXTRA_CFLAGS) -c itex2MML_ruby.c -I$(RUBYHDRDIR) -I$(RUBYDIR) -o itex2MML_ruby.o
++			$(CC) $(RUBY_CFLAGS)  $(EXTRA_CFLAGS) -c itex2MML_ruby.c -I$(RUBYHDRDIR) $(RUBYARCHINCLUDE) -I$(RUBYDIR) -o itex2MML_ruby.o
+ 
+ y.tab_ruby.o:		y.tab.c
+ 			$(CC) $(RUBY_CFLAGS) -Ditex2MML_CAPTURE -c -o y.tab_ruby.o y.tab.c
+@@ -77,5 +77,5 @@ test_ruby:
  	$(RUBY) ./itextomml.rb
  
  install_ruby:	itex2MML.$(DYLIB_EXT)
