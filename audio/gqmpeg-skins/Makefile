@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/03/11 10:50:56 tron Exp $
+# $NetBSD: Makefile,v 1.18 2011/03/08 16:15:37 wiz Exp $
 
 DISTNAME=	gqmpeg-skins-20030712
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://gqmpeg.sourceforge.net/skins/
 DISTFILES+=	\
@@ -78,7 +78,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://gqmpeg.sourceforge.net/
 COMMENT=	Skins for gqmpeg
 
-DEPENDS+=	gqmpeg-[0-9]*:../../audio/gqmpeg
+DEPENDS+=	gqmpeg-[0-9]*:../../audio/gqmpeg-devel
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
