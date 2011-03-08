@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/08 19:03:38 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/08 19:27:27 minskim Exp $
 
 DISTNAME=	collection-fontsrecommended
 PKGNAME=	tex-${DISTNAME}-2010
@@ -38,7 +38,7 @@ DEPENDS+=	tex-tipa-[0-9]*:../../fonts/tex-tipa
 DEPENDS+=	tex-txfonts-[0-9]*:../../fonts/tex-txfonts
 DEPENDS+=	tex-utopia-[0-9]*:../../fonts/tex-utopia
 DEPENDS+=	tex-wasy-[0-9]*:../../fonts/tex-wasy
-DEPENDS+=	tex-wasysym-[0-9]*:../../print/tex-wasysym
+DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 DEPENDS+=	tex-zapfchan-[0-9]*:../../fonts/tex-zapfchan
 DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/tex-zapfding
 
