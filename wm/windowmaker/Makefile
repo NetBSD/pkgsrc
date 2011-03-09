@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2011/01/13 13:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2011/03/09 16:43:19 drochner Exp $
 
 DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://windowmaker.info/pub/source/release/ \
 	ftp://ftp.dti.ad.jp/pub/X/WindowMaker/source/release/
@@ -96,7 +96,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
