@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/01/13 13:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2011/03/09 18:48:51 minskim Exp $
 #
 
 DISTNAME=		lyx-1.6.8
@@ -40,6 +40,21 @@ CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt4-libs} \
 CONFIGURE_ARGS+=	--with-pspell-lib=${BUILDLINK_PREFIX.aspell}/lib \
 			--with-pspell-include=${BUILDLINK_PREFIX.aspell}/include/pspell \
 			--with-pspell
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+GNU_CONFIGURE_PREFIX=	${PREFIX}/Applications/LyX.app
+PLIST_SUBST+=		BIN_DIR=Applications/LyX.app/Contents/MacOS \
+			LYX=LyX \
+			MAN_DIR=Applications/LyX.app/Contents/Resources/man \
+			SHARE_DIR=Applications/LyX.app/Contents/Resources
+.else
+PLIST_SUBST+=		BIN_DIR=bin \
+			LYX=lyx \
+			MAN_DIR="${PKGMANDIR}" \
+			SHARE_DIR=share/lyx
+.endif
 
 PYTHON_PATCH_SCRIPTS=	development/tools/convert_kmap.py \
 			development/tools/generate_symbols_list.py \
