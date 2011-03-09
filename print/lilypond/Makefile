@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2011/03/08 15:59:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2011/03/09 11:05:12 ryoon Exp $
 #
 
 DISTNAME=	lilypond-2.12.3
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake gs:run makeinfo perl pkg-config msgfmt
+USE_TOOLS+=		texi2html
 MAKE_FILE=		GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
@@ -29,6 +30,8 @@ INFO_DIR=		${GNU_CONFIGURE_INFODIR}
 INFO_FILES=		YES
 
 BUILD_DEPENDS+=		urw-fonts-[0-9]*:../../fonts/urw-fonts
+BUILD_DEPENDS+=		fontforge>=20060125:../../fonts/fontforge
+BUILD_DEPENDS+=		t1utils>=1.33:../../fonts/t1utils
 CONFIGURE_ARGS+=	--with-ncsb-dir=${LOCALBASE}/share/fonts/urw
 CONFIGURE_ARGS+=	--disable-optimising
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
