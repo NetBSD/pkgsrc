@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/11 19:50:17 gls Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/03/09 17:19:19 drochner Exp $
 include/libraw/libraw.h
 include/libraw/libraw_alloc.h
 include/libraw/libraw_const.h
@@ -6,8 +6,8 @@ include/libraw/libraw_datastream.h
 include/libraw/libraw_internal.h
 include/libraw/libraw_types.h
 include/libraw/libraw_version.h
-lib/libraw.a
-lib/libraw_r.a
+lib/libraw.la
+lib/libraw_r.la
 lib/pkgconfig/libraw.pc
 lib/pkgconfig/libraw_r.pc
 share/doc/libraw/COPYRIGHT
