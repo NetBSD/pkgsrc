@@ -1,0 +1,50 @@
+$NetBSD: patch-aq,v 1.1 2011/03/09 11:22:04 drochner Exp $
+
+--- gio/gsocket.c.orig	2011-02-11 15:23:12.000000000 +0000
++++ gio/gsocket.c
+@@ -33,6 +33,9 @@
+ #include <signal.h>
+ #include <string.h>
+ #include <stdlib.h>
++#ifdef __NetBSD__
++#include <sys/un.h>
++#endif
+ 
+ #ifndef G_OS_WIN32
+ # include <fcntl.h>
+@@ -3540,6 +3543,35 @@ g_socket_get_credentials (GSocket   *soc
+                                   &native_creds);
+       }
+   }
++#elif defined(__NetBSD__)
++  {
++    struct unpcbid cred;
++    socklen_t len = sizeof(cred);
++    if (getsockopt(socket->priv->fd, 0, LOCAL_PEEREID, &cred, &len) < 0)
++      {
++	int errsv = get_socket_errno ();
++	g_set_error (error,
++		     G_IO_ERROR,
++		     socket_io_error_from_errno (errsv),
++		     _("Unable to get pending error: %s"),
++		     socket_strerror (errsv));
++      }
++    else
++      {
++	struct {
++ 		pid_t pid;
++		uid_t uid;
++		gid_t gid;
++	} native_creds;
++	native_creds.uid = cred.unp_euid;
++	native_creds.gid = cred.unp_egid;
++	native_creds.pid = cred.unp_pid;
++	ret = g_credentials_new ();
++	g_credentials_set_native (ret,
++				  G_CREDENTIALS_TYPE_LINUX_UCRED,
++				  &native_creds);
++      }
++  }
+ #else
+   g_set_error_literal (error,
+                        G_IO_ERROR,
