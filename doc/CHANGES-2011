@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.605 2011/03/09 19:23:10 asau Exp $
+$NetBSD: CHANGES-2011,v 1.606 2011/03/09 19:42:17 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1036,3 +1036,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/mupdf to 0.8 [drochner 2011-03-09]
 	Updated math/mpcomplex to 0.9 [asau 2011-03-09]
 	Updated www/curl to 7.21.4 [asau 2011-03-09]
+	Updated devel/libsigsegv to 2.9 [asau 2011-03-09]
