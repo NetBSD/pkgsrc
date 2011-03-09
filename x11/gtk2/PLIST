@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2010/11/23 13:31:33 tnn Exp $
+@comment $NetBSD: PLIST,v 1.75 2011/03/09 11:24:05 drochner Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -86,6 +86,7 @@ include/gtk-2.0/gtk/gtkcolorseldialog.h
 include/gtk-2.0/gtk/gtkcombo.h
 include/gtk-2.0/gtk/gtkcombobox.h
 include/gtk-2.0/gtk/gtkcomboboxentry.h
+include/gtk-2.0/gtk/gtkcomboboxtext.h
 include/gtk-2.0/gtk/gtkcontainer.h
 include/gtk-2.0/gtk/gtkctree.h
 include/gtk-2.0/gtk/gtkcurve.h
@@ -537,6 +538,7 @@ share/gtk-doc/html/gtk/GtkColorSelectionDialog.html
 share/gtk-doc/html/gtk/GtkCombo.html
 share/gtk-doc/html/gtk/GtkComboBox.html
 share/gtk-doc/html/gtk/GtkComboBoxEntry.html
+share/gtk-doc/html/gtk/GtkComboBoxText.html
 share/gtk-doc/html/gtk/GtkContainer.html
 share/gtk-doc/html/gtk/GtkCurve.html
 share/gtk-doc/html/gtk/GtkDialog.html
@@ -600,6 +602,7 @@ share/gtk-doc/html/gtk/GtkOptionMenu.html
 share/gtk-doc/html/gtk/GtkPageSetup.html
 share/gtk-doc/html/gtk/GtkPageSetupUnixDialog.html
 share/gtk-doc/html/gtk/GtkPaned.html
+share/gtk-doc/html/gtk/GtkPaperSize.html
 share/gtk-doc/html/gtk/GtkPixmap.html
 share/gtk-doc/html/gtk/GtkPlug.html
 share/gtk-doc/html/gtk/GtkPreview.html
@@ -642,6 +645,7 @@ share/gtk-doc/html/gtk/GtkTable.html
 share/gtk-doc/html/gtk/GtkTearoffMenuItem.html
 share/gtk-doc/html/gtk/GtkText.html
 share/gtk-doc/html/gtk/GtkTextBuffer.html
+share/gtk-doc/html/gtk/GtkTextIter.html
 share/gtk-doc/html/gtk/GtkTextMark.html
 share/gtk-doc/html/gtk/GtkTextTag.html
 share/gtk-doc/html/gtk/GtkTextTagTable.html
@@ -708,6 +712,7 @@ share/gtk-doc/html/gtk/api-index-2-18.html
 share/gtk-doc/html/gtk/api-index-2-2.html
 share/gtk-doc/html/gtk/api-index-2-20.html
 share/gtk-doc/html/gtk/api-index-2-22.html
+share/gtk-doc/html/gtk/api-index-2-24.html
 share/gtk-doc/html/gtk/api-index-2-4.html
 share/gtk-doc/html/gtk/api-index-2-6.html
 share/gtk-doc/html/gtk/api-index-2-8.html
@@ -801,8 +806,6 @@ share/gtk-doc/html/gtk/gtk-Feature-Test-Macros.html
 share/gtk-doc/html/gtk/gtk-Filesystem-utilities.html
 share/gtk-doc/html/gtk/gtk-General.html
 share/gtk-doc/html/gtk/gtk-Graphics-Contexts.html
-share/gtk-doc/html/gtk/gtk-GtkPaperSize.html
-share/gtk-doc/html/gtk/gtk-GtkTextIter.html
 share/gtk-doc/html/gtk/gtk-GtkTreeView-drag-and-drop.html
 share/gtk-doc/html/gtk/gtk-High-level-Printing-API.html
 share/gtk-doc/html/gtk/gtk-Keyboard-Accelerators.html
@@ -1064,8 +1067,6 @@ share/locale/ja/LC_MESSAGES/gtk20-properties.mo
 share/locale/ja/LC_MESSAGES/gtk20.mo
 share/locale/ka/LC_MESSAGES/gtk20-properties.mo
 share/locale/ka/LC_MESSAGES/gtk20.mo
-share/locale/kg/LC_MESSAGES/gtk20-properties.mo
-share/locale/kg/LC_MESSAGES/gtk20.mo
 share/locale/kk/LC_MESSAGES/gtk20-properties.mo
 share/locale/kk/LC_MESSAGES/gtk20.mo
 share/locale/kn/LC_MESSAGES/gtk20-properties.mo
@@ -1074,8 +1075,6 @@ share/locale/ko/LC_MESSAGES/gtk20-properties.mo
 share/locale/ko/LC_MESSAGES/gtk20.mo
 share/locale/ku/LC_MESSAGES/gtk20-properties.mo
 share/locale/ku/LC_MESSAGES/gtk20.mo
-share/locale/lg/LC_MESSAGES/gtk20-properties.mo
-share/locale/lg/LC_MESSAGES/gtk20.mo
 share/locale/li/LC_MESSAGES/gtk20-properties.mo
 share/locale/li/LC_MESSAGES/gtk20.mo
 share/locale/lt/LC_MESSAGES/gtk20-properties.mo
