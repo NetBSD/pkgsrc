@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2011/02/10 09:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2011/03/09 16:33:20 drochner Exp $
 
 DISTNAME=	gdal-1.8.0
 PKGNAME=	gdal-lib-1.8.0
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/
 
@@ -41,7 +42,7 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 # See the comment above about using the internal tiff library
 # also re-include in buildlink3.mk when uncommenting it!
