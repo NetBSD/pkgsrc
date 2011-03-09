@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2011/01/13 13:36:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2011/03/09 16:26:49 drochner Exp $
 
 BUILDLINK_TREE+=	simage
 
@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.simage?=	../../graphics/simage
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .endif # SIMAGE_BUILDLINK3_MK
 
