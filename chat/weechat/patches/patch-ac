@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2009/11/03 22:22:31 tonio Exp $
+$NetBSD: patch-ac,v 1.4.10.1 2011/03/09 19:11:19 tron Exp $
 
 Make sure to honor destdir
 
---- src/plugins/Makefile.in.orig	2009-09-06 10:10:04.000000000 +0200
+--- src/plugins/Makefile.in.orig	2011-01-16 08:17:23.000000000 +0000
 +++ src/plugins/Makefile.in
-@@ -749,8 +749,8 @@ uninstall-am:
+@@ -759,8 +759,8 @@ uninstall-am:
  # install plugin header
  
  install-data-hook:
