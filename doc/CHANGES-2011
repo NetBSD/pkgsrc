@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.601 2011/03/08 22:32:41 taca Exp $
+$NetBSD: CHANGES-2011,v 1.602 2011/03/09 17:39:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1027,3 +1027,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/clive to 2.2.23 [reed 2011-03-08]
 	Updated sysutils/fabric to 1.0.0 [gls 2011-03-08]
 	Updated www/contao29-translations to 20110308 [taca 2011-03-08]
+	Added misc/window version 20110309 [jmmv 2011-03-09]
