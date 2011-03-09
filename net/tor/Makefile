@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.78 2011/02/11 21:22:03 tnn Exp $
+# $NetBSD: Makefile,v 1.79 2011/03/09 10:03:06 drochner Exp $
 #
 
-DISTNAME=		tor-0.2.1.29
-PKGREVISION=		1
+DISTNAME=		tor-0.2.1.30
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
-MAINTAINER=		athaba@inode.at
+MAINTAINER=		athaba@users.sourceforge.net
 HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
 LICENSE=		modified-bsd
@@ -15,12 +14,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES+=		c99
+USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		CPP=${CPP:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 TEST_TARGET=		check
 
@@ -31,7 +30,7 @@ BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	tor
 
 PKG_GROUPS_VARS+=	TOR_GROUP
-PKG_USERS_VARS+=	TOR_USER
+PKG_USERS_VARS=		TOR_USER
 
 RCD_SCRIPTS=		tor
 RCD_SCRIPT_SRC.tor=	${FILESDIR}/tor.in
@@ -41,15 +40,15 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor-tsocks.conf
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/torrc
 
-FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
-FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
+FILES_SUBST+=		PKG_HOME=${PKG_HOME}
+FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
