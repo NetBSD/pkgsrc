@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2011/01/13 13:36:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/09 16:29:23 drochner Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 
 MAINTAINER=	obache@NetBSD.org
@@ -38,6 +38,6 @@ INSTALL_DIRS=	. docs/man
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

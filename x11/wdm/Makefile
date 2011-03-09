@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2011/01/13 13:40:06 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2011/03/09 16:30:44 drochner Exp $
 
 DISTNAME=		wdm-1.28
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11 windowmaker
 MASTER_SITES=		http://voins.program.ru/wdm/
 
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--with-winmgr=${wmanager:Q}
 INSTALLATION_DIRS += share/pixmaps/wdm share/examples/wdm
 
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
