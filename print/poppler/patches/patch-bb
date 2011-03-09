@@ -1,0 +1,38 @@
+$NetBSD: patch-bb,v 1.7 2011/03/09 12:07:12 drochner Exp $
+
+--- qt4/src/poppler-form.cc.orig	2010-12-27 20:44:28.000000000 +0000
++++ qt4/src/poppler-form.cc
+@@ -188,11 +188,29 @@ FormFieldButton::ButtonType FormFieldBut
+ QString FormFieldButton::caption() const
+ {
+   FormWidgetButton* fwb = static_cast<FormWidgetButton*>(m_formData->fm);
+-  // HACK push buttons seems to have a null GooString for the caption
++  QString ret;
+   if (fwb->getButtonType() == formButtonPush)
+-    return QString();
+-
+-  return fwb->getOnStr() ? QString::fromUtf8(fwb->getOnStr()) : QString();
++  {
++    Dict *dict = m_formData->fm->getObj()->getDict();
++    Object obj1;
++    if (dict->lookup("MK", &obj1)->isDict())
++    {
++      AnnotAppearanceCharacs appearCharacs(obj1.getDict());
++      if (appearCharacs.getNormalCaption())
++      {
++        ret = UnicodeParsedString(appearCharacs.getNormalCaption());
++      }
++    }
++    obj1.free();
++  }
++  else
++  {
++    if (const char *str = fwb->getOnStr())
++    {
++      ret = QString::fromUtf8(str);
++    }
++  }
++  return ret;
+ }
+ 
+ bool FormFieldButton::state() const
