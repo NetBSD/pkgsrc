@@ -230,3 +230,9 @@ www/firefox: dependency update
 devel/xulrunner: security fixes
 Pullup ticket #3379 - requested by tnn
 mail/thunderbird: security update
+Pullup ticket #3383 - requested by tonio
+chat/weechat: security update
+Pullup ticket #3384 - requested by taca
+mail/postfix: security update
+Pullup ticket #3386 - requested by gls
+www/py-moin: security patch
