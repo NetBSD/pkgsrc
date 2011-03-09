@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/02/16 22:17:36 gls Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/09 17:19:19 drochner Exp $
 #
 
-DISTNAME=		LibRaw-0.13.1
+DISTNAME=		LibRaw-0.13.2
 PKGNAME=		${DISTNAME:tl}
 CATEGORIES=		graphics
 MASTER_SITES=	http://www.libraw.org/data/
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config gmake
+USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE=	no
 
 CONFIGURE_ARGS+=	--disable-examples
