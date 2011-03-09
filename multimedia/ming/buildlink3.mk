@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2011/01/13 13:36:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2011/03/09 16:29:23 drochner Exp $
 
 BUILDLINK_TREE+=	ming
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.ming?=	../../multimedia/ming
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .endif # MING_BUILDLINK3_MK
 
