@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10166 2011/03/09 11:48:57 wiz Exp $
+$NetBSD: TODO,v 1.10167 2011/03/09 11:53:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -314,7 +314,7 @@ Suggested new packages
 	xgc, xkbevd, xkbprint, xkbutils, xlsatoms, xorg-sgml-doctools,
 	xpr, xpyb, mkcomposecache, xscope, xf86-video-qxl, input_calibrator,
 	xf86-input-elographics, xditview, proxymngr, rstart, showfont,
-	xdbedizzy, xfindproxy, xfwp
+	xdbedizzy, xfindproxy, xfwp, xorg-docs
 
 
 Suggested package updates
@@ -450,7 +450,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o camlimages-4.0.0
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
-	o cdialog-1.1.20110302
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
@@ -1091,7 +1090,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plone-3.3.4
 	o ploticus-2.41
 	o ploticus-examples-230
-	o plptools-1.0.11
 	o ply-3.3 [pkg/43758]
 	o pngcheck-2.3.0
 	o po4a-0.36.3
@@ -1237,7 +1235,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o spcaview-20060501
-	o sqlitemanager-1.2.4
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o star-1.5.1
@@ -1463,7 +1460,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.4
-	o xorg-docs-1.6
 	o xorg-util-macros-1.10.1 [pkg/43891]
 	o xorg-util-macros-1.12.0
 	o xpaint-2.9.8.2
