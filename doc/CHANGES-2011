@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.606 2011/03/09 19:42:17 asau Exp $
+$NetBSD: CHANGES-2011,v 1.607 2011/03/09 20:25:30 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1037,3 +1037,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/mpcomplex to 0.9 [asau 2011-03-09]
 	Updated www/curl to 7.21.4 [asau 2011-03-09]
 	Updated devel/libsigsegv to 2.9 [asau 2011-03-09]
+	Updated sysutils/mtools to 4.0.14 [asau 2011-03-09]
