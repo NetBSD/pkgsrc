@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/09 17:38:55 jmmv Exp $
+bin/window
+man/man1/window.1
