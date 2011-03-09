@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2007/12/09 23:38:24 wiz Exp $
+$NetBSD: patch-aa,v 1.12 2011/03/09 20:25:08 asau Exp $
 
---- Makefile.in.orig	2006-02-28 08:55:15.000000000 +0000
-+++ Makefile.in
-@@ -11,7 +11,6 @@ USERCFLAGS = 
+--- Makefile.in.orig	2010-10-17 02:23:20.000000000 +0400
++++ Makefile.in	2011-03-09 23:09:25.000000000 +0300
+@@ -26,7 +26,6 @@
  USERLDFLAGS =
  USERLDLIBS =
  
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.11 2007/12/09 23:38:24 wiz Exp $
  TEXI2DVI = texi2dvi
  TEXI2PDF = texi2pdf
  TEXI2HTML = texi2html
-@@ -49,6 +48,7 @@ LN_S        = @LN_S@
+@@ -65,6 +64,7 @@
  
  INSTALL         = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -18,16 +18,7 @@ $NetBSD: patch-aa,v 1.11 2007/12/09 23:38:24 wiz Exp $
  INSTALL_DATA    = @INSTALL_DATA@
  INSTALL_INFO	= @INSTALL_INFO@
  
-@@ -56,7 +56,7 @@ INSTALL_INFO	= @INSTALL_INFO@
- .SUFFIXES: .o .c
- .SUFFIXES: .o .c
- 
--MAN1 = floppyd.1 floppyd_installtest.1 mattrib.1 mbadblocks.1 mcat.1 mcd.1 \
-+MAN1 = @MANFLOPPYD@ @MANFLOPPYD_INSTTEST@ mattrib.1 mbadblocks.1 mcat.1 mcd.1 \
- mclasserase.1 mcopy.1 mdel.1 mdeltree.1 mdir.1 mdu.1 mformat.1  minfo.1 \
- mkmanifest.1 mlabel.1 mmd.1 mmount.1 mmove.1 mpartition.1 \
- mrd.1 mren.1 mshowfat.1 mtoolstest.1 mtools.1 mtype.1 mzip.1
-@@ -257,7 +257,7 @@ install-links: $(DESTDIR)$(bindir)/mtool
+@@ -277,7 +277,7 @@
  install-scripts: $(DESTDIR)$(bindir)/mtools
  	@$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
  	@for j in $(SCRIPTS) ; do \
