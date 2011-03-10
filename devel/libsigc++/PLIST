@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/05/21 09:52:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/03/10 11:03:11 adam Exp $
 include/sigc++-2.0/sigc++/adaptors/adaptor_trait.h
 include/sigc++-2.0/sigc++/adaptors/adaptors.h
 include/sigc++-2.0/sigc++/adaptors/bind.h
@@ -48,6 +48,7 @@ share/doc/libsigc++-2.0/images/libsigc_logo.gif
 share/doc/libsigc++-2.0/images/top.gif
 share/doc/libsigc++-2.0/index.html
 share/doc/libsigc++-2.0/reference/html/annotated.html
+share/doc/libsigc++-2.0/reference/html/bc_s.png
 share/doc/libsigc++-2.0/reference/html/classes.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument.html
@@ -410,6 +411,7 @@ share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__mem__functor6__inh
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__mem__functor7-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__mem__functor7.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__mem__functor7__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/closed.png
 share/doc/libsigc++-2.0/reference/html/doxygen.css
 share/doc/libsigc++-2.0/reference/html/doxygen.png
 share/doc/libsigc++-2.0/reference/html/functions.html
@@ -515,6 +517,9 @@ share/doc/libsigc++-2.0/reference/html/namespacemembers_func_0x75.html
 share/doc/libsigc++-2.0/reference/html/namespacemembers_func_0x76.html
 share/doc/libsigc++-2.0/reference/html/namespaces.html
 share/doc/libsigc++-2.0/reference/html/namespacesigc.html
+share/doc/libsigc++-2.0/reference/html/nav_f.png
+share/doc/libsigc++-2.0/reference/html/nav_h.png
+share/doc/libsigc++-2.0/reference/html/open.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1adaptor__base.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1adaptor__base__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1adaptor__functor-members.html
@@ -655,9 +660,10 @@ share/doc/libsigc++-2.0/reference/html/structsigc_1_1trackable.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1trackable__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1unwrap__lambda__type-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1unwrap__lambda__type.html
-share/doc/libsigc++-2.0/reference/html/tab_b.gif
-share/doc/libsigc++-2.0/reference/html/tab_l.gif
-share/doc/libsigc++-2.0/reference/html/tab_r.gif
+share/doc/libsigc++-2.0/reference/html/tab_a.png
+share/doc/libsigc++-2.0/reference/html/tab_b.png
+share/doc/libsigc++-2.0/reference/html/tab_h.png
+share/doc/libsigc++-2.0/reference/html/tab_s.png
 share/doc/libsigc++-2.0/reference/html/tabs.css
 share/doc/libsigc++-2.0/reference/libsigc++-2.0.tag
 share/doc/libsigc++-2.0/tutorial/html/ch01.html
