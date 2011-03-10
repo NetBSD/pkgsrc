@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2011/02/08 13:13:41 adam Exp $
+# $NetBSD: options.mk,v 1.3 2011/03/10 09:44:10 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
 PKG_SUPPORTED_OPTIONS=	gd pdf x11
-PKG_SUGGESTED_OPTIONS=	gd pdf x11
+PKG_SUGGESTED_OPTIONS=	gd x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,6 +12,7 @@ PLIST_VARS+=	x11
 .include "../../graphics/gd/buildlink3.mk"
 .endif
 
+# PDF output is also provided by cairo
 .if !empty(PKG_OPTIONS:Mpdf)
 CONFIGURE_ARGS+=	--with-pdf
 .include "../../print/pdflib-lite/buildlink3.mk"
