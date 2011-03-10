@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2010/06/15 11:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2011/03/10 11:03:11 adam Exp $
 
-DISTNAME=	libsigc++-2.2.8
+DISTNAME=	libsigc++-2.2.9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/2.2/}
 EXTRACT_SUFX=	.tar.bz2
