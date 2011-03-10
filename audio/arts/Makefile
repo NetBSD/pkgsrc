@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2011/03/10 09:24:15 obache Exp $
+# $NetBSD: Makefile,v 1.72 2011/03/10 19:51:23 markd Exp $
 
 DISTNAME=	arts-1.5.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 HOMEPAGE=	http://multimedia.kde.org/
 COMMENT=	Analog Real-Time Synthesizer
@@ -17,7 +17,6 @@ USE_TOOLS+=	perl pkg-config
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-_IN_ARTS_BUILD=		yes
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 .include "../../audio/libaudiofile/buildlink3.mk"
