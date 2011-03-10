@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.366 2011/03/05 18:09:39 brook Exp $
+# $NetBSD: Makefile,v 1.367 2011/03/10 22:00:23 wiz Exp $
 #
 
 COMMENT=	Databases
@@ -216,6 +216,7 @@ SUBDIR+=	poco-data-mysql
 SUBDIR+=	poco-data-odbc
 SUBDIR+=	poco-data-sqlite
 SUBDIR+=	postgresql-postgis
+#SUBDIR+=	postgresql-uuid	# just contains files for postgresql*-uuid
 SUBDIR+=	postgresql83
 SUBDIR+=	postgresql83-adminpack
 SUBDIR+=	postgresql83-client
