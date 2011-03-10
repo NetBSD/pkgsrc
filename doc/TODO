@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10174 2011/03/10 22:01:40 wiz Exp $
+$NetBSD: TODO,v 1.10175 2011/03/10 22:48:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -497,6 +497,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddclient-3.7.3
 	o ddrescue-1.14
 	o defendguin-0.0.11
+	o dejagnu-1.5
 	o delegate-9.9.7
 	o denemo-0.8.22
 	o dhid-5.3
@@ -541,6 +542,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elinks-0.12pre5
 	o elm-me-2.5plalpha24
 	o elscreen-1.4.6 [pkg/43967]
+	o emacs-23.3
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o empathy-2.32.2
