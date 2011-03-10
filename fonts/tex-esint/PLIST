@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/10 20:39:21 minskim Exp $
+share/texmf-dist/fonts/source/public/esint/bigint.mf
+share/texmf-dist/fonts/source/public/esint/esint10.mf
+share/texmf-dist/fonts/source/public/esint/mathint.mf
+share/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+share/texmf-dist/tex/latex/esint/esint.sty
+share/texmf-dist/tex/latex/esint/uesint.fd
