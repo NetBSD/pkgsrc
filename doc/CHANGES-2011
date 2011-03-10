@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.608 2011/03/10 02:32:33 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.609 2011/03/10 11:04:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libsigsegv to 2.9 [asau 2011-03-09]
 	Updated sysutils/mtools to 4.0.14 [asau 2011-03-09]
 	Updated editors/emacs-snapshot to 24.0.50.20110309 [minskim 2011-03-10]
+	Updated devel/libsigc++ to 2.2.9 [adam 2011-03-10]
