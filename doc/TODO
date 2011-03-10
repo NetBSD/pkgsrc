@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10173 2011/03/10 11:04:40 adam Exp $
+$NetBSD: TODO,v 1.10174 2011/03/10 22:01:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doxygen-1.7.3
 	o dpkg-1.14.25
 	o drivel-3.0.2
-	o dropbear-0.53
 	o drupal-7
 	o dspam-3.9.0
 	o dvdisaster-0.72.2
@@ -725,7 +724,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
 	o gtk3-3.0.2
-	o gtkhtml314-3.32.2
 	o gtkmm-2.24.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.20
@@ -851,7 +849,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXpm-3.5.9
 	o libXrandr-1.3.1
 	o libXres-1.0.5
-	o libXt-1.1.0
+	o libXt-1.1.1
 	o libXtst-1.2.0
 	o libXv-1.0.6
 	o libXxf86dga-1.1.2
@@ -927,7 +925,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.5.0
+	o mathomatic-15.5.1
 	o mawk-1.3.4.20100625
 	o mcsim-5.4.0
 	o merb-builder-0.9.13
@@ -945,6 +943,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
 	o mktemp-1.7 [pkg/44014]
+	o mkvtoolnix-4.6.0
 	o moc-2.4.4
 	o modular-xorg-server-1.10.0
 	o molden-4.8 [after which PR 40252 can be closed]
@@ -1005,6 +1004,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.3
+	o openmpi-1.5.2
 	o openmsx-0.7.0
 	o openoffice3-3.3
 	o openssh-5.8p1
@@ -1062,7 +1062,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o podofo-0.8.4
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.16.3
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1076,7 +1075,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.0 [pkg/42941]
 	o ptlib-2.8.3
 	o puf-0.93.3
-	o puppet-2.6.4
+	o puppet-2.6.6
 	o puzzles-9109
 	o pv-1.1.4
 	o pwlib-1.11.1
@@ -1349,7 +1348,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xextproto-7.2.0
 	o xeyes-1.1.1
 	o xf86-input-keyboard-1.6.0
-	o xf86-input-mouse-1.6.0
+	o xf86-input-mouse-1.7.0
 	o xf86-input-vmmouse-12.7.0
 	o xf86-input-void-1.3.1
 	o xf86-video-apm-1.2.3
