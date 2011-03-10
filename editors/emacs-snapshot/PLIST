@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/03/01 04:12:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/03/10 01:28:48 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -931,6 +931,7 @@ share/emacs/${EMACS_VERSION}/etc/themes/tango-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tsdh-dark-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tsdh-light-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/wheatgrass-theme.el
+share/emacs/${EMACS_VERSION}/etc/themes/wombat-theme.el
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.bg
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.cn
@@ -1957,8 +1958,6 @@ share/emacs/${EMACS_VERSION}/lisp/eshell/esh-opt.el.gz
 share/emacs/${EMACS_VERSION}/lisp/eshell/esh-opt.elc
 share/emacs/${EMACS_VERSION}/lisp/eshell/esh-proc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/eshell/esh-proc.elc
-share/emacs/${EMACS_VERSION}/lisp/eshell/esh-test.el.gz
-share/emacs/${EMACS_VERSION}/lisp/eshell/esh-test.elc
 share/emacs/${EMACS_VERSION}/lisp/eshell/esh-util.el.gz
 share/emacs/${EMACS_VERSION}/lisp/eshell/esh-util.elc
 share/emacs/${EMACS_VERSION}/lisp/eshell/esh-var.el.gz
@@ -3431,6 +3430,7 @@ share/emacs/${EMACS_VERSION}/lisp/term/pc-win.el.gz
 share/emacs/${EMACS_VERSION}/lisp/term/pc-win.elc
 share/emacs/${EMACS_VERSION}/lisp/term/rxvt.el.gz
 share/emacs/${EMACS_VERSION}/lisp/term/rxvt.elc
+share/emacs/${EMACS_VERSION}/lisp/term/screen.el
 share/emacs/${EMACS_VERSION}/lisp/term/sun.el.gz
 share/emacs/${EMACS_VERSION}/lisp/term/sun.elc
 share/emacs/${EMACS_VERSION}/lisp/term/sup-mouse.el.gz
