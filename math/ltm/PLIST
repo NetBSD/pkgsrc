@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/03/10 09:52:24 drochner Exp $
 include/tommath.h
 include/tommath_class.h
 include/tommath_superclass.h
-lib/libtommath.a
+lib/libtommath.la
 share/doc/ltm/bn.pdf
 share/doc/ltm/poster.pdf
 share/doc/ltm/tommath.pdf

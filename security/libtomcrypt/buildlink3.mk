@@ -1,11 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/11/27 06:11:57 agc Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2011/03/10 10:02:34 drochner Exp $
 
 BUILDLINK_TREE+=	libtomcrypt
 
 .if !defined(LIBTOMCRYPT_BUILDLINK3_MK)
 LIBTOMCRYPT_BUILDLINK3_MK:=
-
-BUILDLINK_DEPMETHOD.libtomcrypt?=	build
 
 BUILDLINK_API_DEPENDS.libtomcrypt+=	libtomcrypt>=1.17
 BUILDLINK_PKGSRCDIR.libtomcrypt?=	../../security/libtomcrypt
