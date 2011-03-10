@@ -1,0 +1,5 @@
+A set of font metric files and virtual fonts for using the EC fonts with
+oldstyle numerals. These files can only be used together with the
+standard ec fonts. The style file eco.sty is sufficient to use the eco
+fonts but if you intend to use other font families as well, e.g.,
+PostScript fonts, try altfont.
