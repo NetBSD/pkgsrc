@@ -1,0 +1,6 @@
+The esint package permits access to alternate integral symbols when
+you're using the Computer Modern fonts. In the original set, several
+integral symbols are missing, such as \oiint. Many of these symbols are
+available in other font sets (pxfonts, txfonts, etc.), but there is no
+good solution if you want to use Computer Modern. The package provides
+Metafont source and LaTeX macro support.
