@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/11/24 01:09:48 agc Exp $
+# $NetBSD: Makefile,v 1.14 2011/03/10 09:52:24 drochner Exp $
 #
 
 DISTNAME=		ltm-0.42.0
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		http://libtom.org/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/libtommath-0.42.0
-MAKE_FILE=		makefile
+USE_LIBTOOL=		yes
+MAKE_FILE=		makefile.shared
 BUILD_TARGET=		default
 USE_TOOLS+=		gmake
 
@@ -25,7 +27,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tommath.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/tommath_class.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/tommath_superclass.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_LIB} ${WRKSRC}/libtommath.a ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libtommath.la \
+		${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/bn.pdf ${DESTDIR}${PREFIX}/share/doc/ltm
 	${INSTALL_DATA} ${WRKSRC}/poster.pdf ${DESTDIR}${PREFIX}/share/doc/ltm
 	${INSTALL_DATA} ${WRKSRC}/tommath.pdf ${DESTDIR}${PREFIX}/share/doc/ltm

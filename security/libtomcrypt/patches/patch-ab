@@ -1,0 +1,81 @@
+$NetBSD: patch-ab,v 1.1 2011/03/10 10:02:34 drochner Exp $
+
+--- makefile.shared.orig	2007-05-12 14:46:25.000000000 +0000
++++ makefile.shared
+@@ -9,7 +9,7 @@
+ VERSION=0:117
+ 
+ # Compiler and Linker Names
+-CC=libtool --mode=compile --tag=CC gcc 
++#CC=libtool --mode=compile --tag=CC gcc 
+ 
+ # ranlib tools
+ ifndef RANLIB
+@@ -75,13 +75,13 @@ ifndef DESTDIR
+    DESTDIR=
+ endif
+ ifndef LIBPATH
+-   LIBPATH=/usr/lib
++   LIBPATH=${PREFIX}/lib
+ endif
+ ifndef INCPATH
+-   INCPATH=/usr/include
++   INCPATH=${PREFIX}/include
+ endif
+ ifndef DATAPATH
+-   DATAPATH=/usr/share/doc/libtomcrypt/pdf
++   DATAPATH=${PREFIX}/share/doc/libtomcrypt/
+ endif
+ 
+ #Who do we install as?
+@@ -230,33 +230,38 @@ TIMINGS=demos/timing.o
+ default:library
+ 
+ #ciphers come in two flavours... enc+dec and enc 
+-src/ciphers/aes/aes_enc.o: src/ciphers/aes/aes.c src/ciphers/aes/aes_tab.c
+-	$(CC) $(CFLAGS) -DENCRYPT_ONLY -c src/ciphers/aes/aes.c -o src/ciphers/aes/aes_enc.o
++src/ciphers/aes/aes_enc.lo: src/ciphers/aes/aes.c src/ciphers/aes/aes_tab.c
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -DENCRYPT_ONLY -c src/ciphers/aes/aes.c -o src/ciphers/aes/aes_enc.lo
+ 
+ #These are the rules to make certain object files.
+-src/ciphers/aes/aes.o: src/ciphers/aes/aes.c src/ciphers/aes/aes_tab.c
+-src/ciphers/twofish/twofish.o: src/ciphers/twofish/twofish.c src/ciphers/twofish/twofish_tab.c
+-src/hashes/whirl/whirl.o: src/hashes/whirl/whirl.c src/hashes/whirl/whirltab.c
+-src/hashes/sha2/sha512.o: src/hashes/sha2/sha512.c src/hashes/sha2/sha384.c
+-src/hashes/sha2/sha256.o: src/hashes/sha2/sha256.c src/hashes/sha2/sha224.c
++src/ciphers/aes/aes.lo: src/ciphers/aes/aes.c src/ciphers/aes/aes_tab.c
++src/ciphers/twofish/twofish.lo: src/ciphers/twofish/twofish.c src/ciphers/twofish/twofish_tab.c
++src/hashes/whirl/whirl.lo: src/hashes/whirl/whirl.c src/hashes/whirl/whirltab.c
++src/hashes/sha2/sha512.lo: src/hashes/sha2/sha512.c src/hashes/sha2/sha384.c
++src/hashes/sha2/sha256.lo: src/hashes/sha2/sha256.c src/hashes/sha2/sha224.c
+ 
+ #This rule makes the libtomcrypt library.
+ library: $(LIBNAME)
+ 
++.SUFFIXES: .lo
++.c.lo:
++	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} $< -o $@
++
+ testprof/$(LIBTEST):
+ 	cd testprof ; CFLAGS="$(CFLAGS)" GROUP=$(GROUP) USER=$(USER) VERSION=$(VERSION) LIBPATH=$(LIBPATH) LIBTEST=$(LIBTEST) LIBTEST_S=$(LIBTEST_S) make -f makefile.shared
+ 
+ objs: $(OBJECTS)
+ 
+-$(LIBNAME): $(OBJECTS) testprof/$(LIBTEST)
+-	libtool --silent --mode=link gcc $(CFLAGS) `find . -type f | grep "[.]lo" | grep "src/" | xargs` $(EXTRALIBS) -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
++$(LIBNAME): $(OBJECTS:.o=.lo) testprof/$(LIBTEST)
++	libtool --silent --mode=link ${CC} $(CFLAGS) `find . -type f | grep "[.]lo" | grep "src/" | xargs` $(EXTRALIBS) -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
+ 
+ install: $(LIBNAME)
+-	install -d -g $(GROUP) -o $(USER) $(DESTDIR)$(LIBPATH)
++	${BSD_INSTALL_LIB_DIR} $(DESTDIR)$(LIBPATH)
+ 	cd testprof ; CFLAGS="$(CFLAGS)" GROUP=$(GROUP) USER=$(USER) VERSION=$(VERSION) LIBPATH=$(LIBPATH) LIBTEST=$(LIBTEST) LIBTEST_S=$(LIBTEST_S) DESTDIR=$(DESTDIR) make -f makefile.shared install
+ 	libtool --silent --mode=install install -c libtomcrypt.la $(DESTDIR)$(LIBPATH)/libtomcrypt.la
+-	install -d -g $(GROUP) -o $(USER) $(DESTDIR)$(INCPATH)
+-	install -g $(GROUP) -o $(USER) $(HEADERS) $(DESTDIR)$(INCPATH)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(INCPATH)
++	${BSD_INSTALL_DATA} $(HEADERS) $(DESTDIR)$(INCPATH)
++	${BSD_INSTALL_DATA} doc/crypt.pdf $(DESTDIR)$(DATAPATH)
+ 
+ #This rule makes the hash program included with libtomcrypt
+ hashsum: library
