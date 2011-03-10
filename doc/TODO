@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10175 2011/03/10 22:48:58 wiz Exp $
+$NetBSD: TODO,v 1.10176 2011/03/10 23:39:21 pettai Exp $
 
 Suggested new packages
 ======================
@@ -829,7 +829,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
-	o lftp-4.1.1
 	o lgeneral-1.2
 	o libFS-1.0.3
 	o libICE-1.0.7
