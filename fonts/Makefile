@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2011/03/10 20:17:34 minskim Exp $
+# $NetBSD: Makefile,v 1.189 2011/03/10 20:40:27 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -184,6 +184,8 @@ SUBDIR+=	tex-ec
 SUBDIR+=	tex-ec-doc
 SUBDIR+=	tex-eco
 SUBDIR+=	tex-eco-doc
+SUBDIR+=	tex-esint
+SUBDIR+=	tex-esint-doc
 SUBDIR+=	tex-euenc
 SUBDIR+=	tex-euenc-doc
 SUBDIR+=	tex-euro-ce
