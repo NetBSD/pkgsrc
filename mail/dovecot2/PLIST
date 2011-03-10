@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/01/13 12:59:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/10 13:42:54 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -319,6 +319,7 @@ include/dovecot/utc-offset.h
 include/dovecot/var-expand.h
 include/dovecot/wildcard-match.h
 include/dovecot/write-full.h
+lib/dovecot/doveadm/lib10_doveadm_acl_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_expire_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_quota_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_zlib_plugin.la
@@ -342,6 +343,7 @@ lib/dovecot/lib21_fts_squat_plugin.la
 lib/dovecot/lib30_imap_zlib_plugin.la
 lib/dovecot/libdovecot-lda.la
 lib/dovecot/libdovecot-login.la
+lib/dovecot/libdovecot-sql.la
 lib/dovecot/libdovecot-storage.la
 lib/dovecot/libdovecot.la
 libexec/dovecot/anvil
@@ -481,7 +483,6 @@ share/doc/dovecot/wiki/LDA.Indexing.txt
 share/doc/dovecot/wiki/LDA.Postfix.txt
 share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
-share/doc/dovecot/wiki/LDA.Sieve.txt
 share/doc/dovecot/wiki/LDA.txt
 share/doc/dovecot/wiki/LMTP.txt
 share/doc/dovecot/wiki/Logging.txt
