@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.613 2011/03/10 20:40:26 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.614 2011/03/10 23:39:21 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1046,3 +1046,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-eco-doc version 1.3 [minskim 2011-03-10]
 	Added fonts/tex-esint version 1.1 [minskim 2011-03-10]
 	Added fonts/tex-esint-doc version 1.1 [minskim 2011-03-10]
+	Updated net/lftp to 4.1.3 [pettai 2011-03-10]
