@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1 2011/03/11 14:55:43 drochner Exp $
+
+--- defsetup.py.orig	2011-02-16 16:45:15.000000000 +0000
++++ defsetup.py
+@@ -60,5 +60,5 @@ setupargs = {
+     'cmdclass' :                {'build_ext': build_ext,},
+     'package_dir' :             { 'pyfits' : 'lib', 'pyfits.tests' : 'lib/tests' },
+     'data_files' :              [ ( 'pyfits/tests', [ 'lib/tests/*.fits' ] ) ],
+-    'scripts' :                 ['scripts/fitscheck'],
++    'scripts' :                 ['scripts/fitscheck' + sys.version[0:3]],
+ }

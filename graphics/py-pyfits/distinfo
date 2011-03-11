@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/11 21:13:39 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/03/11 14:55:43 drochner Exp $
 
-SHA1 (pyfits-2.3.1.tar.gz) = cd6ab6f01d937dd2ad5f28076e351e05767866ae
-RMD160 (pyfits-2.3.1.tar.gz) = 0a2131c05499e5340f972825e71e8e03ae4154b4
-Size (pyfits-2.3.1.tar.gz) = 380022 bytes
+SHA1 (pyfits-2.4.0.tar.gz) = 5a0c9c7fd058fc44a22f1c00682461ecf4ebc3c1
+RMD160 (pyfits-2.4.0.tar.gz) = 3256f2111db7c994f1deb7d6ec37cb6a2a003fb0
+Size (pyfits-2.4.0.tar.gz) = 284236 bytes
+SHA1 (patch-aa) = b1d6964efdee73628f716e37e0dc1c18d17e7610
