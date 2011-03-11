@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2011/03/11 07:22:05 adam Exp $
+
+Pass CFLAGS and fix building e.g. with -isysroot on Mac OS X.
+
+--- src/Makefile.in.orig	2011-03-11 06:59:44.000000000 +0000
++++ src/Makefile.in
+@@ -862,7 +862,7 @@ uninstall-am: uninstall-binSCRIPTS unins
+ asn1-parse.c : asn1-func.h gen-help.h
+ 
+ asn1-gentables: asn1-gentables.c asn1-parse.c asn1-func.c gen-help.c gen-help.h
+-	$(CC_FOR_BUILD) -I$(srcdir) -DBUILD_GENTOOLS -o $@ \
++	$(CC_FOR_BUILD) $(CFLAGS) -I$(srcdir) -DBUILD_GENTOOLS -o $@ \
+ 		$(srcdir)/asn1-gentables.c \
+                 `test -f 'asn1-parse.c' || echo '$(srcdir)/'`asn1-parse.c  \
+                 $(srcdir)/asn1-func.c      \
