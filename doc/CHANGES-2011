@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.620 2011/03/11 10:57:12 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.621 2011/03/11 10:59:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1056,3 +1056,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mercurial to 1.8.1 [wiz 2011-03-11]
 	Updated finance/gnucash to 2.4.3 [wiz 2011-03-11]
 	Updated misc/JBidwatcher to 2.1.4.1 [wiz 2011-03-11]
+	Updated misc/dialog to 1.1.20110302 [wiz 2011-03-11]
