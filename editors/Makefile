@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2011/03/11 14:24:26 drochner Exp $
+# $NetBSD: Makefile,v 1.143 2011/03/11 14:45:12 drochner Exp $
 #
 
 COMMENT=	Editors
@@ -98,6 +98,7 @@ SUBDIR+=	poedit
 SUBDIR+=	qgoogletranslator
 SUBDIR+=	rox-edit
 SUBDIR+=	sam
+SUBDIR+=	scite
 SUBDIR+=	speedbar
 SUBDIR+=	ssam
 SUBDIR+=	tamago
