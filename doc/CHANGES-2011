@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.627 2011/03/11 12:04:00 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.628 2011/03/11 12:07:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libgnome to 2.32.1 [wiz 2011-03-11]
 	Updated devel/cfitsio to 3.270 [wiz 2011-03-11]
 	Updated devel/libgnomeui to 2.24.5 [wiz 2011-03-11]
+	Updated games/puzzles to 9109 [wiz 2011-03-11]
