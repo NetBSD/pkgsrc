@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2011/01/13 13:36:47 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2011/03/11 11:41:24 wiz Exp $
 #
 
-DISTNAME=	libgnome-2.32.0
-PKGREVISION=	2
+DISTNAME=	libgnome-2.32.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,10 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Core GNOME2 library (non-graphical)
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
@@ -22,11 +20,13 @@ USE_PKGLOCALEDIR=	YES
 
 PKGCONFIG_OVERRIDE=	libgnome/libgnome-2.0.pc.in
 
-CONFIGURE_ARGS=	--enable-gtk-doc=no
+CONFIGURE_ARGS=		--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	soundlistdir=${PREFIX}/share/examples/libgnome/sound/events
+
+BUILD_DEFS+=	VARBASE
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/sound/events
 
@@ -55,24 +55,14 @@ GCONF_SCHEMAS+=	desktop_gnome_applications_at_mobility.schemas
 GCONF_SCHEMAS+=	desktop_gnome_applications_at_visual.schemas
 GCONF_SCHEMAS+=	desktop_gnome_applications_office.schemas
 
-PKG_OPTIONS_VAR= PKG_OPTIONS.libgnome
-PKG_SUPPORTED_OPTIONS= esound
-.include "../../mk/bsd.options.mk"
-.if !empty(PKG_OPTIONS:Mesound)
-.include "../../audio/esound/buildlink3.mk"
-BUILDLINK_API_DEPENDS.audiofile+=	libaudiofile>=0.2.3
-.include "../../audio/libaudiofile/buildlink3.mk"
-.else
-CONFIGURE_ARGS+= --disable-esd
-.endif
-
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0
-BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
+.include "options.mk"
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
+BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
