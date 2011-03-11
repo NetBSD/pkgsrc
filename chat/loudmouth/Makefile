@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2010/01/17 12:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2011/03/11 10:42:14 zafer Exp $
 
 DISTNAME=	loudmouth-1.4.3
 PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/1.4/} \
-		http://ftp.imendio.com/pub/imendio/loudmouth/src/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/1.4/}
+
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
