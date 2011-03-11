@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.618 2011/03/11 10:13:04 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.619 2011/03/11 10:53:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-base to 1.7.4.1 [adam 2011-03-11]
 	Updated devel/scmgit-docs to 1.7.4.1 [adam 2011-03-11]
 	Updated devel/mercurial to 1.8.1 [wiz 2011-03-11]
+	Updated finance/gnucash to 2.4.3 [wiz 2011-03-11]
