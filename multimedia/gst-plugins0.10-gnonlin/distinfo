@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/09/08 16:29:01 drochner Exp $
+$NetBSD: distinfo,v 1.5 2011/03/11 15:31:13 drochner Exp $
 
-SHA1 (gnonlin-0.10.16.tar.bz2) = df82026e478633ef42a1018762ae8416adcb8960
-RMD160 (gnonlin-0.10.16.tar.bz2) = 4e1a3fa022babafe02742521d6a94a4763eb6f7b
-Size (gnonlin-0.10.16.tar.bz2) = 452179 bytes
+SHA1 (gnonlin-0.10.17.tar.bz2) = 5d3fb27b2590b5a5b8c35e459db6d4cfe489ee15
+RMD160 (gnonlin-0.10.17.tar.bz2) = 784809028a59f05bba59835fa3b2ff112d9e565d
+Size (gnonlin-0.10.17.tar.bz2) = 468711 bytes
