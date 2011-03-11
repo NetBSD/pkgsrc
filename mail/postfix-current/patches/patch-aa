@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.19 2008/09/04 08:25:31 martti Exp $
+$NetBSD: patch-aa,v 1.19.22.1 2011/03/11 10:54:03 tron Exp $
 
 Make this pkgsrc friendly.
 

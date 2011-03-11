@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.22 2010/02/25 13:02:02 martti Exp $
+@comment $NetBSD: PLIST,v 1.22.8.1 2011/03/11 10:54:02 tron Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
 libexec/postfix/bounce
 libexec/postfix/cleanup
-libexec/postfix/discard
 libexec/postfix/dnsblog
+libexec/postfix/discard
 libexec/postfix/error
 libexec/postfix/flush
 libexec/postfix/lmtp
@@ -32,6 +32,7 @@ libexec/postfix/smtp
 libexec/postfix/smtpd
 libexec/postfix/spawn
 libexec/postfix/tlsmgr
+libexec/postfix/tlsproxy
 libexec/postfix/trivial-rewrite
 libexec/postfix/verify
 libexec/postfix/virtual
@@ -69,6 +70,7 @@ man/man5/postconf.5
 man/man5/postfix-wrapper.5
 man/man5/regexp_table.5
 man/man5/relocated.5
+man/man5/sqlite_table.5
 man/man5/tcp_table.5
 man/man5/transport.5
 man/man5/virtual.5
@@ -84,9 +86,9 @@ man/man8/lmtp.8
 man/man8/local.8
 man/man8/master.8
 man/man8/oqmgr.8
+man/man8/postscreen.8
 man/man8/pickup.8
 man/man8/pipe.8
-man/man8/postscreen.8
 man/man8/proxymap.8
 man/man8/qmgr.8
 man/man8/qmqpd.8
@@ -96,6 +98,7 @@ man/man8/smtp.8
 man/man8/smtpd.8
 man/man8/spawn.8
 man/man8/tlsmgr.8
+man/man8/tlsproxy.8
 man/man8/trace.8
 man/man8/trivial-rewrite.8
 man/man8/verify.8
@@ -144,6 +147,7 @@ share/doc/postfix/OVERVIEW
 share/doc/postfix/PACKAGE_README
 share/doc/postfix/PCRE_README
 share/doc/postfix/PGSQL_README
+share/doc/postfix/POSTSCREEN_README
 share/doc/postfix/QSHAPE_README
 share/doc/postfix/RELEASE_NOTES
 share/doc/postfix/RESTRICTION_CLASS_README
@@ -152,6 +156,8 @@ share/doc/postfix/SCHEDULER_README
 share/doc/postfix/SMTPD_ACCESS_README
 share/doc/postfix/SMTPD_POLICY_README
 share/doc/postfix/SMTPD_PROXY_README
+share/doc/postfix/SOHO_README
+share/doc/postfix/SQLITE_README
 share/doc/postfix/STANDARD_CONFIGURATION_README
 share/doc/postfix/STRESS_README
 share/doc/postfix/TLS_LEGACY_README
