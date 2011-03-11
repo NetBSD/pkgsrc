@@ -1,11 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2011/01/31 03:05:17 jym Exp $
+$NetBSD: MESSAGE,v 1.2 2011/03/11 21:00:06 drochner Exp $
 
 Execute these commands to extract and rehash all CA root certificates
 distributed by the Mozilla Project, so that they can be used by third
-party applications:
+party applications using OpenSSL:
 
 	# cd /etc/openssl/certs # Default SSLCERTS path for NetBSD
 	# mozilla-rootcerts extract
 	# mozilla-rootcerts rehash
+
+To create a single file certificate bundle in PEM format which can
+be used by applications using GnuTLS, do the following:
+
+	# mkdir -p /etc/ssl/certs
+	# cd /etc/ssl/certs
+	# cat ../../openssl/certs/*.pem >ca-certificates.crt
 ===========================================================================
