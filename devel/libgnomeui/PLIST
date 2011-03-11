@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2010/10/22 19:34:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.32 2011/03/11 12:03:50 wiz Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -210,6 +210,7 @@ share/locale/kn/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ko/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ku/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/la/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/lg/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/li/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/lt/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/lv/LC_MESSAGES/libgnomeui-2.0.mo
