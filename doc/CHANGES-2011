@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.625 2011/03/11 11:41:35 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.626 2011/03/11 11:56:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1061,3 +1061,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/farsight2 to 0.0.26 [wiz 2011-03-11]
 	Updated devel/libidn to 1.20 [wiz 2011-03-11]
 	Updated devel/libgnome to 2.32.1 [wiz 2011-03-11]
+	Updated devel/cfitsio to 3.270 [wiz 2011-03-11]
