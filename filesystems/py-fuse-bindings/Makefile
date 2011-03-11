@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/02/10 19:17:37 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/11 11:29:42 zafer Exp $
 #
 
 DISTNAME=		fuse-python-0.2pre1-20060720
 PKGNAME=		${PYPKGPREFIX}-fuse-bindings-0.2pre1
 PKGREVISION=		2
 CATEGORIES=		filesystems python
-MASTER_SITES=		http://bsd.cenkes.org/myports/
+MASTER_SITES=		# http://bsd.cenkes.org/myports/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
