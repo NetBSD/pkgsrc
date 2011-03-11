@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/05/15 06:19:27 adam Exp $
+$NetBSD: distinfo,v 1.3 2011/03/11 12:57:46 drochner Exp $
 
-SHA1 (xylib-0.6.tar.bz2) = 7f35c8ddbe2bbb1d9da540369ad63c8b388a5a12
-RMD160 (xylib-0.6.tar.bz2) = 64025b68b966dc49cccaabd7cb24bc54868b744b
-Size (xylib-0.6.tar.bz2) = 288815 bytes
+SHA1 (xylib-0.8.tar.bz2) = fb958d19188a5b345ec07c4f6757658fc2d22d5b
+RMD160 (xylib-0.8.tar.bz2) = 271e92bdf1fbc9ef94e8f7b53cb4a443eca84a77
+Size (xylib-0.8.tar.bz2) = 290832 bytes
