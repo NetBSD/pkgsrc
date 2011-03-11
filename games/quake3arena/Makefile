@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2009/05/19 08:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2011/03/11 12:16:31 zafer Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
 PKGNAME=	quake3arena-1.32b
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/ \
-		ftp://mirrors.xmission.com/idsoftware/quake3/linux/
+MASTER_SITES=	http://distfiles.aydogan.net/games/ \
+		http://www.mirrorservice.org/sites/quakeunity.com/point_releases/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
