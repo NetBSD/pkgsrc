@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 15:55:14 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2011/03/11 12:37:10 zafer Exp $
 
 DISTNAME=	skkfep0.86c
 PKGNAME=	skkfep-0.86c
 PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/skkfep/
+MASTER_SITES=	# ftp://ei5nazha.yz.yamagata-u.ac.jp/skkfep/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/aito-soft.html
