@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2008/03/02 03:48:37 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2011/03/11 10:09:45 zafer Exp $
 
 DISTNAME=	undms-1.3.c
 PKGNAME=	undms-1.3
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://de.aminet.net/misc/unix/ \
-		ftp://us.aminet.net/pub/aminet/misc/unix/
+MASTER_SITES=	ftp://de.aminet.net/misc/unix/
+
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
