@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2011/02/12 15:08:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2011/03/11 10:53:39 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -62,6 +62,7 @@ include/gnucash/glib-helpers.h
 include/gnucash/gnc-account-merge.h
 include/gnucash/gnc-account-sel.h
 include/gnucash/gnc-accounting-period.h
+include/gnucash/gnc-addr-quickfill.h
 include/gnucash/gnc-amount-edit.h
 include/gnucash/gnc-associate-account.h
 include/gnucash/gnc-basic-gobject.h
