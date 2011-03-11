@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:16 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2011/03/11 20:04:46 gdt Exp $
 #
 
-DISTNAME=	rvm-1.14
+DISTNAME=	rvm-1.17
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.coda.cs.cmu.edu/pub/rvm/src/
 
@@ -11,7 +11,7 @@ COMMENT=	Recoverable Virtual Memory
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
