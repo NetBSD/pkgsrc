@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/03/11 09:27:09 adam Exp $
 bin/xmlif
 bin/xmlto
 man/man1/xmlif.1
@@ -27,4 +27,13 @@ share/xmlto/format/fo/pdf
 share/xmlto/format/fo/ps
 share/xmlto/format/fo/svg
 share/xmlto/format/fo/txt
+share/xmlto/format/xhtml1/awt
+share/xmlto/format/xhtml1/dvi
+share/xmlto/format/xhtml1/fo
+share/xmlto/format/xhtml1/mif
+share/xmlto/format/xhtml1/pcl
+share/xmlto/format/xhtml1/pdf
+share/xmlto/format/xhtml1/ps
+share/xmlto/format/xhtml1/svg
+share/xmlto/format/xhtml1/txt
 share/xmlto/xmlto.mak
