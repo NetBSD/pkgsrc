@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2011/03/11 07:20:45 adam Exp $
+
+Pass CFLAGS and fix building e.g. with -isysroot on Mac OS X.
+
+--- doc/Makefile.in.orig	2011-03-11 07:15:50.000000000 +0000
++++ doc/Makefile.in
+@@ -850,7 +850,7 @@ uninstall-man: uninstall-man1
+ 
+ 
+ yat2m: yat2m.c
+-	$(CC_FOR_BUILD) -o $@ $(srcdir)/yat2m.c
++	$(CC_FOR_BUILD) $(CFLAGS) -o $@ $(srcdir)/yat2m.c
+ 
+ yat2m-stamp: $(myman_sources)
+ 	@rm -f yat2m-stamp.tmp
