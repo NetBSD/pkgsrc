@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2011/02/28 14:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2011/03/11 18:03:21 drochner Exp $
 
-DISTNAME=	bluefish-1.0.7
-PKGREVISION=	11
+DISTNAME=	bluefish-2.0.3
 CATEGORIES=	www
 MASTER_SITES=	http://bluefish.mrball.net/stable/source/               \
 		http://www.bennewitz.com/bluefish/stable/source/
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		weblint-[0-9]*:../../www/weblint
 
-USE_TOOLS+=		find gmake grep msgfmt pkg-config
+USE_TOOLS+=		find gmake grep msgfmt pkg-config perl intltool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX:Q}/share/pixmaps
@@ -26,13 +25,18 @@ CONFIGURE_ARGS+=	--with-gnome2_4-appreg=${PREFIX:Q}/share/application-registry
 CONFIGURE_ENV+=		EXTERNAL_GREP=${TOOLS_GREP:Q}
 CONFIGURE_ENV+=		EXTERNAL_FIND=${TOOLS_FIND:Q}
 
+# XXX this doesn't work
+#XML_CATALOGS=	${PREFIX}/share/xml/bluefish/catalog.xml
+#XML_ENTRIES=	delegateURI http://bluefish.openoffice.nl/ns/bflang/2.0/ \
+#		${PREFIX}/share/xml/bluefish/2.0/
+#.include "../../textproc/xmlcatmgr/catalogs.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+.include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/aspell/buildlink3.mk"
+.include "../../textproc/enchant/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
