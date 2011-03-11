@@ -1,13 +1,19 @@
-$NetBSD: patch-ac,v 1.3 2006/10/18 21:40:17 rillig Exp $
+$NetBSD: patch-ac,v 1.4 2011/03/11 18:03:21 drochner Exp $
 
---- configure.orig	2006-10-18 23:28:42.000000000 +0200
-+++ configure	2006-10-18 23:36:32.000000000 +0200
-@@ -4748,7 +4748,7 @@ fi
+--- configure.orig	2010-02-15 13:56:55.000000000 +0000
++++ configure
+@@ -26444,12 +26444,12 @@ LIBS="$LIBS $BLUEFISH_REQUIRED_LIBS"
  
- #####################################################
  
--if test "${prefix}" == "NONE"; then
-+if test "${prefix}" = "NONE"; then
+ 
+-if test "$prefix" == "NONE"; then
++if test "$prefix" = "NONE"; then
  	prefix=${ac_default_prefix}
+ 
+ fi
+ 
+-if test "$exec_prefix" == "NONE"; then
++if test "$exec_prefix" = "NONE"; then
+ 	exec_prefix=${prefix}
  
  fi
