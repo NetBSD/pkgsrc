@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/01/29 16:51:38 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/11 10:48:08 zafer Exp $
 
 DISTNAME=	d1489-1.4
 PKGNAME=	ru-d1489-1.4
 CATEGORIES=	converters
-MASTER_SITES=	ftp://ftp.kiarchive.ru/pub/unix/convert/char/
+MASTER_SITES=	# ftp://ftp.kiarchive.ru/pub/unix/convert/char/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mishka@NetBSD.org
