@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/11 11:32:47 zafer Exp $
 
 DISTNAME=	mplayer-fonts-20030714
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	http://www4.mplayerhq.hu/MPlayer/releases/fonts/ \
-		ftp://ftp2.mplayerhq.hu/MPlayer/releases/fonts/ \
+MASTER_SITES=	ftp://ftp2.mplayerhq.hu/MPlayer/releases/fonts/ \
 		ftp://ftp1.mplayerhq.hu/MPlayer/releases/fonts/ \
 		ftp://ftp5.mplayerhq.hu/MPlayer/releases/fonts/ \
 		http://www1.mplayerhq.hu/MPlayer/releases/fonts/ \
