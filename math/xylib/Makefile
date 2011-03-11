@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/05/15 06:19:27 adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/11 12:57:46 drochner Exp $
 
-DISTNAME=	xylib-0.6
+DISTNAME=	xylib-0.8
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xylib/}
 EXTRACT_SUFX=	.tar.bz2
