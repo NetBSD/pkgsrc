@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.24 2009/12/13 08:55:57 martti Exp $
+$NetBSD: patch-ai,v 1.24.10.1 2011/03/11 10:54:03 tron Exp $
 
 Make this pkgsrc friendly.
 Add support for NetBSD 5.x and DragonFly BSD.
 
---- makedefs.orig	2009-11-10 02:44:41.000000000 +0200
-+++ makedefs	2009-12-13 10:47:16.000000000 +0200
+--- makedefs.orig	2010-02-03 22:58:58.000000000 +0200
++++ makedefs	2010-02-25 14:48:50.000000000 +0200
 @@ -146,6 +146,8 @@
  		;;
    FreeBSD.8*)	SYSTYPE=FREEBSD8
