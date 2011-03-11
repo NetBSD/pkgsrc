@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.623 2011/03/11 11:06:40 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.624 2011/03/11 11:25:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1059,3 +1059,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/dialog to 1.1.20110302 [wiz 2011-03-11]
 	Updated net/yaz to 4.1.4 [wiz 2011-03-11]
 	Updated multimedia/farsight2 to 0.0.26 [wiz 2011-03-11]
+	Updated devel/libidn to 1.20 [wiz 2011-03-11]
