@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/11 21:13:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/11 14:55:43 drochner Exp $
+bin/fitscheck2.5
 ${PYSITELIB}/pyfits/__init__.py
 ${PYSITELIB}/pyfits/__init__.pyc
 ${PYSITELIB}/pyfits/__init__.pyo
@@ -15,16 +16,6 @@ ${PYSITELIB}/pyfits/svn_version.pyo
 ${PYSITELIB}/pyfits/tests/__init__.py
 ${PYSITELIB}/pyfits/tests/__init__.pyc
 ${PYSITELIB}/pyfits/tests/__init__.pyo
-${PYSITELIB}/pyfits/tests/arange.fits
-${PYSITELIB}/pyfits/tests/ascii.fits
-${PYSITELIB}/pyfits/tests/checksum.fits
-${PYSITELIB}/pyfits/tests/comp.fits
-${PYSITELIB}/pyfits/tests/o4sp040b0_raw.fits
-${PYSITELIB}/pyfits/tests/scale.fits
-${PYSITELIB}/pyfits/tests/stddata.fits
-${PYSITELIB}/pyfits/tests/table.fits
-${PYSITELIB}/pyfits/tests/tb.fits
-${PYSITELIB}/pyfits/tests/test0.fits
 ${PYSITELIB}/pyfits/tests/testCore.py
 ${PYSITELIB}/pyfits/tests/testCore.pyc
 ${PYSITELIB}/pyfits/tests/testCore.pyo
