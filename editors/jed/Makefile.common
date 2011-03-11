@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2010/01/29 19:46:20 joerg Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/03/11 11:27:13 zafer Exp $
 #
 DISTNAME=		jed-0.99-16
 CATEGORIES=		editors
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/jed/v0.99/ \
 			ftp://ftp.fu-berlin.de/pub/unix/editors/jed/v0.99/ \
 			ftp://ftp.ntua.gr/pub/lang/slang/jed/v0.99/ \
-			ftp://ftp.bay.net.au/pub/jed/v0.99/ \
 			ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/jed/v0.99/
 EXTRACT_SUFX=		.tar.bz2
 
