@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/01/15 21:23:12 jakllsch Exp $
+# $NetBSD: Makefile,v 1.41 2011/03/11 11:36:28 obache Exp $
 
 DISTNAME=	sdcc-src-2.8.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,8 +10,11 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sdcc.sourceforge.net/
 COMMENT=	Cross compile 8051 code
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gputils-[0-9]*:../../devel/gputils
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 
@@ -49,8 +52,8 @@ sys-endian-buildlink:
 .endif
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/*.lyx ${PREFIX}/share/doc/sdcc
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${PREFIX}/share/doc/sdcc
+	${INSTALL_DATA} ${WRKSRC}/doc/*.lyx ${DESTDIR}${PREFIX}/share/doc/sdcc
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/sdcc
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
