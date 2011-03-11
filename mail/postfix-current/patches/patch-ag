@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.22 2010/04/16 15:32:59 taca Exp $
+$NetBSD: patch-ag,v 1.22.6.1 2011/03/11 10:54:03 tron Exp $
 
 Only define HAS_DB if it hasn't been defined.
 Add support for NetBSD 5.x and DragonFly BSD.
