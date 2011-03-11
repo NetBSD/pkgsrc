@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/12/23 23:42:40 abs Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/03/11 09:28:39 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -130,6 +130,8 @@ libexec/git-core/git-receive-pack
 libexec/git-core/git-reflog
 libexec/git-core/git-relink
 libexec/git-core/git-remote
+libexec/git-core/git-remote-ext
+libexec/git-core/git-remote-fd
 libexec/git-core/git-remote-ftp
 libexec/git-core/git-remote-ftps
 libexec/git-core/git-remote-http
@@ -250,6 +252,7 @@ ${PLIST.gui}share/gitk/lib/msgs/fr.msg
 ${PLIST.gui}share/gitk/lib/msgs/hu.msg
 ${PLIST.gui}share/gitk/lib/msgs/it.msg
 ${PLIST.gui}share/gitk/lib/msgs/ja.msg
+${PLIST.gui}share/gitk/lib/msgs/pt_br.msg
 ${PLIST.gui}share/gitk/lib/msgs/ru.msg
 ${PLIST.gui}share/gitk/lib/msgs/sv.msg
 share/gitweb/gitweb.cgi
