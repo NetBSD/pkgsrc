@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2009/05/19 08:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2011/03/11 10:13:20 zafer Exp $
 
 DISTNAME=	zoo-2.10pl1
 PKGNAME=	zoo-2.10.1
 PKGREVISION=	4
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.kiarchive.ru/pub/unix/arcers/
+MASTER_SITES=	# ftp://ftp.kiarchive.ru/pub/unix/arcers/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Manipulate archives of files in compressed form
