@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10185 2011/03/11 11:41:35 wiz Exp $
+$NetBSD: TODO,v 1.10186 2011/03/11 12:04:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -866,7 +866,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgdata-0.8.0
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
-	o libgnomeui-2.24.5
 	o libhydrogen-0.9.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
