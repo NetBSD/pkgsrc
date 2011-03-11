@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.632 2011/03/11 20:25:17 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.633 2011/03/11 20:27:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1068,3 +1068,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/lwp to 2.6 [gdt 2011-03-11]
 	Updated devel/rpc2 to 2.10 [gdt 2011-03-11]
 	Updated devel/rvm to 1.17 [gdt 2011-03-11]
+	Updated net/coda to 6.9.5 [gdt 2011-03-11]
