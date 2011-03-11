@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2010/10/24 18:10:39 minskim Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/03/11 11:40:37 zafer Exp $
 
 DISTNAME=	uhc-fonts-1.0
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://ftp.ktug.or.kr/pub/ktug/hlatex/fonts/
+MASTER_SITES=	# ftp://ftp.ktug.or.kr/pub/ktug/hlatex/fonts/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${UHC_FONTS}
 
 MAINTAINER=	minskim@NetBSD.org
