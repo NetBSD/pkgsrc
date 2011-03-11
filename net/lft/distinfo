@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:51 agc Exp $
+$NetBSD: distinfo,v 1.3 2011/03/11 07:02:38 gls Exp $
 
-SHA1 (lft-2.2.tar.gz) = e475fbbe948c9097787fec8888b17029a43fc56b
-RMD160 (lft-2.2.tar.gz) = 841b0f79a6ff0bb2ea51ca89843a51b304cb6b10
-Size (lft-2.2.tar.gz) = 105483 bytes
+SHA1 (lft-3.31.tar.gz) = 88013cd465d9fd5b3ea76b6d16a054405e3ae533
+RMD160 (lft-3.31.tar.gz) = 93c4a6b4b8c0a3be18640d9b32cce4b05c108a9c
+Size (lft-3.31.tar.gz) = 173875 bytes

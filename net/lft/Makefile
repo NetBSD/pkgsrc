@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2010/02/11 22:04:09 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2011/03/11 07:02:38 gls Exp $
 #
 
-DISTNAME=		lft-2.2
+DISTNAME=		lft-3.31
 CATEGORIES=		net
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=	http://pwhois.org/dl/index.who?file=
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mainnerve.com/lft/
+HOMEPAGE=		http://pwhois.org/lft/
 COMMENT=		Layer four traceroute capable of tracing protocol paths
+LICENSE=		lft-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
