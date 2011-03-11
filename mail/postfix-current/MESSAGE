@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/07/31 05:53:44 jlam Exp $
+$NetBSD: MESSAGE,v 1.2.56.1 2011/03/11 10:54:02 tron Exp $
 
 Please run the following command to update main.cf and master.cf with
 the latest Postfix services and configuration directives:

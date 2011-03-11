@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.115 2010/09/28 13:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.115.4.1 2011/03/11 10:54:02 tron Exp $
 
-DISTNAME=	postfix-2.8-20100603
-PKGNAME=	postfix-2.8.20100603
+DISTNAME=	postfix-2.8.1
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/
-MASTER_SITES+=	http://postfix.it-austria.net/releases/experimental/
-MASTER_SITES+=	http://mirrors.isc.org/pub/postfix/experimental/
-MASTER_SITES+=	http://mirror.postfix.jp/postfix-release/experimental/
-DIST_SUBDIR=	postfix
+MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
+MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
+MASTER_SITES+=	http://mirrors.isc.org/pub/postfix/official/
+MASTER_SITES+=	http://mirror.postfix.jp/postfix-release/official/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
@@ -17,7 +15,7 @@ LICENSE=	cpl-1.0
 #LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
-CONFLICTS+=	postfix-2.[6-7]-[0-9]* esmtp>=1.2
+CONFLICTS+=	esmtp>=1.2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
