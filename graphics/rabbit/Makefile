@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2011/02/27 08:10:10 obache Exp $
+# $NetBSD: Makefile,v 1.28 2011/03/11 12:29:23 zafer Exp $
 #
 
 DISTNAME=	rabbit-0.9.2
 CATEGORIES=	graphics ruby
-MASTER_SITES=	http://www.cozmixng.org/~kou/download/
+MASTER_SITES=	# http://www.cozmixng.org/~kou/download/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://rabbit-shockers.org/
