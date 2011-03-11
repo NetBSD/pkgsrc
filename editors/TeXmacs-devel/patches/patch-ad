@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/03/11 14:19:12 drochner Exp $
+
+--- src/System/Link/pipe_link.cpp.orig	2010-07-21 21:55:47.000000000 +0000
++++ src/System/Link/pipe_link.cpp
+@@ -28,9 +28,6 @@
+ #include <signal.h>
+ #include <sys/wait.h>
+ #endif
+-#ifndef __APPLE__
+-#include <malloc.h>
+-#endif
+ 
+ hashset<pointer> pipe_link_set;
+ void pipe_callback (void *obj, void *info);
