@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:29 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2011/03/11 20:04:46 gdt Exp $
 
 BUILDLINK_TREE+=	rvm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rvm
 RVM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rvm+=	rvm>=1.3
-BUILDLINK_ABI_DEPENDS.rvm+=	rvm>=1.11nb1
+BUILDLINK_ABI_DEPENDS.rvm+=	rvm>=1.17
 BUILDLINK_PKGSRCDIR.rvm?=	../../devel/rvm
 
 .include "../../devel/lwp/buildlink3.mk"
