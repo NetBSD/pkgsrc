@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1.1.1 2011/03/11 14:19:12 drochner Exp $
+
+--- configure.orig	2010-07-22 08:56:13.000000000 +0000
++++ configure
+@@ -5489,7 +5489,7 @@ $as_echo "yes" >&6; }
+ 
+ $as_echo "#define USE_ICONV 1" >>confdefs.h
+ 
+-      ICONV_LDFLAGS="${ICONV_LDFLAGS/-liconv} -liconv"
++      ICONV_LDFLAGS="${ICONV_LDFLAGS} -liconv"
+ 
+ else
+ 
