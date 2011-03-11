@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.630 2011/03/11 19:58:10 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.631 2011/03/11 20:01:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1066,3 +1066,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/puzzles to 9109 [wiz 2011-03-11]
 	Updated net/quvi to 0.2.14 [ryoon 2011-03-11]
 	Updated devel/lwp to 2.6 [gdt 2011-03-11]
+	Updated devel/rpc2 to 2.10 [gdt 2011-03-11]
