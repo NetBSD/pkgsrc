@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.45 2011/01/19 13:46:13 adam Exp $
+# $NetBSD: Makefile,v 1.46 2011/03/11 12:44:30 zafer Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGREVISION=	2
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
+MASTER_SITES=	http://www.lua.org/ftp/ \
 		ftp://ftp.gwdg.de/pub/languages/lua/ \
-		ftp://ftp.u-aizu.ac.jp/pub/lang/lua/ \
-		ftp://ftp.chg.ru/pub/lang/lua/ \
-		http://www.lua.org/ftp/ \
 		http://www.tecgraf.puc-rio.br/lua/ftp/ \
-		http://ftp.gwdg.de/pub/languages/lua/ \
-		http://mirrors.sunsite.dk/lua/ \
-		http://ftp.chg.ru/pub/lang/lua/
+		http://ftp.gwdg.de/pub/languages/lua/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lua.org/
