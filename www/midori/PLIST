@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/01/26 19:35:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/03/11 21:04:52 drochner Exp $
 bin/midori
 lib/midori/libadblock.so
 lib/midori/libaddons.so
@@ -43,6 +43,7 @@ share/icons/hicolor/48x48/status/news-feed.png
 share/icons/hicolor/scalable/apps/midori.svg
 share/icons/hicolor/scalable/categories/extension.svg
 share/icons/hicolor/scalable/status/news-feed.svg
+share/locale/ar/LC_MESSAGES/midori.mo
 share/locale/ast/LC_MESSAGES/midori.mo
 share/locale/ca/LC_MESSAGES/midori.mo
 share/locale/cs/LC_MESSAGES/midori.mo
