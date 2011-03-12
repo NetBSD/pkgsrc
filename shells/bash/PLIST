@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/01/16 17:17:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/03/12 15:55:22 wiz Exp $
 bin/bash
 bin/bashbug
 info/bash.info
@@ -29,5 +29,7 @@ share/locale/ru/LC_MESSAGES/bash.mo
 share/locale/sk/LC_MESSAGES/bash.mo
 share/locale/sv/LC_MESSAGES/bash.mo
 share/locale/tr/LC_MESSAGES/bash.mo
+share/locale/uk/LC_MESSAGES/bash.mo
 share/locale/vi/LC_MESSAGES/bash.mo
+share/locale/zh_CN/LC_MESSAGES/bash.mo
 share/locale/zh_TW/LC_MESSAGES/bash.mo
