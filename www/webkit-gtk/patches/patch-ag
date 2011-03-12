@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2011/03/12 12:15:58 martin Exp $
+
+It would be easier to list the CPUs where unaligned access is both allowed
+and actually faster!
+
+--- WebCore/platform/text/AtomicString.cpp.orig	2010-09-10 15:20:33.000000000 +0200
++++ WebCore/platform/text/AtomicString.cpp	2011-03-12 12:54:41.000000000 +0100
+@@ -105,7 +105,7 @@ static inline bool equal(StringImpl* str
+ 
+     // FIXME: perhaps we should have a more abstract macro that indicates when
+     // going 4 bytes at a time is unsafe
+-#if CPU(ARM) || CPU(SH4)
++#if CPU(ARM) || CPU(SH4) || CPU(PPC) || CPU(PPC64) || CPU(SPARC) || CPU(SPARC64) || CPU(MIPS)
+     const UChar* stringCharacters = string->characters();
+     for (unsigned i = 0; i != length; ++i) {
+         if (*stringCharacters++ != *characters++)
