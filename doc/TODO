@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10188 2011/03/12 13:58:38 wiz Exp $
+$NetBSD: TODO,v 1.10189 2011/03/12 15:27:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o baci-20040415
 	o balance-3.54
 	o balsa-2.4.9
-	o bash-4.2
 	o bash-completion-1.1
 	o bbdb-2.35
 	o bbkeys-0.9.0
