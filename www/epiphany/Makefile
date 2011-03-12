@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2011/03/11 21:02:35 drochner Exp $
+# $NetBSD: Makefile,v 1.115 2011/03/12 13:04:15 drochner Exp $
 #
 
 DISTNAME=	epiphany-2.30.6
@@ -19,6 +19,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 
+# see pkgsrc/security/mozilla-rootcerts
 CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt
 
 PKGCONFIG_OVERRIDE=	data/epiphany.pc.in

@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.13 2011/03/12 13:04:15 drochner Exp $
+
+Don't check existence of root certificates at build time
+to avoid a hard dependency.
+
+--- configure.orig	2010-09-15 16:27:21.000000000 +0000
++++ configure
+@@ -14652,9 +14652,9 @@ else
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $with_ca_file" >&5
+ $as_echo "$with_ca_file" >&6; }
+-    if ! test -f "$with_ca_file"; then
+-        as_fn_error $? "No such file '$with_ca_file'. Use --with-ca-file=path to set, or --without-ca-file to disable" "$LINENO" 5
+-    fi
++#    if ! test -f "$with_ca_file"; then
++#        as_fn_error $? "No such file '$with_ca_file'. Use --with-ca-file=path to set, or --without-ca-file to disable" "$LINENO" 5
++#    fi
+     GTLS_SYSTEM_CA_FILE="$with_ca_file"
+ 
+ 
