@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2010/04/15 12:49:41 joerg Exp $
+$NetBSD: patch-af,v 1.6 2011/03/12 15:26:45 wiz Exp $
 
---- builtins/printf.def.orig	2009-11-20 20:31:23.000000000 +0000
+--- builtins/printf.def.orig	2010-11-23 15:02:55.000000000 +0000
 +++ builtins/printf.def
-@@ -85,6 +85,11 @@ $END
+@@ -90,6 +90,11 @@ $END
  #  undef PRIdMAX
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD: patch-af,v 1.5 2010/04/15 12:49:41 joerg Exp $
  #if !defined (PRIdMAX)
  #  if HAVE_LONG_LONG
  #    define PRIdMAX	"lld"
-@@ -92,6 +97,13 @@ $END
+@@ -97,6 +102,13 @@ $END
  #    define PRIdMAX	"ld"
  #  endif
  #endif
@@ -28,16 +28,7 @@ $NetBSD: patch-af,v 1.5 2010/04/15 12:49:41 joerg Exp $
  
  #if !defined (errno)
  extern int errno;
-@@ -172,7 +184,7 @@ extern int asprintf __P((char **, const 
- #endif
- 
- #if !HAVE_VSNPRINTF
--extern int vsnprintf __P((char *, size_t, const char *, ...)) __attribute__((__format__ (printf, 3, 4)));
-+extern int vsnprintf __P((char *, size_t, const char *, va_list)) __attribute__((__format__ (printf, 3, 0)));
- #endif
- 
- static void printf_erange __P((char *));
-@@ -487,7 +499,11 @@ printf_builtin (list)
+@@ -571,7 +583,11 @@ printf_builtin (list)
  		p = pp = getintmax ();
  		if (p != pp)
  		  {
@@ -49,7 +40,7 @@ $NetBSD: patch-af,v 1.5 2010/04/15 12:49:41 joerg Exp $
  		    PF (f, pp);
  		  }
  		else
-@@ -514,7 +530,11 @@ printf_builtin (list)
+@@ -598,7 +614,11 @@ printf_builtin (list)
  		p = pp = getuintmax ();
  		if (p != pp)
  		  {
