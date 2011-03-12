@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/13 19:19:51 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/12 16:46:05 pettai Exp $
 #
 
-DISTNAME=	zkt-0.99c
+DISTNAME=	zkt-1.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zkt/}
 
@@ -21,14 +21,28 @@ INSTALLATION_DIRS=	sbin share/doc/zkt ${PKGMANDIR}/man8 etc/zkt
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dnssec-zkt \
 		${DESTDIR}${PREFIX}/sbin/dnssec-zkt
-	${INSTALL_PROGRAM} ${WRKSRC}/dnssec-signer \
+	${INSTALL_PROGRAM} ${WRKSRC}/zkt-conf \
+		${DESTDIR}${PREFIX}/sbin/zkt-conf
+	${INSTALL_PROGRAM} ${WRKSRC}/zkt-keyman \
+		${DESTDIR}${PREFIX}/sbin/zkt-keyman
+	${INSTALL_PROGRAM} ${WRKSRC}/zkt-ls \
+		${DESTDIR}${PREFIX}/sbin/zkt-ls
+	${INSTALL_PROGRAM} ${WRKSRC}/zkt-signer \
+		${DESTDIR}${PREFIX}/sbin/zkt-signer
+	${LN} -f ${DESTDIR}${PREFIX}/sbin/zkt-signer \
 		${DESTDIR}${PREFIX}/sbin/dnssec-signer
 	${INSTALL_PROGRAM} ${WRKSRC}/zkt-soaserial \
 		${DESTDIR}${PREFIX}/sbin/zkt-soaserial
 	${INSTALL_MAN} ${WRKSRC}/man/dnssec-zkt.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/dnssec-zkt.8
-	${INSTALL_MAN} ${WRKSRC}/man/dnssec-signer.8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/dnssec-signer.8
+	${INSTALL_MAN} ${WRKSRC}/man/zkt-conf.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/zkt-conf.8
+	${INSTALL_MAN} ${WRKSRC}/man/zkt-ls.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/zkt-ls.8
+	${INSTALL_MAN} ${WRKSRC}/man/zkt-keyman.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/zkt-keyman.8
+	${INSTALL_MAN} ${WRKSRC}/man/zkt-signer.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/zkt-signer.8
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/zkt/README
 	${INSTALL_DATA} ${WRKSRC}/README.logging \
