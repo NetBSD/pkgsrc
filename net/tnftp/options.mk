@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/08/09 22:03:52 tron Exp $
+# $NetBSD: options.mk,v 1.5 2011/03/12 12:02:09 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tnftp
 PKG_SUPPORTED_OPTIONS=		inet6
@@ -11,6 +11,8 @@ PKG_SUGGESTED_OPTIONS=		inet6
 .if !empty(PKG_OPTIONS:Msocks5)
 CONFIGURE_ARGS+=	--with-socks
 .include "../../net/socks5/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-socks
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
