@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2011/03/12 13:59:59 gdt Exp $
+
+--- configure.orig	2011-02-25 20:04:49.000000000 +0000
++++ configure
+@@ -18400,7 +18400,7 @@ $as_echo "#define HAVE_FLOCK_LOCKING 1" 
+ 
+ if test "$buildvcodacon" != no ; then
+   test -z "${FLUID}" && as_fn_error "\"Unable to find fltk-fluid\"" "$LINENO" 5
+-  test "$coda_cv_path_fltk" == none && as_fn_error "\"Unable to find libfltk\"" "$LINENO" 5
++  test "$coda_cv_path_fltk" = none && as_fn_error "\"Unable to find libfltk\"" "$LINENO" 5
+ fi
+  if test "$buildvcodacon" != no; then
+   BUILD_VCODACON_TRUE=
