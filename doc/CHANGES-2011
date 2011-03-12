@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.635 2011/03/12 14:24:07 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.636 2011/03/12 15:27:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1085,3 +1085,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/fityk to 0.9.7 [drochner 2011-03-11]
 	Updated math/xylib to 0.8 [drochner 2011-03-11]
 	Updated sysutils/cdrtools to 3.01alpha03 [wiz 2011-03-12]
+	Updated shells/bash to 4.2 [wiz 2011-03-12]
