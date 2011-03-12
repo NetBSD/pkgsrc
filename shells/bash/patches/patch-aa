@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2010/02/09 12:31:19 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2011/03/12 15:26:45 wiz Exp $
 
---- lib/sh/fpurge.c.orig	2009-04-20 01:12:23.000000000 +0000
+--- lib/sh/fpurge.c.orig	2010-12-22 14:32:58.000000000 +0000
 +++ lib/sh/fpurge.c
-@@ -53,7 +53,7 @@ fpurge (FILE *fp)
+@@ -137,7 +137,7 @@ fpurge (FILE *fp)
    extern int fpurge (FILE *);
  # endif
    int result = fpurge (fp);
@@ -11,17 +11,17 @@ $NetBSD: patch-aa,v 1.5 2010/02/09 12:31:19 wiz Exp $
    if (result == 0)
      /* Correct the invariants that fpurge broke.
         <stdio.h> on BSD systems says:
-@@ -63,6 +63,9 @@ fpurge (FILE *fp)
+@@ -147,6 +147,9 @@ fpurge (FILE *fp)
         into the buffer, although they shouldn't be allowed to.  */
-     if ((fp->_flags & __SRD) != 0)
-       fp->_w = 0;
+     if ((fp_->_flags & __SRD) != 0)
+       fp_->_w = 0;
 +#elif defined __DragonFly__
-+    if ((((struct __FILE_public *) fp)->_flags & __SRD) != 0)
-+      ((struct __FILE_public *) fp)->_w = 0;
++    if ((((struct __FILE_public *) fp_)->_flags & __SRD) != 0)
++      ((struct __FILE_public *) fp_)->_w = 0;
  # endif
    return result;
  
-@@ -81,7 +84,7 @@ fpurge (FILE *fp)
+@@ -165,7 +168,7 @@ fpurge (FILE *fp)
        fp->_IO_save_base = NULL;
      }
    return 0;
