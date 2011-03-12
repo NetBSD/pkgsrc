@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.633 2011/03/11 20:27:51 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.634 2011/03/12 13:37:37 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1069,3 +1069,18 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/rpc2 to 2.10 [gdt 2011-03-11]
 	Updated devel/rvm to 1.17 [gdt 2011-03-11]
 	Updated net/coda to 6.9.5 [gdt 2011-03-11]
+	Added net/glib-networking version 2.28.0 [drochner 2011-03-11]
+	Updated www/midori to 0.3.2 [drochner 2011-03-11]
+	Updated www/libproxy to 0.3.1 [drochner 2011-03-11]
+	Updated www/bluefish to 2.0.3 [drochner 2011-03-11]
+	Updated multimedia/gst-plugins0.10-gnonlin to 0.10.17 [drochner 2011-03-11]
+	Updated multimedia/gst-plugins0.10-good to 0.10.28 [drochner 2011-03-11]
+	Updated multimedia/libvpx to 0.9.6 [drochner 2011-03-11]
+	Updated lang/vala to 0.10.3 [drochner 2011-03-11]
+	Updated graphics/py-pyfits to 2.4.0 [drochner 2011-03-11]
+	Updated devel/pccts to 1.33.33 [drochner 2011-03-11]
+	Added editors/scite version 2.24 [drochner 2011-03-11]
+	Added devel/scintilla version 2.24 [drochner 2011-03-11]
+	Updated devel/eric4 to 4.4.12 [drochner 2011-03-11]
+	Updated math/fityk to 0.9.7 [drochner 2011-03-11]
+	Updated math/xylib to 0.8 [drochner 2011-03-11]
