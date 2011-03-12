@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.86 2011/02/25 09:47:24 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.87 2011/03/12 14:07:13 wiz Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -111,6 +111,10 @@ _PYTHON_VERSION?=	${pv}
 . endfor
 . endif
 .endif
+
+#
+# Variable assignment for multi-python packages
+MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 
 # No supported version found, annotate to simplify statements below.
 .if !defined(_PYTHON_VERSION)
