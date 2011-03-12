@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.25 2007/12/17 22:09:58 tron Exp $
+# $NetBSD: apache.mk,v 1.26 2011/03/12 14:07:13 wiz Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -134,5 +134,9 @@ APACHE_PKG_PREFIX=	${_APACHE_PKG_PREFIX.${PKG_APACHE}}
 .  include "../../devel/apr/buildlink3.mk"
 .  include "../../devel/apr-util/buildlink3.mk"
 .endif
+
+#
+# Variable assignment for multi-apache packages
+MULTI+=	PKG_APACHE=${PKG_APACHE}
 
 .endif	# APACHE_MK

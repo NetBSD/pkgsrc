@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.13 2010/09/23 07:38:05 taca Exp $
+# $NetBSD: phpversion.mk,v 1.14 2011/03/12 14:07:13 wiz Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -135,6 +135,10 @@ _PHP_VERSION=	${PHP_VERSION_DEFAULT}
 .if !defined(_PHP_VERSION)
 _PHP_VERSION=	${_PHP_VERSION_FIRSTACCEPTED}
 .endif
+
+#
+# Variable assignment for multi-PHP packages
+MULTI+=	PHP_VERSION_REQD=${_PHP_VERSION}
 
 # export some of internal variables
 PKG_PHP_VERSION:=	${_PHP_VERSION:C/\.[0-9]//}
