@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/11 15:25:26 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.3 2011/03/12 11:00:01 tron Exp $
 
 DISTNAME=	libvpx-v0.9.6
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -16,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake bash:build perl:build
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
@@ -34,6 +35,18 @@ CONFIGURE_ARGS+=	--enable-pic \
 			--disable-postproc \
 			--enable-runtime-cpu-detect \
 			--prefix=${PREFIX}
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-lrt
+
+.  if ${MACHINE_ARCH} == "i386"
+.    if empty(OS_VERSION:M8.*)
+CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
+.    else
+CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
+.    endif
+.  endif
+.endif
 
 BUILD_TARGET=	# none
 
