@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.59 2011/02/21 15:00:34 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.60 2011/03/12 14:07:13 wiz Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -60,6 +60,10 @@ RUBY_API_VERSION=	${RUBY19_API_VERSION}
 RUBY_VERSION_SUFFIX=	${RUBY_VERSION}${RUBY_PATCH_LEVEL}
 RUBY_ABI_VERSION=	${RUBY19_API_VERSION}
 .endif
+
+#
+# Variable assignment for multi-ruby packages
+MULTI+=	RUBY_VERSION_REQD=${RUBY_VERSION_REQD:U${_RUBY_VERSION_DEFAULT}}
 
 # RUBY_VERSION_SUPPORTED defines the list of ${RUBY_VER} which is
 #	supported by the package.  It should be defined by the packages
