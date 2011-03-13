@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.8 2010/05/23 10:50:11 tnn Exp $
+# $NetBSD: icedtea-extras.mk,v 1.9 2011/03/13 14:18:33 abs Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			bsdtar
@@ -63,7 +63,7 @@ BUILDLINK_DEPMETHOD.cups?=     build
 .include "../../print/cups/buildlink3.mk"
 .include "../../lang/openjdk7/buildlink3.mk"
 .include "../../devel/xulrunner/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXp?=	build
 .include "../../x11/libXp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
