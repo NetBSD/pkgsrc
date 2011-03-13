@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.3 2011/03/13 11:36:19 drochner Exp $
+
+--- lib/driver/netbsd.c.orig	2008-11-29 04:52:43.000000000 +0000
++++ lib/driver/netbsd.c
+@@ -265,6 +265,9 @@ _cdio_read_toc(_img_private_t *_obj) 
+ 	}
+ 
+ 	_obj->toc_valid = 1;
++	_obj->gen.i_first_track = FIRST_TRACK_NUM;
++	_obj->gen.i_tracks = TOTAL_TRACKS;
++	_obj->gen.toc_init = true;
+ 	return true;
+ }
+ 
