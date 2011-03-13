@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/28 17:36:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/03/13 23:08:05 minskim Exp $
 
-SHA1 (tex-epsf-17190/epsf.tar.xz) = 05f3fc08b68c03cd3c791406f01daaee16396480
-RMD160 (tex-epsf-17190/epsf.tar.xz) = b6560474353a0c026ec7f74b62051c0d4034bbe4
-Size (tex-epsf-17190/epsf.tar.xz) = 7424 bytes
+SHA1 (tex-epsf-21461/epsf.tar.xz) = 25ffb7acd255608fe7fcb00e6533a57253ab6fb0
+RMD160 (tex-epsf-21461/epsf.tar.xz) = 155d1e8174173e30018a0788367ddaa697b6fa45
+Size (tex-epsf-21461/epsf.tar.xz) = 7516 bytes
