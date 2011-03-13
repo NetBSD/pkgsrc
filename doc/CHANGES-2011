@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.642 2011/03/13 23:08:50 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.643 2011/03/13 23:32:14 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1093,3 +1093,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/dnssec-tools to 1.8 [pettai 2011-03-12]
 	Updated print/tex-epsf to 2.7.4 [minskim 2011-03-13]
 	Updated print/tex-epsf-doc to 2.7.4 [minskim 2011-03-13]
+	Updated mail/opendkim to 2.3.0 [pettai 2011-03-13]
