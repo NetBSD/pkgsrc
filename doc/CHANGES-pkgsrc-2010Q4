@@ -240,3 +240,5 @@ Pullup ticket #3385 - requested by taca
 mail/postfix-current: security update
 Pullup ticket #3387 - requested by wiz
 build fix for devel/bmake
+Pullup ticket #3388 - requested by tron
+Security update for graphic/tiff
