@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/10/19 23:11:42 pettai Exp $
+# $NetBSD: options.mk,v 1.2 2011/03/13 23:31:31 pettai Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.opendkim
 PKG_SUPPORTED_OPTIONS=  filter debug dkim-stats vbr
@@ -29,8 +29,8 @@ SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	opendkim/Makefile.in
 SUBST_SED.conf+=	-e 's|@EGDIR@|${EGDIR}|g'
 
-CONF_FILES=		${EGDIR}/opendkim.conf.sample \
-			${PKG_SYSCONFDIR}/opendkim.conf
+#CONF_FILES=		${EGDIR}/opendkim.conf.sample \
+#			${PKG_SYSCONFDIR}/opendkim.conf
 
 PLIST_SRC+=		${PKGDIR}/PLIST.filter
 .else
