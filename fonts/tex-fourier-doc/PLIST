@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/13 23:31:04 minskim Exp $
+share/texmf-dist/doc/fonts/fourier/README
+share/texmf-dist/doc/fonts/fourier/fourier-doc-en.pdf
+share/texmf-dist/doc/fonts/fourier/fourier-doc-en.tex
+share/texmf-dist/doc/fonts/fourier/fourier-orns.pdf
+share/texmf-dist/doc/fonts/fourier/fourier-orns.tex
