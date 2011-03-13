@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.1 2011/03/09 11:22:04 drochner Exp $
+$NetBSD: patch-aq,v 1.2 2011/03/13 11:31:57 drochner Exp $
 
 --- gio/gsocket.c.orig	2011-02-11 15:23:12.000000000 +0000
 +++ gio/gsocket.c
@@ -16,7 +16,7 @@ $NetBSD: patch-aq,v 1.1 2011/03/09 11:22:04 drochner Exp $
                                    &native_creds);
        }
    }
-+#elif defined(__NetBSD__)
++#elif defined(__NetBSD__) && defined(LOCAL_PEEREID)
 +  {
 +    struct unpcbid cred;
 +    socklen_t len = sizeof(cred);
