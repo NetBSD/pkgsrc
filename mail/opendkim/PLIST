@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/02/21 00:04:21 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/13 23:31:31 pettai Exp $
 bin/opendkim-genkey
 bin/opendkim-genzone
 bin/opendkim-testadsp
@@ -15,6 +15,7 @@ share/doc/opendkim/KNOWNBUGS
 share/doc/opendkim/LICENSE
 share/doc/opendkim/LICENSE.Sendmail
 share/doc/opendkim/README
+share/doc/opendkim/README.SQL
 share/doc/opendkim/README.opendkim-reportstats
 share/doc/opendkim/RELEASE_NOTES.Sendmail
 share/doc/opendkim/authheaders-check-setup-hook.lua
@@ -40,6 +41,7 @@ share/doc/opendkim/dkim_get_user_context.html
 share/doc/opendkim/dkim_getcachestats.html
 share/doc/opendkim/dkim_getdomain.html
 share/doc/opendkim/dkim_geterror.html
+share/doc/opendkim/dkim_getid.html
 share/doc/opendkim/dkim_getmode.html
 share/doc/opendkim/dkim_getpartial.html
 share/doc/opendkim/dkim_getpolicystr.html
@@ -99,6 +101,7 @@ share/doc/opendkim/dkim_sig_getkeysize.html
 share/doc/opendkim/dkim_sig_getreportinfo.html
 share/doc/opendkim/dkim_sig_getselector.html
 share/doc/opendkim/dkim_sig_getsignalg.html
+share/doc/opendkim/dkim_sig_getsignedhdrs.html
 share/doc/opendkim/dkim_sig_getsigntime.html
 share/doc/opendkim/dkim_sig_gettagvalue.html
 share/doc/opendkim/dkim_sig_hdrsigned.html
@@ -115,19 +118,23 @@ share/doc/opendkim/dkim_verify.html
 share/doc/opendkim/dns.html
 share/doc/opendkim/draft-ietf-dkim-implementation-report-05.txt
 share/doc/opendkim/draft-ietf-dkim-mailinglists-04.txt
-share/doc/opendkim/draft-ietf-marf-dkim-reporting-00.txt
-share/doc/opendkim/draft-kucherawy-authres-vbr-00.txt
+share/doc/opendkim/draft-ietf-marf-dkim-reporting-01.txt
+share/doc/opendkim/draft-kucherawy-authres-vbr-04.txt
+share/doc/opendkim/draft-kucherawy-dkim-atps-02.txt
 share/doc/opendkim/index.html
+share/doc/opendkim/opendkim
 share/doc/opendkim/opendkim-reportstats
-share/examples/opendkim/opendkim.conf.sample
-share/examples/opendkim/opendkim.conf.simple
-share/examples/opendkim/opendkim.conf.simple-verify
-share/doc/opendkim/opendkim.init
-share/doc/opendkim/opendkim.spec
+share/doc/opendkim/opendkim.conf.sample
+share/doc/opendkim/opendkim.conf.simple
+share/doc/opendkim/opendkim.conf.simple-verify
+share/doc/opendkim/opendkim.spec.in
+share/doc/opendkim/opendkim.xml
 share/doc/opendkim/overview.html
+share/doc/opendkim/rfc3447.txt
 share/doc/opendkim/rfc4686.txt
 share/doc/opendkim/rfc4871.txt
 share/doc/opendkim/rfc5016.txt
+share/doc/opendkim/rfc5322.txt
 share/doc/opendkim/rfc5451.txt
 share/doc/opendkim/rfc5518.txt
 share/doc/opendkim/rfc5585.txt
@@ -136,3 +143,4 @@ share/doc/opendkim/rfc5672.txt
 share/doc/opendkim/rfc5863.txt
 share/doc/opendkim/rfc5965.txt
 share/doc/opendkim/rfc6008.txt
+share/examples/rc.d/opendkim
