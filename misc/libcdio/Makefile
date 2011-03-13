@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2009/10/31 02:49:09 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2011/03/13 11:36:19 drochner Exp $
 
 DISTNAME=	libcdio-0.82
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=libcdio/}
 
