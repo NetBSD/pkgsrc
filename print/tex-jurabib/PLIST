@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/13 23:50:16 minskim Exp $
+share/texmf-dist/bibtex/bib/jurabib/book.bib
+share/texmf-dist/bibtex/bib/jurabib/comment.bib
+share/texmf-dist/bibtex/bib/jurabib/jbtest.bib
+share/texmf-dist/bibtex/bib/jurabib/jbtesthu.bib
+share/texmf-dist/bibtex/bst/jurabib/jox.bst
+share/texmf-dist/bibtex/bst/jurabib/jurabib.bst
+share/texmf-dist/bibtex/bst/jurabib/jureco.bst
+share/texmf-dist/bibtex/bst/jurabib/jurunsrt.bst
+share/texmf-dist/tex/latex/jurabib/dajbbib.ldf
+share/texmf-dist/tex/latex/jurabib/dejbbib.ldf
+share/texmf-dist/tex/latex/jurabib/dujbbib.ldf
+share/texmf-dist/tex/latex/jurabib/enjbbib.ldf
+share/texmf-dist/tex/latex/jurabib/fijbbib.ldf
+share/texmf-dist/tex/latex/jurabib/frjbbib.ldf
+share/texmf-dist/tex/latex/jurabib/itjbbib.ldf
+share/texmf-dist/tex/latex/jurabib/jblong.cfg
+share/texmf-dist/tex/latex/jurabib/jurabib.cfg
+share/texmf-dist/tex/latex/jurabib/jurabib.sty
+share/texmf-dist/tex/latex/jurabib/nojbbib.ldf
+share/texmf-dist/tex/latex/jurabib/ptjbbib.ldf
+share/texmf-dist/tex/latex/jurabib/spjbbib.ldf
