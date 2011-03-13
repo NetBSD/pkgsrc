@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10190 2011/03/12 16:04:58 shattered Exp $
+$NetBSD: TODO,v 1.10191 2011/03/13 16:11:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GConf-2.32.1
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.6.8.0
+	o ImageMagick-6.6.8.4
 	o MAMEDiff-2.30
 	o Mesa-7.10.1
 	o MesaLib-7.10
@@ -447,7 +447,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
-	o cdrtools-3.01a03
 	o celestia-1.6.0
 	o cgdb-0.6.5
 	o cgicc-3.2.9
@@ -480,7 +479,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dansguardian-2.10.0.3
 	o dante-1.2.2
 	o dap-3.7
-	o dar-2.3.10
+	o dar-2.3.11
 	o darcs-2.4
 	o dasher-4.11
 	o davical-0.9.9.4
@@ -712,6 +711,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.1
 	o gssdp-0.9.2
+	o gtar-1.26
+	o gtexinfo-4.13a
 	o gthumb-2.12.2
 	o gtick-0.4.2
 	o gtk-systrace-20030623
@@ -735,7 +736,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.8.5
 	o heimdal-1.2.1
-	o help2man-1.39.1
+	o help2man-1.39.2
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.9.0
@@ -903,6 +904,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lyx-1.6.9
 	o lzip-1.11
 	o lzop-1.03
+	o m4-1.4.16
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
@@ -990,13 +992,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opendkim-2.3.0
 	o opengrok-0.10
 	o openh323-1.19.1
+	o openldap-client-2.4.24
 	o openmortal-0.7.1
 	o openmotif-2.3.3
 	o openmpi-1.5.2
 	o openmsx-0.7.0
 	o openoffice3-3.3
 	o openssh-5.8p1
-	o openssl-1.0.0d
+	o openssl-1.0.0d [pkg/44717]
 	o open-vm-tools-2010.09.19.301124
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
@@ -1005,7 +1008,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-Perl-Tidy-20101217
-	o p5-PerlMagick-6.6.8.0
+	o p5-PerlMagick-6.6.8.4
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1071,6 +1074,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
+	o py-bsddb3-5.1.2
 	o py-checker-0.8.19
 	o py-cheetah-2.4.2.1 [pkg/43458]
 	o py-cups-1.9.54
@@ -1117,6 +1121,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rep-gtk-0.90.5
 	o resize_image-0.7
 	o resourceproto-1.1.1
+	o rftg-0.8.1
 	o rgb-1.0.4
 	o rhythmbox-0.13.3
 	o riece-7.0.1 [pkg/43970]
@@ -1200,8 +1205,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
 	o t-prot-2.101
+	o t1utils-1.36
 	o tacacs-4.0.4.14
 	o tads-3.0.16
+	o taglib-1.7
 	o tcl-8.5.8
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1233,7 +1240,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-1.4.2 [GNOME 2.32]
 	o top-3.8beta1
-	o tor-0.2.1.30
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.12.2
@@ -1259,7 +1265,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-3.07
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.11.6
+	o vala-0.10.4
 	o valgrind-3.6.0
 	o varnish-2.1.5 [pkg/44520]
 	o vbetool-1.1
@@ -1303,7 +1309,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.3
-	o x264-devel-20110305
+	o x264-devel-20110312
 	o xanalyser-1.30
 	o xapian-1.2.4
 	o xapian-omega-1.2.4
@@ -1439,6 +1445,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwud-1.0.3
 	o xzip-182
 	o yafc-1.1
+	o yaz-4.1.6
 	o yodl-2.14.3
 	o ysm-2.9.9.1
 	o yorick-2.1.05
