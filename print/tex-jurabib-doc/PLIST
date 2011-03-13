@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/13 23:50:29 minskim Exp $
+share/texmf-dist/doc/latex/jurabib/changes.txt
+share/texmf-dist/doc/latex/jurabib/docs/english/jbendoc.pdf
+share/texmf-dist/doc/latex/jurabib/docs/english/jbendoc.tex
+share/texmf-dist/doc/latex/jurabib/docs/german/jbgerdoc.pdf
+share/texmf-dist/doc/latex/jurabib/docs/german/jbgerdoc.tex
+share/texmf-dist/doc/latex/jurabib/jbtest.pdf
+share/texmf-dist/doc/latex/jurabib/jbtest.tex
+share/texmf-dist/doc/latex/jurabib/jbtest.url
+share/texmf-dist/doc/latex/jurabib/jbtestbt.tex
+share/texmf-dist/doc/latex/jurabib/jbtestbu.tex
+share/texmf-dist/doc/latex/jurabib/jbtestcb.tex
+share/texmf-dist/doc/latex/jurabib/jbtestcb1.tex
+share/texmf-dist/doc/latex/jurabib/jbtestcb2.tex
+share/texmf-dist/doc/latex/jurabib/jbtesthu.tex
+share/texmf-dist/doc/latex/jurabib/jbtestmb.tex
