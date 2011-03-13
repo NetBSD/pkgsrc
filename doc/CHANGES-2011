@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.643 2011/03/13 23:32:14 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.644 2011/03/13 23:33:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1094,3 +1094,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-epsf to 2.7.4 [minskim 2011-03-13]
 	Updated print/tex-epsf-doc to 2.7.4 [minskim 2011-03-13]
 	Updated mail/opendkim to 2.3.0 [pettai 2011-03-13]
+	Added fonts/tex-fourier version 1.3 [minskim 2011-03-13]
+	Added fonts/tex-fourier-doc version 1.3 [minskim 2011-03-13]
