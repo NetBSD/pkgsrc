@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.4 2008/04/04 21:09:16 tonnerre Exp $
+$NetBSD: patch-ak,v 1.5 2011/03/14 06:15:23 rumko Exp $
 
 Include curses header when testing tgetent in order to prevent
 crash on 64-bit architectures.
@@ -14,24 +14,25 @@ crash on 64-bit architectures.
  main()
  {
   exit(strcmp(tgoto("%p1%d", 0, 1), "1") ? 0 : 1);
-@@ -5572,9 +5574,15 @@
+@@ -5572,9 +5574,16 @@
  
  #include <time.h> /* to get time_t on SCO */
  #include <sys/types.h>
 -#if defined(SVR4) && !defined(DGUX)
 +#include <sys/param.h>
 +#if (defined(SVR4) && !defined(DGUX)) \
-+ || (defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106050000))
++ || (defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106050000)) \
++ || (defined(__DragonFly__) && (__DragonFly_version >= 200902))
  #include <utmpx.h>
  #define utmp utmpx
-+# ifdef __NetBSD__
++# if defined(__NetBSD__) || defined(__DragonFly__)
 +#  define pututline pututxline
 +#  define getutent  getutxent
 +# endif
  #else
  #include <utmp.h>
  #endif
-@@ -7502,6 +7510,148 @@
+@@ -7502,6 +7511,148 @@
  fi
  
  
