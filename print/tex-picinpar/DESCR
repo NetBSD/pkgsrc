@@ -1,0 +1,4 @@
+A legacy package for creating 'windows' in paragraphs, for inserting
+graphics, etc. (including "dropped capitals"). Users should note that
+Piet van Oostrum (in a published review of packages of this sort) does
+not recommend this package; Picins is recommended instead.
