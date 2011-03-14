@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.646 2011/03/14 00:15:35 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.647 2011/03/14 08:07:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1100,3 +1100,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-jurabib-doc version 0.6 [minskim 2011-03-13]
 	Added graphics/tex-xypic version 3.8.5 [minskim 2011-03-14]
 	Added graphics/tex-xypic-doc version 3.8.5 [minskim 2011-03-14]
+	Updated graphics/gnuplot to 4.4.3 [adam 2011-03-14]
