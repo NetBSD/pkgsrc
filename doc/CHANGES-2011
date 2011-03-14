@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.648 2011/03/14 12:04:46 obache Exp $
+$NetBSD: CHANGES-2011,v 1.649 2011/03/14 12:25:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1102,3 +1102,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/tex-xypic-doc version 3.8.5 [minskim 2011-03-14]
 	Updated graphics/gnuplot to 4.4.3 [adam 2011-03-14]
 	Updated emulators/raine to 0.43.3nb3 [obache 2011-03-14]
+	Updated chat/libpurple to 2.7.11 [adam 2011-03-14]
+	Updated chat/finch to 2.7.11 [adam 2011-03-14]
+	Updated chat/pidgin to 2.7.11 [adam 2011-03-14]
+	Updated chat/pidgin-sametime to 2.7.11 [adam 2011-03-14]
+	Updated chat/pidgin-silc to 2.7.11 [adam 2011-03-14]
