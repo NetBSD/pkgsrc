@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2010/06/16 17:31:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2011/03/14 19:44:46 gdt Exp $
 #
 
 DISTNAME=	Trac-0.12
@@ -21,7 +21,7 @@ USE_TOOLS+=	pax
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=	sqlite pgsql psycopg2
+PKG_OPTIONS_GROUP.db=	sqlite psycopg2
 PKG_SUGGESTED_OPTIONS=	sqlite
 
 .include "../../mk/bsd.options.mk"
@@ -41,9 +41,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2:../../databases/py-sqlite2
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 .endif
 .endif
-.if !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PYPKGPREFIX}-PgSQL>=2.4:../../databases/py-PgSQL
-.endif
+# trac 0.12 dropped support for py-PgSQL.  Switching to py-psycopg2 with
+# an existing database that used to be accessed by py-PgSQL worked.
 .if !empty(PKG_OPTIONS:Mpsycopg2)
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2:../../databases/py-psycopg2
 .endif
