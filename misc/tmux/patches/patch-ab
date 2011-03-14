@@ -1,5 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2010/12/21 12:55:55 jmmv Exp $
+$NetBSD: patch-ab,v 1.8 2011/03/14 06:06:58 rumko Exp $
 
+Deal with DragonFly BSD separately from FreeBSD.
 --- configure.orig	2010-06-06 13:00:47.000000000 +0000
 +++ configure
 @@ -205,7 +205,7 @@ SRCS+= osdep-darwin.c \
@@ -11,7 +12,7 @@ $NetBSD: patch-ab,v 1.7 2010/12/21 12:55:55 jmmv Exp $
  	cat <<EOF >>$CONFIG_H
  #define HAVE_ASPRINTF
  #define HAVE_BROKEN_KQUEUE
-@@ -236,6 +236,38 @@ SRCS+= osdep-freebsd.c \
+@@ -236,6 +236,39 @@ SRCS+= osdep-freebsd.c \
  EOF
  	;;
  # ------------------------------------------------------------------------------
@@ -19,6 +20,7 @@ $NetBSD: patch-ab,v 1.7 2010/12/21 12:55:55 jmmv Exp $
 +	cat <<EOF >>$CONFIG_H
 +#define HAVE_ASPRINTF
 +#define HAVE_BZERO
++#define HAVE_CLOSEFROM
 +#define HAVE_DAEMON
 +#define HAVE_FGETLN
 +#define HAVE_FORKPTY
@@ -38,7 +40,7 @@ $NetBSD: patch-ab,v 1.7 2010/12/21 12:55:55 jmmv Exp $
 +#define HAVE_U_INT
 +EOF
 +	cat <<EOF >>$CONFIG_MK
-+LIBS+= -lcurses -lcrypt -lutil
++LIBS+= -lcurses -lcrypt -lutil -levent
 +SRCS+= osdep-unknown.c \
 +	compat/vis.c \
 +	compat/unvis.c \
