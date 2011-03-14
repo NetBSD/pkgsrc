@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/14 21:41:52 minskim Exp $
+share/texmf-dist/tex/latex/lcyw/cmap-cyr-vf.sty
+share/texmf-dist/tex/latex/lcyw/koi7a.cmap
+share/texmf-dist/tex/latex/lcyw/lcywcmr.fd
+share/texmf-dist/tex/latex/lcyw/lcywcmss.fd
+share/texmf-dist/tex/latex/lcyw/lcywcmssq.fd
+share/texmf-dist/tex/latex/lcyw/lcywcmtt.fd
+share/texmf-dist/tex/latex/lcyw/lcywenc.def
