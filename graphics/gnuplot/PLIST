@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/02/08 13:13:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/03/14 08:06:52 adam Exp $
 bin/gnuplot
 info/gnuplot.info
 ${PLIST.x11}libexec/gnuplot/4.4/gnuplot_x11
@@ -9,6 +9,7 @@ share/gnuplot/4.4/PostScript/8859-2.ps
 share/gnuplot/4.4/PostScript/8859-9.ps
 share/gnuplot/4.4/PostScript/aglfn.txt
 share/gnuplot/4.4/PostScript/cp1250.ps
+share/gnuplot/4.4/PostScript/cp1251.ps
 share/gnuplot/4.4/PostScript/cp437.ps
 share/gnuplot/4.4/PostScript/cp850.ps
 share/gnuplot/4.4/PostScript/cp852.ps
