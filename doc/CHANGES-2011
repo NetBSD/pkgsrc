@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.652 2011/03/14 18:53:53 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.653 2011/03/14 21:29:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1110,3 +1110,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/p7zip to 9.20 [adam 2011-03-14]
 	Updated textproc/icu to 4.6.1 [adam 2011-03-14]
 	Updated textproc/tex-xmltex to 1.9nb8 [minskim 2011-03-14]
+	Updated print/kpathsea to 6.0.0nb2 [minskim 2011-03-14]
+	Updated print/teTeX3-bin to 3.0nb47 [minskim 2011-03-14]
