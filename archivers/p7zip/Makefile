@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2011/03/14 12:36:42 adam Exp $
+# $NetBSD: Makefile,v 1.49 2011/03/14 18:18:33 abs Exp $
 
 DISTNAME=	p7zip_9.20_src_all
 PKGNAME=	p7zip-9.20
@@ -20,6 +20,7 @@ MAKE_JOBS_SAFE=		no # missing header when compiling sfx
 NO_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 PLIST_VARS=		dll
+USE_TOOLS=		gmake
 
 # compiles, but does not recognize any archives as supported
 DYNAMIC_7Z=		NO
