@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2011/01/13 13:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2011/03/14 21:29:20 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -12,6 +12,7 @@ COMMENT=	TeX distribution for UNIX compatible systems - binaries
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	kpathsea>=6.0.0nb2:../../print/kpathsea
 DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 DEPENDS+=	teTeX-texmf>=3.0nb14:../../print/teTeX3-texmf
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
@@ -52,11 +53,7 @@ LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
 LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 FILES_SUBST+=		PAPERSIZE=${LOWER_PAPERSIZE:Q}
 
-OWN_DIRS+=	${VARBASE}/lib/texmf ${PREFIX}/share/texmf-local
-.for d in pk source tfm
-OWN_DIRS_PERMS+=	${VARBASE}/lib/texmf/fonts/${d} \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
-.endfor
+OWN_DIRS+=		${PREFIX}/share/texmf-local
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	texmf=${DESTDIR}${PREFIX}/share/texmf
