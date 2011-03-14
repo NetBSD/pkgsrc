@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/11/17 19:27:05 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2011/03/14 21:29:20 minskim Exp $
 
 DISTNAME=	texlive-20100720-source
 PKGNAME=	kpathsea-6.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.tug.org/kpathsea/
 COMMENT=	Path searching library for TeX-related files
 LICENSE=	gnu-lgpl-v2.1
 
-CONFLICTS+=	teTeX-bin<=3.0nb21
+CONFLICTS+=	teTeX-bin<=3.0nb46
 CONFLICTS+=	teTeX-texmf<=3.0nb5
 CONFLICTS+=	texlive-tetex<2010
 
@@ -65,6 +65,10 @@ CONF_FILES=	${PREFIX}/share/texmf/web2c/texmf.cnf \
 		${PKG_SYSCONFDIR}/texmf.cnf
 
 OWN_DIRS+=		${TEXMFLOCAL} ${VARBASE}/lib/texmf
+.for d in pk source tfm
+OWN_DIRS_PERMS+=	${VARBASE}/lib/texmf/fonts/${d} \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
+.endfor
 INSTALLATION_DIRS+=	share/texmf-dist
 
 .include "../../mk/bsd.pkg.mk"
