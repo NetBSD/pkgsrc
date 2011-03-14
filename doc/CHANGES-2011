@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.645 2011/03/13 23:51:49 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.646 2011/03/14 00:15:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1098,3 +1098,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-fourier-doc version 1.3 [minskim 2011-03-13]
 	Added print/tex-jurabib version 0.6 [minskim 2011-03-13]
 	Added print/tex-jurabib-doc version 0.6 [minskim 2011-03-13]
+	Added graphics/tex-xypic version 3.8.5 [minskim 2011-03-14]
+	Added graphics/tex-xypic-doc version 3.8.5 [minskim 2011-03-14]
