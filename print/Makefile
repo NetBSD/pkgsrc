@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2011/03/13 23:51:49 minskim Exp $
+# $NetBSD: Makefile,v 1.478 2011/03/14 21:56:01 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -475,6 +475,8 @@ SUBDIR+=	tex-pgf
 SUBDIR+=	tex-pgf-doc
 SUBDIR+=	tex-pgfplots
 SUBDIR+=	tex-pgfplots-doc
+SUBDIR+=	tex-picinpar
+SUBDIR+=	tex-picinpar-doc
 SUBDIR+=	tex-pkfix
 SUBDIR+=	tex-pkfix-doc
 SUBDIR+=	tex-placeins
