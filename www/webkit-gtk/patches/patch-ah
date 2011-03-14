@@ -1,4 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2011/03/12 12:15:58 martin Exp $
+$NetBSD: patch-ah,v 1.2 2011/03/14 00:15:32 wiz Exp $
+
+Same as patch-ag.
+
+https://bugs.webkit.org/show_bug.cgi?id=56247
 
 --- WebCore/platform/text/StringHash.h.orig	2010-09-10 15:20:33.000000000 +0200
 +++ WebCore/platform/text/StringHash.h	2011-03-12 13:04:40.000000000 +0100
