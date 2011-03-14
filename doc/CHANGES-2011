@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.654 2011/03/14 21:42:52 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.655 2011/03/14 21:56:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1114,3 +1114,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/teTeX3-bin to 3.0nb47 [minskim 2011-03-14]
 	Added fonts/tex-lcyw version 1.1 [minskim 2011-03-14]
 	Added fonts/tex-lcyw-doc version 1.1 [minskim 2011-03-14]
+	Added print/tex-picinpar version 1.2a [minskim 2011-03-14]
+	Added print/tex-picinpar-doc version 1.2a [minskim 2011-03-14]
