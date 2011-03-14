@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2010/12/07 22:23:23 abs Exp $
+$NetBSD: distinfo,v 1.12 2011/03/14 06:31:29 rumko Exp $
 
 SHA1 (openjdk7/8dc6e1ff8ccf.tar.bz2) = 280e3a66c737c928facdeeb2533215e084513088
 RMD160 (openjdk7/8dc6e1ff8ccf.tar.bz2) = 50d96c6c81deff07016649498e6efd7f950108cf
@@ -9,6 +9,9 @@ Size (openjdk7/apache-ant-1.8.1-bin.tar.bz2) = 6702817 bytes
 SHA1 (openjdk7/bootstrap-jdk-7-bin-dragonfly-2_4-i386-20091018.tar.bz2) = e51aafb9711a0a6b050d31ad4143b5799b20c88f
 RMD160 (openjdk7/bootstrap-jdk-7-bin-dragonfly-2_4-i386-20091018.tar.bz2) = 81b97b27f40fdb29004004e799af80a52504c378
 Size (openjdk7/bootstrap-jdk-7-bin-dragonfly-2_4-i386-20091018.tar.bz2) = 24354825 bytes
+SHA1 (openjdk7/bootstrap-jdk-7-bin-dragonfly-2.9-i386-20110128.tar.bz2) = f79deb40e3793229b69390816f9fd074974bb32d
+RMD160 (openjdk7/bootstrap-jdk-7-bin-dragonfly-2.9-i386-20110128.tar.bz2) = ca5728982368c070a5fdb9953d157c0108f86c06
+Size (openjdk7/bootstrap-jdk-7-bin-dragonfly-2.9-i386-20110128.tar.bz2) = 36609438 bytes
 SHA1 (openjdk7/bootstrap-jdk-7-bin-netbsd-4-i386-20091012.tar.bz2) = 51cbd9fc1a97fc40cf61391933b082f8eee17abb
 RMD160 (openjdk7/bootstrap-jdk-7-bin-netbsd-4-i386-20091012.tar.bz2) = c2e2e0a17ae6d53eee1b91948a6d39080b07cafd
 Size (openjdk7/bootstrap-jdk-7-bin-netbsd-4-i386-20091012.tar.bz2) = 24186222 bytes
