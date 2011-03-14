@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.651 2011/03/14 14:10:57 adam Exp $
+$NetBSD: CHANGES-2011,v 1.652 2011/03/14 18:53:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1109,3 +1109,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin-silc to 2.7.11 [adam 2011-03-14]
 	Updated archivers/p7zip to 9.20 [adam 2011-03-14]
 	Updated textproc/icu to 4.6.1 [adam 2011-03-14]
+	Updated textproc/tex-xmltex to 1.9nb8 [minskim 2011-03-14]
