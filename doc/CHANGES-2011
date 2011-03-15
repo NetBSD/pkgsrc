@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.663 2011/03/15 19:40:19 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.664 2011/03/15 19:43:32 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1126,3 +1126,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added math/tex-kastrup version 2010 [minskim 2011-03-15]
 	Added math/tex-kastrup-doc version 2010 [minskim 2011-03-15]
 	Added fonts/kanjistrokeorders-ttf version 2.015 [ryoon 2011-03-15]
+	Updated fonts/dejavu-ttf to 2.33 [jakllsch 2011-03-15]
