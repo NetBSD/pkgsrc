@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.656 2011/03/15 03:44:41 taca Exp $
+$NetBSD: CHANGES-2011,v 1.657 2011/03/15 08:33:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1117,3 +1117,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-picinpar version 1.2a [minskim 2011-03-14]
 	Added print/tex-picinpar-doc version 1.2a [minskim 2011-03-14]
 	Updated www/contao29-translations to 20110314 [taca 2011-03-15]
+	Updated net/ruby-twitter-stream to 0.1.12 [obache 2011-03-15]
