@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.666 2011/03/15 20:36:47 bouyer Exp $
+$NetBSD: CHANGES-2011,v 1.667 2011/03/15 21:52:53 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/dejavu-ttf to 2.33 [jakllsch 2011-03-15]
 	Updated cross/dfu-programmer to 0.5.4 [jakllsch 2011-03-15]
 	Updated net/netdisco to 1.0 [bouyer 2011-03-15]
+	Updated x11/x3270 to 3.3.11ga6 [gls 2011-03-15]
