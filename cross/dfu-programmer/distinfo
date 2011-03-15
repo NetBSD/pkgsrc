@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/15 22:00:19 jakllsch Exp $
+$NetBSD: distinfo,v 1.2 2011/03/15 20:01:01 jakllsch Exp $
 
-SHA1 (dfu-programmer-0.5.2.tar.gz) = 20d786d1cdb65d5ae4d488678f7f0f4c762164c0
-RMD160 (dfu-programmer-0.5.2.tar.gz) = c9dc5063e34bf1ee53072fe2ad1eec8d3c2a2ab6
-Size (dfu-programmer-0.5.2.tar.gz) = 119293 bytes
+SHA1 (dfu-programmer-0.5.4.tar.gz) = f0fcc8faa0f11e53feaa36a01307328a0b0993d3
+RMD160 (dfu-programmer-0.5.4.tar.gz) = 2c04af6f1a4a3b2df668a6ec40d23bf9f37aff68
+Size (dfu-programmer-0.5.4.tar.gz) = 126700 bytes
 SHA1 (patch-aa) = 1d6c401cecc0630f95620b4478a5e2f7ab92969a
