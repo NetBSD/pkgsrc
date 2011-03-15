@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.655 2011/03/14 21:56:01 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.656 2011/03/15 03:44:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1116,3 +1116,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-lcyw-doc version 1.1 [minskim 2011-03-14]
 	Added print/tex-picinpar version 1.2a [minskim 2011-03-14]
 	Added print/tex-picinpar-doc version 1.2a [minskim 2011-03-14]
+	Updated www/contao29-translations to 20110314 [taca 2011-03-15]
