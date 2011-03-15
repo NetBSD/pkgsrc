@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.658 2011/03/15 11:30:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.659 2011/03/15 13:18:18 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29-translations to 20110314 [taca 2011-03-15]
 	Updated net/ruby-twitter-stream to 0.1.12 [obache 2011-03-15]
 	Updated emulators/twin to 3.1.14nb4 [obache 2011-03-15]
+	Added www/shibboleth-sp version 2.4.2 [pettai 2011-03-15]
