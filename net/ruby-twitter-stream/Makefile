@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/10/16 05:09:36 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/15 08:30:01 obache Exp $
 
-DISTNAME=	twitter-stream-0.1.10
+DISTNAME=	twitter-stream-0.1.12
 CATEGORIES=	net
 
 MAINTAINER=	obache@NetBSD.org

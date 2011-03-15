@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/26 10:55:11 obache Exp $
-${GEM_HOME}/cache/twitter-stream-${PKGVERSION}.gem
-${GEM_LIBDIR}/.gitignore
+@comment $NetBSD: PLIST,v 1.2 2011/03/15 08:30:01 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
@@ -8,6 +7,6 @@ ${GEM_LIBDIR}/examples/reader.rb
 ${GEM_LIBDIR}/fixtures/twitter/basic_http.txt
 ${GEM_LIBDIR}/lib/twitter/json_stream.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/twitter/json_stream.rb
+${GEM_LIBDIR}/spec/twitter/json_stream_spec.rb
 ${GEM_LIBDIR}/twitter-stream.gemspec
-${GEM_HOME}/specifications/twitter-stream-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
