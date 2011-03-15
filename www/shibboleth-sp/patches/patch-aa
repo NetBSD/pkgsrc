@@ -1,0 +1,87 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/15 13:15:37 pettai Exp $
+
+Remove uneccesary config, handle it from pkgsrc instead
+
+--- configs/Makefile.in.orig	2011-02-18 04:44:04.000000000 +0000
++++ configs/Makefile.in
+@@ -260,16 +260,12 @@ pkgxmldir = $(datadir)/xml/@PACKAGE@
+ pkgrundir = $(localstatedir)/run/@PACKAGE@
+ pkgsysconfdir = $(sysconfdir)/@PACKAGE@
+ pkgsysconf_DATA = \
+-	shibd-redhat \
+-	shibd-suse \
+-	shibd-debian \
+ 	shibd-osx.plist \
+ 	apache.config \
+ 	apache2.config \
+ 	apache22.config \
+-	keygen.sh \
+-	metagen.sh \
+ 	upgrade.xsl
++EGDIR = @EGDIR@
+ 
+ 
+ # The config files are installed "special".  Unlike the entries in
+@@ -373,15 +369,15 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-pkgsysconfDATA: $(pkgsysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(pkgsysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(pkgsysconfdir)"
+-	@list='$(pkgsysconf_DATA)'; test -n "$(pkgsysconfdir)" || list=; \
++	test -z "$(EGDIR)" || $(MKDIR_P) "$(DESTDIR)$(EGDIR)"
++	@list='$(pkgsysconf_DATA)'; test -n "$(EGDIR)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgsysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgsysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(EGDIR)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(EGDIR)" || exit $$?; \
+ 	done
+ 
+ uninstall-pkgsysconfDATA:
+@@ -432,7 +428,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(pkgsysconfdir)"; do \
++	for dir in "$(DESTDIR)$(EGDIR)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
+@@ -483,7 +479,6 @@ info-am:
+ 
+ install-data-am: install-data-local install-pkgsysconfDATA
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-am
+ 
+ install-dvi-am:
+@@ -596,18 +591,18 @@ install-data-local:	all-data-local
+ 	$(mkinstalldirs) $(DESTDIR)$(shirelogdir)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgrundir)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgxmldir)
+-	$(mkinstalldirs) $(DESTDIR)$(pkgsysconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(EGDIR)
+ 	for f in $(BUILTCONFIGFILES); do \
+-		if test ! -f $(DESTDIR)${pkgsysconfdir}/$$f; then \
+-			$(INSTALL_DATA) $$f $(DESTDIR)${pkgsysconfdir}; \
++		if test ! -f $(DESTDIR)${EGDIR}/$$f; then \
++			$(INSTALL_DATA) $$f $(DESTDIR)${EGDIR}; \
+ 		fi; \
+-		$(INSTALL_DATA) $$f $(DESTDIR)${pkgsysconfdir}/$$f.dist; \
++		$(INSTALL_DATA) $$f $(DESTDIR)${EGDIR}/$$f.dist; \
+         done
+ 	for f in $(CONFIGFILES); do \
+-		if test ! -f $(DESTDIR)${pkgsysconfdir}/$$f; then \
+-			$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${pkgsysconfdir}; \
++		if test ! -f $(DESTDIR)${EGDIR}/$$f; then \
++			$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${EGDIR}; \
+ 		fi; \
+-		$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${pkgsysconfdir}/$$f.dist; \
++		$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${EGDIR}/$$f.dist; \
+         done
+ 
+ install-data-hook:
