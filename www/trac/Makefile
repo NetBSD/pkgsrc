@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/03/14 19:45:37 gdt Exp $
+# $NetBSD: Makefile,v 1.52 2011/03/15 12:58:04 gdt Exp $
 #
 
 DISTNAME=	Trac-0.12
@@ -14,6 +14,28 @@ COMMENT=	Subversion repository browser, wiki, and issue tracking system
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Maintainer notes:
+#
+# This package is similar to wip/trac, which in turn structurally
+# matches www/ja-trac.  Ideally, www/trac and ja-trac would converge.
+# This note outlines the known differences and proposed resolution.
+# Besides bringing the packages closer, a goal is to avoid breaking
+# existing trac installations that blindly upgrade, to the extent that
+# this is reasonable.
+#
+# subversion dependency: ja-trac does not depend on subversion,
+# because 1) trac is useful without a repo, and because one can use
+# other than svn.  Perhaps options to specify repo support (not a
+# group, because trac can support multiple), defaulting to subversion
+# is a good strategy for now.
+#
+# www/trac options are not in options.mk (to be fixed).
+#
+# sqlite2 vs sqlite3: This package has logic to choose sqlite2 vs
+# sqlite3, and ja-trac uses only sqlite2.  This is hard, because
+# database format changes are disruptive, and gdt should consult
+# upstream's idea of best practice.
 
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
 DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
