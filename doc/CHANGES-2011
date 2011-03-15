@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.665 2011/03/15 20:01:12 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.666 2011/03/15 20:36:47 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1128,3 +1128,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/kanjistrokeorders-ttf version 2.015 [ryoon 2011-03-15]
 	Updated fonts/dejavu-ttf to 2.33 [jakllsch 2011-03-15]
 	Updated cross/dfu-programmer to 0.5.4 [jakllsch 2011-03-15]
+	Updated net/netdisco to 1.0 [bouyer 2011-03-15]
