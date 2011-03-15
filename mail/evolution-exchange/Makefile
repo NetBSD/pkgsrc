@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/03/15 11:14:58 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2011/03/15 14:09:01 drochner Exp $
 #
 
 DISTNAME=	evolution-exchange-2.32.2
@@ -26,6 +26,7 @@ GCONF_SCHEMAS=		apps_exchange_addressbook-${EE_VER}.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
+BUILDLINK_API_DEPENDS.evolution+= evolution>=2.32.2
 .include "../../mail/evolution/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
