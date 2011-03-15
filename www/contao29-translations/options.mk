@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2011/03/08 22:32:01 taca Exp $
+# $NetBSD: options.mk,v 1.37 2011/03/15 03:44:00 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.contao-translations
 
@@ -12,12 +12,12 @@ CT_TRANSLATIONS.ar=	Contao-Arabic-v3.zip		# 2010/10/30
 CT_TRANSLATIONS.bg=	Contao-Bulgarian-v21.zip	# 2011/01/14
 CT_TRANSLATIONS.bs=	Contao-Bosnian-v15.zip		# 2010/09/12
 CT_TRANSLATIONS.ca=	TYPOlight-Catalan-v4.zip	# 2008/09/24
-CT_TRANSLATIONS.cs=	Contao-Czech-v34.zip		# 2011/03/08
+CT_TRANSLATIONS.cs=	Contao-Czech-v35.zip		# 2011/03/09
 CT_TRANSLATIONS.da=	Contao-Danish-v14.zip		# 2010/12/06
 CT_TRANSLATIONS.es=	Contao-Spanish-v16.zip		# 2011/01/10
 CT_TRANSLATIONS.fa=	Contao-Persian-v7.zip		# 2011/01/08
 CT_TRANSLATIONS.fi=	Contao-Finnish-v6.zip		# 2011/01/12
-CT_TRANSLATIONS.fr=	Contao-French-v61.zip		# 2010/12/03
+CT_TRANSLATIONS.fr=	Contao-French-v63.zip		# 2011/03/10
 CT_TRANSLATIONS.gl=	TYPOlight-Galician-v3.zip	# 2010/03/26
 CT_TRANSLATIONS.gn=	Contao-Guarani-v3.zip		# 2011/01/16
 CT_TRANSLATIONS.hr=	Contao-Croatian-v13.zip		# 2011/01/10
@@ -29,9 +29,9 @@ CT_TRANSLATIONS.ja=	Contao-Japanese-v51.zip		# 2011/03/08
 CT_TRANSLATIONS.ku=	Contao-Kurdish-v5.zip		# 2010/12/24
 CT_TRANSLATIONS.lt=	Contao-Lithuanian-v5.zip	# 2010/04/14
 CT_TRANSLATIONS.lv=	Contao-Latvian-v27.zip		# 2011/02/24
-CT_TRANSLATIONS.nl=	Contao-Dutch-v49.zip		# 2011/01/07
+CT_TRANSLATIONS.nl=	Contao-Dutch-v50.zip		# 2011/03/14
 CT_TRANSLATIONS.no=	TYPOlight-Norwegian-v11.zip	# 2009/11/16
-CT_TRANSLATIONS.pl=	Contao-Polish-v29.zip		# 2010/09/28
+CT_TRANSLATIONS.pl=	Contao-Polish-v30.zip		# 2011/03/09
 CT_TRANSLATIONS.pt=	TYPOlight-Portuguese-v7.zip	# 2009/11/01
 CT_TRANSLATIONS.rm=	Contao-Rhaeto-Romance-v3.zip	# 2010/03/04
 CT_TRANSLATIONS.ro=	Contao-Romanian-v10.zip		# 2009/07/02
@@ -44,7 +44,7 @@ CT_TRANSLATIONS.sv=	Contao-Swedish-v58.zip		# 2011/03/08
 CT_TRANSLATIONS.th=	TYPOlight-Thai-v2.zip		# 2008/11/23
 CT_TRANSLATIONS.tl=	TYPOlight-Tagalog-v1.zip	# 2010/01/29
 CT_TRANSLATIONS.tr=	Contao-Turkish-v13.zip		# 2010/12/07
-CT_TRANSLATIONS.uk=	Contao-Ukrainian-v14.zip	# 2010/07/02
+CT_TRANSLATIONS.uk=	Contao-Ukrainian-v15.zip	# 2011/03/09
 CT_TRANSLATIONS.zh=	TYPOlight-Chinese-v20.zip	# 2010/01/29
 
 .for l in ${CT_SUPPORTED_LANGUAGES}
