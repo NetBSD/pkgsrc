@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/12/18 01:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/15 09:00:24 obache Exp $
 #
 
 DISTNAME=		tuxnes-0.75
@@ -9,8 +9,11 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tuxnes/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tuxnes.sourceforge.net/
 COMMENT=		NES emulator
+LICENSE=		gnu-gpl-v2 # or later
 
 ONLY_FOR_PLATFORM=	*-*-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -22,9 +25,9 @@ SUBST_FILES.dsp=	consts.h
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tuxnes
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tuxnes
 .for doc in AUTHORS BUGS COPYING README THANKS
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/tuxnes
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/tuxnes
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"
