@@ -1,0 +1,3 @@
+This packages is for expandably converting numbers into binary, octal,
+and hexadecimal. All constructs TeX accepts as an argument to its
+\number primitive are valid.
