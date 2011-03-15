@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2008/08/10 06:35:00 obache Exp $
+$NetBSD: distinfo,v 1.8 2011/03/15 11:30:05 obache Exp $
 
 SHA1 (twin-src-3.1.14.tar.gz) = b1652f07adcc2c98948a4458480b2d8436cc893f
 RMD160 (twin-src-3.1.14.tar.gz) = e4b54f515505176498335387415dc5797b3e63eb
@@ -19,3 +19,6 @@ SHA1 (patch-am) = 1df7aa9125830374cb52a02638249473c69af833
 SHA1 (patch-an) = 8eb83db7351e146bfb0357dd2f4495a38d28530b
 SHA1 (patch-ao) = 7c4a48ad57d76238e097bcf9f1b2fe773cf374ff
 SHA1 (patch-ap) = af23478b138f97261aa173eefcfc1bb5da946cb9
+SHA1 (patch-windows_GdiDC.h) = 6ff43bccb01403eaafc37a9c5081f27201861e8e
+SHA1 (patch-windows_MenuAPI.c) = 1bddef20af7e6f2f6845ff1d8a5cb777caea5c45
+SHA1 (patch-windows_MenuProc.c) = 66671520298204906f454936f0e68b8de1afc44d
