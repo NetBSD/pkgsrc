@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.662 2011/03/15 18:46:56 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.663 2011/03/15 19:40:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1125,3 +1125,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-genmisc version 2010 [minskim 2011-03-15]
 	Added math/tex-kastrup version 2010 [minskim 2011-03-15]
 	Added math/tex-kastrup-doc version 2010 [minskim 2011-03-15]
+	Added fonts/kanjistrokeorders-ttf version 2.015 [ryoon 2011-03-15]
