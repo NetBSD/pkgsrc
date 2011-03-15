@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/03/15 13:15:37 pettai Exp $
+
+Automatically generate the keys in the pkgsrc config dir
+
+--- configs/keygen.sh.orig	2011-03-15 10:21:13.000000000 +0000
++++ configs/keygen.sh
+@@ -1,5 +1,8 @@
+ #! /bin/sh
+ 
++# Dump the generated keys in @SHIB_CONFDIR@ by default
++cd @SHIB_CONFDIR@
++
+ while getopts h:u:g:o:e:y:bf c
+      do
+          case $c in
