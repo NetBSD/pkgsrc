@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/15 18:11:45 minskim Exp $
+share/texmf-dist/fonts/map/fontname/adobe.map
+share/texmf-dist/fonts/map/fontname/apple.map
+share/texmf-dist/fonts/map/fontname/bitstrea.map
+share/texmf-dist/fonts/map/fontname/dtc.map
+share/texmf-dist/fonts/map/fontname/itc.map
+share/texmf-dist/fonts/map/fontname/linot-cd.map
+share/texmf-dist/fonts/map/fontname/linotype-cd.map
+share/texmf-dist/fonts/map/fontname/linotype.map
+share/texmf-dist/fonts/map/fontname/monotype.map
+share/texmf-dist/fonts/map/fontname/skey1250.map
+share/texmf-dist/fonts/map/fontname/skey1555.map
+share/texmf-dist/fonts/map/fontname/softkey-1250.map
+share/texmf-dist/fonts/map/fontname/softkey-1555.map
+share/texmf-dist/fonts/map/fontname/softkey.map
+share/texmf-dist/fonts/map/fontname/special.map
+share/texmf-dist/fonts/map/fontname/supplier.map
+share/texmf-dist/fonts/map/fontname/texfonts.map
+share/texmf-dist/fonts/map/fontname/typeface.map
+share/texmf-dist/fonts/map/fontname/urw.map
+share/texmf-dist/fonts/map/fontname/variant.map
+share/texmf-dist/fonts/map/fontname/weight.map
+share/texmf-dist/fonts/map/fontname/width.map
+share/texmf-dist/fonts/map/fontname/yandy.map
