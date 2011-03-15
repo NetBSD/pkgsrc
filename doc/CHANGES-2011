@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.661 2011/03/15 18:37:25 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.662 2011/03/15 18:46:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1123,3 +1123,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-fontname version 2010 [minskim 2011-03-15]
 	Added fonts/tex-fontname-doc version 2010 [minskim 2011-03-15]
 	Added print/tex-genmisc version 2010 [minskim 2011-03-15]
+	Added math/tex-kastrup version 2010 [minskim 2011-03-15]
+	Added math/tex-kastrup-doc version 2010 [minskim 2011-03-15]
