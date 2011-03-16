@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.670 2011/03/16 08:32:05 sborrill Exp $
+$NetBSD: CHANGES-2011,v 1.671 2011/03/16 11:05:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1133,3 +1133,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/p5-Image-ExifTool to 8.50 [gdt 2011-03-16]
 	Updated x11/py-gnome2-extras to 2.25.3 [obache 2011-03-16]
 	Updated net/istgt to 20110223 [sborrill 2011-03-16]
+	Added parallel/paexec version 0.16 [gdt 2011-03-16]
