@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.674 2011/03/16 14:43:33 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.675 2011/03/16 14:50:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1137,3 +1137,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/ivan to 0.50nb9 [obache 2011-03-16]
 	Updated devel/m4 to 1.4.16 [wiz 2011-03-16]
 	Updated finance/gnucash to 2.4.4 [wiz 2011-03-16]
+	Updated time/ruby-tzinfo to 0.3.25 [taca 2011-03-16]
