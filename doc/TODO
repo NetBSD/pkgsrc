@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10193 2011/03/15 19:43:32 jakllsch Exp $
+$NetBSD: TODO,v 1.10194 2011/03/16 12:54:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -523,7 +523,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ede-2.0
 	o editres-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.2.6
+	o efax-gtk-3.2.7
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
 	o ejabberd-2.1.6
@@ -534,7 +534,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elinks-0.12pre5
-	o elm-me-2.5plalpha24
+	o elm-me-2.5plalpha25
 	o elscreen-1.4.6 [pkg/43967]
 	o emacs-23.3
 	o emacs-muse-3.20
@@ -568,7 +568,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o fd-3.00d
-	o feh-1.11.2
+	o feh-1.12
 	o festival-1.96
 	o felt-3.07
 	o fetchmail-6.3.19
@@ -621,7 +621,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fotoxx-11.03
+	o fotoxx-11.03.1
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.2.5
@@ -637,7 +637,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2010.08.08
 	o fvwm2-themes-0.7.0
-	o gammu-1.29.91
+	o gammu-1.29.92
 	o gap-4r4p9
 	o gated-3.6
 	o gbdfed-1.6
@@ -667,6 +667,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o glade3-3.6.7 [GNOME 2.26]
+	o glib2-2.28.3
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -693,6 +694,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.4.4
 	o gnuchess-5.08
 	o gobject-introspection-0.10.4
 	o gok-2.30.1 [GNOME 2.32]
@@ -717,7 +719,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
-	o gtk3-3.0.2
+	o gtk2-2.24.3
+	o gtk3-3.0.3
 	o gtkmm-2.24.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.20
@@ -731,7 +734,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gzip-1.4
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
-	o hanzim-3.2
+	o hanzim-3.4
 	o haskell-mode-1.45
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.8.5
@@ -1049,7 +1052,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ploticus-examples-230
 	o pngcheck-2.3.0
 	o po4a-0.36.3
-	o podofo-0.8.4
+	o podofo-0.9.0
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppy-4.01
@@ -1147,6 +1150,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o sane-backends-1.0.22
 	o sarg-2.2.5
+	o sawfish-1.8.0
 	o saxon-9.2
 	o scapy-2.2.0
 	o scew-0.4.0
@@ -1225,7 +1229,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tesseract-3.00
 	o tetrinetx-1.40c
 	o tex-musixtex-113 [pkg/34758]
-	o texmaker-2.2.2
+	o texmaker-2.3
 	o tfmxplay-1.1.6
 	o tig-0.17
 	o tightvnc-1.5.1
@@ -1274,7 +1278,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vice-2.3
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
-	o viewvc-1.1.9
+	o viewvc-1.1.10
 	o vifm-0.5
 	o vile-9.8
 	o vim-7.3
@@ -1284,6 +1288,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vmips-1.3.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
+	o vsftpd-2.3.4
 	o vttest-20100830
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1317,7 +1322,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xauth-1.0.5
 	o xbacklight-1.1.2
 	o xbiff-1.0.3
-	o xbindkeys-1.8.4
+	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
 	o xbitmaps-1.1.1
 	o xboard-4.5.1
@@ -1402,7 +1407,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xman-1.1.1
 	o xmbdfed-4.6
 	o xmcd-3.3.2
-	o xmlstarlet-1.0.5
+	o xmlstarlet-1.0.6
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
@@ -1412,7 +1417,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.4
 	o xorg-util-macros-1.10.1 [pkg/43891]
-	o xorg-util-macros-1.12.0
+	o xorg-util-macros-1.13.0
 	o xpaint-2.9.8.2
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.0
@@ -1452,7 +1457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.22
+	o zile-2.3.23
 	o zircon-1.18.256
 	o zlib-1.2.5
 	o zoom-1.1.3
