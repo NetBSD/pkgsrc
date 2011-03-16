@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/01/28 01:41:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2011/03/16 16:43:35 drochner Exp $
 #
 
-DISTNAME=		feedparser-5.0
+DISTNAME=		feedparser-5.0.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
 MASTER_SITES=		http://feedparser.googlecode.com/files/
@@ -15,6 +15,9 @@ COMMENT=		Parse RSS and Atom feeds in Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
+
+do-test:
+	cd ${WRKSRC}/feedparser && ${PYTHONBIN} feedparsertest.py
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
