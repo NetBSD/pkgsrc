@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/16 17:49:10 minskim Exp $
+share/texmf-dist/doc/generic/multido/Changes
+share/texmf-dist/doc/generic/multido/multido-doc.pdf
+share/texmf-dist/doc/generic/multido/multido-doc.tex
+share/texmf-dist/doc/generic/multido/multido.pdf
