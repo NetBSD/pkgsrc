@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/06/16 17:31:33 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/03/16 23:28:22 gdt Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -78,6 +78,9 @@ ${PYSITELIB}/trac/db/util.pyo
 ${PYSITELIB}/trac/db_default.py
 ${PYSITELIB}/trac/db_default.pyc
 ${PYSITELIB}/trac/db_default.pyo
+${PYSITELIB}/trac/dist.py
+${PYSITELIB}/trac/dist.pyc
+${PYSITELIB}/trac/dist.pyo
 ${PYSITELIB}/trac/env.py
 ${PYSITELIB}/trac/env.pyc
 ${PYSITELIB}/trac/env.pyo
@@ -118,6 +121,9 @@ ${PYSITELIB}/trac/htdocs/feed.png
 ${PYSITELIB}/trac/htdocs/file.png
 ${PYSITELIB}/trac/htdocs/folder.png
 ${PYSITELIB}/trac/htdocs/grip.png
+${PYSITELIB}/trac/htdocs/guide/admin-permissions-TICKET_ADMIN.png
+${PYSITELIB}/trac/htdocs/guide/admin-permissions.png
+${PYSITELIB}/trac/htdocs/guide/admin.png
 ${PYSITELIB}/trac/htdocs/guide/basic-workflow.png
 ${PYSITELIB}/trac/htdocs/guide/original-workflow.png
 ${PYSITELIB}/trac/htdocs/ics.png
@@ -131,11 +137,14 @@ ${PYSITELIB}/trac/htdocs/js/folding.js
 ${PYSITELIB}/trac/htdocs/js/ie_pre7_hacks.js
 ${PYSITELIB}/trac/htdocs/js/jquery.js
 ${PYSITELIB}/trac/htdocs/js/keyboard_nav.js
+${PYSITELIB}/trac/htdocs/js/messages/ca.js
 ${PYSITELIB}/trac/htdocs/js/messages/de.js
 ${PYSITELIB}/trac/htdocs/js/messages/en_GB.js
+${PYSITELIB}/trac/htdocs/js/messages/en_US.js
 ${PYSITELIB}/trac/htdocs/js/messages/eo.js
 ${PYSITELIB}/trac/htdocs/js/messages/es.js
 ${PYSITELIB}/trac/htdocs/js/messages/es_AR.js
+${PYSITELIB}/trac/htdocs/js/messages/fi.js
 ${PYSITELIB}/trac/htdocs/js/messages/fr.js
 ${PYSITELIB}/trac/htdocs/js/messages/he.js
 ${PYSITELIB}/trac/htdocs/js/messages/hu.js
