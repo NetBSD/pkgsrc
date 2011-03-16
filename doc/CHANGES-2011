@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.678 2011/03/16 17:51:01 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.679 2011/03/16 18:00:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1142,3 +1142,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-eso-pic to 2.0cnb1 [minskim 2011-03-16]
 	Added devel/tex-multido version 1.42 [minskim 2011-03-16]
 	Added devel/tex-multido-doc version 1.42 [minskim 2011-03-16]
+	Added graphics/tex-tex-ps version 2010 [minskim 2011-03-16]
+	Added graphics/tex-tex-ps-doc version 2010 [minskim 2011-03-16]
