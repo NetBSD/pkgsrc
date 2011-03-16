@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.667 2011/03/15 21:52:53 gls Exp $
+$NetBSD: CHANGES-2011,v 1.668 2011/03/16 00:19:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1130,3 +1130,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated cross/dfu-programmer to 0.5.4 [jakllsch 2011-03-15]
 	Updated net/netdisco to 1.0 [bouyer 2011-03-15]
 	Updated x11/x3270 to 3.3.11ga6 [gls 2011-03-15]
+	Updated graphics/p5-Image-ExifTool to 8.50 [gdt 2011-03-16]
