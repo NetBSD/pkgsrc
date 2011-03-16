@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.668 2011/03/16 00:19:42 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.669 2011/03/16 06:51:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1131,3 +1131,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/netdisco to 1.0 [bouyer 2011-03-15]
 	Updated x11/x3270 to 3.3.11ga6 [gls 2011-03-15]
 	Updated graphics/p5-Image-ExifTool to 8.50 [gdt 2011-03-16]
+	Updated x11/py-gnome2-extras to 2.25.3 [obache 2011-03-16]
