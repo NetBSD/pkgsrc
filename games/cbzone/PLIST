@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/16 08:50:14 obache Exp $
+bin/cbzone
+bin/cbzone.exec
 lib/X11/app-defaults/Cbzone
+share/cbzone/cbzone.help
+share/cbzone/cbzone.motd
 share/cbzone/sounds/enemy_seen.au
 share/cbzone/sounds/game_begin.au
 share/cbzone/sounds/game_end.au
@@ -8,7 +12,3 @@ share/cbzone/sounds/object_explodes.au
 share/cbzone/sounds/salvo_fired.au
 share/cbzone/sounds/user_died.au
 share/cbzone/sounds/user_shoots.au
-share/cbzone/cbzone.help
-share/cbzone/cbzone.motd
-bin/cbzone.exec
-bin/cbzone
