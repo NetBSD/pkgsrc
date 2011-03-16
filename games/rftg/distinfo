@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/09/12 21:55:55 wiz Exp $
+$NetBSD: distinfo,v 1.9 2011/03/16 14:52:27 wiz Exp $
 
-SHA1 (rftg-0.7.5.tar.bz2) = 38d483963695d682f5765fdbf3de8219c278b1d4
-RMD160 (rftg-0.7.5.tar.bz2) = f1c2cb929171a168b53706a21cf20b1cb7a1b74a
-Size (rftg-0.7.5.tar.bz2) = 27299996 bytes
+SHA1 (rftg-0.8.1.tar.bz2) = 340bff9f81102b74b15cefdcc782b20d65bb617b
+RMD160 (rftg-0.8.1.tar.bz2) = d75dd2e171a98cfa8a18ed7b18723793ef662688
+Size (rftg-0.8.1.tar.bz2) = 27282876 bytes
