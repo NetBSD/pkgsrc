@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2011/01/28 01:41:06 schmonz Exp $
+$NetBSD: distinfo,v 1.11 2011/03/16 16:43:35 drochner Exp $
 
-SHA1 (feedparser-5.0.zip) = ea71e12462d7e871fca936589802c7e6db0663f4
-RMD160 (feedparser-5.0.zip) = b19fd387b178cf6fd5ddf7f75f0abb1f0162d610
-Size (feedparser-5.0.zip) = 2002639 bytes
+SHA1 (feedparser-5.0.1.zip) = 6b6840030718fc768790d45c54aaabc49ed30f55
+RMD160 (feedparser-5.0.1.zip) = 6c3001b53bd4b227cb435fdec6578f3d3f8853db
+Size (feedparser-5.0.1.zip) = 2022807 bytes
