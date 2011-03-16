@@ -1,0 +1,5 @@
+The package provides the \multido command, which was originally designed
+for use with with PSTricks. Fixed-point arithmetic is used when working
+on the loop variable, so that the package is equally applicable in
+graphics applications like PSTricks as it is with the more common
+integer loops.
