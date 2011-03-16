@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.15 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/16 11:40:27 obache Exp $
 #
 
 DISTNAME=		ivan-0.50
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ivan/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ivan.sourceforge.net/
 COMMENT=		Graphical roguelike featuring deep gameplay
+LICENSE=		gnu-gpl-v2 # or later
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
@@ -19,8 +21,10 @@ CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/share
 USE_LANGUAGES=		c c++
 
 REQD_DIRS+=		share/ivan
+OWN_DIRS_PERMS+=	share/ivan/Bones ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 CONF_FILES_PERMS+=	/dev/null ${PREFIX}/share/ivan/ivan-highscore.scores \
-			${ROOT_USER} games 664
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+SPECIAL_PERMS+=		bin/ivan ${SETGID_GAMES_PERMS}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

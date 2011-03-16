@@ -1,14 +1,24 @@
-$NetBSD: patch-ac,v 1.1 2006/05/19 07:15:24 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2011/03/16 11:40:28 obache Exp $
 
---- Makefile.in.orig	2006-05-15 20:18:43.000000000 +0000
+--- Makefile.in.orig	2004-12-10 21:34:29.000000000 +0000
 +++ Makefile.in
-@@ -339,9 +339,6 @@ maintainer-clean-generic clean mostlycle
+@@ -336,19 +336,6 @@ install uninstall-am uninstall all-redir
+ installdirs mostlyclean-generic distclean-generic clean-generic \
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
  
- install-data-local:
- 	-./mkinstalldirs -p $(localstatedir) $(bindir) $(datadir)/ivan/Script/ $(datadir)/ivan/Graphics/ $(localstatedir)/ivan/Bones/
+-
+-install-data-local:
+-	-./mkinstalldirs -p $(localstatedir) $(bindir) $(datadir)/ivan/Script/ $(datadir)/ivan/Graphics/ $(localstatedir)/ivan/Bones/
 -	-touch $(localstatedir)/ivan/ivan-highscore.scores
 -	-chown games.games $(localstatedir)/ivan/ivan-highscore.scores
 -	-chmod 664 $(localstatedir)/ivan/ivan-highscore.scores
- 	-chown -R games.games $(localstatedir)/ivan/Bones/
- 	-chmod -R u=rwx $(localstatedir)/ivan/Bones/
- 	-chmod -R g=rwx $(localstatedir)/ivan/Bones/
+-	-chown -R games.games $(localstatedir)/ivan/Bones/
+-	-chmod -R u=rwx $(localstatedir)/ivan/Bones/
+-	-chmod -R g=rwx $(localstatedir)/ivan/Bones/
+-	-chmod -R o=r $(localstatedir)/ivan/Bones/
+-	-chgrp games $(bindir)/ivan 
+-	-chmod 2111 $(bindir)/ivan
+-
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
