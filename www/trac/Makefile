@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2011/03/15 12:58:04 gdt Exp $
+# $NetBSD: Makefile,v 1.53 2011/03/16 23:28:22 gdt Exp $
 #
 
-DISTNAME=	Trac-0.12
+DISTNAME=	Trac-0.12.2
 PKGNAME=	${DISTNAME:tl}
 PKGREVISION=	1
 CATEGORIES=	devel www
