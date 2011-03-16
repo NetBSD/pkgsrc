@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.677 2011/03/16 17:42:03 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.678 2011/03/16 17:51:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1140,3 +1140,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/ruby-tzinfo to 0.3.25 [taca 2011-03-16]
 	Updated games/rftg to 0.8.1 [wiz 2011-03-16]
 	Updated print/tex-eso-pic to 2.0cnb1 [minskim 2011-03-16]
+	Added devel/tex-multido version 1.42 [minskim 2011-03-16]
+	Added devel/tex-multido-doc version 1.42 [minskim 2011-03-16]
