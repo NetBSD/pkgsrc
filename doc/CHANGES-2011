@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.672 2011/03/16 11:40:49 obache Exp $
+$NetBSD: CHANGES-2011,v 1.673 2011/03/16 14:31:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1135,3 +1135,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/istgt to 20110223 [sborrill 2011-03-16]
 	Added parallel/paexec version 0.16 [gdt 2011-03-16]
 	Updated games/ivan to 0.50nb9 [obache 2011-03-16]
+	Updated devel/m4 to 1.4.16 [wiz 2011-03-16]
