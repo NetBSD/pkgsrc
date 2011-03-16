@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/04 22:39:15 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/03/16 17:41:37 minskim Exp $
 
-SHA1 (tex-eso-pic-20020/eso-pic.tar.xz) = 3ae5b4fa58815e4560c51ee36990a1c924d0a608
-RMD160 (tex-eso-pic-20020/eso-pic.tar.xz) = f327d96f74ba1d0d259f47d872d6b18cc5503826
-Size (tex-eso-pic-20020/eso-pic.tar.xz) = 3648 bytes
+SHA1 (tex-eso-pic-21515/eso-pic.tar.xz) = e04fe85163f177524e04db874de8c917a717fc8e
+RMD160 (tex-eso-pic-21515/eso-pic.tar.xz) = 272b5a343ef891826a786643e013d18fc4c08986
+Size (tex-eso-pic-21515/eso-pic.tar.xz) = 3700 bytes
