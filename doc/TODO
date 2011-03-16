@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10197 2011/03/16 14:52:38 wiz Exp $
+$NetBSD: TODO,v 1.10198 2011/03/16 23:28:38 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1243,7 +1243,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.12.2
 	o tree-1.5.3
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
