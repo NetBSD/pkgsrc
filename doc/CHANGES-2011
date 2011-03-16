@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.679 2011/03/16 18:00:01 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.680 2011/03/16 18:15:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1144,3 +1144,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/tex-multido-doc version 1.42 [minskim 2011-03-16]
 	Added graphics/tex-tex-ps version 2010 [minskim 2011-03-16]
 	Added graphics/tex-tex-ps-doc version 2010 [minskim 2011-03-16]
+	Added print/tex-collection-genericrecommended version 2010 [minskim 2011-03-16]
+	Added print/tex-collection-genericrecommended-doc version 2010 [minskim 2011-03-16]
