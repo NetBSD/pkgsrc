@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/02/25 13:34:56 hans Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/16 17:44:23 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -33,6 +33,7 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	stacksize
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
