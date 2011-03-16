@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.49 2011/03/11 10:53:39 wiz Exp $
+$NetBSD: distinfo,v 1.50 2011/03/16 14:43:23 wiz Exp $
 
-SHA1 (gnucash-2.4.3.tar.gz) = cb69bca4d311794b86186a7660eea71b63119440
-RMD160 (gnucash-2.4.3.tar.gz) = 7c8de221c0d99f9ccb0840bfb3d98837ec37bf6b
-Size (gnucash-2.4.3.tar.gz) = 12985416 bytes
+SHA1 (gnucash-2.4.4.tar.gz) = aed2e48370e7c84204b339bc983dcfd35223a6b9
+RMD160 (gnucash-2.4.4.tar.gz) = 957deb2404d1a1f1e48052c7b269cb870493663c
+Size (gnucash-2.4.4.tar.gz) = 13018202 bytes
