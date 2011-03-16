@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/09/10 08:53:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/03/16 14:49:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -165,6 +165,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Mazatlan.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Mendoza.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Menominee.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Merida.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Metlakatla.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Mexico_City.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Miquelon.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Moncton.rb
@@ -177,6 +178,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/New_York.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Nipigon.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Nome.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Noronha.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/North_Dakota/Beulah.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/North_Dakota/Center.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/North_Dakota/New_Salem.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Ojinaga.rb
@@ -203,6 +205,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santo_Domingo.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Sao_Paulo.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Scoresbysund.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Shiprock.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Sitka.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/St_Barthelemy.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/St_Johns.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/St_Kitts.rb
