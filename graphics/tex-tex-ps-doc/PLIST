@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/16 17:58:56 minskim Exp $
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/README
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/cmyk-doc.pdf
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/fountain.eps
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/gdansk.eps
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/rules.tex
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/sam1-sep.bat
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/sample1.tex
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/sample2.tex
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/sample3.tex
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/sample4.tex
+share/texmf-dist/doc/generic/tex-ps/cmyk-hax/screen.eps
+share/texmf-dist/doc/generic/tex-ps/poligraf/README
+share/texmf-dist/doc/generic/tex-ps/poligraf/kol-cmyk.eps
+share/texmf-dist/doc/generic/tex-ps/poligraf/sample.tex
+share/texmf-dist/doc/generic/tex-ps/poligraf/samplelx.tex
