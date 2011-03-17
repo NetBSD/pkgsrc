@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/17 21:17:28 zafer Exp $
 
 DISTNAME=	jhd-2.3
 CATEGORIES=	japanese misc
-MASTER_SITES=	ftp://ftp.iamas.ac.jp/pub1/UNIX/File/
+MASTER_SITES=	# ftp://ftp.iamas.ac.jp/pub1/UNIX/File/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Japanese Hexadecimal Dump
