@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.480 2011/03/16 18:15:34 minskim Exp $
+# $NetBSD: Makefile,v 1.481 2011/03/17 18:09:57 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -517,6 +517,8 @@ SUBDIR+=	tex-skak
 SUBDIR+=	tex-skak-doc
 SUBDIR+=	tex-skaknew
 SUBDIR+=	tex-skaknew-doc
+SUBDIR+=	tex-soul
+SUBDIR+=	tex-soul-doc
 SUBDIR+=	tex-srcltx
 SUBDIR+=	tex-srcltx-doc
 SUBDIR+=	tex-sttools

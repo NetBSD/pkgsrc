@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.685 2011/03/17 18:07:09 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.686 2011/03/17 18:09:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1152,3 +1152,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-fontspec to 2.1f [minskim 2011-03-17]
 	Updated fonts/tex-fontspec-doc to 2.1f [minskim 2011-03-17]
 	Updated print/tex-passivetex to 1.25nb2 [minskim 2011-03-17]
+	Added print/tex-soul version 2.4 [minskim 2011-03-17]
+	Added print/tex-soul-doc version 2.4 [minskim 2011-03-17]
