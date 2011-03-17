@@ -1,0 +1,3 @@
+The package provides plotting of data (typically from external files),
+using PSTricks. Plots my be configured using a wide variety of
+parameters.
