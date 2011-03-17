@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.683 2011/03/17 14:58:27 adam Exp $
+$NetBSD: CHANGES-2011,v 1.684 2011/03/17 17:58:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1149,3 +1149,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/trac to 0.12.2nb1 [gdt 2011-03-16]
 	Updated www/cgicc to 3.2.9 [adam 2011-03-17]
 	Updated archivers/lzop to 1.03 [adam 2011-03-17]
+	Updated fonts/tex-fontspec to 2.1f [minskim 2011-03-17]
+	Updated fonts/tex-fontspec-doc to 2.1f [minskim 2011-03-17]
