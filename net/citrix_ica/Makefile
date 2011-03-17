@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2009/05/19 08:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2011/03/17 09:05:32 sborrill Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	# empty
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://www.citrix.com/English/SS/downloads/downloads.asp?dID=2755
+HOMEPAGE=	http://www.citrix.com/English/ss/downloads/results.asp?productID=186&c1=sot2755
 COMMENT=	Citrix(R) ICA client for the Citrix(R) Presentation Server(TM)
 LICENSE=	citrix_ica-license
 
@@ -29,14 +29,16 @@ PKGNAME=	citrix_ica-10.6.115659
 MASTER_SITES=	ftp://download2.citrix.com/FILES/en/products/Linux10/
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=	en.solaris
-PKGNAME=	citrix_ica-8.46.110465
-MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
-EXTRACT_SUFX=	.tar.Z
+PKGNAME=	citrix_ica-8.63.165401
+HOMEPAGE=	http://www.citrix.com/English/ss/downloads/details.asp?downloadId=1859901&productId=186&c1=sot2755
+MASTER_SITES=	manual
+EXTRACT_SUFX=	.tar.z
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=	en.solx86
-PKGNAME=	citrix_ica-8.50.117422
-MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
-EXTRACT_SUFX=	.tar.Z
+PKGNAME=	citrix_ica-8.63.165401
+HOMEPAGE=	http://www.citrix.com/English/ss/downloads/details.asp?downloadId=1859901&productId=186&c1=sot2755
+MASTER_SITES=	manual
+EXTRACT_SUFX=	.tar.z
 .endif
 
 WRKSRC=		${WRKDIR}
@@ -46,6 +48,13 @@ CDIR=		${PREFIX}/lib/ICAClient
 USE_TOOLS+=	patch
 
 INSTALLATION_DIRS=	bin
+
+.if ${MASTER_SITES} == "manual"
+FETCH_MESSAGE=  "Please fetch ${DISTFILES} manually from"
+FETCH_MESSAGE+= "${HOMEPAGE}"
+FETCH_MESSAGE+= "and put into"
+FETCH_MESSAGE+= "${DISTDIR}/${PKGNAME_NOREV}"
+.endif
 
 do-patch:
 	(cd ${WRKSRC}; \
