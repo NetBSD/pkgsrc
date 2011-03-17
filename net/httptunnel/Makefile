@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/03/22 04:53:40 manu Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/17 21:50:09 zafer Exp $
 #
 
 DISTNAME=	httptunnel-3.0.5
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.nocrew.org/pub/nocrew/unix/
+MASTER_SITES=	http://www.nocrew.org/software/httptunnel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nocrew.org/software/httptunnel.html
