@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2009/05/19 08:59:37 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2011/03/17 11:47:45 obache Exp $
 
 DISTNAME=		install_flash_player_9_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -18,6 +18,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 DIST_SUBDIR=		flash/${FLASH_VERS}
 
 EMUL_PLATFORMS=		linux-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
