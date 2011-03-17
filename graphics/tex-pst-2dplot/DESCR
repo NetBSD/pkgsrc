@@ -1,0 +1,3 @@
+Pst-2dplot is a pstricks package that offers an easy-to-use and
+intuitive tool for plotting 2-d curves. It defines an environment with
+commands similar to MATLAB for plotting.
