@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2009/08/30 01:12:05 zafer Exp $
+# $NetBSD: Makefile,v 1.37 2011/03/17 21:10:47 zafer Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
 PKGREVISION=     1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.astrolog.org/ftp/ephem/ \
-		http://www.astrolog.org/ftp/ \
-		ftp://ftp.kiarchive.ru/pub/unix/magick/astrology/astrolog/	
+		http://www.astrolog.org/ftp/
 DISTFILES=	${DISTNAME}.shr ${EPHEM}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
