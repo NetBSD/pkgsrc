@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/01/13 13:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/03/17 08:26:08 obache Exp $
 
 DISTNAME=		sarg-2.1
 PKGREVISION=		7
@@ -11,6 +11,9 @@ PATCHFILES=		datafile.patch lastlog.patch
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sarg.sourceforge.net/sarg.php
 COMMENT=		Squid-Cache proxy server Analysis Report Generator
+LICENSE=		gnu-gpl-v2 # or later
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gcc					\
@@ -54,6 +57,10 @@ BUILD_DEFS+=		SQUID_ACCESSLOG SARG_REPORTSDIR
 MAKE_ENV+=		PKG_FLAGS="-DSQUID_ACCESSLOG='\"${SQUID_ACCESSLOG}\"' \
 			-DSARG_REPORTSDIR='\"${SARG_REPORTSDIR}\"'"	\
 			EGDIR=${EGDIR:Q}
+
+INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin
+INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+INSTALL_MAKE_FLAGS+=	EGDIR=${DESTDIR}${EGDIR}
 
 CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
 			${EGDIR}/exclude_codes ${PKG_SYSCONFDIR}/exclude_codes \
