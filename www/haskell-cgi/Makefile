@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2011/03/17 09:57:55 obache Exp $
 
 DISTNAME=	haskell-cgi-20001206
 CATEGORIES=	www
@@ -11,6 +11,8 @@ COMMENT=	CGI module for the Hugs Haskell 98 interpreter
 DEPENDS+=	hugs98-[0-9]*:../../lang/hugs
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 
@@ -26,10 +28,10 @@ do-configure:
 	done
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/CGI.lhs ${PREFIX}/share/hugs/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hugs-cgi
-	${INSTALL_DATA} ${WRKSRC}/*.cgi ${PREFIX}/share/examples/hugs-cgi
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/examples/hugs-cgi
-	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/examples/hugs-cgi
+	${INSTALL_DATA} ${WRKSRC}/CGI.lhs ${DESTDIR}${PREFIX}/share/hugs/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/hugs-cgi
+	${INSTALL_DATA} ${WRKSRC}/*.cgi ${DESTDIR}${PREFIX}/share/examples/hugs-cgi
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/examples/hugs-cgi
+	${INSTALL_DATA} ${WRKSRC}/TODO ${DESTDIR}${PREFIX}/share/examples/hugs-cgi
 
 .include "../../mk/bsd.pkg.mk"
