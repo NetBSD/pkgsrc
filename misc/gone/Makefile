@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2010/02/26 10:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2011/03/17 21:07:16 zafer Exp $
 #
 
 DISTNAME=	gone-1.3.5
 CATEGORIES=	misc
-MASTER_SITES=	http://jaguar.ir.miami.edu/~marcus/
+MASTER_SITES=	# http://jaguar.ir.miami.edu/~marcus/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jaguar.ir.miami.edu/~marcus/
