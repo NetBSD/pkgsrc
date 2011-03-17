@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2010/12/16 03:42:49 taca Exp $
+$NetBSD: patch-ab,v 1.4 2011/03/17 13:26:04 adam Exp $
 
 * process directories in client package.
+* Fix building with Clang (precompiler output doesn't print #include)
 
 --- Makefile.in.orig	2010-11-29 10:42:58.000000000 +0000
 +++ Makefile.in
@@ -20,3 +21,12 @@ $NetBSD: patch-ab,v 1.3 2010/12/16 03:42:49 taca Exp $
  
  DIST_SUBDIRS = . include Docs zlib \
  			cmd-line-utils sql-common scripts \
+@@ -1145,7 +1140,7 @@ do_abi_check:
+ 	                            -e '/^#pragma GCC set_debug_pwd/d' \
+ 	                            -e '/^#ident/d' > \
+ 	                                       $(top_builddir)/abi_check.out; \
+-	                  @DIFF@ -I '#include' -w $$file.pp $(top_builddir)/abi_check.out; \
++	                  @DIFF@ -w $$file.pp $(top_builddir)/abi_check.out; \
+ 	                  @RM@ $(top_builddir)/abi_check.out; \
+ 	done
+ 
