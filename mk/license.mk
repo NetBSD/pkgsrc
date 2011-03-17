@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.38 2011/02/06 18:54:49 schnoebe Exp $
+# $NetBSD: license.mk,v 1.39 2011/03/17 22:58:10 bad Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -98,7 +98,7 @@
 # XXX open-font-license should perhaps be changed to open-font
 
 DEFAULT_ACCEPTABLE_LICENSES= \
-	public-domain \
+	public-domain unlicense \
 	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3 \
 	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 \
 	gnu-gpl-v3 gnu-lgpl-v3 \
