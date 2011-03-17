@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/11/10 17:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2011/03/17 23:38:28 zafer Exp $
 
 DISTNAME=	xp-1.2b10
 PKGREVISION=	3
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.ncl.ac.uk/pub/users/ngmt/X11/
+MASTER_SITES=	# ftp://ftp.ncl.ac.uk/pub/users/ngmt/X11/
 
 MAINTAINER=	jdc@NetBSD.org
 COMMENT=	Fast X11 text file viewer using Athena widgets
