@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10198 2011/03/16 23:28:38 gdt Exp $
+$NetBSD: TODO,v 1.10199 2011/03/17 14:49:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdrkit-1.1.10
 	o celestia-1.6.0
 	o cgdb-0.6.5
-	o cgicc-3.2.9
 	o cheese-2.32.0 [GNOME 2.32]
 	o cherokee-1.2.1
 	o chromium-0.9.15
