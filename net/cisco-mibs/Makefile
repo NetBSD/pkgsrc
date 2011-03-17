@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/12/17 22:22:05 abs Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/17 21:43:58 zafer Exp $
 
 DISTNAME=	cisco-mibs-20050210
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.gw.com/pub/mibs/${DISTNAME}/
+MASTER_SITES=	# ftp://ftp.gw.com/pub/mibs/${DISTNAME}/
 DISTFILES=	v1.tar.gz \
 		v2.tar.gz
 
