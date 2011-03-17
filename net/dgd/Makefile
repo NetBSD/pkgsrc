@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2009/12/17 22:39:56 abs Exp $
+# $NetBSD: Makefile,v 1.17 2011/03/17 21:45:30 zafer Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
 PKGREVISION=	1
 CATEGORIES=	net games
-MASTER_SITES=	ftp://ftp.dworkin.nl/pub/dgd/
+MASTER_SITES=	# ftp://ftp.dworkin.nl/pub/dgd/
 
 MAINTAINER=	sco@openface.ca
 HOMEPAGE=	http://www.dworkin.nl/dgd/
