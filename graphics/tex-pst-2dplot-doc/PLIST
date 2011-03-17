@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/17 18:26:51 minskim Exp $
+share/texmf-dist/doc/generic/pst-2dplot/README
+share/texmf-dist/doc/generic/pst-2dplot/data1.dat
+share/texmf-dist/doc/generic/pst-2dplot/data2.dat
+share/texmf-dist/doc/generic/pst-2dplot/data3.dat
+share/texmf-dist/doc/generic/pst-2dplot/pst-2dplot-doc.pdf
+share/texmf-dist/doc/generic/pst-2dplot/pst-2dplot-doc.tex
