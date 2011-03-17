@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/03/17 13:17:51 obache Exp $
+# $NetBSD: Makefile,v 1.41 2011/03/17 13:39:29 obache Exp $
 
 DISTNAME=	acroread5	# overridden below
 PKGNAME=	acroread5-5.10
@@ -64,6 +64,7 @@ do-install:
 SUBST_CLASSES+=		rmdestdir
 SUBST_STAGE.rmdestdir=	post-install
 SUBST_FILES.rmdestdir=	${DESTDIR}${PREFIX}/bin/acroread5
+SUBST_FILES.rmdestdir=	${DESTDIR}${PREFIX}/Acrobat5/bin/acroread
 SUBST_SED.rmdestdir=	-e 's,${DESTDIR},,g'
 
 .include "../../mk/bsd.pkg.mk"
