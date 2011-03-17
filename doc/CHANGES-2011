@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.689 2011/03/17 18:27:54 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.690 2011/03/17 21:47:12 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1160,3 +1160,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/tex-pst-plot-doc version 1.26 [minskim 2011-03-17]
 	Added graphics/tex-pst-2dplot version 1.5 [minskim 2011-03-17]
 	Added graphics/tex-pst-2dplot-doc version 1.5 [minskim 2011-03-17]
+	Updated www/apache-tomcat55 to 5.5.33 [abs 2011-03-17]
