@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 07:34:34 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/17 21:29:20 zafer Exp $
 #
 
 DISTNAME=	dnsdoctor-1.0.1
 CATEGORIES=	net
-MASTER_SITES=	http://www.dnsdoctor.org/download/src/
+MASTER_SITES=	http://www.dnsdoctor.org/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
