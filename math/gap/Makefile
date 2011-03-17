@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/02/26 10:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2011/03/17 20:55:27 zafer Exp $
 #
 
 DISTNAME=	gap4r3
@@ -7,7 +7,6 @@ PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/ \
 		ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/ \
-		ftp://pell.anu.edu.au/pub/algebra/gap4/ \
 		ftp://ftp.ccs.neu.edu/pub/mirrors/ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}	\
 			fix4r3n5.tar.gz
