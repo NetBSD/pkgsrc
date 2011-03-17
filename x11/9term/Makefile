@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2008/06/12 02:14:56 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2011/03/17 23:32:38 zafer Exp $
 
 DISTNAME=		9term.1.6.3
 PKGNAME=		9term-1.6.3
 PKGREVISION=		1
 CATEGORIES=		plan9 x11
-MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
+MASTER_SITES=		# ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
