@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2009/12/15 21:58:38 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2011/03/17 21:21:01 zafer Exp $
 #
 
 DISTNAME=       siag-3.6.1
 PKGREVISION=    3
 CATEGORIES=     misc editors math textproc
-MASTER_SITES=   ftp://siag.nu/pub/siag/		\
-		http://siag.nu/pub/siag/
+MASTER_SITES=   http://siag.nu/pub/siag/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=       http://siag.nu/
