@@ -1,0 +1,12 @@
+$NetBSD: patch-nsprpub_config_Makefile.in,v 1.1 2011/03/17 13:24:07 obache Exp $
+
+--- nsprpub/config/Makefile.in.orig	2004-04-16 22:28:03.000000000 +0000
++++ nsprpub/config/Makefile.in
+@@ -139,7 +139,3 @@ ifeq ($(MOZ_OS2_TOOLS),VACPP)
+ else
+ 	$(CC) $(XCFLAGS) $< $(LDFLAGS) $(XLDOPTS) $(OUTOPTION)$@
+ endif
+-
+-real_install:: nspr.m4
+-	$(NSINSTALL) -D $(DESTDIR)$(datadir)/aclocal
+-	$(NSINSTALL) -t -m 0644 $< $(DESTDIR)$(datadir)/aclocal
