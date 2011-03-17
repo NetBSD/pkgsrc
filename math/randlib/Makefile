@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2009/12/12 20:56:54 asau Exp $
+# $NetBSD: Makefile,v 1.15 2011/03/17 21:01:33 zafer Exp $
 
 DISTNAME=	randlib.c-1.3
 PKGNAME=	randlib-1.3
 CATEGORIES=	math
-MASTER_SITES=	ftp://odin.mdacc.tmc.edu/pub/source/
+MASTER_SITES=	# ftp://odin.mdacc.tmc.edu/pub/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://biostatistics.mdanderson.org/SoftwareDownload/SingleSoftware.aspx?Software_Id=27
