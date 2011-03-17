@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2007/12/27 12:08:01 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/03/17 22:03:40 zafer Exp $
 #
 
 DISTNAME=		srsh-1.2
 PKGREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
+MASTER_SITES=		# ftp://ftp.gw.com/pub/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Emulate rsh client behavior using ssh
