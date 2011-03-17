@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/01/22 22:55:14 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2011/03/17 18:06:49 minskim Exp $
 
 DISTNAME=	passivetex
 PKGNAME=	tex-${DISTNAME}-1.25
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
@@ -12,6 +12,7 @@ COMMENT=	Support package for XML/SGML typesetting
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
