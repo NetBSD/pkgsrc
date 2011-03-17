@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/07/24 11:15:16 ghen Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/03/17 14:09:21 drochner Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -104,10 +104,12 @@ man/man3/ldap_delete.3
 man/man3/ldap_delete_ext.3
 man/man3/ldap_delete_ext_s.3
 man/man3/ldap_delete_s.3
+man/man3/ldap_destroy.3
 man/man3/ldap_dn2ad_canonical.3
 man/man3/ldap_dn2dcedn.3
 man/man3/ldap_dn2str.3
 man/man3/ldap_dn2ufn.3
+man/man3/ldap_dup.3
 man/man3/ldap_err2string.3
 man/man3/ldap_errlist.3
 man/man3/ldap_error.3
@@ -125,6 +127,7 @@ man/man3/ldap_get_option.3
 man/man3/ldap_get_values.3
 man/man3/ldap_get_values_len.3
 man/man3/ldap_init.3
+man/man3/ldap_init_fd.3
 man/man3/ldap_initialize.3
 man/man3/ldap_install_tls.3
 man/man3/ldap_is_ldap_url.3
@@ -179,6 +182,7 @@ man/man3/ldap_search_s.3
 man/man3/ldap_search_st.3
 man/man3/ldap_set_option.3
 man/man3/ldap_set_rebind_proc.3
+man/man3/ldap_set_urllist_proc.3
 man/man3/ldap_simple_bind.3
 man/man3/ldap_simple_bind_s.3
 man/man3/ldap_sort.3
