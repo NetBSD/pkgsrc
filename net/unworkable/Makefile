@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2011/02/11 21:22:04 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/17 21:30:42 zafer Exp $
 
 DISTNAME=	unworkable-0.51
 PKGREVISION=	4
 CATEGORIES=	net
-MASTER_SITES=	http://p2presearch.com/unworkable/dist/
+MASTER_SITES=	# http://p2presearch.com/unworkable/dist/
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://p2presearch.com/unworkable/
