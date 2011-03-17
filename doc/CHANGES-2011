@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.687 2011/03/17 18:13:51 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.688 2011/03/17 18:25:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1156,3 +1156,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-soul-doc version 2.4 [minskim 2011-03-17]
 	Added graphics/tex-pstricks version 2.17 [minskim 2011-03-17]
 	Added graphics/tex-pstricks-doc version 2.17 [minskim 2011-03-17]
+	Added graphics/tex-pst-plot version 1.26 [minskim 2011-03-17]
+	Added graphics/tex-pst-plot-doc version 1.26 [minskim 2011-03-17]
