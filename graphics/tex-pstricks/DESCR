@@ -1,0 +1,11 @@
+An extensive collection of macros for generating PostScript that is
+usable with most TeX macro formats, including Plain TeX, LaTeX, AMS-TeX,
+and AMS-LaTeX. Included are macros for colour, graphics, pie charts,
+rotation, trees and overlays. It has many special features, including a
+wide variety of graphics (picture drawing) macros, with a flexible
+interface and with colour support. There are macros for colouring or
+shading the cells of tables. The package pstricks-add contains bug-fixes
+and additions for pstricks (among other things). PSTricks uses
+PostScript \special commands, which are not supported by PDF(La)TeX.
+This limitation may be overcome by using either the pst-pdf or the
+pdftricks package, to generate a PDF inclusion from a PSTricks diagram.
