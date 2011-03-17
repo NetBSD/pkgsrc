@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10199 2011/03/17 14:49:51 adam Exp $
+$NetBSD: TODO,v 1.10200 2011/03/17 14:58:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -485,7 +485,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dbench-4.0
 	o dbus-1.2.24 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbus-1.4.6
-	o dbxml-2.5.13
 	o dcc-1.3.138
 	o dconf-0.7.1
 	o ddclient-3.7.3
@@ -904,7 +903,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lwm-1.2.2
 	o lyx-1.6.9
 	o lzip-1.11
-	o lzop-1.03
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
