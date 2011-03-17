@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2009/05/19 08:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2011/03/17 13:37:48 obache Exp $
 
 DISTNAME=	acroread	# overridden below
 PKGNAME=	acroread-4.05
@@ -17,6 +17,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		# empty
 
@@ -60,26 +62,30 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 INSTALLATION_DIRS=	bin
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat4
-	@( ${ECHO} accept ) | PAGER=${CAT} ReadInstallDir=${PREFIX}/Acrobat4 ${WRKSRC}/INSTALL
-
-post-install:
-	@cd ${PREFIX}/Acrobat4/bin && \
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/Acrobat4
+	@( ${ECHO} accept ) | PAGER=${CAT} ReadInstallDir=${DESTDIR}${PREFIX}/Acrobat4 ${WRKSRC}/INSTALL
+	@cd ${DESTDIR}${PREFIX}/Acrobat4/bin && \
 	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
-	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat4/bin/acroread \
-	     ${PREFIX}/bin/acroread4 && ${RM} -f acroread.orig
-	${CHMOD} +x ${PREFIX}/bin/acroread4
-	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${PREFIX}/Acrobat4/Browsers/${PLATFORM}/nppdf.so \
-		${NS_PLUGINS_DIR}
+	  ${INSTALL_SCRIPT} ${DESTDIR}${PREFIX}/Acrobat4/bin/acroread \
+	     ${DESTDIR}${PREFIX}/bin/acroread4 && ${RM} -f acroread.orig
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread4
+	${INSTALL_DATA_DIR} ${DESTDIR}${NS_PLUGINS_DIR}
+	${INSTALL_DATA} ${DESTDIR}${PREFIX}/Acrobat4/Browsers/${PLATFORM}/nppdf.so \
+		${DESTDIR}${NS_PLUGINS_DIR}
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat4/Reader/License.pdf"
 .if ((${PLATFORM} == "sparcsolaris") || (${PLATFORM} == "intelsolaris"))
-	@cd ${PREFIX}/Acrobat4/Reader/${PLATFORM}/lib && \
+	@cd ${DESTDIR}${PREFIX}/Acrobat4/Reader/${PLATFORM}/lib && \
 	for LIB in AGM.so.3 CoolType.so.1 ICC.so.1 readcore.so.4; do \
 	  ${RM} -f lib$${LIB} && \
 	  ${LN} -s lib$${LIB}.* lib$${LIB}; \
 	done
 .endif
+
+SUBST_CLASSES+=		rmdestdir
+SUBST_STAGE.rmdestdir=	post-install
+SUBST_FILES.rmdestdir=	${DESTDIR}${PREFIX}/bin/acroread4
+SUBST_FILES.rmdestdir+=	${DESTDIR}${PREFIX}/Acrobat4/bin/acroread
+SUBST_SED.rmdestdir=	-e 's,${DESTDIR},,g'
 
 .include "../../mk/bsd.pkg.mk"
