@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/08/25 12:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/17 13:24:07 obache Exp $
 #
 
 DISTNAME=	nvu-1.0-sources
-PKGNAME=	nvu-1.0
+PKGNAME=	${DISTNAME:S/-sources//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://cvs.nvu.com/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +13,8 @@ HOMEPAGE=	http://www.nvu.com/
 COMMENT=	Web Authoring System
 
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mozilla
 GNU_CONFIGURE=	yes
@@ -32,4 +35,6 @@ BUILDLINK_TRANSFORM+=	l:IDL:IDL-2
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
