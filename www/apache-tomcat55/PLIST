@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/03/17 21:22:56 abs Exp $
 share/examples/rc.d/tomcat
 tomcat/LICENSE
 tomcat/NOTICE
@@ -7,21 +7,25 @@ tomcat/RUNNING.txt
 tomcat/bin/bootstrap.jar
 tomcat/bin/catalina-tasks.xml
 tomcat/bin/catalina.sh
+tomcat/bin/commons-daemon-native.tar.gz
 tomcat/bin/commons-daemon.jar
 tomcat/bin/commons-logging-api-1.1.1.jar
 tomcat/bin/digest.sh
-tomcat/bin/jkstatus-tasks.xml
+tomcat/bin/i64/tcnative-1.dll
+tomcat/bin/i64/tomcat5.exe
 tomcat/bin/jmxaccessor-tasks.xml
-tomcat/bin/jsvc.tar.gz
 tomcat/bin/setclasspath.sh
 tomcat/bin/shutdown.sh
 tomcat/bin/startup.sh
+tomcat/bin/tcnative-1.dll
 tomcat/bin/tomcat-juli.jar
 tomcat/bin/tomcat-native.tar.gz
 tomcat/bin/tomcat5.exe
 tomcat/bin/tomcat5w.exe
 tomcat/bin/tool-wrapper.sh
 tomcat/bin/version.sh
+tomcat/bin/x64/tcnative-1.dll
+tomcat/bin/x64/tomcat5.exe
 tomcat/common/i18n/tomcat-i18n-en.jar
 tomcat/common/i18n/tomcat-i18n-es.jar
 tomcat/common/i18n/tomcat-i18n-fr.jar
@@ -51,7 +55,6 @@ tomcat/server/lib/tomcat-ajp.jar
 tomcat/server/lib/tomcat-apr.jar
 tomcat/server/lib/tomcat-coyote.jar
 tomcat/server/lib/tomcat-http.jar
-tomcat/server/lib/tomcat-jkstatus-ant.jar
 tomcat/server/lib/tomcat-util.jar
 tomcat/server/webapps/host-manager/WEB-INF/lib/catalina-host-manager.jar
 tomcat/server/webapps/host-manager/WEB-INF/web.xml
