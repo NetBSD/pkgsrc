@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:38:06 minskim Exp $
+share/texmf-dist/doc/generic/pst-coil/Changes
+share/texmf-dist/doc/generic/pst-coil/README
+share/texmf-dist/doc/generic/pst-coil/pst-coil-doc.bib
+share/texmf-dist/doc/generic/pst-coil/pst-coil-doc.pdf
+share/texmf-dist/doc/generic/pst-coil/pst-coil-doc.tex
