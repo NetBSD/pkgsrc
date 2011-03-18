@@ -1,0 +1,6 @@
+This PSTricks package provides a really rather simple command
+\PstPolygon that will draw various regular and non-regular polygons
+(according to command parameters); various shortcuts to commonly-used
+polygons are provided, as well as a command \pspolygonbox that frames
+text with a polygon. The package uses the xkeyval package for argument
+decoding.
