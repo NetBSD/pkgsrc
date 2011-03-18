@@ -1,0 +1,3 @@
+pst-tree is a pstricks package that defines a macro \pstree which offers
+a structured way of joining nodes created using pst-node in order to
+draw trees.
