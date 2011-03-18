@@ -1,0 +1,6 @@
+The T2 bundle provides a variety of separate support functions, for
+using Cyrillic characters in LaTeX: - the mathtext package, for using
+Cyrillic letters 'transparently' in formulae - the citehack package, for
+using Cyrillic (or indeed any non-ascii) characters in citation keys; -
+support for Cyrillic in BibTeX; - support for Cyrillic in Makeindex; and
+- various items of font support.
