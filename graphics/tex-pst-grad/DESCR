@@ -1,0 +1,3 @@
+Pst-grad is a PSTricks based package for filling with colour gradients.
+Supported are colours in the RGB, CMYK or HSB models. Other colour
+gradient mechanisms are to be found in package pst-slpe.
