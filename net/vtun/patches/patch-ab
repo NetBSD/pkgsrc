@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2001/12/21 21:04:23 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2011/03/18 10:39:08 adam Exp $
 
---- vtund.8.orig	Sun Oct 29 14:30:30 2000
+--- vtund.8.orig	2007-06-29 05:26:43.000000000 +0000
 +++ vtund.8
-@@ -68,7 +68,7 @@
+@@ -71,7 +71,7 @@ to any kernel parts. 
  .I -f file 
  Read config information from the
  .I file
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1 2001/12/21 21:04:23 jlam Exp $
  .TP
  .I -n 
  Do not become daemon.
-@@ -112,12 +112,12 @@
+@@ -118,12 +118,12 @@ Address of the server to connect to. Eit
  specified.
  .SH FILES
  .TP

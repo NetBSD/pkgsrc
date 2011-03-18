@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/18 10:39:07 adam Exp $
 man/man5/vtund.conf.5
-man/man8/vtun.8
 man/man8/vtund.8
 sbin/vtund
 share/doc/vtun/README
-share/doc/vtun/README.Crypto
 share/doc/vtun/README.Setup
 share/doc/vtun/README.Shaper
 share/examples/vtun/vtund.conf
