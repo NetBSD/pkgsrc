@@ -1,0 +1,6 @@
+Pst-circ is a package built using PSTricks and in particular pst-node.
+It can easily draw current 2-terminal devices and some 3- and 4-terminal
+devices used in electronic or electric theory. The package's macros are
+designed with a view to 'logical' representation of circuits, as far as
+possible, so as to relieve the user of purely graphical considerations
+when expressing a circuit.
