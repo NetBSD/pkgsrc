@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.697 2011/03/18 13:49:58 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.698 2011/03/18 15:36:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1177,3 +1177,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/vtun to 3.0.2 [adam 2011-03-18]
 	Updated x11/dxpc to 3.9.2 [adam 2011-03-18]
 	Updated archivers/libzip to 0.10 [wiz 2011-03-18]
+	Updated x11/qt3-libs to 3.3.8nb16 [wiz 2011-03-18]
