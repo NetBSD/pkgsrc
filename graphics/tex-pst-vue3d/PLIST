@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:39:44 minskim Exp $
+share/texmf-dist/dvips/pst-vue3d/pst-vue3d.pro
+share/texmf-dist/tex/generic/pst-vue3d/pst-vue3d.tex
+share/texmf-dist/tex/latex/pst-vue3d/pst-vue3d.sty
