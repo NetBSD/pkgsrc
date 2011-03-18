@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:28:55 minskim Exp $
+share/texmf-dist/doc/generic/pst-geo/Changes
+share/texmf-dist/doc/generic/pst-geo/PSTricks.bib
+share/texmf-dist/doc/generic/pst-geo/README
+share/texmf-dist/doc/generic/pst-geo/pst-geo-compress.pl
+share/texmf-dist/doc/generic/pst-geo/pst-geo-decompress.pl
+share/texmf-dist/doc/generic/pst-geo/pst-map2d-doc.pdf
+share/texmf-dist/doc/generic/pst-geo/pst-map2d-doc.tex
+share/texmf-dist/doc/generic/pst-geo/pst-map2dII-doc.pdf
+share/texmf-dist/doc/generic/pst-geo/pst-map2dII-doc.tex
+share/texmf-dist/doc/generic/pst-geo/pst-map3d-doc-pdf.pdf
+share/texmf-dist/doc/generic/pst-geo/pst-map3d-doc-pdf.tex
+share/texmf-dist/doc/generic/pst-geo/pst-map3d-doc.pdf
+share/texmf-dist/doc/generic/pst-geo/pst-map3d-doc.tex
+share/texmf-dist/doc/generic/pst-geo/pst-map3dII-doc.pdf
+share/texmf-dist/doc/generic/pst-geo/pst-map3dII-doc.tex
