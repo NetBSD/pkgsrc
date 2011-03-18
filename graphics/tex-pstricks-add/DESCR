@@ -1,0 +1,8 @@
+Collects together examples that have been posted to the pstricks mailing
+list, together with many additional features for the basic pstricks,
+pst-plot and pst-node, including: - bugfixes; - new options for the
+pspicture environment; - arrows; - braces as node connection/linestyle;
+- extended axes for plots (e.g., logarithm axes); - polar plots; -
+plotting tangent lines of curves or functions; - solving and printing
+differential equationd; - box plots; - matrix plots; and - pie charts.
+The package makes use of PostScript routines provided by pst-math.
