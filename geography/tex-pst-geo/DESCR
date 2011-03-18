@@ -1,0 +1,12 @@
+pst-geo is a set of PSTricks related packages for various cartographic
+projections of the terrestrial sphere. The package pst-map2d provides
+conventional projections such as Mercator, Lambert, cylindrical, etc.
+The package pst-map3d treats representation in three dimensions of the
+terrestrial sphere. Packages pst-map2dII and pst-map3dII allow use of
+the CIA World DataBank II. Various parameters of the packages allow for
+choice of the level of the detail and the layouts possible (cities,
+borders, rivers etc). Substantial data files are provided, in an
+(internally) compressed format. Decompression happens on-the-fly as a
+document using the data is displayed, printed or converted to PDF
+format. A Perl script is provided for the user to do the decompression,
+if the need should arise.
