@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2010/02/25 14:59:22 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/18 20:28:21 zafer Exp $
 #
 
 DISTNAME=	NeTraMet44
 PKGNAME=	netramet-4.4.20
 CATEGORIES=	security net
-MASTER_SITES=	http://foobar.cit.buffalo.edu/nms/NeTraMet/
+MASTER_SITES=	# http://foobar.cit.buffalo.edu/nms/NeTraMet/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NEtwork TRaffic METer
