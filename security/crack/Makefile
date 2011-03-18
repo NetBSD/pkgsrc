@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2010/01/09 14:42:04 schwarz Exp $
+# $NetBSD: Makefile,v 1.28 2011/03/18 20:26:02 zafer Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
 PKGREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	http://packetstormsecurity.nl/Crackers/crack/ \
-		ftp://ftp.netsw.org/system/tools/password/crack/crack/
+MASTER_SITES=	http://dl.packetstormsecurity.net/Crackers/crack/
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.crypticide.com/dropsafe/info/home.html
