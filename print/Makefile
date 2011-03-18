@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.481 2011/03/17 18:09:57 minskim Exp $
+# $NetBSD: Makefile,v 1.482 2011/03/18 19:09:21 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -580,6 +580,8 @@ SUBDIR+=	tex-vruler
 SUBDIR+=	tex-vruler-doc
 SUBDIR+=	tex-wallpaper
 SUBDIR+=	tex-wallpaper-doc
+SUBDIR+=	tex-wrapfig
+SUBDIR+=	tex-wrapfig-doc
 SUBDIR+=	tex-xargs
 SUBDIR+=	tex-xargs-doc
 SUBDIR+=	tex-xcolor
