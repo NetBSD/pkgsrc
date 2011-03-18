@@ -1,0 +1,3 @@
+This PSTricks package provides a really rather simple command \PstLens
+that will draw a lens. Command parameters provide a remarkable range of
+effects.
