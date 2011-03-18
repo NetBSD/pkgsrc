@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:38:57 minskim Exp $
+share/texmf-dist/doc/generic/pst-lens/Changes
+share/texmf-dist/doc/generic/pst-lens/README
+share/texmf-dist/doc/generic/pst-lens/pst-lens.pdf
