@@ -1,0 +1,8 @@
+This PStricks package covers all the colour gradient functionality of
+pst-grad (part of the base pstricks distribution), and provides the
+following facilities: - it permits the user to specify an arbitrary
+number of colours, along with the points at which they are to be
+reached; - it converts between RGB and HSV behind the scenes; - it
+provides concentric and radial gradients; - it provides a command
+\psBall that generates bullets with a three-dimensional appearance; and
+- uses the xkeyval package for the extended key handling.
