@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.594 2011/03/17 18:27:54 minskim Exp $
+# $NetBSD: Makefile,v 1.595 2011/03/18 17:47:57 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -412,6 +412,8 @@ SUBDIR+=	tex-mptopdf
 SUBDIR+=	tex-mptopdf-doc
 SUBDIR+=	tex-pst-2dplot
 SUBDIR+=	tex-pst-2dplot-doc
+SUBDIR+=	tex-pst-3d
+SUBDIR+=	tex-pst-3d-doc
 SUBDIR+=	tex-pst-plot
 SUBDIR+=	tex-pst-plot-doc
 SUBDIR+=	tex-pstricks
