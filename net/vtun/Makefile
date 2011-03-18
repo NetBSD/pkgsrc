@@ -1,29 +1,23 @@
-# $NetBSD: Makefile,v 1.44 2011/02/28 14:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2011/03/18 10:39:07 adam Exp $
 
-DISTNAME=	vtun-2.6
-PKGREVISION=	9
+DISTNAME=	vtun-3.0.2
 CATEGORIES=	net
-MASTER_SITES=	http://vtun.sourceforge.net/
-
-PATCHFILES=	vtun-26to30.patch
-PATCH_SITES+=	${MASTER_SITE_LOCAL}
-PATCH_DIST_STRIP=    -p1
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vtun/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/vtun
-
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ssl-headers=${SSLBASE}/include/openssl
 CONFIGURE_ARGS+=	--with-ssl-lib=${SSLBASE}/lib
-CONFIGURE_ARGS+=	--with-lzo-headers=${BUILDLINK_PREFIX.liblzo}/include
-CONFIGURE_ARGS+=	--with-lzo-lib=${BUILDLINK_PREFIX.liblzo}/lib
+CONFIGURE_ARGS+=	--with-lzo-headers=${BUILDLINK_PREFIX.lzo}/include/lzo
+CONFIGURE_ARGS+=	--with-lzo-lib=${BUILDLINK_PREFIX.lzo}/lib
 BUILD_TARGET=		vtund
 
 DOCDIR=			${PREFIX}/share/doc/vtun
@@ -35,30 +29,25 @@ CONF_FILES_PERMS=	${EGDIR}/vtund.conf ${PKG_SYSCONFDIR}/vtund.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 OWN_DIRS=		${LOCKDIR} ${LOGDIR}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${EGDIR} ${DOCDIR}
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
 
-post-build:
-	@cd ${WRKSRC}; for file in vtund.8; do				\
-		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
-	${SED}	-e "/^[^#]/s|^|#|" -e "s|^$$|#|" ${WRKSRC}/vtund.conf	\
-		> ${WRKDIR}/vtund.conf
+SUBST_CLASSES+=		fix-man
+SUBST_STAGE.fix-man=	pre-configure
+SUBST_MESSAGE.fix-man=	Fixing man pages.
+SUBST_FILES.fix-man=	vtund.8
+SUBST_VARS.fix-man=	PKG_SYSCONFDIR
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vtund ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.Crypto ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.Setup ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.Shaper ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKDIR}/vtund.conf ${DESTDIR}${EGDIR}/vtund.conf
+	${INSTALL_DATA} ${WRKSRC}/vtund.conf ${DESTDIR}${EGDIR}/vtund.conf
 	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${LN} -s vtund.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/vtun.8
 
-.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
