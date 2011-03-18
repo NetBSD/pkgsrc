@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.693 2011/03/18 09:44:20 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.694 2011/03/18 09:50:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1160,6 +1160,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/tex-pst-plot-doc version 1.26 [minskim 2011-03-17]
 	Added graphics/tex-pst-2dplot version 1.5 [minskim 2011-03-17]
 	Added graphics/tex-pst-2dplot-doc version 1.5 [minskim 2011-03-17]
+	Updated databases/openldap-client to 2.4.24 [drochner 2011-03-17]
+	Updated databases/openldap-server to 2.4.24 [drochner 2011-03-17]
 	Updated www/apache-tomcat55 to 5.5.33 [abs 2011-03-17]
 	Updated devel/boost-jam to 1.46.1 [adam 2011-03-18]
 	Updated devel/boost-headers to 1.46.1 [adam 2011-03-18]
@@ -1170,3 +1172,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated meta-pkgs/boost to 1.46.1 [adam 2011-03-18]
 	Updated sysutils/xfce4-thunar to 1.0.1nb5 [wiz 2011-03-18]
 	Updated net/yaz to 4.1.6 [wiz 2011-03-18]
+	Updated databases/openldap-doc to 2.4.24 [tron 2011-03-18]
+	Updated databases/openldap to 2.4.24 [tron 2011-03-18]
