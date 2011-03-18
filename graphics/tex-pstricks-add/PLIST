@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:45:03 minskim Exp $
+share/texmf-dist/dvips/pstricks-add/pstricks-add.pro
+share/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
+share/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
