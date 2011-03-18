@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2010/02/10 19:17:44 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2011/03/18 20:16:43 zafer Exp $
 
 DISTNAME=	bg5ps-1.3.0
 PKGREVISION=	3
 CATEGORIES=	print converters
-MASTER_SITES=	ftp://freebsd.sinica.edu.tw/pub/keith/
+MASTER_SITES=	# ftp://freebsd.sinica.edu.tw/pub/keith/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://students.washington.edu/cschin/bg5ps/
