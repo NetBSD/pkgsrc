@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/03/09 17:20:21 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2011/03/18 18:58:29 drochner Exp $
 #
 
 DISTNAME=		shotwell-0.8.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		http://yorba.org/download/shotwell/0.8/
 EXTRACT_SUFX=		.tar.bz2
@@ -41,6 +41,7 @@ post-install:
 # 0.13.2 added shared libs
 BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
 .include "../../graphics/libraw/buildlink3.mk"
+BUILDLINK_API_DEPENDS.vala+= vala>=0.10.4
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
