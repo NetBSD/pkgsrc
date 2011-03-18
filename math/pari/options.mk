@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2010/10/01 20:50:55 minskim Exp $
+# $NetBSD: options.mk,v 1.6 2011/03/18 15:00:01 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -13,13 +13,13 @@ BUILD_DEPENDS+=		tex-pdftex>=1.40.11:../../print/tex-pdftex
 PLIST.doc=		yes
 BUILD_TARGET+=		doc
 INSTALL_TARGET+=	install-doc
-MAKE_ENV+=		PDFTEX=${LOCALBASE:Q}/bin/pdftex
+MAKE_ENV+=		PDFTEX=${LOCALBASE}/bin/pdftex
 .endif
 
 PLIST_VARS+=		nogmp gmp
 .if !empty(PKG_OPTIONS:Mgmp)
 PLIST.gmp=		yes
-CONFIGURE_ARGS+=	--with-gmp=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-gmp=${PREFIX}
 .include "../../devel/gmp/buildlink3.mk"
 .else
 PLIST.nogmp=		yes
@@ -28,8 +28,8 @@ PLIST.nogmp=		yes
 .if !empty(PKG_OPTIONS:Mx11)
 USE_TOOLS+=		imake
 CONFIGURE_ARGS+=	--graphic=X11
-CONFIGURE_ARGS+=	--with-fltk=${PREFIX:Q}
-CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
+CONFIGURE_ARGS+=	--with-fltk=${PREFIX}
+CONFIGURE_ENV+=		X11BASE=${X11BASE}
 CONFIGURE_ENV+=		Xincroot=${X11BASE}/include
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"

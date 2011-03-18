@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2011/01/13 13:53:29 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2011/03/18 15:00:01 adam Exp $
 
 DISTNAME=	pari-2.3.5
 PKGREVISION=	7
@@ -19,11 +19,11 @@ USE_TOOLS+=		perl:run
 USE_LANGUAGES+=		c c++
 USE_GNU_READLINE=	yes	# rl_save_prompt()
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 CONFIGURE_ENV+=		PERL5=${PERL5:Q}
 
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}/man1
 CONFIGURE_ARGS+=	--share-prefix=${PREFIX}/share
 
@@ -32,6 +32,12 @@ REPLACE_PERL+=		src/desc/PARI/822.pm
 BUILD_TARGET=		all
 TEST_TARGET=		test-compat bench
 INSTALL_TARGET=		install
+
+SUBST_CLASSES+=		fix-cfg
+SUBST_STAGE.fix-cfg=	pre-configure
+SUBST_MESSAGE.fix-cfg=	Adding CFLAGS to Configure scripts.
+SUBST_FILES.fix-cfg=	config/get_*
+SUBST_SED.fix-cfg=	-e 's,$$CC $$extraflag,$$CC $$CFLAGS $$extraflag,g'
 
 .include "options.mk"
 
