@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.691 2011/03/18 07:51:17 adam Exp $
+$NetBSD: CHANGES-2011,v 1.692 2011/03/18 09:35:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1168,3 +1168,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/boost-build to 1.46.1 [adam 2011-03-18]
 	Updated devel/boost-python to 1.46.1 [adam 2011-03-18]
 	Updated meta-pkgs/boost to 1.46.1 [adam 2011-03-18]
+	Updated sysutils/xfce4-thunar to 1.0.1nb5 [wiz 2011-03-18]
