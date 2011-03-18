@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2011/02/14 19:00:45 drochner Exp $
+$NetBSD: patch-ac,v 1.11 2011/03/18 12:42:14 adam Exp $
 
 --- make/linux/Makefile.orig	2011-01-29 11:48:16.000000000 +0000
 +++ make/linux/Makefile
@@ -81,7 +81,7 @@ $NetBSD: patch-ac,v 1.10 2011/02/14 19:00:45 drochner Exp $
 -	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(libdir)
 -	ln -fs $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
 +	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(libdir)
-+	$(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
  
  ifneq ($(wildcard .depend),)
  include .depend
