@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2010/01/27 20:20:53 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/18 20:51:26 zafer Exp $
 #
 
 DISTNAME=	procps-2.0.6
 PKGNAME=	tload-2.0.6
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://people.redhat.com/johnsonm/procps/
+MASTER_SITES=	http://procps.sourceforge.net/
 
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Terminal version of xload
+HOMEPAGE=	http://procps.sourceforge.net/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
