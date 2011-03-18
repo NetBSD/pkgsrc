@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/06 01:44:55 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/18 10:55:20 obache Exp $
 #
 
 DISTNAME=	muse-3.11
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mwolson.org/projects/EmacsMuse.html
 COMMENT=	Publishing environment for Emacs
 LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake makeinfo
@@ -26,13 +28,13 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/emacs-wiki-migration.txt \
-		${PREFIX}/share/doc/emacs-muse
+		${DESTDIR}${PREFIX}/share/doc/emacs-muse
 	${INSTALL_DATA} ${WRKSRC}/etc/muse.rnc \
-		${PREFIX}/share/doc/emacs-muse
+		${DESTDIR}${PREFIX}/share/doc/emacs-muse
 	${INSTALL_DATA} ${WRKSRC}/examples/QuickStart.muse \
-		${PREFIX}/share/examples/emacs-muse
+		${DESTDIR}${PREFIX}/share/examples/emacs-muse
 	${INSTALL_DATA} ${WRKSRC}/examples/*.png \
-		${PREFIX}/share/examples/emacs-muse
+		${DESTDIR}${PREFIX}/share/examples/emacs-muse
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
