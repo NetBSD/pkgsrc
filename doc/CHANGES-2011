@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.704 2011/03/18 20:00:23 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.705 2011/03/18 21:29:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1190,3 +1190,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/tex-pst-3dplot-doc version 1.94 [minskim 2011-03-18]
 	Added graphics/tex-pst-blur version 2.0 [minskim 2011-03-18]
 	Added graphics/tex-pst-blur-doc version 2.0 [minskim 2011-03-18]
+	Added geography/tex-pst-geo version 2.03 [minskim 2011-03-18]
+	Added geography/tex-pst-geo-doc version 2.03 [minskim 2011-03-18]
