@@ -1,0 +1,6 @@
+The package enables the user to connect information, and to place
+labels, without knowing (in advance) the actual positions of the items
+to be connected, or where the connecting line should go. The macros are
+useful for making graphs and trees, mathematical diagrams, linguistic
+syntax diagrams, and so on. The package contents were previously
+distributed as a part of the pstricks base distribution.
