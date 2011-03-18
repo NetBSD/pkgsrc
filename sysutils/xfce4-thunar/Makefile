@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/03/18 09:33:48 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	1.0.1
 
 DISTNAME=	Thunar-${XFCE4_VERSION}
 PKGNAME=	xfce4-thunar-${XFCE4_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 COMMENT=	Xfce file manager
 
@@ -39,6 +39,7 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/uca.xml
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
