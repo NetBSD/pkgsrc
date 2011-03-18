@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/08 16:33:38 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/18 05:50:04 obache Exp $
 
 DISTNAME=	djmount-0.71
 PKGNAME=	fuse-${DISTNAME}
@@ -16,10 +16,10 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
-PREFER.readline=	pkgsrc
+USE_GNU_READLINE=	yes
 
 CONFIGURE_ARGS+=	--with-external-libupnp
-CONFIGURE_ARGS+=	--with-libupnp-prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-libupnp-prefix=${BUILDLINK_PREFIX.libupnp}
 
 INSTALLATION_DIRS=	share/doc/djmount
 
