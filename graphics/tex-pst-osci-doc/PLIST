@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:39:14 minskim Exp $
+share/texmf-dist/doc/generic/pst-osci/Changes
+share/texmf-dist/doc/generic/pst-osci/README
+share/texmf-dist/doc/generic/pst-osci/oscilloscope.pdf
+share/texmf-dist/doc/generic/pst-osci/oscilloscope.tex
+share/texmf-dist/doc/generic/pst-osci/pst-osci-doc.pdf
+share/texmf-dist/doc/generic/pst-osci/pst-osci-doc.tex
