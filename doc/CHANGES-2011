@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.698 2011/03/18 15:36:27 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.699 2011/03/18 17:47:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1178,3 +1178,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/dxpc to 3.9.2 [adam 2011-03-18]
 	Updated archivers/libzip to 0.10 [wiz 2011-03-18]
 	Updated x11/qt3-libs to 3.3.8nb16 [wiz 2011-03-18]
+	Added graphics/tex-pst-3d version 1.10 [minskim 2011-03-18]
+	Added graphics/tex-pst-3d-doc version 1.10 [minskim 2011-03-18]
