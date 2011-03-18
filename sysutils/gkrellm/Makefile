@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2011/01/13 13:36:43 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2011/03/18 12:33:54 obache Exp $
 .include "Makefile.common"
 
 PKGREVISION=		6
@@ -9,6 +9,8 @@ WRKSRC=			${GKRELLM_SRCDIR}
 COMMENT=		GTK2 based system monitor
 
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../sysutils/gkrellm-share
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 
@@ -31,6 +33,8 @@ MAKE_ENV+=		PKG_LIBS="-L${BUILDLINK_PREFIX.${GKRELLM_SSL_TYPE}}/lib -Wl,-R${BUIL
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_ENV+=		SMANDIR=${PREFIX}/${PKGMANDIR}/man8
 MAKE_FLAGS+=		BINOWNER=${BINOWN} BINGROUP=${BINGRP}
+INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+INSTALL_MAKE_FLAGS+=	SMANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 SUBST_STAGE.gkprefix=	post-patch
 SUBST_FILES.gkprefix=	src/gkrellm.h
