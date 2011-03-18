@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 23:27:28 minskim Exp $
+share/texmf-dist/doc/otherformats/jadetex/base/ChangeLog
+share/texmf-dist/doc/otherformats/jadetex/base/ChangeLog-old
+share/texmf-dist/doc/otherformats/jadetex/base/Makefile
+share/texmf-dist/doc/otherformats/jadetex/base/demo.sgm
+share/texmf-dist/doc/otherformats/jadetex/base/docbook.dsl
+share/texmf-dist/doc/otherformats/jadetex/base/index.html
+share/texmf-dist/doc/otherformats/jadetex/base/index.xml
+share/texmf-dist/doc/otherformats/jadetex/base/index.xsl
+share/texmf-dist/doc/otherformats/jadetex/base/jadetex.1
+share/texmf-dist/doc/otherformats/jadetex/base/jadetex.cfg
+share/texmf-dist/doc/otherformats/jadetex/base/logo.png
+share/texmf-dist/doc/otherformats/jadetex/base/pdfjadetex.1
+share/texmf-dist/doc/otherformats/jadetex/base/releasenotes.dsl
+share/texmf-dist/doc/otherformats/jadetex/base/releasenotes.xml
