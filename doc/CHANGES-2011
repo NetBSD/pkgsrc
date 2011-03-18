@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.696 2011/03/18 10:51:28 adam Exp $
+$NetBSD: CHANGES-2011,v 1.697 2011/03/18 13:49:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1176,3 +1176,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/openldap to 2.4.24 [tron 2011-03-18]
 	Updated net/vtun to 3.0.2 [adam 2011-03-18]
 	Updated x11/dxpc to 3.9.2 [adam 2011-03-18]
+	Updated archivers/libzip to 0.10 [wiz 2011-03-18]
