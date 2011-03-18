@@ -1,0 +1,4 @@
+A package using PSTricks to draw a large variety of graphs and plots,
+including 3D maths functions. Data can be read from external data files,
+making this package a generic tool for graphing within TeX/LaTeX,
+without the need for external tools.

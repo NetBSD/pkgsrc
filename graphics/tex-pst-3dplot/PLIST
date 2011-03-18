@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 19:49:23 minskim Exp $
+share/texmf-dist/dvips/pst-3dplot/pst-3dplot.pro
+share/texmf-dist/tex/generic/pst-3dplot/pst-3dplot.tex
+share/texmf-dist/tex/latex/pst-3dplot/pst-3dplot.sty
