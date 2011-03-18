@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.712 2011/03/18 23:38:10 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.713 2011/03/18 23:51:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-jadetex-doc version 3.13 [minskim 2011-03-18]
 	Updated print/tex-IEEEtran to 1.7anb4 [minskim 2011-03-18]
 	Updated print/tex-a4wide to 2010nb1 [minskim 2011-03-18]
+	Updated devel/doxygen to 1.6.3nb4 [minskim 2011-03-18]
