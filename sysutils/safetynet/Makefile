@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2010/02/26 10:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/18 20:56:29 zafer Exp $
 #
 
 DISTNAME=	safetynet-1.15
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.unixpimps.org/safetynet/
+MASTER_SITES=	# http://www.unixpimps.org/safetynet/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unixpimps.org/safetynet/
