@@ -1,2 +1,2 @@
-TeX macros needed to produce DVI/PDF files from TeX code generated
-by the jade SGML processor.
+Macro package on top of LaTeX to typeset TeX output of the Jade DSSSL
+implementation.

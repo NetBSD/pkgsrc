@@ -1,22 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:12:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/03/18 23:26:58 minskim Exp $
 bin/jadetex
 bin/pdfjadetex
-man/man1/jadetex.1
-man/man1/pdfjadetex.1
-share/doc/jadetex/Makefile
-share/doc/jadetex/demo.sgm
-share/doc/jadetex/docbook.dsl
-share/doc/jadetex/logo.png
-share/doc/jadetex/releasenotes.dsl
-share/doc/jadetex/releasenotes.xml
 share/texmf-dist/tex/jadetex/base/dsssl.def
+share/texmf-dist/tex/jadetex/base/jadetex.ini
 share/texmf-dist/tex/jadetex/base/jadetex.ltx
+share/texmf-dist/tex/jadetex/base/pdfjadetex.ini
 share/texmf-dist/tex/jadetex/base/uentities.sty
 share/texmf-dist/tex/jadetex/base/ut1omlgc.fd
-share/texmf-dist/tex/jadetex/config/dummyels.sty
-share/texmf-dist/tex/jadetex/config/jadetex.ini
-share/texmf-dist/tex/jadetex/config/mlnames.sty
-share/texmf-dist/tex/jadetex/config/pdfjadetex.ini
-share/texmf-dist/tex/jadetex/config/ucharacters.sty
-share/texmf-dist/tex/jadetex/config/unicode.sty
-share/texmf/web2c/texmf.jadetex.cnf
