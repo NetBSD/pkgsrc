@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:37:10 minskim Exp $
+share/texmf-dist/dvips/pst-circ/pst-circ.pro
+share/texmf-dist/tex/generic/pst-circ/pst-circ.tex
+share/texmf-dist/tex/latex/pst-circ/pst-circ.sty
