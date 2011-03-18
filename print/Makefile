@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.483 2011/03/18 19:13:10 minskim Exp $
+# $NetBSD: Makefile,v 1.484 2011/03/18 23:28:24 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -382,6 +382,7 @@ SUBDIR+=	tex-ifxetex
 SUBDIR+=	tex-ifxetex-doc
 SUBDIR+=	tex-igo
 SUBDIR+=	tex-jadetex
+SUBDIR+=	tex-jadetex-doc
 SUBDIR+=	tex-jsclasses
 SUBDIR+=	tex-jurabib
 SUBDIR+=	tex-jurabib-doc
