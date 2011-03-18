@@ -1,0 +1,6 @@
+pst-osci is a PSTricks package enables you to produce oscilloscope
+"screen shots". Three channels can be used to represent the most common
+signals (damped or not): namely sinusoidal, rectangular, triangular,
+dog's tooth (left and right oriented). The third channel allows you to
+add, to subtract or to multiply the two other signals. Lissajous
+diagrams (XY-mode) can also be obtained.
