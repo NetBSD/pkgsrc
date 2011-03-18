@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:49:41 minskim Exp $
+share/texmf-dist/doc/generic/pst-uml/Changes
+share/texmf-dist/doc/generic/pst-uml/README
+share/texmf-dist/doc/generic/pst-uml/diagCase.tex
+share/texmf-dist/doc/generic/pst-uml/diagClass.tex
+share/texmf-dist/doc/generic/pst-uml/diagClass1.tex
+share/texmf-dist/doc/generic/pst-uml/diagSeq.tex
+share/texmf-dist/doc/generic/pst-uml/diagState.tex
+share/texmf-dist/doc/generic/pst-uml/pst-uml-doc.pdf
+share/texmf-dist/doc/generic/pst-uml/pst-uml-doc.tex
+share/texmf-dist/doc/generic/pst-uml/pst-uml-encapsuled-pdf-fig.pdf
+share/texmf-dist/doc/generic/pst-uml/pst-uml-encapsuled-pdf-fig.tex
+share/texmf-dist/doc/generic/pst-uml/pst-uml-exemples.pdf
+share/texmf-dist/doc/generic/pst-uml/pst-uml-exemples.tex
