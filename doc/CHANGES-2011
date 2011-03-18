@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.702 2011/03/18 19:13:10 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.703 2011/03/18 19:50:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1186,3 +1186,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-wrapfig-doc version 3.6 [minskim 2011-03-18]
 	Added print/tex-t2 version 2010 [minskim 2011-03-18]
 	Added print/tex-t2-doc version 2010 [minskim 2011-03-18]
+	Added graphics/tex-pst-3dplot version 1.94 [minskim 2011-03-18]
+	Added graphics/tex-pst-3dplot-doc version 1.94 [minskim 2011-03-18]
