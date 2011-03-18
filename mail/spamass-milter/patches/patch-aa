@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/09/10 23:33:42 gdt Exp $
+$NetBSD: patch-aa,v 1.5 2011/03/18 15:26:30 gdt Exp $
 
-This patch has hunks for three separate reasons:
+This patch has hunks for multiple reasons:
 
 1) Ancient fix to avoid going beyond s2.
 
@@ -13,7 +13,9 @@ authenticated users, from:
 
   http://lists.freebsd.org/pipermail/freebsd-ports-bugs/2006-November/106024.html
 
---- spamass-milter.cpp.orig	2010-09-10 15:50:58.000000000 +0000
+4) Avoid memory allocation in after fork and before exec.  From PR pkg/44704.
+
+--- spamass-milter.cpp.orig	2011-03-18 15:15:56.000000000 +0000
 +++ spamass-milter.cpp
 @@ -170,10 +170,7 @@ char *spambucket;
  bool flag_full_email = false;		/* pass full email address to spamc */
@@ -160,14 +162,15 @@ authenticated users, from:
 -		/* XXX possible buffer overflow here */
 -		sprintf(buf, fmt, SENDMAIL, envrcpt[0]);
 -#endif
--
--		debug(D_RCPT, "calling %s", buf);
 +		char *popen_argv[4];
 +		
 +		popen_argv[0] = SENDMAIL;
 +		popen_argv[1] = "-bv";
 +		popen_argv[2] = envrcpt[0];
 +		popen_argv[3] = NULL;
+ 
+-		debug(D_RCPT, "calling %s", buf);
++		debug(D_RCPT, "calling %s -bv %s", SENDMAIL, envrcpt[0]);
  
 -#if defined(__FreeBSD__) /* popen bug - see PR bin/50770 */
 -		rv = pthread_mutex_lock(&popen_mutex);
@@ -177,8 +180,7 @@ authenticated users, from:
 -			abort();
 -		}		
 -#endif
-+		debug(D_RCPT, "calling %s -bv %s", SENDMAIL, envrcpt[0]);
- 
+-
 -		p = popen(buf, "r");
 +		p = popenv(popen_argv, "r");
  		if (!p)
@@ -206,7 +208,66 @@ authenticated users, from:
  	} else
  	{
  		assassin->expandedrcpt.push_back(envrcpt[0]);
-@@ -2033,7 +1989,7 @@ cmp_nocase_partial(const string& s, cons
+@@ -1343,6 +1299,22 @@ SpamAssassin::~SpamAssassin()
+ 
+ void SpamAssassin::Connect()
+ {
++  int argc;
++  char *argv[100];
++  char spamc_user[64];
++
++  if (expandedrcpt.size() != 1) {
++    debug(D_RCPT, "%d recipients; spamc gets default username %s", (int)expandedrcpt.size(), defaultuser);
++    strlcpy(spamc_user, defaultuser, sizeof(spamc_user));
++  } else {
++    if (flag_full_email)
++      strlcpy(spamc_user, full_user().c_str(), sizeof(spamc_user)); 
++    else
++      strlcpy(spamc_user, local_user().c_str(), sizeof(spamc_user)); 
++    strlwr(spamc_user);
++    debug(D_RCPT, "spamc gets %s", spamc_user);
++  }
++
+   // set up pipes for in- and output
+   if (pipe(pipe_io[0]))
+     throw string(string("pipe error: ")+string(strerror(errno)));
+@@ -1376,33 +1348,12 @@ void SpamAssassin::Connect()
+       // absolute path (determined in autoconf) 
+       // should be a little more secure
+       // XXX arbitrary 100-argument max
+-      int argc = 0;
+-      char** argv = (char**) malloc(100*sizeof(char*));
++      argc = 0;
+       argv[argc++] = SPAMC;
+       if (flag_sniffuser) 
+       {
+         argv[argc++] = "-u";
+-        if ( expandedrcpt.size() != 1 )
+-        {
+-          // More (or less?) than one recipient, so we pass the default
+-          // username to SPAMC.  This way special rules can be defined for
+-          // multi recipient messages.
+-          debug(D_RCPT, "%d recipients; spamc gets default username %s", (int)expandedrcpt.size(), defaultuser);
+-          argv[argc++] = defaultuser; 
+-        } else
+-        { 
+-          // There is only 1 recipient so we pass the username
+-          // (converted to lowercase) to SPAMC.  Don't worry about 
+-          // freeing this memory as we're exec()ing anyhow.
+-          if (flag_full_email)
+-            argv[argc] = strlwr(strdup(full_user().c_str())); 
+-          else
+-            argv[argc] = strlwr(strdup(local_user().c_str())); 
+-
+-          debug(D_RCPT, "spamc gets %s", argv[argc]);
+-         
+-          argc++;
+-        }
++        argv[argc++] = spamc_user;
+       }
+       if (spamdhost) 
+       {
+@@ -2033,7 +1984,7 @@ cmp_nocase_partial(const string& s, cons
    string::const_iterator p=s.begin();
    string::const_iterator p2=s2.begin();
  
@@ -215,7 +276,7 @@ authenticated users, from:
      if (toupper(*p) != toupper(*p2))
      {
        debug(D_STR, "c_nc_p: <%s><%s> : miss", s.c_str(), s2.c_str());
-@@ -2157,5 +2113,71 @@ void warnmacro(char *macro, char *scope)
+@@ -2157,5 +2108,71 @@ void warnmacro(char *macro, char *scope)
  	warnedmacro = true;
  }
  
