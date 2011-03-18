@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:38:24 minskim Exp $
+share/texmf-dist/doc/generic/pst-fill/Changes
+share/texmf-dist/doc/generic/pst-fill/README
+share/texmf-dist/doc/generic/pst-fill/pst-fill.pdf
