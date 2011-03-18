@@ -1,0 +1,10 @@
+PostScript lacks a lot of basic operators such as tan, acos, asin, cosh,
+sinh, tanh, acosh, asinh, atanh, exp (with e base). Also (oddly) cos and
+sin use arguments in degrees. Pst-math provides all those operators in a
+header file pst-math.pro with wrappers pst-math.sty and pst-math.tex. In
+addition, sinc, gauss, gammaln and bessel are implemented (only
+partially for the latter). pst-math is designed essentially to work with
+pst- plot but can be used in whatever PS code (such as pstricks
+SpecialCoor "!", which is useful for placing labels). The package also
+provides a routine SIMPSON for numerical integration and a solver of
+linear equation systems.
