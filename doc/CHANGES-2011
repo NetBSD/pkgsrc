@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.706 2011/03/18 21:52:39 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.707 2011/03/18 21:56:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1228,3 +1228,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/tex-psgo-doc version 0.17 [minskim 2011-03-18]
 	Added devel/tex-pst-uml version 0.83 [minskim 2011-03-18]
 	Added devel/tex-pst-uml-doc version 0.83 [minskim 2011-03-18]
+	Updated print/teTeX3-texmf to 3.0nb30 [minskim 2011-03-18]
