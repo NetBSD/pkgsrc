@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/01/13 13:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2011/03/19 11:54:30 obache Exp $
 
 .include	"../../security/nessus/Makefile.common"
 
@@ -13,7 +13,12 @@ SITES.nmap.nasl=	http://www.nessus.org/documentation/
 
 COMMENT=	Plugins for the Nessus Network Security Scanner
 
+FETCH_MESSAGE+=	"Please download nmap.nasl"
+FETCH_MESSAGE+=	"manually from ${SITES.nmap.nasl:Q}"
+
 DEPENDS+=	nmap>=2.0:../../net/nmap
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/nessus-plugins
 GNU_CONFIGURE=		yes
@@ -25,17 +30,13 @@ CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q} GZIP=${TOOLS_GZIP_CMD:Q} \
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
 post-install:
-	${INSTALL_DATA} ${DISTDIR}/nmap.nasl ${PREFIX}/lib/nessus/plugins/
+	${INSTALL_DATA} ${DISTDIR}/nmap.nasl ${DESTDIR}${PREFIX}/lib/nessus/plugins/
 	# auto-generate PLIST of plug-ins
 	${RM} -f ${WRKDIR}/PLIST
-	cd ${PREFIX} && \
+	cd ${DESTDIR}${PREFIX} && \
 	${FIND} lib/nessus/plugins -type f -print >>${WRKDIR}/PLIST
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-install=${ROOT_USER}
-.endif
 
 .include "../../security/nessus-core/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
