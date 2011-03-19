@@ -1,22 +1,17 @@
-.\" $NetBSD: pkg_tarup.1,v 1.4 2008/11/19 00:20:48 obache Exp $
-.Dd July 14, 2004
+.\" $NetBSD: pkg_tarup.1,v 1.5 2011/03/19 09:44:17 wiz Exp $
+.Dd March 19, 2011
 .Dt PKG_TARUP 1
 .Os
 .Sh NAME
 .Nm pkg_tarup
-.Nd a utility for tarring up installed software packages
+.Nd utility for tarring up installed software packages
 .Sh SYNOPSIS
 .Nm
 .Op Fl a
-.Bk -words
 .Op Fl d Ar pkgrepository
-.Ek
-.Bk -words
+.Op Fl f Ar filebase
 .Op Fl K Ar pkg_dbdir
-.Ek
-.Bk -words
 .Op Fl s Ar pkg_sufx
-.Ek
 .Ar pkg-name-or-pattern
 .Op Ar ...
 .Sh DESCRIPTION
@@ -52,12 +47,15 @@ Set
 as the extension used for the created package file(s).
 If this option isn't specified, then
 .Pa .tgz
-is used.
+.It Fl f Ar filebase
+By default filename for created package looks like this
+.Dl ${pkgbase}-${pkgversion}${pkg_sufx}
+This option allows to
+use
+.Ar filebase
+instead of
+.Pa ${pkgbase} .
 .El
-.Sh EXIT STATUS
-The
-.Nm
-utility exits 0 on success and 1 on errors.
 .Sh ENVIRONMENT
 The following environment variables affect the execution of
 .Nm :
@@ -105,10 +103,14 @@ Any variable that affects
 .Xr pkg_info 1
 or
 .Xr pkg_create 1 .
+.Sh EXIT STATUS
+The
+.Nm
+utility exits 0 on success and 1 on errors.
 .Sh SEE ALSO
 .Xr pkg_create 1 ,
 .Xr pkg_info 1 ,
-.Xr packages 7
+.Xr pkgsrc 7
 .Sh BUGS
 Packages that contain files with spaces in their names probably
 won't work.
