@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2011/03/19 13:31:52 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/03/19 21:18:06 dholland Exp $
 
-DISTNAME=	modsecurity-apache_2.5.9
+DISTNAME=	modsecurity-apache_2.5.13
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
 CATEGORIES=	www security
 MASTER_SITES=	http://www.modsecurity.org/download/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.modsecurity.org/
 COMMENT=	Intrusion detection and prevention engine for web applications
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+APACHE_MODULE=		yes
 PKG_APACHE_ACCEPTED=	apache2 apache22
-USE_LANGUAGES+=		c++ c
+USE_APR=		yes
+USE_LANGUAGES=		c++ c
 
 .include "../../mk/apache.mk"
 .include "options.mk"
@@ -23,27 +28,30 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/apache2
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-libxml=${BUILDLINK_PREFIX.libxml2}
+CONFIGURE_ARGS+=	--with-lua=${BUILDLINK_PREFIX.lua}
+CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
+CONFIGURE_ARGS+=	--with-apu=${BUILDLINK_PREFIX.apr-util}
 
-SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-patch
-SUBST_FILES.config=	configure
-SUBST_SED.config=       -e "s|@@PREFIX@@|${PREFIX}|g"
-SUBST_MESSAGE.config=   Fixing configuration files.
+INSTALLATION_DIRS+=	lib/httpd
+INSTALL_ENV+=		APACHEPREFIX=${BUILDLINK_PREFIX.apache}
+INSTALL_ENV+=		DESTDIR=${DESTDIR}
 
-EGDIR=			${PREFIX}/share/examples/ap-modsecurity
-CONF_FILES=		${EGDIR}/modsecurity.conf-minimal \
+EGDIR=			share/examples/ap-modsecurity
+DOCDIR=			share/doc/ap-modsecurity
+INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
+
+CONF_FILES=		${PREFIX}/${EGDIR}/modsecurity.conf-minimal \
 			${PKG_SYSCONFDIR}/httpd/modsecurity.conf
 
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.59nb2
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ap-modsecurity
-
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/modsecurity.conf-minimal ${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/modsecurity.conf-minimal \
+			${DESTDIR}${PREFIX}/${EGDIR}
 	cd ${WRKDIR}/${DISTNAME}/doc && \
-		pax -rw . ${PREFIX}/share/doc/ap-modsecurity
+		pax -rw . ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
