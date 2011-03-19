@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10202 2011/03/19 01:34:56 wiz Exp $
+$NetBSD: TODO,v 1.10203 2011/03/19 23:37:14 jakllsch Exp $
 
 Suggested new packages
 ======================
@@ -981,8 +981,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
-	o openafs-1.4.10 [pkg/41262]
-	o openafs-1.4.12.1
 	o opengrok-0.10
 	o openh323-1.19.1
 	o openmortal-0.7.1
