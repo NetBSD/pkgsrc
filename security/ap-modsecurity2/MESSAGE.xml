@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.xml,v 1.1.1.1 2006/11/05 14:33:37 adrianp Exp $
-
-In order to use the XML support in your Apache installation, you will need
-to add the following to your httpd.conf file:
-
-  LoadFile ${PREFIX}/lib/libxml2.so
-
-===========================================================================
