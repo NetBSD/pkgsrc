@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:38:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/03/19 14:52:10 gls Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	pgpmime
 .include "../../mail/claws-mail/plugins.mk"
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Handles PGP/MIME signed and/or encrypted mails
