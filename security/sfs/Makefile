@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/03/24 19:43:28 asau Exp $
+# $NetBSD: Makefile,v 1.36 2011/03/19 08:29:20 obache Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fs.net/sfswww/
 COMMENT=		Secure, global, self-certifying network file system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
@@ -45,9 +47,9 @@ SFSEXAMPLEDIR=		${PREFIX}/share/examples/sfs
 MESSAGE_SUBST+=		SFSDIR=${SFS_ROOT} SFSEXAMPLEDIR=${SFSEXAMPLEDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${SFSEXAMPLEDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SFSEXAMPLEDIR}
 	@${SED} -e 's|@SFSDIR@|${SFS_ROOT}|g' ${FILESDIR}/sfsrwsd_config.sample \
-		> ${SFSEXAMPLEDIR}/sfsrwsd_config.sample
+		> ${DESTDIR}${SFSEXAMPLEDIR}/sfsrwsd_config.sample
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
