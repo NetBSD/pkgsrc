@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2011/01/13 13:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2011/03/19 14:52:09 gls Exp $
 #
 
-DISTNAME=	gtkhtml2_viewer-0.28
-PKGNAME=	claws-mail-gtkhtml2_viewer-0.28
-PKGREVISION=	1
+DISTNAME=	gtkhtml2_viewer-0.29
+PKGNAME=	claws-mail-gtkhtml2_viewer-0.29
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
