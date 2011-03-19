@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2010/02/25 14:59:22 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2011/03/19 09:18:02 obache Exp $
 
 DISTNAME=	pks-0.9.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security www
 MASTER_SITES+=	http://www.mit.edu/people/marc/pks/ \
 	${MASTER_SITE_SOURCEFORGE:=pks/} 
@@ -13,6 +13,9 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mit.edu/people/marc/pks/
 COMMENT=	PGP Public Key Server
+LICENSE=	original-bsd
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
@@ -60,11 +63,19 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	pks-commands.html
 SUBST_SED.paths=	-e "s|localhost|${PKS_SERVER}|g"
 
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	datadir=${DESTDIR}${PREFIX}/share/pks
+INSTALL_MAKE_FLAGS+=	localstatedir=${DESTDIR}${PKS_HOME}
+INSTALL_MAKE_FLAGS+=	man5dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+INSTALL_MAKE_FLAGS+=	man8dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+INSTALL_MAKE_FLAGS+=	sysconfdir=${DESTDIR}${EGDIR:Q}
+
 .include "../../databases/db/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/pks-commands.html ${PKS_HOME}/db/index.html
-	@${CHOWN} ${PKS_USER} ${PKS_HOME}/db/index.html
-	@${CHGRP} ${PKS_GROUP} ${PKS_HOME}/db/index.html
+	${INSTALL_DATA} ${WRKSRC}/pks-commands.html ${DESTDIR}${EGDIR}
+
+CONF_FILES_PERMS=	${EGDIR}/pks-commands.html ${PKS_HOME}/db/index.html \
+			${PKS_USER} ${PKS_GROUP} ${SHAREMODE}
 
 .include "../../mk/bsd.pkg.mk"
