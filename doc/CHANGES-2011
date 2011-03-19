@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.716 2011/03/19 09:44:26 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.717 2011/03/19 15:02:53 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1239,3 +1239,26 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/php53 to 5.3.6 [taca 2011-03-19]
 	Updated security/pks to 0.9.4nb4 [obache 2011-03-19]
 	Updated pkgtools/pkg_tarup to 1.9 [wiz 2011-03-19]
+	Updated mail/claws-mail to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-archive to 0.6.8nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-attachwarner to 0.2.20nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-att_remover to 1.0.12nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-mail-bogofilter to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-cachesaver to 0.10.9nb7 [gls 2011-03-19]
+	Updated mail/claws-mail-dillo_viewer to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-fetchinfo to 0.4.24nb7 [gls 2011-03-19]
+	Updated mail/claws-mail-gtkhtml to 0.29 [gls 2011-03-19]
+	Updated mail/claws-mail-mailmbox to 1.14.5nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-newmail to 0.0.15nb9 [gls 2011-03-19]
+	Updated mail/claws-mail-notification to 0.26nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-pgpcore to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-pgpinline to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-rssyl to 0.29 [gls 2011-03-19]
+	Updated mail/claws-mail-smime to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-spamassassin to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-spamreport to 0.3.12nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-synce to 0.7.5nb9 [gls 2011-03-19]
+	Updated mail/claws-mail-tnef to 0.3.9nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-trayicon to 3.7.8 [gls 2011-03-19]
+	Updated mail/claws-mail-vcalendar to 2.0.9nb2 [gls 2011-03-19]
+	Updated mail/clawsker to 0.7.2nb1 [gls 2011-03-19]
