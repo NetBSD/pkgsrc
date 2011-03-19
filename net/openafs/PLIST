@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 21:00:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/03/19 23:35:40 jakllsch Exp $
+bin/afs_compile_et
 bin/afsmonitor
 bin/bos
 bin/cmdebug
-bin/compile_et
 bin/dlog
 bin/dpass
 bin/fs
@@ -190,8 +190,9 @@ lib/afs/libxstat_cm.a
 lib/afs/libxstat_fs.a
 lib/afs/util.a
 lib/afs/vlib.a
-lib/libafsauthent.a
-lib/libafsrpc.a
+lib/libafssetpag.so
+lib/libafssetpag.so.1
+lib/libafssetpag.so.1.0
 lib/libdes.a
 lib/liblwp.a
 lib/librx.a
@@ -212,14 +213,13 @@ sbin/backup
 sbin/bos_util
 sbin/bosserver
 sbin/butc
-sbin/copyauth
 sbin/fms
 sbin/fstrace
 sbin/kadb_check
 sbin/kas
 sbin/ka-forwarder
 sbin/kdb
-sbin/kdump/kdump-build
+sbin/kdump
 sbin/kpwvalid
 sbin/prdb_check
 sbin/pt_util
