@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/08/31 07:19:44 seb Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/19 13:31:52 obache Exp $
 
 DISTNAME=	modsecurity-apache_2.5.9
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
@@ -20,9 +20,9 @@ USE_TOOLS+=		pax
 USE_LIBTOOL=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/apache2
 
-CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
-CONFIGURE_ARGS+=	--with-pcre=${PREFIX}
-CONFIGURE_ARGS+=        --with-libxml=${PREFIX}
+CONFIGURE_ARGS+=	--with-apxs=${APXS}
+CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
+CONFIGURE_ARGS+=	--with-libxml=${BUILDLINK_PREFIX.libxml2}
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-patch
