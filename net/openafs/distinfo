@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.13 2008/07/13 19:10:41 tonnerre Exp $
+$NetBSD: distinfo,v 1.14 2011/03/19 23:35:40 jakllsch Exp $
 
-SHA1 (openafs-1.4.6-src.tar.bz2) = 39489babe20c42c16ea8f11457de423b2bcca009
-RMD160 (openafs-1.4.6-src.tar.bz2) = 856fa915c7847c25dab77b450bc8b0c6f6aeb308
-Size (openafs-1.4.6-src.tar.bz2) = 12485179 bytes
-SHA1 (patch-aa) = a24cc0d97a0045e44dadbcb195a55c50dfc2d308
-SHA1 (patch-ab) = 7faa19212a385228dcedb0cbedd869d9151e66cf
-SHA1 (patch-ac) = 667d66bb4f65337e8b89f73c91b42e6b445331ee
-SHA1 (patch-ad) = 27d99c4196072e9b65508edede87495dfbc093f3
-SHA1 (patch-ae) = 699b656e0421bdf46de1d8cda7f50b3651854b67
-SHA1 (patch-af) = 886892c359cb13952393aa390997080d65c5224c
+SHA1 (openafs-1.4.14-src.tar.bz2) = 2b4e7c839bbf8f577fdd4831e7a3b3ebb9c41926
+RMD160 (openafs-1.4.14-src.tar.bz2) = ecc038d7f9068d420cf1c94f9c01db5ecd1accac
+Size (openafs-1.4.14-src.tar.bz2) = 11813993 bytes
+SHA1 (patch-aa) = 3dde7848f9773fd8398156149368748146564eee
+SHA1 (patch-src_afsd_afsd.c) = ccc518675fc4b4fa594bb6b3a9f2c36e03df2ea6
+SHA1 (patch-src_comerr_Makefile.in) = f325c813dab0dc62592abead6d112ce15df086c9
+SHA1 (patch-src_config_param.nbsd30.h) = 64bbe81ef7208b6e3f70af4eddcb9d535e8a9c34
+SHA1 (patch-src_config_param.nbsd40.h) = ddfb69d2255629946e6df8416e6e2fcbfc0ffabb
