@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/01/13 13:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2011/03/19 11:14:30 obache Exp $
 
 .include 	"../../security/nessus/Makefile.common"
 
@@ -6,6 +6,8 @@ DISTNAME=	nessus-core-${VERS}
 PKGREVISION=	7
 
 COMMENT=	Core module of the Nessus Network Security Scanner
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/nessus-core
 
@@ -39,6 +41,14 @@ CONF_FILES+=	${BUILDLINK_PREFIX.libnasl}/share/examples/libnasl/nessus_org.pem \
 		${VARBASE}/nessus/nessus_org.pem
 CONF_FILES+=	${PREFIX}/share/examples/nessus/nessus-services	\
 		${VARBASE}/nessus/nessus-services
+
+# just juggle _pkginstall-post-install-check in mk/pkginstall/bsd.pkginstall.mk
+INSTALLATION_DIRS+=	share/examples/libnasl
+CHECK_FILES_SKIP+=	${PREFIX}/share/examples/libnasl/nessus_org.pem
+post-install:
+	${INSTALL_DATA} \
+		${BUILDLINK_PREFIX.libnasl}/share/examples/libnasl/nessus_org.pem \
+		${DESTDIR}${PREFIX}/share/examples/libnasl
 
 .include "../../security/libnasl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
