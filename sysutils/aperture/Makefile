@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2006/05/31 02:31:56 tron Exp $
+# $NetBSD: Makefile,v 1.37 2011/03/19 01:36:20 obache Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
 PKGREVISION=	7
 CATEGORIES=	sysutils x11
 EXTRACT_SUFX=	.shar
-# Not sure why ${MASTER_SITE_LOCAL:=${PKGNAME}} doesn't work, but the
-# following does the correct substitution.
-#
-.for subdir in ${PKGNAME}
-MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}nb1/}
-.endfor
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}nb1/}
 # The definitive location of the distfile is as below, but it's risky to depend
 # on NetBSD-current files to stay stable, so don't we'll place new copies at
 # MASTER_SITE_LOCAL and update this package accordingly.
