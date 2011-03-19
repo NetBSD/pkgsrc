@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.717 2011/03/19 15:02:53 gls Exp $
+$NetBSD: CHANGES-2011,v 1.718 2011/03/19 21:18:51 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1262,3 +1262,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/claws-mail-trayicon to 3.7.8 [gls 2011-03-19]
 	Updated mail/claws-mail-vcalendar to 2.0.9nb2 [gls 2011-03-19]
 	Updated mail/clawsker to 0.7.2nb1 [gls 2011-03-19]
+	Updated security/ap-modsecurity2 to 2.5.13 [dholland 2011-03-19]
