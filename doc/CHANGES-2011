@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.714 2011/03/19 07:02:03 taca Exp $
+$NetBSD: CHANGES-2011,v 1.715 2011/03/19 09:18:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1237,3 +1237,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-a4wide to 2010nb1 [minskim 2011-03-18]
 	Updated devel/doxygen to 1.6.3nb4 [minskim 2011-03-18]
 	Updated lang/php53 to 5.3.6 [taca 2011-03-19]
+	Updated security/pks to 0.9.4nb4 [obache 2011-03-19]
