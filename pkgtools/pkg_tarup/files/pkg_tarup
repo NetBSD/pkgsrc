@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.23 2009/11/05 16:22:47 joerg Exp $
+# $Id: pkg_tarup,v 1.24 2011/03/19 09:44:17 wiz Exp $
 #
 # Tar up installed package
 #
@@ -53,12 +53,20 @@ GETDEPS=0
 
 usage()
 {
-	${ECHO} "Usage: $1 [-a] [-K pkg_dbdir] [-d pkgrepository] [-s pkg_sufx] installed_pkg|pattern [...]"
-	${ECHO} "The following environment variables are used:"
-	${ECHO} " (unless overriden by command line parameters)"
-	${ECHO} " PKGREPOSITORY - A destination directory for packages (/tmp)"
-	${ECHO} " PKG_DBDIR     - The location of the package database directory"
-	${ECHO} " PKG_SUFX      - The suffix to append to the package (.tgz)"
+	cat <<'EOF'
+Usage: pkg_tarup [OPTIONS] installed_pkg|pattern [...]
+OPTIONS:
+   -a                 - Create packages for all dependent packages too.
+   -d <pkgrepository> - Set the destination directory for packages.
+   -f <filebase>      - Set the filebase.
+   -K <pkg_dbdir>     - Set the package database directory.
+   -s <pkg_sufx>      - Set the extension used for the created package(s).
+The following environment variables are used:
+ (unless overriden by command line parameters)
+ PKGREPOSITORY - A destination directory for packages (/tmp)
+ PKG_DBDIR     - The location of the package database directory
+ PKG_SUFX      - The suffix to append to the package (.tgz)
+EOF
 	exit 1
 }
 
@@ -81,8 +89,13 @@ check_and_add()
 create_package()
 {
 	PKG="$1"
+	if [ -n "$FILEBASE" ]; then
+	    PKGFILE=`echo "$PKG" | sed 's/^\(.*\)\(-[0-9][^-]*$\)/'"$FILEBASE"'\2/'`
+	else
+	    PKGFILE="$PKG"
+	fi
 	PKG_ARGS=
-	${ECHO} "Creating binary package: $PKG"
+	${ECHO} "Creating binary package: $PKGFILE"
 
 	check_and_add -c "${PKG_DBDIR}/${PKG}/+COMMENT"
 	check_and_add -d "${PKG_DBDIR}/${PKG}/+DESC"
@@ -130,7 +143,7 @@ create_package()
 	PKG_ARGS="${PKG_ARGS} -l"
 	PKG_ARGS="${PKG_ARGS} -p \"${PKG_PREFIX}\""
 	PKG_ARGS="${PKG_ARGS} -I \"${PKG_PREFIX}\""
-	PKG_ARGS="${PKG_ARGS} \"${PKGREPOSITORY}/${PKG}${PKG_SUFX}\""
+	PKG_ARGS="${PKG_ARGS} \"${PKGREPOSITORY}/${PKGFILE}${PKG_SUFX}\""
 	if [ -f "${PKG_DBDIR}/${PKG}/+VIEWS" ]
 	then
 		PKG_ARGS="${PKG_ARGS} -E"
@@ -154,7 +167,7 @@ add_to_list()
 	for rPKG in `pkg_info -e "$1" | ${SED} -e's/\"/\\\"/g'` ; do
 		if [ -z "$rPKG" -o -f "${PKG_DBDIR}/${rPKG}" ] ; then
 			${ECHO} "Error: package $1 not found"
-			usage "$0"
+			usage
 		fi
 
 		added=1
@@ -191,6 +204,10 @@ while [ $# -gt 0 ] ; do
 		PKG_SUFX="$2"
 		shift 2
 		;;
+	-f)
+		FILEBASE="$2"
+		shift 2
+		;;
 	*)
 		break
 		;;
@@ -210,6 +227,11 @@ add_all_deps_to_list()
 	IFS="$oIFS"
 }
 
+arg_cnt ()
+{
+	echo $#
+}
+
 while [ $# -gt 0 ] ; do
 	add_to_list "$1"
 	if [ $GETDEPS -eq 1 ] ; then
@@ -217,9 +239,15 @@ while [ $# -gt 0 ] ; do
 	fi
 	shift
 done
+if [ -n "$FILEBASE" ]; then
+	if [ `arg_cnt ${PKGS}` -ne 1 ] ; then
+		${ECHO} "ERROR: -f cannot be used for creating multiple packages!"
+		exit 1
+	fi
+fi
 if [ -z "${PKGS}" ] ; then
 	${ECHO} "ERROR: No packages to tarup identified!"
-	usage "$0"
+	usage
 fi
 FOR="
 for xPKG in ${PKGS} ; do
