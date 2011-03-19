@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.1 2011/01/23 19:07:26 agc Exp $
+# $NetBSD: MirBSD.mk,v 1.2 2011/03/19 14:07:10 dholland Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -82,14 +82,3 @@ _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
 _OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
-
-# If games are to be installed setgid, then SETGIDGAME is set to 'yes'
-# (it defaults to 'no' as per defaults/mk.conf).
-# Set the group and mode to meaningful values in that case (defaults to
-# BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
-.if !(empty(SETGIDGAME:M[yY][eE][sS]))
-GAMEOWN=		games
-GAMEGRP=		games
-GAMEMODE=		2555
-GAMEDIRMODE=		0775
-.endif
