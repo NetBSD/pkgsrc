@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.715 2011/03/19 09:18:16 obache Exp $
+$NetBSD: CHANGES-2011,v 1.716 2011/03/19 09:44:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1238,3 +1238,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/doxygen to 1.6.3nb4 [minskim 2011-03-18]
 	Updated lang/php53 to 5.3.6 [taca 2011-03-19]
 	Updated security/pks to 0.9.4nb4 [obache 2011-03-19]
+	Updated pkgtools/pkg_tarup to 1.9 [wiz 2011-03-19]
