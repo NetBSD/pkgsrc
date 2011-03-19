@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10201 2011/03/18 09:44:20 wiz Exp $
+$NetBSD: TODO,v 1.10202 2011/03/19 01:34:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -328,7 +328,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
-	o GConf-2.32.1
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o ImageMagick-6.6.8.4
@@ -389,6 +388,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
+	o aria2-1.11.0
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -436,7 +436,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20101229
-	o bzr-2.3.0
+	o bzr-2.3.1
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
@@ -515,7 +515,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dwm-5.8.2
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
-	o echinus-0.4.4
+	o echinus-0.4.5
 	o eclipse-3.2.0
 	o ed-1.5
 	o ede-2.0
@@ -665,7 +665,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o glade3-3.6.7 [GNOME 2.26]
-	o glib2-2.28.3
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -716,11 +715,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
-	o gtk2-2.24.3
-	o gtk3-3.0.3
 	o gtkmm-2.24.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.20
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -824,7 +820,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libFS-1.0.3
 	o libICE-1.0.7
 	o libSM-1.2.0
-	o libX11-1.4.1
+	o libX11-1.4.2
 	o libXScrnSaver-1.2.1
 	o libXaw-1.0.9
 	o libXcomposite-0.4.3
@@ -835,7 +831,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXfixes-5.0
 	o libXfont-1.4.3
 	o libXft-2.2.0
-	o libXi-1.4.1
+	o libXi-1.4.2
 	o libXinerama-1.1.1
 	o libXmu-1.1.0
 	o libXpm-3.5.9
@@ -849,7 +845,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86vm-1.1.1
 	o libao-1.1.0
 	o libao-sun-1.1.0
-	o libcanberra-0.28
+	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.7.4
 	o libdockapp-0.6.1
 	o libdrm-2.4.23
@@ -989,10 +985,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openafs-1.4.12.1
 	o opengrok-0.10
 	o openh323-1.19.1
-	o openldap-client-2.4.24
 	o openmortal-0.7.1
 	o openmotif-2.3.3
-	o openmpi-1.5.2
+	o openmpi-1.5.3
 	o openmsx-0.7.0
 	o openoffice3-3.3
 	o openssh-5.8p1
@@ -1076,7 +1071,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cheetah-2.4.2.1 [pkg/43458]
 	o py-cups-1.9.54
 	o py-dbus-0.83.2
-	o py-feedparser-5.0.1
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
@@ -1206,7 +1200,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o t1utils-1.36
 	o tacacs-4.0.4.14
 	o tads-3.0.16
-	o taglib-1.7
+	o taglib-1.7 [shlib major went down, clarifying with upstream -- wiz]
 	o tcl-8.5.8
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1250,6 +1244,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o twelf-1.5r1
 	o twm-1.0.6
 	o txt2html-2.51
+	o txt2man-1.5.6
 	o uae-0.8.29
 	o ubs-0.20
 	o ucarp-1.5.1
@@ -1262,7 +1257,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-3.07
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.10.4
 	o valgrind-3.6.0
 	o varnish-2.1.5 [pkg/44520]
 	o vbetool-1.1
@@ -1299,7 +1293,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
-	o worker-2.17.10
+	o worker-2.17.11
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9f
 	o wxGTK28-2.8.11
@@ -1342,7 +1336,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-apm-1.2.3
 	o xf86-video-ark-0.7.3
 	o xf86-video-ast-0.91.10
-	o xf86-video-ati-6.14.0
+	o xf86-video-ati-6.14.1
 	o xf86-video-chips-1.2.4
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
