@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/09/24 09:35:17 chris Exp $
+$NetBSD: patch-ad,v 1.2 2011/03/20 19:13:16 shattered Exp $
 
---- ogg123/ogg123.c.orig	Sat Jul  6 20:12:18 2002
-+++ ogg123/ogg123.c	Sat Sep 14 19:05:37 2002
-@@ -453,6 +453,16 @@
+--- ogg123/ogg123.c.orig	2002-07-06 19:12:18.000000000 +0000
++++ ogg123/ogg123.c
+@@ -453,6 +453,16 @@ void play (char *source_string)
      return;
    }
  
@@ -19,3 +19,17 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/09/24 09:35:17 chris Exp $
    /* Decide which statistics are valid */
    select_stats(stat_format, &options, source, decoder, audio_buffer);
  
+@@ -580,7 +590,13 @@ void play (char *source_string)
+   
+   format->cleanup(decoder);
+   transport->close(source);
++#if 0
++  /*
++   * XXX: should be done properly with pthread_cleanup_push instead,
++   * if at all.
++   */
+   status_reset_output_lock();  /* In case we were killed mid-output */
++#endif
+ 
+   status_message(1, _("Done."));
+   
