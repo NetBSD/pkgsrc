@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/11/27 13:34:25 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2011/03/20 06:29:52 obache Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -19,6 +19,7 @@ MAKE_JOBS_SAFE=	no
 CONFLICTS+=	openpam-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
@@ -36,6 +37,7 @@ CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2PS=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_PS2PDF=no
 
 MAKE_FLAGS+=		CC=cc
+INSTALL_MAKE_FLAGS+=	FAKEROOT=${DESTDIR}
 
 PAM_MODULEDIR=		${VIEWBASE}/lib/security
 MAKE_ENV+=		PAM_MODULEDIR=${PAM_MODULEDIR:Q}
@@ -103,16 +105,16 @@ pre-build:
 	${TOUCH} ${WRKSRC}/.quiet_install
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/pam.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/modules/pam_access/access.conf ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/pam.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/modules/pam_access/access.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/modules/pam_env/pam_env.conf-example	\
-		${EGDIR}/pam_env.conf
-	${INSTALL_DATA} ${WRKSRC}/modules/pam_group/group.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/modules/pam_time/time.conf ${EGDIR}
+		${DESTDIR}${EGDIR}/pam_env.conf
+	${INSTALL_DATA} ${WRKSRC}/modules/pam_group/group.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/modules/pam_time/time.conf ${DESTDIR}${EGDIR}
 .if ${OPSYS} == "Linux"
 	${INSTALL_DATA} ${WRKSRC}/security/modules/pam_limits/limits.skel \
-		${EGDIR}/limits.conf
+		${DESTDIR}${EGDIR}/limits.conf
 .endif
 
 .include "../../mk/bsd.pkg.mk"
