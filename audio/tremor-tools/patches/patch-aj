@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2011/03/20 19:13:16 shattered Exp $
+
+--- ogg123/buffer.c.orig	2002-07-14 05:38:00.000000000 +0000
++++ ogg123/buffer.c
+@@ -409,7 +409,9 @@ void buffer_reset (buf_t *buf)
+ 
+   /* Cleanup pthread variables */
+   pthread_mutex_destroy(&buf->mutex);
++  COND_SIGNAL(buf->write_cond);
+   pthread_cond_destroy(&buf->write_cond);
++  COND_SIGNAL(buf->playback_cond);
+   pthread_cond_destroy(&buf->playback_cond);
+   
+   /* Reinit pthread variables */
