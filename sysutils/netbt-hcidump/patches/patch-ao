@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
+$NetBSD: patch-ao,v 1.3 2011/03/20 19:56:48 plunky Exp $
 
 --- src/hcidump.c.orig	2011-01-27 04:11:41.000000000 +0000
 +++ src/hcidump.c
@@ -31,7 +31,17 @@ $NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
  
  	printf("snap_len: %d filter: 0x%lx\n", snap_len, parser.filter);
  
-@@ -544,10 +548,13 @@ static int open_file(char *file, int mod
+@@ -299,7 +303,8 @@ static int process_frames(int dev, int s
+ 		while (cmsg) {
+ 			switch (cmsg->cmsg_type) {
+ 			case HCI_CMSG_DIR:
+-				memcpy(&frm.in, CMSG_DATA(cmsg), sizeof(int));
++				memcpy(&i, CMSG_DATA(cmsg), sizeof(int));
++				frm.in = (uint8_t)i;
+ 				break;
+ 			case HCI_CMSG_TSTAMP:
+ 				memcpy(&frm.ts, CMSG_DATA(cmsg),
+@@ -544,10 +549,13 @@ static int open_file(char *file, int mod
  	return fd;
  }
  
@@ -47,7 +57,7 @@ $NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
  	struct hci_dev_info di;
  	int sk, dd, opt;
  
-@@ -573,6 +580,7 @@ static int open_socket(int dev, unsigned
+@@ -573,6 +581,7 @@ static int open_socket(int dev, unsigned
  
  		hci_close_dev(dd);
  	}
@@ -55,7 +65,7 @@ $NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
  
  	/* Create HCI socket */
  	sk = socket(AF_BLUETOOTH, SOCK_RAW, BTPROTO_HCI);
-@@ -588,12 +596,13 @@ static int open_socket(int dev, unsigned
+@@ -588,12 +597,13 @@ static int open_socket(int dev, unsigned
  	}
  
  	opt = 1;
@@ -70,7 +80,7 @@ $NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
  	hci_filter_clear(&flt);
  	hci_filter_all_ptypes(&flt);
  	hci_filter_all_events(&flt);
-@@ -601,13 +610,34 @@ static int open_socket(int dev, unsigned
+@@ -601,13 +611,34 @@ static int open_socket(int dev, unsigned
  		perror("Can't set filter");
  		return -1;
  	}
@@ -106,7 +116,7 @@ $NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
  					dev, strerror(errno), errno);
  		return -1;
  	}
-@@ -784,7 +814,7 @@ static int wait_connection(char *addr, c
+@@ -784,7 +815,7 @@ static int wait_connection(char *addr, c
  	return -1;
  }
  
@@ -115,7 +125,7 @@ $NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
  {
  	while (1) {
  		int dd, sk;
-@@ -914,7 +944,7 @@ int main(int argc, char *argv[])
+@@ -914,7 +945,7 @@ int main(int argc, char *argv[])
  {
  	unsigned long flags = 0;
  	unsigned long filter = 0;
@@ -124,7 +134,7 @@ $NetBSD: patch-ao,v 1.2 2011/01/30 20:41:30 plunky Exp $
  	int defpsm = 0;
  	int defcompid = DEFAULT_COMPID;
  	int opt, pppdump_fd = -1, audio_fd = -1;
-@@ -923,7 +953,7 @@ int main(int argc, char *argv[])
+@@ -923,7 +954,7 @@ int main(int argc, char *argv[])
  		switch(opt) {
  		case 'i':
  			if (strcasecmp(optarg, "none") && strcasecmp(optarg, "system"))
