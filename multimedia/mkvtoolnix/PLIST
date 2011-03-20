@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/02/14 19:12:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/20 13:19:44 adam Exp $
 bin/mkvextract
 bin/mkvinfo
 bin/mkvmerge
@@ -72,6 +72,7 @@ share/locale/fr/LC_MESSAGES/mkvtoolnix.mo
 share/locale/ja/LC_MESSAGES/mkvtoolnix.mo
 share/locale/nl/LC_MESSAGES/mkvtoolnix.mo
 share/locale/ru/LC_MESSAGES/mkvtoolnix.mo
+share/locale/tr/LC_MESSAGES/mkvtoolnix.mo
 share/locale/uk/LC_MESSAGES/mkvtoolnix.mo
 share/locale/zh_CN/LC_MESSAGES/mkvtoolnix.mo
 share/locale/zh_TW/LC_MESSAGES/mkvtoolnix.mo
