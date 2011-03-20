@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/03/20 12:00:15 obache Exp $
+# $NetBSD: Makefile,v 1.25 2011/03/20 12:13:44 obache Exp $
 #
 
 DISTNAME=	sendfile-20010216
@@ -21,13 +21,10 @@ CONF_FILES+=	${EGDIR}/sendfile.deny ${PKG_SYSCONFDIR}/sendfile.deny
 
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 
-pre-configure:
-	cd ${WRKSRC} && \
-	${SED}  -e 's,@PREFIX@,${PREFIX},g' \
-		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
-		< makeconfig > makeconfig.new; \
-	${MV} makeconfig.new makeconfig; \
-	${CHMOD} +x makeconfig
+SUBST_CLASSES+=		makeconfig
+SUBST_STAGE.makeconfig=	pre-configure
+SUBST_FILES.makeconfig=	makeconfig
+SUBST_VARS.makeconfig=	PREFIX PKG_SYSCONFBASEDIR
 
 post-configure:
 	cd ${WRKSRC} &&${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} config
