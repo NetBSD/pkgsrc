@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/03/23 06:24:49 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2011/03/20 11:46:34 obache Exp $
 
---- Makefile.orig	2004-07-27 01:18:34.000000000 +0200
+--- Makefile.orig	2004-07-26 23:18:34.000000000 +0000
 +++ Makefile
 @@ -252,15 +252,10 @@ $(man-prefix)/$(man-dir)/man5:
  		mkdir -p $(man-prefix)/$(man-dir)/man5
@@ -16,8 +16,8 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/03/23 06:24:49 wiz Exp $
 -			mv -f $(cfg-prefix)/$(cfg-dir)ser.cfg.sample \
 -				$(cfg-prefix)/$(cfg-dir)ser.cfg; \
 -		fi
-+			< etc/ser.cfg > $(eg-dir)ser.cfg
-+		chmod 644 $(eg-dir)ser.cfg
++			< etc/ser.cfg > $(cfg-prefix)/$(eg-dir)ser.cfg
++		chmod 644 $(cfg-prefix)/$(eg-dir)ser.cfg
  #		$(INSTALL-CFG) etc/ser.cfg $(cfg-prefix)/$(cfg-dir)
  
  install-bin: $(bin-prefix)/$(bin-dir) utils/gen_ha1/gen_ha1

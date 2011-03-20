@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/01 00:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/20 11:46:34 obache Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -10,22 +10,28 @@ MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/0.8.14/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iptel.org/ser/
 COMMENT=	SIP express router
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/ser-0.8.14
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_TOOLS+=	flex gmake yacc
 
 PKG_SYSCONFSUBDIR=	ser
-EGDIR=			${PREFIX}/share/examples/ser
-CONF_FILES=		${EGDIR}/ser.cfg ${PKG_SYSCONFDIR}/ser.cfg
+EGDIR=			share/examples/ser
+CONF_FILES=		${PREFIX}/${EGDIR}/ser.cfg ${PKG_SYSCONFDIR}/ser.cfg
 
-REQD_DIRS=	${EGDIR}
+REQD_DIRS=	${PREFIX}/${EGDIR}
 
 MAKE_ENV+= BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
 MAKE_ENV+= cfg-prefix=${PREFIX}/share/examples
 MAKE_ENV+= EGDIR=${EGDIR:Q}
+INSTALL_ENV+= BASEDIR=${DESTDIR}
 
 CHECK_PORTABILITY_SKIP+=	scripts/sc
+
+INSTALLATION_DIRS+=	${EGDIR}
 
 .include "options.mk"
 
