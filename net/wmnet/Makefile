@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/09/19 06:20:07 tron Exp $
+# $NetBSD: Makefile,v 1.17 2011/03/20 06:55:13 obache Exp $
 
 DISTNAME=	wmnet-1.06
 PKGREVISION=	5
@@ -14,12 +14,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.katharineosborne.com/wmnet/
 COMMENT=	Dockable network monitor
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	YES
-MAKE_FLAGS+=	MANPATH=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 MAKE_FLAGS+=	INSTPGMFLAGS=""
 SPECIAL_PERMS+=	bin/wmnet ${BINOWN} kmem 2555
 .endif
