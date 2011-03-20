@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/03/09 18:48:51 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2011/03/20 18:06:56 minskim Exp $
 #
 
 DISTNAME=		lyx-1.6.8
@@ -30,7 +30,6 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GCC_REQD+=		2.95
 TEX_ACCEPTED=		teTeX3
-MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
 
 CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt4-libs} \
 			--with-qt4-dir=${QTDIR:Q} \
@@ -100,7 +99,7 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../print/teTeX/module.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../textproc/aiksaurus/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
