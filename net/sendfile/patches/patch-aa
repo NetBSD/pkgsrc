@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2006/02/24 19:43:56 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2011/03/20 12:13:44 obache Exp $
 
 --- makeconfig.orig	1999-08-26 18:53:32.000000000 +0000
 +++ makeconfig
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.5 2006/02/24 19:43:56 joerg Exp $
 -SERVERDIR=/usr/local/sbin
 +BINDIR=@PREFIX@/bin
 +MANDIR=@PREFIX@/man
-+CONFIG=@PREFIX@/etc
++CONFIG=@PKG_SYSCONFBASEDIR@
 +EGDIR=@PREFIX@/share/examples/sendfile
 +SERVERDIR=@PREFIX@/sbin
  INETDCONF=/etc/inetd.conf
