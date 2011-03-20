@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/17 18:00:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2011/03/20 06:17:58 obache Exp $
 #
 
 DISTNAME=	modsecurity-apache_1.9.4
@@ -10,18 +10,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.modsecurity.org/
 COMMENT=	Intrusion detection and prevention engine for web applications
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	pax
 
 .include "../../mk/apache.mk"
 
-PKG_APACHE_ACCEPTED=	apache13 apache2
-
-.if ${PKG_APACHE} == "apache2"
+.if ${PKG_APACHE} != "apache13"
 APACHE_DIR=	apache2
 MOD_EXTN=	la
-.endif
-
-.if ${PKG_APACHE} == "apache13"
+.else
 APACHE_DIR=	apache1
 MOD_EXTN=	so
 .endif
@@ -35,17 +33,19 @@ do-build:
 		${SETENV} PATH=${PATH:Q} \
 		${APXS} ${CPPFLAGS} ${LDFLAGS} -c mod_security.c
 
+INSTALLATION_DIRS+=	lib/httpd
+
 do-install:
 	cd ${WRKSRC}/${APACHE_DIR} && \
 		${SETENV} PATH=${PATH:Q} \
-		${APXS} ${CPPFLAGS} ${LDFLAGS} -i mod_security.${MOD_EXTN}
+		${APXS} -i -S LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd mod_security.${MOD_EXTN}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ap-security
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ap-security
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/ap-security
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ap-security
 
 	${INSTALL_DATA} ${WRKSRC}/httpd.conf.example-minimal \
-		${PREFIX}/share/examples/ap-security
-	cd ${WRKSRC}/doc && pax -rw . ${PREFIX}/share/doc/ap-security
+		${DESTDIR}${PREFIX}/share/examples/ap-security
+	cd ${WRKSRC}/doc && pax -rw . ${DESTDIR}${PREFIX}/share/doc/ap-security
 
 .include "../../mk/bsd.pkg.mk"
