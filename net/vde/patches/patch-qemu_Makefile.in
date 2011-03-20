@@ -1,0 +1,21 @@
+$NetBSD: patch-qemu_Makefile.in,v 1.1 2011/03/20 09:05:54 obache Exp $
+
+* fixes staged installation
+
+--- qemu/Makefile.in.orig	2005-06-15 11:17:12.000000000 +0000
++++ qemu/Makefile.in
+@@ -448,11 +448,11 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ 
+ install-exec-hook:
+-	rm -f $(bindir)/vdeqemu
+-	ln -s $(bindir)/vdeq $(bindir)/vdeqemu
++	rm -f $(DESTDIR)$(bindir)/vdeqemu
++	ln -s $(bindir)/vdeq $(DESTDIR)$(bindir)/vdeqemu
+ 
+ uninstall-local:
+-	rm -f $(bindir)/vdeqemu
++	rm -f $(DESTDIR)$(bindir)/vdeqemu
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
