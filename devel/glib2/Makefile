@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2011/03/09 11:22:04 drochner Exp $
+# $NetBSD: Makefile,v 1.180 2011/03/20 21:00:10 cegger Exp $
 
 .include "Makefile.common"
 
@@ -28,7 +28,7 @@ FILES_SUBST+=		GLIB_COMPILE_SCHEMAS=${PREFIX}/bin/glib-compile-schemas
 FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
 
 # need pcre utf8 + unicode-properties
-BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.4nb1
+BUILDLINK_API_DEPENDS.pcre+=	pcre>=8.11
 
 LIBS.SunOS+=	-lnsl -lsocket
 
