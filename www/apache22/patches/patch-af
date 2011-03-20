@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.5 2011/03/20 03:18:21 dholland Exp $
+
+Fix markup glitch.
+
+--- docs/man/apxs.8~	2011-03-20 02:48:50.000000000 +0000
++++ docs/man/apxs.8
+@@ -96,7 +96,11 @@ This explicitly sets the module name for
+  
+ .TP
+ -q
+-Performs a query for apxs's knowledge about certain settings\&. The \fIquery\fR parameters can be one or more of the following strings: CC, CFLAGS, CFLAGS_SHLIB, INCLUDEDIR, LD_SHLIB, LDFLAGS_SHLIB, LIBEXECDIR, LIBS_SHLIB, SBINDIR, SYSCONFDIR, TARGET\&. .PP Use this for manually determining settings\&. For instance use INC=-I`apxs -q INCLUDEDIR` .PP inside your own Makefiles if you need manual access to Apache's C header files\&.  
++Performs a query for apxs's knowledge about certain settings\&. The \fIquery\fR parameters can be one or more of the following strings: CC, CFLAGS, CFLAGS_SHLIB, INCLUDEDIR, LD_SHLIB, LDFLAGS_SHLIB, LIBEXECDIR, LIBS_SHLIB, SBINDIR, SYSCONFDIR, TARGET\&.
++.PP
++Use this for manually determining settings\&. For instance use INC=-I`apxs -q INCLUDEDIR`
++.PP
++inside your own Makefiles if you need manual access to Apache's C header files\&.  
+   
+ .SS "Configuration Options"
+  
