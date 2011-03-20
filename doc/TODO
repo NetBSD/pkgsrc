@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10204 2011/03/20 12:52:48 taca Exp $
+$NetBSD: TODO,v 1.10205 2011/03/20 13:20:36 adam Exp $
 
 Suggested new packages
 ======================
@@ -928,7 +928,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
 	o mktemp-1.7 [pkg/44014]
-	o mkvtoolnix-4.6.0
 	o moc-2.4.4
 	o modular-xorg-server-1.10.0
 	o molden-4.8 [after which PR 40252 can be closed]
