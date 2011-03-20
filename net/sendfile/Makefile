@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/10/14 14:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2011/03/20 12:00:15 obache Exp $
 #
 
 DISTNAME=	sendfile-20010216
@@ -19,9 +19,9 @@ EGDIR=		${PREFIX}/share/examples/sendfile
 CONF_FILES=	${EGDIR}/sendfile.cf ${PKG_SYSCONFDIR}/sendfile.cf
 CONF_FILES+=	${EGDIR}/sendfile.deny ${PKG_SYSCONFDIR}/sendfile.deny
 
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
+
 pre-configure:
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/develop
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/develop
 	cd ${WRKSRC} && \
 	${SED}  -e 's,@PREFIX@,${PREFIX},g' \
 		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
