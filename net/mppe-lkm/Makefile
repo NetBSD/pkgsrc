@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/11/01 00:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/21 05:05:06 obache Exp $
 
 DISTNAME=	kernel_ppp_mppe-0.0.4-src
 PKGNAME=	mppe-lkm-0.0.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NetBSD kernel module for MPPE compression with PPP
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 NO_CONFIGURE=	yes
 
