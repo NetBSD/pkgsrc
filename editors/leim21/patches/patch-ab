@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2007/10/29 13:41:29 uebayasi Exp $
+$NetBSD: patch-ab,v 1.2 2011/03/21 06:32:34 obache Exp $
 
---- ../configure.orig	2003-03-18 14:19:12.000000000 +0000
-+++ ../configure
+--- configure.orig	2003-03-18 14:19:12.000000000 +0000
++++ configure
 @@ -822,9 +822,13 @@ case "${canonical}" in
        sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
