@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.60 2011/03/21 04:52:18 obache Exp $
+# $NetBSD: install.mk,v 1.61 2011/03/21 08:55:12 obache Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -311,7 +311,7 @@ install-dirs-from-PLIST:
 INSTALL_DIRS?=		${BUILD_DIRS}
 INSTALL_MAKE_FLAGS?=	# none
 INSTALL_TARGET?=	install ${USE_IMAKE:D${NO_INSTALL_MANPAGES:D:Uinstall.man}}
-DESTDIR_VARNAME?=	"DESTDIR"
+DESTDIR_VARNAME?=	DESTDIR
 .if ${_USE_DESTDIR} != "no" && !empty(DESTDIR_VARNAME)
 INSTALL_ENV+=		${DESTDIR_VARNAME}=${DESTDIR:Q}
 INSTALL_MAKE_FLAGS+=	${DESTDIR_VARNAME}=${DESTDIR:Q}
