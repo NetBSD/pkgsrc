@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2009/06/13 06:46:48 rillig Exp $
+# $NetBSD: Makefile.common,v 1.18 2011/03/21 11:39:27 obache Exp $
 # used by devel/rt-mysql/Makefile
 # used by devel/rt-pgsql/Makefile
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bestpractical.com/rt/
 COMMENT=	Industrial-grade ticketing system
 CONFLICTS=	rt-*-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -102,6 +104,12 @@ SUBST_VARS.rt=	PREFIX RT_GROUP \
 	RT_PATH RT_LOG_PATH RT_DATA_PATH RT_SESSION_PATH \
 	RT_DB_TYPE RT_DB_DBA RT_DB_DBA_PASSWORD RT_DB_DATABASE RT_DB_USER \
 	RT_DB_PASS RT_DB_HOME RT_DB_HOST RT_DB_PORT RT_WEB_USER RT_WEB_GROUP
+
+INSTALL_MAKE_FLAGS+=	BIN_OWNER=${BINOWN}
+INSTALL_MAKE_FLAGS+=	LIBS_OWNER=${LIBOWN}
+INSTALL_MAKE_FLAGS+=	LIBS_GROUP=${LIBGRP}
+INSTALL_MAKE_FLAGS+=	RTGROUP=${RT_GROUP}
+USERGROUP_PHASE=	pre-install
 
 post-extract:
 	@${STEP_MSG} "Removing CVS directories from work directory"
