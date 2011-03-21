@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/11 09:31:56 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2011/03/21 06:12:19 obache Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,6 +10,8 @@ DISTFILES=	emacs-${VERSION}a${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods (for emacs21)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/emacs-${VERSION}/leim
 GNU_CONFIGURE=	yes
@@ -24,6 +26,9 @@ CONFIG_SUB_OVERRIDE=	../config.sub
 
 EMACS21_FILESDIR=	${.CURDIR}/../../editors/emacs21/files
 
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+INSTALLATION_DIRS+=	share/emacs/${VERSION}/leim
+
 post-extract:
 	@${ECHO} '#!/bin/sh' >${WRKSRC}/configure
 	@${ECHO} 'cd ..' >>${WRKSRC}/configure
@@ -34,7 +39,7 @@ post-extract:
 .include "../../mk/bsd.prefs.mk"
 
 post-install:
-	@${CHOWN} -R ${ROOT_USER} ${PREFIX}/share/emacs/${VERSION}/leim
+	@${CHOWN} -R ${ROOT_USER} ${DESTDIR}${PREFIX}/share/emacs/${VERSION}/leim
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

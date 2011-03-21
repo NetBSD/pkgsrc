@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/07/13 18:36:22 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2011/03/21 06:05:44 obache Exp $
 
 PKGNAME=	emacs-nox11-${EMACSVERSION}a
 PKGREVISION=	13
@@ -6,6 +6,8 @@ CATEGORIES=	editors
 COMMENT_EXTRA=	: non-X11 version
 
 CONFLICTS+=	emacs-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
