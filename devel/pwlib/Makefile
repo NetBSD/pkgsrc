@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2010/01/17 12:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2011/03/21 12:27:11 obache Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -13,6 +13,8 @@ COMMENT=	Portable Windows Library
 # note: obsoleted by devel/ptlib
 
 NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 WRKSRC=			${WRKDIR}/pwlib
 USE_TOOLS+=		bison gmake
@@ -40,19 +42,24 @@ post-extract:
 	mkdir ${WRKSRC}/share
 	${LN} -s ../../pwlib ${WRKSRC}/share/pwlib
 
-do-install:
-	cd ${WRKSRC}/src/ptlib/unix && ${MAKE_ENV} ${GMAKE} install
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
-	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
-	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
-	cd ${WRKSRC}/make; ${INSTALL_SCRIPT} ptlib-config ${PREFIX}/bin; \
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
+INSTALL_DIRS=	src/ptlib/unix
+
+INSTALLATION_DIRS+=	bin lib
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pwlib/make
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/ptclib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/ptlib/unix/ptlib
+	cd ${WRKSRC}/make; ${INSTALL_SCRIPT} ptlib-config ${DESTDIR}${PREFIX}/bin; \
 	for f in *.mak; do		\
-		${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make; \
+		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/pwlib/make; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/include/ptlib
+	${INSTALL_DATA} ${WRKSRC}/version.h ${DESTDIR}${PREFIX}/include/ptlib
 	cd ${WRKSRC}; \
 	for f in `${FIND} include -name CVS -prune -o -name \*.orig -prune -o -name wince -prune -o -name msos -prune -o -type f -print`; do	\
-		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
+		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/$$f;	\
 	done
 
 .include "../../security/openssl/buildlink3.mk"
