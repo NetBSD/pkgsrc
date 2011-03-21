@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.734 2011/03/21 16:54:07 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.735 2011/03/21 19:27:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1280,3 +1280,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/php5 to 5.2.17nb3 [taca 2011-03-21]
 	Added fonts/tex-arphic version 2.11 [minskim 2011-03-21]
 	Added fonts/tex-arphic-doc version 2.11 [minskim 2011-03-21]
+	Updated graphics/xdvipresent to 0.6.1.14nb6 [minskim 2011-03-21]
