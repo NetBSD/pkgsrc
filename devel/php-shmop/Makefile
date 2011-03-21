@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/21 16:08:28 taca Exp $
 
 MODNAME=		shmop
+PKGREVISION=		1
 CATEGORIES+=		devel
 COMMENT=		PHP extension for simple SysV shared memory operations
 
