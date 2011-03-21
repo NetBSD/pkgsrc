@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:21 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2011/03/21 04:53:49 obache Exp $
 #
 
 DISTNAME=	mrt-2.2.2a-Aug11
@@ -11,10 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mrtd.net/
 COMMENT=	Multi-threaded Routing Toolkit
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/mrt/src
 GNU_CONFIGURE=	yes
+DESTDIR_VARNAME=	# empty
+INSTALL_MAKE_FLAGS+=	DESTDIR=${DESTDIR}${PREFIX}/sbin
+INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 PLIST_SRC=	${WRKSRC}/.PLIST_SRC
 
