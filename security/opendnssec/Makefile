@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/01/24 20:30:28 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/21 15:52:25 pettai Exp $
 #
 
-DISTNAME=	opendnssec-1.2.0
+DISTNAME=	opendnssec-1.2.1
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	ldns>=1.6.7:../../net/ldns
+DEPENDS+=	ldns>=1.6.9:../../net/ldns
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.51:../../net/ruby-dnsruby
+DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.52:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -41,6 +41,7 @@ PKG_USERS_VARS+=	ODS_USER
 PKG_GROUPS_VARS+=	ODS_GROUP
 
 EGDIR=			${PREFIX}/share/examples/opendnssec
+DOCDIR=			${PREFIX}/share/doc/opendnssec
 ODS_SYSCONFDIR=		${PKG_SYSCONFDIR}/opendnssec
 
 SUBST_CLASSES+=		paths
@@ -59,7 +60,7 @@ CONF_FILES+=	${EGDIR}/zonefetch.xml.sample \
 CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
 			${ODS_SYSCONFDIR}/zonelist.xml
 
-INSTALLATION_DIRS=	${EGDIR} ${ODS_SYSCONFDIR}
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${ODS_SYSCONFDIR}
 INSTALLATION_DIRS+=	share/opendnssec
 INSTALLATION_DIRS+=	lib/opendnssec
 INSTALLATION_DIRS+=	lib/opendnssec/signer
@@ -74,6 +75,10 @@ OWN_DIRS+=		${VARBASE}/opendnssec/unsigned
 
 pre-install:
 	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}/opendnssec
+
+post-install:
+	${INSTALL} ${WRKSRC}/KNOWN_ISSUES ${DESTDIR}${DOCDIR}
+	${INSTALL} ${WRKSRC}/MIGRATION ${DESTDIR}${DOCDIR}
 
 #.include "../../devel/cunit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
