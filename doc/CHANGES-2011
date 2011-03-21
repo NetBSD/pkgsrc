@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.735 2011/03/21 19:27:48 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.736 2011/03/21 19:56:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1281,3 +1281,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-arphic version 2.11 [minskim 2011-03-21]
 	Added fonts/tex-arphic-doc version 2.11 [minskim 2011-03-21]
 	Updated graphics/xdvipresent to 0.6.1.14nb6 [minskim 2011-03-21]
+	Updated cad/tnt-mmtl to 1.2.2nb5 [minskim 2011-03-21]
