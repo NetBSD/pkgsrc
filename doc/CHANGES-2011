@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.729 2011/03/21 13:46:41 adam Exp $
+$NetBSD: CHANGES-2011,v 1.730 2011/03/21 16:10:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ldns to 1.6.9 [pettai 2011-03-21]
 	Updated net/ruby-dnsruby to 1.52 [pettai 2011-03-21]
 	Updated archivers/p7zip to 9.20.1 [adam 2011-03-21]
+	Updated devel/php-shmop to 5.2.17nb1 [taca 2011-03-21]
