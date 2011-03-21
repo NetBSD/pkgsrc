@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2011/01/01 05:09:17 obache Exp $
+# $NetBSD: Makefile,v 1.45 2011/03/21 13:29:44 obache Exp $
 
 DISTNAME=	openh323-v1_15_2-src
 PKGNAME=	openh323-1.15.2
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openh323.org/
 COMMENT=	Open H.323 library
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 WRKSRC=			${WRKDIR}/openh323
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake tar
@@ -21,11 +23,12 @@ CONFIGURE_ARGS+=	PWLIBDIR=${PREFIX:Q}
 BUILD_TARGET=		opt apps
 MAKE_ENV+=		PWLIBDIR=${PREFIX}/share/pwlib OPENH323DIR=${WRKSRC:Q}
 MAKE_ENV+=		SYSLIBDIR=${PREFIX}/lib
+INSTALL_MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}
 
 MAKE_JOBS_SAFE=		no
 
 INSTALL_DIRS=		src plugins samples/simple
-INSTALLATION_DIRS+=	include/openh323 share/openh323
+INSTALLATION_DIRS+=	bin include/openh323 lib share/openh323
 
 post-patch:
 	cd ${WRKSRC}/include; ${LN} -s . openh323
