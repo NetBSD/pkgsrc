@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2006/01/04 16:58:58 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2011/03/21 08:11:27 obache Exp $
 
---- ../configure.orig	2006-01-04 16:46:20.000000000 +0000
-+++ ../configure
+--- configure.orig	2006-01-04 16:46:20.000000000 +0000
++++ configure
 @@ -1519,6 +1519,7 @@ case "${canonical}" in
        *-sysv4.2uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
        *-386bsd* )	        opsys=386bsd ;;
