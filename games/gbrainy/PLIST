@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/02/13 17:10:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/03/21 09:58:13 wiz Exp $
 bin/gbrainy
 lib/gbrainy/gbrainy.Core.dll
 lib/gbrainy/gbrainy.Core.dll.config
@@ -272,6 +272,27 @@ share/gnome/help/gbrainy/nl/pause.page
 share/gnome/help/gbrainy/nl/score.page
 share/gnome/help/gbrainy/nl/times.page
 share/gnome/help/gbrainy/nl/tips.page
+share/gnome/help/gbrainy/ro/customgame.page
+share/gnome/help/gbrainy/ro/difficulty.page
+share/gnome/help/gbrainy/ro/export.page
+share/gnome/help/gbrainy/ro/figures/all-games.png
+share/gnome/help/gbrainy/ro/figures/gbrainy.png
+share/gnome/help/gbrainy/ro/figures/logic-games.png
+share/gnome/help/gbrainy/ro/figures/math-games.png
+share/gnome/help/gbrainy/ro/figures/memory-games.png
+share/gnome/help/gbrainy/ro/figures/verbal-games.png
+share/gnome/help/gbrainy/ro/gameplay.page
+share/gnome/help/gbrainy/ro/gametypes.page
+share/gnome/help/gbrainy/ro/history.page
+share/gnome/help/gbrainy/ro/index.page
+share/gnome/help/gbrainy/ro/legal.xml
+share/gnome/help/gbrainy/ro/license.page
+share/gnome/help/gbrainy/ro/multiplayer.page
+share/gnome/help/gbrainy/ro/newgame.page
+share/gnome/help/gbrainy/ro/pause.page
+share/gnome/help/gbrainy/ro/score.page
+share/gnome/help/gbrainy/ro/times.page
+share/gnome/help/gbrainy/ro/tips.page
 share/gnome/help/gbrainy/sl/customgame.page
 share/gnome/help/gbrainy/sl/difficulty.page
 share/gnome/help/gbrainy/sl/export.page
@@ -380,3 +401,4 @@ share/locale/zh_TW/LC_MESSAGES/gbrainy.mo
 share/pixmaps/gbrainy.png
 share/pixmaps/gbrainy.svg
 share/pixmaps/gbrainy16.png
+share/pixmaps/gbrainy48.png
