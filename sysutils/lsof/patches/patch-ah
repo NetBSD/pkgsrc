@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2009/08/11 20:53:06 apb Exp $
+$NetBSD: patch-ah,v 1.5 2011/03/21 00:22:02 jym Exp $
 
 --- dialects/n+obsd/dproc.c.orig	2005-05-11 14:54:00.000000000 +0200
 +++ dialects/n+obsd/dproc.c
@@ -27,7 +27,7 @@ $NetBSD: patch-ah,v 1.4 2009/08/11 20:53:06 apb Exp $
 +   */
 +# define HAVE_STRUCT_FDTAB 1
 +# define NFILES(fd,dt) ((dt).dt_nfiles)
-+# define OFILES(fd,dt) ((dt).dt_ff)
++# define OFILES(fd,dt) ((fd).fd_dt->dt_ff)
 +#else
 +# undef HAVE_STRUCT_FDTAB
 +# define NFILES(fd,dt) ((fd).fd_nfiles)
