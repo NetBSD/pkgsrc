@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/21 16:52:39 minskim Exp $
+share/texmf-dist/doc/fonts/arphic/arphic-sampler.pdf
+share/texmf-dist/doc/fonts/arphic/arphic-sampler.tex
+share/texmf-dist/doc/fonts/arphic/bkaiu/README
+share/texmf-dist/doc/fonts/arphic/bsmiu/README
+share/texmf-dist/doc/fonts/arphic/gbsnu/README
+share/texmf-dist/doc/fonts/arphic/gkaiu/README
