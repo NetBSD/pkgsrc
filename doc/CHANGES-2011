@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.727 2011/03/21 13:12:12 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.728 2011/03/21 13:22:49 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/zyGrib to 3.9.9.1 [plunky 2011-03-21]
 	Updated net/lftp to 4.2.0 [pettai 2011-03-21]
 	Updated net/ldns to 1.6.9 [pettai 2011-03-21]
+	Updated net/ruby-dnsruby to 1.52 [pettai 2011-03-21]
