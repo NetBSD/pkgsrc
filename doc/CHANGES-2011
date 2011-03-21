@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.722 2011/03/20 21:41:55 gls Exp $
+$NetBSD: CHANGES-2011,v 1.723 2011/03/21 00:08:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1267,3 +1267,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29-translations to 20110319 [taca 2011-03-20]
 	Updated multimedia/mkvtoolnix to 4.6.0 [adam 2011-03-20]
 	Updated www/p5-Mojolicious to 1.14 [gls 2011-03-20]
+	Updated editors/emacs-snapshot to 24.0.50.20110316 [minskim 2011-03-21]
