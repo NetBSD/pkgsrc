@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2010/11/17 11:21:12 pettai Exp $
+# $NetBSD: Makefile,v 1.9 2011/03/21 13:22:27 pettai Exp $
 
-DISTNAME=	dnsruby-1.51
+DISTNAME=	dnsruby-1.52
 CATEGORIES=	net
 
 MAINTAINER=	pettai@NetBSD.org
@@ -11,8 +11,8 @@ LICENSE=	apache-1.1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
-	${MKDIR} -p ${WRKSRC}/html/classes
-	${MKDIR} -p ${WRKSRC}/html/files
+	${MKDIR} ${WRKSRC}/html/classes
+	${MKDIR} ${WRKSRC}/html/files
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
