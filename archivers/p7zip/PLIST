@@ -1,29 +1,8 @@
-@comment $NetBSD: PLIST,v 1.16 2010/06/16 08:30:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/03/21 13:45:51 adam Exp $
 bin/7z
 bin/7za
 ${PLIST.dll}lib/7z/7z
-${PLIST.dll}lib/7z/Codecs/7zAES.dll
-${PLIST.dll}lib/7z/Codecs/AES.dll
-${PLIST.dll}lib/7z/Codecs/BZip2.dll
-${PLIST.dll}lib/7z/Codecs/Branch.dll
-${PLIST.dll}lib/7z/Codecs/Copy.dll
-${PLIST.dll}lib/7z/Codecs/Deflate.dll
-${PLIST.dll}lib/7z/Codecs/Implode.dll
-${PLIST.dll}lib/7z/Codecs/LZMA.dll
-${PLIST.dll}lib/7z/Codecs/PPMD.dll
-${PLIST.dll}lib/7z/Codecs/Swap.dll
-${PLIST.dll}lib/7z/Formats/7z.dll
-${PLIST.dll}lib/7z/Formats/Rar.dll
-${PLIST.dll}lib/7z/Formats/Tar.dll
-${PLIST.dll}lib/7z/Formats/Zip.dll
-${PLIST.dll}lib/7z/Formats/arj.dll
-${PLIST.dll}lib/7z/Formats/bz2.dll
-${PLIST.dll}lib/7z/Formats/cab.dll
-${PLIST.dll}lib/7z/Formats/cpio.dll
-${PLIST.dll}lib/7z/Formats/deb.dll
-${PLIST.dll}lib/7z/Formats/gz.dll
-${PLIST.dll}lib/7z/Formats/rpm.dll
-${PLIST.dll}lib/7z/Formats/split.dll
+${PLIST.dll}lib/7z/Codecs/Rar29.so
 man/man1/7z.1
 man/man1/7za.1
 man/man1/7zr.1
