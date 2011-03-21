@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/01/09 17:06:19 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/03/21 02:45:04 obache Exp $
 
 DISTNAME=	ns-allinone-2.29.3
 PKGNAME=	nam-1.11
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.isi.edu/nsnam/nam/
 COMMENT=	The UCB/LBNL Network Animator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
@@ -28,7 +29,7 @@ CONFIGURE_ENV+=		V_LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
@@ -42,7 +43,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/tk/buildlink3.mk"
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/nam.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/nam.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
