@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.728 2011/03/21 13:22:49 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.729 2011/03/21 13:46:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1273,3 +1273,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/lftp to 4.2.0 [pettai 2011-03-21]
 	Updated net/ldns to 1.6.9 [pettai 2011-03-21]
 	Updated net/ruby-dnsruby to 1.52 [pettai 2011-03-21]
+	Updated archivers/p7zip to 9.20.1 [adam 2011-03-21]
