@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2011/03/14 18:18:33 abs Exp $
+# $NetBSD: Makefile,v 1.50 2011/03/21 13:45:51 adam Exp $
 
-DISTNAME=	p7zip_9.20_src_all
-PKGNAME=	p7zip-9.20
+DISTNAME=	p7zip_9.20.1_src_all
+PKGNAME=	p7zip-9.20.1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,12 +15,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 MAKE_FILE=		makefile
 MAKE_JOBS_SAFE=		no # missing header when compiling sfx
 NO_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 PLIST_VARS=		dll
-USE_TOOLS=		gmake
 
 # compiles, but does not recognize any archives as supported
 DYNAMIC_7Z=		NO
@@ -55,13 +55,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7za ${DESTDIR}${PREFIX}/bin
 .if !empty(DYNAMIC_7Z:MYES)
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z ${DESTDIR}${PREFIX}/lib/7z
-	ln -s ${PREFIX}/lib/7z/7z ${DESTDIR}${PREFIX}/bin
+	ln -f -s ${PREFIX}/lib/7z/7z ${DESTDIR}${PREFIX}/bin
 	${INSTALL_LIB} ${WRKSRC}/bin/Codecs/* \
 		${DESTDIR}${PREFIX}/lib/7z/Codecs
-	${INSTALL_LIB} ${WRKSRC}/bin/Formats/* \
-		${DESTDIR}${PREFIX}/lib/7z/Formats
 .else
-	ln -s 7za ${DESTDIR}${PREFIX}/bin/7z
+	ln -f -s 7za ${DESTDIR}${PREFIX}/bin/7z
 .endif
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/p7zip
