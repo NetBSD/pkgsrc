@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2010/05/05 14:26:36 roy Exp $
+# $NetBSD: Makefile.common,v 1.8 2011/03/21 06:05:44 obache Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 
@@ -28,6 +28,9 @@ CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${EMACSVERSION}
 
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -97,5 +100,5 @@ pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
 
 post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
-	${CHMOD} -R go-w ${PREFIX}/share/emacs
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/emacs
+	${CHMOD} -R go-w ${DESTDIR}${PREFIX}/share/emacs
