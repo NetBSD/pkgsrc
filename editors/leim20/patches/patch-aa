@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/11 01:12:21 uebayasi Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/21 08:11:27 obache Exp $
 
---- Makefile.in.orig	Mon Jan 11 12:40:22 1999
-+++ Makefile.in	Tue Dec 28 14:53:29 1999
+--- leim/Makefile.in.orig	Mon Jan 11 12:40:22 1999
++++ leim/Makefile.in	Tue Dec 28 14:53:29 1999
 @@ -37,7 +37,7 @@
  
  # Which Emacs to use to convert TIT files to Emacs Lisp files,
