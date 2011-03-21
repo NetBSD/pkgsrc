@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/21 19:27:16 minskim Exp $
 bin/xdvipresent
 man/man1/xdvipresent.1
 share/doc/xdvipresent/xdvipresent.css
@@ -8,16 +8,16 @@ share/doc/xdvipresent/xdvipresent_2.html
 share/doc/xdvipresent/xdvipresent_3.html
 share/doc/xdvipresent/xdvipresent_toc.html
 share/examples/xdvipresent/example.tex
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/Clip.ps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/blue.line.eps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/blueball.ps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/clip.eps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/clip_small.ps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/clip_tiny.eps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/example_figure.eps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/greenball.ps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/line.fig
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/redball.ps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/thin_line.fig
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/images/thin_line.red.eps
-${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent/xdvislides.cls
+share/texmf-dist/tex/latex/xdvipresent/images/Clip.ps
+share/texmf-dist/tex/latex/xdvipresent/images/blue.line.eps
+share/texmf-dist/tex/latex/xdvipresent/images/blueball.ps
+share/texmf-dist/tex/latex/xdvipresent/images/clip.eps
+share/texmf-dist/tex/latex/xdvipresent/images/clip_small.ps
+share/texmf-dist/tex/latex/xdvipresent/images/clip_tiny.eps
+share/texmf-dist/tex/latex/xdvipresent/images/example_figure.eps
+share/texmf-dist/tex/latex/xdvipresent/images/greenball.ps
+share/texmf-dist/tex/latex/xdvipresent/images/line.fig
+share/texmf-dist/tex/latex/xdvipresent/images/redball.ps
+share/texmf-dist/tex/latex/xdvipresent/images/thin_line.fig
+share/texmf-dist/tex/latex/xdvipresent/images/thin_line.red.eps
+share/texmf-dist/tex/latex/xdvipresent/xdvislides.cls

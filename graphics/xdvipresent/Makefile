@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:33 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2011/03/21 19:27:16 minskim Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
 PKGNAME=	xdvipresent-0.6.1.14
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics textproc print x11
 MASTER_SITES=	http://clip.dia.fi.upm.es/Software/
 
@@ -12,6 +12,8 @@ HOMEPAGE=	http://clip.dia.fi.upm.es/Software/
 COMMENT=	Slide Presentations Using LaTeX/xdvi
 
 DEPENDS+=	latex2html>=2002.2:../../textproc/latex2html
+DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
+DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -19,7 +21,7 @@ WRKSRC=		${WRKDIR}/xdvipresent
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-STYDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent
+STYDIR=		${PREFIX}/share/texmf-dist/tex/latex/xdvipresent
 EXAMPLES_DIR=	${PREFIX}/share/examples/xdvipresent
 HTML_DIR=	${PREFIX}/share/doc/xdvipresent
 
@@ -38,5 +40,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${HTML_DIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/xdvipresent_html/* ${DESTDIR}${HTML_DIR}
 
-.include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"
