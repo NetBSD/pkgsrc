@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.724 2011/03/21 09:58:25 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.725 2011/03/21 11:47:37 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1269,3 +1269,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Mojolicious to 1.14 [gls 2011-03-20]
 	Updated editors/emacs-snapshot to 24.0.50.20110316 [minskim 2011-03-21]
 	Updated games/gbrainy to 1.63 [wiz 2011-03-21]
+	Updated misc/zyGrib to 3.9.9.1 [plunky 2011-03-21]
