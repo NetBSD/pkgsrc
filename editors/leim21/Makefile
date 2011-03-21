@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/21 06:12:19 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/03/21 06:32:33 obache Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Libraries of Emacs Input Methods (for emacs21)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/emacs-${VERSION}/leim
+WRKSRC=		${WRKDIR}/emacs-${VERSION}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
@@ -21,20 +21,14 @@ VERSION=	21.4
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox
 
-CONFIG_GUESS_OVERRIDE=	../config.guess
-CONFIG_SUB_OVERRIDE=	../config.sub
-
 EMACS21_FILESDIR=	${.CURDIR}/../../editors/emacs21/files
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	share/emacs/${VERSION}/leim
 
+BUILD_DIRS=		leim
 post-extract:
-	@${ECHO} '#!/bin/sh' >${WRKSRC}/configure
-	@${ECHO} 'cd ..' >>${WRKSRC}/configure
-	@${ECHO} 'exec ./configure $$*' >>${WRKSRC}/configure
-	@${CHMOD} +x ${WRKSRC}/configure
-	${CP} ${EMACS21_FILESDIR}/dragonfly.h ${WRKSRC}/../src/s
+	${CP} ${EMACS21_FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 
 .include "../../mk/bsd.prefs.mk"
 
