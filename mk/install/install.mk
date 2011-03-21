@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.59 2010/02/25 01:03:44 joerg Exp $
+# $NetBSD: install.mk,v 1.60 2011/03/21 04:52:18 obache Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -49,6 +49,10 @@
 #	When this variable is set to "yes", all directories mentioned
 #	in the PLIST files will be created like in INSTALLATION_DIRS.
 #
+# DESTDIR_VARNAME
+#	A variable name that should be set as staged installation location
+#	presented as ${DESTDIR} at install phase.
+#	"DESTDIR" is set by default.
 
 ######################################################################
 ### install (PUBLIC)
@@ -307,9 +311,10 @@ install-dirs-from-PLIST:
 INSTALL_DIRS?=		${BUILD_DIRS}
 INSTALL_MAKE_FLAGS?=	# none
 INSTALL_TARGET?=	install ${USE_IMAKE:D${NO_INSTALL_MANPAGES:D:Uinstall.man}}
-.if ${_USE_DESTDIR} != "no"
-INSTALL_ENV+=		DESTDIR=${DESTDIR:Q}
-INSTALL_MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q}
+DESTDIR_VARNAME?=	"DESTDIR"
+.if ${_USE_DESTDIR} != "no" && !empty(DESTDIR_VARNAME)
+INSTALL_ENV+=		${DESTDIR_VARNAME}=${DESTDIR:Q}
+INSTALL_MAKE_FLAGS+=	${DESTDIR_VARNAME}=${DESTDIR:Q}
 .endif
 
 .if !target(do-install)
