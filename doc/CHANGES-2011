@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.740 2011/03/22 09:38:30 taca Exp $
+$NetBSD: CHANGES-2011,v 1.741 2011/03/22 13:55:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1286,3 +1286,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/ruby-ming to 0.2.1nb4 [obache 2011-03-22]
 	Updated multimedia/py-ming to 0.4.3nb3 [obache 2011-03-22]
 	Updated mail/postfix to 2.8.2 [taca 2011-03-22]
+	Updated mail/exim to 4.75 [adam 2011-03-22]
+	Updated mail/exim-html to 4.75 [adam 2011-03-22]
