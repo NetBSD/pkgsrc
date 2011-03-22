@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.745 2011/03/22 17:08:21 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.746 2011/03/22 17:29:29 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1242,7 +1242,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/claws-mail to 3.7.8 [gls 2011-03-19]
 	Updated mail/claws-mail-archive to 0.6.8nb2 [gls 2011-03-19]
 	Updated mail/claws-mail-attachwarner to 0.2.20nb2 [gls 2011-03-19]
-	Updated mail/claws-mail-att-remover to 1.0.12nb2 [gls 2011-03-19]
+	Updated mail/claws-mail-attremover to 1.0.12nb2 [gls 2011-03-19]
 	Updated mail/claws-mail-bogofilter to 3.7.8 [gls 2011-03-19]
 	Updated mail/claws-mail-cachesaver to 0.10.9nb7 [gls 2011-03-19]
 	Updated mail/claws-mail-dillo-viewer to 3.7.8 [gls 2011-03-19]
