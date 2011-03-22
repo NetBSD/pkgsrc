@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/27 18:49:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/03/22 16:58:15 minskim Exp $
 
-SHA1 (tex-fwlw-doc-2009/fwlw.doc.tar.xz) = bea8b560f4296d0bf2c4cca7647f5d1f336db6e2
-RMD160 (tex-fwlw-doc-2009/fwlw.doc.tar.xz) = 2a5454bf4da98d77df797af0b9c79afc42cd3783
-Size (tex-fwlw-doc-2009/fwlw.doc.tar.xz) = 149300 bytes
+SHA1 (tex-fwlw-21548/fwlw.doc.tar.xz) = 3edf0dc1516ff889266bcbe472b85f6fb46e700c
+RMD160 (tex-fwlw-21548/fwlw.doc.tar.xz) = 3ccc5c924f60a770a80477ec14cc20a7b4ed5f17
+Size (tex-fwlw-21548/fwlw.doc.tar.xz) = 36668 bytes
