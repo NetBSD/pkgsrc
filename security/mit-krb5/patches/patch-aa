@@ -1,31 +1,30 @@
-$NetBSD: patch-aa,v 1.2 2005/04/10 07:15:25 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2011/03/22 23:31:04 tez Exp $
 
---- aclocal.m4.orig	2005-01-14 19:10:44.000000000 -0500
-+++ aclocal.m4
-@@ -1113,8 +1113,10 @@ dnl Pull in the necessary stuff to creat
- 
- AC_DEFUN(KRB5_BUILD_LIBRARY,
- [KRB5_BUILD_LIBRARY_WITH_DEPS
--# null out SHLIB_EXPFLAGS because we lack any dependencies
--SHLIB_EXPFLAGS=])
-+# null out SHLIB_EXPFLAGS and LALIB_EXPFLAGS because we lack any dependencies
-+SHLIB_EXPFLAGS=
-+LALIB_EXPFLAGS=
-+])
- 
- dnl
- dnl KRB5_BUILD_LIBRARY_STATIC
-@@ -1162,6 +1164,9 @@ AC_SUBST(SHLIBVEXT)
+Don't make sunpro warnings into errors (warnings are seen in gcc too)
+Add --enable-pkgsrc-libtool option
+
+--- aclocal.m4.orig	2009-11-22 11:00:45.000000000 -0600
++++ aclocal.m4	2011-01-07 17:00:12.222547100 -0600
+@@ -620,7 +620,7 @@
+     # works, but it also means that declaration-in-code warnings won't
+     # be issued.
+     # -v -fd -errwarn=E_DECLARATION_IN_CODE ...
+-    WARN_CFLAGS="-errtags=yes -errwarn=E_BAD_PTR_INT_COMBINATION,E_BAD_PTR_INT_COMB_ARG,E_PTR_TO_VOID_IN_ARITHMETIC,E_NO_IMPLICIT_DECL_ALLOWED,E_ATTRIBUTE_PARAM_UNDEFINED"
++    WARN_CFLAGS="-errtags=yes"
+     WARN_CXXFLAGS="-errtags=yes +w +w2 -xport64"
+   fi
+ fi
+@@ -1090,6 +1090,9 @@
  AC_SUBST(SHLIBSEXT)
  AC_SUBST(DEPLIBEXT)
  AC_SUBST(PFLIBEXT)
 +AC_SUBST(LALIBEXT)
 +AC_SUBST(LALIB_EXPFLAGS)
 +AC_SUBST(LIBTOOL_TAIL)
- AC_SUBST(LIBINSTLIST)])
- 
- dnl
-@@ -1175,6 +1180,7 @@ AC_SUBST(OBJLISTS)
+ AC_SUBST(LIBINSTLIST)
+ AC_SUBST(DYNOBJEXT)
+ AC_SUBST(MAKE_DYNOBJ_COMMAND)
+@@ -1106,6 +1109,7 @@
  AC_SUBST(STOBJEXT)
  AC_SUBST(SHOBJEXT)
  AC_SUBST(PFOBJEXT)
@@ -33,18 +32,14 @@ $NetBSD: patch-aa,v 1.2 2005/04/10 07:15:25 jlam Exp $
  AC_SUBST(PICFLAGS)
  AC_SUBST(PROFFLAGS)])
  
-@@ -1226,6 +1232,8 @@ else
- 	LIBINSTLIST=install-static
- 	DEPLIBEXT=$STLIBEXT
+@@ -1214,11 +1218,42 @@
+ 	KDB5_PLUGIN_DEPLIBS=
+ 	KDB5_PLUGIN_LIBS=
  fi
 +DEPSTLIBEXT=$STLIBEXT
 +AC_SUBST(DEPSTLIBEXT)
- 
- # Check whether to build shared libraries.
- AC_ARG_ENABLE([shared],
-@@ -1284,8 +1292,35 @@ else
- 	SHLIBSEXT=.so.s-nobuild
- fi
+ CC_LINK="$CC_LINK_SHARED"
+ CXX_LINK="$CXX_LINK_SHARED"
  
 +# Check whether to build libtool archives.
 +AC_ARG_ENABLE([pkgsrc-libtool],
@@ -61,6 +56,8 @@ $NetBSD: patch-aa,v 1.2 2005/04/10 07:15:25 jlam Exp $
 +	LIBINSTLIST=install-libtool
 +	DEPLIBEXT=$LALIBEXT
 +	DEPSTLIBEXT=$LALIBEXT
++	PLUGIN='lib$(LIBBASE)$(LALIBEXT)'
++	PLUGININST=install-libtool
 +	CC_LINK="$CC_LINK_LIBTOOL"
 +	INSTALL_LIBTOOL='$(LIBTOOL) --mode=install'
 +	if test "$krb5_force_static" = yes; then
