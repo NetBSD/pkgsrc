@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2010/03/26 21:44:59 joerg Exp $
+$NetBSD: patch-ad,v 1.5 2011/03/22 23:31:04 tez Exp $
 
---- config/lib.in.orig	2005-04-07 21:38:51.000000000 +0000
-+++ config/lib.in
-@@ -26,8 +26,9 @@
+Add --enable-pkgsrc-libtool option
+
+--- config/lib.in.orig	2010-12-12 17:13:42.864774300 -0600
++++ config/lib.in	2010-12-12 17:24:08.783385600 -0600
+@@ -29,8 +29,9 @@
  # STOBJLISTS=dir1/OBJS.ST dir2/OBJS.ST etc...
  SHOBJLISTS=$(STOBJLISTS:.ST=.SH)
  PFOBJLISTS=$(STOBJLISTS:.ST=.PF)
@@ -12,8 +14,8 @@ $NetBSD: patch-ad,v 1.4 2010/03/26 21:44:59 joerg Exp $
 +dummy-target-1 $(SUBDIROBJLISTS) $(SUBDIROBJLISTS:.ST=.SH) $(SUBDIROBJLISTS:.ST=.PF) $(SUBDIROBJLISTS:.ST=.LA): all-recurse
  
  # Gets invoked as $(PARSE_OBJLISTS) list-of-OBJS.*-files
- PARSE_OBJLISTS= set -x && $(PERL) -p -e '$$e=$$ARGV; $$e =~ s/OBJS\...$$//; s/^/ /; s/ $$//; s/ / $$e/g;'
-@@ -90,6 +91,21 @@ lib$(LIBBASE)$(PFLIBEXT): $(PFOBJLISTS)
+ PARSE_OBJLISTS= set -x && $(PERL) -p -e 'BEGIN { $$SIG{__WARN__} = sub {die @_} }; $$e=$$ARGV; $$e =~ s/OBJS\...$$//; s/^/ /; s/ $$//; s/ / $$e/g;'
+@@ -99,6 +100,21 @@
  	set -x; objlist=`$(PARSE_OBJLISTS) $(PFOBJLISTS)` && $(AR) cq $@ $$objlist
  	$(RANLIB) $@
  
@@ -35,15 +37,15 @@ $NetBSD: patch-ad,v 1.4 2010/03/26 21:44:59 joerg Exp $
  $(TOPLIBD)/lib$(LIBBASE)$(STLIBEXT): lib$(LIBBASE)$(STLIBEXT)
  	$(RM) $@
  	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIBBASE)$(STLIBEXT) .)
-@@ -115,6 +131,7 @@ clean-libs:
+@@ -124,6 +140,7 @@
  	$(RM) lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) lib$(LIBBASE)$(PFLIBEXT)
 +	$(LIBTOOL) --mode=uninstall $(RM) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
- 	$(RM) binutils.versions osf1.exports
+ 	$(RM) binutils.versions osf1.exports darwin.exports hpux10.exports
  
  clean-liblinks:
-@@ -123,6 +140,7 @@ clean-liblinks:
+@@ -132,6 +149,7 @@
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(PFLIBEXT)
@@ -51,13 +53,13 @@ $NetBSD: patch-ad,v 1.4 2010/03/26 21:44:59 joerg Exp $
  
  install-libs: $(LIBINSTLIST)
  install-static:
-@@ -143,6 +161,9 @@ install-profiled:
+@@ -152,6 +170,9 @@
  	$(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)
  	$(INSTALL_DATA) lib$(LIBBASE)$(PFLIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
  	$(RANLIB) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)
 +install-libtool:
 +	$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(LALIBEXT)
-+	$(LIBTOOL) --mode=install $(INSTALL_DATA) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
++	$(LIBTOOL) --mode=install $(INSTALL_SHLIB) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
  
- Makefile: $(SRCTOP)/config/lib.in
- $(thisconfigdir)/config.status: $(SRCTOP)/config/shlib.conf
+ Makefile: $(top_srcdir)/config/lib.in
+ $(BUILDTOP)/config.status: $(top_srcdir)/config/shlib.conf

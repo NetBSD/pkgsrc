@@ -1,0 +1,35 @@
+$NetBSD: patch-ch,v 1.1 2011/03/22 23:31:05 tez Exp $
+
+Add --enable-pkgsrc-libtool option
+
+--- plugins/kdb/db2/Makefile.in.orig	2009-11-22 12:13:29.000000000 -0600
++++ plugins/kdb/db2/Makefile.in	2011-01-04 17:08:39.419207800 -0600
+@@ -35,8 +35,8 @@
+ # Also on gssrpc, for xdr stuff.
+ SHLIB_EXPDEPS = \
+ 	$(GSSRPC_DEPLIBS) \
+-	$(TOPLIBD)/libk5crypto$(SHLIBEXT) \
+-	$(TOPLIBD)/libkrb5$(SHLIBEXT)
++	$(TOPLIBD)/libk5crypto$(DEPLIBEXT) \
++	$(TOPLIBD)/libkrb5$(DEPLIBEXT)
+ SHLIB_EXPLIBS= $(GSSRPC_LIBS) -lkrb5 -lcom_err -lk5crypto $(KDB5_DB_LIB) $(KADMSRV_LIBS) $(SUPPORT_LIB) $(LIBS) @DB_EXTRA_LIBS@
+ 
+ SHLIB_DIRS=-L$(TOPLIBD)
+@@ -47,7 +47,7 @@
+ DBOBJLISTS-sys =
+ DBOBJLISTS-k5 = $(DBDIR)/hash/OBJS.ST $(DBDIR)/btree/OBJS.ST \
+ 	$(DBDIR)/db/OBJS.ST $(DBDIR)/mpool/OBJS.ST $(DBDIR)/recno/OBJS.ST
+-DBSHOBJLISTS = $(DBOBJLISTS:.ST=.SH)
++DBSHOBJLISTS = $(DBOBJLISTS:.ST=.LA)
+ 
+ SRCS= \
+ 	$(srcdir)/kdb_xdr.c \
+@@ -59,7 +59,7 @@
+ 	$(srcdir)/db2_exp.c \
+ 	$(srcdir)/lockout.c
+ 
+-STOBJLISTS=OBJS.ST $(DBOBJLISTS)
++STOBJLISTS=OBJS.LA $(DBOBJLISTS)
+ STLIBOBJS= \
+ 	kdb_xdr.o \
+ 	adb_openclose.o \

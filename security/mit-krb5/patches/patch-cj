@@ -1,0 +1,19 @@
+$NetBSD: patch-cj,v 1.1 2011/03/22 23:31:05 tez Exp $
+
+Add --enable-pkgsrc-libtool option
+
+--- config/libpriv.in.orig	Wed Jan  5 12:25:20 2011
++++ config/libpriv.in	Wed Jan  5 12:26:34 2011
+@@ -3,9 +3,9 @@
+ #
+ # The defaults (for installed shared libraries) are in pre.in.  We
+ # override them here, before lib.in uses them.
+-LIBLIST=lib$(LIBBASE)$(STLIBEXT)
+-LIBLINKS=$(TOPLIBD)/lib$(LIBBASE)$(STLIBEXT)
+-OBJLISTS=OBJS.ST
++LIBLIST=lib$(LIBBASE)$(LALIBEXT)
++LIBLINKS=$(TOPLIBD)/lib$(LIBBASE)$(LALIBEXT)
++OBJLISTS=OBJS.LA
+ LIBINSTLIST=
+ SHLIBEXT=.so-nobuild
+ SHLIBVEXT=.so.v-nobuild

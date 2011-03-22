@@ -5,5 +5,7 @@ client/server applications by using secret-key cryptography. (Kerberos
 
 This package provides Kerberos and GSSAPI (Generic Security Services
 Application Programming Interface) development headers and libraries.
-It also includes Kerberos ticket and principal tools, and Kerberized
-r-services, telnet and ftp services.
+It also includes Kerberos ticket and principal tools.
+
+N.B. Kerberized r-services, telnet and ftp services are now found in
+     the security/mit-krb5-appl package.

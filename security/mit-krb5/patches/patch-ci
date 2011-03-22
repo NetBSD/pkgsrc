@@ -1,0 +1,58 @@
+$NetBSD: patch-ci,v 1.1 2011/03/22 23:31:05 tez Exp $
+
+Add --enable-pkgsrc-libtool option
+
+--- config/libnover.in.orig	Sun Nov 22 12:13:29 2009
++++ config/libnover.in	Wed Jan  5 19:09:38 2011
+@@ -28,8 +28,10 @@
+ # STOBJLISTS=dir1/OBJS.ST dir2/OBJS.ST etc...
+ SHOBJLISTS=$(STOBJLISTS:.ST=.SH)
+ PFOBJLISTS=$(STOBJLISTS:.ST=.PF)
++LAOBJLISTS=$(STOBJLISTS:.ST=.LA)
++LIBTOOL_TAIL=-rpath $(MODULE_INSTALL_DIR) -shared -module -avoid-version
+ 
+-dummy-target-1 $(SUBDIROBJLISTS) $(SUBDIROBJLISTS:.ST=.SH) $(SUBDIROBJLISTS:.ST=.PF): all-recurse
++dummy-target-1 $(SUBDIROBJLISTS) $(SUBDIROBJLISTS:.ST=.SH) $(SUBDIROBJLISTS:.ST=.PF) $(SUBDIROBJLISTS:.ST=.LA): all-recurse
+ 
+ # Gets invoked as $(PARSE_OBJLISTS) list-of-OBJS.*-files
+ PARSE_OBJLISTS= set -x && $(PERL) -p -e 'BEGIN { $$SIG{__WARN__} = sub {die @_} }; $$e=$$ARGV; $$e =~ s/OBJS\...$$//; s/^/ /; s/ $$//; s/ / $$e/g;'
+@@ -91,6 +93,21 @@
+ 	set -x; objlist=`$(PARSE_OBJLISTS) $(PFOBJLISTS)` && $(AR) cq $@ $$objlist
+ 	$(RANLIB) $@
+ 
++lib$(LIBBASE)$(LALIBEXT): ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
++	$(RM) $@
++	$(LN_S) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $@
++
++${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT): $(LAOBJLISTS)
++	$(RM) $@
++	@echo "building $(LIBBASE) libtool archive ($(LIBMAJOR).$(LIBMINOR))"
++	@dirs=`echo $(LAOBJLISTS) | \
++		sed -e 's%/OBJS.LA%%g' -e 's%OBJS.LA%.%'`; \
++		$(LIBTOOL) --mode=link $(CC) -o $@ `for d in $$dirs; do \
++			sed -e '/^$$/d' -e "s%^%$$d/%" -e "s% % $$d/%g" \
++				$$d/OBJS.LA; done` \
++			$(LALIB_EXPFLAGS) \
++			$(LIBTOOL_TAIL)
++
+ $(TOPLIBD)/libkrb5_$(LIBBASE)$(STLIBEXT):
+ 	$(RM) $@
+ 	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/libkrb5_$(LIBBASE)$(STLIBEXT) .)
+@@ -100,6 +117,7 @@
+ 
+ clean-libs:
+ 	$(RM) $(LIBBASE)$(DYNOBJEXT)
++	$(LIBTOOL) --mode=uninstall $(RM) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
+ 	$(RM) binutils.versions osf1.exports darwin.exports hpux10.exports
+ 
+ install-libs: $(PLUGININST)
+@@ -110,6 +128,9 @@
+ install-plugin:
+ 	$(RM) $(DESTDIR)$(MODULE_INSTALL_DIR)/$(LIBBASE)$(DYNOBJEXT)
+ 	$(INSTALL_SHLIB) $(LIBBASE)$(DYNOBJEXT) $(DESTDIR)$(MODULE_INSTALL_DIR)
++install-libtool:
++	$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(MODULE_INSTALL_DIR)/lib$(LIBBASE)$(LALIBEXT)
++	$(LIBTOOL) --mode=install $(INSTALL_SHLIB) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $(DESTDIR)$(MODULE_INSTALL_DIR)/lib$(LIBBASE)$(LALIBEXT)
+ 
+ Makefile: $(top_srcdir)/config/libnover.in
+ $(BUILDTOP)/config.status: $(top_srcdir)/config/shlib.conf

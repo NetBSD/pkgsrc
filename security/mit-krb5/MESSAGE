@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2011/03/22 23:31:04 tez Exp $
+
+Please beware that the Kerberized r-services, telnetd and ftpd services and
+the related client applications are no longer included in this package.
+They are now found in security/mit-krb5-appl.
+
+Also to interoperate with older kerberos realms, you may need to set
+  allow_weak_crypto = true
+in the [libdefaults] section of your krb5.conf file
+
+===========================================================================
