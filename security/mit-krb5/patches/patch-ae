@@ -1,7 +1,9 @@
-$NetBSD: patch-ae,v 1.2 2005/04/10 07:15:25 jlam Exp $
+$NetBSD: patch-ae,v 1.3 2011/03/22 23:31:04 tez Exp $
 
---- config/libobj.in.orig	2004-05-05 18:50:42.000000000 -0400
-+++ config/libobj.in
+Add --enable-pkgsrc-libtool option
+
+--- config/libobj.in.orig	2010-12-12 17:25:51.187240600 -0600
++++ config/libobj.in	2010-12-12 17:27:15.877207200 -0600
 @@ -7,11 +7,13 @@
  # STLIBOBJS	list of .o objects; this must not contain variable
  #		references.
@@ -17,9 +19,9 @@ $NetBSD: patch-ae,v 1.2 2005/04/10 07:15:25 jlam Exp $
  
  # rules to generate object file lists
  
-@@ -24,10 +26,13 @@ OBJS.SH: $(SHLIBOBJS) Makefile
- OBJS.PF: $(PFLIBOBJS) Makefile
+@@ -27,10 +29,13 @@
  	@echo $(PFLIBOBJS) > $@
+ 	: updated $@
  
 +OBJS.LA: $(LALIBOBJS) Makefile
 +	@echo $(LALIBOBJS) > $@
@@ -30,5 +32,5 @@ $NetBSD: patch-ae,v 1.2 2005/04/10 07:15:25 jlam Exp $
 -	$(RM) OBJS.ST OBJS.SH OBJS.PF $(STLIBOBJS) $(SHLIBOBJS) $(PFLIBOBJS)
 +	$(RM) OBJS.ST OBJS.SH OBJS.PF OBJS.LA $(STLIBOBJS) $(SHLIBOBJS) $(PFLIBOBJS) $(LALIBOBJS)
  
- Makefile: $(SRCTOP)/config/libobj.in
- config.status: $(SRCTOP)/config/shlib.conf
+ Makefile: $(top_srcdir)/config/libobj.in
+ config.status: $(top_srcdir)/config/shlib.conf

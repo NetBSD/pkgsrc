@@ -1,8 +1,10 @@
-$NetBSD: patch-ak,v 1.1 2005/04/10 07:15:25 jlam Exp $
+$NetBSD: patch-ak,v 1.2 2011/03/22 23:31:04 tez Exp $
 
---- Makefile.in.orig	2004-12-15 15:28:30.000000000 -0500
-+++ Makefile.in
-@@ -64,7 +64,7 @@ INSTALLMKDIRS = $(KRB5ROOT) $(KRB5MANROO
+No idea why... copied from previous instance of this package.
+
+--- Makefile.in.orig	2010-12-12 17:50:34.797814500 -0600
++++ Makefile.in	2010-12-12 17:51:28.015746400 -0600
+@@ -88,7 +88,7 @@
  install-strip:
  	$(MAKE) install INSTALL_STRIP=-s
  
@@ -11,10 +13,10 @@ $NetBSD: patch-ak,v 1.1 2005/04/10 07:15:25 jlam Exp $
  
  install-mkdirs:
  	@for i in $(INSTALLMKDIRS); do \
-@@ -76,7 +76,7 @@ install-headers-mkdirs:
+@@ -99,7 +99,7 @@
+ 	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)
  	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)/gssapi
  	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)/gssrpc
- 	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)/kerberosIV
 -install-headers-prerecurse: install-headers-mkdirs
 +install-headers-prerecurse:
  
