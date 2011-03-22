@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.743 2011/03/22 15:01:10 darcy Exp $
+$NetBSD: CHANGES-2011,v 1.744 2011/03/22 16:59:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1289,3 +1289,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/exim to 4.75 [adam 2011-03-22]
 	Updated mail/exim-html to 4.75 [adam 2011-03-22]
 	Updated security/sudo to 1.7.5 [taca 2011-03-22]
+	Updated print/tex-fwlw to 2010 [minskim 2011-03-22]
+	Updated print/tex-fwlw-doc to 2010 [minskim 2011-03-22]
