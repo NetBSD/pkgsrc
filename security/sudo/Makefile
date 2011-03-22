@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2011/01/22 09:18:21 taca Exp $
+# $NetBSD: Makefile,v 1.129 2011/03/22 14:52:08 taca Exp $
 #
 
-DISTNAME=		sudo-1.7.4p6
+DISTNAME=		sudo-1.7.5
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -20,7 +20,7 @@ USE_LIBTOOL=		yes
 OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		VARBASE
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 PLIST_VARS+=		ldap
 
 .include "../../mk/bsd.prefs.mk"
@@ -44,6 +44,7 @@ CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0440
 OWN_DIRS+=		${PKG_SYSCONFDIR}/sudoers.d
 SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=		bin/sudoreplay ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 511
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
