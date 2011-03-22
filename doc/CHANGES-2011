@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.741 2011/03/22 13:55:45 adam Exp $
+$NetBSD: CHANGES-2011,v 1.742 2011/03/22 14:52:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1288,3 +1288,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/postfix to 2.8.2 [taca 2011-03-22]
 	Updated mail/exim to 4.75 [adam 2011-03-22]
 	Updated mail/exim-html to 4.75 [adam 2011-03-22]
+	Updated security/sudo to 1.7.5 [taca 2011-03-22]
