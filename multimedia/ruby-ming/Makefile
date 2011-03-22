@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2011/02/21 16:01:19 taca Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/22 08:00:10 obache Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://rubyforge.org/frs/download.php/44137/
 
@@ -36,6 +36,16 @@ post-install:
 		pax -wrppm '-s|.*/CVS.*$$||' . \
 			${DESTDIR}${PREFIX}/${RUBY_EG}/ming
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/ming/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
+.if defined(GIFLIB_IMPLEMENTATION) && ${GIFLIB_IMPLEMENTATION} != "libungif"
+SUBST_CLASSES+=		giflib
+SUBST_STAGE.giflib=	pre-configure
+SUBST_FILES.giflib=	ext/ming/mingc/extconf.rb
+SUBST_SED.giflib=	-e 's/ungif/gif/g'
+.endif
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
