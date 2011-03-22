@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10209 2011/03/22 00:05:17 taca Exp $
+$NetBSD: TODO,v 1.10210 2011/03/22 07:03:45 obache Exp $
 
 Suggested new packages
 ======================
@@ -471,6 +471,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cpmtools-2.6
 	o cross-h8300-hms-binutils-2.17
 	o cryptopp-5.6.0
+	o csound5-5.13
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.21
 	o cygwin_lib-1.5.24.2
