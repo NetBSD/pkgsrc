@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/02/25 09:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2011/03/22 10:41:10 obache Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.26.0
@@ -36,5 +36,6 @@ BUILDLINK_API_DEPENDS.py-gobject-shared+= py-gobject-shared>=${PKGVERSION_NOREV}
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=0.9.5
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
