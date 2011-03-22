@@ -1,0 +1,15 @@
+$NetBSD: patch-cf,v 1.1 2011/03/22 23:31:05 tez Exp $
+
+add needed headers
+
+--- lib/gssapi/Makefile.in.orig	2010-12-22 17:13:19.073797300 -0600
++++ lib/gssapi/Makefile.in	2010-12-22 17:14:58.061262500 -0600
+@@ -125,7 +125,7 @@
+ # appears to be properly serializing the subdir processing and local
+ # compiles... so far.
+ ##DOS##!if 0
+-$(EXPORTED_HEADERS) generic/gssapi.h krb5/gssapi_err_krb5.h generic/gssapi_err_generic.h krb5/gssapi_krb5.h: all-recurse
++$(EXPORTED_HEADERS) generic/gssapi.h generic/errmap.h krb5/error_map.h krb5/gssapi_err_krb5.h generic/gssapi_err_generic.h krb5/gssapi_krb5.h: all-recurse
+ 	: $@ updated by recursion rule
+ ##DOS##!endif
+ 
