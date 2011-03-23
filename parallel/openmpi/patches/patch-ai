@@ -1,18 +1,18 @@
-$NetBSD: patch-ai,v 1.2 2010/12/16 21:00:54 asau Exp $
+$NetBSD: patch-ai,v 1.3 2011/03/23 05:32:29 asau Exp $
 
 Install configuration files into example directory.
 
---- orte/etc/Makefile.in.orig	2009-11-04 18:01:21.000000000 +0300
-+++ orte/etc/Makefile.in	2010-01-12 20:48:26.000000000 +0300
-@@ -1018,6 +1018,7 @@
+--- orte/etc/Makefile.in.orig	2011-03-09 17:51:05.000000000 +0300
++++ orte/etc/Makefile.in	2011-03-11 00:11:49.000000000 +0300
+@@ -1051,6 +1051,7 @@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
 +exampledir = $(pkgdatadir)/examples
- target_alias = @target_alias@
- timer_aix_LIBS = @timer_aix_LIBS@
- top_build_prefix = @top_build_prefix@
-@@ -1223,19 +1224,19 @@
+ sysinfo_solaris_CFLAGS = @sysinfo_solaris_CFLAGS@
+ sysinfo_solaris_CPPFLAGS = @sysinfo_solaris_CPPFLAGS@
+ sysinfo_solaris_LDFLAGS = @sysinfo_solaris_LDFLAGS@
+@@ -1264,19 +1265,19 @@
  # details why the mkdir is in install-data-local.
  
  install-data-local:
