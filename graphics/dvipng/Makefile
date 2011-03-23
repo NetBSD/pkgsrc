@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2011/01/13 13:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/23 10:09:44 adam Exp $
 
-DISTNAME=	dvipng-1.13
-PKGREVISION=	1
+DISTNAME=	dvipng-1.14
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvipng/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvipng/} \
+		http://download.savannah.gnu.org/releases/dvipng/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/dvipng/
@@ -12,10 +12,10 @@ LICENSE=	gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
-BUILD_TARGET=	dvipng
-INSTALL_TARGET=	install-dvigif
+BUILD_TARGET=		dvipng
+INSTALL_TARGET=		install-dvigif
 
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
