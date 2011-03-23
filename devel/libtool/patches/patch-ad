@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
+$NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
 
---- libltdl/configure.orig	2009-12-17 01:29:59.000000000 +0100
+--- libltdl/configure.orig	2010-06-19 07:24:26.000000000 +0000
 +++ libltdl/configure
 @@ -4542,6 +4542,13 @@ else
      lt_cv_sys_max_cmd_len=8192;
@@ -16,7 +16,18 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
    amigaos*)
      # On AmigaOS with pdksh, this test takes hours, literally.
      # So we just punt and use a minimum line length of 8192.
-@@ -4967,7 +4974,7 @@ newos6*)
+@@ -4914,6 +4921,10 @@ gnu*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
++haiku*)
++  lt_cv_deplibs_check_method=pass_all
++  ;;
++
+ hpux10.20* | hpux11*)
+   lt_cv_file_magic_cmd=/usr/bin/file
+   case $host_cpu in
+@@ -4967,7 +4978,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -25,7 +36,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
    ;;
  
  openbsd*)
-@@ -7286,7 +7293,10 @@ for cc_temp in $compiler""; do
+@@ -7286,7 +7297,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
@@ -37,7 +48,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
  
  
  # Only perform the check for file, if the check method requires it
-@@ -7596,9 +7606,11 @@ $as_echo_n "checking for $compiler optio
+@@ -7596,9 +7610,17 @@ $as_echo_n "checking for $compiler optio
        ;;
  
      darwin* | rhapsody*)
@@ -47,10 +58,16 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic='-fno-common'
 +      lt_prog_compiler_static=''
++      ;;
++
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static=
        ;;
  
      hpux*)
-@@ -7620,6 +7632,13 @@ $as_echo_n "checking for $compiler optio
+@@ -7620,6 +7642,13 @@ $as_echo_n "checking for $compiler optio
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -64,7 +81,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -7817,6 +7836,9 @@ $as_echo_n "checking for $compiler optio
+@@ -7817,6 +7846,9 @@ $as_echo_n "checking for $compiler optio
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -74,7 +91,19 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
    *djgpp*)
      lt_prog_compiler_pic=
      ;;
-@@ -8316,7 +8338,7 @@ _LT_EOF
+@@ -8230,6 +8262,11 @@ _LT_EOF
+       fi
+       ;;
+ 
++    haiku*)
++      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      link_all_deplibs=yes
++      ;;
++
+     interix[3-9]*)
+       hardcode_direct=no
+       hardcode_shlibpath_var=no
+@@ -8316,7 +8353,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -83,7 +112,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -8836,6 +8858,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -8836,6 +8873,8 @@ rm -f core conftest.err conftest.$ac_obj
        ;;
  
      *nto* | *qnx*)
@@ -92,7 +121,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
        ;;
  
      openbsd*)
-@@ -9450,6 +9474,7 @@ beos*)
+@@ -9450,6 +9489,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -100,7 +129,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -9551,9 +9576,7 @@ freebsd1*)
+@@ -9551,9 +9591,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -111,7 +140,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
    if test -x /usr/bin/objformat; then
      objformat=`/usr/bin/objformat`
    else
-@@ -9565,7 +9588,7 @@ freebsd* | dragonfly*)
+@@ -9565,7 +9603,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -120,7 +149,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -9588,13 +9611,24 @@ freebsd* | dragonfly*)
+@@ -9588,13 +9626,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -146,7 +175,27 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -9666,12 +9700,7 @@ interix[3-9]*)
+@@ -9605,6 +9654,19 @@ gnu*)
+   hardcode_into_libs=yes
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_var=LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
++  hardcode_into_libs=yes
++  ;;
++
+ hpux9* | hpux10* | hpux11*)
+   # Give a soname corresponding to the major version so that dld.sl refuses to
+   # link against other versions.
+@@ -9666,12 +9728,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -160,7 +209,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -9762,15 +9791,14 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -9762,15 +9819,14 @@ rm -f core conftest.err conftest.$ac_obj
    ;;
  
  netbsd*)
@@ -178,7 +227,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
      soname_spec='${libname}${release}${shared_ext}$major'
      dynamic_linker='NetBSD ld.elf_so'
    fi
-@@ -9799,7 +9827,7 @@ newsos6)
+@@ -9799,7 +9855,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -187,7 +236,7 @@ $NetBSD: patch-ad,v 1.37 2009/12/17 00:53:52 joerg Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -9807,7 +9835,7 @@ openbsd*)
+@@ -9807,7 +9863,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
