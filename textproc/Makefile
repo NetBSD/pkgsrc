@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.571 2011/02/25 02:13:58 obache Exp $
+# $NetBSD: Makefile,v 1.572 2011/03/23 15:13:36 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -206,6 +206,7 @@ SUBDIR+=	mecab
 SUBDIR+=	mecab-base
 SUBDIR+=	mecab-ipadic
 SUBDIR+=	mecab-jumandic
+SUBDIR+=	mecab-naistdic
 SUBDIR+=	mendexk
 SUBDIR+=	metauml
 SUBDIR+=	migemo
