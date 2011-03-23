@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2011/01/13 13:39:09 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2011/03/23 21:44:24 shattered Exp $
 
 DISTNAME=	slrn-0.9.9p1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	news
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slrn/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://slrn.sourceforge.net/
@@ -24,6 +23,7 @@ CONFIGURE_ARGS+=	--disable-inews --with-slrnpull --enable-spool \
 			--with-slanginc=slang2/slang.h \
 			--with-localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 # the next is a workaround, as 1.3.2 install doesn't like -c and -d
