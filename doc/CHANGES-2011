@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.763 2011/03/23 15:28:28 taca Exp $
+$NetBSD: CHANGES-2011,v 1.764 2011/03/23 15:33:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1319,3 +1319,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/fengoffice to 1.7.4 [taca 2011-03-23]
 	Updated www/ruby-rack to 1.2.2 [taca 2011-03-23]
 	Updated www/ruby-rack11 to 1.1.2 [taca 2011-03-23]
+	Updated www/ruby-patron to 0.4.10 [taca 2011-03-23]
+	Updated www/ruby-css-parser to 1.1.4 [taca 2011-03-23]
