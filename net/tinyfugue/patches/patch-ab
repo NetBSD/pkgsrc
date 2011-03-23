@@ -1,35 +1,32 @@
-$NetBSD: patch-ab,v 1.5 2007/12/27 11:43:51 obache Exp $
+$NetBSD: patch-ab,v 1.6 2011/03/23 20:20:52 joerg Exp $
 
 --- unix/Config.orig	1999-03-06 22:43:28.000000000 +0000
 +++ unix/Config
-@@ -33,9 +33,12 @@
+@@ -33,9 +33,9 @@
  #   even if an old version is currently in use.  You can remove
  #   the old version manually later when it is no longer in use.
  
 -# TF="/usr/local/bin/tf-${TFVER}"
 -# LIBDIR="/usr/local/lib/tf-${TFVER}-lib"
 -# SYMLINK="/usr/local/bin/tf"
-+if [ -z "${PREFIX}" ]; then 
-+  PREFIX="/usr/pkg" 
-+fi
-+TF="${PREFIX}/bin/tf-${TFVER}"
-+LIBDIR="${PREFIX}/lib/tf-${TFVER}-lib"
-+SYMLINK="${PREFIX}/bin/tf"
++TF="$${DESTDIR}${PREFIX}/bin/tf-${TFVER}"
++LIBDIR="$${DESTDIR}${PREFIX}/lib/tf-${TFVER}-lib"
++SYMLINK="$${DESTDIR}${PREFIX}/bin/tf"
  
  
  ### Manual Page.
-@@ -44,8 +47,8 @@
+@@ -44,8 +44,8 @@
  # uses nroff format; set MANTYPE=cat if your man uses pre-formatted
  # vt100 "catman" pages.  Default is "cat".
  
 -# MANTYPE="nroff"
 -# MANPAGE="/usr/local/man/man1/tf.1"
 +MANTYPE="nroff"
-+MANPAGE="${PREFIX}/${PKGMANDIR}/man1/tf.1"
++MANPAGE="$${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tf.1"
  
  
  ### Flags.
-@@ -111,7 +114,8 @@ FLAGS=''
+@@ -111,7 +111,8 @@ FLAGS=''
  
  # CC=cc
  # CCFLAGS="-g"
