@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.764 2011/03/23 15:33:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.765 2011/03/23 15:49:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1321,3 +1321,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-rack11 to 1.1.2 [taca 2011-03-23]
 	Updated www/ruby-patron to 0.4.10 [taca 2011-03-23]
 	Updated www/ruby-css-parser to 1.1.4 [taca 2011-03-23]
+	Updated databases/ruby-sequel to 3.21.0 [taca 2011-03-23]
