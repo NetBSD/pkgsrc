@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/10 13:15:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/23 15:30:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/LICENSE
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/ext/patron/extconf.rb
 ${GEM_LIBDIR}/ext/patron/session_ext.c
 ${GEM_LIBDIR}/lib/patron.rb
 ${GEM_LIBDIR}/lib/patron/error.rb
+${GEM_LIBDIR}/lib/patron/proxy_type.rb
 ${GEM_LIBDIR}/lib/patron/request.rb
 ${GEM_LIBDIR}/lib/patron/response.rb
 ${GEM_LIBDIR}/lib/patron/session.rb
