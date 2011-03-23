@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2011/02/20 15:44:17 taca Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/23 14:46:51 taca Exp $
 
-DISTNAME=	actionpack-3.0.4
-PKGREVISION=	1
+DISTNAME=	actionpack-${RUBY_RAILS3_VERSION}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,8 +8,10 @@ HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	Toolkit for building modeling frameworks (part of Rails)
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=3.0.4<3.0.5:../../devel/ruby-activesupport3
-DEPENDS+=	${RUBY_PKGPREFIX}-activemodel>=3.0.4<3.0.5:../../devel/ruby-activemodel
+RUBY_RAILS=	3
+
+DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=2.1.2:../../textproc/ruby-builder
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.4<1:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.2.1<1.3:../../www/ruby-rack
