@@ -1,6 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2011/01/25 09:07:58 obache Exp $
+$NetBSD: patch-ad,v 1.2 2011/03/23 08:10:33 obache Exp $
 
 * Recent OpemPAM define `OPENPAM', not `_OPENPAM'.
+* Remove needless assignment, it break strict-aliasing
 
 --- common/subr.c.orig	2006-11-07 00:22:37.000000000 +0000
 +++ common/subr.c
@@ -13,3 +14,19 @@ $NetBSD: patch-ad,v 1.1 2011/01/25 09:07:58 obache Exp $
  #  include <security/pam_mod_misc.h>
  #  include <security/openpam.h>
  # endif
+@@ -181,7 +181,6 @@ my_getnameinfo(addr, addrlen, buf, bufle
+ 
+ 		sockaddr = (struct sockaddr *)&sa;
+ 		salen = sizeof(sa);
+-		sockaddr->sa_family = PF_INET;
+ 		break;
+ 
+ 	case IPV6SZ:
+@@ -192,7 +191,6 @@ my_getnameinfo(addr, addrlen, buf, bufle
+ 		
+ 		sockaddr = (struct sockaddr *)&sa6;
+ 		salen = sizeof(sa6);
+-		sockaddr->sa_family = PF_INET6;
+ 		break;
+ 
+ 	default:
