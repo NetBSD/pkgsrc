@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/06/30 00:07:21 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/03/23 20:20:52 joerg Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://laurel.actlab.utexas.edu/pub/tinyfugue/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinyfugue.sourceforge.net/
 COMMENT=	Popular programmable MUD client, with macro support and more
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
