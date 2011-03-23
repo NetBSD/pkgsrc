@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2011/02/09 12:45:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2011/03/23 14:55:01 minskim Exp $
 
-DISTNAME=	apel-10.7
+DISTNAME=	apel-10.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/apel/
 
@@ -34,6 +33,17 @@ INSTALL_TARGET.xemacs=	install-package
 MAKE_FLAGS.emacs=
 MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
+.include "../../editors/emacs/modules.mk"
+
+PLIST_VARS+=	emacs23 emacs19
+.if empty(EMACS_TYPE:Mxemacs)
+.  if !empty(EMACS_TYPE:Memacs2[3-9])
+PLIST.emacs23=	yes
+.  else
+PLIST.emacs19=	yes
+.  endif
+.endif
+
 # Pkgsrc developers should run "install" without this and check if PLIST is
 # correct.  Users just need to install files.
 do-install: plist
@@ -47,5 +57,4 @@ do-install: plist
 		done							\
 	done
 
-.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
