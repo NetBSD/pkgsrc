@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.756 2011/03/23 14:50:03 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.757 2011/03/23 14:54:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1306,3 +1306,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/ruby-json to 1.5.1 [taca 2011-03-23]
 	Updated misc/rubygems to 1.6.2 [taca 2011-03-23]
 	Updated parallel/paexec to 0.16.1 [gdt 2011-03-23]
+	Updated devel/ruby-activesupport3 to 3.0.5 [taca 2011-03-23]
+	Updated www/ruby-actionpack3 to 3.0.5 [taca 2011-03-23]
+	Updated databases/ruby-activerecord3 to 3.0.5 [taca 2011-03-23]
+	Updated www/ruby-activeresource3 to 3.0.5 [taca 2011-03-23]
+	Updated devel/ruby-railties to 3.0.5 [taca 2011-03-23]
+	Updated www/ruby-rails3 to 3.0.5 [taca 2011-03-23]
