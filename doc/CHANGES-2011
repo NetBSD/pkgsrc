@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.751 2011/03/23 10:41:05 adam Exp $
+$NetBSD: CHANGES-2011,v 1.752 2011/03/23 10:50:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/py-django to 1.3 [adam 2011-03-23]
 	Removed multimedia/mkvtoolnix-old successor multimedia/mkvtoolnix [adam 2011-03-23]
 	Removed archivers/liblzo successor archivers/lzo [adam 2011-03-23]
+	Updated graphics/pngcrush to 1.7.15 [adam 2011-03-23]
