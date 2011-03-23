@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.772 2011/03/23 21:15:20 adam Exp $
+$NetBSD: CHANGES-2011,v 1.773 2011/03/23 22:25:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1330,3 +1330,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-patron to 0.4.11 [taca 2011-03-23]
 	Updated www/ruby-css-parser to 1.1.5 [taca 2011-03-23]
 	Updated audio/libsndfile to 1.0.24 [adam 2011-03-23]
+	Updated www/ikiwiki to 3.20110321 [schmonz 2011-03-23]
