@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.761 2011/03/23 15:15:06 taca Exp $
+$NetBSD: CHANGES-2011,v 1.762 2011/03/23 15:22:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1316,3 +1316,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/pear to 1.9.2nb1 [taca 2011-03-23]
 	Updated misc/ruby-bundler to 1.0.10 [taca 2011-03-23]
 	Added textproc/mecab-naistdic version 20100801 [taca 2011-03-23]
+	Updated www/fengoffice to 1.7.4 [taca 2011-03-23]
