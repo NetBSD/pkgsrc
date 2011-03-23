@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/03/02 10:14:32 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/23 15:41:55 joerg Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 AWS_VERSION=		2.10.0.1
 USE_TOOLS+=		gmake makeinfo sed
-BUILD_DEPENDS+=		gawk:../../lang/gawk
+BUILD_DEPENDS+=		gawk-[0-9]*:../../lang/gawk
 PATCHDIR=	${.CURDIR}/../../www/aws/patches
 DISTINFO_FILE=	${.CURDIR}/../../www/aws/distinfo
 
