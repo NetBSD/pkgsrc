@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/07/14 16:53:04 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/03/23 16:08:34 gdt Exp $
 bin/cgps
 bin/gpscat
 bin/gpsctl
@@ -48,7 +48,6 @@ man/man1/xgpsspeed.1
 man/man3/libgps.3
 man/man3/libgpsd.3
 man/man3/libgpsmm.3
-man/man5/rtcm-104.5
 man/man5/srec.5
 man/man8/gpsd.8
 sbin/gpsd
