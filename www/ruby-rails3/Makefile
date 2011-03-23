@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2011/02/09 13:05:57 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/23 14:53:20 taca Exp $
 
-DISTNAME=	rails-3.0.4
+DISTNAME=	rails-${RUBY_RAILS3_VERSION}
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,12 +8,14 @@ HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	Full-stack web application framework
 LICENSE=	mit
 
-DEPENDS+=       ${RUBY_PKGPREFIX}-activesupport>=3.0.4<3.0.5:../../devel/ruby-activesupport3
-DEPENDS+=       ${RUBY_PKGPREFIX}-actionpack>=3.0.4<3.0.5:../../www/ruby-actionpack3
-DEPENDS+=       ${RUBY_PKGPREFIX}-activerecord>=3.0.4<3.0.5:../../databases/ruby-activerecord3
-DEPENDS+=       ${RUBY_PKGPREFIX}-activeresource>=3.0.4<3.0.5:../../www/ruby-activeresource3
-DEPENDS+=       ${RUBY_PKGPREFIX}-actionmailer>=3.0.4<3.0.5:../../mail/ruby-actionmailer3
-DEPENDS+=       ${RUBY_PKGPREFIX}-railties>=3.0.4<3.0.5:../../devel/ruby-railties
+RUBY_RAILS=	3
+
+DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
+DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVERESOUCE_DEPENDS}
+DEPENDS+=	${RUBY_ACTIONMAILER_DEPENDS}
+DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 DEPENDS+=       ${RUBY_PKGPREFIX}-bundler>=1.0.0<2:../../misc/ruby-bundler
 
 CONFLICTS+=	ruby[1-9][0-9]-rails-[0-9]*
