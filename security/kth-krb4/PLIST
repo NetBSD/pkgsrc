@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:13:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/03/23 20:56:49 zafer Exp $
 bin/afslog
 bin/compile_et
 bin/k4ftp
@@ -124,7 +124,6 @@ man/man1/rxterm.1
 man/man1/tenletxr.1
 man/man1/xnlock.1
 man/man3/acl_check.3
-man/man3/arg_printusage.3
 man/man3/des_crypt.3
 man/man3/editline.3
 man/man3/getarg.3
