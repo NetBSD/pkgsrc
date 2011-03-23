@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.24 2009/12/15 17:35:37 joerg Exp $
+$NetBSD: patch-ac,v 1.25 2011/03/23 15:46:36 obache Exp $
 
---- libltdl/config/ltmain.sh.orig	2009-11-16 14:23:18.000000000 +0100
+--- libltdl/config/ltmain.sh.orig	2009-11-16 13:23:18.000000000 +0000
 +++ libltdl/config/ltmain.sh
 @@ -111,9 +111,9 @@ done
  $lt_unset CDPATH
@@ -15,3 +15,21 @@ $NetBSD: patch-ac,v 1.24 2009/12/15 17:35:37 joerg Exp $
  : ${CP="cp -f"}
  : ${ECHO="echo"}
  : ${EGREP="/bin/grep -E"}
+@@ -4522,7 +4522,7 @@ func_mode_link ()
+       -l*)
+ 	if test "X$arg" = "X-lc" || test "X$arg" = "X-lm"; then
+ 	  case $host in
+-	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-beos* | *-cegcc*)
++	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-beos* | *-cegcc* | *-*-haiku*)
+ 	    # These systems don't actually have a C or math library (as such)
+ 	    continue
+ 	    ;;
+@@ -6476,7 +6476,7 @@ func_mode_link ()
+       if test "$build_libtool_libs" = yes; then
+ 	if test -n "$rpath"; then
+ 	  case $host in
+-	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-*-beos* | *-cegcc*)
++	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-*-beos* | *-cegcc* | *-*-haiku*)
+ 	    # these systems don't actually have a c library (as such)!
+ 	    ;;
+ 	  *-*-rhapsody* | *-*-darwin1.[012])

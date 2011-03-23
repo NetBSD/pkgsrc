@@ -1,6 +1,6 @@
-$NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
+$NetBSD: manual-libtool.m4,v 1.31 2011/03/23 15:46:36 obache Exp $
 
---- libltdl/m4/libtool.m4.orig	2008-09-05 13:54:41.000000000 +0200
+--- libltdl/m4/libtool.m4.orig	2009-11-16 13:11:59.000000000 +0000
 +++ libltdl/m4/libtool.m4
 @@ -118,7 +118,10 @@ m4_defun([_LT_CC_BASENAME],
      *) break;;
@@ -82,7 +82,27 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -2405,12 +2425,7 @@ interix[[3-9]]*)
+@@ -2344,6 +2364,19 @@ gnu*)
+   hardcode_into_libs=yes
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_var=LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
++  hardcode_into_libs=yes
++  ;;
++
+ hpux9* | hpux10* | hpux11*)
+   # Give a soname corresponding to the major version so that dld.sl refuses to
+   # link against other versions.
+@@ -2405,12 +2438,7 @@ interix[[3-9]]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -96,7 +116,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -2486,15 +2501,14 @@ linux* | k*bsd*-gnu)
+@@ -2486,15 +2514,14 @@ linux* | k*bsd*-gnu)
    ;;
  
  netbsd*)
@@ -115,7 +135,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
      soname_spec='${libname}${release}${shared_ext}$major'
      dynamic_linker='NetBSD ld.elf_so'
    fi
-@@ -2523,7 +2537,7 @@ newsos6)
+@@ -2523,7 +2550,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -124,7 +144,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -2531,7 +2545,7 @@ openbsd*)
+@@ -2531,7 +2558,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -133,7 +153,18 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -3091,7 +3105,7 @@ newos6*)
+@@ -3038,6 +3065,10 @@ gnu*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
++haiku*)
++  lt_cv_deplibs_check_method=pass_all
++  ;;
++
+ hpux10.20* | hpux11*)
+   lt_cv_file_magic_cmd=/usr/bin/file
+   case $host_cpu in
+@@ -3091,7 +3122,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -142,7 +173,16 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
    ;;
  
  openbsd*)
-@@ -3580,9 +3594,15 @@ m4_if([$1], [CXX], [
+@@ -3256,7 +3287,7 @@ AC_DEFUN([LT_LIB_M],
+ [AC_REQUIRE([AC_CANONICAL_HOST])dnl
+ LIBM=
+ case $host in
+-*-*-beos* | *-*-cygwin* | *-*-pw32* | *-*-darwin*)
++*-*-beos* | *-*-cygwin* | *-*-haiku* | *-*-pw32* | *-*-darwin*)
+   # These system don't have libm, or don't need it
+   ;;
+ *-ncr-sysv4.3*)
+@@ -3580,14 +3611,25 @@ m4_if([$1], [CXX], [
  	[_LT_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'])
        ;;
      darwin* | rhapsody*)
@@ -159,7 +199,17 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -3650,6 +3670,9 @@ m4_if([$1], [CXX], [
+       _LT_TAGVAR(lt_prog_compiler_pic, $1)=
+       ;;
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      _LT_TAGVAR(lt_prog_compiler_static, $1)=
++      ;;
+     interix[[3-9]]*)
+       # Interix 3.x gcc -fpic/-fPIC options generate broken code.
+       # Instead, we relocate shared libraries at runtime.
+@@ -3650,6 +3692,9 @@ m4_if([$1], [CXX], [
  	    ;;
  	esac
  	;;
@@ -169,7 +219,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -3888,9 +3911,11 @@ m4_if([$1], [CXX], [
+@@ -3888,9 +3933,17 @@ m4_if([$1], [CXX], [
        ;;
  
      darwin* | rhapsody*)
@@ -179,10 +229,16 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
        # Common symbols not allowed in MH_DYLIB files
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
 +      _LT_TAGVAR(lt_prog_compiler_static, $1)=''
++      ;;
++
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      _LT_TAGVAR(lt_prog_compiler_static, $1)=
        ;;
  
      hpux*)
-@@ -3912,6 +3937,13 @@ m4_if([$1], [CXX], [
+@@ -3912,6 +3965,13 @@ m4_if([$1], [CXX], [
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -196,7 +252,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -4110,6 +4142,9 @@ m4_if([$1], [CXX], [
+@@ -4110,6 +4170,9 @@ m4_if([$1], [CXX], [
  ])
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -206,7 +262,19 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
    *djgpp*)
      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -4429,7 +4464,7 @@ _LT_EOF
+@@ -4343,6 +4406,11 @@ _LT_EOF
+       fi
+       ;;
+ 
++    haiku*)
++      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      _LT_TAGVAR(link_all_deplibs, $1)=yes
++      ;;
++
+     interix[[3-9]]*)
+       _LT_TAGVAR(hardcode_direct, $1)=no
+       _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
+@@ -4429,7 +4497,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -215,7 +283,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
  	_LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -4861,6 +4896,8 @@ _LT_EOF
+@@ -4861,6 +4929,8 @@ _LT_EOF
        ;;
  
      *nto* | *qnx*)
@@ -224,7 +292,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
        ;;
  
      openbsd*)
-@@ -5318,9 +5355,7 @@ m4_defun([_LT_PROG_CXX],
+@@ -5318,9 +5388,7 @@ m4_defun([_LT_PROG_CXX],
  [
  pushdef([AC_MSG_ERROR], [_lt_caught_CXX_error=yes])
  AC_PROG_CXX
@@ -235,7 +303,19 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -6008,18 +6043,37 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -5685,6 +5753,11 @@ if test "$_lt_caught_CXX_error" != yes; 
+       gnu*)
+         ;;
+ 
++      haiku*)
++        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++        _LT_TAGVAR(link_all_deplibs, $1)=yes
++        ;;
++
+       hpux9*)
+         _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
+         _LT_TAGVAR(hardcode_libdir_separator, $1)=:
+@@ -6008,18 +6081,37 @@ if test "$_lt_caught_CXX_error" != yes; 
  
        netbsd*)
          if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
@@ -277,7 +357,7 @@ $NetBSD: manual-libtool.m4,v 1.30 2010/03/17 10:59:45 markd Exp $
  	;;
  
        openbsd2*)
-@@ -6481,6 +6535,11 @@ $RM -f confest.$objext
+@@ -6481,6 +6573,11 @@ $RM -f confest.$objext
  # PORTME: override above test on systems where it is broken
  m4_if([$1], [CXX],
  [case $host_os in
