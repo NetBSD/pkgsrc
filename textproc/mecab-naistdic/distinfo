@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/23 15:12:30 taca Exp $
+
+SHA1 (mecab-naist-jdic-0.6.3-20100801.tar.gz) = 86ccbb15d208a99d81ebcef9f31aee384cc7b31e
+RMD160 (mecab-naist-jdic-0.6.3-20100801.tar.gz) = eb18c0ccfc283f2414635ba46ba1a2313932fe2a
+Size (mecab-naist-jdic-0.6.3-20100801.tar.gz) = 14969100 bytes

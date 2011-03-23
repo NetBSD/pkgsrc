@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/23 15:12:30 taca Exp $
+lib/mecab/dic/naist-jdic/char.bin
+lib/mecab/dic/naist-jdic/char.def
+lib/mecab/dic/naist-jdic/dicrc
+lib/mecab/dic/naist-jdic/feature.def
+lib/mecab/dic/naist-jdic/left-id.def
+lib/mecab/dic/naist-jdic/matrix.bin
+lib/mecab/dic/naist-jdic/matrix.def
+lib/mecab/dic/naist-jdic/naist-jdic.csv
+lib/mecab/dic/naist-jdic/pos-id.def
+lib/mecab/dic/naist-jdic/rewrite.def
+lib/mecab/dic/naist-jdic/right-id.def
+lib/mecab/dic/naist-jdic/sys.dic
+lib/mecab/dic/naist-jdic/unk.def
+lib/mecab/dic/naist-jdic/unk.dic
