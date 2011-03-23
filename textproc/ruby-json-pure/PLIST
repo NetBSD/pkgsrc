@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/04 02:48:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/23 14:12:05 taca Exp $
 bin/edit_json.rb
 bin/prettify_json.rb
-${GEM_HOME}/cache/json_pure-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/COPYING-json-jruby
 ${GEM_LIBDIR}/GPL
 ${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README-json-jruby.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/VERSION
@@ -59,6 +61,22 @@ ${GEM_LIBDIR}/ext/json/ext/parser/parser.c
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.h
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.rl
 ${GEM_LIBDIR}/install.rb
+${GEM_LIBDIR}/java/lib/bytelist-1.0.6.jar
+${GEM_LIBDIR}/java/lib/jcodings.jar
+${GEM_LIBDIR}/java/src/json/ext/ByteListTranscoder.java
+${GEM_LIBDIR}/java/src/json/ext/Generator.java
+${GEM_LIBDIR}/java/src/json/ext/GeneratorMethods.java
+${GEM_LIBDIR}/java/src/json/ext/GeneratorService.java
+${GEM_LIBDIR}/java/src/json/ext/GeneratorState.java
+${GEM_LIBDIR}/java/src/json/ext/OptionsReader.java
+${GEM_LIBDIR}/java/src/json/ext/Parser.java
+${GEM_LIBDIR}/java/src/json/ext/Parser.rl
+${GEM_LIBDIR}/java/src/json/ext/ParserService.java
+${GEM_LIBDIR}/java/src/json/ext/RuntimeInfo.java
+${GEM_LIBDIR}/java/src/json/ext/StringDecoder.java
+${GEM_LIBDIR}/java/src/json/ext/StringEncoder.java
+${GEM_LIBDIR}/java/src/json/ext/Utils.java
+${GEM_LIBDIR}/json-java.gemspec
 ${GEM_LIBDIR}/lib/json.rb
 ${GEM_LIBDIR}/lib/json/Array.xpm
 ${GEM_LIBDIR}/lib/json/FalseClass.xpm
@@ -109,12 +127,13 @@ ${GEM_LIBDIR}/tests/fixtures/pass17.json
 ${GEM_LIBDIR}/tests/fixtures/pass2.json
 ${GEM_LIBDIR}/tests/fixtures/pass26.json
 ${GEM_LIBDIR}/tests/fixtures/pass3.json
+${GEM_LIBDIR}/tests/setup_variant.rb
 ${GEM_LIBDIR}/tests/test_json.rb
 ${GEM_LIBDIR}/tests/test_json_addition.rb
 ${GEM_LIBDIR}/tests/test_json_encoding.rb
 ${GEM_LIBDIR}/tests/test_json_fixtures.rb
 ${GEM_LIBDIR}/tests/test_json_generate.rb
-${GEM_LIBDIR}/tests/test_json_rails.rb
+${GEM_LIBDIR}/tests/test_json_string_matching.rb
 ${GEM_LIBDIR}/tests/test_json_unicode.rb
 ${GEM_LIBDIR}/tools/fuzz.rb
 ${GEM_LIBDIR}/tools/server.rb
