@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10213 2011/03/23 10:16:36 wiz Exp $
+$NetBSD: TODO,v 1.10214 2011/03/23 10:41:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drupal-7
 	o dspam-3.9.0
 	o dvdisaster-0.72.2
-	o dvipng-1.14
 	o dvtm-0.6
 	o dwm-5.8.2
 	o easymenu-0.7.2p1
