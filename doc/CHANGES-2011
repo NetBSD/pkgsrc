@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.768 2011/03/23 16:09:00 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.769 2011/03/23 16:26:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1325,3 +1325,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ZenTest to 4.5.0 [taca 2011-03-23]
 	Updated devel/hoe to 2.9.1 [taca 2011-03-23]
 	Updated geography/gpsd to 2.96 [gdt 2011-03-23]
+	Updated devel/ruby-subexec to 0.1.0 [taca 2011-03-23]
+	Updated graphics/ruby-mini-magick to 3.2 [taca 2011-03-23]
