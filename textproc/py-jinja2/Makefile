@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/06/05 23:54:22 markd Exp $
-#
+# $NetBSD: Makefile,v 1.3 2011/03/23 11:38:31 adam Exp $
 
-DISTNAME=	Jinja2-2.5
+DISTNAME=	Jinja2-2.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/J/Jinja2/
@@ -12,10 +11,6 @@ COMMENT=	Small but fast and easy to use stand-alone template engine
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# move doc directory so its not installed
-post-patch:
-	mv ${WRKSRC}/docs/_build ${WRKSRC}/docs/__build
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
