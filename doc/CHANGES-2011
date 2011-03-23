@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.759 2011/03/23 15:00:32 taca Exp $
+$NetBSD: CHANGES-2011,v 1.760 2011/03/23 15:14:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-rails3 to 3.0.5 [taca 2011-03-23]
 	Updated devel/apel to 10.8 [minskim 2011-03-23]
 	Updated lang/pear to 1.9.2nb1 [taca 2011-03-23]
+	Updated misc/ruby-bundler to 1.0.10 [taca 2011-03-23]
