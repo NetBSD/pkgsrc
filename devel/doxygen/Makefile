@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2011/03/18 23:51:16 minskim Exp $
+# $NetBSD: Makefile,v 1.83 2011/03/23 19:24:35 gdt Exp $
 
 DISTNAME=	doxygen-1.6.3.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -11,24 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
 COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2
-
-BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
-BUILD_DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
-DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
-DEPENDS+=	tex-a4wide>=2010nb1:../../print/tex-a4wide
-DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
-DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
-DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
-DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
-DEPENDS+=	tex-psnfss>=9.2anb2:../../fonts/tex-psnfss
-DEPENDS+=	tex-pspicture-[0-9]*:../../print/tex-pspicture
-DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
-DEPENDS+=	texlive-pdftools-[0-9]*:../../print/texlive-pdftools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -69,7 +51,9 @@ SUBST_SED.epstopdf=	-e 's,"epstopdf","${LOCALBASE}/bin/epstopdf",g'
 
 PRIVILEGED_STAGES+=	clean
 
-INSTALL_TARGET=		install install_docs
+# Just install the binary and the man page.  (If the latex option
+# is enabled, this target will be augmented.)
+INSTALL_TARGET=		install
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -88,6 +72,7 @@ post-patch:
 
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.12nb1
 
+.include "options.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/application.mk"
