@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:17 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/23 14:09:31 obache Exp $
 
---- include/sound.h.orig	Sat Jan 11 12:12:55 1997
-+++ include/sound.h	Sun May 23 10:48:03 1999
-@@ -237,6 +237,42 @@
+--- include/sound.h.orig	1999-09-02 14:34:10.000000000 +0000
++++ include/sound.h
+@@ -215,7 +215,7 @@ struct SoundCacheBufferTag {
+  *  FreeBSD
+  */
+ 
+-#if defined(__FreeBSD__) && defined(USE_SOUND)
++#if (defined(__FreeBSD__) || defined(__DragonFly__)) && defined(USE_SOUND)
+ 
+ /* FreeBSD with SoundBlaster Pro */
+ 
+@@ -233,10 +233,50 @@ struct SoundCacheBufferTag {
+ };
+ 
+ #define	SoundCacheBuffer	struct SoundCacheBufferTag
++#ifdef __DragonFly__
++#define	AUDIO_DEVICE		"/dev/dsp"
++#else
+ #define	AUDIO_DEVICE		"/dev/audio"
++#endif
  
  #endif	/* FreeBSD */
  
