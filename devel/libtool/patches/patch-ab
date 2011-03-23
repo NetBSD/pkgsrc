@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.68 2010/03/17 10:59:45 markd Exp $
+$NetBSD: patch-ab,v 1.69 2011/03/23 15:46:36 obache Exp $
 
 The last two chunks work around bugs in ksh on NetBSD.
 The problem manifests with wl and no_builtin_flag containing newlines.
 
---- configure.orig	2009-11-16 13:14:55.000000000 +0000
+--- configure.orig	2010-06-19 07:24:20.000000000 +0000
 +++ configure
 @@ -5293,6 +5293,13 @@ else
      lt_cv_sys_max_cmd_len=8192;
@@ -19,7 +19,18 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    amigaos*)
      # On AmigaOS with pdksh, this test takes hours, literally.
      # So we just punt and use a minimum line length of 8192.
-@@ -5718,7 +5725,7 @@ newos6*)
+@@ -5665,6 +5672,10 @@ gnu*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
++haiku*)
++  lt_cv_deplibs_check_method=pass_all
++  ;;
++
+ hpux10.20* | hpux11*)
+   lt_cv_file_magic_cmd=/usr/bin/file
+   case $host_cpu in
+@@ -5718,7 +5729,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -28,7 +39,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    ;;
  
  openbsd*)
-@@ -7900,7 +7907,10 @@ for cc_temp in $compiler""; do
+@@ -7900,7 +7911,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
@@ -40,7 +51,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
  # Only perform the check for file, if the check method requires it
-@@ -8210,9 +8220,11 @@ $as_echo_n "checking for $compiler optio
+@@ -8210,9 +8224,17 @@ $as_echo_n "checking for $compiler optio
        ;;
  
      darwin* | rhapsody*)
@@ -50,10 +61,16 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic='-fno-common'
 +      lt_prog_compiler_static=''
++      ;;
++
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static=
        ;;
  
      hpux*)
-@@ -8234,6 +8246,13 @@ $as_echo_n "checking for $compiler optio
+@@ -8234,6 +8256,13 @@ $as_echo_n "checking for $compiler optio
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -67,7 +84,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -8431,6 +8450,9 @@ $as_echo_n "checking for $compiler optio
+@@ -8431,6 +8460,9 @@ $as_echo_n "checking for $compiler optio
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -77,7 +94,19 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic=
      ;;
-@@ -8930,7 +8952,7 @@ _LT_EOF
+@@ -8844,6 +8876,11 @@ _LT_EOF
+       fi
+       ;;
+ 
++    haiku*)
++      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      link_all_deplibs=yes
++      ;;
++
+     interix[3-9]*)
+       hardcode_direct=no
+       hardcode_shlibpath_var=no
+@@ -8930,7 +8967,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -86,7 +115,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -9450,6 +9472,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -9450,6 +9487,8 @@ rm -f core conftest.err conftest.$ac_obj
        ;;
  
      *nto* | *qnx*)
@@ -95,7 +124,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
-@@ -10064,6 +10088,7 @@ beos*)
+@@ -10064,6 +10103,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -103,7 +132,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -10165,9 +10190,7 @@ freebsd1*)
+@@ -10165,9 +10205,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -114,7 +143,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    if test -x /usr/bin/objformat; then
      objformat=`/usr/bin/objformat`
    else
-@@ -10179,7 +10202,7 @@ freebsd* | dragonfly*)
+@@ -10179,7 +10217,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -123,7 +152,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -10202,13 +10225,24 @@ freebsd* | dragonfly*)
+@@ -10202,13 +10240,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -149,7 +178,27 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -10280,12 +10314,7 @@ interix[3-9]*)
+@@ -10219,6 +10268,19 @@ gnu*)
+   hardcode_into_libs=yes
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_var=LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
++  hardcode_into_libs=yes
++  ;;
++
+ hpux9* | hpux10* | hpux11*)
+   # Give a soname corresponding to the major version so that dld.sl refuses to
+   # link against other versions.
+@@ -10280,12 +10342,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -163,7 +212,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -10376,15 +10405,14 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -10376,15 +10433,14 @@ rm -f core conftest.err conftest.$ac_obj
    ;;
  
  netbsd*)
@@ -182,7 +231,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      soname_spec='${libname}${release}${shared_ext}$major'
      dynamic_linker='NetBSD ld.elf_so'
    fi
-@@ -10413,7 +10441,7 @@ newsos6)
+@@ -10413,7 +10469,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -191,7 +240,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -10421,7 +10449,7 @@ openbsd*)
+@@ -10421,7 +10477,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -200,7 +249,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -12587,9 +12615,7 @@ else
+@@ -12587,9 +12643,7 @@ else
  fi
  
  
@@ -211,7 +260,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    ac_ext=cpp
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -12836,7 +12862,10 @@ $RM -r conftest*
+@@ -12836,7 +12890,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
@@ -223,7 +272,19 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
    if test -n "$compiler"; then
-@@ -13628,18 +13657,37 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -13305,6 +13362,11 @@ if test -z "$aix_libpath"; then aix_libp
+       gnu*)
+         ;;
+ 
++      haiku*)
++        archive_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++        link_all_deplibs_CXX=yes
++        ;;
++
+       hpux9*)
+         hardcode_libdir_flag_spec_CXX='${wl}+b ${wl}$libdir'
+         hardcode_libdir_separator_CXX=:
+@@ -13628,18 +13690,37 @@ if test -z "$aix_libpath"; then aix_libp
  
        netbsd*)
          if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
@@ -265,7 +326,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  	;;
  
        openbsd2*)
-@@ -14036,6 +14084,11 @@ $RM -f confest.$objext
+@@ -14036,6 +14117,11 @@ $RM -f confest.$objext
  
  # PORTME: override above test on systems where it is broken
  case $host_os in
@@ -277,7 +338,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  interix[3-9]*)
    # Interix 3.5 installs completely hosed .la files for C++, so rather than
    # hack all around it, let's just trust "g++" to DTRT.
-@@ -14176,9 +14229,15 @@ $as_echo_n "checking for $compiler optio
+@@ -14176,14 +14262,25 @@ $as_echo_n "checking for $compiler optio
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -294,7 +355,17 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -14246,6 +14305,9 @@ $as_echo_n "checking for $compiler optio
+       lt_prog_compiler_pic_CXX=
+       ;;
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static_CXX=
++      ;;
+     interix[3-9]*)
+       # Interix 3.x gcc -fpic/-fPIC options generate broken code.
+       # Instead, we relocate shared libraries at runtime.
+@@ -14246,6 +14343,9 @@ $as_echo_n "checking for $compiler optio
  	    ;;
  	esac
  	;;
@@ -304,7 +375,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -14443,6 +14505,9 @@ $as_echo_n "checking for $compiler optio
+@@ -14443,6 +14543,9 @@ $as_echo_n "checking for $compiler optio
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -314,7 +385,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_CXX=
      ;;
-@@ -14948,6 +15013,7 @@ beos*)
+@@ -14948,6 +15051,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -322,7 +393,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15048,9 +15114,7 @@ freebsd1*)
+@@ -15048,9 +15152,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -333,7 +404,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    if test -x /usr/bin/objformat; then
      objformat=`/usr/bin/objformat`
    else
-@@ -15062,7 +15126,7 @@ freebsd* | dragonfly*)
+@@ -15062,7 +15164,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -342,7 +413,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -15085,13 +15149,24 @@ freebsd* | dragonfly*)
+@@ -15085,13 +15187,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -368,7 +439,27 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -15163,12 +15238,7 @@ interix[3-9]*)
+@@ -15102,6 +15215,19 @@ gnu*)
+   hardcode_into_libs=yes
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_var=LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
++  hardcode_into_libs=yes
++  ;;
++
+ hpux9* | hpux10* | hpux11*)
+   # Give a soname corresponding to the major version so that dld.sl refuses to
+   # link against other versions.
+@@ -15163,12 +15289,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -382,7 +473,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15259,15 +15329,14 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -15259,15 +15380,14 @@ rm -f core conftest.err conftest.$ac_obj
    ;;
  
  netbsd*)
@@ -401,7 +492,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      soname_spec='${libname}${release}${shared_ext}$major'
      dynamic_linker='NetBSD ld.elf_so'
    fi
-@@ -15296,7 +15365,7 @@ newsos6)
+@@ -15296,7 +15416,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -410,7 +501,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -15304,7 +15373,7 @@ openbsd*)
+@@ -15304,7 +15424,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -419,7 +510,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -15877,7 +15946,10 @@ $RM -r conftest*
+@@ -15877,7 +15997,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
@@ -431,7 +522,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
    GCC=$G77
    if test -n "$compiler"; then
-@@ -15971,9 +16043,11 @@ $as_echo_n "checking for $compiler optio
+@@ -15971,9 +16094,17 @@ $as_echo_n "checking for $compiler optio
        ;;
  
      darwin* | rhapsody*)
@@ -441,10 +532,16 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_F77='-fno-common'
 +      lt_prog_compiler_static_F77=''
++      ;;
++
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static_F77=
        ;;
  
      hpux*)
-@@ -15995,6 +16069,13 @@ $as_echo_n "checking for $compiler optio
+@@ -15995,6 +16126,13 @@ $as_echo_n "checking for $compiler optio
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -458,7 +555,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -16192,6 +16273,9 @@ $as_echo_n "checking for $compiler optio
+@@ -16192,6 +16330,9 @@ $as_echo_n "checking for $compiler optio
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -468,7 +565,19 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_F77=
      ;;
-@@ -16676,7 +16760,7 @@ _LT_EOF
+@@ -16590,6 +16731,11 @@ _LT_EOF
+       fi
+       ;;
+ 
++    haiku*)
++      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      link_all_deplibs_F77=yes
++      ;;
++
+     interix[3-9]*)
+       hardcode_direct_F77=no
+       hardcode_shlibpath_var_F77=no
+@@ -16676,7 +16822,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -477,7 +586,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -17183,6 +17267,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -17183,6 +17329,8 @@ rm -f core conftest.err conftest.$ac_obj
        ;;
  
      *nto* | *qnx*)
@@ -486,7 +595,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
-@@ -17644,6 +17730,7 @@ beos*)
+@@ -17644,6 +17792,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -494,7 +603,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17744,9 +17831,7 @@ freebsd1*)
+@@ -17744,9 +17893,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -505,7 +614,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    if test -x /usr/bin/objformat; then
      objformat=`/usr/bin/objformat`
    else
-@@ -17758,7 +17843,7 @@ freebsd* | dragonfly*)
+@@ -17758,7 +17905,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -514,7 +623,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -17781,13 +17866,24 @@ freebsd* | dragonfly*)
+@@ -17781,13 +17928,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -540,7 +649,27 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -17859,12 +17955,7 @@ interix[3-9]*)
+@@ -17798,6 +17956,19 @@ gnu*)
+   hardcode_into_libs=yes
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_var=LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
++  hardcode_into_libs=yes
++  ;;
++
+ hpux9* | hpux10* | hpux11*)
+   # Give a soname corresponding to the major version so that dld.sl refuses to
+   # link against other versions.
+@@ -17859,12 +18030,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -554,7 +683,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -17949,15 +18040,14 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -17949,15 +18115,14 @@ rm -f core conftest.err conftest.$ac_obj
    ;;
  
  netbsd*)
@@ -573,7 +702,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      soname_spec='${libname}${release}${shared_ext}$major'
      dynamic_linker='NetBSD ld.elf_so'
    fi
-@@ -17986,7 +18076,7 @@ newsos6)
+@@ -17986,7 +18151,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -582,7 +711,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -17994,7 +18084,7 @@ openbsd*)
+@@ -17994,7 +18159,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -591,7 +720,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -18557,7 +18647,10 @@ $RM -r conftest*
+@@ -18557,7 +18722,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
@@ -603,7 +732,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
    if test -n "$compiler"; then
-@@ -18776,9 +18869,11 @@ $as_echo_n "checking for $compiler optio
+@@ -18776,9 +18944,17 @@ $as_echo_n "checking for $compiler optio
        ;;
  
      darwin* | rhapsody*)
@@ -613,10 +742,16 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_FC='-fno-common'
 +      lt_prog_compiler_static_FC=''
++      ;;
++
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static_FC=
        ;;
  
      hpux*)
-@@ -18800,6 +18895,13 @@ $as_echo_n "checking for $compiler optio
+@@ -18800,6 +18976,13 @@ $as_echo_n "checking for $compiler optio
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -630,7 +765,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -18997,6 +19099,9 @@ $as_echo_n "checking for $compiler optio
+@@ -18997,6 +19180,9 @@ $as_echo_n "checking for $compiler optio
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -640,7 +775,19 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_FC=
      ;;
-@@ -19481,7 +19586,7 @@ _LT_EOF
+@@ -19395,6 +19581,11 @@ _LT_EOF
+       fi
+       ;;
+ 
++    haiku*)
++      archive_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      link_all_deplibs_FC=yes
++      ;;
++
+     interix[3-9]*)
+       hardcode_direct_FC=no
+       hardcode_shlibpath_var_FC=no
+@@ -19481,7 +19672,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -649,7 +796,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  	archive_cmds_FC='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -19988,6 +20093,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -19988,6 +20179,8 @@ rm -f core conftest.err conftest.$ac_obj
        ;;
  
      *nto* | *qnx*)
@@ -658,7 +805,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
-@@ -20449,6 +20556,7 @@ beos*)
+@@ -20449,6 +20642,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -666,7 +813,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -20549,9 +20657,7 @@ freebsd1*)
+@@ -20549,9 +20743,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -677,7 +824,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    if test -x /usr/bin/objformat; then
      objformat=`/usr/bin/objformat`
    else
-@@ -20563,7 +20669,7 @@ freebsd* | dragonfly*)
+@@ -20563,7 +20755,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -686,7 +833,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -20586,13 +20692,24 @@ freebsd* | dragonfly*)
+@@ -20586,13 +20778,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -712,7 +859,27 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -20664,12 +20781,7 @@ interix[3-9]*)
+@@ -20603,6 +20806,19 @@ gnu*)
+   hardcode_into_libs=yes
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_var=LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
++  hardcode_into_libs=yes
++  ;;
++
+ hpux9* | hpux10* | hpux11*)
+   # Give a soname corresponding to the major version so that dld.sl refuses to
+   # link against other versions.
+@@ -20664,12 +20880,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -726,7 +893,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -20754,15 +20866,14 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -20754,15 +20965,14 @@ rm -f core conftest.err conftest.$ac_obj
    ;;
  
  netbsd*)
@@ -745,7 +912,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      soname_spec='${libname}${release}${shared_ext}$major'
      dynamic_linker='NetBSD ld.elf_so'
    fi
-@@ -20791,7 +20902,7 @@ newsos6)
+@@ -20791,7 +21001,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -754,7 +921,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -20799,7 +20910,7 @@ openbsd*)
+@@ -20799,7 +21009,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -763,7 +930,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -21205,7 +21316,10 @@ for cc_temp in $compiler""; do
+@@ -21205,7 +21415,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
@@ -775,7 +942,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
  # GCJ did not exist at the time GCC didn't implicitly link libc in.
-@@ -21320,9 +21434,11 @@ $as_echo_n "checking for $compiler optio
+@@ -21320,9 +21533,17 @@ $as_echo_n "checking for $compiler optio
        ;;
  
      darwin* | rhapsody*)
@@ -785,10 +952,16 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_GCJ='-fno-common'
 +      lt_prog_compiler_static_GCJ=''
++      ;;
++
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static_GCJ=
        ;;
  
      hpux*)
-@@ -21344,6 +21460,13 @@ $as_echo_n "checking for $compiler optio
+@@ -21344,6 +21565,13 @@ $as_echo_n "checking for $compiler optio
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -802,7 +975,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -21541,6 +21664,9 @@ $as_echo_n "checking for $compiler optio
+@@ -21541,6 +21769,9 @@ $as_echo_n "checking for $compiler optio
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -812,7 +985,19 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_GCJ=
      ;;
-@@ -22025,7 +22151,7 @@ _LT_EOF
+@@ -21939,6 +22170,11 @@ _LT_EOF
+       fi
+       ;;
+ 
++    haiku*)
++      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      link_all_deplibs_GCJ=yes
++      ;;
++
+     interix[3-9]*)
+       hardcode_direct_GCJ=no
+       hardcode_shlibpath_var_GCJ=no
+@@ -22025,7 +22261,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -821,7 +1006,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -22545,6 +22671,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -22545,6 +22781,8 @@ rm -f core conftest.err conftest.$ac_obj
        ;;
  
      *nto* | *qnx*)
@@ -830,7 +1015,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
-@@ -23115,7 +23243,10 @@ for cc_temp in $compiler""; do
+@@ -23115,7 +23353,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
@@ -842,7 +1027,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  lt_cv_prog_compiler_c_o_RC=yes
  
-@@ -24296,6 +24429,9 @@ LTCC='$LTCC'
+@@ -24296,6 +24537,9 @@ LTCC='$LTCC'
  LTCFLAGS='$LTCFLAGS'
  compiler='$compiler_DEFAULT'
  
@@ -852,7 +1037,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  # Quote evaled strings.
  for var in SED \
  GREP \
-@@ -24580,6 +24716,9 @@ case \$lt_ECHO in
+@@ -24580,6 +24824,9 @@ case \$lt_ECHO in
    ;;
  esac
  
