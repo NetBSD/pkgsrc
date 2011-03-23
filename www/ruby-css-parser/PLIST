@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/23 07:28:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/23 15:31:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/css_parser.rb
 ${GEM_LIBDIR}/lib/css_parser/parser.rb
@@ -10,7 +10,7 @@ ${GEM_LIBDIR}/test/fixtures/import1.css
 ${GEM_LIBDIR}/test/fixtures/simple.css
 ${GEM_LIBDIR}/test/fixtures/subdir/import2.css
 ${GEM_LIBDIR}/test/test_css_parser_basic.rb
-${GEM_LIBDIR}/test/test_css_parser_downloading.rb
+${GEM_LIBDIR}/test/test_css_parser_loading.rb
 ${GEM_LIBDIR}/test/test_css_parser_media_types.rb
 ${GEM_LIBDIR}/test/test_css_parser_misc.rb
 ${GEM_LIBDIR}/test/test_css_parser_regexps.rb
