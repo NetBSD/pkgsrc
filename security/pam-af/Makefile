@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/03/23 07:49:47 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/23 08:10:33 obache Exp $
 
 DISTNAME=	pam_af-1.0.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -15,6 +15,8 @@ LICENSE=	2-clause-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=	-Wstrict-aliasing
 
 .if ${OPSYS} == "Linux"
 .include "../../databases/gdbm/buildlink3.mk"
