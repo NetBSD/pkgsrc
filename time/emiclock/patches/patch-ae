@@ -1,8 +1,13 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2011/03/23 14:09:31 obache Exp $
 
---- sound.c.orig	Sat Jan 11 11:35:52 1997
-+++ sound.c	Sun May 23 10:24:16 1999
-@@ -108,6 +108,11 @@
+--- sound.c.orig	1999-09-02 14:33:49.000000000 +0000
++++ sound.c
+@@ -104,10 +104,15 @@ static Boolean		isHalfHourChimeCached = 
+ #endif	/* linux */
+ 
+ /* FreeBSD */
+-#ifdef	__FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include "sys/FreeBSD/audio.c"
  #endif	/* FreeBSD */
  
