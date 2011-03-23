@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2010/12/04 03:50:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/03/23 16:07:49 taca Exp $
 bin/sow
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Hoe.pdf
 ${GEM_LIBDIR}/Manifest.txt
@@ -10,6 +11,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/sow
 ${GEM_LIBDIR}/lib/hoe.rb
 ${GEM_LIBDIR}/lib/hoe/clean.rb
+${GEM_LIBDIR}/lib/hoe/compiler.rb
 ${GEM_LIBDIR}/lib/hoe/debug.rb
 ${GEM_LIBDIR}/lib/hoe/deps.rb
 ${GEM_LIBDIR}/lib/hoe/flay.rb
@@ -20,6 +22,7 @@ ${GEM_LIBDIR}/lib/hoe/inline.rb
 ${GEM_LIBDIR}/lib/hoe/newb.rb
 ${GEM_LIBDIR}/lib/hoe/package.rb
 ${GEM_LIBDIR}/lib/hoe/publish.rb
+${GEM_LIBDIR}/lib/hoe/racc.rb
 ${GEM_LIBDIR}/lib/hoe/rake.rb
 ${GEM_LIBDIR}/lib/hoe/rcov.rb
 ${GEM_LIBDIR}/lib/hoe/rubyforge.rb
