@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.20 2011/01/02 05:13:02 schmonz Exp $
+$NetBSD: patch-aa,v 1.21 2011/03/23 22:25:06 schmonz Exp $
 
---- Makefile.PL.orig	2010-12-11 18:33:22.000000000 +0000
+--- Makefile.PL.orig	2011-03-19 18:02:24.000000000 +0000
 +++ Makefile.PL
 @@ -19,6 +19,8 @@ SED?=sed
  
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.20 2011/01/02 05:13:02 schmonz Exp $
  	./mdwn2man ikiwiki-update-wikilist 1 doc/ikiwiki-update-wikilist.mdwn > ikiwiki-update-wikilist.man
  	./mdwn2man ikiwiki-calendar 1 doc/ikiwiki-calendar.mdwn > ikiwiki-calendar.man
  	$(MAKE) -C po
--	$(SED) -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
-+	#$(SED) -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
+-	$(SED) -i.bkp "s/Version:.*/Version: $(VER)/" ikiwiki.spec
++	#$(SED) -i.bkp "s/Version:.*/Version: $(VER)/" ikiwiki.spec
  	rm -f ikiwiki.spec.bkp
  	
  docwiki:
