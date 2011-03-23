@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 06:51:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/23 16:26:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -11,7 +11,7 @@ ${GEM_LIBDIR}/test/animation.gif
 ${GEM_LIBDIR}/test/command_builder_test.rb
 ${GEM_LIBDIR}/test/composited.jpg
 ${GEM_LIBDIR}/test/image_test.rb
-${GEM_LIBDIR}/test/leaves.tiff
+${GEM_LIBDIR}/test/leaves spaced.tiff
 ${GEM_LIBDIR}/test/not_an_image.php
 ${GEM_LIBDIR}/test/simple-minus.gif
 ${GEM_LIBDIR}/test/simple.gif
