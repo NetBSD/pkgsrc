@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST.emacs,v 1.5 2009/06/14 17:48:33 joerg Exp $
+@comment $NetBSD: PLIST.emacs,v 1.6 2011/03/23 14:55:02 minskim Exp $
 ${EMACS_LISPPREFIX}/emu/apel-ver.el
 ${EMACS_LISPPREFIX}/emu/apel-ver.elc
 ${EMACS_LISPPREFIX}/emu/broken.el
 ${EMACS_LISPPREFIX}/emu/broken.elc
 ${EMACS_LISPPREFIX}/emu/emu.el
 ${EMACS_LISPPREFIX}/emu/emu.elc
-${EMACS_LISPPREFIX}/emu/inv-19.el
-${EMACS_LISPPREFIX}/emu/inv-19.elc
+${PLIST.emacs23}${EMACS_LISPPREFIX}/emu/inv-23.el
+${PLIST.emacs23}${EMACS_LISPPREFIX}/emu/inv-23.elc
+${PLIST.emacs19}${EMACS_LISPPREFIX}/emu/inv-19.el
+${PLIST.emacs19}${EMACS_LISPPREFIX}/emu/inv-19.elc
 ${EMACS_LISPPREFIX}/emu/invisible.el
 ${EMACS_LISPPREFIX}/emu/invisible.elc
 ${EMACS_LISPPREFIX}/emu/mcharset.el
