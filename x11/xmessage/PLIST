@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/16 21:25:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/23 20:07:28 zafer Exp $
 bin/xmessage
-lib/X11/app-defaults/Xmessage
-lib/X11/app-defaults/Xmessage-color
 man/man1/xmessage.1
