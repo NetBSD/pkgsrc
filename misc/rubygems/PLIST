@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/09/16 12:02:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/03/23 14:35:04 taca Exp $
 bin/gem${RUBY_VER}
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
@@ -19,7 +19,6 @@ ${RUBY_VENDORLIB}/rubygems/commands/help_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/install_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/list_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/lock_command.rb
-${RUBY_VENDORLIB}/rubygems/commands/mirror_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/outdated_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/owner_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/pristine_command.rb
@@ -58,7 +57,9 @@ ${RUBY_VENDORLIB}/rubygems/gemcutter_utilities.rb
 ${RUBY_VENDORLIB}/rubygems/indexer.rb
 ${RUBY_VENDORLIB}/rubygems/install_update_options.rb
 ${RUBY_VENDORLIB}/rubygems/installer.rb
+${RUBY_VENDORLIB}/rubygems/installer_test_case.rb
 ${RUBY_VENDORLIB}/rubygems/local_remote_options.rb
+${RUBY_VENDORLIB}/rubygems/mock_gem_ui.rb
 ${RUBY_VENDORLIB}/rubygems/old_format.rb
 ${RUBY_VENDORLIB}/rubygems/package.rb
 ${RUBY_VENDORLIB}/rubygems/package/f_sync_dir.rb
@@ -67,6 +68,7 @@ ${RUBY_VENDORLIB}/rubygems/package/tar_input.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_output.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_reader.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_reader/entry.rb
+${RUBY_VENDORLIB}/rubygems/package/tar_test_case.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_writer.rb
 ${RUBY_VENDORLIB}/rubygems/package_task.rb
 ${RUBY_VENDORLIB}/rubygems/platform.rb
@@ -76,10 +78,9 @@ ${RUBY_VENDORLIB}/rubygems/requirement.rb
 ${RUBY_VENDORLIB}/rubygems/security.rb
 ${RUBY_VENDORLIB}/rubygems/server.rb
 ${RUBY_VENDORLIB}/rubygems/source_index.rb
-${RUBY_VENDORLIB}/rubygems/source_info_cache.rb
-${RUBY_VENDORLIB}/rubygems/source_info_cache_entry.rb
 ${RUBY_VENDORLIB}/rubygems/spec_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/specification.rb
+${RUBY_VENDORLIB}/rubygems/test_case.rb
 ${RUBY_VENDORLIB}/rubygems/test_utilities.rb
 ${RUBY_VENDORLIB}/rubygems/text.rb
 ${RUBY_VENDORLIB}/rubygems/uninstaller.rb
