@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/12/16 21:00:53 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/03/23 05:32:29 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -91,7 +91,6 @@ lib/openmpi/mca_coll_tuned.la
 lib/openmpi/mca_crs_none.la
 lib/openmpi/mca_dpm_orte.la
 lib/openmpi/mca_errmgr_default.la
-lib/openmpi/mca_ess_cm.la
 lib/openmpi/mca_ess_env.la
 lib/openmpi/mca_ess_hnp.la
 lib/openmpi/mca_ess_singleton.la
@@ -115,9 +114,10 @@ lib/openmpi/mca_odls_default.la
 lib/openmpi/mca_oob_tcp.la
 lib/openmpi/mca_osc_pt2pt.la
 lib/openmpi/mca_osc_rdma.la
-lib/openmpi/mca_paffinity_posix.la
+lib/openmpi/mca_paffinity_hwloc.la
 lib/openmpi/mca_plm_rsh.la
 lib/openmpi/mca_plm_rshd.la
+lib/openmpi/mca_pml_bfo.la
 lib/openmpi/mca_pml_cm.la
 lib/openmpi/mca_pml_csum.la
 lib/openmpi/mca_pml_ob1.la
@@ -505,6 +505,7 @@ share/openmpi/help-mpi-btl-tcp.txt
 share/openmpi/help-mpi-coll-sm.txt
 share/openmpi/help-mpi-common-sm.txt
 share/openmpi/help-mpi-errors.txt
+share/openmpi/help-mpi-pml-bfo.txt
 share/openmpi/help-mpi-pml-csum.txt
 share/openmpi/help-mpi-pml-ob1.txt
 share/openmpi/help-mpi-runtime.txt
