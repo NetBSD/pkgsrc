@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.752 2011/03/23 10:50:18 adam Exp $
+$NetBSD: CHANGES-2011,v 1.753 2011/03/23 10:57:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed multimedia/mkvtoolnix-old successor multimedia/mkvtoolnix [adam 2011-03-23]
 	Removed archivers/liblzo successor archivers/lzo [adam 2011-03-23]
 	Updated graphics/pngcrush to 1.7.15 [adam 2011-03-23]
+	Updated graphics/pngcheck to 2.3.0 [adam 2011-03-23]
