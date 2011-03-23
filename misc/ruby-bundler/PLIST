@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/04 04:10:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/23 15:03:52 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -145,7 +145,7 @@ ${GEM_LIBDIR}/spec/support/path.rb
 ${GEM_LIBDIR}/spec/support/platforms.rb
 ${GEM_LIBDIR}/spec/support/ruby_ext.rb
 ${GEM_LIBDIR}/spec/support/rubygems_ext.rb
-${GEM_LIBDIR}/spec/support/rubygems_hax/rubygems_plugin.rb
+${GEM_LIBDIR}/spec/support/rubygems_hax/platform.rb
 ${GEM_LIBDIR}/spec/support/sudo.rb
 ${GEM_LIBDIR}/spec/update/gems_spec.rb
 ${GEM_LIBDIR}/spec/update/git_spec.rb
