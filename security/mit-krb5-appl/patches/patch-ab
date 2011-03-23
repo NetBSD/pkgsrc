@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/03/23 00:01:38 tez Exp $
+
+Do not install un-needed and non-standard make file
+
+--- telnet/telnet/Makefile.in.orig	2011-01-07 20:14:58.251779200 -0600
++++ telnet/telnet/Makefile.in	2011-01-07 20:15:09.328436300 -0600
+@@ -60,7 +60,6 @@
+ 	  $(INSTALL_DATA) $(srcdir)/$$f.1 \
+ 		${DESTDIR}$(CLIENT_MANDIR)/`echo $$f|sed '$(transform)'`.1; \
+ 	done
+-	$(INSTALL_DATA) $(srcdir)/tmac.doc ${DESTDIR}$(CLIENT_MANDIR)/tmac.doc
+ 
+ authenc.o: defines.h externs.h general.h ring.h types.h $(ARPA_TELNET)
+ commands.o: defines.h externs.h general.h ring.h types.h $(ARPA_TELNET)

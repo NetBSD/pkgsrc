@@ -1,0 +1,7 @@
+Kerberos V5 is an authentication system developed at MIT. It is a network
+authentication protocol designed to provide strong authentication for
+client/server applications by using secret-key cryptography. (Kerberos
+5 is discussed in RFC 1510.)
+
+This package provides Kerberos applications and servers for telnet,
+the r-services and ftp.

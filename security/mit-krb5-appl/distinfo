@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/23 00:01:38 tez Exp $
+
+SHA1 (krb5-appl-1.0.1-signed.tar) = 128662c9860f61a51c9bcaf1b6217467faa12324
+RMD160 (krb5-appl-1.0.1-signed.tar) = ca0668b623dcf4dc5a0699fa47d86660aac5544a
+Size (krb5-appl-1.0.1-signed.tar) = 645120 bytes
+SHA1 (patch-ab) = 4522fcdb396d2079ac6405926a64f907d94a2593

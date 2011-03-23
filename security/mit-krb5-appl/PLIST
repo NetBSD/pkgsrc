@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/23 00:01:38 tez Exp $
+bin/kftp
+bin/${KRB5_PREFIX}rcp
+bin/${KRB5_PREFIX}rlogin
+bin/${KRB5_PREFIX}rsh
+bin/${KRB5_PREFIX}telnet
+man/man1/kftp.1
+man/man1/${KRB5_PREFIX}rcp.1
+man/man1/${KRB5_PREFIX}rlogin.1
+man/man1/${KRB5_PREFIX}rsh.1
+man/man1/${KRB5_PREFIX}telnet.1
+man/man8/kftpd.8
+man/man8/klogind.8
+man/man8/kshd.8
+man/man8/${KRB5_PREFIX}telnetd.8
+man/man8/login.krb5.8
+sbin/kftpd
+sbin/klogind
+sbin/kshd
+sbin/${KRB5_PREFIX}telnetd
+sbin/login.krb5
