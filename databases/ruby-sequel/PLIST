@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2010/09/10 04:45:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/03/23 15:49:05 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/sequel
@@ -44,7 +44,13 @@ ${GEM_LIBDIR}/doc/release_notes/3.12.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.13.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.14.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.15.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.16.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.17.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.18.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.19.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.2.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.20.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.21.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
@@ -83,6 +89,7 @@ ${GEM_LIBDIR}/lib/sequel/adapters/odbc/mssql.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/openbase.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/oracle.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/postgres.rb
+${GEM_LIBDIR}/lib/sequel/adapters/shared/access.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/mssql.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/mysql.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/oracle.rb
@@ -90,6 +97,11 @@ ${GEM_LIBDIR}/lib/sequel/adapters/shared/postgres.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/progress.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/sqlite.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/sqlite.rb
+${GEM_LIBDIR}/lib/sequel/adapters/swift.rb
+${GEM_LIBDIR}/lib/sequel/adapters/swift/mysql.rb
+${GEM_LIBDIR}/lib/sequel/adapters/swift/postgres.rb
+${GEM_LIBDIR}/lib/sequel/adapters/swift/sqlite.rb
+${GEM_LIBDIR}/lib/sequel/adapters/tinytds.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/stored_procedures.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool/sharded_single.rb
@@ -129,6 +141,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/schema_dumper.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_date_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
+${GEM_LIBDIR}/lib/sequel/extensions/to_dot.rb
 ${GEM_LIBDIR}/lib/sequel/metaprogramming.rb
 ${GEM_LIBDIR}/lib/sequel/model.rb
 ${GEM_LIBDIR}/lib/sequel/model/associations.rb
@@ -139,6 +152,7 @@ ${GEM_LIBDIR}/lib/sequel/model/exceptions.rb
 ${GEM_LIBDIR}/lib/sequel/model/inflections.rb
 ${GEM_LIBDIR}/lib/sequel/model/plugins.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/active_model.rb
+${GEM_LIBDIR}/lib/sequel/plugins/association_autoreloading.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_dependencies.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_pks.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_proxies.rb
@@ -198,6 +212,7 @@ ${GEM_LIBDIR}/spec/core/schema_spec.rb
 ${GEM_LIBDIR}/spec/core/spec_helper.rb
 ${GEM_LIBDIR}/spec/core/version_spec.rb
 ${GEM_LIBDIR}/spec/extensions/active_model_spec.rb
+${GEM_LIBDIR}/spec/extensions/association_autoreloading_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_dependencies_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_pks_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_proxies_spec.rb
@@ -239,6 +254,7 @@ ${GEM_LIBDIR}/spec/extensions/subclasses_spec.rb
 ${GEM_LIBDIR}/spec/extensions/tactical_eager_loading_spec.rb
 ${GEM_LIBDIR}/spec/extensions/thread_local_timezones_spec.rb
 ${GEM_LIBDIR}/spec/extensions/timestamps_spec.rb
+${GEM_LIBDIR}/spec/extensions/to_dot_spec.rb
 ${GEM_LIBDIR}/spec/extensions/touch_spec.rb
 ${GEM_LIBDIR}/spec/extensions/tree_spec.rb
 ${GEM_LIBDIR}/spec/extensions/typecast_on_load_spec.rb
@@ -275,6 +291,11 @@ ${GEM_LIBDIR}/spec/files/missing_integer_migrations/001_create_alt_basic.rb
 ${GEM_LIBDIR}/spec/files/missing_integer_migrations/003_create_alt_advanced.rb
 ${GEM_LIBDIR}/spec/files/missing_timestamped_migrations/1273253849_create_sessions.rb
 ${GEM_LIBDIR}/spec/files/missing_timestamped_migrations/1273253853_3_create_users.rb
+${GEM_LIBDIR}/spec/files/reversible_migrations/001_reversible.rb
+${GEM_LIBDIR}/spec/files/reversible_migrations/002_reversible.rb
+${GEM_LIBDIR}/spec/files/reversible_migrations/003_reversible.rb
+${GEM_LIBDIR}/spec/files/reversible_migrations/004_reversible.rb
+${GEM_LIBDIR}/spec/files/reversible_migrations/005_reversible.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253849_create_sessions.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253851_create_nodes.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253853_3_create_users.rb
