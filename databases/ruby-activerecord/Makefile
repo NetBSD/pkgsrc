@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2011/02/09 12:39:41 taca Exp $
+# $NetBSD: Makefile,v 1.22 2011/03/23 14:27:14 taca Exp $
 
-DISTNAME=	activerecord-2.3.11
+DISTNAME=	activerecord-${RUBY_RAILS2_VERSION}
 CATEGORIES=	databases
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,7 +8,9 @@ HOMEPAGE=	http://rubyforge.org/projects/activerecord/
 COMMENT=	Object-relation mapping put on rails
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=2.3.11<2.3.12:../../devel/ruby-activesupport
+RUBY_RAILS=	2
+
+DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
