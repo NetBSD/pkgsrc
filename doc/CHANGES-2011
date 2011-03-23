@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.754 2011/03/23 14:14:22 taca Exp $
+$NetBSD: CHANGES-2011,v 1.755 2011/03/23 14:35:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/pngcheck to 2.3.0 [adam 2011-03-23]
 	Updated textproc/ruby-json-pure to 1.5.1 [taca 2011-03-23]
 	Updated textproc/ruby-json to 1.5.1 [taca 2011-03-23]
+	Updated misc/rubygems to 1.6.2 [taca 2011-03-23]
