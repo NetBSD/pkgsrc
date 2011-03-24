@@ -1,0 +1,15 @@
+$NetBSD: patch-cf_Makefile.am.common,v 1.1 2011/03/24 05:38:01 obache Exp $
+
+* require install-man before install-cat-mans to create alias links.
+
+--- cf/Makefile.am.common.orig	2002-08-19 16:10:25.000000000 +0000
++++ cf/Makefile.am.common
+@@ -187,7 +187,7 @@ dist-cat8-mans:
+ 
+ dist-hook: dist-cat1-mans dist-cat3-mans dist-cat5-mans dist-cat8-mans
+ 
+-install-cat-mans:
++install-cat-mans: install-man
+ 	$(SHELL) $(top_srcdir)/cf/install-catman.sh "$(INSTALL_DATA)" "$(mkinstalldirs)" "$(srcdir)" "$(DESTDIR)$(mandir)" '$(CATMANEXT)' $(man_MANS) $(man1_MANS) $(man3_MANS) $(man5_MANS) $(man8_MANS)
+ 
+ install-data-local: install-cat-mans
