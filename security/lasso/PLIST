@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/06/06 11:52:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/03/24 03:04:16 obache Exp $
 lib/pkgconfig/lasso.pc
 lib/liblasso.la
 include/lasso/xml/saml-2.0/saml2_action.h
@@ -160,7 +160,7 @@ share/gtk-doc/html/lasso/idwsf.html
 share/gtk-doc/html/lasso/idwsf2.html
 share/gtk-doc/html/lasso/index.html
 share/gtk-doc/html/lasso/index.sgml
-share/gtk-doc/html/lasso/lasso-Addon-to-SAML-2.0-profile-for-ID-WSF-2.0-bootsraping.ht
+share/gtk-doc/html/lasso/lasso-Addon-to-SAML-2.0-profile-for-ID-WSF-2.0-bootsraping.html
 share/gtk-doc/html/lasso/lasso-Base-Strings.html
 share/gtk-doc/html/lasso/lasso-Error-Codes.html
 share/gtk-doc/html/lasso/lasso-ID-WSF-1.0-Strings.html
