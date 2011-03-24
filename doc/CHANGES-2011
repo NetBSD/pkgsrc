@@ -1,4 +1,6 @@
-$NetBSD: CHANGES-2011,v 1.775 2011/03/24 08:05:33 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.776 2011/03/24 13:54:53 wiz Exp $
+
+PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1333,3 +1335,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/libsndfile to 1.0.24 [adam 2011-03-23]
 	Updated www/ikiwiki to 3.20110321 [schmonz 2011-03-23]
 	Updated security/lasso to 2.2.91nb5 [obache 2011-03-24]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q1 branch [wiz 2011-03-24]
