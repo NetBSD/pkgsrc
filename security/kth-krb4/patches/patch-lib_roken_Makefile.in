@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_roken_Makefile.in,v 1.1 2011/03/24 05:38:01 obache Exp $
+
+* require install-man before install-cat-mans to create alias links.
+
+--- lib/roken/Makefile.in.orig	2011-03-24 05:23:13.000000000 +0000
++++ lib/roken/Makefile.in
+@@ -1059,7 +1059,7 @@ dist-cat8-mans:
+ 
+ dist-hook: dist-cat1-mans dist-cat3-mans dist-cat5-mans dist-cat8-mans
+ 
+-install-cat-mans:
++install-cat-mans: install-man
+ 	$(SHELL) $(top_srcdir)/cf/install-catman.sh "$(INSTALL_DATA)" "$(mkinstalldirs)" "$(srcdir)" "$(DESTDIR)$(mandir)" '$(CATMANEXT)' $(man_MANS) $(man1_MANS) $(man3_MANS) $(man5_MANS) $(man8_MANS)
+ 
+ install-data-local: install-cat-mans

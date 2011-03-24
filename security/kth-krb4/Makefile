@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2010/01/17 12:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2011/03/24 05:38:01 obache Exp $
 #
 
 DISTNAME=		krb4-1.2.2
@@ -13,6 +13,8 @@ COMMENT=		Kerberos IV distribution from KTH
 
 CONFLICTS+=		arla-[0-9]*
 CONFLICTS+=		libdes-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CRYPTO=			yes
 
@@ -67,12 +69,18 @@ CONFIGURE_ARGS+=	--with-readline=yes \
 PLIST_VARS+=		glob
 
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/krb.realms ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/inetd.conf.changes ${EXAMPLEDIR}
-	${INSTALL_DATA} ${FILESDIR}/services-1.4.2.diff ${EXAMPLEDIR}
-	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${EXAMPLEDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/krb.realms ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/inetd.conf.changes ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${FILESDIR}/services-1.4.2.diff ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${DESTDIR}${EXAMPLEDIR}
+
+SPECIAL_PERMS+=	bin/${KRB4_PREFIX}rsh ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	bin/${KRB4_PREFIX}rcp ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	bin/${KRB4_PREFIX}rlogin ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	bin/${KRB4_PREFIX}su ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	bin/otp ${SETUID_ROOT_PERMS}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
