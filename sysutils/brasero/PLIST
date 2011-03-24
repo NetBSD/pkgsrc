@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/03/23 20:40:26 zafer Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/03/24 02:23:47 obache Exp $
 bin/brasero
 include/brasero/brasero-blank-dialog.h
 include/brasero/brasero-burn-dialog.h
@@ -215,6 +215,7 @@ share/brasero/icons/hicolor/scalable/status/brasero-disc-80.svg
 share/brasero/icons/hicolor/scalable/status/brasero-disc-85.svg
 share/brasero/icons/hicolor/scalable/status/brasero-disc-90.svg
 share/brasero/icons/hicolor/scalable/status/brasero-disc-95.svg
+share/glib-2.0/schemas/org.gnome.brasero.gschema.xml
 share/gnome/help/brasero/C/brasero.xml
 share/gnome/help/brasero/C/figures/brasero_main.png
 share/gnome/help/brasero/C/legal.xml
