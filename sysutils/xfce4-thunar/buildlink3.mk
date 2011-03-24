@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/01/13 13:36:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/03/24 14:35:18 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-thunar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-thunar
 XFCE4_THUNAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-thunar+=	xfce4-thunar>=1.0.0
-BUILDLINK_ABI_DEPENDS.xfce4-thunar?=	xfce4-thunar>=1.0.1nb4
+BUILDLINK_ABI_DEPENDS.xfce4-thunar?=	xfce4-thunar>=1.0.1nb5
 BUILDLINK_PKGSRCDIR.xfce4-thunar?=	../../sysutils/xfce4-thunar
 
 pkgbase := xfce4-thunar
@@ -26,6 +26,7 @@ pkgbase := xfce4-thunar
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
 .endif # XFCE4_THUNAR_BUILDLINK3_MK
 
