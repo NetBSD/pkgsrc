@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1 2011/03/24 12:04:57 drochner Exp $
+
+CVE-2011-1166
+
+--- xen/arch/x86/domain.c.orig	2009-08-06 12:56:41.000000000 +0000
++++ xen/arch/x86/domain.c
+@@ -680,6 +680,11 @@ int arch_set_info_guest(
+ 
+             v->arch.guest_table_user = pagetable_from_pfn(cr3_pfn);
+         }
++        else if ( !(flags & VGCF_in_kernel) )
++        {
++            destroy_gdt(v);
++            return -EINVAL;
++        }
+ #endif
+     }
+ #ifdef CONFIG_COMPAT
