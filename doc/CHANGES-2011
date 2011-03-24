@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.773 2011/03/23 22:25:15 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.774 2011/03/24 03:04:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1331,3 +1331,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-css-parser to 1.1.5 [taca 2011-03-23]
 	Updated audio/libsndfile to 1.0.24 [adam 2011-03-23]
 	Updated www/ikiwiki to 3.20110321 [schmonz 2011-03-23]
+	Updated security/lasso to 2.2.91nb5 [obache 2011-03-24]
