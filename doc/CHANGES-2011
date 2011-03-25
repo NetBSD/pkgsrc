@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.776 2011/03/24 13:54:53 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.777 2011/03/25 08:46:17 taca Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1336,3 +1336,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ikiwiki to 3.20110321 [schmonz 2011-03-23]
 	Updated security/lasso to 2.2.91nb5 [obache 2011-03-24]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q1 branch [wiz 2011-03-24]
+	Updated devel/ruby-activemodel to 3.0.5 [taca 2011-03-25]
