@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
+$NetBSD: patch-as,v 1.5 2011/03/25 15:28:26 wiz Exp $
 
---- src/kernel/qpngio.cpp.orig	2007-02-02 14:01:15.000000000 +0000
+--- src/kernel/qpngio.cpp.orig	2007-02-02 10:01:15.000000000 -0400
 +++ src/kernel/qpngio.cpp
 @@ -43,6 +43,7 @@
  #include "qiodevice.h"
@@ -128,16 +128,15 @@ $NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
  
      png_set_IHDR(png_ptr, info_ptr, image.width(), image.height(),
  	image.depth() == 1 ? 1 : 8 /* per channel */,
-@@ -504,11 +526,13 @@ bool QPNGImageWriter::writeImage(const Q
+@@ -504,11 +526,12 @@ bool QPNGImageWriter::writeImage(const Q
  		: PNG_COLOR_TYPE_RGB
  	    : PNG_COLOR_TYPE_PALETTE, 0, 0, 0);
  
-+    png_color_8p sig_bit;
-+    png_get_sBIT(png_ptr, info_ptr, &sig_bit);
-+    sig_bit->red = 8;
-+    sig_bit->green = 8;
-+    sig_bit->blue = 8;
-+    png_set_sBIT(png_ptr, info_ptr, sig_bit);
++    png_color_8 sig_bit;
++    sig_bit.red = 8;
++    sig_bit.green = 8;
++    sig_bit.blue = 8;
++    png_set_sBIT(png_ptr, info_ptr, &sig_bit);
  
 -    //png_set_sBIT(png_ptr, info_ptr, 8);
 -    info_ptr->sig_bit.red = 8;
@@ -146,7 +145,7 @@ $NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
  
      if (image.depth() == 1 && image.bitOrder() == QImage::LittleEndian)
         png_set_packswap(png_ptr);
-@@ -522,11 +546,14 @@ bool QPNGImageWriter::writeImage(const Q
+@@ -522,11 +545,14 @@ bool QPNGImageWriter::writeImage(const Q
  	png_set_PLTE(png_ptr, info_ptr, palette, num_palette);
  	int* trans = new int[num_palette];
  	int num_trans = 0;
@@ -164,7 +163,7 @@ $NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
  	    if (image.hasAlphaBuffer()) {
  		trans[i] = rgb >> 24;
  		if (trans[i] < 255) {
-@@ -534,6 +561,7 @@ bool QPNGImageWriter::writeImage(const Q
+@@ -534,6 +560,7 @@ bool QPNGImageWriter::writeImage(const Q
  		}
  	    }
  	}
@@ -172,7 +171,7 @@ $NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
  	if (num_trans) {
  	    copy_trans = new png_byte[num_trans];
  	    for (int i=0; i<num_trans; i++)
-@@ -544,7 +572,10 @@ bool QPNGImageWriter::writeImage(const Q
+@@ -544,7 +571,10 @@ bool QPNGImageWriter::writeImage(const Q
      }
  
      if ( image.hasAlphaBuffer() ) {
@@ -184,7 +183,7 @@ $NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
      }
  
      // Swap ARGB to RGBA (normal PNG format) before saving on
-@@ -1030,7 +1061,7 @@ int QPNGFormat::decode(QImage& img, QIma
+@@ -1030,7 +1060,7 @@ int QPNGFormat::decode(QImage& img, QIma
  	    return -1;
  	}
  
@@ -193,7 +192,7 @@ $NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
  	    png_destroy_read_struct(&png_ptr, &info_ptr, 0);
  	    image = 0;
  	    return -1;
-@@ -1057,7 +1088,7 @@ int QPNGFormat::decode(QImage& img, QIma
+@@ -1057,7 +1087,7 @@ int QPNGFormat::decode(QImage& img, QIma
  
      if ( !png_ptr ) return 0;
  
@@ -202,7 +201,7 @@ $NetBSD: patch-as,v 1.4 2011/03/18 15:36:01 wiz Exp $
  	png_destroy_read_struct(&png_ptr, &info_ptr, 0);
  	image = 0;
  	state = MovieStart;
-@@ -1117,7 +1148,7 @@ void QPNGFormat::end(png_structp png, pn
+@@ -1117,7 +1147,7 @@ void QPNGFormat::end(png_structp png, pn
      consumer->frameDone(QPoint(offx,offy),r);
      consumer->end();
      state = FrameStart;
