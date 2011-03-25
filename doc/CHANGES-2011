@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.778 2011/03/25 12:36:58 obache Exp $
+$NetBSD: CHANGES-2011,v 1.779 2011/03/25 15:28:35 wiz Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1338,3 +1338,4 @@ Changes to the packages collection and infrastructure in 2011:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q1 branch [wiz 2011-03-24]
 	Updated devel/ruby-activemodel to 3.0.5 [taca 2011-03-25]
 	Updated inputmethod/ibus-handwrite to 2.1.4 [obache 2011-03-25]
+	Updated x11/qt3-libs to 3.3.8nb17 [wiz 2011-03-25]
