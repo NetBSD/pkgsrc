@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.780 2011/03/25 16:52:47 taca Exp $
+$NetBSD: CHANGES-2011,v 1.781 2011/03/25 16:54:12 taca Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1340,3 +1340,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/ibus-handwrite to 2.1.4 [obache 2011-03-25]
 	Updated x11/qt3-libs to 3.3.8nb17 [wiz 2011-03-25]
 	Updated www/contao29 to 2.9.4nb1 [taca 2011-03-25]
+	Updated www/contao29-translations to 20110324 [taca 2011-03-25]
