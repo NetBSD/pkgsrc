@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.777 2011/03/25 08:46:17 taca Exp $
+$NetBSD: CHANGES-2011,v 1.778 2011/03/25 12:36:58 obache Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1337,3 +1337,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/lasso to 2.2.91nb5 [obache 2011-03-24]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q1 branch [wiz 2011-03-24]
 	Updated devel/ruby-activemodel to 3.0.5 [taca 2011-03-25]
+	Updated inputmethod/ibus-handwrite to 2.1.4 [obache 2011-03-25]
