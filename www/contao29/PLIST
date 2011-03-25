@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/07/18 14:46:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/25 16:52:08 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.txt
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/INSTALL.txt
@@ -233,6 +233,7 @@ ${CT_WEBDIR}/plugins/mediabox/images/WhiteClose.gif
 ${CT_WEBDIR}/plugins/mediabox/images/WhiteLoading.gif
 ${CT_WEBDIR}/plugins/mediabox/images/WhiteNext.gif
 ${CT_WEBDIR}/plugins/mediabox/images/WhitePrevious.gif
+${CT_WEBDIR}/plugins/mediabox/js/Quickie.js
 ${CT_WEBDIR}/plugins/mediabox/js/mediabox.js
 ${CT_WEBDIR}/plugins/mediabox/js/mediabox.js.gz
 ${CT_WEBDIR}/plugins/mediabox/js/mediabox_src.js
@@ -896,6 +897,8 @@ ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/de.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/de_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/en.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/en_dlg.js
+${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/es.js
+${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/es_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/fr.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/fr_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/it.js
@@ -910,6 +913,8 @@ ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/ru.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/ru_dlg.js
+${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/sv.js
+${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/sv_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typobox.html
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typoimages.php
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typolib.php
@@ -1973,8 +1978,9 @@ ${CT_WEBDIR}/system/themes/default/src/popup.css
 ${CT_WEBDIR}/system/themes/default/src/switch.css
 ${CT_WEBDIR}/system/themes/default/switch.css
 ${CT_WEBDIR}/system/themes/tinymce.css
-${CT_WEBDIR}/system/utf8_lookup.php
 ${CT_WEBDIR}/system/tmp/.htaccess
+${CT_WEBDIR}/system/utf8_lookup.php
+${CT_WEBDIR}/templates/.htaccess
 ${CT_WEBDIR}/typolight/index.php
 ${CT_WEBDIR}/typolight/install.php
 ${CT_WEBDIR}/typolight/main.php
