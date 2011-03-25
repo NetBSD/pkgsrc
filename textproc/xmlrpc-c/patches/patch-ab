@@ -1,7 +1,15 @@
-$NetBSD: patch-ab,v 1.7 2009/10/28 09:25:23 adam Exp $
+$NetBSD: patch-ab,v 1.8 2011/03/25 13:38:07 adam Exp $
 
 --- Makefile.config.in.orig	2008-03-25 15:24:58.000000000 +0100
 +++ Makefile.config.in
+@@ -141,6 +141,7 @@
+   SHARED_LIB_TYPE = unix
+   SHLIB_SUFFIX = so
+ #  SHLIB_CLIB = -lc
++  CFLAGS_SHLIB = -fPIC
+   LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
+ endif
+ 
 @@ -155,6 +155,15 @@ ifeq ($(findstring solaris,$(HOST_OS)),s
    CFLAGS_SHLIB = -Kpic
  endif
