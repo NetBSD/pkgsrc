@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/09 05:45:23 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/26 08:02:38 obache Exp $
 bin/serve-branches
 bin/start-loggerhead
 bin/stop-loggerhead
 ${PYSITELIB}/bzrlib/plugins/loggerhead/__init__.py
 ${PYSITELIB}/bzrlib/plugins/loggerhead/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/loggerhead/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/loggerhead/info.py
+${PYSITELIB}/bzrlib/plugins/loggerhead/info.pyc
+${PYSITELIB}/bzrlib/plugins/loggerhead/info.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/loggerhead/__init__.py
 ${PYSITELIB}/loggerhead/__init__.pyc
 ${PYSITELIB}/loggerhead/__init__.pyo

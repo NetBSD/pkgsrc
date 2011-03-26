@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/09/09 05:45:23 epg Exp $
+$NetBSD: distinfo,v 1.4 2011/03/26 08:02:38 obache Exp $
 
-SHA1 (loggerhead-1.17.tar.gz) = 910b5f569c8647294cabfa45698909b1fffda1ee
-RMD160 (loggerhead-1.17.tar.gz) = 847e3c12eff66e9fdf617e0ef7523f7f74e3c82c
-Size (loggerhead-1.17.tar.gz) = 706897 bytes
-SHA1 (patch-aa) = 92b3c29fb0320ebe65bee7f872251ba4b6c81fb7
+SHA1 (loggerhead-1.18.1.tar.gz) = dad804c194ddc278d8f4a65460cc480eff937a73
+RMD160 (loggerhead-1.18.1.tar.gz) = a03a119ff82470cba2bccf215bce8c468daf7357
+Size (loggerhead-1.18.1.tar.gz) = 695475 bytes
+SHA1 (patch-aa) = 8cc7793fe682e9ed690be784eb510020b22fca39
