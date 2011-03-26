@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.782 2011/03/25 21:40:00 abs Exp $
+$NetBSD: CHANGES-2011,v 1.783 2011/03/26 08:03:12 obache Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1342,3 +1342,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29 to 2.9.4nb1 [taca 2011-03-25]
 	Updated www/contao29-translations to 20110324 [taca 2011-03-25]
 	Updated net/Transmission to 2.22 [abs 2011-03-25]
+	Updated www/loggerhead to 1.18.1 [obache 2011-03-26]
