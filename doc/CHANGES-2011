@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.783 2011/03/26 08:03:12 obache Exp $
+$NetBSD: CHANGES-2011,v 1.784 2011/03/26 10:05:48 rh Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1343,3 +1343,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29-translations to 20110324 [taca 2011-03-25]
 	Updated net/Transmission to 2.22 [abs 2011-03-25]
 	Updated www/loggerhead to 1.18.1 [obache 2011-03-26]
+	Updated games/cgoban-java to 3.4.14 [rh 2011-03-26]
