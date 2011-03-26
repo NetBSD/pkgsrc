@@ -1,3 +1,5 @@
+$NetBSD: patch-as,v 1.5 2011/03/26 18:45:52 bouyer Exp $
+
 --- etc/afpd/nfsquota.c.orig	2010-06-29 17:30:04.000000000 +0200
 +++ etc/afpd/nfsquota.c	2011-03-24 15:42:56.000000000 +0100
 @@ -18,7 +18,7 @@
