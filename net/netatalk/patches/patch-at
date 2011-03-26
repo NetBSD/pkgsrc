@@ -1,3 +1,5 @@
+$NetBSD: patch-at,v 1.5 2011/03/26 18:45:52 bouyer Exp $
+
 --- etc/afpd/quota.c.orig	2011-03-24 15:43:48.000000000 +0100
 +++ etc/afpd/quota.c	2011-03-24 17:56:34.000000000 +0100
 @@ -47,6 +47,96 @@
@@ -34,10 +36,10 @@
 +	if (retq < 1)
 +		return retq;
 +
-+	switch(quota_check_limit(ufsq[QUOTA_LIMIT_BLOCK].ufsqe_cur, 1,
++	switch(QL_STATUS(quota_check_limit(ufsq[QUOTA_LIMIT_BLOCK].ufsqe_cur, 1,
 +	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_softlimit,
 +	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_hardlimit,
-+	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_time, now)) {
++	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_time, now))) {
 +	case QL_S_DENY_HARD:
 +	case QL_S_DENY_GRACE:
 +		*bfree = 0;
