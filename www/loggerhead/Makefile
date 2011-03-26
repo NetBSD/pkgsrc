@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/03/26 07:09:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/26 07:12:56 obache Exp $
 
 DISTNAME=	loggerhead-${VER}
 PKGREVISION=	1
@@ -26,7 +26,7 @@ PYDISTUTILSPKG=	yes
 # Requires wsgi, which is available for older versions of Python, but not in
 # pkgsrc yet.  Also requires 'sqlite3', which seems not to be available
 # separately (py-sqlite2 is for sqlite3 but is 'pysqlite2').
-PYTHON_VERSIONS_ACCEPTED=	25 26 27
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
