@@ -1,9 +1,16 @@
-# $NetBSD: gem.mk,v 1.4 2011/03/23 14:22:49 taca Exp $
+# $NetBSD: gem.mk,v 1.5 2011/03/27 13:05:16 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
 #
 # Package-settable variables:
+#
+# RUBYGEMS_REQD
+#	Minimum version of required rubygems.  Ruby 1.9.2 coms with
+#	rubygems version 1.3.7.  If newer version of rubygems is
+#	resuiqred, set RUBYGEMS_REQD to minimum version.
+#
+#	Default: 1.3.7
 #
 # BUILD_TARGET
 #	The Rakefile target that creates a local gem if using the
@@ -86,11 +93,15 @@ USE_TOOLS+=		expr
 # If we're using rake to build the local gem, then include it as a
 # build tool.
 #
-.if ${RUBY_VER} == "18"
+
+.if defined(RUBYGEMS_REQD)
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=${RUBYGEMS_REQD}:../../misc/rubygems
+DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=${RUBYGEMS_REQD}:../../misc/rubygems
+.else
+. if ${RUBY_VER} == "18"
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.1.0:../../misc/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
-.else
-_RUBYGEM_UNPACK_OPTION=	${RUBYGEM_INSTALL_ROOT_OPTION}
+. endif
 .endif
 
 CATEGORIES+=	ruby
@@ -163,7 +174,7 @@ post-extract: gem-extract
 gem-extract: fake-home
 .  for _gem_ in ${DISTFILES:M*.gem}
 	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} \
-		${RUBYGEM} unpack ${_RUBYGEM_UNPACK_OPTION} \
+		${RUBYGEM} unpack ${RUBYGEM_INSTALL_ROOT_OPTION} \
 			${_DISTDIR:Q}/${_gem_:Q}
 	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} TZ=UTC \
 		${RUBYGEM} spec ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
