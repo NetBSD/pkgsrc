@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.3 2011/01/01 03:48:54 obache Exp $
+# $NetBSD: INSTALL,v 1.4 2011/03/27 14:47:26 chs Exp $
 #
 # Initialize gtk/pango module configuration.
 #
@@ -9,9 +9,10 @@ POST-INSTALL)
 	SUSECONFIG="${PKG_PREFIX}/@EMULSUBDIR@/sbin/SuSEconfig"
 
 	${ECHO} "${PKGNAME}: initializing GTK/Pango module configuration"
-        ${GNOME_BINDIR}/gtk-query-immodules-2.0@BINSUFFIX@ > ${GNOME_ETCDIR}/gtk-2.0/gtk@ABISUFFIX@.immodules
-        ${GNOME_BINDIR}/gdk-pixbuf-query-loaders@BINSUFFIX@ > ${GNOME_ETCDIR}/gtk-2.0/gdk-pixbuf.loaders
-        ${GNOME_BINDIR}/pango-querymodules@BINSUFFIX@ > ${GNOME_ETCDIR}/pango/pango@ABISUFFIX@.modules
+	${GNOME_BINDIR}/gtk-query-immodules-2.0@BINSUFFIX@ > ${GNOME_ETCDIR}/gtk-2.0/gtk@ABISUFFIX@.immodules
+	${GNOME_BINDIR}/gdk-pixbuf-query-loaders@BINSUFFIX@ > ${GNOME_ETCDIR}/gtk-2.0/gdk-pixbuf.loaders
+	${GNOME_BINDIR}/pango-querymodules@BINSUFFIX@ > ${GNOME_ETCDIR}/pango/pango@ABISUFFIX@.modules
+	${MKDIR} -p ${PKG_PREFIX}/@EMULSUBDIR@/var/lock
 	PATH=${PKG_PREFIX}/@EMULSUBDIR@/bin ROOT=${PKG_PREFIX}/@EMULSUBDIR@ bash ${SUSECONFIG} --module glib2
 	${LN} -s /../var/db/dbus/machine-id ${PKG_PREFIX}/@EMULSUBDIR@/var/lib/dbus/machine-id
 	;;
