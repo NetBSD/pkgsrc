@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/03/27 16:52:29 joerg Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.w3.org/Daemon/
 COMMENT=	WWW server from the W3 Consortium (W3C)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	build-all
