@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.788 2011/03/27 14:48:04 chs Exp $
+$NetBSD: CHANGES-2011,v 1.789 2011/03/27 14:48:56 chs Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1349,3 +1349,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed net/boinc3-libs [shattered 2011-03-27]
 	Removed net/boinc3-coreclient [shattered 2011-03-27]
 	Updated emulators/suse113_gtk2 to 11.3nb3 [chs 2011-03-27]
+	Updated emulators/suse113_base to 11.3nb4 [chs 2011-03-27]
