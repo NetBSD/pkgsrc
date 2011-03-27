@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.1 2011/03/23 14:22:49 taca Exp $
+# $NetBSD: rails.mk,v 1.2 2011/03/27 15:54:43 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -88,6 +88,7 @@ RUBY_RAILS2_ACTIONPACK=		../../www/ruby-actionpack
 RUBY_RAILS2_ACTIVERECORD=	../../databases/ruby-activerecord
 RUBY_RAILS2_ACTIVERESOURCE=	../../www/ruby-activeresource
 RUBY_RAILS2_ACTIONMAILER=	../../mail/ruby-actionmailer
+RUBY_RAILS2_RAILS=		../../www/ruby-rails
 
 RUBY_RAILS3_ACTIVESUPPORT=	../../devel/ruby-activesupport3
 RUBY_RAILS3_ACTIVEMODEL=	../../devel/ruby-activemodel
@@ -96,6 +97,7 @@ RUBY_RAILS3_ACTIVERECORD=	../../databases/ruby-activerecord3
 RUBY_RAILS3_ACTIVERESOURCE=	../../www/ruby-activeresource3
 RUBY_RAILS3_ACTIONMAILER=	../../mail/ruby-actionmailer3
 RUBY_RAILS3_RAILTIES=		../../devel/ruby-railties
+RUBY_RAILS3_RAILS=		../../www/ruby-rails3
 
 .if ${_RUBY_RAILS_MAJOR} == "2"
 RUBY_ACTIVESUPPORT_DEPENDS= \
@@ -109,6 +111,9 @@ RUBY_ACTIVERESOURCE_DEPENDS= \
 RUBY_ACTIONMAILER_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionmailer${_RAILS_DEP}:${RUBY_RAILS2_ACTIONMAILER}
 RUBY_RAILTIES_DEPENDS= # empty
+RUBY_RAILTIES_DEPENDS= # empty
+RUBY_RAILS_DEPENDS= \
+	${RUBY_PKGPREFIX}-rails${_RAILS_DEP}:${RUBY_RAILS2_RAILS}
 .else
 RUBY_ACTIVESUPPORT_DEPENDS= \
 	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:${RUBY_RAILS3_ACTIVESUPPORT}
@@ -124,6 +129,8 @@ RUBY_ACTIONMAILER_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionmailer${_RAILS_DEP}:${RUBY_RAILS3_ACTIONMAILER}
 RUBY_RAILTIES_DEPENDS= \
 	${RUBY_PKGPREFIX}-railties${_RAILS_DEP}:${RUBY_RAILS3_RAILTIES}
+RUBY_RAILS_DEPENDS= \
+	${RUBY_PKGPREFIX}-rails${_RAILS_DEP}:${RUBY_RAILS3_RAILS}
 .endif
 
 .endif
