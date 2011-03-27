@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2011/02/28 01:45:43 chs Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/27 14:48:36 chs Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
-DISTFILES+=	aaa_base-11.3-7.2.${SUSE_ARCH}.rpm
+DISTFILES+=	aaa_base-11.3-8.9.1.${SUSE_ARCH}.rpm
 DISTFILES+=	bash-4.1-8.1.${SUSE_ARCH}.rpm
 DISTFILES+=	coreutils-7.1-10.1.${SUSE_ARCH}.rpm
 DISTFILES+=	cyrus-sasl-2.1.23-11.1.${SUSE_ARCH}.rpm
