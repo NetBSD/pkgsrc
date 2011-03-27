@@ -1,0 +1,12 @@
+# $NetBSD: DEINSTALL,v 1.1 2011/03/27 13:02:17 taca Exp $
+
+RUBYGEM="@PREFIX@/bin/@RUBYGEM_NAME@"
+
+case ${STAGE} in
+DEINSTALL)
+	${MV} ${RUBYGEM} ${RUBYGEM}.new
+	if [ -f ${RUBYGEM}.orig ]; then
+		${MV} ${RUBYGEM}.orig ${RUBYGEM}
+	fi
+	;;
+esac
