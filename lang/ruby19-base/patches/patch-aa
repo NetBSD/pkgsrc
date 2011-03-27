@@ -1,10 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/27 15:49:40 taca Exp $
 
-Adding Interix support.
+* Adding Interix support.
+* Ignore doxygen.
 
---- configure.in.orig	2010-08-14 08:11:59.000000000 +0000
+--- configure.in.orig	2011-02-18 10:43:45.000000000 +0000
 +++ configure.in
-@@ -958,6 +958,8 @@ main()
+@@ -351,11 +351,7 @@ AC_SUBST(MAKEDIRS)
+ 
+ AC_CHECK_TOOL(DOT, dot)
+ AC_CHECK_TOOL(DOXYGEN, doxygen)
+-if test x"$DOXYGEN" = x; then
+-    CAPITARGET=nodoc
+-else
+-    CAPITARGET=capi
+-fi
++CAPITARGET=nodoc
+ AC_SUBST(CAPITARGET)
+ 
+ # checks for UNIX variants that set C preprocessor variables
+@@ -980,6 +976,8 @@ main()
  		],
  [superux*], [	ac_cv_func_setitimer=no
  		],
@@ -13,7 +27,7 @@ Adding Interix support.
  [	LIBS="-lm $LIBS"])
  AC_CHECK_LIB(crypt, crypt)
  AC_CHECK_LIB(dl, dlopen)	# Dynamic linking for SunOS/Solaris and SYSV
-@@ -1809,7 +1811,9 @@ if test "$with_dln_a_out" != yes; then
+@@ -1831,7 +1829,9 @@ if test "$with_dln_a_out" != yes; then
  			rb_cv_dlopen=yes],
  	[interix*], [	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -23,7 +37,7 @@ Adding Interix support.
  			rb_cv_dlopen=yes],
  	[freebsd*|dragonfly*], [
  			: ${LDSHARED='$(CC) -shared'}
-@@ -2164,7 +2168,12 @@ if test "$enable_shared" = 'yes'; then
+@@ -2188,7 +2188,12 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_ALIASES='lib$(RUBY_BASE_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
  	],
      [interix*], [
