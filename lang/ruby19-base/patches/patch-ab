@@ -1,10 +1,24 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+$NetBSD: patch-ab,v 1.2 2011/03/27 15:49:40 taca Exp $
 
-Adding Interix support.
+* Adding Interix support.
+* Ignore doxygen.
 
---- configure.orig	2010-08-18 05:56:27.000000000 +0000
+--- configure.orig	2011-02-18 12:13:10.000000000 +0000
 +++ configure
-@@ -9296,6 +9296,9 @@ esac
+@@ -5979,11 +5979,7 @@ else
+   DOXYGEN="$ac_cv_prog_DOXYGEN"
+ fi
+ 
+-if test x"$DOXYGEN" = x; then
+-    CAPITARGET=nodoc
+-else
+-    CAPITARGET=capi
+-fi
++CAPITARGET=nodoc
+ 
+ 
+ # checks for UNIX variants that set C preprocessor variables
+@@ -9459,6 +9455,9 @@ esac
    superux*) :
      	ac_cv_func_setitimer=no
  		 ;; #(
@@ -14,7 +28,7 @@ Adding Interix support.
    *) :
      	LIBS="-lm $LIBS" ;;
  esac
-@@ -14926,8 +14929,12 @@ esac ;; #(
+@@ -15256,8 +15255,12 @@ esac ;; #(
  			rb_cv_dlopen=yes ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
@@ -27,7 +41,7 @@ Adding Interix support.
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -15424,7 +15431,12 @@ esac
+@@ -15756,7 +15759,12 @@ esac
  	 ;; #(
    interix*) :
  
