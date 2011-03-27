@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 04:11:12 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/27 15:52:41 taca Exp $
 
 DISTNAME=	activerecord-odbc-adapter-2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-adapter//}
@@ -9,8 +9,9 @@ HOMEPAGE=	http://odbc-rails.rubyforge.org/
 COMMENT=	ActiveRecord ODBC adapter
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=2.0.2:../../databases/ruby-activerecord
 DEPENDS+=	${RUBY_PKGPREFIX}-odbc>=0.9991:../../databases/ruby-odbc
+
+RUBY_RAILS=	# empty
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

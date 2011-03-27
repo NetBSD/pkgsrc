@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/26 15:23:23 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/27 15:53:50 taca Exp $
 
 DISTNAME=	gettext_rails-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,8 +10,10 @@ COMMENT=	Localization for Ruby on Rails using Ruby-GetText-Package
 LICENSE=	ruby-license
 
 DEPENDS+=	${RUBY_PKGPREFIX}-locale-rails>=2.0.5:../../devel/ruby-locale-rails
-DEPENDS+=	${RUBY_PKGPREFIX}-gettext-activerecord>=2.1.0:../../devel/ruby-gettext-activerecord
-DEPENDS+=	${RUBY_PKGPREFIX}-rails>=2.3.2:../../www/ruby-rails
+DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
+DEPENDS+=	${RUBY_RAILS_DEPENDS}
+
+RUBY_RAILS=	# defined
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -xdev -type f -print | ${XARGS} ${CHMOD} g-w
