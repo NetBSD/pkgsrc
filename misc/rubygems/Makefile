@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2011/03/23 14:35:04 taca Exp $
+# $NetBSD: Makefile,v 1.38 2011/03/27 13:02:17 taca Exp $
 
 DISTNAME=	rubygems-1.6.2
+PKGREVISION=	1
 CATEGORIES=	misc ruby
 MASTER_SITES=	http://production.cf.rubygems.org/rubygems/ \
 		http://rubyforge.org/frs/download.php/74445/
@@ -19,9 +20,7 @@ CONFLICTS+=	rubygems-[0-9]*
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-RUBY_VERSION=   ${RUBY18_VERSION}
 
-RUBY_VERSION_SUPPORTED= 18
 REPLACE_RUBY_DIRS=	bin
 REPLACE_RUBY_PAT=	[a-z]*
 
@@ -39,6 +38,8 @@ SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	lib/rubygems/config_file.rb
 SUBST_SED.conf=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
+
+FILES_SUBST+=		RUBYGEM_NAME=${RUBYGEM_NAME}
 
 # Generate a dynamic PLIST for the rubygems documentation directory.
 GENERATE_PLIST+=	\
@@ -63,8 +64,18 @@ INSTALL_TARGET+=	--destdir=${DESTDIR:Q}
 # command to install.
 #
 do-install:
+	if [ -f ${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME} ]; then \
+		${MV} ${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME} \
+			${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME}.orig; \
+	fi
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${RUBY} setup.rb ${INSTALL_TARGET}
+	${MV} ${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME} \
+		 ${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME}.new
+	if [ -f ${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME}.orig ]; then \
+		${MV} ${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME}.orig \
+			${DESTDIR}${PREFIX}/bin/${RUBYGEM_NAME}; \
+	fi
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
