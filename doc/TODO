@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10217 2011/03/25 22:06:51 wiz Exp $
+$NetBSD: TODO,v 1.10218 2011/03/27 13:27:18 obache Exp $
 
 Suggested new packages
 ======================
@@ -365,6 +365,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amanda-3.1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.1
+	o amsn-0.98.4
 	o angband-3.2
 	o anjuta-2.32.1.1 [GNOME 2.32]
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
