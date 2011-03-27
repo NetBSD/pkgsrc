@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/12/04 04:25:37 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/03/27 13:08:20 taca Exp $
 
 SHA1 (builder-3.0.0.gem) = 911d35bf53a8678d35aea8e17e4c439eb62fffff
 RMD160 (builder-3.0.0.gem) = f17b12344de661c8baa85a726b52954907ff38e0
 Size (builder-3.0.0.gem) = 609280 bytes
+SHA1 (patch-lib_builder_xmlmarkup.rb) = 5d4c101b3263d84b513e254ad6b62e96840fa255
