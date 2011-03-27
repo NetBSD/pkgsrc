@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.785 2011/03/26 14:19:01 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.786 2011/03/27 13:02:57 taca Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1345,3 +1345,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/loggerhead to 1.18.1 [obache 2011-03-26]
 	Updated games/cgoban-java to 3.4.14 [rh 2011-03-26]
 	Updated audio/musicpd to 0.16.1nb1 [wiz 2011-03-26]
+	Updated misc/rubygems to 1.6.2nb1 [taca 2011-03-27]
