@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/27 17:31:58 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/27 23:05:15 wiz Exp $
 
 DISTNAME=		torrentutils-0.3.0
 PKGREVISION=		4
@@ -8,6 +8,7 @@ MASTER_SITES=		#
 MAINTAINER=		pkgsrc-users@NetBSD.org
 # HOMEPAGE=		http://oskarsapps.mine.nu/torrentutils.html
 COMMENT=		Manage BitTorrent files and interact with trackers
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
