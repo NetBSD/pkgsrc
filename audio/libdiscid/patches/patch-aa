@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2009/07/07 17:44:51 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/27 07:28:25 obache Exp $
 
---- configure.orig	2009-06-16 19:05:52.000000000 +0200
+--- configure.orig	2008-05-25 06:45:56.000000000 +0000
 +++ configure
-@@ -2474,7 +2474,7 @@ case "${host_cpu}-${host_os}" in
+@@ -2473,8 +2473,9 @@ case "${host_cpu}-${host_os}" in
+   *-cygwin*)  os=win32; LIBS='-lwinmm' ;;
    *-freebsd*) os=freebsd ;;
    *-darwin*)  os=darwin; LIBS='-framework CoreFoundation -framework IOKit';;
++  *-dragonfly*)  os=freebsd ;;
    *-linux*)   os=linux ;;
 -  #*-netbsd*)  os=netbsd ;;
 +  *-netbsd*)  os=freebsd ;;
