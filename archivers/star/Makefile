@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/01/13 08:56:19 obache Exp $
+# $NetBSD: Makefile,v 1.25 2011/03/27 07:47:30 obache Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -24,6 +24,7 @@ pre-build:
 	cd ${WRKSRC}/RULES && for i in arm mipsel x86_64 sparc64; do	\
 		${LN} -s i386-netbsd-cc.rul "$$i"-netbsd-cc.rul; done
 	cd ${WRKSRC}/RULES && \
-		${LN} -s os-freebsd.id os-dragonfly.id
+		${LN} -s os-freebsd.id os-dragonfly.id;		\
+		${LN} -s i386-freebsd-cc.rul x86_64-freebsd-cc.rul
 
 .include "../../mk/bsd.pkg.mk"
