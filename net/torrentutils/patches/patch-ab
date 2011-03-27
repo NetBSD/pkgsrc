@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2006/12/01 20:30:18 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2011/03/27 23:05:23 wiz Exp $
+
+Fix unportable test(1) construct.
 
 --- defrag.in.orig	2003-10-12 14:13:16.000000000 +0200
 +++ defrag.in	2006-12-01 21:28:37.000000000 +0100
