@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.16 2011/03/23 14:35:04 taca Exp $
-bin/gem${RUBY_VER}
+@comment $NetBSD: PLIST,v 1.17 2011/03/27 13:02:17 taca Exp $
+bin/gem${RUBY_VER}.new
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
 ${RUBY_VENDORLIB}/rubygems.rb
