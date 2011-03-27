@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/02/28 01:45:43 chs Exp $
+$NetBSD: distinfo,v 1.5 2011/03/27 14:48:36 chs Exp $
 
-SHA1 (suse113/i586/aaa_base-11.3-7.2.i586.rpm) = b14fb02ff155ac83aa39432a78f56cd095b6652e
-RMD160 (suse113/i586/aaa_base-11.3-7.2.i586.rpm) = 489614d045700c0ce9f74461b955b9d29508e300
-Size (suse113/i586/aaa_base-11.3-7.2.i586.rpm) = 126058 bytes
+SHA1 (suse113/i586/aaa_base-11.3-8.9.1.i586.rpm) = 0500794d3195e7868e03305abdb2047e3380553f
+RMD160 (suse113/i586/aaa_base-11.3-8.9.1.i586.rpm) = b537f26831c960b714ddc3b65f83239edf440c82
+Size (suse113/i586/aaa_base-11.3-8.9.1.i586.rpm) = 127438 bytes
 SHA1 (suse113/i586/bash-4.1-8.1.i586.rpm) = d8bbaa8ce4b57a1a2d40e157e454a60eb9446c84
 RMD160 (suse113/i586/bash-4.1-8.1.i586.rpm) = 782d06e75927d9f8e576d7a8638798f053f18aab
 Size (suse113/i586/bash-4.1-8.1.i586.rpm) = 296884 bytes
@@ -93,9 +93,9 @@ Size (suse113/i586/tcpd-7.6-863.1.i586.rpm) = 77182 bytes
 SHA1 (suse113/i586/zlib-1.2.3-141.1.i586.rpm) = 0eaf6cbd2b3c6f7c698b7670baea41878c42f910
 RMD160 (suse113/i586/zlib-1.2.3-141.1.i586.rpm) = 727553dffb7aebdf94c39d8e3100bb7ede788783
 Size (suse113/i586/zlib-1.2.3-141.1.i586.rpm) = 42334 bytes
-SHA1 (suse113/x86_64/aaa_base-11.3-7.2.x86_64.rpm) = 637c8a9dfc936f1900da557cb3a65c37a74dca05
-RMD160 (suse113/x86_64/aaa_base-11.3-7.2.x86_64.rpm) = d1abb33a0914139c3a531737bb58df290f86d044
-Size (suse113/x86_64/aaa_base-11.3-7.2.x86_64.rpm) = 126032 bytes
+SHA1 (suse113/x86_64/aaa_base-11.3-8.9.1.x86_64.rpm) = cec8c4a2e1af290e453fc93333c59abe6713039b
+RMD160 (suse113/x86_64/aaa_base-11.3-8.9.1.x86_64.rpm) = 9e7e01c2ea9af71dab466bc589d8aea83b7ba5c9
+Size (suse113/x86_64/aaa_base-11.3-8.9.1.x86_64.rpm) = 127385 bytes
 SHA1 (suse113/x86_64/bash-4.1-8.1.x86_64.rpm) = 3aa11fe3904f77ba904efc1882084aa651883c4f
 RMD160 (suse113/x86_64/bash-4.1-8.1.x86_64.rpm) = 3689a25db8417aba2fe7f13d546f8d04bc963926
 Size (suse113/x86_64/bash-4.1-8.1.x86_64.rpm) = 312966 bytes
