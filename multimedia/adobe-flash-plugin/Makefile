@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/10/28 18:12:08 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/28 12:24:48 obache Exp $
 
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://download.macromedia.com/pub/labs/flashplayer10/
-MASTER_SITES+=	ftp://www.dvo.ru/pub/Gentoo/distfiles/
+MASTER_SITES+=	ftp://ftp.dvo.ru/pub/Gentoo/distfiles/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.adobe.com/
