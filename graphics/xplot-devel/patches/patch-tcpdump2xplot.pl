@@ -1,6 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2006/10/14 09:20:14 bad Exp $
+$NetBSD: patch-tcpdump2xplot.pl,v 1.1 2011/03/28 19:36:30 gdt Exp $
 
---- tcpdump2xplot.pl.orig	2006-07-27 21:55:59.000000000 +0200
+# This patch contains minor changes to parsing tcpdump to adapt to
+# tcpdump's output changes.  These changes should be merged upstream.
+# Upstream has no bug tracker but $MAINTAINER is an upstream maintainer.
+# Specifically:
+#   omit tos information - we don't use it and it confuses the parser
+#   bare split breaks in modern perl - assgin to @_ explicitly
+#   remove "IP" as second field
+#   allow multiple spaces when splitting sack.
+
+--- tcpdump2xplot.pl.orig	2006-07-27 19:55:59.000000000 +0000
 +++ tcpdump2xplot.pl
 @@ -229,12 +229,16 @@ for ($lineNo = 1; <$Tcpdump>; $lineNo++)
      local(%opts);
@@ -15,7 +24,7 @@ $NetBSD: patch-ab,v 1.1 2006/10/14 09:20:14 bad Exp $
 -    if ($_[1] == "IP") {
 -	splice @_,1,1;
 -    }
-+    split(/ +/);
++    @_ = split(/ +/);
 +    # Sometime after version 3.7.1 tcpdump started to print 'IP'
 +    # as the second field in the output. Get rid of it again.
 +    # also remove additional fields printed in verbose mode
