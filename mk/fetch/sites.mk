@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.79 2011/03/28 20:19:51 zafer Exp $
+# $NetBSD: sites.mk,v 1.80 2011/03/28 20:53:38 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -127,13 +127,12 @@ MASTER_SITE_MOZILLA+=	\
 	http://mozilla.mirror.rafal.ca/ \
 	http://mirror.cc.vt.edu/pub/mozilla/ \
 	http://mirror.its.uidaho.edu/pub/mozilla.org/ \
-	http://mozilla.mirror.facebook.com/ \
+	http://mozilla.mirror.facebook.net/ \
 	http://www.gtlib.gatech.edu/pub/mozilla.org/ \
 	http://mozilla.cs.utah.edu/pub/mozilla.org/ \
 	http://mirror.mcs.anl.gov/mozilla.org/ \
 	http://mirrors.gigenet.com/mozilla/ \
 	http://pv-mirror01.mozilla.org/pub/mozilla.org/ \
-	http://mozilla-mirror.internap.com/ \
 	http://mirror.umoss.org/mozilla/ \
 	http://mirrors.xmission.com/mozilla.org/ \
 	http://mozilla.mirrors.hoobly.com/ \
@@ -164,13 +163,10 @@ MASTER_SITE_MOZILLA+=	\
 	http://mirror.internode.on.net/pub/mozilla/ \
 	http://mozilla.mirror.ihug.co.nz/ \
 	http://mirror.waia.asn.au/pub/mozilla/ \
-	http://mozilla.mirror.pacific.net.au/ \
-	http://vlaai.snt.utwente.nl/pub/software/mozilla.org/ \
 	http://ftp.sunet.se/pub/www/clients/mozilla.org/ \
 	http://mozmirror01.true.nl/pub/mozilla.org/ \
 	http://ftp.uni-kl.de/pub/mozilla/ \
 	http://mirror.yandex.ru/mozilla/ \
-	http://elizabeth.acc.umu.se/pub/mozilla.org/ \
 	http://www.mirrorservice.org/sites/releases.mozilla.org/pub/mozilla.org/ \
 	http://ftp.cvut.cz/mozilla/ \
 	http://mozilla.kn.vutbr.cz/ \
@@ -180,16 +176,12 @@ MASTER_SITE_MOZILLA+=	\
 	http://mirrors.linux.edu.lv/mozilla.org/ \
 	http://www.artfiles.org/mozilla.org/ \
 	http://mirrors.xservers.ro/mozilla/ \
-	http://ftp.bayanat.com.sa/pub/mirror/ftp.mozilla.org/ \
 	http://ftp.spnet.net/mozilla/ \
 	http://ftp.ntua.gr/pub/mozilla.org/ \
-	http://www.mirrorspace.org/mozilla/ \
 	http://ftp.pwr.wroc.pl/pub/mozilla/ \
 	http://ftp.heanet.ie/mirrors/ftp.mozilla.org/pub/mozilla.org/ \
-	http://mozilla.wpro.lv/ \
 	http://mozilla.c3sl.ufpr.br/releases/ \
-	http://mozilla.mirror.pop-sc.rnp.br/mirror/mozilla.org/ \
-	http://mozilla.patan.com.ar/
+	http://mozilla.mirror.pop-sc.rnp.br/mirror/mozilla.org/
 
 MASTER_SITE_XEMACS+=    \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
