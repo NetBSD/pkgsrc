@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.792 2011/03/28 16:20:14 taca Exp $
+$NetBSD: CHANGES-2011,v 1.793 2011/03/28 20:40:17 tonio Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.2.153.1 [chs 2011-03-27]
 	Updated lang/ruby18-base to 1.8.7.334nb1 [taca 2011-03-28]
 	Updated lang/ruby19-base to 1.9.2pl180nb1 [taca 2011-03-28]
+	Updated lang/coq to 8.3pl1 [tonio 2011-03-28]
