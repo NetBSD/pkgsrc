@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.12 2010/11/14 20:53:02 tonio Exp $
+$NetBSD: distinfo,v 1.13 2011/03/28 20:39:26 tonio Exp $
 
-SHA1 (coq-8.3.tar.gz) = 6c6472b6a41429e78d979eacd8ff58bd6f6c9da4
-RMD160 (coq-8.3.tar.gz) = 9e42266001c0a22b39662be86960a05e454fc2fb
-Size (coq-8.3.tar.gz) = 3736420 bytes
-SHA1 (patch-aa) = 851efa1859b4d8dc7bad549792a5966b549f868e
-SHA1 (patch-ab) = f20f78c936e18ca195933375f37fc5b816827604
+SHA1 (coq-8.3pl1.tar.gz) = 3fae9fa2fd6f39c9fb3c0b67fcd5e71f1e7a5f9f
+RMD160 (coq-8.3pl1.tar.gz) = 687983bcaca723299b6ea902a1e1b07338209d55
+Size (coq-8.3pl1.tar.gz) = 3756961 bytes
 SHA1 (patch-ac) = 59516eb44aa6cedb4f897b5ac3e8fe0aa69aba0f
