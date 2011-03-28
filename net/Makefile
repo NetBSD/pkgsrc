@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.873 2011/03/19 19:59:46 spz Exp $
+# $NetBSD: Makefile,v 1.874 2011/03/28 12:49:15 joerg Exp $
 #
 
 COMMENT=	Networking tools
@@ -44,8 +44,6 @@ SUBDIR+=	bittornado-gui
 SUBDIR+=	bittorrent
 SUBDIR+=	bittorrent-gui
 SUBDIR+=	bmon
-SUBDIR+=	boinc3-coreclient
-SUBDIR+=	boinc3-libs
 SUBDIR+=	bounce
 SUBDIR+=	bpalogin
 SUBDIR+=	bridged
