@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/30 17:41:04 sommerfeld Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/28 13:11:21 obache Exp $
 
 --- Makefile.orig	Tue Jul 10 22:17:31 2001
 +++ Makefile
@@ -33,4 +33,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/12/30 17:41:04 sommerfeld Exp $
  	/bin/rm -f *.o tzc tzc.new core
 +
 +install:
-+	${INSTALL} tzc ${LOCALBASE}/bin/tzc
++	${INSTALL} tzc ${DESTDIR}${LOCALBASE}/bin/tzc
