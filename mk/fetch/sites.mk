@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.81 2011/03/28 21:07:49 zafer Exp $
+# $NetBSD: sites.mk,v 1.82 2011/03/28 21:27:06 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -309,7 +309,6 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.pl.debian.org/debian/ \
 	http://ftp.ru.debian.org/debian/ \
 	http://ftp.se.debian.org/debian/ \
-	http://ftp.si.debian.org/debian/ \
 	http://ftp.sk.debian.org/debian/ \
 	http://ftp.us.debian.org/debian/
 
@@ -318,14 +317,11 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://openoffice.mirrors.ilisys.com.au/ \
 	http://www.ibiblio.org/pub/mirrors/openoffice/ \
 	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
-	http://openoffice.mirrors.pair.com/ftp/ \
 	http://gd.tuwien.ac.at/office/openoffice/ \
 	http://ftp.belnet.be/pub/mirror/ftp.openoffice.org/ \
 	http://ftp.sh.cvut.cz/MIRRORS/OpenOffice/ \
 	ftp://ftp.funet.fi/pub/mirrors/openoffice.org/ \
-	ftp://openoffice.cict.fr/openoffice/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/OpenOffice/ \
-	ftp://ftp.tu-chemnitz.de/pub/openoffice/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.openoffice.org/ \
 	ftp://ftp.join.uni-muenster.de/pub/software/OpenOffice/ \
 	http://ftp.ntua.gr/pub/OpenOffice/ \
@@ -340,7 +336,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	ftp://ftp.saix.net/pub/OpenOffice.org/ \
 	http://ftp.sunet.se/pub/Office/OpenOffice.org/ \
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
-	http://mirror.pacific.net.au/openoffice/ \
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
 	ftp://ftp.t.ring.gr.jp/pub/misc/openoffice/ \
@@ -470,7 +465,6 @@ MASTER_SITE_GENTOO+= \
 	http://distfiles.gentoo.bg/ \
 	http://ftp.gentoo.bg/ \
 	http://mirrors.ludost.net/gentoo/ \
-	ftp://mirrors.ludost.net/gentoo/ \
 	http://gentoo.supp.name/ \
 	http://ftp.fi.muni.cz/pub/linux/gentoo/ \
 	ftp://ftp.fi.muni.cz/pub/linux/gentoo/ \
@@ -548,7 +542,6 @@ MASTER_SITE_GENTOO+= \
 	ftp://ftp.ing.umu.se/linux/gentoo/ \
 	http://ftp.ing.umu.se/linux/gentoo/ \
 	ftp://mirror.mdfnet.se/gentoo/ \
-	http://mirror.mdfnet.se/mirror/gentoo/ \
 	http://mirror.switch.ch/ftp/mirror/gentoo/ \
 	ftp://mirror.switch.ch/mirror/gentoo/ \
 	http://mirror.bytemark.co.uk/gentoo/ \
@@ -558,8 +551,6 @@ MASTER_SITE_GENTOO+= \
 	ftp://ftp.mirrorservice.org/sites/www.ibiblio.org/gentoo/ \
 	http://gentoo.virginmedia.com/ \
 	ftp://gentoo.virginmedia.com/mirrors/gentoo/ \
-	http://mirror.pacific.net.au/linux/Gentoo/ \
-	ftp://mirror.pacific.net.au/linux/Gentoo/ \
 	ftp://ftp.swin.edu.au/gentoo/ \
 	http://ftp.swin.edu.au/gentoo/ \
 	http://gentoo.channelx.biz/ \
