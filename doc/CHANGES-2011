@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.794 2011/03/28 21:37:38 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.795 2011/03/29 08:35:33 wiz Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1355,3 +1355,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby18-base to 1.8.7.334nb1 [taca 2011-03-28]
 	Updated lang/ruby19-base to 1.9.2pl180nb1 [taca 2011-03-28]
 	Updated lang/coq to 8.3pl1 [tonio 2011-03-28]
+	Updated multimedia/tvtime to 1.0.2nb3 [wiz 2011-03-29]
