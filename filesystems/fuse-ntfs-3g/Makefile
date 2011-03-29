@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/07/08 16:34:40 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2011/03/29 11:35:10 obache Exp $
 #
 
 DISTNAME=	ntfs-3g-1.1120
@@ -18,6 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-ldconfig
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
