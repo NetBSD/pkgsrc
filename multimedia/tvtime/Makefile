@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2011/01/17 17:57:01 jnemeth Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/29 08:34:58 wiz Exp $
 
 DISTNAME=	tvtime-1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tvtime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tvtime.sourceforge.net/
 COMMENT=	High quality television application
+LICENSE=	gnu-gpl-v2 AND mit AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,6 +29,7 @@ pre-configure:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
