@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2011/01/13 13:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2011/03/29 18:07:50 jruoho Exp $
 
 DISTNAME=		R-2.11.1
 PKGREVISION=		2
@@ -23,6 +23,8 @@ USE_GNU_ICONV=		yes		# latin1 support, iconvlist
 USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 TEXINFO_REQD=		4.7
+
+PTHREAD_AUTO_VARS=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-R-shlib
