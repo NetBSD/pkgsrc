@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/27 14:16:41 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.3 2011/03/29 10:18:18 adam Exp $
 
 DISTNAME=	eggdbus-0.6
 CATEGORIES=	sysutils
@@ -14,17 +13,19 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=	pkg-config autoconf automake gmake
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-TEST_TARGET=	check
+USE_LIBTOOL=		yes
+USE_TOOLS+=		aclocal autoconf autoheader automake gmake pkg-config
+GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 PKGCONFIG_OVERRIDE+=	eggdbus-1.pc.in
 
 pre-configure:
-	cd ${WRKSRC} && ./autogen.sh
+	set -e; cd ${WRKSRC}; gtkdocize --flavour no-tmpl; \
+	libtoolize -c -f; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
 
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
