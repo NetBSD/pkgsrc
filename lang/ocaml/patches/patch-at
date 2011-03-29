@@ -1,7 +1,16 @@
-$NetBSD: patch-at,v 1.20 2010/12/19 08:27:17 is Exp $
+$NetBSD: patch-at,v 1.21 2011/03/29 13:45:02 adam Exp $
 
 --- configure.orig	2010-07-28 13:18:22.000000000 +0000
 +++ configure
+@@ -328,6 +328,8 @@ case "$bytecc,$host" in
+   gcc*)
+     bytecccompopts="-fno-defer-pop $gcc_warnings";;
+ esac
++bytecccompopts="$bytecccompopts $CFLAGS"
++bytecclinkopts="$bytecclinkopts $LDFLAGS"
+ 
+ # Configure compiler to use in further tests
+ 
 @@ -520,7 +520,7 @@ if test $withsharedlibs = "yes"; then
        mksharedlib="$flexlink"
        mkmaindll="$flexlink -maindll"
