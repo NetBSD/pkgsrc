@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.1 2009/10/08 01:24:51 dmcmahill Exp $
+# $NetBSD: hacks.mk,v 1.2 2011/03/29 13:45:02 adam Exp $
 
 .if !defined(OCAML_HACKS_MK)
-OCAML_HACKS_MK=   defined
+OCAML_HACKS_MK=	defined
 
 .include "../../mk/compiler.mk"
 
@@ -12,8 +12,8 @@ OCAML_HACKS_MK=   defined
 ###
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 .  if !empty(CC_VERSION:Mgcc-4.4.*)
-PKG_HACKS+=             optimisation
-BUILDLINK_TRANSFORM+=   rename:-O[0-9]*:-O
+PKG_HACKS+=		optimisation
+BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O
 .  endif
 .endif
 
