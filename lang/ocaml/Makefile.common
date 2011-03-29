@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2010/12/19 08:27:17 is Exp $
+# $NetBSD: Makefile.common,v 1.29 2011/03/29 13:45:02 adam Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
 COMMENT=	The latest implementation of the Caml dialect of ML
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
