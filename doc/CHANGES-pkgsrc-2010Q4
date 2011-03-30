@@ -248,3 +248,6 @@ Pullup ticket #3394 - requested by taca
 security fix for devel/php-shmop
 Pullup ticket #3395 - requested by taca
 security fix for lang/php53
+Pullup ticket #3397 - requested by drochner
+sysutils/xenkernel3: security patch
+sysutils/xenkernel33: security patch
