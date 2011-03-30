@@ -1,5 +1,12 @@
-$NetBSD: distinfo,v 1.7 2009/06/07 20:47:19 mrg Exp $
+$NetBSD: distinfo,v 1.8 2011/03/30 22:17:48 asau Exp $
 
 SHA1 (onyx-5.1.2.tar.bz2) = 1164431e4c5d4fd5122b7d41698baefc1c70d63d
 RMD160 (onyx-5.1.2.tar.bz2) = 0ecca943f37eb9dfb6370c57e9932567a955ed59
 Size (onyx-5.1.2.tar.bz2) = 1397404 bytes
+SHA1 (patch-Cookfile.in) = 2f6d863d1f5b3cb62c9d0c1ae13ff4cb11070986
+SHA1 (patch-bin_onyx_Cookfile.inc.in) = 8babf137c15514ee613cc81be81dec77dfe166cb
+SHA1 (patch-bin_onyx__config_Cookfile.inc.in) = 225d5e570e05e73e4b14ba74304117673af38713
+SHA1 (patch-doc_latex_onyx_Cookfile.inc.in) = 6d560afe66ed73968341e3dd434f6b900d561af9
+SHA1 (patch-lib_libonyx_Cookfile.inc.in) = 0d50270348d45f2f11ae90fd198bb6bf736e95e5
+SHA1 (patch-mod_modclopt_Cookfile.inc.in) = ac0488df5307e23050daa7c43ba4fe4d862fd843
+SHA1 (patch-mod_modprompt_Cookfile.inc.in) = e0a846e5539197813fd76a9a98820bda940707c3
