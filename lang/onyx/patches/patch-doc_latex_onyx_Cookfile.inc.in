@@ -1,0 +1,45 @@
+$NetBSD: patch-doc_latex_onyx_Cookfile.inc.in,v 1.1 2011/03/30 22:17:49 asau Exp $
+
+--- doc/latex/onyx/Cookfile.inc.in.orig	2005-03-17 07:54:59.000000000 +0000
++++ doc/latex/onyx/Cookfile.inc.in
+@@ -82,31 +82,31 @@ onyx_docs_html :
+ 
+ onyx_docs_install_pdf : onyx_docs_pdf onyx_docs_install
+ {
+-  @INSTALL@ -d [DATADIR]/doc/onyx-@onyx_version@/pdf;
+-  @INSTALL@ -m 0444 [ONYX_PDF] [DATADIR]/doc/onyx-@onyx_version@/pdf;
++  @INSTALL@ -d [DESTDIR][DATADIR]/doc/onyx-@onyx_version@/pdf;
++  @INSTALL@ -m 0444 [ONYX_PDF] [DESTDIR][DATADIR]/doc/onyx-@onyx_version@/pdf;
+ }
+ 
+ onyx_docs_install_html : onyx_docs_html onyx_docs_install
+ {
+-  @INSTALL@ -d [DATADIR]/doc/onyx-@onyx_version@/html;
++  @INSTALL@ -d [DESTDIR][DATADIR]/doc/onyx-@onyx_version@/html;
+ 
+   loop local f = [glob [dirname [ONYX_HTML]]"/*"]
+   {
+-    @INSTALL@ -m 0444 [f] [DATADIR]/doc/onyx-@onyx_version@/html;
++    @INSTALL@ -m 0444 [f] [DESTDIR][DATADIR]/doc/onyx-@onyx_version@/html;
+   }
+ }
+ 
+ onyx_docs_install :
+ {
+-  @INSTALL@ -d [DATADIR]/doc;
+-  rm -f [DATADIR]/doc/onyx;
+-  ln -s onyx-@onyx_version@ [DATADIR]/doc/onyx;
++  @INSTALL@ -d [DESTDIR][DATADIR]/doc;
++  rm -f [DESTDIR][DATADIR]/doc/onyx;
++  ln -s onyx-@onyx_version@ [DESTDIR][DATADIR]/doc/onyx;
+ }
+ 
+ onyx_docs_uninstall :
+ {
+-  rm -rf [DATADIR]/doc/onyx-@onyx_version@;
+-  rm -f [DATADIR]/doc/onyx;
++  rm -rf [DESTDIR][DATADIR]/doc/onyx-@onyx_version@;
++  rm -f [DESTDIR][DATADIR]/doc/onyx;
+ }
+ 
+ onyx_docs_clean :

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/06/07 20:47:19 mrg Exp $
+# $NetBSD: Makefile,v 1.24 2011/03/30 22:17:48 asau Exp $
 
 DISTNAME=	onyx-${VERS}
 CATEGORIES=	lang
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.canonware.com/onyx/
 COMMENT=	Embeddable stack-based threaded interpreted language
 
 BUILD_DEPENDS+=	cook-[0-9]*:../../devel/cook
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
@@ -25,10 +27,10 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cook
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cook install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} cook install
 
 post-install:
-	strip ${PREFIX}/bin/onyx
+	strip ${DESTDIR}${PREFIX}/bin/onyx
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

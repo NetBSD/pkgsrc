@@ -1,0 +1,31 @@
+$NetBSD: patch-mod_modprompt_Cookfile.inc.in,v 1.1 2011/03/30 22:17:49 asau Exp $
+
+--- mod/modprompt/Cookfile.inc.in.orig	2005-03-17 07:54:59.000000000 +0000
++++ mod/modprompt/Cookfile.inc.in
+@@ -73,20 +73,20 @@ modprompt_mods_check_update : ;
+ 
+ modprompt_mods_install : [MODPROMPT]
+ {
+-  @INSTALL@ -d [DATADIR]/onyx-@onyx_version@/nxm;
+-  @INSTALL@ -m 0444 [MODPROMPT] [DATADIR]/onyx-@onyx_version@/nxm;
+-  @INSTALL@ -d [DATADIR]/onyx-@onyx_version@/nx/modprompt;
++  @INSTALL@ -d [DESTDIR][DATADIR]/onyx-@onyx_version@/nxm;
++  @INSTALL@ -m 0444 [MODPROMPT] [DESTDIR][DATADIR]/onyx-@onyx_version@/nxm;
++  @INSTALL@ -d [DESTDIR][DATADIR]/onyx-@onyx_version@/nx/modprompt;
+ 
+   loop local f = [MODPROMPT_NX] [MODPROMPT_NX_GEN]
+   {
+-    @INSTALL@ -m 0644 [f] [DATADIR]/onyx-@onyx_version@/nx/modprompt/;
++    @INSTALL@ -m 0644 [f] [DESTDIR][DATADIR]/onyx-@onyx_version@/nx/modprompt/;
+   }
+ }
+ 
+ modprompt_mods_uninstall :
+ {
+-  rm -f [DATADIR]/onyx-@onyx_version@/nxm/modprompt.nxm;
+-  rm -rf [DATADIR]/onyx-@onyx_version@/nx/modprompt;
++  rm -f [DESTDIR][DATADIR]/onyx-@onyx_version@/nxm/modprompt.nxm;
++  rm -rf [DESTDIR][DATADIR]/onyx-@onyx_version@/nx/modprompt;
+ }
+ 
+ modprompt_mods_clean :
