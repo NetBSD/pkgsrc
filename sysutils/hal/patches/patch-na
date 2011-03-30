@@ -1,4 +1,4 @@
-$NetBSD: patch-na,v 1.9 2011/01/08 13:00:13 obache Exp $
+$NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
 
 --- configure.in.orig	2009-08-24 12:42:29.000000000 +0000
 +++ configure.in
@@ -44,12 +44,14 @@ $NetBSD: patch-na,v 1.9 2011/01/08 13:00:13 obache Exp $
  dnl DBUS API is subject to changes
  AC_DEFINE_UNQUOTED(DBUS_API_SUBJECT_TO_CHANGE, [], [DBUS API is subject to change])
  
-@@ -707,7 +715,7 @@ fi
+@@ -706,8 +714,8 @@ else
+ fi
  AC_MSG_RESULT($have_glib_2_14)
  
- case "$host" in
+-case "$host" in
 -    *-*-freebsd*)
-+    *-*-freebsd* | *-*-netbsd* | *-*-dragonfly*)
++case "$HALD_BACKEND" in
++    freebsd | netbsd)
          PKG_CHECK_MODULES(VOLUME_ID, [$volume_id_module])
  	AC_SUBST(VOLUME_ID_CFLAGS)
  	AC_SUBST(VOLUME_ID_LIBS)
