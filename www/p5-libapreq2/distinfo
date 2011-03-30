@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2010/02/23 20:00:54 sno Exp $
+$NetBSD: distinfo,v 1.8 2011/03/30 18:38:07 bouyer Exp $
 
 SHA1 (libapreq2-2.12.tar.gz) = 0199b9d7a6d85b2df849f29e41a4a4d7a83a2a3f
 RMD160 (libapreq2-2.12.tar.gz) = 576b3a514e943ef3c28c45530d9e5a6d75132902
 Size (libapreq2-2.12.tar.gz) = 859412 bytes
+SHA1 (patch-aa) = 8fa12ccc0a959c0b2430f4a3165185d3a4f1bf03
+SHA1 (patch-ab) = 46d68205d1759a74ee630a2a33c6fcb29b56bbe9
