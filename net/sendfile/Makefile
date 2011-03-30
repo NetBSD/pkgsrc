@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/03/23 18:22:28 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2011/03/30 12:38:33 obache Exp $
 #
 
 DISTNAME=	sendfile-20010216
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fex.rus.uni-stuttgart.de/saft/sendfile.html
 COMMENT=	Implementation of the Simple asynchronous file transfer protocol
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/sendfile-2.1a
 
