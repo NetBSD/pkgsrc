@@ -1,0 +1,65 @@
+$NetBSD: patch-lib_libonyx_Cookfile.inc.in,v 1.1 2011/03/30 22:17:49 asau Exp $
+
+--- lib/libonyx/Cookfile.inc.in.orig	2005-03-17 07:54:57.000000000 +0000
++++ lib/libonyx/Cookfile.inc.in
+@@ -235,10 +235,10 @@ libonyx_libs_install : libonyx_libs_inst
+ 
+ libonyx_libs_uninstall :
+ {
+-  rm -f [glob [LIBDIR]/libonyx*];
+-  rm -rf [INCLUDEDIR]/libonyx;
++  rm -f [glob [DESTDIR][LIBDIR]/libonyx*];
++  rm -rf [DESTDIR][INCLUDEDIR]/libonyx;
+ #if @enable_posix@
+-  rm -rf [DATADIR]/onyx-@onyx_version@/libonyx;
++  rm -rf [DESTDIR][DATADIR]/onyx-@onyx_version@/libonyx;
+ #endif
+ }
+ 
+@@ -303,37 +303,37 @@ libonyx_libs_install_i :
+                          [LIBONYX_INIT]
+ #endif
+ {
+-  @INSTALL@ -d [INCLUDEDIR]/libonyx;
++  @INSTALL@ -d [DESTDIR][INCLUDEDIR]/libonyx;
+ 
+   loop local f = [LIBONYX_INCS]
+   {
+-    @INSTALL@ -m 0644 [f] [INCLUDEDIR]/libonyx/;
++    @INSTALL@ -m 0644 [f] [DESTDIR][INCLUDEDIR]/libonyx/;
+   }
+ 
+ #if @enable_posix@
+-  @INSTALL@ -d [DATADIR]/onyx-@onyx_version@/libonyx;
++  @INSTALL@ -d [DESTDIR][DATADIR]/onyx-@onyx_version@/libonyx;
+ 
+-  @INSTALL@ -m 0644 [LIBONYX_INIT] [DATADIR]/onyx-@onyx_version@/libonyx/;
++  @INSTALL@ -m 0644 [LIBONYX_INIT] [DESTDIR][DATADIR]/onyx-@onyx_version@/libonyx/;
+ #endif
+ }
+ 
+ libonyx_libs_install_common :
+ {
+-  @INSTALL@ -d [LIBDIR];
++  @INSTALL@ -d [DESTDIR][LIBDIR];
+ }
+ 
+ libonyx_libs_install_a : [LIBONYX_A] libonyx_libs_install_common
+ {
+-  @INSTALL@ -m 0444 [LIBONYX_A] [LIBDIR];
++  @INSTALL@ -m 0444 [LIBONYX_A] [DESTDIR][LIBDIR];
+ }
+ 
+ libonyx_libs_install_s : [LIBONYX_S] libonyx_libs_install_common
+ {
+-  @INSTALL@ -m 0444 [LIBONYX_S] [LIBDIR];
++  @INSTALL@ -m 0444 [LIBONYX_S] [DESTDIR][LIBDIR];
+ 
+ #if [count [LIBONYX_LNAME]]
+-  rm -f [LIBDIR]/[LIBONYX_LNAME];
+-  ln -s [LIBONYX_SNAME] [LIBDIR]/[LIBONYX_LNAME];
++  rm -f [DESTDIR][LIBDIR]/[LIBONYX_LNAME];
++  ln -s [LIBONYX_SNAME] [DESTDIR][LIBDIR]/[LIBONYX_LNAME];
+ #endif
+ }
+ 

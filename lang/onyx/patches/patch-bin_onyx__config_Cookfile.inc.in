@@ -1,0 +1,36 @@
+$NetBSD: patch-bin_onyx__config_Cookfile.inc.in,v 1.1 2011/03/30 22:17:49 asau Exp $
+
+--- bin/onyx_config/Cookfile.inc.in.orig	2005-03-17 07:55:08.000000000 +0000
++++ bin/onyx_config/Cookfile.inc.in
+@@ -72,22 +72,22 @@ onyx_config_bins_install : [ONYX_CONFIG]
+                            mods_install
+                            onyx_bins_install
+ {
+-  @INSTALL@ -d [BINDIR];
++  @INSTALL@ -d [DESTDIR][BINDIR];
+ 
+-  @INSTALL@ -m 0755 [ONYX_CONFIG] [BINDIR]/onyx_config-@onyx_version@;
+-  rm -f [BINDIR]/onyx_config;
+-  ln -s onyx_config-@onyx_version@ [BINDIR]/onyx_config;
++  @INSTALL@ -m 0755 [ONYX_CONFIG] [DESTDIR][BINDIR]/onyx_config-@onyx_version@;
++  rm -f [DESTDIR][BINDIR]/onyx_config;
++  ln -s onyx_config-@onyx_version@ [DESTDIR][BINDIR]/onyx_config;
+ 
+-  @INSTALL@ -d [MANDIR]/man1;
++  @INSTALL@ -d [DESTDIR][MANDIR]/man1;
+   @INSTALL@ -m 0444 @objroot@/bin/onyx_config/man/man1/onyx_config.1
+-            [MANDIR]/man1;
++            [DESTDIR][MANDIR]/man1;
+ }
+ 
+ onyx_config_bins_uninstall :
+ {
+-  rm -f [BINDIR]/onyx_config-@onyx_version@;
+-  rm -f [BINDIR]/onyx_config;
+-  rm -f [MANDIR]/man1/onyx_config.1;
++  rm -f [DESTDIR][BINDIR]/onyx_config-@onyx_version@;
++  rm -f [DESTDIR][BINDIR]/onyx_config;
++  rm -f [DESTDIR][MANDIR]/man1/onyx_config.1;
+ }
+ 
+ onyx_config_bins_clean :

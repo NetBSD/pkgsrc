@@ -1,0 +1,27 @@
+$NetBSD: patch-mod_modclopt_Cookfile.inc.in,v 1.1 2011/03/30 22:17:49 asau Exp $
+
+--- mod/modclopt/Cookfile.inc.in.orig	2005-03-17 07:54:59.000000000 +0000
++++ mod/modclopt/Cookfile.inc.in
+@@ -92,18 +92,18 @@ modclopt_mods_check_update : modclopt_mo
+ 
+ modclopt_mods_install :
+ {
+-  @INSTALL@ -d [DATADIR]/onyx-@onyx_version@/nx/modclopt;
++  @INSTALL@ -d [DESTDIR][DATADIR]/onyx-@onyx_version@/nx/modclopt;
+ 
+   loop local f = [MODCLOPT_NX] [MODCLOPT_NX_GEN]
+   {
+-    @INSTALL@ -m 0644 [f] [DATADIR]/onyx-@onyx_version@/nx/modclopt/;
++    @INSTALL@ -m 0644 [f] [DESTDIR][DATADIR]/onyx-@onyx_version@/nx/modclopt/;
+   }
+ }
+ 
+ modclopt_mods_uninstall :
+ {
+-  rm -f [DATADIR]/onyx-@onyx_version@/nxm/modclopt.nxm;
+-  rm -rf [DATADIR]/onyx-@onyx_version@/nx/modclopt;
++  rm -f [DESTDIR][DATADIR]/onyx-@onyx_version@/nxm/modclopt.nxm;
++  rm -rf [DESTDIR][DATADIR]/onyx-@onyx_version@/nx/modclopt;
+ }
+ 
+ modclopt_mods_clean :
