@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2010/12/07 18:43:48 bouyer Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2011/03/30 19:10:59 tron Exp $
 #
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel3-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
