@@ -1,0 +1,16 @@
+$NetBSD: patch-programs_CATEGORICAL_Makefile.in,v 1.1 2011/03/31 08:07:01 asau Exp $
+
+--- programs/CATEGORICAL/Makefile.in.orig	2006-01-03 20:41:28.000000000 +0000
++++ programs/CATEGORICAL/Makefile.in
+@@ -286,9 +286,9 @@ uninstall-am: uninstall-info-am
+ 
+ 
+ myinstall: 
+-	$(mkinstalldirs) $(sampleprogdir)
++	$(mkinstalldirs) $(DESTDIR)$(sampleprogdir)
+ 	@-sh -c '( echo "cd $(sampleprogdir)" ; \
+-		cd $(sampleprogdir) && for s in $(LINKLIST) ; do \
++		cd $(DESTDIR)$(sampleprogdir) && for s in $(LINKLIST) ; do \
+ 		$(LN_S) ../$$s $$s ; \
+ 		echo "$(LN_S) ../$$s $$s" ; \
+ 	done )'
