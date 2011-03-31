@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/02/15 14:58:20 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2011/03/31 08:07:01 asau Exp $
 
 DISTNAME=	dxsamples-4.4.0
 CATEGORIES=	graphics
@@ -9,6 +9,8 @@ HOMEPAGE=	http://www.research.ibm.com/dx/
 COMMENT=	Sample data for Open Visualization Data Explorer
 
 DEPENDS+=	dx-[0-9]*:../../graphics/dx
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake makeinfo
