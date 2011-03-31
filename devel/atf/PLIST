@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/11/07 13:41:14 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/03/31 16:30:11 jmmv Exp $
 bin/atf-config
 bin/atf-report
 bin/atf-run
@@ -52,12 +52,15 @@ share/examples/atf/tests-results.css
 share/xml/atf/tests-results.dtd
 share/xsl/atf/tests-results.xsl
 tests/atf/Atffile
+tests/atf/Kyuafile
 tests/atf/atf-c++/Atffile
+tests/atf/atf-c++/Kyuafile
 tests/atf/atf-c++/atf_c++_test
 tests/atf/atf-c++/build_test
 tests/atf/atf-c++/check_test
 tests/atf/atf-c++/config_test
 tests/atf/atf-c++/detail/Atffile
+tests/atf/atf-c++/detail/Kyuafile
 tests/atf/atf-c++/detail/application_test
 tests/atf/atf-c++/detail/env_test
 tests/atf/atf-c++/detail/exceptions_test
@@ -74,11 +77,13 @@ tests/atf/atf-c++/pkg_config_test
 tests/atf/atf-c++/tests_test
 tests/atf/atf-c++/utils_test
 tests/atf/atf-c/Atffile
+tests/atf/atf-c/Kyuafile
 tests/atf/atf-c/atf_c_test
 tests/atf/atf-c/build_test
 tests/atf/atf-c/check_test
 tests/atf/atf-c/config_test
 tests/atf/atf-c/detail/Atffile
+tests/atf/atf-c/detail/Kyuafile
 tests/atf/atf-c/detail/dynstr_test
 tests/atf/atf-c/detail/env_test
 tests/atf/atf-c/detail/fs_test
@@ -98,14 +103,17 @@ tests/atf/atf-c/tc_test
 tests/atf/atf-c/tp_test
 tests/atf/atf-c/utils_test
 tests/atf/atf-config/Atffile
+tests/atf/atf-config/Kyuafile
 tests/atf/atf-config/integration_test
 tests/atf/atf-report/Atffile
+tests/atf/atf-report/Kyuafile
 tests/atf/atf-report/fail_helper
 tests/atf/atf-report/integration_test
 tests/atf/atf-report/misc_helpers
 tests/atf/atf-report/pass_helper
 tests/atf/atf-report/reader_test
 tests/atf/atf-run/Atffile
+tests/atf/atf-run/Kyuafile
 tests/atf/atf-run/atffile_test
 tests/atf/atf-run/bad_metadata_helper
 tests/atf/atf-run/config_test
@@ -122,6 +130,7 @@ tests/atf/atf-run/test_program_test
 tests/atf/atf-run/user_test
 tests/atf/atf-run/zero_tcs_helper
 tests/atf/atf-sh/Atffile
+tests/atf/atf-sh/Kyuafile
 tests/atf/atf-sh/atf-check_test
 tests/atf/atf-sh/atf_check_test
 tests/atf/atf-sh/config_test
@@ -131,6 +140,7 @@ tests/atf/atf-sh/normalize_test
 tests/atf/atf-sh/tc_test
 tests/atf/atf-sh/tp_test
 tests/atf/test-programs/Atffile
+tests/atf/test-programs/Kyuafile
 tests/atf/test-programs/c_helpers
 tests/atf/test-programs/config_test
 tests/atf/test-programs/cpp_helpers
