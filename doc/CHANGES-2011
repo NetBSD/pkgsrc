@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.796 2011/03/29 12:51:21 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.797 2011/03/31 01:28:52 obache Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1357,3 +1357,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/coq to 8.3pl1 [tonio 2011-03-28]
 	Updated multimedia/tvtime to 1.0.2nb3 [wiz 2011-03-29]
 	Updated www/ikiwiki to 3.20110328 [schmonz 2011-03-29]
+	Updated mail/cyrus-imapd24 to 2.4.7 [obache 2011-03-31]
