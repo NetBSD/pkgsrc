@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.797 2011/03/31 01:28:52 obache Exp $
+$NetBSD: CHANGES-2011,v 1.798 2011/03/31 16:30:58 jmmv Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1358,3 +1358,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/tvtime to 1.0.2nb3 [wiz 2011-03-29]
 	Updated www/ikiwiki to 3.20110328 [schmonz 2011-03-29]
 	Updated mail/cyrus-imapd24 to 2.4.7 [obache 2011-03-31]
+	Updated devel/atf to 0.13 [jmmv 2011-03-31]
