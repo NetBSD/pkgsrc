@@ -1,6 +1,27 @@
-$NetBSD: distinfo,v 1.7 2006/10/13 16:40:10 drochner Exp $
+$NetBSD: distinfo,v 1.8 2011/03/31 08:07:01 asau Exp $
 
 SHA1 (dxsamples-4.4.0.tar.gz) = 24a8981312c3a2564623acb85538d9935e5c2469
 RMD160 (dxsamples-4.4.0.tar.gz) = 3d5f09c48452374ec25099bd7a894859fe34fba9
 Size (dxsamples-4.4.0.tar.gz) = 7791659 bytes
 SHA1 (patch-ab) = 49132e01960ceb7cf2a5f1a74a98e78a2b18b938
+SHA1 (patch-programs_2D__DATA_Makefile.in) = de1cebfdd03c7f39546ef97ff0b7f503c6d7276a
+SHA1 (patch-programs_3D__DATA_Makefile.in) = 609edc401e57a8fcea96b460ba9de5e7caa15553
+SHA1 (patch-programs_ANNOTATION_Makefile.in) = f880ee717fd7ebb98b92154bf4091e79a2f9fba2
+SHA1 (patch-programs_CATEGORICAL_Makefile.in) = 2f7589ea9ee28717fcf512e5bf17626a4ef2dbd4
+SHA1 (patch-programs_COLORMAP__EDITOR_Makefile.in) = e557ea071fd7b3d693e1f49cb1b71dc4dd4d7022
+SHA1 (patch-programs_COMPUTE_Makefile.in) = 34a17ca0516aacf7cd792236e08209989594d824
+SHA1 (patch-programs_DATA__DRIVEN__INTERACTORS_Makefile.in) = ec47d066709ef55d575a38e8dd17354e955f9d5c
+SHA1 (patch-programs_DEBUGGING_Makefile.in) = 597d569754ef00616f4862679fb7360f64c65fbb
+SHA1 (patch-programs_DISTRIBUTED__PROCESSING_Makefile.in) = 1a46b130c0deef189fafe036738fdafc7c19fb5e
+SHA1 (patch-programs_IMAGE__PROCESSING_Makefile.in) = 862b540d686df912bcaabbb306f1fb21085b6e5a
+SHA1 (patch-programs_IMPORTING_Makefile.in) = 18c3d2c4ae6f37edbc5a8b25c70498675cc20fcc
+SHA1 (patch-programs_INTERFACE__CONTROL_Makefile.in) = bd760dd79fbb0640bc53f4d1316b265256bd1285
+SHA1 (patch-programs_LOOPING_Makefile.in) = a44a2e9b5e30c42d561bfd5cd6e350ead6c2c6b4
+SHA1 (patch-programs_MISC_Makefile.in) = f3d30500797fe7f16f4beb3dcdbc43f199e6fd82
+SHA1 (patch-programs_PLOTTING_Makefile.in) = 7967de2c7244e41e3c406113703f09c4b0b38d93
+SHA1 (patch-programs_PROBES_Makefile.in) = f82ae0344e24a30b19d031122e641f0da62e2225
+SHA1 (patch-programs_RENDERING_Makefile.in) = 4dcb0ee8ff267323590d80f8c5967279225499f8
+SHA1 (patch-programs_SCATTERED_Makefile.in) = 2ce460042418ad1a32331573f8bc05d8240a2173
+SHA1 (patch-programs_SEQUENCER_Makefile.in) = ca52b55a90d654be9e6b909404cc4d5c3486411b
+SHA1 (patch-programs_SIMPLE_Makefile.in) = 112c8a89bd0c3dd4811405ec989901e96f8c30d7
+SHA1 (patch-programs_SUPERVISE_Makefile.in) = 95255927b79188dfc95c88e67225019f85bdc4bf
