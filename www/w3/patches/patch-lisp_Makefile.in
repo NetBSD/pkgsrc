@@ -1,0 +1,22 @@
+$NetBSD: patch-lisp_Makefile.in,v 1.1 2011/03/31 13:25:57 obache Exp $
+
+* staged installation support.
+
+--- lisp/Makefile.in.orig	2001-11-28 20:04:22.000000000 +0000
++++ lisp/Makefile.in
+@@ -92,12 +92,12 @@ autoloads:
+ 
+ install: all
+ 	@echo Installing in $(lispdir)
+-	( if [ ! -d $(lispdir) ]; then mkdir -p $(lispdir); fi )
++	( if [ ! -d $(DESTDIR)$(lispdir) ]; then mkdir -p $(DESTDIR)$(lispdir); fi )
+ 	for x in $(ALLSOURCES) $(EXTRAS) $(ALLOBJECTS); do		\
+ 		if [ -f $$x ]; then					\
+-			$(INSTALL) -m 644 $$x $(lispdir);		\
++			$(INSTALL) -m 644 $$x $(DESTDIR)$(lispdir);	\
+ 		else							\
+-			$(INSTALL) -m 644 $(srcdir)/$$x $(lispdir);	\
++			$(INSTALL) -m 644 $(srcdir)/$$x $(DESTDIR)$(lispdir);	\
+ 		fi							\
+ 	done;
+ 

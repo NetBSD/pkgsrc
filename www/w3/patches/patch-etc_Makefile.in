@@ -1,0 +1,22 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1 2011/03/31 13:25:57 obache Exp $
+
+* staged installation support.
+
+--- etc/Makefile.in.orig	2001-11-28 20:04:22.000000000 +0000
++++ etc/Makefile.in
+@@ -12,12 +12,12 @@ TARGETS = default.css
+ all:
+ 
+ install:
+-	( if [ ! -d $(datadir) ]; then mkdir -p $(datadir); fi )
++	( if [ ! -d $(DESTDIR)$(datadir) ]; then mkdir -p $(DESTDIR)$(datadir); fi )
+ 	for x in $(TARGETS); do					\
+ 		if [ -f $$x ]; then				\
+-			$(INSTALL) $$x $(datadir);		\
++			$(INSTALL) $$x $(DESTDIR)$(datadir);	\
+ 		else						\
+-			$(INSTALL) $(srcdir)/$$x $(datadir);	\
++			$(INSTALL) $(srcdir)/$$x $(DESTDIR)$(datadir);	\
+ 		fi						\
+ 	done
+ 
