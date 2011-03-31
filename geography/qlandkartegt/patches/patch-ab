@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2011/03/31 20:21:34 drochner Exp $
+
+for gpsd-2.96
+
+--- src/CDeviceGPSD.h.orig	2011-03-15 20:13:04.000000000 +0000
++++ src/CDeviceGPSD.h
+@@ -56,7 +56,7 @@ class CGPSDThread : public QThread
+     protected:
+         virtual void run();
+ 
+-        gps_data_t* gpsdata;
++        gps_data_t* gpsdata, gpsdata_store;
+ 
+         bool decodeData();
+ 
