@@ -1,0 +1,44 @@
+
+
+		      ESTIC V 1.60, 05.03.1997
+
+	  Enhanced Supervisor Tool for ISTEC Configuration
+
+	     Copyright (C) 1995-97 Ullrich von Bassewitz
+			<uz@ibb.schwaben.com>
+
+
+
+Nutzungsbestimmungen und Weitergabe
+-----------------------------------
+
+Die Software (sowohl die Quellcodes, als auch die Binaries) werden ohne
+jegliche Zusagen/Garantien bezüglich Funktionalität oder Funktionsfähigkeit
+abgegeben. Weder die Autoren noch die Distributoren übernehmen eine
+Verantwortung für Schäden, die durch die Benutzung der Software verursacht
+werden.
+
+Die Software darf frei verwendet und weitergegeben werden, wobei "frei"
+ausdrücklich auch eine kommerzielle Nutzung/Weitergabe einschließt,
+*vorausgesetzt* die folgenden Bedingungen werden eingehalten:
+
+  1. Die Herkunft der Software muß - wenn überhaupt - dann korrekt
+     angegeben werden. Es ist nicht erlaubt, die Software als Werk
+     eines anderen auszugeben. Wird die Software in Teilen oder als
+     Ganzes in einem Produkt benutzt, dann würde ich mich über einen
+     Hinweis auf die Herkunft in der Dokumentation freuen. Ein solcher
+     Hinweis ist aber nicht zwingend notwendig.
+
+  2. Geänderte Quellcodes müssen deutlich als solche gekennzeichnet
+     werden und dürfen nicht ohne einen expliziten Hinweis auf die
+     durchgeführten Änderungen weiterverteilt werden.
+
+  3. Die Bedingungen über die Nutzung/Weitergabe dürfen nicht entfernt
+     oder geändert werden.
+
+
+Speziell für ESTIC gilt noch der folgende Hinweis:
+
+  * Die Bestimmungen des Datenschutzes sind zu beachten! Das
+    Logging-Feature kann speziell bei Anwendung im kommerziellen
+    Bereich gegen Datenschutzbestimmungen verstoßen!
