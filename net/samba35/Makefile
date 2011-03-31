@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/03/08 08:30:07 adam Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/31 13:57:30 taca Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -65,6 +65,10 @@ CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
 CONFIGURE_ARGS+=	--with-mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
+#
+# Explicitly disable samba4 merged-build option which is broken.
+#
+CONFIGURE_ARGS+=       --enable-merged-build=no
 
 .include "../../net/samba/options.mk"
 
