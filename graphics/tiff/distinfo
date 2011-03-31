@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.50 2011/03/12 16:10:42 tron Exp $
+$NetBSD: distinfo,v 1.51 2011/03/31 11:05:44 drochner Exp $
 
 SHA1 (tiff-3.9.4.tar.gz) = a4e32d55afbbcabd0391a9c89995e8e8a19961de
 RMD160 (tiff-3.9.4.tar.gz) = 3e0a74b6294297c16fb983ad68056a1dfbbdb1de
 Size (tiff-3.9.4.tar.gz) = 1436968 bytes
+SHA1 (patch-CVE-2011-1167) = 30099dc0e1a8271d65799365ce81fda3081f5d5b
 SHA1 (patch-SA43593) = d24ff27a7a2e659c632d5a5fb720a908915e8595
 SHA1 (patch-aa) = 0ed02eb18454f4d91bf2fad6b9262bc442cd0822
 SHA1 (patch-ab) = 66101ec437ff222d629120e52e2011ea5b36dca0
