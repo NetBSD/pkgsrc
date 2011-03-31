@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/04/28 23:31:57 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/31 09:03:21 asau Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -12,6 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opendylan.org/
 COMMENT=		Functional language
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake perl

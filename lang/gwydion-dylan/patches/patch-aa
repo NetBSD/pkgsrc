@@ -1,23 +1,275 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/12/31 22:42:31 markd Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/31 09:03:21 asau Exp $
 
---- d2c/compiler/platforms.descr.orig	2004-10-18 08:17:02.000000000 +1300
-+++ d2c/compiler/platforms.descr
-@@ -590,6 +590,18 @@ inherit-from:			gcc netbsd x86
- default-c-compiler-flags:       -I. -I%s -I/usr/X11R6/include -fomit-frame-pointer -fno-strict-aliasing
- link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
+Add support for NetBSD/ppc and NetBSD/sparc.
+Always pass "--tag=CC" to libtool.
+
+--- d2c/compiler/platforms.descr.orig	2004-10-17 23:17:02.000000000 +0400
++++ d2c/compiler/platforms.descr	2011-03-31 11:05:47.000000000 +0400
+@@ -452,14 +452,14 @@
+ platform-name:			gcc
+ default-features:		C-compiler-is-GCC
+ compile-c-command:              gcc $(CCFLAGS) -c %s -o %s
+-compile-c-for-shared-command:   $(LIBTOOL) --mode=compile gcc $(CCFLAGS) -c %s -o %s
++compile-c-for-shared-command:   $(LIBTOOL) --mode=compile --tag=CC gcc $(CCFLAGS) -c %s -o %s
+ default-c-compiler-flags:	-I. -I%s -O2 -fomit-frame-pointer -fno-strict-aliasing
+ default-c-compiler-debug-flags:	-I. -I%s -g -O -fno-inline-functions
+ default-c-compiler-profile-flags:	-I. -I%s -pg -g -O -fno-inline-functions
+ assembler-command:		gcc $(CCFLAGS) -c %s -o %s
+ link-library-command:           ar qc %s %s
+-link-executable-command: 	$(LIBTOOL) --mode=link gcc -o %s %s %s
+-link-shared-executable-command: $(LIBTOOL) --mode=link gcc -o %s %s %s
++link-executable-command: 	$(LIBTOOL) --mode=link --tag=CC gcc -o %s %s %s
++link-shared-executable-command: $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s %s
+ link-executable-flags:          $(GC_LIBS) -lm
+ link-debug-flags:               -g
+ link-profile-flags:		-pg -g
+@@ -468,42 +468,42 @@
+ platform-name:			beos-gcc
+ default-features:		C-compiler-is-GCC
+ compile-c-command:              gcc $(CCFLAGS) -c %s -o %s
+-compile-c-for-shared-command:   $(LIBTOOL) --mode=compile gcc $(CCFLAGS) -c %s -o %s
++compile-c-for-shared-command:   $(LIBTOOL) --mode=compile --tag=CC gcc $(CCFLAGS) -c %s -o %s
+ default-c-compiler-flags:	-I. -I%s -g -O3
+ default-c-compiler-debug-flags:	-I. -I%s -g -O -fno-inline-functions
+ default-c-compiler-profile-flags: -I. -I%s -pg -g -O -fno-inline-functions
+ assembler-command:		gcc $(CCFLAGS) -c %s -o %s
+ link-library-command:           ar qc %s %s
+-link-executable-command: 	$(LIBTOOL) --mode=link gcc -o %s %s %s
+-link-shared-executable-command: $(LIBTOOL) --mode=link gcc -o %s %s %s
++link-executable-command: 	$(LIBTOOL) --mode=link --tag=CC gcc -o %s %s %s
++link-shared-executable-command: $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s %s
+ link-executable-flags:          
+ path-separator:        		/
  
+ platform-name:			mac-cw
+ default-features:		C-compiler-is-GCC
+ compile-c-command:              gcc $(CCFLAGS) -c %s -o %s
+-compile-c-for-shared-command:   $(LIBTOOL) --mode=compile gcc $(CCFLAGS) -c %s -o %s
++compile-c-for-shared-command:   $(LIBTOOL) --mode=compile --tag=CC gcc $(CCFLAGS) -c %s -o %s
+ default-c-compiler-flags:	-I. -I%s -g -O4 -finline-functions
+ default-c-compiler-debug-flags:	-I. -I%s -g -O -fno-inline-functions
+ default-c-compiler-profile-flags: -I. -I%s -pg -g -O -fno-inline-functions
+ assembler-command:		gcc $(CCFLAGS) -c %s -o %s
+ link-library-command:           ar qc %s %s
+-link-executable-command: 	$(LIBTOOL) --mode=link gcc -o %s %s %s
+-link-shared-executable-command: $(LIBTOOL) --mode=link gcc -o %s %s %s
++link-executable-command: 	$(LIBTOOL) --mode=link --tag=CC gcc -o %s %s %s
++link-shared-executable-command: $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s %s
+ link-executable-flags:          $(GC_LIBS) -lm
+ path-separator:        		:
+ 
+ platform-name:			egcs
+ default-features:		C-compiler-is-EGCS
+ compile-c-command:              cc $(CCFLAGS) -c %s -o %s
+-compile-c-for-shared-command:   $(LIBTOOL) --mode=compile cc $(CCFLAGS) -c %s -o %s
++compile-c-for-shared-command:   $(LIBTOOL) --mode=compile --tag=CC cc $(CCFLAGS) -c %s -o %s
+ default-c-compiler-flags:	-I. -I%s -O2 -fomit-frame-pointer
+ default-c-compiler-debug-flags:	-I. -I%s -g -O -fno-inline-functions
+ default-c-compiler-profile-flags: -I. -I%s -pg -g -O -fno-inline-functions
+ assembler-command:		cc $(CCFLAGS) -c %s -o %s
+ link-library-command:           ar qc %s %s
+-link-executable-command: 	$(LIBTOOL) --mode=link cc -o %s %s %s
+-link-shared-executable-command: $(LIBTOOL) --mode=link cc -o %s %s %s
++link-executable-command: 	$(LIBTOOL) --mode=link --tag=CC cc -o %s %s %s
++link-shared-executable-command: $(LIBTOOL) --mode=link --tag=CC cc -o %s %s %s
+ link-executable-flags:          $(GC_LIBS) -multiply_defined suppress         
+ path-separator:        		/
+ 
+@@ -521,14 +521,14 @@
+ platform-name:                 ppc-gcc30
+ default-features:              C-compiler-is-GCC
+ compile-c-command:              gcc-3.0 $(CCFLAGS) -c %s -o %s
+-compile-c-for-shared-command:   $(LIBTOOL) --mode=compile gcc-3.0 $(CCFLAGS) -c %s -o %s
++compile-c-for-shared-command:   $(LIBTOOL) --mode=compile --tag=CC gcc-3.0 $(CCFLAGS) -c %s -o %s
+ default-c-compiler-flags:      -I. -I%s -O2 -fomit-frame-pointer -fno-strict-aliasing
+ default-c-compiler-debug-flags:        -I. -I%s -g -O -fno-inline-functions
+ default-c-compiler-profile-flags:      -I. -I%s -pg -g -O -fno-inline-functions
+ assembler-command:             gcc-3.0 $(CCFLAGS) -c %s -o %s
+ link-library-command:           ar qc %s %s
+-link-executable-command: 	$(LIBTOOL) --mode=link gcc-3.0 -o %s %s %s
+-link-shared-executable-command: $(LIBTOOL) --mode=link gcc-3.0 -o %s %s %s
++link-executable-command: 	$(LIBTOOL) --mode=link --tag=CC gcc-3.0 -o %s %s %s
++link-shared-executable-command: $(LIBTOOL) --mode=link --tag=CC gcc-3.0 -o %s %s %s
+ link-executable-flags:          $(GC_LIBS) -lm
+ link-profile-flags:            -pg
+ path-separator:                        /
+@@ -536,14 +536,14 @@
+ platform-name:			  ppc-gcc32
+ default-features:		  C-compiler-is-GCC
+ compile-c-command:		  gcc-3.2 $(CCFLAGS) -c %s -o %s
+-compile-c-for-shared-command:	  $(LIBTOOL) --mode=compile gcc-3.2 $(CCFLAGS) -c %s -o %s
++compile-c-for-shared-command:	  $(LIBTOOL) --mode=compile --tag=CC gcc-3.2 $(CCFLAGS) -c %s -o %s
+ default-c-compiler-flags:	  -I. -I%s -O2 -fomit-frame-pointer  -fno-strict-aliasing
+ default-c-compiler-debug-flags:	  -I. -I%s -g -O -fno-inline-functions
+ default-c-compiler-profile-flags: -I. -I%s -pg -g -O -fno-inline-functions
+ assembler-command:		  gcc-3.2 $(CCFLAGS) -c %s -o %s
+ link-library-command:		  ar qc %s %s
+-link-executable-command:	  $(LIBTOOL) --mode=link gcc-3.2 -o %s %s %s
+-link-shared-executable-command:	  $(LIBTOOL) --mode=link gcc-3.2 -o %s %s %s
++link-executable-command:	  $(LIBTOOL) --mode=link --tag=CC gcc-3.2 -o %s %s %s
++link-shared-executable-command:	  $(LIBTOOL) --mode=link --tag=CC gcc-3.2 -o %s %s %s
+ link-executable-flags:		  $(GC_LIBS) -lm
+ link-profile-flags:		  -pg
+ path-separator:			  /
+@@ -552,28 +552,28 @@
+ platform-name:			x86-gcc32
+ inherit-from:			x86 gcc
+ default-c-compiler-flags:	-I. -I%s -O2 -fomit-frame-pointer -fno-strict-aliasing
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:			x86-gcc33
+ inherit-from:			x86 gcc
+ default-c-compiler-flags:	-I. -I%s -O
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
+-link-executable-command: 	$(LIBTOOL) --mode=link gcc -static -o %s %s %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
++link-executable-command: 	$(LIBTOOL) --mode=link --tag=CC gcc -static -o %s %s %s
+ 
+ /// sparc
+ platform-name:			sparc-gcc30
+ inherit-from:			sparc gcc
+ default-c-compiler-flags:	-I. -I%s -O1
+ default-c-compiler-debug-flags: -I. -I%s -g -O0 -fno-inline-functions
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ long-long-alignment:	8
+ 
+ 
+ // Fully supported platforms (i.e., we use these):
+ platform-name:			x86-linux-gcc
+ inherit-from:			gcc linux x86
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
+-link-executable-command: 	$(LIBTOOL) --mode=link gcc -static -o %s %s %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
++link-executable-command: 	$(LIBTOOL) --mode=link --tag=CC gcc -static -o %s %s %s
+ 
+ platform-name:			x86-linux-gcc32
+ inherit-from:			linux x86-gcc32
+@@ -583,12 +583,24 @@
+ 
+ platform-name:			x86-bsdi-gcc
+ inherit-from:			gcc bsdi x86
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:			x86-netbsd-gcc
+ inherit-from:			gcc netbsd x86
+ default-c-compiler-flags:       -I. -I%s -I/usr/X11R6/include -fomit-frame-pointer -fno-strict-aliasing
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
++
 +platform-name:			ppc-netbsd-gcc
 +inherit-from:			gcc netbsd ppc
-+link-shared-library-command:	$(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:	$(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
 +long-long-size:			8
 +long-long-alignment:		4
 +
 +platform-name:			sparc-netbsd-gcc
 +inherit-from:			gcc netbsd sparc
-+link-shared-library-command:	$(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:	$(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
 +long-long-size:			8
 +long-long-alignment:		4
-+
+ 
  platform-name:			x86-beos-gcc
  // Note:  These rules depend on the presence of the MingW utilities in your
- // system PATH.  You may elect to build using Microsoft's compiler, but
+@@ -596,7 +608,7 @@
+ // you will have a bear of a time getting things to work without some
+ // UNIX-alike commands like "mv", "cmp", and GNU make.
+ inherit-from:			beos-gcc beos x86
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:			ppc-linux
+ inherit-from:			linux ppc
+@@ -605,15 +617,15 @@
+ 
+ platform-name:			ppc-linux-gcc
+ inherit-from:			gcc ppc-linux
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:                 ppc-linux-gcc30
+ inherit-from:                  ppc-gcc30 ppc-linux
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc-3.0 -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc-3.0 -o %s %s -rpath %s
+ 
+ platform-name:			ppc-linux-gcc32
+ inherit-from:			ppc-gcc32 ppc-linux
+-link-shared-library-command:	$(LIBTOOL) --mode=link gcc-3.2 -o %s %s -rpath %s
++link-shared-library-command:	$(LIBTOOL) --mode=link --tag=CC gcc-3.2 -o %s %s -rpath %s
+ 
+ // FreeBSD 2.x
+ platform-name:			x86-freebsd-aout-gcc
+@@ -622,7 +634,7 @@
+ // FreeBSD 3.x and above
+ platform-name:			x86-freebsd-elf-gcc
+ inherit-from:			gcc freebsd x86
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:			x86-freebsd-elf-gcc32
+ inherit-from:			freebsd x86-gcc32
+@@ -634,15 +646,15 @@
+ inherit-from:			gcc linux alpha
+ big-endian?:			#f
+ assembler-command:		gcc $(CCFLAGS) -x assembler-with-cpp -c %s -o %s
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:			sparc-linux-gcc
+ inherit-from:			gcc linux sparc
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:			s390-linux-gcc
+ inherit-from:			gcc linux s390
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ platform-name:			MacOS-ppc
+ inherit-from:			mac-cw macintosh ppc
+@@ -666,20 +678,20 @@
+ // Douglas M. Auclair's cygnus port (doug@cotilliongroup.com)
+ platform-name:			x86-cygnus-gcc
+ inherit-from:			gcc x86 cygnus
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ long-long-alignment:		8
+ double-alignment:		8
+ 
+ platform-name:			x86-cygnus-gcc32
+ inherit-from:			x86-gcc32 cygnus
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ long-long-alignment:		4
+ double-alignment:		4
+ 
+ // Mingwin Port
+ platform-name:			x86-mingw32-gcc32
+ inherit-from:			gcc x86 mingw32
+-link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -rpath %s
+ 
+ // Solaris support maintained by Tom Emerson, tree@tiac.net
+ // Need to define default-features: below since all three of our
+@@ -716,7 +728,7 @@
+ platform-name:			mips-irix-gcc
+ inherit-from:			gcc irix mips
+ default-features:               compiled-for-irix compiled-for-mips C-compiler-is-GCC
+-link-shared-library-command:    $(LIBTOOL) --mode=link cc -n32 -Wl,-woff,85 -o %s %s -rpath %s
++link-shared-library-command:    $(LIBTOOL) --mode=link --tag=CC cc -n32 -Wl,-woff,85 -o %s %s -rpath %s
+ 
+ // This is untested. 
+ platform-name:			sparc-openbsd-gcc
+@@ -743,8 +755,8 @@
+ default-features:               	compiled-for-hpux compiled-for-hppa C-compiler-is-GCC
+ library-filename-suffix:        	.a .sl
+ link-library-command:           	/bin/ar qc %s %s
+-link-executable-command:        	$(LIBTOOL) --mode=link gcc -o %s %s %s
+-//link-shared-library-command:    	$(LIBTOOL) --mode=link gcc -o %s %s -L/lib/pa1.1 -lm -rpath %s
++link-executable-command:        	$(LIBTOOL) --mode=link --tag=CC gcc -o %s %s %s
++//link-shared-library-command:    	$(LIBTOOL) --mode=link --tag=CC gcc -o %s %s -L/lib/pa1.1 -lm -rpath %s
+ link-executable-flags:          	$(GC_LIBS) -L/lib/pa1.1 -lm
+ double-alignment:                       8
+ long-long-alignment:                    8
