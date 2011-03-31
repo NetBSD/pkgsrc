@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/19 09:44:32 imil Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/31 20:45:56 zafer Exp $
 #
 
 PKGNAME=	shelldap-0.4
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Term-ReadLine>=1.20:../../devel/p5-Term-ReadLine
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/shelldap-d703cba056e3
+WRKSRC=		${WRKDIR}/shelldap-d7975e514b2a
 USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
