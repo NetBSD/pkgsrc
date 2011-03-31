@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:39 wiz Exp $
+$NetBSD: distinfo,v 1.5 2011/03/31 13:25:56 obache Exp $
 
 SHA1 (w3-4.0pre.47.tar.gz) = 51cce63a0507fc5dd3486674c678f24067d6611d
 RMD160 (w3-4.0pre.47.tar.gz) = 4d7f7ada9704299b61c2b8925fc651cfa2c7d90f
@@ -6,3 +6,6 @@ Size (w3-4.0pre.47.tar.gz) = 503062 bytes
 SHA1 (patch-aa) = 3b02015ed680630dbceb0e20e2f24850893beabd
 SHA1 (patch-ab) = 1a805be496d385152388ae9b00ad2ffa9f8fdb53
 SHA1 (patch-ac) = 7edc0023e3ad88a126a6ea39955e246da6101f76
+SHA1 (patch-etc_Makefile.in) = a4f4998b66662bd6079b04ae57f8b72264312ef1
+SHA1 (patch-lisp_Makefile.in) = 2aa79a7399daca4589322a43ef70a83e49817e86
+SHA1 (patch-texi_Makefile.in) = 528c07c13f35f09266073ad7c8db8edc0f1a143c
