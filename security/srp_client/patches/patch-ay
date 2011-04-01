@@ -1,0 +1,42 @@
+$NetBSD: patch-ay,v 1.1 2011/04/01 21:56:14 agc Exp $
+
+--- ftp/ftpd/ftpcmd.y	2011/03/30 11:35:57	1.1
++++ ftp/ftpd/ftpcmd.y	2011/03/30 11:36:35
+@@ -909,10 +909,10 @@
+ #include <arpa/telnet.h>
+ 
+ /*
+- * getline - a hacked up version of fgets to ignore TELNET escape codes.
++ * srp_ftp_getline - a hacked up version of fgets to ignore TELNET escape codes.
+  */
+ char *
+-getline(s, n, iop)
++srp_ftp_getline(s, n, iop)
+ 	char *s;
+ 	register FILE *iop;
+ {
+@@ -1013,7 +1013,7 @@
+ 		*s = '\0';
+ 		return(s);
+ 	    }
+-	    if (debug) syslog(LOG_DEBUG, "getline got %d from %s <%s>\n", 
++	    if (debug) syslog(LOG_DEBUG, "srp_ftp_getline got %d from %s <%s>\n", 
+ 			      len, cs, mic?"MIC":"ENC");
+ #ifdef SRP
+ 	if (strcmp(auth_type, "SRP") == 0)
+@@ -1142,13 +1142,13 @@
+ 		case CMD:
+ 			(void) signal(SIGALRM, toolong);
+ 			(void) alarm((unsigned) timeout);
+-			if (getline(cbuf, sizeof(cbuf)-1, stdin) == NULL) {
++			if (srp_ftp_getline(cbuf, sizeof(cbuf)-1, stdin) == NULL) {
+ 				reply(221, "You could at least say goodbye.");
+ 				dologout(0);
+ 			}
+ 			(void) alarm(0);
+ 
+-			/* If getline() finds an error, the string is null */
++			/* If srp_ftp_getline() finds an error, the string is null */
+ 			if (*cbuf == '\0')
+ 				continue;
+ 

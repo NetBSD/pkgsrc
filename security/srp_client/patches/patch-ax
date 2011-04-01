@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1 2011/04/01 21:56:14 agc Exp $
+
+--- telnet/telnet/Makefile.in	2011/03/30 11:33:24	1.1
++++ telnet/telnet/Makefile.in	2011/03/30 11:33:56
+@@ -82,7 +82,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) 
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ ../../base/libmisc/libmisc.a ../../base/lib/libshadow.a
+ telnet_OBJECTS =  authenc.o commands.o main.o network.o ring.o sys_bsd.o \
+ telnet.o terminal.o tn3270.o utilities.o
+ telnet_DEPENDENCIES =  ../libtelnet/libtelnet.a
