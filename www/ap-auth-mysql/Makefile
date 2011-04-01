@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/09/30 10:49:12 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/04/01 13:05:09 obache Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -9,7 +9,7 @@ CATEGORIES=		www databases security
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/liba/libapache-mod-auth-mysql/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://packages.debian.org/unstable/net/libapache-mod-auth-mysql.html
+HOMEPAGE=		http://packages.debian.org/sid/net/libapache2-mod-auth-mysql.html
 COMMENT=		Module to allow apache authentication against a MySQL database
 
 PKG_DESTDIR_SUPPORT=	user-destdir
