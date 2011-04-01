@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.800 2011/04/01 11:32:06 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.801 2011/04/01 11:40:43 wiz Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1361,3 +1361,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/atf to 0.13 [jmmv 2011-03-31]
 	Updated comms/estic to 1.61nb [is 2011-03-31]
 	Updated graphics/blender to 2.49bnb6 [wiz 2011-04-01]
+	Updated mail/mpop to 1.0.23 [wiz 2011-04-01]
