@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2009/02/21 15:53:04 tonio Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/01 21:14:53 markd Exp $
 
-DISTNAME=	bibtex2html-1.89
-PKGREVISION=	1
+DISTNAME=	bibtex2html-1.96
 CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.lri.fr/~filliatr/bibtex2html/
 COMMENT=	Collection of tools for translating from BibTeX to HTML
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
@@ -43,7 +43,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/aux2bib.1
 	${INSTALL_DATA} ${WRKSRC}/manual.html \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/manual.ps \
+	${INSTALL_DATA} ${WRKSRC}/manual.pdf \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/ocaml/buildlink3.mk"
