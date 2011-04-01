@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2011/01/13 13:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/01 11:43:57 wiz Exp $
 #
 
 DISTNAME=	putty-0.60-2009-09-06
-PKGNAME=	putty-0.6.20090906
-PKGREVISION=	4
+PKGNAME=	putty-0.60.20090906
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/ahoka/dist/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/ahoka/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/putty/
 COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
