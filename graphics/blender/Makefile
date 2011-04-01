@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2011/04/01 10:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2011/04/01 11:31:56 wiz Exp $
 
 DISTNAME=	blender-2.49b
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -16,6 +16,8 @@ USE_CMAKE=		yes
 CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		_build
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 LDFLAGS+=		-lcrypto
 
