@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.799 2011/03/31 17:59:13 is Exp $
+$NetBSD: CHANGES-2011,v 1.800 2011/04/01 11:32:06 wiz Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1360,3 +1360,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/cyrus-imapd24 to 2.4.7 [obache 2011-03-31]
 	Updated devel/atf to 0.13 [jmmv 2011-03-31]
 	Updated comms/estic to 1.61nb [is 2011-03-31]
+	Updated graphics/blender to 2.49bnb6 [wiz 2011-04-01]
