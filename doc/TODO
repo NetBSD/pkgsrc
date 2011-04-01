@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10223 2011/04/01 15:37:48 wiz Exp $
+$NetBSD: TODO,v 1.10224 2011/04/01 19:16:37 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1284,7 +1284,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o valgrind-3.6.0
-	o varnish-2.1.5 [pkg/44520]
 	o vbetool-1.1
 	o vera-1.17
 	o vfu-4.09
