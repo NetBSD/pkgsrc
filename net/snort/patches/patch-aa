@@ -1,18 +1,10 @@
-$NetBSD: patch-aa,v 1.16 2007/10/21 00:22:53 adrianp Exp $
+$NetBSD: patch-aa,v 1.17 2011/04/01 16:48:36 gdt Exp $
 
---- src/snort.c.orig	2007-09-07 19:01:56.000000000 +0100
+--- src/snort.c.orig	2009-10-19 17:44:03.000000000 +0000
 +++ src/snort.c
-@@ -158,7 +158,6 @@ extern OutputFuncNode *LogList;
- time_t start_time;    /* tracks how many seconds snort actually ran */
- #endif
- 
--extern int errno;
- 
- /* exported variables *********************************************************/
- u_int8_t runMode = 0;   /* snort run mode */
-@@ -3194,6 +3193,19 @@ int SetPktProcessor(void)
- 
+@@ -2737,6 +2737,19 @@ static int SetPktProcessor(void)
              break;
+ #endif  // NO_NON_ETHER_DECODER
  
 +#if defined(__NetBSD__)
 +#  if defined(__NetBSD_Version__)
@@ -28,9 +20,9 @@ $NetBSD: patch-aa,v 1.16 2007/10/21 00:22:53 adrianp Exp $
 +#endif /* NetBSD */
 +
          case DLT_PPP:                /* point-to-point protocol */
-             if(!pv.readmode_flag)
+             if (!ScReadMode())
              {
-@@ -3743,7 +3755,7 @@ static char *ConfigFileSearch()
+@@ -3379,7 +3392,7 @@ static char *ConfigFileSearch(void)
  {
      struct stat st;
      int i;
