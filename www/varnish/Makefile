@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/12/06 14:25:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/01 18:59:41 zafer Exp $
 #
 
-DISTNAME=	varnish-2.1.4
+DISTNAME=	varnish-2.1.5
 CATEGORIES=	www
-MASTER_SITES=	http://www.varnish-software.com/sites/default/files/
+MASTER_SITES=	http://repo.varnish-cache.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://varnish-cache.org/
@@ -27,6 +27,7 @@ STATEDIR=		${VARBASE}/db
 VRNDIR=			${STATEDIR}/${PKGBASE}
 
 CONFIGURE_ARGS+=	--localstatedir=${STATEDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 OWN_DIRS+=		${VRNDIR}
 OWN_DIRS_PERMS+=	${VRNDIR} ${VRNUSER} ${VRNGROUP} 0770
 
