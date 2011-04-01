@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.803 2011/04/01 12:27:53 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.804 2011/04/01 13:12:33 wiz Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1364,3 +1364,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/mpop to 1.0.23 [wiz 2011-04-01]
 	Updated security/putty-devel to 0.60.20090906 [wiz 2011-04-01]
 	Updated security/xmlsec1 to 1.2.17 [wiz 2011-04-01]
+	Updated editors/joe to 3.7nb2 [wiz 2011-04-01]
