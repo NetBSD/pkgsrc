@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10222 2011/04/01 13:55:00 jmmv Exp $
+$NetBSD: TODO,v 1.10223 2011/04/01 15:37:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o baci-20040415
 	o balance-3.54
 	o balsa-2.4.9
-	o bash-completion-1.1
+	o bash-completion-1.3
 	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -625,7 +625,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fotoxx-11.03.1
+	o fotoxx-11.04
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.2.5
@@ -1476,9 +1476,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zircon-1.18.256
 	o zlib-1.2.5
 	o zoom-1.1.3
-	o zope-3.4.0
-	o zope29-Silva-2.1
-	o zope34-3.4.0
+	o zope210-2.10.13
+	o zope211-2.11.8
+	o zope213-2.13.5
+	o zope34-3.4.1
+	o zope*-Silva-2.3
 	o zopeedit-0.8
 	o zsh-current-4.3.11 [pkg/44460]
 
