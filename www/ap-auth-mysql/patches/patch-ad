@@ -1,26 +1,9 @@
-$NetBSD: patch-ad,v 1.3 2007/06/29 22:58:55 joerg Exp $
+$NetBSD: patch-ad,v 1.4 2011/04/01 15:03:48 wiz Exp $
 
---- mod_auth_mysql.c.orig	2004-06-27 11:34:55.000000000 +0000
+--- mod_auth_mysql.c.orig	2004-12-23 13:43:14.000000000 +0000
 +++ mod_auth_mysql.c
-@@ -29,14 +29,14 @@
- #define SNPRINTF apr_snprintf
- #define PSTRDUP apr_pstrdup
- #define PSTRCAT apr_pstrcat
--#define APACHELOG(severity, handle, message ...) ap_log_error(APLOG_MARK, APLOG_NOERRNO|APLOG_##severity, 0, handle->server, message)
-+#define APACHELOG(severity, handle, message...) ap_log_error(APLOG_MARK, APLOG_NOERRNO|APLOG_##severity, 0, handle->server, message)
- #else
- #define PALLOC ap_palloc
- #define PCALLOC ap_pcalloc
- #define SNPRINTF ap_snprintf
- #define PSTRDUP ap_pstrdup
- #define PSTRCAT ap_pstrcat
--#define APACHELOG(severity, handle, message ...) ap_log_error(APLOG_MARK, APLOG_NOERRNO|APLOG_##severity, handle->server, message)
-+#define APACHELOG(severity, handle, message...) ap_log_error(APLOG_MARK, APLOG_NOERRNO|APLOG_##severity, handle->server, message)
- #endif
- 
- #include <httpd.h>
-@@ -51,12 +51,18 @@
- #include <ap_md5.h>
+@@ -55,12 +55,18 @@
+ #include <ap_sha1.h>
  #endif
  
 +#ifndef APR_XtOffsetOf
@@ -38,7 +21,7 @@ $NetBSD: patch-ad,v 1.3 2007/06/29 22:58:55 joerg Exp $
  #endif
  
  #ifndef TRUE
-@@ -94,7 +100,7 @@ unsigned long auth_db_client_flag = 0;
+@@ -98,7 +104,7 @@ unsigned long auth_db_client_flag = 0;
  #define CRYPT_MD5_ENCRYPTION_FLAG	1<<3
  #endif
  #define PHP_MD5_ENCRYPTION_FLAG		1<<4
@@ -46,8 +29,8 @@ $NetBSD: patch-ad,v 1.3 2007/06/29 22:58:55 joerg Exp $
 +#if defined(HAVE_CRYPT_H) || defined(HAVE_LIBCRYPT)
  #define CRYPT_ENCRYPTION_FLAG		1<<5
  #endif
- 
-@@ -126,7 +132,7 @@ static int check_crypt_MD5_encryption(co
+ #define SHA1SUM_ENCRYPTION_FLAG		1<<6
+@@ -131,7 +137,7 @@ static int check_crypt_MD5_encryption(co
  }
  #endif
  
@@ -56,7 +39,7 @@ $NetBSD: patch-ad,v 1.3 2007/06/29 22:58:55 joerg Exp $
  static int check_crypt_encryption(const char *passwd, char *enc_passwd)
  {
  	return (!strcmp(crypt(passwd, enc_passwd), enc_passwd));
-@@ -206,7 +212,9 @@ encryption_type_entry supported_encrypti
+@@ -250,7 +256,9 @@ encryption_type_entry supported_encrypti
  #if CRYPT_MD5
  	{ "Crypt_MD5",		check_crypt_MD5_encryption,		CRYPT_MD5_ENCRYPTION_FLAG },
  #endif
@@ -64,25 +47,5 @@ $NetBSD: patch-ad,v 1.3 2007/06/29 22:58:55 joerg Exp $
  	{ "Crypt",		check_crypt_encryption,			CRYPT_ENCRYPTION_FLAG },
 +#endif
  	{ "PHP_MD5",		check_PHP_MD5_encryption,		PHP_MD5_ENCRYPTION_FLAG	},
+ 	{ "SHA1Sum",	check_SHA1Sum_encryption, SHA1SUM_ENCRYPTION_FLAG},
  	/* add additional encryption types below */
- 	{ NULL,			NULL,					0 }
-@@ -1463,14 +1471,17 @@ int mysql_authenticate_basic_user(reques
- 		return res;
- 	}
- 
-+#ifdef APACHE2
- 	APACHELOG(DEBUG, r,
- 		"Starting basic user auth for [%s] in %s, child pid %i",
--#ifdef APACHE2
- 		r->user,
-+		sec->dir, getpid());
- #else
-+	APACHELOG(DEBUG, r,
-+		"Starting basic user auth for [%s] in %s, child pid %i",
- 		c->user,
--#endif
- 		sec->dir, getpid());
-+#endif
- 
- #ifdef APACHE2
- 	switch (mysql_check_user_password(r, r->user, sent_pw, sec)) {
