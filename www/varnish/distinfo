@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2010/12/06 14:25:44 wiz Exp $
+$NetBSD: distinfo,v 1.7 2011/04/01 18:59:41 zafer Exp $
 
-SHA1 (varnish-2.1.4.tar.gz) = 3e3734f7795880a90a0514e9fb40d76fd170221b
-RMD160 (varnish-2.1.4.tar.gz) = f5d9bea792f7d2f9ca8dec8bc96c3ac88f0a45a9
-Size (varnish-2.1.4.tar.gz) = 1539241 bytes
-SHA1 (patch-aa) = c0216a4b4c73b43567a6402a14a64c7597d5c4b9
-SHA1 (patch-ab) = 5908f0fbeed7ba7261f67088e7bb9f6423d18e26
-SHA1 (patch-ac) = 796dcbcfaf546e7e7077e59c84f97a38f2ff1edf
+SHA1 (varnish-2.1.5.tar.gz) = 5c413ee7c4267d9fd4713fbff059d1be5fbba60f
+RMD160 (varnish-2.1.5.tar.gz) = 4619d4be920504388325f06afdbea9b40f5a806a
+Size (varnish-2.1.5.tar.gz) = 1530856 bytes
+SHA1 (patch-aa) = d0bce82fc6bc0bb7e078f61461a21172bb658d4a
+SHA1 (patch-ab) = 30a64ce77354df3f2e0e830f60f4c6d98ef3099c
