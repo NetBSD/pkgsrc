@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1438 2011/03/18 21:52:40 minskim Exp $
+# $NetBSD: Makefile,v 1.1439 2011/04/01 13:53:59 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -419,7 +419,6 @@ SUBDIR+=	mono-tools
 SUBDIR+=	monodevelop
 SUBDIR+=	monodevelop-database
 SUBDIR+=	monotone
-SUBDIR+=	monotone-el
 SUBDIR+=	monotone-server
 SUBDIR+=	monotone-viz
 SUBDIR+=	mph
