@@ -1,0 +1,251 @@
+$NetBSD: patch-DIRECTIVES,v 1.1 2011/04/01 15:11:58 wiz Exp $
+
+All Debian patches up to 4.3.9-13.
+
+--- DIRECTIVES.orig	2004-12-23 13:43:14.000000000 +0000
++++ DIRECTIVES
+@@ -1,23 +1,27 @@
+ All the directives understood by this version of mod-auth-mysql are listed
+-below.  The huge number of synonym directives is due to the merging of two
+-separate versions of the program, both of which had subtly different usage
+-symantics.  I'm sure there will be rationalisation in the near future.
++below.  All directives exist in the two forms Auth_MySQL_* and AuthMySQL_*
++and share the same semantics.  They are the result of merging two separate
++versions of the mod_auth_mysql in the first place, both of which had subtly
++different usage symantics.  The directive names have since then unified.
++
++Auth_MySQL <on/off>
++	Enable/disable MySQL authentication
+ 
+ Auth_MySQL_Info <host> <user> <password>
+ 	Server-wide config option to specify the database host, username,
+ 	and password used to connect to the MySQL server.
+ 
+ 	This option affects all directories which do not override it via
+-	AuthMySQL_Host, AuthMySQL_User, and/or AuthMySQL_Password.
++	Auth_MySQL_Host, Auth_MySQL_User, and/or Auth_MySQL_Password.
+ 
+-AuthMySQL_DefaultHost <hostname>
++Auth_MySQL_DefaultHost <hostname>
+ 	Specifies the MySQL server to use for authentication.
+ 	
+ 	This option affects all directories which do not override it via
+-	AuthMySQL_Host.
++	Auth_MySQL_Host.
+ 
+-AuthMySQL_Host <hostname>
+-	Synonym for AuthMySQL_DefaultHost, to be used in .htaccess files and
++Auth_MySQL_Host <hostname>
++	Synonym for Auth_MySQL_DefaultHost, to be used in .htaccess files and
+ 	directory-specific entries.
+ 
+ Auth_MySQL_DefaultPort <portnum>
+@@ -28,35 +32,37 @@ Auth_MySQL_DefaultPort <portnum>
+ 	Auth_MySQL_Port.
+ 
+ Auth_MySQL_Port <portnum>
+-	Specifies a non-default port to use (other than 3306) when talking
+-	to the MySQL server on AuthMySQL_Host or AuthMySQL_DefaultHost.
++	Synonym for Auth_MySQL_DefaultPort, to be used in .htaccess files and
++	directory-specific entries.
+ 
+ Auth_MySQL_DefaultSocket <socketname>
+-	If using a local MySQL server, you can
+-	specify a non-default named pipe to use instead of the default pipe
+-	name compiled into your MySQL client library.
++	If using a local MySQL server, you can specify a non-default named
++	pipe to use instead of the default pipe name compiled into your MySQL
++	client library.
+ 
+ 	This option affects all directories which do not override it via
+ 	Auth_MySQL_Socket.
+ 
+ Auth_MySQL_Socket <socketname>
+-	If using a local MySQL server, you can specify a non-default named
+-	pipe to use instead of the default one compiled into MySQL with this
+-	option.
++	Synonym for Auth_MySQL_DefaultSocket, to be used in .htaccess files and
++	directory-specific entries.
+ 
+-AuthMySQL_DefaultUser <username>
++Auth_MySQL_DefaultUser <username>
+ 	Specifies the username for connection to the MySQL server.
+ 
+-AuthMySQL_User <username>
+-	Synonym for AuthMySQL_DefaultUser, to be used in .htaccess files and
++Auth_MySQL_User <username>
++	Synonym for Auth_MySQL_DefaultUser, to be used in .htaccess files and
+ 	directory-specific entries.
+ 	
+-AuthMySQL_DefaultPassword <password>
++Auth_MySQL_Username <username>
++	Synonym for Auth_MySQL_User.
++	
++Auth_MySQL_DefaultPassword <password>
+ 	Specifies the password user together with the above user.
+ 
+-AuthMySQL_Password <password>
+-	Synonym for AuthMySQL_Password, to be used in .htaccess files and
+-	directory-specific entries.
++Auth_MySQL_Password <password>
++	Synonym for Auth_MySQL_DefaultPassword, to be used in .htaccess files
++	and directory-specific entries.
+ 
+ Auth_MySQL_General_DB <database_name>
+ 	Server-wide, specifies a default database name to use.
+@@ -65,12 +71,20 @@ Auth_MySQL_DB <database_name>
+ 	Synonym for Auth_MySQL_General_DB, to be used in .htaccess files and
+ 	directory-specific entries.
+ 
+-AuthMySQL_DefaultDB <database_name>
++Auth_MySQL_DefaultDB <database_name>
+ 	Synonym for Auth_MySQL_General_DB.
+ 
+-AuthMySQL_DB <database_name>
+-	Synonym for Auth_MySQL_General_DB, to be used in .htaccess files and
+-	directory-specific entries.
++Auth_MySQL_CharacterSet <character set>
++
++	Set the connection character set to the specified one.  Otherwise no
++	particular character set is used when the connection is created.
++	This could cause problems with differently encoded strings and table
++	or column collations.  The parameter must be a valid MySQL
++	character.  It is mandatory if the character set used for tables/rows
++	differs from the default.
++
++AuthMySQL_CharacterSet <character set>
++        Synonym for Auth_MySQL_CharacterSet.
+ 
+ AuthName "<Realm>"
+ 	Describes the data you're guarding.
+@@ -96,39 +110,28 @@ Auth_MySQL_Password_Table <password_tabl
+ 	The name of the MySQL table in the specified database which stores
+ 	username:password pairs.  By default, it is 'mysql_auth'.
+ 
+-AuthMySQL_Password_Table <password_table_name>
+-	Synonym for Auth_MySQL_Password_Table.
+-
+ Auth_MySQL_Group_Table <group_table_name>
+ 	As per ...Password_Table above, stores username:group pairs. 
+ 	Normally you'll store username:password:group triplets in the one
+ 	table, but we are nothing if not flexible.  Defaults to
+ 	'mysql_auth'.
+ 
+-AuthMySQL_Group_Table <group_table_name>
+-	Synonym for Auth_MySQL_Group_Table.
+-
+ Auth_MySQL_Username_Field <username_field_name>
+ 	The name of the field which stores usernames.  Defaults to
+ 	'username'. The username/password combo specified in Auth_MySQL_Info
+ 	must have select privileges to this field in the Password and Group
+ 	tables.
+ 
+-AuthMySQL_Username_Field <username_field_name>
+-	Synonym for Auth_MySQL_Username_Field.
+-
+ Auth_MySQL_Password_Field <password_field_name>
+ 	As per ...Username_Field above, but for passwords.  Same MySQL
+-	access privileges.  Defaults to 'password'.
++	access privileges.  Defaults to 'passwd'.
+ 
+ AuthMySQL_Password_Field <password_field_name>
+ 	Synonym for Auth_MySQL_Password_Field.
+ 
+ Auth_MySQL_Group_Field <group_field_name>
+-	As per ...Username_Field above.  Defaults to 'groups'.
+-	
+-AuthMySQL_Group_Field <group_field_name>
+-	Synonym for Auth_MySQL_Group_Field.
++	As per ...Username_Field above.  Defaults to 'groups'.  The query 
++	will use FIND_IN_SET(<group_name>,<group_field_name>).
+ 	
+ Auth_MySQL_Group_User_Field <field_name>
+ 	The name of the field in the groups table which stores the username. 
+@@ -146,6 +149,9 @@ Auth_MySQL_Group_Clause <SQL fragment>
+ 	Adds arbitrary clause to username:group matching query, for example:
+ 	" AND Allowed=1". Clause has to start with space. Default is empty.
+  
++Auth_MySQL_Where_Clause <SQL fragment>
++	Synonym for Auth_MySQL_Password_Clause.
++
+ Auth_MySQL_Empty_Passwords <on/off>
+ 	Whether or not to allow empty passwords.  If the password field is
+ 	empty (equals to '') and this option is 'on', users would be able to
+@@ -153,9 +159,6 @@ Auth_MySQL_Empty_Passwords <on/off>
+ 	PASSWORD CHECKING.  If this is 'off', they would be denied access. 
+ 	Default: 'on'.
+ 
+-AuthMySQL_Empty_Passwords <on/off>
+-	Synonym for Auth_MySQL_Empty_Passwords.
+-
+ Auth_MySQL_Encryption_Types <type_list>
+ 
+ 	Select which types of encryption to check, and in which order to
+@@ -203,10 +206,11 @@ Auth_MySQL_Encryption_Types <type_list>
+ 
+ 	MySQL
+ 		The hashing scheme used by the MySQL PASSWORD() function.
++	
++	Apache
++		The hashing scheme used by htpasswd utility. Compatible to
++		authuserfile.
+ 		
+-AuthMySQL_Encryption_Types <type_list>
+-	Synonym for Auth_MySQL_Encryption_Types.
+-
+ Auth_MySQL_Encrypted_Passwords <on/off> (DEPRECATED)
+ 	Equivalent to: Auth_MySQL_Encryption_Types Crypt_DES
+ 	Only used if ...Encryption_Types is not set.  Defaults to 'on'.  If
+@@ -214,17 +218,11 @@ Auth_MySQL_Encrypted_Passwords <on/off> 
+ 	...Encryption_Types is not set, passwords are expected to be in
+ 	plaintext.
+ 
+-AuthMySQL_Encrypted_Passwords <on/off> (DEPRECATED)
+-	Synonym for Auth_MySQL_Encrypted_Passwords.
+-
+ Auth_MySQL_Scrambled_Passwords <on/off> (DEPRECATED)
+ 	Equivalent to: Auth_MySQL_Encryption_Types MySQL
+ 	The same restrictions apply to this directive as to
+ 	...Encrypted_Passwords.
+ 
+-AuthMySQL_Scrambled_Passwords <on/off> (DEPRECATED)
+-	Synonym for Auth_MySQL_Scrambled_Passwords.
+-
+ Auth_MySQL_Authoritative <on/off>
+ 	Whether or not to use other authentication schemes if the user is
+ 	successfully authenticated.  That is, if the user passes the MySQL
+@@ -232,9 +230,6 @@ Auth_MySQL_Authoritative <on/off>
+ 	option is set 'off'.  The default is 'on' (i.e. if the user passes
+ 	the MySQL module, they're considered OK).
+ 
+-AuthMySQL_Authoritative <on/off>
+-	Synonym for Auth_MySQL_Authoritative.
+-
+ Auth_MySQL_Non_Persistent <on/off>
+ 	If set to 'on', the link to the MySQL server is explicitly closed
+ 	after each authentication request.  Note that I can't think of any
+@@ -244,10 +239,15 @@ Auth_MySQL_Non_Persistent <on/off>
+ 	increase the maximum number of simultaneous threads in MySQL and
+ 	keep this option off.  Default: off, and for good reason.
+ 
+-AuthMySQL_Persistent <on/off>
++	Please bear in mind that modern MySQL installations appear to have a
++	connection timeout of 28000 seconds (8 hours), one may want to lower
++	this to 30 (max_connections) if you have very busy site and are
++	observing spikes containing a large number of connection threads.
++
++Auth_MySQL_Persistent <on/off>
+ 	An antonym for Auth_MySQL_Non_Persistent.
+ 
+-AuthMySQL_AllowOverride <on/off>
++Auth_MySQL_AllowOverride <on/off>
+ 	Whether or not .htaccess files are allowed to use their own
+ 	Host/User/Password/DB specifications.  If set to 'off', then the
+ 	defaults specified in the httpd.conf cannot be overridden.
+@@ -256,6 +256,3 @@ Auth_MYSQL <on/off>
+ 	Whether or not to enable MySQL authentication.  If it's off, the
+ 	MySQL authentication will simply pass authentication off to other
+ 	modules defined.
+-
+-AuthMySQL <on/off>
+-	Synonym for Auth_MYSQL.

@@ -1,0 +1,69 @@
+$NetBSD: patch-USAGE,v 1.1 2011/04/01 15:11:58 wiz Exp $
+
+All Debian patches up to 4.3.9-13.
+
+--- USAGE.orig	2004-12-23 13:43:14.000000000 +0000
++++ USAGE
+@@ -18,7 +18,10 @@ create table mysql_auth (
+ 	primary key (username)
+ );
+ 
+-This would work quite well.
++This would work quite well.  Remember that the passwd field needs to be long
++enough to store the entire password string -- for example, if you are using
++MD5 passwords, passwd needs to be 32 characters long, and if you are using
++SHA1 it must be 40 characters long.
+ 
+ NOTE 1: You don't have to use a new table for the purpose of storing
+ usernames and passwords; I quite happily use a 'members' table (with all
+@@ -41,9 +44,9 @@ Auth_MySQL_Info <host> <user> <password>
+ 
+ or
+ 
+-AuthMySQL_DefaultHost <host>
+-AuthMySQL_DefaultUser <user>
+-AuthMySQL_DefaultPassword <password>
++Auth_MySQL_DefaultHost <host>
++Auth_MySQL_DefaultUser <user>
++Auth_MySQL_DefaultPassword <password>
+ 
+ This should be placed globally.
+ 
+@@ -53,12 +56,12 @@ use
+ Auth_MySQL_General_DB <database>
+ 
+ to set that.  This setting can be overridden in .htaccess files if
+-AuthMySQL_AllowOverride is set.
++Auth_MySQL_AllowOverride is set.
+ 
+ On that topic, if you want .htaccess files to be restricted in what they're
+ able to connect to database-wise, you can
+ 
+-AuthMySQL_AllowOverride no
++Auth_MySQL_AllowOverride no
+ 
+ and the host, user, password, and database name cannot be changed.
+ 
+@@ -123,3 +126,22 @@ become plaintext equivalents.
+ 
+ The full set of directives available are now listed in the file DIRECTIVES,
+ for ease of perusal.
++
++Disable other Auth methods
++--------------------------
++
++For some reason Apache has problems handing over authority to this
++module if this is requested an another auth module is also loaded.
++
++If you have another authentication module loaded, you'll have to
++disable it the hard way.
++
++AuthBasicAuthoritative Off
++AuthUserFile /dev/null
++
++The following option is not sufficient
++
++Auth_MySQL_Authoritative On
++
++If you experience similar problems with group membership, try
++repeating the same procedure with AuthGroupFile.
