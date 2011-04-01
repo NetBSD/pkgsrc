@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.22 2010/06/05 13:26:46 wiz Exp $
+$NetBSD: distinfo,v 1.23 2011/04/01 21:28:32 tez Exp $
 
 SHA1 (popt-1.16.tar.gz) = cfe94a15a2404db85858a81ff8de27c8ff3e235e
 RMD160 (popt-1.16.tar.gz) = 9c52bff97259de4010499f69c76d2a6396920342
 Size (popt-1.16.tar.gz) = 702769 bytes
 SHA1 (patch-aa) = 7edb4bbd7fe044da9f388159fdc22327377e267e
+SHA1 (patch-lookup3.c) = 7643b577c0913742fc4333c4469d606d81b6aa98
+SHA1 (patch-poptint.h) = c26b97bdeedf8a057009dfca985eb9287220f54b
