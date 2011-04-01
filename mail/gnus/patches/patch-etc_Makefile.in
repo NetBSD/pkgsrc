@@ -1,0 +1,39 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1 2011/04/01 09:12:04 obache Exp $
+
+* staged installation support
+
+--- etc/Makefile.in.orig	2006-01-26 09:17:55.000000000 +0000
++++ etc/Makefile.in
+@@ -14,23 +14,23 @@ INSTALL_DATA = @INSTALL_DATA@
+ SHELL = /bin/sh
+ 
+ install:
+-	$(SHELL) $(top_srcdir)/mkinstalldirs $(etcdir)
++	$(SHELL) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(etcdir)
+ 	cd $(srcdir) \
+ 	&& for p in gnus-tut.txt; do \
+-	  echo " $(INSTALL_DATA) $$p $(etcdir)/$$p"; \
+-	  $(INSTALL_DATA) $$p $(etcdir)/$$p; \
++	  echo " $(INSTALL_DATA) $$p $(DESTDIR)$(etcdir)/$$p"; \
++	  $(INSTALL_DATA) $$p $(DESTDIR)$(etcdir)/$$p; \
+ 	done
+-	$(SHELL) $(top_srcdir)/mkinstalldirs $(etcdir)/images/gnus
++	$(SHELL) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(etcdir)/images/gnus
+ 	cd $(srcdir) \
+ 	&& for p in images/gnus/*.xpm images/gnus/*.pbm images/gnus/*.xbm images/gnus/x-splash; do \
+-	  echo " $(INSTALL_DATA) $$p $(etcdir)/$$p"; \
+-	  $(INSTALL_DATA) $$p $(etcdir)/$$p; \
++	  echo " $(INSTALL_DATA) $$p $(DESTDIR)$(etcdir)/$$p"; \
++	  $(INSTALL_DATA) $$p $(DESTDIR)$(etcdir)/$$p; \
+ 	done
+-	$(SHELL) $(top_srcdir)/mkinstalldirs $(etcdir)/images/smilies
++	$(SHELL) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(etcdir)/images/smilies
+ 	cd $(srcdir) \
+ 	&& for p in images/smilies/*.pbm images/smilies/*.xpm; do \
+-	  echo " $(INSTALL_DATA) $$p $(etcdir)/$$p"; \
+-	  $(INSTALL_DATA) $$p $(etcdir)/$$p; \
++	  echo " $(INSTALL_DATA) $$p $(DESTDIR)$(etcdir)/$$p"; \
++	  $(INSTALL_DATA) $$p $(DESTDIR)$(etcdir)/$$p; \
+ 	done
+ 
+ uninstall:
