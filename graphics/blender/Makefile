@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2011/01/13 13:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2011/04/01 10:59:56 wiz Exp $
 
 DISTNAME=	blender-2.49b
 PKGREVISION=	5
@@ -8,6 +8,7 @@ MASTER_SITES=	http://download.blender.org/source/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
