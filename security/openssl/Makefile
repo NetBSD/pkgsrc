@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2011/02/09 00:15:30 taca Exp $
+# $NetBSD: Makefile,v 1.155 2011/04/01 21:02:48 tez Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -63,9 +63,9 @@ OPENSSL_MACHINE_ARCH=	${MACHINE_ARCH}
 .  if defined(OPENSSL_MACHINE_ARCH) && !empty(OPENSSL_MACHINE_ARCH)
 CONFIGURE_SCRIPT=	./Configure
 .    if !empty(CC_VERSION:Mgcc*)
-CONFIGURE_ARGS+=	solaris-${OPENSSL_MACHINE_ARCH}-gcc
+CONFIGURE_ARGS+=	solaris${${ABI}==64:?64:}-${OPENSSL_MACHINE_ARCH}-gcc
 .    else
-CONFIGURE_ARGS+=	solaris-${OPENSSL_MACHINE_ARCH}-cc
+CONFIGURE_ARGS+=	solaris${${ABI}==64:?64:}-${OPENSSL_MACHINE_ARCH}-cc
 .    endif
 .  endif
 .elif ${OPSYS} == "IRIX"
