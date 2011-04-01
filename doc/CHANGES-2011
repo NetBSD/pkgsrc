@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.805 2011/04/01 13:55:00 jmmv Exp $
+$NetBSD: CHANGES-2011,v 1.806 2011/04/01 15:03:59 wiz Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1368,3 +1368,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/monotone to 1.0 [jmmv 2011-04-01]
 	Updated devel/monotone-server to 1.0 [jmmv 2011-04-01]
 	Removed devel/monotone-el [jmmv 2011-04-01]
+	Updated www/ap-auth-mysql to 4.3.9 [wiz 2011-04-01]
