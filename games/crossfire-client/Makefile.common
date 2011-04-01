@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/01/12 10:36:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/04/01 15:31:33 wiz Exp $
 # used by games/crossfire-client/Makefile
 # used by games/crossfire-client-gtk/Makefile
 # used by games/crossfire-client-gtk2/Makefile
@@ -13,7 +13,7 @@ HOMEPAGE=	http://crossfire.real-time.com/
 CROSSFIRE_VERSION=	1.11.0
 
 DISTINFO_FILE=		${.CURDIR}/../../games/crossfire-client/distinfo
-#PATCHDIR=		${.CURDIR}/../../games/crossfire-client/patches
+PATCHDIR=		${.CURDIR}/../../games/crossfire-client/patches
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
