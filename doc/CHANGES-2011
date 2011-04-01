@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.808 2011/04/01 16:49:11 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.809 2011/04/01 17:59:15 ahoka Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1371,3 +1371,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ap-auth-mysql to 4.3.9 [wiz 2011-04-01]
 	Updated www/ap-auth-mysql to 4.3.9nb1 [wiz 2011-04-01]
 	Updated net/snort to 2.8.5.1 [gdt 2011-04-01]
+	Updated lang/vala to 0.11.7 [ahoka 2011-04-01]
