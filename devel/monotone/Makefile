@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.67 2010/11/30 11:48:39 drochner Exp $
+# $NetBSD: Makefile,v 1.68 2011/04/01 13:51:54 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.99.1
+DISTNAME=	monotone-1.0
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.99.1/
+MASTER_SITES=	http://monotone.ca/downloads/1.0/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
@@ -17,11 +18,13 @@ INFO_FILES=		yes
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
-USE_TOOLS+=		gmake makeinfo pax pkg-config
+USE_TOOLS+=		gmake makeinfo pax perl pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-system-pcre
+
+INSTALL_MAKE_FLAGS+=	bashcompdir=${PREFIX:Q}/share/examples/monotone
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.monotone
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -40,13 +43,6 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 INSTALLATION_DIRS+=	share/monotone
-
-post-install:
-	cd ${WRKSRC} && rm -rf contrib/.deps && \
-	    pax -rw -pm contrib \
-	    ${DESTDIR}${PREFIX}/share/monotone
-	cd ${WRKSRC} && pax -rw -pm figures/*.png \
-	    ${DESTDIR}${PREFIX}/share/doc/monotone
 
 BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.6
 
