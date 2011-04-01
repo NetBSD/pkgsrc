@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2010/09/26 12:14:21 taca Exp $
+$NetBSD: distinfo,v 1.7 2011/04/01 14:16:55 taca Exp $
 
 SHA1 (stream-0.5.gem) = 5a6b14f9b6800003b006a98412d83b839f2c3af7
 RMD160 (stream-0.5.gem) = 74356b4724e6e3bfad85ccf871c05a9015c4d06e
 Size (stream-0.5.gem) = 19253 bytes
-SHA1 (patch-ab) = da822faac75155a49007cd1c0a750d7cdc17dcc3
+SHA1 (patch-ab) = 8a27de3edd4f1b7585ca53ca8e873442c6c53b16
