@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.17 2011/03/17 23:07:52 bad Exp $	*/
+/*	$NetBSD: license.c,v 1.18 2011/04/01 13:11:08 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -48,6 +48,7 @@
 const char *default_acceptable_licenses =
     "public-domain unlicense"
     "gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3 "
+    "gnu-gpl-v1 "
     "gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 "
     "gnu-gpl-v3 gnu-lgpl-v3 "
     "original-bsd modified-bsd 2-clause-bsd "
