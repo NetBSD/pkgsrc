@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2011/04/01 14:52:24 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/04/01 15:03:48 wiz Exp $
 #
 
-DISTNAME=		libapache-mod-auth-mysql_4.3.1
-PKGNAME=		${APACHE_PKG_PREFIX}-auth-mysql-4.3.1
-PKGREVISION=		1
+DISTNAME=		mod-auth-mysql_4.3.9.orig
+PKGNAME=		${APACHE_PKG_PREFIX}-auth-mysql-4.3.9
 WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/}
 CATEGORIES=		www databases security
-MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/liba/libapache-mod-auth-mysql/}
+MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/mod-auth-mysql/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://packages.debian.org/sid/libapache2-mod-auth-mysql
@@ -22,6 +21,9 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql	\
 			--with-mysql-libs=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/.orig//:S/_/-/}
 
 .include "../../mk/apache.mk"
 
