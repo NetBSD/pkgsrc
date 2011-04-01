@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.7 2007/03/23 22:08:58 dmcmahill Exp $
+$NetBSD: patch-aw,v 1.8 2011/04/01 23:50:51 asau Exp $
 
---- Makefile.in.orig	2006-12-11 12:41:55.000000000 +0000
-+++ Makefile.in
-@@ -4,7 +4,7 @@ binary:
+--- Makefile.in.orig	2006-12-11 15:41:55.000000000 +0300
++++ Makefile.in	2011-04-02 03:23:57.000000000 +0400
+@@ -4,7 +4,7 @@
  	@if test -f .binary; then \
  		echo "Humm... this is a binary version"; \
  		config/findpath; \
@@ -11,7 +11,7 @@ $NetBSD: patch-aw,v 1.7 2007/03/23 22:08:58 dmcmahill Exp $
  		echo "Installation done"; \
  	else \
  		echo "***************************************"; \
-@@ -103,7 +103,7 @@ manclean:	
+@@ -103,7 +103,7 @@
  	done
  
  tests:
@@ -20,7 +20,7 @@ $NetBSD: patch-aw,v 1.7 2007/03/23 22:08:58 dmcmahill Exp $
  	@echo "  to test the  distribution"
  
  distclean::
-@@ -184,7 +184,7 @@ BINDISTFILES = \
+@@ -184,7 +184,7 @@
  tarbindist:
  	touch .binary
  	@STRIP@ bin/scilex
@@ -29,34 +29,52 @@ $NetBSD: patch-aw,v 1.7 2007/03/23 22:08:58 dmcmahill Exp $
  	cd .. ; tar cvf $(SCIBASE)/$(SCIBASE)-bin.tar $(BINDISTFILES) @PVMINST@ 
  	$(RM) .binary
  
-@@ -263,14 +263,14 @@ DOCNAME=$(SCIBASE)
+@@ -263,44 +263,42 @@
  
  install:
  	@if test `pwd`/..  != $(PREFIX)/lib ; then \
 -		install -d $(PREFIX)/lib/$(SCIBASE); \
-+		$(BSD_INSTALL_LIB_DIR) $(PREFIX)/lib/$(SCIBASE); \
- 		( for file in $(INSTBINDISTFILES) @PVMINST1@; do tar cf - $${file}  | (cd $(PREFIX)/lib/$(SCIBASE); tar xf -); done); \
+-		( for file in $(INSTBINDISTFILES) @PVMINST1@; do tar cf - $${file}  | (cd $(PREFIX)/lib/$(SCIBASE); tar xf -); done); \
 -		(cd $(PREFIX)/lib/$(SCIBASE);touch .binary; make postinstall PREFIX=$(PREFIX) ) \
-+		(cd $(PREFIX)/lib/$(SCIBASE);touch .binary; $(MAKE) postinstall PREFIX=$(PREFIX) ) \
++		$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/lib/$(SCIBASE); \
++		( for file in $(INSTBINDISTFILES) @PVMINST1@; do tar cf - $${file}  | (cd $(DESTDIR)$(PREFIX)/lib/$(SCIBASE); tar xf -); done); \
++		(cd $(DESTDIR)$(PREFIX)/lib/$(SCIBASE);touch .binary; $(MAKE) postinstall PREFIX=$(PREFIX) ) \
  	fi
 -	install -d $(PREFIX)/share/doc/$(DOCNAME)/
 -	install ACKNOWLEDGEMENTS CHANGES README_Unix Version.incl \
 -		licence.txt license.txt  $(PREFIX)/share/doc/$(DOCNAME)
 -	install -d $(PREFIX)/bin 
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/doc/$(DOCNAME)/
+-	$(RM)  $(PREFIX)/bin/scilab
+-	ln -fs $(PREFIX)/lib/$(SCIBASE)/bin/scilab $(PREFIX)/bin/scilab
+-	$(RM)  $(PREFIX)/bin/intersci
+-	ln -fs $(PREFIX)/lib/$(SCIBASE)/bin/intersci $(PREFIX)/bin/intersci
+-	$(RM)  $(PREFIX)/bin/intersci-n
+-	ln -fs $(PREFIX)/lib/$(SCIBASE)/bin/intersci-n $(PREFIX)/bin/intersci-n
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/doc/$(DOCNAME)/
 +	for f in  ACKNOWLEDGEMENTS CHANGES README_Unix Version.incl licence.txt license.txt  ; do \
-+		$(BSD_INSTALL_DATA) $$f $(PREFIX)/share/doc/$(DOCNAME) ; done
-+	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin 
- 	$(RM)  $(PREFIX)/bin/scilab
- 	ln -fs $(PREFIX)/lib/$(SCIBASE)/bin/scilab $(PREFIX)/bin/scilab
- 	$(RM)  $(PREFIX)/bin/intersci
-@@ -287,13 +287,13 @@ DESTDIR=$(PREFIX)/lib
++		$(BSD_INSTALL_DATA) $$f $(DESTDIR)$(PREFIX)/share/doc/$(DOCNAME) ; done
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(PREFIX)/bin 
++	$(RM)  $(DESTDIR)$(PREFIX)/bin/scilab
++	ln -fs $(PREFIX)/lib/$(SCIBASE)/bin/scilab $(DESTDIR)$(PREFIX)/bin/scilab
++	$(RM)  $(DESTDIR)$(PREFIX)/bin/intersci
++	ln -fs $(PREFIX)/lib/$(SCIBASE)/bin/intersci $(DESTDIR)$(PREFIX)/bin/intersci
++	$(RM)  $(DESTDIR)$(PREFIX)/bin/intersci-n
++	ln -fs $(PREFIX)/lib/$(SCIBASE)/bin/intersci-n $(DESTDIR)$(PREFIX)/bin/intersci-n
+ 
+ # DESTDIR is the final destination of the file 
+ # it can be different from $(PREFIX)/lib
+ # when we use package builders for rpm or deb files 
+ 
+-DESTDIR=$(PREFIX)/lib
+-
  postinstall: 
- 	@echo "creating Path.incl SCIDIR=$(DESTDIR)/$(SCIBASE)"
- 	@echo "SCIDIR=$(DESTDIR)/$(SCIBASE)"  > Path.incl
+-	@echo "creating Path.incl SCIDIR=$(DESTDIR)/$(SCIBASE)"
+-	@echo "SCIDIR=$(DESTDIR)/$(SCIBASE)"  > Path.incl
 -	@cd scripts; make
 -	@cd examples ; make distclean > /dev/null
-+	@cd scripts; $(MAKE)
++	@echo "creating Path.incl SCIDIR=$(PREFIX)/lib/$(SCIBASE)"
++	@echo "SCIDIR=$(PREFIX)/lib/$(SCIBASE)"  > Path.incl
++	@cd scripts; $(MAKE) SCILIB=$(PREFIX)/lib
 +	@cd examples ; $(MAKE) distclean > /dev/null
  	@cp contrib/loader.sce contrib-loader.sce 
  	@$(RM) -f -r contrib 
@@ -67,3 +85,14 @@ $NetBSD: patch-aw,v 1.7 2007/03/23 22:08:58 dmcmahill Exp $
  	@@STRIP@ bin/scilex;
  
  uninstall:
+-	$(RM) -r $(PREFIX)/$(SCIBASE)
+-	$(RM) $(PREFIX)/bin/scilab
+-	$(RM) $(PREFIX)/bin/intersci
+-	$(RM) $(PREFIX)/bin/intersci-n
++	$(RM) -r $(DESTDIR)$(PREFIX)/$(SCIBASE)
++	$(RM) $(DESTDIR)$(PREFIX)/bin/scilab
++	$(RM) $(DESTDIR)$(PREFIX)/bin/intersci
++	$(RM) $(DESTDIR)$(PREFIX)/bin/intersci-n
+ 
+ cvsclean::
+ 	@$(RM) -f -r geci xless wless xmetanet routines/comm routines/libcomm

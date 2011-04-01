@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2010/07/30 10:36:31 asau Exp $
+# $NetBSD: Makefile,v 1.83 2011/04/01 23:50:50 asau Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -11,6 +11,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 SCIBASE=	scilab-4.1
@@ -109,20 +110,20 @@ pre-install:
 # delete some .orig files that got created by patching
 # also fix the libtool link
 post-install:
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/bin/scilink.orig
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/Makeso.incl.in.orig
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/macros/util/scipad.sci.orig
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/util/scidem.orig
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/util/scidoc.orig
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/libtool
-	${LN} -s ${LOCALBASE}/bin/libtool ${PREFIX}/lib/${SCIBASE}/libtool
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/bin/dold
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/*.subst.sav
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.guess
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.sub
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/bin/scilink.orig
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/config/Makeso.incl.in.orig
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/macros/util/scipad.sci.orig
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/util/scidem.orig
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/util/scidoc.orig
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/libtool
+	${LN} -s ${LOCALBASE}/bin/libtool ${DESTDIR}${PREFIX}/lib/${SCIBASE}/libtool
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/bin/dold
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/config/*.subst.sav
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/config/config.guess
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/config/config.sub
 
 .for __tmp__ in scilab.g scilab.g.in scilab-gtk.g scilab-gtk.g.in
-	${RM} -f ${PREFIX}/lib/${SCIBASE}/scripts/${__tmp__}
+	${RM} -f ${DESTDIR}${PREFIX}/lib/${SCIBASE}/scripts/${__tmp__}
 .endfor
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
