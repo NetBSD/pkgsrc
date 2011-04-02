@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.108 2011/03/01 11:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2011/04/02 16:20:37 taca Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
 CATEGORIES=		multimedia
-MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/} \
+			http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
-VLC_VERSION=		1.1.7
+VLC_VERSION=		1.1.8
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
@@ -80,7 +81,7 @@ INSTALLATION_DIRS+=	share/vlc/http/dialogs share/vlc/http/images \
 			share/vlc/osdmenu/dvd/volume \
 			share/vlc/osdmenu/dvd/unselect \
 			share/vlc/osdmenu/dvd/selection \
-			share/vlc/skins2 share/vlc/skins2/fonts \
+			share/vlc/skins2/fonts \
 			${PKGMANDIR}/man1
 pre-configure:
 	cd ${WRKSRC} && autoreconf -f
