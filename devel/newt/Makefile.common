@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2008/04/13 09:54:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/04/02 08:45:43 obache Exp $
 # used by devel/py-newt/Makefile
 
 DISTNAME=	newt-${VERSION}-5.src.rpm
@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.fedora.redhat.com/pub/fedora/linux/core/3/SRPMS/
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	riz@NetBSD.org
-HOMEPAGE=	# empty
+HOMEPAGE=	https://fedorahosted.org/newt/wiki
 
 BUILD_DEPENDS+=	rpm2pkg>=2.0:../../pkgtools/rpm2pkg
 
