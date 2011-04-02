@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.39 2011/02/12 10:53:02 tnn Exp $
+@comment $NetBSD: PLIST,v 1.40 2011/04/02 16:20:37 taca Exp $
 bin/cvlc
 bin/qvlc
 bin/rvlc
+${PLIST.skins}bin/svlc
 bin/vlc
 bin/vlc-wrapper
 include/vlc/deprecated.h
@@ -92,6 +93,7 @@ lib/vlc/plugins/access/libaccess_avio_plugin.la
 lib/vlc/plugins/access/libaccess_bd_plugin.la
 lib/vlc/plugins/access/libaccess_fake_plugin.la
 lib/vlc/plugins/access/libaccess_ftp_plugin.la
+${PLIST.gnome}lib/vlc/plugins/access/libaccess_gnomevfs_plugin.la
 lib/vlc/plugins/access/libaccess_http_plugin.la
 lib/vlc/plugins/access/libaccess_imem_plugin.la
 lib/vlc/plugins/access/libaccess_mmap_plugin.la
@@ -113,7 +115,6 @@ lib/vlc/plugins/audio_filter/liba52tofloat32_plugin.la
 lib/vlc/plugins/audio_filter/liba52tospdif_plugin.la
 lib/vlc/plugins/audio_filter/libaudio_format_plugin.la
 lib/vlc/plugins/audio_filter/libaudiobargraph_a_plugin.la
-lib/vlc/plugins/audio_filter/libbandlimited_resampler_plugin.la
 lib/vlc/plugins/audio_filter/libchorus_flanger_plugin.la
 lib/vlc/plugins/audio_filter/libconverter_fixed_plugin.la
 lib/vlc/plugins/audio_filter/libdolby_surround_decoder_plugin.la
@@ -164,6 +165,7 @@ lib/vlc/plugins/codec/libtelx_plugin.la
 lib/vlc/plugins/codec/libtheora_plugin.la
 lib/vlc/plugins/codec/libvorbis_plugin.la
 lib/vlc/plugins/codec/libx264_plugin.la
+${PLIST.dbus}lib/vlc/plugins/control/libdbus_plugin.la
 lib/vlc/plugins/control/libgestures_plugin.la
 lib/vlc/plugins/control/libglobalhotkeys_plugin.la
 lib/vlc/plugins/control/libhotkeys_plugin.la
@@ -212,6 +214,7 @@ lib/vlc/plugins/demux/libvoc_plugin.la
 lib/vlc/plugins/demux/libwav_plugin.la
 lib/vlc/plugins/demux/libxa_plugin.la
 lib/vlc/plugins/gui/libqt4_plugin.la
+${PLIST.skins}lib/vlc/plugins/gui/libskins2_plugin.la
 lib/vlc/plugins/meta_engine/libfolder_plugin.la
 lib/vlc/plugins/meta_engine/libtaglib_plugin.la
 lib/vlc/plugins/misc/libaudioscrobbler_plugin.la
@@ -219,9 +222,12 @@ lib/vlc/plugins/misc/libdummy_plugin.la
 lib/vlc/plugins/misc/libexport_plugin.la
 lib/vlc/plugins/misc/libfreetype_plugin.la
 lib/vlc/plugins/misc/libgnutls_plugin.la
+${PLIST.dbus}lib/vlc/plugins/misc/libinhibit_plugin.la
 lib/vlc/plugins/misc/liblogger_plugin.la
+${PLIST.dbus}lib/vlc/plugins/misc/libnotify_plugin.la
 lib/vlc/plugins/misc/libosd_parser_plugin.la
 lib/vlc/plugins/misc/libstats_plugin.la
+${PLIST.dbus}lib/vlc/plugins/misc/libtelepathy_plugin.la
 lib/vlc/plugins/misc/libvod_rtsp_plugin.la
 lib/vlc/plugins/misc/libxdg_screensaver_plugin.la
 lib/vlc/plugins/misc/libxml_plugin.la
@@ -366,6 +372,7 @@ share/locale/ast/LC_MESSAGES/vlc.mo
 share/locale/be/LC_MESSAGES/vlc.mo
 share/locale/bg/LC_MESSAGES/vlc.mo
 share/locale/bn/LC_MESSAGES/vlc.mo
+share/locale/br/LC_MESSAGES/vlc.mo
 share/locale/ca/LC_MESSAGES/vlc.mo
 share/locale/ckb/LC_MESSAGES/vlc.mo
 share/locale/co/LC_MESSAGES/vlc.mo
@@ -389,6 +396,7 @@ share/locale/hr/LC_MESSAGES/vlc.mo
 share/locale/hu/LC_MESSAGES/vlc.mo
 share/locale/hy/LC_MESSAGES/vlc.mo
 share/locale/id/LC_MESSAGES/vlc.mo
+share/locale/is/LC_MESSAGES/vlc.mo
 share/locale/it/LC_MESSAGES/vlc.mo
 share/locale/ja/LC_MESSAGES/vlc.mo
 share/locale/ka/LC_MESSAGES/vlc.mo
@@ -522,6 +530,12 @@ share/vlc/osdmenu/default/volume/volume_07.png
 share/vlc/osdmenu/default/volume/volume_08.png
 share/vlc/osdmenu/default/volume/volume_09.png
 share/vlc/osdmenu/default/volume/volume_10.png
+${PLIST.skins}share/vlc/skins2/default.vlt
+${PLIST.skins}share/vlc/skins2/fonts/FreeSans.ttf
+${PLIST.skins}share/vlc/skins2/fonts/FreeSansBold.ttf
+${PLIST.skins}share/vlc/skins2/skin.catalog
+${PLIST.skins}share/vlc/skins2/skin.dtd
+${PLIST.skins}share/vlc/skins2/winamp2.xml
 share/vlc/utils/audio-vlc-default.sh
 share/vlc/utils/gnome-vlc-default.sh
 share/vlc/utils/video-vlc-default.sh
