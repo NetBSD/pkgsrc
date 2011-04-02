@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.811 2011/04/01 21:17:06 markd Exp $
+$NetBSD: CHANGES-2011,v 1.812 2011/04/02 08:01:28 obache Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1375,3 +1375,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/varnish to 2.1.5 [zafer 2011-04-01]
 	Updated net/filezilla to 3.4.0 [zafer 2011-04-01]
 	Updated converters/bibtex2html to 1.96 [markd 2011-04-01]
+	Updated net/pure-ftpd to 1.0.30 [obache 2011-04-02]
