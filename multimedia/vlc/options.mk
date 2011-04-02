@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2011/01/24 18:54:04 drochner Exp $
+# $NetBSD: options.mk,v 1.20 2011/04/02 16:20:38 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl pulseaudio x11 gnome
@@ -46,6 +46,7 @@ CONFIGURE_ARGS+=	--disable-gnomevfs
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
 .include "../../sysutils/dbus/buildlink3.mk"
+PLIST.dbus=		yes
 CONFIGURE_ARGS+=	--enable-notify
 .include "../../sysutils/libnotify/buildlink3.mk"
 
@@ -87,6 +88,7 @@ CONFIGURE_ARGS+=	--enable-release
 .if !empty(PKG_OPTIONS:Mskins)
 CONFIGURE_ARGS+=	--enable-skins2
 PLIST.skins=		yes
+INSTALLATION_DIRS+=	share/vlc/skins2
 .else
 CONFIGURE_ARGS+=	--disable-skins2
 .endif
