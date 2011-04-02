@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2011/02/16 13:29:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/04/02 14:11:26 obache Exp $
 bin/e.py
 bin/e.pyw
-${PYSITELIB}/${PKGNAME}-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/${PKGNAME}-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/${PKGNAME}-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/${PKGNAME}-py2.6.egg-info/requires.txt
-${PYSITELIB}/${PKGNAME}-py2.6.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/etm/__init__.py
 ${PYSITELIB}/etm/__init__.pyc
 ${PYSITELIB}/etm/__init__.pyo
