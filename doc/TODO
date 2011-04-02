@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10224 2011/04/01 19:16:37 zafer Exp $
+$NetBSD: TODO,v 1.10225 2011/04/02 08:48:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -980,7 +980,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o netcdf-4.1.2
 	o netramet-50
 	o newmail-1.0.2
-	o newt-0.52.2 (ubuntu)
+	o newt-0.52.12
 	o ng-1.4.4
 	o nikto-2.0.1
 	o notification-daemon-0.7.0
