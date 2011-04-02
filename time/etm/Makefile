@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/02/16 13:29:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2011/04/02 14:11:26 obache Exp $
 #
 
 DISTNAME=	etm-702
@@ -13,18 +13,15 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
 
 USE_LANGUAGES=	# none
-
-PYDISTUTILSPKG=	yes
 
 # Delete an unnecessary file
 post-configure:
 	${RM} ${WRKSRC}/etm.egg-info/.SOURCES.txt~
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
