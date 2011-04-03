@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/22 16:23:57 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/03 22:48:56 zafer Exp $
 
 # This section contains variables that might be overridden.
 PKGNAME?=	${PKGNAME_BASE}
@@ -15,7 +15,8 @@ CONFLICTS+=	elvis-[0-9]*
 CONFLICTS+=	elvis-x11-[0-9]*
 
 MAINTAINER=	airhead@users.sourceforge.net
-HOMEPAGE=	http://elvis.the-little-red-haired-girl.org/
+HOMEPAGE=	http://elvis.vi-editor.org/
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
