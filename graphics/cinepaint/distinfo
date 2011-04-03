@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2009/12/22 15:42:20 drochner Exp $
+$NetBSD: distinfo,v 1.14 2011/04/03 13:47:01 wiz Exp $
 
 SHA1 (cinepaint-0.22-1.tar.gz) = 717580b9b8b1044d76f1f0e4330e1c8104e2a206
 RMD160 (cinepaint-0.22-1.tar.gz) = 1f8e06486ed5e74ad483abec305d4fcef0538572
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = c7467b3bfef017e140d8d743ecea34b25418d9d7
 SHA1 (patch-af) = 6232ac8b44bb3d112f12c6354d25e35a88dbf6a0
 SHA1 (patch-ag) = 0ee39b21c552311dcaa63d801c6f2dc9c858270b
 SHA1 (patch-ah) = 3415f2b6f775a7b66b9d443cab94757b3b378928
+SHA1 (patch-plug-ins_png_png.c) = 5f7e553bbdbca42f998b70993bc79c2ef94dc03e
