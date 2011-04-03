@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2011/03/04 13:03:47 tsutsui Exp $
+$NetBSD: distinfo,v 1.65 2011/04/03 09:56:39 shattered Exp $
 
 SHA1 (qemu-0.13.0.tar.gz) = 250bba1fdb505a787c48331b6b02f54282edfc76
 RMD160 (qemu-0.13.0.tar.gz) = 4a6faaf38d5616fb7bedc1a6408de1dbb3ec360c
@@ -6,6 +6,7 @@ Size (qemu-0.13.0.tar.gz) = 5184531 bytes
 SHA1 (patch-aa) = bc2f9ea4bd468b1c8bd5623b21ea7631fe5466c3
 SHA1 (patch-ao) = e515093b6ea99f9cba665de022fd62f3be911569
 SHA1 (patch-ba) = 217eb00a0cabd460981026a275d18b6c02914a1c
+SHA1 (patch-bb) = 5d3d034a9ac0f7f35cd5dc9a8f5814f5cb3e42dc
 SHA1 (patch-dd) = bd8016bdeab043f2b2c12728b11e8b54e75dcce9
 SHA1 (patch-de) = 225eaa996fccc02b17be0099d943c75302600ada
 SHA1 (patch-ed) = c30e147005e41fbf6d08457634d94cd90545cbb5
