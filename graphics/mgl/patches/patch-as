@@ -1,7 +1,7 @@
-$NetBSD: patch-as,v 1.1 2003/10/14 16:22:21 salo Exp $
+$NetBSD: patch-as,v 1.2 2011/04/03 11:40:08 wiz Exp $
 
---- mil/mil.c.orig	2000-09-09 05:40:44.000000000 +0200
-+++ mil/mil.c	2003-10-14 18:01:34.000000000 +0200
+--- mil/mil.c.orig	2000-09-09 03:40:44.000000000 +0000
++++ mil/mil.c
 @@ -28,23 +28,23 @@
   */
  
@@ -43,3 +43,137 @@ $NetBSD: patch-as,v 1.1 2003/10/14 16:22:21 salo Exp $
  ";
  
  #include <stdio.h>
+@@ -1045,7 +1045,7 @@ int read_png_file(char *f, int *w, int *
+     }
+ 
+     /* error handling */
+-    if(setjmp(png_ptr->jmpbuf)){
++    if(setjmp(png_jmpbuf(png_ptr))){
+         png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
+         fclose(fp);
+         return -1;
+@@ -1061,29 +1061,29 @@ int read_png_file(char *f, int *w, int *
+     png_read_info(png_ptr, info_ptr);
+ 
+     /* 1, 2, 4bit -> 8bit */
+-    if(info_ptr->bit_depth < 8){
++    if(png_get_bit_depth(png_ptr, info_ptr) < 8){
+         png_set_packing(png_ptr);
+     }
+ 
+     /* 8bit with colormap -> 24bit */
+-    if(info_ptr->color_type == PNG_COLOR_TYPE_PALETTE &&
+-       info_ptr->bit_depth <= 8){
++    if(png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_PALETTE &&
++       png_get_bit_depth(png_ptr, info_ptr) <= 8){
+         /* png_set_palette_to_rgb(png_ptr); */
+         png_set_expand(png_ptr);
+     }
+ 
+ #if 0
+     /* gray -> 8bit */
+-    if(info_ptr->color_type == PNG_COLOR_TYPE_GRAY &&
+-       info_ptr->bit_depth < 8){
++    if(png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY &&
++       png_get_bit_depth(png_ptr, info_ptr) < 8){
+         /* png_set_gray_1_2_4_to_8(png_ptr); */
+         png_set_expand(png_ptr);
+     }
+ #endif
+ 
+     /* gray -> 24bit */
+-    if(info_ptr->color_type == PNG_COLOR_TYPE_GRAY ||
+-       info_ptr->color_type == PNG_COLOR_TYPE_GRAY_ALPHA){
++    if(png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY ||
++       png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_GRAY_ALPHA){
+           png_set_gray_to_rgb(png_ptr);
+     }
+ 
+@@ -1095,36 +1095,36 @@ int read_png_file(char *f, int *w, int *
+     }
+ 
+     /* Cut alpha channel */
+-    if(info_ptr->color_type & PNG_COLOR_MASK_ALPHA){
++    if(png_get_color_type(png_ptr, info_ptr) & PNG_COLOR_MASK_ALPHA){
+         /* png_set_invert_alpha(png_ptr); */
+         png_set_strip_alpha(png_ptr);
+     }
+ #endif
+ 
+     /* 16bit -> 8bit/color */
+-    if(info_ptr->bit_depth == 16){
++    if(png_get_bit_depth(png_ptr, info_ptr) == 16){
+         png_set_strip_16(png_ptr);
+     }
+ 
+     /* RGB -> RGBA */
+ #if 0
+-    if((info_ptr->color_type == PNG_COLOR_TYPE_PALETTE ||
+-       info_ptr->color_type == PNG_COLOR_TYPE_RGB) &&
+-       info_ptr->bit_depth <= 8){
++    if((png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_PALETTE ||
++       png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB) &&
++       png_get_bit_depth(png_ptr, info_ptr) <= 8){
+         png_set_filler(png_ptr, 0xff, PNG_FILLER_AFTER);
+     }
+ #endif
+-    if(info_ptr->pixel_depth != 32){
++    if(png_get_color_type(png_ptr, info_ptr) == PNG_COLOR_TYPE_RGB) {
+         png_set_filler(png_ptr, 0xff, PNG_FILLER_AFTER);
+     }
+ 
+     /* Update info structure */
+     png_read_update_info(png_ptr, info_ptr);
+ 
+-    *w  =  (int)info_ptr->width;
+-    *h  = (int)info_ptr->height;
++    *w  =  (int)png_get_image_width(png_ptr, info_ptr);
++    *h  = (int)png_get_image_height(png_ptr, info_ptr);
+ 
+-    png_image = (png_bytep)malloc(info_ptr->rowbytes * info_ptr->height);
++    png_image = (png_bytep)malloc(png_get_rowbytes(png_ptr, info_ptr) * png_get_image_height(png_ptr, info_ptr));
+     if(!png_image){
+         png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
+         fclose(fp);
+@@ -1132,15 +1132,15 @@ int read_png_file(char *f, int *w, int *
+     }
+ 
+     /* File Read */
+-    row_pointers = (png_bytep *)malloc(info_ptr->height * sizeof(png_bytep *));
++    row_pointers = (png_bytep *)malloc(png_get_image_height(png_ptr, info_ptr) * sizeof(png_bytep *));
+     if(!row_pointers){
+         png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
+         free(png_image);
+         fclose(fp);
+         return -1;
+     }
+-    for(i = 0; i < info_ptr->height; ++i){
+-        row_pointers[i] = png_image + i * info_ptr->rowbytes;
++    for(i = 0; i < png_get_image_height(png_ptr, info_ptr); ++i){
++        row_pointers[i] = png_image + i * png_get_rowbytes(png_ptr, info_ptr);
+     }
+ 
+     png_read_image(png_ptr, row_pointers);
+@@ -1149,16 +1149,16 @@ int read_png_file(char *f, int *w, int *
+     png_read_end(png_ptr, end_info);
+ 
+ #if 0
+-printf("width            [%d]\n", info_ptr->width);
+-printf("height           [%d]\n", info_ptr->height);
+-printf("rowbytes         [%d]\n", info_ptr->rowbytes);
+-printf("bit_depth        [%d]\n", info_ptr->bit_depth);
++printf("width            [%d]\n", png_get_image_width(png_ptr, info_ptr));
++printf("height           [%d]\n", png_get_image_height(png_ptr, info_ptr));
++printf("rowbytes         [%d]\n", png_get_rowbytes(png_ptr, info_ptr));
++printf("bit_depth        [%d]\n", png_get_bit_depth(png_ptr, info_ptr));
+ printf("num_palette      [%d]\n", info_ptr->num_palette);
+-printf("color_type       [%d]\n", info_ptr->color_type);
++printf("color_type       [%d]\n", png_get_color_type(png_ptr, info_ptr));
+ printf("compression_type [%d]\n", info_ptr->compression_type);
+ printf("filter_type      [%d]\n", info_ptr->filter_type);
+ printf("interlace_type   [%d]\n", info_ptr->interlace_type);
+-printf("pixel_depth      [%d]\n", info_ptr->pixel_depth);
++printf("pixel_depth      [%d]\n", png_get_pixel_depth(png_ptr, info_ptr));
+ #endif
+ 
+     /* File Close */
