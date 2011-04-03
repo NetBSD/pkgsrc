@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2007/12/05 13:38:27 obache Exp $
+$NetBSD: distinfo,v 1.8 2011/04/03 11:40:07 wiz Exp $
 
 SHA1 (mgl2-alpha-020.tar.gz) = aa6be2be28749ba9952afbb359ca0525cad3717f
 RMD160 (mgl2-alpha-020.tar.gz) = 4c1b6772d9b9adc96279b016fb574defb78f1fe7
 Size (mgl2-alpha-020.tar.gz) = 341420 bytes
 SHA1 (patch-aa) = 65104bb4030f3bd393f08d6b81382dc87913f5c7
-SHA1 (patch-ab) = 57bb2b1879c5a8ee9f0022ccd74fc8ec2daeef8f
-SHA1 (patch-ac) = b928439dcf815ffab8ec9bb15782ff34ad18006f
+SHA1 (patch-ab) = d9ac9acb108f3f1254a24a90b5ceb7efe4e44e7b
+SHA1 (patch-ac) = e4179c5e6a000fbf24ab515769ab71849f0ec7fd
 SHA1 (patch-ad) = 8d333d48b897758754d781339a85b78edfd44541
 SHA1 (patch-ae) = e631dbe4341056cbc67f0a0054952746a087c5c1
 SHA1 (patch-af) = 9265534267b9aa67a9e5db520de0bfc12a601671
@@ -21,7 +21,7 @@ SHA1 (patch-ao) = a8baeadfb048e397409d027ac5c53b49e4cbd6b9
 SHA1 (patch-ap) = f77dbbd3ae25e17e34d2a81155fdefa8765429a2
 SHA1 (patch-aq) = ecdf40c1bc906da2bd738e9145719d0a2fc146ff
 SHA1 (patch-ar) = 680c2f40e37f8f71d305c8f46460a1fbdc0f0242
-SHA1 (patch-as) = fceb87ac6fb9644bd7a640dcc81cf29ca0f824e5
+SHA1 (patch-as) = dddbd356858f0af34f3995cb4519e347772f5ed5
 SHA1 (patch-at) = 263b09454b9900d383e3447bc5b3da2e37b495cf
 SHA1 (patch-au) = 8450ac4c190d08430583b36c5b8b767601a5aab3
 SHA1 (patch-av) = a8ad4b5e4043bfdf8a77ba1f8017fca697f02cab
