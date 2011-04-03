@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/01/13 13:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/03 10:36:04 wiz Exp $
 #
 
 DISTNAME=		eboard-1.0.4
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://eboard.sourceforge.net/
 COMMENT=		Graphical user interface for playing chess
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
