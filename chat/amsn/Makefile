@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/01/13 13:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/04/03 15:26:26 wiz Exp $
 #
 
 DISTNAME=		amsn-0.98.3
@@ -10,6 +10,7 @@ DISTFILES=		${DISTNAME}-src.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.amsn-project.net/
 COMMENT=		Alvaro's MSN messenger client
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
