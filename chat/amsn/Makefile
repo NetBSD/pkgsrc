@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2011/04/03 15:26:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/04/03 22:10:35 zafer Exp $
 #
 
 DISTNAME=		amsn-0.98.3
-PKGREVISION=		3
+PKGREVISION=	3
 CATEGORIES=		chat
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amsn/}
 DISTFILES=		${DISTNAME}-src.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.amsn-project.net/
-COMMENT=		Alvaro's MSN messenger client
+COMMENT=		Alvaro\'s MSN messenger client
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
