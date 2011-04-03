@@ -1,13 +1,14 @@
-$NetBSD: patch-af,v 1.4 2005/11/14 10:43:14 markd Exp $
+$NetBSD: patch-af,v 1.5 2011/04/03 01:33:51 markd Exp $
 
 --- include/unixconf.h.orig	2003-12-08 12:39:13.000000000 +1300
 +++ include/unixconf.h
-@@ -19,20 +19,20 @@
+@@ -19,20 +19,21 @@
   */
  
  /* define exactly one of the following four choices */
 -/* #define BSD 1 */	/* define for 4.n/Free/Open/Net BSD  */
-+#define BSD 1		/* define for 4.n/Free/Open/Net BSD  */
++#define __NETHACK_OS__ 1
++/* #define BSD */	/* define for 4.n/Free/Open/Net BSD  */
  			/* also for relatives like SunOS 4.x, DG/UX, and */
  			/* older versions of Linux */
  /* #define ULTRIX */	/* define for Ultrix v3.0 or higher (but not lower) */
@@ -26,7 +27,7 @@ $NetBSD: patch-af,v 1.4 2005/11/14 10:43:14 markd Exp $
  			/* including Solaris 2+ */
  #define NETWORK		/* if running on a networked system */
  			/* e.g. Suns sharing a playground through NFS */
-@@ -47,7 +47,7 @@
+@@ -47,7 +48,7 @@
  			 * job control (note that AIX is SYSV otherwise)
  			 * Also define this for AIX 3.2 */
  
@@ -35,7 +36,7 @@ $NetBSD: patch-af,v 1.4 2005/11/14 10:43:14 markd Exp $
  			/* Should be defined for most SYSV, SVR4 (including
  			 * Solaris 2+), HPUX, and Linux systems.  In
  			 * particular, it should NOT be defined for the UNIXPC
-@@ -168,6 +168,9 @@
+@@ -168,6 +169,9 @@
  
  #ifdef	MAIL
  # if defined(BSD) || defined(ULTRIX)
@@ -45,7 +46,7 @@ $NetBSD: patch-af,v 1.4 2005/11/14 10:43:14 markd Exp $
  #  ifdef AMS
  #define AMS_MAILBOX	"/Mailbox"
  #  else
-@@ -177,6 +180,7 @@
+@@ -177,6 +181,7 @@
  #define DEF_MAILREADER	"/usr/ucb/Mail"
  #   endif
  #  endif
@@ -53,7 +54,7 @@ $NetBSD: patch-af,v 1.4 2005/11/14 10:43:14 markd Exp $
  #else
  # if (defined(SYSV) || defined(DGUX) || defined(HPUX)) && !defined(LINUX)
  #  if defined(M_XENIX)
-@@ -284,7 +288,7 @@
+@@ -284,7 +289,7 @@
  #endif
  
  #if defined(BSD) || defined(ULTRIX)
