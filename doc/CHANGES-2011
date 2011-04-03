@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.814 2011/04/03 10:35:50 taca Exp $
+$NetBSD: CHANGES-2011,v 1.815 2011/04/03 14:02:19 chs Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1378,3 +1378,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/pure-ftpd to 1.0.30 [obache 2011-04-02]
 	Updated multimedia/vlc to 1.1.8 [taca 2011-04-02]
 	Updated www/contao29-translations to 20110328 [taca 2011-04-03]
+	Updated emulators/suse113_openssl to 11.3nb3 [chs 2011-04-03]
