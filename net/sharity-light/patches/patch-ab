@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/12/18 20:14:03 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2011/04/03 09:18:45 obache Exp $
 
 --- nfs/syscalls.c.orig	1998-06-30 12:24:56.000000000 +0000
 +++ nfs/syscalls.c
@@ -34,3 +34,12 @@ $NetBSD: patch-ab,v 1.4 2005/12/18 20:14:03 joerg Exp $
  #	ifdef _NEW_VFSCONF
  #		define GETVFSBYNAME	error = getvfsbyname("nfs", &vfc)
  #		define VFCERROR		error
+@@ -113,6 +120,8 @@ struct nfs_args		nfs_args;
+ 	if (VFCERROR)
+ 		return -1;
+ 	return mount(VFCNFSNAME, dir, 0, &nfs_args);
++#elif defined(__NetBSD__) && __NetBSD_Version__ >=499002400
++	return mount(NFSNAME, dir, 0, &nfs_args, sizeof(nfs_args));
+ #else	/* __FreeBSD__ */
+ 	return mount(NFSNAME, dir, 0, &nfs_args);
+ #endif	/* __FreeBSD__ */
