@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/04/01 16:04:11 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2011/04/03 10:08:42 drochner Exp $
 #
 
 DISTNAME=	brasero-2.32.1
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # gnome-common provides m4 files we need
 #
 BUILD_DEPENDS+=         gnome-common>=2.26.0:../../devel/gnome-common
+BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
