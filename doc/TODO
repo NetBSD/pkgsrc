@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10227 2011/04/03 13:31:42 wiz Exp $
+$NetBSD: TODO,v 1.10228 2011/04/03 22:31:37 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1489,7 +1489,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope211-2.11.8
 	o zope213-2.13.5
 	o zope34-3.4.1
-	o zope*-Silva-2.3
 	o zopeedit-0.8
 	o zsh-current-4.3.11 [pkg/44460]
 
