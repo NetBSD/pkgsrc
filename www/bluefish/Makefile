@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2011/03/11 18:03:21 drochner Exp $
+# $NetBSD: Makefile,v 1.89 2011/04/03 10:07:07 drochner Exp $
 
 DISTNAME=	bluefish-2.0.3
 CATEGORIES=	www
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--with-gnome2_4-mime=${PREFIX:Q}/share/mime-info
 CONFIGURE_ARGS+=	--with-gnome2_4-appreg=${PREFIX:Q}/share/application-registry
 CONFIGURE_ENV+=		EXTERNAL_GREP=${TOOLS_GREP:Q}
 CONFIGURE_ENV+=		EXTERNAL_FIND=${TOOLS_FIND:Q}
+
+CHECK_WRKREF_SKIP+=	lib/bluefish/about.so
 
 # XXX this doesn't work
 #XML_CATALOGS=	${PREFIX}/share/xml/bluefish/catalog.xml
