@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/04/01 19:25:21 zafer Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/04/03 11:47:34 abs Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -43,6 +43,8 @@ share/filezilla/resources/16x16/synchronize.png
 share/filezilla/resources/16x16/unknown.png
 share/filezilla/resources/16x16/upload.png
 share/filezilla/resources/16x16/uploadadd.png
+share/filezilla/resources/20x20/unknown.png
+share/filezilla/resources/24x24/unknown.png
 share/filezilla/resources/32x32/file.png
 share/filezilla/resources/32x32/filezilla.png
 share/filezilla/resources/48x48/filezilla.png
@@ -335,6 +337,8 @@ share/filezilla/resources/opencrystal/16x16/speedlimits.png
 share/filezilla/resources/opencrystal/16x16/synchronize.png
 share/filezilla/resources/opencrystal/16x16/upload.png
 share/filezilla/resources/opencrystal/16x16/uploadadd.png
+share/filezilla/resources/opencrystal/20x20/server.png
+share/filezilla/resources/opencrystal/24x24/server.png
 share/filezilla/resources/opencrystal/32x32/ascii.png
 share/filezilla/resources/opencrystal/32x32/auto.png
 share/filezilla/resources/opencrystal/32x32/binary.png
@@ -424,6 +428,7 @@ share/locale/gl_ES/LC_MESSAGES/filezilla.mo
 share/locale/he_IL/LC_MESSAGES/filezilla.mo
 share/locale/hr/LC_MESSAGES/filezilla.mo
 share/locale/hu_HU/LC_MESSAGES/filezilla.mo
+share/locale/hy/LC_MESSAGES/filezilla.mo
 share/locale/id_ID/LC_MESSAGES/filezilla.mo
 share/locale/is/LC_MESSAGES/filezilla.mo
 share/locale/it/LC_MESSAGES/filezilla.mo
@@ -447,6 +452,7 @@ share/locale/ro_RO/LC_MESSAGES/filezilla.mo
 share/locale/ru/LC_MESSAGES/filezilla.mo
 share/locale/sk_SK/LC_MESSAGES/filezilla.mo
 share/locale/sl_SI/LC_MESSAGES/filezilla.mo
+share/locale/sr/LC_MESSAGES/filezilla.mo
 share/locale/sv/LC_MESSAGES/filezilla.mo
 share/locale/th_TH/LC_MESSAGES/filezilla.mo
 share/locale/tr/LC_MESSAGES/filezilla.mo
