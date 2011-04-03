@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/12 16:19:07 jmcneill Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/03 09:01:46 obache Exp $
 #
 
 DISTNAME=	Sharity-Light.1.2
@@ -9,8 +9,11 @@ MASTER_SITES=	http://www.obdev.at/ftp/pub/Products/Sharity-Light/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.obdev.at/products/sharity-light/
 COMMENT=	Userland smbfs -- SMB to NFS protocol converter
+LICENSE=	gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	Interix-*-* # SMB is all native
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # avoid picking up a bad value from a users environment
 MAKE_ENV+=	"ARCH=	"
@@ -26,11 +29,11 @@ post-build:
 	cd ${WRKDIR}/unshlight && ${MAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/shlight ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKDIR}/unshlight/unshlight ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sharity-light
+	${INSTALL_PROGRAM} ${WRKSRC}/shlight ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKDIR}/unshlight/unshlight ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/sharity-light
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/FAQ.txt \
-		${PREFIX}/share/doc/sharity-light/
-	${INSTALL_MAN} ${WRKSRC}/smbmount.8 ${PREFIX}/${PKGMANDIR}/man8/shlight.8
+		${DESTDIR}${PREFIX}/share/doc/sharity-light/
+	${INSTALL_MAN} ${WRKSRC}/smbmount.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/shlight.8
 
 .include "../../mk/bsd.pkg.mk"
