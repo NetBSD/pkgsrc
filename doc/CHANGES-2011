@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.819 2011/04/04 08:30:29 manu Exp $
+$NetBSD: CHANGES-2011,v 1.820 2011/04/04 08:45:43 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1381,3 +1381,4 @@ Changes to the packages collection and infrastructure in 2011:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2011Q1 branch [wiz 2011-04-03]
 	Added textproc/p5-XML-Entities-1.0000 [manu 2011-04-04]
 	Updated security/lasso to 2.3.5 [manu 2011-04-04]
+	Updated www/ap2-auth-mellon to 0.3.0 [manu 2011-04-04]
