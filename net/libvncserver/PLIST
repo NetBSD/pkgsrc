@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/04/04 09:13:44 obache Exp $
 bin/libvncserver-config
 include/rfb/keysym.h
 include/rfb/rfb.h
@@ -9,3 +9,5 @@ include/rfb/rfbproto.h
 include/rfb/rfbregion.h
 lib/libvncclient.la
 lib/libvncserver.la
+lib/pkgconfig/libvncclient.pc
+lib/pkgconfig/libvncserver.pc
