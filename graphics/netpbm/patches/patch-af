@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.15 2011/01/15 18:37:46 tron Exp $
+$NetBSD: patch-af,v 1.16 2011/04/04 09:17:24 adam Exp $
 
 Fix build with png-1.5.
 
@@ -232,7 +232,7 @@ Fix build with png-1.5.
      else
          pm_message("bKGD chunk: not present");
  
--    if (info_ptr->valid & PNG_INFO_PLTE)
+-    if (info_ptr->valid & PNG_INFO_hIST)
 +    if (png_get_hIST(png_ptr, info_ptr, &hist) & PNG_INFO_hIST)
          pm_message("hIST chunk: present");
      else

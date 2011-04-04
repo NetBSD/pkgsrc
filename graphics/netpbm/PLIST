@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/07/14 02:39:17 dholland Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/04/04 09:17:24 adam Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -381,7 +381,6 @@ man/man1/mgrtopbm.1
 man/man1/mrftopbm.1
 man/man1/mtvtoppm.1
 man/man1/neotoppm.1
-man/man1/netpbm.1
 man/man1/palmtopnm.1
 man/man1/pamaddnoise.1
 man/man1/pamarith.1
@@ -652,17 +651,6 @@ man/man5/pbm.5
 man/man5/pgm.5
 man/man5/pnm.5
 man/man5/ppm.5
-share/doc/netpbm/COPYRIGHT.PATENT
-share/doc/netpbm/GPL_LICENSE.txt
-share/doc/netpbm/HISTORY
-share/doc/netpbm/INSTALL
-share/doc/netpbm/Netpbm.programming
-share/doc/netpbm/README.CYGWIN
-share/doc/netpbm/README.DJGPP
-share/doc/netpbm/USERDOC
-share/doc/netpbm/copyright_summary
-share/doc/netpbm/lgpl_v21.txt
-share/doc/netpbm/netpbm.html
 share/netpbm/palmcolor8.map
 share/netpbm/palmgray1.map
 share/netpbm/palmgray2.map
