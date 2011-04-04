@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.7 2008/02/08 10:34:19 tnn Exp $
+# $NetBSD: hacks.mk,v 1.8 2011/04/04 09:17:24 adam Exp $
 
 .if !defined(NETPBM_HACKS_MK)
 NETPBM_HACKS_MK=	# defined
@@ -40,7 +40,7 @@ post-wrapper:
 ###
 .if ${OPSYS} == "Darwin" && !empty(PKGSRC_COMPILER:Mgcc)
 _BAD_GCC_BUILD!=	${CC} --version | (${GREP} -c '^powerpc-apple-darwin8-gcc-4\.0\.0.*build\ 4061' || ${TRUE})
-. if ${_BAD_GCC_BUILD} == "1"
+.  if ${_BAD_GCC_BUILD} == "1"
 PKG_HACKS+=		apple-gcc-4-bug
 BUILDLINK_TRANSFORM+=	rm:-finline-floor # unknown option to gcc-3.3
 BUILDLINK_TRANSFORM+=	rm:-mpowerpc64 # prevent internal compiler error
@@ -48,7 +48,7 @@ BUILDLINK_TRANSFORM+=	rm:-mpowerpc64 # prevent internal compiler error
 post-wrapper:
 		${SED} -e s,/gcc,/gcc-3.3, ${WRKDIR}/.gcc/bin/gcc > ${WRKDIR}/.gcc/bin/gcc-3.3 && ${MV} -f ${WRKDIR}/.gcc/bin/gcc-3.3 ${WRKDIR}/.gcc/bin/gcc && ${CHMOD} a+rx ${WRKDIR}/.gcc/bin/gcc
 # use gcc-3.3 instead of gcc-4.0.0
-. endif
+.  endif
 .endif
 
 .endif
