@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2011/04/04 11:00:39 drochner Exp $
+
+--- ldapvi.c.orig	2007-05-05 10:17:26.000000000 +0000
++++ ldapvi.c
+@@ -470,7 +470,7 @@ change_mechanism(bind_options *bo)
+ 		bo->authmethod = LDAP_AUTH_SASL;
+ 		puts("Switching to SASL authentication.");
+ 	}
+-	bo->sasl_mech = getline("SASL mechanism", bo->sasl_mech);
++	bo->sasl_mech = lv_getline("SASL mechanism", bo->sasl_mech);
+ }
+ 
+ static int
