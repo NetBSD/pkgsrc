@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.827 2011/04/04 12:09:21 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.828 2011/04/04 12:09:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1391,3 +1391,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-pkg-config to 1.1.0 [obache 2011-04-04]
 	Updated x11/xplanet to 1.2.2 [adam 2011-04-04]
 	Updated emulators/mame to 0.142 [wiz 2011-04-04]
+	Updated emulators/mess to 0.142 [wiz 2011-04-04]
