@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.825 2011/04/04 09:40:36 adam Exp $
+$NetBSD: CHANGES-2011,v 1.826 2011/04/04 11:42:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1389,3 +1389,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ap2-perl to 2.0.5 [adam 2011-04-04]
 	Updated www/p5-Apache-Reload to 0.11 [adam 2011-04-04]
 	Updated devel/ruby-pkg-config to 1.1.0 [obache 2011-04-04]
+	Updated x11/xplanet to 1.2.2 [adam 2011-04-04]
