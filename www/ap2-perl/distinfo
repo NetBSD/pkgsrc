@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2009/06/15 17:38:21 he Exp $
+$NetBSD: distinfo,v 1.14 2011/04/04 09:24:14 adam Exp $
 
-SHA1 (mod_perl-2.0.4.tar.gz) = 65299a16ec414a690a48a2bbe63acaa3c6bb897b
-RMD160 (mod_perl-2.0.4.tar.gz) = 111b8f33e2dcc43ef7a0a7d557ceb467f0c55c6d
-Size (mod_perl-2.0.4.tar.gz) = 3727717 bytes
-SHA1 (patch-aa) = 1aba55afc0adfc3a1fe7a694099e09584d2979b0
+SHA1 (mod_perl-2.0.5.tar.gz) = e749e2d7236273217f33cbe7fcd704a662e532d1
+RMD160 (mod_perl-2.0.5.tar.gz) = d659db1c64200ed9c8863c6e283360dfdd0c8384
+Size (mod_perl-2.0.5.tar.gz) = 3778910 bytes
