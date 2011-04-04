@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.sdl,v 1.1 2011/04/04 13:42:08 wiz Exp $
+share/vice/C128/sdl_sym.vkm
+share/vice/C64/sdl_sym.vkm
+share/vice/C64/sdl_sym_da.vkm
+share/vice/C64/sdl_sym_de.vkm
+share/vice/C64/sdl_sym_fi.vkm
+share/vice/C64/sdl_sym_no.vkm
+share/vice/C64DTV/sdl_sym.vkm
+share/vice/C64DTV/sdl_sym_da.vkm
+share/vice/C64DTV/sdl_sym_de.vkm
+share/vice/C64DTV/sdl_sym_fi.vkm
+share/vice/C64DTV/sdl_sym_no.vkm
+share/vice/CBM-II/sdl_buks.vkm
+share/vice/PET/sdl_bgrs.vkm
+share/vice/PET/sdl_buks.vkm
+share/vice/PLUS4/sdl_sym.vkm
+share/vice/VIC20/sdl_pos_fi.vkm
+share/vice/VIC20/sdl_sym.vkm
