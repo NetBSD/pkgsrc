@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/12/23 11:44:53 dsainty Exp $
+# $NetBSD: Makefile,v 1.11 2011/04/04 09:13:44 obache Exp $
 #
 
-DISTNAME=		LibVNCServer-0.9.7
-PKGNAME=		libVNCServer-0.9.7
-PKGREVISION=		3
+DISTNAME=		LibVNCServer-0.9.8
+PKGNAME=		libVNCServer-0.9.8
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvncserver/}
 
@@ -17,14 +16,20 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+PKGCONFIG_OVERRIDE+=	libvncserver.pc.in
+PKGCONFIG_OVERRIDE+=	libvncclient.pc.in
+
 CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--without-sdl
+CONFIGURE_ARGS+=	--without-sdl-config
+CONFIGURE_ARGS+=	--without-x11vnc
 
 PTHREAD_AUTO_VARS=	yes
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread||g'
+
+.include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
