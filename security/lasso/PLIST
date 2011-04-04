@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/03/24 03:04:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/04/04 08:30:30 manu Exp $
 lib/pkgconfig/lasso.pc
 lib/liblasso.la
 include/lasso/xml/saml-2.0/saml2_action.h
@@ -25,6 +25,8 @@ include/lasso/xml/saml-2.0/saml2_subject_confirmation_data.h
 include/lasso/xml/saml-2.0/saml2_subject_confirmation.h
 include/lasso/xml/saml-2.0/saml2_subject.h
 include/lasso/xml/saml-2.0/saml2_subject_locality.h
+include/lasso/xml/saml-2.0/saml2_strings.h
+include/lasso/xml/saml-2.0/saml2_xsd.h
 include/lasso/xml/saml-2.0/samlp2_artifact_resolve.h
 include/lasso/xml/saml-2.0/samlp2_artifact_response.h
 include/lasso/xml/saml-2.0/samlp2_assertion_id_request.h
@@ -59,7 +61,6 @@ include/lasso/xml/soap-1.1/soap_envelope.h
 include/lasso/xml/soap-1.1/soap_header.h
 include/lasso/xml/soap-1.1/xml_soap11.h
 include/lasso/xml/strings.h
-include/lasso/xml/idwsf_strings.h
 include/lasso/xml/xml.h
 include/lasso/xml/ds_key_info.h
 include/lasso/xml/ds_key_value.h
@@ -129,9 +130,12 @@ include/lasso/saml-2.0/profile.h
 include/lasso/saml-2.0/name_id_management.h
 include/lasso/saml-2.0/provider.h
 include/lasso/saml-2.0/saml2_helper.h
+include/lasso/backward_comp.h
+include/lasso/ctypes.h
 include/lasso/export.h
 include/lasso/lasso.h
 include/lasso/lasso_config.h
+include/lasso/logging.h
 include/lasso/errors.h
 include/lasso/registry.h
 include/lasso/debug.h
@@ -160,13 +164,19 @@ share/gtk-doc/html/lasso/idwsf.html
 share/gtk-doc/html/lasso/idwsf2.html
 share/gtk-doc/html/lasso/index.html
 share/gtk-doc/html/lasso/index.sgml
-share/gtk-doc/html/lasso/lasso-Addon-to-SAML-2.0-profile-for-ID-WSF-2.0-bootsraping.html
 share/gtk-doc/html/lasso/lasso-Base-Strings.html
 share/gtk-doc/html/lasso/lasso-Error-Codes.html
-share/gtk-doc/html/lasso/lasso-ID-WSF-1.0-Strings.html
 share/gtk-doc/html/lasso/lasso-Initialization-functions.html
 share/gtk-doc/html/lasso/lasso-LassoAssertionQuery.html
 share/gtk-doc/html/lasso/lasso.html
+share/gtk-doc/html/lasso/lasso-Addon-to-SAML-20-profile-for-ID-WSF-20-bootsraping.html
+share/gtk-doc/html/lasso/lasso-ID-WSF-10-Strings.html
+share/gtk-doc/html/lasso/lasso-SAML-20-Strings.html
+share/gtk-doc/html/lasso/lasso-SOAP-Binding-utility-function-for-ID-WSF-20.html
+share/gtk-doc/html/lasso/lasso-Strings-for-ID-FF-12.html
+share/gtk-doc/html/lasso/lasso-Strings-for-ID-WSF-20.html
+share/gtk-doc/html/lasso/lasso-Utility-functions-for-ID-WSF-10.html
+share/gtk-doc/html/lasso/lasso-Utility-functions-for-SAML-20.html
 share/gtk-doc/html/lasso/lasso-LassoAuthentication.html
 share/gtk-doc/html/lasso/lasso-LassoDataService.html
 share/gtk-doc/html/lasso/lasso-LassoDefederation.html
@@ -495,15 +505,9 @@ share/gtk-doc/html/lasso/lasso-LassoWsSec1TransformationParameters.html
 share/gtk-doc/html/lasso/lasso-LassoWsUtil1Timestamp.html
 share/gtk-doc/html/lasso/lasso-LassoWsfProfile.html
 share/gtk-doc/html/lasso/lasso-LassoWsseUsernameToken.html
-share/gtk-doc/html/lasso/lasso-SAML-2.0-Strings.html
-share/gtk-doc/html/lasso/lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html
-share/gtk-doc/html/lasso/lasso-Strings-for-ID-FF-1.2.html
-share/gtk-doc/html/lasso/lasso-Strings-for-ID-WSF-2.0.html
 share/gtk-doc/html/lasso/lasso-Strings-for-SOAP.html
 share/gtk-doc/html/lasso/lasso-Strings-for-WS-*.html
 share/gtk-doc/html/lasso/lasso-Strings-for-XML-DSIG.html
-share/gtk-doc/html/lasso/lasso-Utility-functions-for-ID-WSF-1.0.html
-share/gtk-doc/html/lasso/lasso-Utility-functions-for-SAML-2.0.html
 share/gtk-doc/html/lasso/left.png
 share/gtk-doc/html/lasso/pt01.html
 share/gtk-doc/html/lasso/right.png
