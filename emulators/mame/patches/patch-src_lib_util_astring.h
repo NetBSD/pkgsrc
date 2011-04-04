@@ -1,17 +1,16 @@
-$NetBSD: patch-src_lib_util_astring.h,v 1.4 2011/02/26 07:06:24 wiz Exp $
+$NetBSD: patch-src_lib_util_astring.h,v 1.5 2011/04/04 12:09:03 wiz Exp $
 
-Sent upstream and accepted.
+toupper is a macro on NetBSD.
+Sent upstream.
 
---- src/lib/util/astring.h.orig	2010-10-31 23:48:04.000000000 +0000
+--- src/lib/util/astring.h.orig	2011-02-01 20:29:56.000000000 +0000
 +++ src/lib/util/astring.h
-@@ -296,6 +296,10 @@ INLINE astring *astring_assemble_5(astri
- ***************************************************************************/
+@@ -396,7 +396,7 @@ public:
  
- #ifdef __cplusplus
-+#ifdef SDLMAME_NETBSD
-+#undef toupper
-+#undef tolower
-+#endif
- 
- /* derived class for C++ */
- class astring : public astring_base
+ 	astring &delchr(int ch) { return *astring_delchr(this, ch); }
+ 	astring &replacechr(int ch, int newch) { return *astring_replacechr(this, ch, newch); }
+-	astring &toupper() { return *astring_toupper(this); }
++	astring &upper() { return *astring_toupper(this); }
+ 	astring &tolower() { return *astring_tolower(this); }
+ 	astring &trimspace() { return *astring_trimspace(this); }
+ };
