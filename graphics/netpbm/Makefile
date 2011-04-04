@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.172 2011/01/15 18:37:46 tron Exp $
+# $NetBSD: Makefile,v 1.173 2011/04/04 09:17:24 adam Exp $
 
-DISTNAME=	netpbm-10.35.78
+DISTNAME=	netpbm-10.35.80
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -8,8 +8,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
-
-MAKE_JOBS_SAFE=	no
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -74,6 +73,8 @@ MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
 CPPFLAGS+=	-DSGI_IDO_CC
 .endif
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/netpbm
+
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
 
@@ -84,17 +85,11 @@ post-install:
 	cd ${STAGEDIR} && 					\
 	${MV} link/* lib && 					\
 	${RM} -rf link man/web && 				\
-	(rmdir man || ${TRUE}) &&				\
-	${MKDIR} share/doc/netpbm &&				\
-	${CP} ${WRKSRC}/doc/* share/doc/netpbm &&		\
-	${MKDIR} ${PKGMANDIR}/man1 &&				\
-	${MV} share/doc/netpbm/*.1	${PKGMANDIR}/man1 &&	\
+	${MKDIR} share &&					\
 	${MV} misc share/netpbm && 				\
 	${CHOWN} -R ${BINOWN}:${BINGRP} . &&			\
 	pax -rwpppm . ${DESTDIR}${PREFIX}
 	${RM} -fr ${STAGEDIR}
-	${FIND} ${DESTDIR}${PREFIX}/share/doc/netpbm -type f -print |	\
-		${XARGS} ${CHMOD} ${NONBINMODE}
 
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
