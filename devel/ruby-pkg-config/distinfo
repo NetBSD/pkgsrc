@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/01/30 12:10:30 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/04/04 09:28:03 obache Exp $
 
-SHA1 (pkg-config-1.0.8.tgz) = 379fc067b57482b94669bf1bc572a8c0351e8d16
-RMD160 (pkg-config-1.0.8.tgz) = 98d73810fced574247fb1af02008bc3b84d66c1f
-Size (pkg-config-1.0.8.tgz) = 14955 bytes
+SHA1 (pkg-config-1.1.0.tgz) = bcab296301db7a9eda976c089d611bdc6ef5ffa0
+RMD160 (pkg-config-1.1.0.tgz) = 07fe92056cc15ecff894b6f6735b192fedba8070
+Size (pkg-config-1.1.0.tgz) = 15089 bytes
