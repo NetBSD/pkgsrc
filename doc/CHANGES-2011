@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.823 2011/04/04 09:23:30 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.824 2011/04/04 09:28:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1385,3 +1385,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/musicpd to 0.16.2 [wiz 2011-04-04]
 	Updated net/libvncserver to 0.9.8 [obache 2011-04-04]
 	Updated devel/mercurial to 1.8.2 [wiz 2011-04-04]
+	Updated devel/ruby-pkg-config to 1.1.0 [obache 2011-04-04]
