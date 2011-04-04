@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.572 2011/03/23 15:13:36 taca Exp $
+# $NetBSD: Makefile,v 1.573 2011/04/04 08:02:12 manu Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -353,6 +353,7 @@ SUBDIR+=	p5-XML-DOM
 SUBDIR+=	p5-XML-Dumper
 SUBDIR+=	p5-XML-Elemental
 SUBDIR+=	p5-XML-Encoding
+SUBDIR+=	p5-XML-Entities
 SUBDIR+=	p5-XML-Feed
 SUBDIR+=	p5-XML-FeedPP
 SUBDIR+=	p5-XML-Filter-BufferText
