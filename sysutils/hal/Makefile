@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2011/03/10 19:45:03 markd Exp $
+# $NetBSD: Makefile,v 1.54 2011/04/04 09:41:17 hans Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		2
@@ -66,7 +66,7 @@ PLIST_SRC=		PLIST
 
 CFLAGS.SunOS+=		-Du_int32_t=uint32_t
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
 .endif
 
