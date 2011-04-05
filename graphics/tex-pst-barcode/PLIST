@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/05 19:37:53 minskim Exp $
+share/texmf-dist/dvips/pst-barcode/pst-barcode.pro
+share/texmf-dist/tex/generic/pst-barcode/pst-barcode.tex
+share/texmf-dist/tex/latex/pst-barcode/pst-barcode.sty
