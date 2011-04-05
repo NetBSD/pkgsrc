@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.845 2011/04/05 13:01:03 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.846 2011/04/05 13:08:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1407,3 +1407,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libgsf-gnome to 1.14.20 [wiz 2011-04-05]
 	Updated devel/mdds to 0.5.2 [wiz 2011-04-05]
 	Updated textproc/hunspell-de to 20110321 [wiz 2011-04-05]
+	Updated devel/meld to 1.5.1 [wiz 2011-04-05]
