@@ -1,4 +1,4 @@
-# $NetBSD: make.mk,v 1.13 2005/07/17 21:36:24 jlam Exp $
+# $NetBSD: make.mk,v 1.14 2011/04/05 12:42:06 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,7 +52,7 @@ MAKE_PROGRAM=		${GMAKE}
 .elif !empty(_USE_TOOLS:Mimake) && defined(IMAKE_MAKE)
 MAKE_PROGRAM=		${IMAKE_MAKE}
 .else
-MAKE_PROGRAM=		${MAKE}
+MAKE_PROGRAM?=		${MAKE}
 .endif
 
 TOOLS_CREATE+=		make

@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.208 2011/02/10 12:08:04 adam Exp $
+# $NetBSD: makevars.map,v 1.209 2011/04/05 12:42:06 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -435,7 +435,7 @@ MAKE_FILE		Pathname [$package]
 MAKE_FLAGS		List of ShellWord [$package_list]
 MAKE_JOBS		Integer [$user]
 MAKE_JOBS_SAFE		YesNo [$package]
-MAKE_PROGRAM		ShellCommand [$system]
+MAKE_PROGRAM		ShellCommand [$package]
 MANCOMPRESSED		YesNo [m:s,c:ds]
 MANCOMPRESSED_IF_MANZ	Yes [m:s,c:ds]
 MANGRP			UserGroupName [$system]
