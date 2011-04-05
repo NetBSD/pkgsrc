@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2008/12/21 16:53:45 uebayasi Exp $
+$NetBSD: patch-ac,v 1.5 2011/04/05 13:54:24 ryoon Exp $
 
---- configure.orig	2008-10-31 02:07:59.000000000 +0900
+--- configure.orig	2010-09-23 09:42:09.000000000 +0000
 +++ configure
-@@ -18472,6 +18472,10 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6; }
+@@ -20091,6 +20091,10 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
          DLLD="${DLLD=$CC}"
          DLLDARG=""
        ;;
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.4 2008/12/21 16:53:45 uebayasi Exp $
        * )
  	DLLD="${DLLD=ld}"
  	DLLDARG=""
-@@ -18482,6 +18486,7 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6; }
+@@ -20101,6 +20105,7 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
      case "$host_os" in
        hpux*)   DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
        darwin*) DLCFLAGS="${DLCFLAGS=-fno-common}" ;;
@@ -21,7 +21,7 @@ $NetBSD: patch-ac,v 1.4 2008/12/21 16:53:45 uebayasi Exp $
        *)       DLCFLAGS="${DLCFLAGS=-fPIC}" ;;
      esac
    else
-@@ -18496,7 +18501,7 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6; }
+@@ -20115,7 +20120,7 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
    fi
    case "$host_os" in
      osf*) DLLDFLAGS="${DLLDFLAGS=-shared -expect_unresolved '*'}" ;;
