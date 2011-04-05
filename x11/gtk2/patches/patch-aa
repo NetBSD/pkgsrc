@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.19 2010/11/23 13:31:34 tnn Exp $
+$NetBSD: patch-aa,v 1.20 2011/04/05 17:50:07 drochner Exp $
 
 Fix busted stock icons (PR pkg/44119). Patch borrowed from OpenBSD.
  
 Upstream bug report:
   https://bugzilla.gnome.org/show_bug.cgi?id=629878
 
---- gtk/Makefile.in.orig	2010-09-23 14:27:23.000000000 +0000
+--- gtk/Makefile.in.orig	2011-04-01 21:41:08.000000000 +0000
 +++ gtk/Makefile.in
-@@ -1598,7 +1598,171 @@ GENERATED_ICONS = \
+@@ -1614,7 +1614,171 @@ GENERATED_ICONS = \
  	stock-icons/24/folder-remote.png 		\
  	stock-icons/24/user-home.png 			\
  	stock-icons/24/user-desktop.png 		\
@@ -180,10 +180,10 @@ Upstream bug report:
  
  @CROSS_COMPILING_FALSE@gtk_update_icon_cache_program = \
  @CROSS_COMPILING_FALSE@	   ./gtk-update-icon-cache
-@@ -2869,6 +3033,88 @@ stamp-icons: $(STOCK_ICONS)
+@@ -2885,6 +3049,88 @@ stamp-icons: $(STOCK_ICONS)
  	   && $(LN_S) folder.png user-desktop.png 			\
- 	   && $(RM) text-x-generic.png 					\
- 	   && $(LN_S) document-x-generic.png text-x-generic.png 	\
+ 	   && $(RM) user-home.png 					\
+ 	   && $(LN_S) folder.png user-home.png 				\
 +	   && $(LN_S) application-exit.png gtk-quit.png			\
 +	   && $(LN_S) dialog-info.png gtk-info.png			\
 +	   && $(LN_S) document-new.png gtk-file.png			\
