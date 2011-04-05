@@ -1,5 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2011/01/11 20:46:16 gls Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/04/05 18:34:20 drochner Exp $
 bin/shotwell
+lib/shotwell/plugins/builtin/facebook.png
+lib/shotwell/plugins/builtin/flickr.png
+lib/shotwell/plugins/builtin/picasa.png
+lib/shotwell/plugins/builtin/shotwell-publishing-extras.so
+lib/shotwell/plugins/builtin/shotwell-publishing.so
+lib/shotwell/plugins/builtin/shotwell-transitions.so
+lib/shotwell/plugins/builtin/slideshow-plugin.png
+lib/shotwell/plugins/builtin/yandex_publish_model.glade
+lib/shotwell/plugins/builtin/youtube.png
 share/applications/shotwell-viewer.desktop
 share/applications/shotwell.desktop
 share/gconf/schemas/shotwell.schemas
@@ -27,6 +36,7 @@ share/gnome/help/shotwell/C/organize-event.page
 share/gnome/help/shotwell/C/organize-flag.page
 share/gnome/help/shotwell/C/organize-rating.page
 share/gnome/help/shotwell/C/organize-remove.page
+share/gnome/help/shotwell/C/organize-search.page
 share/gnome/help/shotwell/C/organize-tag.page
 share/gnome/help/shotwell/C/organize-title.page
 share/gnome/help/shotwell/C/other-files.page
@@ -84,6 +94,8 @@ share/locale/sk/LC_MESSAGES/shotwell.mo
 share/locale/sl/LC_MESSAGES/shotwell.mo
 share/locale/sr/LC_MESSAGES/shotwell.mo
 share/locale/sv/LC_MESSAGES/shotwell.mo
+share/locale/ta/LC_MESSAGES/shotwell.mo
+share/locale/te/LC_MESSAGES/shotwell.mo
 share/locale/th/LC_MESSAGES/shotwell.mo
 share/locale/tr/LC_MESSAGES/shotwell.mo
 share/locale/uk/LC_MESSAGES/shotwell.mo
@@ -94,12 +106,17 @@ share/shotwell/icons/crop-pivot-reticle.png
 share/shotwell/icons/crop.svg
 share/shotwell/icons/drag_nub.png
 share/shotwell/icons/enhance.png
+share/shotwell/icons/filter-flagged.png
+share/shotwell/icons/filter-photos.png
+share/shotwell/icons/filter-raw.png
+share/shotwell/icons/filter-videos.png
 share/shotwell/icons/five-star-filter.svg
 share/shotwell/icons/five-stars.svg
 share/shotwell/icons/flag-page.png
 share/shotwell/icons/flag-trinket.png
 share/shotwell/icons/four-star-filter-plus.svg
 share/shotwell/icons/four-stars.svg
+share/shotwell/icons/generic-plugin.png
 share/shotwell/icons/image-adjust.svg
 share/shotwell/icons/import-all.png
 share/shotwell/icons/import.svg
@@ -116,11 +133,14 @@ share/shotwell/icons/pin-toolbar.svg
 share/shotwell/icons/publish.png
 share/shotwell/icons/redeye.png
 share/shotwell/icons/rejected.svg
+share/shotwell/icons/searchbox-clear.svg
+share/shotwell/icons/searchbox-find.svg
 share/shotwell/icons/shotwell-16.svg
 share/shotwell/icons/shotwell-24.svg
 share/shotwell/icons/shotwell-street.jpg
 share/shotwell/icons/shotwell.ico
 share/shotwell/icons/shotwell.svg
+share/shotwell/icons/slideshow-extension-point.png
 share/shotwell/icons/sprocket.png
 share/shotwell/icons/three-star-filter-plus.svg
 share/shotwell/icons/three-stars.svg
@@ -139,9 +159,8 @@ share/shotwell/ui/import_queue.ui
 share/shotwell/ui/media.ui
 share/shotwell/ui/offline.ui
 share/shotwell/ui/photo.ui
+share/shotwell/ui/search_bar.ui
 share/shotwell/ui/set_background_dialog.glade
 share/shotwell/ui/shotwell.glade
 share/shotwell/ui/tags.ui
 share/shotwell/ui/trash.ui
-share/shotwell/ui/video.ui
-share/shotwell/ui/yandex_publish_model.glade
