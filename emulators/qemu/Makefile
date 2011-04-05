@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2011/02/28 17:49:30 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2011/04/05 08:38:00 wiz Exp $
 
 DISTNAME=		qemu-0.13.0
 PKGREVISION=		1
@@ -16,6 +16,7 @@ CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
 USE_TOOLS+=		gmake makeinfo perl:build
+UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
 BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
