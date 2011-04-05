@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.839 2011/04/05 12:45:48 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.840 2011/04/05 12:48:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1401,3 +1401,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/mdocml to 1.11.1 [wiz 2011-04-05]
 	Added net/mikutter version 0.0.2.12 [obache 2011-04-05]
 	Added www/py-cherrypy version 3.2.0 [adam 2011-04-05]
+	Updated graphics/png to 1.5.2 [wiz 2011-04-05]
