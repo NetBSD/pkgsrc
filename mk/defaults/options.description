@@ -560,6 +560,9 @@ uucp			Enable support for uucp.
 vdpau			Enable support for VDPAU.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
+vice-ethernet		Enable Ethernet cartridge support.
+vice-fullscreen		Enable full-screen support.
+vice-hwscaling		Enable hardware-assisted screen scaling.
 viewvc-php		Use php to colorize .php and .inc files.
 vorbis			Enable Ogg Vorbis support.
 w3m			Use and enable support for the w3m browser.
