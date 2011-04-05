@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 20:47:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/04/05 17:18:14 drochner Exp $
 bin/calc
 bin/calc-static
 bin/cscript/4dsphere
@@ -91,6 +91,7 @@ share/calc/custom/pmodm127.cal
 share/calc/custom/pzasusb8.cal
 share/calc/custom/register.cal
 share/calc/deg.cal
+share/calc/dms.cal
 share/calc/dotest.cal
 share/calc/ellip.cal
 share/calc/hello.cal
@@ -426,6 +427,7 @@ share/calc/help/variable
 share/calc/help/version
 share/calc/help/wishlist
 share/calc/help/xor
+share/calc/hms.cal
 share/calc/intfile.cal
 share/calc/linear.cal
 share/calc/lucas.cal
