@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.833 2011/04/05 08:14:24 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.834 2011/04/05 08:30:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1397,3 +1397,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/navi2ch to 1.8.4 [ryoon 2011-04-04]
 	Added devel/snappy version 1.0.1 [agc 2011-04-04]
 	Updated games/gbrainy to 1.64 [wiz 2011-04-05]
+	Updated www/lighttpd to 1.4.28 [adam 2011-04-05]
