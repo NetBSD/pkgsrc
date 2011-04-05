@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/09/04 21:11:58 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2011/04/05 11:04:40 wiz Exp $
 
---- src/tuxpaint.c.orig	2007-07-01 03:38:03.000000000 +0200
+Third chunk: fix build with png-1.5.
+
+--- src/tuxpaint.c.orig	2007-07-01 01:38:03.000000000 +0000
 +++ src/tuxpaint.c
 @@ -170,7 +170,7 @@ static scaleparams scaletable[] = {
     likely available; if not using GNU, you can set HAVE_STRCASESTR to
@@ -22,3 +24,17 @@ $NetBSD: patch-ab,v 1.4 2007/09/04 21:11:58 drochner Exp $
  #if !defined(RSVG_H) || !defined(RSVG_CAIRO_H)
  #error "---------------------------------------------------"
  #error "If you installed libRSVG from packages, be sure"
+@@ -12528,12 +12528,7 @@ static int do_png_save(FILE * fi, const 
+       {
+ 	png_init_io(png_ptr, fi);
+ 
+-	info_ptr->width = surf->w;
+-	info_ptr->height = surf->h;
+-	info_ptr->bit_depth = 8;
+-	info_ptr->color_type = PNG_COLOR_TYPE_RGB;
+-	info_ptr->interlace_type = 1;
+-	info_ptr->valid = 0;	// will be updated by various png_set_FOO() functions
++	png_set_IHDR(png_ptr, info_ptr, surf->w, surf->h, 8, PNG_COLOR_TYPE_RGB, 1, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
+ 
+ 	png_set_sRGB_gAMA_and_cHRM(png_ptr, info_ptr,
+ 				   PNG_sRGB_INTENT_PERCEPTUAL);
