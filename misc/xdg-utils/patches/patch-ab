@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2011/04/05 09:13:43 wiz Exp $
+
+ 2008-01-24 Kevin Krammer <kevin.krammer@gmx.at>
+     * Fixing security issue in xdg-email and xdg-open at replacing
+       parameter in $BROWSER
+
+diff --git a/scripts/xdg-open b/scripts/xdg-open
+index b124d6b..1456b7e 100755
+--- a/scripts/xdg-open
++++ ./scripts/xdg-open
+@@ -382,7 +382,8 @@ open_generic()
+     for browser in $BROWSER; do
+         if [ x"$browser" != x"" ]; then
+ 
+-            browser_with_arg=`echo "$browser" | sed s#%s#"$1"#`
++            IFS=' '
++            browser_with_arg=${browser//'%s'/"$1"}
+ 
+             if [ x"$browser_with_arg" = x"$browser" ]; then "$browser" "$1";
+             else $browser_with_arg;
