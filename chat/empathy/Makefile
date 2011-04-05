@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2011/02/21 15:51:44 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2011/04/05 18:27:08 drochner Exp $
 
-DISTNAME=	empathy-2.30.3
-PKGREVISION=	2
+DISTNAME=	empathy-2.34.0
 CATEGORIES=	chat gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/empathy/2.30/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/empathy/2.34/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Empathy
@@ -17,24 +16,30 @@ USE_TOOLS+=		gawk gmake intltool msgfmt pkg-config
 USE_TOOLS+=		autoconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+CONFIGURE_ENV+=	YELL_CFLAGS=-I${WRKSRC}/telepathy-yell
+CONFIGURE_ENV+=	\
+  YELL_LIBS="-L${WRKSRC}/telepathy-yell/telepathy-yell -ltelepathy-yell"
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
-
-GCONF_SCHEMAS+=	empathy.schemas
 
 # notyet
 #CONFIGURE_ARGS+=	--enable-meego
 
+BUILD_DEPENDS+= gsed-[0-9]*:../../textproc/gsed
+
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../chat/telepathy-farsight/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
+.include "../../chat/telepathy-logger/buildlink3.mk"
+.include "../../chat/libfolks/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.enchant+=		enchant>=1.2.0
 .include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
