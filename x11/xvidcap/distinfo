@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2009/07/07 17:38:09 joerg Exp $
+$NetBSD: distinfo,v 1.9 2011/04/05 11:24:15 wiz Exp $
 
 SHA1 (xvidcap-1.1.3.tar.gz) = e6d86a4184c8cc3e74738fb6e20d49c0d1640025
 RMD160 (xvidcap-1.1.3.tar.gz) = cc7be360153f192b502ffedc6548cce163a9154c
@@ -10,3 +10,5 @@ SHA1 (patch-ad) = ac40095849f721cfd8aa1e0143dff3ac9b705be7
 SHA1 (patch-ae) = 2ebab45421ab2782d48067f7b63e010190111397
 SHA1 (patch-af) = 7e5533775b68a2c2ade195660b859530e6422da4
 SHA1 (patch-ag) = 44cb7ad63e477f21b013a43d06ce81fddb235ef7
+SHA1 (patch-src_xtomng.c) = 474b082c94883fd367126e6835e91bfc856063b5
+SHA1 (patch-src_xtopng.c) = 5e4e8e7150ccb67e25a65ecf33e2900074fa1179
