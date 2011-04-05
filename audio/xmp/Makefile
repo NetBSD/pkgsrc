@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2010/11/20 18:09:15 shattered Exp $
+# $NetBSD: Makefile,v 1.25 2011/04/05 05:22:52 rxg Exp $
 
-DISTNAME=	xmp-2.5.1
+DISTNAME=	xmp-3.3.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmp/}
 
@@ -13,27 +13,18 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--disable-alsa \
-		--disable-oss \
-		--disable-xmms \
-		--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 
 USE_TOOLS+=	gmake pkg-config
 
 EGDIR=		${PREFIX}/share/examples/xmp
-CONF_FILES=	${EGDIR}/xmp-modules.conf ${PKG_SYSCONFDIR}/xmp-modules.conf
-CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp.conf
+CONF_FILES=	${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/xmp/modules.conf
+CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp/xmp.conf
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
 
 INSTALL_MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 
 .include "options.mk"
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
-# No native support for these OS's, so use esound for audio output
-.include "../../audio/esound/buildlink3.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
