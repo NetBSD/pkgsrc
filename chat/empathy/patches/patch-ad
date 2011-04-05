@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2011/04/05 18:27:08 drochner Exp $
+
+--- configure.orig	2011-03-24 15:18:52.000000000 +0000
++++ configure
+@@ -2659,7 +2659,7 @@ GSTREAMER_REQUIRED=0.10.32
+ GTK_REQUIRED=2.22.0
+ KEYRING_REQUIRED=2.26.0
+ LIBCANBERRA_GTK_REQUIRED=0.4
+-LIBNOTIFY_REQUIRED=0.7.0
++LIBNOTIFY_REQUIRED=0.4.0
+ TELEPATHY_FARSIGHT_REQUIRED=0.0.14
+ TELEPATHY_GLIB_REQUIRED=0.14.1
+ TELEPATHY_LOGGER=0.2.0
+@@ -13553,8 +13553,8 @@ install-data-am: install-gsettings-schem
+ .SECONDARY: $(gsettings_SCHEMAS)
+ 
+ gsettings__base_list = \
+-  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
+-  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
++  gsed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
++  gsed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
+ 
+ install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid)
+ 	@$(NORMAL_INSTALL)
