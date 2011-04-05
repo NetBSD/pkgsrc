@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.851 2011/04/05 18:54:20 darcy Exp $
+$NetBSD: CHANGES-2011,v 1.852 2011/04/05 19:39:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1412,3 +1412,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated shells/zsh-current to 4.3.11 [ryoon 2011-04-05]
 	Updated databases/pgpool to 3.4.1 [minskim 2011-04-05]
 	Updated net/p5-Geo-IPfree to 1.100470 [minskim 2011-04-05]
+	Added graphics/tex-pst-barcode version 0.08 [minskim 2011-04-05]
+	Added graphics/tex-pst-barcode-doc version 0.08 [minskim 2011-04-05]
