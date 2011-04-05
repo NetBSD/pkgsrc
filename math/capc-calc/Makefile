@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2009/09/03 09:59:09 asau Exp $
+# $NetBSD: Makefile,v 1.41 2011/04/05 17:18:14 drochner Exp $
 #
 
-DISTNAME=	calc-2.12.4.0
+DISTNAME=	calc-2.12.4.1
 PKGNAME=	capc-${DISTNAME:S/t/./}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calc/}
