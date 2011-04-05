@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2011/04/05 18:47:19 drochner Exp $
 #
 
-DISTNAME=	telepathy-gabble-0.9.2
-PKGREVISION=	4
+DISTNAME=	telepathy-gabble-0.11.10
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-gabble/
 
@@ -17,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+CONFIGURE_ENV+=	UUID_CFLAGS=" " UUID_LIBS=" "
 
 pre-configure: wocky-pkg-config-hack
 wocky-pkg-config-hack:
@@ -29,6 +29,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.21.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libnice/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.78
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.1
