@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/08/15 12:12:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2011/04/05 13:00:54 wiz Exp $
 #
 
-DISTNAME=	igerman98-20100727
+DISTNAME=	igerman98-20110321
 PKGNAME=	${DISTNAME:S/igerman98/hunspell-de/}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.j3e.de/ispell/igerman98/dict/
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.j3e.de/ispell/igerman98/
 COMMENT=	German dictionaries for hunspell
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
