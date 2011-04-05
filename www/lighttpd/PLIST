@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/02/08 14:47:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/04/05 08:29:26 adam Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -34,10 +34,6 @@ lib/lighttpd/mod_webdav.la
 man/man8/lighttpd.8
 sbin/lighttpd
 sbin/lighttpd-angel
-share/doc/lighttpd/AUTHORS
-share/doc/lighttpd/COPYING
-share/doc/lighttpd/NEWS
-share/doc/lighttpd/README
 share/doc/lighttpd/access.txt
 share/doc/lighttpd/accesslog.txt
 share/doc/lighttpd/alias.txt
@@ -79,7 +75,34 @@ share/doc/lighttpd/traffic-shaping.txt
 share/doc/lighttpd/trigger_b4_dl.txt
 share/doc/lighttpd/userdir.txt
 share/doc/lighttpd/webdav.txt
+share/examples/lighttpd/conf.d/access_log.conf
+share/examples/lighttpd/conf.d/auth.conf
+share/examples/lighttpd/conf.d/cgi.conf
+share/examples/lighttpd/conf.d/cml.conf
+share/examples/lighttpd/conf.d/compress.conf
+share/examples/lighttpd/conf.d/debug.conf
+share/examples/lighttpd/conf.d/dirlisting.conf
+share/examples/lighttpd/conf.d/evhost.conf
+share/examples/lighttpd/conf.d/expire.conf
+share/examples/lighttpd/conf.d/fastcgi.conf
+share/examples/lighttpd/conf.d/geoip.conf
+share/examples/lighttpd/conf.d/magnet.conf
+share/examples/lighttpd/conf.d/mime.conf
+share/examples/lighttpd/conf.d/mod.template
+share/examples/lighttpd/conf.d/mysql_vhost.conf
+share/examples/lighttpd/conf.d/proxy.conf
+share/examples/lighttpd/conf.d/rrdtool.conf
+share/examples/lighttpd/conf.d/scgi.conf
+share/examples/lighttpd/conf.d/secdownload.conf
+share/examples/lighttpd/conf.d/simple_vhost.conf
+share/examples/lighttpd/conf.d/ssi.conf
+share/examples/lighttpd/conf.d/status.conf
+share/examples/lighttpd/conf.d/trigger_b4_dl.conf
+share/examples/lighttpd/conf.d/userdir.conf
+share/examples/lighttpd/conf.d/webdav.conf
 share/examples/lighttpd/lighttpd.conf
+share/examples/lighttpd/modules.conf
 share/examples/lighttpd/rrdtool-graph.sh
 share/examples/lighttpd/spawn-php.sh
+share/examples/lighttpd/vhosts.d/vhosts.template
 share/examples/rc.d/lighttpd
