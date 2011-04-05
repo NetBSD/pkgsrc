@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10235 2011/04/05 09:28:26 wiz Exp $
+$NetBSD: TODO,v 1.10236 2011/04/05 12:48:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1079,7 +1079,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plone-3.3.4
 	o ploticus-2.41
 	o ploticus-examples-230
-	o png-1.5.2
 	o po4a-0.36.3
 	o podofo-0.9.0
 	o polsms-2.1.0
