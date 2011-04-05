@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10239 2011/04/05 12:58:03 wiz Exp $
+$NetBSD: TODO,v 1.10240 2011/04/05 13:01:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -770,7 +770,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o htop-0.9
 	o httping-1.4.4
 	o httptunnel-3.3
-	o hunspell-de-20110321
 	o hydrogen-0.9.3 [pkg/37424]
 	o hylafax-5.5.0
 	o ibus-input-pad-1.4.0 [for ibus-1.4.x]
