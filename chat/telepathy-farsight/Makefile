@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2011/02/24 21:03:56 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2011/04/05 18:30:22 drochner Exp $
 #
 
-DISTNAME=	telepathy-farsight-0.0.15
+DISTNAME=	telepathy-farsight-0.0.16
 CATEGORIES=	chat multimedia
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-farsight/
 
@@ -28,7 +28,7 @@ BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.12
 .include "../../multimedia/farsight2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-python+=	${PYPKGPREFIX}-gstreamer0.10>=0.10.10
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
-BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.7.23
+BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.13.4
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
