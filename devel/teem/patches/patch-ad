@@ -1,7 +1,27 @@
-$NetBSD: patch-ad,v 1.1 2010/06/13 22:44:11 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2011/04/05 11:27:29 wiz Exp $
+
+Fix build with png-1.5.
 
 --- src/nrrd/formatPNG.c.orig	2005-03-01 22:27:40.000000000 +0000
 +++ src/nrrd/formatPNG.c
+@@ -116,7 +116,7 @@ _nrrdErrorHandlerPNG (png_structp png, p
+   sprintf(err, "%s: PNG error: %s", me, message);
+   biffAdd(NRRD, err);
+   /* longjmp back to the setjmp, return 1 */
+-  longjmp(png->jmpbuf, 1);
++  longjmp(png_jmpbuf(png), 1);
+ }
+ 
+ void
+@@ -192,7 +192,7 @@ _nrrdFormatPNG_read(FILE *file, Nrrd *nr
+     biffAdd(NRRD, err); return 1;
+   }
+   /* set up png style error handling */
+-  if (setjmp(png->jmpbuf)) {
++  if (setjmp(png_jmpbuf(png))) {
+     /* the error is reported inside the handler, 
+        but we still need to clean up and return */
+     png_destroy_read_struct(&png, &info, NULL);
 @@ -216,7 +216,7 @@ _nrrdFormatPNG_read(FILE *file, Nrrd *nr
      png_set_palette_to_rgb(png);
    /* expand grayscale images to 8 bits from 1, 2, or 4 bits */
@@ -11,3 +31,12 @@ $NetBSD: patch-ad,v 1.1 2010/06/13 22:44:11 wiz Exp $
    /* expand paletted or rgb images with transparency to full alpha
       channels so the data will be available as rgba quartets */
    if (png_get_valid(png, info, PNG_INFO_tRNS))
+@@ -409,7 +409,7 @@ _nrrdFormatPNG_write(FILE *file, const N
+     biffAdd(NRRD, err); return 1;
+   }
+   /* set up error png style error handling */
+-  if (setjmp(png->jmpbuf))
++  if (setjmp(png_jmpbuf(png)))
+   {
+     /* the error is reported inside the error handler, 
+        but we still need to clean up an return with an error */
