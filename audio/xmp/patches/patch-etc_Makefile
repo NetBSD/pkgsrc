@@ -1,0 +1,19 @@
+$NetBSD: patch-etc_Makefile,v 1.1 2011/04/05 05:22:52 rxg Exp $
+
+--- etc/Makefile.orig	2010-01-09 22:34:20.000000000 +0000
++++ etc/Makefile
+@@ -4,10 +4,10 @@ ETC_PATH	= etc
+ 
+ install-etc:
+ 	@[ -d $(DESTDIR)$(SYSCONFDIR) ] || mkdir -p $(DESTDIR)$(SYSCONFDIR)
+-	@echo "Installing xmp.conf in $(SYSCONFDIR)"
+-	@$(INSTALL_DATA) $(ETC_PATH)/xmp.conf $(DESTDIR)$(SYSCONFDIR)/
+-	@echo "Installing modules.conf in $(SYSCONFDIR)"
+-	@$(INSTALL_DATA) $(ETC_PATH)/modules.conf $(DESTDIR)$(SYSCONFDIR)/
++	@echo "Installing xmp.conf in ${DESTDIR}$(datarootdir)/examples/xmp"
++	@$(INSTALL_DATA) $(ETC_PATH)/xmp.conf $(DESTDIR)$(datarootdir)/examples/xmp/
++	@echo "Installing modules.conf in ${DESTDIR}$(datarootdir)/examples/xmp"
++	@$(INSTALL_DATA) $(ETC_PATH)/modules.conf $(DESTDIR)$(datarootdir)/examples/xmp/
+ 
+ dist-etc:
+ 	mkdir -p $(DIST)/$(ETC_PATH)
