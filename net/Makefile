@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.874 2011/03/28 12:49:15 joerg Exp $
+# $NetBSD: Makefile,v 1.875 2011/04/05 11:48:41 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -248,6 +248,7 @@ SUBDIR+=	mbrowse
 SUBDIR+=	mcast-tools
 SUBDIR+=	md-whois
 SUBDIR+=	microdc2
+SUBDIR+=	mikutter
 SUBDIR+=	miniupnpd
 SUBDIR+=	miredo
 SUBDIR+=	mirror
