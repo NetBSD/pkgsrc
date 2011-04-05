@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/04/05 09:13:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/05 12:05:01 wiz Exp $
 #
 
 DISTNAME=	xdg-utils-1.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://portland.freedesktop.org/download/
 EXTRACT_SUFX=	.tgz
