@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.834 2011/04/05 08:30:40 adam Exp $
+$NetBSD: CHANGES-2011,v 1.835 2011/04/05 09:13:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1398,3 +1398,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/snappy version 1.0.1 [agc 2011-04-04]
 	Updated games/gbrainy to 1.64 [wiz 2011-04-05]
 	Updated www/lighttpd to 1.4.28 [adam 2011-04-05]
+	Updated misc/xdg-utils to 1.0.2nb1 [wiz 2011-04-05]
