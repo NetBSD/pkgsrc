@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/05 05:34:16 agc Exp $
+include/snappy-sinksource.h
+include/snappy-stubs-public.h
+include/snappy.h
+lib/libsnappy.la
+share/doc/snappy/COPYING
+share/doc/snappy/ChangeLog
+share/doc/snappy/INSTALL
+share/doc/snappy/NEWS
+share/doc/snappy/README
