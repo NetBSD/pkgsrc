@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.850 2011/04/05 17:56:14 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.851 2011/04/05 18:54:20 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1409,6 +1409,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/hunspell-de to 20110321 [wiz 2011-04-05]
 	Updated devel/meld to 1.5.1 [wiz 2011-04-05]
 	Updated fonts/umefont-ttf to 0.426 [ryoon 2011-04-05]
-	Updated shells/zsh-current.ryoon to 4.3.11 [ryoon 2011-04-05]
+	Updated shells/zsh-current to 4.3.11 [ryoon 2011-04-05]
 	Updated databases/pgpool to 3.4.1 [minskim 2011-04-05]
 	Updated net/p5-Geo-IPfree to 1.100470 [minskim 2011-04-05]
