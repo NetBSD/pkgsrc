@@ -1,0 +1,5 @@
+The pst-barcode package allows printing of barcodes, in a huge variety
+of formats (see documentation for details). As a pstricks package,
+pst-barcode requires pstricks. The package uses PostScript for
+calculating the bars. For PDF output use a multi-pass mechansism such as
+pst-pdf.
