@@ -1,0 +1,2 @@
+libfolks is a library that aggregates people from multiple sources (eg,
+Telepathy connection managers) to create metacontacts.
