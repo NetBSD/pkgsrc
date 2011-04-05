@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/04/05 09:13:42 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/04/05 12:05:01 wiz Exp $
 
 SHA1 (xdg-utils-1.0.2.tgz) = e41a04cbf9ff8d743397a2bc23c6ca82e8b59d2c
 RMD160 (xdg-utils-1.0.2.tgz) = 344482917e8c780613ec20b103f8e51322540c04
 Size (xdg-utils-1.0.2.tgz) = 282262 bytes
-SHA1 (patch-aa) = 2e615a88a2e564acc5ae2494bff5996b3a854b2a
-SHA1 (patch-ab) = 3fbfb21f4b1d774de446d899327db7404ef746b3
