@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.832 2011/04/05 05:36:19 agc Exp $
+$NetBSD: CHANGES-2011,v 1.833 2011/04/05 08:14:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-polytable-doc to 0.8.2nb1 [minskim 2011-04-04]
 	Updated chat/navi2ch to 1.8.4 [ryoon 2011-04-04]
 	Added devel/snappy version 1.0.1 [agc 2011-04-04]
+	Updated games/gbrainy to 1.64 [wiz 2011-04-05]
