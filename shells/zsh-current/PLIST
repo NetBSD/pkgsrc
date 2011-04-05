@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/04/05 13:54:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/04/05 15:03:44 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -25,6 +25,7 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/sched.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/stat.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/system.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/termcap.so
+${PLIST.dynamic}${PLIST.curses}lib/zsh/${PKGVERSION}/zsh/curses.so
 ${PLIST.dynamic}${PLIST.terminfo}lib/zsh/${PKGVERSION}/zsh/terminfo.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zftp.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zle.so
