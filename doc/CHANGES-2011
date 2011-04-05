@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.837 2011/04/05 11:47:35 obache Exp $
+$NetBSD: CHANGES-2011,v 1.838 2011/04/05 11:57:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1401,3 +1401,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/xdg-utils to 1.0.2nb1 [wiz 2011-04-05]
 	Updated textproc/mdocml to 1.11.1 [wiz 2011-04-05]
 	Added net/mikutter version 0.0.2.12 [obache 2011-04-05]
+	Added www/py-cherrypy version 3.2.0 [adam 2011-04-05]
