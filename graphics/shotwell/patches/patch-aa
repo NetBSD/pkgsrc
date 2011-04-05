@@ -1,33 +1,61 @@
-$NetBSD: patch-aa,v 1.3 2011/01/11 20:46:16 gls Exp $
+$NetBSD: patch-aa,v 1.4 2011/04/05 18:34:20 drochner Exp $
 
---- Makefile.orig	2010-12-23 23:01:46.000000000 +0000
+--- Makefile.orig	2011-04-05 00:35:38.000000000 +0000
 +++ Makefile
-@@ -280,7 +280,7 @@ EXT_PKGS = \
+@@ -261,7 +261,6 @@ EXT_PKGS = \
+ 	gstreamer-0.10 \
  	gstreamer-base-0.10 \
  	gtk+-2.0 \
- 	glib-2.0 \
 -	gudev-1.0 \
-+	gmodule-2.0 \
- 	json-glib-1.0 \
  	libexif \
  	libgphoto2 \
-@@ -306,7 +306,6 @@ EXT_PKG_VERSIONS = \
- 	glib-2.0 >= 2.24.0 \
+ 	libsoup-2.4 \
+@@ -288,7 +287,6 @@ EXT_PKG_VERSIONS = \
  	gstreamer-0.10 >= 0.10.28 \
  	gstreamer-base-0.10 >= 0.10.28 \
+ 	gtk+-2.0 >= 2.18.0 \
 -	gudev-1.0 >= 145 \
- 	json-glib-1.0 >= 0.7.6 \
  	libexif >= 0.6.16 \
  	libgphoto2 >= 2.4.2 \
-@@ -504,7 +503,6 @@ endif
+ 	libsoup-2.4 >= 2.26.0 \
+@@ -394,7 +392,7 @@ CFLAGS += -DG_UDEV_API_IS_SUBJECT_TO_CHA
+ # if not available.
+ LIBRAW_CONFIG=./libraw-config
  
- $(VALA_STAMP): $(EXPANDED_SRC_FILES) $(EXPANDED_VAPI_FILES) $(EXPANDED_SRC_HEADER_FILES) Makefile \
- 	$(CONFIG_IN)
--	@ ./minver `$(VALAC) --version | awk '{print $$2}'` $(MIN_VALAC_VERSION) || ( echo 'Shotwell requires Vala compiler $(MIN_VALAC_VERSION) or greater.  You are running' `$(VALAC) --version` '\b.'; exit 1 )
+-define check_valac_version
++define xcheck_valac_version
+ 	@ ./chkver min $(VALAC_VERSION) $(MIN_VALAC_VERSION) || ( echo 'Shotwell requires Vala compiler $(MIN_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 )
+ 	$(if $(MAX_VALAC_VERSION),\
+ 		@ ./chkver max $(VALAC_VERSION) $(MAX_VALAC_VERSION) || ( echo 'Shotwell cannot be built by Vala compiler $(MAX_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 ),)
+@@ -568,15 +566,15 @@ ifdef INSTALL_HEADERS
+ endif
+ 
+ $(PC_FILE): $(PC_INPUT) $(MAKE_FILES)
+-	m4 '--define=_VERSION_=$(VERSION)' '--define=_PREFIX_=$(PREFIX)' '--define=_REQUIREMENTS_=$(PLUGIN_PKG_REQS)' \
+-		'--define=_LIB_=$(LIB)' $< > $@
++	m4 '-D_VERSION_=$(VERSION)' '-D_PREFIX_=$(PREFIX)' '-D_REQUIREMENTS_=$(PLUGIN_PKG_REQS)' \
++		'-D_LIB_=$(LIB)' $< > $@
+ 
+ $(UNITIZE_STAMP): $(MAKE_FILES) src/unit/rc/UnitInternals.m4 src/unit/rc/unitize_entry.m4
+ 	@mkdir -p $(UNITIZE_DIR)
+ 	@$(foreach group,$(APP_GROUPS),\
+-		`m4 '--define=_APP_GROUP_=$(group)' '--define=_UNIT_ENTRY_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).init_entry,)' '--define=_UNIT_TERMINATE_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).terminate_entry,)' src/unit/rc/unitize_entry.m4 > $(UNITIZE_DIR)/_$(group)_unitize_entry.vala`)
++		`m4 '-D_APP_GROUP_=$(group)' '-D_UNIT_ENTRY_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).init_entry,)' '-D_UNIT_TERMINATE_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).terminate_entry,)' src/unit/rc/unitize_entry.m4 > $(UNITIZE_DIR)/_$(group)_unitize_entry.vala`)
+ 	@$(foreach nm,$(UNIT_NAMESPACES),\
+-		`m4 '--define=_UNIT_NAME_=$(nm)' '--define=_UNIT_USES_INITS_=$($(nm)_USES_INITS)' '--define=_UNIT_USES_TERMINATORS_=$($(nm)_USES_TERMINATORS)' src/unit/rc/UnitInternals.m4 > $(UNITIZE_DIR)/_$(nm)Internals.vala`)
++		`m4 '-D_UNIT_NAME_=$(nm)' '-D_UNIT_USES_INITS_=$($(nm)_USES_INITS)' '-D_UNIT_USES_TERMINATORS_=$($(nm)_USES_TERMINATORS)' src/unit/rc/UnitInternals.m4 > $(UNITIZE_DIR)/_$(nm)Internals.vala`)
+ 	@touch $@
+ 
+ $(UNITIZE_INITS) $(UNITIZE_ENTRIES): $(UNITIZE_STAMP)
+@@ -584,7 +582,6 @@ $(UNITIZE_INITS) $(UNITIZE_ENTRIES): $(U
+ 
+ # EXPANDED_SRC_FILES includes UNITIZE_INITS and UNITIZE_ENTRY
+ $(VALA_STAMP): $(EXPANDED_SRC_FILES) $(EXPANDED_VAPI_FILES) $(EXPANDED_SRC_HEADER_FILES)
+-	$(call check_valac_version)
  ifndef ASSUME_PKGS
  ifdef EXT_PKG_VERSIONS
  	@pkg-config --print-errors --exists '$(EXT_PKG_VERSIONS) $(DIRECT_LIBS_VERSIONS)'
-@@ -530,13 +528,13 @@ $(EXPANDED_C_FILES): $(VALA_STAMP)
+@@ -611,17 +608,16 @@ $(EXPANDED_C_FILES): $(VALA_STAMP)
  	@
  
  $(EXPANDED_OBJ_FILES): %.o: %.c $(CONFIG_IN) Makefile
@@ -38,6 +66,16 @@ $NetBSD: patch-aa,v 1.3 2011/01/11 20:46:16 gls Exp $
 -	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `$(LIBRAW_CONFIG) --libs` $(EXPORT_FLAGS) -o $@
 +	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) $(LDFLAGS) `pkg-config --libs libraw` $(EXPORT_FLAGS) -o $@
  
+ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLUGINS_DIR)
+ 	@
+ 
+ .PHONY: $(PLUGINS_DIR)
+ $(PLUGINS_DIR): $(PLUGIN_VAPI) $(PLUGIN_HEADER) $(PLUGIN_DEPS)
+-	$(call check_valac_version)
+ 	@$(MAKE) --directory=$@ PLUGINS_VERSION="$(VERSION)" USER_VALAFLAGS="$(USER_VALAFLAGS)" \
+ 		PLUGIN_CFLAGS="$(PLUGIN_CFLAGS)"
+ 
+@@ -639,5 +635,5 @@ docs:
  glade: lib$(PROGRAM).so
  
  lib$(PROGRAM).so: $(EXPANDED_OBJ_FILES) $(RESOURCES) $(LANG_STAMP)
