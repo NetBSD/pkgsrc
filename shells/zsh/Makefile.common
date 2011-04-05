@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2010/02/09 00:08:50 zafer Exp $
+# $NetBSD: Makefile.common,v 1.59 2011/04/05 15:03:44 ryoon Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -33,7 +33,7 @@ BUILD_DEFS+=	ZSH_STATIC
 MAKE_JOBS_SAFE=	no
 INSTALL_TARGET=	install install.info
 PKG_SHELL=	bin/zsh
-PLIST_VARS=	dynamic terminfo
+PLIST_VARS=	dynamic terminfo curses
 
 ################################################################################
 
@@ -79,6 +79,14 @@ CHECK_BUILTIN.terminfo=	yes
 .if !empty(USE_BUILTIN.terminfo:M[Yy][Ee][Ss])
 PLIST.terminfo=	yes
 .endif
+
+### curses
+CHECK_BUILTIN.curses=	yes
+.include "../../mk/curses.builtin.mk"
+.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss])
+PLIST.curses=	yes
+.endif
+
 
 ################################################################################
 
