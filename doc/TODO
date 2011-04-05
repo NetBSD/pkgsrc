@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10242 2011/04/05 13:55:50 ryoon Exp $
+$NetBSD: TODO,v 1.10243 2011/04/05 17:47:58 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1055,7 +1055,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pfstat-2.5
-	o pgpool-3.1.1
 	o phonon-4.5.0
 	o phoon-20050629
 	o photopc-3.05
