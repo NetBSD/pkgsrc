@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/01/13 13:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/05 08:09:41 wiz Exp $
 
 DISTNAME=		gqmpeg-0.91.1
 PKGREVISION=		11
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg/}
 MAINTAINER=		sekiya@NetBSD.org
 HOMEPAGE=		http://gqmpeg.sourceforge.net/
 COMMENT=		GTK+ front end to mpg123
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
