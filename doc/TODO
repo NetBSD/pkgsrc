@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10236 2011/04/05 12:48:06 wiz Exp $
+$NetBSD: TODO,v 1.10237 2011/04/05 12:51:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -548,7 +548,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eog-plugins-2.30.2
 	o epic4-2.6
 	o epstool-3.08
-	o epubcheck-1.2
 	o eric4-4.4.13
 	o eric5-5.1.1
 	o erlang-13b4
