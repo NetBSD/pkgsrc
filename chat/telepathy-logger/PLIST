@@ -1,17 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/24 18:50:48 drochner Exp $
-include/telepathy-logger-0.1/telepathy-logger/entity.h
-include/telepathy-logger-0.1/telepathy-logger/entry-text.h
-include/telepathy-logger-0.1/telepathy-logger/entry.h
-include/telepathy-logger-0.1/telepathy-logger/log-manager.h
-include/telepathy-logger-0.1/telepathy-logger/telepathy-logger.h
+@comment $NetBSD: PLIST,v 1.2 2011/04/05 18:22:29 drochner Exp $
+include/telepathy-logger-0.2/telepathy-logger/entity.h
+include/telepathy-logger-0.2/telepathy-logger/event.h
+include/telepathy-logger-0.2/telepathy-logger/log-manager.h
+include/telepathy-logger-0.2/telepathy-logger/telepathy-logger.h
+include/telepathy-logger-0.2/telepathy-logger/text-event.h
 lib/libtelepathy-logger.la
-lib/pkgconfig/telepathy-logger-0.1.pc
+lib/pkgconfig/telepathy-logger-0.2.pc
 libexec/telepathy-logger
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Logger.service
 share/dbus-1/services/org.freedesktop.Telepathy.Logger.service
 share/glib-2.0/schemas/org.freedesktop.Telepathy.Logger.gschema.xml
-share/gtk-doc/html/telepathy-logger/TplEntry.html
-share/gtk-doc/html/telepathy-logger/TplEntryText.html
+share/gtk-doc/html/telepathy-logger/TplEntity.html
+share/gtk-doc/html/telepathy-logger/TplEvent.html
+share/gtk-doc/html/telepathy-logger/TplLogManager.html
+share/gtk-doc/html/telepathy-logger/TplTextEvent.html
 share/gtk-doc/html/telepathy-logger/ch-public.html
 share/gtk-doc/html/telepathy-logger/home.png
 share/gtk-doc/html/telepathy-logger/index.html
@@ -19,8 +21,6 @@ share/gtk-doc/html/telepathy-logger/index.sgml
 share/gtk-doc/html/telepathy-logger/left.png
 share/gtk-doc/html/telepathy-logger/right.png
 share/gtk-doc/html/telepathy-logger/style.css
-share/gtk-doc/html/telepathy-logger/telepathy-logger-TplEntity.html
-share/gtk-doc/html/telepathy-logger/telepathy-logger-TplLogManager.html
 share/gtk-doc/html/telepathy-logger/telepathy-logger.devhelp
 share/gtk-doc/html/telepathy-logger/telepathy-logger.devhelp2
 share/gtk-doc/html/telepathy-logger/up.png
