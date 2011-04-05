@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1439 2011/04/01 13:53:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.1440 2011/04/05 05:35:20 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -1332,6 +1332,7 @@ SUBDIR+=	sgi-stl-docs
 SUBDIR+=	silc-toolkit
 SUBDIR+=	slib
 SUBDIR+=	sml-mode
+SUBDIR+=	snappy
 SUBDIR+=	sparse
 SUBDIR+=	sparsehash
 SUBDIR+=	spiff
