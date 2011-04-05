@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2010/06/13 22:44:24 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2011/04/05 11:32:46 wiz Exp $
+
+Fix build with png-1.5.
+
+Last chunk: ?
 
 --- src/renderer/r_image.c.orig	2008-04-25 16:15:02.000000000 +0000
 +++ src/renderer/r_image.c
@@ -10,6 +14,51 @@ $NetBSD: patch-ab,v 1.2 2010/06/13 22:44:24 wiz Exp $
 +		png_set_expand_gray_1_2_4_to_8(png_ptr);
  	if (png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS))
  		png_set_tRNS_to_alpha(png_ptr);
+ 
+@@ -268,32 +268,32 @@ static int R_LoadPNG (const char *name, 
+ 	row_pointers = png_get_rows(png_ptr, info_ptr);
+ 	rowptr = 0;
+ 
+-	img = VID_TagAlloc(vid_imagePool, info_ptr->width * info_ptr->height * 4, 0);
++	img = VID_TagAlloc(vid_imagePool, png_get_image_width(png_ptr, info_ptr) * png_get_image_height(png_ptr, info_ptr) * 4, 0);
+ 	if (pic)
+ 		*pic = img;
+ 
+-	if (info_ptr->channels == 4) {
+-		for (i = 0; i < info_ptr->height; i++) {
+-			memcpy (img + rowptr, row_pointers[i], info_ptr->rowbytes);
+-			rowptr += info_ptr->rowbytes;
++	if (png_get_channels(png_ptr, info_ptr) == 4) {
++		for (i = 0; i < png_get_image_height(png_ptr, info_ptr); i++) {
++			memcpy (img + rowptr, row_pointers[i], png_get_rowbytes(png_ptr, info_ptr));
++			rowptr += png_get_rowbytes(png_ptr, info_ptr);
+ 		}
+ 	} else {
+ 		uint32_t	j;
+ 
+-		memset(img, 255, info_ptr->width * info_ptr->height * 4);
+-		for (rowptr = 0, i = 0; i < info_ptr->height; i++) {
+-			for (j = 0; j < info_ptr->rowbytes; j += info_ptr->channels) {
+-				memcpy(img + rowptr, row_pointers[i] + j, info_ptr->channels);
++		memset(img, 255, png_get_image_width(png_ptr, info_ptr) * png_get_image_height(png_ptr, info_ptr) * 4);
++		for (rowptr = 0, i = 0; i < png_get_image_height(png_ptr, info_ptr); i++) {
++			for (j = 0; j < png_get_rowbytes(png_ptr, info_ptr); j += png_get_channels(png_ptr, info_ptr)) {
++				memcpy(img + rowptr, row_pointers[i] + j, png_get_channels(png_ptr, info_ptr));
+ 				rowptr += 4;
+ 			}
+ 		}
+ 	}
+ 
+ 	if (width)
+-		*width = info_ptr->width;
++		*width = png_get_image_width(png_ptr, info_ptr);
+ 	if (height)
+-		*height = info_ptr->height;
+-	samples = info_ptr->channels;
++		*height = png_get_image_height(png_ptr, info_ptr);
++	samples = png_get_channels(png_ptr, info_ptr);
+ 
+ 	png_destroy_read_struct(&png_ptr, &info_ptr, &end_info);
  
 @@ -651,17 +651,6 @@ static void jpg_skip_input_data (j_decom
  	cinfo->src->bytes_in_buffer -= (size_t) num_bytes;
