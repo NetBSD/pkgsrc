@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/01/15 17:09:50 minskim Exp $
+$NetBSD: distinfo,v 1.5 2011/04/05 17:47:17 minskim Exp $
 
-SHA1 (pgpool-2.7.tar.gz) = 25963c9956c5cb00019a38b2f89c0e8b4830b153
-RMD160 (pgpool-2.7.tar.gz) = c143f763f978b93faa23d5b5b0b87ff34975bb4a
-Size (pgpool-2.7.tar.gz) = 153554 bytes
-SHA1 (patch-aa) = 868af0f14b2f03921e2ad2301658a4d3466586ae
+SHA1 (pgpool-3.4.1.tar.gz) = 55027bfb0437b4edea38a480163e32762698c48a
+RMD160 (pgpool-3.4.1.tar.gz) = ba409a8b2b424272cd458e689ea94234f9bc3f42
+Size (pgpool-3.4.1.tar.gz) = 201509 bytes
+SHA1 (patch-aa) = 3e222f3c8b82ff317c7e628ce3e6e8554d0a49cc

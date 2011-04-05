@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2006/01/15 17:09:51 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2011/04/05 17:47:17 minskim Exp $
 
 --- Makefile.in.orig	2006-01-02 16:33:53.000000000 -0800
 +++ Makefile.in
-@@ -177,7 +177,7 @@ pgpool_SOURCES = pool.h version.h pgpool
- 	pool_process_query.c pool_stream.c pool_connection_pool.c pool_params.c \
- 	pool_signal.h pool_signal.c
+@@ -184,7 +184,7 @@ pgpool_SOURCES = pool.h version.h pgpool
+ 	pool_hba.c pool_list.h pool_list.c pool_path.h pool_path.c \
+ 	pool_type.h pool_ip.h pool_ip.c pool_hba.conf.sample pgpool.pam
  
--sysconf_DATA = pgpool.conf.sample
+-sysconf_DATA = pgpool.conf.sample pool_hba.conf.sample
 +sysconf_DATA = 
+ pkgdata_DATA = pgpool.pam
  AM_CPPFLAGS = -Wall -Wmissing-prototypes -Wmissing-declarations -D_GNU_SOURCE
- all: config.h
- 	$(MAKE) $(AM_MAKEFLAGS) all-am
+ man_MANS = pgpool.8

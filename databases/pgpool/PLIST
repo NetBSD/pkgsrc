@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/11 16:40:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/05 17:47:17 minskim Exp $
 bin/pgpool
+man/man8/pgpool.8
 share/examples/pgpool.conf.sample
+share/examples/pool_hba.conf.sample
+share/pgpool/pgpool.pam
