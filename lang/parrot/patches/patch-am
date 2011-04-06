@@ -1,4 +1,10 @@
-$NetBSD: patch-am,v 1.1 2011/04/06 11:22:57 he Exp $
+$NetBSD: patch-am,v 1.2 2011/04/06 11:25:31 he Exp $
+
+Perl uses stat(2) and lstat(2) directly, and those system calls may
+not fill in st_rdev, leaving garbage behind.  Parrot, on the other hand,
+sets the st_rdev member always to 0 in stat_buf_to_array() in dynpmc/os.pmc,
+so compensate for this by zeroing the st_rdev member from the perl stat
+and lstat operations.
 
 --- t/dynpmc/os.t.orig	2011-03-15 08:01:43.000000000 +0000
 +++ t/dynpmc/os.t
