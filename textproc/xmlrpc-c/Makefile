@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2011/02/22 14:23:24 adam Exp $
+# $NetBSD: Makefile,v 1.19 2011/04/06 07:45:47 adam Exp $
 
-DISTNAME=	xmlrpc-c-1.06.42
+DISTNAME=	xmlrpc-c-1.16.34
 # the "super stable" branch
 PKGNAME=	${DISTNAME:S/-c-/-c-ss-/}
 CATEGORIES=	textproc devel
@@ -34,7 +34,7 @@ PTHREAD_LINKFLAGS=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_MESSAGE.pthread=	Fixing config scripts.
-SUBST_FILES.pthread=	xmlrpc-c-config.in xmlrpc-c-config.test.in
+SUBST_FILES.pthread=	xmlrpc-c-config.* xmlrpc-c-config.test.*
 SUBST_SED.pthread=	-e 's/-lpthread/${PTHREAD_LINKFLAGS:Q}/'
 SUBST_SED.pthread+=	-e 's/-L\(.\)libdir/-L\1libdir ${COMPILER_RPATH_FLAG}\1libdir/'
 
