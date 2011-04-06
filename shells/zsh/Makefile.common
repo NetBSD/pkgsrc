@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2011/04/05 15:03:44 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.60 2011/04/06 11:27:59 ryoon Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -81,12 +81,13 @@ PLIST.terminfo=	yes
 .endif
 
 ### curses
+.if empty(MACHINE_PLATFORM:MNetBSD-[0-9]*)
 CHECK_BUILTIN.curses=	yes
 .include "../../mk/curses.builtin.mk"
 .if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss])
 PLIST.curses=	yes
 .endif
-
+.endif
 
 ################################################################################
 
