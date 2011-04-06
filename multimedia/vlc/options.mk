@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2011/04/02 16:20:38 taca Exp $
+# $NetBSD: options.mk,v 1.21 2011/04/06 08:14:21 sborrill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl pulseaudio x11 gnome
@@ -110,12 +110,13 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-qt4 \
-			--enable-x11 \
+			--with-x \
 			--enable-glx \
 			--enable-snapshot
 PLIST.x11=		yes
 .else
-CONFIGURE_ARGS+=	--disable-x11 \
+CONFIGURE_ARGS+=	--without-x \
+			--disable-xcb \
 			--disable-qt4 \
 			--disable-glx \
 			--disable-snapshot
