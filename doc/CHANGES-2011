@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.816 2011/04/03 14:03:06 chs Exp $
+$NetBSD: CHANGES-2011,v 1.816.2.1 2011/04/06 18:12:35 tron Exp $
 
 PLEASE NOTE: we're in the pkgsrc freeze for 2011Q1.
 
@@ -1371,7 +1371,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ap-auth-mysql to 4.3.9 [wiz 2011-04-01]
 	Updated www/ap-auth-mysql to 4.3.9nb1 [wiz 2011-04-01]
 	Updated net/snort to 2.8.5.1 [gdt 2011-04-01]
-	Updated lang/vala to 0.11.7 [ahoka 2011-04-01]
 	Updated www/varnish to 2.1.5 [zafer 2011-04-01]
 	Updated net/filezilla to 3.4.0 [zafer 2011-04-01]
 	Updated converters/bibtex2html to 1.96 [markd 2011-04-01]
