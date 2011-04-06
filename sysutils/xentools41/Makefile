@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/06 09:10:26 cegger Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/06 10:03:01 cegger Exp $
 #
 
 VERSION=		4.1.0
@@ -25,6 +25,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 # XXX add version check: Xen requires dev86 >= 0.16.14
 BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
+BUILD_DEPENDS+= ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 PKG_SYSCONFSUBDIR=	xen
 
@@ -157,6 +158,5 @@ CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .include "../../devel/ncurses/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
-.include "../../devel/ocaml-findlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
