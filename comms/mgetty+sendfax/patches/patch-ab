@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
+$NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
 
---- Makefile.orig	2007-06-15 13:15:56.000000000 +0200
+--- Makefile.orig	2010-06-05 09:48:22.000000000 +0000
 +++ Makefile
-@@ -4,8 +4,8 @@
- #
- # this is the C compiler to use (on SunOS, the standard "cc" does not
+@@ -6,8 +6,8 @@
  # grok my code, so please use gcc there. On ISC 4.0, use "icc".).
+ #
+ # if you are cross-compiling, this is the C compiler for the target platform
 -CC=gcc
 -#CC=cc
 +#CC=gcc
 +CC=cc
  #
- #### C Compiler Flags ####
- #
-@@ -102,7 +102,7 @@ CC=gcc
+ # if you are cross-compiling, *this* needs to be the C compiler that 
+ # is able to produce binaries that run on the local system (if not 
+@@ -109,7 +109,7 @@ HOSTCC=$(CC)
  #	    USTAT	  - ustat(), no statfs etc.
  #
  #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  #CFLAGS=-O -DSVR4
  #CFLAGS=-O -DSVR4 -DSVR42
  #CFLAGS=-O -DUSE_POLL
-@@ -144,7 +144,7 @@ CFLAGS=-O2 -Wall -pipe
+@@ -151,7 +151,7 @@ CFLAGS=-O2 -Wall -pipe
  # For Linux, add "-lutil" if the linker complains about "updwtmp".
  #
  LDFLAGS=
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  #LIBS=-lprot -lsocket				# SCO Unix
  #LIBS=-lsocket
  #LIBS=-lbsd					# OSF/1
-@@ -164,8 +164,8 @@ LIBS=
+@@ -171,8 +171,8 @@ LIBS=
  #
  # if your systems doesn't have one, use the shell script that I provide
  # in "inst.sh" (taken from X11R5). Needed on IRIX5.2
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  #INSTALL=/usr/ucb/install -c -o bin -g bin	# AIX, Solaris 2.x
  #INSTALL=installbsd -c -o bin -g bin		# OSF/1, AIX 4.1, 4.2
  #INSTALL=/usr/bin/X11/bsdinst -c -o bin 	# IRIX
-@@ -258,12 +258,12 @@ AWK=awk
+@@ -265,12 +265,12 @@ AWK=awk
  # and the "tkperl" frontends without PERL, so don't worry if you don't
  # have it.
  # If you specify command line arguments (-w), don't forget the quotes!
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  #
  #
  # An echo program that understands escapes like "\n" for newline or
-@@ -275,9 +275,9 @@ TKPERL=/usr/bin/tkperl
+@@ -282,9 +282,9 @@ TKPERL=/usr/bin/tkperl
  # please use the "mg.echo" program provided in the compat/ subdirectory.
  # Set ECHO="mg.echo" and INSTALL_MECHO to mg.echo
  #
@@ -69,7 +69,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  
  #
  # for mgetty, that's it. If you want to use the voice
-@@ -285,7 +285,7 @@ ECHO="echo"
+@@ -292,7 +292,7 @@ ECHO="echo"
  
  # To maintain security, I recommend creating a new group for
  # users who are allowed to manipulate the recorded voice messages.
@@ -78,16 +78,16 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  PHONE_PERMS=770
  
  # Add -DNO_STRSTR to CFLAGS if you don't have strstr().
-@@ -317,7 +317,7 @@ SFAXOBJ=sendfax.o logfile.o locks.o mode
+@@ -324,7 +324,7 @@ SFAXOBJ=sendfax.o logfile.o locks.o mode
  
- all:	bin-all doc-all
+ all:	bin-all doc-man-only
  
 -bin-all: mgetty sendfax newslock sedscript subdirs call-back 
 +bin-all: mgetty sendfax newslock sedscript subdirs call-back vgetty
  
  # a few C files need extra compiler arguments
  
-@@ -560,8 +560,8 @@ newslock: compat/newslock.c
+@@ -572,8 +572,8 @@ newslock: compat/newslock.c
  # internal: use this to create a "clean" mgetty+sendfax tree
  bindist: all doc-all sedscript
  	-rm -rf bindist
@@ -98,7 +98,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  		BINDIR=$$bd$(BINDIR) SBINDIR=$$bd$(SBINDIR) \
  		LIBDIR=$$bd$(LIBDIR) CONFDIR=$$bd$(CONFDIR) \
  		spool=$$bd$(spool) FAX_SPOOL=$$bd$(FAX_SPOOL) \
-@@ -573,7 +573,7 @@ bindist: all doc-all sedscript
+@@ -585,7 +585,7 @@ bindist: all doc-all sedscript
  	cd bindist; gtar cvvfz mgetty$(MR).$(SR)-bin.tgz *
  
  
@@ -107,7 +107,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
  
  install.bin: mgetty sendfax newslock \
  		login.config mgetty.config sendfax.config 
-@@ -581,7 +581,7 @@ install.bin: mgetty sendfax newslock \
+@@ -593,7 +593,7 @@ install.bin: mgetty sendfax newslock \
  # binaries
  #
  	-test -d $(BINDIR)  || ( ./mkidirs $(BINDIR)  ; chmod 755 $(BINDIR)  )
@@ -115,4 +115,4 @@ $NetBSD: patch-ab,v 1.11 2009/10/02 19:21:59 is Exp $
 +	$(INSTALL) -s -m 755 newslock $(BINDIR)
  
  	-test -d $(SBINDIR) || ( ./mkidirs $(SBINDIR) ; chmod 755 $(SBINDIR) )
- 	-mv -f $(SBINDIR)/mgetty $(SBINDIR)/mgetty.old
+ 	if [ -f $(SBINDIR)/mgetty ] ; then \
