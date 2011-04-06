@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2009/11/09 13:29:53 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2011/04/06 07:45:48 adam Exp $
 
---- Makefile.common.orig	2007-07-13 02:32:20.000000000 +0200
-+++ Makefile.common
-@@ -28,15 +28,15 @@ GCC_CXX_WARNINGS = $(GCC_WARNINGS) -Wove
+--- common.mk.orig	2011-03-25 16:58:35.000000000 +0000
++++ common.mk
+@@ -31,15 +31,15 @@ GCC_CXX_WARNINGS = $(GCC_WARNINGS) -Wove
  # assertion and crash the program if it isn't really true.  You can add
  # -UNDEBUG (in any of various ways) to override this.
  #
@@ -21,21 +21,8 @@ $NetBSD: patch-aa,v 1.5 2009/11/09 13:29:53 joerg Exp $
 +  CXXFLAGS_COMMON += $(GCC_CXX_WARNINGS)
  endif
  
- DISTDIR = $(BUILDDIR)/$(PACKAGE)-$(VERSION)/$(SUBDIR)
-@@ -116,10 +116,8 @@ ifneq ($(ENABLE_LIBXML2_BACKEND),yes)
-   # We're using the internal Expat XML parser
-   LIBXMLRPC_XML = $(LIBXMLRPC_XMLPARSE) $(LIBXMLRPC_XMLTOK)
-   LDLIBS_XML = \
--        -L$(BUILDDIR)/lib/expat/xmlparse/.libs \
--	-lxmlrpc_xmlparse \
--        -L$(BUILDDIR)/lib/expat/xmltok/.libs \
--	-lxmlrpc_xmltok
-+        $(BUILDDIR)/lib/expat/xmlparse/libxmlrpc_xmlparse.la \
-+        $(BUILDDIR)/lib/expat/xmltok/libxmlrpc_xmltok.la
- else
-   LDLIBS_XML = $(shell xml2-config --libs)
- endif
-@@ -334,7 +332,7 @@ install-headers: $(HEADERS_TO_INSTALL)
+ DISTDIR = $(BLDDIR)/$(PACKAGE)-$(VERSION)/$(SUBDIR)
+@@ -524,7 +524,7 @@ install-headers: $(HEADERS_TO_INSTALL)
  	done
  
  
