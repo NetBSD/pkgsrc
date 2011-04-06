@@ -1,0 +1,24 @@
+$NetBSD: patch-ce,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+
+--- security/policytools.txt.orig	2008-08-01 16:38:07.000000000 +0200
++++ security/policytools.txt
+@@ -16,10 +16,10 @@ XML. Read in the user manual about the n
+ name is used by the Xen management tools to identify existing
+ policies. Creating the security policy means creating a policy
+ description in XML:
+-/etc/xen/acm-security/policies/example/chwall_ste/test-security_policy.xml.
++@XENDCONFDIR@/acm-security/policies/example/chwall_ste/test-security_policy.xml.
+ 
+ The policy XML description must follow the XML schema definition in
+-/etc/xen/acm-security/policies/security_policy.xsd. The policy tools
++@XENDCONFDIR@/acm-security/policies/security_policy.xsd. The policy tools
+ are written against this schema; they will create and refine policies
+ that conform to this scheme.
+ 
+@@ -144,5 +144,5 @@ policy file naming conventions based on 
+ choose to use.
+ 
+ To get a feel for the tool, you could use one of the example policy
+-definitions files from /etc/xen/acm-security/policies/example as
++definitions files from @XENDCONFDIR@/acm-security/policies/example as
+ input or a policy created by the xensec_ezpolicy tool.

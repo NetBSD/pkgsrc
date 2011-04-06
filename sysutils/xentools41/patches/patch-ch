@@ -1,0 +1,16 @@
+$NetBSD: patch-ch,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+
+--- xm-test/runtest.sh.orig	2008-08-01 16:38:07.000000000 +0200
++++ xm-test/runtest.sh
+@@ -220,9 +220,9 @@ unsafe=no
+ GROUPENTERED=default
+ 
+ #Prepare for usage with ACM
+-if [ -d /etc/xen/acm-security/policies ]; then
++if [ -d @XENDCONFDIR@/acm-security/policies ]; then
+ 	cp -f tests/security-acm/xm-test-security_policy.xml \
+-	      /etc/xen/acm-security/policies
++	      @XENDCONFDIR@/acm-security/policies
+ fi
+ 
+ unset XM_MANAGED_DOMAINS

@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+
+--- hotplug/NetBSD/vif-bridge.orig	2011-03-25 11:42:50.000000000 +0100
++++ hotplug/NetBSD/vif-bridge	2011-04-01 14:55:58.000000000 +0200
+@@ -23,7 +23,10 @@
+ 	xbridge=$(xenstore-read "$xpath/bridge")
+ 	xfid=$(xenstore-read "$xpath/frontend-id")
+ 	xhandle=$(xenstore-read "$xpath/handle")
+-	iface=$(xenstore-read "$xpath/vifname")
++ 	iface=$(xenstore-read "$xpath/vifname") || true
++	if [ x${iface} = "x" ] ; then
++		iface=xvif$xfid.$xhandle
++	fi
+ 	echo ifconfig $iface up
+ 	ifconfig $iface up
+ 	brconfig $xbridge add $iface

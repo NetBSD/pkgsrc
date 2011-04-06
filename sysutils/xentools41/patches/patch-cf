@@ -1,0 +1,17 @@
+$NetBSD: patch-cf,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+
+--- xm-test/tests/security-acm/Makefile.am.orig	2008-08-01 16:38:07.000000000 +0200
++++ xm-test/tests/security-acm/Makefile.am
+@@ -19,10 +19,10 @@ TESTS_ENVIRONMENT=@TENV@
+ %.test: %.py
+ 	cp $< $@
+ 	chmod +x $@
+-	@if [ -d /etc/xen/acm-security/policies ]; then \
++	@if [ -d @XENDCONFDIR@/acm-security/policies ]; then \
+ 		cp -f xm-test-security_policy.xml       \
+ 		      xm-test-update-security_policy.xml\
+-		      /etc/xen/acm-security/policies;   \
++		      @XENDCONFDIR@/acm-security/policies;   \
+ 	fi;
+ 
+ clean-local: am_config_clean-local
