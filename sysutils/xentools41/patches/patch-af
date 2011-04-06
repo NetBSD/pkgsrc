@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+
+--- firmware/etherboot/Makefile.orig	2011-03-25 10:42:50.000000000 +0000
++++ firmware/etherboot/Makefile
+@@ -34,18 +34,10 @@ eb-roms.h: Config
+ 	$(MAKE) NO_WERROR=1 $@.new
+ 	mv -f $@.new $@
+ 
+-$T:
+-	if ! wget -O _$T $(IPXE_TARBALL_URL); then \
+-		$(GIT) clone $(IPXE_GIT_URL) $D.git; \
+-		(cd $D.git && $(GIT) archive --format=tar --prefix=$D/ \
+-		$(IPXE_GIT_TAG) | gzip >../_$T); \
+-		rm -rf $D.git; \
+-	fi
+-	mv _$T $T
++$D:
++	ln -sf $(WRKSRC)/../../ipxe $D
+ 
+-$D/src/arch/i386/Makefile: $T Config
+-	rm -rf $D
+-	gzip -dc $T | tar xf -
++$D/src/arch/i386/Makefile: $D Config
+ 	for i in $$(cat patches/series) ; do                 \
+ 	    patch -d $D -p1 --quiet <patches/$$i || exit 1 ; \
+ 	done

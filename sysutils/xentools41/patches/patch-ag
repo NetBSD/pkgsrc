@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+
+--- ../config/NetBSD.mk.orig	2011-03-25 11:42:47.000000000 +0100
++++ ../config/NetBSD.mk	2011-03-31 17:21:05.000000000 +0200
+@@ -7,12 +7,12 @@
+ LIBEXEC = $(PREFIX)/libexec
+ PRIVATE_BINDIR = $(BINDIR)
+ 
++MANDIR = $(PREFIX)/man
++MAN1DIR = $(MANDIR)/man1
++MAN8DIR = $(MANDIR)/man8
++
+ DLOPEN_LIBS =
+ 
+-ifeq ($(PREFIX),/usr)
+-XEN_LOCK_DIR = /var/lib
+-else
+-XEN_LOCK_DIR = $(PREFIX)/var/lib
+-endif
++XEN_LOCK_DIR = $(VARBASE)/run
+ 
+ WGET = ftp

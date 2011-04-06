@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+
+--- xentrace/Makefile.orig	2010-04-07 16:12:05.000000000 +0000
++++ xentrace/Makefile
+@@ -43,6 +43,7 @@ install: build
+ 	[ -z "$(LIBBIN)" ] || $(INSTALL_PROG) $(LIBBIN) $(DESTDIR)$(PRIVATE_BINDIR)
+ 	$(INSTALL_DATA) $(MAN1) $(DESTDIR)$(MAN1DIR)
+ 	$(INSTALL_DATA) $(MAN8) $(DESTDIR)$(MAN8DIR)
++	$(INSTALL_DATA) formats $(DESTDIR)$(XEN_CONFIG_DIR)
+ 
+ .PHONY: clean
+ clean:
