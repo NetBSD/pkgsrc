@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/06 11:43:39 obache Exp $
+bin/swath
+man/man1/swath.1
+share/swath/swathdic.tri
