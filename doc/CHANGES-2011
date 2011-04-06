@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.864 2011/04/06 14:03:44 adam Exp $
+$NetBSD: CHANGES-2011,v 1.865 2011/04/06 14:09:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1435,3 +1435,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/ruby-tzinfo to 0.3.26 [taca 2011-04-06]
 	Updated devel/ncurses to 5.9 [adam 2011-04-06]
 	Updated devel/ncursesw to 5.9 [adam 2011-04-06]
+	Updated devel/scmgit to 1.7.4.3 [adam 2011-04-06]
+	Updated devel/scmgit-base to 1.7.4.3 [adam 2011-04-06]
+	Updated devel/scmgit-docs to 1.7.4.3 [adam 2011-04-06]
