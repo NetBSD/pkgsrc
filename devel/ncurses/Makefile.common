@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.15 2011/02/28 11:02:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2011/04/06 14:02:47 adam Exp $
 #
 # used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
-NC_VERS=	5.8
+NC_VERS=	5.9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/ \
@@ -39,12 +39,12 @@ MAKE_JOBS_SAFE=		no
 # We can only build groff if there is a builtin implementation of curses,
 # otherwise we get a circular dependency problem.
 # Additionally, Interix is special, see ../../mk/curses.buildlink3.mk
-. if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h)) || \
+.  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h)) || \
 	${OPSYS} == "Interix"
 # None was available, so disable use of tbl(1)
 USE_TOOLS:=		${USE_TOOLS:Ntbl}
 CONFIGURE_ARGS+=	--without-manpage-tbl
-. endif
+.  endif
 .endif
 
 .if ${OPSYS} == "SunOS"
