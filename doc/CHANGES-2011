@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.859 2011/04/06 13:01:57 obache Exp $
+$NetBSD: CHANGES-2011,v 1.860 2011/04/06 13:10:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1422,3 +1422,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/parrot to 3.2.0 [he 2011-04-06]
 	Added textproc/swath version 0.4.1 [obache 2011-04-06]
 	Added devel/msgpack version 0.5.5 [obache 2011-04-06]
+	Added net/zeromq version 2.0.11 [obache 2011-04-06]
