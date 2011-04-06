@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/04/05 18:27:08 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2011/04/06 08:10:22 obache Exp $
 
 DISTNAME=	empathy-2.34.0
 CATEGORIES=	chat gnome
@@ -19,6 +19,9 @@ USE_PKGLOCALEDIR=	yes
 CONFIGURE_ENV+=	YELL_CFLAGS=-I${WRKSRC}/telepathy-yell
 CONFIGURE_ENV+=	\
   YELL_LIBS="-L${WRKSRC}/telepathy-yell/telepathy-yell -ltelepathy-yell"
+
+# see pkgsrc/security/mozilla-rootcerts
+CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
