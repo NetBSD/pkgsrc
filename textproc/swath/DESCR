@@ -1,0 +1,8 @@
+Swath is a general-purpose utility to workaround the lack of such capability
+in applications.  It analyzes the given Thai text by consulting a Thai word
+list for word boundaries, before outputting the same text with the predefined
+word delimitors inserted.
+
+It can read many kinds of input, including plain text and structured documents
+like HTML, RTF, LaTeX and Lambda (Unicode version of LaTeX with Omega
+typesetter kernel).
