@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.573 2011/04/04 08:02:12 manu Exp $
+# $NetBSD: Makefile,v 1.574 2011/04/06 11:46:36 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -538,6 +538,7 @@ SUBDIR+=	suikyo
 SUBDIR+=	suikyo-conv-table
 SUBDIR+=	suikyo-docs
 SUBDIR+=	suikyo-elisp
+SUBDIR+=	swath
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-xml
