@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.861 2011/04/06 13:17:20 obache Exp $
+$NetBSD: CHANGES-2011,v 1.862 2011/04/06 13:36:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1424,3 +1424,11 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/msgpack version 0.5.5 [obache 2011-04-06]
 	Added net/zeromq version 2.0.11 [obache 2011-04-06]
 	Added textproc/groonga version 1.2.0 [obache 2011-04-06]
+	Updated devel/ruby-activesupport3 to 3.0.6 [taca 2011-04-06]
+	Updated devel/ruby-activemodel to 3.0.6 [taca 2011-04-06]
+	Updated devel/ruby-actionpack3 to 3.0.6 [taca 2011-04-06]
+	Updated databases/ruby-activerecord3 to 3.0.6 [taca 2011-04-06]
+	Updated www/ruby-activeresource3 to 3.0.6 [taca 2011-04-06]
+	Updated mail/ruby-actionmailer3 to 3.0.6 [taca 2011-04-06]
+	Updated devel/ruby-railties to 3.0.6 [taca 2011-04-06]
+	Updated www/ruby-rails3 to 3.0.6 [taca 2011-04-06]
