@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.855 2011/04/06 09:30:49 cegger Exp $
+$NetBSD: CHANGES-2011,v 1.856 2011/04/06 11:13:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1418,3 +1418,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/dhcpcd to 5.2.12 [roy 2011-04-06]
 	Added sysutils/xenkernel41 version 4.1.0 [cegger 2011-04-06]
 	Added sysutils/xentools41 version 4.1.0 [cegger 2011-04-06]
+	Updated devel/libthai to 0.1.15 [obache 2011-04-06]
