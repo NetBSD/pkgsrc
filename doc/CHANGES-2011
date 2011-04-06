@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.866 2011/04/06 21:02:50 is Exp $
+$NetBSD: CHANGES-2011,v 1.867 2011/04/06 21:51:28 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1439,3 +1439,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-base to 1.7.4.3 [adam 2011-04-06]
 	Updated devel/scmgit-docs to 1.7.4.3 [adam 2011-04-06]
 	Updated comms/mgetty+sendfax to 1.1.37 [is 2011-04-06]
+	Updated devel/libsigsegv to 2.10 [asau 2011-04-06]
