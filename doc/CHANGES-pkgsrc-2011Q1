@@ -1,5 +1,32 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.1 2011/04/03 23:01:21 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.2 2011/04/06 23:10:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
 
+Pullup ticket #3398 - requested by wiz
+lang/vala: Downgrade package as it breaks package depending on it.
+Pullup ticket #3400 - requested by wiz
+audio/gqmpeg-devel: build fix
+devel/teem: build fix
+games/ufoai: build fix
+graphics/tuxpaint: build fix
+lang/kaffe: build fix
+sysutils/xnc: build fix
+wm/afterstep: build fix
+www/chimera: build fix
+www/mMosaic: build fix
+x11/xcursorgen: build fix
+Pullup ticket #3401 - requested by taca
+databases/ruby-activerecord3: security update
+devel/ruby-activemodel: security update
+devel/ruby-activesupport3: security update
+devel/ruby-railties: security update
+lang/ruby: security update
+mail/ruby-actionmailer3: security update
+www/ruby-actionpack3: security update
+www/ruby-activeresource3: security update
+www/ruby-rails3: security update
+Pullup ticket #3402 - requested by joerg
+chat/gloox: build fix
+Pullup ticket #3403 - requested by joerg
+py-django-cms: build fix
