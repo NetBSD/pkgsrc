@@ -1,9 +1,9 @@
-$NetBSD: patch-.._activemodel.gemspec,v 1.1 2011/03/25 08:44:45 taca Exp $
+$NetBSD: patch-.._activemodel.gemspec,v 1.2 2011/04/06 13:24:48 taca Exp $
 
 Allow depending later version gem of builder.
 
---- ../activemodel-3.0.5.gemspec.orig	2011-02-28 08:08:29.000000000 +0000
-+++ ../activemodel-3.0.5.gemspec
+--- ../activemodel-3.0.6.gemspec.orig	2011-04-06 16:09:09.000000000 +0900
++++ ../activemodel-3.0.6.gemspec	2011-04-06 16:09:46.000000000 +0900
 @@ -40,7 +40,7 @@ dependencies: 
    requirement: &id002 !ruby/object:Gem::Requirement 
      none: false
