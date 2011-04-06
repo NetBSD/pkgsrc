@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.856 2011/04/06 11:13:46 obache Exp $
+$NetBSD: CHANGES-2011,v 1.857 2011/04/06 11:23:29 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1419,3 +1419,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/xenkernel41 version 4.1.0 [cegger 2011-04-06]
 	Added sysutils/xentools41 version 4.1.0 [cegger 2011-04-06]
 	Updated devel/libthai to 0.1.15 [obache 2011-04-06]
+	Updated lang/parrot to 3.2.0 [he 2011-04-06]
