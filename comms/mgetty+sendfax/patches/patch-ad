@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2006/03/20 04:09:37 jlam Exp $
+$NetBSD: patch-ad,v 1.8 2011/04/06 20:57:19 is Exp $
 
---- doc/Makefile.orig	2004-07-17 11:21:19.000000000 -0400
+--- doc/Makefile.orig	2009-02-18 08:15:59.000000000 +0000
 +++ doc/Makefile
 @@ -6,7 +6,7 @@
  NROFF=nroff
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.7 2006/03/20 04:09:37 jlam Exp $
  MAN5PAGES=faxqueue.5
 @@ -26,7 +26,7 @@ MAN_FMT_PRG=$(NROFF) -man
  
- all:
+ all: manpages fmt-manpages mgetty.texi
  
 -doc-all: mgetty.asc mgetty.info mgetty.dvi mgetty.ps fmt-manpages $(MANSRC) 
 +doc-all: mgetty.asc mgetty.info fmt-manpages $(MANSRC) 
