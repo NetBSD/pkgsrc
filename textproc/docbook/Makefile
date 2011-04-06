@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41.16.1 2011/04/05 23:45:47 gdt Exp $
+# $NetBSD: Makefile,v 1.41.16.2 2011/04/06 18:37:04 gdt Exp $
 
 DISTNAME=	docbook-4.4
 PKGREVISION=	3
@@ -40,7 +40,6 @@ SGML_CATALOGS+=	${PREFIX}/share/sgml/docbook/${ver}/catalog
 do-build:
 .for ver in 241 30 31 40 41 42 43 44
 	${CP} ${FILESDIR}/catalog${ver} ${WRKDIR}
-	${CHMOD} +w ${WRKDIR}/catalog${ver}
 	${ECHO} "CATALOG \"${ISOCAT}\"" >> ${WRKDIR}/catalog${ver}
 .endfor
 
