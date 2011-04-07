@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.62 2010/09/24 23:24:30 taca Exp $
+# $NetBSD: Makefile,v 1.63 2011/04/07 15:45:37 hauke Exp $
 
-DISTNAME=	mailman-2.1.12
-PKGREVISION=	2
+DISTNAME=	mailman-2.1.14-1
+PKGNAME=	mailman-2.1.14.1
 CATEGORIES=	mail www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailman/}
+MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.14/+download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.list.org/
 COMMENT=	The GNU Mailing List Manager
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -33,7 +34,7 @@ MAILMAN_MAILGROUP?=	daemon	# group sendmail runs under;
                                 # use 'nobody' for postfix
 MAILMAN_CGIEXT?=	.cgi
 
-MESSAGE_SUBST+=		EXECDIR=${EXECDIR}
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
 MESSAGE_SUBST+=		MAILMAN_USER=${MAILMAN_USER}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 PLIST_SUBST+=		MAILMAN_CGIEXT=${MAILMAN_CGIEXT:S/none//}
@@ -125,6 +126,7 @@ post-install:
 	done
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailman.conf.dist ${DESTDIR}${EGDIR}/mailman.conf
+	${INSTALL_DATA} ${WRKSRC}/cron/crontab.in ${DESTDIR}${EGDIR}/crontab.in
 	${CHOWN} -R root:${MAILMAN_GROUP} ${DESTDIR}${EXECDIR}
 	${CHMOD} -R g+w ${DESTDIR}${EXECDIR}
 	${CHMOD} g+s ${DESTDIR}${EXECDIR}/cgi-bin/*
