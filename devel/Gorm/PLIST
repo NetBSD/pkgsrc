@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 17:48:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/04/07 02:20:30 rh Exp $
 bin/Gorm
 include/GormCore/GormBoxEditor.h
 include/GormCore/GormClassEditor.h
@@ -24,7 +24,9 @@ include/GormCore/GormImageInspector.h
 include/GormCore/GormInspectorsManager.h
 include/GormCore/GormInternalViewEditor.h
 include/GormCore/GormMatrixEditor.h
+include/GormCore/GormNSPanel.h
 include/GormCore/GormNSSplitViewInspector.h
+include/GormCore/GormNSWindow.h
 include/GormCore/GormObjectEditor.h
 include/GormCore/GormObjectInspector.h
 include/GormCore/GormOpenGLView.h
@@ -39,12 +41,14 @@ include/GormCore/GormResource.h
 include/GormCore/GormResourceEditor.h
 include/GormCore/GormResourceManager.h
 include/GormCore/GormScrollViewAttributesInspector.h
+include/GormCore/GormServer.h
 include/GormCore/GormSetNameController.h
 include/GormCore/GormSound.h
 include/GormCore/GormSoundEditor.h
 include/GormCore/GormSoundInspector.h
 include/GormCore/GormSoundView.h
 include/GormCore/GormSplitViewEditor.h
+include/GormCore/GormStandaloneViewEditor.h
 include/GormCore/GormViewEditor.h
 include/GormCore/GormViewKnobs.h
 include/GormCore/GormViewSizeInspector.h
