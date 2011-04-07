@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:48:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/04/07 01:41:31 rh Exp $
 bin/debugapp
 bin/gnustep-config
 bin/openapp
 bin/opentool
+man/man1/debugapp.1
+man/man1/gnustep-config.1
+man/man1/openapp.1
+man/man1/opentool.1
+man/man7/GNUstep.7
+man/man7/library-combo.7
 share/GNUstep/Makefiles/GNUstep-reset.sh
 share/GNUstep/Makefiles/GNUstep.csh
 share/GNUstep/Makefiles/GNUstep.sh
@@ -38,7 +44,6 @@ share/GNUstep/Makefiles/Instance/test-application.make
 share/GNUstep/Makefiles/Instance/test-library.make
 share/GNUstep/Makefiles/Instance/test-tool.make
 share/GNUstep/Makefiles/Instance/tool.make
-share/GNUstep/Makefiles/Master/aggregate.make
 share/GNUstep/Makefiles/Master/application.make
 share/GNUstep/Makefiles/Master/bundle.make
 share/GNUstep/Makefiles/Master/clibrary.make
@@ -53,9 +58,11 @@ share/GNUstep/Makefiles/Master/library.make
 share/GNUstep/Makefiles/Master/nsis.make
 share/GNUstep/Makefiles/Master/objc.make
 share/GNUstep/Makefiles/Master/palette.make
+share/GNUstep/Makefiles/Master/parallel-subdirectories.make
 share/GNUstep/Makefiles/Master/resource-set.make
 share/GNUstep/Makefiles/Master/rpm.make
 share/GNUstep/Makefiles/Master/rules.make
+share/GNUstep/Makefiles/Master/serial-subdirectories.make
 share/GNUstep/Makefiles/Master/service.make
 share/GNUstep/Makefiles/Master/source-distribution.make
 share/GNUstep/Makefiles/Master/subproject.make
@@ -104,10 +111,12 @@ share/GNUstep/Makefiles/nsi-app.template
 share/GNUstep/Makefiles/objc.make
 share/GNUstep/Makefiles/os.sh
 share/GNUstep/Makefiles/palette.make
+share/GNUstep/Makefiles/parallel-subdirectories.make
 share/GNUstep/Makefiles/print_unique_pathlist.sh
 share/GNUstep/Makefiles/relative_path.sh
 share/GNUstep/Makefiles/resource-set.make
 share/GNUstep/Makefiles/rules.make
+share/GNUstep/Makefiles/serial-subdirectories.make
 share/GNUstep/Makefiles/service.make
 share/GNUstep/Makefiles/spec-rules.template
 share/GNUstep/Makefiles/strip_makefiles.sh
@@ -120,12 +129,6 @@ share/GNUstep/Makefiles/test-tool.make
 share/GNUstep/Makefiles/tool.make
 share/GNUstep/Makefiles/vendor.sh
 share/examples/GNUstep/GNUstep.conf
-man/man1/debugapp.1
-man/man1/gnustep-config.1
-man/man1/openapp.1
-man/man1/opentool.1
-man/man7/GNUstep.7
-man/man7/library-combo.7
 @pkgdir share/GNUstep/Makefiles/${GNUSTEP_ARCH}
 @pkgdir share/GNUstep/Makefiles/Auxiliary
 @pkgdir share/GNUstep/Makefiles/Additional
