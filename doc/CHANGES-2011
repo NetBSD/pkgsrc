@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.876 2011/04/07 02:26:55 rh Exp $
+$NetBSD: CHANGES-2011,v 1.877 2011/04/07 04:04:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1449,3 +1449,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/Gorm to 1.2.12 [rh 2011-04-07]
 	Updated devel/ProjectCenter to 0.6.0 [rh 2011-04-07]
 	Updated meta-pkgs/gnustep to 2.4.0 [rh 2011-04-07]
+	Updated lang/perl5 to 5.12.2nb2 [taca 2011-04-07]
