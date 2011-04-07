@@ -1,17 +1,24 @@
-$NetBSD: patch-aa,v 1.14 2009/04/13 12:16:24 rh Exp $
+$NetBSD: patch-aa,v 1.15 2011/04/07 01:55:15 rh Exp $
 
---- configure.orig	2008-12-23 01:16:38.000000000 +1000
+--- configure.orig	2010-06-17 19:09:26.000000000 +0000
 +++ configure
-@@ -3806,12 +3806,12 @@ echo $ECHO_N "checking the Objective-C r
+@@ -5071,18 +5071,19 @@ echo $ECHO_N "checking the Objective-C r
  if test "$OBJC_RUNTIME_LIB" = "nx" -o "$OBJC_RUNTIME_LIB" = "apple"; then
-   echo "$as_me:$LINENO: result: NeXT" >&5
- echo "${ECHO_T}NeXT" >&6
+   { echo "$as_me:$LINENO: result: NeXT" >&5
+ echo "${ECHO_T}NeXT" >&6; }
 -  LIBOBJC='-lobjc'
 +  LIBOBJC='-lobjc @PTHREAD_LIBS@'
    OBJCFLAGS="-fnext-runtime -DNeXT_RUNTIME"
+ elif test "$OBJC_RUNTIME_LIB" = "gnugc"; then
+   { echo "$as_me:$LINENO: result: GNU" >&5
+ echo "${ECHO_T}GNU" >&6; }
+   LIBOBJC='-lobjc_gc -ldl -lgc'
++  LIBOBJC='-lobjc_gc -ldl -lgc @PTHREAD_LIBS@'
+   OBJCFLAGS="-fgnu-runtime"
+   OBJC_WITH_GC=yes
  else
-   echo "$as_me:$LINENO: result: GNU" >&5
- echo "${ECHO_T}GNU" >&6
+   { echo "$as_me:$LINENO: result: GNU" >&5
+ echo "${ECHO_T}GNU" >&6; }
 -  LIBOBJC='-lobjc'
 +  LIBOBJC='-lobjc @PTHREAD_LIBS@'
    OBJCFLAGS="-fgnu-runtime"
