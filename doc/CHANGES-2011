@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.871 2011/04/07 02:08:28 rh Exp $
+$NetBSD: CHANGES-2011,v 1.872 2011/04/07 02:13:25 rh Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1444,3 +1444,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/gnustep-make to 2.4.0 [rh 2011-04-07]
 	Updated devel/gnustep-base to 1.20.1 [rh 2011-04-07]
 	Updated x11/gnustep-gui to 0.18.0 [rh 2011-04-07]
+	Updated x11/gnustep-back to 0.18.0 [rh 2011-04-07]
