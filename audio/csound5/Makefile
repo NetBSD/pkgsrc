@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/07 08:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2011/04/07 09:23:10 wiz Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_src
@@ -12,14 +12,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/csound/
 COMMENT=		Software synthesizer and sequencer
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 CSOUND_VERSION=		5.01
 USE_LANGUAGES=		c c++
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=${PREFIX}/ -DBETA
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 # Severe LP64 problems
-NOT_FOR_PLATFORM=	${LP64PLATFORMS}
+#NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 SCONS=			${PREFIX}/bin/scons
 SCONS_ARGS=		-C ${WRKSRC} prefix=${PREFIX}
 SCONS_ARGS+=		buildDSSI=0 buildLoris=0 buildRelease=1
@@ -35,7 +33,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && SCONS_ENV="`${CAT} ${SCONS_ENV_FILE}`" && \
-		eval "${SETENV} $${SCONS_ENV} ${SCONS} ${SCONS_ARGS} prefix=${DESTDIR}${PREFIX} install"
+		eval "${SETENV} $${SCONS_ENV} ${SCONS} ${SCONS_ARGS} install"
 	cd ${DESTDIR}${PREFIX} && ${LN} -s ../lib/csound5/csound bin/csound5
 
 .include "../../audio/fluidsynth/buildlink3.mk"
