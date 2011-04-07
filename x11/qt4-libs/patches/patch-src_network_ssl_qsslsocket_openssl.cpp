@@ -1,3 +1,5 @@
+$NetBSD: patch-src_network_ssl_qsslsocket_openssl.cpp,v 1.2 2011/04/07 05:23:52 obache Exp $
+
 From b87528a71b66e786c11804d7b79e408aae612748 Mon Sep 17 00:00:00 2001
 From: Peter Hartmann <peter.hartmann@nokia.com>
 Date: Fri, 25 Mar 2011 13:45:24 +0100
@@ -30,6 +32,3 @@ index 0866534..2427193 100644
  
      // Start translating errors.
      QList<QSslError> errors;
--- 
-1.6.1
-
