@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.868 2011/04/07 00:21:26 asau Exp $
+$NetBSD: CHANGES-2011,v 1.869 2011/04/07 01:42:27 rh Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1441,3 +1441,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/mgetty+sendfax to 1.1.37 [is 2011-04-06]
 	Updated devel/libsigsegv to 2.10 [asau 2011-04-06]
 	Updated math/mpfr to 3.0.1 [asau 2011-04-07]
+	Updated devel/gnustep-make to 2.4.0 [rh 2011-04-07]
