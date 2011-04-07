@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10248 2011/04/06 21:51:28 asau Exp $
+$NetBSD: TODO,v 1.10249 2011/04/07 15:46:52 hauke Exp $
 
 Suggested new packages
 ======================
@@ -932,7 +932,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
-	o mailman-2.1.14
 	o mailscanner-4.74
 	o maketool-0.8.4
 	o makeztxt-1.60
