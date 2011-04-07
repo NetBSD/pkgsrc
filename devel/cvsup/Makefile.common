@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2009/06/13 06:46:41 rillig Exp $
+# $NetBSD: Makefile.common,v 1.14 2011/04/07 13:17:14 wiz Exp $
 # used by devel/cvsup/Makefile
 # used by devel/cvsup-gui/Makefile
 
@@ -47,9 +47,9 @@ AUTO_MKDIRS=			yes
 EGDIR=		${PREFIX}/share/examples/cvsup
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cvsup ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/License ${PREFIX}/share/doc/cvsup
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cvsup ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/License ${DESTDIR}${PREFIX}/share/doc/cvsup
 	${INSTALL_DATA} ${FILESDIR}/*cvsup* \
-		${EGDIR}
+		${DESTDIR}${EGDIR}
 
 .include "../../lang/ezm3/buildlink3.mk"
