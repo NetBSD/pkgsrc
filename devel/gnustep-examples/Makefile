@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2010/01/24 13:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2011/04/07 02:17:00 rh Exp $
 #
 
-DISTNAME=	gnustep-examples-1.2.0
-PKGREVISION=	1
+DISTNAME=	gnustep-examples-1.3.0
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -17,7 +16,6 @@ USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
-MAKE_JOBS_SAFE=	no
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
