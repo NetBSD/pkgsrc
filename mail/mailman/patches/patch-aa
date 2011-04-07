@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2010/06/28 09:29:40 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2011/04/07 15:45:37 hauke Exp $
 
---- misc/Makefile.in.orig	2009-02-23 21:23:35.000000000 +0000
+Add missing DESTDIR bits.
+
+--- misc/Makefile.in.orig	2011-03-01 20:35:57.000000000 +0000
 +++ misc/Makefile.in
 @@ -41,7 +41,7 @@ DEFS=   	@DEFS@
  OPT=		@OPT@
@@ -11,17 +13,16 @@ $NetBSD: patch-aa,v 1.6 2010/06/28 09:29:40 joerg Exp $
  ICONDIR=	$(prefix)/icons
  SCRIPTSDIR=	$(prefix)/scripts
  
-@@ -91,14 +91,15 @@ install-other:
+@@ -91,7 +91,7 @@ install-other:
  	$(INSTALL) -m $(FILEMODE) sitelist.cfg $(DESTDIR)$(DATADIR)
  
  install-packages:
--	if [ -z "$(EMAILPKG)" -a -d $(PYTHONLIBDIR)/email ] ; \
+-	if [ -z "$(EMAILPKG)" -a -d $(DESTDIR)$(PYTHONLIBDIR)/email ] ; \
 +	if [ -z "$(DESTDIR)$(EMAILPKG)" -a -d $(DESTDIR)$(PYTHONLIBDIR)/email ] ; \
  	then \
--	    rm -rf $(PYTHONLIBDIR)/email* ; \
-+	    rm -rf $(DESTDIR)$(PYTHONLIBDIR)/email* ; \
+ 	    rm -rf $(DESTDIR)$(PYTHONLIBDIR)/email* ; \
  	fi
- 	for p in $(PACKAGES); \
+@@ -99,6 +99,7 @@ install-packages:
  	do \
  	    gunzip -c $(srcdir)/$$p.tar.gz | (cd $(PKGDIR) ; tar xf -); \
  	    (cd $(PKGDIR)/$$p ; umask 02 ; PYTHONPATH=$(PYTHONLIBDIR) $(PYTHON) $(SETUPCMD)); \

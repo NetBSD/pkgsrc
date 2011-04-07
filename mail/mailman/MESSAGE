@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2011/04/07 13:57:23 hauke Exp $
+$NetBSD: MESSAGE,v 1.6 2011/04/07 15:45:37 hauke Exp $
 
 Mailman needs to know your mail domain and Web server hostname.  Edit
 ${PREFIX}/lib/mailman/Mailman/mm_cfg.py and insert your hostname
@@ -16,10 +16,12 @@ to make mailman and its archive accessible through, respectively,
 	http://www.domain.com/pipermail/
 
 You will also need to add some crontab entries for the user ${MAILMAN_USER}.
-You can use ${EXECDIR}/cron/crontab.in as template.
+You can use ${EGDIR}/crontab.in as template.
 
-See the files in ${DOCDIR} for how to use mailman, especially
-the file ${DOCDIR}/mailman-install.txt and, if you are upgrading 
-an existing mailman installation, ${DOCDIR}/UPGRADING.
+See the files in ${DOCDIR} for how to use mailman,
+especially the file ${DOCDIR}/mailman-install.txt.
+
+If you are upgrading an existing mailman installation,
+see ${DOCDIR}/UPGRADING.
 
 ===========================================================================

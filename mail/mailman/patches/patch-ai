@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.5 2011/04/07 15:45:37 hauke Exp $
+
+Install the sample crontab under share/examples/mailman, 
+not into a binaries directory.
+
+--- cron/Makefile.in.orig	2011-03-01 20:35:57.000000000 +0000
++++ cron/Makefile.in
+@@ -59,10 +59,6 @@ FILEMODE=	644
+ all:
+ 
+ install:
+-	for f in $(FILES); \
+-	do \
+-	    $(INSTALL) -m $(FILEMODE) $$f $(DESTDIR)$(CRONDIR); \
+-	done
+ 	for f in $(PROGRAMS); \
+ 	do \
+ 	    $(INSTALL) -m $(EXEMODE) $(BUILDDIR)/$$f $(DESTDIR)$(CRONDIR); \

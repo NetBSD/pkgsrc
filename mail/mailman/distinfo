@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.19 2010/09/24 23:24:30 taca Exp $
+$NetBSD: distinfo,v 1.20 2011/04/07 15:45:37 hauke Exp $
 
-SHA1 (mailman-2.1.12.tgz) = 6d6281f7ce322e271f0259321f4d8931ff46e6ae
-RMD160 (mailman-2.1.12.tgz) = 94d8d132bb37180bf4c02ccd2a5fb3862ce13b94
-Size (mailman-2.1.12.tgz) = 8010027 bytes
-SHA1 (patch-aa) = 3f32d6de2e05c638b6915d64bbc7a70e12ce4470
+SHA1 (mailman-2.1.14-1.tgz) = 390874c1059878b33be9ab4cf57fdb719eac1819
+RMD160 (mailman-2.1.14-1.tgz) = 0d86e766e28aaab9703bfe530b72316a5b02beda
+Size (mailman-2.1.14-1.tgz) = 8201308 bytes
+SHA1 (patch-aa) = 9684b1caeb52f31ee6967eae3f9a464de214879e
 SHA1 (patch-ab) = 39f6294e53110bd1fd09b1e90ab46820f4d48e3f
 SHA1 (patch-ad) = 665884b9dd1789e4abd430c762bdbfd707d48d30
 SHA1 (patch-ae) = 6c17de398014217be8f1c7a3b3a6f8d379fc0fb2
 SHA1 (patch-af) = 985a619a055151d998cefd0c1b7280a0d55f889e
-SHA1 (patch-ag) = 5fda86a90ef17a08c304ae89f0934812601d5dfc
+SHA1 (patch-ag) = fac40640db483c2e9db3a79ec0696dc60596e453
 SHA1 (patch-ah) = c7cde35f787c003ace550a98d8d5e166ba2d48dc
-SHA1 (patch-ak) = d010a4bb1d7468ddf02ff22dbb3662a41045f8a2
-SHA1 (patch-al) = e07e6b77b4fea57683f79807ad9b9b2677e56b9e
+SHA1 (patch-ai) = f3afeba664b0cca27f160fde3b94c7b7f8498e57
