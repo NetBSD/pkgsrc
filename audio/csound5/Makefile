@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/01/13 13:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/07 08:37:24 wiz Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_src
@@ -11,6 +11,8 @@ WRKSRC=			${WRKDIR}/Csound${CSOUND_VERSION}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/csound/
 COMMENT=		Software synthesizer and sequencer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CSOUND_VERSION=		5.01
 USE_LANGUAGES=		c c++
@@ -25,14 +27,16 @@ SCONS_ARGS+=		useALSA=0 useJack=0 useOSC=0 usePortMIDI=0
 SCONS_ARGS+=		usePortAudio=0
 SCONS_ENV_FILE=		${WRKDIR}/ugly-pkgsrc-scons-hack.txt
 
+INSTALLATION_DIRS=	bin
+
 do-build:
 	${ECHO} ${MAKE_ENV:Q} >${SCONS_ENV_FILE}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}
 
 do-install:
 	cd ${WRKSRC} && SCONS_ENV="`${CAT} ${SCONS_ENV_FILE}`" && \
-		eval "${SETENV} $${SCONS_ENV} ${SCONS} ${SCONS_ARGS} install"
-	cd ${PREFIX} && ${LN} -s ../lib/csound5/csound bin/csound5
+		eval "${SETENV} $${SCONS_ENV} ${SCONS} ${SCONS_ARGS} prefix=${DESTDIR}${PREFIX} install"
+	cd ${DESTDIR}${PREFIX} && ${LN} -s ../lib/csound5/csound bin/csound5
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
