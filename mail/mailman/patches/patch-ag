@@ -1,4 +1,7 @@
-$NetBSD: patch-ag,v 1.2 2008/06/29 07:47:03 kim Exp $
+$NetBSD: patch-ag,v 1.3 2011/04/07 15:45:37 hauke Exp $
+
+Mandate setgid bits on directories only when we install
+on !BSD
 
 --- bin/check_perms.orig	2008-04-21 21:28:22.000000000 +0300
 +++ bin/check_perms	2008-06-29 09:06:30.000000000 +0300
