@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:48:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/04/07 02:17:00 rh Exp $
 bin/Calculator
 bin/CurrencyConverter
 bin/GSTest
 bin/Ink
-bin/MyGL
 bin/NSBrowserTest
 bin/NSImageTest
 bin/NSPanelTest
@@ -27,6 +26,9 @@ lib/GNUstep/ApplicationSupport/GSTest/NSAnimation-test.bundle/stamp.make
 lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle/NSBox-test
 lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle/Resources/Info-gnustep.plist
 lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSButton-test.bundle/NSButton-test
+lib/GNUstep/ApplicationSupport/GSTest/NSButton-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSButton-test.bundle/stamp.make
 lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle/NSColorList-test
 lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle/Resources/Info-gnustep.plist
 lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle/stamp.make
@@ -36,6 +38,9 @@ lib/GNUstep/ApplicationSupport/GSTest/NSColorWell-test.bundle/stamp.make
 lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle/NSForm-test
 lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle/Resources/Info-gnustep.plist
 lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSOpenPanel-test.bundle/NSOpenPanel-test
+lib/GNUstep/ApplicationSupport/GSTest/NSOpenPanel-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSOpenPanel-test.bundle/stamp.make
 lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle/NSOutlineView-test
 lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle/Resources/Info-gnustep.plist
 lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle/stamp.make
@@ -95,15 +100,9 @@ lib/GNUstep/Applications/Ink.app/Resources/FileIcon_rtf.tiff
 lib/GNUstep/Applications/Ink.app/Resources/FileIcon_txt.tiff
 lib/GNUstep/Applications/Ink.app/Resources/Info-gnustep.plist
 lib/GNUstep/Applications/Ink.app/Resources/Ink.desktop
+lib/GNUstep/Applications/Ink.app/Resources/Ink_app.ico
 lib/GNUstep/Applications/Ink.app/Resources/Ink_app.tiff
 lib/GNUstep/Applications/Ink.app/stamp.make
-lib/GNUstep/Applications/MyGL.app/MyGL
-lib/GNUstep/Applications/MyGL.app/Resources/Info-gnustep.plist
-lib/GNUstep/Applications/MyGL.app/Resources/MyGL.desktop
-lib/GNUstep/Applications/MyGL.app/Resources/MyGL.gorm/data.classes
-lib/GNUstep/Applications/MyGL.app/Resources/MyGL.gorm/data.info
-lib/GNUstep/Applications/MyGL.app/Resources/MyGL.gorm/objects.gorm
-lib/GNUstep/Applications/MyGL.app/stamp.make
 lib/GNUstep/Applications/NSBrowserTest.app/NSBrowserTest
 lib/GNUstep/Applications/NSBrowserTest.app/Resources/Info-gnustep.plist
 lib/GNUstep/Applications/NSBrowserTest.app/Resources/NSBrowserTest.desktop
