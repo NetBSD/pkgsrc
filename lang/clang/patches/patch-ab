@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2010/10/21 13:52:16 adam Exp $
+$NetBSD: patch-ab,v 1.2 2011/04/07 09:26:33 adam Exp $
 
---- docs/Makefile.orig	2010-07-29 12:46:24.000000000 +0000
+--- docs/Makefile.orig	2011-02-11 07:43:27.000000000 +0000
 +++ docs/Makefile
-@@ -46,20 +46,19 @@ install-local:: $(install_targets)
+@@ -53,13 +53,12 @@ endif
  # 'make generated BUILD_FOR_WEBSITE=1'
- generated:: doxygen ocamldoc
+ generated:: $(generated_targets)
  
 -install-html: $(PROJ_OBJ_DIR)/html.tar.gz
 +install-html:
@@ -17,29 +17,3 @@ $NetBSD: patch-ab,v 1.1 2010/10/21 13:52:16 adam Exp $
  
  $(PROJ_OBJ_DIR)/html.tar.gz: $(HTML)
  	$(Echo) Packaging HTML documentation
- 	$(Verb) $(RM) -rf $@ $(PROJ_OBJ_DIR)/html.tar
- 	$(Verb) cd $(PROJ_SRC_DIR) && \
- 	  $(TAR) cf $(PROJ_OBJ_DIR)/html.tar *.html
--	$(Verb) $(GZIP) $(PROJ_OBJ_DIR)/html.tar
-+	$(Verb) $(GZIPBIN) $(PROJ_OBJ_DIR)/html.tar
- 
- install-doxygen: doxygen
- 	$(Echo) Installing doxygen documentation
-@@ -82,7 +81,7 @@ $(PROJ_OBJ_DIR)/doxygen.tar.gz: $(DOXYFI
- 	$(Echo) Packaging doxygen documentation
- 	$(Verb) $(RM) -rf $@ $(PROJ_OBJ_DIR)/doxygen.tar
- 	$(Verb) $(TAR) cf $(PROJ_OBJ_DIR)/doxygen.tar doxygen
--	$(Verb) $(GZIP) $(PROJ_OBJ_DIR)/doxygen.tar
-+	$(Verb) $(GZIPBIN) $(PROJ_OBJ_DIR)/doxygen.tar
- 	$(Verb) $(CP) $(PROJ_OBJ_DIR)/doxygen.tar.gz $(PROJ_OBJ_DIR)/doxygen/html/
- 
- userloc: $(LLVM_SRC_ROOT)/docs/userloc.html
-@@ -104,7 +103,7 @@ ocamldoc: regen-ocamldoc
- 	$(Echo) Packaging ocamldoc documentation
- 	$(Verb) $(RM) -rf $(PROJ_OBJ_DIR)/ocamldoc.tar*
- 	$(Verb) $(TAR) cf $(PROJ_OBJ_DIR)/ocamldoc.tar ocamldoc
--	$(Verb) $(GZIP) $(PROJ_OBJ_DIR)/ocamldoc.tar
-+	$(Verb) $(GZIPBIN) $(PROJ_OBJ_DIR)/ocamldoc.tar
- 	$(Verb) $(CP) $(PROJ_OBJ_DIR)/ocamldoc.tar.gz $(PROJ_OBJ_DIR)/ocamldoc/html/
- 
- regen-ocamldoc:
