@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.879 2011/04/07 15:36:40 adam Exp $
+$NetBSD: CHANGES-2011,v 1.880 2011/04/07 15:46:51 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1452,3 +1452,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/perl5 to 5.12.2nb2 [taca 2011-04-07]
 	Updated security/policykit-gnome to 0.9.2nb6 [obache 2011-04-07]
 	Updated lang/clang to 2.9 [adam 2011-04-07]
+	Updated mail/mailman to 2.1.14.1 [hauke 2011-04-07]
