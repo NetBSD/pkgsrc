@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2010/01/24 13:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2011/04/07 02:23:06 rh Exp $
 
-DISTNAME=	ProjectCenter-0.5.0
-PKGREVISION=	1
+DISTNAME=	ProjectCenter-0.6.0
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 
@@ -15,13 +14,14 @@ PKG_DESTDIR_SUPPORT=	destdir
 USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	no
 MAKE_FILE=	GNUmakefile
 
 SUBST_CLASSES+=		gmake
 SUBST_STAGE.gmake=	post-patch
-SUBST_FILES.gmake=	Framework/GNUmakefile.preamble
-SUBST_SED.gmake=	-e 's|.which gmake.|${GMAKE:Q}|g'
+SUBST_FILES.gmake+=	Framework/GNUmakefile.preamble
+SUBST_FILES.gmake+=	Modules/Preferences/Build/PCBuildPrefs.h
+SUBST_SED.gmake+=	-e 's|.(GMAKE)|${GMAKE:Q}|g'
+SUBST_SED.gmake+=	-e 's|/usr/bin/make|${GMAKE:Q}|g'
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
