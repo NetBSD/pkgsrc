@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.313 2011/01/31 08:18:44 sbd Exp $
+# $NetBSD: bsd.prefs.mk,v 1.314 2011/04/07 08:08:45 wiz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -424,12 +424,9 @@ do-install:
 	@${DO_NADA}
 .endif
 
-# PKG_DESTDIR_SUPPORT can only be one of "destdir" or "user-destdir".
-.if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
+# After 2011Q1, the default is to use DESTDIR.
 USE_DESTDIR?=		yes
-.else
-USE_DESTDIR?=		no
-.endif
+# PKG_DESTDIR_SUPPORT can only be one of "destdir" or "user-destdir".
 PKG_DESTDIR_SUPPORT?=	# empty
 
 .if empty(PKG_DESTDIR_SUPPORT) || empty(USE_DESTDIR:M[Yy][Ee][Ss])
@@ -445,7 +442,9 @@ _USE_DESTDIR=		destdir
 PKG_FAIL_REASON+=	"PKG_DESTDIR_SUPPORT must be \`\`destdir'' or \`\`user-destdir''."
 .endif
 
-.if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no" && empty(PKG_DESTDIR_SUPPORT)
+# This stanza serves to warn the user; deciding to not build
+# non-DESTDIR-capable packages when not in DESTDIR mode is above.
+.if empty(PKG_DESTDIR_SUPPORT)
 WARNINGS+=	"[bsd.prefs.mk] The package ${PKGNAME} is missing DESTDIR support."
 .endif
 
