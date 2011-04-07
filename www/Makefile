@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.789 2011/03/15 13:19:59 pettai Exp $
+# $NetBSD: Makefile,v 1.790 2011/04/07 06:09:54 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -519,6 +519,7 @@ SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-PasteDeploy
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-blosxom
+SUBDIR+=	py-cherrypy
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
 SUBDIR+=	py-django
