@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/05 18:13:17 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/07 12:28:02 wiz Exp $
 #
 
 DISTNAME=	folks-0.4.2
+PKGNAME=	lib${DISTNAME}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/folks/0.4/}
 EXTRACT_SUFX=	.tar.bz2
