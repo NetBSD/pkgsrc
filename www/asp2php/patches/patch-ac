@@ -1,16 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2004/07/11 00:31:25 salo Exp $
+$NetBSD: patch-ac,v 1.2 2011/04/08 12:23:04 obache Exp $
 
---- src/jscript/Makefile.orig	2003-03-26 19:35:11.000000000 +0100
-+++ src/jscript/Makefile	2004-07-11 02:14:17.000000000 +0200
-@@ -1,8 +1,8 @@
+--- src/jscript/Makefile.orig	2006-11-26 15:24:44.000000000 +0000
++++ src/jscript/Makefile
+@@ -1,9 +1,9 @@
+ 
  
 -CC=gcc
 -LD=ld
 +#CC=gcc
 +#LD=ld
- #FLAGS=-DDEBUG
--CFLAGS=-Wall
-+#CFLAGS=-Wall
+ #DEBUG=-DDEBUG
+-FLAGS=-s -O2 -Wall $(DEBUG)
++FLAGS=$(CFLAGS) $(DEBUG)
  
- default:
- 	$(CC) -c conditionals_j.c $(CFLAGS) $(FLAGS)
+ #PATH=/opt/xmingw/bin:/usr/bin
+ #CC=i386-mingw32msvc-gcc
