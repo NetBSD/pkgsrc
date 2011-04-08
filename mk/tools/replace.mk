@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.230 2011/01/19 13:05:39 jym Exp $
+# $NetBSD: replace.mk,v 1.231 2011/04/08 23:06:51 tez Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -453,7 +453,13 @@ MAKEFLAGS+=			TOOLS_IGNORE.gtar=
 TOOLS_DEPENDS.gtar?=		gtar-base>=1.13.25:../../archivers/gtar-base
 TOOLS_CREATE+=			gtar
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gtar=gtar-base
+.    if defined(GTAR_PROGRAM_PREFIX)
+TOOLS_PATH.gtar=		${TOOLS_PREFIX.gtar}/bin/${GTAR_PROGRAM_PREFIX}tar
+.    elif defined(GNU_PROGRAM_PREFIX) && ${GNU_PROGRAM_PREFIX} != ""
 TOOLS_PATH.gtar=		${TOOLS_PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar
+.    else
+TOOLS_PATH.gtar=		${TOOLS_PREFIX.gtar}/bin/gtar
+.    endif
 .  endif
 .endif
 
