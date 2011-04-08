@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.11 2009/12/15 18:56:01 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2011/04/08 22:37:24 morr Exp $
 
-SHA1 (nagios-3.1.2.tar.gz) = 91d6e0dc19b4f09d1c0c7d4220bc69df8af07b1b
-RMD160 (nagios-3.1.2.tar.gz) = cb633f316cc6108a9b4fe387b3e8097a2e8546a9
-Size (nagios-3.1.2.tar.gz) = 3172982 bytes
-SHA1 (patch-aa) = 1079c24f0d42b69522ca04ab91e77cf53065e63d
-SHA1 (patch-ab) = 0f5b7ab0d13be9eca22ffed921ee8e22e3f8fa1b
-SHA1 (patch-ac) = ac60819f5c4f9b385637a6c8d0b5dd62622c2622
-SHA1 (patch-ad) = 72565abe365a4488d519169822bfcad7a6cc2eba
-SHA1 (patch-ae) = e1f80e7b0496d19545321f9d05306cfcd0f9af31
-SHA1 (patch-af) = 8041ca50021a41bdd7897363f6ea68afdddaab28
-SHA1 (patch-ag) = 9904acb53998a9efeecf37efe722e61a3edf2053
-SHA1 (patch-ah) = 88122296f9d74648c3dadbd7f6e12e7ef1f32081
-SHA1 (patch-ai) = 738039e46af95a035bf0220eaa5c621938b651fd
+SHA1 (nagios-3.2.3.tar.gz) = fcb2c016c1b803bac71442d0ee8375b737906421
+RMD160 (nagios-3.2.3.tar.gz) = 3c09034069416c5f4dd5071e34516b1154c276b2
+Size (nagios-3.2.3.tar.gz) = 3249447 bytes
+SHA1 (patch-aa) = d56ae45ad54b43fe28e1d83fe916f04e8f8741a7
+SHA1 (patch-ab) = 37beee7195879806a2cd44cde2f376e07fc13470
+SHA1 (patch-ac) = cb2c6a28fc4d46eb41c942998251171ddd946bf2
+SHA1 (patch-ad) = 22d2a083f485e0da323403a2e27d6ee83e8cea27
+SHA1 (patch-ae) = 35418dbe26f2e7c14d6a98951e62247344ae80b0
+SHA1 (patch-af) = a91ab37f16e8adda3146a2dde7273ebf841ef9af
+SHA1 (patch-ag) = ae2811e97fc91e937ef240fc671c069181c97861
+SHA1 (patch-ah) = 3e73f1256f2364855598a94092744968b88c78e6
+SHA1 (patch-ai) = 9212106c141be6faaf65e4e4909fcf92907c0e58

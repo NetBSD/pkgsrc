@@ -1,6 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2010/04/07 17:57:41 joerg Exp $
+# $NetBSD: Makefile.common,v 1.11 2011/04/08 22:37:24 morr Exp $
 #
 # used by net/nagios-base/Makefile
+# used by net/nagios-nsca/Makefile
+# used by net/nagios-plugins/Makefile.common
+# used by net/nagios-plugin-ldap/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 

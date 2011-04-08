@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2009/12/15 18:56:02 bouyer Exp $
+$NetBSD: patch-ag,v 1.7 2011/04/08 22:37:25 morr Exp $
 
---- configure.orig	2009-06-23 19:40:46.000000000 +0200
-+++ configure	2009-12-15 17:03:08.000000000 +0100
-@@ -6061,7 +6061,7 @@
+--- configure.orig	2010-10-04 03:56:55.000000000 +0000
++++ configure
+@@ -6239,7 +6239,7 @@ else
  fi
  
  if test x$CHECKRESULTDIR = xno; then
