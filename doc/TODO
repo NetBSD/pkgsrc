@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10249 2011/04/07 15:46:52 hauke Exp $
+$NetBSD: TODO,v 1.10250 2011/04/08 11:35:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -570,7 +570,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fakeroot-1.6.5
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o fd-3.00d
 	o feh-1.12
 	o festival-1.96
 	o felt-3.07
