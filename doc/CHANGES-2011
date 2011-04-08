@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.887 2011/04/08 12:56:50 adam Exp $
+$NetBSD: CHANGES-2011,v 1.888 2011/04/08 14:11:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1463,3 +1463,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/py-uwsgi to 0.9.7.2 [adam 2011-04-08]
 	Updated textproc/py-markdown to 2.0.3 [adam 2011-04-08]
 	Updated devel/py-cheetah to 2.4.4 [adam 2011-04-08]
+	Updated net/isc-dhcp4 to 4.2.1p1 [taca 2011-04-08]
+	Updated net/isc-dhclient4 to 4.2.1p1 [taca 2011-04-08]
+	Updated net/isc-dhcpd4 to 4.2.1p1 [taca 2011-04-08]
+	Updated net/isc-dhcrelay4 to 4.2.1p1 [taca 2011-04-08]
