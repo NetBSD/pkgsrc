@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1.1.1 2007/04/13 20:06:21 bouyer Exp $
+$NetBSD: patch-am,v 1.2 2011/04/08 22:49:49 morr Exp $
 
---- contrib/check_mssql.sh.orig	2003-08-05 09:56:13.000000000 +0000
+--- contrib/check_mssql.sh.orig	2010-07-27 20:47:15.000000000 +0000
 +++ contrib/check_mssql.sh
 @@ -35,10 +35,10 @@ pswd=$3
  srv=$4
