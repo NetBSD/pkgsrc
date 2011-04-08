@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2008/12/21 21:24:08 adrianp Exp $
+$NetBSD: patch-ac,v 1.2 2011/04/08 14:09:24 taca Exp $
 
---- includes/dhcpd.h.orig	2007-12-08 19:36:00.000000000 +0000
+* Honor PKG_SYSCONFDIR and PREFIX.
+
+--- includes/dhcpd.h.orig	2010-12-03 20:32:14.000000000 +0000
 +++ includes/dhcpd.h
-@@ -1241,7 +1241,7 @@ typedef unsigned char option_mask [16];
+@@ -1386,7 +1386,7 @@ typedef unsigned char option_mask [16];
  #else /* !DEBUG */
  
  #ifndef _PATH_DHCPD_CONF
@@ -11,7 +13,7 @@ $NetBSD: patch-ac,v 1.1 2008/12/21 21:24:08 adrianp Exp $
  #endif /* DEBUG */
  
  #ifndef _PATH_DHCPD_DB
-@@ -1263,11 +1263,11 @@ typedef unsigned char option_mask [16];
+@@ -1408,11 +1408,11 @@ typedef unsigned char option_mask [16];
  #endif /* DEBUG */
  
  #ifndef _PATH_DHCLIENT_CONF
