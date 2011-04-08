@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.16 2010/11/24 18:54:55 drochner Exp $
+# $NetBSD: Makefile.common,v 1.17 2011/04/08 14:30:15 drochner Exp $
 #
 # used by devel/py-gobject/Makefile
 # used by devel/py-gobject-shared/Makefile
 
-DISTNAME=		pygobject-2.26.0
+DISTNAME=		pygobject-2.28.3
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.28/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pygtk.org/
