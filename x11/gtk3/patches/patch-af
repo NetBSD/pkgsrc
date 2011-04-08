@@ -1,43 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2011/03/18 17:06:10 drochner Exp $
+$NetBSD: patch-af,v 1.2 2011/04/08 13:54:25 drochner Exp $
 
---- configure.orig	2011-03-14 16:33:02.000000000 +0000
+--- configure.orig	2011-03-23 20:31:51.000000000 +0000
 +++ configure
-@@ -18725,7 +18725,7 @@ GDK_WINDOWING=
- GIO_PACKAGE=gio-2.0
- PANGO_PACKAGES="pango pangocairo"
- 
--if test "x$enable_x11_backend" == xyes; then
-+if test "x$enable_x11_backend" = xyes; then
-   # GDK calls the xlib backend "x11," cairo calls it "xlib." Other
-   # backend names are identical.
-   cairo_backends="$cairo_backends cairo-xlib"
-@@ -18738,7 +18738,7 @@ if test "x$enable_x11_backend" == xyes; 
- #define GDK_WINDOWING_X11"
- fi
- 
--if test "x$enable_win32_backend" == xyes; then
-+if test "x$enable_win32_backend" = xyes; then
-   cairo_backends="$cairo_backends cairo-win32"
-   GDK_BACKENDS="$GDK_BACKENDS win32"
-   backend_immodules="$backend_immodules,ime"
-@@ -18765,7 +18765,7 @@ fi
- 
- fi
- 
--if test "x$enable_quartz_backend" == xyes; then
-+if test "x$enable_quartz_backend" = xyes; then
-   cairo_backends="$cairo_backends cairo-quartz"
-   GDK_BACKENDS="$GDK_BACKENDS quartz"
-   GDK_WINDOWING="$GDK_WINDOWING
-@@ -21503,7 +21503,7 @@ GTK_DEP_PACKAGES_FOR_X=
- GTK_DEP_LIBS_FOR_X=
- X_EXTENSIONS=
- 
--if test "x$enable_x11_backend" == xyes; then
-+if test "x$enable_x11_backend" = xyes; then
-   X_PACKAGES=fontconfig
- 
-   #
 @@ -21765,7 +21765,7 @@ _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
@@ -47,12 +11,3 @@ $NetBSD: patch-af,v 1.1.1.1 2011/03/18 17:06:10 drochner Exp $
  else
    LIBS="$ac_xsave_LIBS -R $x_libraries"
         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -22849,7 +22849,7 @@ rm -f core conftest.err conftest.$ac_obj
- fi
- 
- GTK_PACKAGES="atk cairo cairo-gobject gdk-pixbuf-2.0 gio-2.0"
--if test "x$enable_x11_backend" == xyes; then
-+if test "x$enable_x11_backend" = xyes; then
-   GTK_PACKAGES="$GTK_PACKAGES pangoft2"
- fi
- GTK_EXTRA_LIBS=
