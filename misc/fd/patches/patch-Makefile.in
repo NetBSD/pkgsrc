@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/04/08 11:34:45 obache Exp $
+
+* honor PKGMANDIR
+* let not to take __LANGDIR__ from ${LANG}
+
+--- Makefile.in.orig	2010-09-24 15:00:00.000000000 +0000
++++ Makefile.in
+@@ -13,11 +13,11 @@ BINTOP	= $(PREFIX)/bin
+ BINDIR	= $(BUILD)$(BINTOP)
+ DATATOP	= $(PREFIX)/share
+ DATADIR	= $(BUILD)$(DATATOP)/fd
+-MANTOP	= $(PREFIX)/man
++MANTOP	= $(PREFIX)/$(PKGMANDIR)
+ MANDIR	= $(BUILD)$(MANTOP)/man$(MANSEC)
+ CATDIR	= $(BUILD)$(MANTOP)/cat$(MANSEC)
+-JMANDIR	= $(BUILD)$(MANTOP)__LANGDIR__/man$(MANSEC)
+-JCATDIR	= $(BUILD)$(MANTOP)__LANGDIR__/cat$(MANSEC)
++JMANDIR	= $(BUILD)$(MANTOP)/${LANGDIR}/man$(MANSEC)
++JCATDIR	= $(BUILD)$(MANTOP)/${LANGDIR}/cat$(MANSEC)
+ IPKWDIR	= ./ipk.work
+ IPKTDIR	= ./ipk.tmp
+ DEPDIR	= ./depend.tmp
