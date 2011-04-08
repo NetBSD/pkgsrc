@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10250 2011/04/08 11:35:01 obache Exp $
+$NetBSD: TODO,v 1.10251 2011/04/08 12:23:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o arping-2.09
 	o asapm-3.1
 	o asc-2.4.0
-	o asp2php-0.77.3
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
