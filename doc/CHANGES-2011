@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.886 2011/04/08 12:37:26 taca Exp $
+$NetBSD: CHANGES-2011,v 1.887 2011/04/08 12:56:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1460,3 +1460,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/fd to 3.00j [obache 2011-04-08]
 	Updated www/asp2php to 0.77.3 [obache 2011-04-08]
 	Updated net/rsync to 3.0.8 [taca 2011-04-08]
+	Updated www/py-uwsgi to 0.9.7.2 [adam 2011-04-08]
+	Updated textproc/py-markdown to 2.0.3 [adam 2011-04-08]
+	Updated devel/py-cheetah to 2.4.4 [adam 2011-04-08]
