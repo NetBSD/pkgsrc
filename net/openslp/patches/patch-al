@@ -1,0 +1,27 @@
+$NetBSD: patch-al,v 1.1 2011/04/08 12:19:17 drochner Exp $
+
+CVE-2010-3609
+
+--- common/slp_message.c.orig	2005-03-02 17:00:31.000000000 +0000
++++ common/slp_message.c
+@@ -872,11 +872,20 @@ int ParseExtension(SLPBuffer buffer, SLP
+     int             extid;
+     int             nextoffset;
+     int             result  = SLP_ERROR_OK;
++    int		    bufsz = (int)(buffer->end - buffer->start);
+ 
+     nextoffset = message->header.extoffset;
+     while(nextoffset)
+     {
++	/* check for circular reference in list
++	 * if the size gets below zero, we know we're
++	 * reprocessing extensions in a loop.
++	 */
++	bufsz -= 5;
++	if (bufsz <= 0)
++	   return SLP_ERROR_PARSE_ERROR;
+         buffer->curpos = buffer->start + nextoffset;
++
+         if(buffer->curpos + 5 >= buffer->end)
+         {
+             /* Extension takes us past the end of the buffer */
