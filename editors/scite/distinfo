@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/11 14:42:46 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/04/08 14:01:08 drochner Exp $
 
-SHA1 (scite224.tgz) = 4e624655c28481507d44126a3c6dbf5bf9a7a244
-RMD160 (scite224.tgz) = a11dfc9251d804cd5f699bf1fe15688b65106544
-Size (scite224.tgz) = 1829813 bytes
+SHA1 (scite225.tgz) = 6b33f254cc4760fdd861223573524e270b735a0b
+RMD160 (scite225.tgz) = 3b86042411f2272fa87428883386e5a7e5d86653
+Size (scite225.tgz) = 1843570 bytes
 SHA1 (patch-aa) = 72bea1ac6869236e9a9608ea64d58d514d9181a6

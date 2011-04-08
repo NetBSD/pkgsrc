@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/11 14:42:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/08 14:01:08 drochner Exp $
 bin/SciTE
 share/applications/SciTE.desktop
 share/pixmaps/Sci48M.png
@@ -58,6 +58,7 @@ share/scite/lua.properties
 share/scite/matlab.properties
 share/scite/metapost.properties
 share/scite/mmixal.properties
+share/scite/modula3.properties
 share/scite/nimrod.properties
 share/scite/nncrontab.properties
 share/scite/nsis.properties
