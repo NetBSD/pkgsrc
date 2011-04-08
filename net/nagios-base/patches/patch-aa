@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2009/12/15 18:56:02 bouyer Exp $
+$NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
 
---- Makefile.in.orig	2009-06-17 05:57:21.000000000 +0200
-+++ Makefile.in	2009-12-15 16:53:59.000000000 +0100
-@@ -24,17 +24,16 @@
+--- Makefile.in.orig	2009-12-31 10:12:08.000000000 +0000
++++ Makefile.in
+@@ -24,17 +24,16 @@ prefix=@prefix@
  exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CHECKRESULTDIR=@CHECKRESULTDIR@
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/15 18:56:02 bouyer Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -64,66 +63,6 @@
+@@ -64,66 +63,6 @@ all:
  	cd $(SRC_BASE) && $(MAKE)
  	cd $(SRC_CGI) && $(MAKE)
  	cd $(SRC_HTM) && $(MAKE)
@@ -90,7 +90,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/15 18:56:02 bouyer Exp $
  
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
-@@ -214,14 +153,10 @@
+@@ -214,14 +153,10 @@ install-unstripped:
  	$(MAKE) install-basic
  
  install-basic:
@@ -107,7 +107,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/15 18:56:02 bouyer Exp $
  	@echo ""
  	@echo "*** Main program, CGIs and HTML files installed ***"
  	@echo ""
-@@ -241,20 +176,20 @@
+@@ -241,20 +176,20 @@ install-basic:
  
  
  install-config:
@@ -127,22 +127,22 @@ $NetBSD: patch-aa,v 1.7 2009/12/15 18:56:02 bouyer Exp $
 -
 +	[ -d $(DESTDIR)$(SAMPDIR) ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(SAMPDIR)
 +	[ -d $(DESTDIR)$(SAMPDIR)/objects ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(SAMPDIR)/objects
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/nagios.cfg $(DESTDIR)$(SAMPDIR)/nagios.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/cgi.cfg $(DESTDIR)$(SAMPDIR)/cgi.cfg-sample
-+	$(INSTALL) -m 640 $(INSTALL_OPTS) sample-config/resource.cfg $(DESTDIR)$(SAMPDIR)/resource.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/templates.cfg $(DESTDIR)$(SAMPDIR)/objects/templates.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/commands.cfg $(DESTDIR)$(SAMPDIR)/objects/commands.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/contacts.cfg $(DESTDIR)$(SAMPDIR)/objects/contacts.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/timeperiods.cfg $(DESTDIR)$(SAMPDIR)/objects/timeperiods.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/localhost.cfg $(DESTDIR)$(SAMPDIR)/objects/localhost.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/windows.cfg $(DESTDIR)$(SAMPDIR)/objects/windows.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/printer.cfg $(DESTDIR)$(SAMPDIR)/objects/printer.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/switch.cfg $(DESTDIR)$(SAMPDIR)/objects/switch.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/nagios.cfg $(DESTDIR)$(SAMPDIR)/nagios.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/cgi.cfg $(DESTDIR)$(SAMPDIR)/cgi.cfg-sample
++	${BSD_INSTALL_DATA} -m 640 sample-config/resource.cfg $(DESTDIR)$(SAMPDIR)/resource.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/templates.cfg $(DESTDIR)$(SAMPDIR)/objects/templates.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/commands.cfg $(DESTDIR)$(SAMPDIR)/objects/commands.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/contacts.cfg $(DESTDIR)$(SAMPDIR)/objects/contacts.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/timeperiods.cfg $(DESTDIR)$(SAMPDIR)/objects/timeperiods.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/localhost.cfg $(DESTDIR)$(SAMPDIR)/objects/localhost.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/windows.cfg $(DESTDIR)$(SAMPDIR)/objects/windows.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/printer.cfg $(DESTDIR)$(SAMPDIR)/objects/printer.cfg-sample
++	${BSD_INSTALL_DATA} -m 644 sample-config/template-object/switch.cfg $(DESTDIR)$(SAMPDIR)/objects/switch.cfg-sample
 +	
  	@echo ""
  	@echo "*** Config files installed ***"
  	@echo ""
-@@ -282,7 +217,10 @@
+@@ -282,7 +217,10 @@ install-daemoninit:
  
  
  install-commandmode:
