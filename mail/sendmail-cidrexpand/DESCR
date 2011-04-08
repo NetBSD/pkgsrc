@@ -1,0 +1,3 @@
+The 'cidrexpand' script (which ships with the Sendmail distribution)
+acts as a pre-parser on /etc/mail/access_db to allow you to use
+address/bit notation.
