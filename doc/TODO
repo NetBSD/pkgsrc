@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10252 2011/04/08 12:56:50 adam Exp $
+$NetBSD: TODO,v 1.10253 2011/04/08 14:11:34 taca Exp $
 
 Suggested new packages
 ======================
@@ -1156,7 +1156,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rpm-5.1.4
 	o rrdtool-1.4.5
 	o rsnapshot-1.3.1
-	o rsync-3.0.8
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rudiments-0.30
