@@ -1,17 +1,19 @@
-$NetBSD: patch-ad,v 1.6 2009/12/15 18:56:02 bouyer Exp $
+$NetBSD: patch-ad,v 1.7 2011/04/08 22:37:25 morr Exp $
 
---- html/Makefile.in.orig	2009-06-17 05:57:21.000000000 +0200
-+++ html/Makefile.in	2009-12-15 17:01:07.000000000 +0100
-@@ -7,7 +7,7 @@
+--- html/Makefile.in.orig	2009-07-07 22:34:51.000000000 +0000
++++ html/Makefile.in
+@@ -7,8 +7,8 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
 -CGIDIR=@sbindir@
+-HTMLDIR=@datadir@
 +CGIDIR=@libexecdir@
- HTMLDIR=@datarootdir@
++HTMLDIR=@datarootdir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -33,46 +33,45 @@
+ COMMAND_OPTS=@COMMAND_OPTS@
+@@ -33,46 +33,45 @@ distclean: clean
  devclean: distclean
  
  install:

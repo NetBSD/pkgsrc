@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.30 2011/01/13 13:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2011/04/08 22:37:24 morr Exp $
 #
 
-DISTNAME=		nagios-3.1.2
+DISTNAME=		nagios-3.2.3
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		4
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nagios.org/
 COMMENT=		Network monitor
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../net/nagios-base/Makefile.common"
@@ -25,18 +27,13 @@ CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP}
 CONFIGURE_ARGS+=	--with-command-user=${NAGIOS_USER}
 CONFIGURE_ARGS+=	--with-command-group=${NAGIOSCMD_GROUP}
 CONFIGURE_ARGS+=	--with-init-dir=${PREFIX}/share/examples/rc.d
-CONFIGURE_ARGS+=	--with-lockfile=/var/run/nagios.lock
+CONFIGURE_ARGS+=	--with-lockfile=/var/run/nagios/nagios.lock
 
 USE_TOOLS+=		mail:run perl
 CONFIGURE_ARGS+=	--with-mail=${TOOLS_PLATFORM.mail:Q}
 
 RCD_SCRIPTS+=		nagios
 FILES_SUBST+=		NAGIOS_USER=${NAGIOS_USER}
-# XXX Merge this into the package proper.
-# Nagios drops permissions before creating the log file, so the
-# default location doesn't work.  In the config file, change
-# lock_file=/var/run/nagios.lock to
-# lock_file=/var/run/nagios/nagios.lock
 
 INSTALL_TARGET=		install install-config
 
@@ -70,6 +67,7 @@ CONF_FILES+=		${EGDIR}/nagios.conf ${PKG_SYSCONFDIR}/nagios.conf
 OWN_DIRS_PERMS+=${NAGIOSDIR} ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 OWN_DIRS_PERMS+=${NAGIOSDIR}/archives ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 OWN_DIRS_PERMS+=${NAGIOSDIR}/rw ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0775
+OWN_DIRS_PERMS+=${NAGIOSDIR}/checkresults ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0775
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
@@ -81,7 +79,7 @@ pre-build:
 	${CP} ${FILESDIR}/nagios.conf.dist ${WRKSRC}/nagios.conf.dist
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/nagios.conf.dist ${EGDIR}/nagios.conf
+	${INSTALL_DATA} ${WRKSRC}/nagios.conf.dist ${DESTDIR}/${EGDIR}/nagios.conf
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
