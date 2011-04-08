@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.11 2009/03/05 18:51:28 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.12 2011/04/08 12:54:20 adam Exp $
 
-DISTNAME=		Cheetah-2.0.1
-PKGNAME=		${PYPKGPREFIX}-cheetah-2.0.1
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cheetahtemplate/}
+DISTNAME=	Cheetah-2.4.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	devel
+MASTER_SITES=	http://pypi.python.org/packages/source/C/Cheetah/
 
-CONFLICTS=		Cheetah-[0-9]*
-
-MAINTAINER=		shannonjr@NetBSD.org
-HOMEPAGE=		http://cheetahtemplate.sourceforge.net/
-COMMENT=		Python-powered template engine and code-generator
+MAINTAINER=	shannonjr@NetBSD.org
+HOMEPAGE=	http://www.cheetahtemplate.org/
+COMMENT=	Python-powered template engine and code-generator
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG=		yes
-PYSETUP=		setup.py
+CONFLICTS=	Cheetah-[0-9]*
+DEPENDS+=	${PYPKGPREFIX}-markdown>=2.0.1:../../textproc/py-markdown
 
-.include "../../lang/python/extension.mk"
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
+
+USE_LANGUAGES=		c
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
