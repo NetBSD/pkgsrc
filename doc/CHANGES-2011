@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.885 2011/04/08 12:23:20 obache Exp $
+$NetBSD: CHANGES-2011,v 1.886 2011/04/08 12:37:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1459,3 +1459,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/milter-manager to 1.6.7 [obache 2011-04-08]
 	Updated misc/fd to 3.00j [obache 2011-04-08]
 	Updated www/asp2php to 0.77.3 [obache 2011-04-08]
+	Updated net/rsync to 3.0.8 [taca 2011-04-08]
