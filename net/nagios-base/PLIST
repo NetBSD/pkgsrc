@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/12/15 18:56:01 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/04/08 22:37:24 morr Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -235,6 +235,7 @@ share/nagios/docs/index.html
 share/nagios/docs/int-snmptrap.html
 share/nagios/docs/int-tcpwrappers.html
 share/nagios/docs/integration.html
+share/nagios/docs/knownissues.html
 share/nagios/docs/largeinstalltweaks.html
 share/nagios/docs/macrolist.html
 share/nagios/docs/macros.html
@@ -321,6 +322,7 @@ share/nagios/images/restart.gif
 share/nagios/images/right.gif
 share/nagios/images/sblogo.png
 share/nagios/images/serviceevent.gif
+share/nagios/images/sflogo.png
 share/nagios/images/splunk1.gif
 share/nagios/images/splunk2.gif
 share/nagios/images/start.gif
@@ -368,3 +370,4 @@ share/nagios/stylesheets/summary.css
 share/nagios/stylesheets/tac.css
 share/nagios/stylesheets/trends.css
 @pkgdir share/nagios/ssi
+@pkgdir etc/nagios/objects
