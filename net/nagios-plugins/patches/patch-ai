@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+$NetBSD: patch-ai,v 1.2 2011/04/08 22:56:12 morr Exp $
 
---- plugins-scripts/subst.in.orig	2005-08-04 10:24:09.000000000 -0700
-+++ plugins-scripts/subst.in	2005-08-04 10:24:23.000000000 -0700
-@@ -9,13 +9,14 @@
+--- plugins-scripts/subst.in.orig	2010-07-27 20:47:16.000000000 +0000
++++ plugins-scripts/subst.in
+@@ -9,13 +9,14 @@ function which(c,path) {
  
  	sub(/\/.*\//,"",c);
    for (dir in path) {
