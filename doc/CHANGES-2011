@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.882 2011/04/08 07:29:30 adam Exp $
+$NetBSD: CHANGES-2011,v 1.883 2011/04/08 07:58:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit to 1.7.4.4 [adam 2011-04-08]
 	Updated devel/scmgit-base to 1.7.4.4 [adam 2011-04-08]
 	Updated devel/scmgit-docs to 1.7.4.4 [adam 2011-04-08]
+	Updated mail/milter-manager to 1.6.7 [obache 2011-04-08]
