@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2011/01/26 19:35:20 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2011/04/08 20:02:13 drochner Exp $
 
---- wscript.orig	2010-10-31 22:20:48.000000000 +0000
+--- wscript.orig	2011-03-13 22:03:35.000000000 +0000
 +++ wscript
-@@ -421,7 +421,7 @@ def build (bld):
-             'AUTHORS COPYING ChangeLog EXPAT README')
+@@ -407,7 +407,7 @@ def build (bld):
+             'AUTHORS COPYING ChangeLog EXPAT README data/faq.html data/faq.css')
  
      # Install default configuration
 -    bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + '/', 'data/search')
 +    bld.install_files ('${DESTDIR}${PREFIX}/share/examples/' + APPNAME + '/', 'data/search')
  
-     if bld.env['RST2HTML']:
-         # FIXME: Build only if needed
-@@ -508,13 +508,13 @@ def build (bld):
+     if bld.env['INTLTOOL']:
+         obj = bld.new_task_gen ('intltool_po')
+@@ -481,13 +481,13 @@ def build (bld):
                  if os.path.exists (source):
                      bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + \
                                         '/extensions/' + folder, source)
