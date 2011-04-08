@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:26:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/08 22:38:08 morr Exp $
 #
 
-PKGNAME=	nagios-imagepak-base-20030219
 DISTNAME=	imagepak-base
+PKGNAME=	nagios-imagepak-base-20030219
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagios/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nagios.org/
-COMMENT=	Additioannal icons for nagios
+COMMENT=	Additional icons for nagios
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	nagios-base>=2.0:../../net/nagios-base
 
 WRKSRC=		${WRKDIR}/base
 
-IMAGE_DIR=	${PREFIX}/share/nagios/images/logos
+IMAGE_DIR=	${DESTDIR}${PREFIX}/share/nagios/images/logos
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,6 +25,7 @@ do-build:
 
 do-install:
 	@@cd ${WRKSRC} && \
+	${INSTALL_DATA_DIR} ${IMAGE_DIR} && \
 	    for i in aix.gd2 aix.gif aix.jpg aix.png amiga.gd2 amiga.gif \
 	    amiga.jpg amiga.png apple.gd2 apple.gif apple.jpg apple.png \
 	    beos.gd2 beos.gif beos.jpg beos.png caldera.gd2 caldera.gif \
