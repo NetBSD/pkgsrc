@@ -1,24 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:30 joerg Exp $
-include/isc-dhcp/boolean.h
-include/isc-dhcp/commandline.h
-include/isc-dhcp/dst.h
-include/isc-dhcp/formatcheck.h
-include/isc-dhcp/int.h
-include/isc-dhcp/lang.h
-include/isc-dhcp/list.h
-include/isc-dhcp/mem.h
-include/isc-dhcp/print.h
-include/isc-dhcp/result.h
-include/isc-dhcp/string.h
-include/isc-dhcp/types.h
+@comment $NetBSD: PLIST,v 1.4 2011/04/08 14:09:23 taca Exp $
+@comment include/isc-dhcp/dst.h
 include/omapip/alloc.h
 include/omapip/buffer.h
 include/omapip/convert.h
 include/omapip/hash.h
+include/omapip/isclib.h
 include/omapip/omapip.h
 include/omapip/omapip_p.h
+include/omapip/result.h
 include/omapip/trace.h
-lib/libdst.a
+@comment lib/libdst.a
 man/man5/dhcp-eval.5
 man/man5/dhcp-options.5
 share/doc/isc-dhcp/README

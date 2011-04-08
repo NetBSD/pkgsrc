@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2010/06/25 21:56:46 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/08 14:09:24 taca Exp $
 #
 
 PKGNAME=	isc-dhcpd-${DHVER}
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Server
+BUILD_SUBDIR=	bind includes tests common omapip dhcpctl server
 SUBDIR=		omapip dhcpctl server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONF_FILES+=	${EGDIR}/dhcpd.conf ${PKG_SYSCONFDIR}/dhcpd.conf
+#CONF_FILES+=	${EGDIR}/dhcpd6.conf ${PKG_SYSCONFDIR}/dhcpd6.conf
 RCD_SCRIPTS=	isc_dhcpd
 FILES_SUBST+=	DHCP_HOME=${DHCP_HOME}
 
