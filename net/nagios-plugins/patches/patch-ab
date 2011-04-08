@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
+$NetBSD: patch-ab,v 1.7 2011/04/08 22:56:12 morr Exp $
 
---- configure.orig	2009-09-16 10:38:03.000000000 +0200
-+++ configure	2009-12-15 17:29:32.000000000 +0100
-@@ -1443,7 +1443,7 @@
- pdfdir='${docdir}'
- psdir='${docdir}'
- libdir='${exec_prefix}/lib'
--localedir='${datarootdir}/locale'
-+localedir='${datarootdir}/nagios/locale'
- mandir='${datarootdir}/man'
- 
- ac_prev=
-@@ -22562,7 +22562,7 @@
+--- configure.orig	2010-07-27 20:48:13.000000000 +0000
++++ configure
+@@ -14688,7 +14688,7 @@ _ACEOF
  
  fi
  
@@ -20,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
    EXTRAS="$EXTRAS check_radius"
  	RADIUSLIBS="-lradiusclient"
  
-@@ -22717,7 +22717,7 @@
+@@ -14843,7 +14843,7 @@ _ACEOF
  
  fi
  
@@ -29,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
    LDAPLIBS="-lldap -llber"\
    LDAPINCLUDE="-I/usr/include/ldap"
  
-@@ -26671,7 +26671,7 @@
+@@ -19037,7 +19037,7 @@ fi
  	then
  		{ echo "$as_me:$LINENO: checking for nslookup syntax" >&5
  echo $ECHO_N "checking for nslookup syntax... $ECHO_C" >&6; }
@@ -38,7 +29,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
  		then
  			ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
  			{ echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
-@@ -26894,7 +26894,7 @@
+@@ -19260,7 +19260,7 @@ echo "${ECHO_T}no" >&6; }
  fi
  
  
@@ -47,7 +38,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -27065,7 +27065,7 @@
+@@ -19431,7 +19431,7 @@ if test "${with_snmpget_command+set}" = 
    withval=$with_snmpget_command; PATH_TO_SNMPGET=$withval
  fi
  
@@ -56,7 +47,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -27124,7 +27124,7 @@
+@@ -19490,7 +19490,7 @@ if test "${with_snmpgetnext_command+set}
    withval=$with_snmpgetnext_command; PATH_TO_SNMPGETNEXT=$withval
  fi
  
@@ -65,7 +56,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -27133,7 +27133,7 @@
+@@ -19499,7 +19499,7 @@ _ACEOF
  
  fi
  
@@ -74,7 +65,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
  then
  	{ echo "$as_me:$LINENO: checking for Net::SNMP perl module" >&5
  echo $ECHO_N "checking for Net::SNMP perl module... $ECHO_C" >&6; }
-@@ -27300,7 +27300,7 @@
+@@ -19666,7 +19666,7 @@ if test "${with_fping_command+set}" = se
    withval=$with_fping_command; PATH_TO_FPING=$withval
  fi
  
@@ -83,12 +74,12 @@ $NetBSD: patch-ab,v 1.6 2011/01/25 22:22:14 shattered Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -28516,7 +28516,7 @@
+@@ -20882,7 +20882,7 @@ if test -n "$PATH_TO_APTGET" ; then
  fi
  
  
--if test -f plugins/check_nt.c ; then
+-if test -f $srcdir/plugins/check_nt.c ; then
 +if false ; then
    EXTRAS="$EXTRAS check_nt"
- elif test -f ../plugins/check_nt.c ; then
-   EXTRAS="$EXTRAS check_nt"
+ fi
+ 
