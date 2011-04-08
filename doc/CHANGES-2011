@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.890 2011/04/08 19:18:35 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.891 2011/04/08 20:07:14 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1469,3 +1469,11 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/isc-dhcrelay4 to 4.2.1p1 [taca 2011-04-08]
 	Updated mail/sendmail-cidrexpand to 8.14.4 [hauke 2011-04-08]
 	Updated mail/getmail to 4.20.1 [schmonz 2011-04-08]
+	Updated www/midori to 0.3.3 [drochner 2011-04-08]
+	Updated x11/py-gtk2 to 2.24.0 [drochner 2011-04-08]
+	Updated devel/py-gobject to 2.28.3 [drochner 2011-04-08]
+	Updated x11/qt4-qscintilla to 2.5 [drochner 2011-04-08]
+	Updated editors/scite to 2.25 [drochner 2011-04-08]
+	Updated devel/scintilla to 2.25 [drochner 2011-04-08]
+	Updated x11/gtk3 to 3.0.8 [drochner 2011-04-08]
+	Updated x11/xrdb to 1.0.9 [drochner 2011-04-08]
