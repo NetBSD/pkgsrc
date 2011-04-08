@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.889 2011/04/08 14:44:52 hauke Exp $
+$NetBSD: CHANGES-2011,v 1.890 2011/04/08 19:18:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1468,3 +1468,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/isc-dhcpd4 to 4.2.1p1 [taca 2011-04-08]
 	Updated net/isc-dhcrelay4 to 4.2.1p1 [taca 2011-04-08]
 	Updated mail/sendmail-cidrexpand to 8.14.4 [hauke 2011-04-08]
+	Updated mail/getmail to 4.20.1 [schmonz 2011-04-08]
