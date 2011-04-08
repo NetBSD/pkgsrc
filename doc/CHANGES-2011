@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.891 2011/04/08 20:07:14 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.892 2011/04/08 22:39:46 morr Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scintilla to 2.25 [drochner 2011-04-08]
 	Updated x11/gtk3 to 3.0.8 [drochner 2011-04-08]
 	Updated x11/xrdb to 1.0.9 [drochner 2011-04-08]
+	Updated net/nagios-base to 3.2.3 [morr 2011-04-09]
