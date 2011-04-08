@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2011/01/28 08:11:30 adam Exp $
+# $NetBSD: Makefile,v 1.29 2011/04/08 07:28:40 adam Exp $
 
 .include "../../devel/scmgit/Makefile.common"
 
-PKGNAME=		scmgit-base-${GIT_VERSION}
-COMMENT=		GIT Tree History Storage Tool (base package)
+PKGNAME=	scmgit-base-${GIT_VERSION}
+COMMENT=	GIT Tree History Storage Tool (base package)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -84,14 +84,12 @@ SUBST_STAGE.fix-cd-P=	pre-build
 SUBST_SED.fix-cd-P=	-e "s/cd -P/cd/g"
 .endif
 
-#.include "../../editors/emacs/modules.mk" # XXX TODO (see patch-ad)
-
 .include "options.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
