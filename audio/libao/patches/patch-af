@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2010/05/19 18:17:27 drochner Exp $
+$NetBSD: patch-af,v 1.5 2011/04/09 13:20:21 shattered Exp $
 
 --- src/plugins/alsa/ao_alsa.c.orig	2008-12-18 23:24:28.000000000 -0500
 +++ src/plugins/alsa/ao_alsa.c
@@ -11,5 +11,5 @@ $NetBSD: patch-af,v 1.4 2010/05/19 18:17:27 drochner Exp $
 +#endif
 +
  /* default 500 millisecond buffer */
- #define AO_ALSA_BUFFER_TIME 500000
+ #define AO_ALSA_BUFFER_TIME 100000
  
