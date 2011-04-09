@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2011/04/09 08:40:12 obache Exp $
+# $NetBSD: Makefile,v 1.51 2011/04/09 08:43:56 obache Exp $
 
 DISTNAME=		ettercap-0.6.b
 PKGREVISION=		9
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ettercap/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ettercap.sourceforge.net/
 COMMENT=		Multipurpose sniffer/interceptor/logger for switched LAN
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS+=		ettercap-NG-[0-9]*
 
