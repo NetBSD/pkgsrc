@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2011/03/22 23:31:04 tez Exp $
+# $NetBSD: Makefile,v 1.52 2011/04/09 00:16:18 tez Exp $
 
 DISTNAME=	krb5-1.8.3
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.8/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
@@ -85,5 +85,6 @@ post-install:
 		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
 	done
 
+BUILDLINK_API_DEPENDS.openssl+= openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
