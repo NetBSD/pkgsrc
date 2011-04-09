@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2009/07/06 22:35:22 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2011/04/09 08:58:51 obache Exp $
 
 --- src/Makefile.orig	2003-05-15 16:17:53.000000000 +0200
 +++ src/Makefile
@@ -25,29 +25,29 @@ $NetBSD: patch-aa,v 1.2 2009/07/06 22:35:22 joerg Exp $
 -	cp lablgtktop varcc $(INSTALLDIR)
 -	if test -f lablgtktop_t; then cp lablgtktop_t $(INSTALLDIR); fi
 -	cp -p *.h $(INSTALLDIR)
-+	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} ${INSTALLDIR}; fi
++	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} ${DESTDIR}${INSTALLDIR}; fi
 +	for F in $(ALLOBJS:.cmo=.cmi) $(THOBJS:.cmo=.cmi) *.mli \
 +		$(ALLOBJS:.cmo=.ml) $(ALLTHOBJS:.cmo=.ml) \
 +		$(MLLIBS) $(THOBJS) $(INITOBJS) $(THINITOBJS) $(CLIBS) *.h; \
 +	do \
-+	    ${BSD_INSTALL_DATA} $$F ${INSTALLDIR}; \
++	    ${BSD_INSTALL_DATA} $$F ${DESTDIR}${INSTALLDIR}; \
 +	done
-+	${BSD_INSTALL_SCRIPT} lablgtktop $(INSTALLDIR)
-+	${BSD_INSTALL_SCRIPT} varcc $(INSTALLDIR)
-+	if test -f lablgtktop_t; then ${BSD_INSTALL_SCRIPT} lablgtktop_t $(INSTALLDIR); fi
++	${BSD_INSTALL_SCRIPT} lablgtktop ${DESTDIR}$(INSTALLDIR)
++	${BSD_INSTALL_SCRIPT} varcc ${DESTDIR}$(INSTALLDIR)
++	if test -f lablgtktop_t; then ${BSD_INSTALL_SCRIPT} lablgtktop_t ${DESTDIR}$(INSTALLDIR); fi
  	if test -f lablgtk.cmxa; then $(MAKE) installopt; fi
-+	${BSD_INSTALL_DATA_DIR} $(DLLDIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(DLLDIR)
  	if test -f dlllablgtk.so; then \
 -	   if test -d $(DLLDIR); then : ; else mkdir -p $(DLLDIR); fi; \
 -	   cp $(CLIBS:lib%.a=dll%.so) $(DLLDIR) || \
 -	   echo "Couldn't install dlls in default location"; \
 +	   for F in $(CLIBS:lib%.a=dll%.so); \
 +	   do \
-+		${BSD_INSTALL_DATA} $$F $(DLLDIR); \
++		${BSD_INSTALL_DATA} $$F ${DESTDIR}$(DLLDIR); \
 +	   done; \
  	fi
 -	cp lablgtk $(BINDIR)
-+	${BSD_INSTALL_SCRIPT} lablgtk $(BINDIR)
++	${BSD_INSTALL_SCRIPT} lablgtk ${DESTDIR}$(BINDIR)
  	if test -f lablgladecc; then cp lablgladecc $(BINDIR); fi
  
  installopt:
@@ -58,13 +58,13 @@ $NetBSD: patch-aa,v 1.2 2009/07/06 22:35:22 joerg Exp $
 +	for F in $(MLLIBS:.cma=.cmxa) $(MLLIBS:.cma=.a) \
 +		$(ALLOBJS:.cmo=.cmx) $(INITOBJS:.cmo=.o); \
 +	do \
-+	    ${BSD_INSTALL_DATA} $$F $(INSTALLDIR); \
++	    ${BSD_INSTALL_DATA} $$F ${DESTDIR}$(INSTALLDIR); \
 +	done
  	if test -f gtkThread.cmx; then \
 -	   cp $(THOBJS:.cmo=.cmx) $(THOBJS:.cmo=.o) $(INSTALLDIR); fi
 +	    for F in $(THOBJS:.cmo=.cmx) $(THOBJS:.cmo=.o); \
 +	    do \
-+		${BSD_INSTALL_DATA} $$F $(INSTALLDIR); \
++		${BSD_INSTALL_DATA} $$F ${DESTDIR}$(INSTALLDIR); \
 +	    done; \
 +	fi
  
