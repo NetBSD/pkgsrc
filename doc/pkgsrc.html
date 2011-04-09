@@ -2139,21 +2139,21 @@ works.</p>
 <div class="sect1" title="5.3. Variables affecting the installation process">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="variables-affecting-installation"></a>5.3. Variables affecting the installation process</h2></div></div></div>
-<p>A growing number of packages support installation into a
+<p>Most packages support installation into a
     subdirectory of <code class="varname">WRKDIR</code>. This allows a package
     to be built, before the actual filesystem is touched. DESTDIR
     support exists in two variations:</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc">
 <li class="listitem"><p>Basic DESTDIR support means that the package
-      installation and packaging is still run as
-      root.</p></li>
-<li class="listitem"><p>Full DESTDIR support can run the complete build,
-      installation and packaging as normal user. Root privileges are
-      only needed to add packages.</p></li>
+      installation and packaging is still run as root.</p></li>
+<li class="listitem"><p>Full DESTDIR support can run the complete
+      build, installation and packaging as normal user. Root
+      privileges are only needed to add packages.</p></li>
 </ul></div>
-<p>To use the DESTDIR support, set
-    <code class="varname">USE_DESTDIR=yes</code> to get the full support for packages
-    that support it and with fallback to basic support. </p>
+<p>DESTDIR support is now the default. To switch back to non-DESTDIR,
+    you can set
+    <code class="varname">USE_DESTDIR=no</code>; this setting will be deprecated though,
+    so it's preferable to convert a package to DESTDIR instead.</p>
 <p>DESTDIR support changes the behaviour of various targets
     slightly. To install a package after building it, use
     <code class="literal">package-install</code>. <code class="literal">package</code> and
@@ -7521,7 +7521,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168230185389"></a><dl>
+<a name="id1168229346836"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7538,7 +7538,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230185393"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168229346839"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7548,7 +7548,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230185401"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168229346848"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7559,7 +7559,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230185411"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168229346857"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9571,7 +9571,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168230172265"></a><dl>
+<a name="id1168229333677"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9614,7 +9614,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230172268"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168229333681"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9630,7 +9630,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230172302"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168229333783"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9648,7 +9648,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230172339"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168229333819"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9666,7 +9666,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230172374"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168229333854"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9679,7 +9679,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230172392"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168229333873"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9695,7 +9695,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230172418"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168229333898"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9719,7 +9719,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230172485"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168229333965"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9744,7 +9744,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230172517"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168229333997"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9792,7 +9792,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230172571"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168229334052"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
