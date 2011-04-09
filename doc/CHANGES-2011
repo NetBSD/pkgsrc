@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.895 2011/04/09 13:22:27 shattered Exp $
+$NetBSD: CHANGES-2011,v 1.896 2011/04/09 14:59:10 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1482,3 +1482,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/nagios-plugins to 1.4.15 [morr 2011-04-09]
 	Updated www/wordpress to 3.1.1 [morr 2011-04-09]
 	Updated audio/libao to 1.1.0 [shattered 2011-04-09]
+	Updated emulators/suse113_krb5 to 11.3nb3 [chs 2011-04-09]
