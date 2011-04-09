@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/06/14 22:58:00 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2011/04/09 08:03:49 wiz Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=		The pkgsrc guide
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 # To regenerate pkgsrc/doc/pkgsrc.{html,txt} and
 # htdocs/docs/pkgsrc, just run "make regen".
 
@@ -18,7 +20,8 @@ DIST_SUBDIR=		${PKGBASE}
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		SED=${SED:Q}
 
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+PLIST_VARS=		ascii html pdf
+
 DOCDIR=			${PREFIX}/share/doc/pkgsrc
 .if exists(/usr/cvs/htdocs)
 HTDOCSDIR?=		/usr/cvs/htdocs
@@ -28,11 +31,22 @@ HTDOCSDIR?=		${.CURDIR}/../../../htdocs
 BUILD_DEFS+=		OUTPUTS
 OUTPUTS?=		lint html html-split ascii pdf
 
+INSTALLATION_DIRS=	${DOCDIR}
+
 .if defined(OUTPUTS)
 .  if !empty(OUTPUTS:Mascii)
 # the html is needed to build the ascii version.
 OUTPUTS+=		html
+PLIST.ascii=		yes
 .  endif
+
+.  if !empty(OUTPUTS:Mhtml) || !empty(OUTPUTS:Mhtml-split)
+PLIST.html=		yes
+.endif
+
+.  if !empty(OUTPUTS:Mpdf)
+PLIST.pdf=		yes
+.endif
 
 # only override the Makefile.common default if it is explicitly set
 _GUIDE_OUTPUTS=		${OUTPUTS}
@@ -56,23 +70,17 @@ post-build:
 	@${RM} -f ${WRKSRC}/pkgsrc.tmp.html
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
 .if !empty(OUTPUTS:Mhtml) || !empty(OUTPUTS:Mhtml-split)
-	${INSTALL_DATA} ${WRKSRC}/*.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKDIR}/htdocs/global.css ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/htdocs/global.css ${DESTDIR}${DOCDIR}
 .endif
 .if !empty(OUTPUTS:Mascii)
-	${INSTALL_DATA} ${WRKSRC}/pkgsrc.txt ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/pkgsrc.txt ${DESTDIR}${DOCDIR}
 .endif
 .if !empty(OUTPUTS:Mpdf)
-	${INSTALL_DATA} ${WRKSRC}/pkgsrc.ps ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/pkgsrc.pdf ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/pkgsrc.ps ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/pkgsrc.pdf ${DESTDIR}${DOCDIR}
 .endif
-
-post-install:
-	${FIND} ${DOCDIR} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
-		>> ${PLIST_SRC}
 
 # install the single-file HTML and ascii output into the pkgsrc doc/
 # directory, for distribution with pkgsrc.
