@@ -1,2 +1,40 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/21 14:27:37 grant Exp $
-@comment this PLIST automatically generated
+@comment $NetBSD: PLIST,v 1.2 2011/04/09 08:03:49 wiz Exp $
+${PLIST.html}share/doc/pkgsrc/binary.html
+${PLIST.html}share/doc/pkgsrc/build.html
+${PLIST.html}share/doc/pkgsrc/buildlink.html
+${PLIST.html}share/doc/pkgsrc/bulk.html
+${PLIST.html}share/doc/pkgsrc/components.html
+${PLIST.html}share/doc/pkgsrc/configuring.html
+${PLIST.html}share/doc/pkgsrc/creating.html
+${PLIST.html}share/doc/pkgsrc/debug.html
+${PLIST.html}share/doc/pkgsrc/developers-guide.html
+${PLIST.html}share/doc/pkgsrc/devfaq.html
+${PLIST.html}share/doc/pkgsrc/editing.html
+${PLIST.html}share/doc/pkgsrc/examples.html
+${PLIST.html}share/doc/pkgsrc/faq.html
+${PLIST.html}share/doc/pkgsrc/files.html
+${PLIST.html}share/doc/pkgsrc/fixes.html
+${PLIST.html}share/doc/pkgsrc/ftp-layout.html
+${PLIST.html}share/doc/pkgsrc/getting.html
+${PLIST.html}share/doc/pkgsrc/global.css
+${PLIST.html}share/doc/pkgsrc/gnome.html
+${PLIST.html}share/doc/pkgsrc/index.html
+${PLIST.html}share/doc/pkgsrc/infr.design.html
+${PLIST.html}share/doc/pkgsrc/infrastructure.html
+${PLIST.html}share/doc/pkgsrc/introduction.html
+${PLIST.html}share/doc/pkgsrc/logs.html
+${PLIST.html}share/doc/pkgsrc/makefile.html
+${PLIST.html}share/doc/pkgsrc/options.html
+${PLIST.html}share/doc/pkgsrc/pkginstall.html
+${PLIST.html}share/doc/pkgsrc/pkgsrc.html
+${PLIST.pdf}share/doc/pkgsrc/pkgsrc.pdf
+${PLIST.pdf}share/doc/pkgsrc/pkgsrc.ps
+${PLIST.ascii}share/doc/pkgsrc/pkgsrc.txt
+${PLIST.html}share/doc/pkgsrc/platforms.html
+${PLIST.html}share/doc/pkgsrc/plist.html
+${PLIST.html}share/doc/pkgsrc/porting.html
+${PLIST.html}share/doc/pkgsrc/regression.html
+${PLIST.html}share/doc/pkgsrc/submit.html
+${PLIST.html}share/doc/pkgsrc/tools.html
+${PLIST.html}share/doc/pkgsrc/users-guide.html
+${PLIST.html}share/doc/pkgsrc/using.html
