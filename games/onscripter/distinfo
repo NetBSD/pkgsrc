@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/02 12:05:18 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2011/04/10 08:11:56 ryoon Exp $
 
-SHA1 (onscripter-20110226.tar.gz) = fc51c2c8bc80d81db6d2bc76285008a6b3e8f7ad
-RMD160 (onscripter-20110226.tar.gz) = 7ecd53941ac3f76d219162a886281f6f4d30dd79
-Size (onscripter-20110226.tar.gz) = 222659 bytes
+SHA1 (onscripter-20110320.tar.gz) = 90eba76fc04640420c6b2b2e339ee83b2a2d54cb
+RMD160 (onscripter-20110320.tar.gz) = 090cedbf55d98fd523a23ad854083e2ef574a7da
+Size (onscripter-20110320.tar.gz) = 222685 bytes
 SHA1 (patch-Makefile.Linux) = 1858f37ee018e763ebba965972c2333a9ce33c17
 SHA1 (patch-Makefile.onscripter) = e70df448c97fec2b6df9902bfe616050e07c6b1d
