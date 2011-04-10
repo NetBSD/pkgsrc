@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/04/10 10:24:47 ryoon Exp $
+bin/test-graph
 bin/tig
 man/man1/tig.1
 man/man5/tigrc.5
+man/man7/tigmanual.7
 share/doc/tig/NEWS.html
 share/doc/tig/README.html
 share/doc/tig/manual.html
