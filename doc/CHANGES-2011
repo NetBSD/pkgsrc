@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.899 2011/04/10 08:13:34 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.900 2011/04/10 08:43:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1486,3 +1486,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/getmail to 4.20.2 [schmonz 2011-04-10]
 	Updated x11/mlterm to 3.0.3 [ryoon 2011-04-10]
 	Updated games/onscripter to 20110320 [ryoon 2011-04-10]
+	Added multimedia/gnome-mplayer version 1.0.2 [obache 2011-04-10]
