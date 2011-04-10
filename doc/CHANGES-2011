@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.898 2011/04/10 07:27:09 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.899 2011/04/10 08:13:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1485,3 +1485,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_krb5 to 11.3nb3 [chs 2011-04-09]
 	Updated mail/getmail to 4.20.2 [schmonz 2011-04-10]
 	Updated x11/mlterm to 3.0.3 [ryoon 2011-04-10]
+	Updated games/onscripter to 20110320 [ryoon 2011-04-10]
