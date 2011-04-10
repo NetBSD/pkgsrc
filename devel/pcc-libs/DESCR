@@ -1,0 +1,3 @@
+This package contains the runtime libraries for pcc, the Portable C
+Compiler. On some platforms, these libraries are needed to compile code
+with PCC.
