@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/10 10:40:45 bsiegert Exp $
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/float.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/iso646.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/libpcc_float.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/libpcc_limits.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/libpcc_stdarg.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/libpcc_stdbool.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/libpcc_stddef.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/limits.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/stdarg.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/stdbool.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/include/stddef.h
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/lib/crt0.o
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/lib/crt1.o
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/lib/dylib1.o
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/lib/gcrt1.o
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/lib/libpcc.a
+lib/pcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}.RELEASE/lib/libpccsoftfloat.a
