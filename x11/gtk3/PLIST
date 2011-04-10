@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 17:06:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/10 04:30:01 obache Exp $
 bin/gtk-query-immodules-3.0
 bin/gtk3-demo
 include/gail-3.0/gail/gailwidget.h
@@ -278,7 +278,7 @@ lib/gtk-3.0/3.0.0/immodules/im-ti-er.la
 lib/gtk-3.0/3.0.0/immodules/im-ti-et.la
 lib/gtk-3.0/3.0.0/immodules/im-viqr.la
 lib/gtk-3.0/3.0.0/immodules/im-xim.la
-lib/gtk-3.0/3.0.0/printbackends/libprintbackend-cups.la
+${PLIST.cups}lib/gtk-3.0/3.0.0/printbackends/libprintbackend-cups.la
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-file.la
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-lpr.la
 lib/gtk-3.0/modules/libferret.la
