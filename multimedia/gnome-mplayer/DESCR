@@ -1,0 +1,2 @@
+GNOME MPlayer is a GTK GUI for MPlayer based on the Gnome HIG.  However, the
+code is not dependent on any Gnome library
