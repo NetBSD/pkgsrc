@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/04/10 08:54:08 obache Exp $
+
+Schema source must be installed even if not do install-schemas.
+
+--- Makefile.in.orig	2010-11-05 16:13:49.000000000 +0000
++++ Makefile.in
+@@ -263,8 +263,8 @@ gecko_mediaplayerdoc_DATA = \
+ 	NEWS\
+ 	DOCS/tech/javascript.txt
+ 
+-@GCONF_SCHEMAS_INSTALL_TRUE@schemadir = @GCONF_SCHEMA_FILE_DIR@
+-@GCONF_SCHEMAS_INSTALL_TRUE@schema_DATA = gecko-mediaplayer.schemas
++schemadir = @GCONF_SCHEMA_FILE_DIR@
++schema_DATA = gecko-mediaplayer.schemas
+ EXTRA_DIST = $(gecko_mediaplayerdoc_DATA) $(schema_DATA) gecko-mediaplayer.spec.in
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
