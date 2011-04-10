@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10257 2011/04/09 13:22:27 shattered Exp $
+$NetBSD: TODO,v 1.10258 2011/04/10 10:25:50 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1245,7 +1245,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-3.0
 	o tfmxplay-1.1.6
-	o tig-0.17
 	o tightvnc-1.5.1
 	o tile-0.7.4
 	o tinyproxy-1.8.0
