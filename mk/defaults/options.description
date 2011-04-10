@@ -3,6 +3,7 @@ abook			Enable abook support.
 acl			Enable POSIX ACL support.
 ads			Enable Windows's Active Directory support.
 agg			Enable agg support.
+alsa			Enable ALSA support.
 amule-alc		Build aMule LinkCreator GUI version. .
 amule-alcc		Build aMule LinkCreator for console.
 amule-cas		Build C aMule Statistics.
@@ -375,6 +376,7 @@ mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
 mstats			Enable memory statistics.
 musepack		Enable the portable Musepack decoder library.
+musicbrainz		Enable musicbrainz support.
 mutt-compressed-mbox	Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
