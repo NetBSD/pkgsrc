@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.3 2011/04/07 08:06:03 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.4 2011/04/11 14:20:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -32,3 +32,15 @@ Pullup ticket #3403 - requested by joerg
 py-django-cms: build fix
 Pullup ticket #3404 - requested by taca
 lang/perl5: security patch
+Pullup ticket #3405 - requested by drochner
+devel/xulrunner: security update
+www/firefox: security update
+Pullup ticket #3406 - requested by taca
+net/rsync: security update
+Pullup ticket #3407 - requested by taca
+net/isc-dhclient4: security update
+net/isc-dhcp4: security update
+net/isc-dhcpd4: security update
+net/isc-dhcrelay4: security update
+Pullup ticket #3408 - requested by morr
+www/wordpress security update
