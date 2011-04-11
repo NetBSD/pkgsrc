@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.903 2011/04/10 10:50:15 bsiegert Exp $
+$NetBSD: CHANGES-2011,v 1.904 2011/04/11 03:14:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/tig to 0.17 [ryoon 2011-04-10]
 	Added devel/pcc-libs version 1.0.0 [bsiegert 2011-04-10]
 	Updated lang/pcc to 1.0.0 [bsiegert 2011-04-10]
+	Updated www/firefox-l10n to 3.6.16 [obache 2011-04-11]
