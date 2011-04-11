@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/08/05 10:55:55 adam Exp $
+$NetBSD: distinfo,v 1.10 2011/04/11 09:12:51 adam Exp $
 
-SHA1 (PDF-API2-0.73.tar.gz) = 828092603c31731c604738cb6d2ac37347f0a972
-RMD160 (PDF-API2-0.73.tar.gz) = 86a179b8b58bae79698ded8641a004ce5fde10e2
-Size (PDF-API2-0.73.tar.gz) = 7762509 bytes
+SHA1 (PDF-API2-2.019.tar.gz) = 794de9d6d83e8d0ae04b6c1c314238411d151aa8
+RMD160 (PDF-API2-2.019.tar.gz) = e4e5c37c37aa6484f1741e9704df8333dbb56e98
+Size (PDF-API2-2.019.tar.gz) = 3496615 bytes
