@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2010/06/16 19:43:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/04/11 20:15:00 drochner Exp $
 bin/merkaartor
+lib/merkaartor/plugins/background/libMCadastreFranceBackgroundPlugin.la
 lib/merkaartor/plugins/background/libMGdalBackgroundPlugin.la
+lib/merkaartor/plugins/background/libMGeoTiffBackgroundPlugin.la
+lib/merkaartor/plugins/background/libMMsBingMapBackgroundPlugin.la
 lib/merkaartor/plugins/background/libMWalkingPapersBackgroundPlugin.la
 lib/merkaartor/plugins/background/libMYahooBackgroundPlugin.la
 lib/merkaartor/plugins/background/libMYahooTiledBackgroundPlugin.la
@@ -15,7 +18,10 @@ share/merkaartor/translations/merkaartor_ar.qm
 share/merkaartor/translations/merkaartor_cs.qm
 share/merkaartor/translations/merkaartor_de.qm
 share/merkaartor/translations/merkaartor_es.qm
+share/merkaartor/translations/merkaartor_et.qm
 share/merkaartor/translations/merkaartor_fr.qm
+share/merkaartor/translations/merkaartor_hr.qm
+share/merkaartor/translations/merkaartor_hu.qm
 share/merkaartor/translations/merkaartor_it.qm
 share/merkaartor/translations/merkaartor_ja.qm
 share/merkaartor/translations/merkaartor_nl.qm
