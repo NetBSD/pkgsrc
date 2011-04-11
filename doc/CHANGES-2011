@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.907 2011/04/11 14:56:10 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.908 2011/04/11 15:06:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1496,3 +1496,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-IO-Compress to 2.033 [adam 2011-04-11]
 	Updated textproc/p5-PDF-API2 to 2.019 [adam 2011-04-11]
 	Updated misc/gaupol to 0.17.2 [wiz 2011-04-11]
+	Updated games/gbrainy to 1.65 [wiz 2011-04-11]
