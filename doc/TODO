@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10262 2011/04/11 15:06:19 wiz Exp $
+$NetBSD: TODO,v 1.10263 2011/04/11 15:22:55 drochner Exp $
 
 Suggested new packages
 ======================
@@ -714,7 +714,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnucash-2.4.5
 	o gnuchess-5.08
 	o gnumeric110-1.10.14
-	o gnutls-2.12.2
+	o gnutls-2.12.2 [possibly broken - POP3 over SSL hangs]
 	o gobject-introspection-0.10.6
 	o goffice0.8-0.8.14
 	o gok-2.30.1 [GNOME 2.32]
