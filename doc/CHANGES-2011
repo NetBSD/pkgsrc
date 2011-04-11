@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.905 2011/04/11 07:03:04 adam Exp $
+$NetBSD: CHANGES-2011,v 1.906 2011/04/11 09:28:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1493,3 +1493,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/pcc to 1.0.0 [bsiegert 2011-04-10]
 	Updated www/firefox-l10n to 3.6.16 [obache 2011-04-11]
 	Updated graphics/jpegoptim to 1.2.4 [adam 2011-04-11]
+	Updated devel/p5-IO-Compress to 2.033 [adam 2011-04-11]
+	Updated textproc/p5-PDF-API2 to 2.019 [adam 2011-04-11]
