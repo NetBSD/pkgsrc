@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.906 2011/04/11 09:28:03 adam Exp $
+$NetBSD: CHANGES-2011,v 1.907 2011/04/11 14:56:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/jpegoptim to 1.2.4 [adam 2011-04-11]
 	Updated devel/p5-IO-Compress to 2.033 [adam 2011-04-11]
 	Updated textproc/p5-PDF-API2 to 2.019 [adam 2011-04-11]
+	Updated misc/gaupol to 0.17.2 [wiz 2011-04-11]
