@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2008/05/17 02:37:24 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/11 19:57:54 gls Exp $
 #
 
-DISTNAME=		suphp-0.6.3
+DISTNAME=		suphp-0.7.1
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		http://www.suphp.org/download/
@@ -9,6 +9,7 @@ MASTER_SITES=		http://www.suphp.org/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suphp.org/
 COMMENT=		SuEXEC-like wrapper for PHP scripts
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,9 +19,9 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0	# the C++ code uses the .at() method
 CONFIGURE_ARGS+=	APXS=${APXS}
-CONFIGURE_ARGS+=	--with-apache-user=${APACHE_USER:Q}
+CONFIGURE_ARGS+=	--with-apache-user=${APACHE_USER}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/httpd/suphp_log
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_USERS_VARS+=	APACHE_USER
 BUILD_DEFS+=		VARBASE
@@ -39,7 +40,7 @@ SUBST_SED.suphp+=	-e "s,/var/log/suphp.log,${VARBASE}/httpd/suphp_log,g"
 SUBST_SED.suphp+=	-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/suphp.conf-example ${DESTDIR}${EGDIR}/suphp.conf
 
 .include "../../mk/apache.mk"
