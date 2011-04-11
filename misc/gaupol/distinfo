@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/07/21 11:29:37 wiz Exp $
+$NetBSD: distinfo,v 1.7 2011/04/11 14:56:00 wiz Exp $
 
-SHA1 (gaupol-0.17.tar.gz) = e0e3b6a97ccac655b690ef0bc0579a85cfde6268
-RMD160 (gaupol-0.17.tar.gz) = e5b9dd5db766d4ce2ad5085778c93940dd7fc2a6
-Size (gaupol-0.17.tar.gz) = 570815 bytes
+SHA1 (gaupol-0.17.2.tar.gz) = acb4e71c1d378db8614cdabf9cc1deef587c1c28
+RMD160 (gaupol-0.17.2.tar.gz) = 3b7041e5a5c7fc8cada84613bd061a7fa935c5a0
+Size (gaupol-0.17.2.tar.gz) = 608728 bytes
