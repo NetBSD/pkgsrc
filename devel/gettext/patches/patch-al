@@ -1,22 +1,13 @@
-$NetBSD: patch-al,v 1.2 2006/02/05 22:45:54 joerg Exp $
+$NetBSD: patch-al,v 1.3 2011/04/12 17:41:28 adam Exp $
 
---- gettext-tools/po/Makefile.in.in.orig	2006-02-04 20:52:36.000000000 +0000
+--- gettext-tools/po/Makefile.in.in.orig	2010-06-06 12:49:57.000000000 +0000
 +++ gettext-tools/po/Makefile.in.in
-@@ -156,7 +156,7 @@ $(POFILES): $(srcdir)/$(DOMAIN).pot
+@@ -207,7 +207,7 @@ $(POFILES): $(srcdir)/$(DOMAIN).pot
+ 	fi
  
- install: install-exec install-data
+ 
+-install: install-exec install-data
++install: install-exec install-data-@USE_NLS@
  install-exec:
--install-data: install-data-@USE_NLS@
-+install-data:
+ install-data: install-data-@USE_NLS@
  	if test "$(PACKAGE)" = "gettext-tools"; then \
- 	  $(mkinstalldirs) $(DESTDIR)$(gettextsrcdir); \
- 	  for file in $(DISTFILES.common) Makevars.template; do \
-@@ -215,7 +215,7 @@ install-strip: install
- 
- installdirs: installdirs-exec installdirs-data
- installdirs-exec:
--installdirs-data: installdirs-data-@USE_NLS@
-+installdirs-data:
- 	if test "$(PACKAGE)" = "gettext-tools"; then \
- 	  $(mkinstalldirs) $(DESTDIR)$(gettextsrcdir); \
- 	else \

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2010/02/05 08:44:04 obache Exp $
+$NetBSD: patch-aa,v 1.7 2011/04/12 17:41:28 adam Exp $
 
---- gettext-runtime/intl/localcharset.c.orig	2005-05-20 13:07:51.000000000 -0700
+--- gettext-runtime/intl/localcharset.c.orig	2010-06-06 12:49:57.000000000 +0000
 +++ gettext-runtime/intl/localcharset.c
-@@ -23,6 +23,10 @@
- # include <config.h>
- #endif
+@@ -21,6 +21,10 @@
+ 
+ #include <config.h>
  
 +#if !defined(HAVE_GNU_ICONV)
 +
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.6 2010/02/05 08:44:04 obache Exp $
  /* Specification.  */
  #include "localcharset.h"
  
-@@ -407,3 +411,4 @@ locale_charset ()
+@@ -547,3 +551,4 @@ locale_charset (void)
  
    return codeset;
  }
