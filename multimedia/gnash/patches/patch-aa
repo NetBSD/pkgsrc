@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.11 2010/10/29 14:15:03 obache Exp $
+$NetBSD: patch-aa,v 1.12 2011/04/12 13:15:01 obache Exp $
 
---- configure.orig	2010-08-21 17:30:15.000000000 +0000
+--- configure.orig	2011-03-18 13:50:30.000000000 +0000
 +++ configure
-@@ -39826,7 +39826,7 @@ else
+@@ -27796,7 +27796,7 @@ fi
+       KDE4_CONFIGDIR="${KDE4_PREFIX}/share/kde4/config"
+     fi
+     if test x"${KDE4_APPSDATADIR}" = x ; then
+-      KDE4_APPSDATADIR="${KDE4_PREFIX}/share/kde4/apps/klash"
++      KDE4_APPSDATADIR="${KDE4_PREFIX}/share/kde/apps/klash"
+     fi
+ 
+   if test x"${ac_cv_path_kde4_incl}" != x ; then
+@@ -27986,7 +27986,7 @@ else
    ;;
    *)
    as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.11 2010/10/29 14:15:03 obache Exp $
  do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
-@@ -40128,9 +40128,9 @@ fi
+@@ -28281,9 +28281,9 @@ fi
      fi
  
      KDE3_PLUGINDIR="${KDE3_PREFIX}/lib/kde3"
@@ -21,21 +30,6 @@ $NetBSD: patch-aa,v 1.11 2010/10/29 14:15:03 obache Exp $
 +    KDE3_SERVICESDIR="${KDE3_PREFIX}/share/kde/services"
 +    KDE3_CONFIGDIR="${KDE3_PREFIX}/share/kde/config"
 +    KDE3_APPSDATADIR="${KDE3_PREFIX}/share/kde/apps/klash"
-   fi
+ 
    if test x"${ac_cv_path_kde3_incl}" != x ; then
      if test x"${ac_cv_path_kde3_incl}" != x"-I/usr/include"; then
-@@ -40688,12 +40688,12 @@ fi
-     if test x"${KDE4_CONFIGDIR}" != x ; then
-       KDE4_CONFIGDIR="${KDE4_CONFIGDIR}}/share/kde4/config"
-     else
--      KDE4_CONFIGDIR="${KDE4_PREFIX}}/share/kde4/config"
-+      KDE4_CONFIGDIR="${KDE4_PREFIX}/share/kde4/config"
-     fi
-     if test x"${KDE4_APPSDATADIR}" != x ; then
-       KDE4_APPSDATADIR="${KDE4_APPSDATADIR}/share/kde4/apps/klash"
-     else
--      KDE4_APPSDATADIR="${KDE4_PREFIX}/share/kde4/apps/klash"
-+      KDE4_APPSDATADIR="${KDE4_PREFIX}/share/kde/apps/klash"
-     fi
-   fi
-   if test x"${ac_cv_path_kde4_incl}" != x ; then
