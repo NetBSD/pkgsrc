@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/11/18 17:41:20 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/04/12 21:48:01 wiz Exp $
 
 SHA1 (calibre-0.6.24.tar.gz) = 8484746cb058d7719225b02a843d29bd7626ffa0
 RMD160 (calibre-0.6.24.tar.gz) = a7833156b635bfd14842b055e3b44debe64e4752
 Size (calibre-0.6.24.tar.gz) = 10953557 bytes
 SHA1 (patch-aa) = cf794f388d8193c3384f7f36208bef606c14dc6d
 SHA1 (patch-ac) = da8fedb745ebb29ea7df0a5b7a642384273ae324
+SHA1 (patch-src_calibre_ebooks_pdf_images.cpp) = 31deac71af1f8d6f04978df26104ccd91229950c
