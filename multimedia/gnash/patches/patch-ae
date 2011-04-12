@@ -1,24 +1,24 @@
-$NetBSD: patch-ae,v 1.2 2010/10/29 14:15:03 obache Exp $
+$NetBSD: patch-ae,v 1.3 2011/04/12 13:15:01 obache Exp $
 
---- gui/Makefile.in.orig	2010-08-21 18:04:41.000000000 +0000
+--- gui/Makefile.in.orig	2011-03-18 13:50:23.000000000 +0000
 +++ gui/Makefile.in
-@@ -1815,8 +1815,8 @@ GUI_SRCS = gnash.cpp \
+@@ -1413,8 +1413,8 @@ GUI_SRCS = gnash.cpp \
  @BUILD_QTOPIA3_GUI_TRUE@	$(GNASH_LIBS) $(AM_LDFLAGS) \
- @BUILD_QTOPIA3_GUI_TRUE@	$(am__append_19) $(am__append_22)
+ @BUILD_QTOPIA3_GUI_TRUE@	$(am__append_13) $(am__append_16)
  @BUILD_KDE3_GUI_TRUE@kde3_gnash_CPPFLAGS = -DGUI_KDE3 \
 -@BUILD_KDE3_GUI_TRUE@	-DGUI_CONFIG=\"KDE3\" $(AM_CPPFLAGS) \
  @BUILD_KDE3_GUI_TRUE@	$(KDE3_CFLAGS) $(QT3_CFLAGS) \
 +@BUILD_KDE3_GUI_TRUE@	-DGUI_CONFIG=\"KDE3\" $(AM_CPPFLAGS) \
- @BUILD_KDE3_GUI_TRUE@	$(am__append_26) $(am__append_29)
+ @BUILD_KDE3_GUI_TRUE@	$(am__append_20) $(am__append_23)
  @BUILD_KDE3_GUI_TRUE@kde3_gnash_SOURCES = $(GUI_SRCS) kde/gui_kde.cpp \
- @BUILD_KDE3_GUI_TRUE@	$(am__append_28) $(am__append_31)
-@@ -1831,8 +1831,8 @@ GUI_SRCS = gnash.cpp \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_36) $(am__append_39) \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_42)
+ @BUILD_KDE3_GUI_TRUE@	$(am__append_22) $(am__append_25)
+@@ -1429,8 +1429,8 @@ GUI_SRCS = gnash.cpp \
+ @BUILD_KDE4_GUI_TRUE@	$(am__append_30) $(am__append_33) \
+ @BUILD_KDE4_GUI_TRUE@	$(am__append_36)
  @BUILD_KDE4_GUI_TRUE@kde4_gnash_CPPFLAGS = -DGUI_KDE4 \
 -@BUILD_KDE4_GUI_TRUE@	-DGUI_CONFIG=\"KDE4\" $(AM_CPPFLAGS) \
  @BUILD_KDE4_GUI_TRUE@	$(KDE4_CFLAGS) $(QT4_CFLAGS) \
 +@BUILD_KDE4_GUI_TRUE@	-DGUI_CONFIG=\"KDE4\" $(AM_CPPFLAGS) \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_34) $(am__append_37) \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_40)
- @BUILD_KDE4_GUI_TRUE@kde4_gnash_LDFLAGS = $(LIBLTDL) -export-dynamic 
+ @BUILD_KDE4_GUI_TRUE@	$(am__append_28) $(am__append_31) \
+ @BUILD_KDE4_GUI_TRUE@	$(am__append_34)
+ @BUILD_KDE4_GUI_TRUE@kde4_gnash_LDFLAGS = -export-dynamic 

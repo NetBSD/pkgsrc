@@ -1,0 +1,17 @@
+$NetBSD: patch-libbase_Makefile.in,v 1.1 2011/04/12 13:15:01 obache Exp $
+
+* let not to remove libtoo .la files, to maintain PLIST easier.
+
+--- libbase/Makefile.in.orig	2011-04-10 12:30:08.000000000 +0000
++++ libbase/Makefile.in
+@@ -1461,10 +1461,6 @@ mudflap:
+ 	@echo "Rebuilding with GCC Mudflap support"
+ 	$(MAKE) CXXFLAGS="$(CXXFLAGS) -fmudflap" LDFLAGS="$(LDFLAGS) -lmudflap"
+ 
+-# Remove libtool .la files
+-install-exec-hook:
+-	$(RM) $(DESTDIR)$(libdir)/gnash/libgnashbase.la
+-
+ uninstall-local:
+ 	$(RM) $(DESTDIR)$(libdir)/gnash/libgnashbase-*.so
+ 
