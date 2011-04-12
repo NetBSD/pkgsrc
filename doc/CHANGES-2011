@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.919 2011/04/12 19:04:36 adam Exp $
+$NetBSD: CHANGES-2011,v 1.920 2011/04/12 21:15:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1414,6 +1414,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/p5-Geo-IPfree to 1.100470 [minskim 2011-04-05]
 	Added graphics/tex-pst-barcode version 0.08 [minskim 2011-04-05]
 	Added graphics/tex-pst-barcode-doc version 0.08 [minskim 2011-04-05]
+	Added chat/libfolks version 0.4.2 [drochner 2011-04-05]
 	Updated textproc/xmlrpc-c to 1.16.34 [adam 2011-04-06]
 	Updated net/dhcpcd to 5.2.12 [roy 2011-04-06]
 	Added sysutils/xenkernel41 version 4.1.0 [cegger 2011-04-06]
