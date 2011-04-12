@@ -1,0 +1,17 @@
+$NetBSD: patch-libmedia_Makefile.in,v 1.1 2011/04/12 13:15:01 obache Exp $
+
+* let not to remove libtoo .la files, to maintain PLIST easier.
+
+--- libmedia/Makefile.in.orig	2011-04-10 12:30:09.000000000 +0000
++++ libmedia/Makefile.in
+@@ -1416,10 +1416,6 @@ mudflap:
+ clean-hook:
+ 	-rm -f core.* *.obj
+ 
+-# Remove libtool .la files
+-install-exec-hook:
+-	$(RM) $(DESTDIR)$(libdir)/gnash/libgnashmedia.la
+-
+ uninstall-local:
+ 	$(RM) $(DESTDIR)$(libdir)/gnash/libgnashmedia-*.so
+ 
