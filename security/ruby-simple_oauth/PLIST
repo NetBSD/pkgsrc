@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/12 11:58:45 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/init.rb
+${GEM_LIBDIR}/lib/simple_oauth.rb
+${GEM_LIBDIR}/lib/simple_oauth/core_ext/object.rb
+${GEM_LIBDIR}/lib/simple_oauth/header.rb
+${GEM_LIBDIR}/lib/simple_oauth/version.rb
+${GEM_LIBDIR}/simple_oauth.gemspec
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/rsa_private_key
+${GEM_LIBDIR}/test/simple_oauth_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
