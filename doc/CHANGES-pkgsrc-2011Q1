@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.4 2011/04/11 14:20:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.5 2011/04/12 06:17:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -44,3 +44,5 @@ net/isc-dhcpd4: security update
 net/isc-dhcrelay4: security update
 Pullup ticket #3408 - requested by morr
 www/wordpress security update
+Pullup ticket #3409 - requested by markd
+x11/kdelibs4: security patch
