@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.406 2011/04/12 12:00:39 obache Exp $
+# $NetBSD: Makefile,v 1.407 2011/04/12 13:46:35 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -65,7 +65,6 @@ SUBDIR+=	fprint-demo
 SUBDIR+=	fragroute
 SUBDIR+=	fsh
 SUBDIR+=	fwbuilder
-SUBDIR+=	fwbuilder21
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnome-keyring-manager
 SUBDIR+=	gnu-crypto
@@ -106,7 +105,6 @@ SUBDIR+=	libcrack
 SUBDIR+=	libdes
 SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
-SUBDIR+=	libfwbuilder21
 SUBDIR+=	libgcrypt
 SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgpg-error
