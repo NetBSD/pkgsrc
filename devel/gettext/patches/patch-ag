@@ -1,47 +1,36 @@
-$NetBSD: patch-ag,v 1.7 2006/07/26 06:53:02 adam Exp $
+$NetBSD: patch-ag,v 1.8 2011/04/12 17:41:28 adam Exp $
 
---- gettext-tools/lib/Makefile.in.orig	2006-06-21 14:30:05.000000000 +0200
-+++ gettext-tools/lib/Makefile.in
-@@ -453,7 +453,7 @@ libgettextlib_la_LIBADD = @LTLIBOBJS@
- # Need @LTLIBICONV@ because linebreak.c uses iconv().
- libgettextlib_la_LDFLAGS = \
-   -release @VERSION@ \
--  @LTLIBINTL@ @LTLIBICONV@ -lc -no-undefined
-+  @LTLIBINTL@ @LTLIBICONV@ -lc
- 
- 
- # Extra files to be installed.
-@@ -681,7 +681,7 @@ check: $(BUILT_SOURCES)
+--- gettext-tools/gnulib-lib/Makefile.in.orig	2010-06-06 20:12:29.000000000 +0000
++++ gettext-tools/gnulib-lib/Makefile.in
+@@ -3034,7 +3034,7 @@ check: $(BUILT_SOURCES)
  	$(MAKE) $(AM_MAKEFLAGS) check-am
- all-am: Makefile $(LTLIBRARIES) $(DATA) $(HEADERS) all-local
+ all-am: Makefile $(LTLIBRARIES) $(DATA) all-local
  installdirs:
--	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(examplesbuildauxdir)" "$(DESTDIR)$(gettextsrcdir)"; do \
+-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(gettextsrcdir)" "$(DESTDIR)$(pkgdatadir)"; do \
 +	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(gettextsrcdir)"; do \
- 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: $(BUILT_SOURCES)
-@@ -733,7 +733,7 @@ info: info-am
+@@ -3100,7 +3100,7 @@ info: info-am
  
  info-am:
  
--install-data-am: install-examplesbuildauxDATA install-gettextsrcDATA
+-install-data-am: install-gettextsrcDATA install-pkgdataDATA
 +install-data-am:
  
- install-exec-am: install-exec-local install-libLTLIBRARIES
+ install-dvi: install-dvi-am
  
-@@ -779,15 +779,6 @@ uninstall-am: uninstall-examplesbuildaux
- 	uninstall-gettextsrcDATA uninstall-info-am \
- 	uninstall-libLTLIBRARIES uninstall-local
+@@ -3366,13 +3366,6 @@ getopt.h: getopt.in.h $(ARG_NONNULL_H)
+ 	} > $@-t && \
+ 	mv -f $@-t $@
  
--
 -# No need to install libgettextlib.a, except on AIX.
 -install-exec-local: install-libLTLIBRARIES install-exec-clean
 -install-exec-clean:
 -	case "@host_os@" in \
 -	  aix*) ;; \
--	  *) $(RM) $(DESTDIR)$(libdir)/libgettextlib.a ;; \
+-	  *) rm -f $(DESTDIR)$(libdir)/libgettextlib.a ;; \
 -	esac
--
- # The following is needed in order to create an <stdbool.h> when the system
- # doesn't have one that works.
- all-local $(libgettextlib_la_OBJECTS): @STDBOOL_H@
+ # This is a Makefile rule that generates multiple files at once; see the
+ # automake documentation, node "Multiple Outputs", for details.
+ html-ostream.h : $(top_srcdir)/../build-aux/moopp html-ostream.oo.h html-ostream.oo.c ostream.oo.h
