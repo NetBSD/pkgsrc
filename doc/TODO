@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10264 2011/04/12 08:42:30 wiz Exp $
+$NetBSD: TODO,v 1.10265 2011/04/12 08:46:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o ImageMagick-6.6.9.5
-	o JBidwatcher-2.1.5
 	o MAMEDiff-2.30
 	o Mesa-7.10.2
 	o MesaLib-7.10
