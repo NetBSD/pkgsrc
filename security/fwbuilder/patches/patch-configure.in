@@ -1,0 +1,52 @@
+$NetBSD: patch-configure.in,v 1.1 2011/04/12 13:44:03 adam Exp $
+
+Fix MANDIR and DEFAULT_RES_DIR.
+
+--- configure.in.orig	2011-04-12 06:15:34.000000000 +0000
++++ configure.in
+@@ -325,15 +325,15 @@ case ${host} in
+   *-*-darwin*)
+     OS=MacOSX
+     OS_MACOSX=1
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     AC_MSG_RESULT(MacOSX)
+-    DEFAULT_RES_DIR="../Resources"
++    DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder-${VERSION}"
+     ;;
+ 
+   *-*-solaris*)
+     OS=Solaris
+     OS_SOLARIS=1
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     AC_MSG_RESULT(Solaris)
+     DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder-${VERSION}"
+     ;;
+@@ -362,7 +362,7 @@ case ${host} in
+     else
+        DISTRO="Unknown"
+     fi
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     AC_MSG_RESULT($DISTRO GNU/kFreeBSD)
+     DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder-${VERSION}"
+     ;;
+@@ -388,7 +388,7 @@ case ${host} in
+     else
+ 	DISTRO="Unknown"
+     fi
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     ICONSDIR="${DATADIR}/icons/hicolor/"
+     AC_MSG_RESULT($DISTRO Linux)
+     ;;
+@@ -397,7 +397,7 @@ case ${host} in
+     OS=Unknown
+     OS_UNKNOWN=1
+     DISTRO=Unknown
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     AC_MSG_RESULT(Unknown)
+     DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder-${VERSION}"
+     ;;
