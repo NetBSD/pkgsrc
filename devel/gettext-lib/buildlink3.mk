@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.31 2009/03/20 19:24:13 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2011/04/12 17:41:28 adam Exp $
 
 BUILDLINK_TREE+=	gettext
 
 .if !defined(GETTEXT_BUILDLINK3_MK)
 GETTEXT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.14.5
+BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.18
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 BUILDLINK_LIBNAME.gettext=	intl
 BUILDLINK_LDADD.gettext=	${BUILDLINK_LIBNAME.gettext:S/^/-l/:S/^-l$//}
@@ -21,10 +21,10 @@ BUILDLINK_LDADD.gettext+=	${BUILDLINK_LDADD.iconv}
 # to LIBS to workaround this brokenness.
 #
 BROKEN_GETTEXT_DETECTION?=	no
-.  if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
+.if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
 BUILDLINK_LIBS.gettext+=	${BUILDLINK_LDADD.gettext}
 CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
-.  endif
+.endif
 
 CHECK_BUILTIN.gettext:=	yes
 .include "../../devel/gettext-lib/builtin.mk"

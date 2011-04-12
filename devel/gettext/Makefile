@@ -1,27 +1,20 @@
-# $NetBSD: Makefile,v 1.78 2010/10/27 15:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2011/04/12 17:41:28 adam Exp $
 
-DISTNAME=	gettext-0.14.6
-PKGREVISION=	1
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
+.include "../../devel/gettext/Makefile.common"
 
-MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
 COMMENT=	Tools for providing messages in different languages
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+DEPENDS+=	gettext-m4-${PKGVERSION_NOREV}{,nb[0-9]*}:../../devel/gettext-m4
+DEPENDS+=	gettext-tools-${PKGVERSION_NOREV}{,nb[0-9]*}:../../devel/gettext-tools
+BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.18
 
-DEPENDS+=		gettext-m4-0.14.6{,nb[0-9]*}:../../devel/gettext-m4
-DEPENDS+=		gettext-tools-0.14.6{,nb[0-9]*}:../../devel/gettext-tools
-BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.14.5
-
-USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
 SHLIBTOOL_OVERRIDE=	# empty
-CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--disable-csharp
+CONFIGURE_ARGS+=	--without-git
+CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
@@ -36,7 +29,6 @@ USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
 
 do-install:
 	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS DESTDIR=${DESTDIR}
-	cd ${WRKSRC}/gettext-tools/lib && ${MAKE} install-gettextsrcDATA DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/projects && ${MAKE} install DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/misc && ${MAKE} install DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/src && ${MAKE} install-tcl install-exec-local DESTDIR=${DESTDIR}
