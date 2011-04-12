@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.909 2011/04/11 19:58:13 gls Exp $
+$NetBSD: CHANGES-2011,v 1.910 2011/04/12 06:03:04 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1498,3 +1498,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/gaupol to 0.17.2 [wiz 2011-04-11]
 	Updated games/gbrainy to 1.65 [wiz 2011-04-11]
 	Updated www/ap2-suphp to 0.7.1 [gls 2011-04-11]
+	Updated www/p5-App-Nopaste to 0.28 [gls 2011-04-12]
