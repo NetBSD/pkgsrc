@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10263 2011/04/11 15:22:55 drochner Exp $
+$NetBSD: TODO,v 1.10264 2011/04/12 08:42:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -711,7 +711,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnucash-2.4.5
 	o gnuchess-5.08
 	o gnumeric110-1.10.14
 	o gnutls-2.12.2 [possibly broken - POP3 over SSL hangs]
