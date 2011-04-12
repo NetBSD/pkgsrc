@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10267 2011/04/12 13:15:18 obache Exp $
+$NetBSD: TODO,v 1.10268 2011/04/12 13:49:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -1580,7 +1580,7 @@ Suggested cleanups in pkgsrc
 
 	o Fix packages installing manual pages under share/man to install
 	  them directly under man.
-	  Affects: net/tsclient, security/fwbuilder
+	  Affects: net/tsclient
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
