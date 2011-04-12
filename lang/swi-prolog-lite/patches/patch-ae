@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.4 2011/04/12 23:16:43 asau Exp $
+
+--- packages/xpce/pl/src/Makefile.orig	2011-03-23 21:57:54.000000000 +0300
++++ packages/xpce/pl/src/Makefile	2011-04-12 18:46:41.000000000 +0400
+@@ -25,7 +25,7 @@
+ OBJDIR=		../../$(builddir)/pl
+ CONFIG=		../../$(builddir)/config.h
+ 
+-CPLIFLAGS=	-I$(PLINCL) -I../../$(builddir) -I../../src
++CPLIFLAGS=	-I$(PLINCL) -I$(PLINCL)/os -I../../$(builddir) -I../../src
+ PL=     	pl
+ PLLD=		plld -pl $(PL)
+ ITFOBJ= 	$(addprefix $(OBJDIR)/, interface.o link.o pcecall.o)

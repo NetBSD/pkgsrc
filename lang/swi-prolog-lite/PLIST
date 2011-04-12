@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/11/23 21:56:25 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/04/12 23:16:42 asau Exp $
 bin/swi-prolog
 bin/swipl-ld
 bin/swipl-rc
@@ -249,10 +249,12 @@ lib/swi-prolog-${PKGVERSION}/library/INDEX.pl
 lib/swi-prolog-${PKGVERSION}/library/MANUAL
 lib/swi-prolog-${PKGVERSION}/library/aggregate.pl
 lib/swi-prolog-${PKGVERSION}/library/am_match.pl
+lib/swi-prolog-${PKGVERSION}/library/ansi_term.pl
 lib/swi-prolog-${PKGVERSION}/library/apply.pl
 lib/swi-prolog-${PKGVERSION}/library/apply_macros.pl
 lib/swi-prolog-${PKGVERSION}/library/assoc.pl
 lib/swi-prolog-${PKGVERSION}/library/backcomp.pl
+lib/swi-prolog-${PKGVERSION}/library/base32.pl
 lib/swi-prolog-${PKGVERSION}/library/base64.pl
 lib/swi-prolog-${PKGVERSION}/library/bim.pl
 lib/swi-prolog-${PKGVERSION}/library/broadcast.pl
@@ -330,6 +332,7 @@ lib/swi-prolog-${PKGVERSION}/library/persistency.pl
 lib/swi-prolog-${PKGVERSION}/library/pio.pl
 lib/swi-prolog-${PKGVERSION}/library/portray_text.pl
 lib/swi-prolog-${PKGVERSION}/library/prolog_clause.pl
+lib/swi-prolog-${PKGVERSION}/library/prolog_history.pl
 lib/swi-prolog-${PKGVERSION}/library/prolog_source.pl
 lib/swi-prolog-${PKGVERSION}/library/prolog_stack.pl
 lib/swi-prolog-${PKGVERSION}/library/prolog_xref.pl
