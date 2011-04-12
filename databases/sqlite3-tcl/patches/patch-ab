@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2010/12/30 12:35:54 obache Exp $
+$NetBSD: patch-ab,v 1.2 2011/04/12 19:00:51 adam Exp $
 
 * treat DragonFly shlib handling same as NetBSD.
 
 --- configure.orig	2010-12-08 12:53:41.000000000 +0000
 +++ configure
-@@ -9089,7 +9089,7 @@ fi
+@@ -9143,7 +9143,7 @@ fi
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
