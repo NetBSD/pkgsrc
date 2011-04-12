@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2011/04/11 20:15:00 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2011/04/12 17:14:53 drochner Exp $
 
 --- src/GPS/qgpsdevice.cpp.orig	2011-02-10 12:00:35.000000000 +0000
 +++ src/GPS/qgpsdevice.cpp
@@ -33,9 +33,18 @@ $NetBSD: patch-aa,v 1.3 2011/04/11 20:15:00 drochner Exp $
             {
             errno = 0;
             gpsdata = Server->read();
-@@ -1027,13 +1026,13 @@ void QGPSDDevice::onDataAvailable()
+@@ -1026,14 +1025,22 @@ void QGPSDDevice::onDataAvailable()
+     setFixStatus(StatusActive);
      setLatitude(gpsdata->fix.latitude);
      setLongitude(gpsdata->fix.longitude);
++    if (gpsdata->fix.latitude < 0)
++	setLatCardinal(CardinalSouth);
++    else
++	setLatCardinal(CardinalNorth);
++    if (gpsdata->fix.longitude < 0)
++	setLongCardinal(CardinalWest);
++    else
++	setLongCardinal(CardinalEast);
      double Alt = gpsdata->fix.altitude;
 -    if (!__isnan(Alt))
 +    if (!std::isnan(Alt))
