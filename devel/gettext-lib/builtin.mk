@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.40 2011/01/21 21:24:11 wiz Exp $
+# $NetBSD: builtin.mk,v 1.41 2011/04/12 17:41:28 adam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -50,14 +50,14 @@ USE_BUILTIN.gettext=	${IS_BUILTIN.gettext}
 	!empty(IS_BUILTIN.gettext:M[yY][eE][sS])
 USE_BUILTIN.gettext=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.gettext}
-.	 if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+.        if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
 USE_BUILTIN.gettext!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gettext:Q}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
 	fi
-.	 endif
+.        endif
 .      endfor
 .    endif
 # XXX
