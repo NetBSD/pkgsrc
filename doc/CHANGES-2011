@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.913 2011/04/12 08:58:07 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.914 2011/04/12 11:59:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1502,3 +1502,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated finance/gnucash to 2.4.5 [wiz 2011-04-12]
 	Updated misc/JBidwatcher to 2.1.5 [wiz 2011-04-12]
 	Updated graphics/tiff to 3.9.5 [wiz 2011-04-12]
+	Updated security/ruby-simple_oauth to 0.1.4 [obache 2011-04-12]
