@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/05/16 18:46:10 asau Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/12 23:16:42 asau Exp $
 
 .include "Makefile.common"
 
@@ -28,11 +28,16 @@ PLIST_SUBST+=		BITS=64
 PLIST_SUBST+=		BITS=32
 .endif
 
+REPLACE_INTERPRETER+=	swipl
+REPLACE.swipl.old=	/usr/bin/swipl
+REPLACE.swipl.new=	${PREFIX}/bin/swi-prolog
+REPLACE_FILES.swipl+=	library/dialect/sicstus/swipl-lfr.pl
+
+TEST_TARGET=		check
+
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/shlib.pl \
 		${DESTDIR}${PREFIX}/lib/swi-prolog-${SWIPLVERS}/library/shlib.pl
-
-TEST_TARGET=		check
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/11/23 21:56:25 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/04/12 23:16:43 asau Exp $
 bin/xpce-client
 lib/swi-prolog-${PKGVERSION}/Makefile
 lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_GNU_PLATFORM}/xpce
@@ -8,6 +8,7 @@ lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/crypt.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/double_metaphone.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/files.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/http_stream.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/isub.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/json.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/memfile.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/mime.so
@@ -93,6 +94,7 @@ lib/swi-prolog-${PKGVERSION}/library/http/html_head.pl
 lib/swi-prolog-${PKGVERSION}/library/http/html_write.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_authenticate.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_client.pl
+lib/swi-prolog-${PKGVERSION}/library/http/http_cookie.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_dirindex.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_dispatch.pl
 lib/swi-prolog-${PKGVERSION}/library/http/http_error.pl
@@ -133,6 +135,7 @@ lib/swi-prolog-${PKGVERSION}/library/http/web/icons/openid-logo-square.png
 lib/swi-prolog-${PKGVERSION}/library/http/web/icons/openid-logo-tiny.png
 lib/swi-prolog-${PKGVERSION}/library/http/xpce_httpd.pl
 lib/swi-prolog-${PKGVERSION}/library/iso_639.pl
+lib/swi-prolog-${PKGVERSION}/library/isub.pl
 lib/swi-prolog-${PKGVERSION}/library/memfile.pl
 lib/swi-prolog-${PKGVERSION}/library/mime.pl
 lib/swi-prolog-${PKGVERSION}/library/pldoc.pl
@@ -152,6 +155,7 @@ lib/swi-prolog-${PKGVERSION}/library/pldoc/doc_wiki.pl
 lib/swi-prolog-${PKGVERSION}/library/pldoc/edit.gif
 lib/swi-prolog-${PKGVERSION}/library/pldoc/favicon.ico
 lib/swi-prolog-${PKGVERSION}/library/pldoc/h1-bg.png
+lib/swi-prolog-${PKGVERSION}/library/pldoc/h2-bg.png
 lib/swi-prolog-${PKGVERSION}/library/pldoc/hooks.pl
 lib/swi-prolog-${PKGVERSION}/library/pldoc/multi-bg.png
 lib/swi-prolog-${PKGVERSION}/library/pldoc/pldoc.css
@@ -973,6 +977,7 @@ lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/english/pce_message
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/file_item.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/find_file.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/find_file_dialog.pl
+lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/getpass.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/gradient.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/gui_tracer.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/help_message.pl
@@ -1094,6 +1099,7 @@ lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/splash_screen.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/stayup_popup.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/swi/pce_debug_monitor.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/swi/pce_profile.pl
+lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/swi/swi_console.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/swi/thread_monitor.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/swi_compatibility.pl
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/swi_edit.pl
@@ -1171,6 +1177,7 @@ lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/retry.x
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/send.xpm
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/skip.xpm
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/spy.xpm
+lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/stack.xpm
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/stop.xpm
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/undefined.xpm
 lib/swi-prolog-${PKGVERSION}/xpce-${XPCE_VERSION}/prolog/lib/trace/icons/undefpred.xpm
