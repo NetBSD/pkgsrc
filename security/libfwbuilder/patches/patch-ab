@@ -1,24 +1,34 @@
-$NetBSD: patch-ab,v 1.4 2006/03/12 06:56:30 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2011/04/12 13:41:17 adam Exp $
 
---- qmake.inc.in.orig	2005-04-26 07:16:02.000000000 +0000
+--- qmake.inc.in.orig	2010-11-17 05:18:12.000000000 +0000
 +++ qmake.inc.in
-@@ -27,11 +27,9 @@ unix {
- 	migration.path          =$(DDIR)@TEMPLATE_DIR@/migration
- 	doc.path                =$(DDIR)@DOCDIR@
+@@ -22,7 +22,6 @@ unix {
+     LIBS += @PTHREAD_LIBS@ @XML_LIBS@ @XSLT_LIBS@ @LIBSNMP_LIBS@ \
+         @LIB_RESOLV@ @LIBS@
  
--	CONFIG                 += warn_on debug
-+	CONFIG                 += warn_on
- 	QMAKE_CFLAGS_DEBUG     += -Wno-unused-parameter
--	QMAKE_CFLAGS_RELEASE   += -Wno-unused-parameter
- 	QMAKE_CXXFLAGS_DEBUG   += -Wno-unused-parameter
--	QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
+-    !macx {
+          UI_DIR = .ui
+          MOC_DIR = .moc
+          OBJECTS_DIR = .obj
+@@ -35,12 +34,10 @@ unix {
+          migration.path = @TEMPLATE_DIR@/migration
+          doc.path = @DOCDIR@
+ 
+-         CONFIG += warn_on debug
++         CONFIG += warn_on
+          QMAKE_CFLAGS_DEBUG += -Wno-unused-parameter
+-         QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
+          QMAKE_CXXFLAGS_DEBUG += -Wno-unused-parameter @CXXFLAGS@
+-         QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter @CXXFLAGS@
+-    }
++         QMAKE_CXXFLAGS_RELEASE += @CXXFLAGS@
  }
+ 
+ exists(qmake2.inc) {
+@@ -48,5 +45,6 @@ exists(qmake2.inc) {
  }
  
-@@ -45,5 +43,6 @@ exists(qmake2.inc) {
- }
+ CONFIG -= qt
++CONFIG += thread
  
- CONFIG     -= qt
-+CONFIG     += thread
- 
- INSTALLS   += target
+ INSTALLS += target
