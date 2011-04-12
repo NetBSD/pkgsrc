@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/03/21 13:10:58 pettai Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/12 11:33:33 obache Exp $
 
 DISTNAME=	ldns-1.6.9
 CATEGORIES=	net
@@ -38,6 +38,8 @@ PLIST_VARS.sha2!=	\
 .endif
 .if ${PLIST_VARS.sha2} == "yes"
 CONFIGURE_ARGS+=	--enable-sha2
+.else
+CONFIGURE_ARGS+=	--disable-sha2
 .endif
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	DOXYGEN=${FALSE}
