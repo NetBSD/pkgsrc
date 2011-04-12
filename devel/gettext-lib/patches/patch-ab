@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2010/02/05 08:44:04 obache Exp $
+$NetBSD: patch-ab,v 1.5 2011/04/12 17:41:28 adam Exp $
 
---- gettext-runtime/intl/Makefile.in.orig	Thu Jul 25 08:49:57 2002
-+++ gettext-runtime/intl/Makefile.in	Mon Mar 15 14:39:58 2004
-@@ -156,8 +156,7 @@ libintl.la libgnuintl.la: $(OBJECTS)
- 	  $(CC) $(CPPFLAGS) $(CFLAGS) $(XCFLAGS) $(LDFLAGS) -o $@ \
- 	  $(OBJECTS) @LTLIBICONV@ @INTL_MACOSX_LIBS@ $(LIBS) -lc \
+--- gettext-runtime/intl/Makefile.in.orig	2010-06-06 12:49:57.000000000 +0000
++++ gettext-runtime/intl/Makefile.in
+@@ -223,8 +223,7 @@ libintl.la libgnuintl.la: $(OBJECTS) $(O
+ 	  $(OBJECTS) @LTLIBICONV@ @INTL_MACOSX_LIBS@ $(LIBS) @LTLIBTHREAD@ @LTLIBC@ \
+ 	  $(OBJECTS_RES_@WOE32@) \
  	  -version-info $(LTV_CURRENT):$(LTV_REVISION):$(LTV_AGE) \
 -	  -rpath $(libdir) \
 -	  -no-undefined
@@ -12,8 +12,8 @@ $NetBSD: patch-ab,v 1.4 2010/02/05 08:44:04 obache Exp $
  
  # Libtool's library version information for libintl.
  # Before making a gettext release, the gettext maintainer must change this
-@@ -264,7 +263,7 @@ install-exec: all
- 	  $(mkinstalldirs) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir); \
+@@ -386,7 +385,7 @@ install-exec: all
+ 	  $(mkdir_p) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir); \
  	  $(INSTALL_DATA) libintl.h $(DESTDIR)$(includedir)/libintl.h; \
  	  $(LIBTOOL) --mode=install \
 -	    $(INSTALL_DATA) libintl.$la $(DESTDIR)$(libdir)/libintl.$la; \

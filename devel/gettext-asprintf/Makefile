@@ -1,25 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2010/10/27 15:43:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/12 17:41:28 adam Exp $
 
-DISTNAME=	gettext-0.14.6
-PKGNAME=	gettext-asprintf-0.14.6
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
+.include "../../devel/gettext/Makefile.common"
 
-MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
+PKGNAME=	${DISTNAME:S/-/-asprintf-/}
 COMMENT=	Provides a printf-like interface for C++
-LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
 
 CONFIGURE_DIRS=		gettext-runtime
 BUILD_DIRS=		gettext-runtime/libasprintf
 
+USE_LANGUAGES=		c c++
 INFO_FILES=		yes
 
 .include "../../mk/bsd.pkg.mk"

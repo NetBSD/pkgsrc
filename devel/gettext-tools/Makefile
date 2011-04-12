@@ -1,26 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2011/02/09 05:52:07 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/12 17:41:29 adam Exp $
 
-DISTNAME=	gettext-0.14.6
-PKGNAME=	gettext-tools-0.14.6
-PKGREVISION=	1
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
+.include "../../devel/gettext/Makefile.common"
 
-MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
+PKGNAME=	${DISTNAME:S/-/-tools-/}
 COMMENT=	Tools for providing messages in different languages
-LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+#MAKE_JOBS_SAFE=		no
 
-BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.14.5
-CONFLICTS=		gettext<0.14.5
+DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/gettext/patches
 
-MAKE_JOBS_SAFE=		no
-
-USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
@@ -32,7 +23,6 @@ LDFLAGS.AIX+=		-Wl,-brtl
 
 SHLIBTOOL_OVERRIDE=	# empty
 INFO_FILES=		yes
-MAKE_JOBS_SAFE=		no
 
 BROKEN_GETTEXT_DETECTION=	yes
 USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
