@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/02/02 09:03:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/04/12 19:03:48 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -34,8 +34,9 @@ share/doc/sqlite3/c3ref/c_alter_table.html
 share/doc/sqlite3/c3ref/c_any.html
 share/doc/sqlite3/c3ref/c_blob.html
 share/doc/sqlite3/c3ref/c_busy_recovery.html
+share/doc/sqlite3/c3ref/c_checkpoint_full.html
 share/doc/sqlite3/c3ref/c_config_getmalloc.html
-share/doc/sqlite3/c3ref/c_dbconfig_lookaside.html
+share/doc/sqlite3/c3ref/c_dbconfig_enable_fkey.html
 share/doc/sqlite3/c3ref/c_dbstatus_cache_used.html
 share/doc/sqlite3/c3ref/c_deny.html
 share/doc/sqlite3/c3ref/c_fcntl_chunk_size.html
@@ -153,6 +154,7 @@ share/doc/sqlite3/c3ref/vtab.html
 share/doc/sqlite3/c3ref/vtab_cursor.html
 share/doc/sqlite3/c3ref/wal_autocheckpoint.html
 share/doc/sqlite3/c3ref/wal_checkpoint.html
+share/doc/sqlite3/c3ref/wal_checkpoint_v2.html
 share/doc/sqlite3/c3ref/wal_hook.html
 share/doc/sqlite3/c_interface.html
 share/doc/sqlite3/capi3.html
@@ -190,11 +192,13 @@ share/doc/sqlite3/fileio.html
 share/doc/sqlite3/foreignkeys.html
 share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
+share/doc/sqlite3/fts3req.html
 share/doc/sqlite3/howtocompile.html
-share/doc/sqlite3/howtocorrupt.html
 share/doc/sqlite3/images/2005osaward.gif
 share/doc/sqlite3/images/SQLite.gif
 share/doc/sqlite3/images/SQLite_big.gif
+share/doc/sqlite3/images/ac/btreemodule_balance_shallower.svg
+share/doc/sqlite3/images/ac/btreemodule_overview.svg
 share/doc/sqlite3/images/ac/commit-0.gif
 share/doc/sqlite3/images/ac/commit-1.gif
 share/doc/sqlite3/images/ac/commit-2.gif
@@ -239,6 +243,9 @@ share/doc/sqlite3/images/chw.jpg
 share/doc/sqlite3/images/dan1.jpg
 share/doc/sqlite3/images/direct1b.gif
 share/doc/sqlite3/images/drh1.jpg
+share/doc/sqlite3/images/fileformat/._filesystem1.gif
+share/doc/sqlite3/images/fileformat/._master_journal_ptr.gif
+share/doc/sqlite3/images/fileformat/.~lock.indexpage.odg#
 share/doc/sqlite3/images/fileformat/db_connection.gif
 share/doc/sqlite3/images/fileformat/examplepop.gif
 share/doc/sqlite3/images/fileformat/fileio_diagrams.odg
@@ -258,15 +265,15 @@ share/doc/sqlite3/images/fileformat/overflowpage.gif
 share/doc/sqlite3/images/fileformat/pointermapentry.gif
 share/doc/sqlite3/images/fileformat/recordformat.gif
 share/doc/sqlite3/images/fileformat/rtdocs.css
+share/doc/sqlite3/images/fileformat/rtdocs.css~
 share/doc/sqlite3/images/fileformat/rtdocs.js
+share/doc/sqlite3/images/fileformat/rtdocs.js~
 share/doc/sqlite3/images/fileformat/tablelongrecord.gif
 share/doc/sqlite3/images/fileformat/tablenodecell.gif
 share/doc/sqlite3/images/fileformat/tableshortrecord.gif
 share/doc/sqlite3/images/fileformat/tabletree.gif
 share/doc/sqlite3/images/fileformat/vfs_role.gif
 share/doc/sqlite3/images/fileformat/write_transaction.gif
-share/doc/sqlite3/images/foreignlogos/Airbus1.jpg
-share/doc/sqlite3/images/foreignlogos/AirbusLogo2.jpg
 share/doc/sqlite3/images/foreignlogos/adobe-logo.gif
 share/doc/sqlite3/images/foreignlogos/adobe.gif
 share/doc/sqlite3/images/foreignlogos/airbus1.gif
@@ -277,10 +284,12 @@ share/doc/sqlite3/images/foreignlogos/dropbox.gif
 share/doc/sqlite3/images/foreignlogos/firefox.gif
 share/doc/sqlite3/images/foreignlogos/ge.gif
 share/doc/sqlite3/images/foreignlogos/google.gif
+share/doc/sqlite3/images/foreignlogos/intuit.gif
 share/doc/sqlite3/images/foreignlogos/mcaffee.gif
 share/doc/sqlite3/images/foreignlogos/microsoft.gif
 share/doc/sqlite3/images/foreignlogos/monotone.gif
 share/doc/sqlite3/images/foreignlogos/mozilla.gif
+share/doc/sqlite3/images/foreignlogos/nokia.gif
 share/doc/sqlite3/images/foreignlogos/oracle.gif
 share/doc/sqlite3/images/foreignlogos/philips.gif
 share/doc/sqlite3/images/foreignlogos/php.gif
@@ -313,7 +322,6 @@ share/doc/sqlite3/images/private_branch.gif
 share/doc/sqlite3/images/qp/fruitobstate.gif
 share/doc/sqlite3/images/qp/fruitobstate0.gif
 share/doc/sqlite3/images/qp/fullscan.gif
-share/doc/sqlite3/images/qp/grab.sh
 share/doc/sqlite3/images/qp/idx1.gif
 share/doc/sqlite3/images/qp/idx1lu1.gif
 share/doc/sqlite3/images/qp/idx1lu2.gif
@@ -336,12 +344,12 @@ share/doc/sqlite3/images/se.gif
 share/doc/sqlite3/images/se.png
 share/doc/sqlite3/images/shane1.jpg
 share/doc/sqlite3/images/shared.gif
-share/doc/sqlite3/images/sqlite370.eps
 share/doc/sqlite3/images/sqlite370.jpg
 share/doc/sqlite3/images/sqlite370_banner.gif
 share/doc/sqlite3/images/src_logo.gif
 share/doc/sqlite3/images/sw.gif
 share/doc/sqlite3/images/sw.png
+share/doc/sqlite3/images/syntax/a.gif
 share/doc/sqlite3/images/syntax/alter-table-stmt.gif
 share/doc/sqlite3/images/syntax/analyze-stmt.gif
 share/doc/sqlite3/images/syntax/attach-stmt.gif
@@ -365,9 +373,7 @@ share/doc/sqlite3/images/syntax/drop-table-stmt.gif
 share/doc/sqlite3/images/syntax/drop-trigger-stmt.gif
 share/doc/sqlite3/images/syntax/drop-view-stmt.gif
 share/doc/sqlite3/images/syntax/expr.gif
-share/doc/sqlite3/images/syntax/floating-point-literal.gif
 share/doc/sqlite3/images/syntax/foreign-key-clause.gif
-share/doc/sqlite3/images/syntax/foreign-key-clause2.gif
 share/doc/sqlite3/images/syntax/indexed-column.gif
 share/doc/sqlite3/images/syntax/insert-stmt.gif
 share/doc/sqlite3/images/syntax/join-constraint.gif
@@ -397,7 +403,6 @@ share/doc/sqlite3/images/syntax/update-stmt-limited.gif
 share/doc/sqlite3/images/syntax/update-stmt.gif
 share/doc/sqlite3/images/syntax/vacuum-stmt.gif
 share/doc/sqlite3/images/table-ex1b2.gif
-share/doc/sqlite3/images/x.gif
 share/doc/sqlite3/index.html
 share/doc/sqlite3/inmemorydb.html
 share/doc/sqlite3/keyword_index.html
@@ -436,6 +441,7 @@ share/doc/sqlite3/lang_update.html
 share/doc/sqlite3/lang_vacuum.html
 share/doc/sqlite3/limits.html
 share/doc/sqlite3/lockingv3.html
+share/doc/sqlite3/logformat.html
 share/doc/sqlite3/malloc.html
 share/doc/sqlite3/mingw.html
 share/doc/sqlite3/mostdeployed.html
@@ -544,12 +550,17 @@ share/doc/sqlite3/releaselog/3_7_2.html
 share/doc/sqlite3/releaselog/3_7_3.html
 share/doc/sqlite3/releaselog/3_7_4.html
 share/doc/sqlite3/releaselog/3_7_5.html
+share/doc/sqlite3/releaselog/3_7_6.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rtree.html
-share/doc/sqlite3/search
 share/doc/sqlite3/selfcontained.html
 share/doc/sqlite3/serverless.html
+share/doc/sqlite3/session.html
+share/doc/sqlite3/session/constlist.html
+share/doc/sqlite3/session/funclist.html
+share/doc/sqlite3/session/intro.html
+share/doc/sqlite3/session/objlist.html
 share/doc/sqlite3/sharedcache.html
 share/doc/sqlite3/sitemap.html
 share/doc/sqlite3/speed.html
