@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.918 2011/04/12 17:50:19 adam Exp $
+$NetBSD: CHANGES-2011,v 1.919 2011/04/12 19:04:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1514,3 +1514,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/gettext-lib to 0.18.1.1 [adam 2011-04-12]
 	Updated devel/gettext-m4 to 0.18.1.1 [adam 2011-04-12]
 	Updated devel/gettext-tools to 0.18.1.1 [adam 2011-04-12]
+	Updated databases/sqlite3 to 3.7.6 [adam 2011-04-12]
+	Updated databases/sqlite3-docs to 3.7.6 [adam 2011-04-12]
+	Updated databases/sqlite3-tcl to 3.7.6 [adam 2011-04-12]
