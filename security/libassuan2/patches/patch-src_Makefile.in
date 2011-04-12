@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2011/04/12 13:17:20 adam Exp $
+
+Pass CFLAGS (needed on Mac OS X).
+
+--- src/Makefile.in.orig	2011-04-12 13:13:02.000000000 +0000
++++ src/Makefile.in
+@@ -981,7 +981,7 @@ uninstall-am: uninstall-binPROGRAMS unin
+ @HAVE_W32CE_SYSTEM_TRUE@              $(DESTDIR)$(bindir)/gpgcedev.dll
+ 
+ mkheader: mkheader.c Makefile
+-	$(CC_FOR_BUILD) -I. -I$(srcdir) -o $@ $(srcdir)/mkheader.c
++	$(CC_FOR_BUILD) $(CFLAGS) -I. -I$(srcdir) -o $@ $(srcdir)/mkheader.c
+ 
+ assuan.h: assuan.h.in mkheader $(parts_of_assuan_h)
+ 	./mkheader $(host_os) $(srcdir)/assuan.h.in >$@
