@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2011/02/23 12:15:52 shattered Exp $
+# $NetBSD: options.mk,v 1.14 2011/04/12 13:15:01 obache Exp $
 #
 
 #
@@ -25,13 +25,17 @@ PLIST_VARS+=	gtk kde kde3 kde4 plugin gstreamer
 GNASH_GUIS+=		gtk
 PLIST.gtk=		yes
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mkde)
-#.include "../../devel/nspr/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-npapi-plugins-install=system
+BUILDLINK_DEPMETHOD.xulrunner=	build
+.include "../../devel/xulrunner/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-npapi-install=system
 CONFIGURE_ARGS+=	--with-npapi-plugindir=${PREFIX}/lib/netscape/plugins
 PLIST.plugin=		yes
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mkde)
@@ -106,6 +110,8 @@ PLIST.gstreamer=	yes
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 DEPENDS+= gst-ffmpeg-0.10.[0-9]*:../../multimedia/gst-plugins0.10-ffmpeg
+DEPENDS+= gst-plugins0.10-mad-[0-9]*:../../audio/gst-plugins0.10-mad
+DEPENDS+= gst-plugins0.10-vorbis-[0-9]*:../../audio/gst-plugins0.10-vorbis
 .endif
 
 CONFIGURE_ARGS+=	--enable-media=${GNASH_MEDIA:Unone:tW:S/ /,/}
@@ -114,6 +120,5 @@ CONFIGURE_ARGS+=	--enable-media=${GNASH_MEDIA:Unone:tW:S/ /,/}
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hwaccel=VAAPI
 .else
-.include "../../x11/libXv/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-hwaccel=xvideo
+CONFIGURE_ARGS+=	--enable-hwaccel=none
 .endif
