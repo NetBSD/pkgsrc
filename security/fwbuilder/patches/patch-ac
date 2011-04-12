@@ -1,18 +1,28 @@
-$NetBSD: patch-ac,v 1.4 2006/03/12 06:58:42 minskim Exp $
+$NetBSD: patch-ac,v 1.5 2011/04/12 13:44:03 adam Exp $
 
---- src/res/res.pro.orig	2005-07-06 06:05:01.000000000 +0000
+--- src/res/res.pro.orig	2011-04-12 06:19:21.000000000 +0000
 +++ src/res/res.pro
-@@ -7,11 +7,13 @@ win32 {
-   QMAKE_RUN_CC  = @echo
-   QMAKE_RUN_CXX = @echo
-   QMAKE_LINK    = @echo
-+  QMAKE_LIBTOOL = @echo
- }
- !win32 {
+@@ -17,6 +17,7 @@ win32 {
    QMAKE_RUN_CC  = @echo > /dev/null
    QMAKE_RUN_CXX = @echo > /dev/null
    QMAKE_LINK    = @echo > /dev/null
 +  QMAKE_LIBTOOL = @echo > /dev/null
  }
+ 
+ TARGET = res
+@@ -40,7 +41,6 @@ INSTALLS += res_help_en_US
+ INSTALLS += res_configlets
+ 
+ unix {
+-!macx {
+ 	res_desktop.files = fwbuilder.desktop
+ 	INSTALLS += res_desktop
+ 
+@@ -78,7 +78,6 @@ unix {
+ 		INSTALLS += app_icon_512x512
+ 	}
+ }
+-}
+ 
  
  
