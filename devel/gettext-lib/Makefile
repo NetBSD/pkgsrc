@@ -1,27 +1,16 @@
-# $NetBSD: Makefile,v 1.51 2010/10/28 09:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2011/04/12 17:41:28 adam Exp $
 
-DISTNAME=	gettext-0.14.6
-PKGNAME=	gettext-lib-0.14.6
+.include "../../devel/gettext/Makefile.common"
+
+PKGNAME=	${DISTNAME:S/-/-lib-/}
 SVR4_PKGNAME=	gttli
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
-
-MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
 COMMENT=	Internationalized Message Handling Library (libintl)
-LICENSE=	gnu-gpl-v2
 
-CONFLICTS=		gettext<=0.10.35
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c
 CONFIGURE_ARGS+=	--with-included-gettext
 CONFIGURE_ARGS+=	--disable-csharp
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
-MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
 CFLAGS+=		${CFLAGS.${ICONV_TYPE}-iconv}
 CFLAGS.gnu-iconv+=	-DHAVE_GNU_ICONV

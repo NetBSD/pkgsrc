@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:48:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/04/12 17:41:28 adam Exp $
 bin/autopoint
 bin/gettextize
 lib/gettext/hostname
@@ -8,9 +8,8 @@ lib/gettext/user-email
 man/man1/autopoint.1
 man/man1/gettextize.1
 share/gettext/ABOUT-NLS
-share/gettext/archive.tar.gz
+share/gettext/archive.dir.tar.gz
 share/gettext/config.rpath
-share/gettext/gettext.h
 share/gettext/intl/COPYING.LIB-2.0
 share/gettext/intl/COPYING.LIB-2.1
 share/gettext/intl/ChangeLog
@@ -25,15 +24,19 @@ share/gettext/intl/dgettext.c
 share/gettext/intl/dngettext.c
 share/gettext/intl/eval-plural.h
 share/gettext/intl/explodename.c
+share/gettext/intl/export.h
 share/gettext/intl/finddomain.c
 share/gettext/intl/gettext.c
 share/gettext/intl/gettextP.h
 share/gettext/intl/gmo.h
+share/gettext/intl/hash-string.c
 share/gettext/intl/hash-string.h
 share/gettext/intl/intl-compat.c
+share/gettext/intl/intl-exports.c
 share/gettext/intl/l10nflist.c
 share/gettext/intl/langprefs.c
 share/gettext/intl/libgnuintl.h.in
+share/gettext/intl/libintl.rc
 share/gettext/intl/loadinfo.h
 share/gettext/intl/loadmsgcat.c
 share/gettext/intl/localcharset.c
@@ -41,6 +44,8 @@ share/gettext/intl/localcharset.h
 share/gettext/intl/locale.alias
 share/gettext/intl/localealias.c
 share/gettext/intl/localename.c
+share/gettext/intl/lock.c
+share/gettext/intl/lock.h
 share/gettext/intl/log.c
 share/gettext/intl/ngettext.c
 share/gettext/intl/os2compat.c
@@ -59,13 +64,17 @@ share/gettext/intl/ref-add.sin
 share/gettext/intl/ref-del.sin
 share/gettext/intl/relocatable.c
 share/gettext/intl/relocatable.h
+share/gettext/intl/setlocale.c
 share/gettext/intl/textdomain.c
+share/gettext/intl/threadlib.c
+share/gettext/intl/tsearch.c
+share/gettext/intl/tsearch.h
 share/gettext/intl/vasnprintf.c
 share/gettext/intl/vasnprintf.h
 share/gettext/intl/vasnwprintf.h
+share/gettext/intl/version.c
 share/gettext/intl/wprintf-parse.h
 share/gettext/intl/xsize.h
-share/gettext/mkinstalldirs
 share/gettext/msgunfmt.tcl
 share/gettext/po/Makefile.in.in
 share/gettext/po/Makevars.template
