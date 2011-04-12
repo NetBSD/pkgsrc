@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.912 2011/04/12 08:46:27 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.913 2011/04/12 08:58:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1501,3 +1501,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-App-Nopaste to 0.28 [gls 2011-04-12]
 	Updated finance/gnucash to 2.4.5 [wiz 2011-04-12]
 	Updated misc/JBidwatcher to 2.1.5 [wiz 2011-04-12]
+	Updated graphics/tiff to 3.9.5 [wiz 2011-04-12]
