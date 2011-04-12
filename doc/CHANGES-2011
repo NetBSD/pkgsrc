@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.910 2011/04/12 06:03:04 gls Exp $
+$NetBSD: CHANGES-2011,v 1.911 2011/04/12 08:42:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1499,3 +1499,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/gbrainy to 1.65 [wiz 2011-04-11]
 	Updated www/ap2-suphp to 0.7.1 [gls 2011-04-11]
 	Updated www/p5-App-Nopaste to 0.28 [gls 2011-04-12]
+	Updated finance/gnucash to 2.4.5 [wiz 2011-04-12]
