@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.20 2011/01/12 00:26:33 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.21 2011/04/12 22:12:42 tron Exp $	*/
 
 /*-
  * Copyright (c) 2001-2011 The NetBSD Foundation, Inc.
@@ -343,52 +343,6 @@ WriteFile(FileHandle *in, char *name, mode_t mode, unsigned long length,
 
 	(void)unlink(name);
 	return false;
-}
-
-static void
-CheckSymLinks(PListEntry **Links, PListEntry **Files, PListEntry **Dirs)
-{
-	PListEntry	*Link;
-
-	while ((Link = *Links) != NULL) {
-		struct stat	Stat;
-		PListEntry	*Ptr;
-		char		*Basename;
-
-		if (Link->pe_Left != NULL)
-			CheckSymLinks(&Link->pe_Left, Files, Dirs);
-
-		if ((stat(Link->pe_Name, &Stat) < 0) ||
-		    !S_ISREG(Stat.st_mode)) {
-			Links = &Link->pe_Right;
-			continue;
-		}
-
-		(void)PListInsert(Files, Link->pe_Name);
-		if ((Basename = strrchr(Link->pe_Name, '/')) != NULL) {
-			*Basename = '\0';
-			if ((Ptr = PListFind(*Dirs, Link->pe_Name)) != NULL)
-				Ptr->pe_DirEmpty = false;
-		}
-
-		if (Link->pe_Right == NULL) {
-			*Links = Link->pe_Left;
-			free(Link);
-			break;
-		}
-
-		*Links = Link->pe_Right;
-		Ptr = Link->pe_Left;
-		free(Link);
-
-		if (Ptr == NULL)
-			continue;
-
-		Link = *Links;
-		while (Link->pe_Left != NULL)
-			Link = Link->pe_Left;
-		Link->pe_Left = Ptr;
-	}
 }
 
 static bool
