@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.921 2011/04/12 22:13:03 tron Exp $
+$NetBSD: CHANGES-2011,v 1.922 2011/04/12 23:18:19 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1519,3 +1519,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3-docs to 3.7.6 [adam 2011-04-12]
 	Updated databases/sqlite3-tcl to 3.7.6 [adam 2011-04-12]
 	Updated pkgtools/rpm2pkg to 3.2.2 [tron 2011-04-12]
+	Updated lang/swi-prolog-lite to 5.11.18 [asau 2011-04-12]
+	Updated lang/swi-prolog-packages to 5.11.18 [asau 2011-04-12]
+	Updated lang/swi-prolog to 5.11.18 [asau 2011-04-12]
