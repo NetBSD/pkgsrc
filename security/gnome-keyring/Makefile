@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2011/01/13 13:36:39 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2011/04/13 16:39:14 drochner Exp $
 
-DISTNAME=	gnome-keyring-2.30.3
-PKGREVISION=	3
+DISTNAME=	gnome-keyring-2.32.1
 CATEGORIES=	security gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.30/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,8 +20,6 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/gcr/gcr.pc.in
 PKGCONFIG_OVERRIDE=	${WRKSRC}/library/gnome-keyring-1.pc.in
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gp11/gp11.pc.in
 
-GCONF_SCHEMAS+=		gnome-keyring.schemas
-
 CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
 
 # Workaround a bug with NetBSD's openpam
@@ -34,10 +31,10 @@ CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
+BUILD_DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 
-.include "../../devel/GConf/schemas.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
