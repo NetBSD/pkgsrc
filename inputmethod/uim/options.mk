@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2010/10/15 07:01:08 obache Exp $
+# $NetBSD: options.mk,v 1.23 2011/04/13 13:45:16 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 #PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gtk m17nlib openssl prime sj3 sqlite uim-fep wnn xim
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gtk m17nlib openssl p
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde3
 PKG_OPTIONS_GROUP.qt=	qt qt3
-PKG_SUGGESTED_OPTIONS=	anthy canna gtk uim-fep xim
+PKG_SUGGESTED_OPTIONS=	anthy gtk uim-fep xim
 
 .include "../../mk/bsd.options.mk"
 
@@ -79,6 +79,7 @@ CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR}/eb.conf
 PLIST.eb=		yes
 .endif
 
+# For uim-yahoo-jp
 .if !empty(PKG_OPTIONS:Mexpat)
 .  include "../../textproc/expat/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
