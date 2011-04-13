@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.21 2010/03/21 11:06:05 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.22 2011/04/13 13:23:39 adam Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -92,9 +92,9 @@ phpize-module:
 do-install: do-module-install
 
 do-module-install:
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/${PHP_EXTENSION_DIR}
-	${INSTALL_DATA} ${MODULESDIR}/${PKGMODNAME}.${SHLIB_SUFFIX} \
-		${DESTDIR:Q}${PREFIX:Q}/${PHP_EXTENSION_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PHP_EXTENSION_DIR}
+	${INSTALL_LIB} ${MODULESDIR}/${PKGMODNAME}.${SHLIB_SUFFIX} \
+		${DESTDIR}${PREFIX}/${PHP_EXTENSION_DIR}
 
 .if defined(USE_PHP_EXT_PATCHES)
 PATCHDIR=		${.CURDIR}/${PHPPKGSRCDIR}/patches
