@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.38 2010/07/06 16:13:42 drochner Exp $
+$NetBSD: distinfo,v 1.39 2011/04/13 16:39:14 drochner Exp $
 
-SHA1 (gnome-keyring-2.30.3.tar.bz2) = 0e0a2a1f4127dc6a01583fb3e81386370d9335f0
-RMD160 (gnome-keyring-2.30.3.tar.bz2) = 9bd3cea25e10e1dcd93cfbc75a6a448e8ab338ca
-Size (gnome-keyring-2.30.3.tar.bz2) = 1592573 bytes
+SHA1 (gnome-keyring-2.32.1.tar.bz2) = 3d0ecc3e29f426ecfcaa488ea17d3e330fe34eb6
+RMD160 (gnome-keyring-2.32.1.tar.bz2) = cb72f171f5918ff26f40feb7bba90dc7e2e120ec
+Size (gnome-keyring-2.32.1.tar.bz2) = 1619245 bytes
 SHA1 (patch-ad) = d49bc78227646b3de3c357cd0f1e90cd38862ee4
-SHA1 (patch-ae) = f2c75eb299cd9cd6f1f4ba32da73df0ad546c4ec
-SHA1 (patch-af) = 03f4ff07a7b9830dbc5c228efb4d971adfe85d89
-SHA1 (patch-ag) = 4b6f5510124c58613c5b8ce8782f913cca43a570
+SHA1 (patch-ae) = a4e6fabd0534a56b974ec799539ce93df6580ff1
+SHA1 (patch-af) = f89bc8980fd966f330c67907b4534ba01f2591f9
+SHA1 (patch-ag) = 1d51cad93c511d2fe0132b1a24e554611d4e18e2
+SHA1 (patch-ah) = 59f37786e06e197a726a32e8fc76b0b064259e1d
