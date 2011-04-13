@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/13 13:17:00 obache Exp $
-bin/xlsopcodes${$RUBY_VER}
+@comment $NetBSD: PLIST,v 1.2 2011/04/13 13:21:29 obache Exp $
+bin/xlsopcodes${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/GUIDE.txt
