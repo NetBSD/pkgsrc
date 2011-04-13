@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/09/18 03:08:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/04/13 13:45:16 obache Exp $
 ${PLIST.qt3}bin/uim-chardict-qt
 ${PLIST.qt}bin/uim-chardict-qt4
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
@@ -47,11 +47,11 @@ ${PLIST.editline}lib/uim/plugin/libuim-editline.la
 ${PLIST.expat}lib/uim/plugin/libuim-expat.la
 ${PLIST.ffi}lib/uim/plugin/libuim-ffi.la
 lib/uim/plugin/libuim-fileio.la
+lib/uim/plugin/libuim-lolevel.la
 lib/uim/plugin/libuim-look.la
 ${PLIST.m17nlib}lib/uim/plugin/libuim-m17nlib.la
 ${PLIST.openssl}lib/uim/plugin/libuim-openssl.la
 ${PLIST.sqlite}lib/uim/plugin/libuim-sqlite3.la
-lib/uim/plugin/libuim-lolevel.la
 lib/uim/plugin/libuim-process.la
 lib/uim/plugin/libuim-skk.la
 lib/uim/plugin/libuim-socket.la
@@ -167,10 +167,10 @@ share/uim/lolevel.scm
 share/uim/look-custom.scm
 share/uim/look.scm
 share/uim/m17nlib.scm
-share/uim/match.scm
 share/uim/mana-custom.scm
 share/uim/mana-key-custom.scm
 share/uim/mana.scm
+share/uim/match.scm
 share/uim/ng-action.scm
 share/uim/ng-key.scm
 share/uim/openssl.scm
@@ -372,11 +372,13 @@ share/uim/tables/zm.table
 share/uim/tcode.scm
 share/uim/trec.scm
 share/uim/trycode.scm
+share/uim/tutcode-bushu.scm
 share/uim/tutcode-bushudic.scm
 share/uim/tutcode-custom.scm
 share/uim/tutcode-dialog.scm
 share/uim/tutcode-editor.scm
 share/uim/tutcode-key-custom.scm
+share/uim/tutcode-kigou-rule.scm
 share/uim/tutcode-kigoudic.scm
 share/uim/tutcode-rule.scm
 share/uim/tutcode.scm
