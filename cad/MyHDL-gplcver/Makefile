@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 01:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/13 16:14:10 drochner Exp $
 #
 
-DISTNAME=	myhdl-0.5.1
-PKGNAME=	MyHDL-gplcver-0.5.1
+DISTNAME=	myhdl-0.7
+PKGNAME=	MyHDL-gplcver-0.7
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 
@@ -19,6 +19,10 @@ do-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/gplcver
 	${INSTALL_DATA} ${WRKSRC}/cosimulation/cver/myhdl_vpi.so \
 		${DESTDIR}${PREFIX}/lib/gplcver
+
+# XXX would require Python dependency
+#do-test:
+#	(cd ${WRKSRC}/cosimulation/cver/test && ${PYTHONBIN} test_all.py)
 
 .include "../../cad/gplcver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

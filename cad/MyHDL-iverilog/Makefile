@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/04/01 17:26:06 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/13 16:14:10 drochner Exp $
 #
 
-DISTNAME=	myhdl-0.5.1
-PKGNAME=	MyHDL-iverilog-0.5.1
+DISTNAME=	myhdl-0.7
+PKGNAME=	MyHDL-iverilog-0.7
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 
@@ -19,5 +19,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cosimulation/icarus/myhdl.vpi \
 		${DESTDIR}${PREFIX}/lib/ivl
 
-.include "../../cad/verilog-current/buildlink3.mk"
+# XXX would require Python dependency
+#do-test:
+#	(cd ${WRKSRC}/cosimulation/icarus/test && ${PYTHONBIN} test_all.py)
+
+.include "../../cad/verilog/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
