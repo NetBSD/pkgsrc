@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/03/03 22:26:26 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/13 01:48:55 minskim Exp $
 
 DISTNAME=	metafont
 PKGNAME=	tex-${DISTNAME}-2009
 PKGREVISION=	1
 CATEGORIES=	fonts
-TEXLIVE_REV=	21345
+TEXLIVE_REV=	21566
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	METAFONT font design system
