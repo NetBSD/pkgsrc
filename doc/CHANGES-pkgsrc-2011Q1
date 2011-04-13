@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.5 2011/04/12 06:17:37 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.6 2011/04/13 18:29:32 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -46,3 +46,7 @@ Pullup ticket #3408 - requested by morr
 www/wordpress security update
 Pullup ticket #3409 - requested by markd
 x11/kdelibs4: security patch
+Pullup ticket #3411 - requested by wiz
+misc/calibre: build fix
+Pullup ticket #3413 - requested by drochner
+x11/xrdb: security update
