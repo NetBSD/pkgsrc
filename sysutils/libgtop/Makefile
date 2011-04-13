@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2011/01/19 16:43:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2011/04/13 17:05:20 drochner Exp $
 
-DISTNAME=		libgtop-2.28.2
-PKGREVISION=		2
+DISTNAME=		libgtop-2.28.3
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.28/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 OSVERSION_SPECIFIC=	YES
 
 GNU_CONFIGURE=		YES
+CONFIG_SHELL=		bash
 INFO_FILES=		YES
 PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 TEXINFO_REQD=		4.6
