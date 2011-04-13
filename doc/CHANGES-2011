@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.926 2011/04/13 13:45:57 obache Exp $
+$NetBSD: CHANGES-2011,v 1.927 2011/04/13 13:50:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1526,3 +1526,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/ruby-ole version 1.2.11.1 [obache 2011-04-13]
 	Added math/ruby-spreadsheet version 0.6.5.3 [obache 2011-04-13]
 	Updated inputmethod/uim to 1.6.1 [obache 2011-04-13]
+	Updated inputmethod/uim-elisp to 1.6.1 [obache 2011-04-13]
