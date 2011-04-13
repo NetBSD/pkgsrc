@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/11/09 18:25:38 tnn Exp $
+# $NetBSD: Makefile,v 1.6.12.1 2011/04/13 18:28:42 tron Exp $
 #
 
-DISTNAME=		xrdb-1.0.6
+DISTNAME=		xrdb-1.0.9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
