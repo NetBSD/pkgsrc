@@ -1,0 +1,18 @@
+SNMPTT (SNMP Trap Translator) is an SNMP trap handler written in Perl for
+use with the Net-SNMP / UCD-SNMP snmptrapd program (www.net-snmp.org).
+SNMPTT supports Linux, Unix and Windows.
+
+Snmptt can log to any of the following destinations: text log, syslog,
+NT Event log or a SQL database. External programs can also be run to pass
+the translated trap to an email client, paging software, Nagios etc.
+
+In addition to variable substitution, SNMPTT allows complex configurations
+allowing:
+
+    * the ability to accept or reject a trap based on the host name,
+      ip address, network range, or variable values inside of the trap
+      enterprise variables
+    * execute external programs to send pages, emails etc
+    * perform regular expression search and replace on the translated message
+      such as translating the variable value "Building alarm 4" to
+      "Moisture detection alarm"
