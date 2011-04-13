@@ -1,0 +1,15 @@
+$NetBSD: patch-bd,v 1.3 2011/04/13 16:19:15 drochner Exp $
+
+CVE-2010-1806
+
+--- WebCore/rendering/RenderBlock.cpp.orig	2011-02-07 17:29:58.000000000 +0000
++++ WebCore/rendering/RenderBlock.cpp
+@@ -544,6 +544,8 @@ void RenderBlock::removeChild(RenderObje
+                                     (!oldChild->isRenderBlock() || !toRenderBlock(oldChild)->inlineContinuation()) && 
+                                     (!prev || (prev->isAnonymousBlock() && prev->childrenInline())) &&
+                                     (!next || (next->isAnonymousBlock() && next->childrenInline()));
++    if (prev && prev->firstChild() && prev->firstChild()->isInline() && prev->firstChild()->isRunIn())
++	canDeleteAnonymousBlocks = false;
+     if (canDeleteAnonymousBlocks && prev && next) {
+         // Take all the children out of the |next| block and put them in
+         // the |prev| block.
