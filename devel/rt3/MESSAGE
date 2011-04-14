@@ -1,12 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2011/02/27 17:05:57 spz Exp $
+$NetBSD: MESSAGE,v 1.6 2011/04/14 12:42:56 adam Exp $
 
 You must configure RT by editing ${PKG_SYSCONFDIR}/RT_SiteConfig.pm.
 
 To initialize the RT database, run
 
 	${PREFIX}/sbin/rt-setup-database --action init \
-	    --dba dbadmin --prompt-for-dba-password
+	    --dba dbadmin --prompt-for-dba-password \
+	    --datadir ${RTSHAREDIR}/etc
 
 as a user in the ${RT_GROUP} group or as superuser.  In the previous
 command-line, 'dbadmin' stands for the database administrator's username,
