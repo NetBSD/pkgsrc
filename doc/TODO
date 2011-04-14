@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10271 2011/04/13 13:45:57 obache Exp $
+$NetBSD: TODO,v 1.10272 2011/04/14 10:35:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -508,7 +508,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dmenu-4.2.1
 	o dnsmasq-2.57
 	o dnstracer-1.9
-	o docbook-xsl-1.76.0
 	o doclifter-2.6
 	o doxygen-1.7.4
 	o dpkg-1.14.25
