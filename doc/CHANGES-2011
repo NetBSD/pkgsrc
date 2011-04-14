@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.927 2011/04/13 13:50:53 obache Exp $
+$NetBSD: CHANGES-2011,v 1.928 2011/04/14 02:18:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1527,3 +1527,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added math/ruby-spreadsheet version 0.6.5.3 [obache 2011-04-13]
 	Updated inputmethod/uim to 1.6.1 [obache 2011-04-13]
 	Updated inputmethod/uim-elisp to 1.6.1 [obache 2011-04-13]
+	Updated mail/cyrus-imapd24 to 2.4.8 [obache 2011-04-14]
