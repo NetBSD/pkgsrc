@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/04/14 15:52:51 drochner Exp $
+
+GTimeVal->tv_sec is glong
+
+--- champlain/champlain-network-tile-source.c.orig	2011-03-30 21:41:54.000000000 +0000
++++ champlain/champlain-network-tile-source.c
+@@ -680,6 +680,7 @@ static gchar *
+ get_modified_time_string (ChamplainTile *tile)
+ {
+   const GTimeVal *time;
++  time_t t;
+ 
+   g_return_val_if_fail (CHAMPLAIN_TILE (tile), NULL);
+ 
+@@ -688,7 +689,8 @@ get_modified_time_string (ChamplainTile 
+   if (time == NULL)
+     return NULL;
+ 
+-  struct tm *other_time = gmtime (&time->tv_sec);
++  t = time->tv_sec;
++  struct tm *other_time = gmtime (&t);
+   char value[100];
+ 
+ #ifdef G_OS_WIN32
