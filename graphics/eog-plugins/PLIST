@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/26 11:16:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/14 15:57:25 drochner Exp $
 lib/eog/plugins/fit-to-width.eog-plugin
 lib/eog/plugins/libfit-to-width.la
 lib/eog/plugins/libsend-by-mail.la
@@ -9,6 +9,7 @@ share/locale/be@latin/LC_MESSAGES/eog-plugins.mo
 share/locale/bg/LC_MESSAGES/eog-plugins.mo
 share/locale/bn_IN/LC_MESSAGES/eog-plugins.mo
 share/locale/ca/LC_MESSAGES/eog-plugins.mo
+share/locale/ca@valencia/LC_MESSAGES/eog-plugins.mo
 share/locale/cs/LC_MESSAGES/eog-plugins.mo
 share/locale/da/LC_MESSAGES/eog-plugins.mo
 share/locale/de/LC_MESSAGES/eog-plugins.mo
@@ -20,6 +21,7 @@ share/locale/fi/LC_MESSAGES/eog-plugins.mo
 share/locale/fr/LC_MESSAGES/eog-plugins.mo
 share/locale/gl/LC_MESSAGES/eog-plugins.mo
 share/locale/gu/LC_MESSAGES/eog-plugins.mo
+share/locale/he/LC_MESSAGES/eog-plugins.mo
 share/locale/hu/LC_MESSAGES/eog-plugins.mo
 share/locale/id/LC_MESSAGES/eog-plugins.mo
 share/locale/it/LC_MESSAGES/eog-plugins.mo
@@ -35,6 +37,7 @@ share/locale/pa/LC_MESSAGES/eog-plugins.mo
 share/locale/pl/LC_MESSAGES/eog-plugins.mo
 share/locale/pt/LC_MESSAGES/eog-plugins.mo
 share/locale/pt_BR/LC_MESSAGES/eog-plugins.mo
+share/locale/ro/LC_MESSAGES/eog-plugins.mo
 share/locale/sl/LC_MESSAGES/eog-plugins.mo
 share/locale/sq/LC_MESSAGES/eog-plugins.mo
 share/locale/sv/LC_MESSAGES/eog-plugins.mo
