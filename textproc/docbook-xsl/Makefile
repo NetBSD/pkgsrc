@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2010/06/11 13:13:49 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.53 2011/04/14 10:31:18 adam Exp $
 
-DISTNAME=	docbook-xsl-1.75.2
+DISTNAME=	docbook-xsl-1.76.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,9 +14,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml
 
 USE_LANGUAGES=	# empty
-NO_BUILD=	YES
-
 USE_TOOLS+=	pax perl:run
+NO_BUILD=	yes
+
 REPLACE_PERL+=	fo/pdf2index
 
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
@@ -37,12 +36,12 @@ do-install:
 	cd ${WRKSRC}/template && pax -rw -pp -pm . ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${DESTDIR}${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${DESTDIR}${XSLDIR}/catalog.xml
-	for d in ${XSLMODS}; do \
+	set -e; for d in ${XSLMODS}; do \
 	    ${ECHO} "${INSTALL_DATA_DIR} ${DESTDIR}${XSLDIR}/$$d"; \
 	    ${ECHO} "cd ${WRKSRC} && pax -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/"; \
 	    cd ${WRKSRC} && pax -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/; \
 	done
-	for f in `${FIND} ${DESTDIR}${XSLDIR} -name \\*.orig -print` ; do \
+	set -e; for f in `${FIND} ${DESTDIR}${XSLDIR} -name \\*.orig -print` ; do \
 		${ECHO} "Remove .orig file $$f" ; \
 		${RM} $$f ; \
 	done
