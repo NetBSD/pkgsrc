@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2011/04/14 21:27:39 hans Exp $
+$NetBSD: patch-ac,v 1.10 2011/04/14 21:42:42 hans Exp $
 
---- vpnc-script.in.orig	2009-02-04 14:40:43.000000000 +0100
-+++ vpnc-script.in
-@@ -48,18 +48,19 @@ PATH=/sbin:/usr/sbin:$PATH
+--- vpnc-script.in.orig	2008-11-19 21:55:51.000000000 +0100
++++ vpnc-script.in	2011-04-14 23:33:24.877879829 +0200
+@@ -48,29 +48,36 @@ PATH=/sbin:/usr/sbin:$PATH
  
  OS="`uname -s`"
  
@@ -27,7 +27,24 @@ $NetBSD: patch-ac,v 1.9 2011/04/14 21:27:39 hans Exp $
  
  if [ "$OS" = "Linux" ]; then
  	ifconfig_syntax_ptp="pointopoint"
-@@ -94,7 +94,7 @@ do_ifconfig() {
+ 	route_syntax_gw="gw"
+ 	route_syntax_del="del"
+ 	route_syntax_netmask="netmask"
++	route_syntax_iface=""
+ else
+ 	ifconfig_syntax_ptp=""
+ 	route_syntax_gw=""
+ 	route_syntax_del="delete"
+ 	route_syntax_netmask="-netmask"
++	if [ "$OS" = "SunOS" ]; then
++		route_syntax_iface="-interface"
++	else
++		route_syntax_iface=""
++	fi
+ fi
+ 
+ if [ -x /sbin/resolvconf ]; then # Optional tool on Debian, Ubuntu, Gentoo
+@@ -93,7 +100,7 @@ do_ifconfig() {
  		DEV=$($IPROUTE route | grep ^default | sed 's/^.* dev \([[:alnum:]-]\+\).*$/\1/')
  		MTU=$(($($IPROUTE link show "$DEV" | grep mtu | sed 's/^.* mtu \([[:digit:]]\+\).*$/\1/') - 88))
  	else
@@ -36,7 +53,7 @@ $NetBSD: patch-ac,v 1.9 2011/04/14 21:27:39 hans Exp $
  	fi
  
  	# Point to point interface require a netmask of 255.255.255.255 on some systems
-@@ -163,7 +164,7 @@ else # use route command
+@@ -163,11 +170,11 @@ else # use route command
  		# isn't -n supposed to give --numeric output?
  		# apperently not...
  		# Get rid of lines containing IPv6 addresses (':')
@@ -45,7 +62,30 @@ $NetBSD: patch-ac,v 1.9 2011/04/14 21:27:39 hans Exp $
  	}
  	
  	set_vpngateway_route() {
-@@ -440,6 +440,20 @@ do_pre_init() {
+-		route add -host "$VPNGATEWAY" $route_syntax_gw "`get_default_gw`"
++		route add -host "$VPNGATEWAY" $route_syntax_gw "`get_default_gw`" $route_syntax_iface
+ 	}
+ 
+ 	del_vpngateway_route() {
+@@ -178,7 +185,7 @@ else # use route command
+ 		DEFAULTGW="`get_default_gw`"
+ 		echo "$DEFAULTGW" > "$DEFAULT_ROUTE_FILE"
+ 		route $route_syntax_del default
+-		route add default $route_syntax_gw "$INTERNAL_IP4_ADDRESS"
++		route add default $route_syntax_gw "$INTERNAL_IP4_ADDRESS" $route_syntax_iface
+ 	}
+ 	
+ 	set_network_route() {
+@@ -186,7 +193,7 @@ else # use route command
+ 		NETMASK="$2"
+ 		NETMASKLEN="$3"
+ 		del_network_route "$NETWORK" "$NETMASK" "$NETMASKLEN"
+-		route add -net "$NETWORK" $route_syntax_netmask "$NETMASK" $route_syntax_gw "$INTERNAL_IP4_ADDRESS"
++		route add -net "$NETWORK" $route_syntax_netmask "$NETMASK" $route_syntax_gw "$INTERNAL_IP4_ADDRESS" $route_syntax_iface
+ 	}
+ 	
+ 	reset_default_route() {
+@@ -439,6 +446,20 @@ do_pre_init() {
  }
  
  do_connect() {

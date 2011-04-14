@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/03/05 17:46:41 cegger Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/14 21:42:42 hans Exp $
 #
 
 DISTNAME=		vpnc-0.5.3
@@ -59,6 +59,14 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/vpnc
 
 .include "options.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+CFLAGS.SunOS=	-DLOG_PERROR=0
+
+.if ${OPSYS} == "SunOS"
+.include "../../net/solaris-tap/buildlink3.mk"
+.endif
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
