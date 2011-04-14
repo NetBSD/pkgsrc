@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+$NetBSD: patch-aa,v 1.2 2011/04/14 12:29:17 obache Exp $
 
 --- configure.in.orig	2009-12-21 13:09:10.000000000 +0000
 +++ configure.in
@@ -16,3 +16,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
  			LIBS="$LIBS -lrx"
  			AC_DEFINE(ENABLE_REGEX, [],
  				  [Do we have a regex library?])
+@@ -1145,7 +1145,7 @@ dnl add perl cccdlflags when building li
+ dnl libraries will be compiled as PIC if perl requires PIC objects
+ dnl -- this is needed on NetBSD and Linux, but seems to cause problems on atleast Solaris --
+     case "${target_os}" in
+-        linux*|netbsd*)
++        linux*|netbsd*|dragonfly*)
+             AC_MSG_CHECKING(for perl cccdlflags needed on "${target_os}")
+             eval `${PERL} -V:cccdlflags`
+             PERL_CCCDLFLAGS="$cccdlflags"
