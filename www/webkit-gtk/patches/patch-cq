@@ -1,0 +1,12 @@
+$NetBSD: patch-cq,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/svg/SVGUseElement.h.orig	2010-09-10 13:20:33.000000000 +0000
++++ WebCore/svg/SVGUseElement.h
+@@ -71,6 +71,7 @@ namespace WebCore {
+         friend class RenderSVGShadowTreeRootContainer;
+         bool isPendingResource() const { return m_isPendingResource; }
+         void buildShadowAndInstanceTree(SVGShadowTreeRootElement*);
++        void detachInstance();
+ 
+     private:
+         virtual bool hasRelativeValues() const;

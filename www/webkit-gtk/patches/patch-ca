@@ -1,0 +1,22 @@
+$NetBSD: patch-ca,v 1.3 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/css/CSSCanvasValue.cpp.orig	2010-09-10 13:20:33.000000000 +0000
++++ WebCore/css/CSSCanvasValue.cpp
+@@ -34,7 +34,7 @@ namespace WebCore {
+ CSSCanvasValue::~CSSCanvasValue()
+ {
+     if (m_element)
+-        m_element->setObserver(0);
++        m_element->removeObserver(this);
+ }
+ 
+ String CSSCanvasValue::cssText() const
+@@ -79,7 +79,7 @@ HTMLCanvasElement* CSSCanvasValue::eleme
+         m_element = document->getCSSCanvasElement(m_name);
+         if (!m_element)
+             return 0;
+-        m_element->setObserver(this);
++        m_element->addObserver(this);
+     }
+     return m_element;
+ }

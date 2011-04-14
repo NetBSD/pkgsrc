@@ -1,0 +1,13 @@
+$NetBSD: patch-cj,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/loader/ImageDocument.cpp.orig	2010-09-10 13:20:33.000000000 +0000
++++ WebCore/loader/ImageDocument.cpp
+@@ -368,7 +368,7 @@ void ImageEventListener::handleEvent(Scr
+ {
+     if (event->type() == eventNames().resizeEvent)
+         m_doc->windowSizeChanged();
+-    else if (event->type() == eventNames().clickEvent) {
++    else if (event->type() == eventNames().clickEvent && event->isMouseEvent()) {
+         MouseEvent* mouseEvent = static_cast<MouseEvent*>(event);
+         m_doc->imageClicked(mouseEvent->x(), mouseEvent->y());
+     }

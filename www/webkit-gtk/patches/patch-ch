@@ -1,0 +1,23 @@
+$NetBSD: patch-ch,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/html/HTMLCanvasElement.h.orig	2010-09-10 13:20:33.000000000 +0000
++++ WebCore/html/HTMLCanvasElement.h
+@@ -99,7 +99,8 @@ public:
+     void setOriginTainted() { m_originClean = false; } 
+     bool originClean() const { return m_originClean; }
+ 
+-    void setObserver(CanvasObserver* observer) { m_observer = observer; }
++    void addObserver(CanvasObserver* observer);
++    void removeObserver(CanvasObserver* observer);
+ 
+     AffineTransform baseTransform() const;
+ 
+@@ -127,7 +128,7 @@ private:
+ 
+     OwnPtr<CanvasRenderingContext> m_context;
+     IntSize m_size;    
+-    CanvasObserver* m_observer;
++    HashSet<CanvasObserver*> m_observers;
+ 
+     bool m_originClean;
+     bool m_ignoreReset;

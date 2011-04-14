@@ -1,0 +1,23 @@
+$NetBSD: patch-cd,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/dom/Document.cpp.orig	2011-04-14 10:45:05.000000000 +0000
++++ WebCore/dom/Document.cpp
+@@ -2870,6 +2870,18 @@ void Document::detachNodeIterator(NodeIt
+     m_nodeIterators.remove(ni);
+ }
+ 
++void Document::moveNodeIteratorsToNewDocument(Node* node, Document* newDocument)
++{
++    HashSet<NodeIterator*> nodeIteratorsList = m_nodeIterators;
++    HashSet<NodeIterator*>::const_iterator nodeIteratorsEnd = nodeIteratorsList.end();
++    for (HashSet<NodeIterator*>::const_iterator it = nodeIteratorsList.begin(); it != nodeIteratorsEnd; ++it) {
++        if ((*it)->root() == node) {
++            detachNodeIterator(*it);
++            newDocument->attachNodeIterator(*it);
++        }
++    }
++}
++
+ void Document::nodeChildrenChanged(ContainerNode* container)
+ {
+     if (!disableRangeMutation(page())) {

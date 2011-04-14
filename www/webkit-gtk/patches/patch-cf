@@ -1,0 +1,16 @@
+$NetBSD: patch-cf,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/dom/Node.cpp.orig	2010-09-28 21:45:32.000000000 +0000
++++ WebCore/dom/Node.cpp
+@@ -522,8 +522,10 @@ void Node::setDocument(Document* documen
+         document->addNodeListCache();
+     }
+ 
+-    if (m_document)
++    if (m_document) {
++        m_document->moveNodeIteratorsToNewDocument(this, document);
+         m_document->selfOnlyDeref();
++    }
+ 
+     m_document = document;
+ 
