@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2011/04/13 16:19:14 drochner Exp $
+$NetBSD: distinfo,v 1.34 2011/04/14 18:11:45 drochner Exp $
 
 SHA1 (webkit-1.2.7.tar.gz) = e9afc573d2459794c3749ba404f2187f9dcc9ed3
 RMD160 (webkit-1.2.7.tar.gz) = f36b3ae05693e0eeb4d1936ceee52b6fe1517e57
@@ -12,3 +12,20 @@ SHA1 (patch-ba) = 6caffef625e9c04e971fbbd0763b4f9c834491e3
 SHA1 (patch-bb) = 5e59576629e9ecfbbe576c3d0afe047bda449291
 SHA1 (patch-bc) = 0d6d3e2e2f5b2d199aaa94084f9d5a96b39c2708
 SHA1 (patch-bd) = 2e105ade29ff04cdcb5385d19aee467090b6765a
+SHA1 (patch-ca) = c3a8367582064a66d9b30486449d80571062c950
+SHA1 (patch-cb) = 1d106ae16375e7812078bdcacaed1c18ba75c5f1
+SHA1 (patch-cc) = d552f68d28a8ac6e3af795e99dd7f90617a57f5c
+SHA1 (patch-cd) = 1d7664fef8a9158ba71d49cd771d6b55e685b29e
+SHA1 (patch-ce) = 36c174a7a085fdfedd3dc8e06363bda3ba4aa96e
+SHA1 (patch-cf) = d011ace602c71a3063d6d2db70260b87142a6b20
+SHA1 (patch-cg) = 463f851254e78ae51496706f0c139fd39ebb761e
+SHA1 (patch-ch) = 856a4788273ed0ed8f7151634313d6898696490a
+SHA1 (patch-ci) = d0bc0a61725d319e985606ca751affe5a0c9b0ea
+SHA1 (patch-cj) = bc1a1ce7e9d32c074817abde9dffe646a6c19d78
+SHA1 (patch-ck) = 675cb023883b2afeaa850cb5bd087cc37d241ca7
+SHA1 (patch-cl) = 4188b727b9517a6d34fbc33ec1509f491abafb68
+SHA1 (patch-cm) = 66ee43d6fb56a850467a29f998e40cebd50ef8c0
+SHA1 (patch-cn) = 33167472bd2a34756aa120939fbce048cf58d95c
+SHA1 (patch-co) = 194f0ae8d262cffb790a420970d3f63342ebfd05
+SHA1 (patch-cp) = 6e25f5c3b05ce77f2c16d400e010dafb5124256e
+SHA1 (patch-cq) = 5258c761ab68183af8762232f5e53a9a7c63c52a
