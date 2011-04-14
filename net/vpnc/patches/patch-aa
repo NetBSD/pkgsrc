@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2011/03/05 17:46:41 cegger Exp $
+$NetBSD: patch-aa,v 1.8 2011/04/14 21:27:39 hans Exp $
 
---- config.c.orig	2008-11-19 20:36:12.000000000 +0000
-+++ config.c
-@@ -173,12 +173,12 @@ static const char *config_def_app_versio
+--- config.c.orig	2007-09-10 22:39:48.000000000 +0200
++++ config.c	2008-05-28 16:32:56.000000000 +0100
+@@ -267,12 +267,12 @@ static const char *config_def_app_versio
  
  static const char *config_def_script(void)
  {
@@ -56,3 +56,23 @@ $NetBSD: patch-aa,v 1.7 2011/03/05 17:46:41 cegger Exp $
  		0, 0, 0, NULL, NULL, NULL, NULL, NULL
  	}
  };
+@@ -538,7 +538,7 @@ static char *get_config_filename(const c
+ {
+ 	char *realname;
+ 	
+-	asprintf(&realname, "%s%s%s", index(name, '/') ? "" : "/etc/vpnc/", name, add_dot_conf ? ".conf" : "");
++	asprintf(&realname, "%s%s%s", index(name, '/') ? "" : "@PKG_SYSCONFDIR@/vpnc/", name, add_dot_conf ? ".conf" : "");
+ 	return realname;
+ }
+ 
+@@ -757,8 +757,8 @@ void do_config(int argc, char **argv)
+ 	}
+ 	
+ 	if (!got_conffile) {
+-		read_config_file("/etc/vpnc/default.conf", config, 1);
+-		read_config_file("/etc/vpnc.conf", config, 1);
++		read_config_file("@PKG_SYSCONFDIR@/vpnc/default.conf", config, 1);
++		read_config_file("@PKG_SYSCONFDIR@/vpnc.conf", config, 1);
+ 	}
+ 	
+ 	if (!print_config) {
