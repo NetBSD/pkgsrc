@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1 2011/04/14 19:34:09 asau Exp $
+
+--- lib/odbc/c_src/Makefile.in.orig	2010-02-19 20:07:30.000000000 +0200
++++ lib/odbc/c_src/Makefile.in	2010-06-21 23:28:49.000000000 +0300
+@@ -81,7 +81,7 @@
+ CFLAGS = $(TYPEFLAGS) @CFLAGS@ @THR_DEFS@ @DEFS@
+ EI_LDFLAGS = -L$(EI_ROOT)/obj$(TYPEMARKER)/$(TARGET)
+ LD = @LD@
+-LDFLAGS =  $(ODBC_LIB) $(EI_LDFLAGS)
++LDFLAGS = -Wl,-R$(PREFIX)/lib $(ODBC_LIB) $(EI_LDFLAGS)
+ LIBS = @LIBS@ @THR_LIBS@ $(EI_LIB)
+ INCLUDES = -I. $(ODBC_INCLUDE) $(EI_INCLUDE)
+ TARGET_FLAGS =  @TARGET_FLAGS@
