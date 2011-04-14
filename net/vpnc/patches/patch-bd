@@ -1,0 +1,32 @@
+--- sysdep.c.orig	2008-11-19 21:36:12.000000000 +0100
++++ sysdep.c	2010-01-07 23:30:57.937261239 +0100
+@@ -666,7 +666,7 @@ int tun_get_hwaddr(int fd, char *dev, ui
+ 	}
+ 	
+ 	return 0;
+-#elif defined(SIOCGIFHWADDR)
++#elif defined(SIOCGIFHWADDR) || defined(SIOCGENADDR)
+ 	struct ifreq ifr;
+ 	
+ 	/* Use a new socket fd! */
+@@ -677,11 +677,20 @@ int tun_get_hwaddr(int fd, char *dev, ui
+ 	memset(&ifr, 0, sizeof(struct ifreq));
+ 	strncpy(ifr.ifr_name, dev, IFNAMSIZ);
+ 	
++#if defined(SIOCGIFHWADDR) && !defined(__sun)
+ 	if (ioctl(fd, SIOCGIFHWADDR, &ifr) < 0) {
+ 		return -1;
+ 	}
+ 	
+ 	memcpy(hwaddr, &ifr.ifr_hwaddr.sa_data, ETH_ALEN);
++#endif
++#if defined(SIOCGENADDR)
++	if (ioctl(fd, SIOCGENADDR, &ifr) < 0) {
++		return -1;
++	}
++	
++	memcpy(hwaddr, &ifr.ifr_enaddr, ETH_ALEN);
++#endif
+ 	
+ 	return 0;
+ #else
