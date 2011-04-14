@@ -1,0 +1,16 @@
+$NetBSD: patch-cn,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/svg/SVGFontFaceElement.cpp.orig	2010-09-10 13:20:33.000000000 +0000
++++ WebCore/svg/SVGFontFaceElement.cpp
+@@ -262,6 +262,11 @@ String SVGFontFaceElement::fontFamily() 
+     return m_styleDeclaration->getPropertyValue(CSSPropertyFontFamily);
+ }
+ 
++SVGFontElement* SVGFontFaceElement::associatedFontElement() const
++{
++    return m_fontElement.get();
++}
++
+ void SVGFontFaceElement::rebuildFontFace()
+ {
+     ASSERT(inDocument());

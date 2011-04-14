@@ -1,0 +1,24 @@
+$NetBSD: patch-cc,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/css/CSSFontFaceSource.h.orig	2010-09-10 13:20:33.000000000 +0000
++++ WebCore/css/CSSFontFaceSource.h
+@@ -62,8 +62,8 @@ public:
+     void pruneTable();
+ 
+ #if ENABLE(SVG_FONTS)
+-    SVGFontFaceElement* svgFontFaceElement() const { return m_svgFontFaceElement; }
+-    void setSVGFontFaceElement(SVGFontFaceElement* element) { m_svgFontFaceElement = element; }
++    SVGFontFaceElement* svgFontFaceElement() const;
++    void setSVGFontFaceElement(PassRefPtr<SVGFontFaceElement>);
+ #endif
+ 
+ private:
+@@ -73,7 +73,7 @@ private:
+     HashMap<unsigned, SimpleFontData*> m_fontDataTable; // The hash key is composed of size synthetic styles.
+ 
+ #if ENABLE(SVG_FONTS)
+-    SVGFontFaceElement* m_svgFontFaceElement;
++    RefPtr<SVGFontFaceElement> m_svgFontFaceElement;
+     RefPtr<SVGFontElement> m_externalSVGFontElement;
+ #endif
+ };
