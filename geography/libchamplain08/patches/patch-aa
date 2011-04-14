@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/04/14 15:52:51 drochner Exp $
+
+--- Makefile.in.orig	2011-03-30 22:13:37.000000000 +0000
++++ Makefile.in
+@@ -309,7 +309,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ 
+ # Have the demos build at the end as they depend on optional parts
+-SUBDIRS = build tidy champlain $(am__append_1) docs demos bindings
++SUBDIRS = build tidy champlain $(am__append_1) demos bindings
+ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+ pcfiles = champlain-@CHAMPLAIN_API_VERSION@.pc $(am__append_2) \
+ 	$(am__append_4)
