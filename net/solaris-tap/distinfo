@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/07/01 00:59:57 tnn Exp $
+$NetBSD: distinfo,v 1.3 2011/04/14 20:20:33 hans Exp $
 
-SHA1 (solaris-tap-20070625/tuntap.tar.gz) = 3d2bd63cf7813ac365b73faa4d6ab9de33e2920b
-RMD160 (solaris-tap-20070625/tuntap.tar.gz) = 40855ab98cadbd975afe6f2b799cab4f1c6928b5
-Size (solaris-tap-20070625/tuntap.tar.gz) = 40016 bytes
+SHA1 (solaris-tap-20091116/tuntap.tar.gz) = bbe7cbc50d9f337e3c89cc20f3948f860bde11bd
+RMD160 (solaris-tap-20091116/tuntap.tar.gz) = 30a4271550e86e7fe76bfdfa66f84f2e3a0e1c77
+Size (solaris-tap-20091116/tuntap.tar.gz) = 40637 bytes
