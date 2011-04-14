@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+$NetBSD: patch-ab,v 1.2 2011/04/14 12:29:17 obache Exp $
 
---- configure.orig	2009-12-23 08:06:48.000000000 +0000
+--- configure.orig	2009-12-21 13:17:55.000000000 +0000
 +++ configure
 @@ -12402,7 +12402,7 @@ fi
  
@@ -20,3 +20,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
  			LIBS="$LIBS -lrx"
  
  cat >>confdefs.h <<\_ACEOF
+@@ -20173,7 +20173,7 @@ elif test "${with_perl}" != "no"; then
+     PERL_SUBDIRS="imap"
+     PERL="${with_perl}"
+     case "${target_os}" in
+-        linux*|netbsd*)
++        linux*|netbsd*|dragonfly*)
+             { $as_echo "$as_me:$LINENO: checking for perl cccdlflags needed on \"${target_os}\"" >&5
+ $as_echo_n "checking for perl cccdlflags needed on \"${target_os}\"... " >&6; }
+             eval `${PERL} -V:cccdlflags`
