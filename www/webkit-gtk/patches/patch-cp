@@ -1,0 +1,65 @@
+$NetBSD: patch-cp,v 1.1 2011/04/14 18:11:45 drochner Exp $
+
+--- WebCore/svg/SVGUseElement.cpp.orig	2011-02-07 17:29:58.000000000 +0000
++++ WebCore/svg/SVGUseElement.cpp
+@@ -128,7 +128,7 @@ void SVGUseElement::insertedIntoDocument
+ 
+ void SVGUseElement::removedFromDocument()
+ {
+-    m_targetElementInstance = 0;
++    detachInstance();
+     SVGElement::removedFromDocument();
+ }
+ 
+@@ -455,8 +455,7 @@ void SVGUseElement::buildShadowAndInstan
+     if (targetElement && targetElement->isSVGElement())
+         target = static_cast<SVGElement*>(targetElement);
+ 
+-    if (m_targetElementInstance)
+-        m_targetElementInstance = 0;
++    detachInstance();
+ 
+     // Do not allow self-referencing.
+     // 'target' may be null, if it's a non SVG namespaced element.
+@@ -482,7 +481,7 @@ void SVGUseElement::buildShadowAndInstan
+     // SVG specification does not say a word about <use> & cycles. My view on this is: just ignore it!
+     // Non-appearing <use> content is easier to debug, then half-appearing content.
+     if (foundProblem) {
+-        m_targetElementInstance = 0;
++        detachInstance();
+         return;
+     }
+ 
+@@ -515,7 +514,7 @@ void SVGUseElement::buildShadowAndInstan
+     // Do NOT leave an inconsistent instance tree around, instead destruct it.
+     if (!m_targetElementInstance->shadowTreeElement()) {
+         shadowRoot->removeAllChildren();
+-        m_targetElementInstance = 0;
++        detachInstance();
+         return;
+     }
+ 
+@@ -551,6 +550,14 @@ void SVGUseElement::buildShadowAndInstan
+     updateContainerSizes();
+ }
+ 
++void SVGUseElement::detachInstance()
++{
++    if (!m_targetElementInstance)
++        return;
++    m_targetElementInstance->clearUseElement();
++    m_targetElementInstance = 0;
++}
++
+ RenderObject* SVGUseElement::createRenderer(RenderArena* arena, RenderStyle*)
+ {
+     return new (arena) RenderSVGShadowTreeRootContainer(this);
+@@ -572,7 +579,7 @@ void SVGUseElement::attach()
+ 
+ void SVGUseElement::detach()
+ {
+-    m_targetElementInstance = 0;
++    detachInstance();
+     SVGStyledTransformableElement::detach();
+ }
+ 
