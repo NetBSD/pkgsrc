@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
+$NetBSD: patch-aq,v 1.2 2011/04/14 02:18:27 obache Exp $
 
---- imap/sync_client.c.orig	2010-10-19 03:08:28.000000000 +0000
+--- imap/sync_client.c.orig	2011-04-13 14:35:22.000000000 +0000
 +++ imap/sync_client.c
-@@ -92,6 +92,10 @@
+@@ -93,6 +93,10 @@
  #include "signals.h"
  #include "cyrusdb.h"
  
@@ -11,5 +11,5 @@ $NetBSD: patch-aq,v 1.1.1.1 2010/10/30 12:12:35 obache Exp $
 +#endif
 +
  /* signal to config.c */
- const int config_need_data = 0;  /* YYY */
+ const int config_need_data = CONFIG_NEED_PARTITION_DATA;
  
