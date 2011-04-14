@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2010/06/03 06:55:54 obache Exp $
+$NetBSD: distinfo,v 1.3 2011/04/14 12:29:16 obache Exp $
 
 SHA1 (cyrus-imapd-2.3.16.tar.gz) = decc87045bfedb449d0af3512aa228090e558036
 RMD160 (cyrus-imapd-2.3.16.tar.gz) = fa9d1462a7d7e839da9a11f52cddfd2ab854f2be
 Size (cyrus-imapd-2.3.16.tar.gz) = 2359349 bytes
-SHA1 (patch-aa) = 38605d33284292bc3a3a1665bce1e63203b407f4
-SHA1 (patch-ab) = 6dee8c0b449f77b576e319cf78dc430f9a4e371a
+SHA1 (patch-aa) = ad2080816f3ec3b4cf0eca027cf5152dadc621b1
+SHA1 (patch-ab) = 50bf708b4e784925ea1b8f1fbaeefeb4bc1d2c09
 SHA1 (patch-ac) = 28143b2306866ec8fb6357f7fa70f1c8baaa4c2d
 SHA1 (patch-ad) = b9a68c7a1ab9b36e1c9bfa6d06dbc4f13bb2c99a
 SHA1 (patch-ae) = f72486e0e3cf941eabbe6da31b107e8aabecb112
