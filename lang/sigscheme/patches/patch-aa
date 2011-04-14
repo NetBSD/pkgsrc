@@ -1,0 +1,11 @@
+--- configure.orig	2009-12-31 11:28:03.192102171 +0100
++++ configure	2009-12-31 14:03:26.073302498 +0100
+@@ -39958,7 +39958,7 @@ _ACEOF
+ 
+     # Overrides _POSIX_C_SOURCE
+     cat >>confdefs.h <<\_ACEOF
+-#define _XOPEN_SOURCE 500
++#define _XOPEN_SOURCE 600
+ _ACEOF
+ 
+ 
