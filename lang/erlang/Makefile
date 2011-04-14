@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.45 2010/04/17 20:10:16 tez Exp $
+# $NetBSD: Makefile,v 1.46 2011/04/14 19:34:07 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
-PKGREVISION=		4
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.erlang.org/
 COMMENT=		Concurrent functional programming language
+LICENSE=		erlang-public-license
 
 DIST_SUBDIR=		erlang
 
@@ -22,11 +22,6 @@ USE_TOOLS+=		gmake perl:run
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
-###
-### XXX Linking fails on amd64 due to invalid relocations without this.
-###
-CONFIGURE_ARGS+=	--enable-dynamic-ssl-lib
-
 PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
 
@@ -39,7 +34,7 @@ SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.
 
 TEST_TARGET=		tests
-TEST_MAKE_FLAGS=	ERL_TOP=$(WRKSRC)
+TEST_MAKE_FLAGS=	ERL_TOP=${WRKSRC}
 REPLACE_PERL+=		make/make_emakefile
 
 PLIST_SRC=		PLIST
