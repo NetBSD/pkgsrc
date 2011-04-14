@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2009/12/15 12:09:20 asau Exp $
+$NetBSD: patch-am,v 1.2 2011/04/14 19:34:08 asau Exp $
 
---- erts/emulator/hipe/hipe_arm.c.orig	2007-11-26 14:00:35.000000000 -0500
-+++ erts/emulator/hipe/hipe_arm.c
-@@ -45,11 +45,19 @@ static struct segment {
+--- erts/emulator/hipe/hipe_arm.c.orig	2010-06-24 07:25:07.000000000 +0300
++++ erts/emulator/hipe/hipe_arm.c	2010-06-24 07:25:43.000000000 +0300
+@@ -73,6 +73,10 @@
  #define in_area(ptr,start,nbytes)	\
  	((unsigned long)((char*)(ptr) - (char*)(start)) < (nbytes))
  
@@ -13,13 +13,3 @@ $NetBSD: patch-am,v 1.1 2009/12/15 12:09:20 asau Exp $
  static void *new_code_mapping(void)
  {
      return mmap(0, SEGMENT_NRBYTES,
- 		PROT_EXEC|PROT_READ|PROT_WRITE,
--		MAP_PRIVATE|MAP_ANONYMOUS,
-+		MAP_PRIVATE|MAP_ANONYMOUS
-+#ifdef MMAP_MAP_FIXED
-+		| MAP_FIXED
-+#endif
-+		,
- 		-1, 0);
- }
- 
