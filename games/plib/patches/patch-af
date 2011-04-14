@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.5 2011/04/14 11:30:08 hauke Exp $
+
+For MacOS X, make sure we have endianness information (coming from
+<machine/endian.h>. Otherwise, we'll be mis-identified as win32.
+ 
+--- src/ssg/ssgLoadFLT.cxx.orig	2008-03-11 02:06:23.000000000 +0000
++++ src/ssg/ssgLoadFLT.cxx
+@@ -103,6 +103,11 @@
+ #include <string.h>
+ #include <fcntl.h>
+ #include <stdio.h>
++
++#if defined (__APPLE__) && defined (__GNUC__)
++#include <sys/types.h>  /* Endianness on MacOS X 10.6 */
++#endif
++
+ #ifdef UL_IRIX
+ # include <sys/endian.h>
+ #endif
