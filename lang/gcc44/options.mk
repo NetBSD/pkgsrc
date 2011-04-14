@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/10/24 20:16:02 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2011/04/14 19:38:13 hans Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc44
 PKG_SUPPORTED_OPTIONS=	nls
@@ -14,6 +14,7 @@ PKG_SUGGESTED_OPTIONS+=	nls
 ###
 .if !empty(PKG_OPTIONS:Mnls)
 CONFIGURE_ARGS+=	--enable-nls
+USE_TOOLS+=		msgfmt
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .else
