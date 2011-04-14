@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/04/14 17:11:20 hans Exp $
 include/dockapp.h
 lib/libdockapp.la
 share/doc/libdockapp/README
+share/examples/libdockapp/basic/README
+share/examples/libdockapp/basic/Imakefile
+share/examples/libdockapp/basic/basic.c
+share/examples/libdockapp/basic/ball_red.xpm
+share/examples/libdockapp/rectangles/rectangles.c
+share/examples/libdockapp/rectangles/Imakefile
