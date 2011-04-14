@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2011/04/09 00:16:18 tez Exp $
+$NetBSD: distinfo,v 1.29 2011/04/14 19:37:26 tez Exp $
 
 SHA1 (2010-006-patch.txt) = 600f0890de65f96112f267b56317a4fd0166cba0
 RMD160 (2010-006-patch.txt) = fc262a23e9aa118262a4258f74832445062444e4
@@ -15,6 +15,9 @@ Size (2011-002-patch-r18.txt) = 6130 bytes
 SHA1 (2011-003-patch.txt) = 1c72390c5d629eee592e5cb0c2b600b376e2fdc5
 RMD160 (2011-003-patch.txt) = 9b0d172a1abfaf437edacc9f18fd0a6e83028b3e
 Size (2011-003-patch.txt) = 544 bytes
+SHA1 (2011-004-patch-r18.txt) = 7853bcbdf0dba6f0fce15fc3b475f86d692287b2
+RMD160 (2011-004-patch-r18.txt) = 03d06d5c88505688eb4dbcd516144999ecb89a70
+Size (2011-004-patch-r18.txt) = 1136 bytes
 SHA1 (krb5-1.8.3-signed.tar) = 69696f63b6c2b0e3238156b19eed68cecd661c6b
 RMD160 (krb5-1.8.3-signed.tar) = bdf3a505e4b2447af0c9080b441918d665dcdd9c
 Size (krb5-1.8.3-signed.tar) = 11642880 bytes
