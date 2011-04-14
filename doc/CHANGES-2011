@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.930 2011/04/14 08:45:30 adam Exp $
+$NetBSD: CHANGES-2011,v 1.931 2011/04/14 09:04:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1532,3 +1532,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3-tcl to 3.7.6.1 [adam 2011-04-14]
 	Updated www/ap2-perl to 2.0.5nb1 [adam 2011-04-14]
 	Updated www/p5-Apache-Reload to 0.11nb1 [adam 2011-04-14]
+	Updated archivers/xz to 5.0.2 [adam 2011-04-14]
