@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.929 2011/04/14 07:11:19 adam Exp $
+$NetBSD: CHANGES-2011,v 1.930 2011/04/14 08:45:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1530,3 +1530,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/cyrus-imapd24 to 2.4.8 [obache 2011-04-14]
 	Updated databases/sqlite3 to 3.7.6.1 [adam 2011-04-14]
 	Updated databases/sqlite3-tcl to 3.7.6.1 [adam 2011-04-14]
+	Updated www/ap2-perl to 2.0.5nb1 [adam 2011-04-14]
+	Updated www/p5-Apache-Reload to 0.11nb1 [adam 2011-04-14]
