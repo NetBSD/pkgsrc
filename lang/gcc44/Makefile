@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/03/16 17:48:22 hans Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/14 19:31:35 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -39,6 +39,15 @@ UNLIMIT_RESOURCES+=	stacksize
 .include "options.mk"
 
 # Determine whether to use binutils
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/bin/ld
+. if !exists(/usr/bin/gas)
+CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/bin/as
+. else
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/gas
+.endif
+.endif
+
 
 # REPLACE_AWK+=	gcc/testsuite/gcc.test-framework/test-framework.awk	\
 # 		gcc/mkmap-symver.awk					\
