@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2009/11/22 21:05:17 drochner Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/04/14 21:47:24 hans Exp $
 
 DISTNAME=		cdrdao-${CDRDAO_VER}
 CATEGORIES=		sysutils
@@ -24,6 +24,12 @@ CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
 CONFIGURE_ARGS+=	--with-gtkmm-exec-prefix=/dev/null
 # don't pick up an installed libcdda_paranoia
 LDFLAGS+=		-L../paranoia
+LDFLAGS.SunOS=		-lvolmgt -lnsl
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=--with-scglib
+.endif
 
 # override ARCH to avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=	ARCH=""
