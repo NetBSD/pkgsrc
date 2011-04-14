@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.932 2011/04/14 10:35:11 adam Exp $
+$NetBSD: CHANGES-2011,v 1.933 2011/04/14 18:23:45 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1535,3 +1535,12 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/xz to 5.0.2 [adam 2011-04-14]
 	Updated textproc/docbook to 4.5 [adam 2011-04-14]
 	Updated textproc/docbook-xsl to 1.76.1 [adam 2011-04-14]
+	Added security/py-keyring version 0.5.1 [drochner 2011-04-14]
+	Updated graphics/shotwell to 0.9.2 [drochner 2011-04-14]
+	Updated graphics/gthumb to 2.12.3 [drochner 2011-04-14]
+	Updated graphics/eog-plugins to 2.30.2 [drochner 2011-04-14]
+	Added geography/libchamplain08 version 0.8.3 [drochner 2011-04-14]
+	Updated sysutils/libgtop to 2.28.3 [drochner 2011-04-14]
+	Updated security/gnome-keyring to 2.32.1 [drochner 2011-04-14]
+	Updated cad/py-MyHDL to 0.7 [drochner 2011-04-14]
+	Updated cad/verilog to 0.9.4 [drochner 2011-04-14]
