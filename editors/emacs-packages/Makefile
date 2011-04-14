@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/04/08 22:55:07 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2011/04/14 18:20:56 hans Exp $
 
 DISTNAME=	emacs-packages-0.9
 CATEGORIES=	meta-pkgs editors
@@ -24,12 +24,18 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}calc-[0-9]*:../../math/calc
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}doxymacs-[0-9]*:../../devel/doxymacs
+.if ${EMACS_VERSION_MAJOR} < 23
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}eieio-[0-9]*:../../lang/eieio
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elib-[0-9]*:../../devel/elib
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elscreen-[0-9]*:../../misc/elscreen
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-dict-client-[0-9]*:../../textproc/emacs-dict-client
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-ilisp-[0-9]*:../../devel/emacs-ilisp
+.if ${EMACS_VERSION_MAJOR} < 23
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-w3m-[0-9]*:../../www/emacs-w3m
+.else
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-w3m-[0-9]*:../../www/emacs-w3m-snapshot
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ess-[0-9]*:../../math/ess
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}etach-[0-9]*:../../mail/etach
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}flim-[0-9]*:../../devel/flim
@@ -60,7 +66,9 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}psgml-mode-[0-9]*:../../textproc/psgml-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}python-mode-[0-9]*:../../devel/python-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ruby-mode-[0-9]*:../../devel/ruby-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ruby-rd-mode-[0-9]*:../../devel/ruby-rd-mode
+.if ${EMACS_VERSION_MAJOR} < 23
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semantic-[0-9]*:../../devel/semantic
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}skk-[0-9]*:../../inputmethod/skk
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}sml-mode-[0-9]*:../../devel/sml-mode
@@ -72,7 +80,11 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}vm-[0-9]*:../../mail/vm
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3-[0-9]*:../../www/w3
 .endif
+.if ${EMACS_VERSION_MAJOR} < 23
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}wl-[0-9]*:../../mail/wl
+.else
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}wl-[0-9]*:../../mail/wl-snapshot
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenicb-[0-9]*:../../chat/zenicb
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenirc-[0-9]*:../../chat/zenirc
 
