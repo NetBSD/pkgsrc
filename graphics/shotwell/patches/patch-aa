@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2011/04/05 18:34:20 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2011/04/14 16:24:39 drochner Exp $
 
---- Makefile.orig	2011-04-05 00:35:38.000000000 +0000
+--- Makefile.orig	2011-04-12 22:04:01.000000000 +0000
 +++ Makefile
 @@ -261,7 +261,6 @@ EXT_PKGS = \
  	gstreamer-0.10 \
@@ -27,26 +27,15 @@ $NetBSD: patch-aa,v 1.4 2011/04/05 18:34:20 drochner Exp $
  	@ ./chkver min $(VALAC_VERSION) $(MIN_VALAC_VERSION) || ( echo 'Shotwell requires Vala compiler $(MIN_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 )
  	$(if $(MAX_VALAC_VERSION),\
  		@ ./chkver max $(VALAC_VERSION) $(MAX_VALAC_VERSION) || ( echo 'Shotwell cannot be built by Vala compiler $(MAX_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 ),)
-@@ -568,15 +566,15 @@ ifdef INSTALL_HEADERS
- endif
- 
- $(PC_FILE): $(PC_INPUT) $(MAKE_FILES)
--	m4 '--define=_VERSION_=$(VERSION)' '--define=_PREFIX_=$(PREFIX)' '--define=_REQUIREMENTS_=$(PLUGIN_PKG_REQS)' \
--		'--define=_LIB_=$(LIB)' $< > $@
-+	m4 '-D_VERSION_=$(VERSION)' '-D_PREFIX_=$(PREFIX)' '-D_REQUIREMENTS_=$(PLUGIN_PKG_REQS)' \
-+		'-D_LIB_=$(LIB)' $< > $@
- 
+@@ -574,7 +572,7 @@ $(PC_FILE): $(PC_INPUT) $(MAKE_FILES)
  $(UNITIZE_STAMP): $(MAKE_FILES) src/unit/rc/UnitInternals.m4 src/unit/rc/unitize_entry.m4
  	@mkdir -p $(UNITIZE_DIR)
  	@$(foreach group,$(APP_GROUPS),\
 -		`m4 '--define=_APP_GROUP_=$(group)' '--define=_UNIT_ENTRY_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).init_entry,)' '--define=_UNIT_TERMINATE_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).terminate_entry,)' src/unit/rc/unitize_entry.m4 > $(UNITIZE_DIR)/_$(group)_unitize_entry.vala`)
 +		`m4 '-D_APP_GROUP_=$(group)' '-D_UNIT_ENTRY_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).init_entry,)' '-D_UNIT_TERMINATE_POINTS_=$(foreach nm,$($(group)_UNITS),$(nm).terminate_entry,)' src/unit/rc/unitize_entry.m4 > $(UNITIZE_DIR)/_$(group)_unitize_entry.vala`)
  	@$(foreach nm,$(UNIT_NAMESPACES),\
--		`m4 '--define=_UNIT_NAME_=$(nm)' '--define=_UNIT_USES_INITS_=$($(nm)_USES_INITS)' '--define=_UNIT_USES_TERMINATORS_=$($(nm)_USES_TERMINATORS)' src/unit/rc/UnitInternals.m4 > $(UNITIZE_DIR)/_$(nm)Internals.vala`)
-+		`m4 '-D_UNIT_NAME_=$(nm)' '-D_UNIT_USES_INITS_=$($(nm)_USES_INITS)' '-D_UNIT_USES_TERMINATORS_=$($(nm)_USES_TERMINATORS)' src/unit/rc/UnitInternals.m4 > $(UNITIZE_DIR)/_$(nm)Internals.vala`)
+ 		`m4 '-D_UNIT_NAME_=$(nm)' '-D_UNIT_USES_INITS_=$($(nm)_USES_INITS)' '-D_UNIT_USES_TERMINATORS_=$($(nm)_USES_TERMINATORS)' src/unit/rc/UnitInternals.m4 > $(UNITIZE_DIR)/_$(nm)Internals.vala`)
  	@touch $@
- 
- $(UNITIZE_INITS) $(UNITIZE_ENTRIES): $(UNITIZE_STAMP)
 @@ -584,7 +582,6 @@ $(UNITIZE_INITS) $(UNITIZE_ENTRIES): $(U
  
  # EXPANDED_SRC_FILES includes UNITIZE_INITS and UNITIZE_ENTRY
