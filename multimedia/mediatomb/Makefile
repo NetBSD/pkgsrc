@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/01/14 08:22:55 tron Exp $
+# $NetBSD: Makefile,v 1.20 2011/04/14 07:26:34 adam Exp $
 
 DISTNAME=	mediatomb-0.12.1
 PKGREVISION=	2
@@ -12,10 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config automake autoconf autoreconf
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		automake autoconf autoreconf pkg-config
+GNU_CONFIGURE=		yes
 
 RCD_SCRIPTS=	mediatomb
 
@@ -32,10 +31,10 @@ EGDIR=			${PREFIX}/share/examples/mediatomb
 CONF_FILES_PERMS+=	${EGDIR}/config.xml ${PKG_SYSCONFDIR}/config.xml \
 			${MEDIATOMB_USER} ${MEDIATOMB_GROUP} 0640
 
-FILES_SUBST+=			PKG_HOME=${PKG_HOME.${MEDIATOMB_USER}:Q}
-FILES_SUBST+=			MEDIATOMB_GROUP=${MEDIATOMB_GROUP:Q}
-FILES_SUBST+=			MEDIATOMB_USER=${MEDIATOMB_USER:Q}
-FILES_SUBST+=			PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+FILES_SUBST+=		PKG_HOME=${PKG_HOME.${MEDIATOMB_USER}:Q}
+FILES_SUBST+=		MEDIATOMB_GROUP=${MEDIATOMB_GROUP}
+FILES_SUBST+=		MEDIATOMB_USER=${MEDIATOMB_USER}
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 MEDIATOMB_HOME=		${PKG_HOME.${MEDIATOMB_USER}}
 
@@ -72,4 +71,5 @@ PREFER.bind=	pkgsrc	# we need the package for the lwres lib
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
