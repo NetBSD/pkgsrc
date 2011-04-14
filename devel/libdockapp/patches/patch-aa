@@ -1,14 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/12 17:10:35 wiz Exp $
-
---- README.orig	Sun Jan 16 14:59:40 2000
-+++ README
-@@ -14,8 +14,7 @@
- make install
+--- examples/Makefile.in.orig	2008-05-01 11:17:34.000000000 +0200
++++ examples/Makefile.in	2010-12-20 14:15:03.091622885 +0100
+@@ -161,7 +161,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SHAREDIR = $(DESTDIR)/usr/local/share
++SHAREDIR = $(DESTDIR)${datarootdir}
+ BASICDIR = basic
+ BASICSRC = basic/Imakefile basic/README basic/ball_red.xpm basic/basic.c
+ RECTDIR = rectangles
+@@ -169,7 +169,7 @@ RECTSRC = rectangles/Imakefile rectangle
  
+ #SHAPEDIR = shapes
+ #SHAPESRC =
+-EXAMPLESDIR = /examples/dockapp/
++EXAMPLESDIR = /examples/libdockapp/
+ all: all-am
  
--The API is described in dockapp.h  wmtest.c is a sample program
--that shows the library usage.
-+The API is described in dockapp.h.
- 
- 
- 
+ .SUFFIXES:
