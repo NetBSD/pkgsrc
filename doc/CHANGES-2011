@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.933 2011/04/14 18:23:45 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.934 2011/04/14 19:36:05 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1544,3 +1544,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/gnome-keyring to 2.32.1 [drochner 2011-04-14]
 	Updated cad/py-MyHDL to 0.7 [drochner 2011-04-14]
 	Updated cad/verilog to 0.9.4 [drochner 2011-04-14]
+	Updated lang/erlang to 14.1.2 [asau 2011-04-14]
+	Updated lang/erlang-man to 14.1.2 [asau 2011-04-14]
+	Updated lang/erlang-doc to 14.1.2 [asau 2011-04-14]
