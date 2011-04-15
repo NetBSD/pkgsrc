@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/05 12:01:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/15 13:36:01 adam Exp $
 bin/sieve-dump
 bin/sieve-test
 bin/sievec
@@ -20,6 +20,7 @@ include/dovecot/sieve/sieve-config.h
 include/dovecot/sieve/sieve-dump.h
 include/dovecot/sieve/sieve-error-private.h
 include/dovecot/sieve/sieve-error.h
+include/dovecot/sieve/sieve-ext-copy.h
 include/dovecot/sieve/sieve-ext-enotify.h
 include/dovecot/sieve/sieve-ext-environment.h
 include/dovecot/sieve/sieve-ext-variables.h
@@ -57,5 +58,6 @@ man/man1/sievec.1
 man/man1/sieved.1
 man/man7/pigeonhole.7
 share/doc/dovecot/sieve/spamtest-virustest.txt
+share/doc/dovecot/sieve/vacation.txt
 share/examples/dovecot/conf.d/20-managesieve.conf
 share/examples/dovecot/conf.d/90-sieve.conf
