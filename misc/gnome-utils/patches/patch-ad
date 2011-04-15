@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.7 2011/04/15 16:08:06 drochner Exp $
+
+--- gsearchtool/libgnomeui-deprecated/Makefile.in.orig	2010-09-27 22:50:42.000000000 +0000
++++ gsearchtool/libgnomeui-deprecated/Makefile.in
+@@ -278,7 +278,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-INCLUDES = -DGTK_DISABLE_DEPRECATED \
++INCLUDES = \
+            -DGDK_DISABLE_DEPRECATED \
+            -DG_DISABLE_DEPRECATED
+ 
