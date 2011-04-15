@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2011/04/15 16:23:00 drochner Exp $
+
+--- configure.orig	Fri May 21 22:08:40 2004
++++ configure
+@@ -12063,8 +12063,6 @@ if test "X$GCC" = Xyes; then
+   MFX_CC="GCC"
+   if test "X$enable_debug" = Xyes; then
+     CFLAGS="$CFLAGS -O0"
+-  else
+-    CFLAGS="$CFLAGS -O2"
+   fi
+   CFLAGS="$CFLAGS -Wall -Wcast-align -Wcast-qual -Wwrite-strings"
+   case $MFX_CPU in
