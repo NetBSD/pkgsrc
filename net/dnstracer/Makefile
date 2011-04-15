@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/15 08:34:00 obache Exp $
 
 DISTNAME=		dnstracer-1.7
 CATEGORIES=		net
@@ -12,10 +12,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_FEATURES+=		inet6
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.dnstracer
-PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
-PKG_OPTIONS_GROUP.inet6=	inet6
-
-.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
