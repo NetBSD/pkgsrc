@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/06 09:10:26 cegger Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/15 10:32:22 bouyer Exp $
 bin/lsevtchn
 bin/pygrub
 bin/qemu-img-xen
@@ -687,6 +687,10 @@ share/examples/xen/xend-config.sxp
 share/examples/xen/xmexample1
 share/examples/xen/xmexample2
 share/examples/xen/xmexample3
+share/examples/xen/scripts/block
+share/examples/xen/scripts/vif-bridge
+share/examples/xen/scripts/vif-ip
+share/examples/xen/scripts/qemu-ifup
 share/xen/create.dtd
 share/xen/qemu/bios.bin
 share/xen/qemu/vgabios.bin

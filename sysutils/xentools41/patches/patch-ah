@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+$NetBSD: patch-ah,v 1.2 2011/04/15 10:32:22 bouyer Exp $
 
---- hotplug/NetBSD/Makefile.orig	2011-03-31 16:18:33.000000000 +0200
-+++ hotplug/NetBSD/Makefile	2011-03-31 16:22:07.000000000 +0200
+--- hotplug/NetBSD/Makefile.orig	2011-03-25 11:42:50.000000000 +0100
++++ hotplug/NetBSD/Makefile	2011-04-15 11:38:32.000000000 +0200
 @@ -8,7 +8,7 @@
  XEN_SCRIPTS += vif-ip
  
@@ -11,7 +11,21 @@ $NetBSD: patch-ah,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
  
  .PHONY: all
  all:
-@@ -33,12 +33,6 @@
+@@ -21,10 +21,11 @@
+ 
+ .PHONY: install-scripts
+ install-scripts:
+-	$(INSTALL_DIR) $(DESTDIR)$(XEN_SCRIPT_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)/scripts
+ 	set -e; for i in $(XEN_SCRIPTS); \
+ 	   do \
+-	   $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
++	   $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_EXAMPLES_DIR)/scripts; \
+ 	done
+ 	set -e; for i in $(XEN_SCRIPT_DATA); \
+ 	   do \
+@@ -33,12 +34,6 @@
  
  .PHONY: install-rcd
  install-rcd:
