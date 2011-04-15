@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/09/07 18:44:08 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2011/04/15 17:23:24 drochner Exp $
 
 BUILDLINK_TREE+=	python25
 
@@ -13,9 +13,9 @@ BUILDLINK_PKGSRCDIR.python25?=		../../lang/python25
 BUILDLINK_DEPMETHOD.python25?=	${BUILDLINK_DEPMETHOD.python}
 .  endif
 
-BUILDLINK_INCDIRS.python25+=	include/python2.5
-BUILDLINK_LIBDIRS.python25+=	lib/python2.5/config
-BUILDLINK_TRANSFORM+=		l:python:python2.5
+#BUILDLINK_INCDIRS.python25+=	include/python2.5
+#BUILDLINK_LIBDIRS.python25+=	lib/python2.5/config
+#BUILDLINK_TRANSFORM+=		l:python:python2.5
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
