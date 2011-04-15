@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/07 18:36:12 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2011/04/15 08:35:28 obache Exp $
 #
 
 DISTNAME=	www6to4-1.6
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	Lightweight http proxy, helps IPv4 only browsers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_FEATURES+=		inet6
 
 BUILD_TARGET=	# empty
 
@@ -24,9 +26,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/www6to4_forward.conf \
 		${DESTDIR}${PREFIX}/share/examples/www6to4
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.www6to4
-PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
-PKG_OPTIONS_GROUP.inet6=	inet6
-
-.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
