@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/04/06 10:03:01 cegger Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/15 10:32:22 bouyer Exp $
 #
 
 VERSION=		4.1.0
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools41-${VERSION}
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=		.tar.gz
@@ -97,6 +97,8 @@ SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
 .include "../../mk/bsd.prefs.mk"
 
+XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup
+
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		proc
 SUBST_STAGE.proc=	pre-configure
@@ -121,6 +123,11 @@ CONF_FILES=		${EGDIR}/xend-config.sxp \
 			${PKG_SYSCONFDIR}/xend-config.sxp
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts ${VARBASE}/log/xen ${VARBASE}/lib
+
+.for s in ${XEND_SCRIPTS}
+CONF_FILES_PERMS+=	${EGDIR}/scripts/${s} ${PKG_SYSCONFDIR}/scripts/${s} \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
+.endfor 
 
 pre-build:
 	rm -f ${WRKSRC}/check/check_x11_devel
