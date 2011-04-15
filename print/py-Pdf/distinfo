@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/10 15:31:25 joerg Exp $
+$NetBSD: distinfo,v 1.3 2011/04/15 08:49:00 adam Exp $
 
-SHA1 (pyPdf-1.12.tar.gz) = 559f080fe47a0aeda9945acbcc52331b7e4d6213
-RMD160 (pyPdf-1.12.tar.gz) = 0528bdbfdbbdb8cf26dbe47b162f57f8d0c0984a
-Size (pyPdf-1.12.tar.gz) = 31979 bytes
-SHA1 (patch-aa) = ba4246416356851f4b6553cb3281ebc5e2903769
+SHA1 (pyPdf-1.13.tar.gz) = ba7aed11cf21a2c218df2e3979be5eb90992dcbe
+RMD160 (pyPdf-1.13.tar.gz) = 0669d4a93c20fcd899d15ff42cb1b8b908f28e3b
+Size (pyPdf-1.13.tar.gz) = 35699 bytes
