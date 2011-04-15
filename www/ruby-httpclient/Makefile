@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/25 02:25:59 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/15 11:06:51 obache Exp $
 #
 
-DISTNAME=	httpclient-2.1.6.1
+DISTNAME=	httpclient-2.2.0
 CATEGORIES=	www
-MASTER_SITES=	http://dev.ctor.org/download/ \
-		http://dev.ctor.org/download/archive/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	https://github.com/nahi/httpclient
@@ -15,10 +13,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-USE_RUBY_INSTALL=	yes
-NO_BUILD=		yes
-
-INSTALLATION_DIRS=	${RUBY_VENDORLIB}
-
-.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
