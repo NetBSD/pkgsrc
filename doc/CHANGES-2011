@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.935 2011/04/15 08:30:05 adam Exp $
+$NetBSD: CHANGES-2011,v 1.936 2011/04/15 09:03:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1547,4 +1547,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/erlang to 14.1.2 [asau 2011-04-14]
 	Updated lang/erlang-man to 14.1.2 [asau 2011-04-14]
 	Updated lang/erlang-doc to 14.1.2 [asau 2011-04-14]
-	Updated print/py-reportlab to 2.5 [adam 2011-04-14]
+	Updated print/py-reportlab to 2.5 [adam 2011-04-15]
+	Updated textproc/py-html5lib to 0.90 [adam 2011-04-15]
+	Updated print/py-Pdf to 1.13 [adam 2011-04-15]
+	Updated print/py-pisa to 3.0.33 [adam 2011-04-15]
