@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10274 2011/04/15 11:27:18 obache Exp $
+$NetBSD: TODO,v 1.10275 2011/04/15 13:38:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -1103,7 +1103,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
-	o py-psycopg-2.4
 	o py-simplejson-2.1.3
 	o py-sybase-0.37
 	o py-twisted-11.0.0
