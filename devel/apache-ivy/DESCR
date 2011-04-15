@@ -1,0 +1,4 @@
+Apache Ivy is a simple yet powerful dependency manager featuring
+continuous integration, dependencies of dependencies management,
+multiple repositories including ibiblio and high performance (use
+of a local cache).
