@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/03/10 13:42:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/04/15 13:34:28 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -129,6 +129,7 @@ include/dovecot/ioloop-iolist.h
 include/dovecot/ioloop-notify-fd.h
 include/dovecot/ioloop.h
 include/dovecot/iostream-internal.h
+include/dovecot/ipwd.h
 include/dovecot/istream-attachment.h
 include/dovecot/istream-base64-encoder.h
 include/dovecot/istream-concat.h
