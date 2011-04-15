@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.165 2011/04/05 05:43:19 agc Exp $
+# $NetBSD: bootstrap,v 1.166 2011/04/15 09:02:00 joerg Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1097,7 +1097,7 @@ echo ".endif			# end pkgsrc settings" >> ${BOOTSTRAP_MKCONF}
 # register packages
 # usage: register_package <packagedirectory> [additional arguments]
 build_package() {
-	run_cmd "(cd $pkgsrcdir/$1 && $bmake -DPKG_PRESERVE MAKECONF=${BOOTSTRAP_MKCONF} install)"
+	run_cmd "(cd $pkgsrcdir/$1 && $bmake USE_DESTDIR=no -DPKG_PRESERVE MAKECONF=${BOOTSTRAP_MKCONF} install)"
 }
 
 #
