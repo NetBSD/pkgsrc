@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2011/04/10 08:55:07 obache Exp $
+# $NetBSD: Makefile,v 1.181 2011/04/15 16:18:02 drochner Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -99,6 +99,7 @@ SUBDIR+=	ming
 SUBDIR+=	mjpegtools
 SUBDIR+=	mkv2mp4
 SUBDIR+=	mkvtoolnix
+SUBDIR+=	mkvtoolnix-old
 SUBDIR+=	mlt
 SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg4ip
