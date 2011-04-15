@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/01/20 09:55:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/04/15 13:28:26 adam Exp $
 ${PYSITELIB}/psycopg2/__init__.py
 ${PYSITELIB}/psycopg2/__init__.pyc
 ${PYSITELIB}/psycopg2/__init__.pyo
@@ -72,6 +72,9 @@ ${PYSITELIB}/psycopg2/tests/test_quote.pyo
 ${PYSITELIB}/psycopg2/tests/test_transaction.py
 ${PYSITELIB}/psycopg2/tests/test_transaction.pyc
 ${PYSITELIB}/psycopg2/tests/test_transaction.pyo
+${PYSITELIB}/psycopg2/tests/testconfig.py
+${PYSITELIB}/psycopg2/tests/testconfig.pyc
+${PYSITELIB}/psycopg2/tests/testconfig.pyo
 ${PYSITELIB}/psycopg2/tests/testutils.py
 ${PYSITELIB}/psycopg2/tests/testutils.pyc
 ${PYSITELIB}/psycopg2/tests/testutils.pyo
