@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.941 2011/04/15 11:27:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.942 2011/04/15 13:38:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1556,3 +1556,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/xentools41 to 4.1.0nb1 [bouyer 2011-04-15]
 	Updated www/ruby-httpclient to 2.2.0 [obache 2011-04-15]
 	Updated sysutils/pfstat to 2.5 [obache 2011-04-15]
+	Updated databases/py-psycopg2 to 2.4 [adam 2011-04-15]
+	Updated mail/dovecot2 to 2.0.12 [adam 2011-04-15]
+	Updated mail/dovecot2-pigeonhole to 0.2.3 [adam 2011-04-15]
