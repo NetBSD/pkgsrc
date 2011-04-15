@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2011/02/28 18:55:53 adam Exp $
+# $NetBSD: Makefile,v 1.30 2011/04/15 09:48:56 adam Exp $
 
-DISTNAME=	squid-3.1.11
+DISTNAME=	squid-3.1.12
 PKGNAME=	${DISTNAME}	# Necessary for "pkgsrc/www/squid/options.mk"
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/3.1/ \
@@ -30,7 +30,6 @@ SQUID_NTLM_AUTH_HELPERS?= fakeauth
 .include "../../www/squid/options.mk"
 
 post-build:
-	${CP} -pf ${WRKSRC}/src/squid.conf.documented \
-	  ${WRKSRC}/src/squid.conf.default
+	cd ${WRKSRC}/src && ${CP} -pf squid.conf.documented squid.conf.default
 
 .include "../../mk/bsd.pkg.mk"
