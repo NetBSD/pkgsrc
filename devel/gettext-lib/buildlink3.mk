@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2011/04/12 17:41:28 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2011/04/15 09:24:33 adam Exp $
 
 BUILDLINK_TREE+=	gettext
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	gettext
 GETTEXT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.18
+BUILDLINK_ABI_DEPENDS.gettext+=	gettext-lib>=0.18
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 BUILDLINK_LIBNAME.gettext=	intl
 BUILDLINK_LDADD.gettext=	${BUILDLINK_LIBNAME.gettext:S/^/-l/:S/^-l$//}
