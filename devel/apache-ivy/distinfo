@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/15 09:39:31 abs Exp $
+
+SHA1 (apache-ivy-2.2.0-bin.tar.gz) = 269c3a87226a87a1a189eaa74cf2574e412de655
+RMD160 (apache-ivy-2.2.0-bin.tar.gz) = 46b3e2b07562196cf9094091a55beeed2b0b7405
+Size (apache-ivy-2.2.0-bin.tar.gz) = 2748479 bytes
