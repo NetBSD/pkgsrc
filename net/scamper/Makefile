@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/08/22 21:10:16 markd Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/15 08:34:00 obache Exp $
 #
 
 DISTNAME=	scamper-cvs-20100517
@@ -12,6 +12,8 @@ COMMENT=	Dual-stack traceroute software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_FEATURES+=	inet6
+
 INSTALLATION_DIRS=bin
 
 MAKE_FLAGS+=	WITH_DEBUG=yes	# recommended by the the software developer
@@ -19,9 +21,4 @@ MAKE_FLAGS+=	WITH_DEBUG=yes	# recommended by the the software developer
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scamper ${DESTDIR}${PREFIX}/bin
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.scamper
-PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
-PKG_OPTIONS_GROUP.inet6=	inet6
-
-.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"

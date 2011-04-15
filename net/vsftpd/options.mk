@@ -1,18 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2008/09/22 11:02:21 abs Exp $
+# $NetBSD: options.mk,v 1.7 2011/04/15 08:34:01 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vsftpd
 PKG_SUPPORTED_OPTIONS=	pam ssl tcpwrappers
 PKG_SUGGESTED_OPTIONS=	pam tcpwrappers
-PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
-PKG_OPTIONS_GROUP.inet6=	inet6
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-BROKEN=		Needs ipv6 option enabled.
-.endif
 
 .if !empty(PKG_OPTIONS:Mpam)
 .include "../../mk/pam.buildlink3.mk"
