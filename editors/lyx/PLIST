@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/03/09 18:48:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/04/15 16:32:33 drochner Exp $
 ${BIN_DIR}/lyx
 ${BIN_DIR}/lyxclient
 ${BIN_DIR}/tex2lyx
@@ -29,6 +29,7 @@ share/locale/ro/LC_MESSAGES/${LYX}.mo
 share/locale/ru/LC_MESSAGES/${LYX}.mo
 share/locale/sk/LC_MESSAGES/${LYX}.mo
 share/locale/sr/LC_MESSAGES/${LYX}.mo
+share/locale/sv/LC_MESSAGES/${LYX}.mo
 share/locale/tr/LC_MESSAGES/${LYX}.mo
 share/locale/uk/LC_MESSAGES/${LYX}.mo
 share/locale/zh_CN/LC_MESSAGES/${LYX}.mo
