@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+$NetBSD: patch-ag,v 1.2 2011/04/15 10:32:22 bouyer Exp $
 
 --- ../config/NetBSD.mk.orig	2011-03-25 11:42:47.000000000 +0100
-+++ ../config/NetBSD.mk	2011-03-31 17:21:05.000000000 +0200
-@@ -7,12 +7,12 @@
++++ ../config/NetBSD.mk	2011-04-15 11:36:19.000000000 +0200
+@@ -7,12 +7,13 @@
  LIBEXEC = $(PREFIX)/libexec
  PRIVATE_BINDIR = $(BINDIR)
  
@@ -18,5 +18,6 @@ $NetBSD: patch-ag,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
 -XEN_LOCK_DIR = $(PREFIX)/var/lib
 -endif
 +XEN_LOCK_DIR = $(VARBASE)/run
++XEN_EXAMPLES_DIR=$(PREFIX)/share/examples/xen
  
  WGET = ftp

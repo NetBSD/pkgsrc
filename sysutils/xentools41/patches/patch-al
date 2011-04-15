@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2011/04/15 10:32:22 bouyer Exp $
+
+--- ioemu-qemu-xen/i386-dm/hookstarget.mak.orig	2011-04-15 11:45:21.000000000 +0200
++++ ioemu-qemu-xen/i386-dm/hookstarget.mak	2011-04-15 11:46:36.000000000 +0200
+@@ -2,5 +2,5 @@
+ 
+ install-hook:
+ 	$(INSTALL_DIR) "$(DESTDIR)/$(bindir)"
+-	$(INSTALL_DIR) "$(DESTDIR)/$(configdir)"
+-	$(INSTALL_PROG) $(QEMU_ROOT)/i386-dm/qemu-ifup-$(IOEMU_OS) "$(DESTDIR)/$(configdir)/qemu-ifup"
++	$(INSTALL_DIR) "$(DESTDIR)/$(XEN_EXAMPLES_DIR)/scripts"
++	$(INSTALL_PROG) $(QEMU_ROOT)/i386-dm/qemu-ifup-$(IOEMU_OS) "$(DESTDIR)/$(XEN_EXAMPLES_DIR)/scripts/qemu-ifup"

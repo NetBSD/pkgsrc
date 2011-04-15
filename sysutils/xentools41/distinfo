@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/06 09:10:26 cegger Exp $
+$NetBSD: distinfo,v 1.2 2011/04/15 10:32:22 bouyer Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -12,11 +12,12 @@ SHA1 (patch-ac) = c3cc5335a1d6b066307c5f03fe72f513a9eb2bdb
 SHA1 (patch-ad) = 5eb15470bff85d30b6d26d8fe094f59fc8e34175
 SHA1 (patch-ae) = 032f9bd48bbe7423d24ec8464ef6b626d7f1369a
 SHA1 (patch-af) = e866e7d96766b735a53432350275810803eeb510
-SHA1 (patch-ag) = f1f58566b41922d661bbe6ea7e4c90d17cecd7fe
-SHA1 (patch-ah) = 1227ce79a9547464059f7de7a18bd342c4741280
+SHA1 (patch-ag) = 90893326dcce4e3e2ef273f22ec5ddf5af0f7cd8
+SHA1 (patch-ah) = ab91c41ef6bbdd7f7f3d992b9f81e43056a765e2
 SHA1 (patch-ai) = 8da6bba38bd7677ea829ca35058f7d2d1d7acad4
 SHA1 (patch-aj) = d0999d8dcbc1eef4de7037db0e54dcd8d2f706eb
-SHA1 (patch-ak) = dee9673fd67f582da64e8f2c14b566032f162f6f
+SHA1 (patch-ak) = 722a6b0541b036d84c703037134e25bc47f3eb65
+SHA1 (patch-al) = d9a310c16db708dd86170a13946f87e4cd21eb7a
 SHA1 (patch-ba) = 2c65e4b4b85e91e92dfb3aa402ebc44694bdff06
 SHA1 (patch-bb) = 64a61fb156bcb6a99ff0963063a0716b808e3b61
 SHA1 (patch-bc) = 25c99a428fda6dee709888ddbcfdcfef5f654564
