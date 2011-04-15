@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 2011/04/15 13:35:05 bouyer Exp $
+
 --- hotplug/NetBSD/vif-ip.orig	2011-04-01 16:04:24.000000000 +0200
 +++ hotplug/NetBSD/vif-ip	2011-04-01 16:04:54.000000000 +0200
 @@ -23,7 +23,10 @@
