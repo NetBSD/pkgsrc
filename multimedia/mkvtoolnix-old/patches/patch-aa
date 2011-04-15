@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2011/04/15 16:18:02 drochner Exp $
+
+--- src/common/os.h.orig	2009-07-01 16:40:03.000000000 +0000
++++ src/common/os.h
+@@ -15,6 +15,8 @@
+ 
+ #include "config.h"
+ 
++#include <stdarg.h>
++
+ // For PRId64 and PRIu64:
+ #define __STDC_FORMAT_MACROS
+ 
