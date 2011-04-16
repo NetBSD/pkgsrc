@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2010/08/12 10:22:40 asau Exp $
+$NetBSD: distinfo,v 1.11 2011/04/16 16:10:59 asau Exp $
 
-SHA1 (tinyscheme1.39.zip) = d759bff93683399ee7abbfd1a822d000adb22a0c
-RMD160 (tinyscheme1.39.zip) = d8d365ccceb9482ffd457fd6d4f97c1651e131e9
-Size (tinyscheme1.39.zip) = 58751 bytes
-SHA1 (patch-aa) = 94cac80297b4e89e2fe2ff8a575c616354aa122d
+SHA1 (tinyscheme-1.40.tar.gz) = e03f7ac41f0517bb35eced2772c79eb9db42ea82
+RMD160 (tinyscheme-1.40.tar.gz) = 1eac087a90c2c2e8ca5f4cefbc5660b96491e4b3
+Size (tinyscheme-1.40.tar.gz) = 60160 bytes
+SHA1 (patch-aa) = 47462044ec20f3c4f9cc551e22e69007c4bf85d8
