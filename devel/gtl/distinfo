@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/05/25 11:36:46 wiz Exp $
+$NetBSD: distinfo,v 1.6 2011/04/16 11:05:49 obache Exp $
 
-SHA1 (GTL-1.2.1.tar.bz2) = 87fbaf515213733025889cd03627c6b65f5c239a
-RMD160 (GTL-1.2.1.tar.bz2) = 9590f898bdd357d094945b88b0210072c5396daf
-Size (GTL-1.2.1.tar.bz2) = 613258 bytes
+SHA1 (GTL-1.2.4-lgpl.tar.gz) = 472a29211aa37a9c3f2e47336ddc16034d81c80f
+RMD160 (GTL-1.2.4-lgpl.tar.gz) = 5ee228fadfda0c450c358dd2be16265cca49e1f1
+Size (GTL-1.2.4-lgpl.tar.gz) = 1074276 bytes
