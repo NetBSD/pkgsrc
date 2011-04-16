@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.28 2009/05/19 08:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2011/04/16 11:05:49 obache Exp $
 
-DISTNAME=		GTL-1.2.1
-PKGNAME=		gtl-1.2.1
+DISTNAME=		GTL-1.2.4-lgpl
+PKGNAME=		${DISTNAME:S/-lgpl//:tl}
 CATEGORIES=		devel
-MASTER_SITES=		http://infosun.fim.uni-passau.de/GTL/download/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		http://www.fim.uni-passau.de/fileadmin/files/lehrstuhl/brandenburg/projekte/gtl/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.infosun.fim.uni-passau.de/GTL/
 COMMENT=		C++ graph data structure library based on the STL
-LICENSE=		no-commercial-use
+LICENSE=		gnu-lgpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
@@ -18,35 +19,20 @@ USE_LANGUAGES=		c c++
 CONFLICTS=		gtl0-[0-9]*
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:Q}
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-lgpl//}
 
 DOCDIR=		${PREFIX}/share/doc/GTL
 
-INTERACTIVE_STAGE=	fetch
-
-FETCH_MESSAGE= \
-"With the release of version 1.0.0 the download policy of GTL has been" \
-"changed. GTL can be downloaded free of charge for non-commercial use." \
-"Please follow the steps below to get access to the download archive:" \
-"" \
-"Send an email to gtl-download@infosun.fim.uni-passau.de containing the" \
-"following information:" \
-"- Your Name" \
-"- Your Affiliation" \
-"- And your email address. Please use your academic address, e.g. .edu," \
-"  if you have. Otherwise your are classified as a \"commercial\" user." \
-"As soon as possible you will receive an answer from the GTL Team" \
-"containing the access code to the download page." \
-"" \
-"If you intend to use GTL commercially please send an email to" \
-"brandenb@fim.uni-passau.de."
+# tests/test.gml is missing in archive
+#TEST_TARGET=	runtests
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}/icons
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/icons
 	cd ${WRKSRC}/doc; \
-		${INSTALL_DATA} *.html style.css ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/icons/*.jpeg ${DOCDIR}/icons
-	${INSTALL_DATA} ${WRKSRC}/doc/userguide/GTL.ps ${DOCDIR}
+		${INSTALL_DATA} *.html style.css ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/icons/*.jpeg ${DESTDIR}${DOCDIR}/icons
+	${INSTALL_DATA} ${WRKSRC}/doc/userguide/GTL.ps ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
