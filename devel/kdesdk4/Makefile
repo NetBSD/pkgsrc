@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/01/23 07:55:12 markd Exp $
+# $NetBSD: Makefile,v 1.17 2011/04/16 14:30:33 roy Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -32,6 +32,16 @@ REPLACE_PERL+= \
 	cervisia/cervisia-normalize_cvsroot.pl \
 	cervisia/change_colors.pl
 
+REPLACE_PYTHON+= \
+    kcachegrind/converters/hotshot2calltree \
+    lokalize/scripts/xliffmerge.py \
+    scripts/rename_source_files \
+    scripts/kdelnk2desktop.py \
+    scripts/kde_generate_export_header \
+    scripts/kde-systemsettings-tree.py \
+    scripts/zonetab2pot.py \
+    umbrello/umbrello/headings/heading.py
+
 REPLACE_SH+= \
 	scripts/build-progress.sh \
 	scripts/cvsaddcurrentdir
@@ -46,6 +56,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../devel/libiberty/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
