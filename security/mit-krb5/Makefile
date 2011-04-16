@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2011/03/22 23:31:04 tez Exp $
+# $NetBSD: Makefile,v 1.51.2.1 2011/04/16 09:43:46 tron Exp $
 
 DISTNAME=	krb5-1.8.3
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.8/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar
 
 PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
 
-PATCHFILES=	2010-006-patch.txt 2010-007-patch.txt 2011-001-patch.txt 2011-002-patch-r18.txt 2011-003-patch.txt
+PATCHFILES=	2010-006-patch.txt 2010-007-patch.txt 2011-001-patch.txt 2011-002-patch-r18.txt 2011-003-patch.txt 2011-004-patch-r18.txt
 
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/
@@ -85,5 +85,6 @@ post-install:
 		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
 	done
 
+BUILDLINK_API_DEPENDS.openssl+= openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
