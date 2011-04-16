@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2011/04/04 13:42:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.90 2011/04/16 11:05:33 tron Exp $
 
 DISTNAME=		vice-2.3
 CATEGORIES=		emulators
@@ -41,6 +40,7 @@ PLIST_SRC+=		PLIST
 
 .if (${OPSYS} == NetBSD)
 CONFIGURE_ARGS+=	--without-oss
+CPPFLAGS+=		-DHAVE_STDINT_H
 .endif
 
 .include "../../devel/readline/buildlink3.mk"
