@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.951 2011/04/16 16:11:25 asau Exp $
+$NetBSD: CHANGES-2011,v 1.952 2011/04/16 17:45:56 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1568,3 +1568,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/gtl to 1.2.4 [obache 2011-04-16]
 	Updated net/wireshark to 1.4.5 [tron 2011-04-16]
 	Updated lang/tinyscheme to 1.40 [asau 2011-04-16]
+	Updated games/lpairs to 1.0.4 [shattered 2011-04-16]
