@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.944 2011/04/15 17:42:17 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.945 2011/04/16 01:53:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1561,3 +1561,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/gobject-introspection to 0.10.7 [drochner 2011-04-15]
 	Updated editors/lyx to 1.6.9 [drochner 2011-04-15]
 	Updated devel/glib2 to 2.28.6 [drochner 2011-04-15]
+	Updated mail/milter-manager to 1.6.8 [obache 2011-04-16]
