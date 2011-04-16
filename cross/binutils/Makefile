@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/02/04 19:52:55 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2011/04/16 07:47:00 obache Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -13,6 +13,9 @@ MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/
 COMMENT=		Unified GNU binutils for cross build environments
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CROSSBASE=		yes
 USE_TOOLS+=		gm4 pod2man
@@ -45,36 +48,35 @@ post-patch:
 
 # we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
 do-install:
-	${MKDIR} ${BINDIR} ${PREFIX}/lib/ldscripts ${PREFIX}/include
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/coffdump ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/cxxfilt ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nm-new ${BINDIR}/nm
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objcopy ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objdump ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ranlib ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/readelf ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/size ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/srconv ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strings ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strip-new ${BINDIR}/strip
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysdump ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysinfo ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/windres ${BINDIR}
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/ld/ld-new ${BINDIR}/ld
-	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${PREFIX}/lib
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/intl/libintl.a ${PREFIX}/lib
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${PREFIX}/lib
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/symcat.h ${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${PREFIX}/include
-	for f in ${WRKSRC}/ld/ldscripts/*; do ${INSTALL_DATA} $${f} ${PREFIX}/lib/ldscripts; done
-	${INSTALL_SCRIPT} ${WRKSRC}/cross-env ${BINDIR}
-	${LN} -s ${BINDIR}/cross-env ${LOCALBASE}/bin/cross-env
+	${MKDIR} ${DESTDIR}${BINDIR} ${DESTDIR}${PREFIX}/lib/ldscripts ${DESTDIR}${PREFIX}/include
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/coffdump ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/cxxfilt ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nm-new ${DESTDIR}${BINDIR}/nm
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objcopy ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objdump ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ranlib ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/readelf ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/size ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/srconv ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strings ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strip-new ${DESTDIR}${BINDIR}/strip
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysdump ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysinfo ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/windres ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/ld/ld-new ${DESTDIR}${BINDIR}/ld
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${DESTDIR}${BINDIR}
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${DESTDIR}${PREFIX}/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/intl/libintl.a ${DESTDIR}${PREFIX}/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${DESTDIR}${PREFIX}/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/symcat.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${DESTDIR}${PREFIX}/include
+	for f in ${WRKSRC}/ld/ldscripts/*; do ${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/lib/ldscripts; done
+	${INSTALL_SCRIPT} ${WRKSRC}/cross-env ${DESTDIR}${BINDIR}
 
 post-build:
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|' < ${FILESDIR}/cross-env > \
