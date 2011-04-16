@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10279 2011/04/16 17:45:56 shattered Exp $
+$NetBSD: TODO,v 1.10280 2011/04/16 23:52:37 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -724,7 +724,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.1
 	o gssdp-0.10.0
-	o gst123-0.2.0
 	o gtar-1.26
 	o gtar-base-1.26
 	o gtexinfo-4.13a
