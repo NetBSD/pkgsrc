@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:12:00 agc Exp $
+$NetBSD: distinfo,v 1.4 2011/04/16 17:44:07 shattered Exp $
 
-SHA1 (lpairs-1.0.1.tar.gz) = 4094c77bee155f1e32c87886f772aae9ca04e1fd
-RMD160 (lpairs-1.0.1.tar.gz) = f27d9d57569f78f9361b21fc305b657d3ec79e72
-Size (lpairs-1.0.1.tar.gz) = 418431 bytes
+SHA1 (lpairs-1.0.4.tar.gz) = 4e7c8d9b55ccb8c740d8125c116347cf7bb36fb4
+RMD160 (lpairs-1.0.4.tar.gz) = ca4a23bc536dba7da625eb3485258381de003c5d
+Size (lpairs-1.0.4.tar.gz) = 536625 bytes
+SHA1 (patch-aa) = 59a134c074cf9b0ff2aeef297fc88e06ed6a977a
