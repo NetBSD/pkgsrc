@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.948 2011/04/16 04:36:17 obache Exp $
+$NetBSD: CHANGES-2011,v 1.949 2011/04/16 11:06:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1565,3 +1565,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Compress-Raw-Zlib to 2.033 [obache 2011-04-16]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.033 [obache 2011-04-16]
 	Updated devel/p5-IO-Compress to 2.033nb1 [obache 2011-04-16]
+	Updated devel/gtl to 1.2.4 [obache 2011-04-16]
