@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.947 2011/04/16 04:27:51 obache Exp $
+$NetBSD: CHANGES-2011,v 1.948 2011/04/16 04:36:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1564,3 +1564,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/milter-manager to 1.6.8 [obache 2011-04-16]
 	Updated devel/p5-Compress-Raw-Zlib to 2.033 [obache 2011-04-16]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.033 [obache 2011-04-16]
+	Updated devel/p5-IO-Compress to 2.033nb1 [obache 2011-04-16]
