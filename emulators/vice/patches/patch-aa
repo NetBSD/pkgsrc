@@ -1,27 +1,21 @@
-$NetBSD: patch-aa,v 1.10 2010/07/24 09:44:57 wiz Exp $
+$NetBSD: patch-aa,v 1.10.6.1 2011/04/16 21:27:34 spz Exp $
 
-Better destdir support.
+Bring back DESTDIR support which is somehow patched out by pkgsrc.
+    localedir = $(DESTDIR)$(datadir)/locale
+is changed to
+    localedir = /usr/pkg/share/locale
+and the same for gnulocaledir.
 
---- po/Makefile.in.in.orig	2008-06-18 16:02:50.000000000 +0000
-+++ po/Makefile.in.in
-@@ -116,16 +116,16 @@ install-data: install-data-@USE_NLS@
- install-data-no: all
- install-data-yes: all
- 	if test -r "$(MKINSTALLDIRS)"; then \
--	  $(MKINSTALLDIRS) $(datadir); \
-+	  $(MKINSTALLDIRS) ${DESTDIR}$(datadir); \
- 	else \
--	  $(SHELL) $(top_srcdir)/mkinstalldirs $(datadir); \
-+	  $(SHELL) $(top_srcdir)/mkinstalldirs ${DESTDIR}$(datadir); \
- 	fi
- 	@catalogs='$(CATALOGS)'; \
+--- po/Makefile.in.in.dist	2011-02-27 00:39:47.000000000 +0100
++++ po/Makefile.in.in	2011-02-27 01:11:12.000000000 +0100
+@@ -126,8 +126,8 @@
  	for cat in $$catalogs; do \
  	  cat=`basename $$cat`; \
  	  case "$$cat" in \
 -	    *.gmo) destdir=$(gnulocaledir);; \
 -	    *)     destdir=$(localedir);; \
-+	    *.gmo) destdir=${DESTDIR}$(gnulocaledir);; \
-+	    *)     destdir=${DESTDIR}$(localedir);; \
++	    *.gmo) destdir=$(DESTDIR)$(gnulocaledir);; \
++	    *)     destdir=$(DESTDIR)$(localedir);; \
  	  esac; \
  	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
  	  dir=$$destdir/$$lang/LC_MESSAGES; \
