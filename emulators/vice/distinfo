@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.37 2011/01/24 14:58:41 wiz Exp $
+$NetBSD: distinfo,v 1.37.2.1 2011/04/16 21:27:34 spz Exp $
 
-SHA1 (vice-2.2.tar.gz) = 88ec1f4fefc708957b242805a28ca9b26a3e2738
-RMD160 (vice-2.2.tar.gz) = d3fb33deb776ffcae297df413849437fb4e49840
-Size (vice-2.2.tar.gz) = 9597027 bytes
-SHA1 (vice_2_2_netbsd.patch) = fd6ca57372efde9d467da221f4b5b8454b8062fc
-RMD160 (vice_2_2_netbsd.patch) = 26cd48aa79eae7976f41f4dacf972d81c5da788e
-Size (vice_2_2_netbsd.patch) = 4437 bytes
-SHA1 (patch-aa) = 08ac51c0674fde12ff0032a69f7c301464c1b408
-SHA1 (patch-ab) = 982424905a9fb8eb011d19b3ec649b5d7a01ca83
-SHA1 (patch-ac) = 25589b1d59b891ec7205490e7d892ca9df765972
-SHA1 (patch-ad) = 0ace2e00ed2f66c8669ec745b62118570187735a
+SHA1 (vice-2.3.tar.gz) = 5e7e1a375a4ca8c4895dc1552162955fdffce296
+RMD160 (vice-2.3.tar.gz) = 056e48ffedfaecd470892c73b97af89c1e002ff9
+Size (vice-2.3.tar.gz) = 11602378 bytes
+SHA1 (patch-aa) = 7ecda5911a2dd0e7ef8676959d9dc021323d393f
+SHA1 (patch-ab) = 095839b7f234f803d01296dc72c37ec9909bcbce
