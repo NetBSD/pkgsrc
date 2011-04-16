@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/02/27 17:05:57 spz Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/04/16 09:41:19 spz Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -96,8 +96,11 @@ lib/rt3/RT/I18N/cs.pm
 lib/rt3/RT/I18N/cs.po
 lib/rt3/RT/I18N/da.po
 lib/rt3/RT/I18N/de.po
+lib/rt3/RT/I18N/el.po
 lib/rt3/RT/I18N/en.po
+lib/rt3/RT/I18N/en_GB.po
 lib/rt3/RT/I18N/es.po
+lib/rt3/RT/I18N/et.po
 lib/rt3/RT/I18N/fi.po
 lib/rt3/RT/I18N/fr.po
 lib/rt3/RT/I18N/he.po
@@ -108,6 +111,9 @@ lib/rt3/RT/I18N/id.po
 lib/rt3/RT/I18N/is.po
 lib/rt3/RT/I18N/it.po
 lib/rt3/RT/I18N/ja.po
+lib/rt3/RT/I18N/lt.po
+lib/rt3/RT/I18N/lv.po
+lib/rt3/RT/I18N/mk.po
 lib/rt3/RT/I18N/nb.po
 lib/rt3/RT/I18N/nl.po
 lib/rt3/RT/I18N/nn.po
@@ -118,6 +124,7 @@ lib/rt3/RT/I18N/pt_PT.po
 lib/rt3/RT/I18N/rt.pot
 lib/rt3/RT/I18N/ru.pm
 lib/rt3/RT/I18N/ru.po
+lib/rt3/RT/I18N/sl.po
 lib/rt3/RT/I18N/sv.po
 lib/rt3/RT/I18N/tr.po
 lib/rt3/RT/I18N/zh_CN.po
@@ -322,7 +329,7 @@ share/rt3/etc/upgrade/3.8.3/schema.Pg
 share/rt3/etc/upgrade/3.8.4/content
 share/rt3/etc/upgrade/3.8.6/content
 share/rt3/etc/upgrade/3.8.8/content
-share/rt3/etc/upgrade/${PKGVERSION}/content
+share/rt3/etc/upgrade/3.8.9/content
 share/rt3/etc/vulnerable-passwords
 share/rt3/html/Admin/CustomFields/GroupRights.html
 share/rt3/html/Admin/CustomFields/Modify.html
@@ -931,6 +938,7 @@ share/rt3/html/NoAuth/RichText/FCKeditor/fckpackager.xml
 share/rt3/html/NoAuth/RichText/FCKeditor/fckstyles.xml
 share/rt3/html/NoAuth/RichText/FCKeditor/fcktemplates.xml
 share/rt3/html/NoAuth/RichText/FCKeditor/license.txt
+share/rt3/html/NoAuth/RichText/autohandler
 share/rt3/html/NoAuth/RichText/dhandler
 share/rt3/html/NoAuth/css/3.4-compat/body.css
 share/rt3/html/NoAuth/css/3.4-compat/footer.css
