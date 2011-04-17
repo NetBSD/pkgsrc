@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2009/08/15 23:27:19 zafer Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/04/17 08:51:22 obache Exp $
+# used by audio/aumix/Makefile
+# used by audio/aumix-gtk/Makefile
 
 DISTNAME=	aumix-2.8
 CATEGORIES=	audio
