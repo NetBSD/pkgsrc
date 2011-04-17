@@ -1,5 +1,8 @@
-# $NetBSD: Makefile.common,v 1.49 2007/08/04 11:13:37 obache Exp $
+# $NetBSD: Makefile.common,v 1.50 2011/04/17 09:30:03 obache Exp $
 #
+# used by databases/libgda/Makefile
+# used by databases/libgda-mysql
+# used by databases/libgda-postgresql
 
 DISTNAME=		libgda-3.0.1
 CATEGORIES=		databases gnome
