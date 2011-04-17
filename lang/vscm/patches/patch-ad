@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2011/04/17 07:46:05 asau Exp $
+
+--- compiler/Makefile.orig	1999-02-09 08:05:04.000000000 +0300
++++ compiler/Makefile	2011-03-30 20:19:31.000000000 +0400
+@@ -1,7 +1,7 @@
+ SHELL =	/bin/sh
+ 
+-OSYS = ../scheme
+-NSYS = ../scheme
++OSYS = ../vscm
++NSYS = ../vscm
+ OOBJ = O
+ NOBJ = O
+ 
