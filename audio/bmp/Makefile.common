@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.25 2009/07/22 09:01:17 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2011/04/17 09:02:17 obache Exp $
 #
+# used by audio/bmp/Makefile
+# used by audio/bmp-esound/Makefile
 
 DISTNAME=	bmp-0.9.7.1
 CATEGORIES=	audio
