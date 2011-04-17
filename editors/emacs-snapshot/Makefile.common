@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.25 2011/03/21 00:07:45 minskim Exp $
+# $NetBSD: Makefile.common,v 1.26 2011/04/17 03:52:18 minskim Exp $
 
-DISTNAME=	emacs-snapshot_20110316.orig
+DISTNAME=	emacs-snapshot_20110408.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.naquadah.org/unstable/
@@ -19,7 +19,7 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
-USE_TOOLS+=	gmake makeinfo gzip
+USE_TOOLS+=	automake autoconf gmake makeinfo gzip
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-gameuser=${GAMEOWN}
 
 BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		GAMEDATAMODE
+BUILD_DEFS+=		GAMES_USER GAMES_GROUP GAMEDATAMODE
 PLIST_SRC+=		../../editors/emacs-snapshot/PLIST
 
 .include "../../editors/emacs-snapshot/version.mk"
@@ -72,3 +72,6 @@ post-extract:
 	cp ${.CURDIR}/../../editors/emacs/files/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CHMOD} -R go-w ${WRKSRC}
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
