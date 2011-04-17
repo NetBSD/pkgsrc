@@ -1,4 +1,8 @@
-# $NetBSD: Makefile.common,v 1.61 2010/11/16 12:21:10 tron Exp $
+# $NetBSD: Makefile.common,v 1.62 2011/04/17 09:23:49 obache Exp $
+#
+# used by chat/xchat/Makefile
+# used by chat/xchat-perl/Makefile
+# used by chat/xchat-python/Makefile
 
 DISTNAME=	xchat-2.8.8
 CATEGORIES=	chat
