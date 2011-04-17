@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.956 2011/04/17 07:47:34 asau Exp $
+$NetBSD: CHANGES-2011,v 1.957 2011/04/17 09:15:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1573,3 +1573,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.2.13 [obache 2011-04-17]
 	Updated editors/emacs-snapshot to 24.0.50.20110408 [minskim 2011-04-17]
 	Updated lang/vscm to 1.4 [asau 2011-04-17]
+	Updated databases/sqlite3 to 3.7.6.1nb1 [adam 2011-04-17]
