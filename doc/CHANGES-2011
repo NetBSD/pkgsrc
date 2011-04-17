@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.954 2011/04/17 02:13:42 obache Exp $
+$NetBSD: CHANGES-2011,v 1.955 2011/04/17 03:52:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1571,3 +1571,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/lpairs to 1.0.4 [shattered 2011-04-16]
 	Updated multimedia/gst123 to 0.2.0 [ryoon 2011-04-16]
 	Updated net/mikutter to 0.0.2.13 [obache 2011-04-17]
+	Updated editors/emacs-snapshot to 24.0.50.20110408 [minskim 2011-04-17]
