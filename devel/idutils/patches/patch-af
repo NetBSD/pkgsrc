@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2011/04/17 01:44:57 mrg Exp $
+
+also in for *.mk files as makefiles.
+
+--- libidu/id-lang.map.orig	2006-04-29 08:52:05.000000000 -0700
++++ libidu/id-lang.map	2011-04-17 02:13:46.000000000 -0700
+@@ -79,6 +79,7 @@
+ *.scm			lisp
+ 
+ *.am			make
++*.mk			make
+ Makefile		make
+ Makefile.*		make
+ 
