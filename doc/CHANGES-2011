@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.958 2011/04/17 10:32:06 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.959 2011/04/17 10:52:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1575,3 +1575,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/vscm to 1.4 [asau 2011-04-17]
 	Updated databases/sqlite3 to 3.7.6.1nb1 [adam 2011-04-17]
 	Updated net/quvi to 0.2.15 [ryoon 2011-04-17]
+	Updated net/youtube-dl to 20110329 [ryoon 2011-04-17]
