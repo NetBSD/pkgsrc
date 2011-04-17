@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/03/10 01:28:48 minskim Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/04/17 03:52:18 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -926,6 +926,7 @@ share/emacs/${EMACS_VERSION}/etc/srecode/test.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/texi.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/wisent.srt
 share/emacs/${EMACS_VERSION}/etc/themes/light-blue-theme.el
+share/emacs/${EMACS_VERSION}/etc/themes/misterioso-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tango-dark-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tango-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tsdh-dark-theme.el
@@ -1067,8 +1068,6 @@ share/emacs/${EMACS_VERSION}/lisp/COPYING
 share/emacs/${EMACS_VERSION}/lisp/README
 share/emacs/${EMACS_VERSION}/lisp/abbrev.el.gz
 share/emacs/${EMACS_VERSION}/lisp/abbrev.elc
-share/emacs/${EMACS_VERSION}/lisp/abbrevlist.el.gz
-share/emacs/${EMACS_VERSION}/lisp/abbrevlist.elc
 share/emacs/${EMACS_VERSION}/lisp/align.el.gz
 share/emacs/${EMACS_VERSION}/lisp/align.elc
 share/emacs/${EMACS_VERSION}/lisp/allout-widgets.el.gz
@@ -1649,6 +1648,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/byte-run.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/byte-run.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/bytecomp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/bytecomp.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cconv.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cconv.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/chart.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/chart.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/check-declare.el.gz
@@ -1687,8 +1688,6 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/edebug.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/edebug.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-base.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-base.elc
-share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-comp.el.gz
-share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-comp.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-custom.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-custom.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-datadebug.el.gz
@@ -1757,6 +1756,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/smie.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/smie.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/syntax.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/syntax.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/tabulated-list.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/tabulated-list.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/tcover-ses.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/tcover-ses.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/tcover-unsafep.el.gz
@@ -2128,6 +2129,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gravatar.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gravatar.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/gssapi.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/gssapi.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/html2text.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/html2text.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/ietf-drums.el.gz
@@ -2228,10 +2231,10 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/proto-stream.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/proto-stream.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/qp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/qp.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/registry.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/registry.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc1843.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc1843.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/rfc2045.el.gz
@@ -2697,6 +2700,8 @@ share/emacs/${EMACS_VERSION}/lisp/net/net-utils.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/net-utils.elc
 share/emacs/${EMACS_VERSION}/lisp/net/netrc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/netrc.elc
+share/emacs/${EMACS_VERSION}/lisp/net/network-stream.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/network-stream.elc
 share/emacs/${EMACS_VERSION}/lisp/net/newst-backend.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/newst-backend.elc
 share/emacs/${EMACS_VERSION}/lisp/net/newst-plainview.el.gz
@@ -2824,6 +2829,8 @@ share/emacs/${EMACS_VERSION}/lisp/nxml/xmltok.el.gz
 share/emacs/${EMACS_VERSION}/lisp/nxml/xmltok.elc
 share/emacs/${EMACS_VERSION}/lisp/nxml/xsd-regexp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/nxml/xsd-regexp.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/abbrevlist.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/abbrevlist.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/awk-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.el.gz
