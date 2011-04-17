@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/08/21 16:33:55 seb Exp $
+# $NetBSD: Makefile,v 1.19 2011/04/17 10:11:03 adam Exp $
 
 DISTNAME=	IPC-Run-0.89
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IPC-Run/
 COMMENT=	Perl module for interacting with child processes
-LICENSE=	gnu-glp-v2 OR artistic
+LICENSE=	gnu-gpl-v2 OR artistic
 
 # XXX Win32 will need Win32::Process while all others IO::Pty
 #     How about Interix?
