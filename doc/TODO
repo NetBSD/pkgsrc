@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10280 2011/04/16 23:52:37 ryoon Exp $
+$NetBSD: TODO,v 1.10281 2011/04/17 10:32:34 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1109,7 +1109,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qpopper-4.0.14
 	o qrencode-3.1.1
 	o quagga-0.99.18
-	o quvi-0.2.15
 	o qvplay-0.95
 	o radiance-3.7.2
 	o rails-3.0.3
