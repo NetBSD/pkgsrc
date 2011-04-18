@@ -1,0 +1,15 @@
+$NetBSD: patch-bj,v 1.1 2011/04/18 16:19:48 manu Exp $
+Make sure NetBSD pulls proper FUSE header
+--- xlators/mount/fuse/src/fuse-bridge.h.orig	2011-04-13 14:32:26.000000000 +0200
++++ xlators/mount/fuse/src/fuse-bridge.h	2011-04-13 14:32:27.000000000 +0200
+@@ -58,9 +58,9 @@
+ 
+ /* TODO: when supporting posix acl, remove this definition */
+ #define DISABLE_POSIX_ACL
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+ #define FUSE_OP_HIGH (FUSE_POLL + 1)
+ #endif
+ #ifdef GF_DARWIN_HOST_OS
+ #define FUSE_OP_HIGH (FUSE_DESTROY + 1)

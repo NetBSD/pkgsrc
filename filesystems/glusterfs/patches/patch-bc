@@ -1,5 +1,5 @@
-$NetBSD: patch-bc,v 1.1.1.1 2010/08/26 14:26:19 manu Exp $
-
+$NetBSD: patch-bc,v 1.2 2011/04/18 16:19:48 manu Exp $
+                 
 glibc dirname() modify the string it is given and returns it.
 glusterfs takes this behavior for granted, and assume that if it
 gives a malloc'ed string to dirname(), then it can free()) the
@@ -9,13 +9,13 @@ Here is what SUSv2 says:
 http://opengroup.org/onlinepubs/007908799/xsh/dirname.html
 "The dirname() function may modify the string pointed to by path,
 and may return a pointer to static storage"
-
+                 
 At least NetBSD returns a static storage. glusterfs will return it to
 a calling function that has the responsability to free it, causing
 a SIGSEGV.
 
---- ./xlators/performance/quick-read/src/quick-read.c.orig	2010-08-24 18:01:15.000000000 +0200
-+++ ./xlators/performance/quick-read/src/quick-read.c	2010-08-24 18:04:22.000000000 +0200
+--- xlators/performance/quick-read/src/quick-read.c.orig	2011-04-13 10:04:09.000000000 +0200
++++ xlators/performance/quick-read/src/quick-read.c	2011-04-13 10:05:35.000000000 +0200
 @@ -80,8 +80,9 @@
  qr_loc_fill (loc_t *loc, inode_t *inode, char *path)
  {
@@ -23,17 +23,17 @@ a SIGSEGV.
          char    *parent = NULL;
 +        char    *path_copy = NULL;
  
-         if ((loc == NULL) || (inode == NULL) || (path == NULL)) {
+         if ((loc == NULL) || (inode == NULL) || (path == NULL)
+             || (inode->table == NULL)) {
                  ret = -1;
-                 errno = EINVAL;
-@@ -91,15 +92,15 @@
+@@ -92,15 +93,15 @@
          loc->inode = inode_ref (inode);
-         loc->path = strdup (path);
+         loc->path = gf_strdup (path);
          loc->ino = inode->ino;
  
--        parent = strdup (path);
+-        parent = gf_strdup (path);
 -        if (parent == NULL) {
-+        path_copy = strdup (path);
++        path_copy = gf_strdup (path);
 +        if (path_copy == NULL) {
                  ret = -1;
                  goto out;
@@ -51,10 +51,10 @@ a SIGSEGV.
          }
  
 -        if (parent) {
--                FREE (parent);
+-                GF_FREE (parent);
 +        if (path_copy) {
-+                FREE (path_copy);
++                GF_FREE (path_copy);
          }
-         
+ 
          return ret;
  }

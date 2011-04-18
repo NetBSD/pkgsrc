@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+$NetBSD: patch-aa,v 1.2 2011/04/18 16:19:48 manu Exp $
 
 The == operator is a non-standard bash extension. = should be used instead
---- xlators/mount/fuse/utils/mount_glusterfs.in.orig	2010-07-16 11:32:53.000000000 +0200
-+++ xlators/mount/fuse/utils/mount_glusterfs.in	2010-07-16 11:33:04.000000000 +0200
-@@ -166,9 +166,9 @@
+--- xlators/mount/fuse/utils/mount_glusterfs.in.orig	2011-04-13 10:19:20.000000000 +0200
++++ xlators/mount/fuse/utils/mount_glusterfs.in	2011-04-13 10:19:33.000000000 +0200
+@@ -164,9 +164,9 @@
      }
  
      # TODO: use getopt. This is very much darwin specific

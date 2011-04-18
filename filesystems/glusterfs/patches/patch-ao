@@ -1,27 +1,35 @@
-$NetBSD: patch-ao,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+$NetBSD: patch-ao,v 1.2 2011/04/18 16:19:48 manu Exp $
 
 NetBSD uses libperfuse(3). Also enable debugging (-g) for now.
---- configure.orig	2010-08-23 15:32:00.000000000 +0200
-+++ configure	2010-08-23 16:39:44.000000000 +0200
-@@ -13828,8 +13828,21 @@
- 	GF_BOOSTER_SUBDIR=""
+--- configure.orig	2011-04-09 10:09:09.000000000 +0200
++++ configure	2011-04-13 14:40:44.000000000 +0200
+@@ -21732,8 +21732,19 @@
+ 	GF_GLUSTERFS_LDFLAGS="-lnsl -lresolv -lsocket"
          BUILD_FUSE_CLIENT=no
          FUSE_CLIENT_SUBDIR=""
  	;;
 +     *netbsd*)
-+        GF_HOST_OS="GF_BSD_HOST_OS"
-+	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -g"
-+	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS} -g"
++	GF_HOST_OS="GF_BSD_HOST_OS"
++	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS}"
++	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
 +	GF_LDADD="${ARGP_STANDALONE_LDADD}"
 +	if test "x$ac_cv_header_execinfo_h" = "xyes"; then
 +	   GF_GLUSTERFS_LDFLAGS="-lexecinfo"
 +	fi
 +	GF_FUSE_LDADD="-liconv -lperfuse"
-+	BUILD_LIBGLUSTERFSCLIENT=no
-+	LIBGLUSTERFSCLIENT_SUBDIR=""
-+	GF_BOOSTER_SUBDIR=""
++	BUILD_FUSE_CLIENT=no
 +	;;
       *bsd*)
          GF_HOST_OS="GF_BSD_HOST_OS"
- 	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS}"
+ 	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -O0"
  	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
+@@ -22849,8 +22860,9 @@
+ s,@GF_GLUSTERFS_CFLAGS@,$GF_GLUSTERFS_CFLAGS,;t t
+ s,@GF_CFLAGS@,$GF_CFLAGS,;t t
+ s,@GF_LDFLAGS@,$GF_LDFLAGS,;t t
+ s,@GF_LDADD@,$GF_LDADD,;t t
++s,@GF_FUSE_LDADD@,$GF_FUSE_LDADD,;t t
+ s,@GF_FUSE_CFLAGS@,$GF_FUSE_CFLAGS,;t t
+ s,@RLLIBS@,$RLLIBS,;t t
+ s,@CONTRIBDIR@,$CONTRIBDIR,;t t
+ s,@INCLUDES@,$INCLUDES,;t t
