@@ -1,24 +1,25 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+$NetBSD: distinfo,v 1.2 2011/04/18 16:19:47 manu Exp $
 
-SHA1 (glusterfs-3.0.5.tar.gz) = 15ff9777cc23afa61f253bcbea2ebdd7a65ef82a
-RMD160 (glusterfs-3.0.5.tar.gz) = 2316dd43e7d4db98a8a619414cbe3d0546e678b4
-Size (glusterfs-3.0.5.tar.gz) = 1698376 bytes
-SHA1 (patch-aa) = 35e85637d0779d24a7c51cf2084c37d2abf57033
-SHA1 (patch-ab) = d929f88563f503323fb9f29e981cebe0deb6df34
+SHA1 (glusterfs-3.1.4.tar.gz) = 1166063b4a3fa25927b16c88025cc1186c73f420
+RMD160 (glusterfs-3.1.4.tar.gz) = dc7db013790dc2366f574e6e8a4fca6a67078cdc
+Size (glusterfs-3.1.4.tar.gz) = 2173373 bytes
+SHA1 (patch-aa) = b5d19e5ec8a1d9ca9d6e7e5e8e9e251638ac7127
+SHA1 (patch-ab) = c244841380b6f3bc55581a5e18fd3e22b94c9107
 SHA1 (patch-ac) = f130a850238f3e0b1b7f906cc2b37242249ef9f2
-SHA1 (patch-ad) = 18860e03627d679a8a1f05f68b0688c82ddaea57
-SHA1 (patch-ae) = 0ec5cd1f251a016ba4f36093c6bdc5b17112ce06
-SHA1 (patch-af) = 7a19a965768cb923629cc50d4791e9934750078d
-SHA1 (patch-ag) = 8de8f242d6aca13b6a04b1affc6af6376877392d
-SHA1 (patch-an) = d76f131bca8e1f6b2d0cf00fec2f5390222811c0
-SHA1 (patch-ao) = 72198b13482bc0653b473ee98830bb05b44bd330
-SHA1 (patch-aq) = 57a25ef86a14c144553c3357fd69b9ab008f798e
-SHA1 (patch-ar) = 56217f95b689d6872d777fed2350366fdb3c3e66
-SHA1 (patch-as) = 3f303a80389b6ddf91e828836581af04d973c7f7
+SHA1 (patch-ae) = b4b12863b608c7aea043809059c586278b62dffc
+SHA1 (patch-af) = fe4494041804bc91a4985c25829e61abfe85eb87
+SHA1 (patch-ag) = ea16cbe55fbaea0989842fcefb61d35c0a6e8da4
+SHA1 (patch-an) = 0b7f67f3698c170e40f8d5e1cfc743eac1a84a97
+SHA1 (patch-ao) = 3368aa3e531ec128383a0b2c85d17cb8809458b3
+SHA1 (patch-ar) = 1ab07f9db7da9ed1cbf34f8285f1ea9be8f7366e
+SHA1 (patch-as) = b5d309e2678f07eb43e2017f47ba7d978dd74b73
 SHA1 (patch-ax) = 89e42127b49d70cc0071c0ce32641d3cdf59fae9
-SHA1 (patch-ba) = f384e775bd99622790c7bceef22525e2d92a5519
-SHA1 (patch-bb) = 03afe977ab7b80332de4a1014bc7032a37b677ab
-SHA1 (patch-bc) = 2109d45002dea0cc9546135f333c93f5c2c17d19
-SHA1 (patch-bd) = 2a9b7492af964410f156fbe521b35b1d2ec46d84
-SHA1 (patch-be) = a0ff5c2a9f856055328925ac3cf227f7bcfdf3e2
-SHA1 (patch-bf) = 9ea8057d03de080b42da649ea66a892a07df8f6d
+SHA1 (patch-ba) = 23f0753c8f2b523a381cd2499078d13d01524185
+SHA1 (patch-bb) = 3d78df8c77764d2dfc6ba8447fc933918f55b2f2
+SHA1 (patch-bc) = 4bc72a9e5013a03b43f4d1e2ecbb6ed883786cff
+SHA1 (patch-be) = a8f1e059f1f9e6dfd070d647d9709bab01fdd1df
+SHA1 (patch-bf) = b04efbad0242d7258b9c84185f626ce6c9525f99
+SHA1 (patch-bg) = 559edf8b560a5054e2ee9791570b92992be18c56
+SHA1 (patch-bh) = 21a84a74e1ec114569b6fa4636a0f07b5a0bea16
+SHA1 (patch-bj) = ab35e4e3b70cac2fd6b4fe1df89ab5710e14ed59
+SHA1 (patch-bk) = 8c82f5896c2b4a10be496a627d13b9060ed21bc2

@@ -1,12 +1,11 @@
-$NetBSD: patch-bb,v 1.1.1.1 2010/08/26 14:26:19 manu Exp $
+$NetBSD: patch-bb,v 1.2 2011/04/18 16:19:48 manu Exp $
 
 On NetBSD and FreeBSD, O_DIRECTORY does not exists and is defined as 0
 by glusterfs. ((flags & O_DIRECTORY) == O_DIRECTORY) always evaluate
 to true, and this is a bug.
-
---- ./xlators/performance/quick-read/src/quick-read.c.orig	2010-08-24 17:31:30.000000000 +0200
-+++ ./xlators/performance/quick-read/src/quick-read.c	2010-08-24 17:32:13.000000000 +0200
-@@ -642,9 +642,9 @@
+--- ./xlators/performance/quick-read/src/quick-read.c.orig	2011-04-13 10:02:38.000000000 +0200
++++ ./xlators/performance/quick-read/src/quick-read.c	2011-04-13 10:03:23.000000000 +0200
+@@ -637,9 +637,9 @@
                  }
          }
          UNLOCK (&table->lock);

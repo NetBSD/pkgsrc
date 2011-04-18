@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.960 2011/04/17 20:29:50 adam Exp $
+$NetBSD: CHANGES-2011,v 1.961 2011/04/18 16:19:47 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1579,3 +1579,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/youtube-dl to 20110329 [ryoon 2011-04-17]
 	Updated databases/sqlite3 to 3.7.6.2 [adam 2011-04-17]
 	Updated databases/sqlite3-tcl to 3.7.6.2 [adam 2011-04-17]
+	Updated filesystems/glusterfs to 31.4 [manu 2011-04-18]
