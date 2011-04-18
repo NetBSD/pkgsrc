@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.961 2011/04/18 16:19:47 manu Exp $
+$NetBSD: CHANGES-2011,v 1.962 2011/04/18 20:08:12 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1580,3 +1580,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3 to 3.7.6.2 [adam 2011-04-17]
 	Updated databases/sqlite3-tcl to 3.7.6.2 [adam 2011-04-17]
 	Updated filesystems/glusterfs to 31.4 [manu 2011-04-18]
+	Updated devel/orc to 0.4.11nb1 [he 2011-04-18]
