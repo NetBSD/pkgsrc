@@ -1,0 +1,22 @@
+$NetBSD: patch-bb,v 1.1 2011/04/18 17:10:23 drochner Exp $
+
+--- src/IDocument.h.orig	2009-02-28 21:00:35.000000000 +0000
++++ src/IDocument.h
+@@ -306,7 +306,7 @@ namespace ePDFView 
+             const gchar *getFormat (void);
+             void setFormat (gchar *format);
+             const gchar *getLinearized (void);
+-            void setLinearized (gchar *linearized);
++            void setLinearized (gboolean linearized);
+             const gchar *getCreationDate (void);
+             void setCreationDate (gchar *date);
+             const gchar *getModifiedDate (void);
+@@ -382,7 +382,7 @@ namespace ePDFView 
+             /// The document's keyword.
+             gchar *m_Keywords;
+             /// Tells if the document is linearized or not.
+-            gchar *m_Linearized;
++            gboolean m_Linearized;
+             /// The document's modification date and time.
+             gchar *m_ModifiedDate;
+             /// @brief The list of classes that will receive notifications

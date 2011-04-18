@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2011/02/12 14:18:35 drochner Exp $
+$NetBSD: distinfo,v 1.7 2011/04/18 17:10:23 drochner Exp $
 
 SHA1 (epdfview-0.1.7.tar.bz2) = ff46942c285b8e2c28766a38cdfce1a018b4a015
 RMD160 (epdfview-0.1.7.tar.bz2) = 485399d1982a3f8128322ee7e13d46225573bae3
 Size (epdfview-0.1.7.tar.bz2) = 443609 bytes
 SHA1 (patch-aa) = 6c5b2766836cf3610c92feb5fdcc5de0dd75534d
 SHA1 (patch-ab) = 67ab5dd3c5c2d4af5e2aeddc77e4714c9e96b008
-SHA1 (patch-ac) = bca1aa97617ba41a13bd0dfa3c8db44d726e4f9a
+SHA1 (patch-ac) = 64056116653246b5ae89af7247dfd790d4aab724
+SHA1 (patch-ba) = 92644aa2aa9012e2e97ee8e13f2964eb7cf96703
+SHA1 (patch-bb) = cf24cafa8460100a9ba6dd1d06d7205d10d28d3f
