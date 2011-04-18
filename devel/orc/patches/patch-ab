@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.4 2011/04/18 20:07:31 he Exp $
+
+Fix this so that NetBSD is also probed for altivec on powerpc
+(and so that this builds).
+
+--- orc/orccpu-powerpc.c.orig	2010-07-09 23:56:52.000000000 +0000
++++ orc/orccpu-powerpc.c
+@@ -45,7 +45,7 @@
+ 
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+ #include <sys/types.h>
+ #include <sys/sysctl.h>
+ #endif
+@@ -76,9 +76,11 @@ test_altivec (void * ignored)
+ }
+ #endif
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__)
+ #if defined(__APPLE__)
+ #define SYSCTL "hw.vectorunit"
++#elif defined(__NetBSD__)
++#define SYSCTL "machdep.altivec"
+ #else
+ #define SYSCTL "hw.altivec"
+ #endif
+@@ -174,7 +176,7 @@ out:
+ }
+ #endif
+ 
+-#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__OpenBSD__) && !defined(__APPLE__) && !defined(__linux__)
++#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__OpenBSD__) && !defined(__APPLE__) && !defined(__linux__) && !defined(__NetBSD__)
+ static void
+ orc_check_altivec_fault (void)
+ {
+@@ -190,7 +192,7 @@ orc_check_altivec_fault (void)
+ void
+ orc_cpu_detect_arch(void)
+ {
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__APPLE__) || defined(__NetBSD__)
+   orc_check_altivec_sysctl_bsd();
+ #elif defined(__OpenBSD__)
+   orc_check_altivec_sysctl_openbsd();
