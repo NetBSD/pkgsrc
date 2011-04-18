@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/08/26 14:26:18 manu Exp $
+$NetBSD: patch-ae,v 1.2 2011/04/18 16:19:48 manu Exp $
 
 On NetBSD use libperfuse(3), rename umount2(2) as unmount(2), and skip
-inexistant /etc/mtab management. 
---- contrib/fuse-lib/mount.c.orig	2010-08-23 09:56:52.000000000 +0200
-+++ contrib/fuse-lib/mount.c	2010-08-23 10:29:03.000000000 +0200
+inexistant /etc/mtab management.
+--- contrib/fuse-lib/mount.c.orig	2011-04-09 10:09:02.000000000 +0200
++++ contrib/fuse-lib/mount.c	2011-04-13 14:36:53.000000000 +0200
 @@ -19,16 +19,23 @@
  #include <limits.h>
  #include <fcntl.h>
@@ -11,7 +11,7 @@ inexistant /etc/mtab management.
  #include <dirent.h>
 +#ifndef __NetBSD__
  #include <mntent.h>
-+#endif
++#endif /* __NetBSD__ */
  #include <sys/stat.h>
  #include <sys/poll.h>
  #include <sys/socket.h>
@@ -45,7 +45,7 @@ inexistant /etc/mtab management.
  }
 +#else /* __NetBSD__ */
 +#define mtab_needs_update(x) 1
-+#endif 
++#endif /* __NetBSD__ */
  
  #ifndef FUSE_UTIL
  static
