@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.104 2010/12/23 11:45:04 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.105 2011/04/18 11:50:47 obache Exp $
 #
+# used by x11/xscreensaver/Makefile
+# used by x11/xscreensaver-demo/Makefile
 
 # When updating the package,
 # please check kdeartwork3 -- it installs some extra
