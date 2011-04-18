@@ -1,0 +1,50 @@
+$NetBSD: patch-ba,v 1.1 2011/04/18 17:10:23 drochner Exp $
+
+--- src/IDocument.cxx.orig	2009-02-28 21:00:35.000000000 +0000
++++ src/IDocument.cxx
+@@ -135,7 +135,7 @@ IDocument::IDocument ()
+     m_FindPage = 0;
+     m_Format = NULL;
+     m_Keywords = NULL;
+-    m_Linearized = NULL;
++    m_Linearized = 0;
+     m_ModifiedDate = NULL;
+     m_PageCache = NULL;
+     m_PageCacheAge = 0;
+@@ -164,7 +164,6 @@ IDocument::~IDocument ()
+     g_free (m_FileName);
+     g_free (m_Format);
+     g_free (m_Keywords);
+-    g_free (m_Linearized);
+     g_free (m_ModifiedDate);
+     g_free (m_Password);
+     g_free (m_Producer);
+@@ -755,11 +754,11 @@ IDocument::setFormat (gchar *format)
+ const gchar *
+ IDocument::getLinearized ()
+ {
+-    if ( NULL == m_Linearized )
++    if ( !m_Linearized )
+     {
+         return "No";
+     }
+-    return m_Linearized;
++    return "Yes";
+ }
+ 
+ ///
+@@ -769,12 +768,9 @@ IDocument::getLinearized ()
+ ///                   otherwise. IDocument will free it.
+ ///
+ void
+-IDocument::setLinearized (gchar *linearized)
++IDocument::setLinearized (gboolean linearized)
+ {
+-    gchar *oldLinearized = m_Linearized;
+-    m_Linearized = g_strdup (linearized);
+-    g_free (oldLinearized);
+-    g_free (linearized);
++    m_Linearized = linearized;
+ }
+ 
+ ///
