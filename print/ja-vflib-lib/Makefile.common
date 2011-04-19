@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.10 2010/11/23 06:37:01 obache Exp $
+# $NetBSD: Makefile.common,v 1.11 2011/04/19 11:30:50 obache Exp $
+#
+# used by print/ja-vflib-lib
+# used by print/ja-vflib-utils
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
 CATEGORIES+=		japanese print
