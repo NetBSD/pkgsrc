@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2011/04/14 10:31:18 adam Exp $
+# $NetBSD: Makefile,v 1.54 2011/04/19 06:32:47 roy Exp $
 
 DISTNAME=	docbook-xsl-1.76.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +22,8 @@ REPLACE_PERL+=	fo/pdf2index
 
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
 XSLDIR=		${PREFIX}/share/xsl/docbook
-XSLMODS=	common eclipse epub fo highlighting html \
+# epub requires ruby, so we don't install the XSLMOD
+XSLMODS=	common eclipse fo highlighting html \
 		htmlhelp images javahelp lib manpages params \
 		profiling roundtrip slides website xhtml xhtml-1_1
 
