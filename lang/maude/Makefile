@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/05/19 11:55:43 asau Exp $
+# $NetBSD: Makefile,v 1.24 2011/04/19 19:18:40 asau Exp $
 #
 
-DISTNAME=	Maude-2.4
-PKGNAME=	maude-2.4
-#PKGREVISION=	1
+DISTNAME=	Maude-2.6
+PKGNAME=	maude-2.6
 CATEGORIES=	lang
 MASTER_SITES=	http://maude.cs.uiuc.edu/download/ \
 		http://maude.cs.uiuc.edu/download/current/
@@ -16,15 +15,15 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=$(PREFIX)/share/$(PKGBASE)
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex bison
-AUTO_MKDIRS=		yes
+TEST_TARGET=	check
 
 post-install:
-	cd ${WRKSRC}/src/Main && ${INSTALL_DATA} *.maude \
-		${DESTDIR}${PREFIX}/share/maude
+	cd $(WRKSRC)/src/Main && $(INSTALL_DATA) *.maude \
+		$(DESTDIR)$(PREFIX)/share/$(PKGBASE)
 
 .include "../../devel/buddy/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
