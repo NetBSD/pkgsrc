@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2011/04/19 19:45:02 asau Exp $
 
-DISTNAME=	cdl3-1.2.7
+DISTNAME=	cdl3-1.2.8
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.ru.nl/pub/cdl3/
 
