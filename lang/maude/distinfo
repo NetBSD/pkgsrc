@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2010/05/19 11:55:43 asau Exp $
+$NetBSD: distinfo,v 1.9 2011/04/19 19:18:40 asau Exp $
 
-SHA1 (Maude-2.4.tar.gz) = fe6c11a9ba370175eb477aad4042f2f0ef8cce7e
-RMD160 (Maude-2.4.tar.gz) = dae6357386cb4f4a683fd23aa32580f29a013f82
-Size (Maude-2.4.tar.gz) = 1528771 bytes
+SHA1 (Maude-2.6.tar.gz) = 3f1ec2f39a22942bb096102d1d8d6eed4510483e
+RMD160 (Maude-2.6.tar.gz) = a9387701016e04ba4a256c3db8c9f10195147183
+Size (Maude-2.6.tar.gz) = 1600026 bytes
 SHA1 (patch-ab) = ff1caa60e4b57dd6a847e28d25efa9be8474f15a
 SHA1 (patch-ac) = d77e8e817cb33c2594eacfa0cb44b20b63e71b8f
