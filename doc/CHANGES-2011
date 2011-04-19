@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.966 2011/04/19 19:18:57 asau Exp $
+$NetBSD: CHANGES-2011,v 1.967 2011/04/19 19:45:17 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1585,3 +1585,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/dbtoepub to 1.76.1 [roy 2011-04-19]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.2.159.1 [chs 2011-04-19]
 	Updated lang/maude to 2.6 [asau 2011-04-19]
+	Updated lang/cdl3 to 1.2.8 [asau 2011-04-19]
