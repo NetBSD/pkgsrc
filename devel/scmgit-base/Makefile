@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/04/19 10:58:57 roy Exp $
+# $NetBSD: Makefile,v 1.31 2011/04/19 17:08:18 drochner Exp $
 
 .include "../../devel/scmgit/Makefile.common"
 
@@ -29,8 +29,6 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 BUILD_TARGET=		all
-
-REPLACE_PYTHON+=	*/*.py */*/*.py
 
 REPLACE_SH+=		contrib/hooks/post-receive-email
 REPLACE_SH+=		contrib/hooks/pre-auto-gc-battery
@@ -92,7 +90,6 @@ SUBST_SED.fix-cd-P=	-e "s/cd -P/cd/g"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../lang/python/application.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
