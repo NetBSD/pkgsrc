@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2011/04/14 10:31:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2011/04/19 06:32:48 roy Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
@@ -105,11 +105,6 @@ share/xsl/docbook/common/zh_tw.xml
 share/xsl/docbook/eclipse/eclipse.xsl
 share/xsl/docbook/eclipse/eclipse3.xsl
 share/xsl/docbook/eclipse/profile-eclipse.xsl
-share/xsl/docbook/epub/README
-share/xsl/docbook/epub/bin/dbtoepub
-share/xsl/docbook/epub/bin/lib/docbook.rb
-share/xsl/docbook/epub/bin/xslt/obfuscate.xsl
-share/xsl/docbook/epub/docbook.xsl
 share/xsl/docbook/fo/admon.xsl
 share/xsl/docbook/fo/annotations.xsl
 share/xsl/docbook/fo/autoidx-kimber.xsl
