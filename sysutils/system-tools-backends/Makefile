@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 16:35:50 seb Exp $
+# $NetBSD: Makefile,v 1.7 2011/04/19 16:10:16 roy Exp $
 #
 
 DISTNAME=		system-tools-backends-2.6.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://system-tools-backends.freedesktop.org/downloads/2.6/
 
@@ -44,6 +44,9 @@ DEPENDS+=	p5-XML-Twig>=3.32:../../textproc/p5-XML-Twig
 DEPENDS+=	p5-Net-DBus>=0.33.6:../../net/p5-Net-DBus
 DEPENDS+=	p5-libwww>=5.820:../../www/p5-libwww
 DEPENDS+=	p5-URI>=1.37:../../www/p5-URI
+
+REPLACE_PERL+=	SystemToolsBackends.pl.in
+REPLACE_PERL+=	Utils/*.pm
 
 SUBST_CLASSES+= 		gettext-package
 SUBST_STAGE.gettext-package=	post-configure
