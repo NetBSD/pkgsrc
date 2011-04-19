@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2011/04/19 13:29:47 roy Exp $
+# $NetBSD: Makefile,v 1.25 2011/04/19 13:30:12 roy Exp $
 #
 
 DISTNAME=		tomboy-1.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		editors misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/tomboy/1.2/}
 
