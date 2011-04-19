@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/03/18 15:12:37 obache Exp $
+$NetBSD: distinfo,v 1.5 2011/04/19 19:45:02 asau Exp $
 
-SHA1 (cdl3-1.2.7.tar.gz) = 78d87904229a04fe52704469c8912bfa30b19198
-RMD160 (cdl3-1.2.7.tar.gz) = b71e39bb984864ece08d8bfbf360bf405093bf29
-Size (cdl3-1.2.7.tar.gz) = 980452 bytes
+SHA1 (cdl3-1.2.8.tar.gz) = b657ec9f838d2055d6425e4aa7166b0bbebcbfa3
+RMD160 (cdl3-1.2.8.tar.gz) = 89d9d16677b1359cffd7686aaf85bea32c903553
+Size (cdl3-1.2.8.tar.gz) = 1013179 bytes
