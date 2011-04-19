@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.8 2010/12/23 11:45:02 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/04/19 11:47:12 obache Exp $
 #
+# used by x11/wxGTK24/Makefile
 
 DISTNAME=		wxGTK-2.4.2
 PKGNAME=		${DISTNAME:S/wxGTK/wxGTK24/}
