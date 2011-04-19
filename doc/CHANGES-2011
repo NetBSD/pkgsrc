@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.962 2011/04/18 20:08:12 he Exp $
+$NetBSD: CHANGES-2011,v 1.963 2011/04/19 07:57:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3-tcl to 3.7.6.2 [adam 2011-04-17]
 	Updated filesystems/glusterfs to 31.4 [manu 2011-04-18]
 	Updated devel/orc to 0.4.11nb1 [he 2011-04-18]
+	Updated www/ruby-httpclient to 2.2.0.1 [obache 2011-04-19]
