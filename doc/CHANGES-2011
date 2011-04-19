@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.963 2011/04/19 07:57:19 obache Exp $
+$NetBSD: CHANGES-2011,v 1.964 2011/04/19 10:06:05 roy Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1582,3 +1582,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/glusterfs to 31.4 [manu 2011-04-18]
 	Updated devel/orc to 0.4.11nb1 [he 2011-04-18]
 	Updated www/ruby-httpclient to 2.2.0.1 [obache 2011-04-19]
+	Updated textproc/dbtoepub to 1.76.1 [roy 2011-04-19]
