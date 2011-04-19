@@ -1,9 +1,13 @@
-# $NetBSD: check-interpreter.mk,v 1.25 2011/01/11 12:03:18 obache Exp $
+# $NetBSD: check-interpreter.mk,v 1.26 2011/04/19 14:28:28 roy Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
 # have a "#!" line with a non-existent interpreter will generate an
 # error message if they are executable, and a warning message otherwise.
+#
+# Files are not allowed to use /bin/env or /usr/bin/env as an interpreter
+# due the use dynamic paths and package developers not checking that they work.
+# A classic example is: #!/usr/bin/env python
 #
 # User-settable variables:
 #
@@ -62,7 +66,8 @@ _check-interpreter: error-check .PHONY
 			continue;					\
 		};							\
 		case "$$interp" in					\
-		"") continue;						\
+		"") continue;;						\
+		/bin/env|/usr/bin/env) ${DELAYED_ERROR_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"${DESTDIR}${PREFIX}/$$file\" is not allowed.";; \
 		esac;							\
 									\
 		if { [ ! -f ${DESTDIR:Q}"$$interp" ] &&			\
