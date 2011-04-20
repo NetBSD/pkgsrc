@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2011/04/20 18:44:57 hans Exp $
+
+--- modules/pari/Makefile.in.orig	2010-05-21 22:53:02.000000000 +0200
++++ modules/pari/Makefile.in	2011-04-20 20:39:48.106302044 +0200
+@@ -5,6 +5,7 @@ CC = @CC@
+ PARICPPFLAGS = @CPPFLAGS@
+ CFLAGS = @CFLAGS@
+ CLISP = @CLISP@ -norc -q
++CLISP_CFLAGS = @CLISP_CFLAGS@
+ CLISP_LINKKIT = @CLISP_LINKKIT@
+ 
+ LN = @LN@
+@@ -14,7 +15,7 @@ MAKE = make
+ 
+ SHELL = /bin/sh
+ 
+-ALL_CFLAGS = $(CPPFLAGS) $(PARICPPFLAGS) $(CFLAGS) -I$(CLISP_LINKKIT) \
++ALL_CFLAGS = $(CPPFLAGS) $(PARICPPFLAGS) $(CFLAGS) $(CLISP_CFLAGS) -I$(CLISP_LINKKIT) \
+   -I$(srcdir) # for cpari.h
+ 
+ GENERATED = pari.o cpari.o pari.fas preload.lisp
