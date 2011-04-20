@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2011/04/20 18:40:44 hans Exp $
+bin/clx
+lib/clisp/clx/mit-clx/clx.mem
