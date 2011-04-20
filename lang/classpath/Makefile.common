@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2009/05/18 13:15:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2011/04/20 12:06:02 obache Exp $
+#
+# used by lang/classpath/Makefile
+# used by lang/classpath-gui/Makefile
 
 DISTNAME=		classpath-0.93
 CATEGORIES=		devel
