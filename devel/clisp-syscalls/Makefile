@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/17 09:35:58 asau Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/20 18:57:22 hans Exp $
 #
 
 CLISP_MODULE=	syscalls
@@ -16,4 +16,7 @@ MAKE_JOBS_SAFE=	no
 
 .include "../../lang/clisp/module.mk"
 
+post-patch:
+	(cd ${WRKSRC} && ${CP} -p src/gllib/mbrtowc.c modules/syscalls/gllib)
+	
 .include "../../mk/bsd.pkg.mk"
