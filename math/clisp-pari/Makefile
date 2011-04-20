@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/04/20 18:44:56 hans Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/20 22:23:57 hans Exp $
 #
 
 CLISP_MODULE=	pari
@@ -21,6 +21,6 @@ ac_cv_libpari_libs=     -l${PARI_LIB}
 ac_cv_libpari_libs+=    -lgmp
 .endif
 
-CONFIGURE_ENV+=	"ac_cv_libpari_libs=${ac_cv_libpari_libs}"
+CONFIGURE_ENV+=	"ac_cv_libpari_libs=${ac_cv_libpari_libs} -R${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"
