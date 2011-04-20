@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1 2011/04/20 18:50:02 hans Exp $
+
+--- modules/wildcard/Makefile.in.orig	2010-03-24 20:46:07.000000000 +0100
++++ modules/wildcard/Makefile.in	2011-04-20 19:19:44.692300084 +0200
+@@ -5,6 +5,7 @@ CC = @CC@
+ CPPFLAGS = @CPPFLAGS@
+ CFLAGS = @CFLAGS@
+ CLISP = @CLISP@ -norc -q
++CLISP_CFLAGS = @CLISP_CFLAGS@
+ CLISP_LIBDIR = @CLISP_LIBDIR@
+ CLISP_LINKKIT = @CLISP_LINKKIT@
+ 
+@@ -28,7 +29,7 @@ wildcard.c wildcard.fas : $(srcdir)/wild
+ 	$(CLISP) -c $(srcdir)/wildcard.lisp -o ./
+ 
+ wildcard.o : wildcard.c config.h gllib
+-	$(CC) $(CPPFLAGS) $(CFLAGS) -I$(CLISP_LINKKIT) \
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(CLISP_CFLAGS) -I$(CLISP_LINKKIT) \
+ 		-Igllib -I$(srcdir)/gllib -c wildcard.c
+ 
+ am--refresh :
+@@ -39,9 +40,9 @@ gllib libgnu_wc.a : force
+ 	mkdir -p gllib
+ 	test -f gllib/Makefile || sh config.status gllib/Makefile depfiles
+ 	cd gllib; \
+-	  $(MAKE) srcdir="$(srcdir)/gllib" \
++	  $(MAKE) \
+ 		ACLOCAL_M4="$(srcdir)/gllib/Makefile.am" \
+-		CFLAGS="$(CFLAGS) -I$(CLISP_LIBDIR)"; \
++		CFLAGS="$(CFLAGS) $(CLISP_CFLAGS) -I$(CLISP_LIBDIR)"; \
+ 	  $(LN) libgnu.a ../libgnu_wc.a
+ 
+ # Make a module distribution into $(distribdir)

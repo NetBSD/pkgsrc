@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.8 2011/04/20 18:44:56 hans Exp $
+# $NetBSD: options.mk,v 1.9 2011/04/20 18:50:00 hans Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
 # this option is essential for some others to work:
 PKG_SUPPORTED_OPTIONS+=		ffcall
 
-PKG_SUPPORTED_OPTIONS+=		wildcard
 PKG_SUPPORTED_OPTIONS+=		readline
 
 PKG_SUPPORTED_OPTIONS+=		gmalloc
@@ -39,10 +38,6 @@ CONFIGURE_ARGS+=	--with-dynamic-ffi
 .  include "../../devel/ffcall/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mwildcard)
-CONFIGURE_ARGS+=	--with-module=wildcard
-.endif
-
 .if !empty(PKG_OPTIONS:Mreadline)
 USE_GNU_READLINE=	YES
 CONFIGURE_ARGS+=	--with-readline
@@ -51,6 +46,10 @@ CONFIGURE_ARGS+=	--with-readline
 
 
 # Options for those who wishes to build "static" CLISP:
+
+#.if !empty(PKG_OPTIONS:Mwildcard)
+#CONFIGURE_ARGS+=	--with-module=wildcard
+#.endif
 
 #.if !empty(PKG_OPTIONS:Mpari)
 #CONFIGURE_ARGS+=	--with-module=pari
