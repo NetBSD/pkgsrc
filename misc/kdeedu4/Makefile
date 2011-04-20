@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/01/23 07:55:13 markd Exp $
+# $NetBSD: Makefile,v 1.17 2011/04/20 09:03:18 roy Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
+REVISION=	1
 CATEGORIES=	misc
 COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 
@@ -20,6 +21,8 @@ CMAKE_ARGS+=	-DBUILD_step:BOOL=OFF
 USE_GNU_READLINE=	yes
 BROKEN_READLINE_DETECTION=	yes
 
+REPLACE_PYTHON+=	kig/pykig/pykig.py
+
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 #.include "../../lang/python/application.mk"
@@ -28,6 +31,7 @@ BROKEN_READLINE_DETECTION=	yes
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 #BUILDLINK_API_DEPENDS.eigen2+=	eigen2>=2.0.3
 #.include "../../math/eigen2/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
