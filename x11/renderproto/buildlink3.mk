@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2010/12/22 23:41:30 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2011/04/20 10:00:01 hauke Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -9,7 +9,9 @@ RENDERPROTO_BUILDLINK3_MK:=
 
 .if ${X11_TYPE} == "native"
 . include "../../mk/x11.buildlink3.mk"
-. if ${BUILTIN_X11_TYPE.native} == "XFree86"
+. if ${BUILTIN_X11_TYPE.native} == "XFree86" || \
+     ${BUILTIN_X11_TYPE.native} == "xorg" && \
+     empty(BUILTIN_X11_VERSION.xorg)
 RENDERPROTO_RENDERPROTO9=1
 . endif
 .endif
@@ -17,6 +19,7 @@ RENDERPROTO_RENDERPROTO9=1
 .if defined(RENDERPROTO_RENDERPROTO9)
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.9.3nb1
 BUILDLINK_PKGSRCDIR.renderproto?=	../../x11/renderproto9
+BUILDLINK_BUILTIN_MK.renderproto=	../../x11/renderproto/builtin.mk
 .else
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.9.3nb1
 BUILDLINK_PKGSRCDIR.renderproto?=	../../x11/renderproto
