@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.970 2011/04/20 19:13:13 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.971 2011/04/20 20:47:05 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1589,3 +1589,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/wireshark to 1.4.6 [tron 2011-04-19]
 	Updated net/unbound to 1.4.9 [pettai 2011-04-20]
 	Updated print/tex-texlive-en-doc to 2010.21569 [minskim 2011-04-20]
+	Updated lang/sbcl to 1.0.47 [asau 2011-04-20]
