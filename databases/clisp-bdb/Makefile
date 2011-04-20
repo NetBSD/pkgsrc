@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/04/20 18:31:36 hans Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/20 22:12:50 hans Exp $
 #
 
 CLISP_MODULE=	berkeley-db
@@ -11,10 +11,15 @@ MAINTAINER=	hans@netbsd.org
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP Berkeley DB module
 
+SUBST_CLASSES+=			db4-libname
+SUBST_STAGE.db4-libname=	pre-configure
+SUBST_FILES.db4-libname=	modules/berkeley-db/configure
+SUBST_SED.db4-libname=		-e "/names_next_round='db '/s/db/db4/"
+
+
 MAKE_JOBS_SAFE=	no
 
 .include "../../lang/clisp/module.mk"
 
-BUILDLINK_TRANSFORM+=   l:db:db4
 .include "../../databases/db4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
