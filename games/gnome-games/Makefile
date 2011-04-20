@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2011/01/13 13:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2011/04/20 07:17:46 roy Exp $
 
 DISTNAME=		gnome-games-2.32.1
 PKGREVISION=		1
@@ -49,6 +49,12 @@ GCONF_SCHEMAS+=	gnome-sudoku.schemas
 PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess.in.in
 PYTHON_PATCH_SCRIPTS+=	gnome-sudoku/src/gnome-sudoku.in.in
 PY_PATCHPLIST=		yes
+
+#!/usr/bin/env sh is pretty dumb and REPLACE_SH doesn't support fixing it
+SUBST_CLASSES+=		swell
+SUBST_STAGE.swell=	post-patch
+SUBST_FILES.swell=	swell-foop/swell-foop.in
+SUBST_SED.swell=	's:/usr/bin/env sh:${SH}:'
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
