@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2011/04/20 18:44:57 hans Exp $
+
+Override ac_install_sh.
+
+--- modules/pari/configure.orig	2010-06-24 22:09:41.000000000 +0400
++++ modules/pari/configure	2010-07-09 15:07:41.000000000 +0400
+@@ -2295,19 +2295,6 @@
+ $as_echo "$cl_cv_clisp_FFI" >&6; }
+ ${required} && test $cl_cv_clisp_FFI = no && \
+ as_fn_error "no FFI in CLISP" "$LINENO" 5
+-ac_aux_dir=
+-for ac_dir in $cl_cv_clisp_libdir/build-aux "$srcdir"/$cl_cv_clisp_libdir/build-aux; do
+-  for ac_t in install-sh install.sh shtool; do
+-    if test -f "$ac_dir/$ac_t"; then
+-      ac_aux_dir=$ac_dir
+-      ac_install_sh="$ac_aux_dir/$ac_t -c"
+-      break 2
+-    fi
+-  done
+-done
+-if test -z "$ac_aux_dir"; then
+-  as_fn_error "cannot find install-sh, install.sh, or shtool in $cl_cv_clisp_libdir/build-aux \"$srcdir\"/$cl_cv_clisp_libdir/build-aux" "$LINENO" 5
+-fi
+ 
+ # These three variables are undocumented and unsupported,
+ # and are intended to be withdrawn in a future Autoconf release.
