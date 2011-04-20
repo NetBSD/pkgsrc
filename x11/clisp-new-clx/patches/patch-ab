@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2011/04/20 18:36:17 hans Exp $
+
+--- modules/clx/new-clx/Makefile.in.orig	2010-03-24 20:44:56.000000000 +0100
++++ modules/clx/new-clx/Makefile.in	2011-04-20 16:54:04.545746107 +0200
+@@ -3,7 +3,7 @@
+ srcdir = @srcdir@
+ CC = @CC@
+ CPPFLAGS = @CPPFLAGS@
+-CFLAGS = -O
++CFLAGS = @CLISP_CFLAGS@
+ CLISP = @CLISP@ -norc -q
+ CLISP_LINKKIT = @CLISP_LINKKIT@
+ LN = @LN@
