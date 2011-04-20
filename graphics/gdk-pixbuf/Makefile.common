@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.47 2010/12/23 11:44:37 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.48 2011/04/20 12:12:48 obache Exp $
+#
+# used by graphics/gdk-pixbuf/Makefile
 
 DISTNAME=		gdk-pixbuf-${VER}.0
 CATEGORIES=		graphics devel
