@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2010/07/09 18:08:05 asau Exp $
+# $NetBSD: options.mk,v 1.5 2011/04/20 18:31:35 hans Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
 # this option is essential for some others to work:
 PKG_SUPPORTED_OPTIONS+=		ffcall
 
-PKG_SUPPORTED_OPTIONS+=		bdb pari wildcard
+PKG_SUPPORTED_OPTIONS+=		pari wildcard
 PKG_SUPPORTED_OPTIONS+=		readline
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	x11-bindings
@@ -42,13 +42,6 @@ CONFIGURE_ARGS+=	--with-dynamic-ffi
 .  include "../../devel/ffcall/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mbdb)
-# it requires version 4, not anything older
-CONFIGURE_ARGS+=	--with-module=berkeley-db
-BUILDLINK_TRANSFORM+=	l:db:db46
-.  include "../../databases/db46/buildlink3.mk"
-.endif
-
 .if !empty(PKG_OPTIONS:Mpari)
 CONFIGURE_ARGS+=	--with-module=pari
 .  include "../../math/pari/buildlink3.mk"
@@ -78,6 +71,13 @@ CONFIGURE_ARGS+=	--with-readline
 
 
 # Options for those who wishes to build "static" CLISP:
+
+#.if !empty(PKG_OPTIONS:Mbdb)
+# it requires version 4, not anything older
+#CONFIGURE_ARGS+=	--with-module=berkeley-db
+#BUILDLINK_TRANSFORM+=	l:db:db46
+#.  include "../../databases/db46/buildlink3.mk"
+#.endif
 
 # .if !empty(PKG_OPTIONS:Mpgsql)
 # CONFIGURE_ARGS+=       --with-module=postgresql

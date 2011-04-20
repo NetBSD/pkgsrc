@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2011/04/20 18:31:36 hans Exp $
+
+--- modules/berkeley-db/Makefile.in.orig	2010-03-24 20:44:56.000000000 +0100
++++ modules/berkeley-db/Makefile.in	2011-04-20 16:21:26.184581749 +0200
+@@ -3,7 +3,7 @@
+ srcdir = @srcdir@
+ CC = @CC@
+ DBCPPFLAGS = @CPPFLAGS@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CLISP_CFLAGS@
+ CLISP = @CLISP@ -norc -q
+ CLISP_LINKKIT = @CLISP_LINKKIT@
+ 

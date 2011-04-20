@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.367 2011/03/10 22:00:23 wiz Exp $
+# $NetBSD: Makefile,v 1.368 2011/04/20 18:31:36 hans Exp $
 #
 
 COMMENT=	Databases
@@ -8,6 +8,7 @@ SUBDIR+=	adodb
 SUBDIR+=	apache-cassandra
 SUBDIR+=	bdb-xml
 SUBDIR+=	cdb
+SUBDIR+=	clisp-bdb
 SUBDIR+=	clisp-gdbm
 SUBDIR+=	clisp-pgsql
 SUBDIR+=	couchdb
