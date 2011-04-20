@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2011/04/20 18:31:35 hans Exp $
+# $NetBSD: options.mk,v 1.6 2011/04/20 18:36:16 hans Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=		pari wildcard
 PKG_SUPPORTED_OPTIONS+=		readline
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	x11-bindings
-PKG_OPTIONS_GROUP.x11-bindings=	mit-clx new-clx
+PKG_OPTIONS_GROUP.x11-bindings=	mit-clx
 
 PKG_SUPPORTED_OPTIONS+=		gmalloc
 
@@ -47,12 +47,6 @@ CONFIGURE_ARGS+=	--with-module=pari
 .  include "../../math/pari/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mnew-clx)
-CONFIGURE_ARGS+=	--with-module=clx/new-clx
-.  include "../../x11/libX11/buildlink3.mk"
-.  include "../../x11/libXau/buildlink3.mk"
-.endif
-
 .if !empty(PKG_OPTIONS:Mmit-clx)
 CONFIGURE_ARGS+=	--with-module=clx/mit-clx
 .  include "../../x11/libX11/buildlink3.mk"
@@ -71,6 +65,12 @@ CONFIGURE_ARGS+=	--with-readline
 
 
 # Options for those who wishes to build "static" CLISP:
+
+#.if !empty(PKG_OPTIONS:Mnew-clx)
+#CONFIGURE_ARGS+=	--with-module=clx/new-clx
+#.  include "../../x11/libX11/buildlink3.mk"
+#.  include "../../x11/libXau/buildlink3.mk"
+#.endif
 
 #.if !empty(PKG_OPTIONS:Mbdb)
 # it requires version 4, not anything older
