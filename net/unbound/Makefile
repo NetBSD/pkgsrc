@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.13 2011/03/21 15:04:32 pettai Exp $
+# $NetBSD: Makefile,v 1.14 2011/04/20 10:44:46 pettai Exp $
 
-DISTNAME=	unbound-1.4.8
+DISTNAME=	unbound-1.4.9
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.unbound.net/
 COMMENT=	DNS resolver and recursive server
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEFS+=	VARBASE
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -40,6 +43,8 @@ UNBOUND_GROUP?=	unbound
 
 PKG_GROUPS=	${UNBOUND_GROUP}
 PKG_USERS=	${UNBOUND_USER}:${UNBOUND_GROUP}
+
+.include "options.mk"
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
