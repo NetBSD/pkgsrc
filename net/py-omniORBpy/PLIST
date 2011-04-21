@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 15:08:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/21 16:35:27 drochner Exp $
 include/omniORB4/pydistdate.hh
 include/omniORBpy.h
 ${PYSITELIB}/CORBA.py
@@ -17,13 +17,13 @@ ${PYSITELIB}/__init__.py
 ${PYSITELIB}/__init__.pyc
 ${PYSITELIB}/_omniConnMgmtmodule.so
 ${PYSITELIB}/_omniConnMgmtmodule.so.3
-${PYSITELIB}/_omniConnMgmtmodule.so.3.4
+${PYSITELIB}/_omniConnMgmtmodule.so.3.5
 ${PYSITELIB}/_omnicodesetsmodule.so
 ${PYSITELIB}/_omnicodesetsmodule.so.3
-${PYSITELIB}/_omnicodesetsmodule.so.3.4
+${PYSITELIB}/_omnicodesetsmodule.so.3.5
 ${PYSITELIB}/_omnipymodule.so
 ${PYSITELIB}/_omnipymodule.so.3
-${PYSITELIB}/_omnipymodule.so.3.4
+${PYSITELIB}/_omnipymodule.so.3.5
 ${PYSITELIB}/omniORB.pth
 ${PYSITELIB}/omniORB/BiDirPolicy.py
 ${PYSITELIB}/omniORB/BiDirPolicy.pyc
