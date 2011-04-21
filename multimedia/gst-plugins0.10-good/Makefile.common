@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.32 2011/03/11 15:28:14 drochner Exp $
+# $NetBSD: Makefile.common,v 1.33 2011/04/21 13:50:29 obache Exp $
 #
 # used by audio/gst-plugins0.10-esound/Makefile
 # used by audio/gst-plugins0.10-flac/Makefile
+# used by audio/gst-plugins0.10-jack/Makefile
 # used by audio/gst-plugins0.10-oss/Makefile
 # used by audio/gst-plugins0.10-pulse/Makefile
 # used by audio/gst-plugins0.10-speex/Makefile
@@ -9,6 +10,7 @@
 # used by graphics/gst-plugins0.10-cairo/Makefile
 # used by graphics/gst-plugins0.10-jpeg/Makefile
 # used by graphics/gst-plugins0.10-png/Makefile
+# used by multimedia/gst-plugins0.10-hal/Makefile
 # used by multimedia/gst-plugins0.10-v4l2/Makefile
 # used by net/gst-plugins0.10-soup/Makefile
 
