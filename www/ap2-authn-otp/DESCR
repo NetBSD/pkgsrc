@@ -1,0 +1,5 @@
+mod_authn_otp is an Apache web server module for two-factor authentication
+using one-time passwords (OTP) generated via the HOTP/OATH algorithm
+defined in RFC 4226. This creates a simple way to protect a web site with
+one-time passwords, using any RFC 4226-compliant hardware or software
+token device. mod_authn_otp also supports the Mobile-OTP algorithm.
