@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/04/04 12:09:02 wiz Exp $
+$NetBSD: distinfo,v 1.5 2011/04/21 20:43:02 wiz Exp $
 
 SHA1 (mame0142s.zip) = 6d70b7a2a15abfdb7955772844ac4c6eae50ced4
 RMD160 (mame0142s.zip) = 20b7fc0af868521462e8081021acbfbe98bea16d
@@ -7,7 +7,5 @@ SHA1 (mess0142s.zip) = 6682f1cad54b9db4eae164046c09e79d69c44b57
 RMD160 (mess0142s.zip) = e6fb3409892548632be8f2d95c71d1f148e6ad6e
 Size (mess0142s.zip) = 40778589 bytes
 SHA1 (patch-makefile) = 7117269c9818a1bf018c7d650a5fd64fc0ea3728
-SHA1 (patch-src_emu_hash.c) = c2cf2d70c97c2f88538e974f962f53a0eb2647cc
-SHA1 (patch-src_emu_input.c) = 2a7b5a607e2def30f501ea6ef25616ab0ab5aee3
-SHA1 (patch-src_lib_util_astring.h) = 31612dcae07ada558afb7727395d67b0a1388eb5
+SHA1 (patch-src_lib_util_astring.h) = 103db1d57f11f2df65eccd6957c551003e55a137
 SHA1 (patch-src_mame_machine_naomibd.c) = 7bc53bd57a6d75eae4e0d1d27b1b8cb7fd2fb4df
