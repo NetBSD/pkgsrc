@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: omninames.sh,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+# $NetBSD: omninames.sh,v 1.2 2011/04/21 16:34:18 drochner Exp $
 #
 # omniORB NameService rc.d control script
 #
@@ -24,7 +24,9 @@ $_rc_subr_loaded . /etc/rc.subr
 name="omniNames"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
-pidfile="/var/run/${name}.pid"
+logdir="/var/db"
+errlogfile="/var/log/${name}.log"
+command_args="-start -always -logdir ${logdir} -errlog ${errlogfile} &"
 
 load_rc_config $name
 run_rc_command "$1"
