@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/04/11 07:25:49 sekiya Exp $
+# $NetBSD: Makefile,v 1.45 2011/04/21 17:53:26 hans Exp $
 
 DISTNAME=	abcde-2.3.99.7_p235
 PKGNAME=	abcde-2.3.99.7
@@ -10,12 +10,15 @@ MAINTAINER=	sekiya@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/abcde/
 COMMENT=	Command-line utility to rip and encode an audio CD
 
+.include "../../mk/bsd.prefs.mk"
+
 DEPENDS+=	cd-discid>=0.7:../../audio/cd-discid
 DEPENDS+=	id3-[0-9]*:../../audio/id3
 DEPENDS+=	id3v2-[0-9]*:../../audio/id3v2
-DEPENDS+=	cdparanoia>=3.0.9.7:../../audio/cdparanoia
+.if ${OPSYS} != "SunOS"
+DEPENDS+=	cdparanoia>=>=3.0.9.7:../../audio/cdparanoia
+.endif
 DEPENDS+=	mkcue>=2.1:../../misc/mkcue
-DEPENDS+=	gsed>=4.2:../../textproc/gsed
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,7 +26,7 @@ NO_BUILD=	yes
 EXTRACT_SUFX=	.tar.bz2
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run gsed:run
 REPLACE_BASH=	abcde
 
 EGDIR=		${PREFIX}/share/examples/abcde
@@ -48,5 +51,17 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/cddb-tool.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=	ftp:run
+
+SUBST_CLASSES+=		abcde-cdparanoia
+SUBST_STAGE.abcde-cdparanoia=	pre-configure
+SUBST_MESSAGE.abcde-cdparanoia=	Adjusting cd-paranoia command name
+SUBST_FILES.abcde-cdparanoia=	abcde abcde.conf
+SUBST_SED.abcde-cdparanoia=	-e "/CDPARANOIA=cdparanoia/s/cdparanoia/cd-paranoia/"
+
+.include "../../misc/libcdio/buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
