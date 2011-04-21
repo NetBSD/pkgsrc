@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2011/04/21 14:30:35 hans Exp $
+$NetBSD: patch-aa,v 1.2 2011/04/21 20:01:03 hans Exp $
 
 --- configure.orig	2008-05-24 00:00:38.000000000 +0200
-+++ configure	2011-04-21 17:09:12.454026785 +0200
-@@ -2298,8 +2298,8 @@ echo "${ECHO_T}Solaris" >&6; }
++++ configure	2011-04-21 21:10:43.769673417 +0200
+@@ -2291,15 +2291,15 @@ echo "${ECHO_T}Mac OS X" >&6; }
+ echo "${ECHO_T}Solaris" >&6; }
+ 			LIB_CPPFLAGS='-DPIC'
+ 			LIB_CFLAGS='-fPIC'
+-			LIB_LDFLAGS='-shared -fPIC -Wl,-soname,${LIB}.${LIB_MAJOR}.${LIB_MINOR}'
++			LIB_LDFLAGS='-shared -fPIC -Wl,-soname,${LIB}.${LIB_MAJOR}'
+ 			LIB_PREFIX='lib'
+ 			LIB_SUFFIX='.so'
+ 			PLUGIN_CPPFLAGS='-DPIC'
  			PLUGIN_CFLAGS='-fPIC'
  			PLUGIN_LDFLAGS='-shared -fPIC'
  			PLUGIN_SUFFIX='.so'
