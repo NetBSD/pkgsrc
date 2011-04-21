@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2011/04/21 14:25:09 hans Exp $
+$NetBSD: patch-ab,v 1.2 2011/04/21 20:29:20 hans Exp $
 
---- configure.orig	2011-02-16 22:18:08.078550720 +0100
-+++ configure	2011-02-16 22:19:36.365698531 +0100
-@@ -3239,8 +3239,8 @@ $as_echo "Solaris" >&6; }
+--- configure.orig	Thu Apr 21 23:01:02 2011
++++ configure	Thu Apr 21 23:03:01 2011
+@@ -3231,7 +3231,7 @@
+ $as_echo "Solaris" >&6; }
+ 			LIB_CPPFLAGS='-DPIC'
+ 			LIB_CFLAGS='-fPIC'
+-			LIB_LDFLAGS='-shared -fPIC -Wl,-soname=${LIB}.${LIB_MAJOR}.${LIB_MINOR}'
++			LIB_LDFLAGS='-shared -fPIC -Wl,-soname=${LIB}.${LIB_MAJOR}'
+ 			LIB_PREFIX='lib'
+ 			LIB_SUFFIX='.so'
+ 			LDFLAGS_RPATH='-Wl,-rpath,${libdir}'
+@@ -3239,8 +3239,8 @@
  			PLUGIN_CFLAGS='-fPIC'
  			PLUGIN_LDFLAGS='-shared -fPIC'
  			PLUGIN_SUFFIX='.so'
