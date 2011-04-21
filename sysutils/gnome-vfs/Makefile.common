@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.25 2010/10/22 20:11:16 drochner Exp $
+# $NetBSD: Makefile.common,v 1.26 2011/04/21 11:32:02 obache Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
-# used by net/gnome-vfs-dns-sd/Makefile
 # used by net/gnome-vfs-smb/Makefile
 
 GNOME_VFS_VERSION=	2.24.4
