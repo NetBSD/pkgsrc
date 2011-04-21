@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/02/26 14:42:13 hans Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/04/21 14:33:37 hans Exp $
 lib/audacious/Container/m3u.so
 lib/audacious/Container/pls.so
 lib/audacious/Container/xspf.so
@@ -39,7 +39,7 @@ lib/audacious/Input/vtx.so
 lib/audacious/Input/wavpack.so
 lib/audacious/Input/wma.so
 ${PLIST.esd}lib/audacious/Output/ESD.so
-lib/audacious/Output/OSS.so
+${PLIST.oss}lib/audacious/Output/OSS.so
 lib/audacious/Output/filewriter.so
 ${PLIST.jack}lib/audacious/Output/libjackout.so
 ${PLIST.pulse}lib/audacious/Output/pulse_audio.so
