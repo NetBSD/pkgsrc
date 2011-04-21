@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/04/21 09:49:44 pettai Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule ${MODULE_NAME} lib/httpd/mod_authn_otp.so
+
+===========================================================================
