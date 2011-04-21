@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2011/04/21 13:05:35 hans Exp $
+# $NetBSD: builtin.mk,v 1.2 2011/04/21 14:46:29 hans Exp $
 
 BUILTIN_PKG:=	libusb
 PKGCONFIG_FILE.libusb=	/usr/bin/libusb-config
@@ -29,7 +29,7 @@ override-libusb-pkgconfig:
 	${ECHO} "";					\
 	${ECHO} "Name: libusb";				\
 	${ECHO} "Description: library for USB access";	\
-	${ECHO} "Version: ${BUILTIN_VERSION.libusb";	\
+	${ECHO} "Version: ${BUILTIN_VERSION.libusb}";	\
 	${ECHO} "Libs: -Wl,-R\$${libdir} -L\$${libdir} -lusb";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
 	} >> ${BLKDIR_PKGCFG}/${LIBUSB_PKGCFGF};
