@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.26 2010/04/11 07:25:49 sekiya Exp $
+$NetBSD: patch-ac,v 1.27 2011/04/21 17:53:26 hans Exp $
 
 --- abcde.orig	2010-04-10 10:14:30.000000000 +0900
 +++ abcde	2010-04-10 18:40:03.000000000 +0900
@@ -126,5 +126,11 @@ $NetBSD: patch-ac,v 1.26 2010/04/11 07:25:49 sekiya Exp $
  	OSFLAVOUR=NBSD
 +	SED=gsed
  elif [ X$(uname) = "SunOS" ] ; then
- 	HTTPGET=""
+-	HTTPGET=""
++	HTTPGET=ftp
  	MD5SUM=md5
+ 	OSFLAVOUR=SunOS
++	SED=gsed
+ else
+ 	HTTPGET=wget
+ fi
