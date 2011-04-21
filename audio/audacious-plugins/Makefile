@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/21 15:01:56 hans Exp $
 #
 
 DISTNAME=		audacious-plugins-1.5.1
@@ -57,7 +57,8 @@ PLIST.oss=	yes
 .elif ${OPSYS} == "DragonFly"
 PLIST.oss=	yes
 .elif ${OPSYS} == "SunOS"
-PLIST.sun=	yes
+CPPFLAGS.SunOS=	-D__EXTENSIONS__ -D__uint32_t=uint32_t -D__uint64_t=uint64_t
+PLIST.oss=	yes
 #.elif ${OPSYS} == "Linux"
 #.  include	"../../wip/alsa-lib/buildlink3.mk"
 #PKG_SUPPORTED_OPTIONS+= lirc
