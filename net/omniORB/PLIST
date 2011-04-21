@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/21 16:34:17 drochner Exp $
 bin/catior
 bin/convertior
 bin/genior
@@ -193,27 +193,27 @@ include/omnithread/solaris.h
 lib/libCOS4.a
 lib/libCOS4.so
 lib/libCOS4.so.1
-lib/libCOS4.so.1.4
+lib/libCOS4.so.1.5
 lib/libCOSDynamic4.a
 lib/libCOSDynamic4.so
 lib/libCOSDynamic4.so.1
-lib/libCOSDynamic4.so.1.4
+lib/libCOSDynamic4.so.1.5
 lib/libomniCodeSets4.a
 lib/libomniCodeSets4.so
 lib/libomniCodeSets4.so.1
-lib/libomniCodeSets4.so.1.4
+lib/libomniCodeSets4.so.1.5
 lib/libomniConnectionMgmt4.a
 lib/libomniConnectionMgmt4.so
 lib/libomniConnectionMgmt4.so.1
-lib/libomniConnectionMgmt4.so.1.4
+lib/libomniConnectionMgmt4.so.1.5
 lib/libomniDynamic4.a
 lib/libomniDynamic4.so
 lib/libomniDynamic4.so.1
-lib/libomniDynamic4.so.1.4
+lib/libomniDynamic4.so.1.5
 lib/libomniORB4.a
 lib/libomniORB4.so
 lib/libomniORB4.so.1
-lib/libomniORB4.so.1.4
+lib/libomniORB4.so.1.5
 lib/libomnithread.a
 lib/libomnithread.so
 lib/libomnithread.so.3
