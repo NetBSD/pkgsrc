@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:08:05 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/04/22 13:42:50 obache Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	7
+PKGREVISION=	8
 
 COMMENT+=	(ncurses interface only)
 
