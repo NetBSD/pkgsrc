@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/02/09 08:48:19 adam Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/22 08:10:24 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/90-server-/}
 COMMENT=	PostgreSQL database server programs
@@ -9,10 +9,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_PLATFORM=	*-*-mips
 
 .include "../../databases/postgresql90/Makefile.common"
-
-# Use shlibtool (invoked as "$(LIBTOOL)") to build modules.
-#USE_LIBTOOL=		yes
-#PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 
 CONFIGURE_ARGS+=	--with-openssl
 
