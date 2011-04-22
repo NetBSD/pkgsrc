@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2011/02/15 09:06:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.18 2011/04/22 13:50:38 adam Exp $
 #
 # used by databases/postgresql83-adminpack/Makefile
 # used by databases/postgresql83-client/Makefile
@@ -17,13 +17,14 @@
 
 .include "../../databases/postgresql83/Makefile.mirrors"
 
-DISTNAME=	postgresql-8.3.14
+DISTNAME=	postgresql-8.3.15
 CATEGORIES=	databases
 MASTER_SITES=	${PGSQL_MIRRORS:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	adam@NetBSD.org
 HOMEPAGE=	http://www.postgresql.org/
+LICENSE=	postgresql-license
 
 CONFLICTS+=	postgresql-[0-9]*
 CONFLICTS+=	postgresql7[0-9]-*
