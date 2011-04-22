@@ -9,9 +9,9 @@
 name="xymon"
 
 # user-settable rc.conf variables
-: ${xymon_launchcfg:="@XYETCDIR@/hobbitlaunch.cfg"}
-: ${xymon_servercfg:="@XYETCDIR@/hobbitserver.cfg"}
-: ${xymon_log:="@BBLOGDIR@/hobbitlaunch.log"}
+: ${xymon_launchcfg:="@XYETCDIR@/tasks.cfg"}
+: ${xymon_servercfg:="@XYETCDIR@/xymonserver.cfg"}
+: ${xymon_log:="@XYMONLOGDIR@/xymonlaunch.log"}
 : ${xymon_pidfile:="/var/run/${name}.pid"}
 
 if [ -f /etc/rc.subr ]; then
@@ -22,7 +22,7 @@ rcvar=${name}
 xymon_user="xymon"
 pidfile=${xymon_pidfile}
 required_files="${xymon_launchcfg} ${xymon_servercfg}"
-command="@XYBINDIR@/hobbitlaunch"
+command="@XYBINDIR@/xymonlaunch"
 command_args="--config=${xymon_launchcfg} --env=${xymon_servercfg} --log=${xymon_log} --pidfile=${xymon_pidfile}"
 
 xymon_precmd()
