@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2009/12/09 12:27:28 obache Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/22 14:40:44 obache Exp $
 #
 
 DISTNAME=	libnids-1.23
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libnids/}
 
