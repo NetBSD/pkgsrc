@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.972 2011/04/21 10:41:44 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.973 2011/04/22 08:14:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1591,3 +1591,18 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-texlive-en-doc to 2010.21569 [minskim 2011-04-20]
 	Updated lang/sbcl to 1.0.47 [asau 2011-04-20]
 	Added www/ap2-authn-otp version 1.1.3 [pettai 2011-04-21]
+	Updated databases/postgresql90 to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-client to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-server to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-docs to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-adminpack to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-datatypes to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-dblink to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-fuzzystrmatch to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-monitoring to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-pgcrypto to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-plperl to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-plpython to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-pltcl to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-replicationtools to 9.0.4 [adam 2011-04-22]
+	Updated databases/postgresql90-upgrade to 9.0.4 [adam 2011-04-22]
