@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/23 01:49:02 gls Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/04/22 20:31:49 gls Exp $
 bin/cap
 bin/capify
-${GEM_HOME}/cache/capistrano-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rvmrc
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.mdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/bin/cap
 ${GEM_LIBDIR}/bin/capify
+${GEM_LIBDIR}/capistrano.gemspec
 ${GEM_LIBDIR}/lib/capistrano.rb
 ${GEM_LIBDIR}/lib/capistrano/callback.rb
 ${GEM_LIBDIR}/lib/capistrano/cli.rb
@@ -67,6 +70,7 @@ ${GEM_LIBDIR}/lib/capistrano/ssh.rb
 ${GEM_LIBDIR}/lib/capistrano/task_definition.rb
 ${GEM_LIBDIR}/lib/capistrano/transfer.rb
 ${GEM_LIBDIR}/lib/capistrano/version.rb
+${GEM_LIBDIR}/rvmrc.sample
 ${GEM_LIBDIR}/test/cli/execute_test.rb
 ${GEM_LIBDIR}/test/cli/help_test.rb
 ${GEM_LIBDIR}/test/cli/options_test.rb
@@ -108,4 +112,4 @@ ${GEM_LIBDIR}/test/ssh_test.rb
 ${GEM_LIBDIR}/test/task_definition_test.rb
 ${GEM_LIBDIR}/test/transfer_test.rb
 ${GEM_LIBDIR}/test/utils.rb
-${GEM_HOME}/specifications/capistrano-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
