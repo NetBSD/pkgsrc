@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.38 2008/11/19 16:27:14 sketch Exp $
+# $NetBSD: build.conf-example,v 1.39 2011/04/22 09:03:52 spz Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -102,5 +102,5 @@ MKSUMMARY=no
 #SIGN_AS=username@NetBSD.org
 
 # Destination for packages and rsync options.
-RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/i386
+RSYNC_DST=ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/SomeArch/${osrev}-201xQy/
 RSYNC_OPTS='-e ssh'

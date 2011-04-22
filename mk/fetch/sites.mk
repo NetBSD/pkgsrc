@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.83 2011/03/29 12:49:05 zafer Exp $
+# $NetBSD: sites.mk,v 1.84 2011/04/22 09:03:53 spz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -462,6 +462,6 @@ MASTER_SITE_NETLIB+= \
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
 	ftp://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
-	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
-	http://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
+	ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/ \
+	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/ \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/
