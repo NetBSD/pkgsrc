@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.97 2011/01/13 13:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2011/04/22 14:40:42 obache Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
 
 DISTNAME=	xemacs-21.4.22
 #PKGREVISION=	1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
