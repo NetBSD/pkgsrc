@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/04/19 19:21:39 zafer Exp $
+# $NetBSD: Makefile,v 1.30 2011/04/22 14:40:41 obache Exp $
 
 # This section contains variables that might be overridden.
 PKGNAME?=	${PKGNAME_BASE}
@@ -7,7 +7,7 @@ COMMENT?=	SQL shell for Sybase and MS-SQL servers
 # Normal package Makefile contents follow.
 DISTNAME=	sqsh-2.1-src
 PKGNAME_BASE=	${DISTNAME:S/-src//}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sqsh/}
 
