@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2010/11/30 08:50:17 adam Exp $
+# $NetBSD: Makefile,v 1.40 2011/04/22 14:40:44 obache Exp $
 
 DISTNAME=	openvpn-2.1.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://swupdate.openvpn.net/community/releases/
 
