@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2011/04/22 13:42:06 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/04/22 13:50:38 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/83-client-/}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database client programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -87,11 +86,9 @@ pre-build:
 		../../src/include/utils/fmgroids.h
 
 post-install:
-	set -e; cd ${WRKSRC}/doc; for file in FAQ*; do \
-		${INSTALL_DATA} $$file ${DESTDIR}${PREFIX}/share/doc/postgresql/$$file;	\
-	done
-	set -e; for file in ${PGXS_FILES}; do				\
-		${INSTALL_DATA} ${WRKSRC}/$$file ${DEST_PGXS}/$$file;	\
-	done
+	${INSTALL_DATA} ${WRKSRC}/doc/FAQ* ${DESTDIR}${PREFIX}/share/doc/postgresql/
+.for file in ${PGXS_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DEST_PGXS}/${file}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
