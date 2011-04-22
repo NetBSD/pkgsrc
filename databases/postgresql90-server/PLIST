@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/02/09 08:48:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/04/22 08:10:24 adam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.so
@@ -216,6 +216,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Mazatlan
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Mendoza
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Menominee
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Merida
+${PG_SUBPREFIX}share/postgresql/timezone/America/Metlakatla
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Mexico_City
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Miquelon
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Moncton
@@ -228,6 +229,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/New_York
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Nipigon
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Nome
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Noronha
+${PG_SUBPREFIX}share/postgresql/timezone/America/North_Dakota/Beulah
 ${PG_SUBPREFIX}share/postgresql/timezone/America/North_Dakota/Center
 ${PG_SUBPREFIX}share/postgresql/timezone/America/North_Dakota/New_Salem
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Ojinaga
@@ -254,6 +256,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Santo_Domingo
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Sao_Paulo
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Scoresbysund
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Shiprock
+${PG_SUBPREFIX}share/postgresql/timezone/America/Sitka
 ${PG_SUBPREFIX}share/postgresql/timezone/America/St_Barthelemy
 ${PG_SUBPREFIX}share/postgresql/timezone/America/St_Johns
 ${PG_SUBPREFIX}share/postgresql/timezone/America/St_Kitts
