@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2010/07/14 08:20:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/22 13:42:31 obache Exp $
 
 DISTNAME=	mono-addins-0.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono-addins/
 EXTRACT_SUFX=	.tar.bz2

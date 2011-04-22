@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2011/04/22 13:42:05 obache Exp $
 
 BUILDLINK_TREE+=	qof
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	qof
 QOF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qof+=	qof>=0.7.5
+BUILDLINK_ABI_DEPENDS.qof?=	qof>=0.7.5nb7
 BUILDLINK_PKGSRCDIR.qof?=	../../devel/qof
 
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/01/13 13:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/04/22 13:42:17 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.6.2
 
 DISTNAME=	xfce4-weather-plugin-${XFCE4_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-weather-plugin/
 COMMENT=	Xfce weather plugin

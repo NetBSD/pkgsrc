@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/02/25 09:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:43:08 obache Exp $
 
 DISTNAME=		spectrum-1.4.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		http://spectrum.im/attachments/download/37/
 

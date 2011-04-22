@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/01/13 13:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/04/22 13:43:34 obache Exp $
 
 DISTNAME=	crack-attack-1.1.14
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/crack-attack/
 

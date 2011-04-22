@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2010/01/31 17:21:14 spz Exp $
+# $NetBSD: Makefile,v 1.33 2011/04/22 13:43:18 obache Exp $
 
 DISTNAME=		flex-2.5.35
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flex/}
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://flex.sourceforge.net/

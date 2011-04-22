@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/05/01 14:28:45 zafer Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/22 13:44:37 obache Exp $
 
 DISTNAME=	pakemon-0.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://www.binarii.com/files/security/ 
 MAINTAINER=	pkgsrc-users@NetBSD.org

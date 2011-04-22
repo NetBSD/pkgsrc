@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2011/01/13 13:36:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2011/04/22 13:42:47 obache Exp $
 
 BUILDLINK_TREE+=	GraphicsMagick
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	GraphicsMagick
 GRAPHICSMAGICK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.GraphicsMagick+=	GraphicsMagick>=1.2
-BUILDLINK_ABI_DEPENDS.GraphicsMagick?=	GraphicsMagick>=1.3.12nb3
+BUILDLINK_ABI_DEPENDS.GraphicsMagick?=	GraphicsMagick>=1.3.12nb4
 BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../graphics/GraphicsMagick
 
 .include "../../archivers/bzip2/buildlink3.mk"

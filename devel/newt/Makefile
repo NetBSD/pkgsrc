@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/04/13 09:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/04/22 13:43:21 obache Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Windowing toolkit based on libslang
 
 PKG_DESTDIR_SUPPORT=	user-destdir

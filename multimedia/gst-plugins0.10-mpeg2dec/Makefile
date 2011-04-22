@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:27 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:45:22 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	mpeg2dec
 GST_PLUGINS0.10_DIRS=	ext/mpeg2dec
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

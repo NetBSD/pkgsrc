@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2008/06/12 02:14:37 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2011/04/22 13:44:13 obache Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		misc
 MASTER_SITES=		# http://alioth.debian.org/download.php/1502/
 
