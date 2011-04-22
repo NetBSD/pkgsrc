@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/02/15 08:14:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/04/22 13:01:30 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -70,6 +70,7 @@ include/postgresql/server/access/slru.h
 include/postgresql/server/access/subtrans.h
 include/postgresql/server/access/sysattr.h
 include/postgresql/server/access/transam.h
+include/postgresql/server/access/tupconvert.h
 include/postgresql/server/access/tupdesc.h
 include/postgresql/server/access/tupmacs.h
 include/postgresql/server/access/tuptoaster.h
@@ -1311,6 +1312,7 @@ share/doc/postgresql/html/release-8-2-18.html
 share/doc/postgresql/html/release-8-2-19.html
 share/doc/postgresql/html/release-8-2-2.html
 share/doc/postgresql/html/release-8-2-20.html
+share/doc/postgresql/html/release-8-2-21.html
 share/doc/postgresql/html/release-8-2-3.html
 share/doc/postgresql/html/release-8-2-4.html
 share/doc/postgresql/html/release-8-2-5.html
@@ -1325,6 +1327,7 @@ share/doc/postgresql/html/release-8-3-11.html
 share/doc/postgresql/html/release-8-3-12.html
 share/doc/postgresql/html/release-8-3-13.html
 share/doc/postgresql/html/release-8-3-14.html
+share/doc/postgresql/html/release-8-3-15.html
 share/doc/postgresql/html/release-8-3-2.html
 share/doc/postgresql/html/release-8-3-3.html
 share/doc/postgresql/html/release-8-3-4.html
@@ -1341,6 +1344,7 @@ share/doc/postgresql/html/release-8-4-4.html
 share/doc/postgresql/html/release-8-4-5.html
 share/doc/postgresql/html/release-8-4-6.html
 share/doc/postgresql/html/release-8-4-7.html
+share/doc/postgresql/html/release-8-4-8.html
 share/doc/postgresql/html/release-8-4.html
 share/doc/postgresql/html/release.html
 share/doc/postgresql/html/resources.html
