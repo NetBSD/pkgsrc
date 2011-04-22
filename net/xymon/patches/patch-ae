@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/02/14 22:58:58 spz Exp $
+$NetBSD: patch-ae,v 1.2 2011/04/22 14:52:18 spz Exp $
 
---- build/bb-commands.sh.orig	2007-04-14 00:20:21.000000000 -0500
+--- build/bb-commands.sh.orig	2011-03-08 17:20:28.000000000 +0000
 +++ build/bb-commands.sh
 @@ -9,6 +9,11 @@
  
@@ -26,5 +26,5 @@ $NetBSD: patch-ae,v 1.1.1.1 2010/02/14 22:58:58 spz Exp $
  # DFCMD is an alias for DF
 +ENVNAME=DF
  PGM=`findbin df | head -n 1`
- echo "# DF,DFCMD and PS are for compatibility only, NOT USED by the Hobbit client"
+ echo "# DF,DFCMD and PS are for compatibility only, NOT USED by the Xymon client"
  echo "DF=\"${PGM} -Pk\""

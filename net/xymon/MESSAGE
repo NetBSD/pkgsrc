@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2010/04/14 19:50:48 spz Exp $
+$NetBSD: MESSAGE,v 1.2 2011/04/22 14:52:18 spz Exp $
 
 Please note that the
 ${SECCGIDIR}
@@ -11,4 +11,9 @@ Please also note that anything beyond the xymon front page (eg cpu reports,
 which contain top output) are a privacy concern and also a potential
 excessive information disclosure concern, so you may want to restrict
 access to authenticated users.
+
+If you are updating from an earlier version of xymon, many config files
+and the directory names have changed.  Refer to
+${EXAMPLEDIR}/www/help/upgrade-to-430.txt
+for the necessary changes.
 ===========================================================================
