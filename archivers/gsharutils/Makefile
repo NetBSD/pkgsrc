@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2009/02/09 23:53:52 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2011/04/22 13:42:49 obache Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=sharutils/}
 

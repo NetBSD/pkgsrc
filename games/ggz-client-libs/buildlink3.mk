@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:34 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2011/04/22 13:42:44 obache Exp $
 
 BUILDLINK_TREE+=	ggz-client-libs
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ggz-client-libs
 GGZ_CLIENT_LIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ggz-client-libs+=	ggz-client-libs>=0.0.14.1
+BUILDLINK_ABI_DEPENDS.ggz-client-libs?=	ggz-client-libs>=0.0.14.1nb4
 BUILDLINK_PKGSRCDIR.ggz-client-libs?=	../../games/ggz-client-libs
 
 .include "../../games/libggz/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/01/13 13:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2011/04/22 13:42:37 obache Exp $
 
 DISTNAME=	polkit-qt-0.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_KDE:=apps/KDE4.x/admin/}
 EXTRACT_SUFX=	.tar.bz2

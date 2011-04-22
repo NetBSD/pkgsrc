@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:06 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2011/04/22 13:45:21 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	oss
 GST_PLUGINS0.10_DIRS=	sys/oss
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

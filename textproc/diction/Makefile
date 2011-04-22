@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/12/04 00:57:37 bjs Exp $
+# $NetBSD: Makefile,v 1.11 2011/04/22 13:44:49 obache Exp $
 
 DISTNAME=	diction-1.11
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.moria.de/~michael/diction/
 

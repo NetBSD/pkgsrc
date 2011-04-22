@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/09/05 22:11:50 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2011/04/22 13:44:41 obache Exp $
 
 DISTNAME=		duplicity-0.5.20
+PKGREVISION=		1
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://savannah.nongnu.org/download/duplicity/
 
