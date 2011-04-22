@@ -1,14 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/02/14 22:58:58 spz Exp $
+$NetBSD: patch-ad,v 1.2 2011/04/22 14:52:18 spz Exp $
 
---- build/Makefile.NetBSD.orig	2010-02-08 23:58:57.000000000 +0000
+--- build/Makefile.NetBSD.orig	2011-03-08 17:20:28.000000000 +0000
 +++ build/Makefile.NetBSD
-@@ -10,7 +10,8 @@ NETLIBS =
- CC= gcc
- PKGDIR?=/usr/pkg
- CFLAGS = -g -O2 -Wall -Wno-unused -D_REENTRANT $(LFSDEF) $(OSDEF) \
--       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib
-+       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib \
-+       -DHAVE_STDINT_H
- RPATH = "-Wl,--rpath,"
+@@ -1,7 +1,7 @@
+ # Xymon compile-time settings for NetBSD systems
+ # From Emmanuel Dreyfus.
+ #
+-OSDEF = -DBSD
++OSDEF = -DBSD -DHAVE_STDINT_H
  
- # Compile flags for debugging
+ # NETLIBS: None needed
+ NETLIBS =
