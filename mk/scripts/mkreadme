@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.25 2010/07/21 12:29:46 spz Exp $
+# $NetBSD: mkreadme,v 1.26 2011/04/22 09:03:53 spz Exp $
 #
 # Script for README.html generation
 #
@@ -103,7 +103,7 @@ usage(){
     echo " "
     echo "  -v|--version        Displays the version of this script and exits."
     echo " "
-    echo "Example:    $prog -p /pub/NetBSD/packages/pkgsrc -P /pub/NetBSD/packages -f"
+    echo "Example:    $prog -p /pub/pkgsrc/current/pkgsrc -P /pub/pkgsrc -f"
     echo " "
 }
 
