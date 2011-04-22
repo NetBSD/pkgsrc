@@ -15,6 +15,7 @@ name="xymonclient"
 # user-settable rc.conf variables
 : ${xymon_launchcfg:="@XYETCDIR@/clientlaunch.cfg"}
 : ${xymon_clientcfg:="@XYETCDIR@/xymonclient.cfg"}
+: ${xymon_configclass:=""}
 : ${xymon_log:="@XYMONLOGDIR@/clientlaunch.log"}
 : ${xymon_pidfile:="/var/run/xymonclient.pid"}
 
@@ -48,10 +49,17 @@ xymon_precmd()
 
 	MACHINEDOTS="`uname -n`"
 	export MACHINEDOTS
-	XYMONOSTYPE="`uname -s | tr '[ABCDEFGHIJKLMNOPQRSTUVWXYZ/]' '[abcdefghijklmnopqrstuvwxyz_]'`"
-	export XYMONOSTYPE
-	XYMONOSSCRIPT="xymonclient-$XYMONOSTYPE.sh"
+	SERVEROSTYPE="`uname -s | tr '[ABCDEFGHIJKLMNOPQRSTUVWXYZ/]' '[abcdefghijklmnopqrstuvwxyz_]'`"
+	export SERVEROSTYPE
+	XYMONOSSCRIPT="xymonclient-$SERVEROSTYPE.sh"
 	export XYMONOSSCRIPT
+
+	if [ -z "$xymon_configclass" ]; then
+		CONFIGCLASS="$SERVEROSTYPE"
+	else
+		CONFIGCLASS="$xymon_configclass"
+	fi
+	export CONFIGCLASS
 }
 
 start_precmd="xymon_precmd"
