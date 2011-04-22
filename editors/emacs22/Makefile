@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2011/03/10 10:24:52 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/04/22 14:40:42 obache Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
 
 DISTNAME=	emacs-22.3
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 

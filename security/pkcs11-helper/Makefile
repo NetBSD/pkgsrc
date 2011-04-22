@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/03/31 18:37:34 agc Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/22 14:40:45 obache Exp $
 #
 
 DISTNAME=	pkcs11-helper-1.06
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.opensc-project.org/files/pkcs11-helper/
 EXTRACT_SUFX=	.tar.bz2
