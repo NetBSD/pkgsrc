@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/02/15 08:14:16 adam Exp $
+# $NetBSD: Makefile,v 1.14 2011/04/22 13:01:30 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -79,8 +79,8 @@ post-wrapper:
 .endif
 
 post-install:
-	set -e; for file in ${PGXS_FILES}; do				\
-		${INSTALL_DATA} ${WRKSRC}/$$file ${DEST_PGXS}/$$file;	\
-	done
+.for file in ${PGXS_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DEST_PGXS}/${file}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
