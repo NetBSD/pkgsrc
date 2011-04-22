@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:23:57 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2011/04/22 13:41:56 obache Exp $
 
 BUILDLINK_TREE+=	libvisual
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libvisual
 LIBVISUAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvisual+=	libvisual>=0.4.0
+BUILDLINK_ABI_DEPENDS.libvisual?=		libvisual>=0.4.0nb3
 BUILDLINK_PKGSRCDIR.libvisual?=		../../audio/libvisual
 
 .include "../../devel/gettext-lib/buildlink3.mk"

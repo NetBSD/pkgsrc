@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2010/11/13 21:09:04 shattered Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/22 13:44:44 obache Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
 PKGNAME=	mtoolsfm-1.9.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.core-coutainville.org/MToolsFM/archive/SOURCES/
 

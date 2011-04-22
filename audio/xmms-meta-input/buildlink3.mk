@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:00 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2011/04/22 13:42:12 obache Exp $
 
 BUILDLINK_TREE+=	xmms-meta-input
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xmms-meta-input
 XMMS_META_INPUT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmms-meta-input+=	xmms-meta-input>=0.4
-BUILDLINK_ABI_DEPENDS.xmms-meta-input?=	xmms-meta-input>=0.4nb2
+BUILDLINK_ABI_DEPENDS.xmms-meta-input?=	xmms-meta-input>=0.4nb5
 BUILDLINK_PKGSRCDIR.xmms-meta-input?=	../../audio/xmms-meta-input
 
 .include "../../audio/xmms/buildlink3.mk"

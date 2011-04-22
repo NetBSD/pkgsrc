@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/09/30 10:49:14 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:44:35 obache Exp $
 #
 
 PKGNAME=		libpreludedb-mysql-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 COMMENT=		MySQL plugin for LibPreludeDB
 
 PKG_DESTDIR_SUPPORT=	user-destdir

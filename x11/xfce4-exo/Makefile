@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/01/13 13:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2011/04/22 13:42:16 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	0.3.101
 
 DISTNAME=	exo-${XFCE4_VERSION}
 PKGNAME=	xfce4-exo-${XFCE4_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 COMMENT=	Xfce extension library
 

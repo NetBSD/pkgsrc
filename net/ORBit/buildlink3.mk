@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:25:06 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2011/04/22 13:42:01 obache Exp $
 
 BUILDLINK_TREE+=	ORBit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ORBit
 ORBIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ORBit+=	ORBit>=0.5.15nb5
-BUILDLINK_ABI_DEPENDS.ORBit+=	ORBit>=0.5.17nb1
+BUILDLINK_ABI_DEPENDS.ORBit+=	ORBit>=0.5.17nb2
 BUILDLINK_PKGSRCDIR.ORBit?=	../../net/ORBit
 
 .include "../../devel/gettext-lib/buildlink3.mk"

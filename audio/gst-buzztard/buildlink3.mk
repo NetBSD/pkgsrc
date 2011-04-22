@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/09/10 20:19:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2011/04/22 13:42:15 obache Exp $
 
 BUILDLINK_TREE+=	gst-buzztard
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	gst-buzztard
 GST_BUZZTARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-buzztard+=	gst-buzztard>=0.5.0
+BUILDLINK_ABI_DEPENDS.gst-buzztard?=	gst-buzztard>=0.5.0nb1
 BUILDLINK_PKGSRCDIR.gst-buzztard?=	../../audio/gst-buzztard
 
 .include "../../devel/glib2/buildlink3.mk"

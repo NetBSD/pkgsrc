@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2009/03/17 21:40:47 darcy Exp $
+# $NetBSD: Makefile,v 1.32 2011/04/22 13:44:55 obache Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/11/24 18:50:48 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2011/04/22 13:42:22 obache Exp $
 
 BUILDLINK_TREE+=	telepathy-logger
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	telepathy-logger
 TELEPATHY_LOGGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.telepathy-logger+=	telepathy-logger>=0.1.4
+BUILDLINK_ABI_DEPENDS.telepathy-logger?=	telepathy-logger>=0.2.7nb1
 BUILDLINK_PKGSRCDIR.telepathy-logger?=	../../chat/telepathy-logger
 
 .include "../../devel/glib2/buildlink3.mk"

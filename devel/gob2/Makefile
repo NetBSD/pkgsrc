@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/01/12 20:40:55 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/22 13:42:17 obache Exp $
 
 DISTNAME=	gob2-2.0.18
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://ftp.5z.com/pub/gob/
 

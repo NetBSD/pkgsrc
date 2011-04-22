@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2011/03/17 21:19:53 zafer Exp $
+# $NetBSD: Makefile,v 1.73 2011/04/22 13:42:04 obache Exp $
 
 DISTNAME=	rpm-2.5.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	http://rpm.org/releases/historical/rpm-2.5.x/
 

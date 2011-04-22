@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2011/01/13 13:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/04/22 13:42:37 obache Exp $
 
 DISTNAME=	soprano-2.5.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=soprano/}
 EXTRACT_SUFX=	.tar.bz2
