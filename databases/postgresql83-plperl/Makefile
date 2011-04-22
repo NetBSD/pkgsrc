@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2011/04/22 13:43:14 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/04/22 22:58:18 obache Exp $
 
 PKGNAME=	${DISTNAME:C/-/83-plperl-/}
-PKGREVISION=	1
 COMMENT=	PL/Perl procedural language for the PostgreSQL backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
