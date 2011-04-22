@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/06 16:45:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/22 13:43:02 obache Exp $
 #
 
 DISTNAME=	xmms-nas-0.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/willem/
 

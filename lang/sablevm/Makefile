@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2010/07/06 10:17:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:59 obache Exp $
 #
 
 DISTNAME=	sablevm-1.13
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://sablevm.org/download/release/1.13/
 

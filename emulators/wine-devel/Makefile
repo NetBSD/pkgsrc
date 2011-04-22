@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:53:27 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/22 13:43:30 obache Exp $
 
 DISTNAME=	wine-1.1.16
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2011/01/13 13:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2011/04/22 13:45:16 obache Exp $
 
 COMMENT=	Screen saver and locker for the X window system
 
@@ -10,7 +10,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}

@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2009/01/26 11:12:39 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:45:21 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	speex
 GST_PLUGINS0.10_DIRS=	ext/speex
 GST_PLUGINS0.10_FLAGS=	speex
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
