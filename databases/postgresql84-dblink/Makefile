@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/15 08:14:16 adam Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/22 13:01:30 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-dblink-/}
 COMMENT=	dblink module for remote database connections
@@ -10,9 +10,10 @@ DEPENDS+=	postgresql84-server>=${PKGVERSION_NOREV}:../../databases/postgresql84-
 .include "../../databases/postgresql84/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-openssl
+BUILD_MAKE_FLAGS=	PGXS=1
+
 BUILD_DIRS=		src/interfaces/libpq
 BUILD_DIRS+=		contrib/dblink
-BUILD_MAKE_FLAGS=	PGXS=1
 INSTALL_DIRS=		contrib/dblink
 REQD_DIRS+=		share/doc/postgresql/contrib
 REQD_DIRS+=		share/postgresql/contrib
