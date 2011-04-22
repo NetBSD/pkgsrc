@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2011/02/09 08:48:17 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2011/04/22 13:42:06 obache Exp $
 
 BUILDLINK_TREE+=	postgresql90-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql90-client
 POSTGRESQL90_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql90-client+=	postgresql90-client>=9.0.0
-BUILDLINK_ABI_DEPENDS.postgresql90-client+=	postgresql90-client>=9.0.0
+BUILDLINK_ABI_DEPENDS.postgresql90-client+=	postgresql90-client>=9.0.4
 BUILDLINK_PKGSRCDIR.postgresql90-client?=	../../databases/postgresql90-client
 
 .if defined(PG_SUBPREFIX) && !empty(PG_SUBPREFIX)

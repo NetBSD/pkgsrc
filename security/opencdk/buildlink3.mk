@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:25:20 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/04/22 13:42:48 obache Exp $
 
 BUILDLINK_TREE+=	opencdk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opencdk
 OPENCDK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opencdk+=	opencdk>=0.5.4nb1
-BUILDLINK_ABI_DEPENDS.opencdk+=	opencdk>=0.6.0
+BUILDLINK_ABI_DEPENDS.opencdk+=	opencdk>=0.6.6nb1
 BUILDLINK_PKGSRCDIR.opencdk?=	../../security/opencdk
 
 .include "../../devel/zlib/buildlink3.mk"

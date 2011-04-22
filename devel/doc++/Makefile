@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2009/12/17 21:04:41 abs Exp $
+# $NetBSD: Makefile,v 1.21 2011/04/22 13:43:17 obache Exp $
 
 DISTNAME=		doc++-3.4.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=docpp/}
 

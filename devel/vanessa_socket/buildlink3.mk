@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2010/06/02 12:43:37 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2011/04/22 13:42:44 obache Exp $
 #
 # This file was created automatically using createbuildlink-3.5.
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	vanessa_socket
 VANESSA_SOCKET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vanessa_socket+=	vanessa_socket>=0.0.10
-BUILDLINK_ABI_DEPENDS.vanessa_socket+=	vanessa_socket>=0.0.10
+BUILDLINK_ABI_DEPENDS.vanessa_socket+=	vanessa_socket>=0.0.10nb1
 BUILDLINK_PKGSRCDIR.vanessa_socket?=	../../devel/vanessa_socket
 
 .include "../../devel/popt/buildlink3.mk"

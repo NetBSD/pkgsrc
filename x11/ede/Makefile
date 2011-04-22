@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/01/13 13:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2011/04/22 13:45:02 obache Exp $
 #
 
 DISTNAME=	ede-1.0.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
 EXTRACT_SUFX=	.tar.bz2

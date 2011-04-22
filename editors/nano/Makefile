@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2010/04/18 17:21:34 tez Exp $
+# $NetBSD: Makefile,v 1.39 2011/04/22 13:43:26 obache Exp $
 
 DISTNAME=	nano-2.2.4
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.nano-editor.org/dist/v2.2/
 

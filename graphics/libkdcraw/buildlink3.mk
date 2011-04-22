@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2011/01/13 13:36:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2011/04/22 13:42:09 obache Exp $
 
 BUILDLINK_TREE+=	libkdcraw
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkdcraw
 LIBKDCRAW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.1
-BUILDLINK_ABI_DEPENDS.libkdcraw?=	libkdcraw>=0.1.9nb6
+BUILDLINK_ABI_DEPENDS.libkdcraw?=	libkdcraw>=0.1.9nb7
 BUILDLINK_PKGSRCDIR.libkdcraw?=	../../graphics/libkdcraw
 
 .include "../../x11/qt3-libs/buildlink3.mk"

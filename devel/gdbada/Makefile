@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2009/07/14 19:02:16 hasso Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/22 13:42:03 obache Exp $
 
 DISTNAME=	gdbada-6.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.johnrshannon.com/download/
 EXTRACT_SUFX=	.tgz

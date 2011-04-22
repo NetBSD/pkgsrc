@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:27 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/04/22 13:43:22 obache Exp $
 
 MODNAME=		gettext
+PKGREVISION=		1
 CATEGORIES+=		devel
 COMMENT=		PHP extension for gettext support
 

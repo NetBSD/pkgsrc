@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2011/04/07 12:28:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2011/04/22 13:42:20 obache Exp $
 
 BUILDLINK_TREE+=	libfolks
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libfolks
 LIBFOLKS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfolks+=	libfolks>=0.3.6
+BUILDLINK_ABI_DEPENDS.libfolks?=	libfolks>=0.4.2nb1
 BUILDLINK_PKGSRCDIR.libfolks?=	../../chat/libfolks
 
 .include "../../devel/glib2/buildlink3.mk"

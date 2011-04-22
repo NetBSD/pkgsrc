@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2010/06/03 01:00:46 dsainty Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2011/04/22 13:42:05 obache Exp $
 
 BUILDLINK_TREE+=	glib2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glib2
 GLIB2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0
-BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.14.3
+BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.28.6nb3
 BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
 
 .include "../../converters/libiconv/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2011/04/15 17:23:24 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2011/04/22 13:41:58 obache Exp $
 
 BUILDLINK_TREE+=	python25
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	python25
 PYTHON25_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.python25+=	python25>=2.5
-BUILDLINK_ABI_DEPENDS.python25+=	python25>=2.5.2
+BUILDLINK_ABI_DEPENDS.python25+=	python25>=2.5.5nb4
 BUILDLINK_PKGSRCDIR.python25?=		../../lang/python25
 
 .  if defined(BUILDLINK_DEPMETHOD.python)

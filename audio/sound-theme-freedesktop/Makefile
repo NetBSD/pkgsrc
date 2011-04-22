@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/11/29 18:51:06 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/22 13:42:59 obache Exp $
 #
 
 DISTNAME=	sound-theme-freedesktop-0.7
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://cgit.freedesktop.org/sound-theme-freedesktop/snapshot/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/15 13:15:37 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/22 13:45:00 obache Exp $
 #
 
-DISTNAME=	shibboleth-sp-${PKGVERSION}
-PKGVERSION=	2.4.2
+DISTNAME=	shibboleth-sp-2.4.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://shibboleth.internet2.edu/downloads/shibboleth/cppsp/latest/
 
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-xmltooling=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-WRKSRC=		${WRKDIR}/shibboleth-2.4.2
+WRKSRC=		${WRKDIR}/shibboleth-${PKGVERSION_NOREV}
 EGDIR=		${PREFIX}/share/examples/shibboleth
 SHIB_CONFDIR=	${PKG_SYSCONFDIR}/shibboleth
 
@@ -86,8 +86,8 @@ INSTALLATION_DIRS+=     ${PREFIX}/include/shibsp/metadata
 INSTALLATION_DIRS+=	${PREFIX}/include/shibsp/remoting
 INSTALLATION_DIRS+=	${PREFIX}/include/shibsp/security
 INSTALLATION_DIRS+=	${PREFIX}/include/shibsp/util
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/shibboleth-${PKGVERSION}
-INSTALLATION_DIRS+=     ${PREFIX}/share/doc/shibboleth-${PKGVERSION}/api
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/shibboleth-${PKGVERSION_NOREV}
+INSTALLATION_DIRS+=     ${PREFIX}/share/doc/shibboleth-${PKGVERSION_NOREV}/api
 INSTALLATION_DIRS+=     ${PREFIX}/share/xml/shibboleth
 INSTALLATION_DIRS+=     ${PREFIX}/lib/shibboleth
 INSTALLATION_DIRS+=	${EGDIR} ${SHIB_CONFDIR}

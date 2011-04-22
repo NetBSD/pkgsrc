@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/07/07 17:54:26 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/22 13:45:15 obache Exp $
 #
 
 DISTNAME=	xdg-user-dirs-0.10
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://user-dirs.freedesktop.org/releases/
 

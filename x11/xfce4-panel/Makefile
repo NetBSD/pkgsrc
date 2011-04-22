@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2011/01/13 13:36:48 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2011/04/22 13:42:25 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-PKGREVISION=		5
+PKGREVISION=		6
 
 XFCE4_VERSION=		4.6.2
 

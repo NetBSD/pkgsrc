@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2011/02/25 09:47:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2011/04/22 13:42:22 obache Exp $
 
 DISTNAME=	pygtksourceview-2.10.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtksourceview/2.10/}
 EXTRACT_SUFX=	.tar.bz2

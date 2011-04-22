@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2010/11/09 13:13:03 adam Exp $
+# $NetBSD: Makefile,v 1.55 2011/04/22 13:43:00 obache Exp $
 
 DISTNAME=	vorbis-tools-1.4.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:05 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2011/04/22 13:42:32 obache Exp $
 #
 
 BUILDLINK_TREE+=	p5-GStreamer
@@ -7,6 +7,7 @@ BUILDLINK_TREE+=	p5-GStreamer
 P5_GSTREAMER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-GStreamer+=	p5-GStreamer>=0.11
+BUILDLINK_ABI_DEPENDS.p5-GStreamer?=	p5-GStreamer>=0.15nb1
 BUILDLINK_PKGSRCDIR.p5-GStreamer?=	../../multimedia/p5-GStreamer
 
 .include "../../devel/p5-glib2/buildlink3.mk"

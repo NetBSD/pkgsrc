@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2010/12/23 11:44:34 dsainty Exp $
+# $NetBSD: Makefile,v 1.35 2011/04/22 13:43:42 obache Exp $
 #
 
 DISTNAME=	dcraw-9.04
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/archive/
 

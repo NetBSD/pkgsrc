@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:06 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:42:53 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	libvisual
 GST_PLUGINS0.10_DIRS=	ext/libvisual
 GST_PLUGINS0.10_FLAGS=	libvisual
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:25:18 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2011/04/22 13:42:47 obache Exp $
 
 BUILDLINK_TREE+=	libgcrypt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgcrypt
 LIBGCRYPT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.0
-BUILDLINK_ABI_DEPENDS.libgcrypt+=	libgcrypt>=1.2.2nb1
+BUILDLINK_ABI_DEPENDS.libgcrypt+=	libgcrypt>=1.4.6nb2
 BUILDLINK_PKGSRCDIR.libgcrypt?=	../../security/libgcrypt
 
 .include "../../security/libgpg-error/buildlink3.mk"

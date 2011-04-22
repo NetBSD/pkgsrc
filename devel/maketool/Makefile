@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2010/01/29 19:03:44 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2011/04/22 13:43:20 obache Exp $
 #
 
 DISTNAME=	maketool-0.7-src
 PKGNAME=	maketool-0.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://home.alphalink.com.au/~gnb/maketool/
 

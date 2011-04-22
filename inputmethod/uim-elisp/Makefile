@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/20 11:08:48 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:43:58 obache Exp $
 
 .include		"../../inputmethod/uim/Makefile.common"
 PKGNAME=		${EMACS_PKGNAME_PREFIX}uim-elisp-${UIM_VERSION}
+PKGREVISION=		1
 CATEGORIES=		inputmethod editors
 
 COMMENT=		Emacs LISP for inputmethod/uim

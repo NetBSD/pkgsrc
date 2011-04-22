@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/17 12:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/22 13:42:11 obache Exp $
 #
 
 DISTNAME=	liblrdf-0.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lrdf/}
 

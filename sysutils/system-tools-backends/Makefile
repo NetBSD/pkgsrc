@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/04/19 16:10:16 roy Exp $
+# $NetBSD: Makefile,v 1.8 2011/04/22 13:42:25 obache Exp $
 #
 
 DISTNAME=		system-tools-backends-2.6.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://system-tools-backends.freedesktop.org/downloads/2.6/
 

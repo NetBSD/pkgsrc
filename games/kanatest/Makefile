@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/03/29 09:56:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2011/04/22 13:43:37 obache Exp $
 
 DISTNAME=	kanatest-0.4.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://clayo.org/kanatest/
 LICENSE=	gnu-gpl-v2

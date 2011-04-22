@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2011/02/25 09:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/04/22 13:43:50 obache Exp $
 #
 
 DISTNAME=		matplotlib-1.0.1
 PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-1.0.1
+PKGREVISION=		1
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
 

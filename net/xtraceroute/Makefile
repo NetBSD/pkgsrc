@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2010/02/11 23:26:12 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2011/04/22 13:44:30 obache Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net x11
 MASTER_SITES=	http://www.dtek.chalmers.se/~d3august/xt/dl/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \

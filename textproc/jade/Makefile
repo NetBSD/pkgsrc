@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2009/05/01 14:56:45 zafer Exp $
+# $NetBSD: Makefile,v 1.50 2011/04/22 13:42:00 obache Exp $
 
 DISTNAME=	jade-1.2.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/jade/ 

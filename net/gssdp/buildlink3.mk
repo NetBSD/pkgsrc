@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/06/13 22:45:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2011/04/22 13:42:23 obache Exp $
 
 BUILDLINK_TREE+=	gssdp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gssdp
 GSSDP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gssdp+=	gssdp>=0.7.1
-BUILDLINK_ABI_DEPENDS.gssdp?=	gssdp>=0.7.2nb1
+BUILDLINK_ABI_DEPENDS.gssdp?=	gssdp>=0.7.2nb5
 BUILDLINK_PKGSRCDIR.gssdp?=	../../net/gssdp
 
 .include "../../devel/glib2/buildlink3.mk"

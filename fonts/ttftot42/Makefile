@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:19 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/04/22 13:43:32 obache Exp $
 #
 
 DISTNAME=	ttftot42-0.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts print
 MASTER_SITES=	http://www.nih.at/ttftot42/
 

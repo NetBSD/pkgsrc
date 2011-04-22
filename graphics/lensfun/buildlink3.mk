@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/07/09 19:44:50 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2011/04/22 13:42:27 obache Exp $
 
 BUILDLINK_TREE+=	lensfun
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	lensfun
 LENSFUN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lensfun+=	lensfun>=0.2.2b
+BUILDLINK_ABI_DEPENDS.lensfun?=	lensfun>=0.2.5nb5
 BUILDLINK_PKGSRCDIR.lensfun?=	../../graphics/lensfun
 
 .include "../../devel/glib2/buildlink3.mk"

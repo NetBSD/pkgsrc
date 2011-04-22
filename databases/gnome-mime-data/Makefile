@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2009/07/22 09:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2011/04/22 13:42:05 obache Exp $
 #
 
 DISTNAME=		gnome-mime-data-2.18.0
+PKGREVISION=		1
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-mime-data/2.18/}
 EXTRACT_SUFX=		.tar.bz2

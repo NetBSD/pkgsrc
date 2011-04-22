@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2011/02/16 20:34:43 gls Exp $
+# $NetBSD: Makefile,v 1.31 2011/04/22 13:44:14 obache Exp $
 #
 
 DISTNAME=	DVDStyler-1.8.2.1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdstyler/}
 EXTRACT_SUFX=	.tar.bz2

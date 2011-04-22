@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2010/11/18 23:59:15 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2011/04/22 13:42:34 obache Exp $
 
 BUILDLINK_TREE+=	gtkhtml314
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkhtml314
 GTKHTML314_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkhtml314+=	gtkhtml314>=3.24.0
-BUILDLINK_ABI_DEPENDS.gtkhtml314?=	gtkhtml314>=3.32.1
+BUILDLINK_ABI_DEPENDS.gtkhtml314?=	gtkhtml314>=3.32.2nb1
 BUILDLINK_PKGSRCDIR.gtkhtml314?=	../../www/gtkhtml314
 
 .include "../../devel/GConf/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2010/02/10 19:17:46 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2011/04/22 13:44:52 obache Exp $
 
 DISTNAME=	yodl-1.31.18
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
 

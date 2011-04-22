@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/08/12 02:31:20 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/22 13:43:15 obache Exp $
 
 DISTNAME=	sqlsharpgtk-0.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://forgeftp.novell.com/sqlsharpgtk/SQL-Sharp%20For%20GTK-Sharp%200.4/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/22 13:42:58 obache Exp $
 #
 
 DISTNAME=	pykaraoke-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pykaraoke/}
 EXTRACT_SUFX=	.zip

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:11 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2011/04/22 13:44:34 obache Exp $
 #
 
 DISTNAME=	gtk-systrace-2002-12-01
 PKGNAME=	gtk-systrace-20021201
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security x11
 MASTER_SITES=	http://www.citi.umich.edu/u/provos/systrace/
 

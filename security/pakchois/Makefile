@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/03/31 18:37:34 agc Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/22 13:41:58 obache Exp $
 #
 
 DISTNAME=	pakchois-0.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.manyfish.co.uk/pakchois/
 

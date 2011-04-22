@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2010/12/23 11:44:59 dsainty Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/22 13:45:01 obache Exp $
 
 DISTNAME=	swiggle-0.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www graphics
 MASTER_SITES=	http://homepage.univie.ac.at/l.ertl/swiggle/files/
 

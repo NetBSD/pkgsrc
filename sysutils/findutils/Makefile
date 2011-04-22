@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2008/03/08 11:15:03 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2011/04/22 13:44:41 obache Exp $
 
 DISTNAME=	findutils-4.2.33
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=findutils/}
 

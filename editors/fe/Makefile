@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/01/12 04:17:38 bjs Exp $
+# $NetBSD: Makefile,v 1.13 2011/04/22 13:43:24 obache Exp $
 
 DISTNAME=	fe-1.8
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.moria.de/~michael/fe/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/08/29 11:33:14 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:10 obache Exp $
 
 DISTNAME=	lrzsz-0.12.20
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://www.ohse.de/uwe/releases/
 

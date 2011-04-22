@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2011/01/13 13:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2011/04/22 13:44:05 obache Exp $
 
 DISTNAME=	wmbiff-0.4.26
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	mail x11 windowmaker
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wmbiff/}
 

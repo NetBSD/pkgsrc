@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2010/05/26 01:32:33 obache Exp $
+# $NetBSD: Makefile,v 1.109 2011/04/22 13:44:59 obache Exp $
 
 DISTNAME=	lynx2.8.7
 PKGNAME=	lynx-2.8.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \
 		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/
