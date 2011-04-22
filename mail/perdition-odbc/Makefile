@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/06/02 12:50:04 adam Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/22 13:45:19 obache Exp $
 
 PERDITION_COMMENT=	UnixODBC user database module
 PERDITION_PKGNAME=	odbc
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

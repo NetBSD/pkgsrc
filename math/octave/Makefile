@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2011/01/13 13:53:29 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2011/04/22 13:44:07 obache Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.octave.org/pub/octave/
 EXTRACT_SUFX=	.tar.bz2

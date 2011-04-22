@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/01/17 14:16:50 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/22 13:44:31 obache Exp $
 #
 
 DISTNAME=	foomatic-db-engine-4.0.6
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.openprinting.org/download/foomatic/
 

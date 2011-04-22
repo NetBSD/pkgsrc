@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2008/07/14 12:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2011/04/22 13:44:26 obache Exp $
 
 DISTNAME=	napshare-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=napshare/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/12/15 21:42:05 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:43:31 obache Exp $
 #
 
 DISTNAME=	gphotofs-0.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 EXTRACT_SUFX=	.tar.bz2

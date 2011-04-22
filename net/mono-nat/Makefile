@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/08/12 02:31:19 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/22 13:42:30 obache Exp $
 
 DISTNAME=	mono-nat-1.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://projects.qnetp.net/attachments/download/22/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2011/02/28 14:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2011/04/22 13:43:53 obache Exp $
 #
 
 DISTNAME=	tnt-1.9.2
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	ftp://ftp.wspse.de/pub/packet_radio/tnt/
 
