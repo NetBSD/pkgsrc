@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2011/04/22 14:52:18 spz Exp $
+
+--- xymonnet/Makefile.orig	2011-03-08 17:20:28.000000000 +0000
++++ xymonnet/Makefile
+@@ -59,6 +59,8 @@ c-ares/configure: c-ares-$(ARESVER).tar.
+ 	mv c-ares-$(ARESVER) c-ares
+ 	# Must touch "configure", or it will trigger a rebuild because it is older than the tar.gz file.
+ 	touch c-ares/configure
++	mkdir c-ares/.libs
++	touch c-ares/.libs/libcares.la
+ 
+ beastat: $(BEASTATOBJS) ../lib/libxymon.a
+ 	$(CC) $(CFLAGS) -o $@ $(RPATHOPT) $(BEASTATOBJS) ../lib/libxymon.a $(PCRELIBS) $(NETLIBS) $(LIBRTDEF)
