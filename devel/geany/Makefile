@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/01/13 13:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2011/04/22 13:43:18 obache Exp $
 
 DISTNAME=	geany-0.17
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geany/}
 

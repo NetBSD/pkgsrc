@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:24:49 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2011/04/22 13:41:55 obache Exp $
 
 BUILDLINK_PREFIX.gcc34:=${LOCALBASE}/gcc34
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	gcc34
 GCC34_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc34+=	gcc34>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc34?=	gcc34>=3.4.5nb1
+BUILDLINK_ABI_DEPENDS.gcc34?=	gcc34>=3.4.6nb4
 BUILDLINK_PKGSRCDIR.gcc34?=	../../lang/gcc34
 .  if exists(${BUILDLINK_PREFIX.gcc34}/bin/gcc)
 _GNAT1!=${BUILDLINK_PREFIX.gcc34}/bin/gcc -print-prog-name=gnat1

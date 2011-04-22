@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/07/14 12:55:59 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/04/22 13:42:48 obache Exp $
 
 VERSION=	3.2.0
 DISTNAME=	libotr-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	chat security
 MASTER_SITES=	http://www.cypherpunks.ca/otr/
 

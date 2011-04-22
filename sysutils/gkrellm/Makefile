@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2011/03/18 12:33:54 obache Exp $
+# $NetBSD: Makefile,v 1.65 2011/04/22 13:42:26 obache Exp $
 .include "Makefile.common"
 
-PKGREVISION=		6
+PKGREVISION=		7
 
 GKRELLM_PKGBASE=	gkrellm
 WRKSRC=			${GKRELLM_SRCDIR}

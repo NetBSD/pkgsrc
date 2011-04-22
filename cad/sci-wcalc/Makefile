@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2010/01/28 01:11:28 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2011/04/22 13:43:04 obache Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	sci-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Scilab Based Transmission Line Analysis/Synthesis Calculator
 

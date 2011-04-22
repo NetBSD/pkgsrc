@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2011/01/13 13:36:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2011/04/22 13:41:56 obache Exp $
 
 BUILDLINK_TREE+=	bmp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	bmp
 BMP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.bmp+=	bmp>=0.9.7rc2nb3
-BUILDLINK_ABI_DEPENDS.bmp?=	bmp>=0.9.7.1nb10
+BUILDLINK_ABI_DEPENDS.bmp?=	bmp>=0.9.7.1nb11
 BUILDLINK_PKGSRCDIR.bmp?=	../../audio/bmp
 
 .include "../../devel/gettext-lib/buildlink3.mk"

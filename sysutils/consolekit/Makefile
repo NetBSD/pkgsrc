@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2010/12/26 20:53:14 markd Exp $
+# $NetBSD: Makefile,v 1.13 2011/04/22 13:42:39 obache Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
 DISTNAME=		ConsoleKit-${CONSOLEKIT_VER}
 PKGNAME=		consolekit-${CONSOLEKIT_VER}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.freedesktop.org/software/ConsoleKit/dist/
 EXTRACT_SUFX=		.tar.bz2

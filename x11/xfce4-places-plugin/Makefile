@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/03/24 14:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/04/22 13:42:18 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	1.0.0
 
 DISTNAME=	xfce4-places-plugin-${XFCE4_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-places-plugin/
 COMMENT=	Xfce Places plugin

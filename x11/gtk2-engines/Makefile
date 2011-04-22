@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2011/01/13 13:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2011/04/22 13:42:44 obache Exp $
 
 DISTNAME=		gtk-engines-2.20.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-engines/2.20/}
 EXTRACT_SUFX=		.tar.bz2

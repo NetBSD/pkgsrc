@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/02/13 00:20:24 rumko Exp $
+# $NetBSD: Makefile,v 1.17 2011/04/22 13:44:28 obache Exp $
 #
 
 DISTNAME=	tinc-1.0.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.tinc-vpn.org/packages/
 

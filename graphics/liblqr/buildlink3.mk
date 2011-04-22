@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/05/22 20:33:23 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2011/04/22 13:42:17 obache Exp $
 
 BUILDLINK_TREE+=	liblqr
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	liblqr
 LIBLQR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblqr+=	liblqr>=0.4.1
+BUILDLINK_ABI_DEPENDS.liblqr?=	liblqr>=0.4.1nb1
 BUILDLINK_PKGSRCDIR.liblqr?=	../../graphics/liblqr
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:39 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2011/04/22 13:44:54 obache Exp $
 #
 
 DISTNAME=	wmclockmon-0.8.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time x11
 MASTER_SITES=	http://tnemeth.free.fr/projets/programmes/
 

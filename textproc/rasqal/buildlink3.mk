@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2010/01/20 10:40:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2011/04/22 13:42:11 obache Exp $
 
 BUILDLINK_TREE+=	rasqal
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	rasqal
 RASQAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rasqal+=	rasqal>=0.9.17
+BUILDLINK_ABI_DEPENDS.rasqal?=	rasqal>=0.9.21nb1
 BUILDLINK_PKGSRCDIR.rasqal?=	../../textproc/rasqal
 
 .include "../../textproc/raptor/buildlink3.mk"

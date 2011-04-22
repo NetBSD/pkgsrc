@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2010/07/14 16:13:20 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2011/04/22 13:45:13 obache Exp $
 #
 
 DISTNAME=	libxklavier-5.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gswitchit/}
 EXTRACT_SUFX=	.tar.bz2

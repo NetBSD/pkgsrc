@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:06 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/22 13:45:22 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	sid
 GST_PLUGINS0.10_DIRS=	ext/sidplay
 GST_PLUGINS0.10_FLAGS=	sidplay
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2011/03/04 13:14:05 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/04/22 13:43:51 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gdkpixbuf-${VERSION}
 COMMENT=		Ruby binding of GdkPixbuf-2.x
+PKGREVISION=		1
 CATEGORIES=		graphics devel
 
 CONFLICTS+=		ruby-gnome2-gdkpixbuf-[0-9]*

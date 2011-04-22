@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2010/06/02 16:43:26 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2011/04/22 13:42:28 obache Exp $
 
 BUILDLINK_TREE+=	glibmm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glibmm
 GLIBMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.24.2
-BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.24.2
+BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.24.2nb1
 BUILDLINK_PKGSRCDIR.glibmm?=	../../devel/glibmm
 
 .include "../../devel/glib2/buildlink3.mk"

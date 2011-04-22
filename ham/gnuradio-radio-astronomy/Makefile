@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2011/01/13 13:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2011/04/22 13:43:53 obache Exp $
 
 PKGNAME=	gnuradio-radio-astronomy-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	GNU Radio module for radio astronomy
 
 PKG_DESTDIR_SUPPORT=	user-destdir

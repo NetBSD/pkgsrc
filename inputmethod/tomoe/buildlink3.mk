@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:47 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2011/04/22 13:42:25 obache Exp $
 
 BUILDLINK_TREE+=	tomoe
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	tomoe
 TOMOE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tomoe+=	tomoe>=0.6.0
+BUILDLINK_ABI_DEPENDS.tomoe?=	tomoe>=0.6.0nb2
 BUILDLINK_PKGSRCDIR.tomoe?=	../../inputmethod/tomoe
 
 .include "../../devel/glib2/buildlink3.mk"

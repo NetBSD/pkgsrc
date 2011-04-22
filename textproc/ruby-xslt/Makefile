@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/02/21 16:01:22 taca Exp $
+# $NetBSD: Makefile,v 1.8 2011/04/22 13:44:52 obache Exp $
 
 DISTNAME=	ruby-xslt-0.9.8
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

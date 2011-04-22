@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2011/01/13 13:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/04/22 13:42:29 obache Exp $
 
 DISTNAME=	libglademm-2.6.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libglademm/2.6/}
 EXTRACT_SUFX=	.tar.bz2

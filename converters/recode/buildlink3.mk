@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:04 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2011/04/22 13:41:54 obache Exp $
 
 BUILDLINK_TREE+=	recode
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	recode
 RECODE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.recode+=	recode>=3.6nb1
-BUILDLINK_ABI_DEPENDS.recode+=	recode>=3.6nb3
+BUILDLINK_ABI_DEPENDS.recode+=	recode>=3.6nb5
 BUILDLINK_PKGSRCDIR.recode?=	../../converters/recode
 
 .include "../../devel/gettext-lib/buildlink3.mk"

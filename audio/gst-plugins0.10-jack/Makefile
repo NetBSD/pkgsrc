@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/04/08 13:50:34 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/22 13:45:21 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	jack
 GST_PLUGINS0.10_DIRS=	ext/jack
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

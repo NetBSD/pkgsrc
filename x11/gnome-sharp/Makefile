@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2011/01/13 13:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/04/22 13:42:30 obache Exp $
 #
 
 DISTNAME=	gnome-sharp-2.24.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sharp/2.24/}
 

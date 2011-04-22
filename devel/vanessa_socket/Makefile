@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/06/02 12:43:37 adam Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/22 13:42:44 obache Exp $
 
 DISTNAME=	vanessa_socket-0.0.10
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.vergenet.net/linux/vanessa/download/vanessa_socket/0.0.10/
 EXTRACT_SUFX=	.tar.bz2

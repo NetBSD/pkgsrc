@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/07/14 12:56:20 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2011/04/22 13:45:17 obache Exp $
 
 DISTNAME=	xvattr-1.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 

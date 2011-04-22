@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2011/03/23 20:20:52 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2011/04/22 13:44:28 obache Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net games
 MASTER_SITES=	ftp://laurel.actlab.utexas.edu/pub/tinyfugue/ \
 		${MASTER_SITE_SOURCEFORGE:=tinyfugue/}

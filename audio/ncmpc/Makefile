@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2011/02/27 15:10:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/04/22 13:42:57 obache Exp $
 
 DISTNAME=		ncmpc-0.18
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 EXTRACT_SUFX=           .tar.bz2

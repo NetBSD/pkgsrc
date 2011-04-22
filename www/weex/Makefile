@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/07/10 12:46:43 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2011/04/22 13:45:01 obache Exp $
 
 DISTNAME=	weex-2.6.1.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=weex/}
 

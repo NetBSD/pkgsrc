@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/05 09:27:51 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/22 13:42:50 obache Exp $
 #
 
 DISTNAME=	blop-0.2.8
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blop/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/01/13 13:38:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/04/22 13:43:55 obache Exp $
 #
 
 DISTNAME=	kimera-2.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kimera/37271/}
 

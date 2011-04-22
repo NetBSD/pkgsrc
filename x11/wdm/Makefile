@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2011/03/09 16:30:44 drochner Exp $
+# $NetBSD: Makefile,v 1.44 2011/04/22 13:45:15 obache Exp $
 
 DISTNAME=		wdm-1.28
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		x11 windowmaker
 MASTER_SITES=		http://voins.program.ru/wdm/
 

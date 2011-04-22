@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2011/01/13 13:36:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2011/04/22 13:42:25 obache Exp $
 
 BUILDLINK_TREE+=	gtk-vnc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtk-vnc
 GTK_VNC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk-vnc+=	gtk-vnc>=0.3.7
-BUILDLINK_ABI_DEPENDS.gtk-vnc?=	gtk-vnc>=0.3.10nb4
+BUILDLINK_ABI_DEPENDS.gtk-vnc?=	gtk-vnc>=0.3.10nb5
 BUILDLINK_PKGSRCDIR.gtk-vnc?=	../../net/gtk-vnc
 
 pkgbase := gtk-vnc

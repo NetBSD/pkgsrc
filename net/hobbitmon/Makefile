@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2011/01/13 13:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2011/04/22 13:44:23 obache Exp $
 #
 
 DISTNAME=	hobbit-4.0-beta6
 PKGNAME=	hobbit-4.0b6
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
 

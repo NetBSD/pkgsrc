@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2011/01/13 13:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2011/04/22 13:43:39 obache Exp $
 #
 
 DISTNAME=	warzone2100-2.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=warzone2100/}
 

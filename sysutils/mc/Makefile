@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2011/03/08 11:42:00 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2011/04/22 13:44:44 obache Exp $
 
 DISTNAME=	mc-4.7.0.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2

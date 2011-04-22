@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2011/01/13 13:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2011/04/22 13:44:03 obache Exp $
 #
 
 DISTNAME=	mail-notification-5.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 EXTRACT_SUFX=	.tar.bz2

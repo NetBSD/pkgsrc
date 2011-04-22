@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2010/07/30 10:36:23 asau Exp $
+# $NetBSD: Makefile,v 1.10 2011/04/22 13:43:04 obache Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	oct-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Octave Based Transmission Line Analysis/Synthesis Calculator
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2011/01/13 13:36:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2011/04/22 13:42:43 obache Exp $
 
 BUILDLINK_TREE+=	fnlib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fnlib
 FNLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fnlib+=	fnlib>=0.5nb6
-BUILDLINK_ABI_DEPENDS.fnlib+=	fnlib>=0.5nb14
+BUILDLINK_ABI_DEPENDS.fnlib+=	fnlib>=0.5nb16
 BUILDLINK_PKGSRCDIR.fnlib?=	../../graphics/fnlib
 
 .include "../../graphics/imlib/buildlink3.mk"

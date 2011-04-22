@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/01/13 13:36:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/22 13:42:31 obache Exp $
 #
 
 DISTNAME=	Gnome2-VFS-1.081
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2010/01/29 23:39:30 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2011/04/22 13:43:37 obache Exp $
 
 DISTNAME=	lincity-1.12.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lincity/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/01/13 13:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:49 obache Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -7,7 +7,7 @@ MAKE_JOBS_SAFE=		no
 .include "../../x11/p5-gtk/Makefile.common"
 
 PKGNAME=	p5-Gdk-Pixbuf-${GTKPERL_VERSION}
-PKGREVISION=	18
+PKGREVISION=	19
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 Gtk::Gdk::Pixbuf
