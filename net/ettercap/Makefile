@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2011/04/09 08:43:56 obache Exp $
+# $NetBSD: Makefile,v 1.52 2011/04/22 14:40:44 obache Exp $
 
 DISTNAME=		ettercap-0.6.b
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ettercap/}
 
