@@ -14,44 +14,44 @@ name="xymonclient"
 
 # user-settable rc.conf variables
 : ${xymon_launchcfg:="@XYETCDIR@/clientlaunch.cfg"}
-: ${xymon_clientcfg:="@XYETCDIR@/hobbitclient.cfg"}
-: ${xymon_log:="@BBLOGDIR@/clientlaunch.log"}
+: ${xymon_clientcfg:="@XYETCDIR@/xymonclient.cfg"}
+: ${xymon_log:="@XYMONLOGDIR@/clientlaunch.log"}
 : ${xymon_pidfile:="/var/run/xymonclient.pid"}
 
 rcvar=${name}
 xymonclient_user="xymon"
 pidfile=${xymon_pidfile}
 required_files="${xymon_launchcfg} ${xymon_clientcfg}"
-command="@XYBINDIR@/client/hobbitlaunch"
+command="@XYBINDIR@/client/xymonlaunch"
 command_args="--config=${xymon_launchcfg} --env=${xymon_clientcfg} --log=${xymon_log} --pidfile=${xymon_pidfile}"
 
 xymon_precmd()
 {
-	HOBBITCLIENTHOME="@BBHOME@/client"
-	export HOBBITCLIENTHOME
-	if [ ! -h $HOBBITCLIENTHOME/bin ]; then
-		ln -s @XYBINDIR@/client $HOBBITCLIENTHOME/bin
+	XYMONCLIENTHOME="@XYMONHOME@/client"
+	export XYMONCLIENTHOME
+	if [ ! -h $XYMONCLIENTHOME/bin ]; then
+		ln -s @XYBINDIR@/client $XYMONCLIENTHOME/bin
 	fi
-	if [ ! -h $HOBBITCLIENTHOME/etc ]; then
-		ln -s @XYETCDIR@ $HOBBITCLIENTHOME/etc
+	if [ ! -h $XYMONCLIENTHOME/etc ]; then
+		ln -s @XYETCDIR@ $XYMONCLIENTHOME/etc
 	fi
-	if [ ! -h $HOBBITCLIENTHOME/ext ]; then
-		ln -s @XYEXTDIR@/client $HOBBITCLIENTHOME/ext
+	if [ ! -h $XYMONCLIENTHOME/ext ]; then
+		ln -s @XYEXTDIR@/client $XYMONCLIENTHOME/ext
 	fi
-	if [ ! -h $HOBBITCLIENTHOME/tmp ]; then
-		ln -s @XYTMPDIR@/client $HOBBITCLIENTHOME/tmp
+	if [ ! -h $XYMONCLIENTHOME/tmp ]; then
+		ln -s @XYTMPDIR@/client $XYMONCLIENTHOME/tmp
 	fi
-	if [ ! -h $HOBBITCLIENTHOME/logs ]; then
-		ln -s @BBLOGDIR@ $HOBBITCLIENTHOME/logs
+	if [ ! -h $XYMONCLIENTHOME/logs ]; then
+		ln -s @XYMONLOGDIR@ $XYMONCLIENTHOME/logs
 	fi
 	touch ${xymon_pidfile} && chown ${xymonclient_user} ${xymon_pidfile}
 
 	MACHINEDOTS="`uname -n`"
 	export MACHINEDOTS
-	BBOSTYPE="`uname -s | tr '[ABCDEFGHIJKLMNOPQRSTUVWXYZ/]' '[abcdefghijklmnopqrstuvwxyz_]'`"
-	export BBOSTYPE
-	BBOSSCRIPT="hobbitclient-$BBOSTYPE.sh"
-	export BBOSSCRIPT
+	XYMONOSTYPE="`uname -s | tr '[ABCDEFGHIJKLMNOPQRSTUVWXYZ/]' '[abcdefghijklmnopqrstuvwxyz_]'`"
+	export XYMONOSTYPE
+	XYMONOSSCRIPT="xymonclient-$XYMONOSTYPE.sh"
+	export XYMONOSSCRIPT
 }
 
 start_precmd="xymon_precmd"
