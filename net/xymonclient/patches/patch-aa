@@ -1,34 +1,34 @@
-$NetBSD: patch-aa,v 1.2 2011/02/07 20:37:00 spz Exp $
+$NetBSD: patch-aa,v 1.3 2011/04/22 15:37:02 spz Exp $
 
---- configure.client.orig	2009-02-22 20:41:16.000000000 +0000
+--- configure.client.orig	2011-03-08 17:20:28.000000000 +0000
 +++ configure.client
 @@ -75,7 +75,7 @@ then
- 	BBUSER="xymon"
+ 	XYMONUSER="xymon"
  fi
  
--if test -z "$BBTOPDIR"
-+if test -z "$BBHOME"
+-if test -z "$XYMONTOPDIR"
++if test -z "$XYMONHOME"
  then
  	if test "`uname -s`" = "Darwin"
  	then
-@@ -92,22 +92,24 @@ then
+@@ -92,29 +92,31 @@ then
  		echo ""; echo ""
- 		HOMEDIR="`dscl . -read /Users/$BBUSER | grep HomeDirectory | awk '{print $2}'`"
+ 		HOMEDIR="`dscl . -read /Users/$XYMONUSER | grep HomeDirectory | awk '{print $2}'`"
  	else
--		USERDATA=`getent passwd $BBUSER 2>/dev/null || ypmatch "${BBUSER}" passwd || grep "^${BBUSER}:" /etc/passwd`
+-		USERDATA=`getent passwd $XYMONUSER 2>/dev/null || ypmatch "${XYMONUSER}" passwd || grep "^${XYMONUSER}:" /etc/passwd`
 -		if test $? -eq 0
 -		then
 -			echo "Found passwd entry for user $USERDATA"
 -		else
--			echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
+-			echo "FAILURE: The user $XYMONUSER does not exist. Create user and try again."
 -			exit 1
 +		if [ -z ${PKGBUILD} ]; then
-+			USERDATA=`getent passwd $BBUSER 2>/dev/null || ypmatch "${BBUSER}" passwd || grep "^${BBUSER}:" /etc/passwd`
++			USERDATA=`getent passwd $XYMONUSER 2>/dev/null || ypmatch "${XYMONUSER}" passwd || grep "^${XYMONUSER}:" /etc/passwd`
 +			if test $? -eq 0
 +			then
 +				echo "Found passwd entry for user $USERDATA"
 +			else
-+				echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
++				echo "FAILURE: The user $XYMONUSER does not exist. Create user and try again."
 +				exit 1
 +			fi
 +			echo ""; echo ""
@@ -38,27 +38,35 @@ $NetBSD: patch-aa,v 1.2 2011/02/07 20:37:00 spz Exp $
 -		HOMEDIR="`echo $USERDATA|cut -d: -f6`"
  	fi
  else
--	HOMEDIR="$BBTOPDIR"
-+	HOMEDIR="$BBHOME"
+-	HOMEDIR="$XYMONTOPDIR"
++	HOMEDIR="$XYMONHOME"
  fi
  
 -echo "Where do you want the Xymon installation [${HOMEDIR}] ?"
-+echo "Where do you want the Xymon installation [${BBTOPDIR}] ?"
- if test -z "$BBTOPDIR"
++echo "Where do you want the Xymon installation [${XYMONTOPDIR}] ?"
+ if test -z "$XYMONTOPDIR"
  then
- 	read BBTOPDIR
+ 	read XYMONTOPDIR
+ fi
+ if test -z "$XYMONTOPDIR"
+ then
+-	XYMONTOPDIR=${HOMEDIR}
++	XYMONTOPDIR=${XYMONTOPDIR}
+ fi
+ if test -d "$XYMONTOPDIR"
+ then
 @@ -158,9 +160,12 @@ echo "# Toplevel dir"                   
- echo "BBTOPDIR = $BBTOPDIR"              >>Makefile
+ echo "XYMONTOPDIR = $XYMONTOPDIR"        >>Makefile
  echo "# Server home dir for etc/, www/"  >>Makefile
- echo "BBHOME = $BBHOME"                  >>Makefile
-+echo "HOBBITCLIENTHOME = $BBHOME/client" >>Makefile
+ echo "XYMONHOME = $XYMONHOME"            >>Makefile
++echo "XYMONCLIENTHOME = $XYMONHOME/client"            >>Makefile
  echo ""                                  >>Makefile
  echo "# Xymon settings follows"          >>Makefile
  echo "#"                                 >>Makefile
 +echo "# Xymon Logdir"                    >>Makefile
-+echo "BBLOGDIR = $BBLOGDIR"              >>Makefile
++echo "XYMONLOGDIR = $XYMONLOGDIR"        >>Makefile
  echo "# Username running Xymon"          >>Makefile
- echo "BBUSER = $BBUSER"                  >>Makefile
+ echo "XYMONUSER = $XYMONUSER"            >>Makefile
  echo "# Xymon server IP-address"         >>Makefile
 @@ -194,6 +199,9 @@ fi
  if test "$INSTALLETCDIR" != ""; then

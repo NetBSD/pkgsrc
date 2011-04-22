@@ -1,29 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/14 16:11:11 spz Exp $
-libexec/xymon/client/bb
-libexec/xymon/client/bbcmd
-libexec/xymon/client/bbdigest
-libexec/xymon/client/bbhostgrep
-libexec/xymon/client/bbhostshow
+@comment $NetBSD: PLIST,v 1.2 2011/04/22 15:37:02 spz Exp $
 libexec/xymon/client/clientupdate
-libexec/xymon/client/hobbitclient-aix.sh
-libexec/xymon/client/hobbitclient-darwin.sh
-libexec/xymon/client/hobbitclient-freebsd.sh
-libexec/xymon/client/hobbitclient-hp-ux.sh
-libexec/xymon/client/hobbitclient-irix.sh
-libexec/xymon/client/hobbitclient-linux.sh
-libexec/xymon/client/hobbitclient-${LOWER_OPSYS}.sh
-libexec/xymon/client/hobbitclient-openbsd.sh
-libexec/xymon/client/hobbitclient-osf1.sh
-libexec/xymon/client/hobbitclient-sco_sv.sh
-libexec/xymon/client/hobbitclient-sunos.sh
-libexec/xymon/client/hobbitclient.sh
-libexec/xymon/client/hobbitlaunch
 libexec/xymon/client/logfetch
 libexec/xymon/client/msgcache
 libexec/xymon/client/${LOWER_OPSYS}-meminfo
-libexec/xymon/client/orcahobbit
+libexec/xymon/client/orcaxymon
 libexec/xymon/client/runclient.sh
+libexec/xymon/client/xymon
+libexec/xymon/client/xymoncfg
+libexec/xymon/client/xymonclient-aix.sh
+libexec/xymon/client/xymonclient-darwin.sh
+libexec/xymon/client/xymonclient-freebsd.sh
+libexec/xymon/client/xymonclient-hp-ux.sh
+libexec/xymon/client/xymonclient-irix.sh
+libexec/xymon/client/xymonclient-linux.sh
+libexec/xymon/client/xymonclient-${LOWER_OPSYS}.sh
+libexec/xymon/client/xymonclient-openbsd.sh
+libexec/xymon/client/xymonclient-osf1.sh
+libexec/xymon/client/xymonclient-sco_sv.sh
+libexec/xymon/client/xymonclient-sunos.sh
+libexec/xymon/client/xymonclient-unixware.sh
+libexec/xymon/client/xymonclient.sh
+libexec/xymon/client/xymoncmd
+libexec/xymon/client/xymondigest
+libexec/xymon/client/xymongrep
+libexec/xymon/client/xymonlaunch
 share/examples/rc.d/xymonclient
 share/examples/xymon/clientlaunch.cfg
-share/examples/xymon/hobbitclient.cfg
-share/examples/xymon/localclient.cfg
+share/examples/xymon/xymonclient.cfg
+@pkgdir share/examples/xymon
+@pkgdir libexec/xymon/ext/client
