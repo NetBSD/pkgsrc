@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2011/04/22 13:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.33 2011/04/23 17:31:40 tron Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python25-${PY_DISTVERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -147,9 +147,7 @@ INSTALL_TARGET=	altinstall
 REPLACE_INTERPRETER+=	py25
 REPLACE.py25.old=	.*python[^ ]*
 REPLACE.py25.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py25=	Lib/cgi.py	# explicitly demanded to be patched
-REPLACE_FILES.py25+=	Lib/bsddb/dbshelve.py Lib/test/test_bz2.py
-REPLACE_FILES.py25+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
+REPLACE_FILES.py25=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
 
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
