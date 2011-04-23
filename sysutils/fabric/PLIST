@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/03/08 21:29:34 gls Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/04/23 15:23:53 gls Exp $
 bin/fab
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -82,6 +82,7 @@ share/doc/fabric/changes/0.9.3.rst
 share/doc/fabric/changes/0.9.4.rst
 share/doc/fabric/changes/0.9.5.rst
 share/doc/fabric/changes/0.9.rst
+share/doc/fabric/changes/1.0.1.rst
 share/doc/fabric/changes/1.0.rst
 share/doc/fabric/development.rst
 share/doc/fabric/faq.rst
