@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/04/23 06:04:37 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/04/23 06:06:30 obache Exp $
 
 BUILDLINK_TREE+=	python24
 
@@ -23,4 +23,3 @@ BUILDLINK_DEPMETHOD.python24?=	${BUILDLINK_DEPMETHOD.python}
 .endif # PYTHON24_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-python24
-
