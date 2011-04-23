@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.977 2011/04/23 08:54:13 obache Exp $
+$NetBSD: CHANGES-2011,v 1.978 2011/04/23 10:40:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1624,3 +1624,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/postgresql83-pltcl to 8.3.15 [adam 2011-04-22]
 	Updated sysutils/capistrano to 2.5.21 [gls 2011-04-22]
 	Updated lang/python24 to 2.4.6 [obache 2011-04-23]
+	Updated lang/python27 to 2.7.1nb3 [tron 2011-04-23]
