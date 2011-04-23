@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2011/04/23 01:41:36 obache Exp $
+# $NetBSD: Makefile,v 1.38 2011/04/23 10:39:01 tron Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python26-${PY_DISTVERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -142,16 +142,7 @@ INSTALL_TARGET=	altinstall
 REPLACE_INTERPRETER+=	py26
 REPLACE.py26.old=	.*python[^ ]*
 REPLACE.py26.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py26=	Lib/cgi.py	# explicitly demanded to be patched
-REPLACE_FILES.py26+=	Lib/bsddb/dbshelve.py Lib/test/test_bz2.py
-REPLACE_FILES.py26+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
-REPLACE_FILES.py26+=	Lib/*.py
-REPLACE_FILES.py26+=	Lib/test/*.py
-REPLACE_FILES.py26+=	Lib/bsddb/test/test_dbtables.py
-REPLACE_FILES.py26+=	Lib/encodings/rot_13.py
-REPLACE_FILES.py26+=	Lib/idlelib/PyShell.py
-REPLACE_FILES.py26+=	Lib/lib2to3/pgen2/token.py
-REPLACE_FILES.py26+=	Lib/lib2to3/tests/pytree_idempotency.py
+REPLACE_FILES.py26=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
 
 SUBST_CLASSES+=		findlib
 SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
