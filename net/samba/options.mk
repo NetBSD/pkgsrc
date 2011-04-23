@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2010/12/06 16:40:50 adam Exp $
+# $NetBSD: options.mk,v 1.27 2011/04/23 12:49:38 tron Exp $
 
 # Recommended package options for various setups:
 #
@@ -32,6 +32,11 @@ PKG_OPTIONS+=		ldap
 .  endif
 CONFIGURE_ARGS+=	--with-ads
 CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE:Q}
+
+# Avoid build failures with recent version of Heimdal under NetBSD.
+.  if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=	samba_cv_HAVE_KRB5_DEPRECATED_WITH_IDENTIFIER=no
+.  endif
 
 # ignore gssapi.h on Solaris as it conflicts with <gssapi/gssapi.h>
 .  if ${OPSYS} == "SunOS"
