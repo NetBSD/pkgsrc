@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2011/03/14 21:29:20 minskim Exp $
+# $NetBSD: Makefile,v 1.64 2011/04/23 17:29:39 tron Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	47
+PKGREVISION=	48
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -24,7 +24,7 @@ DEPENDS+=	web2c>=7.5.7nb2:../../print/web2c
 
 INFO_FILES=	# PLIST
 
-USE_TOOLS+=	bison lex
+USE_TOOLS+=	bison perl:run lex
 
 USE_LIBTOOL=	yes
 
@@ -69,6 +69,8 @@ TEX_FORMATS=	"aleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\n
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
 .include "../../print/texlive-tetex/format.mk"
+
+REPLACE_PERL=	texk/tetex/texdoctk
 
 post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
