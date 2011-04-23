@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/11/13 11:21:05 obache Exp $
+$NetBSD: distinfo,v 1.6 2011/04/23 21:46:59 adam Exp $
 
-SHA1 (lzo-2.04.tar.gz) = f5bf5c7ae4116e60513e5788d156ef78946677e7
-RMD160 (lzo-2.04.tar.gz) = 8fcfcd45144d63db397ef1e8b1bd5140e456fdaf
-Size (lzo-2.04.tar.gz) = 604424 bytes
+SHA1 (lzo-2.05.tar.gz) = 2307bcd0d13f1d53b623a54094c33b703544111c
+RMD160 (lzo-2.05.tar.gz) = 206ecf9b2d1aaada97268fbf422439de21ef3d15
+Size (lzo-2.05.tar.gz) = 587694 bytes
 SHA1 (patch-aa) = d1220a9d349e7d86cd1c76215a5e0e7a9fb1613e
