@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/22 13:44:04 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/04/23 08:09:43 obache Exp $
 #
 
 DISTNAME=	milter-manager-1.6.8
@@ -80,6 +80,13 @@ BUILD_DEFS+=		MILTER_MANAGER_GROUP
 BUILD_DEFS+=		MILTER_MANAGER_SOCKET_GROUP
 
 REPLACE_RUBY=		admin/public/dispatch.*
+REPLACE_RUBY+=		admin/script/*
+REPLACE_RUBY+=		admin/script/performance/*
+REPLACE_RUBY+=		admin/script/process/*
+REPLACE_RUBY+=		data/munin/milter_manager_
+REPLACE_RUBY+=		tool/milter-manager-log-analyzer
+REPLACE_RUBY+=		tool/milter-performance-check
+REPLACE_RUBY+=		tool/milter-report-statistics
 .include "../../lang/ruby/replace.mk"
 
 .include "../../lang/ruby/buildlink3.mk"
