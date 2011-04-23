@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:44:49 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/23 04:12:50 obache Exp $
 #
 
 DISTNAME=	groonga-1.2.0
@@ -37,6 +37,8 @@ OWN_DIRS+=		${VARBASE}/log/${PKGBASE}
 
 CHECK_WRKREF_SKIP+=	bin/groonga
 CHECK_INTERPRETER_SKIP+=	share/groonga/examples/*
+# XXX: should be in separate package.
+CHECK_INTERPRETER_SKIP+=	share/groonga/munin/plugins/*
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
