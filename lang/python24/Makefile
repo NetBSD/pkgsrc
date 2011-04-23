@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2011/04/22 13:42:00 obache Exp $
+# $NetBSD: Makefile,v 1.56 2011/04/23 08:53:53 obache Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python24-${PY_DISTVERSION}
-PKGREVISION=	7
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -139,6 +138,8 @@ REPLACE.py24.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
 REPLACE_FILES.py24=	Lib/cgi.py	# explicitly demanded to be patched
 REPLACE_FILES.py24+=	Lib/bsddb/dbshelve.py Lib/test/test_bz2.py
 REPLACE_FILES.py24+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
+REPLACE_FILES.py24+=	Lib/*.py
+REPLACE_FILES.py24+=	Lib/test/*.py
 
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
