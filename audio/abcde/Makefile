@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2011/04/21 17:53:26 hans Exp $
+# $NetBSD: Makefile,v 1.46 2011/04/24 16:17:53 wiz Exp $
 
 DISTNAME=	abcde-2.3.99.7_p235
 PKGNAME=	abcde-2.3.99.7
@@ -16,7 +16,7 @@ DEPENDS+=	cd-discid>=0.7:../../audio/cd-discid
 DEPENDS+=	id3-[0-9]*:../../audio/id3
 DEPENDS+=	id3v2-[0-9]*:../../audio/id3v2
 .if ${OPSYS} != "SunOS"
-DEPENDS+=	cdparanoia>=>=3.0.9.7:../../audio/cdparanoia
+DEPENDS+=	cdparanoia>=3.0.9.7:../../audio/cdparanoia
 .endif
 DEPENDS+=	mkcue>=2.1:../../misc/mkcue
 
