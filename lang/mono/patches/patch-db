@@ -1,6 +1,6 @@
-$NetBSD: patch-db,v 1.4 2010/12/29 05:41:20 obache Exp $
---- mono/utils/mono-proclib.c.orig	2010-11-12 10:24:41.000000000 +0000
-+++ mono/utils/mono-proclib.c
+$NetBSD: patch-db,v 1.5 2011/04/25 14:01:40 kefren Exp $
+--- mono/utils/mono-proclib.c.orig	2011-02-23 21:21:01.000000000 +0200
++++ mono/utils/mono-proclib.c	2011-04-25 12:35:21.000000000 +0300
 @@ -13,11 +13,13 @@
  #endif
  
@@ -13,10 +13,10 @@ $NetBSD: patch-db,v 1.4 2010/12/29 05:41:20 obache Exp $
 +#ifndef __DragonFly__
  #include <sys/proc.h>
 +#endif
- #ifdef HAVE_SYS_USER_H
- #include <sys/user.h>
+ #if defined(__APPLE__)
+ #include <mach/mach.h>
  #endif
-@@ -29,6 +31,9 @@
+@@ -32,6 +34,9 @@
  #    define kinfo_pid_member kp_proc.p_pid
  #    define kinfo_name_member kp_proc.p_comm
  #  endif
