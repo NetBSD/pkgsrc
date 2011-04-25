@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.26 2010/10/16 04:32:18 kefren Exp $
---- configure.orig	2010-10-05 23:00:40.000000000 +0300
-+++ configure	2010-10-15 08:28:52.000000000 +0300
-@@ -3106,7 +3106,7 @@
+$NetBSD: patch-ab,v 1.27 2011/04/25 14:01:40 kefren Exp $
+--- configure.orig	2011-02-23 21:34:00.000000000 +0200
++++ configure	2011-04-25 12:37:59.000000000 +0300
+@@ -3123,7 +3123,7 @@
  		host_win32=yes
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
--			if test "x$host" == "x$target"; then
-+			if test "x$host" = "x$target"; then
+-			if test "x$host" == "x$build"; then
++			if test "x$host" = "x$build"; then
  
  cat >>confdefs.h <<\_ACEOF
  #define TARGET_WIN32 1
-@@ -3153,12 +3153,15 @@
+@@ -3171,12 +3171,15 @@
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.26 2010/10/16 04:32:18 kefren Exp $
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -3174,7 +3177,8 @@
+@@ -3192,7 +3195,8 @@
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.26 2010/10/16 04:32:18 kefren Exp $
  		need_link_unlink=yes
  
  cat >>confdefs.h <<\_ACEOF
-@@ -28824,6 +28828,9 @@
+@@ -28838,6 +28842,9 @@
  /* end confdefs.h.  */
  $ac_includes_default
  #include <$ac_header>
@@ -48,7 +48,7 @@ $NetBSD: patch-ab,v 1.26 2010/10/16 04:32:18 kefren Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -38453,7 +38460,7 @@
+@@ -39018,7 +39025,7 @@
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.26 2010/10/16 04:32:18 kefren Exp $
  
  sizeof_register="SIZEOF_VOID_P"
  
-@@ -39038,10 +39045,12 @@
+@@ -39646,10 +39653,12 @@
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
