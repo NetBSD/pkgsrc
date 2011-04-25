@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.986 2011/04/25 13:38:25 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.987 2011/04/25 14:09:25 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1633,3 +1633,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/pavucontrol to 0.9.10 [shattered 2011-04-24]
 	Updated net/mikutter to 0.0.3.1 [obache 2011-04-25]
 	Added fonts/droid-ttf version 20100923 [ryoon 2011-04-25]
+	Updated lang/mono to 2.10.1 [kefren 2011-04-25]
+	Updated lang/mono-basic to 2.10 [kefren 2011-04-25]
+	Updated devel/mono-tools to 2.10 [kefren 2011-04-25]
+	Updated devel/mono-addins to 0.6.1 [kefren 2011-04-25]
+	Updated graphics/libgdiplus to 2.10 [kefren 2011-04-25]
+	Updated www/mono-xsp to 2.10 [kefren 2011-04-25]
+	Updated www/ap-mono to 2.10 [kefren 2011-04-25]
