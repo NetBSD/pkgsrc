@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/25 13:37:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/25 13:45:43 ryoon Exp $
 lib/X11/fonts/TTF/DroidSans-Bold.ttf
 lib/X11/fonts/TTF/DroidSans.ttf
 lib/X11/fonts/TTF/DroidSansArabic.ttf
@@ -12,5 +12,5 @@ lib/X11/fonts/TTF/DroidSerif-Bold.ttf
 lib/X11/fonts/TTF/DroidSerif-BoldItalic.ttf
 lib/X11/fonts/TTF/DroidSerif-Italic.ttf
 lib/X11/fonts/TTF/DroidSerif-Regular.ttf
-share/doc/droid-fonts/NOTICE
-share/doc/droid-fonts/README.txt
+share/doc/${PKGBASE}/NOTICE
+share/doc/${PKGBASE}/README.txt
