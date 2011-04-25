@@ -1,3 +1,4 @@
-A package for adding a columns of numbering to the general text so
-that the text can be properly referenced.  The vertical ruler can be
-scaled and moved freely.  Supports LaTeX and plain TeX.
+The package offers facilities for adding a columns of numbering to the
+general text so that the text can be properly referenced.  The
+vertical ruler can be scaled and moved freely.  The package may be
+used either with LaTeX or with plain TeX.
