@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.984 2011/04/24 13:44:56 shattered Exp $
+$NetBSD: CHANGES-2011,v 1.985 2011/04/25 13:05:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1631,3 +1631,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/python25 to 2.5.5nb5 [tron 2011-04-23]
 	Updated archivers/lzo to 2.05 [adam 2011-04-23]
 	Updated audio/pavucontrol to 0.9.10 [shattered 2011-04-24]
+	Updated net/mikutter to 0.0.3.1 [obache 2011-04-25]
