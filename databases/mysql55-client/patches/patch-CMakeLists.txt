@@ -1,0 +1,42 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/04/25 21:12:53 adam Exp $
+
+Split configuration between mysql-client and mysql-server.
+
+--- CMakeLists.txt.orig	2011-03-31 13:36:18.000000000 +0000
++++ CMakeLists.txt
+@@ -274,7 +274,6 @@ ADD_SUBDIRECTORY(strings)
+ ADD_SUBDIRECTORY(vio)
+ ADD_SUBDIRECTORY(regex)
+ ADD_SUBDIRECTORY(mysys)
+-ADD_SUBDIRECTORY(libmysql)
+ 
+ 
+ IF(WITH_UNIT_TESTS)
+@@ -286,9 +285,13 @@ IF(WITH_UNIT_TESTS)
+ ENDIF()
+ 
+ ADD_SUBDIRECTORY(extra)
+-IF(NOT WITHOUT_SERVER)
+-  ADD_SUBDIRECTORY(tests)
++IF(WITHOUT_SERVER)
++  ADD_SUBDIRECTORY(libmysql)
+   ADD_SUBDIRECTORY(client)
++  ADD_SUBDIRECTORY(scripts)
++  ADD_SUBDIRECTORY(man)
++  ADD_SUBDIRECTORY(tests)
++ELSE()
+   ADD_SUBDIRECTORY(sql)
+   ADD_SUBDIRECTORY(sql/share)
+   ADD_SUBDIRECTORY(libservices)
+@@ -301,11 +304,7 @@ IF(NOT WITHOUT_SERVER)
+   ADD_SUBDIRECTORY(mysql-test)
+   ADD_SUBDIRECTORY(mysql-test/lib/My/SafeProcess)
+   ADD_SUBDIRECTORY(support-files)
+-  ADD_SUBDIRECTORY(scripts)
+   ADD_SUBDIRECTORY(sql-bench)
+-  IF(UNIX)
+-    ADD_SUBDIRECTORY(man)
+-  ENDIF()
+ ENDIF()
+ 
+ INCLUDE(cmake/abi_check.cmake)
