@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.988 2011/04/25 21:15:36 adam Exp $
+$NetBSD: CHANGES-2011,v 1.989 2011/04/25 22:42:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1642,3 +1642,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ap-mono to 2.10 [kefren 2011-04-25]
 	Added databases/mysql55-client version 5.5.11 [adam 2011-04-25]
 	Added databases/mysql55-server version 5.5.11 [adam 2011-04-25]
+	Updated print/tex-vruler to 2.3nb1 [minskim 2011-04-25]
