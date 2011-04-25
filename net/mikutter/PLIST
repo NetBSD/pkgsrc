@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/05 11:47:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/25 13:05:31 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
 share/mikutter/core/addon/addon.rb
-share/mikutter/core/addon/bitly.rb
+share/mikutter/core/addon/bitly/bitly.rb
 share/mikutter/core/addon/bugreport.rb
 share/mikutter/core/addon/change_account.rb
 share/mikutter/core/addon/contextmenu.rb
@@ -21,7 +21,12 @@ share/mikutter/core/addon/set_view.rb
 share/mikutter/core/addon/settings.rb
 share/mikutter/core/addon/shortcutkey.rb
 share/mikutter/core/addon/smartthread.rb
-share/mikutter/core/addon/sqlite.rb
+share/mikutter/core/addon/sqlite/datasource.rb
+share/mikutter/core/addon/sqlite/favoritedatasource.rb
+share/mikutter/core/addon/sqlite/messagedatasource.rb
+share/mikutter/core/addon/sqlite/sqlite.rb
+share/mikutter/core/addon/sqlite/userdatasource.rb
+share/mikutter/core/addon/sqlite/userlistdatasource.rb
 share/mikutter/core/addon/streaming.rb
 share/mikutter/core/addon/worldcup.rb
 share/mikutter/core/autotag.rb
