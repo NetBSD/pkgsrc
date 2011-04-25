@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.987 2011/04/25 14:09:25 kefren Exp $
+$NetBSD: CHANGES-2011,v 1.988 2011/04/25 21:15:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1640,3 +1640,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/libgdiplus to 2.10 [kefren 2011-04-25]
 	Updated www/mono-xsp to 2.10 [kefren 2011-04-25]
 	Updated www/ap-mono to 2.10 [kefren 2011-04-25]
+	Added databases/mysql55-client version 5.5.11 [adam 2011-04-25]
+	Added databases/mysql55-server version 5.5.11 [adam 2011-04-25]
