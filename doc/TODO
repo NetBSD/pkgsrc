@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10285 2011/04/25 14:09:25 kefren Exp $
+$NetBSD: TODO,v 1.10286 2011/04/25 21:15:36 adam Exp $
 
 Suggested new packages
 ======================
@@ -963,8 +963,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o multitail-5.2.8
 	o munin-1.4.4
 	o muse-0.9.2
-	o mysql55-client-5.5.8 (MySQL 5.5.8)
-	o mysql55-server-5.5.8 (MySQL 5.5.8)
 	o nap-1.5.3
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o nawk-20071023
