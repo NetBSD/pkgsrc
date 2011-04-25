@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2011/04/14 19:34:07 asau Exp $
+# $NetBSD: Makefile,v 1.47 2011/04/25 20:58:24 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -26,6 +27,17 @@ PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
+
+REPLACE_INTERPRETER+=	escript
+REPLACE.escript.old=	.*escript
+REPLACE.escript.new=	${LOCALBASE}/bin/escript
+REPLACE_FILES.escript=	\
+	lib/reltool/examples/display_args \
+	lib/reltool/examples/mnesia_core_dump_viewer \
+	lib/snmp/src/compile/snmpc.src \
+	lib/erl_docgen/priv/bin/codeline_preprocessing.escript \
+	lib/erl_docgen/priv/bin/xml_from_edoc.escript \
+	lib/snmp/bin/snmpc
 
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
