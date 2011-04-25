@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/04/17 02:13:23 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/25 13:05:31 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.2.13
+DISTNAME=	mikutter.0.0.3.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -39,7 +39,7 @@ REPLACE_RUBY_DIRS=	core
 INSTALLATION_DIRS+=	bin share/doc/mikutter share/applications share/mikutter
 
 do-build:
-	cd ${WRKSRC}/core && ${RM} -rf json* lib/escape.rb lib/oauth* lib/memoize.rb
+	cd ${WRKSRC}/core/lib && ${RM} -rf json* escape.rb oauth* memoize.rb
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/desktop.in > ${WRKDIR}/desktop
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/mikutter.sh.in > ${WRKDIR}/mikutter.sh
 
