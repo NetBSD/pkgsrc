@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.11 2011/04/24 14:05:31 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.12 2011/04/25 16:32:30 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -64,3 +64,5 @@ Pullup ticket #3417 - requested by drochner
 graphics/gimp: security patch
 Pullup ticket #3418 - requested by tron
 net/wireshark: security update
+Pullup ticket #3419 - requested by he
+devel/orc: build fix
