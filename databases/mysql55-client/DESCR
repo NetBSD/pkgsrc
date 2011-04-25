@@ -1,0 +1,14 @@
+MySQL is a SQL (Structured Query Language) database server. SQL is the most
+popular database language in the world. MySQL is a client-server implementation
+that consists of a server daemon `mysqld' and many different client
+programs/libraries.
+
+The main goals of MySQL are speed and robustness.
+
+The base upon which MySQL is built is a set of routines that have been used in
+a highly demanding production environment for many years.  While MySQL is still
+in development it already offers a rich and highly useful function set.
+
+The official way to pronounce 'MySQL' is 'My Ess Que Ell' (Not MY-SEQUEL).
+
+This package contains the MySQL client programs and libraries.
