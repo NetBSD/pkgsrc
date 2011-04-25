@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/12/01 16:53:23 kefren Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/04/25 14:06:08 kefren Exp $
 bin/asp-state
 bin/asp-state2
 bin/asp-state4
@@ -26,18 +26,21 @@ lib/mono/gac/Mono.WebServer2/0.2.0.0__0738eb9f132ed756/Mono.WebServer2.dll
 lib/mono/gac/Mono.WebServer2/0.2.0.0__0738eb9f132ed756/Mono.WebServer2.dll.mdb
 lib/mono/gac/Mono.WebServer2/0.4.0.0__0738eb9f132ed756/Mono.WebServer2.dll
 lib/mono/gac/Mono.WebServer2/0.4.0.0__0738eb9f132ed756/Mono.WebServer2.dll.mdb
-lib/mono/gac/fastcgi-mono-server2/${PKGVERSION}.0__0738eb9f132ed756/fastcgi-mono-server2.exe
-lib/mono/gac/fastcgi-mono-server2/${PKGVERSION}.0__0738eb9f132ed756/fastcgi-mono-server2.exe.mdb
-lib/mono/gac/fastcgi-mono-server4/${PKGVERSION}.0__0738eb9f132ed756/fastcgi-mono-server4.exe
-lib/mono/gac/fastcgi-mono-server4/${PKGVERSION}.0__0738eb9f132ed756/fastcgi-mono-server4.exe.mdb
-lib/mono/gac/mod-mono-server2/${PKGVERSION}.0__0738eb9f132ed756/mod-mono-server2.exe
-lib/mono/gac/mod-mono-server2/${PKGVERSION}.0__0738eb9f132ed756/mod-mono-server2.exe.mdb
-lib/mono/gac/mod-mono-server4/${PKGVERSION}.0__0738eb9f132ed756/mod-mono-server4.exe
-lib/mono/gac/mod-mono-server4/${PKGVERSION}.0__0738eb9f132ed756/mod-mono-server4.exe.mdb
-lib/mono/gac/xsp2/${PKGVERSION}.0__0738eb9f132ed756/xsp2.exe
-lib/mono/gac/xsp2/${PKGVERSION}.0__0738eb9f132ed756/xsp2.exe.mdb
-lib/mono/gac/xsp4/${PKGVERSION}.0__0738eb9f132ed756/xsp4.exe
-lib/mono/gac/xsp4/${PKGVERSION}.0__0738eb9f132ed756/xsp4.exe.mdb
+lib/mono/gac/fastcgi-mono-server2/${PKGVERSION}.0.0__0738eb9f132ed756/fastcgi-mono-server2.exe
+lib/mono/gac/fastcgi-mono-server2/${PKGVERSION}.0.0__0738eb9f132ed756/fastcgi-mono-server2.exe.mdb
+lib/mono/gac/fastcgi-mono-server4/${PKGVERSION}.0.0__0738eb9f132ed756/fastcgi-mono-server4.exe
+lib/mono/gac/fastcgi-mono-server4/${PKGVERSION}.0.0__0738eb9f132ed756/fastcgi-mono-server4.exe.mdb
+lib/mono/gac/mod-mono-server2/${PKGVERSION}.0.0__0738eb9f132ed756/mod-mono-server2.exe
+lib/mono/gac/mod-mono-server2/${PKGVERSION}.0.0__0738eb9f132ed756/mod-mono-server2.exe.mdb
+lib/mono/gac/mod-mono-server4/${PKGVERSION}.0.0__0738eb9f132ed756/mod-mono-server4.exe
+lib/mono/gac/mod-mono-server4/${PKGVERSION}.0.0__0738eb9f132ed756/mod-mono-server4.exe.mdb
+lib/mono/gac/xsp2/${PKGVERSION}.0.0__0738eb9f132ed756/xsp2.exe
+lib/mono/gac/xsp2/${PKGVERSION}.0.0__0738eb9f132ed756/xsp2.exe.mdb
+lib/mono/gac/xsp4/${PKGVERSION}.0.0__0738eb9f132ed756/xsp4.exe
+lib/mono/gac/xsp4/${PKGVERSION}.0.0__0738eb9f132ed756/xsp4.exe.mdb
+lib/monodoc/sources/Mono.FastCGI.source
+lib/monodoc/sources/Mono.FastCGI.tree
+lib/monodoc/sources/Mono.FastCGI.zip
 lib/monodoc/sources/Mono.WebServer.source
 lib/monodoc/sources/Mono.WebServer.tree
 lib/monodoc/sources/Mono.WebServer.zip
