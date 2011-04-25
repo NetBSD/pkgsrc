@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:42:30 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/04/25 14:06:08 kefren Exp $
 
-DISTNAME=	xsp-2.8.2
+DISTNAME=	xsp-2.10
 PKGNAME=	mono-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www
