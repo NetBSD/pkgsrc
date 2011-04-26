@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/01/13 12:19:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/04/26 13:47:33 adam Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -129,6 +129,9 @@ share/roundcube/plugins/managesieve/skins/default/managesieve_toolbar.png
 share/roundcube/plugins/managesieve/skins/default/templates/filteredit.html
 share/roundcube/plugins/managesieve/skins/default/templates/managesieve.html
 share/roundcube/plugins/managesieve/skins/default/templates/setedit.html
+share/roundcube/plugins/managesieve/tests/Makefile
+share/roundcube/plugins/managesieve/tests/parser.phpt
+share/roundcube/plugins/managesieve/tests/tokenize.phpt
 share/roundcube/plugins/markasjunk/localization/cs_CZ.inc
 share/roundcube/plugins/markasjunk/localization/da_DK.inc
 share/roundcube/plugins/markasjunk/localization/de_DE.inc
