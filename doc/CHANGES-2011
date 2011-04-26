@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.990 2011/04/26 00:04:16 mspo Exp $
+$NetBSD: CHANGES-2011,v 1.991 2011/04/26 07:55:00 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1644,3 +1644,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/mysql55-server version 5.5.11 [adam 2011-04-25]
 	Updated print/tex-vruler to 2.3nb1 [minskim 2011-04-25]
 	Added databases/maatkit version 7410nb1 [mspo 2011-04-26]
+	Udated filesystems/perfuse to 20110426 [manu 2011-04-26]
