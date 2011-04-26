@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.182 2011/01/31 07:25:03 agc Exp $
+# $NetBSD: Makefile,v 1.183 2011/04/26 12:17:51 obache Exp $
 
 # Notes to package maintainers:
 #
@@ -173,7 +173,7 @@ pre-configure:
 		--disable-dependency-tracking
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
-	cd ${WRKDIR}/libfetch && ${SETENV} ${MAKE_ENV}			\
+	cd ${WRKDIR}/libfetch && ${SETENV} ${MAKE_ENV} ${BSD_MAKE_ENV}	\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}	\
 			-f ${MAKE_FILE} depend all
 
