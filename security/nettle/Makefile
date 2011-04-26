@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/26 08:59:33 adam Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/26 09:39:02 adam Exp $
 
 DISTNAME=	nettle-2.1
 CATEGORIES=	devel security
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake m4
+USE_TOOLS+=		gm4 gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-openssl
 
