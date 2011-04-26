@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.995 2011/04/26 13:48:17 adam Exp $
+$NetBSD: CHANGES-2011,v 1.996 2011/04/26 14:41:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1652,3 +1652,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-docs to 1.7.5 [adam 2011-04-26]
 	Updated textproc/groff to 1.20.1nb3 [obache 2011-04-26]
 	Updated mail/roundcube to 0.5.2 [adam 2011-04-26]
+	Updated multimedia/gnome-mplayer to 1.0.3 [obache 2011-04-26]
+	Updated multimedia/gecko-mediaplayer to 1.0.3 [obache 2011-04-26]
