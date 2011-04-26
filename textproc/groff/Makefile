@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2010/02/04 13:13:57 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2011/04/26 12:07:14 obache Exp $
 #
 
 DISTNAME=	groff-1.20.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 
@@ -25,6 +25,12 @@ USE_FEATURES=		getopt_long
 INFO_FILES=		YES
 
 REPLACE_AWK+=		font/devlj4/generate/special.awk
+REPLACE_PERL+=		contrib/groffer/perl/func.pl
+REPLACE_PERL+=		contrib/groffer/perl/groffer.pl
+REPLACE_PERL+=		contrib/groffer/perl/man.pl
+REPLACE_PERL+=		contrib/groffer/perl/perl_test.pl
+REPLACE_PERL+=		contrib/groffer/perl/roff2.pl
+REPLACE_PERL+=		src/roff/grog/grog.pl
 
 REPLACE_INTERPRETER+=	sed
 REPLACE.sed.old=	.*/sed
