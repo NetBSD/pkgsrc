@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/04/26 08:59:33 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2011/04/26 09:54:55 adam Exp $
 
 Use LIBTOOL.
 
@@ -20,7 +20,7 @@ Use LIBTOOL.
  SHLIBTARGETS = $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
  
  TARGETS = aesdata$(EXEEXT) desdata$(EXEEXT) shadata$(EXEEXT) \
-@@ -138,19 +138,17 @@ hogweed_OBJS = $(hogweed_SOURCES:.c=.$(O
+@@ -138,19 +138,19 @@ hogweed_OBJS = $(hogweed_SOURCES:.c=.$(O
  hogweed_PURE_OBJS = $(hogweed_OBJS:.$(OBJEXT)=.p$(OBJEXT))
  
  # FIXME: Do we really need to delete the archive first?
@@ -30,7 +30,8 @@ Use LIBTOOL.
 -	$(RANLIB) $@
 +libnettle.la: $(nettle_OBJS)
 +	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libnettle.la \
-+		${nettle_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 4:0
++		${nettle_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info ${LIBNETTLE_MAJOR}:${LIBNETTLE_MINOR}
  
  # FIXME: Do we really need to delete the archive first?
 -libhogweed.a: $(hogweed_OBJS)
@@ -39,7 +40,8 @@ Use LIBTOOL.
 -	$(RANLIB) $@
 +libhogweed.la: $(hogweed_OBJS)
 +	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libhogweed.la \
-+		${hogweed_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 4:0
++		${hogweed_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info ${LIBHOGWEED_MAJOR}:${LIBHOGWEED_MINOR}
  
  .c.$(OBJEXT):
 -	$(COMPILE) $(CCPIC_MAYBE) -c $< \
@@ -47,7 +49,7 @@ Use LIBTOOL.
  	&& $(DEP_PROCESS)
  
  # Rules building shared libraries
-@@ -200,7 +198,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
+@@ -200,7 +200,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
  .asm.$(OBJEXT):
  	$(M4) $(srcdir)/asm.m4 machine.m4 config.m4 \
  		$< >$*.s
@@ -56,7 +58,7 @@ Use LIBTOOL.
  	echo "$@ : $< $(srcdir)/asm.m4 machine.m4 config.m4" >$@.d 
  
  .asm.p$(OBJEXT):
-@@ -266,7 +264,7 @@ install-here: install-info install-heade
+@@ -266,7 +266,7 @@ install-here: install-info install-heade
  install-static: $(LIBTARGETS)
  	$(MKDIR_P) $(DESTDIR)$(libdir)
  	for f in $(LIBTARGETS); do \
