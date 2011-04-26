@@ -1,0 +1,17 @@
+$NetBSD: patch-config.make.in,v 1.1.1.1 2011/04/26 08:59:33 adam Exp $
+
+Use LIBTOOL.
+
+--- config.make.in.orig	2011-04-26 08:41:17.000000000 +0000
++++ config.make.in
+@@ -63,8 +63,8 @@ infodir =	@infodir@
+ 
+ COMPILE = $(CC) $(PRE_CPPFLAGS) $(CPPFLAGS) $(DEFS) $(CFLAGS) $(CCPIC) $(DEP_FLAGS)
+ COMPILE_CXX = $(CXX) $(PRE_CPPFLAGS) $(CPPFLAGS) $(DEFS) $(CXXFLAGS) $(CCPIC) $(DEP_FLAGS)
+-LINK = $(CC) $(CFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
+-LINK_CXX = $(CXX) $(CXXFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
++LINK = ${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
++LINK_CXX = ${LIBTOOL} --mode=link $(CXX) $(CXXFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
+ 
+ # Default rule. Must be here, since config.make is included before the
+ # usual targets.

@@ -1,0 +1,67 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/04/26 08:59:33 adam Exp $
+
+Use LIBTOOL.
+
+--- Makefile.in.orig	2010-07-25 19:30:13.000000000 +0000
++++ Makefile.in
+@@ -14,13 +14,13 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_STRIP_PROGRAM = $(INSTALL_PROGRAM) -s
+ MKDIR_P = @MKDIR_P@
+ 
+-SUBDIRS = tools testsuite examples
++SUBDIRS = tools testsuite
+ 
+ include config.make
+ 
+ PRE_CPPFLAGS = -I.
+ # FIXME: Add configuration of LIBEXT?
+-LIBTARGETS = libnettle.a @IF_HOGWEED@ libhogweed.a
++LIBTARGETS = libnettle.la @IF_HOGWEED@ libhogweed.la
+ SHLIBTARGETS = $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
+ 
+ TARGETS = aesdata$(EXEEXT) desdata$(EXEEXT) shadata$(EXEEXT) \
+@@ -138,19 +138,17 @@ hogweed_OBJS = $(hogweed_SOURCES:.c=.$(O
+ hogweed_PURE_OBJS = $(hogweed_OBJS:.$(OBJEXT)=.p$(OBJEXT))
+ 
+ # FIXME: Do we really need to delete the archive first?
+-libnettle.a: $(nettle_OBJS)
+-	-rm -f $@
+-	$(AR) $(ARFLAGS) $@ $(nettle_OBJS)
+-	$(RANLIB) $@
++libnettle.la: $(nettle_OBJS)
++	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libnettle.la \
++		${nettle_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 4:0
+ 
+ # FIXME: Do we really need to delete the archive first?
+-libhogweed.a: $(hogweed_OBJS)
+-	-rm -f $@
+-	$(AR) $(ARFLAGS) $@ $(hogweed_OBJS)
+-	$(RANLIB) $@
++libhogweed.la: $(hogweed_OBJS)
++	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libhogweed.la \
++		${hogweed_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 4:0
+ 
+ .c.$(OBJEXT):
+-	$(COMPILE) $(CCPIC_MAYBE) -c $< \
++	${LIBTOOL} --mode=compile --tag=CC $(COMPILE) $(CCPIC_MAYBE) -c $< \
+ 	&& $(DEP_PROCESS)
+ 
+ # Rules building shared libraries
+@@ -200,7 +198,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
+ .asm.$(OBJEXT):
+ 	$(M4) $(srcdir)/asm.m4 machine.m4 config.m4 \
+ 		$< >$*.s
+-	$(COMPILE) $(CCPIC_MAYBE) -c $*.s
++	${LIBTOOL} --mode=compile --tag=CC $(COMPILE) $(CCPIC_MAYBE) -c $*.s
+ 	echo "$@ : $< $(srcdir)/asm.m4 machine.m4 config.m4" >$@.d 
+ 
+ .asm.p$(OBJEXT):
+@@ -266,7 +264,7 @@ install-here: install-info install-heade
+ install-static: $(LIBTARGETS)
+ 	$(MKDIR_P) $(DESTDIR)$(libdir)
+ 	for f in $(LIBTARGETS); do \
+-	  $(INSTALL_DATA) $$f $(DESTDIR)$(libdir) ; \
++	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir) ; \
+ 	done
+ 
+ install-shared-nettle: $(LIBNETTLE_FORLINK)
