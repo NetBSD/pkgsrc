@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/04/08 23:07:50 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2011/04/26 11:52:51 joerg Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.5
@@ -10,7 +10,7 @@ COMMENT=		FreeType libraries and utilities
 
 META_PACKAGE=		# empty
 
-DEPENDS+=		freetype-lib-${FT_VERS}:../../graphics/freetype-lib
-DEPENDS+=		freetype-utils-${FT_VERS}:../../graphics/freetype-utils
+DEPENDS+=		freetype-lib-${FT_VERS}{,nb[0-9]*}:../../graphics/freetype-lib
+DEPENDS+=		freetype-utils-${FT_VERS}{,nb[0-9]*}:../../graphics/freetype-utils
 
 .include "../../mk/bsd.pkg.mk"
