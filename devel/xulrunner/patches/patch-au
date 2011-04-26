@@ -1,9 +1,10 @@
-$NetBSD: patch-au,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-au,v 1.2 2011/04/26 14:16:36 tnn Exp $
 
-SOUND_VERSION just isn't a reliable way to detect features supported by
-particular OSS implementation.
+- Fix device name on NetBSD
+- SOUND_VERSION just isn't a reliable way to detect features supported by
+  particular OSS implementation.
 
---- media/libsydneyaudio/src/sydney_audio_oss.c.orig	2009-06-29 18:15:03.000000000 +0200
+--- media/libsydneyaudio/src/sydney_audio_oss.c.orig	2010-07-21 00:52:30.000000000 +0000
 +++ media/libsydneyaudio/src/sydney_audio_oss.c
 @@ -51,9 +51,9 @@
  // support only versions newer than 3.6.1
@@ -18,7 +19,20 @@ particular OSS implementation.
  
  typedef struct sa_buf sa_buf;
  struct sa_buf {
-@@ -716,4 +716,4 @@ UNSUPPORTED(int sa_stream_drain(sa_strea
+@@ -201,7 +201,12 @@ sa_stream_create_pcm(
+     return SA_ERROR_SYSTEM;
+   }
+ 
++#if defined(__NetBSD__)
++  /* XXX should use DEVOSSAUDIO provided by pkgsrc. */
++  s->output_unit  = "/dev/audio";
++#else
+   s->output_unit  = "/dev/dsp";
++#endif
+   s->output_fd    = -1;
+   s->thread_id    = 0;
+   s->playing      = 0;
+@@ -721,4 +726,4 @@ UNSUPPORTED(int sa_stream_drain(sa_strea
  
  const char *sa_strerror(int code) { return NULL; }
  
