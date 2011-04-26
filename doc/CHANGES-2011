@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.998 2011/04/26 15:40:21 obache Exp $
+$NetBSD: CHANGES-2011,v 1.999 2011/04/26 21:24:56 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1662,3 +1662,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/nss to 3.12.9.0 [tnn 2011-04-26]
 	Updated www/firefox-l10n to 4.0 [tnn 2011-04-26]
 	Updated mail/milter-manager to 1.6.9 [obache 2011-04-26]
+	Updated www/privoxy to 3.0.17 [mjl 2011-04-26]
