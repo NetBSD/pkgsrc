@@ -1,0 +1,5 @@
+This module provides an alternative to the Net-IRC
+and Net-IRC2 modules. Its design rationale is
+offering a 100% non-blocking callback-based interface,
+RFC-compliant parsing and a lightweight approach to
+modularity and reusability.
