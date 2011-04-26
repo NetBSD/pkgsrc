@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2007/09/05 21:51:22 drochner Exp $
+$NetBSD: patch-af,v 1.2 2011/04/26 10:35:30 adam Exp $
 
 --- guile/src/extra.c.orig	2007-09-04 18:12:51.000000000 +0200
 +++ guile/src/extra.c
-@@ -27,7 +27,7 @@
+@@ -30,7 +30,7 @@
  #include <gnutls/openpgp.h>
  #include <libguile.h>
  
