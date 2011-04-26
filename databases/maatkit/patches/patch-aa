@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/04/26 00:00:13 mspo Exp $
+
+rename man pages to .1 from .1p
+submitted upstream as 1277
+http://code.google.com/p/maatkit/issues/detail?id=1277
+
+--- Makefile.PL.orig	2011-03-12 17:39:22.000000000 +0000
++++ Makefile.PL
+@@ -6,10 +6,10 @@ WriteMakefile(
+     EXE_FILES    => [ <bin/mk-*> ],
+     MAN3PODS     => {}, # No man(3) pages, all man(1).
+     MAN1PODS     => {
+-      'maatkit.pod' => 'blib/man1/maatkit.1p',
++      'maatkit.pod' => 'blib/man1/maatkit.1',
+       map {
+          (my $name = $_) =~ s/^bin.//;
+-         $_ => "blib/man1/$name.1p";
++         $_ => "blib/man1/$name.1";
+       } <bin/mk-*>
+     },
+     PREREQ_PM    => {
