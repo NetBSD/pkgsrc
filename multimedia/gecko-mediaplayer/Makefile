@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:44:14 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/26 14:41:37 obache Exp $
 #
 
-DISTNAME=	gecko-mediaplayer-1.0.0
-PKGREVISION=	1
+DISTNAME=	gecko-mediaplayer-1.0.3
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://gecko-mediaplayer.googlecode.com/files/
 
@@ -23,15 +22,19 @@ USE_TOOLS+=		pkg-config msgfmt
 
 GCONF_SCHEMAS+=		gecko-mediaplayer.schemas
 
+CONFIGURE_ARGS+=	--with-gconf
 CONFIGURE_ARGS+=	--enable-new-libxul
 CONFIGURE_ARGS+=	--with-plugin-dir=${PREFIX}/lib/netscape/plugins
+CONFIGURE_ARGS+=	--with-libcurl
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
+BUILDLINK_DEPMETHOD.xulrunner=	build
 .include "../../devel/xulrunner/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .if empty(BUILDLINK_LDADD.ldl)
