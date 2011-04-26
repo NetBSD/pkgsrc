@@ -1,0 +1,26 @@
+$NetBSD: patch-testsuite_Makefile.in,v 1.1.1.1 2011/04/26 08:59:33 adam Exp $
+
+Use LIBTOOL.
+
+--- testsuite/Makefile.in.orig	2011-04-26 08:29:38.000000000 +0000
++++ testsuite/Makefile.in
+@@ -62,8 +62,8 @@ all: $(TARGETS) $(EXTRA_TARGETS)
+ # to use suffix rules to build the test executables. So we use an
+ # explicit rule for each and every executable.
+ 
+-LIB_HOGWEED = @IF_HOGWEED@ -lhogweed
+-TEST_OBJS = testutils.$(OBJEXT) $(LIB_HOGWEED) -lnettle $(LIBS)
++LIB_HOGWEED = @IF_HOGWEED@ ../libhogweed.la
++TEST_OBJS = testutils.$(OBJEXT) $(LIB_HOGWEED) ../libnettle.la $(LIBS)
+ 
+ .PHONY: test-rules
+ test-rules:
+@@ -81,7 +81,7 @@ test-rules:
+ include $(srcdir)/.test-rules.make
+ 
+ $(TARGETS) $(EXTRA_TARGETS): testutils.$(OBJEXT) \
+-	../libnettle.a @IF_HOGWEED@ ../libhogweed.a
++	../libnettle.la @IF_HOGWEED@ ../libhogweed.la
+ 
+ check: $(TS_ALL) $(srcdir)/run-tests
+ 	LD_LIBRARY_PATH=../.lib srcdir="$(srcdir)" \
