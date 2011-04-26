@@ -1,6 +1,6 @@
-# $NetBSD: mozilla-common.mk,v 1.19 2010/12/23 11:44:28 dsainty Exp $
+# $NetBSD: mozilla-common.mk,v 1.20 2011/04/26 14:16:36 tnn Exp $
 #
-# common Makefile fragment for mozilla packages based on gecko 1.9.1.
+# common Makefile fragment for mozilla packages based on gecko 2.0.
 # 
 # used by devel/xulrunner/Makefile
 # used by mail/thunderbird/Makefile
@@ -25,12 +25,13 @@ CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
 CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--enable-svg --enable-mathml
+# Needs tee and subpixel functions which are not shipped in stable cairo (yet?)
 CONFIGURE_ARGS+=	--disable-system-cairo
+CONFIGURE_ARGS+=	--disable-system-pixman
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
-CONFIGURE_ARGS+=	--disable-installer
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-ipc	# no chromium platform support on BSD
@@ -85,10 +86,11 @@ PREFER.bzip2?=	pkgsrc
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.1
-CONFIGURE_ENV+= ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
+CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"

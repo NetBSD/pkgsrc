@@ -1,4 +1,4 @@
-$NetBSD: patch-mf,v 1.3 2010/03/16 15:57:02 tnn Exp $
+$NetBSD: patch-mf,v 1.4 2011/04/26 14:16:37 tnn Exp $
 
 Add DragonFly support.
 Make sure nss libraries have a run path defined.
