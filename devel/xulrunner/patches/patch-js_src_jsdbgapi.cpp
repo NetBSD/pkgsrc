@@ -1,3 +1,5 @@
+$NetBSD: patch-js_src_jsdbgapi.cpp,v 1.2 2011/04/26 14:43:32 tnn Exp $
+
 https://bugzilla.mozilla.org/show_bug.cgi?id=637437
 
 --- js/src/jsdbgapi.cpp	
