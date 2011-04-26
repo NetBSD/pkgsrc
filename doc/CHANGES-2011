@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.992 2011/04/26 10:37:03 adam Exp $
+$NetBSD: CHANGES-2011,v 1.993 2011/04/26 10:58:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1647,3 +1647,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/perfuse to 20110426 [manu 2011-04-26]
 	Added security/nettle version 2.1 [adam 2011-04-26]
 	Updated security/gnutls to 2.12.3 [adam 2011-04-26]
+	Updated devel/scmgit to 1.7.5 [adam 2011-04-26]
+	Updated devel/scmgit-base to 1.7.5 [adam 2011-04-26]
+	Updated devel/scmgit-docs to 1.7.5 [adam 2011-04-26]
