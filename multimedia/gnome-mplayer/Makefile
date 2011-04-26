@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:44:15 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/26 14:39:09 obache Exp $
 #
 
-DISTNAME=	gnome-mplayer-1.0.2
-PKGREVISION=	1
+DISTNAME=	gnome-mplayer-1.0.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gnome-mplayer.googlecode.com/files/
 
@@ -19,6 +18,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt
+
+CONFIGURE_ARGS+=	--with-gconf
 
 GCONF_SCHEMAS+=	gnome-mplayer.schemas
 
