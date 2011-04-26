@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.996 2011/04/26 14:41:53 obache Exp $
+$NetBSD: CHANGES-2011,v 1.997 2011/04/26 14:45:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1654,3 +1654,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/roundcube to 0.5.2 [adam 2011-04-26]
 	Updated multimedia/gnome-mplayer to 1.0.3 [obache 2011-04-26]
 	Updated multimedia/gecko-mediaplayer to 1.0.3 [obache 2011-04-26]
+	Added devel/xulrunner192 version 1.9.2.16nb1 [tnn 2011-04-26]
+	Added www/firefox36 version 3.6.16nb1 [tnn 2011-04-26]
+	Updated devel/xulrunner to 2.0 [tnn 2011-04-26]
+	Updated www/firefox to 4.0 [tnn 2011-04-26]
+	Updated devel/nspr to 4.8.7 [tnn 2011-04-26]
+	Updated devel/nss to 3.12.9.0 [tnn 2011-04-26]
+	Updated www/firefox-l10n to 4.0 [tnn 2011-04-26]
