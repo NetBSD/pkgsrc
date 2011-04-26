@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1446 2011/04/26 14:18:46 tnn Exp $
+# $NetBSD: Makefile,v 1.1447 2011/04/26 23:03:30 mspo Exp $
 #
 
 COMMENT=	Development utilities
@@ -469,6 +469,7 @@ SUBDIR+=	p5-AnnoCPAN-Perldoc
 SUBDIR+=	p5-Any-Moose
 SUBDIR+=	p5-AnyEvent
 SUBDIR+=	p5-AnyEvent-AIO
+SUBDIR+=	p5-AnyEvent-IRC
 SUBDIR+=	p5-App-CLI
 SUBDIR+=	p5-App-Cache
 SUBDIR+=	p5-App-Cmd
