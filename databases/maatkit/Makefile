@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/26 00:00:13 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/26 19:17:59 joerg Exp $
 #
 
 DISTNAME=	maatkit-7410
@@ -16,8 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL+=	bin/*
 
-DEPENDS+=	p5-DBD-mysql:../../databases/p5-DBD-mysql
-DEPENDS+=	p5-Time-HiRes:../../time/p5-Time-HiRes
+DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=	auto/maatkit/.packlist
 .include "../../lang/perl5/module.mk"
