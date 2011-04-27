@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1003 2011/04/27 15:07:44 reed Exp $
+$NetBSD: CHANGES-2011,v 1.1004 2011/04/27 15:42:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1667,3 +1667,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/firefox36-l10n version 3.6.16 [tnn 2011-04-27]
 	Updated www/p5-Mojolicious to 1.16 [obache 2011-04-27]
 	Added devel/log4cplus version 1.0.4 [reed 2011-04-27]
+	Updated time/ruby-tzinfo to 0.3.27 [taca 2011-04-27]
