@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1000 2011/04/26 23:02:12 mspo Exp $
+$NetBSD: CHANGES-2011,v 1.1001 2011/04/27 10:33:54 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1664,3 +1664,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/milter-manager to 1.6.9 [obache 2011-04-26]
 	Updated www/privoxy to 3.0.17 [mjl 2011-04-26]
 	Added devel/p5-AnyEvent-IRC version 0.96nb1 [mspo 2011-04-26]
+	Added www/firefox36-l10n version 3.6.16 [tnn 2011-04-27]
