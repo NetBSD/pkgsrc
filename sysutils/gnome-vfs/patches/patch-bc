@@ -1,10 +1,11 @@
-$NetBSD: patch-bc,v 1.2 2008/04/01 18:05:37 drochner Exp $
+$NetBSD: patch-bc,v 1.3 2011/04/27 17:50:25 tnn Exp $
 
 Stick to the pkgsrc conventions of the locale directory.
+Add -lgcrypt for gcry_control symbol.
 
---- libgnomevfs/Makefile.in.orig	2007-11-12 10:30:11.000000000 +0100
+--- libgnomevfs/Makefile.in.orig	2010-09-28 09:35:22.000000000 +0000
 +++ libgnomevfs/Makefile.in
-@@ -425,12 +425,11 @@ INCLUDES = \
+@@ -430,12 +430,11 @@ INCLUDES = \
  	-D_LARGEFILE64_SOURCE                   \
  	-D_POSIX_PTHREAD_SEMANTICS		\
  	-D_REENTRANT				\
@@ -18,3 +19,11 @@ Stick to the pkgsrc conventions of the locale directory.
  	-DGNOME_VFS_SYSCONFDIR=\"$(sysconfdir)\"\
  	-DG_LOG_DOMAIN=\"libgnomevfs\"		\
  	$(NULL)
+@@ -496,6 +495,7 @@ libgnomevfs_2_la_LIBADD = \
+ 	$(SOCKET_LIBS)				\
+ 	$(INTLLIBS)				\
+ 	$(SELINUX_LIBS)				\
++	-lgcrypt				\
+ 	$(NULL)
+ 
+ libgnomevfs_2_la_LDFLAGS = \
