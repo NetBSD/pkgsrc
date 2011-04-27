@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1005 2011/04/27 15:48:46 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1006 2011/04/27 18:57:11 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1669,3 +1669,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/log4cplus version 1.0.4 [reed 2011-04-27]
 	Updated time/ruby-tzinfo to 0.3.27 [taca 2011-04-27]
 	Updated www/contao29-translations to 20110427 [taca 2011-04-27]
+	Updated geography/gpsbabel to 1.4.2 [schwarz 2011-04-27]
