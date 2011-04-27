@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1447 2011/04/26 23:03:30 mspo Exp $
+# $NetBSD: Makefile,v 1.1448 2011/04/27 15:07:43 reed Exp $
 #
 
 COMMENT=	Development utilities
@@ -391,6 +391,7 @@ SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
 SUBDIR+=	libxenserver
 SUBDIR+=	lincvs
+SUBDIR+=	log4cplus
 SUBDIR+=	log4cxx
 SUBDIR+=	log4shib
 SUBDIR+=	ltsa
