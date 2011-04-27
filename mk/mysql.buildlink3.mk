@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.13 2010/09/23 15:34:07 joerg Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.14 2011/04/27 04:22:00 taca Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -8,7 +8,7 @@
 # MYSQL_VERSION_DEFAULT
 #	The preferred MySQL version.
 #
-#	Possible: 51 50
+#	Possible: 51 55 50
 #	Default: 51
 #
 # === Package-settable variables ===
@@ -31,7 +31,7 @@ _SYS_VARS.mysql=	MYSQL_PKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 MYSQL_VERSION_DEFAULT?=		51
-MYSQL_VERSIONS_ACCEPTED?=	51 50
+MYSQL_VERSIONS_ACCEPTED?=	51 55 50
 
 # transform the list into individual variables
 .for mv in ${MYSQL_VERSIONS_ACCEPTED}
@@ -39,6 +39,11 @@ _MYSQL_VERSION_${mv}_OK=	yes
 .endfor
 
 # check what is installed
+.if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.18)
+_MYSQL_VERSION_55_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	55
+.endif
+
 .if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.16)
 _MYSQL_VERSION_51_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	51
@@ -86,7 +91,9 @@ _MYSQL_VERSION=	${_MYSQL_VERSION_FIRSTACCEPTED}
 #
 # set variables for the version we decided to use:
 #
-.if ${_MYSQL_VERSION} == "51"
+.if ${_MYSQL_VERSION} == "55"
+MYSQL_PKGSRCDIR=	../../databases/mysql55-client
+.elif ${_MYSQL_VERSION} == "51"
 MYSQL_PKGSRCDIR=	../../databases/mysql51-client
 .elif ${_MYSQL_VERSION} == "50"
 MYSQL_PKGSRCDIR=	../../databases/mysql5-client
