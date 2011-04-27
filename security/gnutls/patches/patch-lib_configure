@@ -1,0 +1,20 @@
+$NetBSD: patch-lib_configure,v 1.1 2011/04/27 16:56:43 tnn Exp $
+
+--- lib/configure.orig	2011-04-22 11:40:04.000000000 +0000
++++ lib/configure
+@@ -17201,6 +17201,7 @@ else
+ $as_echo "no" >&6; }
+ fi
+ 
++if false; then # there is no zlib.pc in pkgsrc
+ if test x$ac_zlib != xno; then
+   if test x$GNUTLS_REQUIRES_PRIVATE = x; then
+     GNUTLS_REQUIRES_PRIVATE="Requires.private: zlib"
+@@ -17208,6 +17209,7 @@ if test x$ac_zlib != xno; then
+     GNUTLS_REQUIRES_PRIVATE="$GNUTLS_REQUIRES_PRIVATE , zlib"
+   fi
+ fi
++fi
+ 
+ 
+ 
