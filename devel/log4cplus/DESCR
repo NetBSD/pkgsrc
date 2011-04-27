@@ -1,0 +1,7 @@
+Log4cplus provides a port of the log4j logging framework for C++.
+
+Log4cplus is a featureful log facility with various filters, run-time
+re-configurations, and Wide Character (UNICODE) support.  It provides
+log levels, hierarchal loggers, NDC (Nested Diagnostic Context),
+and log rotation support. It can log to the console, files, syslog,
+Windows events, or via sockets.
