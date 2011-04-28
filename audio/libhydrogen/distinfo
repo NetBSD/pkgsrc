@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/09/29 11:11:27 rillig Exp $
-
-SHA1 (libhydrogen-0.8.0.tar.gz) = 4f43b81653144ed4ade9df2e538259cf4289e3db
-RMD160 (libhydrogen-0.8.0.tar.gz) = 45f934f5884fd8dac5ee2c3470ae6caf08936591
-Size (libhydrogen-0.8.0.tar.gz) = 767576 bytes
-SHA1 (patch-aa) = 1ba199707bd50cd75abded457b77cf39a00d5ca1
-SHA1 (patch-ab) = ff5ebfb97a5089d56b51888eb588ee3a99a9c214
