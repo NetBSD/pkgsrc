@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1009 2011/04/28 20:47:44 alnsn Exp $
+$NetBSD: CHANGES-2011,v 1.1010 2011/04/28 23:00:45 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1675,3 +1675,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/hydrogen to 0.9.4.2 [mrg 2011-04-28]
 	Removed audio/libhydrogen successor audio/hydrogen [wiz 2011-04-28]
 	Added devel/cmph version 1.0 [alnsn 2011-04-28]
+	Updated mail/opendkim to 2.3.2 [pettai 2011-04-28]
