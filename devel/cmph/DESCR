@@ -1,0 +1,20 @@
+The CMPH Library encapsulates the newest and more efficient algorithms in an
+easy-to-use, production-quality, fast API. The library was designed to work
+with big entries that cannot fit in the main memory. It has been used
+successfully for constructing minimal perfect hash functions for sets with
+more than 100 million of keys, and we intend to expand this number to the
+order of billion of keys. Although there is a lack of similar libraries, we
+can point out some of the distinguishable features of the CMPH Library:
+
+  - Fast.
+  - Space-efficient with main memory usage carefully documented.
+  - The best modern algorithms are available (or at least scheduled for
+    implementation :-)).
+  - Works with in-disk key sets through of using the adapter pattern.
+  - Serialization of hash functions.
+  - Portable C code (currently works on GNU/Linux and WIN32 and is reported
+    to work in OpenBSD and Solaris).
+  - Object oriented implementation.
+  - Easily extensible.
+  - Well encapsulated API aiming binary compatibility through releases.
+  - Free Software.
