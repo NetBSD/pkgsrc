@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2011/01/13 13:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/04/28 10:27:38 mrg Exp $
 
-DISTNAME=	hydrogen-0.8.0
-PKGREVISION=	10
+DISTNAME=	hydrogen-0.9.4.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hydrogen/}
 
@@ -13,23 +12,27 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
-GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
-CONFIGURE_ARGS+=	--disable-alsa-seq
-CONFIGURE_ARGS+=	--disable-jack-support
+BUILD_DEPENDS+=		scons>=0.98:../../devel/scons
+BUILD_DEPENDS+=		subversion-base>=1.0:../../devel/subversion-base
+
+MAKE_ENV+=	QTDIR=${PREFIX}/qt4 PATH=$$PATH:${PREFIX}/qt4/bin
+SCONS_ARGS=	libarchive=1 jack=0 lrdf=0 alsa=0 QTDIR=/usr/pkg/qt4
+
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons DESTDIR=${DESTDIR} prefix=${PREFIX} ${SCONS_ARGS}
+
+do-install:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons DESTDIR=${DESTDIR} prefix=${PREFIX} ${SCONS_ARGS} install
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11_TYPE} != "native" || exists(${X11BASE}/include/X11/extensions/Xinerama.h)
-.include "../../x11/libXinerama/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-xinerama
-.endif
-
-.include "../../audio/libhydrogen/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
