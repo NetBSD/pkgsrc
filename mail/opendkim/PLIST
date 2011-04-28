@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/03/13 23:31:31 pettai Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/04/28 23:00:07 pettai Exp $
 bin/opendkim-genkey
 bin/opendkim-genzone
 bin/opendkim-testadsp
@@ -116,11 +116,10 @@ share/doc/opendkim/dkim_ssl_version.html
 share/doc/opendkim/dkim_stat.html
 share/doc/opendkim/dkim_verify.html
 share/doc/opendkim/dns.html
-share/doc/opendkim/draft-ietf-dkim-implementation-report-05.txt
-share/doc/opendkim/draft-ietf-dkim-mailinglists-04.txt
+share/doc/opendkim/draft-ietf-dkim-implementation-report-06.txt
+share/doc/opendkim/draft-ietf-dkim-mailinglists-06.txt
 share/doc/opendkim/draft-ietf-marf-dkim-reporting-01.txt
 share/doc/opendkim/draft-kucherawy-authres-vbr-04.txt
-share/doc/opendkim/draft-kucherawy-dkim-atps-02.txt
 share/doc/opendkim/index.html
 share/doc/opendkim/opendkim
 share/doc/opendkim/opendkim-reportstats
@@ -143,4 +142,5 @@ share/doc/opendkim/rfc5672.txt
 share/doc/opendkim/rfc5863.txt
 share/doc/opendkim/rfc5965.txt
 share/doc/opendkim/rfc6008.txt
+share/doc/opendkim/rfc6212.txt
 share/examples/rc.d/opendkim
