@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2011/04/28 10:27:39 mrg Exp $
+
+diff -ru qt4.py.orig qt4.py
+--- qt4.py.orig	2009-08-08 04:35:13.000000000 -0700
++++ qt4.py	2011-03-03 22:47:22.000000000 -0800
+@@ -444,7 +444,7 @@
+ 		try : self.AppendUnique(CPPDEFINES=moduleDefines[module])
+ 		except: pass
+ 	debugSuffix = ''
+-	if sys.platform == "linux2" and not crosscompiling :
++	if (sys.platform == "netbsd5" and not crosscompiling) or (sys.platform == "linux2" and not crosscompiling) :
+ 		if debug : debugSuffix = '_debug'
+ 		for module in modules :
+ 			if module not in pclessModules : continue
