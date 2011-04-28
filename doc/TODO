@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10289 2011/04/26 10:58:32 adam Exp $
+$NetBSD: TODO,v 1.10290 2011/04/28 10:55:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -767,7 +767,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o htop-0.9
 	o httping-1.4.4
 	o httptunnel-3.3
-	o hydrogen-0.9.3 [pkg/37424]
 	o hylafax-5.5.0
 	o ibus-input-pad-1.4.0 [for ibus-1.4.x]
 	o ical-2.3.2
@@ -885,7 +884,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnome-keyring-3.0.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.0.0
-	o libhydrogen-0.9.2
 	o libidn-1.21
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
