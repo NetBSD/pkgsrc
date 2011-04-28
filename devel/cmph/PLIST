@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2011/04/28 20:45:48 alnsn Exp $
+bin/cmph
+include/chd_ph.h
+include/cmph.h
+include/cmph_time.h
+include/cmph_types.h
+lib/libcmph.la
+lib/pkgconfig/cmph.pc
+man/man1/cmph.1
