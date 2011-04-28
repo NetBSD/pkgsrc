@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1008 2011/04/28 10:55:32 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1009 2011/04/28 20:47:44 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1674,3 +1674,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/openvpn to 2.2.0 [adam 2011-04-28]
 	Updated audio/hydrogen to 0.9.4.2 [mrg 2011-04-28]
 	Removed audio/libhydrogen successor audio/hydrogen [wiz 2011-04-28]
+	Added devel/cmph version 1.0 [alnsn 2011-04-28]
