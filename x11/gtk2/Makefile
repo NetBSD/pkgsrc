@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2011/04/22 13:41:57 obache Exp $
+# $NetBSD: Makefile,v 1.216 2011/04/28 01:57:38 obache Exp $
 
 DISTNAME=		gtk+-2.24.4
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -35,6 +35,8 @@ CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 # Work around build problems, disable unstable PAPI, PR #41608:
 CONFIGURE_ARGS+=	--disable-papi
+# Not to unwanted pick up of db2html, PR#44908
+CONFIGURE_ENV+=		ac_cv_prog_DB2HTML=false
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 TEST_TARGET=		check
 
