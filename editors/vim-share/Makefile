@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/12/18 08:15:03 martti Exp $
+# $NetBSD: Makefile,v 1.28 2011/04/28 15:54:59 jmmv Exp $
 
 PKGNAME=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -18,5 +18,8 @@ USE_TOOLS+=		awk
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} TOOLS_AWK=${TOOLS_AWK} TOOLS_SETENV=${TOOLS_SETENV}
 
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR}
+
+CHECK_INTERPRETER_SKIP+=	share/vim/vim72/doc/*.pl
+CHECK_INTERPRETER_SKIP+=	share/vim/vim72/tools/*.pl
 
 .include "../../mk/bsd.pkg.mk"
