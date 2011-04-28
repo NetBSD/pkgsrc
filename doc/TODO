@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10291 2011/04/28 13:49:52 wiz Exp $
+$NetBSD: TODO,v 1.10292 2011/04/28 23:00:45 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1003,7 +1003,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
-	o opendkim-2.3.2
 	o opengrok-0.10
 	o openh323-1.19.1
 	o openldap-client-2.4.25
