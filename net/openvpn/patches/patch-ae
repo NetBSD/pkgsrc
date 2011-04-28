@@ -1,28 +1,16 @@
-$NetBSD: patch-ae,v 1.4 2010/11/30 08:50:17 adam Exp $
+$NetBSD: patch-ae,v 1.5 2011/04/28 07:27:25 adam Exp $
 
---- configure.ac.orig	2010-11-04 19:29:02.000000000 +0000
+--- configure.ac.orig	2011-04-14 21:30:08.000000000 +0000
 +++ configure.ac
-@@ -362,14 +362,17 @@ if test "${WIN32}" != "yes"; then
+@@ -375,6 +375,7 @@ if test "${WIN32}" != "yes"; then
  		 sys/mman.h fcntl.h sys/file.h stdlib.h stdint.h dnl
  		 stdarg.h unistd.h signal.h stdio.h string.h dnl
  		 strings.h ctype.h errno.h syslog.h pwd.h grp.h dnl
--		 net/if_tun.h net/tun/if_tun.h stropts.h sys/sockio.h dnl
-+		 net/if_tap.h net/if_tun.h net/tun/if_tun.h stropts.h sys/sockio.h dnl
++		 net/if_tap.h
+ 		 net/if_tun.h net/tun/if_tun.h stropts.h sys/sockio.h dnl
  		 netinet/in.h netinet/in_systm.h dnl
  		 netinet/tcp.h arpa/inet.h dnl
- 		 netdb.h sys/uio.h linux/if_tun.h linux/sockios.h dnl
- 		 linux/types.h sys/poll.h sys/epoll.h err.h dnl
-    )
-    AC_CHECK_HEADERS(net/if.h,,,
--		 [#ifdef HAVE_SYS_SOCKET_H 
-+		 [#ifdef HAVE_SYS_TYPES_H 
-+		  # include <sys/types.h>
-+		  #endif
-+		  #ifdef HAVE_SYS_SOCKET_H 
- 		  # include <sys/socket.h>
- 		  #endif
- 		 ])
-@@ -391,6 +394,9 @@ if test "${WIN32}" != "yes"; then
+@@ -407,6 +408,9 @@ if test "${WIN32}" != "yes"; then
  		  #ifdef HAVE_SYS_SOCKET_H
  		  # include <sys/socket.h>
  		  #endif
