@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/05 11:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/28 09:57:05 adam Exp $
 
 DISTNAME=	CherryPy-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,5 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# none
 EGG_NAME=		${DISTNAME}
 
+REPLACE_PYTHON=		py2/cherrypy/cherryd
+REPLACE_PYTHON+=	py3/cherrypy/cherryd
+
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
