@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2010/11/30 08:50:17 adam Exp $
+$NetBSD: patch-aa,v 1.6 2011/04/28 07:27:25 adam Exp $
 
 --- route.c.orig	2010-11-04 19:29:40.000000000 +0000
 +++ route.c
-@@ -1636,7 +1636,11 @@ get_default_gateway (in_addr_t *gateway,
+@@ -1614,7 +1614,11 @@ get_default_gateway (in_addr_t *gateway,
  #define RTA_NETMASK 0x4
  
  #define RTM_GET     0x4

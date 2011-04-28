@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2010/11/30 08:50:17 adam Exp $
+$NetBSD: patch-ab,v 1.7 2011/04/28 07:27:25 adam Exp $
 
 --- syshead.h.orig	2010-11-04 19:29:02.000000000 +0000
 +++ syshead.h
-@@ -305,6 +305,10 @@
+@@ -306,6 +306,10 @@
  
  #ifdef TARGET_NETBSD
  
