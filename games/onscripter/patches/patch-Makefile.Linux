@@ -1,45 +1,26 @@
-$NetBSD: patch-Makefile.Linux,v 1.1.1.1 2011/03/02 12:05:19 ryoon Exp $
+$NetBSD: patch-Makefile.Linux,v 1.2 2011/04/29 17:02:27 ryoon Exp $
 
---- Makefile.Linux.orig	2011-02-26 02:18:50.000000000 +0000
+--- Makefile.Linux.orig	2011-04-18 01:51:34.000000000 +0000
 +++ Makefile.Linux
-@@ -3,23 +3,27 @@
- # Makefile.Linux - Makefile rules for linux
- #
- 
--# without OggVorbis and AVI
--#INCS = `sdl-config --cflags` `smpeg-config --cflags`
--#LIBS = `sdl-config --libs` `smpeg-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm
-+# without OggVorbis, AVI and Lua
-+#INCS = `sdl-config --cflags` `smpeg-config --cflags` `pkg-config --cflags SDL_ttf` `pkg-config --cflags SDL_image` `pkg-config --cflags SDL_mixer`
-+#LIBS = `sdl-config --libs` `smpeg-config --libs` `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm
+@@ -8,11 +8,15 @@
+ #LIBS = `sdl-config --libs` `smpeg-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm
  #DEFS = -DLINUX
  
 -INCS = `sdl-config --cflags` `smpeg-config --cflags` `avifile-config --cflags` -I/usr/include/lua5.1
--# with OggVorbis and AVI
++#INCS = `sdl-config --cflags` `smpeg-config --cflags` `avifile-config --cflags` -I/usr/include/lua5.1
+ # with OggVorbis and AVI
 -LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile -llua5.1
--#DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS
++#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile -llua5.1
+ #DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS
 -DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
-+# with OggVorbis, AVI and Lua + fontconfig
-+#INCS = `sdl-config --cflags` `smpeg-config --cflags` `avifile-config --cflags` `pkg-config --cflags SDL_ttf` `pkg-config --cflags SDL_image` `pkg-config --cflags SDL_mixer` `pkg-config --cflags ogg` `pkg-config --cflags vorbis` `pkg-config --cflags vorbisfile` `pkg-config --cflags lua` `pkg-config --cflags fontconfig`
-+#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm `pkg-config --libs ogg` `pkg-config --libs vorbis` `pkg-config --libs vorbisfile` `pkg-config --libs lua` `pkg-config --libs fontconfig`
 +#DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
-+
 +# with OggVorbis and Lua + fontconfig
 +INCS = `sdl-config --cflags` `smpeg-config --cflags` `pkg-config --cflags SDL_ttf` `pkg-config --cflags SDL_image` `pkg-config --cflags SDL_mixer` `pkg-config --cflags ogg` `pkg-config --cflags vorbis` `pkg-config --cflags vorbisfile` `pkg-config --cflags lua` `pkg-config --cflags fontconfig`
 +LIBS = `sdl-config --libs` `smpeg-config --libs` `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm `pkg-config --libs ogg` `pkg-config --libs vorbis` `pkg-config --libs vorbisfile` `pkg-config --libs lua` `pkg-config --libs fontconfig`
 +DEFS = -DLINUX -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
  
  # with Integer OggVorbis and AVI in PDA size
--#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -lvorbisidec
-+#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm -lvorbisidec
- #DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS -DINTEGER_OGG_VORBIS -DPDA -DPDA_WIDTH=640
- 
- # with OggVorbis and AVI and English mode
--#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile
-+#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` `avifile-config --libs` `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile
- #DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS -DENABLE_1BYTE_CHAR -DFORCE_1BYTE_CHAR
- 
- EXESUFFIX =
+ #LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -lvorbisidec
 @@ -29,11 +33,11 @@ OBJSUFFIX = .o
  .SUFFIXES: $(OBJSUFFIX) .cpp .h
  
