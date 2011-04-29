@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1013 2011/04/29 13:33:01 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1014 2011/04/29 17:03:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1679,3 +1679,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/ffmpeg to 20110426.0.6.3 [obache 2011-04-29]
 	Updated multimedia/ffplay to 0.6.3 [obache 2011-04-29]
 	Updated textproc/groonga to 1.2.1 [obache 2011-04-29]
+	Updated games/onscripter to 20110416 [ryoon 2011-04-29]
