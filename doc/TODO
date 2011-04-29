@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10293 2011/04/29 06:02:57 obache Exp $
+$NetBSD: TODO,v 1.10294 2011/04/29 07:41:17 obache Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o fetchmail-6.3.19
 	o fetchyahoo-2.14.0
-	o ffmpeg-20110426.0.6.3
 	o file-5.05
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
