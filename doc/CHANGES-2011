@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1015 2011/04/29 17:25:50 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1016 2011/04/29 22:46:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1681,3 +1681,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/groonga to 1.2.1 [obache 2011-04-29]
 	Updated games/onscripter to 20110416 [ryoon 2011-04-29]
 	Updated time/etm to 707 [ryoon 2011-04-29]
+	Updated mail/msmtp to 1.4.24 [ryoon 2011-04-29]
