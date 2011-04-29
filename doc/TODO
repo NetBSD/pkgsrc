@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10294 2011/04/29 07:41:17 obache Exp $
+$NetBSD: TODO,v 1.10295 2011/04/29 17:26:18 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -558,7 +558,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-706
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evince-3.0.0
