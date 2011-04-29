@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1011 2011/04/29 07:42:09 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1012 2011/04/29 07:42:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1677,3 +1677,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/cmph version 1.0 [alnsn 2011-04-28]
 	Updated mail/opendkim to 2.3.2 [pettai 2011-04-28]
 	Updated multimedia/ffmpeg to 20110426.0.6.3 [obache 2011-04-29]
+	Updated multimedia/ffplay to 0.6.3 [obache 2011-04-29]
