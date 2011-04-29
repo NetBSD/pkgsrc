@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/06 13:17:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/29 13:31:15 obache Exp $
 bin/grntest
 bin/groonga
 bin/groonga-suggest-create-dataset
@@ -85,6 +85,7 @@ share/groonga/doc/ja/html/_sources/grntest.txt
 share/groonga/doc/ja/html/_sources/http.txt
 share/groonga/doc/ja/html/_sources/index.txt
 share/groonga/doc/ja/html/_sources/install.txt
+share/groonga/doc/ja/html/_sources/limitations.txt
 share/groonga/doc/ja/html/_sources/news.txt
 share/groonga/doc/ja/html/_sources/process.txt
 share/groonga/doc/ja/html/_sources/pseudo_column.txt
@@ -165,6 +166,7 @@ share/groonga/doc/ja/html/grntest.html
 share/groonga/doc/ja/html/http.html
 share/groonga/doc/ja/html/index.html
 share/groonga/doc/ja/html/install.html
+share/groonga/doc/ja/html/limitations.html
 share/groonga/doc/ja/html/news.html
 share/groonga/doc/ja/html/objects.inv
 share/groonga/doc/ja/html/process.html
@@ -265,6 +267,8 @@ share/groonga/doc/ja/source/example/tutorial06-2.log
 share/groonga/doc/ja/source/example/tutorial06-3.log
 share/groonga/doc/ja/source/example/tutorial06-4.log
 share/groonga/doc/ja/source/example/tutorial06-5.log
+share/groonga/doc/ja/source/example/tutorial06-6.log
+share/groonga/doc/ja/source/example/tutorial06-7.log
 share/groonga/doc/ja/source/example/tutorial07-1.log
 share/groonga/doc/ja/source/example/tutorial07-2.log
 share/groonga/doc/ja/source/example/tutorial07-3.log
@@ -294,6 +298,7 @@ share/groonga/doc/ja/source/grntest.txt
 share/groonga/doc/ja/source/http.txt
 share/groonga/doc/ja/source/index.txt
 share/groonga/doc/ja/source/install.txt
+share/groonga/doc/ja/source/limitations.txt
 share/groonga/doc/ja/source/news.txt
 share/groonga/doc/ja/source/process.txt
 share/groonga/doc/ja/source/pseudo_column.txt
