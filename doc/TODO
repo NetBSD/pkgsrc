@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10295 2011/04/29 17:26:18 ryoon Exp $
+$NetBSD: TODO,v 1.10296 2011/04/29 22:46:37 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpop-1.0.24
 	o mrtg-2.17.1
 	o mserv-devel-0.41
-	o msmtp-1.4.24
 	o mu-0.9.5
 	o multitail-5.2.8
 	o munin-1.4.4
