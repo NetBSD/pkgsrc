@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.52 2010/08/24 19:08:29 bad Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.53 2011/04/30 21:58:37 dholland Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -212,6 +212,8 @@ FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL:Q}
     (defined(SETGIDGAME) && !empty(SETGIDGAME:M[yY][eE][sS]))
 PKG_GROUPS+=	${GAMES_GROUP}
 PKG_USERS+=	${GAMES_USER}:${GAMES_GROUP}
+BUILD_DEFS+=	GAMES_USER GAMES_GROUP
+BUILD_DEFS+=	GAMEMODE GAMEDIRMODE GAMEDATAMODE
 .endif
 
 # Interix is very special in that users and groups cannot have the
@@ -605,7 +607,7 @@ ${_INSTALL_FILES_FILE}: ../../mk/pkginstall/files
 #	created/destroyed by the INSTALL/DEINSTALL scripts.  MAKE_DIRS_PERMS
 #	is used the same way but the package admin isn't prompted to remove
 #	the directory at post-deinstall time if it isn't empty.
-#	REQD_DIRS_PERMS is like MAKE_DIRS but the value of PKG_CONFIG is
+#	REQD_DIRS_PERMS is like MAKE_DIRS_PERMS but the value of PKG_CONFIG is
 #	ignored; however, all directories listed in REQD_DIRS should be
 #	under ${PREFIX}.
 #
