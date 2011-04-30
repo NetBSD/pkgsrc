@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1018 2011/04/30 09:08:36 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1019 2011/04/30 11:35:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1684,3 +1684,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/msmtp to 1.4.24 [ryoon 2011-04-29]
 	Updated print/abcm2ps to 6.3.1 [ryoon 2011-04-30]
 	Added textproc/p5-Text-Brew version 0.02 [obache 2011-04-30]
+	Updated net/scamper to 20110421 [obache 2011-04-30]
