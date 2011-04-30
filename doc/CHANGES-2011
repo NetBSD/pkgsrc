@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1021 2011/04/30 12:21:53 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1022 2011/04/30 13:28:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/scamper to 20110421 [obache 2011-04-30]
 	Updated lang/smalltalk to 3.2.4 [asau 2011-04-30]
 	Added security/tarsnap version 1.0.29 [wiz 2011-04-30]
+	Updated net/mikutter to 0.0.3.2 [obache 2011-04-30]
