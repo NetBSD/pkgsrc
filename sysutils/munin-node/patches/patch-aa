@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2010/07/11 18:15:47 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2011/04/30 19:10:13 abs Exp $
 
---- Makefile.config.orig	2005-01-10 10:38:22.000000000 +0000
+--- Makefile.config.orig	2005-04-15 20:29:18.000000000 +0000
 +++ Makefile.config
 @@ -7,32 +7,32 @@
  #
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.3 2010/07/11 18:15:47 joerg Exp $
  
  # Client only - Where plugins should put their states. Must be writable by
  # group "munin", and should be preserved between reboots
-@@ -45,14 +49,14 @@ LOGDIR     = $(DESTDIR)/var/log/munin
+@@ -45,14 +45,14 @@ LOGDIR     = $(DESTDIR)/var/log/munin
  # writable by the user "munin".
  STATEDIR   = $(DESTDIR)/var/run/munin
  
@@ -54,7 +54,8 @@ $NetBSD: patch-aa,v 1.3 2010/07/11 18:15:47 joerg Exp $
 +PERL       = ${PERL5}
  
  # The python interpreter to use (used by some plugins)
- PYTHON     = /usr/bin/env python
+-PYTHON     = /usr/bin/env python
++PYTHON     = ${PYTHONBIN}
  
  # Server only - Where to install the perl libraries
 -PERLLIB    = $(DESTDIR)$(shell $(PERL) -V:sitelib | cut -d= -f2 | sed "s/[\';]//g")
@@ -62,7 +63,7 @@ $NetBSD: patch-aa,v 1.3 2010/07/11 18:15:47 joerg Exp $
  
  # Client only - Install plugins for this architecture
  OSTYPE     = $(shell uname | tr '[A-Z]' '[a-z]')
-@@ -65,16 +69,15 @@ HOSTNAME   = $(shell hostname)
+@@ -65,16 +65,15 @@ HOSTNAME   = $(shell hostname)
  VERSION    = $(shell cat RELEASE)
  
  # User to run munin as
