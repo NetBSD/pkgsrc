@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2010/08/30 02:48:40 asau Exp $
+# $NetBSD: Makefile,v 1.93 2011/04/30 23:28:56 asau Exp $
 #
 
-DISTNAME=		mathomatic-15.2.0
+DISTNAME=		mathomatic-15.6.0
 CATEGORIES=		math
 MASTER_SITES=		http://mathomatic.org/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=		yes
 MAKE_FILE=		makefile
 USE_TOOLS+=		gmake
+INSTALL_ENV+=		prefix=$(PREFIX) mandir=$(DESTDIR)$(PREFIX)/$(PKGMANDIR)
 
 CFLAGS.SunOS+=		-DSOLARIS
 
