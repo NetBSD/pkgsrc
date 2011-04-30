@@ -1,0 +1,8 @@
+This module implements the Brew edit distance that is very close to the
+dynamic programming technique used for the Wagner-Fischer (and so for
+the Levenshtein) edit distance.  The difference here is that you have
+separated costs for the DELetion and INSertion operations (but with the
+default to 1 for both, you obtain the Levenshtein edit distance). But
+the most interesting feature is that you can obtain the description of
+the edits needed to transform the first string into the second one (not
+vice versa: here DELetions are separated from INSertions).
