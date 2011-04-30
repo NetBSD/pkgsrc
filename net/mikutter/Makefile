@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/04/25 13:05:31 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/30 13:26:14 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.3.1
+DISTNAME=	mikutter.0.0.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3-[0-9]*:../../databases/ruby-sqlite3
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.1.9:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac-[0-9]*:../../security/ruby-hmac
