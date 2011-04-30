@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1022 2011/04/30 13:28:38 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1023 2011/04/30 23:29:22 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1688,3 +1688,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/smalltalk to 3.2.4 [asau 2011-04-30]
 	Added security/tarsnap version 1.0.29 [wiz 2011-04-30]
 	Updated net/mikutter to 0.0.3.2 [obache 2011-04-30]
+	Updated math/mathomatic to 15.6.0 [asau 2011-04-30]
