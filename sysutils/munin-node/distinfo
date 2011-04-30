@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2010/07/17 11:47:57 abs Exp $
+$NetBSD: distinfo,v 1.9 2011/04/30 19:10:12 abs Exp $
 
 SHA1 (munin_1.3.2.tar.gz) = 575c1dc3373e2e001accd1920fd815d9b875c95a
 RMD160 (munin_1.3.2.tar.gz) = 7bcc16d00ad28731041015ef240144ed0c4fdeb4
 Size (munin_1.3.2.tar.gz) = 309319 bytes
-SHA1 (patch-aa) = 5eaf9bdf345cddb8af221b6c0bc34f84b27c4f1b
+SHA1 (patch-aa) = 6c4517444cbcedadd276924c0ff417443618fd2b
 SHA1 (patch-ab) = bb0f63cdef893d8c224cdd03a4a4125d03f85f80
 SHA1 (patch-ac) = 9ef503b4d20f65e990c332c7789188a6fbad618e
 SHA1 (patch-ad) = d29f61134077f7875500af2e5671b67913fb2306
