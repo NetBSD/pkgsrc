@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1019 2011/04/30 11:35:40 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1020 2011/04/30 12:04:04 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1685,3 +1685,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/abcm2ps to 6.3.1 [ryoon 2011-04-30]
 	Added textproc/p5-Text-Brew version 0.02 [obache 2011-04-30]
 	Updated net/scamper to 20110421 [obache 2011-04-30]
+	Updated lang/smalltalk to 3.2.4 [asau 2011-04-30]
