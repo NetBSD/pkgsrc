@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/04/22 13:42:35 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/04/30 18:31:08 abs Exp $
 
 DISTNAME=	akonadi-1.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://download.akonadi-project.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,9 @@ BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
 .include "../../mk/mysql.buildlink3.mk"
-.if ${_MYSQL_VERSION} == "51"
+.if ${_MYSQL_VERSION} == "55"
+DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql55-server
+.elif ${_MYSQL_VERSION} == "51"
 DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql51-server
 .else
 DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql5-server
