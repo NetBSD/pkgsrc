@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.22 2010/07/31 22:06:24 asau Exp $
+$NetBSD: distinfo,v 1.23 2011/04/30 11:46:15 asau Exp $
 
-SHA1 (smalltalk-3.2.2.tar.gz) = a985d69e4760420614c9dfe4d3605e47c5eb8faa
-RMD160 (smalltalk-3.2.2.tar.gz) = ec1d0c36139d76f5ced530ca7f8228bd0ff0ddb2
-Size (smalltalk-3.2.2.tar.gz) = 5825782 bytes
-SHA1 (patch-aa) = c82dfcc53ce4177ae051041106c6c2efdb61cb4e
-SHA1 (patch-ac) = 15e45687aca1910818eabb82236de8bdd0abed99
-SHA1 (patch-ae) = 1f73f0e1a5a11099ba5cf636bcc154a83b617cc4
-SHA1 (patch-af) = 76744e495b5bb180b5acdbcc450d7090ed708113
-SHA1 (patch-ah) = 9ff279fd482cbc2d10a35cd87f0c78d8e7a07277
+SHA1 (smalltalk-3.2.4.tar.gz) = 6b164e145c1118ad74770bb15614478d47f55523
+RMD160 (smalltalk-3.2.4.tar.gz) = d8ca6b888311a70748071ff4024e31adeb0a920f
+Size (smalltalk-3.2.4.tar.gz) = 5877496 bytes
+SHA1 (patch-ae) = c92422f2ac5378dafc65762a69c0dc840d974363
+SHA1 (patch-ah) = eaa03cf41f1c30acd1762cb6389dfe0157ce551b
