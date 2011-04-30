@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2010/07/31 22:06:25 asau Exp $
+$NetBSD: patch-ae,v 1.5 2011/04/30 11:46:15 asau Exp $
 
 --- configure.orig	2010-04-21 14:03:23.000000000 +0400
 +++ configure	2010-05-02 22:52:09.000000000 +0400
@@ -12,12 +12,3 @@ $NetBSD: patch-ae,v 1.4 2010/07/31 22:06:25 asau Exp $
          lrint trunc strsep strpbrk symlink mkdtemp
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
-@@ -24753,8 +24754,6 @@
- 
- ac_config_files="$ac_config_files tests/atlocal"
- 
--ac_config_files="$ac_config_files libc.la"
--
- 
- ac_config_files="$ac_config_files Makefile"
- 
