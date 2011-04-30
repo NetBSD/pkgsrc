@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2011/04/22 13:44:00 obache Exp $
+# $NetBSD: Makefile,v 1.58 2011/04/30 11:46:15 asau Exp $
 
-DISTNAME=	smalltalk-3.2.2
-PKGREVISION=	4
+DISTNAME=	smalltalk-3.2.4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=smalltalk/}
 
@@ -9,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.smalltalk.org/versions/GNUSmalltalk.html
 COMMENT=	GNU Smalltalk: A smalltalk-80 implementation
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-sparc *-*-powerpc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
