@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/07/31 22:06:24 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/04/30 11:46:15 asau Exp $
 bin/gst
 bin/gst-blox
 bin/gst-browser
@@ -27,7 +27,9 @@ lib/smalltalk/gstglut.la
 lib/smalltalk/gstopengl.la
 lib/smalltalk/i18n.la
 lib/smalltalk/iconv.la
+lib/smalltalk/libc.la
 lib/smalltalk/zlib.la
+libexec/smalltalk/gnutls-wrapper
 libexec/smalltalk/vfs/deb
 libexec/smalltalk/vfs/lslR
 libexec/smalltalk/vfs/mailfs
@@ -50,6 +52,7 @@ man/man1/gst-sunit.1
 man/man1/gst.1
 share/aclocal/gst-package.m4
 share/aclocal/gst.m4
+share/smalltalk/Announcements.star
 share/smalltalk/BLOXBrowser.star
 share/smalltalk/Blox.star
 share/smalltalk/BloxGTK.star
