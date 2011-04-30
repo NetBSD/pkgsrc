@@ -1,0 +1,22 @@
+# $NetBSD: Makefile,v 1.1.1.1 2011/04/30 12:21:05 wiz Exp $
+#
+
+DISTNAME=	tarsnap-autoconf-1.0.29
+PKGNAME=	${DISTNAME:S/-autoconf//}
+CATEGORIES=	security
+MASTER_SITES=	https://www.tarsnap.com/download/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	wiz@NetBSD.org
+HOMEPAGE=	https://www.tarsnap.com/
+COMMENT=	Secure online backup service
+LICENSE=	tarsnap-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=		yes
+INSTALL_MAKE_FLAGS=	sysconfdir=${PREFIX}/share/examples/tarsnap
+
+CONF_FILES=	${PREFIX}/share/examples/tarsnap/tarsnap.conf.sample ${PKG_SYSCONFDIR}/tarsnap.conf
+
+.include "../../mk/bsd.pkg.mk"
