@@ -1,0 +1,15 @@
+$NetBSD: patch-crypto_Makefile.in,v 1.1 2011/05/01 23:28:59 ryoon Exp $
+
+* Fix build. Use devel/libltdl instead of internal libltdl.
+
+--- crypto/Makefile.in.orig	2010-03-07 12:04:48.000000000 +0000
++++ crypto/Makefile.in
+@@ -246,7 +246,7 @@ dyndev_SRC = dyncrypt.c sha1.c sha256.c 
+ @OPTION_DYNAMIC_LOAD_FALSE@DYNSRC = $(dyndev_SRC)
+ @OPTION_DYNAMIC_LOAD_TRUE@DYNSRC = 
+ @OPTION_DYNAMIC_LOAD_FALSE@LTDL = 
+-@OPTION_DYNAMIC_LOAD_TRUE@LTDL = ../ltdl.c
++@OPTION_DYNAMIC_LOAD_TRUE@LTDL =
+ @OPTION_DYNAMIC_LOAD_FALSE@DYNMOD_LD_FLAGS = 
+ @OPTION_DYNAMIC_LOAD_TRUE@DYNMOD_LD_FLAGS = -module         \
+ @OPTION_DYNAMIC_LOAD_TRUE@                   -no-undefined   \
