@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/08 17:09:25 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2011/05/01 23:05:10 wiz Exp $
 #
 
 DISTNAME=	mupdf-0.8-source
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ccxvii.net/mupdf/download/ \
 		http://ccxvii.net/mupdf/download/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ccxvii.net/mupdf/
+HOMEPAGE=	http://mupdf.com/
 COMMENT=	Lightweight PDF viewer and toolkit
 LICENSE=	gnu-gpl-v3
 
