@@ -1,0 +1,15 @@
+$NetBSD: patch-decNumber_Makefile.in,v 1.1 2011/05/01 23:28:59 ryoon Exp $
+
+* Fix build. Use devel/libltdl instead of internal libltdl.
+
+--- decNumber/Makefile.in.orig	2010-03-07 12:04:48.000000000 +0000
++++ decNumber/Makefile.in
+@@ -260,7 +260,7 @@ decNumber_SRC = decContext.c \
+ @BUILD_SHARED_FALSE@XSTATIC = -static
+ @BUILD_SHARED_TRUE@XSTATIC = 
+ @OPTION_DYNAMIC_LOAD_FALSE@LTDL = 
+-@OPTION_DYNAMIC_LOAD_TRUE@LTDL = ../ltdl.c
++@OPTION_DYNAMIC_LOAD_TRUE@LTDL =
+ @OPTION_DYNAMIC_LOAD_FALSE@LIB_LD_FLAGS = $(XSTATIC)    \
+ @OPTION_DYNAMIC_LOAD_FALSE@		   -no-undefined \
+ @OPTION_DYNAMIC_LOAD_FALSE@		   -avoid-version
