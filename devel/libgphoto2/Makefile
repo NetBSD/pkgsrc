@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2011/04/28 11:16:35 hans Exp $
+# $NetBSD: Makefile,v 1.54 2011/05/01 10:19:52 abs Exp $
 
 DISTNAME=	libgphoto2-2.4.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,9 +27,10 @@ PKGCONFIG_OVERRIDE+=	libgphoto2.pc.in libgphoto2_port/libgphoto2_port.pc.in
 post-install:
 	rm ${DESTDIR}${PREFIX}/include/gphoto2/gphoto2
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../devel/libusb/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
