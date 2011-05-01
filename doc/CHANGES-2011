@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1024 2011/05/01 03:13:02 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1025 2011/05/01 09:21:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1690,3 +1690,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.2 [obache 2011-04-30]
 	Updated math/mathomatic to 15.6.0 [asau 2011-04-30]
 	Updated www/ikiwiki to 3.20110430 [schmonz 2011-05-01]
+	Added textproc/py-cssutils version 0.9.7 [obache 2011-05-01]
