@@ -1,0 +1,4 @@
+A Python package to parse and build CSS Cascading Style Sheets.
+
+Querying a parsed stylesheet on a given document or element is planned for a
+future release, for now see the example examples/style.py.
