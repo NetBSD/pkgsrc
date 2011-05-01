@@ -1,27 +1,15 @@
-$NetBSD: distinfo,v 1.10 2010/01/17 08:00:47 dholland Exp $
+$NetBSD: distinfo,v 1.11 2011/05/01 23:28:57 ryoon Exp $
 
-SHA1 (hercules-2.11.tar.gz) = ec84388e29cfd070055afa5fc11a33c896f2333a
-RMD160 (hercules-2.11.tar.gz) = 113647be0bd80ecc52331319902a1140a81b56aa
-Size (hercules-2.11.tar.gz) = 616554 bytes
-SHA1 (patch-aa) = 639ccc667a415fc427996be1972f7b0b67efca2c
-SHA1 (patch-ab) = ea2802d8752411e964ba150d3a54f64a40fc2e70
-SHA1 (patch-ac) = 454ac972ad54f19f139033abe8ccabdbb0c3f88b
-SHA1 (patch-ad) = 51fa93cb9fbc8382de1da52748dffa4ec2bcbf9c
-SHA1 (patch-ae) = 14aafa5462a858e44c00ea6d43efd0f1cfef190e
-SHA1 (patch-af) = 759ad1ee2737ed8021b5a5fd956851677e99879a
-SHA1 (patch-ag) = 6dcec345641bdde0c617da10f57b6f2dd6b702ac
-SHA1 (patch-ah) = 06e03dc32c91ab5d3125a3b5489d15ef5c1e144c
-SHA1 (patch-aj) = 8584ff1c318e72a52ae597457368114998a89cb6
-SHA1 (patch-ak) = 5b594849074ac410f2b8c93f2df0dca874b4533a
-SHA1 (patch-al) = 60d90ed9c1476b8fcf0a905a8316f3aec9108169
-SHA1 (patch-am) = 4626f39156ac2beccd9911f795aff6f9fe7b997b
-SHA1 (patch-an) = 207bff27722867a7a934863451152df2ba8aa2c6
-SHA1 (patch-ao) = 4d389c21d36ab44565f8e90f90dad8acff24e747
-SHA1 (patch-ap) = 7edbd0f8ec738cf1ed6be0d14f7f6882ba0d225b
-SHA1 (patch-aq) = 7b54514b1833da0875f98794e06dcd2e43f0ad4a
-SHA1 (patch-ar) = 37892292e02ba5be83e76bb2d4134bea875ca73a
-SHA1 (patch-as) = 281d81485186f4aa44938e4152050796d564629a
-SHA1 (patch-at) = 75cbca5dcf21df9af227ac49825986217f4491f8
-SHA1 (patch-au) = d1761b4845fdee6633e728d4cf86b8f00ce9b5d4
-SHA1 (patch-av) = ec670511d4aeef9bba08cd6edf16f64a624d10b9
-SHA1 (patch-aw) = cb0f64d81d4c20d237a108cc3baac12f3d4923b1
+SHA1 (hercules-3.07.tar.gz) = d0b2e543dd66ee43576e5a5faff8f4cc061cffb4
+RMD160 (hercules-3.07.tar.gz) = 241344a3242a1dacc5276dd61b7fa4c92a270f71
+Size (hercules-3.07.tar.gz) = 2701835 bytes
+SHA1 (patch-Makefile.in) = b52cc86f9bdc4f0450322fc55424bcb362216d37
+SHA1 (patch-configure) = 0d2e909120d892de335b90ef93eed8845c877227
+SHA1 (patch-crypto_Makefile.in) = 0e9fa3ce7e2f629d9eaed21dcfe7625087f7103b
+SHA1 (patch-decNumber_Makefile.in) = 98228044642007e894fde580e010c6da874454af
+SHA1 (patch-hercifc.h) = e09e4dacc7d733972c2caeb82be7bbf2b84584fb
+SHA1 (patch-hostopts.h) = 57e90d3315d775751fc1c000749e1162b0f8c7a2
+SHA1 (patch-hstructs.h) = 8680a7c4c0e6a1f3921a3fa8fce32010deb1768d
+SHA1 (patch-scsitape.c) = ecdbc3c83ea30bee55d747016671182c07c3aaad
+SHA1 (patch-tapecopy.c) = 8e73edd56f3b1627a41e39ef75aaa79efe13003e
+SHA1 (patch-tapedev.h) = f58aada65a902fa90def655bc78151c8045d3f9d

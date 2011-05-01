@@ -1,0 +1,69 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/05/01 23:28:58 ryoon Exp $
+
+* Fix build. Use devel/libltdl instead of internal libltdl.
+
+--- Makefile.in.orig	2010-03-07 12:04:49.000000000 +0000
++++ Makefile.in
+@@ -304,13 +304,13 @@ libherct_la_OBJECTS = $(am_libherct_la_O
+ libhercu_la_DEPENDENCIES = $(am__DEPENDENCIES_1) libhercs.la
+ am__libhercu_la_SOURCES_DIST = version.c hscutl.c hscutl2.c codepage.c \
+ 	logger.c logmsg.c hdl.c hostinfo.c hsocket.c memrchr.c \
+-	parser.c pttrace.c fthreads.c fishhang.c ltdl.c
++	parser.c pttrace.c fthreads.c fishhang.c
+ am__objects_5 = fthreads.lo
+ @BUILD_FTHREADS_TRUE@am__objects_8 = $(am__objects_5)
+ am__objects_6 = fishhang.lo
+ @BUILD_FISHHANG_TRUE@@BUILD_FTHREADS_TRUE@am__objects_9 =  \
+ @BUILD_FISHHANG_TRUE@@BUILD_FTHREADS_TRUE@	$(am__objects_6)
+-@OPTION_DYNAMIC_LOAD_TRUE@am__objects_10 = ltdl.lo
++@OPTION_DYNAMIC_LOAD_TRUE@am__objects_10 =
+ am_libhercu_la_OBJECTS = version.lo hscutl.lo hscutl2.lo codepage.lo \
+ 	logger.lo logmsg.lo hdl.lo hostinfo.lo hsocket.lo memrchr.lo \
+ 	parser.lo pttrace.lo $(am__objects_8) $(am__objects_9) \
+@@ -614,7 +614,7 @@ AUTOMAKE_OPTIONS = foreign 1.5
+ ACLOCAL_AMFLAGS = -I m4
+ lns = @LN_S@
+ SUBDIRS = decNumber m4 po util html man . crypto
+-LDADD = @LTLIBICONV@ @LTLIBINTL@ @LIBS@
++LDADD = @LTLIBICONV@ @LTLIBINTL@ @LIBS@ -lltdl
+ AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/decNumber
+ @BUILD_HERCIFC_FALSE@HERCIFC = 
+ @BUILD_HERCIFC_TRUE@HERCIFC = hercifc
+@@ -687,7 +687,7 @@ dyndev_SRC = commadpt.c  \
+ @OPTION_DYNAMIC_LOAD_FALSE@DYNSRC = $(dyndev_SRC)
+ @OPTION_DYNAMIC_LOAD_TRUE@DYNSRC = 
+ @OPTION_DYNAMIC_LOAD_FALSE@LTDL = 
+-@OPTION_DYNAMIC_LOAD_TRUE@LTDL = ltdl.c
++@OPTION_DYNAMIC_LOAD_TRUE@LTDL =
+ @OPTION_DYNAMIC_LOAD_FALSE@DYNMOD_LD_FLAGS = 
+ @OPTION_DYNAMIC_LOAD_TRUE@DYNMOD_LD_FLAGS = -module         \
+ @OPTION_DYNAMIC_LOAD_TRUE@                   -no-undefined    \
+@@ -914,7 +914,6 @@ EXTRA_libherc_la_SOURCES = $(fthreads_SR
+                              $(dynamic_SRC)   \
+                              $(extra_SRC)     \
+                              $(dyndev_SRC)    \
+-                             ltdl.c
+ 
+ libherc_la_LDFLAGS = $(LIB_LD_FLAGS)
+ libherc_la_LIBADD = libhercs.la     \
+@@ -1166,7 +1165,6 @@ noinst_HEADERS = fishhang.h     \
+                  hdl.h          \
+                  crypto.h       \
+                  sockdev.h      \
+-                 ltdl.h         \
+                  herc_getopt.h  \
+                  service.h      \
+                  chsc.h         \
+@@ -2047,9 +2045,9 @@ tar: dist
+ install-exec-local:
+ 
+ install-exec-hook:
+-@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(libdir)/libherc*.a
+-@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/dyn*.a
+-@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/hdt*.a
++#@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(libdir)/libherc*.a
++#@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/dyn*.a
++#@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/hdt*.a
+ @BUILD_SHARED_FALSE@	rm -f $(DESTDIR)$(libdir)/libherc*
+ #
+ # NOTE : symbolic links point to FINAL destination (not to staged install)
