@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2011/04/22 13:44:16 obache Exp $
+# $NetBSD: Makefile,v 1.20 2011/05/01 10:15:32 abs Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+REPLACE_BASH+=	kioslave/audiocd/upgrade-metadata.sh
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
