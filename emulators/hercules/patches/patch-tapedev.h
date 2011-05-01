@@ -1,30 +1,15 @@
-$NetBSD: patch-ac,v 1.2 2004/06/13 14:03:28 agc Exp $
+$NetBSD: patch-tapedev.h,v 1.1 2011/05/01 23:28:59 ryoon Exp $
 
-Linux tape handling.
-
---- hercules.h	2004-06-13 14:44:50.000000000 +0100
-+++ hercules.h	2004-06-13 14:47:06.000000000 +0100
-@@ -34,6 +34,7 @@
-  #include <byteswap.h>
- #endif
- #include <sys/types.h>
-+#include <sys/param.h>
- #include <sys/resource.h>
- #include <sys/stat.h>
- #include <sys/socket.h>
-@@ -110,6 +111,7 @@
- #define HAVE_STRUCT_TIMESPEC
- #endif
- #include <pthread.h>
-+#include <sched.h>
- #ifdef WIN32
- #undef DWORD
- #endif
-@@ -935,6 +937,56 @@
- #define CCKD_OPEN_RD           2
- #define CCKD_OPEN_RW           3
+--- tapedev.h.orig	2010-01-08 22:56:27.000000000 +0000
++++ tapedev.h
+@@ -535,4 +535,61 @@ extern int  readhdr_omaheaders (DEVBLK *
+ /*-------------------------------------------------------------------*/
+ // (see SCSITAPE.H)
  
 +#if defined(BSD) && BSD >= 199306
++/*-------------------------------------------------------------------*/
++/* Support for BSD tape                                              */
++/*-------------------------------------------------------------------*/
 +struct mt_tape_info {
 +	BYTE	t_type;
 +	const char *t_name;
@@ -72,8 +57,10 @@ Linux tape handling.
 +#define MT_ISUNKNOWN 0x01
 +#define MT_ISQIC02 0x02 
 +
-+#endif
++#define MTIOCPOS	MTNOP	/* do nothing, status only */
++#define mtpos		mtget	/* generic status struct, including mt_blkno */
++#define MTSEEK		MTFSR	/* forward seek record; probably wrong */
 +
- /*-------------------------------------------------------------------*/
- /* Global data areas in module config.c 			     */
- /*-------------------------------------------------------------------*/
++#endif /* BSD */
++
+ #endif // __TAPEDEV_H__

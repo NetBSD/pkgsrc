@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2011/05/01 23:28:59 ryoon Exp $
+
+* Fix incorrect use of ==
+
+--- configure.orig	2010-03-07 12:04:50.000000000 +0000
++++ configure
+@@ -33253,7 +33253,7 @@ fi
+ 
+ 
+ 
+-if test "$hc_cv_have_sys_mtio_h" == "yes"; then
++if test "$hc_cv_have_sys_mtio_h" = "yes"; then
+     { echo "$as_me:$LINENO: checking whether MTEWARN is declared" >&5
+ echo $ECHO_N "checking whether MTEWARN is declared... $ECHO_C" >&6; }
+ if test "${ac_cv_have_decl_MTEWARN+set}" = set; then
