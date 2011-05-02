@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.1.1.1 2008/11/21 17:40:31 adam Exp $
+$NetBSD: patch-ae,v 1.2 2011/05/02 21:23:01 adam Exp $
 
---- dlls/winex11.drv/opengl.c.orig	2008-06-27 16:24:42.000000000 +0200
+--- dlls/winex11.drv/opengl.c.orig	2010-06-18 17:36:58.000000000 +0000
 +++ dlls/winex11.drv/opengl.c
-@@ -47,6 +47,7 @@ WINE_DEFAULT_DEBUG_CHANNEL(wgl);
+@@ -55,6 +55,7 @@ WINE_DECLARE_DEBUG_CHANNEL(winediag);
  #endif
  #ifdef HAVE_GL_GLX_H
  # include <GL/glx.h>
 +# include <GL/glxext.h>
  #endif
- #ifdef HAVE_GL_GLEXT_H
- # include <GL/glext.h>
+ 
+ #include "wine/wgl.h"
