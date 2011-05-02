@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2010/05/21 06:34:23 adam Exp $
+$NetBSD: patch-aa,v 1.10 2011/05/02 11:15:42 adam Exp $
 
 --- fontforge/Makefile.dynamic.in.orig	2010-02-02 05:23:06.000000000 +0000
 +++ fontforge/Makefile.dynamic.in
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.9 2010/05/21 06:34:23 adam Exp $
  X_11LIB = @X_11LIB@
  X_EXTRA_LIBS = @X_EXTRA_LIBS@
  X_PRE_LIBS = @X_PRE_LIBS@
-@@ -74,7 +74,7 @@ LIBLIBS = -rpath $(libdir) ../libgutils.
+@@ -75,7 +75,7 @@ LIBLIBS = -rpath $(libdir) ../libgutils.
      @LIBS@ $(STATIC_LIBS) -lm
  DLIBS = -rpath $(libdir)  ../libfontforge.la ../libgutils.la ../libgunicode.la @LIBS@ $(STATIC_LIBS) -lm
  

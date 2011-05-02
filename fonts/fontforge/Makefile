@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2011/04/22 13:43:31 obache Exp $
+# $NetBSD: Makefile,v 1.73 2011/05/02 11:15:41 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
-PKGREVISION=	7
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fontforge/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,25 +9,26 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.sourceforge.net/
 COMMENT=	Postscript font editor
+LICENSE=	modified-bsd
 
-VERSION=	20100501
+VERSION=	20110222
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
-
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-freetype-src
 CONFIGURE_ARGS+=	--without-python
-BROKEN_GETTEXT_DETECTION=	yes
 
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 LDFLAGS.SunOS+=		-lrt
+
+BROKEN_GETTEXT_DETECTION=	yes
 
 .include "options.mk"
 
@@ -37,9 +37,9 @@ LDFLAGS.SunOS+=		-lrt
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
