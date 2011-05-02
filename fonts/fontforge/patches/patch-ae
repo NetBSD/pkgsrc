@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.22 2010/05/21 06:34:23 adam Exp $
+$NetBSD: patch-ae,v 1.23 2011/05/02 11:15:42 adam Exp $
 
 --- configure.orig	2010-04-29 17:53:45.000000000 +0000
 +++ configure
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.22 2010/05/21 06:34:23 adam Exp $
  else
    $as_echo "#define _NO_LIBXML 1" >>confdefs.h
  
-@@ -22930,7 +22930,7 @@ if test "$gww_has_gettext" = "yes" >/dev
+@@ -23016,7 +23016,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
   echo 'prefix = @prefix@' >> $ac_confdir/po/Makefile.in
