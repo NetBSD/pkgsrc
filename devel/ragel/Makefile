@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/08/21 03:21:05 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/02 12:42:20 obache Exp $
 
-DISTNAME=	ragel-6.5
+DISTNAME=	ragel-6.6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.complang.org/ragel/
 
