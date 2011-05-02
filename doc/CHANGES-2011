@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1026 2011/05/01 23:32:43 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1027 2011/05/02 11:16:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1692,3 +1692,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ikiwiki to 3.20110430 [schmonz 2011-05-01]
 	Added textproc/py-cssutils version 0.9.7 [obache 2011-05-01]
 	Updated emulators/hercules to 3.07 [ryoon 2011-05-01]
+	Updated net/knock to 0.5nb1 [adam 2011-05-02]
+	Updated fonts/fontforge to 20110222 [adam 2011-05-02]
