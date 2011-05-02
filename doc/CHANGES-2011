@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1037 2011/05/02 13:17:57 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1038 2011/05/02 13:18:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1704,3 +1704,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/curl to 7.21.6 [wiz 2011-05-02]
 	Updated sysutils/cdrtools to 3.01alpha04 [wiz 2011-05-02]
 	Updated www/links to 2.3pre2 [wiz 2011-05-02]
+	Updated www/links-gui to 2.3pre2 [wiz 2011-05-02]
