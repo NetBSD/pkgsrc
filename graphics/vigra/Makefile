@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2011/02/28 14:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2011/05/02 12:57:22 wiz Exp $
 
 DISTNAME=	vigra-1.7.1-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
 
@@ -20,6 +21,17 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
 CMAKE_ARGS+=	-D DOCINSTALL:PATH=${PREFIX}/share/doc
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_FILES.python+=	config/vigra-config.in
+# Best we can do without pulling in a python dependency.
+# Update when PYTHON_VERSION_DEFAULT changes!
+SUBST_SED.python+=	-e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.6,'
+SUBST_MESSAGE.python=	Fixing path to python.
+# Package doesn't need dependency, only packages using the script,
+# usually during configure, so don't depend on python.
+CHECK_INTERPRETER_SKIP=	bin/vigra-config
 
 .include "options.mk"
 
