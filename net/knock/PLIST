@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/02 10:11:34 adam Exp $
 bin/knock
 man/man1/knock.1
-man/man1/knockd.1
+man/man8/knockd.8
 sbin/knockd
 share/examples/knock/knockd.conf
