@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.2 2008/12/07 00:43:03 adam Exp $
+$NetBSD: patch-bc,v 1.3 2011/05/02 21:23:01 adam Exp $
 
 --- dlls/wineoss.drv/audio.c.orig	2008-12-05 17:57:45.000000000 +0100
 +++ dlls/wineoss.drv/audio.c
-@@ -75,6 +75,12 @@
+@@ -83,6 +83,12 @@
  
  #include "audio.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-bc,v 1.2 2008/12/07 00:43:03 adam Exp $
  WINE_DEFAULT_DEBUG_CHANNEL(wave);
  
  /* Allow 1% deviation for sample rates (some ES137x cards) */
-@@ -1170,12 +1176,12 @@ LRESULT OSS_WaveInit(void)
+@@ -1168,12 +1174,12 @@ LRESULT OSS_WaveInit(void)
      }
      else
      {
