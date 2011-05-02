@@ -1,4 +1,4 @@
-# $NetBSD: dist.mk,v 1.20 2011/04/26 14:16:36 tnn Exp $
+# $NetBSD: dist.mk,v 1.21 2011/05/02 20:37:37 tnn Exp $
 #
 # used by devel/nspr/Makefile
 # used by devel/nss/Makefile
@@ -8,7 +8,7 @@
 DISTNAME=	firefox-${FIREFOX_VER}.source
 FIREFOX_VER=	4.0${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	2.0
-MOZ_BRANCH_MINOR=	# empty
+MOZ_BRANCH_MINOR=	.1
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
