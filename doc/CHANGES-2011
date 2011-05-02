@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1039 2011/05/02 13:25:35 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1040 2011/05/02 13:39:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1706,3 +1706,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/links to 2.3pre2 [wiz 2011-05-02]
 	Updated www/links-gui to 2.3pre2 [wiz 2011-05-02]
 	Updated net/unison to 2.40.63 [wiz 2011-05-02]
+	Updated emulators/snes9x-gtk to 1.53.81 [wiz 2011-05-02]
