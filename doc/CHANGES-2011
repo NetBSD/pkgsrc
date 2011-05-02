@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1030 2011/05/02 12:42:35 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1031 2011/05/02 12:50:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1697,3 +1697,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added audio/sptk version 3.4 [obache 2011-05-02]
 	Updated graphics/kipi-plugins to 1.6.0nb4 [wiz 2011-05-02]
 	Updated devel/ragel to 6.6 [obache 2011-05-02]
+	Updated wm/openbox to 3.4.11.2nb5 [wiz 2011-05-02]
