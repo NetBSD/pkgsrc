@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/20 21:42:51 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/02 12:52:43 wiz Exp $
 #
 
 DISTNAME=	runawk-1.3.1
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
@@ -18,6 +19,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 TEST_TARGET=		test
+
+SUBST_CLASSES+=	runawk
+SUBST_SED.runawk=	-e "s,/usr/bin/env runawk,${PREFIX}/bin/runawk,"
+SUBST_FILES.runawk=	a_getopt/alt_getopt
+SUBST_STAGE.runawk=	pre-build
+SUBST_MESSAGE.runawk=	Fixing path to runawk.
 
 .include "../../mk/bsd.prefs.mk"
 
