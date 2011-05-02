@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
+$NetBSD: patch-src_knockd.c,v 1.1 2011/05/02 10:11:34 adam Exp $
+
+Use correct network structures.
+Re-open log file on SIGHUP.
 
 --- src/knockd.c.orig	2005-06-27 05:11:34.000000000 +0000
 +++ src/knockd.c
@@ -38,7 +41,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
  	if(strlen(pcapErr)) {
  		fprintf(stderr, "could not open %s: %s\n", o_int, pcapErr);
  	}
-@@ -1161,8 +1163,8 @@ int exec_cmd(char* command, char* name){
+@@ -371,7 +373,18 @@ void read_cfg(int signum)
+ 	}
+ 	list_free(doors);
+ 
++	if(logfd) {
++		fclose(logfd);
++		logfd = NULL;
++	}
+ 	parseconfig(o_cfg);
++	if(strlen(o_logfile)) {
++		/* open the log file */
++		logfd = fopen(o_logfile, "a");
++		if(logfd == NULL) {
++			perror("warning: cannot open logfile");
++		}
++	}
+ 	return;
+ }
+ 
+@@ -1161,8 +1174,8 @@ int exec_cmd(char* command, char* name){
  void sniff(u_char* arg, const struct pcap_pkthdr* hdr, const u_char* packet)
  {
  	/* packet structs */
@@ -49,7 +71,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
  	struct tcphdr* tcp = NULL;
  	struct udphdr* udp = NULL;
  	char proto[8];
-@@ -1179,23 +1181,23 @@ void sniff(u_char* arg, const struct pca
+@@ -1179,23 +1192,23 @@ void sniff(u_char* arg, const struct pca
  	knocker_t *attempt = NULL;
  
  	if(lltype == DLT_EN10MB) {
@@ -80,7 +102,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
  		/* we don't do ICMP */
  		return;
  	}
-@@ -1207,23 +1209,23 @@ void sniff(u_char* arg, const struct pca
+@@ -1207,23 +1220,23 @@ void sniff(u_char* arg, const struct pca
  		fprintf(stderr, "error: could not understand IP address: %s\n", myip);
  		return;
  	}
@@ -113,7 +135,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
  	}
  
  	/* get the date/time */
-@@ -1234,10 +1236,10 @@ void sniff(u_char* arg, const struct pca
+@@ -1234,10 +1247,10 @@ void sniff(u_char* arg, const struct pca
  			pkt_tm->tm_sec);
  
  	/* convert IPs from binary to string */
@@ -126,7 +148,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
  	strncpy(dstIP, inet_ntoa(inaddr), sizeof(dstIP)-1);
  	dstIP[sizeof(dstIP)-1] = '\0';
  
-@@ -1297,69 +1299,69 @@ void sniff(u_char* arg, const struct pca
+@@ -1297,69 +1310,69 @@ void sniff(u_char* arg, const struct pca
  		/* if tcp, check the flags to ignore the packets we don't want
  		 * (don't even use it to cancel sequences)
  		 */
@@ -210,7 +232,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
  				dport == attempt->door->sequence[attempt->stage]) {
  			/* level up! */
  			attempt->stage++;
-@@ -1451,34 +1453,34 @@ void sniff(u_char* arg, const struct pca
+@@ -1451,34 +1464,34 @@ void sniff(u_char* arg, const struct pca
  		for(lp = doors; lp; lp = lp->next) {
  			opendoor_t *door = (opendoor_t*)lp->data;
  			/* if we're working with TCP, try to match the flags */
@@ -259,7 +281,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/30 12:35:12 adam Exp $
  				struct hostent *he;
  				/* create a new entry */
  				attempt = (knocker_t*)malloc(sizeof(knocker_t));
-@@ -1490,7 +1492,7 @@ void sniff(u_char* arg, const struct pca
+@@ -1490,7 +1503,7 @@ void sniff(u_char* arg, const struct pca
  				strcpy(attempt->src, srcIP);
  				/* try a reverse lookup if enabled  */
  				if (o_lookup) {

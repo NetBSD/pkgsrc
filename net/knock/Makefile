@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/03/02 11:02:20 adam Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/02 10:11:34 adam Exp $
 
 DISTNAME=	knock-0.5
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.zeroflux.org/proj/knock/files/
 
@@ -21,7 +22,7 @@ BUILD_DEFS+=	VARBASE
 EGDIR=		${PREFIX}/share/examples/knock
 CONF_FILES=	${EGDIR}/knockd.conf ${PKG_SYSCONFDIR}/knockd.conf
 
-INSTALLATION_DIRS=	sbin ${EGDIR}
+INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 ${EGDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
