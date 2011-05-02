@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2011/04/22 13:42:18 obache Exp $
+# $NetBSD: Makefile,v 1.66 2011/05/02 12:50:13 wiz Exp $
 
 DISTNAME=	openbox-3.4.11.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wm x11
 MASTER_SITES=	http://openbox.org/dist/openbox/
 
@@ -34,6 +34,15 @@ CONF_FILES=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/openbox/menu.xml
 CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/openbox/rc.xml
 CONF_FILES+=		${EGDIR}/autostart.sh \
 			    ${PKG_SYSCONFDIR}/openbox/autostart.sh
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-build
+SUBST_FILES.python+=	tools/xdg-autostart/xdg-autostart
+# Best we can do without pulling in a python dependency.
+# Update when PYTHON_VERSION_DEFAULT changes!
+SUBST_SED.python+=      -e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.6,'
+SUBST_MESSAGE.xdg=	Fixing path to python.
+CHECK_INTERPRETER_SKIP=	lib/openbox/xdg-autostart
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
