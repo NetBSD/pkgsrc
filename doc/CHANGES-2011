@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1034 2011/05/02 13:09:19 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1035 2011/05/02 13:12:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1701,3 +1701,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/vigra to 1.7.1nb1 [wiz 2011-05-02]
 	Updated devel/mercurial to 1.8.3 [wiz 2011-05-02]
 	Updated devel/libidn to 1.21 [wiz 2011-05-02]
+	Updated www/curl to 7.21.6 [wiz 2011-05-02]
