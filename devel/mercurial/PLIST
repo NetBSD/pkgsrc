@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/04/04 09:23:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/05/02 13:05:06 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -407,6 +407,8 @@ ${PYSITELIB}/mercurial/templatekw.pyo
 ${PYSITELIB}/mercurial/templater.py
 ${PYSITELIB}/mercurial/templater.pyc
 ${PYSITELIB}/mercurial/templater.pyo
+${PYSITELIB}/mercurial/templates/atom/bookmarkentry.tmpl
+${PYSITELIB}/mercurial/templates/atom/bookmarks.tmpl
 ${PYSITELIB}/mercurial/templates/atom/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/atom/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/atom/error.tmpl
@@ -417,6 +419,7 @@ ${PYSITELIB}/mercurial/templates/atom/tagentry.tmpl
 ${PYSITELIB}/mercurial/templates/atom/tags.tmpl
 ${PYSITELIB}/mercurial/templates/coal/header.tmpl
 ${PYSITELIB}/mercurial/templates/coal/map
+${PYSITELIB}/mercurial/templates/gitweb/bookmarks.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/branches.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changelogentry.tmpl
@@ -443,6 +446,7 @@ ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
 ${PYSITELIB}/mercurial/templates/map-cmdline.xml
+${PYSITELIB}/mercurial/templates/monoblue/bookmarks.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/branches.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changelogentry.tmpl
@@ -495,6 +499,8 @@ ${PYSITELIB}/mercurial/templates/raw/index.tmpl
 ${PYSITELIB}/mercurial/templates/raw/manifest.tmpl
 ${PYSITELIB}/mercurial/templates/raw/map
 ${PYSITELIB}/mercurial/templates/raw/notfound.tmpl
+${PYSITELIB}/mercurial/templates/rss/bookmarkentry.tmpl
+${PYSITELIB}/mercurial/templates/rss/bookmarks.tmpl
 ${PYSITELIB}/mercurial/templates/rss/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/rss/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/rss/error.tmpl
