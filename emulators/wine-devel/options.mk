@@ -1,55 +1,52 @@
-# $NetBSD: options.mk,v 1.4 2011/03/09 17:14:13 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2011/05/02 21:23:01 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
-PKG_SUPPORTED_OPTIONS=	cups opengl sane esound ldap dbus hal ssl x11
-PKG_SUGGESTED_OPTIONS=	opengl esound ldap dbus hal ssl x11
+PKG_SUPPORTED_OPTIONS=	cups dbus esound hal ldap opengl sane ssl x11
+PKG_SUGGESTED_OPTIONS=	opengl ssl x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		opengl x11
+PLIST_VARS+=		esd opengl x11
 
-.if !empty(PKG_OPTIONS:Mesound)
-.include "../../audio/esound/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mldap)
-.include "../../databases/openldap-client/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mcups)
+.include "../../print/cups/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --without-ldap
+CONFIGURE_ARGS+=	--without-cups
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
 .include "../../sysutils/dbus/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --without-dbus
+CONFIGURE_ARGS+=	--without-dbus
+.endif
+
+.if !empty(PKG_OPTIONS:Mesound)
+PLIST.esd=		yes
+.include "../../audio/esound/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mhal)
 .include "../../sysutils/hal/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --without-hal
+CONFIGURE_ARGS+=	--without-hal
+.endif
+
+.if !empty(PKG_OPTIONS:Mldap)
+.include "../../databases/openldap-client/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --without-openssl
-.endif
-
-.if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
-.else
-CONFIGURE_ARGS+= --without-cups
+CONFIGURE_ARGS+=	--without-openssl
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=		yes
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
@@ -62,7 +59,8 @@ PLIST.x11=		yes
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --without-x --without-freetype
+CONFIGURE_ARGS+=	--without-freetype
+CONFIGURE_ARGS+=	--without-x
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl) && !empty(PKG_OPTIONS:Mx11)

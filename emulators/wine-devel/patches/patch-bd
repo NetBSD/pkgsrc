@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2011/05/02 21:23:01 adam Exp $
+
+--- dlls/Makedll.rules.in.orig	2010-06-18 17:36:58.000000000 +0000
++++ dlls/Makedll.rules.in
+@@ -84,7 +84,7 @@ install_dll: $(MODULE) $(DESTDIR)$(dlldi
+ 	$(INSTALL_PROGRAM) $(MODULE) $(DESTDIR)$(dlldir)/$(MODULE)
+ 
+ install_dll.so: $(MODULE).so $(DESTDIR)$(dlldir) dummy
+-	$(INSTALL_PROGRAM) $(MODULE).so $(DESTDIR)$(dlldir)/$(MODULE).so
++	$(BSD_INSTALL_LIB) $(MODULE).so $(DESTDIR)$(dlldir)/$(MODULE).so
+ 
+ install_dll.fake: $(MODULE).fake $(DESTDIR)$(fakedlldir) dummy
+ 	$(INSTALL_DATA) $(MODULE).fake $(DESTDIR)$(fakedlldir)/$(MODULE)
