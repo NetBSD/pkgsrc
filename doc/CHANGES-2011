@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1028 2011/05/02 11:57:39 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1029 2011/05/02 12:37:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1695,3 +1695,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/knock to 0.5nb1 [adam 2011-05-02]
 	Updated fonts/fontforge to 20110222 [adam 2011-05-02]
 	Added audio/sptk version 3.4 [obache 2011-05-02]
+	Updated graphics/kipi-plugins to 1.6.0nb4 [wiz 2011-05-02]
