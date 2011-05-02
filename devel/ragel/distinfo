@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/08/21 03:21:05 minskim Exp $
+$NetBSD: distinfo,v 1.4 2011/05/02 12:42:20 obache Exp $
 
-SHA1 (ragel-6.5.tar.gz) = 7bc2cd5fb40d00e71e1d37a6d4d69c83c67f983f
-RMD160 (ragel-6.5.tar.gz) = 162af80f2fdaeb43dc2ce98b1834b17156f27e9f
-Size (ragel-6.5.tar.gz) = 973457 bytes
+SHA1 (ragel-6.6.tar.gz) = 8c085300c90e23a120684760b5f078fca275bb49
+RMD160 (ragel-6.6.tar.gz) = b0de6eaa6383f5fc9f9121012262685eec408450
+Size (ragel-6.6.tar.gz) = 1091836 bytes
