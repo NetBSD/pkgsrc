@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2011/05/02 11:53:51 shattered Exp $
+
+--- CMakeLists.txt.orig	2008-12-30 12:16:23.000000000 +0000
++++ CMakeLists.txt
+@@ -269,7 +269,9 @@ ELSE(DEFINED JPEG_RUNTIME_COMPATIBLE)
+ 	ENDIF(NOT WIN32)
+ ENDIF(DEFINED JPEG_RUNTIME_COMPATIBLE)
+ 
+-FIND_PACKAGE(LUA)
++IF(DEFINED LUA_ENABLED)
++	FIND_PACKAGE(LUA)
++ENDIF(DEFINED LUA_ENABLED)
+ IF(LUA_FOUND)
+ 	# If we have lua, we can build podofoimpose.
+ 	MESSAGE("Lua found - PoDoFoImpose will be built with Lua support")
