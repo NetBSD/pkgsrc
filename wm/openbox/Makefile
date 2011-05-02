@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2011/05/02 12:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2011/05/02 12:54:13 wiz Exp $
 
 DISTNAME=	openbox-3.4.11.2
 PKGREVISION=	5
@@ -41,7 +41,7 @@ SUBST_FILES.python+=	tools/xdg-autostart/xdg-autostart
 # Best we can do without pulling in a python dependency.
 # Update when PYTHON_VERSION_DEFAULT changes!
 SUBST_SED.python+=      -e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.6,'
-SUBST_MESSAGE.xdg=	Fixing path to python.
+SUBST_MESSAGE.python=	Fixing path to python.
 CHECK_INTERPRETER_SKIP=	lib/openbox/xdg-autostart
 
 BUILDLINK_DEPMETHOD.libXt?=	build
