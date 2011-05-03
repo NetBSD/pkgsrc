@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2011/04/05 19:39:25 minskim Exp $
+# $NetBSD: Makefile,v 1.601 2011/05/03 11:20:20 gdt Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -269,6 +269,7 @@ SUBDIR+=	mgl
 SUBDIR+=	mng
 SUBDIR+=	mpeg2codec
 SUBDIR+=	mpgtx
+SUBDIR+=	mscgen
 SUBDIR+=	mypaint
 SUBDIR+=	ncview
 SUBDIR+=	netpbm
