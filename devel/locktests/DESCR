@@ -1,0 +1,9 @@
+This test is aimed at stressing the fcntl locking functions.
+
+A master process sets a lock on a file region (byte range locking).
+Several slave processes try to perform operations on this region,
+such as: read, write, set a new lock ... The expected results of
+these operations are known. If the operation's result is the same
+as the expected one, the test succeeds, otherwise it fails.
+
+Locktests stress POSIX locks.
