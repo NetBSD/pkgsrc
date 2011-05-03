@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/03 12:32:40 manu Exp $
+
+SHA1 (locktests.tar.gz) = cd37b73b38e1fa626871ca8c45487648885b8d9f
+RMD160 (locktests.tar.gz) = bc6121d3ae1c94b888fc825d8a5c99fc2e3f8e41
+Size (locktests.tar.gz) = 12354 bytes

@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/05/03 12:32:40 manu Exp $
+
+See http://nfsv4.bullopensource.org/tools/tests/locktest.php for usage.
+
+For local filesystems:
+
+locktests -n <number of concurent process> -f <test file>
+
+-n <num> :
+    Number of processes to use (mandatory)
+-f <file> :
+    Run the test on a test file defined by the -f option (mandatory)
+
+Example : locktests -n 50 -f /file/system/to/test
+
+===========================================================================
