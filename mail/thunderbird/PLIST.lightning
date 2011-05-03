@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST.lightning,v 1.3 2010/07/12 16:49:21 tnn Exp $
+@comment $NetBSD: PLIST.lightning,v 1.4 2011/05/03 13:17:11 tnn Exp $
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/chrome.manifest
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/chrome/calendar-timezones-en-US.jar
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/chrome/calendar-timezones.jar
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/defaults/preferences/preferences.js
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/install.rdf
 lib/thunderbird/extensions/calendar-timezones@mozilla.org/timezones.sqlite
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/application.ini
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarm.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmMonitor.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calAlarmService.js
