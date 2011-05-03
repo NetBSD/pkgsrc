@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1046 2011/05/03 11:19:38 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.1047 2011/05/03 12:15:49 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1717,3 +1717,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/png to 1.5.3beta04 [wiz 2011-05-03]
 	Updated devel/ruby-pkg-config to 1.1.1 [obache 2011-05-03]
 	Added graphics/mscgen version 0.20 [gdt 2011-05-03]
+	Updated www/seamonkey to 2.0.14 [tnn 2011-05-03]
+	Updated www/seamonkey-l10n to 2.0.14 [tnn 2011-05-03]
