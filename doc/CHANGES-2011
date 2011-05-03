@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1048 2011/05/03 12:29:05 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.1049 2011/05/03 12:44:44 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1720,3 +1720,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/seamonkey to 2.0.14 [tnn 2011-05-03]
 	Updated www/seamonkey-l10n to 2.0.14 [tnn 2011-05-03]
 	Updated geography/viking to 1.1 [gdt 2011-05-03]
+	Added devel/locktests version 20110428 [manu 2011-05-03]
