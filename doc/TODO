@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10309 2011/05/02 21:24:42 adam Exp $
+$NetBSD: TODO,v 1.10310 2011/05/03 09:30:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,6 +345,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
+	o abcmidi-20110429
 	o accerciser-1.12.2 [GNOME 2.32]
 	o acme-091 [pkg/44771]
 	o acr-0.5.2
@@ -451,7 +452,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
-	o cdrtools-3.01a04
 	o celestia-1.6.0
 	o cgdb-0.6.5
 	o cheese-2.32.0 [GNOME 2.32]
@@ -626,7 +626,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fotoxx-11.04
+	o fotoxx-11.05.1
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.2.5
@@ -679,7 +679,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-3.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.2.8.10
+	o gnome-commander-1.2.8.11
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-doc-utils-0.20.5
@@ -827,7 +827,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kphotobook-0.0.7
 	o kronolith-3.0.1
 	o krusader-2.0
-	o ktorrent-4.1
+	o ktorrent-4.1.1
 	o ktorrent3-3.3.4
 	o lapack-3.3.0
 	o latd-1.21
@@ -897,7 +897,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.1
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o librep-0.91.1
+	o librep-0.92.0
 	o libssh-0.4.7
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
@@ -1049,7 +1049,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.3.1
 	o pircbot-1.4.6
-	o pixman-0.21.6
+	o pixman-0.22.0
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
 	o plone-3.3.4
@@ -1096,7 +1096,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
+	o py-qt4-4.8.4
 	o py-simplejson-2.1.5
+	o py-sip-4.12.2
 	o py-sybase-0.37
 	o py-twisted-11.0.0
 	o python-2.4.6
@@ -1126,7 +1128,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o remind-3.1.10
 	o rendercheck-1.4
 	o renderproto-0.11.1
-	o rep-gtk-0.90.5
+	o rep-gtk-0.90.6
 	o resize_image-0.7
 	o resourceproto-1.1.1
 	o rgb-1.0.4
@@ -1154,7 +1156,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o sane-backends-1.0.22
 	o sarg-2.2.5
-	o sawfish-1.8.0
+	o sawfish-1.8.1
 	o saxon-9.2
 	o scapy-2.2.0
 	o scew-0.4.0
@@ -1405,7 +1407,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xlog-2.0.5
 	o xlogo-1.0.3
 	o xlsatoms-1.1.0 [unpackaged]
-	o xlsclients-1.1.1
+	o xlsclients-1.1.2
 	o xm7-1020s
 	o xmag-1.0.4
 	o xman-1.1.1
