@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1043 2011/05/03 08:50:53 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.1044 2011/05/03 09:07:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1714,3 +1714,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/xulrunner192 to 1.9.2.17 [tnn 2011-05-03]
 	Updated www/firefox36 to 3.6.17 [tnn 2011-05-03]
 	Updated www/firefox36-l10n to 3.6.17 [tnn 2011-05-03]
+	Updated graphics/png to 1.5.3beta04 [wiz 2011-05-03]
