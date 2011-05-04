@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/10 12:54:30 grant Exp $
-${PYSITELIB}/pyexpat.so
+@comment $NetBSD: PLIST,v 1.3 2011/05/04 11:38:06 obache Exp $
+${PYLIB}/lib-dynload/pyexpat.so
