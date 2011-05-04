@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.28 2010/07/24 00:57:17 gdt Exp $
+# $NetBSD: extension.mk,v 1.29 2011/05/04 10:01:02 obache Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -49,5 +49,5 @@ INSTALL_ENV+=		PKGSRC_PYTHON_NO_EGG=defined
 .endif
 
 .if defined(PY_PATCHPLIST)
-PLIST_SUBST+=	PYINC=${PYINC} PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
 .endif
