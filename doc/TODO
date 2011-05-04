@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10310 2011/05/03 09:30:42 wiz Exp $
+$NetBSD: TODO,v 1.10311 2011/05/04 13:28:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -1084,7 +1084,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-OpenSSL-0.12
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
-	o py-bsddb3-5.1.2
 	o py-checker-0.8.19
 	o py-cups-1.9.55
 	o py-dbus-0.83.2
