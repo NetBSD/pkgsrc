@@ -1,22 +1,21 @@
-$NetBSD: distinfo,v 1.87 2010/02/20 08:35:58 schwarz Exp $
+$NetBSD: distinfo,v 1.88 2011/05/04 20:31:39 adam Exp $
 
-SHA1 (wine-1.0.1.tar.bz2) = 0550b03bf7b314514a87b6abb2198da96ef83b22
-RMD160 (wine-1.0.1.tar.bz2) = fecd2bf970c51c80fc02ca39631034f066da145e
-Size (wine-1.0.1.tar.bz2) = 13956805 bytes
-SHA1 (patch-aa) = 906623f16ac87380c63f0c8e80d6490142380566
-SHA1 (patch-ab) = 4c8de3db4533519d9964f38cf3fa0462f9fb3d30
-SHA1 (patch-ac) = 3071363f511c9caad53e8b3e94df23fcee3472f4
-SHA1 (patch-ad) = f146f8b07c00890c9dfce824938f3b5abcf90b87
-SHA1 (patch-ae) = e5f62eabe1184ceec873ae2b4e993de5d02d2fca
-SHA1 (patch-af) = 499aa5a82fce105128caff7ca0006e9c8975e905
-SHA1 (patch-ag) = c4bf5a592ad5cad67ff933c5da418c58d6e1367a
+SHA1 (wine-1.2.3.tar.bz2) = 072184c492cc9d137138407732de3bb62ba6c091
+RMD160 (wine-1.2.3.tar.bz2) = 5bc41a4623ee087e57ebd424a15c6743d0874194
+Size (wine-1.2.3.tar.bz2) = 17651336 bytes
+SHA1 (patch-ab) = 90cb810b02d22f8e96389e6c1d4f230c11fb1d8c
+SHA1 (patch-ac) = c02f1ba14197efa109150850f47df19acb062cfb
+SHA1 (patch-ad) = 54df859456f8f6efcddfcdbb5b3fd514e48e8045
+SHA1 (patch-ae) = 5edf543e7cb1614fe6393d5451d786a8ec70f4c7
+SHA1 (patch-af) = cb12614664d70d8393617590eb4cf2bbe111c0f1
+SHA1 (patch-ag) = 3bade676ea1229e35b671b00f75b08b441cf1814
 SHA1 (patch-ai) = a334ee48b949f9f5d4356beed3b422ee032619c2
-SHA1 (patch-aj) = fa9d3baad8d3b895edc6275c2b6da23daa941a09
-SHA1 (patch-ba) = 342564062296d316a20f1c0b3ad7aaa17e7e79be
-SHA1 (patch-bb) = 77cad41a7e8e34f12243e53f6c1cec998bedefda
-SHA1 (patch-bc) = 1542a59718229a41e23aff93e4571bf7127a276b
-SHA1 (patch-bd) = 46a7b8cc8e0793facf78876d26f24cd40ee1d097
-SHA1 (patch-be) = ce9d21a9716c79525239499c89fcf0bb3ef807a3
-SHA1 (patch-bf) = d31bcc193ffe6abc57700bcb43fea6ff5886c038
-SHA1 (patch-ca) = 1383c03cc83cefe6099b58340db2bc468c7524bb
-SHA1 (patch-cb) = 260d3ba130a6d3fc4ad137354a2b9c5fe871ba7a
+SHA1 (patch-ba) = 4daf9a6494e1a9398bc27300dd90a1d573e30b7e
+SHA1 (patch-bc) = 461a46e413d8933c3a9ec317ff17a1014379857f
+SHA1 (patch-bd) = 3c71ee87aa835062a3362d984133d3c010a28d89
+SHA1 (patch-be) = a63f40b3fd18bb49825b048abb39fc2e2e634410
+SHA1 (patch-bf) = 59bce6a706789afe8aa3a8a5ab9e19014e4b198c
+SHA1 (patch-ca) = 40508e7eb2171ea321fb44a2285138a1a17d14f4
+SHA1 (patch-cd) = aec27ca5616625e80123e92b3db1abdd90d212a0
+SHA1 (patch-ce) = 23088aac01e74164ec6d4a42f96ab7fa34d002c3
+SHA1 (patch-cf) = 6a1c8ce2c77de0eebb9aad9cd5078cf18538d8d8

@@ -1,13 +1,13 @@
-$NetBSD: patch-bd,v 1.1 2009/04/20 18:55:42 adam Exp $
+$NetBSD: patch-bd,v 1.2 2011/05/04 20:31:40 adam Exp $
 
---- dlls/Makedll.rules.in.orig	2008-10-17 17:45:25.000000000 +0200
+--- dlls/Makedll.rules.in.orig	2010-06-18 17:36:58.000000000 +0000
 +++ dlls/Makedll.rules.in
-@@ -96,7 +96,7 @@ install_static_implib_a:
- $(IMPLIB_SRCS:%=_install_static_implib_/%): install_static_implib_$(IMPLIBEXT)
+@@ -85,7 +85,7 @@ install_dll: $(MODULE) $(DESTDIR)$(dlldi
+ 	$(INSTALL_PROGRAM) $(MODULE) $(DESTDIR)$(dlldir)/$(MODULE)
  
- install install-lib:: $(MODULE)$(DLLEXT) $(DESTDIR)$(dlldir) dummy
--	$(INSTALL_PROGRAM) $(MODULE)$(DLLEXT) $(DESTDIR)$(dlldir)/$(MODULE)$(DLLEXT)
-+	${BSD_INSTALL_LIB} $(MODULE)$(DLLEXT) $(DESTDIR)$(dlldir)/$(MODULE)$(DLLEXT)
+ install_dll.so: $(MODULE).so $(DESTDIR)$(dlldir) dummy
+-	$(INSTALL_PROGRAM) $(MODULE).so $(DESTDIR)$(dlldir)/$(MODULE).so
++	$(BSD_INSTALL_LIB) $(MODULE).so $(DESTDIR)$(dlldir)/$(MODULE).so
  
- install install-dev:: $(IMPORTLIB:%=_install_/%) $(IMPLIB_SRCS:%=_install_static_implib_/%)
- 
+ install_dll.fake: $(MODULE).fake $(DESTDIR)$(fakedlldir) dummy
+ 	$(INSTALL_DATA) $(MODULE).fake $(DESTDIR)$(fakedlldir)/$(MODULE)
