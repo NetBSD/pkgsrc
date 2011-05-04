@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1060 2011/05/04 20:32:40 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1061 2011/05/04 22:27:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1741,3 +1741,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/py-bsddb3 to 5.1.2 [adam 2011-05-04]
 	Updated net/rdesktop to 1.7.0 [obache 2011-05-04]
 	Updated emulators/wine to 1.2.3 [adam 2011-05-04]
+	Updated sysutils/ir-account to 0.2 [gdt 2011-05-04]
