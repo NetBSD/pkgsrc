@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1057 2011/05/04 11:40:53 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1058 2011/05/04 13:09:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1738,3 +1738,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-cElementTree to 0nb1 [obache 2011-05-04]
 	Updated textproc/py-expat to 0nb5 [obache 2011-05-04]
 	Updated x11/py-Tk to 0nb5 [obache 2011-05-04]
+	Updated databases/py-bsddb3 to 5.1.2 [adam 2011-05-04]
