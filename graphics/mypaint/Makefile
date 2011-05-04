@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/04/22 13:43:49 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/05/04 11:16:23 ryoon Exp $
 #
 
 DISTNAME=	mypaint-0.9.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gna.org/mypaint/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,6 +31,13 @@ SUBST_STAGE.locale-dir=		pre-configure
 SUBST_FILES.locale-dir=		SConstruct
 SUBST_SED.locale-dir=		-e 's,share/locale,${PKGLOCALEDIR}/locale,'
 USE_PKGLOCALEDIR=	yes
+
+SUBST_CLASSES+=			python
+SUBST_STAGE.python=		pre-configure
+SUBST_FILES.python=		brushlib/generate.py \
+				SConstruct
+SUBST_SED.python=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+SUBST_SED.python+=		-e 's,%PYTHONBIN%,${PYTHONBIN},'
 
 REPLACE_BASH=			brushes/label-brush-mypaint.sh
 
