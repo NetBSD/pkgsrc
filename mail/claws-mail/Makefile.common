@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2009/05/19 08:59:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2011/05/04 17:41:15 drochner Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -45,6 +45,9 @@ BUILDLINK_ABI_DEPENDS.libetpan+=	libetpan>=0.57
 CONFIGURE_ARGS+=	--enable-libetpan
 CONFIGURE_ARGS+=	--disable-bogofilter-plugin
 CONFIGURE_ARGS+=	--disable-spamassassin-plugin
+
+# see https://savannah.gnu.org/support/index.php?107660
+BUILDLINK_ABI_DEPENDS.gnutls+= gnutls<2.12.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/libetpan/buildlink3.mk"
