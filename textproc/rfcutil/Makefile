@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/01/19 22:13:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2011/05/04 16:27:42 hans Exp $
 #
 
 DISTNAME=	rfc-3.2
 PKGNAME=	rfcutil-3.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.dewn.com/rfc/
 EXTRACT_SUFX=	#
@@ -21,6 +21,8 @@ NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	rfc
 
+RFCINDEXURL=	http://www.ietf.org/download/
+
 INSTALLATION_DIRS=	bin
 
 .include "options.mk"
@@ -30,6 +32,7 @@ do-extract:
 		-e 's,/usr/local,${PREFIX},' \
 		-e '/VIEWER=/s,w3m lynx,${RFCVIEWER},' \
 		-e '/viewer/s,-dump,${RFCDUMPOPT},' \
+		-e '/viewer/s,http://ftp.isi.edu/in-notes/,${RFCINDEXURL},' \
 		<${DISTDIR}/${DISTNAME} >${WRKSRC}/rfc
 
 do-install:
