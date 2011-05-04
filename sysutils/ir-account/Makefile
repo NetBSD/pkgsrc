@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/03/21 11:58:56 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/04 22:26:56 gdt Exp $
 #
 
-DISTNAME=		ir-account-0.1
-PKGREVISION=		1
+DISTNAME=		ir-account-0.2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ir.bbn.com/~gdt/ir-account/
 
