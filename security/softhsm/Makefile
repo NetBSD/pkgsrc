@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/03/31 18:37:33 agc Exp $
+# $NetBSD: Makefile,v 1.8 2011/05/04 10:10:18 pettai Exp $
 #
 
-DISTNAME=	softhsm-1.2.0
+DISTNAME=	softhsm-1.2.1
 CATEGORIES=	security
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -34,8 +34,6 @@ CONF_FILES=		${EGDIR}/softhsm.conf ${PKG_SYSCONFDIR}/softhsm.conf
 
 INSTALLATION_DIRS=	${EGDIR} etc bin lib
 OWN_DIRS=		${VARBASE}/softhsm
-
-.include "options.mk"
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/softhsm.conf ${DESTDIR}${EGDIR}
