@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10311 2011/05/04 13:28:10 adam Exp $
+$NetBSD: TODO,v 1.10312 2011/05/04 14:47:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -1120,7 +1120,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdesktop-1.7.0
 	o rdp-1.6
 	o recordproto-1.14.1
 	o redland-1.0.13 [needs redland-0.9.22]
