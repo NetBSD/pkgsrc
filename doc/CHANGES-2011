@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1055 2011/05/04 10:11:51 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.1056 2011/05/04 11:17:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1729,3 +1729,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/p5-GD to 2.46 [adam 2011-05-04]
 	Updated databases/p5-DBD-postgresql to 2.18.0 [adam 2011-05-04]
 	Updated security/softhsm to 1.2.1 [pettai 2011-05-04]
+	Updated graphics/mypaint to 0.9.1nb2 [ryoon 2011-05-04]
