@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.48 2011/01/13 13:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2011/05/04 09:43:40 adam Exp $
 
-DISTNAME=	GD-2.45
+DISTNAME=	GD-2.46
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5bd
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 
-MAINTAINER=	damon@brodiefamily.org
-HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/GD/GD.html
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/GD/
 COMMENT=	Perl5 interface to gd graphics library
 LICENSE=	gnu-gpl-v2 OR artistic-2.0
 
