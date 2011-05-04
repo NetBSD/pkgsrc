@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2011/01/31 10:21:41 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2011/05/04 02:00:02 obache Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -16,10 +16,14 @@ PKG_SUGGESTED_OPTIONS+=	imlib2-amd64
 
 .if !empty(PKG_OPTIONS:Mmmx)
 CONFIGURE_ARGS+=	--enable-mmx
+.else
+CONFIGURE_ARGS+=	--disable-mmx
 .endif
 
 .if !empty(PKG_OPTIONS:Mimlib2-amd64)
 CONFIGURE_ARGS+=	--enable-amd64
+.else
+CONFIGURE_ARGS+=	--disable-amd64
 .endif
 
 PLIST_VARS+=		x11
