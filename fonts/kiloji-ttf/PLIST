@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/04 05:41:33 ryoon Exp $
+lib/X11/fonts/TTF/kiloji.ttf
+lib/X11/fonts/TTF/kiloji_b.ttf
+lib/X11/fonts/TTF/kiloji_d.ttf
+lib/X11/fonts/TTF/kiloji_p.ttf
+share/doc/${PKGBASE}/Collecting.txt
+share/doc/${PKGBASE}/License.txt
