@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1052 2011/05/04 05:44:20 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1053 2011/05/04 08:31:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1725,3 +1725,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/thunderbird-l10n to 3.1.10 [tnn 2011-05-03]
 	Updated security/liboauth to 0.9.4 [agc 2011-05-03]
 	Added fonts/kiloji-ttf version 2.1.0 [ryoon 2011-05-04]
+	Updated mail/sylpheed to 3.1.0 [tnn 2011-05-04]
