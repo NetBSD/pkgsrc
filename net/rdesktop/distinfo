@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2008/06/08 16:29:28 tron Exp $
+$NetBSD: distinfo,v 1.20 2011/05/04 14:47:18 obache Exp $
 
-SHA1 (rdesktop-1.6.0.tar.gz) = b8bfd03d4640d285a0aee5b3fb199a47cb4225f2
-RMD160 (rdesktop-1.6.0.tar.gz) = cf604cd1bc0707b485deb653efa3e47e21fabc4c
-Size (rdesktop-1.6.0.tar.gz) = 284728 bytes
+SHA1 (rdesktop-1.7.0.tar.gz) = 4f21a8fb2379ce05859e7fb13efa60071125d27f
+RMD160 (rdesktop-1.7.0.tar.gz) = 0860d3027b19ebb3b5c9ef91d7c6ba47b730e2f1
+Size (rdesktop-1.7.0.tar.gz) = 297239 bytes
 SHA1 (patch-aa) = dda84f70792828c97aa02567b97d2ae9647b6fcb
