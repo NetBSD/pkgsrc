@@ -1,8 +1,8 @@
-$NetBSD: patch-bf,v 1.1 2009/04/20 18:55:42 adam Exp $
+$NetBSD: patch-bf,v 1.2 2011/05/04 20:31:40 adam Exp $
 
 --- libs/wine/Makefile.in.orig	2008-10-17 17:45:25.000000000 +0200
 +++ libs/wine/Makefile.in
-@@ -150,14 +150,14 @@ libwine.dylib: libwine.$(SOVERSION).dyli
+@@ -149,14 +149,14 @@ libwine.dylib: libwine.$(SOVERSION).dyli
  .PHONY: install-lib-so install-lib-dll install-lib-dylib install-dev-so install-dev-dll install-dev-dylib
  
  install-lib-so: libwine.so.$(VERSION) $(DESTDIR)$(libdir) dummy

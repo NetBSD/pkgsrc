@@ -1,16 +1,16 @@
-$NetBSD: patch-ba,v 1.1 2008/06/26 19:46:56 jmcneill Exp $
+$NetBSD: patch-ba,v 1.2 2011/05/04 20:31:40 adam Exp $
 
---- configure.orig	2008-06-26 15:39:25.000000000 -0400
-+++ configure	2008-06-26 15:39:53.000000000 -0400
-@@ -16819,6 +16819,11 @@
+--- configure.orig	2010-06-18 17:36:58.000000000 +0000
++++ configure
+@@ -4166,11 +4166,6 @@ fi
+ $as_echo "$wine_cv_toolsdir" >&6; }
+ TOOLSDIR=$wine_cv_toolsdir
  
-         EXTRA_BINARIES="wine-pthread"
-  ;;
-+      netbsd*)
-+        MAIN_BINARY="wine-kthread"
-+
-+        EXTRA_BINARIES="wine-pthread"
-+ ;;
-     esac
-     ;;
- esac
+-if test -n "$host_alias" -a "$host_alias" != "$build_alias"
+-then
+-    TARGETFLAGS="-b $host_alias $TARGETFLAGS"
+-
+-fi
+ 
+ for ac_prog in flex
+ do
