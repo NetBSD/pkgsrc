@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/03/01 10:26:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/05/04 08:30:39 tnn Exp $
 bin/sylpheed
 include/sylpheed/plugin.h
 include/sylpheed/sylph/account.h
@@ -30,6 +30,7 @@ include/sylpheed/sylph/recv.h
 include/sylpheed/sylph/session.h
 include/sylpheed/sylph/smtp.h
 include/sylpheed/sylph/socket.h
+include/sylpheed/sylph/socks.h
 include/sylpheed/sylph/ssl.h
 include/sylpheed/sylph/stringtable.h
 include/sylpheed/sylph/syl-marshal.h
@@ -108,6 +109,8 @@ share/sylpheed/manual/en/sylpheed-18.html
 share/sylpheed/manual/en/sylpheed-19.html
 share/sylpheed/manual/en/sylpheed-2.html
 share/sylpheed/manual/en/sylpheed-20.html
+share/sylpheed/manual/en/sylpheed-21.html
+share/sylpheed/manual/en/sylpheed-22.html
 share/sylpheed/manual/en/sylpheed-3.html
 share/sylpheed/manual/en/sylpheed-4.html
 share/sylpheed/manual/en/sylpheed-5.html
@@ -143,4 +146,3 @@ share/sylpheed/manual/ja/sylpheed-7.html
 share/sylpheed/manual/ja/sylpheed-8.html
 share/sylpheed/manual/ja/sylpheed-9.html
 share/sylpheed/manual/ja/sylpheed.html
-share/sylpheed/manual/ja/sylpheed.sgml
