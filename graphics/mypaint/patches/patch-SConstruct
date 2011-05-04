@@ -1,0 +1,13 @@
+$NetBSD: patch-SConstruct,v 1.1 2011/05/04 11:16:23 ryoon Exp $
+
+--- SConstruct.orig	2011-03-04 14:44:59.000000000 +0000
++++ SConstruct
+@@ -84,7 +84,7 @@ if sys.platform == "win32":
+ 
+ def burn_python_version(target, source, env):
+     # make sure we run the python version that we built the extension modules for
+-    s =  '#!/usr/bin/env ' + python + '\n'
++    s =  '#!%PYTHONBIN%\n'
+     s += 5*'#\n'
+     s += '# DO NOT EDIT - edit %s instead\n' % source[0]
+     s += 5*'#\n'
