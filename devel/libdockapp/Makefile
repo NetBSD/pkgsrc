@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/04/14 17:11:20 hans Exp $
+# $NetBSD: Makefile,v 1.23 2011/05/04 19:23:08 wiz Exp $
 #
 
 DISTNAME=	libdockapp-0.6.2
-PKGREVISION=	0
 CATEGORIES=	devel wm
 MASTER_SITES=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/
 EXTRACT_SUFX=	.tar.bz2
