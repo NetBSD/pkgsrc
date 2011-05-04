@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.7 2006/10/21 08:22:54 wiz Exp $
+$NetBSD: patch-ag,v 1.8 2011/05/04 20:31:40 adam Exp $
 
---- dlls/ntdll/signal_x86_64.c.orig	2006-10-13 14:43:39.000000000 +0000
+--- dlls/ntdll/signal_x86_64.c.orig	2011-04-08 17:09:51.000000000 +0000
 +++ dlls/ntdll/signal_x86_64.c
-@@ -93,6 +93,53 @@ typedef struct ucontext SIGCONTEXT;
- 
- #endif /* linux */
+@@ -212,6 +212,53 @@ extern int arch_prctl(int func, void *pt
+ #error You must define the signal context functions for your platform
+ #endif
  
 +#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200000000)
 +# include <sys/ucontext.h>
@@ -56,3 +56,12 @@ $NetBSD: patch-ag,v 1.7 2006/10/21 08:22:54 wiz Exp $
  enum i386_trap_code
  {
      TRAP_x86_UNKNOWN    = -1,  /* Unknown fault (TRAP_sig not defined) */
+@@ -2338,7 +2338,7 @@ void signal_init_thread( TEB *teb )
+ #elif defined __FreeBSD__
+     amd64_set_gsbase( teb );
+ #else
+-# error Please define setting %gs for your architecture
++# warning Please define setting %gs for your architecture
+ #endif
+ 
+     ss.ss_sp    = (char *)teb + teb_size;
