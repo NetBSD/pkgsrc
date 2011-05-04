@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2009/03/05 18:51:28 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2011/05/04 11:38:05 obache Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases python
 
 MAINTAINER=	dolecek@ics.muni.cz
@@ -20,6 +20,7 @@ PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 
 PY_SETUP_SUBST+= GDBMPREFIX=${GDBMDIR}
+PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
