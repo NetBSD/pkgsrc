@@ -1,0 +1,12 @@
+$NetBSD: patch-cf,v 1.1 2011/05/04 20:31:40 adam Exp $
+
+--- dlls/riched32/tests/editor.c.orig	2009-02-27 23:21:46.000000000 +0100
++++ dlls/riched32/tests/editor.c
+@@ -23,6 +23,7 @@
+ 
+ #include <stdarg.h>
+ #include <assert.h>
++#include <winsock2.h>
+ #include <windef.h>
+ #include <winbase.h>
+ #include <wingdi.h>
