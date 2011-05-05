@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1063 2011/05/05 06:55:20 agc Exp $
+$NetBSD: CHANGES-2011,v 1.1064 2011/05/05 08:53:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/ir-account to 0.2 [gdt 2011-05-04]
 	Updated net/aria2 to 1.11.1 [ryoon 2011-05-04]
 	Added sysutils/mkmemstick version 20090801 [agc 2011-05-04]
+	Updated audio/libmodplug to 0.8.8.2 [obache 2011-05-05]
