@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10314 2011/05/05 04:15:01 adam Exp $
+$NetBSD: TODO,v 1.10315 2011/05/05 21:49:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -396,6 +396,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o arping-2.09
 	o asapm-3.1
 	o asc-2.4.0
+	o aspell-faroese-0.4.0
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
@@ -457,10 +458,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cheese-3.0.1
 	o cherokee-1.2.1
 	o chromium-0.9.15
+	o chrony-1.25
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
+	o clive-2.3.0.3
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.6.14
 	o cmus-2.4.0
@@ -503,6 +506,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o diffpdf-1.2.0
 	o diffstat-1.54
+	o diffutils-3.0
 	o digikam-1.9.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -512,6 +516,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doclifter-2.6
 	o doxygen-1.7.4
 	o dpkg-1.14.25
+	o dri2proto-2.4
 	o drivel-3.0.2
 	o drupal-7
 	o dspam-3.9.0
@@ -648,6 +653,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gbdfed-1.6
 	o gcc-4.6.0
+	o gcc44-4.4.6
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-9.5
@@ -673,6 +679,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.10.0
 	o glibmm-2.28.0
 	o glom-1.14.2 [GNOME 2.26]
+	o glproto-1.4.13
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.0
@@ -740,6 +747,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-gtk-2.0
 	o gupnp-0.16.1
 	o gupnp-igd-0.1.10
+	o gutenprint-5.2.7
 	o gvfs-1.6.7
 	o gworkspace-0.8.8
 	o gzip-1.4
@@ -756,7 +764,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-7.4
 	o highlight-3.4
 	o honeyd-1.5c
-	o horde-4.0.1
+	o horde-4.0.2
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -777,7 +785,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
 	o imapsync-1.404
-	o imp-5.0.1
+	o imp-5.0.2
 	o ingo-2.0.1
 	o inputproto-2.0.1
 	o inspircd-1.2.1
@@ -824,7 +832,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kodos-2.4.5
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-3.0.1
+	o kronolith-3.0.2
 	o krusader-2.0
 	o ktorrent-4.1.1
 	o ktorrent3-3.3.4
@@ -870,6 +878,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.7.4
 	o libdrm-2.4.25
+	o libdvbpsi-0.2.0
 	o libextractor-0.6.2
 	o libflash-0.4.13
 	o libfolks-0.4.3
@@ -951,7 +960,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mono-2.10.2
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
-	o mousetweaks-3.0.0
+	o mousetweaks-3.0.1
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.3
 	o mplayer-1.0rc4
@@ -1074,7 +1083,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o puppet-2.6.6
 	o puzzle-9159
-	o puzzles-9163
+	o puzzles-9166
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1087,6 +1096,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cups-1.9.55
 	o py-dbus-0.83.2
 	o py-game-1.9.1
+	o py-gdata-2.0.14
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gtk2-2.24.0
@@ -1203,7 +1213,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.2
 	o streamripper-1.63.0
-	o stunnel-4.35
+	o stunnel-4.36
 	o subtitleeditor-0.33.0
 	o supertuxkart-0.7.1
 	o swfdec-gnome-2.30.1
@@ -1254,7 +1264,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
-	o turba-3.0.1
+	o turba-3.0.2
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o twm-1.0.6
@@ -1282,7 +1292,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vile-9.8
 	o vim-7.3
 	o vinagre-3.0.1
-	o vino-3.0.1
+	o vino-2.32.2
+	o vino-3.0.2
 	o visual-regexp-3.1
 	o vlc-1.1.9
 	o vm-8.0.7.522 [pkg/37707]
@@ -1346,7 +1357,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-input-keyboard-1.6.0
 	o xf86-input-mouse-1.7.0
 	o xf86-input-vmmouse-12.7.0
-	o xf86-input-void-1.3.1
+	o xf86-input-void-1.4.0
 	o xf86-video-apm-1.2.3
 	o xf86-video-ark-0.7.3
 	o xf86-video-ast-0.91.10
@@ -1409,7 +1420,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xman-1.1.1
 	o xmbdfed-4.6
 	o xmcd-3.3.2
-	o xmlstarlet-1.1.0
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
@@ -1458,7 +1468,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.24
+	o zile-2.4.0.50
 	o zircon-1.18.256
 	o zlib-1.2.5
 	o zoom-1.1.3
