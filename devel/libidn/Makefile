@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2011/05/02 13:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2011/05/05 07:46:44 adam Exp $
 
-DISTNAME=	libidn-1.21
+DISTNAME=	libidn-1.22
 CATEGORIES=	devel
 MASTER_SITES=	ftp://alpha.gnu.org/pub/gnu/libidn/ \
 		http://ftp.gnu.org/gnu/libidn/
@@ -19,7 +19,7 @@ USE_TOOLS+=		makeinfo pkg-config perl:build
 TEXINFO_REQD=		4.7
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-CONFIGURE_ENV+=		EMACS=${FALSE}
+CONFIGURE_ENV+=		EMACS=${FALSE:Q}
 CONFIGURE_ARGS+=	--disable-csharp --disable-java
 CONFIGURE_ARGS+=	--with-packager=pkgsrc
 CONFIGURE_ARGS+=	--with-packager-bug-reports=http://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd
