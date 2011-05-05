@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1064 2011/05/05 08:53:17 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1065 2011/05/05 10:59:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1745,3 +1745,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/aria2 to 1.11.1 [ryoon 2011-05-04]
 	Added sysutils/mkmemstick version 20090801 [agc 2011-05-04]
 	Updated audio/libmodplug to 0.8.8.2 [obache 2011-05-05]
+	Updated devel/libidn to 1.22 [adam 2011-05-05]
+	Updated devel/scmgit to 1.7.5.1 [adam 2011-04-26]
+	Updated devel/scmgit-base to 1.7.5.1 [adam 2011-05-05]
+	Updated devel/scmgit-docs to 1.7.5.1 [adam 2011-05-05]
