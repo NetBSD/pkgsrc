@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gpgsm,v 1.11 2011/01/20 08:54:56 adam Exp $
+@comment $NetBSD: PLIST.gpgsm,v 1.12 2011/05/05 08:55:23 adam Exp $
 bin/gpg-connect-agent
 bin/gpg2
 bin/gpgconf
@@ -13,11 +13,11 @@ bin/watchgnupg
 info/gnupg.info
 info/gnupg.info-1
 libexec/gnupg-pcsc-wrapper
+libexec/gpg-check-pattern
 libexec/gpg2keys_curl
 libexec/gpg2keys_finger
 libexec/gpg2keys_hkp
 libexec/gpg2keys_ldap
-libexec/gpg-check-pattern
 man/man1/gpg-agent.1
 man/man1/gpg-connect-agent.1
 man/man1/gpg-preset-passphrase.1

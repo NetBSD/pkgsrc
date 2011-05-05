@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/04/22 13:42:48 obache Exp $
+# $NetBSD: Makefile,v 1.35 2011/05/05 08:55:23 adam Exp $
 
 DISTNAME=	gnupg-2.0.17
 PKGNAME=	${DISTNAME:S/gnupg/gnupg2/}
@@ -25,7 +25,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-pinentry-pgm=${BUILDLINK_PREFIX.pinentry}/bin/pinentry
-#CONFIGURE_ARGS+=	--enable-maintainer-mode
+
+# Sometimes wrong include file gets detected, e.g. for Clang
+.if exists(/usr/include/stdint.h)
+CONFIGURE_ENV+=		gl_cv_absolute_stdint_h=/usr/include/stdint.h
+.endif
 
 TEST_TARGET=		check
 
