@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1066 2011/05/05 11:36:56 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1067 2011/05/05 12:40:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1750,3 +1750,13 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-base to 1.7.5.1 [adam 2011-05-05]
 	Updated devel/scmgit-docs to 1.7.5.1 [adam 2011-05-05]
 	Updated databases/p5-Jifty-DBI to 0.68 [obache 2011-05-05]
+	Updated x11/qt4 to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-libs to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-tools to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-docs to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-mng to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-mysql to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-pgsql to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-qdbus to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-sqlite3 to 4.7.3 [adam 2011-05-05]
+	Updated x11/qt4-tiff to 4.7.3 [adam 2011-05-05]
