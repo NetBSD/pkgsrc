@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.14 2011/04/27 04:22:00 taca Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.15 2011/05/05 11:50:56 adam Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -39,19 +39,32 @@ _MYSQL_VERSION_${mv}_OK=	yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.18)
+.if ${OPSYS} == "Darwin"
+.  if exists(${LOCALBASE}/lib/libmysqlclient.18.dylib)
 _MYSQL_VERSION_55_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	55
-.endif
-
-.if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.16)
+.  endif
+.  if exists(${LOCALBASE}/lib/mysql/libmysqlclient.16.dylib)
 _MYSQL_VERSION_51_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	51
-.endif
-
-.if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.15)
+.  endif
+.  if exists(${LOCALBASE}/lib/mysql/libmysqlclient.15.dylib)
 _MYSQL_VERSION_50_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	50
+.  endif
+.else
+.  if exists(${LOCALBASE}/lib/libmysqlclient.so.18)
+_MYSQL_VERSION_55_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	55
+.  endif
+.  if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.16)
+_MYSQL_VERSION_51_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	51
+.  endif
+.  if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.15)
+_MYSQL_VERSION_50_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	50
+.  endif
 .endif
 
 # if a version is explicitely required, take it
@@ -106,9 +119,9 @@ PKG_FAIL_REASON+=	"[mysql.buildlink3.mk] ${_MYSQL_VERSION} is not a valid mysql 
 # check installed version aginst required:
 #
 .if defined(_MYSQL_VERSION_INSTALLED)
-.if ${_MYSQL_VERSION} != ${_MYSQL_VERSION_INSTALLED}
+.  if ${_MYSQL_VERSION} != ${_MYSQL_VERSION_INSTALLED}
 PKG_SKIP_REASON+=	"${PKGBASE} requires mysql-${_MYSQL_VERSION}, but mysql-${_MYSQL_VERSION_INSTALLED} is already installed."
-.endif
+.  endif
 .endif
 
 .include "${MYSQL_PKGSRCDIR}/buildlink3.mk"
