@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.511 2011/04/06 09:16:39 cegger Exp $
+# $NetBSD: Makefile,v 1.512 2011/05/05 06:54:18 agc Exp $
 #
 
 COMMENT=	System utilities
@@ -193,6 +193,7 @@ SUBDIR+=	mencvcd
 SUBDIR+=	mesure
 SUBDIR+=	mgm
 SUBDIR+=	mklivecd
+SUBDIR+=	mkmemstick
 SUBDIR+=	mksunbootcd
 SUBDIR+=	mktemp
 SUBDIR+=	monit
