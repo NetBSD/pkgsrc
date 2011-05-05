@@ -1,0 +1,21 @@
+memory stick the easy way
+
+I got tired of having to jump through hoops to install NetBSD on my
+Eee PC, so I wrote a simple script to take a NetBSD release ISO and
+convert it to an image that can be written to a USB memory stick.
+
+To use the script, simply feed it an ISO and tell it where to write
+the resulting image:
+
+$ sh mkmemstick.sh i386cd-5.0.1.iso i386memstick-5.0.1.img
+
+The resulting image can be written to a memory stick using dd(1):
+
+$ dd if=i386memstick-5.0.1.img of=/dev/sd0d
+
+Please note that this script depends on the sysutils/cdrtools package
+for extracting the contents of the release ISO.
+
+Hopefully this will be integrated with the build process so these
+images are available for those who cannot prepare an image due to lack
+of access to a NetBSD machine.
