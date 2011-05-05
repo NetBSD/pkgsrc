@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1067 2011/05/05 12:40:26 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1068 2011/05/05 12:54:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1760,3 +1760,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/qt4-qdbus to 4.7.3 [adam 2011-05-05]
 	Updated x11/qt4-sqlite3 to 4.7.3 [adam 2011-05-05]
 	Updated x11/qt4-tiff to 4.7.3 [adam 2011-05-05]
+	Added print/tex-parskip version 2.0 [markd 2011-05-05]
+	Added print/tex-parskip-doc version 2.0 [markd 2011-05-05]
