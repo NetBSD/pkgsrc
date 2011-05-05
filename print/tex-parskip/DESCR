@@ -1,0 +1,3 @@
+Simply changing \parskip and \parindent leaves a layout that is
+untidy; this package (though it is no substitute for a
+properly-designed class) helps alleviate this untidiness
