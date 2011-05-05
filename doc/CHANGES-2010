@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4391 2011/02/05 19:21:05 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4392 2011/05/05 21:44:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5349,7 +5349,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-server to 5.1.52 [taca 2010-11-04]
 	Updated net/py-twisted to 10.1.0 [adam 2010-11-04]
 	Updated net/py-twisted-docs to 10.1.0 [adam 2010-11-04]
-	Updated multimedia/libdvbpsi to 10.1.0 [adam 2010-11-04]
+	Updated multimedia/libdvbpsi to 0.1.7 [adam 2010-11-04]
 	Updated security/netpgp to 20101104 [agc 2010-11-04]
 	Updated sysutils/dd_rescue to 1.23 [ghen 2010-11-05]
 	Updated net/openresolv to 3.4.0 [roy 2010-11-05]
