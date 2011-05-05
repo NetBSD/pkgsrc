@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.484 2011/03/18 23:28:24 minskim Exp $
+# $NetBSD: Makefile,v 1.485 2011/05/05 12:51:49 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -465,6 +465,8 @@ SUBDIR+=	tex-oubraces
 SUBDIR+=	tex-oubraces-doc
 SUBDIR+=	tex-paralist
 SUBDIR+=	tex-paralist-doc
+SUBDIR+=	tex-parskip
+SUBDIR+=	tex-parskip-doc
 SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-path
 SUBDIR+=	tex-path-doc
