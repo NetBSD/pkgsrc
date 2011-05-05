@@ -1,8 +1,23 @@
-$NetBSD: patch-ab,v 1.6 2010/02/24 23:22:45 mjl Exp $
+$NetBSD: patch-ab,v 1.7 2011/05/05 16:54:55 gdt Exp $
 
---- GNUmakefile.in.orig	2009-12-16 09:15:42.000000000 +0100
-+++ GNUmakefile.in	2010-02-24 20:15:48.000000000 +0100
-@@ -85,7 +85,7 @@
+Multiple changes.
+
+1) Remove checks for valid user.
+   XXX EXPLAIN WHY.  XXX EXPLAIN UPSTREAM STATUS.
+
+2) Remove apparent Linuxy startup work.
+   XXX EXPLAIN WHY.  XXX EXPLAIN UPSTREAM STATUS.
+
+3) When not isntalling a new config file, check in DESTDIR, not the
+   real filesystem.  Avoids failing to install the config in DESTDIR
+   because it's installed on the host system.
+
+   Not pushed upstream; it's not clear that upstream supports DESTDIR
+   at all.
+
+--- GNUmakefile.in.orig	2010-02-20 12:53:30.000000000 +0000
++++ GNUmakefile.in
+@@ -85,7 +85,7 @@ INSTALL    = @INSTALL@
  # Binaries
  BIN_MODE	 = 0755
  # Support files, docs, etc.
@@ -11,7 +26,7 @@ $NetBSD: patch-ab,v 1.6 2010/02/24 23:22:45 mjl Exp $
  # Directory
  DIR_MODE   = 0755
  # Files daemon writes to.
-@@ -787,16 +787,6 @@
+@@ -788,16 +788,6 @@ install-strip:
  # Perhaps the whole user/group validation should be done here, and simplified.
  PROGRAM_V = Privoxy $(VERSION) $(CODE_STATUS)
  install: CONF_DEST LOG_DEST PID_DEST check_doc GROUP_T
@@ -28,7 +43,7 @@ $NetBSD: patch-ab,v 1.6 2010/02/24 23:22:45 mjl Exp $
  	@$(ECHO) "Creating directories, and preparing $(PROGRAM_V) installation"
  	$(CHMOD) $(DIR_MODE) $(MKDIR)
  	@$(MKDIR) $(DESTDIR)$(SBIN_DEST) $(DESTDIR)$(prefix) $(DESTDIR)$(CONF_DEST) \
-@@ -864,41 +854,6 @@
+@@ -865,48 +855,13 @@ install: CONF_DEST LOG_DEST PID_DEST che
  		$(INSTALL) $(INSTALL_T) $$i $(DESTDIR)$(CONF_DEST)/templates ;\
  	done
  
@@ -70,7 +85,15 @@ $NetBSD: patch-ab,v 1.6 2010/02/24 23:22:45 mjl Exp $
  	$(ECHO) Installing configuration files to $(DESTDIR)$(CONF_DEST);\
  	for i in $(CONFIGS); do \
  		if [ "$$i" = "default.action" ] || [ "$$i" = "default.filter" ] ; then \
-@@ -917,36 +872,6 @@
+ 			$(RM) $(DESTDIR)$(CONF_DEST)/$$i ;\
+ 			$(ECHO) Installing fresh $$i;\
+ 			$(INSTALL) $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST) || exit 1;\
+-		elif [ -s "$(CONF_DEST)/$$i" ]; then \
++		elif [ -s "$(DESTDIR)/$(CONF_DEST)/$$i" ]; then \
+ 			$(ECHO) Installing $$i as $$i.new ;\
+ 			$(INSTALL) $$INSTALL_CONF $$i $(DESTDIR)$(CONF_DEST)/$$i.new || exit 1;\
+ 			NEW=1;\
+@@ -918,36 +873,6 @@ install: CONF_DEST LOG_DEST PID_DEST che
  		$(CHMOD) $(RWD_MODE) $(DESTDIR)$(CONF_DEST)/*.new || exit 1 ;\
  		$(ECHO) "Warning: Older config files are preserved. Check new versions for changes!" ;\
  	fi ;\
