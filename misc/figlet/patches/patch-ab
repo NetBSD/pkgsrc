@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2011/05/06 18:02:06 drochner Exp $
+
+--- run-tests.sh.orig	2011-01-26 10:36:21.000000000 +0000
++++ run-tests.sh
+@@ -4,7 +4,7 @@ LC_ALL=POSIX
+ export LC_ALL
+ 
+ TESTDIR=tests
+-OUTPUT=`mktemp`
++OUTPUT=`mktemp output.XXXXXX`
+ LOGFILE=tests.log
+ CMD=./figlet
+ FONTDIR="$1"
+@@ -68,7 +68,7 @@ run_test 018 "tlf2 overlap centered mode
+ run_test 019 "tlf2 full-width flush-left right-to-left mode" \
+   "$cmd -WRl -f tests/emboss"
+ run_test 020 "specify font directory" \
+-  "X=`mktemp -d`;cp fonts/script.flf \$X/foo.flf;$cmd -d\$X -ffoo;rm -Rf \$X"
++  "X=`mktemp -d fonts.XXXXXX`;cp fonts/script.flf \$X/foo.flf;$cmd -d\$X -ffoo;rm -Rf \$X"
+ run_test 021 "paragraph mode long line output" "$cmd -p -w250"
+ run_test 022 "short line output" "$cmd -w5"
+ run_test 023 "kerning paragraph centered mode (small)" "$cmd -kpc -fsmall"
