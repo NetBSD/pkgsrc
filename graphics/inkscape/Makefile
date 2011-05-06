@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2011/04/22 13:43:48 obache Exp $
+# $NetBSD: Makefile,v 1.60 2011/05/06 09:32:49 drochner Exp $
 
 DISTNAME=	inkscape-0.48.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,6 +35,15 @@ BUILDLINK_API_DEPENDS.poppler+=		poppler>=0.5.9
 
 UNLIMIT_RESOURCES=	datasize
 
+SUBST_CLASSES+= pypath
+SUBST_STAGE.pypath= pre-configure
+SUBST_FILES.pypath= src/extension/implementation/script.cpp
+SUBST_VARS.pypath= PYTHONBIN
+CHECK_INTERPRETER_SKIP+= share/inkscape/extensions/*.py
+
+# XXX I don't see where this is used
+CHECK_INTERPRETER_SKIP+= share/inkscape/extensions/simplepath.rb
+
 PKG_OPTIONS_VAR= PKG_OPTIONS.inkscape
 PKG_SUPPORTED_OPTIONS= gnome
 PKG_SUGGESTED_OPTIONS= gnome
@@ -56,6 +65,7 @@ BUILDLINK_API_DEPENDS.poppler-includes+= poppler-includes>=0.12.2
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
