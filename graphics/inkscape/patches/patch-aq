@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2011/05/06 09:32:50 drochner Exp $
+
+--- src/extension/implementation/script.cpp.orig	2010-07-13 03:48:40.000000000 +0000
++++ src/extension/implementation/script.cpp
+@@ -89,7 +89,7 @@ Script::interpreter_t const Script::inte
+ #ifdef WIN32
+         {"python", "python-interpreter", "pythonw" },
+ #else
+-        {"python", "python-interpreter", "python" },
++        {"python", "python-interpreter", "@PYTHONBIN@" },
+ #endif
+         {"ruby",   "ruby-interpreter",   "ruby"   },
+         {"shell",  "shell-interpreter",  "sh"     },
