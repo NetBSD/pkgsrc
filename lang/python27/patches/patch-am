@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+$NetBSD: patch-am,v 1.2 2011/05/06 16:27:04 abs Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -19,7 +19,7 @@ headers and libraries from the system.
 
 Build the 1.85 compat module all the time against the BDB version of choice.
 
---- setup.py.orig	2010-06-27 12:36:16.000000000 +0000
+--- setup.py.orig	2010-10-31 16:40:21.000000000 +0000
 +++ setup.py
 @@ -21,7 +21,7 @@ from distutils.spawn import find_executa
  COMPILED_WITH_PYDEBUG = hasattr(sys, 'gettotalrefcount')
@@ -49,7 +49,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -681,9 +687,7 @@ class PyBuildExt(build_ext):
+@@ -692,9 +698,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -60,7 +60,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -798,172 +802,6 @@ class PyBuildExt(build_ext):
+@@ -809,172 +813,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -233,7 +233,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1079,31 +917,12 @@ class PyBuildExt(build_ext):
+@@ -1090,31 +928,12 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -270,23 +270,34 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
-@@ -1162,14 +981,11 @@ class PyBuildExt(build_ext):
-                     if db_incs is not None:
-                         print "building dbm using bdb"
-                         dbmext = Extension('dbm', ['dbmmodule.c'],
+@@ -1170,18 +989,14 @@ class PyBuildExt(build_ext):
+                                 libraries = gdbm_libs)
+                             break
+                 elif cand == "bdb":
+-                    if db_incs is not None:
+-                        print "building dbm using bdb"
+-                        dbmext = Extension('dbm', ['dbmmodule.c'],
 -                                           library_dirs=dblib_dir,
 -                                           runtime_library_dirs=dblib_dir,
 -                                           include_dirs=db_incs,
-                                            define_macros=[
-                                                ('HAVE_BERKDB_H', None),
-                                                ('DB_DBM_HSEARCH', None),
-                                                ],
+-                                           define_macros=[
+-                                               ('HAVE_BERKDB_H', None),
+-                                               ('DB_DBM_HSEARCH', None),
+-                                               ],
 -                                           libraries=dblibs)
-+                                           libraries=["db"])
-                         break
+-                        break
++		    print "building dbm using bdb"
++		    dbmext = Extension('dbm', ['dbmmodule.c'],
++				       define_macros=[
++					   ('HAVE_BERKDB_H', None),
++					   ('DB_DBM_HSEARCH', None),
++					   ],
++				       libraries=["db"])
++		    break
              if dbmext is not None:
                  exts.append(dbmext)
-@@ -2032,9 +1848,9 @@ def main():
+             else:
+@@ -2043,9 +1858,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
