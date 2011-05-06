@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10315 2011/05/05 21:49:17 wiz Exp $
+$NetBSD: TODO,v 1.10316 2011/05/06 20:28:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doclifter-2.6
 	o doxygen-1.7.4
 	o dpkg-1.14.25
-	o dri2proto-2.4
 	o drivel-3.0.2
 	o drupal-7
 	o dspam-3.9.0
@@ -679,7 +678,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.10.0
 	o glibmm-2.28.0
 	o glom-1.14.2 [GNOME 2.26]
-	o glproto-1.4.13
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.0
@@ -820,7 +818,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbibtex-0.2.2
 	o kbiff-4.0
 	o kdbg-2.5.0
-	o kde4-4.6.2
+	o kde4-4.6.3
 	o kdenlive-0.8
 	o kdevelop-4.2.2
 	o kdrill-6.5
@@ -1083,7 +1081,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o puppet-2.6.6
 	o puzzle-9159
-	o puzzles-9166
+	o puzzles-9167
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
