@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/26 09:39:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/06 19:30:13 alnsn Exp $
 
 DISTNAME=	nettle-2.1
 CATEGORIES=	devel security
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-openssl
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 
 INFO_FILES=		yes
 TEST_TARGET=		check
