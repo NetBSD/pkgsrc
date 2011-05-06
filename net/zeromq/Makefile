@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2011/05/06 04:13:09 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/06 04:34:50 obache Exp $
 #
 
 DISTNAME=	zeromq-2.0.11
 CATEGORIES=	net devel
-MASTER_SITES=	http://www.zeromq.org/
+MASTER_SITES=	http://download.zeromq.org/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://download.zeromq.org/
+HOMEPAGE=	http://www.zeromq.org/
 COMMENT=	The ZeroMQ messaging library
 LICENSE=	gnu-lgpl-v3
 
