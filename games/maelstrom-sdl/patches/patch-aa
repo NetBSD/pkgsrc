@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2010/03/23 16:02:39 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2011/05/06 05:28:39 dholland Exp $
+
+DESTDIR support.
+Install the docs.
+Use $(CP).
+Don't install default scores file mode 666.
 
 --- Makefile.am.orig	2001-07-23 03:45:05.000000000 +0000
 +++ Makefile.am
-@@ -65,11 +65,12 @@ DIST_SUBDIRS = $(SUBDIRS) Images Docs
+@@ -65,21 +65,22 @@ DIST_SUBDIRS = $(SUBDIRS) Images Docs
  
  # Special install rule for the game
  install:
@@ -17,7 +22,10 @@ $NetBSD: patch-aa,v 1.3 2010/03/23 16:02:39 joerg Exp $
  	       Maelstrom_Fonts		\
  	       Maelstrom_Sounds		\
  	       Maelstrom_Sprites	\
-@@ -79,7 +80,7 @@ install_gamedata:
+ 	       Maelstrom-Scores		\
+ 	       icon.bmp icon.xpm	$(target)/
+-	chmod 666 $(target)/Maelstrom-Scores
++	chmod 644 $(target)/Maelstrom-Scores
  
  install_gamedocs:
  	sh mkinstalldirs $(target)/
