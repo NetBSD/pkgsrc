@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.11 2010/05/23 17:30:31 schwarz Exp $
+$NetBSD: distinfo,v 1.12 2011/05/06 11:36:23 obache Exp $
 
-SHA1 (maradns-1.4.03.tar.bz2) = 3ffd296d6d6ee25206e44f08b6d9bd4845369d81
-RMD160 (maradns-1.4.03.tar.bz2) = 3c910e45b0d2ddcb8a879141ace51fffd7f95d50
-Size (maradns-1.4.03.tar.bz2) = 987147 bytes
+SHA1 (maradns-1.4.06.tar.bz2) = 7de7481512aec606b761c10f67d2da8fc808161b
+RMD160 (maradns-1.4.06.tar.bz2) = 160e0d3d64a29a5ae1c8262d6d80763a68ca7b2d
+Size (maradns-1.4.06.tar.bz2) = 1085986 bytes
 SHA1 (patch-aa) = 701ae5efa81273285fef83ec14b02476cb8ed36a
 SHA1 (patch-ab) = c3b5d86477f0d61434e7b6bed7859fa36741504e
 SHA1 (patch-ac) = 1031b4bb51f65a5cd8ca9a06ffced2ac3571873d
-SHA1 (patch-ad) = 1676c9d144fdca85163d40e3f27aebf8087e9e64
+SHA1 (patch-ad) = c67b25691d0c49553e9efcafaebd1caa6e957b90
 SHA1 (patch-ae) = a2494061247cc4919227622de3758d6c5c8cfd86
 SHA1 (patch-ai) = 7bf925bef4d0b9682af9ccea8779bab686987e2d
 SHA1 (patch-aj) = 1be1ad335a31d03d8def8d7bb74b7d45e814bd77
