@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2010/06/25 21:40:32 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2011/05/06 11:36:23 obache Exp $
 
-DISTNAME=	maradns-1.4.03
-PKGREVISION=	1
+DISTNAME=	maradns-1.4.06
 CATEGORIES=	net
-MASTER_SITES=	http://www.maradns.org/download/1.4/${DISTNAME:S/maradns-//}/
+MASTER_SITES=	http://www.maradns.org/download/1.4/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 HAS_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
-MAKE_ENV+=		LANGUAGE="en" PKGMANDIR=${PKGMANDIR:Q}
+MAKE_ENV+=		LANGUAGE="en"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 			${PKGMANDIR}/man8 sbin share/examples
@@ -25,10 +24,10 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 .include "../../mk/pthread.buildlink3.mk"
 LDFLAGS+=	${PTHREAD_LIBS}
 
-post-patch:
-	@${SED} -e s,@@PKGSYSCONFDIR@@,${PKG_SYSCONFDIR},			\
-	    ${WRKSRC}/parse/ParseMaraRc.c > ${WRKSRC}/parse/ParseMaraRc.sed
-	@${MV} ${WRKSRC}/parse/ParseMaraRc.sed ${WRKSRC}/parse/ParseMaraRc.c
+SUBST_CLASSES+=		sysconf
+SUBST_STAGE.sysconf=	pre-configure
+SUBST_VARS.sysconf=	PKG_SYSCONFDIR
+SUBST_FILES.sysconf=	parse/ParseMaraRc.c
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/share/doc/maradns && ${MV} examples ../../examples/maradns
