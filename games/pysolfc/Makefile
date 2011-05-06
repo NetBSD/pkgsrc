@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/02/10 19:17:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/05/06 08:27:07 dholland Exp $
 
 DISTNAME=	PySolFC-1.1
 PKGNAME=	${DISTNAME:tl}
@@ -16,6 +16,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 
+REPLACE_PYTHON+= \
+	data/themes/clearlooks/create_imgs.py \
+	pysollib/games/siebenbisas.py
+
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		post-patch
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
@@ -28,6 +32,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/pysol.6 \
 	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/pysol.py.6
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
