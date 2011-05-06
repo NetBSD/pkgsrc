@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2011/05/01 23:28:58 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2011/05/06 13:12:48 ryoon Exp $
 
 * Fix build. Use devel/libltdl instead of internal libltdl.
 
@@ -29,7 +29,12 @@ $NetBSD: patch-Makefile.in,v 1.1 2011/05/01 23:28:58 ryoon Exp $
  AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/decNumber
  @BUILD_HERCIFC_FALSE@HERCIFC = 
  @BUILD_HERCIFC_TRUE@HERCIFC = hercifc
-@@ -687,7 +687,7 @@ dyndev_SRC = commadpt.c  \
+@@ -683,11 +683,11 @@ dyndev_SRC = commadpt.c  \
+ # -avoid-version  : needed.. Otherwise libtool gives crazy names to Windows
+ #                   DLLs
+ #
+-@BUILD_SHARED_TRUE@XSTATIC = 
++@BUILD_SHARED_TRUE@XSTATIC = -shared
  @OPTION_DYNAMIC_LOAD_FALSE@DYNSRC = $(dyndev_SRC)
  @OPTION_DYNAMIC_LOAD_TRUE@DYNSRC = 
  @OPTION_DYNAMIC_LOAD_FALSE@LTDL = 
@@ -54,16 +59,3 @@ $NetBSD: patch-Makefile.in,v 1.1 2011/05/01 23:28:58 ryoon Exp $
                   herc_getopt.h  \
                   service.h      \
                   chsc.h         \
-@@ -2047,9 +2045,9 @@ tar: dist
- install-exec-local:
- 
- install-exec-hook:
--@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(libdir)/libherc*.a
--@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/dyn*.a
--@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/hdt*.a
-+#@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(libdir)/libherc*.a
-+#@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/dyn*.a
-+#@BUILD_SHARED_TRUE@	rm -f $(DESTDIR)$(modexecdir)/hdt*.a
- @BUILD_SHARED_FALSE@	rm -f $(DESTDIR)$(libdir)/libherc*
- #
- # NOTE : symbolic links point to FINAL destination (not to staged install)
