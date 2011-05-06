@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1074 2011/05/06 07:20:16 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1075 2011/05/06 11:36:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1768,3 +1768,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/zeromq to 2.1.6 [obache 2011-05-06]
 	Updated devel/msgpack to 0.5.6 [obache 2011-05-06]
 	Updated graphics/png to 1.5.3beta05 [adam 2011-05-06]
+	Updated net/maradns to 1.4.06 [obache 2011-05-06]
