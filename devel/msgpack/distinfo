@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/06 13:01:30 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/05/06 05:48:11 obache Exp $
 
-SHA1 (msgpack-0.5.5.tar.gz) = 788380285ae8b84058658c4115e44fefbde28737
-RMD160 (msgpack-0.5.5.tar.gz) = cda680ef73765c0a4340888bc5efc74af2aea88f
-Size (msgpack-0.5.5.tar.gz) = 407670 bytes
+SHA1 (msgpack-0.5.6.tar.gz) = ee1de5b9e13f82e4d0dc1b9a8f3f20cfaebf7666
+RMD160 (msgpack-0.5.6.tar.gz) = 3021d290f9d9f9ba25c0ba90c359a991ec5f754b
+Size (msgpack-0.5.6.tar.gz) = 390841 bytes
