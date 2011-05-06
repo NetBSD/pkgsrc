@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2009/12/10 21:13:07 abs Exp $
+$NetBSD: distinfo,v 1.9 2011/05/06 18:02:06 drochner Exp $
 
-SHA1 (figlet222.tar.gz) = 138aa027f90c0d68429c7b71af4e51c176bab92b
-RMD160 (figlet222.tar.gz) = fc39809b1f5d5e498d722d49ae88132528633d9f
-Size (figlet222.tar.gz) = 166727 bytes
-SHA1 (patch-aa) = a12ec7c8374eff78a12340cfea2664bfd3ecd262
+SHA1 (figlet-2.2.4.tar.gz) = 365f1fce8525c0ff23631661f96534f06822e423
+RMD160 (figlet-2.2.4.tar.gz) = 158c833e7176f32b1f702482c4cb51dbfe2a4002
+Size (figlet-2.2.4.tar.gz) = 229245 bytes
+SHA1 (patch-aa) = 7ff721d16e0bbc61dae8d397944cb518e6330325
+SHA1 (patch-ab) = e798522fd5842afb2686a5265973f94c4b5a366b

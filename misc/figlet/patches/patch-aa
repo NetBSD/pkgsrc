@@ -1,58 +1,55 @@
-$NetBSD: patch-aa,v 1.7 2009/12/10 21:13:07 abs Exp $
+$NetBSD: patch-aa,v 1.8 2011/05/06 18:02:06 drochner Exp $
 
---- Makefile.orig	2005-07-05 09:57:46.000000000 +0000
+--- Makefile.orig	2011-01-26 10:36:21.000000000 +0000
 +++ Makefile
-@@ -4,26 +4,26 @@
- # Copyright 1996, 1997, 1998, 1999, 2000, 2001 John Cowan
- # Copyright 2002 Christiaan Keet
- 
--# Please make sure DESTDIR, MANDIR, DEFAULTFONTDIR and
-+# Please make sure BINDIR, MANDIR, DEFAULTFONTDIR and
- #   DEFAULTFONTFILE are defined to reflect the situation
- #   on your computer.  See README for details.
- 
- # Don't change this even if your shell is different. The only reason
- # for changing this is if sh is not in the same place.
+@@ -19,8 +19,8 @@
  SHELL = /bin/sh
--CC = gcc
--CFLAGS = -g
-+CC ?= gcc
-+CFLAGS ?= -g
+ 
+ # The C compiler and linker to use
+-CC	= gcc
+-CFLAGS	= -g -O2 -Wall
++CC	?= gcc
++CFLAGS	?= -g -O2 -Wall
+ LD	= gcc
+ LDFLAGS =
+ 
+@@ -29,13 +29,13 @@ LDFLAGS =
+ XCFLAGS	= -DTLF_FONTS
+ 
+ # Where to install files
+-prefix	= /usr/local
++prefix	= ${PREFIX}
  
  # Where the executables should be put
--DESTDIR = /usr/local/bin
-+BINDIR = ${PREFIX}/bin
+ BINDIR	= $(prefix)/bin
  
  # Where the man page should be put
--MANDIR = /usr/local/man/man6
-+MANDIR = ${PREFIX}/man/man6
+-MANDIR	= $(prefix)/man
++#MANDIR	= $(prefix)/man
  
  # Where figlet will search first for fonts (the ".flf" files).
--DEFAULTFONTDIR = /usr/local/share/figlet
-+DEFAULTFONTDIR = ${PREFIX}/share/figlet
- # Use this definition if you can't put things in /usr/local/share/figlet
--DEFAULTFONTDIR = fonts
-+#DEFAULTFONTDIR = fonts
+ DEFAULTFONTDIR = $(prefix)/share/figlet
+@@ -77,13 +77,16 @@ clean:
+ 	rm -f *.o *~ core figlet chkfont
  
- # The filename of the font to be used if no other is specified
- #   (standard.flf is recommended, but any other can be used).
-@@ -52,11 +52,11 @@ clean:
- 	rm -f *.o figlet chkfont
- 
- install: figlet chkfont
--	mkdir -p $(DEFAULTFONTDIR)
--	cp figlet $(DESTDIR)
--	cp figlet.6 $(MANDIR)
--	cp chkfont $(DESTDIR)
--	cp figlist $(DESTDIR)
--	cp showfigfonts $(DESTDIR)
--	cp fonts/*.flf $(DEFAULTFONTDIR)
--	cp fonts/*.flc $(DEFAULTFONTDIR)
+ install: all
+-	mkdir -p $(DESTDIR)$(BINDIR)
+-	mkdir -p $(DESTDIR)$(MANDIR)/man6
+-	mkdir -p $(DESTDIR)$(DEFAULTFONTDIR)
+-	cp $(BINS) $(DESTDIR)$(BINDIR)
+-	cp $(MANUAL) $(DESTDIR)$(MANDIR)/man6
+-	cp fonts/*.flf $(DESTDIR)$(DEFAULTFONTDIR)
+-	cp fonts/*.flc $(DESTDIR)$(DEFAULTFONTDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(MANDIR)
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(DEFAULTFONTDIR)
 +	${BSD_INSTALL_PROGRAM} figlet $(DESTDIR)$(BINDIR)
-+	${BSD_INSTALL_DATA} figlet.6 $(DESTDIR)$(MANDIR)
 +	${BSD_INSTALL_PROGRAM} chkfont $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_SCRIPT} figlist $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_SCRIPT} showfigfonts $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_DATA} $(MANUAL) $(DESTDIR)$(MANDIR)
 +	${BSD_INSTALL_DATA} fonts/*.flf $(DESTDIR)$(DEFAULTFONTDIR)
 +	${BSD_INSTALL_DATA} fonts/*.flc $(DESTDIR)$(DEFAULTFONTDIR)
+ 
+ dist:
+ 	rm -Rf $(DIST) $(DIST).tar.gz
