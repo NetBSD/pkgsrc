@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1069 2011/05/05 23:39:37 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.1070 2011/05/06 00:35:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1763,3 +1763,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-parskip version 2.0 [markd 2011-05-05]
 	Added print/tex-parskip-doc version 2.0 [markd 2011-05-05]
 	Updated print/gutenprint-lib to 5.2.7 [gdt 2011-05-05]
+	Updated net/bind98 to 9.8.0pl1 [taca 2011-05-06]
