@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.14 2011/05/04 17:23:30 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.15 2011/05/07 10:48:14 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -70,3 +70,9 @@ Pullup ticket #3420 - requested by obache
 www/p5-Mojolicious: security update
 Pullup ticket #3421 - requested by obache
 net/rdesktop: security update
+Pullup ticket #3422 - requested by obache
+databases/p5-Jifty-DBI: security update
+Pullup ticket #3423 - requested by taca
+net/bind98: security update
+Pullup ticket #3424 - requested by obache
+net/maradns: security update
