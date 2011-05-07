@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1076 2011/05/07 00:19:06 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1077 2011/05/07 03:01:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1770,3 +1770,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/png to 1.5.3beta05 [adam 2011-05-06]
 	Updated net/maradns to 1.4.06 [obache 2011-05-06]
 	Updated games/pysolfc to 1.1nb6 [dholland 2011-05-07]
+	Updated security/ruby-simple_oauth to 0.1.5 [obache 2011-05-07]
