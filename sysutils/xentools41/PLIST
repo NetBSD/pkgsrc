@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/05/07 17:02:39 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/05/07 18:39:05 tnn Exp $
 bin/lsevtchn
 bin/pygrub
 bin/qemu-img-xen
@@ -23,7 +23,6 @@ bin/xenstore-write
 bin/xentrace
 bin/xentrace_format
 bin/xentrace_setsize
-etc/xen/scripts/hotplugpath.sh
 include/_libxl_types.h
 include/blktaplib.h
 include/fsimage.h
@@ -686,11 +685,26 @@ share/examples/rc.d/xen-watchdog
 share/examples/rc.d/xencommons
 share/examples/rc.d/xend
 share/examples/rc.d/xendomains
+share/examples/xen/README
+share/examples/xen/README.incompatibilities
+share/examples/xen/cpupool
+share/examples/xen/formats
+share/examples/xen/scripts/hotplugpath.sh
 share/examples/xen/scripts/block
 share/examples/xen/scripts/qemu-ifup
 share/examples/xen/scripts/vif-bridge
 share/examples/xen/scripts/vif-ip
 share/examples/xen/xend-config.sxp
+share/examples/xen/xend-pci-permissive.sxp
+share/examples/xen/xend-pci-quirks.sxp
+share/examples/xen/xl.conf
+share/examples/xen/xl.sh
+share/examples/xen/xm-config.xml
+share/examples/xen/xmexample.hvm
+share/examples/xen/xmexample.hvm-stubdom
+share/examples/xen/xmexample.nbd
+share/examples/xen/xmexample.pv-grub
+share/examples/xen/xmexample.vti
 share/examples/xen/xmexample1
 share/examples/xen/xmexample2
 share/examples/xen/xmexample3
@@ -743,4 +757,4 @@ share/xen/qemu/pxe-rtl8139.bin
 share/xen/qemu/vgabios-cirrus.bin
 share/xen/qemu/vgabios.bin
 share/xen/qemu/video.x
-@pkgdir etc/xen/auto
+@pkgdir share/examples/xen/auto

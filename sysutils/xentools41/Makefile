@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2011/05/07 06:39:16 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/07 18:39:05 tnn Exp $
 #
-
 VERSION=		4.1.0
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools41-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
-EXTRACT_SUFX=		.tar.gz
 
 DISTFILES=		${DISTNAME}.tar.gz
 DISTFILES+=		ipxe-git-v1.0.0.tar.gz
@@ -47,14 +45,13 @@ USE_TOOLS+=		gmake
 
 MAKE_ENV+=		PREFIX=${prefix:Q} WRKSRC=${WRKSRC}
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
+MAKE_ENV+=		BASH_COMPLETION_DIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 MAKE_ENV+=		VARBASE=${VARBASE}
 
 #MAKE_ENV+=		INSTALL_DIR=${BSD_INSTALL_DATA_DIR}
 #MAKE_ENV+=		INSTALL_DATA=${BSD_INSTALL_DATA}
 #MAKE_ENV+=		INSTALL_PROG=${BSD_INSTALL_PROGRAM}
-
-#INSTALL_MAKE_FLAGS+=	CONFIG_DIR=${prefix}/share/examples
 
 PY_PATCHPLIST=		yes
 #PYTHON_PATCH_SCRIPTS+=	misc/xm
@@ -97,7 +94,7 @@ SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
 .include "../../mk/bsd.prefs.mk"
 
-XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup
+XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup hotplugpath.sh
 
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		proc
@@ -117,17 +114,16 @@ FILES_SUBST+=		PREFIX=${PREFIX:Q}
 
 BLKTAP_FILES=		blk_netbsd.c blktapctrl_netbsd.c
 
-#CONF_FILES=		${EGDIR}/formats ${PKG_SYSCONFDIR}/formats
-
-CONF_FILES=		${EGDIR}/xend-config.sxp \
-			${PKG_SYSCONFDIR}/xend-config.sxp
+CONF_FILES+=		${EGDIR}/xend-config.sxp ${PKG_SYSCONFDIR}/xend-config.sxp
+CONF_FILES+=		${EGDIR}/formats ${PKG_SYSCONFDIR}/formats
+CONF_FILES+=		${EGDIR}/xm-config.xml ${PKG_SYSCONFDIR}/xm-config.xml
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts ${VARBASE}/log/xen ${VARBASE}/lib
 
 .for s in ${XEND_SCRIPTS}
 CONF_FILES_PERMS+=	${EGDIR}/scripts/${s} ${PKG_SYSCONFDIR}/scripts/${s} \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
-.endfor 
+.endfor
 
 pre-build:
 	rm -f ${WRKSRC}/check/check_x11_devel
