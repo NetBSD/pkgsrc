@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/11/19 01:19:23 reed Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/07 10:06:02 cheusov Exp $
 
-DISTNAME=		libmaa-1.2.0
+DISTNAME=		libmaa-1.3.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dict/} \
                         ftp://ftp.dict.org/pub/dict/
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dict/} \
 MAINTAINER=		vle@gmx.net
 HOMEPAGE=		http://www.dict.org/
 COMMENT=		General purpose data structures and functions
+LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
