@@ -1,8 +1,17 @@
-$NetBSD: patch-da,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
+$NetBSD: patch-da,v 1.2 2011/05/07 16:55:58 tnn Exp $
 
---- ioemu-qemu-xen/configure.orig	2011-02-11 18:54:51.000000000 +0100
-+++ ioemu-qemu-xen/configure	2011-03-31 16:50:40.000000000 +0200
-@@ -1124,7 +1124,7 @@
+--- ioemu-qemu-xen/configure.orig	2011-02-11 17:54:51.000000000 +0000
++++ ioemu-qemu-xen/configure
+@@ -1089,7 +1089,7 @@ fi
+ # Check if tools are available to build documentation.
+ if [ -x "`which texi2html 2>/dev/null`" ] && \
+    [ -x "`which pod2man 2>/dev/null`" ]; then
+-  build_docs="yes"
++#  build_docs="yes"
+ fi
+ 
+ ##########################################
+@@ -1124,7 +1124,7 @@ else
    if test -z "$prefix" ; then
        prefix="/usr/local"
    fi
@@ -11,7 +20,7 @@ $NetBSD: patch-da,v 1.1.1.1 2011/04/06 09:10:27 cegger Exp $
    datasuffix="/share/qemu"
    docsuffix="/share/doc/qemu"
    binsuffix="/bin"
-@@ -1215,6 +1215,9 @@
+@@ -1215,6 +1215,9 @@ echo "docdir=\${prefix}$docsuffix" >> $c
  echo "#define CONFIG_QEMU_SHAREDIR \"$prefix$datasuffix\"" >> $config_h
  echo "MAKE=$make" >> $config_mak
  echo "INSTALL=$install" >> $config_mak
