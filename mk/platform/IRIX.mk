@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.36 2010/07/08 04:57:36 dholland Exp $
+# $NetBSD: IRIX.mk,v 1.37 2011/05/07 22:16:16 cheusov Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -29,6 +29,11 @@ SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
+
+USERADD?=		${LOCALBASE}/sbin/useradd
+GROUPADD?=		${LOCALBASE}/sbin/groupadd
+_PKG_USER_HOME?=	/dev/null # to match other system accounts
+_USER_DEPENDS=		user-[0-9]*:../../sysutils/user_irix
 
 # imake installs manpages in weird places
 .if !empty(OS_VERSION:M6*)
