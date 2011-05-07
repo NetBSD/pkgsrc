@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1078 2011/05/07 04:05:04 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1079 2011/05/07 13:57:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/ruby-simple_oauth to 0.1.5 [obache 2011-05-07]
 	Updated databases/mysql55-client to 5.5.12 [adam 2011-05-07]
 	Updated databases/mysql55-server to 5.5.12 [adam 2011-05-07]
+	Updated net/mikutter to 0.0.3.3 [obache 2011-05-07]
