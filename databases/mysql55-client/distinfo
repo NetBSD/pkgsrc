@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/25 21:12:52 adam Exp $
+$NetBSD: distinfo,v 1.2 2011/05/07 04:03:07 adam Exp $
 
-SHA1 (mysql-5.5.11.tar.gz) = f6a9ccf00fe723e7f18027cfd64527d1e71c8322
-RMD160 (mysql-5.5.11.tar.gz) = e220a2b105d43de0544b097ffae954e2d0829da6
-Size (mysql-5.5.11.tar.gz) = 23664849 bytes
+SHA1 (mysql-5.5.12.tar.gz) = 8a4f4c2b762676140722d414d694cddd9c1e3397
+RMD160 (mysql-5.5.12.tar.gz) = e36d6a29e4f92eecfbbdac47d9f0d9a427446da3
+Size (mysql-5.5.12.tar.gz) = 23681636 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = a1ac666efa953a98455a726e5db359c903d699b6
 SHA1 (patch-CMakeLists.txt) = eaf78f2198945b5010dc3e67e13bdb37fd9c12c7
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
@@ -11,7 +11,7 @@ SHA1 (patch-client_mysqlbinlog.cc) = f78dd6538b978e1ae95bb720e8baa91087ecc149
 SHA1 (patch-client_sql_string.cc) = 4a18442fa16ccbc8f34c11a460209209017c3bc5
 SHA1 (patch-cmake_libutils.cmake) = 5d75a1762e3db6724bec2d75b45d40b17a5e9d09
 SHA1 (patch-include_CMakeLists.txt) = 4781c69315624fb5567ae70cee87f1ddb3f89847
-SHA1 (patch-include_my_handler.h) = 323c1624457c96269a138c8a7fc810162f6187cd
+SHA1 (patch-include_my_compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my_net.h) = 162c97a87ab00b407f6796b55ef839ba2e3ac2af
 SHA1 (patch-include_my_pthread.h) = 109d376b4cf5b64c5243f9e91300667441131f86
 SHA1 (patch-include_myisam.h) = cfbec9eee43282c5ebc38a64add97218c74279a0
