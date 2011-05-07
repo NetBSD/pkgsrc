@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.512 2011/05/05 06:54:18 agc Exp $
+# $NetBSD: Makefile,v 1.513 2011/05/07 15:45:45 cheusov Exp $
 #
 
 COMMENT=	System utilities
@@ -328,6 +328,7 @@ SUBDIR+=	ups-nut-usb
 SUBDIR+=	usbutil
 SUBDIR+=	user_darwin
 SUBDIR+=	user_interix
+SUBDIR+=	user_irix
 SUBDIR+=	vbetool
 SUBDIR+=	vcdimager
 SUBDIR+=	vcdimager-devel
