@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1080 2011/05/07 16:56:03 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1081 2011/05/07 20:03:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1775,3 +1775,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql55-server to 5.5.12 [adam 2011-05-07]
 	Updated net/mikutter to 0.0.3.3 [obache 2011-05-07]
 	Updated lang/clang to 2.9nb1 [adam 2011-05-07]
+	Added editors/nts version 77 [ryoon 2011-05-07]
