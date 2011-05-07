@@ -1,7 +1,7 @@
-	$NetBSD: patch-ac,v 1.7 2011/02/10 16:20:45 pooka Exp $
+$NetBSD: patch-ac,v 1.8 2011/05/07 10:06:34 shattered Exp $
 
---- src/netbsd_pci.c.orig	2009-02-17 01:10:20.000000000 +0100
-+++ src/netbsd_pci.c	2011-02-10 17:12:57.000000000 +0100
+--- src/netbsd_pci.c.orig	2009-02-17 00:10:20.000000000 +0000
++++ src/netbsd_pci.c
 @@ -1,6 +1,7 @@
  /*
   * Copyright (c) 2008 Juan Romero Pardines
@@ -10,7 +10,7 @@
   *
   * Permission to use, copy, modify, and distribute this software for any
   * purpose with or without fee is hereby granted, provided that the above
-@@ -20,12 +21,17 @@
+@@ -20,12 +21,26 @@
  #include <sys/mman.h>
  #include <sys/types.h>
  
@@ -19,7 +19,16 @@
 +#ifdef HAVE_MTRR
  #include <machine/sysarch.h>
  #include <machine/mtrr.h>
-+#define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)(mr, num)
++#ifdef _X86_SYSARCH_L
++#define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)((mr), (num))
++#else
++#ifdef __i386__
++#define netbsd_set_mtrr(mr, num)	i386_set_mtrr((mr), (num))
++#endif
++#ifdef __amd64__
++#define netbsd_set_mtrr(mr, num)	x86_64_set_mtrr((mr), (num))
++#endif
++#endif
 +#endif
  
 +#include <dev/pci/pcidevs.h>
@@ -29,7 +38,7 @@
  
  #include <errno.h>
  #include <fcntl.h>
-@@ -35,126 +41,162 @@
+@@ -35,126 +50,162 @@
  #include <unistd.h>
  
  
@@ -256,7 +265,7 @@
  
  	return pci_device_generic_unmap_range(dev, map);
  }
-@@ -163,25 +205,23 @@
+@@ -163,25 +214,23 @@ static int
  pci_device_netbsd_read(struct pci_device *dev, void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_read)
  {
@@ -291,7 +300,7 @@
  
  		offset += toread;
  		data = (char *)data + toread;
-@@ -196,25 +236,23 @@
+@@ -196,25 +245,23 @@ static int
  pci_device_netbsd_write(struct pci_device *dev, const void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_written)
  {
@@ -324,7 +333,7 @@
  		size -= 4;
  		*bytes_written += 4;
  	}
-@@ -225,7 +263,11 @@
+@@ -225,7 +272,11 @@ pci_device_netbsd_write(struct pci_devic
  static void
  pci_system_netbsd_destroy(void)
  {
@@ -337,7 +346,7 @@
  	free(pci_sys);
  	pci_sys = NULL;
  }
-@@ -233,17 +275,34 @@
+@@ -233,17 +284,34 @@ pci_system_netbsd_destroy(void)
  static int
  pci_device_netbsd_probe(struct pci_device *device)
  {
@@ -375,7 +384,7 @@
  	if (err)
  		return err;
  
-@@ -254,16 +313,16 @@
+@@ -254,16 +322,16 @@ pci_device_netbsd_probe(struct pci_devic
  	region = device->regions;
  	for (bar = PCI_MAPREG_START; bar < PCI_MAPREG_END;
  	     bar += sizeof(uint32_t), region++) {
@@ -396,7 +405,7 @@
  
  		if (PCI_MAPREG_TYPE(reg) == PCI_MAPREG_TYPE_IO) {
  			region->is_IO = 1;
-@@ -286,66 +345,188 @@
+@@ -286,66 +354,188 @@ pci_device_netbsd_probe(struct pci_devic
  
  				bar += sizeof(uint32_t);
  
@@ -613,7 +622,7 @@
  				    &reg) != 0)
  					continue;
  				if (PCI_VENDOR(reg) == PCI_VENDOR_INVALID ||
-@@ -355,37 +536,43 @@
+@@ -355,37 +545,43 @@ pci_system_netbsd_create(void)
  				ndevs++;
  			}
  		}
@@ -666,7 +675,7 @@
  					continue;
  
  				device->base.device_class =
-@@ -393,8 +580,8 @@
+@@ -393,8 +589,8 @@ pci_system_netbsd_create(void)
  				    PCI_SUBCLASS(reg) << 8;
  				device->base.revision = PCI_REVISION(reg);
  
