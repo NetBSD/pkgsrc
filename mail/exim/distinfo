@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2011/03/22 13:52:19 adam Exp $
+$NetBSD: distinfo,v 1.50 2011/05/07 14:32:02 drochner Exp $
 
 SHA1 (exim-4.75.tar.bz2) = e3196a9035f433c380bb2cec4cbbcfd7ad6c00b3
 RMD160 (exim-4.75.tar.bz2) = 2dfea8750cc95d057c0b804c0379f69fbed927a9
@@ -8,4 +8,5 @@ SHA1 (patch-ab) = ffb9fb28e4e5548777db31b3de34673a08a1c0fa
 SHA1 (patch-ac) = 9a260a07f5e8cc89c60188925f01fc5b46164a37
 SHA1 (patch-ae) = 4a9d2fde403cfd6386742b31f062e7801ef081b9
 SHA1 (patch-ag) = 8512795060ad913f4699c277867fd24e7a785519
+SHA1 (patch-ah) = 99eae6cf5a3d4b771db39934c3e468706f7497b9
 SHA1 (patch-ba) = 6647a95bb8e3bce2bc7f075e4be2217b3a97ce8b
