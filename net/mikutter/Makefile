@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/04/30 13:26:14 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/07 13:57:35 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.3.2
+DISTNAME=	mikutter.0.0.3.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -19,7 +19,7 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.1.9:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac-[0-9]*:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk-[0-9]*:../../x11/ruby-gnome2-gtk
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gstreamer-[0-9]*:../../multimedia/ruby-gnome2-gstreamer
+DEPENDS+=	${RUBY_PKGPREFIX}-SDL-[0-9]*:../../devel/ruby-SDL
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.3.6:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-escape-[0-9]*:../../textproc/ruby-escape
 DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3.1:../../devel/ruby-memoize
