@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1087 2011/05/08 17:43:25 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1088 2011/05/08 18:15:04 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1782,6 +1782,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql51-client to 5.1.57 [taca 2011-05-08]
 	Updated databases/mysql51-server to 5.1.57 [taca 2011-05-08]
 	Updated www/contao29-translations to 20110508 [taca 2011-05-08]
-	Added sysutils/user_irix to 20110201 [cheusov 2011-05-08]
+	Added sysutils/user_irix version 20110201 [cheusov 2011-05-08]
 	Updated devel/libmaa to 1.3.0 [cheusov 2011-05-08]
 	Updated lang/mawk to 1.3.4.20100625 [cheusov 2011-05-08]
