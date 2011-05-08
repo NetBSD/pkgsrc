@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.578 2011/05/01 09:21:50 obache Exp $
+# $NetBSD: Makefile,v 1.579 2011/05/08 18:21:58 cheusov Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -58,6 +58,7 @@ SUBDIR+=	dbtoepub
 SUBDIR+=	detex
 SUBDIR+=	dict-client
 SUBDIR+=	dict-dictionaries
+SUBDIR+=	dict-mueller7
 SUBDIR+=	dict-server
 SUBDIR+=	dictem
 SUBDIR+=	diction
