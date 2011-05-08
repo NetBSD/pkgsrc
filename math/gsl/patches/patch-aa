@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2008/05/02 08:49:50 adam Exp $
+$NetBSD: patch-aa,v 1.10 2011/05/08 20:35:25 asau Exp $
 
---- configure.orig	2008-03-29 17:23:19.000000000 +0100
-+++ configure
-@@ -10715,7 +10715,7 @@ fi
+--- configure.orig	2011-05-05 01:10:35.000000000 +0400
++++ configure	2011-05-09 00:00:51.000000000 +0400
+@@ -11598,7 +11598,7 @@
  
  
  GSL_CFLAGS="-I$includedir"
 -GSL_LIBS="-L$libdir -lgsl"
 +GSL_LIBS="-Wl,-R$libdir -L$libdir -lgsl"
- 
- 
- 
+ LIBM=
+ case $host in
+ *-*-beos* | *-*-cegcc* | *-*-cygwin* | *-*-haiku* | *-*-pw32* | *-*-darwin*)
