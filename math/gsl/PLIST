@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/03/15 10:45:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/05/08 20:35:25 asau Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -89,6 +89,7 @@ include/gsl/gsl_multiset.h
 include/gsl/gsl_nan.h
 include/gsl/gsl_ntuple.h
 include/gsl/gsl_odeiv.h
+include/gsl/gsl_odeiv2.h
 include/gsl/gsl_permutation.h
 include/gsl/gsl_permute.h
 include/gsl/gsl_permute_char.h
