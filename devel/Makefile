@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1450 2011/05/03 12:44:44 manu Exp $
+# $NetBSD: Makefile,v 1.1451 2011/05/08 18:33:57 cheusov Exp $
 #
 
 COMMENT=	Development utilities
@@ -392,6 +392,7 @@ SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
 SUBDIR+=	libxenserver
 SUBDIR+=	lincvs
+SUBDIR+=	lmdbg
 SUBDIR+=	locktests
 SUBDIR+=	log4cplus
 SUBDIR+=	log4cxx
