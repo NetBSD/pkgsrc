@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2010/07/30 10:36:34 asau Exp $
+# $NetBSD: Makefile,v 1.60 2011/05/08 15:12:22 cheusov Exp $
 
 DISTNAME=	pvm3.4.6
 PKGNAME=	pvm-3.4.6
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.csm.ornl.gov/pvm/pvm_home.html
 COMMENT=	Parallel Virtual Machine libraries and environment
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=	m4
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		PVM_SSH
@@ -29,7 +27,7 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 WRKSRC=			${WRKDIR}/pvm3
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake m4
 MAKE_JOBS_SAFE=		no
 
 PVM_ROOT=		${WRKSRC}
