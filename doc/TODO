@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10318 2011/05/08 18:56:34 wiz Exp $
+$NetBSD: TODO,v 1.10319 2011/05/08 20:35:48 asau Exp $
 
 Suggested new packages
 ======================
@@ -729,7 +729,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grhino-0.16.1
 	o groff-1.21
 	o gsharutils-4.11
-	o gsl-1.15
 	o gss-1.0.1
 	o gssdp-0.10.0
 	o gtar-1.26

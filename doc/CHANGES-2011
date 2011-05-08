@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1091 2011/05/08 18:49:25 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1092 2011/05/08 20:35:48 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/dict-mueller7 version 1.2 [cheusov 2011-05-08]
 	Added devel/lmdbg version 0.16.0nb1 [cheusov 2011-05-08]
 	Added textproc/zoem version 10.265 [cheusov 2011-05-08]
+	Updated math/gsl to 1.15 [asau 2011-05-08]
