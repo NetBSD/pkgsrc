@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2011/05/08 17:07:25 christos Exp $
+
+--- pptpgre.c.orig	2011-05-08 13:02:05.000000000 -0400
++++ pptpgre.c	2011-05-08 13:01:57.000000000 -0400
+@@ -136,7 +136,7 @@
+ 		 * network write failed.
+ 		 */
+ 		if ((status = read(fd, buffer, sizeof(buffer))) <= 0) {
+-			syslog(LOG_ERR, "GRE: read(fd=%d,buffer=%lx,len=%d) from PTY failed: status = %d error = %s%s",
++			syslog(LOG_ERR, "GRE: read(fd=%d,buffer=%lx,len=%zu) from PTY failed: status = %d error = %s%s",
+ 			       fd, (unsigned long) buffer, sizeof(buffer), 
+ 			       status, status ? strerror(errno) : "No error", 
+ 			       errno != EIO ? "" : ", usually caused by unexpected termination of pppd, check option syntax and pppd logs");
+@@ -344,7 +344,7 @@
+ 
+ 	dequeue_gre(cb, cl);
+ 	if ((status = read(fd, buffer, sizeof(buffer))) <= 0) {
+-		syslog(LOG_ERR, "GRE: read(fd=%d,buffer=%lx,len=%d) from network failed: status = %d error = %s",
++		syslog(LOG_ERR, "GRE: read(fd=%d,buffer=%lx,len=%zu) from network failed: status = %d error = %s",
+ 		       fd, (unsigned long) buffer, sizeof(buffer), status, status ? strerror(errno) : "No error");
+ 		stats.rx_errors++;
+ 		return -1;
