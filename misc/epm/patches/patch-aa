@@ -1,0 +1,73 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/05/08 21:50:48 cheusov Exp $
+
+DESTDIR support
+--- Makefile.in.orig	2006-11-30 23:59:27.000000000 +0200
++++ Makefile.in
+@@ -31,7 +31,10 @@ RANLIB		=	@RANLIB@
+ RM		=	@RM@ -f
+ SHELL		=	/bin/sh
+ STRIP		=	@STRIP@
+-
++INSTALL		=	@INSTALL@
++INSTALL_PROGRAM	=	@INSTALL_PROGRAM@
++INSTALL_SCRIPT	=	@INSTALL_SCRIPT@
++INSTALL_DATA	=	@INSTALL_DATA@
+ 
+ #
+ # Program options...
+@@ -155,39 +158,25 @@ distclean:
+ 
+ install: all @INSTALL_GUIS@ @INSTALL_OSX@
+ 	echo Installing EPM programs in $(bindir)
+-	-$(MKDIR) $(bindir)
+-	$(RM) $(bindir)/epm
+-	$(CP) epm $(bindir)
+-	$(STRIP) $(bindir)/epm
+-	$(RM) $(bindir)/epminstall
+-	$(CP) epminstall $(bindir)
+-	$(STRIP) $(bindir)/epminstall
+-	$(RM) $(bindir)/mkepmlist
+-	$(CP) mkepmlist $(bindir)
++	-$(MKDIR) $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) epm $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) epminstall $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) mkepmlist $(DESTDIR)$(bindir)
+ 	echo Installing EPM manpages in $(mandir)/man1
+-	-$(MKDIR) $(mandir)/man1
+-	$(RM) $(mandir)/man1/epm.1
+-	$(CP) $(srcdir)/doc/epm.man $(mandir)/man1/epm.1
+-	$(RM) $(mandir)/man1/epminstall.1
+-	$(CP) $(srcdir)/doc/epminstall.man $(mandir)/man1/epminstall.1
+-	$(RM) $(mandir)/man1/mkepmlist.1
+-	$(CP) $(srcdir)/doc/mkepmlist.man $(mandir)/man1/mkepmlist.1
+-	$(RM) $(mandir)/man1/setup.1
+-	$(CP) $(srcdir)/doc/setup.man $(mandir)/man1/setup.1
++	-$(MKDIR) $(DESTDIR)$(mandir)/man1
++	$(INSTALL_DATA) $(srcdir)/doc/epm.man $(DESTDIR)$(mandir)/man1/epm.1
++	$(INSTALL_DATA) $(srcdir)/doc/epminstall.man $(DESTDIR)$(mandir)/man1/epminstall.1
++	$(INSTALL_DATA) $(srcdir)/doc/mkepmlist.man $(DESTDIR)$(mandir)/man1/mkepmlist.1
++	$(INSTALL_DATA) $(srcdir)/doc/setup.man $(DESTDIR)$(mandir)/man1/setup.1
+ 	echo Installing EPM manpages in $(mandir)/man5
+-	-$(MKDIR) $(mandir)/man5
+-	$(RM) $(mandir)/man5/epm.list.5
+-	$(CP) $(srcdir)/doc/epm.list.man $(mandir)/man5/epm.list.5
+-	$(RM) $(mandir)/man5/setup.types.5
+-	$(CP) $(srcdir)/doc/setup.types.man $(mandir)/man5/setup.types.5
++	-$(MKDIR) $(DESTDIR)$(mandir)/man5
++	$(INSTALL_DATA) $(srcdir)/doc/epm.list.man $(DESTDIR)$(mandir)/man5/epm.list.5
++	$(INSTALL_DATA) $(srcdir)/doc/setup.types.man $(DESTDIR)$(mandir)/man5/setup.types.5
+ 	echo Installing EPM documentation in $(docdir)
+-	-$(MKDIR) $(docdir)
+-	$(RM) $(docdir)/COPYING
+-	$(CP) $(srcdir)/COPYING $(docdir)
+-	$(RM) $(docdir)/README
+-	$(CP) $(srcdir)/README $(docdir)
+-	$(RM) $(docdir)/epm-book.html
+-	$(CP) $(srcdir)/doc/epm-book.html $(docdir)
++	-$(MKDIR) $(DESTDIR)$(docdir)
++	$(INSTALL_DATA) $(srcdir)/COPYING $(DESTDIR)$(docdir)
++	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(docdir)
++	$(INSTALL_DATA) $(srcdir)/doc/epm-book.html $(DESTDIR)$(docdir)
+ 
+ install-guis:	setup uninst
+ 	echo Installing EPM setup/uninst in $(libdir)/epm
