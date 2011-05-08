@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.41 2011/04/22 08:09:00 adam Exp $
+# $NetBSD: license.mk,v 1.42 2011/05/08 10:53:22 ryoon Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -117,7 +117,9 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	python-software-foundation \
 	ipafont \
 	isc \
-	boost-license
+	boost-license \
+	mplusfont \
+	cc-by-sa-v3.0
 
 # not approved by OSI, derived from BSD
 DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
