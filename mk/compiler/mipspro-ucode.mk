@@ -1,4 +1,4 @@
-# $NetBSD: mipspro-ucode.mk,v 1.4 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: mipspro-ucode.mk,v 1.5 2011/05/08 10:37:54 cheusov Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -42,6 +42,6 @@ COMPILER_MIPSPRO_UCODE_MK=	defined
 
 CC_VERSION?=	MIPSpro Compilers: Version 4.x (ucode)
 
-.include "../../mk/compilers/mipspro.mk"
+.include "../../mk/compiler/mipspro.mk"
 
 .endif	# COMPILER_MIPSPRO_UCODE_MK
