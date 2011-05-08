@@ -1,0 +1,125 @@
+#!/usr/bin/perl
+# Written by Alexey Dyachenko <alexd@altlinux.ru> (c) 2002
+# Licensed under GNU GPL
+
+ require Unicode::Map8;
+ my $koi_map = Unicode::Map8->new("koi8-r")    || die;
+
+ my $ipa_map = Unicode::Map8->new();
+
+ $ipa_map->default_to16( 0x20 );
+
+$ipa_map->addpair( 0x61,  0x61 );
+$ipa_map->addpair( 0x62,  0x62 );
+$ipa_map->addpair( 0x63,  0x63 );
+$ipa_map->addpair( 0x64,  0x64 );
+$ipa_map->addpair( 0x65,  0x65 );
+$ipa_map->addpair( 0x66,  0x66 );
+$ipa_map->addpair( 0x67,  0x67 );
+$ipa_map->addpair( 0x68,  0x68 );
+$ipa_map->addpair( 0x69,  0x69 );
+$ipa_map->addpair( 0x6a,  0x6a );
+$ipa_map->addpair( 0x6b,  0x6b );
+$ipa_map->addpair( 0x6c,  0x6c );
+$ipa_map->addpair( 0x6d,  0x6d );
+$ipa_map->addpair( 0x6e,  0x6e );
+$ipa_map->addpair( 0x6f,  0x6f );
+$ipa_map->addpair( 0x70,  0x70 );
+$ipa_map->addpair( 0x71,  0x71 );
+$ipa_map->addpair( 0x72,  0x72 );
+$ipa_map->addpair( 0x73,  0x73 );
+$ipa_map->addpair( 0x74,  0x74 );
+$ipa_map->addpair( 0x75,  0x75 );
+$ipa_map->addpair( 0x76,  0x76 );
+$ipa_map->addpair( 0x77,  0x77 );
+$ipa_map->addpair( 0x78,  0x78 );
+$ipa_map->addpair( 0x79,  0x79 );
+$ipa_map->addpair( 0x7a,  0x7a );
+
+$ipa_map->addpair( 0x2d,  0x2e );
+$ipa_map->addpair( 0x2e,  0x2e );
+
+
+$ipa_map->addpair( 0x54,  0x03b8 );
+$ipa_map->addpair( 0x53,  0x0283 );
+$ipa_map->addpair( 0x4e,  0x014b );
+$ipa_map->addpair( 0xd7,  0x02a7 );
+$ipa_map->addpair( 0x44,  0x00F0 );
+
+$ipa_map->addpair( 0x5a,  0x0292 );
+
+$ipa_map->addpair( 0x51,  0x00e6 );
+$ipa_map->addpair( 0x49,  0x0131 );
+$ipa_map->addpair( 0xc3,  0x028c );
+$ipa_map->addpair( 0x55,  0x028a );
+$ipa_map->addpair( 0x81,  0x0252 );
+$ipa_map->addpair( 0x45,  0x025b );
+$ipa_map->addpair( 0xab,  0x0259 );
+
+$ipa_map->addpair( 0x41,  0x0251 );
+$ipa_map->addpair( 0xce,  0x025c );
+$ipa_map->addpair( 0x8d,  0x0254 );
+
+$ipa_map->addpair( 0xc7,  0x02cc );
+$ipa_map->addpair( 0xc8,  0x02c8 );
+
+$ipa_map->addpair( 0xf9,  0x02d0 );
+$ipa_map->addpair( 0x3e,  0x02d1 );
+
+# dump_map( $ipa_map );
+#
+# exit;
+
+sub to_utf {
+	return $koi_map->tou($_[0])->utf8;
+}
+
+sub ipa_code {
+	return $ipa_map->tou($_[0])->utf8;
+}
+
+
+while( <> ) {
+	if( /\[\S+\]/ ) {
+		if( /(.*)  (.*)/ ){
+			my $leftpart = $1;
+			my $rightpart = $2;
+			print to_utf($leftpart)."  ";
+			if( substr( $rightpart, 0, 1 ) != "[" ) {
+				if( $rightpart =~ /([^[]+)/ ){
+					print to_utf($1);
+				}
+			};
+
+			while( $rightpart =~ /\[([^]]+)\]([^[]*)/g ){
+				print "[".ipa_code($1)."]".to_utf($2);
+			};
+			
+			print "\n";
+		}else{
+			print to_utf($_);
+		};
+	}else{
+		print to_utf($_);
+	}
+};
+
+sub dump_map
+{
+  my $m = shift;
+  for (my $i = 0; $i < 256; $i++) {
+    my $u = $m->to_char16($i);
+    next if $u == NOCHAR;
+    printf "0x%02X 0x%04X\n", $i, $u;
+  }
+  for (my $block = 0; $block < 256; $block++) {
+    next if $m->_empty_block($block);
+    print "# BLOCK $block\n";
+    for (my $i = 0; $i < 256; $i++) {
+      my $u = $block*256 + $i;
+      my $c = $m->to_char8($u);
+      next if $c == NOCHAR;
+      printf "0x%04X 0x%02X\n", $u, $c;
+    }
+  }
+}
