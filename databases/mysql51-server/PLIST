@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/03/08 14:06:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/05/08 16:01:58 taca Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -331,6 +331,7 @@ share/mysql-test/include/no_valgrind_without_big.inc
 share/mysql-test/include/not_as_root.inc
 share/mysql-test/include/not_binlog_format_row.inc
 share/mysql-test/include/not_blackhole.inc
+share/mysql-test/include/not_crashrep.inc
 share/mysql-test/include/not_embedded.inc
 share/mysql-test/include/not_ndb.inc
 share/mysql-test/include/not_ndb_default.inc
@@ -636,6 +637,7 @@ share/mysql-test/r/func_default.result
 share/mysql-test/r/func_des_encrypt.result
 share/mysql-test/r/func_encrypt.result
 share/mysql-test/r/func_encrypt_nossl.result
+share/mysql-test/r/func_encrypt_ucs2.result
 share/mysql-test/r/func_equal.result
 share/mysql-test/r/func_gconcat.result
 share/mysql-test/r/func_group.result
@@ -967,6 +969,7 @@ share/mysql-test/r/sql_mode.result
 share/mysql-test/r/ssl-big.result
 share/mysql-test/r/ssl.result
 share/mysql-test/r/ssl_8k_key.result
+share/mysql-test/r/ssl_cipher.result
 share/mysql-test/r/ssl_compress.result
 share/mysql-test/r/ssl_connect.result
 share/mysql-test/r/status.result
@@ -2691,6 +2694,7 @@ share/mysql-test/suite/innodb/r/innodb_bug56680.result
 share/mysql-test/suite/innodb/r/innodb_bug56716.result
 share/mysql-test/suite/innodb/r/innodb_bug57252.result
 share/mysql-test/suite/innodb/r/innodb_bug57255.result
+share/mysql-test/suite/innodb/r/innodb_bug60049.result
 share/mysql-test/suite/innodb/r/innodb_gis.result
 share/mysql-test/suite/innodb/r/innodb_lock_wait_timeout_1.result
 share/mysql-test/suite/innodb/r/innodb_misc1.result
@@ -2748,6 +2752,8 @@ share/mysql-test/suite/innodb/t/innodb_bug56680.test
 share/mysql-test/suite/innodb/t/innodb_bug56716.test
 share/mysql-test/suite/innodb/t/innodb_bug57252.test
 share/mysql-test/suite/innodb/t/innodb_bug57255.test
+share/mysql-test/suite/innodb/t/innodb_bug60049-master.opt
+share/mysql-test/suite/innodb/t/innodb_bug60049.test
 share/mysql-test/suite/innodb/t/innodb_gis.test
 share/mysql-test/suite/innodb/t/innodb_lock_wait_timeout_1-master.opt
 share/mysql-test/suite/innodb/t/innodb_lock_wait_timeout_1.test
@@ -2830,6 +2836,8 @@ share/mysql-test/suite/innodb_plugin/r/innodb_bug56716.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug56947.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug57252.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug57255.result
+share/mysql-test/suite/innodb_plugin/r/innodb_bug59307.result
+share/mysql-test/suite/innodb_plugin/r/innodb_bug60049.result
 share/mysql-test/suite/innodb_plugin/r/innodb_file_format.result
 share/mysql-test/suite/innodb_plugin/r/innodb_gis.result
 share/mysql-test/suite/innodb_plugin/r/innodb_information_schema.result
@@ -2917,6 +2925,9 @@ share/mysql-test/suite/innodb_plugin/t/innodb_bug56716.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug56947.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug57252.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug57255.test
+share/mysql-test/suite/innodb_plugin/t/innodb_bug59307.test
+share/mysql-test/suite/innodb_plugin/t/innodb_bug60049-master.opt
+share/mysql-test/suite/innodb_plugin/t/innodb_bug60049.test
 share/mysql-test/suite/innodb_plugin/t/innodb_file_format.test
 share/mysql-test/suite/innodb_plugin/t/innodb_gis.test
 share/mysql-test/suite/innodb_plugin/t/innodb_information_schema.test
@@ -4524,6 +4535,7 @@ share/mysql-test/t/func_des_encrypt.test
 share/mysql-test/t/func_encrypt-master.opt
 share/mysql-test/t/func_encrypt.test
 share/mysql-test/t/func_encrypt_nossl.test
+share/mysql-test/t/func_encrypt_ucs2.test
 share/mysql-test/t/func_equal.test
 share/mysql-test/t/func_gconcat.test
 share/mysql-test/t/func_group.test
@@ -4847,6 +4859,8 @@ share/mysql-test/t/ssl-big.test
 share/mysql-test/t/ssl.test
 share/mysql-test/t/ssl_8k_key-master.opt
 share/mysql-test/t/ssl_8k_key.test
+share/mysql-test/t/ssl_cipher-master.opt
+share/mysql-test/t/ssl_cipher.test
 share/mysql-test/t/ssl_compress.test
 share/mysql-test/t/ssl_connect.test
 share/mysql-test/t/status-master.opt
