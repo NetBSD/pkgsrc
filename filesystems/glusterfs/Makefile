@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/04/26 16:06:32 manu Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/08 08:26:43 tnn Exp $
 #
 
 DISTNAME=	glusterfs-3.1.4
@@ -7,7 +7,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	http://download.gluster.com/pub/gluster/glusterfs/3.1/LATEST/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gluster.org/glusterfs.php
+HOMEPAGE=	http://www.gluster.org/
 COMMENT=	Cluster filesystem
 LICENSE=	gnu-gpl-v3
 
