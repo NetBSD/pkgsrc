@@ -1,0 +1,21 @@
+Zoem is an interpretive macro language with substantial facilities for
+programming. It supports a two-stage process, consisting of macro
+interpretation (featuring inside-out evaluation if needed), followed
+by a simple and powerful application of stream character filtering.
+
+Its syntax is remindful of \it{TeX}'s, it has dictionary stacks like
+\it{PostScript}, and various resemblances to \it{m4} and \it{info}.
+It has interfaces to modules making life easy \- counters, references,
+arithmetic, multi-dimensional data storage, input/output operations,
+regular expressions, and system commands.
+
+Zoem is used for creating extendible dummy mark-up languages and
+mapping those to real mark-up languages.  The dummy languages have all
+the power of the zoem primitives available to them.  A prime
+application is the creation of little mark-up languages that allow
+easy preparation of documents for use with different devices.
+Examples are the PUD \bf{faq} language and the PUD \bf{man} language,
+both of which can be used to generate troff output and html
+output. PUD stands for Portable Unix Documentation and is shipped with
+Aephea.  Aephea itself is an abstraction layer for creating concise
+and maintainable HTML documents.
