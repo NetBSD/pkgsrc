@@ -1,0 +1,9 @@
+EPM is an open source UNIX software and file packaging program that
+generates distribution archives from a list of files. EPM provides a
+complete, cross-platform software distribution solution for your
+applications.
+
+ESP generates both native and "portable" script-based distribution packages
+complete with installation and removal scripts and standard
+install/uninstall GUIs. The installers can be customized with product logos,
+"readme" files, and click-wrap licenses as desired.
