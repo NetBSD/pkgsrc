@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10316 2011/05/06 20:28:08 wiz Exp $
+$NetBSD: TODO,v 1.10317 2011/05/08 17:43:25 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -935,7 +935,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mawk-1.3.4.20100625
 	o mcsim-5.4.0
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
