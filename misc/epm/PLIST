@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/08 21:50:48 cheusov Exp $
+bin/epm
+bin/epminstall
+bin/mkepmlist
+man/man1/epm.1
+man/man1/epminstall.1
+man/man1/mkepmlist.1
+man/man1/setup.1
+man/man5/epm.list.5
+man/man5/setup.types.5
+share/doc/epm/COPYING
+share/doc/epm/README
+share/doc/epm/epm-book.html
