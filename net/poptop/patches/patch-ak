@@ -1,0 +1,31 @@
+$NetBSD: patch-ak,v 1.1 2011/05/08 17:07:25 christos Exp $
+
+--- ctrlpacket.c.orig	2011-05-08 13:00:58.000000000 -0400
++++ ctrlpacket.c	2011-05-08 13:00:50.000000000 -0400
+@@ -146,7 +146,7 @@
+ 	} else {
+ 		/* debugging */
+ 		if (pptpctrl_debug) {
+-			syslog(LOG_DEBUG, "CTRL: I wrote %d bytes to the client.", packet_size);
++			syslog(LOG_DEBUG, "CTRL: I wrote %zu bytes to the client.", packet_size);
+ 			syslog(LOG_DEBUG, "CTRL: Sent packet to client");
+ 		}
+ 		return bytes_written;
+@@ -237,7 +237,7 @@
+ 						return(0);
+ 					memcpy(buffer, packet, bytes_ttl);
+ 				}
+-				syslog(LOG_ERR, "CTRL: Error reading ctrl packet length (bytes_ttl=%d): %s", bytes_ttl, strerror(errno));
++				syslog(LOG_ERR, "CTRL: Error reading ctrl packet length (bytes_ttl=%zd): %s", bytes_ttl, strerror(errno));
+ 				return -1;
+ 			}
+ 			/* FALLTHRU */
+@@ -291,7 +291,7 @@
+ 					return(0);
+ 				memcpy(buffer, packet, bytes_ttl);
+ 			}
+-			syslog(LOG_ERR, "CTRL: Error reading ctrl packet (bytes_ttl=%d,length=%d): %s", bytes_ttl, length, strerror(errno));
++			syslog(LOG_ERR, "CTRL: Error reading ctrl packet (bytes_ttl=%zd,length=%d): %s", bytes_ttl, length, strerror(errno));
+ 			return -1;
+ 		}
+ 		/* FALLTHRU */
