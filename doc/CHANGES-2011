@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1095 2011/05/08 21:07:03 asau Exp $
+$NetBSD: CHANGES-2011,v 1.1096 2011/05/08 21:53:13 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1792,3 +1792,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/wordpress to 3.1.2 [morr 2011-05-08]
 	Updated devel/gmp to 5.0.2 [asau 2011-05-08]
 	Updated math/mpfr to 3.0.1.3 [asau 2011-05-08]
+	Added misc/epm version 4.2 [cheusov 2011-05-08]
