@@ -1,0 +1,10 @@
+Ricty font is developed for research and programming use.
+Ricty is free TrueType font and based on Inconsolata and
+Migu 1M (based on M+ 1M and IPA Gothic).
+
+* Latin characters are Inconsolata.
+* Non-Latin characters are Migu 1M.
+* 2-byte characters have double width of 1-byte ones.
+* 2-byte white space is visible.
+* 2-byte comma and period are different look.
+* An en dash has broken-line look.
