@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1082 2011/05/08 09:09:30 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1083 2011/05/08 11:07:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1777,3 +1777,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/clang to 2.9nb1 [adam 2011-05-07]
 	Added editors/nts version 77 [ryoon 2011-05-07]
 	Updated graphics/png to 1.5.3beta06 [wiz 2011-05-08]
+	Added fonts/ricty-ttf version 2.0.1 [ryoon 2011-05-08]
