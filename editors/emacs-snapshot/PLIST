@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/04/17 03:52:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/05/08 23:28:44 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1858,8 +1858,6 @@ share/emacs/${EMACS_VERSION}/lisp/erc/erc-fill.el.gz
 share/emacs/${EMACS_VERSION}/lisp/erc/erc-fill.elc
 share/emacs/${EMACS_VERSION}/lisp/erc/erc-goodies.el.gz
 share/emacs/${EMACS_VERSION}/lisp/erc/erc-goodies.elc
-share/emacs/${EMACS_VERSION}/lisp/erc/erc-hecomplete.el.gz
-share/emacs/${EMACS_VERSION}/lisp/erc/erc-hecomplete.elc
 share/emacs/${EMACS_VERSION}/lisp/erc/erc-ibuffer.el.gz
 share/emacs/${EMACS_VERSION}/lisp/erc/erc-ibuffer.elc
 share/emacs/${EMACS_VERSION}/lisp/erc/erc-identd.el.gz
@@ -2837,6 +2835,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/complete.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/erc-hecomplete.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/erc-hecomplete.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/fast-lock.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/fast-lock.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/iso-acc.el.gz
@@ -3633,6 +3633,8 @@ share/emacs/${EMACS_VERSION}/lisp/url/url-privacy.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-privacy.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-proxy.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-proxy.elc
+share/emacs/${EMACS_VERSION}/lisp/url/url-queue.el.gz
+share/emacs/${EMACS_VERSION}/lisp/url/url-queue.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-util.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-util.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-vars.el.gz
