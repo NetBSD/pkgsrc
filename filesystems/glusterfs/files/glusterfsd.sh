@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: glusterfsd.sh,v 1.1 2011/04/18 16:19:48 manu Exp $
+# $NetBSD: glusterfsd.sh,v 1.2 2011/05/09 09:38:26 manu Exp $
 #
 
 # PROVIDE: glusterfsd
@@ -12,6 +12,7 @@ name="glusterfsd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
+command_args="-p ${pidfile}"
 required_files="@PREFIX@/etc/glusterfs/${name}.vol"
 
 load_rc_config $name
