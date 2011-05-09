@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/07/30 10:36:28 asau Exp $
+# $NetBSD: Makefile,v 1.21 2011/05/09 03:12:07 dbj Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-2.1.5
@@ -16,11 +16,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
-.if ${MACHINE_ARCH} == "i386"
-CONFIGURE_ARGS+=	--enable-i386-hacks
-.endif
 USE_LANGUAGES=		c fortran77
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		# PLIST
+
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--enable-i386-hacks
+.endif
 
 .include "../../mk/bsd.pkg.mk"
