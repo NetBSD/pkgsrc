@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
+$NetBSD: patch-aa,v 1.22 2011/05/09 13:30:47 adam Exp $
 
---- Local/Makefile.pkgsrc.orig	2011-01-12 07:35:17.000000000 +0000
+--- Local/Makefile.pkgsrc.orig	2011-05-09 13:16:39.000000000 +0000
 +++ Local/Makefile.pkgsrc
 @@ -100,7 +100,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
  
  
  
-@@ -332,7 +332,7 @@ PCRE_LIBS=-lpcre
+@@ -357,7 +357,7 @@ PCRE_LIBS=-lpcre
  # files are defaulted in the OS/Makefile-Default file, but can be overridden in
  # local OS-specific make files.
  
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -527,11 +527,11 @@ FIXED_NEVER_USERS=root
+@@ -552,11 +552,11 @@ FIXED_NEVER_USERS=root
  # included in the Exim binary. You will then need to set up the run time
  # configuration to make use of the mechanism(s) selected.
  
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -697,7 +697,7 @@ HEADERS_CHARSET="ISO-8859-1"
+@@ -722,7 +722,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -945,13 +945,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -970,13 +970,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -101,7 +101,7 @@ $NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -1145,7 +1145,7 @@ TMPDIR="/tmp"
+@@ -1170,7 +1170,7 @@ TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
@@ -110,7 +110,7 @@ $NetBSD: patch-aa,v 1.21 2011/01/12 07:52:44 adam Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1197,3 +1197,10 @@ TMPDIR="/tmp"
+@@ -1222,3 +1222,10 @@ TMPDIR="/tmp"
  # ENABLE_DISABLE_FSYNC=yes
  
  # End of EDITME for Exim 4.
