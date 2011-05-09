@@ -1,33 +1,23 @@
-# $NetBSD: Makefile,v 1.19 2008/03/04 18:12:59 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2011/05/09 20:59:10 asau Exp $
 
-DISTNAME=	mcsim-4.2.0
+DISTNAME=	mcsim-5.4.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=mcsim/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/mcsim
 COMMENT=	Monte Carlo Simulation software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
-WRKSRC=		${WRKDIR}/mcsim
 
-INSTALLATION_DIRS=	bin ${PKGINFODIR} share/doc/mcsim share/doc/html/mcsim
+REPLACE_SH=	sim/makemcsim.in sim/makemcsimd.in sim/makemcsims.in
 
-post-build:
-	cd ${WRKSRC}/doc && makeinfo mcsim.texinfo
+TEST_TARGET=	check
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mod/mod ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/sim/mcsim ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${WRKSRC}/doc/MCSim*	\
-		${WRKSRC}/doc/mcsim.dvi ${DESTDIR}${PREFIX}/share/doc/mcsim/
-	${INSTALL_DATA} ${WRKSRC}/doc/mcsim.html			\
-		${DESTDIR}${PREFIX}/share/doc/html/mcsim
-	cd ${WRKSRC}/doc; for f in mcsim mcsim-[0-9]*; do		\
-		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
-	done
-
+.include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/05/09 20:59:10 asau Exp $
+
+--- Makefile.in.orig	2011-01-29 15:52:31.000000000 +0000
++++ Makefile.in
+@@ -481,7 +481,7 @@ check-TESTS: $(TESTS)
+ 	    if test -f ./$$tst; then dir=./; \
+ 	    elif test -f $$tst; then dir=; \
+ 	    else dir="$(srcdir)/"; fi; \
+-	    if $(TESTS_ENVIRONMENT) $${dir}$$tst; then \
++	    if $(TESTS_ENVIRONMENT) $(SHELL) $${dir}$$tst; then \
+ 	      all=`expr $$all + 1`; \
+ 	      case " $(XFAIL_TESTS) " in \
+ 	      *[\ \	]$$tst[\ \	]*) \
