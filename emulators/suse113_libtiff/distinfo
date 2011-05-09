@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2011/02/10 02:43:29 chs Exp $
+$NetBSD: distinfo,v 1.3 2011/05/09 01:21:09 chs Exp $
 
-SHA1 (suse113/i586/libtiff3-3.9.2-5.2.1.i586.rpm) = fd01980b5fb70ca71968a493b83abbbc649d789d
-RMD160 (suse113/i586/libtiff3-3.9.2-5.2.1.i586.rpm) = 0e7b1c1bbf16d5ccbe533fb2f8425de36c7ca648
-Size (suse113/i586/libtiff3-3.9.2-5.2.1.i586.rpm) = 123490 bytes
-SHA1 (suse113/x86_64/libtiff3-3.9.2-5.2.1.x86_64.rpm) = 3c3f620a4ebaa5b587ba5c761c66ea111fa39ed8
-RMD160 (suse113/x86_64/libtiff3-3.9.2-5.2.1.x86_64.rpm) = 8a640aa0c78f0f5429972420607a4836392f1894
-Size (suse113/x86_64/libtiff3-3.9.2-5.2.1.x86_64.rpm) = 123754 bytes
+SHA1 (suse113/i586/libtiff3-3.9.2-5.10.1.i586.rpm) = 410d6b77f2333791b8b21a353df18adc281cbf77
+RMD160 (suse113/i586/libtiff3-3.9.2-5.10.1.i586.rpm) = 9aa1601bae7fc72624f1abce6c6de36bad7f9840
+Size (suse113/i586/libtiff3-3.9.2-5.10.1.i586.rpm) = 124165 bytes
+SHA1 (suse113/x86_64/libtiff3-3.9.2-5.10.1.x86_64.rpm) = 82572065da1be23cb0accf051ea0c0219c5f389a
+RMD160 (suse113/x86_64/libtiff3-3.9.2-5.10.1.x86_64.rpm) = 348c6bc1f21c029b0d7a812b7b7b4a11e54d9e5f
+Size (suse113/x86_64/libtiff3-3.9.2-5.10.1.x86_64.rpm) = 124461 bytes
