@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2010/12/26 23:51:13 asau Exp $
+$NetBSD: distinfo,v 1.20 2011/05/09 22:32:40 asau Exp $
 
-SHA1 (maxima-5.23.0.tar.gz) = 18e9b32af8393346315c4ce647c7e023a901de41
-RMD160 (maxima-5.23.0.tar.gz) = eb7a51fcb21ad11a69955bae2069d434dda86d45
-Size (maxima-5.23.0.tar.gz) = 21949755 bytes
+SHA1 (maxima-5.24.0.tar.gz) = 13586c1221bb5f36067a4cce1e6d5fb31e44e41c
+RMD160 (maxima-5.24.0.tar.gz) = 46e9ce7dbf8293606ab76b50926fbef922f4cafb
+Size (maxima-5.24.0.tar.gz) = 25422077 bytes
