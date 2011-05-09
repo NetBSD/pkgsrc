@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/05/08 08:26:43 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2011/05/09 09:38:26 manu Exp $
 #
 
 DISTNAME=	glusterfs-3.1.4
@@ -57,7 +57,7 @@ EGDIR=			${PREFIX}/etc/glusterfs
 CONF_FILES+=		${EGDIR}/glusterfs.vol.sample ${EGDIR}/glusterfs.vol
 CONF_FILES+=		${EGDIR}/glusterfsd.vol.sample ${EGDIR}/glusterfsd.vol
 CONF_FILES+=		${EGDIR}/glusterd.vol ${EGDIR}/glusterd.vol
-OWN_DIRS+=		${VARBASE}/glusterfs
+OWN_DIRS+=		${VARBASE}/log/glusterfs
 BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		glusterfsd glusterd
