@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2011/05/07 10:06:34 shattered Exp $
+	$NetBSD: patch-ac,v 1.9 2011/05/09 14:06:46 taca Exp $
 
 --- src/netbsd_pci.c.orig	2009-02-17 00:10:20.000000000 +0000
 +++ src/netbsd_pci.c
@@ -19,18 +19,18 @@ $NetBSD: patch-ac,v 1.8 2011/05/07 10:06:34 shattered Exp $
 +#ifdef HAVE_MTRR
  #include <machine/sysarch.h>
  #include <machine/mtrr.h>
-+#ifdef _X86_SYSARCH_L
-+#define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)((mr), (num))
-+#else
-+#ifdef __i386__
-+#define netbsd_set_mtrr(mr, num)	i386_set_mtrr((mr), (num))
-+#endif
-+#ifdef __amd64__
-+#define netbsd_set_mtrr(mr, num)	x86_64_set_mtrr((mr), (num))
-+#endif
-+#endif
-+#endif
  
++# ifdef _X86_SYSARCH_L
++#  define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)(mr, num)
++# else
++#  ifdef i386
++#   define netbsd_set_mtrr(mr, num)	i386_set_mtrr((mr), (num))
++#  elif amd64
++#   define netbsd_set_mtrr(mr, num)	x86_64_set_mtrr((mr), (num))
++#  endif
++# endif
++#endif
++
 +#include <dev/pci/pcidevs.h>
  #include <dev/pci/pciio.h>
  #include <dev/pci/pcireg.h>
