@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/25 07:34:11 manu Exp $
-Do not require libpuffs from src, as we may not have the sources
---- lib/libperfuse/Makefile.orig	2010-08-23 14:44:21.000000000 +0200
-+++ lib/libperfuse/Makefile	2010-08-23 14:44:28.000000000 +0200
-@@ -1,6 +1,6 @@
+$NetBSD: patch-aa,v 1.2 2011/05/09 09:55:14 manu Exp $
+--- lib/libperfuse/Makefile.orig	2011-05-09 11:44:28.000000000 +0200
++++ lib/libperfuse/Makefile	2011-05-09 11:44:35.000000000 +0200
+@@ -1,8 +1,8 @@
+ # $NetBSD: patch-aa,v 1.2 2011/05/09 09:55:14 manu Exp $
+ 
  LIB=            perfuse
--LIBDPLIBS+=     puffs	/usr/src/lib/libpuffs
-+#LIBDPLIBS+=     puffs	/usr/src/lib/libpuffs
+-LIBDPLIBS+=     puffs	${.CURDIR}/../libpuffs
++#LIBDPLIBS+=     puffs	${.CURDIR}/../libpuffs
  
- 
+ .ifdef DEBUG
  PERFUSE_OPT_DEBUG_FLAGS=   -g -DPERFUSE_DEBUG
- 
+ .endif
