@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/21 16:07:03 darcy Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/09 13:13:49 cheusov Exp $
 
 DISTNAME=	xxkb-1.11-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,6 +10,7 @@ MAINTAINER=	vle@gmx.net
 # only.  See http://pascal.tsu.ru/en/ for English translation updates.
 HOMEPAGE=	http://pascal.tsu.ru/other/xxkb/
 COMMENT=	XXKB - switches and indicates a current keyboard layout
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,6 +19,8 @@ USE_IMAKE=		yes
 DOC_FILES=		LICENSE README.koi8 README
 DOC_DIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${DOC_DIR}
+
+MAKE_FLAGS+=		MANPATH=${PREFIX}/${PKGMANDIR}
 
 WRKSRC=			${WRKDIR}/xxkb
 
