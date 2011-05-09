@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1104 2011/05/09 21:00:24 asau Exp $
+$NetBSD: CHANGES-2011,v 1.1105 2011/05/09 22:33:12 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1802,3 +1802,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/xmlrpc-c to 1.16.35 [adam 2011-05-09]
 	Updated lang/sbcl to 1.0.48 [asau 2011-05-09]
 	Updated math/mcsim to 5.4.0 [asau 2011-05-09]
+	Updated math/maxima to 5.24.0 [asau 2011-05-09]
