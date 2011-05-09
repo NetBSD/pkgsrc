@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.cserve,v 1.1 2011/05/09 13:06:29 cheusov Exp $
+bin/evas_cserve
+bin/evas_cserve_tool
