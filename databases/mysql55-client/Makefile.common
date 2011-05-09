@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/05/07 04:03:07 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/05/09 13:06:28 adam Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -34,6 +34,7 @@ MYSQL_USER?=		mysql
 MYSQL_GROUP?=		mysql
 MYSQL_DATADIR?=		${VARBASE}/mysql
 MYSQL_CHARSET?=		latin1
+MYSQL_COLLATION?=	latin1_swedish_ci
 MYSQL_EXTRA_CHARSET?=	all
 
 PKG_USERS_VARS+=	MYSQL_USER
@@ -65,6 +66,7 @@ CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 CMAKE_ARGS+=		-DWITH_LIBEDIT=OFF
 CMAKE_ARGS+=		-DWITH_READLINE=OFF
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET:Q}
+CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION:Q}
 CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET:Q}
 BROKEN_READLINE_DETECTION=	yes # At least on RHEL 5.6
 
