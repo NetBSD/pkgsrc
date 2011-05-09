@@ -1,8 +1,0 @@
-$NetBSD: patch-af,v 1.1 2001/02/25 22:14:20 jtb Exp $
-
---- /dev/null	Sun Feb 25 21:54:22 2001
-+++ Makefile
-@@ -0,0 +1,3 @@
-+SUBDIR = mod sim
-+
-+.include <bsd.subdir.mk>
