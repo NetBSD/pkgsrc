@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.14 2010/11/08 13:59:11 adam Exp $
+$NetBSD: patch-ac,v 1.15 2011/05/09 13:30:47 adam Exp $
 
---- src/dns.c.orig	2009-11-16 19:50:36.000000000 +0000
+--- src/dns.c.orig	2011-05-09 08:36:25.000000000 +0000
 +++ src/dns.c
-@@ -168,18 +168,34 @@ Returns:            nothing
+@@ -168,26 +168,39 @@ Returns:            nothing
  void
  dns_init(BOOL qualify_single, BOOL search_parents)
  {
@@ -38,13 +38,31 @@ $NetBSD: patch-ac,v 1.14 2010/11/08 13:59:11 adam Exp $
 -if (dns_retry > 0) _res.retry = dns_retry;
 +if (dns_retrans > 0) rs->retrans = dns_retrans;
 +if (dns_retry > 0) rs->retry = dns_retry;
+ 
+ #ifdef RES_USE_EDNS0
+ if (dns_use_edns0 >= 0)
+   {
+   if (dns_use_edns0)
+-    _res.options |= RES_USE_EDNS0;
++    rs->options |= RES_USE_EDNS0;
+   else
+-    _res.options &= ~RES_USE_EDNS0;
++    rs->options &= ~RES_USE_EDNS0;
+   DEBUG(D_resolver)
+     debug_printf("Coerced resolver EDNS0 support %s.\n",
+         dns_use_edns0 ? "on" : "off");
+@@ -198,6 +211,10 @@ if (dns_use_edns0 >= 0)
+     debug_printf("Unable to %sset EDNS0 without resolver support.\n",
+         dns_use_edns0 ? "" : "un");
+ #endif
++
 +#ifdef __NetBSD__
 +__res_put_state(rs);
 +#endif
  }
  
  
-@@ -424,9 +440,15 @@ Returns:     the return code
+@@ -442,9 +459,15 @@ Returns:     the return code
  static int
  dns_return(uschar *name, int type, int rc)
  {
@@ -61,7 +79,7 @@ $NetBSD: patch-ac,v 1.14 2010/11/08 13:59:11 adam Exp $
  node->data.val = rc;
  (void)tree_insertnode(&tree_dns_fails, node);
  return rc;
-@@ -466,6 +488,12 @@ dns_basic_lookup(dns_answer *dnsa, uscha
+@@ -484,6 +507,12 @@ dns_basic_lookup(dns_answer *dnsa, uscha
  int rc = -1;
  uschar *save;
  #endif
@@ -74,7 +92,7 @@ $NetBSD: patch-ac,v 1.14 2010/11/08 13:59:11 adam Exp $
  
  tree_node *previous;
  uschar node_name[290];
-@@ -476,7 +504,7 @@ have many addresses in the same domain. 
+@@ -494,7 +523,7 @@ have many addresses in the same domain. 
  caching for successful lookups. */
  
  sprintf(CS node_name, "%.255s-%s-%lx", name, dns_text_type(type),
