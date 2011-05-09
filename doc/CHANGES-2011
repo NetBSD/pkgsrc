@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1100 2011/05/09 12:39:37 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1101 2011/05/09 13:33:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1797,3 +1797,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_libtiff to 11.3nb2 [chs 2011-05-09]
 	Updated filesystems/perfuse to 20110509 [manu 2011-05-09]
 	Updated databases/p5-DBD-mysql to 4.019 [adam 2011-05-09]
+	Updated mail/exim to 4.76 [adam 2011-05-09]
+	Updated mail/exim-html to 4.76 [adam 2011-05-09]
