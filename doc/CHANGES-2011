@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1097 2011/05/08 23:29:15 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1098 2011/05/09 01:21:34 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1794,3 +1794,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/mpfr to 3.0.1.3 [asau 2011-05-08]
 	Added misc/epm version 4.2 [cheusov 2011-05-08]
 	Updated editors/emacs-snapshot to 24.0.50.20110505 [minskim 2011-05-08]
+	Updated emulators/suse113_libtiff to 11.3nb2 [chs 2011-05-09]
