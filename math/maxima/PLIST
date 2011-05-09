@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/12/26 23:51:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/05/09 22:32:40 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -119,6 +119,9 @@ share/maxima/${PKGVERSION}/doc/html/maxima.hhp
 share/maxima/${PKGVERSION}/doc/html/maxima.html
 share/maxima/${PKGVERSION}/doc/html/maxima_1.html
 share/maxima/${PKGVERSION}/doc/html/maxima_10.html
+share/maxima/${PKGVERSION}/doc/html/maxima_100.html
+share/maxima/${PKGVERSION}/doc/html/maxima_101.html
+share/maxima/${PKGVERSION}/doc/html/maxima_102.html
 share/maxima/${PKGVERSION}/doc/html/maxima_11.html
 share/maxima/${PKGVERSION}/doc/html/maxima_12.html
 share/maxima/${PKGVERSION}/doc/html/maxima_13.html
@@ -503,9 +506,7 @@ share/maxima/${PKGVERSION}/share/contrib/ezunits/ezunits.mac
 share/maxima/${PKGVERSION}/share/contrib/ezunits/physical_constants.mac
 share/maxima/${PKGVERSION}/share/contrib/ezunits/rtestezunits.mac
 share/maxima/${PKGVERSION}/share/contrib/f90.lisp
-share/maxima/${PKGVERSION}/share/contrib/finance/finance.es.texi
 share/maxima/${PKGVERSION}/share/contrib/finance/finance.mac
-share/maxima/${PKGVERSION}/share/contrib/finance/finance.texi
 share/maxima/${PKGVERSION}/share/contrib/floatproperties.lisp
 share/maxima/${PKGVERSION}/share/contrib/format/README
 share/maxima/${PKGVERSION}/share/contrib/format/autoload-m.macsyma
@@ -523,7 +524,6 @@ share/maxima/${PKGVERSION}/share/contrib/format/pois2m.ps
 share/maxima/${PKGVERSION}/share/contrib/fourier_elim/fourier_elim.lisp
 share/maxima/${PKGVERSION}/share/contrib/fourier_elim/rtest_fourier_elim.mac
 share/maxima/${PKGVERSION}/share/contrib/fractals/fractals.mac
-share/maxima/${PKGVERSION}/share/contrib/fractals/fractals.texi
 share/maxima/${PKGVERSION}/share/contrib/fractals/rtest_fractals.mac
 share/maxima/${PKGVERSION}/share/contrib/fresnel/d78.mac
 share/maxima/${PKGVERSION}/share/contrib/fresnel/fg.mac
@@ -670,6 +670,7 @@ share/maxima/${PKGVERSION}/share/contrib/namespaces/rtest_namespaces.mac
 share/maxima/${PKGVERSION}/share/contrib/noninteractive/asksign1.lisp
 share/maxima/${PKGVERSION}/share/contrib/noninteractive/noninteractive.lisp
 share/maxima/${PKGVERSION}/share/contrib/noninteractive/noninteractive.mac
+share/maxima/${PKGVERSION}/share/contrib/noninteractive/rtest_noninteractive.mac
 share/maxima/${PKGVERSION}/share/contrib/nset/README
 share/maxima/${PKGVERSION}/share/contrib/nset/announce-1.2.txt
 share/maxima/${PKGVERSION}/share/contrib/nset/changes_1.0_to_1.2.txt
@@ -869,6 +870,7 @@ share/maxima/${PKGVERSION}/share/diff_form/surface_example.txt
 share/maxima/${PKGVERSION}/share/diffequations/abel.mac
 share/maxima/${PKGVERSION}/share/diffequations/desoln.mac
 share/maxima/${PKGVERSION}/share/diffequations/desoln.usg
+share/maxima/${PKGVERSION}/share/diffequations/drawdf.mac
 share/maxima/${PKGVERSION}/share/diffequations/exampl.mac
 share/maxima/${PKGVERSION}/share/diffequations/linde1.mc
 share/maxima/${PKGVERSION}/share/diffequations/ode2.mac
@@ -879,15 +881,20 @@ share/maxima/${PKGVERSION}/share/diffequations/phypgm.mac
 share/maxima/${PKGVERSION}/share/diffequations/pivtr.mac
 share/maxima/${PKGVERSION}/share/diffequations/pmain.mac
 share/maxima/${PKGVERSION}/share/draw/draw.lisp
+share/maxima/${PKGVERSION}/share/draw/drawutils.mac
+share/maxima/${PKGVERSION}/share/draw/drawutils.texi
+share/maxima/${PKGVERSION}/share/draw/grcommon.lisp
 share/maxima/${PKGVERSION}/share/draw/implicit3d.lisp
 share/maxima/${PKGVERSION}/share/draw/picture.lisp
 share/maxima/${PKGVERSION}/share/draw/rtest_draw.mac
+share/maxima/${PKGVERSION}/share/draw/vtk.lisp
 share/maxima/${PKGVERSION}/share/draw/wbd.lisp
 share/maxima/${PKGVERSION}/share/draw/worldmap.mac
 share/maxima/${PKGVERSION}/share/dynamics/complex_dynamics.lisp
 share/maxima/${PKGVERSION}/share/dynamics/dynamics.mac
 share/maxima/${PKGVERSION}/share/dynamics/plotdf.lisp
 share/maxima/${PKGVERSION}/share/dynamics/rtest_dynamics.mac
+share/maxima/${PKGVERSION}/share/dynamics/visualization.lisp
 share/maxima/${PKGVERSION}/share/hypergeometric/abramowitz_id.mac
 share/maxima/${PKGVERSION}/share/hypergeometric/hypergeometric.lisp
 share/maxima/${PKGVERSION}/share/hypergeometric/hypergeometric_mac.mac
@@ -980,6 +987,7 @@ share/maxima/${PKGVERSION}/share/lapack/blas/ztrmm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrmv.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsv.lisp
+share/maxima/${PKGVERSION}/share/lapack/dgemm.lisp
 share/maxima/${PKGVERSION}/share/lapack/dgesv.lisp
 share/maxima/${PKGVERSION}/share/lapack/eigensys.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack-lisp.system
