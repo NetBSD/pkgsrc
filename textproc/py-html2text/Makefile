@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/09/19 14:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/05/10 16:45:35 schnoebe Exp $
 #
 
 DISTNAME=		html2text-2.39
@@ -19,6 +19,8 @@ WRKSRC=			${WRKDIR}
 USE_TOOLS+=		tr
 NO_BUILD=		yes
 
+REPLACE_PYTHON=		html2text.py
+
 INSTALLATION_DIRS=	share/html2text
 
 do-extract:
@@ -29,5 +31,5 @@ do-extract:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/html2text.py ${DESTDIR}${PREFIX}/share/html2text
 
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
