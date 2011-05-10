@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10322 2011/05/10 11:24:46 wiz Exp $
+$NetBSD: TODO,v 1.10323 2011/05/10 12:52:32 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1343,7 +1343,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xboard-4.5.1
 	o xcalc-1.0.4.1
 	o xcb-util-0.3.8
-	o xchm-1.20
 	o xcircuit-3.6.85
 	o xclock-1.0.5
 	o xcmiscproto-1.2.1
