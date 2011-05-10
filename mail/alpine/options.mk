@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/04/03 09:44:21 abs Exp $
+# $NetBSD: options.mk,v 1.3 2011/05/10 01:33:12 obache Exp $
 #
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.alpine
@@ -20,8 +20,10 @@ PATCH_DIST_STRIP=       -p1
 #.endif
 
 .if !empty(PKG_OPTIONS:Mldap)
-CONFIGURE_ARGS+=        --with-ldap
+CONFIGURE_ARGS+=        --with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
 .include "../../databases/openldap-client/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mmaildir)
