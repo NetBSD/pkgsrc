@@ -1,0 +1,4 @@
+After the installation of this R package is complete
+copy the files R.cgi and .Rprofile in
+    ${PREFIX}/lib/R/library/CGIwithR/cgi-bin/
+to the cgi-bin area of your Web server.
