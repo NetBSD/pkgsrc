@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1109 2011/05/10 11:25:59 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1110 2011/05/10 12:52:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1807,3 +1807,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated cad/gerbv to 2.5.0 [dmcmahill 2011-05-10]
 	Updated textproc/ruby-hikidoc to 0.0.6nb1 [taca 2011-05-10]
 	Updated math/ruby-rb-gsl to 1.14.7 [taca 2011-05-10]
+	Updated misc/xchm to 1.20 [ryoon 2011-05-10]
