@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1451 2011/05/08 18:33:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.1452 2011/05/10 14:49:39 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -674,6 +674,7 @@ SUBDIR+=	p5-File-BaseDir
 SUBDIR+=	p5-File-ChangeNotify
 SUBDIR+=	p5-File-ConfigDir
 SUBDIR+=	p5-File-DesktopEntry
+SUBDIR+=	p5-File-DirCompare
 SUBDIR+=	p5-File-DirSync
 SUBDIR+=	p5-File-Find-Rule
 SUBDIR+=	p5-File-Find-Rule-Age
