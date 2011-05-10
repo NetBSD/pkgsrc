@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2011/05/10 14:07:48 taca Exp $
+
+Allow to use getline(3) in base system.
+
+--- config.h.in.orig	2004-04-29 03:00:29.000000000 +0000
++++ config.h.in
+@@ -108,6 +108,9 @@
+ /* Define to 1 if you have the `getcwd' function. */
+ #undef HAVE_GETCWD
+ 
++/* Define to 1 if you have the `getline' function. */
++#undef HAVE_GETLINE
++
+ /* Define to 1 if you have the `getdelim' function. */
+ #undef HAVE_GETDELIM
+ 
