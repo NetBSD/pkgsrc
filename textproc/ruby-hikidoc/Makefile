@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 08:13:23 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/10 11:20:46 taca Exp $
 #
 
 DISTNAME=	hikidoc-0.0.6
+PKGREVISION=	1
 CATEGORIES=	textproc converters ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/72253/
 EXTRACT_SUFX=	.tgz
@@ -21,6 +22,7 @@ DOCS=		NEWS NEWS.ja README README.ja \
 		TextFormattingRules TextFormattingRules.ja
 
 CONFIGURE_ARGS+=	--siterubyver=${PREFIX}/${RUBY_VENDORLIB}
+REPLACE_RUBY+=		bin/hikidoc
 INSTALLATION_DIRS=	${RUBY_DOC}/hikidoc
 
 post-install:
