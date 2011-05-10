@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2011/05/10 14:07:48 taca Exp $
+
+Allow to use getline(3) in base system.
+
+--- configure.orig	2004-04-29 03:00:27.000000000 +0000
++++ configure
+@@ -14759,6 +14759,12 @@ echo "${ECHO_T}$am_cv_func_working_getli
+   *) LIBOBJS="$LIBOBJS getline.$ac_objext" ;;
+ esac
+ 
++  else
++
++    cat >>confdefs.h <<\_ACEOF
++#define HAVE_GETLINE 1
++_ACEOF
++
+   fi
+ 
+ for ac_func in usleep
