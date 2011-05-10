@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1108 2011/05/10 11:22:03 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1109 2011/05/10 11:25:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1806,3 +1806,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/alpine to 2.00nb5 [obache 2011-05-10]
 	Updated cad/gerbv to 2.5.0 [dmcmahill 2011-05-10]
 	Updated textproc/ruby-hikidoc to 0.0.6nb1 [taca 2011-05-10]
+	Updated math/ruby-rb-gsl to 1.14.7 [taca 2011-05-10]
