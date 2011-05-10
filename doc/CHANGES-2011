@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1115 2011/05/10 14:17:14 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1116 2011/05/10 14:50:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1820,3 +1820,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/ruby-actionmailer3 to 3.0.7 [taca 2011-05-10]
 	Updated devel/ruby-railties to 3.0.7 [taca 2011-05-10]
 	Updated www/ruby-rails3 to 3.0.7 [taca 2011-05-10]
+	Added devel/p5-File-DirCompare version 0.6 [abs 2011-05-10]
