@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.5 2011/03/27 13:05:16 taca Exp $
+# $NetBSD: gem.mk,v 1.6 2011/05/10 13:31:49 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -10,7 +10,7 @@
 #	rubygems version 1.3.7.  If newer version of rubygems is
 #	resuiqred, set RUBYGEMS_REQD to minimum version.
 #
-#	Default: 1.3.7
+#	Default: not defined
 #
 # BUILD_TARGET
 #	The Rakefile target that creates a local gem if using the
