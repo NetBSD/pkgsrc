@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2011/05/10 11:23:48 taca Exp $
+# $NetBSD: Makefile,v 1.11 2011/05/10 11:24:56 taca Exp $
 
 DISTNAME=	rb-gsl-1.14.7
-PKGREVISION=	1
 CATEGORIES=	math ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/74341/
 EXTRACT_SUFX=	.tgz
