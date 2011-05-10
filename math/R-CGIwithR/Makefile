@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/13 11:12:52 markd Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/10 18:55:55 alnsn Exp $
 #
 
 CATEGORIES=		math
@@ -9,12 +9,19 @@ HOMEPAGE=		${R_HOMEPAGE_BASE}/CGIwithR/
 COMMENT=		Facilities for the use of R to write CGI scripts
 
 R_PKGNAME=		CGIwithR
-R_PKGVER=		0.72
+R_PKGVER=		0.73-0
 
 REPLACE_INTERPRETER+=	r
 REPLACE.r.old=		.*R
 REPLACE.r.new=		${PREFIX}/bin/R
 REPLACE_FILES.r=	inst/examples/dangerous.R inst/examples/trivial.R
 
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		post-patch
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		inst/cgi-bin/R.cgi
+SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
+
 .include "../../math/R/Makefile.extension"
+.include "../../print/ghostscript/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
