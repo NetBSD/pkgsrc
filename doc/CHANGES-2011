@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1106 2011/05/10 01:33:45 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1107 2011/05/10 06:22:30 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1804,3 +1804,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/mcsim to 5.4.0 [asau 2011-05-09]
 	Updated math/maxima to 5.24.0 [asau 2011-05-09]
 	Updated mail/alpine to 2.00nb5 [obache 2011-05-10]
+	Updated cad/gerbv to 2.5.0 [dmcmahill 2011-05-10]
