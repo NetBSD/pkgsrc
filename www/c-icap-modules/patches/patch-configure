@@ -1,0 +1,29 @@
+$NetBSD: patch-configure,v 1.1.1.1 2011/05/11 04:30:06 adam Exp $
+
+Detect Berkeley DB.
+
+--- configure.orig	2011-05-05 13:16:38.000000000 +0000
++++ configure
+@@ -11053,11 +11053,11 @@ rm -f core conftest.err conftest.$ac_obj
+ #  Save old CFLAGS/LDFLAGS
+      OLDCFLAGS=$CFLAGS
+      OLDLDFLAGS=$LDFLAGS
+-     for DBVER in 49 48 47 46 45 44 43 42; do
++     for DBVER in 4 5 6; do
+         if test -d $libdbpath/include/db$DBVER; then
+            echo -n "checking for Berleley DB under $libdbpath/include/db$DBVER and $libdbpath/lib/db$DBVER... "
+            CFLAGS="-I$libdbpath/include/db$DBVER $OLDCFLAGS"
+-           LDFLAGS="-L $libdbpath/lib/db$DBVER -ldb $OLDLDFLAGS"
++           LDFLAGS="-L $libdbpath/lib -ldb$DBVER $OLDLDFLAGS"
+            cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -11071,7 +11071,7 @@ rm -f core conftest.err conftest.$ac_obj
+ 
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  echo yes;BDB_ADD_LDFLAG="-L$libdbpath/lib/db$DBVER -ldb"; BDB_ADD_FLAG="-I$libdbpath/include/db$DBVER";libdb="yes";
++  echo yes;BDB_ADD_LDFLAG="-L$libdbpath/lib -ldb$DBVER"; BDB_ADD_FLAG="-I$libdbpath/include/db$DBVER";libdb="yes";
+ else
+   libdb="no"; echo "no";
+ 
