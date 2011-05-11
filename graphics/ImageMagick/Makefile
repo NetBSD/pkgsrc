@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.168 2011/01/13 13:36:08 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2011/05/11 11:38:48 adam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
-PKGREVISION=	1
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.imagemagick.org/
 COMMENT=	Package for display and interactive manipulation of images
 
 CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
@@ -15,11 +13,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++ c99
-USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-assert
 CONFIGURE_ARGS+=	--with-fontconfig
+CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
+CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
+CONFIGURE_ARGS+=	--without-perl
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
 PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
 
@@ -41,17 +40,33 @@ GCC_REQD+=		3.0
 CFLAGS+=		-O
 .endif
 
-# Some configure_args come from Makefile.common
-CONFIGURE_ARGS+=	--without-perl
-CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
-CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
+PKG_SYSCONFSUBDIR=	ImageMagick
+EGDIR=		${PREFIX}/share/examples/ImageMagick
+CONF_FILES=	${EGDIR}/coder.xml ${PKG_SYSCONFDIR}/coder.xml
+CONF_FILES+=	${EGDIR}/colors.xml ${PKG_SYSCONFDIR}/colors.xml
+CONF_FILES+=	${EGDIR}/delegates.xml ${PKG_SYSCONFDIR}/delegates.xml
+CONF_FILES+=	${EGDIR}/log.xml ${PKG_SYSCONFDIR}/log.xml
+CONF_FILES+=	${EGDIR}/magic.xml ${PKG_SYSCONFDIR}/magic.xml
+CONF_FILES+=	${EGDIR}/mime.xml ${PKG_SYSCONFDIR}/mime.xml
+CONF_FILES+=	${EGDIR}/policy.xml ${PKG_SYSCONFDIR}/policy.xml
+CONF_FILES+=	${EGDIR}/sRGB.icm ${PKG_SYSCONFDIR}/sRGB.icm
+CONF_FILES+=	${EGDIR}/thresholds.xml ${PKG_SYSCONFDIR}/thresholds.xml
+CONF_FILES+=	${EGDIR}/type-dejavu.xml ${PKG_SYSCONFDIR}/type-dejavu.xml
+CONF_FILES+=	${EGDIR}/type-ghostscript.xml ${PKG_SYSCONFDIR}/type-ghostscript.xml
+CONF_FILES+=	${EGDIR}/type-windows.xml ${PKG_SYSCONFDIR}/type-windows.xml
+CONF_FILES+=	${EGDIR}/type.xml ${PKG_SYSCONFDIR}/type.xml
 
-# Put our CONFIGURE_ARGS into configure.xml, otherwise WRKDIR gets mentioned.
 SUBST_CLASSES+=		fix-cfg
 SUBST_STAGE.fix-cfg=	pre-configure
 SUBST_MESSAGE.fix-cfg=	Fixing configure.xml.
 SUBST_FILES.fix-cfg=	config/configure.xml.in
 SUBST_VARS.fix-cfg=	CONFIGURE_ARGS
+
+SUBST_CLASSES+=		fix-etc
+SUBST_STAGE.fix-etc=	pre-configure
+SUBST_MESSAGE.fix-etc=	Handle configuration files.
+SUBST_FILES.fix-etc=	Makefile.in
+SUBST_SED.fix-etc=	-e 's,^configlibdir =.*,configlibdir = $$(DATA_DIR)/examples/ImageMagick,'
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
