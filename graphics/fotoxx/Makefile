@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/04/22 13:43:44 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/05/11 01:27:03 ryoon Exp $
 #
 
-DISTNAME=	fotoxx-10.8.4
-PKGREVISION=	5
+DISTNAME=	fotoxx-11.05.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://kornelix.squarespace.com/storage/downloads/
 
@@ -21,7 +20,7 @@ USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake pkg-config
 
 BUILD_TARGET=	fotoxx
-INSTALL_TARGET=	install manpage # XXX menu
+INSTALL_TARGET=	install
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
