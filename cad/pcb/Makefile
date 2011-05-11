@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2011/04/22 13:43:04 obache Exp $
+# $NetBSD: Makefile,v 1.54 2011/05/11 11:21:36 dmcmahill Exp $
 #
 
-DISTNAME=	pcb-20091103
-PKGREVISION=	6
+DISTNAME=	pcb-20100929
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
@@ -52,6 +51,11 @@ CONFIGURE_ARGS+=	--with-gui=gtk
 CONFIGURE_ARGS+=	--with-gui=none
 .else
 PKG_FAIL_REASON=	Invalid options
+.endif
+
+# dbus is only needed if we are building a gui (lesstif/gtk)
+.if empty(PKG_OPTIONS:Mbatch)
+.include "../../sysutils/dbus/buildlink3.mk"
 .endif
 
 EXPORTERS=	bom gerber ps
