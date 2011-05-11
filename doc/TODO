@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10325 2011/05/11 01:32:30 ryoon Exp $
+$NetBSD: TODO,v 1.10326 2011/05/11 07:51:24 adam Exp $
 
 Suggested new packages
 ======================
@@ -731,8 +731,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.1
 	o gssdp-0.10.0
-	o gtar-1.26
-	o gtar-base-1.26
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.96.9
