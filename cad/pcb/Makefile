@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2011/05/11 11:21:36 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.55 2011/05/11 11:53:07 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-20100929
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://pcb.sourceforge.net/
 COMMENT=	Printed circuit board layout system
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
