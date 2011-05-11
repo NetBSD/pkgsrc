@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.47 2011/05/11 10:28:08 hans Exp $
+# $NetBSD: Makefile,v 1.48 2011/05/11 10:45:57 wiz Exp $
 
 DISTNAME=	abcde-2.3.99.7_p235
 PKGNAME=	abcde-2.3.99.7
-#PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=	sekiya@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/abcde/
 COMMENT=	Command-line utility to rip and encode an audio CD
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -19,8 +21,6 @@ DEPENDS+=	id3v2-[0-9]*:../../audio/id3v2
 DEPENDS+=	cdparanoia>=3.0.9.7:../../audio/cdparanoia
 .endif
 DEPENDS+=	mkcue>=2.1:../../misc/mkcue
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 EXTRACT_SUFX=	.tar.bz2
