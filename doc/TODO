@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10324 2011/05/10 14:17:51 taca Exp $
+$NetBSD: TODO,v 1.10325 2011/05/11 01:32:30 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -632,7 +632,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fotoxx-11.05.1
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.2.5
