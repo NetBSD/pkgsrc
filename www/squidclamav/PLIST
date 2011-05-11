@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/11 04:31:15 adam Exp $
+lib/c_icap/squidclamav.la
+libexec/squidclamav/clwarn.cgi
+libexec/squidclamav/clwarn.cgi.de_DE
+libexec/squidclamav/clwarn.cgi.en_EN
+libexec/squidclamav/clwarn.cgi.fr_FR
+libexec/squidclamav/clwarn.cgi.pt_BR
+libexec/squidclamav/clwarn.cgi.ru_RU
+man/man1/squidclamav.1
+share/squidclamav/README
+share/squidclamav/squidclamav.conf
