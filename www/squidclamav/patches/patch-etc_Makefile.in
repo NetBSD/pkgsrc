@@ -1,0 +1,15 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1.1.1 2011/05/11 04:31:15 adam Exp $
+
+Handle configuration files.
+
+--- etc/Makefile.in.orig	2011-05-10 09:05:26.000000000 +0000
++++ etc/Makefile.in
+@@ -167,7 +167,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ EXTRA_DIST = squidclamav.conf
+-CFGINST = @CFGDIR@
++CFGINST = $(datadir)/squidclamav
+ all: all-am
+ 
+ .SUFFIXES:
