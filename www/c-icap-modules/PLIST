@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/11 04:30:06 adam Exp $
+${PLIST.clamav}lib/c_icap/srv_clamav.la
+lib/c_icap/srv_url_check.la
+${PLIST.clamav}share/c-icap/srv_clamav.conf.default
+share/c-icap/srv_url_check.conf.default
