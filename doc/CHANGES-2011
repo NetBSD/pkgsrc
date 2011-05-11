@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1116 2011/05/10 14:50:09 abs Exp $
+$NetBSD: CHANGES-2011,v 1.1117 2011/05/11 01:31:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1821,3 +1821,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-railties to 3.0.7 [taca 2011-05-10]
 	Updated www/ruby-rails3 to 3.0.7 [taca 2011-05-10]
 	Added devel/p5-File-DirCompare version 0.6 [abs 2011-05-10]
+	Updated graphics/fotoxx to 11.05.1 [ryoon 2011-05-11]
