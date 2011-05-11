@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/04/24 16:17:53 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2011/05/11 10:28:08 hans Exp $
 
 DISTNAME=	abcde-2.3.99.7_p235
 PKGNAME=	abcde-2.3.99.7
@@ -42,6 +42,12 @@ SUBST_MESSAGE.abcde=	Adjusting the directory for configuration files
 SUBST_FILES.abcde=	abcde abcde.1
 SUBST_SED.abcde=	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"
 
+SUBST_CLASSES+=		gsed
+SUBST_STAGE.gsed=	pre-configure
+SUBST_MESSAGE.gsed=	Adjusting gsed path
+SUBST_FILES.gsed=	abcde
+SUBST_SED.gsed=		-e "s,@TOOLS_GSED@,${TOOLS_PATH.gsed},g"
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/abcde ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/cddb-tool ${DESTDIR}${PREFIX}/bin
@@ -51,6 +57,10 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/cddb-tool.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.gsed=	# empty
+.endif
 
 .if ${OPSYS} == "SunOS"
 USE_TOOLS+=	ftp:run
