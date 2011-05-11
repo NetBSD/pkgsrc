@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/05/11 01:27:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2011/05/11 01:31:01 ryoon Exp $
 #
 
 DISTNAME=	fotoxx-11.05.1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://kornelix.squarespace.com/storage/downloads/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kornelix.squarespace.com/fotoxx/
 COMMENT=	Program for editing image files from a digital camera
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,4 +25,5 @@ INSTALL_TARGET=	install
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
