@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 20:45:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/05/11 21:28:35 bouyer Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -6,6 +6,10 @@ share/doc/turba/RELEASE_NOTES
 share/doc/turba/UPGRADING
 share/examples/turba/turba.conf
 share/horde/turba/add.php
+share/horde/turba/addressbooks/create.php
+share/horde/turba/addressbooks/delete.php
+share/horde/turba/addressbooks/edit.php
+share/horde/turba/addressbooks/index.php
 share/horde/turba/browse.php
 share/horde/turba/config/attributes.php.dist
 share/horde/turba/config/conf.xml.dist
