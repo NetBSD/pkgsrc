@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2011/01/13 13:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2011/05/11 11:38:48 adam Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
-
-PKGREVISION=	1
 SVR4_PKGNAME=	p5pma
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,14 +10,11 @@ HOMEPAGE=	http://www.simplesystems.org/ImageMagick/www/perl-magick.html
 COMMENT=	Object-oriented Perl interface to ImageMagick
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/ImageMagick/distinfo
-FILESDIR=	${.CURDIR}/../../graphics/ImageMagick/files
 PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 
