@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1121 2011/05/11 06:27:27 alnsn Exp $
+$NetBSD: CHANGES-2011,v 1.1122 2011/05/11 07:51:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1829,3 +1829,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/c-icap-modules version 0.1.5 [adam 2011-05-11]
 	Added www/squidclamav version 6.2 [adam 2011-05-11]
 	Updated editors/nvi-m17n to 1.79.20040608 [obache 2011-05-11]
+	Updated archivers/gtar to 1.26 [adam 2011-05-11]
+	Updated archivers/gtar-base to 1.26 [adam 2011-05-11]
+	Updated archivers/gtar-info to 1.26 [adam 2011-05-11]
