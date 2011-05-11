@@ -1,0 +1,4 @@
+DEPENDS=  foo>10.0 bar-[0-9]*
+BUILD_DEPENDS=  foo>10.0
+PKGNAME=baz-1.2.3
+

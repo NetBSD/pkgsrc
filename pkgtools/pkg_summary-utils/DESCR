@@ -1,0 +1,26 @@
+A collection of utilities for manipulating pkg_summary(5) files.
+
+pkg_list_all_pkgs       - list (in PKGPATH form) all packages in pkgsrc tree
+pkg_src_summary         - create a full pkg_src_summary
+                          for given (in PKGPATH form) packages
+pkg_bin_summary         - creates a summary for binary or installed packages
+pkg_micro_src_summary   - create a micro pkg_src_summary
+                          for given (in PKGPATH form) packages
+pkg_cmp_summary         - compare two summary files, i.e. packages
+                          are compared by their versions
+pkg_grep_summary        - grep the summary using AWK expression
+pkg_digger              - very powerful package searcher
+pkg_digger_backend      - pkg_summary.txt backend for pkg_digger
+pkg_update_summary      - updates pkg_summary(5) by analysing the modification
+                          time of binary packages and pkg_summary(5) file
+pkg_update_src_summary  - efficiently updates pkg_src_summary for all
+                          packages in pkgsrc tree
+pkg_summary4view        - convert a summary file to human readable format
+pkg_refresh_summary     - output an information about latest/newest version
+                          of packages
+pkg_cleanup_distdir     - remove old unused distfiles
+pkg_uniq_summary        - filter out repeated package summaries
+pkg_summary2deps        - summary to dependency graph converter
+pkg_subgraph_deps       - analyses dependency graph given on input
+pkg_lint_summary        - sanity checks for summaries
+pkg_summary2leaves      - output leaf packages
