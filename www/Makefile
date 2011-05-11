@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.794 2011/04/28 08:42:58 wiz Exp $
+# $NetBSD: Makefile,v 1.795 2011/05/11 04:33:52 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -86,6 +86,8 @@ SUBDIR+=	bluefish
 SUBDIR+=	blur6ex
 SUBDIR+=	bozohttpd
 SUBDIR+=	browser-bookmarks-menu
+SUBDIR+=	c-icap
+SUBDIR+=	c-icap-modules
 SUBDIR+=	cadaver
 SUBDIR+=	calamaris
 SUBDIR+=	camping
@@ -598,6 +600,7 @@ SUBDIR+=	spawn-fcgi
 SUBDIR+=	squid27
 SUBDIR+=	squid31
 SUBDIR+=	squidGuard
+SUBDIR+=	squidclamav
 SUBDIR+=	squidpurge
 SUBDIR+=	squirm
 SUBDIR+=	surfraw
