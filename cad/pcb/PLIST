@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.15 2009/11/06 02:29:59 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/05/11 11:21:36 dmcmahill Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
 info/pcb.info
 man/man1/pcb.1
 share/applications/pcb.desktop
+share/doc/pcb/examples/LED.pcb
+share/doc/pcb/examples/LED.net
+share/doc/pcb/examples/LED2.pcb
+share/doc/pcb/examples/libraries/example.inc
+share/doc/pcb/examples/libraries/example.list
+share/doc/pcb/examples/libraries/example.m4
 share/doc/pcb/pad.gif
 share/doc/pcb/pad.png
 share/doc/pcb/pcb.html
@@ -16,6 +22,8 @@ share/doc/pcb/refcard.pdf
 share/doc/pcb/refcard.ps
 share/doc/pcb/thermal.gif
 share/doc/pcb/thermal.png
+share/doc/pcb/tutorial/tut1.pcb
+share/gEDA/scheme/gnet-pcbfwd.scm
 share/icons/hicolor/16x16/mimetypes/application-x-excellon-16.png
 share/icons/hicolor/16x16/mimetypes/application-x-gerber-16.png
 share/icons/hicolor/16x16/mimetypes/application-x-pcb-footprint-16.png
@@ -49,6 +57,7 @@ share/icons/hicolor/scalable/mimetypes/application-x-pcb-footprint.svg
 share/icons/hicolor/scalable/mimetypes/application-x-pcb-layout.svg
 share/icons/hicolor/scalable/mimetypes/application-x-pcb-netlist.svg
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pcb.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pcb.mo
 share/mime/packages/pcb.xml
 share/mimelnk/application/x-excellon.desktop
 share/mimelnk/application/x-gerber.desktop
@@ -60,12 +69,6 @@ share/pcb/CreateLibraryContents.sh
 share/pcb/ListLibraryContents.sh
 share/pcb/QueryLibrary.sh
 share/pcb/default_font
-share/pcb/examples/LED
-share/pcb/examples/LED.NET
-share/pcb/examples/LED2
-share/pcb/examples/libraries/example.inc
-share/pcb/examples/libraries/example.list
-share/pcb/examples/libraries/example.m4
 share/pcb/gpcb-menu.res
 share/pcb/m4/TTL_74xx_DIL.m4
 share/pcb/m4/amp.inc
@@ -1052,4 +1055,3 @@ share/pcb/tools/Merge_dimPCBPS
 share/pcb/tools/apctools.zip
 share/pcb/tools/gerbertotk.c
 share/pcb/tools/pcb2ncap.tgz
-share/pcb/tutorial/tut1.pcb
