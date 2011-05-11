@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.41 2011/03/20 09:00:08 obache Exp $
+# $NetBSD: Linux.mk,v 1.42 2011/05/11 12:46:20 obache Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -25,8 +25,8 @@ DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
-.if exists(/usr/bin/false)
-NOLOGIN?=		/usr/bin/false
+.if exists(/etc/ssdlinux_version)
+NOLOGIN?=		/sbin/nologin
 .else
 NOLOGIN?=		/bin/false
 .endif
