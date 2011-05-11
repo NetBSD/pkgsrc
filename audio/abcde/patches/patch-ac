@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.27 2011/04/21 17:53:26 hans Exp $
+$NetBSD: patch-ac,v 1.28 2011/05/11 10:28:08 hans Exp $
 
 --- abcde.orig	2010-04-10 10:14:30.000000000 +0900
 +++ abcde	2010-04-10 18:40:03.000000000 +0900
@@ -120,17 +120,17 @@ $NetBSD: patch-ac,v 1.27 2011/04/21 17:53:26 hans Exp $
  # Asume fetch if under FreeBSD. curl is used for Mac OS X. wget is used for
  # Linux/OpenBSD. ftp is user for NetBSD.
  # Let's use these checkings to determine the OS flavour, which will be used
-@@ -3060,6 +3063,7 @@
+@@ -3060,10 +3063,12 @@
  	HTTPGET=ftp
  	MD5SUM=md5
  	OSFLAVOUR=NBSD
-+	SED=gsed
++	SED=@TOOLS_GSED@
  elif [ X$(uname) = "SunOS" ] ; then
 -	HTTPGET=""
 +	HTTPGET=ftp
  	MD5SUM=md5
  	OSFLAVOUR=SunOS
-+	SED=gsed
++	SED=@TOOLS_GSED@
  else
  	HTTPGET=wget
  fi
