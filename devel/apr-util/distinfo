@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2010/11/01 17:44:52 adam Exp $
+$NetBSD: distinfo,v 1.11 2011/05/11 18:11:18 tron Exp $
 
-SHA1 (apr-util-1.3.10.tar.bz2) = 9a720cf77f1d0fdc5b0f6ce6d656cc864d7d4833
-RMD160 (apr-util-1.3.10.tar.bz2) = b18520330602d342e15966c48fb31127ce7b31e0
-Size (apr-util-1.3.10.tar.bz2) = 607912 bytes
+SHA1 (apr-util-1.3.11.tar.bz2) = dc71af7684f76d56f06b4fc8763a8606bd861e84
+RMD160 (apr-util-1.3.11.tar.bz2) = 5b745baf523b99c8fa0501deab4f00d86ca050e5
+Size (apr-util-1.3.11.tar.bz2) = 607486 bytes
 SHA1 (patch-aa) = c778c6c5b9ea1d51aa6899fd885f00e4a5e9242b
