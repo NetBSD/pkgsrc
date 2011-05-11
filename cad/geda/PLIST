@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/03/11 05:57:52 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/05/11 11:20:23 dmcmahill Exp $
 bin/convert_sym
 bin/garchive
 bin/gattrib
@@ -109,6 +109,10 @@ share/doc/geda-gaf/examples/lightning_detector/lightning.sch.bom
 share/doc/geda-gaf/examples/lightning_detector/sym/2N4401.sym
 share/doc/geda-gaf/examples/lightning_detector/sym/2N4403.sym
 share/doc/geda-gaf/gedadocs.html
+share/doc/geda-gaf/man/gnetlist.html
+share/doc/geda-gaf/man/grenum.html
+share/doc/geda-gaf/man/gschem.html
+share/doc/geda-gaf/man/gsymcheck.html
 share/doc/geda-gaf/nc.pdf
 share/doc/geda-gaf/readmes/README.bom
 share/doc/geda-gaf/readmes/README.eagle
