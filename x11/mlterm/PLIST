@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2011/04/10 07:25:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2011/05/11 14:50:56 ryoon Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -11,6 +11,8 @@ lib/mkf/libmkf_kokr.la
 lib/mkf/libmkf_zh.la
 lib/mlterm/libathena.la
 lib/mlterm/libim-kbd.la
+${PLIST.m17nlib}lib/mlterm/libim-m17nlib.la
+${PLIST.uim}lib/mlterm/libim-uim.la
 lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
 lib/mlterm/libnext.la
