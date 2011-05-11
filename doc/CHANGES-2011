@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1123 2011/05/11 11:22:55 dmcmahill Exp $
+$NetBSD: CHANGES-2011,v 1.1124 2011/05/11 16:47:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1834,3 +1834,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/gtar-info to 1.26 [adam 2011-05-11]
 	Updated cad/pcb to 20100929 [dmcmahill 2011-05-11]
 	Updated cad/geda to 1.6.2 [dmcmahill 2011-05-11]
+	Updated www/links-gui to 2.3pre2nb1 [wiz 2011-05-11]
