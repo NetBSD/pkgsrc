@@ -1,0 +1,26 @@
+$NetBSD: patch-services_url_check_Makefile.in,v 1.1.1.1 2011/05/11 04:30:06 adam Exp $
+
+Remove unwanted linker flag.
+Handle configuration files.
+
+--- services/url_check/Makefile.in.orig	2011-05-05 13:19:55.000000000 +0000
++++ services/url_check/Makefile.in
+@@ -34,7 +34,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+-@USEBDB_TRUE@am__append_1 = @BDB_ADD_LDFLAG@ -ldb
++@USEBDB_TRUE@am__append_1 = @BDB_ADD_LDFLAG@
+ @USEBDB_TRUE@am__append_2 = @BDB_ADD_FLAG@
+ @USEBDB_TRUE@am__append_3 = sguardDB.c
+ subdir = services/url_check
+@@ -554,8 +554,7 @@ uninstall-am: uninstall-cicapmoduleLTLIB
+ 
+ 
+ install-data-local:
+-	$(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf.default
+-	if test ! -f $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; then $(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; fi
++	$(INSTALL) srv_url_check.conf $(DESTDIR)$(datadir)/c-icap/srv_url_check.conf.default
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
