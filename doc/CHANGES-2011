@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1131 2011/05/12 12:34:19 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1132 2011/05/12 13:12:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1850,3 +1850,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/milter-manager to 1.6.9nb1 [obache 2011-05-12]
 	Updated devel/libuuid to 2.19.1 [adam 2011-05-12]
 	Added devel/ctemplate version 0.99 [adam 2011-05-12]
+	Updated devel/geany to 0.20 [obache 2011-05-12]
