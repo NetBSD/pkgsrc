@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2011/01/06 14:23:41 taca Exp $
+# $NetBSD: Makefile,v 1.13 2011/05/12 14:51:26 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
 PKGNAME=	typolight${TL_VER}-${TL_PKGVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -90,8 +90,6 @@ OWN_DIRS_PERMS+= \
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
-
-.include "../../www/typolight/options.mk"
 
 pre-configure:
 	${MV} ${WRKSRC}/templates/.htaccess ${WRKDIR}/templates-htaccess
