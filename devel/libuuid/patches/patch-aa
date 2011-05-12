@@ -1,23 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/01/08 20:40:33 markd Exp $
+$NetBSD: patch-aa,v 1.2 2011/05/12 12:26:15 adam Exp $
 
 sh doesn't like the empty case
 
---- configure.orig	2010-06-30 12:53:01.000000000 +0000
+--- configure.orig	2011-05-02 09:49:20.000000000 +0000
 +++ configure
-@@ -18952,11 +18952,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- 
- 	  syscall=no
--	  if test "x$linux_os" = xyes; then
--	    case $host_cpu in
--
--	    esac
--	  fi
- 
- fi
- 
-@@ -19082,11 +19077,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
+@@ -15993,11 +15993,6 @@ if ac_fn_c_try_compile "$LINENO"; then :
+ else
  
  	  syscall=no
 -	  if test "x$linux_os" = xyes; then
@@ -27,21 +15,9 @@ sh doesn't like the empty case
 -	  fi
  
  fi
- 
-@@ -19489,11 +19479,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- 
- 	  syscall=no
--	  if test "x$linux_os" = xyes; then
--	    case $host_cpu in
--
--	    esac
--	  fi
- 
- fi
- 
-@@ -19701,11 +19686,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -16073,11 +16068,6 @@ if ac_fn_c_try_compile "$LINENO"; then :
+ else
  
  	  syscall=no
 -	  if test "x$linux_os" = xyes; then
@@ -51,4 +27,28 @@ sh doesn't like the empty case
 -	  fi
  
  fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -16330,11 +16320,6 @@ if ac_fn_c_try_compile "$LINENO"; then :
+ else
  
+ 	  syscall=no
+-	  if test "x$linux_os" = xyes; then
+-	    case $host_cpu in
+-
+-	    esac
+-	  fi
+ 
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -16461,11 +16446,6 @@ if ac_fn_c_try_compile "$LINENO"; then :
+ else
+ 
+ 	  syscall=no
+-	  if test "x$linux_os" = xyes; then
+-	    case $host_cpu in
+-
+-	    esac
+-	  fi
+ 
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
