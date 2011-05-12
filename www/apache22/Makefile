@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2011/05/12 06:50:44 tron Exp $
+# $NetBSD: Makefile,v 1.65 2011/05/12 07:04:02 adam Exp $
 
 DISTNAME=	httpd-2.2.18
 PKGNAME=	${DISTNAME:S/httpd/apache/}
@@ -160,6 +160,7 @@ SUBST_SED.confs+=	-e "s|logs/|${VARBASE}/log/httpd/|g"
 SUBST_SED.confs+=	-e 's|/var/log/httpd/foo\.log|logs/foo.log/|g'
 SUBST_SED.confs+=	-e 's|^\(User[	 ]\).*|\1${APACHE_USER}|g'
 SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
+SUBST_SED.confs+=	-e 's|^Listen \(.*\)|Listen 0.0.0.0:\1|g'
 
 # abs_srcdir in config_vars.mk is used during install so needs to reference
 # the work dir path, and by other packages such as ap2-fastcgi after install,
@@ -219,25 +220,6 @@ INSTALL_MAKE_FLAGS+=	sysconfdir="${EGDIR}"
 
 post-install:
 	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${DESTDIR}${PREFIX}/share/httpd/build
-	cd ${DESTDIR}${EGDIR} &&					\
-	for file in							\
-		httpd.conf						\
-		extra/httpd-ssl.conf;					\
-	do								\
-		${AWK} '						\
-			/^Listen[ 	]*80/	{			\
-				printf "%s", "Listen 0.0.0.0:80\n";	\
-				next;					\
-			}						\
-			/^Listen[ 	]*443/	{			\
-				printf "%s", "Listen 0.0.0.0:443\n";	\
-				next;					\
-			}						\
-			{ print; }					\
-			' < "$${file}" >> $${file}.new;			\
-		${MV} -f $${file}.new $${file};				\
-	done
-
 	${LN} -sf ${SBINDIR}/envvars-std ${DESTDIR}${SBINDIR}/envvars
 
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${DESTDIR}${PREFIX}/sbin
