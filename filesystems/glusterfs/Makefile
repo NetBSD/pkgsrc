@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/05/09 09:38:26 manu Exp $
+# $NetBSD: Makefile,v 1.8 2011/05/12 10:28:47 manu Exp $
 #
 
 DISTNAME=	glusterfs-3.1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	http://download.gluster.com/pub/gluster/glusterfs/3.1/LATEST/
 
@@ -36,6 +36,11 @@ SUBST_STAGE.bash=	post-build
 SUBST_FILES.bash=	xlators/mount/fuse/utils/mount.glusterfs
 SUBST_SED.bash=		-e "s,/bin/bash,/bin/sh,g"
 
+SUBST_CLASSES+=		mtab
+SUBST_STAGE.mtab=	post-build
+SUBST_FILES.mtab=	xlators/mount/fuse/utils/mount.glusterfs
+SUBST_SED.mtab=		-e "s,/etc/mtab,/proc/mounts,g"
+
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-build
 SUBST_FILES.etc+=	cli/src/cli-rpc-ops.c
@@ -63,7 +68,8 @@ BUILD_DEFS+=		VARBASE
 RCD_SCRIPTS=		glusterfsd glusterd
 
 post-install:
-	cp ${DESTDIR}/sbin/mount.glusterfs ${DESTDIR}/${PREFIX}/sbin/
+	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount.glusterfs \
+	    ${DESTDIR}/${PREFIX}/sbin/
 	${INSTALL_SCRIPT} ${FILESDIR}/xattr-init.sh \
 	    ${DESTDIR}/${PREFIX}/etc/glusterfs
 
