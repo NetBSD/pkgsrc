@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2011/04/22 13:43:18 obache Exp $
+# $NetBSD: Makefile,v 1.19 2011/05/12 13:12:18 obache Exp $
 
-DISTNAME=	geany-0.17
-PKGREVISION=	6
+DISTNAME=	geany-0.20
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geany/}
+MASTER_SITES=	http://download.geany.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://geany.uvena.de/
+HOMEPAGE=	http://www.geany.org/
 COMMENT=	Geany integrated development environment (IDE)
+#LICENSE=	gnu-gpl-v2 (or later) AND internal scintilla License.
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt gmake perl:run intltool
 USE_LANGUAGES=		c c++
+
+PKGCONFIG_OVERRIDE+=	geany.pc.in
 
 CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--enable-vte
@@ -28,11 +30,11 @@ MAKE_FLAGS+=		CCLD=${CXX:Q}
 .if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Msunpro)
 CONFIGURE_ARGS+=	CC=sunpro
 BUILDLINK_TRANSFORM+=	rm:-lstdc++
-.else
-CONFIGURE_ARGS+=	CC=gcc
 .endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
