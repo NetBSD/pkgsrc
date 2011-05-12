@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1129 2011/05/12 11:27:00 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1130 2011/05/12 11:28:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1847,3 +1847,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/cairomm to 1.10.0 [adam 2011-05-12]
 	Updated x11/gtkmm to 2.24.0 [adam 2011-05-12]
 	Updated editors/gobby to 0.4.12 [adam 2011-05-12]
+	Updated mail/milter-manager to 1.6.9nb1 [obache 2011-05-12]
