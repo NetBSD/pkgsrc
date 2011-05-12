@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/27 19:47:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/05/12 11:19:46 adam Exp $
 bin/gobby
 man/man1/gobby.1
 share/gobby/icons/HighContrastLargePrint/48x48/actions/chat.png
@@ -29,6 +29,7 @@ share/locale/ca/LC_MESSAGES/gobby.mo
 share/locale/cs/LC_MESSAGES/gobby.mo
 share/locale/de/LC_MESSAGES/gobby.mo
 share/locale/el/LC_MESSAGES/gobby.mo
+share/locale/en_GB/LC_MESSAGES/gobby.mo
 share/locale/es/LC_MESSAGES/gobby.mo
 share/locale/fr/LC_MESSAGES/gobby.mo
 share/locale/he/LC_MESSAGES/gobby.mo
@@ -41,4 +42,5 @@ share/locale/pt/LC_MESSAGES/gobby.mo
 share/locale/pt_BR/LC_MESSAGES/gobby.mo
 share/locale/ru/LC_MESSAGES/gobby.mo
 share/locale/sv/LC_MESSAGES/gobby.mo
+share/locale/uk/LC_MESSAGES/gobby.mo
 share/locale/zh_CN/LC_MESSAGES/gobby.mo
