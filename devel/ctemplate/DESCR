@@ -1,0 +1,3 @@
+CTemplate is a simple but powerful template language for C++. It emphasizes
+separating logic from presentation: it is impossible to embed application logic
+in this template language.
