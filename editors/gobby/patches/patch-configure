@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2011/05/12 11:19:46 adam Exp $
+
+Do not require ige-mac-integraton on Mac OS X.
+
+--- configure.orig	2009-12-18 22:35:57.000000000 +0000
++++ configure
+@@ -4594,12 +4594,8 @@ if test "x$build_vendor" = "xapple" ; th
+ $as_echo "#define OSX 1" >>confdefs.h
+ 
+   target=`pkg-config --variable=target gtk+-2.0`
+-  if test "$target" = "quartz" ; then
+ 
+-$as_echo "#define OSX_NATIVE 1" >>confdefs.h
+ 
+-    required_libs="$required_libs ige-mac-integration"
+-  fi
+ fi
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
