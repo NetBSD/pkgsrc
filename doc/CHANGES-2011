@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1132 2011/05/12 13:12:35 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1133 2011/05/12 14:54:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1851,3 +1851,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libuuid to 2.19.1 [adam 2011-05-12]
 	Added devel/ctemplate version 0.99 [adam 2011-05-12]
 	Updated devel/geany to 0.20 [obache 2011-05-12]
+	Updated www/contao29 to 2.9.4nb2 [taca 2011-05-12]
+	Updated www/contao29-translations to 20110508nb1 [taca 2011-05-12]
+	Updated www/typolight28 to 2.8.4nb3 [taca 2011-05-12]
+	Updated www/typolight28-translations to 20100606nb1 [taca 2011-05-12]
