@@ -1,20 +1,10 @@
-# $NetBSD: INSTALL,v 1.2 2010/07/22 14:04:49 taca Exp $
+# $NetBSD: INSTALL,v 1.3 2011/05/12 14:48:10 taca Exp $
 
-CT_UPDATE="@CT_UPDATE@"
 CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
 CT_OWN="@WWWOWN@"
-CT_GRP="@WWWGRP@"
 
 case ${STAGE} in
 POST-INSTALL)
-	case "${CT_UPDATE}" in
-	[Yy][Ee][Ss])	${CHOWN} -R ${CT_OWN} ${CT_WEBDIR};;
-	*)		cd ${CT_WEBDIR}/system/modules && \
-			for i in */languages; do
-				${CHGRP} -R ${CT_GRP} $i
-				${CHMOD} -R g+w $i
-			done
-			;;
-	esac
+	${CHOWN} -R ${CT_OWN} ${CT_WEBDIR}
 	;;
 esac
