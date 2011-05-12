@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/12/12 12:15:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/05/12 11:15:43 adam Exp $
 include/pangomm-1.4/pangomm.h
 include/pangomm-1.4/pangomm/attributes.h
 include/pangomm-1.4/pangomm/attriter.h
@@ -55,6 +55,8 @@ include/pangomm-1.4/pangomm/types.h
 include/pangomm-1.4/pangomm/wrap_init.h
 lib/libpangomm-1.4.la
 lib/pangomm-1.4/include/pangommconfig.h
+lib/pangomm-1.4/proc/m4/convert.m4
+lib/pangomm-1.4/proc/m4/convert_pango.m4
 lib/pkgconfig/pangomm-1.4.pc
 share/devhelp/books/pangomm-1.4/pangomm-1.4.devhelp2
 share/doc/pangomm-1.4/images/gtkmm_logo.gif
@@ -294,6 +296,7 @@ share/doc/pangomm-1.4/reference/html/since_1_6.html
 share/doc/pangomm-1.4/reference/html/since_1_8.html
 share/doc/pangomm-1.4/reference/html/since_2_14.html
 share/doc/pangomm-1.4/reference/html/since_2_16.html
+share/doc/pangomm-1.4/reference/html/since_2_28.html
 share/doc/pangomm-1.4/reference/html/structPango_1_1AttributeTraits-members.html
 share/doc/pangomm-1.4/reference/html/structPango_1_1AttributeTraits.html
 share/doc/pangomm-1.4/reference/html/structPango_1_1ItemTraits-members.html
