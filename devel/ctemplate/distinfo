@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/12 12:32:09 adam Exp $
+
+SHA1 (ctemplate-0.99.tar.gz) = 7fe974dfe90d35748564fa577f2c8be4b46f9663
+RMD160 (ctemplate-0.99.tar.gz) = b15cd6825d8f8ec841318ddb1b7afdadbc47931f
+Size (ctemplate-0.99.tar.gz) = 787831 bytes
