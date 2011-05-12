@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1133 2011/05/12 14:54:02 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1134 2011/05/12 15:58:48 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1855,3 +1855,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29-translations to 20110508nb1 [taca 2011-05-12]
 	Updated www/typolight28 to 2.8.4nb3 [taca 2011-05-12]
 	Updated www/typolight28-translations to 20100606nb1 [taca 2011-05-12]
+	Updated sysutils/xentools33 to 3.3.2nb7 [bouyer 2011-05-12]
+	Updated sysutils/xentools41 to 4.1.0nb4 [bouyer 2011-05-12]
