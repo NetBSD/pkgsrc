@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/13 15:56:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/12 11:10:35 adam Exp $
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
 include/atkmm-1.6/atkmm/component.h
@@ -41,6 +41,8 @@ include/atkmm-1.6/atkmm/text.h
 include/atkmm-1.6/atkmm/value.h
 include/atkmm-1.6/atkmm/wrap_init.h
 lib/atkmm-1.6/include/atkmmconfig.h
+lib/atkmm-1.6/proc/m4/convert.m4
+lib/atkmm-1.6/proc/m4/convert_atk.m4
 lib/libatkmm-1.6.la
 lib/pkgconfig/atkmm-1.6.pc
 share/devhelp/books/atkmm-1.6/atkmm-1.6.devhelp2
