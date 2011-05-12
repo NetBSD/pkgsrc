@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/05/12 08:04:05 abs Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/05/12 14:52:13 abs Exp $
 bin/fltk-config
 bin/fluid
 include/FL/Enumerations.H
@@ -221,8 +221,6 @@ ${PLIST.cs}include/FL/filename.h
 include/FL/fl_ask.H
 ${PLIST.cs}include/FL/fl_ask.h
 include/FL/fl_draw.H
-include/FL/images/png.h
-include/FL/images/pngconf.h
 ${PLIST.cs}include/FL/fl_draw.h
 ${PLIST.cs}include/FL/fl_file_chooser.H
 ${PLIST.cs}include/FL/fl_file_chooser.h
@@ -255,7 +253,6 @@ lib/libfltk.la
 lib/libfltk_forms.la
 lib/libfltk_gl.la
 lib/libfltk_images.la
-lib/libfltk_png.a
 man/man1/fltk-config.1
 man/man1/fluid.1
 man/man3/fltk.3
