@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.209 2011/04/05 12:42:06 wiz Exp $
+# $NetBSD: makevars.map,v 1.210 2011/05/12 12:31:05 adam Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -526,6 +526,7 @@ PGPKGSRCDIR		Pathname [$system]
 PHASE_MSG		ShellCommand [$system]
 PKGBASE			Identifier [$system]
 PKGCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
+PKGCONFIG_OVERRIDE_STAGE	Stage [$package]
 PKGDIR			RelativePkgDir [$package]
 PKGDIRMODE		FileMode [$system]
 PKGLOCALEDIR		Pathname [$system]
