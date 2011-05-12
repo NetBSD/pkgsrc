@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/05/03 20:10:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/05/12 06:50:44 tron Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -462,12 +462,14 @@ share/httpd/manual/developer/debugging.html
 share/httpd/manual/developer/debugging.html.en
 share/httpd/manual/developer/documenting.html
 share/httpd/manual/developer/documenting.html.en
+share/httpd/manual/developer/documenting.html.zh-cn
 share/httpd/manual/developer/filters.html
 share/httpd/manual/developer/filters.html.en
 share/httpd/manual/developer/hooks.html
 share/httpd/manual/developer/hooks.html.en
 share/httpd/manual/developer/index.html
 share/httpd/manual/developer/index.html.en
+share/httpd/manual/developer/index.html.zh-cn
 share/httpd/manual/developer/modules.html
 share/httpd/manual/developer/modules.html.en
 share/httpd/manual/developer/modules.html.ja.utf8
@@ -493,6 +495,7 @@ share/httpd/manual/env.html.tr.utf8
 share/httpd/manual/faq/index.html
 share/httpd/manual/faq/index.html.en
 share/httpd/manual/faq/index.html.tr.utf8
+share/httpd/manual/faq/index.html.zh-cn
 share/httpd/manual/filter.html
 share/httpd/manual/filter.html.en
 share/httpd/manual/filter.html.es
@@ -516,10 +519,12 @@ share/httpd/manual/handler.html.ja.utf8
 share/httpd/manual/handler.html.ko.euc-kr
 share/httpd/manual/handler.html.ru.koi8-r
 share/httpd/manual/handler.html.tr.utf8
+share/httpd/manual/handler.html.zh-cn
 share/httpd/manual/howto/access.html
 share/httpd/manual/howto/access.html.en
 share/httpd/manual/howto/auth.html
 share/httpd/manual/howto/auth.html.en
+share/httpd/manual/howto/auth.html.fr
 share/httpd/manual/howto/auth.html.ja.utf8
 share/httpd/manual/howto/auth.html.ko.euc-kr
 share/httpd/manual/howto/auth.html.tr.utf8
@@ -529,6 +534,7 @@ share/httpd/manual/howto/cgi.html.ja.utf8
 share/httpd/manual/howto/cgi.html.ko.euc-kr
 share/httpd/manual/howto/htaccess.html
 share/httpd/manual/howto/htaccess.html.en
+share/httpd/manual/howto/htaccess.html.fr
 share/httpd/manual/howto/htaccess.html.ja.utf8
 share/httpd/manual/howto/htaccess.html.ko.euc-kr
 share/httpd/manual/howto/htaccess.html.pt-br
@@ -536,6 +542,7 @@ share/httpd/manual/howto/index.html
 share/httpd/manual/howto/index.html.en
 share/httpd/manual/howto/index.html.ja.utf8
 share/httpd/manual/howto/index.html.ko.euc-kr
+share/httpd/manual/howto/index.html.zh-cn
 share/httpd/manual/howto/public_html.html
 share/httpd/manual/howto/public_html.html.en
 share/httpd/manual/howto/public_html.html.ja.utf8
@@ -568,6 +575,7 @@ share/httpd/manual/images/mod_rewrite_fig1.png
 share/httpd/manual/images/mod_rewrite_fig2.gif
 share/httpd/manual/images/mod_rewrite_fig2.png
 share/httpd/manual/images/pixel.gif
+share/httpd/manual/images/rewrite_rule_flow.png
 share/httpd/manual/images/right.gif
 share/httpd/manual/images/ssl_intro_fig1.gif
 share/httpd/manual/images/ssl_intro_fig1.png
@@ -576,6 +584,8 @@ share/httpd/manual/images/ssl_intro_fig2.png
 share/httpd/manual/images/ssl_intro_fig3.gif
 share/httpd/manual/images/ssl_intro_fig3.png
 share/httpd/manual/images/sub.gif
+share/httpd/manual/images/syntax_rewritecond.png
+share/httpd/manual/images/syntax_rewriterule.png
 share/httpd/manual/images/up.gif
 share/httpd/manual/index.html
 share/httpd/manual/index.html.de
@@ -586,6 +596,7 @@ share/httpd/manual/index.html.ja.utf8
 share/httpd/manual/index.html.ko.euc-kr
 share/httpd/manual/index.html.pt-br
 share/httpd/manual/index.html.tr.utf8
+share/httpd/manual/index.html.zh-cn
 share/httpd/manual/install.html
 share/httpd/manual/install.html.de
 share/httpd/manual/install.html.en
@@ -614,6 +625,7 @@ share/httpd/manual/misc/index.html
 share/httpd/manual/misc/index.html.en
 share/httpd/manual/misc/index.html.ko.euc-kr
 share/httpd/manual/misc/index.html.tr.utf8
+share/httpd/manual/misc/index.html.zh-cn
 share/httpd/manual/misc/password_encryptions.html
 share/httpd/manual/misc/password_encryptions.html.en
 share/httpd/manual/misc/perf-tuning.html
@@ -638,6 +650,7 @@ share/httpd/manual/mod/beos.html.ko.euc-kr
 share/httpd/manual/mod/core.html
 share/httpd/manual/mod/core.html.de
 share/httpd/manual/mod/core.html.en
+share/httpd/manual/mod/core.html.fr
 share/httpd/manual/mod/core.html.ja.utf8
 share/httpd/manual/mod/core.html.tr.utf8
 share/httpd/manual/mod/directive-dict.html
@@ -653,6 +666,7 @@ share/httpd/manual/mod/directives.html.ja.utf8
 share/httpd/manual/mod/directives.html.ko.euc-kr
 share/httpd/manual/mod/directives.html.ru.koi8-r
 share/httpd/manual/mod/directives.html.tr.utf8
+share/httpd/manual/mod/directives.html.zh-cn
 share/httpd/manual/mod/event.html
 share/httpd/manual/mod/event.html.en
 share/httpd/manual/mod/index.html
@@ -662,6 +676,7 @@ share/httpd/manual/mod/index.html.es
 share/httpd/manual/mod/index.html.ja.utf8
 share/httpd/manual/mod/index.html.ko.euc-kr
 share/httpd/manual/mod/index.html.tr.utf8
+share/httpd/manual/mod/index.html.zh-cn
 share/httpd/manual/mod/mod_actions.html
 share/httpd/manual/mod/mod_actions.html.de
 share/httpd/manual/mod/mod_actions.html.en
@@ -678,13 +693,16 @@ share/httpd/manual/mod/mod_asis.html.ja.utf8
 share/httpd/manual/mod/mod_asis.html.ko.euc-kr
 share/httpd/manual/mod/mod_auth_basic.html
 share/httpd/manual/mod/mod_auth_basic.html.en
+share/httpd/manual/mod/mod_auth_basic.html.fr
 share/httpd/manual/mod/mod_auth_basic.html.ja.utf8
 share/httpd/manual/mod/mod_auth_basic.html.ko.euc-kr
 share/httpd/manual/mod/mod_auth_digest.html
 share/httpd/manual/mod/mod_auth_digest.html.en
+share/httpd/manual/mod/mod_auth_digest.html.fr
 share/httpd/manual/mod/mod_auth_digest.html.ko.euc-kr
 share/httpd/manual/mod/mod_authn_alias.html
 share/httpd/manual/mod/mod_authn_alias.html.en
+share/httpd/manual/mod/mod_authn_alias.html.fr
 share/httpd/manual/mod/mod_authn_anon.html
 share/httpd/manual/mod/mod_authn_anon.html.en
 share/httpd/manual/mod/mod_authn_anon.html.ja.utf8
@@ -701,10 +719,12 @@ share/httpd/manual/mod/mod_authn_default.html.ja.utf8
 share/httpd/manual/mod/mod_authn_default.html.ko.euc-kr
 share/httpd/manual/mod/mod_authn_file.html
 share/httpd/manual/mod/mod_authn_file.html.en
+share/httpd/manual/mod/mod_authn_file.html.fr
 share/httpd/manual/mod/mod_authn_file.html.ja.utf8
 share/httpd/manual/mod/mod_authn_file.html.ko.euc-kr
 share/httpd/manual/mod/mod_authnz_ldap.html
 share/httpd/manual/mod/mod_authnz_ldap.html.en
+share/httpd/manual/mod/mod_authnz_ldap.html.fr
 share/httpd/manual/mod/mod_authz_dbm.html
 share/httpd/manual/mod/mod_authz_dbm.html.en
 share/httpd/manual/mod/mod_authz_dbm.html.ko.euc-kr
@@ -730,6 +750,7 @@ share/httpd/manual/mod/mod_authz_user.html.ja.utf8
 share/httpd/manual/mod/mod_authz_user.html.ko.euc-kr
 share/httpd/manual/mod/mod_autoindex.html
 share/httpd/manual/mod/mod_autoindex.html.en
+share/httpd/manual/mod/mod_autoindex.html.fr
 share/httpd/manual/mod/mod_autoindex.html.ja.utf8
 share/httpd/manual/mod/mod_autoindex.html.ko.euc-kr
 share/httpd/manual/mod/mod_autoindex.html.tr.utf8
@@ -858,6 +879,7 @@ share/httpd/manual/mod/mod_nw_ssl.html
 share/httpd/manual/mod/mod_nw_ssl.html.en
 share/httpd/manual/mod/mod_proxy.html
 share/httpd/manual/mod/mod_proxy.html.en
+share/httpd/manual/mod/mod_proxy.html.fr
 share/httpd/manual/mod/mod_proxy.html.ja.utf8
 share/httpd/manual/mod/mod_proxy_ajp.html
 share/httpd/manual/mod/mod_proxy_ajp.html.en
@@ -872,12 +894,14 @@ share/httpd/manual/mod/mod_proxy_ftp.html
 share/httpd/manual/mod/mod_proxy_ftp.html.en
 share/httpd/manual/mod/mod_proxy_http.html
 share/httpd/manual/mod/mod_proxy_http.html.en
+share/httpd/manual/mod/mod_proxy_http.html.fr
 share/httpd/manual/mod/mod_proxy_scgi.html
 share/httpd/manual/mod/mod_proxy_scgi.html.en
 share/httpd/manual/mod/mod_reqtimeout.html
 share/httpd/manual/mod/mod_reqtimeout.html.en
 share/httpd/manual/mod/mod_rewrite.html
 share/httpd/manual/mod/mod_rewrite.html.en
+share/httpd/manual/mod/mod_rewrite.html.fr
 share/httpd/manual/mod/mod_setenvif.html
 share/httpd/manual/mod/mod_setenvif.html.en
 share/httpd/manual/mod/mod_setenvif.html.ja.utf8
@@ -903,6 +927,7 @@ share/httpd/manual/mod/mod_substitute.html
 share/httpd/manual/mod/mod_substitute.html.en
 share/httpd/manual/mod/mod_suexec.html
 share/httpd/manual/mod/mod_suexec.html.en
+share/httpd/manual/mod/mod_suexec.html.fr
 share/httpd/manual/mod/mod_suexec.html.ja.utf8
 share/httpd/manual/mod/mod_suexec.html.ko.euc-kr
 share/httpd/manual/mod/mod_suexec.html.tr.utf8
@@ -955,6 +980,7 @@ share/httpd/manual/mod/quickreference.html.ja.utf8
 share/httpd/manual/mod/quickreference.html.ko.euc-kr
 share/httpd/manual/mod/quickreference.html.ru.koi8-r
 share/httpd/manual/mod/quickreference.html.tr.utf8
+share/httpd/manual/mod/quickreference.html.zh-cn
 share/httpd/manual/mod/worker.html
 share/httpd/manual/mod/worker.html.de
 share/httpd/manual/mod/worker.html.en
@@ -968,6 +994,7 @@ share/httpd/manual/mpm.html.fr
 share/httpd/manual/mpm.html.ja.utf8
 share/httpd/manual/mpm.html.ko.euc-kr
 share/httpd/manual/mpm.html.tr.utf8
+share/httpd/manual/mpm.html.zh-cn
 share/httpd/manual/new_features_2_0.html
 share/httpd/manual/new_features_2_0.html.de
 share/httpd/manual/new_features_2_0.html.en
@@ -989,6 +1016,7 @@ share/httpd/manual/platform/ebcdic.html.ko.euc-kr
 share/httpd/manual/platform/index.html
 share/httpd/manual/platform/index.html.en
 share/httpd/manual/platform/index.html.ko.euc-kr
+share/httpd/manual/platform/index.html.zh-cn
 share/httpd/manual/platform/netware.html
 share/httpd/manual/platform/netware.html.en
 share/httpd/manual/platform/netware.html.ko.euc-kr
@@ -1049,6 +1077,7 @@ share/httpd/manual/programs/index.html.es
 share/httpd/manual/programs/index.html.ko.euc-kr
 share/httpd/manual/programs/index.html.ru.koi8-r
 share/httpd/manual/programs/index.html.tr.utf8
+share/httpd/manual/programs/index.html.zh-cn
 share/httpd/manual/programs/logresolve.html
 share/httpd/manual/programs/logresolve.html.en
 share/httpd/manual/programs/logresolve.html.ko.euc-kr
@@ -1065,19 +1094,36 @@ share/httpd/manual/programs/suexec.html
 share/httpd/manual/programs/suexec.html.en
 share/httpd/manual/programs/suexec.html.ko.euc-kr
 share/httpd/manual/programs/suexec.html.tr.utf8
+share/httpd/manual/rewrite/access.html
+share/httpd/manual/rewrite/access.html.en
+share/httpd/manual/rewrite/advanced.html
+share/httpd/manual/rewrite/advanced.html.en
+share/httpd/manual/rewrite/avoid.html
+share/httpd/manual/rewrite/avoid.html.en
+share/httpd/manual/rewrite/flags.html
+share/httpd/manual/rewrite/flags.html.en
+share/httpd/manual/rewrite/flags.html.fr
+share/httpd/manual/rewrite/htaccess.html
+share/httpd/manual/rewrite/htaccess.html.en
 share/httpd/manual/rewrite/index.html
 share/httpd/manual/rewrite/index.html.en
+share/httpd/manual/rewrite/index.html.fr
 share/httpd/manual/rewrite/index.html.tr.utf8
-share/httpd/manual/rewrite/rewrite_flags.html
-share/httpd/manual/rewrite/rewrite_flags.html.en
-share/httpd/manual/rewrite/rewrite_guide.html
-share/httpd/manual/rewrite/rewrite_guide.html.en
-share/httpd/manual/rewrite/rewrite_guide_advanced.html
-share/httpd/manual/rewrite/rewrite_guide_advanced.html.en
-share/httpd/manual/rewrite/rewrite_intro.html
-share/httpd/manual/rewrite/rewrite_intro.html.en
-share/httpd/manual/rewrite/rewrite_tech.html
-share/httpd/manual/rewrite/rewrite_tech.html.en
+share/httpd/manual/rewrite/index.html.zh-cn
+share/httpd/manual/rewrite/intro.html
+share/httpd/manual/rewrite/intro.html.en
+share/httpd/manual/rewrite/intro.html.fr
+share/httpd/manual/rewrite/proxy.html
+share/httpd/manual/rewrite/proxy.html.en
+share/httpd/manual/rewrite/remapping.html
+share/httpd/manual/rewrite/remapping.html.en
+share/httpd/manual/rewrite/rewritemap.html
+share/httpd/manual/rewrite/rewritemap.html.en
+share/httpd/manual/rewrite/tech.html
+share/httpd/manual/rewrite/tech.html.en
+share/httpd/manual/rewrite/tech.html.fr
+share/httpd/manual/rewrite/vhosts.html
+share/httpd/manual/rewrite/vhosts.html.en
 share/httpd/manual/sections.html
 share/httpd/manual/sections.html.en
 share/httpd/manual/sections.html.fr
@@ -1096,10 +1142,12 @@ share/httpd/manual/sitemap.html.es
 share/httpd/manual/sitemap.html.ja.utf8
 share/httpd/manual/sitemap.html.ko.euc-kr
 share/httpd/manual/sitemap.html.tr.utf8
+share/httpd/manual/sitemap.html.zh-cn
 share/httpd/manual/ssl/index.html
 share/httpd/manual/ssl/index.html.en
 share/httpd/manual/ssl/index.html.ja.utf8
 share/httpd/manual/ssl/index.html.tr.utf8
+share/httpd/manual/ssl/index.html.zh-cn
 share/httpd/manual/ssl/ssl_compat.html
 share/httpd/manual/ssl/ssl_compat.html.en
 share/httpd/manual/ssl/ssl_faq.html
@@ -1134,6 +1182,7 @@ share/httpd/manual/style/sitemap.dtd
 share/httpd/manual/style/version.ent
 share/httpd/manual/suexec.html
 share/httpd/manual/suexec.html.en
+share/httpd/manual/suexec.html.fr
 share/httpd/manual/suexec.html.ja.utf8
 share/httpd/manual/suexec.html.ko.euc-kr
 share/httpd/manual/suexec.html.tr.utf8
@@ -1171,6 +1220,7 @@ share/httpd/manual/vhosts/index.html.ja.utf8
 share/httpd/manual/vhosts/index.html.ko.euc-kr
 share/httpd/manual/vhosts/index.html.ru.koi8-r
 share/httpd/manual/vhosts/index.html.tr.utf8
+share/httpd/manual/vhosts/index.html.zh-cn
 share/httpd/manual/vhosts/ip-based.html
 share/httpd/manual/vhosts/ip-based.html.en
 share/httpd/manual/vhosts/ip-based.html.fr
