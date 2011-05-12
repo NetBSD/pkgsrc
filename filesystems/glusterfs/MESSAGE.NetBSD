@@ -1,11 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.4 2011/04/28 10:49:41 tnn Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.5 2011/05/12 10:28:47 manu Exp $
+
+In order to use mount -t glusterfs, please install this link
+	ln -s ${PREFIX}/sbin/mount.glusterfs /sbin/mount_glusterfs
 
 glusterfs clients need the following in /etc/sysctl.conf in order to
 avoid hangs on I/O operations:
-kern.sbmax=4194304
-net.inet.tcp.sendbuf_max=1048576
-net.inet.tcp.recvbuf_max=1048576
+	kern.sbmax=4194304
+	net.inet.tcp.sendbuf_max=1048576
+	net.inet.tcp.recvbuf_max=1048576
 
 glusterfs servers will need extended attributes in exported filesystems.
 The required attributes can be initialized by running
