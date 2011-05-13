@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1453 2011/05/12 12:33:19 adam Exp $
+# $NetBSD: Makefile,v 1.1454 2011/05/13 21:23:17 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -307,6 +307,7 @@ SUBDIR+=	libconfig
 SUBDIR+=	libctl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdatrie
+SUBDIR+=	libdbusmenu-qt
 SUBDIR+=	libdnsres
 SUBDIR+=	libdockapp
 SUBDIR+=	libebml
