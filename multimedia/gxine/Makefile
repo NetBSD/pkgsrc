@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/04/22 13:44:16 obache Exp $
+# $NetBSD: Makefile,v 1.52 2011/05/13 11:18:16 drochner Exp $
 
 DISTNAME=	gxine-0.5.905
 PKGREVISION=	5
@@ -35,7 +35,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/xulrunner/buildlink3.mk"
+.include "../../devel/xulrunner192/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
