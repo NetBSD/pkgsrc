@@ -1,0 +1,20 @@
+Active Management Technology (AMT) tools
+
+descriptions from man pages:
+
+	amttool - remotely control Intel AMT managed machines.
+	amtterm - Intel AMT serial-over-lan (sol) client.
+
+from amt-howto(7):
+
+   What is AMT and why I should care?
+       AMT stands for "Active Management Technology".  It provides some remote
+       management facilities.  They are handled by the hardware and  firmware,
+       thus  they work independant from the operation system.  Means: It works
+       before Linux bootet up to the point  where  it  activated  the  network
+       interface.   It works even when your most recent test kernel deadlocked
+       the machine.  Which makes it quite useful for development machines  ...
+
+       Intel  AMT  is  part  of the vPro Platform.  Recent intel-chipset based
+       business machines should have it.  My fairly new Intel SDV machine  has
+       it too.
