@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.17 2011/04/08 14:30:15 drochner Exp $
+# $NetBSD: Makefile.common,v 1.18 2011/05/13 17:14:42 drochner Exp $
 #
 # used by devel/py-gobject/Makefile
 # used by devel/py-gobject-shared/Makefile
 
-DISTNAME=		pygobject-2.28.3
+DISTNAME=		pygobject-2.28.4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.28/}
 
