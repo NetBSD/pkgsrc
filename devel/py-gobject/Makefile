@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 13:42:15 obache Exp $
+# $NetBSD: Makefile,v 1.34 2011/05/13 17:14:42 drochner Exp $
 #
 
-PKGNAME=		${PYPKGPREFIX}-gobject-2.28.3
-PKGREVISION=		1
+PKGNAME=		${PYPKGPREFIX}-gobject-2.28.4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,11 +27,12 @@ REPLACE_PYTHON+=	codegen/missingdefs.py
 REPLACE_PYTHON+=	codegen/mkskel.py
 REPLACE_PYTHON+=	codegen/scanvirtuals.py
 REPLACE_PYTHON+=	codegen/scmexpr.py
+REPLACE_PYTHON+=	docs/xsl/fixxref.py.in
 
 BUILDLINK_API_DEPENDS.py-gobject-shared+= py-gobject-shared>=${PKGVERSION_NOREV}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
