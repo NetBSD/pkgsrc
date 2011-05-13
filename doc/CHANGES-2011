@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1139 2011/05/13 17:45:17 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.1140 2011/05/13 19:58:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1872,3 +1872,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/py-qt4 to 4.8.4 [drochner 2011-05-13]
 	Updated x11/py-sip to 4.12.2 [drochner 2011-05-13]
 	Updated x11/qt4-qscintilla to 2.5.1 [drochner 2011-05-13]
+	Updated fonts/ipafont to 00303 [ryoon 2011-05-13]
