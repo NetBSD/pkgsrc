@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1141 2011/05/13 23:28:30 markd Exp $
+$NetBSD: CHANGES-2011,v 1.1142 2011/05/13 23:29:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1874,3 +1874,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/qt4-qscintilla to 2.5.1 [drochner 2011-05-13]
 	Updated fonts/ipafont to 00303 [ryoon 2011-05-13]
 	Added devel/libdbusmenu-qt version 0.8.2 [markd 2011-05-13]
+	Updated print/tex-kix to 2010 [minskim 2011-05-13]
+	Updated print/tex-kix-doc to 2010 [minskim 2011-05-13]
