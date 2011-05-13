@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15 2011/02/03 19:28:48 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.16 2011/05/13 16:43:02 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -225,6 +225,7 @@ share/sip${PYVERSSUFFIX}/QtGui/qcolordialog.sip
 share/sip${PYVERSSUFFIX}/QtGui/qcolumnview.sip
 share/sip${PYVERSSUFFIX}/QtGui/qcombobox.sip
 share/sip${PYVERSSUFFIX}/QtGui/qcommandlinkbutton.sip
+share/sip${PYVERSSUFFIX}/QtGui/qcommonstyle.sip
 share/sip${PYVERSSUFFIX}/QtGui/qcompleter.sip
 share/sip${PYVERSSUFFIX}/QtGui/qcursor.sip
 share/sip${PYVERSSUFFIX}/QtGui/qdatawidgetmapper.sip
@@ -488,7 +489,6 @@ share/sip${PYVERSSUFFIX}/QtTest/qtestcase.sip
 share/sip${PYVERSSUFFIX}/QtTest/qtestkeyboard.sip
 share/sip${PYVERSSUFFIX}/QtTest/qtestmouse.sip
 share/sip${PYVERSSUFFIX}/QtTest/qtestsystem.sip
-share/sip${PYVERSSUFFIX}/QtTest/qtesttouch.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/QtWebKitmod.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qgraphicswebview.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebdatabase.sip
