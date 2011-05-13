@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.5 2011/05/13 02:50:06 dmcmahill Exp $
+
+Upstream patch from http://bugzilla-attachments.gnome.org/attachment.cgi?id=148640
+
+--- gtk/gnome/gw/gtk-support.c.orig	2008-07-03 14:52:27.000000000 +0000
++++ gtk/gnome/gw/gtk-support.c
+@@ -1012,10 +1012,14 @@ gtk_widget_get_window (GtkWidget *widget
+ }
+ 
+ GdkRectangle*
+-gtk_widget_get_allocation (GtkWidget *widget)
++_wrap_gtk_widget_get_allocation (GtkWidget *widget)
+ {
+     GdkRectangle *ret = g_new (GdkRectangle, 1);
++#if GTK_CHECK_VERSION(2,18,0)
++    gtk_widget_get_allocation (widget, (GtkAllocation*)ret);
++#else
+     *ret = widget->allocation;
++#endif
+     return ret;
+ }
+ 
