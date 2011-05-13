@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 00:18:17 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/13 23:29:09 minskim Exp $
 
 DISTNAME=	kix
-PKGNAME=	tex-${DISTNAME}-2009
-TEXLIVE_REV=	17363
+PKGNAME=	tex-${DISTNAME}-2010
+TEXLIVE_REV=	21606
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Typeset KIX codes
