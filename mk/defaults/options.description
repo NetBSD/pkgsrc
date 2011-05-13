@@ -4,6 +4,7 @@ acl			Enable POSIX ACL support.
 ads			Enable Windows's Active Directory support.
 agg			Enable agg support.
 alsa			Enable ALSA support.
+amtterm-gamt		Build amtterm GUI version (gamt).
 amule-alc		Build aMule LinkCreator GUI version.
 amule-alcc		Build aMule LinkCreator for console.
 amule-cas		Build C aMule Statistics.
