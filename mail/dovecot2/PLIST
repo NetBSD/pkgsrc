@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/04/15 13:34:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/05/13 07:36:39 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -381,6 +381,7 @@ man/man1/doveadm-fetch.1
 man/man1/doveadm-force-resync.1
 man/man1/doveadm-help.1
 man/man1/doveadm-import.1
+man/man1/doveadm-index.1
 man/man1/doveadm-kick.1
 man/man1/doveadm-log.1
 man/man1/doveadm-mailbox.1
@@ -469,6 +470,7 @@ share/doc/dovecot/wiki/Design.txt
 share/doc/dovecot/wiki/Dict.txt
 share/doc/dovecot/wiki/Director.txt
 share/doc/dovecot/wiki/DomainLost.txt
+share/doc/dovecot/wiki/Errors.ChgrpNoPerm.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
@@ -543,6 +545,9 @@ share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Troubleshooting.txt
 share/doc/dovecot/wiki/Pigeonhole.ManageSieve.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Configuration.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Examples.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.SpamtestVirustest.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Vacation.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extdata.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Usage.txt
