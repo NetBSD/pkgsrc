@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10329 2011/05/12 13:12:35 obache Exp $
+$NetBSD: TODO,v 1.10330 2011/05/13 06:52:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,6 +345,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
+	o abcm2ps-6.3.4
 	o abcmidi-20110429
 	o accerciser-1.12.2 [GNOME 2.32]
 	o acme-091 [pkg/44771]
@@ -443,6 +444,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o byacc-20101229
 	o bzr-2.3.1
 	o c4-1.10 [schmonz]
+	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.8
@@ -578,7 +580,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.27
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-1.13
+	o feh-1.14
 	o festival-1.96
 	o felt-3.07
 	o fetchmail-6.3.19
@@ -845,6 +847,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o leafnode-1.11.8
 	o less-443
 	o level9-4.1
+	o lftp-4.2.3
 	o lgeneral-1.2
 	o libAppleWM-1.4.1
 	o libFS-1.0.3
@@ -926,7 +929,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o luit-1.1.0
 	o lwm-1.2.2
 	o lyx-2.0.0
-	o lzip-1.11
+	o lzip-1.12
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
@@ -936,6 +939,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
+	o mdocml-1.11.2
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
 	o mergeant-0.67
@@ -1047,7 +1051,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o photopc-3.05
 	o php-jpgraph-3.0.6
 	o php-libawl-0.46
-	o phpmyadmin-3.3.10
+	o phpmyadmin-3.4.0
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1080,7 +1084,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o puppet-2.6.6
 	o puzzle-9159
-	o puzzles-9170
+	o puzzles-9173
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1101,6 +1105,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
+	o py-psycopg2-2.4.1
 	o py-qt4-4.8.4
 	o py-simplejson-2.1.5
 	o py-sip-4.12.2
@@ -1418,6 +1423,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xman-1.1.1
 	o xmbdfed-4.6
 	o xmcd-3.3.2
+	o xmlsec1-1.2.18
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
