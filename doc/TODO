@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10330 2011/05/13 06:52:09 wiz Exp $
+$NetBSD: TODO,v 1.10331 2011/05/13 12:47:23 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-6.3.4
 	o abcmidi-20110429
 	o accerciser-1.12.2 [GNOME 2.32]
 	o acme-091 [pkg/44771]
