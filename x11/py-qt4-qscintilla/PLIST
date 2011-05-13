@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/08 15:34:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/13 16:39:06 drochner Exp $
 ${PYSITELIB}/PyQt4/Qsci.so
 qt4/qsci/api/python/QScintilla2.api
 share/sip${PYVERSSUFFIX}/Qsci/qsciabstractapis.sip
@@ -24,6 +24,8 @@ share/sip${PYVERSSUFFIX}/Qsci/qscilexerjava.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerjavascript.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerlua.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexermakefile.sip
+share/sip${PYVERSSUFFIX}/Qsci/qscilexermatlab.sip
+share/sip${PYVERSSUFFIX}/Qsci/qscilexeroctave.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerpascal.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerperl.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerpostscript.sip
