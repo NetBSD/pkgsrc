@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2010/07/25 22:17:20 ghen Exp $
+@comment $NetBSD: PLIST,v 1.29 2011/05/13 07:34:48 adam Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -507,7 +507,6 @@ share/doc/dovecot/wiki/UserDatabase.Prefetch.txt
 share/doc/dovecot/wiki/UserDatabase.Static.txt
 share/doc/dovecot/wiki/UserDatabase.txt
 share/doc/dovecot/wiki/UserIds.txt
-share/doc/dovecot/wiki/VarMailDotLock.txt
 share/doc/dovecot/wiki/Variables.txt
 share/doc/dovecot/wiki/VirtualUsers.Home.txt
 share/doc/dovecot/wiki/VirtualUsers.txt
