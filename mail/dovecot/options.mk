@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2010/07/23 07:44:51 ghen Exp $
+# $NetBSD: options.mk,v 1.28 2011/05/13 07:34:48 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
@@ -105,7 +105,7 @@ CONFIGURE_ARGS+=	--without-gssapi
 # Default so we can use += below
 DISTFILES=		${DEFAULT_DISTFILES}
 PLIST_SRC=		${PLIST_SRC_DFLT:Q}
-INSTALL_DIRS=		${WRKSRC}
+INSTALL_DIRS=		.
 # sieve (must be built after dovecot, before managesieve)
 DISTFILES+=		dovecot-${DOVECOT_VERSION}-sieve-${SIEVE_VERSION}.tar.gz
 SITES.dovecot-${DOVECOT_VERSION}-sieve-${SIEVE_VERSION}.tar.gz=\
