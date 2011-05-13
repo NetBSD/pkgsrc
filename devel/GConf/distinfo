@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.29 2011/03/18 16:32:29 drochner Exp $
+$NetBSD: distinfo,v 1.30 2011/05/13 17:07:27 drochner Exp $
 
-SHA1 (GConf-2.32.1.tar.bz2) = 8d8d113dc654314cf955c4f8c5a4cccd3a15f447
-RMD160 (GConf-2.32.1.tar.bz2) = 455a21d217eeec8a413a664ff19fbc662b88205d
-Size (GConf-2.32.1.tar.bz2) = 1544626 bytes
+SHA1 (GConf-2.32.3.tar.bz2) = efc7d451c5988207f708b75c01d1d228ba3deed6
+RMD160 (GConf-2.32.3.tar.bz2) = d491165a58dd658987730aeebfdbf70f8b7c93d6
+Size (GConf-2.32.3.tar.bz2) = 1558681 bytes
 SHA1 (patch-ab) = ca0c9f45ff46ceb05a10c03c59f94b6a5be562b0
 SHA1 (patch-ac) = a810c943fc6408cd4f6024be65f9973d42028e1a
 SHA1 (patch-ae) = ec5b872713e3a5aec222ad46e6f24e27fff51a86
 SHA1 (patch-af) = 6c32965505db5d0b2e1083e629c7bc7f0cd0a439
-SHA1 (patch-ag) = d9a4347443f114785f236c76881cce1b8881c81d
 SHA1 (patch-ah) = 66485f9aeef7e6023c60f58cc054924f3cac4972
-SHA1 (patch-ai) = 4fcb2effbb4e668262d2dfff6ca2875eb42d0521
+SHA1 (patch-ai) = bd343f9e98dbb8597b593fdcb01de35824f18dd4
