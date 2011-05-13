@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/14 00:18:17 minskim Exp $
+$NetBSD: distinfo,v 1.3 2011/05/13 23:29:10 minskim Exp $
 
-SHA1 (tex-kix-17363/kix.doc.tar.xz) = 5d46c2be19c4b98ae73eadd327d691fec6a745de
-RMD160 (tex-kix-17363/kix.doc.tar.xz) = 6d9f2448020655cd6e84859c532120294cc47f34
-Size (tex-kix-17363/kix.doc.tar.xz) = 123796 bytes
+SHA1 (tex-kix-21606/kix.doc.tar.xz) = 5652b1a248f6c772b79bd7b7315f49e1664e76d6
+RMD160 (tex-kix-21606/kix.doc.tar.xz) = 6afc678d35eddbdf5edd01e2ee2b87efafdd07a7
+Size (tex-kix-21606/kix.doc.tar.xz) = 123796 bytes
