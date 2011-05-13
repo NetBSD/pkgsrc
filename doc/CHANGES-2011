@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1135 2011/05/13 07:37:38 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1136 2011/05/13 10:55:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1859,3 +1859,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/xentools41 to 4.1.0nb4 [bouyer 2011-05-12]
 	Updated mail/dovecot to 1.2.17 [adam 2011-05-13]
 	Updated mail/dovecot2 to 2.0.13 [adam 2011-05-13]
+	Updated devel/googletest to 1.6.0 [ryoon 2011-05-13]
