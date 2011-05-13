@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/08 15:32:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/13 16:37:55 drochner Exp $
 qt4/include/Qsci/qsciabstractapis.h
 qt4/include/Qsci/qsciapis.h
 qt4/include/Qsci/qscicommand.h
@@ -23,6 +23,8 @@ qt4/include/Qsci/qscilexerjava.h
 qt4/include/Qsci/qscilexerjavascript.h
 qt4/include/Qsci/qscilexerlua.h
 qt4/include/Qsci/qscilexermakefile.h
+qt4/include/Qsci/qscilexermatlab.h
+qt4/include/Qsci/qscilexeroctave.h
 qt4/include/Qsci/qscilexerpascal.h
 qt4/include/Qsci/qscilexerperl.h
 qt4/include/Qsci/qscilexerpostscript.h
