@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1134 2011/05/12 15:58:48 bouyer Exp $
+$NetBSD: CHANGES-2011,v 1.1135 2011/05/13 07:37:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1857,3 +1857,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/typolight28-translations to 20100606nb1 [taca 2011-05-12]
 	Updated sysutils/xentools33 to 3.3.2nb7 [bouyer 2011-05-12]
 	Updated sysutils/xentools41 to 4.1.0nb4 [bouyer 2011-05-12]
+	Updated mail/dovecot to 1.2.17 [adam 2011-05-13]
+	Updated mail/dovecot2 to 2.0.13 [adam 2011-05-13]
