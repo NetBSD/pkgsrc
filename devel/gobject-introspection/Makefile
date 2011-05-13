@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/04/22 13:42:26 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/05/13 17:12:19 drochner Exp $
 #
 
-DISTNAME=	gobject-introspection-0.10.7
-PKGREVISION=	2
+DISTNAME=	gobject-introspection-0.10.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/0.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +22,6 @@ USE_TOOLS+=	pkg-config flex bison gmake
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
 PYTHON_VERSIONS_ACCEPTED=	27 26 25
-REPLACE_PYTHON+=	giscanner/*.py
 
 SUBST_CLASSES+=	timet
 SUBST_STAGE.timet=	pre-configure
@@ -38,6 +36,9 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
 SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_LONG,g'
 SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 .endif
+
+# not executable
+CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
 
 TEST_TARGET=	check
 
