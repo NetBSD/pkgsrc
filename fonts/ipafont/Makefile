@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/03/07 08:52:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/13 19:57:37 ryoon Exp $
 #
 
-DISTNAME=	IPAfont00302
+DISTNAME=	IPAfont00303
 PKGNAME=	${DISTNAME:S/IPAfont/ipafont-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=ipafonts/46146/} \
-		http://info.openlab.ipa.go.jp/ipafont/fontdata/
+MASTER_SITES=	http://info.openlab.ipa.go.jp/ipafont/fontdata/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
