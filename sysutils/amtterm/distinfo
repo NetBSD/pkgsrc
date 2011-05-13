@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/13 13:24:01 obache Exp $
+
+SHA1 (amtterm-1.2.tar.gz) = 7459a2817cdd5886d6e2f208af28de5af3937b9d
+RMD160 (amtterm-1.2.tar.gz) = 1a37c6f857d5e12dbda4a005838c31c19738db7a
+Size (amtterm-1.2.tar.gz) = 37225 bytes
+SHA1 (patch-GNUmakefile) = f0ff91d80b01ea9d4b42ea752b786ce16a698c7d
+SHA1 (patch-mk_Variables.mk) = cb2d2fae3c0e650386308bd9290fa62c64a137f7
