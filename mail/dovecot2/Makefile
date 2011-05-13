@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2011/04/22 14:40:43 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/05/13 07:36:39 adam Exp $
 
-DISTNAME=	dovecot-2.0.12
-PKGREVISION=	1
+DISTNAME=	dovecot-2.0.13
 CATEGORIES=	mail
 MASTER_SITES=	http://www.dovecot.org/releases/2.0/
 
@@ -13,8 +12,8 @@ LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		pkg-config rpcgen
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config rpcgen
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
