@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/26 01:20:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/05/13 10:54:39 ryoon Exp $
 bin/gtest-config
 include/gtest/gtest-death-test.h
 include/gtest/gtest-message.h
 include/gtest/gtest-param-test.h
+include/gtest/gtest-printers.h
 include/gtest/gtest-spi.h
 include/gtest/gtest-test-part.h
 include/gtest/gtest-typed-test.h
