@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1136 2011/05/13 10:55:45 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1137 2011/05/13 12:46:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1860,3 +1860,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/dovecot to 1.2.17 [adam 2011-05-13]
 	Updated mail/dovecot2 to 2.0.13 [adam 2011-05-13]
 	Updated devel/googletest to 1.6.0 [ryoon 2011-05-13]
+	Updated print/abcm2ps to 6.3.4 [ryoon 2011-05-13]
