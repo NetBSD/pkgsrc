@@ -1,5 +1,7 @@
---- libstdc++-v3/config/os/bsd/netbsd/ctype_base.h.orig	2009-04-10 01:23:07.000000000 +0200
-+++ libstdc++-v3/config/os/bsd/netbsd/ctype_base.h	2011-03-03 13:57:27.000000000 +0100
+$NetBSD: patch-aj,v 1.2 2011/05/14 18:00:24 wiz Exp $
+
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_base.h.orig	2009-04-09 23:23:07.000000000 +0000
++++ libstdc++-v3/config/os/bsd/netbsd/ctype_base.h
 @@ -30,6 +30,8 @@
  // Full details can be found from the CVS files at:
  //   anoncvs@anoncvs.netbsd.org:/cvsroot/basesrc/include/ctype.h

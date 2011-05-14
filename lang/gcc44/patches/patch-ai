@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 2011/05/14 18:00:24 wiz Exp $
+
 --- gcc/fortran/f95-lang.c.orig	2010-04-21 23:26:11.000000000 +0200
 +++ gcc/fortran/f95-lang.c
 @@ -871,10 +871,17 @@
