@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/04/22 00:35:33 taca Exp $
+# $NetBSD: Makefile,v 1.23 2011/05/14 02:54:39 taca Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-${ZOPE29_VERSION}-final
@@ -37,9 +37,25 @@ SUBST_SED.param+=	-e "s|@ZOPE_USER@|${ZOPE_USER}|g"
 SUBST_SED.param+=	-e "s|@ZOPE_GROUP@|${ZOPE_GROUP}|g"
 SUBST_MESSAGE.param=	Fixing some parameters in files.
 
-REPLACE_PYTHON+=	test.py lib/python/Zope2/Startup/zopectl.py \
-			lib/python/zdaemon/zdctl.py lib/python/zdaemon/zdrun.py
-REPLACE_PYTHON_DIRS+=	${WRKSRC}/lib/python/ZConfig/scripts ${WRKSRC}/utilities
+REPLACE_PYTHON+= \
+	lib/python/AccessControl/securitySuite/regressionSecurity.py \
+	lib/python/Interface/pyskel.py lib/python/OFS/ndiff.py \
+	lib/python/Products/PageTemplates/tests/run.py \
+	lib/python/Products/PluginIndexes/TextIndex/Splitter/setup.py \
+	lib/python/StructuredText/ClassicStructuredText.py \
+	lib/python/ZEO/zeoctl.py lib/python/Zope2/Startup/misc/zpasswd.py \
+	lib/python/Zope2/Startup/zopectl.py lib/python/ZTUtils/tests/run.py \
+	lib/python/docutils/readers/python/pynodes.py \
+	lib/python/zdaemon/tests/nokill.py lib/python/zope/security/setup.py \
+	test.py 
+REPLACE_PYTHON_DIRS+=	lib/python/ZConfig \
+	lib/python/Products/ZCTextIndex/tests \
+	lib/python/Products/ZCatalog/regressiontests \
+	lib/python/Products/ZGadflyDA/gadfly \
+	lib/python/TAL lib/python/ZServer/medusa \
+	lib/python/zope/app/locales \
+	lib/python/zope/app/rdb lib/python/zdaemon \
+	lib/python/zope/index/text/tests lib/python/zope/tal utilities
 
 post-extract:
 	cd ${WRKSRC} && ${FIND} doc lib skel/import -type f -print | \
