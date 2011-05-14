@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/05/14 20:19:47 wiz Exp $
+
+Avoid a reference to the wrapped make in the pkgsrc work directory from showing up
+in an installed file.  See ${WRKDIR}/gcc-4.4.1/libjava/contrib/aotcompile.py.in
+
+--- libjava/configure.orig	2010-04-02 14:18:06.000000000 -0400
++++ libjava/configure
+@@ -24517,7 +24517,7 @@ $as_echo "Python modules dir: ${python_m
+ 
+ 
+ # needed for aot-compile-rpm
+-MAKE=`which make`
++MAKE=${PKGSRC_MAKE}
+ 
+ 
+ # Check whether --enable-aot-compile-rpm was given.

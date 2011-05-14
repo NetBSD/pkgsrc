@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2011/05/14 20:19:47 wiz Exp $
+
+--- libgfortran/intrinsics/c99_functions.c.orig	2011-02-23 18:44:34.000000000 +0100
++++ libgfortran/intrinsics/c99_functions.c
+@@ -601,7 +601,7 @@
+   if (x > DBL_MAX || x < -DBL_MAX)
+     {
+ #ifdef HAVE_NEXTAFTERL
+-      static long double prechalf = nexafterl (0.5L, LDBL_MAX);
++      long double prechalf = nextafterl (0.5L, LDBL_MAX);
+ #else
+       static long double prechalf = 0.5L;
+ #endif
