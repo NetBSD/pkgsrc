@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10333 2011/05/14 03:09:25 taca Exp $
+$NetBSD: TODO,v 1.10334 2011/05/14 13:09:50 obache Exp $
 
 Suggested new packages
 ======================
@@ -409,7 +409,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacity-1.3.13
 	o autoconvert-0.3.16
 	o autogen-5.11.8
-	o avahi-0.6.28
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.9
