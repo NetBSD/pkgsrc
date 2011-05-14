@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.25 2011/03/23 15:46:36 obache Exp $
+$NetBSD: patch-ac,v 1.26 2011/05/14 16:49:45 bsiegert Exp $
 
 --- libltdl/config/ltmain.sh.orig	2009-11-16 13:23:18.000000000 +0000
 +++ libltdl/config/ltmain.sh
@@ -24,7 +24,34 @@ $NetBSD: patch-ac,v 1.25 2011/03/23 15:46:36 obache Exp $
  	    # These systems don't actually have a C or math library (as such)
  	    continue
  	    ;;
-@@ -6476,7 +6476,7 @@ func_mode_link ()
+@@ -6308,6 +6308,7 @@ func_mode_link ()
+ 	  func_arith $current - $age
+ 	  major=.$func_arith_result
+ 	  versuffix="$major.$age.$revision"
++	  versuffix2="$major.$age"
+ 	  ;;
+ 
+ 	osf)
+@@ -6368,8 +6369,10 @@ func_mode_link ()
+ 	  esac
+ 	  if test "$need_version" = no; then
+ 	    versuffix=
++	    versuffix2=
+ 	  else
+ 	    versuffix=".0.0"
++	    versuffix2=".0.0"
+ 	  fi
+ 	fi
+ 
+@@ -6377,6 +6380,7 @@ func_mode_link ()
+ 	if test "$avoid_version" = yes && test "$need_version" = no; then
+ 	  major=
+ 	  versuffix=
++	  versuffix2=
+ 	  verstring=""
+ 	fi
+ 
+@@ -6476,7 +6480,7 @@ func_mode_link ()
        if test "$build_libtool_libs" = yes; then
  	if test -n "$rpath"; then
  	  case $host in
