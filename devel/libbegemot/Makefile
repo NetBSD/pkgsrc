@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/07/14 12:56:01 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2011/05/14 20:21:19 hans Exp $
 #
 
 DISTNAME=	libbegemot-1.11
@@ -13,5 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+
+CFLAGS.SunOS=	-Du_int64_t=uint64_t
 
 .include "../../mk/bsd.pkg.mk"
