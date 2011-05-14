@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 2011/05/14 18:00:24 wiz Exp $
+
 --- libgfortran/intrinsics/c99_functions.c.orig	2009-04-10 01:23:07.000000000 +0200
 +++ libgfortran/intrinsics/c99_functions.c
 @@ -538,7 +538,7 @@
