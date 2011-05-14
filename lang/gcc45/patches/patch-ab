@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/05/14 20:19:47 wiz Exp $
+
+--- libgcc/config.host.orig	2010-04-01 23:02:18.000000000 -0400
++++ libgcc/config.host
+@@ -156,6 +156,8 @@ case ${host} in
+   # machine-specific sections may refine and add to this
+   # configuration.
+   ;;
++*-*-dragonfly*)
++  ;;
+ *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu*)
+   extra_parts="crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o"
+   ;;
+@@ -282,6 +284,10 @@ i[34567]86-*-freebsd*)
+ 	;;
+ x86_64-*-freebsd*)
+ 	;;
++i[34567]86-*-dragonfly*)
++	;;
++x86_64-*-dragonfly*)
++	;;
+ i[34567]86-*-netbsdelf*)
+ 	;;
+ i[34567]86-*-netbsd*)
