@@ -1,0 +1,30 @@
+$NetBSD: patch-ax,v 1.1 2011/05/14 16:17:46 hans Exp $
+
+--- xmms/playlist.c.orig	2007-11-16 22:51:30.000000000 +0100
++++ xmms/playlist.c	2010-01-16 00:31:37.850435192 +0100
+@@ -564,7 +564,7 @@ void playlist_play(void)
+ 		/* If there are entries */
+ 		if (g_list_length(skinlist)) {
+ 			/* Get a random value to select the skin to use */
+-			int randval = (gint)(random() / (RAND_MAX + 1.0) * (g_list_length(skinlist) + 1));
++			int randval = (gint)((double)rand() / (double)(RAND_MAX + 1) * (g_list_length(skinlist) + 1));
+ 			/* If the random value is 0, use the default skin */
+ 			/* Otherwise subtract 1 from the random value and */
+ 			/* select the skin */
+@@ -1693,14 +1693,14 @@ static GList *playlist_shuffle_list(GLis
+ 	for (node = list, i = 0; i < len; node = g_list_next(node), i++)
+ 		ptrs[i] = node;
+ 
+-	j = (int)(random() / (RAND_MAX + 1.0) * len); 
++	j = (int)((double)rand() / (double)(RAND_MAX + 1.0) * len); 
+ 	list = ptrs[j];
+ 	ptrs[j]->next = NULL;
+ 	ptrs[j] = ptrs[0];
+ 
+ 	for (i = 1; i < len; i++)
+ 	{
+-		j = (int)(random() / (RAND_MAX + 1.0) * (len - i));
++		j = (int)((double)rand() / (double)(RAND_MAX + 1.0) * (len - i));
+ 		list->prev = ptrs[i + j];
+ 		ptrs[i + j]->next = list;
+ 		list = ptrs[i + j];
