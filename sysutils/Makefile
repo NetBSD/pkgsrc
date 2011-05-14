@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.514 2011/05/13 13:25:31 obache Exp $
+# $NetBSD: Makefile,v 1.515 2011/05/14 23:12:12 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -233,6 +233,7 @@ SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Linux-Inotify2
 SUBDIR+=	p5-Mac-AppleScript
 SUBDIR+=	p5-Mac-AppleScript-Glue
+SUBDIR+=	p5-Ocsinventory-Agent
 SUBDIR+=	p5-Parse-Syslog
 SUBDIR+=	p5-SSH-Batch
 SUBDIR+=	p5-Server-Starter
