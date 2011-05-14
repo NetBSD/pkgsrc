@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10331 2011/05/13 12:47:23 ryoon Exp $
+$NetBSD: TODO,v 1.10332 2011/05/14 01:34:31 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -328,6 +328,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
+	o FlightCrew-0.7.1 [wip]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o ImageMagick-6.6.9.8
@@ -339,7 +340,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o Sigil-0.3.4
+	o Sigil-0.3.4 [wip]
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o XaoS-3.5
