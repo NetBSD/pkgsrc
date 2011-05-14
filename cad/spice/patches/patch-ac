@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2006/10/09 20:04:38 mlelstv Exp $
+$NetBSD: patch-ac,v 1.7 2011/05/14 18:45:54 hans Exp $
 
 --- src/include/misc.h.orig	1993-04-25 23:37:48.000000000 +0200
 +++ src/include/misc.h
@@ -41,7 +41,7 @@ $NetBSD: patch-ac,v 1.6 2006/10/09 20:04:38 mlelstv Exp $
  #    endif /* clearerr */
  #  endif /* HAS_CLEARERR */
  
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun))
  #  ifndef bzero
  extern int bzero();
  #  endif
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.6 2006/10/09 20:04:38 mlelstv Exp $
  extern void perror();
  #endif
  
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun))
  #ifdef HAS_TIME_
  #  ifdef HAS_BSDTIME
  extern char *timezone();
@@ -68,7 +68,7 @@ $NetBSD: patch-ac,v 1.6 2006/10/09 20:04:38 mlelstv Exp $
  
  #ifndef HAS_MEMAVL
  #  ifdef HAS_RLIMIT_
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun))
  extern char *sbrk();
 +#endif
  #  endif
