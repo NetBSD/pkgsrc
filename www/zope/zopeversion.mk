@@ -1,4 +1,4 @@
-# $NetBSD: zopeversion.mk,v 1.14 2011/05/14 02:54:39 taca Exp $
+# $NetBSD: zopeversion.mk,v 1.15 2011/05/14 02:56:33 taca Exp $
 #
 
 .if !defined(_ZOPEVERSION_MK)
@@ -57,7 +57,7 @@ ZOPE_VERSION_ACCEPTED?=	${ZOPE_VERSION_SUPPORTED}
 
 # current Zope version
 ZOPE29_VERSION=		2.9.12
-ZOPE210_VERSION=	2.10.7
+ZOPE210_VERSION=	2.10.13
 ZOPE211_VERSION=	2.11.2
 #ZOPE212_VERSION=	2.12.18
 #ZOPE213_VERSION=	2.13.7		# py26 py27
