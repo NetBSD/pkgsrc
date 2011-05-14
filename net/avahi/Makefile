@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:42:12 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/05/14 13:04:04 obache Exp $
 
-DISTNAME=		avahi-0.6.27
-PKGREVISION=		5
+DISTNAME=		avahi-0.6.30
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
@@ -28,6 +27,7 @@ PKGCONFIG_OVERRIDE+=	avahi-gobject.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-qt3.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-qt4.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-ui-gtk3.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-ui-sharp.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-ui.pc.in
 
@@ -38,7 +38,6 @@ BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 PLIST_SRC=		${PKGDIR}/PLIST
 PKG_SYSCONFSUBDIR=	avahi
 USE_LANGUAGES=		c c++
-MAKE_DIRS=		${PKG_SYSCONFDIR}/services
 
 PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}
 PKG_GROUPS=		${AVAHI_GROUP}
@@ -60,7 +59,9 @@ CONF_FILES+=		${PREFIX}/share/examples/avahi/hosts \
 			${PKG_SYSCONFDIR}/hosts
 CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dnsconfd.action \
 			${PKG_SYSCONFDIR}/avahi-dnsconfd.action
-CONF_FILES+=		${PREFIX}/share/examples/avahi/ssh.service \
+CONF_FILES+=		${PREFIX}/share/examples/avahi/services/sftp-ssh.service \
+			${PKG_SYSCONFDIR}/services/sftp-ssh.service
+CONF_FILES+=		${PREFIX}/share/examples/avahi/services/ssh.service \
 			${PKG_SYSCONFDIR}/services/ssh.service
 CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dbus.conf \
 			${PKG_SYSCONFBASE}/dbus-1/system.d/avahi-dbus.conf
@@ -82,27 +83,16 @@ CONFIGURE_ARGS+=	--disable-doxygen-html
 CONFIGURE_ARGS+=	--disable-xmltoman
 CONFIGURE_ARGS+=	--disable-autoipd
 CONFIGURE_ARGS+=	--enable-tests
-
-.if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-distro=none
-.endif
 
-INSTALLATION_DIRS+=	share/examples/avahi
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
+INSTALL_MAKE_FLAGS+=	dbusservicedir=${PREFIX}/share/examples/avahi
+
 INSTALLATION_DIRS+=	share/doc/avahi
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/services
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-daemon.conf \
-		${DESTDIR}${PREFIX}/share/examples/avahi
-	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/hosts \
-		${DESTDIR}${PREFIX}/share/examples/avahi
-	${INSTALL_DATA} ${WRKSRC}/avahi-dnsconfd/avahi-dnsconfd.action \
-		${DESTDIR}${PREFIX}/share/examples/avahi
-	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/ssh.service \
-		${DESTDIR}${PREFIX}/share/examples/avahi
-	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-dbus.conf \
-		${DESTDIR}${PREFIX}/share/examples/avahi/avahi-dbus.conf
 	${INSTALL_DATA} ${WRKSRC}/docs/HACKING ${DESTDIR}${PREFIX}/share/doc/avahi
 	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DESTDIR}${PREFIX}/share/doc/avahi
 	${INSTALL_DATA} ${WRKSRC}/docs/NEWS ${DESTDIR}${PREFIX}/share/doc/avahi
@@ -111,10 +101,12 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libdaemon+=	libdaemon>=0.14
 .include "../../devel/libdaemon/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
