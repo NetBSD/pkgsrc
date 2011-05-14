@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.8 2007/11/29 18:36:39 wiz Exp $
+$NetBSD: patch-am,v 1.9 2011/05/14 16:13:40 hans Exp $
 
---- configure.orig	2007-11-16 21:54:45.000000000 +0000
-+++ configure
+--- configure.orig	2007-11-16 22:54:45.000000000 +0100
++++ configure	2009-12-25 09:14:40.622056780 +0100
 @@ -33390,13 +33390,6 @@ _ACEOF
  
  		fi
@@ -21,7 +21,7 @@ $NetBSD: patch-am,v 1.8 2007/11/29 18:36:39 wiz Exp $
  		arch_type=ix86
  		case "$host" in
 -		        *-*-netbsd* | *-*openbsd*)
-+		        *-*-netbsd* | *-*openbsd* | *-*darwin*)
++		        *-*-netbsd* | *-*openbsd* | *-*darwin* | *-*solaris*)
  			;;
  			*)
  				ARCH_DEFINES="-DI386_ASSEM"
