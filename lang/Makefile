@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2011/02/22 08:52:37 obache Exp $
+# $NetBSD: Makefile,v 1.300 2011/05/14 20:20:28 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -56,6 +56,7 @@ SUBDIR+=	gcc3-objc
 SUBDIR+=	gcc34
 SUBDIR+=	gcc34-ada
 SUBDIR+=	gcc44
+SUBDIR+=	gcc45
 SUBDIR+=	gforth
 SUBDIR+=	ghc
 SUBDIR+=	gnat-aux
