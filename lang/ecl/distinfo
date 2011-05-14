@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.9 2011/02/11 01:28:41 asau Exp $
+$NetBSD: distinfo,v 1.10 2011/05/14 22:30:44 hans Exp $
 
 SHA1 (ecl-11.1.1.tar.gz) = 9c4c88683f6186f8152866033e6850e19eb8cc1f
 RMD160 (ecl-11.1.1.tar.gz) = e15dd8cf02cd6ad78ef35293df014363615fd4ad
 Size (ecl-11.1.1.tar.gz) = 5898523 bytes
+SHA1 (patch-aa) = 21ac292cfe5bb7a4687a6761c427349470473586
+SHA1 (patch-ab) = f0ac6475fb947ec45eec14b2cbb6f86937ea0652
