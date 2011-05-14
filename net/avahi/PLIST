@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/07/24 13:42:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/05/14 13:04:04 obache Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 bin/avahi-discover-standalone
@@ -98,11 +98,13 @@ share/examples/avahi/avahi-daemon.conf
 share/examples/avahi/avahi-dbus.conf
 share/examples/avahi/avahi-dnsconfd.action
 share/examples/avahi/hosts
-share/examples/avahi/ssh.service
+share/examples/avahi/services/sftp-ssh.service
+share/examples/avahi/services/ssh.service
 share/examples/rc.d/avahidaemon
 share/locale/bg/LC_MESSAGES/avahi.mo
 share/locale/ca/LC_MESSAGES/avahi.mo
 share/locale/cs/LC_MESSAGES/avahi.mo
+share/locale/da/LC_MESSAGES/avahi.mo
 share/locale/de/LC_MESSAGES/avahi.mo
 share/locale/el/LC_MESSAGES/avahi.mo
 share/locale/en_AU/LC_MESSAGES/avahi.mo
@@ -111,9 +113,12 @@ share/locale/en_GB/LC_MESSAGES/avahi.mo
 share/locale/en_NZ/LC_MESSAGES/avahi.mo
 share/locale/es/LC_MESSAGES/avahi.mo
 share/locale/fi/LC_MESSAGES/avahi.mo
+share/locale/fo/LC_MESSAGES/avahi.mo
 share/locale/fr/LC_MESSAGES/avahi.mo
 share/locale/gl/LC_MESSAGES/avahi.mo
+share/locale/he/LC_MESSAGES/avahi.mo
 share/locale/hu/LC_MESSAGES/avahi.mo
+share/locale/id/LC_MESSAGES/avahi.mo
 share/locale/it/LC_MESSAGES/avahi.mo
 share/locale/ja/LC_MESSAGES/avahi.mo
 share/locale/ms/LC_MESSAGES/avahi.mo
@@ -122,6 +127,7 @@ share/locale/pl/LC_MESSAGES/avahi.mo
 share/locale/pt_BR/LC_MESSAGES/avahi.mo
 share/locale/ro/LC_MESSAGES/avahi.mo
 share/locale/ru/LC_MESSAGES/avahi.mo
+share/locale/sl/LC_MESSAGES/avahi.mo
 share/locale/sr/LC_MESSAGES/avahi.mo
 share/locale/sr@latin/LC_MESSAGES/avahi.mo
 share/locale/sv/LC_MESSAGES/avahi.mo
