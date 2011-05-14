@@ -1,0 +1,23 @@
+--- src/include/os_sun.h.orig	1993-04-25 01:10:15.000000000 +0200
++++ src/include/os_sun.h	2011-05-14 20:00:05.515105748 +0200
+@@ -17,12 +17,19 @@ Copyright 1991 Regents of the University
+ #define HAS_BCOPY		/* bcopy( ), bzero( )			*/
+ #define HAS_BSDRANDOM		/* srandom( ) and random( )		*/
+ #define HAS_POSIXTTY		/* <termios.h>				*/
+-#define HAS_BSDDIRS		/* <sys/dir.h>				*/
++#define HAS_SYSVDIRS		/* <sys/dirent.h>			*/
+ #define HAS_BSDRUSAGE		/* getrusage( )				*/
+ #define HAS_BSDRLIMIT		/* getrlimit( )				*/
+ #define HAS_BSDSOCKETS		/* <net/inet.h>, socket( ), etc.	*/
++#define HAS_BSDTIME		/* gettimeofday( ) return time		*/
+ #define HAS_DUP2
++#define HAS_FLOAT_H		/* float.h				*/
+ #define HAS_GETWD		/* getwd(buf)				*/
++#define HAS_INTWAITSTATUS	/* wait(int *status)			*/
++#define HAS_LIMITS_H		/* limits.h exists			*/
++#define HAS_STDLIB		
++#define HAS_STDLIB
++#define HAS_STRCHR		/* strchr( ) instead of index( )	*/
+ #define HAS_STRINGS		/* use <strings.h> instead of <string.h> */
+ #define HAS_IEEE_SCALBN		/* Use "scalbn( )" for "scalb( )"	*/
+ 
