@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/05/14 02:58:08 taca Exp $
 ${ZOPE_DOC_BASE}/zeo/README.txt
 ${ZOPE_DOC_BASE}/zeo/ZopeREADME.txt
 ${ZOPE_DOC_BASE}/zeo/cache.txt
@@ -407,8 +407,6 @@ ${ZOPE_BASE}/lib/python/BTrees/tests/test_check.py
 ${ZOPE_BASE}/lib/python/BTrees/tests/test_check.pyc
 ${ZOPE_BASE}/lib/python/BTrees/tests/test_compare.py
 ${ZOPE_BASE}/lib/python/BTrees/tests/test_compare.pyc
-${ZOPE_BASE}/lib/python/ClientForm/ClientForm.py
-${ZOPE_BASE}/lib/python/ClientForm/ClientForm.pyc
 ${ZOPE_BASE}/lib/python/ClientForm/__init__.py
 ${ZOPE_BASE}/lib/python/ClientForm/__init__.pyc
 ${ZOPE_BASE}/lib/python/ComputedAttribute/_ComputedAttribute.so
@@ -746,6 +744,7 @@ ${ZOPE_BASE}/lib/python/OFS/subscribers.py
 ${ZOPE_BASE}/lib/python/OFS/subscribers.pyc
 ${ZOPE_BASE}/lib/python/OFS/tests/__init__.py
 ${ZOPE_BASE}/lib/python/OFS/tests/__init__.pyc
+${ZOPE_BASE}/lib/python/OFS/tests/export.xml
 ${ZOPE_BASE}/lib/python/OFS/tests/mime.types-1
 ${ZOPE_BASE}/lib/python/OFS/tests/mime.types-2
 ${ZOPE_BASE}/lib/python/OFS/tests/test.gif
@@ -1872,6 +1871,8 @@ ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/__init__.pyc
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/dtml/addTemporaryFolder.dtml
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/dtml/mountfail.dtml
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/help/TemporaryFolder.stx
+${ZOPE_BASE}/lib/python/Products/TemporaryFolder/mount.py
+${ZOPE_BASE}/lib/python/Products/TemporaryFolder/mount.pyc
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/patchfs.py
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/patchfs.pyc
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/www/tempfolder.gif
@@ -2182,6 +2183,8 @@ ${ZOPE_BASE}/lib/python/RestrictedPython/tests/testREADME.py
 ${ZOPE_BASE}/lib/python/RestrictedPython/tests/testREADME.pyc
 ${ZOPE_BASE}/lib/python/RestrictedPython/tests/testRestrictions.py
 ${ZOPE_BASE}/lib/python/RestrictedPython/tests/testRestrictions.pyc
+${ZOPE_BASE}/lib/python/RestrictedPython/tests/testUtiliities.py
+${ZOPE_BASE}/lib/python/RestrictedPython/tests/testUtiliities.pyc
 ${ZOPE_BASE}/lib/python/RestrictedPython/tests/unpack.py
 ${ZOPE_BASE}/lib/python/RestrictedPython/tests/unpack.pyc
 ${ZOPE_BASE}/lib/python/RestrictedPython/tests/verify.py
@@ -2849,6 +2852,8 @@ ${ZOPE_BASE}/lib/python/ZEO/tests/invalidations_while_connecting.test
 ${ZOPE_BASE}/lib/python/ZEO/tests/multi.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/multi.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/registerDB.test
+${ZOPE_BASE}/lib/python/ZEO/tests/servertesting.py
+${ZOPE_BASE}/lib/python/ZEO/tests/servertesting.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/speed.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/speed.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/stress.py
@@ -2865,6 +2870,8 @@ ${ZOPE_BASE}/lib/python/ZEO/tests/testTransactionBuffer.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/testTransactionBuffer.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/testZEO.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/testZEO.pyc
+${ZOPE_BASE}/lib/python/ZEO/tests/testZEO2.py
+${ZOPE_BASE}/lib/python/ZEO/tests/testZEO2.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/testZEOOptions.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/testZEOOptions.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/test_cache.py
@@ -3010,6 +3017,9 @@ ${ZOPE_BASE}/lib/python/ZODB/scripts/space.py
 ${ZOPE_BASE}/lib/python/ZODB/scripts/space.pyc
 ${ZOPE_BASE}/lib/python/ZODB/scripts/stats.py
 ${ZOPE_BASE}/lib/python/ZODB/scripts/stats.pyc
+${ZOPE_BASE}/lib/python/ZODB/scripts/strip_versions.py
+${ZOPE_BASE}/lib/python/ZODB/scripts/strip_versions.pyc
+${ZOPE_BASE}/lib/python/ZODB/scripts/strip_versions.test
 ${ZOPE_BASE}/lib/python/ZODB/scripts/tests.py
 ${ZOPE_BASE}/lib/python/ZODB/scripts/tests.pyc
 ${ZOPE_BASE}/lib/python/ZODB/scripts/zodbload.py
@@ -3377,6 +3387,8 @@ ${ZOPE_BASE}/lib/python/Zope2/App/startup.py
 ${ZOPE_BASE}/lib/python/Zope2/App/startup.pyc
 ${ZOPE_BASE}/lib/python/Zope2/App/tests/__init__.py
 ${ZOPE_BASE}/lib/python/Zope2/App/tests/__init__.pyc
+${ZOPE_BASE}/lib/python/Zope2/App/tests/testDoomedTransaction.py
+${ZOPE_BASE}/lib/python/Zope2/App/tests/testDoomedTransaction.pyc
 ${ZOPE_BASE}/lib/python/Zope2/App/tests/testExceptionHook.py
 ${ZOPE_BASE}/lib/python/Zope2/App/tests/testExceptionHook.pyc
 ${ZOPE_BASE}/lib/python/Zope2/ClassFactory.py
@@ -3675,16 +3687,38 @@ ${ZOPE_BASE}/lib/python/initgroups/__init__.pyc
 ${ZOPE_BASE}/lib/python/initgroups/_initgroups.so
 ${ZOPE_BASE}/lib/python/mechanize/_auth.py
 ${ZOPE_BASE}/lib/python/mechanize/_auth.pyc
+${ZOPE_BASE}/lib/python/mechanize/_beautifulsoup.py
+${ZOPE_BASE}/lib/python/mechanize/_beautifulsoup.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_clientcookie.py
 ${ZOPE_BASE}/lib/python/mechanize/_clientcookie.pyc
+${ZOPE_BASE}/lib/python/mechanize/_debug.py
+${ZOPE_BASE}/lib/python/mechanize/_debug.pyc
+${ZOPE_BASE}/lib/python/mechanize/_file.py
+${ZOPE_BASE}/lib/python/mechanize/_file.pyc
+${ZOPE_BASE}/lib/python/mechanize/_firefox3cookiejar.py
+${ZOPE_BASE}/lib/python/mechanize/_firefox3cookiejar.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_gzip.py
 ${ZOPE_BASE}/lib/python/mechanize/_gzip.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_headersutil.py
 ${ZOPE_BASE}/lib/python/mechanize/_headersutil.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_html.py
 ${ZOPE_BASE}/lib/python/mechanize/_html.pyc
+${ZOPE_BASE}/lib/python/mechanize/_http.py
+${ZOPE_BASE}/lib/python/mechanize/_http.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_pullparser.py
 ${ZOPE_BASE}/lib/python/mechanize/_pullparser.pyc
+${ZOPE_BASE}/lib/python/mechanize/_response.py
+${ZOPE_BASE}/lib/python/mechanize/_response.pyc
+${ZOPE_BASE}/lib/python/mechanize/_rfc3986.py
+${ZOPE_BASE}/lib/python/mechanize/_rfc3986.pyc
+${ZOPE_BASE}/lib/python/mechanize/_seek.py
+${ZOPE_BASE}/lib/python/mechanize/_seek.pyc
+${ZOPE_BASE}/lib/python/mechanize/_sockettimeout.py
+${ZOPE_BASE}/lib/python/mechanize/_sockettimeout.pyc
+${ZOPE_BASE}/lib/python/mechanize/_testcase.py
+${ZOPE_BASE}/lib/python/mechanize/_testcase.pyc
+${ZOPE_BASE}/lib/python/mechanize/_upgrade.py
+${ZOPE_BASE}/lib/python/mechanize/_upgrade.pyc
 ${ZOPE_BASE}/lib/python/mechanize/__init__.py
 ${ZOPE_BASE}/lib/python/mechanize/__init__.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_lwpcookiejar.py
@@ -3701,8 +3735,6 @@ ${ZOPE_BASE}/lib/python/mechanize/_request.py
 ${ZOPE_BASE}/lib/python/mechanize/_request.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_urllib2.py
 ${ZOPE_BASE}/lib/python/mechanize/_urllib2.pyc
-${ZOPE_BASE}/lib/python/mechanize/_urllib2_support.py
-${ZOPE_BASE}/lib/python/mechanize/_urllib2_support.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_util.py
 ${ZOPE_BASE}/lib/python/mechanize/_util.pyc
 ${ZOPE_BASE}/lib/python/mechanize/_useragent.py
@@ -3748,8 +3780,6 @@ ${ZOPE_BASE}/lib/python/persistent/tests/test_wref.py
 ${ZOPE_BASE}/lib/python/persistent/tests/test_wref.pyc
 ${ZOPE_BASE}/lib/python/persistent/wref.py
 ${ZOPE_BASE}/lib/python/persistent/wref.pyc
-${ZOPE_BASE}/lib/python/pytz/LICENSE.txt
-${ZOPE_BASE}/lib/python/pytz/README.txt
 ${ZOPE_BASE}/lib/python/pytz/__init__.py
 ${ZOPE_BASE}/lib/python/pytz/__init__.pyc
 ${ZOPE_BASE}/lib/python/pytz/reference.py
@@ -3828,6 +3858,8 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/Jujuy
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/La_Rioja
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/Mendoza
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/Rio_Gallegos
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/Salta
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/San_Luis
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/San_Juan
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/Tucuman
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Argentina/Ushuaia
@@ -3886,6 +3918,7 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Indianapolis
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Knox
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Marengo
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Petersburg
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Tell_City
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Vevay
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Vincennes
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Indiana/Winamac
@@ -3905,7 +3938,9 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Louisville
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Maceio
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Managua
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Manaus
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Marigot
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Martinique
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Matamoros
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Mazatlan
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Mendoza
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Menominee
@@ -3924,6 +3959,7 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Nome
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Noronha
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/North_Dakota/Center
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/North_Dakota/New_Salem
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Ojinaga
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Panama
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Pangnirtung
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Paramaribo
@@ -3941,10 +3977,13 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Resolute
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Rio_Branco
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Rosario
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Santiago
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Santarem
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Santa_Isabel
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Santo_Domingo
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Sao_Paulo
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Scoresbysund
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/Shiprock
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/St_Barthelemy
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/St_Johns
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/St_Kitts
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/America/St_Lucia
@@ -4003,6 +4042,7 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Dushanbe
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Gaza
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Harbin
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Hong_Kong
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Ho_Chi_Minh
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Hovd
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Irkutsk
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Istanbul
@@ -4013,7 +4053,9 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Kabul
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Kamchatka
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Karachi
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Kashgar
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Kathmandu
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Katmandu
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Kolkata
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Krasnoyarsk
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Kuala_Lumpur
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Kuching
@@ -4025,6 +4067,7 @@ ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Makassar
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Manila
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Muscat
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Nicosia
+${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Novokuznetsk
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Novosibirsk
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Omsk
 ${ZOPE_BASE}/lib/python/pytz/zoneinfo/Asia/Oral
@@ -4515,7 +4558,6 @@ ${ZOPE_BASE}/lib/python/zope/annotation/tests/annotations.py
 ${ZOPE_BASE}/lib/python/zope/annotation/tests/annotations.pyc
 ${ZOPE_BASE}/lib/python/zope/annotation/tests/test_attributeannotations.py
 ${ZOPE_BASE}/lib/python/zope/annotation/tests/test_attributeannotations.pyc
-${ZOPE_BASE}/lib/python/zope/app/EXTERNALS.txt
 ${ZOPE_BASE}/lib/python/zope/app/__init__.py
 ${ZOPE_BASE}/lib/python/zope/app/__init__.pyc
 ${ZOPE_BASE}/lib/python/zope/app/annotation/__init__.py
@@ -4767,6 +4809,8 @@ ${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/tests/test_runtimein
 ${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/tests/test_runtimeinfoview.pyc
 ${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/tests/test_servercontrolview.py
 ${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/tests/test_servercontrolview.pyc
+${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/tests/test_translationdomaincontrol.py
+${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/tests/test_translationdomaincontrol.pyc
 ${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/translationdomaincontrol.pt
 ${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/translationdomaincontrol.py
 ${ZOPE_BASE}/lib/python/zope/app/applicationcontrol/browser/translationdomaincontrol.pyc
@@ -5522,6 +5566,8 @@ ${ZOPE_BASE}/lib/python/zope/app/http/tests/test_delete.py
 ${ZOPE_BASE}/lib/python/zope/app/http/tests/test_delete.pyc
 ${ZOPE_BASE}/lib/python/zope/app/http/tests/test_functional_put.py
 ${ZOPE_BASE}/lib/python/zope/app/http/tests/test_functional_put.pyc
+${ZOPE_BASE}/lib/python/zope/app/http/tests/test_options.py
+${ZOPE_BASE}/lib/python/zope/app/http/tests/test_options.pyc
 ${ZOPE_BASE}/lib/python/zope/app/http/tests/test_put.py
 ${ZOPE_BASE}/lib/python/zope/app/http/tests/test_put.pyc
 ${ZOPE_BASE}/lib/python/zope/app/http/tests/test_traversers.py
@@ -5652,6 +5698,8 @@ ${ZOPE_BASE}/lib/python/zope/app/locales/it/LC_MESSAGES/zope.mo
 ${ZOPE_BASE}/lib/python/zope/app/locales/it/LC_MESSAGES/zope.po
 ${ZOPE_BASE}/lib/python/zope/app/locales/ja/LC_MESSAGES/zope.mo
 ${ZOPE_BASE}/lib/python/zope/app/locales/ja/LC_MESSAGES/zope.po
+${ZOPE_BASE}/lib/python/zope/app/locales/nl/LC_MESSAGES/zope.mo
+${ZOPE_BASE}/lib/python/zope/app/locales/nl/LC_MESSAGES/zope.po
 ${ZOPE_BASE}/lib/python/zope/app/locales/pl/LC_MESSAGES/zope.mo
 ${ZOPE_BASE}/lib/python/zope/app/locales/pl/LC_MESSAGES/zope.po
 ${ZOPE_BASE}/lib/python/zope/app/locales/pt_BR/LC_MESSAGES/zope.mo
@@ -6872,11 +6920,11 @@ ${ZOPE_BASE}/lib/python/zope/documenttemplate/untrusted/untrusted.py
 ${ZOPE_BASE}/lib/python/zope/documenttemplate/untrusted/untrusted.pyc
 ${ZOPE_BASE}/lib/python/zope/documenttemplate/ustr.py
 ${ZOPE_BASE}/lib/python/zope/documenttemplate/ustr.pyc
+${ZOPE_BASE}/lib/python/zope/dottedname/README.txt
 ${ZOPE_BASE}/lib/python/zope/dottedname/__init__.py
 ${ZOPE_BASE}/lib/python/zope/dottedname/__init__.pyc
 ${ZOPE_BASE}/lib/python/zope/dottedname/resolve.py
 ${ZOPE_BASE}/lib/python/zope/dottedname/resolve.pyc
-${ZOPE_BASE}/lib/python/zope/dottedname/resolve.txt
 ${ZOPE_BASE}/lib/python/zope/dottedname/tests.py
 ${ZOPE_BASE}/lib/python/zope/dottedname/tests.pyc
 ${ZOPE_BASE}/lib/python/zope/dublincore/__init__.py
@@ -8491,17 +8539,19 @@ ${ZOPE_BASE}/lib/python/zope/testbrowser/__init__.py
 ${ZOPE_BASE}/lib/python/zope/testbrowser/__init__.pyc
 ${ZOPE_BASE}/lib/python/zope/testbrowser/browser.py
 ${ZOPE_BASE}/lib/python/zope/testbrowser/browser.pyc
-${ZOPE_BASE}/lib/python/zope/testbrowser/dummymodules.py
-${ZOPE_BASE}/lib/python/zope/testbrowser/dummymodules.pyc
+${ZOPE_BASE}/lib/python/zope/testbrowser/fixed-bugs.txt
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/__init__.py
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/__init__.pyc
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/controls.html
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/forms.html
+${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/fragment.html
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/ftesting.zcml
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/navigate.html
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/notitle.html
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/oneform.html
+${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/radio.html
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/simple.html
+${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/textarea.html
 ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests/zope3logo.gif
 ${ZOPE_BASE}/lib/python/zope/testbrowser/interfaces.py
 ${ZOPE_BASE}/lib/python/zope/testbrowser/interfaces.pyc
@@ -8516,6 +8566,7 @@ ${ZOPE_BASE}/lib/python/zope/testing/cleanup.py
 ${ZOPE_BASE}/lib/python/zope/testing/cleanup.pyc
 ${ZOPE_BASE}/lib/python/zope/testing/doctest.py
 ${ZOPE_BASE}/lib/python/zope/testing/doctest.pyc
+${ZOPE_BASE}/lib/python/zope/testing/doctest.txt
 ${ZOPE_BASE}/lib/python/zope/testing/doctestunit.py
 ${ZOPE_BASE}/lib/python/zope/testing/doctestunit.pyc
 ${ZOPE_BASE}/lib/python/zope/testing/formparser.py
@@ -8560,6 +8611,10 @@ ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-pp-products/more/sampletests.
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-pp-products/more/sampletests.pyc
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-pp-products/sampletests.py
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-pp-products/sampletests.pyc
+${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-r/innertests.py
+${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-r/innertests.pyc
+${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-r/outertests.py
+${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-r/outertests.pyc
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex/README.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex/gc0.py
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex/gc0.pyc
@@ -8712,9 +8767,11 @@ ${ZOPE_BASE}/lib/python/zope/testing/testrunner-layers-ntd.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-layers.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-leaks-err.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-leaks.txt
+${ZOPE_BASE}/lib/python/zope/testing/testrunner-package-normalization.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-profiling-cprofiler.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-profiling.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-progress.txt
+${ZOPE_BASE}/lib/python/zope/testing/testrunner-reentrancy.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-repeat.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-simple.txt
 ${ZOPE_BASE}/lib/python/zope/testing/testrunner-test-selection.txt
