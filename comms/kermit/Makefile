@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2010/01/17 12:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2011/05/14 19:27:53 hans Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -52,6 +52,8 @@ BUILD_TARGET=	macosx10
 .  endif
 .elif ${OPSYS} == "Linux"
 BUILD_TARGET=	linux
+.elif ${OPSYS} == "SunOS"
+BUILD_TARGET=	solaris10g+openssl+shadow+pam+zlib
 .else
 BUILD_TARGET=	netbsd+openssl
 .include "../../security/openssl/buildlink3.mk"
