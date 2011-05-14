@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1146 2011/05/14 14:28:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1147 2011/05/14 18:56:31 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1882,3 +1882,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/liblinebreak to 2.1 [wiz 2011-05-14]
 	Updated net/avahi to 0.6.30 [obache 2011-05-14]
 	Updated chat/gajim to 0.14.1nb3 [obache 2011-05-14]
+	Updated graphics/shotwell to 0.9.3 [gls 2011-05-14]
