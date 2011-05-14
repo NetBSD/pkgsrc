@@ -1,3 +1,5 @@
+$NetBSD: patch-ax,v 1.2 2011/05/14 18:47:24 hans Exp $
+
 --- src/include/os_sun.h.orig	1993-04-25 01:10:15.000000000 +0200
 +++ src/include/os_sun.h	2011-05-14 20:00:05.515105748 +0200
 @@ -17,12 +17,19 @@ Copyright 1991 Regents of the University
