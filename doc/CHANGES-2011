@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1142 2011/05/13 23:29:47 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1143 2011/05/14 03:04:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1876,3 +1876,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/libdbusmenu-qt version 0.8.2 [markd 2011-05-13]
 	Updated print/tex-kix to 2010 [minskim 2011-05-13]
 	Updated print/tex-kix-doc to 2010 [minskim 2011-05-13]
+	Updated www/zope29 to 2.9.12 [taca 2011-05-14]
+	Updated www/zope210 to 2.10.13 [taca 2011-05-14]
+	Updated www/zope211 to 2.11.8 [taca 2011-05-14]
