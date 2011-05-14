@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
+$NetBSD: patch-ad,v 1.39 2011/05/14 16:49:45 bsiegert Exp $
 
---- libltdl/configure.orig	2010-06-19 07:24:26.000000000 +0000
+--- libltdl/configure.orig	2011-04-14 15:39:09.000000000 +0000
 +++ libltdl/configure
-@@ -4542,6 +4542,13 @@ else
+@@ -4542,13 +4542,20 @@ else
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -16,6 +16,14 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    amigaos*)
      # On AmigaOS with pdksh, this test takes hours, literally.
      # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
++  netbsd* | freebsd* | openbsd* | mirbsd* | darwin* | dragonfly*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
 @@ -4914,6 +4921,10 @@ gnu*)
    lt_cv_deplibs_check_method=pass_all
    ;;
@@ -27,7 +35,25 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
  hpux10.20* | hpux11*)
    lt_cv_file_magic_cmd=/usr/bin/file
    case $host_cpu in
-@@ -4967,7 +4978,7 @@ newos6*)
+@@ -4952,6 +4963,17 @@ linux* | k*bsd*-gnu)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
++midnightbsd*)
++  # might to use match_pattern like MirBSD, but there is no well-defined
++  # naming scheme for libraries yet, as the current one is deprecated, and
++  # the new one in a state of flux especially between mports and MirPorts
++  lt_cv_deplibs_check_method=pass_all
++  ;;
++
++mirbsd*)
++  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|\.so|_pic\.a)$'
++  ;;
++
+ netbsd*)
+   if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+     lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
+@@ -4967,7 +4989,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -36,7 +62,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    ;;
  
  openbsd*)
-@@ -7286,7 +7297,10 @@ for cc_temp in $compiler""; do
+@@ -7286,7 +7308,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
@@ -48,7 +74,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
  
  
  # Only perform the check for file, if the check method requires it
-@@ -7596,9 +7610,17 @@ $as_echo_n "checking for $compiler optio
+@@ -7596,9 +7621,17 @@ $as_echo_n "checking for $compiler optio
        ;;
  
      darwin* | rhapsody*)
@@ -67,7 +93,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
        ;;
  
      hpux*)
-@@ -7620,6 +7642,13 @@ $as_echo_n "checking for $compiler optio
+@@ -7620,6 +7653,13 @@ $as_echo_n "checking for $compiler optio
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -81,7 +107,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -7817,6 +7846,9 @@ $as_echo_n "checking for $compiler optio
+@@ -7817,6 +7857,9 @@ $as_echo_n "checking for $compiler optio
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -91,7 +117,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    *djgpp*)
      lt_prog_compiler_pic=
      ;;
-@@ -8230,6 +8262,11 @@ _LT_EOF
+@@ -8230,6 +8273,11 @@ _LT_EOF
        fi
        ;;
  
@@ -103,7 +129,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
      interix[3-9]*)
        hardcode_direct=no
        hardcode_shlibpath_var=no
-@@ -8316,7 +8353,7 @@ _LT_EOF
+@@ -8316,7 +8364,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -112,7 +138,40 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -8836,6 +8873,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -8703,6 +8751,11 @@ if test -z "$aix_libpath"; then aix_libp
+       hardcode_shlibpath_var=no
+       ;;
+ 
++      haiku*)
++        archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++        link_all_deplibs=yes
++        ;;
++
+     hpux9*)
+       if test "$GCC" = yes; then
+ 	archive_cmds='$RM $output_objdir/$soname~$CC -shared -fPIC ${wl}+b ${wl}$install_libdir -o $output_objdir/$soname $libobjs $deplibs $compiler_flags~test $output_objdir/$soname = $lib || mv $output_objdir/$soname $lib'
+@@ -8816,6 +8869,20 @@ rm -f core conftest.err conftest.$ac_obj
+       link_all_deplibs=yes
+       ;;
+ 
++    mirbsd*)
++      if test -f /usr/libexec/ld.so; then
++	hardcode_direct=yes
++	hardcode_shlibpath_var=no
++	hardcode_direct_absolute=yes
++	archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
++	archive_expsym_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
++	hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++	export_dynamic_flag_spec='${wl}-E'
++      else
++	ld_shlibs=no
++      fi
++      ;;
++
+     netbsd*)
+       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+ 	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
+@@ -8836,6 +8903,8 @@ rm -f core conftest.err conftest.$ac_obj
        ;;
  
      *nto* | *qnx*)
@@ -121,7 +180,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
        ;;
  
      openbsd*)
-@@ -9450,6 +9489,7 @@ beos*)
+@@ -9450,6 +9519,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -129,7 +188,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -9551,9 +9591,7 @@ freebsd1*)
+@@ -9551,9 +9621,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -140,7 +199,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    if test -x /usr/bin/objformat; then
      objformat=`/usr/bin/objformat`
    else
-@@ -9565,7 +9603,7 @@ freebsd* | dragonfly*)
+@@ -9565,7 +9633,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -149,7 +208,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -9588,13 +9626,24 @@ freebsd* | dragonfly*)
+@@ -9588,13 +9656,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -175,7 +234,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -9605,6 +9654,19 @@ gnu*)
+@@ -9605,6 +9684,19 @@ gnu*)
    hardcode_into_libs=yes
    ;;
  
@@ -195,7 +254,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
  hpux9* | hpux10* | hpux11*)
    # Give a soname corresponding to the major version so that dld.sl refuses to
    # link against other versions.
-@@ -9666,12 +9728,7 @@ interix[3-9]*)
+@@ -9666,12 +9758,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -209,17 +268,42 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -9762,15 +9819,14 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -9761,16 +9848,38 @@ rm -f core conftest.err conftest.$ac_obj
+   dynamic_linker='GNU/Linux ld.so'
    ;;
  
++midnightbsd*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  library_names_spec='${libname}${release}${shared_ext}${versuffix2} ${libname}${release}${shared_ext} $libname${shared_ext}'
++  finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  hardcode_into_libs=yes
++  ;;
++
++mirbsd*)
++  version_type=linux
++  sys_lib_search_path_spec="/usr/lib"
++  sys_lib_dlsearch_path_spec="/usr/lib"
++  need_lib_prefix=no
++  need_version=no
++  library_names_spec='${libname}${release}${shared_ext}${versuffix2} ${libname}${shared_ext}${versuffix2}'
++  finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  ;;
++
  netbsd*)
 -  version_type=sunos
 +  version_type=linux
    need_lib_prefix=no
    need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-   if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
@@ -227,7 +311,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
      soname_spec='${libname}${release}${shared_ext}$major'
      dynamic_linker='NetBSD ld.elf_so'
    fi
-@@ -9799,7 +9855,7 @@ newsos6)
+@@ -9799,7 +9908,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -236,7 +320,7 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -9807,7 +9863,7 @@ openbsd*)
+@@ -9807,7 +9916,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -245,3 +329,13 @@ $NetBSD: patch-ad,v 1.38 2011/03/23 15:46:36 obache Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
+@@ -11295,6 +11404,9 @@ else
+     # at 6.2 and later dlopen does load deplibs.
+     lt_cv_sys_dlopen_deplibs=yes
+     ;;
++  mirbsd*)
++    lt_cv_sys_dlopen_deplibs=yes
++    ;;
+   netbsd*)
+     lt_cv_sys_dlopen_deplibs=yes
+     ;;
