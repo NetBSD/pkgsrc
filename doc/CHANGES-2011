@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1148 2011/05/14 20:20:50 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1149 2011/05/14 23:12:40 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1884,3 +1884,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/gajim to 0.14.1nb3 [obache 2011-05-14]
 	Updated graphics/shotwell to 0.9.3 [gls 2011-05-14]
 	Added lang/gcc45 version 4.5.2 [wiz 2011-05-14]
+	Added sysutils/p5-Ocsinventory-Agent version 1.1.2 [abs 2011-05-14]
