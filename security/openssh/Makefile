@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.199 2011/02/16 17:45:08 taca Exp $
+# $NetBSD: Makefile,v 1.200 2011/05/15 04:17:15 taca Exp $
 
-DISTNAME=		openssh-5.8p1
-PKGNAME=		openssh-5.8.1
+DISTNAME=		openssh-5.8p2
+PKGNAME=		openssh-5.8.2
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
