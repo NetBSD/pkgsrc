@@ -1,8 +1,26 @@
-$NetBSD: patch-ab,v 1.6 2008/07/13 16:14:00 tonnerre Exp $
+$NetBSD: patch-ab,v 1.7 2011/05/15 09:59:18 hans Exp $
 
---- dvd.c.orig	2008-02-19 06:27:04.000000000 +0100
-+++ dvd.c
-@@ -166,7 +166,7 @@ int get_device( char *path, char *device
+--- dvd.c.orig	2009-06-08 22:15:34.000000000 +0200
++++ dvd.c	2011-05-15 12:46:00.612223980 +0200
+@@ -23,7 +23,7 @@
+  */
+ int get_dvd_name(const char *device, char *title)
+ {
+-
++  int i = 0;
+ #if defined( __sun )
+   /* title is actually in the device name */
+   char *new_title;
+@@ -31,7 +31,7 @@ int get_dvd_name(const char *device, cha
+   strncpy( title, new_title, sizeof(title)-1 );
+ #else
+   int  filehandle = 0;
+-  int  i = 0, last = 0;
++  int  last = 0;
+   int  bytes_read;
+ 
+   char tmp_buf[2048];
+@@ -173,7 +173,7 @@ int get_device( char *path, char *device
         if( !strcmp( path, buf.f_mntonname ) )
           {
             mounted = TRUE;
