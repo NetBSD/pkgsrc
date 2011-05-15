@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.210 2011/05/12 12:31:05 adam Exp $
+# $NetBSD: makevars.map,v 1.211 2011/05/15 16:30:59 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -541,7 +541,7 @@ PKGVERSION		Version [$system]
 PKGWILDCARD		Filemask [$system]
 PKG_ADMIN		ShellCommand [$system]
 PKG_APACHE		{ apache13 apache2 apache22 } [$system]
-PKG_APACHE_ACCEPTED	List of { apache13 apache2 apache22 }
+PKG_APACHE_ACCEPTED	List of { apache13 apache2 apache22 } [$package]
 PKG_APACHE_DEFAULT	{ apache13 apache2 apache22 } [$user]
 PKG_CONFIG		Yes [$user]
 # ^^ No, this is not the popular command from GNOME, but the setting
