@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.410 2011/04/30 12:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.411 2011/05/15 11:17:51 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -358,7 +358,6 @@ SUBDIR+=	stunnel
 SUBDIR+=	sudo
 SUBDIR+=	systrace-policies
 SUBDIR+=	tacshell
-SUBDIR+=	tarsnap
 SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
