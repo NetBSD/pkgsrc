@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/04/23 10:39:01 tron Exp $
+# $NetBSD: Makefile,v 1.39 2011/05/15 10:06:11 hans Exp $
 
 .include "dist.mk"
 
@@ -60,6 +60,7 @@ USE_TOOLS+=	gmake
 PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 .elif ${OPSYS} == "SunOS"
 PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
+CONFIGURE_ENV+=        ac_cv_header_netpacket_packet_h=no
 .elif ${OPSYS} == "HPUX"
 PY_PLATNAME=	hp-ux11
 .else
