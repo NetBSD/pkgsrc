@@ -1,0 +1,5 @@
+Tarsnap is a secure online backup service for BSD, Linux, OS X,
+Solaris, Cygwin, and can probably be compiled on many other UNIX-like
+operating systems. The Tarsnap client code provides a flexible and
+powerful command-line interface which can be used directly or via
+shell scripts.
