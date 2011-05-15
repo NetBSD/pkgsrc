@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/15 11:16:14 wiz Exp $
+bin/tarsnap
+bin/tarsnap-keygen
+bin/tarsnap-keymgmt
+bin/tarsnap-keyregen
+bin/tarsnap-recrypt
+man/man1/tarsnap-keygen.1
+man/man1/tarsnap-keymgmt.1
+man/man1/tarsnap-keyregen.1
+man/man1/tarsnap-recrypt.1
+man/man1/tarsnap.1
+man/man5/tarsnap.conf.5
+share/examples/tarsnap/tarsnap.conf.sample
