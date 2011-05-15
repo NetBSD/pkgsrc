@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+
+--- libjava/configure.orig	2011-03-25 17:07:00.000000000 +0000
++++ libjava/configure
+@@ -24653,7 +24653,7 @@ $as_echo "Python modules dir: ${python_m
+ 
+ 
+ # needed for aot-compile-rpm
+-MAKE=`which make`
++MAKE=${PKGSRC_MAKE}
+ 
+ 
+ # Check whether --enable-aot-compile-rpm was given.
