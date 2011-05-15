@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.154 2011/04/22 13:42:26 obache Exp $
+# $NetBSD: Makefile,v 1.155 2011/05/15 23:38:11 wiz Exp $
 #
 
 DISTNAME=		gnucash-2.4.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -32,6 +32,11 @@ REPLACE_PERL+=		src/optional/xsl/vcard-gnccustomer.pl
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+
+PKG_SYSCONFSUBDIR=	gnucash
+CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
+CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 
 GCONF_SCHEMAS+=	apps_gnucash_history.schemas
 GCONF_SCHEMAS+=	apps_gnucash_dialog_commodities.schemas
