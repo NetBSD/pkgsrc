@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1156 2011/05/15 11:20:17 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1157 2011/05/15 19:32:27 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1893,3 +1893,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/cyrus-imapd23 to 2.3.16nb4 [obache 2011-05-15]
 	Added devel/mscgen version 0.20 [wiz 2011-05-15]
 	Moved security/tarsnap to sysutils/tarsnap [wiz 2011-05-15]
+	Updated security/ruby-net-ssh to 2.1.4 [gls 2011-05-15]
