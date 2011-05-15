@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1153 2011/05/15 07:32:57 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1154 2011/05/15 08:40:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1890,3 +1890,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/openssh to 5.8.2 [taca 2011-05-15]
 	Updated print/tex-memoir to 3.6gpl6.0g [minskim 2011-05-15]
 	Updated print/tex-memoir-doc to 3.6gpl6.0g [minskim 2011-05-15]
+	Updated mail/cyrus-imapd23 to 2.3.16nb4 [obache 2011-05-15]
