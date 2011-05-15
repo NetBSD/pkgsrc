@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10335 2011/05/15 00:26:51 wiz Exp $
+$NetBSD: TODO,v 1.10336 2011/05/15 16:42:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o FlightCrew-0.7.1 [wip]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.6.9.8
+	o ImageMagick-6.6.9.9
 	o MAMEDiff-2.30
 	o Mesa-7.10.2
 	o MesaLib-7.10
@@ -429,6 +429,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bigreqsproto-1.1.1
 	o binutils-2.21
 	o bioperl-1.5.0
+	o bison-2.5
 	o bitlbee-3.0.2
 	o bitmap-1.0.5
 	o blender-2.57b
@@ -576,7 +577,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o f-spot-0.8.2
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o farsight2-0.0.27
+	o farsight2-0.0.28
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o feh-1.14
@@ -678,6 +679,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.8.0 [GNOME 2.34]
 	o glade3-3.10.0
 	o glom-1.14.2 [GNOME 2.26]
+	o glproto-1.4.13
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.0
@@ -710,7 +712,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnuchess-5.08
 	o gnumeric110-1.10.14
-	o gnutls-2.12.4
+	o gnutls-2.12.5
 	o goffice0.8-0.8.14
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -729,6 +731,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.1
 	o gssdp-0.10.0
+	o gst-plugins0.10-bad-0.10.22
+	o gst-plugins0.10-base-0.10.33
+	o gst-plugins0.10-good-0.10.29
+	o gst-plugins0.10-ugly-0.10.18
+	o gstreamer0.10-0.10.33
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.96.9
@@ -756,7 +763,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.8.5
 	o heimdal-1.2.1
-	o help2man-1.39.3
+	o help2man-1.39.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-7.4
@@ -1025,7 +1032,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Perl-Tidy-20101217
-	o p5-PerlMagick-6.6.9.8
+	o p5-PerlMagick-6.6.9.9
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1105,7 +1112,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
 	o py-psycopg2-2.4.1
-	o py-simplejson-2.1.5
+	o py-simplejson-2.1.6
 	o py-sybase-0.37
 	o py-twisted-11.0.0
 	o python-2.4.6
@@ -1310,6 +1317,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wcalc-2.4
 	o webkit-gtk-1.3.12
 	o webmin-1.550
+	o weechat-0.3.5
 	o weewm-0.01
 	o whohas-0.24
 	o windowlab-1.40
@@ -1326,7 +1334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.3
-	o x264-devel-20110507
+	o x264-devel-20110514
 	o xanalyser-1.30
 	o xapian-1.2.4
 	o xapian-omega-1.2.4
