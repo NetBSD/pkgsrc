@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/10/30 07:44:35 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/05/15 08:40:33 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.16
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-imapd/ \
 		ftp://ftp.cyrusimap.org/cyrus-imapd/OLD-VERSIONS/ \
@@ -9,6 +9,13 @@ MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-imapd/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/ \
 		http://www.t.ring.gr.jp/archives/net/mail/cyrus-mail/ \
 		ftp://ftp.t.ring.gr.jp/pub/net/mail/cyrus-mail/
+PATCHFILES+=	cyrus-imapd-2.3-patch-99e184a903e4f973c7358bc0c7e26fabb2237fd2
+PATCHFILES+=	cyrus-imapd-2.3-patch-82cbb4adddeafbf9998de110831ad593f94a5a06
+SITES.cyrus-imapd-2.3-patch-99e184a903e4f973c7358bc0c7e26fabb2237fd2=	\
+	-http://git.cyrusimap.org/cyrus-imapd/patch/?h=cyrus-imapd-2.3&id=99e184a903e4f973c7358bc0c7e26fabb2237fd2
+SITES.cyrus-imapd-2.3-patch-82cbb4adddeafbf9998de110831ad593f94a5a06=	\
+	-http://git.cyrusimap.org/cyrus-imapd/patch/?h=cyrus-imapd-2.3&id=82cbb4adddeafbf9998de110831ad593f94a5a06
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.cyrusimap.org/
