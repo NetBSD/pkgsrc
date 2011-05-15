@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1152 2011/05/15 04:18:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1153 2011/05/15 07:32:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1888,3 +1888,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added lang/gcc46 version 4.6.0 [wiz 2011-05-15]
 	Added editors/zim version 0.52 [ryoon 2011-05-15]
 	Updated security/openssh to 5.8.2 [taca 2011-05-15]
+	Updated print/tex-memoir to 3.6gpl6.0g [minskim 2011-05-15]
+	Updated print/tex-memoir-doc to 3.6gpl6.0g [minskim 2011-05-15]
