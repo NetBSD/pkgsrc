@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2011/04/14 12:23:40 obache Exp $
+$NetBSD: patch-aa,v 1.4 2011/05/15 12:04:24 obache Exp $
 
 --- configure.in.orig	2011-04-13 14:35:22.000000000 +0000
 +++ configure.in
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.3 2011/04/14 12:23:40 obache Exp $
  dnl -- this is needed on NetBSD and Linux, but seems to cause problems on atleast Solaris --
      case "${target_os}" in
 -        linux*|netbsd*)
-+        linux*|netbsd*|dragonfly*)
++        linux*|netbsd*|freebsd*|dragonfly*)
              AC_MSG_CHECKING(for perl cccdlflags needed on "${target_os}")
              eval `${PERL} -V:cccdlflags`
              PERL_CCCDLFLAGS="$cccdlflags"
