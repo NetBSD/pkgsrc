@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1150 2011/05/15 00:10:41 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1151 2011/05/15 03:11:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1886,3 +1886,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added lang/gcc45 version 4.5.2 [wiz 2011-05-14]
 	Added sysutils/p5-Ocsinventory-Agent version 1.1.2 [abs 2011-05-14]
 	Added lang/gcc46 version 4.6.0 [wiz 2011-05-15]
+	Added editors/zim version 0.52 [ryoon 2011-05-15]
