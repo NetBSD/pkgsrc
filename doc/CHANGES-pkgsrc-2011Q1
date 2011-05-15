@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.18 2011/05/13 17:09:10 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.19 2011/05/15 09:34:35 sbd Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -84,3 +84,7 @@ Pullup ticket #3428 - requested by bouyer
 mail/turba: fix incomplete installation
 Pullup ticket #3429 - requested by bouyer
 sysutils/xentools33: security patch
+Pullup ticket #3427 - requested by tron
+devel/apr security update
+Pullup ticket #3430 - requested by taca
+security/openssh security update
