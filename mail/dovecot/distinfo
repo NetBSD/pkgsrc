@@ -1,5 +1,14 @@
-$NetBSD: distinfo,v 1.116 2011/05/13 07:34:48 adam Exp $
+$NetBSD: distinfo,v 1.117 2011/05/15 13:19:06 obache Exp $
 
+SHA1 (dovecot-1.2-managesieve-0.11.12.tar.gz) = c632c74bfc5e0c0c0a00c1445a65cb012423ceba
+RMD160 (dovecot-1.2-managesieve-0.11.12.tar.gz) = f91a1fd059cebcb3c934192f1db57eb75ea4baa6
+Size (dovecot-1.2-managesieve-0.11.12.tar.gz) = 406261 bytes
+SHA1 (dovecot-1.2-sieve-0.1.18.tar.gz) = e661a6ab79b2987dedec1ed84cbd957755882ade
+RMD160 (dovecot-1.2-sieve-0.1.18.tar.gz) = f61b1ec03d861b964666a374a8c42a7b98c1fba1
+Size (dovecot-1.2-sieve-0.1.18.tar.gz) = 1052057 bytes
+SHA1 (dovecot-1.2.16-managesieve-0.11.12.diff.gz) = 54000390e45d0d3978158322ab6377f79cd87fa0
+RMD160 (dovecot-1.2.16-managesieve-0.11.12.diff.gz) = 58369056e8f0f094fd28adf64d4de4dada24a955
+Size (dovecot-1.2.16-managesieve-0.11.12.diff.gz) = 6459 bytes
 SHA1 (dovecot-1.2.17.tar.gz) = 457b16791a15e739c6bc8b02bc9c78f9ad794e39
 RMD160 (dovecot-1.2.17.tar.gz) = 59f619dba2aadef3cccd6ceb045a2e75a11700a2
 Size (dovecot-1.2.17.tar.gz) = 2983431 bytes
