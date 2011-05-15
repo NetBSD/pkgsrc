@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+
+--- libgfortran/configure.orig	2011-04-13 10:23:06.659661693 +0000
++++ libgfortran/configure
+@@ -25687,7 +25687,7 @@ $as_echo "#define SUPPORTS_WEAK 1" >>con
+ 
+   fi
+   case "$host" in
+-    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* )
++    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* | *-*-netbsd*)
+ 
+ $as_echo "#define GTHREAD_USE_WEAK 0" >>confdefs.h
+ 
