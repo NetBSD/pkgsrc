@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10334 2011/05/14 13:09:50 obache Exp $
+$NetBSD: TODO,v 1.10335 2011/05/15 00:26:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,6 +351,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o acme-091 [pkg/44771]
 	o acr-0.5.2
 	o acroread9-9.3.4 [wip]
+	o adobe-flash-plugin10.1-10.3
 	o adocman-0.13
 	o adtool-1.3
 	o advi-1.9.0
@@ -557,7 +558,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eog-3.0.1
 	o epic4-2.6
 	o epstool-3.08
-	o eric4-4.4.14
 	o eric5-5.1.2
 	o esh-0.8.5
 	o espeak-1.40
@@ -587,7 +587,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o file-5.06
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
-	o findutils-4.4.2
+	o findutils-4.5.10
 	o firefox-4.01
 	o fisg-0.3.12
 	o fixesproto-5.0
@@ -654,7 +654,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gap-4r4p9
 	o gated-3.6
 	o gbdfed-1.6
-	o gcc-4.6.0
 	o gcc44-4.4.6
 	o gcin-1.5.5
 	o gcombust-0.1.55
@@ -1044,6 +1043,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pdfjam-2.08
 	o pdmenu-1.2.87
 	o pen-0.17.3
+	o perl5-5.14.0
 	o pessulus-2.30.3 [GNOME 2.28]
 	o phonon-4.5.0
 	o phoon-20050629
@@ -1105,9 +1105,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
 	o py-psycopg2-2.4.1
-	o py-qt4-4.8.4
 	o py-simplejson-2.1.5
-	o py-sip-4.12.2
 	o py-sybase-0.37
 	o py-twisted-11.0.0
 	o python-2.4.6
@@ -1315,6 +1313,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.24
 	o windowlab-1.40
+	o wine-devel-1.3.20
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
