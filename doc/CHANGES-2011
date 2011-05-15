@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1155 2011/05/15 11:15:00 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1156 2011/05/15 11:20:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1892,3 +1892,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-memoir-doc to 3.6gpl6.0g [minskim 2011-05-15]
 	Updated mail/cyrus-imapd23 to 2.3.16nb4 [obache 2011-05-15]
 	Added devel/mscgen version 0.20 [wiz 2011-05-15]
+	Moved security/tarsnap to sysutils/tarsnap [wiz 2011-05-15]
