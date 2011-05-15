@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2011/03/16 14:43:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2011/05/15 23:38:11 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -8,8 +8,6 @@ bin/gnucash-env
 bin/gnucash-make-guids
 bin/gnucash-valgrind
 bin/update-gnucash-gconf
-etc/gnucash/config
-etc/gnucash/environment
 include/gnucash/Account.h
 include/gnucash/FreqSpec.h
 include/gnucash/GNCId.h
@@ -272,6 +270,8 @@ libexec/gnucash/overrides/gnucash-make-guids
 libexec/gnucash/overrides/guile
 man/man1/gnucash.1
 share/applications/gnucash.desktop
+share/examples/gnucash/gnucash/config
+share/examples/gnucash/gnucash/environment
 share/gconf/schemas/apps_gnucash_dialog_business_common.schemas
 share/gconf/schemas/apps_gnucash_dialog_commodities.schemas
 share/gconf/schemas/apps_gnucash_dialog_common.schemas
