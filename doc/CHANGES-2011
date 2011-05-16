@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1173 2011/05/16 19:21:33 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1174 2011/05/16 19:21:53 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1912,3 +1912,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/py-sqlite2 to 2.6.3 [adam 2011-05-16]
 	Added sysutils/bup version 0.24b [wiz 2011-05-16]
 	Added pkgtools/pkg_online-client version 0.12.1 [cheusov 2011-05-16]
+	Added pkgtools/pkg_online-server version 0.12.1 [cheusov 2011-05-16]
