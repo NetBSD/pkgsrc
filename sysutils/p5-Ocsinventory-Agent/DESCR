@@ -1,5 +1,0 @@
-ocsinventory-agent creates inventory data. This agent is the
-successor of the former linux_agent which was released with OCS
-1.01 and prior. It also replaces the Solaris/AIX/BSD unofficial
-agents. The detailed list of supported Operating System is available
-in the OCS Inventory Wiki.
