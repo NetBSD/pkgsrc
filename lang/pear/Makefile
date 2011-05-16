@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2011/03/23 14:59:33 taca Exp $
+# $NetBSD: Makefile,v 1.17 2011/05/16 13:05:01 taca Exp $
 #
 
 DISTNAME=	PEAR-1.9.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
