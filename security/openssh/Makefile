@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.200 2011/05/15 04:17:15 taca Exp $
+# $NetBSD: Makefile,v 1.201 2011/05/16 05:06:48 taca Exp $
 
 DISTNAME=		openssh-5.8p2
 PKGNAME=		openssh-5.8.2
+PKGREVISION=		1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -104,10 +105,18 @@ CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 CONFIGURE_ARGS+=	--without-skey
 .endif
 
-.if (${OPSYS} == "NetBSD") && exists(/usr/include/utmpx.h)
+.if (${OPSYS} == "NetBSD")
+.  if exists(/usr/include/utmpx.h)
 # if we have utmpx et al do not try to use login()
 CONFIGURE_ARGS+=	--disable-libutil
+.  endif
+#
+# NetBSD current after 2011/03/12 has incompatible strnvis(3) and
+# prior version don't have it.  So, disable use of strnvis(3) now.
+#
+CONFIGURE_ENV+=		ac_cv_func_strnvis=no
 .endif
+
 .if (${OPSYS} == "SunOS") && (${OS_VERSION} == "5.8" || ${OS_VERSION} == "5.9")
 CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp
 .endif
