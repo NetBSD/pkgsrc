@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2011/01/12 14:40:42 adam Exp $
+# $NetBSD: Makefile.common,v 1.26 2011/05/16 22:13:46 cheusov Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -23,6 +23,10 @@ HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+
+.if empty(PKGNAME:U:Mqt4-libs-*)
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=${QTVERSION}
+.endif
 
 QTPREFIX=		${PREFIX}/qt4
 
