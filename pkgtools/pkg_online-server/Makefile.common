@@ -1,0 +1,21 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/05/16 19:16:22 cheusov Exp $
+#
+# used by pkgtools/pkg_online-client/Makefile
+# used by pkgtools/pkg_online-server/Makefile
+
+DISTNAME=	pkg_online-${VERSION}
+MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
+
+VERSION=	0.12.1
+
+HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
+COMMENT=	Client/Server package searcher for pkgsrc
+
+LICENSE=		mit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DISTINFO_FILE=		${.CURDIR}/../../pkgtools/pkg_online-server/distinfo
+DESCR_SRC=		${.CURDIR}/../../pkgtools/pkg_online-server/DESCR.common
+
+USE_LANGUAGES=		# none
