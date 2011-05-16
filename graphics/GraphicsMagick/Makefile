@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2011/04/22 13:42:47 obache Exp $
+# $NetBSD: Makefile,v 1.39 2011/05/16 01:18:54 dmcmahill Exp $
 #
 
-DISTNAME=	GraphicsMagick-1.3.12
-PKGREVISION=	4
-CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
-		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/
-
+.include "Makefile.common"
+PKGREVISION=	1
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.graphicsmagick.org/
 COMMENT=	X application for displaying and manipulating images
@@ -27,29 +23,28 @@ PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in \
 			wand/GraphicsMagickWand.pc.in \
 			Magick++/lib/GraphicsMagick++.pc.in
 
-CONFIGURE_ARGS+=	--without-perl
-
 TEST_TARGET=	check
 
 FIND_PREFIX:=	URW_FONTS_DIR=urw-fonts
 .include "../../mk/find-prefix.mk"
 
+.include "options.mk"
+
+CONFIGURE_ARGS+=	--without-perl
+CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
+CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
+
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/libwmf/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
