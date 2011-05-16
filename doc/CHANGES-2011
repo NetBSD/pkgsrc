@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1175 2011/05/16 21:31:19 shattered Exp $
+$NetBSD: CHANGES-2011,v 1.1176 2011/05/16 22:05:14 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1914,3 +1914,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added pkgtools/pkg_online-client version 0.12.1 [cheusov 2011-05-16]
 	Added pkgtools/pkg_online-server version 0.12.1 [cheusov 2011-05-16]
 	Updated finance/kmymoney2 to 1.0.5 [shattered 2011-05-16]
+	Added pkgtools/nih version 0.7.1 [cheusov 2011-05-16]
