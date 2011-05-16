@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1166 2011/05/16 13:05:42 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1167 2011/05/16 13:09:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1903,3 +1903,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/clive to 2.3.0.3 [wiz 2011-05-16]
 	Added databases/mysql-workbench version 5.2.33 [adam 2011-05-16]
 	Updated lang/pear to 1.9.2nb2 [taca 2011-05-16]
+	Updated lang/php53 to 5.3.6nb1 [taca 2011-05-16]
