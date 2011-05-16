@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/04/26 14:43:27 abs Exp $
+# $NetBSD: Makefile,v 1.9 2011/05/16 10:03:24 abs Exp $
 
 DISTNAME=	ack-1.94
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
@@ -17,6 +17,10 @@ USE_TOOLS+=		perl
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/ack/.packlist
 REPLACE_PERL+=		ack
+
+# Avoid ack regenerating itself and frustrating REPLACE_PERL setting
+post-configure:
+	    ${TOUCH} ${WRKSRC}/ack
 
 DEPENDS+=	p5-File-Next>=0.4:../../devel/p5-File-Next
 DEPENDS+=	p5-Term-ANSIColor-[0-9]*:../../devel/p5-Term-ANSIColor
