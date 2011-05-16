@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1164 2011/05/16 11:10:14 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1165 2011/05/16 12:43:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/openssh to 5.8.2nb1 [taca 2011-05-16]
 	Updated lang/mono to 2.10.1nb1 [obache 2011-05-16]
 	Updated net/clive to 2.3.0.3 [wiz 2011-05-16]
+	Added databases/mysql-workbench version 5.2.33 [adam 2011-05-16]
