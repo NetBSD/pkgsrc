@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1161 2011/05/16 03:05:20 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1162 2011/05/16 05:07:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/capistrano to 2.6.0 [gls 2011-05-15]
 	Updated finance/gnucash to 2.4.5nb2 [wiz 2011-05-15]
 	Updated net/mikutter to 0.0.3.4 [obache 2011-05-16]
+	Updated security/openssh to 5.8.2nb1 [taca 2011-05-16]
