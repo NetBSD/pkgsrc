@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2011/04/22 13:42:28 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2011/05/16 06:18:13 obache Exp $
 
 BUILDLINK_TREE+=	mono
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.mono?=	../../lang/mono
 ALL_ENV+=			MONO_SHARED_DIR=${WRKDIR:Q}
 BUILDLINK_CONTENTS_FILTER.mono+=	${EGREP} '(^include/|^lib/)'
 
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .endif # MONO_BUILDLINK3_MK
 
