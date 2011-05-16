@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1168 2011/05/16 13:14:21 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1169 2011/05/16 13:22:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1905,3 +1905,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/pear to 1.9.2nb2 [taca 2011-05-16]
 	Updated lang/php53 to 5.3.6nb1 [taca 2011-05-16]
 	Updated www/php-apc to 3.1.9 [taca 2011-05-16]
+	Updated net/pear-Net_SMTP to 1.5.2 [taca 2011-05-16]
+	Updated graphics/pear-Image_Color to 1.0.4nb1 [taca 2011-05-16]
+	Updated graphics/pear-Image_Canvas to 0.3.3 [taca 2011-05-16]
