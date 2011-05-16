@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/05/07 13:57:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/05/16 03:05:04 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -56,6 +56,11 @@ share/mikutter/core/miku/primitive.rb
 share/mikutter/core/miku/symbol.rb
 share/mikutter/core/miku/symboltable.rb
 share/mikutter/core/miku/yamlisp.rb
+share/mikutter/core/mui/cairo_cell_renderer_message.rb
+share/mikutter/core/mui/cairo_coordinate_module.rb
+share/mikutter/core/mui/cairo_miracle_painter.rb
+share/mikutter/core/mui/cairo_pseudo_message_widget.rb
+share/mikutter/core/mui/cairo_timeline.rb
 share/mikutter/core/mui/gtk_contextmenu.rb
 share/mikutter/core/mui/gtk_crud.rb
 share/mikutter/core/mui/gtk_extension.rb
@@ -73,6 +78,7 @@ share/mikutter/core/mui/gtk_prioritybox.rb
 share/mikutter/core/mui/gtk_selectbox.rb
 share/mikutter/core/mui/gtk_skin.rb
 share/mikutter/core/mui/gtk_timeline.rb
+share/mikutter/core/mui/gtk_timeline_utils.rb
 share/mikutter/core/mui/gtk_userlist.rb
 share/mikutter/core/mui/gtk_webicon.rb
 share/mikutter/core/plugin/ChangeLog
