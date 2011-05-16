@@ -1,0 +1,18 @@
+NIH Invented Here :-)
+This is a package manager for pkgsrc.
+
+Available commands:
+   nih help            - Display help message
+   nih refresh         - Download pkg_summary and SHA512 files
+   nih install         - Install or update packages
+   nih uninstall       - Uninstall packages
+   nih verify          - Verify packages integrity
+   nih status          - Show status of installed packages
+   nih info            - Show information about packages
+   nih meta            - Output available or installed meta packages
+   nih search          - Powerful search in packages
+   nih leaf            - Output or remove autoinstalled leaf packages
+   nih list            - List packages
+   nih mark            - Mark packages
+   nih deps            - Show dependencies
+   nih clean-cache     - Clean-up cache directory with binaries
