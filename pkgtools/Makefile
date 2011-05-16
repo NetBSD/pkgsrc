@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2011/05/11 20:07:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.99 2011/05/16 19:20:43 cheusov Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -33,6 +33,8 @@ SUBDIR+=	pkg_install
 SUBDIR+=	pkg_install-info
 SUBDIR+=	pkg_leaves
 SUBDIR+=	pkg_notify
+SUBDIR+=	pkg_online-client
+SUBDIR+=	pkg_online-server
 SUBDIR+=	pkg_regress
 SUBDIR+=	pkg_rolling-replace
 SUBDIR+=	pkg_select
