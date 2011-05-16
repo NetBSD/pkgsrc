@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/04/22 13:42:19 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/05/16 01:35:10 obache Exp $
 
 BUILDLINK_TREE+=	gstreamer0.10
 
@@ -18,13 +18,6 @@ pkgbase := gstreamer0.10
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
-# PR#44108 gst-inspect hang up on DragonFly BSD.
-.include "../../mk/bsd.fast.prefs.mk"
-.if ${OPSYS} == "DragonFly"
-ALL_ENV+=	GST_REGISTRY_FORK=no
-.endif
-
 .endif # GSTREAMER0.10_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gstreamer0.10
