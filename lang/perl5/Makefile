@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2011/04/07 04:03:57 taca Exp $
+# $NetBSD: Makefile,v 1.172 2011/05/16 07:59:04 abs Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -70,6 +70,7 @@ PERL5_SCRIPTDIR=	${PERL5_PERLBASE}/bin
 SUBST_VARS.policysh+=	PERL5_SCRIPTDIR
 SUBST_VARS.policysh+=	PERL5_PERLBASE
 SUBST_VARS.policysh+=	PERL5_SITEBASE
+SUBST_VARS.policysh+=	PERL5_SITEBIN
 SUBST_VARS.policysh+=	PERL5_VENDORBASE
 SUBST_VARS.policysh+=	PERL5_PRIVLIB
 SUBST_VARS.policysh+=	PERL5_SITELIB

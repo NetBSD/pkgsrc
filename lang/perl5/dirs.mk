@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1 2010/08/27 05:27:37 sno Exp $
+# $NetBSD: dirs.mk,v 1.2 2011/05/16 07:59:04 abs Exp $
 #
 # Provide typical required Perl directories
 
@@ -27,6 +27,8 @@ PERL5_SITEBASE=		${PERL5_SITEPREFIX}/lib/perl5/site_perl
 .else
 PERL5_SITEBASE=		${PERL5_SITEPREFIX}
 .endif
+
+PERL5_SITEBIN?=		${PERL5_SITEBASE}/bin
 
 PERL5_PRIVLIB=		${PERL5_PERLBASE}/${PERL5_API_VERS}
 PERL5_VENDORLIB=	${PERL5_VENDORBASE}/${PERL5_API_VERS}
