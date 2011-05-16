@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/12/19 03:02:25 taca Exp $
+$NetBSD: distinfo,v 1.9 2011/05/16 13:10:56 taca Exp $
 
-SHA1 (php-apc/apc-3.1.6.tgz) = 24993518b454bda7b4773c3a86bfdfc0676f3106
-RMD160 (php-apc/apc-3.1.6.tgz) = ca65c0686f506afff3407f337e7c5edeccf13b2b
-Size (php-apc/apc-3.1.6.tgz) = 148835 bytes
+SHA1 (php-apc/apc-3.1.9.tgz) = 417b95e63496de7f785b4917166098c6ac996008
+RMD160 (php-apc/apc-3.1.9.tgz) = 67288c957a0234a82912f06e51c6f60f4ed4c66c
+Size (php-apc/apc-3.1.9.tgz) = 155540 bytes
