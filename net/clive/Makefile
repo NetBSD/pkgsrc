@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2011/03/08 21:21:35 reed Exp $
+# $NetBSD: Makefile,v 1.38 2011/05/16 11:10:04 wiz Exp $
 #
 
-DISTNAME=	clive-2.2.23
+DISTNAME=	clive-2.3.0.3
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://clive.googlecode.com/files/
 
@@ -10,18 +10,30 @@ HOMEPAGE=	http://clive.sourceforge.net/
 COMMENT=	Command line video extraction tool for user-uploaded video hosts
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	p5-BerkeleyDB>=0.34:../../databases/p5-BerkeleyDB
-DEPENDS+=	p5-Class-Singleton-[0-9]*:../../devel/p5-Class-Singleton
-DEPENDS+=	p5-Getopt-ArgvFile-[0-9]*:../../devel/p5-Getopt-ArgvFile
-DEPENDS+=	p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
-DEPENDS+=	p5-HTML-Parser>=2.37:../../www/p5-HTML-Parser
-DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
-DEPENDS+=	p5-URI>=1.37:../../www/p5-URI
-DEPENDS+=	p5-WWW-Curl>=4.05:../../www/p5-WWW-Curl
+DEPENDS+=	quvi-[0-9]*:../../net/quvi
+DEPENDS+=	curl-[0-9]*:../../www/curl
+DEPENDS+=	p5-JSON-XS>=2.3:../../converters/p5-JSON-XS
+DEPENDS+=	p5-Getopt-ArgvFile>=1.11:../../devel/p5-Getopt-ArgvFile
+DEPENDS+=	p5-version>=0.77:../../devel/p5-version
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/clive/.packlist
+INSTALLATION_DIRS=	share/examples/clive
+
+CONF_FILES=	${PREFIX}/share/examples/clive/cliverc ${PKG_SYSCONFDIR}/cliverc
+
+SUBST_CLASSES+=		config
+SUBST_SED.config+=	-e "s,/usr/local/share/clive/cliverc,${PKG_SYSCONFDIR}/cliverc,"
+SUBST_FILES.config+=	bin/clive
+SUBST_STAGE.config=	pre-build
+SUBST_MESSAGE.config=	Fixing path to global config file.
+
+post-build:
+	sed "s,/usr/,${PREFIX}/," ${WRKSRC}/examples/cliverc > ${WRKSRC}/cliverc
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/cliverc ${DESTDIR}${PREFIX}/share/examples/clive
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
