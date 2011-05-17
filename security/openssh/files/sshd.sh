@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sshd.sh,v 1.12 2011/05/16 05:06:49 taca Exp $
+# $NetBSD: sshd.sh,v 1.13 2011/05/17 03:26:52 taca Exp $
 #
 # PROVIDE: sshd
 # REQUIRE: DAEMON LOGIN
@@ -42,13 +42,14 @@ sshd_keygen()
 	else
 		${keygen_command} -t rsa -f @PKG_SYSCONFDIR@/ssh_host_rsa_key -N ''
 	fi
-
+/* HAVE_ECDSA_START */
 	if [ -f @PKG_SYSCONFDIR@/ssh_host_ecdsa_key ]; then
 		@ECHO@ "You already have a ECDSA host key in @PKG_SYSCONFDIR@/ssh_host_ecdsa_key"
 		@ECHO@ "Skipping protocol version 2 ECDSA Key Generation"
 	else
 		${keygen_command} -t ecdsa -f @PKG_SYSCONFDIR@/ssh_host_ecdsa_key -N ''
 	fi
+/* HAVE_ECDSA_STOP */
 	)
 }
 
