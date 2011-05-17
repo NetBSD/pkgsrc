@@ -1,0 +1,8 @@
+This module provides an implentation of the LOC's spec on how to convert
+metadata between MARC and Dublin Core format. The spec for converting MARC to
+Dublin Core is available at: http://www.loc.gov/marc/marc2dc.html, and from DC
+to MARC: http://www.loc.gov/marc/dccross.html.
+
+NB: The conversion cannot be done in a round-trip manner. i.e. Doing a
+conversion from MARC to DC, then trying to go back to MARC will not yield the
+original record.
