@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1179 2011/05/17 12:02:36 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1180 2011/05/17 16:09:21 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1918,3 +1918,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/openssh to 5.8.2nb2 [taca 2011-05-17]
 	Updated databases/py-psycopg2 to 2.4.1 [adam 2011-05-17]
 	Updated inputmethod/ibus-anthy to 1.2.6 [obache 2011-05-17]
+	Updated emulators/suse113_freetype2 to 11.3nb2 [chs 2011-05-17]
