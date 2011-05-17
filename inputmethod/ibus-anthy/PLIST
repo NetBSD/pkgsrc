@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 01:50:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/17 11:58:44 obache Exp $
 ${PYSITELIB}/_anthy.la
 ${PYSITELIB}/anthy.py
 libexec/ibus-engine-anthy
 libexec/ibus-setup-anthy
+share/ibus-anthy/dicts/oldchar.t
 share/ibus-anthy/dicts/symbol.t
 share/ibus-anthy/engine/engine.py
 share/ibus-anthy/engine/engine.pyc

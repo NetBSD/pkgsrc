@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/12/01 11:16:26 obache Exp $
+$NetBSD: distinfo,v 1.6 2011/05/17 11:58:44 obache Exp $
 
-SHA1 (ibus-anthy-1.2.5.tar.gz) = 09fb9831e58dde8de7d489e7d405323b390568db
-RMD160 (ibus-anthy-1.2.5.tar.gz) = 113a4446a505da13db8a91e0cf69e631c9c05671
-Size (ibus-anthy-1.2.5.tar.gz) = 500228 bytes
+SHA1 (ibus-anthy-1.2.6.tar.gz) = 3ae6f3c8bd988c7e7f1e2911a8f32fa81ef74220
+RMD160 (ibus-anthy-1.2.6.tar.gz) = 540968008a62f67126771471fb02a65c0c210f11
+Size (ibus-anthy-1.2.6.tar.gz) = 519488 bytes
