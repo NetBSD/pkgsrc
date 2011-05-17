@@ -1,0 +1,2 @@
+This module provides a tied hash interface and some convenience
+functions for using a memcached cache to memoize functions.
