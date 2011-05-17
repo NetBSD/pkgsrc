@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2011/04/08 14:09:23 taca Exp $
+# $NetBSD: Makefile.common,v 1.10 2011/05/17 15:12:29 bouyer Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -23,6 +23,7 @@ DHCP_HOME?=		${VARBASE}/db/isc-dhcp
 DHCP_PID?=		${VARBASE}/run/isc-dhcp
 PKG_SYSCONFSUBDIR=	dhcp
 
+USE_TOOLS+=		gmake
 USE_LANGUAGES+=		c c++
 
 PATCHDIR=		${.CURDIR}/../isc-dhcp4/patches
