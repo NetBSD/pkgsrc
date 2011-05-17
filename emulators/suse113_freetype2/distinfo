@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2010/11/02 16:53:52 chs Exp $
+$NetBSD: distinfo,v 1.3 2011/05/17 16:08:52 chs Exp $
 
-SHA1 (suse113/i586/libfreetype6-2.3.12-7.2.1.i586.rpm) = fb80303c9170ecf013e8d0ef2dd1bf56add77b1a
-RMD160 (suse113/i586/libfreetype6-2.3.12-7.2.1.i586.rpm) = a32d84675ff4a02094a684926c2c0f460077e40a
-Size (suse113/i586/libfreetype6-2.3.12-7.2.1.i586.rpm) = 372530 bytes
-SHA1 (suse113/x86_64/libfreetype6-2.3.12-7.2.1.x86_64.rpm) = 4f53cb8e33cbdf337bf33b2f6f7bf0380e91eb67
-RMD160 (suse113/x86_64/libfreetype6-2.3.12-7.2.1.x86_64.rpm) = c0e38f5dbaf39dce545ccb886d0cd6f0892c34d0
-Size (suse113/x86_64/libfreetype6-2.3.12-7.2.1.x86_64.rpm) = 369538 bytes
+SHA1 (suse113/i586/libfreetype6-2.3.12-7.4.1.i586.rpm) = 559aa81b79e13e5cc341dca6a9ee8b6cc1672626
+RMD160 (suse113/i586/libfreetype6-2.3.12-7.4.1.i586.rpm) = f2f2224ae76b270f8df18470c13e87aa07280b8f
+Size (suse113/i586/libfreetype6-2.3.12-7.4.1.i586.rpm) = 372730 bytes
+SHA1 (suse113/x86_64/libfreetype6-2.3.12-7.4.1.x86_64.rpm) = cc872c9b7977127233cfc8bb4acfb76beefed300
+RMD160 (suse113/x86_64/libfreetype6-2.3.12-7.4.1.x86_64.rpm) = b6cb7454a4ca7c4cd83fddb6288440ab3598b46a
+Size (suse113/x86_64/libfreetype6-2.3.12-7.4.1.x86_64.rpm) = 369891 bytes
