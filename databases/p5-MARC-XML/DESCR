@@ -1,0 +1,7 @@
+The MARC-XML distribution is an extension to the MARC-Record distribution for
+working with MARC21 data that is encoded as XML. The XML encoding used is the
+MARC21slim schema supplied by the Library of Congress. More information may be
+obtained here: http://www.loc.gov/standards/marcxml/
+
+This version of MARC-XML supersedes an the versions ending with 0.25 which were
+used with the MARC.pm framework. MARC-XML now uses MARC::Record exclusively.
