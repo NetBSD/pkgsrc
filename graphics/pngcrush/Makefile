@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/03/23 09:00:23 adam Exp $
+# $NetBSD: Makefile,v 1.47 2011/05/17 07:23:46 adam Exp $
 
 DISTNAME=	pngcrush-1.7.15
 PKGNAME=	${DISTNAME:C/-nolib//}
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://pmt.sourceforge.net/pngcrush/index.html
 COMMENT=	Optimizer for PNG (Portable Network Graphics) files
+LICENSE=	png-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,5 +24,5 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pngcrush ${DESTDIR}${PREFIX}/bin
 
-.include "../../graphics/png/buildlink3.mk"
+#.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
