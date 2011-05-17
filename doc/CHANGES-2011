@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1176 2011/05/16 22:05:14 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1177 2011/05/17 03:27:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1915,3 +1915,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added pkgtools/pkg_online-server version 0.12.1 [cheusov 2011-05-16]
 	Updated finance/kmymoney2 to 1.0.5 [shattered 2011-05-16]
 	Added pkgtools/nih version 0.7.1 [cheusov 2011-05-16]
+	Updated security/openssh to 5.8.2nb2 [taca 2011-05-17]
