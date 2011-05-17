@@ -1,0 +1,14 @@
+This is a sub-module to PDF::Reuse. It creates barcode "images" to be used in
+PDF documents. It uses GD::Barcode and its sub-modules: GD::Barcode::Code39,
+COOP2of5, EAN13 and so on, to calculate the barcode pattern. For Code128 it uses
+Barcode::Code128.
+
+Normally the barcodes are displayed on a white background and with the
+characters under the bars. You can rotate the "image", make it smaller or
+bigger, prolong the bars and change the background. (But then, don't forget to
+test that your barcode scanner still understands it.)
+
+If you don't change the size of the "image", the bars are approximately 24
+pixels high (the guard bars a few pixels longer) and the box/background is 38
+pixels high and something like 20 pixels wider than the barcodes. The text
+under the bars are 10 pixels high.
