@@ -1,0 +1,5 @@
+This is an objected-oriented Perl interface to GraphicsMagick, a fork of
+ImageMagick. It provides an interface similar to that PerlMagick provides
+to ImageMagick, but wit a different class name.
+Use the module to read, manipulate, or write an image or image sequence from
+within a Perl script. This makes it suitable for Web CGI scripts.
