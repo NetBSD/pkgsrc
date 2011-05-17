@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2011/05/09 09:55:14 manu Exp $
+$NetBSD: patch-aa,v 1.3 2011/05/17 12:41:16 manu Exp $
 --- lib/libperfuse/Makefile.orig	2011-05-09 11:44:28.000000000 +0200
 +++ lib/libperfuse/Makefile	2011-05-09 11:44:35.000000000 +0200
 @@ -1,8 +1,8 @@
- # $NetBSD: patch-aa,v 1.2 2011/05/09 09:55:14 manu Exp $
+ # $NetBSD: patch-aa,v 1.3 2011/05/17 12:41:16 manu Exp $
  
  LIB=            perfuse
 -LIBDPLIBS+=     puffs	${.CURDIR}/../libpuffs
