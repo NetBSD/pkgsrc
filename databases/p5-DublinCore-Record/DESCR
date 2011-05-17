@@ -1,0 +1,4 @@
+DublinCore::Record is an abstract class for manipulating DublinCore metadata.
+The Dublin Core is a small set of metadata elements for describing information
+resources. For more information on embedding DublinCore in HTML see RFC 2731
+http://www.ietf.org/rfc/rfc2731 or http://www.dublincore.org/documents/dces/
