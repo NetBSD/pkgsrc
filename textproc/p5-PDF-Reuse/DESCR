@@ -1,0 +1,10 @@
+This module could be used when you want to mass produce similar (but not
+identical) PDF documents and reuse templates, JavaScripts and some other
+components. It is functional to be fast, and to give your programs capacity
+to produce many pages per second and very big PDF documents if necessary.
+
+The module produces PDF-1.4 files. Some features of PDF-1.5, like "object
+streams" and "cross reference streams", are supported, but only at an
+experimental level. More testing is needed. (If you get problems with a new
+document from Acrobat 6 or higher, try to save it or recreate it as a PDF-1.4
+document first, before using it together with this module.)
