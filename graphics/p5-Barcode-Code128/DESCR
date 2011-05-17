@@ -1,1 +1,23 @@
-Perl module Barcode::Code128 - Generate CODE 128 bar codes.
+Barcode::Code128 generates bar codes using the CODE 128 symbology. It can
+generate images in PNG or GIF format using the GD package, or it can generate a
+text string representing the barcode that you can render using some other
+technology if desired.
+
+The intended use of this module is to create a web page with a bar code on it,
+which can then be printed out and faxed or mailed to someone who will scan the
+bar code. The application which spurred its creation was an expense report tool,
+where the employee submitting the report would print out the web page and staple
+the receipts to it, and the Accounts Payable clerk would scan the bar code to
+indicate that the receipts were received.
+
+The default settings for this module produce a large image that can safely be
+FAXed several times and still scanned easily. If this requirement is not
+important you can generate smaller image using optional parameters.
+
+If you wish to generate images with this module you must also have the GD.pm
+module (written by Lincoln Stein, and available from CPAN) installed.
+
+If the GD module is not present, you can still use the module, but you will not
+be able to use its functions for generating images. You can use the barcode()
+method to get a string of "#" and " " (hash and space) characters, and use your
+own image-generating routine with that as input.
