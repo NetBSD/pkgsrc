@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.50 2011/02/10 10:46:45 tron Exp $
+# $NetBSD: fetch.mk,v 1.51 2011/05/17 16:38:18 mspo Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -167,7 +167,7 @@ fetch-check-interactive: .USEBEFORE
 #       It must understand fetching files located via URLs,
 #	e.g. NetBSD's ftp, net/tnftp, etc.
 #
-# The following variables are all lists of options to pass to he command
+# The following variables are all lists of options to pass to the command
 # used to do the actual fetching of the file.
 #
 # FETCH_BEFORE_ARGS appear before all other options on the command line.
