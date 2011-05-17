@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.201 2011/05/16 05:06:48 taca Exp $
+# $NetBSD: Makefile,v 1.202 2011/05/17 03:26:52 taca Exp $
 
 DISTNAME=		openssh-5.8p2
 PKGNAME=		openssh-5.8.2
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -162,6 +162,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 OWN_DIRS=		${OPENSSH_CHROOT}
 RCD_SCRIPTS=		sshd
+RCD_SCRIPT_SRC.sshd=	${WRKDIR}/sshd.sh
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}
@@ -175,6 +176,19 @@ SUBST_MESSAGE.patch=	More patch a file.
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
+
+#
+# type of key "ecdsa" isn't always supported depends on OpenSSL.
+#
+post-configure:
+	if ${EGREP} -q '^\#define[ 	]+OPENSSL_HAS_ECC' \
+	    ${WRKSRC}/config.h; then \
+		${SED} -e '/HAVE_ECDSA/s/.*//' \
+			${FILESDIR}/sshd.sh > ${WRKDIR}/sshd.sh; \
+	else \
+		${SED} -e '/HAVE_ECDSA_START/,/HAVE_ECDSA_STOP/d' \
+			${FILESDIR}/sshd.sh > ${WRKDIR}/sshd.sh; \
+	fi
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
