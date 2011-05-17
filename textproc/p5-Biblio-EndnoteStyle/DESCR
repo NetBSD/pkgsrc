@@ -1,0 +1,6 @@
+This small module provides a way of formatting bibliographic references
+using style templates similar to those used by the popular reference
+management software Endnote (http://www.endnote.com/). The API is
+embarrassingly simple: a formatter object is made using the class's
+constructor, the new() method; format() may then be repeatedly called
+on this object, using the same or different templates.
