@@ -1,0 +1,16 @@
+Original HTML::Template is written by Sam Tregar, sam@tregar.com with
+contributions of many people mentioned there. Their efforts caused
+HTML::Template to be mature html tempate engine which separate perl code and
+html design. Yet powerful, HTML::Template is slow, especially if mod_perl isn't
+available or in case of disk usage and memory limitations.
+
+HTML::Template::Pro is a fast lightweight C/Perl+XS reimplementation of
+HTML::Template (as of 2.9) and HTML::Template::Expr (as of 0.0.7). It is not
+intended to be a complete replacement, but to be a fast implementation of
+HTML::Template if you don't need quering, the extended facility of
+HTML::Template. Designed for heavy upload, resource limitations, abcence of
+mod_perl.
+
+HTML::Template::Pro has complete support of filters and HTML::Template::Expr's
+tag EXPR="<expression>", including user-defined functions and construction
+<TMPL_INCLUDE EXPR="...">.
