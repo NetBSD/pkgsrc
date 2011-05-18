@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1455 2011/05/15 11:13:46 wiz Exp $
+# $NetBSD: Makefile,v 1.1456 2011/05/18 02:23:22 dmcmahill Exp $
 #
 
 COMMENT=	Development utilities
@@ -782,6 +782,7 @@ SUBDIR+=	p5-Lexical-Persistence
 SUBDIR+=	p5-Lexical-SealRequireHints
 SUBDIR+=	p5-List-MoreUtils
 SUBDIR+=	p5-Locale-Msgfmt
+SUBDIR+=	p5-Locale-PO
 SUBDIR+=	p5-Log-Agent
 SUBDIR+=	p5-Log-Any
 SUBDIR+=	p5-Log-Any-Adapter
@@ -801,6 +802,7 @@ SUBDIR+=	p5-Mac-SystemDirectory
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
+SUBDIR+=	p5-Memoize-Memcached
 SUBDIR+=	p5-Method-Signatures-Simple
 SUBDIR+=	p5-Mixin-ExtraFields
 SUBDIR+=	p5-Mixin-ExtraFields-Param

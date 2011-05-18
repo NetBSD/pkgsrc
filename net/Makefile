@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.877 2011/04/13 10:26:49 bouyer Exp $
+# $NetBSD: Makefile,v 1.878 2011/05/18 02:23:23 dmcmahill Exp $
 #
 
 COMMENT=	Networking tools
@@ -351,6 +351,7 @@ SUBDIR+=	p5-Net-Bind
 SUBDIR+=	p5-Net-Bonjour
 SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-CIDR-Set
+SUBDIR+=	p5-Net-CUPS
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
