@@ -1,0 +1,1 @@
+CGI::Session::Driver::memcached is CGI::Session driver for memcached.
