@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2011/02/04 19:53:06 adam Exp $
+$NetBSD: distinfo,v 1.8 2011/05/18 14:52:44 wiz Exp $
 
-SHA1 (libwpd-0.9.1.tar.bz2) = bc1fd58fdb260409b02bd01911bd3187b05c5220
-RMD160 (libwpd-0.9.1.tar.bz2) = 8cb666fd4244831be0008a24905fb22692414d8e
-Size (libwpd-0.9.1.tar.bz2) = 540345 bytes
+SHA1 (libwpd-0.9.2.tar.bz2) = 4cbf7e1534082156c4c4a1402d26cf2416649fda
+RMD160 (libwpd-0.9.2.tar.bz2) = 6509411050260fa35d2c0b7d590e7781478b65cb
+Size (libwpd-0.9.2.tar.bz2) = 614862 bytes
 SHA1 (patch-aa) = 4c91375938db1761200af1b68cacd4714a4da004
 SHA1 (patch-src_lib_WPXStreamImplementation.cpp) = 2ddb87c81990ab2edcfa958ce5e31d39f8aba588
