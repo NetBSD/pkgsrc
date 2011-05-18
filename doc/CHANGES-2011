@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1182 2011/05/18 02:11:00 dmcmahill Exp $
+$NetBSD: CHANGES-2011,v 1.1183 2011/05/18 08:21:10 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/p5-CGI-Session-Serialize-yaml version 4.26 [dmcmahill 2011-05-17]
 	Added www/p5-HTML-Template-Pro version 0.9504 [dmcmahill 2011-05-17]
 	Added www/p5-HTTP-OAI version 3.24 [dmcmahill 2011-05-17]
+	Updated lang/parrot to 3.4.0 [he 2011-05-18]
