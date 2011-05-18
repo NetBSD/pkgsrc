@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10338 2011/05/17 06:19:08 adam Exp $
+$NetBSD: TODO,v 1.10339 2011/05/18 11:40:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -466,7 +466,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
-	o cln-1.3.2
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.6.14
 	o cmus-2.4.0
@@ -563,6 +562,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
+	o eterm-0.9.6
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evince-3.0.0
@@ -684,7 +684,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-3.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.2.8.11
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-doc-utils-0.20.5
@@ -730,17 +729,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.1
 	o gssdp-0.10.0
-	o gst-plugins0.10-bad-0.10.22
-	o gst-plugins0.10-base-0.10.33
-	o gst-plugins0.10-good-0.10.29
-	o gst-plugins0.10-ugly-0.10.18
-	o gstreamer0.10-0.10.33
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.96.9
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
-	o gtk3-3.0.9
 	o gtkmm-3.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.21
@@ -886,7 +879,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdvbpsi-0.2.0
 	o libextractor-0.6.2
 	o libflash-0.4.13
-	o libfolks-0.4.3
+	o libfolks-0.5.1
 	o libfontenc-1.1.0
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
@@ -898,7 +891,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnomekbd-3.0.0
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
-	o libjpeg-turbo-1.1.0
+	o libjpeg-turbo-1.1.1
 	o liblbxutil-1.1.0
 	o libltdl-2.4
 	o libmatheval-1.1.6
@@ -1024,7 +1017,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o open-vm-tools-2010.09.19.301124
 	o openttd-1.1.0
 	o opera-11.10
-	o orc-0.4.14
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
@@ -1150,7 +1142,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o root-5.24.00 [needs newer f2c]
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o roundup-1.4.8
+	o roundup-1.4.17
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
@@ -1280,6 +1272,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
+	o uim-1.7.0
 	o unicap-0.9.8
 	o units-88 [pkg/43742]
 	o ups-nut-2.2.1 [pkgsrc-wip]
@@ -1292,7 +1285,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
-	o viewvc-1.1.10
+	o viewvc-1.1.11
 	o vifm-0.5
 	o vile-9.8
 	o vim-7.3
@@ -1426,7 +1419,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xman-1.1.1
 	o xmbdfed-4.6
 	o xmcd-3.3.2
-	o xmlsec1-1.2.18
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
