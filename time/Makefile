@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2010/10/19 12:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2011/05/18 02:23:23 dmcmahill Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -43,6 +43,7 @@ SUBDIR+=	p5-Calendar-Simple
 SUBDIR+=	p5-Convert-NLS_DATE_FORMAT
 SUBDIR+=	p5-Data-ICal
 SUBDIR+=	p5-Data-ICal-DateTime
+SUBDIR+=	p5-Date-Leapyear
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Calendar-Discordian
 SUBDIR+=	p5-DateTime-Calendar-Mayan
@@ -78,6 +79,7 @@ SUBDIR+=	p5-MooseX-Types-DateTimeX
 SUBDIR+=	p5-Net-Google-Calendar
 SUBDIR+=	p5-Olson-Abbreviations
 SUBDIR+=	p5-Rose-DateTime
+SUBDIR+=	p5-Schedule-At
 SUBDIR+=	p5-Schedule-Cron-Events
 SUBDIR+=	p5-Template-Plugin-DateTime
 SUBDIR+=	p5-Test-MockTime
