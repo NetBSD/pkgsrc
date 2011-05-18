@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.24 2011/01/26 23:24:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/05/18 09:39:57 drochner Exp $
 include/gstreamer-0.10/gst/interfaces/photography-enumtypes.h
 include/gstreamer-0.10/gst/interfaces/photography.h
 include/gstreamer-0.10/gst/signalprocessor/gstsignalprocessor.h
 include/gstreamer-0.10/gst/video/gstbasevideocodec.h
 include/gstreamer-0.10/gst/video/gstbasevideodecoder.h
 include/gstreamer-0.10/gst/video/gstbasevideoencoder.h
-include/gstreamer-0.10/gst/video/gstbasevideoparse.h
-include/gstreamer-0.10/gst/video/gstbasevideoutils.h
 lib/gstreamer-0.10/libgstadpcmdec.la
 lib/gstreamer-0.10/libgstadpcmenc.la
 lib/gstreamer-0.10/libgstaiff.la
 lib/gstreamer-0.10/libgstapexsink.la
 lib/gstreamer-0.10/libgstasfmux.la
-lib/gstreamer-0.10/libgstaudioparsersbad.la
 lib/gstreamer-0.10/libgstautoconvert.la
 lib/gstreamer-0.10/libgstbayer.la
 lib/gstreamer-0.10/libgstbz2.la
@@ -27,6 +24,8 @@ lib/gstreamer-0.10/libgstdtmf.la
 lib/gstreamer-0.10/libgstdvbsuboverlay.la
 lib/gstreamer-0.10/libgstdvdspu.la
 lib/gstreamer-0.10/libgstfestival.la
+lib/gstreamer-0.10/libgstfieldanalysis.la
+lib/gstreamer-0.10/libgstfragmented.la
 lib/gstreamer-0.10/libgstfreeze.la
 lib/gstreamer-0.10/libgstfrei0r.la
 lib/gstreamer-0.10/libgstgaudieffects.la
@@ -45,19 +44,22 @@ lib/gstreamer-0.10/libgstliveadder.la
 lib/gstreamer-0.10/libgstmpeg4videoparse.la
 lib/gstreamer-0.10/libgstmpegdemux.la
 lib/gstreamer-0.10/libgstmpegpsmux.la
+lib/gstreamer-0.10/libgstmpegtsdemux.la
 lib/gstreamer-0.10/libgstmpegtsmux.la
 lib/gstreamer-0.10/libgstmpegvideoparse.la
 lib/gstreamer-0.10/libgstmve.la
 lib/gstreamer-0.10/libgstmxf.la
 lib/gstreamer-0.10/libgstnsf.la
 lib/gstreamer-0.10/libgstnuvdemux.la
+lib/gstreamer-0.10/libgstpatchdetect.la
 lib/gstreamer-0.10/libgstpcapparse.la
 lib/gstreamer-0.10/libgstpnm.la
-lib/gstreamer-0.10/libgstqtmux.la
 lib/gstreamer-0.10/libgstrawparse.la
 lib/gstreamer-0.10/libgstrfbsrc.la
 lib/gstreamer-0.10/libgstrtpmux.la
+lib/gstreamer-0.10/libgstrtpvp8.la
 lib/gstreamer-0.10/libgstscaletempoplugin.la
+lib/gstreamer-0.10/libgstsdi.la
 lib/gstreamer-0.10/libgstsdpelem.la
 lib/gstreamer-0.10/libgstsegmentclip.la
 lib/gstreamer-0.10/libgstsiren.la
@@ -65,8 +67,10 @@ lib/gstreamer-0.10/libgstspeed.la
 lib/gstreamer-0.10/libgststereo.la
 lib/gstreamer-0.10/libgstsubenc.la
 lib/gstreamer-0.10/libgsttta.la
+lib/gstreamer-0.10/libgstvideofiltersbad.la
 lib/gstreamer-0.10/libgstvideomaxrate.la
 lib/gstreamer-0.10/libgstvideomeasure.la
+lib/gstreamer-0.10/libgstvideoparsersbad.la
 lib/gstreamer-0.10/libgstvideosignal.la
 lib/gstreamer-0.10/libgstvmnc.la
 lib/gstreamer-0.10/libgsty4mdec.la
@@ -74,6 +78,7 @@ lib/libgstbasevideo-0.10.la
 lib/libgstphotography-0.10.la
 lib/libgstsignalprocessor-0.10.la
 lib/pkgconfig/gstreamer-plugins-bad-0.10.pc
+share/glib-2.0/schemas/org.freedesktop.gstreamer-0.10.default-elements.gschema.xml
 share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
