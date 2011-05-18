@@ -1,0 +1,9 @@
+This library can be used by CGI::Session to serialize session data.
+It uses YAML, or the faster C implementation, YAML::Syck if it is available.
+YAML serializers exist not just for Perl but also other dynamic languages,
+such as PHP, Python, and Ruby, so storing session data in this format makes it
+easy to share session data across different languages.
+
+YAML is made to be friendly for humans to parse as well as other computer
+languages. It creates a format that is easier to read than the default
+serializer.

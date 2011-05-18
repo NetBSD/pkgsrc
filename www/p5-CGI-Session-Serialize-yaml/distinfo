@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/18 01:54:52 dmcmahill Exp $
+
+SHA1 (CGI-Session-Serialize-yaml-4.26.tgz) = 5202e7297f0a01608a15838bb6d0fb4c0ca1488e
+RMD160 (CGI-Session-Serialize-yaml-4.26.tgz) = c27b4f888f3bcbbb7532d0e9a94328143241a3fb
+Size (CGI-Session-Serialize-yaml-4.26.tgz) = 5386 bytes
