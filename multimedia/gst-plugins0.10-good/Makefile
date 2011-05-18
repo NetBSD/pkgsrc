@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/04/24 15:31:09 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/05/18 09:38:18 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "Makefile.common"
 
 COMMENT+=		good plugins
-PKGREVISION=		1
 
 # some plugins were moved from bad to good
 CONFLICTS+=		gst-plugins0.10-bad<0.10.18
