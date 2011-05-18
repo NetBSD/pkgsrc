@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.795 2011/05/11 04:33:52 adam Exp $
+# $NetBSD: Makefile,v 1.796 2011/05/18 02:23:23 dmcmahill Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -280,6 +280,8 @@ SUBDIR+=	p5-CGI-Minimal
 SUBDIR+=	p5-CGI-PSGI
 SUBDIR+=	p5-CGI-ProgressBar
 SUBDIR+=	p5-CGI-Session
+SUBDIR+=	p5-CGI-Session-Driver-memcached
+SUBDIR+=	p5-CGI-Session-Serialize-yaml
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CSS
 SUBDIR+=	p5-CSS-Squish
@@ -366,6 +368,7 @@ SUBDIR+=	p5-HTML-Table
 SUBDIR+=	p5-HTML-TableExtract
 SUBDIR+=	p5-HTML-Tagset
 SUBDIR+=	p5-HTML-Template
+SUBDIR+=	p5-HTML-Template-Pro
 SUBDIR+=	p5-HTML-Tiny
 SUBDIR+=	p5-HTML-TokeParser-Simple
 SUBDIR+=	p5-HTML-Tree
@@ -380,6 +383,7 @@ SUBDIR+=	p5-HTTP-Cache-Transparent
 SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
+SUBDIR+=	p5-HTTP-OAI
 SUBDIR+=	p5-HTTP-Parser
 SUBDIR+=	p5-HTTP-Parser-XS
 SUBDIR+=	p5-HTTP-Proxy

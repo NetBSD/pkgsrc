@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2011/02/10 16:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2011/05/18 02:23:22 dmcmahill Exp $
 #
 
 COMMENT=	Communication utilities
@@ -51,6 +51,7 @@ SUBDIR+=	p5-Asterisk
 SUBDIR+=	p5-Device-Gsm
 SUBDIR+=	p5-Device-Modem
 SUBDIR+=	p5-Device-SerialPort
+SUBDIR+=	p5-SMS-Send
 SUBDIR+=	p5-pilot-link
 SUBDIR+=	pilot-link
 SUBDIR+=	pilot-link-libs

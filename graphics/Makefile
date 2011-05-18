@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.601 2011/05/03 11:20:20 gdt Exp $
+# $NetBSD: Makefile,v 1.602 2011/05/18 02:23:23 dmcmahill Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -287,6 +287,7 @@ SUBDIR+=	p5-Barcode-Code128
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Chart-ThreeD
 SUBDIR+=	p5-GD
+SUBDIR+=	p5-GD-Barcode
 SUBDIR+=	p5-GD-Graph-sparklines
 SUBDIR+=	p5-GD-Graph3d
 SUBDIR+=	p5-GD-SVG
@@ -298,6 +299,7 @@ SUBDIR+=	p5-GIFgraph
 SUBDIR+=	p5-Gdk-Imlib
 SUBDIR+=	p5-Gdk-Pixbuf
 SUBDIR+=	p5-Gnome2-Canvas
+SUBDIR+=	p5-GraphicsMagick
 SUBDIR+=	p5-GraphViz
 SUBDIR+=	p5-Image-BMP
 SUBDIR+=	p5-Image-ExifTool
