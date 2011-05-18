@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2011/05/12 11:17:01 adam Exp $
+# $NetBSD: Makefile,v 1.78 2011/05/18 10:45:02 drochner Exp $
 
 DISTNAME=	gtkmm-2.24.0
 CATEGORIES=	x11
@@ -22,9 +22,10 @@ EXTRACT_USING=		bsdtar
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.20.1
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.24.0
 
 .include "../../devel/atkmm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pangomm+= pangomm>=2.28.0
 .include "../../devel/pangomm/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
