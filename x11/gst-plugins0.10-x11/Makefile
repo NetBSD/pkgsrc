@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2011/04/24 15:31:09 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/05/18 09:49:03 drochner Exp $
 #
 
 GST_PLUGINS0.10_NAME=	x11
 GST_PLUGINS0.10_DIRS=	sys/ximage sys/xvimage
 GST_PLUGINS0.10_FLAGS=	x xshm xvideo
-
-PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
