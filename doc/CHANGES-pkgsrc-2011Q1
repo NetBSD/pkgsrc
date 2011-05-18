@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.20 2011/05/17 08:19:23 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.21 2011/05/18 09:58:57 sbd Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -92,3 +92,5 @@ Pullup ticket #3432 - requested by taca
 lang/php53 security update
 Pullup ticket #3433 - requested by taca
 lang/pear security update
+Pullup ticket #3434 - requested by bouyer
+net/isc-dhcp4 build fix
