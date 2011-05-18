@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2010/10/24 21:56:51 ahoka Exp $
+# $NetBSD: Makefile.common,v 1.49 2011/05/18 08:28:39 wiz Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -45,8 +45,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
 			#--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2:${LOCALBASE}/include/cdparanoia:${LOCALBASE}/include/freetype2" \
 			--with-extralibdir="${LOCALBASE}/lib" \
 			--disable-dvdread-internal --disable-smb
-
-ONLY_FOR_COMPILER=	gcc
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
