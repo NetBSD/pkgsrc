@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2011/05/05 08:54:47 obache Exp $
+# $NetBSD: Makefile,v 1.28 2011/05/18 21:08:49 gls Exp $
 #
 
-DISTNAME=		cmus-v2.3.3
+DISTNAME=		cmus-v2.4.0
 PKGNAME=		${DISTNAME:S/-v/-/}
-PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cmus/}
 EXTRACT_SUFX=		.tar.bz2
