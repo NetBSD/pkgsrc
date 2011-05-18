@@ -1,0 +1,11 @@
+distbb - distributed bulk build tool for pkgsrc
+
+Key features:
+   - several packages can be built at the same time on different
+        machines or chroots
+   - good design ;-)
+   - flexibility
+   - compactness
+   - no limit on a number of "slave" machines and/or chroots
+   - fault tolerance, e.g. failures of slave hosts is not a problem
+   - nice logging
