@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2011/05/17 11:44:28 obache Exp $
+# $NetBSD: Makefile,v 1.42 2011/05/18 14:26:26 obache Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=	5
+PKGREVISION=	6
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.graphicsmagick.org/
 COMMENT=	X application for displaying and manipulating images
@@ -14,9 +14,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config gs
+USE_TOOLS+=	gmake pkg-config gs:run
 USE_FEATURES=	vsnprintf		# optional but recommended for security
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--with-modules=yes
+CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-gs-font-dir=${URW_FONTS_DIR}/share/fonts/urw
 
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in \

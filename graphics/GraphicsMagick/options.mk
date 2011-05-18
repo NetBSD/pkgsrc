@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2011/05/16 01:18:54 dmcmahill Exp $
+# $NetBSD: options.mk,v 1.2 2011/05/18 14:26:26 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.GraphicsMagick
 PKG_SUPPORTED_OPTIONS=	bzip2 x11 jasper ghostscript wmf
 PKG_SUGGESTED_OPTIONS=	bzip2 x11 jasper
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	jasper x11
 
 .if !empty(PKG_OPTIONS:Mbzip2)
 .include "../../archivers/bzip2/buildlink3.mk"
@@ -17,6 +19,7 @@ CONFIGURE_ARGS+=	--without-bzlib
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif
@@ -25,6 +28,7 @@ CONFIGURE_ARGS+=	--without-x
 BUILDLINK_API_DEPENDS.jasper+=	jasper>=1.701.0
 .include "../../graphics/jasper/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-jp2
+PLIST.jasper=		yes
 .else
 CONFIGURE_ARGS+=	--without-jp2
 .endif
