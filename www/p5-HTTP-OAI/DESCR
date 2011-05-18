@@ -1,0 +1,16 @@
+HTTP::OAI is a stub module.
+
+HTTP::OAI::Harvester is the harvesting front-end in the OAI-PERL library.
+
+To harvest from an OAI-PMH compliant repository create an HTTP::OAI::Harvester
+object using the baseURL option and then call OAI-PMH methods to request data
+from the repository. To handle version 1.0/1.1 repositories automatically you
+must request Identify() first.
+
+It is recommended that you request an Identify from the Repository and use the
+repository() method to update the Identify object used by the harvester.
+
+When making OAI requests the underlying HTTP::OAI::UserAgent module will take
+care of automatic redirection (http code 302) and retry-after (http code 503).
+OAI-PMH flow control (i.e. resumption tokens) is handled transparently by
+HTTP::OAI::Response.
