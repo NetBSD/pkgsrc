@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1188 2011/05/18 19:35:06 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1189 2011/05/18 21:09:14 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1953,3 +1953,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated converters/libwpd to 0.9.2 [wiz 2011-05-18]
 	Updated converters/libwps to 0.2.2 [wiz 2011-05-18]
 	Added pkgtools/distbb version 0.40.0 [cheusov 2011-05-18]
+	Updated audio/cmus to 2.4.0 [gls 2011-05-18]
