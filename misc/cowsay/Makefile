@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/03/17 21:11:44 zafer Exp $
+# $NetBSD: Makefile,v 1.13 2011/05/18 10:48:34 drochner Exp $
 
 DISTNAME=		cowsay-3.03
 PKGREVISION=		1
@@ -16,7 +16,7 @@ USE_TOOLS+=		perl:run
 SUBST_CLASSES+=		pap
 SUBST_STAGE.pap=	pre-install # after patch to avoid sneaking into patches
 SUBST_MESSAGE.pap=	Adjusting paths to perl and the cows
-SUBST_FILES.pap=	cowsay
+SUBST_FILES.pap=	cowsay cowsay.1
 SUBST_SED.pap=		-e "s|%BANGPERL%|!${PERL5}|" -e "s|%PREFIX%|${PREFIX}|"
 
 NO_CONFIGURE=		yes
