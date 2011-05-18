@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/18 01:31:55 dmcmahill Exp $
+
+SHA1 (CGI-Session-Driver-memcached-0.04.tar.gz) = 0c8131fc4044f39ed3701aab8b35b5874beccf1c
+RMD160 (CGI-Session-Driver-memcached-0.04.tar.gz) = 0f2235d054c0c841f1631dcf27aa5d108b41f349
+Size (CGI-Session-Driver-memcached-0.04.tar.gz) = 10569 bytes
