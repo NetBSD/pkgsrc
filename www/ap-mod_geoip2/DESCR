@@ -1,0 +1,2 @@
+Apache module to look up the IP address of the client end user in
+the MaxMind geoip database
