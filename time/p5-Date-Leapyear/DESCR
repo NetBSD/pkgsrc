@@ -1,0 +1,2 @@
+Date::Leapyear exports one function - isleap - which returns 1 or 0 if a year
+is leap, or not, respectively.
