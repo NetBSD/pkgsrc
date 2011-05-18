@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/01/26 23:15:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/05/18 09:34:20 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -6,6 +6,7 @@ bin/gst-typefind-0.10
 bin/gst-xmlinspect-0.10
 bin/gst-xmllaunch-0.10
 include/gstreamer-0.10/gst/base/gstadapter.h
+include/gstreamer-0.10/gst/base/gstbaseparse.h
 include/gstreamer-0.10/gst/base/gstbasesink.h
 include/gstreamer-0.10/gst/base/gstbasesrc.h
 include/gstreamer-0.10/gst/base/gstbasetransform.h
@@ -27,6 +28,7 @@ include/gstreamer-0.10/gst/controller/gstlfocontrolsource.h
 include/gstreamer-0.10/gst/dataprotocol/dataprotocol.h
 include/gstreamer-0.10/gst/glib-compat.h
 include/gstreamer-0.10/gst/gst.h
+include/gstreamer-0.10/gst/gstatomicqueue.h
 include/gstreamer-0.10/gst/gstbin.h
 include/gstreamer-0.10/gst/gstbuffer.h
 include/gstreamer-0.10/gst/gstbufferlist.h
@@ -141,6 +143,7 @@ share/gtk-doc/html/gstreamer-0.10/gst-running.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-0.10.devhelp
 share/gtk-doc/html/gstreamer-0.10/gstreamer-0.10.devhelp2
 share/gtk-doc/html/gstreamer-0.10/gstreamer-Gst.html
+share/gtk-doc/html/gstreamer-0.10/gstreamer-GstAtomicQueue.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstBuffer.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstBufferList.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstCaps.html
@@ -201,6 +204,7 @@ share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-dataprotocol.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-hierarchy.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-0.10.devhelp
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-0.10.devhelp2
+share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstBaseParse.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstBitReader.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstBufferStraw.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstByteReader.html
@@ -232,6 +236,7 @@ share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fdsink.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fdsrc.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-filesink.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-filesrc.html
+share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-funnel.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-identity.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-input-selector.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-multiqueue.html

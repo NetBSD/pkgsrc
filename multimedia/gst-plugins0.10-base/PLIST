@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/01/26 23:18:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/05/18 09:36:25 drochner Exp $
 bin/gst-discoverer-0.10
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
@@ -69,6 +69,7 @@ include/gstreamer-0.10/gst/sdp/gstsdp.h
 include/gstreamer-0.10/gst/sdp/gstsdpmessage.h
 include/gstreamer-0.10/gst/tag/gsttagdemux.h
 include/gstreamer-0.10/gst/tag/tag.h
+include/gstreamer-0.10/gst/tag/xmpwriter.h
 include/gstreamer-0.10/gst/video/gstvideofilter.h
 include/gstreamer-0.10/gst/video/gstvideosink.h
 include/gstreamer-0.10/gst/video/video-enumtypes.h
