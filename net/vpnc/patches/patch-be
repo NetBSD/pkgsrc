@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2011/05/18 12:28:50 is Exp $
+
+--- sysdep.h.orig	2008-11-19 20:36:12.000000000 +0000
++++ sysdep.h
+@@ -230,7 +230,7 @@ struct ether_arp {
+ extern void error(int fd, int errorno, const char *fmt, ...);
+ #endif
+ #ifndef HAVE_GETLINE
+-extern int getline(char **line, size_t * length, FILE * stream);
++extern ssize_t getline(char **line, size_t * length, FILE * stream);
+ #endif
+ #ifndef HAVE_VASPRINTF
+ #include <stdarg.h>
