@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2011/04/14 21:42:42 hans Exp $
+$NetBSD: distinfo,v 1.17 2011/05/18 12:28:50 is Exp $
 
 SHA1 (vpnc-0.5.3.tar.gz) = 321527194e937371c83b5e7c38e46fca4f109304
 RMD160 (vpnc-0.5.3.tar.gz) = 6f3926901e75dc98762f6ef45782930f2fb76a2f
@@ -11,7 +11,7 @@ SHA1 (patch-ae) = ae3e4be379965911dec27b6bb407ae1af017d88e
 SHA1 (patch-af) = d41aaab81061db058c4b38013f07815e1e8cf506
 SHA1 (patch-ag) = 2c1a2b2e93e5f8e0a13d7b92c15088ab66e4aaa3
 SHA1 (patch-ah) = 8180c569137f5d6de89b1a495dcba91dc374e2c2
-SHA1 (patch-ba) = 7cd58afdf4888ed9868644b071052ae9abcc5bfb
 SHA1 (patch-bb) = 015e3a6c3d0ec68a75694a03334d8116b381c46a
 SHA1 (patch-bc) = dd4817bfd05838cb863c8810e6b2c0194de3a3bf
-SHA1 (patch-bd) = 67f415224fadeddb1e3bb597eaa38696a15fe400
+SHA1 (patch-bd) = 3e7390667f06174f4434e10dfb840a6ab6c95ffb
+SHA1 (patch-be) = c09ebc1bbe4848e510a4f6aac24bbe4939d3f726

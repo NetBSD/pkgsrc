@@ -1,5 +1,7 @@
---- sysdep.c.orig	2008-11-19 21:36:12.000000000 +0100
-+++ sysdep.c	2010-01-07 23:30:57.937261239 +0100
+$NetBSD: patch-bd,v 1.2 2011/05/18 12:28:50 is Exp $
+
+--- sysdep.c.orig	2008-11-19 20:36:12.000000000 +0000
++++ sysdep.c
 @@ -666,7 +666,7 @@ int tun_get_hwaddr(int fd, char *dev, ui
  	}
  	
@@ -30,3 +32,12 @@
  	
  	return 0;
  #else
+@@ -751,7 +760,7 @@ void error(int status, int errornum, con
+ #endif
+ 
+ #ifndef HAVE_GETLINE
+-int getline(char **line, size_t * length, FILE * stream)
++ssize_t getline(char **line, size_t * length, FILE * stream)
+ {
+ 	size_t len;
+ #ifdef HAVE_FGETLN
