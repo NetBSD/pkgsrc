@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1192 2011/05/19 14:54:22 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1193 2011/05/19 20:44:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1957,3 +1957,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated cad/gwave to 20090213 [dmcmahill 2011-05-18]
 	Updated www/contao29-translations to 20110518 [taca 2011-05-19]
 	Updated filesystems/glusterfs to 3.2 [manu 2011-05-19]
+	Updated databases/sqlite3 to 3.7.6.3 [adam 2011-05-19]
+	Updated databases/sqlite3-tcl to 3.7.6.3 [adam 2011-05-19]
