@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2011/05/19 15:48:41 drochner Exp $
+
+--- sysdep/common/libsysdep/arc4random.c.orig	2001-06-05 05:05:37.000000000 +0000
++++ sysdep/common/libsysdep/arc4random.c
+@@ -95,7 +95,7 @@ arc4_stir(as)
+ 	/* fd < 0?  Ah, what the heck. We'll just take whatever was on the
+ 	 * stack... */
+ 
+-	arc4_addrandom(as, (void *) &rdat, sizeof(rdat));
++	arc4_addrandom(as, (u_char *) &rdat, sizeof(rdat));
+ }
+ 
+ static inline u_int8_t
