@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1191 2011/05/19 14:27:15 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1192 2011/05/19 14:54:22 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1956,3 +1956,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/cmus to 2.4.0 [gls 2011-05-18]
 	Updated cad/gwave to 20090213 [dmcmahill 2011-05-18]
 	Updated www/contao29-translations to 20110518 [taca 2011-05-19]
+	Updated filesystems/glusterfs to 3.2 [manu 2011-05-19]
