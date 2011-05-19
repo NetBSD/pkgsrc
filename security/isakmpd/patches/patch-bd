@@ -1,0 +1,29 @@
+$NetBSD: patch-bd,v 1.1 2011/05/19 15:48:41 drochner Exp $
+
+--- x509.c.orig	2003-06-10 16:41:29.000000000 +0000
++++ x509.c
+@@ -975,7 +975,14 @@ x509_cert_validate (void *scert)
+    * trust.
+    */
+   X509_STORE_CTX_init (&csc, x509_cas, cert, NULL);
+-#if OPENSSL_VERSION_NUMBER >= 0x00907000L
++#if OPENSSL_VERSION_NUMBER >= 0x00908000L
++  /* XXX See comment in x509_read_crls_from_dir.  */
++  if (x509_cas->param->flags & X509_V_FLAG_CRL_CHECK)
++    {
++      X509_STORE_CTX_set_flags (&csc, X509_V_FLAG_CRL_CHECK);
++      X509_STORE_CTX_set_flags (&csc, X509_V_FLAG_CRL_CHECK_ALL);
++    }
++#elif OPENSSL_VERSION_NUMBER >= 0x00907000L
+   /* XXX See comment in x509_read_crls_from_dir.  */
+   if (x509_cas->flags & X509_V_FLAG_CRL_CHECK)
+     {
+@@ -1517,7 +1524,7 @@ x509_DN_string (u_int8_t *asn1, size_t s
+   /* XXX Just a guess at a maximum length.  */
+   char buf[256];
+ 
+-  name = d2i_X509_NAME (NULL, &p, sz);
++  name = d2i_X509_NAME (NULL, (const unsigned char **)&p, sz);
+   if (!name)
+     {
+       log_print ("x509_DN_string: d2i_X509_NAME failed");

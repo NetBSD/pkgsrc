@@ -1,0 +1,18 @@
+$NetBSD: patch-bb,v 1.1 2011/05/19 15:48:41 drochner Exp $
+
+--- log.c.orig	2003-06-10 16:41:29.000000000 +0000
++++ log.c
+@@ -155,11 +155,11 @@ _log_print (int error, int syslog_level,
+       tm = localtime (&t);
+       if (class >= 0)
+ 	snprintf (nbuf, sizeof nbuf, "%02d%02d%02d.%06ld %s %02d ",
+-		  tm->tm_hour, tm->tm_min, tm->tm_sec, now.tv_usec,
++		  tm->tm_hour, tm->tm_min, tm->tm_sec, (long)now.tv_usec,
+ 		  _log_get_class (class), level);
+       else /* LOG_PRINT (-1) or LOG_REPORT (-2) */
+ 	snprintf (nbuf, sizeof nbuf, "%02d%02d%02d.%06ld %s ", tm->tm_hour,
+-		  tm->tm_min, tm->tm_sec, now.tv_usec,
++		  tm->tm_min, tm->tm_sec, (long)now.tv_usec,
+ 		  class == LOG_PRINT ? "Default" : "Report>");
+       strlcat (nbuf, buffer, sizeof nbuf);
+ #if defined (USE_PRIVSEP)
