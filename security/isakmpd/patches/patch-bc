@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2011/05/19 15:48:41 drochner Exp $
+
+--- sysdep/netbsd/sysdep.c.orig	2003-06-03 14:53:11.000000000 +0000
++++ sysdep/netbsd/sysdep.c
+@@ -116,7 +116,7 @@ sysdep_ipsec_get_spi (size_t *sz, u_int8
+     {
+       *sz = IPSEC_SPI_SIZE;
+       /* XXX should be random instead I think.  */
+-      return strdup ("\x12\x34\x56\x78");
++      return (u_int8_t *)strdup ("\x12\x34\x56\x78");
+     }
+   return KEY_API (get_spi) (sz, proto, src, dst, seq);
+ }

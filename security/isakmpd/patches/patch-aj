@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2003/10/10 12:56:18 agc Exp $
+$NetBSD: patch-aj,v 1.2 2011/05/19 15:48:41 drochner Exp $
 
---- message.c	2003/10/05 02:10:45	1.1
-+++ message.c	2003/10/05 02:11:57
-@@ -1188,8 +1188,14 @@
+--- message.c.orig	2003-09-02 18:14:52.000000000 +0000
++++ message.c
+@@ -1188,8 +1188,14 @@ message_recv (struct message *msg)
     * Now we can validate DOI-specific exchange types.  If we have no SA
     * DOI-specific exchange types are definitely wrong.
     */
@@ -17,3 +17,12 @@ $NetBSD: patch-aj,v 1.1 2003/10/10 12:56:18 agc Exp $
      {
        log_print ("message_recv: invalid DOI exchange type %d", exch_type);
        message_drop (msg, ISAKMP_NOTIFY_INVALID_EXCHANGE_TYPE, 0, 1, 1);
+@@ -1787,7 +1793,7 @@ message_negotiate_sa (struct message *ms
+ 		      int (*validate) (struct exchange *, struct sa *,
+ 				       struct sa *))
+ {
+-  struct payload *tp, *propp, *sap, *next_tp = 0, *next_propp, *next_sap;
++  struct payload *tp, *propp, *sap, *next_tp = 0, *next_propp = 0, *next_sap = 0;
+   struct payload *saved_tp = 0, *saved_propp = 0, *saved_sap = 0;
+   struct sa *sa;
+   struct proto *proto;
