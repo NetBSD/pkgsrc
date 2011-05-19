@@ -1,4 +1,4 @@
-# $NetBSD: icc.mk,v 1.7 2009/06/02 22:32:49 joerg Exp $
+# $NetBSD: icc.mk,v 1.8 2011/05/19 22:37:55 alnsn Exp $
 #
 # This is the compiler definition for the Intel compilers.
 #
@@ -22,6 +22,7 @@ LANGUAGES.icc=		# empty
 
 _ICC_DIR=		${WRKDIR}/.icc
 _ICC_VARS=		# empty
+
 .if exists(${ICCBASE}/bin/icc)
 LANGUAGES.icc+=		c
 _ICC_VARS+=		CC
@@ -29,6 +30,12 @@ _ICC_CC=		${_ICC_DIR}/bin/icc
 _ALIASES.CC=		cc
 CCPATH=			${ICCBASE}/bin/icc
 PKG_CC:=		${_ICC_CC}
+_ICC_VARS+=		CPP
+_ICC_CPP=		${_ICC_DIR}/bin/cpp
+PKG_CPP:=		${_ICC_CPP}
+.endif
+
+.if exists(${ICCBASE}/bin/icpc)
 LANGUAGES.icc+=		c++
 _ICC_VARS+=		CXX
 _ICC_CXX=		${_ICC_DIR}/bin/icpc
@@ -36,6 +43,7 @@ _ALIASES.CXX=		CC c++
 CXXPATH=		${ICCBASE}/bin/icpc
 PKG_CXX:=		${_ICC_CXX}
 .endif
+
 _COMPILER_STRIP_VARS+=	${_ICC_VARS}
 
 # icc passes rpath directives to the linker using "-Wl,-R".
@@ -74,6 +82,23 @@ PREPEND_PATH+=	${_ICC_DIR}/bin
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ENV+=		ac_cv___attribute__=yes
 .endif
+
+override-tools: ${_ICC_CPP}
+${_ICC_CPP}:
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}						\
+	(${ECHO} '#!${TOOLS_SHELL}';			\
+	 ${ECHO} 'for o in "$$@"'; ${ECHO} 'do';	\
+	 ${ECHO} ' case "$$o"'; ${ECHO} ' in';		\
+	 ${ECHO} ' -undef) undef=1;;'; ${ECHO} ' esac';	\
+	 ${ECHO} 'done';				\
+	 ${ECHO} 'if [ -n "$$undef" ]'; ${ECHO} 'then';	\
+	 ${ECHO} 'exec ${ICCBASE}/bin/icc -E -Uunix "$$@"';	\
+	 ${ECHO} 'else';				\
+	 ${ECHO} 'exec ${ICCBASE}/bin/icc -E "$$@"';	\
+	 ${ECHO} 'fi'					\
+	) > ${.TARGET}
+	${RUN}${CHMOD} +x ${.TARGET}
 
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_ICC_VARS}
