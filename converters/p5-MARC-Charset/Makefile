@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/17 10:33:38 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/19 05:29:19 obache Exp $
 
 DISTNAME=	MARC-Charset-1.2
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	converters perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/id/E/ES/ESUMMERS/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MARC/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MARC-Charset/
 COMMENT=	Convert MARC-8 encoded strings to UTF-8
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-XML-SAX:../../textproc/p5-XML-SAX
-DEPENDS+=	p5-Class-Accessor:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
+DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MARC/Charset/.packlist
