@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1456 2011/05/18 02:23:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.1457 2011/05/19 04:16:05 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -469,6 +469,7 @@ SUBDIR+=	p4web
 SUBDIR+=	p5-Acme-PlayCode
 SUBDIR+=	p5-Algorithm-Annotate
 SUBDIR+=	p5-Algorithm-C3
+SUBDIR+=	p5-Algorithm-CheckDigits
 SUBDIR+=	p5-Algorithm-Dependency
 SUBDIR+=	p5-Algorithm-Diff
 SUBDIR+=	p5-Algorithm-Merge
@@ -662,6 +663,7 @@ SUBDIR+=	p5-ExtUtils-AutoInstall
 SUBDIR+=	p5-ExtUtils-CBuilder
 SUBDIR+=	p5-ExtUtils-Command
 SUBDIR+=	p5-ExtUtils-Depends
+SUBDIR+=	p5-ExtUtils-Embed
 SUBDIR+=	p5-ExtUtils-F77
 SUBDIR+=	p5-ExtUtils-Install
 SUBDIR+=	p5-ExtUtils-MakeMaker
