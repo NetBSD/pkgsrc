@@ -1,0 +1,24 @@
+$NetBSD: patch-be,v 1.1 2011/05/19 15:48:41 drochner Exp $
+
+--- timer.c.orig	2003-06-03 14:28:16.000000000 +0000
++++ timer.c
+@@ -104,15 +104,15 @@ timer_add_event (char *name, void (*func
+     {
+       LOG_DBG ((LOG_TIMER, 10,
+ 		"timer_add_event: event %s(%p) added before %s(%p), "
+-		"expiration in %lds", name,
+-		arg, n->name, n->arg, expiration->tv_sec - now.tv_sec));
++		"expiration in %llds", name,
++		arg, n->name, n->arg, (long long)(expiration->tv_sec - now.tv_sec)));
+       TAILQ_INSERT_BEFORE (n, ev, link);
+     }
+   else
+     {
+       LOG_DBG ((LOG_TIMER, 10, "timer_add_event: event %s(%p) added last, "
+-		"expiration in %lds", name, arg,
+-		expiration->tv_sec - now.tv_sec));
++		"expiration in %llds", name, arg,
++		(long long)(expiration->tv_sec - now.tv_sec)));
+       TAILQ_INSERT_TAIL (&events, ev, link);
+     }
+   return ev;
