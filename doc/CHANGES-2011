@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1190 2011/05/19 03:29:32 dmcmahill Exp $
+$NetBSD: CHANGES-2011,v 1.1191 2011/05/19 14:27:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1955,3 +1955,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added pkgtools/distbb version 0.40.0 [cheusov 2011-05-18]
 	Updated audio/cmus to 2.4.0 [gls 2011-05-18]
 	Updated cad/gwave to 20090213 [dmcmahill 2011-05-18]
+	Updated www/contao29-translations to 20110518 [taca 2011-05-19]
