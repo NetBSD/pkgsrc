@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/19 12:50:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/19 13:13:51 ryoon Exp $
 #
 
 DISTNAME=	Ricty-2.0.1
@@ -10,6 +10,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
 COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
 LICENSE=	ipafont AND open-font-license AND mplusfont
+
+RESTRICTED=	Violation of open-font-license PERMISSION & CONDITIONS 5)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
