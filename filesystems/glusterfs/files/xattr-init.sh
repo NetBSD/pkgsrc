@@ -1,17 +1,20 @@
 #!/bin/sh
 
-# $NetBSD: xattr-init.sh,v 1.2 2011/04/26 16:06:32 manu Exp $
+# $NetBSD: xattr-init.sh,v 1.3 2011/05/19 14:54:22 manu Exp $
 
 GLUSTERFS_XATTR="
   trusted.distribute.linkinfo
   trusted.distribute.fix.layout
   trusted.glusterfs.pathinfo
-  trusted.glusterfs.test
   trusted.glusterfs.volume-mark
   trusted.glusterfs.test
   trusted.posix1.gen
   trusted.gfid
   trusted.afr
+  glusterfs.open-fd-count
+  glusterfs.inodelk-count
+  glusterfs.entrylk-count
+  glusterfs.posixlk-count
 "
 
 test $# -ne 1 && {

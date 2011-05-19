@@ -1,0 +1,12 @@
+--- rpc/xdr/src/cli1-xdr.c.orig	2011-05-19 15:56:47.000000000 +0200
++++ rpc/xdr/src/cli1-xdr.c	2011-05-19 15:57:10.000000000 +0200
+@@ -23,8 +23,9 @@
+  * It was generated using rpcgen.
+  */
+ 
+ #include "cli1-xdr.h"
++#include "xdr-common.h"
+ #include "compat.h"
+ 
+ bool_t
+ xdr_gf1_cluster_type (XDR *xdrs, gf1_cluster_type *objp)
