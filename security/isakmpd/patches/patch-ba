@@ -1,0 +1,16 @@
+$NetBSD: patch-ba,v 1.4 2011/05/19 15:48:41 drochner Exp $
+
+--- connection.c.orig	2003-06-03 14:28:16.000000000 +0000
++++ connection.c
+@@ -433,9 +433,9 @@ connection_report (void)
+   gettimeofday (&now, 0);
+   for (conn = TAILQ_FIRST (&connections); conn; conn = TAILQ_NEXT (conn, link))
+     LOG_DBG ((LOG_REPORT, 0,
+-	      "connection_report: connection %s next check %ld seconds",
++	      "connection_report: connection %s next check %lld seconds",
+ 	      (conn->name ? conn->name : "<unnamed>"),
+-	      conn->ev->expiration.tv_sec - now.tv_sec));
++	      (long long)(conn->ev->expiration.tv_sec - now.tv_sec)));
+ #ifdef USE_DEBUG
+   for (pconn = TAILQ_FIRST (&connections_passive); pconn;
+        pconn = TAILQ_NEXT (pconn, link))

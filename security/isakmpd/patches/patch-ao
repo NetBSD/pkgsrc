@@ -1,8 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2008/12/19 21:09:12 heinz Exp $
+$NetBSD: patch-ao,v 1.2 2011/05/19 15:48:41 drochner Exp $
 
-  - Override variables for DESTDIR support.
-
---- apps/certpatch/Makefile.orig	2003-06-03 16:35:00.000000000 +0200
+--- apps/certpatch/Makefile.orig	2003-06-03 14:35:00.000000000 +0000
 +++ apps/certpatch/Makefile
 @@ -31,6 +31,12 @@
  #
@@ -17,3 +15,11 @@ $NetBSD: patch-ao,v 1.1 2008/12/19 21:09:12 heinz Exp $
  SRCS=		certpatch.c
  BINDIR?=	/usr/sbin
  TOPSRC=		${.CURDIR}/../..
+@@ -42,6 +48,7 @@ CFLAGS+=	-I${TOPSRC} -I${TOPSRC}/sysdep/
+ LDADD+=		-lcrypto
+ DPADD+=		${LIBCRYPTO}
+ MAN=		certpatch.8
++MKHTML=	no
+ 
+ .if ${FEATURES:Mgmp} == "gmp"
+ CFLAGS+=	-DMP_FLAVOUR=MP_FLAVOUR_GMP
