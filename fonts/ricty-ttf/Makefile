@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/08 11:05:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/19 12:50:09 ryoon Exp $
 #
 
 DISTNAME=	Ricty-2.0.1
@@ -12,6 +12,11 @@ COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
 LICENSE=	ipafont AND open-font-license AND mplusfont
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
