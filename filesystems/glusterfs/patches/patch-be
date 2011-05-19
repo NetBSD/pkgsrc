@@ -1,19 +1,10 @@
-$NetBSD: patch-be,v 1.2 2011/04/18 16:19:48 manu Exp $
-
-basename() and dirname() are not supposed to be thread-safe, and NetBSD's
-implementation is not. glusterfs assume the functions are thread-safe. 
-Borrow basename() and rdirname() form glibc and make NetBSD use them.
-
-Also map Linux extended attribute system calls to NetBSD counterpart
-
---- libglusterfs/src/compat.c.orig	2011-04-09 10:09:02.000000000 +0200
-+++ libglusterfs/src/compat.c	2011-04-14 10:36:40.000000000 +0200
-@@ -547,4 +547,282 @@
- 		len++;
- 	return len;
+--- libglusterfs/src/compat.c.orig	2011-04-22 19:37:28.000000000 +0200
++++ libglusterfs/src/compat.c	2011-05-19 15:27:32.000000000 +0200
+@@ -529,8 +529,285 @@
+ 
  }
- #endif /* STRNLEN */
-+
+ #endif /* GF_SOLARIS_HOST_OS */
+ 
 +#ifdef __NetBSD__
 +/*
 + * basename() and dirname() are not supposed to be thread-safe. 
@@ -291,3 +282,7 @@ Also map Linux extended attribute system calls to NetBSD counterpart
 +{ return extattr_set_link(path, EXTATTR_NAMESPACE_USER, key, value, size); }
 +
 +#endif /* __NetBSD__ */
+ #ifndef HAVE_STRNLEN
+ size_t
+ strnlen(const char *string, size_t maxlen)
+ {
