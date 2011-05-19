@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:35:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/05/19 03:28:34 dmcmahill Exp $
 bin/gwave
 bin/gwave-exec
 bin/gwaverepl
 bin/sp2sp
 bin/sweepsplit
-man/man1/sp2sp.1
 share/guile/app/gwave/cmds.scm
 share/guile/app/gwave/dynlink.scm
 share/guile/app/gwave/export-gnugraph.scm
