@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.38 2011/04/22 13:43:03 obache Exp $
+# $NetBSD: Makefile,v 1.39 2011/05/19 03:28:34 dmcmahill Exp $
 #
 
-DISTNAME=	gwave-20060606
-PKGREVISION=	5
+DISTNAME=	gwave2-20090213
+PKGNAME=	${DISTNAME:S/gwave2/gwave/}
 CATEGORIES=	cad
-MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/ \
-		http://www.geda.seul.org/dist/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwave/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave.html
+HOMEPAGE=	http://gwave.sourceforge.net
 COMMENT=	Viewer for spice-like simulator output and other analog data
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,9 +23,10 @@ EVAL_PREFIX+=	GRAPHDIR=plotutils
 CONFIGURE_ENV+=	GRAPH=${GRAPHDIR}/bin/graph
 
 # make this file get rebuilt in a way that gcc3 can deal with
-post-extract:
-	${RM} ${WRKSRC}/src/init_scheme_string.c
+#post-extract:
+#	${RM} ${WRKSRC}/src/init_scheme_string.c
 
-.include "../../devel/guile16-gtk/buildlink3.mk"
+.include "../../devel/guile-gnome/buildlink3.mk"
 .include "../../graphics/plotutils/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
