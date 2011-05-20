@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1194 2011/05/20 00:29:19 tonnerre Exp $
+$NetBSD: CHANGES-2011,v 1.1195 2011/05/20 01:08:10 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1960,3 +1960,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3 to 3.7.6.3 [adam 2011-05-19]
 	Updated databases/sqlite3-tcl to 3.7.6.3 [adam 2011-05-19]
 	Updated databases/apache-cassandra to 0.7.6 [tonnerre 2011-05-20]
+	Updated devel/libthrift to 0.6.0 [tonnerre 2011-05-20]
