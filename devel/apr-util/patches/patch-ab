@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2011/05/20 09:35:35 drochner Exp $
+
+--- ldap/apr_ldap_rebind.c.orig	2011-03-12 12:48:50.000000000 +0000
++++ ldap/apr_ldap_rebind.c
+@@ -82,7 +82,7 @@ APU_DECLARE_LDAP(apr_status_t) apr_ldap_
+ #endif
+ 
+     /* run after apr_thread_mutex_create cleanup */
+-    apr_pool_cleanup_register(pool, &apr_ldap_xref_lock, apr_ldap_pool_cleanup_set_null, NULL);
++    apr_pool_cleanup_register(pool, &apr_ldap_xref_lock, apr_ldap_pool_cleanup_set_null, apr_pool_cleanup_null);
+ 
+ #if APR_HAS_THREADS
+     if (apr_ldap_xref_lock == NULL) {
