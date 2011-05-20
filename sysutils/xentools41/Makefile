@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2011/05/12 15:57:38 bouyer Exp $
+# $NetBSD: Makefile,v 1.8 2011/05/20 17:09:21 bouyer Exp $
 #
 VERSION=		4.1.0
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools41-${VERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
