@@ -1,0 +1,91 @@
+$NetBSD: patch-qemu-phy-devices,v 1.1 2011/05/20 17:09:21 bouyer Exp $
+
+This does 2 things:
+- use the correct way to get the size of a disk device or partition (from
+  haad@NetBSD.org)
+- if given a block device, use the character device instead.
+
+--- ioemu/block-raw.c.orig	2009-08-06 14:56:33.000000000 +0200
++++ ioemu/block-raw.c	2011-05-20 18:55:59.000000000 +0200
+@@ -63,6 +63,13 @@
+ #include <sys/disklabel.h>
+ #include <sys/dkio.h>
+ #endif
++#if defined(__NetBSD__)
++#include <sys/ioctl.h>
++#include <sys/disklabel.h>
++#include <sys/dkio.h>
++#include <sys/disk.h>
++#include <sys/param.h>
++#endif
+ 
+ //#define DEBUG_FLOPPY
+ 
+@@ -101,6 +108,33 @@
+ {
+     BDRVRawState *s = bs->opaque;
+     int fd, open_flags, ret;
++#ifdef __NetBSD__
++    struct stat sb;
++    static char namebuf[MAXPATHLEN];
++    const char *dp;
++
++    if (lstat(filename, &sb) < 0) {
++	fprintf(stderr, "%s: stat failed: %s\n", filename, strerror(errno));
++	return -errno;
++    }
++    if (S_ISLNK(sb.st_mode)) {
++	fprintf(stderr, "%s: symolink links not supported by qemu-dm\n",
++	    filename);
++	return -EINVAL;
++    }
++    if (S_ISBLK(sb.st_mode)) {
++	dp = strrchr(filename, '/');
++	if (dp == NULL) {
++		snprintf(namebuf, MAXPATHLEN, "r%s", filename);
++	} else {
++		snprintf(namebuf, MAXPATHLEN, "%.*s/r%s",
++		    (int)(dp - filename), filename, dp + 1);
++	}
++	fprintf(stderr, "%s is a block device", filename);
++	filename = namebuf;
++	fprintf(stderr, ", using %s\n", filename);
++    }
++#endif
+ 
+     s->lseek_err_cnt = 0;
+ 
+@@ -533,7 +567,7 @@
+     return 0;
+ }
+ 
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ static int64_t  raw_getlength(BlockDriverState *bs)
+ {
+ 	int fd = ((BDRVRawState*)bs->opaque)->fd;
+@@ -541,11 +575,24 @@
+ 	if(fstat(fd, &st))
+ 	  return -1;
+ 	if(S_ISCHR(st.st_mode) || S_ISBLK(st.st_mode)){
++#ifdef __OpenBSD__
+ 	  struct disklabel dl;
+ 	  if(ioctl(fd, DIOCGDINFO, &dl))
+ 	    return -1;
+ 	  return (uint64_t)dl.d_secsize *
+ 		dl.d_partitions[DISKPART(st.st_rdev)].p_size;
++#else
++	struct dkwedge_info dkw;      
++	if (ioctl(fd, DIOCGWEDGEINFO, &dkw) != -1) {
++	    return dkw.dkw_size * 512;
++	}  else {
++		struct disklabel dl;  
++		if(ioctl(fd, DIOCGDINFO, &dl))
++			return -1;    
++		return (uint64_t)dl.d_secsize *
++			    dl.d_partitions[DISKPART(st.st_rdev)].p_size;
++	}
++#endif
+ 	}else
+ 	  return st.st_size;
+ }
