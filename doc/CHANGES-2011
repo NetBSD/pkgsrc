@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1198 2011/05/20 17:10:19 bouyer Exp $
+$NetBSD: CHANGES-2011,v 1.1199 2011/05/20 22:57:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1965,3 +1965,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/proftpd to 1.3.3e [adam 2011-05-20]
 	Updated sysutils/xentools33 to 3.3.2nb8 [bouyer 2011-05-20]
 	Updated sysutils/xentools41 to 4.1.0nb5 [bouyer 2011-05-20]
+	Updated editors/emacs-snapshot to 24.0.50.20110520 [minskim 2011-05-20]
