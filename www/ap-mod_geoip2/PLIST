@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/18 01:27:52 mspo Exp $
-lib/httpd/mod_geoip.so

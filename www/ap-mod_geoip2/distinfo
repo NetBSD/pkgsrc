@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/18 01:27:52 mspo Exp $
-
-SHA1 (mod_geoip2_1.2.5.tar.gz) = aee05907479bbb6c7923287d6ddb6e8a0e169b46
-RMD160 (mod_geoip2_1.2.5.tar.gz) = e81511ed3a2aa20897a4071d508a01194f97c4aa
-Size (mod_geoip2_1.2.5.tar.gz) = 11602 bytes
