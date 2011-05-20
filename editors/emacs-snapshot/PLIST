@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2011/05/08 23:28:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/05/20 22:56:39 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -58,7 +58,6 @@ info/vip
 info/viper
 info/widget
 info/woman
-libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/fakemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/profile
@@ -580,6 +579,17 @@ share/emacs/${EMACS_VERSION}/etc/images/mpc/rewind.xpm
 share/emacs/${EMACS_VERSION}/etc/images/mpc/stop.xpm
 share/emacs/${EMACS_VERSION}/etc/images/new.pbm
 share/emacs/${EMACS_VERSION}/etc/images/new.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/README
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/browse-url.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/get-all.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/mark-immortal.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/mark-read.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/narrow.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/next-feed.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/next-item.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/prev-feed.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/prev-item.xpm
+share/emacs/${EMACS_VERSION}/etc/images/newsticker/update.xpm
 share/emacs/${EMACS_VERSION}/etc/images/next-node.pbm
 share/emacs/${EMACS_VERSION}/etc/images/next-node.xpm
 share/emacs/${EMACS_VERSION}/etc/images/next-page.pbm
@@ -1030,6 +1040,8 @@ share/emacs/${EMACS_VERSION}/leim/quail/latin-pre.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/latin-pre.elc
 share/emacs/${EMACS_VERSION}/leim/quail/lrt.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/lrt.elc
+share/emacs/${EMACS_VERSION}/leim/quail/persian.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/persian.elc
 share/emacs/${EMACS_VERSION}/leim/quail/py-punct.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/py-punct.elc
 share/emacs/${EMACS_VERSION}/leim/quail/pypunct-b5.el.gz

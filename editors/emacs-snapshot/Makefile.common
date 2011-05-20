@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.27 2011/05/08 23:28:44 minskim Exp $
+# $NetBSD: Makefile.common,v 1.28 2011/05/20 22:56:39 minskim Exp $
 
-DISTNAME=	emacs-snapshot_20110505.orig
+DISTNAME=	emacs-snapshot_20110520.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.naquadah.org/unstable/
