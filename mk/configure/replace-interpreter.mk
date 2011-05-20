@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.9 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.10 2011/05/20 15:02:27 wiz Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -9,7 +9,6 @@
 # REPLACE_BASH
 # REPLACE_KSH
 # REPLACE_PERL
-# REPLACE_PYTHON
 # REPLACE_SH
 #	Lists of files relative to WRKSRC in which the #! interpreter
 #	should be replaced by the pkgsrc one. If any directories
