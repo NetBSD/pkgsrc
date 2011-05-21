@@ -1,4 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2010/02/01 15:00:20 jmcneill Exp $
+$NetBSD: patch-aa,v 1.7 2011/05/21 15:32:59 wiz Exp $
+
+SNDDSP_GETODELAY isn't defined on NetBSD-4.x.
+ioctl() takes u_long argument on NetBSD.
+On NetBSD, use third parameter in ioctl instead of varargs.
+stat() system call has been versioned, use latest version when dlopen()ing.
+Try more typical device names.
 
 --- src/utils/padsp.c.orig	2009-09-18 20:21:44.000000000 +0000
 +++ src/utils/padsp.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-dd,v 1.1 2010/02/02 12:39:14 jmcneill Exp $
+$NetBSD: patch-dd,v 1.2 2011/05/21 15:33:00 wiz Exp $
+
+Avoid autoreconf from adding a git dependency.
 
 --- git-version-gen.orig	2010-02-02 06:54:03.000000000 -0500
 +++ git-version-gen	2010-02-02 06:55:16.000000000 -0500
