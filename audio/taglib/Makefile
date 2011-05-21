@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2010/07/10 07:56:06 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/05/21 15:13:20 wiz Exp $
 #
 
-DISTNAME=	taglib-1.6.3
-PKGREVISION=	1
+DISTNAME=	taglib-1.7
 CATEGORIES=	audio
 MASTER_SITES=	http://ktown.kde.org/~wheeler/files/src/
 
@@ -15,13 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-asf
-CONFIGURE_ARGS+=	--enable-mp4
-
+USE_CMAKE=		YES
+CMAKE_ARGS=		-DWITH_MP4=ON -DWITH_ASF=ON
 USE_LIBTOOL=		YES
 
-PKGCONFIG_OVERRIDE=	bindings/c/taglib_c.pc.in taglib.pc.in
+PKGCONFIG_OVERRIDE=	bindings/c/taglib_c.pc.cmake taglib.pc.cmake
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
