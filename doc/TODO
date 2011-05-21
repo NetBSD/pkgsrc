@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10343 2011/05/21 15:08:17 wiz Exp $
+$NetBSD: TODO,v 1.10344 2011/05/21 15:14:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1218,7 +1218,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o t1utils-1.36
 	o tacacs-4.0.4.14
 	o tads-3.0.16
-	o taglib-1.7 [shlib major went down, clarifying with upstream -- wiz]
 	o tcl-8.5.8
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
