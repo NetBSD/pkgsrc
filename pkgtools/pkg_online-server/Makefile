@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/16 21:46:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/21 09:07:04 wiz Exp $
 #
 
 .include "../../pkgtools/pkg_online-server/Makefile.common"
@@ -15,8 +15,6 @@ DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
 INSTALL_TARGET=	install-server install-doc
-
-DESCR_SRC+=	${.CURDIR}/DESCR
 
 DOCDIR=		${PREFIX}/share/doc/pkg_online-server
 EGDIR=		${PREFIX}/share/examples/pkg_online-server
