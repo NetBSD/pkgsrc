@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1202 2011/05/21 15:14:02 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1203 2011/05/21 15:33:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1969,3 +1969,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/alephone to 20100424nb3 [dholland 2011-05-21]
 	Updated misc/calibre to 0.8.2 [wiz 2011-05-21]
 	Updated audio/taglib to 1.7 [wiz 2011-05-21]
+	Updated audio/pulseaudio to 0.9.21nb9 [wiz 2011-05-21]
