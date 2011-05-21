@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/07/06 10:17:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2011/05/21 09:05:26 obache Exp $
 
 DISTNAME=	pnet-0.8.0
 #PKGREVISION=	1
@@ -8,10 +8,13 @@ MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dotgnu.org/
 COMMENT=	DotGNU Portable.NET (development tools)
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	treecc>=0.2.6:../../devel/treecc
 
 CONFLICTS=	mono-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Unsupported by internal libffi
 NOT_FOR_PLATFORM=	NetBSD-*-x86_64
