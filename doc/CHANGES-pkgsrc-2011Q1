@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.23 2011/05/21 09:03:56 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.24 2011/05/21 09:10:22 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -43,7 +43,7 @@ net/isc-dhcp4: security update
 net/isc-dhcpd4: security update
 net/isc-dhcrelay4: security update
 Pullup ticket #3408 - requested by morr
-www/wordpress security update
+www/wordpress: security update
 Pullup ticket #3409 - requested by markd
 x11/kdelibs4: security patch
 Pullup ticket #3411 - requested by wiz
@@ -77,23 +77,23 @@ net/bind98: security update
 Pullup ticket #3424 - requested by obache
 net/maradns: security update
 Pullup ticket #3425 - requested by morr
-www/wordpress security update.
+www/wordpress: security update.
 Pullup ticket #3426 - requested by taca
-mail/postfix security update
+mail/postfix: security update
 Pullup ticket #3428 - requested by bouyer
 mail/turba: fix incomplete installation
 Pullup ticket #3429 - requested by bouyer
 sysutils/xentools33: security patch
 Pullup ticket #3427 - requested by tron
-devel/apr security update
+devel/apr: security update
 Pullup ticket #3430 - requested by taca
-security/openssh security update
+security/openssh: security update
 Pullup ticket #3432 - requested by taca
-lang/php53 security update
+lang/php53: security update
 Pullup ticket #3433 - requested by taca
-lang/pear security update
+lang/pear: security update
 Pullup ticket #3434 - requested by bouyer
-net/isc-dhcp4 build fix
+net/isc-dhcp4: build fix
 Pullup ticket #3431 - requested by taca
 security/openssh: bug fix update
 Pullup ticket #3436 - requested by drochner
