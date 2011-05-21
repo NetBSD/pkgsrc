@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1201 2011/05/21 15:08:17 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1202 2011/05/21 15:14:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1968,3 +1968,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/emacs-snapshot to 24.0.50.20110520 [minskim 2011-05-20]
 	Updated games/alephone to 20100424nb3 [dholland 2011-05-21]
 	Updated misc/calibre to 0.8.2 [wiz 2011-05-21]
+	Updated audio/taglib to 1.7 [wiz 2011-05-21]
