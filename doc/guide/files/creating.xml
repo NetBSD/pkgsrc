@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.9 2009/09/07 18:22:10 joerg Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.10 2011/05/21 16:39:03 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -35,7 +35,10 @@ these dependencies, look where it exists in pkgsrc, and if there is a
 file called <filename>buildlink3.mk</filename> in that directory, add a
 line to your package <filename>Makefile</filename> which includes that
 file just before the last line. If the
-<filename>buildlink3.mk</filename> file does not exist, add a
+<filename>buildlink3.mk</filename> file does not exist, it must be
+created first. The <filename>buildlink3.mk</filename> file makes sure that the package's include files and libraries are provided.</para>
+
+<para>If you just need binaries from a package, add a
 <varname>DEPENDS</varname> line to the Makefile, which specifies the
 version of the dependency and where it can be found in pkgsrc. This line
 should be placed in the third paragraph. If the dependency is only
