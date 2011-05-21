@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.103 2011/01/16 08:40:28 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.104 2011/05/21 16:39:03 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -327,95 +327,20 @@ ACCEPTABLE_LICENSES+=xv-license
       </listitem>
 
       <listitem>
-	<para>If your package needs to use another package to build
-	itself and there is no <filename>buildlink3.mk</filename>
-	file available, use the <varname>BUILD_DEPENDS</varname>
-	definition:</para>
+	<para>If your package needs binaries from another package to build,
+	use the <varname>BUILD_DEPENDS</varname> definition:</para>
 
 	<programlisting>
-BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 	</programlisting>
       </listitem>
 
       <listitem>
-
 	<para>If your package needs a library with which to link and
 	again there is no <filename>buildlink3.mk</filename> file
-	available, this is specified using the
-	<varname>DEPENDS</varname> definition. For example:</para>
-
-	<programlisting>
-DEPENDS+=       xpm-3.4j:../../graphics/xpm
-	</programlisting>
-
-	<para>You can also use wildcards in package dependencies:</para>
-
-	<programlisting>
-DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
-	</programlisting>
-
-	<para>Note that such wildcard dependencies are retained when
-	creating binary packages.  The dependency is checked when
-	installing the binary package and any package which matches
-	the pattern will be used.  Wildcard dependencies should be
-	used with care.</para>
-
-	<para>The <quote>-[0-9]*</quote> should be used instead of
-	<quote>-*</quote> to avoid potentially ambiguous matches
-	such as <quote>tk-postgresql</quote> matching a
-	<quote>tk-*</quote> <varname>DEPENDS</varname>.</para>
-
-	<para>Wildcards can also be used to specify that a package
-	will only build against a certain minimum version of a
-	pre-requisite:</para>
-
-	<programlisting>
-DEPENDS+=       tiff>=3.5.4:../../graphics/tiff
-	</programlisting>
-
-	<para>This means that the package will build against version
-	3.5.4 of the tiff library or newer.  Such a dependency may
-	be warranted if, for example, the API of the library has
-	changed with version 3.5.4 and a package would not compile
-	against an earlier version of tiff.</para>
-
-	<para>Please note that such dependencies should only be
-	updated if a package requires a newer pre-requisite, but
-	not to denote recommendations such as
-	ABI changes that do not prevent a package from building
-	correctly.  Such recommendations can be expressed using
-	<varname>ABI_DEPENDS</varname>:</para>
-
-	<programlisting>
-ABI_DEPENDS+=   tiff>=3.6.1:../../graphics/tiff
-	</programlisting>
-
-	<para>In addition to the above <varname>DEPENDS</varname>
-	line, this denotes that while a package will build against
-	tiff&gt;=3.5.4, at least version 3.6.1 is recommended.
-	<varname>ABI_DEPENDS</varname> entries will be turned into
-	dependencies unless explicitly ignored (in which case a
-	warning will be printed).</para>
-
-	<para>To ignore these ABI dependency recommendations and just
-	use the required <varname>DEPENDS</varname>, set
-	<varname>USE_ABI_DEPENDS=NO</varname>.   This may make
-	it easier and faster to update packages built using pkgsrc,
-	since older compatible dependencies can continue to be
-	used. This is useful for people who watch their rebuilds
-	very carefully; it is not very good as a general-purpose
-	hammer.  If you use it, you need to be mindful of possible
-	ABI changes, including those from the underlying OS.</para>
-
-	<para>Packages that are built with recommendations ignored
-	may not be uploaded to ftp.NetBSD.org by developers and
-	should not be used across different systems that may have
-	different versions of binary packages installed.</para>
-
-	<para>For security fixes, please update the package
-	vulnerabilities file. See <xref
-	linkend="security-handling"/> for more
-	information.</para>
+	available, create one. Using
+	<varname>DEPENDS</varname> won't be sufficient because the
+	include files and libraries will be hidden from the compiler.</para>
       </listitem>
 
       <listitem>
@@ -430,9 +355,39 @@ ABI_DEPENDS+=   tiff>=3.6.1:../../graphics/tiff
 	<programlisting>
 DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 	</programlisting>
+      </listitem>
+      <listitem>
+	<para>You can use wildcards in package dependencies. Note that
+	such wildcard dependencies are retained when creating binary
+	packages. The dependency is checked when installing the binary
+	package and any package which matches the pattern will be
+	used. Wildcard dependencies should be used with care.</para>
 
-	<para>The comment about wildcard dependencies from previous
-	paragraph applies here, too.</para>
+	<para>The <quote>-[0-9]*</quote> should be used instead of
+	<quote>-*</quote> to avoid potentially ambiguous matches
+	such as <quote>tk-postgresql</quote> matching a
+	<quote>tk-*</quote> <varname>DEPENDS</varname>.</para>
+
+	<para>Wildcards can also be used to specify that a package
+	will only build against a certain minimum version of a
+	pre-requisite:</para>
+
+	<programlisting>
+DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
+	</programlisting>
+
+	<para>This means that the package will build using version 6.0
+	of ImageMagick or newer. Such a dependency may be warranted
+	if, for example, the command line options of an executable
+	have changed.</para>
+
+	<para>If you need to depend on minimum versions of libraries,
+	see the buildlink section of the pkgsrc guide.</para>
+
+	<para>For security fixes, please update the package
+	vulnerabilities file. See <xref
+	linkend="security-handling"/> for more
+	information.</para>
       </listitem>
     </orderedlist>
 
