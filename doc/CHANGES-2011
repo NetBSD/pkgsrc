@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1204 2011/05/21 17:23:36 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1205 2011/05/21 17:26:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1746,7 +1746,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/mkmemstick version 20090801 [agc 2011-05-04]
 	Updated audio/libmodplug to 0.8.8.2 [obache 2011-05-05]
 	Updated devel/libidn to 1.22 [adam 2011-05-05]
-	Updated devel/scmgit to 1.7.5.1 [adam 2011-04-26]
+	Updated devel/scmgit to 1.7.5.1 [adam 2011-05-05]
 	Updated devel/scmgit-base to 1.7.5.1 [adam 2011-05-05]
 	Updated devel/scmgit-docs to 1.7.5.1 [adam 2011-05-05]
 	Updated databases/p5-Jifty-DBI to 0.68 [obache 2011-05-05]
@@ -1971,3 +1971,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/taglib to 1.7 [wiz 2011-05-21]
 	Updated audio/pulseaudio to 0.9.21nb9 [wiz 2011-05-21]
 	Updated x11/xvidcap to 1.1.3nb12 [wiz 2011-05-21]
+	Updated devel/scmgit to 1.7.5.2 [adam 2011-05-21]
+	Updated devel/scmgit-base to 1.7.5.2 [adam 2011-05-21]
+	Updated devel/scmgit-docs to 1.7.5.2 [adam 2011-05-21]
