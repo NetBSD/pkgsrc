@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/05/21 09:05:26 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/05/21 11:59:53 obache Exp $
 
 DISTNAME=	pnet-0.8.0
 #PKGREVISION=	1
@@ -8,11 +8,12 @@ MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dotgnu.org/
 COMMENT=	DotGNU Portable.NET (development tools)
-LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	treecc>=0.2.6:../../devel/treecc
 
 CONFLICTS=	mono-[0-9]*
+CONFLICTS+=	libffi-[0-9]*
+CONFLICTS+=	boehm-gc-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
