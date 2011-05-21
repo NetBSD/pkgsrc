@@ -1,4 +1,10 @@
-$NetBSD: patch-ad,v 1.6 2010/12/02 21:17:43 wiz Exp $
+$NetBSD: patch-ad,v 1.7 2011/05/21 15:32:59 wiz Exp $
+
+1. chunk: adapt installation paths for pkgsrc; make UDEV optional
+2. chunk: adapt installation path for pkgsrc
+3. chunk: adapt path for NetBSD
+4. chunk: link against libossaudio where it exists (variable supplied
+by pkgsrc)
 
 --- src/Makefile.am.orig	2009-11-22 19:57:04.000000000 -0800
 +++ src/Makefile.am	2010-10-01 10:11:05.000000000 -0700
