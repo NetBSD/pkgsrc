@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10341 2011/05/20 11:07:29 adam Exp $
+$NetBSD: TODO,v 1.10342 2011/05/21 09:14:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -443,12 +443,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20101229
-	o bzr-2.3.1
+	o bzr-2.3.3
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8
+	o calibre-0.8.1
 	o camlimages-4.0.0
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -578,7 +578,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.28
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-1.14
+	o feh-1.14.1
 	o festival-1.96
 	o felt-3.07
 	o fetchmail-6.3.19
@@ -760,7 +760,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-7.4
 	o highlight-3.4
 	o honeyd-1.5c
-	o horde-4.0.2
+	o horde-4.0.3
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -828,7 +828,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kodos-2.4.5
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-3.0.2
+	o kronolith-3.0.3
 	o krusader-2.0
 	o ktorrent-4.1.1
 	o ktorrent3-3.3.4
@@ -991,7 +991,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-16.10
+	o nut-16.11
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1015,7 +1015,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0d [pkg/44717]
 	o open-vm-tools-2010.09.19.301124
 	o openttd-1.1.0
-	o opera-11.10
+	o opera-11.11
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
@@ -1047,7 +1047,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o photopc-3.05
 	o php-jpgraph-3.0.6
 	o php-libawl-0.46
-	o phpmyadmin-3.4.0
+	o phpmyadmin-3.4.1
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1229,7 +1229,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-29.0.2
+	o tea-29.0.3
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.3
