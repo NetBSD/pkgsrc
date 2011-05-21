@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.797 2011/05/19 02:09:17 mspo Exp $
+# $NetBSD: Makefile,v 1.798 2011/05/21 09:07:42 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -26,10 +26,10 @@ SUBDIR+=	ap-bandwidth
 SUBDIR+=	ap-dav
 SUBDIR+=	ap-dtcl
 SUBDIR+=	ap-fastcgi
+SUBDIR+=	ap-geoip2
 SUBDIR+=	ap-gzip
 SUBDIR+=	ap-jk
 SUBDIR+=	ap-layout
-SUBDIR+=	ap-mod_geoip2
 SUBDIR+=	ap-mono
 SUBDIR+=	ap-mp3
 SUBDIR+=	ap-perl
