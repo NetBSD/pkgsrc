@@ -1,4 +1,6 @@
-$NetBSD: patch-db,v 1.1 2010/02/01 15:00:20 jmcneill Exp $
+$NetBSD: patch-db,v 1.2 2011/05/21 15:33:00 wiz Exp $
+
+Make udev optional.
 
 --- src/daemon/default.pa.in.orig	2009-11-23 03:57:05.000000000 +0000
 +++ src/daemon/default.pa.in
