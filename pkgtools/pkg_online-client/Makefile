@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/16 21:46:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/21 09:07:04 wiz Exp $
 #
 
 .include "../../pkgtools/pkg_online-server/Makefile.common"
@@ -16,8 +16,6 @@ DEPENDS+=	netcat-[0-9]*:../../net/netcat
 BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
 INSTALL_TARGET=	install-client install-doc
-
-DESCR_SRC+=	${.CURDIR}/DESCR
 
 DOCDIR=		${PREFIX}/share/doc/pkg_online-client
 EGDIR=		${PREFIX}/share/examples/pkg_online-client

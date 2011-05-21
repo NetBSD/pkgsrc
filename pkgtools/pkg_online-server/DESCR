@@ -1,2 +1,20 @@
+pkg_online - client/server package searcher for pkgsrc.
+
+Every separate field (PKGPATH, PKGNAME, COMMENT etc.) may be queried
+separately and multiple fields may be queried too. A lot of search
+strategies are available. Set of fields and search strategies may
+very depending on your server configuration. Search in multiple
+"repositories" is supported too, e.g. search in binary repository
+or in pkgsrc source tree.
+
+Communication protocol is a well known dictionary protocol described
+in RFC-2229. Server may run dictd or any other dictionary protocol
+server.  For dictd see http://www.dict.org and
+http://sourceforge.net/projects/dict
+
+pkg_online has minimal amount of things specific to pkgsrc and can
+easily be adapted to any other packageing systems.
+
+Of course it is based on pkg_summary-utils ;-)
 
 This package provides tools for building PKG_ONLINE databases.
