@@ -1,7 +1,27 @@
-$NetBSD: patch-ae,v 1.1 2006/02/18 14:07:54 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2011/05/21 08:18:16 obache Exp $
 
---- makeinclude.in.orig	2006-02-01 18:02:22.000000000 +0000
+* destdir installation support
+* libtoolize
+
+--- makeinclude.in.orig	2003-03-13 15:10:15.000000000 +0000
 +++ makeinclude.in
+@@ -37,11 +37,11 @@ SYSTYPE	       = @SYSTYPE@
+ 
+ prefix		= @prefix@
+ exec_prefix	= @exec_prefix@
+-bindir		= @bindir@
+-datadir		= @datadir@
+-includedir	= @includedir@
+-libdir		= @libdir@
+-mandir		= @mandir@
++bindir		= $(DESTDIR)@bindir@
++datadir		= $(DESTDIR)@datadir@
++includedir	= $(DESTDIR)@includedir@
++libdir		= $(DESTDIR)@libdir@
++mandir		= $(DESTDIR)@mandir@
+ srcdir		= @srcdir@
+ VPATH		= @srcdir@
+ 
 @@ -104,8 +104,8 @@ ODBCLIBS	=$(FLODBCLIB) $(UNIXODBCLIB)
  MYSQLLIBS_	=$(FLMYSQLLIB) $(MYSQLLIBS)
  
