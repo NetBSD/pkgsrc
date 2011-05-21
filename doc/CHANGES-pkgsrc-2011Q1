@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.22 2011/05/20 07:54:42 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.23 2011/05/21 09:03:56 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -96,3 +96,5 @@ Pullup ticket #3434 - requested by bouyer
 net/isc-dhcp4 build fix
 Pullup ticket #3431 - requested by taca
 security/openssh: bug fix update
+Pullup ticket #3436 - requested by drochner
+devel/apr: security patch
