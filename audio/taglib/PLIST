@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.11 2010/07/10 07:56:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/05/21 15:13:20 wiz Exp $
 bin/taglib-config
 include/taglib/aifffile.h
 include/taglib/aiffproperties.h
+include/taglib/apefile.h
 include/taglib/apefooter.h
 include/taglib/apeitem.h
+include/taglib/apeproperties.h
 include/taglib/apetag.h
 include/taglib/asfattribute.h
 include/taglib/asffile.h
+include/taglib/asfpicture.h
 include/taglib/asfproperties.h
 include/taglib/asftag.h
 include/taglib/attachedpictureframe.h
@@ -14,6 +17,8 @@ include/taglib/audioproperties.h
 include/taglib/commentsframe.h
 include/taglib/fileref.h
 include/taglib/flacfile.h
+include/taglib/flacmetadatablock.h
+include/taglib/flacpicture.h
 include/taglib/flacproperties.h
 include/taglib/generalencapsulatedobjectframe.h
 include/taglib/id3v1genres.h
@@ -75,7 +80,11 @@ include/taglib/wavpackproperties.h
 include/taglib/wavproperties.h
 include/taglib/xingheader.h
 include/taglib/xiphcomment.h
-lib/libtag.la
-lib/libtag_c.la
+lib/libtag.so
+lib/libtag.so.1
+lib/libtag.so.1.10.0
+lib/libtag_c.so
+lib/libtag_c.so.0
+lib/libtag_c.so.0.0.0
 lib/pkgconfig/taglib.pc
 lib/pkgconfig/taglib_c.pc
