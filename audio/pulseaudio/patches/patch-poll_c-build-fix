@@ -1,4 +1,6 @@
-$NetBSD: patch-poll_c-build-fix,v 1.1 2011/01/20 13:08:59 ahoka Exp $
+$NetBSD: patch-poll_c-build-fix,v 1.2 2011/05/21 15:33:00 wiz Exp $
+
+Fix compilation on platforms without poll().
 
 --- src/pulsecore/poll.c.orig	2009-03-05 11:28:10.000000000 +0000
 +++ src/pulsecore/poll.c
