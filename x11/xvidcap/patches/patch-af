@@ -1,6 +1,11 @@
-$NetBSD: patch-af,v 1.2 2006/05/17 01:53:17 reed Exp $
+$NetBSD: patch-af,v 1.3 2011/05/21 17:23:10 wiz Exp $
 
---- src/mngutil.c.orig	2004-02-14 11:55:36.000000000 +0100
+Do not redeclare png functions.
+png_ptr's members are hidden now, so don't access them.
+XXX: this patch won't work if some bytes were already written,
+but why should they have been? Should be done better by upstream.
+
+--- src/mngutil.c.orig	2004-02-14 10:55:36.000000000 +0000
 +++ src/mngutil.c
 @@ -30,13 +30,6 @@
  #include <png.h>
@@ -16,12 +21,15 @@ $NetBSD: patch-af,v 1.2 2006/05/17 01:53:17 reed Exp $
  png_byte mng_sig[8] = {138, 77, 78, 71, 13, 10, 26, 10};
  
  /*
-@@ -46,7 +39,7 @@ void
+@@ -45,9 +38,8 @@ png_byte mng_sig[8] = {138, 77, 78, 71, 
+ void
  mng_write_sig (png_structp png_ptr)
  {
- 	/* write the rest of the 8 byte signature */
+-	/* write the rest of the 8 byte signature */
 -	png_write_data (png_ptr, &mng_sig[png_ptr->sig_bytes],
-+	png_write_chunk_data (png_ptr, &mng_sig[png_ptr->sig_bytes],
- 		(png_size_t)8 - png_ptr->sig_bytes);
+-		(png_size_t)8 - png_ptr->sig_bytes);
++	/* write the 8 byte signature */
++	png_write_chunk_data (png_ptr, mng_sig, 8);
  }
+ 
  
