@@ -1,10 +1,16 @@
-$NetBSD: patch-ba,v 1.7 2010/08/10 05:42:34 tsutsui Exp $
+$NetBSD: patch-ba,v 1.8 2011/05/21 15:33:00 wiz Exp $
 
+1. chunk:
+Check NetBSD's native atomic_ops in configure even in arm case.
+configure checks $host_cpu first, not $host_os on checks for
+native atomic operations.
+(In upstream it seems fixed to see $host_os first but
+ it might still have problem around NetBSD version checks)
+
+2. chunk:
 Fix for security vulnerability reported in CVE-2009-1299, taken from here:
 
 http://git.0pointer.de/?p=pulseaudio.git;a=patch;h=d3efa43d85ac132c6a5a416a2b6f2115f5d577ee
-
-Also handle atomic_ops for NetBSD/arm.
 
 --- configure.ac.orig	2009-11-23 04:06:47.000000000 +0000
 +++ configure.ac	2010-08-07 08:06:57.000000000 +0000
