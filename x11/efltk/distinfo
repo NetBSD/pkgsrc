@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2006/03/08 11:29:50 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/05/21 08:18:16 obache Exp $
 
 SHA1 (efltk-2.0.5.tar.bz2) = 26f7124b384d0bfe3d28a73cbdf0111432b08d99
 RMD160 (efltk-2.0.5.tar.bz2) = 7efa711d0df8a01ee402e1866286265d294778e8
@@ -7,7 +7,10 @@ SHA1 (patch-aa) = d87f595661c465fc315b643241b22ef65926906e
 SHA1 (patch-ab) = 27a6870c068c8ea44089955a7d3c0492191f23ba
 SHA1 (patch-ac) = cf4474ff83f9630f6b310bc3df0fc16adaff7138
 SHA1 (patch-ad) = 41911884bc0eaa6a4de869b90d62c9ee27d1908b
-SHA1 (patch-ae) = db02f224887f6d0e55334310ad0a3f09da6499b8
+SHA1 (patch-ae) = 45f32b9d098736443a3d9b405b6fe17da624d9fc
 SHA1 (patch-af) = 2fe44ea57e0579dcfa43ba597e52161c70f67efd
 SHA1 (patch-ag) = 29799b2b0aeffbca82dbc98cb1e06eb62a7e595a
 SHA1 (patch-ah) = 63bacecefa0cece0cbcbf229c886231f2907c0a8
+SHA1 (patch-efltk_Fl__Text__Buffer.h) = 16eb6b48d0f06ac0f2074a0b61a782db7757663e
+SHA1 (patch-efltk_Fl__Window.h) = b97f04435b88e05ec4f642b0615575cf8d279dd7
+SHA1 (patch-src_images_Fl__Png.cpp) = 0c2d3bf30a5542274048784aaf32256cc5466dea
