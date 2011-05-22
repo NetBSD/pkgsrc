@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.2 2011/05/22 19:11:42 dholland Exp $
+$NetBSD: patch-ai,v 1.3 2011/05/22 19:17:58 dholland Exp $
 
 - supply toplevel makefile
 
@@ -6,9 +6,9 @@ $NetBSD: patch-ai,v 1.2 2011/05/22 19:11:42 dholland Exp $
 +++ Makefile	Sat Dec  7 19:22:44 2002
 @@ -0,0 +1,7 @@
 +all:
-+	cd dpteng && make depend && make
-+	cd dptutil && make depend && make
++	(cd dpteng && $(MAKE) depend && $(MAKE))
++	(cd dptutil && $(MAKE) depend && $(MAKE))
 +
 +clean:
-+	cd dpteng && make clean
-+	cd dptutil && make clean
++	(cd dpteng && $(MAKE) clean)
++	(cd dptutil && $(MAKE) clean)
