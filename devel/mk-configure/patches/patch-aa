@@ -1,5 +1,6 @@
-$NetBSD: patch-mkc__imp.init.mk,v 1.1 2011/05/13 22:00:26 cheusov Exp $
+$NetBSD: patch-aa,v 1.1 2011/05/22 15:23:31 cheusov Exp $
 
+Fix problem with MAKE_JOBS>1
 --- mkc_imp.init.mk.orig	2010-10-23 14:18:27.000000000 +0000
 +++ mkc_imp.init.mk
 @@ -13,7 +13,7 @@ TARGET_OPSYS?=  ${OPSYS}
