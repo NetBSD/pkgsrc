@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1205 2011/05/21 17:26:49 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1206 2011/05/22 05:57:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1974,3 +1974,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit to 1.7.5.2 [adam 2011-05-21]
 	Updated devel/scmgit-base to 1.7.5.2 [adam 2011-05-21]
 	Updated devel/scmgit-docs to 1.7.5.2 [adam 2011-05-21]
+	Added www/ruby-liquid version 2.2.2 [minskim 2011-05-22]
