@@ -1,8 +1,12 @@
-$NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
+$NetBSD: patch-ae,v 1.3 2011/05/22 19:11:42 dholland Exp $
 
---- dpteng/osd_unix.c.orig	Tue Aug 13 16:02:26 2002
-+++ dpteng/osd_unix.c	Fri Dec 13 14:15:13 2002
-@@ -2588,7 +2588,7 @@
+- fix shmget?
+- use intptr_t
+- config for netbsd
+
+--- dpteng/osd_unix.c.orig	2002-08-13 15:02:26.000000000 +0000
++++ dpteng/osd_unix.c
+@@ -2588,7 +2588,7 @@ int BufferAlloc(uLONG toLoggerSize, char
  
          BufferID = shmget(IPC_PRIVATE,(int)(toLoggerTotalSize +
                            fromLoggerTotalSize),
@@ -11,7 +15,16 @@ $NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
  
    /* If We Got The Segment, Try To Attach To It */
  
-@@ -3676,7 +3676,7 @@
+@@ -2599,7 +2599,7 @@ int BufferAlloc(uLONG toLoggerSize, char
+ 
+   /* The Attach Failed, So DeAllocate The Shared Memory */
+ 
+-            if((int)SharedMemoryPtr == -1)
++            if((intptr_t)SharedMemoryPtr == -1)
+               {
+                 Rtnval = 1;
+                 shmctl(BufferID,IPC_RMID,&shm_buff);
+@@ -3676,7 +3676,7 @@ uSHORT BuildNodeNameList(void)
     uCHAR DataBuff[100];
     EATA_CP pkt;
     int IoctlRtn;
@@ -20,7 +33,7 @@ $NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
         int   c;
         int   i2oMajorNode = 0;
         FILE *fp = popen (
-@@ -3695,7 +3695,7 @@
+@@ -3695,7 +3695,7 @@ uSHORT BuildNodeNameList(void)
     NumEntries = 0;
     for(i = 0; i < MAX_HAS; ++i)
       {
@@ -29,7 +42,7 @@ $NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
         int created = 0;
  #      endif
  
-@@ -3710,7 +3710,7 @@
+@@ -3710,7 +3710,7 @@ uSHORT BuildNodeNameList(void)
         IoctlRtn = osdSendIoctl(&HbaDevs[NumEntries],DPT_SIGNATURE,
                                 DataBuff,&pkt);
  
@@ -38,7 +51,7 @@ $NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
         /*
          *   Use Alternate access.
          */
-@@ -3758,7 +3758,7 @@
+@@ -3758,7 +3758,7 @@ uSHORT BuildNodeNameList(void)
             HbaDevs[NumEntries].IoAddress = 0xffffffff;
             ++NumEntries;
          }
@@ -47,7 +60,7 @@ $NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
           else if (created)
        {
           unlink (HbaDevs[NumEntries].NodeName);
-@@ -3777,8 +3777,10 @@
+@@ -3777,8 +3777,10 @@ uSHORT BuildNodeNameList(void)
          }
         HbaDevs[NumEntries].Flags = 0;
         strcpy(HbaDevs[NumEntries].NodeName,"/dev");
@@ -59,7 +72,7 @@ $NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
  #      else
             strcat(HbaDevs[NumEntries].NodeName,"/dptr");
  #      endif
-@@ -3789,7 +3791,7 @@
+@@ -3789,7 +3791,7 @@ uSHORT BuildNodeNameList(void)
         mknod(HbaDevs[NumEntries].NodeName, S_IFCHR|S_IRUSR|S_IWUSR,
          (MAJOR_NODE << 20) + (i << 10) + 0);
  #      undef MAJOR_NODE
