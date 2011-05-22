@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/13 22:00:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/22 15:23:31 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.21.0
@@ -10,7 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 MAINTAINER=	vle@gmx.net
 HOMEPAGE=	http://sourceforge.net/projects/mk-configure
 COMMENT=	Lightweight but powerful replacement for GNU autotools
-
 LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
