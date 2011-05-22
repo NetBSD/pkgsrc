@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_namarray_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/namarray.hpp~	2002-08-13 15:02:49.000000000 +0000
++++ dptutil/namarray.hpp
+@@ -32,7 +32,7 @@ class NameArray:public Command
+ {
+ 
+ 	public:
+-		NameArray::NameArray(SCSI_Address arrayToName, char *arrayName);
++		NameArray(SCSI_Address arrayToName, char *arrayName);
+ 		NameArray(const NameArray &new_NameArray);
+ 		virtual	~NameArray();
+ 

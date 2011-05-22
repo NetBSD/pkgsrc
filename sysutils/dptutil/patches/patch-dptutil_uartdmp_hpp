@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_uartdmp_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/uartdmp.hpp~	2002-08-13 15:02:52.000000000 +0000
++++ dptutil/uartdmp.hpp
+@@ -33,7 +33,7 @@ class UartDmp:public Command
+ {
+ 
+ 	public:
+-		UartDmp::UartDmp(int hbaNo, char *fileName);
++		UartDmp(int hbaNo, char *fileName);
+ 		UartDmp(const UartDmp &new_UartDmp);
+ 		virtual	~UartDmp();
+ 

@@ -1,0 +1,28 @@
+$NetBSD: patch-dptutil_lockunix_c,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+- Avoid mktemp.
+- Pass a file mode to open when creating files.
+
+Note that dpteng/lockunix.c and dptutil/lockunix.c are identical and
+should be patched identically.
+
+--- dptutil/lockunix.c.orig	2002-08-13 15:02:26.000000000 +0000
++++ dptutil/lockunix.c
+@@ -73,7 +73,7 @@ MkLock (char * name)
+ 		return (-1);
+ 	}
+ 	sprintf (templateBuffer, Template, Name);
+-	if ((fd = open(mktemp (templateBuffer), O_WRONLY|O_CREAT|O_EXCL)) < 0) {
++	if ((fd = mkstemp (templateBuffer)) < 0) {
+ 		free (templateBuffer);
+ 		free (lock);
+ 		return (-1);
+@@ -143,7 +143,7 @@ ChLock (char * name, int pid)
+ 
+ 	if (lock != (char *)NULL) {
+ 		sprintf (lock, Lock, Name);
+-	    if ((fd = open(lock, O_WRONLY|O_CREAT|O_TRUNC)) >= 0) {
++	    if ((fd = open(lock, O_WRONLY|O_CREAT|O_TRUNC, 0600)) >= 0) {
+ 			sprintf (buffer, "%d\n", pid);
+ 			write (fd, buffer, strlen(buffer));
+ 			close (fd);

@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2003/01/27 23:39:03 ad Exp $
+$NetBSD: patch-ah,v 1.2 2011/05/22 19:11:42 dholland Exp $
+
+- fix msgget?
 
 --- dpteng/engmsg.c.orig	Fri Dec 13 14:18:21 2002
 +++ dpteng/engmsg.c	Fri Dec 13 14:18:40 2002

@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2003/12/09 19:41:26 ad Exp $
+$NetBSD: patch-ao,v 1.2 2011/05/22 19:11:42 dholland Exp $
+
+- ...?
 
 --- dptutil/dynsize.cpp.orig	2003-12-09 19:22:47.000000000 +0000
 +++ dptutil/dynsize.cpp	2003-12-09 19:25:59.000000000 +0000

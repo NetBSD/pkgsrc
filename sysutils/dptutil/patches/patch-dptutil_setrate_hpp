@@ -1,0 +1,17 @@
+$NetBSD: patch-dptutil_setrate_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/setrate.hpp~	2002-08-13 15:02:51.000000000 +0000
++++ dptutil/setrate.hpp
+@@ -33,8 +33,8 @@ class SetRate: public Command
+ 	public:
+ 
+ 		// Set the (global) rebuild rate
+-        SetRate::SetRate(int rate, SCSI_Addr_List *objs);
+-        SetRate::SetRate(const SetRate &right);
++        SetRate(int rate, SCSI_Addr_List *objs);
++        SetRate(const SetRate &right);
+ 		virtual	~SetRate();
+ 
+ 		Dpt_Error execute(String_List **output);

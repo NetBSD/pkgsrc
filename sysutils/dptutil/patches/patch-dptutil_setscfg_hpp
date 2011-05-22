@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_setscfg_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/setscfg.hpp~	2002-08-13 15:02:51.000000000 +0000
++++ dptutil/setscfg.hpp
+@@ -33,7 +33,7 @@ class setscfg:public Command
+ {
+ 
+ 	public:
+-		setscfg::setscfg();
++		setscfg();
+ 		virtual	~setscfg();
+ 
+ 		Dpt_Error execute(String_List **output);

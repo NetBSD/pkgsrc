@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_taskctrl_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/taskctrl.hpp~	2002-08-13 15:02:52.000000000 +0000
++++ dptutil/taskctrl.hpp
+@@ -33,7 +33,7 @@ enum TaskCommandOptions { List, Build, R
+ class TaskControl:public Command
+ 	{
+ 	public:
+-		TaskControl::TaskControl(SCSI_Addr_List *deviceList, TaskCommandOptions cmd);
++		TaskControl(SCSI_Addr_List *deviceList, TaskCommandOptions cmd);
+ 		TaskControl(const TaskControl &new_TaskControl);
+ 		virtual	~TaskControl();
+ 

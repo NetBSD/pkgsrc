@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_expand_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/expand.hpp~	2002-08-13 15:02:47.000000000 +0000
++++ dptutil/expand.hpp
+@@ -29,7 +29,7 @@
+ class Expand:public Command
+ {
+    public:
+-      Expand::Expand (SCSI_Address raid, SCSI_Addr_List *list);
++      Expand (SCSI_Address raid, SCSI_Addr_List *list);
+ 		Expand (const Expand &new_Expand);
+ 		virtual ~Expand();
+ 		Expand &operator = (Expand &right);

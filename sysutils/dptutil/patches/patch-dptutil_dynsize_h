@@ -1,0 +1,20 @@
+$NetBSD: patch-dptutil_dynsize_h,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/dynsize.h.orig	2002-08-13 15:02:46.000000000 +0000
++++ dptutil/dynsize.h
+@@ -22,8 +22,11 @@
+ *****************************************************************************/
+ 
+ /*** INCLUDES ***/
+-#include <iostream.h>
+-#include <stdio.h>
++#include <iostream>
++#include <cstdio>
++using std::ios;
++using std::istream;
++using std::streambuf;
+ 
+ 
+ /*** DEFINES ***/

@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.1.1.1 2002/12/09 11:07:20 ad Exp $
+$NetBSD: patch-ai,v 1.2 2011/05/22 19:11:42 dholland Exp $
+
+- supply toplevel makefile
 
 --- /dev/null	Sat Dec  7 19:02:30 2002
 +++ Makefile	Sat Dec  7 19:22:44 2002

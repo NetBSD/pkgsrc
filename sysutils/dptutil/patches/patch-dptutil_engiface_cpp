@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_engiface_cpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/engiface.cpp~	2002-08-13 15:02:46.000000000 +0000
++++ dptutil/engiface.cpp
+@@ -26,7 +26,7 @@
+ #include "id_list.hpp"
+ #include "dpt_api.h"
+ 
+-extern "C" uLONG engineTimeOut = 0;
++uLONG engineTimeOut = 0;
+ 
+ //Function - DPT_EngineIO_C::DPT_EngineIO_C() - start
+ //===========================================================================

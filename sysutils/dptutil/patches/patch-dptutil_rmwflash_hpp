@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_rmwflash_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/rmwflash.hpp~	2002-08-13 15:02:50.000000000 +0000
++++ dptutil/rmwflash.hpp
+@@ -33,7 +33,7 @@ class RMWFlash:public Command
+ {
+ 
+         public:
+-                RMWFlash::RMWFlash(int hbaNo, char *Data, int Region, unsigned long Offset, unsigned Size);
++                RMWFlash(int hbaNo, char *Data, int Region, unsigned long Offset, unsigned Size);
+                 RMWFlash(const RMWFlash &new_RMWFlash);
+                 virtual ~RMWFlash();
+ 
