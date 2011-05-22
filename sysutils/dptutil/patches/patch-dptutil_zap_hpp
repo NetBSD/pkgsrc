@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_zap_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/zap.hpp~	2002-08-13 15:02:53.000000000 +0000
++++ dptutil/zap.hpp
+@@ -29,7 +29,7 @@
+ class Zap:public Command
+ 	{
+ 	public:
+-		Zap::Zap(
++		Zap(
+ 				SCSI_Addr_List	*addresses,  // a list of addresses
+             int resync = 0            // (send reset to hba or not)
+       );								         // to delete raid tables on

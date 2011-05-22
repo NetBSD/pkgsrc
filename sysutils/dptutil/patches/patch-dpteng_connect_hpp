@@ -1,0 +1,15 @@
+$NetBSD: patch-dpteng_connect_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dpteng/connect.hpp~	2002-08-13 15:02:20.000000000 +0000
++++ dpteng/connect.hpp
+@@ -167,7 +167,7 @@ public:
+ 
+ // Constructor/Destructor.............................
+ 
+-			dptSCSIcon_C::dptSCSIcon_C();
++			dptSCSIcon_C();
+ 
+ // Message Handlers...................................
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_forcest_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/forcest.hpp~	2002-08-13 15:02:47.000000000 +0000
++++ dptutil/forcest.hpp
+@@ -39,7 +39,7 @@ enum ForceStateOptions { Optimal, Fail, 
+ class ForceState:public Command
+ 	{
+ 	public:
+-		ForceState::ForceState(SCSI_Addr_List *deviceList, ForceStateOptions cmd);
++		ForceState(SCSI_Addr_List *deviceList, ForceStateOptions cmd);
+ 		ForceState(const ForceState &new_ForceState);
+ 		virtual	~ForceState();
+ 
