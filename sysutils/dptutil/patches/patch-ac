@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/12/09 11:07:20 ad Exp $
+$NetBSD: patch-ac,v 1.2 2011/05/22 19:11:42 dholland Exp $
 
 diff -ur dpteng/makefile dpteng/makefile
 --- odpteng/makefile	Fri Aug 30 19:40:36 2002
@@ -10,8 +10,8 @@ diff -ur dpteng/makefile dpteng/makefile
 -CFLAGS= $(INCLUDE_DIR) -D__UNIX__ -DMESSAGES -D_DPT_ACTIVE_ALIGNMENT -DI_WANT_SNI_DEBUG -DNEW_LOGGER -c
 +CFLAGS= $(INCLUDE_DIR) -Dunix -D__unix__ -D_DPT_FREE_BSD -D__UNIX__ -DMESSAGES \
 +	-D_DPT_ACTIVE_ALIGNMENT -D_DPT_DEFINE_SEMUN -DI_WANT_SNI_DEBUG \
-+	-DNEW_LOGGER -DDEFAULT_PATH=\"@SBINDIR@\" \
-+	-D_NBSD_LIBEXEC=\"@SBINDIR@\" -c
++	-DNEW_LOGGER -DDEFAULT_PATH=\"${PREFIX}/sbin\" \
++	-D_NBSD_LIBEXEC=\"${PREFIX}/sbin\" -c
  
  SRCS = \
  	addr_rng.cpp \

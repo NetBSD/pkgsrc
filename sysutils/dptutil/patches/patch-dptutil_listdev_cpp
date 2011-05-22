@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_listdev_cpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/listdev.cpp~	2002-08-13 15:02:48.000000000 +0000
++++ dptutil/listdev.cpp
+@@ -1896,7 +1896,7 @@ void List_Device::GetSmorBiosSignatures(
+     // Save some data from the engine (I have no idea what this data is).
+     //
+     size_t saveSize = engine->fromEng_P->allocSize + sizeof(dptData_S) - 1;
+-    void *saveData = new char[saveSize];
++    char *saveData = new char[saveSize];
+     if ( saveData != NULL )
+     {
+         memcpy(saveData, engine->fromEng_P, saveSize);

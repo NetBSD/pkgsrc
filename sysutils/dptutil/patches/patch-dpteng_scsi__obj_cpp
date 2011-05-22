@@ -1,0 +1,24 @@
+$NetBSD: patch-dpteng_scsi__obj_cpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+gcc apparently won't accept passing a packed field by reference
+nowadays.
+
+--- dpteng/scsi_obj.cpp~	2002-08-13 15:02:28.000000000 +0000
++++ dpteng/scsi_obj.cpp
+@@ -421,7 +421,15 @@ if (bytesLeft >= (infoSize()+sizeof(uLON
+ 	// Return this object's manager SCSI ID instead of tag
+       basic_P->attachedTo = myMgr_P()->getAddrL();
+ 	// Reverse the SCSI address bytes
+-      reverseBytes(basic_P->attachedTo);
++      {
++	 /*
++	  * dholland 20110522 gcc apparently won't accept passing a
++	  * packed field by reference nowadays.
++	  */
++	 uLONG tmp = basic_P->attachedTo;
++	 reverseBytes(tmp);
++	 basic_P->attachedTo = tmp;
++      }
+ 
+    DEBUG(6, PRT_SADDR(basic_P) << "new attachedTo=0x" << hex << \
+ 	    basic_P->attachedTo << " is set");
