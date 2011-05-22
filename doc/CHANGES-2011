@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1209 2011/05/22 22:47:31 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1210 2011/05/22 22:55:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1978,3 +1978,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cmph to 1.1 [alnsn 2011-05-22]
 	Updated devel/apr to 1.4.5 [tron 2011-05-22]
 	Updated devel/apr-util to 1.3.12 [tron 2011-05-22]
+	Updated www/apache22 to 2.2.19 [tron 2011-05-22]
