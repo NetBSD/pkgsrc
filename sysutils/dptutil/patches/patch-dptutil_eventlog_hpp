@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_eventlog_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/eventlog.hpp~	2002-08-13 15:02:47.000000000 +0000
++++ dptutil/eventlog.hpp
+@@ -51,7 +51,7 @@ class EventLog:public Command
+ 	{
+ 
+ 	public:
+-		EventLog::EventLog(SCSI_Addr_List *deviceList, 
++		EventLog(SCSI_Addr_List *deviceList, 
+             EventLogOptions cmd);
+ 		EventLog(const EventLog &new_EventLog);
+ 		virtual	~EventLog();
