@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/13 19:57:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/22 20:55:31 ryoon Exp $
 #
 
 DISTNAME=	IPAfont00303
@@ -31,7 +31,7 @@ INSTALL_FONTS=	ipag.ttf \
 		ipam.ttf \
 		ipamp.ttf
 INSTALL_DOCS=	IPA_Font_License_Agreement_v1.0.txt \
-		Readme_IPAfont00302.txt
+		Readme_IPAfont00303.txt
 
 USE_LANGUAGES=	# none
 
