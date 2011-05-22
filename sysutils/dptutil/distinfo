@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/05/22 19:11:42 dholland Exp $
+$NetBSD: distinfo,v 1.6 2011/05/22 19:17:57 dholland Exp $
 
 SHA1 (raidmgt-3.31.tar.gz) = d55d573fbdd22c4c9c44003b9230b29c1c728848
 RMD160 (raidmgt-3.31.tar.gz) = 387aee21d9b0730461b6cb77f88d9ec6b837db8f
@@ -11,7 +11,7 @@ SHA1 (patch-ae) = 95e879f5ef10fd9fbbec8338c13d5676a38e1d41
 SHA1 (patch-af) = bd2a5777942f8758489852ada25b1cfdc0e8bc63
 SHA1 (patch-ag) = 5dad34b5fa4aa843cd16a73d8bdecf3383e0a613
 SHA1 (patch-ah) = 4c09208dfd3a245bf775a0a20fe03d041dadcc48
-SHA1 (patch-ai) = 79c695ac644f2842a98274e9eea96b777cf6a0ae
+SHA1 (patch-ai) = 6d100c12cab2437c903ea6154820b5054e2a61ac
 SHA1 (patch-ak) = 3ceef4fff08827af7fd7b28df2e049c1cc61973a
 SHA1 (patch-al) = 4cfd01c04fae9f1a159b661341ccf46548d1c793
 SHA1 (patch-am) = 6ffaa38d86399bdb80847cb99bd2b6adff4e804f
