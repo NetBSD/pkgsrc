@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/12/01 21:00:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/22 22:41:09 abs Exp $
 #
 VERS=			1.1.2.1
+PKGREVISION=		1
 DISTNAME=		Ocsinventory-Agent-${VERS}
 PKGNAME=		ocsinventory-agent-${VERS}
 CATEGORIES=		net
@@ -25,7 +26,7 @@ WRKSRC=			${WRKDIR}/Ocsinventory-Agent-${VERS}
 BUILD_DEFS+=		VARBASE
 AUTO_MKDIRS=yes
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,10 +51,10 @@ SUBST_MESSAGE.sysconfdir=	Fixing hardcoded install directory path.
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	lib/Ocsinventory/Agent/Common.pm
 SUBST_SED.path=		-e "s|/usr/local/bin|${PREFIX}/bin|g"
-SUBST_SED.path=		-e "s|/usr/local/sbin|${PREFIX}/sbin|g"
+SUBST_SED.path+=	-e "s|/usr/local/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.path=	Fixing hardcoded path.
 
-PERL5_PACKLIST=         auto/Ocsinventory/Agent/.packlist
+PERL5_PACKLIST=		auto/Ocsinventory/Agent/.packlist
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/lib/Ocsinventory/Agent/Backend/OS/BSD/Pcictl
