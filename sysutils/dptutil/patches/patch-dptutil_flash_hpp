@@ -1,0 +1,16 @@
+$NetBSD: patch-dptutil_flash_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/flash.hpp~	2002-08-13 15:02:47.000000000 +0000
++++ dptutil/flash.hpp
+@@ -21,7 +21,8 @@
+ *****************************************************************************/
+ 
+ /*** INCLUDES ***/
+-#include <iostream.h>
++#include <iostream>
++using std::istream;
+ /*** CONSTANTS ***/
+ enum FlashRegion { FW, I2OBIOS, SMOR, NVRAM };
+ 

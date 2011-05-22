@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_setcache_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/setcache.hpp~	2002-08-13 15:02:51.000000000 +0000
++++ dptutil/setcache.hpp
+@@ -29,7 +29,7 @@
+ class SetCache:public Command
+ 	{
+ 	public:
+-		SetCache::SetCache(
++		SetCache(
+ 				SCSI_Addr_List	*addresses,		// a list of addresses
+ 				int				on,				// Whether to enable or disable
+ 				int				rw				// Read or write cacheing.

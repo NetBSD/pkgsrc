@@ -1,0 +1,15 @@
+$NetBSD: patch-dptutil_segment_hpp,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dptutil/segment.hpp~	2002-08-13 15:02:51.000000000 +0000
++++ dptutil/segment.hpp
+@@ -23,7 +23,7 @@ class arraySegment:public Command
+ {
+ 
+ 	public:
+-		arraySegment::arraySegment(SCSI_Address raidToSeg, uLONG segSize[8], uLONG segOffset[8], bool showSeg);
++		arraySegment(SCSI_Address raidToSeg, uLONG segSize[8], uLONG segOffset[8], bool showSeg);
+ 		arraySegment(const arraySegment &new_arraySegment);
+ 		virtual	~arraySegment();
+ 

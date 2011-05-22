@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2003/01/27 23:39:03 ad Exp $
+$NetBSD: patch-ak,v 1.2 2011/05/22 19:11:42 dholland Exp $
+
+- fix semget?
 
 --- dpteng/semaphor.c.orig	Fri Dec 13 14:16:50 2002
 +++ dpteng/semaphor.c	Fri Dec 13 14:17:22 2002

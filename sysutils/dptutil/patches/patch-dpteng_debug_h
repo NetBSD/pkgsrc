@@ -1,0 +1,23 @@
+$NetBSD: patch-dpteng_debug_h,v 1.1 2011/05/22 19:11:42 dholland Exp $
+
+Build fix for semi-modern C++.
+
+--- dpteng/debug.h~	2002-08-13 15:02:21.000000000 +0000
++++ dpteng/debug.h
+@@ -4,11 +4,11 @@
+ #include "osd_defs.h"
+ 
+ #ifndef _DPT_NETWARE
+-#include <fstream.h>
+-#include <iostream.h>
+-#include <iomanip.h>
+-#include <string.h>
+-#include <stdio.h>
++#include <fstream>
++#include <iostream>
++#include <iomanip>
++#include <cstring>
++#include <cstdio>
+ #endif
+ 
+ 
