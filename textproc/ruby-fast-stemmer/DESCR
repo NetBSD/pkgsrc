@@ -1,0 +1,2 @@
+Fast-stemmer is simply a wrapping around multithreaded Porter stemming
+algorithm.
