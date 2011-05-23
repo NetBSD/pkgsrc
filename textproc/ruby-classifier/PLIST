@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/23 18:11:23 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/bayes.rb
+${GEM_LIBDIR}/bin/summarize.rb
+${GEM_LIBDIR}/lib/classifier.rb
+${GEM_LIBDIR}/lib/classifier/bayes.rb
+${GEM_LIBDIR}/lib/classifier/extensions/string.rb
+${GEM_LIBDIR}/lib/classifier/extensions/vector.rb
+${GEM_LIBDIR}/lib/classifier/extensions/vector_serialize.rb
+${GEM_LIBDIR}/lib/classifier/extensions/word_hash.rb
+${GEM_LIBDIR}/lib/classifier/lsi.rb
+${GEM_LIBDIR}/lib/classifier/lsi/content_node.rb
+${GEM_LIBDIR}/lib/classifier/lsi/summary.rb
+${GEM_LIBDIR}/lib/classifier/lsi/word_list.rb
+${GEM_LIBDIR}/test/bayes/bayesian_test.rb
+${GEM_LIBDIR}/test/extensions/word_hash_test.rb
+${GEM_LIBDIR}/test/lsi/lsi_test.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
