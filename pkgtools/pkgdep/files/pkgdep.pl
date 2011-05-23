@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-# $NetBSD: pkgdep.pl,v 1.2 2000/11/27 04:42:48 sakamoto Exp $
+# $NetBSD: pkgdep.pl,v 1.3 2011/05/23 08:28:42 cheusov Exp $
 
 require 'getopts.pl';
 use strict;
@@ -8,7 +8,7 @@ $|=1;
 
 use vars qw($opt_I $opt_h $opt_e $opt_r $opt_v);
 my (%pkgdir, %builddeps, %rundeps, %buildreqd, %runreqd, %printed);
-my ($indexfile) = "/usr/pkgsrc/INDEX";
+my ($indexfile) = "@PKGSRCDIR@/INDEX";
 my ($package, $match_pkgs);
 my (%node, %arrow, $home_level);
 my(%color);
