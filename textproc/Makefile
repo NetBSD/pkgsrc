@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2011/05/23 18:12:56 minskim Exp $
+# $NetBSD: Makefile,v 1.584 2011/05/23 21:08:45 cheusov Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -64,6 +64,7 @@ SUBDIR+=	dictem
 SUBDIR+=	diction
 SUBDIR+=	diffsplit
 SUBDIR+=	diffstat
+SUBDIR+=	dikt
 SUBDIR+=	docbook
 SUBDIR+=	docbook-simple
 SUBDIR+=	docbook-website
