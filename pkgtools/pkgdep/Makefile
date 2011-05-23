@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/04/09 00:48:13 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2011/05/23 08:28:42 cheusov Exp $
 #
 
 DISTNAME=	pkgdep-1.0
@@ -11,17 +11,19 @@ COMMENT=	Script for displaying dependence information on software packages
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/files
 USE_TOOLS+=	perl:run
 
-NO_CONFIGURE=	yes
+REPLACE_PERL=	pkgdep.pl
 
 INSTALLATION_DIRS=	bin
 
+do-extract:
+	${CP} -Rp ${FILESDIR} ${WRKSRC}
+
 do-build:
-	${CP} ${FILESDIR}/pkgdep.pl ${WRKDIR}/pkgdep
-#	${SED} -e 's|/usr/pkgsrc|${PKGSRCDIR}|' \
-#		${FILESDIR}/pkgdep.pl > ${WRKDIR}/pkgdep
+	${SED} -e 's|@PKGSRCDIR@|${PKGSRCDIR}|' \
+		${WRKSRC}/pkgdep.pl > ${WRKDIR}/pkgdep
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/pkgdep ${DESTDIR}${PREFIX}/bin
