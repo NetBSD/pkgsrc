@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1216 2011/05/23 20:05:00 zafer Exp $
+$NetBSD: CHANGES-2011,v 1.1217 2011/05/23 21:07:23 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1987,3 +1987,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/p5-SNMP-Info to 2.04 [bouyer 2011-05-23]
 	Updated net/netdisco to 1.1 [bouyer 2011-05-23]
 	Updated net/filezilla to 3.5.0 [zafer 2011-05-23]
+	Added textproc/dikt version 2d [cheusov 2011-05-23]
