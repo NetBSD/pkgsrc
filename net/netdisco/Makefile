@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.23 2011/03/15 20:36:03 bouyer Exp $
+# $NetBSD: Makefile,v 1.24 2011/05/23 19:39:09 bouyer Exp $
 #
 
-DISTNAME=		netdisco-1.0_with_mibs
-PKGNAME=		netdisco-1.0
+DISTNAME=		netdisco-1.1_with_mibs
+PKGNAME=		netdisco-1.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netdisco.org/
 COMMENT=		Open Source web-based network management tool
+LICENSE=		modified-bsd
 
-DEPENDS+=		p5-SNMP-Info-[0-9]*:../../net/p5-SNMP-Info
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=		p5-SNMP-Info>=2.04:../../net/p5-SNMP-Info
 DEPENDS+=		p5-Apache-DBI-[0-9]*:../../databases/p5-Apache-DBI
 DEPENDS+=		p5-Apache-Session-[0-9]*:../../www/p5-Apache-Session
 DEPENDS+=		p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
@@ -26,21 +29,24 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
-EGDIR=			${PREFIX}/share/examples/${PKGNAME_NOREV}
-
 USE_TOOLS+=	pax perl:run
+REPLACE_PERL+=	bin/device_to_csv
 REPLACE_PERL+=	bin/doc_munge
+REPLACE_PERL+=	bin/firewall_arp
+REPLACE_PERL+=	bin/parse_kismet_ap
 REPLACE_PERL+=	bin/pod_arg_link_fix
+REPLACE_PERL+=	bin/search_node.pl
 REPLACE_PERL+=	bin/test_cdp.pl
 REPLACE_PERL+=	bin/test_fwtable.pl
 REPLACE_PERL+=	bin/test_iproute.pl
-REPLACE_PERL+=	bin/parse_kismet_ap
+REPLACE_PERL+=	bin/snmpv3_key
 REPLACE_PERL+=	netdisco
 REPLACE_PERL+=	mibs/chk_dups
 REPLACE_PERL+=	mibs/diff_dir
 REPLACE_PERL+=	mibs/rm_cisco_dups
 REPLACE_PERL+=	mibs/chk_mibs
 REPLACE_PERL+=	mibs/snmpwalkmib
+REPLACE_PERL+=	mibs/split-extreme
 REPLACE_PERL+=	sql/pg
 
 SUBST_CLASSES+=			installdir path varbase apachevers
@@ -54,12 +60,12 @@ SUBST_FILES.installdir+=	bin/test_cache.pl bin/test_cdp.pl
 SUBST_FILES.installdir+=	bin/test_dev.pl bin/test_stats.pl
 SUBST_FILES.installdir+=	bin/debian_install.sh
 SUBST_FILES.installdir+=	bin/test_fwtable.pl bin/test_iproute.pl
-SUBST_FILES.installdir+=	doc/INSTALL.html doc/INSTALL.pod
+SUBST_FILES.installdir+=	doc/INSTALL doc/INSTALL.pod
 SUBST_FILES.installdir+=	doc/README.pod doc/README.html
-SUBST_FILES.installdir+=	doc/UPGRADE.html doc/UPGRADE.pod
+SUBST_FILES.installdir+=	doc/UPGRADE.pod
 SUBST_FILES.installdir+=	INSTALL README UPGRADE
-SUBST_FILES.installdir+=	html/doc/INSTALL.html html/doc/README.html
-SUBST_FILES.installdir+=	html/doc/UPGRADE.html html/admin_reconfig.html
+SUBST_FILES.installdir+=	html/doc/README.html
+SUBST_FILES.installdir+=	html/admin_reconfig.html
 SUBST_FILES.installdir+=	netdisco.crontab
 SUBST_FILES.installdir+=	mibs/snmp.conf
 SUBST_SED.installdir=		-e "s|/usr/local/netdisco|${PREFIX}/netdisco|g"
@@ -69,7 +75,7 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	bin/catalyst_mac_vlan.pl bin/port_control
 SUBST_FILES.path+=	bin/test_cache.pl bin/test_dev.pl bin/test_stats.pl
 SUBST_FILES.path+=	bin/parse_mac
-SUBST_FILES.path+=	doc/INSTALL.html doc/INSTALL.pod html/doc/INSTALL.html
+SUBST_FILES.path+=	doc/INSTALL.pod
 SUBST_FILES.path+=	INSTALL netdisco.crontab
 SUBST_SED.path=		-e "s|/usr/local/bin|${PREFIX}/bin|g"
 SUBST_MESSAGE.path=	Fixing hardcoded path.
@@ -102,6 +108,9 @@ CONF_FILES+=		${EGDIR:Q}/netdisco-topology.txt ${PKG_SYSCONFDIR:Q}/netdisco-topo
 
 REQD_DIRS+=		${PREFIX:Q}/netdisco ${EGDIR:Q}
 OWN_DIRS_PERMS+=	${VARBASE:Q}/netdisco ${NETDISCOUSER} ${NETDISCOGROUP} 0775
+OWN_DIRS_PERMS+=	${PREFIX:Q}/netdisco/html ${NETDISCOUSER} ${NETDISCOGROUP} 0775
+OWN_DIRS_PERMS+=	${PREFIX:Q}/netdisco/mason ${NETDISCOUSER} ${APACHE_GROUP} 0775
+
 RCD_SCRIPTS=		netdisco
 RCD_SCRIPT_SRC.netdisco=	${WRKSRC:Q}/bin/netdisco_daemon
 
@@ -133,16 +142,13 @@ do-build:
 
 do-install:
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
-	cd ${WRKSRC:Q} && pax -rw -pp . ${PREFIX:Q}/netdisco
-	${CHOWN} -R ${NETDISCOUSER}:${NETDISCOGROUP} ${PREFIX:Q}/netdisco
-	${CHMOD} 775 ${PREFIX:Q}/netdisco/html
+	cd ${WRKSRC:Q} && pax -rw -pp . ${DESTDIR}${PREFIX:Q}/netdisco
+	mkdir ${DESTDIR}${EGDIR}
+	
 	set -e; \
 	for i in netdisco.conf netdisco-topology.txt netdisco.crontab \
 	    netdisco_apache.conf netdisco_apache_dir.conf; do \
-		${MV} ${PREFIX:Q}/netdisco/"$$i" ${EGDIR:Q}/ ;\
+		${MV} ${DESTDIR}${PREFIX:Q}/netdisco/"$$i" ${DESTDIR}${EGDIR:Q}/ ;\
 	done
-	${MKDIR} ${PREFIX:Q}/netdisco/mason
-	${CHGRP} -R ${APACHE_GROUP} ${PREFIX:Q}/netdisco/mason
-	${CHMOD} -R 775 ${PREFIX:Q}/netdisco/mason
 
 .include "../../mk/bsd.pkg.mk"
