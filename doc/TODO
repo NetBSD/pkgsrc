@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10345 2011/05/22 15:53:04 wiz Exp $
+$NetBSD: TODO,v 1.10346 2011/05/23 21:38:48 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -1031,7 +1031,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o packagekit-0.5.1
 	o pan-0.134
 	o paprefs-0.9.8
-	o parallel-20110522
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.2
