@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2011/05/18 02:23:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.582 2011/05/23 02:58:21 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -494,6 +494,7 @@ SUBDIR+=	ruby-coderay
 SUBDIR+=	ruby-diff-lcs
 SUBDIR+=	ruby-eruby
 SUBDIR+=	ruby-escape
+SUBDIR+=	ruby-fast-stemmer
 SUBDIR+=	ruby-fastercsv
 SUBDIR+=	ruby-feed-normalizer
 SUBDIR+=	ruby-ferret
