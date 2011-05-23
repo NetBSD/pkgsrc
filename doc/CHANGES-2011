@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1213 2011/05/23 18:12:56 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1214 2011/05/23 18:30:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1982,3 +1982,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/ruby-fast-stemmer version 1.0.0 [minskim 2011-05-23]
 	Updated games/xmris to 4.05nb3 [obache 2011-05-23]
 	Added textproc/ruby-classifier version 1.3.3 [minskim 2011-05-23]
+	Updated print/tex-pdfpages to 0.4n [minskim 2011-05-23]
+	Updated print/tex-pdfpages-doc to 0.4n [minskim 2011-05-23]
