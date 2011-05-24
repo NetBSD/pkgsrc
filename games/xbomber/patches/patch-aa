@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2004/08/27 06:29:07 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2011/05/24 12:03:37 obache Exp $
 
---- makefile.orig	1998-06-19 04:28:34.000000000 +0100
-+++ makefile	2003-11-05 12:36:20.000000000 +0000
+--- makefile.orig	1998-06-19 03:28:34.000000000 +0000
++++ makefile
 @@ -11,15 +11,22 @@
  
  # Makefile user-definable variables------------------------------------------
  
 -CC=gcc
-+INSTALLROOT= $(PREFIX)
++INSTALLROOT= $(DESTDIR)$(PREFIX)
 +INSTALLBIN= $(INSTALLROOT)/bin
 +SOUNDS= $(INSTALLROOT)/share/xbomber/sounds
 +PIXMAPS= $(INSTALLROOT)/share/xbomber/pixmap
@@ -28,11 +28,12 @@ $NetBSD: patch-aa,v 1.8 2004/08/27 06:29:07 jlam Exp $
  
  # uncomment for sunos/solaris
  #XLIB=-L/usr/openwin/lib -lX11
-@@ -44,6 +51,19 @@
+@@ -44,6 +51,20 @@ all:	xbomber
  		bitmaps/*.xbm pixmaps/*.ppm \
  		sounds/numbers/*.au levels/*.dat
  
 +install: xbomber
++	${BSD_INSTALL_PROGRAM_DIR} ${INSTALLBIN}
 +	${BSD_INSTALL_PROGRAM} xbomber $(INSTALLBIN)/xbomber
 +	${BSD_INSTALL_DATA_DIR} $(LEVELS)
 +	${BSD_INSTALL_DATA_DIR} $(SOUNDS)/numbers
