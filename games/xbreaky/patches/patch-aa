@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2002/09/12 13:30:29 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2011/05/24 11:32:55 obache Exp $
 
 --- Makefile.orig	Thu Sep 12 11:08:57 2002
 +++ Makefile
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.3 2002/09/12 13:30:29 wiz Exp $
 -          $(prefix)/share/games/xbreaky $(prefix)/doc/xbreaky ; do \
 -          test -d $$d || install -d -m755 $$d ; \
 +          $(prefix)/share/games/xbreaky $(prefix)/share/doc/xbreaky ; do \
-+          test -d $$d || ${BSD_INSTALL_DATA_DIR} $$d ; \
++          test -d $(DESTDIR)$$d || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$$d ; \
          done
 -	install -m755 -s  xbreaky      $(prefix)/bin
 -	install -m755 -s  xbreaky.snd  $(prefix)/bin
@@ -46,15 +46,15 @@ $NetBSD: patch-aa,v 1.3 2002/09/12 13:30:29 wiz Exp $
 -	install -m644     COPYING      $(prefix)/doc/xbreaky
 -	install -m644     AUTHORS      $(prefix)/doc/xbreaky
 -	install -m644     xbreaky.6    $(prefix)/man/man6
-+	${BSD_INSTALL_PROGRAM}  xbreaky      $(prefix)/bin
-+	${BSD_INSTALL_PROGRAM}  xbreaky.snd  $(prefix)/bin
-+	${BSD_INSTALL_DATA}     xbreaky.xpm  $(prefix)/share/pixmaps
-+	${BSD_INSTALL_DATA}     *.dat        $(prefix)/share/games/xbreaky
-+	${BSD_INSTALL_DATA}     *.raw        $(prefix)/share/games/xbreaky
-+	${BSD_INSTALL_DATA}     README       $(prefix)/share/doc/xbreaky
-+	${BSD_INSTALL_DATA}     COPYING      $(prefix)/share/doc/xbreaky
-+	${BSD_INSTALL_DATA}     AUTHORS      $(prefix)/share/doc/xbreaky
-+	${BSD_INSTALL_DATA}     xbreaky.6    $(prefix)/man/man6
++	${BSD_INSTALL_PROGRAM}  xbreaky      $(DESTDIR)$(prefix)/bin
++	${BSD_INSTALL_PROGRAM}  xbreaky.snd  $(DESTDIR)$(prefix)/bin
++	${BSD_INSTALL_DATA}     xbreaky.xpm  $(DESTDIR)$(prefix)/share/pixmaps
++	${BSD_INSTALL_DATA}     *.dat        $(DESTDIR)$(prefix)/share/games/xbreaky
++	${BSD_INSTALL_DATA}     *.raw        $(DESTDIR)$(prefix)/share/games/xbreaky
++	${BSD_INSTALL_DATA}     README       $(DESTDIR)$(prefix)/share/doc/xbreaky
++	${BSD_INSTALL_DATA}     COPYING      $(DESTDIR)$(prefix)/share/doc/xbreaky
++	${BSD_INSTALL_DATA}     AUTHORS      $(DESTDIR)$(prefix)/share/doc/xbreaky
++	${BSD_INSTALL_DATA}     xbreaky.6    $(DESTDIR)$(prefix)/${PKGMANDIR}/man6
  
   clean:
  	rm -f xbreaky a.out core xbreaky.snd *.o
