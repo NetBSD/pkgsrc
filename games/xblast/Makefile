@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/06/06 07:45:56 dsainty Exp $
+# $NetBSD: Makefile,v 1.29 2011/05/24 12:38:43 obache Exp $
 #
 
 DISTNAME=		xblast-2.10.4
@@ -14,6 +14,9 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=		dsainty@NetBSD.org
 HOMEPAGE=		http://xblast.sourceforge.net/
 COMMENT=		2-6 player kill the other guy with bombs game. A real blast!
+LICENSE=		gnu-gpl-v2 # or later
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-sound
@@ -52,7 +55,7 @@ pre-build:
 	${MV} ${WRKDIR}/musics-2005-01-06/* ${WRKSRC}/sounds
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/xblast.man ${PREFIX}/${PKGMANDIR}/man6/xblast.6
+	${INSTALL_MAN} ${WRKSRC}/xblast.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/xblast.6
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
