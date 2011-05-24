@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1218 2011/05/23 21:38:48 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1219 2011/05/24 09:54:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1989,3 +1989,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/filezilla to 3.5.0 [zafer 2011-05-23]
 	Added textproc/dikt version 2d [cheusov 2011-05-23]
 	Added parallel/parallel version 20110522 [cheusov 2011-05-23]
+	Updated games/xjewel to 1.6nb3 [obache 2011-05-24]
