@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/01/13 00:16:13 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2011/05/24 09:54:05 obache Exp $
 
 --- Imakefile.orig	1994-02-16 10:35:06.000000000 +0000
 +++ Imakefile
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.2 2006/01/13 00:16:13 joerg Exp $
  # CHANGE HSCORE_FILE TO SUIT
 -#HSCORE_FILE=/usr/local/lib/xjewel.scores
 -HSCORE_FILE=xjewel.scores
-+HSCORE_FILE=/var/games/xjewel.scores
++HSCORE_FILE=@VARBASE@/games/xjewel.scores
  
  # ADD YOUR ARCHITECTURE IF YOU USE SELECT INSTEAD OF POLL
  #if defined(HPArchitecture) || defined(ApolloArchitecture) || \
@@ -31,14 +31,7 @@ $NetBSD: patch-aa,v 1.2 2006/01/13 00:16:13 joerg Exp $
  
  ##############################################################################
  # X-STUFF...
-@@ -42,15 +42,19 @@ CFONT   = bitmaps/seven_seg.$(FFILE)
- 
- 
- # LETS GET TO IT...
-+INSTPGMFLAGS = -s -m 2555 -o root -g games
- ComplexProgramTarget(xjewel)
- 
- # IF YOUR SERVER DOES NOT LIKE THE DEFAULT FONT COMPILER, EDIT HERE...
+@@ -48,9 +48,7 @@ ComplexProgramTarget(xjewel)
  FontTarget($(FONT))
  	$(MKFONTDIR) bitmaps/
  
@@ -46,10 +39,7 @@ $NetBSD: patch-aa,v 1.2 2006/01/13 00:16:13 joerg Exp $
 +
  # FORCE FONT TO BE BUILT
  all:: $(CFONT)
- 
- install::
+-
+-install::
 -	touch  $(HSCORE_FILE)
 -	chmod a+w $(HSCORE_FILE)
-+	touch $(HSCORE_FILE)
-+	chown games:games $(HSCORE_FILE)
-+	chmod 664 $(HSCORE_FILE)
