@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/25 01:11:29 dmcmahill Exp $
+
+SHA1 (idzebra-2.0.47.tar.gz) = 03453e7ce345a488b7151099c28a0924cd5c2cf7
+RMD160 (idzebra-2.0.47.tar.gz) = ab03071ce1b83a95e719d8a8f6526dfea3a6fedd
+Size (idzebra-2.0.47.tar.gz) = 1775645 bytes
