@@ -1,11 +1,11 @@
-$NetBSD: patch-cj,v 1.3 2011/03/09 11:22:04 drochner Exp $
+$NetBSD: patch-cj,v 1.4 2011/05/25 09:38:42 drochner Exp $
 
 The mem-overflow test contains a declaration of an empty struct, which breaks
 on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
 test for now, pending a better fix.
 https://bugzilla.gnome.org/show_bug.cgi?id=641350
 
---- glib/tests/Makefile.in.orig	2011-02-08 17:40:51.000000000 +0000
+--- glib/tests/Makefile.in.orig	2011-05-21 04:15:23.000000000 +0000
 +++ glib/tests/Makefile.in
 @@ -59,7 +59,7 @@ am__EXEEXT_1 = testing$(EXEEXT) option-c
  	string$(EXEEXT) markup-parse$(EXEEXT) markup-collect$(EXEEXT) \
@@ -25,34 +25,34 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  mem_overflow_DEPENDENCIES = $(progs_ldadd)
  node_SOURCES = node.c
  node_OBJECTS = node.$(OBJEXT)
-@@ -235,7 +233,7 @@ SOURCES = array-test.c base64.c bookmark
+@@ -238,7 +236,7 @@ SOURCES = array-test.c base64.c bookmark
  	$(fileutils_SOURCES) $(gdatetime_SOURCES) gvariant.c hash.c \
  	hostutils.c $(keyfile_SOURCES) list.c logging.c \
  	markup-collect.c markup-escape.c markup-parse.c \
 -	markup-subparser.c mem-overflow.c node.c \
 +	markup-subparser.c node.c \
- 	$(option_context_SOURCES) pattern.c $(printf_SOURCES) \
- 	$(protocol_SOURCES) queue.c $(rand_SOURCES) regex.c \
- 	scannerapi.c sequence.c shell.c slist.c $(strfuncs_SOURCES) \
-@@ -246,7 +244,7 @@ DIST_SOURCES = array-test.c base64.c boo
+ 	$(option_context_SOURCES) pattern.c $(protocol_SOURCES) \
+ 	queue.c $(rand_SOURCES) regex.c scannerapi.c sequence.c \
+ 	shell.c slist.c $(strfuncs_SOURCES) $(string_SOURCES) \
+@@ -250,7 +248,7 @@ DIST_SOURCES = array-test.c base64.c boo
  	$(fileutils_SOURCES) $(gdatetime_SOURCES) gvariant.c hash.c \
  	hostutils.c $(keyfile_SOURCES) list.c logging.c \
  	markup-collect.c markup-escape.c markup-parse.c \
 -	markup-subparser.c mem-overflow.c node.c \
 +	markup-subparser.c node.c \
- 	$(option_context_SOURCES) pattern.c $(printf_SOURCES) \
- 	$(protocol_SOURCES) queue.c $(rand_SOURCES) regex.c \
- 	scannerapi.c sequence.c shell.c slist.c $(strfuncs_SOURCES) \
-@@ -497,7 +495,7 @@ EXTRA_DIST = 4096-random-bytes keyfilete
- 	bookmarks.xbel
- TEST_PROGS = testing option-context keyfile fileutils printf protocol \
- 	rand strfuncs string markup-parse markup-collect markup-escape \
--	markup-subparser array-test hostutils gvariant mem-overflow \
-+	markup-subparser array-test hostutils gvariant \
- 	utils regex base64 sequence scannerapi shell collate \
- 	utf8-pointer utf8-validate utf8-misc checksum hash date node \
- 	convert list slist queue tree uri dir pattern logging error \
-@@ -678,9 +676,6 @@ markup-parse$(EXEEXT): $(markup_parse_OB
+ 	$(option_context_SOURCES) pattern.c $(protocol_SOURCES) \
+ 	queue.c $(rand_SOURCES) regex.c scannerapi.c sequence.c \
+ 	shell.c slist.c $(strfuncs_SOURCES) $(string_SOURCES) \
+@@ -503,7 +501,7 @@ EXTRA_DIST = 4096-random-bytes keyfilete
+ TEST_PROGS = testing option-context keyfile fileutils test-printf \
+ 	protocol rand strfuncs string markup-parse markup-collect \
+ 	markup-escape markup-subparser array-test hostutils gvariant \
+-	mem-overflow utils regex base64 sequence scannerapi shell \
++	utils regex base64 sequence scannerapi shell \
+ 	collate utf8-pointer utf8-validate utf8-misc checksum hash \
+ 	date node convert list slist queue tree uri dir pattern \
+ 	logging error bookmarkfile gdatetime timeout environment
+@@ -685,9 +683,6 @@ markup-parse$(EXEEXT): $(markup_parse_OB
  markup-subparser$(EXEEXT): $(markup_subparser_OBJECTS) $(markup_subparser_DEPENDENCIES) 
  	@rm -f markup-subparser$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(markup_subparser_OBJECTS) $(markup_subparser_LDADD) $(LIBS)
@@ -62,7 +62,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  node$(EXEEXT): $(node_OBJECTS) $(node_DEPENDENCIES) 
  	@rm -f node$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(node_OBJECTS) $(node_LDADD) $(LIBS)
-@@ -773,7 +768,6 @@ distclean-compile:
+@@ -783,7 +778,6 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-escape.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-parse.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-subparser.Po@am__quote@
