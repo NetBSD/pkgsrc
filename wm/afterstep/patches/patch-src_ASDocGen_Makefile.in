@@ -1,0 +1,15 @@
+$NetBSD: patch-src_ASDocGen_Makefile.in,v 1.1 2011/05/25 13:17:37 obache Exp $
+
+* staged installation suuport.
+
+--- src/ASDocGen/Makefile.in.orig	2004-11-30 22:57:13.000000000 +0000
++++ src/ASDocGen/Makefile.in
+@@ -67,7 +67,7 @@ install.data_html:  do_compile
+ 			echo "Generating catalogue of installed data files ..." ; \
+ 			old_IMAGE_PATH=$(IMAGE_PATH); old_FONT_PATH=$(FONT_PATH); \
+ 			FONT_PATH="@with_afterdir@/desktop/fonts/:@datadir@/afterstep/desktop/fonts/:/usr/share/fonts/default/TrueType/:@x_libraries@/X11/fonts/TTF"; \
+-			IMAGE_PATH="@with_afterdir@/desktop/icons/:@datadir@/afterstep/desktop/icons/:@with_afterdir@/desktop/:@datadir@/afterstep/desktop/:@with_afterdir@/desktop/buttons/:@datadir@/afterstep/desktop/buttons/:@with_afterdir@/backgrounds/:@datadir@/afterstep/backgrounds/:@x_includes@/X11/pixmaps/"; \
++			IMAGE_PATH="@with_afterdir@/desktop/icons/:$(DESTDIR)@datadir@/afterstep/desktop/icons/:@with_afterdir@/desktop/:$(DESTDIR)@datadir@/afterstep/desktop/:@with_afterdir@/desktop/buttons/:$(DESTDIR)@datadir@/afterstep/desktop/buttons/:@with_afterdir@/backgrounds/:$(DESTDIR)@datadir@/afterstep/backgrounds/:@x_includes@/X11/pixmaps/"; \
+ 			export IMAGE_PATH; export FONT_PATH; \
+ 			./ASDocGen -t html --data --css data_html_styles.css -S $(AFTER_SHAREDIR) -D $(AFTER_DOC_DIR)/html/data -l /dev/null  ; \
+ 			IMAGE_PATH=$(old_IMAGE_PATH); FONT_PATH=$(old_FONT_PATH); \
