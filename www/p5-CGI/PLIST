@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:30 joerg Exp $
-share/doc/p5-CGI/cgi-lib_porting.html
+@comment $NetBSD: PLIST,v 1.4 2011/05/25 20:13:59 gls Exp $
 share/doc/p5-CGI/cgi_docs.html
 share/doc/p5-CGI/examples/caution.xbm
 share/doc/p5-CGI/examples/clickable_image.cgi
