@@ -1,0 +1,10 @@
+Zebra is a high-performance, general-purpose structured text indexing and
+retrieval engine. It reads structured records in a variety of input formats
+(eg. email, XML, MARC) and allows access to them through exact boolean
+search expressions and relevance-ranked free-text queries.
+
+Zebra supports large databases (more than ten gigabytes of data, tens of
+millions of records). It supports incremental, safe database updates on
+live systems. You can access data stored in Zebra using a variety of Index
+Data tools (eg. YAZ and PHP/YAZ) as well as commercial and freeware Z39.50
+clients and toolkits.
