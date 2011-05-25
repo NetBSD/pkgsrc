@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2008/07/10 13:09:58 joerg Exp $
+$NetBSD: distinfo,v 1.11 2011/05/25 06:11:46 obache Exp $
 
 SHA1 (Wormz-1.0b5.tar.gz) = a5e45e90fcc0eb4d188508bdffe71220ddcd20a4
 RMD160 (Wormz-1.0b5.tar.gz) = 38411dcc3611d70d5873bf512439cd707372ef9e
 Size (Wormz-1.0b5.tar.gz) = 436954 bytes
-SHA1 (patch-aa) = f67e29081df0f51dff8eea820425e0a767d87274
+SHA1 (patch-aa) = 4aaf583300a445de33651983433199c3c503e77c
 SHA1 (patch-ab) = b549a5afb22695695bbc1f6c07836632ea57bc65
 SHA1 (patch-ac) = 7a7764b24bd5c1c6f5121508b9bf618a71cdc8de
 SHA1 (patch-ad) = 8754a4a826273354e5b98586c44add9b818a3d53
