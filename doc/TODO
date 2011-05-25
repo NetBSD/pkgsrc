@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10346 2011/05/23 21:38:48 cheusov Exp $
+$NetBSD: TODO,v 1.10347 2011/05/25 19:44:52 gls Exp $
 
 Suggested new packages
 ======================
@@ -578,7 +578,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.28
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-1.14.1
 	o festival-1.96
 	o felt-3.07
 	o fetchmail-6.3.19
