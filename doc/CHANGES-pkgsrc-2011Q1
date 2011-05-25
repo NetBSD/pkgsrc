@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.24 2011/05/21 09:10:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.25 2011/05/25 17:49:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -98,3 +98,5 @@ Pullup ticket #3431 - requested by taca
 security/openssh: bug fix update
 Pullup ticket #3436 - requested by drochner
 devel/apr: security patch
+Pullup ticket #3437 - requested by mspo
+net/tinyfugue: build fix
