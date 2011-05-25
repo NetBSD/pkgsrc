@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/12/12 11:56:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/05/25 09:48:48 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -237,6 +237,9 @@ share/applications/gnumeric.desktop
 share/gconf/schemas/gnumeric-dialogs.schemas
 share/gconf/schemas/gnumeric-general.schemas
 share/gconf/schemas/gnumeric-plugins.schemas
+share/glib-2.0/schemas/org.gnome.gnumeric.dialogs.gschema.xml
+share/glib-2.0/schemas/org.gnome.gnumeric.gschema.xml
+share/glib-2.0/schemas/org.gnome.gnumeric.plugin.gschema.xml
 share/gnome/help/gnumeric/C/about-authors.xml
 share/gnome/help/gnumeric/C/about-history.xml
 share/gnome/help/gnumeric/C/about-license.xml
