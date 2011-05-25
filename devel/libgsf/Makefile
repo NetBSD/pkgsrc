@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.72 2011/04/22 13:42:17 obache Exp $
+# $NetBSD: Makefile,v 1.73 2011/05/25 09:42:24 drochner Exp $
 #
 # Some files are shared with libgsf-gnome, so update that
 # as well when updating libgsf!
 #
 
-DISTNAME=	libgsf-1.14.20
-PKGREVISION=	1
+DISTNAME=	libgsf-1.14.21
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.14/}
 EXTRACT_SUFX=	.tar.bz2
