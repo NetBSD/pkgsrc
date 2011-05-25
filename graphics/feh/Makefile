@@ -1,26 +1,27 @@
-# $NetBSD: Makefile,v 1.41 2011/01/13 13:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2011/05/25 19:44:26 gls Exp $
 #
 
-DISTNAME=	feh-1.3.4
-PKGREVISION=	8
+DISTNAME=	feh-1.14.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://linuxbrit.co.uk/downloads/
+MASTER_SITES=	http://feh.finalrewind.org/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://linuxbrit.co.uk/feh/
+HOMEPAGE=	http://feh.finalrewind.org/
 COMMENT=	Advanced image viewer
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	wget-[0-9]*:../../net/wget
-
-GNU_CONFIGURE=	YES
+#GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--program-transform-name=s,cam,feh_cam,
 
-USE_TOOLS+=	bash:run perl:run
+USE_TOOLS+=	bash:run perl:run gmake
 
-REPLACE_BASH=		cam/gen_cam_menu.sh
-REPLACE_PERL=		cam/cam
+REPLACE_BASH=		cam/gen-cam-menu
+REPLACE_PERL=		scripts/*.pl cam/feh-cam
+
+CFLAGS+=			-std=c99
 
 LDFLAGS.SunOS+=		-lnsl -lsocket
 
@@ -30,6 +31,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/giblib/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
