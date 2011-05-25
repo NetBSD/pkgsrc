@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2011/05/19 04:10:32 obache Exp $
+# $NetBSD: Makefile,v 1.374 2011/05/25 01:12:30 dmcmahill Exp $
 #
 
 COMMENT=	Databases
@@ -36,6 +36,7 @@ SUBDIR+=	gramps2
 SUBDIR+=	gramps3
 SUBDIR+=	gtksql
 SUBDIR+=	guile-pg
+SUBDIR+=	idzebra
 SUBDIR+=	iodbc
 SUBDIR+=	ipa_sdb
 SUBDIR+=	java-db3
