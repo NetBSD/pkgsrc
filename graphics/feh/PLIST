@@ -1,23 +1,23 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/05/25 19:44:26 gls Exp $
 bin/feh
-bin/feh_cam
-bin/gen_feh_cam_menu.sh
+bin/feh-cam
+bin/gen-cam-menu
+man/man1/feh-cam.1
 man/man1/feh.1
+man/man1/gen-cam-menu.1
 share/doc/feh/AUTHORS
 share/doc/feh/ChangeLog
 share/doc/feh/README
 share/doc/feh/TODO
+share/doc/feh/examples/keys
+share/doc/feh/examples/themes
 share/feh/fonts/black.style
 share/feh/fonts/menu.style
 share/feh/fonts/yudit.ttf
-share/feh/images/about.png
+share/feh/images/logo.svg
 share/feh/images/menubg_aluminium.png
 share/feh/images/menubg_aqua.png
 share/feh/images/menubg_black.png
-share/feh/images/menubg_britney.png
 share/feh/images/menubg_brushed.png
-share/feh/images/menubg_chrome.png
 share/feh/images/menubg_default.png
-share/feh/images/menubg_pastel.png
 share/feh/images/menubg_sky.png
-share/feh/images/menubg_wood.png
