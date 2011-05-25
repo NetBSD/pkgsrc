@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/02/25 13:34:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/05/25 09:45:05 drochner Exp $
 include/libgoffice-0.8/goffice/app/error-info.h
 include/libgoffice-0.8/goffice/app/file.h
 include/libgoffice-0.8/goffice/app/go-cmd-context-impl.h
@@ -194,6 +194,7 @@ lib/goffice/${PKGVERSION}/plugins/plot_surface/plugin.xml
 lib/goffice/${PKGVERSION}/plugins/plot_surface/surface.la
 lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-bubble-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-xy-color-prefs.ui
+lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-xy-dropbar-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-xy-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_xy/gog-xy-series-prefs.ui
 lib/goffice/${PKGVERSION}/plugins/plot_xy/plot-types.xml
@@ -478,6 +479,8 @@ share/pixmaps/goffice/${PKGVERSION}/chart_cylinder_2_3.png
 share/pixmaps/goffice/${PKGVERSION}/chart_cylinder_3_1.png
 share/pixmaps/goffice/${PKGVERSION}/chart_dropbar_1_1.png
 share/pixmaps/goffice/${PKGVERSION}/chart_dropbar_1_2.png
+share/pixmaps/goffice/${PKGVERSION}/chart_dropbar_1_3.png
+share/pixmaps/goffice/${PKGVERSION}/chart_dropbar_1_4.png
 share/pixmaps/goffice/${PKGVERSION}/chart_histogram_1_1.png
 share/pixmaps/goffice/${PKGVERSION}/chart_histogram_1_3.png
 share/pixmaps/goffice/${PKGVERSION}/chart_histogram_1_4.png
