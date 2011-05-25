@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/04/21 09:00:23 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2011/05/25 06:11:46 obache Exp $
 
 --- Makefile.orig	1998-07-14 13:41:40.000000000 +0000
 +++ Makefile
@@ -124,7 +124,7 @@ $NetBSD: patch-aa,v 1.4 2006/04/21 09:00:23 joerg Exp $
  
  Client-target: $(TargetClient)
  
-@@ -178,14 +188,14 @@ PathConfig=include/PathConfig.hh
+@@ -178,22 +188,22 @@ PathConfig=include/PathConfig.hh
  Create-PathConfig:
  	echo '#ifndef _PathConfig_hh_' > $(PathConfig)
  	echo '#define _PathConfig_hh_' >> $(PathConfig)
@@ -137,7 +137,20 @@ $NetBSD: patch-aa,v 1.4 2006/04/21 09:00:23 joerg Exp $
  
  install-client2:
 -	$(INSTALLBIN) $(TargetClient) $(LibInstallPath)$(TargetNameClient)
-+	$(INSTALLBIN) $(TargetClient) $(BinInstallPath)$(TargetNameClient)
++	$(INSTALLBIN) $(TargetClient) $(DESTDIR)$(BinInstallPath)$(TargetNameClient)
  	
  install: all
- 	$(INSTALLDIR) $(BinInstallPath)
+-	$(INSTALLDIR) $(BinInstallPath)
+-	$(INSTALLDIR) $(LibInstallPath)	
+-	$(INSTALLBIN) $(TargetRunner) $(BinInstallPath)$(TargetNameRunner)
+-	$(INSTALLBIN) $(TargetServer) $(BinInstallPath)$(TargetNameServer)
++	$(INSTALLDIR) $(DESTDIR)$(BinInstallPath)
++	$(INSTALLDIR) $(DESTDIR)$(LibInstallPath)	
++	$(INSTALLBIN) $(TargetRunner) $(DESTDIR)$(BinInstallPath)$(TargetNameRunner)
++	$(INSTALLBIN) $(TargetServer) $(DESTDIR)$(BinInstallPath)$(TargetNameServer)
+ 	for i in $(AllDepths); do Depth=$$i $(MAKE) install-client2 ; done
+-	$(INSTALL) images/* $(LibInstallPath)
++	$(INSTALL) images/* $(DESTDIR)$(LibInstallPath)
+ 	
+ include $(DEPEND)
+ 
