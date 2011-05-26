@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1225 2011/05/26 01:35:32 dmcmahill Exp $
+$NetBSD: CHANGES-2011,v 1.1226 2011/05/26 07:42:49 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1991,7 +1991,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added parallel/parallel version 20110522 [cheusov 2011-05-23]
 	Updated games/xjewel to 1.6nb3 [obache 2011-05-24]
 	Added databases/idzebra version 2.0.47 [dmcmahill 2011-05-24]
-	Updated mail/milter-greylist to 4.2.7 [tron 2011-05-25]
 	Updated mail/milter-greylist to 4.2.7 [tron 2011-05-25]
 	Updated graphics/feh to 1.14.1 [gls 2011-05-25]
 	Updated www/p5-CGI to 3.54 [gls 2011-05-25]
