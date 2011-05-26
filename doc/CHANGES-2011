@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1226 2011/05/26 07:42:49 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1227 2011/05/26 08:43:30 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1995,3 +1995,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/feh to 1.14.1 [gls 2011-05-25]
 	Updated www/p5-CGI to 3.54 [gls 2011-05-25]
 	Updated time/p5-Schedule-At to 1.11 [dmcmahill 2011-05-25]
+	Updated net/glib-networking to 2.28.7 [drochner 2011-05-25]
+	Updated math/gnumeric110 to 1.10.15 [drochner 2011-05-25]
+	Updated misc/goffice0.8 to 0.8.15 [drochner 2011-05-25]
+	Updated devel/libgsf to 1.14.21 [drochner 2011-05-25]
+	Updated x11/gtk3 to 3.0.10 [drochner 2011-05-25]
+	Updated devel/glib2 to 2.28.7 [drochner 2011-05-25]
