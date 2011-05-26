@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2011/04/25 20:58:24 asau Exp $
+# $NetBSD: Makefile,v 1.48 2011/05/26 20:19:43 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
-PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -37,7 +36,8 @@ REPLACE_FILES.escript=	\
 	lib/snmp/src/compile/snmpc.src \
 	lib/erl_docgen/priv/bin/codeline_preprocessing.escript \
 	lib/erl_docgen/priv/bin/xml_from_edoc.escript \
-	lib/snmp/bin/snmpc
+	lib/snmp/bin/snmpc \
+	lib/diameter/bin/diameterc
 
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
