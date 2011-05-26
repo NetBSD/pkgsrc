@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/22 10:53:10 obache Exp $
+$NetBSD: distinfo,v 1.3 2011/05/26 09:23:16 obache Exp $
 
-SHA1 (libgcroots-0.2.2.tar.gz) = bd3e0080e3e3136301c5ecf9eb31cccb39113dc3
-RMD160 (libgcroots-0.2.2.tar.gz) = 7d07f731e6a5189e7cd40260c4e7bd1b70931bfc
-Size (libgcroots-0.2.2.tar.gz) = 369803 bytes
+SHA1 (libgcroots-0.2.3.tar.gz) = 0542e8ca20f465c0cd7355a426dea89a9b7be3af
+RMD160 (libgcroots-0.2.3.tar.gz) = eef2db5ea64e6ba20ec68b01b4f0621f45e0ecab
+Size (libgcroots-0.2.3.tar.gz) = 379193 bytes
