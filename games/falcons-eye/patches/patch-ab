@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2006/06/17 19:00:08 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2011/05/26 12:51:23 obache Exp $
 
---- sys/unix/Makefile.top.orig	2001-06-24 18:57:24.000000000 +0200
-+++ sys/unix/Makefile.top	2006-06-17 20:32:55.000000000 +0200
+--- sys/unix/Makefile.top.orig	2001-06-24 09:57:24.000000000 +0000
++++ sys/unix/Makefile.top
 @@ -14,19 +14,17 @@
  # MAKE = make
  
@@ -89,15 +89,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/17 19:00:08 rillig Exp $
  
  dofiles:
  	target=`sed -n					\
-@@ -203,6 +210,7 @@ dofiles:
- 	-rm -f $(SHELLDIR)/$(GAME)
- 	sed -e 's;/usr/games/lib/nethackdir;$(GAMEDIR);' \
- 		-e 's;HACKDIR/nethack;HACKDIR/$(GAME);' \
-+		-e 's;XXXPREFIXXXX;$(PREFIX);' \
- 		< sys/unix/nethack.sh \
- 		> $(SHELLDIR)/$(GAME)
- # set up their permissions
-@@ -239,7 +247,8 @@ dofiles-jtp:
+@@ -239,7 +246,8 @@ dofiles-jtp:
  	chmod $(DIRPERM) $(JTPMAINDIR) $(JTPDATADIR) $(JTPGRAPHICSDIR) $(JTPSOUNDDIR) $(JTPMANUALDIR)
  # copy over the Falcon's Eye files
  	( cd  win/jtp/gamedata; cp $(JTPMAINFILES) $(JTPMAINDIR) ; \
@@ -107,7 +99,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/17 19:00:08 rillig Exp $
  	cd ../graphics; cp $(JTPGRAPHICSFILES) $(JTPGRAPHICSDIR) ; \
  	cd ../sound; cp $(JTPSOUNDFILES) $(JTPSOUNDDIR) ; \
  	cd ../manual; cp $(JTPMANUALFILES) $(JTPMANUALDIR) )
-@@ -247,9 +256,6 @@ dofiles-jtp:
+@@ -247,9 +255,6 @@ dofiles-jtp:
  	-( cd $(JTPMAINDIR) ; $(CHOWN) $(GAMEUID) $(JTPMAINFILES) ; \
  	$(CHGRP) $(GAMEGRP) $(JTPMAINFILES) ; \
  	chmod $(FILEPERM) $(JTPMAINFILES) ; \
@@ -117,7 +109,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/17 19:00:08 rillig Exp $
  	cd $(JTPGRAPHICSDIR) ; $(CHOWN) $(GAMEUID) $(JTPGRAPHICSFILES) ; \
  	$(CHGRP) $(GAMEGRP) $(JTPGRAPHICSFILES) ; \
  	chmod $(FILEPERM) $(JTPGRAPHICSFILES) ; \
-@@ -280,19 +286,27 @@ install: $(GAME) $(VARDAT) dungeon spec_
+@@ -280,19 +285,27 @@ install: $(GAME) $(VARDAT) dungeon spec_
  # set up the directories
  # not all mkdirs have -p; those that don't will create a -p directory
  	-mkdir -p $(SHELLDIR)
