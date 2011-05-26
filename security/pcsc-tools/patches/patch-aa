@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2010/11/28 10:47:40 shattered Exp $
+$NetBSD: patch-aa,v 1.4 2011/05/26 13:32:26 obache Exp $
+
+* honor PKGMANDIR
 
 --- Makefile.orig	2008-09-07 11:51:40.000000000 +0000
 +++ Makefile
@@ -8,8 +10,8 @@ $NetBSD: patch-aa,v 1.3 2010/11/28 10:47:40 shattered Exp $
  
 -	install -d $(DESTDIR)/share/man/man1/
 -	install -m 644 $(MAN) $(DESTDIR)/share/man/man1/
-+	install -d $(DESTDIR)/man/man1/
-+	install -m 644 $(MAN) $(DESTDIR)/man/man1/
++	install -d $(DESTDIR)/$(PKGMANDIR)/man1/
++	install -m 644 $(MAN) $(DESTDIR)/$(PKGMANDIR)/man1/
  
  clean:
  	rm -f pcsc_scan.o $(BIN) $(MAN)
