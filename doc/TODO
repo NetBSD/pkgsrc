@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10347 2011/05/25 19:44:52 gls Exp $
+$NetBSD: TODO,v 1.10348 2011/05/26 22:02:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -314,7 +314,7 @@ Suggested new packages
 	xgc, xkbevd, xkbprint, xkbutils, xlsatoms, xorg-sgml-doctools,
 	xpr, xpyb, mkcomposecache, xscope, xf86-video-qxl, input_calibrator,
 	xf86-input-elographics, xditview, proxymngr, rstart, showfont,
-	xdbedizzy, xfindproxy, xfwp, xorg-docs
+	xdbedizzy, xfindproxy, xfwp, xorg-docs, xts
 
 
 Suggested package updates
@@ -371,7 +371,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amsn-0.98.4
 	o angband-3.2
 	o anjuta-2.32.1.1 [GNOME 2.32]
-	o anjuta-3.0
+	o anjuta-3.0.2
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
@@ -460,6 +460,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.0.1
 	o cherokee-1.2.1
+	o chicken-4.7.0
 	o chromium-0.9.15
 	o chrony-1.25
 	o cinepaint-0.23
@@ -523,7 +524,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvdisaster-0.72.2
 	o dvdstyler-1.8.3
 	o dvtm-0.6
-	o dwm-5.8.2
+	o dwm-5.8.2 [pkg/44987]
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.5
@@ -544,7 +545,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elinks-0.12pre5
-	o elm-me-2.5plalpha25
+	o elm-me-2.6plalpha26
 	o elscreen-1.4.6 [pkg/43967]
 	o emacs-23.3
 	o emacs-muse-3.20
@@ -564,7 +565,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eterm-0.9.6
 	o eukleides-1.5.4
 	o evieext-1.1.1
-	o evince-3.0.0
+	o evince-3.0.2
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-exchange-2.32.2
@@ -660,6 +661,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdb-7.2
 	o gdeskcal-1.01
 	o gdl-2.30.1 [GNOME 2.32]
+	o gdl-3.0.2
 	o gdm-2.32.1 [GNOME 2.32]
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
@@ -679,15 +681,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glproto-1.4.13
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.0
+	o gnome-3.0.2
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-doc-utils-0.20.5
-	o gnome-games-3.0.1
+	o gnome-games-3.0.2
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.0.0
+	o gnome-keyring-3.0.3
 	o gnome-mag-0.16.3
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
@@ -707,9 +709,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnuchess-5.08
-	o gnumeric110-1.10.14
 	o gnutls-2.12.5
-	o goffice0.8-0.8.14
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -771,16 +771,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ibus-input-pad-1.4.0 [for ibus-1.4.x]
 	o ical-2.3.2
 	o icdprog-0.5
-	o iceauth-1.0.4
+	o iceauth-1.0.5
 	o icewm-1.3.7
 	o ico-1.0.3
 	o icsi-finger-1.0.29
+	o icu-4.8
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
 	o imapsync-1.404
-	o imp-5.0.2
+	o imp-5.0.4
 	o ingo-2.0.1
 	o inputproto-2.0.1
 	o inspircd-1.2.1
@@ -885,7 +886,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.2.5
 	o libgdata-0.8.1
 	o libgiigic-1.1.2
-	o libgnome-keyring-3.0.0
+	o libgnome-keyring-3.0.3
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.0.0
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
@@ -935,7 +936,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mdocml-1.11.2
+	o mdocml-1.11.3
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
 	o mergeant-0.67
@@ -950,6 +951,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkfontscale-1.0.8
 	o mknmz-wwwoffle-0.7.2
 	o mksh-39c
+	o mkvtoolnix-4.8.0
 	o moc-2.4.4
 	o modular-xorg-server-1.10.1
 	o molden-4.8 [after which PR 40252 can be closed]
@@ -957,7 +959,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mono-2.10.2
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
-	o mousetweaks-3.0.1
+	o mousetweaks-3.0.2
 	o mp3splt-2.3a
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.3
@@ -1079,7 +1081,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.3
 	o puf-0.93.3
 	o puppet-2.6.6
-	o puzzle-9159
+	o puzzle-9173
 	o puzzles-9173
 	o pv-1.1.4
 	o pwlib-1.11.1
@@ -1100,6 +1102,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
+	o py-mxDateTime-3.2.0
 	o py-simplejson-2.1.6
 	o py-sip-4.12.3
 	o py-sybase-0.37
@@ -1238,6 +1241,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-3.0.2
 	o tfmxplay-1.1.6
+	o tgif-4.2.3
 	o tightvnc-1.5.1
 	o tile-0.7.4
 	o tinc-1.0.14
@@ -1327,7 +1331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xapian-1.2.4
 	o xapian-omega-1.2.4
 	o xaric-0.13.2
-	o xauth-1.0.5
+	o xauth-1.0.6
 	o xbacklight-1.1.2
 	o xbiff-1.0.3
 	o xbindkeys-1.8.5
@@ -1335,7 +1339,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xbitmaps-1.1.1
 	o xboard-4.5.1
 	o xcalc-1.0.4.1
-	o xcb-util-0.3.8
+	o xcb-util-0.3.8 [NOT binary compatible to 0.3.6, so perhaps wait with update -- wiz 20110524]
 	o xcircuit-3.6.85
 	o xclock-1.0.5
 	o xcmiscproto-1.2.1
@@ -1358,7 +1362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-apm-1.2.3
 	o xf86-video-ark-0.7.3
 	o xf86-video-ast-0.91.10
-	o xf86-video-ati-6.14.1
+	o xf86-video-ati-6.14.2
 	o xf86-video-chips-1.2.4
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
