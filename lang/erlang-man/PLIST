@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2011/04/14 19:34:10 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/05/26 20:19:43 asau Exp $
 lib/erlang/man/man1/ct_run.1
+lib/erlang/man/man1/diameter_compile.1
 lib/erlang/man/man1/epmd.1
 lib/erlang/man/man1/erl.1
 lib/erlang/man/man1/erl_call.1
@@ -121,6 +122,11 @@ lib/erlang/man/man3/dbg.3
 lib/erlang/man/man3/debugger.3
 lib/erlang/man/man3/dets.3
 lib/erlang/man/man3/dialyzer.3
+lib/erlang/man/man3/diameter.3
+lib/erlang/man/man3/diameter_app.3
+lib/erlang/man/man3/diameter_sctp.3
+lib/erlang/man/man3/diameter_tcp.3
+lib/erlang/man/man3/diameter_transport.3
 lib/erlang/man/man3/dict.3
 lib/erlang/man/man3/digraph.3
 lib/erlang/man/man3/digraph_utils.3
@@ -594,6 +600,7 @@ lib/erlang/man/man3/zlib_stub.3
 lib/erlang/man/man4/app.4
 lib/erlang/man/man4/appup.4
 lib/erlang/man/man4/config.4
+lib/erlang/man/man4/diameter_dict.4
 lib/erlang/man/man4/rel.4
 lib/erlang/man/man4/relup.4
 lib/erlang/man/man4/script.4
@@ -623,3 +630,4 @@ lib/erlang/man/man7/SNMP-VIEW-BASED-ACM-MIB.7
 lib/erlang/man/man7/SNMPv2-MIB.7
 lib/erlang/man/man7/SNMPv2-TM.7
 lib/erlang/man/man7/STANDARD-MIB.7
+lib/erlang/man/man7/TRANSPORT-ADDRESS-MIB.7
