@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.799 2011/05/22 05:57:11 minskim Exp $
+# $NetBSD: Makefile,v 1.800 2011/05/26 22:19:11 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -573,6 +573,7 @@ SUBDIR+=	ruby-gnome2-gtkmozembed
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-httpclient
 SUBDIR+=	ruby-innate
+SUBDIR+=	ruby-jekyll
 SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-liquid
 SUBDIR+=	ruby-mechanize
