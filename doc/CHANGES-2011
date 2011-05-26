@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1230 2011/05/26 13:32:41 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1231 2011/05/26 20:06:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libgcroots to 0.2.3 [obache 2011-05-26]
 	Updated games/falcons-eye to 1.9.3nb14 [obache 2011-05-26]
 	Updated security/pcsc-tools to 1.4.15nb2 [obache 2011-05-26]
+	Updated lang/chicken to 4.7.0 [asau 2011-05-26]
