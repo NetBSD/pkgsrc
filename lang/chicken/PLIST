@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2010/09/13 12:43:16 asau Exp $
+@comment $NetBSD: PLIST,v 1.29 2011/05/26 20:06:13 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-install
@@ -7,36 +7,35 @@ bin/chicken-status
 bin/chicken-uninstall
 bin/csc
 bin/csi
-include/chicken-config.h
-include/chicken.h
-lib/chicken/5/chicken.import.so
-lib/chicken/5/csi.import.so
-lib/chicken/5/data-structures.import.so
-lib/chicken/5/extras.import.so
-lib/chicken/5/files.import.so
-lib/chicken/5/foreign.import.so
-lib/chicken/5/irregex.import.so
-lib/chicken/5/lolevel.import.so
-lib/chicken/5/ports.import.so
-lib/chicken/5/posix.import.so
-lib/chicken/5/regex.import.so
-lib/chicken/5/scheme.import.so
-lib/chicken/5/setup-api.import.so
-lib/chicken/5/setup-api.so
-lib/chicken/5/setup-download.import.so
-lib/chicken/5/setup-download.so
-lib/chicken/5/srfi-1.import.so
-lib/chicken/5/srfi-13.import.so
-lib/chicken/5/srfi-14.import.so
-lib/chicken/5/srfi-18.import.so
-lib/chicken/5/srfi-4.import.so
-lib/chicken/5/srfi-69.import.so
-lib/chicken/5/tcp.import.so
-lib/chicken/5/types.db
-lib/chicken/5/utils.import.so
+include/chicken/chicken-config.h
+include/chicken/chicken.h
+lib/chicken/6/chicken.import.so
+lib/chicken/6/csi.import.so
+lib/chicken/6/data-structures.import.so
+lib/chicken/6/extras.import.so
+lib/chicken/6/files.import.so
+lib/chicken/6/foreign.import.so
+lib/chicken/6/irregex.import.so
+lib/chicken/6/lolevel.import.so
+lib/chicken/6/ports.import.so
+lib/chicken/6/posix.import.so
+lib/chicken/6/scheme.import.so
+lib/chicken/6/setup-api.import.so
+lib/chicken/6/setup-api.so
+lib/chicken/6/setup-download.import.so
+lib/chicken/6/setup-download.so
+lib/chicken/6/srfi-1.import.so
+lib/chicken/6/srfi-13.import.so
+lib/chicken/6/srfi-14.import.so
+lib/chicken/6/srfi-18.import.so
+lib/chicken/6/srfi-4.import.so
+lib/chicken/6/srfi-69.import.so
+lib/chicken/6/tcp.import.so
+lib/chicken/6/types.db
+lib/chicken/6/utils.import.so
 lib/libchicken.a
 lib/libchicken.so
-lib/libchicken.so.5
+lib/libchicken.so.6
 man/man1/chicken-bug.1
 man/man1/chicken-install.1
 man/man1/chicken-profile.1
@@ -45,56 +44,59 @@ man/man1/chicken-uninstall.1
 man/man1/chicken.1
 man/man1/csc.1
 man/man1/csi.1
-share/chicken/chicken.png
 share/chicken/setup.defaults
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/manual/Accessing external objects
-share/doc/${PKGNAME}/manual/Acknowledgements
-share/doc/${PKGNAME}/manual/Basic mode of operation
-share/doc/${PKGNAME}/manual/Bibliography
-share/doc/${PKGNAME}/manual/Bugs and limitations
-share/doc/${PKGNAME}/manual/C interface
-share/doc/${PKGNAME}/manual/Callbacks
-share/doc/${PKGNAME}/manual/Cross development
-share/doc/${PKGNAME}/manual/Data representation
-share/doc/${PKGNAME}/manual/Declarations
-share/doc/${PKGNAME}/manual/Deployment
-share/doc/${PKGNAME}/manual/Deviations from the standard
-share/doc/${PKGNAME}/manual/Embedding
-share/doc/${PKGNAME}/manual/Exceptions
-share/doc/${PKGNAME}/manual/Extensions
-share/doc/${PKGNAME}/manual/Extensions to the standard
-share/doc/${PKGNAME}/manual/Foreign type specifiers
-share/doc/${PKGNAME}/manual/Getting started
-share/doc/${PKGNAME}/manual/Interface to external functions and variables
-share/doc/${PKGNAME}/manual/Locations
-share/doc/${PKGNAME}/manual/Modules
-share/doc/${PKGNAME}/manual/Non-standard macros and special forms
-share/doc/${PKGNAME}/manual/Non-standard read syntax
-share/doc/${PKGNAME}/manual/Other support procedures
-share/doc/${PKGNAME}/manual/Parameters
-share/doc/${PKGNAME}/manual/Supported language
-share/doc/${PKGNAME}/manual/The R5RS standard
-share/doc/${PKGNAME}/manual/The User's Manual
-share/doc/${PKGNAME}/manual/Unit data-structures
-share/doc/${PKGNAME}/manual/Unit eval
-share/doc/${PKGNAME}/manual/Unit expand
-share/doc/${PKGNAME}/manual/Unit extras
-share/doc/${PKGNAME}/manual/Unit files
-share/doc/${PKGNAME}/manual/Unit library
-share/doc/${PKGNAME}/manual/Unit lolevel
-share/doc/${PKGNAME}/manual/Unit ports
-share/doc/${PKGNAME}/manual/Unit posix
-share/doc/${PKGNAME}/manual/Unit regex
-share/doc/${PKGNAME}/manual/Unit srfi-1
-share/doc/${PKGNAME}/manual/Unit srfi-13
-share/doc/${PKGNAME}/manual/Unit srfi-14
-share/doc/${PKGNAME}/manual/Unit srfi-18
-share/doc/${PKGNAME}/manual/Unit srfi-4
-share/doc/${PKGNAME}/manual/Unit srfi-69
-share/doc/${PKGNAME}/manual/Unit tcp
-share/doc/${PKGNAME}/manual/Unit utils
-share/doc/${PKGNAME}/manual/Using the compiler
-share/doc/${PKGNAME}/manual/Using the interpreter
-share/doc/${PKGNAME}/manual/faq
+share/doc/${PKGNAME}/manual/Accessing external objects.html
+share/doc/${PKGNAME}/manual/Acknowledgements.html
+share/doc/${PKGNAME}/manual/Basic mode of operation.html
+share/doc/${PKGNAME}/manual/Bibliography.html
+share/doc/${PKGNAME}/manual/Bugs and limitations.html
+share/doc/${PKGNAME}/manual/C interface.html
+share/doc/${PKGNAME}/manual/Callbacks.html
+share/doc/${PKGNAME}/manual/Cross development.html
+share/doc/${PKGNAME}/manual/Data representation.html
+share/doc/${PKGNAME}/manual/Declarations.html
+share/doc/${PKGNAME}/manual/Deployment.html
+share/doc/${PKGNAME}/manual/Deviations from the standard.html
+share/doc/${PKGNAME}/manual/Embedding.html
+share/doc/${PKGNAME}/manual/Exceptions.html
+share/doc/${PKGNAME}/manual/Extensions.html
+share/doc/${PKGNAME}/manual/Extensions to the standard.html
+share/doc/${PKGNAME}/manual/Foreign type specifiers.html
+share/doc/${PKGNAME}/manual/Getting started.html
+share/doc/${PKGNAME}/manual/Interface to external functions and variables.html
+share/doc/${PKGNAME}/manual/Locations.html
+share/doc/${PKGNAME}/manual/Macros.html
+share/doc/${PKGNAME}/manual/Modules.html
+share/doc/${PKGNAME}/manual/Non-standard macros and special forms.html
+share/doc/${PKGNAME}/manual/Non-standard read syntax.html
+share/doc/${PKGNAME}/manual/Other support procedures.html
+share/doc/${PKGNAME}/manual/Parameters.html
+share/doc/${PKGNAME}/manual/Supported language.html
+share/doc/${PKGNAME}/manual/The R5RS standard.html
+share/doc/${PKGNAME}/manual/The User's Manual.html
+share/doc/${PKGNAME}/manual/Unit data-structures.html
+share/doc/${PKGNAME}/manual/Unit eval.html
+share/doc/${PKGNAME}/manual/Unit expand.html
+share/doc/${PKGNAME}/manual/Unit extras.html
+share/doc/${PKGNAME}/manual/Unit files.html
+share/doc/${PKGNAME}/manual/Unit irregex.html
+share/doc/${PKGNAME}/manual/Unit library.html
+share/doc/${PKGNAME}/manual/Unit lolevel.html
+share/doc/${PKGNAME}/manual/Unit ports.html
+share/doc/${PKGNAME}/manual/Unit posix.html
+share/doc/${PKGNAME}/manual/Unit srfi-1.html
+share/doc/${PKGNAME}/manual/Unit srfi-13.html
+share/doc/${PKGNAME}/manual/Unit srfi-14.html
+share/doc/${PKGNAME}/manual/Unit srfi-18.html
+share/doc/${PKGNAME}/manual/Unit srfi-4.html
+share/doc/${PKGNAME}/manual/Unit srfi-69.html
+share/doc/${PKGNAME}/manual/Unit tcp.html
+share/doc/${PKGNAME}/manual/Unit utils.html
+share/doc/${PKGNAME}/manual/Using the compiler.html
+share/doc/${PKGNAME}/manual/Using the interpreter.html
+share/doc/${PKGNAME}/manual/chicken.png
+share/doc/${PKGNAME}/manual/faq.html
+share/doc/${PKGNAME}/manual/index.html
+share/doc/${PKGNAME}/manual/manual.css
