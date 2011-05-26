@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1236 2011/05/26 23:24:22 morr Exp $
+$NetBSD: CHANGES-2011,v 1.1237 2011/05/26 23:27:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2012,3 +2012,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/ruby-jekyll version 0.10.0 [minskim 2011-05-26]
 	Updated print/tex-latexconfig to 2010.21697 [minskim 2011-05-26]
 	Updated www/wordpress to 3.1.3 [morr 2011-05-26]
+	Added meta-pkgs/modular-xorg version 1.0 [wiz 2011-05-26]
