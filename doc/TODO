@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10348 2011/05/26 22:02:53 wiz Exp $
+$NetBSD: TODO,v 1.10349 2011/05/26 23:53:59 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1238,7 +1238,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tellico-2.3.3
 	o tesseract-3.00
 	o tetrinetx-1.40c
-	o tex-musixtex-113 [pkg/34758]
 	o texmaker-3.0.2
 	o tfmxplay-1.1.6
 	o tgif-4.2.3
