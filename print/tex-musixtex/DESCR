@@ -1,18 +1,10 @@
-MusixTeX is a set of TeX macros to typeset polyphonic, orchestral or
-polyphonic music.
-
-This is the typical way one would process a MusixTeX file:
-
-	musixtex foo
-	musixflx foo
-	musixtex foo
-
-This will give you foo.dvi which then can be processed like any other
-.dvi.  Use dvips to convert it into a postscript file or print it to a
-Postscript printer.  Then ps2pdf may be used to convert the Postscript
-file into a PDF file.
-
-The full documentation of MusixTeX will be found in
-${LOCALBASE}/share/texmf/doc/musixtex/.  It's highly recommended that
-you either print out musixdoc.ps directly or use a PDF viewer to print
-musixdoc.pdf and put the resulting hardcopy in a loose-leaf binder.
+MusiXTeX is a set of macros, based on the earlier MusicTeX, for
+typesetting music with TeX. MusicTeX demonstrated that TeX alone cannot
+practically typeset good-looking ties and slurs. There is therefore a
+separate processor, musixflx, in the bundle, which uses the output of
+MusiXTeX to position the slurs. As a result, MusixTeX is a three-pass
+system: TeX, musixflx, and TeX again. This version of MusixTeX builds
+upon work by Andreas Egler, whose own version is no longer being
+developed. Raw MusiXTeX macros are universally acknowledged to be tricky
+to write: most users employ the pmx preprocessor, which takes much of
+the strain.
