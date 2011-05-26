@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/05/15 13:04:12 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/26 09:23:16 obache Exp $
 #
 
-DISTNAME=	libgcroots-0.2.2
+DISTNAME=	libgcroots-0.2.3
 CATEGORIES=	devel
 MASTER_SITES=	http://sigscheme.googlecode.com/files/
 
