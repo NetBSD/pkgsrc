@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1224 2011/05/25 20:14:19 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1225 2011/05/26 01:35:32 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/milter-greylist to 4.2.7 [tron 2011-05-25]
 	Updated graphics/feh to 1.14.1 [gls 2011-05-25]
 	Updated www/p5-CGI to 3.54 [gls 2011-05-25]
+	Updated time/p5-Schedule-At to 1.11 [dmcmahill 2011-05-25]
