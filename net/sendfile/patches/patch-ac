@@ -1,8 +1,59 @@
-$NetBSD: patch-ac,v 1.4 2011/03/23 18:22:28 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
 
 --- develop/install.orig	1999-12-07 10:40:11.000000000 +0100
 +++ develop/install
-@@ -105,6 +105,7 @@ eval `awk -F\" '/define BINDIR/    {prin
+@@ -58,12 +58,12 @@ mkdir_recursive() {
+ }
+ 
+ make_dirs() {
+-  mkdir_recursive $BINDIR
+-  mkdir_recursive $MANDIR/man1
+-  mkdir_recursive $SERVERDIR
+-  mkdir_recursive `dirname $DENY`
+-  mkdir_recursive `dirname $CONFIG`
+-  mkdir $MANDIR/man$manmisc $MANDIR/man$manadmin 2>/dev/null
++  mkdir_recursive $D$BINDIR
++  mkdir_recursive $D$MANDIR/man1
++  mkdir_recursive $D$SERVERDIR
++  mkdir_recursive $D`dirname $DENY`
++  mkdir_recursive $D`dirname $CONFIG`
++  mkdir $D/$MANDIR/man$manmisc $D/$MANDIR/man$manadmin 2>/dev/null
+ }
+ 
+ make_man() {
+@@ -71,7 +71,7 @@ make_man() {
+        s:/usr/local/etc/sendfile.deny:$DENY:
+        s:/usr/local/etc/sendfile.cf:$CONFIG:
+        s:/var/spool/sendfile:$SPOOL:
+-      " doc/$1.$2 >$MANDIR/man$3/$1.$3
++      " doc/$1.$2 >$D$MANDIR/man$3/$1.$3
+ }
+ 
+ install_man() {
+@@ -81,8 +81,8 @@ install_man() {
+   make_man fetchfile 1 1
+   make_man fetchfile 7 $manmisc
+   make_man sendfiled 8 $manadmin
+-  cp doc/wlock.1 doc/utf7encode.1 $MANDIR/man1
+-  (cd $MANDIR/man1; ln -s utf7encode.1 utf7decode.1 2>/dev/null)
++  cp doc/wlock.1 doc/utf7encode.1 $D$MANDIR/man1
++  (cd $D$MANDIR/man1; ln -s utf7encode.1 utf7decode.1 2>/dev/null)
+ }
+ 
+ SYSTEM=$1
+@@ -93,18 +93,11 @@ if [ "$SYSTEM" = "" ]; then 
+   exit
+ fi
+ 
+-if [ "$LOGNAME" != root ]; then
+-  if [ "`whoami`" != root ]; then
+-    echo
+-    echo "You are not root! You probably run into problems now..."
+-    echo
+-  fi
+-fi
+-
+ eval `awk -F\" '/define BINDIR/    {print "BINDIR="$2} 
                  /define MANDIR/    {print "MANDIR="$2} 
                  /define SERVERDIR/ {print "SERVERDIR="$2}
                  /define SPOOL/     {print "SPOOL="$2}
@@ -10,19 +61,16 @@ $NetBSD: patch-ac,v 1.4 2011/03/23 18:22:28 joerg Exp $
                  /define CONFIG/    {print "CONFIG="$2}
                  /define DENY/	   {print "DENY="$2}
                  /define ALLOW/	   {print "ALLOW="$2}
-@@ -113,6 +114,11 @@ eval `awk -F\" '/define BINDIR/    {prin
+@@ -113,6 +106,8 @@ eval `awk -F\" '/define BINDIR/    {prin
                  /define OUTLOG/    {print "OUTLOG="$2}
  	       ' src/globals.h`
  
-+BINDIR=$DESTDIR$BINDIR
-+MANDIR=$DESTDIR$MANDIR
-+SERVERDIR=$DESTDIR$SERVERDIR
-+EGDIR=$DESTDIR$EGDIR
++D=$DESTDIR
 +
  if [ "$BINDIR" = "" ]; then	BINDIR=/usr/local/bin; fi
  if [ "$MANDIR" = "" ]; then	MANDIR=/usr/local/man; fi
  if [ "$SERVERDIR" = "" ]; then	SERVERDIR=/usr/local/sbin; fi
-@@ -126,6 +132,9 @@ if [ "$OUTLOG" = "" ]; then	OUTLOG=$SPOO
+@@ -126,53 +121,29 @@ if [ "$OUTLOG" = "" ]; then	OUTLOG=$SPOO
  if [ "$INETDCONF" = "" ]; then	INETDCONF=/etc/inetd.conf; fi
  if [ "$SERVICES" = "" ]; then	SERVICES=/etc/services; fi
  
@@ -32,10 +80,46 @@ $NetBSD: patch-ac,v 1.4 2011/03/23 18:22:28 joerg Exp $
  case "$SYSTEM" in
    *BSD*) manmisc=7; manadmin=8;;
        *) manmisc=5; manadmin=1m;;
-@@ -165,14 +174,6 @@ In /etc/profile and /etc/csh.login a cal
- To deinstall the sendfile-daemon, simply type: 	rm -f $SERVERDIR/sendfiled
+ esac
  
- EOD
+-# purge old logfiles (bug from sendfile revision < 19980310)
+-(cd $SPOOL && rm -f */.sendfile*.log)
+-
+ if [ "$2"  = "reinstall" ] ; then
+ 	umask 022
+ 	cd src || exit 1
+ 	make_dirs
+-	cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $BINDIR/
+-	[ -x $SERVERDIR/sendfiled ] && mv $SERVERDIR/sendfiled $SERVERDIR/sendfiled.old && rm -f $SERVERDIR/sendfiled.old
+-	cp sendfiled $SERVERDIR
++	cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $D$BINDIR/
++	[ -x $D$SERVERDIR/sendfiled ] && mv $D$SERVERDIR/sendfiled $D$SERVERDIR/sendfiled.old && rm -f $SERVERDIR/sendfiled.old
++	cp sendfiled $D$SERVERDIR
+ 	cd ../etc
+-	cp sfconf sfdconf $BINDIR/
++	cp sfconf sfdconf $D$BINDIR/
+ 	cd ..
+ 	install_man
+ 	echo Done.
+ 	exit 0
+ fi
+ 
+-cat <<EOD
+-WARNING: this sendfile install script will create or write to:
+-
+-	spool directory =	$SPOOL
+-	binary directory =	$BINDIR
+-	manual directory =	$MANDIR
+-	sendfiled directory =	$SERVERDIR
+-	configuration files =	$CONFIG
+-				$DENY
+-
+-In /etc/services and /etc/inetd.conf apropriate ads will be inserted.
+-In /etc/profile and /etc/csh.login a call to sendfile_check will be added.
+-
+-To deinstall the sendfile-daemon, simply type: 	rm -f $SERVERDIR/sendfiled
+-
+-EOD
 -echo 'If you are satisfied with these defaults, then type "ok" now:'
 -read answer
 -if [ "$answer" != ok ]; then
@@ -47,3 +131,166 @@ $NetBSD: patch-ac,v 1.4 2011/03/23 18:22:28 joerg Exp $
  
  umask 022
  
+@@ -183,7 +154,7 @@ echo "installing the clients in $BINDIR"
+ cd etc || exit 1
+ sed "s:/usr/local/etc/sendfile.cf:$CONFIG:
+      s:/var/spool/sendfile:$SPOOL:" sf_cleanup \
+-     > $BINDIR/sf_cleanup
++     > $D$BINDIR/sf_cleanup
+ sed "s:SPOOL=/var/spool/sendfile:SPOOL=$SPOOL:
+      s:INLOG=/var/spool/sendfile/LOG/in:INLOG=$INLOG:
+      s:OUTLOG=/var/spool/sendfile/LOG/in:OUTLOG=$OUTLOG:
+@@ -193,13 +164,13 @@ sed "s:SPOOL=/var/spool/sendfile:SPOOL=$
+      s:ALLOW=/usr/local/etc/sendfile.allow:ALLOW=$ALLOW:
+     " sfdconf \
+     | awk '{if ($0 != "CONFIG") print $0; else system("cat sendfile.cf")}' \
+-    > $BINDIR/sfdconf
+-sed "s:/var/spool/sendfile:$SPOOL:" sfconf >$BINDIR/sfconf
+-sed "s:receive :$BINDIR/receive :" check_sendfile >$BINDIR/check_sendfile
++    > $D$BINDIR/sfdconf
++sed "s:/var/spool/sendfile:$SPOOL:" sfconf >$D$BINDIR/sfconf
++sed "s:receive :$BINDIR/receive :" check_sendfile >$D$BINDIR/check_sendfile
+ cd ../src || exit 1
+-cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $BINDIR/
++cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $D$BINDIR/
+ cd ..
+-(cd $BINDIR
++(cd $D$BINDIR
+  ln -s utf7encode utf7decode 2>/dev/null
+  ln -s sendfile sf 2>/dev/null
+  ln -s sendmsg  sm 2>/dev/null
+@@ -220,8 +191,8 @@ if [ "$SENDFILED" != "$SERVERDIR/sendfil
+   echo "         there is $SERVERDIR/sendfiled in makeconfig! Check it!"
+ fi
+ echo "installing the sendfile-daemon in $SERVERDIR"
+-[ -x $SERVERDIR/sendfiled ] && mv $SERVERDIR/sendfiled $SERVERDIR/sendfiled.old && rm -f $SERVERDIR/sendfiled.old
+-cp src/sendfiled $SERVERDIR  || exit 1
++[ -x $D$SERVERDIR/sendfiled ] && mv $D$SERVERDIR/sendfiled $D$SERVERDIR/sendfiled.old && rm -f $D$SERVERDIR/sendfiled.old
++cp src/sendfiled $D$SERVERDIR  || exit 1
+ 
+ NOSENDFILE=`dirname $DENY 2>/dev/null`/nosendfile
+ if [ -f $NOSENDFILE ]; then 
+@@ -233,16 +204,16 @@ if [ -f $NOSENDFILE ]; then 
+     mv $NOSENDFILE $DENY
+   fi
+ fi
+-if [ ! -f $DENY -a ! -f $ALLOW ]; then 
++if [ ! -f $D$DENY -a ! -f $D$ALLOW ]; then 
+   echo "installing the sendfile deny file as $DENY"
+-  cp etc/sendfile.deny $DENY
+-  chmod 644 $DENY
++  cp etc/sendfile.deny $D$DENY
++  chmod 644 $D$DENY
+ fi
+ 
+-if [ ! -f $CONFIG ]; then 
++if [ ! -f $D$CONFIG ]; then 
+   echo "installing the global sendfile config file as $CONFIG"
+-  cp etc/sendfile.cf $CONFIG
+-  chmod 644 $CONFIG
++  cp etc/sendfile.cf $D$CONFIG
++  chmod 644 $D$CONFIG
+ else 
+   if [ "`diff etc/sendfile.cf $CONFIG`" ]; then
+     echo "Warning: `pwd`/etc/sendfile.cf differs from $CONFIG !"
+@@ -250,100 +221,6 @@ else 
+   fi
+ fi
+ 
+-if [ "$SYSTEM" = NEXT ]; then
+-  SERVICE="`nidump services . | awk '/[ \t]487\/tcp/'`"
+-else
+-  SERVICE="`awk '/[ \t]487\/tcp/' /etc/services`"
+-fi
+-if [ "$SERVICE" != "" ]; then
+-  case "$SERVICE" in 
+-    saft*)	;;
+-        *)	echo "ERROR: tcp-port 487 is already in use!"; exit 1;;
+-  esac
+-else
+-  if [ "$SYSTEM" = NEXT ]; then
+-    echo "configuring services"
+-    echo "saft	487/tcp		# simple asynchronous file transfer" | niload services .
+-  else
+-    echo "configuring $SERVICES"
+-    echo "#" >>$SERVICES
+-    echo "saft	487/tcp		# simple asynchronous file transfer" >>$SERVICES
+-  fi
+-fi
+-
+-if [ "$SENDFILED" = "" ]; then
+-  if [ -f /usr/sbin/tcpd ]; then 
+-    SFD="/usr/sbin/tcpd $SERVERDIR/sendfiled"
+-  else
+-    SFD="$SERVERDIR/sendfiled sendfiled"
+-  fi
+-  RESTART=true
+-  echo "configuring $INETDCONF"
+-  echo "#" >>$INETDCONF
+-  echo "# simple asynchronous file transfer" >>$INETDCONF
+-  echo "saft	stream	tcp	nowait	root	$SFD" >>$INETDCONF
+-fi
+-
+-if [ -f /etc/inetd.sec ]; then
+-  if [ "`grep '^saft' /etc/inetd.sec`" = "" ]; then
+-    echo >> /etc/inetd.sec
+-    echo "saft allow" >> /etc/inetd.sec
+-  fi
+-fi
+-
+-if [ -f /etc/profile ]; then
+-  if [ "`grep check_sendfile /etc/profile`" = "" ]; then
+-    echo "adding check_sendfile to /etc/profile"
+-    echo >>/etc/profile
+-    echo "test -x $BINDIR/check_sendfile && $BINDIR/check_sendfile"\
+-          >>/etc/profile
+-  fi
+-fi
+-if [ -f /etc/csh.login ]; then
+-  if [ "`grep check_sendfile /etc/csh.login`" = "" ]; then
+-    echo "adding check_sendfile to /etc/csh.login"
+-    echo >>/etc/csh.login
+-    echo "test -x $BINDIR/check_sendfile && $BINDIR/check_sendfile" \
+-         >>/etc/csh.login
+-  fi
+-fi
+-				
+-if [ ! -d "$SPOOL/OUTGOING" ]; then
+-  echo "creating $SPOOL"
+-  mkdir_recursive $SPOOL/OUTGOING
+-  chmod 755  $SPOOL || exit 1
+-  chmod 1777 $SPOOL/OUTGOING
+-fi
+-if [ ! -d `dirname "$INLOG"` ]; then 
+-  mkdir_recursive `dirname $INLOG`
+-  chmod 700 `dirname $INLOG`
+-fi
+-if [ ! -d `dirname "$OUTLOG"` ]; then 
+-  mkdir_recursive `dirname $OUTLOG`
+-  chmod 700 `dirname $OUTLOG`
+-fi
+-if [ ! -f "$INLOG" ]; then 
+-  echo "# use \"utf7decode $INLOG\" to view this file" > $INLOG
+-  echo >> $INLOG
+-  chmod 600 $INLOG
+-fi
+-if [ ! -f "$OUTLOG" ]; then 
+-  echo "# use \"utf7decode $OUTLOG\" to view this file" > $OUTLOG
+-  echo >> $OUTLOG
+-  chmod 600 $OUTLOG
+-fi
+-
+-free=`$SERVERDIR/sendfiled -f`
+-minfree=`awk '/minfree =/{print $3}' $CONFIG`
+-if [ "$free" -le "$minfree" ]; then
+-  cat <<EOD
+-		! WARNING ! 
+-You have not enough free disk space in $SPOOL !
+-Either give the spool directory more space or lower the value for the 
+-minfree option in $CONFIG
+-EOD
+-fi
+-
+ echo
+ echo "You may want to add the following line to your system bootup script:"
+ echo "    $SERVERDIR/sendfiled -Q"
