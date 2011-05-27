@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:37:20 cheusov Exp $
+${HLROOT}/bin/posix/touch
+${HLROOT}/bin/posix2001/touch
+${HLROOT}/bin/s42/touch
+${HLROOT}/bin/settime
+${HLROOT}/bin/touch
+${HLROOT}/man/man1/settime.1
+${HLROOT}/man/man1/touch.1
