@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/03/24 19:21:25 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2011/05/27 13:16:04 obache Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -13,6 +13,8 @@ COMMENT=		Optimizing Oberon-2 Compiler
 
 DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
 DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 \
 	|| ${MACHINE_ARCH} == x86_64
@@ -30,15 +32,21 @@ LIBTOOL_PREFIX_DEFAULT=	${LOCALBASE}
 
 INSTALLATION_DIRS=	share/doc/html share/emacs/site-lisp
 
-pre-install:
-	for f in ${WRKSRC}/rsrc/OOC/oo2crc.xml; do			\
-		${SED} -e 's,${BUILDLINK_DIR},${LIBTOOL_PREFIX},g'	\
-		$$f > $$f.tmp && ${MV} $$f.tmp $$f;			\
-	done
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	pre-install
+SUBST_FILES.destdir=	oo2crc-install.xml
+SUBST_SED.destdir=	-e 's,>${PREFIX}/lib<,>${DESTDIR}${PREFIX}/lib<,g'
+SUBST_SED.destdir+=	-e 's,>${PREFIX}/lib/oo2c<,>${DESTDIR}${PREFIX}/lib/oo2c<,g'
+SUBST_SED.destdir+=	-e 's,>${PREFIX}/bin<,>${DESTDIR}${PREFIX}/bin<,g'
+
+SUBST_CLASSES+=		pkg-unwrap
+SUBST_STAGE.pkg-unwrap=	post-install
+SUBST_FILES.pkg-unwrap=	${DESTDIR}${PREFIX}/lib/oo2c/oo2crc.xml
+SUBST_SED.pkg-unwrap=	-e 's,${WRAPPER_DIR},${LIBTOOL_PREFIX},g'
 
 post-install:
-	${LN} -sf ${PREFIX}/lib/oo2c/oocdoc/html ${PREFIX}/share/doc/html/oo2c
-	${LN} -sf ${PREFIX}/lib/oo2c/emacs ${PREFIX}/share/emacs/site-lisp/oo2c
+	${LN} -sf ${PREFIX}/lib/oo2c/oocdoc/html ${DESTDIR}${PREFIX}/share/doc/html/oo2c
+	${LN} -sf ${PREFIX}/lib/oo2c/emacs ${DESTDIR}${PREFIX}/share/emacs/site-lisp/oo2c
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
