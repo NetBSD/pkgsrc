@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:29:24 cheusov Exp $
+${HLROOT}/bin/posix/who
+${HLROOT}/bin/posix2001/who
+${HLROOT}/bin/s42/who
+${HLROOT}/bin/who
+${HLROOT}/man/man1/who.1
