@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/18 02:08:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/27 23:29:58 joerg Exp $
 
 DISTNAME=	HTTP-OAI-3.24
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	p5-XML-LibXML>=1.60:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-SAX>=0.96:../../textproc/p5-XML-SAX
-DEPENDS+=	p5-URI:../../www/p5-URI
-DEPENDS+=	p5-libwww:../../www/p5-libwww
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/HTTP-OAI/.packlist
