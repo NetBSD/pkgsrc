@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/08/21 16:36:05 seb Exp $
+# $NetBSD: Makefile,v 1.13 2011/05/27 19:54:23 jmmv Exp $
 #
 
 DISTNAME=	Text-Markdown-1.000031
 PKGNAME=	p5-${DISTNAME:S/000031/0.31/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
@@ -20,6 +20,9 @@ BUILD_DEPENDS+= p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 
 PERL5_PACKLIST=		auto/Text/Markdown/.packlist
 USE_LANGUAGES=		# none
+
+REPLACE_PERL+=	blib/script/Markdown.pl
+REPLACE_PERL+=	script/Markdown.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
