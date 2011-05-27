@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2011/03/30 12:38:33 obache Exp $
+# $NetBSD: Makefile,v 1.29 2011/05/27 13:13:35 is Exp $
 #
 
 DISTNAME=	sendfile-20010216
 PKGNAME=	sendfile-2.1.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.belwue.de/pub/unix/sendfile/current/
 # http://fex.rus.uni-stuttgart.de/download/
@@ -14,6 +14,8 @@ COMMENT=	Implementation of the Simple asynchronous file transfer protocol
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/sendfile-2.1a
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_SYSCONFSUBDIR=	sendfile
 EGDIR=		${PREFIX}/share/examples/sendfile
@@ -29,5 +31,9 @@ SUBST_VARS.makeconfig=	PREFIX PKG_SYSCONFBASEDIR
 
 post-configure:
 	cd ${WRKSRC} &&${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} config
+
+OWN_DIRS+=	 ${VARBASE}/spool/sendfile
+OWN_DIRS_PERMS+= ${VARBASE}/spool/sendfile/LOG ${ROOT_USER} ${ROOT_GROUP} 700
+OWN_DIRS_PERMS+= ${VARBASE}/spool/sendfile/OUTGOING ${ROOT_USER} ${ROOT_GROUP} 1777
 
 .include "../../mk/bsd.pkg.mk"
