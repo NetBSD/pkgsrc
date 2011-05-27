@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:50:11 cheusov Exp $
+${HLROOT}/bin/renice
+${HLROOT}/man/man1/renice.1
+${HLROOT}/ucb/renice
