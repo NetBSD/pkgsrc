@@ -1,0 +1,231 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+# used by archivers/heirloom-tar/Makefile
+# used by devel/heirloom-common/Makefile
+# used by devel/heirloom-getopt/Makefile
+# used by devel/heirloom-libcommon/Makefile
+# used by devel/heirloom-what/Makefile
+# used by devel/libuxre/Makefile
+# used by lang/heirloom-awk/Makefile
+# used by math/heirloom-factor/Makefile
+# used by math/heirloom-units/Makefile
+# used by misc/heirloom-banner/Makefile
+# used by misc/heirloom-cal/Makefile
+# used by misc/heirloom-calendar/Makefile
+# used by misc/heirloom-more/Makefile
+# used by misc/heirloom-od/Makefile
+# used by misc/heirloom-printf/Makefile
+# used by misc/heirloom-sleep/Makefile
+# used by misc/heirloom-sum/Makefile
+# used by misc/heirloom-tcopy/Makefile
+# used by misc/heirloom-time/Makefile
+# used by news/heirloom-news/Makefile
+# used by security/heirloom-su/Makefile
+# used by sysutils/heirloom-basename/Makefile
+# used by sysutils/heirloom-cat/Makefile
+# used by sysutils/heirloom-chmod/Makefile
+# used by sysutils/heirloom-chown/Makefile
+# used by sysutils/heirloom-cksum/Makefile
+# used by sysutils/heirloom-cmp/Makefile
+# used by sysutils/heirloom-copy/Makefile
+# used by sysutils/heirloom-cp/Makefile
+# used by sysutils/heirloom-csplit/Makefile
+# used by sysutils/heirloom-dd/Makefile
+# used by sysutils/heirloom-dirname/Makefile
+# used by sysutils/heirloom-doc/Makefile
+# used by sysutils/heirloom-du/Makefile
+# used by sysutils/heirloom-env/Makefile
+# used by sysutils/heirloom-file/Makefile
+# used by sysutils/heirloom-find/Makefile
+# used by sysutils/heirloom-getconf/Makefile
+# used by sysutils/heirloom-groups/Makefile
+# used by sysutils/heirloom-hostname/Makefile
+# used by sysutils/heirloom-id/Makefile
+# used by sysutils/heirloom-listusers/Makefile
+# used by sysutils/heirloom-ln/Makefile
+# used by sysutils/heirloom-logins/Makefile
+# used by sysutils/heirloom-logname/Makefile
+# used by sysutils/heirloom-ls/Makefile
+# used by sysutils/heirloom-mesg/Makefile
+# used by sysutils/heirloom-mkdir/Makefile
+# used by sysutils/heirloom-mkfifo/Makefile
+# used by sysutils/heirloom-mknod/Makefile
+# used by sysutils/heirloom-nice/Makefile
+# used by sysutils/heirloom-nohup/Makefile
+# used by sysutils/heirloom-pathchk/Makefile
+# used by sysutils/heirloom-pgrep/Makefile
+# used by sysutils/heirloom-priocntl/Makefile
+# used by sysutils/heirloom-ps/Makefile
+# used by sysutils/heirloom-psrinfo/Makefile
+# used by sysutils/heirloom-pwd/Makefile
+# used by sysutils/heirloom-renice/Makefile
+# used by sysutils/heirloom-rm/Makefile
+# used by sysutils/heirloom-rmdir/Makefile
+# used by sysutils/heirloom-setpgrp/Makefile
+# used by sysutils/heirloom-sleep/Makefile
+# used by sysutils/heirloom-sort/Makefile
+# used by sysutils/heirloom-split/Makefile
+# used by sysutils/heirloom-stty/Makefile
+# used by sysutils/heirloom-sync/Makefile
+# used by sysutils/heirloom-tapecntl/Makefile
+# used by sysutils/heirloom-tee/Makefile
+# used by sysutils/heirloom-touch/Makefile
+# used by sysutils/heirloom-tsort/Makefile
+# used by sysutils/heirloom-tty/Makefile
+# used by sysutils/heirloom-uname/Makefile
+# used by sysutils/heirloom-uniq/Makefile
+# used by sysutils/heirloom-users/Makefile
+# used by sysutils/heirloom-wc/Makefile
+# used by sysutils/heirloom-who/Makefile
+# used by sysutils/heirloom-whoami/Makefile
+# used by sysutils/heirloom-whodo/Makefile
+# used by sysutils/heirloom-xargs/Makefile
+# used by sysutils/heirloom-yes/Makefile
+# used by textproc/heirloom-bdiff/Makefile
+# used by textproc/heirloom-bfs/Makefile
+# used by textproc/heirloom-col/Makefile
+# used by textproc/heirloom-comm/Makefile
+# used by textproc/heirloom-cut/Makefile
+# used by textproc/heirloom-diff3/Makefile
+# used by textproc/heirloom-ed/Makefile
+# used by textproc/heirloom-fmt/Makefile
+# used by textproc/heirloom-fold/Makefile
+# used by textproc/heirloom-grep/Makefile
+# used by textproc/heirloom-head/Makefile
+# used by textproc/heirloom-join/Makefile
+# used by textproc/heirloom-line/Makefile
+# used by textproc/heirloom-nl/Makefile
+# used by textproc/heirloom-paste/Makefile
+# used by textproc/heirloom-pg/Makefile
+# used by textproc/heirloom-pr/Makefile
+# used by textproc/heirloom-sdiff/Makefile
+# used by textproc/heirloom-sed/Makefile
+# used by textproc/heirloom-tail/Makefile
+# used by textproc/heirloom-tr/Makefile
+# used by textproc/heirloom-ul/Makefile
+# used by textproc/heirloom-uniq/Makefile
+# used by textproc/heirloom-wc/Makefile
+# used by time/heirloom-date/Makefile
+
+DISTNAME=	heirloom-${HEIRLOOM_VER}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heirloom/}
+EXTRACT_SUFX=	.tar.bz2
+HOMEPAGE=	http://heirloom.sourceforge.net/
+MAINTAINER=	cheusov@tut.by
+COMMENT?=	Collection of standard Unix utilities (${PKGBASE:S/heirloom-//})
+
+HEIRLOOM_VER=		070715
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+PATCHDIR=	${.CURDIR}/../../sysutils/heirloom-doc/patches
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/heirloom-doc/distinfo
+
+CONFLICTS+=	heirloom-toolchest-[0-9]*
+
+DESCR_SRC=	${.CURDIR}/../../sysutils/heirloom-doc/DESCR.common
+
+MAKE_FILE=	makefile.hl
+HLROOT=		heirloom
+PLIST_SUBST+=	HLROOT=${HLROOT}
+
+.include "../../mk/bsd.prefs.mk"
+
+CFLAGS.Linux+=		-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64L
+CFLAGS.Interix+=	-Dstrtoll=strtol -Dstrtoull=strtoul
+CFLAGS.Interix+=	-Dintptr_t=int -Datoll=atol -Dinitgroups="(0)"
+
+.if ${NEED_LIBKVM:U0}
+LDFLAGS.NetBSD+=	-lkvm
+LDFLAGS.FreeBSD+=	-lkvm
+LDFLAGS.OpenBSD+=	-lkvm
+LDFLAGS.DragonFly+=	-lkvm
+.endif
+
+.if ${NEED_LIBSOCKET:U0}
+LDFLAGS.SunOS+=		-lsocket
+.endif
+
+.if ${NEED_LIBCRYPT:U0}
+LCRYPT=	-lcrypt
+.  if ${OPSYS} == "OpenBSD"
+LCRYPT=
+.  endif
+.endif
+
+.if ${NEED_LIBCURSES:U0}
+LCURS=-lcurses
+
+.  if ${OPSYS} == "NetBSD"
+CFLAGS+=	-DUSE_TERMCAP
+LCURS=		-ltermcap
+.  endif
+.endif
+
+.if ${NEED_ZLIB:U0}
+LDFLAGS+=	-lz
+.endif
+
+.if ${NEED_BZLIB:U0}
+LDFLAGS+=	-lbz2
+.endif
+
+HLPREFIX=	${PREFIX:Q}/${HLROOT}
+
+MAKE_FLAGS+=	UCBINST=${INSTALL:Q}
+MAKE_FLAGS+=	ROOT=${DESTDIR}
+MAKE_FLAGS+=	DEFBIN=${HLPREFIX:Q}/bin
+MAKE_FLAGS+=	SV3BIN=${HLPREFIX:Q}/bin
+MAKE_FLAGS+=	S42BIN=${HLPREFIX:Q}/bin/s42
+MAKE_FLAGS+=	SUSBIN=${HLPREFIX:Q}/bin/posix
+MAKE_FLAGS+=	SU3BIN=${HLPREFIX:Q}/bin/posix2001
+MAKE_FLAGS+=	UCBBIN=${HLPREFIX:Q}/ucb
+MAKE_FLAGS+=	CCSBIN=${HLPREFIX:Q}/bin/ccs
+MAKE_FLAGS+=	DEFLIB=${HLPREFIX:Q}/lib
+MAKE_FLAGS+=	DEFSBIN=${HLPREFIX:Q}/sbin
+MAKE_FLAGS+=	MANDIR=${HLPREFIX:Q}/man
+MAKE_FLAGS+=	DFLDIR=${HLPREFIX:Q}/etc/default
+MAKE_FLAGS+=	SPELLHIST=${HLPREFIX:Q}/var/adm/spellhist
+MAKE_FLAGS+=	SULOG=${HLPREFIX:Q}/var/log/sulog
+MAKE_FLAGS+=	MANINST=${INSTALL_MAN:Q}
+MAKE_FLAGS+=	LCURS=${LCURS}
+MAKE_FLAGS+=	LIBZ=-lz
+MAKE_FLAGS+=	USE_ZLIB=${USE_ZLIB}
+MAKE_FLAGS+=	LIBBZ2=-lbz2
+MAKE_FLAGS+=	USE_BZLIB=${USE_BZLIB}
+MAKE_FLAGS+=	LD=${CC:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	CPPFLAGS=${CPPFLAGS:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	CFLAGSS=${CFLAGS:Q}
+MAKE_FLAGS+=	CFLAGS2=${CFLAGS:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	STRIP=true
+MAKE_FLAGS+=	LCRYPT=${LCRYPT}
+MAKE_FLAGS+=	UCBINST=${INSTALL:Q}
+MAKE_FLAGS+=	ICOMMON=
+MAKE_FLAGS+=	LCOMMON=
+MAKE_FLAGS+=	IUXRE=
+
+.if ${NEED_LIBUXRE:U0}
+MAKE_FLAGS+=	LUXRE=-luxre
+.endif
+
+.if empty(PKGNAME:Mheirloom-doc-*)
+MAKE_FLAGS+=	NO_INSTALL_INTRO=1
+.endif
+
+.if empty(PKGNAME:Mheirloom-doc-*) && empty(PKGNAME:Mheirloom-libcommon-*)
+LDFLAGS+=	-lheirloomcommon
+.endif
+
+.if empty(PKGNAME:Mheirloom-doc-*)
+DEPENDS+=	heirloom-doc-${HEIRLOOM_VER}:../../sysutils/heirloom-doc
+.endif
+
+# makefile.hl is for case insensitive HFS+ (Darwin)
+.if ${NEED_PRE_BUILD:U1}
+pre-build:
+	set -e; cd ${WRKSRC}; \
+	${TEST} -f makefile.hl || mv makefile makefile.hl; \
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile.hl makefiles
+.endif
