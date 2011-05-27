@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:45:54 cheusov Exp $
+${HLROOT}/bin/setpgrp
+${HLROOT}/man/man1/setpgrp.1
