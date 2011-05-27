@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10350 2011/05/27 06:29:51 adam Exp $
+$NetBSD: TODO,v 1.10351 2011/05/27 09:44:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -1280,6 +1280,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-3.07
 	o uriparser-0.7.5
 	o userppp-030706
+	o utilisp-1.14
 	o valgrind-3.6.0
 	o vbetool-1.1
 	o vera-1.17
