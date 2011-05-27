@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1269 2011/05/27 23:52:14 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1270 2011/05/27 23:54:05 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2047,3 +2047,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-renice version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-pwd version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-psrinfo version 070715 [cheusov 2011-05-27]
+	Added sysutils/heirloom-ps version 070715 [cheusov 2011-05-27]
