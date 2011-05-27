@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 06:41:42 adam Exp $
+bin/dhcpd-pools
+man/man1/dhcpd-pools.1
+share/dhcpd-pools/dhcpd-pools.cgi
+share/dhcpd-pools/snmptest.pl

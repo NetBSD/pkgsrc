@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/27 06:41:42 adam Exp $
+
+SHA1 (dhcpd-pools-2.14.tar.gz) = c30980fa9ea6dfc39d3bef633d42680c5adceb42
+RMD160 (dhcpd-pools-2.14.tar.gz) = bf24d5889354330b1d4a4307df5553310a7ea11a
+Size (dhcpd-pools-2.14.tar.gz) = 384847 bytes
