@@ -1,0 +1,7 @@
+This is dhcpd-pools ISC dhcp shared network and pool range usage analysis.
+Purpose of command is to count usage ratio of each IP range and shared network
+pool which ISC dhcpd is in control of. The command has no native monitoring
+capability, for instance the tool will not talk nagios protocol. To accomodiate
+this need the CSV output format is meant to be parsed by some organization
+specific script etc. Users of the command are most likely ISPs and other
+organizations that have large IP space.
