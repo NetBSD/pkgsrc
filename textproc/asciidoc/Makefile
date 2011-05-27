@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:44:46 obache Exp $
+# $NetBSD: Makefile,v 1.28 2011/05/27 18:51:48 gls Exp $
 #
 
-DISTNAME=		asciidoc-8.6.4
-PKGREVISION=		1
+DISTNAME=		asciidoc-8.6.5
 CATEGORIES=		textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asciidoc/}
 
@@ -36,7 +35,7 @@ SUBST_CLASSES+=		ae
 SUBST_STAGE.ae=		pre-configure
 SUBST_MESSAGE.ae=	Fixing hard-coded Python interpreter paths.
 SUBST_FILES.ae=		a2x.py asciidoc.conf
-SUBST_FILES.ae+=	xhtml11.conf xhtml11-quirks.conf
+SUBST_FILES.ae+=	html5.conf xhtml11.conf xhtml11-quirks.conf
 SUBST_SED.ae=		-e 's,python,${PYTHONBIN},'
 
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
