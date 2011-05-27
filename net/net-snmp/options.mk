@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2010/05/11 04:39:54 adam Exp $
+# $NetBSD: options.mk,v 1.11 2011/05/27 10:55:24 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
 PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem perl
@@ -6,9 +6,9 @@ PKG_SUGGESTED_OPTIONS=		perl
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
-# net-snmp doesn't do IPv6 on Solaris & Darwin
-PKG_SUPPORTED_OPTIONS+=	inet6
+.if ${OPSYS} != "SunOS"
+# net-snmp doesn't do IPv6 on Solaris
+PKG_SUPPORTED_OPTIONS+=		inet6
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -49,10 +49,10 @@ PERL5_CONFIGURE=	no
 PERL5_PACKLIST=		auto/Bundle/NetSNMP/.packlist
 CONFIGURE_ARGS+=	--with-perl-modules=${MAKE_PARAMS:Q}
 CONFIGURE_ENV+=		PERLPROG=${PERL5:Q}
-
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .else # !perl
-CONFIGURE_ARGS+= --enable-embedded-perl=no
-CONFIGURE_ARGS+= --enable-perl-cc-checks=no
-CONFIGURE_ARGS+= --with-perl-modules=no
-.endif # perl
+CONFIGURE_ARGS+=	--disable-perl-cc-checks
+CONFIGURE_ARGS+=	--with-perl-modules=no
+.endif
+CONFIGURE_ARGS+=	--disable-embedded-perl
