@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/03/26 20:06:31 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2011/05/27 23:27:15 joerg Exp $
 #
 
 DISTNAME=	bagpipetex-3.01
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	http://www.stanford.edu/~wrinnes/bagpipe.tex/distribution/
 DISTFILES=	bagpipe301.tar.gz
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.stanford.edu/~wrinnes/bagpipe.tex/
 COMMENT=	MusixTeX macros to typeset bagpipe music
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-DEPENDS+=	tex-musixtex>=112:../../print/tex-musixtex
+DEPENDS+=	tex-musixtex>=1.15:../../print/tex-musixtex
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
