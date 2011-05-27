@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1 2009/03/10 18:30:44 apb Exp $
+$NetBSD: patch-ap,v 1.2 2011/05/27 10:55:25 adam Exp $
 
 Some systems define ifnet.if_lastchange as struct timespec (with a
 tv_nsec field measured in nanoseconds), while other systems define it
@@ -7,12 +7,12 @@ Both variants have a tv_sec field for integer seconds.
 
 --- agent/mibgroup/mibII/interfaces.c.orig	2008-06-05 23:11:53.000000000 +0200
 +++ agent/mibgroup/mibII/interfaces.c
-@@ -830,15 +830,25 @@ var_ifEntry(struct variable *vp,
+@@ -847,15 +847,25 @@ var_ifEntry(struct variable *vp,
           * * this is fixed, thus the 199607 comparison.
           */
          if (ifnet.if_lastchange.tv_sec == 0 &&
 -            ifnet.if_lastchange.tv_usec == 0)
-+#if STRUCT_IFNET_HAS_IF_LASTCHANGE_TV_NSEC
++#if HAVE_STRUCT_IFNET_IF_LASTCHANGE_TV_NSEC
 +            ifnet.if_lastchange.tv_nsec == 0
 +#else
 +            ifnet.if_lastchange.tv_usec == 0
@@ -27,7 +27,7 @@ Both variants have a tv_sec field for integer seconds.
 -                 + (ifnet.if_lastchange.tv_usec -
 -                    starttime.tv_usec) / 10000);
 +                 + (
-+#if STRUCT_IFNET_HAS_IF_LASTCHANGE_TV_NSEC
++#if HAVE_STRUCT_IFNET_IF_LASTCHANGE_TV_NSEC
 +		    ifnet.if_lastchange.tv_nsec / 1000
 +#else
 +		    ifnet.if_lastchange.tv_usec

@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.10 2007/02/05 12:06:16 adam Exp $
+$NetBSD: patch-ag,v 1.11 2011/05/27 10:55:25 adam Exp $
 
 --- agent/mibgroup/host/hr_storage.c.orig	2006-10-12 11:54:57.000000000 +0200
 +++ agent/mibgroup/host/hr_storage.c
-@@ -75,6 +75,13 @@
+@@ -69,6 +69,13 @@
  #endif
  #endif                          /* vm/vm.h */
  #endif                          /* sys/vm.h */
