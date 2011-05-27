@@ -1,16 +1,18 @@
-$NetBSD: patch-dc,v 1.7 2010/07/20 08:33:44 adam Exp $
+$NetBSD: patch-dc,v 1.8 2011/05/27 10:55:25 adam Exp $
 
---- include/net-snmp/net-snmp-config.h.in.orig	2010-03-03 16:11:57.000000000 +0000
+--- include/net-snmp/net-snmp-config.h.in.orig	2010-11-30 05:56:25.000000000 +0000
 +++ include/net-snmp/net-snmp-config.h.in
-@@ -159,6 +159,7 @@
- #undef STRUCT_IFNET_HAS_IF_IMCASTS
- #undef STRUCT_IFNET_HAS_IF_IQDROPS
- #undef STRUCT_IFNET_HAS_IF_LASTCHANGE_TV_SEC
-+#undef STRUCT_IFNET_HAS_IF_LASTCHANGE_TV_NSEC
- #undef STRUCT_IFNET_HAS_IF_NOPROTO
- #undef STRUCT_IFNET_HAS_IF_OMCASTS
- #undef STRUCT_IFNET_HAS_IF_XNAME
-@@ -1466,6 +1467,7 @@
+@@ -767,6 +767,9 @@
+ /* Define to 1 if `if_lastchange.tv_sec' is member of `struct ifnet'. */
+ #undef HAVE_STRUCT_IFNET_IF_LASTCHANGE_TV_SEC
+ 
++/* Define to 1 if `if_lastchange.tv_nsec' is member of `struct ifnet'. */
++#undef HAVE_STRUCT_IFNET_IF_LASTCHANGE_TV_NSEC
++
+ /* Define to 1 if `if_mtu' is member of `struct ifnet'. */
+ #undef HAVE_STRUCT_IFNET_IF_MTU
+ 
+@@ -1715,6 +1718,7 @@
  #define NETSNMP_HPUX11ID 14
  #define NETSNMP_AIXID 15
  #define NETSNMP_MACOSXID 16
@@ -18,7 +20,7 @@ $NetBSD: patch-dc,v 1.7 2010/07/20 08:33:44 adam Exp $
  #define NETSNMP_UNKNOWNID 255
  
  #ifdef hpux9
-@@ -1495,6 +1497,9 @@
+@@ -1744,6 +1748,9 @@
  #if defined(__FreeBSD__)
  #define NETSNMP_OSTYPE NETSNMP_FREEBSDID
  #endif
