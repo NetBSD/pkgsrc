@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+
+Fix for SunOS
+--- ls/ls.c.orig	2005-05-29 15:55:42.000000000 +0300
++++ ls/ls.c
+@@ -81,12 +81,6 @@ static char ifmt_c[] = "-pc-d-b--nl-SD--
+ 
+ #define ifmt(mode)	ifmt_c[((mode) >> 12) & 0xF]
+ 
+-#ifndef	USE_TERMCAP
+-#ifdef	sun
+-#include <curses.h>
+-#include <term.h>
+-#endif
+-#endif
+ #define nil 0
+ #include <sys/types.h>
+ #include <sys/stat.h>

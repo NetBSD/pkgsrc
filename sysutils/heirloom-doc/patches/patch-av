@@ -1,0 +1,14 @@
+$NetBSD: patch-av,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+
+Fix for systems having no btowc(3)
+--- libuxre/bracket.c.orig	Sat Oct 18 22:16:46 2003
++++ libuxre/bracket.c
+@@ -31,6 +31,8 @@
+ #include <string.h>
+ #include "re.h"
+ 
++#include "btowc.h"
++
+ /*
+ * Build and match the [...] part of REs.
+ *

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+${HLROOT}/man/man1/intro.1
+share/doc/heirloom-doc/LICENSE/COPYING
+share/doc/heirloom-doc/LICENSE/COPYING.LGPL
+share/doc/heirloom-doc/LICENSE/LICENSE
+share/doc/heirloom-doc/LICENSE/LUCENT
+share/doc/heirloom-doc/LICENSE/OPENSOLARIS.LICENSE
+share/doc/heirloom-doc/LICENSE/README
+share/doc/heirloom-doc/README

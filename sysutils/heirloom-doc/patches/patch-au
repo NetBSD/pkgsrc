@@ -1,0 +1,17 @@
+$NetBSD: patch-au,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+
+Fix for Interix-3.5
+--- libuxre/btowc.h.orig	Mon Dec 18 15:22:23 2006
++++ libuxre/btowc.h
+@@ -0,0 +1,11 @@
++#ifndef _BTOWC_H
++#define _BTOWC_H
++
++#if defined(__INTERIX)
++#define HAVE_NO_BTOWC 1
++#include <wchar.h>
++wint_t btowc (int c);
++#endif
++
++#endif
++
