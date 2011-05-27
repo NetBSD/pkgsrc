@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:41:54 cheusov Exp $
+${HLROOT}/bin/STTY
+${HLROOT}/bin/stty
+${HLROOT}/man/man1/stty.1
+${HLROOT}/man/man1b/stty.1b
+${HLROOT}/ucb/stty
