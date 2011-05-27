@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:28:35 cheusov Exp $
+${HLROOT}/bin/whoami
+${HLROOT}/man/man1/whoami.1
+${HLROOT}/ucb/whoami
