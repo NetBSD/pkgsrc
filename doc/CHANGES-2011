@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1252 2011/05/27 23:29:34 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1253 2011/05/27 23:31:06 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2030,3 +2030,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-whodo version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-whoami version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-who version 070715 [cheusov 2011-05-27]
+	Added sysutils/heirloom-users version 070715 [cheusov 2011-05-27]
