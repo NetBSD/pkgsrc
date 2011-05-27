@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.5 2008/06/06 16:18:04 tron Exp $
+$NetBSD: patch-ai,v 1.6 2011/05/27 10:55:25 adam Exp $
 
 --- agent/mibgroup/mibII/ip.c.orig	2008-06-06 15:51:31.000000000 +0100
 +++ agent/mibgroup/mibII/ip.c	2008-06-06 15:55:38.000000000 +0100
-@@ -212,6 +212,18 @@
+@@ -241,6 +241,18 @@
  #define	USES_TRADITIONAL_IPSTAT
  #endif
  

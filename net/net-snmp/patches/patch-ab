@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2010/07/20 08:33:44 adam Exp $
+$NetBSD: patch-ab,v 1.11 2011/05/27 10:55:24 adam Exp $
 
 --- agent/mibgroup/ucd-snmp/diskio.c.orig	2009-04-10 20:14:51.000000000 +0000
 +++ agent/mibgroup/ucd-snmp/diskio.c
-@@ -421,6 +421,155 @@ var_diskio(struct variable * vp,
+@@ -446,6 +446,155 @@ var_diskio(struct variable * vp,
  }
  #endif                          /* bsdi */
  

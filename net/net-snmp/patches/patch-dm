@@ -1,6 +1,6 @@
-$NetBSD: patch-dm,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-dm,v 1.2 2011/05/27 10:55:25 adam Exp $
 
---- agent/mibgroup/ucd-snmp/vmstat_freebsd2.c.orig	2004-06-29 12:14:32.000000000 +0000
+--- agent/mibgroup/ucd-snmp/vmstat_freebsd2.c.orig	2008-10-21 21:10:43.000000000 +0000
 +++ agent/mibgroup/ucd-snmp/vmstat_freebsd2.c
 @@ -9,9 +9,15 @@
   */
@@ -18,7 +18,7 @@ $NetBSD: patch-dm,v 1.1 2006/03/19 22:03:29 joerg Exp $
  #else
  #include <sys/dkstat.h>
  #endif
-@@ -168,11 +174,18 @@ var_extensible_vmstat(struct variable *v
+@@ -175,11 +181,18 @@ var_extensible_vmstat(struct variable *v
      static time_t   time_old;
      static time_t   time_diff;
  
@@ -37,7 +37,7 @@ $NetBSD: patch-dm,v 1.1 2006/03/19 22:03:29 joerg Exp $
      double          cpu_prc;
  
      static struct vmmeter mem_old, mem_new;
-@@ -180,6 +193,11 @@ var_extensible_vmstat(struct variable *v
+@@ -187,6 +200,11 @@ var_extensible_vmstat(struct variable *v
      static long     long_ret;
      static char     errmsg[300];
  
@@ -49,7 +49,7 @@ $NetBSD: patch-dm,v 1.1 2006/03/19 22:03:29 joerg Exp $
      long_ret = 0;               /* set to 0 as default */
  
      if (header_generic(vp, name, length, exact, var_len, write_method))
-@@ -195,15 +213,27 @@ var_extensible_vmstat(struct variable *v
+@@ -202,15 +220,27 @@ var_extensible_vmstat(struct variable *v
          /*
           * CPU usage 
           */
@@ -79,7 +79,7 @@ $NetBSD: patch-dm,v 1.1 2006/03/19 22:03:29 joerg Exp $
  
          if (cpu_total == 0)
              cpu_total = 1;
-@@ -223,7 +253,11 @@ var_extensible_vmstat(struct variable *v
+@@ -230,7 +260,11 @@ var_extensible_vmstat(struct variable *v
      /*
       * Page-to-kb macro 
       */
@@ -91,7 +91,7 @@ $NetBSD: patch-dm,v 1.1 2006/03/19 22:03:29 joerg Exp $
  
      switch (vp->magic) {
      case MIBINDEX:
-@@ -270,37 +304,73 @@ var_extensible_vmstat(struct variable *v
+@@ -277,37 +311,73 @@ var_extensible_vmstat(struct variable *v
          long_ret = rate(mem_new.v_swtch - mem_old.v_swtch);
          return ((u_char *) (&long_ret));
      case CPUUSER:
