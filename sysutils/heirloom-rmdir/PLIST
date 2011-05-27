@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:47:06 cheusov Exp $
+${HLROOT}/bin/posix/rmdir
+${HLROOT}/bin/posix2001/rmdir
+${HLROOT}/bin/rmdir
+${HLROOT}/bin/s42/rmdir
+${HLROOT}/man/man1/rmdir.1
