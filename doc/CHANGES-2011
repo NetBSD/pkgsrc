@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1246 2011/05/27 21:41:46 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1247 2011/05/27 22:57:54 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2024,3 +2024,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/sendfile to 2.1.0.2nb2 [is 2011-05-27]
 	Updated textproc/asciidoc to 8.6.5 [gls 2011-05-27]
 	Updated editors/emacs-snapshot to 24.0.50.20110526 [minskim 2011-05-27]
+	Added sysutils/heirloom-doc version 070715 [cheusov 2011-05-27]
