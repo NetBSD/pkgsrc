@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1241 2011/05/27 06:48:50 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1242 2011/05/27 07:27:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2019,3 +2019,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/dhcpd-pools version 2.14 [adam 2011-05-27]
 	Updated net/bind98 to 9.8.0pl2 [taca 2011-05-27]
 	Updated net/bind97 to 9.7.3pl1 [taca 2011-05-27]
+	Updated www/ruby-httpclient to 2.2.0.2 [obache 2011-05-27]
