@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2010/12/16 18:00:59 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2011/05/27 10:05:52 kivinen Exp $
 
 COMMENT=		Smart Card drivers and middleware
 LICENSE=		gnu-lgpl-v2.1
 
 .include "../../security/opensc/Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
