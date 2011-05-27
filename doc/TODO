@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10352 2011/05/27 10:56:34 adam Exp $
+$NetBSD: TODO,v 1.10353 2011/05/27 22:36:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
-	o asymptote-2.08
+	o asymptote-2.10
 	o aterm-1.0.1
 	o atk-2.0.0
 	o audacious-plugins-2.4.4
@@ -469,6 +469,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.6.14
+	o cmus-2.4.1
 	o colorize-0.3.4
 	o compositeproto-0.4.2
 	o cone-0.87
@@ -896,6 +897,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libltdl-2.4
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
+	o libmilter-8.14.5
 	o libnasl-2.3.1
 	o libnids-1.24
 	o libnotify-0.7.1
@@ -1176,6 +1178,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o seahorse-2.32.0
 	o seamonkey-2.0.13
 	o sendfile-20010424
+	o sendmail-8.14.5
 	o ser-0.9.6
 	o sessreg-1.0.6
 	o setxkbmap-1.2.0
