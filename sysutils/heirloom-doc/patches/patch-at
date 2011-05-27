@@ -1,0 +1,17 @@
+$NetBSD: patch-at,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+
+Fix for systems having no btowc(3) (Interix-3.5)
+--- libuxre/btowc.c.orig	Mon Dec 18 15:22:23 2006
++++ libuxre/btowc.c
+@@ -0,0 +1,11 @@
++#include "btowc.h"
++
++#if defined (HAVE_NO_BTOWC)
++wint_t btowc (int c)
++{
++	if (c == EOF || c > 0xFF)
++		return WEOF;
++
++	return (wint_t)c;
++}
++#endif
