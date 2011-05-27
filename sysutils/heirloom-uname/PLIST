@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:32:13 cheusov Exp $
+${HLROOT}/bin/uname
+${HLROOT}/man/man1/uname.1
