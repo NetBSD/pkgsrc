@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+
+Improvement for build system
+--- Makefile.mk.orig	2007-01-27 18:43:39.000000000 +0200
++++ Makefile.mk
+@@ -94,4 +94,6 @@ links:
+ 	else \
+ 		sh build/crossln $(ROOT)$(MANDIR)/man1/oawk.1 $(ROOT)$(MANDIR)/man1/awk.1 $(ROOT); \
+ 	fi
+-	$(SHELL) build/maninst -c -m 644 intro.1 $(ROOT)$(MANDIR)/man1/intro.1
++	if test -z "${NO_INSTALL_INTRO}"; then \
++		$(SHELL) build/maninst -c -m 644 intro.1 $(ROOT)$(MANDIR)/man1/intro.1; \
++	fi
