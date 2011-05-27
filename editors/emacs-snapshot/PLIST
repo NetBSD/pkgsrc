@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2011/05/20 22:56:39 minskim Exp $
+@comment $NetBSD: PLIST,v 1.23 2011/05/27 21:41:14 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3393,8 +3393,6 @@ share/emacs/${EMACS_VERSION}/lisp/server.el.gz
 share/emacs/${EMACS_VERSION}/lisp/server.elc
 share/emacs/${EMACS_VERSION}/lisp/ses.el.gz
 share/emacs/${EMACS_VERSION}/lisp/ses.elc
-share/emacs/${EMACS_VERSION}/lisp/sha1.el.gz
-share/emacs/${EMACS_VERSION}/lisp/sha1.elc
 share/emacs/${EMACS_VERSION}/lisp/shadowfile.el.gz
 share/emacs/${EMACS_VERSION}/lisp/shadowfile.elc
 share/emacs/${EMACS_VERSION}/lisp/shell.el.gz
