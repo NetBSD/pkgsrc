@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2011/02/11 21:22:02 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2011/05/27 11:58:52 fhajny Exp $
 #
 
-DISTNAME=	memcached-1.4.4
-PKGREVISION=	1
+DISTNAME=	memcached-1.4.5
 CATEGORIES=	devel
 MASTER_SITES=	http://memcached.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.memcached.org/
 COMMENT=	High-performance distributed memory object caching system
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
 
 RCD_SCRIPTS=		memcached
 INSTALLATION_DIRS=	share/doc/${PKGBASE} share/examples/rc.d
+
+.include "../../mk/bsd.prefs.mk"
 
 MEMCACHED_USER?=	memcached
 MEMCACHED_GROUP?=	memcached
