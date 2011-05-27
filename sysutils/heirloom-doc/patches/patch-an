@@ -1,0 +1,18 @@
+$NetBSD: patch-an,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+
+Improvement for build system
+--- build/crossln.sh.orig	2005-03-10 18:33:13.000000000 +0200
++++ build/crossln.sh
+@@ -10,6 +10,12 @@ usage() {
+ }
+ 
+ doit() {
++	if echo "$1" | grep '^[^/]' > /dev/null; then
++		src="`dirname $2`/$1"
++	else
++		src="$1"
++	fi
++	test -f "$src" -o -h "$src" || return 0
+ 	rm -f -- "$2" || exit
+ 	exec @LNS@ -- "$1" "$2" || exit
+ }
