@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1261 2011/05/27 23:42:04 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1262 2011/05/27 23:43:22 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-tapecntl version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-sync version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-stty version 070715 [cheusov 2011-05-27]
+	Added sysutils/heirloom-split version 070715 [cheusov 2011-05-27]
