@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.3 2006/01/24 22:16:55 adam Exp $
+$NetBSD: patch-an,v 1.4 2011/05/27 10:55:25 adam Exp $
 
---- agent/mibgroup/mibII/route_write.c.orig	2005-09-16 19:00:23.000000000 +0200
+--- agent/mibgroup/mibII/route_write.c.orig	2010-03-20 19:36:28.000000000 +0000
 +++ agent/mibgroup/mibII/route_write.c
-@@ -97,7 +97,7 @@
+@@ -93,7 +93,7 @@
  int
  addRoute(u_long dstip, u_long gwip, u_long iff, u_short flags)
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-an,v 1.3 2006/01/24 22:16:55 adam Exp $
      struct sockaddr_in dst;
      struct sockaddr_in gateway;
      int             s, rc;
-@@ -132,6 +132,54 @@ addRoute(u_long dstip, u_long gwip, u_lo
+@@ -128,6 +128,54 @@ addRoute(u_long dstip, u_long gwip, u_lo
      if (rc < 0)
          snmp_log_perror("ioctl");
      return rc;
@@ -66,7 +66,7 @@ $NetBSD: patch-an,v 1.3 2006/01/24 22:16:55 adam Exp $
  
  #else                           /* SIOCADDRT */
      return -1;
-@@ -143,7 +191,7 @@ addRoute(u_long dstip, u_long gwip, u_lo
+@@ -139,7 +187,7 @@ addRoute(u_long dstip, u_long gwip, u_lo
  int
  delRoute(u_long dstip, u_long gwip, u_long iff, u_short flags)
  {
@@ -75,7 +75,7 @@ $NetBSD: patch-an,v 1.3 2006/01/24 22:16:55 adam Exp $
  
      struct sockaddr_in dst;
      struct sockaddr_in gateway;
-@@ -178,6 +226,56 @@ delRoute(u_long dstip, u_long gwip, u_lo
+@@ -174,6 +222,56 @@ delRoute(u_long dstip, u_long gwip, u_lo
      close(s);
      return rc;
  

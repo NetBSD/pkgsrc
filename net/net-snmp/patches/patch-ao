@@ -1,12 +1,28 @@
-$NetBSD: patch-ao,v 1.1 2009/03/10 18:30:44 apb Exp $
+$NetBSD: patch-ao,v 1.2 2011/05/27 10:55:25 adam Exp $
 
---- acconfig.h.orig	2008-06-05 23:11:53.000000000 +0200
-+++ acconfig.h
-@@ -158,6 +158,7 @@
- #undef STRUCT_IFNET_HAS_IF_IMCASTS
- #undef STRUCT_IFNET_HAS_IF_IQDROPS
- #undef STRUCT_IFNET_HAS_IF_LASTCHANGE_TV_SEC
-+#undef STRUCT_IFNET_HAS_IF_LASTCHANGE_TV_NSEC
- #undef STRUCT_IFNET_HAS_IF_NOPROTO
- #undef STRUCT_IFNET_HAS_IF_OMCASTS
- #undef STRUCT_IFNET_HAS_IF_XNAME
+--- agent/mibgroup/if-mib/data_access/interface_sysctl.c.orig	2011-04-27 11:24:58.000000000 +0000
++++ agent/mibgroup/if-mib/data_access/interface_sysctl.c
+@@ -49,7 +49,11 @@
+ #   define ARCH_PROMISC_FLAG IFF_PROMISC
+ #endif
+ 
++#if HAVE_STRUCT_IFNET_IF_LASTCHANGE_TV_NSEC
++#define starttime (*(const struct timespec*)netsnmp_get_agent_starttime())
++#else
+ #define starttime (*(const struct timeval*)netsnmp_get_agent_starttime())
++#endif
+ 
+ /* sa_len roundup macro. */
+ #define ROUNDUP(a) \
+@@ -472,7 +476,11 @@ netsnmp_arch_interface_container_load(ne
+                             NETSNMP_INTERFACE_FLAGS_HAS_DROPS |
+                             NETSNMP_INTERFACE_FLAGS_HAS_MCAST_PKTS;
+ 
++#if HAVE_STRUCT_IFNET_IF_LASTCHANGE_TV_NSEC
++        if (timespeccmp(&ifp->ifm_data.ifi_lastchange, &starttime, >)) {
++#else
+         if (timercmp(&ifp->ifm_data.ifi_lastchange, &starttime, >)) {
++#endif
+             entry->lastchange = (ifp->ifm_data.ifi_lastchange.tv_sec -
+                                  starttime.tv_sec) * 100;
+             entry->ns_flags |= NETSNMP_INTERFACE_FLAGS_HAS_LASTCHANGE;
