@@ -1,0 +1,14 @@
+$NetBSD: patch-aw,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+
+Fix for systems having btowc(3)
+--- libuxre/regnfa.c.orig	Sun Feb  6 16:16:14 2005
++++ libuxre/regnfa.c
+@@ -35,6 +35,8 @@
+ typedef unsigned char	Uchar;
+ typedef unsigned short	Ushort;
+ 
++#include "btowc.h"
++
+ /*
+ * Nondeterministic Finite Automata.
+ */
