@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:26:21 cheusov Exp $
+${HLROOT}/bin/uptime
+${HLROOT}/bin/w
+${HLROOT}/bin/whodo
+${HLROOT}/man/man1/whodo.1
+${HLROOT}/man/man1/uptime.1
+${HLROOT}/man/man1/w.1
+${HLROOT}/ucb/uptime
+${HLROOT}/ucb/w
