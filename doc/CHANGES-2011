@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1271 2011/05/27 23:57:17 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1272 2011/05/27 23:59:48 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-psrinfo version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-ps version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-priocntl version 070715 [cheusov 2011-05-27]
+	Added sysutils/heirloom-pgrep version 070715 [cheusov 2011-05-27]
