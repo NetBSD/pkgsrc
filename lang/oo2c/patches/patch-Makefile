@@ -1,0 +1,29 @@
+$NetBSD: patch-Makefile,v 1.1 2011/05/27 13:16:04 obache Exp $
+
+* destdir installation support
+
+--- Makefile.orig	2003-07-12 13:14:07.000000000 +0000
++++ Makefile
+@@ -159,17 +159,17 @@ uninstall-man:
+ 
+ ### Install manual pages.
+ install-man: uninstall-man
+-	$(INSTALL) -d $(mandir)
++	$(INSTALL) -d $(DESTDIR)$(mandir)
+ 	for i in oo2c oob ooef oowhereis; do \
+-	  $(INSTALL_DATA) man/$$i.1 $(mandir)/$$i$(manext); \
++	  $(INSTALL_DATA) man/$$i.1 $(DESTDIR)$(mandir)/$$i$(manext); \
+ 	done
+ 
+ install: lib/obj/liboo2c.la bin/oo2c install-man
+-	$(INSTALL) -d $(oocdir)/pkginfo
++	$(INSTALL) -d $(DESTDIR)$(oocdir)/pkginfo
+ 	$(BOOTSTRAP_COMPILER) --config oo2crc-install.xml -r lib -r . --install-program "$(INSTALL_PROGRAM)" $(OFLAGS) --install-package liboo2c
+ 	$(BOOTSTRAP_COMPILER) --config oo2crc-install.xml -r lib -r . --install-program "$(INSTALL_PROGRAM)" $(OFLAGS) --install-package oo2c
+-	$(INSTALL_SCRIPT) rsrc/OOC/oobacktrace $(bindir)/oobacktrace
+-	chmod a+x $(oocdir)/install-sh
++	$(INSTALL_SCRIPT) rsrc/OOC/oobacktrace $(DESTDIR)$(bindir)/oobacktrace
++	chmod a+x $(DESTDIR)$(oocdir)/install-sh
+ 
+ install-strip:
+ 	${MAKE} INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install
