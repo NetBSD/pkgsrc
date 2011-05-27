@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/27 23:44:47 cheusov Exp $
+${HLROOT}/bin/posix/sort
+${HLROOT}/bin/posix2001/sort
+${HLROOT}/bin/s42/sort
+${HLROOT}/bin/sort
+${HLROOT}/man/man1/sort.1
