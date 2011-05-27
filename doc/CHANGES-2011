@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1264 2011/05/27 23:46:04 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1265 2011/05/27 23:47:16 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2042,3 +2042,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-split version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-sort version 070715 [cheusov 2011-05-27]
 	Added sysutils/heirloom-setpgrp version 070715 [cheusov 2011-05-27]
+	Added sysutils/heirloom-rmdir version 070715 [cheusov 2011-05-27]
