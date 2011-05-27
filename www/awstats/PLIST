@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/11/09 07:14:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/05/27 15:02:03 hauke Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -478,6 +478,7 @@ awstats/icon/flags/py.png
 awstats/icon/flags/qa.png
 awstats/icon/flags/re.png
 awstats/icon/flags/ro.png
+awstats/icon/flags/rs.png
 awstats/icon/flags/ru.png
 awstats/icon/flags/rw.png
 awstats/icon/flags/sa.png
