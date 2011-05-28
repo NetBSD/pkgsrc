@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 09:56:56 cheusov Exp $
+${HLROOT}/bin/printenv
+${HLROOT}/man/man1/printenv.1
+${HLROOT}/ucb/printenv
