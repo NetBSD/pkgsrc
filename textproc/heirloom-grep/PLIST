@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:14:47 cheusov Exp $
+${HLROOT}/bin/egrep
+${HLROOT}/bin/fgrep
+${HLROOT}/bin/grep
+${HLROOT}/bin/posix/egrep
+${HLROOT}/bin/posix/fgrep
+${HLROOT}/bin/posix/grep
+${HLROOT}/bin/posix2001/egrep
+${HLROOT}/bin/posix2001/fgrep
+${HLROOT}/bin/posix2001/grep
+${HLROOT}/bin/s42/egrep
+${HLROOT}/bin/s42/fgrep
+${HLROOT}/bin/s42/grep
+${HLROOT}/man/man1/egrep.1
+${HLROOT}/man/man1/fgrep.1
+${HLROOT}/man/man1/grep.1
