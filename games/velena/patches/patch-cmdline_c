@@ -1,8 +1,20 @@
-$NetBSD: patch-ab,v 1.2 2008/02/02 17:05:00 rillig Exp $
+$NetBSD: patch-cmdline_c,v 1.1 2011/05/28 22:41:43 dholland Exp $
 
---- cmdline.c.orig	1997-07-27 17:14:18.000000000 +0200
-+++ cmdline.c	2008-02-02 18:02:11.000000000 +0100
-@@ -42,16 +42,19 @@ void command_line_input(struct board *bo
+- declare external functions
+- improve input prompting
+- don't use gets
+
+--- cmdline.c.orig	1997-07-27 21:14:18.000000000 +0000
++++ cmdline.c
+@@ -16,6 +16,7 @@
+ #include <stdio.h>
+ 
+ #include "connect4.h"
++#include "proto.h"
+ 
+ // Here's the interface for sending positions to velena engine
+ // positions are passed in a C string in the form of: x+y+'0'
+@@ -42,16 +43,19 @@ void command_line_input(struct board *bo
     int flag = 1,answer;
     char st[80];
  
