@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:32:41 cheusov Exp $
+${HLROOT}/bin/tcopy
+${HLROOT}/man/man1/tcopy.1
+${HLROOT}/ucb/tcopy
