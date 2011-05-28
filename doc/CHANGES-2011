@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1337 2011/05/28 08:30:45 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1338 2011/05/28 08:31:06 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2115,3 +2115,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added misc/heirloom-banner version 070715 [cheusov 2011-05-28]
 	Added misc/heirloom-cal version 070715 [cheusov 2011-05-28]
 	Added misc/heirloom-calendar version 070715 [cheusov 2011-05-28]
+	Added misc/heirloom-more version 070715 [cheusov 2011-05-28]
