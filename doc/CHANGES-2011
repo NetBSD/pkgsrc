@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1335 2011/05/28 08:30:03 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1336 2011/05/28 08:30:25 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2113,3 +2113,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added time/heirloom-date version 070715 [cheusov 2011-05-28]
 	Added fonts/migu-ttf version 20110514 [ryoon 2011-05-28]
 	Added misc/heirloom-banner version 070715 [cheusov 2011-05-28]
+	Added misc/heirloom-cal version 070715 [cheusov 2011-05-28]
