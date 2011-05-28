@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.6 2010/12/23 23:42:41 abs Exp $
+$NetBSD: patch-ah,v 1.7 2011/05/28 08:03:30 tnn Exp $
 
 --- git-gui/Makefile.orig	2010-12-16 02:52:11.000000000 +0000
 +++ git-gui/Makefile
@@ -10,7 +10,7 @@ $NetBSD: patch-ah,v 1.6 2010/12/23 23:42:41 abs Exp $
 +INSTALL_D0 = $(BSD_INSTALL_DATA_DIR) # space is required here
  INSTALL_D1 =
 -INSTALL_R0 = $(INSTALL) -m 644 # space is required here
-+INSTALL_R0 = $(BSD_INSATLL_DATA)  # space is required here
++INSTALL_R0 = $(BSD_INSTALL_DATA)  # space is required here
  INSTALL_R1 =
 -INSTALL_X0 = $(INSTALL) -m 755 # space is required here
 +INSTALL_X0 = $(BSD_INSTALL_SCRIPT) # space is required here
