@@ -1,0 +1,34 @@
+$NetBSD: patch-evaluate_c,v 1.1 2011/05/28 22:41:43 dholland Exp $
+
+- Use matching argument types with printf and scanf.
+
+--- evaluate.c.orig	1997-07-27 21:15:12.000000000 +0000
++++ evaluate.c
+@@ -73,7 +73,8 @@ void show_square_used(struct board *boar
+ 
+ void test_conditions(char **matrix,struct board *board)
+ 	{
+-	short x,y,z,n1,n2,x1,y1;
++	int x,y;
++	short z,n1,n2,x1,y1;
+ 
+ 	printf("Enter rule 1 number : ");
+ 	scanf("%d %d",&x,&y);
+@@ -137,7 +138,7 @@ void test_conditions(char **matrix,struc
+ 		}
+ 	else
+ 		{
+-		printf("Rules %d,%d don't exist!\n\r\n\r");
++		printf("Rules %d,%d don't exist!\n\r\n\r", x, y);
+ 		}
+ 
+ 	}
+@@ -1655,7 +1656,7 @@ void debug_white(struct board *board)
+ 			}
+ 		else
+ 			{
+-			printf("Pentas found.\n\r",pentas);
++			printf("Pentas found.\n\r");
+ 			}
+ 
+ 

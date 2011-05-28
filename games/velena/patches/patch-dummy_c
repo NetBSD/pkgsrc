@@ -1,0 +1,24 @@
+$NetBSD: patch-dummy_c,v 1.1 2011/05/28 22:41:43 dholland Exp $
+
+- Declare external functions.
+- Make functions match their declarations.
+
+--- dummy.c.orig	1997-07-27 21:31:48.000000000 +0000
++++ dummy.c
+@@ -14,6 +14,7 @@
+ 
+ 
+ #include <stdio.h>
++#include "proto.h"
+ 
+ // This code is used under Linux to define dummy functions which are
+ // referenced somewhere in the deadcode.
+@@ -21,7 +22,7 @@
+ // Since this is a porting of the core engine I didn't bother to delete
+ // the functions which are not used... :-)))
+ 
+-int readkey()
++long readkey()
+         {
+         return 0;
+         }
