@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:15:13 cheusov Exp $
+${HLROOT}/bin/listusers
+${HLROOT}/man/man1/listusers.1
