@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/12/04 03:53:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/05/28 16:32:10 bad Exp $
 bin/rdebug
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
@@ -17,7 +17,6 @@ ${GEM_LIBDIR}/cli/ruby-debug/commands/catchpoint.rb
 ${GEM_LIBDIR}/cli/ruby-debug/commands/condition.rb
 ${GEM_LIBDIR}/cli/ruby-debug/commands/continue.rb
 ${GEM_LIBDIR}/cli/ruby-debug/commands/control.rb
-${GEM_LIBDIR}/cli/ruby-debug/commands/disassemble.rb
 ${GEM_LIBDIR}/cli/ruby-debug/commands/display.rb
 ${GEM_LIBDIR}/cli/ruby-debug/commands/edit.rb
 ${GEM_LIBDIR}/cli/ruby-debug/commands/enable.rb
