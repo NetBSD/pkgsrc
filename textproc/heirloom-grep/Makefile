@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/28 11:42:05 cheusov Exp $
 
 PKGNAME=	heirloom-grep-${HEIRLOOM_VER}
 CATEGORIES=	textproc sysutils
@@ -6,6 +6,7 @@ CATEGORIES=	textproc sysutils
 MAKE_FLAGS+=	SUBDIRS="build grep"
 
 NEED_LIBUXRE=	1
+USE_TOOLS=	yacc
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 
