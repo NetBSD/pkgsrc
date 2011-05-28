@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2003/10/05 02:00:43 kei Exp $
+$NetBSD: patch-ac,v 1.4 2011/05/28 11:32:04 obache Exp $
 
---- texk/xdvik/Makefile.in.orig	Fri Jul 11 22:28:01 2003
-+++ texk/xdvik/Makefile.in	Fri Jul 11 22:30:59 2003
-@@ -44,8 +44,8 @@
+--- texk/xdvik/Makefile.in.orig	2011-05-28 09:37:43.000000000 +0000
++++ texk/xdvik/Makefile.in
+@@ -44,8 +44,8 @@ x_ext_lib = @x_ext_lib@
  #   -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 (some may not be present).
  x_link = $(LDLIBWWW) $(LDLIBT1) $(x_ldflags) $(x_tool_libs) $(x_pre_libs) $(x_ext_lib) -lX11 $(x_extra_libs)
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.3 2003/10/05 02:00:43 kei Exp $
  LIBWWWDEP=@LIBWWWDEP@
  LIBWWWDIR = ../../libs/libwww
  LIBWWWSRCDIR = $(srcdir)/../../libs/libwww
-@@ -78,10 +78,10 @@
+@@ -78,10 +78,10 @@ objects = xdvi.o dvi-draw.o dvi-init.o e
    paper.o tategaki.o vfontmap.o vf2ft.o \
    $(ALLOCA) dvips.o tfmload.o
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.3 2003/10/05 02:00:43 kei Exp $
  
  $(program): $(kpathsea) $(objects) $(LIBWWWDEP) $(LIBT1DEP)
  	$(kpathsea_link) $(objects) $(x_link) $(VFLIB) $(LOADLIBES)
-@@ -118,10 +118,10 @@
+@@ -118,10 +118,10 @@ krheader.h: $(CC_CONCAT_FILES) c-auto.h 
  psheader.c: psheader.txt squeeze
  	./squeeze $(srcdir)/psheader.txt $@
  
@@ -40,23 +40,26 @@ $NetBSD: patch-ac,v 1.3 2003/10/05 02:00:43 kei Exp $
  	if test -x /usr/bin/nawk; then \
  	  sed -e '/^## for @DVIFILTER@/,/^##/s/^# //' -e 's/awk/nawk/' \
  	      -e "s,/usr/local/share/texmf/xdvi,$(XDVIETCDIR)," \
-@@ -142,28 +142,25 @@
+@@ -142,40 +142,35 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
  install: install-exec install-data
  uninstall: uninstall-exec uninstall-data
  
 -install-exec: $(program) xdviprint
-+install-exec: $(program) vfxdviprint
- 	$(SHELL) $(top_srcdir)/../mkinstalldirs $(bindir)
- 	for p in $(program); do $(INSTALL_LIBTOOL_PROG) $(bindir) $$p; done
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(bindir)
+-	for p in $(program); do $(INSTALL_LIBTOOL_PROG) $(bindir) $$p; done
 -	$(INSTALL_SCRIPT) $(srcdir)/$(perlprog) $(scriptdir)/$(perlprog)
 -	$(INSTALL_SCRIPT) $(srcdir)/xdvi-sh $(scriptdir)/xdvi
 -	$(INSTALL_SCRIPT) $(srcdir)/xdvizilla $(scriptdir)/xdvizilla
-+	$(INSTALL_SCRIPT) $(srcdir)/xdvi-sh $(scriptdir)/vfxdvi
-+	$(INSTALL_SCRIPT) $(srcdir)/xdvizilla $(scriptdir)/vfxdvizilla
++install-exec: $(program) vfxdviprint
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(bindir)
++	for p in $(program); do $(INSTALL_LIBTOOL_PROG) $(DESTDIR)$(bindir) $$p; done
++	$(INSTALL_SCRIPT) $(srcdir)/xdvi-sh $(DESTDIR)$(scriptdir)/vfxdvi
++	$(INSTALL_SCRIPT) $(srcdir)/xdvizilla $(DESTDIR)$(scriptdir)/vfxdvizilla
  	if test "@XDVIPRINTCMD@" != no; then \
- 	  if test ! -x @XDVIPRINTCMD@; then \
+-	  if test ! -x @XDVIPRINTCMD@; then \
 -	    $(INSTALL_SCRIPT) $(srcdir)/xdviprint @XDVIPRINTCMD@; \
-+	    $(INSTALL_SCRIPT) $(srcdir)/vfxdviprint @XDVIPRINTCMD@; \
++	  if test ! -x $(DESTDIR)@XDVIPRINTCMD@; then \
++	    $(INSTALL_SCRIPT) $(srcdir)/vfxdviprint $(DESTDIR)@XDVIPRINTCMD@; \
  	  fi; \
  	fi
  
@@ -66,19 +69,26 @@ $NetBSD: patch-ac,v 1.3 2003/10/05 02:00:43 kei Exp $
  
  ### //FIXME: add installation for encoding.map here!! (same place where psfonts.map is?)
 -install-data: xdvi.1 t1mapper.1 vfontmap.sample
-+install-data: vfxdvi.1 vfontmap.sample
- 	$(SHELL) $(top_srcdir)/../mkinstalldirs $(man1dir) $(XDVIETCDIR)
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(man1dir) $(XDVIETCDIR)
 -	$(INSTALL_DATA) xdvi.1 $(man1dir)/xdvi.$(manext)
 -	$(INSTALL_DATA) $(srcdir)/t1mapper.1 $(man1dir)/t1mapper.$(manext)
 -	$(INSTALL_DATA) $(srcdir)/xdvizilla.1 $(man1dir)/xdvizilla.$(manext)
 -	$(INSTALL_DATA) $(srcdir)/texmf/xdvi-teTeX.cfg $(texmf)/xdvi/xdvi.cfg
-+	$(INSTALL_DATA) vfxdvi.1 $(man1dir)/vfxdvi.$(manext)
-+	$(INSTALL_DATA) $(srcdir)/xdvizilla.1 $(man1dir)/vfxdvizilla.$(manext)
- 	if test ! -f $(XDVIETCDIR)/vfontmap; then \
- 	  $(INSTALL_DATA) vfontmap.sample $(XDVIETCDIR)/vfontmap; \
+-	if test ! -f $(XDVIETCDIR)/vfontmap; then \
+-	  $(INSTALL_DATA) vfontmap.sample $(XDVIETCDIR)/vfontmap; \
++install-data: vfxdvi.1 vfontmap.sample
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(man1dir) $(DESTDIR)$(XDVIETCDIR)
++	$(INSTALL_DATA) vfxdvi.1 $(DESTDIR)$(man1dir)/vfxdvi.$(manext)
++	$(INSTALL_DATA) $(srcdir)/xdvizilla.1 $(DESTDIR)$(man1dir)/vfxdvizilla.$(manext)
++	if test ! -f $(DESTDIR)$(XDVIETCDIR)/vfontmap; then \
++	  $(INSTALL_DATA) vfontmap.sample $(DESTDIR)$(XDVIETCDIR)/vfontmap; \
  	fi
-@@ -172,10 +169,8 @@
- 	$(INSTALL_DATA) xdvipaper.jdvi2kps $(XDVIETCDIR)/xdvipaper.jdvi2kps
+-	$(INSTALL_DATA) xdvipaper.dvi2ps-j $(XDVIETCDIR)/xdvipaper.dvi2ps-j
+-	$(INSTALL_DATA) xdvipaper.dvips $(XDVIETCDIR)/xdvipaper.dvips
+-	$(INSTALL_DATA) xdvipaper.jdvi2kps $(XDVIETCDIR)/xdvipaper.jdvi2kps
++	$(INSTALL_DATA) xdvipaper.dvi2ps-j $(DESTDIR)$(XDVIETCDIR)/xdvipaper.dvi2ps-j
++	$(INSTALL_DATA) xdvipaper.dvips $(DESTDIR)$(XDVIETCDIR)/xdvipaper.dvips
++	$(INSTALL_DATA) xdvipaper.jdvi2kps $(DESTDIR)$(XDVIETCDIR)/xdvipaper.jdvi2kps
  
  uninstall-data:
 -	rm -f $(man1dir)/xdvi.$(manext) 
@@ -90,13 +100,13 @@ $NetBSD: patch-ac,v 1.3 2003/10/05 02:00:43 kei Exp $
  	rm -f $(FILTOPTTBLDIR)/xdvipaper.*
  
  distname = xdvik
-@@ -207,9 +202,6 @@
- 	test -f $(LIBWWWDIR)/Makefile && { cd $(LIBWWWDIR); $(MAKE) distclean; } || true
+@@ -208,9 +203,6 @@ distclean::
  	test -f $(LIBTYPE1DIR)/Makefile && { cd $(LIBTYPE1DIR); $(MAKE) distclean; } || true
  	test -f $(LIBT1DIR)/Makefile && { cd $(LIBT1DIR); $(MAKE) distclean; } || true
--
+ 
 -$(LIBWWWDIR)/libwww.a:
 -	cd $(LIBWWWDIR); $(MAKE) $(makeargs) libwww.a
- 
+-
  $(LIBT1DIR)/libt1.a:
  	cd $(LIBT1DIR); $(MAKE) $(makeargs) libt1.a
+ 
