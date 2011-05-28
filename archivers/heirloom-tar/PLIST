@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:48:39 cheusov Exp $
+${HLROOT}/etc/default/tar
+${HLROOT}/bin/tar
+${HLROOT}/man/man1/tar.1
