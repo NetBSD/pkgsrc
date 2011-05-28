@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/28 08:45:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:14 cheusov Exp $
 
 PKGNAME=	heirloom-libcommon-${HEIRLOOM_VER}
 CATEGORIES=	devel
@@ -22,7 +22,7 @@ PLIST_SUBST+=	NOUTMPX_H=
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 
-DESCR_SRC+=	DESCR
+DESCR_SRC+=	${.CURDIR}/DESCR
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PLIST_SUBST+=	"NO_ALLOCA_H=@comment "
