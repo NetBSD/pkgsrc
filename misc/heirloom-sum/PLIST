@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:32:18 cheusov Exp $
+${HLROOT}/bin/sum
+${HLROOT}/man/man1/sum.1
+${HLROOT}/man/man1b/sum.1b
+${HLROOT}/ucb/sum
