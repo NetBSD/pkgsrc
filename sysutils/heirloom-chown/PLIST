@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:33:10 cheusov Exp $
+${HLROOT}/bin/chown
+${HLROOT}/bin/chgrp
+${HLROOT}/man/man1/chown.1
+${HLROOT}/man/man1/chgrp.1
+${HLROOT}/man/man1b/chown.1b
+${HLROOT}/ucb/chown
