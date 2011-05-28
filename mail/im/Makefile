@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/09/06 12:19:45 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/28 07:54:01 obache Exp $
 
-DISTNAME=	im-150
-PKGREVISION=	2
+DISTNAME=	im-151
 CATEGORIES=	mail
 MASTER_SITES=	http://tats.haun.org/im/
 
@@ -15,12 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 
-CONFIGURE_ARGS+=	--libdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-perldir=${PREFIX}/${PERL5_SUB_INSTALLVENDORLIB}
 CONFIGURE_ENV+=		im_path_perl=${PERL5:Q}
 
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
-INSTALL_MAKE_FLAGS+=	perldir=${DESTDIR}${PREFIX}/${PERL5_SUB_INSTALLVENDORLIB}
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 PKG_SYSCONFSUBDIR=	im
 
