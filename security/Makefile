@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.411 2011/05/15 11:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.412 2011/05/28 08:37:10 cheusov Exp $
 #
 
 COMMENT=	Security tools
@@ -82,6 +82,7 @@ SUBDIR+=	gtk-systrace
 SUBDIR+=	hackbot
 SUBDIR+=	hashcash
 SUBDIR+=	heimdal
+SUBDIR+=	heirloom-su
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	hydan
