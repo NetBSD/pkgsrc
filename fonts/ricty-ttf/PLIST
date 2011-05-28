@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/08 11:05:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/28 11:15:25 ryoon Exp $
 lib/X11/fonts/TTF/Ricty-Bold.ttf
 lib/X11/fonts/TTF/Ricty-Regular.ttf
-share/doc/ricty-ttf/IPA_Font_License_Agreement_v1.0.txt
-share/doc/ricty-ttf/LICENSE_J
-share/doc/ricty-ttf/OFL.txt
-share/doc/ricty-ttf/README
+lib/X11/fonts/TTF/RictyDiscord-Bold.ttf
+lib/X11/fonts/TTF/RictyDiscord-Regular.ttf
+@pkgdir share/doc/ricty-ttf
