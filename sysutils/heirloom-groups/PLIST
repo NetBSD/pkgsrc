@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:18:00 cheusov Exp $
+${HLROOT}/bin/groups
+${HLROOT}/man/man1/groups.1
+${HLROOT}/man/man1b/groups.1b
+${HLROOT}/ucb/groups
