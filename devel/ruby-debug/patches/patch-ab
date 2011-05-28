@@ -1,10 +1,11 @@
-$NetBSD: patch-ab,v 1.2 2010/12/04 03:53:32 taca Exp $
+$NetBSD: patch-ab,v 1.3 2011/05/28 16:32:10 bad Exp $
 
 - Try to correct some name of files.
+- disassemble.rb relies on pre-requisites that do not work on 1.8.7
 
---- ../ruby-debug-0.10.4.gemspec.orig	2010-12-01 01:43:52.000000000 +0000
-+++ ../ruby-debug-0.10.4.gemspec
-@@ -50,23 +50,23 @@ files: 
+--- ../ruby-debug-0.10.4.gemspec.orig	2011-05-28 15:27:41.000000000 +0000
++++ ../ruby-debug-0.10.4.gemspec	2011-05-28 15:28:55.000000000 +0000
+@@ -67,23 +67,22 @@
  - VERSION
  - Rakefile
  - cli/ruby-debug.rb
@@ -28,11 +29,10 @@ $NetBSD: patch-ab,v 1.2 2010/12/04 03:53:32 taca Exp $
  - cli/ruby-debug/commands/variables.rb
  - cli/ruby-debug/commands/threads.rb
 -- cli/ruby-debug/commands/disassemble.RB
-+- cli/ruby-debug/commands/disassemble.rb
  - cli/ruby-debug/commands/irb.rb
  - cli/ruby-debug/commands/tmate.rb
  - cli/ruby-debug/commands/kill.rb
-@@ -82,7 +82,7 @@ files: 
+@@ -99,7 +98,7 @@
  - cli/ruby-debug/commands/eval.rb
  - cli/ruby-debug/commands/info.rb
  - cli/ruby-debug/commands/continue.rb
