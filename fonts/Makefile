@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2011/05/08 11:11:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.199 2011/05/28 08:23:58 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -132,6 +132,7 @@ SUBDIR+=	linux-libertine-ttf
 SUBDIR+=	lohit-fonts
 SUBDIR+=	mftrace
 SUBDIR+=	mglfonts
+SUBDIR+=	migu-ttf
 SUBDIR+=	misaki-fonts
 SUBDIR+=	mkfontalias
 SUBDIR+=	mkfontdir
