@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1351 2011/05/28 08:45:45 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1352 2011/05/28 08:48:49 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2129,3 +2129,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/heirloom-getopt version 070715 [cheusov 2011-05-28]
 	Added devel/heirloom-libcommon version 070715 [cheusov 2011-05-28]
 	Added devel/heirloom-what version 070715 [cheusov 2011-05-28]
+	Added archivers/heirloom-tar version 070715 [cheusov 2011-05-28]
