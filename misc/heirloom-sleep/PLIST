@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:31:54 cheusov Exp $
+${HLROOT}/bin/sleep
+${HLROOT}/man/man1/sleep.1
