@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/27 16:22:49 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/28 02:29:39 minskim Exp $
 
 DISTNAME=	igo
 PKGNAME=	tex-${DISTNAME}-0
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/}
 EXTRACT_SUFX=	.zip
@@ -10,30 +11,35 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.ctan.org/tex-archive/fonts/igo/
 COMMENT=	Fonts and macro to typeset Go diagrams
 
+BUILD_DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
+BUILD_DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
+BUILD_DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../print/teTeX/module.mk"
+.include "../../print/kpathsea/texmf.mk"
 
 do-configure:
 	${GREP} "^maketfm" ${WRKSRC}/fonts/makefonts.bat | \
-	${SED} -e 's/maketfm/mktextfm/g' > ${WRKSRC}/fonts/makefonts.sh
+	${SED} -e 's,maketfm,${LOCALBASE}/bin/mktextfm,g' \
+		> ${WRKSRC}/fonts/makefonts.sh
 
 do-build:
 	cd ${WRKSRC}/fonts && ${SH} makefonts.sh
 
-INSTALLATION_DIRS+=	${PKG_LOCALTEXMFPREFIX}/doc/latex/igo \
-			${PKG_LOCALTEXMFPREFIX}/tex/latex/igo \
-			${PKG_LOCALTEXMFPREFIX}/fonts/source/igo \
-			${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo
+INSTALLATION_DIRS+=	${PREFIX}/share/texmf-dist/doc/latex/igo \
+			${PREFIX}/share/texmf-dist/tex/latex/igo \
+			${PREFIX}/share/texmf-dist/fonts/source/igo \
+			${PREFIX}/share/texmf-dist/fonts/tfm/igo
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/igo.pdf ${WRKSRC}/igo.tex \
-	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/igo
+	    ${DESTDIR}${PREFIX}/share/texmf-dist/doc/latex/igo
 	${INSTALL_DATA} ${WRKSRC}/igo.sty ${WRKSRC}/repeat.tex \
-	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/igo
+	    ${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/igo
 	${INSTALL_DATA} ${WRKSRC}/fonts/*.mf \
-	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/source/igo
+	    ${DESTDIR}${PREFIX}/share/texmf-dist/fonts/source/igo
 	${INSTALL_DATA} ${WRKSRC}/fonts/*.tfm \
-	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo
+	    ${DESTDIR}${PREFIX}/share/texmf-dist/fonts/tfm/igo
 
 .include "../../mk/bsd.pkg.mk"
