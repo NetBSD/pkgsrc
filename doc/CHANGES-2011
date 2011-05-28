@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1359 2011/05/28 10:33:16 asau Exp $
+$NetBSD: CHANGES-2011,v 1.1360 2011/05/28 11:16:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2137,3 +2137,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added misc/heirloom-printenv version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-shl version 070715 [cheusov 2011-05-28]
 	Updated devel/fossil to 201105231.51112 [asau 2011-05-28]
+	Updated fonts/ricty-ttf to 3.0.1 [ryoon 2011-05-28]
