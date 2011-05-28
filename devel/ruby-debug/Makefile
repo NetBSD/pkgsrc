@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/12/04 03:53:32 taca Exp $
+# $NetBSD: Makefile,v 1.7 2011/05/28 16:32:10 bad Exp $
 
 DISTNAME=	ruby-debug-0.10.4
+PKGREVISION=	1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	devel
 
@@ -16,8 +17,8 @@ RUBY_VERSION_SUPPORTED= 18
 
 pre-configure:
 	${RM} -f ${WRKSRC}/cli/ruby-debug/processor.RB
+	${RM} -f ${WRKSRC}/cli/ruby-debug/disassemble.RB
 	cd ${WRKSRC}/cli/ruby-debug/commands && \
-		${MV} disassemble.RB disassemble.rb; \
 		${MV} raise.RB raise.rb; \
 		${MV} source.RB source.rb;
 		${RM} -f continue.RB.save
