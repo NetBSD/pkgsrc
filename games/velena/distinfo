@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.2 2008/02/02 17:05:00 rillig Exp $
+$NetBSD: distinfo,v 1.3 2011/05/28 22:41:43 dholland Exp $
 
 SHA1 (veleng10.zip) = f9af1cc6f809347151bee4763a62073fe56ef9b4
 RMD160 (veleng10.zip) = a8cc6933196140b5ac941f4369e9bb422a885851
 Size (veleng10.zip) = 243352 bytes
-SHA1 (patch-aa) = 810ca44164b273710fccf8237b1b5343d3354e9d
-SHA1 (patch-ab) = 5d4fabb5fb6b4b7d51123c19eb398fb0c54c78ed
-SHA1 (patch-ac) = dd01e7c0231c715421ef56a230e44b2e075b6f67
-SHA1 (patch-ad) = 11e71c97346be1ecd1cef65a1fe2a27805ca0bee
-SHA1 (patch-ae) = d08ca8a02db09bd1013e3823308a445796ca3897
+SHA1 (patch-buildob_c) = be8cca61cc4a604f72b150dbd58da3efeccb0b4f
+SHA1 (patch-cmdline_c) = 52a7290d6d6be956d7ee547e99a5df281869991a
+SHA1 (patch-connect4_c) = a06c00c119068c2cec6063ec897f7fe4cc7b0ebc
+SHA1 (patch-database_c) = 17d409d8e0d34dbca96dc3607a86f1d457e5428e
+SHA1 (patch-dummy_c) = 374bbb8d89194ce5be37758c8d1d07001898917a
+SHA1 (patch-evaluate_c) = f2dea8394a78e6cd9705a42e6ee81f2f6d623a3e
+SHA1 (patch-pnsearch_c) = 067a51579ad21221ff9b2555a954068657005c52
+SHA1 (patch-proto_h) = 710a33eebee805605724d331636f8a1cf6833b9c

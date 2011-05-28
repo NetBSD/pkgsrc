@@ -1,0 +1,71 @@
+$NetBSD: patch-pnsearch_c,v 1.1 2011/05/28 22:41:43 dholland Exp $
+
+- needs unistd.h
+- use matching types with printf and scanf
+- don't use gets
+- fix bug caught by gcc -Wuninitialized
+
+--- pnsearch.c.orig	1997-07-27 21:44:30.000000000 +0000
++++ pnsearch.c
+@@ -16,8 +16,8 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <malloc.h>
+ #include <time.h>
++#include <unistd.h>
+ 
+ #include "connect4.h"
+ #include "con4vals.h"
+@@ -112,7 +112,7 @@ void show_pinfo()
+ 
+     if(parameters.pr>0 && parameters.ds>0)
+         {
+-        sprintf(st," Nodes: %5ld/%-5ld   P=%-3d   D=%-3d   Time: %2d:%02d:%02d   SEQ=%s   %s",
++        sprintf(st," Nodes: %5ld/%-5ld   P=%-3ld   D=%-3ld   Time: %2d:%02d:%02d   SEQ=%s   %s",
+                 parameters.nodes,parameters.maxnodes,parameters.pr,parameters.ds,hh,mm,ss,
+                 seqs,adv[a]);
+         }
+@@ -157,7 +157,7 @@ void change_max_nodes_numb(void)
+ 
+ void change_sequence()
+ 	{
+-	short seq[BOARDX],done[BOARDX],x,valid=YES;
++	int seq[BOARDX],done[BOARDX],x,valid=YES;
+ 
+ 	for(x=0;x<BOARDX;x++)
+ 		done[x]=NO;
+@@ -789,7 +789,7 @@ short start_pn_search(struct board *boar
+ 
+     printf("\n\nConnect Four Search Engine %s. ",SEARCH_ENGINE_VERSION);
+     printf("Last revision %s\n",__DATE__);
+-    printf("Now building nodes... (each node takes %d bytes of memory)\n",
++    printf("Now building nodes... (each node takes %zu bytes of memory)\n",
+ 			 sizeof(struct node));
+ 
+     printf("Max nodes numb = %ld  (%ld bytes) ",
+@@ -994,12 +994,13 @@ void build_associated_file()
+     {
+     FILE *h1,*h2;
+     char filein[255],seq[50];
+-    short seqlen,state=0,byte;
++    short seqlen=0,state=0,byte;
+     short seqnumb=1,seqthreshold=0;
+     unsigned short key;
+ 
+     printf("Input file to parse : ");
+-    gets(filein);
++    if (fgets(filein, sizeof(filein), stdin) == NULL)
++        exit(0);
+ 
+     printf("Start from sequence #1 ? (Y/N)\n");
+     do
+@@ -1011,7 +1012,7 @@ void build_associated_file()
+     if(key=='n')
+         {
+         printf("\nEnter sequence number to start from : ");
+-        scanf("%d",&seqthreshold);
++        scanf("%hu",&seqthreshold);
+         }
+ 
+     h1=fopen(filein,"rb");
