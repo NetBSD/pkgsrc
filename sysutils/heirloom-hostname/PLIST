@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:17:07 cheusov Exp $
+${HLROOT}/bin/hostname
+${HLROOT}/man/man1/hostname.1
+${HLROOT}/ucb/hostname
