@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:36:05 cheusov Exp $
+${HLROOT}/etc/default/su
+${HLROOT}/bin/su
+${HLROOT}/man/man1/su.1
+${HLROOT}/var/log/sulog
