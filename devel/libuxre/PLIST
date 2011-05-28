@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 09:48:07 cheusov Exp $
+include/uxre/regex.h
+lib/libuxre.la
+share/doc/${PKGBASE}/COPYING.LGPL
+share/doc/${PKGBASE}/NOTES
