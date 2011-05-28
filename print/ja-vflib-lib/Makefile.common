@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2011/04/19 11:34:47 obache Exp $
+# $NetBSD: Makefile.common,v 1.13 2011/05/28 09:07:38 obache Exp $
 #
 # used by print/ja-vflib-lib/Makefile
 # used by print/ja-vflib-utils/Makefile
@@ -13,6 +13,9 @@ VFLIB_SRC=		${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ARGS+=	--without-x
 VFLIB_VERSION=		2.24.2
 PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION:Q}
 PLIST_SUBST+=		VFLIB_SO_VERSION=${VFLIB_VERSION:C/^2.//}
@@ -28,6 +31,7 @@ CONFIGURE_ARGS+=	--with-freetype=${FT_LIB:Q}
 CONFIGURE_ARGS+=	--with-freetype-includedir=${FT_INCLUDEDIR:Q}
 CONFIGURE_ARGS+=	--with-freetype-libdir=${FT_LIBDIR:Q}
 MAKE_ENV+=		LOCAL_LDFLAGS=${LDFLAGS:M*:Q}
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 DISTINFO_FILE=		${.CURDIR}/../../print/ja-vflib-lib/distinfo
 PATCHDIR=		${.CURDIR}/../../print/ja-vflib-lib/patches

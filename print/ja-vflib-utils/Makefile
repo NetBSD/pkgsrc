@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 13:44:32 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/05/28 09:07:38 obache Exp $
 
 .include "../../print/ja-vflib-lib/Makefile.common"
 
@@ -14,6 +14,8 @@ USE_TOOLS+=	xmkmf
 
 BUILD_TARGET=		build-tools
 INSTALL_TARGET=		install-tools
+
+INSTALLATION_DIRS+=	bin
 
 .include "../../print/ja-vflib-lib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
