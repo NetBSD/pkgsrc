@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1360 2011/05/28 11:16:16 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1361 2011/05/28 11:46:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2138,3 +2138,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-shl version 070715 [cheusov 2011-05-28]
 	Updated devel/fossil to 201105231.51112 [asau 2011-05-28]
 	Updated fonts/ricty-ttf to 3.0.1 [ryoon 2011-05-28]
+	Updated www/drupal6 to 6.21 [taca 2011-05-28]
