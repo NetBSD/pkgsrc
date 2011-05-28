@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2011/05/11 14:48:28 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2011/05/28 10:33:00 asau Exp $
 
---- src/sqlite3.c.orig	2011-04-13 12:12:12.000000000 +0000
-+++ src/sqlite3.c
-@@ -24413,7 +24413,7 @@ static struct unix_syscall {
+--- src/sqlite3.c.orig	2011-05-25 17:41:58.000000000 +0400
++++ src/sqlite3.c	2011-05-27 01:46:25.000000000 +0400
+@@ -24733,7 +24733,7 @@
    sqlite3_syscall_ptr pDefault; /* Default value */
  } aSyscall[] = {
-   { "open",         (sqlite3_syscall_ptr)open,       0  },
+   { "open",         (sqlite3_syscall_ptr)posixOpen,  0  },
 -#define osOpen      ((int(*)(const char*,int,int))aSyscall[0].pCurrent)
 +#define osOpen      ((int(*)(const char*,int,...))aSyscall[0].pCurrent)
  
