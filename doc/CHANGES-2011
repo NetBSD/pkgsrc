@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1341 2011/05/28 08:32:04 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1342 2011/05/28 08:32:29 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2119,3 +2119,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added misc/heirloom-od version 070715 [cheusov 2011-05-28]
 	Added misc/heirloom-printf version 070715 [cheusov 2011-05-28]
 	Added misc/heirloom-sleep version 070715 [cheusov 2011-05-28]
+	Added misc/heirloom-sum version 070715 [cheusov 2011-05-28]
