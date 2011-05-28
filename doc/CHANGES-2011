@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1357 2011/05/28 09:57:06 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1358 2011/05/28 10:01:16 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2135,3 +2135,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/libuxre version 070715 [cheusov 2011-05-28]
 	Added misc/heirloom-random version 070715 [cheusov 2011-05-28]
 	Added misc/heirloom-printenv version 070715 [cheusov 2011-05-28]
+	Added sysutils/heirloom-shl version 070715 [cheusov 2011-05-28]
