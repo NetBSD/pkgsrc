@@ -1,0 +1,3 @@
+The Heirloom Bourne Shell is a portable variant of the traditional Unix
+shell. It has been derived from OpenSolaris code and thus implements
+the SVR4/SVID3 level of the shell.
