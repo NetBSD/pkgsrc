@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/28 11:15:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/28 12:05:22 ryoon Exp $
 #
 
 DISTNAME=	Ricty-3.0.1
@@ -17,8 +17,8 @@ BUILD_DEPENDS+=		fontforge-[0-9]*:../../fonts/fontforge
 BUILD_DEPENDS+=		migu-ttf-[0-9]*:../../fonts/migu-ttf
 BUILD_DEPENDS+=		inconsolata-ttf-[0-9]*:../../fonts/inconsolata-ttf
 
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
