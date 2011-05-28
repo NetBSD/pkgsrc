@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:04:32 cheusov Exp $
+${HLROOT}/bin/mkfifo
+${HLROOT}/man/man1/mkfifo.1
