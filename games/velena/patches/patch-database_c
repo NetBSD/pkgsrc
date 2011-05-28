@@ -1,0 +1,26 @@
+$NetBSD: patch-database_c,v 1.1 2011/05/28 22:41:43 dholland Exp $
+
+- needs unistd.h
+- don't use gets
+
+--- database.c.orig	1997-07-27 21:44:50.000000000 +0000
++++ database.c
+@@ -16,7 +16,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <malloc.h>
++#include <unistd.h>
+ 
+ #include "connect4.h"
+ #include "con4vals.h"
+@@ -698,7 +698,8 @@ void merge()
+ 	char filename[255];
+ 
+ 	printf("Enter name of file to merge: ");
+-	gets(filename);
++	if (fgets(filename, sizeof(filename), stdin) == NULL)
++		exit(0);
+ 
+ 	printf("\n");
+ 	printf("Sure you want to merge '%s' ? (Y/N)\n\n",filename);

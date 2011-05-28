@@ -1,0 +1,33 @@
+$NetBSD: patch-proto_h,v 1.1 2011/05/28 22:41:43 dholland Exp $
+
+Declare external functions.
+
+--- proto.h.orig	1997-07-27 21:32:02.000000000 +0000
++++ proto.h
+@@ -1,4 +1,9 @@
+ 
++struct bintree;
++struct board;
++struct dbtree;
++struct node;
++
+ #ifndef max
+ #define max(a,b) ((a)>(b) ? (a) : (b))
+ #endif
+@@ -59,3 +64,16 @@ unsigned long pseudo32(unsigned long *);
+ 
+ long fileln(FILE *);
+ 
++void initboard(struct board *board);
++void fight(char);
++void command_line_input(struct board *board);
++void randomize(void);
++void collapse_position(unsigned char *mypos, unsigned char *blk);
++void clrscr(void);
++void erase_temp_file(void);
++void expand_block(unsigned char *blk, unsigned char *pss);
++short get_lower(short *bb, unsigned char *tp);
++void collapse_position(unsigned char *mypos, unsigned char *blk);
++short fast_try_to_win(struct board *board);
++void fast_free_bin_tree(struct bintree *tree);
++short playgame(char *input_str, struct board *board);
