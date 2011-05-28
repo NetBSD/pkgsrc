@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.26 2011/05/27 11:08:29 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.27 2011/05/28 17:52:19 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -106,3 +106,5 @@ Pullup ticket #3440 - requested by taca
 net/bind97 security update
 Pullup ticket #3441 - requested by morr
 www/wordpress security update
+Pullup ticket #3442 - requested by taca
+www/drupal6: security update
