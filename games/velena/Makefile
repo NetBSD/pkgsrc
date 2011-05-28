@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/05/19 08:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2011/05/28 22:41:43 dholland Exp $
 #
 
 DISTNAME=	veleng10
 PKGNAME=	velena-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.ce.unipr.it/~gbe/
 EXTRACT_SUFX=	.zip
@@ -41,6 +41,9 @@ SUBST_SED.cflags=	-e s,^CFLAGS.*,,
 
 # Velena isn't 64bit-safe, which results in a "fatal error" for some
 # board positions.
+#
+# Try for example "c170", which works with -m32 and fails without.
+#
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH:M*64} != ""
 .  if ${PKGSRC_COMPILER:Mgcc} != ""
