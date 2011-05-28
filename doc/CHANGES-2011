@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1307 2011/05/28 02:30:31 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1308 2011/05/28 07:54:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2085,3 +2085,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-getconf version 070715 [cheusov 2011-05-28]
 	Added lang/heirloom-awk version 070715 [cheusov 2011-05-28]
 	Updated print/tex-igo to 0nb1 [minskim 2011-05-28]
+	Updated mail/im to 151 [obache 2011-05-28]
