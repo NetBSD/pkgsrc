@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1276 2011/05/28 00:03:48 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1277 2011/05/28 00:04:42 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2054,3 +2054,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-nohup version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-nice version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-mknod version 070715 [cheusov 2011-05-28]
+	Added sysutils/heirloom-mkfifo version 070715 [cheusov 2011-05-28]
