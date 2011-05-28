@@ -1,4 +1,7 @@
-$NetBSD: patch-aq,v 1.2 2006/01/23 18:07:51 joerg Exp $
+$NetBSD: patch-aq,v 1.3 2011/05/28 23:02:33 dholland Exp $
+
+- handle dragonfly
+- fix parallel build
 
 --- src/Makefile.orig	1997-06-27 14:50:31.000000000 +0000
 +++ src/Makefile
@@ -11,3 +14,12 @@ $NetBSD: patch-aq,v 1.2 2006/01/23 18:07:51 joerg Exp $
  	@$(MAKE) binaries
  
  bsdi:
+@@ -145,7 +145,7 @@ EXES=	$(BINDIR)/bw_bzero $(BINDIR)/bw_fi
+ 	$(BINDIR)/mhz $(BINDIR)/mhz-counter
+ #	$(BINDIR)/lmdd $(BINDIR)/lat_pagefault
+ 
+-binaries: setupdirs $(EXES)
++binaries: setupdirs .WAIT $(EXES)
+ 
+ clean:
+ 	@echo rm -rf ../bin/$(OS)-$(ARCH)*
