@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/05/28 10:03:38 cheusov Exp $
 # used by archivers/heirloom-tar/Makefile
 # used by devel/heirloom-common/Makefile
 # used by devel/heirloom-getopt/Makefile
@@ -11,9 +11,12 @@
 # used by misc/heirloom-banner/Makefile
 # used by misc/heirloom-cal/Makefile
 # used by misc/heirloom-calendar/Makefile
+# used by misc/heirloom-hd/Makefile
 # used by misc/heirloom-more/Makefile
 # used by misc/heirloom-od/Makefile
+# used by misc/heirloom-printenv/Makefile
 # used by misc/heirloom-printf/Makefile
+# used by misc/heirloom-random/Makefile
 # used by misc/heirloom-sleep/Makefile
 # used by misc/heirloom-sum/Makefile
 # used by misc/heirloom-tcopy/Makefile
@@ -61,6 +64,7 @@
 # used by sysutils/heirloom-rm/Makefile
 # used by sysutils/heirloom-rmdir/Makefile
 # used by sysutils/heirloom-setpgrp/Makefile
+# used by sysutils/heirloom-shl/Makefile
 # used by sysutils/heirloom-sleep/Makefile
 # used by sysutils/heirloom-sort/Makefile
 # used by sysutils/heirloom-split/Makefile
