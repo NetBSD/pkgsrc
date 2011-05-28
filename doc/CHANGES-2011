@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1353 2011/05/28 08:53:21 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1354 2011/05/28 09:40:52 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2131,3 +2131,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/heirloom-what version 070715 [cheusov 2011-05-28]
 	Added archivers/heirloom-tar version 070715 [cheusov 2011-05-28]
 	Added shells/heirloom-sh version 050706nb2 [cheusov 2011-05-28]
+	Added misc/heirloom-hd version 070715 [cheusov 2011-05-28]
