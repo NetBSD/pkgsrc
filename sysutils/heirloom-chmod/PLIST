@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:34:16 cheusov Exp $
+${HLROOT}/bin/chmod
+${HLROOT}/bin/posix/chmod
+${HLROOT}/bin/posix2001/chmod
+${HLROOT}/bin/s42/chmod
+${HLROOT}/man/man1/chmod.1
