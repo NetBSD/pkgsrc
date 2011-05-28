@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:53:11 cheusov Exp $
+heirloom/bin/jsh
+heirloom/bin/sh
+heirloom/man/man1/jsh.1
+heirloom/man/man1/sh.1
+share/doc/${PKGBASE}/CHANGES
+share/doc/${PKGBASE}/CALDERA.LICENSE
+share/doc/${PKGBASE}/OPENSOLARIS.LICENSE
+share/doc/${PKGBASE}/README
