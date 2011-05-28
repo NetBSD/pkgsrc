@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:28:44 cheusov Exp $
+${HLROOT}/bin/csplit
+${HLROOT}/bin/posix/csplit
+${HLROOT}/bin/posix2001/csplit
+${HLROOT}/bin/s42/csplit
+${HLROOT}/man/man1/csplit.1
