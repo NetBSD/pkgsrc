@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 01:01:46 cheusov Exp $
+${HLROOT}/bin/awk
+${HLROOT}/bin/nawk
+${HLROOT}/bin/oawk
+${HLROOT}/bin/posix/awk
+${HLROOT}/bin/posix/nawk
+${HLROOT}/bin/posix2001/awk
+${HLROOT}/bin/posix2001/nawk
+${HLROOT}/bin/s42/awk
+${HLROOT}/bin/s42/nawk
+${HLROOT}/man/man1/awk.1
+${HLROOT}/man/man1/nawk.1
+${HLROOT}/man/man1/oawk.1
