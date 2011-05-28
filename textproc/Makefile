@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.584 2011/05/23 21:08:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.585 2011/05/28 08:21:14 cheusov Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -103,6 +103,30 @@ SUBDIR+=	gtkspell
 SUBDIR+=	gutcheck
 SUBDIR+=	halibut
 SUBDIR+=	harmony
+SUBDIR+=	heirloom-bdiff
+SUBDIR+=	heirloom-bfs
+SUBDIR+=	heirloom-col
+SUBDIR+=	heirloom-comm
+SUBDIR+=	heirloom-cut
+SUBDIR+=	heirloom-diff3
+SUBDIR+=	heirloom-ed
+SUBDIR+=	heirloom-fmt
+SUBDIR+=	heirloom-fold
+SUBDIR+=	heirloom-grep
+SUBDIR+=	heirloom-head
+SUBDIR+=	heirloom-join
+SUBDIR+=	heirloom-line
+SUBDIR+=	heirloom-nl
+SUBDIR+=	heirloom-paste
+SUBDIR+=	heirloom-pg
+SUBDIR+=	heirloom-pr
+SUBDIR+=	heirloom-sdiff
+SUBDIR+=	heirloom-sed
+SUBDIR+=	heirloom-tail
+SUBDIR+=	heirloom-tr
+SUBDIR+=	heirloom-ul
+SUBDIR+=	heirloom-uniq
+SUBDIR+=	heirloom-wc
 SUBDIR+=	helpdeco
 SUBDIR+=	hevea
 SUBDIR+=	highlight
