@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:22:22 cheusov Exp $
+${HLROOT}/bin/date
+${HLROOT}/bin/posix/date
+${HLROOT}/bin/posix2001/date
+${HLROOT}/bin/s42/date
+${HLROOT}/man/man1/date.1
