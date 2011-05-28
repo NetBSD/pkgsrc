@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:10:41 cheusov Exp $
+${HLROOT}/bin/lc
+${HLROOT}/bin/ls
+${HLROOT}/bin/posix/ls
+${HLROOT}/bin/posix2001/ls
+${HLROOT}/bin/s42/ls
+${HLROOT}/bin/s42/lc
+${HLROOT}/man/man1/lc.1
+${HLROOT}/man/man1/ls.1
+${HLROOT}/man/man1b/ls.1b
+${HLROOT}/ucb/ls
