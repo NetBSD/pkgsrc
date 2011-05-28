@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1279 2011/05/28 00:06:48 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1280 2011/05/28 00:10:50 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2057,3 +2057,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-mkfifo version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-mkdir version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-mesg version 070715 [cheusov 2011-05-28]
+	Added sysutils/heirloom-ls version 070715 [cheusov 2011-05-28]
