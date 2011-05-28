@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1282 2011/05/28 00:13:04 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1283 2011/05/28 00:14:31 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2060,3 +2060,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-ls version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-logname version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-logins version 070715 [cheusov 2011-05-28]
+	Added sysutils/heirloom-ln version 070715 [cheusov 2011-05-28]
