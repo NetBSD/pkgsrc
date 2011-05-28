@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/27 23:29:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:21 cheusov Exp $
 
 PKGNAME=	heirloom-who-${HEIRLOOM_VER}
 CATEGORIES=	textproc
@@ -9,7 +9,7 @@ NOT_FOR_PLATFORM+=	Interix-*-*
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 
-DESCR_SRC+=	DESCR
+DESCR_SRC+=	${.CURDIR}/DESCR
 
 .include "../../devel/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
