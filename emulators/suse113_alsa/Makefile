@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/10 02:55:44 chs Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/28 13:40:40 ryoon Exp $
 
 DISTNAME=	suse_alsa-${SUSE_VERSION}
 PKGREVISION=	2
@@ -18,7 +18,7 @@ EMUL_MODULES.linux=	base
 PLIST_SRC=	${PKGDIR}/PLIST ${RPM2PKG_PLIST}
 
 post-install:
-	ln -sf /${EMULSUBDIR}/etc/asound-pulse.conf \
+	ln -sf asound-pulse.conf \
 		${DESTDIR}${PREFIX}/${EMULSUBDIR}/etc/asound.conf
 
 .include "../../emulators/suse113_linux/Makefile.common"
