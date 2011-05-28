@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1302 2011/05/28 00:35:56 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1303 2011/05/28 00:39:55 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2080,3 +2080,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/heirloom-chmod version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-cat version 070715 [cheusov 2011-05-28]
 	Added sysutils/heirloom-basename version 070715 [cheusov 2011-05-28]
+	Added sysutils_/heirloom-file version 070715 [cheusov 2011-05-28]
