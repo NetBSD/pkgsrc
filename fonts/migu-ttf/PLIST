@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:23:09 ryoon Exp $
+lib/X11/fonts/TTF/Migu-1C-bold.ttf
+lib/X11/fonts/TTF/Migu-1C-regular.ttf
+lib/X11/fonts/TTF/Migu-1M-bold.ttf
+lib/X11/fonts/TTF/Migu-1M-regular.ttf
+lib/X11/fonts/TTF/Migu-1P-bold.ttf
+lib/X11/fonts/TTF/Migu-1P-regular.ttf
+share/doc/migu-ttf/IPA_Font_License_Agreement_v1.0.txt
+share/doc/migu-ttf/LICENSE_E
+share/doc/migu-ttf/Migu-README.txt
