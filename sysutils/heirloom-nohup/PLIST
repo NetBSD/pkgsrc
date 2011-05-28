@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:01:53 cheusov Exp $
+${HLROOT}/bin/nohup
+${HLROOT}/bin/posix/nohup
+${HLROOT}/bin/posix2001/nohup
+${HLROOT}/bin/s42/nohup
+${HLROOT}/man/man1/nohup.1
