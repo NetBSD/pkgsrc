@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2011/05/28 09:42:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.358 2011/05/28 09:53:58 cheusov Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -89,6 +89,7 @@ SUBDIR+=	heirloom-hd
 SUBDIR+=	heirloom-more
 SUBDIR+=	heirloom-od
 SUBDIR+=	heirloom-printf
+SUBDIR+=	heirloom-random
 SUBDIR+=	heirloom-sleep
 SUBDIR+=	heirloom-sum
 SUBDIR+=	heirloom-tcopy
