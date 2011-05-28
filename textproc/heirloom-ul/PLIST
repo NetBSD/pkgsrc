@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:18:50 cheusov Exp $
+${HLROOT}/bin/ul
+${HLROOT}/man/man1/ul.1
+${HLROOT}/ucb/ul
